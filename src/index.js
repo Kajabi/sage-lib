@@ -1,1 +1,1 @@
-export const Testing = 'testing'
+export { default } from './javascript/react-components'
