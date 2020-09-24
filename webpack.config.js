@@ -1,30 +1,34 @@
+// webpack.config.js
 var path = require('path');
 
 module.exports = {
+  entry: './src/index.js',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'main.js',
+    libraryTarget: 'commonjs2'
+  },
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
+        include: path.resolve(__dirname, 'src'),
+        exclude: /(node_modules)/,
         use: {
-          loader: "babel-loader"
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env']
+          }
         }
       },
       {
-        test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
-      },
-      {
-        test: /\.s[ac]ss$/i,
-        use: ["style-loader", "css-loader", "sass-loader"],
-      },
-    ]
+        test: /\.scss$/,
+        loaders: ["style-loader", "css-loader", "sass-loader"],
+        include: path.resolve(__dirname, '../')
+      }
+    ],
   },
   resolve: {
-    modules: [
-      path.resolve(__dirname, './src'),
-      path.resolve(__dirname, './node_modules')
-    ],
-    extensions: ['.js', '.jsx', '.json']
+    extensions: ['.js', '.jsx', '.css', '.scss', '.sass']
   }
-};
+}
