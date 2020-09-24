@@ -1,0 +1,44 @@
+/* ==================================================
+  ** _assistant.scss
+  type: object
+
+================================================== */
+
+.sage-assistant {
+  display: flex;
+  align-items: center;
+  z-index: sage-z-index(nav);
+  height: $sage-assistant-height;
+  padding: sage-spacing(xs) sage-spacing();
+  background: sage-color(primary, 500);
+}
+
+.sage-assistant__branding {
+  height: $sage-assistant-branding-height;
+}
+
+.sage-assistant__body {
+  flex: 1;
+}
+
+.sage-assistant__search {
+  @include placeholder {
+    color: $sage-assistant-search-placeholder-color;
+    transition: $sage-assistant-search-placeholder-transition;
+  }
+
+  width: 100%;
+  height: $sage-assistant-search-height;
+  padding: sage-spacing(xs);
+  color: $sage-assistant-search-placeholder-color;
+  background: rgba($sage-assistant-search-bg-color, $sage-assistant-search-bg-opacity);
+  border: 0;
+  border-radius: sage-border(radius);
+
+  &:focus,
+  &:active {
+    @include placeholder {
+      opacity: 0.2;
+    }
+  }
+}

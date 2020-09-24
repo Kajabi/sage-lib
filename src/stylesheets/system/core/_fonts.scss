@@ -1,0 +1,221 @@
+/* ==================================================
+  ** _fonts.scss
+
+================================================== */
+
+$-body-font-path: "../../fonts/inter" !default; // pathname of font directory
+$-body-font-version: 3.14 !default;
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: local("Inter-Thin"), url("#{$-body-font-path}/Inter-Thin.woff2?v=#{$-body-font-version}") format("woff2"), url("#{$-body-font-path}/Inter-Thin.woff?v=#{$-body-font-version}") format("woff");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: italic;
+  font-weight: 100;
+  font-display: swap;
+  src: local("Inter-ThinItalic"), url("#{$-body-font-path}/Inter-ThinItalic.woff2?v=#{$-body-font-version}") format("woff2"), url("#{$-body-font-path}/Inter-ThinItalic.woff?v=#{$-body-font-version}") format("woff");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: local("Inter-ExtraLight"), url("#{$-body-font-path}/Inter-ExtraLight.woff2?v=#{$-body-font-version}") format("woff2"), url("#{$-body-font-path}/Inter-ExtraLight.woff?v=#{$-body-font-version}") format("woff");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: italic;
+  font-weight: 200;
+  font-display: swap;
+  src: local("Inter-ExtraLightItalic"), url("#{$-body-font-path}/Inter-ExtraLightItalic.woff2?v=#{$-body-font-version}") format("woff2"), url("#{$-body-font-path}/Inter-ExtraLightItalic.woff?v=#{$-body-font-version}") format("woff");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local("Inter-Light"), url("#{$-body-font-path}/Inter-Light.woff2?v=#{$-body-font-version}") format("woff2"), url("#{$-body-font-path}/Inter-Light.woff?v=#{$-body-font-version}") format("woff");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: local("Inter-LightItalic"), url("#{$-body-font-path}/Inter-LightItalic.woff2?v=#{$-body-font-version}") format("woff2"), url("#{$-body-font-path}/Inter-LightItalic.woff?v=#{$-body-font-version}") format("woff");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Inter-Regular"), url("#{$-body-font-path}/Inter-Regular.woff2?v=#{$-body-font-version}") format("woff2"), url("#{$-body-font-path}/Inter-Regular.woff?v=#{$-body-font-version}") format("woff");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Inter-Italic"), url("#{$-body-font-path}/Inter-Italic.woff2?v=#{$-body-font-version}") format("woff2"), url("#{$-body-font-path}/Inter-Italic.woff?v=#{$-body-font-version}") format("woff");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local("Inter-Medium"), url("#{$-body-font-path}/Inter-Medium.woff2?v=#{$-body-font-version}") format("woff2"), url("#{$-body-font-path}/Inter-Medium.woff?v=#{$-body-font-version}") format("woff");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: local("Inter-MediumItalic"), url("#{$-body-font-path}/Inter-MediumItalic.woff2?v=#{$-body-font-version}") format("woff2"), url("#{$-body-font-path}/Inter-MediumItalic.woff?v=#{$-body-font-version}") format("woff");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local("Inter-SemiBold"), url("#{$-body-font-path}/Inter-SemiBold.woff2?v=#{$-body-font-version}") format("woff2"), url("#{$-body-font-path}/Inter-SemiBold.woff?v=#{$-body-font-version}") format("woff");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: local("Inter-SemiBoldItalic"), url("#{$-body-font-path}/Inter-SemiBoldItalic.woff2?v=#{$-body-font-version}") format("woff2"), url("#{$-body-font-path}/Inter-SemiBoldItalic.woff?v=#{$-body-font-version}") format("woff");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local("Inter-Bold"), url("#{$-body-font-path}/Inter-Bold.woff2?v=#{$-body-font-version}") format("woff2"), url("#{$-body-font-path}/Inter-Bold.woff?v=#{$-body-font-version}") format("woff");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: local("Inter-BoldItalic"), url("#{$-body-font-path}/Inter-BoldItalic.woff2?v=#{$-body-font-version}") format("woff2"), url("#{$-body-font-path}/Inter-BoldItalic.woff?v=#{$-body-font-version}") format("woff");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: local("Inter-ExtraBold"), url("#{$-body-font-path}/Inter-ExtraBold.woff2?v=#{$-body-font-version}") format("woff2"), url("#{$-body-font-path}/Inter-ExtraBold.woff?v=#{$-body-font-version}") format("woff");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: italic;
+  font-weight: 800;
+  font-display: swap;
+  src: local("Inter-ExtraBoldItalic"), url("#{$-body-font-path}/Inter-ExtraBoldItalic.woff2?v=#{$-body-font-version}") format("woff2"), url("#{$-body-font-path}/Inter-ExtraBoldItalic.woff?v=#{$-body-font-version}") format("woff");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: local("Inter-Black"), url("#{$-body-font-path}/Inter-Black.woff2?v=#{$-body-font-version}") format("woff2"), url("#{$-body-font-path}/Inter-Black.woff?v=#{$-body-font-version}") format("woff");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: italic;
+  font-weight: 900;
+  font-display: swap;
+  src: local("Inter-BlackItalic"), url("#{$-body-font-path}/Inter-BlackItalic.woff2?v=#{$-body-font-version}") format("woff2"), url("#{$-body-font-path}/Inter-BlackItalic.woff?v=#{$-body-font-version}") format("woff");
+}
+
+/* ==================================================
+Variable font
+
+Usage:
+  html { font-family: "Inter", sans-serif; }
+  @supports (font-variation-settings: normal) {
+    html { font-family: "Inter var", sans-serif; }
+  }
+================================================== */
+
+@font-face {
+  font-family: "Inter var";
+  font-weight: 100 900;
+  font-style: normal;
+  font-named-instance: "Regular";
+  font-display: swap;
+  src: url("#{$-body-font-path}/Inter-roman.var.woff2?v=#{$-body-font-version}") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter var";
+  font-weight: 100 900;
+  font-style: italic;
+  font-named-instance: "Italic";
+  font-display: swap;
+  src: url("#{$-body-font-path}/Inter-italic.var.woff2?v=#{$-body-font-version}") format("woff2");
+}
+
+/* Legacy naming compatibility */
+@font-face {
+  font-family: "Inter var alt";
+  font-weight: 100 900;
+  font-style: normal;
+  font-named-instance: "Regular";
+  font-display: swap;
+  src: url("#{$-body-font-path}/Inter-roman.var.woff2?v=#{$-body-font-version}") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter var alt";
+  font-weight: 100 900;
+  font-style: italic;
+  font-named-instance: "Italic";
+  font-display: swap;
+  src: url("#{$-body-font-path}/Inter-italic.var.woff2?v=#{$-body-font-version}") format("woff2");
+}
+
+
+/* ==================================================
+[EXPERIMENTAL] Multi-axis, single variable font.
+
+Slant axis is not yet widely supported (as of February 2019) and thus this
+multi-axis single variable font is opt-in rather than the default.
+
+When using this, you will probably need to set font-variation-settings
+explicitly, e.g.
+
+  * { font-variation-settings: "slnt" 0deg }
+  .italic { font-variation-settings: "slnt" 10deg }
+
+================================================== */
+
+@font-face {
+  font-family: "Inter var experimental";
+  font-weight: 100 900;
+  font-style: oblique 0deg 10deg;
+  font-display: swap;
+  src: url("#{$-body-font-path}/Inter.var.woff2?v=#{$-body-font-version}") format("woff2");
+}

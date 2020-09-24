@@ -1,0 +1,180 @@
+/* ==================================================
+  ** data_card
+  type: object
+
+================================================== */
+
+$-data-card-colors: (
+  default: (
+    border-color: sage-color(grey, 300),
+    text-color: sage-color(charcoal, 400),
+  ),
+  danger: (
+    border-color: sage-color(red, 300),
+    text-color: sage-color(red, 300),
+  ),
+  muted: (
+    border-color: sage-color(grey, 400),
+    text-color: sage-color(grey, 400),
+  ),
+);
+$-data-card-transition: 0.2s linear;
+$-data-card-border-radius: $sage-panel-border-radius;
+$-data-card-background-color: $sage-panel-bg-color;
+$-data-card-shadow: $sage-panel-box-shadow;
+$-data-card-padding: sage-spacing(xs);
+
+.sage-data-card {
+  background: $-data-card-background-color;
+  border-radius: $-data-card-border-radius;
+
+  .sage-data-card-group &:not(:last-child) {
+    margin-bottom: sage-spacing(xs);
+  }
+
+  .sage-data-card-scroll-container & {
+    width: 200px;
+
+    &:not(:last-child) {
+      margin-right: sage-spacing(sm);
+      margin-bottom: 0;
+    }
+  }
+
+  @each $-color-name, $-values in $-data-card-colors {
+    @if $-color-name == default {
+      border: 1px solid map-get($-values, border-color);
+    }
+    @else {
+      &.sage-data-card--#{$-color-name},
+      .sage-data-card-group--#{$-color-name} & {
+        border: 1px solid map-get($-values, border-color);
+      }
+    }
+  }
+}
+
+
+.sage-data-card__body {
+  position: relative;
+  padding: $-data-card-padding;
+
+  > *:not(:last-child) {
+    margin-bottom: sage-spacing(xs);
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+
+  @include clearfix;
+}
+
+.sage-data-card__footer {
+  padding: $-data-card-padding;
+  border-top: sage-border();
+
+  @each $-color-name, $-values in $-data-card-colors {
+    @if $-color-name == default {
+      color: map-get($-values, text-color);
+    }
+
+    @else {
+      .sage-data-card--#{$-color-name} &,
+      .sage-data-card-group--#{$-color-name} & {
+        color: map-get($-values, text-color);
+      }
+    }
+  }
+
+  @include clearfix;
+}
+
+.sage-data-card__header {
+  display: flex;
+  align-items: center;
+  padding: $-data-card-padding;
+  border-bottom: sage-border();
+
+  @each $-color-name, $-values in $-data-card-colors {
+    @if $-color-name == default {
+      color: map-get($-values, text-color);
+    }
+
+    @else {
+      .sage-data-card--#{$-color-name} &,
+      .sage-data-card-group--#{$-color-name} & {
+        color: map-get($-values, text-color);
+      }
+    }
+  }
+}
+
+.sage-data-card__header-aside {
+  display: inline-flex;
+  align-self: baseline;
+  margin-left: auto;
+}
+
+
+// Sage data-card Group Styles
+
+.sage-data-card-group {
+  margin-top: sage-spacing();
+  margin-bottom: sage-spacing();
+  padding-left: 0;
+  list-style: none;
+
+  .sage-data-card-scroll-container & {
+    padding-bottom: sage-spacing(sm);
+  }
+  
+  .sage-data-card-scroll-container &:not(:last-child) {
+    padding-right: sage-spacing(md);
+    border-right: 1px solid sage-color(grey, 300);
+  }
+
+  .sage-data-card-scroll-container &:not(:first-child) {
+    padding-left: sage-spacing(md);
+  }
+}
+
+.sage-data-card-group__items {
+  .sage-data-card-scroll-container & {
+    display: flex;
+  }
+}
+
+.sage-data-card-group__title {
+  margin-bottom: sage-spacing(xs);
+  
+  @each $-color-name, $-values in $-data-card-colors {
+    @if $-color-name == default {
+      color: map-get($-values, text-color);
+    }
+
+    @else {
+      .sage-data-card--#{$-color-name} &,
+      .sage-data-card-group--#{$-color-name} & {
+        color: map-get($-values, text-color);
+      }
+    }
+  }
+}
+
+
+// Sage data-card scroll container styles
+
+.sage-data-card-scroll-container {
+  display: grid;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.sage-data-card-scroll {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: auto;
+  overflow-x: auto;
+  width: 100%;
+}

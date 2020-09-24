@@ -1,0 +1,10 @@
+<svg class="sage-live-active-mic" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+  <mask id="active-area" maskUnits="userSpaceOnUse" x="6" y="1" width="8" height="11">
+    <rect x="6" y="1" width="8" height="11" rx="3" fill="#fff"/>
+  </mask>
+  <g mask="url(#active-area)">
+    <path class="sage-live-active-mic__background" d="M6 1h8v11H6z"/>
+    <path class="sage-live-active-mic__volume" d="M6 1h8v11H6z"/>
+  </g>
+  <path class="sage-live-active-mic__icon" fill-rule="evenodd" clip-rule="evenodd" d="M6.665 5c0-1.873 1.46-3.333 3.333-3.333 1.873 0 3.334 1.46 3.334 3.333v3.333c0 1.873-1.46 3.334-3.334 3.334-1.873 0-3.333-1.46-3.333-3.334V5zm3.333-5a4.96 4.96 0 00-5 5v3.333c0 2.794 2.207 5 5 5 2.794 0 5-2.206 5-5V5c0-2.794-2.206-5-5-5zM3.332 8.333a.833.833 0 00-1.667 0c0 4.346 3.27 7.88 7.5 8.293v1.707H5.832a.833.833 0 000 1.667h8.333a.833.833 0 000-1.667h-3.333v-1.707a8.299 8.299 0 007.5-8.293.833.833 0 00-1.667 0A6.635 6.635 0 019.998 15a6.635 6.635 0 01-6.666-6.667z"/>
+</svg>

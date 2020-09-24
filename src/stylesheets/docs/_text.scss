@@ -1,0 +1,12 @@
+/* ==================================================
+  ** _text.scss
+
+  For Sage documentation use
+================================================== */
+
+code {
+  display: inline-block;
+  padding: 0 sage-spacing(2xs);
+  font-size: 0.9em;
+  background-color: sage-color(primary, 100);
+}

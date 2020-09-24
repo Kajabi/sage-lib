@@ -1,0 +1,166 @@
+/* ==================================================
+  ** _checkbox.scss
+  type: element
+
+
+================================================== */
+
+.sage-checkbox {
+  &:not(.sage-checkbox--standalone) {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    margin-bottom: $sage-form-element-spacing;
+  }
+
+  .sage-list & {
+    margin-bottom: $sage-form-element-spacing / 2;
+  }
+
+  .sage-panel__content-stack > &,
+  .sage-panel__copy > & {
+    margin-bottom: 0;
+  }
+}
+
+.sage-checkbox--standalone {
+  display: inline-block;
+}
+
+.sage-checkbox__label {
+  display: inline-block;
+  flex: 1;
+  margin-left: rem(12px);
+  vertical-align: top;
+  cursor: pointer;
+
+  @extend %t-sage-body;
+
+  .sage-checkbox__input:disabled + & {
+    color: $sage-checkbox-color-default;
+    cursor: not-allowed;
+  }
+
+  .sage-checkbox--error &,
+  .sage-checkbox__input:invalid + & {
+    color: sage-color(red);
+  }
+}
+
+.sage-checkbox--standalone,
+.sage-checkbox__input {
+  appearance: none;
+  display: inline-block;
+  position: relative;
+  height: $sage-checkbox-size;
+  width: $sage-checkbox-size;
+  margin: 0;
+  vertical-align: top;
+  color: $sage-checkbox-color-default;
+  border: 1px solid $sage-checkbox-color-default;
+  border-radius: $sage-checkbox-border-radius;
+  outline: none;
+  transition: background $sage-checkbox-transition, box-shadow $sage-checkbox-transition, border $sage-checkbox-transition;
+  cursor: pointer;
+
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transition: opacity 0.2s ease-in-out, transform $sage-checkbox-transition;
+    opacity: 0;
+  }
+
+  // focus outline
+  &::before {
+    transform: translate3d(-50%, -50%, 0) scale(0.94);
+    width: calc(100% + (#{$sage-checkbox-focus-outline-width * 1px} + #{$sage-checkbox-focus-outline-size * 2}));
+    height: calc(100% + (#{$sage-checkbox-focus-outline-width * 1px} + #{$sage-checkbox-focus-outline-size * 2}));
+    border: ($sage-checkbox-focus-outline-width * 1px) solid $sage-checkbox-focus-outline-color;
+    border-radius: $sage-checkbox-border-radius;
+    pointer-events: none;
+    opacity: 0;
+  }
+
+  &::after {
+    transform: translate3d(-50%, calc(-50% + #{$sage-checkbox-marker-offset}), 0) rotate($sage-checkbox-marker-rotate);
+    height: $sage-checkbox-marker-height;
+    width: $sage-checkbox-marker-width;
+    border-right: $sage-checkbox-marker-border solid $sage-checkbox-marker-color;
+    border-bottom: $sage-checkbox-marker-border solid $sage-checkbox-marker-color;
+  }
+
+  &:checked {
+    color: $sage-checkbox-color-checked;
+    background: $sage-checkbox-color-checked;
+    border-color: $sage-checkbox-color-checked;
+    box-shadow: sage-shadow(sm);
+
+    &::after {
+      transform: translate3d(-50%, calc(-50% - #{$sage-checkbox-marker-border} / 2), 0) rotate($sage-checkbox-marker-rotate);
+      opacity: 1;
+    }
+  }
+
+  &:hover:not(:checked):not(:disabled) {
+    border-color: sage-color(grey, 500);
+    box-shadow: sage-shadow(sm);
+  }
+
+  &:focus:not(:disabled),
+  &:active:not(:disabled) {
+    outline: none;
+
+    &::before {
+      transform: translate3d(-50%, -50%, 0) scale(1);
+      opacity: 1;
+    }
+  }
+
+  &:disabled {
+    background: $sage-checkbox-color-disabled;
+    cursor: not-allowed;
+    opacity: 0.5;
+
+    &::before {
+      display: none;
+    }
+
+    // disabled & checked
+    &:checked {
+      background: $sage-checkbox-color-disabled-checked;
+      border-color: $sage-checkbox-color-disabled-checked;
+      box-shadow: none;
+      opacity: 1;
+    }
+
+    &:checked::before {
+      display: none;
+    }
+  }
+
+  .sage-checkbox--error &,
+  &:invalid {
+    background: sage-color(red, 100);
+    border-color: sage-color(red);
+
+    &::after {
+      border-right-color: sage-color(red);
+      border-bottom-color: sage-color(red);
+    }
+    &:hover:not(:checked):not(:disabled) {
+      border-color: sage-color(red);
+    }
+    &::before {
+      border-color: sage-color(red);
+    }
+  }
+
+  &:not(.sage-checkbox--standalone) {
+    margin-top: 4px;
+  }
+}

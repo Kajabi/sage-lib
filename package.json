@@ -2,9 +2,10 @@
   "name": "@kajabi/sage",
   "version": "1.0.0",
   "description": "Sage NPM Package",
-  "main": "src/index.js",
+  "main": "dist/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --mode production",
+    "postinstall": "yarn run build"
   },
   "repository": {
     "type": "git",
@@ -19,5 +20,18 @@
   "bugs": {
     "url": "https://github.com/Kajabi/sage-lib/issues"
   },
-  "homepage": "https://github.com/Kajabi/sage-lib#readme"
+  "homepage": "https://github.com/Kajabi/sage-lib#readme",
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-react": "^7.10.4",
+    "babel-loader": "^8.1.0",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {
+    "css-loader": "^4.3.0",
+    "sass-loader": "^10.0.2",
+    "style-loader": "^1.2.1"
+  }
 }

@@ -1,0 +1,33 @@
+/* ==================================================
+  ** _overlay.scss
+
+
+================================================== */
+
+.sage-overlay {
+  visibility: hidden;
+  position: absolute;
+  z-index: $sage-overlay-z-index;
+  top: 0;
+  left: 0;
+  height: 0;
+  width: 0;
+  background-color: $sage-overlay-bg-color;
+  transition: $sage-overlay-transition-default;
+  opacity: 0;
+
+  @supports (backdrop-filter: blur(10px)) {
+    transition: $sage-overlay-transition-default, $sage-overlay-transition-backdrop-filter;
+    backdrop-filter: $sage-overlay-backdrop-filter;
+  }
+
+  @media (max-width: sage-breakpoint()) {
+    &.sage-overlay--open {
+      visibility: visible;
+      z-index: $sage-overlay-z-index;
+      height: 100%;
+      width: 100%;
+      opacity: 1;
+    }
+  }
+}

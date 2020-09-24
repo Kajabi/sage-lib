@@ -1,0 +1,166 @@
+/* ==================================================
+  ** _radio.scss
+  type: element
+
+
+================================================== */
+
+.sage-radio {
+  &:not(.sage-radio--standalone) {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    margin-bottom: $sage-form-element-spacing;
+  }
+
+  .sage-list & {
+    margin-bottom: $sage-form-element-spacing / 2;
+  }
+
+  .sage-panel__content-stack > &,
+  .sage-panel__copy > & {
+    margin-bottom: 0;
+  }
+}
+
+.sage-radio--standalone {
+  display: inline-block;
+}
+
+.sage-radio__label {
+  display: inline-block;
+  flex: 1;
+  margin-left: sage-spacing(sm);
+  vertical-align: top;
+  cursor: pointer;
+
+  @extend %t-sage-body;
+}
+
+
+.sage-radio--standalone,
+.sage-radio__input {
+  display: inline-block;
+  position: relative;
+  height: $sage-radio-button-size;
+  width: $sage-radio-button-size;
+  margin: 0;
+  appearance: none;
+  color: $sage-radio-color-default;
+  vertical-align: top;
+  outline: none;
+  background-color: sage-color(white);
+  border: rem(1px) solid $sage-radio-color-default;
+  border-radius: $sage-radio-border-radius;
+  transition: background 0.2s ease-in-out, box-shadow $sage-radio-transition, border $sage-radio-transition;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    color: inherit;
+    border-radius: inherit;
+    transition: opacity 0.2s ease-in-out, transform $sage-radio-transition;
+    opacity: 0;
+  }
+
+  // focus outline
+  &::before {
+    transform: translate3d(-50%, -50%, 0) scale(0.94);
+    width: calc(100% + ((#{$sage-radio-focus-outline-width} * 1px) + (#{$sage-radio-focus-outline-size} * 2)));
+    height: calc(100% + ((#{$sage-radio-focus-outline-width} * 1px) + (#{$sage-radio-focus-outline-size} * 2)));
+    border: calc(#{$sage-radio-focus-outline-width} * 1px) solid $sage-radio-focus-outline-color;
+    pointer-events: none;
+    opacity: 0;
+  }
+
+  &::after {
+    transform: translate3d(-50%, -50%, 0) scale(0);
+    height: $sage-radio-selected-indicator-size;
+    width: $sage-radio-selected-indicator-size;
+    background-color: $sage-radio-selected-indicator-color;
+    transition: opacity $sage-radio-transition, transform 0.3s ease-in-out;
+  }
+
+  &:checked {
+    color: $sage-radio-color-checked;
+    background-color: $sage-radio-color-checked;
+    border-color: transparent;
+    box-shadow: sage-shadow(sm);
+
+    &::after {
+      transform: translate3d(-50%, -50%, 0) scale(1);
+      opacity: 1;
+    }
+  }
+
+  &:hover {
+    &:not(:checked):not(:disabled) {
+      border-color: $sage-radio-color-hover;
+      box-shadow: sage-shadow(sm);
+    }
+  }
+
+  &:focus:not(:disabled),
+  &:active:not(:disabled) {
+    &::before {
+      transform: translate3d(-50%, -50%, 0) scale(1);
+      opacity: 1;
+    }
+
+    &::after {
+      transform: translate3d(-50%, -50%, 0) scale(1);
+      opacity: 1;
+    }
+  }
+
+  &:disabled {
+    background: $sage-radio-color-disabled;
+    border-color: $sage-radio-color-disabled-checked;
+    cursor: not-allowed;
+    opacity: 0.5;
+
+    // disabled & checked
+    &:checked {
+      background: $sage-radio-color-disabled-checked;
+      box-shadow: none;
+    }
+
+    + .sage-radio__label {
+      color: $sage-radio-color-disabled-checked;
+      cursor: not-allowed;
+    }
+
+    &:not(:checked)::after {
+      background: $sage-radio-color-disabled;
+    }
+  }
+
+  &:not(.sage-radio--standalone) {
+    margin-top: 6px;
+  }
+}
+
+.sage-radio--error {
+  .sage-radio__label {
+    color: sage-color(red);
+  }
+  .sage-radio__input {
+    border-color: sage-color(red);
+    &:checked {
+      color: sage-color(red);
+      background-color: sage-color(red);
+    }
+    &::after {
+      background-color: sage-color(white);
+    }
+  }
+  :hover:not(:checked):not(:disabled) {
+    border-color: sage-color(red);
+  }
+}

@@ -1,0 +1,119 @@
+/* ==================================================
+  ** _code.scss
+
+  For Sage documentation use
+================================================== */
+
+.prettyprint {
+  @include overflow-scroll(x);
+
+  display: block;
+  padding: sage-spacing();
+  color: sage-color(sage, 200);
+  font-size: sage-font-size(sm);
+  font-weight: sage-font-weight(normal);
+  background-color: sage-color(primary, 500);
+  border-radius: sage-border(radius);
+
+  &.prettyprinted {
+    padding: sage-spacing();
+  }
+
+  code {
+    display: inline;
+    padding: 0;
+    font-size: inherit;
+    background-color: transparent;
+  }
+}
+pre .nocode {
+  color: sage-color(charcoal, 500);
+  background-color: none;
+}
+pre .str { /* string */
+  color: sage-color(sage, 200);
+}
+pre .kwd {
+  color: sage-color(sage, 200);
+  font-weight: bold;
+}
+pre .com { /* comment */
+  color: sage-color(sage, 200);
+  opacity: 0.4;
+}
+pre .typ { /* typen */
+  color: sage-color(sage, 200);
+}
+pre .lit { /* literal */
+  color: sage-color(sage, 200);
+}
+pre .pun { /* punctuation */
+  color: sage-color(sage, 200);
+}
+pre .pln { /* plaintext */
+  color: sage-color(primary, 200);
+}
+pre .tag { /* html/xml tag */
+  color: sage-color(primary, 200);
+  font-weight: bold;
+}
+pre .atn { /* attribute name */
+  color: sage-color(primary, 200);
+}
+pre .atv { /* attribute value */
+  color: sage-color(primary, 100);
+  font-weight: bold;
+}
+pre .dec { /* decimal */
+  color: sage-color(sage, 200);
+}
+
+@media print {
+  .prettyprint {
+    background-color: none;
+  }
+  pre .str,
+  code .str {
+    color: #060;
+  }
+  pre .kwd,
+  code .kwd {
+    color: #006;
+    font-weight: bold;
+  }
+  pre .com,
+  code .com {
+    color: #600;
+    font-style: italic;
+  }
+  pre .typ,
+  code .typ {
+    color: #404;
+    font-weight: bold;
+  }
+  pre .lit,
+  code .lit {
+    color: #044;
+  }
+  pre .pun,
+  code .pun {
+    color: #440;
+  }
+  pre .pln,
+  code .pln {
+    color: #000;
+  }
+  pre .tag,
+  code .tag {
+    color: #006;
+    font-weight: bold;
+  }
+  pre .atn,
+  code .atn {
+    color: #404;
+  }
+  pre .atv,
+  code .atv {
+    color: #060;
+  }
+}

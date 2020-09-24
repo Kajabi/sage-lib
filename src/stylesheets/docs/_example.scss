@@ -1,0 +1,160 @@
+/* ==================================================
+  ** _example.scss
+
+  For Sage documentation use
+================================================== */
+
+$-example-link-color: inherit;
+$-example-link-color-hover: sage-color(charcoal, 100);
+
+$-example-code-preview-height: 8rem;
+$-example-code-preview-button-color: sage-color(white);
+$-example-code-preview-button-color-hover: sage-color(sage, 200);
+$-example-code-preview-button-blur: blur(2px);
+$-example-code-preview-button-bg: rgba(sage-color(primary, 500), 0.75);
+
+.example__title {
+  color: sage-color(charcoal, 500);
+  text-transform: capitalize;
+}
+
+.example__link {
+  color: $-example-link-color;
+  transition: $sage-transition;
+  transition-property: color;
+
+  &:hover {
+    color: $-example-link-color-hover;
+  }
+
+  &:focus,
+  &:active {
+    text-decoration: underline;
+    outline: none;
+  }
+}
+
+.example__link--breakout {
+  color: sage-color(sage);
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: sage-color(charcoal, 500);
+    text-decoration: none;
+  }
+}
+
+.example__label {
+  display: inline-block;
+  min-width: rem(100px);
+  margin: sage-spacing() 0;
+  padding: sage-spacing(xs) sage-spacing();
+  color: sage-color(charcoal, 500);
+  text-align: center;
+  background: sage-color(white);
+  box-shadow: sage-shadow();
+  border-radius: rem(20px);
+}
+
+.example__preview {
+  margin: sage-spacing() 0;
+}
+
+.example__block {
+  margin-top: sage-spacing(sm);
+  margin-bottom: sage-spacing(sm);
+}
+
+.example__block--md {
+  margin-top: sage-spacing(md);
+  margin-bottom: sage-spacing(md);
+}
+
+.example__block--lg {
+  margin-top: sage-spacing(lg);
+  margin-bottom: sage-spacing(lg);
+}
+
+.example__expand-btn {
+  @include sage-button-style-reset();
+  position: absolute;
+  z-index: sage-z_index(raised);
+  bottom: sage-spacing(xs);
+  left: 0;
+  width: 100%;
+  padding: sage-spacing(xs);
+  color: $-example-code-preview-button-color;
+  background-color: $-example-code-preview-button-bg;
+  transition: $sage-transition;
+  transition-property: color, opacity;
+
+  @extend %t-sage-body-small-med;
+
+  .example__code--expanded & {
+    opacity: 0.4;
+
+    &:hover,
+    &:focus,
+    &:active {
+      opacity: 1;
+      cursor: n-resize;
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $-example-code-preview-button-color-hover;
+    background-color: transparent;
+    cursor: s-resize;
+  }
+
+  &:focus,
+  &:active {
+    outline: 1px dotted sage-color(sage);
+  }
+
+  @supports (backdrop-filter: blur(2px)) {
+    backdrop-filter: $-example-code-preview-button-blur;
+    background-color: rgba(sage-color(primary, 500), 0.15);
+
+    .example__code--expanded & {
+      backdrop-filter: none;
+    }
+  }
+}
+
+.example__code {
+  overflow: hidden;
+  position: relative;
+  max-height: $-example-code-preview-height;
+  margin: 0 0 sage-spacing();
+
+  .prettyprint {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    z-index: sage-z-index(default, 100);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(sage-color(primary, 500), 0.3) 0%, rgba(sage-color(primary, 500), 0.9) 100%);
+    transition: $sage-transition;
+    transition-property: opacity;
+    pointer-events: none;
+  }
+
+  &.example__code--expanded {
+    max-height: none;
+
+    &::before {
+      opacity: 0;
+    }
+  }
+}

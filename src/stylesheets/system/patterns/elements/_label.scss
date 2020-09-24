@@ -1,0 +1,69 @@
+/* ==================================================
+  ** label
+  type: element
+
+
+================================================== */
+
+$-label-padding: 0 sage-spacing(xs) !default;
+$-label-border-radius: sage-border(radius) !default;
+$-label-inset-border: 0 0 0 1px inset;
+
+.sage-label {
+  @extend %t-sage-body-small-semi;
+
+  display: inline-flex;
+  align-items: center;
+  padding: $-label-padding;
+  text-align: center;
+  white-space: nowrap;
+  border-radius: $-label-border-radius;
+}
+
+.sage-label--truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@each $-color-name, $-color-settings in $sage-color-combos {
+  .sage-label--#{$-color-name} {
+    color: sage-color-combo($-color-name, default, foreground);
+    background-color: sage-color-combo($-color-name, default, background);
+
+    &.sage-label--subtle {
+      color: sage-color-combo($-color-name, subtle, foreground);
+      background-color: sage-color(white);
+      // Box shadow instead of border so that size and inner spacing is not affected
+      box-shadow: $-label-inset-border sage-color-combo($-color-name, subtle, background);
+    }
+
+    &.sage-label--bold {
+      color: sage-color-combo($-color-name, bold, foreground);
+      background-color: sage-color-combo($-color-name, bold, background);
+    }
+
+    .sage-btn & {
+      &:focus,
+      &:active {
+        background-color: inherit;
+        box-shadow: $-label-inset-border transparent;
+      }
+    }
+  }
+}
+
+@each $-icon-name, $-icon-code in $sage-icons {
+  .sage-label--icon-left-#{$-icon-name} {
+    &::before {
+      margin-right: sage-spacing(2xs);
+      @include sage-icon-base($-icon-name);
+    }
+  }
+
+  .sage-label--icon-right-#{$-icon-name} {
+    &::after {
+      margin-left: sage-spacing(2xs);
+      @include sage-icon-base($-icon-name);
+    }
+  }
+}

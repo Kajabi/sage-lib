@@ -1,0 +1,43 @@
+/* ==================================================
+  ** _tabs.scss
+  type: object
+
+================================================== */
+
+.sage-tabs {
+  display: flex;
+}
+
+.sage-tabs--layout-default {
+  flex-direction: row;
+
+  > * {
+    &:not(:last-of-type) {
+      margin-right: sage-spacing(sm);
+    }
+
+    @include sage-tab-underline(".sage-tabs__tab--active");
+  }
+}
+
+.sage-tabs--layout-stacked {
+  flex-direction: column;
+
+  > * {
+    margin-bottom: sage-spacing(sm);
+  }
+  .sage-choice {
+    flex-basis: initial;
+  }
+}
+
+.sage-tabs-pane {
+  display: none;
+  visibility: hidden;
+  margin-bottom: sage-spacing();
+}
+
+.sage-tabs-pane--active {
+  display: block;
+  visibility: visible;
+}

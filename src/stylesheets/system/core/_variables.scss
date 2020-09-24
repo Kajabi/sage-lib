@@ -1,0 +1,404 @@
+// ==================================================
+// CSS CUSTOM PROPERTIES
+// ==================================================
+
+/*
+  Place global custom properties here.
+  These should be limited to properties that are _expected_ to change
+  via media query, JS, or some other action/method, not used as static variables
+*/
+
+// :root {
+//   --something: something;
+// }
+
+
+// ==================================================
+// MISC GLOBAL STANDARDS
+// ==================================================
+$sage-transition: 0.1s ease-in-out !default;
+
+// ==================================================
+// TYPOGRAPHY
+// ==================================================
+
+
+// Text
+$sage-body-font-size: rem(16px) !default;
+$sage-body-font-color: sage-color(charcoal, 400) !default;
+$sage-body-letter-spacing: sage-letter-spacing(xs) !default;
+
+// Headings
+$sage-heading-font-color: sage-color(charcoal, 500) !default;
+$sage-heading-margin-bottom: sage-spacing(sm) !default;
+
+
+// ==================================================
+// GRID
+// ==================================================
+$sage-grid-baseline: $default-baseline !default;
+$sage-grid-columns: 12 !default;
+$sage-grid-gap: sage-spacing(sm) !default;
+
+$sage-grid-breakpoint-sm: sage-breakpoint(sm-min) !default;
+$sage-grid-breakpoint-sm-max: sage-breakpoint(sm-max) !default;
+$sage-grid-breakpoint-md: sage-breakpoint(md-min) !default;
+$sage-grid-breakpoint-md-max: sage-breakpoint(md-max) !default;
+$sage-grid-breakpoint-lg: sage-breakpoint(lg-min) !default;
+$sage-grid-breakpoint-lg-max: sage-breakpoint(lg-max) !default;
+$sage-grid-breakpoint-xl: sage-breakpoint(xl-min) !default;
+
+
+// ==================================================
+// AVATARS
+// ==================================================
+
+$sage-avatar-ring-width: 1px !default;
+
+
+// ==================================================
+// FORM ELEMENTS
+// ==================================================
+
+$sage-form-element-spacing: sage-spacing(sm) !default;
+
+
+// ==================================================
+// BUTTONS
+// ==================================================
+
+// Base styles
+$sage-btn-transition: $sage-transition !default;
+$sage-btn-border-width: rem(2px) !default;
+$sage-btn-border-radius: sage-border(radius) !default;
+$sage-btn-letter-spacing: $sage-body-letter-spacing !default;
+$sage-btn-shadow-base: sage-shadow(sm) !default;
+$sage-btn-shadow-hover: sage-shadow(md) !default;
+
+// Focus outline
+$sage-btn-focus-outline-spacing: sage-spacing(3xs) !default;
+$sage-btn-focus-outline-width: 1 !default;
+$sage-btn-focus-outline-color: currentColor !default;
+
+// Primary button
+$sage-btn-primary-bg-color: sage-color(primary) !default;
+$sage-btn-primary-bg-active-color: darken($sage-btn-primary-bg-color, 11%) !default;
+$sage-btn-primary-bg-hover-color: lighten($sage-btn-primary-bg-color, 9%) !default;
+$sage-btn-primary-text-color: sage-color(white) !default;
+
+// Secondary button
+$sage-btn-secondary-text-color: sage-color(primary) !default;
+
+// Tertiary button
+$sage-btn-tertiary-text-color: sage-color(charcoal, 300) !default;
+
+// Danger button
+$sage-btn-danger-text-color: sage-color(red) !default;
+$sage-btn-danger-bg-active-color: sage-color(red, 200) !default;
+$sage-btn-danger-bg-hover-color: sage-color(red, 100) !default;
+
+// Menu button
+$sage-menubtn-toggle-size: rem(24px) !default;
+$sage-menubtn-toggle-line-color: sage-color(grey, 100) !default;
+$sage-menubtn-toggle-line-height: rem(2px) !default;
+$sage-menubtn-toggle-radius: rem(2px) !default;
+$sage-menubtn-focus-outline-size: sage-spacing(xs) !default;
+$sage-menubtn-focus-outline-width: 1 !default;
+$sage-menubtn-focus-outline-color: currentColor !default;
+
+$sage-iconbtn-padding: rem(12px) !default;
+
+
+// ==================================================
+// INPUT FIELDS
+// ==================================================
+
+$sage-inputfield-font-size: $sage-body-font-size !default;
+$sage-inputfield-letter-spacing: $sage-body-letter-spacing !default;
+
+// Border
+$sage-inputfield-border-color: sage-color(grey, 300) !default;
+$sage-inputfield-border-radius: sage-border(radius) !default;
+$sage-inputfield-border-width: rem(1px) !default;
+$sage-inputfield-box-shadow-size: 0 0 0 rem(1px) !default;
+
+// Sizing
+$sage-inputfield-height: rem(40px) !default;
+$sage-inputfield-padding: sage-spacing(sm) !default;
+$sage-inputfield-label-offset: rem(12px) !default;
+$sage-inputfield-padding-offset: $sage-inputfield-padding - $sage-inputfield-border-width;
+$sage-inputfield-padding-filled: rem(4px) !default;
+$sage-inputfield-padding-label: rem(4px) !default;
+
+// Spacing
+$sage-inputfield-spacing: sage-spacing() !default;
+
+// Colors
+$sage-inputfield-color-default: sage-color(charcoal) !default;
+$sage-inputfield-color-disabled: sage-color(grey, 400) !default;
+$sage-inputfield-color-success: sage-color(primary) !default;
+$sage-inputfield-color-error: sage-color(red) !default;
+$sage-inputfield-bg-label: sage-color(white) !default;
+$sage-inputfield-bg-disabled: sage-color(grey, 100) !default;
+
+
+// ==================================================
+// TEXTAREAS
+// ==================================================
+
+// Border
+$sage-textarea-border-color: $sage-inputfield-border-color !default;
+$sage-textarea-border-color-hover: sage-color(grey, 500) !default;
+$sage-textarea-border-radius: $sage-inputfield-border-radius !default;
+$sage-textarea-border-width: $sage-inputfield-border-width !default;
+$sage-textarea-box-shadow-size: $sage-inputfield-box-shadow-size !default;
+
+// Padding
+$sage-textarea-label-padding: rem(3px) !default;
+$sage-textarea-padding: $sage-inputfield-padding !default;
+
+// Sizing
+$sage-textarea-min-height: rem(90px) !default;
+$sage-textarea-height: 100% !default;
+$sage-textarea-width: 100% !default;
+
+// Spacing
+$sage-textarea-spacing: $sage-inputfield-spacing !default;
+
+// Colors
+$sage-textarea-color-default: $sage-inputfield-color-default !default;
+$sage-textarea-color-disabled: $sage-inputfield-color-disabled !default;
+$sage-textarea-color-success: $sage-inputfield-color-success !default;
+$sage-textarea-color-error: $sage-inputfield-color-error !default;
+$sage-textarea-bg-default: sage-color(white) !default;
+$sage-textarea-bg-disabled: $sage-inputfield-bg-disabled !default;
+$sage-textarea-label-bg-color: $sage-textarea-bg-default !default;
+
+
+// ==================================================
+// CHECKBOXES
+// ==================================================
+
+// Colors
+$sage-checkbox-color-default: sage-color(grey, 400) !default;
+$sage-checkbox-color-checked: sage-color(primary) !default;
+$sage-checkbox-color-disabled: sage-color(grey, 200) !default;
+$sage-checkbox-color-disabled-checked: sage-color(primary, 200) !default;
+
+$sage-checkbox-size: rem(20px) !default;
+$sage-checkbox-border-radius: sage-border(radius) !default;
+$sage-checkbox-transition: 0.15s ease-in-out !default;
+
+$sage-checkbox-marker-border: rem(2px) !default;
+$sage-checkbox-marker-height: rem(12px) !default;
+$sage-checkbox-marker-width: rem(6px) !default;
+$sage-checkbox-marker-color: sage-color(white) !default;
+$sage-checkbox-marker-rotate: 42.5deg !default;
+$sage-checkbox-marker-offset: $sage-checkbox-marker-border * 2 !default;
+
+// Focus state
+$sage-checkbox-focus-outline-size: sage-spacing(2xs) !default;
+$sage-checkbox-focus-outline-width: 1 !default;
+$sage-checkbox-focus-outline-color: sage-color(primary) !default;
+
+
+// ============================================
+// RADIO BUTTONS
+// ============================================
+
+// Colors
+$sage-radio-color-default: sage-color(grey, 400) !default;
+$sage-radio-color-checked: sage-color(primary) !default;
+$sage-radio-color-hover: sage-color(grey, 500) !default;
+$sage-radio-color-disabled: sage-color(grey, 100) !default;
+$sage-radio-color-disabled-checked: sage-color(grey, 300) !default;
+
+$sage-radio-button-size: rem(16px) !default;
+$sage-radio-border-radius: sage-border(radius-round) !default;
+$sage-radio-transition: 0.15s ease-in-out !default;
+$sage-radio-selected-indicator-size: rem(7px) !default;
+$sage-radio-selected-indicator-color: sage-color(white) !default;
+
+// Focus state
+$sage-radio-focus-outline-size: sage-spacing(2xs) !default;
+$sage-radio-focus-outline-width: 1 !default;
+$sage-radio-focus-outline-color: currentColor !default;
+
+
+// ============================================
+// SWITCHES
+// ============================================
+
+// Colors
+$sage-switch-color-default: sage-color(grey, 400) !default;
+$sage-switch-color-default-text: sage-color(charcoal, 300) !default;
+$sage-switch-color-checked: sage-color(primary) !default;
+$sage-switch-color-disabled: sage-color(grey, 200) !default;
+$sage-switch-color-disabled-text: sage-color(grey, 400) !default;
+$sage-switch-color-disabled-checked: sage-color(primary, 200) !default;
+$sage-switch-color-disabled-checked-text: sage-color(charcoal, 100) !default;
+
+// Switch
+$sage-switch-label-left-spacing: sage-spacing(sm) !default;
+$sage-switch-border-radius: rem(16px) !default;
+$sage-switch-height: rem(24px) !default;
+$sage-switch-width: rem(44px) !default;
+
+// Toggle
+$sage-switch-toggle-size: rem(20px) !default;
+
+// Focus state
+$sage-switch-focus-outline-spacing: sage-spacing(2xs) !default;
+$sage-switch-focus-outline-width: 1 !default;
+$sage-switch-focus-outline-color: sage-color(primary) !default;
+
+
+// ==================================================
+// TABLES
+// ==================================================
+
+// Borders and sizing
+$sage-table-border: rem(1px) solid sage-color(grey);
+$sage-table-cell-padding-xs: sage-spacing(xs);
+$sage-table-cell-padding-sm: sage-spacing(sm) sage-spacing(xs);
+$sage-table-cell-padding-lg: sage-spacing(md) sage-spacing(sm);
+$sage-table-heading-padding-sm: sage-spacing(sm) sage-spacing(xs);
+$sage-table-heading-padding-lg: sage-spacing(md) sage-spacing(sm);
+$sage-table-max-width: none;
+
+// Text
+$sage-table-caption-font-size: "%t-sage-body-small";
+$sage-table-caption-alignment: center;
+$sage-table-heading-font-color: sage-color(grey, 400);
+$sage-table-heading-font-size: "%t-sage-heading-6";
+$sage-table-cell-font-color: sage-color(charcoal);
+$sage-table-cell-font-size: "%t-sage-body-small";
+
+// Overflow gradient
+$sage-table-overflow-indicator-width: sage-spacing(md);
+$sage-table-overflow-indicator-color-start: rgba(255, 255, 255, 0);
+$sage-table-overflow-indicator-color-end: sage-color(white);
+$sage-table-overflow-indicator-opacity: 0.95;
+$sage-table-overflow-indicator-gradient: linear-gradient(90deg, $sage-table-overflow-indicator-color-start 0%, rgba($sage-table-overflow-indicator-color-end, $sage-table-overflow-indicator-opacity) 100%);
+
+
+// ==================================================
+// LOADERS AND SPINNERS
+// ==================================================
+
+$sage-loader-bar-bg-color: sage-color(grey) !default;
+$sage-loader-bar-height: rem(10px) !default;
+$sage-loader-bar-width: rem(300px) !default;
+$sage-loader-bar-speed: 2s !default;
+
+$sage-loader-spinner-size: rem(48px) !default;
+$sage-loader-spinner-speed: 0.9s !default;
+
+
+// ==================================================
+// OVERLAYS
+// ==================================================
+
+$sage-overlay-bg-color: rgba(sage-color(charcoal, 100), 0.5) !default;
+$sage-overlay-backdrop-filter: blur(rem(2px)) !default;
+$sage-overlay-z-index: sage-z-index(underlay) !default;
+$sage-overlay-transition-default: opacity 0.5s ease-in-out !default;
+$sage-overlay-transition-backdrop-filter: backdrop-filter 0.7s ease-in-out !default;
+
+
+// ==================================================
+// PANEL
+// ==================================================
+
+$sage-panel-bg-color: sage-color(white) !default;
+$sage-panel-padding: sage-spacing(sm) !default;
+$sage-panel-padding-lg: sage-spacing() !default;
+$sage-panel-border-radius: sage-border(radius) !default;
+$sage-panel-box-shadow: sage-shadow(sm) !default;
+
+
+// ==================================================
+// SIDEBAR
+// ==================================================
+
+$sage-sidebar-breakpoint: sage-breakpoint(md-min) !default;
+
+
+// ==================================================
+// ASSISTANT
+// ==================================================
+
+$sage-assistant-height: rem(56px) !default;
+$sage-assistant-branding-height: rem(20px) !default;
+$sage-assistant-search-height: rem(40px) !default;
+$sage-assistant-search-bg-color: sage-color(grey, 300) !default;
+$sage-assistant-search-bg-opacity: 0.1 !default;
+$sage-assistant-search-placeholder-color: sage-color(grey, 400) !default;
+$sage-assistant-search-placeholder-transition: color 0.15s ease-in-out, opacity 0.15s ease-in-out !default;
+
+
+// ==================================================
+// TABS
+// ==================================================
+
+$sage-tabs-default-color: sage-color(charcoal, 100) !default;
+
+// Active tab
+$sage-tabs-active-color: sage-color(charcoal, 500) !default;
+
+// Active tab indicator
+$sage-tabs-active-border-height: rem(3px) !default;
+$sage-tabs-active-border-width: 100% !default;
+$sage-tabs-active-border-color: sage-color(primary) !default;
+$sage-tabs-active-border-radius: sage-border(radius) !default;
+
+
+// ==================================================
+// TOOLTIPS
+// ==================================================
+
+// Colors
+$sage-tooltip-bg-color: sage-color(charcoal, 400) !default;
+$sage-tooltip-light-bg-color: sage-color(white) !default;
+$sage-tooltip-font-color: sage-color(white) !default;
+$sage-tooltip-light-font-color: sage-color(charcoal, 400) !default;
+
+// Indicator arrow
+$sage-tooltip-arrow-size: rem(6px) !default;
+$sage-tooltip-arrow-inactive: $sage-tooltip-arrow-size solid transparent !default;
+$sage-tooltip-arrow-active: $sage-tooltip-arrow-size solid $sage-tooltip-bg-color !default;
+
+// Styling
+$sage-tooltip-shadow: sage-shadow(xl) !default;
+$sage-tooltip-padding: sage-spacing(2xs) sage-spacing(sm) !default;
+$sage-tooltip-small-padding: sage-spacing(2xs) sage-spacing(xs) !default;
+$sage-tooltip-large-padding: sage-spacing(xs) sage-spacing(xs) !default;
+$sage-tooltip-zindex: sage-z_index(overlay) !default;
+$sage-tooltip-maxwidth: rem(200px) !default;
+$sage-tooltip-large-maxwidth: rem(320px) !default;
+
+
+// ==================================================
+// CARDS
+// ==================================================
+
+$sage-card-shadow: sage-shadow(sm);
+$sage-card-radius: sage-border(radius);
+$sage-card-spacing: sage-spacing(md);
+$sage-card-spacing-2xl: sage-spacing(2xl);
+$sage-card-text-color: sage-color(charcoal, 200);
+
+
+// ==================================================
+// ALERTS
+// ==================================================
+
+
+// ==================================================
+// BANNERS
+// ==================================================
+
+$sage-banner-height: rem(48px);
+$sage-banner-text-color: sage-color(white);
+$sage-banner-text-color-dark: sage-color(charcoal);
+$sage-banner-icon-size: rem(22px);
