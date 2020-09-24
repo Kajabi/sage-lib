@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Sage NPM Package",
   "main": "dist/main.js",
+  "private": "true",
   "scripts": {
     "build": "webpack --mode production",
     "postinstall": "yarn run build"
