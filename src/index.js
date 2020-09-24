@@ -1,1 +1,1 @@
-export { default } from './javascript/react-components'
+export * from './javascript/react-components'
