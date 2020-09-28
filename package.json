@@ -1,12 +1,19 @@
 {
   "name": "@kajabi/sage",
-  "version": "1.2.0",
+  "version": "1.0.0",
   "description": "Sage NPM Package",
   "main": "dist/react.js",
   "private": "true",
   "scripts": {
     "build": "webpack --mode production",
-    "build:watch": "webpack --mode production --watch"
+    "build:watch": "webpack --mode production --watch",
+    "preversion": "yarn build",
+    "version": "git commit -am \"Update dist for release\" && git checkout -b release && git add -f ",
+    "postversion": "git push --tags && git checkout amster && git branch -D release && git push",
+    "release:pre": "npm version prelease",
+    "release:patch": "npm version patch",
+    "release:minor": "npm version minor",
+    "release:major": "npm version major"
   },
   "repository": {
     "type": "git",

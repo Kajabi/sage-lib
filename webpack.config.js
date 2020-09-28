@@ -60,7 +60,7 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/,
-        loader: 'url-loader?limit=100000&name=./images/[name].[ext]',
+        loader: 'url-loader',
         options: {
           limit: Infinity
         }
