@@ -1,0 +1,183 @@
+<fieldset class="sage-type">
+
+  <h3 class="t-sage-heading-6">Text (default)</h3>
+  <%= render "examples/elements/form_input/markup",
+    id: "form__fname1",
+    input_type: "text",
+    label_text: "First name",
+    placeholder: "First name",
+    value: "",
+    required: true,
+    disabled: false,
+    input_mode: "",
+    pattern: "",
+    max: "",
+    minlength: "",
+    maxlength: "",
+    has_error: false,
+    message_text: "This is a message",
+    prefix: "",
+    suffix: ""
+  %>
+
+  <h3 class="t-sage-heading-6">Text (with error)</h3>
+  <%= render "examples/elements/form_input/markup",
+    id: "form__fname2",
+    input_type: "text",
+    label_text: "First name",
+    placeholder: "First name",
+    value: "",
+    required: true,
+    disabled: false,
+    input_mode: "",
+    pattern: "",
+    max: "",
+    minlength: "",
+    maxlength: "",
+    has_error: true,
+    message_text: "This is a message",
+    prefix: "",
+    suffix: ""
+  %>
+
+  <h3 class="t-sage-heading-6">Text (prefilled)</h3>
+  <%= render "examples/elements/form_input/markup",
+    id: "form__country",
+    input_type: "text",
+    label_text: "Country",
+    placeholder: "Country",
+    value: "USA",
+    required: true,
+    disabled: false,
+    input_mode: "",
+    pattern: "",
+    max: "",
+    minlength: "",
+    maxlength: "",
+    has_error: false,
+    message_text: "",
+    prefix: "",
+    suffix: ""
+  %>
+
+  <h3 class="t-sage-heading-6">Text (disabled)</h3>
+  <%= render "examples/elements/form_input/markup",
+    id: "form__apt",
+    input_type: "text",
+    label_text: "PO Box",
+    placeholder: "PO Box",
+    value: "",
+    required: true,
+    disabled: true,
+    input_mode: "",
+    pattern: "",
+    max: "",
+    minlength: "",
+    maxlength: "",
+    has_error: false,
+    message_text: "This is a message",
+    prefix: "",
+    suffix: ""
+  %>
+
+  <h3 class="t-sage-heading-6">Email</h3>
+  <%= render "examples/elements/form_input/markup",
+    id: "form__email",
+    input_type: "email",
+    label_text: "Email address",
+    placeholder: "Email address",
+    value: "",
+    required: true,
+    disabled: false,
+    input_mode: "",
+    pattern: "",
+    max: "",
+    minlength: "",
+    maxlength: "",
+    has_error: false,
+    message_text: "This is a message",
+    prefix: "",
+    suffix: ""
+  %>
+
+  <h3 class="t-sage-heading-6">Password</h3>
+  <%= render "examples/elements/form_input/markup",
+    id: "form__pw",
+    input_type: "password",
+    label_text: "Create a password",
+    placeholder: "Create a password",
+    value: "",
+    required: true,
+    disabled: false,
+    input_mode: "",
+    pattern: "",
+    max: "",
+    minlength: "8",
+    maxlength: "128",
+    has_error: false,
+    message_text: "",
+    prefix: "",
+    suffix: ""
+  %>
+
+  <h3 class="t-sage-heading-6">Numbers</h3>
+  <%= render "examples/elements/form_input/markup",
+    id: "form__num",
+    input_type: "number",
+    label_text: "Enter quantity (max 48)",
+    placeholder: "Enter quantity (max 48)",
+    value: "",
+    required: true,
+    disabled: false,
+    input_mode: "numeric",
+    pattern: "[0-9]{2}",
+    max: "48",
+    minlength: "",
+    maxlength: "2",
+    has_error: false,
+    message_text: "",
+    prefix: "",
+    suffix: ""
+  %>
+  
+  <h3 class="t-sage-heading-6">Prefixed</h3>
+  <%= render "examples/elements/form_input/markup",
+    id: "form__pre",
+    input_type: "text",
+    label_text: "Custom domain",
+    placeholder: "Custom domain",
+    value: "",
+    required: true,
+    disabled: false,
+    input_mode: "text",
+    pattern: "[a-z]+\.[a-zA-Z0-9\/\-]+",
+    max: "",
+    minlength: "",
+    maxlength: "",
+    has_error: false,
+    message_text: "",
+    prefix: "https://",
+    suffix: ""
+  %>
+
+  <h3 class="t-sage-heading-6">Suffixed</h3>
+  <%= render "examples/elements/form_input/markup",
+    id: "form__suf",
+    input_type: "number",
+    label_text: "Price per month",
+    placeholder: "Price per month",
+    value: "",
+    required: true,
+    disabled: false,
+    input_mode: "numeric",
+    pattern: "[0-9]{6}",
+    max: "100000",
+    minlength: "",
+    maxlength: "6",
+    has_error: false,
+    message_text: "",
+    prefix: "",
+    suffix: ".00"
+  %>
+
+</fieldset>

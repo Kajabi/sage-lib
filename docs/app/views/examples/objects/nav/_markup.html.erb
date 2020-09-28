@@ -1,0 +1,16 @@
+<nav class="sage-nav" aria-label="Main">
+  <ul class="sage-nav__list">
+    <% nav_links.each do |link| %>
+    <li>
+      <a href="<%= link[:url] %>" class="sage-nav__link<%= link[:is_active] ? " sage-nav__link--active" : "" %>"><%= link[:text] %></a>
+      <% if link[:sub_links] %>
+      <ul class="sage-nav__list sage-nav__list--sub">
+        <% link[:sub_links].each do |link| %>
+        <li><a href="<%= link[:url] %>" class="sage-nav__link sage-nav__link--sub<%= link[:is_active] ? " sage-nav__link--active" : "" %>"><%= link[:text] %></a></li>
+        <% end %>
+      </ul>
+      <% end %>
+    </li>
+    <% end %>
+  </ul>
+</nav>

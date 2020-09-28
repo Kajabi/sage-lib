@@ -1,0 +1,11 @@
+<div class="sage-panel">
+  <div class="sage-panel__header">
+    <h3 id="<%= title %>-example-code" class="sage-panel__title">Code</h3>
+  </div>
+  <div class="example__code">
+    <button class="example__expand-btn" aria-expanded="false" aria-controls="example-code-<%= title %>">Expand this code snippet</button>
+    <div id="example-code-<%= title %>" class="sage-code-snippet" tabindex="-1">
+      <pre class="prettyprint"><code><%= CGI.unescapeHTML(CGI.escapeHTML render "examples/#{type.pluralize}/#{title}/preview") %></code></pre>
+    </div>
+  </div>
+</div>

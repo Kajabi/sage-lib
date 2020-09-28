@@ -1,0 +1,33 @@
+<h4>Single/independent card</h4>
+<%= render "examples/objects/expandable_card/markup",
+  header: "Header Content",
+  body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+%>
+
+<h4>Card group</h4>
+<ul class="sage-expandable-card-group" data-js-accordion="group-toggle-solo">
+  <li class="sage-expandable-card">
+    <div class="sage-expandable-card__header" data-js-accordion="header">
+      <h4 class="sage-expandable-card__title">Tab 1</h4>
+    </div>
+    <div class="sage-expandable-card__body sage-type" data-js-accordion="body">
+      <p>Lorem ipsum dolor sit</p>
+    </div>
+  </li>
+  <li class="sage-expandable-card">
+    <div class="sage-expandable-card__header" data-js-accordion="header">
+      <h4 class="sage-expandable-card__title">Tab 2</h4>
+    </div>
+    <div class="sage-expandable-card__body sage-type" data-js-accordion="body">
+      <p>Lorem ipsum dolor sit</p>
+    </div>
+  </li>
+  <li class="sage-expandable-card">
+    <div class="sage-expandable-card__header" data-js-accordion="header">
+      <h4 class="sage-expandable-card__title">Tab 3</h4>
+    </div>
+    <div class="sage-expandable-card__body sage-type" data-js-accordion="body">
+      <p>Lorem ipsum dolor sit</p>
+    </div>
+  </li>
+</ul>

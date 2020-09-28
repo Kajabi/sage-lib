@@ -1,0 +1,148 @@
+<div class="sage-row">
+  <div class="sage-col--md-6">
+    <!-- Checkbox Default -->
+    <%= render "examples/elements/switch/markup",
+      type: "checkbox",
+      id: "sage-switch-1",
+      name: "sage-switch-1",
+      value: "switch-1-value",
+      label_text: "Switch (checkbox)",
+      has_error: false,
+      checked: false,
+      disabled: false,
+      required: false,
+      message: ""
+    %>
+    <!-- Checkbox Error -->
+    <%= render "examples/elements/switch/markup",
+      type: "checkbox",
+      id: "sage-switch-2",
+      name: "sage-switch-2",
+      value: "switch-2-value",
+      label_text: "Switch (checkbox) with error",
+      has_error: true,
+      checked: false,
+      disabled: false,
+      required: true,
+      message: ""
+    %>
+    <!-- Checkbox Disabled -->
+    <%= render "examples/elements/switch/markup",
+      type: "checkbox",
+      id: "sage-switch-3",
+      name: "sage-switch-3",
+      value: "switch-3-value",
+      label_text: "Switch disabled",
+      has_error: false,
+      checked: false,
+      disabled: true,
+      required: false,
+      message: ""
+    %>
+    <!-- Checkbox On & Disabled -->
+    <%= render "examples/elements/switch/markup",
+      type: "checkbox",
+      id: "sage-switch-4",
+      name: "sage-switch-4",
+      value: "switch-4-value",
+      label_text: "Switch on disabled",
+      has_error: false,
+      checked: true,
+      disabled: true,
+      required: false,
+      message: ""
+    %>
+    <!-- Checkbox w/ Message -->
+    <%= render "examples/elements/switch/markup",
+      type: "checkbox",
+      id: "sage-switch-5",
+      name: "sage-switch-5",
+      value: "switch-5-value",
+      label_text: "Switch (checkbox) with info",
+      has_error: false,
+      checked: false,
+      disabled: false,
+      required: false,
+      message: "Additional Info"
+    %>
+    <%= render "examples/elements/switch/markup",
+      type: "checkbox",
+      id: "sage-switch-6",
+      name: "sage-switch-6",
+      value: "switch-6-value",
+      label_text: "Switch (checkbox) error with info",
+      has_error: true,
+      checked: false,
+      disabled: false,
+      required: true,
+      message: "Additional Info"
+    %>
+  </div>
+  <div class="sage-col--md-6">
+    <!-- Radio Default -->
+    <%= render "examples/elements/switch/markup",
+      type: "radio",
+      id: "sage-switch-7",
+      name: "sage-switch-7",
+      value: "switch-7-value",
+      label_text: "Switch (radio)",
+      has_error: false,
+      checked: true,
+      disabled: false,
+      required: false,
+      message: ""
+    %>
+    <%= render "examples/elements/switch/markup",
+      type: "radio",
+      id: "sage-switch-8",
+      name: "sage-switch-7",
+      value: "switch-8-value",
+      label_text: "Switch (radio)",
+      has_error: false,
+      checked: false,
+      disabled: false,
+      required: false,
+      message: ""
+    %>
+    <hr/>
+    <!-- Radio Error -->
+    <%= render "examples/elements/switch/markup",
+      type: "radio",
+      id: "sage-switch-9",
+      name: "sage-switch-9",
+      value: "switch-9-value",
+      label_text: "Switch (radio) error",
+      has_error: true,
+      checked: false,
+      disabled: false,
+      required: true,
+      message: ""
+    %>
+    <!-- Radio Disabled -->
+    <%= render "examples/elements/switch/markup",
+      type: "radio",
+      id: "sage-switch-10",
+      name: "sage-switch-10",
+      value: "switch-10-value",
+      label_text: "Switch (radio) disabled",
+      has_error: false,
+      checked: false,
+      disabled: true,
+      required: false,
+      message: ""
+    %>
+    <!-- Radio On & Disabled -->
+    <%= render "examples/elements/switch/markup",
+      type: "radio",
+      id: "sage-switch-11",
+      name: "sage-switch-10",
+      value: "switch-11-value",
+      label_text: "Switch (radio) on disabled",
+      has_error: false,
+      checked: true,
+      disabled: true,
+      required: false,
+      message: ""
+    %>
+  </div>
+</div>

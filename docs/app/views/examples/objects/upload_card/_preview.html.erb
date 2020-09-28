@@ -1,0 +1,14 @@
+<h5>Initial State</h5>
+<%= render "examples/objects/upload_card/markup" %>
+
+<h5>Selected File State</h5>
+<%= render "examples/objects/upload_card/markup",
+  file_selected: true
+%>
+
+<h5>Error State</h5>
+<%= render "examples/objects/upload_card/markup",
+  errors: [
+    "Your file is too large."
+  ]
+%>

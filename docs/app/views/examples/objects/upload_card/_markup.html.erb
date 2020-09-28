@@ -1,0 +1,42 @@
+<%
+file_selected = defined?(file_selected) && file_selected == true
+errors = defined?(errors) ? errors : false
+%>
+<div class="sage-upload-card<%= " sage-upload-card--selected" if file_selected %><%= " sage-upload-card--error" if errors %>">
+    <div class="sage-upload-card__dropzone">
+      <input class="sage-upload-card__input" accept=".csv" multiple="multiple" type="file" autocomplete="off" />
+      <% if file_selected %>
+        <div class="sage-upload-card__preview sage-icon-card sage-icon-card--draft">
+          <i class="sage-icon-image-3xl" aria-label="Upload graphic"></i>
+        </div>
+        <div class="sage-upload-card__body">
+          <p class="sage-upload-card__text">Heading 6, Charcoal 400</p>
+          <%= render "examples/elements/button/markup",
+            color: "secondary",
+            icon_class: "sage-btn--icon-right-caret-down",
+            is_link_btn: false,
+            text: "Replace file"
+          %>
+          <p class="sage-upload-card__subtext">Body small, Charcoal 200</p>
+        </div>
+      <% else %>
+        <div class="sage-upload-card__body">
+          <i class="sage-upload-card__icon sage-icon-image-3xl" aria-label="Upload graphic"></i>
+          <%= render "examples/elements/button/markup",
+            color: "secondary",
+            icon_class: "sage-btn--icon-right-caret-down",
+            is_link_btn: false,
+            text: "Select a file"
+          %>
+          <p class="sage-upload-card__subtext">Body small, Charcoal 200</p>
+        </div>
+      <% end %>
+    </div>
+    <% if errors %>
+      <div class="sage-upload-card__errors">
+        <% errors.each do | error | %>
+        <p>Body small medium, Red 300 Errors here...</p>
+        <% end %>
+      </div>
+    <% end %>
+</div>

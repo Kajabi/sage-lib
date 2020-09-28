@@ -1,0 +1,19 @@
+<% css_active_class = "sage-choice--active" %>
+
+<button
+  type="button"
+  class="sage-choice <%= css_active_class if component.active %>"
+  data-js-tabs-target="<%= component.target %>"
+  data-sage-active-class="<%= css_active_class %>"
+  role="tab"
+  aria-controls="<%= component.target %>"
+>
+  <div class="sage-choice__content">
+    <% if component.text.present? %>
+      <em class="sage-choice__text"><%= component.text.html_safe %></em>
+    <% end %>
+    <% if component.subtext.present? %>
+      <span class="sage-choice__subtext" aria-hidden="true"><%= component.subtext.html_safe %></span>
+    <% end %>
+  </div>
+</button>

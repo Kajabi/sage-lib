@@ -1,0 +1,57 @@
+version: '3.4'
+
+services:
+  router:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+    volumes:
+      - ./docker/nginx.conf:/etc/nginx/nginx.conf
+  js:
+    user: root
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.dev
+      target: base
+    command:
+      - /bin/bash
+      - -c
+      - |
+        yarn install --check-files
+        yarn build:watch
+    volumes:
+      - .:/app:delegated
+      - ./yarncache:/root/.yarn-cache
+      - ./node_modules:/app/node_modules
+  docs:
+    user: root
+    build:
+      context: ./docs
+      dockerfile: Dockerfile.dev
+      target: base
+    image: app
+    working_dir: '/app/docs'
+    command:
+      - /bin/bash
+      - -c
+      - |
+        gem install bundler
+        yarn install --check-files
+        bundle check || bundle install --jobs 8
+        /container-complete.sh
+        yarn start
+    ports:
+      - "4000:4000"
+      - "4035:4035"
+    depends_on:
+      - router
+      - js
+    volumes:
+      - '.:/app:delegated'
+      - "./docs/bundle:/usr/local/bundle"
+      - "./docs/yarncache:/root/.yarn-cache"
+      - "./docs/node_modules:/app/docs/node_modules"
+      - "./docs/compiled_assets:/app/docs/public/assets"
+      - "./docs/tmp:/app/docs/tmp"
+
+

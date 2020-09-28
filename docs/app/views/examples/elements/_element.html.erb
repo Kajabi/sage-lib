@@ -1,0 +1,27 @@
+<% info_content = sage_elements.select { |element| element[:title] == @title }[0] %>
+<% props_content = render partial: "examples/elements/#{@title}/props" %>
+<% do_content = render partial: "examples/elements/#{@title}/rules_do" %>
+<% dont_content = render partial: "examples/elements/#{@title}/rules_dont" %>
+
+<%= render "examples/shared/heading",
+  info_content: info_content %>
+
+<%= render "examples/shared/quick_links",
+  props_content: props_content,
+  do_content: do_content,
+  dont_content: dont_content %>
+
+<%= render "examples/shared/preview",
+  type: "element",
+  title: @title %>
+
+<%= render "examples/shared/code",
+  type: "element",
+  title: @title %>
+
+<%= render "examples/shared/props",
+  props_content: props_content %>
+
+<%= render "examples/shared/rules",
+  do_content: do_content,
+  dont_content: dont_content %>

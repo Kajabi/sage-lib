@@ -1,0 +1,44 @@
+<%
+colors = [
+  "draft",
+  "info",
+  "success",
+  "warning",
+  "danger"
+]
+%>
+
+<h5>Default</h5>
+<% colors.each do | color | %>
+  <%= render "examples/elements/label/markup",
+  color: color
+  %>
+<% end %>
+
+<h5>Subtle</h5>
+<% colors.each do | color | %>
+  <%= render "examples/elements/label/markup",
+  color: color,
+  type: "subtle"
+  %>
+<% end %>
+
+<h5>Bold</h5>
+<% colors.each do | color | %>
+  <%= render "examples/elements/label/markup",
+  color: color,
+  type: "bold"
+  %>
+<% end %>
+
+<h5>With Icons</h5>
+<div style="display: grid; grid-gap: 4px; grid-auto-columns: max-content; grid-auto-flow: column;">
+  <%= render "examples/elements/label/markup",
+    color: "draft",
+    icon_left: "add-small"
+  %>
+  <%= render "examples/elements/label/markup",
+    color: "draft",
+    icon_right: "tag"
+  %>
+</div>

@@ -1,0 +1,8 @@
+<div class="sage-alert<%= component.color ? " sage-alert--#{component.color}" : ""%>">
+  <i class="sage-alert__icon <%= component.icon_name %>" aria-hidden="true"></i>
+  <div class="sage-alert__copy">
+    <h3 class="sage-alert__title"><%= component.title %></h3>
+    <p class="sage-alert__desc"><%= component.desc %></p>
+    <button type="button" class="sage-alert__close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  </div>
+</div>

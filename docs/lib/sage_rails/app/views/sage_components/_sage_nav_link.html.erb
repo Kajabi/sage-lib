@@ -1,0 +1,7 @@
+<% active_class = (component.no_active.blank? && current_page?(component.link)) ? "sage-nav__link--active" : "" %>
+<% component_class = component.type ? "sage-nav__link--#{component.type}" : "" %>
+<%= link_to component.text,
+  component.link,
+  method: component.method,
+  class: "sage-nav__link #{active_class} #{component_class}"
+%>

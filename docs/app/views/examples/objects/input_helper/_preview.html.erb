@@ -1,0 +1,28 @@
+<fieldset class="sage-type" data-js-example="input-helper">
+  <h3 class="t-sage-heading-6">Input helper</h3>
+  <%= render "examples/objects/input_helper/markup",
+    helper_id: "",
+    helper_target: "",
+    description: "Your password must meet the following criteria:",
+    hints: [
+      {
+        id: "pw-hint-characters",
+        type_detect: "characters",
+        type_detect_min: 8,
+        text: "At least eight characters"
+      },
+      {
+        id: "pw-hint-numbers",
+        type_detect: "numbers",
+        type_detect_min: 1,
+        text: "Has one or more numbers"
+      },
+      {
+        id: "pw-hint-symbols",
+        type_detect: "symbols",
+        type_detect_min: 1,
+        text: "Includes at least one symbol ($@!#%)"
+      }
+    ]
+  %>
+</fieldset>

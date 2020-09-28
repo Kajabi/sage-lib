@@ -1,0 +1,31 @@
+<div class="sage-container sage-container--xs" style="padding-top: 200px;">
+  <%= image_pack_tag("media/docs/sage.svg", width: 100) %>
+  <h1 class="t-sage-heading-1">Sage Design System</h1>
+  <h2 class="t-sage-heading-6">SCSS Based Component Library for our applications UI</h2>
+  <p class="t-sage-body">The Sage Design System (SDS) is our single source of truth, providing everything you need to build great products for our customers. It is the culmination of designers and developers working together to give teams the ability to ship high-quality products faster.</p>
+
+  <% if @wrong %>
+    <div class="sage-banner sage-banner--warning">
+      <p class="sage-banner__title">Hmm&hellip; that doesn&#8217;t seem right. Try again?</p>
+      <% if lockup_hint %>
+        <p class="sage-banner__copy"><%= lockup_hint %></p>
+      <% end %>
+    </div>
+  <% end %>
+
+  <%= form_for :lockup, url: { action: 'unlock' }, html: {style: "padding-top: 50px"} do |form| %>
+    <% if params[:return_to].present? %>
+      <%= form.hidden_field "return_to", value: params[:return_to] %>
+    <% elsif @return_to.present? %>
+      <%= form.hidden_field "return_to", value: @return_to %>
+    <% end %>
+
+    <div class="sage-input-group" role="group">
+      <div class="sage-input">
+        <%= form.password_field "codeword", placeholder: "Password...", autofocus: true, class: "sage-input__field", id: "password" %>
+        <label for="password" class="sage-input__label">Password</label>
+      </div>
+      <%= button_tag "Enter", class: "sage-input-group__button sage-btn sage-btn--primary sage-btn--icon-right-arrow-right" %>
+    </div>
+  <% end %>
+</div>

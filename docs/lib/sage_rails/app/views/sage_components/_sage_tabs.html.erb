@@ -1,0 +1,22 @@
+<nav
+  data-js-tabs="<%= component.id %>"
+  class="sage-tabs <%= component.stacked.present? ? "sage-tabs--layout-stacked" : "sage-tabs--layout-default" %>"
+  role="tablist"
+>
+  <% component.items.each do |item| %>
+    <% if component.style.present? && component.style === "choice" %>
+      <%= sage_component SageChoice,
+        target: item[:target],
+        text: item[:text],
+        subtext: item[:subtext],
+        active: item[:active]
+      %>
+    <% else %>
+      <%= sage_component SageTab,
+        target: item[:target],
+        text: item[:text],
+        active: item[:active]
+      %>
+    <% end %>
+  <% end %>
+</nav>

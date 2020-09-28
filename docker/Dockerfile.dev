@@ -1,0 +1,14 @@
+FROM circleci/node:14.11-browsers AS base
+
+USER root
+
+RUN apt-get update -qq\
+  && apt-get install -y vim\
+  && rm -rf /var/lib/apt/lists/*
+
+COPY ./docker/docker-entrypoint.sh /
+COPY ./docker/container-complete.sh /
+
+ENTRYPOINT ["/docker-entrypoint.sh"]
+
+WORKDIR /app

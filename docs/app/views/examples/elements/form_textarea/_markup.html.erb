@@ -1,0 +1,6 @@
+<div class="sage-textarea">
+    <textarea class="sage-textarea__field" id="<%= id %>" name="<%= id %>" placeholder="<%= placeholder %>" <%= disabled ? "disabled" : "" %>><% if content != "" %><%= content %><% end %></textarea>
+    <% if label_text != "" %>
+    <label for="<%= id %>" class="sage-textarea__label"><%= label_text %></label>
+    <% end %>
+  </div>

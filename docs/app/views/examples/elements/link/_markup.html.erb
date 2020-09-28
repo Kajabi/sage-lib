@@ -1,0 +1,15 @@
+<% if help_link && show_label %>
+<a href="<%= url %>" class="sage-link--help"><%= label %></a>
+<% elsif help_link && !show_label %>
+<a href="<%= url %>" class="sage-link--help-icon-only">
+  <span class="visually-hidden"><%= label %></span>
+</a>
+<% elsif !external && !launch %>
+<a href="<%= url %>"><%= label %></a>
+<% elsif !external && launch %>
+<a href="<%= url %>" class="sage-link--launch"><%= label %></a>
+<% elsif external && launch %>
+<a href="<%= url %>" target="_blank"><%= label %></a>
+<% elsif external && !launch %>
+<a href="<%= url %>" target="_blank" class="sage-link--no-launch"><%= label %></a>
+<% end %>

@@ -1,0 +1,23 @@
+<%= content_for :quick_links do %>
+  <div class="quick-links">
+    <h2 class="quick-links__title">Contents</h2>
+    <ul class="quick-links__body">
+      <li class="quick-links__item">
+        <a href="#<%= @title %>-example-preview" class="quick-links__link">Preview</a>
+      </li>
+      <li class="quick-links__item">
+        <a href="#<%= @title %>-example-code" class="quick-links__link">Code</a>
+      </li>
+      <% if props_content.present? %>
+        <li class="quick-links__item">
+          <a href="#<%= @title %>-example-props" class="quick-links__link">Properties</a>
+        </li>
+      <% end %>
+      <% if do_content.present? || dont_content.present? %>
+        <li class="quick-links__item">
+          <a href="#<%= @title %>-example-best-practices" class="quick-links__link">Best Practices</a>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

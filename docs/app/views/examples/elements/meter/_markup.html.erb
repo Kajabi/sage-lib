@@ -1,0 +1,5 @@
+<div class="sage-meter">
+  <% if label != "" %><label for="<%= id -%>" class="sage-meter__label visually-hidden"><%= label -%></label><% end %>
+  <p id="<%= id -%>-description" class="sage-meter__description" data-low-text="<%= low_value_text %>" data-med-text="<%= med_value_text %>" data-high-text="<%= high_value_text %>" data-max-text="<%= max_value_text %>"></p>
+  <meter class="sage-meter__bar" id="<%= id -%>" max="<%= max_value -%>" <% if optimum_value != "" -%>optimum="<%= optimum_value -%>"<%- end %> value="<%= value -%>" js-meter-type="password" aria-live="polite" aria-describedby="<%= id -%>-description"></meter>
+</div>

@@ -1,0 +1,21 @@
+<% permalink = "object-#{title}" %>
+
+<div class="sage-panel">
+  <div class="sage-panel__header">
+    <h2 id="<%= permalink %>" class="sage-panel__title">
+      <%= link_to title.titleize, "##{permalink}", class: "example__link" %>
+    </h2>
+
+    <div class="sage-panel__header-aside">
+      <%= link_to pages_object_path(title), class: "sage-btn sage-btn--tertiary sage-btn--icon-right-preview-on", data: { "js-tooltip": "Inspect object details" } do %>
+        Details
+      <% end %>
+      <%= link_to pages_breakout_path(type: :object, title: title), target: "_blank", class: "sage-btn sage-btn--tertiary sage-btn--icon-only-launch", data: { "js-tooltip": "Open breakout page" } do %>
+        <span class="visually-hidden">Opens <%= title.titleize %> in a new window</span>
+      <% end %>
+    </div>
+  </div>
+  <div class="sage-type">
+    <%= render "examples/objects/#{title}/preview" %>
+  </div>
+</div>

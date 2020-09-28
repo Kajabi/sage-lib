@@ -1,0 +1,109 @@
+<h3 class="t-sage-heading-6">Regular tabs</h3>
+<%= render "examples/objects/tabs/markup",
+  id: "example-tabs1",
+  options: [
+    {
+      text: "Active",
+      id: "test0",
+      content: "Active content"
+    },
+    {
+      text: "Sub Page 1",
+      id: "test1",
+      content: "Sub Page 1 content"
+    },
+    {
+      text: "Sub Page 2",
+      id: "test2",
+      content: "Sub Page 2 content"
+    },
+    {
+      text: "Sub Page 3",
+      id: "test3",
+      content: "Sub Page 3 content"
+    },
+  ]
+%>
+
+<h3 class="t-sage-heading-6">Progress styled tabs</h3>
+<%= render "examples/objects/tabs/markup",
+  id: "example-tabs2",
+  is_progressbar: true,
+  options: [
+    {
+      text: "Active",
+      id: "test0",
+      content: "Active content"
+    },
+    {
+      text: "Sub Page 1",
+      id: "test1",
+      content: "Sub Page 1 content"
+    },
+    {
+      text: "Sub Page 2",
+      id: "test2",
+      content: "Sub Page 2 content"
+    },
+    {
+      text: "Sub Page 3",
+      id: "test3",
+      content: "Sub Page 3 content"
+    },
+  ]
+%>
+
+<h3 class="t-sage-heading-6">Choice tabs - default layout</h3>
+<%= render "examples/objects/tabs/markup",
+  id: "example-tabs3",
+  style: "choice",
+  options: [
+    {
+      text: "Active",
+      id: "test0",
+      content: "Active content"
+    },
+    {
+      text: "Sub Page 1",
+      id: "test1",
+      content: "Sub Page 1 content"
+    },
+    {
+      text: "Sub Page 2",
+      id: "test2",
+      content: "Sub Page 2 content"
+    },
+    {
+      text: "Sub Page 3",
+      id: "test3",
+      content: "Sub Page 3 content"
+    },
+  ]
+%>
+
+<h3 class="t-sage-heading-6">Choice tabs - stacked layout</h3>
+<%= render "examples/objects/tabs/markup",
+  id: "example-tabs4",
+  stacked: true,
+  style: "choice",
+  options: [
+    {
+      text: "Upload file",
+      subtext: "Upload a CSV or Excel file and map the columns to import.",
+      id: "test0",
+      content: "Upload file content"
+    },
+    {
+      text: "Copy/paste from file",
+      subtext: "Copy/paste the rows from a CSV file and insert below.",
+      id: "test1",
+      content: "Copy/paste from file content"
+    },
+    {
+      text: "Add a single contact",
+      subtext: "Manually add a single contact and add a tag or grant an offer.",
+      id: "test2",
+      content: "Add a single contact content"
+    },
+  ]
+%>

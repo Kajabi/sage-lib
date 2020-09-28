@@ -1,0 +1,19 @@
+<div class="sage-form-section">
+  <div class="sage-form-section__info">
+    <h3 class="sage-form-section__title"><%= title %></h3>
+    <p class="sage-form-section__subtitle"><%= sub_title %></p>
+  </div>
+  <div class="sage-form-section__content">
+    <div class="sage-form-section__panel">
+      <!-- Start Of Content -->
+      <%= render "examples/objects/alert/markup",
+        color: "",
+        sage_icon_name: "sage-icon-info-circle",
+        sage_alert_title: "Form Section Content Will Go Here",
+        sage_alert_desc: "This component is designed to be very flexible and take any sort of content you want to pass to it.",
+        dismissible: false
+      %>
+      <!-- End Of Content -->
+    </div>
+  </div>
+</div>

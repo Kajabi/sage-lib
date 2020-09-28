@@ -1,0 +1,30 @@
+<fieldset class="sage-type">
+
+  <h3 class="t-sage-heading-6">Default</h3>
+  <%= render "examples/elements/form_textarea/markup",
+    id: "txtarea-example",
+    placeholder: "Your message",
+    label_text: "Your message",
+    disabled: false,
+    content: ""
+  %>
+
+  <h3 class="t-sage-heading-6">No label (placeholder only)</h3>
+   <%= render "examples/elements/form_textarea/markup",
+    id: "txtarea-example-nolabel",
+    placeholder: "Your message",
+    label_text: "",
+    disabled: false,
+    content: ""
+  %>
+
+  <h3 class="t-sage-heading-6">Disabled</h3>
+  <%= render "examples/elements/form_textarea/markup",
+    id: "txtarea-example-disabled",
+    placeholder: "Your message",
+    label_text: "Your message",
+    disabled: true,
+    content: "Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Praesent commodo cursus magna, vel scelerisque nisl consectetur et."
+  %>
+
+</fieldset>

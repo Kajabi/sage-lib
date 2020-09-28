@@ -1,0 +1,37 @@
+<%= content_for :heading do %>
+  <h1>Tokens</h1>
+  <p>Design tokens are the visual design atoms of the design system&mdash;specifically, they are named entities that store visual design attributes. We use them in place of hard-coded values (such as hex values for color or pixel values for spacing) in order to maintain a scalable and consistent visual system for UI development.</p>
+<% end %>
+<%= content_for :quick_links do %>
+  <div class="quick-links">
+    <h2 class="quick-links__title">Contents</h2>
+    <ul class="quick-links__body">
+      <% sage_tokens.each do |token| %>
+        <li class="quick-links__item">
+          <a href="#<%= token[:category] %>" class="quick-links__link"><%= token[:category].titleize %></a>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+<div class="sage-panel-set">
+  <% sage_tokens.each do |token| %>
+    <div class="sage-panel">
+      <div class="sage-panel__header">
+        <h2 class="sage-panel__title" id="<%= token[:category] %>"><%= token[:category].titleize %></h2>
+      </div>
+      <div class="sage-type">
+        <h3 class="t-sage-heading-6">Default</h3>
+        <div class="tokens">
+          <div class="token token-<%= token[:category] %>"><strong>sage-<%= token[:category] %>( )</strong></div>
+        </div>
+        <h3 class="t-sage-heading-6">Options</h3>
+        <div class="tokens">
+          <% token[:tokens] .each do |test| %>
+            <div class="token token-<%= token[:category] %>-<%= test[:name] %>"><strong>sage-<%= token[:category] %>(<%= test[:name] %>)</strong></div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,8 @@
+<%= content_for :heading do %>
+  <h1>Sandbox</h1>
+  <p>Use this scratchpad to test out elements and objects in context. Just be sure not to commit your changes. ❤️</p>
+<% end %>
+
+<%= sage_component SagePanel, {} do %>
+  <%= sage_component SageButton, { style: "primary", value: "This is a sage component rails test" } %>
+<% end %>

@@ -1,0 +1,13 @@
+<div class="sage-data-card<%= " sage-data-card--#{color}" if defined?(color) %>">
+  <div class="sage-data-card__header">
+    <%= header.html_safe if defined?(header) %>
+    <% if defined?(header_aside) %>
+      <div class="sage-data-card__header-aside">
+        <%= header_aside.html_safe %>
+      </div>
+    <% end %>
+  </div>
+  <div class="sage-data-card__body">
+    <%= body.html_safe %>
+  </div>
+</div>

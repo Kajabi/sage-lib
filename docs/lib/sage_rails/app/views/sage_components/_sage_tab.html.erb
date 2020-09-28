@@ -1,0 +1,15 @@
+<% css_active_class = "sage-tab--active" %>
+
+<button
+  type="button"
+  class="
+    sage-tab <%= css_active_class if component.active %>"
+  data-js-tabs-target="<%= component.target %>"
+  data-sage-active-class="<%= css_active_class %>"
+  role="tab"
+  aria-controls="<%= component.target %>"
+>
+  <% if component.text.present? %>
+    <%= component.text.html_safe %>
+  <% end %>
+</button>

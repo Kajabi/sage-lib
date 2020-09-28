@@ -1,0 +1,15 @@
+FROM circleci/ruby:2.4.9-node-browsers AS base
+
+USER root
+
+RUN apt-get update -qq\
+  && apt-get install -y vim\
+  && rm -rf /var/lib/apt/lists/*
+
+COPY ./docker-entrypoint.sh /
+ENTRYPOINT ["/docker-entrypoint.sh"]
+
+EXPOSE 4000
+EXPOSE 4035
+
+WORKDIR /app

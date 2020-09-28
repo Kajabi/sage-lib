@@ -1,0 +1,11 @@
+/* ==================================================
+  ** _table.scss
+
+  For Sage documentation use
+================================================== */
+
+.sage-table {
+  .example__preview & {
+    margin-bottom: sage-spacing();
+  }
+}

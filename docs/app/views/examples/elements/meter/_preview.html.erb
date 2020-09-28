@@ -1,0 +1,31 @@
+<!-- Default -->
+<%= render "examples/elements/form_input/markup",
+  id: "pw-meter-example",
+  input_type: "number",
+  label_text: "Meter value",
+  placeholder: "Meter value",
+  value: "1",
+  required: true,
+  disabled: false,
+  input_mode: "",
+  pattern: "",
+  max: "8",
+  minlength: "",
+  maxlength: "",
+  has_error: false,
+  message_text: "",
+  prefix: "",
+  suffix: ""
+%>
+
+<%= render "examples/elements/meter/markup",
+  id: "pw-hint-meter",
+  label: "Password strength",
+  value: 1,
+  max_value: 8,
+  optimum_value: 6,
+  low_value_text: "Weak password",
+  med_value_text: "¯\\_(ツ)_/¯",
+  high_value_text: "Not bad",
+  max_value_text: "Strong password"
+%>

@@ -1,0 +1,8 @@
+<tr id="<%= item[:title] %>">
+  <td><%= item[:title].titleize %></td>
+  <td><span class="status-key__icon status-key__icon--<%= item[:scss] %>"><span class="visually-hidden"><%= item[:scss].titleize %></span></span></td>
+  <td><span class="status-key__icon status-key__icon--<%= item[:a11y] %>"><span class="visually-hidden"><%= item[:a11y].titleize %></span></span></td>
+  <td><span class="status-key__icon status-key__icon--<%= item[:docs] %>"><span class="visually-hidden"><%= item[:docs].titleize %></span></span></td>
+  <td><span class="status-key__icon status-key__icon--<%= item[:rails] %>"><span class="visually-hidden"><%= item[:rails].titleize %></span></span></td>
+  <td><span class="status-key__icon status-key__icon--<%= item[:react] %>"><span class="visually-hidden"><%= item[:react].titleize %></span></span></td>
+</tr>

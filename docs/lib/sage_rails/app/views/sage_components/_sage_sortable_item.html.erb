@@ -1,0 +1,13 @@
+<section
+  class="sage-sortable__item"
+  data-js-sortable-update-url="<%= component.url_update %>"
+  <%= "id=#{component.id}" if component.id %>
+>
+  <div class="sage-sortable__item-content">
+    <h1 class="t-sage-body"><%= component.name %></h1>
+    <h2 class="t-sage-body-xsmall"><%= component.label %></h2>
+  </div>
+  <div class="sage-sortable__item-actions">
+    <%= component.content %>
+  </div>
+</section>

@@ -1,0 +1,50 @@
+<div class="sage-table-wrapper">
+  <% if responsive %>
+  <div class="sage-table-wrapper__overflow">
+  <% end %>
+    <table class="sage-table<%= striped ? " sage-table--striped" : "" %><%= selectable ? " sage-table--selectable" : "" %><%= condensed ? " sage-table--condensed" : "" %><%= sortable ? " sage-table--sortable" : ""%>">
+      <% if caption != "" %><caption><%= caption %></caption><% end %>
+      <thead>
+        <tr>
+          <th><% if sortable %><a href="#" class="sage-table__sort sage-table__sort--selected"><% end %>Cras Porta<% if sortable %></a><% end %></th>
+          <th><% if sortable %><a href="#" class="sage-table__sort"><% end %>Dapibus Ridiculus<% if sortable %></a><% end %></th>
+          <th><% if sortable %><a href="#" class="sage-table__sort"><% end %>Purus<% if sortable %></a><% end %></th>
+          <th><% if sortable %><a href="#" class="sage-table__sort"><% end %>Mollis<% if sortable %></a><% end %></th>
+          <th><% if sortable %><a href="#" class="sage-table__sort"><% end %>Ridiculus<% if sortable %></a><% end %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="<%= selectable ? "sage-row--selectable" : "" %>">
+          <td>Venenatis Condimentum</td>
+          <td>Ridiculus</td>
+          <td>Sem Elit</td>
+          <td>Nibh Aenean</td>
+          <td>Sem Elit</td>
+        </tr>
+        <tr class="<%= selectable ? "sage-row--selectable" : "" %>">
+          <td>Nullam Porta</td>
+          <td>Adipiscing Ligula</td>
+          <td>Euismod Etiam</td>
+          <td>Malesuada</td>
+          <td>Etiam</td>
+        </tr>
+        <tr class="<%= selectable ? "sage-row--selectable" : "" %>">
+          <td>Ridiculus</td>
+          <td>Cras Malesuada</td>
+          <td>Commodo</td>
+          <td>Cursus Pharetra</td>
+          <td>Fringilla</td>
+        </tr>
+        <tr class="<%= selectable ? "sage-row--selectable" : "" %>">
+          <td>Pharetra Mattis</td>
+          <td>Magna</td>
+          <td>Elit Inceptos</td>
+          <td>Cursus Pharetra</td>
+          <td>Dolor Fringilla</td>
+        </tr>
+      </tbody>
+    </table>
+  <% if responsive %>
+  </div>
+  <% end %>
+</div>

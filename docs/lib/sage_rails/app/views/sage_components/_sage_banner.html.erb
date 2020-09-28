@@ -1,0 +1,36 @@
+<% if component.context_ladera_top %>
+  <div style="margin-bottom: 60px">
+  <div style="top: 0; position: absolute; left: 0; right: 0;">
+<% end %>
+
+<div class="sage-banner <%= component.type ? "sage-banner--#{component.type}" : "" %>">
+  <% if component.icon.present? %>
+    <i class="sage-banner__icon sage-icon-<%= component.icon %>-lg" aria-hidden="true"></i>
+  <% end %>
+  <% if component.title.present? %>
+    <p class="sage-banner__text">
+      <%= component.title %>
+    </p>
+  <% end %>
+  <% if component.text.present? %>
+    <p class="sage-banner__text">
+      <%= component.text %>
+    </p>
+  <% end %>
+  <% if component.link.present? %>
+    <a
+      class="sage-banner__link"
+      <% component.link[:attributes].each do |key, value| %>
+        <%= "#{key}='#{value}'".html_safe %>
+      <% end if component.link[:attributes]&.is_a?(Hash) %>
+    >
+      <%= component.link[:name] %>
+    </a>
+  <% end %>
+  <%= component.content if component.content.present? %>
+</div>
+
+<% if component.context_ladera_top %>
+  </div>
+  </div>
+<% end %>

@@ -1,0 +1,22 @@
+<%
+is_compact = defined?(is_compact) && is_compact
+is_spaced = defined?(is_spaced) && is_spaced
+has_img = defined?(has_img) && has_img
+%>
+<div class="d-sage-card<%= " d-sage-card--compact" if is_compact %><%= " d-sage-card--spaced" if is_spaced %>">
+  <% if has_img %>
+    <div class="d-sage-card__img">
+      <%= image_pack_tag("#{img_path}", alt: "#{img_alt}") %>
+    </div>
+  <% end %>
+  <div class="d-sage-card__body">
+    <h2 class="d-sage-card__title t-sage-heading-5"><%= title %></h2>
+    <p class="d-sage-card__text"><%= text %></p>
+    <a
+      href="#" 
+      class="sage-btn<%= " sage-btn--#{action_style}" if defined?(action_style) %><%= " sage-btn--icon-#{icon_style}" if defined?(icon_style) %>"
+    >
+      <%= action_text %>
+    </a>
+  </div>
+</div>

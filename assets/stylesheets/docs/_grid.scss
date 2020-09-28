@@ -1,0 +1,21 @@
+/* ==================================================
+  ** _grid.scss
+
+  For Sage documentation use
+================================================== */
+
+.grid-item {
+  margin-bottom: sage-spacing(md);
+  padding: sage-spacing(xs) sage-spacing(md);
+  text-align: center;
+  background: sage-color(grey, 200);
+  border-radius: sage-border(radius);
+
+  [class*="sage-col--align-"] & {
+    text-align: inherit;
+  }
+}
+
+.grid-item--small {
+  padding: sage-spacing(2xs);
+}

@@ -1,0 +1,23 @@
+<div class="sage-page-heading">
+  <% if component.title.present? %>
+    <h1 class="sage-page-heading__title">
+      <%= component.title %>
+      <% if component.help_link.present? %>
+        <a href="<%= component.help_link[:url] %>" class="sage-link--help-icon-only" target="_blank" referrer="no-referrer">
+          <span class="visually-hidden"><%= component.help_link[:label] %></a>
+        </a>
+      <% end %>
+    </h1>
+  <% end %>
+  <% if component.link_url.present? %>
+    <nav aria-label="Breadcrumbs" class="sage-page-heading__back sage-breadcrumbs">
+      <p class="sage-breadcrumbs__item">
+        <a class="sage-breadcrumbs__link sage-breadcrumbs__link--current" aria-current="page" href="<%= component.link_url %>">
+          <i class="sage-breadcrumbs__icon sage-icon-caret-left" aria-label="navigate to"></i>
+          <%= component.link_text %>
+        </a>
+      </p>
+    </nav>
+  <% end %>
+  <%= component.content %>
+</div>

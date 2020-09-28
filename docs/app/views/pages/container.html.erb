@@ -1,0 +1,78 @@
+<%
+containers = [
+  {
+    full_name: 'Default (Fluid/Full Width) Container',
+    short_name: 'Default (Full/Fluid)',
+    size: 'Fluid 100% wide',
+    alias: false,
+    id: 'default',
+  },
+  {
+    full_name: 'Modal (Fluid/Full Width) Container',
+    short_name: 'Modal (Full/Fluid)',
+    size: 'Maximum of 500px wide',
+    alias: 'modal',
+    id: 'modal',
+  },
+  {
+    full_name: 'Extra small Container',
+    short_name: 'Extra Small',
+    size: 'Maximum of 760px wide',
+    alias: 'xs',
+    id: 'xsmall',
+  },
+  {
+    full_name: 'Small Container',
+    short_name: 'Small',
+    size: 'Maximum of 900px wide',
+    alias: 'sm',
+    id: 'small',
+  },
+  {
+    full_name: 'Medium Container',
+    short_name: 'Medium',
+    size: 'Maximum of 1200px wide',
+    alias: 'md',
+    id: 'medium',
+  },
+  {
+    full_name: 'Large Container',
+    short_name: 'Large',
+    size: 'Maximum of 1440px wide',
+    alias: 'lg',
+    id: 'large',
+  }
+]
+%>
+<%= content_for :heading do %>
+  <h1>Containers</h1>
+  <p>Containers provide a restricted width box any sort of content can be placed within. Here we show Card object inside the containers, but containers have no intrinsic decorations.
+<% end %>
+<%= content_for :quick_links do %>
+  <div class="quick-links">
+    <h2 class="quick-links__title">Contents</h2>
+    <ul class="quick-links__body">
+      <% containers.each do | container | %>
+        <li class="quick-links__item">
+          <a href="#<%= container[:id] %>" class="quick-links__link"><%= container[:short_name] %></a>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+<div class="sage-type">
+  <% containers.each do | container | %>
+    <h2 id="<%= container[:id] %>"><%= container[:full_name] %></h2>
+    <div class="sage-container<%= " sage-container--#{container[:alias]}" if container[:alias] %>">
+      <div class="sage-panel">
+        <p><%= container[:size] %></p>
+      </div>
+    </div>
+    <div class="docs-container">
+      <pre class="prettyprint"><code>&lt;div class=&quot;sage-container<%= " sage-container--#{container[:alias]}" if container[:alias] %>&quot;&gt;
+  &lt;!-- <%= container[:size] %> --&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+  <% end %>
+
+</div>

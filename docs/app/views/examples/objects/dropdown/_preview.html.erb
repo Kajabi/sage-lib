@@ -1,0 +1,96 @@
+<%
+sample_menu = [
+  {
+    label: "Edit",
+    modifiers: ["icon-pen"]
+  },
+  {
+    label: "New",
+    modifiers: ["primary", "icon-add"]
+  },
+  {
+    label: "Visit Element",
+    item_modifiers: ["border-before"],
+    modifiers: ["icon-arrow-right"]
+  },
+  {
+    label: "Share Element",
+    modifiers: ["icon-url"]
+  },
+  {
+    label: "Take A Dangerous Action",
+    modifiers: ["danger", "icon-remove-circle"]
+  }
+];
+
+sample_select = [
+  {
+    label: "-- None",
+    modifiers: []
+  },
+  {
+    label: "Option 1",
+    modifiers: []
+  },
+  {
+    label: "Option 2",
+    modifiers: []
+  },
+  {
+    label: "Option 3",
+    modifiers: []
+  },
+  {
+    label: "Option 4 (disabled)",
+    item_modifiers: ["disabled"],
+    modifiers: []
+  }
+]
+%>
+
+<h5>Menu Button</h5>
+<%= render "examples/objects/dropdown/markup",
+  options: sample_menu,
+  trigger: %(
+    <button
+      aria-controls="participant_options_menu"
+      class="sage-btn sage-btn--primary"
+      type="button"
+    >
+      Add An Element
+    </button>
+  )
+%>
+
+<h5>Select</h5>
+<%= render "examples/objects/dropdown/markup",
+  options: sample_select,
+  has_search: true,
+  trigger: %(
+    <button
+      aria-controls="participant_options_menu"
+      class="sage-dropdown__trigger-selected-value sage-btn sage-btn--tertiary sage-btn--icon-right-caret-down"type="button"
+    >
+      <span class="sage-btn__truncate-text">&nbsp;</span>
+    </button>
+    <label class="sage-dropdown__trigger-label">Add an Element</label>
+  ),
+  trigger_modifier: "select"
+%>
+
+<h5>Form Field</h5>
+<%= render "examples/objects/dropdown/markup",
+  options: sample_select,
+  has_search: true,
+  trigger: %(
+    <button
+      aria-controls="participant_options_menu"
+      class="sage-dropdown__trigger-selected-value sage-btn sage-btn--tertiary sage-btn--icon-right-caret-down"
+      type="button"
+    >
+      <span class="sage-btn__truncate-text">&nbsp;</span>
+    </button>
+    <label class="sage-dropdown__trigger-label">Add an Element</label>
+  ),
+  trigger_modifier: "select-labeled"
+%>

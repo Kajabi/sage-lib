@@ -1,0 +1,44 @@
+<div class="sage-assistant">
+  <%- if menu_button -%>
+    <button class="sage-menubutton" aria-expanded="false" aria-controls="sage-sidebar-menu" data-js-btn-target="sage-sidebar-menu" data-js-target-type="sidebar">
+      <span class="sage-menubutton__bar"></span><span class="sage-menubutton__bar"></span><span class="sage-menubutton__bar"></span>
+      <span class="visually-hidden">Toggle main menu</span>
+    </button>
+  <%- end -%>
+  <%= link_to pages_index_path do %>
+    <%= image_pack_tag("media/docs/sage.svg", class: "sage-assistant__branding")%>
+  <% end %>
+  <div class="sage-assistant__body">
+  </div>
+  <div class="sage-assistant__actions">
+    <%= link_to "💎 Gem v#{$SAGE_VERSION_GEM}",
+      $SAGE_VERSION_GEM_URL,
+      class: "sage-label sage-label--draft sage-spacer-right-2xs",
+      target: "_blank",
+      rel: "noopener noreferrer",
+      title: "Open SageRails gem source"
+    %>
+    <%= link_to "📦 Package v#{$SAGE_VERSION_FRONTEND}",
+      $SAGE_VERSION_FRONTEND_URL,
+      class: "sage-label sage-label--draft sage-spacer-right-2xs",
+      target: "_blank",
+      rel: "noopener noreferrer",
+      title: "Open Sage frontent package source"
+    %>
+    |
+    <%= link_to "Release Notes",
+      $SAGE_RELEASE_URL,
+      class: "sage-btn sage-btn--small sage-btn--tertiary",
+      target: "_blank",
+      rel: "noopener noreferrer",
+      title: "Github release notes"
+    %>
+    <%= link_to "Changelog",
+      "https://github.com/Kajabi/sage/releases",
+      class: "sage-btn sage-btn--small sage-btn--secondary",
+      target: "_blank",
+      rel: "noopener noreferrer",
+      title: "Github changelog"
+    %>
+  </div>
+</div>

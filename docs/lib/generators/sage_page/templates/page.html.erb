@@ -1,0 +1,26 @@
+<%= content_for :heading do %>
+  <h1>[PAGE CONTENT]</h1>
+  <p>[SUBITLE]</p>
+<% end %>
+
+<%= content_for :quick_links do %>
+  <div class="quick-links">
+    <h2 class="quick-links__title">Contents</h2>
+    <ul class="quick-links__body">
+      <li class="quick-links__item">
+        <a href="#[TITLE-SECTION-ID]" class="quick-links__link">[TITLE-SECTION-NAME]</a>
+      </li>
+    </ul>
+  </div>
+<% end %>
+
+<div class="sage-panel">
+  <div class="sage-panel__header">
+    <h2 id="[TITLE-SECTION-ID]" class="sage-panel__title">
+      [TITLE-SECTION-NAME]
+    </h2>
+  </div>
+  <div class="sage-type">
+    [PAGE CONTENT]
+  </div>
+</div>

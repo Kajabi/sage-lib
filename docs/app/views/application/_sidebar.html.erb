@@ -1,0 +1,74 @@
+<%
+foundations_pages = [
+  {
+    name: "Introduction",
+    path: pages_index_path,
+  },
+  {
+    name: "Tokens",
+    path: pages_foundations_path(:token),
+  },
+  {
+    name: "Colors",
+    path: pages_foundations_path(:color),
+  },
+  {
+    name: "Typography",
+    path: pages_foundations_path(:typography),
+  },
+  {
+    name: "Icons",
+    path: pages_foundations_path(:icon),
+  },
+  {
+    name: "Containers",
+    path: pages_foundations_path(:container),
+  },
+  {
+    name: "Panels and Cards",
+    path: pages_foundations_path(:panels_cards),
+  },
+  {
+    name: "Grid",
+    path: pages_foundations_path(:grid),
+  }
+]
+%>
+<div class="sage-sidebar" data-js-sidebar="sage-sidebar-menu" id="sage-sidebar-menu">
+  <div class="sage-sidebar__body">
+    <nav class="sage-nav" aria-label="Main">
+      <ul class="sage-nav__list">
+        <li>
+          <%= link_to "Foundations", pages_index_path, class: "sage-nav__link #{"sage-nav__link--active" if current_page_foundations?}" %>
+          <% if current_page_foundations? %>
+            <ul class="sage-nav__list sage-nav__list--sub">
+              <% foundations_pages.each do | page | %>
+                <li>
+                  <%= link_to page[:name], page[:path], class: "sage-nav__link sage-nav__link--sub #{"sage-nav__link--active" if current_page?(page[:path])}" %>
+                </li>
+              <% end %>
+            </ul>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to "Elements", pages_elements_path, class: "sage-nav__link #{"sage-nav__link--active" if current_page_elements?}" %>
+        </li>
+        <li>
+          <%= link_to "Objects", pages_objects_path, class: "sage-nav__link #{"sage-nav__link--active" if current_page_objects?}" %>
+        </li>
+        <li>
+          <%= link_to "Sandbox", pages_sandbox_path, class: "sage-nav__link #{"sage-nav__link--active" if current_page?(pages_sandbox_path)}" %>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="sage-sidebar__footer">
+    <nav class="sage-nav" aria-label="Secondary">
+      <ul class="sage-nav__list">
+        <li><%= link_to "Voice & Tone", "https://github.com/Kajabi/sage/wiki/Voice-&-Tone", class: "sage-nav__link", target: "_blank", rel: "noopener noreferrer" %></li>
+        <li><%= link_to "Guidelines", "https://github.com/Kajabi/sage/wiki", class: "sage-nav__link", target: "_blank", rel: "noopener noreferrer" %></li>
+        <li><%= link_to "Code Status", pages_status_path, class: "sage-nav__link #{"sage-nav__link--active" if current_page?(pages_status_path)}" %></li>
+      </ul>
+    </nav>
+  </div>
+</div>

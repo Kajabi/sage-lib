@@ -1,0 +1,10 @@
+<button type="button" data-js-tabs-target="<%= target %>" class="sage-choice" data-sage-active-class="sage-choice--active" role="tab" aria-controls="<%= target %>">
+  <div class="sage-choice__content">
+    <% if defined?(text) && text %>
+    <em class="sage-choice__text"><%= text %></em>
+    <% end %>
+    <% if defined?(subtext) && subtext %>
+    <span class="sage-choice__subtext" aria-hidden="true"><%= subtext %></span>
+    <% end %>
+  </div>
+</button>

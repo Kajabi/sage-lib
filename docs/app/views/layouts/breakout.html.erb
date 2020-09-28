@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%= render "application/meta" %>
+    <%= render "application/styles" %>
+  </head>
+  <body class="sage-page sage-docs sage-page--breakout">
+    <%= render "application/content_skip_link",
+      link_id: "main-content"
+    -%>
+    <header class="sage-header">
+      <%= render "application/assistant",
+        menu_button: false
+      -%>
+    </header>
+    <div class="sage-stage">
+      <main class="sage-content" id="main-content">
+        <div class="sage-container sage-container--sm">
+          <div class="sage-row">
+            <div class="sage-col-12 sage-type">
+              <%= yield :heading %>
+            </div>
+          </div>
+          <hr/>
+          <%= yield %>
+        </div>
+      </main>
+    </div>
+    <div class="sage-overlay" aria-hidden="true"></div>
+    <%= render "scripts" %>
+  </body>
+</html>

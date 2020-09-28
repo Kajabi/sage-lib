@@ -1,0 +1,18 @@
+<dialog
+  class="
+    sage-modal
+    <%= "sage-modal--active" if component.active %>
+  "
+  <%= "data-js-modal-disable-close" if component.disable_close %>
+  data-js-modal="<%= component.id %>"
+>
+  <section class="sage-modal__container" data-js-modal-container>
+    <% if component.content.present? %>
+      <%= component.content %>
+    <% else %>
+      <%= sage_component SageModalContent, {} do %>
+        <%= sage_component SageLoader, { style: "spinner" } %>
+      <% end %>
+    <% end %>
+  </section>
+</dialog>

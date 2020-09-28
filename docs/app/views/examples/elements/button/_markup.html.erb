@@ -1,0 +1,38 @@
+<%
+is_link_btn = defined?(is_link_btn) && is_link_btn
+icon_only = defined?(icon_only) && icon_only
+align_end = defined?(align_end) && align_end
+is_disabled = defined?(is_disabled) && is_disabled
+%>
+<% if is_link_btn %>
+  <a
+    href=<%= link_url != "" ? link_url : "#" %>
+    class="sage-btn sage-btn--<%= color %><%= " sage-btn--#{size}" if defined?(size) %><%= " sage-btn--align-end " if align_end %><%= " disabled" if is_disabled %><%= " #{icon_class}" if defined?(icon_class) %>"
+    <% if is_disabled %>aria-disabled="true"<% end %>
+  >
+    <% if icon_only %>
+      <span class="visually-hidden">
+        <%= text -%>
+      </span>
+    <% else %>
+      <span class="sage-btn__truncate-text">
+        <%= text -%>
+      </span>
+    <% end %>
+  </a>
+<% else %>
+  <button
+    class="sage-btn sage-btn--<%= color %><%= " sage-btn--#{size}" if defined?(size) %><%= " sage-btn--align-end " if align_end %><%= " disabled" if is_disabled %><%= " #{icon_class}" if defined?(icon_class) %>"
+    <% if is_disabled %>disabled<% end %>
+  >
+  <% if icon_only %>
+    <span class="visually-hidden">
+      <%= text -%>
+    </span>
+  <% else %>
+    <span class="sage-btn__truncate-text">
+      <%= text -%>
+    </span>
+  <% end %>
+  </button>
+<% end %>

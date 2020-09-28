@@ -1,0 +1,47 @@
+<%
+colors = [
+  "draft",
+  "success",
+  "info",
+  "warning",
+  "danger"
+]
+%>
+
+<h5>Regular Cards</h5>
+<div class="sage-row">
+  <% colors.each do | color | %>
+    <div class="sage-col-2">
+      <%= render "examples/elements/icon_card/markup", 
+        color: color,
+        icon: "file"
+      %>
+    </div>
+  <% end %>
+</div>
+
+<h5>Subtle Cards</h5>
+<div class="sage-row">
+  <% colors.each do | color | %>
+    <div class="sage-col-2">
+      <%= render "examples/elements/icon_card/markup", 
+        color: color,
+        icon: "file",
+        style: "subtle"
+      %>
+    </div>
+  <% end %>
+</div>
+
+<h5>Bold Cards</h5>
+<div class="sage-row">
+  <% colors.each do | color | %>
+    <div class="sage-col-2">
+      <%= render "examples/elements/icon_card/markup", 
+        color: color,
+        icon: "file",
+        style: "bold"
+      %>
+    </div>
+  <% end %>
+</div>

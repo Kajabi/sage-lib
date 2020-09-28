@@ -1,0 +1,139 @@
+<%= content_for :heading do %>
+  <h1>Colors</h1>
+  <p>Our color palette is built with a minimal approach to reduce decision fatigue and save time making design decisions. All of our colors and text color combinations meet AA requirements with a 4.5:1 passing grade at the bare minimum.</p>
+<% end %>
+<%= content_for :quick_links do %>
+  <div class="quick-links">
+    <h2 class="quick-links__title">Contents</h2>
+    <ul class="quick-links__body">
+      <li class="quick-links__item">
+        <a href="#primary" class="quick-links__link">How we use color</a>
+      </li>
+      <li class="quick-links__item">
+        <a href="#primary" class="quick-links__link">Primary</a>
+      </li>
+      <li class="quick-links__item">
+        <a href="#neutral" class="quick-links__link">Neutrals</a>
+      </li>
+      <li class="quick-links__item">
+        <a href="#grey" class="quick-links__link">Grey</a>
+      </li>
+      <li class="quick-links__item">
+        <a href="#charcoal" class="quick-links__link">Charcoal</a>
+      </li>
+      <li class="quick-links__item">
+        <a href="#purple" class="quick-links__link">Purple</a>
+      </li>
+      <li class="quick-links__item">
+        <a href="#sage" class="quick-links__link">Sage</a>
+      </li>
+      <li class="quick-links__item">
+        <a href="#yellow" class="quick-links__link">Yellow</a>
+      </li>
+      <li class="quick-links__item">
+        <a href="#orange" class="quick-links__link">Orange</a>
+      </li>
+      <li class="quick-links__item">
+        <a href="#red" class="quick-links__link">Red</a>
+      </li>
+      <li class="quick-links__item">
+        <a href="#white" class="quick-links__link">White</a>
+      </li>
+    </ul>
+  </div>
+<% end %>
+<div class="sage-panel">
+  <div class="sage-type">
+    <h2 id="how">How we use color</h2>
+    <p>You will notice <strong>pure black is not used at all as a text color</strong>. Instead, we rely on 400 for our darkest text color value. Our default text color is sage-color(charcoal, 400). To achieve more depth use 300 to 400 shades for text on top of lighter background colors using 100 to 200 for their fill. You can also use 100 to 200 as the text color on darker backgrounds using from 300 to 400 for their fill. Pure white is used as a text color when the lightest shade (100) of a color will not pass color contrast tests. At the moment, this only occurs on the 300 shades of purple, primary, and red.</p>
+    
+    <h2 id="primary">Primary</h2>
+    <p>These are the splashes of color that appear the most in Kajabi’s UI, and are the ones that determine the overall "look" of the app. Use these for things like primary actions, links, navigation items, icons, accent borders, or text we want to emphasize.</p>
+    <%= render "color_values", color: "primary"%>
+    
+    <h2 id="neutral">Neutrals</h2>
+    <p>These are the colors we will use the most and will make up the majority of Kajabi’s UI. Use them for most of our text, backgrounds, and borders, as well as for things like alternative buttons and links.</p>
+    <div class="sage-row">
+      <div class="sage-col--md-6 sage-type">
+        <h3 id="grey">Grey</h3>
+        <%= render "color_values", color: "grey"%>
+      </div>
+      <div class="sage-col--md-6 sage-type">
+        <h3 id="charcoal">Charcoal</h3>
+        <%= render "color_values", color: "charcoal"%>
+      </div>
+    </div>
+
+    <h2>Supporting</h2>
+    <p>These colors should be used fairly conservatively throughout Kajabi’s UI to avoid overpowering our primary colors. We’ll use them when we need an element to stand out.</p>
+    <div class="sage-row">
+      <div class="sage-col--md-6 sage-type">
+        <h3 id="purple">Purple</h3>
+        <%= render "color_values", color: "purple"%>
+      </div>
+      <div class="sage-col--md-6 sage-type">
+        <h3 id="sage">Sage</h3>
+        <%= render "color_values", color: "sage"%>
+      </div>
+      <div class="sage-col--md-6 sage-type">
+        <h3 id="yellow">Yellow</h3>
+        <%= render "color_values", color: "yellow"%>
+      </div>
+      <div class="sage-col--md-6 sage-type">
+        <h3 id="orange">Orange</h3>
+        <%= render "color_values", color: "orange"%>
+      </div>
+      <div class="sage-col--md-6 sage-type">
+        <h3 id="red">Red</h3>
+        <%= render "color_values", color: "red"%>
+      </div>
+      <div class="sage-col--md-6 sage-type">
+        <h3 id="white">White</h3>
+        <div class="colors">
+          <div class="colors__block color-white-300">sage-color(white)</div>
+        </div>
+        <p>All values passed for white will return the same value.</p>
+        <h3 id="black">Black</h3>
+        <div class="colors">
+          <div class="colors__block color-black-300">sage-color(black)</div>
+        </div>
+        <div class="sage-type">
+          <p>All values passed for black will return the same value.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2>Color Combinations</h2>
+    <p>We prescribe a few sets of color combinations for an easy and consisteny pairing between a foreground and a background color</p>
+    
+    <h3>Default</h3>
+    <%
+    colors = [
+      "draft",
+      "info",
+      "success",
+      "warning",
+      "danger"
+    ]
+    %>
+    <% colors.each do | color | %>
+      <%= render "examples/elements/label/markup", color: color %>
+    <% end %>
+    
+    <h3>Subtle</h3>
+    <% colors.each do | color | %>
+      <%= render "examples/elements/label/markup",
+        color: color,
+        type: "subtle"
+      %>
+    <% end %>
+    
+    <h3>Bold</h3>
+    <% colors.each do | color | %>
+      <%= render "examples/elements/label/markup",
+        color: color,
+        type: "bold"
+      %>
+    <% end %>
+  </div>
+</div>

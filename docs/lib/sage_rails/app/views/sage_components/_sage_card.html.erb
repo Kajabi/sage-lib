@@ -1,0 +1,18 @@
+<div
+  class="
+    sage-card
+    <%= "sage-card--center" if component.center %>
+    <%= "sage-card--null" if component.null %>
+    <%= "sage-card--#{component.style}" if component.style %>
+    <%= "sage-card--#{component.color}" if component.color %>
+  "
+  <% component.attributes.each do |key, value| %>
+    <%= "#{key}='#{value}'".html_safe %>
+  <% end if component.attributes&.is_a?(Hash) %>
+>
+  <div class="sage-card__body">
+    <h2 class="sage-card__title t-sage-heading-5"><%= component.title %></h2>
+    <p class="sage-card__text"><%= component.text %></p>
+    <%= component.content %>
+  </div>
+</div>

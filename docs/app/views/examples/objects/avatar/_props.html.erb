@@ -1,0 +1,31 @@
+<tr>
+  <td>color</td>
+  <td>
+    This component uses the <code>--color</code> modifier to change the default
+    color set to the provided color. For example <code>sage-avatar--orange</code>
+    sets the initials color, background color, and optional halo to variants of the
+    system's orange swatch.
+  </td>
+  <td>String</td>
+  <td>null (primary color)</td>
+</tr>
+<tr>
+  <td>ring</td>
+  <td>
+    This component uses the <code>--ring</code> modifier to add a thin border around the image.
+    While this results in a default <code>primary</code> color being applied, this will change
+    dependingon the <code>--color</code> set.
+  </td>
+  <td>Boolean</td>
+  <td>false</td>
+</tr>
+<tr>
+  <td>tile</td>
+  <td>
+    With the <code>--tile</code> modifier this component can become scalable as the core part of
+    a tile. In such cases, the initials or avatar image will be centered on a background depending
+    on the color passed in. The tile container should provide the sizing constraints.
+  </td>
+  <td>Boolean</td>
+  <td>false</td>
+</tr>

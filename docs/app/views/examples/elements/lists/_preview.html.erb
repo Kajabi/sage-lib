@@ -1,0 +1,86 @@
+<h5>Default Lists</h5>
+<p>Lists in Sage get simple default styling.</p>
+<ul>
+  <li>Lorem ipsum</li>
+  <li>Dolor sit amet
+    <ul>
+      <li>Lorem ipsum</li>
+      <li>Dolor sit amet
+        <ul>
+          <li>Lorem ipsum</li>
+          <li>Dolor sit amet</li>
+        </ul>
+      </li>
+      <li>Consectetur adipiscing elit</li>
+    </ul>
+  </li>
+  <li>Consectetur adipiscing elit</li>
+</ul>
+
+<ol>
+  <li>Lorem ipsum</li>
+  <li>Dolor sit amet
+    <ol>
+      <li>Lorem ipsum</li>
+      <li>Dolor sit amet
+        <ol>
+          <li>Lorem ipsum</li>
+          <li>Dolor sit amet</li>
+        </ol>
+      </li>
+      <li>Consectetur adipiscing elit</li>
+    </ol>
+  </li>
+  <li>Consectetur adipiscing elit</li>
+</ol>
+
+<h5>Unstyled List</h5>
+<p>Add <code>sage-list</code> to create an unstyled list such as for complex elements:</p>
+<ul class="sage-list">
+  <li class="sage-switch">
+    <input class="sage-switch__input" id="switch-0a" name="group-1" type="radio" value="option-1">
+    <label class="sage-switch__label" for="switch-0a">It matters a whole lot.</label>
+  </li>
+  <li class="sage-switch">
+    <input class="sage-switch__input" id="switch-1a" name="group-1" type="radio" value="option-2">
+    <label class="sage-switch__label" for="switch-1a">It matters somewhat.</label>
+  </li>
+  <li class="sage-switch">
+    <input class="sage-switch__input" id="switch-2a" name="group-1" type="radio" value="option-3">
+    <label class="sage-switch__label" for="switch-2a">It does not matter one bit at all.</label>
+  </li>
+  <li class="sage-switch">
+    <input class="sage-switch__input" id="switch-3a" name="group-1" type="radio" value="option-4">
+    <label class="sage-switch__label" for="switch-3a">Undecided.</label>
+  </li>
+</ul>
+
+<h5>Inline List</h5>
+<p>Inline lists will wrap by default so this works best with items that have an intrinsically limited smaller width that affords space for other elements to a point.</p>
+<ul class="sage-list sage-list--inline">
+  <li class="sage-switch">
+    <input class="sage-switch__input" id="switch-0b" name="group-2" type="radio" value="option-1">
+    <label class="sage-switch__label" for="switch-0b">It matters a whole lot.</label>
+  </li>
+  <li class="sage-switch">
+    <input class="sage-switch__input" id="switch-1b" name="group-2" type="radio" value="option-2">
+    <label class="sage-switch__label" for="switch-1b">It matters somewhat.</label>
+  </li>
+  <li class="sage-switch">
+    <input class="sage-switch__input" id="switch-2b" name="group-2" type="radio" value="option-3">
+    <label class="sage-switch__label" for="switch-2b">It does not matter one bit at all.</label>
+  </li>
+  <li class="sage-switch">
+    <input class="sage-switch__input" id="switch-3b" name="group-2" type="radio" value="option-4">
+    <label class="sage-switch__label" for="switch-3b">Undecided.</label>
+  </li>
+</ul>
+
+<h5>Non-wrapping Inline List</h5>
+<p>Non-wrapping list will stay packed on one line until 768px at which point it will wrap. This may be most relevant for inline lists for which wrapping is undesirable but has clear limitations inside restricted containers.</p>
+<ul class="sage-list sage-list--inline-fit">
+  <li class="sage-label sage-label--draft sage-label--truncate"><i class="sage-icon-tag-sm"></i> Lorem ipsum</li>
+  <li class="sage-label sage-label--draft sage-label--truncate"><i class="sage-icon-tag-sm"></i> Dolor sit amet</li>
+  <li class="sage-label sage-label--draft sage-label--truncate"><i class="sage-icon-tag-sm"></i> Consectetur</li>
+  <li class="sage-label sage-label--draft sage-label--truncate"><i class="sage-icon-tag-sm"></i> Adipiscing elit</li>
+</ul>

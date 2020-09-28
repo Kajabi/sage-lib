@@ -1,0 +1,2 @@
+class SageGridRow < SageComponent
+end

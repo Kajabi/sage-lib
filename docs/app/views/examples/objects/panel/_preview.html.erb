@@ -1,0 +1,20 @@
+<h5>Basic Panel</h5>
+<%= render "examples/objects/panel/markup",
+  header: %(
+    <h2 class="sage-panel__title">Header Content</h2>
+    <a href="#" class="sage-link--help-icon-only"><span class="visually-hidden">Help me!</span></a>
+  ),
+  header_aside: "<i class='sage-icon-enlarge' aria-label='Sortable'></i>",
+  body: %(
+    <div class="sage-panel__body">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+  ),
+  footer: %(
+    <button class="sage-btn sage-btn--secondary">Other</button>
+    <div class="sage-btn-group">
+      <button class="sage-btn sage-btn--tertiary">Cancel</button>
+      <button class="sage-btn sage-btn--primary">Save</button>
+    </div>
+  )
+%>

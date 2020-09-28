@@ -1,0 +1,135 @@
+<h5>Basic example</h5>
+
+<%= render "examples/objects/icon_list/markup",
+  items: [
+    {
+      bullet: %(
+        <i class="sage-icon-circle-1-lg t-sage--color-grey"></i>
+      ),
+      body: %(
+        <h4 class="sage-icon-list-item__title">Lorem ipsum dolor sit amet</h4>
+        <p>Consectetur adipiscing elit. Donec imperdiet commodo libero, at faucibus justo sollicitudin venenatis. Nulla mattis tellus quis lectus tristique, sit amet dapibus sem placerat.</p>
+      )
+    },
+    {
+      bullet: %(
+        <i class="sage-icon-circle-2-lg t-sage--color-grey"></i>
+      ),
+      body: %(
+        <h4 class="sage-icon-list-item__title">Lorem ipsum dolor sit amet</h4>
+        <p>Consectetur adipiscing elit. Donec imperdiet commodo libero, at faucibus justo sollicitudin venenatis. Nulla mattis tellus quis lectus tristique, sit amet dapibus sem placerat.</p>
+      )
+    },
+    {
+      bullet: %(
+        <i class="sage-icon-circle-3-lg t-sage--color-grey"></i>
+      ),
+      body: %(
+        <h4 class="sage-icon-list-item__title">Lorem ipsum dolor sit amet</h4>
+        <p>Consectetur adipiscing elit. Donec imperdiet commodo libero, at faucibus justo sollicitudin venenatis. Nulla mattis tellus quis lectus tristique, sit amet dapibus sem placerat.</p>
+      )
+    }
+  ]
+%>
+
+<h5>Checkbox list</h5>
+
+<%= render "examples/objects/icon_list/markup",
+  items: [
+    {
+      bullet: %(
+        <input id="c1" type="checkbox" class="sage-checkbox sage-checkbox--standalone" />
+      ),
+      bullet_type: "checkbox",
+      body: %(
+        <label for="c1" class="sage-icon-list-item__label">Grant an offer</label>
+        <div class="sage-icon-list-item__label-subtext">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Tempus aliquam suspendisse pretium diam posuere phasellus
+          sit sed. Consectetur at convallis dis senectus euismod cursus
+          orci, amet quis.
+        </div>
+      )
+    },
+    {
+      bullet: %(
+        <input id="c2" type="checkbox" class="sage-checkbox sage-checkbox--standalone" />
+      ),
+      bullet_type: "checkbox",
+      body: %(
+        <label for="c2" class="sage-icon-list-item__label">Add tags</label>
+        <div class="sage-icon-list-item__label-subtext">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Tempus aliquam suspendisse pretium diam posuere phasellus
+          sit sed. Consectetur at convallis dis senectus euismod cursus
+          orci, amet quis.
+        </div>
+      )
+    },
+    {
+      bullet: %(
+        <input id="c3" type="checkbox" class="sage-checkbox sage-checkbox--standalone" />
+      ),
+      bullet_type: "checkbox",
+      body: %(
+        <label for="c3" class="sage-icon-list-item__label">Subscribe to marketing emails</label>
+        <div class="sage-icon-list-item__label-subtext">
+          By checking this box you certify that you have gathered proper
+          permissions to send marketing emails to every email address in
+          this file.
+        </div>
+      )
+    }
+  ]
+%>
+
+<h5>Radio list</h5>
+
+<%= render "examples/objects/icon_list/markup",
+  items: [
+    {
+      bullet: %(
+        <input id="r1" type="radio" name="radio-group" class="sage-radio sage-radio--standalone" />
+      ),
+      bullet_type: "radio",
+      body: %(
+        <label for="r1" class="sage-icon-list-item__label">Grant an offer</label>
+        <p class="sage-icon-list-item__label-subtext">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Tempus aliquam suspendisse pretium diam posuere phasellus
+          sit sed. Consectetur at convallis dis senectus euismod cursus
+          orci, amet quis.
+        </p>
+      )
+    },
+    {
+      bullet: %(
+        <input id="r2" type="radio" name="radio-group" class="sage-radio sage-radio--standalone" />
+      ),
+      bullet_type: "radio",
+      body: %(
+        <label for="r2" class="sage-icon-list-item__label">Add tags</label>
+        <p class="sage-icon-list-item__label-subtext">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Tempus aliquam suspendisse pretium diam posuere phasellus
+          sit sed. Consectetur at convallis dis senectus euismod cursus
+          orci, amet quis.
+        </p>
+      )
+    },
+    {
+      bullet: %(
+        <input id="r3" type="radio" name="radio-group" class="sage-radio sage-radio--standalone" />
+      ),
+      bullet_type: "radio",
+      body: %(
+        <label for="r3" class="sage-icon-list-item__label">Subscribe to marketing emails</label>
+        <p class="sage-icon-list-item__label-subtext">
+          By checking this box you certify that you have gathered proper
+          permissions to send marketing emails to every email address in
+          this file.
+        </p>
+      )
+    }
+  ]
+%>

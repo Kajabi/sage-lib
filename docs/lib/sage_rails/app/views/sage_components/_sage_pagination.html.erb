@@ -1,0 +1,40 @@
+<% if component.items.total_pages > 1 %>
+  <nav class="sage-pagination" aria-label="Pagination Navigation">
+
+    <span class="sage-pagination__count"><%= component.page_count component.items %></span>
+
+    <ul class="sage-pagination__pages">
+      <% if component.items.first_page?  %>
+      <li class="sage-pagination__item">
+        <a href="#" class="sage-pagination__page sage-pagination__page--disabled">
+          <%= component.prev_text %>
+        </a>
+      </li>
+      <% else %>
+        <li class="sage-pagination__item">
+          <%= link_to_previous_page component.items, component.prev_text, class: "sage-pagination__page", params: component.pager_params %>
+        </li>
+      <% end -%>
+
+      <%= paginate component.items, outer_window: component.window, theme: "sage_theme" %>
+
+      <% if component.items.last_page?  %>
+      <li class="sage-pagination__item">
+        <a href="#" class="sage-pagination__page sage-pagination__page--disabled">
+          <%= component.next_text %>
+        </a>
+      </li>
+      <% else %>
+      <li class="sage-pagination__item">
+        <%= link_to_next_page component.items, component.next_text, class: "sage-pagination__page", params: component.pager_params %>
+      </li>
+      <% end -%>
+    </ul>
+  </nav>
+<% else -%>
+  <div class="sage-pagination">
+    <span class="sage-pagination__count sage-pagination__count--solo">
+      <%= component.page_count component.items %>
+    </span>
+  </div>
+<% end -%>

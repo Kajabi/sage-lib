@@ -1,0 +1,20 @@
+Description:
+============
+    Creates a new component.
+    Pass the under_scored component name and an optional list of attributes as arguments.
+
+Example:
+========
+    bin/rails generate sage_rails_component Profile name age
+
+    creates a Profile component:
+        Component:    lib/sage_rails/sage_components/profile.rb
+        Template:     lib/sage_rails/views/sage_components/profile.html.erb
+
+Usage:
+======
+    <%= sage_component(Profile, {name: 'Jon Doe', age: '27'}) %>
+
+    <%= sage_component(Profile, {name: 'Jon Doe', age: '27'}) do %>
+      Content can be rendered inside the component
+    <% end %>
