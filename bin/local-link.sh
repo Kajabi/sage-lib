@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Sage Local Link Script
 #
 #   Frontend (sage-frontend):
@@ -15,15 +17,17 @@
 #   $ <PATH TO SAGE REPO>/bin/sage-local-link.sh --help
 
 sage_repo_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; cd .. ; pwd -P )
+sage_docs_path=$sage_repo_path/docs
+sage_bin_path=$sage_repo_path/bin
 
-function echo_custom() {
-  printf "\n\n\033[0;34m${1} \033[0m${2}\n\033[0;34m------------------------------------------------\033[0m\n"
-}
+. $sage_bin_path/local-link-utils.sh
 
 function bundle_and_yarn() {
   echo_custom "GEM:" "bundle install"
+  cd $sage_docs_path
   bundle install --quiet
 
+  cd $sage_repo_path
   echo_custom "FRONTEND PACKAGE:" "yarn install --force"
   yarn install --silent --force
 }
@@ -40,35 +44,18 @@ if [ "$1" = "true" ] || [ "$1" = "false" ]; then
 
   # UNINSTALL Local Bindings
   if [ "$1" = "false" ]; then
-    echo_custom "GEM:" "Removing local Sage gem"
-    bundle config --delete disable_local_branch_check
-    bundle config --delete local.sage_rails
-
-    echo_custom "FRONTEND PACKAGE:" "Removing local Sage frontend package"
-    yarn unlink sage
-    (cd $sage_repo_path; yarn unlink)
-
-    bundle_and_yarn
-    echo_custom "Now Using..." "PRODUCTION SAGE ✅"
-
+    $sage_bin_path/local-link-gem.sh false
+    $sage_bin_path/local-link-frontend.sh false
   # INSTALL Local Bindings
   elif [ "$1" = "true" ]; then
-    echo_custom "GEM:" "Use local Sage gem located at: $sage_repo_path"
-    bundle config --local disable_local_branch_check true
-    bundle config --local local.sage_rails $sage_repo_path
-
-    echo_custom "FRONTEND PACKAGE:" "Use the local Sage frontend package located at: $sage_repo_path"
-    (cd $sage_repo_path; yarn link)
-    yarn link sage
-
-    bundle_and_yarn
-    echo_custom "Now Using..." "LOCAL SAGE ✅"
+    $sage_bin_path/local-link-gem.sh true
+    $sage_bin_path/local-link-frontend.sh true
   fi;
 
-  show_status_of_gem_and_package
 
 elif [ "$1" = "status" ]; then
-    show_status_of_gem_and_package
+    $sage_bin_path/local-link-gem.sh status
+    $sage_bin_path/local-link-frontend.sh status
 else
   echo_custom "Run inside the of root the Kajabi-Products repo:"
   echo "$ <PATH TO SAGE REPO>/bin/sage-local-link <BOOLEAN>"
