@@ -9,7 +9,7 @@
     "build:watch": "webpack --mode production --watch",
     "preversion": "yarn build",
     "version": "git commit -am \"Update dist for release\" && git checkout -b release && git add -f dist/",
-    "postversion": "git push --tags && git checkout amster && git branch -D release && git push",
+    "postversion": "git push --tags && git checkout master && git branch -D release && git push",
     "release:pre": "npm version prelease",
     "release:patch": "npm version patch",
     "release:minor": "npm version minor",
