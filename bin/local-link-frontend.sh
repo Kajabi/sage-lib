@@ -6,7 +6,6 @@ sage_docs_path=$sage_repo_path/docs
 . $sage_repo_path/bin/local-link-utils.sh
 
 function yarn_install() {
-  cd $sage_repo_path
   echo_custom "[FRONTEND]:" "yarn install --force"
   yarn install --silent --force
 }
@@ -17,6 +16,8 @@ function show_status_of_package() {
 }
 
 if [ "$1" = "true" ] || [ "$1" = "false" ]; then
+
+  cd $sage_repo_path
 
   # UNINSTALL Local Bindings
   if [ "$1" = "false" ]; then
