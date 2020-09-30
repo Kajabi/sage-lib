@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Sage Tag Script
 #
 #   - Updates SageRails gem version
@@ -10,13 +12,10 @@
 #   USAGE:
 #   $ bin/sage-tag.sh <VERSION CHANGE: patch / minor / major>
 
-function echo_custom() {
-  printf "\n\n\033[0;34m${1} \033[0m${2}\n\033[0;34m------------------------------------------------\033[0m\n"
-}
+sage_repo_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; cd .. ; pwd -P )
+sage_docs_path=$sage_repo_path/docs
 
-function echo_custom_error() {
-  printf "\n\n\033[0;31m${1} \033[0m${2}\n\n"
-}
+. $sage_repo_path/bin/local-link-utils.sh
 
 # PREFLIGHT: Run some checks to ensure everything is properly configured
 # ----------------------------------------------------------------------
@@ -60,7 +59,7 @@ git add .
 
 # `yarn version` handles updating package.json and making a version-tagged git commit internally
 # ---> NOTE: This command creates the the git tag and commit
-yarn version --$1 --no-commit-hooks
+yarn release:$1
 
 # DEPLOY
 # ----------------------------------------------------------------------
@@ -70,7 +69,7 @@ echo_custom "DEPLOY:" "Push latest tag to master and perform 'yarn run deploy'"
 git push origin master --tags
 
 # Run the package.json deploy script to push to production Docs site
-yarn run deploy
+# yarn run deploy
 
 # Success!
 echo_custom "Successfully released and deployed version $1!"

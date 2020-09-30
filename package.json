@@ -10,9 +10,9 @@
     "preversion": "yarn build",
     "version": "git commit -am \"Update dist for release\" && git checkout -b release && git add -f dist/",
     "postversion": "git push --tags && git checkout master && git branch -D release && git push",
-    "release:patch": "yarn version --patch",
-    "release:minor": "yarn version --minor",
-    "release:major": "yarn version --major"
+    "release:patch": "yarn version --patch --no-commit-hooks",
+    "release:minor": "yarn version --minor --no-commit-hooks",
+    "release:major": "yarn version --major --no-commit-hooks"
   },
   "repository": {
     "type": "git",
