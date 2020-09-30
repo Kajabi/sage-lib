@@ -1,6 +1,6 @@
 {
   "name": "@kajabi/sage",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Sage NPM Package",
   "main": "dist/react.js",
   "private": "true",
