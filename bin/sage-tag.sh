@@ -33,10 +33,10 @@ if [[ -n $(git status --porcelain) ]]; then
 fi
 
 # Does a git remote location of `heroku master` exist?
-if ! [[ -n $(git ls-remote --exit-code --heads heroku master) ]]; then
-  echo_custom_error "Error:" "Heroku remote git location does not exist. Ensure the Heroku CLI is installed and the remote location has been added 'heroku git:remote -a sage-design-system'"
-  exit 1
-fi
+# if ! [[ -n $(git ls-remote --exit-code --heads heroku master) ]]; then
+#   echo_custom_error "Error:" "Heroku remote git location does not exist. Ensure the Heroku CLI is installed and the remote location has been added 'heroku git:remote -a sage-design-system'"
+#   exit 1
+# fi
 
 # PPREPARE
 # ----------------------------------------------------------------------
@@ -53,8 +53,11 @@ git checkout master
 echo_custom "UPDATE:" "Bumping the SageRails gem, Sage frontend package, & creating a version-tagged git commit"
 
 # Use the ruby Bump gem to bump SageRails package but DON'T COMMIT, this will be handled by `yarn version`
+cd $sage_docs_path
 bump $1 --no-commit
 bundle install
+cd $sage_repo_path
+
 git add .
 
 # `yarn version` handles updating package.json and making a version-tagged git commit internally
