@@ -33,10 +33,10 @@ if [[ -n $(git status --porcelain) ]]; then
 fi
 
 # Does a git remote location of `heroku master` exist?
-# if ! [[ -n $(git ls-remote --exit-code --heads heroku master) ]]; then
-#   echo_custom_error "Error:" "Heroku remote git location does not exist. Ensure the Heroku CLI is installed and the remote location has been added 'heroku git:remote -a sage-design-system'"
-#   exit 1
-# fi
+if ! [[ -n $(git ls-remote --exit-code --heads heroku master) ]]; then
+  echo_custom_error "Error:" "Heroku remote git location does not exist. Ensure the Heroku CLI is installed and the remote location has been added 'heroku git:remote -a sage-design-system'"
+  exit 1
+fi
 
 # PPREPARE
 # ----------------------------------------------------------------------
@@ -72,7 +72,7 @@ echo_custom "DEPLOY:" "Push latest tag to master and perform 'yarn run deploy'"
 git push origin master --tags
 
 # Run the package.json deploy script to push to production Docs site
-# yarn run deploy
+yarn run deploy
 
 # Success!
 echo_custom "Successfully released and deployed version $1!"
