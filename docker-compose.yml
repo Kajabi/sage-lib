@@ -24,21 +24,18 @@ services:
       - ./yarncache:/root/.yarn-cache
       - ./node_modules:/app/node_modules
   docs:
-    user: root
     build:
       context: ./docs
       dockerfile: Dockerfile.dev
       target: base
-    image: app
     working_dir: '/app/docs'
     command:
       - /bin/bash
       - -c
       - |
-        gem install bundler
+        # bundle pristine
         yarn install --check-files
         bundle check || bundle install --jobs 8
-        /container-complete.sh
         yarn start
     ports:
       - "4000:4000"
@@ -48,10 +45,8 @@ services:
       - js
     volumes:
       - '.:/app:delegated'
-      - "./docs/bundle:/usr/local/bundle"
       - "./docs/yarncache:/root/.yarn-cache"
       - "./docs/node_modules:/app/docs/node_modules"
-      - "./docs/compiled_assets:/app/docs/public/assets"
       - "./docs/tmp:/app/docs/tmp"
 
 

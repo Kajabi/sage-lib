@@ -9,7 +9,13 @@ RUN apt-get update -qq\
 COPY ./docker-entrypoint.sh /
 ENTRYPOINT ["/docker-entrypoint.sh"]
 
+WORKDIR /app/docs
+
+COPY Gemfile /app/docs/Gemfile
+COPY lib/sage_rails /app/docs/lib/sage_rails
+
+RUN gem install bundler -v 1.17.3
+RUN bundle install
+
 EXPOSE 4000
 EXPOSE 4035
-
-WORKDIR /app
