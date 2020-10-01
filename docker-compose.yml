@@ -35,7 +35,6 @@ services:
       - |
         yarn install --check-files
         bundle check || bundle install --jobs 8
-        ./docker/container-complete.sh
         yarn start
     ports:
       - "4000:4000"
