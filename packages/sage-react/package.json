@@ -45,5 +45,6 @@
     "classnames": "^2.2.6",
     "prop-types": "^15.7.2",
     "react": "^16.13.1"
-  }
+  },
+  "gitHead": "3a8094eb7c6972939051fdff213f1f7dd47c098c"
 }
