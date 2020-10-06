@@ -1,19 +1,15 @@
-// webpack.config.js
 var path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
+  mode: 'production',
   entry: {
-    system: [
-      './assets/javascript/system/index.js',
-      './assets/stylesheets/system/index.scss'
-    ],
-    react: [
-      './assets/javascript/react-components/index.js'
+    main: [
+      './lib/index.js'
     ]
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, '../', 'dist'),
     filename: '[name].js',
     libraryTarget: 'commonjs2'
   },
@@ -24,7 +20,6 @@ module.exports = {
     rules: [
       {
         test: /\.(js|jsx)$/,
-        include: path.resolve(__dirname, 'assets/javascript'),
         use: {
           loader: 'babel-loader',
           options: {
@@ -46,10 +41,6 @@ module.exports = {
           'css-loader',
           'sass-loader'
         ],
-        include: [
-          path.resolve(__dirname, 'assets/stylesheets'),
-          path.resolve(__dirname, 'assets/fonts')
-        ]
       },
       {
         test: /\.(woff|woff2|eot|ttf)$/,

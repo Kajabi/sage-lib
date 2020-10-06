@@ -1,0 +1,40 @@
+/* ==================================================
+  ** _status_icon.scss
+  type: element
+
+
+================================================== */
+
+.sage-status-icon {
+  @extend %t-sage-body-med;
+
+  display: inline-flex;
+  align-self: flex-start;
+  align-items: baseline;
+  position: relative;
+  padding: $sage-iconbtn-padding;
+  color: $sage-btn-tertiary-text-color;
+  border-radius: sage-border(radius);
+  transition: color $sage-transition, background-color $sage-transition;
+  cursor: help;
+
+
+  &:hover:not(:focus):not(:active) {
+    color: sage-color(charcoal, 100);
+    background-color: sage-color(grey, 200);
+  }
+
+  &:focus,
+  &:active {
+    color: sage-color(charcoal, 100);
+    background-color: sage-color(grey, 200);
+  }
+}
+
+@each $icon-name, $icon-code in $sage-icons {
+  .sage-status-icon--#{$icon-name} {
+    &::before {
+      @include sage-icon-base($icon-name);
+    }
+  }
+}

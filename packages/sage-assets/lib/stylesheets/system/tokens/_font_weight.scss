@@ -1,0 +1,11 @@
+@function sage-font-weight($key: regular) {
+  $value: map-get($sage-font-weights, $key);
+  @return $value;
+}
+
+$sage-font-weights: (
+  regular: 400,
+  medium: 500,
+  semibold: 600,
+  bold: 700
+);

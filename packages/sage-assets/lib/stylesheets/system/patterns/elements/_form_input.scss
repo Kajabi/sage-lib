@@ -1,0 +1,156 @@
+/* ==================================================
+  ** _form_inputs.scss
+  type: element
+
+================================================== */
+
+
+.sage-input {
+  position: relative;
+
+  &:not(:last-child) {
+    margin-bottom: $sage-inputfield-spacing;
+  }
+
+  .sage-input-group & {
+    height: auto;
+  }
+
+  .sage-panel__content-stack > &,
+  .sage-panel__copy > & {
+    margin-bottom: 0;
+  }
+}
+
+.sage-input__affix {
+  position: absolute;
+  top: sage-spacing(xs);
+  z-index: sage-z-index(default, 1);
+
+  &:hover {
+    cursor: default;
+  }
+}
+
+.sage-input__affix--prefix {
+  left: sage-spacing(xs);
+}
+
+.sage-input__affix--suffix {
+  right: sage-spacing(xs);
+}
+
+.sage-input__label {
+  @extend %t-sage-body-xsmall-semi;
+
+  position: absolute;
+  transform: translateY(calc(#{$sage-body-font-size} * -1));
+  padding-left: $sage-inputfield-padding-label;
+  padding-right: $sage-inputfield-padding-label;
+  color: inherit;
+  font-weight: sage-font-weight(semibold);
+  white-space: nowrap;
+  background-color: $sage-inputfield-bg-label;
+  pointer-events: none;
+  opacity: 0;
+
+  @include position(($sage-inputfield-height / 2), unset, unset, $sage-inputfield-label-offset);
+
+  @media screen and (min-width: sage-breakpoint(sm-min)) {
+    white-space: normal;
+  }
+
+  .sage-input--prefixed & {
+    transform: translateY(calc(#{$sage-body-font-size} * -1)) translateX(30px);
+    z-index: sage-z-index(default, 2);
+  }
+}
+
+.sage-input__field {
+  @mixin floating-label-active {
+    transform: translateY(-($sage-body-font-size + $sage-inputfield-padding-filled * 2)); // IE doesn't support calc in transforms so we provide a fallback
+    transform: translateY(calc(-50% - (#{$sage-body-font-size} + #{$sage-inputfield-padding-filled}))); // we calculate the centered position minus the offset of the text height plus the spacing height
+    transition: opacity 0.1s ease-in, transform 0.15s ease-in-out, color 0.15s ease-out;
+    opacity: 1;
+  }
+
+  height: $sage-inputfield-height;
+  width: 100%;
+  padding: $sage-inputfield-padding-offset $sage-inputfield-padding;
+  color: $sage-inputfield-color-default;
+  appearance: none;
+  border: $sage-inputfield-border-width solid $sage-inputfield-border-color;
+  border-radius: $sage-inputfield-border-radius;
+  background: transparent;
+  transition: border 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+
+  @include placeholder {
+    color: inherit;
+  }
+
+  &:hover:not(:disabled) {
+    border-color: currentColor;
+  }
+
+  &:focus:not(:disabled),
+  &:active:not(:disabled) {
+    outline: none;
+    border-color: $sage-inputfield-color-success;
+    box-shadow: $sage-inputfield-box-shadow-size $sage-inputfield-color-success;
+
+    @include placeholder {
+      opacity: 0;
+    }
+
+    ~ .sage-input__label {
+      @include floating-label-active();
+      color: $sage-inputfield-color-success;
+    }
+  }
+
+  &:valid:not(:placeholder-shown) {
+    outline: none;
+    background: transparent; // Prevent some browsers from coloring the background on 'valid'
+
+    @include placeholder {
+      opacity: 0;
+    }
+
+    ~ .sage-input__label {
+      @include floating-label-active();
+    }
+  }
+
+  .sage-input--error &,
+  .sage-input--error &:focus:not(:disabled),
+  .sage-input--error &:not(:placeholder-shown),
+  &:required:not(:placeholder-shown):not(:valid) {
+    border-color: $sage-inputfield-color-error;
+    box-shadow: $sage-inputfield-box-shadow-size $sage-inputfield-color-error;
+
+    ~ .sage-input__label {
+      color: $sage-inputfield-color-error;
+    }
+  }
+
+  &:disabled {
+    color: $sage-inputfield-color-disabled;
+    background-color: $sage-inputfield-bg-disabled;
+    cursor: not-allowed;
+  }
+}
+
+.sage-input__message {
+  @extend %t-sage-body-xsmall;
+
+  .sage-input--error & {
+    color: $sage-inputfield-color-error;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sage-input__label,
+  .sage-input__field {
+    transition: none !important; /* stylelint-disable-line declaration-no-important */
+  }
+}

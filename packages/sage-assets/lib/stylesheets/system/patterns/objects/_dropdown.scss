@@ -1,0 +1,301 @@
+/* ==================================================
+  ** dropdown
+  type: object
+
+
+================================================== */
+
+$-dropdown-height: $sage-inputfield-height;
+$-dropdown-width: rem(280px);
+$-dropdown-item-focus-line-spacing-x: sage-spacing(sm);
+
+$-option-underline: "::after";
+$-option-icon: "::before";
+$-option-menu-size: rem(40px);
+
+$-panel-max-height: rem(400px);
+
+$-trigger-label-bg-label: $sage-inputfield-bg-label;
+$-trigger-label-color-default: $sage-inputfield-color-default;
+$-trigger-label-color-disabled: $sage-inputfield-color-disabled;
+$-trigger-padding-label: $sage-inputfield-padding-label;
+$-trigger-padding-x: $sage-inputfield-padding;
+$-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
+
+.sage-dropdown {
+  position: relative;
+
+  &:not(.sage-dropdown--customized) {
+    display: inline-flex;
+  }
+}
+
+.sage-dropdown--disabled {
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.sage-dropdown__item {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: sage-z-index(nav);
+  width: 100%;
+  list-style: none;
+
+  @extend %t-sage-body;
+
+  &#{$-option-underline} {
+    $-focus-offset: 50%;
+    content: "";
+    display: block;
+    position: absolute;
+    right: $-focus-offset;
+    bottom: 0;
+    left: $-focus-offset;
+    border-bottom: 2px solid transparent;
+    transition: 0.1s ease-in-out;
+    transition-property: border-bottom-color, left, right;
+  }
+
+  &:hover {
+    color: sage-color(charcoal, 500);
+    background-color: sage-color(grey, 200);
+  }
+
+  &:active,
+  &:focus-within {
+    z-index: sage-z-index(modal);
+    outline: none;
+
+    &#{$-option-underline} {
+      right: $-dropdown-item-focus-line-spacing-x;
+      left: $-dropdown-item-focus-line-spacing-x;
+    }
+  }
+
+  &:focus-within#{$-option-underline} {
+    border-bottom-color: currentColor;
+  }
+
+  &:active#{$-option-underline} {
+    border-bottom-color: sage-color(primary);
+  }
+}
+
+.sage-dropdown__item--border-before {
+  border-top: 1px solid sage-color(grey, 300);
+}
+
+.sage-dropdown__item--border-after {
+  border-bottom: 1px solid sage-color(grey, 300);
+}
+
+.sage-dropdown__item--disabled {
+  &:active#{$-option-underline} {
+    border-bottom-color: transparent;
+  }
+}
+
+.sage-dropdown__item-control {
+  @include sage-button-style-reset();
+
+  display: flex;
+  position: relative;
+  align-items: center;
+  width: 100%;
+  padding: rem(9px) sage-spacing(sm);
+  text-align: left;
+  user-select: none;
+
+  &:focus {
+    outline: 0;
+  }
+
+  .sage-dropdown__item--with-options > & {
+    max-width: calc(100% - #{$-option-menu-size});
+    padding-right: sage-spacing(md);
+    margin-right: -1 * sage-spacing(2xs);
+  }
+
+  .sage-dropdown__item--disabled &,
+  &:disabled {
+    color: sage-color(grey, 400);
+    pointer-events: none;
+    cursor: not-allowed;
+  }
+}
+
+.sage-dropdown__item-control--primary {
+  color: sage-color(primary);
+
+  &:hover {
+    color: sage-color(primary, 300);
+    background-color: sage-color(primary, 100);
+  }
+}
+
+.sage-dropdown__item-control--danger {
+  color: sage-color(red);
+
+  &:hover {
+    color: sage-color(red, 400);
+    background-color: sage-color(red, 100);
+  }
+}
+
+.sage-dropdown__item-control--muted {
+  color: sage-color(charcoal, 100);
+
+  &:hover {
+    color: sage-color(charcoal, 400);
+    background-color: sage-color(grey, 200);
+  }
+}
+
+@each $icon-name, $icon-code in $sage-icons {
+  .sage-dropdown__item-control--icon-#{$icon-name}#{$-option-icon} {
+    @include sage-icon-base($icon-name);
+    margin: 0 sage-spacing(xs) 0 0;
+  }
+}
+
+.sage-dropdown__item-label {
+  @include truncate();
+
+  .sage-dropdown__item-checkbox + & {
+    margin-left: sage-spacing(xs);
+  }
+}
+
+.sage-dropdown__menu {
+  overflow: auto;
+  min-width: $-dropdown-width;
+  width: 100%;
+  max-height: $-panel-max-height;
+  padding: sage-spacing(xs) 0;
+
+  :not(.sage-dropdown--anchor-right) > .sage-dropdown__panel & {
+    left: 0;
+  }
+
+  .sage-dropdown--anchor-right > .sage-dropdown__panel & {
+    right: 0;
+  }
+}
+
+.sage-dropdown__panel {
+  visibility: hidden;
+  position: absolute;
+  z-index: sage-z-index(nav, -1);
+  top: calc(100% + #{sage-spacing(xs)});
+  // Temporariliy removing animation as it causes
+  // a positioning issue with nested fixed positioned elements
+  // transform: rotate3d(1, 0, 0, -90deg);
+  transform-origin: top center;
+  min-width: $-dropdown-width;
+  width: 100%;
+  border-radius: sage-border(radius);
+  background-color: sage-color(white);
+  box-shadow: sage-shadow(md);
+  transition: $sage-transition;
+  transition-property: transform, z-index;
+
+  // In the event that this dropdown is at the bottom of the page, add some margin below
+  // to prevent it from touching the bottom of the viewport/page when it expands
+  margin-bottom: sage-spacing(); /* stylelint-disable-line order/properties-order */
+
+  .sage-dropdown--anchor-right & {
+    right: 0;
+  }
+
+  .sage-dropdown--pinned & {
+    position: fixed;
+    z-index: sage-z-index(modal);
+  }
+
+  &::before {
+    content: "";
+    visibility: hidden;
+    position: fixed;
+    background-color: transparent;
+    pointer-events: none;
+    cursor: default;
+
+    @include position-full;
+  }
+
+  [aria-expanded="true"] > & {
+    visibility: visible;
+    // Temporariliy removing animation as it causes
+    // a positioning issue with nested fiex positioned elements
+    // transform: rotate3d(0, 0, 0, 0);
+
+    &::before {
+      visibility: visible;
+      pointer-events: auto;
+    }
+  }
+}
+
+.sage-dropdown__panel--custom {
+  padding: sage-spacing();
+}
+
+.sage-dropdown__trigger {
+  width: 100%;
+
+  &.sage-dropdown__trigger--options {
+    min-width: auto;
+  }
+}
+
+.sage-dropdown__trigger--select,
+.sage-dropdown__trigger--select-labeled {
+  :not(.sage-dropdown--customized) > & {
+    min-width: $-dropdown-width;
+  }
+}
+
+.sage-dropdown__trigger-selected-value {
+  justify-content: space-between;
+  width: 100%;
+
+  // Adds form field styling
+  .sage-dropdown__trigger--select &,
+  .sage-dropdown__trigger--select-labeled & {
+    border: $sage-inputfield-border-width solid $sage-inputfield-border-color;
+  }
+}
+
+.sage-dropdown__trigger-label {
+  @extend %t-sage-body;
+
+  position: absolute;
+  transform: translateY(-50%);
+  width: calc(100% - #{(2 * $-trigger-padding-x) + $-trigger-dropdown-offset});
+  padding: 0 $-trigger-padding-label;
+  color: $-trigger-label-color-default;
+  white-space: nowrap;
+  pointer-events: none;
+
+  @include position(($-dropdown-height / 2), unset, unset, ($-trigger-padding-x - $-trigger-padding-label));
+  @include truncate();
+
+  .sage-dropdown--value-selected & {
+    @extend %t-sage-body-xsmall-semi;
+
+    transform: translateY(calc(#{-$-dropdown-height} + 50%));
+    width: auto;
+    background-color: $-trigger-label-bg-label;
+    transition: transform 0.15s ease-in-out, color 0.15s ease-out;
+  }
+
+  .sage-dropdown--value-selected .sage-dropdown__trigger--select & {
+    display: none;
+  }
+
+  .sage-dropdown--disabled & {
+    color: $-trigger-label-color-disabled;
+  }
+}

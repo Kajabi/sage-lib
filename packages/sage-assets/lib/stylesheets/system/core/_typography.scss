@@ -1,0 +1,207 @@
+/* ==================================================
+  ** _typography.scss
+
+================================================== */
+
+// Font definitions
+$-body-font-stack: "Inter", -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "Noto Sans", sans-serif !default;
+$-body-margin-bottom: sage-spacing(xs) !default;
+
+// ==================================================
+// MIXINS
+// ==================================================
+
+@mixin t-block-spacing($block-spacing) {
+  margin-bottom: $block-spacing;
+
+  &.no-margin-bottom,
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+// ==================================================
+// STYLES
+// ==================================================
+
+// Automate setting up classes that extend the specs
+@each $spec-name, $spec in $sage-type-specs {
+  .t-sage-#{$spec-name} {
+    @extend %t-sage-#{$spec-name};
+    color: inherit;
+  }
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-size-adjust: 100%;
+  color: $sage-body-font-color;
+  font-family: $-body-font-stack;
+
+  @supports (font-variation-settings: normal) {
+    font-family: "Inter var", $-body-font-stack;
+  }
+}
+
+// For simpler markup styling in blocks of CMS-like text, use this container
+.sage-type {
+
+  // Body-like elements get spacing below
+  > p:not([class]),
+  > ul:not([class]),
+  > ol:not([class]),
+  > dl:not([class]),
+  > [class*="t-sage-body"] {
+    @include t-block-spacing($-body-margin-bottom);
+  }
+
+  // Heading-like elements get spacing below as well
+  > h1:not([class]),
+  > h2:not([class]),
+  > h3:not([class]),
+  > h4:not([class]),
+  > h5:not([class]),
+  > h6:not([class]),
+  > [class*="t-sage-heading-"] {
+    color: $sage-heading-font-color;
+
+    @include t-block-spacing($sage-heading-margin-bottom);
+  }
+
+  // Elements with no classes extend related type specs
+  > h1:not([class]) {
+    @extend %t-sage-heading-1;
+  }
+
+  > h2:not([class]) {
+    @extend %t-sage-heading-2;
+
+    &:not(:first-child) {
+      margin-top: sage-spacing(lg);
+    }
+  }
+
+  > .t-sage-heading-2:not(:first-child) {
+    margin-top: sage-spacing(lg);
+  }
+
+  > h3:not([class]) {
+    @extend %t-sage-heading-3;
+
+    &:not(:first-child) {
+      margin-top: sage-spacing();
+    }
+  }
+
+  > h4:not([class]) {
+    @extend %t-sage-heading-4;
+
+    &:not(:first-child) {
+      margin-top: sage-spacing();
+    }
+  }
+
+  > h5:not([class]) {
+    @extend %t-sage-heading-5;
+
+    &:not(:first-child) {
+      margin-top: sage-spacing();
+    }
+  }
+
+  > h6:not([class]) {
+    @extend %t-sage-heading-6;
+
+    &:not(:first-child) {
+      margin-top: sage-spacing();
+    }
+  }
+
+  > .t-sage-heading-3,
+  > .t-sage-heading-4,
+  > .t-sage-heading-5,
+  > .t-sage-heading-6 {
+    &:not(:first-child) {
+      margin-top: sage-spacing();
+    }
+  }
+
+  > ul li:not([class]),
+  > ol li:not([class]),
+  > p:not([class]) {
+    @extend %t-sage-body;
+  }
+
+  // Hyperlinks get some default coloring applied
+  > a:not([class]),
+  > a[class*="sage-link"] {
+    color: sage-color(primary);
+  }
+
+  > table:not(:last-child) {
+    margin-top: sage-spacing();
+    margin-bottom: sage-spacing();
+  }
+}
+
+a {
+  &:hover,
+  &:focus {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+hr {
+  margin: sage-spacing() 0;
+  border: 0;
+  border-top: sage-border();
+}
+
+// Generate text color modifiers
+@each $color-name, $color-slider in $sage-colors {
+  // Default color values
+  $color-value: sage-color($color-name);
+
+  @if ($color-name == charcoal) {
+    $color-value: sage-color($color-name, 100);
+  }
+
+  @if ($color-name == grey) {
+    $color-value: sage-color($color-name, 500);
+  }
+
+  .t-sage--color-#{$color-name} {
+    color: $color-value;
+  }
+
+  // Specific color values
+  @each $-level, $-value in $color-slider {
+    .t-sage--color-#{$color-name}-#{$-level} {
+      color: sage-color($color-name, $-level);
+    }
+  }
+}
+
+.t-sage--align-center {
+  text-align: center;
+}
+
+.t-sage--align-right {
+  text-align: right;
+}
+
+.t-sage--align-justify {
+  text-align: justify;
+}
+
+.t-sage--strikethrough {
+  text-decoration: line-through;
+}
+
+.t-sage--truncate {
+  @include truncate;
+}

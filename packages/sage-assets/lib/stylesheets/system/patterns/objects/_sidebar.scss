@@ -1,0 +1,71 @@
+/* ==================================================
+  ** _sidebar.scss
+  type: object
+
+================================================== */
+$-sidebar-top-offset: $sage-assistant-height;
+$-sidebar-color-background: sage-color(white);
+
+.sage-sidebar {
+  display: flex;
+  flex-direction: column;
+  z-index: sage-z-index(nav);
+  position: fixed;
+  top: $-sidebar-top-offset;
+  left: 0;
+  transform: translateX(-100%);
+  height: calc(100% - #{$-sidebar-top-offset});
+  width: sage-sidebar(xl);
+  background: $-sidebar-color-background;
+  border-right: sage-border();
+  box-shadow: sage-shadow();
+  overscroll-behavior-y: contain;
+  transition: transform 0.2s ease-out, opacity 0.15s ease-in-out;
+  opacity: 0;
+
+  @media (min-width: $sage-sidebar-breakpoint) {
+    z-index: sage-z_index();
+    position: static;
+    transform: none;
+    height: auto;
+    width: sage-sidebar();
+    box-shadow: none;
+    transition: none;
+    opacity: 1;
+  }
+}
+
+.sage-sidebar--open {
+  transform: none;
+  opacity: 1;
+}
+
+.sage-sidebar--md {
+  width: sage-sidebar(md);
+}
+
+.sage-sidebar--lg {
+  width: sage-sidebar(lg);
+}
+
+.sage-sidebar__body {
+  @include overflow-scroll();
+  flex: 1;
+  padding: sage-spacing();
+}
+
+.sage-sidebar__footer::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: sage-spacing(sm) / -1;
+  left: 0;
+  right: 0;
+  height: sage-spacing(sm);
+  background: linear-gradient(to top, #{$-sidebar-color-background} 0%, rgba(255, 255, 255, 0) 60%);
+}
+
+.sage-sidebar__footer {
+  position: relative;
+  padding: sage-spacing();
+}

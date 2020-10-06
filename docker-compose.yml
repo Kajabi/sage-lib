@@ -1,4 +1,4 @@
-version: '3.4'
+version: "3.4"
 
 services:
   router:
@@ -21,14 +21,13 @@ services:
         yarn build:watch
     volumes:
       - .:/app:delegated
-      - ./yarncache:/root/.yarn-cache
       - ./node_modules:/app/node_modules
   docs:
     build:
       context: ./docs
       dockerfile: Dockerfile.dev
       target: base
-    working_dir: '/app/docs'
+    working_dir: "/app/docs"
     command:
       - /bin/bash
       - -c
@@ -43,9 +42,6 @@ services:
       - router
       - js
     volumes:
-      - '.:/app:delegated'
-      - "./docs/yarncache:/root/.yarn-cache"
+      - ".:/app:delegated"
       - "./docs/node_modules:/app/docs/node_modules"
       - "./docs/tmp:/app/docs/tmp"
-
-

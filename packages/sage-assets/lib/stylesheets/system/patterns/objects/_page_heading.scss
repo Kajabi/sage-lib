@@ -1,0 +1,22 @@
+/* ==================================================
+  ** page_heading
+  type: object
+
+================================================== */
+
+.sage-page-heading {
+  display: flex;
+  flex-flow: column;
+  margin-bottom: sage-spacing(lg);
+}
+
+.sage-page-heading__title {
+  @extend %t-sage-heading-1;
+
+  order: 2;
+}
+
+.sage-page-heading__back {
+  order: 1;
+  margin-bottom: sage-spacing(sm);
+}

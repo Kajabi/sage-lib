@@ -1,0 +1,90 @@
+@function sage-color-combo($color-key: draft, $combo-set-key: default,  $color-type: foreground) {
+  $color-set: map-get($sage-color-combos, $color-key);
+  $combo-set: map-get($color-set, $combo-set-key);
+
+  @return map-get($combo-set, $color-type);
+}
+
+
+$sage-color-combos: (
+  draft: (
+    default: (
+      foreground: sage-color(charcoal, 400),
+      foreground-accent: sage-color(charcoal, 400),
+      background: sage-color(grey, 300),
+    ),
+    subtle: (
+      foreground: sage-color(charcoal, 200),
+      foreground-accent: sage-color(charcoal, 100),
+      background: sage-color(grey, 500),
+    ),
+    bold: (
+      foreground: sage-color(grey, 100),
+      background: sage-color(charcoal, 400),
+    )
+  ),
+  success: (
+    default: (
+      foreground: sage-color(sage, 400),
+      foreground-accent: sage-color(sage, 400),
+      background: sage-color(sage, 100),
+    ),
+    subtle: (
+      foreground: sage-color(sage, 400),
+      foreground-accent: sage-color(sage, 300),
+      background: sage-color(sage, 300),
+    ),
+    bold: (
+      foreground: sage-color(white),
+      background: sage-color(sage, 300),
+    )
+  ),
+  info: (
+    default: (
+      foreground: sage-color(primary, 400),
+      foreground-accent: sage-color(primary, 300),
+      background: sage-color(primary, 100),
+    ),
+    subtle: (
+      foreground: sage-color(primary, 400),
+      foreground-accent: sage-color(primary, 300),
+      background: sage-color(primary, 200),
+    ),
+    bold: (
+      foreground: sage-color(primary, 100),
+      background: sage-color(primary, 300),
+    )
+  ),
+  warning: (
+    default: (
+      foreground: sage-color(yellow, 500),
+      foreground-accent: sage-color(yellow, 300),
+      background: sage-color(yellow, 200),
+    ),
+    subtle: (
+      foreground: sage-color(yellow, 400),
+      foreground-accent: sage-color(yellow, 300),
+      background: sage-color(yellow, 300),
+    ),
+    bold: (
+      foreground: sage-color(white),
+      background: sage-color(yellow, 300),
+    )
+  ),
+  danger: (
+    default: (
+      foreground: sage-color(red, 500),
+      foreground-accent: sage-color(red, 300),
+      background: sage-color(red, 200),
+    ),
+    subtle: (
+      foreground: sage-color(red, 400),
+      foreground-accent: sage-color(red, 300),
+      background: sage-color(red, 300),
+    ),
+    bold: (
+      foreground: sage-color(red, 100),
+      background: sage-color(red, 300),
+    )
+  ),
+);

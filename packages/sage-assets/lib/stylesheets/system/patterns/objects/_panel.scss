@@ -1,0 +1,30 @@
+/* ==================================================
+  ** _panel.scss
+  type: object
+
+================================================== */
+
+.sage-panel {
+  padding: sage-spacing();
+  background: $sage-panel-bg-color;
+  border-radius: $sage-panel-border-radius;
+  box-shadow: $sage-panel-box-shadow;
+
+  @include sage-grid-panel();
+}
+
+.sage-panel__footer,
+.sage-panel__header {
+  @include sage-grid-panel-row();
+}
+
+.sage-panel__title {
+  @extend %t-sage-heading-5;
+}
+
+.sage-panel-set {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: min-content;
+  grid-gap: sage-spacing(lg);
+}

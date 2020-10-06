@@ -1,0 +1,116 @@
+/* ==================================================
+  ** expandable_card
+  type: object
+
+================================================== */
+
+$-expandable-card-transition: 0.2s linear;
+$-expandable-card-bg-color: sage-color(white);
+$-expandable-card-border-color: sage-color(grey, 300);
+$-expandable-card-border-radius: sage-border(radius);
+$-expandable-card-padding: sage-spacing(sm);
+
+.sage-expandable-card {
+  background: $-expandable-card-bg-color;
+  border: 1px solid $-expandable-card-border-color;
+  border-radius: $-expandable-card-border-radius;
+
+  .sage-expandable-card-group &:not(:last-child) {
+    margin-bottom: sage-spacing(xs);
+  }
+}
+
+.sage-expandable-card__body {
+  position: relative;
+  padding: $-expandable-card-padding;
+
+  > *:not(:last-child) {
+    margin-bottom: sage-spacing(xs);
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+
+  @include clearfix;
+
+  [aria-expanded] + & {
+    overflow: hidden;
+    padding-top: 0;
+    padding-bottom: 0;
+    transition: $-expandable-card-transition height;
+
+    &::after,
+    &::before {
+      content: "";
+      display: block;
+      height: $-expandable-card-padding;
+    }
+  }
+
+  [aria-expanded="false"] + & {
+    height: 0;
+  }
+
+  [aria-expanded="true"] + & {
+    height: auto;
+  }
+}
+
+.sage-expandable-card__body--center {
+  display: flex;
+  justify-items: center;
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+.sage-expandable-card__footer {
+  padding: $-expandable-card-padding;
+
+  @include clearfix;
+}
+
+.sage-expandable-card__header {
+  @include sage-grid-panel-row;
+
+  padding: sage-spacing(xs) $-expandable-card-padding;
+  color: sage-color(charcoal, 400);
+  cursor: pointer;
+
+  @include clearfix;
+
+  &:active,
+  &:focus {
+    border-color: sage-color(primary);
+  }
+
+  // Expand icon
+  &::after {
+    @include sage-icon-base(right-small, xl);
+
+    transform: rotateZ(0deg);
+    transform-origin: center;
+    margin: 0 0 0 auto;
+    color: sage-color(charcoal, 100);
+    transition: $-expandable-card-transition transform;
+  }
+
+  &[aria-expanded="true"]::after {
+    transform: rotateZ(90deg);
+  }
+}
+
+.sage-expandable-card__title {
+  @extend %t-sage-body-small-med;
+
+  color: sage-color(charcoal, 400);
+}
+
+.sage-expandable-card-group {
+  margin-top: sage-spacing();
+  margin-bottom: sage-spacing();
+  padding-left: 0;
+  list-style: none;
+}

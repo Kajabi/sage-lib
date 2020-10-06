@@ -1,0 +1,75 @@
+Arguments: 
+  /home/shane/.nvm/versions/node/v14.9.0/bin/node /home/shane/.nvm/versions/node/v14.9.0/bin/yarn add @babel/plugin-proposal-object-rest-spread --dev
+
+PATH: 
+  /usr/local/bin:/home/shane/.nvm/versions/node/v14.9.0/bin:/home/shane/.rbenv/shims:/usr/local/bin:/home/shane/.nvm/versions/node/v14.9.0/bin:/home/shane/.rbenv/shims:/usr/local/bin:/home/shane/.nvm/versions/node/v14.9.0/bin:/home/shane/.rbenv/shims:/usr/local/bin:/home/shane/.nvm/versions/node/v14.9.0/bin:/home/shane/.rbenv/shims:/usr/local/bin:/home/shane/.nvm/versions/node/v14.9.0/bin:/home/shane/.rbenv/shims:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/home/shane/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/shane/Code/go/bin:/usr/local/go/bin:/home/shane/Android/Sdk/emulator:/home/shane/Android/Sdk/tools:/home/shane/Android/Sdk/tools/bin:/home/shane/Android/Sdk/platform-tools:/home/shane/.i3/scripts:/home/shane/.local:/home/shane/.local/bin:/home/shane/.rbenv/bin:/home/shane/.rbenv/shims:/home/shane/bin:/home/shane/npm/bin:/home/shane/.pyenv/bin:/home/shane/.pyenv/bin:.nvm/versions/node/v8.1.0/bin:/sbin:/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/sbin:/home/shane/Code/go/bin:/usr/local/go/bin:/home/shane/Android/Sdk/emulator:/home/shane/Android/Sdk/tools:/home/shane/Android/Sdk/tools/bin:/home/shane/Android/Sdk/platform-tools:/home/shane/.i3/scripts:/home/shane/.local:/home/shane/.local/bin:/home/shane/.rbenv/bin:/home/shane/.rbenv/shims:/home/shane/bin:/home/shane/npm/bin:/home/shane/.pyenv/bin:/home/shane/.pyenv/bin:.nvm/versions/node/v8.1.0/bin:/sbin:/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/sbin:/home/shane/Code/go/bin:/usr/local/go/bin:/home/shane/Android/Sdk/emulator:/home/shane/Android/Sdk/tools:/home/shane/Android/Sdk/tools/bin:/home/shane/Android/Sdk/platform-tools:/home/shane/.i3/scripts:/home/shane/.local:/home/shane/.local/bin:/home/shane/.rbenv/bin:/home/shane/.rbenv/shims:/home/shane/bin:/home/shane/npm/bin:/home/shane/.pyenv/bin:/home/shane/.pyenv/bin:.nvm/versions/node/v8.1.0/bin:/sbin:/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/sbin:/home/shane/Code/go/bin:/usr/local/go/bin:/home/shane/Android/Sdk/emulator:/home/shane/Android/Sdk/tools:/home/shane/Android/Sdk/tools/bin:/home/shane/Android/Sdk/platform-tools:/home/shane/.i3/scripts:/home/shane/.local:/home/shane/.local/bin:/home/shane/.rbenv/bin:/home/shane/.rbenv/shims:/home/shane/bin:/home/shane/npm/bin:/home/shane/.pyenv/bin:/home/shane/.pyenv/bin:.nvm/versions/node/v8.1.0/bin:/sbin:/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/sbin:/home/shane/Code/go/bin:/usr/local/go/bin:/home/shane/Android/Sdk/emulator:/home/shane/Android/Sdk/tools:/home/shane/Android/Sdk/tools/bin:/home/shane/Android/Sdk/platform-tools:/home/shane/.i3/scripts:/home/shane/.local:/home/shane/.local/bin:/home/shane/.rbenv/bin:/home/shane/.rbenv/shims:/home/shane/bin:/home/shane/npm/bin:/home/shane/.pyenv/bin:/home/shane/.pyenv/bin:.nvm/versions/node/v8.1.0/bin:/sbin:/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/sbin
+
+Yarn version: 
+  1.22.5
+
+Node version: 
+  14.9.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: EACCES: permission denied, mkdir '/home/shane/Code/github.com/Kajabi/sage-lib/node_modules/make-dir/node_modules/pify'
+
+npm manifest: 
+  {
+    "name": "@voodoogq/sage-react",
+    "version": "1.0.2",
+    "description": "React Components",
+    "keywords": [
+      "react",
+      "sage"
+    ],
+    "author": "Shane Smith <voodoogq@gmail.com>",
+    "homepage": "https://github.com/voodooGQ/sage-assets#readme",
+    "license": "ISC",
+    "main": "dist/main.js",
+    "directories": {
+      "lib": "lib"
+    },
+    "files": [
+      "lib"
+    ],
+    "publishConfig": {
+      "registry": "https://npm.pkg.github.com/"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/voodooGQ/sage-assets.git"
+    },
+    "bugs": {
+      "url": "https://github.com/voodooGQ/sage-assets/issues"
+    },
+    "scripts": {
+      "build": "webpack --config webpack/webpack.prod.js"
+    },
+    "devDependencies": {
+      "@babel/core": "^7.11.6",
+      "@babel/preset-env": "^7.11.5",
+      "@babel/preset-react": "^7.10.4",
+      "babel-loader": "^8.1.0",
+      "babel-plugin-transform-object-rest-spread": "^6.26.0",
+      "css-loader": "^4.3.0",
+      "mini-css-extract-plugin": "^0.11.3",
+      "sass-loader": "^10.0.2",
+      "url-loader": "^4.1.0",
+      "webpack": "^4.44.2",
+      "webpack-cli": "^3.3.12"
+    },
+    "dependencies": {
+      "classnames": "^2.2.6",
+      "prop-types": "^15.7.2",
+      "react": "^16.13.1"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

@@ -1,0 +1,100 @@
+/* ==================================================
+  ** tooltip
+  type: element
+
+================================================== */
+
+.sage-tooltip {
+  display: flex;
+  position: absolute;
+  z-index: $sage-tooltip-zindex;
+  min-width: max-content;
+  max-width: $sage-tooltip-maxwidth;
+  padding: $sage-tooltip-padding;
+  text-align: center;
+  color: $sage-tooltip-font-color;
+  white-space: normal;
+  border-radius: sage-border(radius);
+  background-color: $sage-tooltip-bg-color;
+  box-shadow: $sage-tooltip-shadow;
+
+  @extend %t-sage-body-small;
+
+  &::after {
+    content: "";
+    position: absolute;
+  }
+}
+
+.sage-tooltip--top {
+  &::after {
+    left: 50%;
+    top: 100%;
+    transform: translate3d(-50%, 0, 0);
+    border-left: $sage-tooltip-arrow-inactive;
+    border-right: $sage-tooltip-arrow-inactive;
+    border-top: $sage-tooltip-arrow-active;
+  }
+}
+
+.sage-tooltip--bottom {
+  &::after {
+    left: 50%;
+    bottom: 100%;
+    transform: translate3d(-50%, 0, 0);
+    border-left: $sage-tooltip-arrow-inactive;
+    border-right: $sage-tooltip-arrow-inactive;
+    border-bottom: $sage-tooltip-arrow-active;
+  }
+}
+
+.sage-tooltip--left {
+  &::after {
+    left: 100%;
+    bottom: 50%;
+    transform: translate3d(0, 50%, 0);
+    border-top: $sage-tooltip-arrow-inactive;
+    border-bottom: $sage-tooltip-arrow-inactive;
+    border-left: $sage-tooltip-arrow-active;
+  }
+}
+
+.sage-tooltip--right {
+  &::after {
+    left: 0;
+    bottom: 50%;
+    transform: translate3d(-100%, 50%, 0);
+    border-top: $sage-tooltip-arrow-inactive;
+    border-bottom: $sage-tooltip-arrow-inactive;
+    border-right: $sage-tooltip-arrow-active;
+  }
+}
+
+.sage-tooltip--light {
+  color: $sage-tooltip-light-font-color;
+  background: $sage-tooltip-light-bg-color;
+
+  &.sage-tooltip--top::after {
+    border-top-color: sage-color(white);
+  }
+  &.sage-tooltip--bottom::after {
+    border-bottom-color: sage-color(white);
+  }
+  &.sage-tooltip--left::after {
+    border-left-color: sage-color(white);
+  }
+  &.sage-tooltip--right::after {
+    border-right-color: sage-color(white);
+  }
+}
+
+.sage-tooltip--small {
+  padding: $sage-tooltip-small-padding;
+
+  @extend %t-sage-body-xsmall-semi;
+}
+
+.sage-tooltip--large {
+  max-width: $sage-tooltip-large-maxwidth;
+  padding: $sage-tooltip-large-padding;
+}

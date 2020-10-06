@@ -1,0 +1,130 @@
+/* ==================================================
+  ** upload_card
+  type: object
+
+================================================== */
+
+$-upload-card-border-radius: sage-border(radius);
+$-upload-card-border-color-default: sage-color(grey, 300);
+$-upload-card-border-color-hover: sage-color(grey, 400);
+$-upload-card-border-color-error: sage-color(red, 300);
+$-upload-card-border-color-focus: sage-color(primary, 300);
+$-upload-card-background: sage-color(white);
+$-upload-card-background-hover: sage-color(grey, 100);
+
+.sage-upload-card {
+  &:focus {
+    outline: none;
+  }
+}
+
+.sage-upload-card__body {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  flex: 1;
+
+  :not(.sage-upload-card--selected) & {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sage-upload-card--selected & {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+
+.sage-upload-card__dropzone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: sage-spacing(md);
+  background-color: $-upload-card-background;
+  border-radius: $-upload-card-border-radius;
+
+  .sage-upload-card:not(.sage-upload-card--selected) & {
+    flex-flow: column;
+
+    @include sage-dashed-border(
+      $color: $-upload-card-border-color-default,
+      $border-radius: $-upload-card-border-radius,
+    );
+
+    &:hover {
+      background-color: $-upload-card-background-hover;
+  
+      @include sage-dashed-border(
+        $color: $-upload-card-border-color-hover,
+        $border-radius: $-upload-card-border-radius,
+      );
+    }
+  
+    &:focus,
+    &:focus-within {
+      outline: 0;
+
+      @include sage-dashed-border(
+        $color: $-upload-card-border-color-focus,
+        $border-radius: $-upload-card-border-radius,
+      );
+    }
+  }
+
+  .sage-upload-card--selected & {
+    flex-flow: row;
+    border: 1px solid $-upload-card-border-color-default;
+  }
+
+  .sage-upload-card.sage-upload-card--error & {
+    @include sage-dashed-border(
+      $color: $-upload-card-border-color-error,
+      $border-radius: $-upload-card-border-radius,
+    );
+  }
+}
+
+.sage-upload-card__errors {
+  margin-top: sage-spacing(sm);
+
+  > p {
+    @extend %t-sage-body-small-semi;
+
+    color: sage-color(red, 300);
+
+    &:not(:last-child) {
+      margin-bottom: sage-spacing(2xs);
+    }
+  }
+}
+
+.sage-upload-card__icon {
+  color: sage-color(grey, 500);
+
+  .sage-upload-card:not(.sage-uploaded-card--selected) & {
+    margin-bottom: sage-spacing(2xs);
+  }
+}
+
+.sage-upload-card__input {
+  @include visually-hidden;
+}
+
+.sage-upload-card__preview {
+  width: rem(190px);
+  margin-right: sage-spacing(md);
+}
+
+.sage-upload-card__subtext {
+  @extend %t-sage-body-small;
+
+  margin-top: sage-spacing(2xs);
+  color: sage-color(charcoal, 200);
+}
+
+.sage-upload-card__text {
+  @extend %t-sage-heading-6;
+
+  margin-bottom: sage-spacing(2xs);
+  color: sage-color(charcoal, 400);
+}

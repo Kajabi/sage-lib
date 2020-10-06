@@ -1,0 +1,15 @@
+@function sage-spacing($key: md) {
+  $value: map-get($sage-spacings, $key);
+  @return $value;
+}
+
+$sage-spacings: (
+  3xs: rem(2px),
+  2xs: rem(4px),
+  xs: rem(8px),
+  sm: rem(16px),
+  md: rem(24px),
+  lg: rem(32px),
+  xl: rem(48px),
+  2xl: rem(64px),
+);

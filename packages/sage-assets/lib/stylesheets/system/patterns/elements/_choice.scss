@@ -1,0 +1,81 @@
+/* ==================================================
+  ** _choice.scss
+  type: element
+
+
+================================================== */
+
+$item-radio: "::before";
+$item-radio-indicator: "::after";
+
+.sage-choice {
+  @include sage-button-style-reset();
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-grow: 1;
+  flex-basis: 0;
+  margin-bottom: sage-spacing(sm);
+  padding: sage-spacing(sm);
+  white-space: nowrap;
+  color: $sage-tabs-default-color;
+  border: sage-border();
+  border-radius: sage-border(radius);
+  transition: color $sage-transition, background-color $sage-transition, box-shadow $sage-transition;
+
+  @extend %t-sage-body-med;
+
+  &#{$item-radio} {
+    content: "";
+    display: inline-block;
+    box-sizing: border-box;
+    height: $sage-radio-button-size;
+    min-width: $sage-radio-button-size;
+    width: $sage-radio-button-size;
+    margin: 0 sage-spacing(xs) 0 0;
+    background-color: $sage-radio-selected-indicator-color;
+    border-radius: sage-border(radius-round);
+    border: sage-border();
+    transition: border $sage-transition, box-shadow $sage-transition;
+  }
+
+  &:hover {
+    color: $sage-tabs-active-color;
+    background-color: sage-color(grey, 100);
+
+    &#{$item-radio} {
+      box-shadow: sage-shadow(sm);
+    }
+  }
+
+  &:focus {
+    outline-color: sage-color(primary);
+  }
+
+  &:active,
+  &.sage-choice--active {
+    color: $sage-tabs-active-color;
+    &#{$item-radio} {
+      box-shadow: sage-shadow(sm);
+      border-width: 5px;
+      border-color: $sage-radio-color-checked;
+    }
+  }
+}
+
+.sage-choice__content {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  pointer-events: none;
+}
+
+.sage-choice__text {
+  font-style: normal;
+  color: sage-color(charcoal, 400);
+}
+
+.sage-choice__subtext {
+  @extend %t-sage-body-small;
+  color: sage-color(charcoal, 100);
+}

@@ -1,0 +1,37 @@
+{
+  "name": "@voodoogq/sage-system",
+  "version": "1.0.0",
+  "description": "Sage System",
+  "keywords": [
+    "sage",
+    "system"
+  ],
+  "author": "Shane Smith <voodoogq@gmail.com>",
+  "homepage": "https://github.com/Kajabi/sage-lib#readme",
+  "license": "ISC",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kajabi/sage-lib.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Kajabi/sage-lib/issues"
+  },
+  "scripts": {
+    "build": "webpack --config webpack/webpack.prod.js"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
+  }
+}
