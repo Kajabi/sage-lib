@@ -2,6 +2,10 @@ FROM circleci/ruby:2.4.9-node-browsers AS base
 
 USER root
 
+RUN mkdir -p /app && chown -Rh $user:$user /app
+
+USER $user
+
 RUN apt-get update -qq\
   && apt-get install -y vim\
   && rm -rf /var/lib/apt/lists/*

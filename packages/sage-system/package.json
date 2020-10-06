@@ -27,12 +27,18 @@
     "url": "https://github.com/Kajabi/sage-lib/issues"
   },
   "scripts": {
-    "build": "webpack --config webpack/webpack.prod.js"
+    "build": "webpack --config webpack/webpack.prod.js",
+    "build:watch": "yarn build -- --watch"
   },
   "devDependencies": {
     "@babel/core": "^7.11.6",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12"
   },
-  "gitHead": "b8c2dd5f156473667f33a4d425c501a1e3b1c578"
+  "gitHead": "b8c2dd5f156473667f33a4d425c501a1e3b1c578",
+  "dependencies": {
+    "@babel/preset-env": "^7.11.5",
+    "arrive": "^2.4.1",
+    "babel-loader": "^8.1.0"
+  }
 }

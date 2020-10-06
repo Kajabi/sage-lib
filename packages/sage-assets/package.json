@@ -12,7 +12,8 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "scripts": {
-    "build": "sass lib/stylesheets/system/index.scss dist/main.css --style compressed",
+    "build": "sass lib/stylesheets/index.scss dist/main.css --style compressed",
+    "build:watch": "yarn run build -- --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Shane Smith <voodoogq@gmail.com>",
