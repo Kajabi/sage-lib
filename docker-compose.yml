@@ -7,12 +7,13 @@ services:
       - "80:80"
     volumes:
       - ./docker/nginx.conf:/etc/nginx/nginx.conf
-  js:
+  assets:
     user: root
     build:
       context: .
       dockerfile: docker/Dockerfile.dev
       target: base
+    working_dir: packages/sage-assets
     command:
       - /bin/bash
       - -c
@@ -40,7 +41,7 @@ services:
       - "4035:4035"
     depends_on:
       - router
-      - js
+      - assets
     volumes:
       - ".:/app:delegated"
       - "./docs/node_modules:/app/docs/node_modules"
