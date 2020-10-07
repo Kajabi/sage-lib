@@ -1,8 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import classnames from 'classnames';
-import configs from './configs';
-import { htmlAttributePropTypes, hyperlinkAttributePropTypes } from '../configs';
+import React from "react";
+import classnames from "classnames";
+import PropTypes from "prop-types";
+import configs from "./configs";
+import {
+  htmlAttributePropTypes,
+  hyperlinkAttributePropTypes,
+} from "../configs";
 
 const Button = ({
   alignEnd,
@@ -18,20 +21,16 @@ const Button = ({
   size,
   type,
 }) => {
-  const blockName = 'sage-btn';
-  const classNames = classnames(
-    blockName,
-    className,
-    {
-      [`${blockName}--align-end`]: alignEnd,
-      [`${blockName}--${color}`]: color,
-      [`${blockName}--${size}`]: size,
-      [`${blockName}--icon-${iconPosition}-${icon}`]: icon && !iconOnly,
-      [`${blockName}--icon-only-${icon}`]: icon && iconOnly,
-    }
-  );
+  const blockName = "sage-btn";
+  const classNames = classnames(blockName, className, {
+    [`${blockName}--align-end`]: alignEnd,
+    [`${blockName}--${color}`]: color,
+    [`${blockName}--${size}`]: size,
+    [`${blockName}--icon-${iconPosition}-${icon}`]: icon && !iconOnly,
+    [`${blockName}--icon-only-${icon}`]: icon && iconOnly,
+  });
 
-  const TagName = hyperlinkAttributes ? 'a' : 'button';
+  const TagName = hyperlinkAttributes ? "a" : "button";
 
   let otherProps = {
     onClick,
@@ -48,14 +47,10 @@ const Button = ({
     <TagName className={classNames} {...otherProps}>
       FOOBAR
       {iconOnly ? (
-        <span className="visually-hidden">
-          {children}
-        </span>
+        <span className="visually-hidden">{children}</span>
       ) : (
-          <>
-            {children}
-          </>
-        )}
+        <>{children}</>
+      )}
     </TagName>
   );
 };
@@ -64,16 +59,16 @@ Button.configs = configs;
 
 Button.defaultProps = {
   alignEnd: false,
-  className: '',
-  color: 'primary',
+  className: "",
+  color: "primary",
   htmlAttributes: null,
   hyperlinkAttributes: null,
   icon: null,
   iconOnly: false,
-  iconPosition: 'left',
+  iconPosition: "left",
   onClick: null,
   size: null,
-  type: 'button',
+  type: "button",
 };
 
 Button.propTypes = {
