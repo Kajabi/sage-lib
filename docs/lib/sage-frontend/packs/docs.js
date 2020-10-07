@@ -1,9 +1,8 @@
 // --- Webpacker Dependencies ---
 import "core-js/stable";
 import "regenerator-runtime/runtime";
-import "@kajabi/sage";
+import "../javascript/docs/index";
 
 // --- Sage Docs Assets ----------
-require.context("../../../../assets/images/docs", true);
-require.context("../../../../assets/images/system", true);
-import "../../../../assets/stylesheets/docs/index.scss";
+require.context("../images/docs", true);
+import "../stylesheets/docs/index.scss";

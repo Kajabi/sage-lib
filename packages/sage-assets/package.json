@@ -12,7 +12,7 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "scripts": {
-    "build": "sass lib/stylesheets/index.scss dist/main.css --style compressed",
+    "build": "webpack --config webpack/webpack.prod.js",
     "build:watch": "yarn run build -- --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,7 +21,17 @@
   "devDependencies": {
     "@babel/core": "^7.11.6",
     "@babel/preset-env": "^7.11.5",
-    "sass": "^1.26.11"
+    "babel-loader": "^8.1.0",
+    "css-loader": "^4.3.0",
+    "mini-css-extract-plugin": "^0.11.3",
+    "sass": "^1.26.11",
+    "sass-loader": "^10.0.2",
+    "url-loader": "^4.1.0",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
   },
-  "gitHead": "b8c2dd5f156473667f33a4d425c501a1e3b1c578"
+  "gitHead": "b8c2dd5f156473667f33a4d425c501a1e3b1c578",
+  "dependencies": {
+    "resolve-url-loader": "^3.1.1"
+  }
 }
