@@ -1,8 +1,8 @@
 // --- Webpacker Dependencies ---
-import 'core-js/stable'
-import 'regenerator-runtime/runtime'
-import '@kajabi/sage'
+import "core-js/stable";
+import "regenerator-runtime/runtime";
+import "@kajabi/sage-system";
 
 // --- Sage System Assets -------
-require.context('../../../../assets/images/system', true)
-import '../../../../assets/stylesheets/system/index.scss'
+require.context("@kajabi/sage-assets/lib/images", true);
+import "@kajabi/sage-assets/dist/main.css";
