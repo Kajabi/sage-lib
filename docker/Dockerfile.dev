@@ -2,12 +2,9 @@ FROM circleci/node:14.11-browsers AS base
 
 USER root
 
-RUN mkdir -p /app && chown -Rh $user:$user /app
-
-USER $user
-
 RUN apt-get update -qq\
   && apt-get install -y vim\
   && rm -rf /var/lib/apt/lists/*
 
-WORKDIR /app
+RUN npm i lerna -g --loglevel notice
+
