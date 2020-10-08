@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.description = "temp"
   s.license     = "MIT"
 
-  s.files = Dir["{app,config,lib}/**/*"]
+  s.files = Dir["docs/{app,config,lib}/**/*"]
 
   s.add_runtime_dependency "rails"
 
