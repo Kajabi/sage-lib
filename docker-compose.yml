@@ -23,6 +23,7 @@ services:
     volumes:
       - .:/app:delegated
       - ./node_modules:/app/node_modules
+      - ./packages/sage-packs/node_modules:/app/packages/sage-packs/node_modules
       - ./packages/sage-assets/node_modules:/app/packages/sage-assets/node_modules
       - ./packages/sage-react/node_modules:/app/packages/sage-react/node_modules
       - ./packages/sage-system/node_modules:/app/packages/sage-system/node_modules
