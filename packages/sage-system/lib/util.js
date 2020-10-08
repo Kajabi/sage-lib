@@ -1,8 +1,9 @@
-Sage.util = (function(Sage) {
-
+Sage.util = (function (Sage) {
   // retrieve button target from aria-controls or data attribute
   function getBtnTarget(e) {
-    return e.target.getAttribute('aria-controls') ? e.target.getAttribute('aria-controls') : e.target.getAttribute('data-js-menu');
+    return e.target.getAttribute("aria-controls")
+      ? e.target.getAttribute("aria-controls")
+      : e.target.getAttribute("data-js-menu");
   }
 
   // convert nodelist to array for iteration
@@ -11,7 +12,7 @@ Sage.util = (function(Sage) {
   }
 
   function isEmptyString(str) {
-    return (!str || 0 === str.length);
+    return !str || 0 === str.length;
   }
 
   function isIE() {
@@ -21,13 +22,19 @@ Sage.util = (function(Sage) {
   function ajaxRequestWithJsInjection(method, urlTarget, urlParams) {
     let xhr = new XMLHttpRequest();
     xhr.open(method, urlTarget);
-    xhr.setRequestHeader('Accept', 'text/javascript, application/javascript');
-    xhr.setRequestHeader('X-CSRF-Token', document.querySelector('meta[name="csrf-token"]').content);
-    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+    xhr.setRequestHeader("Accept", "text/javascript, application/javascript");
+    xhr.setRequestHeader(
+      "X-CSRF-Token",
+      document.querySelector('meta[name="csrf-token"]').content
+    );
+    xhr.setRequestHeader(
+      "Content-Type",
+      "application/x-www-form-urlencoded; charset=UTF-8"
+    );
 
     xhr.onload = function (evt) {
-      let elScript = document.createElement('script');
-      elScript.setAttribute('type', 'text/javascript');
+      let elScript = document.createElement("script");
+      elScript.setAttribute("type", "text/javascript");
       elScript.innerHTML = evt.currentTarget.response;
       document.body.appendChild(elScript);
     };
@@ -40,7 +47,6 @@ Sage.util = (function(Sage) {
     nodelistToArray: nodelistToArray,
     isEmptyString: isEmptyString,
     isIE: isIE,
-    ajaxRequestWithJsInjection: ajaxRequestWithJsInjection
+    ajaxRequestWithJsInjection: ajaxRequestWithJsInjection,
   };
-
 })(Sage);
