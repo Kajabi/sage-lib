@@ -2,9 +2,10 @@
 // Variables
 // ==================================================
 
-$sage-icon-font-path: "../fonts/sage" !default;
+$sage-icon-font-path: "../../fonts/sage" !default;
 $sage-icon-background-color: #eee !default;
 $sage-icon-li-margin-right: 0.4em !default;
+
 
 // ==================================================
 // Font setup
@@ -22,6 +23,7 @@ $sage-icon-li-margin-right: 0.4em !default;
   font-display: block;
 }
 
+
 // ==================================================
 // Mixins
 // ==================================================
@@ -35,6 +37,7 @@ $sage-icon-li-margin-right: 0.4em !default;
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=#{$rotation});
   transform: scale($horiz, $vert);
 }
+
 
 // ==================================================
 // Base class definition
@@ -54,6 +57,11 @@ $sage-icon-li-margin-right: 0.4em !default;
         @include sage-icon-base($icon-name, $size-name);
       }
     }
+  }
+
+  // Other icons generated here
+  .sage-choice--icon-#{$icon-name}::before {
+    @include sage-icon-base($icon-name);
   }
 }
 

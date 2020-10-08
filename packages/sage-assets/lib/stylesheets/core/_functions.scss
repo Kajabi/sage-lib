@@ -3,6 +3,46 @@
 
 ================================================== */
 
+@function parse-morse-code($-code) {
+  $-pattern: ();
+  $-dash-slots: ();
+  $-dot-slots: ();
+
+  $i: 1;
+  @while $i <= str-length($-code) {
+    $str: str-slice($-code, $i, $i);
+
+    @if ($str == ".") {
+      $-dot-slots: append($-dot-slots, $i);
+      $-pattern: append($-pattern, auto);
+    }
+    @else if ($str == "-") {
+      $-dash-slots: append($-dash-slots, $i);
+      $-pattern: append($-pattern, 1fr);
+    }
+
+    $i: $i + 1;
+  }
+
+  @return (
+    code: $-code,
+    pattern: $-pattern,
+    dash-slots: $-dash-slots,
+    dot-slots: $-dot-slots,
+  );
+}
+
+@function position-print-value($key, $value) {
+  @if not $value {
+    @error "position() mixin requires all 4 position values (top, right, bottom, left): #{$key} is missing or invalid.";
+  }
+  @else if $value != unset {
+    @return $value;
+  }
+  @else {
+    @return null;
+  }
+}
 
 /* ==================================================
 ** Integer (pixel) to rem function
@@ -15,7 +55,6 @@
 @function rem($value) {
   @return strip-unit($value) / 16 * 1rem;
 }
-
 
 /* ==================================================
 ** Strip units from value
@@ -36,6 +75,34 @@
 }
 
 /* ==================================================
+** Replace `$search` with `$replace` in `$string`
+  author Hugo Giraudel
+  Usage: `str-replace(12px)`
+  
+  Replace `$search` with `$replace` in `$string`
+
+  arguments: 
+    {String} $string - Initial string
+    {String} $search - Substring to replace
+    {String} $replace ('') - New value
+
+  @return {String} - Updated string
+================================================== */
+@function str-replace($string, $search, $replace: "") {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+
+  @return $string;
+}
+
+//
+// Functions dependant on others
+//
+
+/* ==================================================
 ** Generates a value based on the baseline grid
   Usage: `baseline(5)`
 
@@ -52,33 +119,4 @@ $default-baseline: rem(4px) !default;
 
 @function baseline($num: 2, $baseline: $default-baseline) {
   @return $num * $baseline;
-}
-
-
-/// Replace `$search` with `$replace` in `$string`
-/// @author Hugo Giraudel
-/// @param {String} $string - Initial string
-/// @param {String} $search - Substring to replace
-/// @param {String} $replace ('') - New value
-/// @return {String} - Updated string
-@function str-replace($string, $search, $replace: "") {
-  $index: str-index($string, $search);
-
-  @if $index {
-    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
-  }
-
-  @return $string;
-}
-
-@function position-print-value($key, $value) {
-  @if not $value {
-    @error "position() mixin requires all 4 position values (top, right, bottom, left): #{$key} is missing or invalid.";
-  }
-  @else if $value != unset {
-    @return $value;
-  }
-  @else {
-    @return null;
-  }
 }

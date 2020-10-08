@@ -11,8 +11,10 @@
     margin-bottom: $sage-textarea-spacing;
   }
 
-  .sage-panel__content-stack > &,
-  .sage-panel__copy > & {
+  .sage-panel__stack > &,
+  .sage-panel__block > &,
+  .sage-card__stack > &,
+  .sage-card__block > & {
     margin-bottom: 0;
   }
 }
@@ -59,7 +61,7 @@
   transition: border 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 
   @include placeholder {
-    color: inherit;
+    color: sage-color(charcoal, 100);
   }
 
   &:hover:not(:active):not(:focus),

@@ -1,0 +1,2 @@
+class SagePanelStack < SageComponent
+end

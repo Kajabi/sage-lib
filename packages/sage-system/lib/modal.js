@@ -30,7 +30,7 @@ Sage.modal = (function() {
         dispatchCloseAll();
 
       // Modal Close Button has been clicked
-      } else if ( evt.target.parentElement.hasAttribute(SELECTOR_MODAL_CLOSE) || el.hasAttribute(SELECTOR_MODAL_CLOSE) ) {
+      } else if ( el.hasAttribute(SELECTOR_MODAL_CLOSE) || evt.target.parentElement.hasAttribute(SELECTOR_MODAL_CLOSE) ) {
         dispatchCloseAll();
       }
     });
@@ -38,7 +38,7 @@ Sage.modal = (function() {
 
   function initTrigger(el) {
     el.addEventListener('click', function(evt){
-      let modalId = evt.target.getAttribute(SELECTOR_MODALTRIGGER);
+      let modalId = evt.target.getAttribute(SELECTOR_MODALTRIGGER) || evt.target.parentElement.getAttribute(SELECTOR_MODALTRIGGER);
       openModal(modalId);
     });
   }

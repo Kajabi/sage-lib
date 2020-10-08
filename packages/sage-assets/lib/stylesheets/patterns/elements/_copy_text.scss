@@ -1,0 +1,80 @@
+/* ==================================================
+  ** copy_text
+  type: element
+
+================================================== */
+
+$-copy-text-border: 1px solid sage-color(grey, 400);
+$-copy-text-color: sage-color(charcoal, 400);
+$-copy-text-color-hover: sage-color(charcoal, 500);
+
+@mixin sage-copy-text() {
+  @extend %t-sage-body-small;
+
+  @include truncate();
+
+  color: sage-color(charcoal, 400);
+  background-color: sage-color(grey, 200);
+  border: $-copy-text-border;
+  border-radius: sage-border(radius);
+}
+
+.sage-copy-text {
+  @include sage-copy-text;
+
+  display: inline-block;
+  padding: 0 sage-spacing(xs);
+
+  .sage-copy-btn & {
+    transition: $sage-transition;
+    transition-property: color, background-color;
+  }
+
+  .sage-copy-btn:hover & {
+    color: $-copy-text-color-hover;
+    background-color: sage-color(grey, 100);
+    border-color: sage-color(grey, 500);
+  }
+}
+
+.sage-copy-text-card {
+  @include sage-grid-stack;
+  @include sage-copy-text;
+  
+  width: 100%;
+  padding: $sage-card-padding;
+}
+
+.sage-copy-text-card--truncate-contents {
+  > * {
+    width: 100%;
+
+    @include truncate();
+  }
+}
+
+.sage-copy-btn {
+  @include sage-button-style-reset();
+  @include sage-focus-outline($-copy-text-color-hover);
+
+  display: inline-flex;
+  flex-flow: row-reverse;
+  align-items: center;
+  padding-right: sage-spacing(2xs);
+
+  &::before {
+    @include sage-icon-base(copy);
+
+    margin-left: sage-spacing(xs);
+    color: $-copy-text-color;
+  }
+
+  &:hover::before {
+    color: $-copy-text-color-hover;
+  }
+}
+
+.sage-copy-text--semibold,
+.sage-copy-text-card--semibold {
+  @extend %t-sage-body-small-semi;
+}

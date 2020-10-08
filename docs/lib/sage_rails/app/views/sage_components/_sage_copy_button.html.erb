@@ -1,0 +1,6 @@
+<button
+  class="sage-copy-btn"
+  data-js-copy-button="<%= component.value.html_safe %>"
+>
+  <%= sage_component SageCopyText, { value: component.value, semibold: component.semibold.present? && component.semibold } %>
+</button>

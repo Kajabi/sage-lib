@@ -7,6 +7,10 @@ class SageComponent
     @generated_css_classes ||= ""
   end
 
+  def generated_html_attributes
+    @generated_html_attributes ||= ""
+  end
+
   def render
     context.render(
       partial: "sage_components/#{template_path}",
@@ -24,7 +28,20 @@ class SageComponent
     raise ArgumentError.new("SageComponent expects :spacer to be a hash") unless spacer_hash.is_a?(Hash)
 
     spacer_hash.each do |key, value|
-      generated_css_classes << " sage-spacer-#{key}-#{value}"
+      generated_css_classes << " sage-spacer-#{key}#{value != :md ? "-#{value}" : ""}"
+    end
+  end
+
+  # SageComponent Custom Html Attributes
+  #   Accepts a :html_attributes hash that generates additional html attributes for a component.
+  #
+  #   USAGE:
+  #   sage_component <CLASSNAME>, { html_attributes: { "id": "my-cool-identifier" } }
+  def html_attributes=(html_attributes_hash)
+    raise ArgumentError.new("SageComponent expects :html_attributes to be a hash") unless html_attributes_hash.is_a?(Hash)
+
+    html_attributes_hash.each do |key, value|
+      generated_html_attributes << " #{key}=#{value.to_s}".html_safe
     end
   end
 

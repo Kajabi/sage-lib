@@ -1,23 +1,28 @@
-<div class="sage-page-heading">
-  <% if component.title.present? %>
-    <h1 class="sage-page-heading__title">
-      <%= component.title %>
-      <% if component.help_link.present? %>
-        <a href="<%= component.help_link[:url] %>" class="sage-link--help-icon-only" target="_blank" referrer="no-referrer">
-          <span class="visually-hidden"><%= component.help_link[:label] %></a>
-        </a>
-      <% end %>
-    </h1>
+<section class="sage-page-heading <%= component.generated_css_classes %>">
+  <% if content_for? :sage_breadcrumbs %>
+    <div class="sage-page-heading__crumbs">
+      <%= content_for :sage_breadcrumbs %>
+    </div>
   <% end %>
-  <% if component.link_url.present? %>
-    <nav aria-label="Breadcrumbs" class="sage-page-heading__back sage-breadcrumbs">
-      <p class="sage-breadcrumbs__item">
-        <a class="sage-breadcrumbs__link sage-breadcrumbs__link--current" aria-current="page" href="<%= component.link_url %>">
-          <i class="sage-breadcrumbs__icon sage-icon-caret-left" aria-label="navigate to"></i>
-          <%= component.link_text %>
-        </a>
-      </p>
-    </nav>
+  <h1 class="sage-page-heading__title"><%= component.title %><% if component.help_link.present? %> <a href="<%= component.help_link[:url] %>" class="sage-link--no-launch sage-link--help-icon-only" target="_blank" referrer="no-referrer"><span class="visually-hidden"><%= component.help_link[:label] %></span></a><% end %></h1>
+  <% if content_for? :sage_page_heading_intro %>
+    <div class="sage-page-heading__intro">
+      <%= content_for :sage_page_heading_intro %>
+    </div>
   <% end %>
-  <%= component.content %>
-</div>
+  <% if content_for? :sage_page_heading_actions %>
+    <div class="sage-page-heading__actions">
+      <%= content_for :sage_page_heading_actions %>
+    </div>
+  <% end %>
+  <% if content_for? :sage_page_heading_toolbar %>
+    <div class="sage-page-heading__toolbar">
+      <%= content_for :sage_page_heading_toolbar %>
+    </div>
+  <% end %>
+  <% if component.secondary_text.present? %>
+    <div class="sage-page-heading__secondary">
+      <p><%= component.secondary_text %></p>
+    </div>
+  <% end %>
+</section>

@@ -1,3 +1,3 @@
 class SageBody < SageComponent
-  attr_accessor :style_class
+  attr_accessor :css_classes
 end

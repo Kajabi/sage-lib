@@ -18,7 +18,6 @@
   align-items: baseline;
   position: relative;
   padding: rem(6px) sage-spacing(sm);
-  margin-left: sage-spacing(2xs);
   letter-spacing: $sage-btn-letter-spacing;
   color: sage-color(charcoal, 500);
   border: 0;
@@ -33,7 +32,7 @@
   cursor: not-allowed;
   pointer-events: none;
 
-  &:hover:not(:focus):not(:active):not(:disabled):not(.disabled),
+  &:hover:not(:focus):not(:active):not(:disabled):not([aria-disabled="true"]),
   &:focus,
   &:active {
     outline: none;
@@ -43,46 +42,21 @@
 
 .sage-btn {
   @include button-style-base;
+  @include sage-focus-outline($sage-btn-focus-outline-color);
 
   .sage-input-group & {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }
 
-  &:first-of-type {
-    margin-left: 0;
-  }
-
-  &::after {
-    content: "";
-    display: inline-block;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate3d(-50%, -50%, 0) scale(0.94);
-    width: calc(100% + #{$sage-btn-focus-outline-width * 2px} + #{$sage-btn-focus-outline-spacing * 2});
-    height: calc(100% + #{$sage-btn-focus-outline-width * 2px} + #{$sage-btn-focus-outline-spacing * 2});
-    border: ($sage-btn-focus-outline-width * 1px) solid $sage-btn-focus-outline-color;
-    border-radius: sage-border(radius-large);
-    transition: opacity 0.15s ease-out 0.05s, transform 0.2s ease-in-out;
-    pointer-events: none;
-    opacity: 0;
-  }
-
   &:focus {
     box-shadow: $sage-btn-shadow-base;
-    outline: none;
   }
 
-  &:focus:not(:disabled):not(.disabled),
-  &:active:not(:disabled):not(.disabled) {
-    &::after {
-      transform: translate3d(-50%, -50%, 0) scale(1);
-      opacity: 1;
-    }
-
-    .sage-dropdown__item > &::after {
-      opacity: 0;
+  &:focus:not(:disabled):not([aria-disabled="true"]),
+  &:active:not(:disabled):not([aria-disabled="true"]) {
+    .sage-dropdown__item > & {
+      @include sage-focus-outline--update-color(transparent);
     }
   }
 
@@ -92,7 +66,7 @@
   }
 
   &:disabled,
-  &.disabled {
+  &[aria-disabled="true"] {
     @include button-style-disabled;
 
     color: sage-color(grey);
@@ -105,12 +79,38 @@
     padding-bottom: rem(9px);
     border-radius: 0;
   }
+
+  .sage-page-heading__actions & {
+    margin: 0;
+  }
+
+  // NOTE: Hope to use `gap` in the future instead
+  // but Safari does not currently support it for flexbox
+  /* stylelint-disable max-nesting-depth */
+  @each $-key, $-value in $sage-spacings {
+    @if ($-key == xs) {
+      .sage-btn-group &:not(:last-child) {
+        margin-right: sage-spacing($-key);
+      }
+    }
+    @else if ($-key == sm or $-key == md or $-key == lg) {
+      .sage-btn-group--gap-#{$-key} &:not(:last-child) {
+        margin-right: sage-spacing($-key);
+      }
+    }
+  }
+  /* stylelint-enable max-nesting-depth */
 }
 
 .sage-btn--small {
-  padding-top: 0;
-  padding-bottom: 0;
+  padding: 0 sage-spacing(sm);
   font-size: sage-font-size(sm);
+}
+
+.sage-btn--tiny {
+  @extend %t-sage-body-small;
+  padding: 0 sage-spacing(2xs);
+
 }
 
 .sage-btn--full-width {
@@ -118,25 +118,18 @@
   width: 100%;
 }
 
-.sage-btn--tiny {
-  padding: 0;
-}
-
 .sage-btn--primary {
+  @include sage-focus-outline--update-color($sage-btn-primary-bg-color);
   color: $sage-btn-primary-text-color;
   background-color: $sage-btn-primary-bg-color;
 
-  &::after {
-    border-color: $sage-btn-primary-bg-color;
-  }
-
-  &:hover:not(:focus):not(:active):not(:disabled):not(.disabled),
+  &:hover:not(:focus):not(:active):not(:disabled):not([aria-disabled="true"]),
   &:focus,
   &:active {
     color: $sage-btn-primary-text-color;
   }
 
-  &:hover:not(:focus):not(:active):not(:disabled):not(.disabled) {
+  &:hover:not(:focus):not(:active):not(:disabled):not([aria-disabled="true"]) {
     background-color: lighten($sage-btn-primary-bg-color, 9%);
   }
 
@@ -151,7 +144,7 @@
   }
 
   &:disabled,
-  &.disabled {
+  &[aria-disabled="true"] {
     @include button-style-disabled;
 
     color: sage-color(primary, 200);
@@ -160,16 +153,13 @@
 }
 
 .sage-btn--secondary {
+  @include sage-focus-outline--update-color(sage-color(primary));
   color: $sage-btn-secondary-text-color;
   background-color: sage-color(white);
   border: 0;
   box-shadow: none;
 
-  &::after {
-    border-color: sage-color(primary);
-  }
-
-  &:hover:not(:focus):not(:active):not(:disabled):not(.disabled) {
+  &:hover:not(:focus):not(:active):not(:disabled):not([aria-disabled="true"]) {
     color: $sage-btn-secondary-text-color;
     background-color: sage-color(grey, 200);
   }
@@ -187,7 +177,7 @@
   }
 
   &:disabled,
-  &.disabled {
+  &[aria-disabled="true"] {
     @include button-style-disabled;
 
     color: sage-color(primary, 200);
@@ -200,16 +190,13 @@
 }
 
 .sage-btn--tertiary {
+  @include sage-focus-outline--update-color(sage-color(charcoal, 200));
   color: $sage-btn-tertiary-text-color;
-  background-color: sage-color(white);
+  background-color: transparent;
   border: 0;
   box-shadow: none;
 
-  &::after {
-    border-color: sage-color(charcoal, 200);
-  }
-
-  &:hover:not(:focus):not(:active):not(:disabled):not(.disabled) {
+  &:hover:not(:focus):not(:active):not(:disabled):not([aria-disabled="true"]) {
     color: $sage-btn-tertiary-text-color;
     background-color: sage-color(grey, 200);
   }
@@ -227,7 +214,7 @@
   }
 
   &:disabled,
-  &.disabled {
+  &[aria-disabled="true"] {
     @include button-style-disabled;
 
     color: sage-color(grey, 300);
@@ -240,15 +227,12 @@
 }
 
 .sage-btn--danger {
+  @include sage-focus-outline--update-color($sage-btn-danger-text-color);
   color: $sage-btn-danger-text-color;
   border: 0;
   box-shadow: none;
 
-  &::after {
-    border-color: $sage-btn-danger-text-color;
-  }
-
-  &:hover:not(:focus):not(:active):not(:disabled):not(.disabled) {
+  &:hover:not(:focus):not(:active):not(:disabled):not([aria-disabled="true"]) {
     color: $sage-btn-danger-text-color;
     background-color: $sage-btn-danger-bg-hover-color;
   }
@@ -266,7 +250,7 @@
   }
 
   &:disabled,
-  &.disabled {
+  &[aria-disabled="true"] {
     @include button-style-disabled;
 
     color: sage-color(primary, 200);
@@ -307,10 +291,6 @@
           align-self: center;
           margin: 0 0 0 sage-spacing(xs);
         }
-
-        &.sage-btn--tiny::before {
-          padding-right: sage-spacing(2xs);
-        }
       }
     }
 
@@ -324,10 +304,6 @@
 
           align-self: center;
           margin: 0 sage-spacing(xs) 0 0;
-        }
-
-        &.sage-btn--tiny::before {
-          padding-left: sage-spacing(2xs);
         }
       }
     }
@@ -364,4 +340,13 @@
 
 .sage-btn__truncate-text {
   @include truncate;
+}
+
+.sage-btn-group {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.sage-btn-group--align-end {
+  justify-content: flex-end;
 }

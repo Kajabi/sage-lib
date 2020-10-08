@@ -30,8 +30,10 @@ $-sage-selectfield-color-error: $sage-inputfield-color-error;
     margin-bottom: $-sage-selectfield-bottom-spacing;
   }
 
-  .sage-panel__content-stack > &,
-  .sage-panel__copy > & {
+  .sage-panel__stack > &,
+  .sage-panel__block > &,
+  .sage-card__stack > &,
+  .sage-card__block > & {
     margin-bottom: 0;
   }
 }

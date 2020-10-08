@@ -8,7 +8,6 @@
   display: flex;
   position: absolute;
   z-index: $sage-tooltip-zindex;
-  min-width: max-content;
   max-width: $sage-tooltip-maxwidth;
   padding: $sage-tooltip-padding;
   text-align: center;

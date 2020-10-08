@@ -9,11 +9,12 @@ $item-underline: "::after";
 /* stylelint-disable max-nesting-depth */
 .sage-tab {
   @include sage-button-style-reset();
+
   display: flex;
   position: relative;
   align-items: center;
   overflow: hidden;
-  margin: 0 sage-spacing(sm) sage-spacing(lg) 0;
+  margin: 0;
   padding: 0 0 sage-spacing(xs);
   white-space: nowrap;
   color: $sage-tabs-default-color;
@@ -40,6 +41,10 @@ $item-underline: "::after";
 
   @include sage-tab-underline;
 
+  .sage-tabs &:not(:last-child) {
+    margin-right: sage-spacing(sm);
+  }
+
   .sage-tabs--progressbar & {
     overflow: visible;
 
@@ -55,7 +60,6 @@ $item-underline: "::after";
         @include sage-icon-base(right-small, xl);
       }
     }
-
   }
 }
 /* stylelint-enable max-nesting-depth */

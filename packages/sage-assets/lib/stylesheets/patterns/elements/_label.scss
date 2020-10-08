@@ -14,10 +14,12 @@ $-label-inset-border: 0 0 0 1px inset;
 
   display: inline-flex;
   align-items: center;
+  appearance: none;
   padding: $-label-padding;
   text-align: center;
   white-space: nowrap;
   border-radius: $-label-border-radius;
+  border: unset;
 }
 
 .sage-label--truncate {
@@ -42,6 +44,16 @@ $-label-inset-border: 0 0 0 1px inset;
       background-color: sage-color-combo($-color-name, bold, background);
     }
 
+    &.sage-label--interactive {
+      cursor: pointer;
+
+      @include sage-focus-outline( sage-color-combo($-color-name, subtle, background) );
+
+      &:hover:not(:focus):not(:active):not(:disabled):not(.disabled) {
+        background-color: darken(sage-color-combo($-color-name, default, background), 5%);
+      }
+    }
+
     .sage-btn & {
       &:focus,
       &:active {
@@ -54,16 +66,22 @@ $-label-inset-border: 0 0 0 1px inset;
 
 @each $-icon-name, $-icon-code in $sage-icons {
   .sage-label--icon-left-#{$-icon-name} {
+    flex-direction: row;
+    gap: sage-spacing(xs);
+
     &::before {
-      margin-right: sage-spacing(2xs);
-      @include sage-icon-base($-icon-name);
+      align-self: center;
+      @include sage-icon-base($-icon-name, sm);
     }
   }
 
   .sage-label--icon-right-#{$-icon-name} {
-    &::after {
-      margin-left: sage-spacing(2xs);
-      @include sage-icon-base($-icon-name);
+    flex-direction: row-reverse;
+    gap: sage-spacing(xs);
+
+    &::before {
+      align-self: center;
+      @include sage-icon-base($-icon-name, sm);
     }
   }
 }

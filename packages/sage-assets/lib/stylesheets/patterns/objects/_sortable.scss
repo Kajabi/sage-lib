@@ -6,67 +6,92 @@
 ================================================== */
 
 .sage-sortable {
-  padding: sage-spacing(xs) 0 0;
+  /* stylelint-disable-line block-no-empty */
 }
 
 .sage-sortable__item {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 0 0 sage-spacing(xs);
-  padding: sage-spacing(xs) sage-spacing(xs) sage-spacing(xs) sage-spacing(sm);
+  gap: sage-spacing(2xs);
+  padding: sage-spacing(2xs);
   background: sage-color(white);
-  border: sage-border();
-  border-radius: sage-border(radius-large);
-  transition: $sage-transition;
-  transition-property: border-color, box-shadow;
+  border-bottom: sage-border(light);
   cursor: grab;
 
   &::before {
     @include sage-icon-base(handle);
-
-    padding: 0 sage-spacing(sm) 0 0;
+    padding: 0 sage-spacing(xs);
     color: sage-color(grey, 500);
   }
 
   &:focus,
   &:hover {
-    box-shadow: sage-shadow(sm);
+    background-color: sage-color(grey, 100);
 
     &::before {
       color: sage-color(primary);
     }
   }
 
+  &.sage-sortable__item--card {
+    padding: sage-spacing(xs);
+    border: sage-border();
+    border-radius: sage-border(radius-large);
+    transition: $sage-transition;
+    transition-property: border-color, box-shadow;
+
+    &:not(:last-child) {
+      margin-bottom: sage-spacing(xs);
+    }
+
+    &:focus,
+    &:hover {
+      box-shadow: sage-shadow(sm);
+    }
+
+    &.sage-sortable__item--active,
+    &:active {
+      border-color: sage-color(primary);
+      box-shadow: sage-shadow(md);
+    }
+  }
+
   &.sage-sortable__item--active,
   &:active {
-    border-color: sage-color(primary);
-    box-shadow: sage-shadow(md);
     cursor: grabbing;
   }
 
   &.sage-sortable__item--ghost {
-    border-color: sage-color(grey, 500);
-    opacity: 0.5;
+    background: sage-color(grey, 200);
   }
 }
 
 .sage-sortable__item-content {
+  display: flex;
   z-index: sage-z-index();
   overflow: hidden;
-  width: 100%;
-  list-style: none;
+  flex-direction: row;
+  align-items: baseline;
+  margin-right: auto;
 
-  > * {
-    overflow: hidden;
-    margin-bottom: 0;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+  .sage-sortable__item--card & {
+    flex-direction: column;
   }
 }
 
-.sage-sortable__item-actions {
-  display: flex;
-  margin: 0 0 0 auto;
-  padding: 0 sage-spacing(xs) 0 sage-spacing(sm);
+.sage-sortable__item-title {
+  @extend %t-sage-body-small;
+  @include truncate();
+  margin-right: sage-spacing(xs);
+
+  .sage-sortable__item--card & {
+    @extend %t-sage-body;
+    margin-right: 0;
+  }
+}
+
+.sage-sortable__item-subtitle {
+  @extend %t-sage-body-xsmall;
+  color: sage-color(charcoal, 100);
 }

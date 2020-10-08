@@ -155,6 +155,11 @@ a {
   }
 }
 
+b,
+strong {
+  font-weight: sage-font-weight(semibold);
+}
+
 hr {
   margin: sage-spacing() 0;
   border: 0;

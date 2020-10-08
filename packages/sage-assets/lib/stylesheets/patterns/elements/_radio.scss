@@ -17,8 +17,10 @@
     margin-bottom: $sage-form-element-spacing / 2;
   }
 
-  .sage-panel__content-stack > &,
-  .sage-panel__copy > & {
+  .sage-panel__stack > &,
+  .sage-panel__block > &,
+  .sage-card__stack > &,
+  .sage-card__block > & {
     margin-bottom: 0;
   }
 }

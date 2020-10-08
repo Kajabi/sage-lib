@@ -1,0 +1,39 @@
+<% is_progressbar = component.is_progressbar.present? && component.is_progressbar %>
+<nav
+  aria-label="Breadcrumbs"
+  class="
+    sage-breadcrumbs
+    <%= "sage-breadcrumbs--progressbar" if is_progressbar %>
+    <%= css_classes if component.css_classes.present? %>
+  "
+>
+  <% if component.items.length() > 1 %>
+    <ul class="sage-breadcrumbs__list">
+      <% component.items.each_with_index do |item, i| %>
+        <li class="sage-breadcrumbs__item">
+          <a
+            href="<%= item[:url] %>"
+            class="
+              sage-breadcrumbs__link
+              <%= " sage-breadcrumbs__link--current" if defined?(item[:is_current]) && item[:is_current] || !component.is_progressbar && i == (component.items.length() - 1) %>
+            "
+          >
+            <% if i == 0 && defined?(has_back_icon) && has_back_icon %>
+              <i class="sage-breadcrumbs__icon sage-icon-arrow-left" aria-hidden="true"></i>
+            <% end %>
+            <%= item[:text] %>
+          </a>
+        </li>
+      <% end %>
+    </ul>
+  <% else %>
+  <p class="sage-breadcrumbs__item">
+    <a href="<%= component.items[0][:url] %>" class="sage-breadcrumbs__link" aria-current="page">
+      <% if component.has_back_icon.present? && component.has_back_icon %>
+        <i class="sage-breadcrumbs__icon sage-icon-arrow-left" aria-hidden="true"></i>
+      <% end %>
+      <%= component.items[0][:text] %>
+    </a>  
+  </p>
+  <% end %>
+</nav>

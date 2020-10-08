@@ -4,6 +4,7 @@
 }
 
 $sage-borders: (
+  light: rem(1px) solid sage-color(grey, 200),
   default: rem(1px) solid sage-color(grey, 300),
   radius: rem(4px),
   radius-large: rem(6px),

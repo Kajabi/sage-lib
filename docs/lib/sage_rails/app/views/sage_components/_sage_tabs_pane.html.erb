@@ -1,3 +1,13 @@
-<section class="sage-tabs-pane" data-js-tabs-pane="<%= component.id %>" id="<%= component.id %>" role="tabpanel">
+<section
+  class="
+    sage-tabs-pane
+    <%= "sage-tabs-pane--panel-spacing" if component.panel_spacing.present? && component.panel_spacing == true %>
+    <%= "sage-tabs-pane--card-spacing" if component.card_spacing.present? && component.card_spacing == true %>
+    <%= "sage-tabs-pane--card" if component.card.present? && component.card == true %>
+  "
+  data-js-tabs-pane="<%= component.id %>"
+  id="<%= component.id %>"
+  role="tabpanel"
+>
   <%= component.content %>
 </section>

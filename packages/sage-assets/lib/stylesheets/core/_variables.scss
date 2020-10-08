@@ -311,10 +311,20 @@ $sage-overlay-transition-backdrop-filter: backdrop-filter 0.7s ease-in-out !defa
 // ==================================================
 
 $sage-panel-bg-color: sage-color(white) !default;
-$sage-panel-padding: sage-spacing(sm) !default;
-$sage-panel-padding-lg: sage-spacing() !default;
 $sage-panel-border-radius: sage-border(radius) !default;
 $sage-panel-box-shadow: sage-shadow(sm) !default;
+$sage-panel-grid-gap: sage-spacing();
+$sage-panel-padding: sage-spacing() !default;
+
+
+// ==================================================
+// CARDS
+// ==================================================
+
+$sage-card-border: 1px solid sage-color(grey, 300) !default;
+$sage-card-border-radius: sage-border(radius) !default;
+$sage-card-grid-gap: sage-spacing(sm) !default;
+$sage-card-padding: sage-spacing(sm) !default;
 
 
 // ==================================================
@@ -376,17 +386,6 @@ $sage-tooltip-large-padding: sage-spacing(xs) sage-spacing(xs) !default;
 $sage-tooltip-zindex: sage-z_index(overlay) !default;
 $sage-tooltip-maxwidth: rem(200px) !default;
 $sage-tooltip-large-maxwidth: rem(320px) !default;
-
-
-// ==================================================
-// CARDS
-// ==================================================
-
-$sage-card-shadow: sage-shadow(sm);
-$sage-card-radius: sage-border(radius);
-$sage-card-spacing: sage-spacing(md);
-$sage-card-spacing-2xl: sage-spacing(2xl);
-$sage-card-text-color: sage-color(charcoal, 200);
 
 
 // ==================================================

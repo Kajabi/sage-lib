@@ -6,7 +6,7 @@
   <% component.attributes.each do |key, value| %>
     <%= "#{key}='#{value}'".html_safe %>
   <% end if component.attributes&.is_a?(Hash) %>
-  <%= "aria-disabled='true' disabled" if component.disabled %>
+  <%= "aria-disabled=true disabled" if component.disabled %>
   class="
     sage-btn
     <%= "sage-btn--full-width" if component.full_width %>
@@ -23,7 +23,8 @@
     </span>
   <% else %>
     <span class="sage-btn__truncate-text">
-      <%= component.value.html_safe %>
+      <%# if the component.value is an empty string, add a `&nbsp;` to prevent height collapse %>
+      <%= (component.value.strip.empty? ? "&nbsp;" : component.value).html_safe %>
     </span>
   <% end %>
 </<%= html_tag %>>

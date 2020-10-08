@@ -1,8 +1,121 @@
 /* ==================================================
-  ** card DEPRECATED
+  ** OLD card DEPRECATED
   type: object
 
 
+================================================== */
+
+.sage-card {
+  @include sage-card();
+
+  width: 100%;
+}
+
+.sage-card__footer {
+  @include sage-grid-card-row();
+
+  &:not(.sage-card__footer--align-spread) {
+    justify-content: end;
+  }
+}
+
+.sage-card__divider {
+  margin: 0;
+  padding-top: rem(11px); // 16 - 1px element - 4px bottom padding
+  padding-bottom: rem(4px);
+  border: 0;
+
+  &::before {
+    content: "";
+    display: block;
+    border-top: 1px solid sage-color(grey, 300);
+  }
+}
+
+.sage-card__divider--full-bleed {
+  padding: 0;
+  margin: 0 -#{$sage-card-padding};
+}
+
+.sage-card__figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 100%;
+  border-radius: sage-border(radius);
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.sage-card__figure--bleed-bottom {
+  width: calc(100% + #{2 * sage-spacing(sm)});
+  margin: 0 (-1 * sage-spacing(sm)) (-1 * sage-spacing(sm));
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.sage-card__figure--bleed-sides {
+  width: calc(100% + #{2 * sage-spacing(sm)});
+  margin: 0 (-1 * sage-spacing(sm));
+  border-radius: 0;
+}
+
+.sage-card__figure--bleed-top {
+  width: calc(100% + #{2 * sage-spacing(sm)});
+  margin: (-1 * sage-spacing(sm)) (-1 * sage-spacing(sm)) 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.sage-card__figure--wistia {
+  display: block;
+}
+
+.sage-card__header {
+  @include sage-grid-card-row();
+}
+
+.sage-card__list {
+  padding: 0;
+  margin: 0 -#{sage-spacing(sm)};
+  list-style: none;
+}
+
+.sage-card__list-item {
+  margin-bottom: rem(-1px);
+  padding: sage-spacing(xs) sage-spacing(sm);
+  border-top: 1px solid sage-color(grey, 200);
+  border-bottom: 1px solid sage-color(grey, 200);
+}
+
+.sage-card__row {
+  @include sage-grid-card-row();
+}
+
+.sage-card__row--vertical-align-start {
+  align-items: start;
+}
+
+.sage-card__stack {
+  padding: 0;
+  list-style: none;
+
+  @include sage-grid-stack();
+}
+
+.sage-card__title {
+  @extend %t-sage-heading-6;
+}
+
+/* ==================================================
+  ** OLD card DEPRECATED
+  type: object
 ================================================== */
 
 $-d-sage-card-shadow: sage-shadow(sm);

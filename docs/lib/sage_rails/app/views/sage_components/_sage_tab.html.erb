@@ -1,15 +1,22 @@
-<% css_active_class = "sage-tab--active" %>
+<% 
+css_active_class = "sage-tab--active"
+is_button = !component.attributes&.has_key?(:href)
+html_tag = is_button ? "button" : "a"
+%>
 
-<button
-  type="button"
+<<%= html_tag %>
+  <%= "type=button" if is_button %>
+  <% component.attributes.each do |key, value| %>
+    <%= "#{key}='#{value}'".html_safe %>
+  <% end if component.attributes&.is_a?(Hash) %>
   class="
     sage-tab <%= css_active_class if component.active %>"
   data-js-tabs-target="<%= component.target %>"
   data-sage-active-class="<%= css_active_class %>"
   role="tab"
-  aria-controls="<%= component.target %>"
+  aria-controls="<%= component.target.present? %>"
 >
   <% if component.text.present? %>
     <%= component.text.html_safe %>
   <% end %>
-</button>
+</<%= html_tag %>>

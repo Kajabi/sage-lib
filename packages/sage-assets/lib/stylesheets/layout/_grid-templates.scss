@@ -1,0 +1,28 @@
+// ============================================
+// Row Grid Templates - B
+// ============================================
+
+// Generates classes for each sage grid template
+@each $-key, $-map in $sage-grid-templates {
+  [data-sage-grid-template="#{map-get($-map, code)}"],
+  .sage-grid-template-#{$-key} {
+    @media (max-width: sage-breakpoint(md-max)) {
+      // Set dash elements to fill the space
+      @each $-n in map-get($-map, dash-slots) {
+        > :nth-child(#{$-n}) {
+          width: 100%;
+        }
+      }
+    }
+
+    @media (min-width: sage-breakpoint(lg-min)) {
+      grid-template-columns: map-get($-map, pattern);
+      // Set dot elements to align at start
+      @each $-n in map-get($-map, dot-slots) {
+        > :nth-child(#{$-n}) {
+          align-self: center;
+        }
+      }
+    }
+  }
+}

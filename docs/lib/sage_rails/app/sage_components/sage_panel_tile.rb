@@ -1,0 +1,2 @@
+class SagePanelTile < SageComponent
+end

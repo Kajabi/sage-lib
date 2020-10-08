@@ -1,2 +1,2 @@
-window.Sage = window.Sage || {};
-window.Sage.docs = window.Sage.docs || {};
+var Sage = Sage || {};
+Sage.docs = Sage.docs || {};

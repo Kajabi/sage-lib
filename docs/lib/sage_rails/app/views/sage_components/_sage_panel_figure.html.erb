@@ -1,0 +1,10 @@
+<div
+  class="sage-panel__figure
+    <%= "sage-panel__figure--bleed-#{component.bleed}" if component.bleed %>
+    <%= "sage-panel__figure--wistia" if component.is_wistia %>
+    <%= component.generated_css_classes %>
+  "
+  <%= component.generated_html_attributes %>
+>
+  <%= component.content %>
+</div>

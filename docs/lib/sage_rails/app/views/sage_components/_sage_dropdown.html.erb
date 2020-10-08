@@ -6,6 +6,7 @@
   data-js-dropdown="<%= component.id %>"
 >
   <div
+    aria-controls="options_menu"
     class="
       sage-dropdown__trigger
       <%= "sage-dropdown__trigger--#{component.trigger_type}" if component.trigger_type %>
@@ -14,9 +15,21 @@
     <%= component.content %>
   </div>
   <nav class="sage-dropdown__panel">
-    <ul class="sage-dropdown__menu" role="menu" aria-label="Participant options">
+    <ul class="sage-dropdown__menu" role="menu" aria-label="options_menu">
+      <% if component.search %>
+        <li class="sage-dropdown__item sage-dropdown__item--search sage-search" role="none">
+          <input class="sage-search__input" type="text" placeholder="Search..." />
+        </li>
+      <% end %>
       <% component.items.each do |item| %>
-        <li class="sage-dropdown__item" role="none">
+        <li class="
+            sage-dropdown__item
+            <% item[:modifiers]&.each do |item_modifier| %>
+              <%= "sage-dropdown__item--#{item_modifier}" %>
+            <% end %>
+          "
+          role="none"
+        >
           <a
             <% item[:attributes].each do |key, value| %>
               <%= "#{key}=#{value}"%>
@@ -25,10 +38,11 @@
             tabindex="0"
             class="
               sage-dropdown__item-control
+              <%= "sage-dropdown__item-control--#{item[:style]}" if item[:style] %>
               <%= "sage-dropdown__item-control--icon-#{item[:icon]}" if item[:icon] %>
             "
           >
-            <%= item[:name] %>
+            <%= item[:value].html_safe %>
           </a>
         </li>
       <% end %>

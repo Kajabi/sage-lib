@@ -1,29 +1,8 @@
-<section
-  class="
+<section class="
     sage-panel
-    <%= "sage-panel--#{component.style}" if component.style %>
-    <%= "sage-panel--#{component.color}" if component.color %>
-    <%= "sage-panel--#{component.size}" if component.size %>
     <%= component.generated_css_classes %>
   "
-  <%= "id=#{component.id}" if component.id %>
+  <%= component.generated_html_attributes %>
 >
-  <% if component.title || content_for?(:sage_header_actions) %>
-    <header class="sage-panel__header">
-      <h1 class="t-sage-heading-5">
-        <%= component.title %>
-      </h1>
-      <aside class="sage-panel__header-aside">
-        <%= content_for :sage_header_actions %>
-      </aside>
-    </header>
-  <% end %>
-  <div class="sage-panel__body">
-    <%= component.content %>
-  </div>
-  <% if content_for?(:sage_footer) %>
-    <footer class="sage-panel__footer">
-      <%= content_for :sage_footer %>
-    </footer>
-  <% end %>
+  <%= component.content %>
 </section>

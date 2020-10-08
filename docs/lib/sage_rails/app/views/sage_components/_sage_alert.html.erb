@@ -3,6 +3,8 @@
   <div class="sage-alert__copy">
     <h3 class="sage-alert__title"><%= component.title %></h3>
     <p class="sage-alert__desc"><%= component.desc %></p>
-    <button type="button" class="sage-alert__close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <% if component.dismissable %>
+      <button type="button" class="sage-alert__close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <% end %>
   </div>
 </div>

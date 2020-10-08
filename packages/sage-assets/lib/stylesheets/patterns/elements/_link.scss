@@ -12,7 +12,7 @@
   position: relative;
 
   &::before {
-    @include sage-icon-base(question-circle, xl);
+    @include sage-icon-base(question-circle, lg);
 
     transform: translateY(rem(1px));
     color: sage-color(grey, 500);

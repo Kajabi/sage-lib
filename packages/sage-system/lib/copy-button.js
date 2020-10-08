@@ -14,6 +14,7 @@ Sage.copyButton = (function() {
     el.select();
     document.execCommand('copy');
     document.body.removeChild(el);
+    ev.currentTarget.focus();
   };
 
 

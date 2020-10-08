@@ -26,27 +26,6 @@
 }
 
 /* ==================================================
-  ** Visually Hidden mixin
-  Usage: `@include visually-hidden()`
-
-  Hides content from view, but allows text to stay visible to screen readers
-  arguments: n/a
-================================================== */
-
-@mixin visually-hidden {
-  position: absolute;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  clip-path: polygon(0 0, 0 0, 0 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  white-space: nowrap;
-  border: 0;
-}
-
-/* ==================================================
 ** Overflow scroll mixin
   Usage: `@include overflow-scroll();
 
@@ -135,6 +114,27 @@
   white-space: nowrap;
 }
 
+/* ==================================================
+  ** Visually Hidden mixin
+  Usage: `@include visually-hidden()`
+
+  Hides content from view, but allows text to stay visible to screen readers
+  arguments: n/a
+================================================== */
+
+@mixin visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: polygon(0 0, 0 0, 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  white-space: nowrap;
+  border: 0;
+}
+
 
 /* ==================================================
   ** SAGE-SPECIFIC MIXINS
@@ -183,6 +183,58 @@
 }
 
 /* ==================================================
+** Button Outline
+  Usage:
+    Set up the custom outline:
+    @include sage-focus-outline--define($color)
+
+    Overwrite the custom outline color:
+    @include sage-focus-outline--define($color)
+
+  Sets a Sage-style custom focus outline to an interactive element.
+
+  arguments:
+    $color: [hex color to be used for the stroke color]
+================================================== */
+
+@mixin sage-focus-outline($outline-color) {
+  position: relative;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0) scale(0.94);
+    width: calc(100% + #{$sage-btn-focus-outline-width * 2px} + #{$sage-btn-focus-outline-spacing * 2});
+    height: calc(100% + #{$sage-btn-focus-outline-width * 2px} + #{$sage-btn-focus-outline-spacing * 2});
+    border: ($sage-btn-focus-outline-width * 1px) solid $outline-color;
+    border-radius: sage-border(radius-large);
+    transition: opacity 0.15s ease-out 0.05s, transform 0.2s ease-in-out;
+    pointer-events: none;
+    opacity: 0;
+  }
+
+  &:focus:not(:disabled):not(.disabled),
+  &:active:not(:disabled):not(.disabled) {
+    &::after {
+      transform: translate3d(-50%, -50%, 0) scale(1);
+      opacity: 1;
+    }
+  }
+}
+
+@mixin sage-focus-outline--update-color($outline-color) {
+  &::after {
+    border-color: $outline-color;
+  }
+}
+
+/* ==================================================
   ** Card
   Usage: `@include sage-card;`
 
@@ -222,19 +274,20 @@
 ================================================== */
 @mixin sage-grid-card() {
   display: grid;
-  grid-gap: sage-spacing(sm);
+  gap: sage-spacing(sm);
   grid-template-rows: min-content;
 }
 
 /* ==================================================
   ** Grid: Panel Stack
-  Usage: `@include sage-grid-content-stack;`
+  Usage: `@include sage-grid-stack;`
 ================================================== */
-@mixin sage-grid-content-stack() {
+@mixin sage-grid-stack() {
   display: grid;
-  grid-gap: sage-spacing(xs);
+  gap: sage-spacing(xs);
   grid-template-columns: 100%;
   grid-template-rows: min-content;
+  justify-items: start;
 }
 
 /* ==================================================
@@ -243,7 +296,7 @@
 ================================================== */
 @mixin sage-grid-panel() {
   display: grid;
-  grid-gap: sage-spacing();
+  gap: $sage-panel-grid-gap;
   grid-template-columns: 100%;
   grid-template-rows: min-content;
 }
@@ -255,12 +308,21 @@
   Standard grid setup for a single row layout.
 ================================================== */
 @mixin sage-grid-card-row() {
-  display: grid;
-  align-items: center;
-  grid-auto-columns: auto;
-  grid-auto-flow: column;
-  grid-gap: sage-spacing(sm);
   justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: sage-breakpoint(md-max)) {
+    display: flex;
+    flex-flow: row wrap;
+    gap: sage-spacing(sm);
+  }
+
+  @media (min-width: sage-breakpoint(lg-min)) {
+    display: grid;
+    grid-auto-columns: auto;
+    grid-auto-flow: column;
+    gap: sage-spacing(sm);
+  }
 }
 
 /* ==================================================
@@ -270,12 +332,21 @@
   Standard grid setup for a single row layout.
 ================================================== */
 @mixin sage-grid-panel-row() {
-  display: grid;
-  align-items: center;
-  grid-auto-columns: auto;
-  grid-auto-flow: column;
-  grid-gap: sage-spacing();
   justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: sage-breakpoint(md-max)) {
+    display: flex;
+    flex-flow: row wrap;
+    gap: sage-spacing();
+  }
+
+  @media (min-width: sage-breakpoint(lg-min)) {
+    display: grid;
+    grid-auto-columns: auto;
+    grid-auto-flow: column;
+    gap: sage-spacing();
+  }
 }
 
 /* ==================================================

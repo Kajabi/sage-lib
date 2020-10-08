@@ -15,6 +15,7 @@
 @import "layout/content";
 @import "layout/document";
 @import "layout/grid";
+@import "layout/grid-templates";
 @import "layout/page";
 @import "layout/stage";
 @import "layout/header";
@@ -28,6 +29,7 @@
 @import "patterns/elements/button";
 @import "patterns/elements/checkbox";
 @import "patterns/elements/choice";
+@import "patterns/elements/copy_text";
 @import "patterns/elements/description";
 @import "patterns/elements/form_input";
 @import "patterns/elements/form_select";
@@ -48,6 +50,7 @@
 @import "patterns/elements/tooltip";
 @import "patterns/elements/status_icon";
 @import "patterns/elements/icon_card";
+@import "patterns/elements/property";
 
 // Objects
 @import "patterns/objects/alert";
@@ -55,6 +58,7 @@
 @import "patterns/objects/avatar";
 @import "patterns/objects/banner";
 @import "patterns/objects/billboard";
+@import "patterns/objects/catalog_item";
 @import "patterns/objects/card";
 @import "patterns/objects/data_card";
 @import "patterns/objects/dropdown";
@@ -73,3 +77,4 @@
 @import "patterns/objects/sortable";
 @import "patterns/objects/tabs";
 @import "patterns/objects/upload_card";
+@import "patterns/objects/outline_item";

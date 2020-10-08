@@ -1,0 +1,20 @@
+<% html_tag = component.interactive ? "button" : "span" %>
+
+<<%= html_tag %>
+  class="
+    sage-label
+    <%= "sage-label--#{component.color}" if component.color %>
+    <%= "sage-label--#{component.style}" if component.style %>
+    <%= "sage-label--interactive" if component.interactive %>
+    <%= "sage-label--icon-#{component.icon[:style]}-#{component.icon[:name]}" if component.icon %>
+    <%= component.generated_css_classes %>
+  "
+>
+  <% if component.icon&.dig(:style) == "only" %>
+    <span class="visually-hidden">
+      <%= component.value.html_safe %>
+    </span>
+  <% else %>
+    <%= component.value.html_safe %>
+  <% end %>
+</<%= html_tag %>>

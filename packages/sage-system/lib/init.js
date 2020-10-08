@@ -48,10 +48,11 @@ Sage.init = function(elementNamesToInitLegacy) {
   // ==================================================
 
   // Event Detail Format: not supported
-  initDocumentEventListener('sage.modal.closeAll',          Sage.modal.eventHandlerCloseAll);
+  initDocumentEventListener('sage.modal.closeAll', Sage.modal.eventHandlerCloseAll);
 
   // Event Detail Format: { tabsId: "", paneId: "" }
-  initDocumentEventListener('sage.tabs.change',             Sage.tabs.eventHandlerChange);
+  initDocumentEventListener('sage.tabs.initial',   Sage.tabs.eventHandlerChange);
+  initDocumentEventListener('sage.tabs.change',    Sage.tabs.eventHandlerChange);
 
   // ==================================================
   // LEGACY

@@ -5,39 +5,46 @@
 ================================================== */
 
 .sage-tabs {
-  display: flex;
+  /* stylelint-disable block-no-empty */
 }
 
 .sage-tabs--layout-default {
+  display: flex;
   flex-direction: row;
-
-  > * {
-    &:not(:last-of-type) {
-      margin-right: sage-spacing(sm);
-    }
-
-    @include sage-tab-underline(".sage-tabs__tab--active");
-  }
 }
 
 .sage-tabs--layout-stacked {
-  flex-direction: column;
+  @include sage-grid-card();
+}
 
-  > * {
-    margin-bottom: sage-spacing(sm);
-  }
-  .sage-choice {
-    flex-basis: initial;
-  }
+.sage-tabs-container {
+  @include sage-grid-panel();
+}
+
+.sage-tabs-divider,
+.sage-tabs-container > hr {
+  margin: 0;
+  border-top: 1px solid sage-color(grey, 300);
 }
 
 .sage-tabs-pane {
   display: none;
   visibility: hidden;
-  margin-bottom: sage-spacing();
 }
 
 .sage-tabs-pane--active {
   display: block;
   visibility: visible;
+
+  &.sage-tabs-pane--card {
+    @include sage-card;
+  }
+
+  &.sage-tabs-pane--card-spacing {
+    @include sage-grid-card;
+  }
+
+  &.sage-tabs-pane--panel-spacing {
+    @include sage-grid-panel;
+  }
 }

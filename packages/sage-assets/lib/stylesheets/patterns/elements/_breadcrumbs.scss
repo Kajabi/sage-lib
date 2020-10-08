@@ -9,7 +9,6 @@
 .sage-breadcrumbs__icon {
   display: inline-flex;
   align-items: center;
-  margin-right: rem(4px);
 }
 
 .sage-breadcrumbs__item {
@@ -34,6 +33,7 @@
 .sage-breadcrumbs__link {
   display: inline-flex;
   align-items: center;
+  gap: rem(8px);
   color: sage-color(charcoal, 100);
 
   &:hover,

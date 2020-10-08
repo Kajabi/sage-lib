@@ -15,7 +15,7 @@ $-pagination-bg-color-dark: sage-color(grey, 300);
 
 .sage-pagination {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   flex-flow: row wrap;
   align-items: center;
 }

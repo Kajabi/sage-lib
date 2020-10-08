@@ -1,0 +1,166 @@
+/* ==================================================
+  ** outline-item
+  type: object
+
+
+================================================== */
+
+$-collapse-breakpoint-key: md-max;
+
+.sage-outline-item {
+  overflow: hidden;
+  margin-bottom: sage-spacing(xs);
+  background-color: sage-color(white);
+  border: sage-border();
+  border-radius: sage-border(radius);
+
+  & & {
+    margin-bottom: 0;
+    border: unset;
+    border-radius: unset;
+  }
+}
+
+.sage-outline-item__content {
+  display: grid;
+  align-items: center;
+  grid-template-rows: repeat(auto-fit, auto);
+  grid-column-gap: sage-spacing(sm);
+  padding-right: sage-spacing(sm);
+  padding-left: sage-spacing(md);
+
+  @media (min-width: sage-breakpoint($-collapse-breakpoint-key)) {
+    // Using static column values to ensure alignment
+    grid-template-columns: min-content 1fr min-content rem(160px) rem(92px) rem(40px);
+    grid-template-areas: "handle-drag title actions-secondary actions-primary status handle-collapse";
+  }
+
+  @media (max-width: sage-breakpoint($-collapse-breakpoint-key)) {
+    grid-template-columns: min-content 1fr min-content min-content;
+    grid-row-gap: sage-spacing(2xs);
+    grid-template-areas:
+      "handle-drag title actions-secondary status"
+      ". actions-primary . handle-collapse";
+  }
+
+  .sage-outline-item--category > & {
+    padding-top: sage-spacing(sm);
+    padding-bottom: sage-spacing(sm);
+    border-bottom: sage-border();
+  }
+
+  :not(.sage-outline-item--category) > & {
+    padding-top: sage-spacing(xs);
+    padding-bottom: sage-spacing(xs);
+    border-bottom: sage-border(light);
+  }
+
+  :not(.sage-outline-item--category):last-child > & {
+    border-bottom: unset;
+  }
+
+  /* stylelint-disable selector-max-compound-selectors */
+  // Nested Item Identention
+  // Indents `type-category` that is 1-level deep and anything that is 2-levels deep
+  .sage-outline-item__children .sage-outline-item.sage-outline-item--category &,
+  .sage-outline-item__children .sage-outline-item.sage-outline-item--category .sage-outline-item__children & {
+    padding-left: sage-spacing(xl);
+  }
+  /* stylelint-enable selector-max-compound-selectors */
+}
+
+.sage-outline-item__title {
+  grid-area: title;
+  color: sage-color(charcoal, 400);
+  @include truncate;
+
+  .sage-outline-item--category > .sage-outline-item__content & {
+    @extend %t-sage-body-semi;
+  }
+
+  :not(.sage-outline-item--category) > .sage-outline-item__content & {
+    @extend %t-sage-body;
+  }
+}
+
+.sage-outline-item__actions-secondary {
+  display: flex;
+  grid-area: actions-secondary;
+  flex-direction: row;
+
+  @media (min-width: sage-breakpoint($-collapse-breakpoint-key)) {
+    display: none;
+    visibility: hidden;
+
+    :hover > &,
+    :focus > &,
+    :focus-within > & {
+      display: flex;
+      visibility: visible;
+    }
+  }
+}
+
+.sage-outline-item__actions-primary {
+  grid-area: actions-primary;
+}
+
+.sage-outline-item__status {
+  display: flex;
+  grid-area: status;
+  justify-content: flex-end;
+}
+
+.sage-outline-item__handle-drag {
+  grid-area: handle-drag;
+  cursor: grab;
+
+  &:active {
+    cursor: grabbing;
+  }
+
+  &::before {
+    @include sage-icon-base(null);
+    color: sage-color(charcoal, 200);
+  }
+
+  /* stylelint-disable selector-max-compound-selectors */
+  // Category: Standard
+  .sage-outline-item--category > .sage-outline-item__content &::before {
+    content: sage-icon(folder);
+    color: sage-color(primary);
+  }
+
+  // Category: Nested
+  .sage-outline-item__children .sage-outline-item--category > .sage-outline-item__content &::before {
+    content: sage-icon(arrow-corner);
+    color: sage-color(primary);
+  }
+  /* stylelint-enable selector-max-compound-selectors */
+
+  /* stylelint-disable declaration-no-important */
+  // Universal Hover For All
+  .sage-outline-item__content:hover > & {
+    &::before {
+      content: sage-icon(handle) !important;
+      color: sage-color(charcoal, 100) !important;
+    }
+
+    &:hover::before {
+      color: sage-color(primary) !important;
+    }
+  }
+  /* stylelint-enable declaration-no-important */
+}
+
+.sage-outline-item__handle-collapse {
+  display: flex;
+  grid-area: handle-collapse;
+  justify-content: flex-end;
+}
+
+.sage-outline-item__children {
+  .sage-outline-item--collapsed > & {
+    display: none;
+  }
+}

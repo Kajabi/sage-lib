@@ -1,0 +1,2 @@
+class SagePanelList < SageComponent
+end

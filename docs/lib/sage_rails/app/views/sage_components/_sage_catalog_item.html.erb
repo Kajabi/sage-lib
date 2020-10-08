@@ -1,0 +1,21 @@
+<li class="sage-catalog-item">
+  <strong class="sage-catalog-item__title">
+    <a class="t-sage-heading-6" href="<%= component.href %>" tabindex="0">
+      <%= component.title %>
+    </a>
+  </strong>
+  <% if component.content.present? %>
+    <div class="sage-catalog-item__content">
+      <%= component.content %>
+    </div>
+  <% end %>
+  <% if content_for? :sage_aside %>
+    <div class="sage-catalog-item__aside">
+      <%= content_for :sage_aside %>
+    </div>
+  <% end %>
+  <%# Uses tabindex="-1" because there are two links to the same location in this component (component.title also links to the href) %>
+  <a class="sage-catalog-item__img" href="<%= component.href %>" tabindex="-1" title="Go to: <%= component.title %>">
+    <img src="<%= component.image %>" alt="Cover image for: <%= component.title %>">
+  </a>
+</li>

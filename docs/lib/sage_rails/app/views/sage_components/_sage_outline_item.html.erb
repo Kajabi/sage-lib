@@ -1,0 +1,54 @@
+<% is_category = component.content.present? %>
+
+<section class="
+    sage-outline-item
+    <%= "sage-outline-item--category" if is_category %>
+  "
+>
+  <div class="sage-outline-item__content">
+    <div
+      class="
+        sage-outline-item__handle-drag
+        <%= "sage-icon-#{component.icon}" if component.icon && !is_category %>
+      "
+      title="Click to drag"
+    ></div>
+    <h1 class="sage-outline-item__title">
+      <%= component.title %>
+    </h1>
+    <% if component.actions_primary %>
+      <div class="sage-outline-item__actions-primary">
+        <% component.actions_primary.each do |primary| %>
+          <%= primary.html_safe %>
+        <% end %>
+      </div>
+    <% end %>
+    <% if component.actions_secondary %>
+      <div class="sage-outline-item__actions-secondary">
+        <% component.actions_secondary.each do |secondary| %>
+          <%= secondary.html_safe %>
+        <% end %>
+      </div>
+    <% end %>
+    <% if component.status %>
+      <div class="sage-outline-item__status">
+        <%= component.status.html_safe %>
+      </div>
+    <% end %>
+    <% if is_category %>
+      <div class="sage-outline-item__handle-collapse">
+        <%= sage_component SageButton, {
+          value: "Add Content",
+          style: "tertiary",
+          icon: {style: "only", name: "caret-down"},
+          attributes: { "data-js-tooltip": "Collapse" }
+        } %>
+      </div>
+    <% end %>
+  </div>
+  <% if is_category %>
+    <div class="sage-outline-item__children">
+      <%= component.content %>
+    </div>
+  <% end %>
+</section>

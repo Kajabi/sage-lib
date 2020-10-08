@@ -16,8 +16,10 @@
     height: auto;
   }
 
-  .sage-panel__content-stack > &,
-  .sage-panel__copy > & {
+  .sage-panel__stack > &,
+  .sage-panel__block > &,
+  .sage-card__stack > &,
+  .sage-card__block > & {
     margin-bottom: 0;
   }
 }
@@ -85,7 +87,7 @@
   transition: border 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 
   @include placeholder {
-    color: inherit;
+    color: sage-color(charcoal, 100);
   }
 
   &:hover:not(:disabled) {
@@ -137,6 +139,9 @@
     color: $sage-inputfield-color-disabled;
     background-color: $sage-inputfield-bg-disabled;
     cursor: not-allowed;
+    @include placeholder {
+      color: sage-color(grey, 400);
+    }
   }
 }
 

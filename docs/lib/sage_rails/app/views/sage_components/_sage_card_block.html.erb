@@ -1,0 +1,10 @@
+<div
+  class="sage-card__block
+    <%= "t-sage--color-#{component.color}" if component.color %>
+    <%= "sage-type" if component.type_block && component.type_block == true %>
+    <%= component.generated_css_classes %>
+  "
+  <%= component.generated_html_attributes %>
+>
+  <%= component.content %>
+</div>

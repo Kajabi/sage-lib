@@ -1,0 +1,2 @@
+class SageCardList < SageComponent
+end
