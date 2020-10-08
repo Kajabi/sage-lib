@@ -1,5 +1,5 @@
 <nav
-  <%= "data-js-tabs=\"#{component.id}\"" if !component.navigational %>
+  <%= "data-js-tabs=#{component.id}" if !component.navigational %>
   class="sage-tabs
     <%= component.stacked.present? ? "sage-tabs--layout-stacked" : "sage-tabs--layout-default" %>
     <%= "sage-tabs--progressbar" if component.progressbar.present? && component.progressbar == true %>

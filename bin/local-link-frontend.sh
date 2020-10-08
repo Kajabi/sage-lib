@@ -26,6 +26,7 @@ function link() {
   yarn link @kajabi/sage-assets
   yarn link @kajabi/sage-react
   yarn link @kajabi/sage-system
+  yarn link @kajabi/sage-packs
   cd $sage_repo_path
 }
 
@@ -34,6 +35,7 @@ function unlink() {
   yarn unlink @kajabi/sage-assets
   yarn unlink @kajabi/sage-react
   yarn unlink @kajabi/sage-system
+  yarn unlink @kajabi/sage-packs
   (cd $sage_assets_path; yarn unlink)
   (cd $sage_react_path; yarn unlink)
   (cd $sage_system_path; yarn unlink)
