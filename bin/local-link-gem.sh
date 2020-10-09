@@ -17,8 +17,6 @@ function show_status_of_gem() {
 
 if [ "$1" = "true" ] || [ "$1" = "false" ]; then
 
-  cd $sage_docs_path
-
   # UNINSTALL Local Bindings
   if [ "$1" = "false" ]; then
     echo_custom "[GEM]:" "Removing local Sage gem"

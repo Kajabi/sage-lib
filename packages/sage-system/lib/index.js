@@ -1,4 +1,4 @@
-require('../define')
+require('./defineSage')
 require('./util')
 
 require('./table')

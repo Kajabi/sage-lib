@@ -1,8 +1,0 @@
-tmp/
-node_modules/
-.git/
-.github/
-.circleci/
-.browserslistrc
-.dockerignore
-.gitignore

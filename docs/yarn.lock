@@ -713,7 +713,7 @@
     "@babel/helper-create-regexp-features-plugin" "^7.10.4"
     "@babel/helper-plugin-utils" "^7.10.4"
 
-"@babel/preset-env@^7.7.1":
+"@babel/preset-env@^7.11.5", "@babel/preset-env@^7.7.1":
   version "7.11.5"
   resolved "https://registry.yarnpkg.com/@babel/preset-env/-/preset-env-7.11.5.tgz#18cb4b9379e3e92ffea92c07471a99a2914e4272"
   integrity sha512-kXqmW1jVcnB2cdueV+fyBM8estd5mlNfaQi6lwLgRwCby4edpavgbFhiBNjmWA3JpB/yZGSISa7Srf+TwxDQoA==
@@ -843,21 +843,21 @@
   resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
   integrity sha512-5a6wqoJV/xEdbRNKVo6I4hO3VjyDq//8q2f9I6PBAvMesJHFauXDorcNCsr9RzvsZnaWi5NYCcfyqP1QeFHFbw==
 
-"@kajabi/sage-assets@*":
-  version "0.0.5"
-  resolved "https://npm.pkg.github.com/download/@kajabi/sage-assets/0.0.5/4a352dafd551aa3d8b7c5c5539f589e8c342336d5614fb41faf7fe3fd8d90910#072ebaf32aec650a7524f31d70c2e5028d5a0b19"
-  integrity sha512-XxKXeLs78ZKq3Jzq5PZH82hWqKuQx/qwjHm1cMGYzZ9Eton/7pc4+NCYst1ZFIk+sr1Oj9Abmue4S5q6WnAYfg==
+"@kajabi/sage-assets@^0.0.6":
+  version "0.0.6"
+  resolved "https://npm.pkg.github.com/download/@kajabi/sage-assets/0.0.6/69f40f9718ca154ca4da744b3834da59e80a7ecdfe1fa8f8a53916ff219ef45a#4f3668e0a3a213c726ef248da3a7b5834f4663b6"
+  integrity sha512-Z+K7G5XbdAYDFLimXhYWgv8cCpJPAEjmogLl7vD7VAKLKySiLSnkIxi3GWO27WWuRaHopNwwR5zNBB/f7ORiKA==
   dependencies:
     resolve-url-loader "^3.1.1"
 
 "@kajabi/sage-packs@*":
-  version "0.0.2"
-  resolved "https://npm.pkg.github.com/download/@kajabi/sage-packs/0.0.2/d001e698ce43cb381e94e9b2e72cebb65a314ef35213a9836283be124e60db68#d8c09e5cccb2b812f3fa7ada8f82db091b326542"
-  integrity sha512-e6rb0PRbEXflg0o2U4uzkjC4Bl//YeKiEbq2kGfcOtCaZaXHe0QAv2XuLo3f6rAM/B81FUPrnRZQiQ0meC2qzA==
+  version "0.0.4"
+  resolved "https://npm.pkg.github.com/download/@kajabi/sage-packs/0.0.4/575e1498d51ecdcbceb22fafc1c0940e66fb206fae56eec1b5eb9724a5cb1860#1ffab0f33b4e2a335790b4d764996097f6852c8f"
+  integrity sha512-5OVlUqTbR02WzLdmZttzeRN3Nj4+FmCubN2Xc1zeLgv+5b8G9K9NHutg7r6ngt3tEuytaIeCJ2pC1KXCAleHDg==
   dependencies:
-    "@kajabi/sage-assets" "*"
+    "@kajabi/sage-assets" "^0.0.6"
     "@kajabi/sage-react" "*"
-    "@kajabi/sage-system" "*"
+    "@kajabi/sage-system" "^0.0.5"
 
 "@kajabi/sage-react@*":
   version "0.0.4"
@@ -868,10 +868,16 @@
     prop-types "^15.7.2"
     react "^16.13.1"
 
-"@kajabi/sage-system@*":
-  version "0.0.3"
-  resolved "https://npm.pkg.github.com/download/@kajabi/sage-system/0.0.3/9accae5b2f508472e297bcf88f23efe54a8626e21905ce033989f5e1d7920ba4#f424ffd80ad6ceba1b8e2066016a195cc9f7e7ad"
-  integrity sha512-wqwqHgax4E1FXrKWzpy3GKIkM7nmx3d+lseB1am71WNNXc1XYuVRxgmTdDyzgvGYPh5Mx306+R0/HOWUf0vL5Q==
+"@kajabi/sage-system@^0.0.5":
+  version "0.0.5"
+  resolved "https://npm.pkg.github.com/download/@kajabi/sage-system/0.0.5/7b477a126e1fb49614bed860d0b37c9003aff284a35329c4d7e3c6f59a262143#2879273d640da9dacee7073f652a38bb31af9ed2"
+  integrity sha512-djw4YyKuZmEbRDudmGAbHWRVWtvQ62NMFvJH3HiC12BgCVvcFjf4yVpNiVa6I3tOzOItHp/FGmH42deZpAhuzg==
+  dependencies:
+    "@babel/preset-env" "^7.11.5"
+    arrive "^2.4.1"
+    babel-loader "^8.1.0"
+    sortablejs "^1.12.0"
+    zxcvbn "^4.4.2"
 
 "@nodelib/fs.scandir@2.1.3":
   version "2.1.3"
@@ -977,9 +983,9 @@
   integrity sha1-aaI6OtKcrwCX8G7aWbNh7i8GOfY=
 
 "@types/node@*":
-  version "14.11.5"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.11.5.tgz#fecad41c041cae7f2404ad4b2d0742fdb628b305"
-  integrity sha512-jVFzDV6NTbrLMxm4xDSIW/gKnk8rQLF9wAzLWIOg+5nU6ACrIMndeBdXci0FGtqJbP9tQvm6V39eshc96TO2wQ==
+  version "14.11.8"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.11.8.tgz#fe2012f2355e4ce08bca44aeb3abbb21cf88d33f"
+  integrity sha512-KPcKqKm5UKDkaYPTuXSx8wEP7vE9GnuaXIZKijwRYcePpZFDVuy2a57LarFKiORbHOuTOOwYzxVxcUzsh2P2Pw==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.0"
@@ -1482,7 +1488,7 @@ aws4@^1.8.0:
   resolved "https://registry.yarnpkg.com/aws4/-/aws4-1.10.1.tgz#e1e82e4f3e999e2cfd61b161280d16a111f86428"
   integrity sha512-zg7Hz2k5lI8kb7U32998pRRFin7zJlkfezGJjUc2heaD4Pw2wObakCDVzkKztTm/Ln7eiVvYsjqak0Ed4LkMDA==
 
-babel-loader@^8.0.6:
+babel-loader@^8.0.6, babel-loader@^8.1.0:
   version "8.1.0"
   resolved "https://registry.yarnpkg.com/babel-loader/-/babel-loader-8.1.0.tgz#c611d5112bd5209abe8b9fa84c3e4da25275f1c3"
   integrity sha512-7q7nC1tYOrqvUrN3LQK4GwSk/TQorZSOlO9C+RZDZpODgyN4ZlCqE5q9cDsyWOliN+aU9B4JX01xK9eJXowJLw==
@@ -2116,21 +2122,21 @@ color-name@^1.0.0, color-name@~1.1.4:
   resolved "https://registry.yarnpkg.com/color-name/-/color-name-1.1.4.tgz#c2a09a87acbde69543de6f63fa3995c826c536a2"
   integrity sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==
 
-color-string@^1.5.2:
-  version "1.5.3"
-  resolved "https://registry.yarnpkg.com/color-string/-/color-string-1.5.3.tgz#c9bbc5f01b58b5492f3d6857459cb6590ce204cc"
-  integrity sha512-dC2C5qeWoYkxki5UAXapdjqO672AM4vZuPGRQfO8b5HKuKGBbKWpITyDYN7TOFKvRW7kOgAn3746clDBMDJyQw==
+color-string@^1.5.4:
+  version "1.5.4"
+  resolved "https://registry.yarnpkg.com/color-string/-/color-string-1.5.4.tgz#dd51cd25cfee953d138fe4002372cc3d0e504cb6"
+  integrity sha512-57yF5yt8Xa3czSEW1jfQDE79Idk0+AkN/4KWad6tbdxUmAs3MvjxlWSWD4deYytcRfoZ9nhKyFl1kj5tBvidbw==
   dependencies:
     color-name "^1.0.0"
     simple-swizzle "^0.2.2"
 
 color@^3.0.0:
-  version "3.1.2"
-  resolved "https://registry.yarnpkg.com/color/-/color-3.1.2.tgz#68148e7f85d41ad7649c5fa8c8106f098d229e10"
-  integrity sha512-vXTJhHebByxZn3lDvDJYw4lR5+uB3vuoHsuYA5AKuxRVn5wzzIfQKGLBmgdVRHKTJYeK5rvJcHnrd0Li49CFpg==
+  version "3.1.3"
+  resolved "https://registry.yarnpkg.com/color/-/color-3.1.3.tgz#ca67fb4e7b97d611dcde39eceed422067d91596e"
+  integrity sha512-xgXAcTHa2HeFCGLE9Xs/R82hujGtu9Jd9x4NW3T34+OMs7VoPsjwzRczKHvTAHeJwWFwX5j15+MgAppE8ztObQ==
   dependencies:
     color-convert "^1.9.1"
-    color-string "^1.5.2"
+    color-string "^1.5.4"
 
 colorette@^1.2.1:
   version "1.2.1"
@@ -2487,9 +2493,9 @@ css-tree@1.0.0-alpha.39:
     source-map "^0.6.1"
 
 css-what@^3.2.1:
-  version "3.4.1"
-  resolved "https://registry.yarnpkg.com/css-what/-/css-what-3.4.1.tgz#81cb70b609e4b1351b1e54cbc90fd9c54af86e2e"
-  integrity sha512-wHOppVDKl4vTAOWzJt5Ek37Sgd9qq1Bmj/T1OjvicWbU5W7ru7Pqbn0Jdqii3Drx/h+dixHKXNhZYx7blthL7g==
+  version "3.4.2"
+  resolved "https://registry.yarnpkg.com/css-what/-/css-what-3.4.2.tgz#ea7026fcb01777edbde52124e21f327e7ae950e4"
+  integrity sha512-ACUm3L0/jiZTqfzRM3Hi9Q8eZqd6IK37mMWPLz9PJxkLWllYeRf+EHUSHYEtFop2Eqytaq1FizFVh7XfBnXCDQ==
 
 css@^2.0.0:
   version "2.2.4"
@@ -7447,7 +7453,7 @@ sort-keys@^1.0.0:
   dependencies:
     is-plain-obj "^1.0.0"
 
-sortablejs@^1.10.2:
+sortablejs@^1.10.2, sortablejs@^1.12.0:
   version "1.12.0"
   resolved "https://registry.yarnpkg.com/sortablejs/-/sortablejs-1.12.0.tgz#ee6d7ece3598c2af0feb1559d98595e5ea37cbd6"
   integrity sha512-bPn57rCjBRlt2sC24RBsu40wZsmLkSo2XeqG8k6DC1zru5eObQUIPPZAQG7W2SJ8FZQYq+BEJmvuw1Zxb3chqg==
