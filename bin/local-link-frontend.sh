@@ -21,10 +21,10 @@ function show_status_of_package() {
 
 function linkSetup() {
   echo_custom "[FRONTEND]:" "Setting up local link for package assets..."
-  (cd $sage_assets_path; echo $PWD; yarn link)
-  (cd $sage_react_path; echo $PWD; yarn link)
-  (cd $sage_system_path; echo $PWD; yarn link)
-  (cd $sage_packs_path; echo $PWD; yarn link)
+  (cd $sage_assets_path; yarn link)
+  (cd $sage_react_path; yarn link)
+  (cd $sage_system_path; yarn link)
+  (cd $sage_packs_path; yarn link)
 }
 
 function link() {
