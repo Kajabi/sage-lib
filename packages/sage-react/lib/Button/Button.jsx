@@ -2,6 +2,7 @@ import React from "react";
 import classnames from "classnames";
 import PropTypes from "prop-types";
 import configs from "./configs";
+import Icon from '../Icon'
 import {
   htmlAttributePropTypes,
   hyperlinkAttributePropTypes,
@@ -45,7 +46,6 @@ const Button = ({
 
   return (
     <TagName className={classNames} {...otherProps}>
-      FOOBAR
       {iconOnly ? (
         <span className="visually-hidden">{children}</span>
       ) : (
