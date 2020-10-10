@@ -10,8 +10,8 @@ jobs:
       - node/install-packages:
           pkg-manager: yarn
       - run:
-          command: yarn stylelint "lib/sage-frontend/**/*.{css,scss}" --max-warnings 0
-          name: Lint styles inside 'lib/sage-frontend/..'
+          command: yarn lint
+          name: Lint package styles
 workflows:
   sage_system_specs:
     jobs:
