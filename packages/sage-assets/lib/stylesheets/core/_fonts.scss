@@ -13,9 +13,9 @@ $-body-font-version: 3.14 !default;
   font-display: swap;
   src: local("Inter-Thin"),
     url("#{$-body-font-path}/Inter-Thin.woff2?v=#{$-body-font-version}")
-      format("woff2"),
+    format("woff2"),
     url("#{$-body-font-path}/Inter-Thin.woff?v=#{$-body-font-version}")
-      format("woff");
+    format("woff");
 }
 
 @font-face {
@@ -25,9 +25,9 @@ $-body-font-version: 3.14 !default;
   font-display: swap;
   src: local("Inter-ThinItalic"),
     url("#{$-body-font-path}/Inter-ThinItalic.woff2?v=#{$-body-font-version}")
-      format("woff2"),
+    format("woff2"),
     url("#{$-body-font-path}/Inter-ThinItalic.woff?v=#{$-body-font-version}")
-      format("woff");
+    format("woff");
 }
 
 @font-face {
@@ -37,9 +37,9 @@ $-body-font-version: 3.14 !default;
   font-display: swap;
   src: local("Inter-ExtraLight"),
     url("#{$-body-font-path}/Inter-ExtraLight.woff2?v=#{$-body-font-version}")
-      format("woff2"),
+    format("woff2"),
     url("#{$-body-font-path}/Inter-ExtraLight.woff?v=#{$-body-font-version}")
-      format("woff");
+    format("woff");
 }
 
 @font-face {
@@ -49,9 +49,9 @@ $-body-font-version: 3.14 !default;
   font-display: swap;
   src: local("Inter-ExtraLightItalic"),
     url("#{$-body-font-path}/Inter-ExtraLightItalic.woff2?v=#{$-body-font-version}")
-      format("woff2"),
+    format("woff2"),
     url("#{$-body-font-path}/Inter-ExtraLightItalic.woff?v=#{$-body-font-version}")
-      format("woff");
+    format("woff");
 }
 
 @font-face {
@@ -61,9 +61,9 @@ $-body-font-version: 3.14 !default;
   font-display: swap;
   src: local("Inter-Light"),
     url("#{$-body-font-path}/Inter-Light.woff2?v=#{$-body-font-version}")
-      format("woff2"),
+    format("woff2"),
     url("#{$-body-font-path}/Inter-Light.woff?v=#{$-body-font-version}")
-      format("woff");
+    format("woff");
 }
 
 @font-face {
@@ -73,9 +73,9 @@ $-body-font-version: 3.14 !default;
   font-display: swap;
   src: local("Inter-LightItalic"),
     url("#{$-body-font-path}/Inter-LightItalic.woff2?v=#{$-body-font-version}")
-      format("woff2"),
+    format("woff2"),
     url("#{$-body-font-path}/Inter-LightItalic.woff?v=#{$-body-font-version}")
-      format("woff");
+    format("woff");
 }
 
 @font-face {
@@ -85,9 +85,9 @@ $-body-font-version: 3.14 !default;
   font-display: swap;
   src: local("Inter-Regular"),
     url("#{$-body-font-path}/Inter-Regular.woff2?v=#{$-body-font-version}")
-      format("woff2"),
+    format("woff2"),
     url("#{$-body-font-path}/Inter-Regular.woff?v=#{$-body-font-version}")
-      format("woff");
+    format("woff");
 }
 
 @font-face {
@@ -97,9 +97,9 @@ $-body-font-version: 3.14 !default;
   font-display: swap;
   src: local("Inter-Italic"),
     url("#{$-body-font-path}/Inter-Italic.woff2?v=#{$-body-font-version}")
-      format("woff2"),
+    format("woff2"),
     url("#{$-body-font-path}/Inter-Italic.woff?v=#{$-body-font-version}")
-      format("woff");
+    format("woff");
 }
 
 @font-face {
@@ -109,9 +109,9 @@ $-body-font-version: 3.14 !default;
   font-display: swap;
   src: local("Inter-Medium"),
     url("#{$-body-font-path}/Inter-Medium.woff2?v=#{$-body-font-version}")
-      format("woff2"),
+    format("woff2"),
     url("#{$-body-font-path}/Inter-Medium.woff?v=#{$-body-font-version}")
-      format("woff");
+    format("woff");
 }
 
 @font-face {
@@ -121,9 +121,9 @@ $-body-font-version: 3.14 !default;
   font-display: swap;
   src: local("Inter-MediumItalic"),
     url("#{$-body-font-path}/Inter-MediumItalic.woff2?v=#{$-body-font-version}")
-      format("woff2"),
+    format("woff2"),
     url("#{$-body-font-path}/Inter-MediumItalic.woff?v=#{$-body-font-version}")
-      format("woff");
+    format("woff");
 }
 
 @font-face {
@@ -133,9 +133,9 @@ $-body-font-version: 3.14 !default;
   font-display: swap;
   src: local("Inter-SemiBold"),
     url("#{$-body-font-path}/Inter-SemiBold.woff2?v=#{$-body-font-version}")
-      format("woff2"),
+    format("woff2"),
     url("#{$-body-font-path}/Inter-SemiBold.woff?v=#{$-body-font-version}")
-      format("woff");
+    format("woff");
 }
 
 @font-face {
@@ -145,9 +145,9 @@ $-body-font-version: 3.14 !default;
   font-display: swap;
   src: local("Inter-SemiBoldItalic"),
     url("#{$-body-font-path}/Inter-SemiBoldItalic.woff2?v=#{$-body-font-version}")
-      format("woff2"),
+    format("woff2"),
     url("#{$-body-font-path}/Inter-SemiBoldItalic.woff?v=#{$-body-font-version}")
-      format("woff");
+    format("woff");
 }
 
 @font-face {
@@ -157,9 +157,9 @@ $-body-font-version: 3.14 !default;
   font-display: swap;
   src: local("Inter-Bold"),
     url("#{$-body-font-path}/Inter-Bold.woff2?v=#{$-body-font-version}")
-      format("woff2"),
+    format("woff2"),
     url("#{$-body-font-path}/Inter-Bold.woff?v=#{$-body-font-version}")
-      format("woff");
+    format("woff");
 }
 
 @font-face {
@@ -169,9 +169,9 @@ $-body-font-version: 3.14 !default;
   font-display: swap;
   src: local("Inter-BoldItalic"),
     url("#{$-body-font-path}/Inter-BoldItalic.woff2?v=#{$-body-font-version}")
-      format("woff2"),
+    format("woff2"),
     url("#{$-body-font-path}/Inter-BoldItalic.woff?v=#{$-body-font-version}")
-      format("woff");
+    format("woff");
 }
 
 @font-face {
@@ -181,9 +181,9 @@ $-body-font-version: 3.14 !default;
   font-display: swap;
   src: local("Inter-ExtraBold"),
     url("#{$-body-font-path}/Inter-ExtraBold.woff2?v=#{$-body-font-version}")
-      format("woff2"),
+    format("woff2"),
     url("#{$-body-font-path}/Inter-ExtraBold.woff?v=#{$-body-font-version}")
-      format("woff");
+    format("woff");
 }
 
 @font-face {
@@ -193,9 +193,9 @@ $-body-font-version: 3.14 !default;
   font-display: swap;
   src: local("Inter-ExtraBoldItalic"),
     url("#{$-body-font-path}/Inter-ExtraBoldItalic.woff2?v=#{$-body-font-version}")
-      format("woff2"),
+    format("woff2"),
     url("#{$-body-font-path}/Inter-ExtraBoldItalic.woff?v=#{$-body-font-version}")
-      format("woff");
+    format("woff");
 }
 
 @font-face {
@@ -205,9 +205,9 @@ $-body-font-version: 3.14 !default;
   font-display: swap;
   src: local("Inter-Black"),
     url("#{$-body-font-path}/Inter-Black.woff2?v=#{$-body-font-version}")
-      format("woff2"),
+    format("woff2"),
     url("#{$-body-font-path}/Inter-Black.woff?v=#{$-body-font-version}")
-      format("woff");
+    format("woff");
 }
 
 @font-face {
@@ -217,9 +217,9 @@ $-body-font-version: 3.14 !default;
   font-display: swap;
   src: local("Inter-BlackItalic"),
     url("#{$-body-font-path}/Inter-BlackItalic.woff2?v=#{$-body-font-version}")
-      format("woff2"),
+    format("woff2"),
     url("#{$-body-font-path}/Inter-BlackItalic.woff?v=#{$-body-font-version}")
-      format("woff");
+    format("woff");
 }
 
 /* ==================================================
