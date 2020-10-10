@@ -843,35 +843,35 @@
   resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
   integrity sha512-5a6wqoJV/xEdbRNKVo6I4hO3VjyDq//8q2f9I6PBAvMesJHFauXDorcNCsr9RzvsZnaWi5NYCcfyqP1QeFHFbw==
 
-"@kajabi/sage-assets@^0.0.6":
-  version "0.0.6"
-  resolved "https://npm.pkg.github.com/download/@kajabi/sage-assets/0.0.6/69f40f9718ca154ca4da744b3834da59e80a7ecdfe1fa8f8a53916ff219ef45a#4f3668e0a3a213c726ef248da3a7b5834f4663b6"
-  integrity sha512-Z+K7G5XbdAYDFLimXhYWgv8cCpJPAEjmogLl7vD7VAKLKySiLSnkIxi3GWO27WWuRaHopNwwR5zNBB/f7ORiKA==
+"@kajabi/sage-assets@^0.0.7":
+  version "0.0.7"
+  resolved "https://npm.pkg.github.com/download/@kajabi/sage-assets/0.0.7/eb1e190cf5a84a22d38a38142fa24351ea97bb9577fd36403d73754dc07c2f52#3dd0c4920a41d57839165404490f263b1eec9ccc"
+  integrity sha512-u15UgPo6mON2/cV3kZTjH5cNCRg7dzWJ2Xz/pdKDhRIxk19VkSTqVHGlkwby2glyL+gIHE0nKboZ0tWrrOmFcw==
   dependencies:
     resolve-url-loader "^3.1.1"
 
-"@kajabi/sage-packs@*":
-  version "0.0.4"
-  resolved "https://npm.pkg.github.com/download/@kajabi/sage-packs/0.0.4/575e1498d51ecdcbceb22fafc1c0940e66fb206fae56eec1b5eb9724a5cb1860#1ffab0f33b4e2a335790b4d764996097f6852c8f"
-  integrity sha512-5OVlUqTbR02WzLdmZttzeRN3Nj4+FmCubN2Xc1zeLgv+5b8G9K9NHutg7r6ngt3tEuytaIeCJ2pC1KXCAleHDg==
+"@kajabi/sage-packs@0.0.7":
+  version "0.0.7"
+  resolved "https://npm.pkg.github.com/download/@kajabi/sage-packs/0.0.7/79e5e07ef44b0b65a74479210cf964535ed416137b0cdf8e24598ec470c2e8e1#f3f453f9f6f626f822f9542c1b50cb546163178c"
+  integrity sha512-FS7JOpUSm7FAsuAGrqAP5OaF1Qwo6rUC3At2dppdzVYHVkdxyQtcPAJ3poC7CdUGxJ8owp1k7VTCbi5eO/aS5A==
   dependencies:
-    "@kajabi/sage-assets" "^0.0.6"
-    "@kajabi/sage-react" "*"
-    "@kajabi/sage-system" "^0.0.5"
+    "@kajabi/sage-assets" "^0.0.7"
+    "@kajabi/sage-react" "^0.0.5"
+    "@kajabi/sage-system" "^0.0.7"
 
-"@kajabi/sage-react@*":
-  version "0.0.4"
-  resolved "https://npm.pkg.github.com/download/@kajabi/sage-react/0.0.4/463b7305d9c5bc4e2e4e78202abfe3097f40424e63b7c596c1bef069f7ac5d61#94859f2ea99902e56f5f49224f94561ff7651217"
-  integrity sha512-CdzjkPO7P/X0NZ/wqHlXVyEhKYl7ATJgM0eWWNOuWImB8YkC9CPruUAQLczXeB4MuQqWM3W00YgwvVouIaVrFg==
+"@kajabi/sage-react@^0.0.5":
+  version "0.0.5"
+  resolved "https://npm.pkg.github.com/download/@kajabi/sage-react/0.0.5/1b99613d52bf6513cf2495d8b45416d0c79982ccc9171dc2f23a984c1ad1503c#cd105ddbec23786b5aae9053d0ff2db2adab0491"
+  integrity sha512-OPtGSoWZX467YlZCl+R0h0pCH6Tgt3oi0b5Lbxn0arXl8ddm0xgsgMvIYD3rqPEAioFOhVViosN/w+v2jTk4kw==
   dependencies:
     classnames "^2.2.6"
     prop-types "^15.7.2"
     react "^16.13.1"
 
-"@kajabi/sage-system@^0.0.5":
-  version "0.0.5"
-  resolved "https://npm.pkg.github.com/download/@kajabi/sage-system/0.0.5/7b477a126e1fb49614bed860d0b37c9003aff284a35329c4d7e3c6f59a262143#2879273d640da9dacee7073f652a38bb31af9ed2"
-  integrity sha512-djw4YyKuZmEbRDudmGAbHWRVWtvQ62NMFvJH3HiC12BgCVvcFjf4yVpNiVa6I3tOzOItHp/FGmH42deZpAhuzg==
+"@kajabi/sage-system@^0.0.7":
+  version "0.0.7"
+  resolved "https://npm.pkg.github.com/download/@kajabi/sage-system/0.0.7/9cc93e83948380988eee82c46b951d131f9824a7dd9b29caf642cea104cf1fba#26f103f428586559bbdefb8e87e604e40bdfcd84"
+  integrity sha512-ahSO6MERmhmvEZsnpCcWwhTECAm2fDtFi9Ayle2ipAdQW6ucpguee9WqGVXxz7PwagKIxxHyvRuX9wO/l/F8gw==
   dependencies:
     "@babel/preset-env" "^7.11.5"
     arrive "^2.4.1"

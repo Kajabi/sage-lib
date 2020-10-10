@@ -1,6 +1,5 @@
 require('./defineSage')
 require('./util')
-
 require('./table')
 require('./tooltip')
 require('./sidebar')
