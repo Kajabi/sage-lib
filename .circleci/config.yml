@@ -25,7 +25,7 @@ jobs:
               - add_ssh_keys:
                   fingerprints:
                     - "0a:4d:3f:bd:33:18:a3:42:24:6a:8f:39:3e:e0:70:ca"
-              - run: npx lerna bootstrap --hoist --ci
+              - run: npx lerna bootstrap --ci
               - run: npx lerna version --no-private --conventional-commits --create-release github --yes
 
 workflows:
