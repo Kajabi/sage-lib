@@ -1,8 +1,8 @@
 version: 2.1
 orbs:
-  node: circleci/node@3.0.1
+  node: circleci/node@1.1.6
 jobs:
-  lint:
+  build-and-lint:
     executor:
       name: node/default
     docker:
@@ -14,26 +14,27 @@ jobs:
           steps:
             - run: yarn install
             - run: yarn lint
-release:
-  docker:
-    - image: circleci/node
-  resource_class: small
-  steps:
-    - checkout
-    - node/with-cache:
-        steps:
-          - add_ssh_keys:
-              fingerprints:
-                - '0a:4d:3f:bd:33:18:a3:42:24:6a:8f:39:3e:e0:70:ca'
-          - run: npx lerna bootstrap --hoist --ci
-          - run: npx lerna version --conventional-commits --create-release github --yes
+  release:
+      docker:
+        - image: circleci/node
+      resource_class: small
+      steps:
+        - checkout
+        - node/with-cache:
+            steps:
+              - add_ssh_keys:
+                  fingerprints:
+                    - "0a:4d:3f:bd:33:18:a3:42:24:6a:8f:39:3e:e0:70:ca"
+              - run: npx lerna bootstrap --hoist --ci
+              - run: npx lerna version --no-private --conventional-commits --create-release github --yes
+
 workflows:
-  sage_system_specs:
-    jobs:
-      - lint
-      - release:
-        filters:
-          branches:
-            only: master
-          requires:
-            - lint
+    build-and-lint:
+      jobs:
+        - build-and-lint
+        - release:
+            filters:
+              branches:
+                only: master
+            requires:
+              - build-and-lint
