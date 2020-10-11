@@ -29,7 +29,7 @@ jobs:
               - run: git config user.email "dev+github-bot@kajabi.com"
               - run: git config user.name "Kajabi Automation Bot"
               - run: npx lerna bootstrap --ci
-              - run: npx lerna version --no-private --conventional-commits --create-release github --yes
+              # - run: npx lerna version --conventional-commits --create-release github --yes
               - run: npx lerna publish --registry github --yes
 
 workflows:
