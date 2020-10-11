@@ -2,7 +2,7 @@ version: 2.1
 orbs:
   node: circleci/node@1.1.6
 jobs:
-  build-and-lint:
+  lint-and-build:
     executor:
       name: node/default
     docker:
@@ -14,6 +14,7 @@ jobs:
           steps:
             - run: yarn install
             - run: yarn lint
+            - run: yarn build
   release:
       docker:
         - image: circleci/node
@@ -25,20 +26,18 @@ jobs:
               - add_ssh_keys:
                   fingerprints:
                     - "0a:4d:3f:bd:33:18:a3:42:24:6a:8f:39:3e:e0:70:ca"
-              - run: yarn build
               - run: git config user.email "dev+github-bot@kajabi.com"
               - run: git config user.name "Kajabi Automation Bot"
               - run: npx lerna bootstrap --ci
-              # - run: npx lerna version --conventional-commits --create-release github --yes
               - run: npx lerna publish --registry github --yes
 
 workflows:
-    build-and-lint:
+    lint-and-build:
       jobs:
-        - build-and-lint
+        - lint-and-build
         - release:
             filters:
               branches:
                 only: master
             requires:
-              - build-and-lint
+              - lint-and-build
