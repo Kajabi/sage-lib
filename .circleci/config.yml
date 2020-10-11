@@ -26,6 +26,8 @@ jobs:
                   fingerprints:
                     - "0a:4d:3f:bd:33:18:a3:42:24:6a:8f:39:3e:e0:70:ca"
               - run: yarn build
+              - run: git config user.email "dev+github-bot@kajabi.com"
+              - run: git config user.name "Kajabi Automation Bot"
               - run: npx lerna bootstrap --ci
               - run: npx lerna version --no-private --conventional-commits --create-release github --yes
               - run: npx lerna publish --registry github --yes
