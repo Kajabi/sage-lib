@@ -35,7 +35,7 @@
     "lint:assets": "yarn stylelint 'packages/sage-assets/lib/stylesheets/**/*.{css,scss}' --max-warnings 0",
     "local": "bin/local-link-frontend.sh true",
     "start": "yarn npm-run-all --parallel watch docs storybook",
-    "setup": "yarn npm-run-all init docs:init",
+    "setup": "yarn init && yarn docs:init",
     "storybook": "cd packages/sage-react && yarn storybook",
     "watch": "yarn npm-run-all --parallel watch:*",
     "watch:assets": "cd packages/sage-assets && yarn build:watch",
