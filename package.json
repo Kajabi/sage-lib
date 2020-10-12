@@ -30,14 +30,11 @@
     "lint:assets": "yarn stylelint 'packages/sage-assets/lib/stylesheets/**/*.{css,scss}' --max-warnings 0",
     "local": "bin/local-link-frontend.sh true",
     "start": "yarn npm-run-all --parallel watch docs storybook",
-    "setup": "yarn install && cd docs && bundle install && yarn install",
+    "setup": "export $(cat .env | xargs) && yarn install && cd docs && bundle install && yarn install",
     "storybook": "cd packages/sage-react && yarn storybook",
     "watch": "yarn npm-run-all --parallel watch:*",
     "watch:assets": "cd packages/sage-assets && yarn build:watch",
     "watch:react": "cd packages/sage-react && yarn build:watch",
     "watch:system": "cd packages/sage-system && yarn build:watch"
-  },
-  "dependencies": {
-    "dotenv": "^8.2.0"
   }
 }
