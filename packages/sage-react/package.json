@@ -28,7 +28,7 @@
   },
   "scripts": {
     "build": "webpack --config webpack/webpack.prod.js",
-    "build:watch": "yarn build -- --watch",
+    "build:watch": "yarn build --watch",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },

@@ -13,7 +13,7 @@
   },
   "scripts": {
     "build": "webpack --config webpack/webpack.prod.js",
-    "build:watch": "yarn run build -- --watch",
+    "build:watch": "yarn run build --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Shane Smith <voodoogq@gmail.com>",
