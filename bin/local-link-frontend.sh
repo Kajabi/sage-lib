@@ -10,17 +10,17 @@ sage_packs_path=$sage_repo_path/packages/sage-packs
 . $sage_repo_path/bin/utils.sh
 
 function yarn_install() {
-  echo_custom "[FRONTEND]:" "yarn install --force"
+  echo_custom "[FRONTEND]:" "yarn install --force in ${PWD}"
   yarn install --silent --force
 }
 
 function show_status_of_package() {
-  echo_custom "[FRONTEND]:" "Current Package Symlinks ⚒️"
-  ( ls -l node_modules ; ls -l node_modules/@* ) | grep ^l # <-- This looks up the symlinked node_modules
+  echo_custom "[FRONTEND]:" "Current Package Symlinks in ${PWD} ⚒️"
+  ( ls -l node_modules ; ls -l node_modules/@* ) | grep ^l || (echo 'No Packages Symlinked') # <-- This looks up the symlinked node_modules
 }
 
 function linkSetup() {
-  echo_custom "[FRONTEND]:" "Setting up local link for package assets..."
+  echo_custom "[FRONTEND]:" "Setting up local link in ${PWD}"
   (cd $sage_assets_path; yarn link)
   (cd $sage_react_path; yarn link)
   (cd $sage_system_path; yarn link)
@@ -36,7 +36,7 @@ function link() {
 }
 
 function linkTeardown() {
-  echo_custom "[FRONTEND]:" "Tearing down local link for package assets..."
+  echo_custom "[FRONTEND]:" "Tearing down local link in ${PWD}"
   (cd $sage_assets_path; yarn unlink)
   (cd $sage_react_path; yarn unlink)
   (cd $sage_system_path; yarn unlink)
@@ -55,7 +55,7 @@ if [ "$1" = "true" ] || [ "$1" = "false" ]; then
 
   # UNINSTALL Local Bindings
   if [ "$1" = "false" ]; then
-    echo_custom "[FRONTEND]:" "Removing local Sage package"
+    echo_custom "[FRONTEND]:" "Removing local Sage package in ${PWD}"
     unlink
     yarn_install
 
@@ -65,7 +65,7 @@ if [ "$1" = "true" ] || [ "$1" = "false" ]; then
 
     linkTeardown
 
-    echo_custom "[FRONTEND]: Now Using..." "PRODUCTION SAGE ✅"
+    echo_custom "[FRONTEND]:" "${PWD} is now using PRODUCTION SAGE ✅"
 
   # INSTALL Local Bindings
   elif [ "$1" = "true" ]; then
@@ -81,7 +81,7 @@ if [ "$1" = "true" ] || [ "$1" = "false" ]; then
     cd $sage_docs_path
     link
     yarn_install
-    echo_custom "[FRONTEND]: Now Using..." "LOCAL SAGE ✅"
+    echo_custom "[FRONTEND]:" "${PWD} is now Using LOCAL SAGE ✅"
   fi;
 
   show_status_of_package
