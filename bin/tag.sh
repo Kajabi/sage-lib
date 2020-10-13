@@ -15,7 +15,7 @@
 sage_repo_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; cd .. ; pwd -P )
 sage_docs_path=$sage_repo_path/docs
 
-. $sage_repo_path/bin/local-link-utils.sh
+. $sage_repo_path/bin/utils.sh
 
 # PREFLIGHT: Run some checks to ensure everything is properly configured
 # ----------------------------------------------------------------------

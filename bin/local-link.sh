@@ -20,7 +20,7 @@ sage_repo_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; cd .. ; pwd -P )
 sage_docs_path=$sage_repo_path/docs
 sage_bin_path=$sage_repo_path/bin
 
-. $sage_bin_path/local-link-utils.sh
+. $sage_bin_path/utils.sh
 
 function bundle_and_yarn() {
   echo_custom "GEM:" "bundle install"

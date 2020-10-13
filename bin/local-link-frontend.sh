@@ -7,7 +7,7 @@ sage_react_path=$sage_repo_path/packages/sage-react
 sage_system_path=$sage_repo_path/packages/sage-system
 sage_packs_path=$sage_repo_path/packages/sage-packs
 
-. $sage_repo_path/bin/local-link-utils.sh
+. $sage_repo_path/bin/utils.sh
 
 function yarn_install() {
   echo_custom "[FRONTEND]:" "yarn install --force"
