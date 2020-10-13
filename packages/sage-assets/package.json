@@ -1,6 +1,6 @@
 {
   "name": "@kajabi/sage-assets",
-  "version": "0.0.20",
+  "version": "0.0.21",
   "description": "Assets",
   "main": "dist/main.css",
   "repository": {
