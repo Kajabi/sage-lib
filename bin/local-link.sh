@@ -22,24 +22,6 @@ sage_bin_path=$sage_repo_path/bin
 
 . $sage_bin_path/utils.sh
 
-function bundle_and_yarn() {
-  echo_custom "GEM:" "bundle install"
-  cd $sage_docs_path
-  bundle install --quiet
-
-  cd $sage_repo_path
-  echo_custom "FRONTEND PACKAGE:" "yarn install --force"
-  yarn install --silent --force
-}
-
-function show_status_of_gem_and_package() {
-  echo_custom "GEM:" "Current Bundle Config Entries 💎"
-  bundle config
-
-  echo_custom "FRONTEND PACKAGE:" "Current Package Symlinks ⚒️"
-  ( ls -l node_modules ; ls -l node_modules/@* ) | grep ^l # <-- This looks up the symlinked node_modules
-}
-
 if [ "$1" = "true" ] || [ "$1" = "false" ]; then
 
   # UNINSTALL Local Bindings

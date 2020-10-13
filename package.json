@@ -25,6 +25,8 @@
     "build:assets": "cd packages/sage-assets && yarn build",
     "build:react": "cd packages/sage-react && yarn build",
     "build:system": "cd packages/sage-system && yarn build",
+    "bridge:kajabi-products": "bin/bridge.sh true",
+    "bridge:kajabi-products:destroy": "bin/bridge.sh false",
     "docs": "cd docs && yarn start",
     "docs:bundle": "bin/bundle.sh",
     "docs:initialize": "yarn docs:bundle && cd docs && yarn install",
