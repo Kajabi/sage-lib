@@ -8,7 +8,7 @@
   ],
   "author": "Shane Smith <voodoogq@gmail.com>",
   "homepage": "https://github.com/Kajabi/sage-lib#readme",
-  "license": "ISC",
+  "license": "MIT",
   "main": "lib/packs/react.js",
   "directories": {
     "lib": "lib"
