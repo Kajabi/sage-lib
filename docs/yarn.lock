@@ -1140,36 +1140,36 @@
   resolved "https://registry.yarnpkg.com/@icons/material/-/material-0.2.4.tgz#e90c9f71768b3736e76d7dd6783fc6c2afa88bc8"
   integrity sha512-QPcGmICAPbGLGb6F/yNf/KzKqvFx8z5qx3D1yFqVAjoFmXK35EgyW+cJ57Te3CNsmzblwtzakLGFqHPqrfb4Tw==
 
-"@kajabi/sage-assets@^0.0.15":
-  version "0.0.15"
-  resolved "https://npm.pkg.github.com/download/@kajabi/sage-assets/0.0.15/f8565b4330f5d3cd82535aeb2b2eb2ad9c7569032b136b41f9db60ac01890ffe#65f227d6e845172dc0b2495df306418892c6766c"
-  integrity sha512-x/aWNEcJFDLxGfyXZtwclJrW8Ri02vPIRb9+YuAh3+lJ953tY7OyAvV35baDHfEdoBGMTtIASqVZ6pSXNU7g9A==
+"@kajabi/sage-assets@^0.0.18":
+  version "0.0.18"
+  resolved "https://npm.pkg.github.com/download/@kajabi/sage-assets/0.0.18/f5a7b0a7392e40aa1c8572c87b2f6ada78fa0147bfa9f714f3dd437289b4b44a#b0f0d5dfeeefbd5f91ff7287a6352c929857c902"
+  integrity sha512-9SZeExmKI73CqgYkJV4VN8Mf8e+QVY3iOeL/vBkwgmzBGkueXY/PP5VRwMN1V31tRWskae838h3dwC4Y93mR1w==
   dependencies:
     resolve-url-loader "^3.1.1"
 
 "@kajabi/sage-packs@*":
-  version "0.0.15"
-  resolved "https://npm.pkg.github.com/download/@kajabi/sage-packs/0.0.15/1cbd1fcc3a3c9863135e43f7081c9d86e10b13b07ecda4edc1bc786d8e61c4e0#eff1a9e1b99361d307f2eabf1d85b6eb90d17039"
-  integrity sha512-tqG3E/uZy8JzbRf8okeA2Aotzu3Eeo1IfGUyo1iITVZ7Gv7erh9tyDqPcXTFSpntU7/sAp6Sjpg7bbhSQ9n+Gw==
+  version "0.0.18"
+  resolved "https://npm.pkg.github.com/download/@kajabi/sage-packs/0.0.18/007ce6f115761b8c9d4c0471a07f3c0a5ec031492136b8135948b0ec6bfff40d#f5da5b81847834f1bb82d9c0a95b865adb66206a"
+  integrity sha512-T4Ke3IYqJ4SmDU4Vd0aBUtyzv9hRGQ136A7KlsmogXvhcuXZFdpt/NkjMzrvPWApfEBgzswgvWmKZtrTTiHurg==
   dependencies:
-    "@kajabi/sage-assets" "^0.0.15"
-    "@kajabi/sage-react" "^0.0.6"
-    "@kajabi/sage-system" "^0.0.8"
+    "@kajabi/sage-assets" "^0.0.18"
+    "@kajabi/sage-react" "^0.0.7"
+    "@kajabi/sage-system" "^0.0.9"
 
-"@kajabi/sage-react@^0.0.6":
-  version "0.0.6"
-  resolved "https://npm.pkg.github.com/download/@kajabi/sage-react/0.0.6/911c024998e00368c7ef1e0f89e430769ecbbf091288587c350a64f5cd4602b5#b231bb68cf35b55983f0b647bf119694918e2385"
-  integrity sha512-WJuR4MmOGaHoRWI4yeqeHstIa2ZL/ZyWsNSNLOTRsmzfdomFuWJCRzrpbDhGZ4mL9hrjM/ICZ05VnmEQoEUIsg==
+"@kajabi/sage-react@^0.0.7":
+  version "0.0.7"
+  resolved "https://npm.pkg.github.com/download/@kajabi/sage-react/0.0.7/20fec0b5ddb7a0de7b7637f6ec36e69ad908173e90118e19cfa0c82fa71cedb4#d0ef51f4f929dd6478109989dbcb35b81d517ac1"
+  integrity sha512-jNXD1WXpSj7COxWlDcnm6v1L6UbIRwZznLTdCdup33OE/zcwQfBsH1Q4yjzlzSIZBXr+zcPvJ/+xXacZDF7JZQ==
   dependencies:
     "@storybook/react" "^6.0.26"
     classnames "^2.2.6"
     prop-types "^15.7.2"
     react "^16.13.1"
 
-"@kajabi/sage-system@^0.0.8":
-  version "0.0.8"
-  resolved "https://npm.pkg.github.com/download/@kajabi/sage-system/0.0.8/7e733f0bcf160e75635520f1761efe0cca09948a19ef1b3a08de7f8ace45c4d0#364d988bed3fa95fc638b20e153db36244deafc7"
-  integrity sha512-sR7fUXHBamT3XMB/EwaOlbpEm7UzlaC7QI30XoghK45Je9ZWIQZRaUYl2EWcyEUUCDDyFzsQgeATo0CiZ3S8qg==
+"@kajabi/sage-system@^0.0.9":
+  version "0.0.9"
+  resolved "https://npm.pkg.github.com/download/@kajabi/sage-system/0.0.9/da78058f8f84594f56850d40ffaab75bab74e402f3276bb46877d9966e978ae6#e79b2d82b81fa02b8c044e0aad14cab2e1d10411"
+  integrity sha512-x5UnhbmL0W6KLqZ2IubfyFHMgYB4ZiWk4QAFS8ZBIvIavtGIhcEYxUrceyNDw3SuauAkEbNjmDZoexLeWV2sMQ==
   dependencies:
     "@babel/preset-env" "^7.11.5"
     arrive "^2.4.1"
@@ -2184,17 +2184,7 @@ ajv-keywords@^3.1.0, ajv-keywords@^3.4.1, ajv-keywords@^3.5.2:
   resolved "https://registry.yarnpkg.com/ajv-keywords/-/ajv-keywords-3.5.2.tgz#31f29da5ab6e00d1c2d329acf7b5929614d5014d"
   integrity sha512-5p6WTN0DdTGVQk6VjcEju19IgaHudalcfabD7yhDGeA6bcQnmL+CpveLJq/3hvfwd1aof6L386Ougkx6RfyMIQ==
 
-ajv@^6.1.0, ajv@^6.10.2, ajv@^6.12.3, ajv@^6.12.4:
-  version "6.12.5"
-  resolved "https://registry.yarnpkg.com/ajv/-/ajv-6.12.5.tgz#19b0e8bae8f476e5ba666300387775fb1a00a4da"
-  integrity sha512-lRF8RORchjpKG50/WFf8xmg7sgCLFiYNNnqdKflk63whMQcWR5ngGjiSXkL9bjxy6B2npOK2HSMN49jEBMSkag==
-  dependencies:
-    fast-deep-equal "^3.1.1"
-    fast-json-stable-stringify "^2.0.0"
-    json-schema-traverse "^0.4.1"
-    uri-js "^4.2.2"
-
-ajv@^6.12.5:
+ajv@^6.1.0, ajv@^6.10.2, ajv@^6.12.3, ajv@^6.12.4, ajv@^6.12.5:
   version "6.12.6"
   resolved "https://registry.yarnpkg.com/ajv/-/ajv-6.12.6.tgz#baf5a62e802b07d977034586f8c3baf5adf26df4"
   integrity sha512-j3fVLgvTo527anyYyJOGTYJbG+vnnQYvE0m5mmkc1TK+nxAppkCLMIL0aZ4dblVCNoGShhm+kzE4ZUykBoMg4g==
@@ -3300,12 +3290,7 @@ caniuse-api@^3.0.0:
     lodash.memoize "^4.1.2"
     lodash.uniq "^4.5.0"
 
-caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000981, caniuse-lite@^1.0.30001109, caniuse-lite@^1.0.30001135:
-  version "1.0.30001146"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001146.tgz#c61fcb1474520c1462913689201fb292ba6f447c"
-  integrity sha512-VAy5RHDfTJhpxnDdp2n40GPPLp3KqNrXz1QqFv4J64HvArKs8nuNMOWkB3ICOaBTU/Aj4rYAo/ytdQDDFF/Pug==
-
-caniuse-lite@^1.0.30001035:
+caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000981, caniuse-lite@^1.0.30001035, caniuse-lite@^1.0.30001109, caniuse-lite@^1.0.30001135:
   version "1.0.30001148"
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001148.tgz#dc97c7ed918ab33bf8706ddd5e387287e015d637"
   integrity sha512-E66qcd0KMKZHNJQt9hiLZGE3J4zuTqE1OnU53miEVtylFbwOEmeA5OsRu90noZful+XGSQOni1aT2tiqu/9yYw==
@@ -3406,9 +3391,9 @@ chokidar@^2.1.8:
     fsevents "^1.2.7"
 
 chokidar@^3.3.0, chokidar@^3.4.1:
-  version "3.4.2"
-  resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-3.4.2.tgz#38dc8e658dec3809741eb3ef7bb0a47fe424232d"
-  integrity sha512-IZHaDeBeI+sZJRX7lGcXsdzgvZqKv6sECqsbErJA4mHWfpRrD8B97kSFN4cQz6nGBGiuFia1MKR4d6c1o8Cv7A==
+  version "3.4.3"
+  resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-3.4.3.tgz#c1df38231448e45ca4ac588e6c79573ba6a57d5b"
+  integrity sha512-DtM3g7juCXQxFVSNPNByEC2+NImtBuxQQvWlHunpJIS5Ocr0lG306cC7FCi7cEA0fzmybPUIl4txBIobk1gGOQ==
   dependencies:
     anymatch "~3.1.1"
     braces "~3.0.2"
@@ -3416,7 +3401,7 @@ chokidar@^3.3.0, chokidar@^3.4.1:
     is-binary-path "~2.1.0"
     is-glob "~4.0.1"
     normalize-path "~3.0.0"
-    readdirp "~3.4.0"
+    readdirp "~3.5.0"
   optionalDependencies:
     fsevents "~2.1.2"
 
@@ -4741,9 +4726,9 @@ es6-symbol@^3.1.1, es6-symbol@~3.1.3:
     ext "^1.1.2"
 
 escalade@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/escalade/-/escalade-3.1.0.tgz#e8e2d7c7a8b76f6ee64c2181d6b8151441602d4e"
-  integrity sha512-mAk+hPSO8fLDkhV7V0dXazH5pDc6MrjBTPyD3VeKzxnVFjH1MIxbCdqGZB9O8+EwWakZs3ZCbDS4IpRt79V1ig==
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/escalade/-/escalade-3.1.1.tgz#d8cfdc7000965c5a0174b4a82eaa5c0552742e40"
+  integrity sha512-k0er2gUkLf8O0zKJiAhmkTnJlTvINGv7ygDNPbeIsX/TJjGJZHuh9B2UxbsaEkmlEo9MfhrSzmhIlhRlI2GXnw==
 
 escape-html@~1.0.3:
   version "1.0.3"
@@ -7494,9 +7479,9 @@ mute-stream@0.0.8:
   integrity sha512-nnbWWOkoWyUsTjKrhgD0dcz22mdkSnpYqbEjIm2nhwhuxlSkpywJmBo8h0ZqJdkp73mb90SssHkN4rsRaBAfAA==
 
 nan@^2.12.1, nan@^2.13.2:
-  version "2.14.1"
-  resolved "https://registry.yarnpkg.com/nan/-/nan-2.14.1.tgz#d7be34dfa3105b91494c3147089315eff8874b01"
-  integrity sha512-isWHgVjnFjh2x2yuJ/tj3JbwoHu3UC2dX5G/88Cm24yB6YopVgxvBObDY7n5xW6ExmFhJpSEQqFPvq9zaXc8Jw==
+  version "2.14.2"
+  resolved "https://registry.yarnpkg.com/nan/-/nan-2.14.2.tgz#f5376400695168f4cc694ac9393d0c9585eeea19"
+  integrity sha512-M2ufzIiINKCuDfBSAUr1vWQ+vuVcA9kqx8JJUsbQi6yf1uGRyb7HfpdfUr5qLXf3B/t8dPvcjhKMmlfnP47EzQ==
 
 nanomatch@^1.2.9:
   version "1.2.13"
@@ -9096,9 +9081,9 @@ prop-types@^15.5.10, prop-types@^15.6.0, prop-types@^15.6.1, prop-types@^15.6.2,
     react-is "^16.8.1"
 
 property-information@^5.0.0:
-  version "5.5.0"
-  resolved "https://registry.yarnpkg.com/property-information/-/property-information-5.5.0.tgz#4dc075d493061a82e2b7d096f406e076ed859943"
-  integrity sha512-RgEbCx2HLa1chNgvChcx+rrCWD0ctBmGSE0M7lVm1yyv4UbvbrWoXp/BkVLZefzjrRBGW8/Js6uh/BnlHXFyjA==
+  version "5.6.0"
+  resolved "https://registry.yarnpkg.com/property-information/-/property-information-5.6.0.tgz#61675545fb23002f245c6540ec46077d4da3ed69"
+  integrity sha512-YUHSPk+A30YPv+0Qf8i9Mbfe/C0hdPXk1s1jPVToV8pk8BQtpw10ct89Eo7OWkutrwqvT0eicAxlOg3dOAu8JA==
   dependencies:
     xtend "^4.0.0"
 
@@ -9556,10 +9541,10 @@ readdirp@^2.2.1:
     micromatch "^3.1.10"
     readable-stream "^2.0.2"
 
-readdirp@~3.4.0:
-  version "3.4.0"
-  resolved "https://registry.yarnpkg.com/readdirp/-/readdirp-3.4.0.tgz#9fdccdf9e9155805449221ac645e8303ab5b9ada"
-  integrity sha512-0xe001vZBnJEK+uKcj8qOhyAKPzIT+gStxWr3LCB0DwcXR5NZJ3IaC+yGnHCYzB/S7ov3m3EEbZI2zeNvX+hGQ==
+readdirp@~3.5.0:
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/readdirp/-/readdirp-3.5.0.tgz#9ba74c019b15d365278d2e91bb8c48d7b4d42c9e"
+  integrity sha512-cMhu7c/8rdhkHXWsY+osBhfSy0JikwpHK/5+imo+LpeasTF8ouErHrlYkwT0++njiyuDvc7OFY5T3ukvZ8qmFQ==
   dependencies:
     picomatch "^2.2.1"
 
@@ -11228,15 +11213,10 @@ ts-pnp@^1.1.6:
   resolved "https://registry.yarnpkg.com/ts-pnp/-/ts-pnp-1.2.0.tgz#a500ad084b0798f1c3071af391e65912c86bca92"
   integrity sha512-csd+vJOb/gkzvcCHgTGSChYpy5f1/XKNsmvBGO4JXS+z1v2HobugDz4s1IeFXM3wZB44uczs+eazB5Q/ccdhQw==
 
-tslib@^1.10.0:
+tslib@^1.10.0, tslib@^1.9.0:
   version "1.14.1"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
   integrity sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==
-
-tslib@^1.9.0:
-  version "1.14.0"
-  resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.14.0.tgz#d624983f3e2c5e0b55307c3dd6c86acd737622c6"
-  integrity sha512-+Zw5lu0D9tvBMjGP8LpvMb0u2WW2QV3y+D8mO6J+cNzCYIN4sVy43Bf9vl92nqFahutN0I8zHa7cc4vihIshnw==
 
 tslib@^2.0.0, tslib@^2.0.1:
   version "2.0.3"

@@ -5,6 +5,7 @@
     "packages/sage-*"
   ],
   "devDependencies": {
+    "dotenv": "8.2.0",
     "eslint": "^7.10.0",
     "lerna": "^3.22.1",
     "npm-run-all": "4.1.5",
@@ -24,7 +25,6 @@
     "build:assets": "cd packages/sage-assets && yarn build",
     "build:react": "cd packages/sage-react && yarn build",
     "build:system": "cd packages/sage-system && yarn build",
-    "copy:env": "cp .env-sample .env",
     "docs": "cd docs && yarn start",
     "docs:bundle": "cd docs && gem install bundler -v $(tail -n 1 Gemfile.lock) && bundle install",
     "docs:initialize": "yarn docs:bundle && cd docs && yarn install",
@@ -33,8 +33,8 @@
     "lint": "yarn npm-run-all lint:*",
     "lint:assets": "yarn stylelint 'packages/sage-assets/lib/stylesheets/**/*.{css,scss}' --max-warnings 0",
     "local": "bin/local-link-frontend.sh true",
-    "start": "export $(cat .env | xargs) && yarn npm-run-all --parallel watch docs storybook",
-    "setup": "export $(cat .env | xargs) && yarn install && yarn docs:initialize",
+    "start": "yarn npm-run-all --parallel watch docs storybook",
+    "setup": "yarn install && yarn docs:initialize",
     "storybook": "cd packages/sage-react && yarn storybook",
     "watch": "yarn npm-run-all --parallel watch:*",
     "watch:assets": "cd packages/sage-assets && yarn build:watch",
