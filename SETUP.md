@@ -6,3 +6,5 @@
 1. Clone this repo: `git clone git@github.com:Kajabi/sage-lib.git`
 1. `yarn setup`
 1. `yarn start`
+
+https://www.conventionalcommits.org/en/v1.0.0/#specification
