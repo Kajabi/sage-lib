@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.1.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.0.21...@kajabi/sage-assets@0.1.0) (2020-10-14)
+
+
+### Features
+
+* **assets:** moved ordering of icons/fonts in stylesheet ([1326f04](https://github.com/Kajabi/sage-lib/commit/1326f04e273139e9848349aa14a5e4310613cd56))
+
+
+
+
+
 ## [0.0.21](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.0.20...@kajabi/sage-assets@0.0.21) (2020-10-13)
 
 **Note:** Version bump only for package @kajabi/sage-assets
