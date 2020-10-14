@@ -1,5 +1,4 @@
-pre-commit:
-  parallel: true
+commit-msg:
   commands:
     lint-commit:
       run: npx commitlint --edit
