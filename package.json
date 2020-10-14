@@ -7,9 +7,9 @@
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
+    "@arkweid/lefthook": "0.7.2",
     "dotenv": "8.2.0",
     "eslint": "^7.10.0",
-    "husky": "^4.3.0",
     "lerna": "^3.22.1",
     "npm-run-all": "4.1.5",
     "stylelint": "^13.7.2",
@@ -44,10 +44,5 @@
     "watch:assets": "cd packages/sage-assets && yarn build:watch",
     "watch:react": "cd packages/sage-react && yarn build:watch",
     "watch:system": "cd packages/sage-system && yarn build:watch"
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
   }
 }

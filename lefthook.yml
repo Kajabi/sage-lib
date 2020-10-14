@@ -1,0 +1,4 @@
+commit-msg:
+  commands:
+    lint-commit:
+      run: npx commitlint --edit
