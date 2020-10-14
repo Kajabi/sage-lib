@@ -36,6 +36,7 @@
     "external": "bin/local-link-frontend.sh false",
     "lint": "yarn npm-run-all lint:*",
     "lint:assets": "yarn stylelint 'packages/sage-assets/lib/stylesheets/**/*.{css,scss}' --max-warnings 0",
+
     "local": "bin/local-link-frontend.sh true",
     "start": "yarn npm-run-all --parallel watch docs storybook",
     "setup": "yarn install && yarn docs:initialize",
