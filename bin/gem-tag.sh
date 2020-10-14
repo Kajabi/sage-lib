@@ -9,13 +9,11 @@ function conventional_commit_json() {
   git log --no-merges --oneline --no-decorate $(git rev-parse --abbrev-ref HEAD)...master docs | sed 's/[^ ]* //' | sed 's/$/\n===/' | head -n -1 | npx conventional-commits-parser "==="
 }
 
-echo $(conventional_commit_json)
-
 function uniq_types_from_commits() {
   conventional_commit_json | jq -r '.[] | .type' | uniq
 }
 
-echo $(uniq_types_from_commits)
+echo $(git status)
 
 if [ $(uniq_types_from_commits | grep 'feat') ]; then
   (cd $sage_docs_path && bundle exec bump 'minor' --no-commit)
