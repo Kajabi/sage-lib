@@ -1,5 +1,5 @@
 {
-  "name": "sage",
+  "name": "@kajabi/sage",
   "version": "1.11.2",
   "description": "The Sage Design System (SDS) is our single source of truth, providing everything you need to build great products for our customers. It is the culmination of designers and developers working together to give teams the ability to ship high-quality products faster.",
   "main": "sage/pages/index",
@@ -15,16 +15,19 @@
     "start": "npm-run-all --parallel webpack:server rails:server",
     "deploy": "git push heroku $(git rev-parse --abbrev-ref HEAD):master --force"
   },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Kajabi/sage.git"
+    "url": "git+https://github.com/Kajabi/sage-lib.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Kajabi/sage/issues"
+    "url": "https://github.com/Kajabi/sage-lib/issues"
   },
-  "homepage": "https://github.com/Kajabi/sage#readme",
+  "homepage": "https://github.com/Kajabi/sage-lib#readme",
   "dependencies": {
     "@rails/webpacker": "4.2.2",
     "core-js": "^3.6.5",

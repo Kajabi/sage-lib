@@ -2,7 +2,8 @@
   "name": "root",
   "private": true,
   "workspaces": [
-    "packages/sage-*"
+    "packages/sage-*",
+    "docs"
   ],
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
