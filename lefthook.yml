@@ -1,7 +1,7 @@
 pre-push:
   commands:
     bump-gem:
-      run: ./bin/gem-tag.sh
+      run: ./bin/bump-gem.sh
 commit-msg:
   commands:
     lint-commit:
