@@ -16,7 +16,11 @@ function uniq_types_from_commits() {
 }
 
 if [ $(uniq_types_from_commits | grep 'feat') ]; then
-  (cd $sage_docs_path && bundle exec bump 'minor' --no-commit)
+  echo 'PATCH'
+  # (cd $sage_docs_path && bundle exec bump 'minor' --no-commit)
 elif [ $(uniq_types_from_commits | grep 'fix') ]; then
-  (cd $sage_docs_path && bundle exec bump 'patch' --no-commit)
+  # (cd $sage_docs_path && bundle exec bump 'patch' --no-commit)
+  echo 'MINOR'
 fi
+
+git add $sage_docs_path/lib/sage_rails/lib/sage_rails/version.rb
