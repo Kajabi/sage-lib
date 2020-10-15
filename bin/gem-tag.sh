@@ -8,7 +8,7 @@ sage_docs_path=$sage_repo_path/docs
 echo $CIRCLE_BRANCH
 
 function conventional_commit_json() {
-  git log --no-merges --oneline --no-decorate $CIRCLE_BRANCH...master docs | sed 's/[^ ]* //' | sed 's/$/\n===/' | head -n -1 | npx conventional-commits-parser "==="
+  git log --no-merges --oneline --no-decorate $(git rev-parse --abbrev-ref HEAD)...master docs | sed 's/[^ ]* //' | sed 's/$/\n===/' | head -n -1 | npx conventional-commits-parser "==="
 }
 
 function uniq_types_from_commits() {

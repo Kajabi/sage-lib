@@ -1,3 +1,7 @@
+pre-commit:
+  commands:
+    bump-gem:
+      run: ./bin/gem-tag.sh
 commit-msg:
   commands:
     lint-commit:
