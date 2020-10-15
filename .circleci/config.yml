@@ -22,7 +22,6 @@ jobs:
       resource_class: small
       steps:
         - checkout
-        - jq/install
         - node/with-cache:
             steps:
               - add_ssh_keys:
