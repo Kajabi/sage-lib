@@ -1,9 +1,7 @@
-post-commit:
+pre-push:
   commands:
     bump-gem:
       run: ./bin/bump-gem.sh
-
-pre-push:
   commands:
     circleci_validate:
       files: git diff --name-only master -- .circleci/config.yml
