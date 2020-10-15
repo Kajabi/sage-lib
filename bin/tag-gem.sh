@@ -5,8 +5,6 @@ sage_docs_path=$sage_repo_path/docs
 
 . $sage_repo_path/bin/utils.sh
 
-gem install -g bundler -v 1.17.3
-
 function current_version() {
   (cd $sage_docs_path && bundle exec bump current | cut -d: -f2 | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')
 }
@@ -25,5 +23,5 @@ if version_exists;  then
   echo_custom "[GEM]" "Tag for version v$(current_version) already exists..."
 else
   echo_custom "[GEM]" "Tagging v$(current_version)..."
-  # tag
+  tag
 fi;
