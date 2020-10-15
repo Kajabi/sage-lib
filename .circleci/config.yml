@@ -22,8 +22,6 @@ jobs:
       resource_class: small
       steps:
         - checkout
-        - ruby/install:
-            version: '2.4.9'
         - node/with-cache:
             steps:
               - add_ssh_keys:
