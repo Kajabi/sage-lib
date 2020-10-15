@@ -14,8 +14,6 @@ function commit_bump() {
   (NO_BUMP_PROMPT=true git commit -m "chore(gem): bumping rails gem")
 }
 
-echo $NO_BUMP_PROMPT
-
 if [[ $NO_BUMP_PROMPT != 'true' ]];  then
   read -rp "Would you like to bump the Sage Rails gem? (y/n): " BUMP_RAILS_GEM </dev/tty
 
