@@ -5,7 +5,7 @@ sage_docs_path=$sage_repo_path/docs
 
 . $sage_repo_path/bin/utils.sh
 
-echo_custom "[GEM]" "Versioning"
+echo_custom "[GEM]" "Versioning..."
 
 read -rp "Would you like to bump the Sage Rails gem? (y/n): " BUMP_RAILS_GEM </dev/tty
 
