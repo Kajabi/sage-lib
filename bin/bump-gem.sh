@@ -11,12 +11,12 @@ function commit_bump() {
   (cd $sage_docs_path && bundle install)
   git add $sage_docs_path/lib/sage_rails/lib/sage_rails/version.rb
   git add $sage_docs_path/Gemfile.lock
-  git commit -m "chore(gem): bumping rails gem"
+  (NO_BUMP_PROMPT=true git commit -m "chore(gem): bumping rails gem")
 }
 
-export BUMPED=0
+echo $NO_BUMP_PROMPT
 
-if [[ $BUMPED == 0 ]];  then
+if [[ $NO_BUMP_PROMPT == 'true' ]];  then
   echo 'No changes to bump'
 else
   read -rp "Would you like to bump the Sage Rails gem? (y/n): " BUMP_RAILS_GEM </dev/tty
@@ -26,6 +26,4 @@ else
     (cd $sage_docs_path && bundle exec bump $BUMP_TYPE)
     commit_bump
   fi;
-
-  export BUMPED=1
 fi;
