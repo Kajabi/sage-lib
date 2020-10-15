@@ -5,18 +5,20 @@ sage_docs_path=$sage_repo_path/docs
 
 . $sage_repo_path/bin/utils.sh
 
-echo $CIRCLE_BRANCH
+echo_custom "[GEM]" "Versioning..."
 
-function conventional_commit_json() {
-  git log --no-merges --oneline --no-decorate $CIRCLE_BRANCH...master docs | sed 's/[^ ]* //' | sed 's/$/\n===/' | head -n -1 | npx conventional-commits-parser "==="
+function commit_bump() {
+  git add $sage_docs_path/lib/sage_rails/lib/sage_rails/version.rb
+  (cd $sage_docs_path && bundle install)
+  git add $sage_docs_path/Gemfile.lock
+
+  git commit -m "chore(gem): bumping rails gem"
 }
 
-function uniq_types_from_commits() {
-  conventional_commit_json | jq -r '.[] | .type' | uniq
-}
+read -rp "Would you like to bump the Sage Rails gem? (y/n): " BUMP_RAILS_GEM </dev/tty
 
-if [ $(uniq_types_from_commits | grep 'feat') ]; then
-  (cd $sage_docs_path && bundle exec bump 'minor' --no-commit)
-elif [ $(uniq_types_from_commits | grep 'fix') ]; then
-  (cd $sage_docs_path && bundle exec bump 'patch' --no-commit)
-fi
+if [ $BUMP_RAILS_GEM == 'y' ]; then
+  read -rp "What type of bump? (major,minor,patch): " BUMP_TYPE </dev/tty
+  (cd $sage_docs_path && bundle exec bump $BUMP_TYPE --no-commit)
+  commit_bump
+fi;
