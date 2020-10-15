@@ -11,7 +11,6 @@ function current_version() {
 
 function tag() {
   git tag -a v$(current_version) -m "chore(gem): tagging gem."
-  git push --tags
 }
 
 function version_exists() {
