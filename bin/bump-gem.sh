@@ -14,7 +14,9 @@ function commit_bump() {
   git commit -m "chore(gem): bumping rails gem"
 }
 
-if [ git log -1 --pretty=%B != 'chore(gem): bumping rails gem']; then
+if [[ $(git log -1 --pretty=%B) = 'chore(gem): bumping rails gem' ]];  then
+  echo 'No changes to bump'
+else
   read -rp "Would you like to bump the Sage Rails gem? (y/n): " BUMP_RAILS_GEM </dev/tty
 
   if [ $BUMP_RAILS_GEM == 'y' ]; then
