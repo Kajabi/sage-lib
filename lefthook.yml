@@ -1,4 +1,4 @@
-pre-commit:
+pre-push:
   commands:
     bump-gem:
       run: ./bin/gem-tag.sh
