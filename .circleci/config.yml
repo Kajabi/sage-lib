@@ -1,7 +1,6 @@
 version: 2.1
 orbs:
   node: circleci/node@1.1.6
-  jq: circleci/jq@2.2.0
 jobs:
   lint-and-build:
     executor:
@@ -32,6 +31,7 @@ jobs:
               - run: npm config set '//npm.pkg.github.com/:_authToken' '${GH_TOKEN}'
               - run: git config user.email "dev+github-bot@kajabi.com"
               - run: git config user.name "Kajabi Automation Bot"
+              - run: ./bin/tag-gem.sh
               - run: npx lerna bootstrap --ci
               - run: npx lerna publish --registry github --yes
 
