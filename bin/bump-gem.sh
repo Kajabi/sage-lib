@@ -16,9 +16,7 @@ function commit_bump() {
 
 echo $NO_BUMP_PROMPT
 
-if [[ $NO_BUMP_PROMPT == 'true' ]];  then
-  echo 'No changes to bump'
-else
+if [[ $NO_BUMP_PROMPT != 'true' ]];  then
   read -rp "Would you like to bump the Sage Rails gem? (y/n): " BUMP_RAILS_GEM </dev/tty
 
   if [ $BUMP_RAILS_GEM == 'y' ]; then
