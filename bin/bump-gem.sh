@@ -12,6 +12,7 @@ function commit_bump() {
   git add $sage_docs_path/lib/sage_rails/lib/sage_rails/version.rb
   git add $sage_docs_path/Gemfile.lock
   git commit -m "chore(gem): bumping rails gem"
+  git push
 }
 
 function current_version() {
