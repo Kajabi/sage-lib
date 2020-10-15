@@ -2,6 +2,9 @@ pre-push:
   commands:
     bump-gem:
       run: ./bin/bump-gem.sh
+    circleci_validate:
+      files: git diff --name-only master -- .circleci/config.yml
+      run: circleci config validate
 commit-msg:
   commands:
     lint-commit:
