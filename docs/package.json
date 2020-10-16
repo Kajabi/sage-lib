@@ -1,6 +1,6 @@
 {
   "name": "@kajabi/sage",
-  "version": "1.12.0",
+  "version": "1.16.0",
   "description": "The Sage Design System (SDS) is our single source of truth, providing everything you need to build great products for our customers. It is the culmination of designers and developers working together to give teams the ability to ship high-quality products faster.",
   "main": "sage/pages/index",
   "directories": {
@@ -8,12 +8,13 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "webpack": "./bin/webpack",
-    "webpack:server": "./bin/webpack-dev-server",
+    "deploy": "git push heroku $(git rev-parse --abbrev-ref HEAD):master --force",
     "rails:server": "rails server -p 4000 -b 0.0.0.0",
     "start": "npm-run-all --parallel webpack:server rails:server",
-    "deploy": "git push heroku $(git rev-parse --abbrev-ref HEAD):master --force"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "version": "../bin/bump-gem.sh",
+    "webpack": "./bin/webpack",
+    "webpack:server": "./bin/webpack-dev-server"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
@@ -29,13 +30,13 @@
   },
   "homepage": "https://github.com/Kajabi/sage-lib#readme",
   "dependencies": {
-    "@kajabi/sage-packs": "*",
     "@rails/webpacker": "4.2.2",
-    "arrive": "^2.4.1",
     "core-js": "^3.6.5",
+    "arrive": "^2.4.1",
     "left-pad": "^1.3.0",
     "sortablejs": "^1.10.2",
-    "zxcvbn": "^4.4.2"
+    "zxcvbn": "^4.4.2",
+    "@kajabi/sage-packs": "*"
   },
   "devDependencies": {
     "npm-run-all": "^4.1.5",
