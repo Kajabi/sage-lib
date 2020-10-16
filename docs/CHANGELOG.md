@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.19.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.18.0...@kajabi/sage@1.19.0) (2020-10-16)
+
+
+### Features
+
+* **monorepo:** skip ci directive ([2fa363a](https://github.com/Kajabi/sage-lib/commit/2fa363a1f73452cf35010f6fb6446fa84756800d))
+
+
+
+
+
 # [1.18.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.17.0...@kajabi/sage@1.18.0) (2020-10-16)
 
 
