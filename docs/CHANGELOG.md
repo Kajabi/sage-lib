@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.17.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.12.0...@kajabi/sage@1.17.0) (2020-10-16)
+
+
+### Features
+
+* **monorepo:** hopefully we'll bump the gem ([15c50ed](https://github.com/Kajabi/sage-lib/commit/15c50ed83992061bcb387d0ad26d47f540daeb99))
+
+
+
+
+
 # 1.12.0 (2020-10-15)
 
 
