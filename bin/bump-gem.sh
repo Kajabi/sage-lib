@@ -12,6 +12,10 @@ BUMP_TYPE=$(yarn run --silent gem:bump:type)
 
 if [[ $BUMP_TYPE != 'null' ]]; then
   (cd $sage_docs_path && bundle exec bump $BUMP_TYPE --no-commit)
+  (cd $sage_docs_path && bundle install)
+  git add $sage_docs_path/Gemfile.lock
+  git add $sage_docs_path/lib/sage_rails/version.rb
+  git commit -m "chore(ci): updating rails gem version"
 else
   echo 'Nothing to bump!'
 fi;
