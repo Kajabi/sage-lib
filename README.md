@@ -22,21 +22,31 @@ There are 5 total packages in the monorepo:
 
 #### @kajabi/sage
 
+Located in `./docs`
+
 More info in the [README](./docs/README.md)
 
 #### @kajabi/sage-assets
+
+Located in `./packages/sage-assets`
 
 More info in the [README](./packages/sage-assets/README.md)
 
 #### @kajabi/sage-packs
 
+Located in `./packages/sage-packs`
+
 More info in the [README](./packages/sage-packs/README.md)
 
 #### @kajabi/sage-react
 
+Located in `./packages/sage-react`
+
 More info in the [README](./packages/sage-react/README.md)
 
 #### @kajabi/sage-system
+
+Located in `./packages/sage-system`
 
 More info in the [README](./packages/sage-system/README.md)
 
@@ -44,15 +54,15 @@ More info in the [README](./packages/sage-system/README.md)
 
 ### Getting Started
 
-- Run the Setup script.
+Run the Setup script:
 
 ```bash
 $ yarn setup
 ```
 
-If this is your first time using Sage you will be prompted to provide a GitHub Personal Access token. This token will be placed in your global `~/.npmrc` file, if it exists, or an `~/.npmrc` file will be created for you. If the Sage installer already identifies GitHub Access token in your `~/.npmrc` you will not be prompted.  You can find more information on obtaining a token [here](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token).
+If this is your first time using Sage you will be prompted to provide a GitHub Personal Access token. This token will be placed in your global `~/.npmrc` file, if it exists, or an `~/.npmrc` file will be created for you. If the Sage installer identifies a GitHub Access token in your `~/.npmrc` you will not be prompted.  You can find more information on obtaining a token [here](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token).
 
-- Start the suite
+Start the suite:
 ```bash
 $ yarn start
 ```

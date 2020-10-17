@@ -1,11 +1,7 @@
-# `@voodoogq/sage-system`
+# Sage "System" Package
 
-> TODO: description
+More to come ...
 
 ## Usage
 
-```
-const sageSystem = require('@voodoogq/sage-system');
-
-// TODO: DEMONSTRATE API
-```
+`import '@kajabi/sage-system'`
