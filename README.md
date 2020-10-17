@@ -4,176 +4,219 @@ The Sage Design System (SDS) is our single source of truth, providing everything
 
 [Visit Sage Design System →](https://sage-design-system.kajabi.com/)
 
-#### Password Protection
-The SDS documentation site uses [Lockup](https://github.com/gblakeman/lockup) for password protection. Currently this is disabled but can be easily enabled by setting the ENV variable `LOCKUP_CODEWORD` in Heroku.
-
 ## Structure
 
-This repo contains the Sage documentation site and the SDS as a webpack-compatible frontend package and rails engine located within `./lib/..`.
+### Lerna Mono-Repository
 
-![image](https://user-images.githubusercontent.com/565743/83690086-b0acce00-a5b5-11ea-90f5-9b8e8b0bd337.png)
+The Sage Design System is a [Lerna Mono-Repository](https://github.com/lerna/lerna) (or a monorepo for short). From the Lerna README:
+
+>Splitting up large codebases into separate independently versioned packages is extremely useful for code sharing. However, making changes across many repositories is messy and difficult to track, and testing across repositories becomes complicated very quickly.
+>
+> To solve these (and many other) problems, some projects will organize their codebases into multi-package repositories (sometimes called monorepos). Projects like Babel, React, Angular, Ember, Meteor, Jest, and many others develop all of their packages within a single repository.
+>
+> Lerna is a tool that optimizes the workflow around managing multi-package repositories with git and npm.
+>
+> Lerna can also reduce the time and space requirements for numerous copies of packages in development and build environments - normally a downside of dividing a project into many separate NPM packages.
+
+There are 5 total packages in the monorepo:
+
+#### @kajabi/sage
+
+Located in `./docs`
+
+More info in the [README](./docs/README.md)
+
+#### @kajabi/sage-assets
+
+Located in `./packages/sage-assets`
+
+More info in the [README](./packages/sage-assets/README.md)
+
+#### @kajabi/sage-packs
+
+Located in `./packages/sage-packs`
+
+More info in the [README](./packages/sage-packs/README.md)
+
+#### @kajabi/sage-react
+
+Located in `./packages/sage-react`
+
+More info in the [README](./packages/sage-react/README.md)
+
+#### @kajabi/sage-system
+
+Located in `./packages/sage-system`
+
+More info in the [README](./packages/sage-system/README.md)
 
 ## Local Development: Sage
 
 ### Getting Started
 
-Install the dependencies.
+Run the Setup script:
 
 ```bash
-$ yarn install
+$ yarn setup
 ```
 
-```bash
-$ bundle
-```
+If this is your first time using Sage you will be prompted to provide a GitHub Personal Access token. This token will be placed in your global `~/.npmrc` file, if it exists, or an `~/.npmrc` file will be created for you. If the Sage installer identifies a GitHub Access token in your `~/.npmrc` you will not be prompted.  You can find more information on obtaining a token [here](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token).
 
-### Run Locally
-
-Run the rails & webpack development servers in tandem.
+Start the suite:
 ```bash
 $ yarn start
 ```
 
-Additional scripts live within `./package.json` and can be run in the console using `yarn run <COMMAND NAME>`.
+To visit the primary documentation site: http://localhost:4000/
+To visit the storybook site: http://localhost6006/
 
-The documentation site can be accessed at [`http://localhost:4000`](http://localhost:4000/). Happy development!
+### Bridging Kajabi Products
 
-### Contributing
-
-To contribute to Sage development you must be an authorized contributor, typically as an employee of Kajabi. Otherwise:
-
-1. Create a branch off of `master` on which to add your changes. Push the branch and open a PR.
-2. Once approval has been given  merge the PR into `master` using the Squash and Merge option and be sure that your merge commit message succinctly but accurately describes the changes you made.
-3. Find the active draft release in [Github Releases](https://github.com/Kajabi/sage/releases) and edit the release notes to include information relative to your PR. Be sure to note any cases where your work will necessitate updates wherever this system is implemented (see notes below under Version Bump process regarding patch versus minor versions).
-
-
-## Local Development: Kajabi-Products
-
-### Getting Started
-
-To link your _local_ Sage repo's assets within Kajabi-Products we have a shell script that automates this process.
+The Kajabi Products repository needs to be locally linked to your Sage repository in order to have live reloading of your changes during your development cycle. This process is natively handled by Sage:
 
 ```bash
-# IMPORTANT! Run the Sage script within the root of your local Kajabi-Products repo, not the Sage repo.
-
-$ <RELATIVE PATH TO SAGE REPO>/bin/sage-local-link.sh <BOOLEAN>
-
-
-# For example if the Kajabi-Products and Sage repos are sibling directories:
-# $ ../sage/bin/sage-local-link.sh true
+$ yarn bridge:kajabi-products
 ```
 
-The script requires a boolean argument designating whether to setup or tear down the link to your local Sage repo.
-- Frontend is an automation of `yarn link`, you can do this process manually as well. [See the yarn docs for more details.](https://classic.yarnpkg.com/en/docs/cli/link/)
-- Rails Gem is an automation of `bundle config local.sage_rails`
+If this is your first time using `yarn bridge` you will be prompted to provide your path to your local Kajabi Products repository. This can be an absolute (`~/home/me/code/kajabi-products`) or relative (`../kajabi-products`). The value you enter will be instered into your local `.env` file. If a `.env` file does not exist one will be created for your based on the `.env.dist` file in this repository.
 
-### Run Locally
+>*Note: In the event you mistype your repository path, or it's location changes you can edit it's value in the `.env` file*
 
-Within Kajabi-Products, run the project as you normally would and in tandem also run Kajabi-Products' webpack-dev-server. In order for Kajabi-Products to watch changes within your local Sage repo webpack-dev-server needs to be running.
+When running the `bridge` you *must* have `yarn start` running in this repository in order for your changes to be actively compiled.
+
+Within your Kajabi Products repository, run the project as you normally would and in tandem also run Kajabi-Products' webpack-dev-server. In order for Kajabi-Products to watch changes within your local Sage repo webpack-dev-server needs to be running.
+
 ```bash
-# Run Kajabi-Products
 $ heroku local
 ```
 
 ```bash
-# Run Kajabi-Products' webpack-dev-server
 $ bin/webpack-dev-server
 ```
 
-It's recommended to run the Sage documentation site in tandem with Kajabi-Products. The documentation site is hosted through port `4000` to avoid conflicts with Kajabi-Products' use of the `30XX` range.
+### Destroying the Kajabi Products Bridge
 
-## Deploying Sage
+From time to time you will need to destroy your Kajabi Products Bridge and utilize the production version of the packages on the branch. To destroy the bridge:
 
-### Cut A New Version Of Sage
-
-#### If This Is Your First Deploy
-
-Ensure you have…
-
-1. Deploy rights to the [sage-design-system Heroku app](https://dashboard.heroku.com/apps/sage-design-system/access)
-2. The [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli#download-and-install) installed
-3. Added the Heroku app as a git remote location (`heroku git:remote -a sage-design-system`)
-
-#### Version Bump & Deploy Docs
-
-First ensure all new code is completed through a PR and merged into `master`. Then:
-
-1. Check with the UX Dev group via the `ux-dev` channel in Kajabi Slack to see if there are any concerns regarding a version bump. Assuming no concerns are voiced, continue.
-2. Find the current draft release in [Github Releases](https://github.com/Kajabi/sage/releases) and review its contents in order to determine what this next version bump should be. Generally:
-
-    - A Patch (_._.n; non-blocking changes) should be used when only small styling is adjusted or new elements/objects are added that are yet to be implemented in `kajabi-products` or other repos that use this design system.
-    - A Minor bump (_.n.0; blocking changes) should be used when more significant styling is completed, markup is changed on any object or element, or substantive changes are made to the system's documentation. _When in doubt, bump a new `minor` version.
-
-    Keep the version draft open as you will return to it shortly.
-
-3. From the `master` branch (after first ensuring your local branch is up to date with `origin`) use `bin/sage-release` script to bump the package & gem version with a version-tagged git commit as follows:
-
-    ```bash
-    # Use the minor or patch arguments to update the minor or patch version number respectively
-    $ bin/sage-tag patch
-    # This will automatically push the git-tagged commit to github and deploy to Heroku
-    ```
-
-    **Note:** The Sage version is defined in 3 locations:
-      - `./package.json` frontend package version
-      - `SageRails::VERSION` gem version
-      - tagged git commit containing the version bump update
-    Please ensure these values match after a version bump.
-
-    This command also automatically deploys the new version bump to our [sage-design-system.kajabi.com](https://sage-design-system.kajabi.com/) public documentation.
-
-4. Once the deployment is complete make sure the version commit is also pushed to the `origin`.
-5. Return to [Github Releases](https://github.com/Kajabi/sage/releases) and the draft release you consulted earlier. Update its number and title to match the version tag you just bumped and map it to the tag that pushed with your version commit from the step above.
-6. Publish the Release.
-7. Update the `ux-dev` channel in Kajabi Slack.
-8. Create a new Draft release with the next logical version number matching the existing tag and title naming conventions from the other Releases. This will ensure others can add their updates to the release notes as they merge changes moving forward.
-
-### Update Kajabi-Products To The Latest Sage Version
-Our main app uses a version-tagged commit from the Kajabi/Sage master branch as the source for the Sage frontend dependency.
-
-Both the Sage Frontend package and the sage_rails gem **should be updated**.
-
-#### Sage Frontend
 ```bash
-# Example:
-# yarn upgrade sage@git://github.com/Kajabi/sage.git#0.17.0
-
-$ yarn upgrade sage@git://github.com/Kajabi/sage.git#<GIT VERSION TAG>
+$ yarn bridge:kajabi-products:destroy
 ```
 
-### sage_rails
-First update the Kajabi-Products gemfile:
-```diff
-# Example:
-# gem "sage_rails", "<SAGERAILS GEM VERSION>", tag: "<GIT VERSION TAG>", git: "https://github.com/kajabi/sage", glob: "lib/sage_rails/*.gemspec"
+## Local Scripts
 
--  gem "sage_rails", "1.11.2", tag: "v1.11.2", git: "https://github.com/kajabi/sage", glob: "lib/sage_rails/*.gemspec"
-+  gem "sage_rails", "1.11.3", tag: "v1.11.3", git: "https://github.com/kajabi/sage", glob: "lib/sage_rails/*.gemspec"
+The following scripts can be ran by typing `yarn <script_name>` in the root of this repository. The following section goes over each script in detail.
 
-```
-Then run `bundle install`.
-```bash
-$ bundle install
-```
+### `bootstrap`
 
-## Installation
-### Frontend Package
-Add the frontend package to your `package.json`.
-```bash
-$ yarn add git://github.com/Kajabi/sage.git
-```
+Proxy for the Lerna (bootstrap)[https://github.com/lerna/lerna/tree/master/commands/bootstrap] command. This will install all dependencies and link any cross-dependencies of the monorepo.
 
-Exclude the Sage package from being ignored in your webpack development server.
-```yml
-# Within webpacker.yml
+### `bridge:kajabi-products`
 
-development:
-  <<: *default
-    watch_options:
-      ignored: '[/node_modules([\\]+|\/)+(?!sage)/]'
+Creates a local "bridge" between your local Sage packages and the Kajabi Products repo. Use this bridge when you want to be able to locally edit changes in Sage and see them live in Kajabi Products.
 
-```
+### `bridge:kajabi-products:destroy`
+
+Destroys the bridge created by `bridge:kajabi-products`
+
+### `build`
+
+Runs all `build:*` based scripts
+
+### `build:assets`
+
+One time build of the `@kajabi/sage-assets` package
+
+### `build:react`
+
+One time build of the `@kajabi/sage-react` package
+
+### `build:system`
+
+One time build of the `@kajabi/sage-system` package
+
+### `docs`
+
+Start the documentation site from the `docs/` folder. Will be located at http://localhost:4000/
+
+### `docs:bundle`
+
+Run `bundle install` on the `docs/` folder.
+
+### `external`
+
+Destroy any local link between the Sage Rails gem and the internal Sage Packages
+
+### `gem:bump:type`
+
+Determine the current required "bump type" for the Sage Rails gem. This value is based on the current version value of the npm package it is associated with. (null|patch|minor|major|ect.)
+
+### `lint`
+
+Run all `lint:*` scripts
+
+### `lint:assets`
+
+Lint the `@kajabi/sage-assets` package
+
+### `local`
+
+Establish a local link between the Sage Rails gem and the internal Sage Packages
+
+### `setup`
+
+Run the initial setup scripts
+
+### `setup:init`
+
+Install local packages for the main repository and `docs/` path
+
+### `start`
+
+Continuely compiles packages on changes and starts the applications
+To visit the primary documentation site: http://localhost:4000/
+To visit the storybook site: http://localhost6006/
+
+### `storybook`
+
+Launch "storybook" from the `@kajabi/sage-react` package
+
+### `ver:sage`
+
+Get the current version of the `@kajabi/sage` npm package
+
+### `ver:sage:gem`
+
+Get the current version of the `sage_rails` gem
+
+### `ver:assets`
+
+Get the current version of the `@kajabi/sage-assets` npm package
+
+### `ver:react`
+
+Get the current version of the `@kajabi/sage-react` npm package
+
+### `ver:system`
+
+Get the current version of the `@kajabi/sage-system` npm package
+
+### `watch`
+
+Run all `watch:*` scripts
+
+### `watch:assets`
+
+Continuely watch and build the `@kajabi/sage-assets` npm package
+
+### `watch:react`
+
+Continuely watch and build the `@kajabi/sage-react` npm package
+
+### `watch:system`
+
+Continuely watch and build the `@kajabi/sage-system` npm package
 
 ## License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+

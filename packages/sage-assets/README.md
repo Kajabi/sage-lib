@@ -1,10 +1,6 @@
-# Sage "React" Package
+# Sage "Assets" Package
 
-More details to come...
-
-## Usage
-
-`import { Button } from '@kajabi/sage-react'`
+Details to come...
 
 ## Local Scripts
 
@@ -14,14 +10,6 @@ The following scripts can be ran by typing `yarn <script_name>` in the root of t
 
 One time build of the package
 
-### `build-storybook`
-
-Build the storybook instance
-
 ### `build:watch`
 
 Continuely watch and buil the package
-
-### `storybook`
-
-Run the storybook server. Access at http://localhost:6006/

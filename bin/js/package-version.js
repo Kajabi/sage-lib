@@ -1,4 +1,9 @@
 #!/bin/node
+/**
+ * Return the version of a specific package library in the suite
+ *
+ * @returns string
+ */
 
 const package_path = '../../packages/sage-'
 

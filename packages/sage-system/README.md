@@ -1,11 +1,19 @@
-# `@voodoogq/sage-system`
+# Sage "System" Package
 
-> TODO: description
+More to come ...
 
 ## Usage
 
-```
-const sageSystem = require('@voodoogq/sage-system');
+`import '@kajabi/sage-system'`
 
-// TODO: DEMONSTRATE API
-```
+## Local Scripts
+
+The following scripts can be ran by typing `yarn <script_name>` in the root of this repository. The following section goes over each script in detail.
+
+### `build`
+
+One time build of the package
+
+### `build:watch`
+
+Continuely watch and buil the package
