@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.10](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.0.9...@kajabi/sage-react@0.0.10) (2020-10-17)
+
+
+### Bug Fixes
+
+* **monorepo:** docs ([3a491b9](https://github.com/Kajabi/sage-lib/commit/3a491b9ff8a443b8d4b05cc915de73cf602f27c6))
+* **react:** documentation ([2c666e4](https://github.com/Kajabi/sage-lib/commit/2c666e4efbcb348707dcb2888ef340d54e031b07))
+
+
+
+
+
 ## [0.0.9](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.0.8...@kajabi/sage-react@0.0.9) (2020-10-15)
 
 

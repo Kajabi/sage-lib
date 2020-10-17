@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.1.1...@kajabi/sage-assets@0.1.2) (2020-10-17)
+
+
+### Bug Fixes
+
+* **monorepo:** docs ([3a491b9](https://github.com/Kajabi/sage-lib/commit/3a491b9ff8a443b8d4b05cc915de73cf602f27c6))
+
+
+
+
+
 ## [0.1.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.1.0...@kajabi/sage-assets@0.1.1) (2020-10-14)
 
 **Note:** Version bump only for package @kajabi/sage-assets

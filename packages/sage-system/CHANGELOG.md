@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.11](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.0.10...@kajabi/sage-system@0.0.11) (2020-10-17)
+
+
+### Bug Fixes
+
+* **monorepo:** docs ([3a491b9](https://github.com/Kajabi/sage-lib/commit/3a491b9ff8a443b8d4b05cc915de73cf602f27c6))
+* **react:** documentation ([2c666e4](https://github.com/Kajabi/sage-lib/commit/2c666e4efbcb348707dcb2888ef340d54e031b07))
+* **system:** readme updates ([a615321](https://github.com/Kajabi/sage-lib/commit/a615321f9796089077301928362097b450213e81))
+
+
+
+
+
 ## [0.0.10](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.0.9...@kajabi/sage-system@0.0.10) (2020-10-13)
 
 **Note:** Version bump only for package @kajabi/sage-system
