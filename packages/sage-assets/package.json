@@ -13,10 +13,9 @@
   },
   "scripts": {
     "build": "webpack --config webpack/webpack.prod.js",
-    "build:watch": "yarn run build --watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:watch": "yarn run build --watch"
   },
-  "author": "Shane Smith <voodoogq@gmail.com>",
+  "author": "Shane Smith <shane@kajabi.com>",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.11.6",

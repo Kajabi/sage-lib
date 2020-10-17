@@ -4,14 +4,41 @@ The Sage Design System (SDS) is our single source of truth, providing everything
 
 [Visit Sage Design System →](https://sage-design-system.kajabi.com/)
 
-#### Password Protection
-The SDS documentation site uses [Lockup](https://github.com/gblakeman/lockup) for password protection. Currently this is disabled but can be easily enabled by setting the ENV variable `LOCKUP_CODEWORD` in Heroku.
-
 ## Structure
 
-This repo contains the Sage documentation site and the SDS as a webpack-compatible frontend package and rails engine located within `./lib/..`.
+### Lerna Mono-Repository
 
-![image](https://user-images.githubusercontent.com/565743/83690086-b0acce00-a5b5-11ea-90f5-9b8e8b0bd337.png)
+The Sage Design System is a [Lerna Mono-Repository](https://github.com/lerna/lerna) (or a monorepo for short). From the Lerna README:
+
+>Splitting up large codebases into separate independently versioned packages is extremely useful for code sharing. However, making changes across many repositories is messy and difficult to track, and testing across repositories becomes complicated very quickly.
+>
+> To solve these (and many other) problems, some projects will organize their codebases into multi-package repositories (sometimes called monorepos). Projects like Babel, React, Angular, Ember, Meteor, Jest, and many others develop all of their packages within a single repository.
+>
+> Lerna is a tool that optimizes the workflow around managing multi-package repositories with git and npm.
+>
+> Lerna can also reduce the time and space requirements for numerous copies of packages in development and build environments - normally a downside of dividing a project into many separate NPM packages.
+
+There are 5 total packages in the monorepo:
+
+#### @kajabi/sage
+
+More info in the [README](./docs/README.md)
+
+#### @kajabi/sage-assets
+
+More info in the [README](./packages/sage-assets/README.md)
+
+#### @kajabi/sage-packs
+
+More info in the [README](./packages/sage-packs/README.md)
+
+#### @kajabi/sage-react
+
+More info in the [README](./packages/sage-react/README.md)
+
+#### @kajabi/sage-system
+
+More info in the [README](./packages/sage-system/README.md)
 
 ## Local Development: Sage
 
@@ -43,19 +70,17 @@ $ yarn bridge:kajabi-products
 
 If this is your first time using `yarn bridge` you will be prompted to provide your path to your local Kajabi Products repository. This can be an absolute (`~/home/me/code/kajabi-products`) or relative (`../kajabi-products`). The value you enter will be instered into your local `.env` file. If a `.env` file does not exist one will be created for your based on the `.env.dist` file in this repository.
 
-In the event you mistype your repository path, or it's location changes you can edit it's value in the `.env` file
+>*Note: In the event you mistype your repository path, or it's location changes you can edit it's value in the `.env` file*
 
 When running the `bridge` you *must* have `yarn start` running in this repository in order for your changes to be actively compiled.
 
 Within your Kajabi Products repository, run the project as you normally would and in tandem also run Kajabi-Products' webpack-dev-server. In order for Kajabi-Products to watch changes within your local Sage repo webpack-dev-server needs to be running.
 
 ```bash
-# Run Kajabi-Products
 $ heroku local
 ```
 
 ```bash
-# Run Kajabi-Products' webpack-dev-server
 $ bin/webpack-dev-server
 ```
 
