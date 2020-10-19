@@ -11,7 +11,6 @@
     "deploy": "git push heroku $(git rev-parse --abbrev-ref HEAD):master --force",
     "rails:server": "rails server -p 4000 -b 0.0.0.0",
     "start": "npm-run-all --parallel webpack:server rails:server",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "version": "../bin/bump-gem.sh",
     "webpack": "./bin/webpack",
     "webpack:server": "./bin/webpack-dev-server"

@@ -77,7 +77,8 @@ $ yarn start
 ```
 
 To visit the primary documentation site: http://localhost:4000/
-To visit the storybook site: http://localhost6006/
+
+To visit the storybook site: http://localhost:6006/
 
 ### Bridging Kajabi Products
 
