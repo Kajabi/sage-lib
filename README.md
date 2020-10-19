@@ -6,6 +6,8 @@ The Sage Design System (SDS) is our single source of truth, providing everything
 
 ## Structure
 
+![Sage Structure](readme/sage-structure.png "Sage Structure")
+
 ### Lerna Mono-Repository
 
 The Sage Design System is a [Lerna Mono-Repository](https://github.com/lerna/lerna) (or a monorepo for short). From the Lerna README:
@@ -49,6 +51,13 @@ More info in the [README](./packages/sage-react/README.md)
 Located in `./packages/sage-system`
 
 More info in the [README](./packages/sage-system/README.md)
+
+### Conventional Commits
+
+This repository utilizes the
+[Conventional Commits Standarard](https://www.conventionalcommits.org/en/v1.0.0/). Utilizing this standard allows us to automatically version our software during the Continuous Integration process as well as generating CHANGELOG.md files for each of the packages.
+
+A `commit-msg` hook has been added to the repository to enforce this behavior. Ensure you have read over the convention and understand it prior to making a Pull Request.
 
 ## Local Development: Sage
 
@@ -101,6 +110,9 @@ From time to time you will need to destroy your Kajabi Products Bridge and utili
 ```bash
 $ yarn bridge:kajabi-products:destroy
 ```
+## Update Kajabi-Products To The Latest Sage Version
+
+More to come...
 
 ## Local Scripts
 
