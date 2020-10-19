@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.20.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.20.0...@kajabi/sage@1.20.1) (2020-10-19)
+
+
+### Bug Fixes
+
+* **dependencies:** adding peer dependencies ([91d3dc9](https://github.com/Kajabi/sage-lib/commit/91d3dc941fe6400731e46700afff12e408a740eb))
+
+
+
+
+
 # [1.20.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.19.0...@kajabi/sage@1.20.0) (2020-10-17)
 
 

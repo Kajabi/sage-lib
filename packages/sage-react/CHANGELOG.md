@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.11](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.0.10...@kajabi/sage-react@0.0.11) (2020-10-19)
+
+
+### Bug Fixes
+
+* **dependencies:** adding peer dependencies ([91d3dc9](https://github.com/Kajabi/sage-lib/commit/91d3dc941fe6400731e46700afff12e408a740eb))
+
+
+
+
+
 ## [0.0.10](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.0.9...@kajabi/sage-react@0.0.10) (2020-10-17)
 
 
