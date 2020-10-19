@@ -84,7 +84,7 @@ If this is your first time using `yarn bridge` you will be prompted to provide y
 
 When running the `bridge` you *must* have `yarn start` running in this repository in order for your changes to be actively compiled.
 
-Within your Kajabi Products repository, run the project as you normally would and in tandem also run Kajabi-Products' webpack-dev-server. In order for Kajabi-Products to watch changes within your local Sage repo webpack-dev-server needs to be running.
+Within your Kajabi Products repository, run the project as you normally would and in tandem also run Kajabi-Products' `webpack-dev-server`. In order for Kajabi Products to watch changes within your local Sage repo `webpack-dev-server` needs to be running.
 
 ```bash
 $ heroku local
@@ -215,6 +215,10 @@ Continuely watch and build the `@kajabi/sage-react` npm package
 ### `watch:system`
 
 Continuely watch and build the `@kajabi/sage-system` npm package
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## License
 
