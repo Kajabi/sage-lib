@@ -87,7 +87,7 @@ The Kajabi Products repository needs to be locally linked to your Sage repositor
 $ yarn bridge:kajabi-products
 ```
 
-If this is your first time using `yarn bridge` you will be prompted to provide your path to your local Kajabi Products repository. This can be an absolute (`~/home/me/code/kajabi-products`) or relative (`../kajabi-products`). The value you enter will be instered into your local `.env` file. If a `.env` file does not exist one will be created for your based on the `.env.dist` file in this repository.
+If this is your first time using `yarn bridge` you will be prompted to provide your path to your local Kajabi Products repository. This path can be an absolute (`~/home/me/code/kajabi-products`) or relative (`../kajabi-products`). The value you enter will be instered into your local `.env` file. If a `.env` file does not exist one will be created for your based on the `.env.dist` file in this repository.
 
 >*Note: In the event you mistype your repository path, or it's location changes you can edit it's value in the `.env` file*
 
