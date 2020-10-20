@@ -29,7 +29,7 @@
     "url": "https://github.com/Kajabi/sage-lib/issues"
   },
   "scripts": {
-    "build": "webpack --config webpack/webpack.prod.js && build:storybook",
+    "build": "webpack --config webpack/webpack.prod.js && yarn build:storybook",
     "build:storybook": "build-storybook -o build",
     "build:watch": "yarn build --watch",
     "storybook": "start-storybook -p 6006",
