@@ -28,9 +28,6 @@
   "bugs": {
     "url": "https://github.com/Kajabi/sage-lib/issues"
   },
-  "engines": {
-    "yarn": "1.22.5"
-  },
   "scripts": {
     "build": "webpack --config webpack/webpack.prod.js && npm run build:storybook",
     "build:storybook": "build-storybook -o build",
