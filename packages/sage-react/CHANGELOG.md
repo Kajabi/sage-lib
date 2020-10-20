@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.1.0...@kajabi/sage-react@0.1.1) (2020-10-20)
+
+
+### Bug Fixes
+
+* **react:** adding build:storybook to main build ([299799a](https://github.com/Kajabi/sage-lib/commit/299799a7a1357e795cc803c2c419ddaea984260b))
+* **react:** fixing build script ([f1c440c](https://github.com/Kajabi/sage-lib/commit/f1c440cf1fc50aa693a7d14edef6e11d7e6154f3))
+
+
+
+
+
 # [0.1.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.0.16...@kajabi/sage-react@0.1.0) (2020-10-20)
 
 
