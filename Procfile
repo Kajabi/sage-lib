@@ -1,2 +1,2 @@
-docs: yarn docs
+web: yarn docs
 storybook: yarn storybook
