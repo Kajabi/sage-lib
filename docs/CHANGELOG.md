@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.20.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.20.2...@kajabi/sage@1.20.3) (2020-10-20)
+
+
+### Bug Fixes
+
+* **gem:** adding npmrc to docs directory ([c061256](https://github.com/Kajabi/sage-lib/commit/c06125628350d2c513068733564c777f672a2118))
+
+
+
+
+
 ## [1.20.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.20.1...@kajabi/sage@1.20.2) (2020-10-19)
 
 **Note:** Version bump only for package @kajabi/sage
