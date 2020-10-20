@@ -1,1 +1,1 @@
-web: npm run rails:server:production
+worker: npm run rails:server:production
