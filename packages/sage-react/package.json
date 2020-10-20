@@ -14,7 +14,8 @@
     "lib": "lib"
   },
   "files": [
-    "lib"
+    "lib",
+    "dist"
   ],
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
@@ -31,7 +32,7 @@
     "build-storybook": "build-storybook",
     "build:watch": "yarn build --watch",
     "storybook": "start-storybook -p 6006",
-    "preversion": "yarn run build && git add -f dist"
+    "preversion": "yarn run build"
   },
   "devDependencies": {
     "@babel/core": "^7.11.6",

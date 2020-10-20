@@ -11,9 +11,10 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
+  "files": [ "dist/*" ],
   "scripts": {
     "build": "webpack --config webpack/webpack.prod.js",
-    "preversion": "yarn run build && git add -f dist",
+    "preversion": "yarn run build",
     "build:watch": "yarn run build --watch"
   },
   "author": "Shane Smith <shane@kajabi.com>",
