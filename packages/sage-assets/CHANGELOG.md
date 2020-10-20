@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.4](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.1.3...@kajabi/sage-assets@0.1.4) (2020-10-20)
+
+
+### Bug Fixes
+
+* **monorepo:** removing dists from main master ([a3844ec](https://github.com/Kajabi/sage-lib/commit/a3844ec1f9bdc5b19b44b621f4cb07477cde3e91))
+
+
+
+
+
 ## [0.1.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.1.2...@kajabi/sage-assets@0.1.3) (2020-10-20)
 
 
