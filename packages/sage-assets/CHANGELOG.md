@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.7](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.1.6...@kajabi/sage-assets@0.1.7) (2020-10-20)
+
+
+### Bug Fixes
+
+* **heroku:** deployment ([7f6c78a](https://github.com/Kajabi/sage-lib/commit/7f6c78a850f88f5162945663702ee0dd3a873a05))
+
+
+
+
+
 ## [0.1.6](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.1.5...@kajabi/sage-assets@0.1.6) (2020-10-20)
 
 
