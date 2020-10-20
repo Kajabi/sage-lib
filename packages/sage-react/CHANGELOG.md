@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.12](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.0.11...@kajabi/sage-react@0.0.12) (2020-10-20)
+
+
+### Bug Fixes
+
+* **packages:** adding preversion step to include dist ([3a80171](https://github.com/Kajabi/sage-lib/commit/3a80171d4154e74329f0908f97c9dbb9c93dffcc))
+
+
+
+
+
 ## [0.0.11](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.0.10...@kajabi/sage-react@0.0.11) (2020-10-19)
 
 
