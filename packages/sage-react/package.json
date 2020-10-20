@@ -30,7 +30,8 @@
     "build": "webpack --config webpack/webpack.prod.js",
     "build-storybook": "build-storybook",
     "build:watch": "yarn build --watch",
-    "storybook": "start-storybook -p 6006"
+    "storybook": "start-storybook -p 6006",
+    "preversion": "yarn run build && git add -f dist"
   },
   "devDependencies": {
     "@babel/core": "^7.11.6",

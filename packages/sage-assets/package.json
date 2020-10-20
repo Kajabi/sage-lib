@@ -13,6 +13,7 @@
   },
   "scripts": {
     "build": "webpack --config webpack/webpack.prod.js",
+    "preversion": "yarn run build && git add -f dist",
     "build:watch": "yarn run build --watch"
   },
   "author": "Shane Smith <shane@kajabi.com>",
