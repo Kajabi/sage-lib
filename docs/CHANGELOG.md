@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.22.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.21.2...@kajabi/sage@1.22.0) (2020-10-20)
+
+
+### Features
+
+* **gem:** adding Procfile to docs site ([481d67a](https://github.com/Kajabi/sage-lib/commit/481d67ab5f8e016ba6fb94665415bedb2fd085fa))
+
+
+
+
+
 ## [1.21.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.21.1...@kajabi/sage@1.21.2) (2020-10-20)
 
 **Note:** Version bump only for package @kajabi/sage
