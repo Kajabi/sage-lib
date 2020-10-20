@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.1.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.0.16...@kajabi/sage-react@0.1.0) (2020-10-20)
+
+
+### Features
+
+* **heroku:** deploy step for storybook ([7ec5fa7](https://github.com/Kajabi/sage-lib/commit/7ec5fa77cff82385a85a5abf33c2b6c53effe012))
+
+
+
+
+
 ## [0.0.16](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.0.15...@kajabi/sage-react@0.0.16) (2020-10-20)
 
 
