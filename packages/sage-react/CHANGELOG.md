@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.1.1...@kajabi/sage-react@0.1.2) (2020-10-20)
+
+
+### Bug Fixes
+
+* **react:** removing engine ([2cfb243](https://github.com/Kajabi/sage-lib/commit/2cfb243bec42a6b137ebe75f408136c01587def1))
+* **react:** updating yarn command to npm ([f936a20](https://github.com/Kajabi/sage-lib/commit/f936a200956570b61804b26b3a7f5da668c704af))
+
+
+
+
+
 ## [0.1.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.1.0...@kajabi/sage-react@0.1.1) (2020-10-20)
 
 
