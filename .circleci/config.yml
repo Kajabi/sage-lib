@@ -16,7 +16,7 @@ jobs:
             - run: yarn install
             - run: yarn lint
             - run: yarn build
-  release:
+  release-and-deploy:
       docker:
         - image: circleci/ruby:2.4.9-node
       resource_class: small
@@ -33,12 +33,13 @@ jobs:
               - run: (cd docs && bundle install)
               - run: npx lerna bootstrap --ci
               - run: npx lerna publish --registry github --yes
+              - run: yarn docs:deploy
 
 workflows:
     lint-and-build:
       jobs:
         - lint-and-build
-        - release:
+        - release-and-deploy:
             filters:
               branches:
                 only: master
