@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.16](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.0.15...@kajabi/sage-system@0.0.16) (2020-10-20)
+
+
+### Bug Fixes
+
+* **heroku:** deployment ([7f6c78a](https://github.com/Kajabi/sage-lib/commit/7f6c78a850f88f5162945663702ee0dd3a873a05))
+
+
+
+
+
 ## [0.0.15](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.0.14...@kajabi/sage-system@0.0.15) (2020-10-20)
 
 **Note:** Version bump only for package @kajabi/sage-system
