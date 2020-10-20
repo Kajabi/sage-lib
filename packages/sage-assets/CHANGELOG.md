@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.1.2...@kajabi/sage-assets@0.1.3) (2020-10-20)
+
+
+### Bug Fixes
+
+* **packages:** adding preversion step to include dist ([3a80171](https://github.com/Kajabi/sage-lib/commit/3a80171d4154e74329f0908f97c9dbb9c93dffcc))
+
+
+
+
+
 ## [0.1.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.1.1...@kajabi/sage-assets@0.1.2) (2020-10-17)
 
 
