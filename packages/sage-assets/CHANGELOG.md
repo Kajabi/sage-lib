@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.6](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.1.5...@kajabi/sage-assets@0.1.6) (2020-10-20)
+
+
+### Bug Fixes
+
+* **assets:** swapping fonts with icons in index.scss ([8d774b7](https://github.com/Kajabi/sage-lib/commit/8d774b70f3bb3f93189aa438daaeb74af8cca87b))
+
+
+
+
+
 ## [0.1.5](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.1.4...@kajabi/sage-assets@0.1.5) (2020-10-20)
 
 **Note:** Version bump only for package @kajabi/sage-assets
