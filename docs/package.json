@@ -8,7 +8,6 @@
     "test": "test"
   },
   "scripts": {
-    "deploy": "git push heroku $(git rev-parse --abbrev-ref HEAD):master --force",
     "rails:server": "rails server -p 4000 -b 0.0.0.0",
     "rails:server:production": "bundle exec rake assets:precompile && rails s -e production -b 0.0.0.0",
     "start": "npm-run-all --parallel webpack:server rails:server",
