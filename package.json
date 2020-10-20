@@ -35,7 +35,7 @@
     "build:system": "cd packages/sage-system && yarn build",
     "docs": "cd docs && yarn start",
     "docs:bundle": "bin/bundle.sh",
-    "docs:deploy": "git subtree push --prefix docs heroku master",
+    "docs:deploy": "git subtree push --prefix docs https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git master",
     "docs:initialize": "yarn docs:bundle && cd docs && yarn install",
     "external": "bin/local-link-frontend.sh false",
     "gem:bump:type": "export SAGE_ORIGINAL_VER=$(bin/gem-version.sh); node bin/js/gem-bump-type.js",

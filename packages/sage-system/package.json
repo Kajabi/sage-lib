@@ -14,8 +14,8 @@
     "lib": "lib"
   },
   "files": [
-    "lib",
-    "dist"
+    "lib/*",
+    "dist/*"
   ],
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"

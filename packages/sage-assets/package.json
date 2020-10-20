@@ -12,6 +12,7 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "files": [
+    "lib/*",
     "dist/*"
   ],
   "scripts": {

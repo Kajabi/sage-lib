@@ -10,7 +10,7 @@ sage_docs_path=$sage_repo_path/docs
 # Run a quiet bundle install in the current directory
 function bundle_install() {
   echo_custom "[GEM]:" "bundle install in ${PWD}"
-  bundle install --quiet
+  bundle exec bundle install --quiet
 }
 
 # Retrieve the current status of all local gems in the current directory
