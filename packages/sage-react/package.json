@@ -14,6 +14,7 @@
     "lib": "lib"
   },
   "files": [
+    "build/*",
     "lib/*",
     "dist/*"
   ],
@@ -29,7 +30,7 @@
   },
   "scripts": {
     "build": "webpack --config webpack/webpack.prod.js",
-    "build-storybook": "build-storybook",
+    "build:storybook": "build-storybook -o build",
     "build:watch": "yarn build --watch",
     "storybook": "start-storybook -p 6006",
     "preversion": "yarn run build"
