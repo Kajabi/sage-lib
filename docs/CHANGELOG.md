@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.22.9](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.22.8...@kajabi/sage@1.22.9) (2020-10-21)
+
+
+### Bug Fixes
+
+* **gem:** adding direct bundle install step ([5bbccf5](https://github.com/Kajabi/sage-lib/commit/5bbccf5c354c830a03af4b8e1d7addc1cbdc0e0b))
+
+
+
+
+
 ## [1.22.8](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.22.7...@kajabi/sage@1.22.8) (2020-10-21)
 
 
