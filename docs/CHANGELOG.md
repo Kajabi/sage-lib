@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.22.4](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.22.3...@kajabi/sage@1.22.4) (2020-10-21)
+
+
+### Bug Fixes
+
+* **gem:** adding the rails_12factor gem for Heroku ([2addae0](https://github.com/Kajabi/sage-lib/commit/2addae0af39f3379f050e9fbe7beedf9995981e1))
+
+
+
+
+
 ## [1.22.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.22.2...@kajabi/sage@1.22.3) (2020-10-21)
 
 **Note:** Version bump only for package @kajabi/sage
