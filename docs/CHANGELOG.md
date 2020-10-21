@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.22.7](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.22.6...@kajabi/sage@1.22.7) (2020-10-21)
+
+
+### Bug Fixes
+
+* **gem:** updating to a postbuild hook ([e147871](https://github.com/Kajabi/sage-lib/commit/e147871559cb2dd25f31c27909df4fd85f3ba903))
+
+
+
+
+
 ## [1.22.6](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.22.5...@kajabi/sage@1.22.6) (2020-10-21)
 
 
