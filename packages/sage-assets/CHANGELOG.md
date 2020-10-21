@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.1.14...@kajabi/sage-assets@0.2.0) (2020-10-21)
+
+
+### Features
+
+* **assets:** adding sassdocs, updating LICENSE, creating Procfile for deployment ([4fd56c4](https://github.com/Kajabi/sage-lib/commit/4fd56c436a1b2d7b2f1db5c213a1da085f7c25b7))
+
+
+
+
+
 ## [0.1.14](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.1.13...@kajabi/sage-assets@0.1.14) (2020-10-21)
 
 **Note:** Version bump only for package @kajabi/sage-assets
