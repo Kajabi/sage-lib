@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.3.1...@kajabi/sage-assets@0.3.2) (2020-10-21)
+
+
+### Bug Fixes
+
+* **assets:** fixing engine definition ([6383055](https://github.com/Kajabi/sage-lib/commit/638305504f75878aed333282dca144ef9354fde3))
+* **assets:** updating  build script ([ea46665](https://github.com/Kajabi/sage-lib/commit/ea466658116bcf0baf73f3178d43bd193b4abc14))
+* **assets:** updating engine versions ([62999d1](https://github.com/Kajabi/sage-lib/commit/62999d17a5e6f03fb17b3eb76f2399087db06993))
+
+
+
+
+
 ## [0.3.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.3.0...@kajabi/sage-assets@0.3.1) (2020-10-21)
 
 
