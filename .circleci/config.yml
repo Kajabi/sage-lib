@@ -30,11 +30,11 @@ jobs:
               - run: npm config set '//npm.pkg.github.com/:_authToken' '${GH_TOKEN}'
               - run: git config user.email "dev+github-bot@kajabi.com"
               - run: git config user.name "Kajabi Automation Bot"
-              # - run: (cd docs && bundle install)
               - run: npx lerna bootstrap --ci
               - run: npx lerna publish --registry github --yes
               - run: yarn docs:deploy
               - run: yarn storybook:deploy
+              - run: yarn sassdocs:deploy
 
 workflows:
     lint-and-build:
