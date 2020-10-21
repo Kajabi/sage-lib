@@ -17,7 +17,7 @@
     "sassdoc/*"
   ],
   "scripts": {
-    "build": "webpack --config webpack/webpack.prod.js",
+    "build": "webpack --config webpack/webpack.prod.js && yarn build:sassdoc",
     "build:sassdoc": "sassdoc lib/stylesheets",
     "build:sassdoc:watch": "nodemon -e scss --watch lib/stylesheets -x \"yarn run build:sassdoc\"",
     "build:watch": "yarn run build --watch && build:sassdoc:watch",
