@@ -17,9 +17,9 @@
     "sassdoc/*"
   ],
   "engines": {
-    "node": "14.9.0",
+    "node": "12.16.1",
     "npm": "6.14.8",
-    "yarn": "1.22.5"
+    "yarn": "1.22.0"
   },
   "scripts": {
     "build": "webpack --config webpack/webpack.prod.js && sassdoc lib/stylesheets",
