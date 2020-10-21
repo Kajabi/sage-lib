@@ -10,6 +10,22 @@ The following scripts can be ran by typing `yarn <script_name>` in the root of t
 
 One time build of the package
 
+### `build:sassdoc`
+
+One time build of the SassDoc assets
+
+### `build:sassdoc:watch`
+
+Continuely watch and build the SassDoc assets
+
 ### `build:watch`
 
-Continuely watch and buil the package
+Continuely watch and build the package
+
+### `preversion`
+
+Automated script to run during preversion. Used in the Lerna monorepo.
+
+### `start`
+
+Start the SassDocs http server on port 6400

@@ -1,5 +1,6 @@
 node_modules/
 dist/
+sassdoc/
 build/
 yarn-error.log
 lerna-debug.log
