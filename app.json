@@ -1,0 +1,10 @@
+{
+  "name": "Sage Design System Documentation Site",
+  "description": "Documentation Site for the Sage Design System",
+  "website": "http://kajabi.com",
+  "buildpacks": [
+    { "url": "https://github.com/debitoor/heroku-buildpack-npmrc.git" },
+    { "url": "heroku/ruby" },
+    { "url": "heroku/nodejs" }
+  ]
+}
