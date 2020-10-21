@@ -7,5 +7,6 @@
     { "url": "https://github.com/debitoor/heroku-buildpack-npmrc.git" },
     { "url": "heroku/ruby" },
     { "url": "heroku/nodejs" }
-  ]
+  ],
+  "scripts": {}
 }
