@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.22.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.22.0...@kajabi/sage@1.22.1) (2020-10-20)
+
+
+### Bug Fixes
+
+* **react:** updating procfile ([3e73940](https://github.com/Kajabi/sage-lib/commit/3e7394089881577742565cf37e8dacf5aad83599))
+
+
+
+
+
 # [1.22.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.21.2...@kajabi/sage@1.22.0) (2020-10-20)
 
 
