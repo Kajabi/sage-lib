@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.22.10](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.22.9...@kajabi/sage@1.22.10) (2020-10-21)
+
+
+### Bug Fixes
+
+* **gem:** adding prebuild step ([717ae42](https://github.com/Kajabi/sage-lib/commit/717ae421a95b0e5bd6fa3c58b5512d8249a750d4))
+
+
+
+
+
 ## [1.22.9](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.22.8...@kajabi/sage@1.22.9) (2020-10-21)
 
 
