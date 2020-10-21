@@ -16,8 +16,13 @@
     "dist/*",
     "sassdoc/*"
   ],
+  "engines": {
+    "node": "14.90.0",
+    "npm": "6.14.8",
+    "yarn": "1.22.5"
+  },
   "scripts": {
-    "build": "webpack --config webpack/webpack.prod.js && yarn build:sassdoc",
+    "build": "webpack --config webpack/webpack.prod.js && sassdoc lib/stylesheets",
     "build:sassdoc": "sassdoc lib/stylesheets",
     "build:sassdoc:watch": "nodemon -e scss --watch lib/stylesheets -x \"yarn run build:sassdoc\"",
     "build:watch": "yarn run build --watch && build:sassdoc:watch",
