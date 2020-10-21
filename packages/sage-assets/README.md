@@ -29,4 +29,3 @@ Automated script to run during preversion. Used in the Lerna monorepo.
 ### `start`
 
 Start the SassDocs http server on port 6400
-
