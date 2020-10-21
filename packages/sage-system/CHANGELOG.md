@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.24](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.0.23...@kajabi/sage-system@0.0.24) (2020-10-21)
+
+
+### Bug Fixes
+
+* **system:** updating license ([2bcff66](https://github.com/Kajabi/sage-lib/commit/2bcff6604311f8ba76fa767c9774e8eff84dcfd0))
+
+
+
+
+
 ## [0.0.23](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.0.22...@kajabi/sage-system@0.0.23) (2020-10-21)
 
 **Note:** Version bump only for package @kajabi/sage-system
