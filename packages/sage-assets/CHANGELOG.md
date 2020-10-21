@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.1.14...@kajabi/sage-assets@0.3.0) (2020-10-21)
+
+
+### Bug Fixes
+
+* **monorepo:** testing a build ([876df7e](https://github.com/Kajabi/sage-lib/commit/876df7eb49999ca88d5834c85d34b0af268447ce))
+* **monorepo:** triggering build ([5a6360c](https://github.com/Kajabi/sage-lib/commit/5a6360c26bfd493fb933e383bd16db44239eca0a))
+
+
+### Features
+
+* **assets:** adding sassdocs, updating LICENSE, creating Procfile for deployment ([4fd56c4](https://github.com/Kajabi/sage-lib/commit/4fd56c436a1b2d7b2f1db5c213a1da085f7c25b7))
+
+
+
+
+
 # [0.2.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.1.14...@kajabi/sage-assets@0.2.0) (2020-10-21)
 
 

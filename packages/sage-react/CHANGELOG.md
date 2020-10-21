@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.8](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.1.6...@kajabi/sage-react@0.1.8) (2020-10-21)
+
+
+### Bug Fixes
+
+* **react:** updating license ([84eb25f](https://github.com/Kajabi/sage-lib/commit/84eb25f674548f3be33c69c1d0694ca9433d9da2))
+
+
+
+
+
 ## [0.1.7](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.1.6...@kajabi/sage-react@0.1.7) (2020-10-21)
 
 
