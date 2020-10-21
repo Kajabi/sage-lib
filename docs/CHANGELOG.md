@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.22.6](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.22.5...@kajabi/sage@1.22.6) (2020-10-21)
+
+
+### Bug Fixes
+
+* **gem:** updating heroku-prebuild procedures ([d007148](https://github.com/Kajabi/sage-lib/commit/d007148a787ecdca8b1208258c9dbbc43afd06ff))
+
+
+
+
+
 ## [1.22.5](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.22.4...@kajabi/sage@1.22.5) (2020-10-21)
 
 
