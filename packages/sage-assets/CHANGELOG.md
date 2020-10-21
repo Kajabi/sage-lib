@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.3.0...@kajabi/sage-assets@0.3.1) (2020-10-21)
+
+
+### Bug Fixes
+
+* **assets:** adding sassdocs to build script ([19a6863](https://github.com/Kajabi/sage-lib/commit/19a68638370de058bc8195685b8997f217639957))
+
+
+
+
+
 # [0.3.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.1.14...@kajabi/sage-assets@0.3.0) (2020-10-21)
 
 
