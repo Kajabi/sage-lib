@@ -12,6 +12,10 @@ gem 'webpacker', '~> 4.x'
 
 gem 'sage_rails', path: 'lib/sage_rails'
 
+group :production do
+  gem 'rails_12factor'
+end
+
 group :development, :test do
   gem 'byebug'
   gem 'pry'
