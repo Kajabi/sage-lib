@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.22.5](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.22.4...@kajabi/sage@1.22.5) (2020-10-21)
+
+
+### Bug Fixes
+
+* **gem:** updating Procfile to web instead of worker ([f02276d](https://github.com/Kajabi/sage-lib/commit/f02276d826037f50657e37113183e6071c71651c))
+
+
+
+
+
 ## [1.22.4](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.22.3...@kajabi/sage@1.22.4) (2020-10-21)
 
 
