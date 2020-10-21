@@ -156,6 +156,14 @@ Start the documentation site from the `docs/` folder. Will be located at http://
 
 Run `bundle install` on the `docs/` folder.
 
+### `docs:deploy`
+
+For deploying the Documentation Site application to Heroku. This is an automated process through Continuous Deployment.
+
+### `docs:initialize`
+
+Initialize the docs site. Install all gems/packages
+
 ### `external`
 
 Destroy any local link between the Sage Rails gem and the internal Sage Packages
@@ -176,6 +184,14 @@ Lint the `@kajabi/sage-assets` package
 
 Establish a local link between the Sage Rails gem and the internal Sage Packages
 
+### `sassdocs`
+
+Run the SassDoc server from the `@kajabi/sage-assets` package.
+
+### `sassdocs:deploy`
+
+For deploying the SassDocs application to Heroku. This is an automated process through Continuous Deployment.
+
 ### `setup`
 
 Run the initial setup scripts
@@ -193,6 +209,10 @@ To visit the storybook site: http://localhost6006/
 ### `storybook`
 
 Launch "storybook" from the `@kajabi/sage-react` package
+
+### `storybook:deploy`
+
+For deploying the Storybook application to Heroku. This is an automated process through Contiuous Integration.
 
 ### `ver:sage`
 
