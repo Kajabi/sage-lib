@@ -2,7 +2,8 @@
 
 The Sage Design System (SDS) is our single source of truth, providing everything you need to build great products for our customers. It is the culmination of designers and developers working together to give teams the ability to ship high-quality products faster.
 
-[Visit Sage Design System →](https://sage-design-system.kajabi.com/)
+[Visit Sage Design System Documentation →](https://sage-lib-documentation.com)
+[Visit Sage Storybook Documentation →](https://sage-lib-storybook.com)
 
 ## Structure
 
