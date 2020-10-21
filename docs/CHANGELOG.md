@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.22.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.22.1...@kajabi/sage@1.22.2) (2020-10-21)
+
+
+### Bug Fixes
+
+* **gem:** updating script to account for dynamic port on heroku ([bd13cc9](https://github.com/Kajabi/sage-lib/commit/bd13cc96b16dbb3f83e949a0d8ec91a4f9930c6a))
+
+
+
+
+
 ## [1.22.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.22.0...@kajabi/sage@1.22.1) (2020-10-20)
 
 
