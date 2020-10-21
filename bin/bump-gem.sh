@@ -11,6 +11,9 @@ sage_docs_path=$sage_repo_path/docs
 
 echo_custom "[GEM]" "Bumping gem version..."
 
+echo_custom "[GEM]" "Installing latest gems..."
+
+(cd $sage_docs_path && bundle install)
 # Get the type of bump
 cd $sage_repo_path
 BUMP_TYPE=$(yarn run --silent gem:bump:type)
