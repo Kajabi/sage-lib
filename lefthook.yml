@@ -5,6 +5,7 @@ pre-push:
       run: circleci config validate
 
 pre-commit:
+  commands:
     yarn_validate:
       run: ./bin/yarn-check.sh
 
