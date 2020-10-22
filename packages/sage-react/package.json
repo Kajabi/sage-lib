@@ -63,7 +63,6 @@
     "@storybook/react": "^6.0.26",
     "classnames": "^2.2.6",
     "prop-types": "^15.7.2",
-    "lodash": "4.17.20",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-test-renderer": "^16.13.1"
