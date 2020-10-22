@@ -8,7 +8,7 @@ sage_bin_path=$sage_repo_path/bin
 # Utils
 . $sage_bin_path/utils.sh
 
-# If passeed true/false
+# If passed true/false
 if [ "$1" = "true" ] || [ "$1" = "false" ]; then
   # UNINSTALL Local Bindings
   if [ "$1" = "false" ]; then
