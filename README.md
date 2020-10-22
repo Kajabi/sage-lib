@@ -53,6 +53,30 @@ Located in `./packages/sage-system`
 
 More info in the [README](./packages/sage-system/README.md)
 
+### Adding Packages
+
+This repository utilizes Yarn Workspaces which allows for setup of multiple packages in such a way that you only need to run `yarn install` from the root of the repository and all packages will be updated. In addition syntax is provided to target installation towards specific packages or the entire suite. Below are examples of adding packages:
+
+```bash
+# Adds the module-1 package to the packages in the 'prefix-' prefixed folders
+$ yarn lerna add @kajabi/sage-assets packages/sage-*
+
+# Install @kajabi/sage-assets in @kajabi/sage-react
+$ yarn lerna add @kajabi/sage-assets --scope=@kajabi/sage-react
+
+# Install @kajabi/sage-assets in @kajabi/sage-react as a devDependency
+$ yarn lerna add @kajabi/sage-assets --scope=@kajabi/sage-react -D
+
+# Install @kajabi/sage-assets to @kajabi/sage-react as a peerDependency
+$ yarn lerna add @kajabi/sage-assets --scope=module-2 -P
+
+# Install @kajabi/sage-assets in all modules except @kajabi/sage-assets
+$ yarn lerna add @kajabi/sage-assets
+
+# Install babel-core in all modules
+$ yarn lerna add babel-core
+```
+
 ### Conventional Commits
 
 This repository utilizes the
