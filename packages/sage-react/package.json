@@ -46,6 +46,7 @@
     "@storybook/react": "^6.0.26",
     "babel-loader": "^8.1.0",
     "css-loader": "^4.3.0",
+    "jest": "^26.6.0",
     "mini-css-extract-plugin": "^0.11.3",
     "react-is": "^16.13.1",
     "sass-loader": "^10.0.2",
