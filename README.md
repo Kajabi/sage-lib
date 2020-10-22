@@ -290,6 +290,10 @@ See [CONTRIBUTING.md](CONTRIBUTING.md)
 
 See [AUTOMATIONS.md](readme/AUTOMATIONS.md)
 
+## CI/CD, Releases, and Versioning
+
+See [CICD.md](readme/CICD.md)
+
 ## License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
