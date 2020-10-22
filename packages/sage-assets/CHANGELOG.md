@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.4](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.3.3...@kajabi/sage-assets@0.3.4) (2020-10-22)
+
+
+### Bug Fixes
+
+* **assets:** updating Procfile ([4b81f73](https://github.com/Kajabi/sage-lib/commit/4b81f73739e2004b6c1b39709510e9d41547acd9))
+
+
+
+
+
 ## [0.3.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.3.2...@kajabi/sage-assets@0.3.3) (2020-10-21)
 
 
