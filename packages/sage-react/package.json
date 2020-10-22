@@ -51,6 +51,7 @@
     "enzyme-adapter-react-16": "^1.15.5",
     "jest": "^26.6.0",
     "mini-css-extract-plugin": "^0.11.3",
+    "react-test-renderer": "^16.14.0",
     "react-is": "^16.13.1",
     "sass-loader": "^10.0.2",
     "typescript": "4.0.3",
@@ -63,7 +64,8 @@
     "classnames": "^2.2.6",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "^16.13.1",
+    "react-test-renderer": "^16.13.1"
   },
   "gitHead": "b8c2dd5f156473667f33a4d425c501a1e3b1c578"
 }
