@@ -19,10 +19,11 @@ function add_token() {
 if grep -Fq "npm.pkg.github.com" ~/.npmrc; then
     echo_custom '[SETUP] Found GitHub authorization token in ~/.npmrc'
     echo_custom '[SETUP] Installing...'
-    yarn setup:init
 # Prompt for the token if not available
 else
     echo_custom_error "No Personal Access Token for Github found in ~/.npmrc"
     echo_custom_error 'To create your PAT: https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token'
     add_token
 fi
+
+yarn setup:init
