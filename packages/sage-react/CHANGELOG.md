@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.2.0...@kajabi/sage-react@0.3.0) (2020-10-22)
+
+
+### Bug Fixes
+
+* **react:** adding correct dependencies ([143c605](https://github.com/Kajabi/sage-lib/commit/143c605734d510ee40ed09fdf9ab1f1ad7c30ac6))
+* **react:** removing lodash package ([1be3067](https://github.com/Kajabi/sage-lib/commit/1be306760603ab277a73ec8ac18d752921d04241))
+
+
+### Features
+
+* **monorepo:** adding check for yarn ([8ce2e4d](https://github.com/Kajabi/sage-lib/commit/8ce2e4d19d51036f05b157a3750d2fedde7ad6ad))
+
+
+
+
+
 # [0.2.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.1.8...@kajabi/sage-react@0.2.0) (2020-10-22)
 
 
