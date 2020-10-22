@@ -4,6 +4,11 @@ pre-push:
       files: git diff --name-only master -- .circleci/config.yml
       run: circleci config validate
 
+pre-commit:
+  commands:
+    yarn_validate:
+      run: ./bin/yarn-check.sh
+
 commit-msg:
   commands:
     lint-commit:
