@@ -6,7 +6,7 @@ pre-push:
 
 pre-commit:
     yarn_validate:
-      run: bin/yarn-check.sh
+      run: ./bin/yarn-check.sh
 
 commit-msg:
   commands:
