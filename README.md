@@ -214,6 +214,14 @@ Launch "storybook" from the `@kajabi/sage-react` package
 
 For deploying the Storybook application to Heroku. This is an automated process through Contiuous Integration.
 
+### `test`
+
+Run all `test:*` scripts
+
+### `test:react`
+
+Run the test suite on the `@kajabi/sage-react` npm package
+
 ### `ver:sage`
 
 Get the current version of the `@kajabi/sage` npm package

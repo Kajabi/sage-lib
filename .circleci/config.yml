@@ -2,7 +2,7 @@ version: 2.1
 orbs:
   node: circleci/node@1.1.6
 jobs:
-  lint-and-build:
+  lint-test-build:
     executor:
       name: node/default
     docker:
@@ -15,6 +15,7 @@ jobs:
             - run: npm config set '//npm.pkg.github.com/:_authToken' '${GH_TOKEN}'
             - run: yarn install
             - run: yarn lint
+            - run: yarn test
             - run: yarn build
   release-and-deploy:
       docker:
@@ -36,12 +37,12 @@ jobs:
               - run: yarn storybook:deploy
               - run: yarn sassdocs:deploy
 workflows:
-    lint-and-build:
+    lint-test-build:
       jobs:
-        - lint-and-build
+        - lint-test-build
         - release-and-deploy:
             filters:
               branches:
                 only: master
             requires:
-              - lint-and-build
+              - lint-test-build
