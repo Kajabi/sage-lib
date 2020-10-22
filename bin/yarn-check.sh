@@ -8,8 +8,14 @@ sage_bin_path=$sage_repo_path/bin
 # Utilities
 . $sage_bin_path/utils.sh
 
-if [ yarn check ]; then
-  echo 'CHECK PASSED'
+echo_custom '[MONOREPO]', 'Verifying package dependencies...'
+
+if yarn check; then
+  echo_custom '[MONOREPO]', 'All packages up to date!'
 else
-  echo 'CHECK FAILED'
+  echo_custom_error "Detected changes in the monorepo's dependencies... Running yarn install and adding yarn.lock to commit"
+  cd $sage_repo_path
+  yarn install
+  git add yarn.lock
+  git commit -m "chore(monorepo): updating yarn.lock for repository"
 fi;
