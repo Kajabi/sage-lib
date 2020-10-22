@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.5](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.3.4...@kajabi/sage-assets@0.3.5) (2020-10-22)
+
+
+### Bug Fixes
+
+* **assets:** updating license ([1a3a9d8](https://github.com/Kajabi/sage-lib/commit/1a3a9d809e2f0f392913b76969954f8d728c04d5))
+
+
+
+
+
 ## [0.3.4](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.3.3...@kajabi/sage-assets@0.3.4) (2020-10-22)
 
 

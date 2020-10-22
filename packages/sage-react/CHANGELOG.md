@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.1.8...@kajabi/sage-react@0.2.0) (2020-10-22)
+
+
+### Features
+
+* **react:** adding jest/enzyme, configuring ([e31334e](https://github.com/Kajabi/sage-lib/commit/e31334ed105b2867b26921c25c094876f13d1759))
+* **react:** jest dependencies ([12fa3f5](https://github.com/Kajabi/sage-lib/commit/12fa3f57624ad177976e704ba8bba9f5cda6f5fb))
+
+
+
+
+
 ## [0.1.8](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.1.6...@kajabi/sage-react@0.1.8) (2020-10-21)
 
 
