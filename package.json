@@ -9,6 +9,7 @@
     "@arkweid/lefthook": "0.7.2",
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
+    "commitizen": "^4.2.2",
     "dotenv": "8.2.0",
     "eslint": "^7.10.0",
     "lerna": "^3.22.1",
@@ -61,8 +62,5 @@
     "watch:assets": "cd packages/sage-assets && yarn build:watch",
     "watch:react": "cd packages/sage-react && yarn build:watch",
     "watch:system": "cd packages/sage-system && yarn build:watch"
-  },
-  "dependencies": {
-    "commitizen": "^4.2.2"
   }
 }
