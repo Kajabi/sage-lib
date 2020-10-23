@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.3.5...@kajabi/sage-assets@0.4.0) (2020-10-23)
+
+
+### Bug Fixes
+
+* **scss:** updating order of depenencies ([09ab405](https://github.com/Kajabi/sage-lib/commit/09ab40535d343d1c5f3c4a3ec6f7267883247ea6))
+
+
+### BREAKING CHANGES
+
+* **scss:** Testing breaking changes
+
+
+
+
+
 ## [0.3.5](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.3.4...@kajabi/sage-assets@0.3.5) (2020-10-22)
 
 
