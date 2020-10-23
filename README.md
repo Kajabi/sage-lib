@@ -83,7 +83,7 @@ $ yarn lerna add babel-core
 ### Conventional Commits
 
 This repository utilizes the
-[Conventional Commits Standarard](https://www.conventionalcommits.org/en/v1.0.0/). Utilizing this standard allows us to automatically version our software during the Continuous Integration process as well as generating CHANGELOG.md files for each of the packages.
+[Conventional Commits Standarard](https://www.conventionalcommits.org/en/v1.0.0/). Utilizing this standard allows us to automatically version our software during the Continuous Integration process as well as generate `CHANGELOG.md` files for each of the packages.
 
 A `commit-msg` hook has been added to the repository to enforce this behavior. Ensure you have read over the convention and understand it prior to making a Pull Request.
 
@@ -149,7 +149,7 @@ The following scripts can be ran by typing `yarn <script_name>` in the root of t
 
 ### `bootstrap`
 
-Proxy for the Lerna (bootstrap)[https://github.com/lerna/lerna/tree/master/commands/bootstrap] command. This will install all dependencies and link any cross-dependencies of the monorepo.
+Proxy for the Lerna [bootstrap](https://github.com/lerna/lerna/tree/master/commands/bootstrap) command. This will install all dependencies and link any cross-dependencies of the monorepo.
 
 ### `bridge:kajabi-products`
 
