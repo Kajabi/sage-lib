@@ -85,6 +85,8 @@ $ yarn lerna add babel-core
 This repository utilizes the
 [Conventional Commits Standarard](https://www.conventionalcommits.org/en/v1.0.0/). Utilizing this standard allows us to automatically version our software during the Continuous Integration process as well as generate `CHANGELOG.md` files for each of the packages.
 
+Unsure how to format your commit message? Use `yarn commit` to launch a wizard to walk you through with [Commitizen](https://github.com/commitizen/cz-cli)
+
 A `commit-msg` hook has been added to the repository to enforce this behavior. Ensure you have read over the convention and understand it prior to making a Pull Request.
 
 ## Local Development: Sage
@@ -174,6 +176,10 @@ One time build of the `@kajabi/sage-react` package
 ### `build:system`
 
 One time build of the `@kajabi/sage-system` package
+
+### `commit`
+
+Utilize [Commitizen](https://github.com/commitizen/cz-cli) to generate a commit message following the [Conventional Commit Standard](https://www.conventionalcommits.org/en/v1.0.0/)
 
 ### `docs`
 
