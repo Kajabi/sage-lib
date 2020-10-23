@@ -30,7 +30,10 @@ There are 5 total packages in the monorepo:
 
 Located in `./docs`
 
-More info in the [README](.monorepo
+More info in the [README](./docs/README.md)
+
+#### @kajabi/sage-assets
+
 Located in `./packages/sage-assets`
 
 More info in the [README](./packages/sage-assets/README.md)
