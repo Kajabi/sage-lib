@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.4.2...@kajabi/sage-assets@0.4.3) (2020-10-28)
+
+
+### Bug Fixes
+
+* **scripts:** fixing script issues with assets watch ([ddda4b5](https://github.com/Kajabi/sage-lib/commit/ddda4b5bbc86495563ebabca602dd5b9106c93cb))
+
+
+
+
+
 ## [0.4.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.4.1...@kajabi/sage-assets@0.4.2) (2020-10-23)
 
 

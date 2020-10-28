@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.3.0...@kajabi/sage-react@0.3.1) (2020-10-28)
+
+
+### Bug Fixes
+
+* **scripts:** fixing script issues with assets watch ([ddda4b5](https://github.com/Kajabi/sage-lib/commit/ddda4b5bbc86495563ebabca602dd5b9106c93cb))
+
+
+
+
+
 # [0.3.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.2.0...@kajabi/sage-react@0.3.0) (2020-10-22)
 
 
