@@ -22,10 +22,10 @@
     "yarn": ">=1.22.0"
   },
   "scripts": {
-    "build": "webpack --config webpack/webpack.prod.js && sassdoc lib/stylesheets",
+    "build": "yarn build:sassdoc && webpack --config webpack/webpack.prod.js",
     "build:sassdoc": "sassdoc lib/stylesheets",
     "build:sassdoc:watch": "nodemon -e scss --watch lib/stylesheets -x \"yarn run build:sassdoc\"",
-    "build:watch": "yarn run build --watch && build:sassdoc:watch",
+    "build:watch": "yarn run build --watch && yarn build:sassdoc:watch",
     "preversion": "yarn run build",
     "start": "npx http-server sassdoc/ -p 6400"
   },
@@ -37,6 +37,7 @@
     "babel-loader": "^8.1.0",
     "css-loader": "^4.3.0",
     "mini-css-extract-plugin": "^0.11.3",
+    "nodemon": "2.0.6",
     "resolve-url-loader": "^3.1.1",
     "sass": "^1.26.11",
     "sass-loader": "^10.0.2",

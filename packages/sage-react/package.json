@@ -32,7 +32,7 @@
     "build": "webpack --config webpack/webpack.prod.js && npm run build:storybook",
     "build:storybook": "build-storybook -o build",
     "build:watch": "yarn build --watch",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -p 6006 --ci",
     "preversion": "yarn run build",
     "test": "jest"
   },
@@ -64,8 +64,7 @@
     "classnames": "^2.2.6",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-test-renderer": "^16.13.1"
+    "react-dom": "^16.13.1"
   },
   "gitHead": "b8c2dd5f156473667f33a4d425c501a1e3b1c578"
 }
