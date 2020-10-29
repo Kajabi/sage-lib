@@ -42,7 +42,7 @@ The `docs:deploy` script at the root of the monorepo is designed to push a subtr
 
 #### Heroku Env Requirements
 
-- **$NPMRC**: Utilize the $GH_TOKEN environment variable listed in your CircleCI env in place of `<your_token>`:
+- **NPMRC**: Utilize the $GH_TOKEN environment variable listed in your CircleCI env in place of `<your_token>`:
 
 ```text
 //npm.pkg.github.com/:_authToken=<your_token>
