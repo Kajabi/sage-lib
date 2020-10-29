@@ -118,7 +118,7 @@ The Kajabi Products repository needs to be locally linked to your Sage repositor
 $ yarn bridge:kajabi-products
 ```
 
-If this is your first time using `yarn bridge` you will be prompted to provide your path to your local Kajabi Products repository. This path can be an absolute (`~/home/me/code/kajabi-products`) or relative (`../kajabi-products`). The value you enter will be instered into your local `.env` file. If a `.env` file does not exist one will be created for your based on the `.env.dist` file in this repository.
+If this is your first time using `yarn bridge` you will be prompted to provide your path to your local Kajabi Products repository. This path can be absolute (`~/home/me/code/kajabi-products`) or relative (`../kajabi-products`). The value you enter will be instered into your local `.env` file. If a `.env` file does not exist one will be created for you based on the `.env.dist` file in this repository.
 
 >*Note: In the event you mistype your repository path, or it's location changes you can edit it's value in the `.env` file*
 
@@ -147,21 +147,21 @@ More to come...
 
 ## Local Scripts
 
-The following scripts can be ran by typing `yarn <script_name>` in the root of this repository. The following section goes over each script in detail.
+The following scripts can be ran by typing `yarn <script_name>` in the root of this repository. :star:'s have been added to signify common user initiated tasks.
 
 ### `bootstrap`
 
 Proxy for the Lerna [bootstrap](https://github.com/lerna/lerna/tree/master/commands/bootstrap) command. This will install all dependencies and link any cross-dependencies of the monorepo.
 
-### `bridge:kajabi-products`
+### `bridge:kajabi-products` :star:
 
 Creates a local "bridge" between your local Sage packages and the Kajabi Products repo. Use this bridge when you want to be able to locally edit changes in Sage and see them live in Kajabi Products.
 
-### `bridge:kajabi-products:destroy`
+### `bridge:kajabi-products:destroy` :star:
 
 Destroys the bridge created by `bridge:kajabi-products`
 
-### `build`
+### `build` :star:
 
 Runs all `build:*` based scripts
 
@@ -177,7 +177,7 @@ One time build of the `@kajabi/sage-react` package
 
 One time build of the `@kajabi/sage-system` package
 
-### `commit`
+### `commit` :star:
 
 Utilize [Commitizen](https://github.com/commitizen/cz-cli) to generate a commit message following the [Conventional Commit Standard](https://www.conventionalcommits.org/en/v1.0.0/)
 
@@ -205,7 +205,7 @@ Destroy any local link between the Sage Rails gem and the internal Sage Packages
 
 Determine the current required "bump type" for the Sage Rails gem. This value is based on the current version value of the npm package it is associated with. (null|patch|minor|major|ect.)
 
-### `lint`
+### `lint` :star:
 
 Run all `lint:*` scripts
 
@@ -225,7 +225,7 @@ Run the SassDoc server from the `@kajabi/sage-assets` package.
 
 For deploying the SassDocs application to Heroku. This is an automated process through Continuous Deployment.
 
-### `setup`
+### `setup` :star:
 
 Run the initial setup scripts
 
@@ -233,7 +233,7 @@ Run the initial setup scripts
 
 Install local packages for the main repository and `docs/` path
 
-### `start`
+### `start` :star:
 
 Continuely compiles packages on changes and starts the applications
 To visit the primary documentation site: http://localhost:4000/
@@ -275,7 +275,7 @@ Get the current version of the `@kajabi/sage-react` npm package
 
 Get the current version of the `@kajabi/sage-system` npm package
 
-### `watch`
+### `watch` :star:
 
 Run all `watch:*` scripts
 
