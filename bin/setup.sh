@@ -11,7 +11,7 @@ sage_bin_path=$sage_repo_path/bin
 
 # Prompt for github token and add to global npmrc
 function add_token() {
-  read -n 40 -p "Enter your 40 digit GitHub Personal Access Token (Ctrl+c to exit): " GH_TOKEN
+  read -e -n 40 -p "Enter your 40 digit GitHub Personal Access Token (Ctrl+c to exit): " GH_TOKEN
   echo "//npm.pkg.github.com/:_authToken=${GH_TOKEN}" >> ~/.npmrc
 }
 
