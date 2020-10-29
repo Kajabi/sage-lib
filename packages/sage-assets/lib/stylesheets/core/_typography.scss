@@ -179,13 +179,13 @@ hr {
     $color-value: sage-color($color-name, 500);
   }
 
-  .t-sage--color-#{$color-name} {
+  .t-sage--color-#{"" + $color-name} {
     color: $color-value;
   }
 
   // Specific color values
   @each $-level, $-value in $color-slider {
-    .t-sage--color-#{$color-name}-#{$-level} {
+    .t-sage--color-#{"" + $color-name}-#{$-level} {
       color: sage-color($color-name, $-level);
     }
   }
