@@ -46,6 +46,7 @@ const Button = ({
 
   return (
     <TagName className={classNames} {...otherProps}>
+      FooBar
       {iconOnly ? (
         <span className="visually-hidden">{children}</span>
       ) : (
