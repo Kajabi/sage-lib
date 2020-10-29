@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.4.3...@kajabi/sage-assets@0.5.0) (2020-10-29)
+
+
+### Bug Fixes
+
+* updated style color variables ([4e0ef58](https://github.com/Kajabi/sage-lib/commit/4e0ef58fa16c6076b92aa2a086e8c92620395c2e))
+
+
+### Features
+
+* **assets:** moved fonts and icons around ([35a6811](https://github.com/Kajabi/sage-lib/commit/35a6811f0f1418886f59f3d12afb3164ea2c3a14))
+
+
+### Reverts
+
+* **assets:** reverting order of elements ([074c835](https://github.com/Kajabi/sage-lib/commit/074c835e1965b05fc5b0df233e06ffc2f80dd5b9))
+
+
+
+
+
 ## [0.4.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.4.2...@kajabi/sage-assets@0.4.3) (2020-10-28)
 
 

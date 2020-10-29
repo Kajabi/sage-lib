@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.22.24](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.22.23...@kajabi/sage@1.22.24) (2020-10-29)
+
+
+### Bug Fixes
+
+* updated style color variables ([4e0ef58](https://github.com/Kajabi/sage-lib/commit/4e0ef58fa16c6076b92aa2a086e8c92620395c2e))
+
+
+
+
+
 ## [1.22.23](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.22.22...@kajabi/sage@1.22.23) (2020-10-28)
 
 **Note:** Version bump only for package @kajabi/sage
