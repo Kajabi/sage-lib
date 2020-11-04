@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.22.26](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.22.25...@kajabi/sage@1.22.26) (2020-11-04)
+
+
+### Bug Fixes
+
+* **docs site:** adding bundle exec calls to rails server execution ([a496119](https://github.com/Kajabi/sage-lib/commit/a496119b8eee928198241163f994f39f04be63a3))
+
+
+
+
+
 ## [1.22.25](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.22.24...@kajabi/sage@1.22.25) (2020-10-29)
 
 **Note:** Version bump only for package @kajabi/sage
