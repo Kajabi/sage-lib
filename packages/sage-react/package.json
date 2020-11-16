@@ -33,7 +33,7 @@
     "build:storybook": "build-storybook -o build",
     "build:watch": "yarn build --watch",
     "storybook": "start-storybook -p 6006 --ci",
-    "preversion": "yarn run build",
+    "preversion": "yarn install && yarn run build",
     "test": "jest"
   },
   "devDependencies": {
