@@ -46,7 +46,7 @@ export { default as Link } from './Link';
 //   Switch,
 //   Toggle,
 // } from './Toggle';
-// export { default as Type } from './Type';
+export { default as Type } from './Type';
 // export { default as UploadCard } from './UploadCard';
 // export { default as Sortable } from './Sortable';
 export {
