@@ -16,11 +16,11 @@
 //   CopyTextCard,
 // } from './CopyText';
 // export { default as FormSection } from './FormSection';
-// export {
-//   Grid,
-//   Row,
-//   Col,
-// } from './Grid';
+export {
+  Grid,
+  Row,
+  Col,
+} from './Grid';
 // export { default as HelpLink } from './HelpLink';
 export { default as Icon } from './Icon';
 // export { default as IconList } from './IconList';
