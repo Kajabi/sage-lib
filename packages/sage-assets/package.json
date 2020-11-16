@@ -25,9 +25,12 @@
     "build": "yarn build:sassdoc && webpack --config webpack/webpack.prod.js",
     "build:sassdoc": "sassdoc lib/stylesheets",
     "build:sassdoc:watch": "nodemon -e scss --watch lib/stylesheets -x \"yarn run build:sassdoc\"",
-    "build:watch": "yarn run build --watch && yarn build:sassdoc:watch",
+    "build:watch": "yarn build:sassdoc:watch",
     "preversion": "yarn run build",
-    "start": "npx http-server sassdoc/ -p 6400"
+    "server": "npx http-server sassdoc/ -p 6400",
+    "prestart": "yarn build:sassdoc",
+    "start": "yarn server",
+    "start:local": "npm-run-all -p server build:sassdoc:watch"
   },
   "author": "Shane Smith <shane@kajabi.com>",
   "license": "MIT",
