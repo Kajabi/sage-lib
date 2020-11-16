@@ -93,7 +93,7 @@ $-avatar-tile-size: rem(216px);
 
   @extend %t-sage-body-xsmall-bold;
 
-  @each $color, $settings in $-avatar-ring-colors {  
+  @each $color, $settings in $-avatar-ring-colors {
     .sage-avatar--#{"" + $color} & {
       color: map-get($settings, main);
       fill: map-get($settings, main);
