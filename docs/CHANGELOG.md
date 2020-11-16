@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.22.28](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.22.27...@kajabi/sage@1.22.28) (2020-11-16)
+
+
+### Bug Fixes
+
+* **docs:** update gems ([6189e55](https://github.com/Kajabi/sage-lib/commit/6189e552bc1a113f63a27599166950fafc7e0c24))
+* **docs:** update site content and assets ([71c69fb](https://github.com/Kajabi/sage-lib/commit/71c69fbd23341d5de9689c30d1c034e3bbc2e813))
+* **docs:** update/add rails components necessary to documentation site rendering ([6c70320](https://github.com/Kajabi/sage-lib/commit/6c70320be36abc7b5a8b1be7461f15c4cac495ef))
+
+
+
+
+
 ## [1.22.27](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.22.26...@kajabi/sage@1.22.27) (2020-11-16)
 
 **Note:** Version bump only for package @kajabi/sage
