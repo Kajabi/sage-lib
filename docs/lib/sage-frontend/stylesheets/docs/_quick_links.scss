@@ -11,10 +11,15 @@ $-quick-links-color-background: sage-color(primary, 400);
 .quick-links {
   position: sticky;
   top: 0;
-  padding: 0 sage-spacing();
+  overflow: hidden;
+  padding: sage-spacing(2xs) sage-spacing();
+  background-color: #fff;
+  border-radius: sage-border(radius);
 }
 
 .quick-links__body {
+  overflow: auto;
+  max-height: calc(100vh - 360px);
   margin: 0;
   padding: 0;
   @extend %t-sage-body-small;

@@ -1,22 +1,22 @@
 <% if props_content.present? %>
-<div class="sage-panel">
-  <div class="sage-panel__header">
-    <h2 id="<%= @title %>-example-props" class="sage-panel__title">Properties</h2>
-  </div>
-  <div class="sage-table-wrapper">
-    <div class="sage-table-wrapper__overflow">
-      <table class="sage-table sage-table--properties">
-        <thead>
-          <tr>
-            <th>Property</th>
-            <th>Description</th>
-            <th>Type</th>
-            <th>Default</th>
-          </tr>
-        </thead>
-        <%= props_content %>
-      </table>
+  <%= sage_component SagePanelHeader, {} do %>
+    <h2 id="<%= title %>-example-props">Properties</h2>
+  <% end %>
+  <%= sage_component SageCard, {} do %>
+    <div class="sage-table-wrapper">
+      <div class="sage-table-wrapper__overflow">
+        <table class="sage-table sage-table--properties">
+          <thead>
+            <tr>
+              <th>Property</th>
+              <th>Description</th>
+              <th>Type</th>
+              <th>Default</th>
+            </tr>
+          </thead>
+          <%= props_content %>
+        </table>
+      </div>
     </div>
-  </div>
-</div>
+  <% end %>
 <% end %>

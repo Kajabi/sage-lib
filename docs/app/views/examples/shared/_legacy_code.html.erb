@@ -1,0 +1,9 @@
+<%= sage_component SagePanelHeader, {} do %>
+  <h2 id="<%= title %>-example-code">HTML Code</h2>
+<% end %>
+<div class="example__code">
+  <button class="example__expand-btn" aria-expanded="false" aria-controls="example-code-<%= title %>">Expand this code snippet</button>
+  <div id="example-code-<%= title %>" class="sage-code-snippet" tabindex="-1">
+    <pre class="prettyprint"><code><%= CGI.unescapeHTML(CGI.escapeHTML render "examples/#{type.pluralize}/#{title}/preview") %></code></pre>
+  </div>
+</div>

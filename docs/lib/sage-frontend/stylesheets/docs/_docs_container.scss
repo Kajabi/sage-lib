@@ -12,3 +12,13 @@
   border-radius: $sage-panel-border-radius;
   box-shadow: $sage-panel-box-shadow;
 }
+
+.sage-panel--docs-span-right {
+  @media (min-width: sage-breakpoint()) {
+    width: calc(100vw - 240px - 64px);
+  }
+
+  @media (max-width: sage-breakpoint(sm-max)) {
+    width: 100%;
+  }
+}

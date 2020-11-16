@@ -1,4 +1,169 @@
-<% icons = [
+<% action_icons = [
+  {
+    name: "add",
+    action: "Add",
+  },
+  {
+    name: "check",
+    action: "Confirm",
+  },
+  {
+    name: "copy",
+    action: "Copy & Clone",
+  },
+  {
+    name: "customize",
+    action: "Customize",
+  },
+  {
+    name: "download",
+    action: "Download",
+  },
+  {
+    name: "gear",
+    action: "Configure",
+  },
+  {
+    name: "handle",
+    action: "Drag",
+  },
+  {
+    name: "launch",
+    action: "Leave Expereince",
+  },
+  {
+    name: "pen",
+    action: "Edit",
+  },
+  {
+    name: "preview-on",
+    action: "Preview",
+  },
+  {
+    name: "remove",
+    action: "Clear",
+  },
+  {
+    name: "search",
+    action: "Search",
+  },
+  {
+    name: "sort",
+    action: "Sort",
+  },
+  {
+    name: "trash",
+    action: "Delete",
+  },
+  {
+    name: "upload",
+    action: "Upload",
+  },
+]
+%>
+<% feature_icons = [
+  {
+    name: "automations",
+    action: "Automations",
+  },
+  {
+    name: "calendar-date",
+    action: "Events",
+  },
+  {
+    name: "cart",
+    action: "Checkout",
+  },
+  {
+    name: "chart",
+    action: "Analytics",
+  },
+  {
+    name: "comment",
+    action: "Comments",
+  },
+  {
+    name: "coupon",
+    action: "Coupons",
+  },
+  {
+    name: "drop",
+    action: "Drip",
+  },
+  {
+    name: "filters",
+    action: "Filters",
+  },
+  {
+    name: "folder",
+    action: "Categories",
+  },
+  {
+    name: "folder-group",
+    action: "Sub Categories",
+  },
+  {
+    name: "form",
+    action: "Forms",
+  },
+  {
+    name: "mail",
+    action: "Email Broadcasts",
+  },
+  {
+    name: "megaphone",
+    action: "Marketing",
+  },
+  {
+    name: "monitor",
+    action: "Website",
+  },
+  {
+    name: "product",
+    action: "Products",
+  },
+  {
+    name: "refresh",
+    action: "Email Sequences",
+  },
+  {
+    name: "user-circle",
+    action: "People",
+  },
+  {
+    name: "user-star",
+    action: "Partners",
+  },
+]
+%>
+<% dialogue_icons = [
+  {
+    name: "check-circle",
+    action: "Confirmation",
+  },
+  {
+    name: "danger",
+    action: "Danger",
+  },
+  {
+    name: "flag",
+    action: "Announcement",
+  },
+  {
+    name: "info-circle",
+    action: "Information",
+  },
+  {
+    name: "question-circle",
+    action: "Help",
+  },
+  {
+    name: "warning",
+    action: "Warning",
+  },
+]
+%>
+<% all_icons = [
   "add",
   "add-circle",
   "add-image",
@@ -46,19 +211,22 @@
   "coupon",
   "custom-field",
   "customize",
+  "danger",
   "delete-circle",
   "delete-key",
   "delete-x",
   "dot-menu-horizontal",
   "down-small",
   "download",
+  "draft",
   "drop",
   "email-activity",
   "enlarge",
   "enlarge-vertical",
-  "favortie",
+  "favorite",
   "file",
   "filters",
+  "flag",
   "folder",
   "folder-group",
   "form",
@@ -97,6 +265,7 @@
   "question-circle",
   "quote",
   "redo",
+  "refresh",
   "remove",
   "remove-circle",
   "restore",
@@ -109,6 +278,7 @@
   "send-message",
   "skipped",
   "sort",
+  "stack",
   "star",
   "stop",
   "strikethrough",
@@ -129,31 +299,109 @@
   "video-off",
   "video-on",
   "warning"
-] 
+]
 %>
 <%= content_for :heading do %>
-<h1>Icons</h1>
-<p>
-  Our icon set includes those shown below. The typical pattern for
-  these is to use an <code>&lt;i&gt;</code> tag with a class as indicated below.
-</p>
-<p>
-  Note as well for accessibility that if the icon should have an
-  <code>aria-label</code> attribute that describes the icon's
-  purpose in context. However, if the icon is immediately surrounded by
-  text that describes the icon, such as where the icon is purely decorative
-  then <code>aria-hidden="true"</code> can be used instead.
-</p>
+<%= md(%(
+# Icons
+<p class="docs-heading__lead">Our icon set includes those shown below. The typical pattern for these is to use an <code>&lt;i&gt;</code> tag with a class as indicated below.</p>
+
+Note as well for accessibility that if the icon should have an
+`aria-label` attribute that describes the icon\'s
+purpose in context. However, if the icon is immediately surrounded by
+text that describes the icon, such as where the icon is purely decorative
+then `aria-hidden=\"true\"` can be used instead.
+)) %>
 <% end %>
-<div class="docs-container">
-  <div class="sage-row">
-    <% icons.each do |icon| %>
-      <div class="sage-col--md-4 sage-col--sm-6">
-        <div class="sage-icon-block">
-          <i class="sage-icon-<%= icon %>-2xl" aria-hidden="true"></i>
-          <p class="sage-icon-block__label">sage-icon-<%= icon %></p>
-        </div>
-      </div>
-    <% end %>
+<%= content_for :quick_links do %>
+  <div class="quick-links">
+    <h2 class="quick-links__title">Contents</h2>
+    <ul class="quick-links__body">
+      <li class="quick-links__item">
+        <a href="#general-guidelines" class="quick-links__link">Guidelines</a>
+      </li>
+      <li class="quick-links__item">
+        <a href="#action-icons" class="quick-links__link">Action Icons</a>
+      </li>
+      <li class="quick-links__item">
+        <a href="#feature-icons" class="quick-links__link">Feature Icons</a>
+      </li>
+      <li class="quick-links__item">
+        <a href="#dialogue-icons" class="quick-links__link">Dialogue Icons</a>
+      </li>
+      <li class="quick-links__item">
+        <a href="#all-icons" class="quick-links__link">All Icons</a>
+      </li>
+    </ul>
   </div>
+<% end %>
+<%= md(%(
+## General Guidelines
+
+Icons are an effective way to enforce the purpose of an experience. Icons are broken out into two main categories: Actions and Features. In order to ensure that the icons are adding to the clarity of an experience and not creating confusion, we adhere to two principles. 
+
+####Actions take priority over features. 
+
+<span class="sage-label sage-label--draft">Example:</span>
+
+Add Product, the add action take priority over the Product feature. Add Product and Add Post both carry the add icon.
+
+####Feature icons are reserved for their feature.
+
+<span class="sage-label sage-label--draft">Example:</span>
+
+Marketing uses the Megaphone icon. We do not use the megaphone icon for other treatments such as an in-app announcement. 
+), use_sage_type: true) %>
+<hr>
+<div id="action-icons" class="sage-type">
+  <h2>Action Icons</h2>
+  <% action_icons.each do |icon| %>
+    <div class="docs-icon-inline">
+      <%= sage_component SageCardRow, { grid_template: "it" } do %>
+        <i class="sage-icon-<%= icon[:name] %>-xl" aria-hidden="true"></i>
+        <p class="docs-icon-inline__label">sage-icon-<%= icon[:name] %></p>
+        <p class="docs-icon-inline__usage"><strong><%= icon[:action] %></strong> Actions</p>
+      <% end %>
+    </div>
+  <% end %>
+</div>
+<hr>
+<div id="feature-icons" class="sage-type">
+  <h2>Feature Icons</h2>
+  <% feature_icons.each do |icon| %>
+    <div class="docs-icon-inline">
+      <%= sage_component SageCardRow, { grid_template: "it" } do %>
+        <i class="sage-icon-<%= icon[:name] %>-xl" aria-hidden="true"></i>
+        <p class="docs-icon-inline__label">sage-icon-<%= icon[:name] %></p>
+        <p class="docs-icon-inline__usage"><strong><%= icon[:action] %></strong></p>
+      <% end %>
+    </div>
+  <% end %>
+</div>
+<hr>
+<div id="dialogue-icons" class="sage-type">
+  <h2>Dialogue Icons</h2>
+  <% dialogue_icons.each do |icon| %>
+    <div class="docs-icon-inline">
+      <%= sage_component SageCardRow, { grid_template: "it" } do %>
+        <i class="sage-icon-<%= icon[:name] %>-xl" aria-hidden="true"></i>
+        <p class="docs-icon-inline__label">sage-icon-<%= icon[:name] %></p>
+        <p class="docs-icon-inline__usage"><strong><%= icon[:action] %></strong> Dialogues</p>
+      <% end %>
+    </div>
+  <% end %>
+</div>
+<hr>
+<div id="all-icons" class="sage-type">
+  <h2>All Icons</h2>
+  <%= sage_component SageGridRow, {} do %> 
+    <% all_icons.each do |icon| %>
+      <%= sage_component SageGridCol, { breakpoint: "md", size: "4" } do %>
+        <div class="docs-icon-block">
+          <i class="sage-icon-<%= icon %>-2xl" aria-hidden="true"></i>
+          <p class="docs-icon-block__label">sage-icon-<%= icon %></p>
+        </div>
+      <% end %>
+    <% end %>
+  <% end %>
 </div>

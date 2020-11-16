@@ -1,0 +1,275 @@
+<%
+grid_patterns = [
+  {
+    group_name: "Equal sized columns",
+    group_id: "patterns-equal",
+    members: {
+      m:  "--",
+      o:  "---",
+      mm: "----",
+      mo: "-----",
+    }
+  },
+  {
+    group_name: "Dots first",
+    group_id: "patterns-dots",
+    members: {
+      et: ".-",
+      em: ".--",
+      eo: ".---",
+      it: "..-",
+      im: "..--",
+      io: "..---",
+      se: "...-",
+      sm: "...--",
+      so: "...---"
+    }
+  },
+  {
+    group_name: "Dashes First",
+    group_id: "patterns-dashes",
+    members: {
+      te: "-.",
+      me: "--.",
+      oe: "---.",
+      ti: "-..",
+      mi: "--..",
+      oi: "---..",
+      ts: "-...",
+      ms: "--...",
+      os: "---..."
+    }
+  },
+  {
+    group_name: "Dots on both sides",
+    group_id: "patterns-both",
+    members: {
+      ete: ".-.",
+      eme: ".--.",
+      eoe: ".---.",
+      eti: ".-..",
+      emi: ".--..",
+      eoi: ".---..",
+      ets: ".-...",
+      ems: ".--...",
+      eos: ".---...",
+      ite: "..-.",
+      ime: "..--.",
+      ioe: "..---.",
+      iti: "..-..",
+      imi: "..--..",
+      ioi: "..---..",
+      its: "..-...",
+      ims: "..--...",
+      ios: "..---...",
+      ste: "...-.",
+      sme: "...--.",
+      soe: "...---.",
+      sti: "...-..",
+      smi: "...--..",
+      soi: "...---..",
+      sts: "...-...",
+      sms: "...--...",
+      sos: "...---...",
+    }
+  }
+]
+
+dashes = [
+  sage_component(SageCardBlock, { content: md("Lorem ipsum dolor sit amet, consectetur adipiscing elit.") }),
+  sage_component(SageCardBlock, { content: md("Proin aliquam tortor eget tortor suscipit blandit nunc sed.") }),
+  sage_component(SageCardBlock, { content: md("Sed a tortor magna sed consectetur, sapien eget consequat.") }),
+  sage_component(SageCardBlock, { content: md("Phasellus semper nisi metus, vel pulvinar risus hendrerit non.") }),
+  sage_component(SageCardBlock, { content: md("Integer nec ultricies nibh. Aenean sit amet faucibus massa.") }),
+]
+
+dots = [
+  %(<i class="sage-icon-check-circle t-sage--color-sage"></i>),
+  sage_component(SageLabel, { value: "In progress", color: "warning" }),
+  %(<i class="sage-icon-star t-sage--color-orange"></i>),
+  sage_component(SageLabel, { value: "Verified", color: "success" }),
+  %(<span class="t-sage-body-small-semi">$5.99</span>),
+  %(<i class="sage-icon-dot-menu-horizontal t-sage--color-grey"></i>)
+]
+%>
+
+<%= content_for :heading do %>
+<%= md(%(
+# Grid Templates
+<p class="docs-heading__lead">Easily create row layouts with our library of grid templates.</p>
+)) %>
+<% end %>
+<%= content_for :quick_links do %>
+  <div class="quick-links">
+    <h2 class="quick-links__title">Contents</h2>
+    <ul class="quick-links__body">
+      <li class="quick-links__item">
+        <a href="#overview" class="quick-links__link">Overview</a>
+      </li>
+      <li class="quick-links__item">
+        <a href="#patterns" class="quick-links__link">Patterns</a>
+      </li>
+      <% grid_patterns.each do | group | %>
+        <li class="quick-links__item">
+          <a href="#<%= group[:group_id] %>" class="quick-links__link quick-links__link--secondary"><%= group[:group_name] %></a>
+        </li>
+      <% end %>
+      <li class="quick-links__item">
+        <a href="#responsive-considerations" class="quick-links__link">Responsive Considerations</a>
+      </li>
+      <li class="quick-links__item">
+        <a href="#limitations-and-customization"" class="quick-links__link">Limitations and Customization</a>
+      </li>
+    </ul>
+  </div>
+<% end %>
+<%= md("
+## Overview
+
+Certain components allow for items inside them to be laid out inline in a row-like fashion.
+These include the following rows and list items inside of both Panels and Cards.
+In order to make inline or row-based layouts simple and easy
+to build on the fly we\'ve set up a number of template sets that
+employ CSS Grid templates.
+This means that you can add one of the grid template classes below
+onto any row-based layout element such as card rows or panel rows
+and the elements within will conform in a snap.
+
+The method we employ sees layouts as being composed of one of two kinds of elements:
+
+- Fixed elements — these have a small instrinsic size, and they space they occupy fits
+  snugly around them. Think of icons, small text labels, and option menu triggers.
+- Flexing elements — these are allowed to span wider and fill space that remains after
+  fixed elements\'s sizes are accounted for. This means they may not always naturally fill
+  this space, but can flow within the bounds of this space. Think of text that may be of
+  varied size but can span between other fixed elements.
+
+Since naming a series of abstract patterns is challenging to do in a way that is anything
+more than an enumerated list, we decided to use Morse Code as a base.
+As each letter in Morse Code is composed of a series of dots and dashes, so our layouts are
+composed of a series of fixed and flexing elements. So if fixed elements are \"dots\" and
+flexing elements are \"dashes\" we can easily analyze a layout to extract a \"Morse-like\" pattern.
+
+## Patterns
+
+The patterns below use a simple combinations of just a few letters:
+", use_sage_type: true) %>
+<%= sage_component SagePanel, {
+  clear_top_padding: true,
+  clear_bottom_padding: true,
+  spacer: {
+    top: :md,
+    bottom: :md,
+  }
+} do %>
+  <%= sage_component SageTable, {
+    headers: [
+      "Type",
+      "Description",
+      "Single",
+      "Double",
+      "Triple"
+    ],
+    rows: [
+      [
+        "Dots",
+        "Fixed elements such as icons, buttons, labels, and other controls",
+        md("E `.`"),
+        md("I `..`"),
+        md("S `...`")
+      ],
+      [
+        "Dashes",
+        "Flexing elements such as text blocks",
+        md("T `-`"),
+        md("M `--`"),
+        md("O `---`")
+      ]
+    ]
+  } %>
+<% end %>
+<%= md("
+While these may be useful on their own, the power comes in their combination,
+where letters are combined for a compound layout pattern.
+Yet, it would also not be useful or practical to have two dot letters in a row,
+we thus allow for dots then dashes, dashes then dots, or dots, dashes, and dots.
+A full set of the possibilities are demonstrated below.
+
+**Note:** Elements shown here are merely demonstrations; any fixed or flexible elements may be substituted.
+", use_sage_type: true) %>
+  <div class="sage-panel-set sage-spacer-top sage-spacer-bottom">
+    <% grid_patterns.each do | group | %>
+      <%= sage_component SagePanel, {} do %>
+        <h3 id="<%= group[:group_id] %>"><%= group[:group_name] %></h3>
+          <% group[:members].each do | letter, code | %>
+            <%= sage_component SagePanelRow, { grid_template: "ete" } do %>
+              <h4 style="width: 30px"><%= letter %></h4>
+              <code><%= code %></code>
+              <code style="text-align: right">.sage-grid-template-<%= letter %></code>
+            <% end %>
+            <%= sage_component SageCard, {} do %>
+              <%= sage_component SageCardRow, { grid_template: letter, spacer: { top: :xs, bottom: :md }} do %>
+                <%
+                  i_dashes = 0
+                  i_dots = 0
+                %>
+                <% code.split("").each do | c | %>
+                  <% if c == "-" %>
+                    <%= dashes[i_dashes].html_safe %>
+                    <% i_dashes += 1 %>
+                  <% end %>
+                  <% if c == "." %>
+                    <%= dots[i_dots].html_safe %>
+                    <% i_dots += 1 %>
+                  <% end %>
+                <% end %>
+              <% end %>
+            <% end %>
+          <% end %>
+        </ul>    
+      <% end %>
+    <% end %>
+  </div>
+  <%= md("
+## Responsive Considerations</h2>
+
+These layouts persist for tablet and desktop viewports,
+but for smartphone they will stack and flow with flexing elements filling the viewport
+and fixed elements lining up as long as space allows, wrapping otherwise.
+
+## Limitations and Customization</h2>
+
+A number of limitations become apparent with this system, some of which include:
+
+- It is impossible to cover all possible layouts in a practical and digestible fashion.
+  We have limited this library to up to three dots or dashes in a series, and only one set of dashes.
+- Fixed elements sometimes do need particular sizes to be specified; our system assumes they have an intrinsic size.
+- The responsive capability of the grid is quite hampered by a one-size-fits-all rule as we\'ve employed here.
+- Source order independence is another capability of the grid is completely ignored by this system.
+Accessibility may therefore also be somewhat hampered, albeit no more than it has been hampered by layout techniques that predate the CSS Grid.
+
+For these and other reasons, needs may arise where a custom grid template may be needed.
+In such a case consider this approach:
+
+- Unless a completely new component is needed, aim to use as much
+of the existing Panel and Card styles that exist
+so that all that remains is a custom grid template,
+possibly with additional responsive considerations.
+
+- In lieu of `sage-panel__row` or `sage-card__row`
+use `sage-panel__custom-row` or `sage-card__custom-row`.
+These will set up a basic grid with the appropraite spacings applied.
+Yet, if even this provides too much constraint, use the complete open
+`sage-panel__block` or `sage-card__block` instead.
+
+- In place of an existing grid template above set up a completely new one locally
+or within `stylesheets/system/layout/_custom-grid-templates.scss`
+named `.sage-custom-grid-template-{template-name}`.
+Set up the template as needed, including responsive adjustments.
+
+- If you want to adjust source order and use `grid-area` mappings
+nest those mappings within the above custom template style declaration
+so as to keep all relevant setup contained in this space.
+
+An example of such a custom grid template is under development for future release.
+", use_sage_type: true) %>

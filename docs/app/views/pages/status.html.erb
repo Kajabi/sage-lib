@@ -1,6 +1,9 @@
 <%= content_for :heading do %>
-  <h1>Code Status</h1>
-  <p>Our Elements and Objects and the platforms they're available in.</p>
+<%= md("
+# Code Status
+
+Our Elements and Objects and the platforms they're available in.
+") %>
   <%= render "status_key" %>
 <% end %>
 <%= content_for :quick_links do %>

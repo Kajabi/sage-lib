@@ -1,7 +1,56 @@
 <%= content_for :heading do %>
-<h1>Panels and Cards</h1>
-<p>
-  Panels and Cards are the two most common ways designers and engineers can group content within Sage.
-</p>
+<%= md(%(
+# Panels and Cards
+<p class="docs-heading__lead">Panels and Cards are the two most common ways designers and engineers can group content within Sage.</p>
+)) %>
 <% end %>
-<p>Details coming soon!</p>
+<%= md("
+## Organizing within Sage
+
+Within Sage, we aim to keep our content organized well while avoiding additional unsemantic markup.
+It is always preferable to use simple structures over complex ones
+and to use HTML tags as they are intended.
+When it comes to organizing markup such as `div` and the `section` tags, in particular,
+care should be taken to use each in its intended context.
+When in doubt, `div` is the preferred default organizer in order to avoid confuscating organization
+with the additional semantics and outlining features of the `section` tags.
+
+Our grid setup and containers provide a baseline for sizing elements
+and displaying them in particular arrangements beside each other.
+But when it comes to visual effects that enhance grouping we have two core categories
+of grouping devices: Panels and Cards.
+", use_sage_type: true) %>
+<%= sage_component SagePanel, { spacer: { top: :md, bottom: :md }} do %>
+  <%= sage_component SagePanelHeader, { title: "Panel" } %>
+  <%= sage_component SagePanelBlock, { type_block: true } do %>
+    <p>This is a basic panel filling the space available within this page's grid setup.</p>
+  <% end %>
+  <%= sage_component SageCard, {} do %>
+    <%= sage_component SageCardHeader, { title: "Card" } %>
+    <p>This is a basic card filling the space available inside this panel.</p>
+  <% end %>
+<% end %>
+<%= md("
+## Panels
+
+Panels may be placed on the Stage and present a group of content
+within a raised white background with rounded corners.
+
+Panels are very versatile with a number of inner elements useful
+for arranging content as desired.
+These are explained in full detail on the
+[Panel Object](/pages/object/panel) page.
+
+## Cards
+
+Cards are smaller sets of content placed within Panels that have a solid border,
+rounded corner treatment, and certain internal spacing rules.
+
+Implementation of Cards are almost infinite,
+but formally codified configurations are found under Objects
+such as Upload Cards, Data Cards, and Expandable Cards.
+For other one-off implementations, the
+[Card Object](/pages/object/card)
+can be used (assumedly within a panel).
+", use_sage_type: true) %>
+

@@ -6,39 +6,40 @@
     </button>
   <%- end -%>
   <%= link_to pages_index_path do %>
-    <%= image_pack_tag("media/images/docs/sage.svg", class: "sage-assistant__branding")%>
+    <%= image_pack_tag("docs/sage.svg", class: "sage-assistant__branding")%>
   <% end %>
   <div class="sage-assistant__body">
   </div>
   <div class="sage-assistant__actions">
-    <%= link_to "💎 Gem v#{$SAGE_VERSION_GEM}",
-      $SAGE_VERSION_GEM_URL,
-      class: "sage-label sage-label--draft sage-spacer-right-2xs",
-      target: "_blank",
-      rel: "noopener noreferrer",
-      title: "Open SageRails gem source"
-    %>
-    <%= link_to "📦 Package v#{$SAGE_VERSION_FRONTEND}",
-      $SAGE_VERSION_FRONTEND_URL,
-      class: "sage-label sage-label--draft sage-spacer-right-2xs",
-      target: "_blank",
-      rel: "noopener noreferrer",
-      title: "Open Sage frontent package source"
-    %>
-    |
-    <%= link_to "Release Notes",
-      $SAGE_RELEASE_URL,
-      class: "sage-btn sage-btn--small sage-btn--tertiary",
-      target: "_blank",
-      rel: "noopener noreferrer",
-      title: "Github release notes"
-    %>
-    <%= link_to "Changelog",
-      "https://github.com/Kajabi/sage/releases",
-      class: "sage-btn sage-btn--small sage-btn--secondary",
-      target: "_blank",
-      rel: "noopener noreferrer",
-      title: "Github changelog"
-    %>
+    <div class="sage-btn-group sage-btn-group--gap-md">
+      <%= link_to "💎 v#{$SAGE_VERSION_GEM}",
+        $SAGE_VERSION_GEM_URL,
+        class: "sage-btn sage-btn--subtle sage-btn--secondary",
+        target: "_blank",
+        rel: "noopener noreferrer",
+        title: "Open SageRails gem source"
+      %>
+      <%= link_to "📦 v#{$SAGE_VERSION_FRONTEND}",
+        $SAGE_VERSION_FRONTEND_URL,
+        class: "sage-btn sage-btn--subtle sage-btn--secondary",
+        target: "_blank",
+        rel: "noopener noreferrer",
+        title: "Open Sage frontent package source"
+      %>
+      <%= link_to "Release Notes",
+        $SAGE_RELEASE_URL,
+        class: "sage-btn sage-btn--subtle sage-btn--secondary",
+        target: "_blank",
+        rel: "noopener noreferrer",
+        title: "Github release notes"
+      %>
+      <%= link_to "Changelog",
+        "https://github.com/Kajabi/sage/releases",
+        class: "sage-btn sage-btn--subtle sage-btn--secondary",
+        target: "_blank",
+        rel: "noopener noreferrer",
+        title: "Github changelog"
+      %>
+    </div>
   </div>
 </div>
