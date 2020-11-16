@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.5](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.5.4...@kajabi/sage-assets@0.5.5) (2020-11-16)
+
+
+### Bug Fixes
+
+* **alert:** move over alert stylesheet and update index entry ([07e9189](https://github.com/Kajabi/sage-lib/commit/07e9189830cccf2a3a2edfcc011589cc31470480))
+
+
+
+
+
 ## [0.5.4](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.5.3...@kajabi/sage-assets@0.5.4) (2020-11-16)
 
 

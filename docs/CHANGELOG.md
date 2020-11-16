@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.22.32](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.22.31...@kajabi/sage@1.22.32) (2020-11-16)
+
+
+### Bug Fixes
+
+* **alert:** added component files and corresponding documentation examples ([ed72d47](https://github.com/Kajabi/sage-lib/commit/ed72d47aeadeb387611f02a6a31d37f000ce9a6c))
+* added alert to objects_helper ([4047a14](https://github.com/Kajabi/sage-lib/commit/4047a14bb6bcb640c2361797708d5489747d3573))
+
+
+
+
+
 ## [1.22.31](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.22.30...@kajabi/sage@1.22.31) (2020-11-16)
 
 **Note:** Version bump only for package @kajabi/sage
