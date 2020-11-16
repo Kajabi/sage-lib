@@ -1,0 +1,55 @@
+<!-- Default -->
+<%= sage_component SagePanelStack, {} do %>
+  <%= sage_component SageCheckbox, {
+    id:"c1",
+    label_text: "Checkbox",
+    checked: false,
+    disabled: false,
+    has_error: false
+  } %>
+
+  <!-- Checked -->
+  <%= sage_component SageCheckbox, {
+    id: "c2",
+    label_text: "Checked",
+    checked: true,
+    disabled: false,
+    has_error: false
+  } %>
+
+  <!-- Disabled -->
+  <%= sage_component SageCheckbox, {
+    id: "c3",
+    label_text: "Disabled",
+    checked: false,
+    disabled: true,
+    has_error: false
+  } %>
+
+  <!-- Checked and disabled -->
+  <%= sage_component SageCheckbox, {
+    id: "c4",
+    label_text: "Checked and disabled",
+    checked: true,
+    disabled: true,
+    has_error: false
+  } %>
+
+  <!-- Error -->
+  <%= sage_component SageCheckbox, {
+    id: "c5",
+    label_text: "Error",
+    checked: false,
+    disabled: false,
+    has_error: true
+  } %>
+
+  <!-- Checked & Error -->
+  <%= sage_component SageCheckbox, {
+    id: "c6",
+    label_text: "Checked & Error",
+    checked: true,
+    disabled: false,
+    has_error: true
+  } %>
+<% end %>
