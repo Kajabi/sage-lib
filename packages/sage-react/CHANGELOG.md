@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.5.0...@kajabi/sage-react@0.5.1) (2020-11-16)
+
+
+### Bug Fixes
+
+* **monorepo:** added yarnrc to all sub dirs due to submodule deploy methods ([72c8bd3](https://github.com/Kajabi/sage-lib/commit/72c8bd3e0bab360ce752c5113fda912506ff85f3))
+
+
+
+
+
 # [0.5.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.4.0...@kajabi/sage-react@0.5.0) (2020-11-16)
 
 

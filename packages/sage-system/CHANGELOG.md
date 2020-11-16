@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.26](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.0.25...@kajabi/sage-system@0.0.26) (2020-11-16)
+
+
+### Bug Fixes
+
+* **monorepo:** added yarnrc to all sub dirs due to submodule deploy methods ([72c8bd3](https://github.com/Kajabi/sage-lib/commit/72c8bd3e0bab360ce752c5113fda912506ff85f3))
+
+
+
+
+
 ## [0.0.25](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.0.23...@kajabi/sage-system@0.0.25) (2020-10-21)
 
 
