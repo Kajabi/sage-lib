@@ -1,0 +1,46 @@
+// scss-lint:disable ImportPath, ColorKeyword
+// Temporary style shim for TabsItem to be removed with release of Sage 1.16.3 or higher
+@import "sage/lib/sage-frontend/stylesheets/system/_consumables";
+
+//
+// Tab styles
+
+$-tab-disabled-color: sage-color(grey, 500);
+
+.sage-tab {
+  &[aria-disabled="true"],
+  &:disabled {
+    color: $-tab-disabled-color;
+    cursor: default;
+  }
+}
+
+//
+// Choice styles
+
+$-choice-disabled-color: sage-color(grey, 500);
+
+.sage-choice {
+  &[aria-disabled="true"],
+  &:disabled {
+    cursor: default;
+    background-color: sage-color(grey, 100);
+
+    &::before {
+      background-color: sage-color(grey, 200);
+    }
+
+    &:hover::before {
+      box-shadow: none;
+    }
+  }
+}
+
+.sage-choice__subtext,
+.sage-choice__text {
+  [aria-disabled="true"] &,
+  :disabled & {
+    color: $-choice-disabled-color;
+    cursor: default;
+  }
+}
