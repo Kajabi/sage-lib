@@ -1,0 +1,38 @@
+<h3 class="t-sage-heading-6">Single Line (radio type)</h3>
+
+<%= sage_component SageChoice, {
+    target: "example",
+    text: "Option 1",
+    type: "radio",
+    active: true
+  }
+%>
+
+<h3 class="t-sage-heading-6">Multi-Line  (radio type)</h3>
+<%= sage_component SageChoice, {
+    target: "example",
+    text: "Option 1",
+    subtext: "Description of Option 1",
+    type: "radio",
+  }
+%>
+
+<h3 class="t-sage-heading-6">Arrow Variation</h3>
+<%= sage_component SageChoice, {
+    attributes: {
+      href: "//example.com"
+    },
+    text: "Option 1",
+    type: "arrow",
+  }
+%>
+
+<h3 class="t-sage-heading-6">Icon Variation</h3>
+<p>Select any icon to appear to the left of the text.</p>
+<%= sage_component SageChoice, {
+    target: "example",
+    text: "Option 1",
+    type: "icon",
+    icon: "video-on"
+  }
+%>
