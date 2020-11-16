@@ -1,7 +1,7 @@
 // NOTE: Migration in progress; known components are present but commented out until transferred.
 //
 // export { default as Avatar } from './Avatar';
-// export { default as Button } from './Button';
+export { default as Button } from './Button';
 // export { default as Breadcrumbs } from './Breadcrumbs';
 // export { default as Card } from './Card';
 // export { default as DataCard } from './DataCard';
