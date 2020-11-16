@@ -1,6 +1,72 @@
 <tr>
-  <td>Icon usage</td>
-  <td>Classnames dictate the icon positioning to the left or right of text. For example, `sage-btn--icon-left-gear` indicates that the "gear" icon will be displayed to the left. Reference the <a href="<%= pages_foundations_path(:icon) %>" rel="nofollow">full list of icons</a> for naming.</td>
+  <td>align</td>
+  <td>Aligns a button to the "right" rather than its default position</td>
+  <td>String: [ null | "end" ]</td>
+  <td>null</td>
+</tr>
+<tr>
+  <td>disabled</td>
+  <td>
+    Toggles whether or not the button is disabled.
+    On <code>button</code> this implements the "disabled" HTML attribute
+    but on hyperlinks it enables the <code>aria-disabled="true"</code>.
+  </td>
+  <td>Boolean</td>
+  <td>false</td>
+</tr>
+<tr>
+  <td>full_width</td>
+  <td>Forces a button to 100% the width of its container.</td>
+  <td>Boolean</td>
+  <td>false</td>
+</tr>
+<tr>
+  <td>icon</td>
+  <td>Allows for configurations for an and its placement to be provided.</td>
+  <td>
+<pre><code>icon: {
+  name: &lt;String: name of Sage icon, see Icons&gt;,
+  style: &lt;String: [ "left" | "right" | "only" ]&gt;
+}</code></pre>
+  </td>
+  <td>null</td>
+</tr>
+<tr>
+  <td>no_shadow</td>
+  <td>Toggles the "raised" effect off of Buttons that are of the "primary" type.</td>
+  <td>Boolean</td>
+  <td>false</td>
+</tr>
+<tr>
+  <td>raised</td>
+  <td>Toggles "raised" shadows effect onto the "secondar" or "danger" types.</td>
+  <td>Boolean</td>
+  <td>false</td>
+</tr>
+<tr>
+  <td>small</td>
+  <td>Toggles whether buttons in the "subtle" format can be display in a regular (default) and small size using this property.</td>
+  <td>Boolean</td>
+  <td>false</td>
+</tr>
+<tr>
+  <td>style</td>
+  <td>Buttons have three different "styles" that affect color appearance to create a "primary", "secondary", and "danger" variation.</td>
+  <td>String: [ "primary" | "secondary" | "danger" ]</td>
+  <td>"primary"</td>
+</tr>
+<tr>
+  <td>subtle</td>
+  <td>Whether or not to render the button in the "subtle" format.</td>
+  <td>Boolean</td>
+  <td>false</td>
+</tr>
+<tr>
+  <td>value</td>
+  <td>
+    The value to show on the button.
+    If the "only" style is set for "icon", this label is visually hidden.
+  </td>
   <td>String</td>
   <td>null</td>
 </tr>

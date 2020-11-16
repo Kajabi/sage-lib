@@ -4,7 +4,7 @@
     <%= "sage-panel__figure--wistia" if component.is_wistia %>
     <%= component.generated_css_classes %>
   "
-  <%= component.generated_html_attributes %>
+  <%= component.generated_html_attributes.html_safe %>
 >
   <%= component.content %>
 </div>

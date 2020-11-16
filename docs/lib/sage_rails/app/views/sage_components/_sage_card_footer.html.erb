@@ -3,7 +3,7 @@
     <%= "sage-card__footer--align-spread" if component.align_spread %>
     <%= component.generated_css_classes %>
   "
-  <%= component.generated_html_attributes %>
+  <%= component.generated_html_attributes.html_safe %>
 >
   <%= component.content %>
 </div>

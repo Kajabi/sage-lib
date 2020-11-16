@@ -1,4 +1,4 @@
-<% html_tag = component.interactive ? "button" : "span" %>
+<% html_tag = component.interactive ? "button" : component.html_tag.present? ? component.html_tag : "span" %>
 
 <<%= html_tag %>
   class="

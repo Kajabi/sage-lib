@@ -4,7 +4,7 @@
     <%= "sage-grid-template-#{component.grid_template}" if component.grid_template %>
     <%= component.generated_css_classes %>
   "
-  <%= component.generated_html_attributes %>
+  <%= component.generated_html_attributes.html_safe %>
 >
   <%= component.content %>
 </li>

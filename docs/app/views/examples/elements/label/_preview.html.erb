@@ -8,37 +8,63 @@ colors = [
 ]
 %>
 
-<h5>Default</h5>
-<% colors.each do | color | %>
-  <%= render "examples/elements/label/markup",
-  color: color
-  %>
+<h3 class="t-sage-heading-6">Default</h3>
+<%= sage_component SagePanelBlock, {} do %>
+  <% colors.each do | color | %>
+    <%= sage_component SageLabel, {
+      color: color,
+      value: %(
+        #{color.capitalize}
+        <button class="sage-btn sage-btn--subtle sage-btn--secondary sage-btn--icon-only-remove"></button>
+      )
+    } %>
+  <% end %>
 <% end %>
 
-<h5>Subtle</h5>
-<% colors.each do | color | %>
-  <%= render "examples/elements/label/markup",
-  color: color,
-  type: "subtle"
-  %>
+<h3 class="t-sage-heading-6">Subtle</h3>
+<%= sage_component SagePanelBlock, {} do %>
+  <% colors.each do | color | %>
+    <%= sage_component SageLabel, {
+      color: color,
+      style: "subtle",
+      value: color.capitalize
+    } %>
+  <% end %>
 <% end %>
 
-<h5>Bold</h5>
-<% colors.each do | color | %>
-  <%= render "examples/elements/label/markup",
-  color: color,
-  type: "bold"
-  %>
+<h3 class="t-sage-heading-6">Bold</h3>
+<%= sage_component SagePanelBlock, {} do %>
+  <% colors.each do | color | %>
+    <%= sage_component SageLabel, {
+      color: color,
+      style: "bold",
+      value: color.capitalize
+    } %>
+  <% end %>
 <% end %>
 
-<h5>With Icons</h5>
-<div style="display: grid; grid-gap: 4px; grid-auto-columns: max-content; grid-auto-flow: column;">
-  <%= render "examples/elements/label/markup",
+<h3 class="t-sage-heading-6">With Icons</h3>
+<%= sage_component SagePanelBlock, {} do %>
+  <%= sage_component SageLabel, {
     color: "draft",
-    icon_left: "add-small"
-  %>
-  <%= render "examples/elements/label/markup",
+    value: "Add",
+    icon: { style: "left", name: "add-small" }
+  } %>
+  <%= sage_component SageLabel, {
     color: "draft",
-    icon_right: "tag"
-  %>
-</div>
+    value: "Tag",
+    icon: { style: "right", name: "tag" }
+  } %>
+<% end %>
+
+<h3 class="t-sage-heading-6">Interactive</h3>
+<%= sage_component SagePanelBlock, {} do %>
+  <% colors.each do | color | %>
+    <%= sage_component SageLabel, {
+      color: color,
+      interactive: true,
+      value: color.capitalize,
+      icon: { style: "right", name: "caret-down" }
+    } %>
+  <% end %>
+<% end %>

@@ -1,2 +1,0 @@
-class SageAssistant < SageComponent
-end
