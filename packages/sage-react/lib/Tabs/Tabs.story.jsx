@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
 import { SageTokens, Tabs, Button } from 'common/components/Sage';
 import { withKnobs, radios, select } from '@storybook/addon-knobs';
-import { centerXY } from 'stories/config/decorators';
+import { centerXY } from '../story-support/decorators';
 import TabsNotes from './TabsNotes.md';
 
 const TabsWithState = () => {
