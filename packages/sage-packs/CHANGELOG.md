@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.56](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.0.55...@kajabi/sage-packs@0.0.56) (2020-11-16)
+
+
+### Bug Fixes
+
+* **monorepo:** adding npmrc to all packages for sub module deployments ([831dc43](https://github.com/Kajabi/sage-lib/commit/831dc436605f60d2e27e645507c5bd7ca8a4604d))
+
+
+
+
+
 ## [0.0.55](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.0.54...@kajabi/sage-packs@0.0.55) (2020-11-16)
 
 **Note:** Version bump only for package @kajabi/sage-packs
