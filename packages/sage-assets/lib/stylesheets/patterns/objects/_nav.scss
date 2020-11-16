@@ -6,6 +6,7 @@
 $-sage-nav-color-text: sage-color(charcoal, 400);
 $-sage-nav-color-focus: sage-color(primary);
 $-sage-nav-color-background: sage-color(primary, 400);
+$-sage-nav-icon-size: rem(20px);
 
 .sage-nav__list {
   margin: 0;
@@ -13,11 +14,20 @@ $-sage-nav-color-background: sage-color(primary, 400);
   list-style: none;
 }
 
+.sage-nav__list--sub {
+  margin-left: rem(36px);
+
+  .sage-nav__link--active {
+    color: sage-color(primary);
+    background: rgba($-sage-nav-color-background, 0.06);
+  }
+}
+
 .sage-nav__link {
   display: flex;
   align-items: center;
   height: rem(32px);
-  margin-bottom: rem(2px);
+  margin-bottom: sage-spacer(2xs);
   padding: sage-spacing(2xs) sage-spacing(xs);
   color: $-sage-nav-color-text;
   border-radius: sage-border(radius);
@@ -44,13 +54,11 @@ $-sage-nav-color-background: sage-color(primary, 400);
 }
 
 .sage-nav__link--sub {
-  padding-left: sage-spacing(sm);
-
   @extend %t-sage-body-small-med;
 }
 
-.sage-nav__link--active {
-  background: rgba($-sage-nav-color-background, 0.06);
+.sage-nav__link--active .sage-nav__icon {
+  color: sage-color(primary);
 }
 
 .sage-nav__link-decorator {
@@ -62,5 +70,13 @@ $-sage-nav-color-background: sage-color(primary, 400);
   
   &:not(:first-child) {
     margin-left: sage-spacing(xs);
+  }
+}
+
+.sage-nav__icon {
+  margin-right: sage-spacing(xs);
+
+  &::before {
+    @include sage-icon-base(null, xl);
   }
 }

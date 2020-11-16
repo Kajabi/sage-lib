@@ -14,6 +14,16 @@
   @include sage-grid-panel();
 }
 
+.sage-panel--clear-padding-top,
+.sage-panel--clear-padding-both {
+  padding-top: 0;
+}
+
+.sage-panel--clear-padding-bottom,
+.sage-panel--clear-padding-both {
+  padding-bottom: 0;
+}
+
 .sage-panel__divider {
   margin: 0;
   padding-top: rem(11px); // 16 - 1px element - 4px bottom padding
@@ -43,7 +53,8 @@
   img {
     display: block;
     width: 100%;
-    height: 100%;
+    max-width: 100%;
+    height: auto;
     object-fit: cover;
   }
 }
@@ -153,5 +164,5 @@
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: min-content;
-  grid-gap: sage-spacing(lg);
+  grid-gap: $sage-stage-grid-gap;
 }

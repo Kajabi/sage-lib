@@ -141,29 +141,6 @@
 ================================================== */
 
 /* ==================================================
-** Avatar Ring
-  Usage: `@include sage-avatar-ring();`
-
-  Adds an activated ring around a save-avatar object in the provided color
-  arguments: $color | [valid system color]
-================================================== */
-
-@mixin sage-avatar-ring($color: primary) {
-  $-avatar-ring-offset: -($sage-avatar-ring-width + 2px);
-  $-avatar-right-color: sage-color($color);
-
-  @if ($color == charcoal) {
-    $-avatar-right-color: sage-color($color, 500);
-  }
-
-  &::before {
-    border-color: $-avatar-right-color;
-
-    @include position-full($-avatar-ring-offset);
-  }
-}
-
-/* ==================================================
 ** Button reset mixin
   Usage: `@include sage-button-style-reset();
 
@@ -183,6 +160,78 @@
 }
 
 /* ==================================================
+** Button disabled mixin
+  Usage: `@include sage-button-style-disabled();
+
+  Sets up disabled styles for buttons
+  arguments: n/a
+================================================== */
+
+@mixin sage-button-style-disabled {
+  box-shadow: none;
+  transition: none;
+  cursor: not-allowed;
+  pointer-events: none;
+
+  &:hover:not(:focus):not(:active):not(:disabled):not([aria-disabled="true"]),
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
+
+/* ==================================================
+** Button button icon generator mixin
+  Usage: `@include sage-button-icon-generator();
+
+  Generates icon variations for buttons
+  arguments: $icon-name, $icon-doe, $direction <left|right|only>
+================================================== */
+
+@mixin button-icon-generator($icon-name, $icon-code, $direction) {
+  // --- Right Icon Buttons
+  @if $direction == right {
+    .sage-btn--icon-right-#{$icon-name} {
+      flex-direction: row-reverse;
+
+      &::before {
+        @include sage-icon-base($icon-name, md);
+
+        align-self: center;
+        margin: 0 0 0 sage-spacing(xs);
+      }
+    }
+  }
+
+  // --- Left Icon Buttons
+  @else if $direction == left {
+    .sage-btn--icon-left-#{$icon-name} {
+      flex-direction: row;
+
+      &::before {
+        @include sage-icon-base($icon-name);
+
+        align-self: center;
+        margin: 0 sage-spacing(xs) 0 0;
+      }
+    }
+  }
+
+  // --- Standalone Icon Buttons
+  @else if $direction == only {
+    .sage-btn--icon-only-#{$icon-name} {
+      justify-content: center;
+      text-align: center;
+
+      &::before {
+        @include sage-icon-base($icon-name);
+        align-self: center;
+      }
+    }
+  }
+}
+
+/* ==================================================
 ** Button Outline
   Usage:
     Set up the custom outline:
@@ -197,7 +246,7 @@
     $color: [hex color to be used for the stroke color]
 ================================================== */
 
-@mixin sage-focus-outline($outline-color) {
+@mixin sage-focus-outline($outline-width: 2px, $outline-offset-block: 4px, $outline-offset-inline: 4px) {
   position: relative;
 
   &:focus {
@@ -205,22 +254,25 @@
   }
 
   &::after {
+    $-offset-block: $outline-width * 2 + $outline-offset-block * 2;
+    $-offset-inline: $outline-width * 2 + $outline-offset-inline * 2;
+
     content: "";
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate3d(-50%, -50%, 0) scale(0.94);
-    width: calc(100% + #{$sage-btn-focus-outline-width * 2px} + #{$sage-btn-focus-outline-spacing * 2});
-    height: calc(100% + #{$sage-btn-focus-outline-width * 2px} + #{$sage-btn-focus-outline-spacing * 2});
-    border: ($sage-btn-focus-outline-width * 1px) solid $outline-color;
+    width: calc(100% + #{$-offset-inline});
+    height: calc(100% + #{$-offset-block});
+    border: $outline-width solid transparent;
     border-radius: sage-border(radius-large);
     transition: opacity 0.15s ease-out 0.05s, transform 0.2s ease-in-out;
     pointer-events: none;
     opacity: 0;
   }
 
-  &:focus:not(:disabled):not(.disabled),
-  &:active:not(:disabled):not(.disabled) {
+  &:focus:not(:disabled):not([aria-disabled="true"]),
+  &:active:not(:disabled):not([aria-disabled="true"]) {
     &::after {
       transform: translate3d(-50%, -50%, 0) scale(1);
       opacity: 1;
@@ -311,13 +363,13 @@
   justify-content: space-between;
   align-items: center;
 
-  @media (max-width: sage-breakpoint(md-max)) {
+  @media (max-width: sage-breakpoint(sm-max)) {
     display: flex;
     flex-flow: row wrap;
     gap: sage-spacing(sm);
   }
 
-  @media (min-width: sage-breakpoint(lg-min)) {
+  @media (min-width: sage-breakpoint(md-min)) {
     display: grid;
     grid-auto-columns: auto;
     grid-auto-flow: column;
@@ -335,13 +387,13 @@
   justify-content: space-between;
   align-items: center;
 
-  @media (max-width: sage-breakpoint(md-max)) {
+  @media (max-width: sage-breakpoint(sm-max)) {
     display: flex;
     flex-flow: row wrap;
     gap: sage-spacing();
   }
 
-  @media (min-width: sage-breakpoint(lg-min)) {
+  @media (min-width: sage-breakpoint(md-min)) {
     display: grid;
     grid-auto-columns: auto;
     grid-auto-flow: column;

@@ -5,52 +5,115 @@
 
 ================================================== */
 
-// ==================================================
-// MIXINS
-// ==================================================
+/* stylelint-disable max-nesting-depth */
 
-@mixin button-style-base {
-  @include sage-button-style-reset();
+// Base styles
+$-btn-transition: $sage-transition;
+$-btn-border-radius: sage-border(radius);
+$-btn-shadow-base: sage-shadow(sm);
+$-btn-base-styles: (
+  primary: (
+    default: (
+      color: sage-color(white),
+      background-color: sage-color(primary),
+      ring-color: sage-color(primary),
+    ),
+    hover: (
+      color: sage-color(white),
+      background-color: sage-color(primary, 400),
+    ),
+    focus: (
+      color: sage-color(white),
+      background-color: sage-color(primary),
+    ),
+    disabled: (
+      color: sage-color(primary, 200),
+      background-color: sage-color(primary, 100),
+    )
+  ),
+  secondary: (
+    default: (
+      color: sage-color(charcoal),
+      background-color: sage-color(white),
+      ring-color: sage-color(charcoal),
+    ),
+    hover: (
+      color: sage-color(charcoal),
+      background-color: sage-color(grey, 200),
+    ),
+    focus: (
+      color: sage-color(charcoal),
+      background-color: sage-color(white),
+    ),
+    disabled: (
+      color: sage-color(grey, 500),
+      background-color: sage-color(grey, 200),
+    )
+  ),
+  danger: (
+    default: (
+      color: sage-color(white),
+      background-color: sage-color(red),
+      ring-color: sage-color(red),
+    ),
+    hover: (
+      color: sage-color(white),
+      background-color: sage-color(red, 400),
+    ),
+    focus: (
+      color: sage-color(white),
+      background-color: sage-color(red),
+    ),
+    disabled: (
+      color: sage-color(red, 200),
+      background-color: sage-color(red, 100),
+    )
+  ),
+);
+
+$-btn-subtle-styles: (
+  primary: (
+    default: sage-color(primary),
+    hover: sage-color(primary, 400),
+    focus: sage-color(primary),
+    disabled: sage-color(primary, 200),
+  ),
+  secondary: (
+    default: sage-color(charcoal, 200),
+    hover: sage-color(charcoal, 500),
+    focus: sage-color(charcoal, 200),
+    disabled: sage-color(grey, 500),
+  ),
+  danger: (
+    default: sage-color(red),
+    hover: sage-color(red, 400),
+    focus: sage-color(red),
+    disabled: sage-color(red, 200),
+  ),
+);
+
+.sage-btn {
   @extend %t-sage-body-med;
+  @include sage-button-style-reset();
+  @include sage-focus-outline;
+
+  $-padding-block: rem(6px);
 
   display: inline-flex;
   align-self: inherit;
-  align-items: baseline;
+  align-items: center;
   position: relative;
-  padding: rem(6px) sage-spacing(sm);
-  letter-spacing: $sage-btn-letter-spacing;
-  color: sage-color(charcoal, 500);
+  min-height: ($-padding-block * 2 + sage-line-height(md));
+  padding: $-padding-block sage-spacing(sm);
+  text-align: left; // Prevents text alignment issue when inner text is truncated
   border: 0;
-  border-radius: $sage-btn-border-radius;
-  box-shadow: $sage-btn-shadow-base;
-  transition: border $sage-btn-transition, background-color $sage-btn-transition, box-shadow $sage-btn-transition;
-}
+  border-radius: $-btn-border-radius;
+  transition: $-btn-transition;
+  transition-property: border, background-color, box-shadow;
 
-@mixin button-style-disabled {
-  box-shadow: none;
-  transition: none;
-  cursor: not-allowed;
-  pointer-events: none;
-
-  &:hover:not(:focus):not(:active):not(:disabled):not([aria-disabled="true"]),
-  &:focus,
-  &:active {
-    outline: none;
-  }
-}
-
-
-.sage-btn {
-  @include button-style-base;
-  @include sage-focus-outline($sage-btn-focus-outline-color);
-
-  .sage-input-group & {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-  }
-
-  &:focus {
-    box-shadow: $sage-btn-shadow-base;
+  &:disabled,
+  &[aria-disabled="true"] {
+    @include sage-button-style-disabled;
   }
 
   &:focus:not(:disabled):not([aria-disabled="true"]),
@@ -60,17 +123,23 @@
     }
   }
 
-  &:active {
-    color: sage-color(charcoal, 400);
-    box-shadow: none;
+  // Contextual modifications
+  .sage-catalog-item__content & {
+    &:not(:last-child) {
+      margin-right: sage-spacing();
+    }
   }
 
-  &:disabled,
-  &[aria-disabled="true"] {
-    @include button-style-disabled;
+  .sage-dropdown--contained &,
+  .sage-panel-controls__toolbar .sage-dropdown__trigger &,
+  .sage-panel-controls__bulk-actions .sage-dropdown__trigger & {
+    @include sage-focus-outline--update-color(transparent);
 
-    color: sage-color(grey);
-    background-color: sage-color(grey, 100);
+    border-radius: inherit;
+
+    &:hover {
+      background-color: sage-color(white);
+    }
   }
 
   .sage-dropdown__item > & {
@@ -80,13 +149,95 @@
     border-radius: 0;
   }
 
+  .sage-input-group & {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .sage-label & {
+    &:first-child:not(:last-child) {
+      margin-right: sage-spacing(xs);
+    }
+
+    &:last-child:not(:first-child) {
+      margin-left: sage-spacing(xs);
+    }
+
+    + & {
+      margin-left: 0;
+    }
+  }
+
   .sage-page-heading__actions & {
-    margin: 0;
+    &:not(:last-child) {
+      margin-right: sage-spacing();
+    }
+  }
+
+  .sage-page-heading__toolbar & {
+    &:not(:last-child) {
+      margin-right: sage-spacing(lg);
+    }
+  }
+
+  .sage-sortable__item-actions & {
+    &:not(:last-child) {
+      margin-right: sage-spacing(sm);
+    }
+  }
+
+  .sage-panel-controls__bulk-actions > &,
+  .sage-panel-controls__toolbar > &,
+  .sage-panel-controls__toolbar-btn-group > &,
+  .sage-panel-controls__pagination > & {
+    position: relative;
+    z-index: sage-z-index(default);
+    box-shadow: $sage-toolbar-btn-border;
+    border: 0;
+
+    @include sage-focus-outline--update-color(transparent);
+
+    &:hover {
+      z-index: sage-z-index(default, 1);
+      box-shadow: $sage-toolbar-btn-border-hover;
+      background-color: sage-color(white);
+    }
+
+    &:focus {
+      z-index: sage-z-index(default, 2);
+      box-shadow: $sage-toolbar-btn-border-focus;
+    }
+  }
+
+  .sage-panel-controls__toolbar-btn-group > & {
+    border-radius: 0;
+
+    &:first-child {
+      border-top-left-radius: sage-border(radius);
+      border-bottom-left-radius: sage-border(radius);
+    }
+
+    &:last-child {
+      border-top-right-radius: sage-border(radius);
+      border-bottom-right-radius: sage-border(radius);
+    }
+  }
+
+  .sage-panel-controls__toolbar-btn-group--expand-collapse > & {
+    border-radius: sage-border(radius);
+  }
+  
+  .sage-panel-controls__toolbar > &,
+  .sage-panel-controls__pagination > & {
+    border-radius: sage-border(radius);
+
+    &:not(:last-child) {
+      margin-right: $sage-card-grid-gap;
+    }
   }
 
   // NOTE: Hope to use `gap` in the future instead
   // but Safari does not currently support it for flexbox
-  /* stylelint-disable max-nesting-depth */
   @each $-key, $-value in $sage-spacings {
     @if ($-key == xs) {
       .sage-btn-group &:not(:last-child) {
@@ -99,18 +250,122 @@
       }
     }
   }
-  /* stylelint-enable max-nesting-depth */
+
+  // NOTE: Icon generation consolidated in `core/_icons.scss`
+}
+
+// Generate button style variations
+@each $-style-name, $-styles in $-btn-base-styles {
+  .sage-btn--#{$-style-name} {
+    @each $-style-type-name, $-style-type-configs in $-styles {
+      @if ($-style-type-name == hover) {
+        &:hover {
+          color: map-get($-style-type-configs, color);
+          background-color: map-get($-style-type-configs, background-color);
+        }
+      }
+      @else if ($-style-type-name == focus) {
+        &:focus,
+        &:active {
+          color: map-get($-style-type-configs, color);
+          background-color: map-get($-style-type-configs, background-color);
+        }
+      }
+      @else if ($-style-type-name == disabled) {
+        &:disabled,
+        &[aria-disabled="true"] {
+          color: map-get($-style-type-configs, color);
+          background-color: map-get($-style-type-configs, background-color);
+          box-shadow: none;
+        }
+      }
+      @else {
+        @include sage-focus-outline--update-color(map-get($-style-type-configs, ring-color));
+
+        color: map-get($-style-type-configs, color);
+        background-color: map-get($-style-type-configs, background-color);
+      }
+    }
+
+    &:not(.sage-btn--subtle) {
+      // Shadow appears on Primary by default but can be toggled off with `--no-shadow`
+      @if ($-style-name == primary) {
+        box-shadow: $-btn-shadow-base;
+
+        &.sage-btn--no-shadow {
+          box-shadow: none;
+        }
+      }
+      // All other buttons have no shadow by default but one can be toggled on with `--raised`
+      @else {
+        &.sage-btn--raised {
+          box-shadow: $-btn-shadow-base;
+        }
+      }
+    }
+  }
+}
+
+// Subtle buttons are smaller with no padding or background color but still use a focus ring
+.sage-btn--subtle {
+  min-height: sage-line-height(md);
+  padding: 0;
+  box-shadow: none;
+
+  @include sage-focus-outline($outline-offset-inline: 6px, $outline-offset-block: 0);
+
+  // Generate button style variations
+  @each $-style-name, $-styles in $-btn-subtle-styles {
+    &.sage-btn--#{$-style-name} {
+      color: map-get($-styles, default);
+      background-color: transparent;
+
+      @include sage-focus-outline--update-color(map-get($-styles, default));
+
+      &:hover {
+        color: map-get($-styles, hover);
+        background-color: transparent;
+      }
+
+      &:focus,
+      &:active {
+        color: map-get($-styles, focus);
+        background-color: transparent;
+      }
+
+      &:disabled,
+      &[aria-disabled="true"] {
+        color: map-get($-styles, disabled);
+        background-color: transparent;
+      }
+    }
+  }
+
+  .sage-assistant &,
+  .sage-toast & {
+    color: sage-color(grey, 100);
+
+    @include sage-focus-outline--update-color(sage-color(white));
+
+    &:hover {
+      color: sage-color(white);
+    }
+
+    &:focus {
+      color: sage-color(white);
+    }
+  }
 }
 
 .sage-btn--small {
-  padding: 0 sage-spacing(sm);
-  font-size: sage-font-size(sm);
+  @extend %t-sage-body-small;
 }
 
-.sage-btn--tiny {
-  @extend %t-sage-body-small;
-  padding: 0 sage-spacing(2xs);
 
+// TODO: Investigate deprecating the float setting here
+.sage-btn--align-end {
+  align-self: flex-end;
+  float: right;
 }
 
 .sage-btn--full-width {
@@ -118,235 +373,24 @@
   width: 100%;
 }
 
-.sage-btn--primary {
-  @include sage-focus-outline--update-color($sage-btn-primary-bg-color);
-  color: $sage-btn-primary-text-color;
-  background-color: $sage-btn-primary-bg-color;
-
-  &:hover:not(:focus):not(:active):not(:disabled):not([aria-disabled="true"]),
-  &:focus,
-  &:active {
-    color: $sage-btn-primary-text-color;
-  }
-
-  &:hover:not(:focus):not(:active):not(:disabled):not([aria-disabled="true"]) {
-    background-color: lighten($sage-btn-primary-bg-color, 9%);
-  }
-
-  &:focus {
-    background-color: $sage-btn-primary-bg-color;
-    box-shadow: $sage-btn-shadow-base;
-  }
-
-  &:active {
-    background-color: darken($sage-btn-primary-bg-color, 11%);
-    box-shadow: none;
-  }
-
-  &:disabled,
-  &[aria-disabled="true"] {
-    @include button-style-disabled;
-
-    color: sage-color(primary, 200);
-    background-color: sage-color(primary, 100);
-  }
-}
-
-.sage-btn--secondary {
-  @include sage-focus-outline--update-color(sage-color(primary));
-  color: $sage-btn-secondary-text-color;
-  background-color: sage-color(white);
-  border: 0;
-  box-shadow: none;
-
-  &:hover:not(:focus):not(:active):not(:disabled):not([aria-disabled="true"]) {
-    color: $sage-btn-secondary-text-color;
-    background-color: sage-color(grey, 200);
-  }
-
-  &:focus {
-    color: $sage-btn-secondary-text-color;
-    background: sage-color(white);
-    box-shadow: none;
-  }
-
-  &:active {
-    color: $sage-btn-secondary-text-color;
-    background-color: sage-color(grey, 300);
-    box-shadow: none;
-  }
-
-  &:disabled,
-  &[aria-disabled="true"] {
-    @include button-style-disabled;
-
-    color: sage-color(primary, 200);
-    background-color: transparent;
-  }
-
-  .sage-dropdown__item & {
-    background-color: transparent;
-  }
-}
-
-.sage-btn--tertiary {
-  @include sage-focus-outline--update-color(sage-color(charcoal, 200));
-  color: $sage-btn-tertiary-text-color;
-  background-color: transparent;
-  border: 0;
-  box-shadow: none;
-
-  &:hover:not(:focus):not(:active):not(:disabled):not([aria-disabled="true"]) {
-    color: $sage-btn-tertiary-text-color;
-    background-color: sage-color(grey, 200);
-  }
-
-  &:focus {
-    color: $sage-btn-tertiary-text-color;
-    background: sage-color(white);
-    box-shadow: none;
-  }
-
-  &:active {
-    color: $sage-btn-tertiary-text-color;
-    background-color: sage-color(grey, 300);
-    box-shadow: none;
-  }
-
-  &:disabled,
-  &[aria-disabled="true"] {
-    @include button-style-disabled;
-
-    color: sage-color(grey, 300);
-    background-color: transparent;
-  }
-
-  .sage-dropdown__item & {
-    background-color: transparent;
-  }
-}
-
-.sage-btn--danger {
-  @include sage-focus-outline--update-color($sage-btn-danger-text-color);
-  color: $sage-btn-danger-text-color;
-  border: 0;
-  box-shadow: none;
-
-  &:hover:not(:focus):not(:active):not(:disabled):not([aria-disabled="true"]) {
-    color: $sage-btn-danger-text-color;
-    background-color: $sage-btn-danger-bg-hover-color;
-  }
-
-  &:focus {
-    color: $sage-btn-danger-text-color;
-    background: sage-color(white);
-    box-shadow: none;
-  }
-
-  &:active {
-    color: $sage-btn-danger-text-color;
-    background-color: $sage-btn-danger-bg-active-color;
-    box-shadow: none;
-  }
-
-  &:disabled,
-  &[aria-disabled="true"] {
-    @include button-style-disabled;
-
-    color: sage-color(primary, 200);
-    background-color: transparent;
-  }
-
-  .sage-dropdown__item & {
-    background-color: transparent;
-  }
-}
-
-.sage-btn--link {
-  box-shadow: none;
-
-  &:focus,
-  &:active,
-  &:hover {
-    box-shadow: none;
-  }
-}
-
-.sage-btn--align-end {
-  align-self: flex-end;
-  float: right;
-}
-
-/* stylelint-disable max-nesting-depth */
-@mixin button-icon-generator($direction) {
-  @each $icon-name, $icon-code in $sage-icons {
-    // --- Right Icon Buttons
-    @if $direction == right {
-      .sage-btn--icon-right-#{$icon-name} {
-        flex-direction: row-reverse;
-
-        &::before {
-          @include sage-icon-base($icon-name, md);
-
-          align-self: center;
-          margin: 0 0 0 sage-spacing(xs);
-        }
-      }
-    }
-
-    // --- Left Icon Buttons
-    @else if $direction == left {
-      .sage-btn--icon-left-#{$icon-name} {
-        flex-direction: row;
-
-        &::before {
-          @include sage-icon-base($icon-name);
-
-          align-self: center;
-          margin: 0 sage-spacing(xs) 0 0;
-        }
-      }
-    }
-
-    // --- Standalone Icon Buttons
-    @else if $direction == only {
-      .sage-btn--icon-only-#{$icon-name} {
-        justify-content: center;
-        padding: $sage-iconbtn-padding;
-        text-align: center;
-
-        &::before {
-          @include sage-icon-base($icon-name);
-          align-self: center;
-        }
-
-        &.sage-btn--small {
-          padding: rem(6px);
-        }
-
-        &.sage-btn--tiny {
-          width: auto;
-          padding: sage-spacing(2xs);
-        }
-      }
-    }
-  }
-}
-/* stylelint-enable max-nesting-depth */
-
-@include button-icon-generator(only);
-@include button-icon-generator(left);
-@include button-icon-generator(right);
-
 .sage-btn__truncate-text {
   @include truncate;
+
+  @media (max-width: sage-breakpoint(lg-max)) {
+    .sage-outline-item__actions-primary & {
+      @include visually-hidden();
+    }
+  }
 }
 
+// Button groups allow for several buttons together to be spaced appropriately
 .sage-btn-group {
   display: flex;
-  flex-flow: row wrap;
+  align-items: center;
 }
 
 .sage-btn-group--align-end {
   justify-content: flex-end;
 }
+
+/* stylelint-enable max-nesting-depth */
