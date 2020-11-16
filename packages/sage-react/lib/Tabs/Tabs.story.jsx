@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
-import { SageTokens, Tabs, Button } from 'common/components/Sage';
+import { Button } from '../Button';
+import { Tabs } from './Tabs';
+import { SageTokens } from '../configs';
 import { withKnobs, radios, select } from '@storybook/addon-knobs';
 import { centerXY } from '../story-support/decorators';
 import TabsNotes from './TabsNotes.md';
