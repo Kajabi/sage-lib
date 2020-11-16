@@ -1,6 +1,12 @@
 <div
-  class="sage-card <%= component.generated_css_classes %>"
-  <%= component.generated_html_attributes %>
+  class="
+    sage-card
+    <%= "sage-card--clear-padding-top" if component.clear_top_padding %>
+    <%= "sage-card--clear-padding-bottom" if component.clear_bottom_padding %>
+    <%= "sage-card--border-dashed" if component.border_dashed %>
+    <%= component.generated_css_classes %>
+  "
+  <%= component.generated_html_attributes.html_safe %>
 >
   <%= component.content %>
 </div>

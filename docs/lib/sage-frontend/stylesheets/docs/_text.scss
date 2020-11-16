@@ -8,5 +8,13 @@ code {
   display: inline-block;
   padding: 0 sage-spacing(2xs);
   font-size: 0.9em;
-  background-color: sage-color(primary, 100);
+  background-color: sage-color(grey, 200);
+}
+
+pre {
+  .sage-type & {
+    padding: rem(8px);
+    margin-bottom: rem(8px);
+    font-size: 0.9rem;
+  }
 }

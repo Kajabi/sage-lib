@@ -1,2 +1,0 @@
-class SageHeader < SageComponent
-end

@@ -44,9 +44,12 @@ containers = [
   }
 ]
 %>
+
 <%= content_for :heading do %>
-  <h1>Containers</h1>
-  <p>Containers provide a restricted width box any sort of content can be placed within. Here we show Card object inside the containers, but containers have no intrinsic decorations.
+<%= md(%(
+# Containers
+<p class="docs-heading__lead">Containers provide a restricted width box any sort of content can be placed within. Here we show Card object inside the containers, but containers have no intrinsic decorations.</p>
+)) %>
 <% end %>
 <%= content_for :quick_links do %>
   <div class="quick-links">
@@ -60,19 +63,81 @@ containers = [
     </ul>
   </div>
 <% end %>
+<div class="sage-table-wrapper">
+  <div class="sage-table-wrapper__overflow">
+    <table class="sage-table">
+      <thead>
+        <tr>
+          <th></th>
+          <th>sm-min <br>(545px)</th>
+          <th>sm-max <br>(767px)</th>
+          <th>md-max <br>(991px)</th>
+          <th>lg-max <br>(1199px)</th>
+          <th>xl-max <br>(1440px+)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>.sage-container--modal</code></td>
+          <td><b>500px</b></td>
+          <td><b>500px</b></td>
+          <td><b>500px</b></td>
+          <td><b>500px</b></td>
+          <td><b>500px</b></td>
+        </tr>
+        <tr>
+          <td><code>.sage-container--xs</code></td>
+          <td>100%</td>
+          <td><b>760px</b></td>
+          <td><b>760px</b></td>
+          <td><b>760px</b></td>
+          <td><b>760px</b></td>
+        </tr>
+        <tr>
+          <td><code>.sage-container--sm</code></td>
+          <td>100%</td>
+          <td>100%</td>
+          <td><b>900px</b></td>
+          <td><b>900px</b></td>
+          <td><b>900px</b></td>
+        </tr>
+        <tr>
+          <td><code>.sage-container--md</code></td>
+          <td>100%</td>
+          <td>100%</td>
+          <td>100%</td>
+          <td>100%</td>
+          <td><b>1200px</b></td>
+        </tr>
+        <tr>
+          <td><code>.sage-container--lg</code></td>
+          <td>100%</td>
+          <td>100%</td>
+          <td>100%</td>
+          <td>100%</td>
+          <td><b>1400px</b></td>
+        </tr>
+        <tr>
+          <td><code>.sage-container</code></td>
+          <td><b>100%</b></td>
+          <td><b>100%</b></td>
+          <td><b>100%</b></td>
+          <td><b>100%</b></td>
+          <td><b>100%</b></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<hr>
 <div class="sage-type">
   <% containers.each do | container | %>
-    <h2 id="<%= container[:id] %>"><%= container[:full_name] %></h2>
-    <div class="sage-container<%= " sage-container--#{container[:alias]}" if container[:alias] %>">
-      <div class="sage-panel">
-        <p><%= container[:size] %></p>
-      </div>
-    </div>
-    <div class="docs-container">
-      <pre class="prettyprint"><code>&lt;div class=&quot;sage-container<%= " sage-container--#{container[:alias]}" if container[:alias] %>&quot;&gt;
-  &lt;!-- <%= container[:size] %> --&gt;
+  <%= sage_component SagePanelHeader, {  title: container[:full_name], html_attributes: { id: container[:id] } } %>
+  <p><%= container[:size] %></p>
+  <pre class="prettyprint"><code>&lt;div class=&quot;sage-container<%= " sage-container--#{container[:alias]}" if container[:alias] %>&quot;&gt;
+&lt;!-- <%= container[:size] %> --&gt;
 &lt;/div&gt;</code></pre>
-    </div>
-  <% end %>
-
+<hr>
+<% end %>
 </div>
+

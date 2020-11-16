@@ -1,6 +1,12 @@
 <%= content_for :heading do %>
-  <h1>Elements</h1>
-  <p>Elements are the basic building blocks of matter. Applied to web interfaces, atoms are our HTML tags, such as a form label, an input or a button.</p>
+<%= md(%(
+# Elements
+<p class="docs-heading__lead">
+Elements are the basic building blocks.
+Applied to web interfaces, elements are our HTML tags,
+such as a form label, an input or a button.
+</p>
+)) %>
 <% end %>
 <%= content_for :quick_links do %>
   <div class="quick-links">

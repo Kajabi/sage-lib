@@ -1,2 +1,0 @@
-class SageNav < SageComponent
-end

@@ -95,6 +95,7 @@ module TokensHelper
         category: "border",
         tokens: [
           { name: "default" },
+          { name: "radius-small" },
           { name: "radius" },
           { name: "radius-large" },
           { name: "radius-round" },

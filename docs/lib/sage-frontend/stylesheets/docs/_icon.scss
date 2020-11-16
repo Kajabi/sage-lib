@@ -4,19 +4,36 @@
   For Sage documentation use
 ================================================== */
 
-.sage-icon-block {
+.docs-icon-block {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   margin-bottom: sage-spacing();
   padding: sage-spacing(lg) sage-spacing(sm);
   text-align: center;
-  background: sage-color(white);
-  border: sage-border();
+  background: sage-color(grey, 100);
+  border-radius: sage-border(radius);
 }
 
-.sage-icon-block__label {
+.docs-icon-block__label {
   margin-bottom: 0;
+  font-size: sage-font-size(xs);
+  font-weight: sage-font-weight(semibold);
+}
+
+
+.docs-icon-inline {
+  margin-bottom: sage-spacing(sm);
+  padding: sage-spacing(sm);
+  text-align: right;
+  background: sage-color(grey, 100);
+  border-radius: sage-border(radius);
+  i {
+    line-height: 1;
+  }
+}
+
+.docs-icon-inline__label {
   font-size: sage-font-size(xs);
   font-weight: sage-font-weight(semibold);
 }

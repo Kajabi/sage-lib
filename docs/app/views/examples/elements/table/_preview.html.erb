@@ -1,55 +1,83 @@
-<h3 class="t-sage-heading-6">Responsive table</h3>
-<%= render "examples/elements/table/markup",
-  caption: "Responsive tables require the use of two parent containers",
-  condensed: false,
-  responsive: true,
-  selectable: false,
-  sortable: false,
-  striped: false
+<%
+sample_table = {
+  headers: [
+    "Cras Porta",
+    "Dapibus Ridiculus",
+    "Purus",
+    "Mollis",
+    "Ridiculus"
+  ],
+  rows: [
+    {
+      value_1: "Venenatis Condimentum",
+      value_2: "Ridiculus",
+      value_3: "Sem Elit",
+      value_4: "Nibh Aenean",
+      value_5: "Sem Elit"
+    },
+    {
+      value_1: "Nullam Porta",
+      value_2: "Adipiscing Ligula",
+      value_3: "Euismod Etiam",
+      value_4: "Malesuada",
+      value_5: "Etiam"
+    },
+    {
+      value_1: "Ridiculus",
+      value_2: "Cras Malesuada",
+      value_3: "Commodo",
+      value_4: "Cursus Pharetra",
+      value_5: "Fringilla"
+    },
+    {
+      value_1: "Pharetra Mattis",
+      value_2: "Magna",
+      value_3: "Elit Inceptos",
+      value_4: "Cursus Pharetra",
+      value_5: "Dolor Fringilla"
+    }
+  ]
+}
 %>
+
+<h3 class="t-sage-heading-6">Responsive table</h3>
+<%= sage_component SageTable, {
+  headers: sample_table[:headers],
+  rows: sample_table[:rows],
+  caption: "Responsive tables require the use of two parent containers",
+} %>
 
 <h3 class="t-sage-heading-6">Striped table</h3>
-<%= render "examples/elements/table/markup",
+<%= sage_component SageTable, {
+  headers: sample_table[:headers],
+  rows: sample_table[:rows],
   caption: "Striped tables display a background color on odd-numbered rows",
-  condensed: false,
-  responsive: true,
-  selectable: false,
-  sortable: false,
   striped: true
-%>
+} %>
 
-<h3 class="t-sage-heading-6">Striped table with condensed padding</h3>
-<%= render "examples/elements/table/markup",
-  caption: "Condensed tables use decreased vertical padding in table cells",
-  condensed: true,
-  responsive: true,
-  selectable: false,
-  sortable: false,
-  striped: true
-%>
-
-<h3 class="t-sage-heading-6">Sortable table with condensed padding</h3>
-<%= render "examples/elements/table/markup",
+<h3 class="t-sage-heading-6">Sortable table</h3>
+<%= sage_component SageTable, {
+  headers: sample_table[:headers],
+  rows: sample_table[:rows],
   caption: "NOTE: this example is for mockup purposes only and does not implement sorting cells",
-  condensed: true,
-  responsive: true,
-  selectable: false,
   sortable: true,
   striped: true
-%>
+} %>
 
 <h3 class="t-sage-heading-6">Table with highlighted rows and block cells</h3>
-<table class="sage-table sage-table--selectable">
-  <caption>Block cells can be used with anchor tags to link the entire cell, or <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> elements for content</caption>
-  <thead>
-    <tr>
-      <th>Mattis</th>
-      <th>Justo Inceptos</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr class="sage-row--selectable">
-      <td class="sage-table-cell">
+<%= sage_component SageTable, {
+  caption: %(
+    Block cells can be used with anchor tags to link the entire cell, or <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> elements for content
+  ),
+  headers: [
+    "Mattis",
+    "Justo Inceptos"
+  ],
+  selectable: true,
+  striped: true,
+  rows: [
+    [
+      %(
         <a href="#" class="sage-table-cell__block sage-table-cell__link">
           <div class="sage-table-cell__heading">
             <p class="sage-table-cell__title">First item</p>
@@ -59,13 +87,11 @@
             Maecenas sed diam eget risus varius blandit sit amet non
           </div>
         </a>
-      </td>
-      <td class="sage-table-cell">
-        <a href="#" class="sage-table-cell__link">Porta Ipsum</a>
-      </td>
-    </tr>
-    <tr class="sage-row--selectable">
-      <td class="sage-table-cell">
+      ),
+      %(<a href="#" class="sage-table-cell__link">Porta Ipsum</a>)
+    ],
+    [
+      %(
         <a href="#" class="sage-table-cell__block sage-table-cell__link">
           <div class="sage-table-cell__heading">
             <p class="sage-table-cell__title">Second item</p>
@@ -75,90 +101,68 @@
             Pellentesque ornare sem lacinia quam venenatis vestibulum
           </div>
         </a>
-      </td>
-      <td class="sage-table-cell">
-        <a href="#" class="sage-table-cell__link">Dapibus Vulputate</a>
-      </td>
-    </tr>
-  </tbody>
-</table>
+      ),
+      %(<a href="#" class="sage-table-cell__link">Dapibus Vulputate</a>)
+    ]
+  ]
+} %>
 
 <h3 class="t-sage-heading-6">Striped table with selectively truncated cells</h3>
 <p>Individual cells should be assigned the <code>.sage-table-cell--truncate</code> class. Not suggested for use with long strings of <em>important</em> text: use the responsive (scrolling) table instead.</p>
-<table class="sage-table sage-table--striped sage-table--truncate">
-  <thead>
-    <tr>
-      <th>Malesuada</th>
-      <th>Amet Cras</th>
-      <th>Consectetur</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr class="sage-row--selectable">
-      <td class="sage-table-cell">
-        <span class="sage-table-cell__label sage-label sage-label--danger">Warning</span>
-      </td>
-      <td class="sage-table-cell">
-        $20,323.30 USD
-      </td>
-      <td class="sage-table-cell sage-table-cell--truncate">
-        Sed posuere consectetur
-      </td>
-    </tr>
-    <tr class="sage-row--selectable">
-      <td class="sage-table-cell">
-        <span class="sage-table-cell__label sage-label sage-label--draft">Draft</span>
-      </td>
-      <td class="sage-table-cell">
-        $1,101,444.31 USD
-      </td>
-      <td class="sage-table-cell sage-table-cell--truncate">
-        Curabitur blandit tempus
-      </td>
-    </tr>
-  </tbody>
-</table>
+<%= sage_component SageTable, {
+  headers: [
+    "Malesuada",
+    "Amet Cras",
+    "Consectetur",
+  ],
+  striped: true,
+  rows: [
+    [
+      %(<span class="sage-table-cell__label sage-label sage-label--danger">Warning</span>),
+      "$20,323.30 USD",
+      {
+        value: "Sed posuere consectetur",
+        html_attributes: {
+          class: "sage-table-cell--truncate"
+        }
+      }
+    ],
+    [
+      %(<span class="sage-table-cell__label sage-label sage-label--draft">Draft</span>),
+      "$1,101,444.31 USD",
+      {
+        value: "Curabitur blandit tempus",
+        html_attributes: {
+          class: "sage-table-cell--truncate"
+        }
+      }
+    ]
+  ]
+} %>
 
 <h3 class="t-sage-heading-6">Hiding and showing cell content</h3>
-<p>Individual cells can make use of the <a href="<%= pages_foundations_path(:grid) %>">Sage Grid</a> classes for responsive display of content. Refer to the <a href="<%= pages_foundations_path(:icon) %>#grid-responsive-show-hide">Grid documentation</a> for more details.</p>
+<p>Individual cells can make use of the <a href="<%= pages_design_path(:grid) %>">Sage Grid</a> classes for responsive display of content. Refer to the <a href="<%= pages_design_path(:icon) %>#grid-responsive-show-hide">Grid documentation</a> for more details.</p>
 <p>Remember to apply the same classes equally to <strong>all related vertical columns</strong>, or the structure of the table will be misaligned.</p>
-<table class="sage-table sage-table--condensed">
-  <thead>
-    <tr>
-      <th>Malesuada</th>
-      <th>Amet Cras</th>
-      <th class="sage-col--sm-hide">Hidden &lt; <code>sm</code> breakpoint</th>
-      <th class="sage-col--lg-hide">Hidden &lt; <code>lg</code> breakpoint</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr class="sage-row--selectable">
-      <td class="sage-table-cell">
-        Donec sed odio dui
-      </td>
-      <td class="sage-table-cell">
-        <span class="sage-table-cell__label sage-label sage-label--draft">Draft</span>
-      </td>
-      <td class="sage-table-cell sage-col--sm-hide">
-        Lorem Tristique
-      </td>
-      <td class="sage-table-cell sage-col--lg-hide">
-        Cras justo odio, dapibus ac facilisis
-      </td>
-    </tr>
-    <tr class="sage-row--selectable">
-      <td class="sage-table-cell">
-        Nulla non metus
-      </td>
-      <td class="sage-table-celle">
-        <span class="sage-table-cell__label sage-label sage-label--success">Complete</span>
-      </td>
-      <td class="sage-table-cell sage-col--sm-hide">
-        Euismod Dapibus
-      </td>
-      <td class="sage-table-cell sage-col--lg-hide">
-        Curabitur blandit tempus
-      </td>
-    </tr>
-  </tbody>
-</table>
+<%= sage_component SageTable, {
+  headers: [
+    "Malesuada",
+    "Amet Cras",
+    { html_attributes: { class: "sage-col--sm-hide" }, value: %(Hidden &lt; <code>sm</code> breakpoint) },
+    { html_attributes: { class: "sage-col--lg-hide" }, value: %(Hidden &lt; <code>lg</code> breakpoint) },
+  ],
+  selectable: true,
+  rows: [
+    [
+      "Donec sed odio dui",
+      %(<span class="sage-table-cell__label sage-label sage-label--draft">Draft</span>),
+      { html_attributes: { class: "sage-col--sm-hide" }, value: "Lorem Tristique" },
+      { html_attributes: { class: "sage-col--lg-hide" }, value: "Cras justo odio, dapibus ac facilisis" },
+    ],
+    [
+      "Nulla non metus",
+      %(<span class="sage-table-cell__label sage-label sage-label--success">Complete</span>),
+      { html_attributes: { class: "sage-col--sm-hide" }, value: "Euismod Dapibus" },
+      { html_attributes: { class: "sage-col--lg-hide" }, value: "Curabitur blandit tempus" },
+    ]
+  ]
+} %>

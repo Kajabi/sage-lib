@@ -1,36 +1,116 @@
 <%
 foundations_pages = [
   {
-    name: "Introduction",
-    path: pages_index_path,
+    name: "Experience Values",
+    path: pages_foundation_path(:ux_values),
   },
   {
+    name: "Design Principles",
+    path: pages_foundation_path(:design_principles),
+  },
+  {
+    name: "Accessibility",
+    path: pages_foundation_path(:accessibility),
+  }
+]
+%>
+<%
+content_pages = [
+  {
+    name: "Voice & Tone",
+    path: pages_content_path(:voice_tone),
+  },
+  {
+    name: "Grammar",
+    path: pages_content_path(:grammar),
+  },
+  {
+    name: "Branding",
+    path: pages_content_path(:branding),
+  },
+  {
+    name: "Product Content",
+    path: pages_content_path(:content),
+  },
+  {
+    name: "Vocabulary",
+    path: pages_content_path(:vocabulary),
+  },
+]
+%>
+<%
+experiences_pages = [
+  {
+    name: "Empty States",
+    path: pages_experiences_path(:null),
+  },
+  {
+    name: "Onboarding",
+    path: pages_experiences_path(:onboarding),
+  },
+  {
+    name: "Create & Destroy",
+    path: pages_experiences_path(:crud),
+  },
+  {
+    name: "Loading",
+    path: pages_experiences_path(:loading),
+  },
+  {
+    name: "Navigation",
+    path: pages_experiences_path(:nav),
+  },
+  {
+    name: "Feedback",
+    path: pages_experiences_path(:feedback),
+  },
+  {
+    name: "Help",
+    path: pages_experiences_path(:help),
+  },
+]
+%>
+<%
+design_pages = [
+  {
     name: "Tokens",
-    path: pages_foundations_path(:token),
+    path: pages_design_path(:token),
   },
   {
     name: "Colors",
-    path: pages_foundations_path(:color),
+    path: pages_design_path(:color),
   },
   {
     name: "Typography",
-    path: pages_foundations_path(:typography),
+    path: pages_design_path(:typography),
   },
   {
     name: "Icons",
-    path: pages_foundations_path(:icon),
+    path: pages_design_path(:icon),
   },
   {
+    name: "Motion",
+    path: pages_design_path(:motion),
+  }
+]
+%>
+<%
+layout_pages = [
+  {
     name: "Containers",
-    path: pages_foundations_path(:container),
+    path: pages_layout_path(:container),
   },
   {
     name: "Panels and Cards",
-    path: pages_foundations_path(:panels_cards),
+    path: pages_layout_path(:panels_cards),
   },
   {
-    name: "Grid",
-    path: pages_foundations_path(:grid),
+    name: "12 Col Grid",
+    path: pages_layout_path(:grid),
+  },
+  {
+    name: "Grid Templates",
+    path: pages_layout_path(:grid_templates),
   }
 ]
 %>
@@ -38,8 +118,9 @@ foundations_pages = [
   <div class="sage-sidebar__body">
     <nav class="sage-nav" aria-label="Main">
       <ul class="sage-nav__list">
+        <li><%= link_to "Home", pages_index_path, class: "sage-nav__link #{"sage-nav__link--active" if current_page?(pages_index_path)}" %>
         <li>
-          <%= link_to "Foundations", pages_index_path, class: "sage-nav__link #{"sage-nav__link--active" if current_page_foundations?}" %>
+          <%= link_to "Foundations", pages_foundation_path(:ux_values), class: "sage-nav__link #{"sage-nav__link--active" if current_page_foundations?}" %>
           <% if current_page_foundations? %>
             <ul class="sage-nav__list sage-nav__list--sub">
               <% foundations_pages.each do | page | %>
@@ -51,13 +132,68 @@ foundations_pages = [
           <% end %>
         </li>
         <li>
-          <%= link_to "Elements", pages_elements_path, class: "sage-nav__link #{"sage-nav__link--active" if current_page_elements?}" %>
+          <%= link_to "Content", pages_content_path(:voice_tone), class: "sage-nav__link #{"sage-nav__link--active" if current_page_content?}" %>
+          <% if current_page_content? %>
+            <ul class="sage-nav__list sage-nav__list--sub">
+              <% content_pages.each do | page | %>
+                <li>
+                  <%= link_to page[:name], page[:path], class: "sage-nav__link sage-nav__link--sub #{"sage-nav__link--active" if current_page?(page[:path])}" %>
+                </li>
+              <% end %>
+            </ul>
+          <% end %>
         </li>
         <li>
-          <%= link_to "Objects", pages_objects_path, class: "sage-nav__link #{"sage-nav__link--active" if current_page_objects?}" %>
+          <%= link_to "Experiences", pages_experiences_path(:null), class: "sage-nav__link #{"sage-nav__link--active" if current_page_experiences?}" %>
+          <% if current_page_experiences? %>
+            <ul class="sage-nav__list sage-nav__list--sub">
+              <% experiences_pages.each do | page | %>
+                <li>
+                  <%= link_to page[:name], page[:path], class: "sage-nav__link sage-nav__link--sub #{"sage-nav__link--active" if current_page?(page[:path])}" %>
+                </li>
+              <% end %>
+            </ul>
+          <% end %>
         </li>
         <li>
-          <%= link_to "Sandbox", pages_sandbox_path, class: "sage-nav__link #{"sage-nav__link--active" if current_page?(pages_sandbox_path)}" %>
+          <%= link_to "Design", pages_design_path(:token), class: "sage-nav__link #{"sage-nav__link--active" if current_page_design?}" %>
+          <% if current_page_design? %>
+            <ul class="sage-nav__list sage-nav__list--sub">
+              <% design_pages.each do | page | %>
+                <li>
+                  <%= link_to page[:name], page[:path], class: "sage-nav__link sage-nav__link--sub #{"sage-nav__link--active" if current_page?(page[:path])}" %>
+                </li>
+              <% end %>
+            </ul>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to "Layout", pages_layout_path(:container), class: "sage-nav__link #{"sage-nav__link--active" if current_page_layout?}" %>
+          <% if current_page_layout? %>
+            <ul class="sage-nav__list sage-nav__list--sub">
+              <% layout_pages.each do | page | %>
+                <li>
+                  <%= link_to page[:name], page[:path], class: "sage-nav__link sage-nav__link--sub #{"sage-nav__link--active" if current_page?(page[:path])}" %>
+                </li>
+              <% end %>
+            </ul>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to "Components", pages_getting_started_path, class: "sage-nav__link #{"sage-nav__link--active" if current_page_elements? || current_page_objects? || current_page?(pages_getting_started_path) }" %>
+          <% if current_page_elements? || current_page_objects? || current_page?(pages_getting_started_path) %>
+            <ul class="sage-nav__list sage-nav__list--sub">
+              <li>
+                <%= link_to "Getting Started", pages_getting_started_path, class: "sage-nav__link sage-nav__link--sub #{"sage-nav__link--active" if current_page?(pages_getting_started_path)}" %>
+              </li>
+              <li>
+                <%= link_to "Elements", pages_elements_path, class: "sage-nav__link sage-nav__link--sub #{"sage-nav__link--active" if current_page_elements?}" %>
+              </li>
+              <li>
+                <%= link_to "Objects", pages_objects_path, class: "sage-nav__link sage-nav__link--sub #{"sage-nav__link--active" if current_page_objects?}" %>
+              </li>
+            </ul>
+          <% end %>
         </li>
       </ul>
     </nav>
@@ -65,9 +201,8 @@ foundations_pages = [
   <div class="sage-sidebar__footer">
     <nav class="sage-nav" aria-label="Secondary">
       <ul class="sage-nav__list">
-        <li><%= link_to "Voice & Tone", "https://github.com/Kajabi/sage/wiki/Voice-&-Tone", class: "sage-nav__link", target: "_blank", rel: "noopener noreferrer" %></li>
-        <li><%= link_to "Guidelines", "https://github.com/Kajabi/sage/wiki", class: "sage-nav__link", target: "_blank", rel: "noopener noreferrer" %></li>
-        <li><%= link_to "Code Status", pages_status_path, class: "sage-nav__link #{"sage-nav__link--active" if current_page?(pages_status_path)}" %></li>
+        <li><%= link_to "Sandbox", pages_sandbox_path, class: "sage-nav__link #{"sage-nav__link--active" if current_page?(pages_sandbox_path)}" %></li>
+        <li><%= link_to "Code Guidelines", "https://github.com/Kajabi/sage/wiki", class: "sage-nav__link", target: "_blank", rel: "noopener noreferrer" %></li>
       </ul>
     </nav>
   </div>

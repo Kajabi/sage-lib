@@ -1,20 +1,34 @@
 <% permalink = "element-#{title}" %>
 
-<div class="sage-panel">
-  <div class="sage-panel__header">
-    <h2 id="<%= permalink %>" class="sage-panel__title">
-      <%= link_to title.titleize, "##{permalink}", class: "example__link" %>
-    </h2>
-    <div class="sage-panel__header-aside">
-      <%= link_to pages_element_path(title), class: "sage-btn sage-btn--tertiary sage-btn--icon-right-preview-on", data: { "js-tooltip": "Inspect element details" } do %>
-        Details
-      <% end %>
-      <%= link_to pages_breakout_path(type: :element, title: title), target: "_blank", class: "sage-btn sage-btn--tertiary sage-btn--icon-only-launch", data: { "js-tooltip": "Open breakout page" } do %>
-        <span class="visually-hidden">Opens <%= title.titleize %> in a new window</span>
-      <% end %>
-    </div>
-  </div>
-  <div class="sage-type">
-    <%= render "examples/elements/#{title}/preview" %>
-  </div>
-</div>
+<%= sage_component SagePanelHeader, {} do %>
+  <h2 id="<%= permalink %>">
+    <%= link_to title.titleize, pages_element_path(title), class: "example__link" %>
+  </h2>
+  <%= sage_component SageButtonGroup, { gap: :md } do %>
+    <%= sage_component SageButton, {
+      value: "View Details",
+      style: "secondary",
+      subtle: true,
+      icon: { name: "preview-on", style: "only" },
+      attributes: {
+        "data-js-tooltip": "Inspect element details",
+        href: pages_element_path(title),
+      }
+    } %>
+    <%= sage_component SageButton, {
+      value: "Opens #{title.titleize} in a new window",
+      style: "secondary",
+      subtle: true,
+      icon: { name: "launch", style: "only" },
+      attributes: {
+        "data-js-tooltip": "Open breakout page",
+        href: pages_breakout_path(type: :element, title: title),
+        target: "_blank",
+      }
+    } %>
+  <% end %>
+<% end %>
+
+<%= sage_component SageCard, {} do %>
+  <%= render "examples/elements/#{title}/preview" %>
+<% end %>

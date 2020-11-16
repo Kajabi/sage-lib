@@ -8,17 +8,15 @@ Sage.docs.example = (function() {
   // Functions
   // ==================================================
 
-
-  // Note: assumes we won't have multiple code snippets per page
   function showHideCodeSample() {
-    var codeBtn = document.querySelector('.example__expand-btn'),
-      codeSnippet = codeBtn.closest('.sage-code-snippet');
-
-    codeBtn.addEventListener('click', function(e) {
-      updateButtonState(e.target, this);
-      e.target.parentElement.classList.toggle('example__code--expanded');
-      e.target.nextElementSibling.focus();
-    });
+    var elCodeBtns = document.querySelectorAll('.example__expand-btn');
+    elCodeBtns.forEach(function(el) {
+      el.addEventListener('click', function(e) {
+        updateButtonState(e.target, this);
+        e.target.parentElement.classList.toggle('example__code--expanded');
+        e.target.nextElementSibling.focus();
+      });
+   });
   }
 
 

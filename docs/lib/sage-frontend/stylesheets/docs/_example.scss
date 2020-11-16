@@ -129,7 +129,6 @@ $-example-code-preview-button-bg: rgba(sage-color(primary, 500), 0.75);
   overflow: hidden;
   position: relative;
   max-height: $-example-code-preview-height;
-  margin: 0 0 sage-spacing();
 
   .prettyprint {
     margin-bottom: 0;

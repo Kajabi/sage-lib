@@ -41,7 +41,7 @@ class SageComponent
     raise ArgumentError.new("SageComponent expects :html_attributes to be a hash") unless html_attributes_hash.is_a?(Hash)
 
     html_attributes_hash.each do |key, value|
-      generated_html_attributes << " #{key}=#{value.to_s}".html_safe
+      generated_html_attributes << " #{key}=\"#{value.to_s}\""
     end
   end
 

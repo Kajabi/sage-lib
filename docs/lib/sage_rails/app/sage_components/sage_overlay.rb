@@ -1,2 +1,0 @@
-class SageOverlay < SageComponent
-end

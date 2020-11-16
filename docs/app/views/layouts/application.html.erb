@@ -3,6 +3,7 @@
   <head>
     <%= render "application/meta" %>
     <%= render "application/styles" %>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css">
   </head>
   <body class="sage-page sage-docs">
     <%= render "application/content_skip_link",
@@ -18,13 +19,13 @@
       <main class="sage-content" id="main-content">
         <div class="sage-container sage-container--lg">
           <div class="sage-row">
-            <div class="sage-col--lg-9 sage-type">
+            <div class="sage-col--lg-7 docs-heading">
               <%= yield :heading %>
-              <hr/>
             </div>
           </div>
           <div class="sage-row">
             <div class="sage-col--lg-9">
+              <hr/>
               <%= yield %>
             </div>
             <div class="sage-col--lg-3 sage-col--md-hide"><%= yield :quick_links %></div>

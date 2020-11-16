@@ -1,7 +1,23 @@
 module ApplicationHelper
 
   def current_page_foundations?
-    current_page?(pages_index_path) || (params[:title] && current_page?(pages_foundations_path(params[:title])))
+    current_page?(pages_foundation_path(:ux_values)) || (params[:title] && current_page?(pages_foundation_path(params[:title])))
+  end
+
+  def current_page_content?
+    current_page?(pages_content_path(:voice_tone)) || (params[:title] && current_page?(pages_content_path(params[:title])))
+  end
+
+  def current_page_experiences?
+    current_page?(pages_experiences_path(:onboarding)) || (params[:title] && current_page?(pages_experiences_path(params[:title])))
+  end
+  
+  def current_page_design?
+    current_page?(pages_design_path(:token)) || (params[:title] && current_page?(pages_design_path(params[:title])))
+  end
+
+  def current_page_layout?
+    current_page?(pages_layout_path(:token)) || (params[:title] && current_page?(pages_layout_path(params[:title])))
   end
 
   def current_page_elements?

@@ -1,241 +1,202 @@
+<%
+type_specs = [
+  {
+    style: %(<span class="t-sage-heading-1">Heading 1</span>),
+    class: %(<code>t-sage-heading-1</code>),
+    weight: "700",
+    size: "29px",
+    line_height: "36px",
+    kerning: "0.3px",
+  },
+  {
+    style: %(<span class="t-sage-heading-2">Heading 2</span>),
+    class: %(<code>t-sage-heading-2</code>),
+    weight: "700",
+    size: "26px",
+    line_height: "32px",
+    kerning: "0.3px",
+  },
+  {
+    style: %(<span class="t-sage-heading-3">Heading 3</span>),
+    class: %(<code>t-sage-heading-3</code>),
+    weight: "700",
+    size: "23px",
+    line_height: "32px",
+    kerning: "0.3px",
+  },
+  {
+    style: %(<span class="t-sage-heading-4">Heading 4</span>),
+    class: %(<code>t-sage-heading-4</code>),
+    weight: "600",
+    size: "20px",
+    line_height: "28px",
+    kerning: "0.3px",
+  },
+  {
+    style: %(<span class="t-sage-heading-5">Heading 5</span>),
+    class: %(<code>t-sage-heading-5</code>),
+    weight: "600",
+    size: "18px",
+    line_height: "24px",
+    kerning: "0.3px",
+  },
+  {
+    style: %(<span class="t-sage-heading-6">Heading 6</span>),
+    class: %(<code>t-sage-heading-6</code>),
+    weight: "600",
+    size: "16px",
+    line_height: "20px",
+    kerning: "0.3px",
+  },
+  {
+    style: %(<span class="t-sage-body">Body*</span>),
+    class: %(<code>t-sage-body</code>),
+    weight: "400*",
+    size: "16px",
+    line_height: "28px",
+    kerning: "0.2px",
+  },
+  {
+    style: %(<span class="t-sage-body-small">Small Body*</span>),
+    class: %(<code>t-sage-body-small</code>),
+    weight: "400*",
+    size: "14px",
+    line_height: "24px",
+    kerning: "0.2px",
+  },
+  {
+    style: %(<span class="t-sage-body-xsmall">Extra Small Body*</span>),
+    class: %(<code>t-sage-body-xsmall</code>),
+    weight: "400*",
+    size: "12px",
+    line_height: "20px",
+    kerning: "0.2px",
+  }
+]
+
+type_color_classes = [
+  {
+    color: %(<span class="t-sage-body-semi t-sage--color-primary">Primary</span>),
+    type_class: %(<code>t-sage--color-primary</code>),
+  },
+  {
+    color: %(<span class="t-sage-body-semi t-sage--color-charcoal">Charcoal</span>),
+    type_class: %(<code>t-sage--color-charcoal</code>),
+  },
+  {
+    color: %(<span class="t-sage-body-semi t-sage--color-grey">Grey</span>),
+    type_class: %(<code>t-sage--color-grey</code>),
+  },
+  {
+    color: %(<span class="t-sage-body-semi t-sage--color-red">Red</span>),
+    type_class: %(<code>t-sage--color-red</code>),
+  },
+  { 
+    color: %(<span class="t-sage-body-semi t-sage--color-orange">Orange</span>),
+    type_class: %(<code>t-sage--color-orange</code>),
+  },
+  {
+    color: %(<span class="t-sage-body-semi t-sage--color-yellow">Yellow</span>),
+    type_class: %(<code>t-sage--color-yellow</code>),
+  },
+  { 
+    color: %(<span class="t-sage-body-semi t-sage--color-sage">Sage</span>),
+    type_class: %(<code>t-sage--color-sage</code>),
+  },
+  { 
+    color: %(<span class="t-sage-body-semi t-sage--color-purple">Purple</span>),
+    type_class: %(<code>t-sage--color-purple</code>),
+  }
+]
+%>
 <%= content_for :heading do %>
-  <h1>Typography</h1>
-  <p>Sage provides a constrained, purposeful set of typographic styles. These styles map as much as possible to functional roles so you know when each can be used.</p>
-<% end %>
-<%= content_for :quick_links do %>
-  <div class="quick-links">
-    <h2 class="quick-links__title">Contents</h2>
-    <ul class="quick-links__body">
-      <li class="quick-links__item">
-        <a href="#guidance" class="quick-links__link">Guidance</a>
-      </li>
-      <li class="quick-links__item">
-        <a href="#spec-table" class="quick-links__link">Type Spec Reference</a>
-      </li>
-    </ul>
-  </div>
+<%= md(%(
+# Typography
+<p class="docs-heading__lead">
+Sage provides a constrained, purposeful set of typographic styles.
+These styles map as much as possible to functional roles so you know when each can be used.
+</p>
+
+Setting individual styles manually should be avoided, but where needed, should be sure to use the appropriate
+[design tokens](/pages/foundations/token).
+In the end, we prefer adding new entries to the type spec over including one-off styling.
+)) %>
 <% end %>
 <div class="sage-type">
-  <p>
-    The Sage type system uses a major second modular scale (factor of 1.125) with a base font size of 16px.
-  </p>
-  <p>
-    Typography in our system uses <code>t-sage-</code> classes in order to apply a given typographical specification to an element
-    These can be used on any element to apply the desired typographical styles regardless of the tag. This allows a
-    wide range of flexibility for applying a desired style to an element while still using the most semantic element possible
-    for a given context.
-  </p>
-  <p>
-    Setting individual styles manually should be avoided, but where needed, should be sure to use the appropriate
-    <%= link_to "design tokens", pages_foundations_path(:token) %>.
-    In the end, we prefer adding new entries to the type spec over including one-off styling.
-  </p>
-  <h2 id="spec-table">Type Spec Reference</h2>
-  <table class="sage-specs">
-    <thead>
-      <tr>
-        <th>Style</th>
-        <th>Class</th>
-        <th>Weight</th>
-        <th>Size</th>
-        <th>Line-height</th>
-        <th>Kerning</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="t-sage-heading-1">Heading 1</span></td>
-        <td><code>t-sage-heading-1</code>
-        <td>700</td>
-        <td>29px</td>
-        <td>36px</td>
-        <td>0.3px</td>
-      </tr>
-      <tr>
-        <td><span class="t-sage-heading-2">Heading 2</span></td>
-        <td><code>t-sage-heading-2</code>
-        <td>700</td>
-        <td>26px</td>
-        <td>32px</td>
-        <td>0.3px</td>
-      </tr>
-      <tr>
-        <td><span class="t-sage-heading-3">Heading 3</span></td>
-        <td><code>t-sage-heading-3</code>
-        <td>700</td>
-        <td>23px</td>
-        <td>32px</td>
-        <td>0.3px</td>
-      </tr>
-      <tr>
-        <td><span class="t-sage-heading-4">Heading 4</span></td>
-        <td><code>t-sage-heading-4</code>
-        <td>600</td>
-        <td>20px</td>
-        <td>28px</td>
-        <td>0.3px</td>
-      </tr>
-      <tr>
-        <td><span class="t-sage-heading-5">Heading 5</span></td>
-        <td><code>t-sage-heading-5</code>
-        <td>600</td>
-        <td>18px</td>
-        <td>24px</td>
-        <td>0.3px</td>
-      </tr>
-      <tr>
-        <td><span class="t-sage-heading-6">Heading 6</span></td>
-        <td><code>t-sage-heading-6</code>
-        <td>600</td>
-        <td>16px</td>
-        <td>20px</td>
-        <td>0.3px</td>
-      </tr>
-      <tr>
-        <td><span class="t-sage-body">Body*</span></td>
-        <td><code>t-sage-body</code>
-        <td>400*</td>
-        <td>16px</td>
-        <td>28px</td>
-        <td>0.2px</td>
-      </tr>
-      <tr>
-        <td><span class="t-sage-body-small">Small Body*</span></td>
-        <td><code>t-sage-body-small</code>
-        <td>400*</td>
-        <td>14px</td>
-        <td>24px</td>
-        <td>0.2px</td>
-      </tr>
-      <tr>
-        <td><span class="t-sage-body-xsmall">Extra Small Body*</span></td>
-        <td><code>t-sage-body-xsmall</code>
-        <td>400*</td>
-        <td>12px</td>
-        <td>20px</td>
-        <td>0.2px</td>
-      </tr>
-    </tbody>
-    <tfoot>
-      <tr>
-        <td colspan="6">
-          <p class="t-sage-body-xsmall">
-            * The <code>t-sage-body{-size}</code> classes also have weight variations:
-               append <code>-med</code> for <span class="t-sage-body-xsmall-med">medium (500)</span>;
-               append <code>-semi</code> for <span class="t-sage-body-xsmall-semi">semibold (600)</span>;
-               append <code>-bold</code> for <span class="t-sage-body-xsmall-bold">bold (700)</span>
-           </p>
-        </td>
-      </tr>
-    </tfoot>
-  </table>
+    <%= md("
+      The Sage type system uses a major second modular scale (factor of 1.125) with a base font size of 16px.
 
-  <p>
-    The type specs above map logically to corresponding HTML elements, as well as the following:
-  </p>
+      Typography in our system uses `t-sage-` classes in order to apply a given typographical specification to an element
+      These can be used on any element to apply the desired typographical styles regardless of the tag. This allows a
+      wide range of flexibility for applying a desired style to an element while still using the most semantic element possible
+      for a given context.
+    ") %>
+  
+  <%= sage_component SageTable, {
+    headers: [
+      "Type Spec",
+      "Class",
+      "Weight",
+      "Size",
+      "Line-height",
+      "Kerning",
+    ],
+    rows: type_specs,
+  } %>
+  
+    <%= md('
+\* The `t-sage-body{-size}` classes also have weight variations:
+append `-med` for <span class="t-sage-body-med">medium (500)</span>;
+append `-semi` for <span class="t-sage-body-semi">semibold (600)</span>;
+append `-bold` for <span class="t-sage-body-bold">bold (700)</span>
 
-  <ul>
-    <li>
-      <span class="t-sage-body">Body</span> is used as the default type style, and is thus applied to elements such as
-      <code>li</code>, <code>dd</code>, <code>td</code>, <code>blockquote</code>, and more.
-    </li>
-    <li>
-      <strong>Body Bold</strong> is used for elements that are typically bolded such as
-      <code>tr</code>, <code>dt</code>, <code>strong</code>, and <code>b</code>.
-    </li>
-  </ul>
+The type specs above map logically to corresponding HTML elements, as well as the following:
 
-  <p>
-    As an example, see here how the "Heading 3" type spec can be applied to an
-    <code>h3</code> element:
-  </p>
+- Body (`t-sage-body`) is used as the default type style, and is thus applied to elements such as
+  `li`, `dd`, `td`, `blockquote`, and more.
+- <strong>Body Bold</strong> (`t-sage-body-semi`) is used for elements that are typically bolded such as
+  `tr`, `dt`, `strong`, and `b`.
 
-  <div class="docs-container">
-    <div class="sage-type">
-      <h3 class="t-sage-heading-3">Lorem ipsum dolor sit</h3>
-      <div class="sage-code-snippet">
-        <pre class="prettyprint"><code>&lt;h3 class="t-sage-heading-3"&gt;Lorem ipsum dolor sit&lt;/h3&gt;</code></pre>
-      </div>
-    </div>
+As an example, see here how the \"Heading 3\" type spec can be applied to an `h3` element:
+') %>
+  
+  <h3 class="t-sage-heading-3">Lorem ipsum dolor sit</h3>
+  <div class="sage-code-snippet">
+    <pre class="prettyprint"><code>&lt;h3 class="t-sage-heading-3"&gt;Lorem ipsum dolor sit&lt;/h3&gt;</code></pre>
   </div>
+  
+    <%= md("
+      But the exact specs can also be applied to any element such as a `span`.
+      This is not meant to be an excuse for using non-semantic markup, but rather,
+      to free a spec to be applied to the most semantic element in context regardless
+      of the spec's name.
+    ") %>
 
-  <p>
-    But the exact specs can also be applied to any element such as a <code>span</code>.
-    This is not meant to be an excuse for using non-semantic markup, but rather,
-    to free a spec to be applied to the most semantic element in context regardless
-    of the spec's name.
-  </p>
-
-  <div class="docs-container">
-    <div class="sage-type">
-      <span class="t-sage-heading-3">Lorem ipsum dolor sit</span>
-      <div class="sage-code-snippet">
-        <pre class="prettyprint"><code>&lt;span class="t-sage-heading-3"&gt;Lorem ipsum dolor sit&lt;/span&gt;</code></pre>
-      </div>
-    </div>
+  <h3 class="t-sage-heading-3">Lorem ipsum dolor sit</h3>
+  <div class="sage-code-snippet">
+    <pre class="prettyprint"><code>&lt;span class="t-sage-heading-3"&gt;Lorem ipsum dolor sit&lt;/span&gt;</code></pre>
   </div>
+  
+    <%= md("
+      For setting text in open areas where simpler markup is desired, or where a
+      content management system controls the markup being output, we recommend applying
+      the `sage-type` class on a container around such content. This
+      leads to some default styling applied to the tags within the container
+      include our preferred colors and block spacing.
+    ") %>
 
-  <p>
-    For setting text in open areas where simpler markup is desired, or where a
-    content management system controls the markup being output, we recommend applying
-    the <code>sage-type</code> class on a container around such content. This
-    leads to some default styling applied to the tags within the container
-    include our preferred colors and block spacing.
-  </p>
+    <%= md("
+## Coloring Type
 
-  <div class="docs-container">
-    <div class="sage-type">
-      <div class="sage-type">
-        <h3>User-generated content</h3>
-        <p>See how content inside this <code>sage-type</code> container automatically recieves corresponding type specs?</p>
-      </div>
-      <br />
-      <div class="sage-code-snippet">
-        <pre class="prettyprint"><code>&lt;div class="sage-type"&gt;
-      &lt;h3&gt;User-generated content&lt;/h3&gt;
-      &lt;p&gt;See how content inside this &lt;code&gt;sage-type&lt;/code&gt; container automatically recieves corresponding type specs?&lt;/p&gt;
-    &lt;/div&gt;</code></pre>
-      </div>
-    </div>
-  </div>
+While applying colors to type on-the-fly should generally be avoided
+we do provide the following utility classes for such cases where its most practical:
+    ") %>
 
-  <h2>Coloring Type</h2>
-  <p>While applying colors to type on-the-fly should generally be avoided we do provide the following utility classes for such cases where its most practical:</p>
-
-  <div class="docs-container">
-    <table>
-      <tr>
-        <td><span class="t-sage-body-semi t-sage--color-primary">Primary</span></td>
-        <td><code class="">t-sage--color-primary</code></td>
-      </tr>
-      <tr>
-        <td><span class="t-sage-body-semi t-sage--color-charcoal">Charcoal</span></td>
-        <td><code class="">t-sage--color-charcoal</code></td>
-      </tr>
-      <tr>
-        <td><span class="t-sage-body-semi t-sage--color-grey">Grey</span></td>
-        <td><code class="">t-sage--color-grey</code></td>
-      </tr>
-      <tr>
-        <td><span class="t-sage-body-semi t-sage--color-red">Red</span></td>
-        <td><code class="">t-sage--color-red</code></td>
-      </tr>
-      <tr>
-        <td><span class="t-sage-body-semi t-sage--color-orange">Orange</span></td>
-        <td><code class="">t-sage--color-orange</code></td>
-      </tr>
-      <tr>
-        <td><span class="t-sage-body-semi t-sage--color-yellow">Yellow</span></td>
-        <td><code class="">t-sage--color-yellow</code></td>
-      </tr>
-      <tr>
-        <td><span class="t-sage-body-semi t-sage--color-sage">Sage</span></td>
-        <td><code class="">t-sage--color-sage</code></td>
-      </tr>
-      <tr>
-        <td><span class="t-sage-body-semi t-sage--color-purple">Purple</span></td>
-        <td><code class="">t-sage--color-purple</code></td>
-      </tr>
-    </table>
-  </div>
-</div>
+  <%= sage_component SageTable, {
+    headers: [
+      "Color",
+      "Type class",
+    ],
+    rows: type_color_classes
+  } %>
+<div>

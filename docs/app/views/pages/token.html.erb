@@ -1,6 +1,11 @@
 <%= content_for :heading do %>
-  <h1>Tokens</h1>
-  <p>Design tokens are the visual design atoms of the design system&mdash;specifically, they are named entities that store visual design attributes. We use them in place of hard-coded values (such as hex values for color or pixel values for spacing) in order to maintain a scalable and consistent visual system for UI development.</p>
+<%= md(%(
+# Tokens
+<p class="docs-heading__lead">Design tokens are the visual design atoms of the design system—specifically, they are named entities that store visual design attributes.</p>
+
+We use them in place of hard-coded values (such as hex values for color or pixel values for spacing) in order to maintain a scalable and consistent visual system for UI development.
+
+)) %>
 <% end %>
 <%= content_for :quick_links do %>
   <div class="quick-links">
@@ -16,22 +21,21 @@
 <% end %>
 <div class="sage-panel-set">
   <% sage_tokens.each do |token| %>
-    <div class="sage-panel">
-      <div class="sage-panel__header">
-        <h2 class="sage-panel__title" id="<%= token[:category] %>"><%= token[:category].titleize %></h2>
+    <h2 class="sage-panel__title" id="<%= token[:category] %>"><%= token[:category].titleize %></h2>
+    <%= sage_component SagePanelStack, {} do %>
+      <h3 class="sage-panel__subtitle">Default</h3>
+      <div class="tokens">
+        <div class="token token-<%= token[:category] %>"><strong>sage-<%= token[:category] %>( )</strong></div>
       </div>
-      <div class="sage-type">
-        <h3 class="t-sage-heading-6">Default</h3>
-        <div class="tokens">
-          <div class="token token-<%= token[:category] %>"><strong>sage-<%= token[:category] %>( )</strong></div>
-        </div>
-        <h3 class="t-sage-heading-6">Options</h3>
-        <div class="tokens">
-          <% token[:tokens] .each do |test| %>
-            <div class="token token-<%= token[:category] %>-<%= test[:name] %>"><strong>sage-<%= token[:category] %>(<%= test[:name] %>)</strong></div>
-          <% end %>
-        </div>
+    <% end %>
+
+    <%= sage_component SagePanelStack, {} do %>
+      <h3 class="sage-panel__subtitle">Options</h3>
+      <div class="tokens">
+        <% token[:tokens] .each do |test| %>
+          <div class="token token-<%= token[:category] %>-<%= test[:name] %>"><strong>sage-<%= token[:category] %>(<%= test[:name] %>)</strong></div>
+        <% end %>
       </div>
-    </div>
+    <% end %>
   <% end %>
 </div>

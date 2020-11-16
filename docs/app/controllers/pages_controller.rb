@@ -2,12 +2,31 @@ class PagesController < ApplicationController
   def index
   end
 
-  def foundations
+  def foundation
+    render params[:title]
+  end
+
+  def content
+    render params[:title]
+  end
+
+  def experiences
+    render params[:title]
+  end
+
+  def design
+    render params[:title]
+  end
+
+  def layout
     render params[:title]
   end
 
   def element
     @title = params[:title]
+  end
+
+  def getting_started
   end
 
   def elements

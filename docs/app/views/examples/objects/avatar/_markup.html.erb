@@ -1,8 +1,0 @@
-<div class="sage-avatar<%= color != "" ? " sage-avatar--#{color}" : "" %><%= hasRing ? " sage-avatar--ring" : "" %><%= scale ? " sage-avatar--scaling" : "" %><%= custom_class %>">
-  <svg class="sage-avatar__initials" viewBox="0 0 40 40">
-    <text text-anchor="middle" x="19.5" y="24"><%= initials %></text>
-  </svg>
-  <% if url != "" %>
-  <%= image_pack_tag("#{url}", class: "sage-avatar__image", alt: "") %>
-  <% end %>
-</div>
