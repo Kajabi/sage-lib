@@ -23,6 +23,16 @@ module ElementsHelper
         a11y: "done"
       },
       {
+        title: "choice",
+        description: "A radio button tab for making a choice. To be used inside a tabs object.",
+        use_legacy_html_code_source: false,
+        scss: "done",
+        docs: "done",
+        rails: "done",
+        react: "todo",
+        a11y: "todo"
+      },
+      {
         title: "label",
         description: "Labels show concise metadata or indicate status in a compact format.",
         use_legacy_html_code_source: false,
