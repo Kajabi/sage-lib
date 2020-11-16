@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.5.0...@kajabi/sage-assets@0.5.1) (2020-11-16)
+
+
+### Bug Fixes
+
+* **sage-assets:** adding css-loader ([58fedd5](https://github.com/Kajabi/sage-lib/commit/58fedd5d9bd69aaa17da6b229da1189a81a6319c))
+
+
+
+
+
 # [0.5.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.4.3...@kajabi/sage-assets@0.5.0) (2020-10-29)
 
 

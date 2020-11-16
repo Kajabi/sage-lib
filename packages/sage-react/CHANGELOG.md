@@ -3,6 +3,34 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.4.0...@kajabi/sage-react@0.5.0) (2020-11-16)
+
+
+### Bug Fixes
+
+* **sage-react:** ensure index only includes current components ([3c57d75](https://github.com/Kajabi/sage-lib/commit/3c57d75702bb4bbc958a530b51f52bd1bbca60d5))
+* **sage-react:** ensure test dependencies are present ([0e030ba](https://github.com/Kajabi/sage-lib/commit/0e030bacb8f350282f8dea191326dde7195cf730))
+* **sage-react:** use correct reference to `sage-assets` ([e732704](https://github.com/Kajabi/sage-lib/commit/e732704a5957e366ea3aab48f1ba68bab841e29d))
+* **sage-react:** using yarn instead of npm for build run ([957e54d](https://github.com/Kajabi/sage-lib/commit/957e54dc50be718961b569dccf1c4b285d74be43))
+* **storybook:** fixing path to assets ([a168e27](https://github.com/Kajabi/sage-lib/commit/a168e27aa4ba07b54179740f27646ef230bd2474))
+
+
+### Features
+
+* **sage-react:** add Button component ([5271564](https://github.com/Kajabi/sage-lib/commit/5271564a9b26e02137c11101aaaccc59d6342494))
+* **sage-react:** add configs including classnames and tokens ([c21f5ad](https://github.com/Kajabi/sage-lib/commit/c21f5ad395c2d41472aceefbd92df5e109b87dd7))
+* **sage-react:** add Grid components ([6d89be3](https://github.com/Kajabi/sage-lib/commit/6d89be3c22b75914ad3660aa801668ff70ad2778))
+* **sage-react:** add Icon component ([4d6c5cd](https://github.com/Kajabi/sage-lib/commit/4d6c5cd64a1d4c3bdd28eb061901602b1c188520))
+* **sage-react:** add Link component ([7127aac](https://github.com/Kajabi/sage-lib/commit/7127aacb7be0dfeb758e3e8fb99e76437c5cc0be))
+* **sage-react:** add missing dependencies ([b4de5a4](https://github.com/Kajabi/sage-lib/commit/b4de5a4e4b83f6dd905e5714dd06099e016c8d3b))
+* **sage-react:** add Sage styles and intruduction page to Storybook ([6c93362](https://github.com/Kajabi/sage-lib/commit/6c933628e2c310f8bc3eb41769c4320267bf0db0))
+* **sage-react:** add Type component ([8e61e58](https://github.com/Kajabi/sage-lib/commit/8e61e58f51ad35de718251fea862617cc0f0132b))
+* **sage-react:** update storybook configs to match starting point ([5aa09a3](https://github.com/Kajabi/sage-lib/commit/5aa09a3902da76d8fdf867134fadfb921384b419))
+
+
+
+
+
 # [0.4.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.3.2...@kajabi/sage-react@0.4.0) (2020-10-29)
 
 
