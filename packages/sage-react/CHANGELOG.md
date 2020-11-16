@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.5](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.5.4...@kajabi/sage-react@0.5.5) (2020-11-16)
+
+
+### Bug Fixes
+
+* **sage-react:** added storybook files for Tabs ([d39dff6](https://github.com/Kajabi/sage-lib/commit/d39dff62d5e7a198fa80219dcf14af3fb02e1029))
+* **sage-react:** added tabs, tabsitem and tabspane components ([2598d53](https://github.com/Kajabi/sage-lib/commit/2598d53fd64ffecefe1a54b12f724bcf8dc621c8))
+* **sage-react:** fixed path to storybook config ([54d6ed5](https://github.com/Kajabi/sage-lib/commit/54d6ed5823aa359ee191d513ab1156fccf5071f8))
+* **sage-react:** removed reference to stylesheet ([af84595](https://github.com/Kajabi/sage-lib/commit/af84595884b8dac3e6d62ce2f97fda2b3781eadb))
+* **sage-react:** removed TabsItem.scss stylesheet ([0d4dca9](https://github.com/Kajabi/sage-lib/commit/0d4dca92559efcd4f5a92c1a6df0ecfb631d95ec))
+* **sage-react:** updated import paths ([9430342](https://github.com/Kajabi/sage-lib/commit/9430342cd10119fff0ad2fab68a05557facdc1c0))
+
+
+
+
+
 ## [0.5.4](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.5.3...@kajabi/sage-react@0.5.4) (2020-11-16)
 
 **Note:** Version bump only for package @kajabi/sage-react

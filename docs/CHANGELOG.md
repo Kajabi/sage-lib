@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.22.33](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.22.32...@kajabi/sage@1.22.33) (2020-11-16)
+
+
+### Bug Fixes
+
+* **docs:** added choice and tabs examples ([4ddb54a](https://github.com/Kajabi/sage-lib/commit/4ddb54a5d88914a8b81b621379153b3b13ad6234))
+* **docs:** added choice and tabs to helpers ([a97f387](https://github.com/Kajabi/sage-lib/commit/a97f387a5cc496752bd8d75c078d044f65588a45))
+* **docs:** added choice, tab, tabs_pane and tabs components and views ([edd7ec3](https://github.com/Kajabi/sage-lib/commit/edd7ec3ca2f8ae86e779580edb96aa7a2926a3e9))
+* **docs:** added tab element to elements helper ([4580ebb](https://github.com/Kajabi/sage-lib/commit/4580ebb2eff33624a2838c1f9e151159c6dc8db9))
+
+
+
+
+
 ## [1.22.32](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.22.31...@kajabi/sage@1.22.32) (2020-11-16)
 
 
