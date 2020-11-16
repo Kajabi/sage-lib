@@ -1,13 +1,13 @@
-Sage.banner = (function() {
+Sage.banner = (() => {
 
   // ==================================================
   // Variables
   // ==================================================
 
-  var activeBanner, bannerCloseBtn;
+  const bannerClass = 'sage-banner';
+  const bannerActiveClass = `${bannerClass}--active`;
 
-  var bodyClass = "banner-active";
-  var bannerClass = ".sage-banner--active";
+  const selfTargetAttr = 'SELF';
 
 
   // ==================================================
@@ -15,32 +15,63 @@ Sage.banner = (function() {
   // ==================================================
 
   // check to see if an active banner exists
-  function bannerIsEnabled() {
-    return document.querySelector(bannerClass) !== null;
-  }
+  const bannerIsEnabled = () => {
+    return document.querySelector(`.${bannerActiveClass}`) !== null;
+  };
 
-  function bindEvents() {
-    bannerCloseBtn.addEventListener('click', function(e) {
-      e.target.parentElement.classList.toggle('sage-banner--active');
-      document.querySelector('body').classList.toggle(bodyClass);
-    });
-  }
+  const handleBannerToggleClick = (ev) => {
+    const elTarget = ev.target;
+
+    // Ensure we're working with a button or hyperlink
+    const elTargetTrigger = elTarget.closest('a, button');
+    if (!elTargetTrigger) {
+      return;
+    }
 
 
-  function init() {
-    if (bannerIsEnabled()) {
-      document.body.classList.add(bodyClass);
-      activeBanner = document.querySelector(bannerClass);
-      bannerCloseBtn = activeBanner.querySelector('.sage-banner__close');
+    // Only respond to clicks on banner toggle elements
+    const toggleBannerTarget = elTargetTrigger.dataset.jsToggleBanner;
+    if (!toggleBannerTarget) {
+      return;
+    }
 
-      bindEvents();
+    // Determine the intended target to toggle
+    let elTargetBanner;
+    if (toggleBannerTarget === selfTargetAttr) {
+      elTargetBanner = elTarget.closest(`.${bannerClass}`);
+    } else {
+      elTargetBanner = document.getElementById(toggleBannerTarget);
+    }
+
+    if (elTargetBanner) {
+      toggleBanner(elTargetBanner);
     }
   }
 
+  const toggleBanner = (elTargetBanner) => {
+    if (elTargetBanner.classList.contains(bannerActiveClass)) {
+      elTargetBanner.classList.remove(bannerActiveClass);
+    } else {
+      document.querySelectorAll(bannerActiveClass).forEach(elBanner => elBanner.classList.remove(bannerActiveClass));
+      elTargetBanner.classList.add(bannerActiveClass);
+    }
+  };
+
+  const unbind = () => {
+    document.removeEventListener('click', handleBannerToggleClick);
+  }
+
+
+  const init = () => {
+    // Regardless, look for any toggle buttons and add listeners
+    document.addEventListener('click', handleBannerToggleClick);
+  };
+
 
   return {
-    init: init,
-    bannerIsEnabled: bannerIsEnabled
+    init,
+    bannerIsEnabled,
+    unbind
   };
 
 })();
