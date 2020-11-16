@@ -1,8 +1,8 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { centerXY } from '../decorators';
 import { withKnobs, select, text } from '@storybook/addon-knobs';
-import { Icon } from '../index';
+import { centerXY } from '../story-support/decorators';
+import Icon from './Icon';
 
 storiesOf('Sage/Icon', module)
   .addDecorator(withKnobs)
@@ -10,6 +10,7 @@ storiesOf('Sage/Icon', module)
   .add('Default', () => (
     <div style={{ marginTop: 50 }}>
       <Icon
+        color={select('Color', Icon.COLORS, Icon.COLORS.CHARCOAL)}
         icon={select('Icon', Icon.ICONS, Icon.ICONS.CHECK_CIRCLE)}
         label={text('Label (not visible)', '')}
         size={select('Size', Icon.SIZES, Icon.SIZES.MD)}

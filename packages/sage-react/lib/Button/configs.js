@@ -1,19 +1,17 @@
-const configs = {
-  COLORS: {
-    Primary: 'primary',
-    Secondary: 'secondary',
-    Tertiary: 'tertiary',
-    Danger: 'danger',
-  },
-  ICON_POSITIONS: {
-    Left: 'left',
-    Right: 'right',
-  },
-  SIZES: {
-    Default: null,
-    Small: 'small',
-    Tiny: 'tiny',
-  },
+export const BUTTON_COLORS = {
+  PRIMARY: 'primary',
+  SECONDARY: 'secondary',
+  DANGER: 'danger',
 };
 
-export default configs;
+export const BUTTON_ICON_POSITIONS = {
+  LEFT: 'left',
+  RIGHT: 'right',
+};
+
+export const BUTTON_GROUP_GAP_OPTIONS = {
+  XS: null,
+  SM: 'sm',
+  MD: 'md',
+  LG: 'lg',
+};

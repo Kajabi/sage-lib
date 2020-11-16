@@ -1,89 +1,102 @@
-import React from "react";
-import classnames from "classnames";
-import PropTypes from "prop-types";
-import configs from "./configs";
-import Icon from '../Icon'
-import {
-  htmlAttributePropTypes,
-  hyperlinkAttributePropTypes,
-} from "../configs";
+import React from 'react';
+import PropTypes from 'prop-types';
+import classnames from 'classnames';
+import { SageTokens } from '../configs';
+import { Link } from '../index';
+import ButtonGroup from './ButtonGroup';
+import { BUTTON_COLORS, BUTTON_ICON_POSITIONS } from './configs';
 
 const Button = ({
   alignEnd,
   children,
   className,
   color,
-  htmlAttributes,
-  hyperlinkAttributes,
+  disabled,
   icon,
   iconOnly,
   iconPosition,
-  onClick,
-  size,
-  type,
+  noShadow,
+  raised,
+  small,
+  subtle,
+  ...rest
 }) => {
-  const blockName = "sage-btn";
-  const classNames = classnames(blockName, className, {
-    [`${blockName}--align-end`]: alignEnd,
-    [`${blockName}--${color}`]: color,
-    [`${blockName}--${size}`]: size,
-    [`${blockName}--icon-${iconPosition}-${icon}`]: icon && !iconOnly,
-    [`${blockName}--icon-only-${icon}`]: icon && iconOnly,
-  });
-
-  const TagName = hyperlinkAttributes ? "a" : "button";
-
-  let otherProps = {
-    onClick,
-    ...htmlAttributes,
-  };
-
-  if (hyperlinkAttributes) {
-    otherProps = Object.assign(otherProps, hyperlinkAttributes);
-  } else {
-    otherProps = Object.assign(otherProps, { type });
-  }
+  const { to, href } = rest;
+  const isLink = to || href;
+  const isPrimary = color === BUTTON_COLORS.PRIMARY;
+  const TagName = isLink ? Link : 'button';
+  const blockName = 'sage-btn';
+  const classNames = classnames(
+    blockName,
+    className,
+    {
+      [`${blockName}--align-end`]: alignEnd,
+      [`${blockName}--${color}`]: color,
+      [`${blockName}--no-shadow`]: noShadow && !subtle && isPrimary,
+      [`${blockName}--raised`]: raised && !subtle && !isPrimary,
+      [`${blockName}--small`]: small,
+      [`${blockName}--subtle`]: subtle,
+      [`${blockName}--icon-${iconPosition}-${icon}`]: icon && !iconOnly,
+      [`${blockName}--icon-only-${icon}`]: icon && iconOnly,
+      disabled: isLink && disabled,
+    }
+  );
 
   return (
-    <TagName className={classNames} {...otherProps}>
-      FooBarBazBops
+    <TagName
+      className={classNames}
+      aria-disabled={isLink && disabled}
+      disabled={!isLink && disabled}
+      {...rest}
+    >
       {iconOnly ? (
-        <span className="visually-hidden">{children}</span>
+        <span className="visually-hidden">
+          {children}
+        </span>
       ) : (
-        <>{children}</>
+        <span className="sage-btn__truncate-text">
+          {children}
+        </span>
       )}
     </TagName>
   );
 };
 
-Button.configs = configs;
+Button.Group = ButtonGroup;
+Button.COLORS = BUTTON_COLORS;
+Button.ICON_POSITIONS = BUTTON_ICON_POSITIONS;
 
 Button.defaultProps = {
   alignEnd: false,
-  className: "",
-  color: "primary",
-  htmlAttributes: null,
-  hyperlinkAttributes: null,
+  children: null,
+  className: '',
+  color: BUTTON_COLORS.PRIMARY,
+  disabled: false,
   icon: null,
   iconOnly: false,
-  iconPosition: "left",
+  iconPosition: BUTTON_ICON_POSITIONS.LEFT,
+  noShadow: null,
   onClick: null,
-  size: null,
-  type: "button",
+  raised: null,
+  small: false,
+  subtle: false,
+  type: 'button',
 };
 
 Button.propTypes = {
   alignEnd: PropTypes.bool,
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   className: PropTypes.string,
-  color: PropTypes.oneOf(Object.values(configs.COLORS)),
-  hyperlinkAttributes: PropTypes.shape(hyperlinkAttributePropTypes),
-  htmlAttributes: PropTypes.shape(htmlAttributePropTypes),
-  icon: PropTypes.oneOf(Object.values(Icon.ICONS)),
+  color: PropTypes.oneOf(Object.values(BUTTON_COLORS)),
+  disabled: PropTypes.bool,
+  icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),
   iconOnly: PropTypes.bool,
-  iconPosition: PropTypes.oneOf(Object.values(configs.ICON_POSITIONS)),
+  iconPosition: PropTypes.oneOf(Object.values(BUTTON_ICON_POSITIONS)),
+  noShadow: PropTypes.bool,
   onClick: PropTypes.func,
-  size: PropTypes.oneOf(Object.values(configs.SIZES)),
+  raised: PropTypes.bool,
+  small: PropTypes.bool,
+  subtle: PropTypes.bool,
   type: PropTypes.string,
 };
 

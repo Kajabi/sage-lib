@@ -1,7 +1,8 @@
+require('../test/testHelper');
+
 import React from 'react';
 import { shallow } from 'enzyme';
 import Icon from './Icon';
-
 
 describe('Rendering the Sage Icon Component', () => {
   let component,
@@ -22,7 +23,8 @@ describe('Rendering the Sage Icon Component', () => {
   });
 
   it('has an icon class', () => {
-    expect(component.get(0).props).toHaveProperty('className', `sage-icon-${defaultProps.icon}`);
+    expect(component.get(0).props).toHaveProperty('className');
+    expect(component.get(0).props.className).toContain(`sage-icon-${defaultProps.icon}`);
   });
 
   it('no label results in aria-hidden', () => {

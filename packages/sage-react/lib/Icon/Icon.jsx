@@ -1,14 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { ICONS, ICON_SIZES } from './constants';
+import { ICON_SIZES } from './configs';
+import { SageTokens } from '../configs';
 
-const Icon = ({ className, icon, label, size }) => {
+const Icon = ({
+  className,
+  color,
+  icon,
+  label,
+  size,
+  ...rest
+}) => {
   const classNames = classnames(
     className,
     {
       [`sage-icon-${icon}`]: icon && (!size || size === ICON_SIZES.MD),
       [`sage-icon-${icon}-${size}`]: icon && size,
+      [`t-sage--color-${color}`]: color,
     }
   );
 
@@ -20,22 +29,25 @@ const Icon = ({ className, icon, label, size }) => {
   }
 
   return (
-    <i className={classNames} {...attributes} />
+    <i className={classNames} {...attributes} {...rest} />
   );
 };
 
-Icon.ICONS = ICONS;
+Icon.COLORS = SageTokens.COLOR_SLIDERS;
+Icon.ICONS = SageTokens.ICONS;
 Icon.SIZES = ICON_SIZES;
 
 Icon.defaultProps = {
   className: '',
+  color: SageTokens.COLOR_SLIDERS.INHERIT,
   label: '',
   size: null,
 };
 
 Icon.propTypes = {
   className: PropTypes.string,
-  icon: PropTypes.oneOf(Object.values(ICONS)).isRequired,
+  color: PropTypes.oneOf(Object.values(SageTokens.COLOR_SLIDERS)),
+  icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)).isRequired,
   label: PropTypes.string,
   size: PropTypes.oneOf(Object.values(ICON_SIZES)),
 };
