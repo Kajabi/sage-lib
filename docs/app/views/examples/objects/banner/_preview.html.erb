@@ -1,0 +1,78 @@
+<h3 class="t-sage-heading-6">Announcement (with link)</h3>
+<%= sage_component SageBanner, {
+  banner_context: "sage-demo",
+  active: true,
+  dismissable: true,
+  text: "I have spoken.",
+  link: {
+    name: "Link here",
+    attributes: {
+      href: "#",
+      referer: "no-referer"
+    }
+  }
+} %>
+
+<h3 class="t-sage-heading-6">Secondary (with link)</h3>
+<%= sage_component SageBanner, {
+  banner_context: "sage-demo",
+  active: true,
+  dismissable: true,
+  type: "secondary",
+  text: "Now this is podracing.",
+  link: {
+    name: "Link here",
+    attributes: {
+      href: "#",
+      referer: "no-referer"
+    }
+  }
+} %>
+
+<h3 class="t-sage-heading-6">Warning (with button)</h3>
+<%= sage_component SageBanner, {
+  banner_context: "sage-demo",
+  active: true,
+  dismissable: true,
+  type: "warning",
+  text: "Execute Order 66.",
+  icon: "sage-icon-warning",
+  link: {
+    name: "Link here",
+    attributes: {
+      href: "#",
+      referer: "no-referer"
+    }
+  }
+} %>
+
+<h3 class="t-sage-heading-6">Danger (dismiss disabled)</h3>
+<%= sage_component SageBanner, {
+  banner_context: "sage-demo",
+  active: true,
+  dismissable: false,
+  type: "danger",
+  text: "It's over, Anakin. I have the high ground.",
+} %>
+
+<h3 class="t-sage-heading-6">Primary fixed (Ladera top context)</h3>
+<p>See active example at top of page</p>
+<%= sage_component SageButton, {
+  style: "primary",
+  value: "Toggle banner",
+  attributes: {
+    "data-js-toggle-banner": "banner-1"
+  }
+} %>
+
+<%= sage_component SageBanner, {
+  text: "Another happy landing.",
+  link: {
+    name: "Dismiss",
+    attributes: {
+      "data-js-toggle-banner": "SELF",
+      href: "#"
+    },
+  },
+  id: "banner-1",
+} %>

@@ -1,0 +1,54 @@
+<% if component.banner_context.present? %>
+  <div class="
+    sage-banner-wrapper
+    <%= "sage-banner-wrapper--context-#{component.banner_context}" if component.banner_context.present? %>
+  ">
+<% end %>
+
+<div
+  class="
+    sage-banner
+    <%= "sage-banner--#{component.type}" if component.type.present? %>
+    <%= "sage-banner--active" if component.active.present? && component.active %>
+  "
+  <%= "id=#{component.id}" if component.id.present? %>
+  <%= "aria-hidden=true" if !component.active %>
+>
+  <% if component.text.present? %>
+    <p class="sage-banner__text">
+      <%= component.text %>
+    </p>
+  <% end %>
+
+  <% if component.link.present? %>
+    <a
+      class="sage-banner__link"
+      <% component.link[:attributes].each do |key, value| %>
+        <%= "#{key}='#{value}'".html_safe %>
+      <% end if component.link[:attributes]&.is_a?(Hash) %>
+    >
+      <%= component.link[:name] %>
+    </a>
+  <% end %>
+
+  <%= component.content if component.content.present? %>
+
+  <% if component.dismissable %>
+    <%= sage_component SageButton, {
+      value: "Dismiss",
+      subtle: true,
+      icon: {
+        name: "remove",
+        style: "only"
+      },
+      attributes: {
+        "data-js-toggle-banner": "SELF",
+      },
+      css_classes: "sage-banner__close",
+    } %>
+  <% end %>
+</div>
+
+<% if component.banner_context.present? %>
+  </div>
+<% end %>
