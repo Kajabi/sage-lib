@@ -70,7 +70,7 @@
   @if type-of($number) == "number" and not unitless($number) {
     @return $number / ($number * 0 + 1);
   }
-  
+
   @return $number;
 }
 
@@ -78,10 +78,10 @@
 ** Replace `$search` with `$replace` in `$string`
   author Hugo Giraudel
   Usage: `str-replace(12px)`
-  
+
   Replace `$search` with `$replace` in `$string`
 
-  arguments: 
+  arguments:
     {String} $string - Initial string
     {String} $search - Substring to replace
     {String} $replace ('') - New value

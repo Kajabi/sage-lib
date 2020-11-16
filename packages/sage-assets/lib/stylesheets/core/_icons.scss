@@ -6,6 +6,7 @@ $sage-icon-font-path: "../fonts/sage" !default;
 $sage-icon-background-color: #eee !default;
 $sage-icon-li-margin-right: 0.4em !default;
 
+
 // ==================================================
 // Font setup
 // ==================================================
@@ -22,6 +23,7 @@ $sage-icon-li-margin-right: 0.4em !default;
   font-display: block;
 }
 
+
 // ==================================================
 // Mixins
 // ==================================================
@@ -35,6 +37,7 @@ $sage-icon-li-margin-right: 0.4em !default;
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=#{$rotation});
   transform: scale($horiz, $vert);
 }
+
 
 // ==================================================
 // Base class definition
@@ -56,9 +59,56 @@ $sage-icon-li-margin-right: 0.4em !default;
     }
   }
 
+
   // Other icons generated here
+  
+  @include button-icon-generator($icon-name, $icon-code, only);
+  @include button-icon-generator($icon-name, $icon-code, left);
+  @include button-icon-generator($icon-name, $icon-code, right);
+
   .sage-choice--icon-#{$icon-name}::before {
     @include sage-icon-base($icon-name);
+  }
+
+  .sage-dropdown__item-control--icon-#{$icon-name}::before {
+    @include sage-icon-base($icon-name);
+    margin: 0 sage-spacing(xs) 0 0;
+  }
+
+  .sage-label--icon-left-#{$icon-name} {
+    flex-direction: row;
+    gap: sage-spacing(xs);
+
+    &::before {
+      align-self: center;
+      @include sage-icon-base($icon-name, sm);
+    }
+  }
+
+  .sage-label--icon-right-#{$icon-name} {
+    flex-direction: row-reverse;
+    gap: sage-spacing(xs);
+
+    &::before {
+      align-self: center;
+      @include sage-icon-base($icon-name, sm);
+    }
+  }
+
+  .sage-page-heading__toolbar-icon-#{$icon-name} {
+    white-space: nowrap;
+
+    &::before {
+      margin-right: sage-spacing(xs);
+
+      @include sage-icon-base($icon-name);
+    }
+  }
+
+  .sage-status-icon--#{$icon-name} {
+    &::before {
+      @include sage-icon-base($icon-name);
+    }
   }
 }
 

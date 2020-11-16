@@ -1,0 +1,94 @@
+/* ==================================================
+  ** tinymcev4
+  type: vendor modification styles
+
+================================================== */
+
+.sage-vendor-tinymcev4 {
+  overflow: hidden;
+  border: sage-border();
+  border-radius: sage-border(radius);
+
+  .mce-panel {
+    border: unset !important; /* stylelint-disable-line declaration-no-important */
+
+    &.mce-toolbar-grp {
+      border-bottom: sage-border() !important; /* stylelint-disable-line declaration-no-important */
+    }
+  }
+
+  .mce-btn button {
+    padding: rem(8px) rem(12px) rem(12px) !important; /* stylelint-disable-line declaration-no-important */
+  }
+
+  .mce-btn.mce-colorbutton button[role="presentation"] {
+    position: relative;
+    padding-right: 0 !important; /* stylelint-disable-line declaration-no-important */
+
+    .mce-preview {  /* stylelint-disable-line selector-max-compound-selectors */
+      top: rem(18px) !important; /* stylelint-disable-line declaration-no-important */
+      right: rem(-2px) !important; /* stylelint-disable-line declaration-no-important */
+      left: unset !important; /* stylelint-disable-line declaration-no-important */
+      width: rem(13px) !important; /* stylelint-disable-line declaration-no-important */
+      height: rem(4px) !important; /* stylelint-disable-line declaration-no-important */
+      margin-left: unset !important; /* stylelint-disable-line declaration-no-important */
+    }
+  }
+
+  .mce-ico.mce-i-code::before {
+    @include sage-icon-base(code, md);
+  }
+
+  .mce-ico.mce-i-undo::before {
+    @include sage-icon-base(undo, md);
+  }
+
+  .mce-ico.mce-i-redo::before {
+    @include sage-icon-base(redo, md);
+  }
+
+  .mce-ico.mce-i-bold::before {
+    @include sage-icon-base(bold, md);
+  }
+
+  .mce-ico.mce-i-italic::before {
+    @include sage-icon-base(italic, md);
+  }
+
+  .mce-ico.mce-i-strikethrough::before {
+    @include sage-icon-base(strikethrough, md);
+  }
+
+  .mce-ico.mce-i-underline::before {
+    @include sage-icon-base(underline, md);
+  }
+
+  .mce-ico.mce-i-forecolor::before {
+    @include sage-icon-base(color, md);
+    margin-top: rem(2px);
+  }
+
+  .mce-ico.mce-i-bullist::before {
+    @include sage-icon-base(list-bullet, md);
+  }
+
+  .mce-ico.mce-i-numlist::before {
+    @include sage-icon-base(list-numbers, md);
+  }
+
+  .mce-ico.mce-i-indent::before {
+    @include sage-icon-base(margin-left, md);
+  }
+
+  .mce-ico.mce-i-outdent::before {
+    @include sage-icon-base(margin-right, md);
+  }
+
+  .mce-ico.mce-i-image::before {
+    @include sage-icon-base(image, md);
+  }
+
+  .mce-ico.mce-i-fullscreen::before {
+    @include sage-icon-base(fullscreen, md);
+  }
+}

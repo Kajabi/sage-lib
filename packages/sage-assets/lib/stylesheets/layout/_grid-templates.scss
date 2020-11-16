@@ -6,7 +6,7 @@
 @each $-key, $-map in $sage-grid-templates {
   [data-sage-grid-template="#{map-get($-map, code)}"],
   .sage-grid-template-#{$-key} {
-    @media (max-width: sage-breakpoint(md-max)) {
+    @media (max-width: sage-breakpoint(sm-max)) {
       // Set dash elements to fill the space
       @each $-n in map-get($-map, dash-slots) {
         > :nth-child(#{$-n}) {
@@ -15,7 +15,7 @@
       }
     }
 
-    @media (min-width: sage-breakpoint(lg-min)) {
+    @media (min-width: sage-breakpoint(md-min)) {
       grid-template-columns: map-get($-map, pattern);
       // Set dot elements to align at start
       @each $-n in map-get($-map, dot-slots) {

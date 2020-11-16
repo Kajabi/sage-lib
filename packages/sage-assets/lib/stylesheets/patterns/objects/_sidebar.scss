@@ -51,7 +51,7 @@ $-sidebar-color-background: sage-color(white);
 .sage-sidebar__body {
   @include overflow-scroll();
   flex: 1;
-  padding: sage-spacing();
+  padding: sage-spacing(sm);
 }
 
 .sage-sidebar__footer::before {
@@ -67,5 +67,5 @@ $-sidebar-color-background: sage-color(white);
 
 .sage-sidebar__footer {
   position: relative;
-  padding: sage-spacing();
+  padding: sage-spacing(sm);
 }
