@@ -1,0 +1,171 @@
+/* ==================================================
+  ** _choice.scss
+  type: element
+
+
+================================================== */
+
+$item-radio: "before";
+$item-icon: "before";
+$item-arrow: "before";
+
+$-choice-disabled-color: sage-color(grey, 500);
+
+.sage-choice {
+  @include sage-button-style-reset();
+
+  display: inline-flex;
+  position: relative;
+  align-items: center;
+  flex-grow: 1;
+  flex-basis: 0;
+  padding: sage-spacing(sm);
+  white-space: nowrap;
+  color: $sage-tabs-default-color;
+  border: sage-border();
+  border-radius: sage-border(radius);
+  transition: $sage-transition;
+  transition-property: color, background-color, border-color, box-shadow;
+
+  @extend %t-sage-body-med;
+
+  &::after {
+    content: "";
+    position: absolute;
+    border: 2px solid transparent;
+    border-radius: sage-border(radius);
+
+    @include position(-1px, -1px, -1px, -1px);
+  }
+
+  &:hover {
+    color: $sage-tabs-active-color;
+    background-color: sage-color(grey, 100);
+  }
+
+  &:focus {
+    outline: none;
+
+    &::after {
+      border-color: sage-color(grey, 400);
+    }
+  }
+
+  &:active,
+  &.sage-choice--active {
+    color: $sage-tabs-active-color;
+
+    &::after {
+      border-color: sage-color(primary);
+    }
+  }
+
+  &[aria-disabled="true"],
+  &:disabled {
+    background-color: sage-color(grey, 100);
+    cursor: default;
+    pointer-events: none;
+
+    &::before {
+      background-color: sage-color(grey, 200);
+    }
+
+    &:hover::before {
+      box-shadow: none;
+    }
+  }
+
+  .sage-tabs--layout-default &:not(:last-child) {
+    margin-right: sage-spacing(sm);
+  }
+
+  .sage-tabs--align-items-center & {
+    justify-content: center;
+  }
+}
+
+.sage-choice--align-center {
+  justify-content: center;
+}
+
+.sage-choice--arrow {
+  flex-flow: row-reverse;
+
+  &::#{$item-arrow} {
+    @include sage-icon-base(caret-right, lg);
+
+    margin: 0 0 0 sage-spacing(sm);
+    color: sage-color(grey, 300);
+    transition: color $sage-transition;
+  }
+
+  &:active,
+  &.sage-choice--active {
+    &::#{$item-arrow} {
+      color: sage-color(primary);
+    }
+  }
+}
+
+[class*="sage-choice--icon-"] {
+  &::#{$item-icon} {
+    /* See icon generator */
+    margin: 0 sage-spacing(xs) 0 0;
+    color: currentColor;
+    transition: color $sage-transition;
+  }
+}
+
+.sage-choice--radio {
+  &::#{$item-radio} {
+    content: "";
+    display: inline-block;
+    box-sizing: border-box;
+    height: $sage-radio-button-size;
+    min-width: $sage-radio-button-size;
+    width: $sage-radio-button-size;
+    margin: 0 sage-spacing(sm) 0 0;
+    background-color: $sage-radio-selected-indicator-color;
+    border-radius: sage-border(radius-round);
+    border: sage-border();
+    transition: $sage-transition;
+    transition-property: border, box-shadow;
+  }
+
+  &:hover::#{$item-radio} {
+    box-shadow: sage-shadow(sm);
+  }
+
+  &:active,
+  &.sage-choice--active {
+    &::#{$item-radio} {
+      box-shadow: sage-shadow(sm);
+      border-width: 5px;
+      border-color: $sage-radio-color-checked;
+    }
+  }
+}
+
+.sage-choice__content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  text-align: start;
+  pointer-events: none;
+
+  .sage-tabs--align-items-center &,
+  .sage-choice--align-center & {
+    flex: unset;
+  }
+}
+
+.sage-choice__text {
+  font-style: normal;
+  color: sage-color(charcoal, 400);
+}
+
+.sage-choice__subtext {
+  @extend %t-sage-body-small;
+
+  color: sage-color(charcoal, 100);
+}

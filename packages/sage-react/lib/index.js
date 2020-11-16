@@ -33,11 +33,11 @@ export { default as Link } from './Link';
 // export { default as Panel } from './Panel';
 // export { default as Search } from './Search';
 // export { default as Select } from './Select';
-// export {
-//   Tabs,
-//   TabsItem,
-//   TabsPane,
-// } from './Tabs';
+export {
+  Tabs,
+  TabsItem,
+  TabsPane,
+} from './Tabs';
 // export { default as Textarea } from './Textarea';
 // export { default as Toast } from './Toast';
 // export {

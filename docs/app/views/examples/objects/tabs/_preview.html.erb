@@ -1,0 +1,209 @@
+<h3 class="t-sage-heading-6">Regular tabs</h3>
+<div class="sage-tabs-container">
+  <%= sage_component SageTabs, {
+      id: "example-tabs1",
+      navigational: true,
+      items: [
+        {
+          text: "Sub Page 1",
+          attributes: {
+            href: "//example.com/basic-test1",
+          },
+          active: true
+        },
+        {
+          text: "Sub Page 2",
+          attributes: {
+            href: "//example.com/basic-test2"
+          },
+        },
+        {
+          text: "Sub Page 3",
+          attributes: {
+            href: "//example.com/basic-test3"
+          },
+        },
+      ]
+    }
+  %>
+
+  <%= sage_component SageTabsPane, { id: "basic-test1", card: true } do %>
+    <p>Sub page 1 content</p>
+  <% end %>
+
+  <%= sage_component SageTabsPane, { id: "basic-test2", card: true } do %>
+    <p>Sub page 2 content</p>
+  <% end %>
+
+  <%= sage_component SageTabsPane, { id: "basic-test3", card: true } do %>
+    <p>Sub page 3 content</p>
+  <% end %>
+</div>
+
+<h3 class="t-sage-heading-6">Progress styled tabs</h3>
+<div class="sage-tabs-container">
+  <%= sage_component SageTabs, {
+      id: "example-tabs2",
+      items: [
+        {
+          text: "Sub Page 1",
+          target: "pb-test1",
+          active: true
+        },
+        {
+          text: "Sub Page 2",
+          target: "pb-test2"
+        },
+        {
+          text: "Sub Page 3",
+          target: "pb-test3"
+        },
+      ],
+      progressbar: true
+    }
+  %>
+
+  <%= sage_component SageTabsPane, { id: "pb-test1", card: true } do %>
+    <p>Sub page 1 content</p>
+  <% end %>
+
+  <%= sage_component SageTabsPane, { id: "pb-test2", card: true } do %>
+    <p>Sub page 2 content</p>
+  <% end %>
+
+  <%= sage_component SageTabsPane, { id: "pb-test3", card: true } do %>
+    <p>Sub page 3 content</p>
+  <% end %>
+</div>
+
+<h3 class="t-sage-heading-6">Choice tabs - radios in default layout</h3>
+<div class="sage-tabs-container">
+  <%= sage_component SageTabs, {
+      id: "example-tabs3",
+      items: [
+        {
+          text: "Sub Page 1",
+          target: "choice-test1",
+          active: true,
+          type: "radio"
+        },
+        {
+          text: "Sub Page 2",
+          target: "choice-test2",
+          type: "radio"
+        },
+        {
+          text: "Sub Page 3",
+          target: "choice-test3",
+          type: "radio",
+        },
+      ],
+      style: "choice"
+    }
+  %>
+
+  <%= sage_component SageTabsPane, { id: "choice-test1", card: true } do %>
+    <p>Sub page 1 content</p>
+  <% end %>
+
+  <%= sage_component SageTabsPane, { id: "choice-test2", card: true } do %>
+    <p>Sub page 2 content</p>
+  <% end %>
+
+  <%= sage_component SageTabsPane, { id: "choice-test3", card: true } do %>
+    <p>Sub page 3 content</p>
+  <% end %>
+</div>
+
+<h3 class="t-sage-heading-6">Choice tabs - arrows as links in stacked layout</h3>
+<div class="sage-tabs-container">
+  <%= sage_component SageTabs, {
+      id: "example-tabs4",
+      items: [
+        {
+          text: "Sub Page 1",
+          attributes: {
+            href: "//example.com/#stacked-test1",
+          },
+          active: true,
+          type: "arrow"
+        },
+        {
+          text: "Sub Page 2",
+          attributes: {
+            href: "//example.com/#stacked-test2",
+          },
+          type: "arrow"
+        },
+        {
+          text: "Sub Page 3",
+          attributes: {
+            href: "//example.com/#stacked-test3",
+          },
+          type: "arrow"
+        },
+      ],
+      style: "choice",
+      stacked: true
+    }
+  %>
+  <hr class="sage-tabs-divider" />
+  <%= sage_component SageTabsPane, { id: "stacked-test1", card: true } do %>
+    <p>Sub page 1 content</p>
+  <% end %>
+
+  <%= sage_component SageTabsPane, { id: "stacked-test2", card: true } do %>
+    <p>Sub page 2 content</p>
+  <% end %>
+
+  <%= sage_component SageTabsPane, { id: "stacked-test3", card: true } do %>
+    <p>Sub page 3 content</p>
+  <% end %>
+</div>
+
+<h3 class="t-sage-heading-6">Choice tabs with icons and centered</h3>
+<div class="sage-tabs-container">
+  <%= sage_component SageTabs, {
+      id: "example-tabs45",
+      items: [
+        {
+          text: "Sub Page 1",
+          target: "icon-tabs-test1",
+          active: true,
+          type: "icon",
+          icon: "preview-off",
+        },
+        {
+          text: "Sub Page 2",
+          target: "icon-tabs-test2",
+          type: "icon",
+          icon: "video-on"
+        },
+        {
+          text: "Sub Page 3",
+          target: "icon-tabs-test3",
+          type: "icon",
+          icon: "list-bullet"
+        },
+      ],
+      style: "choice",
+      align_items_center: true
+    }
+  %>
+  <hr class="sage-tabs-divider" />
+  <%= sage_component SageTabsPane, { id: "icon-tabs-test1", card: true } do %>
+    <p>Sub page 1 content</p>
+  <% end %>
+
+  <%= sage_component SageTabsPane, { id: "icon-tabs-test2", card: true } do %>
+    <p>Sub page 2 content</p>
+  <% end %>
+
+  <%= sage_component SageTabsPane, { id: "icon-tabs-test3", card: true } do %>
+    <p>Sub page 3 content</p>
+  <% end %>
+</div>
+
+<h4>Tab Pane Style and Spacing</h4>
+
+<p>Since tabs may be employed in a variety of settings, the following modifiers may be added on panes to set their appearance and internal spacing accordingly: <code>card</code>, <code>card_spacing</code>, and <code>panel_spacing</code>. See the Properties table below for more details</p>

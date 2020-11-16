@@ -1,0 +1,40 @@
+<%
+css_active_class = "sage-choice--active" 
+is_button = !component.attributes&.has_key?(:href)
+html_tag = is_button ? "button" : "a"
+%>
+
+<<%= html_tag %>
+  <%= "type=button" if is_button %>
+  <% component.attributes.each do |key, value| %>
+    <%= "#{key}='#{value}'".html_safe %>
+  <% end if component.attributes&.is_a?(Hash) %>
+  <% if component.disabled %>
+    <%= is_button ? "disabled" : "aria-disabled=true" %>
+  <% end %>
+  class="
+    sage-choice
+    <%= css_active_class if component.active %>
+    <% if component.type.present? %>
+      <% if component.type == "icon" && component.icon.present? %>
+        <%= "sage-choice--icon-#{component.icon}" %>
+      <% else %>
+        <%= "sage-choice--#{component.type}" %>
+      <% end %>
+    <% end %>
+    <%= "sage-choice--align-center" if component.align_center.present? && component.align_center == true %>
+  "
+  data-js-tabs-target="<%= component.target %>"
+  data-sage-active-class="<%= css_active_class %>"
+  role="tab"
+  aria-controls="<%= component.target %>"
+>
+  <div class="sage-choice__content">
+    <% if component.text.present? %>
+      <em class="sage-choice__text"><%= component.text.html_safe %></em>
+    <% end %>
+    <% if component.subtext.present? %>
+      <span class="sage-choice__subtext" aria-hidden="true"><%= component.subtext.html_safe %></span>
+    <% end %>
+  </div>
+</<%= html_tag %>>

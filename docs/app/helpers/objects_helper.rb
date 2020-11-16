@@ -42,6 +42,16 @@ module ObjectsHelper
         react: "done",
         a11y: "done"
       },
+      {
+        title: "tabs",
+        description: "Tabs organize related content across screens, data sets, and can be used for navigation to related destinations.",
+        use_legacy_html_code_source: false,
+        scss: "todo",
+        docs: "todo",
+        rails: "todo",
+        react: "todo",
+        a11y: "todo"
+      },
     ]
   end
 

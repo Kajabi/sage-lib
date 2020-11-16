@@ -1,0 +1,50 @@
+/* ==================================================
+  ** _tabs.scss
+  type: object
+
+================================================== */
+
+.sage-tabs {
+  /* stylelint-disable block-no-empty */
+}
+
+.sage-tabs--layout-default {
+  display: flex;
+  flex-direction: row;
+}
+
+.sage-tabs--layout-stacked {
+  @include sage-grid-card();
+}
+
+.sage-tabs-container {
+  @include sage-grid-panel();
+}
+
+.sage-tabs-divider,
+.sage-tabs-container > hr {
+  margin: 0;
+  border-top: 1px solid sage-color(grey, 300);
+}
+
+.sage-tabs-pane {
+  display: none;
+  visibility: hidden;
+}
+
+.sage-tabs-pane--active:not(:empty) {
+  display: block;
+  visibility: visible;
+
+  &.sage-tabs-pane--card {
+    @include sage-card;
+  }
+
+  &.sage-tabs-pane--card-spacing {
+    @include sage-grid-card;
+  }
+
+  &.sage-tabs-pane--panel-spacing {
+    @include sage-grid-panel;
+  }
+}
