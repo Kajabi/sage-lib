@@ -1,0 +1,66 @@
+/* ==================================================
+  ** _popover.scss
+  type: object
+
+
+================================================== */
+
+$-overlay-z-index: sage-z-index(modal);
+$-popover-panel-min-size: rem(250px);
+$-popover-panel-max-size: rem(350px);
+$-popover-panel-offset-top: sage-spacing(2xs);
+$-popover-panel-offset-left: sage-spacing(md);
+
+.sage-popover {
+  display: inline-flex;
+  position: relative;
+}
+
+.sage-popover__panel {
+  visibility: hidden;
+  z-index: sage-z-index(modal);
+  position: absolute;
+  top: $-popover-panel-offset-top;
+  left: $-popover-panel-offset-left;
+  width: 100%;
+  min-width: $-popover-panel-min-size;
+  max-width: $-popover-panel-max-size;
+  padding: sage-spacing(sm);
+  background-color: sage-color(white);
+  background-clip: padding-box;
+  box-shadow: sage-shadow();
+  border-radius: sage-border(radius);
+
+  @include sage-grid-stack();
+
+  .sage-popover--is-expanded & {
+    visibility: visible;
+  }
+}
+
+.sage-popover__button {
+  position: relative;
+}
+
+.sage-popover__overlay {
+  visibility: hidden;
+  z-index: $-overlay-z-index;
+  position: fixed;
+
+  @include position-full();
+
+  .sage-popover--is-expanded & {
+    visibility: visible;
+  }
+}
+
+.sage-popover__title {
+  @extend %t-sage-heading-5;
+}
+
+.sage-popover__content {
+  @extend %t-sage-body-small;
+  @include sage-grid-stack();
+
+  color: sage-color(charcoal, 100);
+}

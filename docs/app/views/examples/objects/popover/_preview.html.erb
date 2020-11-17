@@ -1,0 +1,31 @@
+<h3 class="t-sage-heading-6">Standalone Popover</h3>
+
+<%= sage_component SagePopover, {
+  title: "Page Title 1",
+  icon: "question-circle",
+  link: {
+    href: "#",
+    name: "Learn more about a thing",
+  }
+} do %>
+  <p>This is a block of content.</p>
+  <p>This is a block of content.</p>
+  <p>This is a block of content.</p>
+  <p>This is a block of content.</p>
+<% end %>
+
+<h3 class="t-sage-heading-6">Another Standalone Popover</h3>
+
+<%= sage_component SagePopover, {
+  title: "Page Title 2",
+  icon: "dot-menu-horizontal",
+  link: {
+    href: "#",
+    name: "Learn more",
+  }
+} do %>
+  <p>This is a block of content.</p>
+  <p>This is a block of content.</p>
+  <p>This is a block of content.</p>
+  <p>This is a block of content.</p>
+<% end %>

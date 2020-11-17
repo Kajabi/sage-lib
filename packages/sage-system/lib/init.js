@@ -43,6 +43,7 @@ Sage.init = function(elementNamesToInitLegacy) {
   initDocumentPresenceListener('[data-js-accordion="header"]', Sage.accordion.init,        Sage.accordion.unbind);
   initDocumentPresenceListener('[data-js-select]',             Sage.select.init,           Sage.select.unbind);
   initDocumentPresenceListener('[data-js-banner], [data-js-toggle-banner]',      Sage.banner.init,        Sage.banner.unbind);
+  initDocumentPresenceListener('[data-js-popover]',            Sage.popover.init,       Sage.popover.unbind);
 
   // ==================================================
   // Event Listeners

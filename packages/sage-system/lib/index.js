@@ -17,5 +17,6 @@ require('./sortable')
 require('./tabs')
 require('./accordion-panel')
 require('./copy-button')
+require('./popover')
 
 require('./init')
