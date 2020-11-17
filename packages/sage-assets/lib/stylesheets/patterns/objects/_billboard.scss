@@ -1,0 +1,34 @@
+/* ==================================================
+  ** billboard
+  type: object
+
+================================================== */
+
+$-billboard-background-color: sage-color(primary, 500);
+$-billboard-text-color: #fff;
+$-billboard-spacing: sage-spacing(lg);
+$-billboard-title-spacing: sage-spacing(sm);
+
+.sage-billboard {
+  display: flex;
+  height: 100%;
+  padding: $-billboard-spacing;
+  background-color: $-billboard-background-color;
+  background-position: center center;
+  background-size: cover;
+}
+
+.sage-billboard__content {
+  align-self: flex-end;
+}
+
+.sage-billboard__title {
+  @extend %t-sage-heading-5;
+  margin-bottom: $-billboard-title-spacing;
+  color: $-billboard-text-color;
+}
+
+.sage-billboard__copy {
+  @extend %t-sage-body;
+  color: $-billboard-text-color;
+}
