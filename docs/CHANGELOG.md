@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.22.34](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.22.33...@kajabi/sage@1.22.34) (2020-11-17)
+
+
+### Bug Fixes
+
+* **banner:** migrate markup ([93c6dad](https://github.com/Kajabi/sage-lib/commit/93c6dad52e7a227a76c08092e24e6bfa2e7a0f17))
+
+
+
+
+
 ## [1.22.33](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.22.32...@kajabi/sage@1.22.33) (2020-11-16)
 
 

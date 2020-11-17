@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.28](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.0.27...@kajabi/sage-system@0.0.28) (2020-11-17)
+
+
+### Bug Fixes
+
+* **banner:** migrate JS ([5afe6c3](https://github.com/Kajabi/sage-lib/commit/5afe6c3ead81740f0591be2ea5ff5e2f61600666))
+
+
+
+
+
 ## [0.0.27](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.0.26...@kajabi/sage-system@0.0.27) (2020-11-16)
 
 

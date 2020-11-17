@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.7](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.5.6...@kajabi/sage-assets@0.5.7) (2020-11-17)
+
+
+### Bug Fixes
+
+* **banner:** migrate styles ([a01ac5a](https://github.com/Kajabi/sage-lib/commit/a01ac5af90b911a3c4eabb56a934a5e334f4a46f))
+
+
+
+
+
 ## [0.5.6](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.5.5...@kajabi/sage-assets@0.5.6) (2020-11-16)
 
 **Note:** Version bump only for package @kajabi/sage-assets
