@@ -1,0 +1,26 @@
+<% is_loading = !component.href %>
+<% link_tag = is_loading ? "div" : "a" %>
+<li class="
+  sage-catalog-item
+  <%= "sage-catalog-item--loading" if is_loading %>
+">
+  <strong class="sage-catalog-item__title">
+    <<%= link_tag %> class="t-sage-heading-6" href="<%= component.href %>">
+      <%= component.title %>
+    </<%= link_tag %>>
+  </strong>
+  <% if component.content.present? %>
+    <div class="sage-catalog-item__content">
+      <%= component.content %>
+    </div>
+  <% end %>
+  <% if content_for? :sage_aside %>
+    <div class="sage-catalog-item__aside">
+      <%= content_for :sage_aside %>
+    </div>
+  <% end %>
+  <%# Uses tabindex="-1" because there are two links to the same location in this component (component.title also links to the href) %>
+  <<%= link_tag %> class="sage-catalog-item__img" href="<%= component.href %>" tabindex="-1" title="Go to: <%= component.title %>">
+    <img src="<%= component.image %>" alt="Cover image for: <%= component.title %>">
+  </<%= link_tag %>>
+</li>
