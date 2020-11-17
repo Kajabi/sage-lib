@@ -1,0 +1,48 @@
+<div
+  class="sage-popover"
+  data-js-popover
+>
+  <%= sage_component SageButton, {
+    value: "Open Menu",
+    style: "secondary",
+    css_classes: "sage-popover__button",
+    subtle: true,
+    icon: {
+      style: "only",
+      name: component.icon
+    },
+    attributes: {
+      "aria-haspopup": true,
+      "aria-controls": "sage-popover",
+      "aria-expanded": false,
+      "data-js-popover--trigger": ""
+    },
+  } %>
+  <div
+    class="sage-popover__overlay"
+    data-js-popover--overlay
+  ></div>
+  <div
+    class="sage-popover__panel"
+  >
+    <div class="sage-popover__title">
+      <%= component.title %>
+    </div>
+    <div class="sage-popover__content">
+      <%= component.content %>
+    </div>
+    <% if component.link %>
+      <div class="sage-popover__actions">
+        <%= sage_component SageButton, {
+          value: component.link[:name],
+          style: "primary",
+          subtle: true,
+          icon: { style: "right", name: "launch" },
+          attributes: {
+            href: component.link[:href]
+          }
+        } %>
+      </div>
+    </div>
+  <% end %>
+</div>
