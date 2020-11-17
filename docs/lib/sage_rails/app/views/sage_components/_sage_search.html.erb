@@ -1,0 +1,30 @@
+<div
+  role="search"
+  class=" sage-search
+  <%= "sage-search--contained" if component.contained %>
+  "
+  data-js-search
+
+>
+  <label for="<%= component.id %>" class="sage-search__label">
+    <%= component.label_text %>
+  </label>
+  <input
+    id="<%= component.id %>"
+    class="sage-search__input"
+    type="search"
+    placeholder="<%= component.placeholder.present? ? component.placeholder : "Search" %>"
+    value="<%= component.value %>"
+  />
+  <%= sage_component SageButton, {
+    value: "Clear Search",
+    style: "secondary",
+    css_classes: "sage-search__reset-button",
+    subtle: true,
+    icon: {
+      style: "only",
+      name: "remove"
+    }
+  } %>
+
+</div>

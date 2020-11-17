@@ -1,0 +1,119 @@
+<h3 class="t-sage-heading-6">Menu Button</h3>
+<%= sage_component SageDropdown, {
+  items: [{
+    value: "Edit",
+    icon: "pen",
+    attributes: { "href": "#" },
+  }, {
+    value: "New",
+    icon: "add",
+    style: "primary",
+    attributes: { "href": "#" },
+   }, {
+    value: "Share Element",
+    icon: "url",
+    modifiers: ["border-before"],
+    attributes: { "href": "#" },
+   }, {
+    value: "Take A Dangerous Action",
+    icon: "remove-circle",
+    style: "danger",
+    attributes: { "href": "#" },
+  }]
+} do %>
+  <%= sage_component SageButton, {
+    style: "primary",
+    value: "Add An Element"
+  } %>
+<% end %>
+
+<h3 class="t-sage-heading-6">SageLabel Button, with SageLabel Values, and aligned right</h3>
+<p>Note: The wrapping div with inline styles is for <i>preview-purposes only</i>. </p>
+<div style="display: flex; flex-direction: row-reverse;">
+  <%= sage_component SageDropdown, {
+    align: "right",
+    items: [{
+      value: sage_component(SageLabel, { color: "success", value: "Publish" }),
+      attributes: { "href": "#" },
+    }, {
+      value: sage_component(SageLabel, { color: "info", value: "Drip" }),
+      attributes: { "href": "#" },
+    }, {
+      value: sage_component(SageLabel, { color: "draft", value: "Draft" }),
+      attributes: { "href": "#" },
+    }, {
+      value: "Delete Category",
+      icon: "trash",
+      style: "danger",
+      attributes: { "href": "#" },
+    }]
+  } do %>
+    <%= sage_component SageLabel, {
+      color: "info",
+      interactive: true,
+      value: "Drip",
+      icon: { style: "right", name: "caret-down" }
+    } %>
+  <% end %>
+</div>
+
+<h3 class="t-sage-heading-6">Select</h3>
+<p>Note: This pattern is used with the SageReact implementation, please consult UXD before using this as SageRails.</p>
+<%= sage_component SageDropdown, {
+  search: true,
+  trigger_type: "select",
+  align: "right",
+  items: [{
+    value: "-- None --"
+  }, {
+    value: "Option 1",
+   }, {
+    value: "Option 2",
+   }, {
+    value: "Option 3",
+  }, {
+    value: "Muted",
+    style: "muted"
+  }, {
+    value: "Disabled",
+    modifiers: ["disabled"]
+  }],
+  contained: true
+} do %>
+  <%= sage_component SageButton, {
+    style: "secondary",
+    value: "",
+    css_classes: "sage-dropdown__trigger-selected-value",
+    icon: { style: "right", name: "caret-down" }
+  } %>
+  <label class="sage-dropdown__trigger-label">Add an Element</label>
+<% end %>
+
+<h3 class="t-sage-heading-6">Form Field</h3>
+<p>Note: This pattern is used with the SageReact implementation, please consult UXD before using this as SageRails.</p>
+<%= sage_component SageDropdown, {
+  search: true,
+  trigger_type: "select-labeled",
+  align: "right",
+  items: [{
+    value: "-- None --"
+  }, {
+    value: "Option 1",
+   }, {
+    value: "Option 2",
+   }, {
+    value: "Option 3",
+  }, {
+    value: "Muted",
+    style: "muted"
+  }],
+  contained: true
+} do %>
+  <%= sage_component SageButton, {
+    style: "secondary",
+    value: "",
+    css_classes: "sage-dropdown__trigger-selected-value",
+    icon: { style: "right", name: "caret-down" }
+  } %>
+  <label class="sage-dropdown__trigger-label">Add an Element</label>
+<% end %>

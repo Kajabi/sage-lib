@@ -1,0 +1,59 @@
+<div
+  class="
+    sage-dropdown
+    <%= "sage-dropdown--anchor-right" if component.align == "right" %>
+    <%= "sage-dropdown--contained" if component.contained %>
+    <%= "sage-dropdown--customized" if component.customized %>
+    <%= "sage-dropdown--#{component.custom_modifier}" if component.custom_modifier.present? %>
+    <%= component.css_classes if component.css_classes.present? %>
+  "
+  data-js-dropdown="<%= component.id %>"
+>
+  <div
+    aria-controls="options_menu"
+    class="
+      sage-dropdown__trigger
+      <%= "sage-dropdown__trigger--#{component.trigger_type}" if component.trigger_type %>
+    "
+  >
+    <%= component.content %>
+  </div>
+  <nav class="sage-dropdown__panel">
+    <% if component.search %>
+      <%= sage_component SageSearch, {
+        placeholder: "Search",
+        value: nil,
+        html_attributes: {
+          "aria-label": "options_search"
+        }
+      } %>
+    <% end %>
+    <ul class="sage-dropdown__menu" role="menu" aria-label="options_menu">
+      <% component.items.each do |item| %>
+        <li class="
+            sage-dropdown__item
+            <% item[:modifiers]&.each do |item_modifier| %>
+              <%= "sage-dropdown__item--#{item_modifier}" %>
+            <% end %>
+          "
+          role="none"
+        >
+          <a
+            <% item[:attributes].each do |key, value| %>
+              <%= "#{key}=#{value}"%>
+            <% end if item[:attributes]&.is_a?(Hash) %>
+            role="menuitem"
+            tabindex="0"
+            class="
+              sage-dropdown__item-control
+              <%= "sage-dropdown__item-control--#{item[:style]}" if item[:style] %>
+              <%= "sage-dropdown__item-control--icon-#{item[:icon]}" if item[:icon] %>
+            "
+          >
+            <%= item[:value].html_safe %>
+          </a>
+        </li>
+      <% end %>
+    </ul>
+  </nav>
+</div>
