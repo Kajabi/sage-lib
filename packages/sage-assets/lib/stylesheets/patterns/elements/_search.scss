@@ -1,0 +1,138 @@
+/* ==================================================
+  ** search
+  type: element
+
+================================================== */
+
+$-search-icon: "::before";
+
+.sage-search {
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-color: sage-color(white);
+
+  &#{$-search-icon} {
+    @include sage-icon-base(search);
+
+    z-index: 2;
+    margin-left: sage-spacing(xs);
+    margin-right: -1 * sage-spacing();
+    color: sage-color(charcoal, 100);
+    transition: $sage-transition;
+    transition-property: color;
+
+    :focus-within > & {
+      color: sage-color(primary);
+    }
+  }
+
+  &:not(.sage-search--contained) {
+    border-bottom: 1px solid sage-color(grey, 300);
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: rem(-1px);
+      left: 50%;
+      right: 50%;
+      z-index: 3;
+      height: 0;
+      border-bottom: rem(2px) solid sage-color(primary);
+      transition: $sage-transition;
+      transition-property: left, right, opacity;
+    }
+
+    &:focus-within::after {
+      left: 0;
+      right: 0;
+      opacity: 1;
+    }
+  }
+
+  &.sage-search--contained,
+  .sage-panel-controls__toolbar & {
+    position: relative;
+    z-index: sage-z-index(default);
+    box-shadow: $sage-toolbar-btn-border;
+    border: 0;
+
+    &::after {
+      display: none;
+    }
+
+    &:first-child {
+      border-top-left-radius: sage-border(radius);
+      border-bottom-left-radius: sage-border(radius);
+    }
+
+    &:last-child {
+      border-top-right-radius: sage-border(radius);
+      border-bottom-right-radius: sage-border(radius);
+    }
+
+    &:hover {
+      z-index: sage-z-index(default, 1);
+      box-shadow: $sage-toolbar-btn-border-hover;
+    }
+
+    &:focus-within {
+      z-index: sage-z-index(default, 2);
+      box-shadow: $sage-toolbar-btn-border-focus;
+    }
+  }
+
+  .sage-panel-controls__toolbar & {
+    flex: 1;
+  }
+
+  .sage-panel-controls__toolbar > &:not(:last-child) {
+    margin-right: $sage-panel-grid-gap;
+  }
+}
+
+.sage-search__label,
+.sage-search__clear-button-text {
+  @include visually-hidden();
+}
+
+.sage-search__input {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  padding: rem(6px) sage-spacing(sm) rem(6px) sage-spacing(lg);
+  border: 0;
+  background: transparent;
+
+  @extend %t-sage-body;
+
+  @include placeholder {
+    color: sage-color(charcoal, 100);
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  .sage-panel-controls__toolbar & {
+    border-radius: sage-border(radius);
+  }
+
+  // remove default webkit search field styling
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration {
+    -webkit-appearance: none; /* stylelint-disable-line property-no-vendor-prefix */
+  }
+}
+
+.sage-search__reset-button {
+  visibility: hidden;
+  margin-right: sage-spacing(xs);
+
+  .sage-search--has-text & {
+    visibility: visible;
+  }
+}
