@@ -73,6 +73,16 @@ module ObjectsHelper
         a11y: "done"
       },
       {
+        title: "pagination",
+        description: "Pagination is used for splitting up results into several pages and provides controls for navigating to the next or previous page.",
+        use_legacy_html_code_source: true,
+        scss: "done",
+        docs: "done",
+        rails: "todo",
+        react: "todo",
+        a11y: "todo"
+      },
+      {
         title: "tabs",
         description: "Tabs organize related content across screens, data sets, and can be used for navigation to related destinations.",
         use_legacy_html_code_source: false,
