@@ -1,0 +1,19 @@
+<% html_tag = component.title_tag ? component.title_tag : "h5" %>
+ 
+<div <%= component.id ? "id=#{component.id}" : "" %> class="sage-form-section">
+  <div class="sage-form-section__info">
+    <% if component.title.present? %>
+      <<%= html_tag %> class="sage-form-section__title t-sage-heading-5">
+        <%= component.title %>
+      </<%= html_tag %>>
+    <% end %>
+    <% if component.subtitle.present? %>
+      <p class="sage-form-section__subtitle"><%= component.subtitle %></p>
+    <% end %>
+  </div>
+  <div class="sage-form-section__content">
+    <div class="sage-form-section__panel">
+      <%= component.content %>
+    </div>
+  </div>
+</div>
