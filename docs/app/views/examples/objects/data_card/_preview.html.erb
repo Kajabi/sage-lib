@@ -1,0 +1,103 @@
+<h3 class="t-sage-heading-6">Default</h3>
+<%= render "examples/objects/data_card/markup",
+  title: "Header Content",
+  header_aside: sage_component(SageButton, { value: "Options", subtle: true, style: "secondary", icon: { name: "mapped", style: "only" }}),
+  body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+%>
+
+<h3 class="t-sage-heading-6">Colors</h3>
+<div class="sage-data-card-group">
+  <%= render "examples/objects/data_card/markup",
+    title: "Default Color",
+    header_aside: sage_component(SageButton, { value: "Options", subtle: true, style: "secondary", icon: { name: "mapped", style: "only" }}),
+    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  %>
+  <%= render "examples/objects/data_card/markup",
+    title: "Muted Color",
+    header_aside: sage_component(SageButton, { value: "Options", subtle: true, style: "secondary", icon: { name: "skipped", style: "only" }}),
+    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    color: "muted"
+  %>
+  <%= render "examples/objects/data_card/markup",
+    title: "Danger Color",
+    header_aside: sage_component(SageButton, { value: "Options", subtle: true, style: "danger", icon: { name: "unmapped", style: "only" }}),
+    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    color: "danger"
+  %>
+</div>
+
+<h3 class="t-sage-heading-6">Inline/Scrolling Layout</h3>
+<div class="sage-data-card-scroll-container">
+  <div class="sage-data-card-scroll">
+    <div class="sage-data-card-group sage-data-card-group--danger">
+      <p class="sage-data-card-group__title">Group 1</p>
+      <div class="sage-data-card-group__items">
+        <%= render "examples/objects/data_card/markup",
+          title: "Field 1",
+          header_aside: sage_component(SageButton, { value: "Options", subtle: true, style: "danger", icon: { name: "unmapped", style: "only" }}),
+          body: %(
+            <p>Lorem ipsum dolor sit amet</p>
+            <p>Consectetur adipiscing elit</p>
+            <p>Sed do eiusmod tempor incididun</p>
+            <p>Ut labore et dolore magna aliqua.</p>
+          )
+        %>
+        <%= render "examples/objects/data_card/markup",
+          title: "Field 2",
+          header_aside: sage_component(SageButton, { value: "Options", subtle: true, style: "danger", icon: { name: "unmapped", style: "only" }}),
+          body: %(
+            <p>Lorem ipsum dolor sit amet</p>
+            <p>Consectetur adipiscing elit</p>
+            <p>Sed do eiusmod tempor incididun</p>
+            <p>Ut labore et dolore magna aliqua.</p>
+          )
+        %>
+      </div>
+    </div>
+    <div class="sage-data-card-group">
+      <p class="sage-data-card-group__title">Group 2</p>
+      <div class="sage-data-card-group__items">
+        <%= render "examples/objects/data_card/markup",
+          title: "Field 3",
+          header_aside: sage_component(SageButton, { value: "Options", subtle: true, style: "secondary", icon: { name: "mapped", style: "only" }}),
+          body: %(
+            <p>Lorem ipsum dolor sit amet</p>
+            <p>Consectetur adipiscing elit</p>
+            <p>Sed do eiusmod tempor incididun</p>
+            <p>Ut labore et dolore magna aliqua.</p>
+          )
+        %>
+        <%= render "examples/objects/data_card/markup",
+          title: "Field 4",
+          header_aside: sage_component(SageButton, { value: "Options", subtle: true, style: "secondary", icon: { name: "mapped", style: "only" }}),
+          body: %(
+            <p>Lorem ipsum dolor sit amet</p>
+            <p>Consectetur adipiscing elit</p>
+            <p>Sed do eiusmod tempor incididun</p>
+            <p>Ut labore et dolore magna aliqua.</p>
+          )
+        %>
+        <%= render "examples/objects/data_card/markup",
+          title: "Field 5",
+          header_aside: sage_component(SageButton, { value: "Options", subtle: true, style: "secondary", icon: { name: "mapped", style: "only" }}),
+          body: %(
+            <p>Lorem ipsum dolor sit amet</p>
+            <p>Consectetur adipiscing elit</p>
+            <p>Sed do eiusmod tempor incididun</p>
+            <p>Ut labore et dolore magna aliqua.</p>
+          )
+        %>
+        <%= render "examples/objects/data_card/markup",
+          title: "Field 6",
+          header_aside: sage_component(SageButton, { value: "Options", subtle: true, style: "secondary", icon: { name: "mapped", style: "only" }}),
+          body: %(
+            <p>Lorem ipsum dolor sit amet</p>
+            <p>Consectetur adipiscing elit</p>
+            <p>Sed do eiusmod tempor incididun</p>
+            <p>Ut labore et dolore magna aliqua.</p>
+          )
+        %>
+      </div>
+    </div>
+  </div>
+</div>
