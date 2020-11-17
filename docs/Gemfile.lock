@@ -1,7 +1,7 @@
 PATH
   remote: lib/sage_rails
   specs:
-    sage_rails (1.22.33)
+    sage_rails (1.22.34)
       rails
 
 GEM
