@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.22.38](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.22.37...@kajabi/sage@1.22.38) (2020-11-17)
+
+
+### Bug Fixes
+
+* added js to popover rails component ([cea19e1](https://github.com/Kajabi/sage-lib/commit/cea19e1d2971f9b8736afff73146119b5969109b))
+* migrated popover rails component ([44c3276](https://github.com/Kajabi/sage-lib/commit/44c3276c052b8a27d75164ecf06c6f25fa11592a))
+
+
+
+
+
 ## [1.22.37](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.22.36...@kajabi/sage@1.22.37) (2020-11-17)
 
 

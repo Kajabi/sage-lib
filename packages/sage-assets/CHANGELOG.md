@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.11](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.5.10...@kajabi/sage-assets@0.5.11) (2020-11-17)
+
+
+### Bug Fixes
+
+* added js to popover rails component ([cea19e1](https://github.com/Kajabi/sage-lib/commit/cea19e1d2971f9b8736afff73146119b5969109b))
+
+
+
+
+
 ## [0.5.10](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.5.9...@kajabi/sage-assets@0.5.10) (2020-11-17)
 
 
