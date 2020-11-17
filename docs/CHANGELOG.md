@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.22.36](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.22.35...@kajabi/sage@1.22.36) (2020-11-17)
+
+
+### Bug Fixes
+
+* **docs:** added assistant and billboard examples ([28ba960](https://github.com/Kajabi/sage-lib/commit/28ba96090f63d45eef40a380c8278b04cad4e56d))
+* **docs:** added assistant and billboard helpers ([1732b7c](https://github.com/Kajabi/sage-lib/commit/1732b7cad521d07fa6ed954b8c03af3572ed2ee4))
+* **docs:** added assistant and billboard views ([156c1f6](https://github.com/Kajabi/sage-lib/commit/156c1f6a1e9a990555c52ed6015496f451c77d8d))
+* **sage-rails:** added assistant and billboard components ([e1438c7](https://github.com/Kajabi/sage-lib/commit/e1438c76c432e473eaf315bc5ff5b59e4bead149))
+
+
+
+
+
 ## [1.22.35](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.22.34...@kajabi/sage@1.22.35) (2020-11-17)
 
 

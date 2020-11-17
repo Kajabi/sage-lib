@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.9](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.5.8...@kajabi/sage-assets@0.5.9) (2020-11-17)
+
+
+### Bug Fixes
+
+* **sage-assets:** added billboard stylesheet ([07b6c56](https://github.com/Kajabi/sage-lib/commit/07b6c560915a6679e2dd4fcef17c154afb2cf133))
+
+
+
+
+
 ## [0.5.8](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.5.7...@kajabi/sage-assets@0.5.8) (2020-11-17)
 
 
