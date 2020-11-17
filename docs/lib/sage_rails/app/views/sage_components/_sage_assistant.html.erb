@@ -1,0 +1,22 @@
+<div class="sage-assistant">
+  <button class="sage-menubutton" aria-expanded="false" aria-controls="sage-sidebar-menu" data-js-btn-target="sage-sidebar-menu" data-js-target-type="sidebar">
+    <span class="sage-menubutton__bar"></span><span class="sage-menubutton__bar"></span><span class="sage-menubutton__bar"></span>
+    <span class="visually-hidden">Toggle main menu</span>
+  </button>
+  <%= image_tag "nav_logo_white.png", class: "sage-assistant__branding" %>
+  <div class="sage-assistant__body"><%= component.content %></div>
+  <div class="sage-assistant__actions">
+    <% if content_for?(:super_admin_actions) %>
+      <div id="super-admin-actions" class="btn-group">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Extra Actions <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <%= yield :super_admin_actions %>
+        </ul>
+      </div>
+    <% end -%>
+    <%= yield :action_buttons %>
+  </div>
+</div>

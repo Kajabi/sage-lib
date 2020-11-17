@@ -1,0 +1,10 @@
+<div class="sage-billboard" style="background-image: url(<%= image_url component.img %>);">
+  <div class="sage-billboard__content">
+    <% if component.title.present? %>
+      <h5 class="sage-billboard__title"><%= component.title %></h5>
+    <% end %>
+    <% if component.message.present? %>
+      <p class="sage-billboard__copy"><%= component.message %></p>
+    <% end %>
+  </div>
+</div>

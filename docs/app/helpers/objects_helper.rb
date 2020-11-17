@@ -23,6 +23,16 @@ module ObjectsHelper
         a11y: "todo"
       },
       {
+        title: "assistant",
+        description: "Page header with optional side menu toggle button.",
+        use_legacy_html_code_source: true,
+        scss: "done",
+        docs: "done",
+        rails: "doing",
+        react: "todo",
+        a11y: "todo"
+      },
+      {
         title: "banner",
         description: "A banner that displays at the top of the page, used for systemwide notifications and events.",
         use_legacy_html_code_source: false,
@@ -31,6 +41,16 @@ module ObjectsHelper
         rails: "done",
         react: "doing",
         a11y: "done"
+      },
+      {
+        title: "billboard",
+        description: "A billboard is composed of a full-width background image, a title, and supporting copy.",
+        use_legacy_html_code_source: true,
+        scss: "done",
+        docs: "done",
+        rails: "doing",
+        react: "todo",
+        a11y: "todo"
       },
       {
         title: "card",
