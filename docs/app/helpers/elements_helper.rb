@@ -63,16 +63,6 @@ module ElementsHelper
         a11y: "done",
       },
       {
-        title: "tab",
-        description: "A tab button to be used inside a tabs object",
-        use_legacy_html_code_source: false,
-        scss: "done",
-        docs: "done",
-        rails: "doing",
-        react: "todo",
-        a11y: "todo"
-      },
-      {
         title: "table",
         description: "Basic table element",
         use_legacy_html_code_source: false,
