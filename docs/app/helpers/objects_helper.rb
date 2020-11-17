@@ -13,13 +13,13 @@ module ObjectsHelper
     [
       # Sage Generated Objects
       {
-        title: "alert",
-        description: "Alerts are used to indicate user-driven notifications.",
+        title: "avatar",
+        description: "The Avatar object shows a user's profile image in a circular frame and allows for a few helpful modifications for different uses.",
         use_legacy_html_code_source: false,
         scss: "done",
         docs: "done",
-        rails: "done",
-        react: "todo",
+        rails: "no",
+        react: "done",
         a11y: "todo"
       },
       {
