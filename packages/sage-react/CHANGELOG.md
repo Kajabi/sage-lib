@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.7](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.5.6...@kajabi/sage-react@0.5.7) (2020-11-17)
+
+
+### Bug Fixes
+
+* migrated avatar react component ([d0820a0](https://github.com/Kajabi/sage-lib/commit/d0820a0fc9f4659c2f2fb1428f36093a1ea6519d))
+
+
+
+
+
 ## [0.5.6](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.5.5...@kajabi/sage-react@0.5.6) (2020-11-17)
 
 **Note:** Version bump only for package @kajabi/sage-react

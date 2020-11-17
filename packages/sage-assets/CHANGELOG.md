@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.8](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.5.7...@kajabi/sage-assets@0.5.8) (2020-11-17)
+
+
+### Bug Fixes
+
+* migrated avatar rails component ([a162b17](https://github.com/Kajabi/sage-lib/commit/a162b170f705fa4e8f522e4ac2034b02f110d756))
+* updated react component styles ([ac99767](https://github.com/Kajabi/sage-lib/commit/ac997673a760f59bb90f0cb92c9460656f84ce25))
+
+
+
+
+
 ## [0.5.7](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.5.6...@kajabi/sage-assets@0.5.7) (2020-11-17)
 
 

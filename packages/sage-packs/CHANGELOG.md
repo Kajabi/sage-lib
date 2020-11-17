@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.60](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.0.59...@kajabi/sage-packs@0.0.60) (2020-11-17)
+
+**Note:** Version bump only for package @kajabi/sage-packs
+
+
+
+
+
 ## [0.0.59](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.0.58...@kajabi/sage-packs@0.0.59) (2020-11-17)
 
 **Note:** Version bump only for package @kajabi/sage-packs

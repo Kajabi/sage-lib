@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.22.35](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.22.34...@kajabi/sage@1.22.35) (2020-11-17)
+
+
+### Bug Fixes
+
+* migrated avatar rails component ([a162b17](https://github.com/Kajabi/sage-lib/commit/a162b170f705fa4e8f522e4ac2034b02f110d756))
+* updated objects_help for Avatar ([db69e0f](https://github.com/Kajabi/sage-lib/commit/db69e0f6cd8c379e1c2e142982e1fe9aa91ed180))
+
+
+
+
+
 ## [1.22.34](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.22.33...@kajabi/sage@1.22.34) (2020-11-17)
 
 
