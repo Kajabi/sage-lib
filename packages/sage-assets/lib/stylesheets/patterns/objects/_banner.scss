@@ -1,0 +1,145 @@
+/* ==================================================
+  ** banner
+  type: object
+
+================================================== */
+
+$-banner-colors: (
+  default: (
+    background: sage-color(primary),
+    text: sage-color(white),
+    text-hover: sage-color(primary, 100),
+    icon: "megaphone",
+  ),
+  secondary: (
+    background: sage-color(grey, 400),
+    text: sage-color(charcoal, 500),
+    text-hover: sage-color(charcoal, 300),
+    icon: "info-circle",
+  ),
+  warning: (
+    background: sage-color(yellow, 300),
+    text: sage-color(yellow, 500),
+    text-hover: sage-color(yellow, 400),
+    icon: "warning",
+  ),
+  danger: (
+    background: sage-color(red, 300),
+    text: sage-color(white),
+    text-hover: sage-color(red, 100),
+    icon: "danger",
+  ),
+);
+
+$-icon: "::before";
+
+.sage-banner {
+  @extend %t-sage-body-med;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: sage-z-index(negative);
+  transform: translateY(-100px);
+  width: 100%;
+  padding: rem(10px) sage-spacing(md);
+  color: map-get(map-get($-banner-colors, default), text);
+  background: map-get(map-get($-banner-colors, default), background);
+  transition: 0.3s ease-in-out;
+  transition-property: transform, opacity, z-index;
+  opacity: 0;
+
+  .sage-banner-wrapper--context-ladera-top & {
+    position: absolute;
+  }
+
+  .sage-banner-wrapper--context-sage-demo & {
+    position: relative;
+  }
+
+  &#{$-icon} {
+    @include sage-icon-base(map-get(map-get($-banner-colors, default), icon));
+    margin-right: sage-spacing(xs);
+  }
+}
+
+@each $name, $configs in $-banner-colors {
+  .sage-banner--#{$name} {
+    color: map-get($configs, text);
+    background: map-get($configs, background);
+
+    &#{$-icon} {
+      content: sage-icon(map-get($configs, icon));
+    }
+  }
+}
+
+.sage-banner--active {
+  transform: translateY(0);
+  z-index: sage-z-index(nav, 1);
+  opacity: 1;
+}
+
+.sage-banner-wrapper--context-ladera-top {
+  margin-bottom: 60px;
+}
+
+.sage-banner__text {
+  display: inline-flex;
+  color: inherit;
+
+  &:not(:last-child) {
+    margin-right: sage-spacing(sm);
+  }
+}
+
+.sage-banner__icon {
+  display: inline-flex;
+  align-self: center;
+  margin-right: sage-spacing(xs);
+}
+
+.sage-banner__link {
+  color: inherit;
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  @include sage-focus-outline();
+}
+
+.sage-banner__close {
+  display: none;
+  position: absolute;
+  right: $sage-card-padding;
+
+  .sage-banner--active & {
+    display: block;
+  }
+}
+
+.sage-banner__close,
+.sage-banner__link {
+  @include sage-focus-outline--update-color(map-get(map-get($-banner-colors, default), text));
+
+  &:hover {
+    color: map-get(map-get($-banner-colors, default), text-hover);
+  }
+
+  @each $name, $configs in $-banner-colors {
+    /* stylelint-disable max-nesting-depth */
+    .sage-banner--#{$name} & {
+      @include sage-focus-outline--update-color(map-get($configs, text));
+
+      &:hover {
+        color: map-get($configs, text-hover);
+      }
+    }
+    /* stylelint-enable max-nesting-depth */
+  }
+}

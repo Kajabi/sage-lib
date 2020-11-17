@@ -23,6 +23,16 @@ module ObjectsHelper
         a11y: "todo"
       },
       {
+        title: "banner",
+        description: "A banner that displays at the top of the page, used for systemwide notifications and events.",
+        use_legacy_html_code_source: false,
+        scss: "done",
+        docs: "done",
+        rails: "done",
+        react: "doing",
+        a11y: "done"
+      },
+      {
         title: "card",
         description: "A versatile smaller container for grouping content within panels",
         use_legacy_html_code_source: false,

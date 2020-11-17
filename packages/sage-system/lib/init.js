@@ -42,6 +42,7 @@ Sage.init = function(elementNamesToInitLegacy) {
   initDocumentPresenceListener('[data-js-copy-button]',        Sage.copyButton.init,       Sage.copyButton.unbind);
   initDocumentPresenceListener('[data-js-accordion="header"]', Sage.accordion.init,        Sage.accordion.unbind);
   initDocumentPresenceListener('[data-js-select]',             Sage.select.init,           Sage.select.unbind);
+  initDocumentPresenceListener('[data-js-banner], [data-js-toggle-banner]',      Sage.banner.init,        Sage.banner.unbind);
 
   // ==================================================
   // Event Listeners
@@ -104,11 +105,6 @@ Sage.init = function(elementNamesToInitLegacy) {
   // Initialize Meter
   if ( shouldInitLegacy('meter', '.sage-meter') ) {
     Sage.meter.init();
-  }
-
-  // Initialize Banner
-  if ( shouldInitLegacy('banner', '.sage-banner--active') && !inDocumentationContext() ) {
-    Sage.banner.init();
   }
 
 }
