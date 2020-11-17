@@ -73,6 +73,26 @@ module ObjectsHelper
         a11y: "done"
       },
       {
+        title: "catalog_item",
+        description: "The Catalog Item displays Products, Offers, and other resources with a large amount of detail to display in list form.",
+        use_legacy_html_code_source: false,
+        scss: "done",
+        docs: "done",
+        rails: "done",
+        react: "todo",
+        a11y: "done"
+      },
+      {
+        title: "data_card",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        use_legacy_html_code_source: true,
+        scss: "todo",
+        docs: "done",
+        rails: "todo",
+        react: "todo",
+        a11y: "todo",
+      },
+      {
         title: "panel",
         description: "Panels are used as multi-purpose containers for a variety of content.",
         use_legacy_html_code_source: false,
