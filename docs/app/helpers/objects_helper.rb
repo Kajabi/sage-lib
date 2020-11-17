@@ -93,6 +93,16 @@ module ObjectsHelper
         a11y: "todo",
       },
       {
+        title: "dropdown",
+        description: "Sage dropdown",
+        use_legacy_html_code_source: false,
+        scss: "done",
+        docs: "done",
+        rails: "done",
+        react: "todo",
+        a11y: "todo"
+      },
+      {
         title: "panel",
         description: "Panels are used as multi-purpose containers for a variety of content.",
         use_legacy_html_code_source: false,
