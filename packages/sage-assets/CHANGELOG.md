@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.10](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.5.9...@kajabi/sage-assets@0.5.10) (2020-11-17)
+
+
+### Bug Fixes
+
+* **pagination:** migrated pagination component stylesheet ([22ce4c1](https://github.com/Kajabi/sage-lib/commit/22ce4c1606605ffe633ce94a431e900f5325c78d))
+* **pagination:** uncomment pagination in index.scss ([4bc8fbe](https://github.com/Kajabi/sage-lib/commit/4bc8fbebea6e36d68e7cc48e4c7cef0d3dbe242f))
+
+
+
+
+
 ## [0.5.9](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.5.8...@kajabi/sage-assets@0.5.9) (2020-11-17)
 
 

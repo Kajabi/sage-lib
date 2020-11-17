@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.22.37](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.22.36...@kajabi/sage@1.22.37) (2020-11-17)
+
+
+### Bug Fixes
+
+* migrated pagination component and views ([4a873e2](https://github.com/Kajabi/sage-lib/commit/4a873e2a01f7cb526a512f359efbecb23988a089))
+* **pagination:** added pagination to object_helper ([d98aae2](https://github.com/Kajabi/sage-lib/commit/d98aae23143be71b30bef303ae98040b705dbdc7))
+* **pagination:** migrated pagination examples ([0d7362f](https://github.com/Kajabi/sage-lib/commit/0d7362f61f6a1a1266ea6a78bdca26c0bbca7fbe))
+
+
+
+
+
 ## [1.22.36](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.22.35...@kajabi/sage@1.22.36) (2020-11-17)
 
 
