@@ -13,6 +13,16 @@ module ObjectsHelper
     [
       # Sage Generated Objects
       {
+        title: "alert",
+        description: "Alerts are used to indicate user-driven notifications.",
+        use_legacy_html_code_source: false,
+        scss: "done",
+        docs: "done",
+        rails: "done",
+        react: "todo",
+        a11y: "todo"
+      },
+      {
         title: "avatar",
         description: "The Avatar object shows a user's profile image in a circular frame and allows for a few helpful modifications for different uses.",
         use_legacy_html_code_source: false,
@@ -81,6 +91,16 @@ module ObjectsHelper
         rails: "todo",
         react: "todo",
         a11y: "todo"
+      },
+      {
+        title: "popover",
+        description: "Popovers open upon click to show information regarding the section. It has a header/subject, minimal information, and a link to learn more",
+        use_legacy_html_code_source: false,
+        scss: "done",
+        docs: "todo",
+        rails: "done",
+        react: "todo",
+        a11y: "done"
       },
       {
         title: "tabs",
