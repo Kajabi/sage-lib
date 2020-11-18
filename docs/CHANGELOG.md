@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.22.39](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.22.38...@kajabi/sage@1.22.39) (2020-11-18)
+
+
+### Bug Fixes
+
+* migrate rail breadcrumbs component ([2644b27](https://github.com/Kajabi/sage-lib/commit/2644b2714973f636282b3a4915a74fd2decacd86))
+* migrate rails page heading component ([9a571df](https://github.com/Kajabi/sage-lib/commit/9a571df79386f143f7ba1bd74dce0c6cf668c510))
+
+
+
+
+
 ## [1.22.38](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.22.37...@kajabi/sage@1.22.38) (2020-11-17)
 
 
