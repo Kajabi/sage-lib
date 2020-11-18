@@ -6,7 +6,7 @@ import { FormSection } from '../FormSection';
 import { Input } from '../Input';
 import { SageTokens } from '../configs';
 import { withKnobs, select, text, boolean } from '@storybook/addon-knobs';
-import { centerXY } from 'stories/config/decorators';
+import { centerXY } from '../story-support/decorators';
 import {
   defaultOptionsItems,
   sampleMenuItems,
