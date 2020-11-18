@@ -1,0 +1,74 @@
+<% 3.times do %>
+  <%= sage_component SageCatalogItem, {
+    title: "Fun For All – The Children Call: Their Favorite Time Of Year",
+    image: asset_pack_path("media/images/docs/card/card-placeholder-sm.png"),
+    href: "#"
+  } do %>
+    <%= sage_component SageButton, {
+      style: "secondary",
+      subtle: true,
+      small: true,
+      icon: { name: "comment", style: "left" },
+      value: "5 Golden Eggs",
+    } %>
+    <%= sage_component SageButton, {
+      style: "secondary",
+      subtle: true,
+      small: true,
+      icon: { name: "users", style: "left" },
+      value: "3 Geese A-Laying",
+    } %>
+    <%= sage_component SageButton, {
+      style: "secondary",
+      subtle: true,
+      small: true,
+      icon: { name: "coupon", style: "left" },
+      value: "1 Partridge In A Pear Tree",
+    } %>
+    <%= content_for :sage_aside do %>
+      <%= sage_component SageDropdown, {
+        align: "right",
+        items: [{
+          value: sage_component(SageLabel, { color: "success", value: "Publish" }),
+          attributes: { "href": "#" },
+        }, {
+          value: sage_component(SageLabel, { color: "info", value: "Drip" }),
+          attributes: { "href": "#" },
+        }, {
+          value: sage_component(SageLabel, { color: "draft", value: "Draft" }),
+          attributes: { "href": "#" },
+        }, {
+          value: "Delete Category",
+          icon: "trash",
+          style: "danger",
+          attributes: { "href": "#" },
+        }]
+      } do %>
+        <%= sage_component SageLabel, {
+          color: "info",
+          interactive: true,
+          value: "Drip",
+          icon: { style: "right", name: "caret-down" }
+        } %>
+      <% end %>
+      <%= sage_component SageDropdown, {
+        align: "right",
+        items: [{
+          value: "Edit Item",
+          icon: "pen",
+          attributes: {
+            "href": "#",
+          },
+        }]
+      } do %>
+        <%= sage_component SageButton, {
+          style: "secondary",
+          icon: { name: "dot-menu-horizontal", style: "only" },
+          value: "Edit",
+          align: "end",
+          subtle: true,
+        } %>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>
