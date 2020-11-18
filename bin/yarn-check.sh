@@ -17,5 +17,4 @@ else
   cd $sage_repo_path
   yarn bootstrap
   git add yarn.lock
-  git commit -m "chore(monorepo): updating yarn.lock for repository"
 fi;
