@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { Button, SelectDropdown } from 'common/components/Sage';
-import Dropdown from 'common/components/Sage/Dropdown/Dropdown';
-import DropdownItem from 'common/components/Sage/Dropdown/DropdownItem';
+import { Button } from '../Button';
+import { SelectDropdown } from './SelectDropdown';
+import Dropdown from './Dropdown';
+import DropdownItem from './DropdownItem';
 import { sampleSelectItems } from './configs';
 
 const SelectDropdownDemo = () => {
