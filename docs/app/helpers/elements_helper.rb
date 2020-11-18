@@ -13,6 +13,16 @@ module ElementsHelper
     [
       # Sage Generated Elements
       {
+        title: "breadcrumbs",
+        description: "Breadcrumbs provide a sense of where we are in the site structure with hyperlinks to previous areas in that structure. Our element also provides a specific \"Back link\" variation",
+        use_legacy_html_code_source: false,
+        scss: "done",
+        docs: "done",
+        rails: "done",
+        react: "done",
+        a11y: "done"
+      },
+      {
         title: "button",
         description: "Standard button styling with multiple display options. Can be applied on both button and link elements.",
         use_legacy_html_code_source: false,

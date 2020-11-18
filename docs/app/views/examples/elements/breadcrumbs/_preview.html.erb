@@ -1,0 +1,66 @@
+<%= sage_component SageCardBlock, {} do %>
+  <%= sage_component SageLabel, {
+    color: "draft",
+    value: "Default",
+    html_tag: "h3"
+  } %>
+<% end %>
+<%= sage_component SageBreadcrumbs, {
+  items: [
+    {
+      text: 'Test 1',
+      url: 'http://example.com/1'
+    },
+    {
+      text: 'Test 2',
+      url: 'http://example.com/2'
+    },
+    {
+      text: 'Test 3',
+      url: 'http://example.com/3'
+    }
+  ]
+} %>
+
+<%= sage_component SageCardBlock, {} do %>
+  <%= sage_component SageLabel, {
+    color: "draft",
+    value: "Back Link Variation",
+    html_tag: "h3"
+  } %>
+<% end %>
+<%= sage_component SageBreadcrumbs, {
+  has_back_icon: true,
+  items: [
+    {
+      text: 'Settings',
+      url: '#'
+    }
+  ]
+} %>
+
+<%= sage_component SageCardBlock, {} do %>
+  <%= sage_component SageLabel, {
+    color: "draft",
+    value: "Progress Bar Variation",
+    html_tag: "h3"
+  } %>
+<% end %>
+<%= sage_component SageBreadcrumbs, {
+  is_progressbar: true,
+  items: [
+    {
+      text: 'Test 1',
+      url: 'http://example.com/1'
+    },
+    {
+      text: 'Test 2',
+      url: 'http://example.com/2',
+      is_current: true
+    },
+    {
+      text: 'Test 3',
+      url: 'http://example.com/3'
+    }
+  ]
+} %>
