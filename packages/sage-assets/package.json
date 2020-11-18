@@ -1,6 +1,6 @@
 {
   "name": "@kajabi/sage-assets",
-  "version": "0.5.13",
+  "version": "0.5.14",
   "description": "Assets",
   "main": "dist/main.css",
   "repository": {
@@ -51,6 +51,5 @@
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12"
   },
-  "gitHead": "b8c2dd5f156473667f33a4d425c501a1e3b1c578",
-  "dependencies": {}
+  "gitHead": "b8c2dd5f156473667f33a4d425c501a1e3b1c578"
 }
