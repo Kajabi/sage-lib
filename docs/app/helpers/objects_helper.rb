@@ -83,6 +83,16 @@ module ObjectsHelper
         a11y: "done"
       },
       {
+        title: "page_heading",
+        description: "Page headings are used at the top of pages and contain the title of the page along with optional breadcrumbs, help link, action buttons, toolbar, and intro text.",
+        use_legacy_html_code_source: false,
+        scss: "done",
+        docs: "done",
+        rails: "done",
+        react: "done",
+        a11y: "done"
+      },
+      {
         title: "pagination",
         description: "Pagination is used for splitting up results into several pages and provides controls for navigating to the next or previous page.",
         use_legacy_html_code_source: true,
