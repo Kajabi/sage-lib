@@ -60,7 +60,7 @@
 
 // build individual color blocks
 @each $name, $color in $sage-colors {
-  .color-#{$name} {
+  .color-#{"" + $name} {
     @each $tone, $hex in $color {
       @include generate-color-tones($name, $tone, $hex);
     }

@@ -1,0 +1,22 @@
+<div class="sage-expandable-card">
+  <div
+    class="sage-expandable-card__header"
+    data-js-accordion="header"
+  >
+    <%= header.html_safe if defined?(header) %>
+    <% if defined?(header_aside) %>
+      <aside class="sage-expandable-card__header-aside">
+        <%= header_aside.html_safe %>
+      </aside>
+    <% end %>
+  </div>
+  <div
+    class="sage-expandable-card__body"
+    data-js-accordion="body"
+  >
+    <%= body.html_safe %>
+  </div>
+  <% if defined?(footer) %>
+    <div class="sage-expandable-card__footer"><%= footer %></div>
+  <% end %>
+</div>

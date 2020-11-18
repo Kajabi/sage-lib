@@ -1,0 +1,16 @@
+<div
+  class="sage-input<% if has_error %> sage-input--error<% end %><% if prefix != "" || suffix !="" %> sage-input--affixed<% end %><% if has_placeholder %> sage-input--showplaceholder<% end %>"
+  <%= prefix != "" ? "data-js-input-prefix=#{prefix}" : "" -%>
+  <%= suffix != "" ? "data-js-input-suffix=#{suffix}" : "" -%>
+>
+  <input
+    type="<%= input_type %>"
+    id="<%= id %>"
+    class="sage-input__field"
+    name="<%= id %>"
+    placeholder="<%= placeholder -%>"
+    <%= required ? "required" : "" -%>
+  <%- if input_mode != "" -%> inputmode="<%= input_mode -%>"<%- end -%><%- if pattern != "" -%> pattern="<%= pattern -%>"<%- end -%><%- if max != "" -%> max="<%= max %>"<%- end -%><%- if minlength != "" -%> minlength="<%= minlength -%>"<%- end -%><%- if maxlength != "" -%> maxlength="<%= maxlength -%>"<%- end -%><%- if value != "" -%> value="<%= value -%>"<%- end -%><%- if disabled == true %> disabled<%- end -%>>
+  <label for="<%= id %>" class="sage-input__label"><%= label_text %></label>
+  <% if message_text != "" %><div class="sage-input__message"><%= message_text %></div><% end %>
+</div>

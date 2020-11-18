@@ -1,0 +1,12 @@
+<h3 class="t-sage-heading-6">Copy Text (inline)</h3>
+<%= sage_component SageCopyText, { value: "me.ns.cloudflare.com", semibold: true } %>
+
+<h3 class="t-sage-heading-6">Copy Text (block)</h3>
+<%= sage_component SageCopyTextCard, {} do %>
+  <p><b>Reply:</b> me.ns.cloudflare.com</p>
+  <p>me.ns.cloudflare.com</p>
+  <p>me.ns.cloudflare.com</p>
+<% end %>
+
+<h3 class="t-sage-heading-6">Copy Button</h3>
+<%= sage_component SageCopyButton, { value: "me.ns.cloudflare.com", semibold: true } %>

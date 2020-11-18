@@ -1,0 +1,87 @@
+<h3 class="t-sage-heading-6">As a Panel list</h3>
+<%= sage_component SagePanelList, {} do %>
+  <%= sage_component SageSortable, { resource_name: "link" } do %>
+
+    <% 3.times do %>
+      <%= sage_component SageSortableItem, {
+        title: "Name Text",
+        subtitle: "Label Text",
+        url_update: "update/endpoint",
+        id: "id"
+      } do %>
+        <%= sage_component SageStatusIcon, {
+          icon: "lock",
+          value: "Authenticated Only"
+        } %>
+        <%= sage_component SageButton, {
+          attributes: {
+            "data-js-tooltip": "Preview"
+          },
+          style: "secondary",
+          subtle: true,
+          icon: { name: "preview-on", style: "only" },
+          value: "Preview"
+        } %>
+        <%= sage_component SageButton, {
+          attributes: {
+            "data-js-tooltip": "Edit",
+          },
+          style: "secondary",
+          subtle: true,
+          icon: { name: "pen", style: "only" },
+          value: "Edit"
+        } %>
+      <% end %>
+    <% end %>
+
+    <%= sage_component_section :empty do %>
+      <%= sage_component SageEmptyState, {
+        title: "Empty State Title",
+        text: "Empty state text",
+      } %>
+    <% end %>
+  <% end %>
+<% end %>
+
+<h3 class="t-sage-heading-6">As cards</h3>
+<%= sage_component SageSortable, { resource_name: "link" } do %>
+  <% 3.times do %>
+    <%= sage_component SageSortableItem, {
+      title: "Name Text",
+      subtitle: "Label Text",
+      url_update: "update/endpoint",
+      id: "id",
+      card: true
+    } do %>
+      <%= sage_component SageStatusIcon, {
+        icon: "lock",
+        value: "Authenticated Only",
+      } %>
+      <%= sage_component SageButton, {
+        attributes: {
+          "data-js-tooltip": "Preview"
+        },
+        style: "secondary",
+        subtle: true,
+        icon: { name: "preview-on", style: "only" },
+        value: "Preview"
+      } %>
+      <%= sage_component SageButton, {
+        attributes: {
+          "data-js-tooltip": "Edit",
+        },
+        style: "secondary",
+        subtle: true,
+        icon: { name: "pen", style: "only" },
+        value: "Edit"
+      } %>
+    <% end %>
+  <% end %>
+
+  <%= sage_component_section :empty do %>
+    <%= sage_component SageEmptyState, {
+      title: "Empty State Title",
+      text: "Empty state text",
+    } %>
+  <% end %>
+<% end %>

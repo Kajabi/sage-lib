@@ -1,0 +1,109 @@
+<tr>
+  <td>
+    <code>target</code>
+  </td>
+  <td>
+    <%= md("The HTML ID for the list this panel controls will target with any events.") %>
+  </td>
+  <td>String</td>
+  <td>null</td>
+</tr>
+<tr>
+  <td>
+    <code>item_count_label</code>
+  </td>
+  <td>
+    <%= md("A caption for the bulk actions checkbox.") %>
+  </td>
+  <td>String</td>
+  <td>"Select all"</td>
+</tr>
+
+<tr>
+  <td>
+    <code>bulk_action_items</code>
+  </td>
+  <td>
+    <%= md("The list of items to populate in the bulk actions dropdown.") %>
+  </td>
+  <td>Array: See structure for Dropdown items</td>
+  <td>null</td>
+</tr>
+
+<tr>
+  <td>
+    <code>sort_items</code>
+  </td>
+  <td>
+    <%= md("The list of items to populate in the sort dropdown.") %>
+  </td>
+  <td>Array: See structure for Dropdown items</td>
+  <td>null</td>
+</tr>
+
+<tr>
+  <td>
+    <code>start_expanded</code>
+  </td>
+  <td>
+    <%= md("
+      Whether or not the controls should start as expanded or collapsed.
+      This merely affects which of the two buttons appears by default
+      and should be syncronized with the actual target list.
+    ") %>
+  </td>
+  <td>Boolean</td>
+  <td>false</td>
+</tr>
+<tr>
+  <td>
+    <code>show_bulk_actions</code>
+  </td>
+  <td>
+    <%= md("
+      Whether or not to render the bulk actions checkmark and dropdown.
+      If set to `true`, the `bulk_action_items`
+      should also be provided to populate the dropdown.
+    ") %>
+  </td>
+  <td>Boolean</td>
+  <td>false</td>
+</tr>
+<tr>
+  <td>
+    <code>show_expand_collapse</code>
+  </td>
+  <td>
+    <%= md('
+      Whether or not to show the "expand"/"collapse" button toggle.
+      If set to `true` the "expand" button will appear by default
+      unless `start_expanded` is set to `true` as well.
+    ') %>
+  </td>
+  <td>Boolean</td>
+  <td>false</td>
+</tr>
+
+<tr>
+  <td>
+    <code>show_pagination</code>
+  </td>
+  <td><%= md("TBD") %>
+  </td>
+  <td>Boolean</td>
+  <td>false</td>
+</tr>
+<tr>
+  <td>
+    <code>show_sort</code>
+  </td>
+  <td>
+    <%= md("
+      Whether or not to render the sorting dropdown.
+      If set to `true`, the `sort_items`
+      should also be provided to populate the dropdown.
+    ") %>
+  </td>
+  <td>Boolean</td>
+  <td>false</td>
+</tr>

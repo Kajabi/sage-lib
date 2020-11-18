@@ -1,0 +1,23 @@
+<div id="<%= helper_id %>" class="sage-input-helper" role="tooltip"<% if helper_target != "" %> data-js-helper-target="<%= helper_target %>"<% end %>>
+  <%- if description -%>
+  <p class="sage-hint__description"><%= description %></p>
+  <%- end -%>
+
+  <ul class="sage-hint__list">
+    <%- hints.each do |hint| -%>
+    <li class="sage-hint__list-item"<% if hint[:id] %> id="<%= hint[:id] %>"<% end %><% if hint[:type_detect] != "" %> data-js-hint-type="<%= hint[:type_detect] %>"<% end %><% if hint[:type_detect_min] != "" %> data-js-hint-min="<%= hint[:type_detect_min] %>"<% end %>><%= hint[:text] %></li>
+    <%- end -%>
+  </ul>
+
+  <%= render "examples/elements/meter/markup",
+    id: "pw-hint-meter",
+    label: "Password strength",
+    value: 0,
+    max_value: 4,
+    optimum_value: 4,
+    low_value_text: "Weak password",
+    med_value_text: "¯\\_(ツ)_/¯",
+    high_value_text: "Not bad",
+    max_value_text: "Strong password"
+  %>
+</div>
