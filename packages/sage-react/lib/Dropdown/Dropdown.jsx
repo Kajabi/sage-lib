@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { debounce } from 'common/lib/debounce';
+import { debounce } from 'debounce';
 import { SageTokens } from '../configs';
 import DropdownItem from './DropdownItem';
 import DropdownItemList from './DropdownItemList';
