@@ -12,14 +12,15 @@
   spacer: { bottom: :xl },
 } do %>
     <% content_for :sage_breadcrumbs do %>
-      <%= render "examples/elements/breadcrumbs/markup",
-        klass: "sage-page-heading__back",
+      <%= sage_component SageBreadcrumbs, {
         has_back_icon: true,
-        items: [{
-        text: "Back to Something",
-        url: "#"
-      }]
-    %>
+        items: [
+          {
+            text: 'Back to Something',
+            url: '#'
+          }
+        ]
+      } %>
   <% end %>
 <% end %>
 

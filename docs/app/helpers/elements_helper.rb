@@ -93,6 +93,16 @@ module ElementsHelper
         a11y: "doing"
       },
       {
+        title: "loader",
+        description: "Stylized loading animations for use with elements or objects",
+        use_legacy_html_code_source: true,
+        scss: "done",
+        docs: "done",
+        rails: "no",
+        react: "no",
+        a11y: "todo"
+      },
+      {
         title: "tab",
         description: "A tab button to be used inside a tabs object",
         use_legacy_html_code_source: false,
