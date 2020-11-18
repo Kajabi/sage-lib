@@ -1,4 +1,4 @@
-import { SageTokens } from '../story-support/decorators';
+import { SageTokens } from '../../configs';
 
 export const defaultOptionsItems = [
   {

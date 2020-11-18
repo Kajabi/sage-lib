@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { SageTokens } from '../configs';
-import Checkbox from '../Toggle/Checkbox';
 import Link from '../Link';
+import { Checkbox } from '../Toggle';
 import OptionsDropdown from './OptionsDropdown';
 import { DROPDOWN_ITEM_COLORS } from './configs';
 

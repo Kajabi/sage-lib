@@ -1,0 +1,3 @@
+Individual custom sets of conent that is laid out in a row/inline fashion can be created using the `Panel.Row` along with one of the [Sage Grid Template](https://sage-design-system.kajabi.com/pages/foundations/grid_templates) classes.
+
+While the default vertical alignment is set to center the items, `verticalAlign` can be passed other values such as `start` to adjust this default.

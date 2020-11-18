@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { SelectDropdown } from './SelectDropdown';
+import SelectDropdown from '../SelectDropdown';
 
 const MultiMenuStory = () => {
   const defaultItems = [

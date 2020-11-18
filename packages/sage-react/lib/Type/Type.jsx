@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { SageClassnames } from '../configs';
+import { SageClassnames } from '../';
 
 const Type = ({ children, className, ...rest }) => (
   <div className={`${SageClassnames.TYPE_BLOCK} ${className || ''}`} {...rest}>

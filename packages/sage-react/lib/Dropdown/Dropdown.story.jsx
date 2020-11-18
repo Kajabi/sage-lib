@@ -1,18 +1,16 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Button } from '../Button';
-import { Dropdown, OptionsDropdown } from '../Dropdown';
-import { FormSection } from '../FormSection';
-import { Input } from '../Input';
-import { SageTokens } from '../configs';
 import { withKnobs, select, text, boolean } from '@storybook/addon-knobs';
 import { centerXY } from '../story-support/decorators';
-import {
-  defaultOptionsItems,
-  sampleMenuItems,
-} from './configs';
-import MultiMenuStory from './MultiMenuStory';
-import SelectDropdownDemo from './SelectDropdownDemo';
+import { SageTokens } from '../configs';
+import Button from '../Button';
+import FormSection from '../FormSection';
+import Input from '../Input';
+import Dropdown from './Dropdown';
+import OptionsDropdown from './OptionsDropdown';
+import { defaultOptionsItems, sampleMenuItems } from './stories/story-helper';
+import MultiMenuStory from './stories/MultiMenuStory';
+import SelectDropdownDemo from './stories/SelectDropdownDemo';
 
 storiesOf('Sage/Dropdown', module)
   .addDecorator(withKnobs)

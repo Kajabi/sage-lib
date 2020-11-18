@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { Button } from '../Button';
-import { SelectDropdown } from './SelectDropdown';
-import Dropdown from './Dropdown';
-import DropdownItem from './DropdownItem';
-import { sampleSelectItems } from './configs';
+import Button from '../../Button';
+import SelectDropdown from '../SelectDropdown';
+import Dropdown from '../Dropdown';
+import DropdownItem from '../DropdownItem';
+import { sampleSelectItems } from './story-helper';
 
 const SelectDropdownDemo = () => {
   const [resetToken, setResetToken] = useState(0);

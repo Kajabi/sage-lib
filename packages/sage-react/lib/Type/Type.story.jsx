@@ -2,7 +2,8 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { centerXY } from '../story-support/decorators';
-import { Grid, Link } from '../index';
+import Grid from '../Grid';
+import Link from '../Link';
 import Type from './Type';
 import TypeNotes from './TypeNotes.md';
 
