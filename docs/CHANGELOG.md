@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.22.43](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.22.42...@kajabi/sage@1.22.43) (2020-11-18)
+
+
+### Bug Fixes
+
+* migrated loader rails component ([15a32c4](https://github.com/Kajabi/sage-lib/commit/15a32c41cab55f6bedef585ce31f6d510642cbf4))
+
+
+
+
+
 ## [1.22.42](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.22.41...@kajabi/sage@1.22.42) (2020-11-18)
 
 

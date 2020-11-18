@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.16](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.5.15...@kajabi/sage-assets@0.5.16) (2020-11-18)
+
+
+### Bug Fixes
+
+* migrated loader rails component ([15a32c4](https://github.com/Kajabi/sage-lib/commit/15a32c41cab55f6bedef585ce31f6d510642cbf4))
+
+
+
+
+
 ## [0.5.15](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.5.14...@kajabi/sage-assets@0.5.15) (2020-11-18)
 
 

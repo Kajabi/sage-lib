@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.15](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.5.14...@kajabi/sage-react@0.5.15) (2020-11-18)
+
+
+### Bug Fixes
+
+* migrate react card component ([d340a84](https://github.com/Kajabi/sage-lib/commit/d340a846266c0c6a45522bd3c2b0d932f3ec825e))
+* migrated react loader ([5ae59e2](https://github.com/Kajabi/sage-lib/commit/5ae59e2e30587fa40e64c957d07c818086bd7bd6))
+
+
+
+
+
 ## [0.5.14](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.5.13...@kajabi/sage-react@0.5.14) (2020-11-18)
 
 
