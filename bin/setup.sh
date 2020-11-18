@@ -35,7 +35,7 @@ function install_circleci_cli() {
         echo "OS type (${uname -s}) is not currently supported."
         exit 1
       ;;
-      esac
+    esac
   )
 }
 
