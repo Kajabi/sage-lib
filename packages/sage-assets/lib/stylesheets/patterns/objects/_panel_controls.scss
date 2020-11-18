@@ -1,0 +1,73 @@
+.sage-panel-controls {
+  display: grid;
+  gap: $sage-panel-grid-gap;
+  grid-template-rows: min-content;
+
+  &::after {
+    content: "";
+    display: block;
+    height: 0;
+    margin-right: -1 * $sage-panel-padding;
+    margin-left: -1 * $sage-panel-padding;
+    border-top: 1px solid sage-color(grey, 300);
+  }
+}
+
+.sage-panel-controls__toolbar,
+.sage-panel-controls__default-controls {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sage-panel-controls__toolbar-btn-group {
+  display: flex;
+  align-items: center;
+  flex: 1;
+
+  &:not(:last-child) {
+    margin-right: $sage-panel-grid-gap;
+  }
+}
+
+.sage-panel-controls__pagination {
+  display: flex;
+  align-items: center;
+
+  &:not(:last-child) {
+    margin-right: $sage-panel-grid-gap;
+  }
+}
+
+.sage-panel-controls__bulk-actions {
+  display: flex;
+  flex: 1;
+  align-items: center;
+
+  &:not(:last-child) {
+    margin-right: $sage-panel-grid-gap;
+  }
+}
+
+.sage-panel-controls__bulk-actions-dropdown {
+  display: none;
+
+  .sage-panel-controls__bulk-actions--checked & {
+    display: block;
+  }
+}
+
+.sage-panel-controls__item-count-label {
+  margin-left: sage-spacing(xs);
+}
+
+// Expand/collapse button setup
+// If status is "collapse" then the "collapse" button should show and not the "expand"
+[data-js-expand-collapse-status="collapse"] .sage-panel-controls__expand-btn {
+  display: none;
+}
+// Or if status is "expand" then the "expand" button should show and not the "collapse"
+[data-js-expand-collapse-status="expand"] .sage-panel-controls__collapse-btn {
+  display: none;
+}

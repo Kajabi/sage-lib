@@ -1,0 +1,37 @@
+/* ==================================================
+  ** empty_state
+  type: object
+
+================================================== */
+
+.sage-empty-state {
+  max-width: sage-container(modal);
+  margin-left: auto;
+  margin-right: auto;
+  padding: sage-spacing(2xl) sage-spacing();
+  text-align: center;
+  justify-items: center;
+
+  @include sage-grid-panel();
+}
+
+.sage-empty-state--compact {
+  padding-top: sage-spacing(xs);
+  padding-bottom: sage-spacing(xs);
+}
+
+.sage-empty-state__icon {
+  color: sage-color(charcoal, 100);
+}
+
+.sage-empty-state__title {
+  @extend %t-sage-heading-4;
+
+  color: sage-color(charcoal, 500);
+  word-wrap: break-word;
+}
+
+.sage-empty-state__text {
+  color: sage-color(charcoal, 200);
+  word-wrap: break-word;
+}

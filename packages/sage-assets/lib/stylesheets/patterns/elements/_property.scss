@@ -1,0 +1,31 @@
+/* ==================================================
+  ** property
+  type: element
+
+================================================== */
+
+.sage-property {
+  @extend %t-sage-body-small;
+
+  display: inline-flex;
+  align-items: center;
+  color: sage-color(charcoal, 200);
+
+  .sage-catalog-item__content & {
+    &:not(:last-child) {
+      margin-right: sage-spacing();
+    }
+  }
+}
+
+.sage-property__icon {
+  margin-right: sage-spacing(xs);
+
+  &::before {
+    vertical-align: text-top;
+  }
+}
+
+.sage-property__value {
+  @include truncate();
+}
