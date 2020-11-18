@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.15](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.5.14...@kajabi/sage-assets@0.5.15) (2020-11-18)
+
+
+### Bug Fixes
+
+* **docs:** added form_section and search examples ([ed06bde](https://github.com/Kajabi/sage-lib/commit/ed06bdee18ba8c615c8f353603519c1ff394cf29))
+* **sage-assets:** added catalog_item and data_card stylesheets ([8ef7430](https://github.com/Kajabi/sage-lib/commit/8ef7430cccf812b829cb502f9882406806b6cf19))
+* **sage-assets:** added catalog_item and data_card stylesheets ([4491253](https://github.com/Kajabi/sage-lib/commit/44912534eac2526d4391387b2d5f17f4b86a0a64))
+* **sage-assets:** added dropdown and search styles ([56759df](https://github.com/Kajabi/sage-lib/commit/56759dfd3ace7b15bfd5b5efc854d9e4c3dd3dcf))
+* **sage-assets:** added tab stylesheet ([fc2902f](https://github.com/Kajabi/sage-lib/commit/fc2902f5485a53288ad453fad2f94153fd0246de))
+
+
+
+
+
 ## [0.5.14](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.5.13...@kajabi/sage-assets@0.5.14) (2020-11-18)
 
 

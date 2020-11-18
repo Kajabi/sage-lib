@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.14](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.5.13...@kajabi/sage-react@0.5.14) (2020-11-18)
+
+
+### Bug Fixes
+
+* **sage-react:** added catalog_item and data_card components ([f038844](https://github.com/Kajabi/sage-lib/commit/f0388445f4d70cc6197d1504dfdf09b5a8655acb))
+* **sage-react:** added debounce library ([c214f45](https://github.com/Kajabi/sage-lib/commit/c214f4509084818153012a315053d0c2a3923ab1))
+* **sage-react:** added Dropdown, FormSection, Input and Search components ([fc7ea02](https://github.com/Kajabi/sage-lib/commit/fc7ea023a9d581494d67ece52afa1b39e945badc))
+* **sage-react:** added toggle component ([ebd8437](https://github.com/Kajabi/sage-lib/commit/ebd8437c7539fee3079c25934518e580c7a1a421))
+* **sage-react:** fixed import paths ([bea9161](https://github.com/Kajabi/sage-lib/commit/bea9161d279732c2e99eab88ea9b68ff5aa1bf75))
+* **sage-react:** path fix ([b4a3207](https://github.com/Kajabi/sage-lib/commit/b4a32075bddddace3851dd46949ce8f7cd6eedfd))
+
+
+
+
+
 ## [0.5.13](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.5.12...@kajabi/sage-react@0.5.13) (2020-11-18)
 
 **Note:** Version bump only for package @kajabi/sage-react

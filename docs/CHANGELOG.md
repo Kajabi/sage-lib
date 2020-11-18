@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.22.42](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.22.41...@kajabi/sage@1.22.42) (2020-11-18)
+
+
+### Bug Fixes
+
+* **docs:** added catalog_item and data_card examples ([67d8ca4](https://github.com/Kajabi/sage-lib/commit/67d8ca400740cdcb96a731001c8677113d67828b))
+* **docs:** added catalog_item and data_card helpers ([b080211](https://github.com/Kajabi/sage-lib/commit/b080211b030cdae72aadd67660a4af8db6bbbe9b))
+* **docs:** added catalog_item component ([c8ebea7](https://github.com/Kajabi/sage-lib/commit/c8ebea708a332d4e0d191ce1752ca5f36ca20409))
+* **docs:** added catalog_item view ([93f593f](https://github.com/Kajabi/sage-lib/commit/93f593f4d7c75dafb2fbcafcd67d79c99206f00c))
+* **docs:** added dropdown and search ([bdd8353](https://github.com/Kajabi/sage-lib/commit/bdd8353d213d1ea2907f134f503c38a8d65d1c7a))
+* **docs:** added dropdown and search examples ([001cc56](https://github.com/Kajabi/sage-lib/commit/001cc565c4bbabe21824670728de4db284ea48dd))
+* **docs:** added form_section and search components ([3fc8ec9](https://github.com/Kajabi/sage-lib/commit/3fc8ec9705b118cc2dc5c92ca588017ddcc6e695))
+* **docs:** added form_section and search examples ([ed06bde](https://github.com/Kajabi/sage-lib/commit/ed06bdee18ba8c615c8f353603519c1ff394cf29))
+
+
+
+
+
 ## [1.22.41](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.22.40...@kajabi/sage@1.22.41) (2020-11-18)
 
 **Note:** Version bump only for package @kajabi/sage
