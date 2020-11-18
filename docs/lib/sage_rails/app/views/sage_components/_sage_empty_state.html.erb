@@ -1,0 +1,12 @@
+<section
+  class="
+    sage-empty-state
+    <%= "sage-empty-state--compact" if component.compact %>
+  "
+  <%= component.generated_html_attributes.html_safe %>
+>
+  <%= "<i class='sage-empty-state__icon sage-icon-#{component.icon}-3xl'></i>".html_safe if component.icon %>
+  <h1 class="sage-empty-state__title"><%= component.title %></h1>
+  <p class="sage-empty-state__text"><%= component.text %></p>
+  <%= component.content %>
+</section>

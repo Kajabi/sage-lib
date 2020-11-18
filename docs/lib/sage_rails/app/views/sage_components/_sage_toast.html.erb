@@ -1,0 +1,27 @@
+<dialog
+  open
+  class="
+    sage-toast
+    <%= "sage-toast--style-danger" if component.style === "danger" %>
+  "
+  aria-labelledby="sage-toast-label"
+>
+  <p
+    class="sage-toast__value"
+    id="sage-toast-label" <%# used by: aria-labelledby %>
+  >
+    <%= component.value %>
+  </p>
+  <%= sage_component SageButton, {
+    value: "close",
+    style: "secondary",
+    subtle: true,
+    icon: {
+      style: "only",
+      name: "remove"
+    },
+    html_attributes: {
+      "data-js-toast__close-trigger": ""
+    }
+  } %>
+</dialog>

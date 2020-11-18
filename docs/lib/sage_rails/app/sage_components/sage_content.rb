@@ -1,0 +1,2 @@
+class SageContent < SageComponent
+end
