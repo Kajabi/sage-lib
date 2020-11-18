@@ -1,0 +1,173 @@
+<h3 class="t-sage-heading-6">Standalone Page Heading</h3>
+
+<%= sage_component SagePageHeading, {
+  title: "Page Title",
+  spacer: { bottom: :xl },
+} %>
+
+<h3 class="t-sage-heading-6">Page Heading with Back Link</h3>
+
+<%= sage_component SagePageHeading, {
+  title: "Page Title",
+  spacer: { bottom: :xl },
+} do %>
+    <% content_for :sage_breadcrumbs do %>
+      <%= render "examples/elements/breadcrumbs/markup",
+        klass: "sage-page-heading__back",
+        has_back_icon: true,
+        items: [{
+        text: "Back to Something",
+        url: "#"
+      }]
+    %>
+  <% end %>
+<% end %>
+
+<h3 class="t-sage-heading-6">Page Heading with Help Link</h3>
+
+<%= sage_component SagePageHeading, {
+  title: "Page Title",
+  spacer: { bottom: :xl },
+  help_title: "About This Cool Thing",
+  help_link: {
+    href: "#",
+    name: "Help"
+  },
+} %>
+
+<h3 class="t-sage-heading-6">Page Heading with Help Content</h3>
+
+<%= sage_component SagePageHeading, {
+  title: "Page Title",
+  spacer: { bottom: :xl },
+  help_title: "About This Cool Thing",
+  help_html: "<p>This is a block of content.</p>",
+  help_link: {
+    href: "#",
+    name: "Help"
+  },
+} %>
+
+<h3 class="t-sage-heading-6">Page Heading with Action Buttons</h3>
+
+<%= sage_component SagePageHeading, {
+  title: "Page Title",
+  spacer: { bottom: :xl },
+} do %>
+    <% content_for :sage_page_heading_actions do %>
+      <%= sage_component SageButton, {
+        style: "secondary",
+        raised: true,
+        icon: { name: "preview-on", style: "left" },
+        value: "Preview",
+      } %>
+      <%= sage_component SageButton, {
+        style: "primary",
+        icon: { name: "add", style: "left" },
+        value: "Create",
+      } %>
+    <% end %>
+<% end %>
+
+<h3 class="t-sage-heading-6">Page Heading w/ Toolbar + Secondary Text</h3>
+
+<%= sage_component SagePageHeading, {
+  title: "Page Title",
+  spacer: { bottom: :xl },
+  secondary_text: "1 Email in Sequence",
+} do %>
+    <% content_for :sage_page_heading_toolbar do %>
+      <%= sage_component SageButton, {
+        style: "secondary",
+        subtle: true,
+        icon: { name: "preview-on", style: "left" },
+        value: "Preview",
+      }%>
+      <%= sage_component SageButton, {
+        style: "secondary",
+        subtle: true,
+        icon: { name: "chart", style: "left" },
+        value: "Report",
+      }%>
+      <%= sage_component SageButton, {
+        style: "secondary",
+        subtle: true,
+        icon: { name: "gear", style: "left" },
+        value: "Settings",
+      }%>
+    <% end %>
+<% end %>
+
+
+<h3 class="t-sage-heading-6">Page Heading w/ Intro</h3>
+
+<%= sage_component SagePageHeading, {
+  title: "Page Title",
+  spacer: { bottom: :xl },
+} do %>
+    <% content_for :sage_page_heading_intro do %>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo dolorum esse modi ut ipsa corporis.</p>
+    <% end %>
+<% end %>
+
+
+<h3 class="t-sage-heading-6">Page Heading w/ All Items</h3>
+
+<%= sage_component SagePageHeading, {
+  title: "Page Title",
+  spacer: { bottom: :xl },
+  help_title: "About This Cool Thing",
+  help_html: "<p>This is a block of content.</p>",
+  help_link: {
+    href: "#",
+    name: "Help"
+  },
+  secondary_text: "1 Email in Sequence",
+} do %>
+    <% content_for :sage_breadcrumbs do %>
+      <%= render "examples/elements/breadcrumbs/markup",
+        klass: "sage-page-heading__back",
+        has_back_icon: true,
+        items: [{
+        text: "Back to Something",
+        url: "#"
+      }]
+    %>
+    <% end %>
+    <% content_for :sage_page_heading_actions do %>
+      <%= sage_component SageButton, {
+        style: "secondary",
+        raised: true,
+        icon: { name: "preview-on", style: "left" },
+        value: "Preview",
+      } %>
+      <%= sage_component SageButton, {
+        style: "primary",
+        icon: { name: "add", style: "left" },
+        value: "Create",
+      } %>
+    <% end %>
+    <% content_for :sage_page_heading_toolbar do %>
+      <%= sage_component SageButton, {
+        style: "secondary",
+        subtle: true,
+        icon: { name: "preview-on", style: "left" },
+        value: "Preview",
+      }%>
+      <%= sage_component SageButton, {
+        style: "secondary",
+        subtle: true,
+        icon: { name: "chart", style: "left" },
+        value: "Report",
+      }%>
+      <%= sage_component SageButton, {
+        style: "secondary",
+        subtle: true,
+        icon: { name: "gear", style: "left" },
+        value: "Settings",
+      }%>
+    <% end %>
+    <% content_for :sage_page_heading_intro do %>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo dolorum esse modi ut ipsa corporis.</p>
+    <% end %>
+<% end %>
