@@ -33,17 +33,20 @@ Sage.init = function(elementNamesToInitLegacy) {
   // Presence Initialization
   // ==================================================
 
-  initDocumentPresenceListener('[data-js-modal]',              Sage.modal.init,            false);
-  initDocumentPresenceListener('[data-js-modaltrigger]',       Sage.modal.initTrigger,     false);
-  initDocumentPresenceListener('[data-js-tooltip]',            Sage.tooltip.init,          Sage.tooltip.unbind);
-  initDocumentPresenceListener('[data-js-dropdown]',           Sage.dropdown.init,         Sage.dropdown.unbind);
-  initDocumentPresenceListener('[data-js-sortable]',           Sage.sortable.init,         Sage.sortable.unbind);
-  initDocumentPresenceListener('[data-js-tabs]',               Sage.tabs.init,             Sage.tabs.unbind);
-  initDocumentPresenceListener('[data-js-copy-button]',        Sage.copyButton.init,       Sage.copyButton.unbind);
-  initDocumentPresenceListener('[data-js-accordion="header"]', Sage.accordion.init,        Sage.accordion.unbind);
-  initDocumentPresenceListener('[data-js-select]',             Sage.select.init,           Sage.select.unbind);
+  initDocumentPresenceListener('[data-js-modal]',                                Sage.modal.init,         false);
+  initDocumentPresenceListener('[data-js-modaltrigger]',                         Sage.modal.initTrigger,  false);
+  initDocumentPresenceListener('[data-js-tooltip]',                              Sage.tooltip.init,       Sage.tooltip.unbind);
+  initDocumentPresenceListener('[data-js-dropdown]',                             Sage.dropdown.init,      Sage.dropdown.unbind);
+  initDocumentPresenceListener('[data-js-sortable]',                             Sage.sortable.init,      Sage.sortable.unbind);
+  initDocumentPresenceListener('[data-js-tabs]',                                 Sage.tabs.init,          Sage.tabs.unbind);
+  initDocumentPresenceListener('[data-js-copy-button]',                          Sage.copyButton.init,    Sage.copyButton.unbind);
+  initDocumentPresenceListener('[data-js-accordion="header"]',                   Sage.accordion.init,     Sage.accordion.unbind);
+  initDocumentPresenceListener('[data-js-search]',                               Sage.search.init,        Sage.search.unbind);
+  initDocumentPresenceListener('[data-js-select]',                               Sage.select.init,        Sage.select.unbind);
+  initDocumentPresenceListener('[data-js-panel-controls]',                       Sage.panelControls.init, Sage.panelControls.unbind);
+  initDocumentPresenceListener('[data-js-popover]',                              Sage.popover.init,       Sage.popover.unbind);
   initDocumentPresenceListener('[data-js-banner], [data-js-toggle-banner]',      Sage.banner.init,        Sage.banner.unbind);
-  initDocumentPresenceListener('[data-js-popover]',            Sage.popover.init,       Sage.popover.unbind);
+  initDocumentPresenceListener('[data-js-input-suffix], [data-js-input-prefix]', Sage.inputaffixes.init,  Sage.inputaffixes.unbind);
 
   // ==================================================
   // Event Listeners
@@ -53,8 +56,9 @@ Sage.init = function(elementNamesToInitLegacy) {
   initDocumentEventListener('sage.modal.closeAll', Sage.modal.eventHandlerCloseAll);
 
   // Event Detail Format: { tabsId: "", paneId: "" }
-  initDocumentEventListener('sage.tabs.initial',   Sage.tabs.eventHandlerChange);
-  initDocumentEventListener('sage.tabs.change',    Sage.tabs.eventHandlerChange);
+  initDocumentEventListener('sage.tabs.initial',         Sage.tabs.eventHandlerChange);
+  initDocumentEventListener('sage.tabs.change',          Sage.tabs.eventHandlerChange);
+  initDocumentEventListener('sage.panelControls.change', Sage.panelControls.eventHandleChange);
 
   // ==================================================
   // LEGACY
@@ -88,11 +92,6 @@ Sage.init = function(elementNamesToInitLegacy) {
     Sage.alert.init();
   }
 
-  // Initialize Input appendices
-  if ( shouldInitLegacy('inputaffixes', '.sage-input--affixed') ) {
-    Sage.inputaffixes.init();
-  }
-
   // Initialize Input groups
   if ( shouldInitLegacy('inputgroup', '.sage-input-group') ) {
     Sage.inputgroup.init();
@@ -107,5 +106,4 @@ Sage.init = function(elementNamesToInitLegacy) {
   if ( shouldInitLegacy('meter', '.sage-meter') ) {
     Sage.meter.init();
   }
-
 }

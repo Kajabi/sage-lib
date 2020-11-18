@@ -13,13 +13,13 @@ Sage.tooltip = (function() {
   // ==================================================
 
   function init(el) {
-    el.addEventListener("mouseover", buildToolTip);
-    el.addEventListener("mouseout", removeTooltip);
+    el.addEventListener("mouseenter", buildToolTip);
+    el.addEventListener("mouseleave", removeTooltip);
   }
 
   function unbind(el) {
-    el.removeEventListener("mouseover", buildToolTip);
-    el.removeEventListener("mouseout", removeTooltip);
+    el.removeEventListener("mouseenter", buildToolTip);
+    el.removeEventListener("mouseleave", removeTooltip);
   }
 
   // tooltip template
