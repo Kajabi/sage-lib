@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.22.40](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.22.39...@kajabi/sage@1.22.40) (2020-11-18)
+
+
+### Bug Fixes
+
+* migrate sage checkbox rails component ([a5ed72a](https://github.com/Kajabi/sage-lib/commit/a5ed72aeb47f306a05abd52fa401e336e5faf84a))
+
+
+
+
+
 ## [1.22.39](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.22.38...@kajabi/sage@1.22.39) (2020-11-18)
 
 

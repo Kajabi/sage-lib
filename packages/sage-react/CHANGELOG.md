@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.12](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.5.11...@kajabi/sage-react@0.5.12) (2020-11-18)
+
+
+### Bug Fixes
+
+* migrated react checkbox and toggle components ([69aa59e](https://github.com/Kajabi/sage-lib/commit/69aa59e2e45e00da7627ee4c9d0059a4ef3eaf6f))
+
+
+
+
+
 ## [0.5.11](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.5.10...@kajabi/sage-react@0.5.11) (2020-11-18)
 
 **Note:** Version bump only for package @kajabi/sage-react
