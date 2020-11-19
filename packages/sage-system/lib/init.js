@@ -45,6 +45,7 @@ Sage.init = function(elementNamesToInitLegacy) {
   initDocumentPresenceListener('[data-js-select]',                               Sage.select.init,        Sage.select.unbind);
   initDocumentPresenceListener('[data-js-panel-controls]',                       Sage.panelControls.init, Sage.panelControls.unbind);
   initDocumentPresenceListener('[data-js-popover]',                              Sage.popover.init,       Sage.popover.unbind);
+  initDocumentPresenceListener('[data-js-toast]',                              Sage.popover.init,       Sage.popover.unbind);
   initDocumentPresenceListener('[data-js-banner], [data-js-toggle-banner]',      Sage.banner.init,        Sage.banner.unbind);
   initDocumentPresenceListener('[data-js-input-suffix], [data-js-input-prefix]', Sage.inputaffixes.init,  Sage.inputaffixes.unbind);
 

@@ -21,5 +21,6 @@ require('./copy-button')
 require('./panel-controls')
 require('./popover')
 require('./search')
+require('./toast')
 
 require('./init')

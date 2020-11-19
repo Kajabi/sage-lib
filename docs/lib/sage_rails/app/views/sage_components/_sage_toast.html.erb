@@ -2,9 +2,11 @@
   open
   class="
     sage-toast
+    sage-toast--is-open
     <%= "sage-toast--style-danger" if component.style === "danger" %>
   "
   aria-labelledby="sage-toast-label"
+  data-js-toast
 >
   <p
     class="sage-toast__value"

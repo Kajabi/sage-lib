@@ -20,6 +20,17 @@ $-toast-viewport-spacing-bottom: sage-spacing();
   }
 }
 
+@keyframes sage-toast--slide-out {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(5%);
+    opacity: 0;
+  }
+}
+
 .sage-toast {
   display: flex;
   z-index: sage-z-index(modal, +1);
@@ -31,7 +42,12 @@ $-toast-viewport-spacing-bottom: sage-spacing();
   box-shadow: sage-shadow(lg);
   background-color: sage-color(charcoal);
   transition: bottom $sage-transition;
-  animation: 0.5s sage-toast--slide-in ease;
+  animation: 0.5s sage-toast--slide-out ease;
+  animation-fill-mode: forwards;
+
+  &.sage-toast--is-open {
+    animation: 0.5s sage-toast--slide-in ease;
+  }
 
   @mixin generate-stacked-toast-alignment($toast-height) {
     @for $index from 1 through 20 {
