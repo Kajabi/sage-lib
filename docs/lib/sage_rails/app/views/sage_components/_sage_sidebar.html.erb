@@ -1,0 +1,8 @@
+<div class="sage-sidebar <%= component.size ? "sage-sidebar--#{component.size}" : "" %>" id="sage-sidebar-menu" data-js-sidebar="sage-sidebar-menu" id="sage-sidebar-menu">
+  <div class="sage-sidebar__body">
+    <%= component.content %>
+  </div>
+  <div class="sage-sidebar__footer">
+    <%= yield :sage_sidebar_footer %>
+  </div>
+</div>

@@ -1,0 +1,54 @@
+<section
+  style="height: 64px;" <%# This height is handled dynamically in React by a containing element %>
+  class="
+    sage-outline-item
+    <%= "sage-outline-item--category" if component.category %>
+    <%= "sage-outline-item--depth-#{component.depth}" if component.depth %>
+  "
+>
+  <div
+    class="
+      sage-outline-item__handle-drag
+      <%= "sage-icon-#{component.icon}" if component.icon %>
+    "
+    title="Click to drag"
+  ></div>
+  <h1 class="sage-outline-item__title">
+    <%= sage_component SageButton, {
+      value: component.title,
+      style: "secondary",
+      subtle: true,
+      small: !component.category
+    } %>
+  </h1>
+  <% if component.actions_primary %>
+    <div class="sage-outline-item__actions-primary">
+      <% component.actions_primary.each do |primary| %>
+        <%= primary.html_safe %>
+      <% end %>
+    </div>
+  <% end %>
+  <% if component.actions_secondary %>
+    <div class="sage-outline-item__actions-secondary sage-btn-group sage-btn-group--gap-xs">
+      <% component.actions_secondary.each do |secondary| %>
+        <%= secondary.html_safe %>
+      <% end %>
+    </div>
+  <% end %>
+  <% if component.status %>
+    <div class="sage-outline-item__status">
+      <%= component.status.html_safe %>
+    </div>
+  <% end %>
+  <% if component.category %>
+    <div class="sage-outline-item__handle-collapse">
+      <%= sage_component SageButton, {
+        value: "Add Content",
+        style: "secondary",
+        subtle: true,
+        icon: {style: "only", name: "caret-down"},
+        attributes: { "data-js-tooltip": "Collapse" }
+      } %>
+    </div>
+  <% end %>
+</section>

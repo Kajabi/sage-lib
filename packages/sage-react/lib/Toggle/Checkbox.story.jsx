@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, boolean, text } from '@storybook/addon-knobs';
-import Checkbox from './Checkbox';
 import { centerXY } from '../story-support/decorators';
+import Checkbox from './Checkbox';
 
 const CheckboxWithState = () => {
   const [checked, toggleChecked] = useState(false);

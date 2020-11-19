@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { ICON_SIZES } from './configs';
 import { SageTokens } from '../configs';
+import { ICON_SIZES } from './configs';
 
 const Icon = ({
   className,

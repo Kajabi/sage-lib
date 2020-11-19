@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
-import { Button } from '../Button';
-import { Tabs } from './Tabs';
-import { SageTokens } from '../configs';
 import { withKnobs, radios, select } from '@storybook/addon-knobs';
 import { centerXY } from '../story-support/decorators';
+import Button from '../Button';
+import { SageTokens } from '../configs';
+import Tabs from './Tabs';
 import TabsNotes from './TabsNotes.md';
 
 const TabsWithState = () => {

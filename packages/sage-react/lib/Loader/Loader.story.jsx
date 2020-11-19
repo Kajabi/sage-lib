@@ -1,9 +1,10 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Card, Grid } from '../index';
-import Loader  from './Loader';
 import { withKnobs, boolean, optionsKnob as options } from '@storybook/addon-knobs';
 import { centerXY } from '../story-support/decorators';
+import Card from '../Card';
+import Grid from '../Grid';
+import Loader  from './Loader';
 
 storiesOf('Sage/Loader', module)
   .addDecorator(withKnobs)

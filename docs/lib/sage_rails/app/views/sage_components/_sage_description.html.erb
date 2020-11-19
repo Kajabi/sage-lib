@@ -1,0 +1,15 @@
+<dl <%= component.id ? "id=#{component.id}" : "" %> class="sage-description">
+  <% if component.title.present? %>
+    <dt class="sage-description__title"><%= component.title %></dt>
+  <% end %>
+  <% if component.data.present? %>
+    <% if component.link.present? %>
+      <%= link_to component.link do %>
+        <dd class="sage-description__data"><%= component.data %></dd>
+      <% end %>
+    <% else %>
+      <dd class="sage-description__data"><%= component.data %></dd>
+    <% end %>
+  <% end %>
+  <%= component.content %>
+</dl>

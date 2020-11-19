@@ -1,0 +1,9 @@
+<ul class="sage-indicator-list" aria-label="<%= "Showing #{label} #{current_item} of #{num_items}"%>">
+  <% for i in 1...(num_items + 1) %>
+    <li class="sage-indicator<%= " sage-indicator--current" if current_item == i %>">
+      <span class="visually-hidden">
+        <%= "#{label} #{i}" %>
+      </span>
+    </li>
+  <% end %>
+</ul>

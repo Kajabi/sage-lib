@@ -1,11 +1,11 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Button } from '../Button';
-import { Grid, } from '../Grid';
-import { DataCard } from '../DataCard';
-import { SageTokens } from '../configs';
 import { withKnobs, radios } from '@storybook/addon-knobs';
 import { centerXY } from '../story-support/decorators';
+import Button from '../Button';
+import Grid from '../Grid';
+import { SageTokens } from '../configs';
+import DataCard from './DataCard';
 import DataCardNotes from './DataCardNotes.md';
 import DataCardGroupNotes from './DataCardGroupNotes.md';
 import DataCardScrollNotes from './DataCardScrollNotes.md';

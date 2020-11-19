@@ -1,9 +1,10 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import Card from './Card';
-import { Button, Grid } from '../index';
 import { withKnobs, boolean } from '@storybook/addon-knobs';
 import { centerXY } from '../story-support/decorators';
+import Button from '../Button';
+import Grid from '../Grid';
+import Card from './Card';
 import CardNotes from './CardNotes.md';
 
 storiesOf('Sage/Card', module)

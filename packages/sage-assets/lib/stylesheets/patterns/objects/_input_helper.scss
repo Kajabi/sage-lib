@@ -1,0 +1,95 @@
+/* ==================================================
+  ** sage-input-helper
+  type: object
+
+================================================== */
+
+$-helper-min-height: 5em;
+$-helper-max-width: rem(320px);
+$-helper-padding: sage-spacing(sm);
+$-helper-pointer-size: rem(12px);
+$-helper-color-bg: sage-color(white);
+$-helper-color-text: sage-color(white);
+$-helper-color-list-default: sage-color(grey, 200);
+$-helper-color-list-success: sage-color(grey, 500);
+$-helper-decoration-list-success: line-through;
+
+
+@mixin input-helper-visible() {
+  z-index: sage-z_index(raised);
+  top: calc(100% + #{$-helper-pointer-size});
+  opacity: 1;
+}
+
+.sage-input-helper {
+  @extend %t-sage-body-small;
+
+  position: absolute;
+  z-index: sage-z_index(negative);
+  transform: translateX(-50%);
+  left: 50%;
+  width: 100%;
+  max-width: $-helper-max-width;
+  min-height: $-helper-min-height;
+  padding: $-helper-padding;
+  background-color: $-helper-color-bg;
+  border-radius: sage-border(radius);
+  box-shadow: sage-shadow(md);
+  transition: $sage-transition;
+  transition-property: opacity;
+  pointer-events: none;
+  opacity: 0;
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -$-helper-pointer-size - rem(1px);
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: $-helper-pointer-size solid transparent;
+    border-right: $-helper-pointer-size solid transparent;
+    border-bottom: $-helper-pointer-size solid rgba(sage-color(black), 0.08);
+  }
+
+  &::after {
+    top: -#{$-helper-pointer-size};
+    border-bottom-color: $-helper-color-bg;
+  }
+
+  .sage-input:focus-within ~ & {
+    @include input-helper-visible();
+  }
+
+  // Separated from above rule due to Edge
+  .sage-input:active ~ & {
+    @include input-helper-visible();
+  }
+}
+
+// fallback using JS on IE, since :focus-within is not supported
+.sage-input-helper--visible {
+  @include input-helper-visible();
+}
+
+.sage-hint__description {
+  margin-bottom: sage-spacing(xs);
+}
+
+.sage-hint__list {
+  margin-bottom: sage-spacing(sm);
+  padding-left: sage-spacing(sm);
+}
+
+.sage-hint__list-item {
+  position: relative;
+  transition: $sage-transition;
+  transition-property: color;
+}
+
+.sage-hint__list-item--success {
+  color: $-helper-color-list-success;
+  text-decoration: $-helper-decoration-list-success;
+}
+

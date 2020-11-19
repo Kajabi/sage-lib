@@ -1,0 +1,122 @@
+<%= sage_component SagePanelBlock, {} do %>
+  <%= sage_component SageOutlineItem, {
+    title: "Wonderful Denim Pants",
+    icon: "folder",
+    depth: 0,
+    category: true,
+    status: sage_component(SageLabel, { value: "Draft", color: "draft" }),
+    actions_primary: [sage_component(SageButton, {
+      value: "Add Content",
+      style: "primary",
+      subtle: true,
+      icon: {style: "left", name: "add-circle"}
+    })],
+    actions_secondary: [
+      sage_component(SageButton, {
+        value: "Edit",
+        style: "secondary",
+        subtle: true,
+        icon: {style: "only", name: "pen"},
+        attributes: { "data-js-tooltip": "Edit" }
+      }),
+      sage_component(SageButton, {
+        value: "Preview",
+        style: "secondary",
+        subtle: true,
+        icon: {style: "only", name: "preview-on"},
+        attributes: { "data-js-tooltip": "Preview" }
+      })
+    ]
+  } %>
+  <% 3.times do %>
+    <%= sage_component SageOutlineItem, {
+      title: "Amazing Item Here, It Has A Very Long Name, Lorem Ipsum Sit Dolar",
+      icon: "video-on",
+      depth: 1,
+      category: false,
+      status: sage_component(SageLabel, { value: "Draft", color: "draft" }),
+      actions_primary: [sage_component(SageButton, {
+        value: "Add Content",
+        style: "primary",
+        subtle: true,
+        icon: {style: "left", name: "add-circle"}
+      })],
+      actions_secondary: [
+        sage_component(SageButton, {
+          value: "Edit",
+          style: "secondary",
+          subtle: true,
+          icon: {style: "only", name: "pen"},
+          attributes: { "data-js-tooltip": "Edit" }
+        }),
+        sage_component(SageButton, {
+          value: "Preview",
+          style: "secondary",
+          subtle: true,
+          icon: {style: "only", name: "preview-on"},
+          attributes: { "data-js-tooltip": "Preview" }
+        })
+      ]
+    } %>
+  <% end %>
+  <%= sage_component SageOutlineItem, {
+    title: "Wonderful Denim Pants",
+    icon: "arrow-corner",
+    depth: 1,
+    category: true,
+    status: sage_component(SageLabel, { value: "Draft", color: "draft" }),
+    actions_primary: [sage_component(SageButton, {
+      value: "Add Content",
+      style: "primary",
+      subtle: true,
+      icon: {style: "left", name: "add-circle"}
+    })],
+    actions_secondary: [
+      sage_component(SageButton, {
+        value: "Edit",
+        style: "secondary",
+        subtle: true,
+        icon: {style: "only", name: "pen"},
+        attributes: { "data-js-tooltip": "Edit" }
+      }),
+      sage_component(SageButton, {
+        value: "Preview",
+        style: "secondary",
+        subtle: true,
+        icon: {style: "only", name: "preview-on"},
+        attributes: { "data-js-tooltip": "Preview" }
+      })
+    ]
+  } %>
+  <% 3.times do %>
+    <%= sage_component SageOutlineItem, {
+      title: "Amazing Item Here, It Has A Very Long Name, Lorem Ipsum Sit Dolar",
+      icon: "video-on",
+      depth: 2,
+      category: false,
+      status: sage_component(SageLabel, { value: "Draft", color: "draft" }),
+      actions_primary: [sage_component(SageButton, {
+        value: "Add Content",
+        style: "primary",
+        subtle: true,
+        icon: {style: "left", name: "add-circle"}
+      })],
+      actions_secondary: [
+        sage_component(SageButton, {
+          value: "Edit",
+          style: "secondary",
+          subtle: true,
+          icon: {style: "only", name: "pen"},
+          attributes: { "data-js-tooltip": "Edit" }
+        }),
+        sage_component(SageButton, {
+          value: "Preview",
+          style: "secondary",
+          subtle: true,
+          icon: {style: "only", name: "preview-on"},
+          attributes: { "data-js-tooltip": "Preview" }
+        })
+      ]
+    } %>
+  <% end %>
+<% end %>

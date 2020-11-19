@@ -1,0 +1,22 @@
+<% if component.title.present? %>
+  <header class="sage-modal__header">
+    <h1 class="t-sage-heading-4">
+      <%= component.title %>
+    </h1>
+  </header>
+<% end %>
+
+<div class="sage-modal__content">
+  <%= component.content %>
+</div>
+
+<% if content_for?(:sage_footer) %>
+  <footer class="sage-modal__footer">
+    <% if content_for?(:sage_footer_aside) %>
+      <aside class="sage-modal__footer-aside">
+        <%= content_for :sage_footer_aside %>
+      </aside>
+    <% end %>
+    <%= content_for :sage_footer %>
+  </footer>
+<% end %>

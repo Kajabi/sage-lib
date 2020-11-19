@@ -23,16 +23,6 @@ module ObjectsHelper
         a11y: "todo"
       },
       {
-        title: "avatar",
-        description: "The Avatar object shows a user's profile image in a circular frame and allows for a few helpful modifications for different uses.",
-        use_legacy_html_code_source: false,
-        scss: "done",
-        docs: "done",
-        rails: "no",
-        react: "done",
-        a11y: "todo"
-      },
-      {
         title: "assistant",
         description: "Page header with optional side menu toggle button.",
         use_legacy_html_code_source: true,
@@ -40,6 +30,16 @@ module ObjectsHelper
         docs: "done",
         rails: "doing",
         react: "todo",
+        a11y: "todo"
+      },
+      {
+        title: "avatar",
+        description: "The Avatar object shows a user's profile image in a circular frame and allows for a few helpful modifications for different uses.",
+        use_legacy_html_code_source: false,
+        scss: "done",
+        docs: "done",
+        rails: "no",
+        react: "done",
         a11y: "todo"
       },
       {
@@ -103,6 +103,26 @@ module ObjectsHelper
         a11y: "todo"
       },
       {
+        title: "empty_state",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        use_legacy_html_code_source: false,
+        scss: "todo",
+        docs: "done",
+        rails: "todo",
+        react: "todo",
+        a11y: "todo",
+      },
+      {
+        title: "expandable_card",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        use_legacy_html_code_source: true,
+        scss: "todo",
+        docs: "done",
+        rails: "todo",
+        react: "todo",
+        a11y: "todo",
+      },
+      {
         title: "form_section",
         description: "A form section genera11y consists of a text section to provide users with instruction, guidance, or related information along with a secondary panel that may contain form inputs and/or related general content.",
         use_legacy_html_code_source: false,
@@ -113,13 +133,63 @@ module ObjectsHelper
         a11y: "todo"
       },
       {
-        title: "panel",
-        description: "Panels are used as multi-purpose containers for a variety of content.",
-        use_legacy_html_code_source: false,
+        title: "icon_list",
+        description: "Icon lists allow for a richer formatting for bulleted lists of things including checkbox lists, feature lists, and more!",
+        use_legacy_html_code_source: true,
+        scss: "todo",
+        docs: "todo",
+        rails: "todo",
+        react: "todo",
+        a11y: "todo",
+      },
+      {
+        title: "input_group",
+        description: "Allows inline grouping of text inputs with buttons",
+        use_legacy_html_code_source: true,
         scss: "done",
         docs: "done",
-        rails: "done",
-        react: "done",
+        rails: "doing",
+        react: "todo",
+        a11y: "todo"
+      },
+      {
+        title: "input_helper",
+        description: "Provides an extended tooltip/popup for text inputs",
+        use_legacy_html_code_source: true,
+        scss: "doing",
+        docs: "doing",
+        rails: "todo",
+        react: "todo",
+        a11y: "todo"
+      },
+      {
+        title: "modal",
+        description: "Sage modal",
+        use_legacy_html_code_source: true,
+        scss: "done",
+        docs: "done",
+        rails: "doing",
+        react: "todo",
+        a11y: "todo"
+      },
+      {
+        title: "nav",
+        description: "Nav is a hierarchical, vertical navigation and can include nested menu items.",
+        use_legacy_html_code_source: true,
+        scss: "done",
+        docs: "done",
+        rails: "doing",
+        react: "todo",
+        a11y: "todo"
+      },
+      {
+        title: "outline_item",
+        description: "Unicorn component handling the complex interactions required for managing Product children",
+        use_legacy_html_code_source: false,
+        scss: "done",
+        docs: "todo",
+        rails: "no",
+        react: "todo",
         a11y: "done"
       },
       {
@@ -143,6 +213,26 @@ module ObjectsHelper
         a11y: "todo"
       },
       {
+        title: "panel",
+        description: "Panels are used as multi-purpose containers for a variety of content.",
+        use_legacy_html_code_source: false,
+        scss: "done",
+        docs: "done",
+        rails: "done",
+        react: "done",
+        a11y: "done"
+      },
+      {
+        title: "panel_controls",
+        description: "Panel controls provides a unified interface for controlling lists inside of a panel.",
+        use_legacy_html_code_source: false,
+        scss: "doing",
+        docs: "doing",
+        rails: "doing",
+        react: "todo",
+        a11y: "doing"
+      },
+      {
         title: "popover",
         description: "Popovers open upon click to show information regarding the section. It has a header/subject, minimal information, and a link to learn more",
         use_legacy_html_code_source: false,
@@ -153,6 +243,26 @@ module ObjectsHelper
         a11y: "done"
       },
       {
+        title: "sidebar",
+        description: "The sidebar object is a fixed, vertical panel that typica11y displays navigation and/or page hierarchy.",
+        use_legacy_html_code_source: true,
+        scss: "done",
+        docs: "done",
+        rails: "doing",
+        react: "todo",
+        a11y: "todo"
+      },
+      {
+        title: "sortable",
+        description: "Sage sortable list",
+        use_legacy_html_code_source: false,
+        scss: "done",
+        docs: "done",
+        rails: "doing",
+        react: "todo",
+        a11y: "todo"
+      },
+      {
         title: "tabs",
         description: "Tabs organize related content across screens, data sets, and can be used for navigation to related destinations.",
         use_legacy_html_code_source: false,
@@ -160,6 +270,16 @@ module ObjectsHelper
         docs: "todo",
         rails: "todo",
         react: "todo",
+        a11y: "todo"
+      },
+      {
+        title: "upload_card",
+        description: "The Upload Card provides a visually pleasing lockup for a file upload field along with other helpful controls.",
+        use_legacy_html_code_source: true,
+        scss: "done",
+        docs: "done",
+        rails: "todo",
+        react: "done",
         a11y: "todo"
       },
     ]

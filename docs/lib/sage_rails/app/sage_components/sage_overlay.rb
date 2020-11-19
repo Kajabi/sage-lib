@@ -1,0 +1,2 @@
+class SageOverlay < SageComponent
+end

@@ -1,0 +1,46 @@
+<!-- Default -->
+<%= sage_component SagePanelStack, {} do %>
+  <%= sage_component SageRadio, {
+    id: "r1",
+    name: "radio1",
+    value: "1",
+    label_text: "Option 1",
+    checked: true
+  } %>
+
+  <%= sage_component SageRadio, {
+    id: "r2",
+    name: "radio1",
+    value: "2",
+    label_text: "Option 2"
+  } %>
+
+  <!-- Disabled -->
+  <%= sage_component SageRadio, {
+    id: "r3",
+    name: "radio2",
+    value: "3",
+    label_text: "Disabled",
+    disabled: true
+  } %>
+
+  <!-- Checked & Disabled -->
+  <%= sage_component SageRadio, {
+    id: "r4",
+    name: "radio3",
+    value: "4",
+    label_text: "Checked & Disabled",
+    checked: true,
+    disabled: true
+  } %>
+
+  <!-- Errror -->
+  <%= sage_component SageRadio, {
+    id: "r5",
+    name: "radio4",
+    value: "5",
+    label_text: "Error",
+    required: true,
+    has_error: true
+  } %>
+<% end %>

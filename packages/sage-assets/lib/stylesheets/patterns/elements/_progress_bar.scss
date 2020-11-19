@@ -1,0 +1,35 @@
+/* ==================================================
+  ** progress_bar
+  type: element
+
+
+================================================== */
+
+@keyframes sage-progress-bar--slide {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(100%);
+  }
+}
+
+.sage-progress-bar {
+  height: rem(6px);
+  border-radius: sage-border(radius-large);
+  background-color: sage-color(grey, 300);
+}
+
+.sage-progress-bar__value {
+  transform-origin: center left;
+  min-width: 5%;
+  height: 100%;
+  background-color: sage-color(sage, 300);
+  border-radius: sage-border(radius-large);
+  animation: 3s sage-progress-bar--slide ease;
+}
+
+.sage-progress-bar__element {
+  @include visually-hidden;
+  height: 0;
+}

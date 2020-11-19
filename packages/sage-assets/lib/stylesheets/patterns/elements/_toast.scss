@@ -1,0 +1,82 @@
+/* ==================================================
+  ** toast.scss
+  type: element
+
+
+================================================== */
+
+$-toast-height-default: rem(68px);
+$-toast-height-mobile: rem(36px);
+$-toast-viewport-spacing-bottom: sage-spacing();
+
+@keyframes sage-toast--slide-in {
+  from {
+    transform: translateX(5%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.sage-toast {
+  display: flex;
+  z-index: sage-z-index(modal, +1);
+  position: fixed;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 sage-spacing(md);
+  border-radius: sage-border(radius-large);
+  box-shadow: sage-shadow(lg);
+  background-color: sage-color(charcoal);
+  transition: bottom $sage-transition;
+  animation: 0.5s sage-toast--slide-in ease;
+
+  @mixin generate-stacked-toast-alignment($toast-height) {
+    @for $index from 1 through 20 {
+      &:nth-of-type(#{$index + 1}) {
+        bottom: $-toast-viewport-spacing-bottom + ((sage-spacing(xs) + $toast-height) * $index);
+      }
+    }
+  }
+
+  @media screen and (max-width: sage-breakpoint(sm-max)) {
+    @include position(auto, sage-spacing(xs), $-toast-viewport-spacing-bottom, sage-spacing(xs));
+    height: $-toast-height-mobile;
+    width: auto;
+    padding: 0 sage-spacing(xs);
+
+    @include generate-stacked-toast-alignment($-toast-height-mobile);
+  }
+
+  @media screen and (min-width: sage-breakpoint(md-min)) {
+    @include position(auto, sage-spacing(lg), $-toast-viewport-spacing-bottom, auto);
+    height: $-toast-height-default;
+    width: fit-content;
+    max-width: 90vw;
+    padding: 0 sage-spacing(lg);
+
+    @include generate-stacked-toast-alignment($-toast-height-default);
+  }
+
+  &.sage-toast--style-danger {
+    background-color: sage-color(red, 400);
+  }
+}
+
+.sage-toast__value {
+  @extend %t-sage-body-med;
+  @include truncate();
+  margin-right: sage-spacing();
+  color: sage-color(white);
+}
+
+.sage-toast__value::before {
+  @include sage-icon-base(check);
+  margin-right: sage-spacing(2xs);
+
+  .sage-toast--style-danger & {
+    content: sage-icon(danger);
+  }
+}

@@ -1,0 +1,21 @@
+<div class="
+    sage-switch
+    <%= component.has_error ? "sage-switch--error" : "" %>
+    <%= component.css_classes if component.css_classes.present? %>
+  "
+>
+  <input 
+    type="<%= component.type %>" 
+    id="<%= component.id %>" 
+    class="sage-switch__input" 
+    name="<%= component.name %>" 
+    value="<%= component.id %>"
+    <%= "checked" if component.checked %>
+    <%= "disabled" if component.disabled %>
+    <%= "required" if component.required %>
+  >
+  <label for="<%= component.id %>" class="sage-switch__label"><%= component.label_text %></label>
+  <% if component.message != "" %>
+    <div class="sage-switch__message">Additional Info</div>
+  <% end %>
+</div>

@@ -1,0 +1,398 @@
+<%
+tabs = sage_component(SageTabs, {
+  items: [
+    {
+      text: "Test 1",
+      attributes: { href: "#test-1" },
+      active: true
+    },
+    {
+      text: "Test 2",
+      attributes: { href: "#test-2" },
+    },
+    {
+      text: "Test 3",
+      attributes: { href: "#test-3" },
+    }
+  ]
+})
+
+search = sage_component(SageSearch, { placeholder: "Find..." })
+
+dropdown = sage_component(SageDropdown, {
+  search: true,
+  trigger_type: "select",
+  align: "right",
+  items: [
+    {
+      value: "-- None --"
+    }, {
+      value: "Option 1",
+    }, {
+      value: "Option 2",
+    }, {
+      value: "Option 3",
+    }
+  ],
+  content: %(
+    #{sage_component(SageButton, {
+      style: "secondary",
+      value: "",
+      css_classes: "sage-dropdown__trigger-selected-value",
+      icon: { style: "right", name: "caret-down" }
+    })}
+  <label class="sage-dropdown__trigger-label">Select an option...</label>
+  ).html_safe
+})
+
+search_filter_toolbar = %(
+  <div class="sage-panel-controls__toolbar-btn-group">
+    #{search}
+    #{
+      sage_component(SageButton, {
+        value: "Saved filters",
+        style: "secondary",
+        icon: { name: "favorite", style: "left" }
+      })
+    }
+    #{
+      sage_component(SageButton, {
+        value: "Filters",
+        style: "secondary",
+        icon: { name: "filters", style: "left" }
+      })
+    }
+    #{
+      sage_component(SageButton, {
+        value: "Clear filters",
+        style: "secondary",
+        icon: { name: "remove", style: "left" }
+      })
+    }
+  </div>
+).html_safe
+
+sort_items = [
+  {
+    value: "Name",
+    attributes: {
+      "href": "#",
+      "data-js-list-sort-by": "name"
+    },
+  },
+  {
+    value: "Email",
+    attributes: {
+      "href": "#",
+      "data-js-list-sort-by": "email"
+    },
+  },
+  {
+    value: "Join date",
+    attributes: {
+      "href": "#",
+      "data-js-list-sort-by": "join_date"
+    },
+  }
+]
+
+actions_items = [
+  {
+    value: "Delete",
+    attributes: {
+      "href": "#",
+      "data-js-list-action": "delete_selected",
+    },
+  },
+  {
+    value: "Set marketing",
+    attributes: {
+      "href": "#",
+      "data-js-list-action": "set_marketing_unsubscribed",
+    },
+  }
+]
+%>
+
+<h3 class="t-sage-heading-6">Tabs + Search</h3>
+<%= sage_component SagePanel, {} do %>
+  <%= sage_component SagePanelControls, {} do %>
+    <% content_for :sage_panel_controls_tabs do %>
+      <%= tabs %>
+    <% end %>
+    <% content_for :sage_panel_controls_toolbar do %>
+      <%= search %>
+    <% end %>
+  <% end %>
+<% end %>
+
+<h3 class="t-sage-heading-6">Bulk actions</h3>
+<%= sage_component SagePanel, {} do %>
+  <%= sage_component SagePanelControls, {
+    show_bulk_actions: true,
+    show_expand_collapse: true,
+    show_pagination: true,
+    show_sort: true,
+    bulk_action_items: actions_items,
+    sort_items: sort_items,
+  } %>
+<% end %>
+
+<h3 class="t-sage-heading-6">Sample Custom Toolbar</h3>
+<%= sage_component SagePanel, {} do %>
+  <%= sage_component SagePanelControls, {} do %>
+    <% content_for :sage_panel_controls_toolbar do %>
+      <%= search_filter_toolbar %>
+      <%= dropdown %>
+    <% end %>
+  <% end %>
+<% end %>
+
+<h3 class="t-sage-heading-6">Kitchen Sink</h3>
+<%= sage_component SagePanel, {} do %>
+  <%= sage_component SagePanelControls, {
+    show_bulk_actions: true,
+    show_expand_collapse: true,
+    show_pagination: true,
+    show_sort: true,
+    bulk_action_items: actions_items,
+    sort_items: sort_items,
+    target: "demo-table",
+  } do %>
+    <% content_for :sage_panel_controls_tabs do %>
+      <%= tabs %>
+    <% end %>
+    <% content_for :sage_panel_controls_toolbar do %>
+      <%= search_filter_toolbar %>
+      <%= dropdown %>
+    <% end %>
+  <% end %>
+
+  <%= sage_component SageTable, {
+    html_attributes: {
+      id: "demo-table",
+      "data-js-list-items-total": "4",
+      "data-js-list-items-shown": "25",
+      "data-js-list-page": "1",
+      "data-js-list-noun": "People,Person",
+    },
+    reset_above: true,
+    headers: [
+      {
+        value: "",
+        data_type: "checkbox",
+      },
+      {
+        value: "",
+        data_type: "avatar",
+      },
+      "Name",
+      "Email",
+      "Email Marketing",
+      "Join Date",
+      "Last Activity",
+    ],
+    rows: [
+      {
+        selected: sage_component(SageCheckbox, { value: "", standalone: true, checked: true }),
+        avatar: sage_component(SageAvatar, { initials: "AF", color: "purple" }),
+        name: "Albert Flores",
+        email: "albert.flores@example.com",
+        marking: "Never Subcribed",
+        joinDate: "8/2/19",
+        lastActivity: "8/2/19",
+      },
+      {
+        selected: sage_component(SageCheckbox, { value: "", standalone: true, checked: true }),
+        avatar: sage_component(SageAvatar, { initials: "EP", color: "orange" }),
+        name: "Eleanor Pena",
+        email: "eleanorpena@example.com",
+        marking: "Unsubscribed",
+        joinDate: "7/11/19",
+        lastActivity: "7/11/19",
+      },
+      {
+        selected: sage_component(SageCheckbox, { value: "", standalone: true }),
+        avatar: sage_component(SageAvatar, { initials: "AM", color: "sage" }),
+        name: "Arlene McCoy",
+        email: "arlenemccoy@example.com",
+        marking: "Unsubscribed",
+        joinDate: "6/21/19",
+        lastActivity: "6/21/19",
+      },
+      {
+        selected: sage_component(SageCheckbox, { value: "", standalone: true }),
+        avatar: sage_component(SageAvatar, { initials: "KM" }),
+        name: "Kathryn Murphy",
+        email: "katmurphy98@example.com",
+        marking: "Subscribed",
+        joinDate: "4/4/18",
+        lastActivity: "4/4/18",
+      }
+    ]
+  }
+  %>
+<% end %>
+
+<%= md(%(
+#### List properties
+
+This component is set up to pair with a target table.
+The following `data-` properties can be set on the table
+in order for the two to sync up well:
+
+| Property | Value | Notes |
+| --- | --- | --- |
+| `data-js-list-items-total` | Number | Total number of items that are available, even beyond this current page. |
+| `data-js-list-items-shown` | Number | Total number of items possible in this view. Consider this the "page size" or maximum number of items the view will show at any one time. |
+| `data-js-list-page` | Number | Current page being shown |
+| `data-js-list-noun` | String | The noun used to describe the items in the table. A plural and singular value can be provided separated by a comma. |
+
+#### Events
+
+This component is set up to pair with a table of items.
+As a result, these controls can sort, navigate between pages,
+and apply bulk actions when the actions exposed here
+are paired with corresponding responders in context.
+
+- All these custom events are mapped to the `sage.panelControls.change` event type.</li>
+- The `detail` property of this custom event always contains the following
+  along with additional properties outlined in detail below:
+  
+  - `type`: the more specific type of event in the context of the Panel Controls
+  - `targetListId`: the id of the list to be targetted by the action
+
+##### Pagination events `type: "pagination:[next|prev]"`
+
+As the user clicks on the "next" or "previous" buttons,
+they will fire the corresponding event type.
+It is up the the responder to interpret and adjust the list accordingly.
+
+##### Expand/Collapse events `type: "list:[collapse|expand]"`
+
+As the user clicks on the "expand" or "collapse" buttons,
+they will fire the corresponding event type.
+It is up the the responder to interpret and adjust the list accordingly.
+
+##### Selection events `type: "list:[selectAll|selectNone|selectSome]"`
+
+As the user toggles the "select all" checkbox the corresponding event type is issued.
+It is up the the responder to interpret and adjust the list accordingly.
+
+When pairing with a target table, clicking on items' checkboxes should affect
+what the bulk actions/item count label should display.
+So the `Sage.panelControls` also exposes a `handleItemSelection()` method as an aid for this.
+Call this method in sync with click events on such checkboxes and the pass the following object:
+
+```
+{
+  target: <Object: the event target>,
+  total: <Number: the total number of items selected>,
+}
+```
+
+This dispatches the `list:selectSome` event detail type with the `target` and `total` values
+passed along for the panel controls to recieve and interpret.
+
+##### Sorting events `type: "list:sort"`
+
+Items provided to the `sort_items`
+should set the `data-js-list-sort-by` attribute
+with the name of the field to be sorted by the responder.
+This value is passed to the `detail` of the custom event
+through the `sortBy` property.
+
+##### Bulk action events `type: "list:action"`
+
+Items provided to the `bulk_action_items`
+should set the `data-js-action` attribute
+with the name of an action to be exposed to the responder.
+This value is passed to the `detail` of the custom event
+through the `action` property.
+Any additional properties may be provided as data attributes
+and accessible on the custom event's `target.dataset` property.
+), use_sage_type: true) %>
+
+<script type="text/javascript">
+  // Target table
+  let table = null;
+
+  // Table items
+  let items = null;
+
+  // Count selected elements
+  let selectedItems = null;
+  let selectedItemsCount = null;
+
+  // Panel Controls object
+  let panelControls = null;
+
+  // Functions
+
+  const setupPanelControls = () => {
+    table = document.getElementById('demo-table');
+
+    // Ensure matching table exists
+    if (!table) {
+      return;
+    }
+
+    items = table.querySelectorAll('tr');
+    selectedItems = table.querySelectorAll(':checked');
+    selectedItemsCount = selectedItems ? selectedItems.length : null;
+
+    // Set up event handlers
+    table.addEventListener('click', (ev) => {
+      const target = ev.target;
+      if (target.classList.contains('sage-checkbox')) {
+        handleClickCheckbox(target);
+      }
+    });
+
+    document.addEventListener('sage.panelControls.change', (ev) => {
+      switch (ev.detail.type) {
+        case 'list:selectAll':
+          items.forEach(tr => {
+            const cb = tr.querySelector('td .sage-checkbox--standalone');
+            if (cb) {
+              cb.checked = true;
+            }
+          });
+          selectedItems = table.querySelectorAll(':checked');
+          selectedItemsCount = selectedItems.length;
+          break;
+        case 'list:selectNone':
+          items.forEach(tr => {
+            const cb = tr.querySelector('td .sage-checkbox--standalone');
+            if (cb) {
+              cb.checked = false;
+            }
+          });
+          selectedItems = null;
+          selectedItemsCount = 0;
+          break;
+        default:
+          break;
+      }
+    });
+  };
+
+  const handleClickCheckbox = (target) => {
+    if (target.checked) {
+      selectedItemsCount++;
+    } else {
+      selectedItemsCount--;
+    }
+
+    Sage.panelControls.handleItemSelection({ target, total: selectedItemsCount });
+  };
+
+  const ready = (callback) => {
+    if (document.readyState != "loading") callback();
+    else document.addEventListener("DOMContentLoaded", callback);
+  }
+
+  ready(() => { 
+     if (Sage.panelControls) setupPanelControls();
+  });
+</script>

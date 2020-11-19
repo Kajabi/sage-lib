@@ -1,0 +1,37 @@
+/* ==================================================
+  ** _status_icon.scss
+  type: element
+
+
+================================================== */
+
+.sage-status-icon {
+  @extend %t-sage-body-med;
+
+  display: inline-flex;
+  align-items: baseline;
+  position: relative;
+  color: sage-color(charcoal, 200);
+  transition: color $sage-transition, background-color $sage-transition;
+  cursor: help;
+
+  @include sage-focus-outline;
+  @include sage-focus-outline--update-color(sage-color(charcoal, 200));
+
+  &:hover:not(:focus):not(:active) {
+    color: sage-color(charcoal, 400);
+  }
+
+  &:focus,
+  &:active {
+    color: sage-color(charcoal, 200);
+  }
+
+  .sage-sortable__item & {
+    &:not(:last-child) {
+      margin-right: sage-spacing(sm);
+    }
+  }
+
+  // NOTE: Icon generation consolidated in `core/_icons.scss`
+}

@@ -1,0 +1,12 @@
+<ul class="sage-icon-list">
+  <% items.each do | item | %>
+    <li class="sage-icon-list-item" role="listitem">
+      <div class="sage-icon-list-item__bullet<%= " sage-icon-list-item__bullet--#{item[:bullet_type]}" if defined?(item[:bullet_type]) %>">
+        <%= item[:bullet].html_safe %>
+      </div>
+      <div class="sage-icon-list-item__body">
+        <%= item[:body].html_safe %>
+      </div>
+    </li>
+  <% end %>
+</ul>

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { SageTokens } from '../configs';
-import { Link } from '../index';
+import Link from '../Link';
 import ButtonGroup from './ButtonGroup';
 import { BUTTON_COLORS, BUTTON_ICON_POSITIONS } from './configs';
 

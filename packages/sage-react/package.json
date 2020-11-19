@@ -71,7 +71,8 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
-    "uuid": "^8.3.1"
+    "react-sortablejs": "^6.0.0",
+    "react-uuid": "^1.0.2"
   },
   "gitHead": "b8c2dd5f156473667f33a4d425c501a1e3b1c578"
 }

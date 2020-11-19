@@ -1,0 +1,39 @@
+<% if component.standalone %>
+  <input 
+    id="<%= component.id %>" 
+    type="radio" 
+    class="
+      sage-radio
+      sage-radio--standalone
+      <%= component.has_error ? "sage-radio--error" : "" %>
+      <%= component.css_classes if component.css_classes.present? %>
+    "
+    <%= "checked" if component.checked %>
+    <%= "disabled" if component.disabled %>
+    <%= "required" if component.required %>
+    aria-label="<%= component.label_text %>"
+    name="<%= component.name %>"
+    value="<%= component.value %>"
+  />
+<% else %>
+  <div class="
+      sage-radio
+      <%= component.has_error ? "sage-radio--error" : "" %>
+      <%= component.css_classes if component.css_classes.present? %>
+    "
+  >
+    <input 
+      id="<%= component.id %>" 
+      type="radio" 
+      class="sage-radio__input" 
+      name="<%= component.name %>" 
+      value="<%= component.value %>"
+      <%= "checked" if component.checked %>
+      <%= "disabled" if component.disabled %>
+      <%= "required" if component.required %>
+    >
+    <label for="<%= component.id %>" class="sage-radio__label">
+      <%= component.label_text %>
+    </label>
+  </div>
+<% end %>

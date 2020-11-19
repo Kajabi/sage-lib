@@ -1,10 +1,12 @@
-Sage.inputaffixes = (function() {
+Sage.inputaffixes = (() => {
 
   // ==================================================
   // Variables
   // ==================================================
   const affixClass = "sage-input__affix";
   const affixRootClass = "sage-input--affixed";
+  const prefixRootClass = "sage-input--prefixed";
+  const suffixRootClass = "sage-input--suffixed";
   const fieldClass = "sage-input__field";
   const labelClass = "sage-label";
   const labelColorModifier = "draft";
@@ -17,67 +19,69 @@ Sage.inputaffixes = (function() {
   // ==================================================
 
   // Adds affix content to an element
-  function addAffixes(el) {
-    const $root = el;
-    const $input = el.querySelector(`.${fieldClass}`);
+  const addAffixes = (el) => {
+    const elRoot = el;
+    const elInput = el.querySelector(`.${fieldClass}`);
 
     // Toggle off the affixed class
-    $root.classList.remove(affixRootClass);
+    elRoot.classList.remove(affixRootClass);
     
-    if ($root.dataset.inputPrefix) {
-      const $label = makeLabel($root.dataset.inputPrefix, 'prefix');
-      $root.appendChild($label);
-      $root.classList.add("sage-input--prefixed");
-      $input.style.paddingLeft = `${$label.offsetWidth + inputPaddingOffset}px`;
+    if (elRoot.dataset.jsInputPrefix) {
+      const elLabel = makeLabel(elRoot.dataset.jsInputPrefix, 'prefix');
+      elRoot.appendChild(elLabel);
+      elRoot.classList.add(prefixRootClass);
+      elInput.style.paddingLeft = `${elLabel.offsetWidth + inputPaddingOffset}px`;
     }
     
-    if ($root.dataset.inputSuffix) {
-      const $label = makeLabel($root.dataset.inputSuffix, 'suffix');
-      $root.appendChild($label);
-      $root.classList.add("sage-input--suffixed");
-      $input.style.paddingRight = `${$label.offsetWidth + inputPaddingOffset}px`;
+    if (elRoot.dataset.jsInputSuffix) {
+      const elLabel = makeLabel(elRoot.dataset.jsInputSuffix, 'suffix');
+      elRoot.appendChild(elLabel);
+      elRoot.classList.add(suffixRootClass);
+      elInput.style.paddingRight = `${elLabel.offsetWidth + inputPaddingOffset}px`;
     }
-  }
+  };
 
   // Make the sage-label that will display the affix content
-  function makeLabel(content, type) {
-    const $label = document.createElement(labelElement);
-    $label.appendChild(document.createTextNode(content));
-    $label.setAttribute("aria-label", `${type}ed with ${content}`);
-    $label.classList.add(
+  const makeLabel = (content, type) => {
+    const elLabel = document.createElement(labelElement);
+    elLabel.appendChild(document.createTextNode(content));
+    elLabel.setAttribute("aria-label", `${type}ed with ${content}`);
+    elLabel.classList.add(
       labelClass,
       affixClass,
       `${labelClass}--${labelColorModifier}`,
       `${affixClass}--${type}`
     );
 
+    return elLabel;
+  };
 
-    return $label;
-  }
-
-  function handleAffixClick(e) {
-    if (e.target.classList.contains(affixClass)) {
+  const handleAffixClick = (ev) => {
+    if (ev.target.classList.contains(affixClass)) {
       // Find neighboring input and focus on it
-      e.target.parentNode.querySelector(`.${fieldClass}`).focus();
+      ev.target.parentNode.querySelector(`.${fieldClass}`).focus();
     }
-  }
+  };
 
-  function init() {
+  const unbind = () => {
+    document.removeEventListener("click", handleAffixClick);
+  };
+
+  const init = () => {
     if (document.querySelector(`.${affixRootClass}`) !== null) {
-      var affixElements = Sage.util.nodelistToArray(document.querySelectorAll(`.${affixRootClass}`));
-      affixElements.forEach(function(el) {
+      const affixElements = Sage.util.nodelistToArray(document.querySelectorAll(`.${affixRootClass}`));
+      affixElements.forEach((el) => {
         addAffixes(el);
       });
 
       document.addEventListener("click", handleAffixClick);
-    } else {
-      document.removeEventListener("click", handleAffixClick);
     }
-  }
+  };
 
 
   return {
-    init: init
+    init,
+    unbind
   };
 
 })();

@@ -1,10 +1,8 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Button } from '../Button';
-import { FormSection } from './FormSection';
-import { Input } from '../Input';
 import { withKnobs, text } from '@storybook/addon-knobs';
 import { centerXY } from '../story-support/decorators';
+import { Button, FormSection, Input } from '../';
 
 storiesOf('Sage/Form Section', module)
   .addDecorator(withKnobs)

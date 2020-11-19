@@ -1,0 +1,92 @@
+/* ==================================================
+  ** _modal.scss
+  type: object
+
+================================================== */
+
+$-modal-padding-x: sage-spacing(md);
+$-modal-padding-y: sage-spacing(md);
+
+.sage-modal {
+  visibility: hidden;
+  display: none;
+  align-items: flex-start;
+  justify-content: center;
+  position: fixed;
+  overflow-y: scroll;
+  z-index: sage-z-index(modal, -1);
+  padding: sage-spacing(md);
+  background-color: rgba(sage-color(charcoal, 500), 0.4);
+  background-image: linear-gradient(
+    rgba(sage-color(charcoal, 200), 0.3) 0%,
+    rgba(sage-color(charcoal, 500), 0.3) 100%
+  );
+  cursor: default;
+
+  @include position-full;
+
+  @supports (backdrop-filter: blur(2px)) {
+    backdrop-filter: blur(2px);
+  }
+
+  &.sage-modal--active {
+    visibility: visible;
+    display: flex;
+  }
+}
+
+.sage-modal__container {
+  visibility: hidden;
+  display: none;
+  z-index: sage-z-index(modal);
+  width: calc(100vw - #{sage-spacing(md)});
+  max-width: sage-container(modal);
+  margin: 0;
+  border-radius: sage-border(radius);
+  background-color: sage-color(white);
+  box-shadow: sage-shadow(2xl);
+
+  @media (min-width: sage-breakpoint(lg-min)) {
+    margin-top: 6vh;
+  }
+
+  @media (min-width: sage-breakpoint(xl-min)) {
+    margin-top: 8vh;
+  }
+
+  .sage-modal--active & {
+    visibility: visible;
+    display: block;
+  }
+}
+
+.sage-modal__header {
+  display: flex;
+  align-items: baseline;
+  margin: $-modal-padding-y $-modal-padding-x;
+}
+
+.sage-modal__header-aside {
+  margin-left: auto;
+}
+
+.sage-modal__content {
+  margin: $-modal-padding-y $-modal-padding-x;
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+
+  @include clearfix;
+}
+
+.sage-modal__footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: $-modal-padding-y $-modal-padding-x;
+}
+
+.sage-modal__footer-aside {
+  margin-right: auto;
+}

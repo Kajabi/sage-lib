@@ -43,14 +43,21 @@ Sage.modal = (function() {
     });
   }
 
+  function onModalKeypress(evt) {
+    const keyNum = "which" in evt ? evt.which : evt.keyCode;
+    if (keyNum === 27) dispatchCloseAll();
+  }
+
   function openModal(modalId) {
     let modal = document.querySelector(`[${SELECTOR_MODAL}="${modalId}"]`);
     modal.classList.add('sage-modal--active');
     modal.setAttribute("open", "");
+    document.addEventListener('keyup', onModalKeypress);
   }
 
   function dispatchCloseAll() {
     document.dispatchEvent(new Event(EVENT_CLOSEALL));
+    document.removeEventListener('keyup', onModalKeypress);
   }
 
   function closeModal(el) {

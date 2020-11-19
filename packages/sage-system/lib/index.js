@@ -1,5 +1,6 @@
 require('./defineSage')
 require('./util')
+
 require('./table')
 require('./tooltip')
 require('./sidebar')
@@ -17,6 +18,8 @@ require('./sortable')
 require('./tabs')
 require('./accordion-panel')
 require('./copy-button')
+require('./panel-controls')
 require('./popover')
+require('./search')
 
 require('./init')

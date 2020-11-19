@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
-import { Search } from './Search';
 import { withKnobs, boolean, text } from '@storybook/addon-knobs';
 import { centerXY } from '../story-support/decorators';
+import Search from './Search';
 
 const InputWithState = (rest) => {
   const [value, updateValue] = useState('');
