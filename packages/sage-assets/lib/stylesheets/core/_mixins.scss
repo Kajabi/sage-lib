@@ -226,6 +226,7 @@
       &::before {
         @include sage-icon-base($icon-name);
         align-self: center;
+        justify-content: center;
       }
     }
   }
@@ -249,7 +250,8 @@
 @mixin sage-focus-outline($outline-width: 2px, $outline-offset-block: 4px, $outline-offset-inline: 4px) {
   position: relative;
 
-  &:focus {
+  &:focus,
+  &:focus-within {
     outline: none;
   }
 
