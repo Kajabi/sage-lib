@@ -90,6 +90,11 @@ Sage.tabs = (function() {
     }
 
     let elPane = document.querySelector(`[${SELECTOR_TAB_PANE}="${paneId}"]`);
+    // Ensure there is a matching pane 
+    if (!elPane) {
+      return;
+    }
+
     let panesArray = Sage.util.nodelistToArray( elPane.parentElement.querySelectorAll(`[${SELECTOR_TAB_PANE}]`) );
 
     panesArray.forEach((el) => el.classList.remove(CLASS_TAB_PANE_ACTIVE));
