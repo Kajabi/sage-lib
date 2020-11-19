@@ -347,7 +347,7 @@ Sage.panelControls = (() => {
       return;
     }
 
-    dispatchEvent(EVENTS.BULK_ACTION, { action: el.dataset[ATTRS.LIST_ACTIONS.JS] });
+    dispatchEvent(EVENTS.BULK_ACTION, { action: el.dataset[ATTRS.LIST_ACTION.JS] || null });
   };
 
   const handleBulkActionClick = (ev) =>  {
