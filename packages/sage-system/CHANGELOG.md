@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.30](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.0.29...@kajabi/sage-system@0.0.30) (2020-11-19)
+
+
+### Bug Fixes
+
+* **sage-system:** update system js for components ([1bd80b2](https://github.com/Kajabi/sage-lib/commit/1bd80b2cacaaa64c28318fadb4438ff6de81b637))
+
+
+
+
+
 ## [0.0.29](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.0.28...@kajabi/sage-system@0.0.29) (2020-11-17)
 
 

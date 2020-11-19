@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.23.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.22.43...@kajabi/sage@1.23.0) (2020-11-19)
+
+
+### Features
+
+* **docs:** add remaining components to documentation ([5eab2d7](https://github.com/Kajabi/sage-lib/commit/5eab2d73095b7dabb24b7fbfe90e996781da54b3))
+* **sage_rails:** add remaining components ([9b88598](https://github.com/Kajabi/sage-lib/commit/9b885988d79120dd18fb0ebdf63bd4cee85aed4a))
+
+
+
+
+
 ## [1.22.43](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.22.42...@kajabi/sage@1.22.43) (2020-11-18)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.5.16...@kajabi/sage-assets@0.6.0) (2020-11-19)
+
+
+### Features
+
+* **sage-assets:** add remaining component styles ([6bf0d76](https://github.com/Kajabi/sage-lib/commit/6bf0d76e1144eb74f59e5b32a3c0d2d79dc0d86e))
+
+
+
+
+
 ## [0.5.16](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.5.15...@kajabi/sage-assets@0.5.16) (2020-11-18)
 
 
