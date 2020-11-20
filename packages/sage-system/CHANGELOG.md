@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.31](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.0.30...@kajabi/sage-system@0.0.31) (2020-11-20)
+
+
+### Bug Fixes
+
+* **sage-system:** fix typo in Panel Controls actions constant ([e288134](https://github.com/Kajabi/sage-lib/commit/e288134c38d18d7db3064bf18a9c1a5766d42e6e))
+* **sage-system:** guard event dispatch when no tab pane is found ([0b9a9ff](https://github.com/Kajabi/sage-lib/commit/0b9a9ff26491ef8852fcd146c5664200d6bbbe5b))
+
+
+
+
+
 ## [0.0.30](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.0.29...@kajabi/sage-system@0.0.30) (2020-11-19)
 
 
