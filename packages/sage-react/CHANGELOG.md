@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.6.0...@kajabi/sage-react@0.6.1) (2020-11-20)
+
+
+### Bug Fixes
+
+* **sage-react:** locking package version ([2417373](https://github.com/Kajabi/sage-lib/commit/2417373e11b0404f67ee815f0f22372d6a330529))
+
+
+
+
+
 # [0.6.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.5.15...@kajabi/sage-react@0.6.0) (2020-11-19)
 
 
