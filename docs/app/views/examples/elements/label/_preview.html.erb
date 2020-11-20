@@ -1,21 +1,39 @@
-<%
-colors = [
-  "draft",
-  "info",
-  "success",
-  "warning",
-  "danger"
+<% 
+configs = [
+  {
+    color: "draft",
+    icon: "draft",
+  },
+  {
+    color: "published",
+    icon: "check",
+  },
+  {
+    color: "info",
+    icon: "draft",
+  },
+  {
+    color: "warning",
+    icon: "warning",
+  },
+  {
+    color: "danger",
+    icon: "danger",
+  },
+  {
+    color: "locked",
+    icon: "lock",
+  }
 ]
 %>
 
 <h3 class="t-sage-heading-6">Default</h3>
 <%= sage_component SagePanelBlock, {} do %>
-  <% colors.each do | color | %>
+  <% configs.each do | config | %>
     <%= sage_component SageLabel, {
-      color: color,
+      color: config[:color],
       value: %(
-        #{color.capitalize}
-        <button class="sage-btn sage-btn--subtle sage-btn--secondary sage-btn--icon-only-remove"></button>
+        #{config[:color].capitalize}
       )
     } %>
   <% end %>
@@ -23,48 +41,65 @@ colors = [
 
 <h3 class="t-sage-heading-6">Subtle</h3>
 <%= sage_component SagePanelBlock, {} do %>
-  <% colors.each do | color | %>
+  <% configs.each do | config | %>
     <%= sage_component SageLabel, {
-      color: color,
+      color: config[:color],
       style: "subtle",
-      value: color.capitalize
+      value: config[:color].capitalize
     } %>
   <% end %>
 <% end %>
 
 <h3 class="t-sage-heading-6">Bold</h3>
 <%= sage_component SagePanelBlock, {} do %>
-  <% colors.each do | color | %>
+  <% configs.each do | config | %>
     <%= sage_component SageLabel, {
-      color: color,
+      color: config[:color],
       style: "bold",
-      value: color.capitalize
+      value: config[:color].capitalize
     } %>
   <% end %>
 <% end %>
 
 <h3 class="t-sage-heading-6">With Icons</h3>
 <%= sage_component SagePanelBlock, {} do %>
-  <%= sage_component SageLabel, {
+  <%= sage_component SageLabel, { 
     color: "draft",
     value: "Add",
-    icon: { style: "left", name: "add-small" }
+    icon: "add-small"
   } %>
   <%= sage_component SageLabel, {
     color: "draft",
     value: "Tag",
-    icon: { style: "right", name: "tag" }
+    icon: "tag"
   } %>
 <% end %>
 
-<h3 class="t-sage-heading-6">Interactive</h3>
+<h3 class="t-sage-heading-6">Tags</h3>
 <%= sage_component SagePanelBlock, {} do %>
-  <% colors.each do | color | %>
+  <% configs.each do | config | %>
     <%= sage_component SageLabel, {
-      color: color,
-      interactive: true,
-      value: color.capitalize,
-      icon: { style: "right", name: "caret-down" }
+      color: config[:color],
+      value: config[:color].capitalize,
+      icon: config[:icon],
+      is_interactive: true,
+      is_tag: true
     } %>
+  <% end %>
+<% end %>
+
+
+<h3 class="t-sage-heading-6">Status</h3>
+
+<%= sage_component SagePanelBlock, {} do %>
+  <% configs.each do | config | %>
+    <%= sage_component SageLabel, {
+      color: config[:color],
+      value: config[:color].capitalize,
+      icon: config[:icon],
+      is_status: true,
+      is_interactive: true
+    } %>
+      
   <% end %>
 <% end %>

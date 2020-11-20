@@ -1,20 +1,35 @@
-<% html_tag = component.interactive ? "button" : component.html_tag.present? ? component.html_tag : "span" %>
+<% is_interactive = component.is_interactive %>
+<% label_content_tag = is_interactive ? "button" : "span" %>
 
-<<%= html_tag %>
+<span
   class="
     sage-label
     <%= "sage-label--#{component.color}" if component.color %>
     <%= "sage-label--#{component.style}" if component.style %>
-    <%= "sage-label--interactive" if component.interactive %>
-    <%= "sage-label--icon-#{component.icon[:style]}-#{component.icon[:name]}" if component.icon %>
+    <%= "sage-label--interactive" if is_interactive %>
+    <%= "sage-label--icon-#{component.icon}" if component.icon %>
     <%= component.generated_css_classes %>
   "
 >
-  <% if component.icon&.dig(:style) == "only" %>
-    <span class="visually-hidden">
-      <%= component.value.html_safe %>
-    </span>
-  <% else %>
+  <<%= label_content_tag %>
+    class="sage-label__value"
+    <%= 'type="button"' if component.is_interactive %>
+    <%= component.generated_html_attributes %>
+  />
     <%= component.value.html_safe %>
+</<%= label_content_tag %>>
+
+  <% if component.is_tag %>
+    <%= sage_component SageButton, {
+      value: "Close",
+      subtle: true,
+      small: true,
+      style: "secondary",
+      icon: { style: "only", name: "remove" }
+    } %>
   <% end %>
-</<%= html_tag %>>
+
+  <% if component.is_status %>
+    <span class="sage-label__decor-icon sage-label__decor-icon--caret-down"></span>
+  <% end %>
+</span>
