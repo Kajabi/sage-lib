@@ -10,7 +10,7 @@ sage_bin_path=$sage_repo_path/bin
 
 echo_custom '[MONOREPO]', 'Verifying package dependencies...'
 
-if yarn check; then
+if yarn install --check-files; then
   echo_custom '[MONOREPO]', 'All packages up to date!'
 else
   echo_custom_error "Detected changes in the monorepo's dependencies... Running bootstrap process and adding yarn.lock to commit"
