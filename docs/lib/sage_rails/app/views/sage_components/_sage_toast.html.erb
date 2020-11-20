@@ -8,12 +8,12 @@
   aria-labelledby="sage-toast-label"
   data-js-toast
 >
-  <p
+  <output aria-live="assertive" aria-atomic="true"
     class="sage-toast__value"
     id="sage-toast-label" <%# used by: aria-labelledby %>
   >
     <%= component.value %>
-  </p>
+  </output>
   <%= sage_component SageButton, {
     value: "close",
     style: "secondary",

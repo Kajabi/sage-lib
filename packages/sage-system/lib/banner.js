@@ -22,6 +22,8 @@ Sage.banner = (() => {
   const handleBannerToggleClick = (ev) => {
     const elTarget = ev.target;
 
+    console.log(elTarget);
+
     // Ensure we're working with a button or hyperlink
     const elTargetTrigger = elTarget.closest('a, button');
     if (!elTargetTrigger) {
@@ -40,6 +42,7 @@ Sage.banner = (() => {
     if (toggleBannerTarget === selfTargetAttr) {
       elTargetBanner = elTarget.closest(`.${bannerClass}`);
     } else {
+      console.log(toggleBannerTarget);
       elTargetBanner = document.getElementById(toggleBannerTarget);
     }
 

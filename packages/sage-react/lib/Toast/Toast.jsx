@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import uuid from 'react-uuid';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import ToastFade from './ToastFade';
 import Button from '../Button';
 import Icon from '../Icon';
 import { TOAST_COLORS } from './configs';
@@ -18,6 +19,7 @@ const Toast = ({
   const [isDismissed, setDismissed] = useState(false);
 
   const dismiss = (dismissed) => {
+    console.log('dismissed', dismissed);
     if (dismissed) {
       if (onDismiss) {
         onDismiss();
@@ -58,21 +60,23 @@ const Toast = ({
   const id = uuid();
 
   return !isDismissed && (
-    <dialog open className={classNames} aria-labelledby={`sage-toast-label-${id}`}>
-      <p className="sage-toast__value" id={`sage-toast-label-${id}`}>
-        {title}
-        {description}
-      </p>
-      <Button
-        color={Button.COLORS.SECONDARY}
-        icon={Icon.ICONS.REMOVE}
-        iconOnly={true}
-        onClick={onClickDismiss}
-        subtle={true}
-      >
-        Dismiss message
-      </Button>
-    </dialog>
+    <ToastFade isDismissed={isDismissed}>
+      <dialog open className={classNames} aria-labelledby={`sage-toast-label-${id}`}>
+        <output className="sage-toast__value" id={`sage-toast-label-${id}`}>
+          {title}
+          {description}
+        </output>
+        <Button
+          color={Button.COLORS.SECONDARY}
+          icon={Icon.ICONS.REMOVE}
+          iconOnly={true}
+          onClick={onClickDismiss}
+          subtle={true}
+        >
+          Dismiss message
+        </Button>
+      </dialog>
+    </ToastFade>
   );
 };
 
@@ -84,7 +88,7 @@ Toast.defaultProps = {
   description: null,
   isActive: false,
   onDismiss: e => e,
-  timeout: 500,
+  timeout: 2000,
   title: null,
 };
 

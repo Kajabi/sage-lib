@@ -19,7 +19,7 @@ Sage.popover = (function() {
 
     // close any toasts present on load
     if (elems) {
-      closeAllToasts(elems);
+      // closeAllToasts(elems);
     } 
   }
 
@@ -30,6 +30,22 @@ Sage.popover = (function() {
 
   function handleClick(evt) {
     const elParent = evt.currentTarget;
+
+    const toggleToastTarget = elTargetTrigger.dataset.jsToggleToast;
+    if (!toggleToastTarget) {
+      return;
+    }
+
+    let elTargetToast;
+    if (toggleToastTarget === selfTargetAttr) {
+      // elTargetToast = elTarget.closest(`.${bannerClass}`);
+    } else {
+      console.log(toggleToastTarget);
+      elTargetToast = document.getElementById(toggleToastTarget);
+    }
+
+
+    elTargetToast = document.getElementById()
 
     closeToast(elParent);
   }
