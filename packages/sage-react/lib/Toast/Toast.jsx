@@ -86,7 +86,7 @@ Toast.defaultProps = {
   description: null,
   isActive: false,
   onDismiss: e => e,
-  timeout: 6000,
+  timeout: 3000,
   title: null,
 };
 
