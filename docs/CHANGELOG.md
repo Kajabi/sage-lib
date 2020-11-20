@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.23.5](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.23.4...@kajabi/sage@1.23.5) (2020-11-20)
+
+
+### Bug Fixes
+
+* added affordance within sage label ([e1be58f](https://github.com/Kajabi/sage-lib/commit/e1be58f0de7bfa65787cc77cc3449bf0219cc96f))
+* resolve incorrect property reference ([c79453e](https://github.com/Kajabi/sage-lib/commit/c79453e6870a032bd1978c3106c10d88f87c575c))
+* updated rails sage label ([6d159b1](https://github.com/Kajabi/sage-lib/commit/6d159b18b091a630c4bb22309c3e76f8ffd5cf00))
+
+
+
+
+
 ## [1.23.4](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.23.3...@kajabi/sage@1.23.4) (2020-11-20)
 
 **Note:** Version bump only for package @kajabi/sage

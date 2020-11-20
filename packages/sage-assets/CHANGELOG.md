@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.6.1...@kajabi/sage-assets@0.6.2) (2020-11-20)
+
+
+### Bug Fixes
+
+* added affordance within sage label ([e1be58f](https://github.com/Kajabi/sage-lib/commit/e1be58f0de7bfa65787cc77cc3449bf0219cc96f))
+* updated css for buttons ([43f2b0b](https://github.com/Kajabi/sage-lib/commit/43f2b0b4a92351a9a9c383bb49105f91517bcb4f))
+
+
+
+
+
 ## [0.6.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.6.0...@kajabi/sage-assets@0.6.1) (2020-11-20)
 
 **Note:** Version bump only for package @kajabi/sage-assets
