@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.6.2...@kajabi/sage-react@0.6.3) (2020-11-20)
+
+
+### Bug Fixes
+
+* **sage-react:** triggering a build ([d31d410](https://github.com/Kajabi/sage-lib/commit/d31d410cdbcaa09a81b27753b9a9b49bdd6e0aa4))
+
+
+
+
+
 ## [0.6.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.6.1...@kajabi/sage-react@0.6.2) (2020-11-20)
 
 **Note:** Version bump only for package @kajabi/sage-react
