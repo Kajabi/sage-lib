@@ -13,10 +13,11 @@
 >
   <<%= label_content_tag %>
     class="sage-label__value"
+    <%= 'type="button"' if component.is_interactive %>
     <%= component.generated_html_attributes %>
   />
     <%= component.value.html_safe %>
-  </<%= label_content_tag %>>
+</<%= label_content_tag %>>
 
   <% if component.is_tag %>
     <%= sage_component SageButton, {
