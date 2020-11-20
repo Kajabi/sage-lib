@@ -1,16 +1,8 @@
 <%= sage_component SageToast, {
   value: "Post Created",
-  id: "toast-1",
 } %>
 
 <%= sage_component SageToast, {
   value: "System Error: This message may provide more information!",
   style: "danger",
 } %>
-
-<%= sage_component SageButton, {
-  style: "primary", 
-  value: "Save" ,
-  attributes: { "data-js-toggle-toast": "toast-1" }
-} %>
-

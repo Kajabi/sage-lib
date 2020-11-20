@@ -1,27 +1,23 @@
-import React, { useEffect, useState } from "react";
-
-const ToastFade = ({ show, children }) => {
-  const [shouldRender, setRender] = useState(show);
-
+import React, { useEffect, useState } from 'react';
+const ToastFade = ({ isDismissed, className, children }) => {
+  const [shouldRender, setRender] = useState(!isDismissed);
   useEffect(() => {
-    if (show) setRender(true);
-  }, [show]);
-
-  const onAnimationEnd = () => {
-    // setTimeout(setR)
-    if (!show) setRender(false);
-  };
-
+    if (isDismissed) {
+      setTimeout(() => setRender(false), 1000);
+    } else {
+      setRender(true);
+    }
+  }, [isDismissed]);
+  if (!shouldRender) {
+    return null;
+  }
   return (
-    shouldRender && (
-      <div
-        style={{ animation: `${show ? "sage-toast--slide-in" : "sage-toast--slide-out"} 1s` }}
-        onAnimationEnd={onAnimationEnd}
-      >
-        {children}
-      </div>
-    )
+    <div
+      className={className}
+      style={{ animation: `${!isDismissed ? "sage-toast--slide-in" : "sage-toast--slide-out"} 1s forwards` }}
+    >
+      {children}
+    </div>
   );
 };
-
 export default ToastFade;

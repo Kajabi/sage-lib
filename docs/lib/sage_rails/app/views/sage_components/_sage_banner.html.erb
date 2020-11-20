@@ -15,9 +15,9 @@
   <%= "aria-hidden=true" if !component.active %>
 >
   <% if component.text.present? %>
-    <output class="sage-banner__text" aria-live="true" aria-atomic="true">
+    <p class="sage-banner__text">
       <%= component.text %>
-    </output>
+    </p>
   <% end %>
 
   <% if component.link.present? %>

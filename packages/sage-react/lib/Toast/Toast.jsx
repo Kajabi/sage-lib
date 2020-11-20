@@ -59,23 +59,21 @@ const Toast = ({
 
   const id = uuid();
 
-  return !isDismissed && (
-    <ToastFade isDismissed={isDismissed}>
-      <dialog open className={classNames} aria-labelledby={`sage-toast-label-${id}`}>
-        <output className="sage-toast__value" id={`sage-toast-label-${id}`}>
-          {title}
-          {description}
-        </output>
-        <Button
-          color={Button.COLORS.SECONDARY}
-          icon={Icon.ICONS.REMOVE}
-          iconOnly={true}
-          onClick={onClickDismiss}
-          subtle={true}
-        >
-          Dismiss message
-        </Button>
-      </dialog>
+  return (
+    <ToastFade className={classNames} isDismissed={isDismissed} open aria-labelledby={`sage-toast-label-${id}`}>
+      <output aria-live="assertive" className="sage-toast__value" id={`sage-toast-label-${id}`}>
+        {title}
+        {description}
+      </output>
+      <Button
+        color={Button.COLORS.SECONDARY}
+        icon={Icon.ICONS.REMOVE}
+        iconOnly={true}
+        onClick={onClickDismiss}
+        subtle={true}
+      >
+        Dismiss message
+      </Button>
     </ToastFade>
   );
 };
@@ -88,7 +86,7 @@ Toast.defaultProps = {
   description: null,
   isActive: false,
   onDismiss: e => e,
-  timeout: 2000,
+  timeout: 6000,
   title: null,
 };
 
