@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.5](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.6.4...@kajabi/sage-react@0.6.5) (2020-11-21)
+
+
+### Bug Fixes
+
+* **sage-react:** moved react/react-dom to peerDependencies ([fa32bcf](https://github.com/Kajabi/sage-lib/commit/fa32bcf1e50e4926e864518682ffa978c73b3925))
+
+
+
+
+
 ## [0.6.4](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.6.3...@kajabi/sage-react@0.6.4) (2020-11-20)
 
 **Note:** Version bump only for package @kajabi/sage-react

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.23.6](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.23.5...@kajabi/sage@1.23.6) (2020-11-21)
+
+
+### Bug Fixes
+
+* **sage-react:** moved react/react-dom to peerDependencies ([fa32bcf](https://github.com/Kajabi/sage-lib/commit/fa32bcf1e50e4926e864518682ffa978c73b3925))
+
+
+
+
+
 ## [1.23.5](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.23.4...@kajabi/sage@1.23.5) (2020-11-20)
 
 
