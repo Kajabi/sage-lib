@@ -16,8 +16,13 @@ $sage_bin_path/env.sh
 export $(cat $sage_repo_path/.env | xargs)
 
 # Cd to the exported path and run the local-link
-cd $KAJABI_PRODUCTS_PATH;
-$sage_bin_path/local-link.sh $1
+if [[ $KAJABI_PRODUCTS_PATH != '' ]]; then
+    cd $KAJABI_PRODUCTS_PATH;
+    $sage_bin_path/local-link.sh $1
+else
+    echo_custom_error "Please check your .env file for a KAJABI_PRODUCTS_PATH variable."
+    exit 1
+fi;
 
 
 

@@ -28,6 +28,9 @@ function show_status_of_package() {
 
 # Create local links to all packages
 function linkSetup() {
+  echo_custom "[FRONTEND]:" "Setting up local link for React and ReactDOM in ${PWD}/node_modules"
+  (cd node_modules/react; yarn link)
+  (cd node_modules/react-dom; yarn link)
   echo_custom "[FRONTEND]:" "Setting up local link in ${PWD}"
   (cd $sage_assets_path; yarn link)
   (cd $sage_react_path; yarn link)
@@ -37,6 +40,9 @@ function linkSetup() {
 
 # Create a link in the current package to the local linked packages
 function link() {
+  echo_custom "[FRONTEND]:" "Linking React / ReactDOM in ${sage_repo_path}"
+  (cd $sage_repo_path && yarn link react)
+  (cd $sage_repo_path && yarn link react-dom)
   echo_custom "[FRONTEND]:" "Linking local packages in ${PWD}"
   yarn link @kajabi/sage-assets
   yarn link @kajabi/sage-react
@@ -46,6 +52,9 @@ function link() {
 
 # Destroy yarn link for package
 function linkTeardown() {
+  echo_custom "[FRONTEND]:" "Tearing down local React / ReactDOM in ${sage_repo_path}/node_modules"
+  (cd node_modules/react; yarn unlink)
+  (cd node_modules/react-dom; yarn unlink)
   echo_custom "[FRONTEND]:" "Tearing down local link in ${PWD}"
   (cd $sage_assets_path; yarn unlink)
   (cd $sage_react_path; yarn unlink)
@@ -55,6 +64,9 @@ function linkTeardown() {
 
 # Destroy yarn local link to packages
 function unlink() {
+  echo_custom "[FRONTEND]:" "Unlinking local React / ReactDOM in ${sage_repo_path}"
+  (cd $sage_repo_path && yarn unlink react)
+  (cd $sage_repo_path && yarn unlink react-dom)
   echo_custom "[FRONTEND]:" "Unlinking local packages in ${PWD}"
   yarn unlink @kajabi/sage-assets
   yarn unlink @kajabi/sage-react
@@ -80,11 +92,16 @@ if [ "$1" = "true" ] || [ "$1" = "false" ]; then
     echo_custom "[FRONTEND]:" "${PWD} is now using PRODUCTION SAGE ✅"
   # Install local bindings on true
   elif [ "$1" = "true" ]; then
+    # Install packs first so we can download react/react-dom
+    yarn_install
+
     # Setup local links on packages
     linkSetup
+
     echo_custom "[FRONTEND]:" "Link the local Sage frontend packages in ${PWD}"
     # Link the packages in the local directory
     link
+
     yarn_install
 
     echo_custom "[FRONTEND]:" "Link the local Sage frontend packages in the Rails Gem ${sage_docs_path}"

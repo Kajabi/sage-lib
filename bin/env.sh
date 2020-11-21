@@ -16,7 +16,14 @@ function add_kajabi_products_path() {
     add_kajabi_products_path
   else
     echo "Adding KAJABI_PRODUCTS_PATH=$KAJABI_PRODUCTS_PATH to your .env file..."
-    sed -i "s@KAJABI_PRODUCTS_PATH=@KAJABI_PRODUCTS_PATH=$KAJABI_PRODUCTS_PATH@" $sage_repo_path/.env
+    case "$(uname -s)" in
+      Darwin)
+        sed -i "" "s@KAJABI_PRODUCTS_PATH=@KAJABI_PRODUCTS_PATH=$KAJABI_PRODUCTS_PATH@" $sage_repo_path/.env
+      ;;
+      *)
+        sed -i "s@KAJABI_PRODUCTS_PATH=@KAJABI_PRODUCTS_PATH=$KAJABI_PRODUCTS_PATH@" $sage_repo_path/.env
+      ;;
+    esac
     echo "Added KAJABI_PRODUCTS_PATH entry"
   fi;
 }
