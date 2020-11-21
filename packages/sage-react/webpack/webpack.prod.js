@@ -16,6 +16,10 @@ module.exports = {
   plugins: [new MiniCssExtractPlugin({
     filename: '[name].css'
   })],
+  externals: {
+    react: "react",
+    reactDOM: "react-dom",
+  },
   module: {
     rules: [
       {
