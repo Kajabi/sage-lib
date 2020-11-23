@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.6](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.6.5...@kajabi/sage-react@0.6.6) (2020-11-23)
+
+
+### Bug Fixes
+
+* **sage-react:** adding react-router-dom as peerDep ([f863de1](https://github.com/Kajabi/sage-lib/commit/f863de1d796df4ef4503e282fb4d05db6e73abbd))
+
+
+
+
+
 ## [0.6.5](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.6.4...@kajabi/sage-react@0.6.5) (2020-11-21)
 
 
