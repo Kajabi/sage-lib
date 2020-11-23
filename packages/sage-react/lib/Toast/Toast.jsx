@@ -10,7 +10,7 @@ import { TOAST_COLORS } from './configs';
 const Toast = ({
   className,
   color,
-  description,
+  text,
   isActive,
   onDismiss,
   timeout,
@@ -62,8 +62,7 @@ const Toast = ({
   return (
     <ToastFade className={classNames} isDismissed={isDismissed} open aria-labelledby={`sage-toast-label-${id}`}>
       <output aria-live="assertive" className="sage-toast__value" id={`sage-toast-label-${id}`}>
-        {title}
-        {description}
+        {text}
       </output>
       <Button
         color={Button.COLORS.SECONDARY}
@@ -83,21 +82,19 @@ Toast.COLORS = TOAST_COLORS;
 Toast.defaultProps = {
   className: null,
   color: TOAST_COLORS.DEFAULT,
-  description: null,
+  text: null,
   isActive: false,
   onDismiss: e => e,
   timeout: 3000,
-  title: null,
 };
 
 Toast.propTypes = {
   className: PropTypes.string,
   color: PropTypes.oneOf(Object.values(TOAST_COLORS)),
-  description: PropTypes.string,
+  text: PropTypes.string,
   isActive: PropTypes.bool,
   onDismiss: PropTypes.func,
   timeout: PropTypes.number,
-  title: PropTypes.string,
 };
 
 export default Toast;

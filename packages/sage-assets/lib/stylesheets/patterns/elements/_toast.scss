@@ -8,6 +8,7 @@
 $-toast-height-default: rem(68px);
 $-toast-height-mobile: rem(36px);
 $-toast-viewport-spacing-bottom: sage-spacing();
+$-toast-min-width: rem(350px);
 
 @keyframes sage-toast--slide-in {
   from {
@@ -37,8 +38,9 @@ $-toast-viewport-spacing-bottom: sage-spacing();
   position: fixed;
   justify-content: space-between;
   align-items: center;
+  min-width: $-toast-min-width;
   padding: 0 sage-spacing(md);
-  border-radius: sage-border(radius-large);
+  border-radius: sage-border(radius);
   box-shadow: sage-shadow(lg);
   background-color: sage-color(charcoal);
   transition: bottom $sage-transition;
@@ -67,6 +69,7 @@ $-toast-viewport-spacing-bottom: sage-spacing();
     width: fit-content;
     max-width: 90vw;
     padding: 0 sage-spacing(lg);
+    padding: 0 sage-spacing(md);
 
     @include generate-stacked-toast-alignment($-toast-height-default);
   }
@@ -85,7 +88,7 @@ $-toast-viewport-spacing-bottom: sage-spacing();
 
 .sage-toast__value::before {
   @include sage-icon-base(check);
-  margin-right: sage-spacing(2xs);
+  margin-right: sage-spacing(xs);
 
   .sage-toast--style-danger & {
     content: sage-icon(danger);

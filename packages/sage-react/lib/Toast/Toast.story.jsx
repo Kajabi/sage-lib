@@ -13,8 +13,7 @@ storiesOf('Sage/Toast', module)
       <Toast
         icon={SageTokens.ICONS.INFO_CIRCLE}
         isActive={boolean('Active', true)}
-        title={text('Title', 'Hello, world')}
-        description={text('Description', 'Hello, world subtext')}
+        text={text('Text', 'Hello, world')}
         color={select('Color', Toast.COLORS, Toast.COLORS.DEFAULT)}
       />
     </div>
