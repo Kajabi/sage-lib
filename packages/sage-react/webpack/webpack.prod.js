@@ -19,6 +19,7 @@ module.exports = {
   externals: {
     react: "react",
     reactDOM: "react-dom",
+    reactRouterDom: "react-router-dom",
   },
   module: {
     rules: [
