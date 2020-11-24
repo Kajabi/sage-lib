@@ -25,20 +25,30 @@ Sage.popover = (function() {
   }
 
   function handleClick(evt) {
-    const elParent = evt.currentTarget;
 
-    if (evt.target.hasAttribute(SELECTOR_TRIGGER)) {
-      if (isExpanded(elParent)) {
+    const elParent = evt.currentTarget;
+    const elChild = elParent.children[0];
+
+    if (evt.target.hasAttribute(SELECTOR_TRIGGER) || evt.target.parentNode.hasAttribute(SELECTOR_TRIGGER)) {
+      if (isExpanded(elParent) || isExpanded(elChild.parentNode)) {
         closePopoverPanel(elParent);
       } else {
         openPopoverPanel(elParent);
+        positionPopoverPanel(elParent)
       }
     }
-    
     // if the clicked element is the overlay, close the previously opened popover
     if (evt.target.hasAttribute(SELECTOR_OVERLAY)) {
       closePopoverPanel(elParent);
     }
+  }
+
+  function positionPopoverPanel(elParent){
+    const trigger = elParent.children[0]
+    const triggerPadding = 12; // conversion of btn padding rem to px
+    const triggerWidth = trigger.offsetWidth + triggerPadding;
+    const triggerPanel = trigger.parentNode.querySelector(".sage-popover__panel")
+    triggerPanel.style.left = triggerWidth + "px";
   }
 
   function handleKeydown(evt) {
