@@ -1,0 +1,116 @@
+<%= render "examples/shared/documentation",
+  dos: "
+* Include a `value` even when you're using the `style: \"only\"` for the `icon`. This ensure that an accessible label is provided for the icon.
+",
+  donts: "
+* Don't include visual text content with the `\"tiny\"` size variation
+  unless it is an element that contains its own padding such as `sage-label`.
+",
+  props: [
+    {
+      name: "align",
+      notes: "Aligns a button to the right rather than its default position",
+      schema: "`String: [ null | \"end\" ]`",
+      default_value: "`null`",
+      required: false,
+    },
+    {
+      name: "disabled",
+      notes: "
+        Toggles whether or not the button is disabled.
+        On `button` this implements the `disabled` HTML attribute
+        but on hyperlinks it enables the `aria-disabled=\"true\"`.
+      ",
+      schema: "`Boolean`",
+      default_value: "`false`",
+      required: false,
+    },
+    {
+      name: "full_width",
+      notes: "Forces a button to 100% the width of its container.",
+      schema: "`Boolean`",
+      default_value: "`false`",
+      required: false,
+    },
+    {
+      name: "icon",
+      notes: "Allows for configurations for an and its placement to be provided.",
+      schema: "```
+icon: {
+  name: <String: name of Sage icon, see Icons>,
+  style: <String: [ \"left\" | \"right\" | \"only\" ]>;
+}
+```",
+      default_value: "`null`",
+      required: false,
+    },
+    {
+      name: "no_shadow",
+      notes: "Toggles the `raised` effect off of Buttons that are of the `primary` type.",
+      schema: "`Boolean`",
+      default_value: "`false`",
+      required: false,
+    },
+    {
+      name: "raised",
+      notes: "Toggles `raised` shadows effect onto the `secondary` or `danger` types.",
+      schema: "`Boolean`",
+      default_value: "`false`",
+      required: false,
+    },
+    {
+      name: "small",
+      notes: "Toggles whether buttons in the `subtle` format can be display in a regular (default) and small size using this property.",
+      schema: "`Boolean`",
+      default_value: "`false`",
+      required: false,
+    },
+    {
+      name: "style",
+      notes: "Buttons have three different \"styles\" that affect color appearance to create a `primary`, `secondary`, and `danger` variation.",
+      schema: "`String: [ \"primary\" | \"secondary\" | \"danger\" ]`",
+      default_value: "`primary`",
+      required: true,
+    },
+    {
+      name: "subtle",
+      notes: "Whether or not to render the button in the \"subtle\" format.",
+      schema: "`Boolean`",
+      default_value: "`false`",
+      required: false,
+    },
+    {
+      name: "value",
+      notes: "
+        The value to show on the button.
+        If the `only` style is set for `icon`, this label is visually hidden.
+      ",
+      schema: "`String`",
+      default_value: "`null`",
+      required: true,
+    }
+  ] 
+%>
+
+<!--
+knob: {
+  label: 'Type',
+  type: 'select',
+  options: [
+    'primary',
+    'secondary',
+    'tertiary',
+    'danger',
+  ],
+}
+
+knob: {
+  label: 'Type',
+  type: 'select',
+  options: [
+    'left',
+    'right',
+    'only',
+  ],
+}
+-->

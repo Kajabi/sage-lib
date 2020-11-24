@@ -1,0 +1,149 @@
+<!-- Demos -->
+<% 
+index = 0
+demos = [
+  {
+    title: "Primary",
+    options: {
+      value: "Primary",
+      style: "primary",
+    }
+  },
+  {
+    title: "Secondary",
+    options: {
+      value: "Secondary",
+      style: "secondary",
+    }
+  },
+  {
+    title: "Danger",
+    options: {
+      value: "Danger",
+      style: "danger",
+    }
+  }
+]
+%>
+<% demos.each do | demo | %>
+  <%= render :layout => "examples/shared/examples", :locals => {
+      title: "#{demo[:title]} (regular and disabled)",
+      number: index += 1
+    } do %>
+    <%= sage_component SagePanelStack, {} do %>
+      <% [false, true].each do | disabled | %>
+        <%= sage_component SageButtonGroup, { gap: :md, spacer: { bottom: :xs }} do %>
+          <!-- Primary button -->
+          <%= sage_component SageButton, {
+            value: demo[:options][:value],
+            style: demo[:options][:style],
+            disabled: disabled
+          } %>
+
+          <!-- Primary button (link) -->
+          <%= sage_component SageButton, {
+            value: "Link",
+            style: demo[:options][:style],
+            attributes: {
+              href: "#element-button"
+            },
+            disabled: disabled
+          } %>
+
+          <!-- Primary button (icon-left) -->
+          <%= sage_component SageButton, {
+            value: "Left icon",
+            style: demo[:options][:style],
+            icon: {
+              style: "left",
+              name: "menu"
+            },
+            disabled: disabled
+          } %>
+
+          <!-- Primary button (icon-right) -->
+          <%= sage_component SageButton, {
+            value: "Right icon",
+            style: demo[:options][:style],
+            icon: {
+              style: "right",
+              name: "menu"
+            },
+            disabled: disabled
+          } %>
+
+          <!-- Primary button (icon-only) -->
+          <%= sage_component SageButton, {
+            value: "Icon only",
+            style: demo[:options][:style],
+            icon: {
+              style: "only",
+              name: "menu"
+            },
+            disabled: disabled
+          } %>
+        <% end %>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>
+
+<% demos.each do | demo | %>
+  <%= render :layout => "examples/shared/examples",
+    :locals => {
+      title: "#{demo[:title]} (Small)",
+      number: index += 1
+    } do %>
+    <%= sage_component SageButtonGroup, { gap: :lg, spacer: { bottom: :xs }} do %>
+      <%= sage_component SageButton, {
+        value: "Button",
+        style: demo[:options][:style],
+        subtle: true
+      } %>
+      <%= sage_component SageButton, {
+        value: "Button",
+        style: demo[:options][:style],
+        subtle: true,
+        icon: {
+          name: "pen",
+          style: "left"
+        }
+      } %>
+      <%= sage_component SageButton, {
+        value: "Button",
+        style: demo[:options][:style],
+        subtle: true,
+        icon: {
+          name: "pen",
+          style: "only"
+        }
+      } %>
+    <% end %>
+  <% end %>
+<% end %>
+
+<%= render "examples/shared/examples", {
+  title: "Button groups",
+  notes: md("
+The Button Group has been used in each example of multiple buttons in a row above.
+This provides grouping and spacing according to the System's intentions.
+  "),
+  number: index += 1
+} %>
+
+<%= render :layout => "examples/shared/examples",
+  :locals => {
+    title: "Button group: Align End",
+    number: index += 1
+  } do %>
+  <%= sage_component SageButtonGroup, { align: "end" } do %>
+    <%= sage_component SageButton, {
+      value: "Save",
+      style: "primary",
+    } %>
+    <%= sage_component SageButton, {
+      value: "Cancel",
+      style: "secondary",
+    } %>
+  <% end %>
+<% end %>
