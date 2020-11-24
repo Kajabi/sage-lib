@@ -31,8 +31,6 @@ $-popover-panel-offset-left: sage-spacing(md);
   box-shadow: sage-shadow();
   border-radius: sage-border(radius);
 
-  @include sage-grid-stack();
-
   .sage-popover--is-expanded & {
     visibility: visible;
   }
@@ -56,11 +54,5 @@ $-popover-panel-offset-left: sage-spacing(md);
 
 .sage-popover__title {
   @extend %t-sage-heading-5;
-}
-
-.sage-popover__content {
-  @extend %t-sage-body-small;
-  @include sage-grid-stack();
-
-  color: sage-color(charcoal, 100);
+  margin-bottom: sage-spacing(xs);
 }
