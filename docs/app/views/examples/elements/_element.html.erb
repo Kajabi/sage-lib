@@ -1,20 +1,22 @@
 <% info_content = sage_elements.select { |element| element[:title] == @title }[0] %>
-<% props_content = render partial: "examples/elements/#{@title}/props" %>
-<% do_content = render partial: "examples/elements/#{@title}/rules_do" %>
-<% dont_content = render partial: "examples/elements/#{@title}/rules_dont" %>
 
 <%= render "examples/shared/heading",
   info_content: info_content %>
 
-<%= render "examples/shared/quick_links",
-  props_content: props_content,
-  do_content: do_content,
-  dont_content: dont_content %>
+<% if info_content[:use_legacy_documentation] %>
+  <% props_content = render partial: "examples/elements/#{@title}/props" %>
+  <% do_content = render partial: "examples/elements/#{@title}/rules_do" %>
+  <% dont_content = render partial: "examples/elements/#{@title}/rules_dont" %>
 
-<div class="sage-panel-set">
-  <%= render "examples/shared/preview",
-    type: "element",
-    title: @title %>
+  <%= render "examples/shared/quick_links",
+    props_content: props_content,
+    do_content: do_content,
+    dont_content: dont_content %>
+
+  <div class="sage-panel-set">
+    <%= render "examples/shared/preview",
+      type: "element",
+      title: @title %>
 
   <% if info_content[:use_legacy_html_code_source] %>
     <%= render "examples/shared/legacy_code",
@@ -26,12 +28,43 @@
       title: @title %>
   <% end %>
 
-  <%= render "examples/shared/props",
-    props_content: props_content, 
-    title: @title %>
+    <%= render "examples/shared/props",
+      props_content: props_content %>
 
-  <%= render "examples/shared/rules",
-    do_content: do_content,
-    dont_content: dont_content, 
-    title: @title %>
-</div>
+    <%= render "examples/shared/rules",
+      do_content: do_content,
+      dont_content: dont_content %>
+  </div>
+<% else %>
+  <%= content_for :quick_links do %>
+    <div class="quick-links">
+      <h2 class="quick-links__title">Contents</h2>
+      <ul class="quick-links__body">
+        <li class="quick-links__item">
+          <a href="#prototype" class="quick-links__link">Prototpye</a>
+        </li>
+        <li class="quick-links__item">
+          <a href="#examples" class="quick-links__link">Examples</a>
+        </li>
+        <li class="quick-links__item">
+          <a href="#best-practices" class="quick-links__link">Best Practices</a>
+        </li>
+        <li class="quick-links__item">
+          <a href="#props" class="quick-links__link">Properties</a>
+        </li>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="sage-panel-set">
+    <h2 id="prototype">Prototype</h2>
+    <%= render "examples/elements/#{@title}/prototype" %>
+
+    <%= sage_component SagePanelDivider, {} %>
+
+    <h2 id="Examples">Examples</h2>
+    <%= render "examples/elements/#{@title}/examples" %>
+
+    <%= render "examples/elements/#{@title}/documentation" %>
+  </div>
+<% end %>

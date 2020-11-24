@@ -22,6 +22,6 @@ such as a form label, an input or a button.
 <% end %>
 <div class="sage-panel-set">
   <% sorted_sage_elements.each do |element| %>
-    <%= render "examples/elements/element_preview", title: element[:title], description: element[:description] %>
+    <%= render "examples/elements/element_preview", title: element[:title], description: element[:description], use_legacy_documentation: element[:use_legacy_documentation] %>
   <% end %>
 </div>
