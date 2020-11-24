@@ -1,0 +1,39 @@
+.sage-docs-prop-item {
+  display: grid;
+  gap: sage-spacing(sm);
+  grid-template-columns: 200px auto;
+  grid-template-areas:
+    "name notes"
+    ".    schema"
+    ".    def-val";
+  padding: sage-spacing(sm) sage-spacing();
+
+  &:not(:last-child) {
+    border-bottom: 1px solid sage-color(grey, 200);
+  }
+}
+
+.sage-docs-prop-item__name {
+  grid-area: name;
+
+  @extend %t-sage-heading-6;
+}
+
+.sage-docs-prop-item__req {
+  display: block;
+  color: sage-color(red);
+
+  @extend %t-sage-body-small;
+}
+
+.sage-docs-prop-item__notes {
+  grid-area: notes;
+}
+
+.sage-docs-prop-item__schema {
+  grid-area: schema;
+}
+
+.sage-docs-prop-item__default {
+  grid-area: def-val;
+}
