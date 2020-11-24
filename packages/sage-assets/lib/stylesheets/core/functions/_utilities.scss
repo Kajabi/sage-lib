@@ -1,0 +1,125 @@
+////
+/// @group utilities
+////
+
+///
+/// Parse a Morse code into a prescriptive object pattern that is used to create CSS for the code value.
+///
+/// - `code` - the original morse code value provided.
+/// - `pattern` - the grid template pattern, a combination of `auto` and `1fr` depending on the morse code provided.
+///   For example, the pattern `..--.` would return `auto auto 1fr 1fr auto`.
+/// - `dash-slots` - a list of the indeces for slots in the pattern occupied by dashes.
+///   For example, the pattern `..--.` would return `2 3`.
+/// - `dot-slots` - a list of the indeces for slots in the pattern occupied by dashes.
+///   For example, the pattern `..--.` would return `0 1 4`.
+///
+/// @param {*} $-code The morse code value to parse.
+///
+/// @return {map} See documentation above
+///
+@function parse-morse-code($-code) {
+  $-pattern: ();
+  $-dash-slots: ();
+  $-dot-slots: ();
+
+  $i: 1;
+  @while $i <= str-length($-code) {
+    $str: str-slice($-code, $i, $i);
+
+    @if ($str == ".") {
+      $-dot-slots: append($-dot-slots, $i);
+      $-pattern: append($-pattern, auto);
+    }
+    @else if ($str == "-") {
+      $-dash-slots: append($-dash-slots, $i);
+      $-pattern: append($-pattern, 1fr);
+    }
+
+    $i: $i + 1;
+  }
+
+  @return (
+    code: $-code,
+    pattern: $-pattern,
+    dash-slots: $-dash-slots,
+    dot-slots: $-dot-slots,
+  );
+}
+
+/// 
+/// Checks the value of a positioning property to ensure it is present.
+///
+/// @param {string} $key The property name being inspected
+/// @param {*} $value The value to check
+///
+/// @return {*} Outputs an error message if the value is not present, the value if provided, or `null` if the value is `unset`.
+///
+@function position-print-value($key, $value) {
+  @if not $value {
+    @error "position() mixin requires all 4 position values (top, right, bottom, left): #{$key} is missing or invalid.";
+  }
+  @else if $value != unset {
+    @return $value;
+  }
+  @else {
+    @return null;
+  }
+}
+
+///
+/// Converts an integer to a rem value based on 16 as the base size.
+///
+/// @param {length} $value Length value, typically a `px` or `pt` that is to be converted to `rem`
+///
+/// @example scss - Basic usage
+///   // Declaration
+///   .sage-box {
+///     width: rem(200px);
+///   }
+///
+///   // Output
+///   .sage-box {
+///     width: 12.5rem;
+///   }
+///
+/// @return {length} Provided value as a `rem`.
+///
+@function rem($value) {
+  @return strip-unit($value) / 16 * 1rem;
+}
+
+///
+/// Converts an integer to a rem value based on 16 as the base size.
+/// 
+/// @param {length} $number Length from which to strip a unit
+///
+/// @return {number} Unitless number
+///
+@function strip-unit($number) {
+  @if type-of($number) == "number" and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+///
+/// Replace `$search` with `$replace` in `$string`
+///
+/// @author Hugo Giraudel
+///
+/// @param {string} $string - Initial string
+/// @param {string} $search - Substring to replace
+/// @param {string} $replace ('') - New value
+///
+/// @return {string} - Updated string
+///
+@function str-replace($string, $search, $replace: "") {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+
+  @return $string;
+}
