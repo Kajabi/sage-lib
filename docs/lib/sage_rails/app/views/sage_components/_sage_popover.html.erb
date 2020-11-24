@@ -1,30 +1,44 @@
-<div
-  class="sage-popover"
-  data-js-popover
->
-  <%= sage_component SageButton, {
-    value: "Open Menu",
-    style: "secondary",
-    css_classes: "sage-popover__button",
-    subtle: true,
-    icon: {
-      style: "only",
-      name: component.icon
-    },
-    attributes: {
-      "aria-haspopup": true,
-      "aria-controls": "sage-popover",
-      "aria-expanded": false,
-      "data-js-popover--trigger": ""
-    },
-  } %>
-  <div
-    class="sage-popover__overlay"
-    data-js-popover--overlay
-  ></div>
-  <div
-    class="sage-popover__panel"
-  >
+<div class="sage-popover" data-js-popover>
+
+  <% if component.trigger_icon_only %>
+    <%= sage_component SageButton, {
+      value: component.trigger_value,
+      style: "secondary",
+      css_classes: "sage-popover__button",
+      subtle: true,
+      icon: {
+        style: "only",
+        name: component.icon
+      },
+      attributes: {
+        "aria-haspopup": true,
+        "aria-controls": "sage-popover",
+        "aria-expanded": false,
+        "data-js-popover--trigger": ""
+      },
+    } %>
+  <% else %>
+    <%= sage_component SageButton, {
+      value: component.trigger_value,
+      style: "secondary",
+      css_classes: "sage-popover__button",
+      subtle: true,
+      icon: {
+        style: "left",
+        name: component.icon
+      },
+      attributes: {
+        "aria-haspopup": true,
+        "aria-controls": "sage-popover",
+        "aria-expanded": false,
+        "data-js-popover--trigger": ""
+      },
+    } %>
+  <% end %>
+
+  <div class="sage-popover__overlay" data-js-popover--overlay></div>
+
+  <div class="sage-popover__panel">
     <div class="sage-popover__title">
       <%= component.title %>
     </div>
