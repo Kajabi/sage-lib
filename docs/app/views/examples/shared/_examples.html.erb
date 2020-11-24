@@ -4,21 +4,29 @@
     id: "sample-#{number}",
     items: [
       { text: "Preview", target: "sample-#{number}-preview", active: true },
-      { text: "Source", target: "sample-#{number}-source" },
-      { text: "Markup", target: "sample-#{number}-markup" }
+      { text: "Rails", target: "sample-#{number}-rails" },
+      { text: "React", target: "sample-#{number}-react" },
+      { text: "HTML", target: "sample-#{number}-html" }
     ]
   } %>
   <%= sage_component SageTabsPane, { id: "sample-#{number}-preview" } do %>
     <%= yield %>
   <% end %>
-  <%= sage_component SageTabsPane, { id: "sample-#{number}-source" } do %>
+  <%= sage_component SageTabsPane, { id: "sample-#{number}-rails" } do %>
     <%= md(%(
 ```ruby
 Amazing Ruby source code coming soon!
 ```
     )) %>
   <% end %>
-  <%= sage_component SageTabsPane, { id: "sample-#{number}-markup" } do %>
+  <%= sage_component SageTabsPane, { id: "sample-#{number}-react" } do %>
+    <%= md(%(
+```js
+Amazing React source code coming soon!
+```
+    )) %>
+  <% end %>
+  <%= sage_component SageTabsPane, { id: "sample-#{number}-html" } do %>
     <%= md("
 ```html
 #{yield}
