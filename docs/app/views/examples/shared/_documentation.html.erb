@@ -1,0 +1,43 @@
+<!-- Best Practices -->
+<% if defined?(dos) || defined?(donts) %>
+  <%= sage_component SagePanelDivider, {} %>
+  <h2 id="best-practices">Best Practices</h2>
+  <%= sage_component SagePanelTiles, { tiles_in_row: 2 } do %>
+    <%= sage_component SagePanelTile, {} do %>
+      <h3>Do</h3>
+      <%= md(dos) %>
+    <% end if defined?(dos) %>
+    <%= sage_component SagePanelTile, {} do %>
+      <h3>Don't</h3>
+      <%= md(donts) %>
+    <% end if defined?(donts) %>
+  <% end %>
+<% end %>
+
+<!-- Properties -->
+  <%= sage_component SagePanelDivider, {} %>
+  <h2 id="props">Properties</h2>
+  <%= sage_component SagePanelList, {} do %>
+  <% props.each do | prop | %>
+    <li class="sage-docs-prop-item">
+      <h6 class="sage-docs-prop-item__name">
+        <code><%= prop[:name] %></code>
+        <% if prop[:required] %>
+          <strong class="sage-docs-prop-item__req">required</strong>
+        <% end %>
+      </h6>
+      <div class="sage-docs-prop-item__notes sage-type">
+        <%= md(prop[:notes]) %>
+      </div>
+      <div class="sage-docs-prop-item__schema">
+        <b>Schema:</b>
+        <%= md(prop[:schema]) %>
+      </div>
+      <div class="sage-docs-prop-item__default">
+        <b>Default:</b>
+        <%= md(prop[:default_value]) %>
+      </div>
+    </li>
+  <% end %>
+<% end if defined?(props) %>
+

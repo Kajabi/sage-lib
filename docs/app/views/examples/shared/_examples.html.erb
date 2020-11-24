@@ -1,0 +1,31 @@
+<h3><%= title %></h3>
+<div class="sage-tabs-container">
+  <%= sage_component SageTabs, {
+    id: "sample-#{number}",
+    items: [
+      { text: "Preview", target: "sample-#{number}-preview", active: true },
+      { text: "Source", target: "sample-#{number}-source" },
+      { text: "Markup", target: "sample-#{number}-markup" }
+    ]
+  } %>
+  <%= sage_component SageTabsPane, { id: "sample-#{number}-preview" } do %>
+    <%= yield %>
+  <% end %>
+  <%= sage_component SageTabsPane, { id: "sample-#{number}-source" } do %>
+    <%= md(%(
+```ruby
+Amazing Ruby source code coming soon!
+```
+    )) %>
+  <% end %>
+  <%= sage_component SageTabsPane, { id: "sample-#{number}-markup" } do %>
+    <%= md("
+```html
+#{yield}
+```
+    ") %>
+  <% end %>
+</div>
+<%= sage_component SagePanelBlock, { type_block: true } do %>
+  <%= notes %>
+<% end if defined?(notes) %>
