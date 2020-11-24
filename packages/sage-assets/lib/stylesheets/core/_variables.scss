@@ -1,19 +1,4 @@
 // ==================================================
-// CSS CUSTOM PROPERTIES
-// ==================================================
-
-/*
-  Place global custom properties here.
-  These should be limited to properties that are _expected_ to change
-  via media query, JS, or some other action/method, not used as static variables
-*/
-
-// :root {
-//   --something: something;
-// }
-
-
-// ==================================================
 // MISC GLOBAL STANDARDS
 // ==================================================
 $sage-transition: 0.1s ease-in-out !default;
@@ -23,17 +8,14 @@ $sage-toolbar-btn-border: 0 0 0 1px sage-color(grey, 300);
 $sage-toolbar-btn-border-hover: 0 0 0 1px sage-color(grey, 400);
 $sage-toolbar-btn-border-focus: 0 0 0 2px sage-color(primary);
 
+
 // ==================================================
 // TYPOGRAPHY
 // ==================================================
 
-
 // Text
 $sage-body-font-size: rem(16px) !default;
 $sage-body-font-color: sage-color(charcoal, 400) !default;
-$sage-body-letter-spacing: sage-letter-spacing(xs) !default;
-
-// Headings
 $sage-heading-font-color: sage-color(charcoal, 500) !default;
 $sage-heading-margin-bottom: sage-spacing(sm) !default;
 
@@ -41,7 +23,6 @@ $sage-heading-margin-bottom: sage-spacing(sm) !default;
 // ==================================================
 // GRID
 // ==================================================
-$sage-grid-baseline: $default-baseline !default;
 $sage-grid-columns: 12 !default;
 $sage-grid-gap: sage-spacing(md) !default;
 
@@ -74,15 +55,10 @@ $sage-menubtn-focus-outline-size: sage-spacing(xs) !default;
 $sage-menubtn-focus-outline-width: 1 !default;
 $sage-menubtn-focus-outline-color: currentColor !default;
 
-$sage-iconbtn-padding: rem(12px) !default;
-
 
 // ==================================================
 // INPUT FIELDS
 // ==================================================
-
-$sage-inputfield-font-size: $sage-body-font-size !default;
-$sage-inputfield-letter-spacing: $sage-body-letter-spacing !default;
 
 // Border
 $sage-inputfield-border-color: sage-color(grey, 300) !default;
@@ -117,7 +93,6 @@ $sage-inputfield-bg-disabled: sage-color(grey, 100) !default;
 
 // Border
 $sage-textarea-border-color: $sage-inputfield-border-color !default;
-$sage-textarea-border-color-hover: sage-color(grey, 500) !default;
 $sage-textarea-border-radius: $sage-inputfield-border-radius !default;
 $sage-textarea-border-width: $sage-inputfield-border-width !default;
 $sage-textarea-box-shadow-size: $sage-inputfield-box-shadow-size !default;
@@ -229,7 +204,6 @@ $sage-tabs-active-color: sage-color(charcoal, 500) !default;
 
 // Active tab indicator
 $sage-tabs-active-border-height: rem(3px) !default;
-$sage-tabs-active-border-width: 100% !default;
 $sage-tabs-active-border-color: sage-color(primary) !default;
 $sage-tabs-active-border-radius: sage-border(radius) !default;
 
@@ -260,15 +234,7 @@ $sage-tooltip-large-maxwidth: rem(320px) !default;
 
 
 // ==================================================
-// ALERTS
-// ==================================================
-
-
-// ==================================================
 // BANNERS
 // ==================================================
 
 $sage-banner-height: rem(48px);
-$sage-banner-text-color: sage-color(white);
-$sage-banner-text-color-dark: sage-color(charcoal);
-$sage-banner-icon-size: rem(22px);
