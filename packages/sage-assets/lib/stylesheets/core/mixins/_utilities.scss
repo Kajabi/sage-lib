@@ -1,0 +1,128 @@
+////
+/// @group utilities
+////
+
+///
+/// Adds a clearfix psuedo-element for use in containers that may include floated elements.
+/// Testing a new _item_.
+///
+/// @example scss - Basic usage
+///   .sage-box {
+///     @include clearfix;
+///   }
+///
+@mixin clearfix() {
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+
+    @content;
+  }
+}
+
+///
+/// Define overflow scrolling dimensions
+///
+/// @param {string(y,x,all)} $dimension [y] The dimension along which to overflow.
+///
+/// @example scss - Basic usage
+///   .sage-box {
+///     @include overflow-scroll(x);
+///   }
+///
+@mixin overflow-scroll($dimension: y) {
+  overflow: hidden;
+  // adds momentum scroll on supported devices
+  -webkit-overflow-scrolling: touch;
+
+  @if ($dimension == y) {
+    overflow-y: auto;
+  }
+  @else if ($dimension == x) {
+    overflow-x: auto;
+  }
+  @else if ($dimension == all) {
+    overflow: auto;
+  }
+}
+
+///
+/// Outputs the enclosed style rules within browser-prefixed pseudo-element selectors for placeholder content. Includes:
+/// - webkit
+/// - moz (pseudo element and pseudo-class)
+/// - ms
+///
+@mixin placeholder {
+  /* stylelint-disable */
+  &::-webkit-input-placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+  /* stylelint-enable */
+}
+
+///
+/// Shorthand for setting positioning offsets on specific sides of an element.
+///
+/// @param {length} $top [false] Top offset
+/// @param {length} $right [false] Right offset
+/// @param {length} $bottom [false] Bottom offset
+/// @param {length} $left [false] Left offset
+///
+@mixin position($top: false, $right: false, $bottom: false, $left: false) {
+  top: position-print-value("top", $top);
+  right: position-print-value("right", $right);
+  bottom: position-print-value("bottom", $bottom);
+  left: position-print-value("left", $left);
+}
+
+///
+/// Shorthand for absolute positioning an element to span all side of a container.
+///
+/// @param {length} $offset [0] The desired offset to apply to all sides
+///
+/// @example scss - Basic usage
+///   .sage-box {
+///     @include position-full(4px);
+///   }
+///
+@mixin position-full($offset: 0) {
+  top: $offset;
+  right: $offset;
+  bottom: $offset;
+  left: $offset;
+}
+
+///
+/// Truncates text of the given element to a single line.
+///
+@mixin truncate() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+///
+/// Hides content from view, but allows text to stay visible to screen readers
+///
+@mixin visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: polygon(0 0, 0 0, 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  white-space: nowrap;
+  border: 0;
+}
