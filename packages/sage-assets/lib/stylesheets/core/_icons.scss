@@ -23,17 +23,29 @@ $sage-icon-li-margin-right: 0.4em !default;
   font-display: block;
 }
 
-
-// ==================================================
-// Mixins
-// ==================================================
-
-@mixin sage-icon-rotate($degrees, $rotation) {
+///
+/// Generates cross-browser icon rotations
+///
+/// @group utilities
+/// 
+/// @param {number} $degrees Degrees value
+/// @param {number} $rotation Rotation value
+///
+@mixin icon-rotate($degrees, $rotation) {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=#{$rotation});
   transform: rotate($degrees);
 }
 
-@mixin sage-icon-flip($horiz, $vert, $rotation) {
+///
+/// Generates cross-browser icon flip in either axis
+///
+/// @group utilities
+/// 
+/// @param {number} $horiz Whether or not to flip on the horizontal axis
+/// @param {number} $vert Whether or not to flip on the vertical axis
+/// @param {number} $rotation Rotation value
+///
+@mixin icon-flip($horiz, $vert, $rotation) {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=#{$rotation});
   transform: scale($horiz, $vert);
 }

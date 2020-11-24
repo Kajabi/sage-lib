@@ -7,10 +7,12 @@
 $-body-font-stack: "Inter", -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "Noto Sans", sans-serif !default;
 $-body-margin-bottom: sage-spacing(xs) !default;
 
-// ==================================================
-// MIXINS
-// ==================================================
-
+/// Adds bottom margin or undoes bottom margin on `.no-margin-bottom` or `:last-child` elements of parent selector
+///
+/// @group sage
+/// 
+/// @param {length} $block-spacing Amount of spacing to apply
+///
 @mixin t-block-spacing($block-spacing) {
   margin-bottom: $block-spacing;
 
