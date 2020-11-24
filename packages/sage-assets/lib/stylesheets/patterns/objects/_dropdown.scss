@@ -7,6 +7,7 @@
 
 $-dropdown-height: $sage-inputfield-height;
 $-dropdown-width: rem(280px);
+$-dropdown-width-small: rem(200px);
 $-dropdown-item-focus-line-spacing-x: sage-spacing(sm);
 
 $-option-underline: "::after";
@@ -237,6 +238,10 @@ $-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
   .sage-dropdown--anchor-right > .sage-dropdown__panel & {
     right: 0;
   }
+
+  .sage-dropdown--small & {
+    min-width: $-dropdown-width-small;
+  }
 }
 
 .sage-dropdown__panel {
@@ -267,6 +272,10 @@ $-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
   .sage-dropdown--pinned & {
     position: fixed;
     z-index: sage-z-index(modal);
+  }
+
+  .sage-dropdown--small & {
+    min-width: $-dropdown-width-small;
   }
 
   &::before {
