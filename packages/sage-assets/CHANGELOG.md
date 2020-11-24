@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.6.2...@kajabi/sage-assets@0.6.3) (2020-11-24)
+
+
+### Bug Fixes
+
+* **sortable:** fix truncated content ([32c620e](https://github.com/Kajabi/sage-lib/commit/32c620e534a4bb823ea03938c407684207df924b))
+
+
+
+
+
 ## [0.6.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.6.1...@kajabi/sage-assets@0.6.2) (2020-11-20)
 
 

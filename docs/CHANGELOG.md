@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.23.8](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.23.7...@kajabi/sage@1.23.8) (2020-11-24)
+
+
+### Bug Fixes
+
+* **sortable:** fix truncated content ([32c620e](https://github.com/Kajabi/sage-lib/commit/32c620e534a4bb823ea03938c407684207df924b))
+
+
+
+
+
 ## [1.23.7](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.23.6...@kajabi/sage@1.23.7) (2020-11-23)
 
 
