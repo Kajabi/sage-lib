@@ -3,15 +3,19 @@
 <%= sage_component SagePopover, {
   title: "Page Title 1",
   icon: "question-circle",
+  trigger_value: "Open Menu",
+  trigger_icon_only: true,
   link: {
     href: "#",
     name: "Learn more about a thing",
   }
 } do %>
-  <p>This is a block of content.</p>
-  <p>This is a block of content.</p>
-  <p>This is a block of content.</p>
-  <p>This is a block of content.</p>
+  <div class="t-sage-body-small sage-spacer-bottom-xs t-sage--color-charcoal">
+    <p>This is a block of content.</p>
+    <p>This is a block of content.</p>
+    <p>This is a block of content.</p>
+    <p>This is a block of content.</p>
+  </div>
 <% end %>
 
 <h3 class="t-sage-heading-6">Another Standalone Popover</h3>
@@ -19,13 +23,37 @@
 <%= sage_component SagePopover, {
   title: "Page Title 2",
   icon: "dot-menu-horizontal",
+  trigger_icon_only: true,
+  trigger_value: "Open Menu",
   link: {
     href: "#",
     name: "Learn more",
   }
 } do %>
-  <p>This is a block of content.</p>
-  <p>This is a block of content.</p>
-  <p>This is a block of content.</p>
-  <p>This is a block of content.</p>
+  <div class="t-sage-body-small sage-spacer-bottom-xs t-sage--color-charcoal">
+    <p>This is a block of content.</p>
+    <p>This is a block of content.</p>
+    <p>This is a block of content.</p>
+    <p>This is a block of content.</p>
+  </div>
+<% end %>
+
+<h3 class="t-sage-heading-6">Popover w/ Full Button</h3>
+
+<%= sage_component SagePopover, {
+  icon: "send-message",
+  trigger_icon_only: false,
+  trigger_value: "Send Test Email",
+} do %>
+  <form>
+    <div class="sage-input">
+      <input type="email" id="form__fname1" class="sage-input__field" name="form__email1" placeholder="Email Address" required  >
+      <label for="form__email1" class="sage-input__label">Email Address</label>
+    </div>
+    <div class="sage-btn-group sage-btn-group--align-end">
+      <button type="submit" class="sage-btn sage-btn--primary">
+        <span class="sage-btn__truncate-text">Send</span>
+      </button>
+    </div>
+  </form>
 <% end %>
