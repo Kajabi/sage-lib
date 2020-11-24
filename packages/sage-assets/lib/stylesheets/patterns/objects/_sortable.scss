@@ -66,6 +66,7 @@
 .sage-sortable__item-content {
   z-index: sage-z-index();
   overflow: hidden;
+  max-width: 100%;
   margin-right: auto;
 }
 
