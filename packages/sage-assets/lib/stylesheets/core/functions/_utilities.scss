@@ -126,3 +126,12 @@
 
   @return $string;
 }
+
+///
+/// Converts a string to unicode
+///
+/// @param {string} $str The string to convert to unicode
+///
+@function unicode($str) {
+  @return unquote("\"\\#{$str}\"");
+}

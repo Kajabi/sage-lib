@@ -1,8 +1,13 @@
-@function sage-line-height($key: md) {
-  $value: map-get($sage-line-heights, $key);
-  @return $value;
-}
+////
+/// Sage line height/leading
+///
+/// @group sage
+////
 
+
+///
+/// Sage line height/leading token
+///
 $sage-line-heights: (
   2xs: sage-baseline(4),
   xs: sage-baseline(5),
@@ -11,3 +16,15 @@ $sage-line-heights: (
   lg: sage-baseline(8),
   xl: sage-baseline(9),
 );
+
+///
+/// Sage line height/leading token utility
+///
+/// @param {string} $key [md] The token to retrieve
+///
+/// @return {length} The value retrieved
+///
+@function sage-line-height($key: md) {
+  $value: map-get($sage-line-heights, $key);
+  @return $value;
+}

@@ -1,17 +1,13 @@
-/* ==================================================
-  ** Icons
+////
+/// Sage icon
+///
+/// @group sage
+////
 
-  Unicode map for icons
-================================================== */
 
-@function unicode($str) {
-  @return unquote("\"\\#{$str}\"");
-}
-
-@function sage-icon($icon-name) {
-  @return map-get($sage-icons, $icon-name);
-}
-
+///
+/// Sage icon sizes
+///
 $sage-icon-sizes: (
   xs: rem(8px),
   sm: rem(12px),
@@ -23,6 +19,9 @@ $sage-icon-sizes: (
   4xl: rem(36px),
 );
 
+///
+/// Sage icons
+///
 $sage-icons: (
   // Primary/active list
   add: unicode(e94c),
@@ -173,3 +172,14 @@ $sage-icons: (
   9-circle: unicode(e92c),
   3-dot-menu: unicode(e983),
 );
+
+///
+/// Sage icon token utility
+///
+/// @param {string} $icon-name The token to retrieve
+///
+/// @return {string} The value retrieved
+///
+@function sage-icon($icon-name) {
+  @return map-get($sage-icons, $icon-name);
+}

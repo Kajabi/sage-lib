@@ -1,9 +1,9 @@
-@function sage-color-combo($color-key: draft, $combo-set-key: default,  $color-type: foreground) {
-  $color-set: map-get($sage-color-combos, $color-key);
-  $combo-set: map-get($color-set, $combo-set-key);
+////
+/// Sage color combinations
+///
+/// @group sage
+////
 
-  @return map-get($combo-set, $color-type);
-}
 
 // Color overrides
 $-label-primary-icon-background-accent: #3e92ee;
@@ -11,6 +11,9 @@ $-label-warning-background-accent: #f9df8b;
 $-label-danger-background-accent: #f3988c;
 $-label-danger-icon-background-accent: #da665e;
 
+///
+/// Sage color combinations token
+///
 $sage-color-combos: (
   draft: (
     default: (
@@ -121,3 +124,19 @@ $sage-color-combos: (
     )
   ),
 );
+
+///
+/// Sage color combinations token utility
+///
+/// @param {string} $color-key [draft] The color token to retrieve
+/// @param {string} $combo-set-key [default] The color set to retrieve
+/// @param {string} $color-type [foreground] The detail of the set to retrieve
+/// 
+/// @return {color} The value retrieved
+///
+@function sage-color-combo($color-key: draft, $combo-set-key: default,  $color-type: foreground) {
+  $color-set: map-get($sage-color-combos, $color-key);
+  $combo-set: map-get($color-set, $combo-set-key);
+
+  @return map-get($combo-set, $color-type);
+}

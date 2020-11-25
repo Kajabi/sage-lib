@@ -1,13 +1,30 @@
+////
+/// Sage containers
+///
+/// @group sage
+////
+
+
+///
+/// Sage containers token
+///
+$sage-containers: (
+  modal: rem(500px),
+  xs: rem(760px),
+  sm: rem(900px),
+  md: rem(1200px),
+  lg: rem(1440px),
+  fluid: 100%,
+);
+
+///
+/// Sage containers token utility
+///
+/// @param {string} $key [md] The token to retrieve
+///
+/// @return {length} The value retrieved
+///
 @function sage-container($key: md) {
   $value: map-get($sage-containers, $key);
   @return $value;
 }
-
-$sage-containers: (
-  modal: 500px,
-  xs: 760px,
-  sm: 900px,
-  md: 1200px,
-  lg: 1440px,
-  fluid: 100%,
-);

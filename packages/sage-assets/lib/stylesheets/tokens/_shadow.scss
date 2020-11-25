@@ -1,8 +1,13 @@
-@function sage-shadow($key: md) {
-  $value: map-get($sage-shadows, $key);
-  @return $value;
-}
+////
+/// Sage shadows
+///
+/// @group sage
+////
 
+
+///
+/// Sage shadows token
+///
 $sage-shadows: (
   sm: (0 1px 2px rgba(sage-color(black), 0.18), 0 1px 3px rgba(sage-color(black), 0.1)),
   md: (0 2px 4px rgba(sage-color(black), 0.12), 0 3px 6px rgba(sage-color(black), 0.15)),
@@ -10,3 +15,15 @@ $sage-shadows: (
   xl: (0 5px 10px rgba(sage-color(black), 0.05), 0 15px 25px rgba(sage-color(black), 0.15)),
   2xl: (0 20px 40px rgba(sage-color(black), 0.2)),
 );
+
+///
+/// Sage shadow token utility
+///
+/// @param {string} $key [md] The token to retrieve
+///
+/// @return {*} The value retrieved
+///
+@function sage-shadow($key: md) {
+  $value: map-get($sage-shadows, $key);
+  @return $value;
+}

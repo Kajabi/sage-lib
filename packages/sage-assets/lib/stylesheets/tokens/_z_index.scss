@@ -1,14 +1,13 @@
-/* ==================================================
-  ** _z_index.scss
+////
+/// Sage z-index
+///
+/// @group sage
+////
 
-  Z-index system
-================================================== */
 
-@function sage-z-index($key: default, $increment: 0) {
-  $value: map-get($sage-z-indexes, $key);
-  @return $value + $increment;
-}
-
+///
+/// Sage z-index token
+///
 $sage-z-indexes: (
   negative: -1,
   default: 0,
@@ -21,3 +20,16 @@ $sage-z-indexes: (
   priority: 8000,
   nuclear: 9000
 );
+
+///
+/// Sage z-index token utility
+///
+/// @param {string} $key [default] The token to retrieve
+/// @param {number} $increment [0] An amount to add onto the retrieved value
+///
+/// @return {number} The value retrieved
+///
+@function sage-z-index($key: default, $increment: 0) {
+  $value: map-get($sage-z-indexes, $key);
+  @return $value + $increment;
+}
