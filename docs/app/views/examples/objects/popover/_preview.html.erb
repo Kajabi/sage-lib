@@ -1,4 +1,10 @@
-<h3 class="t-sage-heading-6">Standalone Popover</h3>
+<%= sage_component SageCardBlock, {} do %>
+  <%= sage_component SageLabel, {
+    color: "draft",
+    value: "Standalone Popover",
+    html_tag: "h3"
+  } %>
+<% end %>
 
 <%= sage_component SagePopover, {
   title: "Page Title 1",
@@ -18,7 +24,13 @@
   </div>
 <% end %>
 
-<h3 class="t-sage-heading-6">Another Standalone Popover</h3>
+<%= sage_component SageCardBlock, {} do %>
+  <%= sage_component SageLabel, {
+    color: "draft",
+    value: "Another Standalone Popover",
+    html_tag: "h3"
+  } %>
+<% end %>
 
 <%= sage_component SagePopover, {
   title: "Page Title 2",
@@ -38,12 +50,19 @@
   </div>
 <% end %>
 
-<h3 class="t-sage-heading-6">Popover w/ Full Button</h3>
+<%= sage_component SageCardBlock, {} do %>
+  <%= sage_component SageLabel, {
+    color: "draft",
+    value: "Popover w/ Full Size Trigger",
+    html_tag: "h3"
+  } %>
+<% end %>
 
 <%= sage_component SagePopover, {
   icon: "send-message",
   trigger_icon_only: false,
   trigger_value: "Send Test Email",
+  popover_position: "bottom",
 } do %>
   <form>
     <div class="sage-input">
@@ -57,3 +76,91 @@
     </div>
   </form>
 <% end %>
+
+<%= sage_component SageCardBlock, {} do %>
+  <%= sage_component SageLabel, {
+    color: "draft",
+    value: "Popover Positioning",
+    html_tag: "h3"
+  } %>
+<% end %>
+
+<div class="sage-card__row">
+
+  <%= sage_component SagePopover, {
+    title: "Popover Top",
+    icon: "arrow-up",
+    trigger_icon_only: false,
+    trigger_value: "Top",
+    popover_position: "top",
+    link: {
+      href: "#",
+      name: "Learn more",
+    }
+  } do %>
+    <div class="t-sage-body-small sage-spacer-bottom-xs t-sage--color-charcoal">
+      <p>This is a block of content.</p>
+      <p>This is a block of content.</p>
+      <p>This is a block of content.</p>
+      <p>This is a block of content.</p>
+    </div>
+  <% end %>
+
+  <%= sage_component SagePopover, {
+    title: "Popover Right",
+    icon: "arrow-right",
+    trigger_icon_only: false,
+    trigger_value: "Right",
+    popover_position: "right",
+    link: {
+      href: "#",
+      name: "Learn more",
+    }
+  } do %>
+    <div class="t-sage-body-small sage-spacer-bottom-xs t-sage--color-charcoal">
+      <p>This is a block of content.</p>
+      <p>This is a block of content.</p>
+      <p>This is a block of content.</p>
+      <p>This is a block of content.</p>
+    </div>
+  <% end %>
+
+  <%= sage_component SagePopover, {
+    title: "Popover Bottom",
+    icon: "arrow-down",
+    trigger_icon_only: false,
+    trigger_value: "Bottom",
+    popover_position: "bottom",
+    link: {
+      href: "#",
+      name: "Learn more",
+    }
+  } do %>
+    <div class="t-sage-body-small sage-spacer-bottom-xs t-sage--color-charcoal">
+      <p>This is a block of content.</p>
+      <p>This is a block of content.</p>
+      <p>This is a block of content.</p>
+      <p>This is a block of content.</p>
+    </div>
+  <% end %>
+
+  <%= sage_component SagePopover, {
+    title: "Popover Left",
+    icon: "arrow-left",
+    trigger_icon_only: false,
+    trigger_value: "Left",
+    popover_position: "left",
+    link: {
+      href: "#",
+      name: "Learn more",
+    }
+  } do %>
+    <div class="t-sage-body-small sage-spacer-bottom-xs t-sage--color-charcoal">
+      <p>This is a block of content.</p>
+      <p>This is a block of content.</p>
+      <p>This is a block of content.</p>
+      <p>This is a block of content.</p>
+    </div>
+  <% end %>
+
+</div>
