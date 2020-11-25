@@ -2,9 +2,6 @@
 // MISC GLOBAL STANDARDS
 // ==================================================
 $sage-transition: 0.1s ease-in-out;
-$sage-toolbar-btn-border: 0 0 0 1px sage-color(grey, 300);
-$sage-toolbar-btn-border-hover: 0 0 0 1px sage-color(grey, 400);
-$sage-toolbar-btn-border-focus: 0 0 0 2px sage-color(primary);
 
 
 // ==================================================
@@ -92,4 +89,13 @@ $g-sage-tab-colors: (
   default: sage-color(charcoal, 100),
   active: sage-color(charcoal, 500),
   disabled: sage-color(grey, 500),
+);
+
+///
+/// Toolbar border styles
+///
+$g-sage-toolbar-button-borders: (
+  default: 0 0 0 1px sage-color(grey, 300),
+  focus: 0 0 0 2px sage-color(primary),
+  hover: 0 0 0 1px sage-color(grey, 400),
 );

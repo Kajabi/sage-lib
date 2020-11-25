@@ -218,20 +218,20 @@ $-label-interactive-icon-size: rem(24px);
   .sage-panel-controls__pagination > & {
     position: relative;
     z-index: sage-z-index(default);
-    box-shadow: $sage-toolbar-btn-border;
+    box-shadow: map-get($g-sage-toolbar-btn-border, default);
     border: 0;
 
     @include sage-focus-outline--update-color(transparent);
 
     &:hover {
       z-index: sage-z-index(default, 1);
-      box-shadow: $sage-toolbar-btn-border-hover;
+      box-shadow: map-get($g-sage-toolbar-btn-border, hover);
       background-color: sage-color(white);
     }
 
     &:focus {
       z-index: sage-z-index(default, 2);
-      box-shadow: $sage-toolbar-btn-border-focus;
+      box-shadow: map-get($g-sage-toolbar-btn-border, focus);
     }
   }
 
