@@ -11,18 +11,18 @@ grid_patterns = [
       oo: "------",
     }
   },
-  {
-    group_name: "Packed (fixed) columns",
-    group_id: "patterns-packed",
-    members: {
-      e:  ".",
-      i:  "..",
-      s:  "...",
-      se: "....",
-      si: ".....",
-      ss: "......",
-    }
-  },
+  # {
+  #   group_name: "Packed (fixed) columns",
+  #   group_id: "patterns-packed",
+  #   members: {
+  #     e:  ".",
+  #     i:  "..",
+  #     s:  "...",
+  #     se: "....",
+  #     si: ".....",
+  #     ss: "......",
+  #   }
+  # },
   {
     group_name: "Dots first",
     group_id: "patterns-dots",
@@ -94,15 +94,16 @@ dashes = [
   sage_component(SageCardBlock, { content: md("Sed a tortor magna sed consectetur, sapien eget consequat.") }),
   sage_component(SageCardBlock, { content: md("Phasellus semper nisi metus, vel pulvinar risus hendrerit non.") }),
   sage_component(SageCardBlock, { content: md("Integer nec ultricies nibh. Aenean sit amet faucibus massa.") }),
+  sage_component(SageCardBlock, { content: md("Lorem ipsum dolor sit amet, consectetur adipiscing elit.") }),
 ]
 
 dots = [
-  %(<i class="sage-icon-check-circle t-sage--color-sage"></i>),
-  sage_component(SageLabel, { value: "In progress", color: "warning" }),
-  %(<i class="sage-icon-star t-sage--color-orange"></i>),
-  sage_component(SageLabel, { value: "Verified", color: "success" }),
-  %(<span class="t-sage-body-small-semi">$5.99</span>),
-  %(<i class="sage-icon-dot-menu-horizontal t-sage--color-grey"></i>)
+  %(<i class="sage-icon-check-circle t-sage--color-sage"></i>).html_safe,
+  sage_component(SageLabel, { value: "In progress", color: "warning" }).html_safe,
+  %(<i class="sage-icon-star t-sage--color-orange"></i>).html_safe,
+  sage_component(SageLabel, { value: "Verified", color: "success" }).html_safe,
+  %(<span class="t-sage-body-small-semi">$5.99</span>).html_safe,
+  %(<i class="sage-icon-dot-menu-horizontal t-sage--color-grey"></i>).html_safe
 ]
 %>
 
@@ -228,11 +229,11 @@ A full set of the possibilities are demonstrated below.
                 %>
                 <% code.split("").each do | c | %>
                   <% if c == "-" %>
-                    <%= dashes[i_dashes].html_safe %>
+                    <%= dashes[i_dashes] %>
                     <% i_dashes += 1 %>
                   <% end %>
                   <% if c == "." %>
-                    <%= dots[i_dots].html_safe %>
+                    <%= dots[i_dots] %>
                     <% i_dots += 1 %>
                   <% end %>
                 <% end %>
