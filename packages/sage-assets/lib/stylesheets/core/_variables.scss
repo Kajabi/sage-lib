@@ -142,17 +142,6 @@ $sage-loader-spinner-speed: 0.9s !default;
 
 
 // ==================================================
-// OVERLAYS
-// ==================================================
-
-$sage-overlay-bg-color: rgba(sage-color(charcoal, 100), 0.5) !default;
-$sage-overlay-backdrop-filter: blur(rem(2px)) !default;
-$sage-overlay-z-index: sage-z-index(underlay) !default;
-$sage-overlay-transition-default: opacity 0.5s ease-in-out !default;
-$sage-overlay-transition-backdrop-filter: backdrop-filter 0.7s ease-in-out !default;
-
-
-// ==================================================
 // PANEL
 // ==================================================
 
