@@ -4,11 +4,19 @@
 
 ================================================== */
 
+$-menubtn-toggle-size: rem(24px) !default;
+$-menubtn-toggle-line-color: sage-color(grey, 100) !default;
+$-menubtn-toggle-line-height: rem(2px) !default;
+$-menubtn-toggle-radius: rem(2px) !default;
+$-menubtn-focus-outline-size: sage-spacing(xs) !default;
+$-menubtn-focus-outline-width: 1 !default;
+$-menubtn-focus-outline-color: currentColor !default;
+
 .sage-menubutton {
   @include sage-button-style-reset();
   display: none;
   position: relative;
-  color: $sage-menubtn-toggle-line-color;
+  color: $-menubtn-toggle-line-color;
 
   &::after {
     content: none;
@@ -17,10 +25,10 @@
     left: 50%;
     top: 50%;
     transform: translate3d(-50%, -50%, 0) scale(0.94);
-    width: calc(100% + ((#{$sage-menubtn-focus-outline-width} * 1px ) + (#{$sage-menubtn-focus-outline-size} * 2)));
-    height: calc(100% + ((#{$sage-menubtn-focus-outline-width} * 1px) + (#{$sage-menubtn-focus-outline-size} * 2)));
+    width: calc(100% + ((#{$-menubtn-focus-outline-width} * 1px ) + (#{$-menubtn-focus-outline-size} * 2)));
+    height: calc(100% + ((#{$-menubtn-focus-outline-width} * 1px) + (#{$-menubtn-focus-outline-size} * 2)));
     color: inherit;
-    border: calc(#{$sage-menubtn-focus-outline-width} * 1px) solid $sage-menubtn-focus-outline-color;
+    border: calc(#{$-menubtn-focus-outline-width} * 1px) solid $-menubtn-focus-outline-color;
     border-radius: sage-border(radius-large);
     transition: opacity 0.15s ease-out 0.05s, transform 0.2s ease-in-out;
     opacity: 0;
@@ -34,8 +42,8 @@
   @media (max-width: sage-breakpoint()) {
     display: block;
     position: relative;
-    height: $sage-menubtn-toggle-size;
-    width: $sage-menubtn-toggle-size;
+    height: $-menubtn-toggle-size;
+    width: $-menubtn-toggle-size;
     margin-right: sage-spacing();
     margin-bottom: 0;
     cursor: pointer;
@@ -68,9 +76,9 @@
 
 .sage-menubutton__bar {
   display: block;
-  height: $sage-menubtn-toggle-line-height;
+  height: $-menubtn-toggle-line-height;
   background: currentColor;
-  border-radius: $sage-menubtn-toggle-radius;
+  border-radius: $-menubtn-toggle-radius;
   transition: transform 0.2s ease-out, opacity 0.15s ease-in-out;
 
   &:not(:first-child) {
