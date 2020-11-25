@@ -3,6 +3,21 @@
 ////
 
 ///
+/// Adds bottom margin or undoes bottom margin on `.no-margin-bottom` or `:last-child` elements of parent selector
+///
+/// @param {length} $block-spacing Amount of spacing to apply
+///
+@mixin sage-block-spacing($block-spacing) {
+  margin-bottom: $block-spacing;
+
+  &.no-margin-bottom,
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+///
 /// Resets base button styles
 ///
 @mixin sage-button-style-reset {

@@ -5,22 +5,8 @@
 
 // Font definitions
 $-body-font-stack: "Inter", -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "Noto Sans", sans-serif !default;
-$-body-margin-bottom: sage-spacing(xs) !default;
-
-/// Adds bottom margin or undoes bottom margin on `.no-margin-bottom` or `:last-child` elements of parent selector
-///
-/// @group sage
-/// 
-/// @param {length} $block-spacing Amount of spacing to apply
-///
-@mixin t-block-spacing($block-spacing) {
-  margin-bottom: $block-spacing;
-
-  &.no-margin-bottom,
-  &:last-child {
-    margin-bottom: 0;
-  }
-}
+$-body-margin-bottom: sage-spacing(xs);
+$-headings-margin-bottom: sage-spacing(sm);
 
 
 // ==================================================
@@ -57,7 +43,7 @@ body {
   > ol:not([class]),
   > dl:not([class]),
   > [class*="t-sage-body"] {
-    @include t-block-spacing($-body-margin-bottom);
+    @include sage-block-spacing($-body-margin-bottom);
   }
 
   // Heading-like elements get spacing below as well
@@ -70,7 +56,7 @@ body {
   > [class*="t-sage-heading-"] {
     color: map-get($g-sage-text-colors, heading);
 
-    @include t-block-spacing();
+    @include sage-block-spacing($-headings-margin-bottom);
   }
 
   // Elements with no classes extend related type specs
