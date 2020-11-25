@@ -6,6 +6,7 @@ Sage.popover = (function() {
   const SELECTOR_PARENT = 'data-js-popover';
   const SELECTOR_OVERLAY = 'data-js-popover--overlay';
   const SELECTOR_TRIGGER = 'data-js-popover--trigger';
+  const SELECTOR_POSITION = 'data-js-popover--position';
 
   const CLASS_ACTIVE = 'sage-popover--is-expanded';
   const ATTRIBUTE_ARIA_EXPANDED = 'aria-expanded';
@@ -29,12 +30,19 @@ Sage.popover = (function() {
     const elParent = evt.currentTarget;
     const elChild = elParent.children[0];
 
+    const triggerWidth = elChild.offsetWidth;
+    const triggerHeight = elChild.offsetHeight;
+    const popoverPanel = elChild.parentNode.querySelector(".sage-popover__panel")
+    const popoverPanelWidth = popoverPanel.offsetWidth;
+    const popoverPanelHeight = popoverPanel.offsetHeight;
+    const position = elChild.parentNode.getAttribute(SELECTOR_POSITION);
+
     if (evt.target.hasAttribute(SELECTOR_TRIGGER) || evt.target.parentNode.hasAttribute(SELECTOR_TRIGGER)) {
       if (isExpanded(elParent) || isExpanded(elChild.parentNode)) {
         closePopoverPanel(elParent);
       } else {
         openPopoverPanel(elParent);
-        positionPopoverPanel(elParent)
+        positionPopoverPanel(triggerWidth, triggerHeight, popoverPanel, popoverPanelWidth, popoverPanelHeight, position)
       }
     }
     // if the clicked element is the overlay, close the previously opened popover
@@ -43,12 +51,32 @@ Sage.popover = (function() {
     }
   }
 
-  function positionPopoverPanel(elParent){
-    const trigger = elParent.children[0]
-    const triggerPadding = 12; // conversion of btn padding rem to px
-    const triggerWidth = trigger.offsetWidth + triggerPadding;
-    const triggerPanel = trigger.parentNode.querySelector(".sage-popover__panel")
-    triggerPanel.style.left = triggerWidth + "px";
+  function positionPopoverPanel(triggerWidth, triggerHeight, popoverPanel, popoverPanelWidth, popoverPanelHeight, position) {
+
+    let dist = 8,
+        top,
+        left;
+
+    switch (position) {
+      case "left":
+        top = 0;
+        left = -popoverPanelWidth - (dist * 2);
+      break;
+      case "top":
+        top = -popoverPanelHeight - dist;
+        left = 0;
+      break;
+      case "bottom":
+        top = triggerHeight + dist;
+        left = 0;
+        break;
+      default:
+      case "right":
+        top = 0;
+        left = triggerWidth + (dist * 2);
+    }
+    popoverPanel.style.left = left + "px";
+    popoverPanel.style.top = top + "px";
   }
 
   function handleKeydown(evt) {
