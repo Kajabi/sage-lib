@@ -74,7 +74,7 @@ Sage.modal = (function() {
     if ( evt.shiftKey ) /* shift + tab */ {
       if (document.activeElement === firstFocusableEl) {
         lastFocusableEl.focus();
-        e.preventDefault();
+        evt.preventDefault();
       }
     } else /* tab */ {
       if (document.activeElement === lastFocusableEl) {
