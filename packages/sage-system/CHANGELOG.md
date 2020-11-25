@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.33](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.0.32...@kajabi/sage-system@0.0.33) (2020-11-25)
+
+
+### Bug Fixes
+
+* add focus trapping to dropdown ([5d54e78](https://github.com/Kajabi/sage-lib/commit/5d54e78f2f3c5338c30836c2e18ad53b6c78ea32))
+* add focus trapping to dropdown ([79c9974](https://github.com/Kajabi/sage-lib/commit/79c9974f523c303a28e4d894ea0b7085d0192a09))
+* added focus trapping to rails sage modal ([d05fa92](https://github.com/Kajabi/sage-lib/commit/d05fa92e6fd2e8864f072383eb946ad669a78063))
+* sage modal - added focus trapping to rails implementation ([7219fd1](https://github.com/Kajabi/sage-lib/commit/7219fd1c8b713da0806b9057f87a36bcb93f33a4))
+
+
+
+
+
 ## [0.0.32](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.0.31...@kajabi/sage-system@0.0.32) (2020-11-20)
 
 **Note:** Version bump only for package @kajabi/sage-system
