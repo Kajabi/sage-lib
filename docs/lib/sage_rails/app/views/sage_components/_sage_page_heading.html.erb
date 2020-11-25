@@ -26,7 +26,12 @@
       <%= sage_component SagePopover, {
         title: component.help_title,
         icon: "question-circle",
-        link: component.help_link
+        trigger_value: "Open Menu",
+        trigger_icon_only: true,
+        link: {
+          href: component.help_link,
+          name: "Learn more about a thing",
+        }
       } do %>
         <%= component.help_html.html_safe %>
       <% end %>
