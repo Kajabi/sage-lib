@@ -53,57 +53,36 @@ Sage.modal = (function() {
   function openModal(modalId) {
     let modal = document.querySelector(`[${SELECTOR_MODAL}="${modalId}"]`);
     let focusableEls = modal.querySelectorAll(SELECTOR_FOCUSABLE_ELEMENTS);
-    let firstFocusableEl = focusableEls[0];
-    let lastFocusableEl = focusableEls[focusableEls.length - 1];
-    let KEYCODE_TAB = 9;
 
     SELECTOR_LAST_FOCUSED = document.activeElement;
     modal.classList.add('sage-modal--active');
     modal.setAttribute("open", "");
     document.addEventListener('keyup', onModalKeypress);
-    // modal.addEventListener('keyup', focusTrap);
-
-    // FOCUS TRAP - putting here for now, but will need to wire in the function for cleaner code
-    modal.addEventListener('keydown', function(e) {
-      var isTabPressed = (e.key === 'Tab' || e.keyCode === KEYCODE_TAB);
-
-      if (!isTabPressed) { 
-        return; 
-      }
-
-      if ( e.shiftKey ) /* shift + tab */ {
-        if (document.activeElement === firstFocusableEl) {
-            lastFocusableEl.focus();
-            e.preventDefault();
-        }
-      } else /* tab */ {
-        if (document.activeElement === lastFocusableEl) {
-            firstFocusableEl.focus();
-            e.preventDefault();
-        }
-      }
-    });
+    modal.addEventListener('keydown', focusTrap.bind(focusableEls));
   }
 
-  // function focusTrap(evt) {
-  //   var isTabPressed = (evt.key === 'Tab' || evt.keyCode === KEYCODE_TAB);
+  function focusTrap(evt) {
+    let firstFocusableEl = this[0];
+    let lastFocusableEl = this[this.length - 1];
+    let KEYCODE_TAB = 9;
+    var isTabPressed = (evt.key === 'Tab' || evt.keyCode === KEYCODE_TAB);
 
-  //   if (!isTabPressed) { 
-  //     return; 
-  //   }
+    if (!isTabPressed) { 
+      return; 
+    }
 
-  //   if ( evt.shiftKey ) /* shift + tab */ {
-  //     if (document.activeElement === firstFocusableEl) {
-  //       lastFocusableEl.focus();
-  //       e.preventDefault();
-  //     }
-  //   } else /* tab */ {
-  //     if (document.activeElement === lastFocusableEl) {
-  //       firstFocusableEl.focus();
-  //       evt.preventDefault();
-  //     }
-  //   }
-  // }
+    if ( evt.shiftKey ) /* shift + tab */ {
+      if (document.activeElement === firstFocusableEl) {
+        lastFocusableEl.focus();
+        e.preventDefault();
+      }
+    } else /* tab */ {
+      if (document.activeElement === lastFocusableEl) {
+        firstFocusableEl.focus();
+        evt.preventDefault();
+      }
+    }
+  }
 
   function dispatchCloseAll() {
     document.dispatchEvent(new Event(EVENT_CLOSEALL));
