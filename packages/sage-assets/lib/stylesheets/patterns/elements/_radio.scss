@@ -6,16 +6,16 @@
 ================================================== */
 
 // Colors
-$-radio-color-checked: map-get($g-sage-radio-colors, checked);
-$-radio-color-checked-disabled: map-get($g-sage-radio-colors, checked-disabled);
-$-radio-color-checked-inner: map-get($g-sage-radio-colors, checked-inner);
-$-radio-color-default: map-get($g-sage-radio-colors, default);
-$-radio-color-disabled: map-get($g-sage-radio-colors, disabled);
-$-radio-color-hover: map-get($g-sage-radio-colors, hover);
+$-radio-color-checked: map-get($sage-radio-colors, checked);
+$-radio-color-checked-disabled: map-get($sage-radio-colors, checked-disabled);
+$-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
+$-radio-color-default: map-get($sage-radio-colors, default);
+$-radio-color-disabled: map-get($sage-radio-colors, disabled);
+$-radio-color-hover: map-get($sage-radio-colors, hover);
 $-radio-color-text-disabled: sage-color(charcoal, 100);
 
 // Additional configurations
-$-radio-button-size: $g-sage-radio-size;
+$-radio-button-size: $sage-radio-size;
 $-radio-transition: 0.15s ease-in-out;
 $-radio-selected-indicator-size: rem(7px);
 

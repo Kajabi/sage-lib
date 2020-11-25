@@ -55,7 +55,7 @@ $-checkbox-focus-outline-color: sage-color(primary);
   }
 
   .sage-panel-controls__bulk-actions--checked & {
-    box-shadow: map-get($g-sage-toolbar-btn-border, default);
+    box-shadow: map-get($sage-toolbar-button-borders, default);
 
     &:first-child {
       border-top-left-radius: sage-border(radius);
@@ -69,13 +69,13 @@ $-checkbox-focus-outline-color: sage-color(primary);
 
     &:hover {
       z-index: sage-z-index(default, 1);
-      box-shadow: map-get($g-sage-toolbar-btn-border, hover);
+      box-shadow: map-get($sage-toolbar-button-borders, hover);
       background-color: sage-color(grey, 100);
     }
 
     &:focus-within {
       z-index: sage-z-index(default, 2);
-      box-shadow: map-get($g-sage-toolbar-btn-border, focus);
+      box-shadow: map-get($sage-toolbar-button-borders, focus);
     }
   }
 }

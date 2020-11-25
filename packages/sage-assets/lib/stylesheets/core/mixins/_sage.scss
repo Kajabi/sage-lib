@@ -315,10 +315,10 @@
     right: $spacing-off;
     bottom: 0;
     left: $spacing-off;
-    height: map-get($g-sage-active-underline-configs, height);
-    background: map-get($g-sage-active-underline-configs, color);
-    border-radius: map-get($g-sage-active-underline-configs, radius);
-    transition: right map-get($g-sage-transitions, default), left map-get($g-sage-transitions, default);
+    height: map-get($sage-active-underline-configs, height);
+    background: map-get($sage-active-underline-configs, color);
+    border-radius: map-get($sage-active-underline-configs, radius);
+    transition: right map-get($sage-transitions, default), left map-get($sage-transitions, default);
   }
 
   &:focus#{$item-underline} {

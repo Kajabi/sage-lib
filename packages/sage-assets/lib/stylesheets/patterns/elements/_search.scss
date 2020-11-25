@@ -19,7 +19,7 @@ $-search-icon: "::before";
     margin-left: sage-spacing(xs);
     margin-right: -1 * sage-spacing();
     color: sage-color(charcoal, 100);
-    transition: map-get($g-sage-transitions, default);
+    transition: map-get($sage-transitions, default);
     transition-property: color;
 
     :focus-within > & {
@@ -40,7 +40,7 @@ $-search-icon: "::before";
       z-index: 3;
       height: 0;
       border-bottom: rem(2px) solid sage-color(primary);
-      transition: map-get($g-sage-transitions, default);
+      transition: map-get($sage-transitions, default);
       transition-property: left, right, opacity;
     }
 
@@ -55,7 +55,7 @@ $-search-icon: "::before";
   .sage-panel-controls__toolbar & {
     position: relative;
     z-index: sage-z-index(default);
-    box-shadow: map-get($g-sage-toolbar-btn-border, default);
+    box-shadow: map-get($sage-toolbar-button-borders, default);
     border: 0;
 
     &::after {
@@ -74,12 +74,12 @@ $-search-icon: "::before";
 
     &:hover {
       z-index: sage-z-index(default, 1);
-      box-shadow: map-get($g-sage-toolbar-btn-border, hover);
+      box-shadow: map-get($sage-toolbar-button-borders, hover);
     }
 
     &:focus-within {
       z-index: sage-z-index(default, 2);
-      box-shadow: map-get($g-sage-toolbar-btn-border, focus);
+      box-shadow: map-get($sage-toolbar-button-borders, focus);
     }
   }
 

@@ -31,7 +31,7 @@ $-sage-nav-icon-size: rem(20px);
   padding: sage-spacing(2xs) sage-spacing(xs);
   color: $-sage-nav-color-text;
   border-radius: sage-border(radius);
-  transition: map-get($g-sage-transitions, default);
+  transition: map-get($sage-transitions, default);
   transition-property: background, box-shadow;
 
   &:not(.sage-nav__link--sub) {

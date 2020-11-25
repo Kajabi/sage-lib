@@ -4,9 +4,9 @@
 
 ================================================== */
 
-$-tab-color-default: map-get($g-sage-tab-colors, default);
-$-tab-color-active: map-get($g-sage-tab-colors, active);
-$-tab-color-disabled: map-get($g-sage-tab-colors, disabled);
+$-tab-color-default: map-get($sage-tab-colors, default);
+$-tab-color-active: map-get($sage-tab-colors, active);
+$-tab-color-disabled: map-get($sage-tab-colors, disabled);
 
 /* stylelint-disable max-nesting-depth */
 .sage-tab {
@@ -20,7 +20,7 @@ $-tab-color-disabled: map-get($g-sage-tab-colors, disabled);
   padding: 0 0 sage-spacing(xs);
   white-space: nowrap;
   color: $-tab-color-default;
-  transition: color map-get($g-sage-transitions, default), background-color map-get($g-sage-transitions, default), box-shadow map-get($g-sage-transitions, default);
+  transition: color map-get($sage-transitions, default), background-color map-get($sage-transitions, default), box-shadow map-get($sage-transitions, default);
 
   @extend %t-sage-body-med;
 

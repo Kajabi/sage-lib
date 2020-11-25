@@ -12,7 +12,7 @@
   align-items: baseline;
   position: relative;
   color: sage-color(charcoal, 200);
-  transition: color map-get($g-sage-transitions, default), background-color map-get($g-sage-transitions, default);
+  transition: color map-get($sage-transitions, default), background-color map-get($sage-transitions, default);
   cursor: help;
 
   @include sage-focus-outline;

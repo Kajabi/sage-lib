@@ -134,7 +134,7 @@ $-table-sort-indicator-direction: rem(7px);
     display: flex;
     align-items: center;
     color: inherit;
-    transition: map-get($g-sage-transitions, default);
+    transition: map-get($sage-transitions, default);
     transition-property: color;
     cursor: pointer;
 
@@ -182,7 +182,7 @@ $-table-sort-indicator-direction: rem(7px);
 .sage-table--selectable {
   .sage-row--selectable,
   .sage-row--selectable:nth-child(odd) {
-    transition: map-get($g-sage-transitions, default);
+    transition: map-get($sage-transitions, default);
     transition-property: background;
 
     &:hover,

@@ -8,7 +8,7 @@
 ///
 /// Active underline configuration
 ///
-$g-sage-active-underline-configs: (
+$sage-active-underline-configs: (
   height: rem(3px),
   color: sage-color(primary),
   radius: sage-border(radius),
@@ -17,12 +17,12 @@ $g-sage-active-underline-configs: (
 ///
 /// Assistant height shared by layout components
 ///
-$g-sage-assistant-height: rem(56px);
+$sage-assistant-height: rem(56px);
 
 ///
 /// Banner heights for page offsets
 ///
-$g-sage-banner-heights: (
+$sage-banner-heights: (
   default: rem(48px),
   ladera: rem(60px),
 );
@@ -30,7 +30,7 @@ $g-sage-banner-heights: (
 ///
 /// Field configurations
 ///
-$g-sage-field-configs: (
+$sage-field-configs: (
   // Border treatments
   border-radius: sage-border(radius),
   border-width: rem(1px),
@@ -46,7 +46,7 @@ $g-sage-field-configs: (
 ///
 /// Field coloring
 ///
-$g-sage-field-colors: (
+$sage-field-colors: (
   border: sage-color(grey, 300),
   default: sage-color(charcoal),
   disabled: sage-color(grey, 400),
@@ -59,7 +59,7 @@ $g-sage-field-colors: (
 ///
 /// Radio button colors
 ///
-$g-sage-radio-colors: (
+$sage-radio-colors: (
   checked: sage-color(primary),
   checked-disabled: sage-color(primary, 200),
   checked-inner: sage-color(white),
@@ -70,12 +70,12 @@ $g-sage-radio-colors: (
 ///
 /// Radio button size
 ///
-$g-sage-radio-size: rem(16px);
+$sage-radio-size: rem(16px);
 
 ///
 /// Tab colors shared by components such as tabs and choices
 ///
-$g-sage-tab-colors: (
+$sage-tab-colors: (
   default: sage-color(charcoal, 100),
   active: sage-color(charcoal, 500),
   disabled: sage-color(grey, 500),
@@ -84,7 +84,7 @@ $g-sage-tab-colors: (
 ///
 /// Standard text colors
 ///
-$g-sage-text-colors: (
+$sage-text-colors: (
   body: sage-color(charcoal, 400),
   heading: sage-color(charcoal, 500),
 );
@@ -92,7 +92,7 @@ $g-sage-text-colors: (
 ///
 /// Toolbar border styles
 ///
-$g-sage-toolbar-button-borders: (
+$sage-toolbar-button-borders: (
   default: 0 0 0 1px sage-color(grey, 300),
   focus: 0 0 0 2px sage-color(primary),
   hover: 0 0 0 1px sage-color(grey, 400),
@@ -101,7 +101,7 @@ $g-sage-toolbar-button-borders: (
 ///
 /// Transitions
 ///
-$g-sage-transitions: (
+$sage-transitions: (
   default: 0.1s ease-in-out,
 );
 // TODO: Audit use of trnasition values

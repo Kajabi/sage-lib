@@ -4,21 +4,21 @@
 
 ================================================== */
 
-$-select-border-radius: map-get($g-sage-field-configs, border-radius);
-$-select-border-width: map-get($g-sage-field-configs, border-width);
-$-select-border-box-shadow-size: map-get($g-sage-field-configs, box-shadow-size);
-$-select-bottom-gap: map-get($g-sage-field-configs, bottom-gap);
-$-select-color-border: map-get($g-sage-field-colors, border);
+$-select-border-radius: map-get($sage-field-configs, border-radius);
+$-select-border-width: map-get($sage-field-configs, border-width);
+$-select-border-box-shadow-size: map-get($sage-field-configs, box-shadow-size);
+$-select-bottom-gap: map-get($sage-field-configs, bottom-gap);
+$-select-color-border: map-get($sage-field-colors, border);
 $-select-color-border-hover: sage-color(charcoal);
 $-select-color-border-selected: sage-color(grey, 400);
-$-select-color-default: map-get($g-sage-field-colors, default);
-$-select-color-error: map-get($g-sage-field-colors, error);
-$-select-color-label-background: map-get($g-sage-field-colors, label-background);
-$-select-color-success: map-get($g-sage-field-colors, success);
+$-select-color-default: map-get($sage-field-colors, default);
+$-select-color-error: map-get($sage-field-colors, error);
+$-select-color-label-background: map-get($sage-field-colors, label-background);
+$-select-color-success: map-get($sage-field-colors, success);
 $-select-filled-top-padding: rem(6);
-$-select-height: map-get($g-sage-field-configs, height);
-$-select-padding-x: map-get($g-sage-field-configs, padding);
-$-select-padding-label: map-get($g-sage-field-configs, padding-label);
+$-select-height: map-get($sage-field-configs, height);
+$-select-padding-x: map-get($sage-field-configs, padding);
+$-select-padding-label: map-get($sage-field-configs, padding-label);
 
 
 .sage-select {
@@ -86,13 +86,13 @@ $-select-padding-label: map-get($g-sage-field-configs, padding-label);
   border-radius: $-select-border-radius;
   background: transparent;
   outline: none;
-  transition: border map-get($g-sage-transitions, default);
+  transition: border map-get($sage-transitions, default);
   cursor: pointer;
 
   // Firefox allows setting the color of <options> within a <select>.
   // This prevents color from being inherited from <select>.
   option:not(:disabled) {
-    color: map-get($g-sage-text-colors, body);
+    color: map-get($sage-text-colors, body);
   }
 
   .sage-select--value-selected & {

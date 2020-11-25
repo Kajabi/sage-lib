@@ -4,7 +4,7 @@
 
 ================================================== */
 
-$-banner-height-ladera: map-get($g-sage-banner-heights, ladera);
+$-banner-height-ladera: map-get($sage-banner-heights, ladera);
 $-banner-colors: (
   default: (
     background: sage-color(primary),

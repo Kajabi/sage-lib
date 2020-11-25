@@ -5,13 +5,13 @@
 ================================================== */
 
 // Border
-$-textarea-border-radius: map-get($g-sage-field-configs, border-radius);
-$-textarea-border-width: map-get($g-sage-field-configs, border-width);
-$-textarea-box-shadow-size: map-get($g-sage-field-configs, box-shadow-size);
+$-textarea-border-radius: map-get($sage-field-configs, border-radius);
+$-textarea-border-width: map-get($sage-field-configs, border-width);
+$-textarea-box-shadow-size: map-get($sage-field-configs, box-shadow-size);
 
 // Padding
 $-textarea-label-padding: rem(3px);
-$-textarea-padding: map-get($g-sage-field-configs, padding);
+$-textarea-padding: map-get($sage-field-configs, padding);
 
 // Sizing
 $-textarea-height: 100%;
@@ -19,17 +19,17 @@ $-textarea-min-height: rem(90px);
 $-textarea-width: 100%;
 
 // Outer spacing
-$-textarea-bottom-gap: map-get($g-sage-field-configs, bottom-gap);
+$-textarea-bottom-gap: map-get($sage-field-configs, bottom-gap);
 
 // Colors
-$-textarea-color-border: map-get($g-sage-field-colors, border);
-$-textarea-color-default: map-get($g-sage-field-colors, default);
+$-textarea-color-border: map-get($sage-field-colors, border);
+$-textarea-color-default: map-get($sage-field-colors, default);
 $-textarea-color-default-background: sage-color(white);
-$-textarea-color-disabled: map-get($g-sage-field-colors, disabled);
-$-textarea-color-disabled-background: map-get($g-sage-field-colors, disabled-background);
-$-textarea-color-error: map-get($g-sage-field-colors, error);
+$-textarea-color-disabled: map-get($sage-field-colors, disabled);
+$-textarea-color-disabled-background: map-get($sage-field-colors, disabled-background);
+$-textarea-color-error: map-get($sage-field-colors, error);
 $-textarea-color-label-background: $-textarea-color-default-background;
-$-textarea-color-success: map-get($g-sage-field-colors, success);
+$-textarea-color-success: map-get($sage-field-colors, success);
 
 .sage-textarea {
   position: relative;

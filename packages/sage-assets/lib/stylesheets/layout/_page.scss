@@ -5,7 +5,7 @@
 ////
 
 
-$-banner-height-offset: map-get($g-sage-banner-heights, default);
+$-banner-height-offset: map-get($sage-banner-heights, default);
 
 .sage-page {
   display: flex;

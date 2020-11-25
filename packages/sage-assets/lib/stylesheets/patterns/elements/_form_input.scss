@@ -4,24 +4,24 @@
 
 ================================================== */
 
-$-input-border-radius: map-get($g-sage-field-configs, border-radius);
-$-input-border-width: map-get($g-sage-field-configs, border-width);
-$-input-bottom-gap: map-get($g-sage-field-configs, bottom-gap);
-$-input-box-shadow-size: map-get($g-sage-field-configs, box-shadow-size);
-$-input-color-border: map-get($g-sage-field-colors, border);
-$-input-color-default: map-get($g-sage-field-colors, default);
-$-input-color-disabled: map-get($g-sage-field-colors, disabled);
-$-input-color-disabled-background: map-get($g-sage-field-colors, disabled-background);
-$-input-color-error: map-get($g-sage-field-colors, error);
-$-input-color-label-background: map-get($g-sage-field-colors, label-background);
-$-input-color-success: map-get($g-sage-field-colors, success);
-$-input-height: map-get($g-sage-field-configs, height);
+$-input-border-radius: map-get($sage-field-configs, border-radius);
+$-input-border-width: map-get($sage-field-configs, border-width);
+$-input-bottom-gap: map-get($sage-field-configs, bottom-gap);
+$-input-box-shadow-size: map-get($sage-field-configs, box-shadow-size);
+$-input-color-border: map-get($sage-field-colors, border);
+$-input-color-default: map-get($sage-field-colors, default);
+$-input-color-disabled: map-get($sage-field-colors, disabled);
+$-input-color-disabled-background: map-get($sage-field-colors, disabled-background);
+$-input-color-error: map-get($sage-field-colors, error);
+$-input-color-label-background: map-get($sage-field-colors, label-background);
+$-input-color-success: map-get($sage-field-colors, success);
+$-input-height: map-get($sage-field-configs, height);
 $-input-label-offset: rem(12px);
-$-input-padding: map-get($g-sage-field-configs, padding);
+$-input-padding: map-get($sage-field-configs, padding);
 $-input-padding-filled: rem(4px);
-$-input-padding-label: map-get($g-sage-field-configs, padding-label);
+$-input-padding-label: map-get($sage-field-configs, padding-label);
 $-input-padding-offset: $-input-padding - $-input-border-width;
-$-input-text-height: map-get(map-get($sage-type-spec, body), size);
+$-input-text-height: map-get(map-get($sage-type-specs, body), size);
 $-input-transition: border 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 
 

@@ -24,7 +24,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-size-adjust: 100%;
-  color: map-get($g-sage-text-colors, body);
+  color: map-get($sage-text-colors, body);
   font-family: $-body-font-stack;
 
   @supports (font-variation-settings: normal) {
@@ -52,7 +52,7 @@ body {
   > h5:not([class]),
   > h6:not([class]),
   > [class*="t-sage-heading-"] {
-    color: map-get($g-sage-text-colors, heading);
+    color: map-get($sage-text-colors, heading);
 
     @include sage-block-spacing($-headings-margin-bottom);
   }

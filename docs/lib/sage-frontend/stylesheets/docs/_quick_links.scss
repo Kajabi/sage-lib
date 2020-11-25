@@ -40,7 +40,7 @@ $-quick-links-color-background: sage-color(primary, 400);
   padding: sage-spacing(2xs) sage-spacing(xs);
   color: $-quick-links-color-text;
   border-radius: sage-border(radius);
-  transition: map-get($g-sage-transitions, default);
+  transition: map-get($sage-transitions, default);
   transition-property: background, box-shadow;
 
   &:hover {

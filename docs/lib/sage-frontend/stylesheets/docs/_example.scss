@@ -20,7 +20,7 @@ $-example-code-preview-button-bg: rgba(sage-color(primary, 500), 0.75);
 
 .example__link {
   color: $-example-link-color;
-  transition: map-get($g-sage-transitions, default);
+  transition: map-get($sage-transitions, default);
   transition-property: color;
 
   &:hover {
@@ -86,7 +86,7 @@ $-example-code-preview-button-bg: rgba(sage-color(primary, 500), 0.75);
   padding: sage-spacing(xs);
   color: $-example-code-preview-button-color;
   background-color: $-example-code-preview-button-bg;
-  transition: map-get($g-sage-transitions, default);
+  transition: map-get($sage-transitions, default);
   transition-property: color, opacity;
 
   @extend %t-sage-body-small-med;
@@ -144,7 +144,7 @@ $-example-code-preview-button-bg: rgba(sage-color(primary, 500), 0.75);
     bottom: 0;
     height: 100%;
     background-image: linear-gradient(to bottom, rgba(sage-color(primary, 500), 0.3) 0%, rgba(sage-color(primary, 500), 0.9) 100%);
-    transition: map-get($g-sage-transitions, default);
+    transition: map-get($sage-transitions, default);
     transition-property: opacity;
     pointer-events: none;
   }

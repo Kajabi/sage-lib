@@ -8,7 +8,7 @@
 ///
 /// Default baseline for the system
 ///
-$g-sage-baseline: rem(4px);
+$sage-baseline: rem(4px);
 
 ///
 /// Generates a value based on the baseline grid.
@@ -20,6 +20,6 @@ $g-sage-baseline: rem(4px);
 ///
 /// @return {length} Product of the arguments resulting in a `rem` measurement
 ///
-@function sage-baseline($num: 2, $baseline: $g-sage-baseline) {
+@function sage-baseline($num: 2, $baseline: $sage-baseline) {
   @return $num * $baseline;
 }
