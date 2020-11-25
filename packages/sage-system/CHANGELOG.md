@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.34](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.0.33...@kajabi/sage-system@0.0.34) (2020-11-25)
+
+
+### Bug Fixes
+
+* added focus trapping to sage rails popover ([3701eee](https://github.com/Kajabi/sage-lib/commit/3701eee5ad4139cf2aa37a7757c1da663f5ca792))
+* added focus trapping to sage rails popover ([883d5d3](https://github.com/Kajabi/sage-lib/commit/883d5d34976ae46cdf431e81343afbf064ff8745))
+
+
+
+
+
 ## [0.0.33](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.0.32...@kajabi/sage-system@0.0.33) (2020-11-25)
 
 
