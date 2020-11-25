@@ -30,7 +30,7 @@ Sage.dropdown = (function() {
   // The element in which to show the selected value when dropdown is in selection mode
   const triggerSelectedValueClass = '.sage-dropdown__trigger-selected-value .sage-btn__truncate-text';
 
-  const SELECTOR_FOCUSABLE_ELEMENTS = '.sage-dropdown__panel a[href]:not([disabled]), .sage-dropdown__panel button:not([disabled]), .sage-dropdown__panel textarea:not([disabled]), .sage-dropdown__panel input[type="text"]:not([disabled]), .sage-dropdown__panel input[type="radio"]:not([disabled]), .sage-dropdown__panel input[type="checkbox"]:not([disabled]), .sage-dropdown__panel select:not([disabled])';
+  const SELECTOR_FOCUSABLE_ELEMENTS = '.sage-dropdown__panel a, .sage-dropdown__panel button, .sage-dropdown__panel textarea, .sage-dropdown__panel input[type="text"], .sage-dropdown__panel input[type="radio"], .sage-dropdown__panel input[type="checkbox"], .sage-dropdown__panel input[type="search"], .sage-dropdown__panel select';
   let SELECTOR_LAST_FOCUSED;
 
   // ==================================================
@@ -118,15 +118,14 @@ Sage.dropdown = (function() {
 
   function open(el) {
     el.setAttribute('aria-expanded', 'true');
-    console.log('el', el);
     let focusableEls = el.querySelectorAll(SELECTOR_FOCUSABLE_ELEMENTS);
-    console.log('focusableEls', focusableEls);
     SELECTOR_LAST_FOCUSED = document.activeElement;
     el.addEventListener('keydown', focusTrap.bind(focusableEls));
   }
 
   function close(el) {
     el.setAttribute('aria-expanded', 'false');
+    SELECTOR_LAST_FOCUSED.focus();
   }
 
   function isExpanded(el) {
@@ -151,7 +150,7 @@ Sage.dropdown = (function() {
     if ( evt.shiftKey ) /* shift + tab */ {
       if (document.activeElement === firstFocusableEl) {
         lastFocusableEl.focus();
-        e.preventDefault();
+        evt.preventDefault();
       }
     } else /* tab */ {
       if (document.activeElement === lastFocusableEl) {
