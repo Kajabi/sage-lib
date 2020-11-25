@@ -38,7 +38,7 @@
     border-bottom: sage-border();
     border-left: sage-border();
     border-right: sage-border();
-    transition: $sage-transition;
+    transition: map-get($g-sage-transitions, default);
     transition-property: border-color, box-shadow;
 
     &:first-child {

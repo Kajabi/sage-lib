@@ -29,7 +29,7 @@ $-choice-radio-color-checked-inner: map-get($g-sage-radio-colors, checked-inner)
   color: $-choice-color-default;
   border: sage-border();
   border-radius: sage-border(radius);
-  transition: $sage-transition;
+  transition: map-get($g-sage-transitions, default);
   transition-property: color, background-color, border-color, box-shadow;
 
   @extend %t-sage-body-med;
@@ -101,7 +101,7 @@ $-choice-radio-color-checked-inner: map-get($g-sage-radio-colors, checked-inner)
 
     margin: 0 0 0 sage-spacing(sm);
     color: sage-color(grey, 300);
-    transition: color $sage-transition;
+    transition: color map-get($g-sage-transitions, default);
   }
 
   &:active,
@@ -117,7 +117,7 @@ $-choice-radio-color-checked-inner: map-get($g-sage-radio-colors, checked-inner)
     /* See icon generator */
     margin: 0 sage-spacing(xs) 0 0;
     color: currentColor;
-    transition: color $sage-transition;
+    transition: color map-get($g-sage-transitions, default);
   }
 }
 
@@ -133,7 +133,7 @@ $-choice-radio-color-checked-inner: map-get($g-sage-radio-colors, checked-inner)
     background-color: $-choice-radio-color-checked-inner;
     border-radius: sage-border(radius-round);
     border: sage-border();
-    transition: $sage-transition;
+    transition: map-get($g-sage-transitions, default);
     transition-property: border, box-shadow;
   }
 

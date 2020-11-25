@@ -19,7 +19,7 @@ $-search-icon: "::before";
     margin-left: sage-spacing(xs);
     margin-right: -1 * sage-spacing();
     color: sage-color(charcoal, 100);
-    transition: $sage-transition;
+    transition: map-get($g-sage-transitions, default);
     transition-property: color;
 
     :focus-within > & {
@@ -40,7 +40,7 @@ $-search-icon: "::before";
       z-index: 3;
       height: 0;
       border-bottom: rem(2px) solid sage-color(primary);
-      transition: $sage-transition;
+      transition: map-get($g-sage-transitions, default);
       transition-property: left, right, opacity;
     }
 

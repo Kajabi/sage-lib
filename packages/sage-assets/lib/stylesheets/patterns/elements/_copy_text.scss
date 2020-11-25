@@ -27,7 +27,7 @@ $-copy-text-color-hover: sage-color(charcoal, 500);
   padding: 0 sage-spacing(xs);
 
   .sage-copy-btn & {
-    transition: $sage-transition;
+    transition: map-get($g-sage-transitions, default);
     transition-property: color, background-color;
   }
 

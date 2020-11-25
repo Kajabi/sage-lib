@@ -86,7 +86,7 @@ $-select-padding-label: map-get($g-sage-field-configs, padding-label);
   border-radius: $-select-border-radius;
   background: transparent;
   outline: none;
-  transition: border $sage-transition;
+  transition: border map-get($g-sage-transitions, default);
   cursor: pointer;
 
   // Firefox allows setting the color of <options> within a <select>.

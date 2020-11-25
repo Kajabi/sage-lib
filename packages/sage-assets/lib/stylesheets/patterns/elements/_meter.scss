@@ -86,7 +86,7 @@ $-meter-bar-divider-color: sage-color(white);
 
   @include meter-bar-value() {
     background: none;
-    transition: $sage-transition;
+    transition: map-get($g-sage-transitions, default);
     transition-property: width;
   }
 }

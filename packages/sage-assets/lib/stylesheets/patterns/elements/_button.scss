@@ -8,7 +8,7 @@
 /* stylelint-disable max-nesting-depth */
 
 // Base styles
-$-btn-transition: $sage-transition;
+$-btn-transition: map-get($g-sage-transitions, default);
 $-btn-border-radius: sage-border(radius);
 $-btn-shadow-base: sage-shadow(sm);
 $-btn-base-styles: (

@@ -1,9 +1,3 @@
-// ==================================================
-// MISC GLOBAL STANDARDS
-// ==================================================
-$sage-transition: 0.1s ease-in-out;
-
-
 ///
 /// Active underline configuration
 ///
@@ -96,3 +90,11 @@ $g-sage-toolbar-button-borders: (
   focus: 0 0 0 2px sage-color(primary),
   hover: 0 0 0 1px sage-color(grey, 400),
 );
+
+///
+/// Transitions
+///
+$g-sage-transitions: (
+  default: 0.1s ease-in-out,
+);
+// TODO: Audit use of trnasition values

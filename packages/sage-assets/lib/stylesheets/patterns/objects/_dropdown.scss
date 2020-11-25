@@ -113,7 +113,7 @@ $-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
     bottom: 0;
     left: $-focus-offset;
     border-bottom: 2px solid transparent;
-    transition: 0.1s ease-in-out;
+    transition: map-get($g-sage-transitions, default);
     transition-property: border-bottom-color, left, right;
   }
 
@@ -258,7 +258,7 @@ $-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
   border-radius: sage-border(radius);
   background-color: sage-color(white);
   box-shadow: sage-shadow(md);
-  transition: $sage-transition;
+  transition: map-get($g-sage-transitions, default);
   transition-property: transform, z-index;
 
   // In the event that this dropdown is at the bottom of the page, add some margin below
