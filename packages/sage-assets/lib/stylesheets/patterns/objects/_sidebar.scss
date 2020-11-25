@@ -3,8 +3,9 @@
   type: object
 
 ================================================== */
-$-sidebar-top-offset: $sage-assistant-height;
 $-sidebar-color-background: sage-color(white);
+$-sidebar-breakpoint: sage-breakpoint(md-min);
+$-sidebar-top-offset: $g-sage-assistant-height;
 
 .sage-sidebar {
   display: flex;
@@ -23,7 +24,7 @@ $-sidebar-color-background: sage-color(white);
   transition: transform 0.2s ease-out, opacity 0.15s ease-in-out;
   opacity: 0;
 
-  @media (min-width: $sage-sidebar-breakpoint) {
+  @media (min-width: $-sidebar-breakpoint) {
     z-index: sage-z_index();
     position: static;
     transform: none;

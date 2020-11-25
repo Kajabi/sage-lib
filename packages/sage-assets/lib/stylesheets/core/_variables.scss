@@ -172,27 +172,6 @@ $sage-card-border-radius: sage-border(radius) !default;
 $sage-card-grid-gap: sage-spacing(sm) !default;
 $sage-card-padding: sage-spacing(sm) !default;
 
-
-// ==================================================
-// SIDEBAR
-// ==================================================
-
-$sage-sidebar-breakpoint: sage-breakpoint(md-min) !default;
-
-
-// ==================================================
-// ASSISTANT
-// ==================================================
-
-$sage-assistant-height: rem(56px) !default;
-$sage-assistant-branding-height: rem(20px) !default;
-$sage-assistant-search-height: rem(40px) !default;
-$sage-assistant-search-bg-color: sage-color(grey, 300) !default;
-$sage-assistant-search-bg-opacity: 0.1 !default;
-$sage-assistant-search-placeholder-color: sage-color(grey, 400) !default;
-$sage-assistant-search-placeholder-transition: color 0.15s ease-in-out, opacity 0.15s ease-in-out !default;
-
-
 ///
 /// Active underline configuration
 ///
@@ -201,6 +180,11 @@ $g-sage-active-underline-configs: (
   color: sage-color(primary),
   radius: sage-border(radius),
 );
+
+///
+/// Assistant height shared by layout components
+///
+$g-sage-assistant-height: rem(56px);
 
 ///
 /// Banner heights for page offsets
