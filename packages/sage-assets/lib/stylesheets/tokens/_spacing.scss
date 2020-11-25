@@ -4,6 +4,7 @@
 }
 
 $sage-spacings: (
+  // Generic sizes
   3xs: rem(2px),
   2xs: rem(4px),
   xs: rem(8px),
@@ -12,4 +13,9 @@ $sage-spacings: (
   lg: rem(32px),
   xl: rem(48px),
   2xl: rem(64px),
+  // Contextual sizes
+  stage: rem(32px),
+  panel: rem(24px),
+  card: rem(16px),
+  stack: rem(8px),
 );

@@ -4,6 +4,16 @@
 
 ================================================== */
 
+$-grid-gap: sage-spacing();
+$-grid-num-columns: 12;
+$-grid-breakpoint-sm: sage-breakpoint(sm-min);
+$-grid-breakpoint-sm-max: sage-breakpoint(sm-max);
+$-grid-breakpoint-md: sage-breakpoint(md-min);
+$-grid-breakpoint-md-max: sage-breakpoint(md-max);
+$-grid-breakpoint-lg: sage-breakpoint(lg-min);
+$-grid-breakpoint-lg-max: sage-breakpoint(lg-max);
+$-grid-breakpoint-xl: sage-breakpoint(xl-min);
+
 // ============================================
 // Rows
 // ============================================
@@ -12,8 +22,8 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-left: calc(#{$sage-grid-gap} / -2);
-  margin-right: calc(#{$sage-grid-gap} / -2);
+  margin-left: calc(#{$-grid-gap} / -2);
+  margin-right: calc(#{$-grid-gap} / -2);
 }
 
 .sage-row {
@@ -21,29 +31,29 @@
 }
 
 .sage-row--stage {
-  margin-left: $sage-stage-padding / -2;
-  margin-right: $sage-stage-padding / -2;
+  margin-left: sage-spacing(stage) / -2;
+  margin-right: sage-spacing(stage) / -2;
 
   &:not(:last-child) {
-    margin-bottom: $sage-stage-grid-gap;
+    margin-bottom: sage-spacing(stage);
   }
 }
 
 .sage-row--panel {
-  margin-left: $sage-panel-padding / -2;
-  margin-right: $sage-panel-padding / -2;
+  margin-left: sage-spacing(panel) / -2;
+  margin-right: sage-spacing(panel) / -2;
 
   &:not(:last-child) {
-    margin-bottom: $sage-panel-grid-gap;
+    margin-bottom: sage-spacing(panel);
   }
 }
 
 .sage-row--card {
-  margin-left: $sage-card-padding / -2;
-  margin-right: $sage-card-padding / -2;
+  margin-left: sage-spacing(card) / -2;
+  margin-right: sage-spacing(card) / -2;
 
   &:not(:last-child) {
-    margin-bottom: $sage-card-grid-gap;
+    margin-bottom: sage-spacing(card);
   }
 }
 
@@ -77,10 +87,10 @@
 @mixin sage-col {
   flex: 1 1 auto;
   max-width: 100%;
-  padding: 0 calc(#{$sage-grid-gap} / 2);
+  padding: 0 calc(#{$-grid-gap} / 2);
 }
 
-@for $sage-i from 1 through $sage-grid-columns {
+@for $sage-i from 1 through $-grid-num-columns {
   .sage-col-#{$sage-i},
   .sage-col--sm-#{$sage-i},
   .sage-col--md-#{$sage-i},
@@ -89,45 +99,45 @@
     flex: 0 0 100%;
 
     .sage-row--stage > & {
-      padding: 0 ($sage-stage-grid-gap / 2);
+      padding: 0 (sage-spacing(stage) / 2);
     }
 
     .sage-row--panel > & {
-      padding: 0 ($sage-stage-grid-gap / 2);
+      padding: 0 (sage-spacing(stage) / 2);
     }
 
     .sage-row--card > & {
-      padding: 0 ($sage-card-grid-gap / 2);
+      padding: 0 (sage-spacing(card) / 2);
     }
   }
 
   .sage-col-#{$sage-i} {
     flex: 0 1 auto;
-    width: percentage($sage-i / $sage-grid-columns);
+    width: percentage($sage-i / $-grid-num-columns);
   }
 }
 
-@media (min-width: $sage-grid-breakpoint-sm) {
-  @for $sage-i from 1 through $sage-grid-columns {
+@media (min-width: $-grid-breakpoint-sm) {
+  @for $sage-i from 1 through $-grid-num-columns {
     .sage-col--sm-#{$sage-i} {
       flex: 0 1 auto;
-      width: percentage($sage-i / $sage-grid-columns);
+      width: percentage($sage-i / $-grid-num-columns);
     }
   }
 }
 
-@media (max-width: $sage-grid-breakpoint-sm-max) {
+@media (max-width: $-grid-breakpoint-sm-max) {
   .sage-col--sm-hide,
   .sage-col--md-show {
     display: none;
   }
 }
 
-@media (min-width: $sage-grid-breakpoint-md) {
-  @for $sage-i from 1 through $sage-grid-columns {
+@media (min-width: $-grid-breakpoint-md) {
+  @for $sage-i from 1 through $-grid-num-columns {
     .sage-col--md-#{$sage-i} {
       flex: 0 1 auto;
-      width: percentage($sage-i / $sage-grid-columns);
+      width: percentage($sage-i / $-grid-num-columns);
     }
   }
 
@@ -136,18 +146,18 @@
   }
 }
 
-@media (max-width: $sage-grid-breakpoint-md-max) {
+@media (max-width: $-grid-breakpoint-md-max) {
   .sage-col--md-hide,
   .sage-col--lg-show {
     display: none;
   }
 }
 
-@media (min-width: $sage-grid-breakpoint-lg) {
-  @for $sage-i from 1 through $sage-grid-columns {
+@media (min-width: $-grid-breakpoint-lg) {
+  @for $sage-i from 1 through $-grid-num-columns {
     .sage-col--lg-#{$sage-i} {
       flex: 0 1 auto;
-      width: percentage($sage-i / $sage-grid-columns);
+      width: percentage($sage-i / $-grid-num-columns);
     }
   }
 
@@ -156,13 +166,13 @@
   }
 }
 
-@media (max-width: $sage-grid-breakpoint-lg-max) {
+@media (max-width: $-grid-breakpoint-lg-max) {
   .sage-col--lg-hide {
     display: none;
   }
 }
 
-@media (min-width: $sage-grid-breakpoint-xl) {
+@media (min-width: $-grid-breakpoint-xl) {
   .sage-col--lg-show {
     display: none;
   }

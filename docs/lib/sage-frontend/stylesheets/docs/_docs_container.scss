@@ -7,10 +7,8 @@
 .docs-container {
   margin-top: sage-spacing();
   margin-bottom: sage-spacing();
-  padding: $sage-panel-padding;
-  background: $sage-panel-bg-color;
-  border-radius: $sage-panel-border-radius;
-  box-shadow: $sage-panel-box-shadow;
+
+  @include sage-panel;
 }
 
 .sage-panel--docs-span-right {

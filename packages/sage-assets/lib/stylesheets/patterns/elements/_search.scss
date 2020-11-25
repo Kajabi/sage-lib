@@ -88,7 +88,7 @@ $-search-icon: "::before";
   }
 
   .sage-panel-controls__toolbar > &:not(:last-child) {
-    margin-right: $sage-panel-grid-gap;
+    margin-right: sage-spacing(panel);
   }
 }
 

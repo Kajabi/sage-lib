@@ -31,11 +31,9 @@
 
 .sage-form-section__panel {
   position: relative;
-  padding: $sage-panel-padding;
   margin-bottom: sage-spacing();
-  background: $sage-panel-bg-color;
-  border-radius: $sage-panel-border-radius;
-  box-shadow: $sage-panel-box-shadow;
+  
+  @include sage-panel;
 
   // Form Section Panels commonly wrap a <form> tag generated within rails.
   // In the event that a form tag is not present, ensure the children behave identically.

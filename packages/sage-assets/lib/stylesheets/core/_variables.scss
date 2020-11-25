@@ -2,8 +2,6 @@
 // MISC GLOBAL STANDARDS
 // ==================================================
 $sage-transition: 0.1s ease-in-out;
-$sage-stage-grid-gap: sage-spacing(lg);
-$sage-stage-padding: sage-spacing(lg);
 $sage-toolbar-btn-border: 0 0 0 1px sage-color(grey, 300);
 $sage-toolbar-btn-border-hover: 0 0 0 1px sage-color(grey, 400);
 $sage-toolbar-btn-border-focus: 0 0 0 2px sage-color(primary);
@@ -19,48 +17,6 @@ $sage-body-font-color: sage-color(charcoal, 400);
 $sage-heading-font-color: sage-color(charcoal, 500);
 $sage-heading-margin-bottom: sage-spacing(sm);
 
-
-// ==================================================
-// GRID
-// ==================================================
-$sage-grid-columns: 12;
-$sage-grid-gap: sage-spacing(md);
-
-$sage-grid-breakpoint-sm: sage-breakpoint(sm-min);
-$sage-grid-breakpoint-sm-max: sage-breakpoint(sm-max);
-$sage-grid-breakpoint-md: sage-breakpoint(md-min);
-$sage-grid-breakpoint-md-max: sage-breakpoint(md-max);
-$sage-grid-breakpoint-lg: sage-breakpoint(lg-min);
-$sage-grid-breakpoint-lg-max: sage-breakpoint(lg-max);
-$sage-grid-breakpoint-xl: sage-breakpoint(xl-min);
-
-
-// ==================================================
-// FORM ELEMENTS
-// ==================================================
-
-$sage-form-element-spacing: sage-spacing(sm);
-
-
-// ==================================================
-// PANEL
-// ==================================================
-
-$sage-panel-bg-color: sage-color(white);
-$sage-panel-border-radius: sage-border(radius);
-$sage-panel-box-shadow: sage-shadow(sm);
-$sage-panel-grid-gap: sage-spacing();
-$sage-panel-padding: sage-spacing();
-
-
-// ==================================================
-// CARDS
-// ==================================================
-
-$sage-card-border: 1px solid sage-color(grey, 300);
-$sage-card-border-radius: sage-border(radius);
-$sage-card-grid-gap: sage-spacing(sm);
-$sage-card-padding: sage-spacing(sm);
 
 ///
 /// Active underline configuration

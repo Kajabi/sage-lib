@@ -32,16 +32,16 @@ $-switch-focus-outline-color: sage-color(primary) !default;
   display: flex;
   flex-flow: row wrap;
   align-items: flex-start;
-  margin-bottom: $sage-form-element-spacing;
+  margin-bottom: sage-spacing(card);
   color: $-switch-color-default-text;
 
   & + & {
-    margin-top: -($sage-form-element-spacing / 2);
+    margin-top: -(sage-spacing(card) / 2);
   }
 
   .sage-list & {
     margin-top: 0;
-    margin-bottom: $sage-form-element-spacing / 2;
+    margin-bottom: sage-spacing(card) / 2;
   }
 
   .sage-panel__stack > &,

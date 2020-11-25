@@ -258,7 +258,7 @@ $-label-interactive-icon-size: rem(24px);
     border-radius: sage-border(radius);
 
     &:not(:last-child) {
-      margin-right: $sage-card-grid-gap;
+      margin-right: sage-spacing(card);
     }
   }
 

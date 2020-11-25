@@ -117,7 +117,7 @@ $-icon: "::before";
 .sage-banner__close {
   display: none;
   position: absolute;
-  right: $sage-card-padding;
+  right: sage-spacing(card);
 
   .sage-banner--active & {
     display: block;

@@ -143,9 +143,9 @@
 @mixin sage-card() {
   @include sage-grid-card();
 
-  padding: $sage-card-padding;
-  border: $sage-card-border;
-  border-radius: $sage-card-border-radius;
+  padding: sage-spacing(card);
+  border: sage-border();
+  border-radius: sage-border(radius);
 }
 
 ///
@@ -190,7 +190,7 @@
 ///
 @mixin sage-grid-panel() {
   display: grid;
-  gap: $sage-panel-grid-gap;
+  gap: sage-spacing(panel);
   grid-template-columns: 100%;
   grid-template-rows: min-content;
 }
@@ -203,6 +203,7 @@
 @mixin sage-grid-card-row() {
   justify-content: space-between;
   align-items: center;
+  gap: sage-spacing(card);
 
   @media (max-width: sage-breakpoint(sm-max)) {
     display: flex;
@@ -275,11 +276,10 @@
 /// Adds the basic default panel setup including grid, spacing, and border treatment
 ///
 @mixin sage-panel() {
-  @include sage-grid-panel();
-
-  padding: $sage-panel-padding;
-  border-radius: $sage-panel-border-radius;
-  box-shadow: $sage-panel-box-shadow;
+  padding: sage-spacing(panel);
+  background-color: sage-color(white);
+  border-radius: sage-border(radius);
+  box-shadow: sage-shadow(sm);
 }
 
 ///

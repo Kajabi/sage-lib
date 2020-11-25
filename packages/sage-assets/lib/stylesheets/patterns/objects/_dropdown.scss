@@ -56,7 +56,7 @@ $-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
 
   .sage-panel-controls__toolbar > & {
     &:not(:last-child) {
-      margin-right: $sage-panel-grid-gap;
+      margin-right: sage-spacing(panel);
     }
   }
   

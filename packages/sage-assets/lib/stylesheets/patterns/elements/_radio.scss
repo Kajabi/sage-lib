@@ -29,11 +29,11 @@ $-radio-focus-outline-color: currentColor;
     display: flex;
     flex-flow: row wrap;
     align-items: flex-start;
-    margin-bottom: $sage-form-element-spacing;
+    margin-bottom: sage-spacing(card);
   }
 
   .sage-list & {
-    margin-bottom: $sage-form-element-spacing / 2;
+    margin-bottom: sage-spacing(card) / 2;
   }
 
   .sage-panel__stack > &,
