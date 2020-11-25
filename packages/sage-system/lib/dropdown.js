@@ -125,6 +125,7 @@ Sage.dropdown = (function() {
 
   function close(el) {
     el.setAttribute('aria-expanded', 'false');
+    el.removeEventListener('keydown', focusTrap);
     SELECTOR_LAST_FOCUSED.focus();
   }
 
