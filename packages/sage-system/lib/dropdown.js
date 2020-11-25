@@ -30,6 +30,9 @@ Sage.dropdown = (function() {
   // The element in which to show the selected value when dropdown is in selection mode
   const triggerSelectedValueClass = '.sage-dropdown__trigger-selected-value .sage-btn__truncate-text';
 
+  const SELECTOR_FOCUSABLE_ELEMENTS = '.sage-dropdown__panel a, .sage-dropdown__panel button, .sage-dropdown__panel textarea, .sage-dropdown__panel input[type="text"], .sage-dropdown__panel input[type="radio"], .sage-dropdown__panel input[type="checkbox"], .sage-dropdown__panel input[type="search"], .sage-dropdown__panel select';
+  let SELECTOR_LAST_FOCUSED;
+
   // ==================================================
   // Functions
   // ==================================================
@@ -115,10 +118,15 @@ Sage.dropdown = (function() {
 
   function open(el) {
     el.setAttribute('aria-expanded', 'true');
+    let focusableEls = el.querySelectorAll(SELECTOR_FOCUSABLE_ELEMENTS);
+    SELECTOR_LAST_FOCUSED = document.activeElement;
+    el.addEventListener('keydown', focusTrap.bind(focusableEls));
   }
 
   function close(el) {
     el.setAttribute('aria-expanded', 'false');
+    el.removeEventListener('keydown', focusTrap);
+    SELECTOR_LAST_FOCUSED.focus();
   }
 
   function isExpanded(el) {
@@ -128,6 +136,29 @@ Sage.dropdown = (function() {
   function buildA11y(el) {
     el.setAttribute('aria-haspopup', true);
     el.setAttribute('aria-expanded', false);
+  }
+
+  function focusTrap(evt) {
+    let firstFocusableEl = this[0];
+    let lastFocusableEl = this[this.length - 1];
+    let KEYCODE_TAB = 9;
+    var isTabPressed = (evt.key === 'Tab' || evt.keyCode === KEYCODE_TAB);
+
+    if (!isTabPressed) { 
+      return; 
+    }
+
+    if ( evt.shiftKey ) /* shift + tab */ {
+      if (document.activeElement === firstFocusableEl) {
+        lastFocusableEl.focus();
+        evt.preventDefault();
+      }
+    } else /* tab */ {
+      if (document.activeElement === lastFocusableEl) {
+        firstFocusableEl.focus();
+        evt.preventDefault();
+      }
+    }
   }
 
   return {
