@@ -92,7 +92,7 @@ $-select-padding-label: map-get($g-sage-field-configs, padding-label);
   // Firefox allows setting the color of <options> within a <select>.
   // This prevents color from being inherited from <select>.
   option:not(:disabled) {
-    color: $sage-body-font-color;
+    color: map-get($g-sage-text-colors, body);
   }
 
   .sage-select--value-selected & {

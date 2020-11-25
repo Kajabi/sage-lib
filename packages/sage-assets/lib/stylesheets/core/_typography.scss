@@ -40,7 +40,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-size-adjust: 100%;
-  color: $sage-body-font-color;
+  color: map-get($g-sage-text-colors, body);
   font-family: $-body-font-stack;
 
   @supports (font-variation-settings: normal) {
@@ -68,9 +68,9 @@ body {
   > h5:not([class]),
   > h6:not([class]),
   > [class*="t-sage-heading-"] {
-    color: $sage-heading-font-color;
+    color: map-get($g-sage-text-colors, heading);
 
-    @include t-block-spacing($sage-heading-margin-bottom);
+    @include t-block-spacing();
   }
 
   // Elements with no classes extend related type specs

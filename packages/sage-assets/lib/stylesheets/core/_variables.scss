@@ -4,17 +4,6 @@
 $sage-transition: 0.1s ease-in-out;
 
 
-// ==================================================
-// TYPOGRAPHY
-// ==================================================
-
-// Text
-$sage-body-font-size: rem(16px);
-$sage-body-font-color: sage-color(charcoal, 400);
-$sage-heading-font-color: sage-color(charcoal, 500);
-$sage-heading-margin-bottom: sage-spacing(sm);
-
-
 ///
 /// Active underline configuration
 ///
@@ -89,6 +78,14 @@ $g-sage-tab-colors: (
   default: sage-color(charcoal, 100),
   active: sage-color(charcoal, 500),
   disabled: sage-color(grey, 500),
+);
+
+///
+/// Standard text colors
+///
+$g-sage-text-colors: (
+  body: sage-color(charcoal, 400),
+  heading: sage-color(charcoal, 500),
 );
 
 ///
