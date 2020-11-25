@@ -232,9 +232,10 @@ $sage-tooltip-zindex: sage-z_index(overlay) !default;
 $sage-tooltip-maxwidth: rem(200px) !default;
 $sage-tooltip-large-maxwidth: rem(320px) !default;
 
-
-// ==================================================
-// BANNERS
-// ==================================================
-
-$sage-banner-height: rem(48px);
+///
+/// Banner heights for page offsets
+///
+$g-sage-banner-heights: (
+  default: rem(48px),
+  ladera: rem(60px),
+);

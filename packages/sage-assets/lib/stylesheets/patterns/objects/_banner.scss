@@ -4,6 +4,7 @@
 
 ================================================== */
 
+$-banner-height-ladera: map-get($g-sage-banner-heights, ladera);
 $-banner-colors: (
   default: (
     background: sage-color(primary),
@@ -84,7 +85,7 @@ $-icon: "::before";
 }
 
 .sage-banner-wrapper--context-ladera-top {
-  margin-bottom: 60px;
+  margin-bottom: $-banner-height-ladera;
 }
 
 .sage-banner__text {
