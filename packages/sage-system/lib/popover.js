@@ -9,6 +9,8 @@ Sage.popover = (function() {
 
   const CLASS_ACTIVE = 'sage-popover--is-expanded';
   const ATTRIBUTE_ARIA_EXPANDED = 'aria-expanded';
+  const SELECTOR_FOCUSABLE_ELEMENTS = '.sage-popover__panel a[href]:not([disabled]), .sage-popover__panel button:not([disabled]), .sage-popover__panel textarea:not([disabled]), .sage-popover__panel input[type="text"]:not([disabled]), .sage-popover__panel input[type="radio"]:not([disabled]), .sage-popover__panel input[type="checkbox"]:not([disabled]), .sage-popover__panel input[type="search"]:not([disabled]), .sage-popover__panel select:not([disabled])';
+  let SELECTOR_LAST_FOCUSED;
 
   // ==================================================
   // Functions
@@ -42,8 +44,6 @@ Sage.popover = (function() {
   }
 
   function handleKeydown(evt) {
-    // prevent a click from bubbling up when ENTER is keydown
-    evt.preventDefault();
     const elParent = evt.target.closest(`[${SELECTOR_PARENT}]`);
 
     // Enter key
@@ -63,11 +63,39 @@ Sage.popover = (function() {
   function openPopoverPanel(elParent) {
     elParent.querySelector(`[${SELECTOR_TRIGGER}]`).setAttribute(ATTRIBUTE_ARIA_EXPANDED, 'true');
     elParent.classList.add(CLASS_ACTIVE);
+    let focusableEls = elParent.querySelectorAll(SELECTOR_FOCUSABLE_ELEMENTS);
+    SELECTOR_LAST_FOCUSED = document.activeElement;
+    elParent.addEventListener('keydown', focusTrap.bind(focusableEls));
   }
 
   function closePopoverPanel(elParent) {
     elParent.querySelector(`[${SELECTOR_TRIGGER}]`).setAttribute(ATTRIBUTE_ARIA_EXPANDED, 'false');
     elParent.classList.remove(CLASS_ACTIVE);
+    elParent.removeEventListener('keydown', focusTrap);
+    SELECTOR_LAST_FOCUSED.focus();
+  }
+
+  function focusTrap(evt) {
+    let firstFocusableEl = this[0];
+    let lastFocusableEl = this[this.length - 1];
+    let KEYCODE_TAB = 9;
+    var isTabPressed = (evt.key === 'Tab' || evt.keyCode === KEYCODE_TAB);
+
+    if (!isTabPressed) { 
+      return; 
+    }
+
+    if ( evt.shiftKey ) /* shift + tab */ {
+      if (document.activeElement === firstFocusableEl) {
+        lastFocusableEl.focus();
+        evt.preventDefault();
+      }
+    } else /* tab */ {
+      if (document.activeElement === lastFocusableEl) {
+        firstFocusableEl.focus();
+        evt.preventDefault();
+      }
+    }
   }
 
   return {
