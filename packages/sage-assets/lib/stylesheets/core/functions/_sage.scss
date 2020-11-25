@@ -1,10 +1,14 @@
 ////
+/// Sage functions
+///
 /// @group sage
 ////
 
 
-/// An overridable baseline for the system
-$default-baseline: rem(4px);
+///
+/// Default baseline for the system
+///
+$g-sage-baseline: rem(4px);
 
 ///
 /// Generates a value based on the baseline grid.
@@ -16,6 +20,6 @@ $default-baseline: rem(4px);
 ///
 /// @return {length} Product of the arguments resulting in a `rem` measurement
 ///
-@function baseline($num: 2, $baseline: $default-baseline) {
+@function sage-baseline($num: 2, $baseline: $g-sage-baseline) {
   @return $num * $baseline;
 }
