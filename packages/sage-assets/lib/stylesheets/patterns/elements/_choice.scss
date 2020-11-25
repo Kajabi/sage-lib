@@ -12,6 +12,9 @@ $item-arrow: "before";
 $-choice-color-default: map-get($g-sage-tab-colors, default);
 $-choice-color-active: map-get($g-sage-tab-colors, active);
 $-choice-color-disabled: map-get($g-sage-tab-colors, disabled);
+$-choice-radio-size: $g-sage-radio-size;
+$-choice-radio-color-checked: map-get($g-sage-radio-colors, checked);
+$-choice-radio-color-checked-inner: map-get($g-sage-radio-colors, checked-inner);
 
 .sage-choice {
   @include sage-button-style-reset();
@@ -123,11 +126,11 @@ $-choice-color-disabled: map-get($g-sage-tab-colors, disabled);
     content: "";
     display: inline-block;
     box-sizing: border-box;
-    height: $sage-radio-button-size;
-    min-width: $sage-radio-button-size;
-    width: $sage-radio-button-size;
+    height: $-choice-radio-size;
+    min-width: $-choice-radio-size;
+    width: $-choice-radio-size;
     margin: 0 sage-spacing(sm) 0 0;
-    background-color: $sage-radio-selected-indicator-color;
+    background-color: $-choice-radio-color-checked-inner;
     border-radius: sage-border(radius-round);
     border: sage-border();
     transition: $sage-transition;
@@ -143,7 +146,7 @@ $-choice-color-disabled: map-get($g-sage-tab-colors, disabled);
     &::#{$item-radio} {
       box-shadow: sage-shadow(sm);
       border-width: 5px;
-      border-color: $sage-radio-color-checked;
+      border-color: $-choice-radio-color-checked;
     }
   }
 }

@@ -5,25 +5,24 @@
 
 ================================================== */
 
-
 // Colors
-$-radio-color-default: sage-color(grey, 400) !default;
-$-radio-color-checked: sage-color(primary) !default;
-$-radio-color-hover: sage-color(grey, 500) !default;
-$-radio-color-disabled: sage-color(grey, 200) !default;
-$-radio-color-disabled-text: sage-color(charcoal, 100) !default;
-$-radio-color-disabled-checked: sage-color(primary, 200) !default;
+$-radio-color-checked: map-get($g-sage-radio-colors, checked);
+$-radio-color-checked-disabled: map-get($g-sage-radio-colors, checked-disabled);
+$-radio-color-checked-inner: map-get($g-sage-radio-colors, checked-inner);
+$-radio-color-default: map-get($g-sage-radio-colors, default);
+$-radio-color-disabled: map-get($g-sage-radio-colors, disabled);
+$-radio-color-hover: map-get($g-sage-radio-colors, hover);
+$-radio-color-text-disabled: sage-color(charcoal, 100);
 
-$-radio-button-size: rem(16px) !default;
-$-radio-border-radius: sage-border(radius-round) !default;
-$-radio-transition: 0.15s ease-in-out !default;
-$-radio-selected-indicator-size: rem(7px) !default;
-$-radio-selected-indicator-color: sage-color(white) !default;
+// Additional configurations
+$-radio-button-size: $g-sage-radio-size;
+$-radio-transition: 0.15s ease-in-out;
+$-radio-selected-indicator-size: rem(7px);
 
 // Focus state
-$-radio-focus-outline-size: sage-spacing(2xs) !default;
-$-radio-focus-outline-width: 2 !default;
-$-radio-focus-outline-color: currentColor !default;
+$-radio-focus-outline-size: sage-spacing(2xs);
+$-radio-focus-outline-width: 2;
+$-radio-focus-outline-color: currentColor;
 
 .sage-radio {
   &:not(.sage-radio--standalone) {
@@ -73,7 +72,7 @@ $-radio-focus-outline-color: currentColor !default;
   outline: none;
   background-color: sage-color(white);
   border: rem(1px) solid $-radio-color-default;
-  border-radius: $-radio-border-radius;
+  border-radius: sage-border(radius-round);
   transition: background 0.2s ease-in-out, box-shadow $-radio-transition, border $-radio-transition;
   cursor: pointer;
 
@@ -105,7 +104,7 @@ $-radio-focus-outline-color: currentColor !default;
     transform: translate3d(-50%, -50%, 0) scale(0);
     height: $-radio-selected-indicator-size;
     width: $-radio-selected-indicator-size;
-    background-color: $-radio-selected-indicator-color;
+    background-color: $-radio-color-checked-inner;
     transition: opacity $-radio-transition, transform 0.3s ease-in-out;
   }
 
@@ -149,12 +148,12 @@ $-radio-focus-outline-color: currentColor !default;
 
     // disabled & checked
     &:checked {
-      background: $-radio-color-disabled-checked;
+      background: $-radio-color-checked-disabled;
       box-shadow: none;
     }
 
     + .sage-radio__label {
-      color: $-radio-color-disabled-text;
+      color: $-radio-color-text-disabled;
       cursor: not-allowed;
     }
 

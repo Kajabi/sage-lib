@@ -119,15 +119,6 @@ $sage-textarea-bg-disabled: $sage-inputfield-bg-disabled !default;
 $sage-textarea-label-bg-color: $sage-textarea-bg-default !default;
 
 
-// ============================================
-// RADIO BUTTONS
-// ============================================
-
-$sage-radio-button-size: rem(16px) !default;
-$sage-radio-selected-indicator-color: sage-color(white) !default;
-$sage-radio-color-checked: sage-color(primary) !default;
-
-
 // ==================================================
 // PANEL
 // ==================================================
@@ -169,6 +160,22 @@ $g-sage-banner-heights: (
   default: rem(48px),
   ladera: rem(60px),
 );
+
+///
+/// Radio button colors
+///
+$g-sage-radio-colors: (
+  checked: sage-color(primary),
+  checked-disabled: sage-color(primary, 200),
+  checked-inner: sage-color(white),
+  default: sage-color(grey, 4000),
+  hover: sage-color(grey, 500),
+);
+
+///
+/// Radio button size
+///
+$g-sage-radio-size: rem(16px);
 
 ///
 /// Tab colors shared by components such as tabs and choices
