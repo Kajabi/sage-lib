@@ -8,7 +8,9 @@ Sage.modal = (function() {
   const SELECTOR_MODAL_DISABLE_CLOSE = 'data-js-modal-disable-close';
   const SELECTOR_MODAL_CLOSE = 'data-js-modal-close';
   const SELECTOR_MODALTRIGGER = 'data-js-modaltrigger';
+  const SELECTOR_FOCUSABLE_ELEMENTS = 'a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled]), input[type="text"]:not([disabled]), input[type="radio"]:not([disabled]), input[type="checkbox"]:not([disabled]), select:not([disabled])';
   const EVENT_CLOSEALL = 'sage.modal.closeAll';
+  let SELECTOR_LAST_FOCUSED;
 
   // ==================================================
   // Functions
@@ -50,9 +52,36 @@ Sage.modal = (function() {
 
   function openModal(modalId) {
     let modal = document.querySelector(`[${SELECTOR_MODAL}="${modalId}"]`);
+    let focusableEls = modal.querySelectorAll(SELECTOR_FOCUSABLE_ELEMENTS);
+
+    SELECTOR_LAST_FOCUSED = document.activeElement;
     modal.classList.add('sage-modal--active');
     modal.setAttribute("open", "");
     document.addEventListener('keyup', onModalKeypress);
+    modal.addEventListener('keydown', focusTrap.bind(focusableEls));
+  }
+
+  function focusTrap(evt) {
+    let firstFocusableEl = this[0];
+    let lastFocusableEl = this[this.length - 1];
+    let KEYCODE_TAB = 9;
+    var isTabPressed = (evt.key === 'Tab' || evt.keyCode === KEYCODE_TAB);
+
+    if (!isTabPressed) { 
+      return; 
+    }
+
+    if ( evt.shiftKey ) /* shift + tab */ {
+      if (document.activeElement === firstFocusableEl) {
+        lastFocusableEl.focus();
+        evt.preventDefault();
+      }
+    } else /* tab */ {
+      if (document.activeElement === lastFocusableEl) {
+        firstFocusableEl.focus();
+        evt.preventDefault();
+      }
+    }
   }
 
   function dispatchCloseAll() {
@@ -63,6 +92,8 @@ Sage.modal = (function() {
   function closeModal(el) {
     el.classList.remove('sage-modal--active');
     el.removeAttribute("open");
+    el.removeEventListener('keydown', focusTrap);
+    SELECTOR_LAST_FOCUSED.focus();
   }
 
   function eventHandlerCloseAll() {
