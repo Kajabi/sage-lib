@@ -1,59 +1,21 @@
-// ==================================================
-// Variables
-// ==================================================
+////
+/// @group sage
+////
 
-$sage-icon-font-path: "../fonts/sage";
-$sage-icon-background-color: #eee;
-$sage-icon-li-margin-right: 0.4em;
+$-icon-font-path: "../fonts/sage";
 
-
-// ==================================================
-// Font setup
-// ==================================================
-
+// Icon font setup
 @font-face {
   font-family: "Sage";
-  src: url("#{$sage-icon-font-path}/Sage.woff");
-  src: url("#{$sage-icon-font-path}/Sage.woff") format("woff"),
-    url("#{$sage-icon-font-path}/Sage.ttf") format("truetype"),
-    url("#{$sage-icon-font-path}/Sage.svg") format("svg"),
-    url("#{$sage-icon-font-path}/Sage.eot") format("embedded-opentype");
+  src: url("#{$-icon-font-path}/Sage.woff");
+  src: url("#{$-icon-font-path}/Sage.woff") format("woff"),
+    url("#{$-icon-font-path}/Sage.ttf") format("truetype"),
+    url("#{$-icon-font-path}/Sage.svg") format("svg"),
+    url("#{$-icon-font-path}/Sage.eot") format("embedded-opentype");
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
-
-///
-/// Generates cross-browser icon rotations
-///
-/// @group utilities
-/// 
-/// @param {number} $degrees Degrees value
-/// @param {number} $rotation Rotation value
-///
-@mixin icon-rotate($degrees, $rotation) {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=#{$rotation});
-  transform: rotate($degrees);
-}
-
-///
-/// Generates cross-browser icon flip in either axis
-///
-/// @group utilities
-/// 
-/// @param {number} $horiz Whether or not to flip on the horizontal axis
-/// @param {number} $vert Whether or not to flip on the vertical axis
-/// @param {number} $rotation Rotation value
-///
-@mixin icon-flip($horiz, $vert, $rotation) {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=#{$rotation});
-  transform: scale($horiz, $vert);
-}
-
-
-// ==================================================
-// Base class definition
-// ==================================================
 
 // Build icons as `sage-icon-icon-name` based on the map in `tokens/_icon`
 @each $icon-name, $icon-code in $sage-icons {
@@ -71,9 +33,7 @@ $sage-icon-li-margin-right: 0.4em;
     }
   }
 
-
   // Other icons generated here
-
   @include button-icon-generator($icon-name, $icon-code, only);
   @include button-icon-generator($icon-name, $icon-code, left);
   @include button-icon-generator($icon-name, $icon-code, right);

@@ -21,6 +21,30 @@
   }
 }
 
+
+///
+/// Generates cross-browser icon rotations
+/// 
+/// @param {number} $degrees Degrees value
+/// @param {number} $rotation Rotation value
+///
+@mixin icon-rotate($degrees, $rotation) {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=#{$rotation});
+  transform: rotate($degrees);
+}
+
+///
+/// Generates cross-browser icon flip in either axis
+/// 
+/// @param {number} $horiz Whether or not to flip on the horizontal axis
+/// @param {number} $vert Whether or not to flip on the vertical axis
+/// @param {number} $rotation Rotation value
+///
+@mixin icon-flip($horiz, $vert, $rotation) {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=#{$rotation});
+  transform: scale($horiz, $vert);
+}
+
 ///
 /// Define overflow scrolling dimensions
 ///
