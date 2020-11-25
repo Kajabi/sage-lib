@@ -1,9 +1,9 @@
-$-box-sides: (
-  top,
-  right,
-  bottom,
-  left
-);
+////
+/// Spacer utility
+///
+/// @group sage
+////
+
 
 @each $-name, $-value in $sage-spacings {
   $suffix: "-#{$-name}";
@@ -12,7 +12,12 @@ $-box-sides: (
     $suffix: "";
   }
   
-  @each $-box-side in $-box-sides {
+  @each $-box-side in (
+    top,
+    right,
+    bottom,
+    left
+  ) {
     .sage-spacer-#{$-box-side}#{$suffix} {
       margin-#{$-box-side}: $-value;
     }

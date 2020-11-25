@@ -1,6 +1,9 @@
-// ============================================
-// Row Grid Templates - B
-// ============================================
+////
+/// Sage grid templates
+///
+/// @group sage
+////
+
 
 // Generates classes for each sage grid template
 @each $-key, $-map in $sage-grid-templates {
