@@ -92,6 +92,7 @@ Sage.modal = (function() {
   function closeModal(el) {
     el.classList.remove('sage-modal--active');
     el.removeAttribute("open");
+    el.removeEventListener('keydown', focusTrap);
     SELECTOR_LAST_FOCUSED.focus();
   }
 
