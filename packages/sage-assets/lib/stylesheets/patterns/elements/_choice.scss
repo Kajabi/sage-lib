@@ -9,7 +9,9 @@ $item-radio: "before";
 $item-icon: "before";
 $item-arrow: "before";
 
-$-choice-disabled-color: sage-color(grey, 500);
+$-choice-color-default: map-get($g-sage-tab-colors, default);
+$-choice-color-active: map-get($g-sage-tab-colors, active);
+$-choice-color-disabled: map-get($g-sage-tab-colors, disabled);
 
 .sage-choice {
   @include sage-button-style-reset();
@@ -21,7 +23,7 @@ $-choice-disabled-color: sage-color(grey, 500);
   flex-basis: 0;
   padding: sage-spacing(sm);
   white-space: nowrap;
-  color: $sage-tabs-default-color;
+  color: $-choice-color-default;
   border: sage-border();
   border-radius: sage-border(radius);
   transition: $sage-transition;
@@ -39,7 +41,7 @@ $-choice-disabled-color: sage-color(grey, 500);
   }
 
   &:hover {
-    color: $sage-tabs-active-color;
+    color: $-choice-color-active;
     background-color: sage-color(grey, 100);
   }
 
@@ -53,7 +55,7 @@ $-choice-disabled-color: sage-color(grey, 500);
 
   &:active,
   &.sage-choice--active {
-    color: $sage-tabs-active-color;
+    color: $-choice-color-active;
 
     &::after {
       border-color: sage-color(primary);

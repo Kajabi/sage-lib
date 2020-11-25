@@ -4,7 +4,9 @@
 
 ================================================== */
 
-$-tab-disabled-color: sage-color(grey, 500);
+$-tab-color-default: map-get($g-sage-tab-colors, default);
+$-tab-color-active: map-get($g-sage-tab-colors, active);
+$-tab-color-disabled: map-get($g-sage-tab-colors, disabled);
 
 /* stylelint-disable max-nesting-depth */
 .sage-tab {
@@ -17,13 +19,13 @@ $-tab-disabled-color: sage-color(grey, 500);
   margin: 0;
   padding: 0 0 sage-spacing(xs);
   white-space: nowrap;
-  color: $sage-tabs-default-color;
+  color: $-tab-color-default;
   transition: color $sage-transition, background-color $sage-transition, box-shadow $sage-transition;
 
   @extend %t-sage-body-med;
 
   &:hover {
-    color: $sage-tabs-active-color;
+    color: $-tab-color-active;
   }
 
   &:focus {
@@ -32,7 +34,7 @@ $-tab-disabled-color: sage-color(grey, 500);
 
   &:active,
   &.sage-tab--active {
-    color: $sage-tabs-active-color;
+    color: $-tab-color-active;
   }
 
   &:last-of-type {
@@ -41,7 +43,7 @@ $-tab-disabled-color: sage-color(grey, 500);
 
   &[aria-disabled="true"],
   &:disabled {
-    color: $-tab-disabled-color;
+    color: $-tab-color-disabled;
     cursor: default;
     pointer-events: none;
   }

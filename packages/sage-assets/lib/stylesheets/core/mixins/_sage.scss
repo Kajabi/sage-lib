@@ -298,9 +298,9 @@
     right: $spacing-off;
     bottom: 0;
     left: $spacing-off;
-    height: $sage-tabs-active-border-height;
-    background: $sage-tabs-active-border-color;
-    border-radius: $sage-tabs-active-border-radius;
+    height: map-get($g-sage-active-underline-configs, height);
+    background: map-get($g-sage-active-underline-configs, color);
+    border-radius: map-get($g-sage-active-underline-configs, radius);
     transition: right $sage-transition, left $sage-transition;
   }
 

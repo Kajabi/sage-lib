@@ -193,20 +193,14 @@ $sage-assistant-search-placeholder-color: sage-color(grey, 400) !default;
 $sage-assistant-search-placeholder-transition: color 0.15s ease-in-out, opacity 0.15s ease-in-out !default;
 
 
-// ==================================================
-// TABS
-// ==================================================
-
-$sage-tabs-default-color: sage-color(charcoal, 100) !default;
-
-// Active tab
-$sage-tabs-active-color: sage-color(charcoal, 500) !default;
-
-// Active tab indicator
-$sage-tabs-active-border-height: rem(3px) !default;
-$sage-tabs-active-border-color: sage-color(primary) !default;
-$sage-tabs-active-border-radius: sage-border(radius) !default;
-
+///
+/// Active underline configuration
+///
+$g-sage-active-underline-configs: (
+  height: rem(3px),
+  color: sage-color(primary),
+  radius: sage-border(radius),
+);
 
 ///
 /// Banner heights for page offsets
@@ -214,4 +208,13 @@ $sage-tabs-active-border-radius: sage-border(radius) !default;
 $g-sage-banner-heights: (
   default: rem(48px),
   ladera: rem(60px),
+);
+
+///
+/// Tab colors shared by components such as tabs and choices
+///
+$g-sage-tab-colors: (
+  default: sage-color(charcoal, 100),
+  active: sage-color(charcoal, 500),
+  disabled: sage-color(grey, 500),
 );
