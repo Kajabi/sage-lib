@@ -5,7 +5,7 @@
 
 ================================================== */
 
-$-dropdown-height: $sage-inputfield-height;
+$-dropdown-height: map-get($g-sage-field-configs, height);
 $-dropdown-width: rem(280px);
 $-dropdown-width-small: rem(200px);
 $-dropdown-item-focus-line-spacing-x: sage-spacing(sm);
@@ -16,11 +16,11 @@ $-option-menu-size: rem(40px);
 
 $-panel-max-height: rem(400px);
 
-$-trigger-label-bg-label: $sage-inputfield-bg-label;
-$-trigger-label-color-default: $sage-inputfield-color-default;
-$-trigger-label-color-disabled: $sage-inputfield-color-disabled;
-$-trigger-padding-label: $sage-inputfield-padding-label;
-$-trigger-padding-x: $sage-inputfield-padding;
+$-trigger-label-color-label-background: map-get($g-sage-field-colors, label-background);
+$-trigger-label-color-default: map-get($g-sage-field-colors, default);
+$-trigger-label-color-disabled: map-get($g-sage-field-colors, disabled);
+$-trigger-padding-label: map-get($g-sage-field-configs, padding-label);
+$-trigger-padding-x: map-get($g-sage-field-configs, padding);
 $-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
 
 .sage-dropdown {
@@ -346,7 +346,7 @@ $-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
 
     transform: translateY(calc(#{-$-dropdown-height} + 50%));
     width: auto;
-    background-color: $-trigger-label-bg-label;
+    background-color: $-trigger-label-color-label-background;
     transition: transform 0.15s ease-in-out, color 0.15s ease-out;
   }
 

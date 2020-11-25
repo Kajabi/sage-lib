@@ -5,37 +5,37 @@
 ================================================== */
 
 // Border
-$-textarea-border-color: $sage-inputfield-border-color;
-$-textarea-border-radius: $sage-inputfield-border-radius;
-$-textarea-border-width: $sage-inputfield-border-width;
-$-textarea-box-shadow-size: $sage-inputfield-box-shadow-size;
+$-textarea-border-radius: map-get($g-sage-field-configs, border-radius);
+$-textarea-border-width: map-get($g-sage-field-configs, border-width);
+$-textarea-box-shadow-size: map-get($g-sage-field-configs, box-shadow-size);
 
 // Padding
 $-textarea-label-padding: rem(3px);
-$-textarea-padding: $sage-inputfield-padding;
+$-textarea-padding: map-get($g-sage-field-configs, padding);
 
 // Sizing
-$-textarea-min-height: rem(90px);
 $-textarea-height: 100%;
+$-textarea-min-height: rem(90px);
 $-textarea-width: 100%;
 
-// Spacing
-$-textarea-spacing: $sage-inputfield-spacing;
+// Outer spacing
+$-textarea-bottom-gap: map-get($g-sage-field-configs, bottom-gap);
 
 // Colors
-$-textarea-color-default: $sage-inputfield-color-default;
-$-textarea-color-disabled: $sage-inputfield-color-disabled;
-$-textarea-color-success: $sage-inputfield-color-success;
-$-textarea-color-error: $sage-inputfield-color-error;
-$-textarea-bg-default: sage-color(white);
-$-textarea-bg-disabled: $sage-inputfield-bg-disabled;
-$-textarea-label-bg-color: $-textarea-bg-default;
+$-textarea-color-border: map-get($g-sage-field-colors, border);
+$-textarea-color-default: map-get($g-sage-field-colors, default);
+$-textarea-color-default-background: sage-color(white);
+$-textarea-color-disabled: map-get($g-sage-field-colors, disabled);
+$-textarea-color-disabled-background: map-get($g-sage-field-colors, disabled-background);
+$-textarea-color-error: map-get($g-sage-field-colors, error);
+$-textarea-color-label-background: $-textarea-color-default-background;
+$-textarea-color-success: map-get($g-sage-field-colors, success);
 
 .sage-textarea {
   position: relative;
 
   &:not(:last-child) {
-    margin-bottom: $-textarea-spacing;
+    margin-bottom: $-textarea-bottom-gap;
   }
 
   .sage-panel__stack > &,
@@ -56,7 +56,7 @@ $-textarea-label-bg-color: $-textarea-bg-default;
   padding-right: $-textarea-label-padding;
   color: inherit;
   white-space: nowrap;
-  background-color: $-textarea-label-bg-color;
+  background-color: $-textarea-color-label-background;
   pointer-events: none;
   opacity: 0;
 
@@ -70,7 +70,7 @@ $-textarea-label-bg-color: $-textarea-bg-default;
   color: sage-color(charcoal, 100);
 
   .sage-textarea--error & {
-    color: $sage-inputfield-color-error;
+    color: $-textarea-color-error;
   }
 }
 
@@ -87,9 +87,9 @@ $-textarea-label-bg-color: $-textarea-bg-default;
   padding: $-textarea-padding;
   color: $-textarea-color-default;
   appearance: none;
-  border: $-textarea-border-width solid $-textarea-border-color;
+  border: $-textarea-border-width solid $-textarea-color-border;
   border-radius: $-textarea-border-radius;
-  background: $-textarea-bg-default;
+  background: $-textarea-color-default-background;
   transition: border 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 
   @include placeholder {
@@ -146,7 +146,7 @@ $-textarea-label-bg-color: $-textarea-bg-default;
 
   &:disabled {
     color: $-textarea-color-disabled;
-    background-color: $-textarea-bg-disabled;
+    background-color: $-textarea-color-disabled-background;
     cursor: not-allowed;
     resize: none;
   }
