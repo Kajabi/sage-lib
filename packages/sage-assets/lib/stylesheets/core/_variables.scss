@@ -208,30 +208,6 @@ $sage-tabs-active-border-color: sage-color(primary) !default;
 $sage-tabs-active-border-radius: sage-border(radius) !default;
 
 
-// ==================================================
-// TOOLTIPS
-// ==================================================
-
-// Colors
-$sage-tooltip-bg-color: sage-color(charcoal, 400) !default;
-$sage-tooltip-light-bg-color: sage-color(white) !default;
-$sage-tooltip-font-color: sage-color(white) !default;
-$sage-tooltip-light-font-color: sage-color(charcoal, 400) !default;
-
-// Indicator arrow
-$sage-tooltip-arrow-size: rem(6px) !default;
-$sage-tooltip-arrow-inactive: $sage-tooltip-arrow-size solid transparent !default;
-$sage-tooltip-arrow-active: $sage-tooltip-arrow-size solid $sage-tooltip-bg-color !default;
-
-// Styling
-$sage-tooltip-shadow: sage-shadow(xl) !default;
-$sage-tooltip-padding: sage-spacing(2xs) sage-spacing(sm) !default;
-$sage-tooltip-small-padding: sage-spacing(2xs) sage-spacing(xs) !default;
-$sage-tooltip-large-padding: sage-spacing(xs) sage-spacing(xs) !default;
-$sage-tooltip-zindex: sage-z_index(overlay) !default;
-$sage-tooltip-maxwidth: rem(200px) !default;
-$sage-tooltip-large-maxwidth: rem(320px) !default;
-
 ///
 /// Banner heights for page offsets
 ///
