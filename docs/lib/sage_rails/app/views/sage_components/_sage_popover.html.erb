@@ -1,4 +1,4 @@
-<div class="sage-popover" data-js-popover>
+<div class="sage-popover" data-js-popover data-js-popover--position="<%= component.popover_position ? component.popover_position : "right" %>">
 
   <% if component.trigger_icon_only %>
     <%= sage_component SageButton, {
@@ -14,7 +14,7 @@
         "aria-haspopup": true,
         "aria-controls": "sage-popover",
         "aria-expanded": false,
-        "data-js-popover--trigger": ""
+        "data-js-popover--trigger": "",
       },
     } %>
   <% else %>
@@ -46,17 +46,21 @@
       <%= component.content %>
     </div>
     <% if component.link %>
-      <div class="sage-popover__actions">
-        <%= sage_component SageButton, {
-          value: component.link[:name],
-          style: "primary",
-          subtle: true,
-          icon: { style: "right", name: "launch" },
-          attributes: {
-            href: component.link[:href]
-          }
-        } %>
-      </div>
+    <div class="sage-popover__actions">
+      <%= sage_component SageButton, {
+        value: component.link[:name],
+        style: "primary",
+        subtle: true,
+        icon: {
+          style: "right",
+          name: "launch"
+        },
+        attributes: {
+          href: component.link[:href]
+        }
+      } %>
     </div>
-  <% end %>
+    <% end %>
+  </div>
+
 </div>
