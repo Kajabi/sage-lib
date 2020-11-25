@@ -4,11 +4,38 @@
 
 ================================================== */
 
+// Border
+$-textarea-border-color: $sage-inputfield-border-color;
+$-textarea-border-radius: $sage-inputfield-border-radius;
+$-textarea-border-width: $sage-inputfield-border-width;
+$-textarea-box-shadow-size: $sage-inputfield-box-shadow-size;
+
+// Padding
+$-textarea-label-padding: rem(3px);
+$-textarea-padding: $sage-inputfield-padding;
+
+// Sizing
+$-textarea-min-height: rem(90px);
+$-textarea-height: 100%;
+$-textarea-width: 100%;
+
+// Spacing
+$-textarea-spacing: $sage-inputfield-spacing;
+
+// Colors
+$-textarea-color-default: $sage-inputfield-color-default;
+$-textarea-color-disabled: $sage-inputfield-color-disabled;
+$-textarea-color-success: $sage-inputfield-color-success;
+$-textarea-color-error: $sage-inputfield-color-error;
+$-textarea-bg-default: sage-color(white);
+$-textarea-bg-disabled: $sage-inputfield-bg-disabled;
+$-textarea-label-bg-color: $-textarea-bg-default;
+
 .sage-textarea {
   position: relative;
 
   &:not(:last-child) {
-    margin-bottom: $sage-textarea-spacing;
+    margin-bottom: $-textarea-spacing;
   }
 
   .sage-panel__stack > &,
@@ -23,13 +50,13 @@
   @extend %t-sage-body-xsmall-semi;
 
   position: absolute;
-  left: $sage-textarea-padding;
-  top: $sage-textarea-border-width;
-  padding-left: $sage-textarea-label-padding;
-  padding-right: $sage-textarea-label-padding;
+  left: $-textarea-padding;
+  top: $-textarea-border-width;
+  padding-left: $-textarea-label-padding;
+  padding-right: $-textarea-label-padding;
   color: inherit;
   white-space: nowrap;
-  background-color: $sage-textarea-label-bg-color;
+  background-color: $-textarea-label-bg-color;
   pointer-events: none;
   opacity: 0;
 
@@ -49,20 +76,20 @@
 
 .sage-textarea__field {
   @mixin floating-label-textarea-active {
-    transform: translateY($sage-textarea-label-padding - $sage-textarea-padding);
+    transform: translateY($-textarea-label-padding - $-textarea-padding);
     transition: opacity 0.1s ease-in, transform 0.15s ease-in-out, color 0.15s ease-out;
     opacity: 1;
   }
 
-  min-height: $sage-textarea-min-height;
-  height: $sage-textarea-height;
-  width: $sage-textarea-width;
-  padding: $sage-textarea-padding;
-  color: $sage-textarea-color-default;
+  min-height: $-textarea-min-height;
+  height: $-textarea-height;
+  width: $-textarea-width;
+  padding: $-textarea-padding;
+  color: $-textarea-color-default;
   appearance: none;
-  border: $sage-textarea-border-width solid $sage-textarea-border-color;
-  border-radius: $sage-textarea-border-radius;
-  background: $sage-textarea-bg-default;
+  border: $-textarea-border-width solid $-textarea-border-color;
+  border-radius: $-textarea-border-radius;
+  background: $-textarea-bg-default;
   transition: border 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 
   @include placeholder {
@@ -76,8 +103,8 @@
 
   &:focus:not(:disabled),
   &:active:not(:disabled) {
-    border-color: $sage-textarea-color-success;
-    box-shadow: $sage-textarea-box-shadow-size $sage-textarea-color-success;
+    border-color: $-textarea-color-success;
+    box-shadow: $-textarea-box-shadow-size $-textarea-color-success;
     outline: none;
 
     @include placeholder {
@@ -86,7 +113,7 @@
 
     ~ .sage-textarea__label {
       @include floating-label-textarea-active();
-      color: $sage-textarea-color-success;
+      color: $-textarea-color-success;
     }
   }
 
@@ -105,21 +132,21 @@
   // TODO: add support for Simpleform classes
   .sage-textarea--error &,
   &:required:not(:placeholder-shown):not(:valid) {
-    border-color: $sage-textarea-color-error;
-    box-shadow: $sage-textarea-box-shadow-size $sage-textarea-color-error;
+    border-color: $-textarea-color-error;
+    box-shadow: $-textarea-box-shadow-size $-textarea-color-error;
 
     ~ .sage-textarea__label {
-      color: $sage-textarea-color-error;
+      color: $-textarea-color-error;
     }
 
     ~ .sage-textarea__label {
-      color: $sage-textarea-color-error;
+      color: $-textarea-color-error;
     }
   }
 
   &:disabled {
-    color: $sage-textarea-color-disabled;
-    background-color: $sage-textarea-bg-disabled;
+    color: $-textarea-color-disabled;
+    background-color: $-textarea-bg-disabled;
     cursor: not-allowed;
     resize: none;
   }

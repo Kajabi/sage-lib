@@ -88,38 +88,6 @@ $sage-inputfield-bg-disabled: sage-color(grey, 100) !default;
 
 
 // ==================================================
-// TEXTAREAS
-// ==================================================
-
-// Border
-$sage-textarea-border-color: $sage-inputfield-border-color !default;
-$sage-textarea-border-radius: $sage-inputfield-border-radius !default;
-$sage-textarea-border-width: $sage-inputfield-border-width !default;
-$sage-textarea-box-shadow-size: $sage-inputfield-box-shadow-size !default;
-
-// Padding
-$sage-textarea-label-padding: rem(3px) !default;
-$sage-textarea-padding: $sage-inputfield-padding !default;
-
-// Sizing
-$sage-textarea-min-height: rem(90px) !default;
-$sage-textarea-height: 100% !default;
-$sage-textarea-width: 100% !default;
-
-// Spacing
-$sage-textarea-spacing: $sage-inputfield-spacing !default;
-
-// Colors
-$sage-textarea-color-default: $sage-inputfield-color-default !default;
-$sage-textarea-color-disabled: $sage-inputfield-color-disabled !default;
-$sage-textarea-color-success: $sage-inputfield-color-success !default;
-$sage-textarea-color-error: $sage-inputfield-color-error !default;
-$sage-textarea-bg-default: sage-color(white) !default;
-$sage-textarea-bg-disabled: $sage-inputfield-bg-disabled !default;
-$sage-textarea-label-bg-color: $sage-textarea-bg-default !default;
-
-
-// ==================================================
 // PANEL
 // ==================================================
 
