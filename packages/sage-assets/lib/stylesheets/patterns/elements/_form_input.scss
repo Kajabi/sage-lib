@@ -16,13 +16,13 @@ $-input-color-error: map-get($g-sage-field-colors, error);
 $-input-color-label-background: map-get($g-sage-field-colors, label-background);
 $-input-color-success: map-get($g-sage-field-colors, success);
 $-input-height: map-get($g-sage-field-configs, height);
-$-input-label-offset: rem(12px) !default;
+$-input-label-offset: rem(12px);
 $-input-padding: map-get($g-sage-field-configs, padding);
-$-input-padding-filled: rem(4px) !default;
+$-input-padding-filled: rem(4px);
 $-input-padding-label: map-get($g-sage-field-configs, padding-label);
 $-input-padding-offset: $-input-padding - $-input-border-width;
 $-input-text-height: map-get(map-get($sage-type-spec, body), size);
-$-input-transition: border 0.2s ease-in-out, box-shadow 0.2s ease-in-out !default;
+$-input-transition: border 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 
 
 .sage-input {

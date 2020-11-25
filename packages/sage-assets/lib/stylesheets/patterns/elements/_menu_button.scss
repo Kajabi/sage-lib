@@ -4,13 +4,13 @@
 
 ================================================== */
 
-$-menubtn-toggle-size: rem(24px) !default;
-$-menubtn-toggle-line-color: sage-color(grey, 100) !default;
-$-menubtn-toggle-line-height: rem(2px) !default;
-$-menubtn-toggle-radius: rem(2px) !default;
-$-menubtn-focus-outline-size: sage-spacing(xs) !default;
-$-menubtn-focus-outline-width: 1 !default;
-$-menubtn-focus-outline-color: currentColor !default;
+$-menubtn-toggle-size: rem(24px);
+$-menubtn-toggle-line-color: sage-color(grey, 100);
+$-menubtn-toggle-line-height: rem(2px);
+$-menubtn-toggle-radius: rem(2px);
+$-menubtn-focus-outline-size: sage-spacing(xs);
+$-menubtn-focus-outline-width: 1;
+$-menubtn-focus-outline-color: currentColor;
 
 .sage-menubutton {
   @include sage-button-style-reset();
