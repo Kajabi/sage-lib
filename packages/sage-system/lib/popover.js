@@ -71,6 +71,7 @@ Sage.popover = (function() {
   function closePopoverPanel(elParent) {
     elParent.querySelector(`[${SELECTOR_TRIGGER}]`).setAttribute(ATTRIBUTE_ARIA_EXPANDED, 'false');
     elParent.classList.remove(CLASS_ACTIVE);
+    elParent.removeEventListener('keydown', focusTrap);
     SELECTOR_LAST_FOCUSED.focus();
   }
 
