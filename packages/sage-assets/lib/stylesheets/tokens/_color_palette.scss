@@ -1,8 +1,13 @@
-@function sage-color($base, $shade: 300) {
-  $color: map-get(map-get($sage-colors, $base), $shade);
-  @return $color;
-}
+////
+/// Sage color palette
+///
+/// @group sage
+////
 
+
+///
+/// Sage color palette token
+///
 $sage-colors: (
   primary: (
     100: #e6f4fe,
@@ -75,3 +80,16 @@ $sage-colors: (
     500: #000,
   ),
 );
+
+///
+/// Sage breakpoints token utility
+///
+/// @param {string} $base The color token to retrieve
+/// @param {number} $value [300] The tint or shade to retrieve
+///
+/// @return {color} The value retrieved
+///
+@function sage-color($base, $value: 300) {
+  $color: map-get(map-get($sage-colors, $base), $value);
+  @return $color;
+}

@@ -9,7 +9,12 @@ $item-radio: "before";
 $item-icon: "before";
 $item-arrow: "before";
 
-$-choice-disabled-color: sage-color(grey, 500);
+$-choice-color-default: map-get($sage-tab-colors, default);
+$-choice-color-active: map-get($sage-tab-colors, active);
+$-choice-color-disabled: map-get($sage-tab-colors, disabled);
+$-choice-radio-size: $sage-radio-size;
+$-choice-radio-color-checked: map-get($sage-radio-colors, checked);
+$-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
 
 .sage-choice {
   @include sage-button-style-reset();
@@ -21,10 +26,10 @@ $-choice-disabled-color: sage-color(grey, 500);
   flex-basis: 0;
   padding: sage-spacing(sm);
   white-space: nowrap;
-  color: $sage-tabs-default-color;
+  color: $-choice-color-default;
   border: sage-border();
   border-radius: sage-border(radius);
-  transition: $sage-transition;
+  transition: map-get($sage-transitions, default);
   transition-property: color, background-color, border-color, box-shadow;
 
   @extend %t-sage-body-med;
@@ -39,7 +44,7 @@ $-choice-disabled-color: sage-color(grey, 500);
   }
 
   &:hover {
-    color: $sage-tabs-active-color;
+    color: $-choice-color-active;
     background-color: sage-color(grey, 100);
   }
 
@@ -53,7 +58,7 @@ $-choice-disabled-color: sage-color(grey, 500);
 
   &:active,
   &.sage-choice--active {
-    color: $sage-tabs-active-color;
+    color: $-choice-color-active;
 
     &::after {
       border-color: sage-color(primary);
@@ -96,7 +101,7 @@ $-choice-disabled-color: sage-color(grey, 500);
 
     margin: 0 0 0 sage-spacing(sm);
     color: sage-color(grey, 300);
-    transition: color $sage-transition;
+    transition: color map-get($sage-transitions, default);
   }
 
   &:active,
@@ -112,7 +117,7 @@ $-choice-disabled-color: sage-color(grey, 500);
     /* See icon generator */
     margin: 0 sage-spacing(xs) 0 0;
     color: currentColor;
-    transition: color $sage-transition;
+    transition: color map-get($sage-transitions, default);
   }
 }
 
@@ -121,14 +126,14 @@ $-choice-disabled-color: sage-color(grey, 500);
     content: "";
     display: inline-block;
     box-sizing: border-box;
-    height: $sage-radio-button-size;
-    min-width: $sage-radio-button-size;
-    width: $sage-radio-button-size;
+    height: $-choice-radio-size;
+    min-width: $-choice-radio-size;
+    width: $-choice-radio-size;
     margin: 0 sage-spacing(sm) 0 0;
-    background-color: $sage-radio-selected-indicator-color;
+    background-color: $-choice-radio-color-checked-inner;
     border-radius: sage-border(radius-round);
     border: sage-border();
-    transition: $sage-transition;
+    transition: map-get($sage-transitions, default);
     transition-property: border, box-shadow;
   }
 
@@ -141,7 +146,7 @@ $-choice-disabled-color: sage-color(grey, 500);
     &::#{$item-radio} {
       box-shadow: sage-shadow(sm);
       border-width: 5px;
-      border-color: $sage-radio-color-checked;
+      border-color: $-choice-radio-color-checked;
     }
   }
 }

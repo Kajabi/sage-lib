@@ -12,9 +12,9 @@
 .sage-sortable__item {
   display: grid;
   grid-template-columns: auto 1fr auto;
-  gap: $sage-card-grid-gap;
+  gap: sage-spacing(card);
   align-items: center;
-  padding: sage-spacing(xs) $sage-panel-padding;
+  padding: sage-spacing(xs) sage-spacing(panel);
   background: sage-color(white);
   cursor: grab;
 
@@ -34,11 +34,11 @@
   }
 
   &.sage-sortable__item--card {
-    padding: sage-spacing(xs) $sage-card-padding;
+    padding: sage-spacing(xs) sage-spacing(card);
     border-bottom: sage-border();
     border-left: sage-border();
     border-right: sage-border();
-    transition: $sage-transition;
+    transition: map-get($sage-transitions, default);
     transition-property: border-color, box-shadow;
 
     &:first-child {

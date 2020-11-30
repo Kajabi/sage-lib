@@ -30,7 +30,7 @@ $-toast-viewport-spacing-bottom: sage-spacing();
   border-radius: sage-border(radius-large);
   box-shadow: sage-shadow(lg);
   background-color: sage-color(charcoal);
-  transition: bottom $sage-transition;
+  transition: bottom map-get($sage-transitions, default);
   animation: 0.5s sage-toast--slide-in ease;
 
   @mixin generate-stacked-toast-alignment($toast-height) {

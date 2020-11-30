@@ -1,47 +1,24 @@
-// ==================================================
-// Variables
-// ==================================================
-
-$sage-icon-font-path: "../fonts/sage" !default;
-$sage-icon-background-color: #eee !default;
-$sage-icon-li-margin-right: 0.4em !default;
+////
+/// Icons setup
+///
+/// @group sage
+////
 
 
-// ==================================================
-// Font setup
-// ==================================================
+$-icon-font-path: "../fonts/sage";
 
+// Icon font setup
 @font-face {
   font-family: "Sage";
-  src: url("#{$sage-icon-font-path}/Sage.woff");
-  src: url("#{$sage-icon-font-path}/Sage.woff") format("woff"),
-    url("#{$sage-icon-font-path}/Sage.ttf") format("truetype"),
-    url("#{$sage-icon-font-path}/Sage.svg") format("svg"),
-    url("#{$sage-icon-font-path}/Sage.eot") format("embedded-opentype");
+  src: url("#{$-icon-font-path}/Sage.woff");
+  src: url("#{$-icon-font-path}/Sage.woff") format("woff"),
+    url("#{$-icon-font-path}/Sage.ttf") format("truetype"),
+    url("#{$-icon-font-path}/Sage.svg") format("svg"),
+    url("#{$-icon-font-path}/Sage.eot") format("embedded-opentype");
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
-
-
-// ==================================================
-// Mixins
-// ==================================================
-
-@mixin sage-icon-rotate($degrees, $rotation) {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=#{$rotation});
-  transform: rotate($degrees);
-}
-
-@mixin sage-icon-flip($horiz, $vert, $rotation) {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=#{$rotation});
-  transform: scale($horiz, $vert);
-}
-
-
-// ==================================================
-// Base class definition
-// ==================================================
 
 // Build icons as `sage-icon-icon-name` based on the map in `tokens/_icon`
 @each $icon-name, $icon-code in $sage-icons {
@@ -59,9 +36,7 @@ $sage-icon-li-margin-right: 0.4em !default;
     }
   }
 
-
   // Other icons generated here
-
   @include button-icon-generator($icon-name, $icon-code, only);
   @include button-icon-generator($icon-name, $icon-code, left);
   @include button-icon-generator($icon-name, $icon-code, right);

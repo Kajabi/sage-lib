@@ -6,12 +6,8 @@
 
 
 .sage-panel {
-  padding: $sage-panel-padding;
-  background: $sage-panel-bg-color;
-  border-radius: $sage-panel-border-radius;
-  box-shadow: $sage-panel-box-shadow;
-
-  @include sage-grid-panel();
+  @include sage-panel;
+  @include sage-grid-panel;
 }
 
 .sage-panel--clear-padding-top,
@@ -39,7 +35,7 @@
 
 .sage-panel__divider--full-bleed {
   padding: 0;
-  margin: 0 -#{$sage-panel-padding};
+  margin: 0 -#{sage-spacing(panel)};
 }
 
 .sage-panel__figure {
@@ -98,7 +94,7 @@
 
 .sage-panel__list {
   padding: 0;
-  margin: 0 -#{$sage-panel-padding};
+  margin: 0 -#{sage-spacing(panel)};
   list-style: none;
 }
 
@@ -164,5 +160,5 @@
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: min-content;
-  grid-gap: $sage-stage-grid-gap;
+  grid-gap: sage-spacing(stage);
 }

@@ -1,9 +1,15 @@
-@function sage-spacing($key: md) {
-  $value: map-get($sage-spacings, $key);
-  @return $value;
-}
+////
+/// Sage spacing
+///
+/// @group sage
+////
 
+
+///
+/// Sage spacing token
+///
 $sage-spacings: (
+  // Generic sizes
   3xs: rem(2px),
   2xs: rem(4px),
   xs: rem(8px),
@@ -12,4 +18,21 @@ $sage-spacings: (
   lg: rem(32px),
   xl: rem(48px),
   2xl: rem(64px),
+  // Contextual sizes
+  stage: rem(32px),
+  panel: rem(24px),
+  card: rem(16px),
+  stack: rem(8px),
 );
+
+///
+/// Sage spacing token utility
+///
+/// @param {string} $key [md] The token to retrieve
+///
+/// @return {length} The value retrieved
+///
+@function sage-spacing($key: md) {
+  $value: map-get($sage-spacings, $key);
+  @return $value;
+}

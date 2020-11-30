@@ -1,17 +1,21 @@
-/* ==================================================
-  ** _page.scss
+////
+/// Sage page
+///
+/// @group sage
+////
 
-  Default Sage page layout
-================================================== */
+
+$-banner-height-offset: map-get($sage-banner-heights, default);
 
 .sage-page {
   display: flex;
   flex-direction: column;
   height: 100%;
 
+  // TODO: Determine if this is used or needed
   &.banner-active {
-    transform: translateY(#{$sage-banner-height});
-    height: calc(100% - #{$sage-banner-height});
+    transform: translateY(#{$-banner-height-offset});
+    height: calc(100% - #{$-banner-height-offset});
     transition: transform 0.25s ease-in-out 0.15s;
   }
 }

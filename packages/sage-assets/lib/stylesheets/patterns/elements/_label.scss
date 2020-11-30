@@ -7,8 +7,8 @@
 
 $-label-interactive-icon-size: rem(24px);
 $-label-interactive-icon-size-small: rem(16px);
-$-label-padding: 0 sage-spacing(xs) !default;
-$-label-border-radius: sage-border(radius) !default;
+$-label-padding: 0 sage-spacing(xs);
+$-label-border-radius: sage-border(radius);
 $-label-inset-border: 0 0 0 1px inset;
 
 .sage-label {

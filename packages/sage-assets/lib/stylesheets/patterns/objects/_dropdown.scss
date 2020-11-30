@@ -5,7 +5,7 @@
 
 ================================================== */
 
-$-dropdown-height: $sage-inputfield-height;
+$-dropdown-height: map-get($sage-field-configs, height);
 $-dropdown-width: rem(280px);
 $-dropdown-width-small: rem(200px);
 $-dropdown-item-focus-line-spacing-x: sage-spacing(sm);
@@ -16,11 +16,11 @@ $-option-menu-size: rem(40px);
 
 $-panel-max-height: rem(400px);
 
-$-trigger-label-bg-label: $sage-inputfield-bg-label;
-$-trigger-label-color-default: $sage-inputfield-color-default;
-$-trigger-label-color-disabled: $sage-inputfield-color-disabled;
-$-trigger-padding-label: $sage-inputfield-padding-label;
-$-trigger-padding-x: $sage-inputfield-padding;
+$-trigger-label-color-label-background: map-get($sage-field-colors, label-background);
+$-trigger-label-color-default: map-get($sage-field-colors, default);
+$-trigger-label-color-disabled: map-get($sage-field-colors, disabled);
+$-trigger-padding-label: map-get($sage-field-configs, padding-label);
+$-trigger-padding-x: map-get($sage-field-configs, padding);
 $-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
 
 .sage-dropdown {
@@ -37,26 +37,26 @@ $-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
   .sage-panel-controls__toolbar-btn-group > & {
     position: relative;
     z-index: sage-z-index(default, 1);
-    box-shadow: $sage-toolbar-btn-border;
+    box-shadow: map-get($sage-toolbar-button-borders, default);
     border: 0;
 
     @include sage-focus-outline--update-color(transparent);
 
     &:hover {
       z-index: sage-z-index(default, 2);
-      box-shadow: $sage-toolbar-btn-border-hover;
+      box-shadow: map-get($sage-toolbar-button-borders, hover);
       background-color: sage-color(white);
     }
 
     &:focus-within {
       z-index: sage-z-index(default, 3);
-      box-shadow: $sage-toolbar-btn-border-focus;
+      box-shadow: map-get($sage-toolbar-button-borders, focus);
     }
   }
 
   .sage-panel-controls__toolbar > & {
     &:not(:last-child) {
-      margin-right: $sage-panel-grid-gap;
+      margin-right: sage-spacing(panel);
     }
   }
   
@@ -113,7 +113,7 @@ $-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
     bottom: 0;
     left: $-focus-offset;
     border-bottom: 2px solid transparent;
-    transition: 0.1s ease-in-out;
+    transition: map-get($sage-transitions, default);
     transition-property: border-bottom-color, left, right;
   }
 
@@ -258,7 +258,7 @@ $-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
   border-radius: sage-border(radius);
   background-color: sage-color(white);
   box-shadow: sage-shadow(md);
-  transition: $sage-transition;
+  transition: map-get($sage-transitions, default);
   transition-property: transform, z-index;
 
   // In the event that this dropdown is at the bottom of the page, add some margin below
@@ -346,7 +346,7 @@ $-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
 
     transform: translateY(calc(#{-$-dropdown-height} + 50%));
     width: auto;
-    background-color: $-trigger-label-bg-label;
+    background-color: $-trigger-label-color-label-background;
     transition: transform 0.15s ease-in-out, color 0.15s ease-out;
   }
 

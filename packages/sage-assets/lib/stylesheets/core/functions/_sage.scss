@@ -1,0 +1,25 @@
+////
+/// Sage functions
+///
+/// @group sage
+////
+
+
+///
+/// Default baseline for the system
+///
+$sage-baseline: rem(4px);
+
+///
+/// Generates a value based on the baseline grid.
+/// Given a baseline grid and a number of units, this function returns the product,
+/// resulting in the equivalent of that number of baselines' dimension.
+///
+/// @param {number} $num [2] Unitless number of baseline units
+/// @param {length} $baseline [$default-baseline] The baseline grid value
+///
+/// @return {length} Product of the arguments resulting in a `rem` measurement
+///
+@function sage-baseline($num: 2, $baseline: $sage-baseline) {
+  @return $num * $baseline;
+}

@@ -4,11 +4,38 @@
 
 ================================================== */
 
+// Border
+$-textarea-border-radius: map-get($sage-field-configs, border-radius);
+$-textarea-border-width: map-get($sage-field-configs, border-width);
+$-textarea-box-shadow-size: map-get($sage-field-configs, box-shadow-size);
+
+// Padding
+$-textarea-label-padding: rem(3px);
+$-textarea-padding: map-get($sage-field-configs, padding);
+
+// Sizing
+$-textarea-height: 100%;
+$-textarea-min-height: rem(90px);
+$-textarea-width: 100%;
+
+// Outer spacing
+$-textarea-bottom-gap: map-get($sage-field-configs, bottom-gap);
+
+// Colors
+$-textarea-color-border: map-get($sage-field-colors, border);
+$-textarea-color-default: map-get($sage-field-colors, default);
+$-textarea-color-default-background: sage-color(white);
+$-textarea-color-disabled: map-get($sage-field-colors, disabled);
+$-textarea-color-disabled-background: map-get($sage-field-colors, disabled-background);
+$-textarea-color-error: map-get($sage-field-colors, error);
+$-textarea-color-label-background: $-textarea-color-default-background;
+$-textarea-color-success: map-get($sage-field-colors, success);
+
 .sage-textarea {
   position: relative;
 
   &:not(:last-child) {
-    margin-bottom: $sage-textarea-spacing;
+    margin-bottom: $-textarea-bottom-gap;
   }
 
   .sage-panel__stack > &,
@@ -23,13 +50,13 @@
   @extend %t-sage-body-xsmall-semi;
 
   position: absolute;
-  left: $sage-textarea-padding;
-  top: $sage-textarea-border-width;
-  padding-left: $sage-textarea-label-padding;
-  padding-right: $sage-textarea-label-padding;
+  left: $-textarea-padding;
+  top: $-textarea-border-width;
+  padding-left: $-textarea-label-padding;
+  padding-right: $-textarea-label-padding;
   color: inherit;
   white-space: nowrap;
-  background-color: $sage-textarea-label-bg-color;
+  background-color: $-textarea-color-label-background;
   pointer-events: none;
   opacity: 0;
 
@@ -43,26 +70,26 @@
   color: sage-color(charcoal, 100);
 
   .sage-textarea--error & {
-    color: $sage-inputfield-color-error;
+    color: $-textarea-color-error;
   }
 }
 
 .sage-textarea__field {
   @mixin floating-label-textarea-active {
-    transform: translateY($sage-textarea-label-padding - $sage-textarea-padding);
+    transform: translateY($-textarea-label-padding - $-textarea-padding);
     transition: opacity 0.1s ease-in, transform 0.15s ease-in-out, color 0.15s ease-out;
     opacity: 1;
   }
 
-  min-height: $sage-textarea-min-height;
-  height: $sage-textarea-height;
-  width: $sage-textarea-width;
-  padding: $sage-textarea-padding;
-  color: $sage-textarea-color-default;
+  min-height: $-textarea-min-height;
+  height: $-textarea-height;
+  width: $-textarea-width;
+  padding: $-textarea-padding;
+  color: $-textarea-color-default;
   appearance: none;
-  border: $sage-textarea-border-width solid $sage-textarea-border-color;
-  border-radius: $sage-textarea-border-radius;
-  background: $sage-textarea-bg-default;
+  border: $-textarea-border-width solid $-textarea-color-border;
+  border-radius: $-textarea-border-radius;
+  background: $-textarea-color-default-background;
   transition: border 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 
   @include placeholder {
@@ -76,8 +103,8 @@
 
   &:focus:not(:disabled),
   &:active:not(:disabled) {
-    border-color: $sage-textarea-color-success;
-    box-shadow: $sage-textarea-box-shadow-size $sage-textarea-color-success;
+    border-color: $-textarea-color-success;
+    box-shadow: $-textarea-box-shadow-size $-textarea-color-success;
     outline: none;
 
     @include placeholder {
@@ -86,7 +113,7 @@
 
     ~ .sage-textarea__label {
       @include floating-label-textarea-active();
-      color: $sage-textarea-color-success;
+      color: $-textarea-color-success;
     }
   }
 
@@ -105,21 +132,21 @@
   // TODO: add support for Simpleform classes
   .sage-textarea--error &,
   &:required:not(:placeholder-shown):not(:valid) {
-    border-color: $sage-textarea-color-error;
-    box-shadow: $sage-textarea-box-shadow-size $sage-textarea-color-error;
+    border-color: $-textarea-color-error;
+    box-shadow: $-textarea-box-shadow-size $-textarea-color-error;
 
     ~ .sage-textarea__label {
-      color: $sage-textarea-color-error;
+      color: $-textarea-color-error;
     }
 
     ~ .sage-textarea__label {
-      color: $sage-textarea-color-error;
+      color: $-textarea-color-error;
     }
   }
 
   &:disabled {
-    color: $sage-textarea-color-disabled;
-    background-color: $sage-textarea-bg-disabled;
+    color: $-textarea-color-disabled;
+    background-color: $-textarea-color-disabled-background;
     cursor: not-allowed;
     resize: none;
   }

@@ -27,7 +27,7 @@ $-copy-text-color-hover: sage-color(charcoal, 500);
   padding: 0 sage-spacing(xs);
 
   .sage-copy-btn & {
-    transition: $sage-transition;
+    transition: map-get($sage-transitions, default);
     transition-property: color, background-color;
   }
 
@@ -43,7 +43,7 @@ $-copy-text-color-hover: sage-color(charcoal, 500);
   @include sage-copy-text;
 
   width: 100%;
-  padding: $sage-card-padding;
+  padding: sage-spacing(card);
 }
 
 .sage-copy-text-card--truncate-contents {

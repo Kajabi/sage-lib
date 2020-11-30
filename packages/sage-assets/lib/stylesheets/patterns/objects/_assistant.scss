@@ -4,17 +4,25 @@
 
 ================================================== */
 
+$-assistant-height: $sage-assistant-height;
+$-assistant-branding-height: rem(20px);
+$-assistant-search-height: rem(40px);
+$-assistant-search-bg-color: sage-color(grey, 300);
+$-assistant-search-bg-opacity: 0.1;
+$-assistant-search-placeholder-color: sage-color(grey, 400);
+$-assistant-search-placeholder-transition: color 0.15s ease-in-out, opacity 0.15s ease-in-out;
+
 .sage-assistant {
   display: flex;
   align-items: center;
   z-index: sage-z-index(nav);
-  height: $sage-assistant-height;
+  height: $-assistant-height;
   padding: sage-spacing(xs) sage-spacing();
   background: sage-color(primary, 500);
 }
 
 .sage-assistant__branding {
-  height: $sage-assistant-branding-height;
+  height: $-assistant-branding-height;
 }
 
 .sage-assistant__body {
@@ -23,15 +31,15 @@
 
 .sage-assistant__search {
   @include placeholder {
-    color: $sage-assistant-search-placeholder-color;
-    transition: $sage-assistant-search-placeholder-transition;
+    color: $-assistant-search-placeholder-color;
+    transition: $-assistant-search-placeholder-transition;
   }
 
   width: 100%;
-  height: $sage-assistant-search-height;
+  height: $-assistant-search-height;
   padding: sage-spacing(xs);
-  color: $sage-assistant-search-placeholder-color;
-  background: rgba($sage-assistant-search-bg-color, $sage-assistant-search-bg-opacity);
+  color: $-assistant-search-placeholder-color;
+  background: rgba($-assistant-search-bg-color, $-assistant-search-bg-opacity);
   border: 0;
   border-radius: sage-border(radius);
 

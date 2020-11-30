@@ -1,8 +1,13 @@
-@function sage-breakpoint($key: sm-max) {
-  $value: map-get($sage-breakpoints, $key);
-  @return $value;
-}
+////
+/// Sage breakpoints tokens
+///
+/// @group sage
+////
 
+
+///
+/// Sage breakpoints token
+///
 $sage-breakpoints: (
   xs-max: 544px,
   sm-min: 545px,
@@ -14,3 +19,13 @@ $sage-breakpoints: (
   xl-min: 1200px,
   xxl-min: 1440px,
 );
+
+///
+/// Sage breakpoints token utility
+///
+/// @param {string} $key [sm-max] The token to retrieve
+///
+@function sage-breakpoint($key: sm-max) {
+  $value: map-get($sage-breakpoints, $key);
+  @return $value;
+}

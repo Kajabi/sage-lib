@@ -35,7 +35,7 @@ $-helper-decoration-list-success: line-through;
   background-color: $-helper-color-bg;
   border-radius: sage-border(radius);
   box-shadow: sage-shadow(md);
-  transition: $sage-transition;
+  transition: map-get($sage-transitions, default);
   transition-property: opacity;
   pointer-events: none;
   opacity: 0;
@@ -84,7 +84,7 @@ $-helper-decoration-list-success: line-through;
 
 .sage-hint__list-item {
   position: relative;
-  transition: $sage-transition;
+  transition: map-get($sage-transitions, default);
   transition-property: color;
 }
 

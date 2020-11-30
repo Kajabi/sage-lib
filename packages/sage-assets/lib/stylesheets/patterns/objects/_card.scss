@@ -24,7 +24,7 @@
 .sage-card--border-dashed {
   border-color: sage-color(white);
   @include sage-dashed-border(
-    $border-radius: $sage-card-border-radius,
+    $border-radius: sage-border(radius),
     $color: sage-color(grey, 300),
   );
 }
@@ -52,7 +52,7 @@
 
 .sage-card__divider--full-bleed {
   padding: 0;
-  margin: 0 -#{$sage-card-padding};
+  margin: 0 -#{sage-spacing(card)};
 }
 
 .sage-card__figure {

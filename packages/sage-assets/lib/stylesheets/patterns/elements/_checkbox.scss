@@ -6,37 +6,37 @@
 ================================================== */
 
 // Colors
-$-checkbox-color-default: sage-color(grey, 400) !default;
-$-checkbox-color-checked: sage-color(primary) !default;
-$-checkbox-color-disabled: sage-color(grey, 200) !default;
-$-checkbox-color-disabled-checked: sage-color(primary, 200) !default;
+$-checkbox-color-default: sage-color(grey, 400);
+$-checkbox-color-checked: sage-color(primary);
+$-checkbox-color-disabled: sage-color(grey, 200);
+$-checkbox-color-disabled-checked: sage-color(primary, 200);
 
-$-checkbox-size: rem(20px) !default;
-$-checkbox-border-radius-inner: sage-border(radius-small) !default;
-$-checkbox-border-radius-outer: sage-border(radius) !default;
-$-checkbox-transition: 0.15s ease-in-out !default;
+$-checkbox-size: rem(20px);
+$-checkbox-border-radius-inner: sage-border(radius-small);
+$-checkbox-border-radius-outer: sage-border(radius);
+$-checkbox-transition: 0.15s ease-in-out;
 
-$-checkbox-marker-border: rem(2px) !default;
-$-checkbox-marker-height: rem(12px) !default;
-$-checkbox-marker-width: rem(6px) !default;
-$-checkbox-marker-color: sage-color(white) !default;
-$-checkbox-marker-offset: $-checkbox-marker-border * 2 !default;
+$-checkbox-marker-border: rem(2px);
+$-checkbox-marker-height: rem(12px);
+$-checkbox-marker-width: rem(6px);
+$-checkbox-marker-color: sage-color(white);
+$-checkbox-marker-offset: $-checkbox-marker-border * 2;
 
 // Focus state
-$-checkbox-focus-outline-size: sage-spacing(2xs) !default;
-$-checkbox-focus-outline-width: 2 !default;
-$-checkbox-focus-outline-color: sage-color(primary) !default;
+$-checkbox-focus-outline-size: sage-spacing(2xs);
+$-checkbox-focus-outline-width: 2;
+$-checkbox-focus-outline-color: sage-color(primary);
 
 .sage-checkbox {
   &:not(.sage-checkbox--standalone) {
     display: flex;
     flex-flow: row wrap;
     align-items: flex-start;
-    margin-bottom: $sage-form-element-spacing;
+    margin-bottom: sage-spacing(card);
   }
 
   .sage-list & {
-    margin-bottom: $sage-form-element-spacing / 2;
+    margin-bottom: sage-spacing(card) / 2;
   }
 
   .sage-panel__stack > &,
@@ -55,7 +55,7 @@ $-checkbox-focus-outline-color: sage-color(primary) !default;
   }
 
   .sage-panel-controls__bulk-actions--checked & {
-    box-shadow: $sage-toolbar-btn-border;
+    box-shadow: map-get($sage-toolbar-button-borders, default);
 
     &:first-child {
       border-top-left-radius: sage-border(radius);
@@ -69,13 +69,13 @@ $-checkbox-focus-outline-color: sage-color(primary) !default;
 
     &:hover {
       z-index: sage-z-index(default, 1);
-      box-shadow: $sage-toolbar-btn-border-hover;
+      box-shadow: map-get($sage-toolbar-button-borders, hover);
       background-color: sage-color(grey, 100);
     }
 
     &:focus-within {
       z-index: sage-z-index(default, 2);
-      box-shadow: $sage-toolbar-btn-border-focus;
+      box-shadow: map-get($sage-toolbar-button-borders, focus);
     }
   }
 }

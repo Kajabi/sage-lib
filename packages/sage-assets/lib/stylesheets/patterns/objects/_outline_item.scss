@@ -166,7 +166,7 @@ $-collapse-breakpoint-key: lg-max;
 
   @media (min-width: sage-breakpoint($-collapse-breakpoint-key)) {
     visibility: hidden;
-    transition: opacity $sage-transition;
+    transition: opacity map-get($sage-transitions, default);
     transition-delay: 0.1s;
     opacity: 0;
 

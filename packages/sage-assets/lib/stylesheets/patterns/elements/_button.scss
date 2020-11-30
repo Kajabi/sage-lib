@@ -8,7 +8,7 @@
 /* stylelint-disable max-nesting-depth */
 
 // Base styles
-$-btn-transition: $sage-transition;
+$-btn-transition: map-get($sage-transitions, default);
 $-btn-border-radius: sage-border(radius);
 $-btn-shadow-base: sage-shadow(sm);
 $-btn-base-styles: (
@@ -218,20 +218,20 @@ $-label-interactive-icon-size: rem(24px);
   .sage-panel-controls__pagination > & {
     position: relative;
     z-index: sage-z-index(default);
-    box-shadow: $sage-toolbar-btn-border;
+    box-shadow: map-get($sage-toolbar-button-borders, default);
     border: 0;
 
     @include sage-focus-outline--update-color(transparent);
 
     &:hover {
       z-index: sage-z-index(default, 1);
-      box-shadow: $sage-toolbar-btn-border-hover;
+      box-shadow: map-get($sage-toolbar-button-borders, hover);
       background-color: sage-color(white);
     }
 
     &:focus {
       z-index: sage-z-index(default, 2);
-      box-shadow: $sage-toolbar-btn-border-focus;
+      box-shadow: map-get($sage-toolbar-button-borders, focus);
     }
   }
 
@@ -258,7 +258,7 @@ $-label-interactive-icon-size: rem(24px);
     border-radius: sage-border(radius);
 
     &:not(:last-child) {
-      margin-right: $sage-card-grid-gap;
+      margin-right: sage-spacing(card);
     }
   }
 

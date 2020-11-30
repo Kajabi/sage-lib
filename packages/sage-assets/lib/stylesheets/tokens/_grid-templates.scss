@@ -1,99 +1,84 @@
-// ============================================
-// Row Grid Templates
-// ============================================
+////
+/// Sage grid
+///
+/// @group sage
+////
 
-@function sage-grid-templates-b($grid-key) {
-  @return map-get($sage-grid-templates, $grid-key);
-}
 
-// Set up basic building blocks for dot and dash combos
-$-dots: (
-  _: "",
-  e: ".",
-  i: "..",
-  s: "...",
+///
+/// Sage grid template codes
+///
+$sage-grid-template-codes: (
+  // Base codes
+  e:   ".",
+  i:   "..",
+  s:   "...",
+  t:   "-",
+  m:   "--",
+  o:   "---",
+  // Mono comobos --- maximum of two letters, largest first
+  se:  "....",
+  si:  ".....",
+  ss:  "......",
+  ot:  "----",
+  om:  "-----",
+  oo:  "------",
+  // Dots then dashes
+  et:  ".-",
+  em:  ".--",
+  eo:  ".---",
+  it:  "..-",
+  im:  "..--",
+  io:  "..---",
+  st:  "...-",
+  sm:  "...--",
+  so:  "...---",
+  // Dashes then dots
+  te:  "-.",
+  ti:  "-..",
+  ts:  "-...",
+  me:  "--.",
+  mi:  "--..",
+  ms:  "--...",
+  oe:  "---.",
+  oi:  "---..",
+  os:  "---...",
+  // Dots, dashes, dots
+  ete: ".-.",
+  eti: ".-..",
+  ets: ".-...",
+  eme: ".--.",
+  emi: ".--..",
+  ems: ".--...",
+  eoe: ".---.",
+  eoi: ".---..",
+  eos: ".---...",
+  ite: "..-.",
+  iti: "..-..",
+  its: "..-...",
+  ime: "..--.",
+  imi: "..--..",
+  ims: "..--...",
+  ioe: "..---.",
+  ioi: "..---..",
+  ios: "..---...",
+  ste: "...-.",
+  sti: "...-..",
+  sts: "...-...",
+  sme: "...--.",
+  smi: "...--..",
+  sms: "...--...",
+  soe: "...---.",
+  soi: "...---..",
+  sos: "...---...",
 );
 
-$-dashes: (
-  _: "",
-  t: "-",
-  m: "--",
-  o: "---",
-);
-
-// Initial merge and cleanup of basic codes
-$sage-grid-template-codes: map-merge($-dots, $-dashes);
-// Patch to add a few additional items missed below ... TBD why...
-$sage-grid-template-codes: map-merge($sage-grid-template-codes, (
-  mm: "----",
-  mo: "-----",
-  se: "...-"
-));
-$sage-grid-template-codes: map-remove($sage-grid-template-codes, _);
-
-// Start with an outer loop for left dots
-@each $-left-dot-ltr, $-left-dot-ptn in $-dots {
-  // Loop through dashes
-  @each $-dash-ltr, $-dash-ptn in $-dashes {
-    // Add on inner loop for right dots
-    @each $-right-dot-ltr, $-right-dot-ptn in $-dots {
-      // Booleans for easier legibility below
-      $-has-left-dot: $-left-dot-ltr != _;
-      $-has-dash: $-dash-ltr != _;
-      $-has-right-dot: $-right-dot-ltr != _;
-
-      // Default assumes all letters are present
-      $-ltrs: "";
-  
-      // Add left dot letter if valid
-      @if ($-has-left-dot) {
-        $-ltrs: $-ltrs + $-left-dot-ltr;
-      }
-  
-      // Add dash letter if valid
-      @if ($-has-dash) {
-        $-ltrs: $-ltrs + $-dash-ltr;
-      }
-  
-      // Add right dot letter if valid
-      @if (
-        (not $-has-left-dot and $-has-dash and $-has-right-dot)
-        or ($-has-left-dot and $-has-dash and $-has-right-dot) 
-      ) {
-        $-ltrs: $-ltrs + $-right-dot-ltr;
-      }
-      
-      // Append combo if there is at least one actual letter and the pattern is not in the combos yet
-      @if (($-ltrs != "") and (not map-has-key($sage-grid-template-codes, $-ltrs))) {
-        $sage-grid-template-codes: map-merge($sage-grid-template-codes, (
-          #{$-ltrs}: $-left-dot-ptn + $-dash-ptn + $-right-dot-ptn
-        ));
-      }
-    }
-  }
-}
-
-/**
-  Build full map of grid configurations
-  Result is a map of codes such as:
-
-  $sage-grid-templates: (
-    m: (
-      code: "--",
-      pattern: 1fr 1fr,
-      dash-slots: 1 2,
-      dot-slots: ()
-    ),
-    ...
-    ug: (
-      code: "..---.",
-      pattern: auto auto 1fr 1fr 1fr auto,
-      dash-slots: 3 4 5,
-      dot-slots: 1 2 6,
-    )
-    ...
-  );
-**/
+///
+/// Stores a full map of grid configurations
+/// Result is a map of codes.
+///
+/// @see parse-morse-code
+///
 $sage-grid-templates: ();
 @each $-ltr, $-code in $sage-grid-template-codes {
   $sage-grid-templates: map-merge(
@@ -104,3 +89,13 @@ $sage-grid-templates: ();
   );
 }
 
+///
+/// Sage grid templates token utility
+///
+/// @param {string} $key [md] The token to retrieve
+///
+/// @return {map} The value retrieved.
+///
+@function sage-grid-template($key) {
+  @return map-get($sage-grid-templates, $key);
+}

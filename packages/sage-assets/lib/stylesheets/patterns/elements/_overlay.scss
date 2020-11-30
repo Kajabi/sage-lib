@@ -4,27 +4,33 @@
 
 ================================================== */
 
+$-overlay-bg-color: rgba(sage-color(charcoal, 100), 0.5);
+$-overlay-backdrop-filter: blur(rem(2px));
+$-overlay-z-index: sage-z-index(underlay);
+$-overlay-transition-default: opacity 0.5s ease-in-out;
+$-overlay-transition-backdrop-filter: backdrop-filter 0.7s ease-in-out;
+
 .sage-overlay {
   visibility: hidden;
   position: absolute;
-  z-index: $sage-overlay-z-index;
+  z-index: $-overlay-z-index;
   top: 0;
   left: 0;
   height: 0;
   width: 0;
-  background-color: $sage-overlay-bg-color;
-  transition: $sage-overlay-transition-default;
+  background-color: $-overlay-bg-color;
+  transition: $-overlay-transition-default;
   opacity: 0;
 
   @supports (backdrop-filter: blur(10px)) {
-    transition: $sage-overlay-transition-default, $sage-overlay-transition-backdrop-filter;
-    backdrop-filter: $sage-overlay-backdrop-filter;
+    transition: $-overlay-transition-default, $-overlay-transition-backdrop-filter;
+    backdrop-filter: $-overlay-backdrop-filter;
   }
 
   @media (max-width: sage-breakpoint()) {
     &.sage-overlay--open {
       visibility: visible;
-      z-index: $sage-overlay-z-index;
+      z-index: $-overlay-z-index;
       height: 100%;
       width: 100%;
       opacity: 1;

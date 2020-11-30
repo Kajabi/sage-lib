@@ -1,11 +1,28 @@
-@function sage-sidebar($key: sm) {
-  $value: map-get($sage-sidebars, $key);
-  @return $value;
-}
+////
+/// Sage sidebars
+///
+/// @group sage
+////
 
+
+///
+/// Sage sidebars token
+///
 $sage-sidebars: (
   sm: rem(240px),
   md: rem(320px),
   lg: rem(400px),
   xl: 80vw
 );
+
+///
+/// Sage sidebar token utility
+///
+/// @param {string} $key [sm] The token to retrieve
+///
+/// @return {length} The value retrieved
+///
+@function sage-sidebar($key: sm) {
+  $value: map-get($sage-sidebars, $key);
+  @return $value;
+}

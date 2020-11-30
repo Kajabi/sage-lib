@@ -4,18 +4,38 @@
 
 ================================================== */
 
+// Colors
+$-tooltip-bg-color: sage-color(charcoal, 400);
+$-tooltip-light-bg-color: sage-color(white);
+$-tooltip-font-color: sage-color(white);
+$-tooltip-light-font-color: sage-color(charcoal, 400);
+
+// Indicator arrow
+$-tooltip-arrow-size: rem(6px);
+$-tooltip-arrow-inactive: $-tooltip-arrow-size solid transparent;
+$-tooltip-arrow-active: $-tooltip-arrow-size solid $-tooltip-bg-color;
+
+// Styling
+$-tooltip-shadow: sage-shadow(xl);
+$-tooltip-padding: sage-spacing(2xs) sage-spacing(sm);
+$-tooltip-small-padding: sage-spacing(2xs) sage-spacing(xs);
+$-tooltip-large-padding: sage-spacing(xs) sage-spacing(xs);
+$-tooltip-zindex: sage-z_index(overlay);
+$-tooltip-maxwidth: rem(200px);
+$-tooltip-large-maxwidth: rem(320px);
+
 .sage-tooltip {
   display: flex;
   position: absolute;
-  z-index: $sage-tooltip-zindex;
-  max-width: $sage-tooltip-maxwidth;
-  padding: $sage-tooltip-padding;
+  z-index: $-tooltip-zindex;
+  max-width: $-tooltip-maxwidth;
+  padding: $-tooltip-padding;
   text-align: center;
-  color: $sage-tooltip-font-color;
+  color: $-tooltip-font-color;
   white-space: normal;
   border-radius: sage-border(radius);
-  background-color: $sage-tooltip-bg-color;
-  box-shadow: $sage-tooltip-shadow;
+  background-color: $-tooltip-bg-color;
+  box-shadow: $-tooltip-shadow;
 
   @extend %t-sage-body-small;
 
@@ -30,9 +50,9 @@
     left: 50%;
     top: 100%;
     transform: translate3d(-50%, 0, 0);
-    border-left: $sage-tooltip-arrow-inactive;
-    border-right: $sage-tooltip-arrow-inactive;
-    border-top: $sage-tooltip-arrow-active;
+    border-left: $-tooltip-arrow-inactive;
+    border-right: $-tooltip-arrow-inactive;
+    border-top: $-tooltip-arrow-active;
   }
 }
 
@@ -41,9 +61,9 @@
     left: 50%;
     bottom: 100%;
     transform: translate3d(-50%, 0, 0);
-    border-left: $sage-tooltip-arrow-inactive;
-    border-right: $sage-tooltip-arrow-inactive;
-    border-bottom: $sage-tooltip-arrow-active;
+    border-left: $-tooltip-arrow-inactive;
+    border-right: $-tooltip-arrow-inactive;
+    border-bottom: $-tooltip-arrow-active;
   }
 }
 
@@ -52,9 +72,9 @@
     left: 100%;
     bottom: 50%;
     transform: translate3d(0, 50%, 0);
-    border-top: $sage-tooltip-arrow-inactive;
-    border-bottom: $sage-tooltip-arrow-inactive;
-    border-left: $sage-tooltip-arrow-active;
+    border-top: $-tooltip-arrow-inactive;
+    border-bottom: $-tooltip-arrow-inactive;
+    border-left: $-tooltip-arrow-active;
   }
 }
 
@@ -63,15 +83,15 @@
     left: 0;
     bottom: 50%;
     transform: translate3d(-100%, 50%, 0);
-    border-top: $sage-tooltip-arrow-inactive;
-    border-bottom: $sage-tooltip-arrow-inactive;
-    border-right: $sage-tooltip-arrow-active;
+    border-top: $-tooltip-arrow-inactive;
+    border-bottom: $-tooltip-arrow-inactive;
+    border-right: $-tooltip-arrow-active;
   }
 }
 
 .sage-tooltip--light {
-  color: $sage-tooltip-light-font-color;
-  background: $sage-tooltip-light-bg-color;
+  color: $-tooltip-light-font-color;
+  background: $-tooltip-light-bg-color;
 
   &.sage-tooltip--top::after {
     border-top-color: sage-color(white);
@@ -88,12 +108,12 @@
 }
 
 .sage-tooltip--small {
-  padding: $sage-tooltip-small-padding;
+  padding: $-tooltip-small-padding;
 
   @extend %t-sage-body-xsmall-semi;
 }
 
 .sage-tooltip--large {
-  max-width: $sage-tooltip-large-maxwidth;
-  padding: $sage-tooltip-large-padding;
+  max-width: $-tooltip-large-maxwidth;
+  padding: $-tooltip-large-padding;
 }

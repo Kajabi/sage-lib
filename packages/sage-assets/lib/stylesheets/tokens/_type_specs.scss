@@ -1,28 +1,31 @@
-// ==================================================
-// TYPE SPECS
-// ==================================================
+////
+/// Sage type specs
+///
+/// @group sage
+////
 
+
+// Base specs to avoid repetition
 $-t-base-spec: (
   weight: sage-font-weight(),
   size: sage-font-size(),
   leading: sage-line-height(md),
   kerning: sage-letter-spacing(xs)
 );
-
 $-t-body-small-spec: map-merge($-t-base-spec, (
   size: sage-font-size(sm),
   leading: sage-line-height(sm),
 ));
-
 $-t-body-xsmall-spec: map-merge($-t-base-spec, (
   size: sage-font-size(xs),
   leading: sage-line-height(xs),
 ));
 
-// The following map is used to generate both `%t-` classes for each entry.
-// These are used to create base classes as well as to apply type specs in
-// context with `@extend %t-` etc.
-
+///
+/// Master map of type specs. This is used to generate both `%t-` classes for each entry.
+/// These are used to create base classes as well as to apply type specs in
+/// context with `@extend %t-` etc.
+///
 $sage-type-specs: (
   // Headings
   "heading-1": (
@@ -99,16 +102,14 @@ $sage-type-specs: (
   )),
 
   // Additional custom specs
+  // TBD
 );
 
-/* ==================================================
-  ** Type spec
-  Usage: `@include sage-type-spec("body-small");`
-
-  Implements a type spec where used.
-  arguments: $thickness: [string name of the desired type spec]
-================================================== */
-
+///
+/// Implements a type spec as CSS properties. 
+/// 
+/// @param {string} $spec-name Name of the type spec to set up 
+///
 @mixin sage-type-spec($spec-name) {
   $spec-map: map-get($sage-type-specs, $spec-name);
 
@@ -118,8 +119,17 @@ $sage-type-specs: (
   line-height: map-get($spec-map, leading);
 }
 
-// Set up base specs as extendables
 @each $spec-name, $spec-map in $sage-type-specs {
+  ///
+  /// Sage type placeholder/extendables
+  ///
+  /// Follow the `t-sage-` with the desired type spec token.
+  ///
+  /// @example scss - Usage example
+  ///   .sage-box__heading {
+  ///     @extend %t-sage-heading-3;
+  ///   }
+  ///
   %t-sage-#{$spec-name} {
     @include sage-type-spec($spec-name);
   }

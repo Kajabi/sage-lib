@@ -50,7 +50,7 @@ $-pw-font-size-sm: sage-font-size(sm);
     height: rem(1px);
     width: calc(100% + #{$-pw-field-button-line-offset});
     background-color: currentColor;
-    transition: $sage-transition;
+    transition: map-get($sage-transitions, default);
     transition-property: opacity, transform;
   }
 
