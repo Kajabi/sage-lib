@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.36](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.0.35...@kajabi/sage-system@0.0.36) (2020-11-30)
+
+
+### Bug Fixes
+
+* **popover:** javascript refactor for positioning ([e710d66](https://github.com/Kajabi/sage-lib/commit/e710d66cd0ff55c8a5f7c37b95904735ed86c39c))
+* **popover:** js adjustments to allow button text to also trigger popover and panel positioning ([7f522a6](https://github.com/Kajabi/sage-lib/commit/7f522a60e5566e12e1c25dd613368626ce707b4c))
+* **popover:** refactored popover positioning js ([e398d80](https://github.com/Kajabi/sage-lib/commit/e398d808f1a55e2b98de5358e60a9c8ad70e8fcc))
+
+
+
+
+
 ## [0.0.35](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.0.34...@kajabi/sage-system@0.0.35) (2020-11-25)
 
 

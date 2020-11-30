@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.23.16](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.23.15...@kajabi/sage@1.23.16) (2020-11-30)
+
+
+### Bug Fixes
+
+* **popover:** added attr_accessor for positioning ([12bcbdf](https://github.com/Kajabi/sage-lib/commit/12bcbdf97fdb07d12b61f3a3231a76ea967c811c))
+* **popover:** added attributes related to icon-only trigger and for allowing a trigger value ([f9bdd3e](https://github.com/Kajabi/sage-lib/commit/f9bdd3ea0a89aea6a945ad3280dbbef56ae11642))
+* **popover:** added position data attribute and formatting clean up ([d0c7ef4](https://github.com/Kajabi/sage-lib/commit/d0c7ef45117edc6ce5ff8099d6b965b0f27255f7))
+* **popover:** adjusted preview and added additional use cases ([72d4f66](https://github.com/Kajabi/sage-lib/commit/72d4f662f0da68be182c1e79bf776716135eac53))
+* **popover:** clean up ([a475ae4](https://github.com/Kajabi/sage-lib/commit/a475ae4b147e193e860f27e0cc333b616852d008))
+* **popover:** fix popover error in page heading ([50cf864](https://github.com/Kajabi/sage-lib/commit/50cf864c65dd28e0fbe6b14639d2feded23be044))
+* **popover:** updated component to allow for icon-only button or full button trigger ([c61d762](https://github.com/Kajabi/sage-lib/commit/c61d7623fb4415dc10db94bdf46b715cce9305d9))
+* **popover:** updated preview for different content types ([cb51734](https://github.com/Kajabi/sage-lib/commit/cb5173480c71d3452c455c73f87dddacf852db89))
+
+
+
+
+
 ## [1.23.15](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.23.14...@kajabi/sage@1.23.15) (2020-11-30)
 
 **Note:** Version bump only for package @kajabi/sage

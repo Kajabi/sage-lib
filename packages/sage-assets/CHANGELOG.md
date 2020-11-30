@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.6](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.6.5...@kajabi/sage-assets@0.6.6) (2020-11-30)
+
+
+### Bug Fixes
+
+* **popover:** updated styling to allow for layout flexibility ([43125ec](https://github.com/Kajabi/sage-lib/commit/43125ecfadaf50715b961f7ec76df4696eae645b))
+
+
+
+
+
 ## [0.6.5](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.6.4...@kajabi/sage-assets@0.6.5) (2020-11-30)
 
 
