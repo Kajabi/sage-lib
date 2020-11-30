@@ -29,20 +29,22 @@ Sage.popover = (function() {
 
     const elParent = evt.currentTarget;
     const elChild = elParent.children[0];
+    const popoverPanel = elChild.parentNode.querySelector(".sage-popover__panel"),
 
-    const triggerWidth = elChild.offsetWidth;
-    const triggerHeight = elChild.offsetHeight;
-    const popoverPanel = elChild.parentNode.querySelector(".sage-popover__panel")
-    const popoverPanelWidth = popoverPanel.offsetWidth;
-    const popoverPanelHeight = popoverPanel.offsetHeight;
-    const position = elChild.parentNode.getAttribute(SELECTOR_POSITION);
+    options = Object.assign({}, {
+      triggerWidth: elChild.offsetWidth,
+      triggerHeight: elChild.offsetHeight,
+      popoverPanelHeight: popoverPanel.offsetHeight,
+      popoverPanelWidth: popoverPanel.offsetWidth,
+      position: elChild.parentNode.getAttribute(SELECTOR_POSITION)
+    });
 
     if (evt.target.hasAttribute(SELECTOR_TRIGGER) || evt.target.parentNode.hasAttribute(SELECTOR_TRIGGER)) {
       if (isExpanded(elParent) || isExpanded(elChild.parentNode)) {
         closePopoverPanel(elParent);
       } else {
         openPopoverPanel(elParent);
-        positionPopoverPanel(triggerWidth, triggerHeight, popoverPanel, popoverPanelWidth, popoverPanelHeight, position)
+        positionPopoverPanel(popoverPanel, options)
       }
     }
     // if the clicked element is the overlay, close the previously opened popover
@@ -51,29 +53,29 @@ Sage.popover = (function() {
     }
   }
 
-  function positionPopoverPanel(triggerWidth, triggerHeight, popoverPanel, popoverPanelWidth, popoverPanelHeight, position) {
+  function positionPopoverPanel(popoverPanel, options) {
 
     let dist = 8,
         top,
         left;
 
-    switch (position) {
+    switch (options.position) {
       case "left":
         top = 0;
-        left = -popoverPanelWidth - (dist * 2);
+        left = -options.popoverPanelWidth - (dist * 2);
       break;
       case "top":
-        top = -popoverPanelHeight - dist;
+        top = -options.popoverPanelHeight - dist;
         left = 0;
       break;
       case "bottom":
-        top = triggerHeight + dist;
+        top = options.triggerHeight + dist;
         left = 0;
         break;
       default:
       case "right":
         top = 0;
-        left = triggerWidth + (dist * 2);
+        left = options.triggerWidth + (dist * 2);
     }
     popoverPanel.style.left = left + "px";
     popoverPanel.style.top = top + "px";
