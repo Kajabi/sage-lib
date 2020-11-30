@@ -45,7 +45,6 @@
     "@storybook/addon-essentials": "^6.0.26",
     "@storybook/addon-knobs": "^6.0.28",
     "@storybook/addon-links": "^6.0.26",
-    "@storybook/addon-notes": "^5.3.21",
     "@storybook/addon-storysource": "^6.0.28",
     "@storybook/react": "^6.0.26",
     "babel-loader": "^8.1.0",
@@ -64,7 +63,6 @@
   },
   "dependencies": {
     "@kajabi/sage-assets": "^0.6.5",
-    "@storybook/react": "^6.0.26",
     "classnames": "^2.2.6",
     "debounce": "^1.2.0",
     "prop-types": "^15.7.2",
@@ -75,6 +73,11 @@
     "react": ">=16.13.1",
     "react-dom": ">=16.13.1",
     "react-router-dom": ">=5.1.0"
+  },
+  "resolutions": {
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-router-dom": "5.1.0"
   },
   "gitHead": "b8c2dd5f156473667f33a4d425c501a1e3b1c578"
 }
