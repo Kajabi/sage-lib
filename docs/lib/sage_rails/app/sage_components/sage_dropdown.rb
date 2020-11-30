@@ -8,5 +8,5 @@ class SageDropdown < SageComponent
   attr_accessor :items
   attr_accessor :trigger_type
   attr_accessor :search
-  attr_accessor :small
+  attr_accessor :panel_size
 end
