@@ -29,15 +29,14 @@ Sage.popover = (function() {
 
     const elParent = evt.currentTarget;
     const elChild = elParent.children[0];
-    const popoverPanel = elChild.parentNode.querySelector(".sage-popover__panel"),
-
-    options = Object.assign({}, {
+    const popoverPanel = elChild.parentNode.querySelector(".sage-popover__panel");
+    const options = {
       triggerWidth: elChild.offsetWidth,
       triggerHeight: elChild.offsetHeight,
       popoverPanelHeight: popoverPanel.offsetHeight,
       popoverPanelWidth: popoverPanel.offsetWidth,
       position: elChild.parentNode.getAttribute(SELECTOR_POSITION)
-    });
+    };
 
     if (evt.target.hasAttribute(SELECTOR_TRIGGER) || evt.target.parentNode.hasAttribute(SELECTOR_TRIGGER)) {
       if (isExpanded(elParent) || isExpanded(elChild.parentNode)) {
