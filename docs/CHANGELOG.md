@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.23.12](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.23.11...@kajabi/sage@1.23.12) (2020-11-30)
+
+
+### Bug Fixes
+
+* update dropdown interactive label preview ([b567df0](https://github.com/Kajabi/sage-lib/commit/b567df03ab36bfc72b4a2652e1300866f0e964eb))
+
+
+
+
+
 ## [1.23.11](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.23.10...@kajabi/sage@1.23.11) (2020-11-25)
 
 **Note:** Version bump only for package @kajabi/sage
