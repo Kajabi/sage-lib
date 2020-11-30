@@ -17,6 +17,7 @@ Gem::Specification.new do |s|
   s.files = Dir["docs/{app,config,lib}/**/*"]
 
   s.add_runtime_dependency "rails"
+  s.add_runtime_dependency "classy_hash"
 
   s.add_development_dependency "pry"
 end

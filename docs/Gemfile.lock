@@ -2,6 +2,7 @@ PATH
   remote: lib/sage_rails
   specs:
     sage_rails (3.4.0)
+      classy_hash
       rails
 
 GEM
@@ -47,6 +48,7 @@ GEM
     builder (3.2.4)
     bump (0.9.0)
     byebug (11.1.3)
+    classy_hash (1.0.0)
     coderay (1.1.3)
     concurrent-ruby (1.1.7)
     crass (1.0.6)
