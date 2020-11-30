@@ -4,6 +4,7 @@
     <%= "sage-dropdown--anchor-right" if component.align == "right" %>
     <%= "sage-dropdown--contained" if component.contained %>
     <%= "sage-dropdown--customized" if component.customized %>
+    <%= "sage-dropdown--small" if component.panel_size == "small" %>
     <%= "sage-dropdown--#{component.custom_modifier}" if component.custom_modifier.present? %>
     <%= component.css_classes if component.css_classes.present? %>
   "
