@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.4](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.6.3...@kajabi/sage-assets@0.6.4) (2020-11-30)
+
+
+### Bug Fixes
+
+* added small variant to sage dropdown ([2f889db](https://github.com/Kajabi/sage-lib/commit/2f889db517171fade63fbd17489c1020abfe3ef2))
+
+
+
+
+
 ## [0.6.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.6.2...@kajabi/sage-assets@0.6.3) (2020-11-24)
 
 

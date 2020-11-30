@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.23.13](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.23.12...@kajabi/sage@1.23.13) (2020-11-30)
+
+
+### Bug Fixes
+
+* **dropdown:** added small variant to sage dropdown ([3fc703d](https://github.com/Kajabi/sage-lib/commit/3fc703d87399f0ffe6b1fbe107132239682083c1))
+* added small variant to sage dropdown ([2f889db](https://github.com/Kajabi/sage-lib/commit/2f889db517171fade63fbd17489c1020abfe3ef2))
+* updated sage dropdown props ([c4d9a50](https://github.com/Kajabi/sage-lib/commit/c4d9a50a9f7126dc812bfe18cff21a55ce55ae4b))
+
+
+
+
+
 ## [1.23.12](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.23.11...@kajabi/sage@1.23.12) (2020-11-30)
 
 
