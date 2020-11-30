@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.23.14](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.23.13...@kajabi/sage@1.23.14) (2020-11-30)
+
+
+### Bug Fixes
+
+* **docs:** fix spacing on object detail page ([2162041](https://github.com/Kajabi/sage-lib/commit/216204169cf87d983688d2228995021fb7105d34))
+* **docs:** repair and protect underdeveloped grid template features ([4d6c759](https://github.com/Kajabi/sage-lib/commit/4d6c75995fdef4c5ed6f26e1082861007736cac1))
+* **sage-assets:** tidy up temporary use of `g-` prefix on shared variables ([f5ccce0](https://github.com/Kajabi/sage-lib/commit/f5ccce09cfdc7494f4732c52805939e5f3e0e3cc))
+
+
+
+
+
 ## [1.23.13](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.23.12...@kajabi/sage@1.23.13) (2020-11-30)
 
 

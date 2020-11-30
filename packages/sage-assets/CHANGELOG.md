@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.5](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.6.4...@kajabi/sage-assets@0.6.5) (2020-11-30)
+
+
+### Bug Fixes
+
+* **sage-assets:** fix typo in documntation ([ca94063](https://github.com/Kajabi/sage-lib/commit/ca94063c9abb0b9fd73320588e3cdcc6602a9c19))
+* **sage-assets:** tidy up temporary use of `g-` prefix on shared variables ([f5ccce0](https://github.com/Kajabi/sage-lib/commit/f5ccce09cfdc7494f4732c52805939e5f3e0e3cc))
+
+
+
+
+
 ## [0.6.4](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.6.3...@kajabi/sage-assets@0.6.4) (2020-11-30)
 
 
