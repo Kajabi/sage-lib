@@ -130,7 +130,14 @@ $-search-icon: "::before";
 
 .sage-search__reset-button {
   visibility: hidden;
-  margin-right: sage-spacing(xs);
+
+  :not(.sage-search--contained) & {
+    margin-right: sage-spacing(xs);
+  }
+
+  .sage-search--contained & {
+    margin-right: sage-spacing(sm);
+  }
 
   .sage-search--has-text & {
     visibility: visible;

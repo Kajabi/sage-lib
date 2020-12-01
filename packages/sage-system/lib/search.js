@@ -3,46 +3,65 @@ Sage.search = (function() {
   // Variables
   // ==================================================
 
-  const SELECTOR_SEARCH = 'data-js-search';
-  const SELECTOR_SEARCH_INPUT = '.sage-search__input';
-  const SELECTOR_SEARCH_BUTTON = '.sage-search__reset-button';
-  const CLASS_VISIBLE = 'sage-search--has-text';
+  const SELECTOR_CLEAR_BUTTON = 'data-js-search-clear';
+  const CLASS_HAS_TEXT = 'sage-search--has-text';
 
 
   // ==================================================
   // Functions
   // ==================================================
 
-  function init(el) {
-    const elInput = el.querySelector(SELECTOR_SEARCH_INPUT);
+  function getInput(el) {
+    return el.querySelector('input');
+  }
 
-    // check the input for a value on load
-    hasValue(elInput) ? addVisibleButtonState(el) : removeVisibleButtonState(el);
-    el.addEventListener('keyup', searchOnInputHandler);
+  function init(el) {
+    el.addEventListener('submit', onSubmit);
+    el.querySelector(`[${SELECTOR_CLEAR_BUTTON}]`).addEventListener('click', onClearButtonClick);
+    getInput(el).addEventListener('keyup', onInputKeyup);
+
+    hasTextCssClassController(el);
   }
 
   function unbind(el) {
-    el.removeEventListener('keyup', searchOnInputHandler);
+    el.removeEventListener('submit', onSubmit);
+    el.querySelector(`[${SELECTOR_CLEAR_BUTTON}]`).removeEventListener('click', onClearButtonClick);
+    getInput(el).removeEventListener('keyup', onInputKeyup);
   }
 
-  function searchOnInputHandler(evt) {
-    const elParent = evt.currentTarget;
-    const elInput = elParent.querySelector(SELECTOR_SEARCH_INPUT);
-
-    hasValue(elInput) ? addVisibleButtonState(elParent) : removeVisibleButtonState(elParent);
+  function onSubmit(evt) {
+    evt.preventDefault();
+    search(getInput(evt.target).value)
   }
 
-  // check if the search value has text or not
-  function hasValue(el) {
-    return el.value.length > 0
+  function onClearButtonClick(evt) {
+    let el = evt.target.parentNode,
+        elInput = getInput(el);
+
+    elInput.value = '';
+    search(elInput.value);
+    hasTextCssClassController(el);
   }
 
-  function addVisibleButtonState(elParent) {
-    elParent.classList.add(CLASS_VISIBLE);
+  function onInputKeyup(evt) {
+    hasTextCssClassController(evt.target.parentNode);
   }
 
-  function removeVisibleButtonState(elParent) {
-    elParent.classList.remove(CLASS_VISIBLE);
+  function search(value) {
+    let searchParams = new URLSearchParams(window.location.search);
+
+    if (value == (searchParams.get('search') || "")) return;
+
+    searchParams.set('search', value);
+    window.location.search = searchParams.toString();
+  }
+
+  function hasTextCssClassController(el) {
+    if (getInput(el).value.length === 0) {
+      el.classList.remove(CLASS_HAS_TEXT);
+    } else {
+      el.classList.add(CLASS_HAS_TEXT);
+    }
   }
 
   return {
