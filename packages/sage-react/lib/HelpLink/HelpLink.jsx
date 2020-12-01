@@ -6,18 +6,21 @@ const HelpLink = ({
   className,
   children,
   labelIsVisible,
+  linkTag,
   ...rest
-}) => (labelIsVisible ? (
-  <Link className={`sage-link--help ${className || ''}`} {...rest}>
-    {children}
+}) => (
+  <Link
+    className={`${labelIsVisible ? 'sage-link--help' : 'sage-link--help-icon-only'} ${className || ''}`}
+    tag={linkTag}
+    {...rest}
+  >
+    {!labelIsVisible ? (
+      <span className="visually-hidden">
+        {children}
+      </span>
+    ) : children}
   </Link>
-) : (
-  <Link className={`sage-link--help-icon-only ${className || ''}`} {...rest}>
-    <span className="visually-hidden">
-      {children}
-    </span>
-  </Link>
-));
+);
 
 HelpLink.defaultProps = {
   children: (
@@ -27,12 +30,14 @@ HelpLink.defaultProps = {
   ),
   className: '',
   labelIsVisible: false,
+  linkTag: null,
 };
 
 HelpLink.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
   labelIsVisible: PropTypes.bool,
+  linkTag: Link.tagPropTypes,
 };
 
 export default HelpLink;
