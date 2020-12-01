@@ -60,8 +60,7 @@ const Toast = ({
   return !isDismissed && (
     <dialog open className={classNames} aria-labelledby={`sage-toast-label-${id}`}>
       <p className="sage-toast__value" id={`sage-toast-label-${id}`}>
-        {title}
-        {description}
+        {title} {description}
       </p>
       <Button
         color={Button.COLORS.SECONDARY}
@@ -84,7 +83,7 @@ Toast.defaultProps = {
   description: null,
   isActive: false,
   onDismiss: e => e,
-  timeout: 500,
+  timeout: 3500,
   title: null,
 };
 
