@@ -9,5 +9,6 @@ class SageSwitch < SageComponent
   attr_accessor :message
   attr_accessor :required
   attr_accessor :type
+  attr_accessor :hide_text
   attr_accessor :value
 end
