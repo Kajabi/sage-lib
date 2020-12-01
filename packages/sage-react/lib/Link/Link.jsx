@@ -1,32 +1,34 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link as ReactLink } from 'react-router-dom';
+
+const tagPropTypes = PropTypes.oneOfType([
+  PropTypes.string,
+  PropTypes.elementType,
+]);
 
 const Link = ({
   children,
-  to,
+  tag,
   ...rest
-}) => (to ? (
-  <ReactLink to={to} {...rest}>
-    {children}
-  </ReactLink>
-) : (
-  <a {...rest}>
-    {children}
-  </a>
-));
+}) => {
+  const SelfTag = tag || 'a';
+  return (
+    <SelfTag {...rest}>
+      {children}
+    </SelfTag>
+  );
+};
 
 Link.defaultProps = {
   children: null,
-  to: null,
+  tag: null,
 };
+
+Link.tagPropTypes = tagPropTypes;
 
 Link.propTypes = {
   children: PropTypes.node,
-  to: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.shape
-  ]),
+  tag: tagPropTypes,
 };
 
 export default Link;
