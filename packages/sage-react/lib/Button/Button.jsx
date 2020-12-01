@@ -15,6 +15,7 @@ const Button = ({
   icon,
   iconOnly,
   iconPosition,
+  linkTag,
   noShadow,
   raised,
   small,
@@ -47,6 +48,7 @@ const Button = ({
       className={classNames}
       aria-disabled={isLink && disabled}
       disabled={!isLink && disabled}
+      tag={!isLink && linkTag}
       {...rest}
     >
       {iconOnly ? (
@@ -75,6 +77,7 @@ Button.defaultProps = {
   icon: null,
   iconOnly: false,
   iconPosition: BUTTON_ICON_POSITIONS.LEFT,
+  linkTag: null,
   noShadow: null,
   onClick: null,
   raised: null,
@@ -92,6 +95,7 @@ Button.propTypes = {
   icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),
   iconOnly: PropTypes.bool,
   iconPosition: PropTypes.oneOf(Object.values(BUTTON_ICON_POSITIONS)),
+  linkTag: Link.tagPropTypes,
   noShadow: PropTypes.bool,
   onClick: PropTypes.func,
   raised: PropTypes.bool,
