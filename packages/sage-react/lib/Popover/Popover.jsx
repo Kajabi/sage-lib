@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import uuid from 'react-uuid';
-import { Button, SageTokens, } from '..';
+import Button from '../Button';
+import { SageTokens } from '../configs';
 
 const Popover = ({ className, children, moreLinkURL, title }) => {
   const [selfActive, setSelfActive] = useState(false);
