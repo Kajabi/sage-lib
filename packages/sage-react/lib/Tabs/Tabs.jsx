@@ -11,15 +11,18 @@ const Tabs = ({
   initialActiveId,
   onClickTab,
   onChangeTabsHook,
+  panesClassName,
   tabLayout,
   tabs,
   tabStyle,
+  tabsClassName,
   useSeparator,
   ...rest
 }) => {
   const [activeId, setActiveId] = useState(initialActiveId);
   const tabsClassNames = classnames(
     'sage-tabs',
+    tabsClassName,
     {
       'sage-tabs--progressbar': tabStyle === TAB_STYLES.PROGRESSBAR,
       'sage-tabs--align-items-center': tabStyle === TAB_STYLES.CHOICE && alignItemsCenter,
@@ -64,11 +67,12 @@ const Tabs = ({
       )}
       {tabs.map(({ id, content, card, cardSpacing, panelSpacing }) => (
         <TabsPane
-          key={id.toString()}
-          id={id}
-          isActive={id === activeId}
           card={card}
           cardSpacing={cardSpacing}
+          className={panesClassName}
+          id={id}
+          isActive={id === activeId}
+          key={id.toString()}
           panelSpacing={panelSpacing}
         >
           {content}
@@ -90,8 +94,10 @@ Tabs.defaultProps = {
   initialActiveId: null,
   onChangeTabsHook: null,
   onClickTab: null,
+  panesClassName: null,
   tabLayout: TAB_LAYOUTS.DEFAULT,
   tabStyle: TAB_STYLES.TAB,
+  tabsClassName: null,
   useSeparator: false,
 };
 
@@ -101,9 +107,11 @@ Tabs.propTypes = {
   initialActiveId: PropTypes.string,
   onChangeTabsHook: PropTypes.func,
   onClickTab: PropTypes.func,
+  panesClassName: PropTypes.string,
   tabLayout: PropTypes.oneOf(Object.values(TAB_LAYOUTS)),
   tabs: PropTypes.arrayOf(tabsItemsPropTypes).isRequired,
   tabStyle: PropTypes.oneOf(Object.values(TAB_STYLES)),
+  tabsClassName: PropTypes.string,
   useSeparator: PropTypes.bool,
 };
 
