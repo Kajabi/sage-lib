@@ -10,8 +10,8 @@ import './Breadcrumbs.scss';
 const Breadcrumbs = ({
   className,
   icon,
-  items,
   isProgressbar,
+  items,
   ...rest
 }) => {
   const classNames = classnames(
@@ -22,15 +22,22 @@ const Breadcrumbs = ({
     }
   );
   let currentSet = false;
-  const renderedItems = items.map(({ current, label, disabled, ...otherProps }, i) => {
+  const renderedItems = items.map(({
+    current,
+    disabled,
+    label,
+    linkTag,
+    ...otherProps
+  }, i) => {
     const isCurrent = current || (!currentSet && items.length > 1 && i + 1 === items.length);
     currentSet = currentSet || isCurrent;
 
     const content = (
       <Link
-        className={`sage-breadcrumbs__link ${isCurrent && 'sage-breadcrumbs__link--current'}`}
         aria-current={isCurrent ? 'page' : false}
         aria-disabled={disabled}
+        className={`sage-breadcrumbs__link ${isCurrent && 'sage-breadcrumbs__link--current'}`}
+        tag={linkTag}
         {...otherProps}
       >
         {(icon && i === 0) && (
