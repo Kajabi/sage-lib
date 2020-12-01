@@ -1,0 +1,53 @@
+/* ==================================================
+  ** feature-toggle
+  type: object
+
+
+================================================== */
+
+$-image-height-min: rem(64px);
+$-image-width: rem(120px);
+$-image-height-mobile: rem(120px);
+
+.sage-feature-toggle {
+  display: grid;
+  grid-column-gap: sage-spacing(md);
+  
+  @media (min-width: sage-breakpoint(md-min)) {
+    grid-template-columns: $-image-width 1fr min-content;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "img title aside"
+      "img content aside";
+  }
+
+  @media (max-width: sage-breakpoint(md-min)) {
+    grid-template-columns: 1fr min-content;
+    grid-template-rows: $-image-height-mobile auto auto;
+    grid-template-areas:
+      "img img"
+      "title aside"
+      "content content";
+  }
+}
+
+.sage-feature-toggle__title {
+  grid-area: title;
+}
+
+.sage-feature-toggle__content {
+  grid-area: content;
+}
+
+.sage-feature-toggle__aside {
+  grid-area: aside;
+  padding-right: sage-spacing(xs);
+}
+
+.sage-feature-toggle__img {
+  grid-area: img;
+
+  img {
+    width: 100%;
+  }
+}

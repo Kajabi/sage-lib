@@ -123,6 +123,16 @@ module ObjectsHelper
         a11y: "todo",
       },
       {
+        title: "feature_toggle",
+        description: "Feature toggle",
+        use_legacy_html_code_source: true,
+        scss: "done",
+        docs: "done",
+        rails: "done",
+        react: "todo",
+        a11y: "todo"
+      },
+      {
         title: "form_section",
         description: "A form section genera11y consists of a text section to provide users with instruction, guidance, or related information along with a secondary panel that may contain form inputs and/or related general content.",
         use_legacy_html_code_source: false,
