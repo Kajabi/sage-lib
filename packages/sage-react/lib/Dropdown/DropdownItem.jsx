@@ -14,17 +14,18 @@ const DropdownItem = ({
   disabled,
   hasCheckbox,
   href,
-  to,
   icon,
   id,
   isActive,
   isLabelVisible,
+  itemTag,
   label,
   groupId,
   onClick,
   onExit,
   options,
   payload,
+  to,
   ...rest
 }) => {
   const classNames = classnames(
@@ -98,6 +99,7 @@ const DropdownItem = ({
           role="menuitem"
           onClick={handleClick}
           disabled={disabled}
+          tag={itemTag}
           {...rest}
         >
           {isLabelVisible && (
@@ -152,11 +154,10 @@ DropdownItem.defaultProps = {
   groupId: 'dropdown',
   hasCheckbox: false,
   href: null,
-  to: null,
-  target: null,
   icon: null,
   isActive: false,
   isLabelVisible: true,
+  itemTag: null,
   onClick: null,
   onExit: null,
   options: null,
@@ -171,12 +172,11 @@ DropdownItem.propTypes = {
   groupId: PropTypes.string,
   hasCheckbox: PropTypes.bool,
   href: PropTypes.string,
-  to: PropTypes.string,
-  target: PropTypes.string,
   icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),
   id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
   isActive: PropTypes.bool,
   isLabelVisible: PropTypes.bool,
+  itemTag: Link.tagPropTypes,
   label: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   onClick: PropTypes.func,
   onExit: PropTypes.func,
@@ -190,6 +190,7 @@ DropdownItem.propTypes = {
     PropTypes.string,
     PropTypes.func,
   ]),
+  to: PropTypes.string,
 };
 
 export default DropdownItem;
