@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.12](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.6.11...@kajabi/sage-react@0.6.12) (2020-12-01)
+
+
+### Bug Fixes
+
+* **sage-react:** adding source mapping to webpack ([2c18df0](https://github.com/Kajabi/sage-lib/commit/2c18df0ea7b4c830f26182c61780740050d66aa3))
+
+
+
+
+
 ## [0.6.11](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.6.10...@kajabi/sage-react@0.6.11) (2020-11-30)
 
 **Note:** Version bump only for package @kajabi/sage-react
