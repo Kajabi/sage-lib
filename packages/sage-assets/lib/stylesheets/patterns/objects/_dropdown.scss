@@ -98,7 +98,6 @@ $-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
   display: flex;
   align-items: center;
   position: relative;
-  z-index: sage-z-index(nav);
   width: 100%;
   list-style: none;
 
@@ -278,32 +277,30 @@ $-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
     min-width: $-dropdown-width-small;
   }
 
-  &::before {
-    content: "";
-    visibility: hidden;
-    position: fixed;
-    background-color: transparent;
-    pointer-events: none;
-    cursor: default;
-
-    @include position-full;
-  }
-
   [aria-expanded="true"] > & {
     visibility: visible;
     // Temporariliy removing animation as it causes
     // a positioning issue with nested fiex positioned elements
     // transform: rotate3d(0, 0, 0, 0);
-
-    &::before {
-      visibility: visible;
-      pointer-events: auto;
-    }
   }
 }
 
 .sage-dropdown__panel--custom {
   padding: sage-spacing();
+}
+
+.sage-dropdown__screen {
+  display: none;
+
+  [aria-expanded="true"] & {
+    display: block;
+    position: fixed;
+    z-index: 3998;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
 }
 
 .sage-dropdown__trigger {

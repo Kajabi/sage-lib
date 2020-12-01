@@ -16,6 +16,7 @@ const Dropdown = ({
   className,
   clickTriggerHandler,
   closePanelOnExit,
+  contained,
   customized,
   customTrigger,
   disabled,
@@ -75,7 +76,7 @@ const Dropdown = ({
     a11yAttrs['aria-disabled'] = true;
   }
 
-  const onExit = (data) => {
+  const onExit = (data = {}) => {
     if (closePanelOnExit && !data.suppressExit) {
       setActive(false);
     }
@@ -98,11 +99,15 @@ const Dropdown = ({
       'sage-dropdown--disabled': disabled,
       'sage-dropdown--pinned': isPinned,
       'sage-dropdown--customized': customized,
+      'sage-dropdown--contained': contained,
     }
   );
 
   return (
     <div ref={wrapperRef} className={classNames} {...a11yAttrs}>
+      {isActive && (
+        <div aria-hidden="true" className="sage-dropdown__screen" onClick={onClickScreen} />
+      )}
       <DropdownTrigger
         disabled={disabled}
         icon={icon}
@@ -141,6 +146,7 @@ Dropdown.defaultProps = {
   className: null,
   clickTriggerHandler: null,
   closePanelOnExit: true,
+  contained: false,
   customTrigger: null,
   customized: false,
   exitPanelHandler: null,
@@ -162,6 +168,7 @@ Dropdown.propTypes = {
   className: PropTypes.string,
   clickTriggerHandler: PropTypes.func,
   closePanelOnExit: PropTypes.bool,
+  contained: PropTypes.bool,
   customized: PropTypes.bool,
   customTrigger: PropTypes.node,
   disabled: PropTypes.bool,

@@ -51,8 +51,20 @@ const DropdownItem = ({
       onClick(e);
     }
 
+    let modifiedPayload;
+    if (payload) {
+      modifiedPayload = {
+        icon,
+        id,
+        label,
+        ...payload,
+      };
+    } else {
+      payload = id;
+    }
+
     if (onExit) {
-      onExit(payload || id);
+      onExit(modifiedPayload);
     }
   };
 

@@ -53,6 +53,7 @@ const DropdownItemList = ({
       <ul className="sage-dropdown__menu" role="menu">
         {localSelectedItems.length > 0 && localSelectedItems.map((item, i) => (
           <DropdownItem
+            borderAfter={i === localSelectedItems.length - 1}
             groupId={groupId}
             hasCheckbox={false}
             key={`item.id-${i}-${item.key}-${item.label}-selected-key`}

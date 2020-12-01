@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import uuid from 'react-uuid';
 import Dropdown from './Dropdown';
 import { SageTokens } from '../configs';
 import DropdownTriggerSelect from './DropdownTriggerSelect';
@@ -10,6 +11,7 @@ const SelectDropdown = ({
   allowMultiselect,
   className,
   closePanelOnExit,
+  contained,
   customized,
   defaultIcon,
   disabled,
@@ -25,6 +27,7 @@ const SelectDropdown = ({
   onSelect,
   resetToken,
   searchable,
+  selectionBecomesLabel,
 }) => {
   const emptySelectedValue = (
     <>
@@ -36,20 +39,22 @@ const SelectDropdown = ({
     className,
     {
       'sage-dropdown--value-selected': _hasSelectedValue,
+      'sage-dropdown--contained': contained,
     }
   );
 
   const [configs, setConfigs] = useState({
     classNames: setClassNames(!!initialSelectedValue),
+    hasSelectedValue: !!initialSelectedValue,
     icon: defaultIcon,
     selectedValue: initialSelectedValue || emptySelectedValue,
   });
 
   const deselectValue = () => {
     setConfigs({
-      ...configs,
-      icon: null,
       classNames: setClassNames(false),
+      hasSelectedValue: false,
+      icon: defaultIcon,
       selectedValue: emptySelectedValue,
     });
 
@@ -59,13 +64,14 @@ const SelectDropdown = ({
   };
 
   const changeValue = (data) => {
-    let { selectedValue, icon } = configs;
+    let { selectedValue, icon, hasSelectedValue } = configs;
 
     if (onChangeHook) {
       data = onChangeHook(data);
     }
 
-    if (!allowMultiselect) {
+    if (selectionBecomesLabel && !allowMultiselect) {
+      // retrieve the selected value and icon if possible
       switch (typeof data) {
         case 'object':
           selectedValue = data.label || null;
@@ -81,13 +87,23 @@ const SelectDropdown = ({
           break;
       }
 
+      // Selecting same item as currently selected deselects it
       if (selectedValue === configs.selectedValue) {
         deselectValue();
         return;
       }
 
+      // Ensure a safe value is put into the selectedvalue
+      if (!selectedValue) {
+        selectedValue = emptySelectedValue;
+        hasSelectedValue = false;
+      } else {
+        hasSelectedValue = true;
+      }
+
       setConfigs({
         classNames: setClassNames(selectedValue !== emptySelectedValue),
+        hasSelectedValue,
         icon,
         selectedValue,
       });
@@ -106,7 +122,7 @@ const SelectDropdown = ({
   }, [resetToken]);
 
   useEffect(() => {
-    if (allowMultiselect) {
+    if (selectionBecomesLabel && allowMultiselect) {
       let lastSelectedLabel,
         numSelected = 0;
 
@@ -117,32 +133,53 @@ const SelectDropdown = ({
         }
       });
 
-      let selectedValue;
+      let selectedValue,
+        hasSelectedValue;
       if (numSelected > 1) {
         selectedValue = `${numSelected} items`;
+        hasSelectedValue = true;
       } else if (numSelected === 1) {
         selectedValue = lastSelectedLabel;
+        hasSelectedValue = true;
       } else {
         selectedValue = initialSelectedValue || emptySelectedValue;
+        hasSelectedValue = initialSelectedValue !== null;
       }
 
       setConfigs({
-        classNames: setClassNames((numSelected > 0)),
+        classNames: setClassNames(hasSelectedValue),
         icon: configs.icon,
+        selectedValue,
+        hasSelectedValue,
+      });
+    } else if (selectionBecomesLabel && !allowMultiselect) {
+      let { selectedValue, hasSelectedValue } = configs;
+      if (initialSelectedValue && !hasSelectedValue) {
+        hasSelectedValue = true;
+        selectedValue = initialSelectedValue;
+      }
+
+      setConfigs({
+        ...configs,
+        classNames: setClassNames(hasSelectedValue),
+        hasSelectedValue,
         selectedValue,
       });
     }
-  }, [initialSelectedValue, items, allowMultiselect]);
+  }, [initialSelectedValue, items, selectionBecomesLabel, allowMultiselect]);
 
   return (
     <Dropdown
       className={configs.classNames}
       closePanelOnExit={closePanelOnExit}
+      contained={contained}
       customized={customized}
       customTrigger={(
         <DropdownTriggerSelect
           disabled={disabled}
+          defaultIcon={defaultIcon}
           label={label}
+          icon={configs.icon}
           selectedValue={configs.selectedValue}
         />
       )}
@@ -169,10 +206,12 @@ SelectDropdown.defaultProps = {
   allowMultiselect: false,
   className: null,
   closePanelOnExit: true,
+  contained: true,
   customized: false,
   defaultIcon: null,
   disabled: false,
   filterActions: null,
+  id: uuid(),
   initialSelectedValue: null,
   items: [],
   label: 'Select...',
@@ -183,18 +222,20 @@ SelectDropdown.defaultProps = {
   onSearch: e => e,
   resetToken: null,
   searchable: false,
+  selectionBecomesLabel: true,
 };
 
 SelectDropdown.propTypes = {
   allowMultiselect: PropTypes.bool,
   className: PropTypes.string,
   closePanelOnExit: PropTypes.bool,
+  contained: PropTypes.bool,
   customized: PropTypes.bool,
   defaultIcon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),
   disabled: PropTypes.bool,
   filterActions: PropTypes.node,
   label: PropTypes.string,
-  id: PropTypes.string.isRequired,
+  id: PropTypes.string,
   initialSelectedValue: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.shape({
@@ -215,6 +256,7 @@ SelectDropdown.propTypes = {
   onSelect: PropTypes.func,
   resetToken: PropTypes.oneOfType([PropTypes.bool, PropTypes.number, PropTypes.string]),
   searchable: PropTypes.bool,
+  selectionBecomesLabel: PropTypes.bool,
 };
 
 export default SelectDropdown;
