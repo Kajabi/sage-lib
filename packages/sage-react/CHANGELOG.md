@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.13](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.6.12...@kajabi/sage-react@0.6.13) (2020-12-01)
+
+
+### Bug Fixes
+
+* **sage-react:** forcing full code compilation for debugging ([300f958](https://github.com/Kajabi/sage-lib/commit/300f958abc2363bb081a9b04b50a7274b03bd6cc))
+
+
+
+
+
 ## [0.6.12](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.6.11...@kajabi/sage-react@0.6.12) (2020-12-01)
 
 
