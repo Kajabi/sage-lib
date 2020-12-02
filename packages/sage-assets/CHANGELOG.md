@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.7.0...@kajabi/sage-assets@0.7.1) (2020-12-02)
+
+
+### Bug Fixes
+
+* **tinymce:** added overflow property for smaller displays ([d5a9582](https://github.com/Kajabi/sage-lib/commit/d5a958239817bdf9b7203cca40ca4c09a620b59e))
+* **tinymce:** added overflow property for smaller displays ([9f8d95e](https://github.com/Kajabi/sage-lib/commit/9f8d95e0659cbadeba7b69bdc0039782e692b984))
+
+
+
+
+
 # [0.7.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.6.7...@kajabi/sage-assets@0.7.0) (2020-12-02)
 
 
