@@ -20,7 +20,7 @@ export const TAB_STYLES = {
 
 export const tabsItemsPropTypes = PropTypes.shape({
   id: PropTypes.string.isRequired,
-  content: PropTypes.node.isRequired,
+  content: PropTypes.node,
   disabled: PropTypes.bool,
   label: PropTypes.string.isRequired,
   subtext: PropTypes.string,

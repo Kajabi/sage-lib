@@ -11,6 +11,7 @@ const Modal = ({
   active,
   children,
   className,
+  containerClassName,
   onExit,
   ...rest
 }) => {
@@ -42,7 +43,11 @@ const Modal = ({
       role="button"
       tabIndex="0"
     >
-      <div className="sage-modal__container" aria-modal="true" {...rest}>
+      <div
+        className={`sage-modal__container ${containerClassName || ''}`}
+        aria-modal="true"
+        {...rest}
+      >
         {children}
       </div>
     </div>
@@ -58,6 +63,7 @@ Modal.HeaderAside = ModalHeaderAside;
 Modal.defaultProps = {
   active: false,
   children: null,
+  containerClassName: null,
   className: '',
   onExit: a => a,
 };
@@ -65,6 +71,7 @@ Modal.defaultProps = {
 Modal.propTypes = {
   active: PropTypes.bool,
   children: PropTypes.node,
+  containerClassName: PropTypes.string,
   className: PropTypes.string,
   onExit: PropTypes.func,
 };

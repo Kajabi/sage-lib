@@ -5,7 +5,6 @@ import { SageTokens } from '../configs';
 import Icon from '../Icon';
 import Link from '../Link';
 import { breadcrumbItemPropTypes } from './configs';
-import './Breadcrumbs.scss';
 
 const Breadcrumbs = ({
   className,

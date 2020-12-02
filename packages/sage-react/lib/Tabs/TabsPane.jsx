@@ -23,21 +23,22 @@ const TabsPane = ({
     }
   );
 
-  return (
+  return isActive && children ? (
     <div
       className={classNames}
       id={id}
       role="tabpanel"
       {...rest}
     >
-      {isActive && children /* Optimization: Don't init/render child components unless active */}
+      {children}
     </div>
-  );
+  ) : null;
 };
 
 TabsPane.defaultProps = {
   card: false,
   cardSpacing: false,
+  children: null,
   className: null,
   isActive: false,
   panelSpacing: false,
@@ -46,7 +47,7 @@ TabsPane.defaultProps = {
 TabsPane.propTypes = {
   card: PropTypes.bool,
   cardSpacing: PropTypes.bool,
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   className: PropTypes.string,
   id: PropTypes.string.isRequired,
   isActive: PropTypes.bool,

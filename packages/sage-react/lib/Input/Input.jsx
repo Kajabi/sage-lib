@@ -10,6 +10,7 @@ const Input = ({
   message,
   onChange,
   prefix,
+  standalone,
   suffix,
   value,
   ...rest
@@ -24,6 +25,7 @@ const Input = ({
       'sage-input--error': hasError,
       'sage-input--prefixed': prefix,
       'sage-input--suffixed': suffix,
+      'sage-input--standalone': standalone,
     }
   );
 
@@ -74,13 +76,27 @@ const Input = ({
         {...rest}
       />
       {label && (
-        <label htmlFor={id} className="sage-input__label">{label}</label>
+        <label htmlFor={id} className="sage-input__label">
+          {label}
+        </label>
       )}
       {prefix && (
-        <span ref={prefixRef} className="sage-input__affix sage-input__affix--prefix sage-label sage-label--draft" aria-label={`Prefixed with ${prefix}`}>{prefix}</span>
+        <span
+          ref={prefixRef}
+          className="sage-input__affix sage-input__affix--prefix sage-label sage-label--draft"
+          aria-label={`Prefixed with ${prefix}`}
+        >
+          {prefix}
+        </span>
       )}
       {suffix && (
-        <span ref={suffixRef} className="sage-input__affix sage-input__affix--suffix sage-label sage-label--draft" aria-label={`Suffixed with ${suffix}`}>{suffix}</span>
+        <span
+          ref={suffixRef}
+          className="sage-input__affix sage-input__affix--suffix sage-label sage-label--draft"
+          aria-label={`Suffixed with ${suffix}`}
+        >
+          {suffix}
+        </span>
       )}
       {message && (
         <div className="sage-input__message">{message}</div>
@@ -96,6 +112,7 @@ Input.defaultProps = {
   message: null,
   onChange: null,
   prefix: null,
+  standalone: false,
   suffix: null,
   value: '',
 };
@@ -108,6 +125,7 @@ Input.propTypes = {
   message: PropTypes.string,
   onChange: PropTypes.func,
   prefix: PropTypes.string,
+  standalone: PropTypes.bool,
   suffix: PropTypes.string,
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
