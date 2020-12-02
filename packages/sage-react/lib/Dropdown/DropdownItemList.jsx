@@ -76,10 +76,7 @@ const DropdownItemList = ({
 };
 
 const itemsPropTypes = PropTypes.arrayOf(
-  PropTypes.shape({
-    id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    label: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
-  })
+  DropdownItem.propTypes,
 );
 
 DropdownItemList.itemsPropTypes = itemsPropTypes;
@@ -88,12 +85,12 @@ DropdownItemList.defaultProps = {
   allowMultiselect: false,
   customSearchFilter: null,
   filterActions: null,
+  groupId: null,
   items: [],
   localSelectedItems: [],
   onExit: e => e,
   onSearch: e => e,
   searchable: false,
-  groupId: null
 };
 
 DropdownItemList.propTypes = {
