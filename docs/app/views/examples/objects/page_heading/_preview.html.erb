@@ -123,6 +123,7 @@
     href: "#",
     name: "Help"
   },
+  secondary_text: "1 Email in Sequence",
 } do %>
     <% content_for :sage_breadcrumbs do %>
       <%= render "examples/elements/breadcrumbs/markup",
@@ -154,20 +155,6 @@
         icon: { name: "preview-on", style: "left" },
         value: "Preview",
       }%>
-      <%= sage_component SageButton, {
-        style: "secondary",
-        subtle: true,
-        icon: { name: "chart", style: "left" },
-        value: "Report",
-      }%>
-
-      <%= sage_component SageButton, {
-        style: "secondary",
-        subtle: true,
-        icon: { name: "chart", style: "left" },
-        value: "Report",
-      }%>
-
       <%= sage_component SageButton, {
         style: "secondary",
         subtle: true,
