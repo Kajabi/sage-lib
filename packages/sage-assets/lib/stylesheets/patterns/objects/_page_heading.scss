@@ -10,9 +10,17 @@
     grid-template-areas:
       "crumbs ."
       "title actions"
-      "intro ."
+      "intro intro"
       "toolbar secondary";
     grid-template-columns: 1fr auto;
+    
+    &.sage-page-heading--no-secondary-text {
+      grid-template-areas:
+      "crumbs ."
+      "title actions"
+      "intro intro"
+      "toolbar toolbar";
+    }
   }
 }
 
