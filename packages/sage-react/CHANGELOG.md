@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.8.1...@kajabi/sage-react@0.8.2) (2020-12-02)
+
+
+### Bug Fixes
+
+* **sage-react:** fix proptypes change that broke build ([99dea76](https://github.com/Kajabi/sage-lib/commit/99dea76d6404fa0abe17676883fe880033b96450))
+
+
+
+
+
 ## [0.8.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.8.0...@kajabi/sage-react@0.8.1) (2020-12-02)
 
 **Note:** Version bump only for package @kajabi/sage-react
