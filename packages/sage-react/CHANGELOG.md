@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.8.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.7.0...@kajabi/sage-react@0.8.0) (2020-12-02)
+
+
+### Bug Fixes
+
+* **sage-react:** adjust content and default duration of Toast ([ad021ba](https://github.com/Kajabi/sage-lib/commit/ad021ba992287e2533803bad7b9da17e13f03d1f))
+* **sage-react:** fix errant paths in popover ([ede2cfb](https://github.com/Kajabi/sage-lib/commit/ede2cfb16f8e9a7f23d25ba66f1777b3d571f4ad))
+* **sage-react:** remove unneeded breadcrumbs stylesheet ([5d0cef6](https://github.com/Kajabi/sage-lib/commit/5d0cef62c5d09307a4c051f17a0face518649757))
+* **sage-react:** update tabs to latest needs ([e8454c0](https://github.com/Kajabi/sage-lib/commit/e8454c059e8a65a737b1c09909e0a6f53ef38761))
+
+
+### Features
+
+* **sage-react:** add container class to modal for customization ([3b847fa](https://github.com/Kajabi/sage-lib/commit/3b847fae52a9650df0ad8eb8777d8d0b2374b3af))
+* **sage-react:** add Popover component ([ca297a1](https://github.com/Kajabi/sage-lib/commit/ca297a15b214bc94994dbf556aa6affe52bf3654))
+* **sage-react:** add standalone mode to Input and tidy ([6e745de](https://github.com/Kajabi/sage-lib/commit/6e745decf40037b40a2891f3d65cbe1cd816999b))
+* **sage-react:** update dropdown to latest ([2fb3a5b](https://github.com/Kajabi/sage-lib/commit/2fb3a5ba97a3db793bdad71b2169f5a5f68bf69c))
+
+
+
+
+
 # [0.7.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.6.14...@kajabi/sage-react@0.7.0) (2020-12-02)
 
 

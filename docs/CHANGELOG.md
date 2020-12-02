@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.24.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.23.20...@kajabi/sage@1.24.0) (2020-12-02)
+
+
+### Features
+
+* **sage-react:** update dropdown to latest ([2fb3a5b](https://github.com/Kajabi/sage-lib/commit/2fb3a5ba97a3db793bdad71b2169f5a5f68bf69c))
+
+
+
+
+
 ## [1.23.20](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.23.19...@kajabi/sage@1.23.20) (2020-12-02)
 
 **Note:** Version bump only for package @kajabi/sage

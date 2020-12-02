@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.6.7...@kajabi/sage-assets@0.7.0) (2020-12-02)
+
+
+### Features
+
+* **sage-react:** update dropdown to latest ([2fb3a5b](https://github.com/Kajabi/sage-lib/commit/2fb3a5ba97a3db793bdad71b2169f5a5f68bf69c))
+
+
+
+
+
 ## [0.6.7](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.6.6...@kajabi/sage-assets@0.6.7) (2020-12-02)
 
 
