@@ -77,7 +77,10 @@ const DropdownItemList = ({
 };
 
 const itemsPropTypes = PropTypes.arrayOf(
-  DropdownItem.propTypes,
+  PropTypes.shape({
+    id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    label: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
+  })
 );
 
 DropdownItemList.itemsPropTypes = itemsPropTypes;

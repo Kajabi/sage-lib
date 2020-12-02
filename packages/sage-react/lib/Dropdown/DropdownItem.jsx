@@ -174,6 +174,7 @@ DropdownItem.defaultProps = {
   onExit: null,
   options: null,
   payload: null,
+  to: null,
 };
 
 DropdownItem.propTypes = {
