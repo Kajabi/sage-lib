@@ -11,8 +11,8 @@
   border-radius: sage-border(radius);
 
   .mce-panel {
-    border: unset !important; /* stylelint-disable-line declaration-no-important */
     overflow-x: scroll;
+    border: unset !important; /* stylelint-disable-line declaration-no-important */
 
     &.mce-toolbar-grp {
       border-bottom: sage-border() !important; /* stylelint-disable-line declaration-no-important */
