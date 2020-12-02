@@ -9,12 +9,12 @@
 
   @media (max-width: sage-breakpoint(sm-max)) {
     grid-template-areas: 
-    "crumbs"
-    "title"
-    "intro"
-    "actions"
-    "toolbar"
-    "secondary";
+      "crumbs"
+      "title"
+      "intro"
+      "actions"
+      "toolbar"
+      "secondary";
   }
 
   @media (min-width: sage-breakpoint(md-min)) {
@@ -27,10 +27,10 @@
 
     &.sage-page-heading--no-secondary-text {
       grid-template-areas:
-      "crumbs ."
-      "title actions"
-      "intro intro"
-      "toolbar toolbar";
+        "crumbs ."
+        "title actions"
+        "intro intro"
+        "toolbar toolbar";
     }
   }
 }
