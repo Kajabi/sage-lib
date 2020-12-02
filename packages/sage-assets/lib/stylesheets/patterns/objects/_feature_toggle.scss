@@ -15,7 +15,7 @@ $-image-height-mobile: rem(120px);
   
   @media (min-width: sage-breakpoint(md-min)) {
     grid-template-columns: $-image-width 1fr min-content;
-    grid-template-rows: auto auto;
+    grid-template-rows: sage-spacing(lg) auto;
     grid-template-areas:
       "img title aside"
       "img content aside";
@@ -33,6 +33,7 @@ $-image-height-mobile: rem(120px);
 
 .sage-feature-toggle__title {
   grid-area: title;
+  @extend %t-sage-heading-5;
 }
 
 .sage-feature-toggle__content {
@@ -42,6 +43,10 @@ $-image-height-mobile: rem(120px);
 .sage-feature-toggle__aside {
   grid-area: aside;
   padding-right: sage-spacing(xs);
+}
+
+.sage-feature-toggle__content-button {
+  margin-top: sage-spacing(xs);
 }
 
 .sage-feature-toggle__img {
