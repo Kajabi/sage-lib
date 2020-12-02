@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.7](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.6.6...@kajabi/sage-assets@0.6.7) (2020-12-02)
+
+
+### Bug Fixes
+
+* **switch:** added option to visually hide label text ([4cbd103](https://github.com/Kajabi/sage-lib/commit/4cbd1034af9bed4e650fab2fbeb5351f17693448))
+
+
+
+
+
 ## [0.6.6](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.6.5...@kajabi/sage-assets@0.6.6) (2020-11-30)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "@kajabi/sage-react",
-  "version": "0.6.13",
+  "version": "0.6.14",
   "description": "React Components",
   "keywords": [
     "react",
@@ -62,7 +62,7 @@
     "webpack-cli": "^3.3.12"
   },
   "dependencies": {
-    "@kajabi/sage-assets": "^0.6.6",
+    "@kajabi/sage-assets": "^0.6.7",
     "classnames": "^2.2.6",
     "debounce": "^1.2.0",
     "prop-types": "^15.7.2",

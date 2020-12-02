@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.23.19](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.23.18...@kajabi/sage@1.23.19) (2020-12-02)
+
+
+### Bug Fixes
+
+* **switch:** added option to visually hide label text ([ed74075](https://github.com/Kajabi/sage-lib/commit/ed740755046279093656f49d911bcd6a235c2dc0))
+* **switch:** added option to visually hide label text ([4cbd103](https://github.com/Kajabi/sage-lib/commit/4cbd1034af9bed4e650fab2fbeb5351f17693448))
+
+
+
+
+
 ## [1.23.18](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.23.17...@kajabi/sage@1.23.18) (2020-12-01)
 
 **Note:** Version bump only for package @kajabi/sage
