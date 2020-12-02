@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.6.14...@kajabi/sage-react@0.7.0) (2020-12-02)
+
+
+### Features
+
+* **sage-react:** allow a `linkTag` for React Router Links in buttons ([60a9b6e](https://github.com/Kajabi/sage-lib/commit/60a9b6e272806874f89a20384c0f47491e7571c7))
+* **sage-react:** allow a component to pass to Link in HelpLink ([b0a8d37](https://github.com/Kajabi/sage-lib/commit/b0a8d373a4980fbe73aad4edbe4815de3fb90b5b))
+* **sage-react:** allow an itemTag within DropdownItem ([1c7a508](https://github.com/Kajabi/sage-lib/commit/1c7a5087b5b5768ce7c6c1d841eb815268d23d66))
+* **sage-react:** allow breadcrumbs items to pass in a link tag ([274deab](https://github.com/Kajabi/sage-lib/commit/274deabe35acb230fb6992b7eb6d4dd8433f504d))
+* **sage-react:** allow Link to provide a tag to use, particularly for use with React Router ([efc71bc](https://github.com/Kajabi/sage-lib/commit/efc71bcf9a7ceb4e04e300cd885893fc41d918b1))
+
+
+
+
+
 ## [0.6.14](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.6.13...@kajabi/sage-react@0.6.14) (2020-12-02)
 
 **Note:** Version bump only for package @kajabi/sage-react
