@@ -178,3 +178,7 @@ $-switch-focus-outline-color: sage-color(primary);
     }
   }
 }
+
+.sage-switch__label--hide-text {
+  @include visually-hidden();
+}

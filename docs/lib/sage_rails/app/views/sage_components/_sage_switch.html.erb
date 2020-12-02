@@ -14,7 +14,7 @@
     <%= "disabled" if component.disabled %>
     <%= "required" if component.required %>
   >
-  <label for="<%= component.id %>" class="sage-switch__label"><%= component.label_text %></label>
+  <label for="<%= component.id %>" class="sage-switch__label <%= "sage-switch__label--hide-text" if component.hide_text %>"><%= component.label_text %></label>
   <% if component.message != "" %>
     <div class="sage-switch__message">Additional Info</div>
   <% end %>
