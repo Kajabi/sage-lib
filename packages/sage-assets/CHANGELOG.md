@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.7.1...@kajabi/sage-assets@0.7.2) (2020-12-03)
+
+
+### Bug Fixes
+
+* **page-header:** update grid on xs and sm displays ([6cbe93b](https://github.com/Kajabi/sage-lib/commit/6cbe93bcf4d729b534d50598b593aa4afa41e424))
+* **page-header:** update grid on xs and sm displays ([3cf3a83](https://github.com/Kajabi/sage-lib/commit/3cf3a835108678b315bfd360ea02544734b81afc))
+* **page-header:** updated grid when secondary_text is not present ([d899ef5](https://github.com/Kajabi/sage-lib/commit/d899ef514e6c021ccb9ea339795e936255b54b0a))
+
+
+
+
+
 ## [0.7.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.7.0...@kajabi/sage-assets@0.7.1) (2020-12-02)
 
 

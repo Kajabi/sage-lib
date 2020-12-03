@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.24.4](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.24.3...@kajabi/sage@1.24.4) (2020-12-03)
+
+
+### Bug Fixes
+
+* **page-header:** updated grid when secondary_text is not present ([455ef1d](https://github.com/Kajabi/sage-lib/commit/455ef1d0e5698572cbba2147afb54d190b1d3662))
+* **page-header:** updated grid when secondary_text is not present ([d899ef5](https://github.com/Kajabi/sage-lib/commit/d899ef514e6c021ccb9ea339795e936255b54b0a))
+
+
+
+
+
 ## [1.24.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@1.24.2...@kajabi/sage@1.24.3) (2020-12-03)
 
 **Note:** Version bump only for package @kajabi/sage
