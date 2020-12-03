@@ -12,6 +12,7 @@ const Link = ({
   ...rest
 }) => {
   const SelfTag = tag || 'a';
+
   return (
     <SelfTag {...rest}>
       {children}

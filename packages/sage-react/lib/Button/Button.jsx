@@ -48,7 +48,7 @@ const Button = ({
       className={classNames}
       aria-disabled={isLink && disabled}
       disabled={!isLink && disabled}
-      tag={!isLink && linkTag}
+      tag={isLink ? linkTag : null}
       {...rest}
     >
       {iconOnly ? (
