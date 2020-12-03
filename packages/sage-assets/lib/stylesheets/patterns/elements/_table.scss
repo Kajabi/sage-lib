@@ -180,8 +180,8 @@ $-table-sort-indicator-direction: rem(7px);
 
 // Selectable rows with checkbox or radio inputs
 .sage-table--selectable {
-  .sage-row--selectable,
-  .sage-row--selectable:nth-child(odd) {
+  .sage-table-row--selectable,
+  .sage-table-row--selectable:nth-child(odd) {
     transition: map-get($sage-transitions, default);
     transition-property: background;
 
