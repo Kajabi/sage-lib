@@ -5,14 +5,33 @@
 ================================================== */
 
 .sage-page-heading {
-  @media (min-width: sage-breakpoint()) {
-    display: grid;
+  display: grid;
+
+  @media (max-width: sage-breakpoint(sm-max)) {
+    grid-template-areas: 
+      "crumbs"
+      "title"
+      "intro"
+      "actions"
+      "toolbar"
+      "secondary";
+  }
+
+  @media (min-width: sage-breakpoint(md-min)) {
     grid-template-areas:
       "crumbs ."
       "title actions"
-      "intro ."
+      "intro intro"
       "toolbar secondary";
     grid-template-columns: 1fr auto;
+
+    &.sage-page-heading--no-secondary-text {
+      grid-template-areas:
+        "crumbs ."
+        "title actions"
+        "intro intro"
+        "toolbar toolbar";
+    }
   }
 }
 
