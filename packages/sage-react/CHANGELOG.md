@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.8.2...@kajabi/sage-react@0.8.3) (2020-12-03)
+
+
+### Bug Fixes
+
+* **sage-react:** adjust logic for passing linkTag in Button ([7bf4def](https://github.com/Kajabi/sage-lib/commit/7bf4def29aacc9cc57933a384632faa6c5a66770))
+
+
+
+
+
 ## [0.8.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.8.1...@kajabi/sage-react@0.8.2) (2020-12-02)
 
 
