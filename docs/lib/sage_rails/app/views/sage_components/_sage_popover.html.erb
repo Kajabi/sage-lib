@@ -39,27 +39,33 @@
   <div class="sage-popover__overlay" data-js-popover--overlay></div>
 
   <div class="sage-popover__panel">
-    <div class="sage-popover__title">
-      <%= component.title %>
-    </div>
-    <div class="sage-popover__content">
+    <% if component.title.present? %>
+      <div class="sage-popover__title">
+        <%= component.title %>
+      </div>
+    <% end %>
+    <div class="
+        sage-popover__content
+        <%= "sage-popover__content--custom #{component.custom_content_class}" if component.custom_content_class.present? %>
+      "
+    >
       <%= component.content %>
     </div>
     <% if component.link %>
-    <div class="sage-popover__actions">
-      <%= sage_component SageButton, {
-        value: component.link[:name],
-        style: "primary",
-        subtle: true,
-        icon: {
-          style: "right",
-          name: "launch"
-        },
-        attributes: {
-          href: component.link[:href]
-        }
-      } %>
-    </div>
+      <div class="sage-popover__actions">
+        <%= sage_component SageButton, {
+          value: component.link[:name],
+          style: "primary",
+          subtle: true,
+          icon: {
+            style: "right",
+            name: "launch"
+          },
+          attributes: {
+            href: component.link[:href]
+          }
+        } %>
+      </div>
     <% end %>
   </div>
 
