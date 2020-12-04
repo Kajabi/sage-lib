@@ -5,7 +5,13 @@ import uuid from 'react-uuid';
 import Button from '../Button';
 import { SageTokens } from '../configs';
 
-const Popover = ({ className, children, moreLinkURL, title }) => {
+const Popover = ({
+  className,
+  children,
+  customContentClassName,
+  moreLinkURL,
+  title,
+}) => {
   const [selfActive, setSelfActive] = useState(false);
 
   const handleExpandClick = () => {
@@ -27,6 +33,14 @@ const Popover = ({ className, children, moreLinkURL, title }) => {
     className,
     {
       'sage-popover--is-expanded': selfActive,
+    }
+  );
+
+  const contentClassNames = classnames(
+    'sage-popover__content',
+    customContentClassName,
+    {
+      'sage-popover__content--custom': customContentClassName,
     }
   );
 
@@ -52,7 +66,7 @@ const Popover = ({ className, children, moreLinkURL, title }) => {
         {title && (
           <h5 className="sage-popover__title">{title}</h5>
         )}
-        <div className="sage-popover__content">
+        <div className={contentClassNames}>
           {children}
         </div>
         {moreLinkURL && (
@@ -77,6 +91,7 @@ const Popover = ({ className, children, moreLinkURL, title }) => {
 Popover.defaultProps = {
   className: null,
   children: null,
+  customContentClassName: null,
   moreLinkURL: null,
   title: null,
 };
@@ -84,6 +99,7 @@ Popover.defaultProps = {
 Popover.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node,
+  customContentClassName: PropTypes.string,
   moreLinkURL: PropTypes.string,
   title: PropTypes.string,
 };
