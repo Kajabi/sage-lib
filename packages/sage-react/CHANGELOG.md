@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.5](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.8.4...@kajabi/sage-react@0.8.5) (2020-12-04)
+
+**Note:** Version bump only for package @kajabi/sage-react
+
+
+
+
+
 ## [0.8.4](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.8.3...@kajabi/sage-react@0.8.4) (2020-12-03)
 
 **Note:** Version bump only for package @kajabi/sage-react
