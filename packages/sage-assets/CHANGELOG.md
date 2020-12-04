@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.8.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.7.3...@kajabi/sage-assets@0.8.0) (2020-12-04)
+
+
+### Code Refactoring
+
+* **react label:** refactor react label with  new style support & rails label button support ([4aec2dc](https://github.com/Kajabi/sage-lib/commit/4aec2dc737e8ae5c31298337bf72787a57607a92))
+
+
+### Features
+
+* **react label:** refactor react label typechecking + storybook docs ([501f17f](https://github.com/Kajabi/sage-lib/commit/501f17fca3075664aa7b20ebd2b04f36c0b2dd44))
+
+
+### BREAKING CHANGES
+
+* **react label:** Breaking change addressing anywhere React Sage Label is implemented
+
+
+
+
+
 ## [0.7.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.7.2...@kajabi/sage-assets@0.7.3) (2020-12-04)
 
 **Note:** Version bump only for package @kajabi/sage-assets
