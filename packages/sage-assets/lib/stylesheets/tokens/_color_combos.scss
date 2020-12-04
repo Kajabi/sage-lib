@@ -5,7 +5,8 @@
 ////
 
 
-// Color overrides
+// Color Overrides
+// NOTE: Stopgap until colors below are merged system color definitions
 $-label-primary-icon-background-accent: #3e92ee;
 $-label-warning-background-accent: #f9df8b;
 $-label-danger-background-accent: #f3988c;
@@ -21,7 +22,7 @@ $sage-color-combos: (
       foreground-accent: sage-color(charcoal, 500),
       background: sage-color(grey, 300),
       background-accent: sage-color(grey, 400),
-      inner-button-background: sage-color(grey, 500),
+      icon-background-accent: sage-color(grey, 500),
     ),
     subtle: (
       foreground: sage-color(charcoal, 200),
@@ -39,7 +40,7 @@ $sage-color-combos: (
       foreground-accent: sage-color(sage, 500),
       background: sage-color(sage, 100),
       background-accent: sage-color(sage, 200),
-      inner-button-background: sage-color(sage, 300),
+      icon-background-accent: sage-color(sage, 300),
     ),
     subtle: (
       foreground: sage-color(sage, 400),
@@ -56,8 +57,8 @@ $sage-color-combos: (
       foreground: sage-color(primary, 400),
       foreground-accent: sage-color(primary, 500),
       background: sage-color(primary, 100),
-      background-accent: $-label-primary-icon-background-accent,
-      inner-button-background: sage-color(primary, 300),
+      background-accent: sage-color(primary, 200),
+      icon-background-accent: $-label-primary-icon-background-accent,
     ),
     subtle: (
       foreground: sage-color(primary, 400),
@@ -75,7 +76,7 @@ $sage-color-combos: (
       foreground-accent: sage-color(purple, 500),
       background: sage-color(purple, 100),
       background-accent: sage-color(purple, 200),
-      inner-button-background: sage-color(purple, 300),
+      icon-background-accent: sage-color(purple, 300),
     ),
     subtle: (
       foreground: sage-color(purple, 400),
@@ -93,7 +94,7 @@ $sage-color-combos: (
       foreground-accent: sage-color(yellow, 500),
       background: sage-color(yellow, 200),
       background-accent: $-label-warning-background-accent,
-      inner-button-background: sage-color(yellow, 300),
+      icon-background-accent: sage-color(yellow, 300),
     ),
     subtle: (
       foreground: sage-color(yellow, 400),
@@ -111,7 +112,7 @@ $sage-color-combos: (
       foreground-accent: sage-color(red, 500),
       background: sage-color(red, 200),
       background-accent: $-label-danger-background-accent,
-      inner-button-background: $-label-danger-icon-background-accent,
+      icon-background-accent: $-label-danger-icon-background-accent,
     ),
     subtle: (
       foreground: sage-color(red, 400),
@@ -131,7 +132,7 @@ $sage-color-combos: (
 /// @param {string} $color-key [draft] The color token to retrieve
 /// @param {string} $combo-set-key [default] The color set to retrieve
 /// @param {string} $color-type [foreground] The detail of the set to retrieve
-/// 
+///
 /// @return {color} The value retrieved
 ///
 @function sage-color-combo($color-key: draft, $combo-set-key: default,  $color-type: foreground) {

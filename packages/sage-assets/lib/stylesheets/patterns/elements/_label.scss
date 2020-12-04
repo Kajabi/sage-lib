@@ -70,19 +70,22 @@ $-label-inset-border: 0 0 0 1px inset;
   }
 
   #{$-color-modifier}.sage-label--interactive {
-    .sage-label__value {
+    &.sage-label--interactive-right-cta-affordance .sage-label__value {
       padding-right: rem(32px);
+    }
+
+    .sage-label__value {
 
       @include sage-focus-outline();
       @include sage-focus-outline--update-color( sage-color-combo($-color-name, default, foreground) );
 
       &:hover:not(:focus):not(:active):not(:disabled):not(.disabled) {
-        color: sage-color-combo($-color-name, bold, foreground-accent);
+        color: sage-color-combo($-color-name, default, foreground-accent);
       }
     }
 
     .sage-btn:hover {
-      background-color: sage-color-combo($-color-name, default, inner-button-background);
+      background-color: sage-color-combo($-color-name, default, icon-background-accent);
     }
 
     &:hover {
