@@ -4,30 +4,30 @@ import classnames from 'classnames';
 
 import Button from '../Button';
 import { SageTokens } from '../configs';
-import { LABEL_TYPES, LABEL_COLORS } from './configs';
+import { LABEL_STYLES, LABEL_COLORS, LABEL_INTERACTIVE_TYPES } from './configs';
 
 const Label = ({
   children,
   className,
   color,
-  isInteractive,
-  isStatus,
-  isDropdown,
   icon,
-  type,
-  value,
+  isDropdown,
+  interactiveType,
+  isStatus,
   secondaryButton,
+  style,
+  value,
   ...rest
 }) => {
-  const TagName = isInteractive ? 'button' : 'span';
+  const TagName = interactiveType ? 'button' : 'span';
 
   const classNames = classnames(
     'sage-label',
     className,
     {
       [`sage-label--${color}`]: color,
-      [`sage-label--${type}`]: type,
-      'sage-label--interactive': isInteractive,
+      [`sage-label--${style}`]: style,
+      'sage-label--interactive': interactiveType,
       [`sage-label--icon-${icon}`]: icon,
     }
   );
@@ -35,36 +35,46 @@ const Label = ({
   return (
     <span className={classNames}>
       <TagName
-        type={isInteractive ? 'button' : null}
+        className="sage-label__value"
+        type={interactiveType ? 'button' : null}
         {...rest}
       >
         {value}
       </TagName>
-      {secondaryButton}
-      {isDropdown && <span class="sage-label__decor-icon sage-label__decor-icon--caret-down"></span>}
+      {
+        interactiveType === LABEL_INTERACTIVE_TYPES.SECONDARY_BUTTON
+        && secondaryButton
+      }
+      {
+        (interactiveType === LABEL_INTERACTIVE_TYPES.DROPDOWN)
+        && <span className="sage-label__decor-icon sage-label__decor-icon--caret-down"></span>
+      }
     </span>
   );
 };
 
 Label.COLORS = LABEL_COLORS;
-Label.TYPES = LABEL_TYPES;
+Label.STYLES = LABEL_STYLES;
+Label.INTERACTIVE_TYPES = LABEL_INTERACTIVE_TYPES;
 
 Label.defaultProps = {
   className: null,
-  isInteractive: false,
   color: LABEL_COLORS.DRAFT,
   icon: null,
-  type: LABEL_TYPES.DEFAULT,
+  interactiveType: null,
+  style: LABEL_STYLES.DEFAULT,
 };
 
 Label.propTypes = {
   className: PropTypes.string,
-  isInteractive: PropTypes.bool,
-  isDropdown: PropTypes.bool,
   color: PropTypes.oneOf(Object.values(LABEL_COLORS)),
   icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),
-  type: PropTypes.oneOf(Object.values(LABEL_TYPES)),
-  secondaryButton: PropTypes.instanceOf(Button),
+  isDropdown: PropTypes.bool,
+  interactiveType: PropTypes.oneOf(Object.values(LABEL_INTERACTIVE_TYPES)),
+  secondaryButton: PropTypes.oneOfType([
+    PropTypes.shape({type: PropTypes.oneOf([Button])})
+  ]),
+  style: PropTypes.oneOf(Object.values(LABEL_STYLES)),
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
 };
 

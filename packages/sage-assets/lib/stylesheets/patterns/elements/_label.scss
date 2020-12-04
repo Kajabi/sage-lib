@@ -82,7 +82,7 @@ $-label-inset-border: 0 0 0 1px inset;
     }
 
     .sage-btn:hover {
-      background-color: sage-color-combo($-color-name, default, inner-button-hover);
+      background-color: sage-color-combo($-color-name, default, icon-background-accent);
     }
 
     &:hover {
