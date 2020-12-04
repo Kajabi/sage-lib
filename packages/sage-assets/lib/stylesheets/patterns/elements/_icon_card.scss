@@ -27,7 +27,7 @@
   }
 
   .sage-icon-card--#{$-color}-subtle {
-    color: sage-color-combo($-color, subtle, foreground);
+    color: sage-color-combo($-color, subtle, foreground-accent);
     border: 1px solid sage-color-combo($-color, subtle, background);
   }
 

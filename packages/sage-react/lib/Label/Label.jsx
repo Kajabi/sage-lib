@@ -12,8 +12,11 @@ const Label = ({
   color,
   isInteractive,
   isStatus,
+  isDropdown,
   icon,
   type,
+  value,
+  secondaryButton,
   ...rest
 }) => {
   const TagName = isInteractive ? 'button' : 'span';
@@ -23,7 +26,6 @@ const Label = ({
     className,
     {
       [`sage-label--${color}`]: color,
-      [`sage-label--${style}`]: style,
       [`sage-label--${type}`]: type,
       'sage-label--interactive': isInteractive,
       [`sage-label--icon-${icon}`]: icon,
@@ -48,22 +50,20 @@ Label.COLORS = LABEL_COLORS;
 Label.TYPES = LABEL_TYPES;
 
 Label.defaultProps = {
-  children: null,
   className: null,
   isInteractive: false,
   color: LABEL_COLORS.DRAFT,
-  style: null,
-  iconRight: null,
+  icon: null,
   type: LABEL_TYPES.DEFAULT,
 };
 
 Label.propTypes = {
-  children: PropTypes.node,
   className: PropTypes.string,
   isInteractive: PropTypes.bool,
+  isDropdown: PropTypes.bool,
   color: PropTypes.oneOf(Object.values(LABEL_COLORS)),
-  iconRight: PropTypes.oneOf(Object.values(SageTokens.ICONS)),
-  style: PropTypes.oneOf(Object.values(LABEL_TYPES)),
+  icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),
+  type: PropTypes.oneOf(Object.values(LABEL_TYPES)),
   secondaryButton: PropTypes.instanceOf(Button),
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
 };
