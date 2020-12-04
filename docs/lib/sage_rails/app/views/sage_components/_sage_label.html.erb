@@ -1,25 +1,26 @@
-<% label_content_tag = component.is_interactive ? "button" : "span" %>
+<% label_content_tag = component.interactive_type ? "button" : "span" %>
 
 <span
   class="
     sage-label
     <%= "sage-label--#{component.color}" if component.color %>
     <%= "sage-label--#{component.style}" if component.style %>
-    <%= "sage-label--interactive" if component.is_interactive %>
+    <%= "sage-label--interactive" if component.interactive_type %>
+    <%= "sage-label--interactive-right-cta-affordance" if (component.interactive_type === :dropdown) || (component.interactive_type === :secondary_button) %>
     <%= "sage-label--icon-#{component.icon}" if component.icon %>
     <%= component.generated_css_classes %>
   "
 >
   <<%= label_content_tag %>
     class="sage-label__value"
-    <%= 'type="button"' if component.is_interactive %>
+    <%= 'type="button"' if component.interactive_type %>
     <%= component.generated_html_attributes %>
   />
     <%= component.value.html_safe %>
   </<%= label_content_tag %>>
   <%= component.content %>
-  <%= component.secondary_button %>
-  <% if component.is_dropdown %>
+  <%= component.secondary_button if component.interactive_type === :secondary_button %>
+  <% if component.interactive_type === :dropdown %>
     <span class="sage-label__decor-icon sage-label__decor-icon--caret-down"></span>
   <% end %>
 </span>

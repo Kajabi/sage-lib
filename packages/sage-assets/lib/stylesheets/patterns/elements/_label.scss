@@ -70,8 +70,11 @@ $-label-inset-border: 0 0 0 1px inset;
   }
 
   #{$-color-modifier}.sage-label--interactive {
-    .sage-label__value {
+    &.sage-label--interactive-right-cta-affordance .sage-label__value {
       padding-right: rem(32px);
+    }
+
+    .sage-label__value {
 
       @include sage-focus-outline();
       @include sage-focus-outline--update-color( sage-color-combo($-color-name, default, foreground) );

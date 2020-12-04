@@ -21,13 +21,21 @@ storiesOf('Sage/Label', module)
   .addDecorator(withKnobs)
   .addDecorator(centerXY)
   .add('Default', () => (
-    <LabelWithDefaultProps
-      interactiveType={select('Interactive Type', Object.assign({ NONE: null }, Label.INTERACTIVE_TYPES), null)}
-    />
+    <LabelWithDefaultProps />
   ), {
     notes: { markdown: LabelNotes }
   })
-  .add('With secondary_button', () => (
+  .add('Interactive: default', () => (
+    <LabelWithDefaultProps
+      interactiveType={Label.INTERACTIVE_TYPES.DEFAULT}
+    />
+  ))
+  .add('Interactive: dropdown treatment', () => (
+    <LabelWithDefaultProps
+      interactiveType={Label.INTERACTIVE_TYPES.DROPDOWN}
+    />
+  ))
+  .add('Interactive: with secondary_button', () => (
     <LabelWithDefaultProps
       interactiveType={Label.INTERACTIVE_TYPES.SECONDARY_BUTTON}
       secondaryButton={

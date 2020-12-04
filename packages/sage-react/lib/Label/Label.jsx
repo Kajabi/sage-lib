@@ -28,6 +28,7 @@ const Label = ({
       [`sage-label--${color}`]: color,
       [`sage-label--${style}`]: style,
       'sage-label--interactive': interactiveType,
+      'sage-label--interactive-right-cta-affordance': interactiveType && interactiveType !== LABEL_INTERACTIVE_TYPES.DEFAULT,
       [`sage-label--icon-${icon}`]: icon,
     }
   );

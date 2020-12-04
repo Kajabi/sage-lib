@@ -32,9 +32,7 @@ configs = [
   <% configs.each do | config | %>
     <%= sage_component SageLabel, {
       color: config[:color],
-      value: %(
-        #{config[:color].capitalize}
-      )
+      value: config[:color].capitalize
     } %>
   <% end %>
 <% end %>
@@ -75,14 +73,26 @@ configs = [
   } %>
 <% end %>
 
-<h3 class="t-sage-heading-6">Tags</h3>
+<h3 class="t-sage-heading-6">Interactive Default</h3>
 <%= sage_component SagePanelBlock, {} do %>
   <% configs.each do | config | %>
     <%= sage_component SageLabel, {
       color: config[:color],
       value: config[:color].capitalize,
       icon: config[:icon],
-      is_interactive: true,
+      interactive_type: :default
+    } %>
+  <% end %>
+<% end %>
+
+<h3 class="t-sage-heading-6">Interactive With Secondary Button</h3>
+<%= sage_component SagePanelBlock, {} do %>
+  <% configs.each do | config | %>
+    <%= sage_component SageLabel, {
+      color: config[:color],
+      value: config[:color].capitalize,
+      icon: config[:icon],
+      interactive_type: :secondary_button,
       secondary_button: sage_component(SageButton, {
         value: "Close",
         subtle: true,
@@ -95,17 +105,14 @@ configs = [
 <% end %>
 
 
-<h3 class="t-sage-heading-6">Status</h3>
-
+<h3 class="t-sage-heading-6">Interactive With Dropdown Treatment</h3>
 <%= sage_component SagePanelBlock, {} do %>
   <% configs.each do | config | %>
     <%= sage_component SageLabel, {
       color: config[:color],
       value: config[:color].capitalize,
       icon: config[:icon],
-      is_dropdown: true,
-      is_interactive: true
+      interactive_type: :dropdown
     } %>
-
   <% end %>
 <% end %>
