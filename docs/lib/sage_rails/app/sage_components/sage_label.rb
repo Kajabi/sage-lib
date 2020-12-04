@@ -5,6 +5,6 @@ class SageLabel < SageComponent
   attr_accessor :value
   attr_accessor :html_tag
   attr_accessor :is_interactive
-  attr_accessor :is_status
-  attr_accessor :is_tag
+  attr_accessor :is_dropdown
+  attr_accessor :secondary_button
 end

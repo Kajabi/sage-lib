@@ -1,4 +1,4 @@
-<% 
+<%
 configs = [
   {
     color: "draft",
@@ -63,7 +63,7 @@ configs = [
 
 <h3 class="t-sage-heading-6">With Icons</h3>
 <%= sage_component SagePanelBlock, {} do %>
-  <%= sage_component SageLabel, { 
+  <%= sage_component SageLabel, {
     color: "draft",
     value: "Add",
     icon: "add-small"
@@ -83,7 +83,13 @@ configs = [
       value: config[:color].capitalize,
       icon: config[:icon],
       is_interactive: true,
-      is_tag: true
+      secondary_button: sage_component(SageButton, {
+        value: "Close",
+        subtle: true,
+        small: true,
+        style: "secondary",
+        icon: { style: "only", name: "remove" }
+      })
     } %>
   <% end %>
 <% end %>
@@ -97,9 +103,9 @@ configs = [
       color: config[:color],
       value: config[:color].capitalize,
       icon: config[:icon],
-      is_status: true,
+      is_dropdown: true,
       is_interactive: true
     } %>
-      
+
   <% end %>
 <% end %>

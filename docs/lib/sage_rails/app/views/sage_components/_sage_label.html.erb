@@ -19,17 +19,11 @@
     <%= component.value.html_safe %>
 </<%= label_content_tag %>>
 
-  <% if component.is_tag %>
-    <%= sage_component SageButton, {
-      value: "Close",
-      subtle: true,
-      small: true,
-      style: "secondary",
-      icon: { style: "only", name: "remove" }
-    } %>
-  <% end %>
+  <%= component.content %>
 
-  <% if component.is_status %>
+  <%= component.secondary_button %>
+
+  <% if component.is_dropdown %>
     <span class="sage-label__decor-icon sage-label__decor-icon--caret-down"></span>
   <% end %>
 </span>
