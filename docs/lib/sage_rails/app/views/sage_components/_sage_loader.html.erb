@@ -4,6 +4,8 @@
     <%= "sage-loader--fill" if component.fill %>
   "
   data-loading="true"
+  aria-busy="true"
+  aria-live="polite"
 > 
   <%# Spinner SVG %>
   <% if component.loader_type === "spinner" %>

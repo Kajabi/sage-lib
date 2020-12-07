@@ -159,7 +159,7 @@ module ElementsHelper
         docs: "done",
         rails: "yes",
         react: "no",
-        a11y: "todo"
+        a11y: "done"
       },
       {
         title: "meter",
