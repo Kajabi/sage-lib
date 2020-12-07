@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.4](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@2.0.3...@kajabi/sage@2.0.4) (2020-12-07)
+
+
+### Bug Fixes
+
+* **docs:** update uses of Label to match new props ([5f93832](https://github.com/Kajabi/sage-lib/commit/5f938327428104171fe9bd9e72861501b8a42b1b))
+
+
+
+
+
 ## [2.0.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@2.0.2...@kajabi/sage@2.0.3) (2020-12-07)
 
 **Note:** Version bump only for package @kajabi/sage
