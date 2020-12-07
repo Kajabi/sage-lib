@@ -34,6 +34,7 @@ $-loader-spinner-path-speed: 1.5s;
 }
 
 .sage-loader--bar {
+  overflow: hidden;
   position: relative;
   top: 50%;
   left: 50%;
@@ -43,22 +44,22 @@ $-loader-spinner-path-speed: 1.5s;
   height: $-loader-bar-height;
   border-radius: sage-border(radius);
   background-color: $-loader-bar-bg-color;
-  overflow: hidden;
 
-  &::before, &::after {
-    content: '';
+  &::before,
+  &::after {
+    content: "";
+    z-index: sage-z-index(default, 2);
     position: absolute;
     top: 0;
     left: 0;
     width: 0;
     height: $-loader-bar-height;
     border-radius: sage-border(radius);
-    z-index: sage-z-index(default, 2);
   }
 
   // used color vars, either make new vars or omit easing colors
   &::before {
-    background: linear-gradient(90deg, sage-color(primary, 300),  sage-color(sage, 300));
+    background: linear-gradient(90deg, sage-color(primary, 300), sage-color(sage, 300));
     animation: loader-bar $-loader-bar-speed linear infinite;
   }
 
@@ -69,16 +70,16 @@ $-loader-spinner-path-speed: 1.5s;
 }
 
 .spinner {
-  animation: rotate $-loader-spinner-speed linear infinite;
   width: sage-spacing(xl);
   height: sage-spacing(xl);
+  animation: rotate $-loader-spinner-speed linear infinite;
 }
 
 .spinner-path {
   stroke-dasharray: 150,200;
   stroke-dashoffset: -10;
-  animation: dash $-loader-spinner-path-speed ease-in-out infinite;
   stroke-linecap: round;
+  animation: dash $-loader-spinner-path-speed ease-in-out infinite;
 }
 
 
@@ -87,22 +88,16 @@ $-loader-spinner-path-speed: 1.5s;
     width: 0;
   }
   25% {
-    width: 30%;
     left: 15%;
+    width: 30%;
   }
   50% {
-    width: 70%;
     left: 40%;
+    width: 70%;
   }
   100% {
-    width: 15%;
     left: 100%;
-  }
-}
-
-@-webkit-keyframes rotate {
-  100% {
-    transform: rotate(360deg);
+    width: 15%;
   }
 }
 
