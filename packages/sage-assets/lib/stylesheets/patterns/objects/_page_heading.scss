@@ -66,6 +66,10 @@
   grid-area: actions;
   align-items: flex-start;
 
+  > a {
+    max-width: 100%;
+  }
+
   @media (max-width: sage-breakpoint(sm-max)) {
     flex-wrap: wrap;
     justify-content: flex-start;
