@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.9.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.9.0...@kajabi/sage-react@0.9.1) (2020-12-07)
+
+
+### Bug Fixes
+
+* **react label:** the locked color option was missing from react label config ([2abbaec](https://github.com/Kajabi/sage-lib/commit/2abbaecdb9a97f6d9ec8ccc936226fdd7492aa29))
+
+
+
+
+
 # [0.9.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.8.5...@kajabi/sage-react@0.9.0) (2020-12-04)
 
 
