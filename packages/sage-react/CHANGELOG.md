@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.9.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.9.2...@kajabi/sage-react@0.9.3) (2020-12-07)
+
+
+### Bug Fixes
+
+* **sage-react:** simplifying script calls ([2031437](https://github.com/Kajabi/sage-lib/commit/203143778729c49b4ee9150b61852a2bf5544784))
+
+
+
+
+
 ## [0.9.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.9.1...@kajabi/sage-react@0.9.2) (2020-12-07)
 
 
