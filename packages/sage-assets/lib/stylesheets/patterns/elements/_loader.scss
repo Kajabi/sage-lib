@@ -57,9 +57,8 @@ $-loader-spinner-path-speed: 1.5s;
     border-radius: sage-border(radius);
   }
 
-  // used color vars, either make new vars or omit easing colors
   &::before {
-    background: linear-gradient(90deg, sage-color(primary, 300), sage-color(sage, 300));
+    background: sage-color(primary, 300);
     animation: loader-bar $-loader-bar-speed linear infinite;
   }
 
@@ -79,6 +78,7 @@ $-loader-spinner-path-speed: 1.5s;
   stroke-dasharray: 150,200;
   stroke-dashoffset: -10;
   stroke-linecap: round;
+  stroke: sage-color(primary, 300);
   animation: dash $-loader-spinner-path-speed ease-in-out infinite;
 }
 

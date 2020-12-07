@@ -1,6 +1,6 @@
 <div class="
     sage-loader
-    sage-loader--<%= component.loader_type %>
+    sage-loader--<%= component.shape %>
     <%= "sage-loader--fill" if component.fill %>
   "
   data-loading="true"
@@ -8,15 +8,9 @@
   aria-live="polite"
 > 
   <%# Spinner SVG %>
-  <% if component.loader_type === "spinner" %>
+  <% if component.shape === "spinner" %>
     <svg class="spinner" viewBox="25 25 50 50" >
-      <defs>
-        <linearGradient id="linear" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%"   stop-color="#0072EF"/>
-          <stop offset="100%" stop-color="#4fc9c5"/>
-        </linearGradient>
-      </defs>
-      <circle class="spinner-path" cx="50" cy="50" r="20" fill="none" stroke="url(#linear)" stroke-width="4" />
+      <circle class="spinner-path" cx="50" cy="50" r="20" fill="none" stroke="0072EF" stroke-width="4" />
     </svg>
   <% end %>
   <span class="visually-hidden">Loading...</span>
