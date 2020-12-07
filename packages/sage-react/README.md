@@ -12,15 +12,11 @@ The following scripts can be ran by typing `yarn <script_name>` in the root of t
 
 ### `build`
 
-One time build of the package
-
-### `build-storybook`
-
-Build the storybook instance
+One time build of the package. Build Storybook as well.
 
 ### `build:watch`
 
-Continuely watch and buil the package
+Continuely watch and build the package
 
 ### `storybook`
 
