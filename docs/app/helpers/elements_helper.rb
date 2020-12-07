@@ -158,7 +158,7 @@ module ElementsHelper
         scss: "done",
         docs: "done",
         rails: "yes",
-        react: "no",
+        react: "yes",
         a11y: "done"
       },
       {
