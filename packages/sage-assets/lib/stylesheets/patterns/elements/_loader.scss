@@ -58,7 +58,7 @@ $-loader-spinner-path-speed: 1.5s;
 
   // used color vars, either make new vars or omit easing colors
   &::before {
-    background: linear-gradient(90deg, #0072EF, #1A8FE1, #35ACD3, #4fc9c5);
+    background: linear-gradient(90deg, sage-color(primary, 300),  sage-color(sage, 300));
     animation: loader-bar $-loader-bar-speed linear infinite;
   }
 
