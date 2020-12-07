@@ -1,9 +1,10 @@
 export const LABEL_COLORS = {
+  DANGER: 'danger',
   DRAFT: 'draft',
   INFO: 'info',
+  LOCKED: 'locked',
   PUBLISHED: 'published',
   WARNING: 'warning',
-  DANGER: 'danger',
 };
 
 export const LABEL_STYLES = {
