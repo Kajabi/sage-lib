@@ -18,6 +18,10 @@ $-popover-panel-offset-left: sage-spacing(md);
 
 .sage-popover__actions {
   margin-top: sage-spacing(card);
+
+  > a {
+    max-width: 100%;
+  }
 }
 
 .sage-popover__panel {

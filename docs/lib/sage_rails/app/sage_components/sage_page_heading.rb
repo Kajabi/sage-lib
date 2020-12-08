@@ -1,7 +1,5 @@
 class SagePageHeading < SageComponent
   attr_accessor :title
-  attr_accessor :link_text
-  attr_accessor :link_url
   attr_accessor :secondary_text
   attr_accessor :help_title
   attr_accessor :help_link

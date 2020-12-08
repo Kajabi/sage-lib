@@ -10,6 +10,7 @@ const Popover = ({
   children,
   customContentClassName,
   moreLinkURL,
+  moreLinkText,
   title,
 }) => {
   const [selfActive, setSelfActive] = useState(false);
@@ -79,7 +80,7 @@ const Popover = ({
               iconPosition={Button.ICON_POSITIONS.RIGHT}
               subtle={true}
             >
-              Learn more
+              {moreLinkText}
             </Button>
           </div>
         )}
@@ -93,6 +94,7 @@ Popover.defaultProps = {
   children: null,
   customContentClassName: null,
   moreLinkURL: null,
+  moreLinkText: 'Learn more',
   title: null,
 };
 
@@ -101,6 +103,7 @@ Popover.propTypes = {
   children: PropTypes.node,
   customContentClassName: PropTypes.string,
   moreLinkURL: PropTypes.string,
+  moreLinkText: PropTypes.string,
   title: PropTypes.string,
 };
 
