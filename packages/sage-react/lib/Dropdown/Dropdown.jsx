@@ -121,7 +121,6 @@ const Dropdown = ({
       </DropdownTrigger>
       {isActive && (
         <DropdownPanel
-          isActive={isActive}
           modifier={panelModifier}
           onClickScreen={onClickScreen}
           onExit={onExit}
