@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.8.1...@kajabi/sage-assets@0.8.2) (2020-12-08)
+
+
+### Bug Fixes
+
+* **outline:** allow for more space in outline status column ([c8b36d1](https://github.com/Kajabi/sage-lib/commit/c8b36d1b8fad7e97932386300ccb6c70de490587))
+
+
+
+
+
 ## [0.8.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.8.0...@kajabi/sage-assets@0.8.1) (2020-12-08)
 
 
