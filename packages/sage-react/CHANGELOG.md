@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.10.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.9.3...@kajabi/sage-react@0.10.0) (2020-12-08)
+
+
+### Features
+
+* **popover:** allow learn more text to be customized ([296762d](https://github.com/Kajabi/sage-lib/commit/296762d01fabd76e2f6e98ee17c59de5ed3d5ea0))
+
+
+
+
+
 ## [0.9.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.9.2...@kajabi/sage-react@0.9.3) (2020-12-07)
 
 

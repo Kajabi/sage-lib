@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.8.0...@kajabi/sage-assets@0.8.1) (2020-12-08)
+
+
+### Bug Fixes
+
+* **page-heading:** ensure long link text truncates ([788a958](https://github.com/Kajabi/sage-lib/commit/788a958e6b760bf9c49fe482f7281d8b39dce72a))
+* **sage-page-header:** move link max-width to popover where it belongs ([02ebf72](https://github.com/Kajabi/sage-lib/commit/02ebf72cdd95d4b7f889f19233d03c1db6c5fbbf))
+
+
+
+
+
 # [0.8.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.7.3...@kajabi/sage-assets@0.8.0) (2020-12-04)
 
 
