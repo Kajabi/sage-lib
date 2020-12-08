@@ -32,29 +32,40 @@
     <% end %>
     <ul class="sage-dropdown__menu" role="menu" aria-label="options_menu">
       <% component.items.each do |item| %>
-        <li class="
-            sage-dropdown__item
-            <% item[:modifiers]&.each do |item_modifier| %>
-              <%= "sage-dropdown__item--#{item_modifier}" %>
-            <% end %>
-          "
-          role="none"
-        >
-          <a
-            <% item[:attributes].each do |key, value| %>
-              <%= "#{key}=#{value}"%>
-            <% end if item[:attributes]&.is_a?(Hash) %>
-            role="menuitem"
-            tabindex="0"
-            class="
-              sage-dropdown__item-control
-              <%= "sage-dropdown__item-control--#{item[:style]}" if item[:style] %>
-              <%= "sage-dropdown__item-control--icon-#{item[:icon]}" if item[:icon] %>
+        <% if item[:is_heading].present? && item[:is_heading] %>
+          <li class="
+              sage-dropdown__item
+              sage-dropdown__item--heading
             "
+            role="none"
           >
-            <%= item[:value].html_safe %>
-          </a>
-        </li>
+            <%= item[:value] %>
+          </li>
+        <% else %>
+          <li class="
+              sage-dropdown__item
+              <% item[:modifiers]&.each do |item_modifier| %>
+                <%= "sage-dropdown__item--#{item_modifier}" %>
+              <% end %>
+            "
+            role="none"
+          >
+            <a
+              <% item[:attributes].each do |key, value| %>
+                <%= "#{key}=#{value}"%>
+              <% end if item[:attributes]&.is_a?(Hash) %>
+              role="menuitem"
+              tabindex="0"
+              class="
+                sage-dropdown__item-control
+                <%= "sage-dropdown__item-control--#{item[:style]}" if item[:style] %>
+                <%= "sage-dropdown__item-control--icon-#{item[:icon]}" if item[:icon] %>
+              "
+            >
+              <%= item[:value].html_safe %>
+            </a>
+          </li>
+        <% end %>
       <% end %>
     </ul>
   </nav>
