@@ -4,8 +4,8 @@ import { storiesOf } from '@storybook/react';
 import { centerXY } from '../story-support/decorators';
 import Panel from '../Panel';
 import Table from '../Table';
-import { sample1 } from './storyHelper';
-// import PanelNotes from './PanelNotes.md';
+import { dataArray, dataCollection, dataCollectionCustom } from './sample-data/contacts';
+import { domains } from './sample-data/domains';
 
 storiesOf('Sage/Table', module)
   .addDecorator(withKnobs)
@@ -15,12 +15,47 @@ storiesOf('Sage/Table', module)
       <Table
         resetAbove={true}
         resetBelow={true}
-        headers={sample1.headers}
         isStriped={true}
-        rows={sample1.rows}
-        schema={sample1.schema}
+        rows={dataCollection}
+        headers={{
+          first: {
+            label: "Header override"
+          }
+        }}
+        schema={{
+          id: false,
+          first: {
+            label: "First name",
+          },
+          email: false,
+          phone: {
+            label: "Phone",
+          },
+        }}
       />
     </Panel>
-  ), {
-    // notes: { markdown: PanelFigureNotes }
-  });
+  ))
+  .add('Table with Rich Content', () => (
+    <Panel>
+      <Table
+        selectable={false}
+        resetAbove={true}
+        resetBelow={true}
+        rows={domains}
+        schema={{
+          domain: {
+            label: 'Domain',
+            dataType: 'string',
+          },
+          status: {
+            label: 'Status',
+            dataType: 'label',
+          },
+          options: {
+            label: '',
+            dataType: 'html',
+          },
+        }}
+      />
+    </Panel>
+  ));
