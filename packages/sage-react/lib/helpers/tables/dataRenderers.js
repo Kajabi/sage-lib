@@ -1,4 +1,5 @@
 import React from 'react';
+import Label from '../../Label';
 import Avatar from '../../Avatar';
 
 // Data Renderers
@@ -6,11 +7,7 @@ export const renderBooleanAsYesOrNo = (data) => {
   return data ? 'Yes' : 'No';
 };
 
-export const renderStringAsIs = (data) => {
-  return typeof data === 'string' || typeof data === 'number' ? data : '?';
-};
-
-export const renderUserAsAvatar = (data) => {
+export const renderObjectAsAvatar = (data) => {
   let { initials, color } = data;
 
   if (!color) {
@@ -32,4 +29,14 @@ export const renderUserAsAvatar = (data) => {
   return (
     <Avatar initials={initials} color={color} />
   );
+};
+
+export const renderObjectAsHTML = (data) => data;
+
+export const renderObjectAsLabel = ({ color, value }) => (
+  <Label color={color} value={value} />
+);
+
+export const renderStringAsIs = (data) => {
+  return typeof data === 'string' || typeof data === 'number' ? data : '?';
 };

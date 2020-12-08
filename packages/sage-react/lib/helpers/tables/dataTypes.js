@@ -5,4 +5,6 @@ export const SAGE_DATA_TYPES = {
   DATE: 'date',
   STRING: 'string',
   AVATAR: 'avatar',
+  LABEL: 'label',
+  HTML: 'html',
 };
