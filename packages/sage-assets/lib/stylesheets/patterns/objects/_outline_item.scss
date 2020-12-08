@@ -42,7 +42,7 @@ $-collapse-breakpoint-key: lg-max;
 
   @media (min-width: sage-breakpoint($-collapse-breakpoint-key)) {
     // Using static column values to ensure alignment
-    grid-template-columns: min-content 1fr max-content min-content rem(140px) rem(24px);
+    grid-template-columns: min-content 1fr max-content min-content rem(170px) rem(24px);
     grid-template-areas: "handle-drag title actions-secondary actions-primary status handle-collapse";
   }
 
