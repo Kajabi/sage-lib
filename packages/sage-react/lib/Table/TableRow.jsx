@@ -19,10 +19,10 @@ const TableRow = ({
 }) => {
   const [selfSelected, setSelfSelected] = useState(selected);
   const classNames = classnames(
-    'sage-table-row',
+    'sage-table__row',
     className,
     {
-      'sage-table-row--selectable': selectable,
+      'sage-table__row--selectable': selectable,
     }
   );
 
@@ -42,7 +42,7 @@ const TableRow = ({
         <td>
           <Checkbox
             checked={selfSelected}
-            id={`sage-table-row-selector-${id}`}
+            id={`sage-table__row-selector-${id}`}
             label="Select row"
             name={`sage-table-selections`}
             onChange={onChangeSelector}

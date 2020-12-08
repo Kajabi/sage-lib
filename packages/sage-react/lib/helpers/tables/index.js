@@ -40,7 +40,7 @@ const renderDataTypes = (data, dataType, renderers) => {
   let renderedValue;
   for (let i = 0; i < keys.length; i += 1) {
     const { customType, rawType, render } = renderers[keys[i]];
-    console.log('parsing', data, dataType, typeof data);
+
     if (customType && customType === dataType) {
       renderedValue = render(data);
       break;
