@@ -1,23 +1,19 @@
 import PropTypes from 'prop-types';
 
-export const cellPropTypes = {
-  attributes: PropTypes.shape({}),
-  className: PropTypes.string,
-  dataType: PropTypes.string,
-  field: PropTypes.string,
-  id: PropTypes.string,
-  value: dataPropTypes,
-};
-
+// Basic data value types
 export const dataPropTypes = PropTypes.oneOfType([
   PropTypes.string,
   PropTypes.number,
   PropTypes.bool,
 ]);
 
-export const headerPropTypes = {
+// Cell structure
+export const cellPropTypes = {
   attributes: PropTypes.shape({}),
   className: PropTypes.string,
   dataType: PropTypes.string,
-  label: PropTypes.string,
+  field: PropTypes.string,
+  id: PropTypes.string,
+  style: PropTypes.shape({}),
+  value: dataPropTypes,
 };

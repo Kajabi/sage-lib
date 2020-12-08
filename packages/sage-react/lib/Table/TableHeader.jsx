@@ -1,15 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { parseHeaderData } from './helpers';
-import { headerPropTypes } from './configs';
+import { parseCellData } from './helpers';
+import { cellPropTypes } from './configs';
 
 const TableHeader = ({
   attributes,
   children,
   className,
   dataType,
-  label,
+  style,
+  value,
 }) => {
   const classNames = classnames(
     'sage-table__header',
@@ -17,27 +18,28 @@ const TableHeader = ({
     {
       [`sage-table__header--${dataType}`]: dataType,
     }
-  )
+  );
   return (
-    <th className={classNames} {...attributes}>
-      {label}
+    <th className={classNames} style={style} {...attributes}>
+      {value}
       {children}
     </th>
   );
 };
 
-TableHeader.parseHeaderData = parseHeaderData;
+TableHeader.parseHeaderData = parseCellData;
 
 TableHeader.defaultProps = {
   attributes: null,
-  children: '',
+  children: null,
   className: null,
   dataType: null,
-  label: null,
+  style: null,
+  value: null,
 };
 
 TableHeader.propTypes = Object.assign({
   children: PropTypes.node,
-}, headerPropTypes);
+}, cellPropTypes);
 
 export default TableHeader;
