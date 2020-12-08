@@ -1,0 +1,69 @@
+/* ==================================================
+  ** typeahead
+  type: object
+
+================================================== */
+
+.sage-typeahead {
+  position: relative;
+}
+
+.sage-typeahead__panel {
+  border: sage-border();
+  background-color: sage-color(white);
+  border-radius: sage-border(radius);
+  box-shadow: sage-shadow(md);
+  z-index: sage-z-index(nav);
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: 0;
+}
+
+.sage-typeahead__item {
+  display: flex;
+  align-items: center;
+
+  &:hover,
+  &:focus-within {
+    background-color: sage-color(grey, 100);
+  }
+}
+
+.sage-typeahead__item-trigger {
+  @include sage-button-style-reset();
+  list-style: none;
+  flex-grow: 1;
+  text-align: left;
+
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-template-rows: 1fr;
+  column-gap: sage-spacing(sm);
+  row-gap: sage-spacing(3xs);
+  padding: sage-spacing(sm);
+  align-items: center;
+  grid-template-areas:
+  "icon title"
+  "icon subTitle";
+
+  &:hover,
+  &:focus {
+    > * {
+      color: red;
+    }
+  }
+}
+
+.sage-typeahead__item-actions {
+  visibility: hidden;
+
+  :hover > &,
+  :focus-within > & {
+    visibility: visible;
+  }
+
+  > * {
+    margin-right: sage-spacing(sm);
+  }
+}
