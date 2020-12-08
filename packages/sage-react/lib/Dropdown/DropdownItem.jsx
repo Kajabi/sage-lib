@@ -17,6 +17,7 @@ const DropdownItem = ({
   icon,
   id,
   isActive,
+  isHeading,
   isLabelVisible,
   itemTag,
   label,
@@ -33,6 +34,7 @@ const DropdownItem = ({
     {
       'sage-dropdown__item--active': isActive,
       'sage-dropdown__item--disabled': disabled,
+      'sage-dropdown__item--heading': isHeading,
       'sage-dropdown__item--with-options': options,
       'sage-dropdown__item--border-before': borderBefore,
       'sage-dropdown__item--border-after': borderAfter,
@@ -79,6 +81,10 @@ const DropdownItem = ({
   const fieldId = `${groupId}-checkbox-${id}`;
 
   const renderItem = () => {
+    if (isHeading) {
+      return <>{label}</>;
+    }
+
     if (hasCheckbox) {
       return (
         <label className={controlClassNames} htmlFor={fieldId}>
@@ -168,6 +174,7 @@ DropdownItem.defaultProps = {
   href: null,
   icon: null,
   isActive: false,
+  isHeading: false,
   isLabelVisible: true,
   itemTag: null,
   onClick: null,
@@ -188,6 +195,7 @@ DropdownItem.propTypes = {
   icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),
   id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
   isActive: PropTypes.bool,
+  isHeading: PropTypes.bool,
   isLabelVisible: PropTypes.bool,
   itemTag: Link.tagPropTypes,
   label: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
