@@ -56,7 +56,7 @@ const Typeahead = ({
                   {item.title}
                 </div>
                 <div
-                  className="t-sage-body-small"
+                  className="t-sage-body-xsmall"
                   style={{gridArea: 'subTitle'}}
                 >
                   {item.subTitle}

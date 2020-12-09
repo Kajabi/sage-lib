@@ -25,6 +25,7 @@
   display: flex;
   align-items: center;
 
+
   &:hover,
   &:focus-within {
     background-color: sage-color(grey, 100);
@@ -32,27 +33,26 @@
 }
 
 .sage-typeahead__item-trigger {
-  @include sage-button-style-reset();
+  @include sage-button-style-reset;
+  @include sage-focus-outline($outline-offset-block: -10px, $outline-offset-inline: -8px);
+  @include sage-focus-outline--update-color(sage-color(primary));
+
   list-style: none;
   flex-grow: 1;
   text-align: left;
 
+  padding: sage-spacing(sm);
   display: grid;
   grid-template-columns: min-content 1fr;
   grid-template-rows: 1fr;
   column-gap: sage-spacing(sm);
-  row-gap: sage-spacing(3xs);
-  padding: sage-spacing(sm);
   align-items: center;
   grid-template-areas:
   "icon title"
   "icon subTitle";
 
-  &:hover,
-  &:focus {
-    > * {
-      color: red;
-    }
+  &:hover > * {
+    color: sage-color(charcoal, 500);
   }
 }
 
