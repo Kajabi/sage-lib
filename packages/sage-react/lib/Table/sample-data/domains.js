@@ -29,7 +29,7 @@ export const domains = [
     status: {
       value: {
         value: 'Connected',
-        color: Label.COLORS.PUBLISHED,
+        color: Label.COLORS.SUCCESS,
       },
     },
     options: (
