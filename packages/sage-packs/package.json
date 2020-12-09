@@ -1,6 +1,6 @@
 {
   "name": "@kajabi/sage-packs",
-  "version": "0.0.100",
+  "version": "0.0.101",
   "description": "Sage Packs",
   "keywords": [
     "sage",
@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "@kajabi/sage-assets": "^0.8.2",
-    "@kajabi/sage-react": "^0.10.1",
+    "@kajabi/sage-react": "^0.11.0",
     "@kajabi/sage-system": "^0.0.36"
   }
 }
