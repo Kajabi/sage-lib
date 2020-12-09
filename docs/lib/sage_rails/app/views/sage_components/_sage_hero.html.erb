@@ -1,0 +1,15 @@
+<article class="sage-hero">
+  <h2 class="sage-hero__title"><%= component.title %></h2>
+  <div class="sage-hero__body">
+    <p>
+      <%= component.description %>
+    </p>
+
+    <% if content_for? :sage_hero_action %>
+      <%= content_for :sage_hero_action %>
+    <% end %>
+  </div>
+  <div class="sage-hero__artwork">
+    <img src=<%= component.image%> alt="" />
+  </div>
+</article>
