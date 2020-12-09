@@ -1,11 +1,10 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
-import { createFocusTrap } from 'focus-trap';
 import uuid from 'react-uuid';
 
 import { SageTokens } from '../configs';
 import Search from '../Search';
+import { useFocusTrap } from '../hooks';
 
 const Typeahead = ({
   items,
@@ -15,21 +14,11 @@ const Typeahead = ({
   const [open, setOpen] = useState(false);
   const containerRef = useRef(null);
 
-  useEffect(() => {
-    if (!open) return;
-
-    const focusTrap = createFocusTrap(containerRef.current, {escapeDeactivates: false});
-    const handleEscape = (evt) => {
-      if (evt.keyCode === 27) setOpen(false);
-    };
-
-    focusTrap.activate();
-    document.addEventListener("keydown", handleEscape, false);
-    return () => {
-      focusTrap.deactivate();
-      document.addEventListener("keydown", handleEscape, false);
-    };
-  }, [open, containerRef.current]);
+  useFocusTrap({
+    active: open,
+    setActive: setOpen,
+    containerRef: containerRef
+  });
 
   return (
     <div

@@ -3,7 +3,6 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs, boolean, text } from '@storybook/addon-knobs';
 import { centerXY } from '../story-support/decorators';
 import Search from './Search';
-import Typeahead from '../Typeahead';
 
 const InputWithState = (rest) => {
   const [value, setValue] = useState('');
