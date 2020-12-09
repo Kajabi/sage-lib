@@ -1,13 +1,26 @@
+/* ==================================================
+  ** _hero.scss
+  type: object
+
+
+================================================== */
+
+$-hero-icon-size: 1.5rem;
+
 .sage-hero {
   display: grid;
   grid-column-gap: sage-spacing(md);
   grid-row-gap: sage-spacing(md);
+  overflow: hidden;
+  border-radius: sage-border(radius);
+  box-shadow: sage-shadow(sm);
 
-  @media (max-width: sage-breakpoint(md-min)) {
+  @media (max-width: sage-breakpoint(sm-max)) {
     grid-template-areas:
       "artwork"
       "title"
       "content";
+    grid-template-rows: rem(120px) min-content;
   }
 
   @media (min-width: sage-breakpoint(md-min)) {
@@ -15,35 +28,77 @@
     grid-template-areas:
       "title artwork"
       "content artwork";
+    padding-left: sage-spacing(md);
   }
 }
 
 .sage-hero__title {
   @extend %t-sage-heading-3;
   grid-area: title;
+
+  @media (max-width: sage-breakpoint(sm-max)) {
+    padding: 0 sage-spacing(md);
+  }
+
+
+  @media (min-width: sage-breakpoint(md-min)) {
+    margin-top: sage-spacing(md);
+  }
 }
 
 .sage-hero__body {
   grid-area: content;
+  margin-bottom: sage-spacing(md);
+
+  @media (max-width: sage-breakpoint(sm-max)) {
+    padding: 0 sage-spacing(md);
+  }
 }
 
 .sage-hero__artwork {
   grid-area: artwork;
   position: relative;
+  overflow: hidden;
 
   img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     width: 100%;
-
-    @media (max-width: sage-breakpoint(md-max)) {
-      max-width: 200px;
-    }
 
     @media (min-width: sage-breakpoint(md-min)) {
       height: 100%;
       object-fit: cover;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
     }
+  }
+
+  &::before {
+    @include sage-icon-base(play);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: sage-z-index(default, 1);
+    align-items: center;
+    width: $-hero-icon-size;
+    font-size: $-hero-icon-size;
+    color: sage-color(primary, 300);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: 0.2s background-color ease;
+  }
+
+  &:hover::after {
+    background-color: rgba(255, 255, 255, 1);
   }
 }

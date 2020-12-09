@@ -41,6 +41,7 @@ Sage.init = function(elementNamesToInitLegacy) {
   initDocumentPresenceListener('[data-js-tabs]',                                 Sage.tabs.init,          Sage.tabs.unbind);
   initDocumentPresenceListener('[data-js-copy-button]',                          Sage.copyButton.init,    Sage.copyButton.unbind);
   initDocumentPresenceListener('[data-js-accordion="header"]',                   Sage.accordion.init,     Sage.accordion.unbind);
+  initDocumentPresenceListener('[data-js-hero]',                                 Sage.hero.init,          Sage.hero.unbind);
   initDocumentPresenceListener('[data-js-search]',                               Sage.search.init,        Sage.search.unbind);
   initDocumentPresenceListener('[data-js-select]',                               Sage.select.init,        Sage.select.unbind);
   initDocumentPresenceListener('[data-js-panel-controls]',                       Sage.panelControls.init, Sage.panelControls.unbind);

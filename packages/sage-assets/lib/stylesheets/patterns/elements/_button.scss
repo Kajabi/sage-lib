@@ -194,6 +194,10 @@ $-label-interactive-icon-size: rem(24px);
     width: rem(28px);
   }
 
+  .sage-hero__body & {
+    margin-top: sage-spacing(md);
+  }
+
   .sage-page-heading__actions & {
     &:not(:last-child) {
       margin-right: sage-spacing();
@@ -401,6 +405,7 @@ $-label-interactive-icon-size: rem(24px);
 
 .sage-btn__truncate-text {
   @include truncate;
+  pointer-events: none;
 
   @media (max-width: sage-breakpoint(lg-max)) {
     .sage-outline-item__actions-primary & {

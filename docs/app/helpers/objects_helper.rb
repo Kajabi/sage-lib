@@ -145,12 +145,12 @@ module ObjectsHelper
       {
         title: "hero",
         description: "Pending",
-        use_legacy_html_code_source: true,
+        use_legacy_html_code_source: false,
         scss: "done",
         docs: "todo",
         rails: "done",
         react: "todo",
-        a11y: "todo",
+        a11y: "done",
       },
       {
         title: "icon_list",
