@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.12.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.11.0...@kajabi/sage-react@0.12.0) (2020-12-09)
+
+
+### Features
+
+* **sage-react:** add basic table components and helpers ([ee30932](https://github.com/Kajabi/sage-lib/commit/ee30932d1ceeed4c455ba57d87b83c42515d074f))
+* **sage-react:** add initial table story for demonstration ([c234ac9](https://github.com/Kajabi/sage-lib/commit/c234ac90b7045f67e17928b911c991475b5284cc))
+* **table:** add additional datatypes and renderers ([f1da949](https://github.com/Kajabi/sage-lib/commit/f1da949b1bf806c43d4d30b7ac5ac53e95eb7997))
+* **table:** ensure components and data parsing is flexible and stable ([d8055f5](https://github.com/Kajabi/sage-lib/commit/d8055f5936e1b147cd71dbfeac2a5d9316e70d66))
+* **table:** ensure story and samples are clean ([413c806](https://github.com/Kajabi/sage-lib/commit/413c8063823c9cf65382997d479e1176a394f9a0))
+
+
+
+
+
 # [0.11.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.10.1...@kajabi/sage-react@0.11.0) (2020-12-09)
 
 
