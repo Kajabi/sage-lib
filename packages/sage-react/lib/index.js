@@ -39,6 +39,7 @@ export {
   TabsPane,
 } from './Tabs';
 export { default as Sortable } from './Sortable';
+export { default as Table } from './Table';
 export { default as Textarea } from './Textarea';
 export { default as Toast } from './Toast';
 export {

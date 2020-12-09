@@ -46,7 +46,7 @@ is_responsive = component.responsive.present? ? component.responsive : true
     <tbody>
       <% if component.rows.present? %>
         <% component.rows.each do | row | %>
-          <tr class="<%= "sage-row--selectable" if component.selectable %>">
+          <tr class="<%= "sage-table__row--selectable" if component.selectable %>">
             <% if row.is_a? Array %>
               <% row.each do | cell | %>
                 <td
