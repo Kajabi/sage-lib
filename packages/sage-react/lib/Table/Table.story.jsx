@@ -45,15 +45,15 @@ storiesOf('Sage/Table', module)
         schema={{
           domain: {
             label: 'Domain',
-            dataType: 'string',
+            dataType: Table.DATA_TYPES.STRING,
           },
           status: {
             label: 'Status',
-            dataType: 'label',
+            dataType: Table.DATA_TYPES.LABEL,
           },
           options: {
             label: '',
-            dataType: 'html',
+            dataType: Table.DATA_TYPES.HTML,
           },
         }}
       />

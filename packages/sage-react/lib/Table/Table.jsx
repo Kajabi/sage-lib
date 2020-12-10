@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import uuid from 'react-uuid';
+import { TableHelpers } from '../helpers';
 import { cellPropTypes, dataPropTypes } from './configs';
 import TableHeader from './TableHeader';
 import TableRow from './TableRow';
@@ -244,6 +245,7 @@ const Table = ({
 
 Table.Header = TableHeader;
 Table.Row = TableRow;
+Table.DATA_TYPES = TableHelpers.DATA_TYPES;
 
 Table.defaultProps = {
   className: null,

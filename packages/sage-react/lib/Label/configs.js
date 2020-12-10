@@ -4,6 +4,7 @@ export const LABEL_COLORS = {
   INFO: 'info',
   LOCKED: 'locked',
   PUBLISHED: 'published',
+  SUCCESS: 'published', // dupe alias for common usage or other contexts
   WARNING: 'warning',
 };
 

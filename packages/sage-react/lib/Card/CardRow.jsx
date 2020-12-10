@@ -13,11 +13,11 @@ const CardRow = ({
   ...rest
 }) => {
   const classNames = classnames(
-    'sage-panel__row',
+    'sage-card__row',
     className,
     {
       [`${SageClassnames.lookupGridTemplate(gridTemplate)}`]: gridTemplate,
-      [`sage-panel__row--vertical-align-${verticalAlign}`]: verticalAlign,
+      [`sage-card__row--vertical-align-${verticalAlign}`]: verticalAlign,
     }
   );
 
