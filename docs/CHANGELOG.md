@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.1.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@2.0.13...@kajabi/sage@2.1.0) (2020-12-10)
+
+
+### Bug Fixes
+
+* **feature-toggle:** added feature toggle component ([f91dba6](https://github.com/Kajabi/sage-lib/commit/f91dba644c81c56dbad806dfa7ac763d12f4494b))
+* **feature-toggle:** added styles to feature-toggle component ([cd11ad3](https://github.com/Kajabi/sage-lib/commit/cd11ad3021e0d1ab0d61f64c4c66e1ef07041dde))
+* **feature-toggle:** updated mobile styles ([04c029d](https://github.com/Kajabi/sage-lib/commit/04c029d75b3c38e3d89361d0ce67b62a7e46ed0b))
+* **feature-toggle:** updated properties ([1f5cd48](https://github.com/Kajabi/sage-lib/commit/1f5cd48b712a2ef092b7edd8b46b141e050e6cf3))
+
+
+### Features
+
+* **feature-toggle:** added feature toggle rails component ([26c1688](https://github.com/Kajabi/sage-lib/commit/26c1688d69f64143f5029d02d4b5f02158c24852))
+
+
+
+
+
 ## [2.0.13](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@2.0.12...@kajabi/sage@2.0.13) (2020-12-10)
 
 

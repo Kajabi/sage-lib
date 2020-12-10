@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.9.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.8.5...@kajabi/sage-assets@0.9.0) (2020-12-10)
+
+
+### Bug Fixes
+
+* **feature-toggle:** added feature toggle component ([f91dba6](https://github.com/Kajabi/sage-lib/commit/f91dba644c81c56dbad806dfa7ac763d12f4494b))
+* **feature-toggle:** added styles to feature-toggle component ([cd11ad3](https://github.com/Kajabi/sage-lib/commit/cd11ad3021e0d1ab0d61f64c4c66e1ef07041dde))
+* **feature-toggle:** updated mobile styles ([04c029d](https://github.com/Kajabi/sage-lib/commit/04c029d75b3c38e3d89361d0ce67b62a7e46ed0b))
+* **feature-toggle:** updated styles ([dee333e](https://github.com/Kajabi/sage-lib/commit/dee333ec601c5d01cd6c7da0305413c211534c52))
+
+
+### Features
+
+* **feature-toggle:** added feature toggle rails component ([26c1688](https://github.com/Kajabi/sage-lib/commit/26c1688d69f64143f5029d02d4b5f02158c24852))
+
+
+
+
+
 ## [0.8.5](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.8.4...@kajabi/sage-assets@0.8.5) (2020-12-10)
 
 
