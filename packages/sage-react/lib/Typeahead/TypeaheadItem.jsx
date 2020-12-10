@@ -1,14 +1,25 @@
-import React, { useState, useRef } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import uuid from 'react-uuid';
+import parse from 'html-react-parser';
 
 import { SageTokens } from '../configs';
+
+const subStringHighlight = (targetString, searchString) => {
+  return parse(
+    targetString.replace(
+      new RegExp(searchString, 'gi'), (match) =>
+        `<mark>${match}</mark>`
+      )
+  );
+};
 
 const TypeaheadItem = ({
   icon,
   title,
   subTitle,
   actions,
+  searchValue,
   ...rest
 }) => (
   <li
@@ -20,18 +31,18 @@ const TypeaheadItem = ({
         className={`sage-icon-${icon}`}
         style={{gridArea: 'icon'}}
       />
-      <div
+      <span
         className="t-sage-heading-6"
         style={{gridArea: 'title'}}
       >
-        {title}
-      </div>
-      <div
+        {subStringHighlight(title, searchValue)}
+      </span>
+      <span
         className="t-sage-body-small"
         style={{gridArea: 'subTitle'}}
       >
         {subTitle}
-      </div>
+      </span>
     </button>
     <div className="sage-typeahead__item-actions">
       {actions && actions.map(action => (
@@ -42,7 +53,8 @@ const TypeaheadItem = ({
 )
 
 TypeaheadItem.defaultProps = {
-  actions: null
+  actions: null,
+  searchValue: '',
 };
 
 TypeaheadItem.propTypes = {
