@@ -4,13 +4,13 @@ import { createFocusTrap } from 'focus-trap';
 /**
 *
 * @param {Boolean} active - React boolean state
-* @param {Function} setActive - React useState function that can be passed a boolean arg
+* @param {Function} deactivateFunc - Fires on deactivation, this is where you can set the state of your component when a click outside or `esc` happens
 * @param {ReactRef} containerRef - React ref of containing element where focus trapping occurs
 *
 */
 
-function useFocusTrap({ active, setActive, containerRef }) {
-  if (typeof active !== 'boolean' || setActive === undefined || containerRef === undefined) {
+function useFocusTrap({ active, deactivateFunc, containerRef }) {
+  if (typeof active !== 'boolean' || typeof deactivateFunc !== 'function' || containerRef === undefined) {
     throw new Error('Sage useFocusTrap Hook: missing args, see param documentation in hooks/useFocusTrap.jsx');
   }
 
@@ -21,11 +21,11 @@ function useFocusTrap({ active, setActive, containerRef }) {
     });
 
     const handleEscape = (evt) => {
-      if (evt.keyCode === 27) setActive(false);
+      if (evt.keyCode === 27) deactivateFunc();
     };
 
     const handleClickOutside = (evt) => {
-      if (!containerRef.current.contains(evt.target)) setActive(false);
+      if (!containerRef.current.contains(evt.target)) deactivateFunc();
     };
 
     const setup = () => {
@@ -40,11 +40,7 @@ function useFocusTrap({ active, setActive, containerRef }) {
       document.removeEventListener('click', handleClickOutside, false);
     };
 
-    if (active) {
-      setup();
-    } else {
-      cleanup();
-    };
+    active ? setup() : cleanup();
 
     return () => cleanup();
   }, [active, containerRef.current]);

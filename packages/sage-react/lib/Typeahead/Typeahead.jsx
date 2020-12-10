@@ -6,11 +6,11 @@ import Search from '../Search';
 import TypeaheadPanel from './TypeaheadPanel';
 import { useFocusTrap } from '../hooks';
 
-const MAXIMUM_RESULTS = 5;
 const A11Y_ID = uuid();
 
 const Typeahead = ({
   items,
+  maxResults,
   ...rest
 }) => {
   const [searchValue, setSearchValue] = useState('');
@@ -20,18 +20,20 @@ const Typeahead = ({
 
   useFocusTrap({
     active: open,
-    setActive: setOpen,
+    deactivateFunc: () => setOpen(false),
     containerRef: containerRef
   });
 
   useEffect(() => {
-    setSearchResults(
-      items.filter(item =>
-        item.title.toUpperCase().includes(
-          searchValue.toUpperCase()
-        )
-      ).slice(0, MAXIMUM_RESULTS)
-    );
+    const value = searchValue.toUpperCase(),
+          results = [];
+
+    items.forEach(item => {
+      if (results.length >= maxResults) return;
+      if (item.title.toUpperCase().includes(value)) results.push(item);
+    });
+
+    setSearchResults(results);
   }, [searchValue]);
 
   return (
@@ -68,10 +70,12 @@ const Typeahead = ({
 };
 
 Typeahead.defaultProps = {
+  maxResults: 5
 };
 
 Typeahead.propTypes = {
-  items: TypeaheadPanel.propTypes.items
+  items: TypeaheadPanel.propTypes.items,
+  maxResults: PropTypes.number
 };
 
 export default Typeahead;
