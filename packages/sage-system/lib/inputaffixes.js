@@ -9,6 +9,7 @@ Sage.inputaffixes = (() => {
   const suffixRootClass = "sage-input--suffixed";
   const fieldClass = "sage-input__field";
   const labelClass = "sage-label";
+  const labelValueClass = "sage-label__value";
   const labelColorModifier = "draft";
   const labelElement = "span";
   const inputPaddingOffset = 16;
@@ -25,14 +26,14 @@ Sage.inputaffixes = (() => {
 
     // Toggle off the affixed class
     elRoot.classList.remove(affixRootClass);
-    
+
     if (elRoot.dataset.jsInputPrefix) {
       const elLabel = makeLabel(elRoot.dataset.jsInputPrefix, 'prefix');
       elRoot.appendChild(elLabel);
       elRoot.classList.add(prefixRootClass);
       elInput.style.paddingLeft = `${elLabel.offsetWidth + inputPaddingOffset}px`;
     }
-    
+
     if (elRoot.dataset.jsInputSuffix) {
       const elLabel = makeLabel(elRoot.dataset.jsInputSuffix, 'suffix');
       elRoot.appendChild(elLabel);
@@ -44,7 +45,9 @@ Sage.inputaffixes = (() => {
   // Make the sage-label that will display the affix content
   const makeLabel = (content, type) => {
     const elLabel = document.createElement(labelElement);
-    elLabel.appendChild(document.createTextNode(content));
+    const elLabelValue = document.createElement(labelElement);
+    elLabel.appendChild(elLabelValue);
+    elLabelValue.appendChild(document.createTextNode(content));
     elLabel.setAttribute("aria-label", `${type}ed with ${content}`);
     elLabel.classList.add(
       labelClass,
@@ -52,14 +55,17 @@ Sage.inputaffixes = (() => {
       `${labelClass}--${labelColorModifier}`,
       `${affixClass}--${type}`
     );
+    elLabelValue.classList.add(
+      labelValueClass
+    );
 
     return elLabel;
   };
 
   const handleAffixClick = (ev) => {
-    if (ev.target.classList.contains(affixClass)) {
+    if (ev.target.classList.contains(labelValueClass)) {
       // Find neighboring input and focus on it
-      ev.target.parentNode.querySelector(`.${fieldClass}`).focus();
+      ev.target.parentNode.parentNode.querySelector(`.${fieldClass}`).focus();
     }
   };
 
