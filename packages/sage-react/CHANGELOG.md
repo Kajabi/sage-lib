@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.14.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.14.0...@kajabi/sage-react@0.14.1) (2020-12-10)
+
+
+### Bug Fixes
+
+* **react tooltip:** ensure we're exporting the tooltip ([a1ca94f](https://github.com/Kajabi/sage-lib/commit/a1ca94f505d9e807c2d2a5499f5a81cd9f314221))
+
+
+
+
+
 # [0.14.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.13.1...@kajabi/sage-react@0.14.0) (2020-12-10)
 
 
