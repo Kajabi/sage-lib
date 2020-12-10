@@ -17,19 +17,24 @@ const Tooltip = ({
   const [active, setActive] = useState(false);
   const [parentDomRect, setParentDomRect] = useState(null);
 
-  function handleMouseEnter(evt) {
+  function handleActivate(evt) {
     setParentDomRect(evt.target.getBoundingClientRect());
     setActive(true);
   }
 
-  function handleMouseLeave() {
+  function handleDeactivate() {
     setActive(false);
   }
 
   return (
     <>
       {Children.map(children, child => {
-        return cloneElement(child, { onMouseEnter: handleMouseEnter, onMouseLeave: handleMouseLeave });
+        return cloneElement(child, {
+          onMouseEnter: handleActivate,
+          onFocus: handleActivate,
+          onMouseLeave: handleDeactivate,
+          onBlur: handleDeactivate,
+        });
       })}
       {active && ReactDOM.createPortal(<TooltipElement parentDomRect={parentDomRect} {...rest} />, document.body) }
     </>

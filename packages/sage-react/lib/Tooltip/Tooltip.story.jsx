@@ -17,7 +17,7 @@ storiesOf('Sage/Tooltip', module)
         size={select('Sizes', Tooltip.SIZES, Tooltip.SIZES.DEFAULT)}
       >
         <Button>
-          I inherit MouseEnter &amp; MouseLeave events 👋
+          I inherit Mouse &amp; Focus events 👋
         </Button>
       </Tooltip>
     </div>

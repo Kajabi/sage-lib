@@ -61,7 +61,12 @@ const TooltipElement = ({
   }, [tooltipRef.current]);
 
   return (
-    <div ref={tooltipRef} className={classNames} style={coordinates}>
+    <div
+      role="tooltip"
+      ref={tooltipRef}
+      className={classNames}
+      style={coordinates}
+    >
       {content}
     </div>
   );
