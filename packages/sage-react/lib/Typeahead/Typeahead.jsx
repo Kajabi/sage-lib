@@ -1,11 +1,13 @@
 import React, { useState, useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import uuid from 'react-uuid';
 
 import Search from '../Search';
 import TypeaheadPanel from './TypeaheadPanel';
 import { useFocusTrap } from '../hooks';
 
 const MAXIMUM_RESULTS = 5;
+const A11Y_ID = uuid();
 
 const Typeahead = ({
   items,
@@ -36,6 +38,9 @@ const Typeahead = ({
     <div
       className="sage-typeahead"
       ref={containerRef}
+      aria-expanded={open}
+      aria-haspopup="listbox"
+      aria-owns={A11Y_ID}
       {...rest}
     >
       <Search
@@ -54,6 +59,8 @@ const Typeahead = ({
         && <TypeaheadPanel
             searchValue={searchValue}
             items={searchResults}
+            role="listbox"
+            id={A11Y_ID}
           />
       }
     </div>

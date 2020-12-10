@@ -286,11 +286,11 @@ module ObjectsHelper
         title: "typeahead",
         description: "For search and 'goto' interactions",
         use_legacy_html_code_source: false,
-        scss: "todo",
-        docs: "todo",
+        scss: "done",
+        docs: "doing",
         rails: "todo",
-        react: "todo",
-        a11y: "todo"
+        react: "done",
+        a11y: "doing"
       },
       {
         title: "upload_card",
