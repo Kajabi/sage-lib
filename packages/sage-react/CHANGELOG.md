@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.13.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.12.0...@kajabi/sage-react@0.13.0) (2020-12-10)
+
+
+### Bug Fixes
+
+* **card:** repair incorrect class on Card.Row ([19c4f50](https://github.com/Kajabi/sage-lib/commit/19c4f50fcee0f7e0385f4d018e5d1ad88e345ae4))
+
+
+### Features
+
+* **label:** add SUCCESS as alias of PUBLISHED for common use ([8d881f8](https://github.com/Kajabi/sage-lib/commit/8d881f869dd0b670e31bf9796a089fae47b77987))
+* **table:** export DATA_TYPES as a prop of Table for easy access ([43c5cc7](https://github.com/Kajabi/sage-lib/commit/43c5cc7c51dfdad7f7fadd58726c3e07798857b0))
+
+
+
+
+
 # [0.12.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.11.0...@kajabi/sage-react@0.12.0) (2020-12-09)
 
 
