@@ -1,0 +1,26 @@
+<li class="sage-feature-toggle">
+  <h3 class="sage-feature-toggle__title"><%= component.title %></h3>
+  <div class="sage-feature-toggle__content">
+    <p><%= component.description %></p>
+    <%= sage_component SageButton, {
+      value: component.link_text,
+      style: "primary",
+      subtle: true,
+      icon: { name: "launch", style: "right" },
+      css_classes: "sage-feature-toggle__content-button"
+    } %>
+  </div>
+  <%= sage_component SageSwitch, { 
+    type: "checkbox",
+    id: component.toggle_id,
+    hide_text: true,
+    label_text: component.title,
+    message: "",
+    name: component.toggle_name,
+    value: component.toggle_value,
+    css_classes: "sage-feature-toggle__switch"
+  } %>
+  <a class="sage-feature-toggle__image-link">
+    <img class="sage-feature-toggle__image" src=<%= component.image %> alt=""/>
+  </a>
+</li>
