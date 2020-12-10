@@ -1,16 +1,18 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import uuid from 'react-uuid';
 
-import { SageTokens } from '../configs';
 import Search from '../Search';
+import TypeaheadPanel from './TypeaheadPanel';
 import { useFocusTrap } from '../hooks';
+
+const MAXIMUM_RESULTS = 5;
 
 const Typeahead = ({
   items,
   ...rest
 }) => {
-  const [value, setValue] = useState('');
+  const [searchValue, setSearchValue] = useState('');
+  const [searchResults, setSearchResults] = useState([]);
   const [open, setOpen] = useState(false);
   const containerRef = useRef(null);
 
@@ -20,56 +22,39 @@ const Typeahead = ({
     containerRef: containerRef
   });
 
+  useEffect(() => {
+    setSearchResults(
+      items.filter(item =>
+        item.title.toUpperCase().includes(
+          searchValue.toUpperCase()
+        )
+      ).slice(0, MAXIMUM_RESULTS)
+    );
+  }, [searchValue]);
+
   return (
     <div
       className="sage-typeahead"
       ref={containerRef}
+      {...rest}
     >
       <Search
         contained={true}
         onChange={e => {
-          setValue(e.target.value);
+          setSearchValue(e.target.value);
           e.target.value.length ? setOpen(true) : setOpen(false);
         }}
         onClear={() => {
-          setValue('');
+          setSearchValue('');
           setOpen(false);
         }}
-        value={value}
+        value={searchValue}
       />
-      {open &&
-        <ul className="sage-typeahead__panel">
-          {items.map(item => (
-            <li
-              className="sage-typeahead__item"
-              key={uuid()}
-            >
-              <button className="sage-typeahead__item-trigger">
-                <i
-                  className={`sage-icon-${item.icon}`}
-                  style={{gridArea: 'icon'}}
-                />
-                <div
-                  className="t-sage-heading-6"
-                  style={{gridArea: 'title'}}
-                >
-                  {item.title}
-                </div>
-                <div
-                  className="t-sage-body-xsmall"
-                  style={{gridArea: 'subTitle'}}
-                >
-                  {item.subTitle}
-                </div>
-              </button>
-              <div className="sage-typeahead__item-actions">
-                {item.actions.map(action => (
-                  React.cloneElement(action, {key: uuid()})
-                ))}
-              </div>
-            </li>
-          ))}
-        </ul>
+      {open
+        && <TypeaheadPanel
+            searchValue={searchValue}
+            items={searchResults}
+          />
       }
     </div>
   );
@@ -79,14 +64,7 @@ Typeahead.defaultProps = {
 };
 
 Typeahead.propTypes = {
-  items: PropTypes.arrayOf(
-    PropTypes.shape({
-      icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),
-      title: PropTypes.string.isRequired,
-      subTitle: PropTypes.string,
-      actions: PropTypes.arrayOf(PropTypes.node),
-    })
-  ).isRequired
+  items: TypeaheadPanel.propTypes.items
 };
 
 export default Typeahead;

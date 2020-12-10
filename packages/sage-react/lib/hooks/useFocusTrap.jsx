@@ -48,6 +48,6 @@ function useFocusTrap({ active, setActive, containerRef }) {
 
     return () => cleanup();
   }, [active, containerRef.current]);
-}
+};
 
 export default useFocusTrap;

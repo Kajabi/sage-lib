@@ -21,10 +21,22 @@
   transform: translateY(4px);
 }
 
+.sage-typeahead__null-state {
+  @extend %t-sage-body-small;
+  color: sage-color(charcoal, 100);
+  text-align: center;
+  padding: sage-spacing();
+}
+
 .sage-typeahead__item {
   display: flex;
   align-items: center;
+  position: relative;
 
+
+  &:not(:first-child) {
+    border-top: sage-border();
+  }
 
   &:hover,
   &:focus-within {
@@ -34,9 +46,10 @@
 
 .sage-typeahead__item-trigger {
   @include sage-button-style-reset;
-  @include sage-focus-outline($outline-offset-block: -10px, $outline-offset-inline: -8px);
+  @include sage-focus-outline($outline-offset-block: -6px, $outline-offset-inline: -6px);
   @include sage-focus-outline--update-color(sage-color(primary));
 
+  position: unset; // Undo position defined in sage-focus-outline()
   list-style: none;
   flex-grow: 1;
   text-align: left;
@@ -51,13 +64,19 @@
   "icon title"
   "icon subTitle";
 
-  &:hover > * {
-    color: sage-color(charcoal, 500);
+  > * {
+    @include truncate;
+
+    :hover & {
+      color: sage-color(charcoal, 500);
+    }
   }
 }
 
 .sage-typeahead__item-actions {
   visibility: hidden;
+  display: flex;
+  flex-wrap: nowrap;
 
   :hover > &,
   :focus-within > & {
