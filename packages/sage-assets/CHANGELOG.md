@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.5](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.8.4...@kajabi/sage-assets@0.8.5) (2020-12-10)
+
+
+### Bug Fixes
+
+* **microphone-icon:** updated spelling for microphone icon reference ([86d3758](https://github.com/Kajabi/sage-lib/commit/86d3758afa508c93b3d65bb9205fb93977207574))
+
+
+
+
+
 ## [0.8.4](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.8.3...@kajabi/sage-assets@0.8.4) (2020-12-10)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.13](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@2.0.12...@kajabi/sage@2.0.13) (2020-12-10)
+
+
+### Bug Fixes
+
+* **microphone-icon:** updated spelling for microphone icon reference ([86d3758](https://github.com/Kajabi/sage-lib/commit/86d3758afa508c93b3d65bb9205fb93977207574))
+
+
+
+
+
 ## [2.0.12](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@2.0.11...@kajabi/sage@2.0.12) (2020-12-10)
 
 **Note:** Version bump only for package @kajabi/sage
