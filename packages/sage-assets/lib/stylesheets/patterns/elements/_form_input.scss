@@ -49,6 +49,10 @@ $-input-transition: border 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
   top: sage-spacing(xs);
   z-index: sage-z-index(default, 1);
 
+  &.sage-label {
+    position: absolute;
+  }
+
   &:hover {
     cursor: default;
   }
