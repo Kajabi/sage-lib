@@ -1,0 +1,28 @@
+<div class="sage-typeahead">
+  <%= sage_component SageSearch, {
+    placeholder: "Search Products",
+    value: nil,
+    contained: true,
+    label_text: "Search"
+  } %>
+  <ul class="sage-typeahead__panel">
+    <% component.items.each do |item| %>
+      <li class="sage-typeahead__item">
+      <button class="sage-typeahead__item-trigger">
+        <i class="sage-icon-<%= item[:icon] %>" style="grid-area: icon;"></i>
+        <div class="t-sage-heading-6" style="grid-area: title;">
+          <%= item[:title] %>
+        </div>
+        <div class="t-sage-body-small" style="grid-area: subTitle;">
+          <%= item[:sub_title] %>
+        </div>
+      </button>
+      <div class="sage-typeahead__item-actions">
+        <% item[:actions].each do |action| %>
+          <%= action.html_safe %>
+        <% end %>
+      </div>
+    </li>
+    <% end %>
+  </ul>
+</div>

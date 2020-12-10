@@ -283,6 +283,16 @@ module ObjectsHelper
         a11y: "todo"
       },
       {
+        title: "typeahead",
+        description: "For search and 'goto' interactions",
+        use_legacy_html_code_source: false,
+        scss: "todo",
+        docs: "todo",
+        rails: "todo",
+        react: "todo",
+        a11y: "todo"
+      },
+      {
         title: "upload_card",
         description: "The Upload Card provides a visually pleasing lockup for a file upload field along with other helpful controls.",
         use_legacy_html_code_source: true,

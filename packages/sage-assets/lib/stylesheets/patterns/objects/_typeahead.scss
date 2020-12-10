@@ -9,23 +9,24 @@
 }
 
 .sage-typeahead__panel {
-  border: sage-border();
-  background-color: sage-color(white);
-  border-radius: sage-border(radius);
-  box-shadow: sage-shadow(md);
   z-index: sage-z-index(nav);
   position: absolute;
   left: 0;
   right: 0;
+  transform: translateY(#{sage-spacing(2xs)});
   padding: 0;
-  transform: translateY(4px);
+  list-style: none;
+  border: sage-border();
+  background-color: sage-color(white);
+  border-radius: sage-border(radius);
+  box-shadow: sage-shadow(md);
 }
 
 .sage-typeahead__null-state {
   @extend %t-sage-body-small;
+  padding: sage-spacing();
   color: sage-color(charcoal, 100);
   text-align: center;
-  padding: sage-spacing();
 }
 
 .sage-typeahead__item {
@@ -49,20 +50,18 @@
   @include sage-focus-outline($outline-offset-block: -6px, $outline-offset-inline: -6px);
   @include sage-focus-outline--update-color(sage-color(primary));
 
-  position: unset; // Undo position defined in sage-focus-outline()
-  list-style: none;
-  flex-grow: 1;
-  text-align: left;
-
-  padding: sage-spacing(sm);
   display: grid;
+  position: unset; // Undo position defined in sage-focus-outline()
+  flex-grow: 1;
+  grid-template-areas:
+    "icon title"
+    "icon subTitle";
   grid-template-columns: min-content 1fr;
   grid-template-rows: 1fr;
   column-gap: sage-spacing(sm);
   align-items: center;
-  grid-template-areas:
-  "icon title"
-  "icon subTitle";
+  padding: sage-spacing(sm);
+  text-align: left;
 
   > * {
     @include truncate;
