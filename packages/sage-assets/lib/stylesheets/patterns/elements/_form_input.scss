@@ -49,7 +49,8 @@ $-input-transition: border 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
   top: sage-spacing(xs);
   z-index: sage-z-index(default, 1);
 
-  &.sage-label {
+  .sage-input--suffixed &,
+  .sage-input--prefixed & {
     position: absolute;
   }
 
@@ -89,6 +90,7 @@ $-input-transition: border 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
   .sage-input--prefixed & {
     transform: translateY(calc(#{$-input-text-height} * -1)) translateX(30px);
     z-index: sage-z-index(default, 2);
+    position: absolute;
   }
 }
 
