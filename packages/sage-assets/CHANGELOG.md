@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.4](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.8.3...@kajabi/sage-assets@0.8.4) (2020-12-10)
+
+
+### Bug Fixes
+
+* **input affix:** adjusts css positioning for labels for affixed inputs ([f2fdc34](https://github.com/Kajabi/sage-lib/commit/f2fdc3413f5c1433becd525bd93d572f7422eccd))
+* **input affix:** styling update based on review ([6e34777](https://github.com/Kajabi/sage-lib/commit/6e34777c1a29ce498961e970c62a4768ab6c0d50))
+
+
+
+
+
 ## [0.8.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.8.2...@kajabi/sage-assets@0.8.3) (2020-12-09)
 
 **Note:** Version bump only for package @kajabi/sage-assets

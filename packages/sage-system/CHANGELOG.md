@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.37](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.0.36...@kajabi/sage-system@0.0.37) (2020-12-10)
+
+
+### Bug Fixes
+
+* **input affix:** fixes structure of labels for affix inputs ([660167c](https://github.com/Kajabi/sage-lib/commit/660167c9b71182044a2c7842a683627dabc5ef09))
+
+
+
+
+
 ## [0.0.36](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.0.35...@kajabi/sage-system@0.0.36) (2020-11-30)
 
 
