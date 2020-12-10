@@ -14,7 +14,10 @@ const TypeaheadPanel = ({
                       "{searchValue}"
                     </p>;
   return (
-    <ul className="sage-typeahead__panel" {...rest}>
+    <ul
+      className="sage-typeahead__panel"
+      {...rest}
+    >
       {(items.length > 0)
         ? items.map(item => <TypeaheadItem {...item} key={uuid()} searchValue={searchValue} />)
         : NullState

@@ -59,8 +59,12 @@ const Typeahead = ({
       />
       {open
         && <TypeaheadPanel
-            searchValue={searchValue}
             items={searchResults}
+            onClick={(evt) =>
+              evt.target.closest('button')
+              && setOpen(false)
+            }
+            searchValue={searchValue}
             role="listbox"
             id={A11Y_ID}
           />

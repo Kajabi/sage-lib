@@ -22,11 +22,12 @@ const TypeaheadItem = ({
   searchValue,
   ...rest
 }) => (
-  <li
-    className="sage-typeahead__item"
-    {...rest}
-  >
-    <button className="sage-typeahead__item-trigger">
+  <li className="sage-typeahead__item">
+    <button
+      className="sage-typeahead__item-trigger"
+      type="button"
+      {...rest}
+    >
       <i
         className={`sage-icon-${icon}`}
         style={{gridArea: 'icon'}}
