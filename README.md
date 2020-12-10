@@ -159,6 +159,10 @@ Proxy for the Lerna [bootstrap](https://github.com/lerna/lerna/tree/master/comma
 
 Creates a local "bridge" between your local Sage packages and the Kajabi Products repo. Use this bridge when you want to be able to locally edit changes in Sage and see them live in Kajabi Products.
 
+### `bridge:kajabi-products:status`
+
+Displays the status of the local bridge link
+
 ### `bridge:kajabi-products:destroy` :star:
 
 Destroys the bridge created by `bridge:kajabi-products`
@@ -308,4 +312,3 @@ See [CICD.md](readme/CICD.md)
 ## License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-

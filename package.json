@@ -32,6 +32,7 @@
   "scripts": {
     "bootstrap": "yarn lerna bootstrap",
     "bridge:kajabi-products": "bin/bridge.sh true",
+    "bridge:kajabi-products:status": "bin/bridge.sh status",
     "bridge:kajabi-products:destroy": "bin/bridge.sh false",
     "build": "yarn npm-run-all --parallel build:*",
     "build:assets": "cd packages/sage-assets && yarn build",
