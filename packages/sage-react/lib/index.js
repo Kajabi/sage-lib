@@ -48,5 +48,6 @@ export {
   Switch,
   Toggle,
 } from './Toggle';
+export { default as Tooltip } from './Tooltip';
 export { default as Type } from './Type';
 export { default as UploadCard } from './UploadCard';
