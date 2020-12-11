@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.15.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.15.2...@kajabi/sage-react@0.15.3) (2020-12-11)
+
+
+### Bug Fixes
+
+* **loader:** updated properties references ([baad883](https://github.com/Kajabi/sage-lib/commit/baad8835c84167ebe6fc02eca9491b3c0b13bd15))
+
+
+
+
+
 ## [0.15.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.15.1...@kajabi/sage-react@0.15.2) (2020-12-11)
 
 
