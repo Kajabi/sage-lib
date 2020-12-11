@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.5](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.0.4...@kajabi/sage@3.0.5) (2020-12-11)
+
+
+### Bug Fixes
+
+* **modal:** resolve invalid property reference ([6dd24c6](https://github.com/Kajabi/sage-lib/commit/6dd24c6da8c1abb36f9fa9bdce758a5c1580b625))
+
+
+
+
+
 ## [3.0.4](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.0.3...@kajabi/sage@3.0.4) (2020-12-11)
 
 **Note:** Version bump only for package @kajabi/sage
