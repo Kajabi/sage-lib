@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.15.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.15.1...@kajabi/sage-react@0.15.2) (2020-12-11)
+
+
+### Bug Fixes
+
+* **dropdown:** do not render a dropdown panel when a dropdown is closed ([d500b6b](https://github.com/Kajabi/sage-lib/commit/d500b6be9069d3d5c497de94dd1d466bc4b974cc))
+* **dropdown:** remove unused isActive prop ([b5fba27](https://github.com/Kajabi/sage-lib/commit/b5fba273980ef00f551bb8b70862dfe65b629f7c))
+
+
+
+
+
 ## [0.15.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.15.0...@kajabi/sage-react@0.15.1) (2020-12-11)
 
 
