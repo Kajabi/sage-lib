@@ -8,7 +8,7 @@ const Loader = ({
   hideWhenDone,
   label,
   loading,
-  shape,
+  type,
   className,
   ...rest
 }) => {
@@ -17,7 +17,7 @@ const Loader = ({
     className,
     {
       'sage-loader--fill': fillSpace,
-      [`sage-loader--${shape}`]: shape,
+      [`sage-loader--${type}`]: type,
       'visually-hidden': !loading && hideWhenDone,
     }
   );
@@ -31,7 +31,7 @@ const Loader = ({
   return (
     <div className={classNames} data-loading={loading} {...ariaAttrs} {...rest}>
       {
-        (shape === LOADER_SHAPES.SPINNER )
+        (type === LOADER_SHAPES.SPINNER )
         && (
         <svg class="spinner" viewBox="25 25 50 50" >
           <defs>
@@ -55,7 +55,7 @@ Loader.defaultProps = {
   fillSpace: false,
   label: 'Loading content',
   hideWhenDone: true,
-  shape: LOADER_SHAPES.BAR,
+  type: LOADER_SHAPES.BAR,
 };
 
 Loader.propTypes = {
@@ -64,7 +64,7 @@ Loader.propTypes = {
   hideWhenDone: PropTypes.bool,
   label: PropTypes.string,
   loading: PropTypes.bool.isRequired,
-  shape: PropTypes.oneOf(Object.values(LOADER_SHAPES)),
+  type: PropTypes.oneOf(Object.values(LOADER_SHAPES)),
 };
 
 export default Loader;

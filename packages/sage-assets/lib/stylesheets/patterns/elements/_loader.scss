@@ -58,12 +58,12 @@ $-loader-spinner-path-speed: 1.5s;
   }
 
   &::before {
-    background: sage-color(primary, 300);
+    background-color: sage-color(primary, 300);
     animation: loader-bar $-loader-bar-speed linear infinite;
   }
 
   &::after {
-    background: sage-color(primary, 300);
+    background-color: sage-color(primary, 300);
     animation: loader-bar $-loader-bar-speed $-loader-bar-speed-delay linear infinite;
   }
 }
