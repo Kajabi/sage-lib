@@ -31,7 +31,7 @@ const Panel = ({
   return (
     <div className={classNames} {...rest}>
       {loading ? (
-        <Loader loading={true} fillSpace={true} shape={Loader.SHAPES.SPINNER} />
+        <Loader loading={true} fillSpace={true} type={Loader.TYPES.SPINNER} />
       ) : children}
     </div>
   );
