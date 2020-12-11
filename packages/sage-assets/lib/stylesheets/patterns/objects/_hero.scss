@@ -7,10 +7,10 @@
 
 $-hero-min-height: 268px;
 $-hero-icon-size: 1.5rem;
-$-hero-mobile-aspect-ratio: 56.25%;
+$-hero-mobile-aspect-ratio: calc(100% * 9 / 16);
 $-hero-artwork-size: rem(56px);
-$-sage-hero-play-icon-background-color: rgba(255, 255, 255, 0.8);
-$-sage-hero-play-icon-background-color-hover: rgba(255, 255, 255, 1);
+$-hero-play-icon-background-color: rgba(255, 255, 255, 0.8);
+$-hero-play-icon-background-color-hover: rgba(255, 255, 255, 1);
 
 .sage-hero {
   display: grid;
@@ -93,12 +93,12 @@ $-sage-hero-play-icon-background-color-hover: rgba(255, 255, 255, 1);
     width: $-hero-artwork-size;
     height: $-hero-artwork-size;
     border-radius: 50%;
-    background-color: $-sage-hero-play-icon-background-color;
+    background-color: $-hero-play-icon-background-color;
     transition: background-color 0.2s ease;
   }
 
   &:hover::after {
-    background-color: $-sage-hero-play-icon-background-color-hover;
+    background-color: $-hero-play-icon-background-color-hover;
   }
 }
 
