@@ -5,12 +5,18 @@
 
 ================================================== */
 
+$-hero-min-height: 268px;
 $-hero-icon-size: 1.5rem;
+$-hero-mobile-aspect-ratio: 56.25%;
+$-hero-artwork-size: rem(56px); 
+$-sage-hero-play-icon-background-color: rgba(255, 255, 255, 0.8);
+$-sage-hero-play-icon-background-color-hover: rgba(255, 255, 255, 1);
 
 .sage-hero {
   display: grid;
   grid-column-gap: sage-spacing(md);
   grid-row-gap: sage-spacing(md);
+  min-height: $-hero-min-height;
   overflow: hidden;
   border-radius: sage-border(radius);
   box-shadow: sage-shadow(sm);
@@ -20,11 +26,12 @@ $-hero-icon-size: 1.5rem;
       "artwork"
       "title"
       "content";
-    grid-template-rows: rem(120px) min-content;
+    grid-template-rows: min-content min-content;
   }
 
   @media (min-width: sage-breakpoint(md-min)) {
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content;
     grid-template-areas:
       "title artwork"
       "content artwork";
@@ -39,7 +46,6 @@ $-hero-icon-size: 1.5rem;
   @media (max-width: sage-breakpoint(sm-max)) {
     padding: 0 sage-spacing(md);
   }
-
 
   @media (min-width: sage-breakpoint(md-min)) {
     margin-top: sage-spacing(md);
@@ -60,16 +66,9 @@ $-hero-icon-size: 1.5rem;
   position: relative;
   overflow: hidden;
 
-  img {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
-
-    @media (min-width: sage-breakpoint(md-min)) {
-      height: 100%;
-      object-fit: cover;
-    }
+  @media (max-width: sage-breakpoint(sm-max)) {
+    height: 0;
+    padding-top: 56.25%; /* 16:9 aspect ratio */
   }
 
   &::before {
@@ -91,14 +90,26 @@ $-hero-icon-size: 1.5rem;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 56px;
-    height: 56px;
+    width: $-hero-artwork-size;
+    height: $-hero-artwork-size;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.8);
-    transition: 0.2s background-color ease;
+    background-color: $-sage-hero-play-icon-background-color;
+    transition: background-color 0.2s ease;
   }
 
   &:hover::after {
-    background-color: rgba(255, 255, 255, 1);
+    background-color: $-sage-hero-play-icon-background-color-hover;
+  }
+}
+
+.sage-hero__artwork-image {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+
+  @media (min-width: sage-breakpoint(md-min)) {
+    height: 100%;
+    object-fit: cover;
   }
 }

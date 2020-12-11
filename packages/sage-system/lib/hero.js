@@ -1,7 +1,7 @@
 Sage.hero = (function() {
 
   // ==================================================
-  // Variables
+  // Variablesp
   // ==================================================
 
   const SELECTOR_DISMISS_TRIGGER = 'data-js-hero--dismiss';
@@ -38,7 +38,6 @@ Sage.hero = (function() {
     const el = evt.target;
 
     if (el.hasAttribute(SELECTOR_DISMISS_TRIGGER)) {
-      console.log(el);
       elParent.remove();
     }
   }
