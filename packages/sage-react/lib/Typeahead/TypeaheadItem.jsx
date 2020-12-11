@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import uuid from 'react-uuid';
 import parse from 'html-react-parser';
 
+import Link from '../Link';
 import { SageTokens } from '../configs';
 
 const subStringHighlight = (targetString, searchString) => {
@@ -23,9 +24,8 @@ const TypeaheadItem = ({
   ...rest
 }) => (
   <li className="sage-typeahead__item">
-    <button
+    <Link
       className="sage-typeahead__item-trigger"
-      type="button"
       {...rest}
     >
       <i
@@ -44,7 +44,7 @@ const TypeaheadItem = ({
       >
         {subTitle}
       </span>
-    </button>
+    </Link>
     <div className="sage-typeahead__item-actions">
       {actions && actions.map(action => (
         React.cloneElement(action, {key: uuid()})

@@ -106,8 +106,14 @@
 /// @param {length} $outline-width [2px] Thickness of the focus ring itself
 /// @param {length} $outline-offset-block [4px] How far the focus ring is offset from the object on the y axis (block)
 /// @param {length} $outline-offset-inline [4px] How far the focus ring is offset from the object on the x axis (inline)
+/// @param {time} $outline-animation-speed [0.2s] How quickly the focus ring animates on activation
 ///
-@mixin sage-focus-outline($outline-width: 2px, $outline-offset-block: 4px, $outline-offset-inline: 4px) {
+@mixin sage-focus-outline(
+  $outline-width: 2px,
+  $outline-offset-block: 4px,
+  $outline-offset-inline: 4px,
+  $outline-animation-speed: 0.2s
+) {
   position: relative;
 
   &:focus,
@@ -128,7 +134,9 @@
     height: calc(100% + #{$-offset-block});
     border: $outline-width solid transparent;
     border-radius: sage-border(radius-large);
-    transition: opacity 0.15s ease-out 0.05s, transform 0.2s ease-in-out;
+    transition:
+      opacity ($outline-animation-speed * 0.75) ease-out ($outline-animation-speed * 0.25),
+      transform $outline-animation-speed ease-in-out;
     pointer-events: none;
     opacity: 0;
   }

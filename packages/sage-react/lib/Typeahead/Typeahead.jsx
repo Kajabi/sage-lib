@@ -11,6 +11,7 @@ const A11Y_ID = uuid();
 const Typeahead = ({
   items,
   maxResults,
+  placeholder,
   ...rest
 }) => {
   const [searchValue, setSearchValue] = useState('');
@@ -20,21 +21,31 @@ const Typeahead = ({
 
   useFocusTrap({
     active: open,
-    deactivateFunc: () => setOpen(false),
-    containerRef: containerRef
+    containerRef: containerRef,
+    onDeactivate: () => setOpen(false),
   });
 
   useEffect(() => {
-    const value = searchValue.toUpperCase(),
-          results = [];
+    const _value = searchValue.toUpperCase(),
+          _results = [];
 
+    console.log('Typeahead Items:', items);
     items.forEach(item => {
-      if (results.length >= maxResults) return;
-      if (item.title.toUpperCase().includes(value)) results.push(item);
+      if (_results.length >= maxResults) return;
+      if (item.title.toUpperCase().includes(_value)) _results.push(item);
     });
-
-    setSearchResults(results);
+    setSearchResults(_results);
   }, [searchValue]);
+
+  const onSearchInteraction = (evt) => {
+    setSearchValue(evt.target.value);
+    evt.target.value.length ? setOpen(true) : setOpen(false);
+  }
+
+  const onSearchClear = () => {
+    setSearchValue('');
+    setOpen(false);
+  }
 
   return (
     <div
@@ -47,23 +58,19 @@ const Typeahead = ({
     >
       <Search
         contained={true}
-        onChange={e => {
-          setSearchValue(e.target.value);
-          e.target.value.length ? setOpen(true) : setOpen(false);
-        }}
-        onClear={() => {
-          setSearchValue('');
-          setOpen(false);
-        }}
+        placeholder={placeholder}
         value={searchValue}
+        onChange={onSearchInteraction}
+        onKeyDown={(evt) => (evt.which === 13) && onSearchInteraction(evt)}
+        onClear={onSearchClear}
       />
       {open
         && <TypeaheadPanel
             items={searchResults}
-            onClick={(evt) =>
-              evt.target.closest('button')
-              && setOpen(false)
-            }
+            // onClick={(evt) =>
+            //   evt.target.closest('button, a')
+            //   && setOpen(false)
+            // }
             searchValue={searchValue}
             role="listbox"
             id={A11Y_ID}
@@ -74,12 +81,15 @@ const Typeahead = ({
 };
 
 Typeahead.defaultProps = {
+  items: [],
+  placeholder: null,
   maxResults: 5
 };
 
 Typeahead.propTypes = {
   items: TypeaheadPanel.propTypes.items,
-  maxResults: PropTypes.number
+  maxResults: PropTypes.number,
+  placeholder: PropTypes.string,
 };
 
 export default Typeahead;
