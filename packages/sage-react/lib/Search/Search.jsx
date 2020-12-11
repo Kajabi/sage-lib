@@ -27,7 +27,7 @@ const Search = ({
         placeholder={`${placeholder}…`}
         value={value}
         // Prevents the default Kajabi-Products Search.js from binding to this input
-        data-js-disable-search
+        data-kjb-disable-search
         {...rest}
       />
     </div>

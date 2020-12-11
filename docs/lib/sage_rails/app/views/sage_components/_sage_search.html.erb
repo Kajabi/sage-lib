@@ -1,10 +1,12 @@
-<div
+<form
   role="search"
   class=" sage-search
   <%= "sage-search--contained" if component.contained %>
   "
   data-js-search
 
+  <%# Prevents the default Kajabi-Products Search.js from binding to this input %>
+  data-kjb-disable-search
 >
   <label for="<%= component.id %>" class="sage-search__label">
     <%= component.label_text %>
@@ -21,10 +23,13 @@
     style: "secondary",
     css_classes: "sage-search__reset-button",
     subtle: true,
+    attributes: {
+      "data-js-search-clear": ""
+    },
     icon: {
       style: "only",
       name: "remove"
     }
   } %>
 
-</div>
+</form>
