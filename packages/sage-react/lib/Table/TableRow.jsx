@@ -39,7 +39,7 @@ const TableRow = ({
   return (
     <tr className={classNames} data-table-row-id={id}>
       {selectable && (
-        <td>
+        <td className="sage-table-cell sage-table-cell--checkbox">
           <Checkbox
             checked={selfSelected}
             id={`sage-table__row-selector-${id}`}
@@ -70,8 +70,16 @@ const TableRow = ({
           style = style ? style : schemaStyle;
         }
 
+        const cellClassnames = classnames(
+          'sage-table-cell',
+          className,
+          {
+            [`sage-table-cell--${dataType}`]: dataType,
+          }
+        )
+
         return (
-          <td key={uuid()} className={className} style={style} {...attributes}>
+          <td key={uuid()} className={cellClassnames} style={style} {...attributes}>
             {renderCellData(value, dataType)}
           </td>
         );
