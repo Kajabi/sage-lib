@@ -289,6 +289,14 @@ $-table-sort-indicator-direction: rem(7px);
   text-overflow: ellipsis;
 }
 
+.sage-table-cell--checkbox {
+  width: rem(64px);
+}
+
+.sage-table-cell--avatar {
+  width: rem(52px);
+}
+
 .sage-table-cell--align-right {
   text-align: right;
 }
