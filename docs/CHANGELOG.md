@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.0.0...@kajabi/sage@3.0.1) (2020-12-11)
+
+
+### Bug Fixes
+
+* **loader:** cleanup additional property references ([5531499](https://github.com/Kajabi/sage-lib/commit/55314993a637874a96fd32cb83288c5d252f2cef))
+* **loader:** cleanup property references ([0c2bdd2](https://github.com/Kajabi/sage-lib/commit/0c2bdd2ce4e2e9150a258e5d846ab494b4fd4eae))
+* **loader:** improved accessibility ([b6d178c](https://github.com/Kajabi/sage-lib/commit/b6d178c4c0f78281779719923eccab2f534e733b))
+* **loader:** update loader styles ([e8cc42a](https://github.com/Kajabi/sage-lib/commit/e8cc42a55cae05d3a05d97c207d4b0e714fe6048))
+* **loader:** update loader styles ([3f35ed2](https://github.com/Kajabi/sage-lib/commit/3f35ed2eb4034d8024ad06b930f226b3578a16ba))
+* **loader:** updated args to match between rails and react ([bfb508e](https://github.com/Kajabi/sage-lib/commit/bfb508e851744fe242992ca71d99c9e504b9a56b))
+* **loader:** updated Rails component config ([6bd8482](https://github.com/Kajabi/sage-lib/commit/6bd848209459a381fc9207c58c41fbcb49777b31))
+* **loader:** updated react component ([0baa773](https://github.com/Kajabi/sage-lib/commit/0baa773e90d81053f72200c52ec90eeb6ac8320b))
+* **loader:** updated renamed properties ([2cd040d](https://github.com/Kajabi/sage-lib/commit/2cd040db481143f3082a91797fd5c39781e52edc))
+
+
+
+
+
 # [3.0.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@2.1.0...@kajabi/sage@3.0.0) (2020-12-11)
 
 
