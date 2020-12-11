@@ -119,15 +119,16 @@ const Dropdown = ({
       >
         {customTrigger}
       </DropdownTrigger>
-      <DropdownPanel
-        isActive={isActive}
-        modifier={panelModifier}
-        onClickScreen={onClickScreen}
-        onExit={onExit}
-        coords={coords}
-      >
-        {children}
-      </DropdownPanel>
+      {isActive && (
+        <DropdownPanel
+          modifier={panelModifier}
+          onClickScreen={onClickScreen}
+          onExit={onExit}
+          coords={coords}
+        >
+          {children}
+        </DropdownPanel>
+      )}
     </div>
   );
 };
