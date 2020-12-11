@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.1.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.0.37...@kajabi/sage-system@0.1.0) (2020-12-11)
+
+
+### Features
+
+* **search component:** migrate KJB's search.js into Sage ([056c2f8](https://github.com/Kajabi/sage-lib/commit/056c2f8ff0d37de8be0b2cb4eafc1ee7fe38f150))
+
+
+### BREAKING CHANGES
+
+* **search component:** Breaking change because of rename of KJB's search.js data-attr that excludes the
+new Sage search fields from being bound by old script
+
+BUILD-447
+
+
+
+
+
 ## [0.0.37](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.0.36...@kajabi/sage-system@0.0.37) (2020-12-10)
 
 

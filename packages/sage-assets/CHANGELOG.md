@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.10.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.9.0...@kajabi/sage-assets@0.10.0) (2020-12-11)
+
+
+### Bug Fixes
+
+* **sage search styles:** fix broken search border-radius when it exists outside of panel-controls ([ebc74e7](https://github.com/Kajabi/sage-lib/commit/ebc74e7e677af4ef13ad40defb4837e33b17b5a9))
+
+
+### Features
+
+* **search component:** migrate KJB's search.js into Sage ([056c2f8](https://github.com/Kajabi/sage-lib/commit/056c2f8ff0d37de8be0b2cb4eafc1ee7fe38f150))
+
+
+### BREAKING CHANGES
+
+* **search component:** Breaking change because of rename of KJB's search.js data-attr that excludes the
+new Sage search fields from being bound by old script
+
+BUILD-447
+
+
+
+
+
 # [0.9.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.8.5...@kajabi/sage-assets@0.9.0) (2020-12-10)
 
 
