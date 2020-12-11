@@ -202,12 +202,12 @@ $-table-sort-indicator-direction: rem(7px);
 .sage-table-wrapper {
   position: relative;
 
-  .sage-panel > & {
+  .sage-panel & {
     margin-left: -1 * $-table-cell-padding-panel;
     margin-right: -1 * $-table-cell-padding-panel;
   }
 
-  .sage-card > & {
+  .sage-card & {
     margin-left: -1 * $-table-cell-padding-card;
     margin-right: -1 * $-table-cell-padding-card;
 
