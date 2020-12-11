@@ -1,4 +1,4 @@
-export const LOADER_SHAPES = {
+export const LOADER_TYPES = {
   BAR: 'bar',
   SPINNER: 'spinner',
 };

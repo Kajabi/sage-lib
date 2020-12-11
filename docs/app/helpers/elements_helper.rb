@@ -154,12 +154,12 @@ module ElementsHelper
       {
         title: "loader",
         description: "Stylized loading animations for use with elements or objects",
-        use_legacy_html_code_source: true,
+        use_legacy_html_code_source: false,
         scss: "done",
         docs: "done",
-        rails: "no",
-        react: "no",
-        a11y: "todo"
+        rails: "yes",
+        react: "yes",
+        a11y: "done"
       },
       {
         title: "meter",

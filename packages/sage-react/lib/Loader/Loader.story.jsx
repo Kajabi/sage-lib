@@ -14,7 +14,7 @@ storiesOf('Sage/Loader', module)
       <Card>
           <Loader
             loading={boolean('Loading', true)}
-            shape={options('Shape', Loader.SHAPES, Loader.SHAPES.BAR, { display: 'inline-radio' })}
+            type={options('Type', Loader.TYPES, Loader.TYPES.BAR, { display: 'inline-radio' })}
             fillSpace={boolean('Fill space', true)}
           />
       </Card>

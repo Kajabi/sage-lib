@@ -1,12 +1,12 @@
 <div class="sage-row">
   <div class="sage-col--md-6 example__block--lg">
-    <%= render "examples/elements/loader/markup",
-      loader_type: "bar"
-    %>
+    <%= sage_component SageLoader, {
+      type: "bar"
+    } %>
   </div>
   <div class="sage-col--md-6 example__block--lg">
-    <%= render "examples/elements/loader/markup",
-      loader_type: "spinner"
-    %>
+    <%= sage_component SageLoader, {
+      type: "spinner"
+    } %>
   </div>
 </div>
