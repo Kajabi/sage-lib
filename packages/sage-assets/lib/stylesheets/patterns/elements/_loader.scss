@@ -68,13 +68,13 @@ $-loader-spinner-path-speed: 1.5s;
   }
 }
 
-.spinner {
+.sage-loader__spinner {
   width: sage-spacing(xl);
   height: sage-spacing(xl);
   animation: rotate $-loader-spinner-speed linear infinite;
 }
 
-.spinner-path {
+.sage-loader__spinner-path {
   stroke-dasharray: 150,200;
   stroke-dashoffset: -10;
   stroke-linecap: round;

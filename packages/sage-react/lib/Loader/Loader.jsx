@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { LOADER_SHAPES } from './configs';
+import { LOADER_TYPES } from './configs';
 
 const Loader = ({
   fillSpace,
@@ -31,16 +31,16 @@ const Loader = ({
   return (
     <div className={classNames} data-loading={loading} {...ariaAttrs} {...rest}>
       {
-        (type === LOADER_SHAPES.SPINNER )
+        (type === LOADER_TYPES.SPINNER )
         && (
-        <svg class="spinner" viewBox="25 25 50 50" >
+        <svg class="sage-loader__spinner" viewBox="25 25 50 50" >
           <defs>
             <linearGradient id="linear" x1="0%" y1="0%" x2="100%" y2="0%">
               <stop offset="0%"   stop-color="#0072EF"/>
               <stop offset="100%" stop-color="#4fc9c5"/>
             </linearGradient>
           </defs>
-          <circle class="spinner-path" cx="50" cy="50" r="20" fill="none" stroke="url(#linear)" stroke-width="4" />
+          <circle class="sage-loader__spinner-path" cx="50" cy="50" r="20" fill="none" stroke="url(#linear)" stroke-width="4" />
         </svg>
       )}
       <span class="visually-hidden">{label}</span>
@@ -48,14 +48,14 @@ const Loader = ({
   );
 };
 
-Loader.SHAPES = LOADER_SHAPES;
+Loader.TYPES = LOADER_TYPES;
 
 Loader.defaultProps = {
   className: '',
   fillSpace: false,
   label: 'Loading content',
   hideWhenDone: true,
-  type: LOADER_SHAPES.BAR,
+  type: LOADER_TYPES.BAR,
 };
 
 Loader.propTypes = {
@@ -64,7 +64,7 @@ Loader.propTypes = {
   hideWhenDone: PropTypes.bool,
   label: PropTypes.string,
   loading: PropTypes.bool.isRequired,
-  type: PropTypes.oneOf(Object.values(LOADER_SHAPES)),
+  type: PropTypes.oneOf(Object.values(LOADER_TYPES)),
 };
 
 export default Loader;
