@@ -11,7 +11,7 @@
       <%= component.content %>
     <% else %>
       <%= sage_component SageModalContent, {} do %>
-        <%= sage_component SageLoader, { style: "spinner" } %>
+        <%= sage_component SageLoader, { type: "spinner" } %>
       <% end %>
     <% end %>
   </section>
