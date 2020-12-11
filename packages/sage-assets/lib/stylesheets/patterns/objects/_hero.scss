@@ -26,7 +26,7 @@ $-sage-hero-play-icon-background-color-hover: rgba(255, 255, 255, 1);
       "artwork"
       "title"
       "content";
-    grid-template-rows: min-content min-content;
+    grid-template-rows: min-content;
   }
 
   @media (min-width: sage-breakpoint(md-min)) {
@@ -68,7 +68,7 @@ $-sage-hero-play-icon-background-color-hover: rgba(255, 255, 255, 1);
 
   @media (max-width: sage-breakpoint(sm-max)) {
     height: 0;
-    padding-top: 56.25%; /* 16:9 aspect ratio */
+    padding-top: $-hero-mobile-aspect-ratio;
   }
 
   &::before {
