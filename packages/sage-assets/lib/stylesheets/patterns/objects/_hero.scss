@@ -8,7 +8,7 @@
 $-hero-min-height: 268px;
 $-hero-icon-size: 1.5rem;
 $-hero-mobile-aspect-ratio: 56.25%;
-$-hero-artwork-size: rem(56px); 
+$-hero-artwork-size: rem(56px);
 $-sage-hero-play-icon-background-color: rgba(255, 255, 255, 0.8);
 $-sage-hero-play-icon-background-color-hover: rgba(255, 255, 255, 1);
 
@@ -16,8 +16,8 @@ $-sage-hero-play-icon-background-color-hover: rgba(255, 255, 255, 1);
   display: grid;
   grid-column-gap: sage-spacing(md);
   grid-row-gap: sage-spacing(md);
-  min-height: $-hero-min-height;
   overflow: hidden;
+  min-height: $-hero-min-height;
   border-radius: sage-border(radius);
   box-shadow: sage-shadow(sm);
 
