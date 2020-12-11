@@ -33,17 +33,17 @@ const Loader = ({
       {
         (type === LOADER_TYPES.SPINNER )
         && (
-        <svg class="sage-loader__spinner" viewBox="25 25 50 50" >
+        <svg className="sage-loader__spinner" viewBox="25 25 50 50" >
           <defs>
             <linearGradient id="linear" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%"   stop-color="#0072EF"/>
-              <stop offset="100%" stop-color="#4fc9c5"/>
+              <stop offset="0%"   stopColor="#0072EF"/>
+              <stop offset="100%" stopColor="#4fc9c5"/>
             </linearGradient>
           </defs>
-          <circle class="sage-loader__spinner-path" cx="50" cy="50" r="20" fill="none" stroke="url(#linear)" stroke-width="4" />
+          <circle className="sage-loader__spinner-path" cx="50" cy="50" r="20" fill="none" stroke="url(#linear)" strokeWidth="4" />
         </svg>
       )}
-      <span class="visually-hidden">{label}</span>
+      <span className="visually-hidden">{label}</span>
     </div>
   );
 };
