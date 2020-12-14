@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.1.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.0.6...@kajabi/sage@3.1.0) (2020-12-14)
+
+
+### Bug Fixes
+
+* **hero:** added alt_text attribute to the component ([59cffa8](https://github.com/Kajabi/sage-lib/commit/59cffa81e080ac287614aaa30608fc9ca41bb4cb))
+* **hero:** added js to rails hero component ([274814b](https://github.com/Kajabi/sage-lib/commit/274814b659b4edb0ea2b4c81c80742913ce5a78c))
+* **hero:** added Rails hero component ([d7927e7](https://github.com/Kajabi/sage-lib/commit/d7927e771dd75ac0ac72b8804e8de57bb20a5e91))
+
+
+### Features
+
+* **hero:** updated properties for hero component ([c07d67c](https://github.com/Kajabi/sage-lib/commit/c07d67ca4ef07f02d3e598bf4c42f71897551e6a))
+
+
+
+
+
 ## [3.0.6](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.0.5...@kajabi/sage@3.0.6) (2020-12-14)
 
 **Note:** Version bump only for package @kajabi/sage

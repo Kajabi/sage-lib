@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.11.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.10.2...@kajabi/sage-assets@0.11.0) (2020-12-14)
+
+
+### Bug Fixes
+
+* **hero:** added alt_text attribute to the component ([59cffa8](https://github.com/Kajabi/sage-lib/commit/59cffa81e080ac287614aaa30608fc9ca41bb4cb))
+* **hero:** added js to rails hero component ([274814b](https://github.com/Kajabi/sage-lib/commit/274814b659b4edb0ea2b4c81c80742913ce5a78c))
+* **hero:** added Rails hero component ([d7927e7](https://github.com/Kajabi/sage-lib/commit/d7927e771dd75ac0ac72b8804e8de57bb20a5e91))
+* **hero:** updated properties for hero component ([801091f](https://github.com/Kajabi/sage-lib/commit/801091f678c01701717bfb414f0aeea9a4d454ec))
+* **hero:** updated properties for hero component ([2a266da](https://github.com/Kajabi/sage-lib/commit/2a266daf4bad06a6049de9c0c1e2a8cbfc94a07b))
+* **hero:** updated styles ([7e4eaa2](https://github.com/Kajabi/sage-lib/commit/7e4eaa29a97659be97117235d3b805760d6f4ebd))
+
+
+### Features
+
+* **hero:** updated properties for hero component ([c07d67c](https://github.com/Kajabi/sage-lib/commit/c07d67ca4ef07f02d3e598bf4c42f71897551e6a))
+
+
+
+
+
 ## [0.10.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.10.1...@kajabi/sage-assets@0.10.2) (2020-12-14)
 
 

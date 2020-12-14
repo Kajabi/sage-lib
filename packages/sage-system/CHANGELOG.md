@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.1.0...@kajabi/sage-system@0.2.0) (2020-12-14)
+
+
+### Bug Fixes
+
+* **hero:** added js to rails hero component ([274814b](https://github.com/Kajabi/sage-lib/commit/274814b659b4edb0ea2b4c81c80742913ce5a78c))
+
+
+### Features
+
+* **hero:** updated properties for hero component ([c07d67c](https://github.com/Kajabi/sage-lib/commit/c07d67ca4ef07f02d3e598bf4c42f71897551e6a))
+
+
+
+
+
 # [0.1.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.0.37...@kajabi/sage-system@0.1.0) (2020-12-11)
 
 
