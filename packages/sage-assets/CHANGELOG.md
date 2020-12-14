@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.10.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.10.1...@kajabi/sage-assets@0.10.2) (2020-12-14)
+
+
+### Bug Fixes
+
+* **form-section:** .sage-form-section__info - updated mobile spacing ([f3c2507](https://github.com/Kajabi/sage-lib/commit/f3c250771d5735dc1b94811a0b06137f37f62574))
+
+
+
+
+
 ## [0.10.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.10.0...@kajabi/sage-assets@0.10.1) (2020-12-11)
 
 
