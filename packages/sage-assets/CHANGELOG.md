@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.12.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.11.0...@kajabi/sage-assets@0.12.0) (2020-12-14)
+
+
+### Bug Fixes
+
+* **table:** ensure outer spacings for tables apply in nested containers ([1b761b0](https://github.com/Kajabi/sage-lib/commit/1b761b084921a70fa40eb159e3c6a8875206c002))
+
+
+### Features
+
+* **table:** add checkbox and avatar data type size constraints to table cells ([c934294](https://github.com/Kajabi/sage-lib/commit/c934294e36b5a8b577fe7247a8e0da1b669b6a05))
+
+
+
+
+
 # [0.11.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.10.2...@kajabi/sage-assets@0.11.0) (2020-12-14)
 
 

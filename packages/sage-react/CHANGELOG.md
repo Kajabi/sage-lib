@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.16.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.15.6...@kajabi/sage-react@0.16.0) (2020-12-14)
+
+
+### Bug Fixes
+
+* **table:** repair logic in cell parser ([eae4a6e](https://github.com/Kajabi/sage-lib/commit/eae4a6e5658ee8c76f3ff0505ce2463c235f4e45))
+
+
+### Features
+
+* **dropdown:** add align prop to OptionsDropdown ([2880181](https://github.com/Kajabi/sage-lib/commit/288018180e5df3f9f0fdfd0d2ac3b078656f7d6e))
+* **table:** allow dataType to affect table cell classes ([147d9ee](https://github.com/Kajabi/sage-lib/commit/147d9eecc611611af84eeca363558551e8d60332))
+
+
+
+
+
 ## [0.15.6](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.15.5...@kajabi/sage-react@0.15.6) (2020-12-14)
 
 **Note:** Version bump only for package @kajabi/sage-react
