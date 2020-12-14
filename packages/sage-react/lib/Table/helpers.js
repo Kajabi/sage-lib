@@ -20,7 +20,7 @@ export const parseCellData = (cell, _field) => {
     style = null,
     value = cell;
 
-  if (typeof cell === 'object') {
+  if (cell && typeof cell === 'object') {
     // Allow each property to pass or fall back to default
     attributes = cell.attributes || attributes;
     className = cell.className || className;

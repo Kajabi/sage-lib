@@ -5,12 +5,14 @@ import Dropdown from './Dropdown';
 import DropdownItemList from './DropdownItemList';
 
 const OptionsDropdown = ({
+  align,
   className,
   exitPanelHandler,
   isPinned,
   options,
 }) => (
   <Dropdown
+    align={align}
     className={className}
     exitPanelHandler={exitPanelHandler}
     icon={SageTokens.ICONS.DOT_MENU}
@@ -25,6 +27,7 @@ const OptionsDropdown = ({
 );
 
 OptionsDropdown.defaultProps = {
+  align: null,
   className: null,
   exitPanelHandler: e => e,
   isPinned: true,
@@ -32,6 +35,9 @@ OptionsDropdown.defaultProps = {
 };
 
 OptionsDropdown.propTypes = {
+  align: PropTypes.oneOf([
+    'right',
+  ]),
   className: PropTypes.string,
   exitPanelHandler: PropTypes.func,
   isPinned: PropTypes.bool,
