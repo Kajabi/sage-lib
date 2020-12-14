@@ -1,0 +1,17 @@
+<% html_tag = component.title_tag ? component.title_tag : "h2" %>
+
+<article class="sage-hero" data-js-hero>
+  <<%= html_tag %> class="sage-hero__title"><%= component.title %></<%= html_tag %>>
+  <div class="sage-hero__body">
+    <p>
+      <%= component.description %>
+    </p>
+    
+    <% if component.button %>
+      <%= component.button.html_safe %>
+    <% end %>
+  </div>
+  <a href="#" class="sage-hero__artwork">
+    <img class="sage-hero__artwork-image" src=<%= component.image%> alt="<%= component.alt_text %>" />
+  </a>
+</article>

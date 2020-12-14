@@ -143,6 +143,16 @@ module ObjectsHelper
         a11y: "todo"
       },
       {
+        title: "hero",
+        description: "Pending",
+        use_legacy_html_code_source: false,
+        scss: "done",
+        docs: "todo",
+        rails: "done",
+        react: "todo",
+        a11y: "done",
+      },
+      {
         title: "icon_list",
         description: "Icon lists allow for a richer formatting for bulleted lists of things including checkbox lists, feature lists, and more!",
         use_legacy_html_code_source: true,
