@@ -1,24 +1,45 @@
 <%= sage_component SagePanel, {} do %>
   <%= sage_component SageFeatureToggle, {
+    alt_text: "Text alt text",
     description: "Quickly see Segments & filter contacts with a consistent People list view.",
     image: asset_pack_path("media/images/docs/card/card-placeholder-sm.png"), 
     link_text: "Learn more",
     link_location: "#",
     title: "New People list view",
-    toggle_id: "feature-1",
-    toggle_name: "feature-1",
-    toggle_value: "feature 1",
-  } %>
+  } do %>
+    <% content_for :sage_feature_toggle_input do %>
+      <div class="sage-switch">
+        <input 
+          type="checkbox" 
+          id="feature-toggle-id" 
+          class="sage-switch__input" 
+          name="feature-toggle-id" 
+          value="feature-toggle-id"
+        >
+        <label for="feature-toggle-id" class="sage-switch__label sage-switch__label--hide-text">Label Title</label>
+      </div>
+    <% end %>
+  <% end %>
 <% end %>
 <%= sage_component SagePanel, {} do %>
-    <%= sage_component SageFeatureToggle, {
-      description: "Quickly see Segments & filter contacts with a consistent People list view.",
-      image: asset_pack_path("media/images/docs/card/card-placeholder-sm.png"), 
-      link_text: "Learn more",
-      link_location: "#",
-      title: "New People list view",
-      toggle_id: "feature-2",
-      toggle_name: "feature-2",
-      toggle_value: "feature 1",
-    } %>
+  <%= sage_component SageFeatureToggle, {
+    description: "Quickly see Segments & filter contacts with a consistent People list view.",
+    image: asset_pack_path("media/images/docs/card/card-placeholder-sm.png"), 
+    link_text: "Learn more",
+    link_location: "#",
+    title: "New People list view",
+  } do %>
+    <% content_for :sage_feature_toggle_input do %>
+      <%= sage_component SageSwitch, { 
+        type: "checkbox",
+        id: "feature-toggle-id",
+        hide_text: true,
+        label_text: "Label Title",
+        message: "",
+        name: "feature-toggle-id",
+        value: "feature-toggle-value",
+        css_classes: "sage-feature-toggle__switch"
+      } %>
+    <% end %>
+  <% end %>
 <% end %>
