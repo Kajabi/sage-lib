@@ -14,7 +14,7 @@ The Sage Design System (SDS) is our single source of truth, providing everything
 
 There are 5 total packages in the monorepo:
 
-| Packagein | Description | Location | README | CHANGELOG |
+| Package | Description | Location | README | CHANGELOG |
 |--|--|--|---|--|
 | **@kajabi/sage** | Gem with Rails components and a documentaiton site of the same | `./docs` | [README](./docs/README.md) | [CHANGELOG](./docs/CHANGELOG.md) |
 | **@kajabi/sage-assets** | Styles and a Sassdoc site of the same | `./packages/sage-assets` | [README](./packages/sage-assets/README.md) | [CHANGELOG](./packages/sage-assets/CHANGELOG.md) |
