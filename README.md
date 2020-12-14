@@ -12,6 +12,18 @@ The Sage Design System (SDS) is our single source of truth, providing everything
 
 ## Structure
 
+There are 5 total packages in the monorepo:
+
+| Packagein | Description | Location | README | CHANGELOG |
+|--|--|--|---|--|
+| **@kajabi/sage** | Gem with Rails components and a documentaiton site of the same | `./docs` | [README](./docs/README.md) | [CHANGELOG](./docs/CHANGELOG.md) |
+| **@kajabi/sage-assets** | Styles and a Sassdoc site of the same | `./packages/sage-assets` | [README](./packages/sage-assets/README.md) | [CHANGELOG](./packages/sage-assets/CHANGELOG.md) |
+| **@kajabi/sage-packs** | Packs `sage-assets`, `sage-system`, and `sage-react` for use in Rails applications. | `./packages/sage-packs` | [README](./packages/sage-packs/README.md) | [CHANGELOG](./packages/sage-packs/CHANGELOG.md) | 
+| **@kajabi/sage-react** | React component library and Storybook for documentation | `./packages/sage-react` | [README](./packages/sage-react/README.md) | [CHANGELOG](./packages/sage-react/CHANGELOG.md) | 
+| **@kajabi/sage-system** | JS scripts for use with the Rails components | `./packages/sage-system` | [README](./packages/sage-system/README.md) | [CHANGELOG](./packages/sage-system/CHANGELOG.md) |
+
+This diagram illustrates how these all pull together for use in Kajabi's `kajabi-products` system:
+
 ![Sage Structure](readme/sage-structure.png "Sage Structure")
 
 ### Lerna Mono-Repository
@@ -26,37 +38,6 @@ The Sage Design System is a [Lerna Mono-Repository](https://github.com/lerna/ler
 >
 > Lerna can also reduce the time and space requirements for numerous copies of packages in development and build environments - normally a downside of dividing a project into many separate NPM packages.
 
-There are 5 total packages in the monorepo:
-
-#### @kajabi/sage
-
-Located in `./docs`
-
-More info in the [README](./docs/README.md)
-
-#### @kajabi/sage-assets
-
-Located in `./packages/sage-assets`
-
-More info in the [README](./packages/sage-assets/README.md)
-
-#### @kajabi/sage-packs
-
-Located in `./packages/sage-packs`
-
-More info in the [README](./packages/sage-packs/README.md)
-
-#### @kajabi/sage-react
-
-Located in `./packages/sage-react`
-
-More info in the [README](./packages/sage-react/README.md)
-
-#### @kajabi/sage-system
-
-Located in `./packages/sage-system`
-
-More info in the [README](./packages/sage-system/README.md)
 
 ### Adding Packages
 
