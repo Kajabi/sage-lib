@@ -13,6 +13,10 @@
 .sage-form-section__info {
   /* stylelint-disable-next-line scss/at-extend-no-missing-placeholder */
   @extend .sage-col--md-4;
+
+  @media (max-width: sage-breakpoint(sm-max)) {
+    margin-bottom: sage-spacing(md);
+  }
 }
 
 .sage-form-section__title {
