@@ -96,7 +96,7 @@ DropdownItemList.defaultProps = {
   onExit: e => e,
   onSearch: e => e,
   searchable: false,
-  searchPlaceholder: null,
+  searchPlaceholder: 'Search',
 };
 
 DropdownItemList.propTypes = {

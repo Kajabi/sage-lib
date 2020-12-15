@@ -41,7 +41,7 @@ const DropdownItemSearch = ({
 DropdownItemSearch.defaultProps = {
   onChangeSearchTerms: e => e,
   onEnter: e => e,
-  placeholder: 'Find',
+  placeholder: 'Search',
   selectedValue: '',
 };
 
