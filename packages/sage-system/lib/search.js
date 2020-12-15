@@ -48,11 +48,17 @@ Sage.search = (function() {
   }
 
   function search(value) {
-    let searchParams = new URLSearchParams(window.location.search);
+    const searchParams = new URLSearchParams(window.location.search);
+    const currentSearchValue = searchParams.get('search') || '';
 
-    if (value == (searchParams.get('search') || "")) return;
+    if (value === currentSearchValue) {
+      return; // no-op
+    } else if (value.length === 0) {
+      searchParams.delete('search');
+    } else {
+      searchParams.set('search', value);
+    }
 
-    searchParams.set('search', value);
     window.location.search = searchParams.toString();
   }
 
