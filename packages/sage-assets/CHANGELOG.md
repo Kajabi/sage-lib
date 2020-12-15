@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.12.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.12.0...@kajabi/sage-assets@0.12.1) (2020-12-15)
+
+
+### Bug Fixes
+
+* **outline-item:** resolved misalignment issue with loader ([499b517](https://github.com/Kajabi/sage-lib/commit/499b517df782efaaca8ed4ee23d4855e42f2b9fa))
+
+
+
+
+
 # [0.12.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.11.0...@kajabi/sage-assets@0.12.0) (2020-12-14)
 
 
