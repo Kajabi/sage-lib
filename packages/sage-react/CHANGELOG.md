@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.17.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.16.3...@kajabi/sage-react@0.17.0) (2020-12-15)
+
+
+### Bug Fixes
+
+* **dropdown:** switch to default of `find` to ensure no regression ([1b4b9c2](https://github.com/Kajabi/sage-lib/commit/1b4b9c286244f701bc70cff9c9bda7f62238b359))
+
+
+### Features
+
+* **drodpown:** ensure a default placeholder value persists ([d81ea23](https://github.com/Kajabi/sage-lib/commit/d81ea234e26698632d98042d0d8718f5d5927764))
+* **dropdown:** add prop for placeholder text in searchable dropdown ([47b109f](https://github.com/Kajabi/sage-lib/commit/47b109f851a9aaf4b641db68de25dc3e23bb331b))
+
+
+
+
+
 ## [0.16.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.16.2...@kajabi/sage-react@0.16.3) (2020-12-15)
 
 **Note:** Version bump only for package @kajabi/sage-react
