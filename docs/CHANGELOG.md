@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.5](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.1.4...@kajabi/sage@3.1.5) (2020-12-15)
+
+
+### Bug Fixes
+
+* **feature-toggle:** removed hard coded switch prop to allow more flexibility ([5a41508](https://github.com/Kajabi/sage-lib/commit/5a41508cdfec4175fe0eeab6d83e9549a4d66622))
+* **feature-toggle:** removed hard coded switch prop to allow more flexible options ([d0308e5](https://github.com/Kajabi/sage-lib/commit/d0308e505a94f05b1cbfd5fdbcd02f7fa2199621))
+
+
+
+
+
 ## [3.1.4](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.1.3...@kajabi/sage@3.1.4) (2020-12-15)
 
 **Note:** Version bump only for package @kajabi/sage
