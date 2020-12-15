@@ -1,0 +1,8 @@
+/spec
+/tmp/cache
+/node_modules
+/.cache/yarn
+/README.md
+/CHANGELOG.md
+/.stylelintrc.json
+/MIT-LICENSE

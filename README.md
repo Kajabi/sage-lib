@@ -5,11 +5,6 @@ The Sage Design System (SDS) is our single source of truth, providing everything
 
 [Visit Sage Design System Documentation →](https://sage-lib-documentation.herokuapp.com)
 
-[Visit Sage Storybook Documentation →](https://sage-lib-storybook.herokuapp.com)
-
-[Visit Sage SASSDocs Documentation →](https://sage-lib-sassdocs.herokuapp.com)
-
-
 ## Structure
 
 There are 5 total packages in the monorepo:
