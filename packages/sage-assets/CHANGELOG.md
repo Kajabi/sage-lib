@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.12.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.12.1...@kajabi/sage-assets@0.12.2) (2020-12-15)
+
+
+### Bug Fixes
+
+* **sage-assets:** add `row` scope to form field margin resets ([8aeab41](https://github.com/Kajabi/sage-lib/commit/8aeab4174870354a6261b13a666ebf53dc813ffb))
+
+
+
+
+
 ## [0.12.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.12.0...@kajabi/sage-assets@0.12.1) (2020-12-15)
 
 
