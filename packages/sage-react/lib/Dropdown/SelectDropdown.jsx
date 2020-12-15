@@ -27,6 +27,7 @@ const SelectDropdown = ({
   onSelect,
   resetToken,
   searchable,
+  searchPlaceholder,
   selectionBecomesLabel,
 }) => {
   const emptySelectedValue = (
@@ -197,6 +198,7 @@ const SelectDropdown = ({
         localSelectedItems={localSelectedItems}
         onSearch={onSearch}
         searchable={searchable || allowMultiselect}
+        searchPlaceholder={searchPlaceholder}
       />
     </Dropdown>
   );
@@ -222,6 +224,7 @@ SelectDropdown.defaultProps = {
   onSearch: e => e,
   resetToken: null,
   searchable: false,
+  searchPlaceholder: 'Find',
   selectionBecomesLabel: true,
 };
 
@@ -256,6 +259,7 @@ SelectDropdown.propTypes = {
   onSelect: PropTypes.func,
   resetToken: PropTypes.oneOfType([PropTypes.bool, PropTypes.number, PropTypes.string]),
   searchable: PropTypes.bool,
+  searchPlaceholder: PropTypes.string,
   selectionBecomesLabel: PropTypes.bool,
 };
 

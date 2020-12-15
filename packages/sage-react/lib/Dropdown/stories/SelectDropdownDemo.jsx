@@ -45,6 +45,7 @@ const SelectDropdownDemo = () => {
         }}
         resetToken={resetToken}
         searchable={true}
+        searchPlaceholder="Search list"
         filterActions={(
           <Dropdown.Item
             color={DropdownItem.COLORS.PRIMARY}

@@ -10,10 +10,11 @@ const DropdownItemList = ({
   filterActions,
   groupId,
   items,
+  localSelectedItems,
   onExit,
-  searchable,
   onSearch,
-  localSelectedItems
+  searchable,
+  searchPlaceholder,
 }) => {
   const [searchTerms, updateSearchTerms] = useState('');
   const [filteredItems, updateFilteredItem] = useState(items);
@@ -48,7 +49,7 @@ const DropdownItemList = ({
   return (
     <>
       {searchable && (
-        <DropdownItemSearch onChangeSearchTerms={onChangeSearchTerms} />
+        <DropdownItemSearch placeholder={searchPlaceholder} onChangeSearchTerms={onChangeSearchTerms} />
       )}
       <ul className="sage-dropdown__menu" role="menu">
         {localSelectedItems.length > 0 && localSelectedItems.map((item, i) => (
@@ -95,6 +96,7 @@ DropdownItemList.defaultProps = {
   onExit: e => e,
   onSearch: e => e,
   searchable: false,
+  searchPlaceholder: 'Find',
 };
 
 DropdownItemList.propTypes = {
@@ -107,6 +109,7 @@ DropdownItemList.propTypes = {
   onExit: PropTypes.func,
   onSearch: PropTypes.func,
   searchable: PropTypes.bool,
+  searchPlaceholder: PropTypes.string,
 };
 
 export default DropdownItemList;
