@@ -224,7 +224,7 @@ SelectDropdown.defaultProps = {
   onSearch: e => e,
   resetToken: null,
   searchable: false,
-  searchPlaceholder: 'Search',
+  searchPlaceholder: 'Find',
   selectionBecomesLabel: true,
 };
 
