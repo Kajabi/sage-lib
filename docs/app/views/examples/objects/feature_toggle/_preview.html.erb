@@ -7,7 +7,7 @@
     link_location: "#",
     title: "New People list view",
   } do %>
-    <% content_for :sage_feature_toggle_input do %>
+    <%= sage_component_section :feature_toggle_input do %>
       <div class="sage-switch">
         <input 
           type="checkbox" 
@@ -29,7 +29,7 @@
     link_location: "#",
     title: "New People list view",
   } do %>
-    <% content_for :sage_feature_toggle_input do %>
+    <%= sage_component_section :feature_toggle_input do %>
       <%= sage_component SageSwitch, { 
         type: "checkbox",
         id: "feature-toggle-id",

@@ -7,6 +7,6 @@ class SageFeatureToggle < SageComponent
   attr_accessor :title
 
   def sections
-    %w(sage_feature_toggle_input)
+    %w(:feature_toggle_input)
   end
 end
