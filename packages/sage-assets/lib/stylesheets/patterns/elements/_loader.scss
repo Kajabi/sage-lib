@@ -66,6 +66,10 @@ $-loader-spinner-path-speed: 1.5s;
     background-color: sage-color(primary, 300);
     animation: loader-bar $-loader-bar-speed $-loader-bar-speed-delay linear infinite;
   }
+
+  .sage-outline-item__actions-primary & {
+    align-self: flex-start;
+  }
 }
 
 .sage-loader__spinner {
