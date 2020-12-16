@@ -1,6 +1,7 @@
 class SageHero < SageComponent
   attr_accessor :alt_text
   attr_accessor :button
+  attr_accessor :cta_attributes
   attr_accessor :description
   attr_accessor :image
   attr_accessor :title
