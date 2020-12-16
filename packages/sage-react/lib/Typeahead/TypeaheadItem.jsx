@@ -1,19 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import uuid from 'react-uuid';
-import parse from 'html-react-parser';
 
+import { renderSubstringHighlight } from '../common/renderers';
 import Link from '../Link';
 import { SageTokens } from '../configs';
-
-const subStringHighlight = (targetString, searchString) => {
-  return parse(
-    targetString.replace(
-      new RegExp(searchString, 'gi'), (match) =>
-        `<mark>${match}</mark>`
-      )
-  );
-};
 
 const TypeaheadItem = ({
   icon,
@@ -36,7 +27,7 @@ const TypeaheadItem = ({
         className="t-sage-heading-6"
         style={{gridArea: 'title'}}
       >
-        {subStringHighlight(title, searchValue)}
+        {renderSubstringHighlight(title, searchValue)}
       </span>
       <span
         className="t-sage-body-small"

@@ -4,7 +4,7 @@ import uuid from 'react-uuid';
 
 import Search from '../Search';
 import TypeaheadPanel from './TypeaheadPanel';
-import { useFocusTrap } from '../hooks';
+import { useFocusTrap } from '../common/hooks';
 
 const A11Y_ID = uuid();
 

@@ -3,16 +3,27 @@ import { createFocusTrap } from 'focus-trap';
 
 /**
 *
-* @param {Boolean} active - React boolean state
-* @param {ReactRef} containerRef - React ref of containing element where focus trapping occurs
-* @param {Function} onDeactivate - Fires on deactivation, this is where you can set the state of your component when a click outside or `esc` happens
-* @param {Boolean} returnFocus - Determines whether the focus trap focuses the initial element on deactivation
-*                                this is typically turned off for context menus that scrollTo another element on the page
+* @param {Boolean} active         - React boolean state
+* @param {ReactRef} containerRef  - React ref of containing element where focus trapping occurs
+* @param {Function} onDeactivate  - Fires on deactivation, this is where you can set the state of your
+                                    component when a click outside or `esc` happens
+* @param {Boolean} returnFocus    - Determines whether the focus trap focuses the initial element on deactivation
+*                                   this is typically turned off for context menus that scrollTo another element on the page
 *
 */
 
-function useFocusTrap({ active, containerRef, onDeactivate = () => {}, returnFocus = true}) {
-  if (typeof active !== 'boolean' || containerRef === undefined || typeof onDeactivate !== 'function' || typeof returnFocus !== 'boolean') {
+export const useFocusTrap = ({
+  active,
+  containerRef,
+  onDeactivate = () => {},
+  returnFocus = true
+}) => {
+  if (
+    typeof active !== 'boolean'
+    || containerRef === undefined
+    || typeof onDeactivate !== 'function'
+    || typeof returnFocus !== 'boolean'
+  ) {
     throw new Error('Sage useFocusTrap Hook: malformed args, see param documentation in hooks/useFocusTrap.jsx');
   }
 
@@ -48,5 +59,3 @@ function useFocusTrap({ active, containerRef, onDeactivate = () => {}, returnFoc
     return () => cleanup();
   }, [active, containerRef.current]);
 };
-
-export default useFocusTrap;
