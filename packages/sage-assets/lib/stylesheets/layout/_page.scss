@@ -8,9 +8,7 @@
 $-banner-height-offset: map-get($sage-banner-heights, default);
 
 .sage-page {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+  overflow: hidden;
 
   // TODO: Determine if this is used or needed
   &.banner-active {
