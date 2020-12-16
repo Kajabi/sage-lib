@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.14.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.13.0...@kajabi/sage-assets@0.14.0) (2020-12-16)
+
+
+### Bug Fixes
+
+* **feature-toggle:** updated image proportions when not a square ([928e8d0](https://github.com/Kajabi/sage-lib/commit/928e8d0a2549e6119193aea3df15eb92b53d01c9))
+* **hero:** updated background-color ([4fbbdf5](https://github.com/Kajabi/sage-lib/commit/4fbbdf54dcf4af76e0cb6698a8aaf80b9ac55394))
+* **page.scss:** adjusted overflow to prevent odd scrolling issue ([fc4cbdf](https://github.com/Kajabi/sage-lib/commit/fc4cbdf1acb4222de373986a5e5563bff8a5d87b))
+* **page.scss:** updates to address scrolling bug based on review ([19e769a](https://github.com/Kajabi/sage-lib/commit/19e769a18d0ea833b0cd84f53e6bcd804b96099f))
+* **tinymce:** resolved overflow issue with the toolbar ([7d382da](https://github.com/Kajabi/sage-lib/commit/7d382da3ecd6e8b35147401e5b2e9d5a719f0243))
+
+
+### Features
+
+* **sage-assets:** add styles for dropdown headings ([e480c4c](https://github.com/Kajabi/sage-lib/commit/e480c4cf74523f5cdd59e1e58a67c109b0caf13e))
+* **sage-assets:** updated Sage icon font ([1043398](https://github.com/Kajabi/sage-lib/commit/104339820d41c29feb749664d5bb8d6746955f74))
+
+
+
+
+
 # [0.13.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.12.3...@kajabi/sage-assets@0.13.0) (2020-12-16)
 
 

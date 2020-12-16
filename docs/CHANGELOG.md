@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.2.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.1.7...@kajabi/sage@3.2.0) (2020-12-16)
+
+
+### Bug Fixes
+
+* **docs:** clean up sandbox page ([976e8fe](https://github.com/Kajabi/sage-lib/commit/976e8febc8e2f39360dda3f446b090c66624f4a9))
+
+
+### Features
+
+* **dropdown:** add dropdown headings to rails component ([cff1b0a](https://github.com/Kajabi/sage-lib/commit/cff1b0a4cbdbf04a9116829fb7ae0a8659a04b16))
+* **sage-assets:** added super-admin icon. removed examples of missing icons ([0a9217d](https://github.com/Kajabi/sage-lib/commit/0a9217dd2277f5281a862d2784172c3daa89d0e0))
+* **sage-assets:** updated Sage icon font ([1043398](https://github.com/Kajabi/sage-lib/commit/104339820d41c29feb749664d5bb8d6746955f74))
+
+
+
+
+
 ## [3.1.7](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.1.6...@kajabi/sage@3.1.7) (2020-12-16)
 
 **Note:** Version bump only for package @kajabi/sage

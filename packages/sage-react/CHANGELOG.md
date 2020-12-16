@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.19.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.18.0...@kajabi/sage-react@0.19.0) (2020-12-16)
+
+
+### Features
+
+* **dropdown:** add dropdown heading to react component ([ed53aef](https://github.com/Kajabi/sage-lib/commit/ed53aefcb1ad1f056af497f0e5b11013ffe91007))
+* **sage-assets:** added super-admin icon. removed examples of missing icons ([0a9217d](https://github.com/Kajabi/sage-lib/commit/0a9217dd2277f5281a862d2784172c3daa89d0e0))
+* **sage-assets:** updated Sage icon font ([1043398](https://github.com/Kajabi/sage-lib/commit/104339820d41c29feb749664d5bb8d6746955f74))
+
+
+
+
+
 # [0.18.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.17.0...@kajabi/sage-react@0.18.0) (2020-12-16)
 
 
