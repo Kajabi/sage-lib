@@ -35,11 +35,13 @@ const Table = ({
   headers,
   isResponsive,
   isStriped,
+  onSelectRowHook,
   resetAbove,
   resetBelow,
   rows,
   schema,
   selectable,
+  selectedRows,
   tableAttributes,
 }) => {
   const [selfSelectedRows, setSelfSelectedRows] = useState([]);
@@ -152,16 +154,34 @@ const Table = ({
     buildHeaders();
   }, [schema, headers]);
 
+  // Ensure selected rows change when adjsuted from the outside
+  useEffect(() => {
+    setSelfSelectedRows(selectedRows);
+  }, [selectedRows]);
+
   const onSelectRow = (data) => {
     const newSelectedRows = selfSelectedRows;
     const matchIndex = newSelectedRows.indexOf(data);
+    let rowSelected;
     if (matchIndex >= 0) {
+      rowSelected = false;
       newSelectedRows.splice(matchIndex, 1); 
     } else {
+      rowSelected = true;
       newSelectedRows.push(data);
     }
 
-    setSelfSelectedRows(newSelectedRows);
+    if (onSelectRowHook) {
+      onSelectRowHook({
+        changedRow: {
+          row: data,
+          selected: rowSelected,
+        },
+        selectedRows: newSelectedRows,
+      });
+    } else {
+      setSelfSelectedRows(newSelectedRows);
+    }
   }
 
   //
@@ -252,11 +272,13 @@ Table.defaultProps = {
   headers: [],
   isResponsive: true,
   isStriped: false,
+  onSelectRowHook: null,
   resetAbove: false,
   resetBelow: false,
   rows: [],
   schema: null,
   selectable: true,
+  selectedRows: [],
   tableAttributes: null,
 };
 
@@ -272,6 +294,7 @@ Table.propTypes = {
   ]),
   isResponsive: PropTypes.bool,
   isStriped: PropTypes.bool,
+  onSelectRowHook: PropTypes.func,
   resetAbove: PropTypes.bool,
   resetBelow: PropTypes.bool,
   rows: PropTypes.arrayOf(PropTypes.oneOfType([
@@ -282,6 +305,11 @@ Table.propTypes = {
   // Schema provides a structure for applying settings to headers and cells
   schema: PropTypes.shape({}),
   selectable: PropTypes.bool,
+  selectedRows: PropTypes.arrayOf(PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.shape({}),
+    PropTypes.string,
+  ])),
   tableAttributes: PropTypes.shape({}),
 };
 
