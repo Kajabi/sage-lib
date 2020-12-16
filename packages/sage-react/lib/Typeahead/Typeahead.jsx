@@ -23,6 +23,9 @@ const Typeahead = ({
     active: open,
     containerRef: containerRef,
     onDeactivate: () => setOpen(false),
+    // NOTE: This prevents the search input from being refocused when Typeahead is closed,
+    //       which prevents blocking the 'scrollTo element' UX pattern that is used with this component
+    returnFocus: false,
   });
 
   useEffect(() => {
@@ -47,6 +50,10 @@ const Typeahead = ({
     setOpen(false);
   }
 
+  const onPanelInteraction = (evt) => {
+    evt.target.closest('button, a') && setOpen(false)
+  }
+
   return (
     <div
       className="sage-typeahead"
@@ -67,10 +74,8 @@ const Typeahead = ({
       {open
         && <TypeaheadPanel
             items={searchResults}
-            // onClick={(evt) =>
-            //   evt.target.closest('button, a')
-            //   && setOpen(false)
-            // }
+            onClick={onPanelInteraction}
+            onKeyDown={(evt) => (evt.which === 13) && onPanelInteraction(evt)}
             searchValue={searchValue}
             role="listbox"
             id={A11Y_ID}
