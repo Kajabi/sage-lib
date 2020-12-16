@@ -8,5 +8,6 @@
 .sage-stage {
   display: flex;
   flex: 1;
-  overflow: hidden;
+  overflow: auto;
+  height: calc(100vh - #{$sage-assistant-height});
 }

@@ -11,6 +11,7 @@ import OptionsDropdown from './OptionsDropdown';
 import { defaultOptionsItems, sampleMenuItems } from './stories/story-helper';
 import MultiMenuStory from './stories/MultiMenuStory';
 import SelectDropdownDemo from './stories/SelectDropdownDemo';
+import BulkActionsStory from './stories/BulkActionsStory';
 
 storiesOf('Sage/Dropdown', module)
   .addDecorator(withKnobs)
@@ -32,6 +33,9 @@ storiesOf('Sage/Dropdown', module)
   ))
   .add('Option menu', () => (
     <OptionsDropdown options={defaultOptionsItems} isPinned={false} />
+  ))
+  .add('Dropdown menu with headings', () => (
+    <BulkActionsStory />
   ))
   .add('Select', () => <SelectDropdownDemo />)
   .add('Multiselect', () => <MultiMenuStory />)

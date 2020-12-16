@@ -19,6 +19,10 @@
     }
   }
 
+  .mce-container-body {
+    white-space: nowrap;
+  }
+
   .mce-btn button {
     padding: rem(8px) rem(12px) rem(12px) !important; /* stylelint-disable-line declaration-no-important */
   }
