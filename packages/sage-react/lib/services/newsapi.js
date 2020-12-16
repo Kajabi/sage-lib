@@ -12,7 +12,6 @@ export const getNews = (page = 1) => {
   };
   
   return axios.request(options).then((response) => {
-    console.log(response.data);
     return response.data;
   }).catch((error) => {
     console.warn(error);
