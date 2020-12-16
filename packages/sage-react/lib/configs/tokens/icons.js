@@ -122,6 +122,7 @@ export const TOKENS_ICONS = {
   SUCCESS: 'success',
   SUBSCRIPT: 'subscript',
   SUPERSCRIPT: 'superscript',
+  SUPER_ADMIN: 'super-admin',
   TAG: 'tag',
   TRASH: 'trash',
   UNDERLINE: 'underline',
