@@ -32,6 +32,7 @@ const items = [
     icon: SageTokens.ICONS.FOLDER,
     title: 'Wonderful Instruments',
     actions: itemActions,
+    tabIndex: 0,
     onClick: () => console.log('Wonderful Instruments'),
   },
   {
@@ -39,6 +40,7 @@ const items = [
     title: 'Dinged Up Dirty Guitar',
     subTitle: 'Wonderful Instruments / Ones That Need Love /',
     actions: itemActions,
+    tabIndex: 0,
     onClick: () => console.log('Dinged Up Dirty Guitar'),
   },
   {
@@ -46,6 +48,7 @@ const items = [
     title: 'Purple & Pink Plastic Violins',
     subTitle: 'Wonderful Instruments /',
     actions: itemActions,
+    tabIndex: 0,
     onClick: () => console.log('Purple & Pink Plastic Violins'),
   },
   {
@@ -53,6 +56,7 @@ const items = [
     title: 'Greasy Tuba',
     subTitle: 'Wonderful Instruments /',
     actions: itemActions,
+    tabIndex: 0,
     onClick: () => console.log('Greasy Tuba'),
   },
 ];

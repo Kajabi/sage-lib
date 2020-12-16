@@ -85,7 +85,7 @@ const Typeahead = ({
 
 Typeahead.defaultProps = {
   items: [],
-  placeholder: null,
+  placeholder: 'Find',
   maxResults: 5
 };
 
