@@ -27,6 +27,57 @@
   } %>
 <% end %>
 
+<h3 class="t-sage-heading-6">Dropdown menu with Headings</h3>
+<%= sage_component SageDropdown, {
+  contained: true,
+  items: [{
+    value: "Offers",
+    is_heading: true,
+  }, {
+    value: "Grant offer",
+  }, {
+    value: "Revoke offer",
+  }, {
+    value: "Emails",
+    is_heading: true,
+  }, {
+    value: "Subscribe to Email Sequence",
+  }, {
+    value: "Unsubscribe from Email Sequence",
+  }, {
+    value: "Events",
+    is_heading: true,
+  }, {
+    value: "Register to Event",
+  }, {
+    value: "Deregister from Event",
+  }, {
+    value: "Tags",
+    is_heading: true,
+  }, {
+    value: "Add tag",
+  }, {
+    value: "Remove tag",
+  }, {
+    value: "Export",
+    icon: "upload",
+    modifiers: ["border-before"]
+  }, {
+    value: "Unsubscribe",
+    icon: "remove-circle",
+  }, {
+    modifiers: ["border-before"],
+    icon: "trash",
+    style: "danger",
+    value: "Delete",
+  }]
+} do %>
+  <%= sage_component SageButton, {
+    style: "secondary",
+    value: "Bulk Actions"
+  } %>
+<% end %>
+
 <h3 class="t-sage-heading-6">SageLabel Button, with SageLabel Values, and aligned right</h3>
 <p>Note: The wrapping div with inline styles is for <i>preview-purposes only</i>. </p>
 <div style="display: flex; flex-direction: row-reverse;">
