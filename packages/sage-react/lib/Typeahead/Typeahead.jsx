@@ -4,7 +4,7 @@ import uuid from 'react-uuid';
 
 import Search from '../Search';
 import TypeaheadPanel from './TypeaheadPanel';
-import { useFocusTrap } from '../common/hooks';
+import { useFocusTrap, useDebounceEffect } from '../common/hooks';
 
 const A11Y_ID = uuid();
 
@@ -22,23 +22,21 @@ const Typeahead = ({
   useFocusTrap({
     active: open,
     containerRef: containerRef,
-    onDeactivate: () => setOpen(false),
-    // NOTE: This prevents the search input from being refocused when Typeahead is closed,
+    onDeactivateCallback: () => setOpen(false),
+    // NOTE: `returnFocus` prevents the search input from being refocused when Typeahead is closed,
     //       which prevents blocking the 'scrollTo element' UX pattern that is used with this component
     returnFocus: false,
   });
 
-  useEffect(() => {
+  useDebounceEffect(() => {
     const _value = searchValue.toUpperCase(),
           _results = [];
-
-    console.log('Typeahead Items:', items);
     items.forEach(item => {
       if (_results.length >= maxResults) return;
       if (item.title.toUpperCase().includes(_value)) _results.push(item);
     });
     setSearchResults(_results);
-  }, [searchValue]);
+  }, [searchValue], 200);
 
   const onSearchInteraction = (evt) => {
     setSearchValue(evt.target.value);
