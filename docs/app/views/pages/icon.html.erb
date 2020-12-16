@@ -166,7 +166,6 @@
 <% all_icons = [
   "add",
   "add-circle",
-  "add-image",
   "add-small",
   "align-center",
   "align-justify",
@@ -180,6 +179,7 @@
   "assessment",
   "attach",
   "automations",
+  "ban",
   "bold",
   "broadcast",
   "calendar-date",
@@ -228,17 +228,18 @@
   "filters",
   "flag",
   "folder",
-  "folder-group",
   "form",
   "fullscreen",
   "funnel",
   "gear",
   "handle",
   "hashtag",
+  "help",
   "horizontal-line",
   "image",
   "info-circle",
   "italic",
+  "lab",
   "launch",
   "left-small",
   "list-bullet",
@@ -259,6 +260,7 @@
   "monitor",
   "pen",
   "play",
+  "play-outline",
   "preview-off",
   "preview-on",
   "product",
@@ -277,13 +279,13 @@
   "search-small",
   "send-message",
   "skipped",
-  "sort",
   "stack",
   "star",
   "stop",
   "strikethrough",
   "subscript",
   "superscript",
+  "success",
   "tag",
   "trash",
   "underline",
@@ -338,9 +340,9 @@ then `aria-hidden=\"true\"` can be used instead.
 <%= md(%(
 ## General Guidelines
 
-Icons are an effective way to enforce the purpose of an experience. Icons are broken out into two main categories: Actions and Features. In order to ensure that the icons are adding to the clarity of an experience and not creating confusion, we adhere to two principles. 
+Icons are an effective way to enforce the purpose of an experience. Icons are broken out into two main categories: Actions and Features. In order to ensure that the icons are adding to the clarity of an experience and not creating confusion, we adhere to two principles.
 
-####Actions take priority over features. 
+####Actions take priority over features.
 
 <span class="sage-label sage-label--draft">Example:</span>
 
@@ -350,7 +352,7 @@ Add Product, the add action take priority over the Product feature. Add Product 
 
 <span class="sage-label sage-label--draft">Example:</span>
 
-Marketing uses the Megaphone icon. We do not use the megaphone icon for other treatments such as an in-app announcement. 
+Marketing uses the Megaphone icon. We do not use the megaphone icon for other treatments such as an in-app announcement.
 ), use_sage_type: true) %>
 <hr>
 <div id="action-icons" class="sage-type">
@@ -394,7 +396,7 @@ Marketing uses the Megaphone icon. We do not use the megaphone icon for other tr
 <hr>
 <div id="all-icons" class="sage-type">
   <h2>All Icons</h2>
-  <%= sage_component SageGridRow, {} do %> 
+  <%= sage_component SageGridRow, {} do %>
     <% all_icons.each do |icon| %>
       <%= sage_component SageGridCol, { breakpoint: "md", size: "4" } do %>
         <div class="docs-icon-block">
