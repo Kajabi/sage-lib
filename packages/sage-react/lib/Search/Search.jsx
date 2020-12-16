@@ -2,19 +2,24 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
+import Button from '../Button';
+import { SageTokens } from '../configs';
+
 const Search = ({
-  contained,
-  placeholder,
   className,
-  value,
+  contained,
+  onClear,
   onChange,
+  placeholder,
+  value,
   ...rest
 }) => {
   const classNames = classnames(
     'sage-search',
     className,
     {
-      'sage-search--contained': contained
+      'sage-search--contained': contained,
+      'sage-search--has-text': value.length > 0,
     }
   );
 
@@ -30,22 +35,37 @@ const Search = ({
         data-kjb-disable-search
         {...rest}
       />
+      {
+        onClear
+        &&
+        <Button
+          className="sage-search__reset-button"
+          color={Button.COLORS.SECONDARY}
+          icon={SageTokens.ICONS.REMOVE}
+          iconOnly={true}
+          onClick={onClear}
+          subtle={true}>
+          Clear Search Input
+        </Button>
+      }
     </div>
   );
 };
 
 Search.defaultProps = {
-  contained: false,
-  placeholder: 'Search',
   className: null,
+  contained: false,
+  onClear: null,
+  placeholder: 'Search',
 };
 
 Search.propTypes = {
-  contained: PropTypes.bool,
-  placeholder: PropTypes.string,
   className: PropTypes.string,
-  value: PropTypes.string.isRequired,
+  contained: PropTypes.bool,
   onChange: PropTypes.func.isRequired,
+  onClear: PropTypes.func,
+  placeholder: PropTypes.string,
+  value: PropTypes.string.isRequired,
 };
 
 export default Search;

@@ -1,6 +1,6 @@
 ////
 /// Typography setup
-/// 
+///
 /// @group sage
 ////
 
@@ -150,6 +150,12 @@ hr {
   margin: sage-spacing() 0;
   border: 0;
   border-top: sage-border();
+}
+
+mark {
+  color: sage-color-combo(warning, default, foreground);
+  background-color: sage-color-combo(warning, default, background);
+  border-radius: sage-border(radius);
 }
 
 // Generate text color modifiers

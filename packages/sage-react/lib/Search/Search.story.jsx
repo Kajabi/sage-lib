@@ -5,12 +5,13 @@ import { centerXY } from '../story-support/decorators';
 import Search from './Search';
 
 const InputWithState = (rest) => {
-  const [value, updateValue] = useState('');
+  const [value, setValue] = useState('');
 
   return (
     <Search
       placeholder={text('Placeholder', 'Find')}
-      onChange={e => updateValue(e.target.value)}
+      onChange={e => setValue(e.target.value)}
+      onClear={() => setValue('')}
       value={value}
       {...rest}
     />

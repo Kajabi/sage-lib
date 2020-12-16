@@ -1,0 +1,1 @@
+export { renderSubstringHighlight } from './renderSubstringHighlight';

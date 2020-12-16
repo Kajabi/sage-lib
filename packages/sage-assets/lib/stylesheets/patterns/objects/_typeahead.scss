@@ -1,0 +1,89 @@
+/* ==================================================
+  ** typeahead
+  type: object
+
+================================================== */
+
+.sage-typeahead {
+  position: relative;
+}
+
+.sage-typeahead__panel {
+  z-index: sage-z-index(raised);
+  position: absolute;
+  left: 0;
+  right: 0;
+  transform: translateY(#{sage-spacing(2xs)});
+  overflow-x: hidden;
+  padding: 0;
+  list-style: none;
+  border: sage-border();
+  background-color: sage-color(white);
+  border-radius: sage-border(radius);
+  box-shadow: sage-shadow(md);
+}
+
+.sage-typeahead__null-state {
+  @extend %t-sage-body-small;
+  padding: sage-spacing(sm);
+  color: sage-color(charcoal, 100);
+  text-align: center;
+}
+
+.sage-typeahead__item {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+
+  &:not(:first-child) {
+    border-top: sage-border();
+  }
+
+  &:hover,
+  &:focus-within {
+    background-color: sage-color(grey, 100);
+  }
+}
+
+.sage-typeahead__item-trigger {
+  @include sage-button-style-reset;
+  @include sage-focus-outline($outline-offset-block: -6px, $outline-offset-inline: -6px, $outline-animation-speed: 0.05s);
+  @include sage-focus-outline--update-color(sage-color(primary));
+
+  display: grid;
+  position: unset; // Undo position defined in sage-focus-outline()
+  flex-grow: 1;
+  grid-template-areas:
+    "icon title"
+    "icon subTitle";
+  grid-template-columns: min-content 1fr;
+  grid-template-rows: 1fr;
+  column-gap: sage-spacing(sm);
+  align-items: center;
+  padding: sage-spacing(sm);
+  text-align: left;
+
+  > * {
+    @include truncate;
+
+    :hover & {
+      color: sage-color(charcoal, 500);
+    }
+  }
+}
+
+.sage-typeahead__item-actions {
+  visibility: hidden;
+  display: flex;
+  flex-wrap: nowrap;
+
+  :hover > &,
+  :focus-within > & {
+    visibility: visible;
+  }
+
+  > * {
+    margin-right: sage-spacing(sm);
+  }
+}
