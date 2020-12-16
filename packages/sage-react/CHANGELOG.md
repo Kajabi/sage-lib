@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.18.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.17.0...@kajabi/sage-react@0.18.0) (2020-12-16)
+
+
+### Features
+
+* **search react:** add clear button to search react components ([6bd3f2c](https://github.com/Kajabi/sage-lib/commit/6bd3f2cd92b80d74050314940ae4bd7be75f0b31))
+* **typeahead:** focus trap typeahead field ([c24a06f](https://github.com/Kajabi/sage-lib/commit/c24a06fa48a3083bc705aa75723bf7f87e3cfd1a))
+* **typeahead:** typeahead focus styles ([87364f9](https://github.com/Kajabi/sage-lib/commit/87364f9e77a27196c82b008e8d7bcc90e1b42a88))
+* **typehead:** react Typeahead component ([bfb7c06](https://github.com/Kajabi/sage-lib/commit/bfb7c06b06fd870bbf8d4934eaa21cbd8ef9c21a))
+
+
+
+
+
 # [0.17.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.16.3...@kajabi/sage-react@0.17.0) (2020-12-15)
 
 

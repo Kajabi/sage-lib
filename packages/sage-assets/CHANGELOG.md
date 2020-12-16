@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.13.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.12.3...@kajabi/sage-assets@0.13.0) (2020-12-16)
+
+
+### Bug Fixes
+
+* **reboot:** update reboot styles to remove <mark> padding inheritance from kajabi-products ([00b31a6](https://github.com/Kajabi/sage-lib/commit/00b31a6e38bd85de2762dca8963da52b093fcd77))
+
+
+### Features
+
+* **typeahead:** typeahead focus styles ([87364f9](https://github.com/Kajabi/sage-lib/commit/87364f9e77a27196c82b008e8d7bcc90e1b42a88))
+* **typehead:** react Typeahead component ([bfb7c06](https://github.com/Kajabi/sage-lib/commit/bfb7c06b06fd870bbf8d4934eaa21cbd8ef9c21a))
+
+
+
+
+
 ## [0.12.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.12.2...@kajabi/sage-assets@0.12.3) (2020-12-15)
 
 
