@@ -7,21 +7,41 @@ import { Button, Panel, Table } from '../';
 import { getNews } from '../services/newsapi';
 import PanelControls from './PanelControls';
 
+// TODO: Consider how select all affects all items
+// when only one page is currently selected
+
 const PanelControlsWithData = () => {
   const [selfData, setSelfData] = useState({
+    // Set locally
     articles: [],
-    itemsOnThisPage: 0,
-    page: 1,
-    pageSize: 1,
-    totalPages: 1,
     selectedRows: [],
-    totalItems: 0,
+
+    // Panel Controls Configurations
+    panelControlConfigs: {
+      currentPage: 1,
+      itemsOnThisPage: 0,
+      numSelectedRows: 0,
+      pageSize: 1,
+      rowNoun: {
+        singular: 'article',
+        plural: 'articles',
+      },
+      selectionType: PanelControls.SELECTION_TYPES.NONE,
+      totalItems: 0,
+      totalPages: 1,
+    }
   });
 
+
+  //
+  // API-related functions
+  //
+
+  // Transforms API data into format for this table
   const transformNewsData = (data) => {
     const {
       articles,
-      page,
+      page: currentPage,
       total_pages: totalPages,
       page_size: pageSize,
       total_hits: totalItems,
@@ -47,15 +67,25 @@ const PanelControlsWithData = () => {
     });
 
     setSelfData({
+      // Bring over all existing selfData props
+      ...selfData,
+      // Rewrite articles to contain those returned by service
       articles: formattedArticles,
-      itemsOnThisPage: articles.length,
-      page,
-      pageSize,
-      totalPages,
-      totalItems,
+      // Rewrite the panelControlConfigs
+      panelControlConfigs: {
+        // First bring over all existing props
+        ...selfData.panelControlConfigs,
+        // Rewrite those changed by this API result
+        currentPage,
+        itemsOnThisPage: articles.length,
+        pageSize,
+        totalPages,
+        totalItems,
+      },
     });
   };
 
+  // Gets new data from the API
   const fetchData = async (page) => {
     const data = await getNews(page);
     
@@ -64,36 +94,58 @@ const PanelControlsWithData = () => {
     }
   };
 
+
+  //
+  // Event handlers
+  //
+
+  // Processes a request for change recieved from the panel
   const handleRequestChange = (data) => {
+    // First if a page change is requested, send for that
     if (data.page) {
       fetchData(data.page);
       return;
     }
     
-    let selectionType, selectedRows;
-    if (data.selectAll !== undefined && data.selectAll) {
-      selectionType  = PanelControls.SELECTION_TYPES.ALL;
-      selectedRows = selfData.articles.map(({ id }) => id);
-    } else if (data.selectAll !== undefined) {
-      selectionType  = PanelControls.SELECTION_TYPES.NONE;
-      selectedRows = [];
-    }
+    // Or if reqeust is to change the selection
+    if (data.selectionType) {
+      // Parse selection type and adjust selected rows accordingly
+      let selectedRows;
+      switch (data.selectionType) {
+        case PanelControls.SELECTION_TYPES.ALL:
+          selectedRows = selfData.articles.map(({ id }) => id);
+          break;
+        case PanelControls.SELECTION_TYPES.NONE:
+        default:
+          selectedRows = [];
+          break;
+      }
 
-    setSelfData({
-      ...selfData,
-      selectionType,
-      selectedRows,
-    })
-    return;
+      setSelfData({
+        ...selfData,
+        selectedRows,
+        panelControlConfigs: {
+          ...selfData.panelControlConfigs,
+          numSelectedRows: selectedRows.length,
+          selectionType: data.selectionType,
+        },
+      });
+      return;
+    }
   };
 
+  // Process changes to selections in the table rows
   const handleSelectRow = (data) => {
     const { selectedRows } = data;
+    const { panelControls: totalItems } = selfData;
 
+    // Determine selection type based on number of items
+    // sent from table's current selection list
+    const numSelectedRows = selectedRows.length;
     let selectionType;
-    if (selectedRows.length === selfData.totalItems) {
+    if (numSelectedRows === totalItems) {
       selectionType = PanelControls.SELECTION_TYPES.ALL;
-    } else if (selectedRows.length > 0) {
+    } else if (numSelectedRows > 0) {
       selectionType = PanelControls.SELECTION_TYPES.PARTIAL;
     } else {
       selectionType = PanelControls.SELECTION_TYPES.NONE;
@@ -102,36 +154,39 @@ const PanelControlsWithData = () => {
     setSelfData({
       ...selfData,
       selectedRows,
-      selectionType,
-    })
+      panelControlConfigs: {
+        ...selfData.panelControlConfigs,
+        numSelectedRows,
+        selectionType,
+      },
+    });
   };
 
+
+  //
+  // Effects
+  //
+
+  // Get first page of data on load
   useEffect(() => {
     fetchData(1);
   }, []);
 
+
+  //
+  // Render
+  //
+
   return (
     <Panel>
       <PanelControls
-        controlSettings={{
-          currentPage: selfData.page,
-          itemsOnThisPage: selfData.itemsOnThisPage,
-          pageSize: selfData.pageSize,
-          rowNoun: {
-            singular: 'article',
-            plural: 'articles',
-          },
-          numSelectedRows: selfData.selectedRows ? selfData.selectedRows.length : 0,
-          selectionType: selfData.selectionType,
-          totalPages: selfData.totalPages,
-          totalItems: selfData.totalItems,
-        }}
+        controlSettings={{ ...selfData.panelControlConfigs }}
         onRequestChange={handleRequestChange}
       />
       <Table
         onSelectRowHook={handleSelectRow}
-        resetAbove
-        resetBelow
+        resetAbove={true}
+        resetBelow={true}
         rows={selfData.articles}
         schema={{
           title: {

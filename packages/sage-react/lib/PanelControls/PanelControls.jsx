@@ -1,15 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import uuid from 'react-uuid';
-import { Button, Checkbox, SageTokens } from '../';
-import { listDisplayString } from './utils';
-
-const SELECTION_TYPES = {
-  NONE: 'none',
-  PARTIAL: 'partial',
-  ALL: 'all',
-};
+import { DEFAULT_NOUN, SELECTION_TYPES } from './configs';
+import PanelControlsBulkActions from './PanelControlsBulkActions';
+import PanelControlsPagination from './PanelControlsPagination';
 
 const PanelControls = ({
   children,
@@ -18,24 +12,26 @@ const PanelControls = ({
   onRequestChange,
 }) => {
   const [selfConfigs, setSelfConfigs] = useState({
+    // Set locally
     bulkActionsChecked: false,
+
+    // Synched with `controlSettings
     currentPage: 1,
     itemsOnThisPage: 0,
-    pageSize: 1,
-    selectionType: SELECTION_TYPES.NONE,
     numSelectedRows: 0,
-    totalPages: 1,
+    pageSize: 1,
+    rowNoun: { ...DEFAULT_NOUN },
+    selectionType: SELECTION_TYPES.NONE,
     totalItems: 0,
+    totalPages: 1,
   });
 
-  const classNames = classnames(
-    'sage-panel-controls',
-    className,
-    {
-      'sage-panel-controls--...': false,
-    }
-  );
 
+  //
+  // Effects
+  //
+
+  // Update when control settings change
   useEffect(() => {
     const bulkActionsChecked = controlSettings 
       && (
@@ -50,6 +46,12 @@ const PanelControls = ({
     });
   }, [controlSettings]);
 
+
+  //
+  // Event handlers
+  //
+
+  // Respond to change on bulk actions checkbox
   const onChangeSelectAll = (data) => {
     const bulkActionsChecked = !selfConfigs.bulkActionsChecked;
 
@@ -60,7 +62,7 @@ const PanelControls = ({
       selectionType = SELECTION_TYPES.NONE;
     }
 
-    onRequestChange({ selectAll: bulkActionsChecked });
+    onRequestChange({ selectionType });
 
     setSelfConfigs({
       ...selfConfigs,
@@ -69,67 +71,21 @@ const PanelControls = ({
     });
   };
 
+  // Respond to pagination clicks
   const onClickPagination = (newPageNumber) => {
     onRequestChange({ page: newPageNumber });
   };
 
-  const renderBulkActions = () => {
-    const bulkActionsLabelText = selfConfigs.numSelectedRows > 0 
-      ? `Selected ${selfConfigs.numSelectedRows} ${selfConfigs.rowNoun.plural || 'items'}`
-      : listDisplayString(
-          selfConfigs.currentPage,
-          selfConfigs.itemsOnThisPage,
-          selfConfigs.totalItems,
-          selfConfigs.rowNoun
-        );
 
-    const checkboxClassNames = classnames(
-      'sage-panel-controls__bulk-actions-checkbox',
-      {
-        'sage-checkbox--partial-selection': selfConfigs.selectionType === SELECTION_TYPES.PARTIAL,
-      }
-    );
+  //
+  // Render
+  //
 
-    return (
-      <div className="sage-panel-controls__bulk-actions"> {/* sage-panel-controls__bulk-actions--checked */}
-        <Checkbox
-          className={checkboxClassNames}
-          id={uuid()}
-          label={bulkActionsLabelText}
-          name="bulk-actions-checkbox"
-          onChange={onChangeSelectAll}
-          checked={selfConfigs.bulkActionsChecked}
-        /> {/* sage-checkbox--partial-selection */}
-      </div>
-    );
-  };
-
-  const renderPagination = () => {
-    return (
-      <div className="sage-panel-controls__pagination">
-        <Button
-          className="sage-panel-controls__pagination-prev"
-          color={Button.COLORS.SECONDARY}
-          disabled={selfConfigs.currentPage === 1}
-          icon={SageTokens.ICONS.ARROW_LEFT}
-          iconOnly={true}
-          onClick={() => onClickPagination(selfConfigs.currentPage - 1)}
-        >
-          Previous Page
-        </Button>
-        <Button
-          className="sage-panel-controls__pagination-next"
-          color={Button.COLORS.SECONDARY}
-          disabled={selfConfigs.currentPage === selfConfigs.totalPages}
-          icon={SageTokens.ICONS.ARROW_RIGHT}
-          iconOnly={true}
-          onClick={() => onClickPagination(selfConfigs.currentPage + 1)}
-        >
-          Next Page
-        </Button>
-      </div>
-    );
-  };
+  // Primary render
+  const classNames = classnames(
+    'sage-panel-controls',
+    className,
+  );
 
   return (
     <div className={classNames}>
@@ -139,9 +95,23 @@ const PanelControls = ({
         </div>
       )}
       <div className="sage-panel-controls__default-controls">
-        {renderBulkActions()}
+        <PanelControlsBulkActions
+          checked={selfConfigs.bulkActionsChecked}
+          currentPage={selfConfigs.currentPage}
+          itemsOnThisPage={selfConfigs.itemsOnThisPage}
+          numSelectedRows={selfConfigs.numSelectedRows}
+          onToggleSelection={onChangeSelectAll}
+          rowNoun={selfConfigs.rowNoun}
+          selectionType={selfConfigs.selectionType}
+          totalItems={selfConfigs.totalItems}
+        />
         <div className="sage-panel-controls__toolbar">
-          {renderPagination()}
+          <PanelControlsPagination
+            currentPage={selfConfigs.currentPage}
+            onClickPagination={onClickPagination}
+            totalPages={selfConfigs.totalPages}
+          />
+          {/* TODO: Add sort dropdown */}
         </div>
       </div>
     </div>
@@ -149,11 +119,12 @@ const PanelControls = ({
 };
 
 PanelControls.SELECTION_TYPES = SELECTION_TYPES;
+PanelControls.handlerUtils
 
 PanelControls.defaultProps = {
   children: null,
   className: null,
-  controlSettings: {},
+  controlSettings: null,
 };
 
 PanelControls.propTypes = {
@@ -168,10 +139,7 @@ PanelControls.propTypes = {
       singular: PropTypes.string,
       plural: PropTypes.string,
     }),
-    selectionType: PropTypes.oneOfType([
-      PropTypes.number,
-      PropTypes.string,
-    ]),
+    selectionType: PropTypes.oneOf(Object.values(SELECTION_TYPES)),
     totalItems: PropTypes.number,
     totalPages: PropTypes.number,
   }),
