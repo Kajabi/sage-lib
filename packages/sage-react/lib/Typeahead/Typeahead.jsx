@@ -22,7 +22,7 @@ const Typeahead = ({
   useFocusTrap({
     active: open,
     containerRef: containerRef,
-    onDeactivateCallback: () => setOpen(false),
+    onDeactivateFn: () => setOpen(false),
     // NOTE: `returnFocus` prevents the search input from being refocused when Typeahead is closed,
     //       which prevents blocking the 'scrollTo element' UX pattern that is used with this component
     returnFocus: false,
