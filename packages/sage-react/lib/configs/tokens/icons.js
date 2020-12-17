@@ -1,6 +1,7 @@
 export const TOKENS_ICONS = {
   ADD: 'add',
   ADD_CIRCLE: 'add-circle',
+  ADD_IMAGE: 'add-image',
   ADD_SMALL: 'add-small',
   ALIGN_CENTER: 'align-center',
   ALIGN_JUSTIFY: 'align-justify',
@@ -64,6 +65,7 @@ export const TOKENS_ICONS = {
   FILTERS: 'filters',
   FLAG: 'flag',
   FOLDER: 'folder',
+  FOLDER_GROUP: 'folder-group',
   FORM: 'form',
   FULLSCREEN: 'fullscreen',
   FUNNEL: 'funnel',
