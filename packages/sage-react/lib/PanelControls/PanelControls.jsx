@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import {
+  handleChange,
+  handleSelection,
+} from './utils';
 import { DEFAULT_NOUN, SELECTION_TYPES } from './configs';
 import PanelControlsBulkActions from './PanelControlsBulkActions';
 import PanelControlsPagination from './PanelControlsPagination';
@@ -119,7 +123,10 @@ const PanelControls = ({
 };
 
 PanelControls.SELECTION_TYPES = SELECTION_TYPES;
-PanelControls.handlerUtils
+PanelControls.handlerUtils = {
+  handleChange,
+  handleSelection,
+};
 
 PanelControls.defaultProps = {
   children: null,

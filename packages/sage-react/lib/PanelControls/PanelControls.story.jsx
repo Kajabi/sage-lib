@@ -47,7 +47,9 @@ const PanelControlsWithData = () => {
       total_hits: totalItems,
     } = data;
 
-    const formattedArticles = articles.map(({ _id, title, author, link, publised, }) => {
+    console.log(data);
+
+    const formattedArticles = articles.map(({ _id, title, author, link, published_date, }) => {
       return {
         id: _id || uuid(),
         title: (
@@ -62,7 +64,7 @@ const PanelControlsWithData = () => {
           </Button>
         ),
         author,
-        publised,
+        published: published_date,
       };
     });
 
@@ -96,74 +98,6 @@ const PanelControlsWithData = () => {
 
 
   //
-  // Event handlers
-  //
-
-  // Processes a request for change recieved from the panel
-  const handleRequestChange = (data) => {
-    // First if a page change is requested, send for that
-    if (data.page) {
-      fetchData(data.page);
-      return;
-    }
-    
-    // Or if reqeust is to change the selection
-    if (data.selectionType) {
-      // Parse selection type and adjust selected rows accordingly
-      let selectedRows;
-      switch (data.selectionType) {
-        case PanelControls.SELECTION_TYPES.ALL:
-          selectedRows = selfData.articles.map(({ id }) => id);
-          break;
-        case PanelControls.SELECTION_TYPES.NONE:
-        default:
-          selectedRows = [];
-          break;
-      }
-
-      setSelfData({
-        ...selfData,
-        selectedRows,
-        panelControlConfigs: {
-          ...selfData.panelControlConfigs,
-          numSelectedRows: selectedRows.length,
-          selectionType: data.selectionType,
-        },
-      });
-      return;
-    }
-  };
-
-  // Process changes to selections in the table rows
-  const handleSelectRow = (data) => {
-    const { selectedRows } = data;
-    const { panelControls: totalItems } = selfData;
-
-    // Determine selection type based on number of items
-    // sent from table's current selection list
-    const numSelectedRows = selectedRows.length;
-    let selectionType;
-    if (numSelectedRows === totalItems) {
-      selectionType = PanelControls.SELECTION_TYPES.ALL;
-    } else if (numSelectedRows > 0) {
-      selectionType = PanelControls.SELECTION_TYPES.PARTIAL;
-    } else {
-      selectionType = PanelControls.SELECTION_TYPES.NONE;
-    }
-
-    setSelfData({
-      ...selfData,
-      selectedRows,
-      panelControlConfigs: {
-        ...selfData.panelControlConfigs,
-        numSelectedRows,
-        selectionType,
-      },
-    });
-  };
-
-
-  //
   // Effects
   //
 
@@ -181,10 +115,19 @@ const PanelControlsWithData = () => {
     <Panel>
       <PanelControls
         controlSettings={{ ...selfData.panelControlConfigs }}
-        onRequestChange={handleRequestChange}
+        onRequestChange={(data) => PanelControls.handlerUtils.handleChange({
+          data,
+          stateData: selfData,
+          setStateDataFn: setSelfData,
+          pageChangeHandlerFn: fetchData,
+        })}
       />
       <Table
-        onSelectRowHook={handleSelectRow}
+        onSelectRowHook={(data) => PanelControls.handlerUtils.handleSelection({
+          data,
+          stateData: selfData,
+          setStateDataFn: setSelfData,
+        })}
         resetAbove={true}
         resetBelow={true}
         rows={selfData.articles}
@@ -195,6 +138,10 @@ const PanelControlsWithData = () => {
           },
           author: {
             label: 'Author',
+            dataType: Table.DATA_TYPES.STRING,
+          },
+          published: {
+            label: 'Date',
             dataType: Table.DATA_TYPES.STRING,
           }
         }}
