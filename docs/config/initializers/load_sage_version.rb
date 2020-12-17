@@ -7,7 +7,9 @@ frontend_package_contents = JSON.parse(
 $SAGE_VERSION_GEM = SageRails::VERSION
 $SAGE_VERSION_FRONTEND = frontend_package_contents["version"]
 
-$SAGE_VERSION_GEM_URL = "https://github.com/Kajabi/sage/tree/v#{$SAGE_VERSION_GEM}/lib/sage_rails"
-$SAGE_VERSION_FRONTEND_URL = "https://github.com/Kajabi/sage/tree/v#{$SAGE_VERSION_FRONTEND}/lib/sage-frontend"
+$SAGE_GITHUB_URL = "https://github.com/Kajabi/sage-lib"
 
-$SAGE_RELEASE_URL = "https://github.com/Kajabi/sage/releases/tag/v#{$SAGE_VERSION_FRONTEND}"
+$SAGE_VERSION_GEM_URL = "#{$SAGE_GITHUB_URL}/tree/v#{$SAGE_VERSION_GEM}/lib/sage_rails"
+$SAGE_VERSION_FRONTEND_URL = "#{$SAGE_GITHUB_URL}/tree/v#{$SAGE_VERSION_FRONTEND}/lib/sage-frontend"
+
+$SAGE_RELEASE_URL = "#{$SAGE_GITHUB_URL}/releases/tag/v#{$SAGE_VERSION_FRONTEND}"
