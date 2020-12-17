@@ -203,6 +203,24 @@ layout_pages = [
       <ul class="sage-nav__list">
         <li><%= link_to "Sandbox", pages_sandbox_path, class: "sage-nav__link #{"sage-nav__link--active" if current_page?(pages_sandbox_path)}" %></li>
         <li><%= link_to "Code Guidelines", "https://github.com/Kajabi/sage/wiki", class: "sage-nav__link", target: "_blank", rel: "noopener noreferrer" %></li>
+        <li class="sage-col--sm-show">
+          <%= link_to "Release Notes",
+            $SAGE_RELEASE_URL,
+            class: "sage-nav__link",
+            target: "_blank",
+            rel: "noopener noreferrer",
+            title: "Github release notes"
+          %>
+        </li>
+        <li class="sage-col--sm-show">
+            <%= link_to "Changelog",
+              "https://github.com/Kajabi/sage/releases",
+              class: "sage-nav__link",
+              target: "_blank",
+              rel: "noopener noreferrer",
+              title: "Github changelog"
+            %>
+        </li>
       </ul>
     </nav>
   </div>
