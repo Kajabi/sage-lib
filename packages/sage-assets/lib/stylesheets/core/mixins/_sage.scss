@@ -142,6 +142,7 @@
   }
 
   &:focus:not(:disabled):not([aria-disabled="true"]),
+  &:focus-within:not(:disabled):not([aria-disabled="true"]),
   &:active:not(:disabled):not([aria-disabled="true"]) {
     &::after {
       transform: translate3d(-50%, -50%, 0) scale(1);
