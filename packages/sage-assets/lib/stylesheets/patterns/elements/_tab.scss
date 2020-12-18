@@ -51,14 +51,18 @@ $-tab-color-disabled: map-get($sage-tab-colors, disabled);
   @include sage-tab-underline;
 
   .sage-tabs &:not(:last-child) {
-    margin-right: sage-spacing(sm);
+    @include target-safari {
+      margin-right: sage-spacing(sm);
+    }
   }
 
   .sage-tabs--progressbar & {
     overflow: visible;
 
     &:not(:last-child) {
-      margin-right: rem(40px);
+      @include target-safari {
+        margin-right: rem(40px);
+      }
 
       &::before {
         position: absolute;

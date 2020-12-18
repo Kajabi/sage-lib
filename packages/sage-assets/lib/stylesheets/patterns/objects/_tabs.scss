@@ -11,6 +11,12 @@
 .sage-tabs--layout-default {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  gap: sage-spacing(sm);
+
+  &.sage-tabs--progressbar {
+    gap: rem(40px);
+  }
 }
 
 .sage-tabs--layout-stacked {
