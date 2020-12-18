@@ -14,7 +14,7 @@
   flex-wrap: wrap;
 
   &.sage-tabs--choice {
-    flex-direction: column; 
+    flex-direction: column;
 
     @media (max-width: sage-breakpoint(sm-max)) {
       margin-bottom: sage-spacing(sm);
