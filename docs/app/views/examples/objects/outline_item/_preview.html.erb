@@ -4,7 +4,12 @@
     icon: "folder",
     depth: 0,
     category: true,
-    status: sage_component(SageLabel, { value: "Draft", color: "draft" }),
+    status: sage_component(SageLabel, {
+      color: "draft",
+      value: "Draft",
+      icon: "draft",
+      interactive_type: :dropdown
+    }),
     actions_primary: [sage_component(SageButton, {
       value: "Add Content",
       style: "primary",
@@ -34,7 +39,12 @@
       icon: "video-on",
       depth: 1,
       category: false,
-      status: sage_component(SageLabel, { value: "Draft", color: "draft" }),
+      status: sage_component(SageLabel, {
+        color: "draft",
+        value: "Draft",
+        icon: "draft",
+        interactive_type: :dropdown
+      }),
       actions_primary: [sage_component(SageButton, {
         value: "Add Content",
         style: "primary",
@@ -64,7 +74,12 @@
     icon: "arrow-corner",
     depth: 1,
     category: true,
-    status: sage_component(SageLabel, { value: "Draft", color: "draft" }),
+    status: sage_component(SageLabel, {
+      color: "draft",
+      value: "Draft",
+      icon: "draft",
+      interactive_type: :dropdown
+    }),
     actions_primary: [sage_component(SageButton, {
       value: "Add Content",
       style: "primary",
@@ -94,7 +109,12 @@
       icon: "video-on",
       depth: 2,
       category: false,
-      status: sage_component(SageLabel, { value: "Draft", color: "draft" }),
+      status: sage_component(SageLabel, {
+        color: "draft",
+        value: "Draft",
+        icon: "draft",
+        interactive_type: :dropdown
+      }),
       actions_primary: [sage_component(SageButton, {
         value: "Add Content",
         style: "primary",
