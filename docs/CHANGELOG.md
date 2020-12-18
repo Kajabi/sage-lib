@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.2.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.2.0...@kajabi/sage@3.2.1) (2020-12-18)
+
+
+### Bug Fixes
+
+* **docs site mobile header:** rearranges header links to better fit mobile devices ([a4ff878](https://github.com/Kajabi/sage-lib/commit/a4ff878a1234b73d5c27e4ce331a92e8c58e208a))
+* **hero:** added additional props for flexibility ([e19aacf](https://github.com/Kajabi/sage-lib/commit/e19aacfcf416e5d9471239d2027e711f9d2b1684))
+* **hero:** typo ([d6a565d](https://github.com/Kajabi/sage-lib/commit/d6a565df18dcce63d51e045c316180ef4f824a40))
+* **sage-assets:** fixed typo ([169defa](https://github.com/Kajabi/sage-lib/commit/169defae686bad739a6ea06088f651d197bc76f2))
+* **sage-assets:** re-added `add-image` and `folder-group` icons ([4c1a913](https://github.com/Kajabi/sage-lib/commit/4c1a91350bf89ce8502f548d36013331fbb34bbb))
+
+
+
+
+
 # [3.2.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.1.7...@kajabi/sage@3.2.0) (2020-12-16)
 
 

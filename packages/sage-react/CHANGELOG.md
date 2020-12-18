@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.19.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.19.0...@kajabi/sage-react@0.19.1) (2020-12-18)
+
+
+### Bug Fixes
+
+* **sage-assets:** re-added `add-image` and `folder-group` icons ([4c1a913](https://github.com/Kajabi/sage-lib/commit/4c1a91350bf89ce8502f548d36013331fbb34bbb))
+
+
+
+
+
 # [0.19.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.18.0...@kajabi/sage-react@0.19.0) (2020-12-16)
 
 
