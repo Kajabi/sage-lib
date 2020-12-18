@@ -11,7 +11,12 @@
       <%= component.button.html_safe %>
     <% end %>
   </div>
-  <a href="#" class="sage-hero__artwork">
+  <a 
+    <% component.cta_attributes.each do |key, value| %>
+      <%= "#{key}='#{value}'".html_safe %>
+    <% end if component.cta_attributes&.is_a?(Hash) %>
+    class="sage-hero__artwork"
+  >
     <img class="sage-hero__artwork-image" src=<%= component.image%> alt="<%= component.alt_text %>" />
   </a>
 </article>
