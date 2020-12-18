@@ -81,7 +81,11 @@ $-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
   }
 
   .sage-tabs--layout-default &:not(:last-child) {
-    @include target-safari {
+    @media (max-width: sage-breakpoint(sm-max)) {
+      margin-bottom: sage-spacing(sm);
+    }
+
+    @media (min-width: sage-breakpoint(md-min)) {
       margin-right: sage-spacing(sm);
     }
   }
