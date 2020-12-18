@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.14.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.14.1...@kajabi/sage-assets@0.14.2) (2020-12-18)
+
+
+### Bug Fixes
+
+* **sage-assets:** fixed unicode issue ([8f96b64](https://github.com/Kajabi/sage-lib/commit/8f96b64ba8a32b6d727b02f8ee84dacee937f46f))
+
+
+
+
+
 ## [0.14.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.14.0...@kajabi/sage-assets@0.14.1) (2020-12-18)
 
 
