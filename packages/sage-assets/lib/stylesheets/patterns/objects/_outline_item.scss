@@ -16,6 +16,7 @@
 ================================================== */
 
 $-collapse-breakpoint-key: lg-max;
+$-fake-background: "::before";
 
 .sage-outline-item {
   @include sage-focus-outline($outline-offset-block: -6px, $outline-offset-inline: -6px, $outline-animation-speed: 0.05s);
@@ -29,8 +30,28 @@ $-collapse-breakpoint-key: lg-max;
   padding: 0 sage-spacing(sm);
   background: sage-color(white);
   will-change: background, box-shadow;
-  border-left: sage-border();
-  border-right: sage-border();
+  position: relative;
+
+  > * {
+    z-index: sage-z-index(default, 3);
+  }
+
+  &#{$-fake-background} {
+    z-index: sage-z-index(default, 2);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    top: -1px;
+    content: '';
+    background: sage-color(white);
+    border-left: sage-border();
+    border-right: sage-border();
+    pointer-events: none;
+  }
+
+  // transition: height 0.5s ease 0.5s;
+  // transform: translateZ(0);
 
   // NOTE: Height is governed by a parent React node to allow us
   //       to dynamically adjust the height of elements depending
@@ -42,7 +63,7 @@ $-collapse-breakpoint-key: lg-max;
   //       regular Outline Items
   //
   // stylelint-disable-next-line order/properties-order
-  height: 100%;
+  flex: 1;
 
   @media (min-width: sage-breakpoint($-collapse-breakpoint-key)) {
     // Using static column values to ensure alignment
@@ -57,13 +78,20 @@ $-collapse-breakpoint-key: lg-max;
 
   // ------------------ ( /Category )
   &.sage-outline-item--depth-0.sage-outline-item--category {
-    margin-top: sage-spacing(xs);
-    border-top-right-radius: sage-border(radius);
-    border-top-left-radius: sage-border(radius);
-    border-top: sage-border();
-    border-bottom: sage-border();
+    // height: rem(68px);
+    // margin-top: sage-spacing(xs);
 
-    &:not(.sage-outline-item--expanded) {
+    padding-top: sage-spacing(xs);
+
+    &#{$-fake-background} {
+      top: sage-spacing(xs);
+      border-top-right-radius: sage-border(radius);
+      border-top-left-radius: sage-border(radius);
+      border-top: sage-border();
+      border-bottom: sage-border();
+    }
+
+    &:not(.sage-outline-item--expanded)#{$-fake-background} {
       border-bottom-right-radius: sage-border(radius);
       border-bottom-left-radius: sage-border(radius);
     }
@@ -71,9 +99,12 @@ $-collapse-breakpoint-key: lg-max;
 
   // ------------------ ( /Category/Post )
   &.sage-outline-item--depth-1:not(.sage-outline-item--category) {
-    border-bottom: sage-border(light);
+    &#{$-fake-background} {
+      border-bottom: sage-border(light);
 
-    &.sage-outline-item--last-child {
+    }
+
+    &.sage-outline-item--last-child#{$-fake-background} {
       border-bottom: sage-border();
       border-bottom-right-radius: sage-border(radius);
       border-bottom-left-radius: sage-border(radius);
@@ -83,11 +114,14 @@ $-collapse-breakpoint-key: lg-max;
   // ------------------ ( /Category/Category )
   &.sage-outline-item--depth-1.sage-outline-item--category {
     padding-left: sage-spacing(lg);
-    margin-top: rem(-1px);
-    border-top: sage-border();
-    border-bottom: sage-border();
 
-    &.sage-outline-item--last-child:not(.sage-outline-item--expanded) {
+    &#{$-fake-background} {
+      top: -2px;
+      border-top: sage-border();
+      border-bottom: sage-border();
+    }
+
+    &.sage-outline-item--last-child:not(.sage-outline-item--expanded)#{$-fake-background} {
       border-bottom-right-radius: sage-border(radius);
       border-bottom-left-radius: sage-border(radius);
     }
@@ -95,10 +129,14 @@ $-collapse-breakpoint-key: lg-max;
 
   // ------------------ ( /Category/Category/Post )
   &.sage-outline-item--depth-2:not(.sage-outline-item--category) {
+    // height: rem(48px);
     padding-left: sage-spacing(xl);
-    border-bottom: sage-border(light);
 
-    &.sage-outline-item--last-child {
+    &#{$-fake-background} {
+      border-bottom: sage-border(light);
+    }
+
+    &.sage-outline-item--last-child#{$-fake-background} {
       border-bottom: sage-border();
     }
   }
@@ -107,42 +145,55 @@ $-collapse-breakpoint-key: lg-max;
   &.sage-outline-item--is-dragging-descendant {
     margin: 0;
 
-    // stylelint-disable-next-line declaration-no-important
-    border: 1px solid sage-color(grey) !important;
-
-    // stylelint-disable-next-line declaration-no-important
-    border-radius: unset !important;
-
     // NOTE: Forces hardware acceleration, this resolves issue with HTML5 Drag & Drop
     //       API drag-preview 'capture' action in webkit browsers.
     //
     // stylelint-disable-next-line order/properties-order
     transform: translateZ(0);
 
+    &#{$-fake-background} {
+      border-radius: unset !important;
+      background-color: sage-color(grey, 200);
+    }
+
     .sage-outline-item__actions-primary,
     .sage-outline-item__actions-secondary,
     .sage-outline-item__handle-collapse {
       visibility: hidden;
     }
-
-    > * {
-      opacity: 0.5;
-    }
   }
 
   &.sage-outline-item--is-droptarget {
-    box-shadow: 0 -4px 0 0 sage-color(primary);
+    &#{$-fake-background} {
+      box-shadow: inset 0 3px 0 0 sage-color(primary);
+    }
   }
 
   &.sage-outline-item--is-droptarget-invalid {
-    box-shadow: 0 -4px 0 0 sage-color(red, 300);
+    &#{$-fake-background} {
+      box-shadow: inset 0 3px 0 0 sage-color(red, 300);
+    }
   }
 
-  &.sage-outline-item--is-searchmatch {
-    box-shadow: inset 0 0 0 1px sage-color(primary, 200);
-    // stylelint-disable-next-line declaration-no-important
-    border-color: sage-color(primary, 200) !important;
-  }
+  // &.sage-outline-item--is-dragging-out-of-bounds {
+  //   display: none;
+  // }
+}
+
+.sage-outline-item__drag-preview {
+  @extend %t-sage-body-xsmall-med;
+  border-radius: sage-border(radius-large);
+  background: sage-color(primary);
+  padding: sage-spacing(3xs) sage-spacing(xs);
+  color: sage-color(white);
+  z-index: sage-z-index(default, 1);
+  white-space: nowrap;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  height: fit-content;
+  opacity: 0.4;
 }
 
 .sage-outline-item__title {
