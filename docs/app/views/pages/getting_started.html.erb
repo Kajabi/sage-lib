@@ -5,11 +5,11 @@
 
 These reusable patterns are created from flexible building blocks we call components that share consistent visual foundations like color, iconography, typography, spacing, and interactive states.
 
-This design system is not owned by any one person or group but is a collective effort across the UXD and Product Design teams at Kajabi. Each team member can make suggestions for enhancements, as well as propose new components and patterns. 
+This design system is not owned by any one person or group but is a collective effort across the UXD and Product Design teams at Kajabi. Each team member can make suggestions for enhancements, as well as propose new components and patterns.
 )) %>
 <% end %>
-<%= md(" 
-## How It Works 
+<%= md("
+## How It Works
 The UI of the Kajabi Core application is a combination of Rails Components, React Components and a custom SCSS Framework called Sage that applies a uniform style to both.
 ", use_sage_type: true) %>
 <%= sage_component SageGridRow, {} do %>
@@ -42,7 +42,7 @@ The UI of the Kajabi Core application is a combination of Rails Components, Reac
     </div>
   <% end %>
 <% end %>
-<%= md(" 
+<%= md("
 We think of our approach to UI at Kajabi in this way: We default to using Rails Components and a classic Rails approach to most problems and move to React where it counts.
 
 Rails does many things very well and gives us the ability to move quickly and solve complex problems with very simple, tried and true, code solutions. With that said, sometimes we come across a problem that we want to solve that the standard rails approach will just not be enough ( Think complex interactions with many versions of state ). In this case we move to React as our default approach to solving complex, Javascript heavy problems.
@@ -51,7 +51,7 @@ Rails does many things very well and gives us the ability to move quickly and so
 <hr>
 <%= sage_component SageGridRow, {} do %>
   <%= sage_component SageGridCol, { breakpoint: :lg, size: "7" } do %>
-<%= md(" 
+<%= md("
 
 Because our system contains two different approaches to UI creation, we utilize a SCSS Design System to provide the styles to both types of components (Think Bootstrap, but customized for our products). Our Design System provides the styles for the core components that make up the UI of our product.
 
@@ -65,9 +65,9 @@ Because our system contains two different approaches to UI creation, we utilize 
   <% end %>
 <% end %>
 <hr>
-<%= md(" 
+<%= md("
 
-This system is a work of shared ownership and we encourage any member of the Kajabi team to feel empowered to participate in its ongoing improvement. Understanding and contributing to the system are the keys to the system's longevity. We encourage anyone planning on contributing to the system to first read over our Guides: 
+This system is a work of shared ownership and we encourage any member of the Kajabi team to feel empowered to participate in its ongoing improvement. Understanding and contributing to the system are the keys to the system's longevity. We encourage anyone planning on contributing to the system to first read over our Guides:
 
-[Code Guidelines](https://github.com/Kajabi/sage/wiki).
+[Code Guidelines](https://github.com/Kajabi/sage-lib/wiki).
 ", use_sage_type: true) %>
