@@ -203,7 +203,7 @@ layout_pages = [
       <ul class="sage-nav__list">
         <li><%= link_to "Sandbox", pages_sandbox_path, class: "sage-nav__link #{"sage-nav__link--active" if current_page?(pages_sandbox_path)}" %></li>
         <li><%= link_to "Code Guidelines", "#{$SAGE_GITHUB_URL}", class: "sage-nav__link", target: "_blank", rel: "noopener noreferrer" %></li>
-        <li class="sage-col--sm-show">
+        <li>
           <%= link_to "Release Notes",
             $SAGE_RELEASE_URL,
             class: "sage-nav__link",
@@ -212,7 +212,7 @@ layout_pages = [
             title: "Github release notes"
           %>
         </li>
-        <li class="sage-col--sm-show">
+        <li>
             <%= link_to "Changelog",
               "#{$SAGE_GITHUB_URL}/releases",
               class: "sage-nav__link",
