@@ -24,10 +24,10 @@ $-label-inset-border: 0 0 0 1px inset;
 .sage-label__value {
   @extend %t-sage-body-small-semi;
 
-  min-height: $-label-interactive-icon-size;
   appearance: none;
   display: flex;
   align-items: center;
+  min-height: $-label-interactive-icon-size;
   padding: $-label-padding;
   white-space: nowrap;
   border-radius: $-label-border-radius;
@@ -139,6 +139,7 @@ $-label-inset-border: 0 0 0 1px inset;
     &.sage-label--interactive-right-cta-affordance .sage-label__decor-icon::before {
       @media (max-width: sage-breakpoint(sm-max)) {
         width: sage-spacing(md);
+        font-size: rem(6px);
       }
     }
   }
