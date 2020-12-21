@@ -148,6 +148,10 @@
       opacity: 1;
     }
   }
+
+  &:focus-within:not(:disabled):not([aria-disabled="true"]) {
+    background-color: sage-color(primary, 100);
+  }
 }
 
 ///
