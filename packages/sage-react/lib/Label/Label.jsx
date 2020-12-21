@@ -40,7 +40,9 @@ const Label = ({
         type={interactiveType ? 'button' : null}
         {...rest}
       >
-        {value}
+        <span className="sage-label__value-text">
+          {value}
+        </span>
       </TagName>
       {
         interactiveType === LABEL_INTERACTIVE_TYPES.SECONDARY_BUTTON

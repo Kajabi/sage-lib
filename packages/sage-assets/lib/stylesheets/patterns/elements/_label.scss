@@ -24,6 +24,7 @@ $-label-inset-border: 0 0 0 1px inset;
 .sage-label__value {
   @extend %t-sage-body-small-semi;
 
+  min-height: $-label-interactive-icon-size;
   appearance: none;
   display: flex;
   align-items: center;
@@ -37,6 +38,14 @@ $-label-inset-border: 0 0 0 1px inset;
   &:focus,
   &:active {
     outline: none;
+  }
+}
+
+.sage-label__value-text {
+  .sage-label--interactive-right-cta-affordance & {
+    @media (max-width: sage-breakpoint(sm-max)) {
+      @include visually-hidden();
+    }
   }
 }
 
@@ -75,7 +84,6 @@ $-label-inset-border: 0 0 0 1px inset;
     }
 
     .sage-label__value {
-
       @include sage-focus-outline();
       @include sage-focus-outline--update-color( sage-color-combo($-color-name, default, foreground) );
 
@@ -125,6 +133,12 @@ $-label-inset-border: 0 0 0 1px inset;
 
       &.sage-btn--tag::before {
         font-size: sage-font-size(md);
+      }
+    }
+
+    &.sage-label--interactive-right-cta-affordance .sage-label__decor-icon::before {
+      @media (max-width: sage-breakpoint(sm-max)) {
+        width: sage-spacing(md);
       }
     }
   }
