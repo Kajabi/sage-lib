@@ -48,7 +48,7 @@ const Label = ({
       }
       {
         (interactiveType === LABEL_INTERACTIVE_TYPES.DROPDOWN)
-        && <span className="sage-label__decor-icon sage-label__decor-icon--caret-down"></span>
+        && <span className="sage-label__decor-icon sage-label__decor-icon--down-small"></span>
       }
     </span>
   );
