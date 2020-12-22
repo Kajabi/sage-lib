@@ -58,10 +58,10 @@ $-modal-padding-y: sage-spacing(md);
     visibility: visible;
     display: block;
   }
-}
 
-.sage-modal--large & {
-  max-width: sage-container(modalLg);
+  .sage-modal--large & {
+    max-width: sage-container(modalLg);
+  }
 }
 
 .sage-modal__header {

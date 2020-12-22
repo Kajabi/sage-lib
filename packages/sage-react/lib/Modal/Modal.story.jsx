@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs } from '@storybook/addon-knobs';
+import { withKnobs, boolean } from '@storybook/addon-knobs';
 import { centerXY } from '../story-support/decorators';
 import { SageTokens, SageClassnames } from '../configs';
 import Modal from '../Modal';
@@ -22,7 +22,11 @@ const ModalWithState = () => {
       >
         Take An Action
       </Button>
-      <Modal active={active} onExit={onExit}>
+      <Modal
+        active={active}
+        onExit={onExit}
+        large={boolean('Large', false)}
+      >
         <Modal.Header>
           <h1 className={SageClassnames.TYPE.HEADING_1}>Example Sage Modal</h1>
           <Modal.HeaderAside>
