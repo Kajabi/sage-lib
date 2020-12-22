@@ -18,6 +18,10 @@
 $-collapse-breakpoint-key: lg-max;
 
 .sage-outline-item {
+  @include sage-focus-outline($outline-offset-block: -6px, $outline-offset-inline: -6px, $outline-animation-speed: 0.05s);
+  @include sage-focus-outline--update-color(transparent);
+  @include sage-focus-outline--focus-within();
+
   display: grid;
   align-items: stretch;
   grid-template-rows: repeat(auto-fit, auto);

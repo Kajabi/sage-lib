@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import uuid from 'react-uuid';
@@ -17,7 +17,7 @@ const TableRow = ({
   selected,
   typeRenderers,
 }) => {
-  const [selfSelected, setSelfSelected] = useState(selected);
+  const [selfSelected, setSelfSelected] = useState(false);
   const classNames = classnames(
     'sage-table__row',
     className,
@@ -26,9 +26,16 @@ const TableRow = ({
     }
   );
 
+  useEffect(() => {
+    setSelfSelected(selected);
+  }, [selected]);
+
   const onChangeSelector = (value, checked, ev) => {
-    onSelect(value);
-    setSelfSelected(!checked);
+    if (onSelect) {
+      onSelect(value);
+    } else {
+      setSelfSelected(!checked);
+    }
   };
 
   const selfTypeRenderers = Object.assign(typeRenderers, TableHelpers.typeRenderers);

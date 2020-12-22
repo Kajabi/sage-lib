@@ -10,7 +10,19 @@
 
 .sage-tabs--layout-default {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
+
+  &.sage-tabs--choice {
+    flex-direction: column;
+
+    @media (max-width: sage-breakpoint(sm-max)) {
+      margin-bottom: sage-spacing(sm);
+    }
+
+    @media (min-width: sage-breakpoint(md-min)) {
+      flex-direction: row;
+    }
+  }
 }
 
 .sage-tabs--layout-stacked {

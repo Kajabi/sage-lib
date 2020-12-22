@@ -1,6 +1,7 @@
 class SagePagination < SageComponent
   attr_accessor :items
   attr_accessor :window
+  attr_accessor :hide_pages
   attr_accessor :additional_params
 
   def initialize(attributes = {})

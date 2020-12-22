@@ -26,11 +26,12 @@ export { default as Loader } from './Loader';
 export { default as Modal } from './Modal';
 export { default as PageHeading } from './PageHeading';
 export { default as Panel } from './Panel';
+export { default as PanelControls } from './PanelControls';
+export { default as Popover } from './Popover';
 export {
   SageTokens,
   SageClassnames,
 } from './configs';
-export { default as Popover } from './Popover';
 export { default as Search } from './Search';
 export { default as Select } from './Select';
 export {

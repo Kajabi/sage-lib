@@ -6,7 +6,7 @@
 ================================================== */
 
 $-label-interactive-icon-size: rem(24px);
-$-label-interactive-icon-size-small: rem(16px);
+$-label-interactive-icon-size-small: rem(28px);
 $-label-padding: 0 sage-spacing(xs);
 $-label-border-radius: sage-border(radius);
 $-label-inset-border: 0 0 0 1px inset;
@@ -71,7 +71,7 @@ $-label-inset-border: 0 0 0 1px inset;
 
   #{$-color-modifier}.sage-label--interactive {
     &.sage-label--interactive-right-cta-affordance .sage-label__value {
-      padding-right: rem(32px);
+      padding-right: $-label-interactive-icon-size-small;
     }
 
     .sage-label__value {
@@ -109,7 +109,6 @@ $-label-inset-border: 0 0 0 1px inset;
       border-radius: 0 sage-border(radius) sage-border(radius) 0;
 
       &::before {
-        font-size: rem(8px);
         font-weight: sage-font-weight(bold);
         color: sage-color-combo($-color-name, default, foreground);
       }

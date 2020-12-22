@@ -151,6 +151,17 @@
 }
 
 ///
+/// Sets the background-color focus outline to an interactive element's parent.
+///
+/// @param {color} $focus-within-background-color Hex color to be used for the background-color
+///
+@mixin sage-focus-outline--focus-within($focus-within-background-color: sage-color(primary, 100)) {
+  &:focus-within:not(:disabled):not([aria-disabled="true"]) {
+    background-color: $focus-within-background-color;
+  }
+}
+
+///
 /// Sets the color custom focus outline to an interactive element.
 /// Can be used both for the initial setting and for a modified setting for a particular state.
 ///
