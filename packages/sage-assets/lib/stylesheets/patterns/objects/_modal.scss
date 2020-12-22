@@ -60,6 +60,10 @@ $-modal-padding-y: sage-spacing(md);
   }
 }
 
+.sage-modal--large & {
+  max-width: sage-container(modalLg);
+}
+
 .sage-modal__header {
   display: flex;
   align-items: baseline;
