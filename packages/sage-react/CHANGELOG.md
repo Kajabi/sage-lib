@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.20.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.19.3...@kajabi/sage-react@0.20.0) (2020-12-22)
+
+
+### Bug Fixes
+
+* **label:** update dropdown labels to new icon, tighten up right spacing a bit ([f6dd468](https://github.com/Kajabi/sage-lib/commit/f6dd468333f7a6d065e94b54cfaebd0564ffe917))
+* **sage-react:** remove console log from service ([5cd0a13](https://github.com/Kajabi/sage-lib/commit/5cd0a135f3f559ca481acfdcf89eb81e82402e46))
+
+
+### Features
+
+* **panel-controls:** add panel controls MVP in React ([d3ac0d3](https://github.com/Kajabi/sage-lib/commit/d3ac0d354070212b033674aca4af0e7446069bb7))
+* **panel-controls:** refactor common handlers into public utils ([1606331](https://github.com/Kajabi/sage-lib/commit/1606331cefa8ae17679abb152f342e348a6a92d3))
+* **sage-react:** add news api service for testing ([d91aac9](https://github.com/Kajabi/sage-lib/commit/d91aac9ec9db3de51e1f55657990a8a50e1a2c06))
+* **table:** improve interactivity of table ([5999c59](https://github.com/Kajabi/sage-lib/commit/5999c5907d542ace7b2e69bf364109b3e101a23a))
+
+
+
+
+
 ## [0.19.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.19.2...@kajabi/sage-react@0.19.3) (2020-12-22)
 
 **Note:** Version bump only for package @kajabi/sage-react

@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.3.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.2.3...@kajabi/sage@3.3.0) (2020-12-22)
+
+
+### Bug Fixes
+
+* **label:** update dropdown labels to new icon, tighten up right spacing a bit ([f6dd468](https://github.com/Kajabi/sage-lib/commit/f6dd468333f7a6d065e94b54cfaebd0564ffe917))
+* **sage-outline:** update focus-within to show background-color ([51a95a9](https://github.com/Kajabi/sage-lib/commit/51a95a9ce0204fc02d5c6f0029028658dd5d16a8))
+* **tabs:** updated choice tabs to stack at specific breakpoint ([7170ff2](https://github.com/Kajabi/sage-lib/commit/7170ff25ebc156577658816c45c528c4b50affa6))
+
+
+### Features
+
+* **rails pagination:** add :hide_pages attribute, enable :spacer support ([8b226fa](https://github.com/Kajabi/sage-lib/commit/8b226fa0a227c8fc54ace50a9aab0e5612c52592))
+
+
+
+
+
 ## [3.2.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.2.2...@kajabi/sage@3.2.3) (2020-12-22)
 
 **Note:** Version bump only for package @kajabi/sage

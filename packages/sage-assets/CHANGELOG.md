@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.14.4](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.14.3...@kajabi/sage-assets@0.14.4) (2020-12-22)
+
+
+### Bug Fixes
+
+* **focus-outline:** updated mixin to reduce impact appwide ([4294c1c](https://github.com/Kajabi/sage-lib/commit/4294c1cc688042a37dbe6f560c815b3dee251b5e))
+* **label:** update dropdown labels to new icon, tighten up right spacing a bit ([f6dd468](https://github.com/Kajabi/sage-lib/commit/f6dd468333f7a6d065e94b54cfaebd0564ffe917))
+* **sage-outline:** linter ([b0a35cb](https://github.com/Kajabi/sage-lib/commit/b0a35cb58c2efd636519210e0cfb4dffc776c778))
+* **sage-outline:** update focus-within to show background-color ([51a95a9](https://github.com/Kajabi/sage-lib/commit/51a95a9ce0204fc02d5c6f0029028658dd5d16a8))
+* **sage-outline:** update focus-within to show outline ([31cbdfd](https://github.com/Kajabi/sage-lib/commit/31cbdfd9f4ee871d068d2805ebce47e405d2043b))
+* **tabs:** linter ([4a41dfe](https://github.com/Kajabi/sage-lib/commit/4a41dfe53d869009506136938cd22557511d5a1e))
+* **tabs:** removed a default flexbox property ([5ac2c0e](https://github.com/Kajabi/sage-lib/commit/5ac2c0eb66564906c7cce54065da8664579693fa))
+* **tabs:** update responsive styles ([46b4942](https://github.com/Kajabi/sage-lib/commit/46b4942ba0a20f6881007f8508d9c0dc19087bff))
+* **tabs:** updated choice tabs to stack at specific breakpoint ([7170ff2](https://github.com/Kajabi/sage-lib/commit/7170ff25ebc156577658816c45c528c4b50affa6))
+
+
+
+
+
 ## [0.14.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.14.2...@kajabi/sage-assets@0.14.3) (2020-12-22)
 
 
