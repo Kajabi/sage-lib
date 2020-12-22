@@ -1,6 +1,11 @@
 <% if component.items.total_pages > 1 %>
-  <nav class="sage-pagination" aria-label="Pagination Navigation">
-
+  <nav
+    class="
+      sage-pagination
+      <%= component.generated_css_classes %>
+    "
+    aria-label="Pagination Navigation"
+  >
     <span class="sage-pagination__count"><%= component.page_count component.items %></span>
 
     <ul class="sage-pagination__pages">
@@ -16,7 +21,9 @@
         </li>
       <% end -%>
 
-      <%= paginate component.items, outer_window: component.window, theme: "sage_theme" %>
+      <% if !component.hide_pages %>
+        <%= paginate component.items, outer_window: component.window, theme: "sage_theme" %>
+      <% end %>
 
       <% if component.items.last_page?  %>
       <li class="sage-pagination__item">
