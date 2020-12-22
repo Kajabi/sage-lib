@@ -4,6 +4,8 @@
 
 ================================================== */
 
+$-item-height: rem(68px);
+
 .sage-typeahead {
   position: relative;
 }
@@ -34,7 +36,8 @@
   display: flex;
   align-items: center;
   position: relative;
-
+  overflow: hidden;
+  height: $-item-height;
 
   &:not(:first-child) {
     border-top: sage-border();
@@ -61,7 +64,7 @@
   grid-template-rows: 1fr;
   column-gap: sage-spacing(sm);
   align-items: center;
-  padding: sage-spacing(sm);
+  padding: sage-spacing(md) sage-spacing(sm);
   text-align: left;
 
   > * {
