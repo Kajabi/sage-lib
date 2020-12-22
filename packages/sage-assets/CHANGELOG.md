@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.14.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.14.2...@kajabi/sage-assets@0.14.3) (2020-12-22)
+
+
+### Bug Fixes
+
+* **typeahead:** normalize typeahead item height to 68px ([52b92a1](https://github.com/Kajabi/sage-lib/commit/52b92a1dbdaae2a27e5e58b0532422c44e2ec7f1))
+
+
+
+
+
 ## [0.14.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.14.1...@kajabi/sage-assets@0.14.2) (2020-12-18)
 
 
