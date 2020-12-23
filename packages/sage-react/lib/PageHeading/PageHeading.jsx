@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import uuid from 'react-uuid';
 import Breadcrumbs from '../Breadcrumbs';
+import classnames from 'classnames';
 
 const PageHeading = ({
   className,
@@ -9,9 +10,17 @@ const PageHeading = ({
   breadcrumbs,
   actionItems,
   toolbarItems,
+  secondaryText,
   ...rest
 }) => (
-  <div className={`sage-page-heading ${className}`} {...rest}>
+  <div
+    className={classnames(
+      'sage-page-heading',
+      className,
+      { 'sage-page-heading--no-secondary-text': !secondaryText }
+    )}
+    {...rest}
+  >
     {breadcrumbs
       && (
       <div className="sage-page-heading__crumbs">
@@ -36,6 +45,13 @@ const PageHeading = ({
         </div>
       )
     }
+    {secondaryText
+      && (
+        <div className="sage-page-heading__secondary">
+          {secondaryText}
+        </div>
+      )
+    }
   </div>
 );
 
@@ -44,6 +60,7 @@ PageHeading.defaultProps = {
   actionItems: null,
   toolbarItems: null,
   breadcrumbs: null,
+  secondaryText: null,
 };
 
 PageHeading.propTypes = {
@@ -52,6 +69,7 @@ PageHeading.propTypes = {
   actionItems: PropTypes.arrayOf(PropTypes.node),
   toolbarItems: PropTypes.arrayOf(PropTypes.node),
   breadcrumbs: PropTypes.arrayOf(Breadcrumbs.itemPropTypes),
+  secondaryText: PropTypes.string,
 };
 
 export default PageHeading;

@@ -10,6 +10,7 @@ storiesOf('Sage/PageHeading', module)
   .addDecorator(centerXY)
   .add('Default', () => (
     <PageHeading
+      secondaryText={text('Secondary Text', 'Secondary text here')}
       breadcrumbs={[
         {
           label: 'Back somewhere',
