@@ -26,6 +26,7 @@ const Tabs = ({
     {
       'sage-tabs--progressbar': tabStyle === TAB_STYLES.PROGRESSBAR,
       'sage-tabs--align-items-center': tabStyle === TAB_STYLES.CHOICE && alignItemsCenter,
+      'sage-tabs--choice': tabStyle === TAB_STYLES.CHOICE,
       [`sage-tabs--layout-${tabLayout}`]: tabLayout,
     },
   );
