@@ -16,7 +16,9 @@
     <%= 'type="button"' if component.interactive_type %>
     <%= component.generated_html_attributes %>
   />
-    <%= component.value.html_safe %>
+    <span class="sage-label__value-text">
+      <%= component.value.html_safe %>
+    </span>
   </<%= label_content_tag %>>
   <%= component.content %>
   <%= component.secondary_button if component.interactive_type === :secondary_button %>
