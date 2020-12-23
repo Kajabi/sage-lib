@@ -42,7 +42,7 @@ $-label-inset-border: 0 0 0 1px inset;
 }
 
 .sage-label__value-text {
-  .sage-label--interactive-right-cta-affordance & {
+  .sage-label--interactive-right-cta-affordance[class*="sage-label--icon-"] & {
     @media (max-width: sage-breakpoint(sm-max)) {
       @include visually-hidden();
     }
