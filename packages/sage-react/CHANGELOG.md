@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.21.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.20.0...@kajabi/sage-react@0.21.0) (2020-12-23)
+
+
+### Features
+
+* **react pageheading:** upfit react pageheading to match the rails component grid implementation ([6b691b3](https://github.com/Kajabi/sage-lib/commit/6b691b3b7ec91f6d8a0a49935ba50fe7e29d2b7d))
+
+
+
+
+
 # [0.20.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.19.3...@kajabi/sage-react@0.20.0) (2020-12-22)
 
 
