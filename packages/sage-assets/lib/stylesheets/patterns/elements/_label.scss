@@ -139,7 +139,6 @@ $-label-inset-border: 0 0 0 1px inset;
     &.sage-label--interactive-right-cta-affordance .sage-label__decor-icon::before {
       @media (max-width: sage-breakpoint(sm-max)) {
         width: sage-spacing(md);
-        font-size: rem(6px);
       }
     }
   }
