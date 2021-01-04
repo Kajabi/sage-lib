@@ -17,6 +17,6 @@
     <% end if component.cta_attributes&.is_a?(Hash) %>
     class="sage-hero__artwork"
   >
-    <img class="sage-hero__artwork-image" src=<%= component.image%> alt="<%= component.alt_text %>" />
+    <img class="sage-hero__artwork-image" <%= "aria-hidden=true" if component.alt_text.blank? %> src=<%= component.image%> alt="<%= component.alt_text %>" />
   </a>
 </article>
