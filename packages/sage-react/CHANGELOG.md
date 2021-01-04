@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.21.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.21.0...@kajabi/sage-react@0.21.1) (2021-01-04)
+
+
+### Bug Fixes
+
+* **label:** responsive updates ([a410914](https://github.com/Kajabi/sage-lib/commit/a41091418275e4be6295774fc06e88db2ce43a85))
+* **modal:** add large attribute ([3ed5551](https://github.com/Kajabi/sage-lib/commit/3ed5551680b3abc547a74c5454e6d616efedf920))
+* **modal:** add large attribute to modal ([915beba](https://github.com/Kajabi/sage-lib/commit/915bebac7f7b4a0009171105b0fcebfe10e91cba))
+* **react tooltip:** fix tooltip alignment bug when view is scrolled ([58c26c1](https://github.com/Kajabi/sage-lib/commit/58c26c1f9e162d9f8a5293c76bd4c25f845e5f12))
+* **tabs:** updates to react choice tabs ([c53465d](https://github.com/Kajabi/sage-lib/commit/c53465d61d746be0b1cb6e97ae83f075a543484a))
+
+
+
+
+
 # [0.21.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.20.0...@kajabi/sage-react@0.21.0) (2020-12-23)
 
 

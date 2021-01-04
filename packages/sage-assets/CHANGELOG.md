@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.14.5](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.14.4...@kajabi/sage-assets@0.14.5) (2021-01-04)
+
+
+### Bug Fixes
+
+* **label:** removed unused responsive styles ([3535a7a](https://github.com/Kajabi/sage-lib/commit/3535a7a00e907f531959f46b42ac1e28abb869da))
+* **label:** responsive updates ([1f4c5de](https://github.com/Kajabi/sage-lib/commit/1f4c5de81cfe12c6ead0e834fe1545937e5b6e50))
+* **label:** responsive updates ([a410914](https://github.com/Kajabi/sage-lib/commit/a41091418275e4be6295774fc06e88db2ce43a85))
+* **label:** styles updates ([f72295a](https://github.com/Kajabi/sage-lib/commit/f72295a2390715eb13822706314b29f2ed6b1574))
+* **modal:** add large attribute ([3ed5551](https://github.com/Kajabi/sage-lib/commit/3ed5551680b3abc547a74c5454e6d616efedf920))
+* **modal:** add large attribute to modal ([2702e1c](https://github.com/Kajabi/sage-lib/commit/2702e1c389c5db83bdb303c0d50dd906720b2a82))
+* **modal:** add large attribute to modal ([915beba](https://github.com/Kajabi/sage-lib/commit/915bebac7f7b4a0009171105b0fcebfe10e91cba))
+
+
+
+
+
 ## [0.14.4](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.14.3...@kajabi/sage-assets@0.14.4) (2020-12-22)
 
 

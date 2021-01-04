@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.3.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.3.1...@kajabi/sage@3.3.2) (2021-01-04)
+
+
+### Bug Fixes
+
+* **hero:** conditional aria-hidden added to image ([5cbf6b3](https://github.com/Kajabi/sage-lib/commit/5cbf6b32c6116bb9ef0791f0993957ac2708924d))
+* **label:** responsive updates ([a410914](https://github.com/Kajabi/sage-lib/commit/a41091418275e4be6295774fc06e88db2ce43a85))
+* **modal:** add large attribute ([3ed5551](https://github.com/Kajabi/sage-lib/commit/3ed5551680b3abc547a74c5454e6d616efedf920))
+* **modal:** tweak demo ([a301424](https://github.com/Kajabi/sage-lib/commit/a301424c566817cf7729718cb227b13eb590a51e))
+* **modal:** updated rails docs and demo ([8f60080](https://github.com/Kajabi/sage-lib/commit/8f60080f64f8437bf62dd8d666a5fc09c6c4135c))
+* **pageheading:** updates for page heading help icon link to recieve correct :href ([ac5dbec](https://github.com/Kajabi/sage-lib/commit/ac5dbec93db5a6e0a2cfd0c774c73e16ddf9f3f4))
+* **rails pagination:** if there are no pages to display component shouldn't lose its spacing classes ([9049a5b](https://github.com/Kajabi/sage-lib/commit/9049a5b45e18a9118105a91287e0a01b1ebce245))
+
+
+
+
+
 ## [3.3.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.3.0...@kajabi/sage@3.3.1) (2020-12-23)
 
 **Note:** Version bump only for package @kajabi/sage
