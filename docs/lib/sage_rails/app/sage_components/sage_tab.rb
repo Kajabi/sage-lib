@@ -1,7 +1,9 @@
 class SageTab < SageComponent
-  attr_accessor :target
-  attr_accessor :text
-  attr_accessor :active
-  attr_accessor :attributes
-  attr_accessor :disabled
+  set_attribute_schema({
+    active: [:optional, TrueClass],
+    attributes: [:optional, Hash],
+    disabled: [:optional, TrueClass],
+    target: [:optional, String],
+    text: String,
+  })
 end

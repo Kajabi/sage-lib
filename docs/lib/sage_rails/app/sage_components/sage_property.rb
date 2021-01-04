@@ -1,4 +1,6 @@
 class SageProperty < SageComponent
-  attr_accessor :icon
-  attr_accessor :value
+  set_attribute_schema({
+    icon: [:optional, String],
+    value: [:optional, String],
+  })
 end

@@ -1,4 +1,6 @@
 class SageLoader < SageComponent
-  attr_accessor :fill
-  attr_accessor :type
+  set_attribute_schema({
+    fill: [:optional, TrueClass],
+    type: Set.new(["bar", "spinner"]),
+  })
 end

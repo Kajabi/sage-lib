@@ -1,15 +1,15 @@
 class SageButton < SageComponent
-  attribute_schema({
+  set_attribute_schema({
     align:            [:optional, String],
     attributes:       [:optional, Hash],
     css_classes:      [:optional, [String]],
     disabled:         [:optional, TrueClass],
     full_width:       [:optional, TrueClass],
-    icon:             [:optional, { style: String, name: String }],
+    icon:             [:optional, { name: String, style: Set.new(["left", "right", "only"]) }],
     no_shadow:        [:optional, TrueClass],
     raised:           [:optional, TrueClass],
     small:            [:optional, TrueClass],
-    style:            [:optional, String],
+    style:            [:optional, Set.new(["primary", "secondary", "danger"])],
     subtle:           [:optional, TrueClass],
     value:            String,
   })

@@ -1,5 +1,7 @@
 class SageAvatar < SageComponent
-  attr_accessor :color
-  attr_accessor :css_classes
-  attr_accessor :initials
+  set_attribute_schema({
+    color: [:optional, Set.new([nil, "purple", "sage", "yellow", "orange", "red"])],
+    css_classes: [:optional, String],
+    initials: String,
+  })
 end

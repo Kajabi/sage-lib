@@ -21,7 +21,7 @@ module SageComponentHelper
     begin
       ClassyHash.validate(attributes, component::ATTRIBUTE_SCHEMA, strict: true, full: true)
     rescue ClassyHash::SchemaViolationError => e
-      raise SageRails::SageComponentSchemaViolationError.new(component, attributes_attempted: attributes, message: e.message)
+      raise SageRails::SageComponentAttributeSchemaViolation.new(component, attributes_attempted: attributes, message: e.message)
     end
   end
 end

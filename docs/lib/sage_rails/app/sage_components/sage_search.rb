@@ -1,7 +1,9 @@
 class SageSearch < SageComponent
-  attr_accessor :id
-  attr_accessor :value
-  attr_accessor :placeholder
-  attr_accessor :contained
-  attr_accessor :label_text
+  set_attribute_schema({
+    id: [:optional, String],
+    value: [:optional, String, NilClass],
+    placeholder: [:optional, String],
+    contained: [:optional, TrueClass],
+    label_text: [:optional, String],
+  })
 end

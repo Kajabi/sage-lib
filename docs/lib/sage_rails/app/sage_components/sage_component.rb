@@ -4,8 +4,13 @@ class SageComponent
   attr_accessor :content
 
   ATTRIBUTE_SCHEMA = {
-    spacer: [:optional, Hash],
     html_attributes: [:optional, Hash],
+    spacer: [:optional, {
+      top: [:optional, Set.new([:xs, :sm, :md, :lg, :xl])],
+      right: [:optional, Set.new([:xs, :sm, :md, :lg, :xl])],
+      bottom: [:optional, Set.new([:xs, :sm, :md, :lg, :xl])],
+      left: [:optional, Set.new([:xs, :sm, :md, :lg, :xl])],
+    }]
   }
 
   def generated_css_classes

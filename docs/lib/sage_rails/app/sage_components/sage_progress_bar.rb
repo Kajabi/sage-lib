@@ -1,4 +1,6 @@
 class SageProgressBar < SageComponent
-  attr_accessor :percent
-  attr_accessor :label
+  set_attribute_schema({
+    percent: 0..100,
+    label: String,
+  })
 end
