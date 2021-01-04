@@ -9,6 +9,7 @@ const IconCard = ({
   className,
   color,
   icon,
+  label,
   size,
   style,
   ...rest
@@ -29,7 +30,7 @@ const IconCard = ({
       role="presentation"
       {...rest}
     >
-      <Icon icon={icon} size={size} />
+      <Icon icon={icon} size={size} label={label} />
     </div>
   );
 };
@@ -42,6 +43,7 @@ IconCard.STYLES = { ...Label.STYLES };
 IconCard.defaultProps = {
   className: null,
   color: Label.COLORS.DRAFT,
+  label: null,
   size: Icon.SIZES.XXXL,
   style: null,
 };
@@ -50,6 +52,7 @@ IconCard.propTypes = {
   className: PropTypes.string,
   color: PropTypes.oneOf(Object.values(Label.COLORS)),
   icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)).isRequired,
+  label: PropTypes.string,
   size: PropTypes.oneOf(Object.values(Icon.SIZES)),
   style: PropTypes.oneOf(Object.values(Label.STYLES)),
 };
