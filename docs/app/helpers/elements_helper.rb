@@ -64,12 +64,12 @@ module ElementsHelper
       {
         title: "description",
         description: "A description is composed of title and data content and is structured as a definition list.",
-        use_legacy_html_code_source: true,
+        use_legacy_html_code_source: false,
         scss: "done",
         docs: "done",
         rails: "done",
         react: "todo",
-        a11y: "todo"
+        a11y: "done"
       },
       {
         title: "form_input",
