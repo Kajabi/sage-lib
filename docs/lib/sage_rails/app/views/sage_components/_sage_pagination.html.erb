@@ -39,7 +39,12 @@
     </ul>
   </nav>
 <% else -%>
-  <div class="sage-pagination">
+  <div
+    class="
+      sage-pagination
+      <%= component.generated_css_classes %>
+    "
+  >
     <span class="sage-pagination__count sage-pagination__count--solo">
       <%= component.page_count component.items %>
     </span>

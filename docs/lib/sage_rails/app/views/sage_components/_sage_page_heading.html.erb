@@ -11,10 +11,10 @@
   <% end %>
   <h1 class="sage-page-heading__title">
     <%= component.title %>
-    <% if component.help_link.present? && component.help_html.blank? %> 
-      <a href="<%= component.help_link[:url] %>" 
-        class="sage-link--no-launch sage-link--help-icon-only" 
-        target="_blank" 
+    <% if component.help_link.present? && component.help_html.blank? %>
+      <a href="<%= component.help_link[:href] %>"
+        class="sage-link--no-launch sage-link--help-icon-only"
+        target="_blank"
         referrer="no-referrer"
       >
         <span class="visually-hidden">

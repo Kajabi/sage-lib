@@ -11,6 +11,7 @@ const Modal = ({
   active,
   children,
   className,
+  large,
   containerClassName,
   onExit,
   ...rest
@@ -20,6 +21,7 @@ const Modal = ({
     className,
     {
       'sage-modal--active': active,
+      'sage-modal--large': large,
     }
   );
 
@@ -65,6 +67,7 @@ Modal.defaultProps = {
   children: null,
   containerClassName: null,
   className: '',
+  large: false,
   onExit: a => a,
 };
 
@@ -73,6 +76,7 @@ Modal.propTypes = {
   children: PropTypes.node,
   containerClassName: PropTypes.string,
   className: PropTypes.string,
+  large: PropTypes.bool,
   onExit: PropTypes.func,
 };
 
