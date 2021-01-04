@@ -26,8 +26,6 @@ const IconCard = ({
   return (
     <div
       className={classNames}
-      aria-hidden="true"
-      role="presentation"
       {...rest}
     >
       <Icon icon={icon} size={size} label={label} />
