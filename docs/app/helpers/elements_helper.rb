@@ -104,12 +104,12 @@ module ElementsHelper
       {
         title: "icon_card",
         description: "A simple component that allows an icon to be rendered on a field with a unified color scheme applied.",
-        use_legacy_html_code_source: true,
+        use_legacy_html_code_source: false,
         scss: "done",
         docs: "done",
-        rails: "todo",
-        react: "doing",
-        a11y: "todo",
+        rails: "done",
+        react: "done",
+        a11y: "done",
       },
       {
         title: "indicator",

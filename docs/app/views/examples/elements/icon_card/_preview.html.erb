@@ -1,7 +1,7 @@
 <%
 colors = [
   "draft",
-  "success",
+  "published",
   "info",
   "warning",
   "danger"
@@ -12,10 +12,10 @@ colors = [
 <div class="sage-row">
   <% colors.each do | color | %>
     <div class="sage-col-2">
-      <%= render "examples/elements/icon_card/markup", 
+      <%= sage_component SageIconCard, { 
         color: color,
-        icon: "file"
-      %>
+        icon: "file",
+      } %>
     </div>
   <% end %>
 </div>
@@ -24,11 +24,11 @@ colors = [
 <div class="sage-row">
   <% colors.each do | color | %>
     <div class="sage-col-2">
-      <%= render "examples/elements/icon_card/markup", 
+      <%= sage_component SageIconCard, { 
         color: color,
         icon: "file",
-        style: "subtle"
-      %>
+        style: "subtle",
+      } %>
     </div>
   <% end %>
 </div>
@@ -37,11 +37,11 @@ colors = [
 <div class="sage-row">
   <% colors.each do | color | %>
     <div class="sage-col-2">
-      <%= render "examples/elements/icon_card/markup", 
+      <%= sage_component SageIconCard, { 
         color: color,
         icon: "file",
-        style: "bold"
-      %>
+        style: "bold",
+      } %>
     </div>
   <% end %>
 </div>
