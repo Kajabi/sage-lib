@@ -8,6 +8,8 @@ import {
   TOOLTIP_THEMES,
 } from './configs';
 
+const TOOLTIP_DISTANCE = 8;
+
 const TooltipElement = ({
   content,
   parentDomRect,
@@ -28,36 +30,38 @@ const TooltipElement = ({
   );
 
   useLayoutEffect(() => {
-    let distance = 8,
-        left = null,
-        top = null;
+    let left = 0,
+        top = 0;
 
     switch (position) {
       case TOOLTIP_POSITIONS.LEFT:
         top = (parentDomRect.top + parentDomRect.bottom) / 2 - tooltipRef.current.offsetHeight / 2;
-        left = parentDomRect.left - distance - tooltipRef.current.offsetWidth;
+        left = parentDomRect.left - TOOLTIP_DISTANCE - tooltipRef.current.offsetWidth;
         if (parentDomRect.left - tooltipRef.current.offsetWidth < 0) {
-          left = distance;
+          left = TOOLTIP_DISTANCE;
         }
         break;
       case TOOLTIP_POSITIONS.RIGHT:
         top = (parentDomRect.top + parentDomRect.bottom) / 2 - tooltipRef.current.offsetHeight / 2;
-        left = parentDomRect.right + distance;
+        left = parentDomRect.right + TOOLTIP_DISTANCE;
         if (parentDomRect.right + tooltipRef.current.offsetWidth > document.documentElement.clientWidth) {
-          left =  document.documentElement.clientWidth - tooltipRef.current.offsetWidth - distance;
+          left =  document.documentElement.clientWidth - tooltipRef.current.offsetWidth - TOOLTIP_DISTANCE;
         }
         break;
       case TOOLTIP_POSITIONS.BOTTOM:
-        top = parentDomRect.bottom + distance;
+        top = parentDomRect.bottom + TOOLTIP_DISTANCE;
         left = parentDomRect.left + (parentDomRect.width - tooltipRef.current.offsetWidth) / 2;
         break;
       case TOOLTIP_POSITIONS.TOP:
-        top = parentDomRect.top - tooltipRef.current.offsetHeight - distance;
+        top = parentDomRect.top - tooltipRef.current.offsetHeight - TOOLTIP_DISTANCE;
         left = parentDomRect.left + (parentDomRect.width - tooltipRef.current.offsetWidth) / 2;
       break;
     }
 
-    setCoordinates({top: top, left: left});
+    setCoordinates({
+      top: top + window.pageYOffset,
+      left: left + window.pageXOffset,
+    });
   }, [tooltipRef.current]);
 
   return (
