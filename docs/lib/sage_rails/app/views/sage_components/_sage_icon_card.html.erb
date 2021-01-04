@@ -1,0 +1,17 @@
+<%
+size = component.size.present? ? component.size : '3xl'
+color = component.color.present? ? component.color : 'draft'
+%>
+<div
+  class="
+    sage-icon-card
+    <%= "sage-icon-card--#{color}" %><%= "-#{component.style}" if component.style.present? %>
+  "
+  aria-hidden="true"
+  role="presentation"
+>
+  <i
+    class="sage-icon-<%= component.icon %>-<%= size %>"
+    aria-hidden="true"
+  ></i>
+</div>
