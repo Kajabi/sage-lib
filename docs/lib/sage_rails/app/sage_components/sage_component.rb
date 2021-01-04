@@ -3,7 +3,7 @@ class SageComponent
   attr_accessor :context
   attr_accessor :content
 
-  SCHEMA = {
+  ATTRIBUTE_SCHEMA = {
     spacer: [:optional, Hash],
     html_attributes: [:optional, Hash],
   }
@@ -20,7 +20,7 @@ class SageComponent
     context.render(
       partial: "sage_components/#{template_path}",
       locals: { component: self }
-    )
+    ).tap { cleanup_section_vars }
   end
 
   # SageComponent Universal Spacer Attribute
@@ -48,12 +48,22 @@ class SageComponent
 
   private
 
+  def sections
+    []
+  end
+
+  def cleanup_section_vars
+    sections.each do |section_name|
+      context.view_flow.set("sage_#{section_name}".to_sym, '')
+    end
+  end
+
   def template_path
     self.class.to_s.underscore
   end
 
-  def self.attribute_schema(attributes)
+  def self.set_attribute_schema(attributes)
     attr_accessor(*attributes.keys)
-    self.const_set("SCHEMA", self.superclass::SCHEMA.deep_merge(attributes))
+    self.const_set("ATTRIBUTE_SCHEMA", self.superclass::ATTRIBUTE_SCHEMA.deep_merge(attributes))
   end
 end
