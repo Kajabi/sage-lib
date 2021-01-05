@@ -43,7 +43,7 @@ Sage.toast = (function () {
     document.body.appendChild(toast);
   }
 
-  // Removes tooltip from DOM
+  // Removes toast from DOM
   function removeToast(toast) {
     window.requestAnimationFrame(function () {
       document.body.removeChild(document.querySelector(`.${TOAST_CLASS}`));
