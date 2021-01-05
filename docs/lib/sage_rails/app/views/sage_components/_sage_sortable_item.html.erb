@@ -8,7 +8,9 @@
 >
   <div class="sage-sortable__item-content">
     <h1 class="sage-sortable__item-title"><%= component.title %></h1>
-    <h2 class="sage-sortable__item-subtitle"><%= component.subtitle %></h2>
+    <% if component.subtitle %>
+      <h2 class="sage-sortable__item-subtitle"><%= component.subtitle %></h2>
+    <% end %>
   </div>
   <div class="sage-sortable__item-actions">
     <%= component.content %>
