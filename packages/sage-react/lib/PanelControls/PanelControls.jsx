@@ -8,6 +8,8 @@ import {
 import { DEFAULT_NOUN, SELECTION_TYPES } from './configs';
 import PanelControlsBulkActions from './PanelControlsBulkActions';
 import PanelControlsPagination from './PanelControlsPagination';
+import PanelControlsToolbar from './PanelControlsToolbar';
+import PanelControlsToolbarButtonGroup from './PanelControlsToolbarButtonGroup';
 
 const PanelControls = ({
   children,
@@ -123,6 +125,8 @@ PanelControls.handlerUtils = {
   handleChange,
   handleSelection,
 };
+PanelControls.Toolbar = PanelControlsToolbar;
+PanelControls.ToolbarButtonGroup = PanelControlsToolbarButtonGroup;
 
 PanelControls.defaultProps = {
   children: null,
