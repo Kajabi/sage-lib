@@ -80,11 +80,11 @@ export const handleSelection = ({
   const numSelectedRows = selectedRows.length;
   let selectionType;
   if (numSelectedRows === totalItems) {
-    selectionType = PanelControls.SELECTION_TYPES.ALL;
+    selectionType = SELECTION_TYPES.ALL;
   } else if (numSelectedRows > 0) {
-    selectionType = PanelControls.SELECTION_TYPES.PARTIAL;
+    selectionType = SELECTION_TYPES.PARTIAL;
   } else {
-    selectionType = PanelControls.SELECTION_TYPES.NONE;
+    selectionType = SELECTION_TYPES.NONE;
   }
 
   setStateDataFn({
