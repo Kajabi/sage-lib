@@ -32,7 +32,7 @@ const TableRow = ({
 
   const onChangeSelector = (value, checked, ev) => {
     if (onSelect) {
-      onSelect(value);
+      onSelect(id);
     } else {
       setSelfSelected(!checked);
     }
