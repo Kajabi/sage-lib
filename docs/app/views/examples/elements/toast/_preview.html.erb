@@ -1,8 +1,18 @@
-<%= sage_component SageToast, {
-  value: "Post Created",
-} %>
-
-<%= sage_component SageToast, {
-  value: "System Error: This message may provide more information!",
-  style: "danger",
-} %>
+<%= sage_component SageButtonGroup, { gap: :sm } do %>
+  <%= sage_component SageButton, {
+    value: "Toast",
+    style: "primary",
+    attributes: {
+      "data-js-toast": "Toast created.",
+      "data-js-toast-timer": "5000",
+    },
+  } %>
+  <%= sage_component SageButton, {
+    value: "Danger Toast",
+    style: "danger",
+    attributes: {
+      "data-js-toast": "Danger toast created.",
+      "data-js-toast-theme": "danger",
+    },
+  } %>
+<% end %>
