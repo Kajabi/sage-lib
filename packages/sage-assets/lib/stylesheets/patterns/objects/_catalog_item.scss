@@ -90,8 +90,8 @@ $-image-height-mobile: rem(120px);
   align-self: flex-start;
   flex-flow: row wrap;
 
-  > *:not(:last-child) {
-    margin-right: sage-spacing();
+  > * + * {
+    margin-left: sage-spacing();
   }
 }
 
