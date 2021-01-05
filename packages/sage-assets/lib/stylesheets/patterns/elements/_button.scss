@@ -127,12 +127,6 @@ $-label-interactive-icon-size: rem(24px);
   }
 
   // Contextual modifications
-  .sage-catalog-item__content & {
-    &:not(:last-child) {
-      margin-right: sage-spacing();
-    }
-  }
-
   .sage-dropdown--contained &,
   .sage-panel-controls__toolbar .sage-dropdown__trigger &,
   .sage-panel-controls__bulk-actions .sage-dropdown__trigger & {
@@ -256,7 +250,7 @@ $-label-interactive-icon-size: rem(24px);
   .sage-panel-controls__toolbar-btn-group--expand-collapse > & {
     border-radius: sage-border(radius);
   }
-  
+
   .sage-panel-controls__toolbar > &,
   .sage-panel-controls__pagination > & {
     border-radius: sage-border(radius);
