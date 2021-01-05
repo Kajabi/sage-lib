@@ -93,11 +93,7 @@ const PanelControls = ({
 
   return (
     <div className={classNames}>
-      {children && (
-        <div className="sage-panel-controls__toolbar">
-          {children}
-        </div>
-      )}
+      {children}
       <div className="sage-panel-controls__default-controls">
         <PanelControlsBulkActions
           checked={selfConfigs.bulkActionsChecked}
