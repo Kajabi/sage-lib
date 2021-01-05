@@ -32,7 +32,8 @@ export const handleChange = ({
   stateData,
   setStateDataFn,
   pageChangeHandlerFn,
-  mapSelectedRowsFn = ({ id }) => id
+  mapSelectedRowsFn = ({ id }) => id,
+  itemsKey = 'items',
 }) => {
   // First if a page change is requested, send for that
   if (data.page) {
@@ -46,7 +47,7 @@ export const handleChange = ({
     let selectedRows;
     switch (data.selectionType) {
       case SELECTION_TYPES.ALL:
-        selectedRows = stateData.articles.map(mapSelectedRowsFn);
+        selectedRows = stateData[itemsKey].map(mapSelectedRowsFn);
         break;
       case SELECTION_TYPES.NONE:
       default:
