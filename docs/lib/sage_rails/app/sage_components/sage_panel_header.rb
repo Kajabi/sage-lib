@@ -1,3 +1,5 @@
 class SagePanelHeader < SageComponent
-  attr_accessor :title
+  set_attribute_schema({
+    title: [:optional, String],
+  })
 end

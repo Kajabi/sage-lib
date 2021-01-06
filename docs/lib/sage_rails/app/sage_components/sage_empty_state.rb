@@ -1,6 +1,8 @@
 class SageEmptyState < SageComponent
-  attr_accessor :icon
-  attr_accessor :title
-  attr_accessor :text
-  attr_accessor :compact
+  set_attribute_schema({
+    icon: [:optional, String],
+    title: [:optional, String],
+    text: [:optional, String],
+    compact: [:optional, TrueClass],
+  })
 end

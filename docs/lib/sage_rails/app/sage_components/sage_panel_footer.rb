@@ -1,3 +1,5 @@
 class SagePanelFooter < SageComponent
-  attr_accessor :align_spread
+  set_attribute_schema({
+    align_spread: [:optional, TrueClass],
+  })
 end

@@ -6,7 +6,7 @@ class SageBreadcrumbs < SageComponent
     items: [[{
       is_current: [:optional, TrueClass],
       text: String,
-      url: String,
+      url: [:optional, String],
     }]],
   })
 end

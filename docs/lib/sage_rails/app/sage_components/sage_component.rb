@@ -5,12 +5,7 @@ class SageComponent
 
   ATTRIBUTE_SCHEMA = {
     html_attributes: [:optional, Hash],
-    spacer: [:optional, {
-      top: [:optional, Set.new([:xs, :sm, :md, :lg, :xl])],
-      right: [:optional, Set.new([:xs, :sm, :md, :lg, :xl])],
-      bottom: [:optional, Set.new([:xs, :sm, :md, :lg, :xl])],
-      left: [:optional, Set.new([:xs, :sm, :md, :lg, :xl])],
-    }]
+    spacer: [:optional, SageSchemaHelper::SPACER]
   }
 
   def generated_css_classes

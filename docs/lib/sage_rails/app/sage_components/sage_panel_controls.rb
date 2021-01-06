@@ -1,15 +1,42 @@
 class SagePanelControls < SageComponent
-  attr_accessor :bulk_action_items
-  attr_accessor :item_count_label
-  attr_accessor :show_bulk_actions
-  attr_accessor :show_expand_collapse
-  attr_accessor :show_pagination
-  attr_accessor :show_sort
-  attr_accessor :sort_items
-  attr_accessor :start_expanded
-  attr_accessor :target
+  set_attribute_schema({
+    bulk_action_items: [:optional, [[{
+      value: String,
+      attributes: [:optional, Hash],
+    }]]],
+    item_count_label: [:optional, TrueClass],
+    show_bulk_actions: [:optional, TrueClass],
+    show_expand_collapse: [:optional, TrueClass],
+    show_pagination: [:optional, TrueClass],
+    show_sort: [:optional, TrueClass],
+    sort_items: [:optional, [[{
+      value: String,
+      attributes: [:optional, Hash],
+    }]]],
+    start_expanded: [:optional, TrueClass],
+    target: [:optional, String],
+  })
 
   def sections
     %w(panel_controls_toolbar panel_controls_tabs)
   end
 end
+
+
+{:show_bulk_actions=>true,
+ :show_expand_collapse=>true,
+ :show_pagination=>true,
+ :show_sort=>true,
+ :bulk_action_items=>
+  [{:value=>"Delete",
+    :attributes=>{:href=>"#", :"data-js-list-action"=>"delete_selected"}},
+   {:value=>"Set marketing",
+    :attributes=>
+     {:href=>"#", :"data-js-list-action"=>"set_marketing_unsubscribed"}}],
+ :sort_items=>
+  [{:value=>"Name",
+    :attributes=>{:href=>"#", :"data-js-list-sort-by"=>"name"}},
+   {:value=>"Email",
+    :attributes=>{:href=>"#", :"data-js-list-sort-by"=>"email"}},
+   {:value=>"Join date",
+    :attributes=>{:href=>"#", :"data-js-list-sort-by"=>"join_date"}}]}

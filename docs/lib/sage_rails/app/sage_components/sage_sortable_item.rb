@@ -1,8 +1,10 @@
 class SageSortableItem < SageComponent
-  attr_accessor :url_update
-  attr_accessor :title
-  attr_accessor :subtitle
-  attr_accessor :label
-  attr_accessor :id
-  attr_accessor :card
+  set_attribute_schema({
+    card: [:optional, TrueClass],
+    id: [:optional, Integer, String],
+    label: [:optional, String],
+    subtitle: [:optional, String],
+    title: String,
+    url_update: [:optional, String],
+  })
 end

@@ -1,3 +1,5 @@
 class SageCardDivider < SageComponent
-  attr_accessor :bleed
+  set_attribute_schema({
+    bleed: [:optional, TrueClass],
+  })
 end

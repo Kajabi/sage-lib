@@ -1,7 +1,9 @@
 class SageCatalogItem < SageComponent
-  attr_accessor :image
-  attr_accessor :href
-  attr_accessor :title
+  set_attribute_schema({
+    href: [:optional, String],
+    image: [:optional, String],
+    title: [:optional, String],
+  })
 
   def sections
     %w(aside)

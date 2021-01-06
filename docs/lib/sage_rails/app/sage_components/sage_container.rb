@@ -1,3 +1,5 @@
 class SageContainer < SageComponent
-  attr_accessor :size
+  set_attribute_schema({
+    size: SageSchemaHelper::CONTAINER_SIZE,
+  })
 end

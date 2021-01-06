@@ -1,4 +1,6 @@
 class SagePanel < SageComponent
-  attr_accessor :clear_top_padding
-  attr_accessor :clear_bottom_padding
+  set_attribute_schema({
+    clear_top_padding: [:optional, TrueClass],
+    clear_bottom_padding: [:optional, TrueClass],
+  })
 end

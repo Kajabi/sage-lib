@@ -1,4 +1,6 @@
 class SagePanelFigure < SageComponent
-  attr_accessor :bleed
-  attr_accessor :is_wistia
+  set_attribute_schema({
+    bleed: [:optional, Set.new(["top", "bottom", "sides"])],
+    is_wistia: [:optional, TrueClass],
+  })
 end

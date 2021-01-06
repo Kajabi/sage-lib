@@ -1,4 +1,6 @@
 class SageCopyTextCard < SageComponent
-  attr_accessor :semibold
-  attr_accessor :truncate_contents
+  set_attribute_schema({
+    semibold: [:optional, TrueClass],
+    truncate_contents: [:optional, TrueClass],
+  })
 end

@@ -1,8 +1,10 @@
 class SageIconCard < SageComponent
-  attr_accessor :color
-  attr_accessor :css_classes
-  attr_accessor :icon
-  attr_accessor :label
-  attr_accessor :size
-  attr_accessor :style
+  set_attribute_schema({
+    color: Set.new(["draft", "published", "info", "warning", "danger"]),
+    css_classes: [:optional, String],
+    icon: String,
+    label: [:optional, String],
+    size: [:optional, SageSchemaHelper::ICON_SIZE],
+    style: [:optional, Set.new(["subtle", "bold"])],
+  })
 end

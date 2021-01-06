@@ -1,11 +1,13 @@
 class SagePopover < SageComponent
-  attr_accessor :body
-  attr_accessor :custom_content_class
-  attr_accessor :icon
-  attr_accessor :id
-  attr_accessor :link
-  attr_accessor :popover_position
-  attr_accessor :title
-  attr_accessor :trigger_icon_only
-  attr_accessor :trigger_value
+  set_attribute_schema({
+    body: [:optional, String],
+    custom_content_class: [:optional, String],
+    icon: [:optional, String],
+    id: [:optional, String],
+    link: [:optional, {href: String, name: String}],
+    popover_position: [:optional, String],
+    title: [:optional, String],
+    trigger_icon_only: [:optional, TrueClass],
+    trigger_value: [:optional, String],
+  })
 end
