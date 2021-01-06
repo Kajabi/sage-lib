@@ -43,12 +43,11 @@
   <% end %>
 <% end %>
 
-<h3 class="t-sage-heading-6">As cards</h3>
+<h3 class="t-sage-heading-6">As cards with no subtitles</h3>
 <%= sage_component SageSortable, { resource_name: "link" } do %>
   <% 3.times do %>
     <%= sage_component SageSortableItem, {
       title: "Fringilla Ullamcorper Dolor Adipiscing Ultricies",
-      subtitle: "Label Text",
       url_update: "update/endpoint",
       id: "id",
       card: true
