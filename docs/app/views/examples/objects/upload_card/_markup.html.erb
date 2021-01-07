@@ -6,9 +6,13 @@ errors = defined?(errors) ? errors : false
     <div class="sage-upload-card__dropzone">
       <input class="sage-upload-card__input" accept=".csv" multiple="multiple" type="file" autocomplete="off" />
       <% if file_selected %>
-        <div class="sage-upload-card__preview sage-icon-card sage-icon-card--draft">
-          <i class="sage-icon-image-3xl" aria-label="Upload graphic"></i>
-        </div>
+        <%= sage_component SageIconCard, {
+          color: "draft",
+          css_classes: "sage-upload-card__preview",
+          icon: "image",
+          label: "Upload graphic",
+          size: "3xl",
+        } %>
         <div class="sage-upload-card__body">
           <p class="sage-upload-card__text">Heading 6, Charcoal 400</p>
           <%= sage_component SageButton, {

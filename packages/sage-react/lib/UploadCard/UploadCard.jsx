@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import Button from '../Button';
-import Icon from '../Icon';
+import IconCard from '../IconCard';
 import { SageTokens } from '../configs';
 
 const UploadCard = ({
@@ -36,12 +36,12 @@ const UploadCard = ({
         <input className="sage-upload-card__input" {...inputProps} />
         {filesSelected ? (
           <>
-            <div className="sage-upload-card__preview sage-icon-card sage-icon-card--draft">
-              <Icon
-                icon={Icon.ICONS.FILE}
-                size={Icon.SIZES['4XL']}
-              />
-            </div>
+            <IconCard
+              className="sage-upload-card__preview"
+              color={IconCard.COLORS.DRAFT}
+              icon={IconCard.ICONS.FILE}
+              size={IconCard.SIZES['4XL']}
+            />
             <div className="sage-upload-card__body">
               {acceptedFiles.map(({ name, size }, i) => {
                 // Limit to one file for now
