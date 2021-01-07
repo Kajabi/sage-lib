@@ -20,6 +20,7 @@ const PanelControls = ({
   const [selfConfigs, setSelfConfigs] = useState({
     // Set locally
     bulkActionsChecked: false,
+    bulkActionsItems: [],
 
     // Synched with `controlSettings
     currentPage: 1,
@@ -82,6 +83,11 @@ const PanelControls = ({
     onRequestChange({ page: newPageNumber });
   };
 
+  // Respond to bulk action command selection
+  const onSelectBulkAction = (payload) => {
+    onRequestChange({ bulkActionCommand: payload });
+  };
+
 
   //
   // Render
@@ -98,10 +104,12 @@ const PanelControls = ({
       {children}
       <div className="sage-panel-controls__default-controls">
         <PanelControlsBulkActions
+          bulkActionsItems={selfConfigs.bulkActionsItems}
           checked={selfConfigs.bulkActionsChecked}
           currentPage={selfConfigs.currentPage}
           itemsOnThisPage={selfConfigs.itemsOnThisPage}
           numSelectedRows={selfConfigs.numSelectedRows}
+          onSelectBulkAction={onSelectBulkAction}
           onToggleSelection={onChangeSelectAll}
           rowNoun={selfConfigs.rowNoun}
           selectionType={selfConfigs.selectionType}

@@ -28,17 +28,26 @@ export const listDisplayString = (page, itemsShown, itemsTotal, noun = { plural:
 
 
 export const handleChange = ({
+  bulkActionsHandlerFn,
   data,
+  itemsKey = 'items',
+  mapSelectedRowsFn = ({ id }) => id,
+  pageChangeHandlerFn,
   stateData,
   setStateDataFn,
-  pageChangeHandlerFn,
-  mapSelectedRowsFn = ({ id }) => id,
-  itemsKey = 'items',
 }) => {
   // First if a page change is requested, send for that
   if (data.page) {
     pageChangeHandlerFn(data.page);
     return;
+  }
+
+  // Of if requested change is a bulk actions command
+  if (data.bulkActionCommand) {
+    if (bulkActionsHandlerFn) {
+      bulkActionsHandlerFn(data);
+      return;
+    }
   }
   
   // Or if reqeust is to change the selection

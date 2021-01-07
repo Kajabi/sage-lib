@@ -2,15 +2,17 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import uuid from 'react-uuid';
-import { Checkbox } from '../';
+import { Checkbox, Dropdown, SelectDropdown } from '../';
 import { listDisplayString } from './utils';
 import { DEFAULT_NOUN, SELECTION_TYPES } from './configs';
 
 const PanelControlsBulkActions = ({
+  bulkActionsItems,
   checked,
   currentPage,
   itemsOnThisPage,
   numSelectedRows,
+  onSelectBulkAction,
   onToggleSelection,
   rowNoun,
   selectionType,
@@ -49,15 +51,27 @@ const PanelControlsBulkActions = ({
         onChange={onToggleSelection}
         checked={checked}
       />
+      {(checked && bulkActionsItems) && (
+        <SelectDropdown
+          className="sage-panel-controls__bulk-actions-dropdown"
+          id={uuid()}
+          items={bulkActionsItems}
+          label="Bulk Actions"
+          searchable={false}
+          onSelect={onSelectBulkAction}
+        />
+      )}
     </div>
   );
 };
 
 PanelControlsBulkActions.defaultProps = {
+  bulkActionsItems: null,
   checked: false,
   currentPage: 1,
   itemsOnThisPage: 0,
   numSelectedRows: 0,
+  onSelectBulkAction: data => data,
   onToggleSelection: data => data,
   rowNoun: { ...DEFAULT_NOUN },
   selectionType: SELECTION_TYPES.NONE,
@@ -65,10 +79,12 @@ PanelControlsBulkActions.defaultProps = {
 };
 
 PanelControlsBulkActions.propTypes = {
+  bulkActionsItems: PropTypes.arrayOf(PropTypes.shape(Dropdown.ItemList.itemsPropTypes)),
   checked: PropTypes.bool,
   currentPage: PropTypes.number,
   itemsOnThisPage: PropTypes.number,
   numSelectedRows: PropTypes.number,
+  onSelectBulkAction: PropTypes.func,
   onToggleSelection: PropTypes.func,
   rowNoun: PropTypes.shape({
     plural: PropTypes.string,
