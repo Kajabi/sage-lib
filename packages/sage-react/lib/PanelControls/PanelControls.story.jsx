@@ -18,6 +18,16 @@ const PanelControlsWithData = () => {
 
     // Panel Controls Configurations
     panelControlConfigs: {
+      bulkActionsItems: [
+        {
+          id: 'action-1',
+          label: 'Action 1'
+        },
+        {
+          id: 'action-2',
+          label: 'Action 2',
+        },
+      ],
       currentPage: 1,
       itemsOnThisPage: 0,
       numSelectedRows: 0,
@@ -106,6 +116,9 @@ const PanelControlsWithData = () => {
     fetchData(1);
   }, []);
 
+  const bulkActionshandler = (payload) => {
+    console.log('bulk action command recieved', payload);
+  };
 
   //
   // Render
@@ -120,6 +133,7 @@ const PanelControlsWithData = () => {
           stateData: selfData,
           setStateDataFn: setSelfData,
           pageChangeHandlerFn: fetchData,
+          bulkActionsHandlerFn: bulkActionshandler,
         })}
       />
       <Table
