@@ -8,6 +8,8 @@ import {
 import { DEFAULT_NOUN, SELECTION_TYPES } from './configs';
 import PanelControlsBulkActions from './PanelControlsBulkActions';
 import PanelControlsPagination from './PanelControlsPagination';
+import PanelControlsToolbar from './PanelControlsToolbar';
+import PanelControlsToolbarButtonGroup from './PanelControlsToolbarButtonGroup';
 
 const PanelControls = ({
   children,
@@ -93,11 +95,7 @@ const PanelControls = ({
 
   return (
     <div className={classNames}>
-      {children && (
-        <div className="sage-panel-controls__toolbar">
-          {children}
-        </div>
-      )}
+      {children}
       <div className="sage-panel-controls__default-controls">
         <PanelControlsBulkActions
           checked={selfConfigs.bulkActionsChecked}
@@ -127,6 +125,8 @@ PanelControls.handlerUtils = {
   handleChange,
   handleSelection,
 };
+PanelControls.Toolbar = PanelControlsToolbar;
+PanelControls.ToolbarButtonGroup = PanelControlsToolbarButtonGroup;
 
 PanelControls.defaultProps = {
   children: null,

@@ -13,7 +13,7 @@ import PanelControls from './PanelControls';
 const PanelControlsWithData = () => {
   const [selfData, setSelfData] = useState({
     // Set locally
-    articles: [],
+    items: [],
     selectedRows: [],
 
     // Panel Controls Configurations
@@ -72,7 +72,7 @@ const PanelControlsWithData = () => {
       // Bring over all existing selfData props
       ...selfData,
       // Rewrite articles to contain those returned by service
-      articles: formattedArticles,
+      items: formattedArticles,
       // Rewrite the panelControlConfigs
       panelControlConfigs: {
         // First bring over all existing props
@@ -130,7 +130,7 @@ const PanelControlsWithData = () => {
         })}
         resetAbove={true}
         resetBelow={true}
-        rows={selfData.articles}
+        rows={selfData.items}
         schema={{
           title: {
             label: 'Title',
