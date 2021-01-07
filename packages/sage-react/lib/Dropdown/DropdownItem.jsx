@@ -63,7 +63,9 @@ const DropdownItem = ({
         ...payload,
       };
     } else {
-      payload = id;
+      modifiedPayload = {
+        id,
+      };
     }
 
     if (onExit) {
