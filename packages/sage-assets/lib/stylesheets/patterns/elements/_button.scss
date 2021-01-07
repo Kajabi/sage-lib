@@ -311,7 +311,7 @@ $-label-interactive-icon-size: rem(24px);
       }
     }
 
-    &:not(.sage-btn--subtle) {
+    &:not(.sage-btn--subtle):not(:disabled):not([aria-disabled="true"]) {
       // Shadow appears on Primary by default but can be toggled off with `--no-shadow`
       @if ($-style-name == primary) {
         box-shadow: $-btn-shadow-base;
