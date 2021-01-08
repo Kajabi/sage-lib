@@ -5,7 +5,7 @@ class SageTokenGenerator < Rails::Generators::NamedBase
     # Style Variables
     style_file = "../packages/sage-assets/lib/stylesheets/tokens/_#{file_name}.scss"
     style_include_file = "../packages/sage-assets/lib/stylesheets/tokens/_index.scss"
-    style_include_line = "// Variable Tokens"\
+    style_include_line = "// Variable Tokens"
     # Create Style File
     template "style.scss", style_file
     # Include Style File

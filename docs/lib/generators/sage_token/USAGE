@@ -1,8 +1,13 @@
 Description:
-    Explain the generator
+  Design tokens are the visual design atoms of the design system—specifically, they are named entities that store visual design attributes. We use them in place of hard-coded values (such as hex values for color or pixel values for spacing) in order to maintain a scalable and consistent visual system for UI development.
 
 Example:
-    rails generate sage_token Thing
+  rails generate sage_token <new_token_name>
 
-    This will create:
-        what/will/it/create
+  This will create:
+    <root>/packages/sage-assets/lib/stylesheets/tokens/_<new_token_name>.scss (stylesheet for token)
+
+  This will update:
+    <root>/packages/sage-assets/lib/stylesheets/tokens/_index.scss (imports new token stylesheet)
+
+  Note that <root>/docs/app/helpers/tokens_helper.rb will *not* be updated and must be manually updated.
