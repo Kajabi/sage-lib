@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.22.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.21.1...@kajabi/sage-react@0.22.0) (2021-01-08)
+
+
+### Bug Fixes
+
+* **icon:** update logic for aria attrs ([43dd8bc](https://github.com/Kajabi/sage-lib/commit/43dd8bcdaacd6d91ac534a63c6865a27f0484b84))
+* **icon-card:** tidy a11y attributes given icon features ([0271ac8](https://github.com/Kajabi/sage-lib/commit/0271ac81cfb3f4e021ba1484c43812243cc4ac28))
+* **panel-controls:** ensure utilities and example allow for easier implementation ([5df0868](https://github.com/Kajabi/sage-lib/commit/5df0868d04e7e56ceff2acc6bb331fc0577a98b7))
+* **panel-controls:** make children uncontained for additional flexibility ([5d5e354](https://github.com/Kajabi/sage-lib/commit/5d5e35490fadd3616688a918da900001225bc807))
+* **panel-controls:** tidy up import issue in utilities ([c3d74aa](https://github.com/Kajabi/sage-lib/commit/c3d74aa6691d4c439e4cbc3fca64ec982037da46))
+* **table:** adjust selection handler to release the row id rather than checkbox value ([6bed25d](https://github.com/Kajabi/sage-lib/commit/6bed25da075ab4e06979718d27318ed273fb4467))
+* **toast:** ensure react toast appears in coordination with `isActive` value from the start ([243c0ae](https://github.com/Kajabi/sage-lib/commit/243c0aeca98b33b196a1f757310cf923b0cd7edc))
+
+
+### Features
+
+* **icon-card:** add label for icon label in React ([72940f5](https://github.com/Kajabi/sage-lib/commit/72940f5f168fa6a483de842fef23c928662fe555))
+* **icon-card:** add react component ([f5360ea](https://github.com/Kajabi/sage-lib/commit/f5360eafd2d42dc52f3d2712f77b58f58a9e89b8))
+* **panel-controls:** add bulk actions dropdown and handlers ([57d8abc](https://github.com/Kajabi/sage-lib/commit/57d8abcfbdbe7ca39264c6dfa12f5259f93caadb))
+* **panel-controls:** add react toolbar and button group subcomponents ([125bfac](https://github.com/Kajabi/sage-lib/commit/125bfac24c9141969f0e29ec110d6a44fb78b5f4))
+* **popover:** add rel attr to react and rails ([edb986a](https://github.com/Kajabi/sage-lib/commit/edb986a30bb94c76b71d314b02612832dbe7a37c))
+* **upload-card:** use icon-card in upload-card (react and rails) ([d25b598](https://github.com/Kajabi/sage-lib/commit/d25b59830c436aafd84d054dfae04964c939b7e0))
+
+
+
+
+
 ## [0.21.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.21.0...@kajabi/sage-react@0.21.1) (2021-01-04)
 
 

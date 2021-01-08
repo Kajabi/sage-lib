@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.4.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.3.2...@kajabi/sage@3.4.0) (2021-01-08)
+
+
+### Bug Fixes
+
+* **breadcrumbs:** restore accidental deletion ([ad5d4e2](https://github.com/Kajabi/sage-lib/commit/ad5d4e224c938c83f72cecfc17b8521e73d867a6))
+* **icon-card:** add example of label provided for icon card icon ([77ae094](https://github.com/Kajabi/sage-lib/commit/77ae09473d81e942cd56c329954d7880cb89fc56))
+* **icon-card:** update docs with latest component ([87a4a2c](https://github.com/Kajabi/sage-lib/commit/87a4a2c89d3404bb88a449f05bd90cedd1385bd3))
+* **search:** ensure search in panel controls renders correctly ([34c8dac](https://github.com/Kajabi/sage-lib/commit/34c8dacc002e75cd9427bc991efcc8143156565e))
+* **sortable item:** conditionally render subtitle heading ([ab4e1b6](https://github.com/Kajabi/sage-lib/commit/ab4e1b6026fabeefc65cd7a3922d9cbf74daaacb))
+
+
+### Features
+
+* **icon-card:** add rails component ([2d94c4a](https://github.com/Kajabi/sage-lib/commit/2d94c4a33655cd79f03e206fd4531b34d4a8da91))
+* **popover:** add rel attr to react and rails ([edb986a](https://github.com/Kajabi/sage-lib/commit/edb986a30bb94c76b71d314b02612832dbe7a37c))
+* **popover:** add target-blank to rails component in sync with react component ([3d38eba](https://github.com/Kajabi/sage-lib/commit/3d38eba06d1937518f40e63d9832f18ef6ff4eb1))
+* **upload-card:** use icon-card in upload-card (react and rails) ([d25b598](https://github.com/Kajabi/sage-lib/commit/d25b59830c436aafd84d054dfae04964c939b7e0))
+
+
+
+
+
 ## [3.3.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.3.1...@kajabi/sage@3.3.2) (2021-01-04)
 
 

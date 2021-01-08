@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.15.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.14.5...@kajabi/sage-assets@0.15.0) (2021-01-08)
+
+
+### Bug Fixes
+
+* **breadcrumbs:** replaces flexbox gap property with margin for wider support ([0a4bc7e](https://github.com/Kajabi/sage-lib/commit/0a4bc7e9d1242560ed5d16be3b76263dfa15b878)), closes [#159](https://github.com/Kajabi/sage-lib/issues/159)
+* **buttons:** remove drop shadow on disabled button primary state ([4b597bd](https://github.com/Kajabi/sage-lib/commit/4b597bd61313ab510e384f6b16262cdd8220b6cc))
+* **search:** ensure search in panel controls renders correctly ([34c8dac](https://github.com/Kajabi/sage-lib/commit/34c8dacc002e75cd9427bc991efcc8143156565e))
+
+
+### Features
+
+* **catalog item:** extend catalog item button spacing to all child elements ([9817f24](https://github.com/Kajabi/sage-lib/commit/9817f249a8be5c3def226c78e1641eea932abddc))
+
+
+
+
+
 ## [0.14.5](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.14.4...@kajabi/sage-assets@0.14.5) (2021-01-04)
 
 
