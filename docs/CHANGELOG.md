@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.5.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.4.0...@kajabi/sage@3.5.0) (2021-01-08)
+
+
+### Features
+
+* **rails component objects:** convert all rails component objects to use new schema validation ([f893db1](https://github.com/Kajabi/sage-lib/commit/f893db198a6f10fe525d9d3f1960731b9fb39aa1))
+* **rails components:** first pass at validating hash args fro Rails Components ([a6229de](https://github.com/Kajabi/sage-lib/commit/a6229de177e50dbdf5afeb8731d983b112b731bf))
+
+
+
+
+
 # [3.4.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.3.2...@kajabi/sage@3.4.0) (2021-01-08)
 
 
