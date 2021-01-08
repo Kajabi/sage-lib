@@ -3,9 +3,9 @@ class SageObjectGenerator < Rails::Generators::NamedBase
   def create_sage_element
 
     # Style Variables
-    style_file = "lib/sage-frontend/stylesheets/system/patterns/objects_#{file_name}.scss"
-    style_include_file = "lib/sage-frontend/stylesheets/system/index.scss"
-    style_include_line = "// Objects"
+    style_file = "../packages/sage-assets/lib/stylesheets/patterns/objects/_#{file_name}.scss"
+    style_include_file = "../packages/sage-assets/lib/stylesheets/index.scss"
+    style_include_line = "// Objects"\
     # Create Style File
     template "style.scss", style_file
     # Include Style File
