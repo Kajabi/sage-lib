@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import Button from '../Button';
+import Icon from '../Icon';
 import IconCard from '../IconCard';
 import { SageTokens } from '../configs';
 
