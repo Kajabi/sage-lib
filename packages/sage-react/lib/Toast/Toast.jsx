@@ -15,7 +15,7 @@ const Toast = ({
   timeout,
   title,
 }) => {
-  const [isDismissed, setDismissed] = useState(false);
+  const [isDismissed, setDismissed] = useState(!isActive);
 
   const dismiss = (dismissed) => {
     if (dismissed) {
