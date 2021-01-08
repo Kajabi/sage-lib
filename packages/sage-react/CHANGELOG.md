@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.22.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.22.0...@kajabi/sage-react@0.22.1) (2021-01-08)
+
+
+### Bug Fixes
+
+* **upload-card:** fix broken import on upload card ([d88882a](https://github.com/Kajabi/sage-lib/commit/d88882a5d624f5425ed4151b0d5ae4757511d7fc))
+
+
+
+
+
 # [0.22.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.21.1...@kajabi/sage-react@0.22.0) (2021-01-08)
 
 
