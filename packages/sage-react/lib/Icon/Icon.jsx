@@ -22,7 +22,7 @@ const Icon = ({
   );
 
   const attributes = {};
-  if (label === '') {
+  if (!label || label === '') {
     attributes['aria-hidden'] = true;
   } else {
     attributes['aria-label'] = label;

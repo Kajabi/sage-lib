@@ -88,7 +88,11 @@ $-image-height-mobile: rem(120px);
   display: flex;
   grid-area: content;
   align-self: flex-start;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
+
+  > * + * {
+    margin-left: sage-spacing();
+  }
 }
 
 .sage-catalog-item__aside {

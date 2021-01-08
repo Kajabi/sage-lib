@@ -18,6 +18,7 @@ export { default as FormSection } from './FormSection';
 export { default as Grid } from './Grid';
 export { default as HelpLink } from './HelpLink';
 export { default as Icon } from './Icon';
+export { default as IconCard } from './IconCard';
 export { default as IconList } from './IconList';
 export { default as Input } from './Input';
 export { default as Label } from './Label';

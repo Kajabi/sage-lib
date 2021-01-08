@@ -76,6 +76,7 @@ const Popover = ({
               color={Button.COLORS.PRIMARY}
               href={moreLinkURL}
               target="_blank"
+              rel="noreferrer noopener"
               icon={SageTokens.ICONS.LAUNCH}
               iconPosition={Button.ICON_POSITIONS.RIGHT}
               subtle={true}

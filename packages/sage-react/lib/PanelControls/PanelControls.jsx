@@ -8,6 +8,8 @@ import {
 import { DEFAULT_NOUN, SELECTION_TYPES } from './configs';
 import PanelControlsBulkActions from './PanelControlsBulkActions';
 import PanelControlsPagination from './PanelControlsPagination';
+import PanelControlsToolbar from './PanelControlsToolbar';
+import PanelControlsToolbarButtonGroup from './PanelControlsToolbarButtonGroup';
 
 const PanelControls = ({
   children,
@@ -18,6 +20,7 @@ const PanelControls = ({
   const [selfConfigs, setSelfConfigs] = useState({
     // Set locally
     bulkActionsChecked: false,
+    bulkActionsItems: [],
 
     // Synched with `controlSettings
     currentPage: 1,
@@ -80,6 +83,11 @@ const PanelControls = ({
     onRequestChange({ page: newPageNumber });
   };
 
+  // Respond to bulk action command selection
+  const onSelectBulkAction = (payload) => {
+    onRequestChange({ bulkActionCommand: payload });
+  };
+
 
   //
   // Render
@@ -93,17 +101,15 @@ const PanelControls = ({
 
   return (
     <div className={classNames}>
-      {children && (
-        <div className="sage-panel-controls__toolbar">
-          {children}
-        </div>
-      )}
+      {children}
       <div className="sage-panel-controls__default-controls">
         <PanelControlsBulkActions
+          bulkActionsItems={selfConfigs.bulkActionsItems}
           checked={selfConfigs.bulkActionsChecked}
           currentPage={selfConfigs.currentPage}
           itemsOnThisPage={selfConfigs.itemsOnThisPage}
           numSelectedRows={selfConfigs.numSelectedRows}
+          onSelectBulkAction={onSelectBulkAction}
           onToggleSelection={onChangeSelectAll}
           rowNoun={selfConfigs.rowNoun}
           selectionType={selfConfigs.selectionType}
@@ -127,6 +133,8 @@ PanelControls.handlerUtils = {
   handleChange,
   handleSelection,
 };
+PanelControls.Toolbar = PanelControlsToolbar;
+PanelControls.ToolbarButtonGroup = PanelControlsToolbarButtonGroup;
 
 PanelControls.defaultProps = {
   children: null,
