@@ -1,4 +1,6 @@
 class SageToast < SageComponent
-  attr_accessor :value
-  attr_accessor :style
+  set_attribute_schema({
+    style: [:optional, Set.new(["danger"])],
+    value: String,
+  })
 end

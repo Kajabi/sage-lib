@@ -1,3 +1,5 @@
 class SageBody < SageComponent
-  attr_accessor :css_classes
+  set_attribute_schema({
+    css_classes: [:optional, String],
+  })
 end

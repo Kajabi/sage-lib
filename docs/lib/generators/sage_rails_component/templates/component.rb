@@ -1,6 +1,12 @@
 class Sage<%= class_name %> < SageComponent
   # EXAMPLE ATTRIBUTES
-  # attr_accessor :title
-  # attr_accessor :subtitle
+  # set_attribute_schema({
+  #   title: String,
+  #   id: [:optional, String, Integer],
+  #   items: [[{
+  #     title: String,
+  #     sub_title: String,
+  #    }]],
   <%= initialize_attributes %>
+  # })>
 end

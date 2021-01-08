@@ -1,10 +1,13 @@
 class SageAlert < SageComponent
-  attr_accessor :color
-  attr_accessor :icon_name
-  attr_accessor :title
-  attr_accessor :desc
-  attr_accessor :dismissable
-  attr_accessor :raised
+  set_attribute_schema({
+    color: [:optional, Set.new(["info", "success", "warning", "danger"])],
+    desc: [:optional, String],
+    dismissable: [:optional, TrueClass],
+    icon_name: [:optional, String],
+    raised: [:optional, TrueClass],
+    title: String,
+  })
+
   def sections
     %w(alert_actions)
   end

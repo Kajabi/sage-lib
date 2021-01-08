@@ -1,12 +1,14 @@
 class SageTable < SageComponent
-  attr_accessor :caption
-  attr_accessor :responsive
-  attr_accessor :striped
-  attr_accessor :selectable
-  attr_accessor :condensed
-  attr_accessor :sortable
-  attr_accessor :headers
-  attr_accessor :rows
-  attr_accessor :reset_above
-  attr_accessor :reset_below
+  set_attribute_schema({
+    caption: [:optional, String],
+    condensed: [:optional, TrueClass],
+    headers: [:optional, Array],
+    reset_above: [:optional, TrueClass],
+    reset_below: [:optional, TrueClass],
+    responsive: [:optional, TrueClass],
+    rows: [:optional, Array],
+    selectable: [:optional, TrueClass],
+    sortable: [:optional, TrueClass],
+    striped: [:optional, TrueClass],
+  })
 end

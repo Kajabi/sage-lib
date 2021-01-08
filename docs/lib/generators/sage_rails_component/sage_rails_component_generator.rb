@@ -16,7 +16,7 @@ class SageRailsComponentGenerator < Rails::Generators::NamedBase
   private
 
   def initialize_attributes
-    attributes.map { |attr| "attr_accessor :#{attr.name}" }.join("\n  ")
+    attributes.map { |attr| "#{attr.name}: [<TYPES>]" }.join("\n  ")
   end
 
   def utilize_attributes

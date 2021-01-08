@@ -1,11 +1,13 @@
 class SageChoice < SageComponent
-  attr_accessor :target
-  attr_accessor :text
-  attr_accessor :type
-  attr_accessor :icon
-  attr_accessor :subtext
-  attr_accessor :active
-  attr_accessor :align_center
-  attr_accessor :attributes
-  attr_accessor :disabled
+  set_attribute_schema({
+    active: [:optional, NilClass, TrueClass],
+    align_center: [:optional, TrueClass],
+    attributes: [:optional, NilClass, Hash],
+    disabled: [:optional, NilClass, TrueClass],
+    icon: [:optional,NilClass, String],
+    subtext: [:optional, NilClass, String],
+    target: [:optional, NilClass, String],
+    text: String,
+    type: Set.new(["icon", "radio", "arrow"]),
+  })
 end

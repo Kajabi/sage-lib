@@ -1,9 +1,11 @@
 class SageLabel < SageComponent
-  attr_accessor :color
-  attr_accessor :style
-  attr_accessor :icon
-  attr_accessor :value
-  attr_accessor :html_tag
-  attr_accessor :interactive_type # TODO: Validate if :dropdown, :default, or :secondary_button
-  attr_accessor :secondary_button
+  set_attribute_schema({
+    color: Set.new(["danger", "draft", "info", "locked", "published", "success", "warning"]),
+    html_tag: [:optional, String],
+    icon: [:optional, String],
+    interactive_type: [:optional, Set.new([:dropdown, :default, :secondary_button])],
+    secondary_button: [:optional, String],
+    style: [:optional, Set.new(["subtle", "bold"])],
+    value: String,
+  })
 end

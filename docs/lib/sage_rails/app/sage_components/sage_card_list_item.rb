@@ -1,3 +1,5 @@
 class SageCardListItem < SageComponent
-  attr_accessor :grid_template
+  set_attribute_schema({
+    grid_template: SageSchemaHelper::GRID_TEMPLATE
+  })
 end

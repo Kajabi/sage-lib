@@ -1,14 +1,16 @@
 class SageSwitch < SageComponent
-  attr_accessor :css_classes
-  attr_accessor :checked
-  attr_accessor :disabled
-  attr_accessor :has_error
-  attr_accessor :hide_text
-  attr_accessor :id
-  attr_accessor :label_text
-  attr_accessor :name
-  attr_accessor :message
-  attr_accessor :required
-  attr_accessor :type
-  attr_accessor :value
+  set_attribute_schema({
+    css_classes: [:optional, String],
+    checked: [:optional, TrueClass],
+    disabled: [:optional, TrueClass],
+    has_error: [:optional, TrueClass],
+    hide_text: [:optional, TrueClass],
+    id: String,
+    label_text: String,
+    name: String,
+    message: [:optional, String],
+    required: [:optional, TrueClass],
+    type: String,
+    value: String,
+  })
 end

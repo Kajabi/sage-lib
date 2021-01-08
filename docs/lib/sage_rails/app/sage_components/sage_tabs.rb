@@ -1,9 +1,18 @@
 class SageTabs < SageComponent
-  attr_accessor :style
-  attr_accessor :stacked
-  attr_accessor :id
-  attr_accessor :items
-  attr_accessor :progressbar
-  attr_accessor :align_items_center
-  attr_accessor :navigational
+  set_attribute_schema({
+    style: [:optional, Set.new(["choice"])],
+    stacked: [:optional, TrueClass],
+    id: [:optional, String],
+    items: [[
+      text: String,
+      attributes: [:optional, Hash],
+      active: [:optional, TrueClass],
+      target: [:optional, String],
+      type: [:optional, Set.new(["radio", "arrow", "icon"])],
+      icon: [:optional, String],
+    ]],
+    progressbar: [:optional, TrueClass],
+    align_items_center: [:optional, TrueClass],
+    navigational: [:optional, TrueClass],
+  })
 end

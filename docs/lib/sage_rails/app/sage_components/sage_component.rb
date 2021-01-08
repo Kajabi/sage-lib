@@ -3,6 +3,11 @@ class SageComponent
   attr_accessor :context
   attr_accessor :content
 
+  ATTRIBUTE_SCHEMA = {
+    html_attributes: [:optional, Hash],
+    spacer: [:optional, SageSchemaHelper::SPACER]
+  }
+
   def generated_css_classes
     @generated_css_classes ||= ""
   end
@@ -25,8 +30,6 @@ class SageComponent
   #   USAGE:
   #   sage_component <CLASSNAME>, { spacer: { bottom: :lg } }
   def spacer=(spacer_hash)
-    raise ArgumentError.new("SageComponent expects :spacer to be a hash") unless spacer_hash.is_a?(Hash)
-
     spacer_hash.each do |key, value|
       generated_css_classes << " sage-spacer-#{key}#{value != :md ? "-#{value}" : ""}"
     end
@@ -38,8 +41,6 @@ class SageComponent
   #   USAGE:
   #   sage_component <CLASSNAME>, { html_attributes: { "id": "my-cool-identifier" } }
   def html_attributes=(html_attributes_hash)
-    raise ArgumentError.new("SageComponent expects :html_attributes to be a hash") unless html_attributes_hash.is_a?(Hash)
-
     html_attributes_hash.each do |key, value|
       generated_html_attributes << " #{key}=\"#{value.to_s}\""
     end
@@ -59,5 +60,10 @@ class SageComponent
 
   def template_path
     self.class.to_s.underscore
+  end
+
+  def self.set_attribute_schema(attributes)
+    attr_accessor(*attributes.keys)
+    self.const_set("ATTRIBUTE_SCHEMA", self.superclass::ATTRIBUTE_SCHEMA.deep_merge(attributes))
   end
 end

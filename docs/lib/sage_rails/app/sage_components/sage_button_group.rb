@@ -1,4 +1,6 @@
 class SageButtonGroup < SageComponent
-  attr_accessor :align
-  attr_accessor :gap
+  set_attribute_schema({
+    align: [:optional, Set.new(["end"])],
+    gap: [:optional, Set.new([:xs, :sm, :md, :lg])]
+  })
 end

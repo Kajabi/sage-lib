@@ -1,8 +1,10 @@
 class SageNavLink < SageComponent
-  attr_accessor :link
-  attr_accessor :text
-  attr_accessor :type
-  attr_accessor :icon
-  attr_accessor :no_active
-  attr_accessor :method
+  set_attribute_schema({
+    link: [:optional, String],
+    text: [:optional, String],
+    type: [:optional, String],
+    icon: [:optional, String],
+    no_active: [:optional, TrueClass],
+    method: [:optional, Symbol],
+  })
 end

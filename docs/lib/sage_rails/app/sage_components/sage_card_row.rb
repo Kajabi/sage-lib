@@ -1,4 +1,6 @@
 class SageCardRow < SageComponent
-  attr_accessor :grid_template
-  attr_accessor :vertical_align
+  set_attribute_schema({
+    grid_template: SageSchemaHelper::GRID_TEMPLATE,
+    vertical_align: [:optional, TrueClass],
+  })
 end

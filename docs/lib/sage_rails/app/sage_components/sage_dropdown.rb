@@ -1,12 +1,23 @@
 class SageDropdown < SageComponent
-  attr_accessor :id
-  attr_accessor :align
-  attr_accessor :css_classes
-  attr_accessor :contained
-  attr_accessor :customized
-  attr_accessor :custom_modifier
-  attr_accessor :items
-  attr_accessor :trigger_type
-  attr_accessor :search
-  attr_accessor :panel_size
+  set_attribute_schema({
+    id: [:optional, String],
+    align: [:optional, Set.new(["right"])],
+    css_classes: [:optional, String],
+    contained: [:optional, TrueClass],
+    content: [:optional, String],
+    customized: [:optional, TrueClass],
+    custom_modifier: [:optional, Set.new(["actions", "sort"])],
+    items: [:optional, [[{
+      value: String,
+      icon: [:optional, NilClass, String],
+      attributes: [:optional, Hash],
+      style: [:optional, String],
+      is_heading: [:optional, TrueClass],
+      modifiers: [:optional, Array],
+      border_before: [:optional, TrueClass],
+    }]]],
+    trigger_type: [:optional, Set.new(["select", "select-labeled"])],
+    search: [:optional, TrueClass],
+    panel_size: [:optional, Set.new(["small"])],
+  })
 end

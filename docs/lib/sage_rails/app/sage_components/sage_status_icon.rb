@@ -1,4 +1,6 @@
 class SageStatusIcon < SageComponent
-  attr_accessor :value
-  attr_accessor :icon
+  set_attribute_schema({
+    value: String,
+    icon: String,
+  })
 end

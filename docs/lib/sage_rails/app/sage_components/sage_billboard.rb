@@ -1,5 +1,7 @@
 class SageBillboard < SageComponent
-  attr_accessor :img
-  attr_accessor :title
-  attr_accessor :message
+  set_attribute_schema({
+    img: [:optional, String],
+    title: [:optional, String],
+    message: [:optional, String],
+  })
 end

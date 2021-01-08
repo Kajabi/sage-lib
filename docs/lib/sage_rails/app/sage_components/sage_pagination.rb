@@ -1,8 +1,10 @@
 class SagePagination < SageComponent
-  attr_accessor :items
-  attr_accessor :window
-  attr_accessor :hide_pages
-  attr_accessor :additional_params
+  set_attribute_schema({
+    items: -> (v) { SageSchemaHelper.is_active_record?(v) },
+    window: [:optional, Integer],
+    hide_pages: [:optional, TrueClass],
+    additional_params: [:optional, Hash]
+  })
 
   def initialize(attributes = {})
     super

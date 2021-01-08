@@ -132,6 +132,7 @@ $-example-code-preview-button-bg: rgba(sage-color(primary, 500), 0.75);
 
   .prettyprint {
     margin-bottom: 0;
+    padding-bottom: sage-spacing(xl);
   }
 
   &::before {

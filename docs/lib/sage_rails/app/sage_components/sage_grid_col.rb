@@ -1,4 +1,6 @@
 class SageGridCol < SageComponent
-  attr_accessor :breakpoint
-  attr_accessor :size
+  set_attribute_schema({
+    breakpoint: [:optional, Symbol, String],
+    size: [:optional, String, Integer],
+  })
 end

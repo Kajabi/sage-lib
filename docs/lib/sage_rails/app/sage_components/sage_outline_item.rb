@@ -1,9 +1,11 @@
 class SageOutlineItem < SageComponent
-  attr_accessor :title
-  attr_accessor :actions_secondary
-  attr_accessor :actions_primary
-  attr_accessor :status
-  attr_accessor :icon
-  attr_accessor :depth
-  attr_accessor :category
+  set_attribute_schema({
+    title: [:optional, String],
+    actions_secondary: [:optional, Array],
+    actions_primary: [:optional, Array],
+    status: [:optional, String],
+    icon: [:optional, String],
+    depth: [:optional, Integer],
+    category: [:optional, TrueClass],
+  })
 end

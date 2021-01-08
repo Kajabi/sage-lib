@@ -1,4 +1,6 @@
 class SageCopyButton < SageComponent
-  attr_accessor :value
-  attr_accessor :semibold
+  set_attribute_schema({
+    semibold: [:optional, TrueClass],
+    value: String,
+  })
 end

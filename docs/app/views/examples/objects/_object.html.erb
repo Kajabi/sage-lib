@@ -16,6 +16,10 @@
     type: "object",
     title: @title %>
 
+  <%= render "examples/shared/props",
+    props_content: props_content,
+    title: @title %>
+
   <% if info_content[:use_legacy_html_code_source] %>
     <%= render "examples/shared/legacy_code",
       type: "object",
@@ -25,10 +29,6 @@
       type: "object",
       title: @title %>
   <% end %>
-
-  <%= render "examples/shared/props",
-    props_content: props_content,
-    title: @title %>
 
   <%= render "examples/shared/rules",
     do_content: do_content,

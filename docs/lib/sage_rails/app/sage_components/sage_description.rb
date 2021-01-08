@@ -1,6 +1,8 @@
 class SageDescription < SageComponent
-  attr_accessor :title
-  attr_accessor :data
-  attr_accessor :link
-  attr_accessor :id 
+  set_attribute_schema({
+    title: [:optional, String],
+    data: [:optional, NilClass, String, Integer, Hash],
+    link: [:optional, String],
+    id: [:optional, String],
+  })
 end

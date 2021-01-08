@@ -1,10 +1,12 @@
 class SageBanner < SageComponent
-  attr_accessor :banner_context
-  attr_accessor :dismissable
-  attr_accessor :type
-  attr_accessor :icon
-  attr_accessor :text
-  attr_accessor :link
-  attr_accessor :id
-  attr_accessor :active
+  set_attribute_schema({
+    banner_context: [:optional, Set.new(["ladera-top", "sage-demo"])],
+    dismissable: [:optional, TrueClass],
+    type: [:optional, String],
+    icon: [:optional, String],
+    text: String,
+    link: [:optional, {name: String, attributes: Hash}],
+    id: [:optional, String],
+    active: [:optional, TrueClass],
+  })
 end

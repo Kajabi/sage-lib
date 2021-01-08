@@ -1,5 +1,7 @@
 class SageSortable < SageComponent
-  attr_accessor :resource_name
+  set_attribute_schema({
+    resource_name: String
+  })
 
   def sections
     %w(empty)
