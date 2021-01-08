@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.5.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.5.0...@kajabi/sage@3.5.1) (2021-01-08)
+
+
+### Bug Fixes
+
+* **sageformsection:** resolve spec failure due to nil being passed to SageFormSection ([ddf0abf](https://github.com/Kajabi/sage-lib/commit/ddf0abfbac445db4b56b2d3c96d046cd26ad97d3))
+
+
+
+
+
 # [3.5.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.4.0...@kajabi/sage@3.5.0) (2021-01-08)
 
 
