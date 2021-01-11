@@ -3,7 +3,7 @@
     value: "Toast",
     style: "primary",
     attributes: {
-      "onClick": "Sage.toast.trigger({message:'Toast created.'})",
+      "onClick": "Sage.toast.trigger({message:'Toast created.', type: 'notice'})",
     },
   } %>
 
@@ -20,7 +20,7 @@
     style: "secondary",
     raised: true,
     attributes: {
-      "onClick": "Sage.toast.trigger({message:'This toast has a 10 second timer.', timer: 10000})",
+      "onClick": "Sage.toast.trigger({message:'This toast has a 10 second timer.', type: 'notice', timer: 10000})",
     },
   } %>
 <% end %>
