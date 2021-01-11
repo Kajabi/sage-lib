@@ -3,6 +3,6 @@ class SageFormSection < SageComponent
     id: [:optional, String],
     subtitle: [:optional, NilClass, String],
     title_tag: [:optional, String],
-    title: [:optional, String],
+    title: [:optional, NilClass, String],
   })
 end
