@@ -3,16 +3,24 @@
     value: "Toast",
     style: "primary",
     attributes: {
-      "data-js-toast": "Toast created.",
-      "data-js-toast-timer": "5000",
+      "onClick": "Sage.toast.trigger({message:'Toast created.'})",
     },
   } %>
+
   <%= sage_component SageButton, {
     value: "Danger Toast",
     style: "danger",
     attributes: {
-      "data-js-toast": "Danger toast created.",
-      "data-js-toast-theme": "danger",
+      "onClick": "Sage.toast.trigger({message:'Danger toast created.', type: 'danger'})",
+    },
+  } %>
+
+  <%= sage_component SageButton, {
+    value: "Custom Timer",
+    style: "secondary",
+    raised: true,
+    attributes: {
+      "onClick": "Sage.toast.trigger({message:'This toast has a 10 second timer.', timer: 10000})",
     },
   } %>
 <% end %>

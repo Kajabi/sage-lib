@@ -4,63 +4,69 @@ Sage.toast = (function () {
   // ==================================================
   const DATA_ATTR = "data-js-toast";
   const TOAST_CLASS = "sage-toast";
-  const TOAST_TIMER = "data-js-toast-timer";
+  const SELECTOR_TOAST_CLOSE = "[data-js-toast-close]";
+
+  let config = {
+    message : "",
+    type : "",
+    timer: ""
+  }
 
   // ==================================================
   // Functions
   // ==================================================
 
   function init(el) {
-    el.addEventListener("click", buildToast);
+    el.querySelector(SELECTOR_TOAST_CLOSE).addEventListener("click", handleCloseToast);
   }
 
   function unbind(el) {
-    el.removeEventListener("click", removeToast);
+    el.querySelector(SELECTOR_TOAST_CLOSE).removeEventListener("click", handleCloseToast);
   }
 
-  // toast template
-  function buildToast(evt) {
-
+  function trigger(config) {
     let toast = document.createElement("dialog");
-    let toastValue = '<p class="sage-toast__value">' + evt.target.getAttribute(DATA_ATTR) + "</p>";
-    let toastCloseBtn ='<button type="button" class="sage-btn sage-btn--subtle sage-btn--secondary sage-btn--icon-only-remove"><span class="visually-hidden">Close</span></button>';
+    let toastMessage = `<p class="sage-toast__value">${config.message}</p>`;
+    let toastCloseBtn = '<button type="button" data-js-toast-close class="sage-btn sage-btn--subtle sage-btn--secondary sage-btn--icon-only-remove"><span class="visually-hidden">Close</span></button>';
+
+    toast.setAttribute(DATA_ATTR, "");
     toast.className = TOAST_CLASS;
-    toast.innerHTML = toastValue + toastCloseBtn;
-    toast.dataItems = [`${DATA_ATTR}-theme`,];
-
-    generateClasses(toast, evt);
-
-    if (evt.target.getAttribute(TOAST_TIMER)) {
-      setTimeout(() => {
-        removeToast(toast);
-      }, evt.target.getAttribute(TOAST_TIMER));
-    } else {
-      setTimeout(() => {
-        removeToast(toast);
-      }, 3000);
-    }
+    toast.classList.add('sage-toast--style-'+ config.type);
+    toast.innerHTML = toastMessage + toastCloseBtn;
 
     document.body.appendChild(toast);
+    setToastTimer(toast, config)
   }
 
-  // Removes toast from DOM
+  // sets default or customer timer
+  function setToastTimer(toast, config) {
+    if (config.timer) {
+      setTimeout(() => {
+        removeToast(toast);
+      }, config.timer);
+    } else {
+      setTimeout(() => {
+        removeToast(toast)
+      }, 4000);
+    }
+  }
+
+  // Remove toast when times up
   function removeToast(toast) {
     window.requestAnimationFrame(function () {
       document.body.removeChild(document.querySelector(`.${TOAST_CLASS}`));
     });
   }
 
-  // Builds list of modifier classes from array of data-attributes
-  function generateClasses(ele, evt) {
-    ele.dataItems.forEach(function (item) {
-      var tgt = evt.target;
-      if (tgt.hasAttribute(item)) {
-        ele.classList.add(`${TOAST_CLASS}--style-${tgt.getAttribute(item)}`);
-      }
+  // Handles click on toast close btn
+  function handleCloseToast(evt) {
+    window.requestAnimationFrame(function () {
+      document.body.removeChild(evt.target.parentElement);
     });
   }
 
   return {
+    trigger: trigger,
     init: init,
     unbind: unbind,
   };
