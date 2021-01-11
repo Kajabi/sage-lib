@@ -6,11 +6,6 @@ Sage.toast = (function () {
   const TOAST_CLASS = "sage-toast";
   const SELECTOR_TOAST_CLOSE = "[data-js-toast-close]";
 
-  let config = {
-    message : "",
-    type : "",
-    timer: ""
-  }
 
   // ==================================================
   // Functions
