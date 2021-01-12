@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { SageClassnames } from '../configs';
 
 const tagPropTypes = PropTypes.oneOfType([
   PropTypes.string,
@@ -24,6 +25,8 @@ Link.defaultProps = {
   children: null,
   tag: null,
 };
+
+Link.CLASSNAMES = SageClassnames.LINK;
 
 Link.tagPropTypes = tagPropTypes;
 
