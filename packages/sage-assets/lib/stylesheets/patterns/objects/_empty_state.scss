@@ -20,6 +20,14 @@
   padding-bottom: sage-spacing(xs);
 }
 
+.sage-empty-state__graphic {
+  overflow: hidden;
+
+  > img {
+    max-width: 100%;
+  }
+}
+
 .sage-empty-state__icon {
   color: sage-color(charcoal, 100);
 }
