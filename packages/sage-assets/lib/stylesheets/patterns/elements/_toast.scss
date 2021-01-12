@@ -24,7 +24,6 @@ $-toast-viewport-spacing-bottom: sage-spacing();
   display: flex;
   z-index: sage-z-index(modal, +1);
   position: fixed;
-  justify-content: space-between;
   align-items: center;
   padding: 0 sage-spacing(md);
   border-radius: sage-border(radius-large);
@@ -53,8 +52,7 @@ $-toast-viewport-spacing-bottom: sage-spacing();
   @media screen and (min-width: sage-breakpoint(md-min)) {
     @include position(auto, sage-spacing(lg), $-toast-viewport-spacing-bottom, auto);
     height: $-toast-height-default;
-    width: fit-content;
-    max-width: 90vw;
+    max-width: rem(350px);
     padding: 0 sage-spacing(lg);
 
     @include generate-stacked-toast-alignment($-toast-height-default);
@@ -65,18 +63,17 @@ $-toast-viewport-spacing-bottom: sage-spacing();
   }
 }
 
-.sage-toast__value {
-  @extend %t-sage-body-med;
-  @include truncate();
-  margin-right: sage-spacing();
+.sage-toast__icon {
+  margin-right: sage-spacing(xs);
   color: sage-color(white);
 }
 
-.sage-toast__value::before {
-  @include sage-icon-base(check);
-  margin-right: sage-spacing(2xs);
+.sage-toast__close {
+  margin-left: auto;
+}
 
-  .sage-toast--style-danger & {
-    content: sage-icon(danger);
-  }
+.sage-toast__value {
+  margin-right: sage-spacing(xs);
+  color: sage-color(white);
+  line-height: sage-line-height(2xs);
 }

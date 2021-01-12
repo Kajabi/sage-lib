@@ -22,12 +22,13 @@ Sage.toast = (function () {
   function trigger(config) {
     let toast = document.createElement("dialog");
     let toastMessage = `<p class="sage-toast__value">${config.message}</p>`;
-    let toastCloseBtn = '<button type="button" data-js-toast-close class="sage-btn sage-btn--subtle sage-btn--secondary sage-btn--icon-only-remove"><span class="visually-hidden">Close</span></button>';
+    let toastCloseBtn = '<button type="button" data-js-toast-close class="sage-toast__close sage-btn sage-btn--subtle sage-btn--secondary sage-btn--icon-only-remove"><span class="visually-hidden">Close</span></button>';
+    let toastIcon = `<i class="sage-toast__icon sage-icon-${config.icon}"></i>`;
 
     toast.setAttribute(DATA_ATTR, "");
     toast.className = TOAST_CLASS;
     toast.classList.add('sage-toast--style-'+ config.type);
-    toast.innerHTML = toastMessage + toastCloseBtn;
+    toast.innerHTML = toastIcon + toastMessage + toastCloseBtn;
 
     document.body.appendChild(toast);
     setToastTimer(toast, config)
