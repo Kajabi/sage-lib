@@ -170,6 +170,32 @@ $-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
   }
 }
 
+.sage-choice__graphic {
+  overflow: hidden;
+  width: rem(48px);
+  height: remb(48px);
+  margin-right: sage-spacing(sm);
+  border-radius: sage-border(radius-small);
+
+  > img {
+    max-width: 100%;
+  }
+}
+
+.sage-choice__link-text {
+  font-style: normal;
+  color: sage-color(primary, 300);
+
+  .sage-choice:hover & {
+    color: sage-color(primary, 400);
+  }
+
+  .sage-choice[aria-disabled="true"] &,
+  .sage-choice:disabled & {
+    color: sage-color(grey, 400);
+  }
+}
+
 .sage-choice__text {
   font-style: normal;
   color: sage-color(charcoal, 400);

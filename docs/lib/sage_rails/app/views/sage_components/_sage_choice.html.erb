@@ -29,6 +29,11 @@ html_tag = is_button ? "button" : "a"
   role="tab"
   aria-controls="<%= component.target %>"
 >
+  <% if component.graphic.present? %>
+    <div class="sage-choice__graphic">
+      <%= component.graphic.html_safe %>
+    </div>
+  <% end %>
   <div class="sage-choice__content">
     <% if component.text.present? %>
       <em class="sage-choice__text"><%= component.text.html_safe %></em>
@@ -37,4 +42,9 @@ html_tag = is_button ? "button" : "a"
       <span class="sage-choice__subtext" aria-hidden="true"><%= component.subtext.html_safe %></span>
     <% end %>
   </div>
+  <% if component.link_text.present? %>
+    <div class="sage-choice__link-text">
+      <%= component.link_text.html_safe %>
+    </div>
+  <% end %>
 </<%= html_tag %>>
