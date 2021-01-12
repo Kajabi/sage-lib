@@ -21,14 +21,14 @@ Sage.toast = (function () {
 
   function trigger(config) {
     let toast = document.createElement("dialog");
-    let toastMessage = `<p class="sage-toast__value">${config.message}</p>`;
-    let toastCloseBtn = '<button type="button" data-js-toast-close class="sage-toast__close sage-btn sage-btn--subtle sage-btn--secondary sage-btn--icon-only-remove"><span class="visually-hidden">Close</span></button>';
-    let toastIcon = `<i class="sage-toast__icon sage-icon-${config.icon}"></i>`;
 
     toast.setAttribute(DATA_ATTR, "");
     toast.className = TOAST_CLASS;
     toast.classList.add('sage-toast--style-'+ config.type);
-    toast.innerHTML = toastIcon + toastMessage + toastCloseBtn;
+    toast.innerHTML = `
+    <i class="sage-toast__icon sage-icon-${config.icon}"></i>
+    <p class="sage-toast__value">${config.message}</p>
+    <button type="button" data-js-toast-close class="sage-toast__close sage-btn sage-btn--subtle sage-btn--secondary sage-btn--icon-only-remove"><span class="visually-hidden">Close</span></button>`;
 
     document.body.appendChild(toast);
     setToastTimer(toast, config)
@@ -47,14 +47,14 @@ Sage.toast = (function () {
     }
   }
 
-  // Remove toast when times up
+  // removes toast when timer is up
   function removeToast(toast) {
     window.requestAnimationFrame(function () {
       document.body.removeChild(document.querySelector(`.${TOAST_CLASS}`));
     });
   }
 
-  // Handles click on toast close btn
+  // handles click on toast close btn
   function handleCloseToast(evt) {
     window.requestAnimationFrame(function () {
       document.body.removeChild(evt.target.parentElement);
