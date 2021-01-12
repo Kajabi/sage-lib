@@ -3,8 +3,8 @@ class SageElementGenerator < Rails::Generators::NamedBase
   def create_sage_element
 
     # Style Variables
-    style_file = "lib/sage-frontend/stylesheets/system/patterns/elements_#{file_name}.scss"
-    style_include_file = "lib/sage-frontend/stylesheets/system/index.scss"
+    style_file = "../packages/sage-assets/lib/stylesheets/patterns/elements/_#{file_name}.scss"
+    style_include_file = "../packages/sage-assets/lib/stylesheets/index.scss"
     style_include_line = "// Elements"
     # Create Style File
     template "style.scss", style_file
