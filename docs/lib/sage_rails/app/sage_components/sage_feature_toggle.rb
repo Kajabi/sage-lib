@@ -6,6 +6,7 @@ class SageFeatureToggle < SageComponent
     link_location: [:optional, String],
     link_text: [:optional, String],
     title: [:optional, String],
+    title_tag: [:optional, String],
   })
 
   def sections
