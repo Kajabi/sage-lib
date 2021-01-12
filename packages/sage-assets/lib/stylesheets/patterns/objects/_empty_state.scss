@@ -32,6 +32,8 @@
 }
 
 .sage-empty-state__text {
+  @extend %t-sage-body-small;
+
   color: sage-color(charcoal, 200);
   word-wrap: break-word;
 }
