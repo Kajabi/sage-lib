@@ -41,3 +41,24 @@
     margin-right: sage-spacing(xs);
   }
 }
+
+.sage-link--subtext {
+  display: inline-block;
+  position: relative;
+  padding: 0 sage-spacing(2xs);
+  color: sage-color(charcoal, 200);
+  text-decoration: underline;
+  border-radius: sage-border(radius-small);
+
+  &:hover {
+    color: sage-color(charcoal, 400);
+    text-decoration: underline;
+  }
+
+  &:focus {
+    color: sage-color(charcoal, 400);
+    text-decoration: none;
+    box-shadow: 0 0 0 2px sage-color(charcoal, 400);
+    outline: 0;
+  }
+}
