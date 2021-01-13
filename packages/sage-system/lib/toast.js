@@ -6,7 +6,6 @@ Sage.toast = (function () {
   const TOAST_CLASS = "sage-toast";
   const SELECTOR_TOAST_CLOSE = "[data-js-toast-close]";
 
-
   // ==================================================
   // Functions
   // ==================================================
@@ -19,7 +18,15 @@ Sage.toast = (function () {
     el.querySelector(SELECTOR_TOAST_CLOSE).removeEventListener("click", handleCloseToast);
   }
 
-  function trigger(config) {
+  function trigger(arguments) {
+
+    const defaultConfig = {
+      icon: "check",
+      type: "notice",
+    }
+
+    const config = Object.assign(arguments, defaultConfig)
+
     let toast = document.createElement("dialog");
 
     toast.setAttribute(DATA_ATTR, "");
@@ -50,7 +57,8 @@ Sage.toast = (function () {
   // removes toast when timer is up
   function removeToast(toast) {
     window.requestAnimationFrame(function () {
-      document.body.removeChild(document.querySelector(`.${TOAST_CLASS}`));
+      toast.remove();
+      clearTimeout(toast);
     });
   }
 
