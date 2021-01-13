@@ -18,14 +18,14 @@ Sage.toast = (function () {
     el.querySelector(SELECTOR_TOAST_CLOSE).removeEventListener("click", handleCloseToast);
   }
 
-  function trigger(arguments) {
+  function trigger(args) {
 
     const defaultConfig = {
       icon: "check",
       type: "notice",
     }
 
-    const config = Object.assign(defaultConfig, arguments)
+    const config = Object.assign(defaultConfig, args)
 
     let toast = document.createElement("dialog");
 
