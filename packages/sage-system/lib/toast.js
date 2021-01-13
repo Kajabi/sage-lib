@@ -25,7 +25,7 @@ Sage.toast = (function () {
       type: "notice",
     }
 
-    const config = Object.assign(arguments, defaultConfig)
+    const config = Object.assign(defaultConfig, arguments)
 
     let toast = document.createElement("dialog");
 
