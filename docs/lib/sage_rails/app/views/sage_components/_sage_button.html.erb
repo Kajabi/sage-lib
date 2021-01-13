@@ -4,7 +4,7 @@
 <<%= html_tag %>
   <%= "type=button" if is_button %>
   <% component.attributes.each do |key, value| %>
-    <%= "#{key}='#{value}'".html_safe %>
+    <%= "#{key}=\"#{value}\"".html_safe %>
   <% end if component.attributes&.is_a?(Hash) %>
   <%= "aria-disabled=true disabled" if component.disabled %>
   class="
