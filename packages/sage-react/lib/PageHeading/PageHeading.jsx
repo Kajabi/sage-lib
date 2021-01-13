@@ -23,9 +23,9 @@ const PageHeading = ({
   >
     {breadcrumbs
       && (
-      <div className="sage-page-heading__crumbs">
-        <Breadcrumbs items={breadcrumbs} className="sage-page-heading__back" />
-      </div>
+        <div className="sage-page-heading__crumbs">
+          <Breadcrumbs items={breadcrumbs} className="sage-page-heading__back" />
+        </div>
       )
     }
     <h1 className="sage-page-heading__title">
@@ -33,9 +33,9 @@ const PageHeading = ({
     </h1>
     {toolbarItems
       && (
-      <div className="sage-page-heading__toolbar">
-        {toolbarItems.map(tool => <React.Fragment key={uuid()}>{tool}</React.Fragment>)}
-      </div>
+        <div className="sage-page-heading__toolbar">
+          {toolbarItems.map(tool => <React.Fragment key={uuid()}>{tool}</React.Fragment>)}
+        </div>
       )
     }
     {actionItems
