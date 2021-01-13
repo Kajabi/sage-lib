@@ -15,6 +15,7 @@ Sage.copyButton = (function() {
     document.execCommand('copy');
     document.body.removeChild(el);
     ev.currentTarget.focus();
+    Sage.toast.trigger({message:'Copied to clipboard'})
   };
 
 
