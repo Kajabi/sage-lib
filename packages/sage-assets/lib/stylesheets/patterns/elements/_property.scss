@@ -16,6 +16,10 @@
       margin-right: sage-spacing();
     }
   }
+
+  .sage-property-group & + & {
+    margin-left: sage-spacing(md);
+  }
 }
 
 .sage-property__icon {
@@ -28,4 +32,9 @@
 
 .sage-property__value {
   @include truncate();
+}
+
+.sage-property-group {
+  display: flex;
+  flex-flow: row wrap;
 }

@@ -5,6 +5,7 @@ import {
   Icon,
   SageTokens,
 } from '..';
+import PropertyGroup from './PropertyGroup';
 
 const Property = ({
   children,
@@ -30,6 +31,8 @@ const Property = ({
     </span>
   );
 };
+
+Property.Group = PropertyGroup;
 
 Property.defaultProps = {
   className: null,
