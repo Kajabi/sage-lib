@@ -33,6 +33,16 @@ module ElementsHelper
         a11y: "done"
       },
       {
+        title: "card_highlight",
+        description: "A special highlight edge to apply to Card components.",
+        use_legacy_html_code_source: false,
+        scss: "done",
+        docs: "done",
+        rails: "done",
+        react: "done",
+        a11y: "done"
+      },
+      {
         title: "checkbox",
         description: "Checkboxes provide users with selectable options like toggling a single setting or selecting multiple options from a list.",
         use_legacy_html_code_source: false,

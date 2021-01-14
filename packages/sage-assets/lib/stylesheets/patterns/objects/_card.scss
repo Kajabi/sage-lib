@@ -8,6 +8,8 @@
 .sage-card {
   @include sage-card();
 
+  position: relative;
+  overflow: hidden;
   width: 100%;
 }
 
