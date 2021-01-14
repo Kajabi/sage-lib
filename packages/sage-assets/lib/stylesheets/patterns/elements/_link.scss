@@ -58,7 +58,7 @@
   &:focus {
     color: sage-color(charcoal, 400);
     text-decoration: none;
-    box-shadow: 0 0 0 2px sage-color(charcoal, 400);
+    box-shadow: 0 0 0 2px currentColor;
     outline: 0;
   }
 }
