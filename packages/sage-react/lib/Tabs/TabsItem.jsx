@@ -22,7 +22,6 @@ const TabsItem = ({
   ...rest
 }) => {
   const { to, href } = rest;
-  console.log(to, href);
   const isLink = to || href;
   const TagName = isLink ? Link : 'button';
   const itemStyleProtected = itemStyle === TAB_STYLES.PROGRESSBAR ? TAB_STYLES.TAB : itemStyle;
