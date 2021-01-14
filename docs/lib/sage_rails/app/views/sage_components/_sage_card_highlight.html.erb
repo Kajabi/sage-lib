@@ -20,7 +20,7 @@ position = component.position.present? ? component.position : 'left'
   role="presentation"
   <% if component.value.present? %>
     aria-label="<%= component.value %>"
-  <% else %>
+  <% elsif component.content.blank? %>
     aria-hidden="true"
   <% end %>
   <% if component.custom_color.present? %>
