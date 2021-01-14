@@ -48,6 +48,7 @@ Card.Block = CardBlock;
 Card.Divider = CardDivider;
 Card.Figure = CardFigure;
 Card.Footer = CardFooter;
+Card.Highlight = CardHighlight;
 Card.Image = CardImage;
 Card.List = CardList;
 Card.Row = CardRow;
