@@ -36,3 +36,17 @@
     <% end %>
   <% end %>
 <% end %>
+
+<%= md("
+**Note:** While highlights may often be just decorative,
+the `value` property can be provided to provided semantic
+and accessible labels for this highlight.
+Internal content can also be provided compositionally
+but will be wrapped with `visually-hidden`.
+") %>
+
+<%= sage_component SageCard, {} do %>
+  <%= sage_component SageCardHeader, { title: "1-on-1 Meeting w/ Julie" } %>
+  <p class="t-sage-body-small t-sage--grey">Tue, Jan 12, 2021, 3:00pm</p>
+  <%= sage_component SageCardHighlight, { color: "sage", value: "1-on-1 Meeting type" } %>
+<% end %>
