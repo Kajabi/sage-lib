@@ -10,6 +10,6 @@ class SageChoice < SageComponent
     subtext: [:optional, NilClass, String],
     target: [:optional, NilClass, String],
     text: String,
-    type: Set.new(["arrow", "graphic", "icon", "radio"]),
+    type: [:optional, Set.new(["arrow", "graphic", "icon", "radio"])],
   })
 end
