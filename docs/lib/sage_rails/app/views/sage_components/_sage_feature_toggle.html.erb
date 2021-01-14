@@ -7,7 +7,10 @@
       style: "primary",
       subtle: true,
       icon: { name: "launch", style: "right" },
-      css_classes: "sage-feature-toggle__content-button"
+      css_classes: "sage-feature-toggle__content-button",
+      attributes: component.link_location && {
+        href:  component.link_location
+      }
     } %>
   </div>
   <% if content_for?(:sage_feature_toggle_input) %>
