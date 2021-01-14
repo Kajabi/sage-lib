@@ -9,6 +9,9 @@ import {
   CLASSNAMES_GRID_TEMPLATES,
   lookupGridTemplateClassname
 } from './grid-templates';
+import {
+  CLASSNAMES_LINK,
+} from './links';
 
 const CLASSNAMES = {
   SPACERS: CLASSNAMES_SPACERS,
@@ -17,6 +20,7 @@ const CLASSNAMES = {
   TYPE_COLORS: CLASSNAMES_TYPE_COLORS,
   TRUNCATE_TEXT: CLASSNAME_TRUNCATE_TEXT,
   GRID_TEMPLATES: CLASSNAMES_GRID_TEMPLATES,
+  LINK: CLASSNAMES_LINK,
   lookupGridTemplate: lookupGridTemplateClassname,
 };
 
