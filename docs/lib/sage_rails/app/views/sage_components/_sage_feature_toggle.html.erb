@@ -20,7 +20,7 @@
       <%= content_for :sage_feature_toggle_input %>
     </div>
   <% end %>
-  <a class="sage-feature-toggle__image-link">
-    <img class="sage-feature-toggle__image" src=<%= component.image %> alt="<%= component.alt_text %>"/>
-  </a>
+  <div class="sage-feature-toggle__image-link" >
+    <img class="sage-feature-toggle__image" src=<%= component.image %> alt="<%= component.alt_text %>" <%= "aria-hidden=true" if component.alt_text.blank? %> />
+  </div>
 </li>
