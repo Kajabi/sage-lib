@@ -1,0 +1,2 @@
+class SagePropertyGroup < SageComponent
+end

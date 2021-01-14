@@ -33,6 +33,7 @@ export {
   SageTokens,
   SageClassnames,
 } from './configs';
+export { default as Property } from './Property';
 export { default as Search } from './Search';
 export { default as Select } from './Select';
 export {
