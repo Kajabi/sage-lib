@@ -1,5 +1,6 @@
 class SageCheckbox < SageComponent
   set_attribute_schema({
+    attributes: [:optional, Hash],
     checked: [:optional, TrueClass],
     css_classes: [:optional, String],
     disabled: [:optional, TrueClass],
