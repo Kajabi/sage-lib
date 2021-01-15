@@ -1,19 +1,22 @@
 <% if component.standalone %>
-  <input 
-    id="<%= component.id %>" 
-    type="radio" 
+  <input
+    id="<%= component.id %>"
+    type="radio"
     class="
       sage-radio
       sage-radio--standalone
       <%= component.has_error ? "sage-radio--error" : "" %>
       <%= component.css_classes if component.css_classes.present? %>
     "
+    name="<%= component.name %>"
+    value="<%= component.value %>"
+    <% component.attributes.each do |key, value| %>
+      <%= "#{key}=\"#{value}\"".html_safe %>
+    <% end if component.attributes&.is_a?(Hash) %>
     <%= "checked" if component.checked %>
     <%= "disabled" if component.disabled %>
     <%= "required" if component.required %>
     aria-label="<%= component.label_text %>"
-    name="<%= component.name %>"
-    value="<%= component.value %>"
   />
 <% else %>
   <div class="
@@ -22,12 +25,15 @@
       <%= component.css_classes if component.css_classes.present? %>
     "
   >
-    <input 
-      id="<%= component.id %>" 
-      type="radio" 
-      class="sage-radio__input" 
-      name="<%= component.name %>" 
+    <input
+      id="<%= component.id %>"
+      type="radio"
+      class="sage-radio__input"
+      name="<%= component.name %>"
       value="<%= component.value %>"
+      <% component.attributes.each do |key, value| %>
+        <%= "#{key}=\"#{value}\"".html_safe %>
+      <% end if component.attributes&.is_a?(Hash) %>
       <%= "checked" if component.checked %>
       <%= "disabled" if component.disabled %>
       <%= "required" if component.required %>
