@@ -59,9 +59,11 @@ export const Toast = ({
 
   return !isDismissed && (
     <dialog open className={classNames} aria-labelledby={`sage-toast-label-${id}`}>
-      <p className="sage-toast__value" id={`sage-toast-label-${id}`}>
-        {title} {description}
-      </p>
+      <output>
+        <p className="sage-toast__value" id={`sage-toast-label-${id}`}>
+          {title} {description}
+        </p>
+      </output>
       <Button
         color={Button.COLORS.SECONDARY}
         icon={Icon.ICONS.REMOVE}
