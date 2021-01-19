@@ -1,7 +1,7 @@
 import React from 'react';
-import Toggle from './Toggle';
+import { Toggle } from './Toggle';
 
-const Checkbox = props => (
+export const Checkbox = (props) => (
   <Toggle {...props} />
 );
 
@@ -11,5 +11,3 @@ Checkbox.defaultProps = {
 };
 
 Checkbox.propTypes = { ...Toggle.propTypes };
-
-export default Checkbox;

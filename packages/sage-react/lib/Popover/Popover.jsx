@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import uuid from 'react-uuid';
-import Button from '../Button';
+import { Button } from '../Button';
 import { SageTokens } from '../configs';
 
-const Popover = ({
+export const Popover = ({
   className,
   children,
   customContentClassName,
@@ -62,7 +62,14 @@ const Popover = ({
       >
         Learn more
       </Button>
-      <div className="sage-popover__overlay" onClick={handleCloseClick} role="button" onKeyDown={handleKeydown} tabIndex={-1} />
+      <div
+        className="sage-popover__overlay"
+        aria-label="Exit popover"
+        onClick={handleCloseClick}
+        role="button"
+        onKeyDown={handleKeydown}
+        tabIndex={-1}
+      />
       <div className="sage-popover__panel">
         {title && (
           <h5 className="sage-popover__title">{title}</h5>
@@ -107,5 +114,3 @@ Popover.propTypes = {
   moreLinkText: PropTypes.string,
   title: PropTypes.string,
 };
-
-export default Popover;

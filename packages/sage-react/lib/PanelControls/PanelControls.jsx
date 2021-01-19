@@ -6,12 +6,12 @@ import {
   handleSelection,
 } from './utils';
 import { DEFAULT_NOUN, SELECTION_TYPES } from './configs';
-import PanelControlsBulkActions from './PanelControlsBulkActions';
-import PanelControlsPagination from './PanelControlsPagination';
-import PanelControlsToolbar from './PanelControlsToolbar';
-import PanelControlsToolbarButtonGroup from './PanelControlsToolbarButtonGroup';
+import { PanelControlsBulkActions } from './PanelControlsBulkActions';
+import { PanelControlsPagination } from './PanelControlsPagination';
+import { PanelControlsToolbar } from './PanelControlsToolbar';
+import { PanelControlsToolbarButtonGroup } from './PanelControlsToolbarButtonGroup';
 
-const PanelControls = ({
+export const PanelControls = ({
   children,
   className,
   controlSettings,
@@ -33,33 +33,32 @@ const PanelControls = ({
     totalPages: 1,
   });
 
-
   //
   // Effects
   //
 
+  const syncSelfConfigsWithPropsConfigs = (bulkActionsChecked) => setSelfConfigs({
+    ...selfConfigs,
+    ...controlSettings,
+    bulkActionsChecked,
+  });
+
   // Update when control settings change
   useEffect(() => {
-    const bulkActionsChecked = controlSettings 
-      && (
-        controlSettings.selectionType === SELECTION_TYPES.ALL
-        || controlSettings.selectionType === SELECTION_TYPES.PARTIAL
-      );
+    const bulkActionsChecked = controlSettings && (
+      controlSettings.selectionType === SELECTION_TYPES.ALL
+      || controlSettings.selectionType === SELECTION_TYPES.PARTIAL
+    );
 
-    setSelfConfigs({
-      ...selfConfigs,
-      ...controlSettings,
-      bulkActionsChecked,
-    });
-  }, [controlSettings]);
-
+    syncSelfConfigsWithPropsConfigs(bulkActionsChecked);
+  }, [controlSettings]); // eslint-disable-line
 
   //
   // Event handlers
   //
 
   // Respond to change on bulk actions checkbox
-  const onChangeSelectAll = (data) => {
+  const onChangeSelectAll = () => {
     const bulkActionsChecked = !selfConfigs.bulkActionsChecked;
 
     let selectionType;
@@ -87,7 +86,6 @@ const PanelControls = ({
   const onSelectBulkAction = (payload) => {
     onRequestChange({ bulkActionCommand: payload });
   };
-
 
   //
   // Render
@@ -160,5 +158,3 @@ PanelControls.propTypes = {
   }),
   onRequestChange: PropTypes.func.isRequired,
 };
-
-export default PanelControls;

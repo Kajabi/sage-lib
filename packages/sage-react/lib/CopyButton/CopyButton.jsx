@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { CopyText } from '../CopyText';
 
-const CopyButton = ({ children, className, semibold }) => {
+export const CopyButton = ({ children, className, semibold }) => {
   const classNames = classnames(
     'sage-copy-btn',
     className,
@@ -41,5 +41,3 @@ CopyButton.propTypes = {
   className: PropTypes.string,
   semibold: PropTypes.bool,
 };
-
-export default CopyButton;

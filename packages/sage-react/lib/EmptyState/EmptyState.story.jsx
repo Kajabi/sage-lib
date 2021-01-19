@@ -2,10 +2,10 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, select, text, boolean } from '@storybook/addon-knobs';
 import { centerXY } from '../story-support/decorators';
+import { Button } from '../Button';
+import { Grid } from '../Grid';
 import { SageTokens } from '../configs';
-import Button from '../Button';
-import Grid from '../Grid';
-import EmptyState from './EmptyState';
+import { EmptyState } from './EmptyState';
 
 storiesOf('Sage/EmptyState', module)
   .addDecorator(withKnobs)
@@ -15,7 +15,7 @@ storiesOf('Sage/EmptyState', module)
       <EmptyState
         title={text('Title', 'Title Here')}
         text={text('Text', 'Text Here')}
-        icon={select('Icon', Object.assign({ NONE: null }, SageTokens.ICONS), SageTokens.ICONS.GEAR)}
+        icon={select('Icon', { ...SageTokens.ICONS, NONE: null }, SageTokens.ICONS.GEAR)}
         compact={boolean('Compact', false)}
       >
         <Button>Lorem ipsum</Button>

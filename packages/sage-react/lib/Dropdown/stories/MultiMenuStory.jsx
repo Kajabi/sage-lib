@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import SelectDropdown from '../SelectDropdown';
+import { SelectDropdown } from '../SelectDropdown';
 
-const MultiMenuStory = () => {
+export const MultiMenuStory = () => {
   const defaultItems = [
     {
       id: 1,
@@ -82,5 +82,3 @@ const MultiMenuStory = () => {
     />
   );
 };
-
-export default MultiMenuStory;

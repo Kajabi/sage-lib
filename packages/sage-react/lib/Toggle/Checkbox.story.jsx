@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, boolean, text } from '@storybook/addon-knobs';
 import { centerXY } from '../story-support/decorators';
-import Checkbox from './Checkbox';
+import { Checkbox } from './Checkbox';
 
 const CheckboxWithState = () => {
   const [checked, toggleChecked] = useState(false);
@@ -17,6 +17,7 @@ const CheckboxWithState = () => {
       hasError={boolean('Has error', false)}
       id="checkbox-demo"
       label={text('Label', 'Checkbox')}
+      name={text('Name', 'checkbox')}
       onChange={onChange}
     />
   );

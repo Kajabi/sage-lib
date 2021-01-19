@@ -2,12 +2,12 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, boolean } from '@storybook/addon-knobs';
 import { centerXY } from '../story-support/decorators';
-import Button from '../Button';
-import Grid from '../Grid';
-import Card from './Card';
-import CardNotes from './CardNotes.md';
-import Icon from '../Icon';
 import { SageTokens } from '../configs';
+import { Button } from '../Button';
+import { Grid } from '../Grid';
+import { Icon } from '../Icon';
+import { Card } from './Card';
+import CardNotes from './CardNotes.md';
 
 storiesOf('Sage/Card', module)
   .addDecorator(withKnobs)

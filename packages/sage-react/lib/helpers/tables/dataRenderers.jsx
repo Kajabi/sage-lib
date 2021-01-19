@@ -1,19 +1,17 @@
 import React from 'react';
-import Label from '../../Label';
-import Avatar from '../../Avatar';
+import { Label } from '../../Label';
+import { Avatar } from '../../Avatar';
 
 // Data Renderers
-export const renderBooleanAsYesOrNo = (data) => {
-  return data ? 'Yes' : 'No';
-};
+export const renderBooleanAsYesOrNo = (data) => data ? 'Yes' : 'No';
 
 export const renderObjectAsAvatar = (data) => {
   let { initials, color } = data;
 
   if (!color) {
     // get a random color
-    let colorKeys = Object.keys(Avatar.COLORS);
-    let index = Math.floor(Math.random() * colorKeys.length);
+    const colorKeys = Object.keys(Avatar.COLORS);
+    const index = Math.floor(Math.random() * colorKeys.length);
     color = Avatar.COLORS[colorKeys[index]];
   }
 
@@ -37,6 +35,6 @@ export const renderObjectAsLabel = ({ color, value }) => (
   <Label color={color} value={value} />
 );
 
-export const renderStringAsIs = (data) => {
-  return typeof data === 'string' || typeof data === 'number' ? data : '?';
-};
+export const renderStringAsIs = (data) => typeof data === 'string' || typeof data === 'number'
+  ? data
+  : '?';

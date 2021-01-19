@@ -1,12 +1,11 @@
 import React from 'react';
+import uuid from 'react-uuid';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, number } from '@storybook/addon-knobs';
 import { centerXY } from '../story-support/decorators';
-import uuid from 'react-uuid';
-
+import { Button } from '../Button';
 import { SageTokens } from '../configs';
-import Button from '../Button';
-import Typeahead from './Typeahead';
+import { Typeahead } from './Typeahead';
 
 const itemActions = [
   <Button
@@ -33,7 +32,7 @@ const items = [
     title: 'Wonderful Instruments',
     actions: itemActions,
     tabIndex: 0,
-    onClick: () => console.log('Wonderful Instruments'),
+    onClick: () => console.log('Wonderful Instruments'), // eslint-disable-line
   },
   {
     icon: SageTokens.ICONS.ASSESSMENT,
@@ -41,7 +40,7 @@ const items = [
     subTitle: 'Wonderful Instruments / Ones That Need Love /',
     actions: itemActions,
     tabIndex: 0,
-    onClick: () => console.log('Dinged Up Dirty Guitar'),
+    onClick: () => console.log('Dinged Up Dirty Guitar'), // eslint-disable-line
   },
   {
     icon: SageTokens.ICONS.VIDEO_ON,
@@ -49,7 +48,7 @@ const items = [
     subTitle: 'Wonderful Instruments /',
     actions: itemActions,
     tabIndex: 0,
-    onClick: () => console.log('Purple & Pink Plastic Violins'),
+    onClick: () => console.log('Purple & Pink Plastic Violins'), // eslint-disable-line
   },
   {
     icon: SageTokens.ICONS.ARROW_CORNER,
@@ -57,7 +56,7 @@ const items = [
     subTitle: 'Wonderful Instruments /',
     actions: itemActions,
     tabIndex: 0,
-    onClick: () => console.log('Greasy Tuba'),
+    onClick: () => console.log('Greasy Tuba'), // eslint-disable-line
   },
 ];
 
@@ -65,15 +64,15 @@ storiesOf('Sage/Typeahead', module)
   .addDecorator(withKnobs)
   .addDecorator(centerXY)
   .add('Default', () => (
-    <div style={{width: 500}}>
+    <div style={{ width: 500 }}>
       <Typeahead
         items={items}
         maxResults={number('Maximum Results', 5)}
       />
-      <p style={{marginTop: 50}}>
+      <p style={{ marginTop: 50 }}>
         Search for&hellip;
-        {items.map(item =>
-          <span key={uuid()}><br/>{item.title}</span>
+        {items.map((item) =>
+          <span key={uuid()}><br />{item.title}</span>
         )}
       </p>
     </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const DataCard = ({
+export const DataCardBody = ({
   children,
   className,
   ...rest
@@ -14,14 +14,12 @@ const DataCard = ({
   </div>
 );
 
-DataCard.defaultProps = {
+DataCardBody.defaultProps = {
   children: null,
   className: '',
 };
 
-DataCard.propTypes = {
+DataCardBody.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
 };
-
-export default DataCard;

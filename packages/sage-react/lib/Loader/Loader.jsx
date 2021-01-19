@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { LOADER_TYPES } from './configs';
 
-const Loader = ({
+export const Loader = ({
   fillSpace,
   hideWhenDone,
   label,
@@ -25,19 +25,17 @@ const Loader = ({
   const ariaAttrs = {
     'aria-hidden': !loading,
     'aria-busy': true,
-    'aria-live': "polite"
+    'aria-live': 'polite',
   };
 
   return (
     <div className={classNames} data-loading={loading} {...ariaAttrs} {...rest}>
-      {
-        (type === LOADER_TYPES.SPINNER )
-        && (
-        <svg className="sage-loader__spinner" viewBox="25 25 50 50" >
+      {(type === LOADER_TYPES.SPINNER) && (
+        <svg className="sage-loader__spinner" viewBox="25 25 50 50">
           <defs>
             <linearGradient id="linear" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%"   stopColor="#0072EF"/>
-              <stop offset="100%" stopColor="#4fc9c5"/>
+              <stop offset="0%" stopColor="#0072EF" />
+              <stop offset="100%" stopColor="#4fc9c5" />
             </linearGradient>
           </defs>
           <circle className="sage-loader__spinner-path" cx="50" cy="50" r="20" fill="none" stroke="url(#linear)" strokeWidth="4" />
@@ -66,5 +64,3 @@ Loader.propTypes = {
   loading: PropTypes.bool.isRequired,
   type: PropTypes.oneOf(Object.values(LOADER_TYPES)),
 };
-
-export default Loader;

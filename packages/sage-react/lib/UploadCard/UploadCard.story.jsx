@@ -1,9 +1,9 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, object } from '@storybook/addon-knobs';
+import { Grid } from '..';
 import { centerXY } from '../story-support/decorators';
-import Grid from '../Grid';
-import UploadCard from './UploadCard';
+import { UploadCard } from './UploadCard';
 
 storiesOf('Sage/Upload Card', module)
   .addDecorator(withKnobs)

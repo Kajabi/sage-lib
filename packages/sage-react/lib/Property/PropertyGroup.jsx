@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-const PropertyGroup = ({
+export const PropertyGroup = ({
   children,
   className,
   ...rest
@@ -28,5 +28,3 @@ PropertyGroup.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node,
 };
-
-export default PropertyGroup;

@@ -2,7 +2,7 @@ require('../test/testHelper');
 
 import React from 'react';
 import { shallow } from 'enzyme';
-import Toggle from './Toggle';
+import { Toggle } from './Toggle';
 
 describe('Rendering the Sage Toggle Component', () => {
   let component,

@@ -1,13 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import {
-  Icon,
-  SageTokens,
-} from '..';
-import PropertyGroup from './PropertyGroup';
+import { Icon } from '../Icon';
+import { SageTokens } from '../configs';
+import { PropertyGroup } from './PropertyGroup';
 
-const Property = ({
+export const Property = ({
   children,
   className,
   icon,
@@ -45,5 +43,3 @@ Property.propTypes = {
   children: PropTypes.node,
   icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),
 };
-
-export default Property;

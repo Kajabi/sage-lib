@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import Button from '../../Button';
-import SelectDropdown from '../SelectDropdown';
-import Dropdown from '../Dropdown';
-import DropdownItem from '../DropdownItem';
+import { Button } from '../../Button';
+import { Dropdown } from '../Dropdown';
+import { SelectDropdown } from '../SelectDropdown';
 import { sampleSelectItems } from './story-helper';
 
-const SelectDropdownDemo = () => {
+export const SelectDropdownDemo = () => {
   const [resetToken, setResetToken] = useState(0);
   const [newItem, setNewItem] = useState('');
   const [items, setItems] = useState(sampleSelectItems);
@@ -48,7 +47,7 @@ const SelectDropdownDemo = () => {
         searchPlaceholder="Search list"
         filterActions={(
           <Dropdown.Item
-            color={DropdownItem.COLORS.PRIMARY}
+            color={Dropdown.Item.COLORS.PRIMARY}
             label={`Add new item: "${newItem}"`}
             onClick={onClick}
             payload={{ terms: newItem }}
@@ -59,5 +58,3 @@ const SelectDropdownDemo = () => {
     </>
   );
 };
-
-export default SelectDropdownDemo;

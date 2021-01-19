@@ -1,1 +1,1 @@
-export { default as TableHelpers } from './tables';
+export { TableHelpers } from './tables';

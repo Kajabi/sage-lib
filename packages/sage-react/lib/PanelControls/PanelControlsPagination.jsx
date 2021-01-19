@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import { Button, SageTokens } from '../';
+import { Button } from '../Button';
+import { SageTokens } from '../configs';
 
-const PanelControlsPagination = ({
+export const PanelControlsPagination = ({
   currentPage,
   onClickPagination,
   totalPages,
@@ -33,7 +34,7 @@ const PanelControlsPagination = ({
 
 PanelControlsPagination.defaultProps = {
   currentPage: 1,
-  onClickPagination: num => num,
+  onClickPagination: (num) => num,
   totalPages: 1,
 };
 
@@ -42,5 +43,3 @@ PanelControlsPagination.propTypes = {
   onClickPagination: PropTypes.func,
   totalPages: PropTypes.number,
 };
-
-export default PanelControlsPagination;

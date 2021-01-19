@@ -1,12 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import uuid from 'react-uuid';
-import { Checkbox, Dropdown, SelectDropdown } from '../';
+import { Checkbox } from '../Toggle';
+import { Dropdown, SelectDropdown } from '../Dropdown';
 import { listDisplayString } from './utils';
 import { DEFAULT_NOUN, SELECTION_TYPES } from './configs';
 
-const PanelControlsBulkActions = ({
+export const PanelControlsBulkActions = ({
   bulkActionsItems,
   checked,
   currentPage,
@@ -18,14 +19,14 @@ const PanelControlsBulkActions = ({
   selectionType,
   totalItems,
 }) => {
-  const bulkActionsLabelText = numSelectedRows > 0 
+  const bulkActionsLabelText = numSelectedRows > 0
     ? `Selected ${numSelectedRows} ${rowNoun.plural || 'items'}`
     : listDisplayString(
-        currentPage,
-        itemsOnThisPage,
-        totalItems,
-        rowNoun
-      );
+      currentPage,
+      itemsOnThisPage,
+      totalItems,
+      rowNoun
+    );
 
   const classNames = classnames(
     'sage-panel-controls__bulk-actions',
@@ -71,8 +72,8 @@ PanelControlsBulkActions.defaultProps = {
   currentPage: 1,
   itemsOnThisPage: 0,
   numSelectedRows: 0,
-  onSelectBulkAction: data => data,
-  onToggleSelection: data => data,
+  onSelectBulkAction: (data) => data,
+  onToggleSelection: (data) => data,
   rowNoun: { ...DEFAULT_NOUN },
   selectionType: SELECTION_TYPES.NONE,
   totalItems: 0,
@@ -93,5 +94,3 @@ PanelControlsBulkActions.propTypes = {
   selectionType: PropTypes.oneOf(Object.values(SELECTION_TYPES)),
   totalItems: PropTypes.number,
 };
-
-export default PanelControlsBulkActions;

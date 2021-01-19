@@ -5,7 +5,6 @@ import jQueryMock from './mocks/jQueryMock';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-
 // this handles warning messages issued from popperjs (a bootstrap dependency)
 if (global.document) {
   document.createRange = () => ({

@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import Icon from '../Icon';
+import { Icon } from '../Icon';
 import { Checkbox, Radio } from '../Toggle';
 import { ICON_LIST_ITEM_INPUT_TYPES } from './configs';
-import IconListItemLabel from './IconListItemLabel';
-import IconListItemSubtext from './IconListItemSubtext';
-import IconListItemTitle from './IconListItemTitle';
+import { IconListItemLabel } from './IconListItemLabel';
+import { IconListItemSubtext } from './IconListItemSubtext';
+import { IconListItemTitle } from './IconListItemTitle';
 
-const IconListItem = ({
+export const IconListItem = ({
   checked,
   children,
   className,
@@ -99,7 +99,7 @@ IconListItem.defaultProps = {
   inputName: null,
   inputValue: null,
   label: null,
-  onChangeInput: v => v,
+  onChangeInput: (val) => val,
 };
 
 IconListItem.propTypes = {
@@ -115,5 +115,3 @@ IconListItem.propTypes = {
   label: PropTypes.string,
   onChangeInput: PropTypes.func,
 };
-
-export default IconListItem;

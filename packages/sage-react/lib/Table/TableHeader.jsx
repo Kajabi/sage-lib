@@ -1,10 +1,11 @@
+/* eslint-disable react/default-props-match-prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { parseCellData } from './helpers';
 import { cellPropTypes } from './configs';
 
-const TableHeader = ({
+export const TableHeader = ({
   attributes,
   children,
   className,
@@ -38,8 +39,7 @@ TableHeader.defaultProps = {
   value: null,
 };
 
-TableHeader.propTypes = Object.assign({
+TableHeader.propTypes = {
+  ...cellPropTypes,
   children: PropTypes.node,
-}, cellPropTypes);
-
-export default TableHeader;
+};

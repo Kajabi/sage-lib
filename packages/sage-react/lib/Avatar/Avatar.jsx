@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { AVATAR_COLORS } from './configs';
 
-
-const Avatar = ({
+export const Avatar = ({
   className,
   color,
   initials,
@@ -40,5 +39,3 @@ Avatar.propTypes = {
   color: PropTypes.oneOf(Object.values(AVATAR_COLORS)),
   initials: PropTypes.string
 };
-
-export default Avatar;

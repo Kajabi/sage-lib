@@ -4,7 +4,7 @@ import classnames from 'classnames';
 import { SageClassnames } from '../configs';
 import { validNumberWithinGrid, validBreakpoint } from './configs';
 
-const GridCol = ({
+export const GridCol = ({
   children,
   className,
   large,
@@ -51,5 +51,3 @@ GridCol.propTypes = {
   sageType: PropTypes.bool,
   size: validNumberWithinGrid
 };
-
-export default GridCol;

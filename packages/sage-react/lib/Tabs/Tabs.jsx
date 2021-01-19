@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import TabsItem from './TabsItem';
-import TabsPane from './TabsPane';
+import { TabsItem } from './TabsItem';
+import { TabsPane } from './TabsPane';
 import { TAB_STYLES, TAB_LAYOUTS, tabsItemsPropTypes } from './configs';
 
-const Tabs = ({
+export const Tabs = ({
   alignItemsCenter,
   className,
   initialActiveId,
@@ -115,5 +115,3 @@ Tabs.propTypes = {
   tabsClassName: PropTypes.string,
   useSeparator: PropTypes.bool,
 };
-
-export default Tabs;

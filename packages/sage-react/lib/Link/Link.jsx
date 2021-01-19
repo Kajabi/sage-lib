@@ -7,7 +7,7 @@ const tagPropTypes = PropTypes.oneOfType([
   PropTypes.elementType,
 ]);
 
-const Link = ({
+export const Link = ({
   children,
   tag,
   ...rest
@@ -26,7 +26,7 @@ Link.defaultProps = {
   tag: null,
 };
 
-Link.CLASSNAMES = SageClassnames.LINK;
+Link.CLASSNAMES = { ...SageClassnames.LINK };
 
 Link.tagPropTypes = tagPropTypes;
 
@@ -34,5 +34,3 @@ Link.propTypes = {
   children: PropTypes.node,
   tag: tagPropTypes,
 };
-
-export default Link;

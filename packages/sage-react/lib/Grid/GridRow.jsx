@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { SageTokens } from '../configs';
 
-const GridRow = ({
+export const GridRow = ({
   children,
   className,
   spacerAbove,
@@ -41,5 +41,3 @@ GridRow.propTypes = {
   spacerAbove: PropTypes.oneOf(Object.values(SageTokens.SPACERS)),
   spacerBelow: PropTypes.oneOf(Object.values(SageTokens.SPACERS)),
 };
-
-export default GridRow;

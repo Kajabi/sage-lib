@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const CardTitle = ({ children, tag, ...rest }) => {
+export const CardTitle = ({ children, tag, ...rest }) => {
   const TagName = tag || 'h3';
 
   return (
@@ -18,5 +18,3 @@ CardTitle.propTypes = {
   children: PropTypes.node,
   tag: PropTypes.string,
 };
-
-export default CardTitle;

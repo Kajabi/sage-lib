@@ -1,1 +1,1 @@
-export { default } from './PanelControls';
+export { PanelControls } from './PanelControls';

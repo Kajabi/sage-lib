@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { SageClassnames } from '../';
+import { SageClassnames } from '../configs';
 
-const PanelBlock = ({
+export const PanelBlock = ({
   children,
   className,
   sageType,
@@ -38,5 +38,3 @@ PanelBlock.propTypes = {
   className: PropTypes.string,
   sageType: PropTypes.bool,
 };
-
-export default PanelBlock;

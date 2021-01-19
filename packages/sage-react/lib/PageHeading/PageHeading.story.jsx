@@ -1,9 +1,9 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, text } from '@storybook/addon-knobs';
+import { HelpLink } from '../HelpLink';
 import { centerXY } from '../story-support/decorators';
-import HelpLink from '../HelpLink';
-import PageHeading from './PageHeading';
+import { PageHeading } from './PageHeading';
 
 storiesOf('Sage/PageHeading', module)
   .addDecorator(withKnobs)

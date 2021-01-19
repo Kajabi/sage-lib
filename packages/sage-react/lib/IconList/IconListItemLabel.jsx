@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-const IconListItemLabel = ({
+export const IconListItemLabel = ({
   children,
   className,
   htmlFor,
@@ -30,5 +30,3 @@ IconListItemLabel.propTypes = {
   className: PropTypes.string,
   htmlFor: PropTypes.string.isRequired,
 };
-
-export default IconListItemLabel;

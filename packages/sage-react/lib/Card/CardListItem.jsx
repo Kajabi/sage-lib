@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { SageClassnames, SageTokens } from '../';
+import { SageClassnames, SageTokens } from '../configs';
 
-const CardListItem = ({
+export const CardListItem = ({
   children,
   className,
   gridTemplate,
@@ -38,5 +38,3 @@ CardListItem.propTypes = {
   className: PropTypes.string,
   gridTemplate: PropTypes.oneOf(Object.values(SageTokens.GRID_TEMPLATES)),
 };
-
-export default CardListItem;

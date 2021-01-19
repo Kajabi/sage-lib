@@ -3,14 +3,14 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { debounce } from 'debounce';
 import { SageTokens } from '../configs';
-import DropdownItem from './DropdownItem';
-import DropdownItemList from './DropdownItemList';
-import DropdownItemSearch from './DropdownItemSearch';
-import DropdownPanel from './DropdownPanel';
-import DropdownTrigger from './DropdownTrigger';
+import { DropdownItem } from './DropdownItem';
+import { DropdownItemList } from './DropdownItemList';
+import { DropdownItemSearch } from './DropdownItemSearch';
+import { DropdownPanel } from './DropdownPanel';
+import { DropdownTrigger } from './DropdownTrigger';
 import { DROPDOWN_ITEM_COLORS } from './configs';
 
-const Dropdown = ({
+export const Dropdown = ({
   align,
   children,
   className,
@@ -48,8 +48,7 @@ const Dropdown = ({
     updateCoords({ top: rect.bottom, left: rect.left });
   };
 
-  const onUpdate = useCallback(debounce(() =>
-    setPanelCoords(), 20), []);
+  const onUpdate = useCallback(debounce(() => setPanelCoords(), 20), []); // eslint-disable-line
 
   useEffect(() => {
     if (!wrapperRef) {
@@ -182,5 +181,3 @@ Dropdown.propTypes = {
   triggerButtonSubtle: PropTypes.bool,
   triggerModifier: PropTypes.string,
 };
-
-export default Dropdown;

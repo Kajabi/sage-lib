@@ -1,6 +1,6 @@
 import React from 'react';
 import uuid from 'react-uuid';
-import Dropdown from '../Dropdown';
+import { Dropdown } from '../Dropdown';
 
 const items = [
   {
@@ -75,12 +75,10 @@ const items = [
   }
 ];
 
-const BulkActionsStory = () => {
+export const BulkActionsStory = () => {
   return (
     <Dropdown label="Bulk Actions" contained={true}>
       <Dropdown.ItemList items={items} />
     </Dropdown>
   );
 };
-
-export default BulkActionsStory;

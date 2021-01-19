@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import IconListItem from './IconListItem';
-import IconListItemLabel from './IconListItemLabel';
-import IconListItemSubtext from './IconListItemSubtext';
-import IconListItemTitle from './IconListItemTitle';
+import { IconListItem } from './IconListItem';
+import { IconListItemLabel } from './IconListItemLabel';
+import { IconListItemSubtext } from './IconListItemSubtext';
+import { IconListItemTitle } from './IconListItemTitle';
 
-const IconList = ({
+export const IconList = ({
   children,
   className,
   ...rest
@@ -37,5 +37,3 @@ IconList.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
 };
-
-export default IconList;

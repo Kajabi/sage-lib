@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import Icon from '../Icon';
-import Label from '../Label';
+import { Icon } from '../Icon';
+import { Label } from '../Label';
 import { SageTokens } from '../configs';
 
-const IconCard = ({
+export const IconCard = ({
   className,
   color,
   icon,
@@ -54,5 +54,3 @@ IconCard.propTypes = {
   size: PropTypes.oneOf(Object.values(Icon.SIZES)),
   style: PropTypes.oneOf(Object.values(Label.STYLES)),
 };
-
-export default IconCard;

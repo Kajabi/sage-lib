@@ -1,11 +1,14 @@
+/* eslint-disable camelcase */
 import React, { useEffect, useState } from 'react';
 import { storiesOf } from '@storybook/react';
 import uuid from 'react-uuid';
 import { withKnobs } from '@storybook/addon-knobs';
+import { Button } from '../Button';
+import { Panel } from '../Panel';
+import { Table } from '../Table';
 import { centerXY } from '../story-support/decorators';
-import { Button, Panel, Table } from '../';
 import { getNews } from '../services/newsapi';
-import PanelControls from './PanelControls';
+import { PanelControls } from './PanelControls';
 
 // TODO: Consider how select all affects all items
 // when only one page is currently selected
@@ -42,7 +45,6 @@ const PanelControlsWithData = () => {
     }
   });
 
-
   //
   // API-related functions
   //
@@ -57,26 +59,22 @@ const PanelControlsWithData = () => {
       total_hits: totalItems,
     } = data;
 
-    console.log(data);
-
-    const formattedArticles = articles.map(({ _id, title, author, link, published_date, }) => {
-      return {
-        id: _id || uuid(),
-        title: (
-          <Button
-            small={true}
-            subtle={true}
-            color={Button.COLORS.PRIMARY}
-            style={{ maxWidth: '200px' }}
-            href={link}
-          >
-            {title}
-          </Button>
-        ),
-        author,
-        published: published_date,
-      };
-    });
+    const formattedArticles = articles.map(({ _id, title, author, link, published_date, }) => ({
+      id: _id || uuid(),
+      title: (
+        <Button
+          small={true}
+          subtle={true}
+          color={Button.COLORS.PRIMARY}
+          style={{ maxWidth: '200px' }}
+          href={link}
+        >
+          {title}
+        </Button>
+      ),
+      author,
+      published: published_date,
+    }));
 
     setSelfData({
       // Bring over all existing selfData props
@@ -100,12 +98,11 @@ const PanelControlsWithData = () => {
   // Gets new data from the API
   const fetchData = async (page) => {
     const data = await getNews(page);
-    
+
     if (data && data.status === 'ok') {
-      transformNewsData(data)
+      transformNewsData(data);
     }
   };
-
 
   //
   // Effects
@@ -117,7 +114,7 @@ const PanelControlsWithData = () => {
   }, []);
 
   const bulkActionshandler = (payload) => {
-    console.log('bulk action command recieved', payload);
+    console.log('bulk action command recieved', payload); // eslint-disable-line
   };
 
   //
@@ -163,7 +160,7 @@ const PanelControlsWithData = () => {
       />
     </Panel>
   );
-}
+};
 
 storiesOf('Sage/Panel Controls', module)
   .addDecorator(withKnobs)

@@ -1,11 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-
-import Button from '../Button';
+import { Button } from '../Button';
 import { SageTokens } from '../configs';
 
-const Search = ({
+export const Search = ({
   className,
   contained,
   onClear,
@@ -35,19 +34,18 @@ const Search = ({
         data-kjb-disable-search
         {...rest}
       />
-      {
-        onClear
-        &&
+      {onClear && (
         <Button
           className="sage-search__reset-button"
           color={Button.COLORS.SECONDARY}
           icon={SageTokens.ICONS.REMOVE}
           iconOnly={true}
           onClick={onClear}
-          subtle={true}>
+          subtle={true}
+        >
           Clear Search Input
         </Button>
-      }
+      )}
     </div>
   );
 };
@@ -67,5 +65,3 @@ Search.propTypes = {
   placeholder: PropTypes.string,
   value: PropTypes.string.isRequired,
 };
-
-export default Search;

@@ -1,4 +1,4 @@
-import TOKENS from '../tokens';
+import { SageTokens } from '../tokens';
 
 const typeClassPrefix = 't-sage';
 
@@ -26,8 +26,8 @@ export const CLASSNAMES_TYPE = {
 // Generates Sage Color classes from the color sliders token set such as
 // CLASSNAMES_TYPE_COLORS.RED_400 ---> `t-sage--color-red-400`
 export const CLASSNAMES_TYPE_COLORS = {};
-Object.keys(TOKENS.COLOR_SLIDERS).forEach((slider) => {
-  CLASSNAMES_TYPE_COLORS[slider] = `${typeClassPrefix}--color-${TOKENS.COLOR_SLIDERS[slider]}`;
+Object.keys(SageTokens.COLOR_SLIDERS).forEach((slider) => {
+  CLASSNAMES_TYPE_COLORS[slider] = `${typeClassPrefix}--color-${SageTokens.COLOR_SLIDERS[slider]}`;
 });
 
 export const CLASSNAME_TRUNCATE_TEXT = `${typeClassPrefix}--truncate`;
