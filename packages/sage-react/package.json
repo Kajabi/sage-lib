@@ -31,7 +31,7 @@
   "scripts": {
     "build": "build-storybook -o build && webpack --config webpack/webpack.prod.js",
     "build:watch": "build-storybook -o build && webpack --config webpack/webpack.prod.js --watch",
-    "lint": "yarn run eslint lib/**/*.{js,jsx}",
+    "lint": "yarn run eslint \"lib/**/*.{js,jsx}\"",
     "storybook": "start-storybook -p 6006 --ci",
     "preversion": "yarn install && yarn run build",
     "test": "jest"
