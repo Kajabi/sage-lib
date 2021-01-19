@@ -185,7 +185,7 @@ module ObjectsHelper
       {
         title: "modal",
         description: "Sage modal",
-        use_legacy_html_code_source: true,
+        use_legacy_html_code_source: false,
         scss: "done",
         docs: "done",
         rails: "doing",
