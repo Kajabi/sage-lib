@@ -47,6 +47,7 @@
     "gem:bump:type": "export SAGE_ORIGINAL_VER=$(bin/gem-version.sh); node bin/js/gem-bump-type.js",
     "lint": "yarn npm-run-all lint:*",
     "lint:assets": "yarn stylelint 'packages/sage-assets/lib/stylesheets/**/*.{css,scss}' --max-warnings 0",
+    "lint:react": "cd packages/sage-react && yarn lint",
     "local": "bin/local-link-frontend.sh true",
     "sassdocs": "cd packages/sage-assets && yarn run start",
     "sassdocs:deploy": "git subtree push --prefix packages/sage-assets https://herkou:$HEROKU_API_KEY@git.heroku.com/$HEROKU_SASSDOCS_APP_NAME.git master",
