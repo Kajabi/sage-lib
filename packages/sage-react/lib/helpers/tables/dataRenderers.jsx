@@ -3,7 +3,7 @@ import { Label } from '../../Label';
 import { Avatar } from '../../Avatar';
 
 // Data Renderers
-export const renderBooleanAsYesOrNo = (data) => data ? 'Yes' : 'No';
+export const renderBooleanAsYesOrNo = (data) => (data ? 'Yes' : 'No');
 
 export const renderObjectAsAvatar = (data) => {
   let { initials, color } = data;
@@ -35,6 +35,6 @@ export const renderObjectAsLabel = ({ color, value }) => (
   <Label color={color} value={value} />
 );
 
-export const renderStringAsIs = (data) => typeof data === 'string' || typeof data === 'number'
+export const renderStringAsIs = (data) => (typeof data === 'string' || typeof data === 'number'
   ? data
-  : '?';
+  : '?');

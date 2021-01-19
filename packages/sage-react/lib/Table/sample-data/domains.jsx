@@ -1,5 +1,7 @@
 import React from 'react';
-import { Button, Label, SageTokens } from '../../';
+import { Button } from '../../Button';
+import { Label } from '../../Label';
+import { SageTokens } from '../../configs';
 
 export const domains = [
   {
