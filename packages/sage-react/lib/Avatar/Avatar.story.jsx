@@ -1,5 +1,6 @@
 import React from 'react';
 import { Avatar } from './Avatar';
+import { AvatarGroup } from './AvatarGroup';
 
 export default {
   title: 'Sage/Avatar',
@@ -13,3 +14,14 @@ Default.args = {
   initials: 'QJ',
   color: Avatar.COLORS.SAGE,
 };
+
+export const Group = () => (
+  <AvatarGroup
+    items={[
+      { initials: 'JC' },
+      { color: 'purple', initials: 'PS' },
+      { color: 'sage', initials: 'Q' },
+      { color: 'orange', initials: 'KJ' },
+    ]}
+  />
+);

@@ -11,3 +11,32 @@
   <!-- Showing custom class -->
   <%= sage_component SageAvatar, { color: "orange", initials: "KJ", css_classes: "my-custom-class" } %>
 </div>
+
+<div class="sage-avatar-wrapper">
+  <%= sage_component SageAvatarGroup, {
+    items: [
+      { color: nil, initials: "JC" },
+    ]
+  } %>
+  <%= sage_component SageAvatarGroup, {
+    items: [
+      { initials: "JC" },
+      { color: "purple", initials: "PS" },
+    ]
+  } %>
+  <%= sage_component SageAvatarGroup, {
+    items: [
+      { color: nil, initials: "JC" },
+      { color: "purple", initials: "PS" },
+      { color: "sage", initials: "Q" },
+    ]
+  } %>
+  <%= sage_component SageAvatarGroup, {
+    items: [
+      { color: nil, initials: "JC" },
+      { color: "purple", initials: "PS" },
+      { color: "sage", initials: "Q" },
+      { color: "orange", initials: "KJ" },
+    ]
+  } %>
+</div>

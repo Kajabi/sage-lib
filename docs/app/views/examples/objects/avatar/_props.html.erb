@@ -1,11 +1,32 @@
 <tr>
-  <td>color</td>
-  <td>
-    This component uses the <code>--color</code> modifier to change the default
-    color set to the provided color. For example <code>sage-avatar--orange</code>
+  <td><%= md("`color`") %></td>
+  <td><%= md("
+    This component uses the `--color` modifier to change the default
+    color set to the provided color. For example `sage-avatar--orange`
     sets the initials color and background color to variants of the
     system's orange swatch.
+  ") %></td>
+  <td><%= md("`String`") %></td>
+  <td><%= md("`null` (primary color)") %></td>
+</tr>
+<tr>
+  <td><%= md("`initials`") %></td>
+  <td><%= md("
+    The initials to display in the avatar circle
+  ") %></td>
+  <td><%= md("`String`") %></td>
+  <td><%= md("`required`") %></td>
+</tr>
+<tr>
+  <td colspan="4">
+    <strong>Avatar Group</strong>
   </td>
-  <td>String</td>
-  <td>null (primary color)</td>
+</tr>
+<tr>
+  <td><%= md("`items`") %></td>
+  <td><%= md("
+    A set of items following the Avatar schema above to be displayed. Only the first four items will be rendered.
+  ") %></td>
+  <td><%= md("`Array<Avatar>`") %></td>
+  <td><%= md("`[]`") %></td>
 </tr>
