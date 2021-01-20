@@ -30,7 +30,7 @@ Avatar.COLORS = AVATAR_COLORS;
 
 Avatar.defaultProps = {
   className: '',
-  color: AVATAR_COLORS.SAGE,
+  color: AVATAR_COLORS.DEFAULT,
   initials: ''
 };
 
