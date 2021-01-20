@@ -1,0 +1,23 @@
+<%
+num_items = component.items.present? ? component.items.length() : 0
+
+# Limit to 4 items
+if num_items > 4
+  num_items = 4
+end
+
+%>
+<div
+  class="
+    sage-avatar-group
+    <%= "sage-avatar-group--#{num_items}-up" if num_items > 1 %>
+    <%= component.css_classes %>
+    <%= component.generated_css_classes %>
+  "
+  <%= component.generated_html_attributes.html_safe %>
+>
+  <% (1..num_items).each_with_index do | item, i | %>
+    <% avatar = component.items[i] %>
+    <%= sage_component SageAvatar, avatar %>
+  <% end %>
+</div>
