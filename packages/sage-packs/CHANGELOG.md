@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.1.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.0.131...@kajabi/sage-packs@0.1.0) (2021-01-20)
+
+
+### Features
+
+* **react:** add eslint to repo with script in sage-react ([0124a48](https://github.com/Kajabi/sage-lib/commit/0124a48e40ec28878ed72d6278c0c60de0c02906))
+
+
+
+
+
 ## [0.0.131](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.0.130...@kajabi/sage-packs@0.0.131) (2021-01-08)
 
 **Note:** Version bump only for package @kajabi/sage-packs

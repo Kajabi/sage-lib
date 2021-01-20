@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.2.1...@kajabi/sage-system@0.3.0) (2021-01-20)
+
+
+### Bug Fixes
+
+* **toast:** added initial js [wip] ([fd17f34](https://github.com/Kajabi/sage-lib/commit/fd17f342d69e8356fec9d43ed8c2d96f1ddaf58c))
+* **toast:** corrected typo ([a805b60](https://github.com/Kajabi/sage-lib/commit/a805b60c597b0ab122b04b200a082ace6ba0f0f5))
+* **toast:** fix build error ([6b8bcf7](https://github.com/Kajabi/sage-lib/commit/6b8bcf7f105abe0e1f9d656ada9350eb20695803))
+* **toast:** remove unused js ([c2cf563](https://github.com/Kajabi/sage-lib/commit/c2cf56368d0e0c38a025777b885422c4eace6029))
+* **toast:** reorder arguments ([6debacd](https://github.com/Kajabi/sage-lib/commit/6debacd65e9ffe01c9539c40c9594556e8d052bd))
+* **toast:** updates to allow for any icon and styling adjustments for long text ([71063e7](https://github.com/Kajabi/sage-lib/commit/71063e71730951523e27c00eb19f8d6de8a9e439))
+
+
+### Features
+
+* **copybutton:** adds toast confirmation to CopyButton ([ad8903f](https://github.com/Kajabi/sage-lib/commit/ad8903f4bd846f53d941f70db75fe0d887b88640))
+* **react:** add eslint to repo with script in sage-react ([0124a48](https://github.com/Kajabi/sage-lib/commit/0124a48e40ec28878ed72d6278c0c60de0c02906))
+
+
+
+
+
 ## [0.2.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.2.0...@kajabi/sage-system@0.2.1) (2020-12-15)
 
 **Note:** Version bump only for package @kajabi/sage-system

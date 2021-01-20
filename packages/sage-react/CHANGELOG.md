@@ -3,6 +3,37 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.23.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.22.1...@kajabi/sage-react@0.23.0) (2021-01-20)
+
+
+### Bug Fixes
+
+* **avatar:** ensure primary is default for avatar color ([98ec82a](https://github.com/Kajabi/sage-lib/commit/98ec82a22ff6c9b4913770ef03b7f0897c550d18))
+* **card:** lint card highlight ([070e313](https://github.com/Kajabi/sage-lib/commit/070e313fce0b551b42363a30fdf831f93ffaa9f7))
+* **page-heading:** adjust whitespace formatting ([f3c1591](https://github.com/Kajabi/sage-lib/commit/f3c1591becfa00cd21ba1fd536713b370bb67a29))
+* **react:** additional linting from CI ([a16038a](https://github.com/Kajabi/sage-lib/commit/a16038af45688e3e4dd0aed7d69dc44c57660f26))
+* **react:** fix linter to include subfolders ([49f600e](https://github.com/Kajabi/sage-lib/commit/49f600e2b2a8048db8fd1eafcaf816d99d950836))
+* **react:** lint and clean up react library ([572b513](https://github.com/Kajabi/sage-lib/commit/572b513eeb05d118a74bd204d94ecf83bb50fee1))
+* **tabs:** remove console ([8179575](https://github.com/Kajabi/sage-lib/commit/8179575bb5f4400bb366288945529360f47c97f4))
+
+
+### Features
+
+* **avatar:** add avatar group react component ([a1cf5d2](https://github.com/Kajabi/sage-lib/commit/a1cf5d26102b03f227e81c01e7fd9ac166cdddec))
+* **avatar:** ensure react avatar group renders up to 4 items ([7064aaf](https://github.com/Kajabi/sage-lib/commit/7064aafc4c2e16b94b0795d8d22e2e17f034b9c6))
+* **card-highlight:** add react component ([98d82db](https://github.com/Kajabi/sage-lib/commit/98d82db1c371275d57d828e1aaace6cf006f3eaf))
+* **empty-state:** add graphic element to empty state ([60c3896](https://github.com/Kajabi/sage-lib/commit/60c389631b03d78a78de32187dd973a8822aba00))
+* **link:** add react story to show classname options ([2abe9f0](https://github.com/Kajabi/sage-lib/commit/2abe9f0fdf5ea8282963a53564a26b054b75cd87))
+* **link:** update react link component and globals with link classnames ([bf4f4af](https://github.com/Kajabi/sage-lib/commit/bf4f4af4c755b3d8419997d2ff2e0e7799d1466b))
+* **property:** add property group for inline layouts of properties ([f121268](https://github.com/Kajabi/sage-lib/commit/f1212685daf88cb384a6fd635cb1d1707cd16929))
+* **property:** add react Property component ([3ecb5a7](https://github.com/Kajabi/sage-lib/commit/3ecb5a7053ab26488022b6f0ba8a2dad23cda4df))
+* **react:** add eslint to repo with script in sage-react ([0124a48](https://github.com/Kajabi/sage-lib/commit/0124a48e40ec28878ed72d6278c0c60de0c02906))
+* **tabs-item:** modify choice in react to match rails ([6e3849a](https://github.com/Kajabi/sage-lib/commit/6e3849aa934daec1fe372791d8d64ea196fe82ee))
+
+
+
+
+
 ## [0.22.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.22.0...@kajabi/sage-react@0.22.1) (2021-01-08)
 
 

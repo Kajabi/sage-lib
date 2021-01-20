@@ -3,6 +3,57 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.6.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.5.3...@kajabi/sage@3.6.0) (2021-01-20)
+
+
+### Bug Fixes
+
+* **avatar:** ensure docs properties are up to date ([164d574](https://github.com/Kajabi/sage-lib/commit/164d5741f08890471e69e05b8360a708086614c6))
+* **button:** fix for syntax ([3e3f917](https://github.com/Kajabi/sage-lib/commit/3e3f91704f538f8c0a0558b78f0a2979f613a798))
+* **card-highlight:** ensure no value and no content leads to aria-hidden=true ([b7aa6b1](https://github.com/Kajabi/sage-lib/commit/b7aa6b14a5510e78e0aa0a0b0db2371bb56db1fe))
+* **card-hilghlight:** add overlooked red color ([1c01dbc](https://github.com/Kajabi/sage-lib/commit/1c01dbc9e3fb9dae61ee2b8db817953f8dc7ed15))
+* **choice:** use pack tag to display sample image ([01c3aec](https://github.com/Kajabi/sage-lib/commit/01c3aeca664cdb24675cb5f64d630e9cb1936e64))
+* **component generators:** updated path assignments in generators ([9172ff5](https://github.com/Kajabi/sage-lib/commit/9172ff5b751a1bc2cf87150e7f0d12e5489f150e))
+* **docs:** disable display of package versions in header ([4115fcf](https://github.com/Kajabi/sage-lib/commit/4115fcfef9f2411d00cd4e9744e631d90514bcd2))
+* **feature-toggle:** add flexibility to heading level of component ([0ac4d70](https://github.com/Kajabi/sage-lib/commit/0ac4d708d1595be3b735f21070bc3b7d2182e3f6))
+* **feature-toggle:** conditionally render aria attributes ([bd9107f](https://github.com/Kajabi/sage-lib/commit/bd9107f19e7e6b675e44f408cdfb0efa6cc1cfe8))
+* **feature-toggle:** update condition link attribute ([d6acefa](https://github.com/Kajabi/sage-lib/commit/d6acefad3c969dce6dda4b07340359e9b89fc487))
+* **feature-toggle:** update image attrs ([cb0a8bd](https://github.com/Kajabi/sage-lib/commit/cb0a8bdabe77e0757e75ee10ec0cefd5ce3ffd86))
+* **feature-toggle:** updated docs site ([5e1285b](https://github.com/Kajabi/sage-lib/commit/5e1285bdedc0d90ff2b8bd70d60e0cf035af49df))
+* **modal:** add rails component and docs ([0b84ece](https://github.com/Kajabi/sage-lib/commit/0b84ece42f76035fc2570192d930005b63c11a97))
+* **modal:** update hero modal dependency ([43cfa31](https://github.com/Kajabi/sage-lib/commit/43cfa3153ba0b9b3e06dc6d4c438cd81aee17228))
+* **modal:** updated props ([2963455](https://github.com/Kajabi/sage-lib/commit/29634553b09210d394b566ada8afbdcd34480734))
+* **modal:** updated props ([e6412ab](https://github.com/Kajabi/sage-lib/commit/e6412abf28adf8f16bcb5ae4833a40b40a0c627c))
+* **modal:** updated props ([76c410d](https://github.com/Kajabi/sage-lib/commit/76c410d216a4ff72a6e2c1f87b090ff0d7429f59))
+* **rails tabs:** add spacer support to Sage Tabs ([68babe8](https://github.com/Kajabi/sage-lib/commit/68babe879877db4d721481542c239782f8c180a5))
+* **schema:** temporarily loosen scritness to allow additiona props in components ([2e6f89d](https://github.com/Kajabi/sage-lib/commit/2e6f89d978bcea606fab22fd12a0d7de7ee779b9))
+* **tabs:** ensure flexible schema for tabs and choices ([7aab075](https://github.com/Kajabi/sage-lib/commit/7aab075db1160493d8c241ccd2f4b8bb34748c49))
+* **tabs:** ensure tabs items props allows for choice props ([54f1186](https://github.com/Kajabi/sage-lib/commit/54f11868c1eb1d23233c3c563f6faaf14bbff485))
+* **tabs:** update props to latest choice props ([e7c395d](https://github.com/Kajabi/sage-lib/commit/e7c395dcc893e7963a1923a4a1d058bf5ba18a01))
+* **toast:** added missing props ([4ee1fa2](https://github.com/Kajabi/sage-lib/commit/4ee1fa2fe6449853603c799aad54a19b1261bf03))
+* **toast:** removed rails toast component ([2c731d7](https://github.com/Kajabi/sage-lib/commit/2c731d7d9d362cd0c47295431a8681bbc1999c62))
+* **toast:** revert file deletion ([0409c24](https://github.com/Kajabi/sage-lib/commit/0409c243fa5048c3e4993b997c496be57a717225))
+* **toast:** updated preview to use sageButtons ([3a6c054](https://github.com/Kajabi/sage-lib/commit/3a6c054344a5fffcc44b4820cf1af7699aaace54))
+* **toast:** updates to allow for any icon and styling adjustments for long text ([71063e7](https://github.com/Kajabi/sage-lib/commit/71063e71730951523e27c00eb19f8d6de8a9e439))
+
+
+### Features
+
+* **avatar:** add avatar group rails component and update preview ([fff035e](https://github.com/Kajabi/sage-lib/commit/fff035e1269db1e4e20c469751a05e951078985b))
+* **card-highlight:** add card highlight element ([b806cae](https://github.com/Kajabi/sage-lib/commit/b806cae160bc18d2d7f5e9b64435c35e0aa20cda))
+* **card-highlight:** add note and exampel of value property ([5a4936d](https://github.com/Kajabi/sage-lib/commit/5a4936d246cb93c81ed4159c9fdb8e2d0e7ee8f1))
+* **checkbox:** conditionally output attributes, name, and value properties ([2b881ad](https://github.com/Kajabi/sage-lib/commit/2b881ad9db214f7fe4c3203534e75be1d3e3b769))
+* **choice:** add graphic and link-text options to choice ([00de760](https://github.com/Kajabi/sage-lib/commit/00de760f7ab3fa064248119a7dc1f0b99a57a86a))
+* **docs:** add docs example of subtext link ([129a944](https://github.com/Kajabi/sage-lib/commit/129a94443e26b583315c6afb01e273c415019b0d))
+* **empty-state:** add graphic element to empty state ([60c3896](https://github.com/Kajabi/sage-lib/commit/60c389631b03d78a78de32187dd973a8822aba00))
+* **property:** add property group for inline layouts of properties ([f121268](https://github.com/Kajabi/sage-lib/commit/f1212685daf88cb384a6fd635cb1d1707cd16929))
+* **radio button:** enable attributes on radio buttons ([c0ddae3](https://github.com/Kajabi/sage-lib/commit/c0ddae38aefc4d8e97b2326d084890a78f18ae87))
+* **react:** add eslint to repo with script in sage-react ([0124a48](https://github.com/Kajabi/sage-lib/commit/0124a48e40ec28878ed72d6278c0c60de0c02906))
+
+
+
+
+
 ## [3.5.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.5.2...@kajabi/sage@3.5.3) (2021-01-11)
 
 

@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.16.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.15.0...@kajabi/sage-assets@0.16.0) (2021-01-20)
+
+
+### Bug Fixes
+
+* **component generators:** updated path assignments in generators ([9172ff5](https://github.com/Kajabi/sage-lib/commit/9172ff5b751a1bc2cf87150e7f0d12e5489f150e))
+* **empty-state:** solidify type spec for `text` element ([1e7f6a3](https://github.com/Kajabi/sage-lib/commit/1e7f6a3157203b2ea512125c743385681493a292))
+* **link:** make focus color on subtet link more flexible ([5e530ec](https://github.com/Kajabi/sage-lib/commit/5e530ecb2791ae8bd8ac6f33fedcd9cf8029f36b))
+* **toast:** updates to allow for any icon and styling adjustments for long text ([71063e7](https://github.com/Kajabi/sage-lib/commit/71063e71730951523e27c00eb19f8d6de8a9e439))
+
+
+### Features
+
+* **avatar:** add avatar group styles ([197975c](https://github.com/Kajabi/sage-lib/commit/197975c6243556b7af9f77a250bb049ed16bd1bf))
+* **card-highlight:** add card highlight element ([b806cae](https://github.com/Kajabi/sage-lib/commit/b806cae160bc18d2d7f5e9b64435c35e0aa20cda))
+* **choice:** add graphic and link-text options to choice ([00de760](https://github.com/Kajabi/sage-lib/commit/00de760f7ab3fa064248119a7dc1f0b99a57a86a))
+* **empty-state:** add graphic element to empty state ([60c3896](https://github.com/Kajabi/sage-lib/commit/60c389631b03d78a78de32187dd973a8822aba00))
+* **link:** add subtext styling for links ([13cf116](https://github.com/Kajabi/sage-lib/commit/13cf11682f4a6fde17de5ee383e58ea8288d8c73))
+* **property:** add property group for inline layouts of properties ([f121268](https://github.com/Kajabi/sage-lib/commit/f1212685daf88cb384a6fd635cb1d1707cd16929))
+* **react:** add eslint to repo with script in sage-react ([0124a48](https://github.com/Kajabi/sage-lib/commit/0124a48e40ec28878ed72d6278c0c60de0c02906))
+
+
+
+
+
 # [0.15.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.14.5...@kajabi/sage-assets@0.15.0) (2021-01-08)
 
 
