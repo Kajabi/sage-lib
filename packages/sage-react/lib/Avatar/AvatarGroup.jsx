@@ -13,13 +13,13 @@ export const AvatarGroup = ({
     'sage-avatar-group',
     className,
     {
-      [`sage-avatar-group--${items.length}-up`]: items.length > 1,
+      [`sage-avatar-group--${items.length < 4 ? items.length : 4}-up`]: items.length > 1,
     }
   );
 
   return (
     <div className={classNames} {...rest}>
-      {items.map((configs) => (
+      {items.map((configs, i) => i < 4 && (
         <Avatar key={uuid()} {...configs} />
       ))}
     </div>
