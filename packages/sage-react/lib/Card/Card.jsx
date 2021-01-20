@@ -6,6 +6,7 @@ import { CardBlock } from './CardBlock';
 import { CardDivider } from './CardDivider';
 import { CardFigure } from './CardFigure';
 import { CardFooter } from './CardFooter';
+import { CardHighlight } from './CardHighlight';
 import { CardImage } from './CardImage';
 import { CardList } from './CardList';
 import { CardRow } from './CardRow';

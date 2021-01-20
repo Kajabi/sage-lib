@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { CARD_HIGHLIGHT_COLORS, CARD_HIGHLIGHT_POSITIONS } from './configs';
 
-const CardHighlight = ({
+export const CardHighlight = ({
   children,
   className,
   color,
@@ -11,7 +11,7 @@ const CardHighlight = ({
   position,
   value
 }) => {
-  const hasContent = value || children ? true : false;
+  const hasContent = value || children;
   const classNames = classnames(
     'sage-card-highlight',
     className,
@@ -50,10 +50,10 @@ CardHighlight.defaultProps = {
 };
 
 CardHighlight.propTypes = {
-  position: PropTypes.string,
+  children: PropTypes.node,
+  className: PropTypes.string,
   color: PropTypes.oneOf(Object.values(CARD_HIGHLIGHT_COLORS)),
   customColor: PropTypes.string,
   position: PropTypes.oneOf(Object.values(CARD_HIGHLIGHT_POSITIONS)),
+  value: PropTypes.string,
 };
-
-export default CardHighlight;
