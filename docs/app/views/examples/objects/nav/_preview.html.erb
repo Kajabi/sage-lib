@@ -1,46 +1,44 @@
-<%= render "examples/objects/nav/markup",
-  nav_links: [
-    {
-      text: "Nav Link 1",
-      is_active: false,
-      url: "#"
-    },
-    {
-      text: "Nav Link 2",
-      is_active: false,
-      url: "#",
-      sub_links: [
-        {
-          text: "Nav Sub Link 1",
-          is_active: false,
-          url: "#"
-        },
-        {
-          text: "Nav Sub Link 2",
-          is_active: false,
-          url: "#"
-        },
-        {
-          text: "Nav Sub Link 3",
-          is_active: true,
-          url: "#"
-        },
-      ]
-    },
-    {
-      text: "Nav Link 3",
-      is_active: false,
-      url: "#"
-    },
-    {
-      text: "Nav Link 4",
-      is_active: false,
-      url: "#"
-    },
-    {
-      text: "Nav Link 5",
-      is_active: false,
-      url: "#"
+<%= sage_component SageNav, {
+  ariaLabel: "My Aria Label",
+} do %>
+  <%= sage_component SageNavLink, { 
+    link: "#",
+    text: "Nav Link 1", 
+  } %>
+  <%= sage_component SageNavLink, { 
+    link: "#",
+    text: "Nav Link 2", 
+  } %>
+  <%= sage_component SageNavLink, { 
+    link: "#",
+    text: "Nav Link 3", 
+  } %>
+  <div class="sage-nav__list sage-nav__list--sub">
+    <%= sage_component SageNavLink, { 
+      link: "#",
+      text: "Nav Sub Link 1", 
+      type: "sub"
     }
-  ]
-%>
+    %>
+    <%= sage_component SageNavLink, { 
+      link: "#",
+      text: "Nav Sub Link 2", 
+      type: "sub"
+    }
+    %>
+    <%= sage_component SageNavLink, { 
+      link: "#",  
+      text: "Nav Sub Link 3", 
+      type: "sub"
+    }
+    %>
+  </div>
+  <%= sage_component SageNavLink, { 
+    link: "#",
+    text: "Nav Link 4", 
+  } %>
+  <%= sage_component SageNavLink, { 
+    link: "#",
+    text: "Nav Link 5", 
+  } %>
+<% end %>
