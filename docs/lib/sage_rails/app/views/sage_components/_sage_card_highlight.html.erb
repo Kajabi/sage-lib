@@ -1,0 +1,36 @@
+<%
+# ensure an appropraite default color is set up
+color = "primary"
+if component.color.present?
+  color = component.color
+elsif component.custom_color.present?
+  color = false
+end
+
+# ensure a default position is provided
+position = component.position.present? ? component.position : 'left'
+%>
+<span
+  class="
+    sage-card-highlight
+    <%= "sage-card-highlight--#{position}" %>
+    <%= "sage-card-highlight--#{color}" if color %>
+    <%= component.generated_css_classes %>
+  "
+  role="presentation"
+  <% if component.value.present? %>
+    aria-label="<%= component.value %>"
+  <% elsif component.content.blank? %>
+    aria-hidden="true"
+  <% end %>
+  <% if component.custom_color.present? %>
+    style="--color: <%= component.custom_color %>"
+  <% end %>
+  <%= component.generated_html_attributes.html_safe %>
+>
+  <% if component.content.present? %>
+    <span class="visually-hidden">
+      <%= component.content %>
+    </span>
+  <% end %>
+</span>
