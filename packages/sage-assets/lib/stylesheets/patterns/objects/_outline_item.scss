@@ -27,23 +27,23 @@ $-fake-background: "::before";
   align-items: stretch;
   grid-template-rows: repeat(auto-fit, auto);
   grid-column-gap: sage-spacing(xs);
+  position: relative;
   padding: 0 sage-spacing(sm);
   background: sage-color(white);
   will-change: background, box-shadow;
-  position: relative;
 
   > * {
     z-index: sage-z-index(default, 3);
   }
 
   &#{$-fake-background} {
+    content: "";
     z-index: sage-z-index(default, 2);
     position: absolute;
     left: 0;
     right: 0;
     bottom: -1px;
     top: -1px;
-    content: '';
     background: sage-color(white);
     border-left: sage-border();
     border-right: sage-border();
@@ -152,7 +152,7 @@ $-fake-background: "::before";
     transform: translateZ(0);
 
     &#{$-fake-background} {
-      border-radius: unset !important;
+      border-radius: unset !important; // stylelint-disable-line
       background-color: sage-color(grey, 200);
     }
 
@@ -182,17 +182,17 @@ $-fake-background: "::before";
 
 .sage-outline-item__drag-preview {
   @extend %t-sage-body-xsmall-med;
-  border-radius: sage-border(radius-large);
-  background: sage-color(primary);
-  padding: sage-spacing(3xs) sage-spacing(xs);
-  color: sage-color(white);
-  z-index: sage-z-index(default, 1);
-  white-space: nowrap;
   position: absolute;
   top: 0;
   bottom: 0;
-  margin: auto 0;
+  z-index: sage-z-index(default, 1);
   height: fit-content;
+  margin: auto 0;
+  padding: sage-spacing(3xs) sage-spacing(xs);
+  color: sage-color(white);
+  white-space: nowrap;
+  border-radius: sage-border(radius-large);
+  background: sage-color(primary);
   opacity: 0.4;
 }
 
