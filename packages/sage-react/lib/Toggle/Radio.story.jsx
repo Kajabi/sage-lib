@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, boolean, text } from '@storybook/addon-knobs';
 import { centerXY } from '../story-support/decorators';
-import Radio from './Radio';
+import { Radio } from './Radio';
 
 const RadioWithState = () => {
   const [checked, toggleChecked] = useState(false);
@@ -17,6 +17,7 @@ const RadioWithState = () => {
       hasError={boolean('Has error', false)}
       id="radio-demo"
       label={text('Label', 'Radio')}
+      name={text('Name', 'radio')}
       onChange={onChange}
     />
   );

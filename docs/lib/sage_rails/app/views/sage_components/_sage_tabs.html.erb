@@ -5,8 +5,10 @@
     <%= "sage-tabs--progressbar" if component.progressbar.present? && component.progressbar == true %>
     <%= "sage-tabs--align-items-center" if component.align_items_center.present? && component.align_items_center == true %>
     <%= "sage-tabs--choice" if component.style.present? && component.style === "choice" %>
+    <%= component.generated_css_classes %>
   "
   role="tablist"
+  <%= component.generated_html_attributes %>
 >
   <% component.items.each do |item| %>
     <% if component.style.present? && component.style === "choice" %>

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, radios } from '@storybook/addon-knobs';
 import { centerXY } from '../story-support/decorators';
-import Grid from './Grid';
+import { Grid } from './Grid';
 import GridNotes from './GridNotes.md';
 
 const GridDemo = ({ children }) => (
@@ -31,7 +31,7 @@ storiesOf('Sage/Grid', module)
   .add('Default', () => (
     <Grid container={Grid.CONTAINER_SIZES.LG}>
       <Grid.Row spacerBelow="sm">
-        {columns.map(col => (
+        {columns.map((col) => (
           <Grid.Col size="1" key={col.toString()} aria-label="Single column">
             <GridDemo>
               1 col
@@ -40,7 +40,7 @@ storiesOf('Sage/Grid', module)
         ))}
       </Grid.Row>
       <Grid.Row spacerBelow="sm">
-        {columns.map(col => col % 2 === 0 && (
+        {columns.map((col) => col % 2 === 0 && (
           <Grid.Col size="2" key={col.toString()}>
             <GridDemo>
               2 col
@@ -49,7 +49,7 @@ storiesOf('Sage/Grid', module)
         ))}
       </Grid.Row>
       <Grid.Row spacerBelow="sm">
-        {columns.map(col => col % 3 === 0 && (
+        {columns.map((col) => col % 3 === 0 && (
           <Grid.Col size="3" key={col.toString()}>
             <GridDemo>
               3 col
@@ -58,7 +58,7 @@ storiesOf('Sage/Grid', module)
         ))}
       </Grid.Row>
       <Grid.Row spacerBelow="sm">
-        {columns.map(col => col % 4 === 0 && (
+        {columns.map((col) => col % 4 === 0 && (
           <Grid.Col size="4" key={col.toString()}>
             <GridDemo>
               4 col
@@ -67,7 +67,7 @@ storiesOf('Sage/Grid', module)
         ))}
       </Grid.Row>
       <Grid.Row spacerBelow="sm">
-        {columns.map(col => col % 6 === 0 && (
+        {columns.map((col) => col % 6 === 0 && (
           <Grid.Col size="6" key={col.toString()}>
             <GridDemo>
               6 col

@@ -33,10 +33,17 @@ $-avatar-ring-colors: (
   )
 );
 $-avatar-tile-size: rem(216px);
+$-avatar-group-size: rem(80px);
+$-avatar-group-item-sizes: (
+  1: rem(48px),
+  2: rem(32px),
+  3: rem(24px),
+  4: rem(16px),
+);
 
-@mixin avatar-scaling() {
-  width: 100%;
-  height: 100%;
+@mixin avatar-scaling($size: 100%) {
+  width: $size;
+  height: $size;
 }
 
 .sage-avatar {
@@ -53,13 +60,60 @@ $-avatar-tile-size: rem(216px);
   background-color: sage-color(primary, 100);
 
   // Documentation-specific styles
-  .sage-avatar-wrapper & {
+  .sage-avatar-wrapper > & {
     margin-right: sage-spacing();
   }
 
   .sage-table td > & {
     margin-top: -1 * sage-spacing(2xs);
     margin-bottom: -1 * sage-spacing(2xs);
+  }
+
+  // Items inside avatar group should be 100% to start
+  .sage-avatar-group & {
+    @include avatar-scaling;
+  }
+
+  .sage-avatar-group--2-up &,
+  .sage-avatar-group--3-up &,
+  .sage-avatar-group--4-up & {
+    position: absolute;
+
+    // Specific sizes for items kick in when there are 2 or more items
+    @each $item, $size in $-avatar-group-item-sizes {
+      &:nth-child(#{$item}) {
+        @include avatar-scaling($size);
+      }
+    }
+
+    // Positioning is same for first item is same in all configs
+    &:nth-child(1) {
+      top: 0;
+      left: 0;
+    }
+  }
+
+  .sage-avatar-group--2-up &:nth-child(2) {
+    bottom: rem(5px);
+    right: rem(6px);
+  }
+
+  .sage-avatar-group--3-up &,
+  .sage-avatar-group--4-up & {
+    &:nth-child(2) {
+      bottom: rem(16px);
+      right: 0;
+    }
+
+    &:nth-child(3) {
+      bottom: 0;
+      left: rem(16px);
+    }
+  
+    &:nth-child(4) {
+      top: rem(8px);
+      right: rem(8px);
+    }
   }
 }
 
@@ -120,5 +174,17 @@ $-avatar-tile-size: rem(216px);
   .sage-avatar--tile & {
     max-width: $-avatar-tile-size;
     max-height: $-avatar-tile-size;
+  }
+}
+
+.sage-avatar-group {
+  display: block;
+  position: relative;
+  width: $-avatar-group-size;
+  height: $-avatar-group-size;
+
+  // Documentation-specific styles
+  .sage-avatar-wrapper & {
+    margin-right: sage-spacing();
   }
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const DataCardHeader = ({
+export const DataCardHeader = ({
   children,
   className,
   title,
@@ -29,5 +29,3 @@ DataCardHeader.propTypes = {
   className: PropTypes.string,
   title: PropTypes.string,
 };
-
-export default DataCardHeader;

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const DataCardScrollContainer = ({
+export const DataCardScrollContainer = ({
   children,
   className,
   ...rest
@@ -22,5 +22,3 @@ DataCardScrollContainer.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
 };
-
-export default DataCardScrollContainer;

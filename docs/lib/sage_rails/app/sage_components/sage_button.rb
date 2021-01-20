@@ -1,7 +1,7 @@
 class SageButton < SageComponent
   set_attribute_schema({
     align:            [:optional, String],
-    attributes:       [:optional, Hash],
+    attributes:       [:optional, NilClass, Hash],
     css_classes:      [:optional, [String]],
     disabled:         [:optional, TrueClass],
     full_width:       [:optional, TrueClass],

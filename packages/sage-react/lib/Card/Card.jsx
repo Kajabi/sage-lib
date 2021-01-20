@@ -1,18 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import Loader from '../Loader';
-import CardBlock from './CardBlock';
-import CardDivider from './CardDivider';
-import CardFigure from './CardFigure';
-import CardFooter from './CardFooter';
-import CardImage from './CardImage';
-import CardList from './CardList';
-import CardRow from './CardRow';
-import CardStack from './CardStack';
-import CardTitle from './CardTitle';
+import { Loader } from '../Loader';
+import { CardBlock } from './CardBlock';
+import { CardDivider } from './CardDivider';
+import { CardFigure } from './CardFigure';
+import { CardFooter } from './CardFooter';
+import { CardHighlight } from './CardHighlight';
+import { CardImage } from './CardImage';
+import { CardList } from './CardList';
+import { CardRow } from './CardRow';
+import { CardStack } from './CardStack';
+import { CardTitle } from './CardTitle';
 
-const Card = ({
+export const Card = ({
   children,
   className,
   clearPaddingBottom,
@@ -48,6 +49,7 @@ Card.Block = CardBlock;
 Card.Divider = CardDivider;
 Card.Figure = CardFigure;
 Card.Footer = CardFooter;
+Card.Highlight = CardHighlight;
 Card.Image = CardImage;
 Card.List = CardList;
 Card.Row = CardRow;
@@ -75,5 +77,3 @@ Card.propTypes = {
   loading: PropTypes.bool,
   borderDashed: PropTypes.bool,
 };
-
-export default Card;

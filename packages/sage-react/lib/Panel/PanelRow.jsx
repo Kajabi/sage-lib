@@ -1,11 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { SageClassnames } from '../configs';
-import { SageTokens } from '../configs';
+import { SageClassnames, SageTokens } from '../configs';
 import { PANEL_ROW_ALIGNMENT_OPTIONS } from './configs';
 
-const PanelRow = ({
+export const PanelRow = ({
   children,
   className,
   gridTemplate,
@@ -44,5 +43,3 @@ PanelRow.propTypes = {
   gridTemplate: PropTypes.oneOf(Object.values(SageTokens.GRID_TEMPLATES)),
   verticalAlign: PropTypes.oneOf(Object.values(PANEL_ROW_ALIGNMENT_OPTIONS)),
 };
-
-export default PanelRow;

@@ -3,11 +3,11 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import uuid from 'react-uuid';
-import Dropdown from './Dropdown';
 import { SageTokens } from '../configs';
-import DropdownTriggerSelect from './DropdownTriggerSelect';
+import { Dropdown } from './Dropdown';
+import { DropdownTriggerSelect } from './DropdownTriggerSelect';
 
-const SelectDropdown = ({
+export const SelectDropdown = ({
   allowMultiselect,
   className,
   closePanelOnExit,
@@ -36,7 +36,7 @@ const SelectDropdown = ({
     </>
   );
 
-  const setClassNames = _hasSelectedValue => classnames(
+  const setClassNames = (_hasSelectedValue) => classnames(
     className,
     {
       'sage-dropdown--value-selected': _hasSelectedValue,
@@ -220,8 +220,8 @@ SelectDropdown.defaultProps = {
   localSelectedItems: [],
   onChangeHook: null,
   onDeselect: null,
-  onSelect: e => e,
-  onSearch: e => e,
+  onSelect: (evt) => evt,
+  onSearch: (evt) => evt,
   resetToken: null,
   searchable: false,
   searchPlaceholder: 'Find',
@@ -262,5 +262,3 @@ SelectDropdown.propTypes = {
   searchPlaceholder: PropTypes.string,
   selectionBecomesLabel: PropTypes.bool,
 };
-
-export default SelectDropdown;

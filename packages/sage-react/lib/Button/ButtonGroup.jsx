@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { BUTTON_GROUP_GAP_OPTIONS } from './configs';
 
-const ButtonGroup = ({
+export const ButtonGroup = ({
   alignEnd,
   children,
   className,
@@ -41,5 +41,3 @@ ButtonGroup.propTypes = {
   children: PropTypes.node,
   gap: PropTypes.oneOf(Object.values(BUTTON_GROUP_GAP_OPTIONS)),
 };
-
-export default ButtonGroup;

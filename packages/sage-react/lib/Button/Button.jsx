@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import { Link } from '../Link';
 import { SageTokens } from '../configs';
-import Link from '../Link';
-import ButtonGroup from './ButtonGroup';
+import { ButtonGroup } from './ButtonGroup';
 import { BUTTON_COLORS, BUTTON_ICON_POSITIONS } from './configs';
 
-const Button = ({
+export const Button = ({
   alignEnd,
   children,
   className,
@@ -103,5 +103,3 @@ Button.propTypes = {
   subtle: PropTypes.bool,
   type: PropTypes.string,
 };
-
-export default Button;

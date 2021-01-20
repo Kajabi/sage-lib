@@ -1,3 +1,3 @@
-export { default as Dropdown } from './Dropdown';
-export { default as OptionsDropdown } from './OptionsDropdown';
-export { default as SelectDropdown } from './SelectDropdown';
+export { Dropdown } from './Dropdown';
+export { OptionsDropdown } from './OptionsDropdown';
+export { SelectDropdown } from './SelectDropdown';

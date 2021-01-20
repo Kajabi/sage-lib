@@ -4,7 +4,7 @@ import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-const DropdownPanel = ({
+export const DropdownPanel = ({
   children,
   coords,
   modifier,
@@ -38,8 +38,8 @@ DropdownPanel.defaultProps = {
   coords: null,
   children: null,
   modifier: null,
-  onClickScreen: e => e,
-  onExit: e => e,
+  onClickScreen: (evt) => evt,
+  onExit: (evt) => evt,
 };
 
 DropdownPanel.propTypes = {
@@ -52,5 +52,3 @@ DropdownPanel.propTypes = {
   onClickScreen: PropTypes.func,
   onExit: PropTypes.func,
 };
-
-export default DropdownPanel;

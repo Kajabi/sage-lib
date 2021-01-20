@@ -1,17 +1,14 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { withKnobs, text } from '@storybook/addon-knobs';
-import { centerXY } from '../story-support/decorators';
-import CopyButton from './CopyButton';
-import CopyButtonNotes from './CopyButtonNotes.md';
+import { CopyButton } from './CopyButton';
 
-storiesOf('Sage/Copy Button', module)
-  .addDecorator(withKnobs)
-  .addDecorator(centerXY)
-  .add('Default', () => (
-    <CopyButton>
-      {text('Copy text', 'https://www.example.com')}
-    </CopyButton>
-  ), {
-    notes: { markdown: CopyButtonNotes }
-  });
+export default {
+  title: 'Sage/CopyButton',
+  component: CopyButton,
+};
+const Template = (args) => <CopyButton {...args} />;
+
+// Each story then reuses that template
+export const Default = Template.bind({});
+Default.args = {
+  children: 'https://www.example.com',
+};

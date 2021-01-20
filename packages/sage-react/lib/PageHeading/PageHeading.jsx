@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import uuid from 'react-uuid';
-import Breadcrumbs from '../Breadcrumbs';
 import classnames from 'classnames';
+import { Breadcrumbs } from '../Breadcrumbs';
 
-const PageHeading = ({
+export const PageHeading = ({
   className,
   children,
   breadcrumbs,
@@ -21,37 +21,29 @@ const PageHeading = ({
     )}
     {...rest}
   >
-    {breadcrumbs
-      && (
+    {breadcrumbs && (
       <div className="sage-page-heading__crumbs">
         <Breadcrumbs items={breadcrumbs} className="sage-page-heading__back" />
       </div>
-      )
-    }
+    )}
     <h1 className="sage-page-heading__title">
       {children}
     </h1>
-    {toolbarItems
-      && (
+    {toolbarItems && (
       <div className="sage-page-heading__toolbar">
-        {toolbarItems.map(tool => <React.Fragment key={uuid()}>{tool}</React.Fragment>)}
+        {toolbarItems.map((tool) => <React.Fragment key={uuid()}>{tool}</React.Fragment>)}
       </div>
-      )
-    }
-    {actionItems
-      && (
-        <div className="sage-page-heading__actions">
-          {actionItems.map(action => <React.Fragment key={uuid()}>{action}</React.Fragment>)}
-        </div>
-      )
-    }
-    {secondaryText
-      && (
-        <div className="sage-page-heading__secondary">
-          {secondaryText}
-        </div>
-      )
-    }
+    )}
+    {actionItems && (
+      <div className="sage-page-heading__actions">
+        {actionItems.map((action) => <React.Fragment key={uuid()}>{action}</React.Fragment>)}
+      </div>
+    )}
+    {secondaryText && (
+      <div className="sage-page-heading__secondary">
+        {secondaryText}
+      </div>
+    )}
   </div>
 );
 
@@ -71,5 +63,3 @@ PageHeading.propTypes = {
   breadcrumbs: PropTypes.arrayOf(Breadcrumbs.itemPropTypes),
   secondaryText: PropTypes.string,
 };
-
-export default PageHeading;

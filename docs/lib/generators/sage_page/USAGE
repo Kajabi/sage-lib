@@ -1,8 +1,8 @@
 Description:
-    Explain the generator
+  Pages refer to the pages of the Sage Design System Gem. Before creating a new page, make sure that what you are documenting would not be a better fit in the gem wiki.
 
 Example:
-    rails generate sage_page Thing
+  rails generate sage_page <new_page_name>
 
-    This will create:
-        what/will/it/create
+  This will create:
+    <root>/docs/app/views/pages/<new_page_name>.html.erb

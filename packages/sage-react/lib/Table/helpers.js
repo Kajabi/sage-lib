@@ -8,7 +8,7 @@ import uuid from 'react-uuid';
 // This structure is extracted from provided data ensuring that at least
 // the `value` property is present in a way that it can be displayed
 // as content of a table header or table cell.
-// 
+//
 
 // Transforms individual cells
 export const parseCellData = (cell, _field) => {
@@ -48,14 +48,14 @@ export const parseCellData = (cell, _field) => {
 };
 
 // Ensures a consistent structure for cells in a row
-// Returns an array of specially formatted objects. 
+// Returns an array of specially formatted objects.
 // See `cellPropTypes`.
 export const parseRowData = (row, schema) => {
   let parsedRow = [];
 
-  // An array for the row means we don't have field names provided
-  // so we check the schema for field names as we parse the items
   if (row instanceof Array) {
+    // An array for the row means we don't have field names provided
+    // so we check the schema for field names as we parse the items
     parsedRow = row.map((cell, i) => {
       let field = null;
       // If we have a schema, it should provide
@@ -71,13 +71,10 @@ export const parseRowData = (row, schema) => {
 
       return parseCellData(cell, field);
     });
-  }
-  // An object for the row must be parse by the keys in contains
-  // and such an object will assume the keys are field names
-  else if (row instanceof Object) {
-    parsedRow = Object.keys(row).map(field => {
-      return parseCellData(row[field], field);
-    });
+  } else if (row instanceof Object) {
+    // An object for the row must be parse by the keys in contains
+    // and such an object will assume the keys are field names
+    parsedRow = Object.keys(row).map((field) => parseCellData(row[field], field));
   }
 
   return parsedRow;

@@ -1,3 +1,4 @@
+/* eslint-disable valid-typeof */
 import { SAGE_DATA_TYPES } from './dataTypes';
 import {
   renderBooleanAsYesOrNo,
@@ -33,7 +34,7 @@ const typeRenderers = {
 
 // Renders based on provided data types (custom) or actual type (raw)
 const renderDataTypes = (data, dataType, renderers) => {
-  const selfRenderers = renderers || SageDataTypeRenderers;
+  const selfRenderers = renderers || typeRenderers;
   const keys = Object.keys(selfRenderers);
 
   // First search for a matching renderer from the provided renderers
@@ -58,10 +59,8 @@ const renderDataTypes = (data, dataType, renderers) => {
   return renderedValue;
 };
 
-const TableHelpers = {
+export const TableHelpers = {
   DATA_TYPES: SAGE_DATA_TYPES,
   renderDataTypes,
   typeRenderers,
 };
-
-export default TableHelpers;

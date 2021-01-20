@@ -4,8 +4,8 @@ import classnames from 'classnames';
 import uuid from 'react-uuid';
 import { TableHelpers } from '../helpers';
 import { cellPropTypes, dataPropTypes } from './configs';
-import TableHeader from './TableHeader';
-import TableRow from './TableRow';
+import { TableHeader } from './TableHeader';
+import { TableRow } from './TableRow';
 
 //
 // Tables are built out from a provided set of rows.
@@ -21,7 +21,7 @@ import TableRow from './TableRow';
 // If cells are included in the data but omitted from the schema,
 // those cells will also be ommited from display.
 //
-// `headers` can also be provided apart from a `schema` if 
+// `headers` can also be provided apart from a `schema` if
 // either you want to override schema settings specifically for one or more headings
 // or if no schema is provided and you want to specify just settings for headers.
 // `headers` can be a simple array of strings to show in the `th` cells in the order provided,
@@ -30,7 +30,7 @@ import TableRow from './TableRow';
 // If no schema is provided, the number of items in `headers` must match the items in each row
 // for a properly formatted table.
 //
-const Table = ({
+export const Table = ({
   className,
   headers,
   isResponsive,
@@ -59,8 +59,8 @@ const Table = ({
   const tableClassNames = classnames(
     'sage-table',
     {
-      'sage-table--selectable' : selectable,
-      'sage-table--striped' : isStriped,
+      'sage-table--selectable': selectable,
+      'sage-table--striped': isStriped,
     }
   );
 
@@ -68,9 +68,29 @@ const Table = ({
   // Component utitilities
   //
 
+  const extractHeaderOverrides = (field, index) => {
+    let overrides = null;
+    // If headers is an array look for matching index
+    // Or if headers is an object, look for field
+    if (headers instanceof Array) {
+      overrides = headers[index];
+    } else if (headers instanceof Object) {
+      overrides = headers[field];
+    }
+
+    // If match is just a string, map it to the label prop
+    if (typeof overrides === 'string') {
+      overrides = {
+        label: overrides,
+      };
+    }
+
+    return overrides;
+  };
+
   const buildHeaders = () => {
     if (!headers && !schema) {
-      return null;
+      return;
     }
 
     let newSelfHeaders = [];
@@ -123,28 +143,6 @@ const Table = ({
     setSelfHeaders(newSelfHeaders);
   };
 
-  const extractHeaderOverrides = (field, index) => {
-    let overrides = null;
-    // Or if headers is an array look for matching index
-    if (headers instanceof Array) {
-      overrides = headers[index];
-    }
-    // Or if headers is an object, look for field
-    else if (headers instanceof Object) {
-      overrides = headers[field];
-    }
-
-    // If match is just a string, map it to the label prop
-    if (typeof overrides === 'string') {
-      overrides = {
-        label: overrides,
-      };
-    }
-
-    return overrides;
-  };
-
-
   //
   // Component state and event handlers
   //
@@ -165,7 +163,7 @@ const Table = ({
     let rowSelected;
     if (matchIndex >= 0) {
       rowSelected = false;
-      newSelectedRows.splice(matchIndex, 1); 
+      newSelectedRows.splice(matchIndex, 1);
     } else {
       rowSelected = true;
       newSelectedRows.push(data);
@@ -182,7 +180,7 @@ const Table = ({
     } else {
       setSelfSelectedRows(newSelectedRows);
     }
-  }
+  };
 
   //
   // Component detail renderers
@@ -312,5 +310,3 @@ Table.propTypes = {
   ])),
   tableAttributes: PropTypes.shape({}),
 };
-
-export default Table;

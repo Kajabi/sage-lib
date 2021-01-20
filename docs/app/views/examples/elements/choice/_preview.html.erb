@@ -36,3 +36,17 @@
     icon: "video-on"
   }
 %>
+
+<h3 class="t-sage-heading-6">Graphic Variation (with link text)</h3>
+<p>Select any icon to appear to the left of the text.</p>
+<%= sage_component SageChoice, {
+    target: "example",
+    text: "Calendly",
+    type: "graphic",
+    graphic: image_pack_tag("docs/card/card-placeholder-sm.png", alt: ""),
+    link_text: "Sign in",
+    attributes: {
+      href: "http://example.com",
+    },
+  }
+%>

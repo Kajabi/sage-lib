@@ -1,7 +1,7 @@
 import React from 'react';
-import Toggle from './Toggle';
+import { Toggle } from './Toggle';
 
-const Radio = props => (
+export const Radio = (props) => (
   <Toggle {...props} />
 );
 
@@ -11,5 +11,3 @@ Radio.defaultProps = {
 };
 
 Radio.propTypes = { ...Toggle.propTypes };
-
-export default Radio;

@@ -1,1 +1,1 @@
-export { default } from './UploadCard';
+export { UploadCard } from './UploadCard';

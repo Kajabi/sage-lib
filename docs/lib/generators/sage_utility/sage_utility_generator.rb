@@ -3,8 +3,8 @@ class SageUtilityGenerator < Rails::Generators::NamedBase
   def create_sage_utility
 
     # Style Variables
-    style_file = "lib/sage-frontend/stylesheets/system/utilities/_#{file_name}.scss"
-    style_include_file = "lib/sage-frontend/stylesheets/system/index.scss"
+    style_file = "../packages/sage-assets/lib/stylesheets/utilities/_#{file_name}.scss"
+    style_include_file = "../packages/sage-assets/lib/stylesheets/index.scss"
     style_include_line = "// Utilities"
     # Create Style File
     template "style.scss", style_file

@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react';
 import uuid from 'react-uuid';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import Button from '../Button';
-import Icon from '../Icon';
+import { Button } from '../Button';
+import { Icon } from '../Icon';
 import { TOAST_COLORS } from './configs';
 
-const Toast = ({
+export const Toast = ({
   className,
   color,
   description,
@@ -82,7 +82,7 @@ Toast.defaultProps = {
   color: TOAST_COLORS.DEFAULT,
   description: null,
   isActive: false,
-  onDismiss: e => e,
+  onDismiss: (evt) => evt,
   timeout: 3500,
   title: null,
 };
@@ -96,5 +96,3 @@ Toast.propTypes = {
   timeout: PropTypes.number,
   title: PropTypes.string,
 };
-
-export default Toast;

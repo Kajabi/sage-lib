@@ -1,3 +1,3 @@
-export default function () {
-  return [];
-}
+const func = () => [];
+
+export default func;

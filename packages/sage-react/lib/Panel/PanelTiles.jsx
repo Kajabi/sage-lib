@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import uuid from 'react-uuid';
 import classnames from 'classnames';
-import PanelTile from './PanelTile';
+import { PanelTile } from './PanelTile';
 import { PANEL_TILE_OPTIONS_ARRAY } from './configs';
 
-const PanelTiles = ({
+export const PanelTiles = ({
   children,
   className,
   tileClassName,
@@ -27,7 +27,7 @@ const PanelTiles = ({
       className={classNames}
       {...rest}
     >
-      {tiles && tiles.map(tile => (wrapTiles ? (
+      {tiles && tiles.map((tile) => (wrapTiles ? (
         <PanelTile
           key={uuid()}
           className={tileClassName}
@@ -61,5 +61,3 @@ PanelTiles.propTypes = {
   tilesInRow: PropTypes.oneOf(PANEL_TILE_OPTIONS_ARRAY),
   wrapTiles: PropTypes.bool,
 };
-
-export default PanelTiles;

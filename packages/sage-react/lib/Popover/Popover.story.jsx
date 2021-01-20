@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { centerXY } from '../story-support/decorators';
-import Popover from './Popover';
+import { Popover } from './Popover';
 
 storiesOf('Sage/Popover', module)
   .addDecorator(withKnobs)

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { SORTABLE_ITEM_TYPES } from './configs';
 
-const SortableItem = ({
+export const SortableItem = ({
   title,
   subtitle,
   actionItems,
@@ -26,21 +26,17 @@ const SortableItem = ({
         <h1 className="sage-sortable__item-title">
           {title}
         </h1>
-        {subtitle
-          && (
-            <h2 className="sage-sortable__item-subtitle">
-              {subtitle}
-            </h2>
-          )
-        }
+        {subtitle && (
+          <h2 className="sage-sortable__item-subtitle">
+            {subtitle}
+          </h2>
+        )}
       </div>
-      {actionItems
-        && (
-          <div className="sage-sortable__item-actions">
-            {actionItems}
-          </div>
-        )
-      }
+      {actionItems && (
+        <div className="sage-sortable__item-actions">
+          {actionItems}
+        </div>
+      )}
     </section>
   );
 };
@@ -59,5 +55,3 @@ SortableItem.propTypes = {
   subtitle: PropTypes.string,
   type: PropTypes.oneOf(Object.values(SORTABLE_ITEM_TYPES)),
 };
-
-export default SortableItem;

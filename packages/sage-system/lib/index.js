@@ -3,6 +3,7 @@ require('./util')
 
 require('./table')
 require('./tooltip')
+require('./toast')
 require('./sidebar')
 require('./overlay')
 require('./banner')

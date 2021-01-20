@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const PanelStack = ({
+export const PanelStack = ({
   children,
   className,
   ...rest
@@ -23,5 +23,3 @@ PanelStack.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
 };
-
-export default PanelStack;

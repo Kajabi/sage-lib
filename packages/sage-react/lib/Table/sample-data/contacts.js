@@ -1,9 +1,9 @@
 export const dataArray = [
-  [ 1, 'Phil', 'phil@example.com', '555-111-1100', ],
-  [ 2, 'Karen', 'karen@example.com', '555-111-1101', ],
-  [ 3, 'Ethan', 'ethan@example.com', '555-111-1110', ],
-  [ 4, 'Abby', 'abby@example.com', '555-111-1111', ],
-  [ 5, 'Airdramon', 'bear@example.com', '555-111-1112', ],
+  [1, 'Phil', 'phil@example.com', '555-111-1100'],
+  [2, 'Karen', 'karen@example.com', '555-111-1101'],
+  [3, 'Ethan', 'ethan@example.com', '555-111-1110'],
+  [4, 'Abby', 'abby@example.com', '555-111-1111'],
+  [5, 'Airdramon', 'bear@example.com', '555-111-1112'],
 ];
 
 export const dataCollection = [

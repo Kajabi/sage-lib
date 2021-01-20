@@ -1,10 +1,10 @@
 /* eslint-disable react/no-array-index-key */
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import DropdownItem from './DropdownItem';
-import DropdownItemSearch from './DropdownItemSearch';
+import { DropdownItem } from './DropdownItem';
+import { DropdownItemSearch } from './DropdownItemSearch';
 
-const DropdownItemList = ({
+export const DropdownItemList = ({
   allowMultiselect,
   customSearchFilter,
   filterActions,
@@ -49,7 +49,10 @@ const DropdownItemList = ({
   return (
     <>
       {searchable && (
-        <DropdownItemSearch placeholder={searchPlaceholder} onChangeSearchTerms={onChangeSearchTerms} />
+        <DropdownItemSearch
+          placeholder={searchPlaceholder}
+          onChangeSearchTerms={onChangeSearchTerms}
+        />
       )}
       <ul className="sage-dropdown__menu" role="menu">
         {localSelectedItems.length > 0 && localSelectedItems.map((item, i) => (
@@ -71,7 +74,7 @@ const DropdownItemList = ({
             {...item}
           />
         ))}
-        {(searchTerms !== '' && !items.some(item => item.label === searchTerms)) && filterActions}
+        {(searchTerms !== '' && !items.some((item) => item.label === searchTerms)) && filterActions}
       </ul>
     </>
   );
@@ -93,8 +96,8 @@ DropdownItemList.defaultProps = {
   groupId: null,
   items: [],
   localSelectedItems: [],
-  onExit: e => e,
-  onSearch: e => e,
+  onExit: (evt) => evt,
+  onSearch: (evt) => evt,
   searchable: false,
   searchPlaceholder: 'Find',
 };
@@ -111,5 +114,3 @@ DropdownItemList.propTypes = {
   searchable: PropTypes.bool,
   searchPlaceholder: PropTypes.string,
 };
-
-export default DropdownItemList;

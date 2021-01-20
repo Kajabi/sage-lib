@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-const Input = ({
+export const Input = ({
   className,
   hasError,
   id,
@@ -129,5 +129,3 @@ Input.propTypes = {
   suffix: PropTypes.string,
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
-
-export default Input;

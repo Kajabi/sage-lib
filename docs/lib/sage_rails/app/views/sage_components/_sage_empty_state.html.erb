@@ -5,6 +5,11 @@
   "
   <%= component.generated_html_attributes.html_safe %>
 >
+  <% if component.graphic.present? %>
+    <div class="sage-empty-state__graphic">
+      <%= component.graphic.html_safe %>
+    </div>
+  <% end %>
   <%= "<i class='sage-empty-state__icon sage-icon-#{component.icon}-3xl'></i>".html_safe if component.icon %>
   <h1 class="sage-empty-state__title"><%= component.title %></h1>
   <p class="sage-empty-state__text"><%= component.text %></p>

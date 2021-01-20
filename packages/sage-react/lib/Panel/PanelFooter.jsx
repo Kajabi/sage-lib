@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-const PanelFooter = ({
+export const PanelFooter = ({
   alignSpread,
   children,
   className,
@@ -37,5 +37,3 @@ PanelFooter.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
 };
-
-export default PanelFooter;

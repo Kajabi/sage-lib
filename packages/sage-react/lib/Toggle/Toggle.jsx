@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { TOGGLE_STYLES, TOGGLE_TYPES } from './configs';
 
-const Toggle = ({
+export const Toggle = ({
   checked,
   className,
   hasError,
@@ -82,7 +82,7 @@ Toggle.defaultProps = {
   className: null,
   hasError: false,
   message: null,
-  onChange: v => v,
+  onChange: (v) => v,
   itemInList: false,
   standalone: false,
   toggleStyle: TOGGLE_STYLES.DEFAULT,
@@ -104,5 +104,3 @@ Toggle.propTypes = {
   type: PropTypes.oneOf(Object.values(TOGGLE_TYPES)).isRequired,
   value: PropTypes.string
 };
-
-export default Toggle;

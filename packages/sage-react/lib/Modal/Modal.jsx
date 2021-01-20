@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import ModalBody from './ModalBody';
-import ModalFooter from './ModalFooter';
-import ModalFooterAside from './ModalFooterAside';
-import ModalHeader from './ModalHeader';
-import ModalHeaderAside from './ModalHeaderAside';
+import { ModalBody } from './ModalBody';
+import { ModalFooter } from './ModalFooter';
+import { ModalFooterAside } from './ModalFooterAside';
+import { ModalHeader } from './ModalHeader';
+import { ModalHeaderAside } from './ModalHeaderAside';
 
-const Modal = ({
+export const Modal = ({
   active,
   children,
   className,
@@ -25,8 +25,8 @@ const Modal = ({
     }
   );
 
-  const handleBackgroundClick = (e) => {
-    if (e.target === e.currentTarget) {
+  const handleBackgroundClick = (evt) => {
+    if (evt.target === evt.currentTarget) {
       onExit(true);
     }
   };
@@ -68,7 +68,7 @@ Modal.defaultProps = {
   containerClassName: null,
   className: '',
   large: false,
-  onExit: a => a,
+  onExit: (val) => val,
 };
 
 Modal.propTypes = {
@@ -79,5 +79,3 @@ Modal.propTypes = {
   large: PropTypes.bool,
   onExit: PropTypes.func,
 };
-
-export default Modal;

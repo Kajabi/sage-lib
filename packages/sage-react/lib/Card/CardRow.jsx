@@ -1,11 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { SageClassnames } from '../configs';
-import { SageTokens } from '../configs';
+import { SageClassnames, SageTokens } from '../configs';
 import { CARD_ROW_ALIGNMENT_OPTIONS } from './configs';
 
-const CardRow = ({
+export const CardRow = ({
   children,
   className,
   gridTemplate,
@@ -44,5 +43,3 @@ CardRow.propTypes = {
   gridTemplate: PropTypes.oneOf(Object.values(SageTokens.GRID_TEMPLATES)),
   verticalAlign: PropTypes.oneOf(Object.values(CARD_ROW_ALIGNMENT_OPTIONS)),
 };
-
-export default CardRow;

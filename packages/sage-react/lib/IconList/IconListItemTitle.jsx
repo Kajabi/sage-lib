@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-const IconListItemTitle = ({
+export const IconListItemTitle = ({
   children,
   className,
   tag,
@@ -33,5 +33,3 @@ IconListItemTitle.propTypes = {
   className: PropTypes.string,
   tag: PropTypes.string,
 };
-
-export default IconListItemTitle;

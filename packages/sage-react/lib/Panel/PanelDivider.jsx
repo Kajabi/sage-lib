@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-const PanelDivider = ({
+export const PanelDivider = ({
   bleed,
   ...rest
 }) => {
@@ -14,7 +14,6 @@ const PanelDivider = ({
   return <hr className={classNames} {...rest} />;
 };
 
-
 PanelDivider.defaultProps = {
   bleed: false,
 };
@@ -22,5 +21,3 @@ PanelDivider.defaultProps = {
 PanelDivider.propTypes = {
   bleed: PropTypes.bool,
 };
-
-export default PanelDivider;

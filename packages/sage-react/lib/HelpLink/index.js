@@ -1,1 +1,1 @@
-export { default } from './HelpLink';
+export { HelpLink } from './HelpLink';

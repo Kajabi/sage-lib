@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import ModalFooterAside from './ModalFooterAside';
+import { ModalFooterAside } from './ModalFooterAside';
 
-const ModalFooter = ({
+export const ModalFooter = ({
   children,
   className,
   ...rest
@@ -31,5 +31,3 @@ ModalFooter.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
 };
-
-export default ModalFooter;

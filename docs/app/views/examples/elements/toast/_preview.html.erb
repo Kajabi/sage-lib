@@ -1,8 +1,26 @@
-<%= sage_component SageToast, {
-  value: "Post Created",
-} %>
+<%= sage_component SageButtonGroup, { gap: :sm } do %>
+  <%= sage_component SageButton, {
+    value: "Toast",
+    style: "primary",
+    attributes: {
+      "onClick": "Sage.toast.trigger({message:'Toast created.'})",
+    },
+  } %>
 
-<%= sage_component SageToast, {
-  value: "System Error: This message may provide more information!",
-  style: "danger",
-} %>
+  <%= sage_component SageButton, {
+    value: "Danger Toast",
+    style: "danger",
+    attributes: {
+      "onClick": "Sage.toast.trigger({icon: 'danger', message:'Danger toast created.', type: 'danger'})",
+    },
+  } %>
+
+  <%= sage_component SageButton, {
+    value: "Custom Timer",
+    style: "secondary",
+    raised: true,
+    attributes: {
+      "onClick": "Sage.toast.trigger({message:'This toast has a 10 second timer.', timer: 10000})",
+    },
+  } %>
+<% end %>

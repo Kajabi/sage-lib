@@ -5,6 +5,7 @@ export const dataPropTypes = PropTypes.oneOfType([
   PropTypes.string,
   PropTypes.number,
   PropTypes.bool,
+  PropTypes.shape({}),
 ]);
 
 // Cell structure

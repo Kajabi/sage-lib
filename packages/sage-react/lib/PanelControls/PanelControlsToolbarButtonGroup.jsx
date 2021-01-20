@@ -1,7 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const PanelControlsToolbarButtonGroup = ({ children, className, ...rest }) => (
+export const PanelControlsToolbarButtonGroup = ({
+  children,
+  className,
+  ...rest
+}) => (
   <div className={`sage-panel-controls__toolbar-btn-group ${className || ''}`} {...rest}>
     {children}
   </div>
@@ -16,5 +20,3 @@ PanelControlsToolbarButtonGroup.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
 };
-
-export default PanelControlsToolbarButtonGroup;

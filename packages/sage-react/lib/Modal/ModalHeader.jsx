@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import ModalHeaderAside from './ModalHeaderAside';
+import { ModalHeaderAside } from './ModalHeaderAside';
 
-const ModalHeader = ({
+export const ModalHeader = ({
   children,
   className,
   ...rest
@@ -31,5 +31,3 @@ ModalHeader.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
 };
-
-export default ModalHeader;

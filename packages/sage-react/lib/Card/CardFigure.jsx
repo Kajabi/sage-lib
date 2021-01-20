@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { CARD_FIGURE_BLEED_OPTIONS } from './configs';
 
-const CardFigure = ({
+export const CardFigure = ({
   children,
   className,
   bleed,
@@ -44,5 +44,3 @@ CardFigure.propTypes = {
   className: PropTypes.string,
   isWistia: PropTypes.bool,
 };
-
-export default CardFigure;

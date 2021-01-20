@@ -1,7 +1,7 @@
 <% if component.standalone %>
-  <input 
-    id="<%= component.id %>" 
-    type="checkbox" 
+  <input
+    id="<%= component.id %>"
+    type="checkbox"
     class="
       sage-checkbox
       sage-checkbox--standalone
@@ -9,13 +9,16 @@
       <%= component.has_error ? "sage-checkbox--error" : "" %>
       <%= component.css_classes if component.css_classes.present? %>
     "
+    <% component.attributes.each do |key, value| %>
+      <%= "#{key}=\"#{value}\"".html_safe %>
+    <% end if component.attributes&.is_a?(Hash) %>
+    <%= component.name ? "name=\"#{component.name}\"".html_safe : "" %>
+    <%= component.value ? "value=\"#{component.value}\"".html_safe : "" %>
     <%= "checked" if component.checked %>
     <%= "disabled" if component.disabled %>
     <%= "required" if component.required %>
     aria-label="<%= component.label_text %>"
-    name="<%= component.name %>"
-    value="<%= component.value %>"
-  />
+  >
 <% else %>
   <div class="
       sage-checkbox
@@ -24,16 +27,19 @@
       <%= component.css_classes if component.css_classes.present? %>
     "
   >
-    <input 
-      id="<%= component.id %>" 
-      type="checkbox" 
+    <input
+      id="<%= component.id %>"
+      type="checkbox"
       class="sage-checkbox__input"
-      name="<%= component.name %>"
-      value="<%= component.value %>"
+      <% component.attributes.each do |key, value| %>
+        <%= "#{key}=\"#{value}\"".html_safe %>
+      <% end if component.attributes&.is_a?(Hash) %>
+      <%= component.name ? "name=\"#{component.name}\"".html_safe : "" %>
+      <%= component.value ? "value=\"#{component.value}\"".html_safe : "" %>
       <%= "checked" if component.checked %>
       <%= "disabled" if component.disabled %>
       <%= "required" if component.required %>
-    />
+    >
     <label for="<%= component.id %>" class="sage-checkbox__label">
       <%= component.label_text %>
     </label>

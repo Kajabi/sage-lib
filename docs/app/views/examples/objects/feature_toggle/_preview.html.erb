@@ -6,17 +6,18 @@
     link_text: "Learn more",
     link_location: "#",
     title: "New People list view",
+    title_tag: "h5",
   } do %>
     <%= sage_component_section :feature_toggle_input do %>
       <div class="sage-switch">
         <input 
           type="checkbox" 
-          id="feature-toggle-id" 
+          id="feature-toggle-id-1" 
           class="sage-switch__input" 
           name="feature-toggle-id" 
           value="feature-toggle-id"
         >
-        <label for="feature-toggle-id" class="sage-switch__label sage-switch__label--hide-text">Label Title</label>
+        <label for="feature-toggle-id-1" class="sage-switch__label sage-switch__label--hide-text">Label Title</label>
       </div>
     <% end %>
   <% end %>
@@ -26,13 +27,12 @@
     description: "Quickly see Segments & filter contacts with a consistent People list view.",
     image: asset_pack_path("media/images/docs/card/card-placeholder-sm.png"), 
     link_text: "Learn more",
-    link_location: "#",
     title: "New People list view",
   } do %>
     <%= sage_component_section :feature_toggle_input do %>
       <%= sage_component SageSwitch, { 
         type: "checkbox",
-        id: "feature-toggle-id",
+        id: "feature-toggle-id-2",
         hide_text: true,
         label_text: "Label Title",
         message: "",

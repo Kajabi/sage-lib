@@ -1,0 +1,43 @@
+.sage-card-highlight {
+  --color: #{sage-color(primary)};
+
+  position: absolute;
+  background-color: var(--color);
+}
+
+.sage-card-highlight--right,
+.sage-card-highlight--left {
+  top: 0;
+  bottom: 0;
+  width: rem(4px);
+}
+
+.sage-card-highlight--right {
+  right: 0;
+}
+
+.sage-card-highlight--left {
+  left: 0;
+}
+
+.sage-card-highlight--top,
+.sage-card-highlight--bottom {
+  right: 0;
+  left: 0;
+  height: rem(4px);
+}
+
+.sage-card-highlight--top {
+  top: 0;
+}
+
+.sage-card-highlight--bottom {
+  bottom: 0;
+}
+
+@each $-color-name, $-color-sliders in $sage-colors {
+  .sage-card-highlight--#{"" + $-color-name} {
+    --color: #{sage-color($-color-name)};
+  }
+}
+

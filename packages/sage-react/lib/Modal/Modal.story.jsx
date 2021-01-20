@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, boolean } from '@storybook/addon-knobs';
 import { centerXY } from '../story-support/decorators';
+import { Button } from '../Button';
 import { SageTokens, SageClassnames } from '../configs';
-import Modal from '../Modal';
-import Button from '../Button';
+import { Modal } from './Modal';
 import ModalNotes from './ModalNotes.md';
 
 const ModalWithState = () => {

@@ -1,4 +1,4 @@
-export { default as Toggle } from './Toggle';
-export { default as Radio } from './Radio';
-export { default as Checkbox } from './Checkbox';
-export { default as Switch } from './Switch';
+export { Toggle } from './Toggle';
+export { Checkbox } from './Checkbox';
+export { Radio } from './Radio';
+export { Switch } from './Switch';

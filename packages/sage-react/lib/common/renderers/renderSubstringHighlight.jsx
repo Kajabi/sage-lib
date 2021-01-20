@@ -6,11 +6,7 @@ import parse from 'html-react-parser';
  * @param {string} searchString      the substrings to highlight with `targetString`
  */
 
-export const renderSubstringHighlight = (targetString, searchString) => {
-  return parse(
-    targetString.replace(
-      new RegExp(searchString, 'gi'), (match) =>
-        `<mark>${match}</mark>`
-      )
-  );
-};
+export const renderSubstringHighlight = (targetString, searchString) => parse(targetString.replace(
+  new RegExp(searchString, 'gi'),
+  (match) => `<mark>${match}</mark>`
+));

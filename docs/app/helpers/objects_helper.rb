@@ -125,7 +125,7 @@ module ObjectsHelper
       {
         title: "feature_toggle",
         description: "Feature toggle",
-        use_legacy_html_code_source: true,
+        use_legacy_html_code_source: false,
         scss: "done",
         docs: "done",
         rails: "done",
@@ -185,7 +185,7 @@ module ObjectsHelper
       {
         title: "modal",
         description: "Sage modal",
-        use_legacy_html_code_source: true,
+        use_legacy_html_code_source: false,
         scss: "done",
         docs: "done",
         rails: "doing",

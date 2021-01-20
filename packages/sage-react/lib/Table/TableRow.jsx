@@ -2,12 +2,12 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import uuid from 'react-uuid';
-import { parseRowData, parseCellData } from './helpers';
-import { cellPropTypes } from './configs';
-import { TableHelpers } from '../helpers'
 import { Checkbox } from '../Toggle';
+import { TableHelpers } from '../helpers';
+import { cellPropTypes } from './configs';
+import { parseRowData, parseCellData } from './helpers';
 
-const TableRow = ({
+export const TableRow = ({
   className,
   cells,
   id,
@@ -30,7 +30,7 @@ const TableRow = ({
     setSelfSelected(selected);
   }, [selected]);
 
-  const onChangeSelector = (value, checked, ev) => {
+  const onChangeSelector = (value, checked) => {
     if (onSelect) {
       onSelect(id);
     } else {
@@ -39,9 +39,11 @@ const TableRow = ({
   };
 
   const selfTypeRenderers = Object.assign(typeRenderers, TableHelpers.typeRenderers);
-  const renderCellData = (data, dataType) => {
-    return TableHelpers.renderDataTypes(data, dataType, selfTypeRenderers);
-  };
+  const renderCellData = (data, dataType) => TableHelpers.renderDataTypes(
+    data,
+    dataType,
+    selfTypeRenderers
+  );
 
   return (
     <tr className={classNames} data-table-row-id={id}>
@@ -51,7 +53,7 @@ const TableRow = ({
             checked={selfSelected}
             id={`sage-table__row-selector-${id}`}
             label="Select row"
-            name={`sage-table-selections`}
+            name="sage-table-selections"
             onChange={onChangeSelector}
             standalone={true}
             value={id.toString()}
@@ -62,19 +64,21 @@ const TableRow = ({
         // Check for schema data for this field
         if (schema && !schema[field]) {
           return null;
-        } else if (schema) {
-          // Schema found; now check for attributes and/or dataType
-          let {
+        }
+
+        // Schema found; now check for attributes and/or dataType
+        if (schema) {
+          const {
             attributes: schemaAttributes,
             className: schemaClassName,
             dataType: schemaDataType,
             style: schemaStyle,
           } = schema[field];
 
-          attributes = attributes ? attributes : schemaAttributes;
-          className = className ? className : schemaClassName;
-          dataType = dataType ? dataType : schemaDataType;
-          style = style ? style : schemaStyle;
+          attributes = attributes || schemaAttributes;
+          className = className || schemaClassName;
+          dataType = dataType || schemaDataType;
+          style = style || schemaStyle;
         }
 
         const cellClassnames = classnames(
@@ -83,7 +87,7 @@ const TableRow = ({
           {
             [`sage-table-cell--${dataType}`]: dataType,
           }
-        )
+        );
 
         return (
           <td key={uuid()} className={cellClassnames} style={style} {...attributes}>
@@ -101,7 +105,8 @@ TableRow.parseRowData = parseRowData;
 TableRow.defaultProps = {
   className: null,
   cells: [],
-  onSelect: ev => ev,
+  onSelect: (evt) => evt,
+  schema: null,
   selectable: false,
   selected: false,
   typeRenderers: {},
@@ -120,5 +125,3 @@ TableRow.propTypes = {
   schema: PropTypes.shape({}),
   typeRenderers: PropTypes.shape({}),
 };
-
-export default TableRow;

@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { SageClassnames } from '../configs';
 
 const tagPropTypes = PropTypes.oneOfType([
   PropTypes.string,
   PropTypes.elementType,
 ]);
 
-const Link = ({
+export const Link = ({
   children,
   tag,
   ...rest
@@ -25,11 +26,11 @@ Link.defaultProps = {
   tag: null,
 };
 
+Link.CLASSNAMES = { ...SageClassnames.LINK };
+
 Link.tagPropTypes = tagPropTypes;
 
 Link.propTypes = {
   children: PropTypes.node,
   tag: tagPropTypes,
 };
-
-export default Link;

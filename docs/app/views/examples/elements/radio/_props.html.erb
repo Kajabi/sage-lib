@@ -6,19 +6,31 @@
 </tr>
 <tr>
   <td>Name</td>
-  <td>Using a singular name groups radio buttons together, allowing the user to toggle between them (see Default example above)</td>
+  <td>Using a singular name groups radio buttons together, allowing the user to toggle between them (see Option 1 and Option 2 examples above)</td>
   <td>String</td>
   <td>null</td>
 </tr>
 <tr>
   <td>Checked</td>
-  <td>Sets the state to "checked" by default</td>
-  <td>String</td>
+  <td>Sets the state of the radio button to "checked" by default</td>
+  <td>Boolean</td>
   <td>null</td>
 </tr>
 <tr>
   <td>Required</td>
   <td>Adding this attribute allows basic HTML form validation on this field</td>
-  <td>String</td>
+  <td>Boolean</td>
+  <td>null</td>
+</tr>
+<tr>
+  <td>Disabled</td>
+  <td>Prevents all user interaction with the control. Be aware that when combining a disabled radio button with a default "checked" state, the value of the radio button <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/disabled#attribute_interactions" target="_blank" rel="noopener">will not be included when its parent form is submitted</a>. Likewise, setting Required will not have any effect.</td>
+  <td>Boolean</td>
+  <td>null</td>
+</tr>
+<tr>
+  <td>Attributes</td>
+  <td>For setting additional attributes not defined above. Accepts a Ruby hash of valid key-value properties, such as data-attributes</td>
+  <td>Hash</td>
   <td>null</td>
 </tr>

@@ -1,16 +1,16 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, text, select, boolean } from '@storybook/addon-knobs';
+import { withKnobs, text, select } from '@storybook/addon-knobs';
 import { centerXY } from '../story-support/decorators';
-import Button from '../Button';
-import Label from '../Label';
+import { Button } from '../Button';
 import { SageTokens } from '../configs';
+import { Label } from './Label';
 import LabelNotes from './LabelNotes.md';
 
-const LabelWithDefaultProps = ({...rest}) => (
+const LabelWithDefaultProps = ({ ...rest }) => (
   <Label
     color={select('Color', Label.COLORS, Label.COLORS.DRAFT)}
-    icon={select('Icon', Object.assign({ NONE: null }, SageTokens.ICONS), null)}
+    icon={select('Icon', { ...SageTokens.ICONS, NONE: null }, null)}
     style={select('Style', Label.STYLES, Label.STYLES.DEFAULT)}
     value={text('Text', 'Hello world')}
     {...rest}
@@ -38,7 +38,7 @@ storiesOf('Sage/Label', module)
   .add('Interactive: with secondary_button', () => (
     <LabelWithDefaultProps
       interactiveType={Label.INTERACTIVE_TYPES.SECONDARY_BUTTON}
-      secondaryButton={
+      secondaryButton={(
         <Button
           color={Button.COLORS.SECONDARY}
           subtle={true}
@@ -47,6 +47,6 @@ storiesOf('Sage/Label', module)
         >
           Cancel
         </Button>
-      }
+      )}
     />
   ));

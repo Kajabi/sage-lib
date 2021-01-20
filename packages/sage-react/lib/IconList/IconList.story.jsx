@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { centerXY } from '../story-support/decorators';
-import IconList from '../IconList';
-import { SageTokens } from '../configs';
+import { IconList } from './IconList';
 import IconListNotes from './IconListNotes.md';
 
 const CheckboxesWithState = () => {
@@ -11,7 +10,7 @@ const CheckboxesWithState = () => {
   const onChange = (v) => {
     let newSelectedValues = [...selectedValues];
     if (selectedValues.includes(v)) {
-      newSelectedValues = newSelectedValues.filter(value => value !== v);
+      newSelectedValues = newSelectedValues.filter((value) => value !== v);
     } else {
       newSelectedValues.push(v);
     }
@@ -112,7 +111,7 @@ storiesOf('Sage/Icon List', module)
   .add('Default', () => (
     <div style={{ maxWidth: '480px' }}>
       <IconList>
-        <IconList.Item icon={SageTokens.ICONS.VIDEO_ON}>
+        <IconList.Item>
           <IconList.ItemTitle>
             Cras ut lectus ac dolor hendrerit venenatis.
           </IconList.ItemTitle>
@@ -121,7 +120,7 @@ storiesOf('Sage/Icon List', module)
             Suspendisse lobortis commodo est sit amet vehicula.
           </p>
         </IconList.Item>
-        <IconList.Item icon={SageTokens.ICONS.MICROPHONE}>
+        <IconList.Item>
           <IconList.ItemTitle>
             Cras ut lectus ac dolor hendrerit venenatis.
           </IconList.ItemTitle>
@@ -130,7 +129,7 @@ storiesOf('Sage/Icon List', module)
             Suspendisse lobortis commodo est sit amet vehicula.
           </p>
         </IconList.Item>
-        <IconList.Item icon={SageTokens.ICONS.USERS}>
+        <IconList.Item>
           <IconList.ItemTitle>
             Cras ut lectus ac dolor hendrerit venenatis.
           </IconList.ItemTitle>

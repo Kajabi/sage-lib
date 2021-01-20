@@ -13,7 +13,13 @@
 </tr>
 <tr>
   <td>Disabled</td>
-  <td>Sets the state to disabled</td>
+  <td>Prevents all user interaction with the control. Be aware that when combining a disabled checkbox with a default "checked" state, the value of the checkbox <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/disabled#attribute_interactions" target="_blank" rel="noopener">will not be included when its parent form is submitted</a>. Likewise, setting Required will not have any effect.</td>
   <td>String</td>
+  <td>null</td>
+</tr>
+<tr>
+  <td>Attributes</td>
+  <td>For setting additional attributes not defined above. Accepts a Ruby hash of valid key-value properties, such as data-attributes</td>
+  <td>Hash</td>
   <td>null</td>
 </tr>

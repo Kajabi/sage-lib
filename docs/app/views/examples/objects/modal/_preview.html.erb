@@ -1,6 +1,48 @@
 <%= sage_component SagePanelBlock, {} do %>
+  <%# Standard Modal %>
   <button class="sage-btn sage-btn--primary sage-btn--icon-right-launch" data-js-modaltrigger="cool-modal">Trigger Modal</button>
-  <%= render "examples/objects/modal/markup" %>
+  <%= sage_component SageModal, { id: "cool-modal" } do %>
+    <header class="sage-modal__header">
+      <h1 class="t-sage-heading-4">Example Sage Modal</h1>
+      <aside class="sage-modal__header-aside">
+        <button class="sage-btn sage-btn--secondary sage-btn--subtle sage-btn--icon-only-dot-menu-horizontal">
+          <span class="visually-hidden">Menu</span>
+        </button>
+      </aside>
+    </header>
+    <div class="sage-modal__content">
+      <p class="t-sage-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <footer class="sage-modal__footer">
+      <aside class="sage-modal__footer-aside">
+        <button class="sage-btn sage-btn--subtle sage-btn--secondary" data-js-modal-close>Close Modal</button>
+      </aside>
+      <button class="sage-btn sage-btn--primary sage-btn--icon-left-check">Take An Action</button>
+    </footer>
+  <% end %>
+
+  <%# Large Modal %>
   <button class="sage-btn sage-btn--primary sage-btn--icon-right-launch" data-js-modaltrigger="cool-modal-large">Trigger Modal Large</button>
-  <%= render "examples/objects/modal/markup1" %>
+  <%= sage_component SageModal, { 
+    id: "cool-modal-large",
+    large: true
+  } do %>
+    <header class="sage-modal__header">
+      <h1 class="t-sage-heading-4">Example Sage Modal</h1>
+      <aside class="sage-modal__header-aside">
+        <button class="sage-btn sage-btn--secondary sage-btn--subtle sage-btn--icon-only-dot-menu-horizontal">
+          <span class="visually-hidden">Menu</span>
+        </button>
+      </aside>
+    </header>
+    <div class="sage-modal__content">
+      <p class="t-sage-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <footer class="sage-modal__footer">
+      <aside class="sage-modal__footer-aside">
+        <button class="sage-btn sage-btn--subtle sage-btn--secondary" data-js-modal-close>Close Modal</button>
+      </aside>
+      <button class="sage-btn sage-btn--primary sage-btn--icon-left-check">Take An Action</button>
+    </footer>
+  <% end %>
 <% end %>

@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { SageTokens } from '../configs';
-import Link from '../Link';
 import { Checkbox } from '../Toggle';
-import OptionsDropdown from './OptionsDropdown';
+import { Link } from '../Link';
+import { SageTokens } from '../configs';
+import { OptionsDropdown } from './OptionsDropdown';
 import { DROPDOWN_ITEM_COLORS } from './configs';
 
-const DropdownItem = ({
+export const DropdownItem = ({
   borderAfter,
   borderBefore,
   color,
@@ -215,5 +215,3 @@ DropdownItem.propTypes = {
   ]),
   to: PropTypes.string,
 };
-
-export default DropdownItem;

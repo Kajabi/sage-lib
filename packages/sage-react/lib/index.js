@@ -1,56 +1,57 @@
-export { default as Avatar } from './Avatar';
-export { default as Breadcrumbs } from './Breadcrumbs';
-export { default as Button } from './Button';
-export { default as Card } from './Card';
+export { Avatar, AvatarGroup } from './Avatar';
+export { Breadcrumbs } from './Breadcrumbs';
+export { Button } from './Button';
+export { Card } from './Card';
 export {
   Dropdown,
   OptionsDropdown,
-  SelectDropdown,
+  SelectDropdown
 } from './Dropdown';
-export { default as CopyButton } from './CopyButton';
+export { CopyButton } from './CopyButton';
 export {
   CopyText,
-  CopyTextCard,
+  CopyTextCard
 } from './CopyText';
-export { default as DataCard } from './DataCard';
-export { default as EmptyState } from './EmptyState';
-export { default as FormSection } from './FormSection';
-export { default as Grid } from './Grid';
-export { default as HelpLink } from './HelpLink';
-export { default as Icon } from './Icon';
-export { default as IconCard } from './IconCard';
-export { default as IconList } from './IconList';
-export { default as Input } from './Input';
-export { default as Label } from './Label';
-export { default as Link } from './Link';
-export { default as Loader } from './Loader';
-export { default as Modal } from './Modal';
-export { default as PageHeading } from './PageHeading';
-export { default as Panel } from './Panel';
-export { default as PanelControls } from './PanelControls';
-export { default as Popover } from './Popover';
-export {
-  SageTokens,
-  SageClassnames,
-} from './configs';
-export { default as Search } from './Search';
-export { default as Select } from './Select';
+export { DataCard } from './DataCard';
+export { EmptyState } from './EmptyState';
+export { FormSection } from './FormSection';
+export { Grid } from './Grid';
+export { HelpLink } from './HelpLink';
+export { Icon } from './Icon';
+export { IconCard } from './IconCard';
+export { IconList } from './IconList';
+export { Input } from './Input';
+export { Label } from './Label';
+export { Link } from './Link';
+export { Loader } from './Loader';
+export { Modal } from './Modal';
+export { PageHeading } from './PageHeading';
+export { Panel } from './Panel';
+export { PanelControls } from './PanelControls';
+export { Popover } from './Popover';
+export { Property } from './Property';
+export { Search } from './Search';
+export { Select } from './Select';
 export {
   Tabs,
   TabsItem,
-  TabsPane,
+  TabsPane
 } from './Tabs';
-export { default as Sortable } from './Sortable';
-export { default as Table } from './Table';
-export { default as Textarea } from './Textarea';
-export { default as Toast } from './Toast';
+export { Sortable } from './Sortable';
+export { Table } from './Table';
+export { Textarea } from './Textarea';
+export { Toast } from './Toast';
 export {
   Checkbox,
   Radio,
   Switch,
   Toggle,
 } from './Toggle';
-export { default as Tooltip } from './Tooltip';
-export { default as Type } from './Type';
-export { default as Typeahead } from './Typeahead';
-export { default as UploadCard } from './UploadCard';
+export { Tooltip } from './Tooltip';
+export { Type } from './Type';
+export { Typeahead } from './Typeahead';
+export { UploadCard } from './UploadCard';
+export {
+  SageClassnames,
+  SageTokens,
+} from './configs';

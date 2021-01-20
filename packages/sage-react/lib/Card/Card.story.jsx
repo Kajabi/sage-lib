@@ -1,13 +1,13 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, boolean } from '@storybook/addon-knobs';
+import { withKnobs, boolean, text, select } from '@storybook/addon-knobs';
 import { centerXY } from '../story-support/decorators';
-import Button from '../Button';
-import Grid from '../Grid';
-import Card from './Card';
-import CardNotes from './CardNotes.md';
-import Icon from '../Icon';
 import { SageTokens } from '../configs';
+import { Button } from '../Button';
+import { Grid } from '../Grid';
+import { Icon } from '../Icon';
+import { Card } from './Card';
+import CardNotes from './CardNotes.md';
 
 storiesOf('Sage/Card', module)
   .addDecorator(withKnobs)
@@ -103,4 +103,17 @@ storiesOf('Sage/Card', module)
     </Grid>
   ), {
     notes: { markdown: CardNotes }
-  });
+  })
+  .add('Card Highlight', () => (
+    <Grid container={Grid.CONTAINER_SIZES.XS}>
+      <Card>
+        <p>Magical content goes here</p>
+        <Card.Highlight
+          color={select('Color', Card.Highlight.COLORS, Card.Highlight.COLORS.PRIMARY)}
+          customColor={text('Custom color', null)}
+          position={select('Position', Card.Highlight.POSITIONS, Card.Highlight.POSITIONS.LEFT)}
+          value={text('Value', null)}
+        />
+      </Card>
+    </Grid>
+  ));

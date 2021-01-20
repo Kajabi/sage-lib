@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import Button from '../Button';
-import Icon from '../Icon';
-import IconCard from '../IconCard';
+import { Button } from '../Button';
+import { Icon } from '../Icon';
+import { IconCard } from '../IconCard';
 import { SageTokens } from '../configs';
 
-const UploadCard = ({
+export const UploadCard = ({
   acceptedFiles,
   className,
   errors,
@@ -126,5 +126,3 @@ UploadCard.propTypes = {
   selectionLabel: PropTypes.string,
   selectionSubtext: PropTypes.string,
 };
-
-export default UploadCard;

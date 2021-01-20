@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import { Icon } from '../Icon';
+import { Link } from '../Link';
 import { SageTokens } from '../configs';
-import Icon from '../Icon';
-import Link from '../Link';
 import { breadcrumbItemPropTypes } from './configs';
 
-const Breadcrumbs = ({
+export const Breadcrumbs = ({
   className,
   icon,
   isProgressbar,
@@ -87,5 +87,3 @@ Breadcrumbs.propTypes = {
   isProgressbar: PropTypes.bool,
   items: PropTypes.arrayOf(breadcrumbItemPropTypes),
 };
-
-export default Breadcrumbs;

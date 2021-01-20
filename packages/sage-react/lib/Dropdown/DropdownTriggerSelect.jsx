@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Button from '../Button';
-import Icon from '../Icon';
+import { Button } from '../Button';
+import { Icon } from '../Icon';
 import { SageClassnames, SageTokens } from '../configs';
 
-const DropdownTriggerSelect = ({
+export const DropdownTriggerSelect = ({
   disabled,
   defaultIcon,
   label,
@@ -48,5 +48,3 @@ DropdownTriggerSelect.propTypes = {
   label: PropTypes.string.isRequired,
   selectedValue: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
 };
-
-export default DropdownTriggerSelect;

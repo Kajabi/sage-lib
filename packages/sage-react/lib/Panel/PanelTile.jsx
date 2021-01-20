@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const PanelTile = ({
+export const PanelTile = ({
   children,
   className,
   ...rest
@@ -23,5 +23,3 @@ PanelTile.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
 };
-
-export default PanelTile;

@@ -4,7 +4,7 @@ import classnames from 'classnames';
 import { SageTokens } from '../configs';
 import { ICON_SIZES } from './configs';
 
-const Icon = ({
+export const Icon = ({
   className,
   color,
   icon,
@@ -51,5 +51,3 @@ Icon.propTypes = {
   label: PropTypes.string,
   size: PropTypes.oneOf(Object.values(ICON_SIZES)),
 };
-
-export default Icon;

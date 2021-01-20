@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import PanelSubtitle from './PanelSubtitle';
+import { PanelSubtitle } from './PanelSubtitle';
 
-const PanelSubheader = ({
+export const PanelSubheader = ({
   children,
   className,
   title,
@@ -30,5 +30,3 @@ PanelSubheader.propTypes = {
   title: PropTypes.string,
   titleTag: PropTypes.string,
 };
-
-export default PanelSubheader;

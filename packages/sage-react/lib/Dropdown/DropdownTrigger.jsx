@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import DropdownTriggerDefault from './DropdownTriggerDefault';
+import { DropdownTriggerDefault } from './DropdownTriggerDefault';
 
-const DropdownTrigger = ({
+export const DropdownTrigger = ({
   children,
   disabled,
   icon,
@@ -37,8 +37,7 @@ const DropdownTrigger = ({
             onClick={onClickTrigger}
             subtle={subtleButton}
           />
-        )
-      }
+        )}
     </div>
   );
 };
@@ -63,5 +62,3 @@ DropdownTrigger.propTypes = {
   onClickTrigger: PropTypes.func.isRequired,
   subtleButton: PropTypes.bool,
 };
-
-export default DropdownTrigger;

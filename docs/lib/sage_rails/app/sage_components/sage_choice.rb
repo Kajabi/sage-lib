@@ -4,10 +4,12 @@ class SageChoice < SageComponent
     align_center: [:optional, TrueClass],
     attributes: [:optional, NilClass, Hash],
     disabled: [:optional, NilClass, TrueClass],
-    icon: [:optional,NilClass, String],
+    graphic: [:optional, NilClass, String],
+    icon: [:optional, NilClass, String],
+    link_text: [:optional, NilClass, String],
     subtext: [:optional, NilClass, String],
     target: [:optional, NilClass, String],
     text: String,
-    type: Set.new(["icon", "radio", "arrow"]),
+    type: [:optional, Set.new(["arrow", "graphic", "icon", "radio"])],
   })
 end

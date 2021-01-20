@@ -1,11 +1,11 @@
 import React from 'react';
-import Button from '../../Button';
+import { Button } from '../../Button';
+import { Label } from '../../Label';
 import { SageTokens } from '../../configs';
-import Label from '../../Label';
 
 export const domains = [
   {
-    domain: "www.daydreamsurfshop.mykajabi.com",
+    domain: 'www.daydreamsurfshop.mykajabi.com',
     status: {
       value: {
         value: 'Kajabi Default',
@@ -16,7 +16,7 @@ export const domains = [
       <Button
         color={Button.COLORS.SECONDARY}
         subtle={true}
-        onClick={() => console.log('do something!')}
+        onClick={() => console.log('do something!')} // eslint-disable-line
         icon={SageTokens.ICONS.PEN}
         iconOnly={true}
       >
@@ -25,7 +25,7 @@ export const domains = [
     ),
   },
   {
-    domain: "courses.daydreamsurfshop.com",
+    domain: 'courses.daydreamsurfshop.com',
     status: {
       value: {
         value: 'Connected',
@@ -36,12 +36,12 @@ export const domains = [
       <Button
         color={Button.COLORS.SECONDARY}
         subtle={true}
-        onClick={() => console.log('go somewhere!')}
+        onClick={() => console.log('go somewhere!')} // eslint-disable-line
         icon={SageTokens.ICONS.CARET_RIGHT}
         iconOnly={true}
       >
         View Settings
       </Button>
     ),
-  }
-]
+  },
+];
