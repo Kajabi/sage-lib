@@ -1,6 +1,5 @@
 import React from 'react';
-import { SageTokens } from '..';
-import Property from './Property';
+import { Property } from './Property';
 
 export default {
   title: 'Sage/Property',

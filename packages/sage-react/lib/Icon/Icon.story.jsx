@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, select, text } from '@storybook/addon-knobs';
 import { centerXY } from '../story-support/decorators';
-import Icon from './Icon';
+import { Icon } from './Icon';
 
 storiesOf('Sage/Icon', module)
   .addDecorator(withKnobs)

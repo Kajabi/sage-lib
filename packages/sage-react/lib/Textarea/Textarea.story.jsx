@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, boolean, text } from '@storybook/addon-knobs';
 import { centerXY } from '../story-support/decorators';
-import Textarea from './Textarea';
+import { Textarea } from './Textarea';
 
 const TextareaWithState = () => {
   const [value, updateValue] = useState('Test');

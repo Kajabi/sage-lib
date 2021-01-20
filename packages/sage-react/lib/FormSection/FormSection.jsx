@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const FormSection = ({
+export const FormSection = ({
   children,
   subtitle,
   title,
@@ -32,5 +32,3 @@ FormSection.propTypes = {
   subtitle: PropTypes.string,
   title: PropTypes.string.isRequired,
 };
-
-export default FormSection;

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { PANEL_FIGURE_BLEED_OPTIONS } from './configs';
 
-const PanelFigure = ({
+export const PanelFigure = ({
   children,
   className,
   bleed,
@@ -44,5 +44,3 @@ PanelFigure.propTypes = {
   className: PropTypes.string,
   isWistia: PropTypes.bool,
 };
-
-export default PanelFigure;

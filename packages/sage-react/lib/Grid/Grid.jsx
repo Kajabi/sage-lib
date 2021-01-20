@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import GridCol from './GridCol';
-import GridRow from './GridRow';
+import { GridCol } from './GridCol';
+import { GridRow } from './GridRow';
 import { CONTAINER_SIZES } from './configs';
 
-const Grid = ({
+export const Grid = ({
   children,
   className,
   container,
@@ -65,5 +65,3 @@ Grid.propTypes = {
   container: PropTypes.oneOf(Object.values(CONTAINER_SIZES)),
   withRow: PropTypes.bool,
 };
-
-export default Grid;

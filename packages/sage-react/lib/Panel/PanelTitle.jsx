@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const PanelTitle = ({ children, tag, ...rest }) => {
+export const PanelTitle = ({ children, tag, ...rest }) => {
   const TagName = tag || 'h2';
 
   return (
@@ -20,5 +20,3 @@ PanelTitle.propTypes = {
   children: PropTypes.node,
   tag: PropTypes.string,
 };
-
-export default PanelTitle;

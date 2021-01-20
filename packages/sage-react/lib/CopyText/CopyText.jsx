@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-const CopyText = ({ children, className, semibold }) => {
+export const CopyText = ({ children, className, semibold }) => {
   const classNames = classnames(
     'sage-copy-text',
     className,
@@ -29,5 +29,3 @@ CopyText.propTypes = {
   className: PropTypes.string,
   semibold: PropTypes.bool,
 };
-
-export default CopyText;

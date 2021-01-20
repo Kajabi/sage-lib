@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Link from '../Link';
+import { Link } from '../Link';
 
-const HelpLink = ({
+export const HelpLink = ({
   className,
   children,
   labelIsVisible,
@@ -39,5 +39,3 @@ HelpLink.propTypes = {
   labelIsVisible: PropTypes.bool,
   linkTag: Link.tagPropTypes,
 };
-
-export default HelpLink;

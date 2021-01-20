@@ -1,8 +1,8 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, select, text } from '@storybook/addon-knobs';
+import { withKnobs, select } from '@storybook/addon-knobs';
 import { centerXY } from '../story-support/decorators';
-import IconCard from './IconCard';
+import { IconCard } from './IconCard';
 
 storiesOf('Sage/Icon Card', module)
   .addDecorator(withKnobs)

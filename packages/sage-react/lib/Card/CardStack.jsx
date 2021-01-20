@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const CardStack = ({
+export const CardStack = ({
   children,
   className,
   ...rest
@@ -23,5 +23,3 @@ CardStack.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
 };
-
-export default CardStack;

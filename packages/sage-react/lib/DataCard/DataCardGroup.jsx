@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { DATA_CARD_COLORS } from './configs';
 
-const DataCardGroup = ({
+export const DataCardGroup = ({
   children,
   className,
   color,
@@ -49,5 +49,3 @@ DataCardGroup.propTypes = {
   title: PropTypes.string,
   titleTag: PropTypes.string,
 };
-
-export default DataCardGroup;

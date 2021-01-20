@@ -26,7 +26,6 @@ export const listDisplayString = (page, itemsShown, itemsTotal, noun = { plural:
   return displayStr;
 };
 
-
 export const handleChange = ({
   bulkActionsHandlerFn,
   data,
@@ -49,7 +48,7 @@ export const handleChange = ({
       return;
     }
   }
-  
+
   // Or if reqeust is to change the selection
   if (data.selectionType) {
     // Parse selection type and adjust selected rows accordingly
@@ -73,9 +72,8 @@ export const handleChange = ({
         selectionType: data.selectionType,
       },
     });
-    return;
   }
-}
+};
 
 export const handleSelection = ({
   data,

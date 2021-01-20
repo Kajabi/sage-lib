@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs, select, text, boolean } from '@storybook/addon-knobs';
 import { centerX } from '../story-support/decorators';
 import { SageTokens } from '../configs';
-import Toast from './Toast';
+import { Toast } from './Toast';
 
 storiesOf('Sage/Toast', module)
   .addDecorator(withKnobs)

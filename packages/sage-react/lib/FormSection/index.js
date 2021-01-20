@@ -1,1 +1,1 @@
-export { default } from './FormSection';
+export { FormSection } from './FormSection';

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, boolean, text, radios } from '@storybook/addon-knobs';
 import { centerXY } from '../story-support/decorators';
-import Switch from './Switch';
+import { Switch } from './Switch';
 
 const SwitchWithState = () => {
   const [on, toggleOn] = useState(false);

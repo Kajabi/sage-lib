@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Button from '../Button';
+import { Button } from '../Button';
 import { SageTokens } from '../configs';
 
-const DropdownTriggerDefault = ({
+export const DropdownTriggerDefault = ({
   disabled,
   icon,
   isLabelVisible,
@@ -39,5 +39,3 @@ DropdownTriggerDefault.propTypes = {
   isLabelVisible: PropTypes.bool,
   subtle: PropTypes.bool,
 };
-
-export default DropdownTriggerDefault;

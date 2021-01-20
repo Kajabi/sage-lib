@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-const CopyTextCard = ({ children, className, semibold }) => {
+export const CopyTextCard = ({ children, className, semibold }) => {
   const classNames = classnames(
     'sage-copy-text-card',
     className,
@@ -29,5 +29,3 @@ CopyTextCard.propTypes = {
   className: PropTypes.string,
   semibold: PropTypes.bool,
 };
-
-export default CopyTextCard;

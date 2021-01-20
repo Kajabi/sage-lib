@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { SageClassnames } from '../';
+import { SageClassnames } from '../configs';
 
-const CardBlock = ({
+export const CardBlock = ({
   children,
   className,
   sageType,
@@ -38,5 +38,3 @@ CardBlock.propTypes = {
   className: PropTypes.string,
   sageType: PropTypes.bool,
 };
-
-export default CardBlock;

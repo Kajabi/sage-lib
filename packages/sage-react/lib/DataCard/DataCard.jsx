@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import DataCardBody from './DataCardBody';
-import DataCardGroup from './DataCardGroup';
-import DataCardHeader from './DataCardHeader';
-import DataCardScrollContainer from './DataCardScrollContainer';
+import { DataCardBody } from './DataCardBody';
+import { DataCardGroup } from './DataCardGroup';
+import { DataCardHeader } from './DataCardHeader';
+import { DataCardScrollContainer } from './DataCardScrollContainer';
 import { DATA_CARD_COLORS } from './configs';
 
-const DataCard = ({
+export const DataCard = ({
   children,
   className,
   color,
@@ -45,5 +45,3 @@ DataCard.propTypes = {
   className: PropTypes.string,
   color: PropTypes.oneOf(Object.values(DATA_CARD_COLORS)),
 };
-
-export default DataCard;

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-const TabsPane = ({
+export const TabsPane = ({
   card,
   cardSpacing,
   children,
@@ -53,5 +53,3 @@ TabsPane.propTypes = {
   isActive: PropTypes.bool,
   panelSpacing: PropTypes.bool,
 };
-
-export default TabsPane;

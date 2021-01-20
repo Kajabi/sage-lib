@@ -2,9 +2,9 @@ import React from 'react';
 import uuid from 'react-uuid';
 import PropTypes from 'prop-types';
 import { SageTokens } from '../configs';
-import PanelListItem from './PanelListItem';
+import { PanelListItem } from './PanelListItem';
 
-const PanelList = ({
+export const PanelList = ({
   children,
   className,
   itemClassName,
@@ -17,7 +17,7 @@ const PanelList = ({
     className={`sage-panel__list ${className || ''}`}
     {...rest}
   >
-    {items && items.map(item => (wrapItems ? (
+    {items && items.map((item) => (wrapItems ? (
       <PanelListItem
         key={uuid()}
         className={itemClassName}
@@ -51,5 +51,3 @@ PanelList.propTypes = {
   itemGridTemplate: PropTypes.oneOf(Object.values(SageTokens.GRID_TEMPLATES)),
   wrapItems: PropTypes.bool,
 };
-
-export default PanelList;

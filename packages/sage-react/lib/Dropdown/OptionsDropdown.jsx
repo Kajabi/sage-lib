@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { SageTokens } from '../configs';
-import Dropdown from './Dropdown';
-import DropdownItemList from './DropdownItemList';
+import { Dropdown } from './Dropdown';
+import { DropdownItemList } from './DropdownItemList';
 
-const OptionsDropdown = ({
+export const OptionsDropdown = ({
   align,
   className,
   exitPanelHandler,
@@ -29,7 +29,7 @@ const OptionsDropdown = ({
 OptionsDropdown.defaultProps = {
   align: null,
   className: null,
-  exitPanelHandler: e => e,
+  exitPanelHandler: (evt) => evt,
   isPinned: true,
   options: null,
 };
@@ -43,5 +43,3 @@ OptionsDropdown.propTypes = {
   isPinned: PropTypes.bool,
   options: DropdownItemList.itemsPropTypes,
 };
-
-export default OptionsDropdown;

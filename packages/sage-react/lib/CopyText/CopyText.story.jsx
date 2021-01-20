@@ -2,8 +2,8 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, text, boolean } from '@storybook/addon-knobs';
 import { centerXY } from '../story-support/decorators';
-import CopyText from './CopyText';
-import CopyTextCard from './CopyTextCard';
+import { CopyText } from './CopyText';
+import { CopyTextCard } from './CopyTextCard';
 import CopyTextNotes from './CopyTextNotes.md';
 
 storiesOf('Sage/Copy Text', module)

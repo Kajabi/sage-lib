@@ -1,0 +1,62 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": "airbnb",
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly",
+    "describe": "readonly",
+    "beforeEach": "readonly",
+    "afterEach": "readonly",
+    "beforeAll": "readonly",
+    "afterAll": "readonly",
+    "it": "readonly",
+    "expect": "readonly",
+    "jest": "readonly",
+    "$": "readonly"
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["app/javascript"]
+      }
+    }
+  },
+  "plugins": ["react", "react-hooks"],
+  "rules": {
+    "comma-dangle": ["off"],
+    "class-methods-use-this": ["off"],
+    "function-paren-newline": ["off"],
+    "jsx-a11y/label-has-associated-control": ["off"],
+    "jsx-a11y/label-has-for": ["off"],
+    "implicit-arrow-linebreak": ["off"],
+    "import/first": ["off"],
+    "import/no-cycle": ["off"],
+    "import/no-extraneous-dependencies": ["error", {
+      "devDependencies": true
+    }],
+    "import/no-named-as-default": ["off"],
+    "import/prefer-default-export": ["off"],
+    "no-param-reassign": ["off"],
+    "no-shadow": ["off"],
+    "no-undef": ["error"],
+    "no-underscore-dangle": ["off"],
+    "object-curly-newline": ["off"],
+    "one-var": ["off"],
+    "react/jsx-boolean-value": ["off"],
+    "react/jsx-one-expression-per-line": ["off"],
+    "react/jsx-props-no-spreading": ["off"],
+    "react/destructuring-assignment": ["off"],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
+  }
+}

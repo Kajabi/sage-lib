@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { selectItemPropTypes, selectStructuredItemPropTypes } from './configs';
 
-const Select = ({
+export const Select = ({
   className,
   hasError,
   id,
@@ -70,7 +70,7 @@ Select.defaultProps = {
   hasError: false,
   label: null,
   message: null,
-  onChange: e => e,
+  onChange: (evt) => evt,
   options: [],
   value: null,
 };
@@ -85,5 +85,3 @@ Select.propTypes = {
   options: PropTypes.arrayOf(selectItemPropTypes),
   value: PropTypes.string,
 };
-
-export default Select;

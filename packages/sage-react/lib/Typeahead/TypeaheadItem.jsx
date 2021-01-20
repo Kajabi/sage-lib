@@ -1,17 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import uuid from 'react-uuid';
-
-import { renderSubstringHighlight } from '../common/renderers';
-import Link from '../Link';
+import { Link } from '../Link';
 import { SageTokens } from '../configs';
+import { renderSubstringHighlight } from '../common/renderers';
 
-const TypeaheadItem = ({
-  icon,
-  title,
-  subTitle,
+export const TypeaheadItem = ({
   actions,
+  icon,
+  subTitle,
   searchValue,
+  title,
   ...rest
 }) => (
   <li className="sage-typeahead__item">
@@ -21,39 +20,39 @@ const TypeaheadItem = ({
     >
       <i
         className={`sage-icon-${icon}`}
-        style={{gridArea: 'icon'}}
+        style={{ gridArea: 'icon' }}
       />
       <span
         className="t-sage-heading-6"
-        style={{gridArea: 'title'}}
+        style={{ gridArea: 'title' }}
       >
         {renderSubstringHighlight(title, searchValue)}
       </span>
       <span
         className="t-sage-body-small"
-        style={{gridArea: 'subTitle'}}
+        style={{ gridArea: 'subTitle' }}
       >
         {subTitle}
       </span>
     </Link>
     <div className="sage-typeahead__item-actions">
-      {actions && actions.map(action => (
-        React.cloneElement(action, {key: uuid()})
+      {actions && actions.map((action) => (
+        React.cloneElement(action, { key: uuid() })
       ))}
     </div>
   </li>
-)
+);
 
 TypeaheadItem.defaultProps = {
   actions: null,
   searchValue: '',
+  subTitle: '',
 };
 
 TypeaheadItem.propTypes = {
-  icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)).isRequired,
-  title: PropTypes.string.isRequired,
-  subTitle: PropTypes.string,
   actions: PropTypes.arrayOf(PropTypes.node),
+  icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)).isRequired,
+  searchValue: PropTypes.string,
+  subTitle: PropTypes.string,
+  title: PropTypes.string.isRequired,
 };
-
-export default TypeaheadItem;

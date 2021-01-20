@@ -2,13 +2,16 @@ import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, select } from '@storybook/addon-knobs';
 import { centerXY } from '../story-support/decorators';
-import { Button, Grid, SageTokens, Sortable } from '../';
+import { Button } from '../Button';
+import { Grid } from '../Grid';
+import { SageTokens } from '../configs';
+import { Sortable } from './Sortable';
 
 const SortableWithState = () => {
   const [state, setState] = useState([
     {
-      id: 1,
-      title: `Title ${1}`,
+      id: '1',
+      title: 'Title 1',
       subtitle: 'Subtitle',
       actionItems: [
         <Button
@@ -23,8 +26,8 @@ const SortableWithState = () => {
       ],
     },
     {
-      id: 2,
-      title: `Title ${2}`,
+      id: '2',
+      title: 'Title 2',
       subtitle: 'Subtitle',
       actionItems: [
         <Button
@@ -39,8 +42,8 @@ const SortableWithState = () => {
       ],
     },
     {
-      id: 3,
-      title: `Title ${3}`,
+      id: '3',
+      title: 'Title 3',
       subtitle: 'Subtitle',
       actionItems: [
         <Button
@@ -56,7 +59,7 @@ const SortableWithState = () => {
     },
   ]);
 
-  const renderItem = item => (
+  const renderItem = (item) => (
     <Sortable.Item
       key={item.id}
       title={item.title}

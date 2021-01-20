@@ -1,7 +1,6 @@
 import React, { useState, useRef, useLayoutEffect } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-
 import {
   TOOLTIP_SIZES,
   TOOLTIP_POSITIONS,
@@ -10,7 +9,7 @@ import {
 
 const TOOLTIP_DISTANCE = 8;
 
-const TooltipElement = ({
+export const TooltipElement = ({
   content,
   parentDomRect,
   position,
@@ -18,7 +17,7 @@ const TooltipElement = ({
   theme,
 }) => {
   const tooltipRef = useRef(null);
-  const [coordinates, setCoordinates] = useState({top: null, left: null});
+  const [coordinates, setCoordinates] = useState({ top: null, left: null });
 
   const classNames = classnames(
     'sage-tooltip',
@@ -31,7 +30,7 @@ const TooltipElement = ({
 
   useLayoutEffect(() => {
     let left = 0,
-        top = 0;
+      top = 0;
 
     switch (position) {
       case TOOLTIP_POSITIONS.LEFT:
@@ -44,9 +43,11 @@ const TooltipElement = ({
       case TOOLTIP_POSITIONS.RIGHT:
         top = (parentDomRect.top + parentDomRect.bottom) / 2 - tooltipRef.current.offsetHeight / 2;
         left = parentDomRect.right + TOOLTIP_DISTANCE;
+        /* eslint-disable max-len */
         if (parentDomRect.right + tooltipRef.current.offsetWidth > document.documentElement.clientWidth) {
-          left =  document.documentElement.clientWidth - tooltipRef.current.offsetWidth - TOOLTIP_DISTANCE;
+          left = document.documentElement.clientWidth - tooltipRef.current.offsetWidth - TOOLTIP_DISTANCE;
         }
+        /* eslint-enable max-len */
         break;
       case TOOLTIP_POSITIONS.BOTTOM:
         top = parentDomRect.bottom + TOOLTIP_DISTANCE;
@@ -55,7 +56,10 @@ const TooltipElement = ({
       case TOOLTIP_POSITIONS.TOP:
         top = parentDomRect.top - tooltipRef.current.offsetHeight - TOOLTIP_DISTANCE;
         left = parentDomRect.left + (parentDomRect.width - tooltipRef.current.offsetWidth) / 2;
-      break;
+        break;
+      default:
+        // top and left remain at 0
+        break;
     }
 
     setCoordinates({
@@ -84,10 +88,14 @@ TooltipElement.defaultProps = {
 
 TooltipElement.propTypes = {
   content: PropTypes.oneOfType([PropTypes.node, PropTypes.string]).isRequired,
-  parentDomRect: PropTypes.object.isRequired,
+  parentDomRect: PropTypes.shape({
+    bottom: PropTypes.number,
+    left: PropTypes.number,
+    right: PropTypes.number,
+    top: PropTypes.number,
+    width: PropTypes.number,
+  }).isRequired,
   position: PropTypes.oneOf(Object.values(TOOLTIP_POSITIONS)),
   size: PropTypes.oneOf(Object.values(TOOLTIP_SIZES)),
   theme: PropTypes.oneOf(Object.values(TOOLTIP_THEMES)),
 };
-
-export default TooltipElement;

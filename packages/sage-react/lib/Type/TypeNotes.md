@@ -3,7 +3,7 @@ The Type component is a container that can be implemented in order to enforce sp
 The Sage component library also provides a dictionary for the Sage Type Spec classes. Simply:
 
 ```
-import { SageClassnames } from '../';
+import { SageClassnames } from '@kajabi/sage-react';
 ```
 
 And then use one of more these classes as the `className` for an element such as `SageClassnames.TYPE.HEADING_3`. 

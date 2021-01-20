@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { centerXY } from '../story-support/decorators';
-import Breadcrumbs from './Breadcrumbs';
+import { Breadcrumbs } from './Breadcrumbs';
 
 storiesOf('Sage/Breadcrumbs', module)
   .addDecorator(withKnobs)

@@ -2,9 +2,9 @@ import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 import { centerXY } from '../story-support/decorators';
-import Panel from '../Panel';
-import Table from '../Table';
-import { dataArray, dataCollection, dataCollectionCustom } from './sample-data/contacts';
+import { Panel } from '../Panel';
+import { Table } from './Table';
+import { dataCollection } from './sample-data/contacts';
 import { domains } from './sample-data/domains';
 
 storiesOf('Sage/Table', module)
@@ -19,17 +19,17 @@ storiesOf('Sage/Table', module)
         rows={dataCollection}
         headers={{
           first: {
-            label: "Header override"
+            label: 'Header override'
           }
         }}
         schema={{
           id: false,
           first: {
-            label: "First name",
+            label: 'First name',
           },
           email: false,
           phone: {
-            label: "Phone",
+            label: 'Phone',
           },
         }}
       />

@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { Link } from '..';
+import { Link } from '../Link';
 import { SageTokens } from '../configs';
 import { TAB_STYLES, CHOICE_TYPES } from './configs';
 
-const TabsItem = ({
+export const TabsItem = ({
   alignCenter,
   className,
   disabled,
@@ -102,7 +102,7 @@ TabsItem.defaultProps = {
   isActive: false,
   itemStyle: 'tab',
   linkText: null,
-  onClick: id => id,
+  onClick: (id) => id,
   subtext: null,
   type: null,
 };
@@ -116,11 +116,9 @@ TabsItem.propTypes = {
   isActive: PropTypes.bool,
   itemStyle: PropTypes.oneOf(Object.values(TAB_STYLES)),
   label: PropTypes.string.isRequired,
-  linkText:  PropTypes.string,
+  linkText: PropTypes.string,
   onClick: PropTypes.func,
   panelId: PropTypes.string.isRequired,
   subtext: PropTypes.string,
   type: PropTypes.oneOf(Object.values(CHOICE_TYPES)),
 };
-
-export default TabsItem;

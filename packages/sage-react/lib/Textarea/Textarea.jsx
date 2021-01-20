@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-const Textarea = ({
+export const Textarea = ({
   className,
   hasError,
   id,
@@ -53,6 +53,8 @@ const Textarea = ({
   );
 };
 
+Textarea.TEST = 'TEST';
+
 Textarea.defaultProps = {
   className: null,
   hasError: false,
@@ -71,5 +73,3 @@ Textarea.propTypes = {
   onChange: PropTypes.func,
   value: PropTypes.string,
 };
-
-export default Textarea;

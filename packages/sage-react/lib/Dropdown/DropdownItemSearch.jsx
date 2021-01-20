@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import Search from '../Search';
+import { Search } from '../Search';
 
-const DropdownItemSearch = ({
+export const DropdownItemSearch = ({
   onChangeSearchTerms,
   onEnter,
   placeholder,
@@ -39,8 +39,8 @@ const DropdownItemSearch = ({
 };
 
 DropdownItemSearch.defaultProps = {
-  onChangeSearchTerms: e => e,
-  onEnter: e => e,
+  onChangeSearchTerms: (evt) => evt,
+  onEnter: (evt) => evt,
   placeholder: 'Find',
   selectedValue: '',
 };
@@ -51,5 +51,3 @@ DropdownItemSearch.propTypes = {
   placeholder: PropTypes.string,
   selectedValue: PropTypes.string,
 };
-
-export default DropdownItemSearch;

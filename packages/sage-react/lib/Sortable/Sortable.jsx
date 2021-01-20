@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ReactSortable } from 'react-sortablejs';
-import SortableItem from './SortableItem';
+import { SortableItem } from './SortableItem';
 
-const Sortable = ({
+export const Sortable = ({
   list,
   setList,
   onEnd,
@@ -22,7 +22,7 @@ const Sortable = ({
         chosenClass="sage-sortable__item--active"
         {...rest}
       >
-        {list.map(item => renderItem(item))}
+        {list.map((item) => renderItem(item))}
       </ReactSortable>
     </div>
   );
@@ -41,5 +41,3 @@ Sortable.propTypes = {
   onEnd: PropTypes.func.isRequired,
   renderItem: PropTypes.func.isRequired,
 };
-
-export default Sortable;

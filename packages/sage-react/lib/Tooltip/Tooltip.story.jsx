@@ -2,14 +2,14 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, text, select } from '@storybook/addon-knobs';
 import { centerXY } from '../story-support/decorators';
-import Tooltip from './Tooltip';
-import Button from '../Button';
+import { Button } from '../Button';
+import { Tooltip } from './Tooltip';
 
 storiesOf('Sage/Tooltip', module)
   .addDecorator(withKnobs)
   .addDecorator(centerXY)
   .add('Default', () => (
-    <div style={{padding: 100}}>
+    <div style={{ padding: 100 }}>
       <Tooltip
         content={text('Content', 'Hi, I provide more context for this element!')}
         position={select('Position', Tooltip.POSITIONS, Tooltip.POSITIONS.DEFAULT)}

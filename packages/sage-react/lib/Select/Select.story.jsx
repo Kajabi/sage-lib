@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, boolean, text } from '@storybook/addon-knobs';
 import { centerXY } from '../story-support/decorators';
-import { Select } from '../';
+import { Select } from './Select';
 
 const SelectWithState = () => {
   const [value, updateValue] = useState('');
@@ -21,7 +21,7 @@ const SelectWithState = () => {
         'Option 4',
       ]}
       value={value}
-      onChange={e => updateValue(e.target.value)}
+      onChange={(evt) => updateValue(evt.target.value)}
     />
   );
 };

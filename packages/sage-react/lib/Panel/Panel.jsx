@@ -1,23 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import Loader from '../Loader';
-import PanelBlock from './PanelBlock';
-import PanelDivider from './PanelDivider';
-import PanelFigure from './PanelFigure';
-import PanelFooter from './PanelFooter';
-import PanelHeader from './PanelHeader';
-import PanelList from './PanelList';
-import PanelListItem from './PanelListItem';
-import PanelRow from './PanelRow';
-import PanelStack from './PanelStack';
-import PanelSubheader from './PanelSubheader';
-import PanelSubtitle from './PanelSubtitle';
-import PanelTile from './PanelTile';
-import PanelTiles from './PanelTiles';
-import PanelTitle from './PanelTitle';
+import { Loader } from '../Loader';
+import { PanelBlock } from './PanelBlock';
+import { PanelDivider } from './PanelDivider';
+import { PanelFigure } from './PanelFigure';
+import { PanelFooter } from './PanelFooter';
+import { PanelHeader } from './PanelHeader';
+import { PanelList } from './PanelList';
+import { PanelListItem } from './PanelListItem';
+import { PanelRow } from './PanelRow';
+import { PanelStack } from './PanelStack';
+import { PanelSubheader } from './PanelSubheader';
+import { PanelSubtitle } from './PanelSubtitle';
+import { PanelTile } from './PanelTile';
+import { PanelTiles } from './PanelTiles';
+import { PanelTitle } from './PanelTitle';
 
-const Panel = ({
+export const Panel = ({
   children,
   className,
   loading,
@@ -63,5 +63,3 @@ Panel.propTypes = {
   className: PropTypes.string,
   loading: PropTypes.bool,
 };
-
-export default Panel;
