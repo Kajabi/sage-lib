@@ -55,10 +55,10 @@ module ObjectsHelper
       {
         title: "billboard",
         description: "A billboard is composed of a full-width background image, a title, and supporting copy.",
-        use_legacy_html_code_source: true,
+        use_legacy_html_code_source: false,
         scss: "done",
         docs: "done",
-        rails: "doing",
+        rails: "done",
         react: "todo",
         a11y: "todo"
       },
