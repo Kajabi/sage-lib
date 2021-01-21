@@ -115,12 +115,12 @@ module ObjectsHelper
       {
         title: "expandable_card",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        use_legacy_html_code_source: true,
+        use_legacy_html_code_source: false,
         scss: "todo",
         docs: "done",
-        rails: "todo",
+        rails: "done",
         react: "todo",
-        a11y: "todo",
+        a11y: "done",
       },
       {
         title: "feature_toggle",
