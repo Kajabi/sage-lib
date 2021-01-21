@@ -113,6 +113,7 @@ export const TOKENS_ICONS = {
   REFRESH: 'refresh',
   REMOVE: 'remove',
   REMOVE_CIRCLE: 'remove-circle',
+  RENAME: 'rename',
   RESTORE: 'restore',
   RIGHT_SMALL: 'right-small',
   ROUND_DOLLAR: 'round-dollar',
