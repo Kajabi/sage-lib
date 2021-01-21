@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.7.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.6.0...@kajabi/sage@3.7.0) (2021-01-21)
+
+
+### Bug Fixes
+
+* **billboard:** updated docs ([5d14167](https://github.com/Kajabi/sage-lib/commit/5d14167a95ac98d10776e99c8486c17397564d63))
+* **billboard:** updated props and added title_tag ([4e8e748](https://github.com/Kajabi/sage-lib/commit/4e8e748dba064d54c3b0dda59456302ff0597d7a))
+* **billboard:** updated rails docs and demo ([cc487d0](https://github.com/Kajabi/sage-lib/commit/cc487d0f1e6283d019b2ead0942cb2913ee5a833))
+* **sage-assets:** re-enabled duplicate and rename ([e0a7af1](https://github.com/Kajabi/sage-lib/commit/e0a7af1fe17cbaf2bd58ef2aa99def1408e630f9))
+* **sage-assets:** uncommented clock icon ([729926e](https://github.com/Kajabi/sage-lib/commit/729926ef9a4fc139b683bf73639d5ff6d4a92ed9))
+
+
+### Features
+
+* **sage-assets:** updated Sage font with new and updated icons ([185935f](https://github.com/Kajabi/sage-lib/commit/185935f0027aba681f96ed0b0946b059976632ab))
+
+
+### Reverts
+
+* **outline item:** remove outline item from Sage and into Kajabi-Products ([9966011](https://github.com/Kajabi/sage-lib/commit/9966011d070a1550051aa76d190ebaf310fa8ebd))
+
+
+
+
+
 # [3.6.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.5.3...@kajabi/sage@3.6.0) (2021-01-20)
 
 

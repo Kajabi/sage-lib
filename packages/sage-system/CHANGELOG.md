@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.3.0...@kajabi/sage-system@0.3.1) (2021-01-21)
+
+
+### Bug Fixes
+
+* **toast:** added screen reader support ([69abd91](https://github.com/Kajabi/sage-lib/commit/69abd91b22790f2271bb7d103ae0b73195312aae))
+* **toast:** updated annoucing element ([4f7e98a](https://github.com/Kajabi/sage-lib/commit/4f7e98af6cc157bedc6b9a096a9c49c5c0e0070e))
+
+
+
+
+
 # [0.3.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.2.1...@kajabi/sage-system@0.3.0) (2021-01-20)
 
 

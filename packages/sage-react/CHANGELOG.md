@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.24.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.23.0...@kajabi/sage-react@0.24.0) (2021-01-21)
+
+
+### Bug Fixes
+
+* **sage-assets:** re-enabled duplicate and rename ([e0a7af1](https://github.com/Kajabi/sage-lib/commit/e0a7af1fe17cbaf2bd58ef2aa99def1408e630f9))
+* **toast:** updated annoucing element - react ([ca8f787](https://github.com/Kajabi/sage-lib/commit/ca8f7875f29e4970a3f663e39c47855fee8fe783))
+* **tooltip:** fix broken map and hook function syntax ([69f59b0](https://github.com/Kajabi/sage-lib/commit/69f59b028af751e3422fed6c41449e196f39bb35))
+
+
+### Features
+
+* **sage-assets:** updated Sage font with new and updated icons ([185935f](https://github.com/Kajabi/sage-lib/commit/185935f0027aba681f96ed0b0946b059976632ab))
+
+
+
+
+
 # [0.23.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.22.1...@kajabi/sage-react@0.23.0) (2021-01-20)
 
 

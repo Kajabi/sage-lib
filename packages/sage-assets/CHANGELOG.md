@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.17.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.16.0...@kajabi/sage-assets@0.17.0) (2021-01-21)
+
+
+### Bug Fixes
+
+* **outline item:** first pass at outline item dragging issues ([2af0147](https://github.com/Kajabi/sage-lib/commit/2af0147d838a9c83c09303e7473588d8c6816671))
+* **outline-item:** lint outline item ([63551da](https://github.com/Kajabi/sage-lib/commit/63551da45b90060b76e0eae4c5f94fca5d53081d))
+* **sage-assets:** updated icon font ([647933b](https://github.com/Kajabi/sage-lib/commit/647933bbf07c234c08dd5080bcff18d1b77c10fb))
+* **sage-assets:** updated icon font with fixes ([6ade599](https://github.com/Kajabi/sage-lib/commit/6ade5990b201586a63531d29b065c6fda741ba25))
+
+
+### Features
+
+* **sage-assets:** updated Sage font with new and updated icons ([185935f](https://github.com/Kajabi/sage-lib/commit/185935f0027aba681f96ed0b0946b059976632ab))
+
+
+### Reverts
+
+* **outline item:** remove outline item from Sage and into Kajabi-Products ([9966011](https://github.com/Kajabi/sage-lib/commit/9966011d070a1550051aa76d190ebaf310fa8ebd))
+
+
+
+
+
 # [0.16.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.15.0...@kajabi/sage-assets@0.16.0) (2021-01-20)
 
 
