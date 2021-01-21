@@ -203,16 +203,6 @@ module ObjectsHelper
         a11y: "todo"
       },
       {
-        title: "outline_item",
-        description: "Unicorn component handling the complex interactions required for managing Product children",
-        use_legacy_html_code_source: false,
-        scss: "done",
-        docs: "todo",
-        rails: "no",
-        react: "todo",
-        a11y: "done"
-      },
-      {
         title: "page_heading",
         description: "Page headings are used at the top of pages and contain the title of the page along with optional breadcrumbs, help link, action buttons, toolbar, and intro text.",
         use_legacy_html_code_source: false,
