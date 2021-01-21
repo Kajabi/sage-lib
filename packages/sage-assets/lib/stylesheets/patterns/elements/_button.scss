@@ -400,12 +400,6 @@ $-label-interactive-icon-size: rem(24px);
 .sage-btn__truncate-text {
   @include truncate;
   pointer-events: none;
-
-  @media (max-width: sage-breakpoint(lg-max)) {
-    .sage-outline-item__actions-primary & {
-      @include visually-hidden();
-    }
-  }
 }
 
 // Button groups allow for several buttons together to be spaced appropriately

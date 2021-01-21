@@ -55,10 +55,10 @@ module ObjectsHelper
       {
         title: "billboard",
         description: "A billboard is composed of a full-width background image, a title, and supporting copy.",
-        use_legacy_html_code_source: true,
+        use_legacy_html_code_source: false,
         scss: "done",
         docs: "done",
-        rails: "doing",
+        rails: "done",
         react: "todo",
         a11y: "todo"
       },
@@ -201,16 +201,6 @@ module ObjectsHelper
         rails: "doing",
         react: "todo",
         a11y: "todo"
-      },
-      {
-        title: "outline_item",
-        description: "Unicorn component handling the complex interactions required for managing Product children",
-        use_legacy_html_code_source: false,
-        scss: "done",
-        docs: "todo",
-        rails: "no",
-        react: "todo",
-        a11y: "done"
       },
       {
         title: "page_heading",
