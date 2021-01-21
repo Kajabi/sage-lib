@@ -26,7 +26,7 @@ export const Tooltip = ({
 
   return (
     <>
-      {Children.map((_children, child) => cloneElement(child, {
+      {Children.map(children, (child) => cloneElement(child, {
         onMouseEnter: handleActivate,
         onFocus: handleActivate,
         onMouseLeave: handleDeactivate,
