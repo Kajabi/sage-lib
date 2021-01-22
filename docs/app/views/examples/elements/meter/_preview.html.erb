@@ -1,5 +1,6 @@
 <!-- Default -->
-<%= render "examples/elements/form_input/markup",
+
+<%= sage_component SageFormInput, {
   id: "pw-meter-example",
   input_type: "number",
   label_text: "Meter value",
@@ -17,9 +18,9 @@
   prefix: "",
   suffix: "",
   has_placeholder: false
-%>
+} %>
 
-<%= render "examples/elements/meter/markup",
+<%= sage_component SageMeter, {
   id: "pw-hint-meter",
   label: "Password strength",
   value: 1,
@@ -29,4 +30,4 @@
   med_value_text: "¯\\_(ツ)_/¯",
   high_value_text: "Not bad",
   max_value_text: "Strong password"
-%>
+} %>
