@@ -57,7 +57,14 @@ DropdownPanel.propTypes = {
   children: PropTypes.node,
   coords: PropTypes.shape({
     top: PropTypes.number,
-    left: PropTypes.number,
+    left: PropTypes.oneOfType([
+      PropTypes.number,
+      PropTypes.string,
+    ]),
+    right: PropTypes.oneOfType([
+      PropTypes.number,
+      PropTypes.string,
+    ]),
   }),
   maxWidth: PropTypes.string,
   modifier: PropTypes.string,

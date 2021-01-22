@@ -46,7 +46,16 @@ export const Dropdown = ({
 
   const setPanelCoords = () => {
     const rect = wrapperRef.current.getBoundingClientRect();
-    updateCoords({ top: rect.bottom, left: rect.left });
+
+    updateCoords({
+      top: rect.bottom,
+      left: align !== 'right'
+        ? rect.left
+        : 'intitial',
+      right: align === 'right'
+        ? window.innerWidth - rect.right
+        : 'intitial',
+    });
   };
 
   const onUpdate = useCallback(debounce(() => setPanelCoords(), 20), []); // eslint-disable-line
@@ -59,12 +68,15 @@ export const Dropdown = ({
     if (isActive && isPinned) {
       setPanelCoords();
       window.addEventListener('scroll', onUpdate);
+      window.addEventListener('resize', onUpdate);
     } else {
       window.removeEventListener('scroll', onUpdate);
+      window.removeEventListener('resize', onUpdate);
     }
 
     return () => {
       window.removeEventListener('scroll', onUpdate);
+      window.removeEventListener('resize', onUpdate);
     };
   }, [wrapperRef, isActive, isPinned, onUpdate]);
 
