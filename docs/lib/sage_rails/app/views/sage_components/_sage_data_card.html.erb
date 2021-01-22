@@ -1,0 +1,13 @@
+<% html_tag = component.title_tag ? component.title_tag : "h4" %>
+
+<div class="sage-data-card<%= component.color ? " sage-data-card--#{component.color}" : ""  %>">
+  <div class="sage-data-card__header">
+    <<%= html_tag %> class="sage-data-card__title">
+      <%= component.title.html_safe %>
+    </<%= html_tag %>>
+      <%= component.header_aside.html_safe %>
+  </div>
+  <div class="sage-data-card__body">
+    <%= component.body.html_safe %>
+  </div>
+</div>
