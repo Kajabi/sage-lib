@@ -3,10 +3,10 @@
     class="sage-expandable-card__header"
     data-js-accordion="header"
   >
-    <%= header.html_safe if defined?(header) %>
-    <% if defined?(header_aside) %>
+    <%= component.header.html_safe %>
+    <% if component.header_aside %>
       <aside class="sage-expandable-card__header-aside">
-        <%= header_aside.html_safe %>
+        <%= component.header_aside.html_safe %>
       </aside>
     <% end %>
   </div>
@@ -14,9 +14,9 @@
     class="sage-expandable-card__body"
     data-js-accordion="body"
   >
-    <%= body.html_safe %>
+    <%= component.body.html_safe %>
   </div>
-  <% if defined?(footer) %>
-    <div class="sage-expandable-card__footer"><%= footer %></div>
+  <% if component.footer %>
+    <div class="sage-expandable-card__footer"><%= component.footer %></div>
   <% end %>
 </div>
