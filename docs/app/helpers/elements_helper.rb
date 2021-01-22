@@ -94,10 +94,10 @@ module ElementsHelper
       {
         title: "form_select",
         description: "The form select presents a selectable menu of options. The options within the menu are represented by <option> elements.",
-        use_legacy_html_code_source: true,
+        use_legacy_html_code_source: false,
         scss: "done",
         docs: "todo",
-        rails: "todo",
+        rails: "done",
         react: "todo",
         a11y: "todo"
       },
