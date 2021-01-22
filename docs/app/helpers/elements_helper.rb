@@ -177,7 +177,7 @@ module ElementsHelper
         use_legacy_html_code_source: true,
         scss: "done",
         docs: "done",
-        rails: "doing",
+        rails: "done",
         react: "todo",
         a11y: "todo"
       },
