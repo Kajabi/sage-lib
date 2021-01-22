@@ -84,10 +84,10 @@ module ElementsHelper
       {
         title: "form_input",
         description: "Basic text input form fields with 'floating' labels",
-        use_legacy_html_code_source: true,
+        use_legacy_html_code_source: false,
         scss: "done",
         docs: "done",
-        rails: "no",
+        rails: "done",
         react: "no",
         a11y: "todo"
       },
