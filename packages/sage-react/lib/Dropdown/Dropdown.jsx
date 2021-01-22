@@ -26,6 +26,7 @@ export const Dropdown = ({
   isPinned,
   label,
   panelModifier,
+  panelMaxWidth,
   triggerButtonSubtle,
   triggerModifier,
 }) => {
@@ -120,6 +121,7 @@ export const Dropdown = ({
       </DropdownTrigger>
       {isActive && (
         <DropdownPanel
+          maxWidth={panelMaxWidth}
           modifier={panelModifier}
           onClickScreen={onClickScreen}
           onExit={onExit}
@@ -154,6 +156,7 @@ Dropdown.defaultProps = {
   icon: null,
   isLabelVisible: true,
   isPinned: false,
+  panelMaxWidth: null,
   panelModifier: 'default',
   triggerButtonSubtle: false,
   triggerModifier: 'default',
@@ -177,6 +180,7 @@ Dropdown.propTypes = {
   isLabelVisible: PropTypes.bool,
   isPinned: PropTypes.bool,
   label: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+  panelMaxWidth: PropTypes.string,
   panelModifier: PropTypes.string,
   triggerButtonSubtle: PropTypes.bool,
   triggerModifier: PropTypes.string,
