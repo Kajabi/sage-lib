@@ -1,0 +1,11 @@
+<% selectID = component.name.downcase.dasherize %>
+
+<div class="sage-select <%= "sage-select--error" if component.has_error %>" data-js-select="true">
+  <select class="sage-select__field" name="<%= selectID %>" id="<%= selectID %>">
+    <% component.select_options.each do |option| %>
+      <option value="<%= option[:value] %>"><%= option[:text] %></option>
+    <% end %>
+  </select>
+  <label class="sage-select__label" for="<%= selectID %>"><%= component.name %></label>
+  <div class="sage-select__message"><%= component.message %></div>
+</div>
