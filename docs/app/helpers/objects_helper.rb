@@ -175,10 +175,10 @@ module ObjectsHelper
       {
         title: "input_helper",
         description: "Provides an extended tooltip/popup for text inputs",
-        use_legacy_html_code_source: true,
+        use_legacy_html_code_source: false,
         scss: "doing",
-        docs: "doing",
-        rails: "todo",
+        docs: "done",
+        rails: "done",
         react: "todo",
         a11y: "todo"
       },
