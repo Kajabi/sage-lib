@@ -74,6 +74,8 @@ $-toast-viewport-spacing-bottom: sage-spacing();
 
 .sage-toast__value {
   margin-right: sage-spacing(xs);
+  padding: 0;
   color: sage-color(white);
   line-height: sage-line-height(2xs);
+  font-size: sage-font-size(md);
 }
