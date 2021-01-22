@@ -104,10 +104,10 @@ module ElementsHelper
       {
         title: "form_textarea",
         description: "Basic text area input field with 'floating' label",
-        use_legacy_html_code_source: true,
+        use_legacy_html_code_source: false,
         scss: "done",
         docs: "done",
-        rails: "no",
+        rails: "done",
         react: "no",
         a11y: "todo"
       },
