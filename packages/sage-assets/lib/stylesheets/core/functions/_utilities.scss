@@ -49,7 +49,7 @@
   );
 }
 
-/// 
+///
 /// Checks the value of a positioning property to ensure it is present.
 ///
 /// @param {string} $key The property name being inspected
@@ -92,8 +92,8 @@
 }
 
 ///
-/// Converts an integer to a rem value based on 16 as the base size.
-/// 
+/// Strips non-numeric content from values
+///
 /// @param {length} $number Length from which to strip a unit
 ///
 /// @return {number} Unitless number
