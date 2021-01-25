@@ -9,6 +9,7 @@ export const OptionsDropdown = ({
   className,
   exitPanelHandler,
   isPinned,
+  panelMaxWidth,
   options,
 }) => (
   <Dropdown
@@ -19,6 +20,7 @@ export const OptionsDropdown = ({
     isLabelVisible={false}
     isPinned={isPinned}
     label="Options"
+    panelMaxWidth={panelMaxWidth}
     triggerModifier="options"
     triggerButtonSubtle={true}
   >
@@ -31,6 +33,7 @@ OptionsDropdown.defaultProps = {
   className: null,
   exitPanelHandler: (evt) => evt,
   isPinned: true,
+  panelMaxWidth: null,
   options: null,
 };
 
@@ -41,5 +44,6 @@ OptionsDropdown.propTypes = {
   className: PropTypes.string,
   exitPanelHandler: PropTypes.func,
   isPinned: PropTypes.bool,
+  panelMaxWidth: PropTypes.string,
   options: DropdownItemList.itemsPropTypes,
 };
