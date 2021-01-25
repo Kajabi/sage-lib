@@ -1,4 +1,4 @@
-<%= render "examples/elements/form_select/markup",
+<%= sage_component SageFormSelect, {
   name: "Characters",
   has_error: false,
   select_options: [
@@ -32,9 +32,9 @@
     },
   ],
   message: "This is a message"
-%>
+} %>
 
-<%= render "examples/elements/form_select/markup",
+<%= sage_component SageFormSelect, {
   name: "Pets",
   has_error: true,
   select_options: [
@@ -72,6 +72,6 @@
     },
   ],
   message: "This is a message"
-%>
+} %>
 
 <p><strong>Note:</strong> For a fully styled dropdown selector, see the Dropdown object.</p>

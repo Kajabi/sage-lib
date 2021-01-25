@@ -1,0 +1,25 @@
+<%= sage_component SageNav, {} do %>
+  <%= sage_component SageNavLink, {
+    link: "#",
+    text: "Nav Link 1", 
+  } %>
+
+  <%= sage_component SageNavLink, {
+    icon: "launch",
+    link: "#",
+    text: "Nav Link 2 with icon", 
+  } %>
+
+  <div class="sage-nav__list sage-nav__list--sub">
+    <%= sage_component SageNavLink, {
+      link: "#",
+      text: "Nav Sub Link 1", 
+      type: "sub"
+    } %> 
+    <%= sage_component SageNavLink, {
+      link: "#",
+      text: "Nav Sub Link 2", 
+      type: "sub"
+    } %> 
+  </div>
+<% end %>

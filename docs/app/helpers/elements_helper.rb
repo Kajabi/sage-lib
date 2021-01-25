@@ -84,30 +84,30 @@ module ElementsHelper
       {
         title: "form_input",
         description: "Basic text input form fields with 'floating' labels",
-        use_legacy_html_code_source: true,
+        use_legacy_html_code_source: false,
         scss: "done",
         docs: "done",
-        rails: "no",
+        rails: "done",
         react: "no",
         a11y: "todo"
       },
       {
         title: "form_select",
         description: "The form select presents a selectable menu of options. The options within the menu are represented by <option> elements.",
-        use_legacy_html_code_source: true,
+        use_legacy_html_code_source: false,
         scss: "done",
         docs: "todo",
-        rails: "todo",
+        rails: "done",
         react: "todo",
         a11y: "todo"
       },
       {
         title: "form_textarea",
         description: "Basic text area input field with 'floating' label",
-        use_legacy_html_code_source: true,
+        use_legacy_html_code_source: false,
         scss: "done",
         docs: "done",
-        rails: "no",
+        rails: "done",
         react: "no",
         a11y: "todo"
       },
@@ -174,10 +174,20 @@ module ElementsHelper
       {
         title: "meter",
         description: "A horizontal display indicating the measurement of a known (finite) quantity",
-        use_legacy_html_code_source: true,
+        use_legacy_html_code_source: false,
         scss: "done",
         docs: "done",
-        rails: "doing",
+        rails: "done",
+        react: "todo",
+        a11y: "todo"
+      },
+      {
+        title: "nav_link",
+        description: "These are links specifically defined within the Nav component",
+        use_legacy_html_code_source: false,
+        scss: "done",
+        docs: "done",
+        rails: "done",
         react: "todo",
         a11y: "todo"
       },

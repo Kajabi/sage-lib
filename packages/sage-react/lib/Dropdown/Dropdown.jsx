@@ -26,12 +26,16 @@ export const Dropdown = ({
   isPinned,
   label,
   panelModifier,
+  panelMaxWidth,
   triggerButtonSubtle,
   triggerModifier,
 }) => {
   const [isActive, setActive] = useState(false);
   const [coords, updateCoords] = useState(null);
   const wrapperRef = useRef(null);
+
+  const topBoxOffset = 2;
+  const inlineBoxOffset = -6;
 
   const onClickTrigger = () => {
     if (!isActive && clickTriggerHandler) {
@@ -45,7 +49,16 @@ export const Dropdown = ({
 
   const setPanelCoords = () => {
     const rect = wrapperRef.current.getBoundingClientRect();
-    updateCoords({ top: rect.bottom, left: rect.left });
+
+    updateCoords({
+      top: rect.bottom + topBoxOffset,
+      left: align !== 'right'
+        ? rect.left + inlineBoxOffset
+        : 'intitial',
+      right: align === 'right'
+        ? window.innerWidth - rect.right + inlineBoxOffset
+        : 'intitial',
+    });
   };
 
   const onUpdate = useCallback(debounce(() => setPanelCoords(), 20), []); // eslint-disable-line
@@ -58,12 +71,15 @@ export const Dropdown = ({
     if (isActive && isPinned) {
       setPanelCoords();
       window.addEventListener('scroll', onUpdate);
+      window.addEventListener('resize', onUpdate);
     } else {
       window.removeEventListener('scroll', onUpdate);
+      window.removeEventListener('resize', onUpdate);
     }
 
     return () => {
       window.removeEventListener('scroll', onUpdate);
+      window.removeEventListener('resize', onUpdate);
     };
   }, [wrapperRef, isActive, isPinned, onUpdate]);
 
@@ -120,6 +136,7 @@ export const Dropdown = ({
       </DropdownTrigger>
       {isActive && (
         <DropdownPanel
+          maxWidth={panelMaxWidth}
           modifier={panelModifier}
           onClickScreen={onClickScreen}
           onExit={onExit}
@@ -154,6 +171,7 @@ Dropdown.defaultProps = {
   icon: null,
   isLabelVisible: true,
   isPinned: false,
+  panelMaxWidth: null,
   panelModifier: 'default',
   triggerButtonSubtle: false,
   triggerModifier: 'default',
@@ -177,6 +195,7 @@ Dropdown.propTypes = {
   isLabelVisible: PropTypes.bool,
   isPinned: PropTypes.bool,
   label: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+  panelMaxWidth: PropTypes.string,
   panelModifier: PropTypes.string,
   triggerButtonSubtle: PropTypes.bool,
   triggerModifier: PropTypes.string,

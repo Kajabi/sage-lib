@@ -7,6 +7,7 @@ import classnames from 'classnames';
 export const DropdownPanel = ({
   children,
   coords,
+  maxWidth,
   modifier,
   onClickScreen,
   onExit,
@@ -28,7 +29,16 @@ export const DropdownPanel = ({
   const positioningCoords = { ...coords };
 
   return (
-    <div ref={menuEl} className={classNames} onClick={handlePanelClick} role="dialog" style={{ ...positioningCoords }}>
+    <div
+      ref={menuEl}
+      className={classNames}
+      onClick={handlePanelClick}
+      role="dialog"
+      style={{
+        maxWidth,
+        ...positioningCoords
+      }}
+    >
       {children && React.cloneElement(children, { onExit })}
     </div>
   );
@@ -37,6 +47,7 @@ export const DropdownPanel = ({
 DropdownPanel.defaultProps = {
   coords: null,
   children: null,
+  maxWidth: null,
   modifier: null,
   onClickScreen: (evt) => evt,
   onExit: (evt) => evt,
@@ -46,8 +57,16 @@ DropdownPanel.propTypes = {
   children: PropTypes.node,
   coords: PropTypes.shape({
     top: PropTypes.number,
-    left: PropTypes.number,
+    left: PropTypes.oneOfType([
+      PropTypes.number,
+      PropTypes.string,
+    ]),
+    right: PropTypes.oneOfType([
+      PropTypes.number,
+      PropTypes.string,
+    ]),
   }),
+  maxWidth: PropTypes.string,
   modifier: PropTypes.string,
   onClickScreen: PropTypes.func,
   onExit: PropTypes.func,

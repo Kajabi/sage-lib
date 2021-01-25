@@ -5,6 +5,7 @@ import { Button } from '../Button';
 import { Grid } from '../Grid';
 import { Icon } from '../Icon';
 import { Label } from '../Label';
+import { OptionsDropdown } from '../Dropdown';
 import { SageClassnames, SageTokens } from '../configs';
 import { centerXY } from '../story-support/decorators';
 import { Panel } from './Panel';
@@ -22,14 +23,24 @@ storiesOf('Sage/Panel', module)
     <Grid container={Grid.CONTAINER_SIZES.XS}>
       <Panel loading={boolean('Loading', false)}>
         <Panel.Header title="Panel header">
-          <Button
-            color={Button.COLORS.SECONDARY}
-            icon={SageTokens.ICONS.INFO_CIRCLE}
-            iconOnly={true}
-            subtle={true}
-          >
-            Learn more
-          </Button>
+          <OptionsDropdown
+            align="right"
+            options={[
+              {
+                id: '1',
+                label: 'Option 1',
+              },
+              {
+                id: '2',
+                label: 'Option 2',
+              },
+              {
+                id: '3',
+                label: 'Option 3',
+              }
+            ]}
+            panelMaxWidth="240px"
+          />
         </Panel.Header>
         <Panel.Block sageType={true}>
           <p>

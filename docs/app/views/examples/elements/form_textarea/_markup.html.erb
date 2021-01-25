@@ -1,7 +1,0 @@
-<div class="sage-textarea<% if has_error %> sage-textarea--error<% end %>">
-  <textarea class="sage-textarea__field" id="<%= id %>" name="<%= id %>" placeholder="<%= placeholder %>" <%= disabled ? "disabled" : "" %>><% if content != "" %><%= content %><% end %></textarea>
-  <% if label_text != "" %>
-  <label for="<%= id %>" class="sage-textarea__label"><%= label_text %></label>
-  <% end %>
-  <% if message_text != "" %><div class="sage-textarea__message"><%= message_text %></div><% end %>
-</div>

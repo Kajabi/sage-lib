@@ -85,12 +85,12 @@ module ObjectsHelper
       {
         title: "data_card",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        use_legacy_html_code_source: true,
+        use_legacy_html_code_source: false,
         scss: "todo",
         docs: "done",
-        rails: "todo",
+        rails: "done",
         react: "todo",
-        a11y: "todo",
+        a11y: "done",
       },
       {
         title: "dropdown",
@@ -115,12 +115,12 @@ module ObjectsHelper
       {
         title: "expandable_card",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        use_legacy_html_code_source: true,
+        use_legacy_html_code_source: false,
         scss: "todo",
         docs: "done",
-        rails: "todo",
+        rails: "done",
         react: "todo",
-        a11y: "todo",
+        a11y: "done",
       },
       {
         title: "feature_toggle",
@@ -175,10 +175,10 @@ module ObjectsHelper
       {
         title: "input_helper",
         description: "Provides an extended tooltip/popup for text inputs",
-        use_legacy_html_code_source: true,
+        use_legacy_html_code_source: false,
         scss: "doing",
-        docs: "doing",
-        rails: "todo",
+        docs: "done",
+        rails: "done",
         react: "todo",
         a11y: "todo"
       },
@@ -195,7 +195,7 @@ module ObjectsHelper
       {
         title: "nav",
         description: "Nav is a hierarchical, vertical navigation and can include nested menu items.",
-        use_legacy_html_code_source: true,
+        use_legacy_html_code_source: false,
         scss: "done",
         docs: "done",
         rails: "doing",

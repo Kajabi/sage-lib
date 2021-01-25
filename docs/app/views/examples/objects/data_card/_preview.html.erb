@@ -1,29 +1,30 @@
 <h3 class="t-sage-heading-6">Default</h3>
-<%= render "examples/objects/data_card/markup",
-  title: "Header Content",
+<%= sage_component SageDataCard, {
+  body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
   header_aside: sage_component(SageButton, { value: "Options", subtle: true, style: "secondary", icon: { name: "mapped", style: "only" }}),
-  body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-%>
+  title: "Header Content",
+  title_tag: "h2",
+} %>
 
 <h3 class="t-sage-heading-6">Colors</h3>
 <div class="sage-data-card-group">
-  <%= render "examples/objects/data_card/markup",
-    title: "Default Color",
+  <%= sage_component SageDataCard, {
+    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     header_aside: sage_component(SageButton, { value: "Options", subtle: true, style: "secondary", icon: { name: "mapped", style: "only" }}),
-    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-  %>
-  <%= render "examples/objects/data_card/markup",
-    title: "Muted Color",
+    title: "Default Color",
+  } %>
+  <%= sage_component SageDataCard, {
+    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    color: "muted",
     header_aside: sage_component(SageButton, { value: "Options", subtle: true, style: "secondary", icon: { name: "skipped", style: "only" }}),
+    title: "Muted Color",
+  } %>
+  <%= sage_component SageDataCard, {
     body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    color: "muted"
-  %>
-  <%= render "examples/objects/data_card/markup",
-    title: "Danger Color",
+    color: "danger",
     header_aside: sage_component(SageButton, { value: "Options", subtle: true, style: "danger", icon: { name: "unmapped", style: "only" }}),
-    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    color: "danger"
-  %>
+    title: "Danger Color",
+  } %>
 </div>
 
 <h3 class="t-sage-heading-6">Inline/Scrolling Layout</h3>
@@ -32,71 +33,74 @@
     <div class="sage-data-card-group sage-data-card-group--danger">
       <p class="sage-data-card-group__title">Group 1</p>
       <div class="sage-data-card-group__items">
-        <%= render "examples/objects/data_card/markup",
+        <%= sage_component SageDataCard, {
+          body: %(
+            <p>Lorem ipsum dolor sit amet</p>
+            <p>Consectetur adipiscing elit</p>
+            <p>Sed do eiusmod tempor incididun</p>
+            <p>Ut labore et dolore magna aliqua.</p>
+          ),
+          color: "danger",
+          header_aside: sage_component(SageButton, { value: "Options", subtle: true, style: "danger", icon: { name: "unmapped", style: "only" }}),
           title: "Field 1",
-          header_aside: sage_component(SageButton, { value: "Options", subtle: true, style: "danger", icon: { name: "unmapped", style: "only" }}),
+        } %>
+        <%= sage_component SageDataCard, {
           body: %(
             <p>Lorem ipsum dolor sit amet</p>
             <p>Consectetur adipiscing elit</p>
             <p>Sed do eiusmod tempor incididun</p>
             <p>Ut labore et dolore magna aliqua.</p>
-          )
-        %>
-        <%= render "examples/objects/data_card/markup",
+          ),
+          header_aside: sage_component(SageButton, { value: "Options", subtle: true, style: "danger", icon: { name: "unmapped", style: "only" }}),
           title: "Field 2",
-          header_aside: sage_component(SageButton, { value: "Options", subtle: true, style: "danger", icon: { name: "unmapped", style: "only" }}),
-          body: %(
-            <p>Lorem ipsum dolor sit amet</p>
-            <p>Consectetur adipiscing elit</p>
-            <p>Sed do eiusmod tempor incididun</p>
-            <p>Ut labore et dolore magna aliqua.</p>
-          )
-        %>
+          title_tag: "h3",
+        } %>
       </div>
     </div>
     <div class="sage-data-card-group">
       <p class="sage-data-card-group__title">Group 2</p>
       <div class="sage-data-card-group__items">
-        <%= render "examples/objects/data_card/markup",
+        <%= sage_component SageDataCard, {
+          body: %(
+            <p>Lorem ipsum dolor sit amet</p>
+            <p>Consectetur adipiscing elit</p>
+            <p>Sed do eiusmod tempor incididun</p>
+            <p>Ut labore et dolore magna aliqua.</p>
+          ),
+          header_aside: sage_component(SageButton, { value: "Options", subtle: true, style: "secondary", icon: { name: "mapped", style: "only" }}),
           title: "Field 3",
-          header_aside: sage_component(SageButton, { value: "Options", subtle: true, style: "secondary", icon: { name: "mapped", style: "only" }}),
+        } %>
+        <%= sage_component SageDataCard, {
           body: %(
             <p>Lorem ipsum dolor sit amet</p>
             <p>Consectetur adipiscing elit</p>
             <p>Sed do eiusmod tempor incididun</p>
             <p>Ut labore et dolore magna aliqua.</p>
-          )
-        %>
-        <%= render "examples/objects/data_card/markup",
+          ),
+          header_aside: sage_component(SageButton, { value: "Options", subtle: true, style: "secondary", icon: { name: "mapped", style: "only" }}),
           title: "Field 4",
-          header_aside: sage_component(SageButton, { value: "Options", subtle: true, style: "secondary", icon: { name: "mapped", style: "only" }}),
+        } %>
+        <%= sage_component SageDataCard, {
           body: %(
             <p>Lorem ipsum dolor sit amet</p>
             <p>Consectetur adipiscing elit</p>
             <p>Sed do eiusmod tempor incididun</p>
             <p>Ut labore et dolore magna aliqua.</p>
-          )
-        %>
-        <%= render "examples/objects/data_card/markup",
+          ),
+          header_aside: sage_component(SageButton, { value: "Options", subtle: true, style: "secondary", icon: { name: "mapped", style: "only" }}),
           title: "Field 5",
-          header_aside: sage_component(SageButton, { value: "Options", subtle: true, style: "secondary", icon: { name: "mapped", style: "only" }}),
+        } %>
+        <%= sage_component SageDataCard, {
           body: %(
             <p>Lorem ipsum dolor sit amet</p>
             <p>Consectetur adipiscing elit</p>
             <p>Sed do eiusmod tempor incididun</p>
             <p>Ut labore et dolore magna aliqua.</p>
-          )
-        %>
-        <%= render "examples/objects/data_card/markup",
+          ),
+          header_aside: sage_component(SageButton, { value: "Options", subtle: true, style: "secondary", icon: { name: "mapped", style: "only" }}),
           title: "Field 6",
-          header_aside: sage_component(SageButton, { value: "Options", subtle: true, style: "secondary", icon: { name: "mapped", style: "only" }}),
-          body: %(
-            <p>Lorem ipsum dolor sit amet</p>
-            <p>Consectetur adipiscing elit</p>
-            <p>Sed do eiusmod tempor incididun</p>
-            <p>Ut labore et dolore magna aliqua.</p>
-          )
-        %>
+          title_tag: "h6",
+        } %>
       </div>
     </div>
   </div>
