@@ -9,8 +9,7 @@ import {
   LABEL_INTERACTIVE_TYPES,
 } from './configs';
 
-export const Label = ({
-  children,
+export const Label = React.forwardRef(({
   className,
   color,
   icon,
@@ -21,7 +20,7 @@ export const Label = ({
   style,
   value,
   ...rest
-}) => {
+}, ref) => {
   const TagName = interactiveType ? 'button' : 'span';
 
   const classNames = classnames(
@@ -37,7 +36,7 @@ export const Label = ({
   );
 
   return (
-    <span className={classNames}>
+    <span className={classNames} ref={ref}>
       <TagName
         className="sage-label__value"
         type={interactiveType ? 'button' : null}
@@ -53,14 +52,13 @@ export const Label = ({
       )}
     </span>
   );
-};
+});
 
 Label.COLORS = LABEL_COLORS;
 Label.STYLES = LABEL_STYLES;
 Label.INTERACTIVE_TYPES = LABEL_INTERACTIVE_TYPES;
 
 Label.defaultProps = {
-  children: null,
   className: null,
   color: LABEL_COLORS.DRAFT,
   icon: null,
@@ -72,7 +70,6 @@ Label.defaultProps = {
 };
 
 Label.propTypes = {
-  children: PropTypes.node,
   className: PropTypes.string,
   color: PropTypes.oneOf(Object.values(LABEL_COLORS)),
   icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),

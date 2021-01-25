@@ -339,7 +339,7 @@ storiesOf('Sage/Panel', module)
               Molestie libero vel
             </p>
           </Panel.Block>
-          <Label color={Label.COLORS.WARNING}>In progress</Label>
+          <Label color={Label.COLORS.WARNING} value="In progress" />
           <Button
             icon={SageTokens.ICONS.PEN}
             subtle={true}
