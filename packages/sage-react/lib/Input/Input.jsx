@@ -62,7 +62,7 @@ export const Input = ({
     if (affixUpdatesNeeded) {
       updateStyles(newInputStyles);
     }
-  }, [inputStyles, prefix, prefixRef, suffix, suffixRef]);
+  }, [prefix, suffix]);
 
   return (
     <div className={classNames}>
