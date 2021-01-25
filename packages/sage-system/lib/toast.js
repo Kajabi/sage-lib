@@ -34,7 +34,7 @@ Sage.toast = (function () {
     toast.classList.add('sage-toast--style-'+ config.type);
     toast.innerHTML = `
     <i class="sage-toast__icon sage-icon-${config.icon}"></i>
-    <output aria-live="assertive" aria-atomic="true"><p class="sage-toast__value">${config.message}</p></output>
+    <output class="sage-toast__value" aria-live="assertive" aria-atomic="true">${config.message}</output>
     <button type="button" data-js-toast-close class="sage-toast__close sage-btn sage-btn--subtle sage-btn--secondary sage-btn--icon-only-remove"><span class="visually-hidden">Close</span></button>`;
 
     document.body.appendChild(toast);
