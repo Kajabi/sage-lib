@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.3.1...@kajabi/sage-system@0.3.2) (2021-01-25)
+
+
+### Bug Fixes
+
+* **toast:** update to markup to prevent clash w/ products boostrap ([bfdc8b0](https://github.com/Kajabi/sage-lib/commit/bfdc8b07627152fc7e1c646950287e68bf187f15))
+
+
+
+
+
 ## [0.3.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.3.0...@kajabi/sage-system@0.3.1) (2021-01-21)
 
 

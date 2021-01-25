@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.7.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.7.0...@kajabi/sage@3.7.1) (2021-01-25)
+
+
+### Bug Fixes
+
+* **data-card:** added sage component, docs, and conditional title tag ([d6b5f22](https://github.com/Kajabi/sage-lib/commit/d6b5f22dc6ee9bae6b04a97f26507c3f671d4584))
+* **expandable-card:** added rails component and doc props ([c139d12](https://github.com/Kajabi/sage-lib/commit/c139d128a1a6628c7e006936298c877d7dae9adf))
+* **expandable-card:** updated rails prop ([50ea5fe](https://github.com/Kajabi/sage-lib/commit/50ea5fe81334f7bc3d110ebcd0712883b3579fe5))
+* **form-input:** added props ([06d96e3](https://github.com/Kajabi/sage-lib/commit/06d96e3ad5a98f322cef62049c6a0d9aa45488ff))
+* **form-input:** added rails component ([04a5f47](https://github.com/Kajabi/sage-lib/commit/04a5f47bd6f439b350afd1e8540a296b55663387))
+* **form-select:** added rails component and updated docs ([897d10f](https://github.com/Kajabi/sage-lib/commit/897d10f9ea9d26cbf06eda38e886daaa5ae87860))
+* **form-textarea:** added rails component ([9c4e735](https://github.com/Kajabi/sage-lib/commit/9c4e7354a64fe4e77fefbba0f801fb18c2e7b29c))
+* **input-helper:** added rails component and updated docs ([7bbd084](https://github.com/Kajabi/sage-lib/commit/7bbd084048571ff9ba89d0e171091624c0f0d56c))
+* **input-helper:** update docs ([073e959](https://github.com/Kajabi/sage-lib/commit/073e959949d79f51121dc3d3132bee49752e8a3e))
+* **meter:** added rails component and updated docs ([69e8a9c](https://github.com/Kajabi/sage-lib/commit/69e8a9c943f16eb7898d711ead4c6004c5037286))
+* **meter:** updated rails docs ([d0887f6](https://github.com/Kajabi/sage-lib/commit/d0887f6bd1f6fca86c6ce042da13f0d6813a7833))
+* **nav:** update demo ([7e4ad9c](https://github.com/Kajabi/sage-lib/commit/7e4ad9cfd7ec1e58d3e183e0aa804b207f3686d1))
+* **nav:** update rails docs ([a889b5a](https://github.com/Kajabi/sage-lib/commit/a889b5a50d6ba490235d45bc11f9dcd83652c731))
+* **nav:** updated docs ([98c1df8](https://github.com/Kajabi/sage-lib/commit/98c1df84162f13da7ad86852f5c4f65b1824787d))
+* **nav:** updates to arial-label ([658dbc3](https://github.com/Kajabi/sage-lib/commit/658dbc3517417dd1ebbc24f517f265268be54d70))
+* **navlist:** added subcomponent navlist to better document ([e563ad7](https://github.com/Kajabi/sage-lib/commit/e563ad7a702958f192462f79aca79edd67976d44))
+* **textarea:** updated docs ([da3a289](https://github.com/Kajabi/sage-lib/commit/da3a28916e20bf221b19b78efa465a559683a225))
+
+
+
+
+
 # [3.7.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.6.0...@kajabi/sage@3.7.0) (2021-01-21)
 
 

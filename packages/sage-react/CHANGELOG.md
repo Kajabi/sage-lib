@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.25.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.24.0...@kajabi/sage-react@0.25.0) (2021-01-25)
+
+
+### Bug Fixes
+
+* **dropdown:** ensure pinned and right-aligned dropdowns position as expected ([79a1123](https://github.com/Kajabi/sage-lib/commit/79a11232803674c8bf6a93525d4c0537ac7e8254))
+* **dropdown:** hone pinned offset settings ([0569c7b](https://github.com/Kajabi/sage-lib/commit/0569c7b6f65c931c281f9ec98986862671ef8c0a))
+
+
+### Features
+
+* **alert:** add react component ([f3f57e7](https://github.com/Kajabi/sage-lib/commit/f3f57e7663b889330b45e272298408736402066f))
+* **dopdown:** add ability to set a panel max width on dropdown ([23210d7](https://github.com/Kajabi/sage-lib/commit/23210d7f8598fcf89a4ffc73fa47aeb1c2b91c27))
+
+
+
+
+
 # [0.24.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.23.0...@kajabi/sage-react@0.24.0) (2021-01-21)
 
 

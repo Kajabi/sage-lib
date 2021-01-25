@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.17.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.17.0...@kajabi/sage-assets@0.17.1) (2021-01-25)
+
+
+### Bug Fixes
+
+* **card-highlight:** fix overflow issue ([1d1b7b2](https://github.com/Kajabi/sage-lib/commit/1d1b7b2eb36793c078cd146f63019b2550c6680c))
+* **toast:** convert font-size to [@extend](https://github.com/extend) ([dc51559](https://github.com/Kajabi/sage-lib/commit/dc5155938791d07b438914ab11408e4f836824e0))
+* **toast:** style adjustments ([43bf96f](https://github.com/Kajabi/sage-lib/commit/43bf96f80e7b4cee9c739d1078d00862a3e493e2))
+
+
+
+
+
 # [0.17.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.16.0...@kajabi/sage-assets@0.17.0) (2021-01-21)
 
 
