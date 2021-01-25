@@ -1,21 +1,21 @@
 <%= sage_component SagePanelBlock, {} do %>
-  <%= render "examples/elements/status_icon/markup",
-    icon_name: "preview-on",
-    content: "Preview is active"
-  %>
+  <%= sage_component SageStatusIcon, {
+    icon: "preview-on",
+    value: "Preview is active"
+  } %>
 
-  <%= render "examples/elements/status_icon/markup",
-    icon_name: "lock",
-    content: "This has been locked"
-  %>
+  <%= sage_component SageStatusIcon, {
+    icon: "lock",
+    value: "This has been locked"
+  } %>
 
-  <%= render "examples/elements/status_icon/markup",
-    icon_name: "warning",
-    content: "Danger danger!"
-  %>
+  <%= sage_component SageStatusIcon, {
+    icon: "warning",
+    value: "Danger danger!"
+  } %>
 
-  <%= render "examples/elements/status_icon/markup",
-    icon_name: "info-circle",
-    content: "Good information here :)"
-  %>
+  <%= sage_component SageStatusIcon, {
+    icon: "info-circle",
+    value: "Good information here :)"
+  } %>
 <% end %>
