@@ -14,10 +14,14 @@
 
 .sage-card-highlight--right {
   right: 0;
+  border-top-right-radius: sage-border(radius);
+  border-bottom-right-radius: sage-border(radius);
 }
 
 .sage-card-highlight--left {
   left: 0;
+  border-top-left-radius: sage-border(radius);
+  border-bottom-left-radius: sage-border(radius);
 }
 
 .sage-card-highlight--top,
@@ -29,10 +33,14 @@
 
 .sage-card-highlight--top {
   top: 0;
+  border-top-left-radius: sage-border(radius);
+  border-top-right-radius: sage-border(radius);
 }
 
 .sage-card-highlight--bottom {
   bottom: 0;
+  border-bottom-left-radius: sage-border(radius);
+  border-bottom-right-radius: sage-border(radius);
 }
 
 @each $-color-name, $-color-sliders in $sage-colors {
