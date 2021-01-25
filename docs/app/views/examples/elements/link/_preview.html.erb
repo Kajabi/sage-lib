@@ -1,61 +1,61 @@
 <h3 class="t-sage-heading-6">Standard link</h3>
 <%= sage_component SagePanelStack, {} do %>
-  <%= render "examples/elements/link/markup",
+  <%= sage_component SageLink, {
     url: "#",
     label: "Standard link",
     external: false,
     launch: false,
     help_link: false,
     show_label: true
-  %>
-  <%= render "examples/elements/link/markup",
+  } %>
+  <%= sage_component SageLink, {
     url: "#",
     label: "Internal link with launch",
     external: false,
     launch: true,
     help_link: false,
     show_label: true
-  %>
+  } %>
 <% end %>
 
 <h3 class="t-sage-heading-6">External links</h3>
 <%= sage_component SagePanelStack, {} do %>
-  <%= render "examples/elements/link/markup",
+  <%= sage_component SageLink, {
     url: "https://example.com",
     label: "External link",
     external: true,
     launch: true,
     help_link: false,
     show_label: true
-  %>
-  <%= render "examples/elements/link/markup",
+  } %>
+  <%= sage_component SageLink, {
     url: "https://example.com",
     label: "External link (launch icon cancelled)",
     external: true,
     launch: false,
     help_link: false,
     show_label: true
-  %>
+  } %>
 <% end %>
 
 <h3 class="t-sage-heading-6">Help/Info links</h3>
 <%= sage_component SagePanelStack, {} do %>
-  <%= render "examples/elements/link/markup",
+  <%= sage_component SageLink, {
     url: "#",
     label: "Get help",
     external: false,
     launch: false,
     help_link: true,
     show_label: true
-  %>
-  <%= render "examples/elements/link/markup",
+  } %>
+  <%= sage_component SageLink, {
     url: "#",
     label: "Get help (hidden)",
     external: false,
     launch: false,
     help_link: true,
     show_label: false
-  %>
+  } %>
 <% end %>
 
 <h3 class="t-sage-heading-6">Subtext links</h3>
