@@ -195,7 +195,7 @@ module ObjectsHelper
       {
         title: "nav",
         description: "Nav is a hierarchical, vertical navigation and can include nested menu items.",
-        use_legacy_html_code_source: true,
+        use_legacy_html_code_source: false,
         scss: "done",
         docs: "done",
         rails: "doing",

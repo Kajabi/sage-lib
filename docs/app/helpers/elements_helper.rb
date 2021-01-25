@@ -182,6 +182,16 @@ module ElementsHelper
         a11y: "todo"
       },
       {
+        title: "nav_link",
+        description: "These are links specifically defined within the Nav component",
+        use_legacy_html_code_source: false,
+        scss: "done",
+        docs: "done",
+        rails: "done",
+        react: "todo",
+        a11y: "todo"
+      },
+      {
         title: "progress_bar",
         description: "Displays progress with a value",
         use_legacy_html_code_source: false,
