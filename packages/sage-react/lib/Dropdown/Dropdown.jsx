@@ -34,6 +34,9 @@ export const Dropdown = ({
   const [coords, updateCoords] = useState(null);
   const wrapperRef = useRef(null);
 
+  const topBoxOffset = 2;
+  const inlineBoxOffset = -6;
+
   const onClickTrigger = () => {
     if (!isActive && clickTriggerHandler) {
       clickTriggerHandler();
@@ -48,12 +51,12 @@ export const Dropdown = ({
     const rect = wrapperRef.current.getBoundingClientRect();
 
     updateCoords({
-      top: rect.bottom,
+      top: rect.bottom + topBoxOffset,
       left: align !== 'right'
-        ? rect.left
+        ? rect.left + inlineBoxOffset
         : 'intitial',
       right: align === 'right'
-        ? window.innerWidth - rect.right
+        ? window.innerWidth - rect.right + inlineBoxOffset
         : 'intitial',
     });
   };
