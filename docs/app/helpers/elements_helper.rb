@@ -174,7 +174,7 @@ module ElementsHelper
       {
         title: "meter",
         description: "A horizontal display indicating the measurement of a known (finite) quantity",
-        use_legacy_html_code_source: true,
+        use_legacy_html_code_source: false,
         scss: "done",
         docs: "done",
         rails: "done",
