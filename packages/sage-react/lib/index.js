@@ -1,3 +1,4 @@
+export { Alert } from './Alert';
 export { Avatar, AvatarGroup } from './Avatar';
 export { Breadcrumbs } from './Breadcrumbs';
 export { Button } from './Button';
