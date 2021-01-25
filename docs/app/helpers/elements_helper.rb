@@ -124,10 +124,10 @@ module ElementsHelper
       {
         title: "indicator",
         description: "A simple dot-styled position indicator bar. This is currently not intended to be used as navigation but only a visual indicator.",
-        use_legacy_html_code_source: true,
+        use_legacy_html_code_source: false,
         scss: "doing",
         docs: "doing",
-        rails: "todo",
+        rails: "done",
         react: "todo",
         a11y: "doing"
       },
