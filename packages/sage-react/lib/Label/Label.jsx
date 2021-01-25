@@ -10,7 +10,6 @@ import {
 } from './configs';
 
 export const Label = React.forwardRef(({
-  children,
   className,
   color,
   icon,
@@ -60,7 +59,6 @@ Label.STYLES = LABEL_STYLES;
 Label.INTERACTIVE_TYPES = LABEL_INTERACTIVE_TYPES;
 
 Label.defaultProps = {
-  children: null,
   className: null,
   color: LABEL_COLORS.DRAFT,
   icon: null,
@@ -72,7 +70,6 @@ Label.defaultProps = {
 };
 
 Label.propTypes = {
-  children: PropTypes.node,
   className: PropTypes.string,
   color: PropTypes.oneOf(Object.values(LABEL_COLORS)),
   icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),
