@@ -1,55 +1,46 @@
 <h3 class="t-sage-heading-6">Dark Tooltips</h3>
 <%= sage_component SagePanelBlock, {} do %>
-  <%= render "examples/elements/tooltip/markup",
-  position: "top",
-  text: "Nascetur ridiculus mus",
-  theme: "",
-  size: ""
-  %>
-  <%= render "examples/elements/tooltip/markup",
-  position: "bottom",
-  text: "80%",
-  theme: "",
-  size: "small"
-  %>
-  <%= render "examples/elements/tooltip/markup",
-  position: "left",
-  text: "Cursus Aenean",
-  theme: "",
-  size: ""
-  %>
-  <%= render "examples/elements/tooltip/markup",
-  position: "right",
-  text: "Bibendum Condimentum",
-  theme: "",
-  size: ""
-  %>
+  <%= sage_component SageTooltip, {
+    position: "top",
+    text: "Nascetur ridiculus mus",
+  } %>
+  <%= sage_component SageTooltip, {
+    position: "bottom",
+    text: "80%",
+    size: "small"
+  } %>
+  <%= sage_component SageTooltip, {
+    position: "left",
+    text: "Cursus Aenean",
+  } %>
+  <%= sage_component SageTooltip, {
+    position: "right",
+    text: "Bibendum Condimentum",
+  } %>
 <% end %>
 
 <h3 class="t-sage-heading-6">Light Tooltips</h3>
 <%= sage_component SagePanelBlock, {} do %>
-  <%= render "examples/elements/tooltip/markup",
-  position: "top",
-  text: "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
-  theme: "light",
-  size: "large"
-  %>
-  <%= render "examples/elements/tooltip/markup",
-  position: "bottom",
-  text: "Magnis dis parturient montes",
-  theme: "light",
-  size: ""
-  %>
-  <%= render "examples/elements/tooltip/markup",
-  position: "left",
-  text: "$12.99",
-  theme: "light",
-  size: "small"
-  %>
-  <%= render "examples/elements/tooltip/markup",
-  position: "right",
-  text: "Sociis natoque et",
-  theme: "light",
-  size: ""
-  %>
+  <%= sage_component SageTooltip, {
+    position: "top",
+    text: "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
+    theme: "light",
+    size: "large"
+  } %>
+  <%= sage_component SageTooltip, {
+    position: "bottom",
+    text: "Magnis dis parturient montes",
+    theme: "light",
+  } %>
+  <%= sage_component SageTooltip, {
+    position: "left",
+    text: "$12.99",
+    theme: "light",
+    size: "small"
+  } %>
+  <%= sage_component SageTooltip, {
+    position: "right",
+    text: "Sociis natoque et",
+    theme: "light",
+  } %>
 <% end %>
