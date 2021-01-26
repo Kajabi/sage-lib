@@ -97,7 +97,10 @@
       value: "Delete Category",
       icon: "trash",
       style: "danger",
-      attributes: { "href": "#" },
+      attributes: { 
+        "href": "#",
+        "data-test": "test method" 
+      },
     }]
   } do %>
     <%= sage_component SageLabel, {
