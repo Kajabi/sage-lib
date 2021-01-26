@@ -234,12 +234,12 @@ module ElementsHelper
       {
         title: "status_icon",
         description: "Display the status of an item",
-        use_legacy_html_code_source: true,
+        use_legacy_html_code_source: false,
         scss: "done",
         docs: "done",
         rails: "done",
         react: "todo",
-        a11y: "todo"
+        a11y: "done"
       },
       {
         title: "switch",
