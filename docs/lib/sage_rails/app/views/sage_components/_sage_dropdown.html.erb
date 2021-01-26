@@ -52,7 +52,7 @@
           >
             <a
               <% item[:attributes].each do |key, value| %>
-                <%= "#{key}=#{value}"%>
+                <%= key %>="<%= value %>"
               <% end if item[:attributes]&.is_a?(Hash) %>
               role="menuitem"
               tabindex="0"
