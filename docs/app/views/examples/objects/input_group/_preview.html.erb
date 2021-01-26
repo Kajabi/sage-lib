@@ -1,6 +1,7 @@
 <fieldset class="sage-type">
   <h3 class="t-sage-heading-6">Input group with password reveal toggle and helper</h3>
-  <%= render "examples/objects/input_group/markup",
+  
+  <%= sage_component SageInputGroup,
     group_id: "input-group-pw-example",
     has_button: true,
     has_hint: true,
@@ -17,7 +18,8 @@
   %>
 
   <h3 class="t-sage-heading-6">Input group with primary button</h3>
-  <%= render "examples/objects/input_group/markup",
+
+  <%= sage_component SageInputGroup, {
     group_id: 'input-group-search-example',
     has_button: true,
     has_hint: false,
@@ -31,5 +33,5 @@
     group_button_tooltip_text: "Search this site",
     group_button_tooltip_position: "top",
     group_button_tooltip_size: ""
-  %>
+  } %>
 </fieldset>
