@@ -284,10 +284,10 @@ module ElementsHelper
       {
         title: "tooltip",
         description: "Tooltips display helpful text when users hover over an element.",
-        use_legacy_html_code_source: true,
+        use_legacy_html_code_source: false,
         scss: "done",
         docs: "done",
-        rails: "todo",
+        rails: "done",
         react: "todo",
         a11y: "todo"
       },
