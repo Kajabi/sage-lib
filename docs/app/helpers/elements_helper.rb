@@ -144,7 +144,7 @@ module ElementsHelper
       {
         title: "link",
         description: "While links have default styling in the app, some links deserve a little more ❤️",
-        use_legacy_html_code_source: true,
+        use_legacy_html_code_source: false,
         scss: "done",
         docs: "done",
         rails: "done",
