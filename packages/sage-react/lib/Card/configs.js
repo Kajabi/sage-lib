@@ -35,3 +35,8 @@ export const CARD_HIGHLIGHT_POSITIONS = {
   BOTTOM: 'bottom',
   LEFT: 'left',
 };
+
+export const CARD_LIST_BLOCK_SPACING = {
+  DEFAULT: false,
+  SM: 'sm',
+};
