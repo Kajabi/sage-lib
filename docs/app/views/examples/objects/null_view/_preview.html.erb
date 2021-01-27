@@ -1,0 +1,19 @@
+<%= sage_component SageNullView, {
+  title: "Create your first Pipeline",
+  text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque at laoreet morbi nullam. Malesuada vi",
+  graphic: image_pack_tag("docs/null-view-graphic.png", alt: "", width: "312", height: "434"),
+} do %>
+  <% content_for :sage_null_view_actions do %>
+    <%= sage_component SageButtonGroup, { gap: :md, spacer: { top: :md }} do %>
+      <%= sage_component SageButton, {
+        style: "primary",
+        value: "Create a Pipeline",
+      } %>
+      <%= sage_component SageButton, {
+        style: "secondary",
+        raised: true,
+        value: "Learn more",
+      } %>
+    <% end %>
+  <% end %>
+<% end %>
