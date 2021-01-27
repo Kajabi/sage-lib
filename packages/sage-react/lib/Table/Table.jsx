@@ -45,7 +45,7 @@ export const Table = ({
   selectedRows,
   tableAttributes,
 }) => {
-  const [selfSelectedRows, setSelfSelectedRows] = useState(selectedRows);
+  const [selfSelectedRows, setSelfSelectedRows] = useState([]);
   const [selfHeaders, setSelfHeaders] = useState([]);
 
   const containerClassNames = classnames(
@@ -152,6 +152,10 @@ export const Table = ({
   useEffect(() => {
     buildHeaders();
   }, [schema, headers]);
+
+  useEffect(() => {
+    setSelfSelectedRows(selectedRows);
+  }, [selectedRows]);
 
   const removeFromList = (data) => selfSelectedRows.filter((each) => each !== data);
 

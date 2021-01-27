@@ -17,7 +17,7 @@ export const TableRow = ({
   selected,
   typeRenderers,
 }) => {
-  const [selfSelected, setSelfSelected] = useState(selected);
+  const [selfSelected, setSelfSelected] = useState([]);
   const [selfCells, setSelfCells] = useState([]);
 
   const classNames = classnames(
@@ -27,6 +27,10 @@ export const TableRow = ({
       'sage-table__row--selectable': selectable,
     }
   );
+
+  useEffect(() => {
+    setSelfSelected(selected);
+  }, [selected]);
 
   useEffect(() => {
     const selfTypeRenderers = Object.assign(typeRenderers, TableHelpers.typeRenderers);
