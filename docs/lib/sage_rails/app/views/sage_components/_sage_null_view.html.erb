@@ -1,0 +1,14 @@
+<div class="sage-null-view <% if component.reversed.present? %>sage-null-view--reversed<% end %><% if component.center_vertical.present? %> sage-null-view--center<% end %>">
+  <div class="sage-null-view__content">
+    <h1 class="sage-null-view__title"><%= component.title %></h1>
+    <p class="sage-null-view__text"><%= component.text %></p>
+    <% if content_for? :sage_null_view_actions %>
+      <%= content_for :sage_null_view_actions %>
+    <% end %>
+  </div>
+  <% if component.graphic.present? %>
+    <div class="sage-null-view__graphic">
+      <%= component.graphic.html_safe %>
+    </div>
+  <% end %>
+</div>
