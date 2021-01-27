@@ -12,7 +12,8 @@
   max-width: 860px;
   margin-left: auto;
   margin-right: auto;
-  @media screen and (min-width: sage-breakpoint(lg-min)) {
+  padding: sage-spacing();
+  @media screen and (min-width: sage-breakpoint(lg-max)) {
     grid-template-columns: auto 1fr;
     grid-gap: 128px;
   }
@@ -24,7 +25,7 @@
   justify-content: center;
   flex-wrap: wrap;
   order: 2;
-  @media screen and (min-width: sage-breakpoint(lg-min)) {
+  @media screen and (min-width: sage-breakpoint(lg-max)) {
     order: 1;
   }
   .sage-null-view--reversed & {
@@ -38,7 +39,7 @@
 .sage-null-view__graphic {
   order: 1;
   text-align: center;
-  @media screen and (min-width: sage-breakpoint(lg-min)) {
+  @media screen and (min-width: sage-breakpoint(lg-max)) {
     order: 2;
   }
   .sage-null-view--reversed & {
@@ -52,4 +53,8 @@
   transform: translate(-50%, -50%);
   max-width: 860px;
   width: 100%;
+  padding: sage-spacing();
+  @media screen and (min-width: sage-breakpoint(lg-max)) {
+    padding: 0;
+  }
 }
