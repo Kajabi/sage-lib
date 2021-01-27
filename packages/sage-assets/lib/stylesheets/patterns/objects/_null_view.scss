@@ -41,9 +41,6 @@
     order: 2;
   }
   .sage-null-view--reversed {
-    &.sage-null-view {
-      grid-template-columns: auto 1fr;
-    }
     .sage-null-view__content {
       order: 2;
     }
