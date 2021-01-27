@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { SageTokens } from '../configs';
 import { Dropdown } from './Dropdown';
 import { DropdownItemList } from './DropdownItemList';
+import { DROPDOWN_PANEL_SIZES } from './configs';
 
 export const OptionsDropdown = ({
   align,
@@ -10,6 +11,7 @@ export const OptionsDropdown = ({
   exitPanelHandler,
   isPinned,
   panelMaxWidth,
+  panelSize,
   options,
 }) => (
   <Dropdown
@@ -21,6 +23,7 @@ export const OptionsDropdown = ({
     isPinned={isPinned}
     label="Options"
     panelMaxWidth={panelMaxWidth}
+    panelSize={panelSize}
     triggerModifier="options"
     triggerButtonSubtle={true}
   >
@@ -28,12 +31,15 @@ export const OptionsDropdown = ({
   </Dropdown>
 );
 
+OptionsDropdown.PANEL_SIZES = DROPDOWN_PANEL_SIZES;
+
 OptionsDropdown.defaultProps = {
   align: null,
   className: null,
   exitPanelHandler: (evt) => evt,
   isPinned: true,
   panelMaxWidth: null,
+  panelSize: DROPDOWN_PANEL_SIZES.DEFAULT,
   options: null,
 };
 
@@ -45,5 +51,6 @@ OptionsDropdown.propTypes = {
   exitPanelHandler: PropTypes.func,
   isPinned: PropTypes.bool,
   panelMaxWidth: PropTypes.string,
+  panelSize: PropTypes.oneOf(Object.values(DROPDOWN_PANEL_SIZES)),
   options: DropdownItemList.itemsPropTypes,
 };
