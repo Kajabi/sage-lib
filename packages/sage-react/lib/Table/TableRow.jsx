@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import uuid from 'react-uuid';
-import { Checkbox } from '../Toggle';
-import { TableHelpers } from '../helpers';
-import { cellPropTypes } from './configs';
 import { parseRowData, parseCellData } from './helpers';
+import { cellPropTypes } from './configs';
+import { TableHelpers } from '../helpers';
+import { Checkbox } from '../Toggle';
 
 export const TableRow = ({
   className,
@@ -17,7 +17,9 @@ export const TableRow = ({
   selected,
   typeRenderers,
 }) => {
-  const [selfSelected, setSelfSelected] = useState(false);
+  const [selfSelected, setSelfSelected] = useState(selected);
+  const [selfCells, setSelfCells] = useState([]);
+
   const classNames = classnames(
     'sage-table__row',
     className,
@@ -27,23 +29,44 @@ export const TableRow = ({
   );
 
   useEffect(() => {
-    setSelfSelected(selected);
-  }, [selected]);
+    const selfTypeRenderers = Object.assign(typeRenderers, TableHelpers.typeRenderers);
+    const newCells = cells.map(({ field, attributes, className, dataType, style, value }) => {
+      if (schema && !schema[field]) {
+        return null;
+      } if (schema) {
+        const {
+          attributes: schemaAttributes,
+          className: schemaClassName,
+          dataType: schemaDataType,
+          style: schemaStyle,
+        } = schema[field];
+        attributes = attributes || schemaAttributes;
+        className = className || schemaClassName;
+        dataType = dataType || schemaDataType;
+        style = style || schemaStyle;
+      }
+      const cellClassnames = classnames(
+        'sage-table-cell',
+        className,
+        {
+          [`sage-table-cell--${dataType}`]: dataType,
+        }
+      );
+      return {
+        attributes,
+        classNames: cellClassnames,
+        contents: TableHelpers.renderDataTypes(value, dataType, selfTypeRenderers),
+        key: uuid(),
+        style,
+      };
+    });
+    setSelfCells(newCells);
+  }, []);
 
   const onChangeSelector = (value, checked) => {
-    if (onSelect) {
-      onSelect(id);
-    } else {
-      setSelfSelected(!checked);
-    }
+    setSelfSelected(!checked);
+    onSelect(id);
   };
-
-  const selfTypeRenderers = Object.assign(typeRenderers, TableHelpers.typeRenderers);
-  const renderCellData = (data, dataType) => TableHelpers.renderDataTypes(
-    data,
-    dataType,
-    selfTypeRenderers
-  );
 
   return (
     <tr className={classNames} data-table-row-id={id}>
@@ -60,58 +83,32 @@ export const TableRow = ({
           />
         </td>
       )}
-      {cells.map(({ field, attributes, className, dataType, style, value }) => {
-        // Check for schema data for this field
-        if (schema && !schema[field]) {
-          return null;
+      {selfCells.map((configs) => {
+        if (!configs) {
+          return;
         }
-
-        // Schema found; now check for attributes and/or dataType
-        if (schema) {
-          const {
-            attributes: schemaAttributes,
-            className: schemaClassName,
-            dataType: schemaDataType,
-            style: schemaStyle,
-          } = schema[field];
-
-          attributes = attributes || schemaAttributes;
-          className = className || schemaClassName;
-          dataType = dataType || schemaDataType;
-          style = style || schemaStyle;
-        }
-
-        const cellClassnames = classnames(
-          'sage-table-cell',
-          className,
-          {
-            [`sage-table-cell--${dataType}`]: dataType,
-          }
-        );
-
+        const { key, classNames, style, attributes, contents } = configs;
+        // eslint-disable-next-line consistent-return
         return (
-          <td key={uuid()} className={cellClassnames} style={style} {...attributes}>
-            {renderCellData(value, dataType)}
+          <td key={key} className={classNames} style={style} {...attributes}>
+            {contents}
           </td>
         );
       })}
     </tr>
   );
 };
-
 TableRow.parseCellData = parseCellData;
 TableRow.parseRowData = parseRowData;
-
 TableRow.defaultProps = {
   className: null,
   cells: [],
-  onSelect: (evt) => evt,
-  schema: null,
+  onSelect: (ev) => ev,
   selectable: false,
   selected: false,
   typeRenderers: {},
+  schema: {}
 };
-
 TableRow.propTypes = {
   className: PropTypes.string,
   cells: PropTypes.arrayOf(PropTypes.shape(cellPropTypes)),
@@ -125,3 +122,4 @@ TableRow.propTypes = {
   schema: PropTypes.shape({}),
   typeRenderers: PropTypes.shape({}),
 };
+export default TableRow;

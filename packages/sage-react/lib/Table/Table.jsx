@@ -45,9 +45,10 @@ export const Table = ({
   selectedRows,
   tableAttributes,
 }) => {
-  const [selfSelectedRows, setSelfSelectedRows] = useState([]);
+  const [selfSelectedRows, setSelfSelectedRows] = useState(selectedRows);
   const [selfHeaders, setSelfHeaders] = useState([]);
 
+  console.log('Hi there');
   const containerClassNames = classnames(
     'sage-table-wrapper',
     className,
@@ -103,7 +104,7 @@ export const Table = ({
           attributes,
           classname,
           dataType,
-          label,
+          lbel,
           style,
         } = schema[field];
 
@@ -153,48 +154,33 @@ export const Table = ({
     buildHeaders();
   }, [schema, headers]);
 
-  // Ensure selected rows change when adjsuted from the outside
-  useEffect(() => {
-    setSelfSelectedRows(selectedRows);
-  }, [selectedRows]);
+  const removeFromList = (data) => selfSelectedRows.filter((each) => each !== data);
+
+  const addToList = (data) => [...selfSelectedRows, data];
 
   const onSelectRow = (data) => {
-    // If `selfSelectedRows` is `all` then
-    // we first need to convert it to an array containing all items.
-    // Otherwise we work with existing selection array.
-    let newSelectedRows = [];
+    let updatedArray;
+
     if (selfSelectedRows === SELECTION_TYPES.ALL) {
-      newSelectedRows = rows.map(({ id }) => id);
+      updatedArray = rows.map(({ id }) => id);
     } else {
-      newSelectedRows = selfSelectedRows;
+      updatedArray = selfSelectedRows;
     }
 
-    const matchIndex = newSelectedRows.indexOf(data);
-    let rowSelected;
-    if (matchIndex >= 0) {
-      rowSelected = false;
-      newSelectedRows.splice(matchIndex, 1);
-    } else {
-      rowSelected = true;
-      newSelectedRows.push(data);
-    }
+    const rowsSelected = selfSelectedRows.includes(data);
+    updatedArray = rowsSelected ? removeFromList(data) : addToList(data);
+    setSelfSelectedRows(updatedArray);
 
     if (onSelectRowHook) {
       onSelectRowHook({
         changedRow: {
           row: data,
-          selected: rowSelected,
+          selected: rowsSelected,
         },
-        selectedRows: newSelectedRows,
+        selectedRows: updatedArray,
       });
-    } else {
-      setSelfSelectedRows(newSelectedRows);
     }
   };
-
-  //
-  // Component detail renderers
-  //
 
   // Renders the cells in the header row
   const renderTableHeader = ({
