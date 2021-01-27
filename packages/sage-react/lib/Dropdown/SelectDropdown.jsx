@@ -8,6 +8,7 @@ import { Dropdown } from './Dropdown';
 import { DropdownTriggerSelect } from './DropdownTriggerSelect';
 
 export const SelectDropdown = ({
+  allowDeselect,
   allowMultiselect,
   className,
   closePanelOnExit,
@@ -89,7 +90,7 @@ export const SelectDropdown = ({
       }
 
       // Selecting same item as currently selected deselects it
-      if (selectedValue === configs.selectedValue) {
+      if (allowDeselect && selectedValue === configs.selectedValue) {
         deselectValue();
         return;
       }
@@ -205,6 +206,7 @@ export const SelectDropdown = ({
 };
 
 SelectDropdown.defaultProps = {
+  allowDeselect: false,
   allowMultiselect: false,
   className: null,
   closePanelOnExit: true,
@@ -229,6 +231,7 @@ SelectDropdown.defaultProps = {
 };
 
 SelectDropdown.propTypes = {
+  allowDeselect: PropTypes.bool,
   allowMultiselect: PropTypes.bool,
   className: PropTypes.string,
   closePanelOnExit: PropTypes.bool,
