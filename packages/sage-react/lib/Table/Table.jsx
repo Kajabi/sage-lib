@@ -48,7 +48,6 @@ export const Table = ({
   const [selfSelectedRows, setSelfSelectedRows] = useState(selectedRows);
   const [selfHeaders, setSelfHeaders] = useState([]);
 
-  console.log('Hi there');
   const containerClassNames = classnames(
     'sage-table-wrapper',
     className,

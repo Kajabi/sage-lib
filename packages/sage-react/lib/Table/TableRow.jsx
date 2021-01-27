@@ -122,4 +122,3 @@ TableRow.propTypes = {
   schema: PropTypes.shape({}),
   typeRenderers: PropTypes.shape({}),
 };
-export default TableRow;
