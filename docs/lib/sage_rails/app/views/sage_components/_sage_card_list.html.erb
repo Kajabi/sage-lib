@@ -1,7 +1,7 @@
 <ul
   class="
     sage-card__list
-    <%= "sage-card__list--block-space-${component.block_spacing}" if component.block_spacing.present? %>
+    <%= "sage-card__list--block-space-#{component.block_spacing}" if component.block_spacing.present? %>
     <%= component.generated_css_classes %>
   "
   <%= component.generated_html_attributes.html_safe %>
