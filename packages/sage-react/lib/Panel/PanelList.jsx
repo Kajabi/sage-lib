@@ -20,7 +20,7 @@ export const PanelList = ({
     'sage-panel__list',
     className,
     {
-      [`sage-panel__list--spacing-${blockSpacing}`]: blockSpacing,
+      [`sage-panel__list--block-space-${blockSpacing}`]: blockSpacing,
     }
   );
 

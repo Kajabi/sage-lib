@@ -20,7 +20,7 @@ export const CardList = ({
     'sage-card__list',
     className,
     {
-      [`sage-card__list--spacing-${blockSpacing}`]: blockSpacing,
+      [`sage-card__list--block-space-${blockSpacing}`]: blockSpacing,
     }
   );
 
