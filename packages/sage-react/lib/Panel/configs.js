@@ -12,3 +12,8 @@ export const PANEL_ROW_ALIGNMENT_OPTIONS = {
 };
 
 export const PANEL_TILE_OPTIONS_ARRAY = [2, 3, 4];
+
+export const PANEL_LIST_BLOCK_SPACING = {
+  DEFAULT: false,
+  MD: 'md',
+};
