@@ -118,6 +118,14 @@
     padding-top: sage-spacing(sm);
     padding-bottom: sage-spacing(sm);
   }
+
+  .sage-card__list:first-child &:first-child {
+    border-top: transparent;
+  }
+
+  .sage-card__list:last-child &:last-child {
+    border-bottom: transparent;
+  }
 }
 
 .sage-card__row {
