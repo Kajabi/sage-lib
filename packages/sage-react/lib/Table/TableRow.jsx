@@ -17,7 +17,7 @@ export const TableRow = ({
   selected,
   typeRenderers,
 }) => {
-  const [selfSelected, setSelfSelected] = useState([]);
+  const [selfSelected, setSelfSelected] = useState(false);
   const [selfCells, setSelfCells] = useState([]);
 
   const classNames = classnames(

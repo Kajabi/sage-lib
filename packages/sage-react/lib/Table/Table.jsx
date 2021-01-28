@@ -65,10 +65,6 @@ export const Table = ({
     }
   );
 
-  //
-  // Component utitilities
-  //
-
   const extractHeaderOverrides = (field, index) => {
     let overrides = null;
     // If headers is an array look for matching index
