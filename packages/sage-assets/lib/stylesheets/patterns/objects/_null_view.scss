@@ -1,0 +1,58 @@
+/* ==================================================
+  ** null_view
+  type: object
+
+================================================== */
+
+.sage-null-view {
+  display: grid;
+  grid-auto-flow: dense;
+  grid-template-columns: auto;
+  grid-gap: sage-spacing();
+  max-width: rem(960px);
+  margin-left: auto;
+  margin-right: auto;
+  padding: sage-spacing();
+  @media screen and (min-width: sage-breakpoint(lg-max)) {
+    grid-template-columns: auto 1fr;
+    grid-gap: 128px;
+  }
+}
+.sage-null-view__content {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  @media screen and (min-width: sage-breakpoint(lg-max)) {
+    order: 1;
+  }
+  .sage-null-view--reversed & {
+    order: 2;
+  }
+}
+.sage-null-view__title {
+  @extend %t-sage-heading-1;
+  margin-bottom: sage-spacing();
+}
+.sage-null-view__graphic {
+  text-align: center;
+  @media screen and (min-width: sage-breakpoint(lg-max)) {
+    order: 2;
+  }
+  .sage-null-view--reversed & {
+    order: 1;
+  }
+}
+.sage-null-view--center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: rem(960px);
+  width: 100%;
+  padding: sage-spacing();
+  @media screen and (min-width: sage-breakpoint(lg-max)) {
+    padding: 0;
+  }
+}
