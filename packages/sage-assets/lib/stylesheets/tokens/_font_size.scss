@@ -4,19 +4,41 @@
 /// @group sage
 ////
 
+:root {
+  --sage-font-size-xs: #{rem(12px)};
+  --sage-font-size-sm: #{rem(14px)};
+  --sage-font-size-md: #{rem(16px)};
+  --sage-font-size-lg: #{rem(18px)};
+  --sage-font-size-xl: #{rem(20px)};
+  --sage-font-size-2xl: #{rem(23px)};
+  --sage-font-size-3xl: #{rem(26px)};
+  --sage-font-size-4xl: #{rem(29px)};
+}
+
+@media screen and (min-width: sage-breakpoint(lg-min)) {
+  :root {
+    --sage-font-size-sm: #{rem(13px)};
+    --sage-font-size-md: #{rem(14px)};
+    --sage-font-size-lg: #{rem(16px)};
+    --sage-font-size-xl: #{rem(18px)};
+    --sage-font-size-2xl: #{rem(20px)};
+    --sage-font-size-3xl: #{rem(22px)};
+    --sage-font-size-4xl: #{rem(25px)};
+  }
+}
 
 ///
 /// Sage font sizes token
 ///
 $sage-font-sizes: (
-  xs: rem(12px),
-  sm: rem(14px),
-  md: rem(16px),
-  lg: rem(18px),
-  xl: rem(20px),
-  2xl: rem(23px),
-  3xl: rem(26px),
-  4xl: rem(29px)
+  xs: var(--sage-font-size-xs),
+  sm: var(--sage-font-size-sm),
+  md: var(--sage-font-size-md),
+  lg: var(--sage-font-size-lg),
+  xl: var(--sage-font-size-xl),
+  2xl: var(--sage-font-size-2xl),
+  3xl: var(--sage-font-size-3xl),
+  4xl: var(--sage-font-size-4xl)
 );
 
 ///
