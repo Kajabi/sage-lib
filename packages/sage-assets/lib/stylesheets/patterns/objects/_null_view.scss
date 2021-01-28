@@ -9,7 +9,7 @@
   grid-auto-flow: dense;
   grid-template-columns: auto;
   grid-gap: sage-spacing();
-  max-width: 960px;
+  max-width: rem(960px);
   margin-left: auto;
   margin-right: auto;
   padding: sage-spacing();
@@ -51,7 +51,7 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  max-width: 960px;
+  max-width: rem(960px);
   width: 100%;
   padding: sage-spacing();
   @media screen and (min-width: sage-breakpoint(lg-max)) {
