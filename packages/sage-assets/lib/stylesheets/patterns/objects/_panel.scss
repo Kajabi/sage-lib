@@ -130,6 +130,11 @@
   @include sage-grid-stack();
 }
 
+.sage-panel__stack--spacing-form {
+  justify-items: stretch;
+  gap: sage-spacing(card);
+}
+
 .sage-panel__subtitle {
   @extend %t-sage-heading-6;
 }
