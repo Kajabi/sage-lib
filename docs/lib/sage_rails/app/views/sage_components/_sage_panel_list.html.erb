@@ -1,5 +1,9 @@
 <ul
-  class="sage-panel__list <%= component.generated_css_classes %>"
+  class="
+    sage-panel__list
+    <%= "sage-panel__list--block-space-#{component.block_spacing}" if component.block_spacing.present? %>
+    <%= component.generated_css_classes %>
+  "
   <%= component.generated_html_attributes.html_safe %>
 >
   <%= component.content %>
