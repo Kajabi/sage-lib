@@ -149,6 +149,7 @@ export const Table = ({
     buildHeaders();
   }, [schema, headers]);
 
+  // Ensure selected rows change when adjusted from the outside
   useEffect(() => {
     setSelfSelectedRows(selectedRows);
   }, [selectedRows]);
