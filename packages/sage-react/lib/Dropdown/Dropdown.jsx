@@ -8,7 +8,7 @@ import { DropdownItemList } from './DropdownItemList';
 import { DropdownItemSearch } from './DropdownItemSearch';
 import { DropdownPanel } from './DropdownPanel';
 import { DropdownTrigger } from './DropdownTrigger';
-import { DROPDOWN_ITEM_COLORS } from './configs';
+import { DROPDOWN_ITEM_COLORS, DROPDOWN_PANEL_SIZES } from './configs';
 
 export const Dropdown = ({
   align,
@@ -27,6 +27,7 @@ export const Dropdown = ({
   label,
   panelModifier,
   panelMaxWidth,
+  panelSize,
   triggerButtonSubtle,
   triggerModifier,
 }) => {
@@ -111,10 +112,11 @@ export const Dropdown = ({
     {
       [`sage-dropdown--anchor-${align}`]: align,
       'sage-dropdown--active': isActive,
+      'sage-dropdown--contained': contained,
+      'sage-dropdown--customized': customized,
       'sage-dropdown--disabled': disabled,
       'sage-dropdown--pinned': isPinned,
-      'sage-dropdown--customized': customized,
-      'sage-dropdown--contained': contained,
+      [`sage-dropdown--${panelSize}`]: panelSize,
     }
   );
 
@@ -156,6 +158,7 @@ Dropdown.Panel = DropdownPanel;
 Dropdown.Trigger = DropdownTrigger;
 
 Dropdown.ITEM_COLORS = DROPDOWN_ITEM_COLORS;
+Dropdown.PANEL_SIZES = DROPDOWN_PANEL_SIZES;
 
 Dropdown.defaultProps = {
   align: null,
@@ -173,6 +176,7 @@ Dropdown.defaultProps = {
   isPinned: false,
   panelMaxWidth: null,
   panelModifier: 'default',
+  panelSize: DROPDOWN_PANEL_SIZES.DEFAULT,
   triggerButtonSubtle: false,
   triggerModifier: 'default',
   label: null
@@ -197,6 +201,7 @@ Dropdown.propTypes = {
   label: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   panelMaxWidth: PropTypes.string,
   panelModifier: PropTypes.string,
+  panelSize: PropTypes.oneOf(Object.values(DROPDOWN_PANEL_SIZES)),
   triggerButtonSubtle: PropTypes.bool,
   triggerModifier: PropTypes.string,
 };

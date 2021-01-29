@@ -1,18 +1,27 @@
 <tr>
-  <td>single_block_type</td>
-  <td>When the card contains a single body type this can be used to simplify markup. See above.</td>
-  <td>String</td>
-  <td><code>block | stack | list | row</code></td>
+  <td><%= md('`clear_bottom_padding`') %></td>
+  <td>Erases padding on bottom of the Card for tighter alignment of child items.</td>
+  <td>Boolean</td>
+  <td><%= md('`false`') %></td>
 </tr>
 <tr>
-  <td>single_block_template</td>
-  <td>When a card contains a single row, this optional param specifies the Sage Grid Template to be used.</td>
-  <td>String</td>
-  <td><code>null</code></td>
+  <td><%= md('`clear_top_padding`') %></td>
+  <td>Erases padding on top of the Card for tighter alignment of child items.</td>
+  <td>Boolean</td>
+  <td><%= md('`false`') %></code></td>
 </tr>
 <tr>
-  <td>border_dashed</td>
+  <td><%= md('`border_dashed`') %></td>
   <td>Uses our Sage dashed border styles</td>
   <td>Boolean</td>
-  <td><code>false</code></td>
+  <td><%= md('`false`') %></td>
+</tr>
+<tr>
+  <td colspan="4"><strong>Card List</strong></td>
+</tr>
+<tr>
+  <td><%= md('`block_spacing`') %></td>
+  <td>Adjusts the default spacing settings on top and bottom of items inside the list</td>
+  <td><%= md('Optionally: `"sm"`') %></td>
+  <td><%= md('--') %></td>
 </tr>

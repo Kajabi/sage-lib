@@ -105,6 +105,11 @@
   border-bottom: 1px solid sage-color(grey, 200);
 
   @include sage-grid-card-row;
+
+  .sage-panel__list--block-space-md & {
+    padding-top: sage-spacing();
+    padding-bottom: sage-spacing();
+  }
 }
 
 .sage-panel__row {

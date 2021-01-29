@@ -106,9 +106,9 @@ $sage-type-specs: (
 );
 
 ///
-/// Implements a type spec as CSS properties. 
-/// 
-/// @param {string} $spec-name Name of the type spec to set up 
+/// Implements a type spec as CSS properties.
+///
+/// @param {string} $spec-name Name of the type spec to set up
 ///
 @mixin sage-type-spec($spec-name) {
   $spec-map: map-get($sage-type-specs, $spec-name);

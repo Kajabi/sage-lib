@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import { Label } from '../Label';
 
 export const Input = ({
   className,
@@ -62,7 +63,7 @@ export const Input = ({
     if (affixUpdatesNeeded) {
       updateStyles(newInputStyles);
     }
-  }, [inputStyles, prefix, prefixRef, suffix, suffixRef]);
+  }, [prefix, suffix]);
 
   return (
     <div className={classNames}>
@@ -81,22 +82,22 @@ export const Input = ({
         </label>
       )}
       {prefix && (
-        <span
-          ref={prefixRef}
-          className="sage-input__affix sage-input__affix--prefix sage-label sage-label--draft"
+        <Label
           aria-label={`Prefixed with ${prefix}`}
-        >
-          {prefix}
-        </span>
+          className="sage-input__affix sage-input__affix--prefix"
+          color={Label.COLORS.DRAFT}
+          ref={prefixRef}
+          value={prefix}
+        />
       )}
       {suffix && (
-        <span
-          ref={suffixRef}
-          className="sage-input__affix sage-input__affix--suffix sage-label sage-label--draft"
+        <Label
           aria-label={`Suffixed with ${suffix}`}
-        >
-          {suffix}
-        </span>
+          className="sage-input__affix sage-input__affix--suffix"
+          color={Label.COLORS.DRAFT}
+          ref={suffixRef}
+          value={suffix}
+        />
       )}
       {message && (
         <div className="sage-input__message">{message}</div>

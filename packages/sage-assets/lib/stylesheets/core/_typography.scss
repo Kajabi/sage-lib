@@ -26,6 +26,7 @@ body {
   text-size-adjust: 100%;
   color: map-get($sage-text-colors, body);
   font-family: $-body-font-stack;
+  font-size: sage-font-size();
 
   @supports (font-variation-settings: normal) {
     font-family: "Inter var", $-body-font-stack;

@@ -1,0 +1,52 @@
+<div class="sage-input-group sage-input-group--<%= component.group_button_type -%>" role="group" aria-labelledby="<%= component.group_id %>">
+  <%= sage_component SageFormInput, {
+    id: "#{ component.group_id }",
+    input_type: "#{ component.group_button_type}",
+    label_text: "#{ component.group_button_label }",
+    placeholder: "#{ component.group_button_label }",
+    value: "",
+    required: true,
+    disabled: false,
+    input_mode: "",
+    pattern: "",
+    max: "",
+    minlength: "",
+    maxlength: "",
+    has_error: false,
+    message_text: "",
+    prefix: "",
+    suffix: "",
+    has_placeholder: false
+  } %>
+  <%- if component.has_hint -%>
+    <%= sage_component SageInputHelper,
+      helper_id: "",
+      helper_target: "input-group-pw-example",
+      description: "Your password must meet the following criteria:",
+      hints: [
+        {
+          id: "pw-hint-characters",
+          type_detect: "characters",
+          text: "At least eight characters"
+        },
+        {
+          id: "pw-hint-numbers",
+          type_detect: "numbers",
+          text: "Has one or more numbers"
+        },
+        {
+          id: "pw-hint-symbols",
+          type_detect: "symbols",
+          text: "Includes at least one symbol ($@!#%)"
+        }
+      ]
+    %>
+  <%- end -%>
+  <%- if component.has_button -%> 
+    <button
+      class="sage-input-group__button <%= component.group_button_style.present? ? "sage-btn #{component.group_button_style}" : "sage-input-group__toggle" %> <%= component.group_button_icon if component.group_button_icon %>"
+      <% if component.group_button_type == "password" %> data-js-mask="password"<% end %><% if component.group_button_tooltip %> data-tooltip="<%= component.group_button_tooltip_text %>" data-position="<% component.group_button_tooltip_position %>"<% if component.group_button_tooltip_size != "" %> data-tooltip-size="<%= component.group_button_tooltip_size %>"<% end %><% end %>>
+      <%- if component.group_button_text_hidden -%><span class="visually-hidden"><% end %><%= component.group_button_text %><%- if component.group_button_text_hidden -%></span><% end %>
+    </button>
+  <%- end -%>
+</div>

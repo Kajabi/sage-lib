@@ -124,10 +124,10 @@ module ElementsHelper
       {
         title: "indicator",
         description: "A simple dot-styled position indicator bar. This is currently not intended to be used as navigation but only a visual indicator.",
-        use_legacy_html_code_source: true,
+        use_legacy_html_code_source: false,
         scss: "doing",
         docs: "doing",
-        rails: "todo",
+        rails: "done",
         react: "todo",
         a11y: "doing"
       },
@@ -144,7 +144,7 @@ module ElementsHelper
       {
         title: "link",
         description: "While links have default styling in the app, some links deserve a little more ❤️",
-        use_legacy_html_code_source: true,
+        use_legacy_html_code_source: false,
         scss: "done",
         docs: "done",
         rails: "done",
@@ -234,12 +234,12 @@ module ElementsHelper
       {
         title: "status_icon",
         description: "Display the status of an item",
-        use_legacy_html_code_source: true,
+        use_legacy_html_code_source: false,
         scss: "done",
         docs: "done",
         rails: "done",
         react: "todo",
-        a11y: "todo"
+        a11y: "done"
       },
       {
         title: "switch",
@@ -284,10 +284,10 @@ module ElementsHelper
       {
         title: "tooltip",
         description: "Tooltips display helpful text when users hover over an element.",
-        use_legacy_html_code_source: true,
+        use_legacy_html_code_source: false,
         scss: "done",
         docs: "done",
-        rails: "todo",
+        rails: "done",
         react: "todo",
         a11y: "todo"
       },

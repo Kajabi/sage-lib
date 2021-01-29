@@ -113,6 +113,19 @@
   padding: sage-spacing(xs) sage-spacing(sm);
   border-top: 1px solid sage-color(grey, 200);
   border-bottom: 1px solid sage-color(grey, 200);
+
+  .sage-card__list--block-space-sm & {
+    padding-top: sage-spacing(sm);
+    padding-bottom: sage-spacing(sm);
+  }
+
+  .sage-card__list:first-child &:first-child {
+    border-top: transparent;
+  }
+
+  .sage-card__list:last-child &:last-child {
+    border-bottom: transparent;
+  }
 }
 
 .sage-card__row {

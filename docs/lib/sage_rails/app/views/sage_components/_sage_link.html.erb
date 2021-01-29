@@ -1,0 +1,15 @@
+<% if component.help_link && component.show_label %>
+  <a href="<%= component.url %>" class="sage-link--help"><%= component.label %></a>
+<% elsif component.help_link && !component.show_label %>
+  <a href="<%= component.url %>" class="sage-link--help-icon-only">
+    <span class="visually-hidden"><%= component.label %></span>
+  </a>
+<% elsif !component.external && !component.launch %>
+  <a href="<%= component.url %>"><%= component.label %></a>
+<% elsif !component.external && component.launch %>
+  <a href="<%= component.url %>" class="sage-link--launch"><%= component.label %></a>
+<% elsif component.external && component.launch %>
+  <a href="<%= component.url %>" target="_blank" rel="noopener noreferrer"><%= component.label %></a>
+<% elsif component.external && !component.launch %>
+  <a href="<%= component.url %>" target="_blank" class="sage-link--no-launch" rel="noopener noreferrer"><%= component.label %></a>
+<% end %>

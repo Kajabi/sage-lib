@@ -4,3 +4,8 @@ export const DROPDOWN_ITEM_COLORS = {
   PRIMARY: 'primary',
   DEFAULT: null,
 };
+
+export const DROPDOWN_PANEL_SIZES = {
+  DEFAULT: false,
+  SMALL: 'small',
+};

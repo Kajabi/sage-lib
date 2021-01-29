@@ -12,6 +12,7 @@ module ObjectsHelper
   def sage_objects
     [
       # Sage Generated Objects
+
       {
         title: "alert",
         description: "Alerts are used to indicate user-driven notifications.",
@@ -165,12 +166,12 @@ module ObjectsHelper
       {
         title: "input_group",
         description: "Allows inline grouping of text inputs with buttons",
-        use_legacy_html_code_source: true,
+        use_legacy_html_code_source: false,
         scss: "done",
         docs: "done",
-        rails: "doing",
+        rails: "done",
         react: "todo",
-        a11y: "todo"
+        a11y: "done"
       },
       {
         title: "input_helper",
@@ -201,6 +202,14 @@ module ObjectsHelper
         rails: "doing",
         react: "todo",
         a11y: "todo"
+      },
+      {
+        title: "null_view",
+        description: "Null view displays content, action items, and a graphic in order to introduce a customer to a section of the app that may not yet have content.",
+        scss: "todo",
+        rails: "todo",
+        react: "todo",
+        a11y: "todo",
       },
       {
         title: "page_heading",

@@ -236,7 +236,7 @@ $-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
 .sage-dropdown__menu {
   overflow: auto;
   min-width: $-dropdown-width;
-  width: 100%;
+  width: auto;
   max-height: $-panel-max-height;
   padding: sage-spacing(xs) 0;
 
@@ -263,7 +263,7 @@ $-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
   // transform: rotate3d(1, 0, 0, -90deg);
   transform-origin: top center;
   min-width: $-dropdown-width;
-  width: 100%;
+  width: auto;
   border-radius: sage-border(radius);
   background-color: sage-color(white);
   box-shadow: sage-shadow(md);

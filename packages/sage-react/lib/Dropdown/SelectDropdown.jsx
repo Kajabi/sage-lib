@@ -6,8 +6,10 @@ import uuid from 'react-uuid';
 import { SageTokens } from '../configs';
 import { Dropdown } from './Dropdown';
 import { DropdownTriggerSelect } from './DropdownTriggerSelect';
+import { DROPDOWN_PANEL_SIZES } from './configs';
 
 export const SelectDropdown = ({
+  allowDeselect,
   allowMultiselect,
   className,
   closePanelOnExit,
@@ -25,6 +27,7 @@ export const SelectDropdown = ({
   onDeselect,
   onSearch,
   onSelect,
+  panelSize,
   resetToken,
   searchable,
   searchPlaceholder,
@@ -89,7 +92,7 @@ export const SelectDropdown = ({
       }
 
       // Selecting same item as currently selected deselects it
-      if (selectedValue === configs.selectedValue) {
+      if (allowDeselect && selectedValue === configs.selectedValue) {
         deselectValue();
         return;
       }
@@ -188,6 +191,7 @@ export const SelectDropdown = ({
       exitPanelHandler={changeValue}
       label={emptySelectedValue}
       panelModifier="select"
+      panelSize={panelSize}
       triggerModifier="select"
     >
       <Dropdown.ItemList
@@ -204,7 +208,10 @@ export const SelectDropdown = ({
   );
 };
 
+SelectDropdown.PANEL_SIZES = DROPDOWN_PANEL_SIZES;
+
 SelectDropdown.defaultProps = {
+  allowDeselect: false,
   allowMultiselect: false,
   className: null,
   closePanelOnExit: true,
@@ -222,6 +229,7 @@ SelectDropdown.defaultProps = {
   onDeselect: null,
   onSelect: (evt) => evt,
   onSearch: (evt) => evt,
+  panelSize: DROPDOWN_PANEL_SIZES.DEFAULT,
   resetToken: null,
   searchable: false,
   searchPlaceholder: 'Find',
@@ -229,6 +237,7 @@ SelectDropdown.defaultProps = {
 };
 
 SelectDropdown.propTypes = {
+  allowDeselect: PropTypes.bool,
   allowMultiselect: PropTypes.bool,
   className: PropTypes.string,
   closePanelOnExit: PropTypes.bool,
@@ -257,6 +266,7 @@ SelectDropdown.propTypes = {
   onDeselect: PropTypes.func,
   onSearch: PropTypes.func,
   onSelect: PropTypes.func,
+  panelSize: PropTypes.oneOf(Object.values(DROPDOWN_PANEL_SIZES)),
   resetToken: PropTypes.oneOfType([PropTypes.bool, PropTypes.number, PropTypes.string]),
   searchable: PropTypes.bool,
   searchPlaceholder: PropTypes.string,
