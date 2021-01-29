@@ -40,6 +40,16 @@ const PanelControlsWithData = () => {
         plural: 'articles',
       },
       selectionType: PanelControls.SELECTION_TYPES.NONE,
+      sortOptions: [
+        {
+          id: 'sort-title',
+          label: 'Title',
+        },
+        {
+          id: 'sort-date',
+          label: 'Publish date',
+        }
+      ],
       totalItems: 0,
       totalPages: 1,
     }
@@ -117,6 +127,10 @@ const PanelControlsWithData = () => {
     console.log('bulk action command recieved', payload); // eslint-disable-line
   };
 
+  const sortActionsHandler = (payload) => {
+    console.log('receieved sorts', payload); // eslint-disable-line
+  };
+
   //
   // Render
   //
@@ -129,6 +143,7 @@ const PanelControlsWithData = () => {
           data,
           stateData: selfData,
           setStateDataFn: setSelfData,
+          sortHandlerFn: sortActionsHandler,
           pageChangeHandlerFn: fetchData,
           bulkActionsHandlerFn: bulkActionshandler,
         })}
