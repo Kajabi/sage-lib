@@ -6,6 +6,7 @@ import { TableHelpers } from '../helpers';
 import { cellPropTypes, dataPropTypes } from './configs';
 import { TableHeader } from './TableHeader';
 import { TableRow } from './TableRow';
+import { SELECTION_TYPES } from '../PanelControls/configs';
 
 //
 // Tables are built out from a provided set of rows.
@@ -158,7 +159,16 @@ export const Table = ({
   }, [selectedRows]);
 
   const onSelectRow = (data) => {
-    const newSelectedRows = selfSelectedRows;
+    // If `selfSelectedRows` is `all` then
+    // we first need to convert it to an array containing all items.
+    // Otherwise we work with existing selection array.
+    let newSelectedRows = [];
+    if (selfSelectedRows === SELECTION_TYPES.ALL) {
+      newSelectedRows = rows.map(({ id }) => id);
+    } else {
+      newSelectedRows = selfSelectedRows;
+    }
+
     const matchIndex = newSelectedRows.indexOf(data);
     let rowSelected;
     if (matchIndex >= 0) {
@@ -226,7 +236,7 @@ export const Table = ({
         id={rowId}
         cells={cells}
         schema={schema}
-        selected={selfSelectedRows.includes(rowId)}
+        selected={selfSelectedRows === SELECTION_TYPES.ALL || selfSelectedRows.includes(rowId)}
         selectable={selectable}
         onSelect={onSelectRow}
       />
@@ -303,10 +313,13 @@ Table.propTypes = {
   // Schema provides a structure for applying settings to headers and cells
   schema: PropTypes.shape({}),
   selectable: PropTypes.bool,
-  selectedRows: PropTypes.arrayOf(PropTypes.oneOfType([
-    PropTypes.number,
-    PropTypes.shape({}),
-    PropTypes.string,
-  ])),
+  selectedRows: PropTypes.oneOfType(
+    PropTypes.oneOf([SELECTION_TYPES.ALL]),
+    PropTypes.arrayOf(PropTypes.oneOfType([
+      PropTypes.number,
+      PropTypes.shape({}),
+      PropTypes.string,
+    ])),
+  ),
   tableAttributes: PropTypes.shape({}),
 };

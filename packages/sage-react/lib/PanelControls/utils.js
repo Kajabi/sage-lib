@@ -29,8 +29,6 @@ export const listDisplayString = (page, itemsShown, itemsTotal, noun = { plural:
 export const handleChange = ({
   bulkActionsHandlerFn,
   data,
-  itemsKey = 'items',
-  mapSelectedRowsFn = ({ id }) => id,
   pageChangeHandlerFn,
   stateData,
   setStateDataFn,
@@ -55,7 +53,7 @@ export const handleChange = ({
     let selectedRows;
     switch (data.selectionType) {
       case SELECTION_TYPES.ALL:
-        selectedRows = stateData[itemsKey].map(mapSelectedRowsFn);
+        selectedRows = SELECTION_TYPES.ALL;
         break;
       case SELECTION_TYPES.NONE:
       default:
