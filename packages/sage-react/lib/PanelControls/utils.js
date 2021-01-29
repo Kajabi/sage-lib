@@ -32,6 +32,7 @@ export const handleChange = ({
   pageChangeHandlerFn,
   stateData,
   setStateDataFn,
+  sortHandlerFn,
 }) => {
   // First if a page change is requested, send for that
   if (data.page) {
@@ -43,6 +44,13 @@ export const handleChange = ({
   if (data.bulkActionCommand) {
     if (bulkActionsHandlerFn) {
       bulkActionsHandlerFn(data);
+      return;
+    }
+  }
+
+  if (data.sortActionCommand) {
+    if (sortHandlerFn) {
+      sortHandlerFn(data);
       return;
     }
   }

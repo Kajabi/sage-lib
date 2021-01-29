@@ -6,6 +6,7 @@ import {
   handleSelection,
 } from './utils';
 import { DEFAULT_NOUN, SELECTION_TYPES } from './configs';
+import { SelectDropdown } from '../Dropdown';
 import { PanelControlsBulkActions } from './PanelControlsBulkActions';
 import { PanelControlsPagination } from './PanelControlsPagination';
 import { PanelControlsToolbar } from './PanelControlsToolbar';
@@ -21,6 +22,7 @@ export const PanelControls = ({
     // Set locally
     bulkActionsChecked: false,
     bulkActionsItems: [],
+    sortOptions: null,
 
     // Synched with `controlSettings
     currentPage: 1,
@@ -87,6 +89,10 @@ export const PanelControls = ({
     onRequestChange({ bulkActionCommand: payload });
   };
 
+  const handleSortSelection = (payload) => {
+    onRequestChange({ sortActionCommand: payload });
+  };
+
   //
   // Render
   //
@@ -119,7 +125,17 @@ export const PanelControls = ({
             onClickPagination={onClickPagination}
             totalPages={selfConfigs.totalPages}
           />
-          {/* TODO: Add sort dropdown */}
+          {selfConfigs.sortOptions && (
+            <SelectDropdown
+              align="right"
+              className="sage-dropdown--sort sage-panel-controls__sorts"
+              customized={true}
+              items={selfConfigs.sortOptions}
+              label="Sort"
+              onSelect={handleSortSelection}
+              selectionBecomesLabel={true}
+            />
+          )}
         </div>
       </div>
     </div>
@@ -153,6 +169,7 @@ PanelControls.propTypes = {
       plural: PropTypes.string,
     }),
     selectionType: PropTypes.oneOf(Object.values(SELECTION_TYPES)),
+    sortOptions: PropTypes.arrayOf(PropTypes.shape({})),
     totalItems: PropTypes.number,
     totalPages: PropTypes.number,
   }),
