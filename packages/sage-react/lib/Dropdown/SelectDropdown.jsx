@@ -9,6 +9,7 @@ import { DropdownTriggerSelect } from './DropdownTriggerSelect';
 import { DROPDOWN_PANEL_SIZES } from './configs';
 
 export const SelectDropdown = ({
+  align,
   allowDeselect,
   allowMultiselect,
   className,
@@ -174,6 +175,7 @@ export const SelectDropdown = ({
 
   return (
     <Dropdown
+      align={align}
       className={configs.classNames}
       closePanelOnExit={closePanelOnExit}
       contained={contained}
@@ -211,6 +213,7 @@ export const SelectDropdown = ({
 SelectDropdown.PANEL_SIZES = DROPDOWN_PANEL_SIZES;
 
 SelectDropdown.defaultProps = {
+  align: null,
   allowDeselect: false,
   allowMultiselect: false,
   className: null,
@@ -237,6 +240,9 @@ SelectDropdown.defaultProps = {
 };
 
 SelectDropdown.propTypes = {
+  align: PropTypes.oneOf([
+    'right',
+  ]),
   allowDeselect: PropTypes.bool,
   allowMultiselect: PropTypes.bool,
   className: PropTypes.string,
