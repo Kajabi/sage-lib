@@ -3,6 +3,41 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.18.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.17.1...@kajabi/sage-assets@0.18.0) (2021-01-29)
+
+
+### Bug Fixes
+
+* **card:** remove card list item borders in first/last context ([f95b173](https://github.com/Kajabi/sage-lib/commit/f95b1730633ce9ceab27661147cc2030218c8328))
+* **dropdown:** max dropdown panel sizing easier to work with ([e07003d](https://github.com/Kajabi/sage-lib/commit/e07003d8066c7b8cfbf4b78572d4cc9917ec1072))
+* **nullview:** adjust responsiveness ([59acb6b](https://github.com/Kajabi/sage-lib/commit/59acb6ba0ab073c9e3c62995d11e204db4e80c3d))
+* **nullview:** adjust reversing based on review ([58d6b59](https://github.com/Kajabi/sage-lib/commit/58d6b59acf8b1d79d8507070f707d8e3601abfdb))
+* **nullview:** adjust styles ([cc234d4](https://github.com/Kajabi/sage-lib/commit/cc234d47c4827245938354c6bd5a6bb4fa91836e))
+* **nullview:** adjustments based on review ([6dd3619](https://github.com/Kajabi/sage-lib/commit/6dd3619440d645aae66df71f9639218776061654))
+* **nullview:** remove duplicate ([7db194d](https://github.com/Kajabi/sage-lib/commit/7db194d50b7489b038d2787cd83d3f84ff0aaac5))
+* **nullview:** remove unused style ([14e58e7](https://github.com/Kajabi/sage-lib/commit/14e58e7ce32511fbef92cda52d1073055cd653af))
+* **nullview:** sizing ajustment ([81f5e72](https://github.com/Kajabi/sage-lib/commit/81f5e728144be99ce1786524f303d19514451986))
+* align spacing settings on card and panel lists ([a8874bd](https://github.com/Kajabi/sage-lib/commit/a8874bd0acb72ce4513f413f6b49de587eaa0272))
+
+
+### Features
+
+* **card:** add block spacing options for card lists ([f75846a](https://github.com/Kajabi/sage-lib/commit/f75846afea2e68498da58f83d21eb5501787ea3d))
+* **font sizes:** apply major second type scale to 14px base font ([7e9bbc9](https://github.com/Kajabi/sage-lib/commit/7e9bbc9a1332e125c1f95c3dfec744c0191033d4))
+* **nullview:** add styling ([f523cb0](https://github.com/Kajabi/sage-lib/commit/f523cb0ea7c906e5fb931478dc4b87b2cbd01f97))
+* **nullview:** initial setup / generation of nullview ([4c4ab47](https://github.com/Kajabi/sage-lib/commit/4c4ab4753e39ab37b8dded299c588266b950934c))
+* **panel:** add block spacing options for panel lists ([ace4bea](https://github.com/Kajabi/sage-lib/commit/ace4bea068324a53e35feac458fe4b1ae957be26))
+* **type:** revised font sizing using css custom props ([db54fa5](https://github.com/Kajabi/sage-lib/commit/db54fa533eeaa549484aa5e517cc3672e6541717))
+
+
+### Performance Improvements
+
+* **fonts:** updated font fonts to v3.15, remove unused weights ([65a82be](https://github.com/Kajabi/sage-lib/commit/65a82beea7fb08648a58dca3f7a31cc3c1302fe8))
+
+
+
+
+
 ## [0.17.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.17.0...@kajabi/sage-assets@0.17.1) (2021-01-25)
 
 

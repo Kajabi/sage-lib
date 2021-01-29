@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.26.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.25.0...@kajabi/sage-react@0.26.0) (2021-01-29)
+
+
+### Bug Fixes
+
+* align spacing settings on card and panel lists ([a8874bd](https://github.com/Kajabi/sage-lib/commit/a8874bd0acb72ce4513f413f6b49de587eaa0272))
+* **input:** remove exhaustive dependencies ([545deb6](https://github.com/Kajabi/sage-lib/commit/545deb67c340f32aea0182b37fcc0181fcb1a306))
+* **input:** use Label component for affixes ([c7e487b](https://github.com/Kajabi/sage-lib/commit/c7e487b25c900d6ae718b3d976df58a26c3cf1dd))
+* **label:** remove unused `children` prop ([8acdf4c](https://github.com/Kajabi/sage-lib/commit/8acdf4c3e1d031f6e255fb525feeaf8b58be5423))
+* **label:** set up forwardRef in Label ([531af59](https://github.com/Kajabi/sage-lib/commit/531af591255e390ee4ff88b81ea18ca202de5fbb))
+* **panel:** fix panel story with correct Label implementation ([05909bf](https://github.com/Kajabi/sage-lib/commit/05909bf3fdd92a53c930ac59452cdbb1dbf06932))
+
+
+### Features
+
+* **card:** add block spacing options for card lists ([f75846a](https://github.com/Kajabi/sage-lib/commit/f75846afea2e68498da58f83d21eb5501787ea3d))
+* **dropdown:** add ability to control deselect in SelectDropdown ([984e1ee](https://github.com/Kajabi/sage-lib/commit/984e1ee4d345162073404b34e957a0dbf889e242))
+* **dropdown:** add panel size prop to react Dropdowns ([cdfe050](https://github.com/Kajabi/sage-lib/commit/cdfe050b9fa2ebc104c720eac8264202532eeb62))
+* **panel:** add block spacing options for panel lists ([ace4bea](https://github.com/Kajabi/sage-lib/commit/ace4bea068324a53e35feac458fe4b1ae957be26))
+
+
+
+
+
 # [0.25.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.24.0...@kajabi/sage-react@0.25.0) (2021-01-25)
 
 

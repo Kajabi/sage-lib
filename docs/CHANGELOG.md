@@ -3,6 +3,41 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.8.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.7.1...@kajabi/sage@3.8.0) (2021-01-29)
+
+
+### Bug Fixes
+
+* **dropdown:** resolve string interpolation issue ([0f8f679](https://github.com/Kajabi/sage-lib/commit/0f8f67977bdb4374467344c9f4418bf3a981c4e0))
+* **indicator:** added rails component ([8cd87d2](https://github.com/Kajabi/sage-lib/commit/8cd87d2a490b3adf9cf350f63fbc067a3246250d))
+* **input-group:** added rails component and updated docs ([c71bf7e](https://github.com/Kajabi/sage-lib/commit/c71bf7ed7a56ece0e30abdced5737db722d96f39))
+* **link:** add rails component and updated docs ([1c41d5b](https://github.com/Kajabi/sage-lib/commit/1c41d5b8aab20f0c58b2f3904a3b44936ccb018c))
+* **nullview:** adjust reversing based on review ([58d6b59](https://github.com/Kajabi/sage-lib/commit/58d6b59acf8b1d79d8507070f707d8e3601abfdb))
+* **nullview:** adjustments based on review ([6dd3619](https://github.com/Kajabi/sage-lib/commit/6dd3619440d645aae66df71f9639218776061654))
+* **nullview:** source clean up ([6ccdec4](https://github.com/Kajabi/sage-lib/commit/6ccdec428e6be048e5df23e249a3e1972f6b897c))
+* card and panel list spacing documentation ([ac32a7a](https://github.com/Kajabi/sage-lib/commit/ac32a7a3f5c62b321273d19a6423412c918277ce))
+* **status-icon:** add rails demo code and updated props ([bb85c78](https://github.com/Kajabi/sage-lib/commit/bb85c78b8a6108c9f8c085c82f2bc8649937393f))
+* **tooltip:** added rails component and docs update ([5cb5ddd](https://github.com/Kajabi/sage-lib/commit/5cb5ddd4f248a88173fa4f8cb825e9ad7f525db5))
+
+
+### Features
+
+* add block spacing to Card and Panel Lists in Rails ([850e0c4](https://github.com/Kajabi/sage-lib/commit/850e0c428be13a9eeee0a1135a4152f8a11901ab))
+* **font sizes:** apply major second type scale to 14px base font ([7e9bbc9](https://github.com/Kajabi/sage-lib/commit/7e9bbc9a1332e125c1f95c3dfec744c0191033d4))
+* **nullview:** add nullview graphic ([9d8cfe8](https://github.com/Kajabi/sage-lib/commit/9d8cfe8d77e3dbc66db9a5e9293acb3d5344ff4b))
+* **nullview:** add preview markup ([4a0eef2](https://github.com/Kajabi/sage-lib/commit/4a0eef2cd6dbe8aa448d491faee7f3d4886f0952))
+* **nullview:** add views ([70d322a](https://github.com/Kajabi/sage-lib/commit/70d322ac00e7083cf04d83dc3d66b9cb14520fee))
+* **nullview:** initial setup / generation of nullview ([4c4ab47](https://github.com/Kajabi/sage-lib/commit/4c4ab4753e39ab37b8dded299c588266b950934c))
+
+
+### Performance Improvements
+
+* **nullview:** optimized null-view-graphic to reduce size ([d807642](https://github.com/Kajabi/sage-lib/commit/d80764262e049c26f7de4049c5f6eae02fea4806))
+
+
+
+
+
 ## [3.7.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.7.0...@kajabi/sage@3.7.1) (2021-01-25)
 
 
