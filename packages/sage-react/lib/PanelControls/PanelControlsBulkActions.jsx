@@ -19,8 +19,11 @@ export const PanelControlsBulkActions = ({
   selectionType,
   totalItems,
 }) => {
-  const bulkActionsLabelText = numSelectedRows > 0
-    ? `Selected ${numSelectedRows} ${rowNoun.plural || 'items'}`
+  const selectionCount = selectionType === SELECTION_TYPES.ALL
+    ? totalItems
+    : numSelectedRows;
+  const bulkActionsLabelText = selectionCount > 0
+    ? `Selected ${selectionCount} ${rowNoun.plural || 'items'}`
     : listDisplayString(
       currentPage,
       itemsOnThisPage,
