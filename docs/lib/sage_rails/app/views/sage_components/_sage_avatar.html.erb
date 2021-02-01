@@ -5,6 +5,9 @@
     <%= "sage-avatar--centered" if component.centered.present? && component.centered %>
     <%= component.css_classes %>
   "
+  <% if component.size.present? %>
+    style="width: <%= component.size %>; height: <%= component.size %>;"
+  <% end %>
 >
   <svg class="sage-avatar__initials" viewBox="0 0 32 32">
     <text x="16" y="20"><%= component.initials %></text>
