@@ -1,4 +1,59 @@
+<h2>Single item</h2>
 <%= sage_component SageDescription, {
   title: "Name",
   data: "John Doe",
 } %>
+
+<h2>Single item (title normal case)</h2>
+<%= sage_component SageDescription, {
+  title: "Name",
+  data: "John Doe",
+  allcaps_titles: false,
+} %>
+
+<h2>Mulitple items</h2>
+<%= sage_component SageDescription, {
+  items: [
+    {
+      title: "Name",
+      data: "John Doe",
+    },
+    {
+      title: "Name",
+      data: "John Doe",
+    },
+    {
+      title: "Name",
+      data: "John Doe",
+    },
+    {
+      title: "Name",
+      data: "John Doe",
+    }
+  ],
+} %>
+
+<h2>Mulitple items (inline layout)</h2>
+<%= sage_component SageDescription, {
+  items: [
+    {
+      title: "Name",
+      data: "John Doe",
+    },
+    {
+      title: "Name",
+      data: "John Doe",
+    },
+    {
+      title: "Name",
+      data: "John Doe",
+    },
+    {
+      title: "Name",
+      data: %(<img src="//placehold.it/24x18?text=VISA" /> John Doe),
+    }
+  ],
+  inline_spread: true,
+  allcaps_titles: false,
+} %>
+
