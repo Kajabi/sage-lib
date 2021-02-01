@@ -5,20 +5,30 @@ import { AVATAR_COLORS } from './configs';
 
 export const Avatar = ({
   className,
+  centered,
   color,
   initials,
+  size,
   ...rest
 }) => {
   const classNames = classnames(
     'sage-avatar',
     className,
     {
-      [`sage-avatar--${color}`]: color
+      'sage-avatar--centered': centered,
+      [`sage-avatar--${color}`]: color,
     }
   );
 
+  const style = {};
+
+  if (size) {
+    style.width = size;
+    style.height = size;
+  }
+
   return (
-    <div className={classNames} {...rest}>
+    <div className={classNames} style={style} {...rest}>
       <svg className="sage-avatar__initials" viewBox="0 0 32 32">
         <text x="16" y="20">{initials}</text>
       </svg>
@@ -29,13 +39,17 @@ export const Avatar = ({
 Avatar.COLORS = AVATAR_COLORS;
 
 Avatar.defaultProps = {
+  centered: false,
   className: '',
   color: AVATAR_COLORS.DEFAULT,
-  initials: ''
+  initials: '',
+  size: null,
 };
 
 Avatar.propTypes = {
+  centered: PropTypes.bool,
   className: PropTypes.string,
   color: PropTypes.oneOf(Object.values(AVATAR_COLORS)),
-  initials: PropTypes.string
+  initials: PropTypes.string,
+  size: PropTypes.string,
 };

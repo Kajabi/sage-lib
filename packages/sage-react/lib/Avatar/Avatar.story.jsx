@@ -13,6 +13,8 @@ export const Default = Template.bind({});
 Default.args = {
   initials: 'QJ',
   color: Avatar.COLORS.SAGE,
+  size: null,
+  centered: true,
 };
 
 export const Group = () => (
