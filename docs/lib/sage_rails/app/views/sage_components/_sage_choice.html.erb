@@ -6,7 +6,6 @@ html_tag = is_button ? (component.content.present? ? "div" : "button") : "a"
 
 <<%= html_tag %>
   <%= "type=button" if is_button and !component.content.present? %>
-  <%= "role=button" if is_button and component.content.present? %>
   <% component.attributes.each do |key, value| %>
     <%= "#{key}='#{value}'".html_safe %>
   <% end if component.attributes&.is_a?(Hash) %>
