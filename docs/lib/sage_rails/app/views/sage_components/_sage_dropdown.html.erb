@@ -50,20 +50,37 @@
             "
             role="none"
           >
-            <a
-              <% item[:attributes].each do |key, value| %>
-                <%= key %>="<%= value %>"
-              <% end if item[:attributes]&.is_a?(Hash) %>
-              role="menuitem"
-              tabindex="0"
-              class="
-                sage-dropdown__item-control
-                <%= "sage-dropdown__item-control--#{item[:style]}" if item[:style] %>
-                <%= "sage-dropdown__item-control--icon-#{item[:icon]}" if item[:icon] %>
-              "
-            >
-              <%= item[:value].html_safe %>
-            </a>
+            <% if item[:attributes].nil? || item[:attributes]&.keys&.include?(:href) || item[:attributes]&.keys&.include?("href") %>
+              <a
+                <% item[:attributes].each do |key, value| %>
+                  <%= key %>="<%= value %>"
+                <% end if item[:attributes]&.is_a?(Hash) %>
+                role="menuitem"
+                tabindex="0"
+                class="
+                  sage-dropdown__item-control
+                  <%= "sage-dropdown__item-control--#{item[:style]}" if item[:style] %>
+                  <%= "sage-dropdown__item-control--icon-#{item[:icon]}" if item[:icon] %>
+                "
+              >
+                <%= item[:value].html_safe %>
+              </a>
+            <% else %>
+              <button 
+                <% item[:attributes].each do |key, value| %>
+                  <%= key %>="<%= value %>"
+                <% end if item[:attributes]&.is_a?(Hash) %>
+                role="menuitem"
+                tabindex="0"
+                type="button"
+                class="
+                  sage-dropdown__item-control
+                  <%= "sage-dropdown__item-control--#{item[:style]}" if item[:style] %>
+                  <%= "sage-dropdown__item-control--icon-#{item[:icon]}" if item[:icon] %>
+                ">
+                <%= item[:value].html_safe %>
+              </button>
+            <% end %>
           </li>
         <% end %>
       <% end %>
