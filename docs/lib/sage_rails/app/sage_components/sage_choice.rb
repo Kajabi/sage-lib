@@ -9,7 +9,7 @@ class SageChoice < SageComponent
     link_text: [:optional, NilClass, String],
     subtext: [:optional, NilClass, String],
     target: [:optional, NilClass, String],
-    text: String,
-    type: [:optional, Set.new(["arrow", "graphic", "icon", "radio"])],
+    text: [:optional, NilClass, String],
+    type: [:optional, NilClass, Set.new(["arrow", "graphic", "icon", "radio"])]
   })
 end

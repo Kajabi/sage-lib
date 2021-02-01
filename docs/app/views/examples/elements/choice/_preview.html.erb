@@ -50,3 +50,18 @@
     },
   }
 %>
+
+<h3 class="t-sage-heading-6">Rich text/Customized</h3>
+<p>Choice cards can also be opened up for custom content to be composed within.</p>
+<%= sage_component SageChoice, {
+  target: "example",
+  attributes: {
+    href: "http://example.com",
+  },
+} do %>
+  <%= sage_component SageAvatar, { initials: 'PS' } %>
+  <%= sage_component SageCardBlock, {} do %>
+    <h4>Custom heading</h4>
+    <p>Custom content here...</p>
+  <% end %>
+<% end %>
