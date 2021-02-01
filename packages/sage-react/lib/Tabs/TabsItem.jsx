@@ -7,6 +7,7 @@ import { TAB_STYLES, CHOICE_TYPES } from './configs';
 
 export const TabsItem = ({
   alignCenter,
+  children,
   className,
   disabled,
   graphic,
@@ -23,7 +24,11 @@ export const TabsItem = ({
 }) => {
   const { to, href } = rest;
   const isLink = to || href;
-  const TagName = isLink ? Link : 'button';
+  const TagName = isLink 
+    ? Link
+    : children
+      ? 'div'
+      : 'button';
   const itemStyleProtected = itemStyle === TAB_STYLES.PROGRESSBAR ? TAB_STYLES.TAB : itemStyle;
   const isChoice = itemStyle === TAB_STYLES.CHOICE;
   const isIconType = type && type === CHOICE_TYPES.ICON;
@@ -57,8 +62,11 @@ export const TabsItem = ({
       ...attrs,
       disabled,
       onClick: () => onClick(panelId),
-      type: 'button',
     };
+
+    if (!children) {
+      attrs.type = 'button';
+    }
   }
 
   return (
@@ -70,15 +78,18 @@ export const TabsItem = ({
               {graphic}
             </span>
           )}
-          <span className="sage-choice__content">
-            <em className="sage-choice__text">
-              {label}
-            </em>
+          <span className={`sage-choice__content ${children && 'sage-choice__content--custom'}`}>
+            {label && (
+              <em className="sage-choice__text">
+                {label}
+              </em>
+            )}
             {subtext && (
               <span className="sage-choice__subtext">
                 {subtext}
               </span>
             )}
+            {children}
           </span>
           {linkText && (
             <span className="sage-choice__link-text">
@@ -95,6 +106,7 @@ TabsItem.CHOICE_TYPES = CHOICE_TYPES;
 
 TabsItem.defaultProps = {
   alignCenter: false,
+  children: null,
   className: null,
   disabled: false,
   graphic: null,
@@ -109,6 +121,7 @@ TabsItem.defaultProps = {
 
 TabsItem.propTypes = {
   alignCenter: PropTypes.bool,
+  children: PropTypes.node,
   className: PropTypes.string,
   disabled: PropTypes.bool,
   graphic: PropTypes.node,
