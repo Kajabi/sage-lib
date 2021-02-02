@@ -1,3 +1,4 @@
+<h3>Sample Avatars</h3>
 <div class="sage-avatar-wrapper">
   <!-- Showing default -->
   <%= sage_component SageAvatar, { color: nil, initials: "JC" } %>
@@ -12,6 +13,10 @@
   <%= sage_component SageAvatar, { color: "orange", initials: "KJ", css_classes: "my-custom-class" } %>
 </div>
 
+<h3>Avatar centered + custom size</h3>
+<%= sage_component SageAvatar, { color: nil, centered: true, initials: "JC", size: "128px" } %>
+
+<h3>Avatar Groups</h3>
 <div class="sage-avatar-wrapper">
   <%= sage_component SageAvatarGroup, {
     items: [
