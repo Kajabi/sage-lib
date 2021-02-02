@@ -38,6 +38,7 @@ $-modal-padding-y: sage-spacing(md);
 .sage-modal__container {
   visibility: hidden;
   display: none;
+  overflow: hidden;
   z-index: sage-z-index(modal);
   width: calc(100vw - #{sage-spacing(md)});
   max-width: sage-container(modal);
