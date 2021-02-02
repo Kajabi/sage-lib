@@ -84,3 +84,33 @@
     } %>
   <% end %>
 <% end %>
+
+<h3 class="t-sage-heading-6">As cards with images and without subtitles</h3>
+<%= sage_component SageSortable, { resource_name: "link" } do %>
+  <% 3.times do %>
+    <%= sage_component SageSortableItem, {
+      title: "Fringilla Ullamcorper Dolor Adipiscing Ultricies",
+      url_update: "update/endpoint",
+      image: "http://placehold.it/150",
+      id: "id",
+      card: true
+    } do %>
+      <%= sage_component SageButton, {
+        attributes: {
+          "data-js-tooltip": "Preview"
+        },
+        style: "secondary",
+        subtle: true,
+        icon: { name: "preview-on", style: "only" },
+        value: "Preview"
+      } %>
+    <% end %>
+  <% end %>
+
+  <%= sage_component_section :empty do %>
+    <%= sage_component SageEmptyState, {
+      title: "Empty State Title",
+      text: "Empty state text",
+    } %>
+  <% end %>
+<% end %>
