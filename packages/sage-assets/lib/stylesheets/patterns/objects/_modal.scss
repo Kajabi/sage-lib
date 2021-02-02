@@ -84,6 +84,14 @@ $-modal-padding-y: sage-spacing(md);
   @include clearfix;
 }
 
+.sage-modal__content--spacing-panel {
+  @include sage-grid-panel();
+}
+
+.sage-modal__content--spacing-card {
+  @include sage-grid-card();
+}
+
 .sage-modal__footer {
   display: flex;
   justify-content: flex-end;

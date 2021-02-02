@@ -6,7 +6,7 @@
   </header>
 <% end %>
 
-<div class="sage-modal__content">
+<div class="sage-modal__content <%= "sage-modal__content--spacing-#{component.spacing}" if component.spacing.present? %>">
   <%= component.content %>
 </div>
 
