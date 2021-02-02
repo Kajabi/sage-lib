@@ -103,7 +103,7 @@ export const Table = ({
           attributes,
           classname,
           dataType,
-          lbel,
+          label,
           style,
         } = schema[field];
 
