@@ -24,11 +24,12 @@ export const TabsItem = ({
 }) => {
   const { to, href } = rest;
   const isLink = to || href;
-  const TagName = isLink 
+  let TagName = children
+    ? 'div'
+    : 'button';
+  TagName = isLink
     ? Link
-    : children
-      ? 'div'
-      : 'button';
+    : TagName;
   const itemStyleProtected = itemStyle === TAB_STYLES.PROGRESSBAR ? TAB_STYLES.TAB : itemStyle;
   const isChoice = itemStyle === TAB_STYLES.CHOICE;
   const isIconType = type && type === CHOICE_TYPES.ICON;

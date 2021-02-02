@@ -7,42 +7,40 @@ import { SageTokens } from '../configs';
 import { Tabs } from './Tabs';
 import TabsNotes from './TabsNotes.md';
 
-const ChoiceTabsWithRichContent = () => {
-  return (
-    <Tabs
-      tabs={[
-        {
-          id: 'tab-1',
-          tabDetails: (
-            <>
-              <h4>Tab 1 content.</h4>
-              <p>Lorem ipsum dolor sit amut consectitor.</p>
-            </>
-          ),
-        },
-        {
-          id: 'tab-2',
-          tabDetails: (
-            <>
-              <h4>Tab 2 content.</h4>
-              <p>Lorem ipsum dolor sit amut consectitor.</p>
-            </>
-          ),
-        },
-        {
-          id: 'tab-3',
-          tabDetails: (
-            <>
-              <h4>Tab 3 content.</h4>
-              <p>Lorem ipsum dolor sit amut consectitor.</p>
-            </>
-          ),
-        },
-      ]}
-      tabStyle="choice"
-    />
-  );
-};
+const ChoiceTabsWithRichContent = () => (
+  <Tabs
+    tabs={[
+      {
+        id: 'tab-1',
+        tabDetails: (
+          <>
+            <h4>Tab 1 content.</h4>
+            <p>Lorem ipsum dolor sit amut consectitor.</p>
+          </>
+        ),
+      },
+      {
+        id: 'tab-2',
+        tabDetails: (
+          <>
+            <h4>Tab 2 content.</h4>
+            <p>Lorem ipsum dolor sit amut consectitor.</p>
+          </>
+        ),
+      },
+      {
+        id: 'tab-3',
+        tabDetails: (
+          <>
+            <h4>Tab 3 content.</h4>
+            <p>Lorem ipsum dolor sit amut consectitor.</p>
+          </>
+        ),
+      },
+    ]}
+    tabStyle="choice"
+  />
+);
 
 const TabsWithState = () => {
   const [initialActiveId, setDefaultActiveId] = useState(null);
