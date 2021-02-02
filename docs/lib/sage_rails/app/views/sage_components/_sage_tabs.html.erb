@@ -34,6 +34,6 @@
         disabled: item[:disabled]
       %>
     <% end %>
-  <% end %>
+  <% end  if component.items.present? %>
   <%= component.content if component.content.present? %>
 </nav>

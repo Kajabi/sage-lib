@@ -4,7 +4,7 @@ class SageTabs < SageComponent
     style: [:optional, Set.new(["choice"])],
     stacked: [:optional, TrueClass],
     id: [:optional, String],
-    items: [[
+    items: [:optional, [[
       active: [:optional, NilClass, TrueClass],
       align_center: [:optional, TrueClass],
       attributes: [:optional, NilClass, Hash],
@@ -17,7 +17,7 @@ class SageTabs < SageComponent
       target: [:optional, NilClass, String],
       text: [:optional, NilClass, String],
       type: [:optional, Set.new(["arrow", "graphic", "icon", "radio"])]
-    ]],
+    ]]],
     progressbar: [:optional, TrueClass],
     align_items_center: [:optional, TrueClass],
     navigational: [:optional, TrueClass],
