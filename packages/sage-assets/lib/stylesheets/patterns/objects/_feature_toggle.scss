@@ -13,7 +13,7 @@ $-image-height-mobile: rem(120px);
   display: grid;
   grid-column-gap: sage-spacing(md);
   grid-row-gap: sage-spacing(sm);
-  
+
   @media (max-width: sage-breakpoint(md-min)) {
     grid-template-columns: 1fr min-content;
     grid-template-rows: $-image-height-mobile auto auto;
@@ -55,6 +55,7 @@ $-image-height-mobile: rem(120px);
 
 .sage-feature-toggle__content-button {
   margin-top: sage-spacing(xs);
+  margin-right: sage-spacing(sm);
 }
 
 .sage-feature-toggle__image-link {
@@ -69,7 +70,7 @@ $-image-height-mobile: rem(120px);
   width: auto;
   height: 100%;
   border-radius: sage-border(radius);
-  
+
   @media (min-width: sage-breakpoint(md-min)) {
     width: 100%;
     object-fit: cover;

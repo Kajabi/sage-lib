@@ -4,16 +4,28 @@
   <<%= feature_toggle_title_tag %> class="sage-feature-toggle__title"><%= component.title %></<%= feature_toggle_title_tag %>>
   <div class="sage-feature-toggle__content">
     <p><%= component.description %></p>
-    <%= sage_component SageButton, {
-      value: component.link_text,
-      style: "primary",
-      subtle: true,
-      icon: { name: "launch", style: "right" },
-      css_classes: "sage-feature-toggle__content-button",
-      attributes: component.link_location && {
-        href:  component.link_location
-      }
-    } %>
+    <div class="sage-grid-template-it">
+      <%= sage_component SageButton, {
+        value: component.link_text,
+        style: "primary",
+        subtle: true,
+        icon: { name: "launch", style: "right" },
+        css_classes: "sage-feature-toggle__content-button",
+        attributes: component.link_location && {
+          href:  component.link_location
+        }
+      } if component.link_text.present? && component.link_location.present? %>
+      <%= sage_component SageButton, {
+        value: component.secondary_link_text,
+        style: "primary",
+        subtle: true,
+        icon: { name: "comment", style: "right" },
+        css_classes: "sage-feature-toggle__content-button",
+        attributes: component.secondary_link_location && {
+          href:  component.secondary_link_location
+        }
+      } if component.secondary_link_location.present? && component.secondary_link_text.present? %>
+    </div>
   </div>
   <% if content_for?(:sage_feature_toggle_input) %>
     <div class="sage-feature-toggle__aside">

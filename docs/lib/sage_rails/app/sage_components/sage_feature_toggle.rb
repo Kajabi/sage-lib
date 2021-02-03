@@ -5,6 +5,8 @@ class SageFeatureToggle < SageComponent
     image: [:optional, String],
     link_location: [:optional, String],
     link_text: [:optional, String],
+    secondary_link_location: [:optional, String],
+    secondary_link_text: [:optional, String],
     title: [:optional, String],
     title_tag: [:optional, String],
   })
