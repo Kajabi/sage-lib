@@ -3,7 +3,20 @@
     <h1 class="t-sage-heading-4">
       <%= component.title %>
     </h1>
+    <% if content_for?(:sage_header_aside) %>
+      <aside class="sage-modal__header-aside">
+        <%= content_for :sage_header_aside %>
+      </aside>
+    <% end %>
   </header>
+<% else %>
+  <% if content_for?(:sage_header_aside) %>
+    <header class="sage-modal__header">
+      <aside class="sage-modal__header-aside">
+        <%= content_for :sage_header_aside %>
+      </aside>
+    </header>
+  <% end %>
 <% end %>
 
 <div class="sage-modal__content <%= "sage-modal__content--spacing-#{component.spacing}" if component.spacing.present? %>">
