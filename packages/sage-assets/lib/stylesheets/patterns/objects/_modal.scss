@@ -86,10 +86,20 @@ $-modal-padding-y: sage-spacing(md);
 
 .sage-modal__content--spacing-panel {
   @include sage-grid-panel();
+
+  // Undo clearfix
+  &::after {
+    display: none;
+  }
 }
 
 .sage-modal__content--spacing-card {
   @include sage-grid-card();
+
+  // Undo clearfix
+  &::after {
+    display: none;
+  }
 }
 
 .sage-modal__footer {
