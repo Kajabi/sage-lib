@@ -171,7 +171,10 @@ export const Table = ({
     }
 
     const rowsSelected = updatedArray.includes(data);
-    updatedArray = rowsSelected ? removeFromList(data, updatedArray) : addToList(data, updatedArray);
+    updatedArray = rowsSelected
+      ? removeFromList(data, updatedArray)
+      : addToList(data, updatedArray);
+
     setSelfSelectedRows(updatedArray);
 
     if (onSelectRowHook) {
