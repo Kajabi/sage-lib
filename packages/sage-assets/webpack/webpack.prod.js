@@ -37,7 +37,7 @@ module.exports = {
         test: /\.(woff|woff2|eot|ttf)$/,
         loader: "url-loader",
         options: {
-          limit: Infinity,
+          limit: 0,
         },
       },
       {
