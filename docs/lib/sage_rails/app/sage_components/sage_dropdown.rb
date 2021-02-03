@@ -15,6 +15,7 @@ class SageDropdown < SageComponent
       is_heading: [:optional, TrueClass],
       modifiers: [:optional, Array],
       border_before: [:optional, TrueClass],
+      selected: [:optional, TrueClass],
     }]]],
     trigger_type: [:optional, Set.new(["select", "select-labeled"])],
     search: [:optional, TrueClass],

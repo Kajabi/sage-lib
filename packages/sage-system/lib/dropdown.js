@@ -27,6 +27,13 @@ Sage.dropdown = (function() {
   // Several variations exist for triggers in selection mode; this is a grouped selector to grab any of them
   const triggerSelectClasses = '.sage-dropdown__trigger--select-labeled, .sage-dropdown__trigger--select';
 
+  const dropdownItemAriaSelectedClass = '.sage-dropdown__panel .sage-dropdown__item[aria-selected="true"]';
+  const dropdownItemControlClass = '.sage-dropdown__item-control';
+  const dropdownClass = '.sage-dropdown';
+  const dropdownTriggerLabelClass = '.sage-dropdown__trigger-label';
+
+
+
   // The element in which to show the selected value when dropdown is in selection mode
   const triggerSelectedValueClass = '.sage-dropdown__trigger-selected-value .sage-btn__truncate-text';
 
@@ -39,6 +46,7 @@ Sage.dropdown = (function() {
 
   function init(el) {
     buildA11y(el);
+    checkSelected(el);
     el.addEventListener('click', handleClick);
     el.addEventListener('keyup', handleKeyAction);
   }
@@ -136,6 +144,16 @@ Sage.dropdown = (function() {
   function buildA11y(el) {
     el.setAttribute('aria-haspopup', true);
     el.setAttribute('aria-expanded', false);
+  }
+
+  function checkSelected(el) {
+    let selectedItem = el.querySelector(dropdownItemAriaSelectedClass); 
+    
+    if (selectedItem != null) {
+      let selectedItemValue = selectedItem.querySelector(dropdownItemControlClass).innerHTML;
+      let selectedParent = selectedItem.closest(dropdownClass);
+      selectedParent.querySelector(dropdownTriggerLabelClass).innerHTML = selectedItemValue;
+    }
   }
 
   function focusTrap(evt) {
