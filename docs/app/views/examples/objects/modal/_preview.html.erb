@@ -1,48 +1,160 @@
 <%= sage_component SagePanelBlock, {} do %>
+  <div class="sage-btn-group">
+    <%= sage_component SageButton, {
+      style: "primary",
+      icon: { name: "launch", style: "right" },
+      value: "Modal",
+      attributes: {
+        "data-js-modaltrigger": "cool-modal",
+      }
+    } %>
+    <%= sage_component SageButton, {
+      style: "primary",
+      icon: { name: "launch", style: "right" },
+      value: "Large Modal",
+      attributes: {
+        "data-js-modaltrigger": "cool-modal-large",
+      }
+    } %>
+    <%= sage_component SageButton, {
+      style: "primary",
+      icon: { name: "launch", style: "right" },
+      value: "Spaced Modal",
+      attributes: {
+        "data-js-modaltrigger": "cool-modal-spaced",
+      }
+    } %>
+  </div>
+
   <%# Standard Modal %>
-  <button class="sage-btn sage-btn--primary sage-btn--icon-right-launch" data-js-modaltrigger="cool-modal">Trigger Modal</button>
   <%= sage_component SageModal, { id: "cool-modal" } do %>
-    <header class="sage-modal__header">
-      <h1 class="t-sage-heading-4">Example Sage Modal</h1>
-      <aside class="sage-modal__header-aside">
-        <button class="sage-btn sage-btn--secondary sage-btn--subtle sage-btn--icon-only-dot-menu-horizontal">
-          <span class="visually-hidden">Menu</span>
-        </button>
-      </aside>
-    </header>
-    <div class="sage-modal__content">
-      <p class="t-sage-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-    <footer class="sage-modal__footer">
-      <aside class="sage-modal__footer-aside">
-        <button class="sage-btn sage-btn--subtle sage-btn--secondary" data-js-modal-close>Close Modal</button>
-      </aside>
-      <button class="sage-btn sage-btn--primary sage-btn--icon-left-check">Take An Action</button>
-    </footer>
+    <%= sage_component SageModalContent, { title: "Example Modal" } do %>
+      <% content_for :sage_header_aside do %>
+        <%= sage_component SageButton, {
+          style: "secondary",
+          subtle: true,
+          value: "Close Modal",
+          icon: { name: "remove", style: "only" },
+          attributes: { "data-js-modal": true }
+        } %>
+      <% end %>
+
+      <p class="t-sage-body">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+
+      <% content_for :sage_footer do %>
+        <% content_for :sage_footer_aside do %>
+          <%= sage_component SageButton, {
+            style: "secondary",
+            subtle: true,
+            value: "Close Modal",
+            attributes: { "data-js-modal": true }
+          } %>
+        <% end %>
+        <%= sage_component SageButton, {
+          style: "primary",
+          icon: { name: "check", style: "left" },
+          value: "Take An Action",
+        } %>
+      <% end %>
+    <% end %>
   <% end %>
 
   <%# Large Modal %>
-  <button class="sage-btn sage-btn--primary sage-btn--icon-right-launch" data-js-modaltrigger="cool-modal-large">Trigger Modal Large</button>
   <%= sage_component SageModal, { 
     id: "cool-modal-large",
     large: true
   } do %>
-    <header class="sage-modal__header">
-      <h1 class="t-sage-heading-4">Example Sage Modal</h1>
-      <aside class="sage-modal__header-aside">
-        <button class="sage-btn sage-btn--secondary sage-btn--subtle sage-btn--icon-only-dot-menu-horizontal">
-          <span class="visually-hidden">Menu</span>
-        </button>
-      </aside>
-    </header>
-    <div class="sage-modal__content">
-      <p class="t-sage-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-    <footer class="sage-modal__footer">
-      <aside class="sage-modal__footer-aside">
-        <button class="sage-btn sage-btn--subtle sage-btn--secondary" data-js-modal-close>Close Modal</button>
-      </aside>
-      <button class="sage-btn sage-btn--primary sage-btn--icon-left-check">Take An Action</button>
-    </footer>
+    <%= sage_component SageModalContent, { title: "Example Large Modal" } do %>
+      <% content_for :sage_header_aside do %>
+        <%= sage_component SageButton, {
+          style: "secondary",
+          subtle: true,
+          value: "Close Modal",
+          icon: { name: "remove", style: "only" },
+          attributes: { "data-js-modal": true }
+        } %>
+      <% end %>
+
+      <p class="t-sage-body">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+
+      <% content_for :sage_footer do %>
+        <% content_for :sage_footer_aside do %>
+          <%= sage_component SageButton, {
+            style: "secondary",
+            subtle: true,
+            value: "Close Modal",
+            attributes: { "data-js-modal": true }
+          } %>
+        <% end %>
+        <%= sage_component SageButton, {
+          style: "primary",
+          icon: { name: "check", style: "left" },
+          value: "Take An Action",
+        } %>
+      <% end %>
+    <% end %>
+  <% end %>
+
+  <%# Spaced Modal %>
+  <%= sage_component SageModal, { 
+    id: "cool-modal-spaced",
+    large: true
+  } do %>
+    <%= sage_component SageModalContent, {
+      title: "Example Spaced Modal",
+      spacing: "panel",
+    } do %>
+      <% content_for :sage_header_aside do %>
+        <%= sage_component SageButton, {
+          style: "secondary",
+          subtle: true,
+          value: "Close Modal",
+          icon: { name: "remove", style: "only" },
+          attributes: { "data-js-modal": true }
+        } %>
+      <% end %>
+
+      <%= sage_component SagePanelBlock, {} do %>
+        <h4 class="t-sage-heading-5">Lorem ipsum dolor sit amet</h4>
+        <p class="t-sage-body">
+          Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      <% end %>
+
+      <%= sage_component SagePanelTiles, { tiles_in_row: 2 } do %>
+        <%= sage_component SageCard, {} do %>
+          <p class="t-sage-body">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+        <% end %>
+        <%= sage_component SageCard, {} do %>
+          <p class="t-sage-body">
+            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        <% end %>
+      <% end %>
+
+      <% content_for :sage_footer do %>
+        <% content_for :sage_footer_aside do %>
+          <%= sage_component SageButton, {
+            style: "secondary",
+            subtle: true,
+            value: "Close Modal",
+            attributes: { "data-js-modal": true }
+          } %>
+        <% end %>
+        <%= sage_component SageButton, {
+          style: "primary",
+          icon: { name: "check", style: "left" },
+          value: "Take An Action",
+        } %>
+      <% end %>
+    <% end %>
   <% end %>
 <% end %>
