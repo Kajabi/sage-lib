@@ -5,13 +5,16 @@
 
 ================================================== */
 
+$-image-width: rem(82px);
+$-image-height: rem(48px);
+
 .sage-sortable {
   /* stylelint-disable-line block-no-empty */
 }
 
 .sage-sortable__item {
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: min-content minmax(0, min-content) auto auto;
   gap: sage-spacing(card);
   align-items: center;
   padding: sage-spacing(xs) sage-spacing(panel);
@@ -63,6 +66,23 @@
   }
 }
 
+.sage-sortable__item-image {
+  position: relative;
+  overflow: hidden;
+  height: $-image-height;
+  width: $-image-width;
+  background: sage-color(grey, 200);
+  border-radius: sage-border(radius);
+  border: sage-border();
+
+  img {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    width: 100%;
+  }
+}
+
 .sage-sortable__item-content {
   z-index: sage-z-index();
   overflow: hidden;
@@ -82,4 +102,9 @@
 .sage-sortable__item-subtitle {
   @extend %t-sage-body-xsmall;
   color: sage-color(charcoal, 100);
+}
+
+.sage-sortable__item-actions {
+  grid-column-start: 4;
+  justify-self: end;
 }

@@ -7,6 +7,7 @@ export const SortableItem = ({
   title,
   subtitle,
   actionItems,
+  image,
   type,
   ...rest
 }) => {
@@ -22,6 +23,14 @@ export const SortableItem = ({
       {...rest}
       className={className}
     >
+      {image && (
+        <div className="sage-sortable__item-image">
+          <img
+            src={image}
+            alt={`Cover for ${title}`}
+          />
+        </div>
+      )}
       <div className="sage-sortable__item-content">
         <h1 className="sage-sortable__item-title">
           {title}
@@ -46,6 +55,7 @@ SortableItem.TYPES = SORTABLE_ITEM_TYPES;
 SortableItem.defaultProps = {
   actionItems: null,
   subtitle: null,
+  image: null,
   type: SORTABLE_ITEM_TYPES.DEFAULT,
 };
 
@@ -53,5 +63,6 @@ SortableItem.propTypes = {
   actionItems: PropTypes.arrayOf(PropTypes.node),
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string,
+  image: PropTypes.string,
   type: PropTypes.oneOf(Object.values(SORTABLE_ITEM_TYPES)),
 };
