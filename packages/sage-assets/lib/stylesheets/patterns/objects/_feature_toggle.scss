@@ -30,6 +30,14 @@ $-image-height-mobile: rem(120px);
       "img  title    aside"
       "img  content  content";
   }
+
+  &.sage-feature-toggle--no-image {
+    grid-template-columns: 1fr min-content;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "title    aside"
+      "content  content";
+  }
 }
 
 .sage-feature-toggle__title {
