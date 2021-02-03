@@ -158,21 +158,20 @@ export const Table = ({
     setSelfSelectedRows(selectedRows);
   }, [selectedRows]);
 
-  const removeFromList = (data) => selfSelectedRows.filter((each) => each !== data);
+  const removeFromList = (data, list) => list.filter((each) => each !== data);
 
-  const addToList = (data) => [...selfSelectedRows, data];
+  const addToList = (data, list) => [...list, data];
 
   const onSelectRow = (data) => {
     let updatedArray;
-
     if (selfSelectedRows === SELECTION_TYPES.ALL) {
       updatedArray = rows.map(({ id }) => id);
     } else {
       updatedArray = selfSelectedRows;
     }
 
-    const rowsSelected = selfSelectedRows.includes(data);
-    updatedArray = rowsSelected ? removeFromList(data) : addToList(data);
+    const rowsSelected = updatedArray.includes(data);
+    updatedArray = rowsSelected ? removeFromList(data, updatedArray) : addToList(data, updatedArray);
     setSelfSelectedRows(updatedArray);
 
     if (onSelectRowHook) {
