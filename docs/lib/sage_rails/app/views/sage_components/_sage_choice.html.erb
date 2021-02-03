@@ -1,11 +1,11 @@
 <%
 css_active_class = "sage-choice--active" 
 is_button = !component.attributes&.has_key?(:href)
-html_tag = is_button ? "button" : "a"
+html_tag = is_button ? (component.content.present? ? "div" : "button") : "a"
 %>
 
 <<%= html_tag %>
-  <%= "type=button" if is_button %>
+  <%= "type=button" if is_button and !component.content.present? %>
   <% component.attributes.each do |key, value| %>
     <%= "#{key}='#{value}'".html_safe %>
   <% end if component.attributes&.is_a?(Hash) %>
@@ -34,13 +34,14 @@ html_tag = is_button ? "button" : "a"
       <%= component.graphic.html_safe %>
     </div>
   <% end %>
-  <div class="sage-choice__content">
+  <div class="sage-choice__content <%= "sage-choice__content--custom" if component.content.present? %>">
     <% if component.text.present? %>
       <em class="sage-choice__text"><%= component.text.html_safe %></em>
     <% end %>
     <% if component.subtext.present? %>
       <span class="sage-choice__subtext" aria-hidden="true"><%= component.subtext.html_safe %></span>
     <% end %>
+    <%= component.content if component.content.present? %>
   </div>
   <% if component.link_text.present? %>
     <div class="sage-choice__link-text">

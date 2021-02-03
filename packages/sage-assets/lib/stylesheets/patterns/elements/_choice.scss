@@ -170,6 +170,10 @@ $-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
   }
 }
 
+.sage-choice__content--custom {
+  @include sage-grid-card;
+}
+
 .sage-choice__graphic {
   overflow: hidden;
   width: rem(48px);

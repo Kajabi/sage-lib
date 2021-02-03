@@ -38,7 +38,7 @@
 %>
 
 <h3 class="t-sage-heading-6">Graphic Variation (with link text)</h3>
-<p>Select any icon to appear to the left of the text.</p>
+<p>Provide a graphic to the left of the text.</p>
 <%= sage_component SageChoice, {
     target: "example",
     text: "Calendly",
@@ -50,3 +50,18 @@
     },
   }
 %>
+
+<h3 class="t-sage-heading-6">Rich text/Customized</h3>
+<p>Choice cards can also be opened up for custom content to be composed within.</p>
+<%= sage_component SageChoice, {
+  target: "example",
+  attributes: {
+    href: "http://example.com",
+  },
+} do %>
+  <%= sage_component SageAvatar, { initials: 'PS' } %>
+  <%= sage_component SageCardBlock, {} do %>
+    <h4>Custom heading</h4>
+    <p>Custom content here...</p>
+  <% end %>
+<% end %>

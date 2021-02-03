@@ -207,3 +207,66 @@
 <h4>Tab Pane Style and Spacing</h4>
 
 <p>Since tabs may be employed in a variety of settings, the following modifiers may be added on panes to set their appearance and internal spacing accordingly: <code>card</code>, <code>card_spacing</code>, and <code>panel_spacing</code>. See the Properties table below for more details</p>
+
+
+<h3>Tabs/Choice with Rich/Custom Content</h3>
+<%= md("
+Choice tabs can be set up with a rich/custom content block by passing any desired markup through the `content` property or yield block.
+
+The example below demonstrates how local styles and Javascript can be paired with the Tabs component and rich content for a much more tailored component.
+") %>
+<style>
+.u-rich-choice-card__option-checkmark {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: none;
+}
+.sage-choice--active .u-rich-choice-card__option-checkmark {
+  display: block;
+}
+</style>
+<script>
+document.addEventListener("sage.tabs.change", function(evt) {
+  // Check that event occurred on special tabs
+  if (evt.detail && evt.detail.tabsId === 'example-tabs-rich') {
+    var elTargetId = evt.detail.paneId;
+    var elTarget = document.getElementById(elTargetId);
+    console.log('Selected', elTargetId, elTarget.value);
+  }
+});
+</script>
+<div class="sage-tabs-container">
+  <%= sage_component SageTabs, {
+      id: "example-tabs-rich",
+      css_classes: "u-rich-choice-card",
+      items: [
+        {
+          target: "item1",
+          content: %(
+            #{sage_component(SageAvatar, { initials: 'PS' })}
+            #{sage_component(SageCardBlock, { content: %(
+              <h4>User A</h4>
+              <p>Custom content here...</p>
+            ).html_safe})}
+            <i class="sage-icon-check-circle-lg t-sage--color-primary u-rich-choice-card__option-checkmark" aria-label="Selected"></i>
+            <input type="hidden" id="item1" name="item1" value="User A" />
+          )
+        },
+        {
+          target: "item2",
+          content: %(
+            #{sage_component(SageAvatar, { initials: 'JW' })}
+            #{sage_component(SageCardBlock, { content: %(
+              <h4>User B</h4>
+              <p>Custom content here...</p>
+            ).html_safe})}
+            <i class="sage-icon-check-circle-lg t-sage--color-primary u-rich-choice-card__option-checkmark" aria-label="Selected"></i>
+            <input type="hidden" id="item2" name="item2" value="User B" />
+          )
+        },
+      ],
+      style: "choice",
+    }
+  %>
+</div>
