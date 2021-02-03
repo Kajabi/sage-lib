@@ -4,27 +4,23 @@
   <<%= feature_toggle_title_tag %> class="sage-feature-toggle__title"><%= component.title %></<%= feature_toggle_title_tag %>>
   <div class="sage-feature-toggle__content">
     <p><%= component.description %></p>
-    <div class="sage-grid-template-it">
-      <%= sage_component SageButton, {
-        value: component.link_text,
-        style: "primary",
-        subtle: true,
-        icon: { name: "launch", style: "right" },
-        css_classes: "sage-feature-toggle__content-button",
-        attributes: component.link_location && {
-          href:  component.link_location
-        }
-      } if component.link_text.present? && component.link_location.present? %>
-      <%= sage_component SageButton, {
-        value: component.secondary_link_text,
-        style: "primary",
-        subtle: true,
-        icon: { name: "comment", style: "right" },
-        css_classes: "sage-feature-toggle__content-button",
-        attributes: component.secondary_link_location && {
-          href:  component.secondary_link_location
-        }
-      } if component.secondary_link_location.present? && component.secondary_link_text.present? %>
+    <div class="sage-feature-toggle__links">
+      <% if component.links.present? %>
+        <% component.links.each do | link | %>
+          <% if link[:location].present? %>
+            <%= sage_component SageButton, {
+              value: link[:text],
+              style: "primary",
+              subtle: true,
+              icon: { name: link[:icon], style: "right" },
+              css_classes: "sage-feature-toggle__content-button",
+              attributes: link[:location].present? && {
+                href: link[:location]
+              }
+            } %>
+          <% end %>
+        <% end %>
+      <% end %>
     </div>
   </div>
   <% if content_for?(:sage_feature_toggle_input) %>
