@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.27.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.26.0...@kajabi/sage-react@0.27.0) (2021-02-03)
+
+
+### Features
+
+* **sortable:** image support ([06dda5e](https://github.com/Kajabi/sage-lib/commit/06dda5e4ee3ad21adfa3fb6113649d1de306b726))
+
+
+
+
+
 # [0.26.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.25.0...@kajabi/sage-react@0.26.0) (2021-01-29)
 
 
