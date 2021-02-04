@@ -27,18 +27,16 @@ Sage.dropdown = (function() {
   // Several variations exist for triggers in selection mode; this is a grouped selector to grab any of them
   const triggerSelectClasses = '.sage-dropdown__trigger--select-labeled, .sage-dropdown__trigger--select';
 
-  const dropdownItemAriaSelectedClass = '.sage-dropdown__panel .sage-dropdown__item[aria-selected="true"]';
-  const dropdownItemControlClass = '.sage-dropdown__item-control';
-  const dropdownClass = '.sage-dropdown';
-  const dropdownTriggerLabelClass = '.sage-dropdown__trigger-label';
-
-
-
   // The element in which to show the selected value when dropdown is in selection mode
   const triggerSelectedValueClass = '.sage-dropdown__trigger-selected-value .sage-btn__truncate-text';
 
   const SELECTOR_FOCUSABLE_ELEMENTS = '.sage-dropdown__panel a, .sage-dropdown__panel button, .sage-dropdown__panel textarea, .sage-dropdown__panel input[type="text"], .sage-dropdown__panel input[type="radio"], .sage-dropdown__panel input[type="checkbox"], .sage-dropdown__panel input[type="search"], .sage-dropdown__panel select';
   let SELECTOR_LAST_FOCUSED;
+
+  const dropdownItemAriaSelectedClass = '.sage-dropdown__panel .sage-dropdown__item[aria-selected="true"]';
+  const dropdownItemControlClass = '.sage-dropdown__item-control';
+  const dropdownClass = '.sage-dropdown';
+  const dropdownTriggerLabelClass = '.sage-dropdown__trigger-label';
 
   // ==================================================
   // Functions
