@@ -44,8 +44,8 @@ jobs:
       - node/with-cache:
           steps:
             - run: yarn docs:deploy
-            # - run: yarn storybook:deploy
-            # - run: yarn sassdocs:deploy
+            - run: yarn storybook:deploy
+            - run: yarn sassdocs:deploy
 workflows:
     lint-test-build:
       jobs:
