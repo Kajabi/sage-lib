@@ -3,8 +3,8 @@
     <%= content_for :sage_transaction_card_header %>
   </div>
   <div class="sage-transaction-card__body">
-    <h1 class="sage-transaction-card__name"><%= component.name %></h1>
-    <div class="sage-transaction-card__amount<%= " t-sage--color-#{component.amount_color}" if component.amount_color.present? %>"><%= component.amount %></div>
+    <h4 class="sage-transaction-card__name"><%= component.name %></h4>
+    <div class="sage-transaction-card__amount<%= " sage-transaction-card__amount--#{component.amount_color}" if component.amount_color.present? %>"><%= component.amount %></div>
   </div>
   <div class="sage-transaction-card__footer">
     <%= content_for :sage_transaction_card_footer %>
