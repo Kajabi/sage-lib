@@ -52,14 +52,14 @@ $-image-height-mobile: rem(120px);
   display: flex;
 }
 
+.sage-feature-toggle__link-item {
+  margin-top: sage-spacing(xs);
+  margin-right: sage-spacing(sm);
+}
+
 .sage-feature-toggle__aside {
   grid-area: aside;
   padding-right: sage-spacing(xs);
-}
-
-.sage-feature-toggle__content-button {
-  margin-top: sage-spacing(xs);
-  margin-right: sage-spacing(sm);
 }
 
 .sage-feature-toggle__image-link {

@@ -13,10 +13,11 @@
               style: "primary",
               subtle: true,
               icon: { name: link[:icon], style: "right" },
-              css_classes: "sage-feature-toggle__content-button",
+              css_classes: "sage-feature-toggle__link-item",
               attributes: link[:location].present? && {
-                href: link[:location]
-              }
+                href: link[:location],
+                target: (link[:target] if link[:target].present?),
+              }.compact
             } %>
           <% end %>
         <% end %>

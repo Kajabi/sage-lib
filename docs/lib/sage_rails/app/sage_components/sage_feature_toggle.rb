@@ -6,6 +6,7 @@ class SageFeatureToggle < SageComponent
     links: [:optional, [[{
       icon: [:optional, NilClass, String],
       location: [:optional, String],
+      target: [:optional, String],
       text: [:optional, String],
     }]]],
     title: [:optional, String],
