@@ -1,0 +1,37 @@
+<%= sage_component SageTransactionCard, {
+    name: "Jonathan VeryLongname Jones",
+    amount: "+ 450.00",
+    amount_color: "sage"
+} do %>
+  <% content_for :sage_transaction_card_header do %>
+    <%= sage_component SageLabel, {
+      color: "published",
+      value: "New",
+    } %>
+    <%= sage_component SageDropdown, {
+      align: "right",
+      items: [{
+        value: "View contact profile",
+        icon: "user-circle",
+        attributes: {
+          "href": "#",
+        },
+      }]
+    } do %>
+      <%= sage_component SageButton, {
+        style: "secondary",
+        icon: { name: "dot-menu-horizontal", style: "only" },
+        value: "Edit",
+        align: "end",
+        subtle: true,
+      } %>
+    <% end %>
+  <% end %>
+  <% content_for :sage_transaction_card_footer do %>
+    <%= sage_component SageProperty, { icon: "tag", value: "Total Product Blueprint" } %>
+    <%= sage_component SageProperty, { value: "10:30pm" } %>
+  <% end %>
+<% end %>
+
+
+
