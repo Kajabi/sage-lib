@@ -16,6 +16,7 @@
               css_classes: "sage-feature-toggle__link-item",
               attributes: {
                 href: (link[:location] if link[:location].present?),
+                rel: ("noopener noreferrer" if link[:target].present? && link[:target] === "_blank"),
                 target: (link[:target] if link[:target].present?),
               }.compact
             } %>
