@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.27.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.27.0...@kajabi/sage-react@0.27.1) (2021-02-04)
+
+
+### Bug Fixes
+
+* **sage-react:** adding react-dom, react-router-dom, and react to devDependencies of sage-react ([01c48be](https://github.com/Kajabi/sage-lib/commit/01c48be8843810f4c579011b371ce40506439e12))
+* **sage-react:** adding react-sortablejs to devdependencies ([b56cf53](https://github.com/Kajabi/sage-lib/commit/b56cf53564e0c0828aa5317ccde36e3cab67ec15))
+* **sage-react:** adding sortablejs to devdependencies ([b9bbb48](https://github.com/Kajabi/sage-lib/commit/b9bbb48be005b2ed68b0adfd0f679fd1583be677))
+
+
+
+
+
 # [0.27.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.26.0...@kajabi/sage-react@0.27.0) (2021-02-03)
 
 
