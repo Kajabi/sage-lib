@@ -25,7 +25,7 @@
 }
 
 .sage-transaction-card__footer {
-  > div:first-child {
+  > :first-child {
     @include truncate;
     max-width: 100%;
   }
