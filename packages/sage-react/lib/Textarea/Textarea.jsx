@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
@@ -12,7 +12,7 @@ export const Textarea = ({
   value,
   ...rest
 }) => {
-  const [fieldValue, updateFieldValue] = useState(value);
+  const [fieldValue, updateFieldValue] = useState(null);
   const classNames = classnames(
     'sage-textarea',
     className,
@@ -29,10 +29,6 @@ export const Textarea = ({
     }
   };
 
-  useEffect(() => {
-    updateFieldValue(value);
-  }, [value]);
-
   return (
     <div className={classNames}>
       <textarea
@@ -40,7 +36,7 @@ export const Textarea = ({
         id={id}
         onChange={handleChange}
         placeholder={label}
-        value={fieldValue}
+        value={fieldValue || value}
         {...rest}
       />
       {label && (
