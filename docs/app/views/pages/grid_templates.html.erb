@@ -222,7 +222,7 @@ A full set of the possibilities are demonstrated below.
               <code style="text-align: right">.sage-grid-template-<%= letter %></code>
             <% end %>
             <%= sage_component SageCard, {} do %>
-              <%= sage_component SageCardRow, { grid_template: letter, spacer: { top: :xs, bottom: :md }} do %>
+              <%= sage_component SageCardRow, { grid_template: letter.to_s, spacer: { top: :xs, bottom: :md }} do %>
                 <%
                   i_dashes = 0
                   i_dots = 0

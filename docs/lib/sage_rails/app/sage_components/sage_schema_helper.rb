@@ -4,10 +4,12 @@ module SageSchemaHelper
   CONTAINER_SIZE = Set.new(["modal", "modal-lg", "xs", "sm", "md", "lg", "fluid"])
 
   GRID_TEMPLATE = Set.new([
-    "m", "o", "mm", "mo", "te",
-    "et", "ete", "eti", "ets", "em", "eme", "emi", "ems", "eo", "eoe", "eoi", "eos",
-    "it", "ite", "iti", "its", "im", "ime", "imi", "ims", "io", "ioe", "ioi", "ios",
-    "st", "ste", "sti", "sts", "sm", "sme", "smi", "sms", "so", "soe", "soi", "sos",
+    "m", "o", "ot", "om", "oo",
+    "et", "em", "eo", "it", "im", "io", "se", "sm", "so",
+    "te", "ti", "ts", "me", "mi", "ms", "oe", "oi", "os",
+    "ete", "eti", "ets", "eme", "emi", "ems", "eoe", "eoi", "eos",
+    "ite", "iti", "its", "ime", "imi", "ims", "ioe", "ioi", "ios",
+    "ste", "sti", "sts", "sme", "smi", "sms", "soe", "soi", "sos",
   ])
 
   SPACER = {
