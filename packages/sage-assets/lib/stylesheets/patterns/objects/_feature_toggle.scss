@@ -30,6 +30,15 @@ $-image-height-mobile: rem(120px);
       "img  title    aside"
       "img  content  content";
   }
+
+  &.sage-feature-toggle--no-image {
+    grid-template-columns: 1fr min-content;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "title    aside"
+      "content  aside";
+    grid-row-gap: sage-spacing(2xs);
+  }
 }
 
 .sage-feature-toggle__title {
@@ -50,6 +59,16 @@ $-image-height-mobile: rem(120px);
 
 .sage-feature-toggle__links {
   display: flex;
+  flex-wrap: wrap;
+}
+
+.sage-feature-toggle__aside {
+  grid-area: aside;
+  padding-right: sage-spacing(xs);
+
+  .sage-feature-toggle--no-image & {
+    align-self: center;
+  }
 }
 
 .sage-feature-toggle__link-item {

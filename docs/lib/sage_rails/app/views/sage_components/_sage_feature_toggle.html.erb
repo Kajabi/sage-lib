@@ -1,6 +1,6 @@
 <% feature_toggle_title_tag = component.title_tag ? component.title_tag : "h3" %>
 
-<li class="sage-feature-toggle">
+<li class="sage-feature-toggle <%= "sage-feature-toggle--no-image" if component.image.blank? %>">
   <<%= feature_toggle_title_tag %> class="sage-feature-toggle__title"><%= component.title %></<%= feature_toggle_title_tag %>>
   <div class="sage-feature-toggle__content">
     <p><%= component.description %></p>
@@ -30,7 +30,9 @@
       <%= content_for :sage_feature_toggle_input %>
     </div>
   <% end %>
-  <div class="sage-feature-toggle__image-link" >
-    <img class="sage-feature-toggle__image" src=<%= component.image %> alt="<%= component.alt_text %>" <%= "aria-hidden=true" if component.alt_text.blank? %> />
-  </div>
+  <% if component.image.present? %>
+    <div class="sage-feature-toggle__image-link" >
+      <img class="sage-feature-toggle__image" src=<%= component.image %> alt="<%= component.alt_text %>" <%= "aria-hidden=true" if component.alt_text.blank? %> />
+    </div>
+  <% end %>
 </li>
