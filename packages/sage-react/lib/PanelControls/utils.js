@@ -29,11 +29,10 @@ export const listDisplayString = (page, itemsShown, itemsTotal, noun = { plural:
 export const handleChange = ({
   bulkActionsHandlerFn,
   data,
-  itemsKey = 'items',
-  mapSelectedRowsFn = ({ id }) => id,
   pageChangeHandlerFn,
   stateData,
   setStateDataFn,
+  sortHandlerFn,
 }) => {
   // First if a page change is requested, send for that
   if (data.page) {
@@ -49,13 +48,20 @@ export const handleChange = ({
     }
   }
 
+  if (data.sortActionCommand) {
+    if (sortHandlerFn) {
+      sortHandlerFn(data);
+      return;
+    }
+  }
+
   // Or if reqeust is to change the selection
   if (data.selectionType) {
     // Parse selection type and adjust selected rows accordingly
     let selectedRows;
     switch (data.selectionType) {
       case SELECTION_TYPES.ALL:
-        selectedRows = stateData[itemsKey].map(mapSelectedRowsFn);
+        selectedRows = SELECTION_TYPES.ALL;
         break;
       case SELECTION_TYPES.NONE:
       default:

@@ -117,6 +117,10 @@ $-avatar-group-item-sizes: (
   }
 }
 
+.sage-avatar--centered {
+  margin: 0 auto;
+}
+
 // Documentation-specific styles
 .sage-avatar-wrapper {
   display: flex;

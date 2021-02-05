@@ -10,12 +10,30 @@
   <td><%= md("`null` (primary color)") %></td>
 </tr>
 <tr>
+  <td><%= md("`centered`") %></td>
+  <td><%= md("
+    Formats the avatar to be centered by setting side `margin` to `auto`.
+  ") %></td>
+  <td><%= md("`Boolean`") %></td>
+  <td><%= md("`false`") %></td>
+</tr>
+<tr>
   <td><%= md("`initials`") %></td>
   <td><%= md("
     The initials to display in the avatar circle
   ") %></td>
   <td><%= md("`String`") %></td>
   <td><%= md("`required`") %></td>
+</tr>
+<tr>
+  <td><%= md("`size`") %></td>
+  <td><%= md("
+    A size setting to customize the Avatar's width and height inline.
+    **NOTE:** Fixed settings such as `px`, `rem`, or `vw` are most reliable
+    as scalable values such as `%` may lead to a squished appearance.
+  ") %></td>
+  <td><%= md("`String`") %></td>
+  <td><%= md("`nil`") %></td>
 </tr>
 <tr>
   <td colspan="4">

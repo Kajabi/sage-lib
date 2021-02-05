@@ -6,6 +6,7 @@ import { TableHelpers } from '../helpers';
 import { cellPropTypes, dataPropTypes } from './configs';
 import { TableHeader } from './TableHeader';
 import { TableRow } from './TableRow';
+import { SELECTION_TYPES } from '../PanelControls/configs';
 
 //
 // Tables are built out from a provided set of rows.
@@ -65,7 +66,7 @@ export const Table = ({
   );
 
   //
-  // Component utitilities
+  // Component utilities
   //
 
   const extractHeaderOverrides = (field, index) => {
@@ -152,39 +153,40 @@ export const Table = ({
     buildHeaders();
   }, [schema, headers]);
 
-  // Ensure selected rows change when adjsuted from the outside
+  // Ensure selected rows change when adjusted from the outside
   useEffect(() => {
     setSelfSelectedRows(selectedRows);
   }, [selectedRows]);
 
+  const removeFromList = (data, list) => list.filter((each) => each !== data);
+
+  const addToList = (data, list) => [...list, data];
+
   const onSelectRow = (data) => {
-    const newSelectedRows = selfSelectedRows;
-    const matchIndex = newSelectedRows.indexOf(data);
-    let rowSelected;
-    if (matchIndex >= 0) {
-      rowSelected = false;
-      newSelectedRows.splice(matchIndex, 1);
+    let updatedArray;
+    if (selfSelectedRows === SELECTION_TYPES.ALL) {
+      updatedArray = rows.map(({ id }) => id);
     } else {
-      rowSelected = true;
-      newSelectedRows.push(data);
+      updatedArray = selfSelectedRows;
     }
+
+    const rowsSelected = updatedArray.includes(data);
+    updatedArray = rowsSelected
+      ? removeFromList(data, updatedArray)
+      : addToList(data, updatedArray);
+
+    setSelfSelectedRows(updatedArray);
 
     if (onSelectRowHook) {
       onSelectRowHook({
         changedRow: {
           row: data,
-          selected: rowSelected,
+          selected: rowsSelected,
         },
-        selectedRows: newSelectedRows,
+        selectedRows: updatedArray,
       });
-    } else {
-      setSelfSelectedRows(newSelectedRows);
     }
   };
-
-  //
-  // Component detail renderers
-  //
 
   // Renders the cells in the header row
   const renderTableHeader = ({
@@ -226,7 +228,7 @@ export const Table = ({
         id={rowId}
         cells={cells}
         schema={schema}
-        selected={selfSelectedRows.includes(rowId)}
+        selected={selfSelectedRows === SELECTION_TYPES.ALL || selfSelectedRows.includes(rowId)}
         selectable={selectable}
         onSelect={onSelectRow}
       />
@@ -303,10 +305,13 @@ Table.propTypes = {
   // Schema provides a structure for applying settings to headers and cells
   schema: PropTypes.shape({}),
   selectable: PropTypes.bool,
-  selectedRows: PropTypes.arrayOf(PropTypes.oneOfType([
-    PropTypes.number,
-    PropTypes.shape({}),
-    PropTypes.string,
-  ])),
+  selectedRows: PropTypes.oneOfType(
+    PropTypes.oneOf([SELECTION_TYPES.ALL]),
+    PropTypes.arrayOf(PropTypes.oneOfType([
+      PropTypes.number,
+      PropTypes.shape({}),
+      PropTypes.string,
+    ])),
+  ),
   tableAttributes: PropTypes.shape({}),
 };
