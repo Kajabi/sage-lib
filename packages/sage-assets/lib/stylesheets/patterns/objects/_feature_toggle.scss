@@ -59,6 +59,7 @@ $-image-height-mobile: rem(120px);
 
 .sage-feature-toggle__links {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .sage-feature-toggle__aside {
