@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.20.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.19.1...@kajabi/sage-assets@0.20.0) (2021-02-05)
+
+
+### Bug Fixes
+
+* **modal:** undo clearfix in spaced `modal__content` ([e4e69db](https://github.com/Kajabi/sage-lib/commit/e4e69db78e58f587899c92eedc6546d31fcd8db7))
+* **panel-controls:** ensure panel controls content stacks above Table ([0f55037](https://github.com/Kajabi/sage-lib/commit/0f550377a3906caf364e7f77ef2f40808b81a5fb))
+* **sage_feature_toggle:** added links prop to feature toggle and updated docs ([43a9a7a](https://github.com/Kajabi/sage-lib/commit/43a9a7a518ce8234bb2fb4d317a433137f318c71))
+
+
+### Features
+
+* **avatar:** allow avatar to be centered ([8b7855b](https://github.com/Kajabi/sage-lib/commit/8b7855b712ae7a0760ea6503b52734fa5b4db945))
+* **choice:** allow rich content to be passed in ([8817107](https://github.com/Kajabi/sage-lib/commit/8817107a12080b8d45773f16f3e2b50cd370c0e3))
+* **description:** enhance description rails component ([c70cdd3](https://github.com/Kajabi/sage-lib/commit/c70cdd3762db75602b7c7678aae115931af16a95))
+* **modal:** add spacing features to `modal__content` ([d19f6ef](https://github.com/Kajabi/sage-lib/commit/d19f6ef9299d6e409605d406bf99c94ab9e8851e))
+* **rails sagecardstack:** spacing: "form" modifier ([32cbd06](https://github.com/Kajabi/sage-lib/commit/32cbd06d82a540b0955a987e84fe208cdb5d7698))
+* **sage-feature-toggle:** added target prop and adjusted markup and styles ([1916c34](https://github.com/Kajabi/sage-lib/commit/1916c345a67c517f023ab4786b0f75dc261e6717))
+* **sagefeaturetoggle:** added a secondary link location/text prop needed for COMM-671 ([44e6f53](https://github.com/Kajabi/sage-lib/commit/44e6f53e02373e4591eac2b3a8cf0156bd139175))
+
+
+
+
+
 ## [0.19.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.19.0...@kajabi/sage-assets@0.19.1) (2021-02-04)
 
 

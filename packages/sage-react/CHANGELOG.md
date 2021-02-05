@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.28.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.27.1...@kajabi/sage-react@0.28.0) (2021-02-05)
+
+
+### Bug Fixes
+
+* **adding changes to table/table row for improved performance:** reduce amount of rendering times ([47a5ef6](https://github.com/Kajabi/sage-lib/commit/47a5ef62ced6d7b9eaba03e7f6821014ed35746b))
+* **panel-controls:** ensure that selection count is correct ([3dd9079](https://github.com/Kajabi/sage-lib/commit/3dd9079e221f3ecdb26fc632a3b564698f72a18d))
+* **table:** patch what happens when deselecting one from "all" ([441561e](https://github.com/Kajabi/sage-lib/commit/441561e71c6343c3fd5ae89b79558befde3aa786))
+* **tabs:** ensure Tabs changes are linted ([34b8b19](https://github.com/Kajabi/sage-lib/commit/34b8b191aaf77d04c4bada074dc97ba6249d151a))
+
+
+### Features
+
+* **avatar:** sync React compoent with same settings as Rails ([a881669](https://github.com/Kajabi/sage-lib/commit/a881669a87355e4819cdd1ca69748cb3055cf0d0))
+* **dropdown:** ensure alignment option is available on SelectDropdown ([68f7c37](https://github.com/Kajabi/sage-lib/commit/68f7c37f2967248478dfbd68739e106c7ff5cc65))
+* **fixing checks:** fixing checkAll ([ab01b00](https://github.com/Kajabi/sage-lib/commit/ab01b003f8819e84afbfd5787e2c5b133c63d669))
+* **panel-controls:** add sorting dropdown and related utilities ([6aba9be](https://github.com/Kajabi/sage-lib/commit/6aba9be2cbf85886eb57b505785382d68150764a))
+* **table:** make select all work smarter ([72b900f](https://github.com/Kajabi/sage-lib/commit/72b900fc6aaf9a2f3ff2adf897461909416909da))
+* **tabs:** add React features to match rails choice and tabs ([d86306e](https://github.com/Kajabi/sage-lib/commit/d86306effa6772f12d0adbad0c61a984d4dc5219))
+
+
+
+
+
 ## [0.27.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.27.0...@kajabi/sage-react@0.27.1) (2021-02-04)
 
 

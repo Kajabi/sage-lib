@@ -3,6 +3,46 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.10.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.9.1...@kajabi/sage@3.10.0) (2021-02-05)
+
+
+### Bug Fixes
+
+* **choice:** tidy up a11y on rich content choice ([f0dc996](https://github.com/Kajabi/sage-lib/commit/f0dc996565a81d9a88e631f73f7d04729205e5f2))
+* **choice:** update docs to for graphic choice alternative ([120df47](https://github.com/Kajabi/sage-lib/commit/120df47d7fa7fd01858d76bb19eea0e7b48f6f8a))
+* **description:** patch html_safe issue ([77c7f53](https://github.com/Kajabi/sage-lib/commit/77c7f531b13e15aacfcc568b5e3fa383a6207ae2))
+* **docs:** correct image asset link, apply responsive classes on home ([d19cc60](https://github.com/Kajabi/sage-lib/commit/d19cc60a2bd1a5474e2a14dd641503f894a54b3f))
+* **docs:** patch typo in description documentation ([853ca75](https://github.com/Kajabi/sage-lib/commit/853ca7539c30eee53a082064827056e7110ac8eb))
+* **docs:** update documentation for tabs and choice ([c754056](https://github.com/Kajabi/sage-lib/commit/c75405661b21062ff4425f3a2f9a353ba31ac2a2))
+* **dropdown:** added button type and value ([e0c05d9](https://github.com/Kajabi/sage-lib/commit/e0c05d9b0c71c29013429ad6885ab14186811f08))
+* **dropdown:** conditionally render button if dropdown item attr is not an herf ([5085dc3](https://github.com/Kajabi/sage-lib/commit/5085dc3949a2ae79b66334e55b171c80e6158fd3))
+* **grid-templates:** sync grid template schema with docs ([ee88719](https://github.com/Kajabi/sage-lib/commit/ee887199773742a30fa80e293874de3a42ef1be7))
+* **panel:** fix panel row alignment schema setting ([d289ae3](https://github.com/Kajabi/sage-lib/commit/d289ae3878dbcd7271008f10242f73f77054b516))
+* **sage_feature_toggle:** added links prop to feature toggle and updated docs ([43a9a7a](https://github.com/Kajabi/sage-lib/commit/43a9a7a518ce8234bb2fb4d317a433137f318c71))
+* **sage-feature-toggle:** added rel attribute for cases where the target is "_blank" ([ba8e19a](https://github.com/Kajabi/sage-lib/commit/ba8e19a414a3b9f3e5674a2396b1cf29b461a8b6))
+* **sage-feature-toggle:** refactored conditional on 'attributes' prop ([9b3e0e4](https://github.com/Kajabi/sage-lib/commit/9b3e0e40f85290f1b27560652fd35dca3ce7f08d))
+
+
+### Features
+
+* **avatar:** allow a custom size to be specified ([9db08d1](https://github.com/Kajabi/sage-lib/commit/9db08d184da5188a6dd091905d7ab0c201703dba))
+* **avatar:** allow avatar to be centered ([8b7855b](https://github.com/Kajabi/sage-lib/commit/8b7855b712ae7a0760ea6503b52734fa5b4db945))
+* **choice:** allow rich content to be passed in ([8817107](https://github.com/Kajabi/sage-lib/commit/8817107a12080b8d45773f16f3e2b50cd370c0e3))
+* **description:** enhance description rails component ([c70cdd3](https://github.com/Kajabi/sage-lib/commit/c70cdd3762db75602b7c7678aae115931af16a95))
+* **docs:** update modal documentation ([232e859](https://github.com/Kajabi/sage-lib/commit/232e859822e07425b24a206cbdacff1faa4bae6e))
+* **modal:** add `header_aside` section to ModalContent (rails) ([62ffbed](https://github.com/Kajabi/sage-lib/commit/62ffbedbf5de1d582bad7727a003c5e0b228a482))
+* **modal:** add spacing features to `modal__content` ([d19f6ef](https://github.com/Kajabi/sage-lib/commit/d19f6ef9299d6e409605d406bf99c94ab9e8851e))
+* **rails sagecardstack:** spacing: "form" modifier ([32cbd06](https://github.com/Kajabi/sage-lib/commit/32cbd06d82a540b0955a987e84fe208cdb5d7698))
+* **sage-feature-toggle:** added target prop and adjusted markup and styles ([1916c34](https://github.com/Kajabi/sage-lib/commit/1916c345a67c517f023ab4786b0f75dc261e6717))
+* **sagefeaturetoggle:** added a secondary link location/text prop needed for COMM-671 ([44e6f53](https://github.com/Kajabi/sage-lib/commit/44e6f53e02373e4591eac2b3a8cf0156bd139175))
+* **tabs:** adjust to allow rich content in choice cards ([7f7b9b6](https://github.com/Kajabi/sage-lib/commit/7f7b9b64538e53af12bf447ea35e3365ac6f5b21))
+* **tabs:** allow content to be manually populated inside tabs (rails) ([e7e2cc2](https://github.com/Kajabi/sage-lib/commit/e7e2cc28d3f54aac5be3b80ad5e029513c3ec724))
+* **tabs:** make `items` optional given ability to use `content` ([30c6bb1](https://github.com/Kajabi/sage-lib/commit/30c6bb1b2bf3a02f766a0fc544ce2816ff5a8269))
+
+
+
+
+
 ## [3.9.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.9.0...@kajabi/sage@3.9.1) (2021-02-04)
 
 **Note:** Version bump only for package @kajabi/sage
