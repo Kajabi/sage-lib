@@ -305,13 +305,13 @@ Table.propTypes = {
   // Schema provides a structure for applying settings to headers and cells
   schema: PropTypes.shape({}),
   selectable: PropTypes.bool,
-  selectedRows: PropTypes.oneOfType(
+  selectedRows: PropTypes.oneOfType([
     PropTypes.oneOf([SELECTION_TYPES.ALL]),
     PropTypes.arrayOf(PropTypes.oneOfType([
       PropTypes.number,
       PropTypes.shape({}),
       PropTypes.string,
     ])),
-  ),
+  ]),
   tableAttributes: PropTypes.shape({}),
 };

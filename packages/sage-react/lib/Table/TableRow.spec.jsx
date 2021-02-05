@@ -11,7 +11,7 @@ describe('Rendering the Sage Icon Component', () => {
 
   beforeEach(() => {
     defaultProps = {
-      id: []
+      id: 'test-id',
     };
 
     component = shallow(
