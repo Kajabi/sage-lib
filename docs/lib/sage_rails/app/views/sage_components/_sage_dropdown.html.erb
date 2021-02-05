@@ -38,6 +38,7 @@
               sage-dropdown__item--heading
             "
             role="none"
+            <%= "aria-selected=true" if item[:selected] %>
           >
             <%= item[:value] %>
           </li>
@@ -49,6 +50,7 @@
               <% end %>
             "
             role="none"
+            <%= "aria-selected=true" if item[:selected] %>
           >
             <% if item[:attributes].nil? || item[:attributes]&.keys&.include?(:href) || item[:attributes]&.keys&.include?("href") %>
               <a
