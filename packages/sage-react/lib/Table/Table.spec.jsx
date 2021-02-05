@@ -9,8 +9,7 @@ describe('Rendering the Sage Icon Component', () => {
     defaultProps;
 
   beforeEach(() => {
-    defaultProps = {
-    };
+    defaultProps = {};
 
     component = shallow(
       <Table {...defaultProps} />
