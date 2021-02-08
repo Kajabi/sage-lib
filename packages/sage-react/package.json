@@ -31,7 +31,7 @@
   "scripts": {
     "build": "build-storybook -o build && webpack --config webpack/webpack.prod.js",
     "build:watch": "build-storybook -o build && webpack --config webpack/webpack.prod.js --watch",
-    "heroku-prebuild": "yarn add react@16.13.1 react-dom@16.13.1 react-router-dom@5.1.0",
+    "heroku-prebuild": "npm install react@16.13.1 react-dom@16.13.1 react-router-dom@5.1.0",
     "lint": "yarn run eslint \"lib/**/*.{js,jsx}\"",
     "storybook": "start-storybook -p 6006 --ci",
     "preversion": "yarn install && yarn run build",
