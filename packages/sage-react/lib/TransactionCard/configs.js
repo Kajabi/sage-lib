@@ -6,6 +6,7 @@ export const AMOUNT_COLORS = {
 
 export const LABEL_COLORS = {
   PUBLISHED: 'published',
+  DRAFT: 'draft',
   DANGER: 'danger',
   INFO: 'info',
   WARNING: 'warning',
