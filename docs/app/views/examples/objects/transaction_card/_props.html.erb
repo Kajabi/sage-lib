@@ -1,4 +1,16 @@
 <tr>
+  <td><%= md('`label_color`') %></td>
+  <td>Color of transaction label</td>
+  <td><%= md("String: [\"published\", \"draft\", \"danger\", \"info\", \"warning\", \"locked\"]") %></td>
+  <td><%= md('`null`') %></td>
+</tr>
+<tr>
+  <td><%= md('`label_text`') %></td>
+  <td>Text displayed in label</td>
+  <td><%= md('`String`') %></td>
+  <td><%= md('`null`') %></td>
+</tr>
+<tr>
   <td><%= md('`name`') %></td>
   <td>Name of contact that initiated transaction</td>
   <td><%= md('`String`') %></td>
@@ -14,5 +26,17 @@
   <td><%= md('`amount_color`') %></td>
   <td>Color that can be applied to the transaction amount</td>
   <td><%= md("String: [\"red\", \"sage\"]") %></td>
+  <td><%= md('`null`') %></td>
+</tr>
+<tr>
+  <td><%= md('`product_name`') %></td>
+  <td>Name of product related to transaction</td>
+  <td><%= md('`String`') %></td>
+  <td><%= md('`null`') %></td>
+</tr>
+<tr>
+  <td><%= md('`transacton_time`') %></td>
+  <td>Time that transaction occured</td>
+  <td><%= md('`String`') %></td>
   <td><%= md('`null`') %></td>
 </tr>
