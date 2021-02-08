@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { SageTokens } from '../configs';
 import { Property } from '../Property';
+import { SageTokens } from '../configs';
 import { Icon } from '../Icon';
 import { Label } from '../Label';
-import { Dropdown } from '../Dropdown';
+import { OptionsDropdown } from '../Dropdown/OptionsDropdown';
 import { AMOUNT_COLORS, LABEL_COLORS } from './configs';
 
 export const TransactionCard = ({
@@ -15,27 +15,22 @@ export const TransactionCard = ({
   amountColor,
   productName,
   transactionTime,
+  dropdownLink
 }) => (
-
   <div className="sage-transaction-card">
     <div className="sage-transaction-card__header">
       <Label value={labelText} color={labelColor} />
-      <Dropdown
-        label="Feature"
-        icon={SageTokens.ICONS.DOT_MENU_HORIZONTAL}
-        isDisabled={false}
-        isLabelVisible={false}
-        triggerButtonSubtle={true}
-      >
-        <Dropdown.ItemList items={
-          [{
-            id: 1,
-            label: 'View Contact Profile',
+      <OptionsDropdown
+        align="right"
+        options={[
+          {
+            id: '1',
+            label: 'View contact profile',
             icon: SageTokens.ICONS.USER_CIRCLE,
-          }]
-        }
-        />
-      </Dropdown>
+            href: `${dropdownLink}`
+          },
+        ]}
+      />
     </div>
     <div className="sage-transaction-card__body">
       <h4 className="sage-transaction-card__name">{name}</h4>
@@ -50,7 +45,6 @@ export const TransactionCard = ({
       <Property>{transactionTime}</Property>
     </div>
   </div>
-
 );
 
 TransactionCard.LABEL_COLORS = LABEL_COLORS;
@@ -63,7 +57,8 @@ TransactionCard.defaultProps = {
   amount: '0.00',
   amountColor: null,
   productName: '--',
-  transactionTime: '--'
+  transactionTime: '--',
+  dropdownLink: '#',
 };
 
 TransactionCard.propTypes = {
@@ -74,4 +69,5 @@ TransactionCard.propTypes = {
   amountColor: PropTypes.oneOf(Object.values(TransactionCard.AMOUNT_COLORS)),
   productName: PropTypes.string,
   transactionTime: PropTypes.string,
+  dropdownLink: PropTypes.string,
 };
