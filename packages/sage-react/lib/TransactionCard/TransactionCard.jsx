@@ -5,17 +5,21 @@ import { Property } from '../Property';
 import { Icon } from '../Icon';
 import { Label } from '../Label';
 import { Dropdown } from '../Dropdown';
-import { AMOUNT_COLORS } from './configs';
+import { AMOUNT_COLORS, LABEL_COLORS } from './configs';
 
 export const TransactionCard = ({
+  labelColor,
+  labelText,
   name,
   amount,
   amountColor,
+  productName,
+  transactionTime,
 }) => (
 
   <div className="sage-transaction-card">
     <div className="sage-transaction-card__header">
-      <Label value="New" color="published" />
+      <Label value={labelText} color={labelColor} />
       <Dropdown
         label="Feature"
         icon={SageTokens.ICONS.DOT_MENU_HORIZONTAL}
@@ -42,23 +46,32 @@ export const TransactionCard = ({
       )}
     </div>
     <div className="sage-transaction-card__footer">
-      <Property icon={Icon.ICONS.TAG}>Total Product Blueprint</Property>
-      <Property>10:32pm</Property>
+      <Property icon={Icon.ICONS.TAG}>{productName}</Property>
+      <Property>{transactionTime}</Property>
     </div>
   </div>
 
 );
 
+TransactionCard.LABEL_COLORS = LABEL_COLORS;
 TransactionCard.AMOUNT_COLORS = AMOUNT_COLORS;
 
 TransactionCard.defaultProps = {
-  name: '',
+  labelText: '--',
+  labelColor: LABEL_COLORS.PUBLISHED,
+  name: '--',
   amount: '0.00',
   amountColor: null,
+  productName: '--',
+  transactionTime: '--'
 };
 
 TransactionCard.propTypes = {
+  labelText: PropTypes.string,
+  labelColor: PropTypes.oneOf(Object.values(TransactionCard.LABEL_COLORS)),
   name: PropTypes.string,
   amount: PropTypes.string,
   amountColor: PropTypes.oneOf(Object.values(TransactionCard.AMOUNT_COLORS)),
+  productName: PropTypes.string,
+  transactionTime: PropTypes.string,
 };

@@ -9,9 +9,13 @@ storiesOf('Sage/TransactionCard', module)
     'Default',
     () => (
       <TransactionCard
+        labelColor={select('Label Color', TransactionCard.LABEL_COLORS)}
+        labelText={text('Label Text', 'New')}
         name={text('Name', 'Lilly Jones')}
         amount={text('Amount', '+ $148.00')}
         amountColor={select('Amount Color', TransactionCard.AMOUNT_COLORS)}
+        productName={text('Product Name', 'Total Product Blueprint')}
+        transactionTime={text('Transaction Time', '10:32pm')}
       />
     ),
     {}
