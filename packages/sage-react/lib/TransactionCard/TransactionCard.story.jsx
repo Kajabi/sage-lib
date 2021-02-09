@@ -16,7 +16,6 @@ storiesOf('Sage/TransactionCard', module)
         amountColor={select('Amount Color', TransactionCard.AMOUNT_COLORS)}
         productName={text('Product Name', 'Total Product Blueprint')}
         transactionTime={text('Transaction Time', '10:32pm')}
-        dropdownLink={text('Dropdown Link', '#')}
       />
     ),
     {}

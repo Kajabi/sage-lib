@@ -5,7 +5,7 @@ import { SageTokens } from '../configs';
 import { Icon } from '../Icon';
 import { Label } from '../Label';
 import { OptionsDropdown } from '../Dropdown/OptionsDropdown';
-import { AMOUNT_COLORS, LABEL_COLORS } from './configs';
+import { AMOUNT_COLORS, LABEL_COLORS, DROPDOWN_ITEMS } from './configs';
 
 export const TransactionCard = ({
   labelColor,
@@ -22,14 +22,7 @@ export const TransactionCard = ({
       <Label value={labelText} color={labelColor} />
       <OptionsDropdown
         align="right"
-        options={[
-          {
-            id: '1',
-            label: 'View contact profile',
-            icon: SageTokens.ICONS.USER_CIRCLE,
-            href: `${dropdownLink}`
-          },
-        ]}
+        options={DROPDOWN_ITEMS}
       />
     </div>
     <div className="sage-transaction-card__body">
@@ -49,6 +42,7 @@ export const TransactionCard = ({
 
 TransactionCard.LABEL_COLORS = LABEL_COLORS;
 TransactionCard.AMOUNT_COLORS = AMOUNT_COLORS;
+TransactionCard.DROPDOWN_ITMES = DROPDOWN_ITEMS;
 
 TransactionCard.defaultProps = {
   labelText: '--',

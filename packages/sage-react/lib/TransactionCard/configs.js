@@ -12,3 +12,12 @@ export const LABEL_COLORS = {
   WARNING: 'warning',
   LOCKED: 'locked',
 };
+
+export const DROPDOWN_ITEMS = [
+  {
+    id: '1',
+    label: 'View contact profile',
+    icon: 'user-circle',
+    href: '#',
+  },
+];
