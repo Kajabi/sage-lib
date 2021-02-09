@@ -150,15 +150,15 @@ $-input-transition: border 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     ~ .sage-input__label {
       color: $-input-color-error;
     }
+  }
 
-    &:focus:not(:disabled),
-    &:active:not(:disabled) {
-      border-color: $-input-color-error;
-      box-shadow: $-input-box-shadow-size $-input-color-error;
+  &.parsley-error:focus:not(:disabled),
+  &.parsley-error:active:not(:disabled) {
+    border-color: $-input-color-error;
+    box-shadow: $-input-box-shadow-size $-input-color-error;
 
-      ~ .sage-input__label {
-        color: $-input-color-error;
-      }
+    ~ .sage-input__label {
+      color: $-input-color-error;
     }
   }
 

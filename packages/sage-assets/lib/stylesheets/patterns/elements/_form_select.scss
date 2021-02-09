@@ -114,16 +114,16 @@ $-select-padding-label: map-get($sage-field-configs, padding-label);
     ~ .sage-select__label {
       color: $-select-color-error;
     }
-    
-    &:focus:not(:disabled),
-      &:active:not(:disabled) {
-        border-color: $-select-color-error;
-        box-shadow: $-select-border-box-shadow-size $-select-color-error;
-  
-        ~ .sage-select__label {
-          color: $-select-color-error;
-        }
-      }
+  }
+
+  &.parsley-error:focus:not(:disabled),
+  &.parsley-error:active:not(:disabled) {
+    border-color: $-select-color-error;
+    box-shadow: $-select-border-box-shadow-size $-select-color-error;
+
+    ~ .sage-select__label {
+      color: $-select-color-error;
+    }
   }
 
   &.parsley-success {

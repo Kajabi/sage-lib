@@ -139,21 +139,22 @@ $-textarea-color-success: map-get($sage-field-colors, success);
 
     @include placeholder {
       color: $-textarea-color-error;
-    }    
+    }
 
     ~ .sage-textarea__label {
       color: $-textarea-color-error;
     }
+  }
 
-    &:focus:not(:disabled),
-    &:active:not(:disabled) {
-      display: inline;
-      border-color: $-textarea-color-error;
-      box-shadow: $-textarea-box-shadow-size $-textarea-color-error;
 
-      ~ .sage-textarea__label {
-        color: $-textarea-color-error;
-      }
+  &.parsley-error:focus:not(:disabled),
+  &.parsley-error:active:not(:disabled) {
+    display: inline;
+    border-color: $-textarea-color-error;
+    box-shadow: $-textarea-box-shadow-size $-textarea-color-error;
+
+    ~ .sage-textarea__label {
+      color: $-textarea-color-error;
     }
   }
 
