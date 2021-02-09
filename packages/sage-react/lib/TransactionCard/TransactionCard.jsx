@@ -4,7 +4,7 @@ import { Property } from '../Property';
 import { Icon } from '../Icon';
 import { Label } from '../Label';
 import { OptionsDropdown } from '../Dropdown/OptionsDropdown';
-import { AMOUNT_COLORS, LABEL_COLORS, DROPDOWN_ITEMS } from './configs';
+import { AMOUNT_COLORS, LABEL_COLORS } from './configs';
 
 export const TransactionCard = ({
   labelColor,
@@ -14,14 +14,17 @@ export const TransactionCard = ({
   amountColor,
   productName,
   transactionTime,
+  dropdownOptions
 }) => (
   <div className="sage-transaction-card">
     <div className="sage-transaction-card__header">
       <Label value={labelText} color={labelColor} />
-      <OptionsDropdown
-        align="right"
-        options={DROPDOWN_ITEMS}
-      />
+      {dropdownOptions && (
+        <OptionsDropdown
+          align="right"
+          options={dropdownOptions}
+        />
+      )}
     </div>
     <div className="sage-transaction-card__body">
       <h4 className="sage-transaction-card__name">{name}</h4>
@@ -40,7 +43,6 @@ export const TransactionCard = ({
 
 TransactionCard.LABEL_COLORS = LABEL_COLORS;
 TransactionCard.AMOUNT_COLORS = AMOUNT_COLORS;
-TransactionCard.DROPDOWN_ITEMS = DROPDOWN_ITEMS;
 
 TransactionCard.defaultProps = {
   labelText: '--',
@@ -50,6 +52,7 @@ TransactionCard.defaultProps = {
   amountColor: null,
   productName: '--',
   transactionTime: '--',
+  dropdownOptions: [],
 };
 
 TransactionCard.propTypes = {
@@ -60,4 +63,6 @@ TransactionCard.propTypes = {
   amountColor: PropTypes.oneOf(Object.values(TransactionCard.AMOUNT_COLORS)),
   productName: PropTypes.string,
   transactionTime: PropTypes.string,
+  dropdownOptions: PropTypes.arrayOf(PropTypes.shape({}))
+
 };
