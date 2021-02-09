@@ -42,7 +42,7 @@ export const TransactionCard = ({
 
 TransactionCard.LABEL_COLORS = LABEL_COLORS;
 TransactionCard.AMOUNT_COLORS = AMOUNT_COLORS;
-TransactionCard.DROPDOWN_ITMES = DROPDOWN_ITEMS;
+TransactionCard.DROPDOWN_ITEMS = DROPDOWN_ITEMS;
 
 TransactionCard.defaultProps = {
   labelText: '--',
