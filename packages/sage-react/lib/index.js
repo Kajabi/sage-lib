@@ -49,6 +49,7 @@ export {
   Toggle,
 } from './Toggle';
 export { Tooltip } from './Tooltip';
+export { TransactionCard } from './TransactionCard';
 export { Type } from './Type';
 export { Typeahead } from './Typeahead';
 export { UploadCard } from './UploadCard';
