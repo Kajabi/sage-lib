@@ -8,6 +8,7 @@ import {
   LABEL_STYLES,
   LABEL_INTERACTIVE_TYPES,
 } from './configs';
+import { LabelSecondaryButton } from './LabelSecondaryButton';
 import { LabelGroup } from './LabelGroup';
 
 export const Label = React.forwardRef(({
@@ -58,6 +59,7 @@ export const Label = React.forwardRef(({
 Label.COLORS = LABEL_COLORS;
 Label.STYLES = LABEL_STYLES;
 Label.INTERACTIVE_TYPES = LABEL_INTERACTIVE_TYPES;
+Label.SecondaryButton = LabelSecondaryButton;
 Label.Group = LabelGroup;
 
 Label.defaultProps = {
@@ -78,9 +80,7 @@ Label.propTypes = {
   interactiveType: PropTypes.oneOf(Object.values(LABEL_INTERACTIVE_TYPES)),
   isDropdown: PropTypes.bool,
   isStatus: PropTypes.bool,
-  secondaryButton: PropTypes.oneOfType([
-    PropTypes.shape({ type: PropTypes.oneOf([Button]) })
-  ]),
+  secondaryButton: PropTypes.node,
   style: PropTypes.oneOf(Object.values(LABEL_STYLES)),
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
 };
