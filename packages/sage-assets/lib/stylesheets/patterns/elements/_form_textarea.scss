@@ -132,6 +132,16 @@ $-textarea-color-success: map-get($sage-field-colors, success);
   }
 
   // TODO: add support for Simpleform classes
+  &.parsley-error {
+    color: inherit;
+    background-color: inherit;
+    border-color: $-textarea-color-error;
+
+    ~ .sage-input__label {
+      color: $-textarea-color-error;
+    }
+  }
+
   .sage-textarea--error &,
   &:required:not(:placeholder-shown):not(:valid) {
     border-color: $-textarea-color-error;

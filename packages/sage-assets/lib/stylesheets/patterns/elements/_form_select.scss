@@ -102,6 +102,16 @@ $-select-padding-label: map-get($sage-field-configs, padding-label);
     border-color: $-select-color-border-selected;
   }
 
+  &.parsley-error {
+    color: inherit;
+    background-color: inherit;
+    border-color: $-select-color-error;
+
+    ~ .sage-input__label {
+      color: $-select-color-error;
+    }
+  }
+
   .sage-select--error & {
     border-color: $-select-color-error;
     box-shadow: $-select-border-box-shadow-size $-select-color-error;

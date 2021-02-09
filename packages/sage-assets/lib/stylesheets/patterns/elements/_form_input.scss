@@ -138,6 +138,16 @@ $-input-transition: border 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     }
   }
 
+  &.parsley-error {
+    color: inherit;
+    background-color: inherit;
+    border-color: $-input-color-error;
+
+    ~ .sage-input__label {
+      color: $-input-color-error;
+    }
+  }
+
   &:valid:not(:placeholder-shown) {
     outline: none;
     background: transparent; // Prevent some browsers from coloring the background on 'valid'
