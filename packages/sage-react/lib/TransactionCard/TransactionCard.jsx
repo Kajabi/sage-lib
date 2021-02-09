@@ -52,7 +52,7 @@ TransactionCard.defaultProps = {
   amountColor: null,
   productName: '--',
   transactionTime: '--',
-  dropdownOptions: [],
+  dropdownOptions: null,
 };
 
 TransactionCard.propTypes = {
