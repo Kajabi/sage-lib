@@ -137,9 +137,30 @@ $-textarea-color-success: map-get($sage-field-colors, success);
     background-color: inherit;
     border-color: $-textarea-color-error;
 
-    ~ .sage-input__label {
+    @include placeholder {
+      color: $-textarea-color-error;
+    }    
+
+    ~ .sage-textarea__label {
       color: $-textarea-color-error;
     }
+
+    &:focus:not(:disabled),
+    &:active:not(:disabled) {
+      display: inline;
+      border-color: $-textarea-color-error;
+      box-shadow: $-textarea-box-shadow-size $-textarea-color-error;
+
+      ~ .sage-textarea__label {
+        color: $-textarea-color-error;
+      }
+    }
+  }
+
+  &.parsley-success {
+    color: inherit;
+    background-color: inherit;
+    border: $-textarea-border-width solid $-textarea-color-success;
   }
 
   .sage-textarea--error &,

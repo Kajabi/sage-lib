@@ -107,9 +107,29 @@ $-select-padding-label: map-get($sage-field-configs, padding-label);
     background-color: inherit;
     border-color: $-select-color-error;
 
-    ~ .sage-input__label {
+    @include placeholder {
       color: $-select-color-error;
     }
+
+    ~ .sage-select__label {
+      color: $-select-color-error;
+    }
+    
+    &:focus:not(:disabled),
+      &:active:not(:disabled) {
+        border-color: $-select-color-error;
+        box-shadow: $-select-box-shadow-size $-select-color-error;
+  
+        ~ .sage-select__label {
+          color: $-select-color-error;
+        }
+      }
+  }
+
+  &.parsley-success {
+    color: inherit;
+    background-color: inherit;
+    border: $-select-border-width solid $-select-color-success;
   }
 
   .sage-select--error & {

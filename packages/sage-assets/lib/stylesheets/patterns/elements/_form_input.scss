@@ -143,9 +143,29 @@ $-input-transition: border 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     background-color: inherit;
     border-color: $-input-color-error;
 
+    @include placeholder {
+      color: $-input-color-error;
+    }
+
     ~ .sage-input__label {
       color: $-input-color-error;
     }
+
+    &:focus:not(:disabled),
+    &:active:not(:disabled) {
+      border-color: $-input-color-error;
+      box-shadow: $-input-box-shadow-size $-input-color-error;
+
+      ~ .sage-input__label {
+        color: $-input-color-error;
+      }
+    }
+  }
+
+  &.parsley-success {
+    color: inherit;
+    background-color: inherit;
+    border: $-input-border-width solid $-input-color-success;
   }
 
   &:valid:not(:placeholder-shown) {
