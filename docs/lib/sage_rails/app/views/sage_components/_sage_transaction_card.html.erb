@@ -4,17 +4,19 @@
       color: component.label_color,
       value: component.label_text,
     } %>
-    <%= sage_component SageDropdown, {
-      align: "right",
-      items: component.dropdown_options
-    } do %>
-      <%= sage_component SageButton, {
-        style: "secondary",
-        icon: { name: "dot-menu-horizontal", style: "only" },
-        value: "Options",
-        align: "end",
-        subtle: true,
-      } %>
+    <% if component.dropdown_options.present? %>
+      <%= sage_component SageDropdown, {
+        align: "right",
+        items: component.dropdown_options
+      } do %>
+        <%= sage_component SageButton, {
+          style: "secondary",
+          icon: { name: "dot-menu-horizontal", style: "only" },
+          value: "Options",
+          align: "end",
+          subtle: true,
+        } %>
+      <% end %>
     <% end %>
   </div>
   <div class="sage-transaction-card__body">
