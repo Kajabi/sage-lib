@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Property } from '../Property';
-import { SageTokens } from '../configs';
 import { Icon } from '../Icon';
 import { Label } from '../Label';
 import { OptionsDropdown } from '../Dropdown/OptionsDropdown';
@@ -15,7 +14,6 @@ export const TransactionCard = ({
   amountColor,
   productName,
   transactionTime,
-  dropdownLink
 }) => (
   <div className="sage-transaction-card">
     <div className="sage-transaction-card__header">
@@ -52,7 +50,6 @@ TransactionCard.defaultProps = {
   amountColor: null,
   productName: '--',
   transactionTime: '--',
-  dropdownLink: '#',
 };
 
 TransactionCard.propTypes = {
@@ -63,5 +60,4 @@ TransactionCard.propTypes = {
   amountColor: PropTypes.oneOf(Object.values(TransactionCard.AMOUNT_COLORS)),
   productName: PropTypes.string,
   transactionTime: PropTypes.string,
-  dropdownLink: PropTypes.string,
 };
