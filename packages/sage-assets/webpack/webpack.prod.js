@@ -35,10 +35,7 @@ module.exports = {
       },
       {
         test: /\.(woff|woff2|eot|ttf)$/,
-        loader: "url-loader",
-        options: {
-          limit: 0,
-        },
+        loader: "file-loader",
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/,
