@@ -1,13 +1,3 @@
-<% dropdown_items = [
-  {
-    value: "View contact profile",
-    icon: "user-circle",
-    attributes: {
-      "href": "#",
-    },
-  },
-]
-%>
 <div class="sage-transaction-card">
   <div class="sage-transaction-card__header">
     <%= sage_component SageLabel, {
@@ -16,7 +6,7 @@
     } %>
     <%= sage_component SageDropdown, {
       align: "right",
-      items: dropdown_items
+      items: component.dropdown_options
     } do %>
       <%= sage_component SageButton, {
         style: "secondary",
