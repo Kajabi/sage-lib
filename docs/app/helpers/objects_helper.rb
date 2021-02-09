@@ -12,7 +12,6 @@ module ObjectsHelper
   def sage_objects
     [
       # Sage Generated Objects
-
       {
         title: "alert",
         description: "Alerts are used to indicate user-driven notifications.",
@@ -290,6 +289,14 @@ module ObjectsHelper
         rails: "todo",
         react: "todo",
         a11y: "todo"
+      },
+      {
+        title: "transaction_card",
+        description: "The Transaction Card displays customer transaction details in a compact view.",
+        scss: "todo",
+        rails: "todo",
+        react: "todo",
+        a11y: "todo",
       },
       {
         title: "typeahead",

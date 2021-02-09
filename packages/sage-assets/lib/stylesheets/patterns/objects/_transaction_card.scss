@@ -1,0 +1,50 @@
+/* ==================================================
+  ** transaction_card
+  type: object
+
+================================================== */
+
+.sage-transaction-card {
+  @include sage-card();
+  position: relative;
+  width: 100%;
+}
+
+.sage-transaction-card__header,
+.sage-transaction-card__body,
+.sage-transaction-card__footer {
+  @include sage-grid-card-row;
+  min-width: 0;
+}
+
+.sage-transaction-card__body,
+.sage-transaction-card__footer {
+  @media (max-width: sage-breakpoint(sm-max)) {
+    flex-flow: nowrap;
+  }
+}
+
+.sage-transaction-card__footer {
+  > :first-child {
+    @include truncate;
+    max-width: 100%;
+  }
+}
+
+.sage-transaction-card__name {
+  @include truncate;
+  @extend %t-sage-heading-5;
+  max-width: 100%;
+}
+
+.sage-transaction-card__amount {
+  @extend %t-sage-heading-5;
+  white-space: nowrap;
+}
+
+.sage-transaction-card__amount--sage {
+  color: sage-color(sage, 300);
+}
+.sage-transaction-card__amount--red {
+  color: sage-color(red, 300);
+}
