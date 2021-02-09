@@ -8,6 +8,7 @@ import {
   LABEL_STYLES,
   LABEL_INTERACTIVE_TYPES,
 } from './configs';
+import { LabelGroup } from './LabelGroup';
 
 export const Label = React.forwardRef(({
   className,
@@ -57,6 +58,7 @@ export const Label = React.forwardRef(({
 Label.COLORS = LABEL_COLORS;
 Label.STYLES = LABEL_STYLES;
 Label.INTERACTIVE_TYPES = LABEL_INTERACTIVE_TYPES;
+Label.Group = LabelGroup;
 
 Label.defaultProps = {
   className: null,

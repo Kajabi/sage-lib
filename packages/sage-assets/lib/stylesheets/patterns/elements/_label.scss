@@ -19,6 +19,14 @@ $-label-inset-border: 0 0 0 1px inset;
   &[class*="sage-label--icon-only"] {
     background-color: transparent;
   }
+
+  .sage-label-group &:not(:last-child) {
+    margin-right: sage-spacing(xs);
+  }
+
+  .sage-label-group & {
+    margin-top: sage-spacing(xs);
+  }
 }
 
 .sage-label__value {
@@ -144,4 +152,9 @@ $-label-inset-border: 0 0 0 1px inset;
   }
 
   // NOTE: Icon generation consolidated in `core/_icons.scss`
+}
+
+.sage-label-group {
+  display: flex;
+  flex-flow: row wrap;
 }
