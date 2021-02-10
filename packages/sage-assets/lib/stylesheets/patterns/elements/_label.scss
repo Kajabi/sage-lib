@@ -100,8 +100,16 @@ $-label-inset-border: 0 0 0 1px inset;
       }
     }
 
-    .sage-btn:hover {
-      background-color: sage-color-combo($-color-name, default, icon-background-accent);
+    .sage-btn {
+      color: sage-color-combo($-color-name, default, foreground);
+
+      &:hover {
+        background-color: sage-color-combo($-color-name, default, icon-background-accent);
+      }
+
+      &:focus {
+        @include sage-focus-outline--update-color( sage-color-combo($-color-name, default, foreground) );
+      }
     }
 
     &:hover {

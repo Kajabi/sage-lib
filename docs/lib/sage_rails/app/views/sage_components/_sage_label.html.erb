@@ -21,7 +21,11 @@
     </span>
   </<%= label_content_tag %>>
   <%= component.content %>
-  <%= component.secondary_button if component.interactive_type === :secondary_button %>
+  <% if component.interactive_type === :secondary_button %>
+    <%= component.secondary_button if component.secondary_button.is_a? String %>
+    <%= sage_component SageLabelSecondaryButton, {} if component.secondary_button == true %>
+    <%= sage_component SageLabelSecondaryButton, component.secondary_button if component.secondary_button.is_a? Hash %>
+  <% end %>
   <% if component.interactive_type === :dropdown %>
     <span class="sage-label__decor-icon sage-label__decor-icon--down-small"></span>
   <% end %>
