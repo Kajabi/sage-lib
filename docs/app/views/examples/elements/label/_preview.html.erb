@@ -26,93 +26,101 @@ configs = [
   }
 ]
 %>
-
-<h3 class="t-sage-heading-6">Default</h3>
+<%= md("**Note:** Examples on this page all use the `SageLabelGroup` to wrap them but this is not required. It simply makes a set of `Label`s display neatly :)") %>
 <%= sage_component SagePanelBlock, {} do %>
-  <% configs.each do | config | %>
-    <%= sage_component SageLabel, {
-      color: config[:color],
-      value: config[:color].capitalize
-    } %>
-  <% end %>
-<% end %>
-
-<h3 class="t-sage-heading-6">Subtle</h3>
-<%= sage_component SagePanelBlock, {} do %>
-  <% configs.each do | config | %>
-    <%= sage_component SageLabel, {
-      color: config[:color],
-      style: "subtle",
-      value: config[:color].capitalize
-    } %>
-  <% end %>
-<% end %>
-
-<h3 class="t-sage-heading-6">Bold</h3>
-<%= sage_component SagePanelBlock, {} do %>
-  <% configs.each do | config | %>
-    <%= sage_component SageLabel, {
-      color: config[:color],
-      style: "bold",
-      value: config[:color].capitalize
-    } %>
-  <% end %>
-<% end %>
-
-<h3 class="t-sage-heading-6">With Icons</h3>
-<%= sage_component SagePanelBlock, {} do %>
-  <%= sage_component SageLabel, {
-    color: "draft",
-    value: "Add",
-    icon: "add-small"
-  } %>
-  <%= sage_component SageLabel, {
-    color: "draft",
-    value: "Tag",
-    icon: "tag"
-  } %>
-<% end %>
-
-<h3 class="t-sage-heading-6">Interactive Default</h3>
-<%= sage_component SagePanelBlock, {} do %>
-  <% configs.each do | config | %>
-    <%= sage_component SageLabel, {
-      color: config[:color],
-      value: config[:color].capitalize,
-      icon: config[:icon],
-      interactive_type: :default
-    } %>
-  <% end %>
-<% end %>
-
-<h3 class="t-sage-heading-6">Interactive With Secondary Button</h3>
-<%= sage_component SagePanelBlock, {} do %>
-  <% configs.each do | config | %>
-    <%= sage_component SageLabel, {
-      color: config[:color],
-      value: config[:color].capitalize,
-      icon: config[:icon],
-      interactive_type: :secondary_button,
-      secondary_button: sage_component(SageButton, {
-        value: "Close",
-        subtle: true,
-        small: true,
-        style: "secondary",
-        icon: { style: "only", name: "remove" }
-      })
-    } %>
+  <h3 class="t-sage-heading-6">Default</h3>
+  <%= sage_component SageLabelGroup, {} do %>
+    <% configs.each do | config | %>
+      <%= sage_component SageLabel, {
+        color: config[:color],
+        value: config[:color].capitalize
+      } %>
+    <% end %>
   <% end %>
 <% end %>
 
 
-<h3 class="t-sage-heading-6">Interactive With Dropdown Treatment</h3>
 <%= sage_component SagePanelBlock, {} do %>
-  <% configs.each do | config | %>
+  <h3 class="t-sage-heading-6">Subtle</h3>
+  <%= sage_component SageLabelGroup, {} do %>
+    <% configs.each do | config | %>
+      <%= sage_component SageLabel, {
+        color: config[:color],
+        style: "subtle",
+        value: config[:color].capitalize
+      } %>
+    <% end %>
+  <% end %>
+<% end %>
+
+<%= sage_component SagePanelBlock, {} do %>
+  <h3 class="t-sage-heading-6">Bold</h3>
+  <%= sage_component SageLabelGroup, {} do %>
+    <% configs.each do | config | %>
+      <%= sage_component SageLabel, {
+        color: config[:color],
+        style: "bold",
+        value: config[:color].capitalize
+      } %>
+    <% end %>
+  <% end %>
+<% end %>
+
+<%= sage_component SagePanelBlock, {} do %>
+  <h3 class="t-sage-heading-6">With Icons</h3>
+  <%= sage_component SageLabelGroup, {} do %>
     <%= sage_component SageLabel, {
-      color: config[:color],
-      value: config[:color].capitalize,
-      icon: config[:icon],
-      interactive_type: :dropdown
+      color: "draft",
+      value: "Add",
+      icon: "add-small",
     } %>
+    <%= sage_component SageLabel, {
+      color: "draft",
+      value: "Tag",
+      icon: "tag"
+    } %>
+  <% end %>
+<% end %>
+
+<%= sage_component SagePanelBlock, {} do %>
+  <h3 class="t-sage-heading-6">Interactive Default</h3>
+  <%= sage_component SageLabelGroup, {} do %>
+    <% configs.each do | config | %>
+      <%= sage_component SageLabel, {
+        color: config[:color],
+        value: config[:color].capitalize,
+        icon: config[:icon],
+        interactive_type: :default
+      } %>
+    <% end %>
+  <% end %>
+<% end %>
+
+<%= sage_component SagePanelBlock, {} do %>
+  <h3 class="t-sage-heading-6">Interactive With Secondary Button</h3>
+  <%= sage_component SageLabelGroup, {} do %>
+    <% configs.each do | config | %>
+      <%= sage_component SageLabel, {
+        color: config[:color],
+        value: config[:color].capitalize,
+        icon: config[:icon],
+        interactive_type: :secondary_button,
+        secondary_button: true,
+      } %>
+    <% end %>
+  <% end %>
+<% end %>
+
+<%= sage_component SagePanelBlock, {} do %>
+  <h3 class="t-sage-heading-6">Interactive With Dropdown Treatment</h3>
+  <%= sage_component SageLabelGroup, {} do %>
+    <% configs.each do | config | %>
+      <%= sage_component SageLabel, {
+        color: config[:color],
+        value: config[:color].capitalize,
+        icon: config[:icon],
+        interactive_type: :dropdown
+      } %>
+    <% end %>
   <% end %>
 <% end %>
