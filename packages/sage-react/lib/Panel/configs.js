@@ -17,3 +17,8 @@ export const PANEL_LIST_BLOCK_SPACING = {
   DEFAULT: false,
   MD: 'md',
 };
+
+export const PANEL_STACK_SPACINGS = {
+  DEFAULT: null,
+  FORM: 'form',
+};
