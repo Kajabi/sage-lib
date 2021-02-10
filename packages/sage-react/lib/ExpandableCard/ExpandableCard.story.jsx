@@ -8,7 +8,7 @@ storiesOf('Sage/ExpandableCard', module)
   .addDecorator(withKnobs)
   .add('Default', () => (
     <ExpandableCard
-      triggerLabel={text('Label Text', 'Expand')}
+      triggerLabel={text('Trigger Label', 'Expand')}
       bodyBordered={boolean('Body Border', false)}
     >
       <Checkbox
