@@ -1,29 +1,53 @@
-<h3 class="t-sage-heading-6">Single/independent card</h3>
+<h3 class="t-sage-heading-6">Bordered</h3>
 <%= sage_component SageExpandableCard, {
-  body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-  header: "Header Content 1",
-} %>
-
-<h3 class="t-sage-heading-6">Single/independent card with header aside and footer</h3>
+  trigger_label: "Expand",
+  body_bordered: true,
+} do %>
+  <%= sage_component SageCheckbox, {
+    id:"c1",
+    label_text: "Grant offers",
+    checked: false,
+    disabled: false,
+    has_error: false
+  } %>
+  <%= sage_component SageCheckbox, {
+    id:"c2",
+    label_text: "Add tags",
+    checked: false,
+    disabled: false,
+    has_error: false
+  } %>
+  <%= sage_component SageCheckbox, {
+    id:"c3",
+    label_text: "Subscribe to emails",
+    checked: false,
+    disabled: false,
+    has_error: false
+  } %>
+<% end %>
+<h3 class="t-sage-heading-6">No Border</h3>
 <%= sage_component SageExpandableCard, {
-  body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-  footer: "Footer - lorem ipsum",
-  header: "Header Content 1",
-  header_aside: "This is the header aside area"
-} %>
-
-<h3 class="t-sage-heading-6">Expandable Card Group</h3>
-<div class="sage-expandable-card-group" data-js-accordion="group-toggle-solo">
-  <%= sage_component SageExpandableCard, {
-    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    header: "Tab 1",
+  trigger_label: "Expand",
+} do %>
+  <%= sage_component SageCheckbox, {
+    id:"c1",
+    label_text: "Grant offers",
+    checked: false,
+    disabled: false,
+    has_error: false
   } %>
-  <%= sage_component SageExpandableCard, {
-    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    header: "Tab 2",
+  <%= sage_component SageCheckbox, {
+    id:"c2",
+    label_text: "Add tags",
+    checked: false,
+    disabled: false,
+    has_error: false
   } %>
-  <%= sage_component SageExpandableCard, {
-    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    header: "Tab 3",
+  <%= sage_component SageCheckbox, {
+    id:"c3",
+    label_text: "Subscribe to emails",
+    checked: false,
+    disabled: false,
+    has_error: false
   } %>
-</div>
+<% end %>

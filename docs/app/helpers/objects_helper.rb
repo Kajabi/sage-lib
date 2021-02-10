@@ -114,7 +114,7 @@ module ObjectsHelper
       },
       {
         title: "expandable_card",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        description: "Card that can be expanded and collapsed in order to display additional content.",
         use_legacy_html_code_source: false,
         scss: "todo",
         docs: "done",
