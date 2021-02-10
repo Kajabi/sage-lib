@@ -15,6 +15,7 @@ export {
 } from './CopyText';
 export { DataCard } from './DataCard';
 export { EmptyState } from './EmptyState';
+export { ExpandableCard } from './ExpandableCard';
 export { FormSection } from './FormSection';
 export { Grid } from './Grid';
 export { HelpLink } from './HelpLink';
