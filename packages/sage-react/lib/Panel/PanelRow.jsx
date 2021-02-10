@@ -30,6 +30,8 @@ export const PanelRow = ({
   );
 };
 
+PanelRow.VERTICAL_ALIGNMENTS = PANEL_ROW_ALIGNMENT_OPTIONS;
+
 PanelRow.defaultProps = {
   children: null,
   className: '',
