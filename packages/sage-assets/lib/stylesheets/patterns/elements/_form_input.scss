@@ -138,36 +138,6 @@ $-input-transition: border 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     }
   }
 
-  &.parsley-error {
-    color: inherit;
-    background-color: inherit;
-    border-color: $-input-color-error;
-
-    @include placeholder {
-      color: $-input-color-error;
-    }
-
-    ~ .sage-input__label {
-      color: $-input-color-error;
-    }
-  }
-
-  &.parsley-error:focus:not(:disabled),
-  &.parsley-error:active:not(:disabled) {
-    border-color: $-input-color-error;
-    box-shadow: $-input-box-shadow-size $-input-color-error;
-
-    ~ .sage-input__label {
-      color: $-input-color-error;
-    }
-  }
-
-  &.parsley-success {
-    color: inherit;
-    background-color: inherit;
-    border: $-input-border-width solid $-input-color-success;
-  }
-
   &:valid:not(:placeholder-shown) {
     outline: none;
     background: transparent; // Prevent some browsers from coloring the background on 'valid'
