@@ -9,6 +9,7 @@ export const Popover = ({
   className,
   children,
   customContentClassName,
+  icon,
   moreLinkURL,
   moreLinkText,
   title,
@@ -55,7 +56,7 @@ export const Popover = ({
         aria-haspopup={true}
         className="sage-popover__button"
         color={Button.COLORS.SECONDARY}
-        icon={SageTokens.ICONS.QUESTION_CIRCLE}
+        icon={icon}
         iconOnly={true}
         onClick={handleExpandClick}
         subtle={true}
@@ -101,6 +102,7 @@ Popover.defaultProps = {
   className: null,
   children: null,
   customContentClassName: null,
+  icon: SageTokens.ICONS.QUESTION_CIRCLE,
   moreLinkURL: null,
   moreLinkText: 'Learn more',
   title: null,
@@ -110,6 +112,7 @@ Popover.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node,
   customContentClassName: PropTypes.string,
+  icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),
   moreLinkURL: PropTypes.string,
   moreLinkText: PropTypes.string,
   title: PropTypes.string,
