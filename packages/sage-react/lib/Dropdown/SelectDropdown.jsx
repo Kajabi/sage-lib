@@ -71,7 +71,6 @@ export const SelectDropdown = ({
   };
 
   const changeValue = (data) => {
-    console.log('change', data);
     let { selectedValue, icon, hasSelectedValue } = configs;
 
     if (onChangeHook) {
