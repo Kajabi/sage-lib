@@ -6,7 +6,7 @@
 
 
 $-parsley-color-error: map-get($sage-field-colors, error);
-$-parsley-box-shadow-size:map-get($sage-field-configs, box-shadow-size);
+$-parsley-box-shadow-size: map-get($sage-field-configs, box-shadow-size);
 $-parsley-border-width: map-get($sage-field-configs, border-width);
 $-parsley-color-success: map-get($sage-field-colors, success);
 
