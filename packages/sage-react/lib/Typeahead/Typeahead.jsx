@@ -8,6 +8,7 @@ import { TypeaheadPanel } from './TypeaheadPanel';
 const A11Y_ID = uuid();
 
 export const Typeahead = ({
+  contained,
   items,
   maxResults,
   placeholder,
@@ -65,7 +66,7 @@ export const Typeahead = ({
       {...rest}
     >
       <Search
-        contained={true}
+        contained={contained}
         placeholder={placeholder}
         value={searchValue}
         onChange={onSearchInteraction}
@@ -87,12 +88,14 @@ export const Typeahead = ({
 };
 
 Typeahead.defaultProps = {
+  contained: true,
   items: [],
   placeholder: 'Find',
   maxResults: 5
 };
 
 Typeahead.propTypes = {
+  contained: PropTypes.bool,
   items: TypeaheadPanel.propTypes.items,
   maxResults: PropTypes.number,
   placeholder: PropTypes.string,
