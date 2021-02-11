@@ -13,6 +13,7 @@ export const Popover = ({
   moreLinkURL,
   moreLinkText,
   title,
+  ...rest
 }) => {
   const [selfActive, setSelfActive] = useState(false);
 
@@ -49,7 +50,7 @@ export const Popover = ({
   const id = uuid();
 
   return (
-    <div id={id} className={classNames} role="button" onKeyDown={handleKeydown} tabIndex={-1}>
+    <div id={id} className={classNames} role="button" onKeyDown={handleKeydown} tabIndex={-1} {...rest}>
       <Button
         aria-controls={id}
         aria-expanded={selfActive}
