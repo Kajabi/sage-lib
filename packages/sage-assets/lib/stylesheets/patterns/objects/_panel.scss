@@ -83,7 +83,7 @@
   @include sage-grid-panel-row();
 
   &:not(.sage-panel__footer--align-spread) {
-    justify-content: end;
+    justify-content: flex-end;
   }
 }
 
