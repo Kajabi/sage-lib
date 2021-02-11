@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import uuid from 'react-uuid';
 import { SageTokens } from '../configs';
+import { Label } from '../Label';
 import { Dropdown } from './Dropdown';
 import { DropdownTriggerSelect } from './DropdownTriggerSelect';
 import { DROPDOWN_PANEL_SIZES } from './configs';
@@ -33,6 +34,7 @@ export const SelectDropdown = ({
   searchable,
   searchPlaceholder,
   selectionBecomesLabel,
+  showSelectionsAsLabels,
 }) => {
   const emptySelectedValue = (
     <>
@@ -173,7 +175,7 @@ export const SelectDropdown = ({
     }
   }, [initialSelectedValue, items, selectionBecomesLabel, allowMultiselect]);
 
-  return (
+  const renderDropdown = () => (
     <Dropdown
       align={align}
       className={configs.classNames}
@@ -208,6 +210,24 @@ export const SelectDropdown = ({
       />
     </Dropdown>
   );
+
+  return allowMultiselect && showSelectionsAsLabels ? (
+    <div className="sage-dropdown-combo">
+      {renderDropdown()}
+      <Label.Group>
+        {items.map(({ id, isActive, label, payload }) => isActive && (
+          <Label
+            key={id}
+            interactiveType={Label.INTERACTIVE_TYPES.SECONDARY_BUTTON}
+            secondaryButton={(
+              <Label.SecondaryButton onClick={() => changeValue((payload || { id }))} />
+            )}
+            value={label}
+          />
+        ))}
+      </Label.Group>
+    </div>
+  ) : renderDropdown();
 };
 
 SelectDropdown.PANEL_SIZES = DROPDOWN_PANEL_SIZES;
@@ -237,6 +257,7 @@ SelectDropdown.defaultProps = {
   searchable: false,
   searchPlaceholder: 'Find',
   selectionBecomesLabel: true,
+  showSelectionsAsLabels: false,
 };
 
 SelectDropdown.propTypes = {
@@ -277,4 +298,5 @@ SelectDropdown.propTypes = {
   searchable: PropTypes.bool,
   searchPlaceholder: PropTypes.string,
   selectionBecomesLabel: PropTypes.bool,
+  showSelectionsAsLabels: PropTypes.bool,
 };

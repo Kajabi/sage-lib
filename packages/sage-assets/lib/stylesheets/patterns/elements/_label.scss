@@ -19,6 +19,14 @@ $-label-inset-border: 0 0 0 1px inset;
   &[class*="sage-label--icon-only"] {
     background-color: transparent;
   }
+
+  .sage-label-group &:not(:last-child) {
+    margin-right: sage-spacing(xs);
+  }
+
+  .sage-label-group & {
+    margin-top: sage-spacing(xs);
+  }
 }
 
 .sage-label__value {
@@ -92,8 +100,16 @@ $-label-inset-border: 0 0 0 1px inset;
       }
     }
 
-    .sage-btn:hover {
-      background-color: sage-color-combo($-color-name, default, icon-background-accent);
+    .sage-btn {
+      color: sage-color-combo($-color-name, default, foreground);
+
+      &:hover {
+        background-color: sage-color-combo($-color-name, default, icon-background-accent);
+      }
+
+      &:focus {
+        @include sage-focus-outline--update-color( sage-color-combo($-color-name, default, foreground) );
+      }
     }
 
     &:hover {
@@ -144,4 +160,9 @@ $-label-inset-border: 0 0 0 1px inset;
   }
 
   // NOTE: Icon generation consolidated in `core/_icons.scss`
+}
+
+.sage-label-group {
+  display: flex;
+  flex-flow: row wrap;
 }

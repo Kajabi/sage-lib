@@ -1,0 +1,12 @@
+<%= sage_component SageButton, {
+  attributes: component.attributes,
+  css_classes: component.css_classes,
+  icon: {
+    name: component.icon.present? ? component.icon : "remove",
+    style: "only"
+  },
+  small: true,
+  style: "secondary",
+  subtle: true,
+  value: component.value.present? ? component.value : "Remove",
+} %>

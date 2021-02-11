@@ -75,6 +75,7 @@ export const MultiMenuStory = () => {
   return (
     <SelectDropdown
       allowMultiselect={true}
+      showSelectionsAsLabels={true}
       closePanelOnExit={false}
       defaultLabel="Select one or more..."
       items={items}

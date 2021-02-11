@@ -365,3 +365,7 @@ $-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
     color: $-trigger-label-color-disabled;
   }
 }
+
+.sage-dropdown-combo {
+  width: 100%;
+}
