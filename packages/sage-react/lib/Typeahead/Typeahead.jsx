@@ -10,6 +10,7 @@ const A11Y_ID = uuid();
 export const Typeahead = ({
   contained,
   items,
+  searchFn,
   maxResults,
   placeholder,
   ...rest
@@ -28,13 +29,17 @@ export const Typeahead = ({
     returnFocus: false,
   });
 
-  useDebounceEffect(() => {
-    const _value = searchValue.toUpperCase(),
-      _results = [];
-    items.forEach((item) => {
-      if (_results.length >= maxResults) return;
-      if (item.title.toUpperCase().includes(_value)) _results.push(item);
-    });
+  useDebounceEffect(async () => {
+    const _value = searchValue.toUpperCase();
+    let _results = [];
+    if (searchFn) {
+      _results = await searchFn(_value);
+    } else {
+      items.forEach((item) => {
+        if (_results.length >= maxResults) return;
+        if (item.title.toUpperCase().includes(_value)) _results.push(item);
+      });
+    }
     setSearchResults(_results);
   }, [searchValue], 200);
 
@@ -90,8 +95,9 @@ export const Typeahead = ({
 Typeahead.defaultProps = {
   contained: true,
   items: [],
+  maxResults: 5,
   placeholder: 'Find',
-  maxResults: 5
+  searchFn: null,
 };
 
 Typeahead.propTypes = {
@@ -99,4 +105,5 @@ Typeahead.propTypes = {
   items: TypeaheadPanel.propTypes.items,
   maxResults: PropTypes.number,
   placeholder: PropTypes.string,
+  searchFn: PropTypes.func,
 };
