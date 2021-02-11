@@ -14,6 +14,7 @@
 
   [class*="sage-icon-"] {
     display: block;
+    color: currentColor;
   }
 }
 
@@ -22,7 +23,7 @@
   $-bold-values: map-get($-values, bold);
 
   .sage-icon-card--#{$-color} {
-    color: sage-color-combo($-color, default, foreground-accent);
+    color: sage-color-combo($-color, default, foreground);
     background-color: sage-color-combo($-color, default, background);
   }
 
