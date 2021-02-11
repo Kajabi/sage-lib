@@ -11,7 +11,7 @@ $-expandable-card-padding: sage-spacing(sm);
 $-expandable-card-padding-xs: sage-spacing(xs);
 
 .sage-expandable-card__body,
-.sage-expandable-card__body__bordered {
+.sage-expandable-card__body-bordered {
   margin-top: sage-spacing(xs);
 
   [aria-expanded] + & {
@@ -37,7 +37,7 @@ $-expandable-card-padding-xs: sage-spacing(xs);
   padding: $-expandable-card-padding-xs;
 }
 
-.sage-expandable-card__body__bordered {
+.sage-expandable-card__body-bordered {
   padding-left: $-expandable-card-padding;
   padding-right: $-expandable-card-padding;
   [aria-expanded="true"] + & {

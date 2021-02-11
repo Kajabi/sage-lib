@@ -33,7 +33,7 @@ export const ExpandableCard = ({ triggerLabel, bodyBordered, children, }) => {
       >
         {triggerLabel}
       </Button>
-      <div id={id} className={`${bodyBordered ? 'sage-expandable-card__body__bordered' : 'sage-expandable-card__body'}`}>
+      <div id={id} className={`${bodyBordered ? 'sage-expandable-card__body-bordered' : 'sage-expandable-card__body'}`}>
         {children}
       </div>
     </div>
