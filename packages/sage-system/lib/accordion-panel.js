@@ -37,7 +37,7 @@ Sage.accordion = (function () {
     // Toggle target
     const toggle = el.getAttribute('aria-expanded') === 'true';
     el.setAttribute('aria-expanded', !toggle);
-    el.nextElementSibling.hidden = false;
+    el.nextElementSibling.hidden = toggle;
   }
 
   function init(el) {
