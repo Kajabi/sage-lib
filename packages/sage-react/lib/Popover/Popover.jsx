@@ -80,7 +80,6 @@ export const Popover = ({
         role="button"
         onKeyDown={handleKeydown}
         tabIndex={-1}
-        {...positioning()}
       />
       <div className="sage-popover__panel">
         {title && (
