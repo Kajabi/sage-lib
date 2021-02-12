@@ -6,6 +6,7 @@
 
 
 $-parsley-color-error: map-get($sage-field-colors, error);
+$-parsley-color-border: map-get($sage-field-colors, border);
 $-parsley-box-shadow-size: map-get($sage-field-configs, box-shadow-size);
 $-parsley-border-width: map-get($sage-field-configs, border-width);
 $-parsley-color-success: map-get($sage-field-colors, success);
@@ -38,7 +39,7 @@ $-parsley-color-success: map-get($sage-field-colors, success);
   &.parsley-success {
     color: inherit;
     background-color: inherit;
-    border: $-parsley-border-width solid $-parsley-color-success;
+    border: $-parsley-border-width solid $-parsley-color-border;
   }
 }
 
@@ -70,7 +71,7 @@ $-parsley-color-success: map-get($sage-field-colors, success);
   &.parsley-success {
     color: inherit;
     background-color: inherit;
-    border: $-parsley-border-width solid $-parsley-color-success;
+    border: $-parsley-border-width solid $-parsley-color-border;
   }
 }
 
@@ -104,6 +105,6 @@ $-parsley-color-success: map-get($sage-field-colors, success);
   &.parsley-success {
     color: inherit;
     background-color: inherit;
-    border: $-parsley-border-width solid $-parsley-color-success;
+    border: $-parsley-border-width solid $-parsley-color-border;
   }
 }
