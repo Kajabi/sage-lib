@@ -19,7 +19,6 @@ storiesOf('Sage/Breadcrumbs', module)
   ))
   .add('Multiple items', () => (
     <Breadcrumbs
-      icon={null}
       items={[
         {
           label: 'First place',
@@ -38,7 +37,6 @@ storiesOf('Sage/Breadcrumbs', module)
   ))
   .add('Progressbar Style', () => (
     <Breadcrumbs
-      icon={null}
       isProgressbar={true}
       items={[
         {
