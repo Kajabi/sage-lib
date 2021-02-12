@@ -1,47 +1,16 @@
-<%
-colors = [
+<div class="sage-row">
+  <% [
   "draft",
   "published",
   "info",
   "warning",
   "danger"
-]
-%>
-
-<h3 class="t-sage-heading-6">Regular Cards</h3>
-<div class="sage-row">
-  <% colors.each do | color | %>
+].each do | color | %>
     <div class="sage-col-2">
       <%= sage_component SageIconCard, { 
         color: color,
         icon: "file",
-        label: "File graphic",
-      } %>
-    </div>
-  <% end %>
-</div>
-
-<h3 class="t-sage-heading-6">Subtle Cards</h3>
-<div class="sage-row">
-  <% colors.each do | color | %>
-    <div class="sage-col-2">
-      <%= sage_component SageIconCard, { 
-        color: color,
-        icon: "file",
-        style: "subtle",
-      } %>
-    </div>
-  <% end %>
-</div>
-
-<h3 class="t-sage-heading-6">Bold Cards</h3>
-<div class="sage-row">
-  <% colors.each do | color | %>
-    <div class="sage-col-2">
-      <%= sage_component SageIconCard, { 
-        color: color,
-        icon: "file",
-        style: "bold",
+        label: "File graphic"
       } %>
     </div>
   <% end %>
