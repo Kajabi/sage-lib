@@ -5,8 +5,6 @@ Sage.accordion = (function () {
 
   const JS_ACCORDION_ROOT = 'data-js-accordion';
   const JS_ACCORDION_BODY = 'body';
-  const JS_ACCORDION_HEADER = 'header';
-  const JS_ACCORDION_SOLO_TOGGLE = 'group-toggle-solo';
   const JS_ACCORDION_ID_BODY_PREFIX = 'accordion-body';
   const JS_ACCORDION_ID_HEADER_PREFIX = 'accordion-header';
 
@@ -36,20 +34,10 @@ Sage.accordion = (function () {
       return false;
     }
 
-    // Check for other items in an exclusive panel group to toggler off
-    const grandparent = el.parentNode.parentNode;
-    if (grandparent.dataset.jsAccordion && grandparent.dataset.jsAccordion === JS_ACCORDION_SOLO_TOGGLE) {
-      const allHeaders = grandparent.querySelectorAll(`[${JS_ACCORDION_ROOT}="${JS_ACCORDION_HEADER}"]`);
-      allHeaders.forEach(header => {
-        if (header.getAttribute('id') !== el.getAttribute('id')) {
-          header.setAttribute('aria-expanded', false);
-        }
-      });
-    }
-
     // Toggle target
     const toggle = el.getAttribute('aria-expanded') === 'true';
     el.setAttribute('aria-expanded', !toggle);
+    el.nextElementSibling.hidden = false;
   }
 
   function init(el) {
@@ -73,6 +61,7 @@ Sage.accordion = (function () {
     if (!bodyId) {
       bodyId = generateId(JS_ACCORDION_ID_BODY_PREFIX);
       body.setAttribute('id', bodyId);
+      body.hidden = true;
     }
 
     // Add a11y attributes
