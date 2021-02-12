@@ -1,5 +1,108 @@
+<h3 class="t-sage-heading-6">Default</h3>
 <%= render "examples/objects/pagination/markup",
   total_count: "32",
+  pagination_items: [
+    {
+      # prev link
+      is_link: true,
+      is_gap: false,
+      is_prev: true,
+      is_next: false,
+      page_number: "",
+      link_url: "#",
+      is_disabled: true,
+      is_current: false
+    },
+    {
+      is_link: true,
+      is_gap: false,
+      is_prev: false,
+      is_next: false,
+      page_number: "1",
+      link_url: "#",
+      is_disabled: false,
+      is_current: true
+    },
+    {
+      is_link: true,
+      is_gap: false,
+      is_prev: false,
+      is_next: false,
+      page_number: "2",
+      link_url: "#",
+      is_disabled: false,
+      is_current: false
+    },
+    {
+      is_link: true,
+      is_gap: false,
+      is_prev: false,
+      is_next: false,
+      page_number: "3",
+      link_url: "#",
+      is_disabled: false,
+      is_current: false
+    },
+    {
+      is_link: true,
+      is_gap: false,
+      is_prev: false,
+      is_next: false,
+      page_number: "4",
+      link_url: "#",
+      is_disabled: false,
+      is_current: false
+    },
+    {
+      is_link: true,
+      is_gap: false,
+      is_prev: false,
+      is_next: false,
+      page_number: "5",
+      link_url: "#",
+      is_disabled: false,
+      is_current: false
+    },
+    {
+      # gap
+      is_link: false,
+      is_gap: true,
+      is_prev: false,
+      is_next: false,
+      page_number: "",
+      link_url: "#",
+      is_disabled: false,
+      is_current: false
+    },
+    {
+      is_link: true,
+      is_gap: false,
+      is_prev: false,
+      is_next: false,
+      page_number: "20",
+      link_url: "#",
+      is_disabled: false,
+      is_current: false
+    },
+    {
+      # next link
+      is_link: true,
+      is_gap: false,
+      is_prev: false,
+      is_next: true,
+      page_number: "",
+      link_url: "#",
+      is_disabled: false,
+      is_current: false
+    },
+  ]
+%>
+
+<h3 class="t-sage-heading-6">Page count disabled</h3>
+<%= render "examples/objects/pagination/markup",
+  total_count: "32",
+  hide_counter: true,
+  hide_pages: true,
   pagination_items: [
     {
       # prev link
