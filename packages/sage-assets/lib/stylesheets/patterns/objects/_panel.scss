@@ -83,7 +83,7 @@
   @include sage-grid-panel-row();
 
   &:not(.sage-panel__footer--align-spread) {
-    justify-content: end;
+    justify-content: flex-end;
   }
 }
 
@@ -105,6 +105,11 @@
   border-bottom: 1px solid sage-color(grey, 200);
 
   @include sage-grid-card-row;
+
+  .sage-panel__list--block-space-xs & {
+    padding-top: sage-spacing(xs);
+    padding-bottom: sage-spacing(xs);
+  }
 
   .sage-panel__list--block-space-md & {
     padding-top: sage-spacing();

@@ -5,9 +5,12 @@ color = component.color.present? ? component.color : 'draft'
 <div
   class="
     sage-icon-card
-    <%= "sage-icon-card--#{color}" %><%= "-#{component.style}" if component.style.present? %>
+    <%= "sage-icon-card--#{color}" %>
     <%= component.css_classes if component.css_classes.present? %>
   "
+  <% component.attributes.each do |key, value| %>
+    <%= "#{key}=\"#{value}\"".html_safe %>
+  <% end if component.attributes&.is_a?(Hash) %>
 >
   <i
     class="sage-icon-<%= component.icon %>-<%= size %>"

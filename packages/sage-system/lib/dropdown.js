@@ -33,12 +33,18 @@ Sage.dropdown = (function() {
   const SELECTOR_FOCUSABLE_ELEMENTS = '.sage-dropdown__panel a, .sage-dropdown__panel button, .sage-dropdown__panel textarea, .sage-dropdown__panel input[type="text"], .sage-dropdown__panel input[type="radio"], .sage-dropdown__panel input[type="checkbox"], .sage-dropdown__panel input[type="search"], .sage-dropdown__panel select';
   let SELECTOR_LAST_FOCUSED;
 
+  const dropdownItemAriaSelectedClass = '.sage-dropdown__panel .sage-dropdown__item[aria-selected="true"]';
+  const dropdownItemControlClass = '.sage-dropdown__item-control';
+  const dropdownClass = '.sage-dropdown';
+  const dropdownTriggerLabelClass = '.sage-dropdown__trigger-label';
+
   // ==================================================
   // Functions
   // ==================================================
 
   function init(el) {
     buildA11y(el);
+    checkSelected(el);
     el.addEventListener('click', handleClick);
     el.addEventListener('keyup', handleKeyAction);
   }
@@ -136,6 +142,16 @@ Sage.dropdown = (function() {
   function buildA11y(el) {
     el.setAttribute('aria-haspopup', true);
     el.setAttribute('aria-expanded', false);
+  }
+
+  function checkSelected(el) {
+    let selectedItem = el.querySelector(dropdownItemAriaSelectedClass); 
+    
+    if (selectedItem != null) {
+      let selectedItemValue = selectedItem.querySelector(dropdownItemControlClass).innerHTML;
+      let selectedParent = selectedItem.closest(dropdownClass);
+      selectedParent.querySelector(dropdownTriggerLabelClass).innerHTML = selectedItemValue;
+    }
   }
 
   function focusTrap(evt) {

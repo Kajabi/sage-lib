@@ -1,0 +1,110 @@
+////
+/// Sage customizations for Parsley form validation
+///
+/// @group vendors
+////
+
+
+$-parsley-color-error: map-get($sage-field-colors, error);
+$-parsley-color-border: map-get($sage-field-colors, border);
+$-parsley-box-shadow-size: map-get($sage-field-configs, box-shadow-size);
+$-parsley-border-width: map-get($sage-field-configs, border-width);
+$-parsley-color-success: map-get($sage-field-colors, success);
+
+.sage-input__field {
+  &.parsley-error {
+    color: inherit;
+    background-color: inherit;
+    border-color: $-parsley-color-error;
+
+    @include placeholder {
+      color: $-parsley-color-error;
+    }
+
+    ~ .sage-input__label {
+      color: $-parsley-color-error;
+    }
+  }
+
+  &.parsley-error:focus:not(:disabled),
+  &.parsley-error:active:not(:disabled) {
+    border-color: $-parsley-color-error;
+    box-shadow: $-parsley-box-shadow-size $-parsley-color-error;
+
+    ~ .sage-input__label {
+      color: $-parsley-color-error;
+    }
+  }
+
+  &.parsley-success {
+    color: inherit;
+    background-color: inherit;
+    border: $-parsley-border-width solid $-parsley-color-border;
+  }
+}
+
+.sage-select__field {
+  &.parsley-error {
+    color: inherit;
+    background-color: inherit;
+    border-color: $-parsley-color-error;
+
+    @include placeholder {
+      color: $-parsley-color-error;
+    }
+
+    ~ .sage-select__label {
+      color: $-parsley-color-error;
+    }
+  }
+
+  &.parsley-error:focus:not(:disabled),
+  &.parsley-error:active:not(:disabled) {
+    border-color: $-parsley-color-error;
+    box-shadow: $-parsley-box-shadow-size $-parsley-color-error;
+
+    ~ .sage-select__label {
+      color: $-parsley-color-error;
+    }
+  }
+
+  &.parsley-success {
+    color: inherit;
+    background-color: inherit;
+    border: $-parsley-border-width solid $-parsley-color-border;
+  }
+}
+
+.sage-textarea__field {
+  &.parsley-error {
+    color: inherit;
+    background-color: inherit;
+    border-color: $-parsley-color-error;
+
+    @include placeholder {
+      color: $-parsley-color-error;
+    }
+
+    ~ .sage-textarea__label {
+      color: $-parsley-color-error;
+    }
+  }
+
+
+  &.parsley-error:focus:not(:disabled),
+  &.parsley-error:active:not(:disabled) {
+    display: inline;
+    border-color: $-parsley-color-error;
+    box-shadow: $-parsley-box-shadow-size $-parsley-color-error;
+
+    ~ .sage-textarea__label {
+      color: $-parsley-color-error;
+    }
+  }
+
+  &.parsley-success {
+    color: inherit;
+    background-color: inherit;
+    border: $-parsley-border-width solid $-parsley-color-border;
+  }
+}

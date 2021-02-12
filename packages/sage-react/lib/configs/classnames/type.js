@@ -31,5 +31,5 @@ Object.keys(SageTokens.COLOR_SLIDERS).forEach((slider) => {
 });
 
 export const CLASSNAME_TRUNCATE_TEXT = `${typeClassPrefix}--truncate`;
-
+export const CLASSNAME_STRIKETHROUGH = `${typeClassPrefix}--strikethrough`;
 export const CLASSNAME_TYPE_BLOCK = 'sage-type';

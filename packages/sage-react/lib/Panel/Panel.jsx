@@ -20,12 +20,20 @@ import { PanelTitle } from './PanelTitle';
 export const Panel = ({
   children,
   className,
+  clearPaddingBoth,
+  clearPaddingBottom,
+  clearPaddingTop,
   loading,
   ...rest
 }) => {
   const classNames = classnames(
     'sage-panel',
     className,
+    {
+      'sage-panel--clear-padding-top': clearPaddingTop,
+      'sage-panel--clear-padding-bottom': clearPaddingBottom,
+      'sage-panel--clear-padding-both': clearPaddingBoth,
+    }
   );
 
   return (
@@ -54,12 +62,18 @@ Panel.Title = PanelTitle;
 
 Panel.defaultProps = {
   children: null,
-  className: '',
+  className: null,
+  clearPaddingBoth: false,
+  clearPaddingBottom: false,
+  clearPaddingTop: false,
   loading: false,
 };
 
 Panel.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
+  clearPaddingBoth: PropTypes.bool,
+  clearPaddingBottom: PropTypes.bool,
+  clearPaddingTop: PropTypes.bool,
   loading: PropTypes.bool,
 };

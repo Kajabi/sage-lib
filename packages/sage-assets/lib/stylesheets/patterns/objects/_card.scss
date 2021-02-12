@@ -35,6 +35,7 @@
 
   &:not(.sage-card__footer--align-spread) {
     justify-content: end;
+    justify-content: flex-end;
   }
 }
 

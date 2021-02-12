@@ -11,15 +11,13 @@ export const IconCard = ({
   icon,
   label,
   size,
-  style,
   ...rest
 }) => {
   const classNames = classnames(
     'sage-icon-card',
     className,
     {
-      [`sage-icon-card--${color}`]: color && !style,
-      [`sage-icon-card--${color}-${style}`]: icon && style,
+      [`sage-icon-card--${color}`]: color,
     }
   );
 
@@ -36,14 +34,12 @@ export const IconCard = ({
 IconCard.COLORS = { ...Label.COLORS };
 IconCard.ICONS = { ...SageTokens.ICONS };
 IconCard.SIZES = { ...Icon.SIZES };
-IconCard.STYLES = { ...Label.STYLES };
 
 IconCard.defaultProps = {
   className: null,
   color: Label.COLORS.DRAFT,
   label: null,
   size: Icon.SIZES.XXXL,
-  style: null,
 };
 
 IconCard.propTypes = {
@@ -52,5 +48,4 @@ IconCard.propTypes = {
   icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)).isRequired,
   label: PropTypes.string,
   size: PropTypes.oneOf(Object.values(Icon.SIZES)),
-  style: PropTypes.oneOf(Object.values(Label.STYLES)),
 };
