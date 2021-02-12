@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.3.2...@kajabi/sage-system@0.3.3) (2021-02-12)
+
+
+### Bug Fixes
+
+* **dropdown:** update order ([79664ba](https://github.com/Kajabi/sage-lib/commit/79664ba20c5307605bf85b0142032d24b2643f6f))
+* **dropdown:** update trigger label to contain the value of the recently selected option onload ([3664069](https://github.com/Kajabi/sage-lib/commit/3664069d1759126c9675c67a6ceaff847ee01aa6))
+
+
+
+
+
 ## [0.3.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.3.1...@kajabi/sage-system@0.3.2) (2021-01-25)
 
 

@@ -3,6 +3,34 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.11.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.10.0...@kajabi/sage@3.11.0) (2021-02-12)
+
+
+### Bug Fixes
+
+* **docs:** removes use of removed properties ([09908f6](https://github.com/Kajabi/sage-lib/commit/09908f63474ab9f077a3136478bbe73a780b8027))
+* **dropdown:** update trigger label to contain the value of the recently selected option onload ([3664069](https://github.com/Kajabi/sage-lib/commit/3664069d1759126c9675c67a6ceaff847ee01aa6))
+* **feature-toggle:** docs update ([7cc02f6](https://github.com/Kajabi/sage-lib/commit/7cc02f6c47bb506af1310de5ddc7015741cfab7e))
+* **feature-toggle:** docs update and apply wrapping to links for stacking on tiny displays ([a2b88e6](https://github.com/Kajabi/sage-lib/commit/a2b88e66eab27081263aef9b5b86bb11a7f9c297))
+* **feature-toggle:** make image conditional ([4a8f675](https://github.com/Kajabi/sage-lib/commit/4a8f675fd7c2353f4b6d952e20d6e710e37ba14b))
+* **feature-toggle:** updated props ([e3d1969](https://github.com/Kajabi/sage-lib/commit/e3d1969be473bc18b35a956e27fe9503003a6a94))
+* **transaction card:** add conditional to dropdown ([40ac7cf](https://github.com/Kajabi/sage-lib/commit/40ac7cfbee22863a049da34953166eb17cc7390d))
+
+
+### Features
+
+* **icon-card:** make same changes in rails component ([c77d71e](https://github.com/Kajabi/sage-lib/commit/c77d71ea98cc1f7375ea2fb8275767000c988ddf))
+* **label:** add label secondary button in Rails ([f40c241](https://github.com/Kajabi/sage-lib/commit/f40c2412526f7a2696a7c901b4413492fc1504ec))
+* **label:** add label-group in Rails ([bdd31d3](https://github.com/Kajabi/sage-lib/commit/bdd31d395172091e174f061ce25fb8f64ff07556))
+* **label:** integrate secondary button into main label in Rails ([50d8e4c](https://github.com/Kajabi/sage-lib/commit/50d8e4c2d8fa0be205d3677afbbc5e4c15b8fe97))
+* **label:** update documentation ([9dd4ce8](https://github.com/Kajabi/sage-lib/commit/9dd4ce8d2aaa149eaf35521cf42f0788f8bfb946))
+* **transaction card:** add inital markup ([d7517c0](https://github.com/Kajabi/sage-lib/commit/d7517c007444c7880b7f325b5e0e8afb5a925db7))
+* **transaction card:** initial generation ([c492c56](https://github.com/Kajabi/sage-lib/commit/c492c56d65fbfe868a150d12a64011ed519fe432))
+
+
+
+
+
 # [3.10.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.9.1...@kajabi/sage@3.10.0) (2021-02-05)
 
 

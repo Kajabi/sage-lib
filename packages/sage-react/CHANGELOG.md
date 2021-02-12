@@ -3,6 +3,44 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.29.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.28.0...@kajabi/sage-react@0.29.0) (2021-02-12)
+
+
+### Bug Fixes
+
+* **dropdown:** remove console log ([ec9a2f3](https://github.com/Kajabi/sage-lib/commit/ec9a2f34b623cc3b697350270b9f2d6e5feaab0d))
+* **icon-card:** remove unnecessary style modifier ([c011ffa](https://github.com/Kajabi/sage-lib/commit/c011ffa9076bcb77421332cbdde81d329e3a10b2))
+* **react textarea:** fix cursor jumping issue within sage react textarea ([d331486](https://github.com/Kajabi/sage-lib/commit/d33148633ec2b172c2a062cca8476413ef37fba2))
+* **rename files:** renamed files ([9449b94](https://github.com/Kajabi/sage-lib/commit/9449b94bc358a39555643cc58fd7e34ea19c92df))
+* **tokens:** update grid templates codes ([1bb6ea4](https://github.com/Kajabi/sage-lib/commit/1bb6ea45bb268ea960c0b01825b495131c642890))
+* ensure linting is clean ([fc40242](https://github.com/Kajabi/sage-lib/commit/fc4024203f3a99ba6dcecdfa3fa7518e64bfc6b6))
+* **transaction card:** add export to index.js ([bf62d71](https://github.com/Kajabi/sage-lib/commit/bf62d715d81f1c62b5edcfb8eeaa49707235d25c))
+* **transaction card:** add missing color ([5d01898](https://github.com/Kajabi/sage-lib/commit/5d01898003d33dbd2dd4bb5d6b93c24cce12150b))
+* **transaction card:** adjust default prop value ([0974ce2](https://github.com/Kajabi/sage-lib/commit/0974ce2932fbaff6c666d73e2fea0debb9839c36))
+* **transaction card:** fix typo ([6de88ae](https://github.com/Kajabi/sage-lib/commit/6de88ae73d6ba380a0471ceff1ef6fa91906aa28))
+* **transaction card:** lint fixes ([491781a](https://github.com/Kajabi/sage-lib/commit/491781a92dee532dd4f528bed3ebf9c85f7d4e98))
+* **transaction card:** remove unused props ([e85b7ef](https://github.com/Kajabi/sage-lib/commit/e85b7efdd8b69f81e1bd4819267f339edc682bf8))
+
+
+### Features
+
+* adds strikethrough class to sage classes dictionary ([ec27a94](https://github.com/Kajabi/sage-lib/commit/ec27a94452c221f04e64910a5fc8c41b4ee79971))
+* **dropdown:** make dropdown option for rendering selects as label group ([5e38e10](https://github.com/Kajabi/sage-lib/commit/5e38e10c0cf243d6f9ea18977b6e319ef9abf849))
+* **label:** add label group in react ([22fbc58](https://github.com/Kajabi/sage-lib/commit/22fbc58305bdbc81f501ea8d0663c7bd0c41ea2a))
+* **label:** add separate secondary button component for react label ([8d44d93](https://github.com/Kajabi/sage-lib/commit/8d44d93e3e0c39952884d5dc9e017f7c2041d8a7))
+* **modal:** improve modal header composition (React) ([58e46cd](https://github.com/Kajabi/sage-lib/commit/58e46cdb795ad509872d3819250f0d419dc07728))
+* **modal:** update modal body with spacing modifiers ([8acca70](https://github.com/Kajabi/sage-lib/commit/8acca705ebc3a40b23087c4fb1fccd2b66b9e841))
+* **panel:** add `xs` option to panel list spacing ([49721dd](https://github.com/Kajabi/sage-lib/commit/49721ddb0eba4d857969180d3db724f77b355a93))
+* **panel:** add option to clear padding on top and bottom ([941e984](https://github.com/Kajabi/sage-lib/commit/941e9842a62d7b0c5a5092421ab823c3b80b6e8a))
+* **panel-row:** add vertical alignment configs access ([9e7a7ec](https://github.com/Kajabi/sage-lib/commit/9e7a7ec33ec0e008e0c3f0ed82e518a626511d68))
+* **panel-stack:** add panel stack spacing prop in React ([069a949](https://github.com/Kajabi/sage-lib/commit/069a9492a795f8b06a79268d5490a1af3cb2aa3d))
+* **transaction card:** add addition props/attributes react ([dfad699](https://github.com/Kajabi/sage-lib/commit/dfad6994d97a200e32a2a403c3dfc71b9e1876c5))
+* **transaction card:** initial react setup ([961e450](https://github.com/Kajabi/sage-lib/commit/961e4501a99348dbae9d24be9866fd8e765fb190))
+
+
+
+
+
 # [0.28.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.27.1...@kajabi/sage-react@0.28.0) (2021-02-05)
 
 

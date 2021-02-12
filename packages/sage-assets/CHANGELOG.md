@@ -3,6 +3,41 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.21.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.20.0...@kajabi/sage-assets@0.21.0) (2021-02-12)
+
+
+### Bug Fixes
+
+* **card:** applies fix to right-align card footer content ([200287d](https://github.com/Kajabi/sage-lib/commit/200287d13e3d4e1b589dc5b26f2d28547cf912dc))
+* **feature-toggle:** docs update and apply wrapping to links for stacking on tiny displays ([a2b88e6](https://github.com/Kajabi/sage-lib/commit/a2b88e66eab27081263aef9b5b86bb11a7f9c297))
+* **feature-toggle:** make image conditional ([4a8f675](https://github.com/Kajabi/sage-lib/commit/4a8f675fd7c2353f4b6d952e20d6e710e37ba14b))
+* **feature-toggle:** update styles ([40d1362](https://github.com/Kajabi/sage-lib/commit/40d1362a8663b7b481a97d3f08019845b5f91499))
+* **feature-toggle:** updated image sizing ([40e0ca6](https://github.com/Kajabi/sage-lib/commit/40e0ca66b36bea6292417857b555107e21bcf927))
+* **form-elements:** typo in css rule ([f4c8c9b](https://github.com/Kajabi/sage-lib/commit/f4c8c9b9548334fa95ade8b40df270e459d50e5c))
+* **form-elements:** updated focus state styles ([3b2fc0b](https://github.com/Kajabi/sage-lib/commit/3b2fc0b9aae49b9f3078465f00b6c44f7aa09a2c))
+* **form-elements:** updated parsley error colors for form elements ([da01adf](https://github.com/Kajabi/sage-lib/commit/da01adf82c889533083026e5997f09eba3fcffcd))
+* **form-elements:** updated rules per linter ([c4d8aca](https://github.com/Kajabi/sage-lib/commit/c4d8aca933458f1304030e51bce807937340c1c8))
+* **icon-card:** ensure icon in card gets correct color ([bce68bd](https://github.com/Kajabi/sage-lib/commit/bce68bd9c7321507f74307c04ffd0e969fca8255))
+* **panel:** applies fix to right-align panel footer content at small screen sizes ([838bc73](https://github.com/Kajabi/sage-lib/commit/838bc7338580b90f596c573e1ecaba84f270bd77))
+* **parsley:** resolve border color after value has an error ([51d9757](https://github.com/Kajabi/sage-lib/commit/51d97578010b46d48f711ab9dab66a6e506bf608))
+* **parsley:** updated parsley erros styles to mimic the sage system ([69c0d04](https://github.com/Kajabi/sage-lib/commit/69c0d04f8a10cfa1243fd82d647daa1f7edd49f9))
+* **transaction card:** css adjustment ([817dd54](https://github.com/Kajabi/sage-lib/commit/817dd5467d27bd3d4bb32de461bb1f5ec9bfc9a0))
+
+
+### Features
+
+* **dropdown:** make dropdown option for rendering selects as label group ([5e38e10](https://github.com/Kajabi/sage-lib/commit/5e38e10c0cf243d6f9ea18977b6e319ef9abf849))
+* **icon-card:** make same changes in rails component ([c77d71e](https://github.com/Kajabi/sage-lib/commit/c77d71ea98cc1f7375ea2fb8275767000c988ddf))
+* **label:** add label group in react ([22fbc58](https://github.com/Kajabi/sage-lib/commit/22fbc58305bdbc81f501ea8d0663c7bd0c41ea2a))
+* **label:** integrate secondary button into main label in Rails ([50d8e4c](https://github.com/Kajabi/sage-lib/commit/50d8e4c2d8fa0be205d3677afbbc5e4c15b8fe97))
+* **panel:** add `xs` option to panel list spacing ([49721dd](https://github.com/Kajabi/sage-lib/commit/49721ddb0eba4d857969180d3db724f77b355a93))
+* **transaction card:** add initial styles ([094404a](https://github.com/Kajabi/sage-lib/commit/094404a67634147e48340a9f43feb7e8386a8bab))
+* **transaction card:** initial generation ([c492c56](https://github.com/Kajabi/sage-lib/commit/c492c56d65fbfe868a150d12a64011ed519fe432))
+
+
+
+
+
 # [0.20.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.19.1...@kajabi/sage-assets@0.20.0) (2021-02-05)
 
 
