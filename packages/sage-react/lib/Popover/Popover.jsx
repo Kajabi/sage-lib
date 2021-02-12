@@ -10,6 +10,8 @@ export const Popover = ({
   children,
   customContentClassName,
   icon,
+  iconOnly,
+  label,
   moreLinkURL,
   moreLinkText,
   title,
@@ -50,7 +52,14 @@ export const Popover = ({
   const id = uuid();
 
   return (
-    <div id={id} className={classNames} role="button" onKeyDown={handleKeydown} tabIndex={-1} {...rest}>
+    <div
+      id={id}
+      className={classNames}
+      role="button"
+      onKeyDown={handleKeydown}
+      tabIndex={-1}
+      {...rest}
+    >
       <Button
         aria-controls={id}
         aria-expanded={selfActive}
@@ -58,11 +67,11 @@ export const Popover = ({
         className="sage-popover__button"
         color={Button.COLORS.SECONDARY}
         icon={icon}
-        iconOnly={true}
+        iconOnly={iconOnly}
         onClick={handleExpandClick}
         subtle={true}
       >
-        Learn more
+        {label}
       </Button>
       <div
         className="sage-popover__overlay"
@@ -71,6 +80,7 @@ export const Popover = ({
         role="button"
         onKeyDown={handleKeydown}
         tabIndex={-1}
+        {...positioning()}
       />
       <div className="sage-popover__panel">
         {title && (
@@ -104,6 +114,8 @@ Popover.defaultProps = {
   children: null,
   customContentClassName: null,
   icon: SageTokens.ICONS.QUESTION_CIRCLE,
+  iconOnly: true,
+  label: 'Learn more',
   moreLinkURL: null,
   moreLinkText: 'Learn more',
   title: null,
@@ -114,6 +126,8 @@ Popover.propTypes = {
   children: PropTypes.node,
   customContentClassName: PropTypes.string,
   icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),
+  iconOnly: PropTypes.bool,
+  label: PropTypes.string,
   moreLinkURL: PropTypes.string,
   moreLinkText: PropTypes.string,
   title: PropTypes.string,
