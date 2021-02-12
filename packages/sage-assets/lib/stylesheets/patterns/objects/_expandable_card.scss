@@ -54,7 +54,7 @@ $-expandable-card-padding-xs: sage-spacing(xs);
     justify-content: center;
     margin-right: rem(4px);
     font-size: rem(4px);
-    transition: all 0.2s linear;
+    transition: transform 0.2s linear;
   }
   &[aria-expanded="true"]::before {
     transform: rotateZ(90deg);
