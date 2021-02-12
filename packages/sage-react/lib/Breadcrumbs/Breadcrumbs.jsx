@@ -39,7 +39,7 @@ export const Breadcrumbs = ({
         tag={linkTag}
         {...otherProps}
       >
-        {(icon && i === 0) && (
+        {(icon && items.length === 1 && i === 0) && (
           <Icon className="sage-breadcrumbs__icon" icon={icon} />
         )}
         {label}
