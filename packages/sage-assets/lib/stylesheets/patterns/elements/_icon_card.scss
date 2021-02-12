@@ -26,14 +26,4 @@
     color: sage-color-combo($-color, default, foreground);
     background-color: sage-color-combo($-color, default, background);
   }
-
-  .sage-icon-card--#{$-color}-subtle {
-    color: sage-color-combo($-color, subtle, foreground-accent);
-    border: 1px solid sage-color-combo($-color, subtle, background);
-  }
-
-  .sage-icon-card--#{$-color}-bold {
-    color: sage-color-combo($-color, bold, foreground);
-    background-color: sage-color-combo($-color, bold, background);
-  }
 }

@@ -5,6 +5,6 @@ class SageIconCard < SageComponent
     icon: String,
     label: [:optional, String],
     size: [:optional, SageSchemaHelper::ICON_SIZE],
-    style: [:optional, Set.new(["subtle", "bold"])],
+    attributes: [:optional, NilClass, Hash],
   })
 end
