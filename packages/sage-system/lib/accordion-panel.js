@@ -26,6 +26,7 @@ Sage.accordion = (function () {
   }
 
   function handleAccordionClick(ev) {
+
     const el = ev.currentTarget;
 
     // Ensure relevant events before proceding
@@ -82,12 +83,12 @@ Sage.accordion = (function () {
 
     // Add listeners
     header.addEventListener('click', handleAccordionClick);
-    header.addEventListener('keypress', handleAccordionClick);
+    header.addEventListener('keydown', handleAccordionClick);
   }
 
   function unbind(el) {
     header.removeEventListener('click', handleAccordionClick);
-    header.removeEventListener('keypress', handleAccordionClick);
+    header.removeEventListener('keydown', handleAccordionClick);
   }
 
   return {
