@@ -53,7 +53,7 @@ $-expandable-card-padding-xs: sage-spacing(xs);
   &::before {
     justify-content: center;
     margin-right: rem(4px);
-    font-size: rem(4px);
+    font-size: rem(8px);
     transition: transform 0.2s linear;
   }
   &[aria-expanded="true"]::before {
