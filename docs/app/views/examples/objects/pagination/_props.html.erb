@@ -1,18 +1,36 @@
 <tr>
-  <td>current</td>
-  <td>Pagination uses a <code>--current</code> modifier to visually indicate which page is currently being viewed.</td>
-  <td>String</td>
-  <td>null</td>
+  <td><%= md("`items`") %></td>
+  <td><%= md("Maps records to create page link items") %></td>
+  <td><%= md("Object") %></td>
+  <td><%= md("`false`") %></td>
 </tr>
 <tr>
-  <td>disabled</td>
-  <td>Pagination uses a <code>--disabled</code> modifier to disable a link to prevent navigation. For example, when a user has reached the last page, the Next link should be disabled since there are no other pages/results to navigate to.</td>
-  <td>String</td>
-  <td>null</td>
+  <td><%= md("`hide_pages`") %></td>
+  <td><%= md("When set to `true`, links to individual pages will not be rendered, leaving only the 'Back' and 'Next' links visible.") %></td>
+  <td><%= md("Boolean") %></td>
+  <td><%= md("`false`") %></td>
 </tr>
 <tr>
-  <td>gap</td>
-  <td>When there are many pages, a <code>--gap</code> modifier along with an ellipsis (&hellip;) can be used to truncate the pagination list items. Should be used in conjunction with <code>sage-pagination__page</code></td>
-  <td>String</td>
-  <td>null</td>
+  <td><%= md("`hide_counter`") %></td>
+  <td><%= md("When set to `true`, the record count will not be displayed.") %></td>
+  <td><%= md("Boolean") %></td>
+  <td><%= md("`false`") %></td>
+</tr>
+<tr>
+  <td><%= md("current") %></td>
+  <td><%= md("Pagination uses a `--current` modifier to visually indicate which page is currently being viewed.") %></td>
+  <td><%= md("String") %></td>
+  <td><%= md("`null`") %></td>
+</tr>
+<tr>
+  <td><%= md("disabled") %></td>
+  <td><%= md("Pagination uses a `--disabled` modifier to disable a link to prevent navigation. For example, when a user has reached the last page, the Next link should be disabled since there are no other pages/results to navigate to.") %></td>
+  <td><%= md("String") %></td>
+  <td><%= md("`null`") %></td>
+</tr>
+<tr>
+  <td><%= md("gap") %></td>
+  <td><%= md("When there are many pages, a `--gap` modifier along with an ellipsis (&hellip;) can be used to truncate the pagination list items. Should be used in conjunction with `sage-pagination__page`") %></td>
+  <td><%= md("String") %></td>
+  <td><%= md("`null`") %></td>
 </tr>

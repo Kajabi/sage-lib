@@ -3,6 +3,7 @@ class SagePagination < SageComponent
     items: -> (v) { SageSchemaHelper.is_active_record?(v) },
     window: [:optional, Integer],
     hide_pages: [:optional, TrueClass],
+    hide_counter: [:optional, TrueClass],
     additional_params: [:optional, Hash]
   })
 

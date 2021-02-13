@@ -223,7 +223,7 @@ module ObjectsHelper
       {
         title: "pagination",
         description: "Pagination is used for splitting up results into several pages and provides controls for navigating to the next or previous page.",
-        use_legacy_html_code_source: true,
+        use_legacy_html_code_source: false,
         scss: "done",
         docs: "done",
         rails: "todo",
