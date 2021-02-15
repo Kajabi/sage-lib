@@ -1,6 +1,5 @@
 <h3 class="t-sage-heading-6">Basic example</h3>
-
-<%= render "examples/objects/icon_list/markup",
+<%= sage_component SageIconList, {
   items: [
     {
       bullet: %(
@@ -30,11 +29,9 @@
       )
     }
   ]
-%>
-
+} %>
 <h3 class="t-sage-heading-6">Checkbox list</h3>
-
-<%= render "examples/objects/icon_list/markup",
+<%= sage_component SageIconList, {
   items: [
     {
       bullet: %(
@@ -81,11 +78,9 @@
       )
     }
   ]
-%>
-
+} %>
 <h3 class="t-sage-heading-6">Radio list</h3>
-
-<%= render "examples/objects/icon_list/markup",
+<%= sage_component SageIconList, {
   items: [
     {
       bullet: %(
@@ -132,4 +127,4 @@
       )
     }
   ]
-%>
+} %>
