@@ -155,7 +155,7 @@ module ObjectsHelper
       {
         title: "icon_list",
         description: "Icon lists allow for a richer formatting for bulleted lists of things including checkbox lists, feature lists, and more!",
-        use_legacy_html_code_source: true,
+        use_legacy_html_code_source: false,
         scss: "todo",
         docs: "todo",
         rails: "todo",
