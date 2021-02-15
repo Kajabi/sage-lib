@@ -1,25 +1,29 @@
-<%= sage_component SageNav, {} do %>
-  <%= sage_component SageNavLink, {
-    link: "#",
-    text: "Nav Link 1", 
-  } %>
-
-  <%= sage_component SageNavLink, {
-    icon: "launch",
-    link: "#",
-    text: "Nav Link 2 with icon", 
-  } %>
-
-  <div class="sage-nav__list sage-nav__list--sub">
-    <%= sage_component SageNavLink, {
+<h3>Standard Nav Link<h3>
+<%= sage_component SageNavLink, {
+  link: "#",
+  text: "Nav Link 1", 
+} %>
+<h3>Nav Link with Icon<h3>
+<%= sage_component SageNavLink, {
+  icon: "launch",
+  link: "#",
+  text: "Nav Link 2 with icon",
+} %>
+<h3>Nav Link with Child Nav Links<h3>
+<%= sage_component SageNavLink, {
+  link: "#",
+  text: "Nav Link 3",
+  items: [
+    {
       link: "#",
       text: "Nav Sub Link 1", 
       type: "sub"
-    } %> 
-    <%= sage_component SageNavLink, {
+    },
+    {
       link: "#",
       text: "Nav Sub Link 2", 
       type: "sub"
-    } %> 
-  </div>
-<% end %>
+    }
+  ]
+} %>
+
