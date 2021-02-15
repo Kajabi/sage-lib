@@ -1,7 +1,7 @@
 <ul class="sage-icon-list">
   <% component.items.each do | item | %>
     <li class="sage-icon-list-item" role="listitem">
-      <div class="sage-icon-list-item__bullet<%= " sage-icon-list-item__bullet--#{item[:bullet_type]}" if defined?(item[:bullet_type]) %>">
+      <div class="sage-icon-list-item__bullet<% if item[:bullet_type].present? %><%= " sage-icon-list-item__bullet--#{item[:bullet_type]}"%><% end %>">
         <%= item[:bullet].html_safe %>
       </div>
       <div class="sage-icon-list-item__body">
