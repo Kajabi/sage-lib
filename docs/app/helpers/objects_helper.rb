@@ -263,7 +263,7 @@ module ObjectsHelper
       {
         title: "sidebar",
         description: "The sidebar object is a fixed, vertical panel that typica11y displays navigation and/or page hierarchy.",
-        use_legacy_html_code_source: true,
+        use_legacy_html_code_source: false,
         scss: "done",
         docs: "done",
         rails: "doing",
