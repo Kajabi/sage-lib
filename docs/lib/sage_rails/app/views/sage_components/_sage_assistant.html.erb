@@ -1,9 +1,11 @@
 <div class="sage-assistant">
-  <button class="sage-menubutton" aria-expanded="false" aria-controls="sage-sidebar-menu" data-js-btn-target="sage-sidebar-menu" data-js-target-type="sidebar">
-    <span class="sage-menubutton__bar"></span><span class="sage-menubutton__bar"></span><span class="sage-menubutton__bar"></span>
-    <span class="visually-hidden">Toggle main menu</span>
-  </button>
-  <%= image_tag "nav_logo_white.png", class: "sage-assistant__branding" %>
+  <% if component.menu_button.present? %>
+    <button class="sage-menubutton" aria-expanded="false" aria-controls="sage-sidebar-menu" data-js-btn-target="sage-sidebar-menu" data-js-target-type="sidebar">
+      <span class="sage-menubutton__bar"></span><span class="sage-menubutton__bar"></span><span class="sage-menubutton__bar"></span>
+      <span class="visually-hidden">Toggle main menu</span>
+    </button>
+  <% end %>
+  <%= image_pack_tag("docs/sage.svg", class: "sage-assistant__branding")%>
   <div class="sage-assistant__body"><%= component.content %></div>
   <div class="sage-assistant__actions">
     <% if content_for?(:super_admin_actions) %>
