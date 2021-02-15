@@ -25,7 +25,7 @@ module ObjectsHelper
       {
         title: "assistant",
         description: "Page header with optional side menu toggle button.",
-        use_legacy_html_code_source: true,
+        use_legacy_html_code_source: false,
         scss: "done",
         docs: "done",
         rails: "doing",

@@ -1,9 +1,9 @@
 <h3 class="t-sage-heading-6">With menu button (visible below medium breakpoint)</h3>
-<%= render "examples/objects/assistant/markup",
-  menu_button: true
--%>
+<%= sage_component SageAssistant, {
+  menu_button: true,
+} %>
 
 <h3 class="t-sage-heading-6">Without menu button</h3>
-<%= render "examples/objects/assistant/markup",
-  menu_button: false
--%>
+<%= sage_component SageAssistant, {
+  menu_button: false,
+} %>
