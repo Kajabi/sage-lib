@@ -5,6 +5,7 @@
     <%= "sage-modal--large" if component.large %>
   "
   <%= "data-js-modal-disable-close" if component.disable_close %>
+  <%= "data-js-modal-remove-content-on-close" if component.remove_content_on_close %>
   data-js-modal="<%= component.id %>"
 >
   <section class="sage-modal__container" data-js-modal-container>
