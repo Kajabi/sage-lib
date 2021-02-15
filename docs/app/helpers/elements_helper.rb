@@ -171,7 +171,7 @@ module ElementsHelper
         scss: "done",
         docs: "done",
         rails: "done",
-        react: "todo",
+        react: "no",
         a11y: "todo"
       },
       {
