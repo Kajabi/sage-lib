@@ -194,24 +194,34 @@
           text: "Sandbox",
           link: pages_sandbox_path,
           active: current_page?(pages_sandbox_path),
+        },
+        {
+          text: "Code Guidelines",
+          link: "#{$SAGE_GITHUB_URL}",
+          attributes: {
+            target: "_blank",
+            rel: "noopener noreferrer"
+          }
+        },
+        {
+          text: "Release Notes (#{$SAGE_VERSION_GEM})",
+          link: $SAGE_RELEASE_URL,
+          attributes: {
+            target: "_blank",
+            rel: "noopener noreferrer",
+            title: "Github release notes"
+          }
+        },
+        {
+          text: "Changelog",
+          link: "#{$SAGE_GITHUB_URL}/releases",
+          attributes: {
+            target: "_blank",
+            rel: "noopener noreferrer",
+            title: "Github changelog"
+          }
         }
       ]
-    } do %>
-      <%= link_to "Code Guidelines", "#{$SAGE_GITHUB_URL}", class: "sage-nav__link", target: "_blank", rel: "noopener noreferrer" %></li>
-      <%= link_to "Release Notes (#{$SAGE_VERSION_GEM})",
-        $SAGE_RELEASE_URL,
-        class: "sage-nav__link",
-        target: "_blank",
-        rel: "noopener noreferrer",
-        title: "Github release notes"
-      %>
-      <%= link_to "Changelog",
-        "#{$SAGE_GITHUB_URL}/releases",
-        class: "sage-nav__link",
-        target: "_blank",
-        rel: "noopener noreferrer",
-        title: "Github changelog"
-      %>
-    <% end %>
+    } %>
   <% end %>
 <% end %>
