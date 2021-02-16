@@ -311,7 +311,7 @@ module ObjectsHelper
       {
         title: "upload_card",
         description: "The Upload Card provides a visually pleasing lockup for a file upload field along with other helpful controls.",
-        use_legacy_html_code_source: true,
+        use_legacy_html_code_source: false,
         scss: "done",
         docs: "done",
         rails: "todo",
