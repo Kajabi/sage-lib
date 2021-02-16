@@ -1,227 +1,217 @@
-<%
-foundations_pages = [
-  {
-    name: "Experience Values",
-    path: pages_foundation_path(:ux_values),
-  },
-  {
-    name: "Design Principles",
-    path: pages_foundation_path(:design_principles),
-  },
-  {
-    name: "Accessibility",
-    path: pages_foundation_path(:accessibility),
-  }
-]
-%>
-<%
-content_pages = [
-  {
-    name: "Voice & Tone",
-    path: pages_content_path(:voice_tone),
-  },
-  {
-    name: "Grammar",
-    path: pages_content_path(:grammar),
-  },
-  {
-    name: "Branding",
-    path: pages_content_path(:branding),
-  },
-  {
-    name: "Product Content",
-    path: pages_content_path(:content),
-  },
-  {
-    name: "Vocabulary",
-    path: pages_content_path(:vocabulary),
-  },
-]
-%>
-<%
-experiences_pages = [
-  {
-    name: "Empty States",
-    path: pages_experiences_path(:null),
-  },
-  {
-    name: "Onboarding",
-    path: pages_experiences_path(:onboarding),
-  },
-  {
-    name: "Create & Destroy",
-    path: pages_experiences_path(:crud),
-  },
-  {
-    name: "Loading",
-    path: pages_experiences_path(:loading),
-  },
-  {
-    name: "Navigation",
-    path: pages_experiences_path(:nav),
-  },
-  {
-    name: "Feedback",
-    path: pages_experiences_path(:feedback),
-  },
-  {
-    name: "Help",
-    path: pages_experiences_path(:help),
-  },
-]
-%>
-<%
-design_pages = [
-  {
-    name: "Tokens",
-    path: pages_design_path(:token),
-  },
-  {
-    name: "Colors",
-    path: pages_design_path(:color),
-  },
-  {
-    name: "Typography",
-    path: pages_design_path(:typography),
-  },
-  {
-    name: "Icons",
-    path: pages_design_path(:icon),
-  },
-  {
-    name: "Motion",
-    path: pages_design_path(:motion),
-  }
-]
-%>
-<%
-layout_pages = [
-  {
-    name: "Containers",
-    path: pages_layout_path(:container),
-  },
-  {
-    name: "Panels and Cards",
-    path: pages_layout_path(:panels_cards),
-  },
-  {
-    name: "12 Col Grid",
-    path: pages_layout_path(:grid),
-  },
-  {
-    name: "Grid Templates",
-    path: pages_layout_path(:grid_templates),
-  }
-]
-%>
-<div class="sage-sidebar" data-js-sidebar="sage-sidebar-menu" id="sage-sidebar-menu">
-  <div class="sage-sidebar__body">
-    <nav class="sage-nav" aria-label="Main">
-      <ul class="sage-nav__list">
-        <li><%= link_to "Home", pages_index_path, class: "sage-nav__link #{"sage-nav__link--active" if current_page?(pages_index_path)}" %>
-        <li>
-          <%= link_to "Foundations", pages_foundation_path(:ux_values), class: "sage-nav__link #{"sage-nav__link--active" if current_page_foundations?}" %>
-          <% if current_page_foundations? %>
-            <ul class="sage-nav__list sage-nav__list--sub">
-              <% foundations_pages.each do | page | %>
-                <li>
-                  <%= link_to page[:name], page[:path], class: "sage-nav__link sage-nav__link--sub #{"sage-nav__link--active" if current_page?(page[:path])}" %>
-                </li>
-              <% end %>
-            </ul>
-          <% end %>
-        </li>
-        <li>
-          <%= link_to "Content", pages_content_path(:voice_tone), class: "sage-nav__link #{"sage-nav__link--active" if current_page_content?}" %>
-          <% if current_page_content? %>
-            <ul class="sage-nav__list sage-nav__list--sub">
-              <% content_pages.each do | page | %>
-                <li>
-                  <%= link_to page[:name], page[:path], class: "sage-nav__link sage-nav__link--sub #{"sage-nav__link--active" if current_page?(page[:path])}" %>
-                </li>
-              <% end %>
-            </ul>
-          <% end %>
-        </li>
-        <li>
-          <%= link_to "Experiences", pages_experiences_path(:null), class: "sage-nav__link #{"sage-nav__link--active" if current_page_experiences?}" %>
-          <% if current_page_experiences? %>
-            <ul class="sage-nav__list sage-nav__list--sub">
-              <% experiences_pages.each do | page | %>
-                <li>
-                  <%= link_to page[:name], page[:path], class: "sage-nav__link sage-nav__link--sub #{"sage-nav__link--active" if current_page?(page[:path])}" %>
-                </li>
-              <% end %>
-            </ul>
-          <% end %>
-        </li>
-        <li>
-          <%= link_to "Design", pages_design_path(:token), class: "sage-nav__link #{"sage-nav__link--active" if current_page_design?}" %>
-          <% if current_page_design? %>
-            <ul class="sage-nav__list sage-nav__list--sub">
-              <% design_pages.each do | page | %>
-                <li>
-                  <%= link_to page[:name], page[:path], class: "sage-nav__link sage-nav__link--sub #{"sage-nav__link--active" if current_page?(page[:path])}" %>
-                </li>
-              <% end %>
-            </ul>
-          <% end %>
-        </li>
-        <li>
-          <%= link_to "Layout", pages_layout_path(:container), class: "sage-nav__link #{"sage-nav__link--active" if current_page_layout?}" %>
-          <% if current_page_layout? %>
-            <ul class="sage-nav__list sage-nav__list--sub">
-              <% layout_pages.each do | page | %>
-                <li>
-                  <%= link_to page[:name], page[:path], class: "sage-nav__link sage-nav__link--sub #{"sage-nav__link--active" if current_page?(page[:path])}" %>
-                </li>
-              <% end %>
-            </ul>
-          <% end %>
-        </li>
-        <li>
-          <%= link_to "Components", pages_getting_started_path, class: "sage-nav__link #{"sage-nav__link--active" if current_page_elements? || current_page_objects? || current_page?(pages_getting_started_path) }" %>
-          <% if current_page_elements? || current_page_objects? || current_page?(pages_getting_started_path) %>
-            <ul class="sage-nav__list sage-nav__list--sub">
-              <li>
-                <%= link_to "Getting Started", pages_getting_started_path, class: "sage-nav__link sage-nav__link--sub #{"sage-nav__link--active" if current_page?(pages_getting_started_path)}" %>
-              </li>
-              <li>
-                <%= link_to "Elements", pages_elements_path, class: "sage-nav__link sage-nav__link--sub #{"sage-nav__link--active" if current_page_elements?}" %>
-              </li>
-              <li>
-                <%= link_to "Objects", pages_objects_path, class: "sage-nav__link sage-nav__link--sub #{"sage-nav__link--active" if current_page_objects?}" %>
-              </li>
-            </ul>
-          <% end %>
-        </li>
-      </ul>
-    </nav>
-  </div>
-  <div class="sage-sidebar__footer">
-    <nav class="sage-nav" aria-label="Secondary">
-      <ul class="sage-nav__list">
-        <li><%= link_to "Sandbox", pages_sandbox_path, class: "sage-nav__link #{"sage-nav__link--active" if current_page?(pages_sandbox_path)}" %></li>
-        <li><%= link_to "Code Guidelines", "#{$SAGE_GITHUB_URL}", class: "sage-nav__link", target: "_blank", rel: "noopener noreferrer" %></li>
-        <li>
-          <%= link_to "Release Notes (#{$SAGE_VERSION_GEM})",
-            $SAGE_RELEASE_URL,
-            class: "sage-nav__link",
-            target: "_blank",
-            rel: "noopener noreferrer",
-            title: "Github release notes"
-          %>
-        </li>
-        <li>
-            <%= link_to "Changelog",
-              "#{$SAGE_GITHUB_URL}/releases",
-              class: "sage-nav__link",
-              target: "_blank",
-              rel: "noopener noreferrer",
-              title: "Github changelog"
-            %>
-        </li>
-      </ul>
-    </nav>
-  </div>
-</div>
+<%= sage_component SageSidebar, {} do %>
+  <%= sage_component SageNav, {
+    items: [
+      {
+        text: "Home",
+        link: pages_index_path,
+        active: current_page?(pages_index_path),
+      },
+      {
+        text: "Foundations",
+        link: pages_foundation_path(:ux_values),
+        active: current_page_foundations?,
+        items: [
+          {
+            text: "Experience Values",
+            link: pages_foundation_path(:ux_values),
+            active: current_page?(pages_foundation_path(:ux_values)),
+          },
+          {
+            text: "Design Principles",
+            link: pages_foundation_path(:design_principles),
+            active: current_page?(pages_foundation_path(:design_principles)),
+          },
+          {
+            text: "Accessibility",
+            link: pages_foundation_path(:accessibility),
+            active: current_page?(pages_foundation_path(:accessibility)),
+          }
+        ]
+      },
+      {
+        text: "Content",
+        link: pages_content_path(:voice_tone),
+        active: current_page_content?,
+        items: [
+          {
+            text: "Voice & Tone",
+            link: pages_content_path(:voice_tone),
+            active: current_page?(pages_content_path(:voice_tone)),
+          },
+          {
+            text: "Grammar",
+            link: pages_content_path(:grammar),
+            active: current_page?(pages_content_path(:grammar)),
+          },
+          {
+            text: "Branding",
+            link: pages_content_path(:branding),
+            active: current_page?(pages_content_path(:branding)),
+          },
+          {
+            text: "Product Content",
+            link: pages_content_path(:content),
+            active: current_page?(pages_content_path(:content)),
+          },
+          {
+            text: "Vocabulary",
+            link: pages_content_path(:vocabulary),
+            active: current_page?(pages_content_path(:vocabulary)),
+          },
+        ]
+      },
+      {
+        text: "Experiences",
+        link: pages_experiences_path(:null),
+        active: current_page_experiences?,
+        items: [
+          {
+            text: "Empty States",
+            link: pages_experiences_path(:null),
+            active: current_page?(pages_experiences_path(:null)),
+          },
+          {
+            text: "Onboarding",
+            link: pages_experiences_path(:onboarding),
+            active: current_page?(pages_experiences_path(:onboarding)),
+          },
+          {
+            text: "Create & Destroy",
+            link: pages_experiences_path(:crud),
+            active: current_page?(pages_experiences_path(:crud)),
+          },
+          {
+            text: "Loading",
+            link: pages_experiences_path(:loading),
+            active: current_page?(pages_experiences_path(:loading)),
+          },
+          {
+            text: "Navigation",
+            link: pages_experiences_path(:nav),
+            active: current_page?(pages_experiences_path(:nav)),
+          },
+          {
+            text: "Feedback",
+            link: pages_experiences_path(:feedback),
+            active: current_page?(pages_experiences_path(:feedback)),
+          },
+          {
+            text: "Help",
+            link: pages_experiences_path(:help),
+            active: current_page?(pages_experiences_path(:help)),
+          },
+        ]
+      },
+      {
+        text: "Design",
+        link: pages_design_path(:token),
+        active: current_page_design?,
+        items: [
+          {
+            text: "Tokens",
+            link: pages_design_path(:token),
+            active: current_page?(pages_design_path(:token)),
+          },
+          {
+            text: "Colors",
+            link: pages_design_path(:color),
+            active: current_page?(pages_design_path(:color)),
+          },
+          {
+            text: "Typography",
+            link: pages_design_path(:typography),
+            active: current_page?(pages_design_path(:typography)),
+          },
+          {
+            text: "Icons",
+            link: pages_design_path(:icon),
+            active: current_page?(pages_design_path(:icon)),
+          },
+          {
+            text: "Motion",
+            link: pages_design_path(:motion),
+            active: current_page?(pages_design_path(:motion)),
+          }
+        ]
+      },
+      {
+        text: "Layout",
+        link: pages_layout_path(:container),
+        active: current_page_layout?,
+        items: [
+          {
+            text: "Containers",
+            link: pages_layout_path(:container),
+            active: current_page?(pages_layout_path(:container)),
+          },
+          {
+            text: "Panels and Cards",
+            link: pages_layout_path(:panels_cards),
+            active: current_page?(pages_layout_path(:panels_cards)),
+          },
+          {
+            text: "12 Col Grid",
+            link: pages_layout_path(:grid),
+            active: current_page?(pages_layout_path(:grid)),
+          },
+          {
+            text: "Grid Templates",
+            link: pages_layout_path(:grid_templates),
+            active: current_page?(pages_layout_path(:grid_templates)),
+          }
+        ]
+      },
+      {
+        text: "Components",
+        link: pages_getting_started_path,
+        active: current_page_elements? || current_page_objects? || current_page?(pages_getting_started_path),
+        items: [
+          {
+            text: "Getting Started",
+            link: pages_getting_started_path,
+            active: current_page?(pages_getting_started_path)
+          },
+          {
+            text: "Elements",
+            link: pages_elements_path,
+            active: current_page_elements?
+          },
+          {
+            text: "Objects",
+            link: pages_objects_path,
+            active: current_page_objects?,
+          }
+        ]
+      }
+    ]
+  } %>
+
+  <%= content_for :sage_sidebar_footer do %>
+    <%= sage_component SageNav, {
+      aria_label: "Secondary",
+      items: [
+        {
+          text: "Sandbox",
+          link: pages_sandbox_path,
+          active: current_page?(pages_sandbox_path),
+        }
+      ]
+    } do %>
+      <%= link_to "Code Guidelines", "#{$SAGE_GITHUB_URL}", class: "sage-nav__link", target: "_blank", rel: "noopener noreferrer" %></li>
+      <%= link_to "Release Notes (#{$SAGE_VERSION_GEM})",
+        $SAGE_RELEASE_URL,
+        class: "sage-nav__link",
+        target: "_blank",
+        rel: "noopener noreferrer",
+        title: "Github release notes"
+      %>
+      <%= link_to "Changelog",
+        "#{$SAGE_GITHUB_URL}/releases",
+        class: "sage-nav__link",
+        target: "_blank",
+        rel: "noopener noreferrer",
+        title: "Github changelog"
+      %>
+    <% end %>
+  <% end %>
+<% end %>
