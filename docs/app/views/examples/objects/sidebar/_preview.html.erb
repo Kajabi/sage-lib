@@ -1,4 +1,53 @@
-<%= render "examples/objects/sidebar/markup",
-  body_content: "examples/objects/nav/preview",
-  footer_content: ""
-%>
+<%= sage_component SageSidebar, {
+  id: "sage-sidebar-menu",
+} do %>
+  <%= sage_component SageNav, {} do %>
+    <%= sage_component SageNavLink, {
+      link: "#",
+      text: "Nav Link 1",
+    } %>
+    <%= sage_component SageNavLink, {
+      link: "#",
+      text: "Nav Link 2",
+    } %>
+    <%= sage_component SageNavLink, {
+      link: "#",
+      text: "Nav Link 3",
+    } %>
+    <div class="sage-nav__list sage-nav__list--sub">
+      <%= sage_component SageNavLink, {
+        link: "#",
+        text: "Nav Sub Link 1",
+        type: "sub"
+      } %>
+      <%= sage_component SageNavLink, {
+        link: "#",
+        text: "Nav Sub Link 2",
+        type: "sub"
+      } %>
+      <%= sage_component SageNavLink, {
+        link: "#",
+        text: "Nav Sub Link 3",
+        type: "sub"
+      } %>
+    </div>
+    <%= sage_component SageNavLink, {
+      link: "#",
+      text: "Nav Link 4",
+    } %>
+    <%= sage_component SageNavLink, {
+      link: "#",
+      text: "Nav Link 5",
+    } %>
+  <% end %>
+  <% content_for :sidebar_footer do %>
+    <%= sage_component SageNavLink, {
+      link: "#",
+      text: "Footer Link 1",
+    } %>
+    <%= sage_component SageNavLink, {
+      link: "#",
+      text: "Footer Link 2",
+    } %>
+  <% end %>
+<% end %>
