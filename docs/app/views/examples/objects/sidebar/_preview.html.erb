@@ -2,10 +2,28 @@
   <%= sage_component SageNav, {
     aria_label: "Example Navigation",
     items: [
-      { link: "#", text: "Nav Link 1", icon: 'product', active: true },
-      { link: "#", text: "Nav Link 2", icon: 'monitor' },
-      { link: "#", text: "Nav Link 3", icon: 'coupon' },
-      { link: "#", text: "Nav Link 4", icon: 'users' }
+      { link: "#", text: "Website", icon: 'monitor', items: [
+        {
+          text: "Design",
+          link: "#",
+          active: true,
+        },
+        {
+          text: "Pages",
+          link: "#",
+        },
+        {
+          text: "Blog",
+          link: "#",
+        },
+        {
+          text: "Analytics",
+          link: "#",
+        }
+      ] },
+      { link: "#", text: "Products", icon: 'product' },
+      { link: "#", text: "Marketing", icon: 'megaphone' },
+      { link: "#", text: "People", icon: 'user-circle' }
     ]
   } %>
 <% end %>

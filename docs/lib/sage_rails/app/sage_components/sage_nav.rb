@@ -3,21 +3,23 @@ class SageNav < SageComponent
     aria_label: [:optional, String],
     items: [:optional, [[
       active: [:optional, NilClass, TrueClass],
-      link: [:optional, String],
-      text: [:optional, String],
-      type: [:optional, String],
+      attributes: [:optional, Hash],
       icon: [:optional, String],
-      no_active: [:optional, TrueClass],
-      method: [:optional, Symbol],
       items: [:optional, [[
         active: [:optional, NilClass, TrueClass],
+        attributes: [:optional, Hash],
+        icon: [:optional, String],
         link: [:optional, String],
+        method: [:optional, Symbol],
+        no_active: [:optional, TrueClass],
         text: [:optional, String],
         type: [:optional, String],
-        icon: [:optional, String],
-        no_active: [:optional, TrueClass],
-        method: [:optional, Symbol],
       ]]],
+      link: [:optional, String],
+      method: [:optional, Symbol],
+      no_active: [:optional, TrueClass],
+      text: [:optional, String],
+      type: [:optional, String],
     ]]]
   })
 end
