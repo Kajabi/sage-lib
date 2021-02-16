@@ -2,7 +2,7 @@ class SageNav < SageComponent
   set_attribute_schema({
     aria_label: [:optional, String],
     items: [:optional, [[
-      active: [:optional, TrueClass],
+      active: [:optional, NilClass, TrueClass],
       link: [:optional, String],
       text: [:optional, String],
       type: [:optional, String],
@@ -10,7 +10,7 @@ class SageNav < SageComponent
       no_active: [:optional, TrueClass],
       method: [:optional, Symbol],
       items: [:optional, [[
-        active: [:optional, TrueClass],
+        active: [:optional, NilClass, TrueClass],
         link: [:optional, String],
         text: [:optional, String],
         type: [:optional, String],
