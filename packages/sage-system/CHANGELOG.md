@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.4](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.3.3...@kajabi/sage-system@0.3.4) (2021-02-17)
+
+
+### Bug Fixes
+
+* **modal:** add prop to modal to remove contents on close ([de4330e](https://github.com/Kajabi/sage-lib/commit/de4330e326d27367b4cef243a9b99486b2512425))
+* **modal:** updates to attr name ([1fbe66b](https://github.com/Kajabi/sage-lib/commit/1fbe66b4505952e2407ee7de3685fd551be3be0f))
+* fix keyboard issue ([d8e21b9](https://github.com/Kajabi/sage-lib/commit/d8e21b9209d530776382ba8fd3171a58a435bbc4))
+* remove group-toggle-solo check and improve keyboard support ([a17c5d8](https://github.com/Kajabi/sage-lib/commit/a17c5d82c007ff41e54fb4ce9b058b49f2fb082c))
+* toggle hidden attribute properly ([bbb68f6](https://github.com/Kajabi/sage-lib/commit/bbb68f6632457af60dc191b1b4712a7a1620c325))
+
+
+
+
+
 ## [0.3.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.3.2...@kajabi/sage-system@0.3.3) (2021-02-12)
 
 

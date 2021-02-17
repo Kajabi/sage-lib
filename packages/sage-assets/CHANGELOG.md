@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.22.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.21.0...@kajabi/sage-assets@0.22.0) (2021-02-17)
+
+
+### Bug Fixes
+
+* **catalog-item:** added only-child exception ([484ed33](https://github.com/Kajabi/sage-lib/commit/484ed33fe94c9f7dbdb054993267444a78de3bc3))
+* **catalog-item:** updated padding and first item border ([04ded78](https://github.com/Kajabi/sage-lib/commit/04ded78060353cdf7f6f43b9646b2a405dac9ef7))
+* **expandable card:** correct transition property ([acfdfe9](https://github.com/Kajabi/sage-lib/commit/acfdfe9db0b0c8c126c7c924927cc91ef3253882))
+* **expandable card:** fix class names ([f32829f](https://github.com/Kajabi/sage-lib/commit/f32829f978c1a5f0e798126f1c44971e4c0d651e))
+* **expandable card:** initial rails refactor ([e2be45f](https://github.com/Kajabi/sage-lib/commit/e2be45f0bbbde3e7fe5deeb0427fdad2ffada382))
+* **parsley:** added error state color to dropdown icon ([226d0e4](https://github.com/Kajabi/sage-lib/commit/226d0e4ebd753ed7a2e924f21aee476e61211e5f))
+* **parsley:** removed unecessary nesting ([d1ef206](https://github.com/Kajabi/sage-lib/commit/d1ef20640e1dc53631e011b87bb26a63f36bec44))
+* fix font size ([a8791dc](https://github.com/Kajabi/sage-lib/commit/a8791dc098013d62d4dba5f013228683bdce8c19))
+* **transaction card:** fix button and layout ([0863d72](https://github.com/Kajabi/sage-lib/commit/0863d7219adc62d61d5d98f3392d319f49ba865f))
+
+
+### Features
+
+* **pagination:** allow page count to be hidden ([0bf69cd](https://github.com/Kajabi/sage-lib/commit/0bf69cdb1a37eaf362f2a63990081e8e431f0026))
+
+
+
+
+
 # [0.21.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.20.0...@kajabi/sage-assets@0.21.0) (2021-02-12)
 
 

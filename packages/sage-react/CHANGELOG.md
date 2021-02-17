@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.30.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.29.0...@kajabi/sage-react@0.30.0) (2021-02-17)
+
+
+### Bug Fixes
+
+* **breadcrumbs:** ensure proper display of back icon in React ([4614c9f](https://github.com/Kajabi/sage-lib/commit/4614c9fb24de0540b7ce81d1b8347c9a332047c2))
+* **expandable card:** fix class names ([f32829f](https://github.com/Kajabi/sage-lib/commit/f32829f978c1a5f0e798126f1c44971e4c0d651e))
+* **popover:** clean up and storybook documentation ([084815b](https://github.com/Kajabi/sage-lib/commit/084815bfa129568a65bff41bda427b76b52ae917))
+
+
+### Features
+
+* **popover:** add additional props to React to match Rails (label, iconOnly) ([4048196](https://github.com/Kajabi/sage-lib/commit/40481961e30160f9b379ddb5643bf968123c9613))
+* **popover:** allow custom icon in React popover ([0bb8922](https://github.com/Kajabi/sage-lib/commit/0bb8922558045f2d1b8de3c6bd825482af131eb7))
+* **popover:** allow other HTML props to pass in React component ([e882663](https://github.com/Kajabi/sage-lib/commit/e882663356f9b22f7a21895e757c26cc01ba18d2))
+* **transaction card:** initial react setup ([e9fca8f](https://github.com/Kajabi/sage-lib/commit/e9fca8f437cf4b808bf9a5fe3b7c81f520c1892d))
+
+
+
+
+
 # [0.29.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.28.0...@kajabi/sage-react@0.29.0) (2021-02-12)
 
 

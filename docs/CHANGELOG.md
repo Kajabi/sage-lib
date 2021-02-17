@@ -3,6 +3,44 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.12.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.11.0...@kajabi/sage@3.12.0) (2021-02-17)
+
+
+### Bug Fixes
+
+* **assistant:** update preview ([93bcd4b](https://github.com/Kajabi/sage-lib/commit/93bcd4bcc93ac923d2d8018c25d2de49e45ec734))
+* **assitant:** add attribute_schema ([2e91f3e](https://github.com/Kajabi/sage-lib/commit/2e91f3e81cf412bacc2f0dc15cf288e22d75080c))
+* **assitant:** adjust markup ([62ce081](https://github.com/Kajabi/sage-lib/commit/62ce081f333ef03abf82fa9ef166faf74fbb3a9f))
+* **breadcrumbs:** ensure proper display of back icon ([7554d6c](https://github.com/Kajabi/sage-lib/commit/7554d6c132fca3cc0300255294003229391245bb))
+* **expandable card:** fix class names ([f32829f](https://github.com/Kajabi/sage-lib/commit/f32829f978c1a5f0e798126f1c44971e4c0d651e))
+* **expandable card:** initial rails refactor ([e2be45f](https://github.com/Kajabi/sage-lib/commit/e2be45f0bbbde3e7fe5deeb0427fdad2ffada382))
+* **icon_list:** add component files ([6e36f4e](https://github.com/Kajabi/sage-lib/commit/6e36f4e9fac4fda8e86f4fd51676d95e342cadca))
+* **icon_list:** remove legacy markup file ([58afa6a](https://github.com/Kajabi/sage-lib/commit/58afa6a0cf38836c77252541214f26147ff10be5))
+* **lists:** update component files ([af6ac0f](https://github.com/Kajabi/sage-lib/commit/af6ac0f7313b2d3911ec2ba4214482310dd2e07b))
+* **lists:** update elements_helper ([6572bdc](https://github.com/Kajabi/sage-lib/commit/6572bdc68faa9a95663bead33bd2d93012872bf0))
+* **lists:** update preview ([f1a636b](https://github.com/Kajabi/sage-lib/commit/f1a636bd55fd47c400d8e5127b16aa3c03a6c5c8))
+* **modal:** add prop to modal to remove contents on close ([de4330e](https://github.com/Kajabi/sage-lib/commit/de4330e326d27367b4cef243a9b99486b2512425))
+* **modal:** updated docs ([b45f0b8](https://github.com/Kajabi/sage-lib/commit/b45f0b8bbe206479f3c55a2c1bbe9a691a4b9277))
+* **sidebar:** remove legacy markup file ([c9c7579](https://github.com/Kajabi/sage-lib/commit/c9c75794114278ccd4381eafe555815137d5dc2d))
+* **sidebar:** update attributes and add sections ([0588782](https://github.com/Kajabi/sage-lib/commit/0588782ade7966e3dbe1af33fc9c9a9cd82a468e))
+* **sidebar:** update component markup ([90f1130](https://github.com/Kajabi/sage-lib/commit/90f1130010c1678e91b7285e1f393e497a4a1240))
+* **sidebar:** update preview ([30ebdda](https://github.com/Kajabi/sage-lib/commit/30ebdda9fdd6ea98f1131d4e845a4f08318894ed))
+* **transaction card:** fix button and layout ([0863d72](https://github.com/Kajabi/sage-lib/commit/0863d7219adc62d61d5d98f3392d319f49ba865f))
+* **upload_card:** add attribute schema ([e2d81e0](https://github.com/Kajabi/sage-lib/commit/e2d81e0bd2fdf15db5c7f4f97af5f44c0dc0a57c))
+* **upload_card:** add markup and adjust preview ([7212a35](https://github.com/Kajabi/sage-lib/commit/7212a350eb3d9b6cbe772918897aad9efa89422c))
+* **upload_card:** remove legacy markup file ([2b88592](https://github.com/Kajabi/sage-lib/commit/2b88592e0dfd353f53d8cf7100507550beb97ad0))
+* **upload_card:** update objects helper ([f61ceab](https://github.com/Kajabi/sage-lib/commit/f61ceab6b85a7d1dd8605302ca79df69ba12efaa))
+* update preview ([59d20f5](https://github.com/Kajabi/sage-lib/commit/59d20f58a0afcc42afaac437ddd4e0730d0de539))
+
+
+### Features
+
+* **pagination:** allow page count to be hidden ([0bf69cd](https://github.com/Kajabi/sage-lib/commit/0bf69cdb1a37eaf362f2a63990081e8e431f0026))
+
+
+
+
+
 # [3.11.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.10.0...@kajabi/sage@3.11.0) (2021-02-12)
 
 
