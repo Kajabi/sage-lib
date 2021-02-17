@@ -3,7 +3,9 @@
 # Search items to see if any items are active or not.
 subitems_active = false
 component.items.each do | item |
-  subitems_active = item[:active] == true ? true : subitems_active
+  if (item[:active] == true) or current_page?(item[:link]) 
+    subitems_active = true
+  end
 end if component.items.present?
 
 # Determing whether root element is active or not.
