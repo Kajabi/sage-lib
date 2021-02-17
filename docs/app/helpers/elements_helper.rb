@@ -154,7 +154,7 @@ module ElementsHelper
       {
         title: "lists",
         description: "Sage lists provide a few styling alternatives for unstyled and inline formatting.",
-        use_legacy_html_code_source: true,
+        use_legacy_html_code_source: false,
         scss: "done",
         docs: "done",
         rails: "done",
