@@ -18,6 +18,10 @@ $-image-height-mobile: rem(120px);
   border-top: sage-border(light);
   border-bottom: sage-border(light);
 
+  &:only-child {
+    border: 0;
+  }
+
   &:last-child {
     border-bottom: 0;
   }
