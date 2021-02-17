@@ -1,5 +1,8 @@
-<nav class="sage-pagination" aria-label="pagination">
-  <span class="sage-pagination__count"><strong><%= total_count %></strong> Records</span>
+<% hide_counter ||= false %>
+<nav class="sage-pagination<% if hide_counter %> sage-pagination--no-counter<% end %>" aria-label="pagination">
+  <% unless hide_counter %>
+    <span class="sage-pagination__count"><strong><%= total_count %></strong> Records</span>
+  <% end %>
   <ul class="sage-pagination__pages">
     <% pagination_items.each do |item| %>
       <li class="sage-pagination__item">

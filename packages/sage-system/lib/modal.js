@@ -5,7 +5,9 @@ Sage.modal = (function() {
   // ==================================================
 
   const SELECTOR_MODAL = 'data-js-modal';
+  const SELECTOR_MODAL_CONTAINER = '.sage-modal__container';
   const SELECTOR_MODAL_DISABLE_CLOSE = 'data-js-modal-disable-close';
+  const SELECTOR_MODAL_REMOVE_CONTENTS_ON_CLOSE = 'data-js-modal-remove-content-on-close';
   const SELECTOR_MODAL_CLOSE = 'data-js-modal-close';
   const SELECTOR_MODALTRIGGER = 'data-js-modaltrigger';
   const SELECTOR_FOCUSABLE_ELEMENTS = 'a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled]), input[type="text"]:not([disabled]), input[type="radio"]:not([disabled]), input[type="checkbox"]:not([disabled]), select:not([disabled])';
@@ -94,6 +96,14 @@ Sage.modal = (function() {
     el.removeAttribute("open");
     el.removeEventListener('keydown', focusTrap);
     SELECTOR_LAST_FOCUSED.focus();
+    removeModalContents(el);
+  }
+
+  function removeModalContents(el) {
+    if ( el.hasAttribute(SELECTOR_MODAL_REMOVE_CONTENTS_ON_CLOSE) ) {
+      let elContainer = el.querySelector(`${SELECTOR_MODAL_CONTAINER}`);
+      elContainer.innerHTML = "";
+    }
   }
 
   function eventHandlerCloseAll() {

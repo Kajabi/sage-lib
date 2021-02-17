@@ -1,14 +1,27 @@
 <h3 class="t-sage-heading-6">Initial State</h3>
-<%= render "examples/objects/upload_card/markup" %>
+<%= sage_component SageUploadCard, {
+  selection_label: "Select a file",
+  selection_subtext: "Body small, Charcoal 200",
+} %>
 
 <h3 class="t-sage-heading-6">Selected File State</h3>
-<%= render "examples/objects/upload_card/markup",
-  file_selected: true
-%>
+
+<%= sage_component SageUploadCard, {
+  accepted_files: [
+    {name: "contacts.csv"},
+  ],
+  file_selected: true,
+  selection_label: "Replace file",
+  selection_subtext: "Body small, Charcoal 200",
+} %>
 
 <h3 class="t-sage-heading-6">Error State</h3>
-<%= render "examples/objects/upload_card/markup",
+
+<%= sage_component SageUploadCard, {
+  has_error: true,
+  selection_label: "Select a file",
+  selection_subtext: "Body small, Charcoal 200",
   errors: [
-    "Your file is too large."
+    {text: "Body small medium, Red 300 Errors here..."},
   ]
-%>
+} %>

@@ -1,22 +1,15 @@
 <div class="sage-expandable-card">
-  <div
-    class="sage-expandable-card__header"
-    data-js-accordion="header"
-  >
-    <%= component.header.html_safe %>
-    <% if component.header_aside %>
-      <aside class="sage-expandable-card__header-aside">
-        <%= component.header_aside.html_safe %>
-      </aside>
-    <% end %>
+  <%= sage_component SageButton, {
+    style: "primary",
+    value: component.trigger_label,
+    subtle: true,
+    icon: { name: "caret-right", style: "left" },
+    css_classes: "sage-expandable-card__trigger",
+    attributes: {
+      "data-js-accordion": "header",
+    }
+  } %>
+  <div class="<% if component.body_bordered.present? %>sage-expandable-card__body-bordered<% else %>sage-expandable-card__body<% end %>" data-js-accordion="body">
+    <%= component.content %>
   </div>
-  <div
-    class="sage-expandable-card__body"
-    data-js-accordion="body"
-  >
-    <%= component.body.html_safe %>
-  </div>
-  <% if component.footer %>
-    <div class="sage-expandable-card__footer"><%= component.footer %></div>
-  <% end %>
 </div>

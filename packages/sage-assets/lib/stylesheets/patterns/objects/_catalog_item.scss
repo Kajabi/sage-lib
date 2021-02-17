@@ -13,13 +13,13 @@ $-image-height-mobile: rem(120px);
   display: grid;
   grid-column-gap: sage-spacing(md);
   grid-row-gap: sage-spacing(xs);
-  padding: sage-spacing(sm) sage-spacing();
+  padding: sage-spacing() sage-spacing();
   margin-bottom: rem(-1px);
   border-top: sage-border(light);
   border-bottom: sage-border(light);
 
-  &:first-child {
-    border-top: 0;
+  &:only-child {
+    border: 0;
   }
 
   &:last-child {

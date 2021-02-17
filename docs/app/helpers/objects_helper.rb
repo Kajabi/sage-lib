@@ -25,7 +25,7 @@ module ObjectsHelper
       {
         title: "assistant",
         description: "Page header with optional side menu toggle button.",
-        use_legacy_html_code_source: true,
+        use_legacy_html_code_source: false,
         scss: "done",
         docs: "done",
         rails: "doing",
@@ -114,7 +114,7 @@ module ObjectsHelper
       },
       {
         title: "expandable_card",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        description: "Card that can be expanded and collapsed in order to display additional content.",
         use_legacy_html_code_source: false,
         scss: "todo",
         docs: "done",
@@ -155,7 +155,7 @@ module ObjectsHelper
       {
         title: "icon_list",
         description: "Icon lists allow for a richer formatting for bulleted lists of things including checkbox lists, feature lists, and more!",
-        use_legacy_html_code_source: true,
+        use_legacy_html_code_source: false,
         scss: "todo",
         docs: "todo",
         rails: "todo",
@@ -223,7 +223,7 @@ module ObjectsHelper
       {
         title: "pagination",
         description: "Pagination is used for splitting up results into several pages and provides controls for navigating to the next or previous page.",
-        use_legacy_html_code_source: true,
+        use_legacy_html_code_source: false,
         scss: "done",
         docs: "done",
         rails: "todo",
@@ -263,7 +263,7 @@ module ObjectsHelper
       {
         title: "sidebar",
         description: "The sidebar object is a fixed, vertical panel that typica11y displays navigation and/or page hierarchy.",
-        use_legacy_html_code_source: true,
+        use_legacy_html_code_source: false,
         scss: "done",
         docs: "done",
         rails: "doing",
@@ -311,7 +311,7 @@ module ObjectsHelper
       {
         title: "upload_card",
         description: "The Upload Card provides a visually pleasing lockup for a file upload field along with other helpful controls.",
-        use_legacy_html_code_source: true,
+        use_legacy_html_code_source: false,
         scss: "done",
         docs: "done",
         rails: "todo",

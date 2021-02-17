@@ -13,7 +13,6 @@
 } do %>
     <% content_for :sage_breadcrumbs do %>
       <%= sage_component SageBreadcrumbs, {
-        has_back_icon: true,
         items: [
           {
             text: 'Back to Something',
@@ -128,12 +127,17 @@
     <% content_for :sage_breadcrumbs do %>
       <%= render "examples/elements/breadcrumbs/markup",
         klass: "sage-page-heading__back",
-        has_back_icon: true,
         items: [{
-        text: "Back to Something",
-        url: "#"
-      }]
-    %>
+          text: "Back to Something",
+          url: "#"
+        }, {
+          text: "Back to Something",
+          url: "#"
+        }, {
+          text: "Back to Something",
+          url: "#"
+        }]
+      %>
     <% end %>
     <% content_for :sage_page_heading_actions do %>
       <%= sage_component SageButton, {
