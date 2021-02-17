@@ -56,6 +56,10 @@ $-parsley-color-success: map-get($sage-field-colors, success);
     ~ .sage-select__label {
       color: $-parsley-color-error;
     }
+
+    & ~ .sage-select__arrow::before {
+      color: $-parsley-color-error;
+    }
   }
 
   &.parsley-error:focus:not(:disabled),
