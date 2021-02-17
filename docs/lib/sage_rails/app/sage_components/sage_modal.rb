@@ -4,5 +4,6 @@ class SageModal < SageComponent
     active: [:optional, TrueClass],
     disable_close: [:optional, TrueClass],
     large: [:optional, TrueClass],
+    remove_content_on_close: [:optional, TrueClass],
   })
 end
