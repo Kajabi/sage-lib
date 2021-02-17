@@ -1,0 +1,48 @@
+<div class="sage-upload-card<% if component.file_selected.present? %> sage-upload-card--selected<% end %><% if component.has_error.present? %> sage-upload-card--error<% end %>">
+  <div class="sage-upload-card__dropzone">
+    <input class="sage-upload-card__input" accept=".csv" multiple="multiple" type="file" autocomplete="off" />
+    <% if component.file_selected.present? %>
+      <%= sage_component SageIconCard, {
+        color: "draft",
+        css_classes: "sage-upload-card__preview",
+        icon: "image",
+        label: "Upload graphic",
+        size: "3xl",
+      } %>
+      <div class="sage-upload-card__body">
+        <p class="sage-upload-card__text"><%= component.accepted_files[0][:name] %></p>
+        <%= sage_component SageButton, {
+          style: "primary",
+          subtle: true,
+          icon: {
+            style: "right",
+            name: "caret-down"
+          },
+          value: component.selection_label
+        } %>
+        <p class="sage-upload-card__subtext"><%= component.selection_subtext %></p>
+      </div>
+    <% else %>
+      <div class="sage-upload-card__body">
+        <i class="sage-upload-card__icon sage-icon-image-3xl" aria-label="Upload graphic"></i>
+        <%= sage_component SageButton, {
+          style: "primary",
+          subtle: true,
+          icon: {
+            style: "right",
+            name: "caret-down"
+          },
+          value: component.selection_label
+        } %>
+        <p class="sage-upload-card__subtext"><%= component.selection_subtext %></p>
+      </div>
+    <% end %>
+  </div>
+  <% if component.errors.present? %>
+    <div class="sage-upload-card__errors">
+      <% component.errors.each do | error | %>
+        <p><%= error[:text] %></p>
+      <% end %>
+    </div>
+  <% end %>
+</div>
