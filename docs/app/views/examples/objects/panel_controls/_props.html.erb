@@ -1,78 +1,53 @@
 <tr>
-  <td>
-    <code>target</code>
-  </td>
-  <td>
-    <%= md("The HTML ID for the list this panel controls will target with any events.") %>
-  </td>
-  <td>String</td>
-  <td>null</td>
+  <td><%= md('`target`') %></td>
+  <td><%= md("The HTML ID for the list this panel controls will target with any events.") %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil`') %></td>
 </tr>
 <tr>
-  <td>
-    <code>item_count_label</code>
-  </td>
-  <td>
-    <%= md("A caption for the bulk actions checkbox.") %>
-  </td>
-  <td>String</td>
-  <td>"Select all"</td>
+  <td><%= md('`item_count_label`') %></td>
+  <td><%= md("A caption for the bulk actions checkbox.") %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('Select all') %></td>
 </tr>
-
 <tr>
-  <td>
-    <code>bulk_action_items</code>
-  </td>
-  <td>
-    <%= md("The list of items to populate in the bulk actions dropdown.") %>
-  </td>
-  <td>Array: See structure for Dropdown items</td>
-  <td>null</td>
+  <td><%= md('`bulk_action_items`') %></td>
+  <td><%= md("The list of items to populate in the bulk actions dropdown.") %></td>
+  <td><%= md('Array: See structure for Dropdown items') %></td>
+  <td><%= md('`nil`') %></td>
 </tr>
-
 <tr>
-  <td>
-    <code>sort_items</code>
-  </td>
-  <td>
-    <%= md("The list of items to populate in the sort dropdown.") %>
-  </td>
-  <td>Array: See structure for Dropdown items</td>
-  <td>null</td>
+  <td><%= md('`sort_items`') %></td>
+  <td><%= md("The list of items to populate in the sort dropdown.") %></td>
+  <td><%= md('Array: See structure for Dropdown items') %></td>
+  <td><%= md('`nil`') %></td>
 </tr>
-
 <tr>
+  <td><%= md('`start_expanded`') %></td>
   <td>
-    <code>start_expanded</code>
-  </td>
-  <td>
-    <%= md("
+    <%= md('
       Whether or not the controls should start as expanded or collapsed.
       This merely affects which of the two buttons appears by default
       and should be syncronized with the actual target list.
-    ") %>
+    ') %>
   </td>
-  <td>Boolean</td>
-  <td>false</td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`false`') %></td>
 </tr>
 <tr>
+  <td><%= md('`show_bulk_actions`') %></td>
   <td>
-    <code>show_bulk_actions</code>
-  </td>
-  <td>
-    <%= md("
+    <%= md('
       Whether or not to render the bulk actions checkmark and dropdown.
       If set to `true`, the `bulk_action_items`
       should also be provided to populate the dropdown.
-    ") %>
+    ') %>
   </td>
-  <td>Boolean</td>
-  <td>false</td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`false`') %></td>
 </tr>
 <tr>
-  <td>
-    <code>show_expand_collapse</code>
-  </td>
+  <td><%= md('`show_expand_collapse`') %></td>
   <td>
     <%= md('
       Whether or not to show the "expand"/"collapse" button toggle.
@@ -80,30 +55,25 @@
       unless `start_expanded` is set to `true` as well.
     ') %>
   </td>
-  <td>Boolean</td>
-  <td>false</td>
-</tr>
-
-<tr>
-  <td>
-    <code>show_pagination</code>
-  </td>
-  <td><%= md("TBD") %>
-  </td>
-  <td>Boolean</td>
-  <td>false</td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`false`') %></td>
 </tr>
 <tr>
-  <td>
-    <code>show_sort</code>
+  <td><%= md('`show_pagination`') %></td>
+  <td><%= md('TBD') %>
   </td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`false`') %></td>
+</tr>
+<tr>
+  <td><%= md('`show_sort`') %></td>
   <td>
-    <%= md("
+    <%= md('
       Whether or not to render the sorting dropdown.
       If set to `true`, the `sort_items`
       should also be provided to populate the dropdown.
-    ") %>
+    ') %>
   </td>
-  <td>Boolean</td>
-  <td>false</td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`false`') %></td>
 </tr>
