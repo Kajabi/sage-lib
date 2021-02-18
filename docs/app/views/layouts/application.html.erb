@@ -10,9 +10,7 @@
       link_id: "main-content"
     -%>
     <header class="sage-header">
-      <%= render "application/assistant",
-        menu_button: true
-      -%>
+      <%= sage_component SageAssistant, { logo: { path: "docs/sage.svg", method: "pack" }} %>
     </header>
     <div class="sage-stage">
       <%= render "application/sidebar" %>

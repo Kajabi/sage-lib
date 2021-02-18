@@ -1,4 +1,10 @@
-<div class="sage-sidebar <%= component.size ? "sage-sidebar--#{component.size}" : "" %>" id="<%= component.id %>" data-js-sidebar="<%= component.id %>">
+<%
+id = "sage-sidebar-menu"
+if component.id.present?
+  id = component.id
+end
+%>
+<div class="sage-sidebar <%= component.size ? "sage-sidebar--#{component.size}" : "" %>" id="<%= id %>" data-js-sidebar="<%= id %>">
   <div class="sage-sidebar__body">
     <%= component.content %>
   </div>
