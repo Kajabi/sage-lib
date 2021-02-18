@@ -1,3 +1,13 @@
+<%
+# TEMP: provide fallbacks in order to avoid breaking change in `products`
+logo = {
+  path: "nav_logo_white.png",
+  method: nil,
+}
+if component.logo.present?
+  logo = component.logo
+end
+%>
 <div class="sage-assistant">
   <% if component.menu_button.present? %>
     <button class="sage-menubutton" aria-expanded="false" aria-controls="sage-sidebar-menu" data-js-btn-target="sage-sidebar-menu" data-js-target-type="sidebar">
@@ -5,7 +15,11 @@
       <span class="visually-hidden">Toggle main menu</span>
     </button>
   <% end %>
-  <%= image_pack_tag("docs/sage.svg", class: "sage-assistant__branding")%>
+  <% if logo[:method] == "pack" %>
+    <%= image_pack_tag(logo[:path], class: "sage-assistant__branding")%>
+  <% else %>
+    <%= image_tag logo[:path], class: "sage-assistant__branding" %>
+  <% end %>
   <div class="sage-assistant__body"><%= component.content %></div>
   <div class="sage-assistant__actions">
     <% if content_for?(:super_admin_actions) %>
