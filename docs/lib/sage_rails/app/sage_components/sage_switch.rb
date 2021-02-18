@@ -10,6 +10,8 @@ class SageSwitch < SageComponent
     name: String,
     message: [:optional, String],
     required: [:optional, TrueClass],
+    standalone: [:optional, TrueClass],
+    toggle_position: [:optional, String],
     type: String,
     value: String,
   })

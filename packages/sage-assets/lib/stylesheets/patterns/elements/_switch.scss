@@ -39,6 +39,10 @@ $-switch-focus-outline-color: sage-color(primary);
     margin-top: -(sage-spacing(card) / 2);
   }
 
+  .sage-switch--toggle-right {
+    flex-direction: row-reverse;
+  }
+
   .sage-list & {
     margin-top: 0;
     margin-bottom: sage-spacing(card) / 2;
@@ -93,6 +97,10 @@ $-switch-focus-outline-color: sage-color(primary);
     cursor: pointer;
 
     @extend %t-sage-body;
+
+    .sage-switch--toggle-right & {
+      margin-left: -($-switch-label-left-spacing);
+    }
   }
 
   &::before,
