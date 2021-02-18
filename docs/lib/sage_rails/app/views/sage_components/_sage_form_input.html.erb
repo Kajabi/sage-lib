@@ -12,14 +12,18 @@
     class="sage-input__field"
     name="<%= component.id %>"
     placeholder="<%= component.placeholder -%>"
+    value="<%= component.value -%>"
     <%= "required" if component.required %>
     <%= "inputmode=#{component.input_mode}" if component.input_mode.present? -%>
+    <%= "autocomplete=#{component.autocomplete}" if component.autocomplete.present? -%>
     <%= "pattern=#{component.pattern}" if component.pattern.present? -%>
+    <%= "min=#{component.min}" if component.min.present? -%>
     <%= "max=#{component.max}" if component.max.present? -%>
     <%= "minlength=#{component.minlength}" if component.minlength.present? -%>
     <%= "maxlength=#{component.maxlength}" if component.maxlength.present? -%>
-    <%= "value=#{component.value}" if component.value.present? -%>
-    <%= "disabled" if component.disabled%>
+    <%= "step=#{component.step}" if component.step.present? -%>
+    <%= "readonly" if component.readonly -%>
+    <%= "disabled" if component.disabled %>
   >
   <label for="<%= component.id %>" class="sage-input__label">
     <%= component.label_text %>

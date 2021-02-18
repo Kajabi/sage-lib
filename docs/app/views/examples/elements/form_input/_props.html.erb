@@ -1,103 +1,133 @@
 <tr>
-  <td><%= md('`disabled`') %></td>
-  <td><%= md('Enabling this property adds the `disabled` attribute to the component.') %></td>
+  <td><%= md('`autocomplete`') %></td>
+  <td><%= md('Enables the browser to autofill values from saved fields or password managers. Refer to <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete" target="_blank" rel="nofollow">the allowed values for acceptable properties</a>.') %></td>
   <td><%= md('String') %></td>
-  <td><%= md('`nill`') %></td>
+  <td><%= md('nil') %></td>
+</tr>
+<tr>
+  <td><%= md('`disabled`') %></td>
+  <td><%= md('Enabling this property adds the `disabled` attribute to the component. Note that `disabled` input fields will not be submitted in forms.') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('nil') %></td>
 </tr>
 <tr>
   <td><%= md('`has_error`') %></td>
   <td><%= md('Enabling this property adds the `.sage-input--error` class to the component.') %></td>
   <td><%= md('String') %></td>
-  <td><%= md('`nill`') %></td>
+  <td><%= md('`nil`') %></td>
 </tr>
 <tr>
   <td><%= md('`has_placeholder`') %></td>
   <td><%= md('Enabling this property adds the `.sage-input--showplaceholder` class to the component.') %></td>
   <td><%= md('String') %></td>
-  <td><%= md('`nill`') %></td>
+  <td><%= md('`nil`') %></td>
 </tr>
 <tr>
   <td><%= md('`id`') %></td>
   <td><%= md('Unique identifier for this input field. Should match the `for` property on the corresponding label.') %></td>
   <td><%= md('String') %></td>
-  <td><%= md('`nill`') %></td>
+  <td><%= md('`nil`') %></td>
 </tr>
 <tr>
   <td><%= md('`input_mode`') %></td>
   <td><%= md('Hints at the type of data to be entered. Primarily intended for mobile devices, this can influence the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/inputmode" rel="nofollow" target="_blank"> type of control displayed</a>, for example a numeric input keypad instead of a standard text keyboard.') %></td>
   <td><%= md('String') %></td>
-  <td><%= md('`nill`') %></td>
+  <td><%= md('`nil`') %></td>
 </tr>
 <tr>
   <td><%= md('`input_type`') %></td>
   <td><%= md('Sets the `type` attribute for the component') %></td>
   <td><%= md('String') %></td>
-  <td><%= md('`nill`') %></td>
+  <td><%= md('`nil`') %></td>
 </tr>
 <tr>
   <td><%= md('`label_text`') %></td>
   <td><%= md('Sets the label text for the component.') %></td>
   <td><%= md('String') %></td>
-  <td><%= md('`nill`') %></td>
+  <td><%= md('`nil`') %></td>
 </tr>
 <tr>
   <td><%= md('`max`') %></td>
   <td><%= md('Sets the maximum numerical value for a form field.') %></td>
   <td><%= md('String') %></td>
-  <td><%= md('`nill`') %></td>
+  <td><%= md('`nil`') %></td>
 </tr>
 <tr>
   <td><%= md('`maxlength`') %></td>
   <td><%= md('Sets the maximum character length for a form field.') %></td>
   <td><%= md('String') %></td>
-  <td><%= md('`nill`') %></td>
+  <td><%= md('`nil`') %></td>
 </tr>
 <tr>
   <td><%= md('`message_text`') %></td>
   <td><%= md('Sets the message text for the component.') %></td>
   <td><%= md('String') %></td>
-  <td><%= md('`nill`') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`min`') %></td>
+  <td><%= md('Sets the minimum value for a numeric form field (ex. `number` or `datetime-local` input types)') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('nil') %></td>
 </tr>
 <tr>
   <td><%= md('`minlength`') %></td>
   <td><%= md('Sets the minimum character length for a form field.') %></td>
   <td><%= md('String') %></td>
-  <td><%= md('`nill`') %></td>
+  <td><%= md('`nil`') %></td>
 </tr>
 <tr>
   <td><%= md('`pattern`') %></td>
-  <td><%= md('Sets form\'s validation pattern.') %></td>
+  <td><%= md('Specifies a form field\'s validation pattern using regex. Ignored with `number` input types (use `min` and `max` instead). <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/pattern" target="_blank" rel="nofollow">See MDN for usage</a>.') %></td>
   <td><%= md('String') %></td>
-  <td><%= md('`nill`') %></td>
+  <td><%= md('nil') %></td>
 </tr>
 <tr>
   <td><%= md('`placeholder`') %></td>
   <td><%= md('Inserts content to be displayed inside a default (empty) field.') %></td>
   <td><%= md('String') %></td>
-  <td><%= md('`nill`') %></td>
+  <td><%= md('`nil`') %></td>
 </tr>
 <tr>
   <td><%= md('`prefix`') %></td>
   <td><%= md('Sets prefix text to be prepended to the component.') %></td>
   <td><%= md('String') %></td>
-  <td><%= md('`nill`') %></td>
+  <td><%= md('`nil`') %></td>
 </tr>
 <tr>
   <td><%= md('`required`') %></td>
   <td><%= md('Adding this attribute allows basic HTML form validation on this field.') %></td>
   <td><%= md('String') %></td>
-  <td><%= md('`nill`') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`readonly`') %></td>
+  <td><%= md('Enabling this property adds the `readonly` attribute, preventing the user from editing the field, but allowing manipulation of the value via Javascript. Unlike with `disabled`, `readonly` values will be submitted in a form.') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('nil') %></td>
+</tr>
+<tr>
+  <td><%= md('`required`') %></td>
+  <td><%= md('Adding this attribute allows basic HTML form validation on this field.') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('nil') %></td>
+</tr>
+<tr>
+  <td><%= md('`step`') %></td>
+  <td><%= md('When applied to a numeric (`number`, `date`, `month`, etc) form field, this allows the browser control to be increase or decrease the value in defined increments') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('nil') %></td>
 </tr>
 <tr>
   <td><%= md('`suffix`') %></td>
   <td><%= md('Sets suffix text to be appended to the component.') %></td>
   <td><%= md('String') %></td>
-  <td><%= md('`nill`') %></td>
+  <td><%= md('nil') %></td>
 </tr>
 <tr>
   <td><%= md('`value`') %></td>
   <td><%= md('Sets the value for the component.') %></td>
   <td><%= md('String') %></td>
-  <td><%= md('`nill`') %></td>
+  <td><%= md('`nil`') %></td>
 </tr>
 
