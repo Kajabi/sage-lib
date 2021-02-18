@@ -210,6 +210,31 @@ $-label-interactive-icon-size: rem(24px);
     }
   }
 
+  .sage-input-group > & {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    right: calc(#{rem(2px)} / 2);
+    min-height: 0;
+    height: calc(100% - #{rem(2px)});
+    background-color: sage-color(white);
+    box-shadow: rem(-1px) 0 0 0 sage-color(grey, 300);
+
+    @include sage-focus-outline--update-color(transparent);
+
+    &::before {
+      margin-right: 0;
+    }
+
+    &:hover {
+      background-color: sage-color(grey, 200);
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 rem(2px) sage-color(primary);
+    }
+  }
+
   .sage-panel-controls__bulk-actions > &,
   .sage-panel-controls__toolbar > &,
   .sage-panel-controls__toolbar-btn-group > &,

@@ -1,13 +1,69 @@
 <fieldset class="sage-type">
+  <h3 class="t-sage-heading-6">Input group with button</h3>
+
+  <%= sage_component SageInputGroup, {
+    group_id: "input-group-search-example",
+    has_button: true,
+    has_hint: false,
+    group_button_type: "text",
+    group_button_icon: "sage-btn--icon-left-search",
+    group_button_text: "Search",
+    group_button_text_hidden: true,
+    group_button_tooltip: true,
+    group_button_tooltip_text: "Search",
+    group_button_tooltip_position: "top",
+    group_button_tooltip_size: ""
+  } do %>
+    <%= sage_component SageFormInput, {
+      id: "input-group-search-field",
+      input_type: "search",
+      label_text: "Search",
+      placeholder: "Search",
+      required: true,
+      disabled: false,
+      has_error: false,
+      message_text: "",
+      has_placeholder: false
+    } %>
+  <% end %>
+  <h3 class="t-sage-heading-6">Input group with button and browser controls</h3>
+
+  <%= sage_component SageInputGroup, {
+    group_id: "input-group-save-example",
+    has_button: true,
+    has_hint: false,
+    group_button_type: "text",
+    group_button_icon: "",
+    group_button_text: "Save",
+    group_button_text_hidden: false,
+    group_button_tooltip: true,
+    group_button_tooltip_text: "Save",
+    group_button_tooltip_position: "top",
+    group_button_tooltip_size: ""
+  } do %>
+    <%= sage_component SageFormInput, {
+      id: "input-group-save-field",
+      value: "0",
+      max: "100",
+      input_type: "number",
+      input_mode: "numeric",
+      label_text: "Percentage",
+      placeholder: "Percentage",
+      required: true,
+      disabled: false,
+      has_error: false,
+      message_text: "",
+      has_placeholder: false
+    } %>
+  <% end %>
+
   <h3 class="t-sage-heading-6">Input group with password reveal toggle and helper</h3>
-  
-  <%= sage_component SageInputGroup,
+
+  <%= sage_component SageInputGroup, {
     group_id: "input-group-pw-example",
     has_button: true,
     has_hint: true,
     group_button_type: "password",
-    group_button_label: "Password",
-    group_button_style: "",
     group_button_icon: "sage-btn--icon-left-preview-on",
     group_button_text: "Toggle password visibility",
     group_button_text_hidden: true,
@@ -15,23 +71,17 @@
     group_button_tooltip_text: "Toggle password visibility",
     group_button_tooltip_position: "top",
     group_button_tooltip_size: "small"
-  %>
-
-  <h3 class="t-sage-heading-6">Input group with primary button</h3>
-
-  <%= sage_component SageInputGroup, {
-    group_id: 'input-group-search-example',
-    has_button: true,
-    has_hint: false,
-    group_button_type: "search",
-    group_button_label: "Search",
-    group_button_style: "sage-btn--primary",
-    group_button_icon: "sage-btn--icon-left-search",
-    group_button_text: "Submit search",
-    group_button_text_hidden: true,
-    group_button_tooltip: true,
-    group_button_tooltip_text: "Search this site",
-    group_button_tooltip_position: "top",
-    group_button_tooltip_size: ""
-  } %>
+    } do %>
+    <%= sage_component SageFormInput, {
+      id: "input-group-pw-example",
+      input_type: "password",
+      label_text: "Password",
+      placeholder: "Password",
+      required: true,
+      disabled: false,
+      has_error: false,
+      message_text: "",
+      has_placeholder: false
+    } %>
+  <% end %>
 </fieldset>

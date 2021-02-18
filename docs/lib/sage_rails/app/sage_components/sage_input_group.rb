@@ -4,8 +4,6 @@ class SageInputGroup < SageComponent
     has_button: [:optional, TrueClass],
     has_hint: [:optional, TrueClass],
     group_button_type: [:optional, String],
-    group_button_label: [:optional, String],
-    group_button_style: [:optional, String],
     group_button_icon: [:optional, String],
     group_button_text: [:optional, String],
     group_button_text_hidden: [:optional, TrueClass],
