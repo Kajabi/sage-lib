@@ -17,6 +17,7 @@
 <% else %>
   <div class="
       sage-switch
+      <%= component.has_border ? "sage-switch--has-border" : "" %>
       <%= component.toggle_position ? "sage-switch--toggle-#{component.toggle_position}" : "" %>
       <%= component.has_error ? "sage-switch--error" : "" %>
       <%= component.css_classes if component.css_classes.present? %>

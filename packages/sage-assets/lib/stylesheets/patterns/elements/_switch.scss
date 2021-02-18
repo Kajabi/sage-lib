@@ -27,11 +27,14 @@ $-switch-toggle-size: rem(20px);
 $-switch-focus-outline-spacing: sage-spacing(2xs);
 $-switch-focus-outline-width: 2;
 $-switch-focus-outline-color: sage-color(primary);
+$-switch-focus-outline-error-color: sage-color(red, 300);
 
 .sage-switch {
   display: flex;
   flex-flow: row wrap;
   align-items: flex-start;
+  width: 100%;
+  position: relative;
   margin-bottom: sage-spacing(card);
   color: $-switch-color-default-text;
 
@@ -39,7 +42,22 @@ $-switch-focus-outline-color: sage-color(primary);
     margin-top: -(sage-spacing(card) / 2);
   }
 
-  .sage-switch--toggle-right {
+  &.sage-switch--has-border {
+    align-items: center;
+    padding: sage-spacing(card);
+    border: sage-border();
+    border-radius: sage-border(radius);
+
+    &:focus-within {
+      box-shadow: 0 0 0 ($-switch-focus-outline-width * 1px) $-switch-focus-outline-color;
+    }
+
+    &.sage-switch--error:focus-within {
+      box-shadow: 0 0 0 ($-switch-focus-outline-width * 1px) $-switch-focus-outline-error-color;
+    }
+  }
+
+  &.sage-switch--toggle-right {
     flex-direction: row-reverse;
   }
 
@@ -71,6 +89,10 @@ $-switch-focus-outline-color: sage-color(primary);
   padding: 0 0 0 ($-switch-width + $-switch-label-left-spacing);
 
   @extend %t-sage-body-xsmall;
+
+  .sage-switch--toggle-right & {
+    padding-left: 0;
+  }
 }
 
 .sage-switch__input {
@@ -89,6 +111,15 @@ $-switch-focus-outline-color: sage-color(primary);
   transition: background 0.3s ease-out;
   cursor: pointer;
 
+  .sage-switch--has-border & {
+    position: absolute;
+
+    &::after,
+    &::before {
+      border-color: transparent;
+    }
+  }
+
   + .sage-switch__label {
     display: inline-block;
     flex: 1;
@@ -98,8 +129,17 @@ $-switch-focus-outline-color: sage-color(primary);
 
     @extend %t-sage-body;
 
+    &::after {
+      content: "" ;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
     .sage-switch--toggle-right & {
-      margin-left: -($-switch-label-left-spacing);
+      margin-left: 0;
     }
   }
 

@@ -3,6 +3,7 @@ class SageSwitch < SageComponent
     css_classes: [:optional, String],
     checked: [:optional, TrueClass],
     disabled: [:optional, TrueClass],
+    has_border: [:optional, TrueClass],
     has_error: [:optional, TrueClass],
     hide_text: [:optional, TrueClass],
     id: String,
