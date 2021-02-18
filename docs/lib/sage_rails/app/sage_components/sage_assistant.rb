@@ -3,7 +3,7 @@ class SageAssistant < SageComponent
     menu_button: [:optional, TrueClass],
     logo: [:optional, {
       path: String,
-      logo_method: [:optional, NilClass, Set.new(["pack"])],
+      method: [:optional, NilClass, Set.new(["pack"])],
     }]
   })
 end
