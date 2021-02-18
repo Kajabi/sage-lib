@@ -2,7 +2,7 @@
   class="
     sage-input
     <%= "sage-input--error" if component.has_error %>
-    <%= "sage-input--affixed" if component.prefix != "" || component.suffix !="" %>
+    <%= "sage-input--affixed" if component.prefix or component.suffix %>
     <%= "sage-input--showplaceholder" if component.has_placeholder %>"
   <%= "data-js-input-prefix=#{component.prefix}" if component.prefix.present? -%>
   <%= "data-js-input-suffix=#{component.suffix}" if component.suffix.present? -%>
