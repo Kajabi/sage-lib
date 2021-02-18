@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.13.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.12.0...@kajabi/sage@3.13.0) (2021-02-18)
+
+
+### Bug Fixes
+
+* **assistant:** fix type in method property name ([29ed352](https://github.com/Kajabi/sage-lib/commit/29ed35240b09ee831f7a4ef80d6c846bb7d4e4fa))
+* **docs:** ensure assistant example is updated ([6fbb371](https://github.com/Kajabi/sage-lib/commit/6fbb3718b0510b89a9112798cbf54f15eb820f7f))
+* **sidebar:** ensure id fallback ([8a657ee](https://github.com/Kajabi/sage-lib/commit/8a657eea614edd0d259d94c245a3908ebf87128f))
+
+
+### Features
+
+* **assistant:** adds additional fallback protection for menu button ([4b53493](https://github.com/Kajabi/sage-lib/commit/4b5349337b413a054711f67e01a1c104e824701d))
+* **assistant:** implement props to control logo image ([80be192](https://github.com/Kajabi/sage-lib/commit/80be192dfcd8dd667f96f98315e6d4c5e32f7ff0))
+* **docs:** implement assistant in docs ([bf50724](https://github.com/Kajabi/sage-lib/commit/bf507244152d9fab4f4f4be211503d6c0cbdd072))
+
+
+
+
+
 # [3.12.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.11.0...@kajabi/sage@3.12.0) (2021-02-17)
 
 
