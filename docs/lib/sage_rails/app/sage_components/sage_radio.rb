@@ -12,7 +12,6 @@ class SageRadio < SageComponent
     name: String,
     required: [:optional, TrueClass],
     standalone: [:optional, TrueClass],
-    toggle_position: [:optional, String],
     value: String,
   })
 end
