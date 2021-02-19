@@ -25,7 +25,7 @@
     %>
   <%- end -%>
   <%- if component.has_button -%>
-    <button class="sage-input-group__button sage-btn<% if component.group_button_toggle %> sage-input-group__toggle<% end %> <%= component.group_button_icon if component.group_button_icon.present? %>"
+    <button class="sage-input-group__button sage-btn<% if component.group_button_display_on_focus %> sage-input-group__toggle<% end %> <%= component.group_button_icon if component.group_button_icon.present? %>"
       <% if component.group_button_type == "password" %> data-js-mask="password"<% end %>
       <% if component.group_button_tooltip %>
        data-tooltip="<%= component.group_button_tooltip_text %>" data-position="<% component.group_button_tooltip_position %>"<% if component.group_button_tooltip_size != "" %> data-tooltip-size="<%= component.group_button_tooltip_size %>"<% end %>

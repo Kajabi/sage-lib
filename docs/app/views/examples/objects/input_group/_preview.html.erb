@@ -1,18 +1,19 @@
 <fieldset class="sage-type">
-  <h3 class="t-sage-heading-6">Input group with button</h3>
+  <h3 class="t-sage-heading-6">Input group with button displayed on focus</h3>
 
   <%= sage_component SageInputGroup, {
     group_id: "input-group-search-example",
     has_button: true,
     has_hint: false,
-    group_button_type: "text",
+    group_button_display_on_focus: true,
     group_button_icon: "sage-btn--icon-left-search",
     group_button_text: "Search",
     group_button_text_hidden: true,
     group_button_tooltip: true,
     group_button_tooltip_text: "Search",
     group_button_tooltip_position: "top",
-    group_button_tooltip_size: ""
+    group_button_tooltip_size: "",
+    group_button_type: "text",
   } do %>
     <%= sage_component SageFormInput, {
       id: "input-group-search-field",
