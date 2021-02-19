@@ -89,6 +89,8 @@ $-radio-focus-outline-color: currentColor;
 
   .sage-radio--has-border & {
     margin-left: sage-spacing(lg);
+    color: sage-color(charcoal, 400);
+    font-weight: sage-font-weight(semibold);
   }
 }
 
@@ -203,6 +205,11 @@ $-radio-focus-outline-color: currentColor;
       position: absolute;
       margin-top: 0;
     }
+
+    .sage-radio--has-border &::after,
+    .sage-radio--has-border &::before {
+      border-color: transparent;
+    }
   }
 }
 
@@ -229,6 +236,7 @@ $-radio-focus-outline-color: currentColor;
 .sage-radio__message {
   width: 100%;
   padding: 0 0 0 2rem;
+  color: sage-color(charcoal, 200);
 
   @extend %t-sage-body-xsmall;
 }

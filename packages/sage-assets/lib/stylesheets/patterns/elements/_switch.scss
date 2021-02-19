@@ -87,6 +87,7 @@ $-switch-focus-outline-error-color: sage-color(red, 300);
 .sage-switch__message {
   width: 100%;
   padding: 0 0 0 ($-switch-width + $-switch-label-left-spacing);
+  color: sage-color(charcoal, 200);
 
   @extend %t-sage-body-xsmall;
 
@@ -138,6 +139,11 @@ $-switch-focus-outline-error-color: sage-color(red, 300);
       height: 100%;
     }
 
+    .sage-switch--has-border & {
+      color: sage-color(charcoal, 400);
+      font-weight: sage-font-weight(semibold);
+    }
+
     .sage-switch--toggle-right & {
       margin-left: 0;
     }
@@ -186,6 +192,11 @@ $-switch-focus-outline-error-color: sage-color(red, 300);
     &::before {
       border-color: sage-color(red);
     }
+  }
+
+  .sage-switch--has-border:not(.sage-switch--standalone) &::after,
+  .sage-switch--has-border:not(.sage-switch--standalone) &::before {
+    border-color: transparent;
   }
 
   // checked
