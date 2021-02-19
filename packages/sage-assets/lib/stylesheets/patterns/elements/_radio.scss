@@ -215,7 +215,7 @@ $-radio-focus-outline-color: currentColor;
 
 .sage-radio--error {
   .sage-radio__label,
-  .sage-radio__message {
+  .sage-radio__caption {
     color: sage-color(red);
   }
   .sage-radio__input {
@@ -233,7 +233,7 @@ $-radio-focus-outline-color: currentColor;
   }
 }
 
-.sage-radio__message {
+.sage-radio__caption {
   width: 100%;
   padding: 0 0 0 2rem;
   color: sage-color(charcoal, 200);

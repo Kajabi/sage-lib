@@ -12,7 +12,7 @@ class SageSwitch < SageComponent
     message: [:optional, String],
     required: [:optional, TrueClass],
     standalone: [:optional, TrueClass],
-    toggle_position: [:optional, String],
+    toggle_position: [:optional, Set.new(["right"])],
     type: String,
     value: String,
   })
