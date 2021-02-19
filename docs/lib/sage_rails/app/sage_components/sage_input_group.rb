@@ -1,9 +1,11 @@
 class SageInputGroup < SageComponent
   set_attribute_schema({
     group_id: [:optional, String],
+    disabled: [:optional, TrueClass],
     has_button: [:optional, TrueClass],
     has_hint: [:optional, TrueClass],
     group_button_type: [:optional, String],
+    group_button_toggle: [:optional, TrueClass],
     group_button_icon: [:optional, String],
     group_button_text: [:optional, String],
     group_button_text_hidden: [:optional, TrueClass],

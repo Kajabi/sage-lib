@@ -17,25 +17,33 @@ $-pw-font-size-sm: sage-font-size(sm);
   position: relative;
 }
 
+.sage-input-group__button:not(.sage-input-group__toggle) {
+  .sage-input-group--disabled & {
+    opacity: 0.5;
+  }
+}
+
 .sage-input-group__toggle {
   transition: $-btn-transition;
   transition-property: opacity;
   opacity: 0;
 
-  &::after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate3d(-50%, -50%, 0) rotate(-45deg);
-    height: rem(1px);
-    width: sage-font-size(xl);
-    background-color: currentColor;
-    border: 0;
-    transition: $-btn-transition;
-    transition-property: transform, opacity;
-    opacity: 1;
+  .sage-input-group--password & {
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate3d(-50%, -50%, 0) rotate(-45deg);
+      height: rem(1px);
+      width: sage-font-size(xl);
+      background-color: currentColor;
+      border: 0;
+      transition: $-btn-transition;
+      transition-property: transform, opacity;
+      opacity: 1;
+    }
   }
 
   &:hover,

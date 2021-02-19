@@ -26,10 +26,11 @@
       has_placeholder: false
     } %>
   <% end %>
-  <h3 class="t-sage-heading-6">Input group with button and browser controls</h3>
+  <h3 class="t-sage-heading-6">Input group with button disabled</h3>
 
   <%= sage_component SageInputGroup, {
     group_id: "input-group-save-example",
+    disabled: true,
     has_button: true,
     has_hint: false,
     group_button_type: "text",
@@ -43,14 +44,13 @@
   } do %>
     <%= sage_component SageFormInput, {
       id: "input-group-save-field",
-      value: "0",
       max: "100",
       input_type: "number",
       input_mode: "numeric",
       label_text: "Percentage",
       placeholder: "Percentage",
-      required: true,
-      disabled: false,
+      required: false,
+      disabled: true,
       has_error: false,
       message_text: "",
       has_placeholder: false

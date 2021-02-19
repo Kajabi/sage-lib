@@ -1,4 +1,4 @@
-<div class="sage-input-group sage-input-group--<%= component.group_button_type -%>" role="group" aria-labelledby="<%= component.group_id %>">
+<div class="sage-input-group sage-input-group--<%= component.group_button_type -%> <% if component.disabled %>sage-input-group--disabled<% end %>" role="group" aria-labelledby="<%= component.group_id %>">
   <%= component.content %>
   <%- if component.has_hint -%>
     <%= sage_component SageInputHelper,
@@ -25,8 +25,12 @@
     %>
   <%- end -%>
   <%- if component.has_button -%>
-    <button class="sage-input-group__button sage-btn <% if component.group_button_type == "password" %>sage-input-group__toggle<% end %> <%= component.group_button_icon if component.group_button_icon %>"
-      <% if component.group_button_type == "password" %> data-js-mask="password"<% end %><% if component.group_button_tooltip %> data-tooltip="<%= component.group_button_tooltip_text %>" data-position="<% component.group_button_tooltip_position %>"<% if component.group_button_tooltip_size != "" %> data-tooltip-size="<%= component.group_button_tooltip_size %>"<% end %><% end %>>
+    <button class="sage-input-group__button sage-btn<% if component.group_button_toggle %> sage-input-group__toggle<% end %> <%= component.group_button_icon if component.group_button_icon.present? %>"
+      <% if component.group_button_type == "password" %> data-js-mask="password"<% end %>
+      <% if component.group_button_tooltip %>
+       data-tooltip="<%= component.group_button_tooltip_text %>" data-position="<% component.group_button_tooltip_position %>"<% if component.group_button_tooltip_size != "" %> data-tooltip-size="<%= component.group_button_tooltip_size %>"<% end %>
+      <% end %>
+      <% if component.disabled %>disabled<% end %>>
       <%- if component.group_button_text_hidden -%><span class="visually-hidden"><% end %><%= component.group_button_text %><%- if component.group_button_text_hidden -%></span><% end %>
     </button>
   <%- end -%>
