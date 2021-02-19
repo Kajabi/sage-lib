@@ -13,6 +13,8 @@ $-radio-color-default: map-get($sage-radio-colors, default);
 $-radio-color-disabled: map-get($sage-radio-colors, disabled);
 $-radio-color-hover: map-get($sage-radio-colors, hover);
 $-radio-color-text-disabled: sage-color(charcoal, 100);
+$-radio-color-focus-outline: sage-color(primary, 200);
+$-radio-color-focus-outline-error: sage-color(red, 300);
 
 // Additional configurations
 $-radio-button-size: $sage-radio-size;
@@ -25,6 +27,8 @@ $-radio-focus-outline-width: 2;
 $-radio-focus-outline-color: currentColor;
 
 .sage-radio {
+  position: relative;
+
   &:not(.sage-radio--standalone) {
     display: flex;
     flex-flow: row wrap;
@@ -50,6 +54,21 @@ $-radio-focus-outline-color: currentColor;
   display: inline-block;
 }
 
+.sage-radio--has-border {
+  align-items: center;
+  padding: sage-spacing(card);
+  border: sage-border();
+  border-radius: sage-border(radius);
+
+  &:focus-within {
+    box-shadow: 0 0 0 ($-radio-focus-outline-width * 1px) $-radio-color-focus-outline;
+  }
+
+  &.sage-radio--error:focus-within {
+    box-shadow: 0 0 0 ($-radio-focus-outline-width * 1px) $-radio-color-focus-outline-error;
+  }
+}
+
 .sage-radio__label {
   display: inline-block;
   flex: 1;
@@ -58,6 +77,15 @@ $-radio-focus-outline-color: currentColor;
   cursor: pointer;
 
   @extend %t-sage-body;
+
+  &::after {
+    content: "" ;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 
@@ -170,7 +198,8 @@ $-radio-focus-outline-color: currentColor;
 }
 
 .sage-radio--error {
-  .sage-radio__label {
+  .sage-radio__label,
+  .sage-radio__message {
     color: sage-color(red);
   }
   .sage-radio__input {
@@ -186,4 +215,11 @@ $-radio-focus-outline-color: currentColor;
   :hover:not(:checked):not(:disabled) {
     border-color: sage-color(red);
   }
+}
+
+.sage-radio__message {
+  width: 100%;
+  padding: 0 0 0 2rem;
+
+  @extend %t-sage-body-xsmall;
 }

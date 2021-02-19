@@ -21,6 +21,8 @@
 <% else %>
   <div class="
       sage-radio
+      <%= component.has_border ? "sage-radio--has-border" : "" %>
+      <%= component.toggle_position ? "sage-radio--toggle-#{component.toggle_position}" : "" %>
       <%= component.has_error ? "sage-radio--error" : "" %>
       <%= component.css_classes if component.css_classes.present? %>
     "
@@ -41,5 +43,8 @@
     <label for="<%= component.id %>" class="sage-radio__label">
       <%= component.label_text %>
     </label>
+    <% if component.caption.present? %>
+      <div class="sage-radio__message"><%= component.caption %></div>
+    <% end %>
   </div>
 <% end %>
