@@ -1,8 +1,9 @@
 <fieldset class="sage-type">
-  <h3 class="t-sage-heading-6">Input group with button displayed on focus</h3>
+  <h3 class="t-sage-heading-6">Input group with button disabled</h3>
 
   <%= sage_component SageInputGroup, {
     group_id: "input-group-search-example",
+    disabled: true,
     has_button: true,
     has_hint: false,
     group_button_icon: "sage-btn--icon-left-search",
@@ -20,17 +21,17 @@
       label_text: "Search",
       placeholder: "Search",
       required: true,
-      disabled: false,
+      disabled: true,
       has_error: false,
       message_text: "",
       has_placeholder: false
     } %>
   <% end %>
-  <h3 class="t-sage-heading-6">Input group with button disabled</h3>
+  <h3 class="t-sage-heading-6">Input group with number controls</h3>
 
   <%= sage_component SageInputGroup, {
     group_id: "input-group-save-example",
-    disabled: true,
+    disabled: false,
     has_button: true,
     has_hint: false,
     group_button_type: "text",
@@ -45,12 +46,13 @@
     <%= sage_component SageFormInput, {
       id: "input-group-save-field",
       max: "100",
+      min: "0",
       input_type: "number",
       input_mode: "numeric",
       label_text: "Percentage",
       placeholder: "Percentage",
       required: false,
-      disabled: true,
+      disabled: false,
       has_error: false,
       message_text: "",
       has_placeholder: false
