@@ -4,31 +4,42 @@
 
 ================================================== */
 
-$-pw-field-button-size: rem(28px);
-$-pw-field-button-offset: rem(12px);
-$-pw-field-button-color-text: sage-color(charcoal, 200);
+$-input-group-border-radius: map-get($sage-field-configs, border-radius);
 $-pw-field-button-color-text-hover: sage-color(black);
-$-pw-field-button-outline: 1px dotted sage-color(grey, 300);
-$-pw-field-button-line-offset: rem(4px);
 $-pw-font-size-sm: sage-font-size(sm);
 
 
 .sage-input-group {
   position: relative;
+  border-radius: $-input-group-border-radius;
 }
 
-.sage-input-group__button:not(.sage-input-group__toggle) {
+.sage-input-group__button,
+.sage-input-group__toggle {
+  transition: $-btn-transition;
+  transition-property: opacity;
+
+  &:hover,
+  &:focus,
+  &:active {
+    opacity: 1;
+  }
+
+  .sage-input-group:focus-within & {
+    background-color: sage-color(grey, 200);
+    opacity: 1;
+  }
+
   .sage-input-group--disabled & {
-    opacity: 0.5;
+    color: sage-color(grey, 400);
+    background-color: sage-color(grey, 100);
   }
 }
 
 .sage-input-group__toggle {
-  transition: $-btn-transition;
-  transition-property: opacity;
-  opacity: 0;
-
   .sage-input-group--password & {
+    opacity: 0;
+
     &::after {
       content: "";
       display: block;
@@ -50,7 +61,6 @@ $-pw-font-size-sm: sage-font-size(sm);
   &:focus,
   &:active {
     color: $-pw-field-button-color-text-hover;
-    opacity: 1;
   }
 
   &:focus:not(:disabled):not([aria-disabled=true]),
@@ -60,10 +70,6 @@ $-pw-font-size-sm: sage-font-size(sm);
     }
   }
 
-  .sage-input-group:focus-within & {
-    opacity: 1;
-  }
-
   .sage-input-group--visible & {
     opacity: 1;
 
@@ -71,5 +77,10 @@ $-pw-font-size-sm: sage-font-size(sm);
       transform: translate3d(-50%, -50%, 0) rotate(-45deg) scale(0.01);
       opacity: 0;
     }
+  }
+
+  .sage-input-group--disabled & {
+    color: sage-color(charcoal);
+    background-color: sage-color(grey, 100);
   }
 }
