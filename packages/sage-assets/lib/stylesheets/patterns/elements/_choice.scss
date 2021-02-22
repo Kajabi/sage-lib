@@ -96,8 +96,7 @@ $-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
     justify-content: center;
   }
 
-  // NOTE: Opportunity to refactors once Safari supports flexbox gap
-
+  // NOTE: This can be simplified once Safari supports flexbox gap
   @each $-key, $-value in $sage-spacings {
     @if ($-key == xs) {
       .sage-btn-group &:not(:last-child) {
