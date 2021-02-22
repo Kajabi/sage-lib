@@ -1,10 +1,10 @@
 class SageNullView < SageComponent
   set_attribute_schema({
-    title: [:optional, String],
-    text: [:optional, String],
+    center_vertical: [:optional, TrueClass],
     graphic: [:optional, String],
     reversed: [:optional, TrueClass],
-    center_vertical: [:optional, TrueClass]
+    text: [:optional, String],
+    title: [:optional, String],
   })
   def sections
     %w(sage_null_view_actions)

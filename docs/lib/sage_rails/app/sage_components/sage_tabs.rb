@@ -1,8 +1,7 @@
 class SageTabs < SageComponent
   set_attribute_schema({
+    align_items_center: [:optional, TrueClass],
     css_classes: [:optional, String],
-    style: [:optional, Set.new(["choice"])],
-    stacked: [:optional, TrueClass],
     id: [:optional, String],
     items: [:optional, [[
       active: [:optional, NilClass, TrueClass],
@@ -18,8 +17,9 @@ class SageTabs < SageComponent
       text: [:optional, NilClass, String],
       type: [:optional, Set.new(["arrow", "graphic", "icon", "radio"])]
     ]]],
-    progressbar: [:optional, TrueClass],
-    align_items_center: [:optional, TrueClass],
     navigational: [:optional, TrueClass],
+    progressbar: [:optional, TrueClass],
+    stacked: [:optional, TrueClass],
+    style: [:optional, Set.new(["choice"])],
   })
 end

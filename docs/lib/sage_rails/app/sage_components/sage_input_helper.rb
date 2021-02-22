@@ -5,9 +5,9 @@ class SageInputHelper < SageComponent
     description: [:optional, String],
     hints: [:optional, [[{
       id: String,
+      text: [:optional, String],
       type_detect: [:optional, String],
       type_detect_min: [:optional, Integer],
-      text: [:optional, String],
     }]]],
   })
 end

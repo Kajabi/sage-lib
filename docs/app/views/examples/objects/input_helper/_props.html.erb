@@ -18,7 +18,16 @@
 </tr>
 <tr>
   <td><%= md('`hints`') %></td>
-  <td><%= md('An array of hint items') %></td>
-  <td><%= md('Hash Array') %></td>
+  <td><%= md('An array of hint items.') %></td>
+  <td>
+    <%= md('```
+      Array<{
+        id: String,
+        text: String,
+        type_detect: String,
+        type_detect_min: String
+      }>
+    ') %>
+  </td>
   <td><%= md('`nil`') %></td>
 </tr>

@@ -18,8 +18,17 @@
 </tr>
 <tr>
   <td><%= md('`links`') %></td>
-  <td><%= md('An array of optional links that includes `icon`, `location`, `target` and `text` hash options.') %></td>
-  <td><%= md('Array') %></td>
+  <td><%= md('An array of optional links.') %></td>
+  <td>
+    <%= md('```
+Array<{
+  icon: String,
+  location: String,
+  target: String,
+  text: String
+}>
+    ') %>
+  </td>
   <td><%= md('`nil`') %></td>
 </tr>
 <tr>
