@@ -1,12 +1,54 @@
 <tr>
+  <td><%= md('`checked`') %></td>
+  <td><%= md('Sets the state to \"checked\" by default.') %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`disabled`') %></td>
+  <td><%= md('Sets the state to \"disabled\" by default.') %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`has_border`') %></td>
+  <td><%= md('When set, the focus styles affect the parent container, not the form element.') %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`has_error`') %></td>
+  <td><%= md('This will display error styles on the component.') %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`hide_text`') %></td>
+  <td><%= md('This will visually hide the text but will remain accessible for assistive technologies.') %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
   <td><%= md('`id`') %></td>
-  <td><%= md('Unique identifier for this input field. Should match the `for` property on the corresponding label.') %></td>
+  <td><%= md('ID.') %></td>
   <td><%= md('String') %></td>
   <td><%= md('`nil`') %></td>
 </tr>
 <tr>
-  <td><%= md('`checked`') %></td>
-  <td><%= md('Sets the state to "checked" by default.') %></td>
+  <td><%= md('`label_text`') %></td>
+  <td><%= md('Sets the label text for the component.') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`message`') %></td>
+  <td><%= md('Sets the message text for the component.') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`name`') %></td>
+  <td><%= md('Sets the \"label\" attribute for the component. This is usedful for grouping form elements') %></td>
   <td><%= md('String') %></td>
   <td><%= md('`nil`') %></td>
 </tr>
@@ -17,8 +59,26 @@
   <td><%= md('`nil`') %></td>
 </tr>
 <tr>
-  <td><%= md('`hide_text`') %></td>
-  <td><%= md('This will visually hide the text but will remain accessible for assistive technologies.') %></td>
+  <td><%= md('`standalone`') %></td>
+  <td><%= md('When set, this component is expected to be used in isolation.') %></td>
   <td><%= md('Boolean') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`toggle_position`') %></td>
+  <td><%= md('Sets the position of the toggle.') %></td>
+  <td><%= md('`"right"`') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`type`') %></td>
+  <td><%= md('Sets the \"type\" attribute of the component.') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`value`') %></td>
+  <td><%= md('Sets the value of the form component.') %></td>
+  <td><%= md('String') %></td>
   <td><%= md('`nil`') %></td>
 </tr>

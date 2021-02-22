@@ -44,3 +44,25 @@
     has_error: true
   } %>
 <% end %>
+
+<h3 class="t-sage-heading-6">Bordered Radio</h3>
+<%= sage_component SageRadio, {
+  caption: "caption text",
+  id: "r6",
+  name: "radio5",
+  value: "6",
+  has_border: true,
+  label_text: "Bordered Option",
+  required: true,
+} %>
+
+<%= sage_component SageRadio, {
+  caption: "caption text",
+  id: "r7",
+  name: "radio6",
+  value: "7",
+  label_text: "Bordered Option with Error",
+  required: true,
+  has_border: true,
+  has_error: true
+} %>

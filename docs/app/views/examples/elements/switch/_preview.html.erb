@@ -48,7 +48,7 @@
       name: "sage-switch-5",
       value: "switch-5-value",
       label_text: "Switch (checkbox) with info",
-      message: "Additional Info"
+      message: "Additional Info 1"
     } %>
     <%= sage_component SageSwitch, { 
       type: "checkbox",
@@ -58,7 +58,7 @@
       label_text: "Switch (checkbox) error with info",
       has_error: true,
       required: true,
-      message: "Additional Info"
+      message: "Additional Info 2"
     } %>
   <% end %>
   <%= sage_component SagePanelStack, {} do %>
@@ -125,3 +125,48 @@
     } %>
   <% end %>
 <% end %>
+
+<h3 class="t-sage-heading-6">Bordered Switch</h3>
+<%= sage_component SageSwitch, { 
+  type: "checkbox",
+  id: "sage-switch-20",
+  name: "sage-switch-20",
+  value: "switch-20-value",
+  has_border: true,
+  label_text: "Switch (checkbox) with info",
+  message: "Additional Info",
+  toggle_position: "right"
+} %>
+<%= sage_component SageSwitch, { 
+  type: "checkbox",
+  id: "sage-switch-21",
+  name: "sage-switch-21",
+  value: "switch-21-value",
+  has_border: true,
+  has_error: true,
+  label_text: "Switch (checkbox) with info",
+  message: "Additional Info",
+  toggle_position: "right"
+} %>
+
+<h3 class="t-sage-heading-6">Bordered Switch (Radio)</h3>
+<%= sage_component SageSwitch, { 
+  type: "radio",
+  id: "sage-switch-22",
+  name: "sage-switch-22",
+  value: "switch-22-value",
+  has_border: true,
+  label_text: "Switch (radio) with info",
+  message: "Additional Info",
+  toggle_position: "right"
+} %>
+<%= sage_component SageSwitch, { 
+  type: "radio",
+  id: "sage-switch-23",
+  name: "sage-switch-22",
+  value: "switch-23-value",
+  has_border: true,
+  label_text: "Switch (radio) with info",
+  message: "Additional Info",
+  toggle_position: "right"
+} %>
