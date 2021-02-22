@@ -10,9 +10,32 @@
   <td><%= md('Boolean') %></td>
   <td><%= md('`false`') %></td>
 </tr>
+  <td><%= md('`attributes`') %></td>
+  <td><%= md('For setting additional attributes not defined above. Accepts a Ruby hash of valid key-value properties, such as data-attributes') %></td>
+  <td><%= md('Hash') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
 <tr>
-  <td><%= md('`text`') %></td>
-  <td><%= md('Sets the content of the primary text line') %></td>
+  <td><%= md('`disabled`') %></td>
+  <td><%= md('Sets the state to \"disabled\" by default.') %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`graphic`') %></td>
+  <td><%= md('Sets the image path to for asset for this component.') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`icon`') %></td>
+  <td><%= md('Provides the name of the Sage Icon to be displayed before the text content.') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`link_text`') %></td>
+  <td><%= md('Sets the link text for the component.') %></td>
   <td><%= md('String') %></td>
   <td><%= md('`nil`') %></td>
 </tr>
@@ -23,20 +46,20 @@
   <td><%= md('`nil`') %></td>
 </tr>
 <tr>
-  <td><%= md('`type`') %></td>
-  <td><%= md('Sets the choice graphic type. If `icon` is used here the `icon` prop must also be set.') %></td>
-  <td><%= md('`icon`, `radio`, or `arrow`') %></td>
-  <td><%= md('`radio`') %></td>
-</tr>
-<tr>
-  <td><%= md('`icon`') %></td>
-  <td><%= md('Provides the name of the Sage Icon to be displayed before the text content.') %></td>
-  <td><%= md('String') %></td>
-  <td><%= md('`nil`') %></td>
-</tr>
-<tr>
   <td><%= md('`target`') %></td>
   <td><%= md('Provides the `id` for the corresponding Tab Pane that this choice will activate.') %></td>
   <td><%= md('String') %></td>
   <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`text`') %></td>
+  <td><%= md('Sets the content of the primary text line') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`type`') %></td>
+  <td><%= md('Sets the choice graphic type. If `icon` is used here the `icon` prop must also be set.') %></td>
+  <td><%= md('`icon`, `radio`, or `arrow`') %></td>
+  <td><%= md('`radio`') %></td>
 </tr>
