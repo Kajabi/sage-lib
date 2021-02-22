@@ -9,5 +9,5 @@
   display: flex;
   flex: 1;
   overflow: auto;
-  height: calc(100vh - #{$sage-assistant-height});
+  height: calc(100vh - #{$sage-header-height});
 }
