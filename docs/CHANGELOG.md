@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.13.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.13.0...@kajabi/sage@3.13.1) (2021-02-22)
+
+
+### Bug Fixes
+
+* **rails empty state:** collapse Rails EmptyState title when no title provided, matches React ([4456d55](https://github.com/Kajabi/sage-lib/commit/4456d55451857f200a1962dba4af7069208746d1))
+
+
+
+
+
 # [3.13.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.12.0...@kajabi/sage@3.13.0) (2021-02-18)
 
 
