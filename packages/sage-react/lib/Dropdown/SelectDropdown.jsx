@@ -27,6 +27,7 @@ export const SelectDropdown = ({
   localSelectedItems,
   onChangeHook,
   onDeselect,
+  onEscapeHook,
   onSearch,
   onSelect,
   panelSize,
@@ -194,6 +195,7 @@ export const SelectDropdown = ({
       disabled={disabled}
       exitPanelHandler={changeValue}
       label={emptySelectedValue}
+      onEscapeHook={onEscapeHook}
       panelModifier="select"
       panelSize={panelSize}
       triggerModifier="select"
@@ -250,6 +252,7 @@ SelectDropdown.defaultProps = {
   localSelectedItems: [],
   onChangeHook: null,
   onDeselect: null,
+  onEscapeHook: () => false,
   onSelect: (evt) => evt,
   onSearch: (evt) => evt,
   panelSize: DROPDOWN_PANEL_SIZES.DEFAULT,
@@ -291,6 +294,7 @@ SelectDropdown.propTypes = {
   localSelectedItems: PropTypes.arrayOf(PropTypes.shape({})),
   onChangeHook: PropTypes.func,
   onDeselect: PropTypes.func,
+  onEscapeHook: PropTypes.func,
   onSearch: PropTypes.func,
   onSelect: PropTypes.func,
   panelSize: PropTypes.oneOf(Object.values(DROPDOWN_PANEL_SIZES)),
