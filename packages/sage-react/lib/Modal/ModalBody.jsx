@@ -29,11 +29,11 @@ ModalBody.SPACINGS = MODAL_CONTENT_SPACINGS;
 ModalBody.defaultProps = {
   children: null,
   className: '',
-  spacing: MODAL_CONTENT_SPACINGS.DEFAULT,
+  spacing: ModalBody.SPACINGS.DEFAULT,
 };
 
 ModalBody.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
-  spacing: PropTypes.oneOf(Object.values(MODAL_CONTENT_SPACINGS)),
+  spacing: PropTypes.oneOf(Object.values(ModalBody.SPACINGS)),
 };
