@@ -29,3 +29,13 @@ Subtext.args = {
   className: Link.CLASSNAMES.SUBTEXT,
   href: '#',
 };
+
+export const Tooltip = Template.bind({});
+Tooltip.args = {
+  children: 'Link with Tooltip',
+  href: '#',
+  tooltip: {
+    content: 'Tooltip',
+    position: 'right'
+  },
+};
