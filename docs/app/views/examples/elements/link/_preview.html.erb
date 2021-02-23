@@ -16,6 +16,17 @@
     help_link: false,
     show_label: true
   } %>
+  <%= sage_component SageLink, {
+    url: "#",
+    label: "Internal link with tooltip",
+    external: false,
+    help_link: false,
+    show_label: true,
+    attributes: {
+      "data-js-tooltip": "Tooltip",
+      "data-js-tooltip-position": "right",
+    },
+  } %>
 <% end %>
 
 <h3 class="t-sage-heading-6">External links</h3>
@@ -36,6 +47,18 @@
     help_link: false,
     show_label: true
   } %>
+  <%= sage_component SageLink, {
+    url: "https://example.com",
+    label: "External link w/ tooltip",
+    external: true,
+    launch: false,
+    help_link: false,
+    show_label: true,
+    attributes: {
+      "data-js-tooltip": "Tooltip",
+      "data-js-tooltip-position": "top"
+    },
+  } %>
 <% end %>
 
 <h3 class="t-sage-heading-6">Help/Info links</h3>
@@ -55,6 +78,18 @@
     launch: false,
     help_link: true,
     show_label: false
+  } %>
+  <%= sage_component SageLink, {
+    url: "#",
+    label: "Help link w/ tooltip",
+    external: false,
+    launch: false,
+    help_link: true,
+    show_label: true,
+    attributes: {
+      "data-js-tooltip": "Tooltip",
+      "data-js-tooltip-position": "bottom"
+    },
   } %>
 <% end %>
 
