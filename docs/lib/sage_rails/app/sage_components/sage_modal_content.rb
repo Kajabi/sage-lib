@@ -1,7 +1,7 @@
 class SageModalContent < SageComponent
   set_attribute_schema({
-    title: [:optional, String],
     spacing: [:optional, NilClass, Set.new(["panel", "card"])],
+    title: [:optional, String],
   })
 
   def sections
