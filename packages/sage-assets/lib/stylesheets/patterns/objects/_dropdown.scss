@@ -193,8 +193,7 @@ $-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
     cursor: not-allowed;
   }
 
-  &[data-js-tooltip],
-  &:disabled {
+  &[data-js-tooltip] {
     pointer-events: visible;
   }
 
