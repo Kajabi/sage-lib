@@ -235,7 +235,7 @@ DropdownItem.propTypes = {
     PropTypes.func,
   ]),
   to: PropTypes.string,
-  tooltip: PropTypes.arrayOf(({
+  tooltip: PropTypes.arrayOf(PropTypes.shape({
 
   }))
 };
