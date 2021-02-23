@@ -84,6 +84,15 @@ export const DropdownItem = ({
 
   const fieldId = `${groupId}-checkbox-${id}`;
 
+  const renderOptions = () => (
+    <OptionsDropdown
+      className="sage-dropdown__item-options"
+      id={`${groupId}-${id}-options`}
+      exitPanelHandler={onExitSubmenu}
+      options={options}
+    />
+  );
+
   const renderItem = () => {
     if (isHeading) {
       return <>{label}</>;
@@ -158,12 +167,7 @@ export const DropdownItem = ({
           <li className={classNames} role="none">
             {renderItem()}
             {options && (
-              <OptionsDropdown
-                className="sage-dropdown__item-options"
-                id={`${groupId}-${id}-options`}
-                exitPanelHandler={onExitSubmenu}
-                options={options}
-              />
+              renderOptions()
             )}
           </li>
         </Tooltip>
@@ -171,12 +175,7 @@ export const DropdownItem = ({
         <li className={classNames} role="none">
           {renderItem()}
           {options && (
-            <OptionsDropdown
-              className="sage-dropdown__item-options"
-              id={`${groupId}-${id}-options`}
-              exitPanelHandler={onExitSubmenu}
-              options={options}
-            />
+            renderOptions()
           )}
         </li>
       )}
@@ -235,7 +234,10 @@ DropdownItem.propTypes = {
     PropTypes.func,
   ]),
   to: PropTypes.string,
-  tooltip: PropTypes.arrayOf(PropTypes.shape({
+  tooltip: PropTypes.shape({
+    position: PropTypes.oneOf(Object.values(Tooltip.POSITIONS)),
+    size: PropTypes.oneOf(Object.values(Tooltip.SIZES)),
+    theme: PropTypes.oneOf(Object.values(Tooltip.THEMES)),
+  }),
 
-  }))
 };
