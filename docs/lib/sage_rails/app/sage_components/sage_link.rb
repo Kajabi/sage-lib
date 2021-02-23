@@ -1,5 +1,6 @@
 class SageLink < SageComponent
   set_attribute_schema({
+    attributes: [:optional, NilClass, Hash],
     external: [:optional, TrueClass],
     help_link: [:optional, TrueClass],
     label: [:optional, String],
