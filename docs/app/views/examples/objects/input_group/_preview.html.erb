@@ -6,14 +6,16 @@
     disabled: true,
     has_button: true,
     has_hint: false,
-    group_button_icon: "sage-btn--icon-left-search",
-    group_button_text: "Search",
-    group_button_text_hidden: true,
-    group_button_tooltip: true,
-    group_button_tooltip_text: "Search",
-    group_button_tooltip_position: "top",
-    group_button_tooltip_size: "",
-    group_button_type: "text",
+    group_buttons: [{
+      icon: "sage-btn--icon-left-search",
+      text: "Search",
+      text_hidden: true,
+      tooltip: true,
+      tooltip_position: "top",
+      tooltip_size: "",
+      tooltip_text: "Search",
+    }],
+    input_type: "search",
   } do %>
     <%= sage_component SageFormInput, {
       id: "input-group-search-field",
@@ -34,14 +36,15 @@
     disabled: false,
     has_button: true,
     has_hint: false,
-    group_button_type: "text",
-    group_button_icon: "",
-    group_button_text: "Save",
-    group_button_text_hidden: false,
-    group_button_tooltip: true,
-    group_button_tooltip_text: "Save",
-    group_button_tooltip_position: "top",
-    group_button_tooltip_size: ""
+    group_buttons: [{
+      icon: "",
+      text: "Save",
+      tooltip: true,
+      tooltip_position: "top",
+      tooltip_size: "",
+      tooltip_text: "Save",
+    }],
+    input_type: "text"
   } do %>
     <%= sage_component SageFormInput, {
       id: "input-group-save-field",
@@ -65,15 +68,16 @@
     group_id: "input-group-pw-example",
     has_button: true,
     has_hint: true,
-    group_button_type: "password",
-    group_button_display_on_focus: true,
-    group_button_icon: "sage-btn--icon-left-preview-on",
-    group_button_text: "Toggle password visibility",
-    group_button_text_hidden: true,
-    group_button_tooltip: true,
-    group_button_tooltip_text: "Toggle password visibility",
-    group_button_tooltip_position: "top",
-    group_button_tooltip_size: "small"
+    group_buttons: [{
+      display_on_focus: true,
+      icon: "sage-btn--icon-left-preview-on",
+      text: "Toggle password visibility",
+      tooltip: true,
+      tooltip_position: "top",
+      tooltip_size: "small",
+      tooltip_text: "Toggle password visibility",
+    }],
+    input_type: "password"
     } do %>
     <%= sage_component SageFormInput, {
       id: "input-group-pw-example",
