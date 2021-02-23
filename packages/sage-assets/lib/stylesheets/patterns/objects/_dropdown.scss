@@ -194,7 +194,7 @@ $-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
   }
 
   &[data-js-tooltip] {
-    pointer-events: visible;
+    pointer-events: auto;
   }
 
   // NOTE: Icon generation consolidated in `core/_icons.scss`
