@@ -1,6 +1,34 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+export const disableArgs = (keys) => {
+  let argTypes = {};
+
+  Object.keys(keys).forEach(key => {
+    argTypes[key] = {
+      table: {
+        disable: true,
+      },
+    };
+  });
+
+  return argTypes;
+};
+
+export const selectArgs = (keys) => {
+  let argTypes = {};
+
+  Object.keys(keys).forEach(key => {
+    argTypes[key] = {
+      control: {
+        options: keys[key],
+      },
+    };
+  });
+
+  return argTypes;
+};
+
 export function ComponentBody(props) {
   const style = {
     height: props.height,
