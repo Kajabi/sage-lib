@@ -64,12 +64,10 @@ export const sampleMenuItems = [
   },
   {
     id: 5,
-    isActive: true,
-    color: 'muted',
     label: 'Disabled w/ tooltip',
     tooltip: {
       content: 'Tooltip',
-      position: 'right'
+      position: 'left'
     },
     disabled: true
   },
