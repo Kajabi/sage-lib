@@ -101,9 +101,11 @@ $-upload-card-background-hover: sage-color(grey, 100);
     color: inherit;
     text-decoration: underline;
 
+    &:focus,
     &:hover {
-      color: sage-color(red, 400);
+      color: sage-color(red, 500);
       text-decoration: underline;
+      outline: 0;
     }
   }
 }
