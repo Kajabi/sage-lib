@@ -3,6 +3,36 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.14.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.13.1...@kajabi/sage@3.14.0) (2021-02-24)
+
+
+### Bug Fixes
+
+* **docs:** resolve typeahead page render issue ([1bcb356](https://github.com/Kajabi/sage-lib/commit/1bcb3563996bf7e4c5274215a89d0eb6282e1fa2))
+* **docs:** update after rebase ([f7ac01f](https://github.com/Kajabi/sage-lib/commit/f7ac01f16c22376cd0efe684680d091784cc9e17))
+* **docs:** updated to element docs ([b93a940](https://github.com/Kajabi/sage-lib/commit/b93a94053e45d962bb5d632d3829ca7acbb01045))
+* **docs:** updated to object docs ([b3e07c0](https://github.com/Kajabi/sage-lib/commit/b3e07c0caf61cfce8a160088d01bd2edcf69600b))
+* **form input affix:** adjustments to class output logic for affixed inputs ([554530d](https://github.com/Kajabi/sage-lib/commit/554530d0b8dbfab487dd77231366d98c938e192e))
+* **input group:** refactor input group to allow child content, updated style to match panel controls ([93b1626](https://github.com/Kajabi/sage-lib/commit/93b1626fc989803b32fc6fd3b063679ae439fd2b))
+* **radio:** added bordered variation with updated focus states ([fe5aad6](https://github.com/Kajabi/sage-lib/commit/fe5aad6efd6d4d9632d222da79a9b866ff44d4d2))
+* **radio:** docs update ([c72b124](https://github.com/Kajabi/sage-lib/commit/c72b124228e17ec779f24b519362e2be4c045862))
+* **radio:** self review and docs update ([4890af4](https://github.com/Kajabi/sage-lib/commit/4890af4cf57ef2c5ec111bb999ae54c7a2d940aa))
+* **switch:** add option to move focus ring to outer wrapper ([bfd0b7a](https://github.com/Kajabi/sage-lib/commit/bfd0b7a598113ebe75e6b5a7b6667008be6e7b18))
+* **switch:** added bordered variation with updated focus states ([7fe5cae](https://github.com/Kajabi/sage-lib/commit/7fe5cae46661bf0090ec4bd1f3170e9627117599))
+* **switch:** final final pass ([9984a0f](https://github.com/Kajabi/sage-lib/commit/9984a0fde3f6304c9551b6dc82b928c9122f61ab))
+
+
+### Features
+
+* **form input:** add  autocomplete, min, readonly, & step props, updated documeentation ([86beb6c](https://github.com/Kajabi/sage-lib/commit/86beb6ce5143a5f62e752a196a63b780a00ec920))
+* **input gropu:** add component disabled state and ability for button toggle appearance ([b404878](https://github.com/Kajabi/sage-lib/commit/b404878961459854e17bec89c828594d4ca68fd7))
+* **input group:** apply JS for browser control button overlap ([d0507af](https://github.com/Kajabi/sage-lib/commit/d0507afe113cee010fa6d6e861dce82af9fd2835))
+* **input group:** modified styling, updated preview & docs ([169cb0b](https://github.com/Kajabi/sage-lib/commit/169cb0b800ace420e6211be3c90af702a188c08c))
+
+
+
+
+
 ## [3.13.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.13.0...@kajabi/sage@3.13.1) (2021-02-22)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.3.4...@kajabi/sage-system@0.4.0) (2021-02-24)
+
+
+### Features
+
+* **input group:** apply JS for browser control button overlap ([d0507af](https://github.com/Kajabi/sage-lib/commit/d0507afe113cee010fa6d6e861dce82af9fd2835))
+
+
+
+
+
 ## [0.3.4](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.3.3...@kajabi/sage-system@0.3.4) (2021-02-17)
 
 

@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.31.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.30.0...@kajabi/sage-react@0.31.0) (2021-02-24)
+
+
+### Bug Fixes
+
+* **sage-react:** adding no-package-lock flag to npm install command ([82118fc](https://github.com/Kajabi/sage-lib/commit/82118fc905cf8a68ecc62b6c8a977ad3dc3993c8))
+* **sage-react:** addings sortablejs to dependencies ([f659bd4](https://github.com/Kajabi/sage-lib/commit/f659bd454b14d0d84e7a0f2c32f0d628566fb304))
+* **sage-react:** prebuild script to install react/react-dom/react-router-dom on storybook deploy ([12a1aee](https://github.com/Kajabi/sage-lib/commit/12a1aee23d3e7d4b4327005e4adeb73eff6180c1))
+* **sage-react:** swapping yarn to npm for Heroku ([83419d9](https://github.com/Kajabi/sage-lib/commit/83419d9bf166af41c3dbeae9ad643f77c5801f4c))
+* **upload-card:** move dropzone handlers in a layer to allow links in errors ([53591d8](https://github.com/Kajabi/sage-lib/commit/53591d8072ddac947af62a7acd858ae0b8a4d85e))
+
+
+### Features
+
+* **dropdown:** add `onEscapeHook` ([35e319b](https://github.com/Kajabi/sage-lib/commit/35e319bc63ab0b8e53f056346909ecb4b5026de8))
+* **sage-react:** add searchNews service call ([ce19678](https://github.com/Kajabi/sage-lib/commit/ce1967890f1db30a74d550408880db882339d2bf))
+* **typeahead:** adjust hooks for external search, filter, and clearing ([8cbd6b1](https://github.com/Kajabi/sage-lib/commit/8cbd6b1452afae8d441b5ba068a7f7c508b13988))
+* **typeahead:** allow a searchFn callback to provide the search results instead of static `items` ([671d4e8](https://github.com/Kajabi/sage-lib/commit/671d4e8d216708c283d13de6aabb3af6814117bf))
+* **typeahead:** allow contained to be passed through to Search box ([0bada4a](https://github.com/Kajabi/sage-lib/commit/0bada4a7065f2a78843bb55aa6d636dfc1f39a06))
+
+
+
+
+
 # [0.30.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.29.0...@kajabi/sage-react@0.30.0) (2021-02-17)
 
 
