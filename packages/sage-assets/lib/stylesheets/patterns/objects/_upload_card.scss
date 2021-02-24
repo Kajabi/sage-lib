@@ -96,6 +96,16 @@ $-upload-card-background-hover: sage-color(grey, 100);
       margin-bottom: sage-spacing(2xs);
     }
   }
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+
+    &:hover {
+      color: sage-color(red, 400);
+      text-decoration: underline;
+    }
+  }
 }
 
 .sage-upload-card__icon {
