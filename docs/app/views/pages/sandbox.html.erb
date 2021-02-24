@@ -5,3 +5,19 @@
 Use this scratchpad to test out elements and objects in context. Just be sure not to commit your changes. ❤️
 ") %>
 <% end %>
+
+<% empty_state_text = "<span>The maximum file size for audio uploads is \
+  <strong>9</strong></span>\
+  <br/>#{sage_component(SageButton, {
+    style: 'primary',
+    subtle: true,
+    small: true,
+    value: 'Supported Audio Formats'})
+  } \
+".html_safe %>
+
+<%= sage_component SageEmptyState, {
+    icon: "trash",
+    text: empty_state_text,
+    compact: true,
+  }%>
