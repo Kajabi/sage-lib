@@ -32,8 +32,8 @@ export const UploadCard = ({
   );
 
   return (
-    <div className={classNames} {...rootProps} {...rest}>
-      <div className="sage-upload-card__dropzone">
+    <div className={classNames} {...rest}>
+      <div className="sage-upload-card__dropzone" {...rootProps}>
         <input className="sage-upload-card__input" {...inputProps} />
         {filesSelected ? (
           <>
