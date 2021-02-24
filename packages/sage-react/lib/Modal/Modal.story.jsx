@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { selectArgs } from '../story-support/helpers';
 import { Button } from '../Button';
 import { SageTokens, SageClassnames } from '../configs';
 import { Modal } from './Modal';
@@ -8,11 +7,11 @@ export default {
   title: 'Sage/Modal',
   component: Modal,
   subcomponents: {
-    "Modal.Header": Modal.Header,
-    "Modal.HeaderAside": Modal.HeaderAside,
-    "Modal.Body": Modal.Body,
-    "Modal.Footer": Modal.Footer,
-    "Modal.FooterAside": Modal.FooterAside,
+    'Modal.Header': Modal.Header,
+    'Modal.HeaderAside': Modal.HeaderAside,
+    'Modal.Body': Modal.Body,
+    'Modal.Footer': Modal.Footer,
+    'Modal.FooterAside': Modal.FooterAside,
   },
 };
 
@@ -20,11 +19,11 @@ export const Empty = (args) => <Modal {...args} />;
 Empty.decorators = [
   (Story) => (
     <>
-      <p>Note: wired modal demonstrates functionality. See "Docs" tab for properties</p>
+      <p>Note: wired modal demonstrates functionality. See &quot;Docs&quot; tab for properties</p>
       <Story />
     </>
   )
-]
+];
 
 export const Wired = () => {
   const [active, setActive] = useState(false);

@@ -23,6 +23,4 @@ export default {
 };
 const Template = (args) => <ButtonGroup {...args} />;
 
-
-// Each story then reuses that template
 export const Default = Template.bind({});

@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export const disableArgs = (keys) => {
-  let argTypes = {};
+  const argTypes = {};
 
-  Object.keys(keys).forEach(key => {
+  Object.keys(keys).forEach((key) => {
     argTypes[key] = {
       table: {
         disable: true,
@@ -16,9 +16,9 @@ export const disableArgs = (keys) => {
 };
 
 export const selectArgs = (keys) => {
-  let argTypes = {};
+  const argTypes = {};
 
-  Object.keys(keys).forEach(key => {
+  Object.keys(keys).forEach((key) => {
     argTypes[key] = {
       control: {
         options: keys[key],
