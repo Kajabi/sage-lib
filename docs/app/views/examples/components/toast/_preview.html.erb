@@ -3,7 +3,7 @@
     value: "Toast",
     style: "primary",
     attributes: {
-      "onClick": "Sage.toast.trigger({message:'Toast created.'})",
+      "onClick": "Sage.toast.trigger({message: 'Toast created.'})",
     },
   } %>
 
@@ -11,16 +11,64 @@
     value: "Danger Toast",
     style: "danger",
     attributes: {
-      "onClick": "Sage.toast.trigger({icon: 'danger', message:'Danger toast created.', type: 'danger'})",
+      "onClick": "Sage.toast.trigger({icon: 'danger', message: 'Danger toast created.', type: 'danger'})",
     },
   } %>
 
   <%= sage_component SageButton, {
-    value: "Custom Timer",
+    value: "Custom Timer: 10 Seconds",
     style: "secondary",
     raised: true,
     attributes: {
-      "onClick": "Sage.toast.trigger({message:'This toast has a 10 second timer.', timer: 10000})",
+      "onClick": "Sage.toast.trigger({message: 'This toast has a 10 second timer.', timer: 10000, icon: 'launch'})",
+    },
+  } %>
+
+  <%= sage_component SageButton, {
+    value: "Custom Timer: 1 Second",
+    style: "secondary",
+    raised: true,
+    attributes: {
+      "onClick": "Sage.toast.trigger({message: 'This toast has a 1 second timer.', timer: 1000, icon: 'drop'})",
     },
   } %>
 <% end %>
+
+<hr/>
+
+<%= sage_component SageButtonGroup, { gap: :sm } do %>
+  <%= sage_component SageButton, {
+    value: "Non-Dismissing Toast",
+    style: "primary",
+    raised: true,
+    attributes: {
+      "onClick": "alert('TOAST ID: ' + Sage.toast.trigger({message: 'I will not dismiss via timer', timer: false}))",
+    },
+  } %>
+<% end %>
+
+<pre class="prettyprint">
+  <code>
+    // Pattern for a manually dismissable toast:
+
+    // Sage.toast.trigger()
+    // -----------------------------------------------------------------------------------------------------
+    // Triggers a toast with the arg and returns the unique id of the toast.
+    //
+    // @param {object} - Toast options, `message` key is required, all others are optional
+    // @returns {unique id}
+    //
+    // Example:
+    const myWonderfulToastId = Sage.toast.trigger({message: 'I will not dismiss via timer', timer: false});
+
+
+    // Sage.toast.dismiss()
+    // -----------------------------------------------------------------------------------------------------
+    // Dismisses a toast with a unique id.
+    //
+    // @param {unique id}
+    // @returns {boolean} – `false` if no toast of that ID exists, `true` if it does exist and was successfully dismissed
+    //
+    // Example:
+    Sage.toast.dismiss(myWonderfulToastId);
+</pre>

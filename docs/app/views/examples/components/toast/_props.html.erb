@@ -5,6 +5,12 @@
   <td><%= md('`check`') %></td>
 </tr>
 <tr>
+  <td><%= md('`id`') %></td>
+  <td><%= md('Unique id') %></td>
+  <td><%= md('Integer') %></td>
+  <td><%= md('`Sage.util.generateId()`') %></td>
+</tr>
+<tr>
   <td><%= md('`message`') %></td>
   <td><%= md('The message to be displayed in the toast.') %></td>
   <td><%= md('String') %></td>
@@ -13,7 +19,7 @@
 <tr>
   <td><%= md('`timer`') %></td>
   <td><%= md('Time in milliseconds that toast should be displayed') %></td>
-  <td><%= md('Integer') %></td>
+  <td><%= md('Integer or `false`') %></td>
   <td><%= md('`4000`') %></td>
 </tr>
 <tr>

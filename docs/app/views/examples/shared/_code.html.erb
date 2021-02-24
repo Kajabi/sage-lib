@@ -11,19 +11,26 @@
         <pre class="prettyprint"><code><%= File.read(File.join(Rails.root, "app/views/examples/", type.pluralize, title, "_preview.html.erb")) %></code></pre>
       </div>
     </div>
-  <% end %>
+  </div>
+<% end %>
 
-  <%= sage_component SageCard, { spacer: { bottom: :md } } do %>
+<%= sage_component SageCard, {} do %>
+  <% if component_classname.is_a?(Class) %>
     <%= sage_component SageCardHeader, { title: "Attribute Schema"} do %>
       <code><%= component_classname %>::ATTRIBUTE_SCHEMA</code>
     <% end %>
     <div class="example__code">
       <button class="example__expand-btn" aria-expanded="false" aria-controls="example-rails-code-<%= title %>">Expand this code snippet</button>
       <div id="example-rails-code-<%= title %>" class="sage-code-snippet" tabindex="-1">
-        <pre class="prettyprint"><code><%= component_classname.constantize::ATTRIBUTE_SCHEMA.pretty_inspect %></code></pre>
+        <pre class="prettyprint"><code>
+          <%= component_classname.constantize::ATTRIBUTE_SCHEMA.pretty_inspect %>
+        </code></pre>
       </div>
     </div>
+  <% else %>
+    <%= sage_component SageCardHeader, { title: "#{component_classname} rails component not available" } %>
   <% end %>
+<% end %>
 
   <%= sage_component SageCard, { spacer: { bottom: :md } } do %>
     <%= sage_component SageCardHeader, { title: "Generated HTML Code"} %>

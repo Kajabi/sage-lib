@@ -35,12 +35,22 @@ Sage.util = (function(Sage) {
     xhr.send(urlParams);
   };
 
+  function generateId() {
+    return Math.floor(Math.random() * 10000);
+  }
+
+  function stringToHtmlFragment(string) {
+    return document.createRange().createContextualFragment(string);
+  }
+
   return {
     getBtnTarget: getBtnTarget,
     nodelistToArray: nodelistToArray,
     isEmptyString: isEmptyString,
     isIE: isIE,
-    ajaxRequestWithJsInjection: ajaxRequestWithJsInjection
+    ajaxRequestWithJsInjection: ajaxRequestWithJsInjection,
+    generateId: generateId,
+    stringToHtmlFragment: stringToHtmlFragment,
   };
 
 })(Sage);
