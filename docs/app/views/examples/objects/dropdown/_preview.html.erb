@@ -4,7 +4,18 @@
     value: "Edit",
     icon: "pen",
     attributes: { "href": "#" },
-  }, {
+  },
+  {
+    value: "Disabled link w/ tooltip",
+    icon: "pen",
+    modifiers: ["disabled"],
+    attributes: {
+      "href": "https://google.com",
+      "data-js-tooltip": "Tooltip",
+      "data-js-tooltip-position": "right",
+    }
+  },
+  {
     value: "New",
     icon: "add",
     style: "primary",
