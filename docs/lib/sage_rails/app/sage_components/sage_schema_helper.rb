@@ -19,7 +19,7 @@ module SageSchemaHelper
     left: [:optional, Set.new([:xs, :sm, :md, :lg, :xl, "xs", "sm", "md", "lg", "xl"])],
   }
 
-  # Accepts ActiveRecord descendants
+  # Accepts any Collection that can be paginated
   def self.will_paginate?(value)
     value.respond_to?(:total_pages)
   end
