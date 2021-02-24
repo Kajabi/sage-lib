@@ -1,42 +1,43 @@
-Sage.dropdown = (function() {
+Sage.dropdown = (function () {
   // ==================================================
   // Variables
   // ==================================================
 
   // The class to toggle on the menu when values are selected in selection mode
-  const dropdownValueSelectedClass = 'sage-dropdown--value-selected';
+  const dropdownValueSelectedClass = "sage-dropdown--value-selected";
 
   // The class to toggle on the menu when the menu is disabled
-  const dropdownDisabledClass = 'sage-dropdown--disabled';
+  const dropdownDisabledClass = "sage-dropdown--disabled";
 
   // Selector for a menu item
-  const dropdownItemClass = 'sage-dropdown__item-control';
+  const dropdownItemClass = "sage-dropdown__item-control";
 
   // The class to toggle on the menu when the menu is disabled
-  const dropdownDisabledItemClass = 'sage-dropdown__item--disabled';
+  const dropdownDisabledItemClass = "sage-dropdown__item--disabled";
 
   // Selector for seach item in menu
-  const dropdownSearchItemClass = 'sage-search__input';
+  const dropdownSearchItemClass = "sage-search__input";
 
   // The selected value needs some content in order to have height
-  const defaultSelectedValue = '&nbsp;';
+  const defaultSelectedValue = "&nbsp;";
 
   // In order to reset the label in seleciton mode, provide a standard prefix for the reset trigger item
-  const triggerRestPrefix = '--';
+  const triggerRestPrefix = "--";
 
   // Several variations exist for triggers in selection mode; this is a grouped selector to grab any of them
-  const triggerSelectClasses = '.sage-dropdown__trigger--select-labeled, .sage-dropdown__trigger--select';
+  const triggerSelectClasses =
+    ".sage-dropdown__trigger--select-labeled, .sage-dropdown__trigger--select";
 
   // The element in which to show the selected value when dropdown is in selection mode
-  const triggerSelectedValueClass = '.sage-dropdown__trigger-selected-value .sage-btn__truncate-text';
+  const triggerSelectedValueClass = ".sage-dropdown__trigger-selected-value .sage-btn__truncate-text";
 
   const SELECTOR_FOCUSABLE_ELEMENTS = '.sage-dropdown__panel a, .sage-dropdown__panel button, .sage-dropdown__panel textarea, .sage-dropdown__panel input[type="text"], .sage-dropdown__panel input[type="radio"], .sage-dropdown__panel input[type="checkbox"], .sage-dropdown__panel input[type="search"], .sage-dropdown__panel select';
   let SELECTOR_LAST_FOCUSED;
 
   const dropdownItemAriaSelectedClass = '.sage-dropdown__panel .sage-dropdown__item[aria-selected="true"]';
-  const dropdownItemControlClass = '.sage-dropdown__item-control';
-  const dropdownClass = '.sage-dropdown';
-  const dropdownTriggerLabelClass = '.sage-dropdown__trigger-label';
+  const dropdownItemControlClass = ".sage-dropdown__item-control";
+  const dropdownClass = ".sage-dropdown";
+  const dropdownTriggerLabelClass = ".sage-dropdown__trigger-label";
 
   // ==================================================
   // Functions
@@ -45,13 +46,13 @@ Sage.dropdown = (function() {
   function init(el) {
     buildA11y(el);
     checkSelected(el);
-    el.addEventListener('click', handleClick);
-    el.addEventListener('keyup', handleKeyAction);
+    el.addEventListener("click", handleClick);
+    el.addEventListener("keyup", handleKeyAction);
   }
 
   function unbind(el) {
-    el.removeEventListener('click', handleClick);
-    el.removeEventListener('keyup', handleKeyAction);
+    el.removeEventListener("click", handleClick);
+    el.removeEventListener("keyup", handleKeyAction);
   }
 
   function handleClick(evt) {
@@ -73,6 +74,15 @@ Sage.dropdown = (function() {
       return;
     }
 
+    // Stop if the dropdown item clicked and parent is disabled
+    if (el.parentNode.classList.contains(dropdownDisabledItemClass)) {
+      if (el.tagName.toLowerCase() == "a") {
+        evt.preventDefault();
+      } else {
+        return;
+      }
+    }
+
     // If the dropdown is in select mode, display the selected content
     const elTrigger = elDropdown.querySelector(triggerSelectClasses);
     const eventIsOnDropdownItem = el.classList.contains(dropdownItemClass);
@@ -86,27 +96,31 @@ Sage.dropdown = (function() {
   }
 
   function updateStateClass(val, elDropdown) {
-    const hasSelectValueClass = elDropdown.classList.contains(dropdownValueSelectedClass);
+    const hasSelectValueClass = elDropdown.classList.contains(
+      dropdownValueSelectedClass
+    );
     if (val.startsWith(triggerRestPrefix)) {
       if (hasSelectValueClass) {
-        elDropdown.classList.remove(dropdownValueSelectedClass)
+        elDropdown.classList.remove(dropdownValueSelectedClass);
       }
     } else {
       if (!hasSelectValueClass) {
-        elDropdown.classList.add(dropdownValueSelectedClass)
+        elDropdown.classList.add(dropdownValueSelectedClass);
       }
     }
   }
 
   function updateTriggerLabel(val, elTrigger) {
-    const triggerSelectedValue = elTrigger.querySelector(triggerSelectedValueClass);
-    
+    const triggerSelectedValue = elTrigger.querySelector(
+      triggerSelectedValueClass
+    );
+
     if (!triggerSelectedValue) {
       return;
     }
 
     if (val.startsWith(triggerRestPrefix)) {
-      triggerSelectedValue.innerHTML = defaultSelectedValue;  
+      triggerSelectedValue.innerHTML = defaultSelectedValue;
     } else {
       triggerSelectedValue.innerHTML = val;
     }
@@ -123,34 +137,38 @@ Sage.dropdown = (function() {
   }
 
   function open(el) {
-    el.setAttribute('aria-expanded', 'true');
+    el.setAttribute("aria-expanded", "true");
     let focusableEls = el.querySelectorAll(SELECTOR_FOCUSABLE_ELEMENTS);
     SELECTOR_LAST_FOCUSED = document.activeElement;
-    el.addEventListener('keydown', focusTrap.bind(focusableEls));
+    el.addEventListener("keydown", focusTrap.bind(focusableEls));
   }
 
   function close(el) {
-    el.setAttribute('aria-expanded', 'false');
-    el.removeEventListener('keydown', focusTrap);
+    el.setAttribute("aria-expanded", "false");
+    el.removeEventListener("keydown", focusTrap);
     SELECTOR_LAST_FOCUSED.focus();
   }
 
   function isExpanded(el) {
-    return el.getAttribute('aria-expanded') === 'true';
+    return el.getAttribute("aria-expanded") === "true";
   }
 
   function buildA11y(el) {
-    el.setAttribute('aria-haspopup', true);
-    el.setAttribute('aria-expanded', false);
+    el.setAttribute("aria-haspopup", true);
+    el.setAttribute("aria-expanded", false);
   }
 
   function checkSelected(el) {
-    let selectedItem = el.querySelector(dropdownItemAriaSelectedClass); 
-    
+    let selectedItem = el.querySelector(dropdownItemAriaSelectedClass);
+
     if (selectedItem != null) {
-      let selectedItemValue = selectedItem.querySelector(dropdownItemControlClass).innerHTML;
+      let selectedItemValue = selectedItem.querySelector(
+        dropdownItemControlClass
+      ).innerHTML;
       let selectedParent = selectedItem.closest(dropdownClass);
-      selectedParent.querySelector(dropdownTriggerLabelClass).innerHTML = selectedItemValue;
+      selectedParent.querySelector(
+        dropdownTriggerLabelClass
+      ).innerHTML = selectedItemValue;
     }
   }
 
@@ -158,18 +176,18 @@ Sage.dropdown = (function() {
     let firstFocusableEl = this[0];
     let lastFocusableEl = this[this.length - 1];
     let KEYCODE_TAB = 9;
-    var isTabPressed = (evt.key === 'Tab' || evt.keyCode === KEYCODE_TAB);
+    var isTabPressed = evt.key === "Tab" || evt.keyCode === KEYCODE_TAB;
 
-    if (!isTabPressed) { 
-      return; 
+    if (!isTabPressed) {
+      return;
     }
 
-    if ( evt.shiftKey ) /* shift + tab */ {
-      if (document.activeElement === firstFocusableEl) {
+    if (evt.shiftKey) {
+      /* shift + tab */ if (document.activeElement === firstFocusableEl) {
         lastFocusableEl.focus();
         evt.preventDefault();
       }
-    } else /* tab */ {
+    } /* tab */ else {
       if (document.activeElement === lastFocusableEl) {
         firstFocusableEl.focus();
         evt.preventDefault();
@@ -180,6 +198,5 @@ Sage.dropdown = (function() {
   return {
     init: init,
     unbind: unbind,
-  }
-
+  };
 })();
