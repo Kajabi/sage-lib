@@ -1,7 +1,69 @@
 <tr>
-  <td><%= md('`small`') %></td>
+  <td><%= md('`align`') %></td>
+  <td><%= md('Aligns a button to the "right" rather than its default position.') %></td>
+  <td><%= md('String: [ nil | "end" ]') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`contained`') %></td>
+  <td><%= md('This uses the `--contained` modifier to add additional styling to the component.') %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`customized`') %></td>
+  <td><%= md('This uses the `--customized` modifier to add additional styling to the component.') %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`custom_modifier`') %></td>
+  <td><%= md('When set, updates styles associated with the component.') %></td>
+  <td><%= md('`"actions"`, `"sort"`') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`id`') %></td>
+  <td><%= md('Unique identifier for this component.') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`items`') %></td>
+  <td><%= md('
+    An array of items to be the dropdown items.
+  ') %></td>
+  <td><%= md('```
+Array<{
+  attributes: String,
+  border_before: String,
+  icon: String,
+  is_heading: Boolean,
+  modifiers: Array,
+  selected: Boolean,
+  style: String,
+  value: String,
+}>
+```
+(see corresponding properties above)') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`panel_size`') %></td>
   <td><%= md('This component uses the `--small` modifier to change the default
     minimum width of the dropdown menu.') %></td>
+  <td><%= md('`"small"`') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`search`') %></td>
+  <td><%= md('When true, adds a search component to the dropdown.') %></td>
   <td><%= md('Boolean') %></td>
-  <td><%= md('`false`') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`trigger_type`') %></td>
+  <td><%= md('When set, provides additional styling for the component.') %></td>
+  <td><%= md('`"select"`, `"select-labeled"`') %></td>
+  <td><%= md('`nil`') %></td>
 </tr>

@@ -1,0 +1,2 @@
+class SageTypeahead < SageComponent
+end

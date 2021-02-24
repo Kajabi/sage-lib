@@ -1,9 +1,5 @@
 class SageUploadCard < SageComponent
   set_attribute_schema({
-    selection_subtext: [:optional, String],
-    selection_label: [:optional, String],
-    file_selected: [:optional, TrueClass],
-    has_error: [:optional, TrueClass],
     accepted_files: [:optional, [[
       name: [:optional, String],
       size: [:optional, String],
@@ -11,5 +7,9 @@ class SageUploadCard < SageComponent
     errors: [:optional, [[
       text: [:optional, String],
     ]]],
+    file_selected: [:optional, TrueClass],
+    has_error: [:optional, TrueClass],
+    selection_label: [:optional, String],
+    selection_subtext: [:optional, String],
   })
 end

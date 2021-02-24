@@ -1,14 +1,15 @@
 <tr>
-  <td><%= md('`target`') %></td>
-  <td><%= md("The HTML ID for the list this panel controls will target with any events.") %></td>
-  <td><%= md('String') %></td>
+  <td><%= md('`bulk_action_items`') %></td>
+  <td><%= md('The list of items to populate in the bulk actions dropdown.') %></td>
+  <td>
+    <%= md('```
+Array<{
+  attributes: Hash,
+  value: String,
+}>
+    ') %>
+  </td>
   <td><%= md('`nil`') %></td>
-</tr>
-<tr>
-  <td><%= md('`item_count_label`') %></td>
-  <td><%= md("A caption for the bulk actions checkbox.") %></td>
-  <td><%= md('String') %></td>
-  <td><%= md('Select all') %></td>
 </tr>
 <tr>
   <td><%= md('`bulk_action_items`') %></td>
@@ -17,22 +18,10 @@
   <td><%= md('`nil`') %></td>
 </tr>
 <tr>
-  <td><%= md('`sort_items`') %></td>
-  <td><%= md("The list of items to populate in the sort dropdown.") %></td>
-  <td><%= md('Array: See structure for Dropdown items') %></td>
-  <td><%= md('`nil`') %></td>
-</tr>
-<tr>
-  <td><%= md('`start_expanded`') %></td>
-  <td>
-    <%= md('
-      Whether or not the controls should start as expanded or collapsed.
-      This merely affects which of the two buttons appears by default
-      and should be syncronized with the actual target list.
-    ') %>
-  </td>
-  <td><%= md('Boolean') %></td>
-  <td><%= md('`false`') %></td>
+  <td><%= md('`item_count_label`') %></td>
+  <td><%= md("A caption for the bulk actions checkbox.") %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('Select all') %></td>
 </tr>
 <tr>
   <td><%= md('`show_bulk_actions`') %></td>
@@ -59,6 +48,19 @@
   <td><%= md('`false`') %></td>
 </tr>
 <tr>
+  <td><%= md('`sort_items`') %></td>
+  <td><%= md('The list of items to populate in the sort dropdown.') %></td>
+  <td>
+    <%= md('```
+Array<{
+  attributes: Hash,
+  value: String,
+}>
+    ') %>
+  </td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
   <td><%= md('`show_pagination`') %></td>
   <td><%= md('TBD') %>
   </td>
@@ -76,4 +78,22 @@
   </td>
   <td><%= md('Boolean') %></td>
   <td><%= md('`false`') %></td>
+</tr>
+<tr>
+  <td><%= md('`start_expanded`') %></td>
+  <td>
+    <%= md('
+      Whether or not the controls should start as expanded or collapsed.
+      This merely affects which of the two buttons appears by default
+      and should be syncronized with the actual target list.
+    ') %>
+  </td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`false`') %></td>
+</tr>
+<tr>
+  <td><%= md('`target`') %></td>
+  <td><%= md("The HTML ID for the list this panel controls will target with any events.") %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil`') %></td>
 </tr>
