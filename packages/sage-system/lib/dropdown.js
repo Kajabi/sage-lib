@@ -76,11 +76,8 @@ Sage.dropdown = (function () {
 
     // Stop if the dropdown item clicked and parent is disabled
     if (el.parentNode.classList.contains(dropdownDisabledItemClass)) {
-      if (el.tagName.toLowerCase() == "a") {
-        evt.preventDefault();
-      } else {
-        return;
-      }
+      evt.preventDefault();
+      return;
     }
 
     // If the dropdown is in select mode, display the selected content
