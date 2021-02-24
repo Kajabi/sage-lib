@@ -31,12 +31,15 @@ $-toast-viewport-spacing-bottom: sage-spacing();
   border-radius: sage-border(radius-large);
   box-shadow: sage-shadow(lg);
   background-color: sage-color(charcoal);
-  transition: bottom map-get($sage-transitions, default);
+  transition:
+    bottom map-get($sage-transitions, default),
+    transform map-get($sage-transitions, default),
+    opacity map-get($sage-transitions, default);
   animation: 0.5s sage-toast--slide-in ease;
 
   @mixin generate-stacked-toast-alignment($toast-height) {
     @for $index from 1 through 20 {
-      &:nth-of-type(#{$index + 1}) {
+      &:not(.sage-toast--animate-out):nth-of-type(#{$index + 1}) {
         bottom: $-toast-viewport-spacing-bottom + ((sage-spacing(xs) + $toast-height) * $index);
       }
     }
@@ -62,6 +65,12 @@ $-toast-viewport-spacing-bottom: sage-spacing();
 
   &.sage-toast--style-danger {
     background-color: sage-color(red, 400);
+  }
+
+  &.sage-toast--animate-out {
+    transform: translateY(5%);
+    z-index: sage-z-index(modal, 0);
+    opacity: 0;
   }
 }
 
