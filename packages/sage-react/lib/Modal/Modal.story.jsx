@@ -1,14 +1,32 @@
 import React, { useState } from 'react';
-import { storiesOf } from '@storybook/react';
-import { withKnobs, boolean } from '@storybook/addon-knobs';
-import { centerXY } from '../story-support/decorators';
 import { Button } from '../Button';
 import { SageTokens, SageClassnames } from '../configs';
 import { Modal } from './Modal';
-import ModalNotes from './ModalNotes.md';
 
-const ModalWithState = () => {
-  const [active, setActive] = useState(true);
+export default {
+  title: 'Sage/Modal',
+  component: Modal,
+  subcomponents: {
+    'Modal.Header': Modal.Header,
+    'Modal.HeaderAside': Modal.HeaderAside,
+    'Modal.Body': Modal.Body,
+    'Modal.Footer': Modal.Footer,
+    'Modal.FooterAside': Modal.FooterAside,
+  },
+};
+
+export const Empty = (args) => <Modal {...args} />;
+Empty.decorators = [
+  (Story) => (
+    <>
+      <p>Note: wired modal demonstrates functionality. See &quot;Docs&quot; tab for properties</p>
+      <Story />
+    </>
+  )
+];
+
+export const Wired = () => {
+  const [active, setActive] = useState(false);
 
   const onExit = () => {
     setActive(false);
@@ -25,10 +43,8 @@ const ModalWithState = () => {
       <Modal
         active={active}
         onExit={onExit}
-        large={boolean('Large', false)}
       >
-        <Modal.Header>
-          <h1 className={SageClassnames.TYPE.HEADING_1}>Example Sage Modal</h1>
+        <Modal.Header title="Example Sage Modal">
           <Modal.HeaderAside>
             <Button
               color={Button.COLORS.SECONDARY}
@@ -70,12 +86,3 @@ const ModalWithState = () => {
     </>
   );
 };
-
-storiesOf('Sage/Modal', module)
-  .addDecorator(withKnobs)
-  .addDecorator(centerXY)
-  .add('Default', () => (
-    <ModalWithState />
-  ), {
-    notes: { markdown: ModalNotes }
-  });

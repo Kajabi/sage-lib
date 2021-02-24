@@ -1,27 +1,31 @@
 <tr>
-  <td><pre>has_back_icon</pre></td>
-  <td>Whether or not to show the back icon before the first item.</td>
-  <td>Boolean</td>
-  <td>false</td>
+  <td><%= md('`has_back_icon`') %></td>
+  <td><%= md('Whether or not to show the back icon before the first item.') %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`false`') %></td>
 </tr>
 <tr>
-  <td><pre>is_progressbar</pre></td>
-  <td>Whether or not to show the breadcrumbs in a progress like fashion.</td>
-  <td>Boolean</td>
-  <td>false</td>
+  <td><%= md('`is_progressbar`') %></td>
+  <td><%= md('Whether or not to show the breadcrumbs in a progress like fashion.') %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`false`') %></td>
 </tr>
 <tr>
-  <td><pre>items</pre></td>
-  <td>The set of items to display.</td>
-  <td>Array of items following schema</td>
+  <td><%= md('`items`') %></td>
   <td>
-    <strong>Schema:</strong>
-    <pre>
-{
-  url: {string},
-  text: {string},
-  is_current: {boolean},
-}
-    </pre>  
+    <%= md('
+      The set of items to display.
+      Array of items following schema
+    ') %>
   </td>
+  <td>
+  <%= md('```
+    Array<{
+      url: String,
+      text: String,
+      is_current: String
+    }>
+    ') %>
+  </td>
+  <td><%= md('`nil`') %></td>
 </tr>

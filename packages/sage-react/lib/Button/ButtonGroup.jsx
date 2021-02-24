@@ -32,12 +32,12 @@ ButtonGroup.defaultProps = {
   alignEnd: false,
   className: null,
   children: null,
-  gap: BUTTON_GROUP_GAP_OPTIONS.XS,
+  gap: ButtonGroup.GAP_OPTIONS.XS,
 };
 
 ButtonGroup.propTypes = {
   alignEnd: PropTypes.bool,
   className: PropTypes.string,
   children: PropTypes.node,
-  gap: PropTypes.oneOf(Object.values(BUTTON_GROUP_GAP_OPTIONS)),
+  gap: PropTypes.oneOf(Object.values(ButtonGroup.GAP_OPTIONS)),
 };

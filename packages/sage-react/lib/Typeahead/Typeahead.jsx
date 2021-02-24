@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import uuid from 'react-uuid';
 import { Search } from '../Search';
@@ -8,15 +8,26 @@ import { TypeaheadPanel } from './TypeaheadPanel';
 const A11Y_ID = uuid();
 
 export const Typeahead = ({
+  contained,
+  filterFn,
   items,
   maxResults,
+  onClearHook,
   placeholder,
+  searchFn,
   ...rest
 }) => {
   const [searchValue, setSearchValue] = useState('');
   const [searchResults, setSearchResults] = useState([]);
   const [open, setOpen] = useState(false);
   const containerRef = useRef(null);
+
+  const filterList = (_items) => {
+    const newItems = (searchValue && filterFn)
+      ? filterFn(searchValue, _items, maxResults)
+      : _items;
+    setSearchResults(newItems.slice(0, maxResults));
+  };
 
   useFocusTrap({
     active: open,
@@ -27,14 +38,19 @@ export const Typeahead = ({
     returnFocus: false,
   });
 
+  // Watch items and filter when updated
+  useEffect(() => filterList(items), [items]);
+
+  // Update list when search value changes (after debounce)
+  // If a search function is provided it is called,
+  // trusting that that function will handle updating `items` externally.
+  // Otherwise, we proceed to call the filtering function.
   useDebounceEffect(() => {
-    const _value = searchValue.toUpperCase(),
-      _results = [];
-    items.forEach((item) => {
-      if (_results.length >= maxResults) return;
-      if (item.title.toUpperCase().includes(_value)) _results.push(item);
-    });
-    setSearchResults(_results);
+    if (searchFn) {
+      searchFn(searchValue);
+    } else {
+      filterList(items);
+    }
   }, [searchValue], 200);
 
   const onSearchInteraction = (evt) => {
@@ -49,6 +65,10 @@ export const Typeahead = ({
   const onSearchClear = () => {
     setSearchValue('');
     setOpen(false);
+
+    if (onClearHook) {
+      onClearHook();
+    }
   };
 
   const onPanelInteraction = (evt) => {
@@ -65,7 +85,7 @@ export const Typeahead = ({
       {...rest}
     >
       <Search
-        contained={true}
+        contained={contained}
         placeholder={placeholder}
         value={searchValue}
         onChange={onSearchInteraction}
@@ -87,13 +107,24 @@ export const Typeahead = ({
 };
 
 Typeahead.defaultProps = {
+  contained: true,
+  filterFn: (_value, _items, _limit = 5) =>
+    _items.filter(({ title }) =>
+      title.toUpperCase().includes(_value.toUpperCase())
+    ).slice(0, _limit),
   items: [],
+  maxResults: 5,
+  onClearHook: null,
   placeholder: 'Find',
-  maxResults: 5
+  searchFn: null,
 };
 
 Typeahead.propTypes = {
+  contained: PropTypes.bool,
+  filterFn: PropTypes.func,
   items: TypeaheadPanel.propTypes.items,
   maxResults: PropTypes.number,
+  onClearHook: PropTypes.func,
   placeholder: PropTypes.string,
+  searchFn: PropTypes.func,
 };

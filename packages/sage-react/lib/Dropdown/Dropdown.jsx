@@ -25,6 +25,7 @@ export const Dropdown = ({
   isLabelVisible,
   isPinned,
   label,
+  onEscapeHook,
   panelModifier,
   panelMaxWidth,
   panelSize,
@@ -104,6 +105,7 @@ export const Dropdown = ({
 
   const onClickScreen = () => {
     setActive(false);
+    onEscapeHook();
   };
 
   const classNames = classnames(
@@ -174,6 +176,7 @@ Dropdown.defaultProps = {
   icon: null,
   isLabelVisible: true,
   isPinned: false,
+  onEscapeHook: () => false,
   panelMaxWidth: null,
   panelModifier: 'default',
   panelSize: DROPDOWN_PANEL_SIZES.DEFAULT,
@@ -199,6 +202,7 @@ Dropdown.propTypes = {
   isLabelVisible: PropTypes.bool,
   isPinned: PropTypes.bool,
   label: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+  onEscapeHook: PropTypes.func,
   panelMaxWidth: PropTypes.string,
   panelModifier: PropTypes.string,
   panelSize: PropTypes.oneOf(Object.values(DROPDOWN_PANEL_SIZES)),

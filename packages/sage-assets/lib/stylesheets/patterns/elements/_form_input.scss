@@ -34,6 +34,7 @@ $-input-transition: border 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 
   .sage-input-group & {
     height: auto;
+    margin-bottom: 0;
   }
 
   .sage-panel__row > &,
@@ -163,6 +164,12 @@ $-input-transition: border 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     }
   }
 
+  .sage-input--showplaceholder & {
+    ~ .sage-input__label {
+      @include floating-label-active();
+    }
+  }
+
   &:disabled {
     color: $-input-color-disabled;
     background-color: $-input-color-disabled-background;
@@ -170,11 +177,9 @@ $-input-transition: border 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     @include placeholder {
       color: sage-color(grey, 400);
     }
-  }
 
-  .sage-input--showplaceholder & {
-    ~ .sage-input__label {
-      @include floating-label-active();
+    .sage-input--showplaceholder & ~ .sage-input__label {
+      opacity: 0.5;
     }
   }
 }

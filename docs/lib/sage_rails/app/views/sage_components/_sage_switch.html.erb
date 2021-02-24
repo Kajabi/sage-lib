@@ -1,21 +1,41 @@
-<div class="
-    sage-switch
-    <%= component.has_error ? "sage-switch--error" : "" %>
-    <%= component.css_classes if component.css_classes.present? %>
-  "
->
+<% if component.standalone %>
   <input 
-    type="<%= component.type %>" 
-    id="<%= component.id %>" 
-    class="sage-switch__input" 
-    name="<%= component.name %>" 
-    value="<%= component.id %>"
-    <%= "checked" if component.checked %>
-    <%= "disabled" if component.disabled %>
-    <%= "required" if component.required %>
+      type="<%= component.type %>" 
+      id="<%= component.id %>" 
+      class="
+        sage-switch
+        sage-switch--standalone
+        <%= component.has_error ? "sage-switch--error" : "" %>
+        <%= component.css_classes if component.css_classes.present? %>
+      " 
+      name="<%= component.name %>" 
+      value="<%= component.id %>"
+      <%= "checked" if component.checked %>
+      <%= "disabled" if component.disabled %>
+      <%= "required" if component.required %>
+    >
+<% else %>
+  <div class="
+      sage-switch
+      <%= component.has_border ? "sage-switch--has-border" : "" %>
+      <%= component.toggle_position ? "sage-switch--toggle-#{component.toggle_position}" : "" %>
+      <%= component.has_error ? "sage-switch--error" : "" %>
+      <%= component.css_classes if component.css_classes.present? %>
+    "
   >
-  <label for="<%= component.id %>" class="sage-switch__label <%= "sage-switch__label--hide-text" if component.hide_text %>"><%= component.label_text %></label>
-  <% if component.message != "" %>
-    <div class="sage-switch__message">Additional Info</div>
-  <% end %>
-</div>
+    <input 
+      type="<%= component.type %>" 
+      id="<%= component.id %>" 
+      class="sage-switch__input" 
+      name="<%= component.name %>" 
+      value="<%= component.id %>"
+      <%= "checked" if component.checked %>
+      <%= "disabled" if component.disabled %>
+      <%= "required" if component.required %>
+    >
+    <label for="<%= component.id %>" class="sage-switch__label <%= "sage-switch__label--hide-text" if component.hide_text %>"><%= component.label_text %></label>
+    <% if component.message.present? %>
+      <div class="sage-switch__message"><%= component.message %></div>
+    <% end %>
+  </div>
+<% end %>

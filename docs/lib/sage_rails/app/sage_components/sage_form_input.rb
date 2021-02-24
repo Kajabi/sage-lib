@@ -1,5 +1,6 @@
 class SageFormInput < SageComponent
   set_attribute_schema({
+    autocomplete: [:optional, TrueClass],
     css_classes: [:optional, String],
     disabled: [:optional, TrueClass],
     has_error: [:optional, TrueClass],
@@ -11,12 +12,15 @@ class SageFormInput < SageComponent
     max: [:optional, String],
     maxlength: [:optional, String],
     message_text: [:optional, String],
+    min: [:optional, String],
     minlength: [:optional, String],
     pattern: [:optional, String],
     placeholder: [:optional, String],
     prefix: [:optional, String],
+    readonly: [:optional, TrueClass],
     required: [:optional, TrueClass],
+    step: [:optional, String],
     suffix: [:optional, String],
-    value: [:optional, String],
+    value: [:optional, String]
   })
 end

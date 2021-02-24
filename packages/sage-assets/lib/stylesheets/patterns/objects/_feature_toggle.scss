@@ -57,6 +57,35 @@ $-image-height-mobile: rem(120px);
   }
 }
 
+.sage-feature-toggle__content--form {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @media (min-width: sage-breakpoint(sm-min)) {
+    flex-wrap: nowrap;
+  }
+}
+
+.sage-feature-toggle__form-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: sage-spacing(md);
+
+  @media (min-width: sage-breakpoint(sm-min)) {
+    margin-right: sage-spacing(md);
+    margin-bottom: 0;
+  }
+
+  &:first-of-type {
+    flex-grow: 1;
+  }
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
 .sage-feature-toggle__links {
   display: flex;
   flex-wrap: wrap;

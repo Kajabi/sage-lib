@@ -1,58 +1,73 @@
 <tr>
-  <td><code>body</code></td>
-  <td>The content to display inside the popover panel</td>
-  <td>String</td>
-  <td><code></code></td>
+  <td><%= md('`body`') %></td>
+  <td><%= md('The content to display inside the popover panel.') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil`') %></td>
 </tr>
 <tr>
-  <td><code>custom_content_class</code></td>
+  <td><%= md('`custom_content_class`') %></td>
   <td>
-    A class to add to the panel's content contianer for cusotm styling.
-    When present, <code>sage-popover__content--custom</code> is also added,
-    and default styling on the content panel is disabled.
+    <%= md('
+      A class to add to the panel\'s content contianer for custom styling.
+      When present, `sage-popover__content--custom` is also added,
+      and default styling on the content panel is disabled.
+    ') %>
   </td>
-  <td>String</td>
-  <td><code></code></td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil`') %></td>
 </tr>
 <tr>
-  <td><code>icon</code></td>
-  <td>Which icon to display in the panel trigger button.</td>
-  <td>String</td>
-  <td><code></code></td>
+  <td><%= md('`icon`') %></td>
+  <td><%= md('Which icon to display in the panel trigger button.') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil`') %></td>
 </tr>
 <tr>
-  <td><code>id</code></td>
-  <td>Id attribute for the panel.</td>
-  <td>String</td>
-  <td><code></code></td>
+  <td><%= md('`id`') %></td>
+  <td><%= md('`id` attribute for the panel.') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil`') %></td>
 </tr>
 <tr>
-  <td><code>link</code></td>
-  <td>If provided, this turns on the actions area with a link that points to the provided URL.</td>
-  <td>String</td>
-  <td><code>nil</code></td>
+  <td><%= md('`link`') %></td>
+  <td><%= md('If provided, this turns on the actions area with a link that points to the provided URL.') %></td>
+  <td>
+<%= md('```
+Array<{
+  href: String,
+  name: String,
+}>
+') %>
+  </td>
+  <td><%= md('`nil`') %></td>
 </tr>
 <tr>
-  <td><code>popover_position</code></td>
-  <td>Where to position the popover panel in relation to the trigger button.</td>
-  <td>String</td>
-  <td><code>right</code></td>
+  <td><%= md('`link`') %></td>
+  <td><%= md('If provided, this turns on the actions area with a link that points to the provided URL.') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil`') %></td>
 </tr>
 <tr>
-  <td><code>title</code></td>
-  <td>The heading to show at the top of the popover.</td>
-  <td>String</td>
-  <td><code>nil</code></td>
+  <td><%= md('`popover_position`') %></td>
+  <td><%= md('Where to position the popover panel in relation to the trigger button.') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('`right`') %></td>
 </tr>
 <tr>
-  <td><code>trigger_icon_only</code></td>
-  <td>Whether or not the trigger button should only show an icon and not a label</td>
-  <td>Boolean</td>
-  <td><code>true</code></td>
+  <td><%= md('`title`') %></td>
+  <td><%= md('The heading to show at the top of the popover.') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil`') %></td>
 </tr>
 <tr>
-  <td><code>trigger_value</code></td>
-  <td>The text label to show on the trigger</td>
-  <td>String</td>
-  <td><code>nil</code></td>
+  <td><%= md('`trigger_icon_only`') %></td>
+  <td><%= md('Whether or not the trigger button should only show an icon and not a label') %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`true`') %></td>
+</tr>
+<tr>
+  <td><%= md('`trigger_value`') %></td>
+  <td><%= md('The text label to show on the trigger') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil`') %></td>
 </tr>

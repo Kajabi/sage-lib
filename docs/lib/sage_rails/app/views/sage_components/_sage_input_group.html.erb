@@ -1,23 +1,5 @@
-<div class="sage-input-group sage-input-group--<%= component.group_button_type -%>" role="group" aria-labelledby="<%= component.group_id %>">
-  <%= sage_component SageFormInput, {
-    id: "#{ component.group_id }",
-    input_type: "#{ component.group_button_type}",
-    label_text: "#{ component.group_button_label }",
-    placeholder: "#{ component.group_button_label }",
-    value: "",
-    required: true,
-    disabled: false,
-    input_mode: "",
-    pattern: "",
-    max: "",
-    minlength: "",
-    maxlength: "",
-    has_error: false,
-    message_text: "",
-    prefix: "",
-    suffix: "",
-    has_placeholder: false
-  } %>
+<div class="sage-input-group sage-input-group--<%= component.input_type -%> <% if component.disabled %>sage-input-group--disabled<% end %>" role="group" aria-labelledby="<%= component.group_id %>">
+  <%= component.content %>
   <%- if component.has_hint -%>
     <%= sage_component SageInputHelper,
       helper_id: "",
@@ -42,11 +24,16 @@
       ]
     %>
   <%- end -%>
-  <%- if component.has_button -%> 
-    <button
-      class="sage-input-group__button <%= component.group_button_style.present? ? "sage-btn #{component.group_button_style}" : "sage-input-group__toggle" %> <%= component.group_button_icon if component.group_button_icon %>"
-      <% if component.group_button_type == "password" %> data-js-mask="password"<% end %><% if component.group_button_tooltip %> data-tooltip="<%= component.group_button_tooltip_text %>" data-position="<% component.group_button_tooltip_position %>"<% if component.group_button_tooltip_size != "" %> data-tooltip-size="<%= component.group_button_tooltip_size %>"<% end %><% end %>>
-      <%- if component.group_button_text_hidden -%><span class="visually-hidden"><% end %><%= component.group_button_text %><%- if component.group_button_text_hidden -%></span><% end %>
-    </button>
+  <%- if component.has_button -%>
+    <%- component.group_buttons.each do |button| -%>
+      <button class="sage-input-group__button sage-btn<% if button[:display_on_focus] %> sage-input-group__toggle<% end %> <%= button[:icon] if button[:icon].present? %>"
+        <% if component.input_type == "password" %> data-js-mask="password"<% end %>
+        <% if button[:tooltip] %>
+        data-tooltip="<%= button[:tooltip_text] %>" data-position="<% button[:tooltip_position] %>"<% if button[:tooltip_size] != "" %> data-tooltip-size="<%= button[:tooltip_size] %>"<% end %>
+        <% end %>
+        <% if component.disabled %>disabled<% end %>>
+        <%- if button[:text_hidden] -%><span class="visually-hidden"><% end %><%= button[:text] %><%- if button[:text_hidden] -%></span><% end %>
+      </button>
+    <%- end -%>
   <%- end -%>
 </div>

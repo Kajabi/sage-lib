@@ -1,8 +1,8 @@
 class SagePanelControls < SageComponent
   set_attribute_schema({
     bulk_action_items: [:optional, [[{
-      value: String,
       attributes: [:optional, Hash],
+      value: String,
     }]]],
     item_count_label: [:optional, TrueClass],
     show_bulk_actions: [:optional, TrueClass],
@@ -10,8 +10,8 @@ class SagePanelControls < SageComponent
     show_pagination: [:optional, TrueClass],
     show_sort: [:optional, TrueClass],
     sort_items: [:optional, [[{
-      value: String,
       attributes: [:optional, Hash],
+      value: String,
     }]]],
     start_expanded: [:optional, TrueClass],
     target: [:optional, String],

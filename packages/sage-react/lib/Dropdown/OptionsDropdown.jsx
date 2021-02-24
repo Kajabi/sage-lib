@@ -10,6 +10,7 @@ export const OptionsDropdown = ({
   className,
   exitPanelHandler,
   isPinned,
+  onEscapeHook,
   panelMaxWidth,
   panelSize,
   options,
@@ -22,6 +23,7 @@ export const OptionsDropdown = ({
     isLabelVisible={false}
     isPinned={isPinned}
     label="Options"
+    onEscapeHook={onEscapeHook}
     panelMaxWidth={panelMaxWidth}
     panelSize={panelSize}
     triggerModifier="options"
@@ -38,6 +40,7 @@ OptionsDropdown.defaultProps = {
   className: null,
   exitPanelHandler: (evt) => evt,
   isPinned: true,
+  onEscapeHook: () => false,
   panelMaxWidth: null,
   panelSize: DROPDOWN_PANEL_SIZES.DEFAULT,
   options: null,
@@ -50,6 +53,7 @@ OptionsDropdown.propTypes = {
   className: PropTypes.string,
   exitPanelHandler: PropTypes.func,
   isPinned: PropTypes.bool,
+  onEscapeHook: PropTypes.func,
   panelMaxWidth: PropTypes.string,
   panelSize: PropTypes.oneOf(Object.values(DROPDOWN_PANEL_SIZES)),
   options: DropdownItemList.itemsPropTypes,

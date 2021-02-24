@@ -1,11 +1,49 @@
-import React from 'react';
+import React, { useState } from 'react';
 import uuid from 'react-uuid';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, number } from '@storybook/addon-knobs';
 import { centerXY } from '../story-support/decorators';
-import { Button } from '../Button';
 import { SageTokens } from '../configs';
+import { Button } from '../Button';
+import { Panel } from '../Panel';
 import { Typeahead } from './Typeahead';
+import { searchNews } from '../services/newsapi';
+
+const TypeaheadWithAPI = () => {
+  const [items, setItems] = useState([]);
+  const [selectedArticle, setSelectedArticle] = useState(null);
+
+  const searchFn = async (value) => {
+    const news = await searchNews(value);
+    if (!news || !news.articles) {
+      return;
+    }
+
+    setItems(news.articles.map(({ title, author, link }) => ({
+      icon: SageTokens.ICONS.URL,
+      onClick: () => setSelectedArticle({ title, author, link }),
+      subtitle: author || '',
+      title,
+    })));
+  };
+
+  return (
+    <Panel.Stack>
+      <Typeahead
+        filterFn={null}
+        items={items}
+        maxResults={5}
+        searchFn={searchFn}
+        onClearHook={() => setSelectedArticle(null)}
+      />
+      {selectedArticle && (
+        <a href={selectedArticle.link} rel="noopener noreferrer" target="_blank">
+          {selectedArticle.title}
+        </a>
+      )}
+    </Panel.Stack>
+  );
+};
 
 const itemActions = [
   <Button
@@ -75,5 +113,10 @@ storiesOf('Sage/Typeahead', module)
           <span key={uuid()}><br />{item.title}</span>
         )}
       </p>
+    </div>
+  ))
+  .add('With API', () => (
+    <div style={{ width: 500 }}>
+      <TypeaheadWithAPI />
     </div>
   ));

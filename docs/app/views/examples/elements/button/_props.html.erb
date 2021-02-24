@@ -1,72 +1,85 @@
 <tr>
-  <td>align</td>
-  <td>Aligns a button to the "right" rather than its default position</td>
-  <td>String: [ null | "end" ]</td>
-  <td>null</td>
+  <td><%= md('`align`') %></td>
+  <td><%= md('Aligns a button to the "right" rather than its default position.') %></td>
+  <td><%= md('String: [ nil | "end" ]') %></td>
+  <td><%= md('`nil`') %></td>
 </tr>
 <tr>
-  <td>disabled</td>
+  <td><%= md('`attributes`') %></td>
+  <td><%= md('For setting additional attributes not defined above. Accepts a Ruby hash of valid key-value properties, such as data-attributes') %></td>
+  <td><%= md('Hash') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`disabled`') %></td>
   <td>
-    Toggles whether or not the button is disabled.
-    On <code>button</code> this implements the "disabled" HTML attribute
-    but on hyperlinks it enables the <code>aria-disabled="true"</code>.
+    <%= md('
+      Toggles whether or not the button is disabled.
+      On `button` this implements the "disabled" HTML attribute
+      but on hyperlinks it enables the `aria-disabled="true"`.
+    ') %>
   </td>
-  <td>Boolean</td>
-  <td>false</td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`false`') %></td>
 </tr>
 <tr>
-  <td>full_width</td>
-  <td>Forces a button to 100% the width of its container.</td>
-  <td>Boolean</td>
-  <td>false</td>
+  <td><%= md('`full_width`') %></td>
+  <td><%= md('Forces a button to 100% the width of its container.') %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`false`') %></td>
 </tr>
 <tr>
-  <td>icon</td>
-  <td>Allows for configurations for an and its placement to be provided.</td>
+  <td><%= md('`icon`') %></td>
+  <td><%= md('Allows for configurations for an icon and its placement to be provided.') %>
+  </td>
   <td>
-<pre><code>icon: {
-  name: &lt;String: name of Sage icon, see Icons&gt;,
-  style: &lt;String: [ "left" | "right" | "only" ]&gt;
-}</code></pre>
+  <%= md('```
+    icon: {
+      name: String,
+      style: String [ "left" | "right" | "only" ],
+    }
+    ') %>
   </td>
-  <td>null</td>
+  <td><%= md('`nil`') %></td>
 </tr>
 <tr>
-  <td>no_shadow</td>
-  <td>Toggles the "raised" effect off of Buttons that are of the "primary" type.</td>
-  <td>Boolean</td>
-  <td>false</td>
+  <td><%= md('`no_shadow`') %></td>
+  <td><%= md('Disables default shadow for "Primary" buttons.') %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`false`') %></td>
 </tr>
 <tr>
-  <td>raised</td>
-  <td>Toggles "raised" shadows effect onto the "secondar" or "danger" types.</td>
-  <td>Boolean</td>
-  <td>false</td>
+  <td><%= md('`raised`') %></td>
+  <td><%= md('Toggles "raised" shadows effect onto the "secondary" or "danger" types.') %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`false`') %></td>
 </tr>
 <tr>
-  <td>small</td>
-  <td>Toggles whether buttons in the "subtle" format can be display in a regular (default) and small size using this property.</td>
-  <td>Boolean</td>
-  <td>false</td>
+  <td><%= md('`small`') %></td>
+  <td><%= md('Toggles whether buttons in the "subtle" format can be display in a regular (default) and small size using this property.') %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`false`') %></td>
 </tr>
 <tr>
-  <td>style</td>
-  <td>Buttons have three different "styles" that affect color appearance to create a "primary", "secondary", and "danger" variation.</td>
-  <td>String: [ "primary" | "secondary" | "danger" ]</td>
-  <td>"primary"</td>
+  <td><%= md('`style`') %></td>
+  <td><%= md('Buttons have three different "styles" that affect color appearance to create a "primary", "secondary", and "danger" variation.') %></td>
+  <td><%= md('String: [ "primary" | "secondary" | "danger" ]') %></td>
+  <td><%= md('`primary`') %></td>
 </tr>
 <tr>
-  <td>subtle</td>
-  <td>Whether or not to render the button in the "subtle" format.</td>
-  <td>Boolean</td>
-  <td>false</td>
+  <td><%= md('`subtle`') %></td>
+  <td><%= md('Whether or not to render the button in the "subtle" format.') %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`false`') %></td>
 </tr>
 <tr>
-  <td>value</td>
+  <td><%= md('`value`') %></td>
   <td>
-    The value to show on the button.
-    If the "only" style is set for "icon", this label is visually hidden.
+    <%= md('
+      The value to show on the button.
+      If the "only" style is set for "icon", this label is visually hidden.
+    ') %>
   </td>
-  <td>String</td>
-  <td>null</td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil`') %></td>
 </tr>

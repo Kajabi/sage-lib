@@ -1,25 +1,66 @@
-
 <tr>
-  <td>ID</td>
-  <td>Unique identifier for the checkbox. Should match the "for" attribute on the corresponding label</td>
-  <td>String</td>
-  <td>null</td>
+  <td><%= md('`attributes`') %></td>
+  <td><%= md('For setting additional attributes not defined above. Accepts a Ruby hash of valid key-value properties, such as data-attributes') %></td>
+  <td><%= md('Hash') %></td>
+  <td><%= md('`nil`') %></td>
 </tr>
 <tr>
-  <td>Checked</td>
-  <td>Sets the state to "checked" by default</td>
-  <td>String</td>
-  <td>null</td>
+  <td><%= md('`checked`') %></td>
+  <td><%= md('Sets the state to "checked" by default') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil`') %></td>
 </tr>
 <tr>
-  <td>Disabled</td>
-  <td>Prevents all user interaction with the control. Be aware that when combining a disabled checkbox with a default "checked" state, the value of the checkbox <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/disabled#attribute_interactions" target="_blank" rel="noopener">will not be included when its parent form is submitted</a>. Likewise, setting Required will not have any effect.</td>
-  <td>String</td>
-  <td>null</td>
+  <td><%= md('`disabled`') %></td>
+  <td><%= md('Prevents all user interaction with the control. Be aware that when combining a disabled checkbox with a default "checked" state, the value of the checkbox <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/disabled#attribute_interactions" target="_blank" rel="noopener">will not be included when its parent form is submitted</a>. Likewise, setting Required will not have any effect.') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil`') %></td>
 </tr>
 <tr>
-  <td>Attributes</td>
-  <td>For setting additional attributes not defined above. Accepts a Ruby hash of valid key-value properties, such as data-attributes</td>
-  <td>Hash</td>
-  <td>null</td>
+  <td><%= md('`has_error`') %></td>
+  <td><%= md('This will display error styles on the component.') %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`id`') %></td>
+  <td><%= md('Unique identifier for the checkbox. Should match the "for" attribute on the corresponding label') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`label_text`') %></td>
+  <td><%= md('Sets the label text for the component.') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`name`') %></td>
+  <td><%= md('Using a singular name groups radio buttons together, allowing the user to toggle between them (see Option 1 and Option 2 examples above)') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`partial_selection`') %></td>
+  <td><%= md('When set, adds styling to show that now all elements are selected') %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`required`') %></td>
+  <td><%= md('Adding this attribute allows basic HTML form validation on this field') %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`standalone`') %></td>
+  <td><%= md('When set, this component is expected to be used in isolation.') %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`value`') %></td>
+  <td><%= md('Sets the value of the form component.') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil`') %></td>
 </tr>
