@@ -20,7 +20,7 @@ module SageSchemaHelper
   }
 
   # Accepts any Collection that can be paginated
-  def self.will_paginate?(value)
+  def self.can_paginate?(value)
     value.respond_to?(:total_pages)
   end
 end
