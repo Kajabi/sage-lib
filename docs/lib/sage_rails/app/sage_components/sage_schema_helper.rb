@@ -20,7 +20,7 @@ module SageSchemaHelper
   }
 
   # Accepts ActiveRecord descendants
-  def self.is_active_record?(value)
-    value.superclass == ActiveRecord::Base
+  def self.will_paginate?(value)
+    value.respond_to?(:total_pages)
   end
 end
