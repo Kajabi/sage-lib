@@ -97,6 +97,7 @@ $-switch-focus-outline-error-color: sage-color(red, 300);
 }
 
 .sage-switch__input {
+  z-index: sage-z-index(raised, 1);
   display: inline-block;
   position: relative;
   transform: translateY(2px);
@@ -132,6 +133,7 @@ $-switch-focus-outline-error-color: sage-color(red, 300);
 
     &::after {
       content: "" ;
+      z-index: sage-z-index(raised);
       position: absolute;
       top: 0;
       left: 0;
