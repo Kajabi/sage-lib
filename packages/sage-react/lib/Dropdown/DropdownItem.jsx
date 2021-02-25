@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { Checkbox } from '../Toggle';
 import { Link } from '../Link';
+import { Tooltip } from '../Tooltip';
 import { SageTokens } from '../configs';
 import { OptionsDropdown } from './OptionsDropdown';
 import { DROPDOWN_ITEM_COLORS } from './configs';
@@ -27,6 +28,7 @@ export const DropdownItem = ({
   options,
   payload,
   to,
+  tooltip,
   ...rest
 }) => {
   const classNames = classnames(
@@ -81,6 +83,15 @@ export const DropdownItem = ({
   };
 
   const fieldId = `${groupId}-checkbox-${id}`;
+
+  const renderOptions = () => (
+    <OptionsDropdown
+      className="sage-dropdown__item-options"
+      id={`${groupId}-${id}-options`}
+      exitPanelHandler={onExitSubmenu}
+      options={options}
+    />
+  );
 
   const renderItem = () => {
     if (isHeading) {
@@ -150,17 +161,25 @@ export const DropdownItem = ({
   };
 
   return (
-    <li className={classNames} role="none">
-      {renderItem()}
-      {options && (
-        <OptionsDropdown
-          className="sage-dropdown__item-options"
-          id={`${groupId}-${id}-options`}
-          exitPanelHandler={onExitSubmenu}
-          options={options}
-        />
+    <>
+      {tooltip ? (
+        <Tooltip {...tooltip}>
+          <li className={classNames} role="none">
+            {renderItem()}
+            {options && (
+              renderOptions()
+            )}
+          </li>
+        </Tooltip>
+      ) : (
+        <li className={classNames} role="none">
+          {renderItem()}
+          {options && (
+            renderOptions()
+          )}
+        </li>
       )}
-    </li>
+    </>
   );
 };
 
@@ -184,6 +203,7 @@ DropdownItem.defaultProps = {
   options: null,
   payload: null,
   to: null,
+  tooltip: null,
 };
 
 DropdownItem.propTypes = {
@@ -214,4 +234,10 @@ DropdownItem.propTypes = {
     PropTypes.func,
   ]),
   to: PropTypes.string,
+  tooltip: PropTypes.shape({
+    position: PropTypes.oneOf(Object.values(Tooltip.POSITIONS)),
+    size: PropTypes.oneOf(Object.values(Tooltip.SIZES)),
+    theme: PropTypes.oneOf(Object.values(Tooltip.THEMES)),
+  }),
+
 };
