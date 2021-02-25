@@ -22,11 +22,9 @@ class SagePagination < SageComponent
   end
 
   def page_count(collection)
-    unless collection_name.blank?
-      entry_name = collection_name.titleize.pluralize(collection.total_count)
-    else
-      entry_name = (collection.entry_name || "Record").titleize.pluralize(collection.total_count)
-    end
+    
+    name = collection_name.presence || collection.entry_name || "Record"
+    entry_name = name.titleize.pluralize(collection.total_count)
 
     if collection.total_pages < 2
       "<strong>#{collection.total_count}</strong> #{entry_name}"
