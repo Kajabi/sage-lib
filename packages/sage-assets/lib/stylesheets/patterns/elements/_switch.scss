@@ -97,8 +97,8 @@ $-switch-focus-outline-error-color: sage-color(red, 300);
 }
 
 .sage-switch__input {
-  z-index: sage-z-index(default, 1);
   display: inline-block;
+  z-index: sage-z-index(default, 1);
   position: relative;
   transform: translateY(2px);
   height: $-switch-height;
