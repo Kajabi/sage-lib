@@ -1,25 +1,31 @@
 import React, { useState } from 'react';
-import { storiesOf } from '@storybook/react';
-import { withKnobs, boolean, text } from '@storybook/addon-knobs';
-import { centerXY } from '../story-support/decorators';
 import { Search } from './Search';
 
-const InputWithState = (rest) => {
+
+export default {
+  title: 'Sage/Search',
+  component: Search,
+};
+
+const Template = (args) => <Search {...args} />;
+
+export const Default = Template.bind({});
+Default.args = {
+  placeholder: 'find',
+  value: ''
+}
+
+export const Contained = () => {
   const [value, setValue] = useState('');
 
   return (
-    <Search
-      placeholder={text('Placeholder', 'Find')}
-      onChange={(evt) => setValue(evt.target.value)}
-      onClear={() => setValue('')}
-      value={value}
-      {...rest}
-    />
-  );
-};
-
-storiesOf('Sage/Search', module)
-  .addDecorator(withKnobs)
-  .addDecorator(centerXY)
-  .add('Controlled: Uncontained', () => <InputWithState contained={boolean('Contained', false)} />)
-  .add('Controlled: Contained', () => <InputWithState contained={boolean('Contained', true)} />);
+    <>
+      <Search
+        placeholder= 'Find'
+        onChange={(evt) => setValue(evt.target.value)}
+        onClear={() => setValue('')}
+        value={value}
+      />
+    </>
+  )
+}
