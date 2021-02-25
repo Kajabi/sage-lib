@@ -80,6 +80,7 @@ $-radio-focus-outline-color: currentColor;
 
   &::after {
     content: "" ;
+    z-index: sage-z-index(raised);
     position: absolute;
     top: 0;
     left: 0;
@@ -97,6 +98,7 @@ $-radio-focus-outline-color: currentColor;
 
 .sage-radio--standalone,
 .sage-radio__input {
+  z-index: sage-z-index(raised, 1);
   display: inline-block;
   position: relative;
   height: $-radio-button-size;
