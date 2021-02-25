@@ -6,7 +6,7 @@ import { Popover } from './Popover';
 export default {
   title: 'Sage/Popover',
   component: Popover,
-  decorators:  [(Story) => <div style={{ minHeight: 150 }}><Story/></div>],
+  decorators: [(Story) => <div style={{ minHeight: 150 }}><Story /></div>],
   argTypes: {
     ...selectArgs({
       icon: SageTokens.ICONS,

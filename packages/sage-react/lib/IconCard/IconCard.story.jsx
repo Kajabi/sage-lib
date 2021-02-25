@@ -6,7 +6,7 @@ import { IconCard } from './IconCard';
 export default {
   title: 'Sage/IconCard',
   component: IconCard,
-  decorators:  [(Story) => <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}><Story/></div>],
+  decorators: [(Story) => <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}><Story /></div>],
   argTypes: {
     ...selectArgs({
       color: IconCard.COLORS,
