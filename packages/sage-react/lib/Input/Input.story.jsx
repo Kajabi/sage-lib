@@ -1,56 +1,37 @@
 import React, { useState } from 'react';
-import { storiesOf } from '@storybook/react';
-import { withKnobs, boolean, select, text } from '@storybook/addon-knobs';
-import { centerXY } from '../story-support/decorators';
 import { Input } from './Input';
 
-const InputWithState = () => {
+export default {
+  title: 'Sage/Input',
+  component: Input,
+  args: {
+    label: "Label"
+  }
+};
+
+const Template = (args) => <Input {...args} />;
+
+export const Default = Template.bind({});
+
+export const Stateful = () => {
   const [value, updateValue] = useState('Test');
   const onChange = (e) => {
     updateValue(e.target.value);
   };
 
   return (
-    <Input
-      disabled={boolean('Disabled', false)}
-      hasError={boolean('Has an error', false)}
-      id="field-1"
-      label={text('Label', 'First name')}
-      message={text('Message', null)}
-      onChange={onChange}
-      prefix={text('Prefix', null)}
-      required={boolean('Required', false)}
-      suffix={text('Suffix', null)}
-      type={select('Type', {
-        Email: 'email',
-        Number: 'number',
-        Password: 'password',
-        Text: 'text',
-      }, 'text')}
-      value={value}
-    />
+    <>
+      <Input
+        disabled={false}
+        id="field-1"
+        label='First name'
+        message={null}
+        onChange={onChange}
+        prefix={null}
+        required={false}
+        suffix={null}
+        value={value}
+      />
+    </>
   );
 };
-
-storiesOf('Sage/Input', module)
-  .addDecorator(withKnobs)
-  .addDecorator(centerXY)
-  .add('Default', () => (
-    <Input
-      disabled={boolean('Disabled', false)}
-      hasError={boolean('Has an error', false)}
-      id="field-1"
-      label={text('Label', 'First name')}
-      message={text('Message', null)}
-      prefix={text('Prefix', null)}
-      required={boolean('Required', false)}
-      suffix={text('Suffix', null)}
-      type={select('Type', {
-        Email: 'email',
-        Number: 'number',
-        Password: 'password',
-        Text: 'text',
-      }, 'text')}
-    />
-  ))
-  .add('Controlled Component Demo', () => <InputWithState />);
