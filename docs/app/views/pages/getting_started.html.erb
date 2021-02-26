@@ -25,7 +25,7 @@ The UI of the Kajabi Core application is a combination of Rails Components, Reac
     <div class="docs-feature">
       <i class="devicon devicon-rails-plain-wordmark colored"></i>
       <h3 class="t-sage-heading-4">Rails Components</h3>
-      <p class="t-sage-body">Our default approach to solving customer problems is via ROR. We use custom Rails Components to serve our system to the app.</p>
+      <p class="t-sage-body">Our default approach to solving customer problems is via ROR. We use custom Rails Components to serve our system to the app. These are documented within this site under "Elements" and "Objects."</p>
     </div>
   <% end %>
   <%= sage_component SageGridCol, { breakpoint: :lg, size: "6" } do %>
@@ -40,7 +40,7 @@ The UI of the Kajabi Core application is a combination of Rails Components, Reac
       <i class="devicon devicon-react-original colored"></i>
       <h3 class="t-sage-heading-4">React Components</h3>
       <p class="t-sage-body">We build React versions of many of our components that mimic the same functionality. A few of our components exist only as React components due to their complexity.</p>
-      <%= sage_component SageLink, { label: "View Sassdocs site", url: Rails.application.config.storybook_root_url, external: true, launch: true } %>
+      <%= sage_component SageLink, { label: "View React components", url: Rails.application.config.storybook_root_url, external: true, launch: true } %>
     </div>
   <% end %>
 <% end %>
