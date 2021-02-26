@@ -28,19 +28,3 @@ export default {
 const Template = (args) => <EmptyState {...args} />;
 
 export const Default = Template.bind({});
-
-// storiesOf('Sage/EmptyState', module)
-//   .addDecorator(withKnobs)
-//   .addDecorator(centerXY)
-//   .add('Default', () => (
-//     <Grid container={Grid.CONTAINER_SIZES.XS}>
-//       <EmptyState
-//         title={text('Title', 'Title Here')}
-//         text={text('Text', 'Text Here')}
-//         icon={select('Icon', { ...SageTokens.ICONS, NONE: null }, SageTokens.ICONS.GEAR)}
-//         compact={boolean('Compact', false)}
-//       >
-//         <Button>Lorem ipsum</Button>
-//       </EmptyState>
-//     </Grid>
-//   ));
