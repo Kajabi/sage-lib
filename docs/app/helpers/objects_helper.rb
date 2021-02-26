@@ -19,7 +19,8 @@ module ObjectsHelper
         docs: "done",
         rails: "done",
         react: "todo",
-        a11y: "todo"
+        a11y: "todo",
+        react_component_slug: "sage-alert--default"
       },
       {
         title: "assistant",

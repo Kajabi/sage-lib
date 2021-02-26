@@ -19,7 +19,7 @@ module ElementsHelper
         docs: "done",
         rails: "done",
         react: "done",
-        a11y: "done"
+        a11y: "done",
       },
       {
         title: "button",
@@ -28,7 +28,8 @@ module ElementsHelper
         docs: "done",
         rails: "done",
         react: "done",
-        a11y: "done"
+        a11y: "done",
+        react_component_slug: "sage-button--default"
       },
       {
         title: "card_highlight",

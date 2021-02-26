@@ -14,7 +14,9 @@
 <div class="sage-panel-set">
   <%= render "examples/shared/preview",
     type: "element",
-    title: @title %>
+    title: @title,
+    react_component_slug: defined?(info_content[:react_component_slug]) ? info_content[:react_component_slug] : nil
+  %>
 
   <%= render "examples/shared/props",
     props_content: props_content,
