@@ -20,6 +20,10 @@ These Objects take on their own properties and serve as the backbone of our desi
 <% end %>
 <div class="sage-panel-set">
   <% sorted_sage_objects.each do |object| %>
-    <%= render "examples/objects/object_preview", title: object[:title], description: object[:description] %>
+    <%= render "examples/objects/object_preview",
+      title: object[:title],
+      description: object[:description],
+      react_component_slug: object[:react_component_slug] ? object[:react_component_slug] : false
+    %>
   <% end %>
 </div>

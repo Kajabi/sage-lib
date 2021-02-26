@@ -168,31 +168,31 @@ Use one of the tiling pattern modifiers to determine how many tiles appear in a 
   <%= sage_component SagePanelTiles, { tiles_in_row: 3 } do %>
     <%= sage_component SageCard, {} do %>
       <%= sage_component SageCardFigure, {} do %>
-        <%= image_pack_tag("docs/card/card-placeholder-sm.png", alt: "") %>
+        <%= image_tag("card-placeholder-sm.png", alt: "") %>
       <% end %>
       <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
     <% end %>
     <%= sage_component SageCard, {} do %>
       <%= sage_component SageCardFigure, {} do %>
-        <%= image_pack_tag("docs/card/card-placeholder-sm.png", alt: "") %>
+        <%= image_tag("card-placeholder-sm.png", alt: "") %>
       <% end %>
       <span>Morbi rhoncus mauris ut turpis gravida bibendum.</span>
     <% end %>
     <%= sage_component SageCard, {} do %>
       <%= sage_component SageCardFigure, {} do %>
-        <%= image_pack_tag("docs/card/card-placeholder-sm.png", alt: "") %>
+        <%= image_tag("card-placeholder-sm.png", alt: "") %>
       <% end %>
       <span>Donec feugiat accumsan velit et semper.</span>
     <% end %>
     <%= sage_component SageCard, {} do %>
       <%= sage_component SageCardFigure, {} do %>
-        <%= image_pack_tag("docs/card/card-placeholder-sm.png", alt: "") %>
+        <%= image_tag("card-placeholder-sm.png", alt: "") %>
       <% end %>
       <span>Ut elementum id leo ac fringilla.</span>
     <% end %>
     <%= sage_component SageCard, {} do %>
       <%= sage_component SageCardFigure, {} do %>
-        <%= image_pack_tag("docs/card/card-placeholder-sm.png", alt: "") %>
+        <%= image_tag("card-placeholder-sm.png", alt: "") %>
       <% end %>
       <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
     <% end %>
@@ -247,17 +247,17 @@ We also have a modifier `.sage-panel__figure--wistia` for when Wistia videos are
 <%= sage_component SagePanel, {} do %>
   <p><i>This example shows a standard figure in context of this existing panel</i>.</p>
   <%= sage_component SagePanelFigure, {} do %>
-    <%= image_pack_tag("docs/card/card-placeholder-lg.png", alt: "") %>
+    <%= image_tag("card-placeholder-lg.png", alt: "") %>
   <% end %>
   <p><i>This example shows a figure in context of this existing panel with side bleed</i>.</p>
   <%= sage_component SagePanelFigure, { bleed: "sides" } do %>
-    <%= image_pack_tag("docs/card/card-placeholder-lg.png", alt: "") %>
+    <%= image_tag("card-placeholder-lg.png", alt: "") %>
   <% end %>
 <% end %>
 <p><i>These examples demonstrate figures with top and bottom bleed respectively</i>.</p>
 <%= sage_component SagePanel, {} do %>
   <%= sage_component SagePanelFigure, { bleed: "top" } do %>
-    <%= image_pack_tag("docs/card/card-placeholder-lg.png", alt: "") %>
+    <%= image_tag("card-placeholder-lg.png", alt: "") %>
   <% end %>
   <%= sage_component SagePanelBlock, { type_block: true } do %>
     <%= sample_copy.html_safe %>
@@ -268,6 +268,6 @@ We also have a modifier `.sage-panel__figure--wistia` for when Wistia videos are
     <%= sample_copy.html_safe %>
   <% end %>
   <%= sage_component SagePanelFigure, { bleed: "bottom" } do %>
-    <%= image_pack_tag("docs/card/card-placeholder-lg.png", alt: "") %>
+    <%= image_tag("card-placeholder-lg.png", alt: "") %>
   <% end %>
 <% end %>

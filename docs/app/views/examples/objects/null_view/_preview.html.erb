@@ -1,7 +1,7 @@
 <%= sage_component SageNullView, {
   title: "Create your first Pipeline",
   text: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque at laoreet morbi nullam. Malesuada vi</p>".html_safe,
-  graphic: image_pack_tag("docs/null-view-graphic.png", alt: "", width: "312", height: "434"),
+  graphic: image_tag("null-view-graphic.png", alt: "", width: "312", height: "434"),
 } do %>
   <% content_for :sage_null_view_actions do %>
     <%= sage_component SageButtonGroup, { gap: :md, spacer: { top: :md }} do %>
