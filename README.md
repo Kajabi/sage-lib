@@ -86,7 +86,9 @@ $ yarn start
 
 To visit the primary documentation site: http://localhost:4000/
 
-To visit the storybook site: http://localhost:6006/
+To visit the Storybook (React components) site: http://localhost:4100/
+
+To visit the Sassdocs (Sass documentation) site: http://localhost:4200/
 
 ### Bridging Kajabi Products
 
@@ -218,8 +220,10 @@ Install local packages for the main repository and `docs/` path
 ### `start` :star:
 
 Continuely compiles packages on changes and starts the applications
-To visit the primary documentation site: http://localhost:4000/
-To visit the storybook site: http://localhost6006/
+
+- To visit the primary documentation site: http://localhost:4000/
+- To visit the Storybook (React components) site: http://localhost:4100/
+- To visit the Sassdocs (Sass documentation) site: http://localhost:4200/
 
 ### `storybook`
 

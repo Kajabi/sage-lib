@@ -20,4 +20,4 @@ Continuely watch and build the package
 
 ### `storybook`
 
-Run the storybook server. Access at http://localhost:6006/
+Run the storybook server. Access at http://localhost:4100/
