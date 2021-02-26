@@ -1,52 +1,52 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { withKnobs, text, select } from '@storybook/addon-knobs';
-import { centerXY } from '../story-support/decorators';
+import { selectArgs } from '../story-support/helpers';
 import { Button } from '../Button';
 import { SageTokens } from '../configs';
 import { Label } from './Label';
-import LabelNotes from './LabelNotes.md';
 
-const LabelWithDefaultProps = ({ ...rest }) => (
-  <Label
-    color={select('Color', Label.COLORS, Label.COLORS.DRAFT)}
-    icon={select('Icon', { ...SageTokens.ICONS, NONE: null }, null)}
-    style={select('Style', Label.STYLES, Label.STYLES.DEFAULT)}
-    value={text('Text', 'Hello world')}
-    {...rest}
-  />
-);
+export default {
+  title: 'Sage/Label',
+  component: Label,
+  argTypes: {
+    ...selectArgs({
+      color: Label.COLORS,
+      icon: SageTokens.ICONS,
+      interactiveType: Label.INTERACTIVE_TYPES,
+      style: Label.STYLES,
+    }),
+  },
+  args: {
+    color: Label.COLORS.DRAFT,
+    icon: SageTokens.ICONS.NONE,
+    style: Label.STYLES.DEFAULT,
+    value: 'Hello world'
+  }
+};
+const Template = (args) => <Label {...args} />;
 
-storiesOf('Sage/Label', module)
-  .addDecorator(withKnobs)
-  .addDecorator(centerXY)
-  .add('Default', () => (
-    <LabelWithDefaultProps />
-  ), {
-    notes: { markdown: LabelNotes }
-  })
-  .add('Interactive: default', () => (
-    <LabelWithDefaultProps
-      interactiveType={Label.INTERACTIVE_TYPES.DEFAULT}
-    />
-  ))
-  .add('Interactive: dropdown treatment', () => (
-    <LabelWithDefaultProps
-      interactiveType={Label.INTERACTIVE_TYPES.DROPDOWN}
-    />
-  ))
-  .add('Interactive: with secondary_button', () => (
-    <LabelWithDefaultProps
-      interactiveType={Label.INTERACTIVE_TYPES.SECONDARY_BUTTON}
-      secondaryButton={(
-        <Button
-          color={Button.COLORS.SECONDARY}
-          subtle={true}
-          icon={SageTokens.ICONS.REMOVE}
-          iconOnly={true}
-        >
-          Cancel
-        </Button>
-      )}
-    />
-  ));
+export const Default = Template.bind({});
+
+export const InteractiveDefault = Template.bind({});
+InteractiveDefault.args = {
+  interactiveType: Label.INTERACTIVE_TYPES.DEFAULT
+};
+
+export const InteractiveDropdownTreatment = Template.bind({});
+InteractiveDropdownTreatment.args = {
+  interactiveType: Label.INTERACTIVE_TYPES.DROPDOWN
+};
+
+export const InteractiveWithSecondaryButton = Template.bind({});
+InteractiveWithSecondaryButton.args = {
+  interactiveType: Label.INTERACTIVE_TYPES.SECONDARY_BUTTON,
+  secondaryButton: (
+    <Button
+      color={Button.COLORS.SECONDARY}
+      subtle={true}
+      icon={SageTokens.ICONS.REMOVE}
+      iconOnly={true}
+    >
+      Cancel
+    </Button>
+  )
+};
