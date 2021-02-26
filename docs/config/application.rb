@@ -26,5 +26,11 @@ module SageDocs
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     # config.active_record.raise_in_transactional_callbacks = true
+
+    # Storybook deploy url to differentiate in different environments
+    config.storybook_root_url = "https://sage-lib-storybook.herokuapp.com/?path=/docs/"
+
+    # Sassdocs deploy url to differentiate in different environments
+    config.sassdocs_root_url = "https://sage-lib-sassdocs.herokuapp.com/"
   end
 end

@@ -38,4 +38,8 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+
+  config.storybook_root_url = "//localhost:4100/?path=/docs/"
+  config.sassdocs_root_url = "//localhost:4200/"
 end
