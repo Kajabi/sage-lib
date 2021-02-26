@@ -23,7 +23,7 @@ export default {
     text: 'Text Here',
     title: 'Title Here'
   }
-}
+};
 
 const Template = (args) => <EmptyState {...args} />;
 

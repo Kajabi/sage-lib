@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import { SageTokens } from '../configs';
 import { Icon } from '../Icon';
 
 export const EmptyState = ({
