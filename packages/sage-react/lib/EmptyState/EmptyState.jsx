@@ -58,7 +58,7 @@ EmptyState.propTypes = {
   children: PropTypes.node,
   compact: PropTypes.bool,
   graphic: PropTypes.node,
-  icon: PropTypes.string,
+  icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),
   text: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   title: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
 };

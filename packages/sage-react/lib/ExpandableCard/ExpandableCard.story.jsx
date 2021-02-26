@@ -1,16 +1,14 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { withKnobs, text, boolean } from '@storybook/addon-knobs';
 import { Checkbox } from '../Toggle';
 import { ExpandableCard } from './ExpandableCard';
 
-storiesOf('Sage/ExpandableCard', module)
-  .addDecorator(withKnobs)
-  .add('Default', () => (
-    <ExpandableCard
-      triggerLabel={text('Trigger Label', 'Expand')}
-      bodyBordered={boolean('Body Border', false)}
-    >
+export default {
+  title: 'Sage/ExpandableCard',
+  component: ExpandableCard,
+  args: {
+    bodyBordered: false,
+    children: (
+      <>
       <Checkbox
         checked={false}
         disabled={false}
@@ -35,5 +33,11 @@ storiesOf('Sage/ExpandableCard', module)
         label="Subscribe to emails"
         name="checkbox3-demo"
       />
-    </ExpandableCard>
-  ));
+      </>
+    ),
+    triggerLabel: 'Expand'
+  }
+};
+const Template = (args) => <ExpandableCard {...args} />;
+
+export const Default = Template.bind({});
