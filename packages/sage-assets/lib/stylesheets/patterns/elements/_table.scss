@@ -1,10 +1,10 @@
-// stylelint-disable selector-max-compound-selectors
-// stylelint-disable max-nesting-depth
-/* ==================================================
-  ** sage_table
-  type: element
+////
+/// Copy Text (FUTURE: System Text)
+///
+/// @group sage
+////
 
-================================================== */
+
 // Borders and sizing
 $-table-border: rem(1px) solid sage-color(grey);
 $-table-header-border: rem(1px) solid sage-color(grey, 300);
@@ -38,10 +38,14 @@ $-table-cell-truncate-width: 6.5em;
 $-table-sort-indicator-width: rem(5px);
 $-table-sort-indicator-direction: rem(7px);
 
+
+// stylelint-disable selector-max-compound-selectors
+// stylelint-disable max-nesting-depth
+
 .sage-table {
   width: 100%;
   max-width: $-table-max-width;
-
+  
   caption {
     @extend #{$-table-caption-font-size};
 
@@ -117,7 +121,6 @@ $-table-sort-indicator-direction: rem(7px);
   }
 }
 
-
 // Alternating rows of striped colors
 .sage-table--striped {
   tbody {
@@ -126,7 +129,6 @@ $-table-sort-indicator-direction: rem(7px);
     }
   }
 }
-
 
 // Sortable rows
 .sage-table--sortable {
@@ -177,7 +179,6 @@ $-table-sort-indicator-direction: rem(7px);
   }
 }
 
-
 // Selectable rows with checkbox or radio inputs
 .sage-table--selectable {
   .sage-table__row--selectable,
@@ -196,7 +197,6 @@ $-table-sort-indicator-direction: rem(7px);
     }
   }
 }
-
 
 // Wrapper div required for responsive tables
 .sage-table-wrapper {
@@ -279,7 +279,6 @@ $-table-sort-indicator-direction: rem(7px);
     background: $-table-overflow-indicator-gradient;
   }
 }
-
 
 // Text overflow treatment in individual cells
 .sage-table-cell--truncate {

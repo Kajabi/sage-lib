@@ -1,13 +1,14 @@
-/* ==================================================
-  ** toast.scss
-  type: element
+////
+/// Toast
+///
+/// @group sage
+////
 
-
-================================================== */
 
 $-toast-height-default: rem(68px);
 $-toast-height-mobile: rem(36px);
 $-toast-viewport-spacing-bottom: sage-spacing();
+
 
 @keyframes sage-toast--slide-in {
   from {
@@ -19,6 +20,7 @@ $-toast-viewport-spacing-bottom: sage-spacing();
     opacity: 1;
   }
 }
+
 
 .sage-toast {
   display: flex;

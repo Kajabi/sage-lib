@@ -1,8 +1,9 @@
-/* ==================================================
-  ** _form_inputs.scss
-  type: element
+////
+/// Form Input (Singleline)
+///
+/// @group sage
+////
 
-================================================== */
 
 $-input-border-radius: map-get($sage-field-configs, border-radius);
 $-input-border-width: map-get($sage-field-configs, border-width);

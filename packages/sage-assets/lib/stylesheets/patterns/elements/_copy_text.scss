@@ -1,23 +1,14 @@
-/* ==================================================
-  ** copy_text
-  type: element
+////
+/// Copy Text (FUTURE: System Text)
+///
+/// @group sage
+////
 
-================================================== */
 
 $-copy-text-border: 1px solid sage-color(grey, 400);
 $-copy-text-color: sage-color(charcoal, 400);
 $-copy-text-color-hover: sage-color(charcoal, 500);
 
-@mixin sage-copy-text() {
-  @extend %t-sage-body-small;
-
-  @include truncate();
-
-  color: sage-color(charcoal, 400);
-  background-color: sage-color(grey, 200);
-  border: $-copy-text-border;
-  border-radius: sage-border(radius);
-}
 
 .sage-copy-text {
   @include sage-copy-text;

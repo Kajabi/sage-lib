@@ -50,6 +50,20 @@
 }
 
 ///
+/// Sets up styles for sage "copy" (system) text.
+///
+@mixin sage-copy-text() {
+  @extend %t-sage-body-small;
+
+  @include truncate();
+
+  color: sage-color(charcoal, 400);
+  background-color: sage-color(grey, 200);
+  border: $-copy-text-border;
+  border-radius: sage-border(radius);
+}
+
+///
 /// Generates icon variations for buttons
 ///
 /// @param {string} $icon-name Name of the icon from the system icon library

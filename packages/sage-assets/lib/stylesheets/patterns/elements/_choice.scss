@@ -1,11 +1,9 @@
-/* ==================================================
-  ** _choice.scss
-  type: element
+////
+/// Choice
+///
+/// @group sage
+////
 
-
-================================================== */
-
-/* stylelint-disable max-nesting-depth */
 
 $item-radio: "before";
 $item-icon: "before";
@@ -17,6 +15,9 @@ $-choice-color-disabled: map-get($sage-tab-colors, disabled);
 $-choice-radio-size: $sage-radio-size;
 $-choice-radio-color-checked: map-get($sage-radio-colors, checked);
 $-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
+
+
+// stylelint-disable max-nesting-depth
 
 .sage-choice {
   @include sage-button-style-reset();

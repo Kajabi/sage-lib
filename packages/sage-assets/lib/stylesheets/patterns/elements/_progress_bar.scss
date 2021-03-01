@@ -1,9 +1,9 @@
-/* ==================================================
-  ** progress_bar
-  type: element
+////
+/// Progress bar
+///
+/// @group sage
+////
 
-
-================================================== */
 
 @keyframes sage-progress-bar--slide {
   from {
@@ -13,6 +13,7 @@
     transform: scaleX(100%);
   }
 }
+
 
 .sage-progress-bar {
   height: rem(6px);

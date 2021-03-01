@@ -1,8 +1,9 @@
-/* ==================================================
-  ** tooltip
-  type: element
+////
+/// Tooltip
+///
+/// @group sage
+////
 
-================================================== */
 
 // Colors
 $-tooltip-bg-color: sage-color(charcoal, 400);
@@ -23,6 +24,7 @@ $-tooltip-large-padding: sage-spacing(xs) sage-spacing(xs);
 $-tooltip-zindex: sage-z_index(overlay);
 $-tooltip-maxwidth: rem(200px);
 $-tooltip-large-maxwidth: rem(320px);
+
 
 .sage-tooltip {
   display: flex;
