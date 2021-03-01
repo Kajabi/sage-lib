@@ -4,6 +4,7 @@
 /// @group utilities
 ////
 
+
 ///
 /// Adds a clearfix psuedo-element for use in containers that may include floated elements.
 /// Testing a new _item_.
@@ -22,7 +23,6 @@
     @content;
   }
 }
-
 
 ///
 /// Generates cross-browser icon rotations

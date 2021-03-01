@@ -15,9 +15,9 @@ $-grid-breakpoint-lg: sage-breakpoint(lg-min);
 $-grid-breakpoint-lg-max: sage-breakpoint(lg-max);
 $-grid-breakpoint-xl: sage-breakpoint(xl-min);
 
-// ============================================
-// Rows
-// ============================================
+///
+/// Rows
+///
 
 @mixin sage-row {
   display: flex;
@@ -81,9 +81,9 @@ $-grid-breakpoint-xl: sage-breakpoint(xl-min);
 }
 
 
-// ============================================
-// Columns
-// ============================================
+///
+/// Columns
+///
 
 @mixin sage-col {
   flex: 1 1 auto;
