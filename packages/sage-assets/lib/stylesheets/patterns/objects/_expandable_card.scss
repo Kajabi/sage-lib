@@ -1,14 +1,16 @@
-/* ==================================================
-  ** expandable_card
-  type: object
+////
+/// Expandable Card
+///
+/// @group sage
+////
 
-================================================== */
 
 $-expandable-card-bg-color: sage-color(white);
 $-expandable-card-border-color: sage-color(grey, 300);
 $-expandable-card-border-radius: sage-border(radius);
 $-expandable-card-padding: sage-spacing(sm);
 $-expandable-card-padding-xs: sage-spacing(xs);
+
 
 .sage-expandable-card__body,
 .sage-expandable-card__body-bordered {

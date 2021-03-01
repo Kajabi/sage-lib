@@ -1,13 +1,15 @@
-/* ==================================================
-  ** billboard
-  type: object
+////
+/// Billboard
+///
+/// @group sage
+////
 
-================================================== */
 
 $-billboard-background-color: sage-color(primary, 500);
 $-billboard-text-color: #fff;
 $-billboard-spacing: sage-spacing(lg);
 $-billboard-title-spacing: sage-spacing(sm);
+
 
 .sage-billboard {
   display: flex;

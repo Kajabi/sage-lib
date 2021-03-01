@@ -1,8 +1,9 @@
-/* ==================================================
-  ** transaction_card
-  type: object
+////
+/// Transaction Card
+///
+/// @group sage
+////
 
-================================================== */
 
 .sage-transaction-card {
   @include sage-card();

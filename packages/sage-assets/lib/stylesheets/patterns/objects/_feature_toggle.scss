@@ -1,13 +1,14 @@
-/* ==================================================
-  ** feature-toggle
-  type: object
+////
+/// Feature Toggle
+///
+/// @group sage
+////
 
-
-================================================== */
 
 $-image-height-min: rem(64px);
 $-image-width: rem(120px);
 $-image-height-mobile: rem(120px);
+
 
 .sage-feature-toggle {
   display: grid;

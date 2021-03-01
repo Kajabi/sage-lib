@@ -1,8 +1,9 @@
-/* ==================================================
-  ** banner
-  type: object
+////
+/// Banner
+///
+/// @group sage
+////
 
-================================================== */
 
 $-banner-height-ladera: map-get($sage-banner-heights, ladera);
 $-banner-colors: (
@@ -33,6 +34,7 @@ $-banner-colors: (
 );
 
 $-icon: "::before";
+
 
 .sage-banner {
   @extend %t-sage-body-med;

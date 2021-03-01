@@ -1,8 +1,9 @@
-/* ==================================================
-  ** input group
-  type: object
+////
+/// Input Group
+///
+/// @group sage
+////
 
-================================================== */
 
 $-input-group-border-radius: map-get($sage-field-configs, border-radius);
 $-pw-field-button-color-text-hover: sage-color(black);

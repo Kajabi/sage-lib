@@ -1,13 +1,14 @@
-/* ==================================================
-  ** catalog-item
-  type: object
+////
+/// Catalogue Item
+///
+/// @group sage
+////
 
-
-================================================== */
 
 $-image-height-min: rem(64px);
 $-image-width: rem(120px);
 $-image-height-mobile: rem(120px);
+
 
 .sage-catalog-item {
   display: grid;

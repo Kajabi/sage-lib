@@ -1,8 +1,9 @@
-/* ==================================================
-  ** sage-input-helper
-  type: object
+////
+/// Input Helper
+///
+/// @group sage
+////
 
-================================================== */
 
 $-helper-min-height: 5em;
 $-helper-max-width: rem(320px);
@@ -20,6 +21,7 @@ $-helper-decoration-list-success: line-through;
   top: calc(100% + #{$-helper-pointer-size});
   opacity: 1;
 }
+
 
 .sage-input-helper {
   @extend %t-sage-body-small;

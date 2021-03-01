@@ -1,9 +1,9 @@
-/* ==================================================
-  ** dropdown
-  type: object
+////
+/// Dropdown
+///
+/// @group sage
+////
 
-
-================================================== */
 
 $-dropdown-height: map-get($sage-field-configs, height);
 $-dropdown-width: rem(280px);
@@ -22,6 +22,7 @@ $-trigger-label-color-disabled: map-get($sage-field-colors, disabled);
 $-trigger-padding-label: map-get($sage-field-configs, padding-label);
 $-trigger-padding-x: map-get($sage-field-configs, padding);
 $-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
+
 
 .sage-dropdown {
   position: relative;
