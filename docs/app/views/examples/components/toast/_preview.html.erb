@@ -38,6 +38,19 @@
 
 <%= sage_component SageButtonGroup, { gap: :sm } do %>
   <%= sage_component SageButton, {
+    value: "Toast With Link",
+    style: "primary",
+    raised: true,
+    attributes: {
+      "onClick": "Sage.toast.trigger({text: 'Congratulations on your success', link: {text: 'Go to next step', href: 'http://app.kajabi.com'}})",
+    },
+  } %>
+<% end %>
+
+<hr/>
+
+<%= sage_component SageButtonGroup, { gap: :sm } do %>
+  <%= sage_component SageButton, {
     value: "Non-Dismissing Toast",
     style: "primary",
     raised: true,

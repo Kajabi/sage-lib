@@ -26,6 +26,7 @@ $-toast-viewport-spacing-bottom: sage-spacing();
   display: flex;
   z-index: sage-z-index(modal, +1);
   position: fixed;
+  overflow: hidden;
   align-items: center;
   padding: 0 sage-spacing(md);
   border-radius: sage-border(radius-large);
@@ -57,9 +58,8 @@ $-toast-viewport-spacing-bottom: sage-spacing();
   @media screen and (min-width: sage-breakpoint(md-min)) {
     @include position(auto, sage-spacing(lg), $-toast-viewport-spacing-bottom, auto);
     height: $-toast-height-default;
-    min-width: rem(300px);
     width: auto;
-    max-width: sage-container(modal);
+    min-width: rem(350px);
     padding: 0 sage-spacing(lg);
 
     @include generate-stacked-toast-alignment($-toast-height-default);
@@ -83,6 +83,7 @@ $-toast-viewport-spacing-bottom: sage-spacing();
 }
 
 .sage-toast__value {
+  padding: 0;
   margin-right: auto;
   color: sage-color(white);
 
@@ -95,11 +96,12 @@ $-toast-viewport-spacing-bottom: sage-spacing();
   @include sage-focus-outline;
   @include sage-focus-outline--update-color(sage-color(white));
 
+  display: inline-flex;
+  align-items: center;
+  margin-left: sage-spacing(sm);
+  white-space: nowrap;
   color: sage-color(grey, 100);
   border-radius: sage-border(radius-large);
-  margin-left: sage-spacing(sm);
-  align-items: center;
-  display: inline-flex;
 
   &:hover,
   &:focus {

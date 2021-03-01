@@ -1,11 +1,5 @@
 Sage.toast = (function () {
 
-  // TODO
-  // - reset()
-  // Migrate button internally
-  // Link
-
-
   // ==================================================
   // Variables
   // ==================================================
@@ -14,26 +8,20 @@ Sage.toast = (function () {
   const DEFAULT_CONFIG = {
     icon: 'check',
     type: 'notice',
-    link: {
-      text: "Go to next step",
-      href: "http://andrew.mn",
-    },
     timer: 4000,
   };
 
   const DATA_ATTR = 'data-js-toast';
   const DATA_ATTR_CLOSE_BUTTON = 'data-js-toast-close';
-  const TOAST_CLASS = 'sage-toast';
-  const TOAST_CLASS_REMOVE = 'sage-toast--animate-out';
+  const TOAST_CLASS_DISMISSED_STATE = 'sage-toast--animate-out';
 
   // ==================================================
   // Template
   // ==================================================
 
-  const toastTemplate = ({id, type, icon, text, link}) => (`
+  const toastTemplate = ({id, type, icon, text, link, timer}) => (`
     <dialog
-      data-timer="3s"
-      class="${TOAST_CLASS} sage-toast--style-${type}"
+      class="sage-toast sage-toast--style-${type}"
       ${DATA_ATTR}="${id}"
     >
       <i class="sage-toast__icon sage-icon-${icon}"></i>
@@ -46,17 +34,17 @@ Sage.toast = (function () {
       </output>
       ${toastLinkTemplate(link)}
       <button
-        class="sage-toast__button sage-toast__button--close"
-        type="button"
-        ${DATA_ATTR_CLOSE_BUTTON}
+      class="sage-toast__button sage-toast__button--close"
+      type="button"
+      ${DATA_ATTR_CLOSE_BUTTON}
       >
-        <span class="visually-hidden">Close</span>
+      <span class="visually-hidden">Close</span>
       </button>
     </dialog>
   `);
 
   const toastLinkTemplate = (link) => {
-    if (!link) return;
+    if (!link) return '';
     const {text, ...linkAttrs} = link;
 
     return(`
@@ -67,14 +55,14 @@ Sage.toast = (function () {
         ${text}
       </a>
     `);
-  }
+  };
 
   // ==================================================
   // Functions
   // ==================================================
 
   function init(el) {
-    el.querySelector(`[${DATA_ATTR_CLOSE_BUTTON}]`).addEventListener('click', handleCloseToast);
+    el.querySelector(`[${DATA_ATTR_CLOSE_BUTTON}]`).addEventListener('click', handleCloseToast, { once: true });
   }
 
   function unbind(el) {
@@ -91,8 +79,6 @@ Sage.toast = (function () {
     const elToast = Sage.util.stringToHtmlFragment(toastTemplate(config));
     getAppToastContainer().appendChild(elToast);
     setToastTimer(config);
-    console.log(config.link);
-    console.log(Sage.util.objectToHtmlAttributes(config.link));
 
     return config.id;
   }
@@ -102,7 +88,7 @@ Sage.toast = (function () {
     if (!elToast) return false;
 
     window.requestAnimationFrame(() => {
-      elToast.classList.add(TOAST_CLASS_REMOVE);
+      elToast.classList.add(TOAST_CLASS_DISMISSED_STATE);
     });
 
     // Remove DOM node on CSS close transition completion
@@ -124,6 +110,10 @@ Sage.toast = (function () {
     return elAppToastContainer;
   }
 
+  function reset() {
+    document.getElementById(APP_TOAST_CONTAINER_ID).remove();
+  }
+
   function setToastTimer(config) {
     if (!config.timer) return;
     setTimeout(() => dismiss(config.id), config.timer);
@@ -136,6 +126,7 @@ Sage.toast = (function () {
   return {
     trigger: trigger,
     dismiss: dismiss,
+    reset: reset,
     init: init,
     unbind: unbind,
   };
