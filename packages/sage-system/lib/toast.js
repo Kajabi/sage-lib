@@ -1,5 +1,11 @@
 Sage.toast = (function () {
 
+  // TODO
+  // - reset()
+  // Migrate button internally
+  // Link
+
+
   // ==================================================
   // Variables
   // ==================================================
@@ -8,6 +14,10 @@ Sage.toast = (function () {
   const DEFAULT_CONFIG = {
     icon: 'check',
     type: 'notice',
+    link: {
+      text: "Go to next step",
+      href: "http://andrew.mn",
+    },
     timer: 4000,
   };
 
@@ -20,8 +30,9 @@ Sage.toast = (function () {
   // Template
   // ==================================================
 
-  const toastTemplate = ({id, type, icon, message}) => (`
+  const toastTemplate = ({id, type, icon, text, link}) => (`
     <dialog
+      data-timer="3s"
       class="${TOAST_CLASS} sage-toast--style-${type}"
       ${DATA_ATTR}="${id}"
     >
@@ -31,17 +42,32 @@ Sage.toast = (function () {
         aria-live="assertive"
         aria-atomic="true"
       >
-        ${message}
+        ${text}
       </output>
+      ${toastLinkTemplate(link)}
       <button
-        class="sage-toast__close sage-btn sage-btn--subtle sage-btn--secondary sage-btn--icon-only-remove"
+        class="sage-toast__button sage-toast__button--close"
         type="button"
         ${DATA_ATTR_CLOSE_BUTTON}
       >
         <span class="visually-hidden">Close</span>
-      </button
+      </button>
     </dialog>
   `);
+
+  const toastLinkTemplate = (link) => {
+    if (!link) return;
+    const {text, ...linkAttrs} = link;
+
+    return(`
+      <a
+        ${Sage.util.objectToHtmlAttributes(linkAttrs)}
+        class="sage-toast__button sage-toast__button--underline"
+      >
+        ${text}
+      </a>
+    `);
+  }
 
   // ==================================================
   // Functions
@@ -64,7 +90,9 @@ Sage.toast = (function () {
 
     const elToast = Sage.util.stringToHtmlFragment(toastTemplate(config));
     getAppToastContainer().appendChild(elToast);
-    setToastTimer(config)
+    setToastTimer(config);
+    console.log(config.link);
+    console.log(Sage.util.objectToHtmlAttributes(config.link));
 
     return config.id;
   }

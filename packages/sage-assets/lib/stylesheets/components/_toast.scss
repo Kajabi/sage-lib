@@ -57,7 +57,9 @@ $-toast-viewport-spacing-bottom: sage-spacing();
   @media screen and (min-width: sage-breakpoint(md-min)) {
     @include position(auto, sage-spacing(lg), $-toast-viewport-spacing-bottom, auto);
     height: $-toast-height-default;
-    max-width: rem(350px);
+    min-width: rem(300px);
+    width: auto;
+    max-width: sage-container(modal);
     padding: 0 sage-spacing(lg);
 
     @include generate-stacked-toast-alignment($-toast-height-default);
@@ -80,14 +82,40 @@ $-toast-viewport-spacing-bottom: sage-spacing();
   color: sage-color(white);
 }
 
-.sage-toast__close {
-  margin-left: auto;
-}
-
 .sage-toast__value {
-  margin-right: sage-spacing(xs);
-  padding: 0;
+  margin-right: auto;
   color: sage-color(white);
 
   @extend %t-sage-body-med;
+}
+
+.sage-toast__button {
+  @extend %t-sage-body-med;
+  @include sage-button-style-reset();
+  @include sage-focus-outline;
+  @include sage-focus-outline--update-color(sage-color(white));
+
+  color: sage-color(grey, 100);
+  border-radius: sage-border(radius-large);
+  margin-left: sage-spacing(sm);
+  align-items: center;
+  display: inline-flex;
+
+  &:hover,
+  &:focus {
+    color: sage-color(white);
+  }
+
+  &:disabled,
+  &[aria-disabled="true"] {
+    @include sage-button-style-disabled;
+  }
+}
+
+.sage-toast__button--close::before {
+  @include sage-icon-base(remove, lg);
+}
+
+.sage-toast__button--underline {
+  text-decoration: underline;
 }
