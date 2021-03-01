@@ -85,7 +85,7 @@ Toggle.defaultProps = {
   onChange: (v) => v,
   itemInList: false,
   standalone: false,
-  toggleStyle: TOGGLE_STYLES.DEFAULT,
+  toggleStyle: Toggle.TYPES.DEFAULT,
   value: '',
 };
 
@@ -100,7 +100,7 @@ Toggle.propTypes = {
   onChange: PropTypes.func,
   itemInList: PropTypes.bool,
   standalone: PropTypes.bool,
-  toggleStyle: PropTypes.oneOf(Object.values(TOGGLE_STYLES)),
-  type: PropTypes.oneOf(Object.values(TOGGLE_TYPES)).isRequired,
+  toggleStyle: PropTypes.oneOf(Object.values(Toggle.STYLES)),
+  type: PropTypes.oneOf(Object.values(toggle.TYPES)).isRequired,
   value: PropTypes.string
 };
