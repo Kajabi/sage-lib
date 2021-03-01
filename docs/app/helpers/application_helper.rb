@@ -28,4 +28,8 @@ module ApplicationHelper
     current_page?(pages_objects_path) || (params[:title] && current_page?(pages_object_path(params[:title])))
   end
 
+  def storybook_url(slug)
+    "#{Rails.application.config.storybook_root_url}#{slug}"
+  end
+
 end

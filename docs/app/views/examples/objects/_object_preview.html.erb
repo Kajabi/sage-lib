@@ -8,7 +8,7 @@
     <%= sage_component SageButton, {
       value: image_tag("logo-react.svg", width: "20px"),
       attributes: {
-        href: "#{Rails.application.config.storybook_root_url}#{react_component_slug}",
+        href: storybook_url(react_component_slug),
         target: "_blank",
         rel: "noopener noreferrer",
         title: "Open Storybook React components site"
