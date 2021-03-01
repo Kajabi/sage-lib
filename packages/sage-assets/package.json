@@ -29,7 +29,7 @@
     "build:sassdoc:watch": "nodemon -e scss --watch lib/stylesheets -x \"yarn run build:sassdoc\"",
     "build:watch": "npm-run-all -p build:webpack:watch build:sassdoc:watch",
     "preversion": "yarn run build",
-    "server": "npx http-server sassdoc/ -p 6400",
+    "server": "npx http-server sassdoc/ -p 4200",
     "prestart": "yarn build:sassdoc",
     "start": "yarn server",
     "start:local": "npm-run-all -p server build:watch"

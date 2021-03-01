@@ -13,32 +13,34 @@ This design system is not owned by any one person or group but is a collective e
 The UI of the Kajabi Core application is a combination of Rails Components, React Components and a custom SCSS Framework called Sage that applies a uniform style to both.
 ", use_sage_type: true) %>
 <%= sage_component SageGridRow, {} do %>
-  <%= sage_component SageGridCol, { breakpoint: :lg, size: "3" } do %>
+  <%= sage_component SageGridCol, { breakpoint: :lg, size: "6" } do %>
     <div class="docs-feature">
       <i class="devicon devicon-sass-original colored"></i>
       <h3 class="t-sage-heading-4">SCSS System</h3>
-      <p>The language-agnostic style system that allows us to service any app code choice. This is the cornerstone of Sage.</p>
+      <p class="t-sage-body">The language-agnostic style system that allows us to service any app code choice. This is the cornerstone of Sage.</p>
+      <%= sage_component SageLink, { label: "View Sassdocs site", url: Rails.application.config.sassdocs_root_url, external: true, launch: true } %>
     </div>
   <% end %>
-  <%= sage_component SageGridCol, { breakpoint: :lg, size: "3" } do %>
+  <%= sage_component SageGridCol, { breakpoint: :lg, size: "6" } do %>
     <div class="docs-feature">
       <i class="devicon devicon-rails-plain-wordmark colored"></i>
       <h3 class="t-sage-heading-4">Rails Components</h3>
-      <p>Our default approach to solving customer problems is via ROR. We use custom Rails Components to serve our system to the app.</p>
+      <p class="t-sage-body">Our default approach to solving customer problems is via ROR. We use custom Rails Components to serve our system to the app. These are documented within this site under "Elements" and "Objects."</p>
     </div>
   <% end %>
-  <%= sage_component SageGridCol, { breakpoint: :lg, size: "3" } do %>
+  <%= sage_component SageGridCol, { breakpoint: :lg, size: "6" } do %>
     <div class="docs-feature">
       <i class="devicon devicon-javascript-plain colored"></i>
       <h3 class="t-sage-heading-4">Vanilla Javascript</h3>
-      <p>Our Rails components have clean, minimal JavaScript needed to ensure the necessary interactions and accessibility features are available right out of the box.</p>
+      <p class="t-sage-body">Our Rails components have clean, minimal JavaScript needed to ensure the necessary interactions and accessibility features are available right out of the box.</p>
     </div>
   <% end %>
-  <%= sage_component SageGridCol, { breakpoint: :lg, size: "3" } do %>
+  <%= sage_component SageGridCol, { breakpoint: :lg, size: "6" } do %>
     <div class="docs-feature">
       <i class="devicon devicon-react-original colored"></i>
       <h3 class="t-sage-heading-4">React Components</h3>
-      <p>We build React versions of many of our components that mimic the same functionality. A few of our components exist only as React components due to their complexity.</p>
+      <p class="t-sage-body">We build React versions of many of our components that mimic the same functionality. A few of our components exist only as React components due to their complexity.</p>
+      <%= sage_component SageLink, { label: "View React components", url: Rails.application.config.storybook_root_url, external: true, launch: true } %>
     </div>
   <% end %>
 <% end %>
@@ -61,7 +63,7 @@ Because our system contains two different approaches to UI creation, we utilize 
 ", use_sage_type: true) %>
   <% end %>
   <%= sage_component SageGridCol, { breakpoint: :lg, size: "5" } do %>
-    <%= image_pack_tag("docs/components.jpg", style: "display:block;max-width:500px;margin:0 auto;width:100%;height:auto", size: "1000x1036") %>
+    <%= image_tag("components.jpg", style: "display:block;max-width:500px;margin:0 auto;width:100%;height:auto", size: "1000x1036") %>
   <% end %>
 <% end %>
 <hr>

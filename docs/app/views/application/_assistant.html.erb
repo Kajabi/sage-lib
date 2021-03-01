@@ -1,45 +1,39 @@
-<div class="sage-assistant">
-  <%- if menu_button -%>
-    <button class="sage-menubutton" aria-expanded="false" aria-controls="sage-sidebar-menu" data-js-btn-target="sage-sidebar-menu" data-js-target-type="sidebar">
-      <span class="sage-menubutton__bar"></span><span class="sage-menubutton__bar"></span><span class="sage-menubutton__bar"></span>
-      <span class="visually-hidden">Toggle main menu</span>
-    </button>
-  <%- end -%>
-  <%= link_to pages_index_path do %>
-    <%= image_pack_tag("docs/sage.svg", class: "sage-assistant__branding")%>
-  <% end %>
-  <div class="sage-assistant__body">
-  </div>
-  <div class="sage-assistant__actions sage-col--sm-hide">
-    <div class="sage-btn-group sage-btn-group--gap-md">
-      <%= link_to "💎 v#{$SAGE_VERSION_GEM}",
-        $SAGE_VERSION_GEM_URL,
-        class: "sage-btn sage-btn--subtle sage-btn--secondary",
-        target: "_blank",
-        rel: "noopener noreferrer",
-        title: "Open SageRails gem source"
-      %>
-      <%#= link_to "📦 v#{$SAGE_VERSION_REACT}",
-        $SAGE_VERSION_REACT_URL,
-        class: "sage-btn sage-btn--subtle sage-btn--secondary",
-        target: "_blank",
-        rel: "noopener noreferrer",
-        title: "Open Sage React package source"
-      %>
-      <%#= link_to "🧰 v#{$SAGE_VERSION_ASSETS}",
-        $SAGE_VERSION_ASSETS_URL,
-        class: "sage-btn sage-btn--subtle sage-btn--secondary",
-        target: "_blank",
-        rel: "noopener noreferrer",
-        title: "Open Sage Assets package source"
-      %>
-      <%#= link_to "🤖 v#{$SAGE_VERSION_SYSTEM}",
-        $SAGE_VERSION_SYSTEM_URL,
-        class: "sage-btn sage-btn--subtle sage-btn--secondary",
-        target: "_blank",
-        rel: "noopener noreferrer",
-        title: "Open Sage System package source"
-      %>
+<%= sage_component SageAssistant, { logo: { path: "sage.svg" }} do %>
+  <% sage_component_section :assistant_actions do %>
+    <div class="sage-btn-group sage-btn-group--gap-sm">
+      <%= sage_component SageButton, {
+        value: image_tag("logo-sass.svg", height: "20px"),
+        attributes: {
+          href: Rails.application.config.sassdocs_root_url,
+          target: "_blank",
+          rel: "noopener noreferrer",
+          title: "Open Sassdocs site"
+        },
+        subtle: true,
+        style: "secondary",
+      } %>
+      <%= sage_component SageButton, {
+        value: image_tag("logo-react.svg", height: "20px"),
+        attributes: {
+          href: Rails.application.config.storybook_root_url,
+          target: "_blank",
+          rel: "noopener noreferrer",
+          title: "Open Storybook React components site"
+        },
+        subtle: true,
+        style: "secondary",
+      } %>
+      <%= sage_component SageButton, {
+        value: $SAGE_VERSION_GEM,
+        attributes: {
+          href: $SAGE_VERSION_GEM_URL,
+          target: "_blank",
+          rel: "noopener noreferrer",
+          title: "Open SageRails gem source"
+        },
+        subtle: true,
+        style: "secondary",
+      } %>
     </div>
-  </div>
-</div>
+  <% end %>
+<% end %>

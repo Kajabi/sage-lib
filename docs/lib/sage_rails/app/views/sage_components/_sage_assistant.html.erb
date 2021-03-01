@@ -32,6 +32,9 @@ end
   <% end %>
   <div class="sage-assistant__body"><%= component.content %></div>
   <div class="sage-assistant__actions">
+    <% if content_for?(:sage_assistant_actions) %>
+      <%= content_for :sage_assistant_actions %>
+    <% end %>
     <% if content_for?(:super_admin_actions) %>
       <div id="super-admin-actions" class="btn-group">
         <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"
