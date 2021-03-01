@@ -10,6 +10,7 @@
   "scripts": {
     "rails:server": "bundle exec rails server -p 4000 -b 0.0.0.0",
     "rails:server:production": "bundle exec rails server -e production -b 0.0.0.0 -p $PORT",
+    "heroku-prebuild": "RAILS_ENV=productions bundle exec rails webpacker:compile",
     "heroku-postbuild": "bundle exec rake assets:precompile",
     "start": "npm-run-all --parallel webpack:server rails:server",
     "version": "../bin/bump-gem.sh",
