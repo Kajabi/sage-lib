@@ -31,34 +31,3 @@ export const SearchWithState = () => {
     />
   );
 };
-
-// const SelectWithState = () => {
-//   const [value, updateValue] = useState('');
-//   return (
-//     <Select
-//       disabled={boolean('Disabled', false)}
-//       hasError={boolean('Has an error', false)}
-//       id="field-2"
-//       label={text('Label', 'Choose...')}
-//       message={text('Message', null)}
-//       required={boolean('Required', false)}
-//       options={[
-//         'Option 1',
-//         'Option 2',
-//         'Option 3',
-//         'Option 4',
-//       ]}
-//       value={value}
-//       onChange={(evt) => updateValue(evt.target.value)}
-//     />
-//   );
-// };
-
-// storiesOf('Sage/Select', module)
-//   .addDecorator(withKnobs)
-//   .addDecorator(centerXY)
-//   .add('Default', () => (
-//     <div style={{ width: '300px' }}>
-//       <SelectWithState />
-//     </div>
-//   ));

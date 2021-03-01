@@ -101,6 +101,6 @@ Toggle.propTypes = {
   itemInList: PropTypes.bool,
   standalone: PropTypes.bool,
   toggleStyle: PropTypes.oneOf(Object.values(Toggle.STYLES)),
-  type: PropTypes.oneOf(Object.values(toggle.TYPES)).isRequired,
+  type: PropTypes.oneOf(Object.values(Toggle.TYPES)).isRequired,
   value: PropTypes.string
 };
