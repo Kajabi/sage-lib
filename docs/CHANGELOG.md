@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.15.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.14.1...@kajabi/sage@3.15.0) (2021-03-01)
+
+
+### Bug Fixes
+
+* **assistant:** improve with use of sections ([8d30440](https://github.com/Kajabi/sage-lib/commit/8d30440834679c0b29b9b74ce8ab2ee313ef28a0))
+* **docs:** improve wording on components page ([6ac3360](https://github.com/Kajabi/sage-lib/commit/6ac33600248ae677a444076ac9c71023e9970f9f))
+* **docs:** use helper for storybook slug ([ba774dd](https://github.com/Kajabi/sage-lib/commit/ba774dd0844c3d7392ee245a5260fbbac50eb9f3))
+
+
+### Features
+
+* **assistant:** add actions slot ([bc94432](https://github.com/Kajabi/sage-lib/commit/bc944320ea49241bc1b05aea57e7accd4d7ed203))
+* **docs:** add env-specific storybook and sassdocs url variables ([407782c](https://github.com/Kajabi/sage-lib/commit/407782c85023467a1261f96b21992edfa6e993db))
+* **docs:** add external links to main components page ([5f212e6](https://github.com/Kajabi/sage-lib/commit/5f212e6743d3327ce44880e89433dac12d6e4a85))
+* **docs:** poc implementation of linking to storybook for a component ([61a497a](https://github.com/Kajabi/sage-lib/commit/61a497a6bda106a54cec27952495d1eb56871ab3))
+* **docs:** update docs assistant with links to storybook and sassdocs ([078c1b7](https://github.com/Kajabi/sage-lib/commit/078c1b7e57692fd09506bf04c6f21b48900fbafc))
+
+
+
+
+
 ## [3.14.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.14.0...@kajabi/sage@3.14.1) (2021-02-25)
 
 **Note:** Version bump only for package @kajabi/sage
