@@ -1,7 +1,4 @@
 import React from 'react';
-import { withKnobs } from '@storybook/addon-knobs';
-import { storiesOf } from '@storybook/react';
-import { centerXY } from '../story-support/decorators';
 import { Panel } from '../Panel';
 import { Table } from './Table';
 import { dataCollection } from './sample-data/contacts';
@@ -40,7 +37,7 @@ Default.decorators = [
       </Panel>
     </>
   )
-]
+];
 
 export const TableWithRichContent = Template.bind({});
 TableWithRichContent.args = {
@@ -59,7 +56,7 @@ TableWithRichContent.args = {
       dataType: Table.DATA_TYPES.HTML,
     },
   }
-}
+};
 
 TableWithRichContent.decorators = [
   (Story) => (
@@ -69,4 +66,4 @@ TableWithRichContent.decorators = [
       </Panel>
     </>
   )
-]
+];
