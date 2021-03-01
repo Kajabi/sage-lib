@@ -43,6 +43,13 @@ Sage.util = (function(Sage) {
     return document.createRange().createContextualFragment(string);
   }
 
+  function objectToHtmlAttributes(object) {
+    return Object.entries(object).map(attribute => {
+      const [key, value] = attribute;
+      return `${key}="${value}"`;
+    }).join(' ');
+  }
+
   return {
     getBtnTarget: getBtnTarget,
     nodelistToArray: nodelistToArray,
@@ -51,6 +58,7 @@ Sage.util = (function(Sage) {
     ajaxRequestWithJsInjection: ajaxRequestWithJsInjection,
     generateId: generateId,
     stringToHtmlFragment: stringToHtmlFragment,
+    objectToHtmlAttributes: objectToHtmlAttributes,
   };
 
 })(Sage);

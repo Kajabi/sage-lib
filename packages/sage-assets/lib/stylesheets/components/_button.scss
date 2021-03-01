@@ -158,6 +158,10 @@ $-btn-interactive-label-icon-size: rem(24px);
     border-bottom-left-radius: 0;
   }
 
+  .sage-toast & {
+    margin-left: sage-spacing(md);
+  }
+
   .sage-label & {
     display: flex;
     justify-content: center;

@@ -3,7 +3,7 @@
     value: "Toast",
     style: "primary",
     attributes: {
-      "onClick": "Sage.toast.trigger({message: 'Toast created.'})",
+      "onClick": "Sage.toast.trigger({text: 'Toast created.'})",
     },
   } %>
 
@@ -11,7 +11,7 @@
     value: "Danger Toast",
     style: "danger",
     attributes: {
-      "onClick": "Sage.toast.trigger({icon: 'danger', message: 'Danger toast created.', type: 'danger'})",
+      "onClick": "Sage.toast.trigger({icon: 'danger', text: 'Danger toast created.', type: 'danger'})",
     },
   } %>
 
@@ -20,7 +20,7 @@
     style: "secondary",
     raised: true,
     attributes: {
-      "onClick": "Sage.toast.trigger({message: 'This toast has a 10 second timer.', timer: 10000, icon: 'launch'})",
+      "onClick": "Sage.toast.trigger({text: 'This toast has a 10 second timer.', timer: 10000, icon: 'launch'})",
     },
   } %>
 
@@ -29,7 +29,7 @@
     style: "secondary",
     raised: true,
     attributes: {
-      "onClick": "Sage.toast.trigger({message: 'This toast has a 1 second timer.', timer: 1000, icon: 'drop'})",
+      "onClick": "Sage.toast.trigger({text: 'This toast has a 1 second timer.', timer: 1000, icon: 'drop'})",
     },
   } %>
 <% end %>
@@ -42,7 +42,7 @@
     style: "primary",
     raised: true,
     attributes: {
-      "onClick": "alert('TOAST ID: ' + Sage.toast.trigger({message: 'I will not dismiss via timer', timer: false}))",
+      "onClick": "alert('TOAST ID: ' + Sage.toast.trigger({text: 'I will not dismiss via timer', timer: false}))",
     },
   } %>
 <% end %>
@@ -59,7 +59,7 @@
     // @returns {unique id}
     //
     // Example:
-    const myWonderfulToastId = Sage.toast.trigger({message: 'I will not dismiss via timer', timer: false});
+    const myWonderfulToastId = Sage.toast.trigger({text: 'I will not dismiss via timer', timer: false});
 
 
     // Sage.toast.dismiss()
@@ -71,4 +71,5 @@
     //
     // Example:
     Sage.toast.dismiss(myWonderfulToastId);
+  </code>
 </pre>
