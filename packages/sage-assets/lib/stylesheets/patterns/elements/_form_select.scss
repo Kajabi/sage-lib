@@ -40,6 +40,7 @@ $-select-padding-label: map-get($sage-field-configs, padding-label);
 
 .sage-select__label {
   @extend %t-sage-body;
+  z-index: sage-z-index(default, 1);
   position: absolute;
   transform: translateY(-50%);
   padding: 0 $-select-padding-label;
