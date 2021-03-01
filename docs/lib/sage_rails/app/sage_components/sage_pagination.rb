@@ -1,10 +1,11 @@
 class SagePagination < SageComponent
   set_attribute_schema({
-    items: -> (v) { SageSchemaHelper.is_active_record?(v) },
+    items: -> (v) { SageSchemaHelper.can_paginate?(v) },
     window: [:optional, Integer],
     hide_pages: [:optional, TrueClass],
     hide_counter: [:optional, TrueClass],
-    additional_params: [:optional, Hash]
+    additional_params: [:optional, Hash],
+    collection_name: [:optional, String]
   })
 
   def initialize(attributes = {})
@@ -21,7 +22,9 @@ class SagePagination < SageComponent
   end
 
   def page_count(collection)
-    entry_name = (collection.entry_name || "Record").pluralize(collection.total_count)
+    
+    name = collection_name.presence || collection.entry_name || "Record"
+    entry_name = name.titleize.pluralize(collection.total_count)
 
     if collection.total_pages < 2
       "<strong>#{collection.total_count}</strong> #{entry_name}"
