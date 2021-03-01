@@ -79,6 +79,8 @@ $-select-padding-label: map-get($sage-field-configs, padding-label);
 }
 
 .sage-select__field {
+  z-index: sage-z-index(default, 1);
+  position: relative;
   height: $-select-height;
   width: 100%;
   padding: $-select-filled-top-padding $-select-padding-x 0;
