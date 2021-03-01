@@ -5,7 +5,7 @@ export default {
   title: 'Sage/Input',
   component: Input,
   args: {
-    label: "Label"
+    label: 'Label'
   }
 };
 
@@ -24,7 +24,7 @@ export const Stateful = () => {
       <Input
         disabled={false}
         id="field-1"
-        label='First name'
+        label="First name"
         message={null}
         onChange={onChange}
         prefix={null}
