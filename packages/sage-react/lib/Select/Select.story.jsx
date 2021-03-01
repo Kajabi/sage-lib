@@ -19,7 +19,7 @@ export const SearchWithState = () => {
   return (
     <Select
       id="field-2"
-      label='Choose...'
+      label="Choose..."
       options={[
         'Option 1',
         'Option 2',
