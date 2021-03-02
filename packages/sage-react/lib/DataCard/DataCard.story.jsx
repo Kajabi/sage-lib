@@ -23,21 +23,48 @@ export default {
 
 export const Empty = (args) => <DataCard {...args} />;
 
-export const DefaultCard = () => {
-  return (
-    <>
-      <Grid container={Grid.CONTAINER_SIZES.MODAL}>
-        <DataCard color={DataCard.COLORS.DEFAULT}>
-          <DataCard.Header title="Header">
-            <Button
-              subtle={true}
-              color={Button.COLORS.SECONDARY}
-              iconOnly={true}
-              icon={SageTokens.ICONS.MAPPED}
-            >
-              Drag
-            </Button>
-          </DataCard.Header>
+export const DefaultCard = () => (
+  <>
+    <Grid container={Grid.CONTAINER_SIZES.MODAL}>
+      <DataCard color={DataCard.COLORS.DEFAULT}>
+        <DataCard.Header title="Header">
+          <Button
+            subtle={true}
+            color={Button.COLORS.SECONDARY}
+            iconOnly={true}
+            icon={SageTokens.ICONS.MAPPED}
+          >
+            Drag
+          </Button>
+        </DataCard.Header>
+        <DataCard.Body>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+          <p>
+            Duis sit amet libero lacus.
+          </p>
+          <p>
+            Aenean ullamcorper faucibus purus a ultrices.
+          </p>
+          <p>
+            Curabitur congue dolor eu condimentum scelerisque.
+          </p>
+          <p>
+            Morbi at elit nunc.
+          </p>
+        </DataCard.Body>
+      </DataCard>
+    </Grid>
+  </>
+);
+
+export const DataCardGroup = () => (
+  <>
+    <Grid container={Grid.CONTAINER_SIZES.XS}>
+      <DataCard.Group color={DataCard.COLORS.DEFAULT}>
+        <DataCard>
+          <DataCard.Header title="Duis gravida" />
           <DataCard.Body>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -48,34 +75,62 @@ export const DefaultCard = () => {
             <p>
               Aenean ullamcorper faucibus purus a ultrices.
             </p>
+          </DataCard.Body>
+        </DataCard>
+        <DataCard>
+          <DataCard.Header title="Lobortis libero" />
+          <DataCard.Body>
             <p>
               Curabitur congue dolor eu condimentum scelerisque.
             </p>
             <p>
               Morbi at elit nunc.
             </p>
+            <p>
+              Aenean vehicula dignissim condimentum.
+            </p>
+            <p>
+              Morbi accumsan venenatis ante.
+            </p>
           </DataCard.Body>
         </DataCard>
-      </Grid>
-    </>
-  );
-};
+        <DataCard>
+          <DataCard.Header title="Et suscipit ligula" />
+          <DataCard.Body>
+            <p>
+              Nunc eget accumsan lacus.
+            </p>
+            <p>
+              Curabitur porttitor lorem vel volutpat sollicitudin.
+            </p>
+            <p>
+              Phasellus accumsan risus vel neque rutrum convallis.
+            </p>
+            <p>
+              Duis gravida lobortis libero, et suscipit ligula pharetra in.
+            </p>
+          </DataCard.Body>
+        </DataCard>
+      </DataCard.Group>
+    </Grid>
+  </>
+);
 
-export const DataCardGroup = () => {
-  return (
-    <>
-      <Grid container={Grid.CONTAINER_SIZES.XS}>
-        <DataCard.Group color={DataCard.COLORS.DEFAULT}>
+export const DataCardScrollContainer = () => (
+  <>
+    <Grid container={Grid.CONTAINER_SIZES.LG}>
+      <DataCard.ScrollContainer>
+        <DataCard.Group title="Aenean vehicula dignissim" color={DataCard.COLORS.DANGER}>
           <DataCard>
             <DataCard.Header title="Duis gravida" />
             <DataCard.Body>
-              <p>
+              <p className="t-sage--truncate">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               </p>
-              <p>
+              <p className="t-sage--truncate">
                 Duis sit amet libero lacus.
               </p>
-              <p>
+              <p className="t-sage--truncate">
                 Aenean ullamcorper faucibus purus a ultrices.
               </p>
             </DataCard.Body>
@@ -83,129 +138,68 @@ export const DataCardGroup = () => {
           <DataCard>
             <DataCard.Header title="Lobortis libero" />
             <DataCard.Body>
-              <p>
+              <p className="t-sage--truncate">
                 Curabitur congue dolor eu condimentum scelerisque.
               </p>
-              <p>
+              <p className="t-sage--truncate">
                 Morbi at elit nunc.
               </p>
-              <p>
+              <p className="t-sage--truncate">
                 Aenean vehicula dignissim condimentum.
               </p>
-              <p>
+            </DataCard.Body>
+          </DataCard>
+        </DataCard.Group>
+        <DataCard.Group title="Aenean vehicula dignissim">
+          <DataCard>
+            <DataCard.Header title="Morbi accumsan venenatis" />
+            <DataCard.Body>
+              <p className="t-sage--truncate">
+                Duis sit amet libero lacus.
+              </p>
+              <p className="t-sage--truncate">
+                Aenean ullamcorper faucibus purus a ultrices.
+              </p>
+            </DataCard.Body>
+          </DataCard>
+          <DataCard>
+            <DataCard.Header title="Duis gravida" />
+            <DataCard.Body>
+              <p className="t-sage--truncate">
+                Aenean vehicula dignissim condimentum.
+              </p>
+              <p className="t-sage--truncate">
                 Morbi accumsan venenatis ante.
+              </p>
+            </DataCard.Body>
+          </DataCard>
+          <DataCard>
+            <DataCard.Header title="Lobortis libero" />
+            <DataCard.Body>
+              <p className="t-sage--truncate">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+              <p className="t-sage--truncate">
+                Duis sit amet libero lacus.
+              </p>
+              <p className="t-sage--truncate">
+                Aenean ullamcorper faucibus purus a ultrices.
               </p>
             </DataCard.Body>
           </DataCard>
           <DataCard>
             <DataCard.Header title="Et suscipit ligula" />
             <DataCard.Body>
-              <p>
-                Nunc eget accumsan lacus.
+              <p className="t-sage--truncate">
+                Aenean vehicula dignissim condimentum.
               </p>
-              <p>
-                Curabitur porttitor lorem vel volutpat sollicitudin.
-              </p>
-              <p>
-                Phasellus accumsan risus vel neque rutrum convallis.
-              </p>
-              <p>
-                Duis gravida lobortis libero, et suscipit ligula pharetra in.
+              <p className="t-sage--truncate">
+                Morbi accumsan venenatis ante,
               </p>
             </DataCard.Body>
           </DataCard>
         </DataCard.Group>
-      </Grid>
-    </>
-  );
-};
-
-export const DataCardScrollContainer = () => {
-  return (
-    <>
-      <Grid container={Grid.CONTAINER_SIZES.LG}>
-        <DataCard.ScrollContainer>
-          <DataCard.Group title="Aenean vehicula dignissim" color={DataCard.COLORS.DANGER}>
-            <DataCard>
-              <DataCard.Header title="Duis gravida" />
-              <DataCard.Body>
-                <p className="t-sage--truncate">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
-                <p className="t-sage--truncate">
-                  Duis sit amet libero lacus.
-                </p>
-                <p className="t-sage--truncate">
-                  Aenean ullamcorper faucibus purus a ultrices.
-                </p>
-              </DataCard.Body>
-            </DataCard>
-            <DataCard>
-              <DataCard.Header title="Lobortis libero" />
-              <DataCard.Body>
-                <p className="t-sage--truncate">
-                  Curabitur congue dolor eu condimentum scelerisque.
-                </p>
-                <p className="t-sage--truncate">
-                  Morbi at elit nunc.
-                </p>
-                <p className="t-sage--truncate">
-                  Aenean vehicula dignissim condimentum.
-                </p>
-              </DataCard.Body>
-            </DataCard>
-          </DataCard.Group>
-          <DataCard.Group title="Aenean vehicula dignissim">
-            <DataCard>
-              <DataCard.Header title="Morbi accumsan venenatis" />
-              <DataCard.Body>
-                <p className="t-sage--truncate">
-                  Duis sit amet libero lacus.
-                </p>
-                <p className="t-sage--truncate">
-                  Aenean ullamcorper faucibus purus a ultrices.
-                </p>
-              </DataCard.Body>
-            </DataCard>
-            <DataCard>
-              <DataCard.Header title="Duis gravida" />
-              <DataCard.Body>
-                <p className="t-sage--truncate">
-                  Aenean vehicula dignissim condimentum.
-                </p>
-                <p className="t-sage--truncate">
-                  Morbi accumsan venenatis ante.
-                </p>
-              </DataCard.Body>
-            </DataCard>
-            <DataCard>
-              <DataCard.Header title="Lobortis libero" />
-              <DataCard.Body>
-                <p className="t-sage--truncate">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
-                <p className="t-sage--truncate">
-                  Duis sit amet libero lacus.
-                </p>
-                <p className="t-sage--truncate">
-                  Aenean ullamcorper faucibus purus a ultrices.
-                </p>
-              </DataCard.Body>
-            </DataCard>
-            <DataCard>
-              <DataCard.Header title="Et suscipit ligula" />
-              <DataCard.Body>
-                <p className="t-sage--truncate">
-                  Aenean vehicula dignissim condimentum.
-                </p>
-                <p className="t-sage--truncate">
-                  Morbi accumsan venenatis ante,
-                </p>
-              </DataCard.Body>
-            </DataCard>
-          </DataCard.Group>
-        </DataCard.ScrollContainer>
-      </Grid>
-    </>
-  );
-};
+      </DataCard.ScrollContainer>
+    </Grid>
+  </>
+);

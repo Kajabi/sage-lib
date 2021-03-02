@@ -25,7 +25,7 @@ export const TextareaWithState = () => {
   return (
     <Textarea
       id="field-2"
-      label='Your message'
+      label="Your message"
       value={value}
       onChange={onChange}
     />
