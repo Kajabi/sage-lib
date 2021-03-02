@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.4.0...@kajabi/sage-system@0.4.1) (2021-03-02)
+
+
+### Bug Fixes
+
+* **dropdown:** adjust js to address disabled items being selected ([7ee112a](https://github.com/Kajabi/sage-lib/commit/7ee112a4969af3ceb6b56f3e4a2e2f8700c54c41))
+
+
+
+
+
 # [0.4.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.3.4...@kajabi/sage-system@0.4.0) (2021-02-24)
 
 

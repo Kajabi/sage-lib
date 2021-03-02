@@ -3,6 +3,43 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.16.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.15.0...@kajabi/sage@3.16.0) (2021-03-02)
+
+
+### Bug Fixes
+
+* **docs:** remove conflicting preview content ([ec08ac4](https://github.com/Kajabi/sage-lib/commit/ec08ac430ec2755bc6e56cfebacf6daec2448f9f))
+* **docs:** undesired save point due to local sage issue ([97fdc4c](https://github.com/Kajabi/sage-lib/commit/97fdc4c25062054935cfc8de77bd36f1022c0820))
+* **docs:** update navigation with latest component ([78aab17](https://github.com/Kajabi/sage-lib/commit/78aab17b98ae1b14b7f3f671addaf40e16c59471))
+* **docs:** update object and element helpers ([01cef6d](https://github.com/Kajabi/sage-lib/commit/01cef6d86fa636fad5cb57f1c9b8e2c862dca7b7))
+* **docs:** update sidebar footer links ([e311994](https://github.com/Kajabi/sage-lib/commit/e31199444a09222c8779c04cd2ff8a3b3ade365a))
+* **docs:** updated to popover, icon, iconcard, helplink react docs ([3da93a4](https://github.com/Kajabi/sage-lib/commit/3da93a4625e996301218e27b8b032c19d89ead03))
+* **dropdown:** copy clean up and style fix ([51255fc](https://github.com/Kajabi/sage-lib/commit/51255fcc401a9471bc586e18ab97139c694c64d2))
+* **dropdown:** update external link ([2f384bd](https://github.com/Kajabi/sage-lib/commit/2f384bd58c287cc50c25e356c4c612b45bd8732d))
+* **links:** add attributes and tooltip to links ([e4dfadf](https://github.com/Kajabi/sage-lib/commit/e4dfadf9735d9b024146a261a38953c7d108938f))
+* **nav:** update nav component ([1ecaa01](https://github.com/Kajabi/sage-lib/commit/1ecaa01cdf7ae6ff89aad5f8774cac5e2eae7be6))
+* **nav-link:** adjust logic for activating a submenu ([ab49d4f](https://github.com/Kajabi/sage-lib/commit/ab49d4f761246eafc2415b8ffd9486d4854341be))
+* **nav-link:** update nav link component ([1849ca4](https://github.com/Kajabi/sage-lib/commit/1849ca43d289f736ff925b778839d8e0e6575f9a))
+* **pagination:** add if/else for collection name ([d75ae5b](https://github.com/Kajabi/sage-lib/commit/d75ae5ba8a9634e7ab4ae283642c092cd0b09db6))
+* **pagination:** makes pagination less subjective and adds parameter for collection name ([bea8864](https://github.com/Kajabi/sage-lib/commit/bea88647a3033d6252b1b66a347d2d062bf0a230))
+* **pagination:** pluralize collection name ([73bf5eb](https://github.com/Kajabi/sage-lib/commit/73bf5ebc52d59210c20de047f0c1468133d48317))
+* **pagination:** titleize collection name ([700b5bd](https://github.com/Kajabi/sage-lib/commit/700b5bd47744815b76b7fe5605ad9037089bac21))
+* **pagination:** updates entry name logic ([d56d859](https://github.com/Kajabi/sage-lib/commit/d56d8593c316ab5f114039ce49156e037fd4346e))
+* **sidebar:** update sidebar component ([d79cbbe](https://github.com/Kajabi/sage-lib/commit/d79cbbe70fdcb570344c4afe8f6b8041e8608970))
+
+
+### Features
+
+* **dropdown:** add ability to have tooltip in dropdown ([9baabcd](https://github.com/Kajabi/sage-lib/commit/9baabcd741253c6507d9a81e2e2d569631ca0868))
+* **nav:** update navigation styling to match specs ([0fecc64](https://github.com/Kajabi/sage-lib/commit/0fecc6488e2c8f0f5eebef3c83d20c52444ffd16))
+* **nav-link:** ensure nested items only display if one is active ([17104a1](https://github.com/Kajabi/sage-lib/commit/17104a1466eb88bf7b5d78f5806cab1248614ecd))
+* **pagination:** updates comment ([8e95a71](https://github.com/Kajabi/sage-lib/commit/8e95a71590c84d51a5fdf07ff9de84d7a12be79b))
+* **sidebar:** add id prop ([dd5b4cf](https://github.com/Kajabi/sage-lib/commit/dd5b4cf30e3fad500d9fedf7c70dd7d237e14ff4))
+
+
+
+
+
 # [3.15.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.14.1...@kajabi/sage@3.15.0) (2021-03-01)
 
 

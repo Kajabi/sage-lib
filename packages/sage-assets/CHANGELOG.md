@@ -3,6 +3,32 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.24.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.23.2...@kajabi/sage-assets@0.24.0) (2021-03-02)
+
+
+### Bug Fixes
+
+* **dropdown:** add props and fix styling ([9c424b7](https://github.com/Kajabi/sage-lib/commit/9c424b7ca6e913ea04d31c6d20a7d32fff65d666))
+* **dropdown:** adjust dropdown tooltip and style fix ([0faa585](https://github.com/Kajabi/sage-lib/commit/0faa585655b8970ff410c8c33d6fc14dbf1cd57c))
+* **dropdown:** copy clean up and style fix ([51255fc](https://github.com/Kajabi/sage-lib/commit/51255fcc401a9471bc586e18ab97139c694c64d2))
+* **icon:** patch icon size ([4d0c01b](https://github.com/Kajabi/sage-lib/commit/4d0c01b31d99beb3c61ea236952adedc1eb8a885))
+* **select:** resolve label z-index issue ([5911ab3](https://github.com/Kajabi/sage-lib/commit/5911ab3664538f6ad721ce1e5cb9877474a4da17))
+* **select:** updated click target ([e78254e](https://github.com/Kajabi/sage-lib/commit/e78254ee0b6dddf3519cd39b6b586433a930875a))
+
+
+### Features
+
+* **choice:** adds support for gap between each choice component ([7c6c85b](https://github.com/Kajabi/sage-lib/commit/7c6c85b3d4810467a47710795c3fee6f2d5b5203))
+* **choice:** disable max-nesting-depth stylelint ([c5979a7](https://github.com/Kajabi/sage-lib/commit/c5979a79f70f09be1b1ddf7fdc90d8aca701240b))
+* **choice:** updates refactor comment ([03c7008](https://github.com/Kajabi/sage-lib/commit/03c700824001387b9bb21708cd9b2c6e7d31c576))
+* **dropdown:** add ability to have tooltip in dropdown ([9baabcd](https://github.com/Kajabi/sage-lib/commit/9baabcd741253c6507d9a81e2e2d569631ca0868))
+* **nav:** update navigation styling to match specs ([0fecc64](https://github.com/Kajabi/sage-lib/commit/0fecc6488e2c8f0f5eebef3c83d20c52444ffd16))
+* **type:** add navigation type specs ([b278122](https://github.com/Kajabi/sage-lib/commit/b278122ee16e1a60a5df285fdc9c7860748765d6))
+
+
+
+
+
 ## [0.23.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.23.1...@kajabi/sage-assets@0.23.2) (2021-03-01)
 
 **Note:** Version bump only for package @kajabi/sage-assets

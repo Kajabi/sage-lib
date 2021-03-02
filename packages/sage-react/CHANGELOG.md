@@ -3,6 +3,32 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.32.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.31.2...@kajabi/sage-react@0.32.0) (2021-03-02)
+
+
+### Bug Fixes
+
+* **docs:** linter fix ([7b2cee4](https://github.com/Kajabi/sage-lib/commit/7b2cee4ec3e59276ed634c8628f1a2b458bea574))
+* **docs:** removed unnecessary code ([3f39c4b](https://github.com/Kajabi/sage-lib/commit/3f39c4b332c0fcd78299f6de81ac47d5c0278804))
+* **docs:** undesired save point due to local sage issue ([97fdc4c](https://github.com/Kajabi/sage-lib/commit/97fdc4c25062054935cfc8de77bd36f1022c0820))
+* **docs:** updated label docs ([6ef9433](https://github.com/Kajabi/sage-lib/commit/6ef9433aac8c815e6921adbc96a523a9bfd349e9))
+* **docs:** updated to popover, icon, iconcard, helplink react docs ([3da93a4](https://github.com/Kajabi/sage-lib/commit/3da93a4625e996301218e27b8b032c19d89ead03))
+* **docs:** updates to emptystate, expandablecard, and formsection ([2ab9b24](https://github.com/Kajabi/sage-lib/commit/2ab9b24f0950f646c84e3c88896566d7af78877f))
+* **dropdown:** add props and fix styling ([9c424b7](https://github.com/Kajabi/sage-lib/commit/9c424b7ca6e913ea04d31c6d20a7d32fff65d666))
+* **dropdown:** adjust dropdown tooltip and style fix ([0faa585](https://github.com/Kajabi/sage-lib/commit/0faa585655b8970ff410c8c33d6fc14dbf1cd57c))
+* **dropdown:** adust options and fix react props ([c85220d](https://github.com/Kajabi/sage-lib/commit/c85220d9347f1bd29e28cdc40af260acd6c92ef8))
+* **link:** add tooltip to link (react) ([cad7a3c](https://github.com/Kajabi/sage-lib/commit/cad7a3ccd7f8e7033b435814b278ecbb9ba15405))
+* **search:** updated story ([8581101](https://github.com/Kajabi/sage-lib/commit/8581101b013d91ed9cec62a8a9587f966e2eb2b5))
+
+
+### Features
+
+* **dropdown:** add tooltip to dropdown (react) ([b811a7c](https://github.com/Kajabi/sage-lib/commit/b811a7c953bcf4efa6dbbd3481370b32743ed30f))
+
+
+
+
+
 ## [0.31.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.31.1...@kajabi/sage-react@0.31.2) (2021-03-01)
 
 **Note:** Version bump only for package @kajabi/sage-react
