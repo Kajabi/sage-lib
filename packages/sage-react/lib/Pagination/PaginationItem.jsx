@@ -40,6 +40,7 @@ export const PaginationItem = ({ children, current, disabled, onClick, url, }) =
 
 PaginationItem.defaultProps = {
   children: null,
+  current: false,
   disabled: false,
   onClick: null,
   url: null,
@@ -47,6 +48,7 @@ PaginationItem.defaultProps = {
 
 PaginationItem.propTypes = {
   children: PropTypes.node,
+  current: PropTypes.bool,
   disabled: PropTypes.bool,
   onClick: PropTypes.func,
   url: PropTypes.string,

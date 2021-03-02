@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import pluralize from 'pluralize';
-import uuid from 'uuid';
+import uuid from 'react-uuid';
 import {
   PAGINATION_ARIA_LABEL,
   PAGINATION_DEFAULT_ITEMS_NOUN,
@@ -30,7 +30,7 @@ export const Pagination = ({
   // Get a safe page count if possible
   let localPageCount = pageCount;
   if (!localPageCount && canCalculatePageRange) {
-    localPageCount = Math.ceil(items / pageSize);
+    localPageCount = Math.ceil(itemsTotalCount / pageSize);
   } else if (!localPageCount) {
     localPageCount = 1;
   }
@@ -114,7 +114,6 @@ export const Pagination = ({
     }
 
     const items = [];
-    const localMaxPageButtons = 0;
     let startPage = 1;
 
     // If current page is far enough from start
@@ -136,14 +135,28 @@ export const Pagination = ({
 
     // Add page 1 and a gap if needed
     if (startPage > 1) {
-      items.push(<PaginationItem key={uuid()} {...handleInteractionProps(1)}>{1}</PaginationItem>);
+      items.push(
+        <PaginationItem
+          key={uuid()}
+          {...handleInteractionProps(1)}
+        >
+          {1}
+        </PaginationItem>
+      );
     }
     if (startPage > 2) {
       items.push(<PaginationItemGap key={uuid()} />);
     }
 
     for (let i = startPage; (i <= (startPage + maxPageButtons) && i <= localPageCount); i += 1) {
-      items.push(<PaginationItem key={uuid()} {...handleInteractionProps(i)}>{i}</PaginationItem>);
+      items.push(
+        <PaginationItem
+          key={uuid()}
+          {...handleInteractionProps(i)}
+        >
+          {i}
+        </PaginationItem>
+      );
     }
 
     // Add final page and a gap if needed
@@ -151,7 +164,14 @@ export const Pagination = ({
       items.push(<PaginationItemGap key={uuid()} />);
     }
     if (startPage < localPageCount - maxPageButtons) {
-      items.push(<PaginationItem key={uuid()} {...handleInteractionProps(localPageCount)}>{localPageCount}</PaginationItem>);
+      items.push(
+        <PaginationItem
+          key={uuid()}
+          {...handleInteractionProps(localPageCount)}
+        >
+          {localPageCount}
+        </PaginationItem>
+      );
     }
 
     return items;
@@ -165,7 +185,10 @@ export const Pagination = ({
           {labels && labels.previous ? labels.previous : PAGINATION_LABEL_PREVIOUS}
         </PaginationItem>
         {renderPageItems()}
-        <PaginationItem disabled={currentPage === localPageCount} {...handleInteractionProps(currentPage + 1)}>
+        <PaginationItem
+          disabled={currentPage === localPageCount}
+          {...handleInteractionProps(currentPage + 1)}
+        >
           {labels && labels.next ? labels.next : PAGINATION_LABEL_NEXT}
         </PaginationItem>
       </ul>
