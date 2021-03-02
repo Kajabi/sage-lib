@@ -59,7 +59,7 @@ $-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
       margin-right: sage-spacing(panel);
     }
   }
-  
+
   .sage-panel-controls__bulk-actions > &,
   .sage-panel-controls__toolbar-btn-group > & {
     border-radius: 0;
@@ -191,6 +191,10 @@ $-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
     color: sage-color(grey, 400);
     pointer-events: none;
     cursor: not-allowed;
+  }
+
+  &[data-js-tooltip] {
+    pointer-events: auto;
   }
 
   // NOTE: Icon generation consolidated in `core/_icons.scss`

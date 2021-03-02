@@ -1,19 +1,25 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { withKnobs, select, text } from '@storybook/addon-knobs';
-import { centerXY } from '../story-support/decorators';
+import { selectArgs } from '../story-support/helpers';
+import { SageTokens } from '../configs';
 import { Icon } from './Icon';
 
-storiesOf('Sage/Icon', module)
-  .addDecorator(withKnobs)
-  .addDecorator(centerXY)
-  .add('Default', () => (
-    <div style={{ marginTop: 50 }}>
-      <Icon
-        color={select('Color', Icon.COLORS, Icon.COLORS.CHARCOAL)}
-        icon={select('Icon', Icon.ICONS, Icon.ICONS.CHECK_CIRCLE)}
-        label={text('Label (not visible)', '')}
-        size={select('Size', Icon.SIZES, Icon.SIZES.MD)}
-      />
-    </div>
-  ));
+export default {
+  title: 'Sage/Icon',
+  component: Icon,
+  argTypes: {
+    ...selectArgs({
+      color: Icon.COLORS,
+      icon: SageTokens.ICONS,
+      size: Icon.SIZES
+    }),
+  },
+  args: {
+    color: Icon.COLORS.CHARCOAL,
+    icon: Icon.ICONS.CHECK_CIRCLE,
+    label: 'Click me',
+    size: Icon.SIZES.MD
+  }
+};
+const Template = (args) => <Icon {...args} />;
+
+export const Default = Template.bind({});

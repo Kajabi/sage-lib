@@ -46,8 +46,8 @@ Icon.defaultProps = {
 
 Icon.propTypes = {
   className: PropTypes.string,
-  color: PropTypes.oneOf(Object.values(SageTokens.COLOR_SLIDERS)),
-  icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)).isRequired,
+  color: PropTypes.oneOf(Object.values(Icon.COLORS)),
+  icon: PropTypes.oneOf(Object.values(Icon.ICONS)).isRequired,
   label: PropTypes.string,
-  size: PropTypes.oneOf(Object.values(ICON_SIZES)),
+  size: PropTypes.oneOf(Object.values(Icon.SIZES)),
 };

@@ -63,7 +63,16 @@ export const sampleMenuItems = [
     label: 'View none',
   },
   {
-    id: 4,
+    id: 5,
+    label: 'Disabled w/ tooltip',
+    tooltip: {
+      content: 'Tooltip',
+      position: 'left'
+    },
+    disabled: true
+  },
+  {
+    id: 6,
     label: 'Option 1',
     icon: SageTokens.ICONS.USERS,
     payload: {
@@ -74,7 +83,7 @@ export const sampleMenuItems = [
     options: sampleOptions,
   },
   {
-    id: 5,
+    id: 7,
     label: 'Option 2',
     icon: SageTokens.ICONS.MEGAPHONE,
     payload: {
@@ -84,7 +93,7 @@ export const sampleMenuItems = [
     options: sampleOptions,
   },
   {
-    id: 6,
+    id: 8,
     label: 'Option 3',
     icon: SageTokens.ICONS.CUSTOMIZE,
     payload: {
@@ -98,7 +107,7 @@ export const sampleMenuItems = [
     options: sampleOptions,
   },
   {
-    id: 7,
+    id: 9,
     color: 'primary',
     label: 'Add something',
     icon: SageTokens.ICONS.ADD,

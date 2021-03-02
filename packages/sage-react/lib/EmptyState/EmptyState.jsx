@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import { SageTokens } from '../configs';
 import { Icon } from '../Icon';
 
 export const EmptyState = ({
@@ -58,7 +59,7 @@ EmptyState.propTypes = {
   children: PropTypes.node,
   compact: PropTypes.bool,
   graphic: PropTypes.node,
-  icon: PropTypes.string,
+  icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),
   text: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   title: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
 };

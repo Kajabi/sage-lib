@@ -1,9 +1,39 @@
-<% active_class = (component.no_active.blank? && current_page?(component.link)) ? "sage-nav__link--active" : "" %>
-<% component_class = component.type ? "sage-nav__link--#{component.type}" : "" %>
-<%= link_to component.link, method: component.method, class: "sage-nav__link #{active_class} #{component_class}" do %>
+<%
+
+# Search items to see if any items are active or not.
+subitems_active = false
+component.items.each do | item |
+  if (item[:active] == true) or current_page?(item[:link]) 
+    subitems_active = true
+  end
+end if component.items.present?
+
+# Determing whether root element is active or not.
+active_class = (subitems_active or component.active or (component.no_active.blank? && current_page?(component.link))) ? "sage-nav__link--active" : ""
+
+# Determine nav type class
+component_class = component.type ? "sage-nav__link--#{component.type}" : ""
+
+# Ensure attributes are a Hash
+attributes = component.attributes.present? ? component.attributes : {}
+
+%>
+<%= link_to component.link, method: component.method, class: "sage-nav__link #{active_class} #{component_class}", **attributes do %>
   <% if component.icon %>
-    <i class="sage-icon-<%= component.icon %> sage-nav__icon"></i>
+    <i class="sage-icon-<%= component.icon %>-lg sage-nav__icon"></i>
   <% end %>
-  <%= component.text %>
+  <span class="sage-nav__label">
+    <%= component.text %>
+  </span>
+<% end %>
+<% if subitems_active %>
+  <ul class="sage-nav__list <%= component.icon ? "sage-nav__list--sub-with-icon" : "sage-nav__list--sub" %>">
+    <% component.items.each do | item | %>
+    <% item[:type] = item[:type].present? ? item[:type] : "sub" %>
+      <li>
+        <%= sage_component(SageNavLink, item) %>
+      </li>
+    <% end %>
+  </ul>
 <% end %>
 <%= component.content %>

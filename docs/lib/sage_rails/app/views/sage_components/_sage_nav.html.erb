@@ -1,3 +1,17 @@
-<div class="sage-nav" <% if component.aria_label.present? %> aria-label="<%= component.aria_label %>"<% end %>>
+<nav
+  class="sage-nav"
+  <% if component.aria_label.present? %>
+    aria-label="<%= component.aria_label %>"
+  <% end %>
+>
+  <% if component.items.present? and component.items.length() > 0 %>
+    <ul class="sage-nav__list">
+      <% component.items.each do | item | %>
+        <li>
+          <%= sage_component(SageNavLink, item) %>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
   <%= component.content %>
-</div>
+</nav>

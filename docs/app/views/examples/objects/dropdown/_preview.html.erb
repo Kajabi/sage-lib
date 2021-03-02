@@ -4,7 +4,18 @@
     value: "Edit",
     icon: "pen",
     attributes: { "href": "#" },
-  }, {
+  },
+  {
+    value: "Disabled link w/ tooltip",
+    icon: "pen",
+    modifiers: ["disabled"],
+    attributes: {
+      "href": "https://kajabi.com",
+      "data-js-tooltip": "Tooltip",
+      "data-js-tooltip-position": "right",
+    }
+  },
+  {
     value: "New",
     icon: "add",
     style: "primary",
@@ -19,7 +30,16 @@
     icon: "remove-circle",
     style: "danger",
     attributes: { "href": "#" },
-  }]
+  }, {
+    value: "Disabled w/ Tooltip",
+    icon: "users",
+    attributes: {
+      "data-js-tooltip": "Tooltip",
+      "data-js-tooltip-position": "right"
+      },
+    modifiers: ["disabled"]
+  }
+  ]
 } do %>
   <%= sage_component SageButton, {
     style: "primary",
@@ -97,9 +117,9 @@
       value: "Delete Category",
       icon: "trash",
       style: "danger",
-      attributes: { 
+      attributes: {
         "href": "#",
-        "data-test": "test method" 
+        "data-test": "test method"
       },
     }]
   } do %>
@@ -133,6 +153,14 @@
   }, {
     value: "Disabled",
     modifiers: ["disabled"]
+  },
+  {
+    value: "Disabled w/ tooltip",
+    modifiers: ["disabled"],
+    attributes: {
+      "data-js-tooltip": "Tooltip",
+      "data-js-tooltip-position": "left"
+    },
   }],
   contained: true
 } do %>
