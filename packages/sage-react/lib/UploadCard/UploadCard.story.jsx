@@ -1,20 +1,25 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { withKnobs, object } from '@storybook/addon-knobs';
 import { Grid } from '..';
-import { centerXY } from '../story-support/decorators';
 import { UploadCard } from './UploadCard';
 
-storiesOf('Sage/Upload Card', module)
-  .addDecorator(withKnobs)
-  .addDecorator(centerXY)
-  .add('Default', () => (
-    <Grid container={Grid.CONTAINER_SIZES.XS}>
-      <UploadCard
-        acceptedFiles={object('Files array', [{ name: 'contacts.csv', size: '14', }])}
-        selectionLabel="Select a file"
-        selectionSubtext="Upload a .csv up to 10KB"
-        replaceLabel="Replace file"
-      />
-    </Grid>
-  ));
+export default {
+  title: 'Sage/UploadCard',
+  component: UploadCard,
+  args: {
+    selectionLabel: 'Select a file',
+    selectionSubtext: 'Upload a .csv up to 10KB',
+    replaceLabel: 'Replace file'
+  }
+};
+const Template = (args) => <UploadCard {...args} />;
+
+export const Default = Template.bind({});
+Default.decorators = [
+  (Story) => (
+    <>
+      <Grid container={Grid.CONTAINER_SIZES.XS}>
+        <Story />
+      </Grid>
+    </>
+  )
+];
