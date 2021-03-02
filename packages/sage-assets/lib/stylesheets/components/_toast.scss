@@ -26,7 +26,6 @@ $-toast-viewport-spacing-bottom: sage-spacing();
   display: flex;
   z-index: sage-z-index(modal, +1);
   position: fixed;
-  overflow: hidden;
   align-items: center;
   padding: 0 sage-spacing(md);
   border-radius: sage-border(radius-large);
