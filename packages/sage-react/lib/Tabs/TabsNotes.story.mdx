@@ -1,0 +1,23 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Sage/Tabs/Notes" />
+
+Tabs allow a simplified tab interface where the `tabs` prop can be provided an array of items that follow this structure:
+
+- `id` -- a unique HTML id attribute for the tab.
+- `label` -- label to appear on the tab.
+- `subtext` -- option subtext available for the `choice` tab style.
+- `content` -- rich content to contain on the tab pane, this should contain JSX content. If a particular container is not inherent in this content, use `React.fragment` as opposed to additional wrapping `div`s.
+
+The tabs interface handles changing tabs on its own, but there are additional options to consider:
+
+- `onClickTab` is an optional function which, if provided, will override the internal click handler. The `id` for the clicked tab is provided to this function.
+- `onChangeTabHook` is an optional hook that can be called alongside the internal click handler. The `id` for the clicked tab is provided to this function.
+
+While the Tabs component is set up to make the first tab selected by default, you can pass a different tab's `id` to `initialActiveId`. This is helpful in the case that you have interactive controls inside a tab pane that govern navigation between tabs.
+
+To adjust display settings for the panes within Tabs, you have three options:
+
+- `card` -- set this to `true` to display the pane as a card with layout rules and border settings to match (for when the Tabs component is within a Panel and the selected Pane should appear as a Card).
+- `cardSpacing` -- set this to `true` to display the pane with card layout rules but not internal padding or border (for when the entire Tabs component is directly within a Panel).
+- `panelSpacing` -- set this to `true` to display the pane with panel layout rules but not internal padding or box shadow (for when the entire Tabs component is directly within a Panel).

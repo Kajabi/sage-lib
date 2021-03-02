@@ -1,48 +1,24 @@
 import React, { useState } from 'react';
-import { storiesOf } from '@storybook/react';
-import { withKnobs, radios, select } from '@storybook/addon-knobs';
-import { centerXY } from '../story-support/decorators';
+import { selectArgs } from '../story-support/helpers';
 import { Button } from '../Button';
 import { SageTokens } from '../configs';
 import { Tabs } from './Tabs';
-import TabsNotes from './TabsNotes.md';
 
-const ChoiceTabsWithRichContent = () => (
-  <Tabs
-    tabs={[
-      {
-        id: 'tab-1',
-        tabDetails: (
-          <>
-            <h4>Tab 1 content.</h4>
-            <p>Lorem ipsum dolor sit amut consectitor.</p>
-          </>
-        ),
-      },
-      {
-        id: 'tab-2',
-        tabDetails: (
-          <>
-            <h4>Tab 2 content.</h4>
-            <p>Lorem ipsum dolor sit amut consectitor.</p>
-          </>
-        ),
-      },
-      {
-        id: 'tab-3',
-        tabDetails: (
-          <>
-            <h4>Tab 3 content.</h4>
-            <p>Lorem ipsum dolor sit amut consectitor.</p>
-          </>
-        ),
-      },
-    ]}
-    tabStyle="choice"
-  />
-);
+export default {
+  title: 'Sage/Tabs',
+  component: Tabs,
+  decorators: [(Story) => <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}><Story /></div>],
+  argTypes: {
+    ...selectArgs({
+      tabLayout: Tabs.LAYOUTS,
+      tabStyle: Tabs.STYLES
+    }),
+  },
+  args: {
+  }
+};
 
-const TabsWithState = () => {
+export const  Default = () => {
   const [initialActiveId, setDefaultActiveId] = useState(null);
   const buttonConfigs = {
     icon: SageTokens.ICONS.CARET_RIGHT,
@@ -50,8 +26,8 @@ const TabsWithState = () => {
     iconPosition: 'right'
   };
 
-  const choiceIcon = select('Choice tab icon', SageTokens.ICONS, null);
-  const choiceType = select('Choice tab type', Tabs.Item.CHOICE_TYPES, Tabs.Item.CHOICE_TYPES.RADIO);
+  const choiceIcon = null;
+  const choiceType = Tabs.Item.CHOICE_TYPES.RADIO;
 
   return (
     <Tabs
@@ -108,20 +84,45 @@ const TabsWithState = () => {
           panelSpacing: true,
         },
       ]}
-      tabStyle={radios('Tab Style', Tabs.STYLES, Tabs.STYLES.TAB)}
-      tabLayout={radios('Tab Layout', Tabs.LAYOUTS, Tabs.LAYOUTS.DEFAULT)}
+      tabStyle={Tabs.STYLES.TAB}
+      tabLayout={Tabs.LAYOUTS.DEFAULT}
     />
   );
+}
+
+const Template = (args) => <Tabs {...args} />;
+
+export const RichContent = Template.bind({});
+RichContent.args = {
+  tabs: [
+    {
+      id: 'tab-1',
+      tabDetails: (
+        <>
+          <h4>Tab 1 content.</h4>
+          <p>Lorem ipsum dolor sit amut consectitor.</p>
+        </>
+      ),
+    },
+    {
+      id: 'tab-2',
+      tabDetails: (
+        <>
+          <h4>Tab 2 content.</h4>
+          <p>Lorem ipsum dolor sit amut consectitor.</p>
+        </>
+      ),
+    },
+    {
+      id: 'tab-3',
+      tabDetails: (
+        <>
+          <h4>Tab 3 content.</h4>
+          <p>Lorem ipsum dolor sit amut consectitor.</p>
+        </>
+      ),
+    },
+  ],
+  tabStyle: Tabs.STYLES.CHOICE
 };
 
-storiesOf('Sage/Tabs', module)
-  .addDecorator(centerXY)
-  .addDecorator(withKnobs)
-  .add('Default', () => (
-    <TabsWithState />
-  ), {
-    notes: { markdown: TabsNotes }
-  })
-  .add('Rich content', () => (
-    <ChoiceTabsWithRichContent />
-  ));
