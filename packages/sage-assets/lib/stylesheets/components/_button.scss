@@ -158,10 +158,6 @@ $-btn-interactive-label-icon-size: rem(24px);
     border-bottom-left-radius: 0;
   }
 
-  .sage-toast & {
-    margin-left: sage-spacing(md);
-  }
-
   .sage-label & {
     display: flex;
     justify-content: center;
@@ -394,8 +390,7 @@ $-btn-interactive-label-icon-size: rem(24px);
     }
   }
 
-  .sage-assistant &,
-  .sage-toast & {
+  .sage-assistant & {
     color: sage-color(grey, 100);
 
     @include sage-focus-outline--update-color(sage-color(white));

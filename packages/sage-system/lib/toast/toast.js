@@ -16,11 +16,6 @@ import {
 } from './toast.template.js';
 
 Sage.toast = (function () {
-
-  // ==================================================
-  // Functions
-  // ==================================================
-
   function init(el) {
     el.querySelector(`[${DATA_ATTR_CLOSE_BUTTON}]`).addEventListener('click', handleCloseToast, { once: true });
   }
