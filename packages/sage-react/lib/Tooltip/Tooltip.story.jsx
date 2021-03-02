@@ -1,24 +1,33 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { withKnobs, text, select } from '@storybook/addon-knobs';
-import { centerXY } from '../story-support/decorators';
+import { selectArgs } from '../story-support/helpers';
 import { Button } from '../Button';
 import { Tooltip } from './Tooltip';
 
-storiesOf('Sage/Tooltip', module)
-  .addDecorator(withKnobs)
-  .addDecorator(centerXY)
-  .add('Default', () => (
-    <div style={{ padding: 100 }}>
-      <Tooltip
-        content={text('Content', 'Hi, I provide more context for this element!')}
-        position={select('Position', Tooltip.POSITIONS, Tooltip.POSITIONS.DEFAULT)}
-        theme={select('Themes', Tooltip.THEMES, Tooltip.THEMES.DEFAULT)}
-        size={select('Sizes', Tooltip.SIZES, Tooltip.SIZES.DEFAULT)}
-      >
+export default {
+  title: 'Sage/Tooltip',
+  component: Tooltip,
+  decorators: [(Story) => <div style={{ padding: 100, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><Story /></div>],
+  argTypes: {
+    ...selectArgs({
+      position: Tooltip.POSITIONS,
+      size: Tooltip.SIZES,
+      theme: Tooltip.THEMES
+    }),
+  },
+  args: {
+    children: (
+      <>
         <Button>
           I inherit Mouse &amp; Focus events 👋
         </Button>
-      </Tooltip>
-    </div>
-  ));
+      </>
+    ),
+    content: 'Hi, I provide more context for this element!',
+    position: Tooltip.POSITIONS.DEFAULT,
+    size: Tooltip.SIZES.DEFAULT,
+    theme: Tooltip.THEMES.DEFAULT,
+  }
+};
+const Template = (args) => <Tooltip {...args} />;
+
+export const Default = Template.bind({});
