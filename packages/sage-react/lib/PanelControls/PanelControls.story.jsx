@@ -1,19 +1,24 @@
 /* eslint-disable camelcase */
 import React, { useEffect, useState } from 'react';
-import { storiesOf } from '@storybook/react';
 import uuid from 'react-uuid';
-import { withKnobs } from '@storybook/addon-knobs';
 import { Button } from '../Button';
 import { Panel } from '../Panel';
 import { Table } from '../Table';
-import { centerXY } from '../story-support/decorators';
 import { getNews } from '../services/newsapi';
 import { PanelControls } from './PanelControls';
 
 // TODO: Consider how select all affects all items
 // when only one page is currently selected
 
-const PanelControlsWithData = () => {
+export default {
+  title: 'Sage/PanelControls',
+  component: PanelControls,
+  decorators: [(Story) => <div style={{ padding: 50, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><Story /></div>],
+  args: {
+  },
+};
+
+export const Default = () => {
   const [selfData, setSelfData] = useState({
     // Set locally
     items: [],
@@ -176,10 +181,3 @@ const PanelControlsWithData = () => {
     </Panel>
   );
 };
-
-storiesOf('Sage/Panel Controls', module)
-  .addDecorator(withKnobs)
-  .addDecorator(centerXY)
-  .add('Default', () => (
-    <PanelControlsWithData />
-  ));
