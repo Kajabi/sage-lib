@@ -1,61 +1,21 @@
+import {
+  generateId,
+  stringToHtmlFragment,
+} from '../util';
+
+import {
+  APP_TOAST_CONTAINER_ID,
+  DEFAULT_CONFIG,
+  DATA_ATTR,
+  TOAST_CLASS_DISMISSED_STATE,
+  DATA_ATTR_CLOSE_BUTTON,
+} from './toast.config.js';
+
+import {
+  template,
+} from './toast.template.js';
+
 Sage.toast = (function () {
-
-  // ==================================================
-  // Variables
-  // ==================================================
-
-  const APP_TOAST_CONTAINER_ID = 'SageToastContainer';
-  const DEFAULT_CONFIG = {
-    icon: 'check',
-    type: 'notice',
-    timer: 4000,
-  };
-
-  const DATA_ATTR = 'data-js-toast';
-  const DATA_ATTR_CLOSE_BUTTON = 'data-js-toast-close';
-  const TOAST_CLASS_DISMISSED_STATE = 'sage-toast--animate-out';
-
-  // ==================================================
-  // Template
-  // ==================================================
-
-  const toastTemplate = ({id, type, icon, text, link, timer}) => (`
-    <dialog
-      class="sage-toast sage-toast--style-${type}"
-      ${DATA_ATTR}="${id}"
-    >
-      <i class="sage-toast__icon sage-icon-${icon}"></i>
-      <output
-        class="sage-toast__value"
-        aria-live="assertive"
-        aria-atomic="true"
-      >
-        ${text}
-      </output>
-      ${toastLinkTemplate(link)}
-      <button
-      class="sage-toast__button sage-toast__button--close"
-      type="button"
-      ${DATA_ATTR_CLOSE_BUTTON}
-      >
-      <span class="visually-hidden">Close</span>
-      </button>
-    </dialog>
-  `);
-
-  const toastLinkTemplate = (link) => {
-    if (!link) return '';
-    const {text, ...linkAttrs} = link;
-
-    return(`
-      <a
-        ${Sage.util.objectToHtmlAttributes(linkAttrs)}
-        class="sage-toast__button sage-toast__button--underline"
-      >
-        ${text}
-      </a>
-    `);
-  };
 
   // ==================================================
   // Functions
@@ -71,12 +31,12 @@ Sage.toast = (function () {
 
   function trigger(args) {
     const config = {
-      id: Sage.util.generateId(),
+      id: generateId(),
       ...DEFAULT_CONFIG,
       ...args,
     };
 
-    const elToast = Sage.util.stringToHtmlFragment(toastTemplate(config));
+    const elToast = stringToHtmlFragment(template(config));
     getAppToastContainer().appendChild(elToast);
     setToastTimer(config);
 
