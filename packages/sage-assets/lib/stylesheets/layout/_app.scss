@@ -1,0 +1,14 @@
+////
+/// Sage application
+///
+/// @group sage
+////
+
+$-app-sidebar-width: rem(240px);
+$-app-header-height: rem(56px);
+
+.sage-app {
+  display: grid;
+  grid-template-columns: $-app-sidebar-width 1fr;
+  grid-template-rows: $-app-header-height;
+}

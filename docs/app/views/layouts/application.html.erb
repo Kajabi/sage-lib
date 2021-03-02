@@ -12,7 +12,7 @@
     <header class="sage-header">
       <%= render "application/assistant" %>
     </header>
-    <div class="sage-stage">
+    <%= sage_component SageStage, {} do %>
       <%= render "application/sidebar" %>
       <main class="sage-content" id="main-content">
         <div class="sage-container sage-container--lg">
@@ -31,7 +31,7 @@
         </div>
       </main>
       <div class="sage-overlay" aria-hidden="true"></div>
-    </div>
+    <% end %>
     <%= render "scripts" %>
   </body>
 </html>
