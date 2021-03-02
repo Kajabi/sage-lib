@@ -16,6 +16,11 @@ export const PaginationItem = ({ children, current, disabled, onClick, url, }) =
       evt.preventDefault();
       onClick();
     }
+  };
+
+  const attrs = {};
+  if (!url) {
+    attrs.role = 'button';
   }
 
   return (
@@ -25,7 +30,7 @@ export const PaginationItem = ({ children, current, disabled, onClick, url, }) =
         className={classNames}
         href={url || '#'}
         onClick={handleClick}
-        role={!url && 'button'}
+        {...attrs}
       >
         {children}
       </a>

@@ -10,8 +10,8 @@ export default {
     itemsTotalCount: 505,
     currentPage: 1,
     // onClickPage: (num) => console.log('clicked', num),
-    pageCount: 10,
-    pageSize: 51,
+    pageCount: 15,
+    pageSize: 50,
     pageURLFn: (page) => `//example.com/${page}`,
   }
 };
