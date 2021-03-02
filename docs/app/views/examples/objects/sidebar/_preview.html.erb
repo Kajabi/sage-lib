@@ -1,53 +1,29 @@
-<%= sage_component SageSidebar, {
-  id: "sage-sidebar-menu",
-} do %>
-  <%= sage_component SageNav, {} do %>
-    <%= sage_component SageNavLink, {
-      link: "#",
-      text: "Nav Link 1",
-    } %>
-    <%= sage_component SageNavLink, {
-      link: "#",
-      text: "Nav Link 2",
-    } %>
-    <%= sage_component SageNavLink, {
-      link: "#",
-      text: "Nav Link 3",
-    } %>
-    <div class="sage-nav__list sage-nav__list--sub">
-      <%= sage_component SageNavLink, {
-        link: "#",
-        text: "Nav Sub Link 1",
-        type: "sub"
-      } %>
-      <%= sage_component SageNavLink, {
-        link: "#",
-        text: "Nav Sub Link 2",
-        type: "sub"
-      } %>
-      <%= sage_component SageNavLink, {
-        link: "#",
-        text: "Nav Sub Link 3",
-        type: "sub"
-      } %>
-    </div>
-    <%= sage_component SageNavLink, {
-      link: "#",
-      text: "Nav Link 4",
-    } %>
-    <%= sage_component SageNavLink, {
-      link: "#",
-      text: "Nav Link 5",
-    } %>
-  <% end %>
-  <% content_for :sidebar_footer do %>
-    <%= sage_component SageNavLink, {
-      link: "#",
-      text: "Footer Link 1",
-    } %>
-    <%= sage_component SageNavLink, {
-      link: "#",
-      text: "Footer Link 2",
-    } %>
-  <% end %>
+<%= sage_component SageSidebar, { id: "sample-sidebar" } do %>
+  <%= sage_component SageNav, {
+    aria_label: "Example Navigation",
+    items: [
+      { link: "#", text: "Website", icon: 'monitor', items: [
+        {
+          text: "Design",
+          link: "#",
+          active: true,
+        },
+        {
+          text: "Pages",
+          link: "#",
+        },
+        {
+          text: "Blog",
+          link: "#",
+        },
+        {
+          text: "Analytics",
+          link: "#",
+        }
+      ] },
+      { link: "#", text: "Products", icon: 'product' },
+      { link: "#", text: "Marketing", icon: 'megaphone' },
+      { link: "#", text: "People", icon: 'user-circle' }
+    ]
+  } %>
 <% end %>

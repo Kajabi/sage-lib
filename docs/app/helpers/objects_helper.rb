@@ -180,8 +180,8 @@ module ObjectsHelper
         description: "Nav is a hierarchical, vertical navigation and can include nested menu items.",
         scss: "done",
         docs: "done",
-        rails: "doing",
-        react: "todo",
+        rails: "done",
+        react: "no",
         a11y: "todo"
       },
       {
@@ -242,8 +242,8 @@ module ObjectsHelper
         description: "The sidebar object is a fixed, vertical panel that typica11y displays navigation and/or page hierarchy.",
         scss: "done",
         docs: "done",
-        rails: "doing",
-        react: "todo",
+        rails: "done",
+        react: "no",
         a11y: "todo"
       },
       {

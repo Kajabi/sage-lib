@@ -8,9 +8,9 @@ end
   <div class="sage-sidebar__body">
     <%= component.content %>
   </div>
-  <% if content_for? :sidebar_footer %>
+  <% if content_for? :sage_sidebar_footer %>
     <div class="sage-sidebar__footer">
-      <%= content_for :sidebar_footer %>
+      <%= yield :sage_sidebar_footer %>
     </div>
   <% end %>
 </div>

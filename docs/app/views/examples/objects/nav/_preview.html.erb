@@ -1,44 +1,14 @@
 <%= sage_component SageNav, {
-  aria_label: "My Aria Label",
-} do %>
-  <%= sage_component SageNavLink, { 
-    link: "#",
-    text: "Nav Link 1", 
-  } %>
-  <%= sage_component SageNavLink, { 
-    link: "#",
-    text: "Nav Link 2", 
-  } %>
-  <%= sage_component SageNavLink, { 
-    link: "#",
-    text: "Nav Link 3", 
-  } %>
-  <div class="sage-nav__list sage-nav__list--sub">
-    <%= sage_component SageNavLink, { 
-      link: "#",
-      text: "Nav Sub Link 1", 
-      type: "sub"
-    }
-    %>
-    <%= sage_component SageNavLink, { 
-      link: "#",
-      text: "Nav Sub Link 2", 
-      type: "sub"
-    }
-    %>
-    <%= sage_component SageNavLink, { 
-      link: "#",  
-      text: "Nav Sub Link 3", 
-      type: "sub"
-    }
-    %>
-  </div>
-  <%= sage_component SageNavLink, { 
-    link: "#",
-    text: "Nav Link 4", 
-  } %>
-  <%= sage_component SageNavLink, { 
-    link: "#",
-    text: "Nav Link 5", 
-  } %>
-<% end %>
+  aria_label: "Example Navigation",
+  items: [
+    { link: "#", text: "Nav Link 1", active: true },
+    { link: "#", text: "Nav Link 2" },
+    { link: "#", text: "Nav Link 3", items: [
+      { link: "#", text: "Nav Sub Link 1", type: "sub" },
+      { link: "#", text: "Nav Sub Link 2", type: "sub" },
+      { link: "#", text: "Nav Sub Link 3", type: "sub" }
+    ]},
+    { link: "#", text: "Nav Link 4" },
+    { link: "#", text: "Nav Link 5" }
+  ]
+} %>
