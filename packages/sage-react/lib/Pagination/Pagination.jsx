@@ -35,7 +35,7 @@ export const Pagination = ({
     localPageCount = 1;
   }
 
-  // Determin markup properties
+  // Determine markup properties
   const hasMultiplePages = localPageCount > 1;
   const Tagname = hasMultiplePages ? 'nav' : 'div';
   const attrs = {};
