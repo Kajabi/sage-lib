@@ -336,9 +336,9 @@
 /// @param {string} $active-class [".sage-tab--active"] class for an active state on the elememnt
 ///
 @mixin sage-tab-underline($active-class: ".sage-tab--active") {
-  $item-underline: "::after";
+  $item-underline: "after";
 
-  &#{$item-underline} {
+  &::#{$item-underline} {
     $spacing-off: 50%;
 
     content: "";
@@ -352,14 +352,14 @@
     transition: right map-get($sage-transitions, default), left map-get($sage-transitions, default);
   }
 
-  &:focus#{$item-underline} {
+  &:focus::#{$item-underline} {
     left: 0;
     right: 0;
   }
 
   &:active,
   &#{$active-class} {
-    &#{$item-underline} {
+    &::#{$item-underline} {
       left: 0;
       right: 0;
     }

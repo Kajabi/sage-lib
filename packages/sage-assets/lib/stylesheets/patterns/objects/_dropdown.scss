@@ -10,7 +10,7 @@ $-dropdown-width: rem(280px);
 $-dropdown-width-small: rem(200px);
 $-dropdown-item-focus-line-spacing-x: sage-spacing(sm);
 
-$-dropdown-option-el-underline: "::after";
+$-dropdown-option-el-underline: "after";
 $-dropdown-option-menu-size: rem(40px);
 
 $-dropdown-panel-max-height: rem(400px);
@@ -103,7 +103,7 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
 
   @extend %t-sage-body;
 
-  &#{$-dropdown-option-el-underline} {
+  &::#{$-dropdown-option-el-underline} {
     $-focus-offset: 50%;
     content: "";
     display: block;
@@ -126,17 +126,17 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
     z-index: sage-z-index(modal);
     outline: none;
 
-    &#{$-dropdown-option-el-underline} {
+    &::#{$-dropdown-option-el-underline} {
       right: $-dropdown-item-focus-line-spacing-x;
       left: $-dropdown-item-focus-line-spacing-x;
     }
   }
 
-  &:focus-within#{$-dropdown-option-el-underline} {
+  &:focus-within::#{$-dropdown-option-el-underline} {
     border-bottom-color: currentColor;
   }
 
-  &:active#{$-dropdown-option-el-underline} {
+  &:active::#{$-dropdown-option-el-underline} {
     border-bottom-color: sage-color(primary);
   }
 }
@@ -150,7 +150,7 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
 }
 
 .sage-dropdown__item--disabled {
-  &:active#{$-dropdown-option-el-underline} {
+  &:active::#{$-dropdown-option-el-underline} {
     border-bottom-color: transparent;
   }
 }
