@@ -84,6 +84,7 @@ module ObjectsHelper
         rails: "done",
         react: "todo",
         a11y: "done",
+        react_component_slug: "sage-datacard--default"
       },
       {
         title: "dropdown",
