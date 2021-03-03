@@ -8,7 +8,7 @@ export default {
   component: Type,
 };
 
-export const Default = (args) => (
+export const Default = () => (
   <Grid container={Grid.CONTAINER_SIZES.SM}>
     <Type>
       <h1>Lorem ipsum dolor sit</h1>
