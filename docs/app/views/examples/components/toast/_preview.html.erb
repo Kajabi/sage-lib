@@ -10,6 +10,7 @@
   <%= sage_component SageButton, {
     value: "Danger Toast",
     style: "danger",
+    raised: true,
     attributes: {
       "onClick": "Sage.toast.trigger({icon: 'danger', text: 'Danger toast created.', type: 'danger'})",
     },
@@ -25,21 +26,8 @@
   } %>
 
   <%= sage_component SageButton, {
-    value: "Custom Timer: 1 Second",
-    style: "secondary",
-    raised: true,
-    attributes: {
-      "onClick": "Sage.toast.trigger({text: 'This toast has a 1 second timer.', timer: 1000, icon: 'drop'})",
-    },
-  } %>
-<% end %>
-
-<hr/>
-
-<%= sage_component SageButtonGroup, { gap: :sm } do %>
-  <%= sage_component SageButton, {
     value: "Toast With Link",
-    style: "primary",
+    style: "secondary",
     raised: true,
     attributes: {
       "onClick": "Sage.toast.trigger({text: 'Congratulations on your success', link: {text: 'Go to next step', href: 'http://app.kajabi.com'}})",
@@ -55,7 +43,25 @@
     style: "primary",
     raised: true,
     attributes: {
-      "onClick": "alert('TOAST ID: ' + Sage.toast.trigger({text: 'I will not dismiss via timer', timer: false}))",
+      "onClick": "let toastId = Sage.toast.trigger({text: 'I will not dismiss via timer', timer: false}); alert(`Toast id:\n ${toastId} \n\n Dismiss with:\n Sage.toast.dismiss('${toastId}')`)",
+    },
+  } %>
+
+  <%= sage_component SageButton, {
+    value: "Dismiss All",
+    style: "danger",
+    raised: true,
+    attributes: {
+      "onClick": "Sage.toast.dismissAll()",
+    },
+  } %>
+
+  <%= sage_component SageButton, {
+    value: "Reset (Remove DOM Nodes)",
+    style: "danger",
+    raised: true,
+    attributes: {
+      "onClick": "Sage.toast.reset()",
     },
   } %>
 <% end %>

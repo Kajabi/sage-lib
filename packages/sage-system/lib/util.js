@@ -40,7 +40,7 @@ Sage.util = (function(Sage) {
     nodelistToArray: nodelistToArray,
     isEmptyString: isEmptyString,
     isIE: isIE,
-    ajaxRequestWithJsInjection: ajaxRequestWithJsInjection,
+    ajaxRequestWithJsInjection: ajaxRequestWithJsInjection
   };
 
 })(Sage);

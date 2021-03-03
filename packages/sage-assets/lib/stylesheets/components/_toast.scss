@@ -7,71 +7,96 @@
 
 $-toast-height-default: rem(68px);
 $-toast-height-mobile: rem(36px);
-$-toast-viewport-spacing-bottom: sage-spacing();
 
+$-toast-breakpoint-default: "screen and (min-width: #{sage-breakpoint(md-min)})";
+$-toast-breakpoint-mobile: "screen and (max-width: #{sage-breakpoint(sm-max)})";
 
-@keyframes sage-toast--slide-in {
+$-toast-viewport-spacing-default: sage-spacing();
+$-toast-viewport-spacing-mobile: sage-spacing(sm);
+
+$-toast-bottom-spacing: sage-spacing(xs);
+
+@keyframes sage-toast--animate-in-default {
   from {
-    transform: translateX(5%);
+    margin-bottom: -$-toast-height-default;
     opacity: 0;
   }
   to {
-    transform: translateX(0);
+    margin-bottom: $-toast-bottom-spacing;
     opacity: 1;
   }
 }
 
+@keyframes sage-toast--animate-in-mobile {
+  from {
+    margin-bottom: -$-toast-height-mobile;
+    opacity: 0;
+  }
+  to {
+    margin-bottom: $-toast-bottom-spacing;
+    opacity: 1;
+  }
+}
+
+.sage-toast-container {
+  display: flex;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  flex-direction: column;
+  align-items: flex-end;
+
+  @media #{$-toast-breakpoint-default} {
+    padding-bottom: $-toast-viewport-spacing-default - $-toast-bottom-spacing;
+    padding-left: $-toast-viewport-spacing-default;
+    padding-right: $-toast-viewport-spacing-default;
+  }
+
+  @media #{$-toast-breakpoint-mobile} {
+    padding-bottom: $-toast-viewport-spacing-mobile - $-toast-bottom-spacing;
+    padding-left: $-toast-viewport-spacing-mobile;
+    padding-right: $-toast-viewport-spacing-mobile;
+  }
+}
 
 .sage-toast {
   display: flex;
-  z-index: sage-z-index(modal, +1);
-  position: fixed;
+  z-index: sage-z-index(priority);
+  position: relative;
   align-items: center;
+  margin-bottom: $-toast-bottom-spacing;
+  padding-top: sage-spacing(xs);
+  padding-bottom: sage-spacing(xs);
   padding: 0 sage-spacing(md);
   border-radius: sage-border(radius-large);
   box-shadow: sage-shadow(lg);
   background-color: sage-color(charcoal);
-  transition:
-    bottom map-get($sage-transitions, default),
-    transform map-get($sage-transitions, default),
-    opacity map-get($sage-transitions, default);
-  animation: 0.5s sage-toast--slide-in ease;
+  animation: 0.5s ease;
 
-  @mixin generate-stacked-toast-alignment($toast-height) {
-    @for $index from 1 through 20 {
-      &:not(.sage-toast--animate-out):nth-of-type(#{$index + 1}) {
-        bottom: $-toast-viewport-spacing-bottom + ((sage-spacing(xs) + $toast-height) * $index);
-      }
-    }
-  }
-
-  @media screen and (max-width: sage-breakpoint(sm-max)) {
-    @include position(auto, sage-spacing(xs), $-toast-viewport-spacing-bottom, sage-spacing(xs));
-    height: $-toast-height-mobile;
-    width: auto;
-    padding: 0 sage-spacing(xs);
-
-    @include generate-stacked-toast-alignment($-toast-height-mobile);
-  }
-
-  @media screen and (min-width: sage-breakpoint(md-min)) {
-    @include position(auto, sage-spacing(lg), $-toast-viewport-spacing-bottom, auto);
-    height: $-toast-height-default;
+  @media #{$-toast-breakpoint-default} {
+    min-height: $-toast-height-default;
     width: auto;
     min-width: rem(350px);
-    padding: 0 sage-spacing(lg);
+    padding-left: sage-spacing(lg);
+    padding-right: sage-spacing(lg);
+    animation-name: sage-toast--animate-in-default;
+  }
 
-    @include generate-stacked-toast-alignment($-toast-height-default);
+  @media #{$-toast-breakpoint-mobile} {
+    min-height: $-toast-height-mobile;
+    width: fit-content;
+    padding-left: sage-spacing(xs);
+    padding-right: sage-spacing(xs);
+    animation-name: sage-toast--animate-in-mobile;
   }
 
   &.sage-toast--style-danger {
     background-color: sage-color(red, 400);
   }
 
-  &.sage-toast--animate-out {
-    transform: translateY(5%);
-    z-index: sage-z-index(modal, 0);
-    opacity: 0;
+  &.sage-toast--dismissed {
+    display: none;
+    visibility: hidden;
   }
 }
 

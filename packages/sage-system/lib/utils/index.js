@@ -1,5 +1,6 @@
-export function generateId() {
-  return Math.floor(Math.random() * 10000);
+export function generateId(prefix) {
+  const hash = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+  return `${prefix}-${hash}`;
 };
 
 export function stringToHtmlFragment(string) {
