@@ -199,7 +199,8 @@ module ObjectsHelper
         docs: "done",
         rails: "done",
         react: "done",
-        a11y: "done"
+        a11y: "done",
+        react_component_slug: "sage-pageheading--default"
       },
       {
         title: "pagination",
@@ -218,7 +219,8 @@ module ObjectsHelper
         docs: "done",
         rails: "done",
         react: "done",
-        a11y: "done"
+        a11y: "done",
+        react_component_slug: "sage-panel--default"
       },
       {
         title: "panel_controls",
@@ -227,7 +229,8 @@ module ObjectsHelper
         docs: "doing",
         rails: "doing",
         react: "todo",
-        a11y: "doing"
+        a11y: "doing",
+        react_component_slug: "sage-panelcontrols--default"
       },
       {
         title: "popover",
@@ -263,7 +266,8 @@ module ObjectsHelper
         docs: "todo",
         rails: "todo",
         react: "todo",
-        a11y: "todo"
+        a11y: "todo",
+        react_component_slug: "sage-tabs--default"
       },
       {
         title: "transaction_card",
@@ -272,6 +276,7 @@ module ObjectsHelper
         rails: "todo",
         react: "todo",
         a11y: "todo",
+        react_component_slug: "sage-transactioncard--default"
       },
       {
         title: "typeahead",
@@ -289,7 +294,8 @@ module ObjectsHelper
         docs: "done",
         rails: "todo",
         react: "done",
-        a11y: "todo"
+        a11y: "todo",
+        react_component_slug: "sage-uploadcard--default"
       },
     ]
   end
