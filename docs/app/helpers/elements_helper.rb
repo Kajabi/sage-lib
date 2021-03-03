@@ -262,7 +262,8 @@ module ElementsHelper
         docs: "done",
         rails: "done",
         react: "todo",
-        a11y: "todo"
+        a11y: "todo",
+        react_component_slug: "sage-tooltip--default"
       },
     ]
   end

@@ -1,30 +1,34 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { withKnobs, text, select } from '@storybook/addon-knobs';
+import { selectArgs } from '../story-support/helpers';
 import { TransactionCard } from './TransactionCard';
 
-storiesOf('Sage/TransactionCard', module)
-  .addDecorator(withKnobs)
-  .add(
-    'Default',
-    () => (
-      <TransactionCard
-        labelColor={select('Label Color', TransactionCard.LABEL_COLORS)}
-        labelText={text('Label Text', 'New')}
-        name={text('Name', 'Lilly Jones')}
-        amount={text('Amount', '+ $148.00')}
-        amountColor={select('Amount Color', TransactionCard.AMOUNT_COLORS)}
-        productName={text('Product Name', 'Total Product Blueprint')}
-        transactionTime={text('Transaction Time', '10:32pm')}
-        dropdownOptions={[
-          {
-            id: 1,
-            label: 'View contact profile',
-            icon: 'user-circle',
-            href: '#',
-          },
-        ]}
-      />
-    ),
-    {}
-  );
+export default {
+  title: 'Sage/TransactionCard',
+  component: TransactionCard,
+  argTypes: {
+    ...selectArgs({
+      amountColor: TransactionCard.AMOUNT_COLORS,
+      labelColor: TransactionCard.LABEL_COLORS,
+    }),
+  },
+  args: {
+    amount: '+ $148.00',
+    amountColor: TransactionCard.AMOUNT_COLORS.DEFAULT,
+    dropdownOptions: [
+      {
+        id: 1,
+        label: 'View contact profile',
+        icon: 'user-circle',
+        href: '#',
+      },
+    ],
+    labelColor: TransactionCard.LABEL_COLORS.INFO,
+    labelText: 'New',
+    name: 'Lilly Jones',
+    productName: 'Total Product Blueprint',
+    transactionTime: '10:32pm'
+  }
+};
+const Template = (args) => <TransactionCard {...args} />;
+
+export const Default = Template.bind({});
