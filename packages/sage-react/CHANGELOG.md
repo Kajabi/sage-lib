@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.33.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.32.0...@kajabi/sage-react@0.33.0) (2021-03-03)
+
+
+### Bug Fixes
+
+* **pagination:** lint work ([31fa634](https://github.com/Kajabi/sage-lib/commit/31fa634dd0c6bdfb451c66edfb80df998cfcb7e8))
+
+
+### Features
+
+* **pagination:** wip adding react component ([44df9b9](https://github.com/Kajabi/sage-lib/commit/44df9b981433a4ab84ef3d0748202b070ed95035))
+* **pagination:** wrap up react work ([2b8ba05](https://github.com/Kajabi/sage-lib/commit/2b8ba0523292c1716cdb24ffbf6ff57ebab3b9ea))
+* **react:** add pluralize library ([27438ee](https://github.com/Kajabi/sage-lib/commit/27438ee2be9c47285c72581cb8cf23075c55db9b))
+
+
+
+
+
 # [0.32.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.31.2...@kajabi/sage-react@0.32.0) (2021-03-02)
 
 

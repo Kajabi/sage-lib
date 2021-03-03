@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.17.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.16.0...@kajabi/sage@3.17.0) (2021-03-03)
+
+
+### Bug Fixes
+
+* **docs:** update language prefacing sassdocs link ([f343415](https://github.com/Kajabi/sage-lib/commit/f343415e4d0e30456a4dc3e34c00c3aa559862b7))
+
+
+### Features
+
+* **pagination:** wrap up react work ([2b8ba05](https://github.com/Kajabi/sage-lib/commit/2b8ba0523292c1716cdb24ffbf6ff57ebab3b9ea))
+
+
+
+
+
 # [3.16.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.15.0...@kajabi/sage@3.16.0) (2021-03-02)
 
 
