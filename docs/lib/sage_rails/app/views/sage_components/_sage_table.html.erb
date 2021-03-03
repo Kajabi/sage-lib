@@ -5,6 +5,7 @@ is_responsive = component.responsive.present? ? component.responsive : true
   sage-table-wrapper
   <%= "sage-table-wrapper--reset-above" if component.reset_above %>
   <%= "sage-table-wrapper--reset-below" if component.reset_below %>
+  <%= "sage-table-wrapper--scroll" if is_responsive %>
 ">
   <% if is_responsive %>
     <div class="sage-table-wrapper__overflow">
@@ -63,7 +64,7 @@ is_responsive = component.responsive.present? ? component.responsive : true
                   data-cell-key="<%= key %>"
                   <% value[:html_attributes].each do | k, v | %>
                     <%= "#{k}=#{v}" %>
-                  <% end if value&.is_a?(Hash) && value[:html_attributes].present? %>  
+                  <% end if value&.is_a?(Hash) && value[:html_attributes].present? %>
                 >
                   <%= value&.is_a?(Hash) ? value[:value].html_safe : value.html_safe %>
                 </td>

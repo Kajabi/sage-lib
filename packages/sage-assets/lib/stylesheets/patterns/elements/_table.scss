@@ -45,7 +45,7 @@ $-table-sort-indicator-direction: rem(7px);
 .sage-table {
   width: 100%;
   max-width: $-table-max-width;
-  
+
   caption {
     @extend #{$-table-caption-font-size};
 
@@ -65,7 +65,7 @@ $-table-sort-indicator-direction: rem(7px);
       &:first-child {
         padding-left: $-table-cell-padding-panel;
       }
-  
+
       &:last-child {
         padding-right: $-table-cell-padding-panel;
       }
@@ -217,7 +217,7 @@ $-table-sort-indicator-direction: rem(7px);
       &:first-child {
         padding-left: $-table-cell-padding-card;
       }
-  
+
       &:last-child {
         padding-right: $-table-cell-padding-card;
       }
@@ -232,12 +232,21 @@ $-table-sort-indicator-direction: rem(7px);
         &:first-child {
           padding-left: $-table-cell-padding-card;
         }
-    
+
         &:last-child {
           padding-right: $-table-cell-padding-card;
         }
       }
     }
+  }
+}
+
+.sage-table-wrapper--scroll {
+  .sage-card &,
+  .sage-panel & {
+    overflow: hidden;
+    overflow-y: visible;
+    max-width: calc(100% + #{ 2 * $-table-cell-padding-card});
   }
 }
 
