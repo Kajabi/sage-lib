@@ -1,8 +1,9 @@
-/* ==================================================
-  ** live_avatar
-  type: object
+////
+/// Avatar
+///
+/// @group sage
+////
 
-================================================== */
 
 $-avatar-min-size: rem(32px);
 $-avatar-max-size: rem(128px);
@@ -41,10 +42,12 @@ $-avatar-group-item-sizes: (
   4: rem(16px),
 );
 
+
 @mixin avatar-scaling($size: 100%) {
   width: $size;
   height: $size;
 }
+
 
 .sage-avatar {
   display: grid;

@@ -1,8 +1,9 @@
-/* ==================================================
-  ** page_heading
-  type: object
+////
+/// Page Heading
+///
+/// @group sage
+////
 
-================================================== */
 
 .sage-page-heading {
   display: grid;
@@ -59,7 +60,6 @@
 
   // NOTE: Icon generation consolidated in `core/_icons.scss`
 }
-
 
 .sage-page-heading__actions {
   display: flex;

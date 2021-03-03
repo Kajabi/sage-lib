@@ -1,15 +1,16 @@
-/* ==================================================
-  ** label
-  type: element
+////
+/// Label
+///
+/// @group sage
+////
 
-
-================================================== */
 
 $-label-interactive-icon-size: rem(24px);
 $-label-interactive-icon-size-small: rem(28px);
 $-label-padding: 0 sage-spacing(xs);
 $-label-border-radius: sage-border(radius);
 $-label-inset-border: 0 0 0 1px inset;
+
 
 .sage-label {
   display: inline-flex;

@@ -1,14 +1,16 @@
-/* ==================================================
-  ** _overlay.scss
+////
+/// Overlay
+///
+/// @group sage
+////
 
-
-================================================== */
 
 $-overlay-bg-color: rgba(sage-color(charcoal, 100), 0.5);
 $-overlay-backdrop-filter: blur(rem(2px));
 $-overlay-z-index: sage-z-index(underlay);
 $-overlay-transition-default: opacity 0.5s ease-in-out;
 $-overlay-transition-backdrop-filter: backdrop-filter 0.7s ease-in-out;
+
 
 .sage-overlay {
   visibility: hidden;

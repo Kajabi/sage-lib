@@ -1,12 +1,12 @@
-/* ==================================================
-  ** input group
-  type: object
+////
+/// Input Group
+///
+/// @group sage
+////
 
-================================================== */
 
 $-input-group-border-radius: map-get($sage-field-configs, border-radius);
-$-pw-field-button-color-text-hover: sage-color(black);
-$-pw-font-size-sm: sage-font-size(sm);
+$-input-group-pw-field-button-color-text-hover: sage-color(black);
 
 
 .sage-input-group {
@@ -60,7 +60,7 @@ $-pw-font-size-sm: sage-font-size(sm);
   &:hover,
   &:focus,
   &:active {
-    color: $-pw-field-button-color-text-hover;
+    color: $-input-group-pw-field-button-color-text-hover;
   }
 
   &:focus:not(:disabled):not([aria-disabled=true]),

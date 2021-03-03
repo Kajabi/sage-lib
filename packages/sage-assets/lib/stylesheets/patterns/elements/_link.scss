@@ -1,3 +1,10 @@
+////
+/// Link modifiers
+///
+/// @group sage
+////
+
+
 .sage-link--launch,
 .sage-type a[target="_blank"]:not(.sage-link--no-launch) {
   &::after {

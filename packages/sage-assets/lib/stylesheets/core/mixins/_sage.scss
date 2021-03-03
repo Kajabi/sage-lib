@@ -4,6 +4,7 @@
 /// @group sage
 ////
 
+
 ///
 /// Adds bottom margin or undoes bottom margin on `.no-margin-bottom` or `:last-child` elements of parent selector
 ///
@@ -17,7 +18,6 @@
     margin-bottom: 0;
   }
 }
-
 
 ///
 /// Resets base button styles
@@ -50,13 +50,27 @@
 }
 
 ///
+/// Sets up styles for sage "copy" (system) text.
+///
+@mixin sage-copy-text() {
+  @extend %t-sage-body-small;
+
+  @include truncate();
+
+  color: sage-color(charcoal, 400);
+  background-color: sage-color(grey, 200);
+  border: $-copy-text-border;
+  border-radius: sage-border(radius);
+}
+
+///
 /// Generates icon variations for buttons
 ///
 /// @param {string} $icon-name Name of the icon from the system icon library
 /// @param {string} $icon-code They code form of the icon
 /// @param {string(left|right|only)} $direction An inline direction indicator
 ///
-@mixin button-icon-generator($icon-name, $icon-code, $direction) {
+@mixin sage-button-icon-generator($icon-name, $icon-code, $direction) {
   // --- Right Icon Buttons
   @if $direction == right {
     .sage-btn--icon-right-#{$icon-name} {
@@ -208,7 +222,6 @@
   grid-template-rows: min-content;
 }
 
-
 ///
 /// Sets up a generic content stack that uses standard stack spacing (8px)
 ///
@@ -219,7 +232,6 @@
   grid-template-rows: min-content;
   justify-items: start;
 }
-
 
 ///
 /// Sets up a grid stack that uses panel-scoped spacing (24px)
@@ -324,9 +336,9 @@
 /// @param {string} $active-class [".sage-tab--active"] class for an active state on the elememnt
 ///
 @mixin sage-tab-underline($active-class: ".sage-tab--active") {
-  $item-underline: "::after";
+  $item-underline: "after";
 
-  &#{$item-underline} {
+  &::#{$item-underline} {
     $spacing-off: 50%;
 
     content: "";
@@ -340,14 +352,14 @@
     transition: right map-get($sage-transitions, default), left map-get($sage-transitions, default);
   }
 
-  &:focus#{$item-underline} {
+  &:focus::#{$item-underline} {
     left: 0;
     right: 0;
   }
 
   &:active,
   &#{$active-class} {
-    &#{$item-underline} {
+    &::#{$item-underline} {
       left: 0;
       right: 0;
     }

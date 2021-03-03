@@ -40,9 +40,9 @@ $-icon-font-path: "../fonts/sage";
   }
 
   // Other icons generated here
-  @include button-icon-generator($icon-name, $icon-code, only);
-  @include button-icon-generator($icon-name, $icon-code, left);
-  @include button-icon-generator($icon-name, $icon-code, right);
+  @include sage-button-icon-generator($icon-name, $icon-code, only);
+  @include sage-button-icon-generator($icon-name, $icon-code, left);
+  @include sage-button-icon-generator($icon-name, $icon-code, right);
 
   .sage-choice--icon-#{$icon-name}::before {
     @include sage-icon-base($icon-name);
