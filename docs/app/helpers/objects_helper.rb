@@ -208,7 +208,8 @@ module ObjectsHelper
         docs: "done",
         rails: "todo",
         react: "todo",
-        a11y: "todo"
+        a11y: "todo",
+        react_component_slug: "sage-pagination--default"
       },
       {
         title: "panel",

@@ -28,6 +28,7 @@ export { Link } from './Link';
 export { Loader } from './Loader';
 export { Modal } from './Modal';
 export { PageHeading } from './PageHeading';
+export { Pagination } from './Pagination';
 export { Panel } from './Panel';
 export { PanelControls } from './PanelControls';
 export { Popover } from './Popover';
