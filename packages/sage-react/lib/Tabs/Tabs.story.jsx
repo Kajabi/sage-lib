@@ -18,7 +18,7 @@ export default {
   }
 };
 
-export const  Default = () => {
+export const Default = () => {
   const [initialActiveId, setDefaultActiveId] = useState(null);
   const buttonConfigs = {
     icon: SageTokens.ICONS.CARET_RIGHT,
@@ -88,7 +88,7 @@ export const  Default = () => {
       tabLayout={Tabs.LAYOUTS.DEFAULT}
     />
   );
-}
+};
 
 const Template = (args) => <Tabs {...args} />;
 
@@ -125,4 +125,3 @@ RichContent.args = {
   ],
   tabStyle: Tabs.STYLES.CHOICE
 };
-
