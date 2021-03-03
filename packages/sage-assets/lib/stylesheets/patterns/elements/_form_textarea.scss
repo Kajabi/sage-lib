@@ -1,8 +1,8 @@
-/* ==================================================
-  ** form_textarea
-  type: element
-
-================================================== */
+////
+/// Form Textarea
+///
+/// @group sage
+////
 
 // Border
 $-textarea-border-radius: map-get($sage-field-configs, border-radius);
@@ -30,6 +30,7 @@ $-textarea-color-disabled-background: map-get($sage-field-colors, disabled-backg
 $-textarea-color-error: map-get($sage-field-colors, error);
 $-textarea-color-label-background: $-textarea-color-default-background;
 $-textarea-color-success: map-get($sage-field-colors, success);
+
 
 .sage-textarea {
   position: relative;

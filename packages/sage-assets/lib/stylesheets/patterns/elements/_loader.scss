@@ -1,8 +1,10 @@
-/* ==================================================
-  ** _loader.scss
-  type: element
+////
+/// Loader
+///
+/// @group sage
+////
 
-================================================== */
+
 $-loader-bar-bg-color: sage-color(grey);
 $-loader-bar-height: rem(10px);
 $-loader-bar-speed: 1.2s;

@@ -1,8 +1,8 @@
-/* ==================================================
-  ** _form_select.scss
-  type: element
-
-================================================== */
+////
+/// Form Select
+///
+/// @group sage
+////
 
 $-select-border-radius: map-get($sage-field-configs, border-radius);
 $-select-border-width: map-get($sage-field-configs, border-width);
@@ -40,7 +40,7 @@ $-select-padding-label: map-get($sage-field-configs, padding-label);
 
 .sage-select__label {
   @extend %t-sage-body;
-  z-index: sage-z-index(default, 1);
+  z-index: sage-z-index(default, 2);
   position: absolute;
   transform: translateY(-50%);
   padding: 0 $-select-padding-label;

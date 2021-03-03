@@ -1,10 +1,12 @@
-/* ==================================================
-  ** typeahead
-  type: object
+////
+/// Typeahead
+///
+/// @group sage
+////
 
-================================================== */
 
-$-item-height: rem(68px);
+$-typeahead-item-height: rem(68px);
+
 
 .sage-typeahead {
   position: relative;
@@ -37,7 +39,7 @@ $-item-height: rem(68px);
   align-items: center;
   position: relative;
   overflow: hidden;
-  height: $-item-height;
+  height: $-typeahead-item-height;
 
   &:not(:first-child) {
     border-top: sage-border();

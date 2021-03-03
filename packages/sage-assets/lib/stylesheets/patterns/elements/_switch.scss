@@ -1,9 +1,9 @@
-/* ==================================================
-  ** _switch.scss
-  type: element
+////
+/// Switch
+///
+/// @group sage
+////
 
-
-================================================== */
 
 // Colors
 $-switch-color-default: sage-color(grey, 400);
@@ -28,6 +28,7 @@ $-switch-focus-outline-spacing: sage-spacing(2xs);
 $-switch-focus-outline-width: 2;
 $-switch-focus-outline-color: sage-color(primary);
 $-switch-focus-outline-error-color: sage-color(red, 300);
+
 
 .sage-switch {
   display: flex;

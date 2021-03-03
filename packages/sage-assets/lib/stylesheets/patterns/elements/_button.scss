@@ -1,13 +1,13 @@
-/* ==================================================
-  ** _button.scss
-  type: element
+////
+/// Button
+///
+/// @group sage
+////
 
 
-================================================== */
-
-/* stylelint-disable max-nesting-depth */
-
-// Base styles
+//
+// Base style variables
+//
 $-btn-transition: map-get($sage-transitions, default);
 $-btn-border-radius: sage-border(radius);
 $-btn-shadow-base: sage-shadow(sm);
@@ -92,8 +92,13 @@ $-btn-subtle-styles: (
   ),
 );
 
+//
 // Custom variables
-$-label-interactive-icon-size: rem(24px);
+//
+$-btn-interactive-label-icon-size: rem(24px);
+
+
+// stylelint-disable max-nesting-depth
 
 .sage-btn {
   @extend %t-sage-body-med;
@@ -156,14 +161,14 @@ $-label-interactive-icon-size: rem(24px);
     justify-content: center;
     position: absolute;
     right: 0;
-    width: $-label-interactive-icon-size;
-    min-height: $-label-interactive-icon-size;
+    width: $-btn-interactive-label-icon-size;
+    min-height: $-btn-interactive-label-icon-size;
     margin: auto 0;
     border-radius: 0 sage-border(radius) sage-border(radius) 0;
 
     &::after {
-      width: $-label-interactive-icon-size;
-      height: $-label-interactive-icon-size;
+      width: $-btn-interactive-label-icon-size;
+      height: $-btn-interactive-label-icon-size;
       border-radius: 0 sage-border(radius) sage-border(radius) 0;
     }
 
@@ -406,7 +411,6 @@ $-label-interactive-icon-size: rem(24px);
   @extend %t-sage-body-small;
 }
 
-
 // TODO: Investigate deprecating the float setting here
 .sage-btn--align-end {
   align-self: flex-end;
@@ -432,5 +436,3 @@ $-label-interactive-icon-size: rem(24px);
 .sage-btn-group--align-end {
   justify-content: flex-end;
 }
-
-/* stylelint-enable max-nesting-depth */

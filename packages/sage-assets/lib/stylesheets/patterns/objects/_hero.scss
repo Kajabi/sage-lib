@@ -1,16 +1,17 @@
-/* ==================================================
-  ** _hero.scss
-  type: object
+////
+/// Hero
+///
+/// @group sage
+////
 
 
-================================================== */
-
-$-hero-min-height: 268px;
-$-hero-icon-size: 1.5rem;
-$-hero-mobile-aspect-ratio: calc(100% * 9 / 16);
 $-hero-artwork-size: rem(56px);
+$-hero-icon-size: rem(24px);
+$-hero-min-height: rem(268px);
+$-hero-mobile-aspect-ratio: calc(100% * 9 / 16);
 $-hero-play-icon-background-color: rgba(sage-color(white, 100), 0.8);
 $-hero-play-icon-background-color-hover: rgba(sage-color(white, 100), 1);
+
 
 .sage-hero {
   display: grid;

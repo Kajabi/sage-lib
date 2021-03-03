@@ -1,8 +1,9 @@
-/* ==================================================
-  ** null_view
-  type: object
+////
+/// Null View
+///
+/// @group sage
+////
 
-================================================== */
 
 .sage-null-view {
   display: grid;
@@ -18,6 +19,7 @@
     grid-gap: 128px;
   }
 }
+
 .sage-null-view__content {
   display: flex;
   align-items: flex-start;
@@ -31,10 +33,12 @@
     order: 2;
   }
 }
+
 .sage-null-view__title {
   @extend %t-sage-heading-1;
   margin-bottom: sage-spacing();
 }
+
 .sage-null-view__graphic {
   text-align: center;
   @media screen and (min-width: sage-breakpoint(lg-max)) {
@@ -44,6 +48,7 @@
     order: 1;
   }
 }
+
 .sage-null-view--center {
   position: absolute;
   left: 50%;

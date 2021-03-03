@@ -1,11 +1,13 @@
-/* ==================================================
-  ** _modal.scss
-  type: object
+////
+/// Modal
+///
+/// @group sage
+////
 
-================================================== */
 
 $-modal-padding-x: sage-spacing(md);
 $-modal-padding-y: sage-spacing(md);
+
 
 .sage-modal {
   visibility: hidden;

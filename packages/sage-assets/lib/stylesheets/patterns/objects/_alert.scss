@@ -1,8 +1,9 @@
-/* ==================================================
-  ** .sage-alert
-  type: object
+////
+/// Alert
+///
+/// @group sage
+////
 
-================================================== */
 
 $-alert-colors: (
   info: primary,
@@ -16,6 +17,7 @@ $-alert-icon-colors: (
   warning: orange,
   danger: red,
 );
+
 
 .sage-alert {
   display: grid;

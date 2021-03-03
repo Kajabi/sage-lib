@@ -1,13 +1,14 @@
-/* ==================================================
-  ** catalog-item
-  type: object
+////
+/// Catalogue Item
+///
+/// @group sage
+////
 
 
-================================================== */
+$-catalogue-item-image-height-min: rem(64px);
+$-catalogue-item-image-width: rem(120px);
+$-catalogue-item-image-height-mobile: rem(120px);
 
-$-image-height-min: rem(64px);
-$-image-width: rem(120px);
-$-image-height-mobile: rem(120px);
 
 .sage-catalog-item {
   display: grid;
@@ -32,7 +33,7 @@ $-image-height-mobile: rem(120px);
   }
 
   @media (min-width: sage-breakpoint(md-min)) {
-    grid-template-columns: $-image-width 1fr min-content;
+    grid-template-columns: $-catalogue-item-image-width 1fr min-content;
     grid-template-rows: auto auto;
     grid-template-areas:
       "img title aside"
@@ -41,7 +42,7 @@ $-image-height-mobile: rem(120px);
 
   @media (max-width: sage-breakpoint(md-min)) {
     grid-template-columns: 1fr min-content;
-    grid-template-rows: $-image-height-mobile auto auto;
+    grid-template-rows: $-catalogue-item-image-height-mobile auto auto;
     grid-template-areas:
       "img img"
       "title aside"
@@ -71,7 +72,7 @@ $-image-height-mobile: rem(120px);
   position: relative;
   grid-area: img;
   overflow: hidden;
-  min-height: $-image-height-min;
+  min-height: $-catalogue-item-image-height-min;
   background: sage-color(grey, 200);
   border-radius: sage-border(radius);
   border: sage-border();

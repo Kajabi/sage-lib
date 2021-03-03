@@ -1,25 +1,25 @@
-/* ==================================================
-  ** sage-input-helper
-  type: object
+////
+/// Input Helper
+///
+/// @group sage
+////
 
-================================================== */
 
-$-helper-min-height: 5em;
-$-helper-max-width: rem(320px);
-$-helper-padding: sage-spacing(sm);
-$-helper-pointer-size: rem(12px);
-$-helper-color-bg: sage-color(white);
-$-helper-color-text: sage-color(white);
-$-helper-color-list-default: sage-color(grey, 200);
-$-helper-color-list-success: sage-color(grey, 500);
-$-helper-decoration-list-success: line-through;
+$-input-helper-min-height: 5em;
+$-input-helper-max-width: rem(320px);
+$-input-helper-padding: sage-spacing(sm);
+$-input-helper-pointer-size: rem(12px);
+$-input-helper-color-bg: sage-color(white);
+$-input-helper-color-list-success: sage-color(grey, 500);
+$-input-helper-decoration-list-success: line-through;
 
 
 @mixin input-helper-visible() {
   z-index: sage-z_index(raised);
-  top: calc(100% + #{$-helper-pointer-size});
+  top: calc(100% + #{$-input-helper-pointer-size});
   opacity: 1;
 }
+
 
 .sage-input-helper {
   @extend %t-sage-body-small;
@@ -29,10 +29,10 @@ $-helper-decoration-list-success: line-through;
   transform: translateX(-50%);
   left: 50%;
   width: 100%;
-  max-width: $-helper-max-width;
-  min-height: $-helper-min-height;
-  padding: $-helper-padding;
-  background-color: $-helper-color-bg;
+  max-width: $-input-helper-max-width;
+  min-height: $-input-helper-min-height;
+  padding: $-input-helper-padding;
+  background-color: $-input-helper-color-bg;
   border-radius: sage-border(radius);
   box-shadow: sage-shadow(md);
   transition: map-get($sage-transitions, default);
@@ -45,17 +45,17 @@ $-helper-decoration-list-success: line-through;
     content: "";
     display: block;
     position: absolute;
-    top: -$-helper-pointer-size - rem(1px);
+    top: -$-input-helper-pointer-size - rem(1px);
     left: 50%;
     transform: translateX(-50%);
-    border-left: $-helper-pointer-size solid transparent;
-    border-right: $-helper-pointer-size solid transparent;
-    border-bottom: $-helper-pointer-size solid rgba(sage-color(black), 0.08);
+    border-left: $-input-helper-pointer-size solid transparent;
+    border-right: $-input-helper-pointer-size solid transparent;
+    border-bottom: $-input-helper-pointer-size solid rgba(sage-color(black), 0.08);
   }
 
   &::after {
-    top: -#{$-helper-pointer-size};
-    border-bottom-color: $-helper-color-bg;
+    top: -#{$-input-helper-pointer-size};
+    border-bottom-color: $-input-helper-color-bg;
   }
 
   .sage-input:focus-within ~ & {
@@ -89,7 +89,7 @@ $-helper-decoration-list-success: line-through;
 }
 
 .sage-hint__list-item--success {
-  color: $-helper-color-list-success;
-  text-decoration: $-helper-decoration-list-success;
+  color: $-input-helper-color-list-success;
+  text-decoration: $-input-helper-decoration-list-success;
 }
 

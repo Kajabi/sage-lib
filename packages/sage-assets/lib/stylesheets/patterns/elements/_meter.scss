@@ -1,8 +1,9 @@
-/* ==================================================
-  ** meter
-  type: element
+////
+/// Meter
+///
+/// @group sage
+////
 
-================================================== */
 
 $-meter-bar-height: rem(4px);
 $-meter-color-bg: sage-color(grey, 200);
@@ -12,13 +13,16 @@ $-meter-bar-success: rgba(sage-color(sage, 200), 0.9);
 $-meter-bar-max: rgba(sage-color(sage), 0.9);
 $-meter-bar-divider-color: sage-color(white);
 
+
+//
+// Local mixins
+//
 @mixin meter-bar-reset {
   height: $-meter-bar-height;
   width: 100%;
   background: $-meter-color-bg;
   border: 0;
 }
-
 
 @mixin meter-bar-value {
   &::-webkit-meter-optimum-value {
@@ -28,6 +32,7 @@ $-meter-bar-divider-color: sage-color(white);
     @content;
   }
 }
+
 
 .sage-meter {
   position: relative;
