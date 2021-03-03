@@ -1,31 +1,49 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-import { storiesOf } from '@storybook/react';
-import { withKnobs, boolean, text, radios } from '@storybook/addon-knobs';
-import { centerXY } from '../story-support/decorators';
+import { selectArgs } from '../story-support/helpers';
 import { Switch } from './Switch';
+import { Toggle } from './Toggle';
 
-const SwitchWithState = () => {
+export default {
+  title: 'Sage/Switch',
+  component: Switch,
+  decorators: [(Story) => <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}><Story /></div>],
+  argTypes: {
+    ...selectArgs({
+      type: Toggle.TYPES
+    }),
+  },
+  args: {
+    checked: false,
+    disabled: false,
+    hasError: false,
+    label: 'Switch label',
+    message: 'Subtext appears',
+    name: 'switch-demo',
+    value: 'Demo'
+  }
+};
+
+export const Default = (type) => {
   const [on, toggleOn] = useState(false);
   return (
     <div>
       <Switch
         checked={on}
-        disabled={boolean('Disabled', false)}
-        hasError={boolean('Has Error', false)}
+        disabled={false}
+        hasError={false}
         id="switch-demo"
-        label={text('Label', 'Switch label')}
-        message={text('Message', 'Subtext appears')}
+        label="Switch label"
+        message="Subtext appears"
         name="switch-demo"
         onChange={(val, isOn) => toggleOn(!isOn)}
-        type={radios('Type', ['radio', 'checkbox'], 'radio')}
+        type={Toggle.TYPES.RADIO}
         value="Demo"
       />
     </div>
   );
 };
 
-const SwitchesWithState = ({ type }) => {
+export const MultiplesExample = (type) => {
   const items = [
     {
       label: 'Option 1',
@@ -71,7 +89,7 @@ const SwitchesWithState = ({ type }) => {
           key={i.toString()}
           name="group-1"
           onChange={onChange}
-          type={type}
+          type={type.type}
           {...configs}
         />
       ))}
@@ -79,16 +97,6 @@ const SwitchesWithState = ({ type }) => {
   );
 };
 
-SwitchesWithState.propTypes = {
-  type: PropTypes.string.isRequired,
+MultiplesExample.args = {
+  type: Toggle.TYPES.RADIO
 };
-
-storiesOf('Sage/Switch', module)
-  .addDecorator(centerXY)
-  .addDecorator(withKnobs)
-  .add('Default', () => (
-    <SwitchWithState />
-  ))
-  .add('Multiples example', () => (
-    <SwitchesWithState type={radios('Type', ['radio', 'checkbox'], 'radio')} />
-  ));
