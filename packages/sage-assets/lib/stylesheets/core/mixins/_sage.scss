@@ -70,7 +70,7 @@
 /// @param {string} $icon-code They code form of the icon
 /// @param {string(left|right|only)} $direction An inline direction indicator
 ///
-@mixin button-icon-generator($icon-name, $icon-code, $direction) {
+@mixin sage-button-icon-generator($icon-name, $icon-code, $direction) {
   // --- Right Icon Buttons
   @if $direction == right {
     .sage-btn--icon-right-#{$icon-name} {
