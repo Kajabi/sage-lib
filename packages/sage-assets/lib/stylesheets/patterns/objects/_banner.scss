@@ -32,8 +32,7 @@ $-banner-colors: (
     icon: "danger",
   ),
 );
-
-$-icon: "::before";
+$-banner-el-icon: "::before";
 
 
 .sage-banner {
@@ -63,7 +62,7 @@ $-icon: "::before";
     position: relative;
   }
 
-  &#{$-icon} {
+  &#{$-banner-el-icon} {
     @include sage-icon-base(map-get(map-get($-banner-colors, default), icon));
     margin-right: sage-spacing(xs);
   }
@@ -74,7 +73,7 @@ $-icon: "::before";
     color: map-get($configs, text);
     background: map-get($configs, background);
 
-    &#{$-icon} {
+    &#{$-banner-el-icon} {
       content: sage-icon(map-get($configs, icon));
     }
   }

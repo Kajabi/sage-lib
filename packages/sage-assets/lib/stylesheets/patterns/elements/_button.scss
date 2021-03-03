@@ -95,7 +95,7 @@ $-btn-subtle-styles: (
 //
 // Custom variables
 //
-$-label-interactive-icon-size: rem(24px);
+$-btn-interactive-label-icon-size: rem(24px);
 
 
 // stylelint-disable max-nesting-depth
@@ -161,14 +161,14 @@ $-label-interactive-icon-size: rem(24px);
     justify-content: center;
     position: absolute;
     right: 0;
-    width: $-label-interactive-icon-size;
-    min-height: $-label-interactive-icon-size;
+    width: $-btn-interactive-label-icon-size;
+    min-height: $-btn-interactive-label-icon-size;
     margin: auto 0;
     border-radius: 0 sage-border(radius) sage-border(radius) 0;
 
     &::after {
-      width: $-label-interactive-icon-size;
-      height: $-label-interactive-icon-size;
+      width: $-btn-interactive-label-icon-size;
+      height: $-btn-interactive-label-icon-size;
       border-radius: 0 sage-border(radius) sage-border(radius) 0;
     }
 

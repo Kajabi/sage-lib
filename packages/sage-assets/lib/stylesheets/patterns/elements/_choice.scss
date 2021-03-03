@@ -5,9 +5,9 @@
 ////
 
 
-$item-radio: "before";
-$item-icon: "before";
-$item-arrow: "before";
+$-choice-el-radio: "before";
+$-choice-el-icon: "before";
+$-choice-el-arrow: "before";
 
 $-choice-color-default: map-get($sage-tab-colors, default);
 $-choice-color-active: map-get($sage-tab-colors, active);
@@ -119,7 +119,7 @@ $-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
 .sage-choice--arrow {
   flex-flow: row-reverse;
 
-  &::#{$item-arrow} {
+  &::#{$-choice-el-arrow} {
     @include sage-icon-base(caret-right, lg);
 
     margin: 0 0 0 sage-spacing(sm);
@@ -129,14 +129,14 @@ $-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
 
   &:active,
   &.sage-choice--active {
-    &::#{$item-arrow} {
+    &::#{$-choice-el-arrow} {
       color: sage-color(primary);
     }
   }
 }
 
 [class*="sage-choice--icon-"] {
-  &::#{$item-icon} {
+  &::#{$-choice-el-icon} {
     /* See icon generator */
     margin: 0 sage-spacing(xs) 0 0;
     color: currentColor;
@@ -145,7 +145,7 @@ $-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
 }
 
 .sage-choice--radio {
-  &::#{$item-radio} {
+  &::#{$-choice-el-radio} {
     content: "";
     display: inline-block;
     box-sizing: border-box;
@@ -160,13 +160,13 @@ $-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
     transition-property: border, box-shadow;
   }
 
-  &:hover::#{$item-radio} {
+  &:hover::#{$-choice-el-radio} {
     box-shadow: sage-shadow(sm);
   }
 
   &:active,
   &.sage-choice--active {
-    &::#{$item-radio} {
+    &::#{$-choice-el-radio} {
       box-shadow: sage-shadow(sm);
       border-width: 5px;
       border-color: $-choice-radio-color-checked;
