@@ -132,6 +132,7 @@ $-data-card-padding: sage-spacing(xs);
 .sage-data-card-group__items {
   .sage-data-card-scroll-container & {
     @include sage-grid-card-row();
+    align-items: flex-start;
   }
 }
 
