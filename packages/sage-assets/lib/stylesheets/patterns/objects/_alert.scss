@@ -76,7 +76,7 @@ $-alert-icon-colors: (
 }
 
 .sage-alert__icon {
-  transform: translateY(rem(2px));
+  display: inline-flex;
   @each $name, $color in $-alert-icon-colors {
     .sage-alert--#{$name} & {
       color: sage-color($color, 300);

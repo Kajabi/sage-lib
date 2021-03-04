@@ -112,6 +112,7 @@ $-upload-card-background-hover: sage-color(grey, 100);
 }
 
 .sage-upload-card__icon {
+  display: inline-flex;
   color: sage-color(grey, 500);
 
   .sage-upload-card:not(.sage-uploaded-card--selected) & {
