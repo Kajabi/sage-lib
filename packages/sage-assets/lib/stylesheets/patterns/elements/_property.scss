@@ -24,8 +24,8 @@
 }
 
 .sage-property__icon {
-  margin-right: sage-spacing(xs);
   display: inline-flex;
+  margin-right: sage-spacing(xs);
 
   &::before {
     vertical-align: text-top;
