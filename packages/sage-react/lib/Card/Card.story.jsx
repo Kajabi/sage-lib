@@ -22,7 +22,6 @@ export default {
   },
 };
 
-
 export const Default = (args) => (
   <Grid container={Grid.CONTAINER_SIZES.XS}>
     <Card
@@ -127,7 +126,7 @@ Default.args = {
   clearPaddingTop: false,
   loading: false,
   borderDashed: false
-}
+};
 
 export const CardHighlight = (args) => (
   <Grid container={Grid.CONTAINER_SIZES.XS}>
