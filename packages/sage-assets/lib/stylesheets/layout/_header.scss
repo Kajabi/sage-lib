@@ -28,6 +28,7 @@ $-header-search-placeholder-transition: color 0.15s ease-in-out, opacity 0.15s e
 .sage-header__actions {
   display: flex;
   grid-area: actions;
+  color: sage-color(grey, 100);
 
   > *:not(:last-child) {
     margin-right: sage-spacing();
@@ -56,6 +57,10 @@ $-header-search-placeholder-transition: color 0.15s ease-in-out, opacity 0.15s e
 
 .sage-header__branding-img {
   height: 100%;
+
+  @media (max-width: sage-breakpoint()) {
+    display: none;
+  }
 }
 
 .sage-header__branding-text {

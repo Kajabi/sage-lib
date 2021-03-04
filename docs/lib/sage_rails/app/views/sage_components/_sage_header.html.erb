@@ -8,10 +8,7 @@ if component.branding[:logo].present?
   logo = component.branding[:logo]
 end
 
-menu_button = true
-if component.menu_button_controls.present?
-  menu_button = component.menu_button
-end
+hide_branding_text = component.branding[:hide_text].present? and component.branding[:hide_text] == true
 
 menu_button_controls = "sage-sidebar-menu"
 if component.menu_button_controls.present?
@@ -19,7 +16,7 @@ if component.menu_button_controls.present?
 end
 %>
 <header class="sage-header">
-  <% if menu_button %>
+  <div class="sage-header__branding">
     <button
       class="sage-menubutton"
       aria-expanded="false"
@@ -32,14 +29,12 @@ end
       <span class="sage-menubutton__bar"></span>
       <span class="visually-hidden">Toggle main menu</span>
     </button>
-  <% end %>
-  <div class="sage-header__branding">
     <% if logo[:method] == "pack" %>
-      <%= image_pack_tag(logo[:path], class: "sage-header__branding-image")%>
+      <%= image_pack_tag(logo[:path], class: "sage-header__branding-img")%>
     <% else %>
-      <%= image_tag logo[:path], class: "sage-header__branding-image" %>
+      <%= image_tag logo[:path], class: "sage-header__branding-img" %>
     <% end %>
-    <h1 class="sage-header__branding-text <%= "visually-hidden" if component.branding[:hide_text].present? %>">
+    <h1 class="sage-header__branding-text <%= "visually-hidden" if hide_branding_text %>">
       <%= component.branding[:text] %></h1>
     </h1>
   </div>

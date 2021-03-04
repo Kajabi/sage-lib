@@ -15,8 +15,10 @@ $-menubtn-focus-outline-color: currentColor;
 
 .sage-menubutton {
   @include sage-button-style-reset();
+
   display: none;
   position: relative;
+  z-index: sage-z-index(priority);
   color: $-menubtn-toggle-line-color;
 
   &::after {

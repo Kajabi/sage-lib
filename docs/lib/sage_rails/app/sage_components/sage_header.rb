@@ -11,4 +11,8 @@ class SageHeader < SageComponent
     center_body: [:optional, TrueClass],
     menu_button_controls: [:optional, NilClass, String],
   })
+
+  def sections
+    %w(:header_actions)
+  end
 end

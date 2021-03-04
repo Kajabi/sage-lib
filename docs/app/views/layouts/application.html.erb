@@ -6,23 +6,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css">
   </head>
   <body class="sage-page sage-docs">
-    <%= render "application/content_skip_link",
-      link_id: "main-content"
-    -%>
-    <%= sage_component SageHeader, {
-      branding: {
-        text: "Sage: Kajabi's Design System",
-        hide_text: true,
-        logo: {
-          path: "docs/sage.svg",
-          method: "pack",
-        }
-      },
-      center_body: true,
-      menu_button_controls: "sage-sidebar-menu",
-    } do %>
-      <%= render "application/assistant" %>
-    <% end %>
+    <%= render "application/content_skip_link", link_id: "main-content" %>
+    <%= render "application/header" %>
     <div class="sage-stage">
       <%= render "application/sidebar" %>
       <main class="sage-content" id="main-content">
