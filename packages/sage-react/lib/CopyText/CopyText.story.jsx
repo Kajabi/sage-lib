@@ -1,27 +1,44 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { withKnobs, text, boolean } from '@storybook/addon-knobs';
-import { centerXY } from '../story-support/decorators';
+import { Panel } from '../Panel';
 import { CopyText } from './CopyText';
 import { CopyTextCard } from './CopyTextCard';
-import CopyTextNotes from './CopyTextNotes.md';
 
-storiesOf('Sage/Copy Text', module)
-  .addDecorator(withKnobs)
-  .addDecorator(centerXY)
-  .add('Default', () => (
-    <CopyText semibold={boolean('Semibold', false)}>
-      {text('Text', 'Hello world!')}
-    </CopyText>
-  ), {
-    notes: { markdown: CopyTextNotes }
-  })
-  .add('Copy Text Card', () => (
-    <CopyTextCard semibold={boolean('Semibold', false)}>
+export default {
+  title: 'Sage/CopyText',
+  component: CopyText,
+  decorators: [(Story) => <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}><Story /></div>],
+  args: {
+    children: (
+      <>
+        Hello World!
+      </>
+    ),
+    semibold: false,
+  }
+};
+const Template = (args) => <CopyText {...args} />;
+
+export const Default = Template.bind({});
+
+export const CopyTextCardBlock = (args) => (
+  <>
+    <CopyTextCard semibold={args.semibold}>
       <p><b>Label:</b> Value to copy yourself!</p>
       <p><b>Label:</b> Value to copy yourself!</p>
       <p><b>Label:</b> Value to copy yourself!</p>
     </CopyTextCard>
-  ), {
-    notes: { markdown: CopyTextNotes }
-  });
+  </>
+);
+
+CopyTextCardBlock.args = {
+  semibold: false
+}
+CopyTextCardBlock.decorators = [
+  (Story) => (
+    <>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <Story />
+      </div>
+    </>
+  )
+];
