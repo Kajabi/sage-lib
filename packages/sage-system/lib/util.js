@@ -19,21 +19,21 @@ Sage.util = (function(Sage) {
   }
 
   function ajaxRequestWithJsInjection(method, urlTarget, urlParams) {
-    let xhr = new XMLHttpRequest();
+    const xhr = new XMLHttpRequest();
     xhr.open(method, urlTarget);
     xhr.setRequestHeader('Accept', 'text/javascript, application/javascript');
     xhr.setRequestHeader('X-CSRF-Token', document.querySelector('meta[name="csrf-token"]').content);
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
 
-    xhr.onload = function (evt) {
-      let elScript = document.createElement('script');
+    xhr.addEventListener('load', (evt) => {
+      const elScript = document.createElement('script');
       elScript.setAttribute('type', 'text/javascript');
       elScript.innerHTML = evt.currentTarget.response;
       document.body.appendChild(elScript);
-    };
+    }, { once: true });
 
     xhr.send(urlParams);
-  }
+  };
 
   return {
     getBtnTarget: getBtnTarget,
