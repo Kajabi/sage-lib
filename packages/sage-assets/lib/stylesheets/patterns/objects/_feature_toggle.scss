@@ -5,9 +5,9 @@
 ////
 
 
-$-feature-toggle-image-width: rem(120px);
-$-feature-toggle-image-height-min: rem(64px);
-$-feature-toggle-image-height-mobile: rem(120px);
+$-feature-toggle-media-width: rem(120px);
+$-feature-toggle-media-height-min: rem(64px);
+$-feature-toggle-media-height-mobile: rem(120px);
 
 
 .sage-feature-toggle {
@@ -16,8 +16,8 @@ $-feature-toggle-image-height-mobile: rem(120px);
   grid-row-gap: sage-spacing(sm);
 
   @media (max-width: sage-breakpoint(md-min)) {
-    grid-template-columns: 1fr min-content;
-    grid-template-rows: $-feature-toggle-image-height-mobile auto auto;
+    grid-template-columns: min-content min-content;
+    grid-template-rows: $-feature-toggle-media-height-mobile auto auto;
     grid-template-areas:
       "img      aside"
       "title    title"
@@ -25,14 +25,14 @@ $-feature-toggle-image-height-mobile: rem(120px);
   }
 
   @media (min-width: sage-breakpoint(md-min)) {
-    grid-template-columns: $-feature-toggle-image-width 1fr min-content;
+    grid-template-columns: min-content 1fr min-content;
     grid-template-rows: sage-spacing(md) auto;
     grid-template-areas:
       "img  title    aside"
       "img  content  content";
   }
 
-  &.sage-feature-toggle--no-image {
+  &.sage-feature-toggle--no-media {
     grid-template-columns: 1fr min-content;
     grid-template-rows: auto auto;
     grid-template-areas:
@@ -96,7 +96,7 @@ $-feature-toggle-image-height-mobile: rem(120px);
   grid-area: aside;
   padding-right: sage-spacing(xs);
 
-  .sage-feature-toggle--no-image & {
+  .sage-feature-toggle--no-media & {
     align-self: center;
   }
 }
@@ -111,7 +111,7 @@ $-feature-toggle-image-height-mobile: rem(120px);
   padding-right: sage-spacing(xs);
 }
 
-.sage-feature-toggle__image-link {
+.sage-feature-toggle__media-link {
   display: flex;
   position: relative;
   grid-area: img;
@@ -121,11 +121,11 @@ $-feature-toggle-image-height-mobile: rem(120px);
   }
 }
 
-.sage-feature-toggle__image {
+.sage-feature-toggle__media {
   align-self: flex-start;
   max-width: rem(140px);
-  width: $-feature-toggle-image-width;
-  height: $-feature-toggle-image-width;
+  width: $-feature-toggle-media-width;
+  height: $-feature-toggle-media-width;
   border-radius: sage-border(radius);
   object-fit: cover;
 }

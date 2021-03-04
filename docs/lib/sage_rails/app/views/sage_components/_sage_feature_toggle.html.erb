@@ -1,6 +1,9 @@
-<% feature_toggle_title_tag = component.title_tag ? component.title_tag : "h3" %>
+<%
+feature_toggle_title_tag = component.title_tag ? component.title_tag : "h3"
+feature_toggle_icon_default_size = "3xl"
+%>
 
-<li class="sage-feature-toggle <%= "sage-feature-toggle--no-image" if component.image.blank? %>">
+<li class="sage-feature-toggle <%= "sage-feature-toggle--no-media" if component.image.blank? && component.icon.blank? %>">
   <<%= feature_toggle_title_tag %> class="sage-feature-toggle__title"><%= component.title %></<%= feature_toggle_title_tag %>>
   <div class="sage-feature-toggle__content">
     <p><%= component.description %></p>
@@ -30,9 +33,22 @@
       <%= content_for :sage_feature_toggle_input %>
     </div>
   <% end %>
+  <% if component.icon.present? %>
+    <div class="sage-feature-toggle__media-link">
+      <%= sage_component SageIconCard, {
+        attributes: {
+          class: "sage-feature-toggle__media",
+        },
+        color: component.icon[:color],
+        icon: component.icon[:icon],
+        label: component.icon[:label] || component.alt_text || "",
+        size: component.icon[:size] || feature_toggle_icon_default_size,
+      } %>
+    </div>
+  <% end %>
   <% if component.image.present? %>
-    <div class="sage-feature-toggle__image-link" >
-      <img class="sage-feature-toggle__image" src=<%= component.image %> alt="<%= component.alt_text %>" <%= "aria-hidden=true" if component.alt_text.blank? %> />
+    <div class="sage-feature-toggle__media-link">
+      <img class="sage-feature-toggle__media" src=<%= component.image %> alt="<%= component.alt_text %>" <%= "aria-hidden=true" if component.alt_text.blank? %> />
     </div>
   <% end %>
 </li>

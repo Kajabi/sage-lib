@@ -33,6 +33,39 @@
     <% end %>
   <% end %>
 <% end %>
+<h3 class="t-sage-heading-6">Feature Toggle with <code><a href="/pages/element/icon_card">Icon Card</a></code></h3>
+<%= sage_component SagePanel, {} do %>
+  <%= sage_component SageFeatureToggle, {
+    description: "New navigation bar layout that places Offers, Coupons, and Affiliates under a brand new “Sales” tab.",
+    icon: {
+      color: "published",
+      icon: "tag",
+      label: "New Sales Tab",
+    },
+    links: [
+      {
+        icon: "comment",
+        location: "#",
+        target: "_blank",
+        text: "Feedback",
+      },
+    ],
+    title: "New Sales Tab",
+  } do %>
+    <%= sage_component_section :feature_toggle_input do %>
+      <%= sage_component SageSwitch, {
+        type: "checkbox",
+        id: "feature-toggle-id-2",
+        hide_text: true,
+        label_text: "Label Title",
+        message: "",
+        name: "feature-toggle-id",
+        value: "feature-toggle-value",
+        css_classes: "sage-feature-toggle__switch"
+      } %>
+    <% end %>
+  <% end %>
+<% end %>
 <h3 class="t-sage-heading-6">Feature Toggle with <code>image</code></h3>
 <%= sage_component SagePanel, {} do %>
   <%= sage_component SageFeatureToggle, {
