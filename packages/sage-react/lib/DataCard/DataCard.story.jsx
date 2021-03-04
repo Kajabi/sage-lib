@@ -124,13 +124,13 @@ export const DataCardScrollContainer = () => (
           <DataCard>
             <DataCard.Header title="Duis gravida" />
             <DataCard.Body>
-              <p className="t-sage--truncate">
+              <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               </p>
-              <p className="t-sage--truncate">
+              <p>
                 Duis sit amet libero lacus.
               </p>
-              <p className="t-sage--truncate">
+              <p>
                 Aenean ullamcorper faucibus purus a ultrices.
               </p>
             </DataCard.Body>
@@ -138,13 +138,13 @@ export const DataCardScrollContainer = () => (
           <DataCard>
             <DataCard.Header title="Lobortis libero" />
             <DataCard.Body>
-              <p className="t-sage--truncate">
+              <p>
                 Curabitur congue dolor eu condimentum scelerisque.
               </p>
-              <p className="t-sage--truncate">
+              <p>
                 Morbi at elit nunc.
               </p>
-              <p className="t-sage--truncate">
+              <p>
                 Aenean vehicula dignissim condimentum.
               </p>
             </DataCard.Body>
@@ -154,10 +154,10 @@ export const DataCardScrollContainer = () => (
           <DataCard>
             <DataCard.Header title="Morbi accumsan venenatis" />
             <DataCard.Body>
-              <p className="t-sage--truncate">
+              <p>
                 Duis sit amet libero lacus.
               </p>
-              <p className="t-sage--truncate">
+              <p>
                 Aenean ullamcorper faucibus purus a ultrices.
               </p>
             </DataCard.Body>
@@ -165,10 +165,10 @@ export const DataCardScrollContainer = () => (
           <DataCard>
             <DataCard.Header title="Duis gravida" />
             <DataCard.Body>
-              <p className="t-sage--truncate">
+              <p>
                 Aenean vehicula dignissim condimentum.
               </p>
-              <p className="t-sage--truncate">
+              <p>
                 Morbi accumsan venenatis ante.
               </p>
             </DataCard.Body>
@@ -176,13 +176,13 @@ export const DataCardScrollContainer = () => (
           <DataCard>
             <DataCard.Header title="Lobortis libero" />
             <DataCard.Body>
-              <p className="t-sage--truncate">
+              <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               </p>
-              <p className="t-sage--truncate">
+              <p>
                 Duis sit amet libero lacus.
               </p>
-              <p className="t-sage--truncate">
+              <p>
                 Aenean ullamcorper faucibus purus a ultrices.
               </p>
             </DataCard.Body>
@@ -190,10 +190,10 @@ export const DataCardScrollContainer = () => (
           <DataCard>
             <DataCard.Header title="Et suscipit ligula" />
             <DataCard.Body>
-              <p className="t-sage--truncate">
+              <p>
                 Aenean vehicula dignissim condimentum.
               </p>
-              <p className="t-sage--truncate">
+              <p>
                 Morbi accumsan venenatis ante,
               </p>
             </DataCard.Body>
