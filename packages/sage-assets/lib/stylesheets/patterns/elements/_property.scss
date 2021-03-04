@@ -24,6 +24,7 @@
 }
 
 .sage-property__icon {
+  display: inline-block;
   margin-right: sage-spacing(xs);
 
   &::before {
