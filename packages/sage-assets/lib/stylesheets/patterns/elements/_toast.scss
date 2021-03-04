@@ -66,6 +66,7 @@ $-toast-viewport-spacing-bottom: sage-spacing();
 }
 
 .sage-toast__icon {
+  display: inline-flex;
   margin-right: sage-spacing(xs);
   color: sage-color(white);
 }

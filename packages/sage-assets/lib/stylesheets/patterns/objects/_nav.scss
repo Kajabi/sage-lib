@@ -13,6 +13,7 @@ $-nav-icon-size: rem(20px);
 
 
 .sage-nav__icon {
+  display: inline-flex;
   margin-right: rem(12px);
   color: sage-color(charcoal, 200);
 

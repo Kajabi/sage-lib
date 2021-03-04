@@ -116,13 +116,8 @@ $-banner-el-icon: "before";
 }
 
 .sage-banner__close {
-  display: none;
   position: absolute;
   right: sage-spacing(card);
-
-  .sage-banner--active & {
-    display: block;
-  }
 }
 
 .sage-banner__close,
