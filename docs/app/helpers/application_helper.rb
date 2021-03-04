@@ -1,3 +1,5 @@
+require "pp"
+
 module ApplicationHelper
 
   def current_page_foundations?
@@ -11,7 +13,7 @@ module ApplicationHelper
   def current_page_experiences?
     current_page?(pages_experiences_path(:onboarding)) || (params[:title] && current_page?(pages_experiences_path(params[:title])))
   end
-  
+
   def current_page_design?
     current_page?(pages_design_path(:token)) || (params[:title] && current_page?(pages_design_path(params[:title])))
   end
