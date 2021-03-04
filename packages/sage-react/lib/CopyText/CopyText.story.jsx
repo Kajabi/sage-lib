@@ -1,5 +1,4 @@
 import React from 'react';
-import { Panel } from '../Panel';
 import { CopyText } from './CopyText';
 import { CopyTextCard } from './CopyTextCard';
 
@@ -32,7 +31,7 @@ export const CopyTextCardBlock = (args) => (
 
 CopyTextCardBlock.args = {
   semibold: false
-}
+};
 CopyTextCardBlock.decorators = [
   (Story) => (
     <>

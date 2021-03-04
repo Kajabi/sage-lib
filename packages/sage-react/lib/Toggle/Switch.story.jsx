@@ -29,18 +29,28 @@ export const Default = (type) => {
     <div>
       <Switch
         checked={on}
-        disabled={false}
-        hasError={false}
-        id="switch-demo"
-        label="Switch label"
-        message="Subtext appears"
-        name="switch-demo"
+        disabled={type.disabled}
+        hasError={type.hasError}
+        id={type.id}
+        label={type.label}
+        message={type.message}
+        name={type.name}
         onChange={(val, isOn) => toggleOn(!isOn)}
-        type={Toggle.TYPES.RADIO}
-        value="Demo"
+        standlone={type.standalone}
+        type={type.type}
+        value={type.value}
       />
     </div>
   );
+};
+
+Default.args = {
+  id: 'switch-demo',
+  label: 'Switch label',
+  message: 'Subtext appears',
+  name: 'switch-demo',
+  type: Toggle.TYPES.RADIO,
+  value: 'Demo'
 };
 
 export const MultiplesExample = (type) => {
