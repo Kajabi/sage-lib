@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.17.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.17.0...@kajabi/sage@3.17.1) (2021-03-04)
+
+
+### Bug Fixes
+
+* **docs:** Add dependencies and config changes for hosting on Heroku ([e3f2faa](https://github.com/Kajabi/sage-lib/commit/e3f2faa7cd0ad19e7dbd7225e5a66a6488356d6c))
+
+
+
+
+
 # [3.17.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.16.0...@kajabi/sage@3.17.0) (2021-03-03)
 
 
