@@ -1,11 +1,7 @@
 import React from 'react';
 import { selectArgs } from '../story-support/helpers';
 import PropTypes from 'prop-types';
-import { storiesOf } from '@storybook/react';
-import { withKnobs, radios } from '@storybook/addon-knobs';
-import { centerXY } from '../story-support/decorators';
 import { Grid } from './Grid';
-import GridNotes from './GridNotes.md';
 
 export default {
   title: 'Sage/Grid',
