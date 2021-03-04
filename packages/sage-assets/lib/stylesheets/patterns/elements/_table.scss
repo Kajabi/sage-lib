@@ -244,7 +244,7 @@ $-table-sort-indicator-direction: rem(7px);
 .sage-table-wrapper--scroll {
   .sage-card &,
   .sage-panel & {
-    overflow: hidden;
+    @include overflow-scroll();
     overflow-y: visible;
     max-width: calc(100% + #{ 2 * $-table-cell-padding-card});
   }
@@ -272,9 +272,7 @@ $-table-sort-indicator-direction: rem(7px);
 
 // Allows overflow scrolling when content exceeds container width
 .sage-table-wrapper__overflow {
-  overflow: hidden;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
+  @include overflow-scroll(x);
 
   &::after {
     content: "";
