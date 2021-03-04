@@ -11,9 +11,7 @@ export default {
 
 const Template = (args) => <Input {...args} />;
 
-export const Default = Template.bind({});
-
-export const Stateful = () => {
+export const Default = (args) => {
   const [value, updateValue] = useState('Test');
   const onChange = (e) => {
     updateValue(e.target.value);
@@ -22,16 +20,25 @@ export const Stateful = () => {
   return (
     <>
       <Input
-        disabled={false}
-        id="field-1"
-        label="First name"
+        className={args.className}
+        disabled={args.disabled}
+        hasError={args.hasError}
+        id={args.id}
+        label={args.label}
         message={null}
         onChange={onChange}
         prefix={null}
         required={false}
+        standalone={args.standalone}
         suffix={null}
         value={value}
       />
     </>
   );
 };
+
+Default.args = {
+  id: 'field-1',
+  label: 'First name'
+}
+
