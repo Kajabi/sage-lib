@@ -9,8 +9,6 @@ export default {
   }
 };
 
-const Template = (args) => <Input {...args} />;
-
 export const Default = (args) => {
   const [value, updateValue] = useState('Test');
   const onChange = (e) => {
@@ -40,5 +38,4 @@ export const Default = (args) => {
 Default.args = {
   id: 'field-1',
   label: 'First name'
-}
-
+};
