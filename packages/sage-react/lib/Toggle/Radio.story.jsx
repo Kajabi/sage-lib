@@ -1,29 +1,28 @@
 import React, { useState } from 'react';
-import { storiesOf } from '@storybook/react';
-import { withKnobs, boolean, text } from '@storybook/addon-knobs';
-import { centerXY } from '../story-support/decorators';
+import { selectArgs } from '../story-support/helpers';
 import { Radio } from './Radio';
+import { Toggle } from './Toggle';
 
-const RadioWithState = () => {
-  const [checked, toggleChecked] = useState(false);
-  const onChange = (newValue, isChecked) => {
-    toggleChecked(!isChecked);
-  };
-
-  return (
-    <Radio
-      checked={checked}
-      disabled={boolean('Disabled', false)}
-      hasError={boolean('Has error', false)}
-      id="radio-demo"
-      label={text('Label', 'Radio')}
-      name={text('Name', 'radio')}
-      onChange={onChange}
-    />
-  );
+export default {
+  title: 'Sage/Radio',
+  component: Radio,
+  decorators: [(Story) => <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}><Story /></div>],
+  args: {
+    label: 'Radio',
+    type: Toggle.TYPES.RADIO,
+  },
+  argTypes: {
+    ...selectArgs({
+      type: Toggle.TYPES
+    })
+  }
 };
 
-const RadioesWithState = () => {
+const Template = (args) => <Radio {...args} />;
+
+export const Default = Template.bind({});
+
+export const MultipleRadios = () => {
   const items = [
     {
       label: 'Option 1',
@@ -71,13 +70,3 @@ const RadioesWithState = () => {
     </ul>
   );
 };
-
-storiesOf('Sage/Radio', module)
-  .addDecorator(centerXY)
-  .addDecorator(withKnobs)
-  .add('Default', () => (
-    <RadioWithState />
-  ))
-  .add('Multiples example', () => (
-    <RadioesWithState />
-  ));

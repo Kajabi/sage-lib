@@ -1,21 +1,32 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { withKnobs, radios } from '@storybook/addon-knobs';
-import { centerXY } from '../story-support/decorators';
+import { selectArgs } from '../story-support/helpers';
 import { Button } from '../Button';
 import { Grid } from '../Grid';
 import { SageTokens } from '../configs';
 import { DataCard } from './DataCard';
-import DataCardNotes from './DataCardNotes.md';
-import DataCardGroupNotes from './DataCardGroupNotes.md';
-import DataCardScrollNotes from './DataCardScrollNotes.md';
 
-storiesOf('Sage/Data Card', module)
-  .addDecorator(withKnobs)
-  .addDecorator(centerXY)
-  .add('Default', () => (
+export default {
+  title: 'Sage/DataCard',
+  component: DataCard,
+  subcomponents: {
+    'DataCard.Header': DataCard.Header,
+    'DataCard.Body': DataCard.Body,
+    'DataCard.Group': DataCard.Group,
+    'DataCard.ScrollContainer': DataCard.ScrollContainer,
+  },
+  argTypes: {
+    ...selectArgs({
+      color: DataCard.COLORS
+    })
+  }
+};
+
+export const Empty = (args) => <DataCard {...args} />;
+
+export const DefaultCard = () => (
+  <>
     <Grid container={Grid.CONTAINER_SIZES.MODAL}>
-      <DataCard color={radios('Color', DataCard.COLORS, DataCard.COLORS.DEFAULT)}>
+      <DataCard color={DataCard.COLORS.DEFAULT}>
         <DataCard.Header title="Header">
           <Button
             subtle={true}
@@ -45,12 +56,13 @@ storiesOf('Sage/Data Card', module)
         </DataCard.Body>
       </DataCard>
     </Grid>
-  ), {
-    notes: { markdown: DataCardNotes }
-  })
-  .add('Data Card Group', () => (
+  </>
+);
+
+export const DataCardGroup = () => (
+  <>
     <Grid container={Grid.CONTAINER_SIZES.XS}>
-      <DataCard.Group color={radios('Color', DataCard.COLORS, DataCard.COLORS.DEFAULT)}>
+      <DataCard.Group color={DataCard.COLORS.DEFAULT}>
         <DataCard>
           <DataCard.Header title="Duis gravida" />
           <DataCard.Body>
@@ -101,23 +113,24 @@ storiesOf('Sage/Data Card', module)
         </DataCard>
       </DataCard.Group>
     </Grid>
-  ), {
-    notes: { markdown: DataCardGroupNotes }
-  })
-  .add('Data Card Scroll Container', () => (
+  </>
+);
+
+export const DataCardScrollContainer = () => (
+  <>
     <Grid container={Grid.CONTAINER_SIZES.LG}>
       <DataCard.ScrollContainer>
         <DataCard.Group title="Aenean vehicula dignissim" color={DataCard.COLORS.DANGER}>
           <DataCard>
             <DataCard.Header title="Duis gravida" />
             <DataCard.Body>
-              <p className="t-sage--truncate">
+              <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               </p>
-              <p className="t-sage--truncate">
+              <p>
                 Duis sit amet libero lacus.
               </p>
-              <p className="t-sage--truncate">
+              <p>
                 Aenean ullamcorper faucibus purus a ultrices.
               </p>
             </DataCard.Body>
@@ -125,13 +138,13 @@ storiesOf('Sage/Data Card', module)
           <DataCard>
             <DataCard.Header title="Lobortis libero" />
             <DataCard.Body>
-              <p className="t-sage--truncate">
+              <p>
                 Curabitur congue dolor eu condimentum scelerisque.
               </p>
-              <p className="t-sage--truncate">
+              <p>
                 Morbi at elit nunc.
               </p>
-              <p className="t-sage--truncate">
+              <p>
                 Aenean vehicula dignissim condimentum.
               </p>
             </DataCard.Body>
@@ -141,10 +154,10 @@ storiesOf('Sage/Data Card', module)
           <DataCard>
             <DataCard.Header title="Morbi accumsan venenatis" />
             <DataCard.Body>
-              <p className="t-sage--truncate">
+              <p>
                 Duis sit amet libero lacus.
               </p>
-              <p className="t-sage--truncate">
+              <p>
                 Aenean ullamcorper faucibus purus a ultrices.
               </p>
             </DataCard.Body>
@@ -152,10 +165,10 @@ storiesOf('Sage/Data Card', module)
           <DataCard>
             <DataCard.Header title="Duis gravida" />
             <DataCard.Body>
-              <p className="t-sage--truncate">
+              <p>
                 Aenean vehicula dignissim condimentum.
               </p>
-              <p className="t-sage--truncate">
+              <p>
                 Morbi accumsan venenatis ante.
               </p>
             </DataCard.Body>
@@ -163,13 +176,13 @@ storiesOf('Sage/Data Card', module)
           <DataCard>
             <DataCard.Header title="Lobortis libero" />
             <DataCard.Body>
-              <p className="t-sage--truncate">
+              <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               </p>
-              <p className="t-sage--truncate">
+              <p>
                 Duis sit amet libero lacus.
               </p>
-              <p className="t-sage--truncate">
+              <p>
                 Aenean ullamcorper faucibus purus a ultrices.
               </p>
             </DataCard.Body>
@@ -177,10 +190,10 @@ storiesOf('Sage/Data Card', module)
           <DataCard>
             <DataCard.Header title="Et suscipit ligula" />
             <DataCard.Body>
-              <p className="t-sage--truncate">
+              <p>
                 Aenean vehicula dignissim condimentum.
               </p>
-              <p className="t-sage--truncate">
+              <p>
                 Morbi accumsan venenatis ante,
               </p>
             </DataCard.Body>
@@ -188,6 +201,5 @@ storiesOf('Sage/Data Card', module)
         </DataCard.Group>
       </DataCard.ScrollContainer>
     </Grid>
-  ), {
-    notes: { markdown: DataCardScrollNotes }
-  });
+  </>
+);
