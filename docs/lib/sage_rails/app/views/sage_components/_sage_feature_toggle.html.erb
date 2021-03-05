@@ -1,8 +1,6 @@
-<%
-feature_toggle_title_tag = component.title_tag ? component.title_tag : "h3"
-%>
+<% feature_toggle_title_tag = component.title_tag ? component.title_tag : "h3" %>
 
-<li class="sage-feature-toggle <%= "sage-feature-toggle--no-media" if component.image.blank? && component.icon.blank? %>">
+<li class="sage-feature-toggle <%= "sage-feature-toggle--no-image" if component.image.blank? && component.icon.blank? %>">
   <<%= feature_toggle_title_tag %> class="sage-feature-toggle__title"><%= component.title %></<%= feature_toggle_title_tag %>>
   <div class="sage-feature-toggle__content">
     <p><%= component.description %></p>
@@ -33,7 +31,7 @@ feature_toggle_title_tag = component.title_tag ? component.title_tag : "h3"
     </div>
   <% end %>
   <% if component.icon.present? or component.image.present? %>
-    <div class="sage-feature-toggle__media">
+    <div class="sage-feature-toggle__image-link">
       <% if component.icon.present? %>
         <%= sage_component SageIconCard, {
           attributes: (component.icon[:attributes] if component.icon[:attributes].present?),

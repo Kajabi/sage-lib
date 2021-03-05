@@ -5,9 +5,9 @@
 ////
 
 
-$-feature-toggle-media-width: rem(120px);
-$-feature-toggle-media-height-min: rem(64px);
-$-feature-toggle-media-height-mobile: rem(120px);
+$-feature-toggle-image-width: rem(120px);
+$-feature-toggle-image-height-min: rem(64px);
+$-feature-toggle-image-height-mobile: rem(120px);
 
 
 .sage-feature-toggle {
@@ -17,7 +17,7 @@ $-feature-toggle-media-height-mobile: rem(120px);
 
   @media (max-width: sage-breakpoint(md-min)) {
     grid-template-columns: min-content min-content;
-    grid-template-rows: $-feature-toggle-media-height-mobile auto auto;
+    grid-template-rows: $-feature-toggle-image-height-mobile auto auto;
     grid-template-areas:
       "img      aside"
       "title    title"
@@ -32,7 +32,7 @@ $-feature-toggle-media-height-mobile: rem(120px);
       "img  content  content";
   }
 
-  &.sage-feature-toggle--no-media {
+  &.sage-feature-toggle--no-image {
     grid-template-columns: 1fr min-content;
     grid-template-rows: auto auto;
     grid-template-areas:
@@ -96,7 +96,7 @@ $-feature-toggle-media-height-mobile: rem(120px);
   grid-area: aside;
   padding-right: sage-spacing(xs);
 
-  .sage-feature-toggle--no-media & {
+  .sage-feature-toggle--no-image & {
     align-self: center;
   }
 }
@@ -111,7 +111,7 @@ $-feature-toggle-media-height-mobile: rem(120px);
   padding-right: sage-spacing(xs);
 }
 
-.sage-feature-toggle__media {
+.sage-feature-toggle__image-link {
   display: flex;
   position: relative;
   grid-area: img;
@@ -124,8 +124,8 @@ $-feature-toggle-media-height-mobile: rem(120px);
 .sage-feature-toggle__image {
   align-self: flex-start;
   max-width: rem(140px);
-  width: $-feature-toggle-media-width;
-  height: $-feature-toggle-media-width;
+  width: $-feature-toggle-image-width;
+  height: $-feature-toggle-image-width;
   border-radius: sage-border(radius);
   object-fit: cover;
 }
