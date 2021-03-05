@@ -111,7 +111,7 @@ $-feature-toggle-media-height-mobile: rem(120px);
   padding-right: sage-spacing(xs);
 }
 
-.sage-feature-toggle__media-link {
+.sage-feature-toggle__media {
   display: flex;
   position: relative;
   grid-area: img;
@@ -121,7 +121,7 @@ $-feature-toggle-media-height-mobile: rem(120px);
   }
 }
 
-.sage-feature-toggle__media {
+.sage-feature-toggle__image {
   align-self: flex-start;
   max-width: rem(140px);
   width: $-feature-toggle-media-width;
