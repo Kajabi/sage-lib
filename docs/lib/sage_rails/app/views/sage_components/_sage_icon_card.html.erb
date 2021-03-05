@@ -1,16 +1,26 @@
 <%
-size = component.size.present? ? component.size : '3xl'
-color = component.color.present? ? component.color : 'draft'
+size = component.size.present? ? component.size : "3xl"
+color = "draft"
+if component.color.present?
+  color = component.color
+elsif component.background_color.present? and component.foreground_color.present?
+  color = false
+end
 %>
 <div
   class="
     sage-icon-card
-    <%= "sage-icon-card--#{color}" %>
+    <% if component.color.present? %>
+      <%= "sage-icon-card--#{color}" %>
+    <% end %>
     <%= component.css_classes if component.css_classes.present? %>
   "
   <% component.attributes.each do |key, value| %>
     <%= "#{key}=\"#{value}\"".html_safe %>
   <% end if component.attributes&.is_a?(Hash) %>
+  <% if component.background_color.present? and component.foreground_color.present? %>
+    style="--background-color: <%= component.background_color %>; --color: <%= component.foreground_color %>"
+  <% end %>
 >
   <i
     class="sage-icon-<%= component.icon %>-<%= size %>"

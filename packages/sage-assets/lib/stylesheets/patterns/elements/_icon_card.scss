@@ -12,10 +12,11 @@
   align-self: stretch;
   padding: sage-spacing(lg);
   border-radius: sage-border(radius);
+  background-color: var(--background-color, inherit);
 
   [class*="sage-icon-"] {
     display: block;
-    color: currentColor;
+    color: var(--color, currentColor);
   }
 }
 

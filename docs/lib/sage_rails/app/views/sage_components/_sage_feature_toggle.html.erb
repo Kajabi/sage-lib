@@ -35,7 +35,9 @@
       <% if component.icon.present? %>
         <%= sage_component SageIconCard, {
           attributes: (component.icon[:attributes] if component.icon[:attributes].present?),
+          background_color: (component.icon[:background_color] if component.icon[:background_color].present?),
           color: (component.icon[:color] if component.icon[:color].present?),
+          foreground_color: (component.icon[:foreground_color] if component.icon[:foreground_color].present?),
           icon: (component.icon[:icon] if component.icon[:icon].present?),
           label: (component.icon[:label] if component.icon[:label].present?),
           size: (component.icon[:size] if component.icon[:size].present?),
