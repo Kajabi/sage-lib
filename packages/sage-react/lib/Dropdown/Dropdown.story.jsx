@@ -62,6 +62,15 @@ Default.args = {
   isLabelVisible: true,
   label: 'Feature',
 };
+Default.decorators = [
+  (Story) => (
+    <>
+      <div style={{ minHeight: 450 }}>
+        <Story />
+      </div>
+    </>
+  )
+];
 
 export const OptionMenu = (args) => (
   <OptionsDropdown options={defaultOptionsItems} isPinned={args.isPinned} />
@@ -69,18 +78,54 @@ export const OptionMenu = (args) => (
 OptionMenu.args = {
   isPinned: false
 };
+OptionMenu.decorators = [
+  (Story) => (
+    <>
+      <div style={{ minHeight: 300 }}>
+        <Story />
+      </div>
+    </>
+  )
+];
 
 export const DropdownMenuWithHeadings = () => (
   <BulkActionsStory />
 );
+DropdownMenuWithHeadings.decorators = [
+  (Story) => (
+    <>
+      <div style={{ minHeight: 450 }}>
+        <Story />
+      </div>
+    </>
+  )
+];
 
 export const Select = () => (
   <SelectDropdownDemo />
 );
+Select.decorators = [
+  (Story) => (
+    <>
+      <div style={{ minHeight: 400 }}>
+        <Story />
+      </div>
+    </>
+  )
+];
 
 export const Multiselect = () => (
   <MultiMenuStory />
 );
+Multiselect.decorators = [
+  (Story) => (
+    <>
+      <div style={{ minHeight: 400 }}>
+        <Story />
+      </div>
+    </>
+  )
+];
 
 export const MenuWithCustomPanel = (args) => (
   <Dropdown
@@ -111,3 +156,12 @@ MenuWithCustomPanel.args = {
   isLabelVisible: true,
   label: 'Login',
 };
+MenuWithCustomPanel.decorators = [
+  (Story) => (
+    <>
+      <div style={{ minHeight: 400 }}>
+        <Story />
+      </div>
+    </>
+  )
+];
