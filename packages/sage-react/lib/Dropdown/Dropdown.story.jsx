@@ -36,17 +36,26 @@ export default {
     isPinned: false,
     label: 'Switch label',
     panelMaxWidth: null,
-    panelModifier: Dropdown.PANEL_SIZES.DEFAULT,
+    panelSize: Dropdown.PANEL_SIZES.DEFAULT,
     triggerButtonSubtle: false
   }
 };
 
 export const Default = (args) => (
   <Dropdown
-    label={args.label}
+    align={args.align}
+    closePanelOnExit={args.closePanelOnExit}
+    contained={args.contained}
+    customized={args.customized}
+    disabled={args.disabled}
     icon={args.icon}
-    isDisabled={args.isDisabled}
     isLabelVisible={args.isLabelVisible}
+    isPinned={args.isPinned}
+    label={args.label}
+    panelSize={args.panelSize}
+    panelMaxWidth={args.panelMaxWidth}
+    triggerButtonSubtle={args.triggerButtonSubtle}
+    triggerModifier={args.triggerModifier}
     exitPanelHandler={(data) => {
       if (data.handler) {
         data.handler();
@@ -58,7 +67,7 @@ export const Default = (args) => (
 );
 Default.args = {
   icon: SageTokens.ICONS.GEAR,
-  isDisabled: false,
+  disabled: false,
   isLabelVisible: true,
   label: 'Feature',
 };
