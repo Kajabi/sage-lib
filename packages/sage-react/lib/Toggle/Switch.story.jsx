@@ -27,19 +27,7 @@ export const Default = (args) => {
   const [on, toggleOn] = useState(false);
   return (
     <div>
-      <Switch
-        checked={on}
-        disabled={args.disabled}
-        hasError={args.hasError}
-        id={args.id}
-        label={args.label}
-        message={args.message}
-        name={args.name}
-        onChange={(val, isOn) => toggleOn(!isOn)}
-        standlone={args.standalone}
-        type={args.type}
-        value={args.value}
-      />
+      <Switch {...args} />
     </div>
   );
 };

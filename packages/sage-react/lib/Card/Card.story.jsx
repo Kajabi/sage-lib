@@ -22,16 +22,22 @@ export default {
   },
 };
 
-export const Default = (args) => (
-  <Grid container={Grid.CONTAINER_SIZES.XS}>
-    <Card
-      borderDashed={args.borderDashed}
-      clearPaddingBottom={args.clearPaddingBottom}
-      clearPaddingLeft={args.clearPaddingLeft}
-      clearPaddingRight={args.clearPaddingRight}
-      clearPaddingTop={args.clearPaddingTop}
-      loading={args.loading}
-    >
+const Template = (args) => <Card {...args} />;
+
+export const Default = Template.bind({});
+Default.decorators = [
+  (Story) => (
+    <>
+      <Grid container={Grid.CONTAINER_SIZES.XS}>
+        <Story />
+      </Grid>
+    </>
+  )
+];
+
+Default.args = {
+  children: (
+    <>
       <Card.Title>Card Title</Card.Title>
       <Card.Title>Block (with Sage Type)</Card.Title>
       <Card.Block sageType={true}>
@@ -114,19 +120,10 @@ export const Default = (args) => (
         <Button color="secondary">Lorem ipsum</Button>
         <Button>Dolor sit</Button>
       </Card.Footer>
-    </Card>
-  </Grid>
-);
-
-Default.args = {
-  className: null,
-  clearPaddingBottom: false,
-  clearPaddingLeft: false,
-  clearPaddingRight: false,
-  clearPaddingTop: false,
-  loading: false,
-  borderDashed: false
+    </>
+  ),
 };
+
 
 export const CardHighlight = (args) => (
   <Grid container={Grid.CONTAINER_SIZES.XS}>
