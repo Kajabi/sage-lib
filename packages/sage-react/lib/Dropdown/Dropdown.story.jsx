@@ -37,34 +37,22 @@ export default {
     label: 'Switch label',
     panelMaxWidth: null,
     panelSize: Dropdown.PANEL_SIZES.DEFAULT,
-    triggerButtonSubtle: false
-  }
-};
-
-export const Default = (args) => (
-  <Dropdown
-    align={args.align}
-    closePanelOnExit={args.closePanelOnExit}
-    contained={args.contained}
-    customized={args.customized}
-    disabled={args.disabled}
-    icon={args.icon}
-    isLabelVisible={args.isLabelVisible}
-    isPinned={args.isPinned}
-    label={args.label}
-    panelSize={args.panelSize}
-    panelMaxWidth={args.panelMaxWidth}
-    triggerButtonSubtle={args.triggerButtonSubtle}
-    triggerModifier={args.triggerModifier}
-    exitPanelHandler={(data) => {
+    triggerButtonSubtle: false,
+    children: (
+      <Dropdown.ItemList items={sampleMenuItems} />
+    ),
+    exitPanelHandler: (data) => {
       if (data.handler) {
         data.handler();
       }
-    }}
-  >
-    <Dropdown.ItemList items={sampleMenuItems} />
-  </Dropdown>
-);
+    }
+  }
+};
+
+const Template = (args) => <Dropdown {...args} />;
+
+export const Default = Template.bind({});
+
 Default.args = {
   icon: SageTokens.ICONS.GEAR,
   disabled: false,
@@ -136,13 +124,10 @@ Multiselect.decorators = [
   )
 ];
 
-export const MenuWithCustomPanel = (args) => (
-  <Dropdown
-    align={args.align}
-    label={args.label}
-    icon={args.icon}
-    isLabelVisible={args.isLabelVisible}
-  >
+export const MenuWithCustomPanel = Template.bind({});
+MenuWithCustomPanel.args = {
+  align: 'right',
+  children: (
     <FormSection
       style={{
         width: '500px',
@@ -157,10 +142,7 @@ export const MenuWithCustomPanel = (args) => (
         Log in
       </Button>
     </FormSection>
-  </Dropdown>
-);
-MenuWithCustomPanel.args = {
-  align: 'right',
+  ),
   icon: SageTokens.ICONS.USERS,
   isLabelVisible: true,
   label: 'Login',
