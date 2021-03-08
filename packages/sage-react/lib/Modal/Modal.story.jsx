@@ -25,7 +25,7 @@ Empty.decorators = [
   )
 ];
 
-export const Wired = () => {
+export const Wired = (args) => {
   const [active, setActive] = useState(false);
 
   const onExit = () => {
@@ -43,6 +43,7 @@ export const Wired = () => {
       <Modal
         active={active}
         onExit={onExit}
+        {...args}
       >
         <Modal.Header title="Example Sage Modal">
           <Modal.HeaderAside>
