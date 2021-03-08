@@ -259,6 +259,10 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
   .sage-dropdown--small & {
     min-width: $-dropdown-width-small;
   }
+
+  .sage-dropdown--page-size & {
+    min-width: 100%;
+  }
 }
 
 .sage-dropdown__panel {
@@ -293,6 +297,10 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
 
   .sage-dropdown--small & {
     min-width: $-dropdown-width-small;
+  }
+
+  .sage-dropdown--page-size & {
+    min-width: 100%;
   }
 
   [aria-expanded="true"] > & {
