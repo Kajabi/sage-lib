@@ -6,6 +6,7 @@ import {
   handleSelection,
 } from './utils';
 import { DEFAULT_NOUN, SELECTION_TYPES } from './configs';
+import { Button } from '../Button';
 import { SelectDropdown } from '../Dropdown';
 import { PanelControlsBulkActions } from './PanelControlsBulkActions';
 import { PanelControlsPagination } from './PanelControlsPagination';
@@ -29,6 +30,7 @@ export const PanelControls = ({
     itemsOnThisPage: 0,
     numSelectedRows: 0,
     pageSize: 1,
+    pageSizeOptions: null,
     rowNoun: { ...DEFAULT_NOUN },
     selectionType: SELECTION_TYPES.NONE,
     totalItems: 0,
@@ -93,6 +95,10 @@ export const PanelControls = ({
     onRequestChange({ sortActionCommand: payload });
   };
 
+  const handlePageSizeSelection = ({ size }) => {
+    onRequestChange({ pageSizeCommand: size });
+  };
+
   //
   // Render
   //
@@ -120,6 +126,25 @@ export const PanelControls = ({
           totalItems={selfConfigs.totalItems}
         />
         <div className="sage-panel-controls__toolbar">
+          {selfConfigs.pageSizeOptions && (
+            <SelectDropdown
+              align="right"
+              className="sage-dropdown--page-size sage-panel-controls__page-size"
+              customized={true}
+              items={selfConfigs.pageSizeOptions.map((size) => ({
+                id: `page-size-${size}`,
+                label: size,
+                payload: {
+                  id: `page-size-${size}`,
+                  label: size,
+                  size,
+                }
+              }))}
+              label="Page size"
+              onSelect={handlePageSizeSelection}
+              selectionBecomesLabel={false}
+            />
+          )}
           <PanelControlsPagination
             currentPage={selfConfigs.currentPage}
             onClickPagination={onClickPagination}
@@ -164,6 +189,7 @@ PanelControls.propTypes = {
     itemsOnThisPage: PropTypes.number,
     numSelectedRows: PropTypes.number,
     pageSize: PropTypes.number,
+    pageSizeOptions: PropTypes.arrayOf(PropTypes.number),
     rowNoun: PropTypes.shape({
       singular: PropTypes.string,
       plural: PropTypes.string,
