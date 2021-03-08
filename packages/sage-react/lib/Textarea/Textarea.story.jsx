@@ -6,7 +6,6 @@ export default {
   component: Textarea,
   args: {
     hasError: false,
-    id: 'field-2',
     label: 'Your message',
     message: null,
   },
@@ -16,7 +15,7 @@ const Template = (args) => <Textarea {...args} />;
 
 export const Default = Template.bind({});
 
-export const TextareaWithState = () => {
+export const TextareaWithState = (args) => {
   const [value, updateValue] = useState('Test value');
   const onChange = (e) => {
     updateValue(e.target.value);
@@ -24,10 +23,13 @@ export const TextareaWithState = () => {
 
   return (
     <Textarea
-      id="field-2"
-      label="Your message"
+      {...args}
       value={value}
       onChange={onChange}
     />
   );
+};
+TextareaWithState.args = {
+  id: 'field-2',
+  label: 'Textarea label'
 };
