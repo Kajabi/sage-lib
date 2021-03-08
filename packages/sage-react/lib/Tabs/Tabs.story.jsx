@@ -15,10 +15,12 @@ export default {
     }),
   },
   args: {
+    tabStyle: Tabs.STYLES.TAB,
+    tabLayout: Tabs.LAYOUTS.DEFAULT
   }
 };
 
-export const Default = () => {
+export const Default = (args) => {
   const [initialActiveId, setDefaultActiveId] = useState(null);
   const buttonConfigs = {
     icon: SageTokens.ICONS.CARET_RIGHT,
@@ -31,6 +33,7 @@ export const Default = () => {
 
   return (
     <Tabs
+      {...args}
       initialActiveId={initialActiveId}
       useSeparator={true}
       tabs={[
@@ -84,8 +87,6 @@ export const Default = () => {
           panelSpacing: true,
         },
       ]}
-      tabStyle={Tabs.STYLES.TAB}
-      tabLayout={Tabs.LAYOUTS.DEFAULT}
     />
   );
 };
