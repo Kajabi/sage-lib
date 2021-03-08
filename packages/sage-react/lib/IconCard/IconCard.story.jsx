@@ -6,7 +6,6 @@ import { IconCard } from './IconCard';
 export default {
   title: 'Sage/IconCard',
   component: IconCard,
-  decorators: [(Story) => <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}><Story /></div>],
   argTypes: {
     ...selectArgs({
       color: IconCard.COLORS,
@@ -20,6 +19,15 @@ export default {
     size: IconCard.SIZES.MD
   }
 };
-const Template = (args) => <IconCard {...args} />;
 
+const Template = (args) => <IconCard {...args} />;
 export const Default = Template.bind({});
+Default.decorators = [
+  (Story) => (
+    <>
+    <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}} >
+      <Story />
+    </div>
+    </>
+  )
+]
