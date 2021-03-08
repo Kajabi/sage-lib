@@ -25,9 +25,9 @@ export default {
   }
 };
 
-export const Default = () => (
+export const Default = (args) => (
   <Grid container={Grid.CONTAINER_SIZES.XS}>
-    <Panel loading={boolean('Loading', false)}>
+    <Panel {...args}>
       <Panel.Header title="Panel header">
         <OptionsDropdown
           align="right"
@@ -71,9 +71,9 @@ export const Default = () => (
   </Grid>
 );
 
-export const PanelStack = () => (
+export const PanelStack = (args) => (
   <Grid container={Grid.CONTAINER_SIZES.XS}>
-    <Panel>
+    <Panel {...args}>
       <Panel.Header title="Panel with a stack" />
       <Panel.Stack>
         <Icon icon={Icon.ICONS.CIRCLE_1} size={Icon.SIZES['2XL']} />
@@ -88,9 +88,9 @@ export const PanelStack = () => (
   </Grid>
 );
 
-export const PanelList = () => (
+export const PanelList = (args) => (
   <Grid container={Grid.CONTAINER_SIZES.XS}>
-    <Panel>
+    <Panel {...args}>
       <Panel.Header title="Panel with a list" />
       <Panel.List
         itemGridTemplate={SageTokens.GRID_TEMPLATES.ETE}
@@ -164,9 +164,9 @@ export const PanelList = () => (
   </Grid>
 );
 
-export const PanelTiles = () => (
+export const PanelTiles = (args) => (
   <Grid container={Grid.CONTAINER_SIZES.XS}>
-    <Panel>
+    <Panel {...args}>
       <Panel.Header title="Panel with tiles" />
       <Panel.Subheader title="Tiles provided through props" />
       <Panel.Tiles
@@ -323,9 +323,9 @@ export const PanelTiles = () => (
   </Grid>
 );
 
-export const PanelRow = () => (
+export const PanelRow = (args) => (
   <Grid container={Grid.CONTAINER_SIZES.XS}>
-    <Panel>
+    <Panel {...args}>
       <Panel.Header title="Panel with a row" />
       <Panel.Row gridTemplate={SageTokens.GRID_TEMPLATES.ETI}>
         <Icon
@@ -355,14 +355,14 @@ export const PanelRow = () => (
   </Grid>
 );
 
-export const PanelFigure = () => (
+export const PanelFigure = (args) => (
   <Grid container={Grid.CONTAINER_SIZES.XS}>
     <p className={`${SageClassnames.TYPE.BODY_SMALL} ${SageClassnames.SPACERS.MD_BOTTOM}`}>
       <strong>Note:</strong> Normally there would be other content along with the figure.
       Content was ommitted here in order to demonstrate the bleed options through Knobs.
       Observe the space that remains inside the panel outside the figure with each setting.
     </p>
-    <Panel>
+    <Panel {...args}>
       <Panel.Figure bleed={radios('Bleed direction', Panel.Figure.BLEED_OPTIONS, Panel.Figure.BLEED_OPTIONS.NONE)}>
         <img src="//source.unsplash.com/800x500" alt="" />
       </Panel.Figure>
