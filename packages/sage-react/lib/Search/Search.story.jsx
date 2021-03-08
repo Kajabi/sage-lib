@@ -31,4 +31,4 @@ export const Contained = (args) => {
 Contained.args = {
   contained: true,
   placeholder: 'Search'
-}
+};

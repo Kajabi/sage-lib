@@ -26,9 +26,9 @@ export const Default = Template.bind({});
 Default.decorators = [
   (Story) => (
     <>
-    <div style={{width: '75%', marginLeft: 'auto', marginRight: 'auto'}} >
-      <Story />
-    </div>
+      <div style={{ width: '75%', marginLeft: 'auto', marginRight: 'auto' }}>
+        <Story />
+      </div>
     </>
   )
-]
+];

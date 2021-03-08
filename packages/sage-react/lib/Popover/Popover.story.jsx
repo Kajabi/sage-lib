@@ -27,9 +27,8 @@ Default.decorators = [
   (Story) => (
     <>
       <div style={{ minHeight: 150 }}>
-          <Story />
+        <Story />
       </div>
     </>
   )
 ];
-

@@ -33,4 +33,4 @@ SearchWithState.args = {
     'Option 3',
     'Option 4',
   ]
-}
+};

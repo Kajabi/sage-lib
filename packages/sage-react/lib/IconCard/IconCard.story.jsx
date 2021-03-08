@@ -25,9 +25,9 @@ export const Default = Template.bind({});
 Default.decorators = [
   (Story) => (
     <>
-    <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}} >
-      <Story />
-    </div>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <Story />
+      </div>
     </>
   )
-]
+];

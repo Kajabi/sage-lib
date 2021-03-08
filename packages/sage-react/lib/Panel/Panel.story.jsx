@@ -1,5 +1,5 @@
 import React from 'react';
-import { boolean, select, radios } from '@storybook/addon-knobs';
+import { select, radios } from '@storybook/addon-knobs';
 import { Button } from '../Button';
 import { Grid } from '../Grid';
 import { Icon } from '../Icon';
