@@ -6,7 +6,6 @@ import {
   handleSelection,
 } from './utils';
 import { DEFAULT_NOUN, SELECTION_TYPES } from './configs';
-import { Button } from '../Button';
 import { SelectDropdown } from '../Dropdown';
 import { PanelControlsBulkActions } from './PanelControlsBulkActions';
 import { PanelControlsPagination } from './PanelControlsPagination';
