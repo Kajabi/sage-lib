@@ -10,17 +10,17 @@ const Template = (args) => <Search {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  placeholder: 'find',
+  placeholder: 'Find',
   value: ''
 };
 
-export const Contained = () => {
+export const Contained = (args) => {
   const [value, setValue] = useState('');
 
   return (
     <>
       <Search
-        placeholder="Find"
+        {...args}
         onChange={(evt) => setValue(evt.target.value)}
         onClear={() => setValue('')}
         value={value}
@@ -28,3 +28,7 @@ export const Contained = () => {
     </>
   );
 };
+Contained.args = {
+  contained: true,
+  placeholder: 'Search'
+}
