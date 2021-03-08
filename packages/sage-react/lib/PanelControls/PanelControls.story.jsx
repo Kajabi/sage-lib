@@ -18,7 +18,7 @@ export default {
   },
 };
 
-export const Default = () => {
+export const Default = (args) => {
   const [selfData, setSelfData] = useState({
     // Set locally
     items: [],
@@ -143,6 +143,7 @@ export const Default = () => {
   return (
     <Panel>
       <PanelControls
+        {...args}
         controlSettings={{ ...selfData.panelControlConfigs }}
         onRequestChange={(data) => PanelControls.handlerUtils.handleChange({
           data,
