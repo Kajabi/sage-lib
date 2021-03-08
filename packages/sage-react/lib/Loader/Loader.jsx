@@ -35,7 +35,7 @@ export const Loader = ({
           <defs>
             <linearGradient id="linear" x1="0%" y1="0%" x2="100%" y2="0%">
               <stop offset="0%" stopColor="#0072EF" />
-              <stop offset="100%" stopColor="#4fc9c5" />
+              <stop offset="100%" stopColor="#86d5bc" />
             </linearGradient>
           </defs>
           <circle className="sage-loader__spinner-path" cx="50" cy="50" r="20" fill="none" stroke="url(#linear)" strokeWidth="4" />
