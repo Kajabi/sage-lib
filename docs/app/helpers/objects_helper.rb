@@ -180,7 +180,7 @@ module ObjectsHelper
         docs: "done",
         rails: "doing",
         react: "todo",
-        a11y: "todo",m
+        a11y: "todo",
         react_component_slug: "sage-modal--wired"
       },
       {
