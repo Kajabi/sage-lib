@@ -61,11 +61,9 @@ Default.args = {
 };
 Default.decorators = [
   (Story) => (
-    <>
-      <div style={{ minHeight: 450 }}>
-        <Story />
-      </div>
-    </>
+    <div style={{ minHeight: 450 }}>
+      <Story />
+    </div>
   )
 ];
 

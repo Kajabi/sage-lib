@@ -7,6 +7,10 @@ import { Card } from '../Card';
 export default {
   title: 'Sage/Grid',
   component: Grid,
+  subcomponents: {
+    'Grid.Row': Grid.Row,
+    'Grid.Col': Grid.Col
+  },
   args: {
     container: Grid.CONTAINER_SIZES.MD,
     withRow: false
