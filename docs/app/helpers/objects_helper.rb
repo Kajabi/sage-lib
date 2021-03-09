@@ -65,7 +65,8 @@ module ObjectsHelper
         docs: "done",
         rails: "done",
         react: "doing",
-        a11y: "done"
+        a11y: "done",
+        react_component_slug: "sage-card--default"
       },
       {
         title: "catalog_item",
@@ -93,7 +94,8 @@ module ObjectsHelper
         docs: "done",
         rails: "done",
         react: "todo",
-        a11y: "todo"
+        a11y: "todo",
+        react_component_slug: "sage-dropdown--default"
       },
       {
         title: "empty_state",
@@ -258,7 +260,8 @@ module ObjectsHelper
         docs: "done",
         rails: "doing",
         react: "todo",
-        a11y: "todo"
+        a11y: "todo",
+        react_component_slug: "sage-sortable--default"
       },
       {
         title: "tabs",

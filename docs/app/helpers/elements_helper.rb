@@ -66,6 +66,7 @@ module ElementsHelper
         rails: "done",
         react: "done",
         a11y: "done",
+        react_component_slug: "sage-copytext--default"
       },
       {
         title: "description",
@@ -232,7 +233,8 @@ module ElementsHelper
         docs: "done",
         rails: "done",
         react: "no",
-        a11y: "todo"
+        a11y: "todo",
+        react_component_slug: "sage-switch--default"
       },
       {
         title: "tab",
