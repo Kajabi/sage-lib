@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { selectArgs } from '../story-support/helpers';
+import React, { useEffect, useState } from 'react';
+import { disableArgs, selectArgs } from '../story-support/helpers';
 import { Switch } from './Switch';
 import { Toggle } from './Toggle';
 
@@ -19,29 +19,31 @@ export default {
     label: 'Switch label',
     message: 'Subtext appears',
     name: 'switch-demo',
+    type: Toggle.TYPES.CHECKBOX,
     value: 'Demo'
   }
 };
 
-export const Default = (args) => {
-  const [on, toggleOn] = useState(false);
+const Template = (args) => {
+  const [checked, setChecked] = useState(false);
+  const selfArgs = {
+    ...args,
+    checked,
+    onChange: () => setChecked(!checked),
+  };
+  useEffect(() => {
+    setChecked(args.checked);
+  }, [args.checked]);
   return (
-    <div>
-      <Switch {...args} />
-    </div>
+    <Switch {...selfArgs} />
   );
 };
-
+export const Default = Template.bind({});
 Default.args = {
   id: 'switch-demo',
-  label: 'Switch label',
-  message: 'Subtext appears',
-  name: 'switch-demo',
-  type: Toggle.TYPES.RADIO,
-  value: 'Demo'
 };
 
-export const MultiplesExample = (type) => {
+export const MultiplesExample = (args) => {
   const items = [
     {
       label: 'Option 1',
@@ -61,23 +63,18 @@ export const MultiplesExample = (type) => {
       checked: false,
     }
   ];
-
   const [itemState, changeItemState] = useState(items);
-
   const onChange = (newValue) => {
     const stateItems = itemState.map(({ label, value, checked }) => {
       if (newValue === value) {
-        checked = type === 'radio' ? true : !checked;
-      } else if (type === 'radio') {
+        checked = args.type === 'radio' ? true : !checked;
+      } else if (args.type === 'radio') {
         checked = false;
       }
-
       return { label, value, checked };
     });
-
     changeItemState(stateItems);
   };
-
   return (
     <ul className="sage-list">
       {itemState.map((configs, i) => (
@@ -87,14 +84,16 @@ export const MultiplesExample = (type) => {
           key={i.toString()}
           name="group-1"
           onChange={onChange}
-          type={type.type}
+          type={args.type}
           {...configs}
         />
       ))}
     </ul>
   );
 };
-
 MultiplesExample.args = {
   type: Toggle.TYPES.RADIO
+};
+MultiplesExample.argTypes = {
+  ...disableArgs(Object.keys(Toggle.propTypes))
 };

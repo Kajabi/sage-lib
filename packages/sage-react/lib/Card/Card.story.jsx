@@ -124,7 +124,6 @@ Default.args = {
   ),
 };
 
-
 export const CardHighlight = (args) => (
   <Grid container={Grid.CONTAINER_SIZES.XS}>
     <Card>
