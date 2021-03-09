@@ -2,7 +2,7 @@ import React from 'react';
 import { AvatarGroup } from './AvatarGroup';
 
 export default {
-  title: 'Sage/AvatarGroup',
+  title: 'Sage/Avatar Group',
   component: AvatarGroup,
   args: {
     items: [
