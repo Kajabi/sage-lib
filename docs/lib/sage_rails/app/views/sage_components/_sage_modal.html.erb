@@ -3,12 +3,13 @@
     sage-modal
     <%= "sage-modal--active" if component.active %>
     <%= "sage-modal--large" if component.large %>
+    <%= "sage-modal--animate" if component.animate %>
   "
   <%= "data-js-modal-disable-close" if component.disable_close %>
   <%= "data-js-modal-remove-content-on-close" if component.remove_content_on_close %>
   data-js-modal="<%= component.id %>"
 >
-  <section class="sage-modal__container" data-js-modal-container>
+  <section class="sage-modal__container" data-js-modal-container tabindex="-1">
     <% if component.content.present? %>
       <%= component.content %>
     <% else %>

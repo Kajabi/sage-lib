@@ -5,5 +5,6 @@ class SageModal < SageComponent
     id: [:optional, String],
     large: [:optional, TrueClass],
     remove_content_on_close: [:optional, TrueClass],
+    animate: [:optional, TrueClass],
   })
 end
