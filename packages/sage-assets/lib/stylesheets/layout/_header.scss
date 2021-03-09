@@ -15,14 +15,22 @@ $-header-search-placeholder-transition: color 0.15s ease-in-out, opacity 0.15s e
 
 .sage-header {
   display: grid;
-  grid-template-columns: (sage-sidebar() - sage-spacing()) 1fr auto;
-  grid-template-areas: "branding body actions";
   gap: sage-spacing(lg);
   align-items: center;
   z-index: sage-z-index(nav);
   height: $-header-height;
   padding: 0 sage-spacing();
   background: sage-color(primary, 500);
+  
+  @media (max-width: sage-breakpoint(sm-max)) {
+    grid-template-areas: "branding actions";
+    grid-template-columns: 1fr auto;
+  }
+  
+  @media (min-width: sage-breakpoint(md-min)) {
+    grid-template-areas: "branding body actions";
+    grid-template-columns: minmax(#{sage-sidebar() - sage-spacing()}, auto) 1fr auto;
+  }
 }
 
 .sage-header__actions {
@@ -36,12 +44,18 @@ $-header-search-placeholder-transition: color 0.15s ease-in-out, opacity 0.15s e
 }
 
 .sage-header__body {
-  display: flex;
-  flex: 1;
   grid-area: body;
 
   > *:not(:last-child) {
     margin-right: sage-spacing();
+  }
+
+  @media (max-width: sage-breakpoint(sm-max)) {
+    display: none;
+  }
+  
+  @media (min-width: sage-breakpoint(md-min)) {
+    display: flex;
   }
 }
 
@@ -65,11 +79,12 @@ $-header-search-placeholder-transition: color 0.15s ease-in-out, opacity 0.15s e
 
 .sage-header__branding-text {
   @extend %t-sage-heading-5;
+  @include truncate();
 
   color: sage-color(white);
 
   .sage-header__branding-img + & {
-    margin-left: sage-spacing(xs);
+    margin-left: sage-spacing(md);
   }
 }
 
