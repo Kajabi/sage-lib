@@ -23,7 +23,7 @@ $-modal-padding-y: sage-spacing(md);
     rgba(sage-color(charcoal, 200), 0.3) 0%,
     rgba(sage-color(charcoal, 500), 0.3) 100%
   );
-  transition: opacity 0.15s ease-in;
+  transition: opacity 0.1s ease-out;
   pointer-events: none;
   opacity: 0;
   cursor: default;
@@ -50,6 +50,7 @@ $-modal-padding-y: sage-spacing(md);
   border-radius: sage-border(radius);
   background-color: sage-color(white);
   box-shadow: sage-shadow(2xl);
+  transition: opacity 0.15s ease-in-out;
   pointer-events: none;
   opacity: 0;
 
@@ -63,7 +64,7 @@ $-modal-padding-y: sage-spacing(md);
 
   .sage-modal--animate & {
     transform: translateY(-#{sage-spacing(lg)});
-    transition: 0.15s ease-out opacity 0.1s, 0.2s ease-out transform 0.1s;
+    transition: opacity 0.1s ease-in-out 0.1s, transform 0.15s ease-out 0.1s;
   }
 
   .sage-modal--active & {
@@ -128,7 +129,13 @@ $-modal-padding-y: sage-spacing(md);
 }
 
 @media (prefers-reduced-motion) {
+  .sage-modal {
+    background-color: rgba(sage-color(charcoal, 500), 0.9);
+    backdrop-filter: none;
+  }
+
   .sage-modal,
+  .sage-modal__container,
   .sage-modal--animate .sage-modal__container {
     transform: none;
     transition: none;
