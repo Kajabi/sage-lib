@@ -11,6 +11,14 @@
     <%= sage_component SageButton, {
       style: "primary",
       icon: { name: "launch", style: "right" },
+      value: "Modal with Animation",
+      attributes: {
+        "data-js-modaltrigger": "cool-modal-animate",
+      }
+    } %>
+    <%= sage_component SageButton, {
+      style: "primary",
+      icon: { name: "launch", style: "right" },
       value: "Large Modal",
       attributes: {
         "data-js-modaltrigger": "cool-modal-large",
@@ -62,8 +70,44 @@
     <% end %>
   <% end %>
 
+  <%# Standard Modal %>
+  <%= sage_component SageModal, { id: "cool-modal-animate", animate: true } do %>
+    <%= sage_component SageModalContent, { title: "Example Modal" } do %>
+      <% content_for :sage_header_aside do %>
+        <%= sage_component SageButton, {
+          style: "secondary",
+          subtle: true,
+          value: "Close Modal",
+          icon: { name: "remove", style: "only" },
+          attributes: { "data-js-modal": true }
+        } %>
+      <% end %>
+
+      <p class="t-sage-body">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+
+      <% content_for :sage_footer do %>
+        <% content_for :sage_footer_aside do %>
+          <%= sage_component SageButton, {
+            style: "secondary",
+            subtle: true,
+            value: "Close Modal",
+            attributes: { "data-js-modal": true }
+          } %>
+        <% end %>
+        <%= sage_component SageButton, {
+          style: "primary",
+          icon: { name: "check", style: "left" },
+          value: "Take An Action",
+        } %>
+      <% end %>
+    <% end %>
+  <% end %>
+
   <%# Large Modal %>
-  <%= sage_component SageModal, { 
+  <%= sage_component SageModal, {
     id: "cool-modal-large",
     large: true,
     remove_content_on_close: true
@@ -103,7 +147,7 @@
   <% end %>
 
   <%# Spaced Modal %>
-  <%= sage_component SageModal, { 
+  <%= sage_component SageModal, {
     id: "cool-modal-spaced",
     large: true
   } do %>
