@@ -38,7 +38,8 @@ module ObjectsHelper
         docs: "done",
         rails: "no",
         react: "done",
-        a11y: "todo"
+        a11y: "todo",
+        react_component_slug: "sage-avatar--default"
       },
       {
         title: "banner",
@@ -105,6 +106,7 @@ module ObjectsHelper
         rails: "todo",
         react: "todo",
         a11y: "todo",
+        react_component_slug: "sage-emptystate--default"
       },
       {
         title: "expandable_card",
@@ -114,6 +116,7 @@ module ObjectsHelper
         rails: "done",
         react: "todo",
         a11y: "done",
+        react_component_slug: "sage-expandablecard--default"
       },
       {
         title: "feature_toggle",
@@ -150,6 +153,7 @@ module ObjectsHelper
         rails: "todo",
         react: "todo",
         a11y: "todo",
+        react_component_slug: "sage-icon-list--default"
       },
       {
         title: "input_group",
@@ -176,7 +180,8 @@ module ObjectsHelper
         docs: "done",
         rails: "doing",
         react: "todo",
-        a11y: "todo"
+        a11y: "todo",m
+        react_component_slug: "sage-modal--wired"
       },
       {
         title: "nav",
@@ -242,7 +247,8 @@ module ObjectsHelper
         docs: "todo",
         rails: "done",
         react: "todo",
-        a11y: "done"
+        a11y: "done",
+        react_component_slug: "sage-popover--default"
       },
       {
         title: "sidebar",
@@ -289,7 +295,8 @@ module ObjectsHelper
         docs: "doing",
         rails: "todo",
         react: "done",
-        a11y: "doing"
+        a11y: "doing",
+        react_component_slug: "sage-typeahead--default"
       },
       {
         title: "upload_card",
