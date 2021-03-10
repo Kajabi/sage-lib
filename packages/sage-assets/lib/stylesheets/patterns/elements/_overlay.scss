@@ -29,7 +29,7 @@ $-overlay-transition-backdrop-filter: backdrop-filter 0.7s ease-in-out;
     backdrop-filter: $-overlay-backdrop-filter;
   }
 
-  @media (max-width: sage-breakpoint()) {
+  @media (max-width: sage-breakpoint(md-max)) {
     &.sage-overlay--open {
       visibility: visible;
       z-index: $-overlay-z-index;
