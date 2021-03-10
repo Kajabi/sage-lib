@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { BUTTON_GROUP_GAP_OPTIONS } from './configs';
+import { BUTTON_GROUP_ALIGN_OPTIONS, BUTTON_GROUP_GAP_OPTIONS } from './configs';
 
 export const ButtonGroup = ({
+  align,
   alignEnd,
   children,
   className,
@@ -15,6 +16,7 @@ export const ButtonGroup = ({
     className,
     {
       'sage-btn-group--align-end': alignEnd,
+      [`sage-btn-group--align-${align}`]: align,
       [`sage-btn-group--gap-${gap}`]: gap,
     }
   );
@@ -26,9 +28,11 @@ export const ButtonGroup = ({
   );
 };
 
+ButtonGroup.ALIGN_OPTIONS = BUTTON_GROUP_ALIGN_OPTIONS;
 ButtonGroup.GAP_OPTIONS = BUTTON_GROUP_GAP_OPTIONS;
 
 ButtonGroup.defaultProps = {
+  align: ButtonGroup.ALIGN_OPTIONS.NONE,
   alignEnd: false,
   className: null,
   children: null,
@@ -36,6 +40,7 @@ ButtonGroup.defaultProps = {
 };
 
 ButtonGroup.propTypes = {
+  align: PropTypes.oneOf(Object.values(ButtonGroup.ALIGN_OPTIONS)),
   alignEnd: PropTypes.bool,
   className: PropTypes.string,
   children: PropTypes.node,
