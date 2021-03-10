@@ -42,12 +42,13 @@ $-menubtn-focus-outline-color: currentColor;
     outline: none;
   }
 
-  @media (max-width: sage-breakpoint()) {
+  @media (max-width: sage-breakpoint(md-max)) {
     display: block;
     position: relative;
     height: $-menubtn-toggle-size;
     width: $-menubtn-toggle-size;
     margin-bottom: 0;
+    margin-right: sage-spacing();
     cursor: pointer;
 
     &::after {
