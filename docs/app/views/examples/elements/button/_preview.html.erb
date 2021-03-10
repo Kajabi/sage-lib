@@ -165,6 +165,23 @@ demo_configs = [
   } %>
 <% end %>
 
+<%= sage_component SageCardBlock, {} do %>
+  <%= sage_component SageLabel, {
+    color: "draft",
+    value: "Button group: Align Space-Between",
+  } %>
+<% end %>
+<%= sage_component SageButtonGroup, { gap: :md, align: "space-between" } do %>
+  <%= sage_component SageButton, {
+    value: "Cancel",
+    style: "secondary",
+  } %>
+  <%= sage_component SageButton, {
+    value: "Save",
+    style: "primary",
+  } %>
+<% end %>
+
 
 <%= sage_component SageCardBlock, {} do %>
   <%= sage_component SageLabel, {
