@@ -1,9 +1,6 @@
 <%
-color = "draft"
-if component.color.present?
-  color = component.color
-end
-size = component.size.present? ? component.size : "3xl"
+color = component.color.present? ? component.color : "draft"
+size = component.size.present? ? component.size == "md" ? "" : "-#{component.size}" : "-3xl"
 style = {
   "--background-color": (component.background_color if component.background_color.present?),
   "--color": (component.foreground_color if component.foreground_color.present?),
@@ -23,7 +20,7 @@ style = {
   <% end %>
 >
   <i
-    class="sage-icon-<%= component.icon %>-<%= size %>"
+    class="sage-icon-<%= component.icon %><%= size %>"
     <% if component.label.present? %>
     aria-label="<%= component.label %>"
     <% else %>

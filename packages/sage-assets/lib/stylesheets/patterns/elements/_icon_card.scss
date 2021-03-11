@@ -15,7 +15,7 @@
   background-color: var(--background-color, inherit);
 
   [class*="sage-icon-"] {
-    display: block;
+    display: flex;
     color: var(--color, currentColor);
   }
 }

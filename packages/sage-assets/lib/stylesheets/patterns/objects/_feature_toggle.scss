@@ -16,7 +16,7 @@ $-feature-toggle-image-height-mobile: rem(120px);
   grid-row-gap: sage-spacing(sm);
 
   @media (max-width: sage-breakpoint(md-min)) {
-    grid-template-columns: min-content min-content;
+    grid-template-columns: min-content;
     grid-template-rows: $-feature-toggle-image-height-mobile auto auto;
     grid-template-areas:
       "img      aside"
