@@ -6,13 +6,15 @@ import { ModalFooter } from './ModalFooter';
 import { ModalFooterAside } from './ModalFooterAside';
 import { ModalHeader } from './ModalHeader';
 import { ModalHeaderAside } from './ModalHeaderAside';
+import { MODAL_ANIMATION_PRESETS, MODAL_ANIMATION_DIRECTIONS } from './configs';
 
 export const Modal = ({
   active,
   children,
   className,
-  large,
   containerClassName,
+  animation,
+  large,
   onExit,
   ...rest
 }) => {
@@ -24,6 +26,16 @@ export const Modal = ({
       'sage-modal--large': large,
     }
   );
+
+  let animationAttributes = {};
+
+  if (animation) {
+    animationAttributes = MODAL_ANIMATION_PRESETS;
+
+    if (animation.direction) {
+      animationAttributes['data-sage-animate-dir'] = animation.direction;
+    }
+  }
 
   const handleBackgroundClick = (evt) => {
     if (evt.target === evt.currentTarget) {
@@ -44,6 +56,7 @@ export const Modal = ({
       onKeyPress={handleBackgroundKeypress}
       role="button"
       tabIndex="0"
+      {...animationAttributes}
     >
       <div
         className={`sage-modal__container ${containerClassName || ''}`}
@@ -61,9 +74,11 @@ Modal.Footer = ModalFooter;
 Modal.FooterAside = ModalFooterAside;
 Modal.Header = ModalHeader;
 Modal.HeaderAside = ModalHeaderAside;
+Modal.ANIMATION_DIRECTIONS = MODAL_ANIMATION_DIRECTIONS;
 
 Modal.defaultProps = {
   active: false,
+  animation: null,
   children: null,
   containerClassName: null,
   className: '',
@@ -73,6 +88,12 @@ Modal.defaultProps = {
 
 Modal.propTypes = {
   active: PropTypes.bool,
+  animation: PropTypes.oneOfType([
+    PropTypes.bool,
+    PropTypes.shape({
+      direction: PropTypes.oneOf(Object.values(Modal.ANIMATION_DIRECTIONS))
+    })
+  ]),
   children: PropTypes.node,
   containerClassName: PropTypes.string,
   className: PropTypes.string,
