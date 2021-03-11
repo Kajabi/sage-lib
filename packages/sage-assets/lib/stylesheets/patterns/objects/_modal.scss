@@ -51,7 +51,7 @@ $-modal-padding-y: sage-spacing(md);
   border-radius: sage-border(radius);
   background-color: sage-color(white);
   box-shadow: sage-shadow(2xl);
-  transition: opacity 0.15s ease-in-out;
+  transition: opacity 0.1s ease-in-out 0.1s;
   pointer-events: none;
   opacity: 0;
 
@@ -65,7 +65,8 @@ $-modal-padding-y: sage-spacing(md);
 
   [data-sage-animate] & {
     transform: translateY(-#{sage-spacing(lg)});
-    transition: opacity 0.1s ease-in-out 0.1s, transform 0.15s ease-out 0.1s;
+    transition: opacity 0.1s ease-in, transform 0.15s ease-out;
+    transition-delay: 0.1s, 0.1s;
   }
 
   [data-sage-animate-dir="top"] & {

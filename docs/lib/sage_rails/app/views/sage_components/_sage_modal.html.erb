@@ -5,7 +5,6 @@
     <%= "sage-modal--large" if component.large %>
   "
   <%= "data-sage-animate" if component.animate %>
-  <%= "data-sage-animate-prop=translate" if component.animate %>
   <% if component.animate_direction.present? && component.animate %>
     <%= "data-sage-animate-dir=#{ component.animate_direction }" %>
   <% end %>
