@@ -1,4 +1,10 @@
-<div class="sage-input-group sage-input-group--<%= component.input_type -%> <% if component.disabled %>sage-input-group--disabled<% end %>" role="group" aria-labelledby="<%= component.group_id %>">
+<div class="
+  sage-input-group sage-input-group--<%= component.input_type -%> 
+  <% if component.disabled %>sage-input-group--disabled<% end %>" 
+  role="group" 
+  aria-labelledby="<%= component.group_id %>"
+  <%= component.generated_html_attributes.html_safe %>
+>
   <%= component.content %>
   <%- if component.has_hint -%>
     <%= sage_component SageInputHelper,

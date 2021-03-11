@@ -19,7 +19,10 @@
   <% end %>
 <% end %>
 
-<div class="sage-modal__content <%= "sage-modal__content--spacing-#{component.spacing}" if component.spacing.present? %>">
+<div 
+  class="sage-modal__content <%= "sage-modal__content--spacing-#{component.spacing}" if component.spacing.present? %>"
+  <%= component.generated_html_attributes.html_safe %>
+>
   <%= component.content %>
 </div>
 

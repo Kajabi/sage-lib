@@ -1,4 +1,7 @@
-<div class="sage-popover" data-js-popover data-js-popover--position="<%= component.popover_position ? component.popover_position : "right" %>">
+<div 
+  class="sage-popover" data-js-popover data-js-popover--position="<%= component.popover_position ? component.popover_position : "right" %>"
+  <%= component.generated_html_attributes.html_safe %>
+>
 
   <% if component.trigger_icon_only %>
     <%= sage_component SageButton, {
