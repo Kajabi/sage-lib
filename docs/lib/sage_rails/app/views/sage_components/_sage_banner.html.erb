@@ -13,6 +13,7 @@
   "
   <%= "id=#{component.id}" if component.id.present? %>
   <%= "aria-hidden=true" if !component.active %>
+  <%= component.generated_html_attributes.html_safe %>
 >
   <% if component.text.present? %>
     <p class="sage-banner__text">

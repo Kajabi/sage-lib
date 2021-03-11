@@ -5,6 +5,7 @@
     <%= "sage-btn-group--gap-#{component.gap}" if component.gap.present? %>
     <%= component.generated_css_classes %>
   "
+  <%= component.generated_html_attributes.html_safe %>
 >
   <%= component.content %>
 </div>

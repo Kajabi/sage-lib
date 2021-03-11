@@ -1,4 +1,4 @@
-<div class="sage-alert<%= component.color ? " sage-alert--#{component.color}" : ""%><% if component.raised %> sage-alert--raised<% end %>">
+<div class="sage-alert<%= component.color ? " sage-alert--#{component.color}" : ""%><% if component.raised %> sage-alert--raised<% end %>" <%= component.generated_html_attributes.html_safe %>>
   <i class="sage-alert__icon <%= component.icon_name %>" aria-hidden="true"></i>
   <div class="sage-alert__copy">
     <% if component.title %>
