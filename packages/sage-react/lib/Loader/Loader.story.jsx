@@ -1,22 +1,34 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { withKnobs, boolean, optionsKnob as options } from '@storybook/addon-knobs';
-import { centerXY } from '../story-support/decorators';
+import { selectArgs } from '../story-support/helpers';
 import { Card } from '../Card';
 import { Grid } from '../Grid';
 import { Loader } from './Loader';
 
-storiesOf('Sage/Loader', module)
-  .addDecorator(withKnobs)
-  .addDecorator(centerXY)
-  .add('Default', () => (
-    <Grid container={Grid.CONTAINER_SIZES.MODAL}>
-      <Card>
-        <Loader
-          loading={boolean('Loading', true)}
-          type={options('Type', Loader.TYPES, Loader.TYPES.BAR, { display: 'inline-radio' })}
-          fillSpace={boolean('Fill space', true)}
-        />
-      </Card>
-    </Grid>
-  ));
+export default {
+  title: 'Sage/Loader',
+  component: Loader,
+  argTypes: {
+    ...selectArgs({
+      type: Loader.TYPES
+    }),
+  },
+  args: {
+    fillSpace: true,
+    loading: true,
+    type: Loader.TYPES.BAR
+  }
+};
+const Template = (args) => <Loader {...args} />;
+
+export const Default = Template.bind({});
+Default.decorators = [
+  (Story) => (
+    <>
+      <Grid container={Grid.CONTAINER_SIZES.MODAL}>
+        <Card>
+          <Story />
+        </Card>
+      </Grid>
+    </>
+  )
+];

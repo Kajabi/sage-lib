@@ -1,22 +1,31 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { storiesOf } from '@storybook/react';
-import { withKnobs, radios } from '@storybook/addon-knobs';
-import { centerXY } from '../story-support/decorators';
+import { selectArgs } from '../story-support/helpers';
 import { Grid } from './Grid';
-import GridNotes from './GridNotes.md';
+import { Card } from '../Card';
+
+export default {
+  title: 'Sage/Grid',
+  component: Grid,
+  subcomponents: {
+    'Grid.Row': Grid.Row,
+    'Grid.Col': Grid.Col
+  },
+  args: {
+    container: Grid.CONTAINER_SIZES.MD,
+    withRow: false
+  },
+  argTypes: {
+    ...selectArgs({
+      container: Grid.CONTAINER_SIZES
+    })
+  }
+};
 
 const GridDemo = ({ children }) => (
-  <div style={{
-    border: '1px solid lightgrey',
-    borderRadius: '4px',
-    padding: '16px',
-    width: '100%',
-    textAlign: 'center',
-  }}
-  >
+  <Card style={{ textAlign: 'center' }}>
     {children}
-  </div>
+  </Card>
 );
 
 GridDemo.propTypes = {
@@ -25,11 +34,12 @@ GridDemo.propTypes = {
 
 const columns = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
-storiesOf('Sage/Grid', module)
-  .addDecorator(withKnobs)
-  .addDecorator(centerXY)
-  .add('Default', () => (
-    <Grid container={Grid.CONTAINER_SIZES.LG}>
+const Template = (args) => <Grid {...args} />;
+export const Default = Template.bind({});
+
+Default.args = {
+  children: (
+    <>
       <Grid.Row spacerBelow="sm">
         {columns.map((col) => (
           <Grid.Col size="1" key={col.toString()} aria-label="Single column">
@@ -123,16 +133,17 @@ storiesOf('Sage/Grid', module)
           </GridDemo>
         </Grid.Col>
       </Grid.Row>
-    </Grid>
-  ), {
-    notes: { markdown: GridNotes }
-  })
-  .add('Containers', () => (
-    <Grid container={radios('Container size', Grid.CONTAINER_SIZES, Grid.CONTAINER_SIZES.NONE)}>
+    </>
+  )
+};
+
+export const Containers = Template.bind({});
+Containers.args = {
+  children: (
+    <>
       <GridDemo>
         Empty Container
       </GridDemo>
-    </Grid>
-  ), {
-    notes: { markdown: GridNotes }
-  });
+    </>
+  )
+};

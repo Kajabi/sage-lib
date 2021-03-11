@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 export const disableArgs = (keys) => {
   const argTypes = {};
 
-  Object.keys(keys).forEach((key) => {
+  Object.values(keys).forEach((key) => {
     argTypes[key] = {
-      table: {
+      control: {
         disable: true,
       },
     };

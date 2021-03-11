@@ -1,29 +1,28 @@
 import React, { useState } from 'react';
-import { storiesOf } from '@storybook/react';
-import { withKnobs, boolean, text } from '@storybook/addon-knobs';
-import { centerXY } from '../story-support/decorators';
+import { selectArgs } from '../story-support/helpers';
 import { Checkbox } from './Checkbox';
+import { Toggle } from './Toggle';
 
-const CheckboxWithState = () => {
-  const [checked, toggleChecked] = useState(false);
-  const onChange = (newValue, isChecked) => {
-    toggleChecked(!isChecked);
-  };
-
-  return (
-    <Checkbox
-      checked={checked}
-      disabled={boolean('Disabled', false)}
-      hasError={boolean('Has error', false)}
-      id="checkbox-demo"
-      label={text('Label', 'Checkbox')}
-      name={text('Name', 'checkbox')}
-      onChange={onChange}
-    />
-  );
+export default {
+  title: 'Sage/Checkbox',
+  component: Checkbox,
+  decorators: [(Story) => <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}><Story /></div>],
+  args: {
+    label: 'Checkbox',
+    type: Toggle.TYPES.CHECKBOX,
+  },
+  argTypes: {
+    ...selectArgs({
+      type: Toggle.TYPES
+    })
+  }
 };
 
-const CheckboxesWithState = () => {
+const Template = (args) => <Checkbox {...args} />;
+
+export const Default = Template.bind({});
+
+export const MultipleExample = () => {
   const items = [
     {
       label: 'Option 1',
@@ -73,13 +72,3 @@ const CheckboxesWithState = () => {
     </ul>
   );
 };
-
-storiesOf('Sage/Checkbox', module)
-  .addDecorator(centerXY)
-  .addDecorator(withKnobs)
-  .add('Default', () => (
-    <CheckboxWithState />
-  ))
-  .add('Multiples example', () => (
-    <CheckboxesWithState />
-  ));
