@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.4.1...@kajabi/sage-system@0.4.2) (2021-03-11)
+
+
+### Bug Fixes
+
+* **sortable:** fixes: Rails Sage Sortable injects its content twice onload ([86f893a](https://github.com/Kajabi/sage-lib/commit/86f893a28acd25d191eba2b8b01a5d7260ee5e89))
+
+
+
+
+
 ## [0.4.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.4.0...@kajabi/sage-system@0.4.1) (2021-03-02)
 
 

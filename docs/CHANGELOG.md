@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.17.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.17.2...@kajabi/sage@3.17.3) (2021-03-11)
+
+
+### Bug Fixes
+
+* **docs:** patch the logo color for navbar logo ([4b466af](https://github.com/Kajabi/sage-lib/commit/4b466af63e85a71ae6c467bad9427ca1b0572c1e))
+* **docs:** revise graphic colors and formats ([41e2a0c](https://github.com/Kajabi/sage-lib/commit/41e2a0c7ede16f54d3a95f6c978fbc0c1fe3540e))
+* **docs:** updated react helper links ([8099ea6](https://github.com/Kajabi/sage-lib/commit/8099ea69898ce0aea8b17150040ae93deb4bf370))
+* **docs:** updated react links ([f5ca0b7](https://github.com/Kajabi/sage-lib/commit/f5ca0b7093bd7417482f97276f9431811251d153))
+* **docs:** updated react links to elements ([886ef85](https://github.com/Kajabi/sage-lib/commit/886ef8546772603f91954e386ea80a980242a6d9))
+* **docs:** updated react links to objects ([660e9ae](https://github.com/Kajabi/sage-lib/commit/660e9ae281b72e4ba9d863ad5b572dfe1cd39863))
+* **table:** corrects table overflow in grid-based parent components ([85a082b](https://github.com/Kajabi/sage-lib/commit/85a082beae74e1b3ce2ef58710c2fa5df124f321))
+
+
+
+
+
 ## [3.17.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.17.1...@kajabi/sage@3.17.2) (2021-03-04)
 
 **Note:** Version bump only for package @kajabi/sage

@@ -3,6 +3,56 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.33.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.33.1...@kajabi/sage-react@0.33.2) (2021-03-11)
+
+
+### Bug Fixes
+
+* **docs:** cleanup ([7da4686](https://github.com/Kajabi/sage-lib/commit/7da468611dd42f25d07978333940e560b60af378))
+* **docs:** copytext and switch updates ([1b0f9d0](https://github.com/Kajabi/sage-lib/commit/1b0f9d054fda38b5660eece96ea08b002e5c60ef))
+* **docs:** data card updated per review ([ab7cbc3](https://github.com/Kajabi/sage-lib/commit/ab7cbc35ddb8283f9cb10060dc80dab9e5196336))
+* **docs:** incorrect file committed ([8569510](https://github.com/Kajabi/sage-lib/commit/856951082cfd17f8638002311c86050dfe742d6e))
+* **docs:** input cleanup ([026f656](https://github.com/Kajabi/sage-lib/commit/026f65697e6898fe936bdc9b5369acdd6d16f371))
+* **docs:** linter ([b7bfd32](https://github.com/Kajabi/sage-lib/commit/b7bfd320063922c8878acde00a927035cd922600))
+* **docs:** resolve default demo args ([8139b91](https://github.com/Kajabi/sage-lib/commit/8139b91cc5e8b08518c0d6d406e008321c2f4585))
+* **docs:** resolve linter ([4062a2d](https://github.com/Kajabi/sage-lib/commit/4062a2dcd9bcc1f2a4220aa4ac7f3f3576ee9c77))
+* **docs:** resolve linter ([48d190e](https://github.com/Kajabi/sage-lib/commit/48d190e8ceb6421a779a92fdb23711e9e6c7e642))
+* **docs:** resolve switch default demo args ([e053ed0](https://github.com/Kajabi/sage-lib/commit/e053ed08ad48e8dc64cfabc0262c966060ff8501))
+* **docs:** sortable cleanup ([a72a2b9](https://github.com/Kajabi/sage-lib/commit/a72a2b974b1a2f85998b0ad80d2a45e1d076e331))
+* **docs:** update input story ([ef4f40d](https://github.com/Kajabi/sage-lib/commit/ef4f40ddfcc648428196957521c5992e91247db6))
+* **docs:** updated card story ([435ca40](https://github.com/Kajabi/sage-lib/commit/435ca40a9772a5ac58b73881b616e15d5da504ed))
+* **docs:** updated card story ([c376bf7](https://github.com/Kajabi/sage-lib/commit/c376bf7e5edf9f57542d07a0b27626d63756dffc))
+* **docs:** updated copytext story ([01304a8](https://github.com/Kajabi/sage-lib/commit/01304a8ae862c99798766e52069d51211eae4cd4))
+* **docs:** updated datacard stories ([abf6021](https://github.com/Kajabi/sage-lib/commit/abf6021ffe3a314e7ecb8bc06c96be960f864702))
+* **docs:** updated dropdown story per phil pairing ([1c23870](https://github.com/Kajabi/sage-lib/commit/1c23870f0a29c5aeb6fe3d84da795e3ee03915d3))
+* **docs:** updated grid story ([ae8ebcf](https://github.com/Kajabi/sage-lib/commit/ae8ebcf45a855b46ab0edbd69a37efa2dd6b02a0))
+* **docs:** updated grid story ([3c910d3](https://github.com/Kajabi/sage-lib/commit/3c910d315ae10ce366684831f0254e408c968948))
+* **docs:** updated pageheading story ([e289a1e](https://github.com/Kajabi/sage-lib/commit/e289a1ec80350c820f2331b251d67afde08dba00))
+* **docs:** updated panel controls story ([aaa1e64](https://github.com/Kajabi/sage-lib/commit/aaa1e6470f70dba1d96c77e9a2091a16b6dca0ac))
+* **docs:** updated panel story ([a166b6f](https://github.com/Kajabi/sage-lib/commit/a166b6fd3844d43a7408f98faf6cd126d311c834))
+* **docs:** updated react checkbox story ([241d4dc](https://github.com/Kajabi/sage-lib/commit/241d4dc23e1143af7295306cfd0a3edb27588bea))
+* **docs:** updated react links ([f5ca0b7](https://github.com/Kajabi/sage-lib/commit/f5ca0b7093bd7417482f97276f9431811251d153))
+* **docs:** updated react radio story ([3409ab4](https://github.com/Kajabi/sage-lib/commit/3409ab4a175db6f08e70307f4b6c04116118eb68))
+* **docs:** updated react select story ([a3df987](https://github.com/Kajabi/sage-lib/commit/a3df987b480f2bc7a9374964f3f795a66f43d218))
+* **docs:** updated select story ([3c2ed1a](https://github.com/Kajabi/sage-lib/commit/3c2ed1a61f44af3760dd244ded20deda2c68a2b0))
+* **docs:** updated sortable story ([82db5a1](https://github.com/Kajabi/sage-lib/commit/82db5a1e91c04282981cedfea1ba304e89990314))
+* **docs:** updated switch story ([2391b9f](https://github.com/Kajabi/sage-lib/commit/2391b9f75630e40a96912048afd965a5e6c85f19))
+* **docs:** updated switch story and general updates ([fc378e3](https://github.com/Kajabi/sage-lib/commit/fc378e37cc75f2007e6fc74942c6b32bc6f082fc))
+* **docs:** updated tabs story ([1da9bcf](https://github.com/Kajabi/sage-lib/commit/1da9bcf4b72520f419db5408cc6fbda5a85418e4))
+* **docs:** updated textarea story ([517e8ff](https://github.com/Kajabi/sage-lib/commit/517e8ff6d7c44638add5f35fe27d4bf39eaa6ba1))
+* **docs:** updated tooltip story ([1fc748a](https://github.com/Kajabi/sage-lib/commit/1fc748abc0ccc8af24adcba3a23bf55d371cff09))
+* **docs:** updated transactioncard story ([db65dc6](https://github.com/Kajabi/sage-lib/commit/db65dc680ec64451d6d0bdb058166885d7658054))
+* **docs:** updated type story ([1f5b865](https://github.com/Kajabi/sage-lib/commit/1f5b86521bc689f372c12644b55a54bf3a631ecb))
+* **docs:** updated uploadcard story ([a365f9c](https://github.com/Kajabi/sage-lib/commit/a365f9c83f7de97713f5579e77c530731f98fed3))
+* **docs:** updates per review ([77a4515](https://github.com/Kajabi/sage-lib/commit/77a4515727473732999b5b2c9dcab24ab2977095))
+* **docs:** updates table story ([71c8150](https://github.com/Kajabi/sage-lib/commit/71c81502583a8b9421685f0a5a04e180b716be68))
+* **dropdown:** updated dropdown story ([e228091](https://github.com/Kajabi/sage-lib/commit/e2280914ef6d5ebe762b70e8666e8ab61f46b5ba))
+* **loader:** patch loader color ([7388b1a](https://github.com/Kajabi/sage-lib/commit/7388b1a57cf8bcc93b6ad6e49cc162bc9d56c008))
+
+
+
+
+
 ## [0.33.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.33.0...@kajabi/sage-react@0.33.1) (2021-03-04)
 
 **Note:** Version bump only for package @kajabi/sage-react

@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.25.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.25.1...@kajabi/sage-assets@0.25.2) (2021-03-11)
+
+
+### Bug Fixes
+
+* **color:** update sage colors to be more green ([efb121e](https://github.com/Kajabi/sage-lib/commit/efb121e8919e4c29449f9292d74a1d38e5bc96ea))
+* **docs:** data card updated per review ([ab7cbc3](https://github.com/Kajabi/sage-lib/commit/ab7cbc35ddb8283f9cb10060dc80dab9e5196336))
+* **table:** corrects table overflow in grid-based parent components ([85a082b](https://github.com/Kajabi/sage-lib/commit/85a082beae74e1b3ce2ef58710c2fa5df124f321))
+
+
+
+
+
 ## [0.25.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.25.0...@kajabi/sage-assets@0.25.1) (2021-03-04)
 
 
