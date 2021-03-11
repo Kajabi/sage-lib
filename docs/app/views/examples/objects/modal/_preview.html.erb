@@ -11,14 +11,6 @@
     <%= sage_component SageButton, {
       style: "primary",
       icon: { name: "launch", style: "right" },
-      value: "Modal with Animation",
-      attributes: {
-        "data-js-modaltrigger": "cool-modal-animate",
-      }
-    } %>
-    <%= sage_component SageButton, {
-      style: "primary",
-      icon: { name: "launch", style: "right" },
       value: "Large Modal",
       attributes: {
         "data-js-modaltrigger": "cool-modal-large",
@@ -36,42 +28,6 @@
 
   <%# Standard Modal %>
   <%= sage_component SageModal, { id: "cool-modal" } do %>
-    <%= sage_component SageModalContent, { title: "Example Modal" } do %>
-      <% content_for :sage_header_aside do %>
-        <%= sage_component SageButton, {
-          style: "secondary",
-          subtle: true,
-          value: "Close Modal",
-          icon: { name: "remove", style: "only" },
-          attributes: { "data-js-modal": true }
-        } %>
-      <% end %>
-
-      <p class="t-sage-body">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      </p>
-
-      <% content_for :sage_footer do %>
-        <% content_for :sage_footer_aside do %>
-          <%= sage_component SageButton, {
-            style: "secondary",
-            subtle: true,
-            value: "Close Modal",
-            attributes: { "data-js-modal": true }
-          } %>
-        <% end %>
-        <%= sage_component SageButton, {
-          style: "primary",
-          icon: { name: "check", style: "left" },
-          value: "Take An Action",
-        } %>
-      <% end %>
-    <% end %>
-  <% end %>
-
-  <%# Standard Modal %>
-  <%= sage_component SageModal, { id: "cool-modal-animate", animate: true } do %>
     <%= sage_component SageModalContent, { title: "Example Modal" } do %>
       <% content_for :sage_header_aside do %>
         <%= sage_component SageButton, {
@@ -202,4 +158,185 @@
       <% end %>
     <% end %>
   <% end %>
+
+<% end %>
+
+<%= sage_component SagePanelBlock, {} do %>
+  <h3 class="t-sage-heading-6">Animated</h3>
+  <div class="sage-btn-group">
+    <%= sage_component SageButton, {
+      style: "primary",
+      icon: { name: "launch", style: "right" },
+      value: "Default (to bottom)",
+      attributes: {
+        "data-js-modaltrigger": "cool-modal-animate-default",
+      }
+    } %>
+    <%= sage_component SageButton, {
+      style: "primary",
+      icon: { name: "launch", style: "right" },
+      value: "Animate to top",
+      attributes: {
+        "data-js-modaltrigger": "cool-modal-animate-top",
+      }
+    } %>
+    <%= sage_component SageButton, {
+      style: "primary",
+      icon: { name: "launch", style: "right" },
+      value: "Animate left",
+      attributes: {
+        "data-js-modaltrigger": "cool-modal-animate-left",
+      }
+    } %>
+    <%= sage_component SageButton, {
+      style: "primary",
+      icon: { name: "launch", style: "right" },
+      value: "Animate right",
+      attributes: {
+        "data-js-modaltrigger": "cool-modal-animate-right",
+      }
+    } %>
+  </div>
+
+  <%# Animated Modals %>
+  <%= sage_component SageModal, { id: "cool-modal-animate-default", animate: true } do %>
+    <%= sage_component SageModalContent, { title: "Example Modal" } do %>
+      <% content_for :sage_header_aside do %>
+        <%= sage_component SageButton, {
+          style: "secondary",
+          subtle: true,
+          value: "Close Modal",
+          icon: { name: "remove", style: "only" },
+          attributes: { "data-js-modal": true }
+        } %>
+      <% end %>
+
+      <p class="t-sage-body">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+
+      <% content_for :sage_footer do %>
+        <% content_for :sage_footer_aside do %>
+          <%= sage_component SageButton, {
+            style: "secondary",
+            subtle: true,
+            value: "Close Modal",
+            attributes: { "data-js-modal": true }
+          } %>
+        <% end %>
+        <%= sage_component SageButton, {
+          style: "primary",
+          icon: { name: "check", style: "left" },
+          value: "Take An Action",
+        } %>
+      <% end %>
+    <% end %>
+  <% end %>
+
+  <%= sage_component SageModal, { id: "cool-modal-animate-top", animate: true, animate_direction: "top" } do %>
+    <%= sage_component SageModalContent, { title: "Example Modal" } do %>
+      <% content_for :sage_header_aside do %>
+        <%= sage_component SageButton, {
+          style: "secondary",
+          subtle: true,
+          value: "Close Modal",
+          icon: { name: "remove", style: "only" },
+          attributes: { "data-js-modal": true }
+        } %>
+      <% end %>
+
+      <p class="t-sage-body">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+
+      <% content_for :sage_footer do %>
+        <% content_for :sage_footer_aside do %>
+          <%= sage_component SageButton, {
+            style: "secondary",
+            subtle: true,
+            value: "Close Modal",
+            attributes: { "data-js-modal": true }
+          } %>
+        <% end %>
+        <%= sage_component SageButton, {
+          style: "primary",
+          icon: { name: "check", style: "left" },
+          value: "Take An Action",
+        } %>
+      <% end %>
+    <% end %>
+  <% end %>
+
+  <%= sage_component SageModal, { id: "cool-modal-animate-left", animate: true, animate_direction: "left" } do %>
+    <%= sage_component SageModalContent, { title: "Example Modal" } do %>
+      <% content_for :sage_header_aside do %>
+        <%= sage_component SageButton, {
+          style: "secondary",
+          subtle: true,
+          value: "Close Modal",
+          icon: { name: "remove", style: "only" },
+          attributes: { "data-js-modal": true }
+        } %>
+      <% end %>
+
+      <p class="t-sage-body">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+
+      <% content_for :sage_footer do %>
+        <% content_for :sage_footer_aside do %>
+          <%= sage_component SageButton, {
+            style: "secondary",
+            subtle: true,
+            value: "Close Modal",
+            attributes: { "data-js-modal": true }
+          } %>
+        <% end %>
+        <%= sage_component SageButton, {
+          style: "primary",
+          icon: { name: "check", style: "left" },
+          value: "Take An Action",
+        } %>
+      <% end %>
+    <% end %>
+  <% end %>
+
+  <%= sage_component SageModal, { id: "cool-modal-animate-right", animate: true, animate_direction: "right" } do %>
+    <%= sage_component SageModalContent, { title: "Example Modal" } do %>
+      <% content_for :sage_header_aside do %>
+        <%= sage_component SageButton, {
+          style: "secondary",
+          subtle: true,
+          value: "Close Modal",
+          icon: { name: "remove", style: "only" },
+          attributes: { "data-js-modal": true }
+        } %>
+      <% end %>
+
+      <p class="t-sage-body">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+
+      <% content_for :sage_footer do %>
+        <% content_for :sage_footer_aside do %>
+          <%= sage_component SageButton, {
+            style: "secondary",
+            subtle: true,
+            value: "Close Modal",
+            attributes: { "data-js-modal": true }
+          } %>
+        <% end %>
+        <%= sage_component SageButton, {
+          style: "primary",
+          icon: { name: "check", style: "left" },
+          value: "Take An Action",
+        } %>
+      <% end %>
+    <% end %>
+  <% end %>
+
 <% end %>

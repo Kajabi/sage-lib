@@ -5,6 +5,18 @@
   <td><%= md('`nil`') %></td>
 </tr>
 <tr>
+  <td><%= md('`animate`') %></td>
+  <td><%= md('When `true`, in addition to the base fade transition assigned to all modals, the modal will animate into view while being displayed. Default direction of this animation runs from the top of the page down, and can be overridden using `animate_direction`. All animations are disabled when the user has <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion" target="_blank" rel="noopener">"reduce motion" enabled in their OS or browser.</a>') %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`animate_direction`') %></td>
+  <td><%= md('Sets the direction of the animation. Options include "bottom" (default), "top", "left", and "right". Use caution when setting `animate_direction` in order to maintain consistency within the page or view. This option requires `animate` to be set to `true`.') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
   <td><%= md('`disable_close`') %></td>
   <td><%= md('Enabling this property will return the JS early to not initialize any handlers.') %></td>
   <td><%= md('Boolean') %></td>
@@ -25,12 +37,6 @@
 <tr>
   <td><%= md('`remove_content_on_close`') %></td>
   <td><%= md('Toggles whether to delete the `innerHTML` when closing the modal.') %></td>
-  <td><%= md('Boolean') %></td>
-  <td><%= md('`nil`') %></td>
-</tr>
-<tr>
-  <td><%= md('`animate`') %></td>
-  <td><%= md('When `true`, the modal will animate in from the top of the page when being displayed in addition to the default fade transtion. All animations are disabled when the user has <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion" target="_blank" rel="noopener">"reduce motion" enabled.</a>') %></td>
   <td><%= md('Boolean') %></td>
   <td><%= md('`nil`') %></td>
 </tr>
