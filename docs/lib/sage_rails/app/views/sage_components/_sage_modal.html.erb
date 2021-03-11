@@ -3,8 +3,12 @@
     sage-modal
     <%= "sage-modal--active" if component.active %>
     <%= "sage-modal--large" if component.large %>
-    <%= "sage-modal--animate" if component.animate %>
   "
+  <%= "data-sage-animate" if component.animate %>
+  <%= "data-sage-animate-prop=translate" if component.animate %>
+  <% if component.animate_direction.present? && component.animate %>
+    <%= "data-sage-animate-dir=#{ component.animate_direction }" %>
+  <% end %>
   <%= "data-js-modal-disable-close" if component.disable_close %>
   <%= "data-js-modal-remove-content-on-close" if component.remove_content_on_close %>
   data-js-modal="<%= component.id %>"

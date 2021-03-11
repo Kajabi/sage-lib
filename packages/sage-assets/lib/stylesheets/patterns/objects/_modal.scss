@@ -16,7 +16,7 @@ $-modal-padding-y: sage-spacing(md);
   justify-content: center;
   position: fixed;
   overflow-y: scroll;
-  z-index: sage-z-index(modal, -1);
+  z-index: sage-z-index(negative);
   padding: sage-spacing(md);
   background-color: rgba(sage-color(charcoal, 500), 0.4);
   background-image: linear-gradient(
@@ -36,6 +36,7 @@ $-modal-padding-y: sage-spacing(md);
 
   &.sage-modal--active {
     visibility: visible;
+    z-index: sage-z-index(modal, -1);
     pointer-events: auto;
     opacity: 1;
   }
@@ -62,9 +63,19 @@ $-modal-padding-y: sage-spacing(md);
     margin-top: 8vh;
   }
 
-  .sage-modal--animate & {
+  [data-sage-animate] & {
     transform: translateY(-#{sage-spacing(lg)});
     transition: opacity 0.1s ease-in-out 0.1s, transform 0.15s ease-out 0.1s;
+  }
+
+  [data-sage-animate-dir="top"] & {
+    transform: translateY(#{sage-spacing(lg)});
+  }
+  [data-sage-animate-dir="left"] & {
+    transform: translateX(#{sage-spacing(lg)});
+  }
+  [data-sage-animate-dir="right"] & {
+    transform: translateX(-#{sage-spacing(lg)});
   }
 
   .sage-modal--active & {
@@ -136,7 +147,7 @@ $-modal-padding-y: sage-spacing(md);
 
   .sage-modal,
   .sage-modal__container,
-  .sage-modal--animate .sage-modal__container {
+  [data-sage-animate] .sage-modal__container {
     transform: none;
     transition: none;
   }

@@ -6,5 +6,6 @@ class SageModal < SageComponent
     large: [:optional, TrueClass],
     remove_content_on_close: [:optional, TrueClass],
     animate: [:optional, TrueClass],
+    animate_direction: [:optional, Set.new(["bottom", "top", "left", "right"])],
   })
 end
