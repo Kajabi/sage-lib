@@ -12,10 +12,11 @@
   align-self: stretch;
   padding: sage-spacing(lg);
   border-radius: sage-border(radius);
+  background-color: var(--background-color, inherit);
 
   [class*="sage-icon-"] {
-    display: block;
-    color: currentColor;
+    display: flex;
+    color: var(--color, currentColor);
   }
 }
 
@@ -24,7 +25,7 @@
   $-bold-values: map-get($-values, bold);
 
   .sage-icon-card--#{$-color} {
-    color: sage-color-combo($-color, default, foreground);
-    background-color: sage-color-combo($-color, default, background);
+    --color: #{sage-color-combo($-color, default, foreground)};
+    --background-color: #{sage-color-combo($-color, default, background)};
   }
 }

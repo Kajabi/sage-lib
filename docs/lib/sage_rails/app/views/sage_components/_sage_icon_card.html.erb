@@ -1,19 +1,26 @@
 <%
-size = component.size.present? ? component.size : '3xl'
-color = component.color.present? ? component.color : 'draft'
+color = component.color.present? ? component.color : "draft"
+size = component.size.present? ? component.size == "md" ? "" : "-#{component.size}" : "-3xl"
+style = {
+  "--background-color": (component.background_color if component.background_color.present?),
+  "--color": (component.foreground_color if component.foreground_color.present?),
+}.compact.map{|k,v| "#{k}:#{v}"}.join(";")
 %>
 <div
   class="
     sage-icon-card
-    <%= "sage-icon-card--#{color}" %>
+    <%= "sage-icon-card--#{color}" if color.present? %>
     <%= component.css_classes if component.css_classes.present? %>
   "
   <% component.attributes.each do |key, value| %>
     <%= "#{key}=\"#{value}\"".html_safe %>
   <% end if component.attributes&.is_a?(Hash) %>
+  <% if component.background_color.present? or component.foreground_color.present? %>
+    style="<%= style %>"
+  <% end %>
 >
   <i
-    class="sage-icon-<%= component.icon %>-<%= size %>"
+    class="sage-icon-<%= component.icon %><%= size %>"
     <% if component.label.present? %>
     aria-label="<%= component.label %>"
     <% else %>
