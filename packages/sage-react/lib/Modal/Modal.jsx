@@ -74,6 +74,7 @@ Modal.Footer = ModalFooter;
 Modal.FooterAside = ModalFooterAside;
 Modal.Header = ModalHeader;
 Modal.HeaderAside = ModalHeaderAside;
+Modal.ANIMATION_PRESETS = MODAL_ANIMATION_PRESETS;
 Modal.ANIMATION_DIRECTIONS = MODAL_ANIMATION_DIRECTIONS;
 
 Modal.defaultProps = {

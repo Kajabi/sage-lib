@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button } from '../Button';
 import { SageTokens, SageClassnames } from '../configs';
+import { disableArgs, selectArgs } from '../story-support/helpers';
 import { Modal } from './Modal';
 
-const defaultBody = (
+const DefaultBody = ({ onExit }) => (
   <>
     <Modal.Header title="Example Sage Modal">
       <Modal.HeaderAside>
@@ -57,18 +58,36 @@ export default {
     'Modal.FooterAside': Modal.FooterAside,
   },
   args: {
-    animation: null
-  }
+    animation: Modal.ANIMATION_PRESETS,
+  },
+  argTypes: {
+    ...disableArgs(['children', 'onExit']),
+  },
 };
 
-const Template = (args) => <Modal {...args} />;
+const Template = (args) => {
+  const [selfActive, setSelfActive] = useState(args.active);
 
+  const handleExit = () => {
+    setSelfActive(false);
+  };
+
+  useEffect(() => {
+    setSelfActive(args.active);
+  }, [args.active]);
+
+  return (
+    <Modal {...args} onExit={handleExit} active={selfActive}>
+      <DefaultBody onExit={handleExit} />
+    </Modal>
+  );
+};
 export const Default = Template.bind({});
 
 Default.decorators = [
   (Story) => (
     <>
-      <p>Note: wired modal demonstrates functionality. See &quot;Docs&quot; tab for properties</p>
+      <p>Note: Use the Controls to toggle the modal's Active property to see it.</p>
       <Story />
     </>
   )
@@ -94,7 +113,7 @@ export const Wired = () => {
         animation={{direction: Modal.ANIMATION_DIRECTIONS.BOTTOM}}
         onExit={onExit}
       >
-        {defaultBody}
+        <DefaultBody onExit={onExit} />
       </Modal>
     </>
   );
