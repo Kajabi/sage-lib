@@ -18,46 +18,57 @@ export default {
     ...selectArgs({
       color: DataCard.COLORS
     })
+  },
+  args: {
+    color: DataCard.COLORS.DEFAULT
   }
 };
 
-export const Empty = (args) => <DataCard {...args} />;
+export const Template = (args) => <DataCard {...args} />;
 
-export const DefaultCard = () => (
-  <>
-    <Grid container={Grid.CONTAINER_SIZES.MODAL}>
-      <DataCard color={DataCard.COLORS.DEFAULT}>
-        <DataCard.Header title="Header">
-          <Button
-            subtle={true}
-            color={Button.COLORS.SECONDARY}
-            iconOnly={true}
-            icon={SageTokens.ICONS.MAPPED}
-          >
-            Drag
-          </Button>
-        </DataCard.Header>
-        <DataCard.Body>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </p>
-          <p>
-            Duis sit amet libero lacus.
-          </p>
-          <p>
-            Aenean ullamcorper faucibus purus a ultrices.
-          </p>
-          <p>
-            Curabitur congue dolor eu condimentum scelerisque.
-          </p>
-          <p>
-            Morbi at elit nunc.
-          </p>
-        </DataCard.Body>
-      </DataCard>
-    </Grid>
-  </>
-);
+export const Default = Template.bind({});
+Default.args = {
+  children: (
+    <>
+      <DataCard.Header title="Header">
+        <Button
+          subtle={true}
+          color={Button.COLORS.SECONDARY}
+          iconOnly={true}
+          icon={SageTokens.ICONS.MAPPED}
+        >
+          Drag
+        </Button>
+      </DataCard.Header>
+      <DataCard.Body>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+        <p>
+          Duis sit amet libero lacus.
+        </p>
+        <p>
+          Aenean ullamcorper faucibus purus a ultrices.
+        </p>
+        <p>
+          Curabitur congue dolor eu condimentum scelerisque.
+        </p>
+        <p>
+          Morbi at elit nunc.
+        </p>
+      </DataCard.Body>
+    </>
+  )
+};
+Default.decorators = [
+  (Story) => (
+    <>
+      <Grid container={Grid.CONTAINER_SIZES.XS}>
+        <Story />
+      </Grid>
+    </>
+  )
+];
 
 export const DataCardGroup = () => (
   <>

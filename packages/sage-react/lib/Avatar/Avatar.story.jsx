@@ -1,29 +1,22 @@
 import React from 'react';
+import { selectArgs } from '../story-support/helpers';
 import { Avatar } from './Avatar';
-import { AvatarGroup } from './AvatarGroup';
 
 export default {
   title: 'Sage/Avatar',
   component: Avatar,
+  args: {
+    initials: 'QJ',
+    color: Avatar.COLORS.SAGE,
+    size: null,
+    centered: true,
+  },
+  argTypes: {
+    ...selectArgs({
+      color: Avatar.COLORS
+    })
+  }
 };
+
 const Template = (args) => <Avatar {...args} />;
-
-// Each story then reuses that template
 export const Default = Template.bind({});
-Default.args = {
-  initials: 'QJ',
-  color: Avatar.COLORS.SAGE,
-  size: null,
-  centered: true,
-};
-
-export const Group = () => (
-  <AvatarGroup
-    items={[
-      { initials: 'JC' },
-      { color: 'purple', initials: 'PS' },
-      { color: 'sage', initials: 'Q' },
-      { color: 'orange', initials: 'KJ' },
-    ]}
-  />
-);

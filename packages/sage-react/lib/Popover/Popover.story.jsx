@@ -6,7 +6,6 @@ import { Popover } from './Popover';
 export default {
   title: 'Sage/Popover',
   component: Popover,
-  decorators: [(Story) => <div style={{ minHeight: 150 }}><Story /></div>],
   argTypes: {
     ...selectArgs({
       icon: SageTokens.ICONS,
@@ -17,9 +16,19 @@ export default {
     icon: SageTokens.ICONS.QUESTION_CIRCLE,
     iconOnly: true,
     moreLinkURL: '//example.com',
+    moreLinkText: 'Link text',
     title: 'Amazing popover'
   }
 };
-const Template = (args) => <Popover {...args} />;
 
+const Template = (args) => <Popover {...args} />;
 export const Default = Template.bind({});
+Default.decorators = [
+  (Story) => (
+    <>
+      <div style={{ minHeight: 150 }}>
+        <Story />
+      </div>
+    </>
+  )
+];

@@ -1,5 +1,6 @@
 export { Alert } from './Alert';
-export { Avatar, AvatarGroup } from './Avatar';
+export { Avatar } from './Avatar';
+export { AvatarGroup } from './AvatarGroup';
 export { Breadcrumbs } from './Breadcrumbs';
 export { Button } from './Button';
 export { Card } from './Card';

@@ -22,7 +22,7 @@ const Template = (args) => <Radio {...args} />;
 
 export const Default = Template.bind({});
 
-export const MultipleRadios = () => {
+export const MultipleRadios = (args) => {
   const items = [
     {
       label: 'Option 1',
@@ -59,6 +59,7 @@ export const MultipleRadios = () => {
     <ul className="sage-list">
       {itemState.map((configs, i) => (
         <Radio
+          {...args}
           id={`check-${i}`}
           key={i.toString()}
           onChange={onChange}
