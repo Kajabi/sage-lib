@@ -4,7 +4,7 @@ class SagePanelControls < SageComponent
       attributes: [:optional, Hash],
       value: String,
     }]]],
-    item_count_label: [:optional, TrueClass],
+    item_count_label: [:optional, String],
     show_bulk_actions: [:optional, TrueClass],
     show_expand_collapse: [:optional, TrueClass],
     show_pagination: [:optional, TrueClass],
