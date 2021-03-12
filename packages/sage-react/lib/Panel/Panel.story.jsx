@@ -1,5 +1,4 @@
 import React from 'react';
-import { select, radios } from '@storybook/addon-knobs';
 import { Button } from '../Button';
 import { Grid } from '../Grid';
 import { Icon } from '../Icon';
@@ -22,7 +21,11 @@ export default {
     'Panel.Tiles': Panel.Tiles,
     'Panel.Figure': Panel.Figure,
     'Panel.Row': Panel.Row
-  }
+  },
+  args: {
+    tiles: 3,
+    bleedDirection: Panel.Figure.BLEED_OPTIONS.NONE
+  },
 };
 
 export const Default = (args) => (
@@ -164,13 +167,13 @@ export const PanelList = (args) => (
   </Grid>
 );
 
-export const PanelTiles = (args) => (
+export const PanelTiles = ({ tiles, ...args }) => (
   <Grid container={Grid.CONTAINER_SIZES.XS}>
     <Panel {...args}>
       <Panel.Header title="Panel with tiles" />
       <Panel.Subheader title="Tiles provided through props" />
       <Panel.Tiles
-        tilesInRow={select('Tiles in row', [2, 3, 4], 3)}
+        tilesInRow={tiles}
         wrapTiles={false}
         tiles={[
           (
@@ -254,7 +257,7 @@ export const PanelTiles = (args) => (
       />
       <Panel.Divider />
       <Panel.Subheader title="Tiles provided through as children" />
-      <Panel.Tiles tilesInRow={select('Tiles in row', [2, 3, 4], 3)}>
+      <Panel.Tiles tilesInRow={tiles}>
         <Panel.Block>
           <Icon icon={Icon.ICONS.CIRCLE_1} size={Icon.SIZES['2XL']} />
           <p className={SageClassnames.TYPE.BODY}>
@@ -322,6 +325,18 @@ export const PanelTiles = (args) => (
     </Panel>
   </Grid>
 );
+PanelTiles.args = {
+  tiles: 3,
+};
+// fully custom ArgsTable
+PanelTiles.argTypes = {
+  tiles: {
+    control: {
+      type: 'select',
+      options: [2, 3, 4]
+    }
+  }
+};
 
 export const PanelRow = (args) => (
   <Grid container={Grid.CONTAINER_SIZES.XS}>
@@ -355,7 +370,7 @@ export const PanelRow = (args) => (
   </Grid>
 );
 
-export const PanelFigure = (args) => (
+export const PanelFigure = ({ bleedDirection, ...args }) => (
   <Grid container={Grid.CONTAINER_SIZES.XS}>
     <p className={`${SageClassnames.TYPE.BODY_SMALL} ${SageClassnames.SPACERS.MD_BOTTOM}`}>
       <strong>Note:</strong> Normally there would be other content along with the figure.
@@ -363,9 +378,21 @@ export const PanelFigure = (args) => (
       Observe the space that remains inside the panel outside the figure with each setting.
     </p>
     <Panel {...args}>
-      <Panel.Figure bleed={radios('Bleed direction', Panel.Figure.BLEED_OPTIONS, Panel.Figure.BLEED_OPTIONS.NONE)}>
+      <Panel.Figure bleed={bleedDirection}>
         <img src="//source.unsplash.com/800x500" alt="" />
       </Panel.Figure>
     </Panel>
   </Grid>
 );
+PanelFigure.args = {
+  bleedDirection: 3,
+};
+// fully custom ArgsTable
+PanelFigure.argTypes = {
+  bleedDirection: {
+    control: {
+      type: 'radio',
+      options: Panel.Figure.BLEED_OPTIONS
+    }
+  }
+};
