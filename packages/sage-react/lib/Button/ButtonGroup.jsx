@@ -6,6 +6,7 @@ import { BUTTON_GROUP_ALIGN_OPTIONS, BUTTON_GROUP_GAP_OPTIONS } from './configs'
 export const ButtonGroup = ({
   align,
   alignEnd,
+  borderTop,
   children,
   className,
   gap,
@@ -17,6 +18,7 @@ export const ButtonGroup = ({
     {
       'sage-btn-group--align-end': alignEnd,
       [`sage-btn-group--align-${align}`]: align,
+      [`sage-btn-group--border-top`]: borderTop,
       [`sage-btn-group--gap-${gap}`]: gap,
     }
   );
@@ -34,6 +36,7 @@ ButtonGroup.GAP_OPTIONS = BUTTON_GROUP_GAP_OPTIONS;
 ButtonGroup.defaultProps = {
   align: ButtonGroup.ALIGN_OPTIONS.NONE,
   alignEnd: false,
+  borderTop: false,
   className: null,
   children: null,
   gap: ButtonGroup.GAP_OPTIONS.XS,
@@ -42,6 +45,7 @@ ButtonGroup.defaultProps = {
 ButtonGroup.propTypes = {
   align: PropTypes.oneOf(Object.values(ButtonGroup.ALIGN_OPTIONS)),
   alignEnd: PropTypes.bool,
+  borderTop: PropTypes.bool,
   className: PropTypes.string,
   children: PropTypes.node,
   gap: PropTypes.oneOf(Object.values(ButtonGroup.GAP_OPTIONS)),
