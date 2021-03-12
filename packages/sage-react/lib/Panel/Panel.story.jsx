@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Button } from '../Button';
 import { Grid } from '../Grid';
 import { Icon } from '../Icon';
@@ -21,10 +22,6 @@ export default {
     'Panel.Tiles': Panel.Tiles,
     'Panel.Figure': Panel.Figure,
     'Panel.Row': Panel.Row
-  },
-  args: {
-    tiles: 3,
-    bleedDirection: Panel.Figure.BLEED_OPTIONS.NONE
   },
 };
 
@@ -337,6 +334,12 @@ PanelTiles.argTypes = {
     }
   }
 };
+PanelTiles.defaultProps = {
+  tiles: null
+};
+PanelTiles.propTypes = {
+  tiles: PropTypes.number
+};
 
 export const PanelRow = (args) => (
   <Grid container={Grid.CONTAINER_SIZES.XS}>
@@ -395,4 +398,10 @@ PanelFigure.argTypes = {
       options: Panel.Figure.BLEED_OPTIONS
     }
   }
+};
+PanelFigure.defaultProps = {
+  bleedDirection: null
+};
+PanelFigure.propTypes = {
+  bleedDirection: PropTypes.oneOf(Object.values(Panel.Figure.BLEED_OPTIONS))
 };
