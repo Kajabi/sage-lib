@@ -10,11 +10,12 @@ import { MODAL_ANIMATION_PRESETS, MODAL_ANIMATION_DIRECTIONS } from './configs';
 
 export const Modal = ({
   active,
+  animation,
   children,
   className,
   containerClassName,
-  animation,
   large,
+  noBlur,
   onExit,
   ...rest
 }) => {
@@ -24,6 +25,7 @@ export const Modal = ({
     {
       'sage-modal--active': active,
       'sage-modal--large': large,
+      'sage-modal--no-blur': noBlur,
     }
   );
 
@@ -33,7 +35,7 @@ export const Modal = ({
     animationAttributes = MODAL_ANIMATION_PRESETS;
 
     if (animation.direction) {
-      animationAttributes['data-sage-animate-dir'] = animation.direction;
+      animationAttributes['data-sage-animate-direction'] = animation.direction;
     }
   }
 
@@ -84,6 +86,7 @@ Modal.defaultProps = {
   containerClassName: null,
   className: '',
   large: false,
+  noBlur: false,
   onExit: (val) => val,
 };
 
@@ -99,5 +102,6 @@ Modal.propTypes = {
   containerClassName: PropTypes.string,
   className: PropTypes.string,
   large: PropTypes.bool,
+  noBlur: PropTypes.bool,
   onExit: PropTypes.func,
 };

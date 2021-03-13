@@ -13,5 +13,5 @@ export const MODAL_ANIMATION_DIRECTIONS = {
 
 export const MODAL_ANIMATION_PRESETS = {
   'data-sage-animate': true,
-  'data-sage-animate-dir': MODAL_ANIMATION_DIRECTIONS.TOP
+  'data-sage-animate-direction': MODAL_ANIMATION_DIRECTIONS.TOP
 };
