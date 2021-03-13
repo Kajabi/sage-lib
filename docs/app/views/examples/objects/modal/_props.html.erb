@@ -11,9 +11,15 @@
   <td><%= md('`nil`') %></td>
 </tr>
 <tr>
-  <td><%= md('`animate_direction`') %></td>
-  <td><%= md('Sets the direction of the animation. Options include "bottom" (default), "top", "left", and "right". Use caution when setting `animate_direction` in order to maintain consistency within the page or view. This option requires `animate` to be set to `true`.') %></td>
+  <td><%= md('`direction`') %></td>
+  <td><%= md('Sets the direction of the animation. Options include "bottom" (default), "top", "left", and "right". Use caution when setting multiple `direction` modals within a page or view to ensure a consistent user experience. This option requires `animate` to be set to `true`.') %></td>
   <td><%= md('String') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`disable_background_blur`') %></td>
+  <td><%= md('Disables the background blur filter, with a darkened background color. Recommended for increased animation performance when `animate` is enabled. This setting is ignored when "reduce motion" is enabled by the user\'s OS.') %></td>
+  <td><%= md('Boolean') %></td>
   <td><%= md('`nil`') %></td>
 </tr>
 <tr>

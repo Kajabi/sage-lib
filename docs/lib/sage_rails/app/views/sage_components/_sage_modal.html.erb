@@ -1,13 +1,15 @@
 <dialog
-  class="
-    sage-modal
+  class="sage-modal
     <%= "sage-modal--active" if component.active %>
-    <%= "sage-modal--large" if component.large %>
+    <%= "sage-modal--large" if component.large -%>
+    <%= "sage-modal--no-blur" if component.disable_background_blur -%>
   "
-  <%= "data-sage-animate" if component.animate %>
-  <% if component.animate_direction.present? && component.animate %>
-    <%= "data-sage-animate-dir=#{ component.animate_direction }" %>
-  <% end %>
+  <%= "data-sage-animate" if component.animate.present? %>
+  <%- if component.animate.is_a?(Hash) -%>
+    <%- component.animate.each do |key, value| -%>
+      <%= "data-sage-animate-#{ key }=#{ value }" %>
+    <%- end -%>
+  <%- end -%>
   <%= "data-js-modal-disable-close" if component.disable_close %>
   <%= "data-js-modal-remove-content-on-close" if component.remove_content_on_close %>
   data-js-modal="<%= component.id %>"
