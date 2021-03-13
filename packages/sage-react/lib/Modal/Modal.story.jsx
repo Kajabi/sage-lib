@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Button } from '../Button';
 import { SageTokens, SageClassnames } from '../configs';
-import { disableArgs, selectArgs } from '../story-support/helpers';
+import { disableArgs } from '../story-support/helpers';
 import { Modal } from './Modal';
 
 const DefaultBody = ({ onExit }) => (
@@ -87,7 +87,7 @@ export const Default = Template.bind({});
 Default.decorators = [
   (Story) => (
     <>
-      <p>Note: Use the Controls to toggle the modal's Active property to see it.</p>
+      <p>Note: Use the Controls to toggle the modal&lsquo;s Active property to see it.</p>
       <Story />
     </>
   )
@@ -110,7 +110,7 @@ export const Wired = () => {
       </Button>
       <Modal
         active={active}
-        animation={{direction: Modal.ANIMATION_DIRECTIONS.BOTTOM}}
+        animation={{ direction: Modal.ANIMATION_DIRECTIONS.BOTTOM }}
         onExit={onExit}
       >
         <DefaultBody onExit={onExit} />
