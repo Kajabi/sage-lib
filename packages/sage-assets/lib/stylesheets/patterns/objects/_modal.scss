@@ -20,8 +20,8 @@ $-modal-padding-y: sage-spacing(md);
   padding: sage-spacing(md);
   background-color: rgba(sage-color(charcoal, 500), 0.4);
   background-image: linear-gradient(
-    rgba(sage-color(charcoal, 200), 0.3) 0%,
-    rgba(sage-color(charcoal, 500), 0.3) 100%
+    rgba(sage-color(charcoal, 200), 0.35) 0%,
+    rgba(sage-color(charcoal, 500), 0.4) 100%
   );
   transition: opacity 0.1s ease-out;
   pointer-events: none;
@@ -30,8 +30,16 @@ $-modal-padding-y: sage-spacing(md);
 
   @include position-full;
 
-  @supports (backdrop-filter: blur(2px)) {
-    backdrop-filter: blur(2px);
+  @supports (backdrop-filter: blur(3px)) {
+    backdrop-filter: blur(3px);
+  }
+
+  &.sage-modal--no-blur {
+    backdrop-filter: none;
+    background-image: linear-gradient(
+      rgba(sage-color(charcoal, 300), 0.5) 0%,
+      rgba(sage-color(charcoal, 500), 0.5) 100%
+    );
   }
 
   &.sage-modal--active {
@@ -51,7 +59,7 @@ $-modal-padding-y: sage-spacing(md);
   border-radius: sage-border(radius);
   background-color: sage-color(white);
   box-shadow: sage-shadow(2xl);
-  transition: opacity 0.1s ease-in-out 0.1s;
+  transition: opacity 0.1s ease-in 0.1s;
   pointer-events: none;
   opacity: 0;
 
@@ -64,18 +72,18 @@ $-modal-padding-y: sage-spacing(md);
   }
 
   [data-sage-animate] & {
-    transform: translateY(-#{sage-spacing(lg)});
+    transform: translateY(-#{sage-spacing(md)});
     transition: opacity 0.1s ease-in, transform 0.15s ease-out;
-    transition-delay: 0.1s, 0.1s;
+    transition-delay: 0.1s, 0.15s;
   }
 
-  [data-sage-animate-dir="top"] & {
+  [data-sage-animate-direction="top"] & {
     transform: translateY(#{sage-spacing(lg)});
   }
-  [data-sage-animate-dir="left"] & {
+  [data-sage-animate-direction="left"] & {
     transform: translateX(#{sage-spacing(lg)});
   }
-  [data-sage-animate-dir="right"] & {
+  [data-sage-animate-direction="right"] & {
     transform: translateX(-#{sage-spacing(lg)});
   }
 
@@ -142,7 +150,7 @@ $-modal-padding-y: sage-spacing(md);
 
 @media (prefers-reduced-motion) {
   .sage-modal {
-    background-color: rgba(sage-color(charcoal, 500), 0.9);
+    background-color: rgba(sage-color(charcoal, 500), 0.85);
     backdrop-filter: none;
   }
 
