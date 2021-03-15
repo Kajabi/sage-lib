@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 import { Button } from '../Button';
 import { SageTokens, SageClassnames } from '../configs';
 import { disableArgs } from '../story-support/helpers';
@@ -46,6 +47,10 @@ const DefaultBody = ({ onExit }) => (
     </Modal.Footer>
   </>
 );
+
+DefaultBody.propTypes = {
+  onExit: PropTypes.func.isRequired
+};
 
 export default {
   title: 'Sage/Modal',
