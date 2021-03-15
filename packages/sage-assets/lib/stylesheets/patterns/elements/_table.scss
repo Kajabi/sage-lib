@@ -284,6 +284,9 @@ $-table-sort-indicator-direction: rem(7px);
     height: 100%;
     width: $-table-overflow-indicator-width;
     background: $-table-overflow-indicator-gradient;
+    @media screen and (min-width: sage-breakpoint(sm-max)) {
+      display: none;
+    }
   }
 }
 
