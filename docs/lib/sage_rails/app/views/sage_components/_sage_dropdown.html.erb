@@ -20,7 +20,7 @@
   >
     <%= component.content %>
   </div>
-  <nav class="sage-dropdown__panel">
+  <div class="sage-dropdown__panel">
     <% if component.search %>
       <%= sage_component SageSearch, {
         placeholder: "Search",
@@ -30,62 +30,66 @@
         }
       } %>
     <% end %>
-    <ul class="sage-dropdown__menu" role="menu" aria-label="options_menu">
-      <% component.items.each do |item| %>
-        <% if item[:is_heading].present? && item[:is_heading] %>
-          <li class="
-              sage-dropdown__item
-              sage-dropdown__item--heading
-            "
-            role="none"
-            <%= "aria-selected=true" if item[:selected] %>
-          >
-            <%= item[:value] %>
-          </li>
-        <% else %>
-          <li class="
-              sage-dropdown__item
-              <% item[:modifiers]&.each do |item_modifier| %>
-                <%= "sage-dropdown__item--#{item_modifier}" %>
+    <% if component.items.present? %>
+      <ul class="sage-dropdown__menu" role="menu" aria-label="options_menu">
+        <% component.items.each do |item| %>
+          <% if item[:is_heading].present? && item[:is_heading] %>
+            <li class="
+                sage-dropdown__item
+                sage-dropdown__item--heading
+              "
+              role="none"
+              <%= "aria-selected=true" if item[:selected] %>
+            >
+              <%= item[:value] %>
+            </li>
+          <% else %>
+            <li class="
+                sage-dropdown__item
+                <% item[:modifiers]&.each do |item_modifier| %>
+                  <%= "sage-dropdown__item--#{item_modifier}" %>
+                <% end %>
+              "
+              role="none"
+              <%= "aria-selected=true" if item[:selected] %>
+            >
+              <% if item[:attributes].nil? || item[:attributes]&.keys&.include?(:href) || item[:attributes]&.keys&.include?("href") %>
+                <a
+                  <% item[:attributes].each do |key, value| %>
+                    <%= key %>="<%= value %>"
+                  <% end if item[:attributes]&.is_a?(Hash) %>
+                  role="menuitem"
+                  tabindex="0"
+                  class="
+                    sage-dropdown__item-control
+                    <%= "sage-dropdown__item-control--#{item[:style]}" if item[:style] %>
+                    <%= "sage-dropdown__item-control--icon-#{item[:icon]}" if item[:icon] %>
+                  "
+                >
+                  <%= item[:value].html_safe %>
+                </a>
+              <% else %>
+                <button
+                  <% item[:attributes].each do |key, value| %>
+                    <%= key %>="<%= value %>"
+                  <% end if item[:attributes]&.is_a?(Hash) %>
+                  role="menuitem"
+                  tabindex="0"
+                  type="button"
+                  class="
+                    sage-dropdown__item-control
+                    <%= "sage-dropdown__item-control--#{item[:style]}" if item[:style] %>
+                    <%= "sage-dropdown__item-control--icon-#{item[:icon]}" if item[:icon] %>
+                  ">
+                  <%= item[:value].html_safe %>
+                </button>
               <% end %>
-            "
-            role="none"
-            <%= "aria-selected=true" if item[:selected] %>
-          >
-            <% if item[:attributes].nil? || item[:attributes]&.keys&.include?(:href) || item[:attributes]&.keys&.include?("href") %>
-              <a
-                <% item[:attributes].each do |key, value| %>
-                  <%= key %>="<%= value %>"
-                <% end if item[:attributes]&.is_a?(Hash) %>
-                role="menuitem"
-                tabindex="0"
-                class="
-                  sage-dropdown__item-control
-                  <%= "sage-dropdown__item-control--#{item[:style]}" if item[:style] %>
-                  <%= "sage-dropdown__item-control--icon-#{item[:icon]}" if item[:icon] %>
-                "
-              >
-                <%= item[:value].html_safe %>
-              </a>
-            <% else %>
-              <button 
-                <% item[:attributes].each do |key, value| %>
-                  <%= key %>="<%= value %>"
-                <% end if item[:attributes]&.is_a?(Hash) %>
-                role="menuitem"
-                tabindex="0"
-                type="button"
-                class="
-                  sage-dropdown__item-control
-                  <%= "sage-dropdown__item-control--#{item[:style]}" if item[:style] %>
-                  <%= "sage-dropdown__item-control--icon-#{item[:icon]}" if item[:icon] %>
-                ">
-                <%= item[:value].html_safe %>
-              </button>
-            <% end %>
-          </li>
+            </li>
+          <% end %>
         <% end %>
-      <% end %>
-    </ul>
-  </nav>
+      </ul>
+    <% else %>
+      <%= component.custom_content %>
+    <% end %>
+  </div>
 </div>
