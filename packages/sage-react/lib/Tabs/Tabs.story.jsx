@@ -28,8 +28,10 @@ export const Default = (args) => {
     iconPosition: 'right'
   };
 
-  const choiceIcon = null;
-  const choiceType = Tabs.Item.CHOICE_TYPES.RADIO;
+  const tabChoiceSettings = {
+    tabChoiceType: Tabs.Item.CHOICE_TYPES.RADIO,
+    tabChoiceIcon: null,
+  };
 
   return (
     <Tabs
@@ -41,8 +43,6 @@ export const Default = (args) => {
           id: 'tab-1',
           label: 'Tab 1',
           subtext: 'Subtext content...',
-          tabChoiceType: choiceType,
-          tabChoiceIcon: choiceIcon,
           content: (
             <>
               <p>Tab 1 content. Lorem ipsum dolor sit amut consectitor.</p>
@@ -52,13 +52,12 @@ export const Default = (args) => {
             </>
           ),
           panelSpacing: true,
+          ...tabChoiceSettings,
         },
         {
           id: 'tab-2',
           label: 'Tab 2',
           subtext: 'Subtext content...',
-          tabChoiceType: choiceType,
-          tabChoiceIcon: choiceIcon,
           content: (
             <>
               <p>Tab 2 content. Lorem ipsum dolor sit amut consectitor.</p>
@@ -68,14 +67,13 @@ export const Default = (args) => {
             </>
           ),
           panelSpacing: true,
+          ...tabChoiceSettings,
         },
         {
           id: 'tab-3',
           disabled: true,
           label: 'Tab 3',
           subtext: 'Subtext content...',
-          tabChoiceType: choiceType,
-          tabChoiceIcon: choiceIcon,
           content: (
             <>
               <p>Tab 3 content. Lorem ipsum dolor sit amut consectitor.</p>
@@ -85,6 +83,7 @@ export const Default = (args) => {
             </>
           ),
           panelSpacing: true,
+          ...tabChoiceSettings,
         },
       ]}
     />
@@ -125,4 +124,45 @@ RichContent.args = {
     },
   ],
   tabStyle: Tabs.STYLES.CHOICE
+};
+
+export const IconAlignment = () => {
+  const tabChoiceSettings = {
+    tabChoiceType: Tabs.Item.CHOICE_TYPES.RADIO,
+    tabChoiceIcon: null,
+    tabChoiceIconAlignment: Tabs.Item.ICON_ALIGNMENTS.START,
+  };
+
+  return (
+    <Tabs
+      useSeparator={true}
+      tabs={[
+        {
+          id: 'tab-1',
+          label: 'Tab 1',
+          subtext: 'Subtext content...',
+          content: 'Content 1',
+          panelSpacing: true,
+          ...tabChoiceSettings,
+        },
+        {
+          id: 'tab-2',
+          label: 'Tab 2',
+          subtext: 'Subtext content...',
+          content: 'Content 2',
+          panelSpacing: true,
+          ...tabChoiceSettings,
+        },
+        {
+          id: 'tab-3',
+          label: 'Tab 3',
+          subtext: 'Subtext content...',
+          content: 'Content 3',
+          panelSpacing: true,
+          ...tabChoiceSettings,
+        },
+      ]}
+      tabStyle={Tabs.STYLES.CHOICE}
+    />
+  );
 };
