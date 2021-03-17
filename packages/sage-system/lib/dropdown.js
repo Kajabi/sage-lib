@@ -9,6 +9,8 @@ Sage.dropdown = (function () {
   // The class to toggle on the menu when the menu is disabled
   const dropdownDisabledClass = "sage-dropdown--disabled";
 
+  const dropdownNoExitClass = "sage-dropdown-no-exit";
+
   // Selector for a menu item
   const dropdownItemClass = "sage-dropdown__item-control";
 
@@ -71,6 +73,11 @@ Sage.dropdown = (function () {
 
     // Stop if the dropdown item clicked is disabled
     if (el.classList.contains(dropdownDisabledItemClass)) {
+      return;
+    }
+
+    // Stop if the dropdown item clicked is has the no-exit class
+    if (el.classList.contains(dropdownNoExitClass)) {
       return;
     }
 
