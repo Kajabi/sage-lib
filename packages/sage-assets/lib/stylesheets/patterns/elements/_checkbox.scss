@@ -58,6 +58,10 @@ $-checkbox-focus-outline-color: sage-color(primary);
     z-index: sage-z-index(default);
     padding: rem(6px) sage-spacing(xs);
     border: 0;
+
+    .sage-panel-controls & {
+      flex-flow: row;
+    }
   }
 
   .sage-panel-controls__bulk-actions--checked & {
@@ -114,6 +118,10 @@ $-checkbox-focus-outline-color: sage-color(primary);
   .sage-checkbox--error &,
   .sage-checkbox__input:invalid + & {
     color: sage-color(red);
+  }
+
+  .sage-panel-controls & {
+    white-space: nowrap;
   }
 }
 
@@ -247,7 +255,7 @@ $-checkbox-focus-outline-color: sage-color(primary);
     margin-top: 4px;
 
     .sage-panel-controls & {
-      margin-top: 0;
+      // margin-top: 0;
     }
   }
 }
