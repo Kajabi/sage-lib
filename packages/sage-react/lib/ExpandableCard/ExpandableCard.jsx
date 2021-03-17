@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 import uuid from 'react-uuid';
 import { Button } from '../Button';
-import { SageTokens } from '../configs';
+import { SageClassnames, SageTokens } from '../configs';
 
-export const ExpandableCard = ({ triggerLabel, bodyBordered, children, }) => {
+export const ExpandableCard = ({ bodyBordered, children, className, sageType, triggerLabel, }) => {
   const [selfActive, setSelfActive] = useState(false);
 
   const handleBodyToggle = () => {
@@ -20,20 +21,27 @@ export const ExpandableCard = ({ triggerLabel, bodyBordered, children, }) => {
 
   const id = uuid();
 
+  const bodyClassnames = classnames({
+    'sage-expandable-card__body-bordered': bodyBordered,
+    'sage-expandable-card__body': !bodyBordered,
+    [`${SageClassnames.TYPE_BLOCK}`]: sageType,
+  });
+
   return (
-    <div className="sage-expandable-card">
+    <div className={`sage-expandable-card ${className || ''}`}>
       <Button
         aria-controls={id}
         aria-expanded={selfActive}
-        color="primary"
-        icon={SageTokens.ICONS.CARET_RIGHT}
-        subtle={true}
         className="sage-expandable-card__trigger"
+        color="primary"
+        fullWidth={true}
+        icon={SageTokens.ICONS.CARET_RIGHT}
         onClick={handleTriggerClick}
+        subtle={true}
       >
         {triggerLabel}
       </Button>
-      <div id={id} className={`${bodyBordered ? 'sage-expandable-card__body-bordered' : 'sage-expandable-card__body'}`}>
+      <div id={id} className={bodyClassnames}>
         {children}
       </div>
     </div>
@@ -41,13 +49,17 @@ export const ExpandableCard = ({ triggerLabel, bodyBordered, children, }) => {
 };
 
 ExpandableCard.defaultProps = {
-  triggerLabel: null,
   bodyBordered: false,
   children: null,
+  className: null,
+  sageType: false,
+  triggerLabel: null,
 };
 
 ExpandableCard.propTypes = {
-  triggerLabel: PropTypes.string,
   bodyBordered: PropTypes.bool,
+  className: PropTypes.string,
   children: PropTypes.node,
+  sageType: PropTypes.bool,
+  triggerLabel: PropTypes.string,
 };
