@@ -20,6 +20,11 @@ $-pagination-bg-color-dark: sage-color(grey, 300);
   justify-content: space-between;
   flex-flow: row wrap;
   align-items: center;
+  flex-grow: 1;
+
+  .sage-panel-controls__default-controls & {
+    margin-right: 1.5rem;
+  }
 }
 
 .sage-pagination--no-counter {
@@ -33,6 +38,10 @@ $-pagination-bg-color-dark: sage-color(grey, 300);
   list-style-type: none;
   border: $-pagination-border;
   border-radius: $-pagination-radius;
+
+  .sage-panel-controls & {
+    border: none;
+  }
 }
 
 .sage-pagination__item {
@@ -42,6 +51,15 @@ $-pagination-bg-color-dark: sage-color(grey, 300);
 
   &:last-of-type {
     border: 0;
+  }
+
+  .sage-panel-controls & {
+    border: 0;
+    margin-right: 12px;
+
+    &:last-of-type {
+       margin-right: 0;
+    }
   }
 }
 
@@ -59,6 +77,12 @@ $-pagination-bg-color-dark: sage-color(grey, 300);
   &:focus {
     background: $-pagination-bg-color;
     box-shadow: none;
+  }
+
+  .sage-panel-controls & {
+    min-height: rem(40px);
+    border: $-pagination-border;
+    border-radius: $-pagination-radius;
   }
 }
 
@@ -79,6 +103,10 @@ $-pagination-bg-color-dark: sage-color(grey, 300);
 .sage-pagination__count {
   @extend %t-sage-body;
   padding-right: sage-spacing();
+
+  .sage-panel-controls__bulk-actions--checked + .sage-pagination & {
+    visibility: hidden;
+  }
 }
 
 .sage-pagination__count--solo {

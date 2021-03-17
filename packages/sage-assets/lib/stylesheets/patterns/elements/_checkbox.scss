@@ -245,5 +245,9 @@ $-checkbox-focus-outline-color: sage-color(primary);
 
   &:not(.sage-checkbox--standalone) {
     margin-top: 4px;
+
+    .sage-panel-controls & {
+      margin-top: 0;
+    }
   }
 }

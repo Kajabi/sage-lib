@@ -3,7 +3,7 @@ show_secondary_toolbar = component.show_pagination || component.show_sort || com
 show_default_controls = component.show_bulk_actions || show_secondary_toolbar
 bulk_action_items = component.bulk_action_items.present? ? component.bulk_action_items : []
 sort_items = component.sort_items.present? ? component.sort_items : []
-item_count_text = component.item_count_label.present? ? component.item_count_label : "Select all"
+item_count_text = component.item_count_label.present? ? component.item_count_label : ""
 %>
 <div class="sage-panel-controls" data-js-panel-controls="<%= component.target %>">
   <% if content_for? :sage_panel_controls_tabs %>
@@ -17,7 +17,6 @@ item_count_text = component.item_count_label.present? ? component.item_count_lab
       <%= content_for :sage_panel_controls_toolbar %>
     </div>
   <% end %>
-<%= item_count_text %>
   <% if show_default_controls %>
     <div class="sage-panel-controls__default-controls">
       <% if component.show_bulk_actions %>
@@ -53,6 +52,25 @@ item_count_text = component.item_count_label.present? ? component.item_count_lab
         <p class="sage-panel-controls__item-count-label">
           <%= item_count_text %>
         </p>
+      <% end %>
+
+      <% if component.show_pagination %>
+        <%# sage_component SagePagination, {
+          items: @comments,
+          window: 2,
+          hide_pages: true
+        } %>
+        <nav class="sage-pagination">
+          <span class="sage-pagination__count"><strong>1</strong> – <strong>50</strong> of <strong>505</strong> Cacti</span>
+          <ul class="sage-pagination__pages">
+            <li class="sage-pagination__item">
+              <a aria-disabled="true" class="sage-pagination__page sage-pagination__page--disabled" href="//example.com/0">&larr;</a>
+            </li>
+            <li class="sage-pagination__item">
+              <a aria-disabled="false" class="sage-pagination__page" href="//example.com/2">&rarr;</a>
+            </li>
+          </ul>
+        </nav>
       <% end %>
 
       <% if show_secondary_toolbar %>

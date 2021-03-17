@@ -50,11 +50,11 @@
 
 .sage-panel-controls__bulk-actions {
   display: flex;
-  flex: 1;
+  flex: 0 1;
   align-items: center;
 
   &:not(:last-child) {
-    margin-right: sage-spacing(panel);
+    // margin-right: sage-spacing(panel);
   }
 }
 

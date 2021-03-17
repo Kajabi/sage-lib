@@ -16,7 +16,12 @@
       <% if component.items.first_page? %>
       <li class="sage-pagination__item">
         <a href="#" class="sage-pagination__page sage-pagination__page--disabled">
-          <%= component.prev_text %>
+          &larr;
+          <% if component.show_arrows %>
+            &larr;
+          <% else %>
+            <%= component.prev_text %>
+          <% end %>
         </a>
       </li>
       <% else %>
@@ -32,7 +37,11 @@
       <% if component.items.last_page? %>
       <li class="sage-pagination__item">
         <a href="#" class="sage-pagination__page sage-pagination__page--disabled">
-          <%= component.next_text %>
+          <% if component.show_arrows %>
+            &rarr;
+          <% else %>
+            <%= component.next_text %>
+          <% end %>
         </a>
       </li>
       <% else %>
