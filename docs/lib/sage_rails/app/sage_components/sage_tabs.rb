@@ -15,7 +15,8 @@ class SageTabs < SageComponent
       subtext: [:optional, NilClass, String],
       target: [:optional, NilClass, String],
       text: [:optional, NilClass, String],
-      type: [:optional, Set.new(["arrow", "graphic", "icon", "radio"])]
+      type: [:optional, Set.new(["arrow", "graphic", "icon", "radio"])],
+      vertical_align_icon: [:optional, NilClass, Set.new(["start"])]
     ]]],
     navigational: [:optional, TrueClass],
     progressbar: [:optional, TrueClass],
