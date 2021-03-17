@@ -16,6 +16,16 @@ $-choice-radio-size: $sage-radio-size;
 $-choice-radio-color-checked: map-get($sage-radio-colors, checked);
 $-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
 
+:root {
+  --icon-top-offset: #{rem(7px)};
+}
+
+@media (max-width: sage-breakpoint(md-min)) {
+  :root {
+    --icon-top-offset: #{rem(6px)};
+  }
+}
+
 
 // stylelint-disable max-nesting-depth
 
@@ -28,7 +38,6 @@ $-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
   flex-grow: 1;
   flex-basis: 0;
   padding: sage-spacing(sm);
-  white-space: nowrap;
   color: $-choice-color-default;
   border: sage-border();
   border-radius: sage-border(radius);
@@ -142,6 +151,11 @@ $-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
     color: currentColor;
     transition: color map-get($sage-transitions, default);
   }
+
+  &.sage-choice--vertical-align-icon-start::#{$-choice-el-icon} {
+    align-self: start;
+    margin-top: var(--icon-top-offset);
+  }
 }
 
 .sage-choice--radio {
@@ -172,6 +186,11 @@ $-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
       border-color: $-choice-radio-color-checked;
     }
   }
+
+  &.sage-choice--vertical-align-icon-start::#{$-choice-el-radio} {
+    align-self: start;
+    margin-top: var(--icon-top-offset);
+  }
 }
 
 .sage-choice__content {
@@ -194,7 +213,7 @@ $-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
 .sage-choice__graphic {
   overflow: hidden;
   width: rem(48px);
-  height: remb(48px);
+  height: rem(48px);
   margin-right: sage-spacing(sm);
   border-radius: sage-border(radius-small);
 
