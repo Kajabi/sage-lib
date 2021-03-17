@@ -90,6 +90,10 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
   width: rem(124px);
 }
 
+.sage-dropdown--page-size {
+  width: rem(130px);
+}
+
 .sage-dropdown--sort {
   width: rem(100px);
 }
@@ -255,6 +259,10 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
   .sage-dropdown--small & {
     min-width: $-dropdown-width-small;
   }
+
+  .sage-dropdown--page-size & {
+    min-width: 100%;
+  }
 }
 
 .sage-dropdown__panel {
@@ -289,6 +297,10 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
 
   .sage-dropdown--small & {
     min-width: $-dropdown-width-small;
+  }
+
+  .sage-dropdown--page-size & {
+    min-width: 100%;
   }
 
   [aria-expanded="true"] > & {

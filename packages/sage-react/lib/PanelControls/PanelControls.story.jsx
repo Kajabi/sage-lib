@@ -40,6 +40,7 @@ export const Default = (args) => {
       itemsOnThisPage: 0,
       numSelectedRows: 0,
       pageSize: 1,
+      pageSizeOptions: [25, 50, 100],
       rowNoun: {
         singular: 'article',
         plural: 'articles',
@@ -136,6 +137,10 @@ export const Default = (args) => {
     console.log('receieved sorts', payload); // eslint-disable-line
   };
 
+  const pageSizeChangeHandler = (payload) => {
+    console.log('receieved page size change', payload); // eslint-disable-line
+  };
+
   //
   // Render
   //
@@ -151,6 +156,7 @@ export const Default = (args) => {
           setStateDataFn: setSelfData,
           sortHandlerFn: sortActionsHandler,
           pageChangeHandlerFn: fetchData,
+          pageSizeChangeHandlerFn: pageSizeChangeHandler,
           bulkActionsHandlerFn: bulkActionshandler,
         })}
       />

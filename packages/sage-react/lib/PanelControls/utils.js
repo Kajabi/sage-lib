@@ -30,6 +30,7 @@ export const handleChange = ({
   bulkActionsHandlerFn,
   data,
   pageChangeHandlerFn,
+  pageSizeChangeHandlerFn,
   stateData,
   setStateDataFn,
   sortHandlerFn,
@@ -51,6 +52,13 @@ export const handleChange = ({
   if (data.sortActionCommand) {
     if (sortHandlerFn) {
       sortHandlerFn(data);
+      return;
+    }
+  }
+
+  if (data.pageSizeCommand) {
+    if (pageSizeChangeHandlerFn) {
+      pageSizeChangeHandlerFn(data.pageSizeCommand);
       return;
     }
   }
