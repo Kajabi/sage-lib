@@ -59,7 +59,8 @@ module ElementsHelper
         docs: "done",
         rails: "done",
         react: "todo",
-        a11y: "todo"
+        a11y: "todo",
+        react_component_slug: "sage-tabs--default"
       },
       {
         title: "copy_text",
@@ -250,7 +251,8 @@ module ElementsHelper
         docs: "done",
         rails: "doing",
         react: "todo",
-        a11y: "todo"
+        a11y: "todo",
+        react_component_slug: "sage-tabs--default"
       },
       {
         title: "table",
