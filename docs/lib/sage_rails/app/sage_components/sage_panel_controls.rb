@@ -4,8 +4,9 @@ class SagePanelControls < SageComponent
       attributes: [:optional, Hash],
       value: String,
     }]]],
-    item_count_label: [:optional, TrueClass],
+    item_count_label: [:optional, String],
     show_bulk_actions: [:optional, TrueClass],
+    show_checkboxes: [:optional, TrueClass],
     show_expand_collapse: [:optional, TrueClass],
     show_pagination: [:optional, TrueClass],
     show_sort: [:optional, TrueClass],
@@ -24,6 +25,7 @@ end
 
 
 {:show_bulk_actions=>true,
+ :show_checkboxes=>true,
  :show_expand_collapse=>true,
  :show_pagination=>true,
  :show_sort=>true,
