@@ -48,7 +48,16 @@ export const Tabs = ({
   return (
     <div className={`sage-tabs-container ${className || ''}`}>
       <div className={tabsClassNames} {...rest}>
-        {tabs.map(({ disabled, id, label, tabDetails, tabChoiceIcon, tabChoiceIconAlignment, tabChoiceType, subtext }) => (
+        {tabs.map(({
+          disabled,
+          id,
+          label,
+          tabDetails,
+          tabChoiceIcon,
+          tabChoiceIconAlignment,
+          tabChoiceType,
+          subtext
+        }) => (
           <TabsItem
             disabled={disabled}
             icon={tabChoiceIcon}
