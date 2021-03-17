@@ -4,6 +4,7 @@ class SageDropdown < SageComponent
     css_classes: [:optional, String],
     contained: [:optional, TrueClass],
     content: [:optional, String],
+    custom_content: [:optional, String],
     customized: [:optional, TrueClass],
     custom_modifier: [:optional, Set.new(["actions", "sort"])],
     id: [:optional, String],

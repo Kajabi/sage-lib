@@ -1,3 +1,13 @@
+
+<%
+custom_example = sage_component SagePanel, {} do
+  sage_component SagePanelStack, {} do
+    '<p class="sage-dropdown-no-exit">We can put whatever content we want in here and use the custom class as a hook to style it like a good ol BEM mixin!</p>'.html_safe
+  end
+end
+%>
+
+
 <h3 class="t-sage-heading-6">Menu Button</h3>
 <%= sage_component SageDropdown, {
   items: [{
@@ -200,4 +210,15 @@
     icon: { style: "right", name: "caret-down" }
   } %>
   <label class="sage-dropdown__trigger-label">Add an Element</label>
+<% end %>
+
+
+<h3 class="t-sage-heading-6">Dropdown w/ Custom Content</h3>
+<%= sage_component SageDropdown, {
+   custom_content: custom_example,
+} do %>
+  <%= sage_component SageButton, {
+    style: "primary",
+    value: "Dropdown Trigger"
+  } %>
 <% end %>
