@@ -3,6 +3,50 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.34.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.33.2...@kajabi/sage-react@0.34.0) (2021-03-18)
+
+
+### Bug Fixes
+
+* **docs:** separated avatargroup from avatar to consume actions ([b23e7c5](https://github.com/Kajabi/sage-lib/commit/b23e7c53f62537e1e96f297bfe25ee101b39c099))
+* **docs:** typo ([2b3800c](https://github.com/Kajabi/sage-lib/commit/2b3800c0dca6ca633f5c8e411fc79e1a141a439f))
+* **docs:** update panelcontrols story ([da05d67](https://github.com/Kajabi/sage-lib/commit/da05d67abb0d863ad21b83c1afd9a25c7956ce02))
+* **docs:** updated alert story ([015d11e](https://github.com/Kajabi/sage-lib/commit/015d11e24ba6ffa07f2d0cfb763ead84648d603d))
+* **docs:** updated checkbox story ([38c8407](https://github.com/Kajabi/sage-lib/commit/38c8407fdd58d40e0df8cd6d842dbc5698ce3e4d))
+* **docs:** updated copyButton story ([dd68bcf](https://github.com/Kajabi/sage-lib/commit/dd68bcf0fedb79dccfc2e6ee52e008ce84de1563))
+* **docs:** updated datacard story ([abaac5e](https://github.com/Kajabi/sage-lib/commit/abaac5e922a0a84b2dae1dd1d28925e7af6a42f9))
+* **docs:** updated formSection story ([ba494ec](https://github.com/Kajabi/sage-lib/commit/ba494ecdb2fa3aeaa8e659cb170b67d7331512d5))
+* **docs:** updated helplink story ([ef2b7e3](https://github.com/Kajabi/sage-lib/commit/ef2b7e3fa17313e02559886d33e916e062b509c7))
+* **docs:** updated iconcard story ([2e95e75](https://github.com/Kajabi/sage-lib/commit/2e95e75786fed6a630ffccdd6193bf9f2baf05a1))
+* **docs:** updated link story ([c164131](https://github.com/Kajabi/sage-lib/commit/c164131bfcd56e3d544d90188e033f0917663cc0))
+* **docs:** updated modal story ([3d03690](https://github.com/Kajabi/sage-lib/commit/3d036907f8e534a35d954aebe30542ef7ae61079))
+* **docs:** updated panel story ([1c5485e](https://github.com/Kajabi/sage-lib/commit/1c5485e2b23ecf803414f8cd4d52b644f03fa34e))
+* **docs:** updated popover story ([8d445c8](https://github.com/Kajabi/sage-lib/commit/8d445c80c82fbc487772d3503196bd9b1e833a38))
+* **docs:** updated property story ([1ee8e23](https://github.com/Kajabi/sage-lib/commit/1ee8e238f188922d9c2a64d00ff310bcf703d683))
+* **docs:** updated radio story ([f43cf67](https://github.com/Kajabi/sage-lib/commit/f43cf67aa8abfbe85b6d0aca33091d1ae4a72adc))
+* **docs:** updated search story ([9920108](https://github.com/Kajabi/sage-lib/commit/99201089208d05c7b87df86ebf13930852b7b78e))
+* **docs:** updated select story ([72c9e0d](https://github.com/Kajabi/sage-lib/commit/72c9e0dcbf3a63d3a58f51ed2119207ddd5e6253))
+* **docs:** updated tabs story ([a87e8a4](https://github.com/Kajabi/sage-lib/commit/a87e8a4a6f2ab0de2fbf33dee99036f979cf2f75))
+* **docs:** updated textarea story ([feff89b](https://github.com/Kajabi/sage-lib/commit/feff89b0630546c46972ce0314de2d608edd7ef7))
+* **docs:** updated type story ([193a4da](https://github.com/Kajabi/sage-lib/commit/193a4da84a745f859bb5d5f3b6a253f731000c5f))
+* **docs:** updates to resolve linter ([9485457](https://github.com/Kajabi/sage-lib/commit/94854572ba0869f153718887d57c62f11dc7faaa))
+* **modal:** lint error cleanup ([6ea2738](https://github.com/Kajabi/sage-lib/commit/6ea27381252778b0bae259166cc609f93baf6b25))
+* **panel:** linter fix ([de5a4a5](https://github.com/Kajabi/sage-lib/commit/de5a4a519135524e2b22386c543847d8c88f03d8))
+* **panel:** updates per review ([f9da181](https://github.com/Kajabi/sage-lib/commit/f9da181a3c09572b08142686decd10c5f680b01f))
+
+
+### Features
+
+* **expandable-card:** add matching settings in React ([7e32540](https://github.com/Kajabi/sage-lib/commit/7e325407d89fdb3b785537ae37227fc134014a07))
+* **modal:** updates to modal react component ([b23b340](https://github.com/Kajabi/sage-lib/commit/b23b34051d1daeb6071da309fe3f582c84dcd9d7))
+* **panel-controls:** add page size dropdown optoins ([6eb731a](https://github.com/Kajabi/sage-lib/commit/6eb731af8b61364c94b4c3fb9a26155b539f19e9))
+* **tabs:** add icon alignment in react choice tabs ([96ff355](https://github.com/Kajabi/sage-lib/commit/96ff355c12a7cf6528b8149cd76e943926e40e37))
+* **type:** add react classes for type alignment ([e26a07c](https://github.com/Kajabi/sage-lib/commit/e26a07c2610760259dd20e04fe610f8946432d9c))
+
+
+
+
+
 ## [0.33.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.33.1...@kajabi/sage-react@0.33.2) (2021-03-11)
 
 

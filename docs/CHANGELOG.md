@@ -3,6 +3,38 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.18.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.17.3...@kajabi/sage@3.18.0) (2021-03-18)
+
+
+### Bug Fixes
+
+* **docs:** fixed typo ([aa88ee4](https://github.com/Kajabi/sage-lib/commit/aa88ee41d531b7ede0ff247b9be9fc32137f60ef))
+* **docs:** updated element react links ([0ae39fa](https://github.com/Kajabi/sage-lib/commit/0ae39fa153ccc86f56bb423f35eeab1ad4ff221f))
+* **docs:** updated object react links ([b034e6b](https://github.com/Kajabi/sage-lib/commit/b034e6be8d7dccf3af43614edb840b77b5ad4feb))
+* **feature-toggle:** added attributes to icon documentation ([eee018e](https://github.com/Kajabi/sage-lib/commit/eee018ea2901d73057e3266be0e2d3cb950f5d5f))
+* **feature-toggle:** added attributes to icon documentation ([561e8fd](https://github.com/Kajabi/sage-lib/commit/561e8fd5d993287cda89f286175da3ae6c7aa225))
+* **feature-toggle:** closing tag fix ([ea5e789](https://github.com/Kajabi/sage-lib/commit/ea5e7896108cabc96d55c2dd0608c8cf521cba61))
+* **feature-toggle:** made `md` icon size work properly ([55eae78](https://github.com/Kajabi/sage-lib/commit/55eae782b9f7c5f1464ba49b460e38c4d09d3519))
+* **feature-toggle:** updated icon card attribute setting logic ([7c25369](https://github.com/Kajabi/sage-lib/commit/7c253690127e6c7b74abeb0a383b5569f0a60e30))
+* **feature-toggle:** updated icon card attribute setting logic ([dac0a8a](https://github.com/Kajabi/sage-lib/commit/dac0a8adbe93210aa64e1b4cbcc89cbd687696b5))
+
+
+### Features
+
+* **choice:** add vertical icon alignment option ([f7d68b5](https://github.com/Kajabi/sage-lib/commit/f7d68b532223c8de84202c5751c01ce9d600e84b))
+* **expandable-card:** adjust padding, button setting, and sage type ([d21517d](https://github.com/Kajabi/sage-lib/commit/d21517d8551825acfa186e72d90e8188da95a745))
+* **feature-toggle:** updated feature toggle to support icon card ([601a2d0](https://github.com/Kajabi/sage-lib/commit/601a2d05b9ce60da3f1a5748be00d3213afd06ff))
+* **icon-card:** added `locked` color ([5272b8b](https://github.com/Kajabi/sage-lib/commit/5272b8bdcf7396ccfd357a6447ef7570b537af06))
+* **icon-card:** added background_color and foreground_color props ([faa8c8c](https://github.com/Kajabi/sage-lib/commit/faa8c8c0142154018301d381b952175d379cbecd))
+* **modal:** animation direction options ([1e892de](https://github.com/Kajabi/sage-lib/commit/1e892de126b84a35c32ea47244abfcba1da5a437))
+* **modal:** enable animation when displaying modals ([6cb4732](https://github.com/Kajabi/sage-lib/commit/6cb4732cd6ba86bd2ae05fb2b5921d18e33cc62a))
+* **modal:** refactor animation logic, add ability to disable background blur ([dd88a43](https://github.com/Kajabi/sage-lib/commit/dd88a430fbb7cba443b0af8a6e076a2c493d6feb))
+* **modal:** remove unused prop, adjust timing values ([232855a](https://github.com/Kajabi/sage-lib/commit/232855a489c041f571c6592780d16dfcb27253ec))
+
+
+
+
+
 ## [3.17.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.17.2...@kajabi/sage@3.17.3) (2021-03-11)
 
 

@@ -3,6 +3,36 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.26.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.25.2...@kajabi/sage-assets@0.26.0) (2021-03-18)
+
+
+### Bug Fixes
+
+* **feature-toggle:** made `md` icon size work properly ([55eae78](https://github.com/Kajabi/sage-lib/commit/55eae782b9f7c5f1464ba49b460e38c4d09d3519))
+* **feature-toggle:** updated icon card attribute setting logic ([7c25369](https://github.com/Kajabi/sage-lib/commit/7c253690127e6c7b74abeb0a383b5569f0a60e30))
+* **feature-toggle:** updated icon card attribute setting logic ([dac0a8a](https://github.com/Kajabi/sage-lib/commit/dac0a8adbe93210aa64e1b4cbcc89cbd687696b5))
+* **panel-controls:** adjust min-width of page size dropdown panel ([f532bc8](https://github.com/Kajabi/sage-lib/commit/f532bc8a3acb55d8dfa2e033d6ea1b0ab5ca3a95))
+* **property:** adjusts alignments of property icon ([efbeab3](https://github.com/Kajabi/sage-lib/commit/efbeab3c72378c64e3241dcfcae652b0d30eb12a))
+* **table:** add better z-index value to table wrapper ([f9e6319](https://github.com/Kajabi/sage-lib/commit/f9e6319274070c213b85975775b5f36532fbbf8e))
+
+
+### Features
+
+* **choice:** add vertical icon alignment option ([f7d68b5](https://github.com/Kajabi/sage-lib/commit/f7d68b532223c8de84202c5751c01ce9d600e84b))
+* **expandable-card:** adjust padding, button setting, and sage type ([d21517d](https://github.com/Kajabi/sage-lib/commit/d21517d8551825acfa186e72d90e8188da95a745))
+* **feature-toggle:** updated feature toggle to support icon card ([601a2d0](https://github.com/Kajabi/sage-lib/commit/601a2d05b9ce60da3f1a5748be00d3213afd06ff))
+* **icon-card:** added background_color and foreground_color props ([faa8c8c](https://github.com/Kajabi/sage-lib/commit/faa8c8c0142154018301d381b952175d379cbecd))
+* **modal:** animation direction options ([1e892de](https://github.com/Kajabi/sage-lib/commit/1e892de126b84a35c32ea47244abfcba1da5a437))
+* **modal:** enable animation when displaying modals ([6cb4732](https://github.com/Kajabi/sage-lib/commit/6cb4732cd6ba86bd2ae05fb2b5921d18e33cc62a))
+* **modal:** modify animation timings ([0a8e32c](https://github.com/Kajabi/sage-lib/commit/0a8e32cce78139f12ba281b3b46f8ca35352da42))
+* **modal:** remove unused prop, adjust timing values ([232855a](https://github.com/Kajabi/sage-lib/commit/232855a489c041f571c6592780d16dfcb27253ec))
+* **modal:** revised animation timings and background blur styles ([d95a6c0](https://github.com/Kajabi/sage-lib/commit/d95a6c0bfd53ba866574503e4104455235e8a1bb))
+* **panel-controls:** add page size dropdown optoins ([6eb731a](https://github.com/Kajabi/sage-lib/commit/6eb731af8b61364c94b4c3fb9a26155b539f19e9))
+
+
+
+
+
 ## [0.25.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.25.1...@kajabi/sage-assets@0.25.2) (2021-03-11)
 
 
