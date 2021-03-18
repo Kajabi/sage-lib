@@ -88,8 +88,8 @@
           <% end %>
         <% end %>
       </ul>
-    <% else %>
-      <%= component.custom_content %>
+    <% elsif content_for? :sage_dropdown_custom_panel_content %>
+      <%= content_for :sage_dropdown_custom_panel_content %>
     <% end %>
   </div>
 </div>
