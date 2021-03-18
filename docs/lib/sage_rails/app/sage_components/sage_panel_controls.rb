@@ -22,7 +22,7 @@ class SagePanelControls < SageComponent
   })
 
   def sections
-    %w(panel_controls_toolbar panel_controls_tabs)
+    %w(panel_controls_pagination panel_controls_toolbar panel_controls_tabs)
   end
 
   # def page_count(collection)

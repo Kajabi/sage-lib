@@ -121,7 +121,12 @@ $-checkbox-focus-outline-color: sage-color(primary);
   }
 
   .sage-panel-controls & {
+    display: none;
     white-space: nowrap;
+  }
+  
+  .sage-panel-controls__bulk-actions--checked & {
+    display: unset;
   }
 }
 

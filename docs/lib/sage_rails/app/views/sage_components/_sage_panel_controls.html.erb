@@ -54,42 +54,19 @@ item_count_text = component.item_count_label.present? ? component.item_count_lab
         </p>
       <% end %>
 
-      <% if component.show_pagination && component.items %>
-        <%# sage_component SagePagination, {
-          items: @comments,
-          window: 2,
-          hide_pages: true
-        } %>
-       
-        <%= sage_component SagePagination, {
-          items: component.items,
-          collection_name: "Some name here",
-          window: 2,
-          hide_pages: true,
-          show_arrows: true
-        } %>
-        
+      <% if content_for? :sage_panel_controls_pagination %>
+        <%= content_for :sage_panel_controls_pagination %>
       <% end %>
 
       <% if show_secondary_toolbar %>
         <div class="sage-panel-controls__toolbar">
-          <% if component.show_pagination %>
-            <div class="sage-panel-controls__pagination">
-              <%= sage_component SageButton, {
-                css_classes: "sage-panel-controls__pagination-prev",
-                value: "Previous page",
-                style: "secondary",
-                icon: { name: "arrow-left", style: "only" }
-              } %>
-              <%= sage_component SageButton, {
-                css_classes: "sage-panel-controls__pagination-next",
-                value: "Next page",
-                style: "secondary",
-                icon: { name: "arrow-right", style: "only" }
-              } %>
-            </div>
-          <% end %>
 
+          <%= sage_component SageButton, {
+            css_classes: "sage-panel-controls__pagination-prev",
+            value: "Previous page",
+            style: "secondary",
+            icon: { name: "arrow-left", style: "only" }
+          } %>
           <% if component.show_sort %>
             <%= sage_component SageDropdown, {
               trigger_type: "select",
