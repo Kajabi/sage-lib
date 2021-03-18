@@ -54,23 +54,21 @@ item_count_text = component.item_count_label.present? ? component.item_count_lab
         </p>
       <% end %>
 
-      <% if component.show_pagination %>
+      <% if component.show_pagination && component.items %>
         <%# sage_component SagePagination, {
           items: @comments,
           window: 2,
           hide_pages: true
         } %>
-        <nav class="sage-pagination">
-          <span class="sage-pagination__count"><strong>1</strong> – <strong>50</strong> of <strong>505</strong> Cacti</span>
-          <ul class="sage-pagination__pages">
-            <li class="sage-pagination__item">
-              <a aria-disabled="true" class="sage-pagination__page sage-pagination__page--disabled" href="//example.com/0">&larr;</a>
-            </li>
-            <li class="sage-pagination__item">
-              <a aria-disabled="false" class="sage-pagination__page" href="//example.com/2">&rarr;</a>
-            </li>
-          </ul>
-        </nav>
+       
+        <%= sage_component SagePagination, {
+          items: component.items,
+          collection_name: "Some name here",
+          window: 2,
+          hide_pages: true,
+          show_arrows: true
+        } %>
+        
       <% end %>
 
       <% if show_secondary_toolbar %>
