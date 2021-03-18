@@ -22,7 +22,7 @@ const Template = (args) => <Checkbox {...args} />;
 
 export const Default = Template.bind({});
 
-export const MultipleExample = () => {
+export const MultipleExample = (args) => {
   const items = [
     {
       label: 'Option 1',
@@ -61,6 +61,7 @@ export const MultipleExample = () => {
     <ul className="sage-list">
       {itemState.map((configs, i) => (
         <Checkbox
+          {...args}
           id={`check-${i}`}
           itemInList={true}
           key={i.toString()}

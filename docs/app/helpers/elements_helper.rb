@@ -20,6 +20,7 @@ module ElementsHelper
         rails: "done",
         react: "done",
         a11y: "done",
+        react_component_slug: "sage-breadcrumbs--single-item"
       },
       {
         title: "button",
@@ -38,7 +39,8 @@ module ElementsHelper
         docs: "done",
         rails: "done",
         react: "done",
-        a11y: "done"
+        a11y: "done",
+        react_component_slug: "sage-card--card-highlight"
       },
       {
         title: "checkbox",
@@ -57,7 +59,8 @@ module ElementsHelper
         docs: "done",
         rails: "done",
         react: "todo",
-        a11y: "todo"
+        a11y: "todo",
+        react_component_slug: "sage-tabs--default"
       },
       {
         title: "copy_text",
@@ -115,6 +118,7 @@ module ElementsHelper
         rails: "done",
         react: "done",
         a11y: "done",
+        react_component_slug: "sage-iconcard--default"
       },
       {
         title: "indicator",
@@ -132,7 +136,8 @@ module ElementsHelper
         docs: "done",
         rails: "done",
         react: "done",
-        a11y: "done"
+        a11y: "done",
+        react_component_slug: "sage-label--default"
       },
       {
         title: "link",
@@ -141,7 +146,8 @@ module ElementsHelper
         docs: "done",
         rails: "done",
         react: "done",
-        a11y: "done"
+        a11y: "done",
+        react_component_slug: "sage-link--primary"
       },
       {
         title: "lists",
@@ -196,7 +202,8 @@ module ElementsHelper
         docs: "todo",
         rails: "done",
         react: "todo",
-        a11y: "todo"
+        a11y: "todo",
+        react_component_slug: "sage-property--primary"
       },
       {
         title: "radio",
@@ -215,7 +222,8 @@ module ElementsHelper
         docs: "doing",
         rails: "todo",
         react: "todo",
-        a11y: "doing"
+        a11y: "doing",
+        react_component_slug: "sage-search--default"
       },
       {
         title: "status_icon",
@@ -243,7 +251,8 @@ module ElementsHelper
         docs: "done",
         rails: "doing",
         react: "todo",
-        a11y: "todo"
+        a11y: "todo",
+        react_component_slug: "sage-tabs--default"
       },
       {
         title: "table",
@@ -262,7 +271,8 @@ module ElementsHelper
         docs: "no",
         rails: "todo",
         react: "todo",
-        a11y: "todo"
+        a11y: "todo",
+        react_component_slug: "sage-toast--default"
       },
       {
         title: "tooltip",

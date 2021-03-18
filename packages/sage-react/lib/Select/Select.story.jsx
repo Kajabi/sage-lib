@@ -14,20 +14,23 @@ const Template = (args) => <Select {...args} />;
 
 export const Default = Template.bind({});
 
-export const SearchWithState = () => {
+export const SearchWithState = (args) => {
   const [value, updateValue] = useState('');
   return (
     <Select
-      id="field-2"
-      label="Choose..."
-      options={[
-        'Option 1',
-        'Option 2',
-        'Option 3',
-        'Option 4',
-      ]}
+      {...args}
       value={value}
       onChange={(evt) => updateValue(evt.target.value)}
     />
   );
+};
+SearchWithState.args = {
+  id: 'field-2',
+  label: 'Choose...',
+  options: [
+    'Option 1',
+    'Option 2',
+    'Option 3',
+    'Option 4',
+  ]
 };

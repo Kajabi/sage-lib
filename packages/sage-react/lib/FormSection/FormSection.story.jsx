@@ -6,7 +6,6 @@ import { FormSection } from './FormSection';
 export default {
   title: 'Sage/FormSection',
   component: FormSection,
-  decorators: [(Story) => <div style={{ width: '75%' }}><Story /></div>],
   args: {
     children: (
       <>
@@ -21,6 +20,15 @@ export default {
     title: 'Sign in'
   }
 };
-const Template = (args) => <FormSection {...args} />;
 
+const Template = (args) => <FormSection {...args} />;
 export const Default = Template.bind({});
+Default.decorators = [
+  (Story) => (
+    <>
+      <div style={{ width: '75%', marginLeft: 'auto', marginRight: 'auto' }}>
+        <Story />
+      </div>
+    </>
+  )
+];

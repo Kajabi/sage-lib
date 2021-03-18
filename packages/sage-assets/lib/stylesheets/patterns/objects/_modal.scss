@@ -11,35 +11,47 @@ $-modal-padding-y: sage-spacing(md);
 
 .sage-modal {
   visibility: hidden;
-  display: none;
+  display: flex;
   align-items: flex-start;
   justify-content: center;
   position: fixed;
   overflow-y: scroll;
-  z-index: sage-z-index(modal, -1);
+  z-index: sage-z-index(negative);
   padding: sage-spacing(md);
   background-color: rgba(sage-color(charcoal, 500), 0.4);
   background-image: linear-gradient(
-    rgba(sage-color(charcoal, 200), 0.3) 0%,
-    rgba(sage-color(charcoal, 500), 0.3) 100%
+    rgba(sage-color(charcoal, 200), 0.35) 0%,
+    rgba(sage-color(charcoal, 500), 0.4) 100%
   );
+  transition: opacity 0.1s ease-out;
+  pointer-events: none;
+  opacity: 0;
   cursor: default;
 
   @include position-full;
 
-  @supports (backdrop-filter: blur(2px)) {
-    backdrop-filter: blur(2px);
+  @supports (backdrop-filter: blur(3px)) {
+    backdrop-filter: blur(3px);
+  }
+
+  &.sage-modal--no-blur {
+    backdrop-filter: none;
+    background-image: linear-gradient(
+      rgba(sage-color(charcoal, 300), 0.5) 0%,
+      rgba(sage-color(charcoal, 500), 0.5) 100%
+    );
   }
 
   &.sage-modal--active {
     visibility: visible;
-    display: flex;
+    z-index: sage-z-index(modal, -1);
+    pointer-events: auto;
+    opacity: 1;
   }
 }
 
 .sage-modal__container {
   visibility: hidden;
-  display: none;
   z-index: sage-z-index(modal);
   width: calc(100vw - #{sage-spacing(md)});
   max-width: sage-container(modal);
@@ -47,6 +59,9 @@ $-modal-padding-y: sage-spacing(md);
   border-radius: sage-border(radius);
   background-color: sage-color(white);
   box-shadow: sage-shadow(2xl);
+  transition: opacity 0.1s ease-in 0.1s;
+  pointer-events: none;
+  opacity: 0;
 
   @media (min-width: sage-breakpoint(lg-min)) {
     margin-top: 6vh;
@@ -56,9 +71,27 @@ $-modal-padding-y: sage-spacing(md);
     margin-top: 8vh;
   }
 
+  [data-sage-animate] & {
+    transform: translateY(-#{sage-spacing(md)});
+    transition: opacity 0.1s ease-in, transform 0.15s ease-out;
+    transition-delay: 0.1s, 0.15s;
+  }
+
+  [data-sage-animate-direction="top"] & {
+    transform: translateY(#{sage-spacing(lg)});
+  }
+  [data-sage-animate-direction="left"] & {
+    transform: translateX(#{sage-spacing(lg)});
+  }
+  [data-sage-animate-direction="right"] & {
+    transform: translateX(-#{sage-spacing(lg)});
+  }
+
   .sage-modal--active & {
     visibility: visible;
-    display: block;
+    transform: none;
+    pointer-events: auto;
+    opacity: 1;
   }
 
   .sage-modal--large & {
@@ -113,4 +146,18 @@ $-modal-padding-y: sage-spacing(md);
 
 .sage-modal__footer-aside {
   margin-right: auto;
+}
+
+@media (prefers-reduced-motion) {
+  .sage-modal {
+    background-color: rgba(sage-color(charcoal, 500), 0.85);
+    backdrop-filter: none;
+  }
+
+  .sage-modal,
+  .sage-modal__container,
+  [data-sage-animate] .sage-modal__container {
+    transform: none;
+    transition: none;
+  }
 }

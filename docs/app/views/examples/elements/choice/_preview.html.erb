@@ -1,3 +1,6 @@
+<%
+long_description = "Description with longer text to cause wrapping and make the top alignment appear more necessary."
+%>
 <h3 class="t-sage-heading-6">Single Line (radio type)</h3>
 
 <%= sage_component SageChoice, {
@@ -65,3 +68,24 @@
     <p>Custom content here...</p>
   <% end %>
 <% end %>
+
+
+<h3 class="t-sage-heading-6">Icon alignment</h3>
+<p>While by default all icon types will align in the center of the choice card, they can be adjusted to align at the "start" or top of the card.</p>
+<%= sage_component SageChoice, {
+    target: "example",
+    text: "Option 1",
+    subtext: long_description,
+    type: "radio",
+    vertical_align_icon: "start",
+  }
+%>
+<%= sage_component SageChoice, {
+    target: "example",
+    text: "Option 1",
+    subtext: long_description,
+    type: "icon",
+    icon: "video-on",
+    vertical_align_icon: "start",
+  }
+%>

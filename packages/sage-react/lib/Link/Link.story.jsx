@@ -5,9 +5,8 @@ export default {
   title: 'Sage/Link',
   component: Link,
 };
-const Template = (args) => <Link {...args} />;
 
-// Each story then reuses that template
+const Template = (args) => <Link {...args} />;
 export const Primary = Template.bind({});
 Primary.args = {
   children: 'Standard link',

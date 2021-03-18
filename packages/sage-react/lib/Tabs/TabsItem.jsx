@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { Link } from '../Link';
 import { SageTokens } from '../configs';
-import { TAB_STYLES, CHOICE_TYPES } from './configs';
+import { TAB_STYLES, CHOICE_TYPES, CHOICE_ICON_ALIGNMENTS } from './configs';
 
 export const TabsItem = ({
   alignCenter,
@@ -20,6 +20,7 @@ export const TabsItem = ({
   panelId,
   subtext,
   type,
+  verticalAlignIcon,
   ...rest
 }) => {
   const { to, href } = rest;
@@ -33,7 +34,11 @@ export const TabsItem = ({
   const itemStyleProtected = itemStyle === TAB_STYLES.PROGRESSBAR ? TAB_STYLES.TAB : itemStyle;
   const isChoice = itemStyle === TAB_STYLES.CHOICE;
   const isIconType = type && type === CHOICE_TYPES.ICON;
+  const isRadioType = type && type === CHOICE_TYPES.RADIO;
   const baseClass = `sage-${itemStyleProtected}`;
+
+  console.log(isChoice, verticalAlignIcon, (isIconType || isRadioType));
+
   const classNames = classnames(
     className,
     {
@@ -42,6 +47,7 @@ export const TabsItem = ({
       [`${baseClass}--align-center`]: isIconType && alignCenter,
       [`${baseClass}--${type}`]: type && !isIconType,
       [`${baseClass}--icon-${icon}`]: isIconType && icon,
+      [`${baseClass}--vertical-align-icon-${verticalAlignIcon}`]: isChoice && verticalAlignIcon && (isIconType || isRadioType),
     }
   );
 
@@ -103,7 +109,9 @@ export const TabsItem = ({
   );
 };
 
+TabsItem.STYLES = TAB_STYLES;
 TabsItem.CHOICE_TYPES = CHOICE_TYPES;
+TabsItem.ICON_ALIGNMENTS = CHOICE_ICON_ALIGNMENTS;
 
 TabsItem.defaultProps = {
   alignCenter: false,
@@ -118,6 +126,7 @@ TabsItem.defaultProps = {
   onClick: (id) => id,
   subtext: null,
   type: null,
+  verticalAlignIcon: CHOICE_ICON_ALIGNMENTS.DEFAULT,
 };
 
 TabsItem.propTypes = {
@@ -128,11 +137,12 @@ TabsItem.propTypes = {
   graphic: PropTypes.node,
   icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),
   isActive: PropTypes.bool,
-  itemStyle: PropTypes.oneOf(Object.values(TAB_STYLES)),
+  itemStyle: PropTypes.oneOf(Object.values(TabsItem.STYLES)),
   label: PropTypes.string.isRequired,
   linkText: PropTypes.string,
   onClick: PropTypes.func,
   panelId: PropTypes.string.isRequired,
   subtext: PropTypes.string,
-  type: PropTypes.oneOf(Object.values(CHOICE_TYPES)),
+  type: PropTypes.oneOf(Object.values(TabsItem.CHOICE_TYPES)),
+  verticalAlignIcon: PropTypes.oneOf(Object.values(TabsItem.ICON_ALIGNMENTS))
 };

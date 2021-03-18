@@ -35,10 +35,6 @@ $-expandable-card-padding-xs: sage-spacing(xs);
   }
 }
 
-.sage-expandable-card__body {
-  padding: $-expandable-card-padding-xs;
-}
-
 .sage-expandable-card__body-bordered {
   padding-left: $-expandable-card-padding;
   padding-right: $-expandable-card-padding;

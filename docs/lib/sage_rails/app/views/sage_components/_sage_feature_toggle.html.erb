@@ -1,6 +1,6 @@
 <% feature_toggle_title_tag = component.title_tag ? component.title_tag : "h3" %>
 
-<li class="sage-feature-toggle <%= "sage-feature-toggle--no-image" if component.image.blank? %>">
+<li class="sage-feature-toggle <%= "sage-feature-toggle--no-image" if component.image.blank? && component.icon.blank? %>">
   <<%= feature_toggle_title_tag %> class="sage-feature-toggle__title"><%= component.title %></<%= feature_toggle_title_tag %>>
   <div class="sage-feature-toggle__content">
     <p><%= component.description %></p>
@@ -30,9 +30,21 @@
       <%= content_for :sage_feature_toggle_input %>
     </div>
   <% end %>
-  <% if component.image.present? %>
-    <div class="sage-feature-toggle__image-link" >
-      <img class="sage-feature-toggle__image" src=<%= component.image %> alt="<%= component.alt_text %>" <%= "aria-hidden=true" if component.alt_text.blank? %> />
+  <% if component.icon.present? or component.image.present? %>
+    <div class="sage-feature-toggle__image-link">
+      <% if component.icon.present? %>
+        <%= sage_component SageIconCard, {
+          attributes: (component.icon[:attributes] if component.icon[:attributes].present?),
+          background_color: (component.icon[:background_color] if component.icon[:background_color].present?),
+          color: (component.icon[:color] if component.icon[:color].present?),
+          foreground_color: (component.icon[:foreground_color] if component.icon[:foreground_color].present?),
+          icon: (component.icon[:icon] if component.icon[:icon].present?),
+          label: (component.icon[:label] if component.icon[:label].present?),
+          size: (component.icon[:size] if component.icon[:size].present?),
+        }.compact %>
+      <% elsif component.image.present? %>
+        <img class="sage-feature-toggle__image" src=<%= component.image %> alt="<%= component.alt_text %>" <%= "aria-hidden=true" if component.alt_text.blank? %> />
+      <% end %>
     </div>
   <% end %>
 </li>

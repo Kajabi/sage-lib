@@ -201,6 +201,7 @@ $-table-sort-indicator-direction: rem(7px);
 // Wrapper div required for responsive tables
 .sage-table-wrapper {
   position: relative;
+  z-index: sage-z-index(default, 1);
 
   .sage-panel & {
     margin-left: -1 * $-table-cell-padding-panel;
@@ -284,6 +285,9 @@ $-table-sort-indicator-direction: rem(7px);
     height: 100%;
     width: $-table-overflow-indicator-width;
     background: $-table-overflow-indicator-gradient;
+    @media screen and (min-width: sage-breakpoint(sm-max)) {
+      background: none;
+    }
   }
 }
 

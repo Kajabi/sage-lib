@@ -2,6 +2,7 @@
     sage-copy-text-card
     <%= "sage-copy-text-card--semibold" if component.semibold.present? && component.semibold %>
     <%= "sage-copy-text-card--truncate-contents" if component.truncate_contents.present? && component.truncate_contents %>
+    <%= component.generated_css_classes %>
   "
 >
   <%= component.content.html_safe %>

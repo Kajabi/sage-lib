@@ -6,7 +6,7 @@ export default {
   component: HelpLink,
   args: {
     labelIsVisible: false,
-    text: 'Learn something'
+    children: 'Learn something'
   }
 };
 const Template = (args) => <HelpLink href="http://example.com" target="_blank" referrer="no-referrer" {...args} />;

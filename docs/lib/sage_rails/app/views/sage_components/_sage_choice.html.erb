@@ -23,6 +23,7 @@ html_tag = is_button ? (component.content.present? ? "div" : "button") : "a"
       <% end %>
     <% end %>
     <%= "sage-choice--align-center" if component.align_center.present? && component.align_center == true %>
+    <%= "sage-choice--vertical-align-icon-#{component.vertical_align_icon}" if component.vertical_align_icon %>
   "
   data-js-tabs-target="<%= component.target %>"
   data-sage-active-class="<%= css_active_class %>"

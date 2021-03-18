@@ -16,7 +16,7 @@ $-feature-toggle-image-height-mobile: rem(120px);
   grid-row-gap: sage-spacing(sm);
 
   @media (max-width: sage-breakpoint(md-min)) {
-    grid-template-columns: 1fr min-content;
+    grid-template-columns: min-content;
     grid-template-rows: $-feature-toggle-image-height-mobile auto auto;
     grid-template-areas:
       "img      aside"
@@ -25,7 +25,7 @@ $-feature-toggle-image-height-mobile: rem(120px);
   }
 
   @media (min-width: sage-breakpoint(md-min)) {
-    grid-template-columns: $-feature-toggle-image-width 1fr min-content;
+    grid-template-columns: min-content 1fr min-content;
     grid-template-rows: sage-spacing(md) auto;
     grid-template-areas:
       "img  title    aside"

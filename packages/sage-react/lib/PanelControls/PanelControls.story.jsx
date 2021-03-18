@@ -18,7 +18,7 @@ export default {
   },
 };
 
-export const Default = () => {
+export const Default = (args) => {
   const [selfData, setSelfData] = useState({
     // Set locally
     items: [],
@@ -40,6 +40,7 @@ export const Default = () => {
       itemsOnThisPage: 0,
       numSelectedRows: 0,
       pageSize: 1,
+      pageSizeOptions: [25, 50, 100],
       rowNoun: {
         singular: 'article',
         plural: 'articles',
@@ -136,6 +137,10 @@ export const Default = () => {
     console.log('receieved sorts', payload); // eslint-disable-line
   };
 
+  const pageSizeChangeHandler = (payload) => {
+    console.log('receieved page size change', payload); // eslint-disable-line
+  };
+
   //
   // Render
   //
@@ -143,6 +148,7 @@ export const Default = () => {
   return (
     <Panel>
       <PanelControls
+        {...args}
         controlSettings={{ ...selfData.panelControlConfigs }}
         onRequestChange={(data) => PanelControls.handlerUtils.handleChange({
           data,
@@ -150,6 +156,7 @@ export const Default = () => {
           setStateDataFn: setSelfData,
           sortHandlerFn: sortActionsHandler,
           pageChangeHandlerFn: fetchData,
+          pageSizeChangeHandlerFn: pageSizeChangeHandler,
           bulkActionsHandlerFn: bulkActionshandler,
         })}
       />

@@ -7,9 +7,15 @@
     css_classes: "sage-expandable-card__trigger",
     attributes: {
       "data-js-accordion": "header",
-    }
+    },
+    full_width: true,
   } %>
-  <div class="<% if component.body_bordered.present? %>sage-expandable-card__body-bordered<% else %>sage-expandable-card__body<% end %>" data-js-accordion="body">
+  <div class="
+      <% if component.body_bordered.present? %>sage-expandable-card__body-bordered<% else %>sage-expandable-card__body<% end %>
+      <%= "sage-type" if component.sage_type %>
+    "
+    data-js-accordion="body"
+  >
     <%= component.content %>
   </div>
 </div>
