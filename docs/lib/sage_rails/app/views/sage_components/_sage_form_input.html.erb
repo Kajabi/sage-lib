@@ -21,6 +21,7 @@
     <%= "max=#{component.max}" if component.max.present? -%>
     <%= "minlength=#{component.minlength}" if component.minlength.present? -%>
     <%= "maxlength=#{component.maxlength}" if component.maxlength.present? -%>
+    <%= "name=#{component.name}" if component.name.present? -%>
     <%= "step=#{component.step}" if component.step.present? -%>
     <%= "readonly" if component.readonly -%>
     <%= "disabled" if component.disabled %>
