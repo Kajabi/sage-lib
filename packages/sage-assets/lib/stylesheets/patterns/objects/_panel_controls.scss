@@ -9,12 +9,8 @@
   display: grid;
   gap: sage-spacing(panel);
   grid-template-rows: min-content;
-
-  // This raises the panel controls
-  // above the elements positioned inside accompanying tables
   position: relative;
-  z-index: sage-z-index(default, 10);
-  
+
   &::after {
     content: "";
     display: block;

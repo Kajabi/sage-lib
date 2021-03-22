@@ -201,3 +201,29 @@
   } %>
   <label class="sage-dropdown__trigger-label">Add an Element</label>
 <% end %>
+
+
+<h3 class="t-sage-heading-6">Dropdown w/ Custom Content</h3>
+<%= sage_component SageDropdown, {
+} do %>
+  <%= sage_component SageButton, {
+    style: "primary",
+    value: "Dropdown Trigger"
+  } %>
+  <% content_for :sage_dropdown_custom_panel_content do %>
+    <%= sage_component SagePanel, {} do %>
+      <%= sage_component SagePanelStack, {} do %>
+        <p>We can put whatever content we want in here and use the custom class as a hook to style it like a good ol BEM mixin!</p>
+        <h4>Dropdown Exit</h4>
+        <p class="sage-spacer-bottom-sm">The <code>data-sage-dropdown-exit</code> attribute can be used on elements that need be able to close the custom panel.<p>
+        <%= sage_component SageButton, {
+          style: "primary",
+          value: "Click me exit",
+          attributes: {
+            "data-sage-dropdown-exit": true,
+          },
+        } %>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>

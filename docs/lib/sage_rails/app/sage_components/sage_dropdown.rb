@@ -21,4 +21,9 @@ class SageDropdown < SageComponent
     search: [:optional, TrueClass],
     trigger_type: [:optional, Set.new(["select", "select-labeled"])],
   })
+
+  def sections
+    %w(dropdown_custom_panel_content)
+  end
+
 end
