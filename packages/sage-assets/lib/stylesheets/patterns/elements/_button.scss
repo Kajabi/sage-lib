@@ -436,3 +436,12 @@ $-btn-interactive-label-icon-size: rem(24px);
 .sage-btn-group--align-end {
   justify-content: flex-end;
 }
+
+.sage-btn-group--align-space-between {
+  justify-content: space-between;
+}
+
+.sage-btn-group--border-top {
+  padding-top: sage-spacing(lg);
+  border-top: 1px solid sage-color(grey, 300);
+}
