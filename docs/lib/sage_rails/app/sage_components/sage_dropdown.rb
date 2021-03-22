@@ -23,7 +23,7 @@ class SageDropdown < SageComponent
   })
 
   def sections
-    %w(sage_dropdown_custom_panel_content)
+    %w(dropdown_custom_panel_content)
   end
 
 end
