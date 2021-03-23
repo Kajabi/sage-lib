@@ -1,26 +1,26 @@
 <tr>
   <td><%= md('`autocomplete`') %></td>
   <td><%= md('Enables the browser to autofill values from saved fields or password managers. Refer to <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete" target="_blank" rel="nofollow">the allowed values for acceptable properties</a>.') %></td>
-  <td><%= md('String') %></td>
-  <td><%= md('nil') %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`false`') %></td>
 </tr>
 <tr>
   <td><%= md('`disabled`') %></td>
   <td><%= md('Enabling this property adds the `disabled` attribute to the component. Note that `disabled` input fields will not be submitted in forms.') %></td>
-  <td><%= md('String') %></td>
-  <td><%= md('nil') %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`false`') %></td>
 </tr>
 <tr>
   <td><%= md('`has_error`') %></td>
   <td><%= md('Enabling this property adds the `.sage-input--error` class to the component.') %></td>
-  <td><%= md('String') %></td>
-  <td><%= md('`nil`') %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`false`') %></td>
 </tr>
 <tr>
   <td><%= md('`has_placeholder`') %></td>
   <td><%= md('Enabling this property adds the `.sage-input--showplaceholder` class to the component.') %></td>
-  <td><%= md('String') %></td>
-  <td><%= md('`nil`') %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`false`') %></td>
 </tr>
 <tr>
   <td><%= md('`id`') %></td>
@@ -68,7 +68,7 @@
   <td><%= md('`min`') %></td>
   <td><%= md('Sets the minimum value for a numeric form field (ex. `number` or `datetime-local` input types)') %></td>
   <td><%= md('String') %></td>
-  <td><%= md('nil') %></td>
+  <td><%= md('`nil`') %></td>
 </tr>
 <tr>
   <td><%= md('`minlength`') %></td>
@@ -78,7 +78,7 @@
 </tr>
 <tr>
   <td><%= md('`name`') %></td>
-  <td><%= md('Unique identifier for this component.') %></td>
+  <td><%= md('Unique identifier for this component. Defaults to the value provided for `id` when left blank.') %></td>
   <td><%= md('String') %></td>
   <td><%= md('`nil`') %></td>
 </tr>
@@ -86,7 +86,7 @@
   <td><%= md('`pattern`') %></td>
   <td><%= md('Specifies a form field\'s validation pattern using regex. Ignored with `number` input types (use `min` and `max` instead). <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/pattern" target="_blank" rel="nofollow">See MDN for usage</a>.') %></td>
   <td><%= md('String') %></td>
-  <td><%= md('nil') %></td>
+  <td><%= md('`nil`') %></td>
 </tr>
 <tr>
   <td><%= md('`placeholder`') %></td>
@@ -109,26 +109,26 @@
 <tr>
   <td><%= md('`readonly`') %></td>
   <td><%= md('Enabling this property adds the `readonly` attribute, preventing the user from editing the field, but allowing manipulation of the value via Javascript. Unlike with `disabled`, `readonly` values will be submitted in a form.') %></td>
-  <td><%= md('String') %></td>
-  <td><%= md('nil') %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`false`') %></td>
 </tr>
 <tr>
   <td><%= md('`required`') %></td>
   <td><%= md('Adding this attribute allows basic HTML form validation on this field.') %></td>
-  <td><%= md('String') %></td>
-  <td><%= md('nil') %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`false`') %></td>
 </tr>
 <tr>
   <td><%= md('`step`') %></td>
   <td><%= md('When applied to a numeric (`number`, `date`, `month`, etc) form field, this allows the browser control to be increase or decrease the value in defined increments') %></td>
   <td><%= md('String') %></td>
-  <td><%= md('nil') %></td>
+  <td><%= md('`nil`') %></td>
 </tr>
 <tr>
   <td><%= md('`suffix`') %></td>
   <td><%= md('Sets suffix text to be appended to the component.') %></td>
   <td><%= md('String') %></td>
-  <td><%= md('nil') %></td>
+  <td><%= md('`nil`') %></td>
 </tr>
 <tr>
   <td><%= md('`value`') %></td>
