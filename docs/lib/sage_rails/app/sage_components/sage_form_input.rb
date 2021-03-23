@@ -14,6 +14,7 @@ class SageFormInput < SageComponent
     message_text: [:optional, String],
     min: [:optional, String],
     minlength: [:optional, String],
+    name: [:optional, String],
     pattern: [:optional, String],
     placeholder: [:optional, String],
     prefix: [:optional, String],

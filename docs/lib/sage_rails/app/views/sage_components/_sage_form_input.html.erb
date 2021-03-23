@@ -10,7 +10,7 @@
     type="<%= component.input_type %>"
     id="<%= component.id %>"
     class="sage-input__field"
-    name="<%= component.id %>"
+    name="<%= component.name.present? ? component.name : component.id %>"
     placeholder="<%= component.placeholder -%>"
     value="<%= component.value -%>"
     <%= "required" if component.required %>

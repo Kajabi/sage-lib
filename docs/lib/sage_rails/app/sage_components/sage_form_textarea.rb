@@ -6,6 +6,7 @@ class SageFormTextarea < SageComponent
     id: String,
     label_text: [:optional, String],
     message_text: [:optional, String],
+    name: [:optional, String],
     placeholder: [:optional, String],
   })
 end
