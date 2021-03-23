@@ -10,7 +10,7 @@
     type="<%= component.input_type %>"
     id="<%= component.id %>"
     class="sage-input__field"
-    name="<%= component.id %>"
+    name="<%= component.name.present? ? component.name : component.id %>"
     placeholder="<%= component.placeholder -%>"
     value="<%= component.value -%>"
     <%= "required" if component.required %>
@@ -21,7 +21,6 @@
     <%= "max=#{component.max}" if component.max.present? -%>
     <%= "minlength=#{component.minlength}" if component.minlength.present? -%>
     <%= "maxlength=#{component.maxlength}" if component.maxlength.present? -%>
-    <%= "name=#{component.name.present? ? component.name : component.id}" -%>
     <%= "step=#{component.step}" if component.step.present? -%>
     <%= "readonly" if component.readonly -%>
     <%= "disabled" if component.disabled %>
