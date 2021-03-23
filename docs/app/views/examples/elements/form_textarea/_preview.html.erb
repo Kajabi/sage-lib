@@ -3,15 +3,16 @@
   <h3 class="t-sage-heading-6">Default</h3>
   <%= sage_component SageFormTextarea, {
     id: "txtarea-example",
+    name: "txtarea-custom-name",
     placeholder: "Your message",
     label_text: "Your message",
     disabled: false,
     has_error: false,
   } %>
-  
+
   <h3 class="t-sage-heading-6">Error</h3>
   <%= sage_component SageFormTextarea, {
-    id: "txtarea-example",
+    id: "txtarea-example-error",
     placeholder: "Your message",
     label_text: "Your message",
     disabled: false,
