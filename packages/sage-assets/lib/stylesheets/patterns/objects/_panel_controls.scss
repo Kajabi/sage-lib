@@ -27,6 +27,10 @@
   flex-flow: row wrap;
   align-items: center;
   justify-content: space-between;
+
+  .sage-panel-controls--show-pagination .sage-panel-controls__bulk-actions + & {
+    flex-grow: 1
+  }
 }
 
 .sage-panel-controls__toolbar-btn-group {
@@ -37,12 +41,17 @@
   &:not(:last-child) {
     margin-right: sage-spacing(panel);
   }
+
+  .sage-panel-controls__toolbar &:last-child {
+    flex: 0 1;
+  }
 }
 
 .sage-panel-controls__pagination {
   display: none;
   display: flex;
   align-items: center;
+  flex-grow: 1;
 
   &:not(:last-child) {
     margin-right: sage-spacing(panel);
@@ -51,11 +60,19 @@
 
 .sage-panel-controls__bulk-actions {
   display: flex;
-  flex: 0 1;
+  flex: 1;
   align-items: center;
 
   &:not(:last-child) {
-    // margin-right: sage-spacing(panel);
+    margin-right: sage-spacing(panel);
+
+    .sage-panel-controls--show-pagination & {
+      margin-right: 0;
+    }
+  }
+
+  .sage-panel-controls--show-pagination & {
+    flex: 0 1;
   }
 }
 

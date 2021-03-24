@@ -120,7 +120,7 @@ $-checkbox-focus-outline-color: sage-color(primary);
     color: sage-color(red);
   }
 
-  .sage-panel-controls & {
+  .sage-panel-controls--show-pagination & {
     display: none;
     white-space: nowrap;
   }
