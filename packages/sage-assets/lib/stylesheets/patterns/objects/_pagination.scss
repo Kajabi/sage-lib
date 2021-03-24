@@ -39,7 +39,7 @@ $-pagination-bg-color-dark: sage-color(grey, 300);
   border: $-pagination-border;
   border-radius: $-pagination-radius;
 
-  .sage-panel-controls & {
+  .sage-panel-controls--show-pagination & {
     border: 0;
   }
 }
@@ -53,7 +53,7 @@ $-pagination-bg-color-dark: sage-color(grey, 300);
     border: 0;
   }
 
-  .sage-panel-controls & {
+  .sage-panel-controls--show-pagination & {
     margin-right: 12px;
     border: 0;
 
@@ -79,7 +79,7 @@ $-pagination-bg-color-dark: sage-color(grey, 300);
     box-shadow: none;
   }
 
-  .sage-panel-controls & {
+  .sage-panel-controls--show-pagination & {
     min-height: rem(40px);
     font-size: 18px;
     border: 0;
@@ -87,11 +87,11 @@ $-pagination-bg-color-dark: sage-color(grey, 300);
     box-shadow: map-get($sage-toolbar-button-borders, default);
   }
 
-  .sage-panel-controls &:hover {
+  .sage-panel-controls--show-pagination &:hover {
     box-shadow: map-get($sage-toolbar-button-borders, hover);
   }
 
-  .sage-panel-controls &:focus {
+  .sage-panel-controls--show-pagination &:focus {
     box-shadow: 0 0 0 rem(2px) sage-color(primary);
     background-color: sage-color(white);
   }
@@ -99,7 +99,7 @@ $-pagination-bg-color-dark: sage-color(grey, 300);
 
 .sage-pagination__pages--show-arrows {
   margin-left: auto;
-  
+
   .sage-pagination__item:first-of-type .sage-pagination__page::before {
     @include sage-icon-base(arrow-left);
   }
@@ -130,9 +130,11 @@ $-pagination-bg-color-dark: sage-color(grey, 300);
   @extend %t-sage-body;
   padding-right: sage-spacing();
 
+  /* stylelint-disable selector-max-compound-selectors */
   .sage-panel-controls--show-pagination .sage-panel-controls__bulk-actions--checked + .sage-panel-controls__toolbar .sage-pagination & {
     @include visually-hidden();
   }
+  /* stylelint-enable selector-max-compound-selectors */
 }
 
 .sage-pagination__count--solo {

@@ -28,9 +28,11 @@
   align-items: center;
   justify-content: space-between;
 
+  /* stylelint-disable selector-max-compound-selectors */
   .sage-panel-controls--show-pagination .sage-panel-controls__bulk-actions + & {
-    flex-grow: 1
+    flex-grow: 1;
   }
+  /* stylelint-enable selector-max-compound-selectors */
 }
 
 .sage-panel-controls__toolbar-btn-group {
@@ -48,7 +50,6 @@
 }
 
 .sage-panel-controls__pagination {
-  display: none;
   display: flex;
   align-items: center;
   flex-grow: 1;
