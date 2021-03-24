@@ -35,6 +35,10 @@
   /* stylelint-enable selector-max-compound-selectors */
 }
 
+.sage-panel-controls__default-controls .sage-panel-controls__toolbar:only-child {
+  flex-grow: 1;
+}
+
 .sage-panel-controls__toolbar-btn-group {
   display: flex;
   align-items: center;
@@ -94,7 +98,7 @@
 }
 
 .sage-panel-controls__item-count-label {
-  margin-left: sage-spacing(xs);
+  font-weight: sage-font-weight(semibold);
 }
 
 // Expand/collapse button setup
