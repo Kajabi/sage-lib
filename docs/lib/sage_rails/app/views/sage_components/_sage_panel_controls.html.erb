@@ -12,6 +12,12 @@ item_count_text = component.item_count_label.present? ? component.item_count_lab
   <% if content_for? :sage_panel_controls_tabs %>
     <div class="sage-panel-controls__tabs">
       <%= content_for :sage_panel_controls_tabs %>
+
+      <div class="sage-panel-controls__tabs-dropdown">
+        <% if content_for? :sage_panel_controls_tabs_dropdown %>
+          <%= content_for :sage_panel_controls_tabs_dropdown %>
+        <% end %>
+      </div>
     </div>
   <% end %>
 
