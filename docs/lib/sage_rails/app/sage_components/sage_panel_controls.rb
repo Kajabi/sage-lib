@@ -6,7 +6,6 @@ class SagePanelControls < SageComponent
     }]]],
     item_count_label: [:optional, String],
     items: [:optional, -> (v) { SageSchemaHelper.can_paginate?(v) }],
-    pagination_additional_params: [:optional, Hash],
     show_bulk_actions: [:optional, TrueClass],
     show_checkboxes: [:optional, TrueClass],
     show_expand_collapse: [:optional, TrueClass],
@@ -31,7 +30,6 @@ end
  :show_expand_collapse=>true,
  :show_pagination=>true,
  :show_sort=>true,
- :pagination_additional_params=>{},
  :bulk_action_items=>
   [{:value=>"Delete",
     :attributes=>{:href=>"#", :"data-js-list-action"=>"delete_selected"}},

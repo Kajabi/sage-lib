@@ -23,7 +23,7 @@ $-pagination-bg-color-dark: sage-color(grey, 300);
   flex-grow: 1;
 
   .sage-panel-controls__default-controls & {
-    margin-right: 1.5rem;
+    margin-right: sage-spacing(sm);
   }
 }
 
@@ -54,7 +54,7 @@ $-pagination-bg-color-dark: sage-color(grey, 300);
   }
 
   .sage-panel-controls--show-pagination & {
-    margin-right: 12px;
+    margin-right: rem(12px);
     border: 0;
 
     &:last-of-type {
@@ -81,7 +81,7 @@ $-pagination-bg-color-dark: sage-color(grey, 300);
 
   .sage-panel-controls--show-pagination & {
     min-height: rem(40px);
-    font-size: 18px;
+    font-size: sage-font-size(lg);
     border: 0;
     border-radius: $-pagination-radius;
     box-shadow: map-get($sage-toolbar-button-borders, default);
