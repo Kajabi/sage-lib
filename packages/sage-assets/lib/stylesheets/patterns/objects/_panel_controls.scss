@@ -56,6 +56,10 @@
   &:not(:last-child) {
     margin-right: sage-spacing(panel);
   }
+
+  .sage-panel-controls--show-pagination .sage-panel-controls__default-controls & {
+    margin-right: 0;
+  }
 }
 
 .sage-panel-controls__bulk-actions {

@@ -98,6 +98,8 @@ $-pagination-bg-color-dark: sage-color(grey, 300);
 }
 
 .sage-pagination__pages--show-arrows {
+  margin-left: auto;
+  
   .sage-pagination__item:first-of-type .sage-pagination__page::before {
     @include sage-icon-base(arrow-left);
   }
@@ -128,8 +130,8 @@ $-pagination-bg-color-dark: sage-color(grey, 300);
   @extend %t-sage-body;
   padding-right: sage-spacing();
 
-  .sage-panel-controls__bulk-actions--checked + .sage-pagination & {
-    visibility: hidden;
+  .sage-panel-controls--show-pagination .sage-panel-controls__bulk-actions--checked + .sage-panel-controls__toolbar .sage-pagination & {
+    @include visually-hidden();
   }
 }
 
