@@ -48,7 +48,7 @@
     margin-right: sage-spacing(panel);
   }
 
-  .sage-panel-controls__toolbar &:last-child {
+  .sage-panel-controls--show-pagination .sage-panel-controls__toolbar &:last-child {
     flex: 0 1;
   }
 }
