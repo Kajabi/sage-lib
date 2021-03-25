@@ -27,6 +27,16 @@
   flex-flow: row wrap;
   align-items: center;
   justify-content: space-between;
+
+  /* stylelint-disable selector-max-compound-selectors */
+  .sage-panel-controls--show-pagination .sage-panel-controls__bulk-actions + & {
+    flex-grow: 1;
+  }
+  /* stylelint-enable selector-max-compound-selectors */
+}
+
+.sage-panel-controls__default-controls .sage-panel-controls__toolbar:only-child {
+  flex-grow: 1;
 }
 
 .sage-panel-controls__toolbar-btn-group {
@@ -37,14 +47,23 @@
   &:not(:last-child) {
     margin-right: sage-spacing(panel);
   }
+
+  .sage-panel-controls--show-pagination .sage-panel-controls__toolbar &:last-child {
+    flex: 0 1;
+  }
 }
 
 .sage-panel-controls__pagination {
   display: flex;
   align-items: center;
+  flex-grow: 1;
 
   &:not(:last-child) {
     margin-right: sage-spacing(panel);
+  }
+
+  .sage-panel-controls--show-pagination .sage-panel-controls__default-controls & {
+    margin-right: 0;
   }
 }
 
@@ -55,7 +74,19 @@
 
   &:not(:last-child) {
     margin-right: sage-spacing(panel);
+
+    .sage-panel-controls--show-pagination & {
+      margin-right: 0;
+    }
   }
+
+  .sage-panel-controls--show-pagination & {
+    flex: 0 1;
+  }
+}
+
+.sage-panel-controls__bulk-actions-checkbox {
+  min-height: rem(40px);
 }
 
 .sage-panel-controls__bulk-actions-dropdown {
@@ -67,7 +98,7 @@
 }
 
 .sage-panel-controls__item-count-label {
-  margin-left: sage-spacing(xs);
+  font-weight: sage-font-weight(semibold);
 }
 
 // Expand/collapse button setup

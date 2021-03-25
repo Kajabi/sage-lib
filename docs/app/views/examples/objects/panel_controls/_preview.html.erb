@@ -126,7 +126,42 @@ actions_items = [
   <% end %>
 <% end %>
 
-<h3 class="t-sage-heading-6">Bulk actions</h3>
+<h3 class="t-sage-heading-6">No Pagination</h3>
+<%= sage_component SagePanel, {} do %>
+  <%= sage_component SagePanelControls, {
+    item_count_label: "Text here",
+    show_bulk_actions: false,
+    show_expand_collapse: true,
+    show_pagination: false,
+    show_sort: true,
+    bulk_action_items: actions_items,
+    sort_items: sort_items,
+  } %>
+<% end %>
+
+<h3 class="t-sage-heading-6">Pagination</h3>
+<%= sage_component SagePanel, {} do %>
+  <%= sage_component SagePanelControls, {
+    show_bulk_actions: false,
+    show_expand_collapse: true,
+    show_pagination: true,
+    show_sort: true,
+    bulk_action_items: actions_items,
+    sort_items: sort_items,
+  } do %>
+    <% content_for :sage_panel_controls_pagination do %>
+      <%= sage_component SagePagination, {
+        items: Kaminari.paginate_array(Array.new(30, 1)).page(1).per(10),
+        collection_name: "Some name here",
+        window: 2,
+        hide_pages: true,
+        show_arrows: true
+      } %>
+    <% end %>
+  <% end %>
+<% end %>
+
+<h3 class="t-sage-heading-6">Pagination with Bulk actions</h3>
 <%= sage_component SagePanel, {} do %>
   <%= sage_component SagePanelControls, {
     show_bulk_actions: true,
@@ -135,7 +170,17 @@ actions_items = [
     show_sort: true,
     bulk_action_items: actions_items,
     sort_items: sort_items,
-  } %>
+  } do %>
+    <% content_for :sage_panel_controls_pagination do %>
+      <%= sage_component SagePagination, {
+        items: Kaminari.paginate_array(Array.new(30, 1)).page(1).per(10),
+        collection_name: "Some name here",
+        window: 2,
+        hide_pages: true,
+        show_arrows: true
+      } %>
+    <% end %>
+  <% end %>
 <% end %>
 
 <h3 class="t-sage-heading-6">Sample Custom Toolbar</h3>
@@ -165,6 +210,15 @@ actions_items = [
     <% content_for :sage_panel_controls_toolbar do %>
       <%= search_filter_toolbar %>
       <%= dropdown %>
+    <% end %>
+    <% content_for :sage_panel_controls_pagination do %>
+      <%= sage_component SagePagination, {
+        items: Kaminari.paginate_array(Array.new(30, 1)).page(1).per(10),
+        collection_name: "Some name here",
+        window: 2,
+        hide_pages: true,
+        show_arrows: true
+      } %>
     <% end %>
   <% end %>
 
