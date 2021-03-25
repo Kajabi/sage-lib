@@ -3,6 +3,7 @@
   <% if component.aria_label.present? %>
     aria-label="<%= component.aria_label %>"
   <% end %>
+  <%= component.generated_html_attributes.html_safe %>
 >
   <% if component.items.present? and component.items.length() > 0 %>
     <ul class="sage-nav__list">

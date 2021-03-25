@@ -6,6 +6,7 @@
   data-loading="true"
   aria-busy="true"
   aria-live="polite"
+  <%= component.generated_html_attributes.html_safe %>
 > 
   <%# Spinner SVG %>
   <% if component.type === "spinner" %>

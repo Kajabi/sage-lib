@@ -8,6 +8,7 @@
   data-js-tabs-pane="<%= component.id %>"
   id="<%= component.id %>"
   role="tabpanel"
+  <%= component.generated_html_attributes.html_safe %>
 >
   <%= component.content %>
 </section>

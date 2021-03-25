@@ -5,6 +5,7 @@
     <%= "sage-avatar--centered" if component.centered.present? && component.centered %>
     <%= component.css_classes %>
   "
+  <%= component.generated_html_attributes.html_safe %>
   <% if component.size.present? %>
     style="width: <%= component.size %>; height: <%= component.size %>;"
   <% end %>

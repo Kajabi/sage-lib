@@ -1,4 +1,7 @@
-<div class="sage-upload-card<% if component.file_selected.present? %> sage-upload-card--selected<% end %><% if component.has_error.present? %> sage-upload-card--error<% end %>">
+<div 
+  class="sage-upload-card<% if component.file_selected.present? %> sage-upload-card--selected<% end %><% if component.has_error.present? %> sage-upload-card--error<% end %>"
+  <%= component.generated_html_attributes.html_safe %>
+>
   <div class="sage-upload-card__dropzone">
     <input class="sage-upload-card__input" accept=".csv" multiple="multiple" type="file" autocomplete="off" />
     <% if component.file_selected.present? %>

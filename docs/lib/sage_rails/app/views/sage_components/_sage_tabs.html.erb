@@ -9,7 +9,7 @@
     <%= component.generated_css_classes %>
   "
   role="tablist"
-  <%= component.generated_html_attributes %>
+  <%= component.generated_html_attributes.html_safe %>
 >
   <% component.items.each do |item| %>
     <% if component.style.present? && component.style === "choice" %>

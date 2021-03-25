@@ -7,6 +7,7 @@
 
   <%# Prevents the default Kajabi-Products Search.js from binding to this input %>
   data-kjb-disable-search
+  <%= component.generated_html_attributes.html_safe %>
 >
   <label for="<%= component.id %>" class="sage-search__label">
     <%= component.label_text %>

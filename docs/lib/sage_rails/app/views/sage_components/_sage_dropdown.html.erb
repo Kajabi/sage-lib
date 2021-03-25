@@ -9,6 +9,7 @@
     <%= component.css_classes if component.css_classes.present? %>
   "
   data-js-dropdown="<%= component.id %>"
+  <%= component.generated_html_attributes.html_safe %>
 >
   <div aria-hidden="true" class="sage-dropdown__screen"></div>
   <div
