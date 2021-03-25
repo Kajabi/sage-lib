@@ -33,6 +33,7 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
   // Adds form field styling
   &.sage-dropdown--contained,
   .sage-panel-controls__bulk-actions > &,
+  .sage-panel-controls__tabs-dropdown > &,
   .sage-panel-controls__toolbar > &,
   .sage-panel-controls__toolbar-btn-group > & {
     position: relative;
@@ -73,6 +74,7 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
   }
 
   &.sage-dropdown--contained,
+  .sage-panel-controls__tabs-dropdown > &,
   .sage-panel-controls__toolbar > & {
     border-radius: sage-border(radius);
   }
@@ -338,6 +340,10 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
 .sage-dropdown__trigger--select-labeled {
   :not(.sage-dropdown--customized) > & {
     min-width: $-dropdown-width;
+
+    .sage-panel-controls__tabs-dropdown & {
+      min-width: $-dropdown-width-small;
+    }
   }
 }
 

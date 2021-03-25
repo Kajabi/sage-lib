@@ -133,6 +133,7 @@ $-btn-interactive-label-icon-size: rem(24px);
 
   // Contextual modifications
   .sage-dropdown--contained &,
+  .sage-panel-controls__tabs-dropdown .sage-dropdown__trigger &,
   .sage-panel-controls__toolbar .sage-dropdown__trigger &,
   .sage-panel-controls__bulk-actions .sage-dropdown__trigger & {
     @include sage-focus-outline--update-color(transparent);

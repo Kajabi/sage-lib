@@ -21,6 +21,12 @@
   }
 }
 
+.sage-panel-controls__tabs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .sage-panel-controls__toolbar,
 .sage-panel-controls__default-controls {
   display: flex;
