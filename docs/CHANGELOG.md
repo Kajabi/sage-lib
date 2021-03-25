@@ -3,6 +3,53 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.19.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.18.0...@kajabi/sage@3.19.0) (2021-03-25)
+
+
+### Bug Fixes
+
+* add html_attributes to modal ([41e2719](https://github.com/Kajabi/sage-lib/commit/41e2719fa5291edf7185ed5acc60db4d363a2ef3))
+* add missing html_attributes to rails components ([de39dda](https://github.com/Kajabi/sage-lib/commit/de39dda7557c84de579932dcb936562d4d49e157))
+* add missing html_attributes to rails components ([2e31bb2](https://github.com/Kajabi/sage-lib/commit/2e31bb21b6425c73aef7132bd071883e6c58c065))
+* **button-group:** added borderTop prop and docs ([74bd7f9](https://github.com/Kajabi/sage-lib/commit/74bd7f9bacf3017bd7ba04170691f6208300e4a8))
+* **button-group:** added space-between modifier ([a512154](https://github.com/Kajabi/sage-lib/commit/a512154e73b51bde7f6851ce67c766c7cebbcfbc))
+* **dropdown:** remove attr ([9b669ae](https://github.com/Kajabi/sage-lib/commit/9b669ae1da08dfc0c386171709f304f670a4ed5b))
+* **dropdown:** update docs and styling fix ([8cf63d5](https://github.com/Kajabi/sage-lib/commit/8cf63d540c97ba3bd90549139e75ced3ff291144))
+* **pagination:** add kaminari and update props ([f4e254f](https://github.com/Kajabi/sage-lib/commit/f4e254f433251c6a2456f09ea94ce217e0e7bbfb))
+* **pagination:** update styles and docs ([a0af772](https://github.com/Kajabi/sage-lib/commit/a0af7729ea0fa9201813f5b3c66d3b6168c00b97))
+* **panel-controls:** added affordance for tabs dropdown ([96fce80](https://github.com/Kajabi/sage-lib/commit/96fce80275c21a8906539d22ed80635e3f6640df))
+* **panel-controls:** added pagination props ([00e41a4](https://github.com/Kajabi/sage-lib/commit/00e41a4cb4da735a8e36856e760e223dcb855207))
+* **panel-controls:** save before context switch ([582c45f](https://github.com/Kajabi/sage-lib/commit/582c45f7b7e7403e625286805d7c477d18ca8a34))
+* **panel-controls:** save before context switch ([09d08a1](https://github.com/Kajabi/sage-lib/commit/09d08a177edc17f53090447ce78ed6fd42bae0b2))
+* **panel-controls:** save point after local sage crash ([47dffab](https://github.com/Kajabi/sage-lib/commit/47dffab9df6aad8ab163b03fb8c91b19d4ed9200))
+* **panel-controls:** self review ([5a8e358](https://github.com/Kajabi/sage-lib/commit/5a8e358217b9f885efd5971f15a88943c75dc87d))
+* **panel-controls:** updated docs ([d99f73f](https://github.com/Kajabi/sage-lib/commit/d99f73ff6d6c808ea090b7538d4da09a2ee4d0a7))
+* **panel-controls:** updated inner pagination ([6492bc0](https://github.com/Kajabi/sage-lib/commit/6492bc0bccf27287f6771a0531799b02082ccf83))
+* **panel-controls:** updated show arrow button text ([ba44c67](https://github.com/Kajabi/sage-lib/commit/ba44c67b29f1d1294ed8232ce9a0ce084e6b9ac0))
+* **panel-controls:** updates per review ([887f08d](https://github.com/Kajabi/sage-lib/commit/887f08d50231388e8155eadc751ecfbf68debf37))
+* **panel-controls:** updating rails styles ([226c171](https://github.com/Kajabi/sage-lib/commit/226c171c96581024bc1f624bf324a850e0526d50))
+
+
+### Features
+
+* **dropdown:** add custom panel section ([d9475f7](https://github.com/Kajabi/sage-lib/commit/d9475f7ab29c45665875a75b9b5d0bd11fda2a57))
+* **dropdown:** add new condition to dropdown ([fa1d922](https://github.com/Kajabi/sage-lib/commit/fa1d922c23ce9beea9091db0c8a28561fad83035))
+* **dropdown:** add new custom example to preview ([9f6edc3](https://github.com/Kajabi/sage-lib/commit/9f6edc30971601f6858589229e3d6f02d23850b6))
+* **form input:** add 'name' attribute option to input fields ([85205c0](https://github.com/Kajabi/sage-lib/commit/85205c0f3b7b31dcdc4e1fde84566ba85c536182))
+* **form input:** default name as id, corrections to documentation values ([54eb822](https://github.com/Kajabi/sage-lib/commit/54eb8226df1bb90fa8df722feb23950eec3802bf))
+* **form input:** remove duplicate attribute, remove unused markup template ([4e61b30](https://github.com/Kajabi/sage-lib/commit/4e61b308c5cd8561c110383b5866751ec6207d19))
+* **form selects:** add css_classes props to form selects ([1f3a069](https://github.com/Kajabi/sage-lib/commit/1f3a0693712afa7baf210f044d929ace82425a62))
+* **textarea:** apply name attribute param to textarea, revised docs ([913b715](https://github.com/Kajabi/sage-lib/commit/913b7151da28a3b363ccf24c11dc39470c5e65a1))
+
+
+### Reverts
+
+* **form select:** reverts changes to form select ([6239417](https://github.com/Kajabi/sage-lib/commit/6239417ae9673c2537cd9d02080f68e056d50c52))
+
+
+
+
+
 # [3.18.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.17.3...@kajabi/sage@3.18.0) (2021-03-18)
 
 

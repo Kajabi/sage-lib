@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.26.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.26.0...@kajabi/sage-assets@0.26.1) (2021-03-25)
+
+
+### Bug Fixes
+
+* **button:** adjust the space setup for icons in buttons ([6a32d9b](https://github.com/Kajabi/sage-lib/commit/6a32d9b05f1391d66682cf4f54417bc54c6862cf))
+* **button-group:** added borderTop prop and docs ([74bd7f9](https://github.com/Kajabi/sage-lib/commit/74bd7f9bacf3017bd7ba04170691f6208300e4a8))
+* **button-group:** added space-between modifier ([a512154](https://github.com/Kajabi/sage-lib/commit/a512154e73b51bde7f6851ce67c766c7cebbcfbc))
+* **dropdown:** simplifies z-index to correct overlapping issue ([ecf39f1](https://github.com/Kajabi/sage-lib/commit/ecf39f15105af27b9fb928a601f70b3196fce573))
+* **dropdown:** update docs and styling fix ([8cf63d5](https://github.com/Kajabi/sage-lib/commit/8cf63d540c97ba3bd90549139e75ced3ff291144))
+* **pagination:** update styles and docs ([a0af772](https://github.com/Kajabi/sage-lib/commit/a0af7729ea0fa9201813f5b3c66d3b6168c00b97))
+* **pagination:** updated pagination in rails panel controls styles ([0b90941](https://github.com/Kajabi/sage-lib/commit/0b909410df163833fb1d89d3196ace9a8ff47ed7))
+* **panel-controls:** added affordance for tabs dropdown ([96fce80](https://github.com/Kajabi/sage-lib/commit/96fce80275c21a8906539d22ed80635e3f6640df))
+* **panel-controls:** added pagination props ([00e41a4](https://github.com/Kajabi/sage-lib/commit/00e41a4cb4da735a8e36856e760e223dcb855207))
+* **panel-controls:** namespaced fix ([1d82a3b](https://github.com/Kajabi/sage-lib/commit/1d82a3be03ff22b76040b25338fd10205d698811))
+* **panel-controls:** save before context switch ([582c45f](https://github.com/Kajabi/sage-lib/commit/582c45f7b7e7403e625286805d7c477d18ca8a34))
+* **panel-controls:** save before context switch ([09d08a1](https://github.com/Kajabi/sage-lib/commit/09d08a177edc17f53090447ce78ed6fd42bae0b2))
+* **panel-controls:** self review ([5a8e358](https://github.com/Kajabi/sage-lib/commit/5a8e358217b9f885efd5971f15a88943c75dc87d))
+* **panel-controls:** updated docs ([d99f73f](https://github.com/Kajabi/sage-lib/commit/d99f73ff6d6c808ea090b7538d4da09a2ee4d0a7))
+* **panel-controls:** updated show arrow button text ([ba44c67](https://github.com/Kajabi/sage-lib/commit/ba44c67b29f1d1294ed8232ce9a0ce084e6b9ac0))
+* **panel-controls:** updates per review ([887f08d](https://github.com/Kajabi/sage-lib/commit/887f08d50231388e8155eadc751ecfbf68debf37))
+* **panel-controls:** updating rails styles ([226c171](https://github.com/Kajabi/sage-lib/commit/226c171c96581024bc1f624bf324a850e0526d50))
+
+
+
+
+
 # [0.26.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.25.2...@kajabi/sage-assets@0.26.0) (2021-03-18)
 
 

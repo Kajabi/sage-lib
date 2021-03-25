@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.4.2...@kajabi/sage-system@0.5.0) (2021-03-25)
+
+
+### Bug Fixes
+
+* **dropdown:** update dropdown js (hat-tip phil for pairing up) ([5dc1970](https://github.com/Kajabi/sage-lib/commit/5dc19705eac4fe4f72432249fd50aa37a5971c59))
+
+
+### Features
+
+* **dropdown:** add no-exit to dropdown js ([adc3432](https://github.com/Kajabi/sage-lib/commit/adc343252928cc76e7b4ec5a826db44258858193))
+
+
+
+
+
 ## [0.4.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.4.1...@kajabi/sage-system@0.4.2) (2021-03-11)
 
 

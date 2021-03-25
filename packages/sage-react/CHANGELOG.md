@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.34.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.34.0...@kajabi/sage-react@0.34.1) (2021-03-25)
+
+
+### Bug Fixes
+
+* **button-group:** added borderTop prop and docs ([74bd7f9](https://github.com/Kajabi/sage-lib/commit/74bd7f9bacf3017bd7ba04170691f6208300e4a8))
+* **button-group:** first part - adding align prop - prep for alignend removal ([a6069a8](https://github.com/Kajabi/sage-lib/commit/a6069a8c7926fddf7edd515d78f0d4ce506ee60b))
+* **panel-controls:** linter ([d1c7796](https://github.com/Kajabi/sage-lib/commit/d1c7796c98e2a6054a167e903718d93fdcd6785f))
+
+
+
+
+
 # [0.34.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.33.2...@kajabi/sage-react@0.34.0) (2021-03-18)
 
 
