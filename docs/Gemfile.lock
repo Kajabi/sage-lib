@@ -61,6 +61,18 @@ GEM
       activesupport (>= 4.2.0)
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
+    kaminari (1.2.1)
+      activesupport (>= 4.1.0)
+      kaminari-actionview (= 1.2.1)
+      kaminari-activerecord (= 1.2.1)
+      kaminari-core (= 1.2.1)
+    kaminari-actionview (1.2.1)
+      actionview
+      kaminari-core (= 1.2.1)
+    kaminari-activerecord (1.2.1)
+      activerecord
+      kaminari-core (= 1.2.1)
+    kaminari-core (1.2.1)
     lockup (1.5.1)
       rails (>= 3, < 6.1)
     loofah (2.7.0)
@@ -176,6 +188,7 @@ PLATFORMS
 DEPENDENCIES
   bump (~> 0.9.0)
   byebug
+  kaminari (~> 1.2.1)
   lockup (~> 1.5)
   pry
   rails (= 4.2.11.1)

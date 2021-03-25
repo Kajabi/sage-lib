@@ -8,6 +8,7 @@ export default {
   component: ButtonGroup,
   argTypes: {
     ...selectArgs({
+      align: ButtonGroup.ALIGN_OPTIONS,
       gap: ButtonGroup.GAP_OPTIONS,
     }),
   },
@@ -18,6 +19,7 @@ export default {
         <Button color={Button.COLORS.SECONDARY}>Bar</Button>
       </>
     ),
+    align: ButtonGroup.ALIGN_OPTIONS.NONE,
     gap: ButtonGroup.GAP_OPTIONS.SM,
   }
 };

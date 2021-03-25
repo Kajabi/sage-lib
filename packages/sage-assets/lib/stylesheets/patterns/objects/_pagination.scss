@@ -20,6 +20,11 @@ $-pagination-bg-color-dark: sage-color(grey, 300);
   justify-content: space-between;
   flex-flow: row wrap;
   align-items: center;
+  flex-grow: 1;
+
+  .sage-panel-controls__default-controls & {
+    margin-right: sage-spacing(sm);
+  }
 }
 
 .sage-pagination--no-counter {
@@ -33,6 +38,10 @@ $-pagination-bg-color-dark: sage-color(grey, 300);
   list-style-type: none;
   border: $-pagination-border;
   border-radius: $-pagination-radius;
+
+  .sage-panel-controls--show-pagination & {
+    border: 0;
+  }
 }
 
 .sage-pagination__item {
@@ -42,6 +51,15 @@ $-pagination-bg-color-dark: sage-color(grey, 300);
 
   &:last-of-type {
     border: 0;
+  }
+
+  .sage-panel-controls--show-pagination & {
+    margin-right: rem(12px);
+    border: 0;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
   }
 }
 
@@ -60,6 +78,38 @@ $-pagination-bg-color-dark: sage-color(grey, 300);
     background: $-pagination-bg-color;
     box-shadow: none;
   }
+
+  .sage-panel-controls--show-pagination & {
+    min-height: rem(40px);
+    font-size: sage-font-size(lg);
+    border: 0;
+    border-radius: $-pagination-radius;
+    box-shadow: map-get($sage-toolbar-button-borders, default);
+  }
+
+  .sage-panel-controls--show-pagination &:hover {
+    box-shadow: map-get($sage-toolbar-button-borders, hover);
+  }
+
+  .sage-panel-controls--show-pagination &:focus {
+    box-shadow: 0 0 0 rem(2px) sage-color(primary);
+    background-color: sage-color(white);
+  }
+}
+
+.sage-pagination__pages--show-arrows {
+  margin-left: auto;
+
+  .sage-pagination__item:first-of-type .sage-pagination__page::before {
+    @include sage-icon-base(arrow-left);
+  }
+  .sage-pagination__item:last-of-type .sage-pagination__page::before {
+    @include sage-icon-base(arrow-right);
+  }
+}
+
+.sage-pagination__page-text {
+  @include visually-hidden();
 }
 
 .sage-pagination__page--current {
@@ -79,6 +129,12 @@ $-pagination-bg-color-dark: sage-color(grey, 300);
 .sage-pagination__count {
   @extend %t-sage-body;
   padding-right: sage-spacing();
+
+  /* stylelint-disable selector-max-compound-selectors */
+  .sage-panel-controls--show-pagination .sage-panel-controls__bulk-actions--checked + .sage-panel-controls__toolbar .sage-pagination & {
+    @include visually-hidden();
+  }
+  /* stylelint-enable selector-max-compound-selectors */
 }
 
 .sage-pagination__count--solo {

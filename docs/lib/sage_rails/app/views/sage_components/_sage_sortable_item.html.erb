@@ -5,6 +5,7 @@
   "
   data-js-sortable-update-url="<%= component.url_update %>"
   <%= "id=#{component.id}" if component.id %>
+  <%= component.generated_html_attributes.html_safe %>
 >
   <% if component.image.present? %>
     <div class="sage-sortable__item-image">

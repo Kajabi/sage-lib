@@ -101,6 +101,7 @@ $-btn-interactive-label-icon-size: rem(24px);
 // stylelint-disable max-nesting-depth
 
 .sage-btn {
+  --icon-block-padding: #{rem(6px)}; // actually applied in the icon building loop in core/_icon.scss
   @extend %t-sage-body-med;
   @include sage-button-style-reset();
   @include sage-focus-outline;
@@ -111,7 +112,6 @@ $-btn-interactive-label-icon-size: rem(24px);
   align-self: inherit;
   align-items: center;
   position: relative;
-  min-height: ($-padding-block * 2 + sage-line-height(md));
   padding: $-padding-block sage-spacing(sm);
   text-align: left; // Prevents text alignment issue when inner text is truncated
   border: 0;
@@ -133,10 +133,12 @@ $-btn-interactive-label-icon-size: rem(24px);
 
   // Contextual modifications
   .sage-dropdown--contained &,
+  .sage-panel-controls__tabs-dropdown .sage-dropdown__trigger &,
   .sage-panel-controls__toolbar .sage-dropdown__trigger &,
   .sage-panel-controls__bulk-actions .sage-dropdown__trigger & {
     @include sage-focus-outline--update-color(transparent);
 
+    width: inherit;
     border-radius: inherit;
 
     &:hover {
@@ -162,7 +164,6 @@ $-btn-interactive-label-icon-size: rem(24px);
     position: absolute;
     right: 0;
     width: $-btn-interactive-label-icon-size;
-    min-height: $-btn-interactive-label-icon-size;
     margin: auto 0;
     border-radius: 0 sage-border(radius) sage-border(radius) 0;
 
@@ -220,7 +221,6 @@ $-btn-interactive-label-icon-size: rem(24px);
     transform: translateY(-50%);
     top: 50%;
     right: calc(#{rem(2px)} / 2);
-    min-height: 0;
     height: calc(100% - #{rem(2px)});
     background-color: sage-color(white);
     box-shadow: rem(-1px) 0 0 0 sage-color(grey, 300);
@@ -358,7 +358,6 @@ $-btn-interactive-label-icon-size: rem(24px);
 
 // Subtle buttons are smaller with no padding or background color but still use a focus ring
 .sage-btn--subtle {
-  min-height: sage-line-height(md);
   padding: 0;
   box-shadow: none;
 
@@ -409,6 +408,8 @@ $-btn-interactive-label-icon-size: rem(24px);
 
 .sage-btn--small {
   @extend %t-sage-body-small;
+
+  --icon-block-padding: #{rem(4px)};
 }
 
 // TODO: Investigate deprecating the float setting here
@@ -435,4 +436,13 @@ $-btn-interactive-label-icon-size: rem(24px);
 
 .sage-btn-group--align-end {
   justify-content: flex-end;
+}
+
+.sage-btn-group--align-space-between {
+  justify-content: space-between;
+}
+
+.sage-btn-group--border-top {
+  padding-top: sage-spacing(lg);
+  border-top: 1px solid sage-color(grey, 300);
 }

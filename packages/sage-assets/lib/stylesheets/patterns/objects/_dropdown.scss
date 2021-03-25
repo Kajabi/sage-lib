@@ -33,23 +33,21 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
   // Adds form field styling
   &.sage-dropdown--contained,
   .sage-panel-controls__bulk-actions > &,
+  .sage-panel-controls__tabs-dropdown > &,
   .sage-panel-controls__toolbar > &,
   .sage-panel-controls__toolbar-btn-group > & {
     position: relative;
-    z-index: sage-z-index(default, 1);
     box-shadow: map-get($sage-toolbar-button-borders, default);
     border: 0;
 
     @include sage-focus-outline--update-color(transparent);
 
     &:hover {
-      z-index: sage-z-index(default, 2);
       box-shadow: map-get($sage-toolbar-button-borders, hover);
       background-color: sage-color(white);
     }
 
     &:focus-within {
-      z-index: sage-z-index(default, 3);
       box-shadow: map-get($sage-toolbar-button-borders, focus);
     }
   }
@@ -76,6 +74,7 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
   }
 
   &.sage-dropdown--contained,
+  .sage-panel-controls__tabs-dropdown > &,
   .sage-panel-controls__toolbar > & {
     border-radius: sage-border(radius);
   }
@@ -127,7 +126,6 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
 
   &:active,
   &:focus-within {
-    z-index: sage-z-index(modal);
     outline: none;
 
     &::#{$-dropdown-option-el-underline} {
@@ -268,7 +266,7 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
 .sage-dropdown__panel {
   visibility: hidden;
   position: absolute;
-  z-index: sage-z-index(nav, -1);
+  z-index: sage-z-index(default, 100);
   top: calc(100% + #{sage-spacing(xs)});
   // Temporariliy removing animation as it causes
   // a positioning issue with nested fixed positioned elements
@@ -321,7 +319,7 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
   [aria-expanded="true"] & {
     display: block;
     position: fixed;
-    z-index: 3998;
+    z-index: sage-z-index(default, 90);
     top: 0;
     right: 0;
     bottom: 0;
@@ -342,6 +340,10 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
 .sage-dropdown__trigger--select-labeled {
   :not(.sage-dropdown--customized) > & {
     min-width: $-dropdown-width;
+
+    .sage-panel-controls__tabs-dropdown & {
+      min-width: $-dropdown-width-small;
+    }
   }
 }
 

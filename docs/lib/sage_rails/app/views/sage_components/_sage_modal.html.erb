@@ -13,6 +13,7 @@
   <%= "data-js-modal-disable-close" if component.disable_close %>
   <%= "data-js-modal-remove-content-on-close" if component.remove_content_on_close %>
   data-js-modal="<%= component.id %>"
+  <%= component.generated_html_attributes.html_safe %>
 >
   <section class="sage-modal__container" data-js-modal-container tabindex="-1">
     <% if component.content.present? %>

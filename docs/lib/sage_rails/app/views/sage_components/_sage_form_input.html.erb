@@ -5,12 +5,13 @@
     <%= "sage-input--showplaceholder" if component.has_placeholder %>"
   <%= "data-js-input-prefix=#{component.prefix}" if component.prefix.present? -%>
   <%= "data-js-input-suffix=#{component.suffix}" if component.suffix.present? -%>
+  <%= component.generated_html_attributes.html_safe -%>
 >
   <input
     type="<%= component.input_type %>"
     id="<%= component.id %>"
     class="sage-input__field"
-    name="<%= component.id %>"
+    name="<%= component.name.present? ? component.name : component.id %>"
     placeholder="<%= component.placeholder -%>"
     value="<%= component.value -%>"
     <%= "required" if component.required %>

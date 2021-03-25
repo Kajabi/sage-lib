@@ -4,6 +4,7 @@
   data-js-tooltip-position="<%= component.position %>" 
   <%= "data-js-tooltip-theme=#{component.theme}" if component.theme.present? -%>
   <%= "data-js-tooltip-size=#{component.size}" if component.size.present? -%>
+  <%= component.generated_html_attributes.html_safe %>
 >
   <%= component.position.capitalize %>
 </button>

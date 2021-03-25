@@ -80,6 +80,31 @@ Sage.dropdown = (function () {
       return;
     }
 
+    // Click may have occurred within a trigger
+    // but we only care if it happened on something within the trigger,
+    // not the trigger container itself
+    const didClickOnTrigger = el.closest(".sage-dropdown__trigger") && !el.classList.contains("sage-dropdown__trigger");
+
+    // Click may have occurred within a menu (such as on item-control elements of various sorts)
+    const didClickOnMenu = !!el.closest(".sage-dropdown__menu");
+
+    // Click may have occurred on the screen element
+    const didClickOnScreen = !!el.closest(".sage-dropdown__screen");
+
+    // Elements with data-sage-dropdown-exit can be used to togglePanel.
+    const elHasExitAttr = el.hasAttribute("data-sage-dropdown-exit")
+
+    // Proceed with toggling the panel if any one of the click conditions is true
+    // (excludes clicks within custom panels)
+    if (didClickOnTrigger || didClickOnMenu || didClickOnScreen || elHasExitAttr) {
+      togglePanel(evt);
+    }
+  }
+
+  function togglePanel(evt) {
+    const el = evt.target;
+    const elDropdown = evt.currentTarget;
+
     // If the dropdown is in select mode, display the selected content
     const elTrigger = elDropdown.querySelector(triggerSelectClasses);
     const eventIsOnDropdownItem = el.classList.contains(dropdownItemClass);

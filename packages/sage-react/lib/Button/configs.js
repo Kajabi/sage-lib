@@ -15,3 +15,9 @@ export const BUTTON_GROUP_GAP_OPTIONS = {
   MD: 'md',
   LG: 'lg',
 };
+
+export const BUTTON_GROUP_ALIGN_OPTIONS = {
+  NONE: 'none',
+  END: 'end',
+  SPACEBETWEEN: 'space-between'
+};

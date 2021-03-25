@@ -7,21 +7,24 @@
     "
     role="pagination"
     aria-label="Pagination Navigation"
+    <%= component.generated_html_attributes.html_safe %>
   >
     <% if !component.hide_counter %>
       <span class="sage-pagination__count"><%= component.page_count component.items %></span>
     <% end %>
 
-    <ul class="sage-pagination__pages">
+    <ul class="sage-pagination__pages <% if component.show_arrows %>sage-pagination__pages--show-arrows<% end %>">
       <% if component.items.first_page? %>
+      <% prev_text = component.show_arrows ? %(<span class="sage-pagination__page-text">#{component.prev_text}</span>).html_safe : component.prev_text %>
+      <% next_text = component.show_arrows ? %(<span class="sage-pagination__page-text">#{component.next_text}</span>).html_safe : component.next_text %>
       <li class="sage-pagination__item">
         <a href="#" class="sage-pagination__page sage-pagination__page--disabled">
-          <%= component.prev_text %>
+          <%= prev_text %>
         </a>
       </li>
       <% else %>
         <li class="sage-pagination__item">
-          <%= link_to_previous_page component.items, component.prev_text, class: "sage-pagination__page", params: component.additional_params %>
+          <%= link_to_previous_page component.items, prev_text, class: "sage-pagination__page", params: component.additional_params %>
         </li>
       <% end -%>
 
@@ -32,12 +35,12 @@
       <% if component.items.last_page? %>
       <li class="sage-pagination__item">
         <a href="#" class="sage-pagination__page sage-pagination__page--disabled">
-          <%= component.next_text %>
+          <%= next_text %>
         </a>
       </li>
       <% else %>
       <li class="sage-pagination__item">
-        <%= link_to_next_page component.items, component.next_text, class: "sage-pagination__page", params: component.additional_params %>
+        <%= link_to_next_page component.items, next_text, class: "sage-pagination__page", params: component.additional_params %>
       </li>
       <% end -%>
     </ul>
@@ -48,6 +51,7 @@
       sage-pagination
       <%= component.generated_css_classes %>
     "
+    <%= component.generated_html_attributes.html_safe %>
   >
     <% unless component.hide_counter %>
       <span class="sage-pagination__count sage-pagination__count--solo">

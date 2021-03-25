@@ -13,6 +13,7 @@
       <%= "checked" if component.checked %>
       <%= "disabled" if component.disabled %>
       <%= "required" if component.required %>
+      <%= component.generated_html_attributes.html_safe %>
     >
 <% else %>
   <div class="
@@ -22,6 +23,7 @@
       <%= component.has_error ? "sage-switch--error" : "" %>
       <%= component.css_classes if component.css_classes.present? %>
     "
+    <%= component.generated_html_attributes.html_safe %>
   >
     <input 
       type="<%= component.type %>" 

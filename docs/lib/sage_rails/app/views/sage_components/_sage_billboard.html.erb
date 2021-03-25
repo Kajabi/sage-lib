@@ -1,6 +1,10 @@
 <% html_tag = component.title_tag ? component.title_tag : "h5" %>
 
-<div class="sage-billboard" style="background-image: url(<%= image_url component.img %>);">
+<div 
+  class="sage-billboard" 
+  style="background-image: url(<%= image_url component.img %>);" 
+  <%= component.generated_html_attributes.html_safe %>
+>
   <div class="sage-billboard__content">
     <% if component.title.present? %>
       <<%= html_tag %> class="sage-billboard__title"><%= component.title %></<%= html_tag %>>

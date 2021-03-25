@@ -4,6 +4,7 @@
     <%= "sage-status-icon--#{component.icon}" %>
   "
   data-js-tooltip="<%= component.value %>"
+  <%= component.generated_html_attributes.html_safe %>
 >
   <span class="visually-hidden">
     <%= component.value %>
