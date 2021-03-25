@@ -80,7 +80,8 @@
         @include sage-icon-base($icon-name, md);
 
         align-self: center;
-        margin: 0 0 0 sage-spacing(xs);
+        margin-left: sage-spacing(xs);
+        padding: var(--icon-block-padding) 0;
       }
     }
   }
@@ -94,7 +95,8 @@
         @include sage-icon-base($icon-name);
 
         align-self: center;
-        margin: 0 sage-spacing(xs) 0 0;
+        margin-right: sage-spacing(xs);
+        padding: var(--icon-block-padding) 0;
       }
     }
   }
@@ -107,7 +109,9 @@
 
       &::before {
         @include sage-icon-base($icon-name);
+
         align-self: center;
+        padding: var(--icon-block-padding) 0;
       }
     }
   }
