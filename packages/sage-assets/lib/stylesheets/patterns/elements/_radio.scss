@@ -134,7 +134,7 @@ $-radio-focus-outline-color: currentColor;
     transform: translate3d(-50%, -50%, 0) scale(0.94);
     width: calc(100% + ((#{$-radio-focus-outline-width} * 1px) + (#{$-radio-focus-outline-size} * 2)));
     height: calc(100% + ((#{$-radio-focus-outline-width} * 1px) + (#{$-radio-focus-outline-size} * 2)));
-    border: calc(#{$-radio-focus-outline-width} * 1px) solid $-radio-focus-outline-color;
+    border: calc(#{$-radio-focus-outline-width} * 1px) solid $-radio-color-default;
     pointer-events: none;
     opacity: 0;
   }
@@ -172,6 +172,7 @@ $-radio-focus-outline-color: currentColor;
     
     &::before {
       transform: translate3d(-50%, -50%, 0) scale(1);
+      border-color: $-radio-color-focus-outline;
       opacity: 1;
     }
 
@@ -231,6 +232,9 @@ $-radio-focus-outline-color: currentColor;
     }
     &::after {
       background-color: sage-color(white);
+    }
+    &:focus::before {
+      border-color: $-radio-color-focus-outline-error;
     }
   }
   :hover:not(:checked):not(:disabled) {
