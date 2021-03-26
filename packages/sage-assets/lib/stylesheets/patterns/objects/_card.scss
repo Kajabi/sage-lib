@@ -12,6 +12,10 @@
   width: 100%;
 }
 
+.sage-card-grid {
+  @include sage-grid-card;
+}
+
 .sage-card--clear-padding-top,
 .sage-card--clear-padding-both {
   padding-top: 0;

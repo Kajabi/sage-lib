@@ -10,6 +10,10 @@
   @include sage-grid-panel;
 }
 
+.sage-panel-grid {
+  @include sage-grid-panel;
+}
+
 .sage-panel--clear-padding-top,
 .sage-panel--clear-padding-both {
   padding-top: 0;
