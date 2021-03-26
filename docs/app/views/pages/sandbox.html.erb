@@ -6,13 +6,226 @@ Use this scratchpad to test out elements and objects in context. Just be sure no
 ") %>
 <% end %>
 
-<%= sage_component SageModal, { id: "whatevz", html_attributes: { "data-something": "who knwows"} } do %>
-  <%= sage_component SageModalContent, { html_attributes: {"data-hey-there": "what up?"} } do %>
-  <%= sage_component SageLabel, {
-    color: 'info',
-    value: 'hey',
-    html_attributes: { "data-dog": "woof woof woof" }
-  } %>
-    Hey Mom
-  <% end %>
+<style>
+  .sage-expandable-panel {
+    padding: 16px;
+    border: 0.0625rem solid #e0e7f1;
+    border-radius: 4px;
+  }
+  .sage-expandable-panel__summary {
+    display: flex;
+    align-items: center;
+  }
+  .sage-expandable-panel__summary-text {
+    margin-left: 16px;
+    flex-grow: 1;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+  .sage-expandable-panel__help {
+    margin-bottom: 24px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #f8fafb;
+    border-radius: 4px;
+  }
+  .sage-expandable-panel__help-text {
+  }
+  .sage-expandable-panel__content {
+    padding-top: 16px;
+  }
+  .sage-expandable-panel .sage-btn-group {
+    margin-top: 24px;
+  }
+  .sage-expandable-panel__summary-icon {
+    position: relative;
+  }
+  .sage-expandable-panel__summary-icon:before {
+    display: inline-flex;
+    box-sizing: content-box;
+    width: 1rem;
+    height: 1rem;
+    text-transform: none;
+    font-family: "Sage";
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1rem;
+    speak: never;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "";
+    align-self: center;
+  }
+  [open].sage-expandable-panel .sage-expandable-panel__summary-icon:before {
+    transform: rotate(90deg);
+  }
+</style>
+
+
+<%= sage_component SageFormInput, {
+  id: "form__fname1",
+  input_type: "text",
+  label_text: "RSS Feed URL",
+  placeholder: "RSS Feed URL",
+  disabled: true,
+  has_error: false,
+  name: "custom_input_name",
+  has_placeholder: true,
+  value: "https://mykajabi.podcast-title.com/eyg97ttxrm/rss"
+} %>
+<%= sage_component SagePanel, {} do %>
+  <details class="sage-expandable-panel">
+    <summary class="sage-expandable-panel__summary">
+      <div class="sage-expandable-panel__summary-image">
+        <img src="/" alt="testing" />
+      </div>
+      <span class="sage-expandable-panel__summary-text">Title</span>
+      <div class="sage-expandable-panel__summary-trigger">
+        <%= sage_component SageButton, {
+          style: "secondary",
+          value: "Save",
+          subtle: true,
+          icon: { name: "caret-right", style: "only" },
+        } %>
+        <span class="sage-expandable-panel__summary-icon"></span>
+      </div>
+    </summary>
+    <div class="sage-expandable-panel__content">
+      <div class="sage-expandable-panel__help">
+        <span class="sage-expandable-panel__help-text">Need Help Connecting?</span>
+        <%= sage_component SageButton, {
+          style: "primary",
+          value: "View Steps",
+          subtle: true,
+          icon: { name: "preview-on", style: "left" },
+        } %>
+      </div>
+      <%= sage_component SageFormInput, {
+        id: "form__fname1",
+        input_type: "text",
+        label_text: "RSS Feed URL",
+        placeholder: "RSS Feed URL",
+        disabled: false,
+        has_error: false,
+        name: "custom_input_name",
+        has_placeholder: true,
+        value: "https://mykajabi.podcast-title.com/eyg97ttxrm/rss"
+      } %>
+    </div>
+    <div class="sage-btn-group sage-btn-group--align-end">
+      <%= sage_component SageButton, {
+        style: "secondary",
+        value: "Cancel",
+        subtle: true,
+      } %>
+      <%= sage_component SageButton, {
+        style: "primary",
+        value: "Submit",
+      } %>
+    </div>
+  </details>
+  <details class="sage-expandable-panel">
+    <summary class="sage-expandable-panel__summary">
+      <div class="sage-expandable-panel__summary-image">
+        <img src="/" alt="testing" />
+      </div>
+      <span class="sage-expandable-panel__summary-text">Title</span>
+      <div class="sage-expandable-panel__summary-trigger">
+        <%= sage_component SageButton, {
+          style: "secondary",
+          value: "Save",
+          subtle: true,
+          icon: { name: "caret-right", style: "only" },
+        } %>
+      </div>
+    </summary>
+    <div class="sage-expandable-panel__content">
+      <div>
+        <span>Need Help Connecting?</span>
+        <%= sage_component SageButton, {
+          style: "primary",
+          value: "View Steps",
+          subtle: true,
+          icon: { name: "preview-on", style: "left" },
+        } %>
+      </div>
+      <%= sage_component SageFormInput, {
+        id: "form__fname1",
+        input_type: "text",
+        label_text: "RSS Feed URL",
+        placeholder: "RSS Feed URL",
+        disabled: false,
+        has_error: false,
+        name: "custom_input_name",
+        has_placeholder: true,
+        value: "https://mykajabi.podcast-title.com/eyg97ttxrm/rss"
+      } %>
+    </div>
+    <div class="sage-btn-group sage-btn-group--align-end">
+      <%= sage_component SageButton, {
+        style: "secondary",
+        value: "Cancel",
+        subtle: true,
+      } %>
+      <%= sage_component SageButton, {
+        style: "primary",
+        value: "Submit",
+      } %>
+    </div>
+  </details>
+  <details class="sage-expandable-panel">
+    <summary class="sage-expandable-panel__summary">
+      <div class="sage-expandable-panel__summary-image">
+        <img src="/" alt="testing" />
+      </div>
+      <span class="sage-expandable-panel__summary-text">Title</span>
+      <div class="sage-expandable-panel__summary-trigger">
+        <%= sage_component SageButton, {
+          style: "secondary",
+          value: "Save",
+          subtle: true,
+          icon: { name: "caret-right", style: "only" },
+        } %>
+      </div>
+    </summary>
+    <div class="sage-expandable-panel__content">
+      <div>
+        <span>Need Help Connecting?</span>
+        <%= sage_component SageButton, {
+          style: "primary",
+          value: "View Steps",
+          subtle: true,
+          icon: { name: "preview-on", style: "left" },
+        } %>
+      </div>
+      <%= sage_component SageFormInput, {
+        id: "form__fname1",
+        input_type: "text",
+        label_text: "RSS Feed URL",
+        placeholder: "RSS Feed URL",
+        disabled: false,
+        has_error: false,
+        name: "custom_input_name",
+        has_placeholder: true,
+        value: "https://mykajabi.podcast-title.com/eyg97ttxrm/rss"
+      } %>
+    </div>
+    <div class="sage-btn-group sage-btn-group--align-end">
+      <%= sage_component SageButton, {
+        style: "secondary",
+        value: "Cancel",
+        subtle: true,
+      } %>
+      <%= sage_component SageButton, {
+        style: "primary",
+        value: "Submit",
+      } %>
+    </div>
+  </details>
 <% end %>

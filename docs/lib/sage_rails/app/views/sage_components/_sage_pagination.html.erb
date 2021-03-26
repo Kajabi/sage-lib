@@ -14,9 +14,9 @@
     <% end %>
 
     <ul class="sage-pagination__pages <% if component.show_arrows %>sage-pagination__pages--show-arrows<% end %>">
-      <% if component.items.first_page? %>
       <% prev_text = component.show_arrows ? %(<span class="sage-pagination__page-text">#{component.prev_text}</span>).html_safe : component.prev_text %>
       <% next_text = component.show_arrows ? %(<span class="sage-pagination__page-text">#{component.next_text}</span>).html_safe : component.next_text %>
+      <% if component.items.first_page? %>
       <li class="sage-pagination__item">
         <a href="#" class="sage-pagination__page sage-pagination__page--disabled">
           <%= prev_text %>
