@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.19.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.19.0...@kajabi/sage@3.19.1) (2021-03-26)
+
+
+### Bug Fixes
+
+* **pagination:** updates to button styles conditional ([d810d0c](https://github.com/Kajabi/sage-lib/commit/d810d0c9a1de73e73e87bc810b2055deeb17616c))
+
+
+
+
+
 # [3.19.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.18.0...@kajabi/sage@3.19.0) (2021-03-25)
 
 
