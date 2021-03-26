@@ -3,5 +3,6 @@ class SageCard < SageComponent
     border_dashed: [:optional, TrueClass],
     clear_bottom_padding: [:optional, TrueClass],
     clear_top_padding: [:optional, TrueClass],
+    css_classes: [:optional, String],
   })
 end

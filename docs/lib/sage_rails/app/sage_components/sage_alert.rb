@@ -1,6 +1,7 @@
 class SageAlert < SageComponent
   set_attribute_schema({
     color: [:optional, Set.new(["info", "success", "warning", "danger"])],
+    css_classes: [:optional, String],
     desc: [:optional, String],
     dismissable: [:optional, TrueClass],
     icon_name: [:optional, String],

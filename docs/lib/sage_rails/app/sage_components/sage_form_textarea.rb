@@ -1,6 +1,7 @@
 class SageFormTextarea < SageComponent
   set_attribute_schema({
     content: [:optional, String],
+    css_classes: [:optional, String],
     disabled: [:optional, TrueClass],
     has_error: [:optional, TrueClass],
     id: String,

@@ -1,5 +1,6 @@
 class SageMeter < SageComponent
   set_attribute_schema({
+    css_classes: [:optional, String],
     high_value_text: [:optional, String],
     id: String,
     label: [:optional, String],

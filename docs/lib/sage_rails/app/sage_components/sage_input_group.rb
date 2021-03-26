@@ -1,5 +1,6 @@
 class SageInputGroup < SageComponent
   set_attribute_schema({
+    css_classes: [:optional, String],
     disabled: [:optional, TrueClass],
     group_buttons: [:optional, [[{
       display_on_focus: [:optional, TrueClass],

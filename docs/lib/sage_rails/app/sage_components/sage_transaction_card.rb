@@ -2,6 +2,7 @@ class SageTransactionCard < SageComponent
   set_attribute_schema({
     amount: [:optional, String],
     amount_color: [:optional, Set.new(["sage", "red"])],
+    css_classes: [:optional, String],
     dropdown_options: [:optional, [[
       attributes: [:optional, Hash],
       icon: [:optional, String],

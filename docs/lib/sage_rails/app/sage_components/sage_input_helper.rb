@@ -1,5 +1,6 @@
 class SageInputHelper < SageComponent
   set_attribute_schema({
+    css_classes: [:optional, String],
     description: [:optional, String],
     helper_id: [:optional, String],
     helper_target: [:optional, String],
