@@ -1,66 +1,76 @@
+////
+/// Expandable Panel
+///
+/// @group sage
+////
+
+
+$-expandable-panel-border: rem(1px) solid sage-color(grey, 300);
+$-expandable-panel-image-size: rem(32px);
+
 .sage-expandable-panel {
-  border: 0.0625rem solid #e0e7f1;
-  border-radius: 4px;
+  border: $-expandable-panel-border;
+  border-radius: sage-border(radius);
+
+  & + & {
+    margin-top: sage-spacing();
+  }
+
+  .sage-btn-group {
+    margin-top: sage-spacing();
+  }
 }
-.sage-expandable-panel + .sage-expandable-panel {
-  margin-top: 24px;
-}
+
 .sage-expandable-panel__summary {
-  padding: 20px 16px;
+  padding: rem(20px) sage-spacing();
   display: flex;
   align-items: center;
+
+  &:focus {
+    outline: none;  
+  }
 }
-.sage-expandable-panel__summary:focus {
-  outline: none;
-}
+
 .sage-expandable-panel__summary-image {
-  margin-right: 16px;
+  margin-right: sage-spacing(sm);
+
+  img {
+    width: $-expandable-panel-image-size;
+    height: $-expandable-panel-image-size;
+  }
 }
+
 .sage-expandable-panel__summary-text {
   flex-grow: 1;
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 24px;
+  font-size: sage-font-size(lg);
+  font-weight: sage-font-weight(semibold);
+  line-height: sage-line-height(sm);
 }
+
 .sage-expandable-panel__help {
-  margin-bottom: 24px;
-  padding: 16px;
+  margin-bottom: sage-spacing();
+  padding: sage-spacing();
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 16px;
-  font-weight: 500;
-  background-color: #f8fafb;
-  border-radius: 4px;
-}
-.sage-expandable-panel__help-text {
+  font-size: sage-font-size();
+  font-weight: sage-font-weight(medium);
+  background-color: sage-color(grey, 200);
+  border-radius: sage-border(radius);
 }
 .sage-expandable-panel__content {
-  padding: 16px;
+  padding: sage-spacing(2xs) sage-spacing() sage-spacing();
 }
-.sage-expandable-panel .sage-btn-group {
-  margin-top: 24px;
-}
+
 .sage-expandable-panel__summary-icon {
   position: relative;
-}
-.sage-expandable-panel__summary-icon:before {
-  display: inline-flex;
-  box-sizing: content-box;
-  width: 1rem;
-  height: 1rem;
-  text-transform: none;
-  font-family: "Sage";
-  font-size: 1rem;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1rem;
-  speak: never;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  content: "\e922";
-  align-self: center;
-}
-[open].sage-expandable-panel .sage-expandable-panel__summary-icon:before {
-  transform: rotate(90deg);
+  z-index: sage-z-indexes(default, 1);
+
+  &:before {
+    @include sage-icon-base(caret-right);
+
+    [open].sage-expandable-panel & {
+      transform: rotate(90deg);    
+    }
+  }
 }
