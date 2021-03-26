@@ -1,0 +1,66 @@
+.sage-expandable-panel {
+  border: 0.0625rem solid #e0e7f1;
+  border-radius: 4px;
+}
+.sage-expandable-panel + .sage-expandable-panel {
+  margin-top: 24px;
+}
+.sage-expandable-panel__summary {
+  padding: 20px 16px;
+  display: flex;
+  align-items: center;
+}
+.sage-expandable-panel__summary:focus {
+  outline: none;
+}
+.sage-expandable-panel__summary-image {
+  margin-right: 16px;
+}
+.sage-expandable-panel__summary-text {
+  flex-grow: 1;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+}
+.sage-expandable-panel__help {
+  margin-bottom: 24px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #f8fafb;
+  border-radius: 4px;
+}
+.sage-expandable-panel__help-text {
+}
+.sage-expandable-panel__content {
+  padding: 16px;
+}
+.sage-expandable-panel .sage-btn-group {
+  margin-top: 24px;
+}
+.sage-expandable-panel__summary-icon {
+  position: relative;
+}
+.sage-expandable-panel__summary-icon:before {
+  display: inline-flex;
+  box-sizing: content-box;
+  width: 1rem;
+  height: 1rem;
+  text-transform: none;
+  font-family: "Sage";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1rem;
+  speak: never;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\e922";
+  align-self: center;
+}
+[open].sage-expandable-panel .sage-expandable-panel__summary-icon:before {
+  transform: rotate(90deg);
+}

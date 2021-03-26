@@ -119,6 +119,15 @@ module ObjectsHelper
         react_component_slug: "sage-expandablecard--default"
       },
       {
+        title: "expandable_panel",
+        description: "Pending",
+        scss: "todo",
+        docs: "done",
+        rails: "done",
+        react: "todo",
+        a11y: "done",
+      },
+      {
         title: "feature_toggle",
         description: "Feature toggle",
         scss: "done",
