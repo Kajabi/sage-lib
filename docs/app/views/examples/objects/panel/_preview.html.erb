@@ -271,3 +271,9 @@ We also have a modifier `.sage-panel__figure--wistia` for when Wistia videos are
     <%= image_tag("card-placeholder-lg.png", alt: "") %>
   <% end %>
 <% end %>
+
+<%= sage_component SagePanelHeader, { title: "Panel Grid Utility <code>.sage-panel-grid</code>".html_safe } %>
+<%= md("
+The `.sage-panel-grid` utility class can be added onto containers in order to enforce the Panel's internal grid settings.
+This is helpful in cases where a container of some sort is needed around contents but those contents should still recieve the standard Panel-scoped gaps.
+", use_sage_type: true) %>
