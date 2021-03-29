@@ -4,11 +4,6 @@
     <%= sage_component SageNav, { 
       items: [
         {
-          text: "Experience Values",
-          link: pages_foundation_path(:ux_values),
-          active: current_page?(pages_foundation_path(:ux_values)),
-        },
-        {
           text: "Design Principles",
           link: pages_foundation_path(:design_principles),
               active: current_page?(pages_foundation_path(:design_principles)),
@@ -112,27 +107,33 @@
       ]
     } %>
   <% end %>
-  <% if current_page_elements? || current_page_objects? || current_page?(pages_getting_started_path) %>
-    <h5 class="docs-sidebar-heading">COMPONENTS</h5>
-    <%= sage_component SageNav, { 
-      items: [
-        {
-          text: "Getting Started",
-          link: pages_getting_started_path,
-          active: current_page?(pages_getting_started_path)
-        },
-        {
-          text: "Elements",
-          link: pages_elements_path,
-          active: current_page_elements?
-        },
-        {
-          text: "Objects",
-          link: pages_objects_path,
-          active: current_page_objects?,
-        }
-      ]
-    } %>
+  <% if current_page_elements? %>
+    <h5 class="docs-sidebar-heading">ELEMENTS</h5>
+    <ul class="sage-nav__list">
+      <% sorted_sage_elements.each do |element| %>
+        <li>
+          <a class="sage-nav__link" href="#element-<%= element[:title] %>">
+            <span class="sage-nav__label">
+              <%= element[:title].titleize %>
+            </span>
+          </a>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+  <% if current_page_objects? %>
+    <h5 class="docs-sidebar-heading">OBJECTS</h5>
+    <ul class="sage-nav__list">
+      <% sorted_sage_objects.each do |object| %>
+        <li>
+          <a class="sage-nav__link" href="#element-<%= object[:title] %>">
+            <span class="sage-nav__label">
+              <%= object[:title].titleize %>
+            </span>
+          </a>
+        </li>
+      <% end %>
+    </ul>
   <% end %>
 
   <%= content_for :sage_sidebar_footer do %>
