@@ -1,4 +1,53 @@
 <%= sage_component SageAssistant, { logo: { path: "sage.svg" }} do %>
+  <%= sage_component SageContainer, { size: "xs" } do %>
+    <div class="sage-btn-group sage-btn-group--gap-sm">
+      <%= sage_component SageButton, {
+        value: "Foundations",
+        attributes: {
+          href: pages_foundation_path(:ux_values),
+          title: "Site Home"
+        },
+        subtle: true,
+        style: "secondary",
+      } %>
+      <%= sage_component SageButton, {
+        value: "Content",
+        attributes: {
+          href: pages_content_path(:voice_tone),
+          title: "Site Home"
+        },
+        subtle: true,
+        style: "secondary",
+      } %>
+      <%= sage_component SageButton, {
+        value: "Design",
+        attributes: {
+          href: pages_design_path(:token),
+          title: "Site Home"
+        },
+        subtle: true,
+        style: "secondary",
+      } %>
+      <%= sage_component SageButton, {
+        value: "Layout",
+        attributes: {
+          href: pages_layout_path(:container),
+          title: "Site Home"
+        },
+        subtle: true,
+        style: "secondary",
+      } %>
+      <%= sage_component SageButton, {
+        value: "Components",
+        attributes: {
+          href: pages_getting_started_path,
+          title: "Site Home"
+        },
+        subtle: true,
+        style: "secondary",
+      } %>
+    </div>
+  <% end %>
   <% sage_component_section :assistant_actions do %>
     <div class="sage-btn-group sage-btn-group--gap-sm">
       <%= sage_component SageButton, {
