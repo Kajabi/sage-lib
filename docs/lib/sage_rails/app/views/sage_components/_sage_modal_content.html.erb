@@ -1,5 +1,8 @@
 <% if component.title.present? %>
   <header class="sage-modal__header">
+    <% if component.header_image.present? %>
+      <img class="sage-modal__header-image" src=<%= component.header_image %> alt="" aria-hidden="true"/>
+    <% end %>
     <h1 class="t-sage-heading-4">
       <%= component.title %>
     </h1>
