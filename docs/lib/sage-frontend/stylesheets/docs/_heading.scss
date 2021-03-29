@@ -1,8 +1,5 @@
 .docs-heading {
   @include sage-grid-card;
-  h1 {
-    font-size: 2.8rem;
-  }
 
   p:not([class]) {
     @extend %t-sage-body;
@@ -10,6 +7,6 @@
 }
 
 .docs-heading__lead {
-  @extend %t-sage-heading-3;
+  @extend %t-sage-heading-4;
   font-weight: sage-font-weight(regular);
 }
