@@ -2,7 +2,8 @@
 
 <div 
   class="sage-billboard" 
-  style="background-image: url(<%= image_url component.img %>);" 
+  style="background-image: url(<%= image_url component.img %>);
+  <%= component.css_classes %>" 
   <%= component.generated_html_attributes.html_safe %>
 >
   <div class="sage-billboard__content">

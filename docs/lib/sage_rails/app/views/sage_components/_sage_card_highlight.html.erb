@@ -15,6 +15,7 @@ position = component.position.present? ? component.position : 'left'
     sage-card-highlight
     <%= "sage-card-highlight--#{position}" %>
     <%= "sage-card-highlight--#{color}" if color %>
+    <%= component.css_classes %>
     <%= component.generated_css_classes %>
   "
   role="presentation"
