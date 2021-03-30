@@ -7,6 +7,7 @@ class SageCheckbox < SageComponent
     has_error:  [:optional, TrueClass],
     id: [:optional, String],
     label_text: [:optional, String],
+    message: [:optional, String],
     name: [:optional, String],
     partial_selection: [:optional, TrueClass],
     required: [:optional, TrueClass],

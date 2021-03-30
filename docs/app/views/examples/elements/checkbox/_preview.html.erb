@@ -9,6 +9,24 @@
     partial_selection: true
   } %>
 
+  <%= sage_component SageCheckbox, {
+    id:"c1b",
+    label_text: "Checkbox",
+    checked: false,
+    disabled: false,
+    has_error: false,
+    message: 'This is where a "hint" message would appear.',
+  } %>
+
+  <%= sage_component SageCheckbox, {
+    id:"c1c",
+    label_text: "Checkbox",
+    checked: false,
+    disabled: false,
+    has_error: false,
+    partial_selection: true
+  } %>
+
   <!-- Checked -->
   <%= sage_component SageCheckbox, {
     id: "c2",
