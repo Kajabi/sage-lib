@@ -7,3 +7,9 @@
 .sage-assistant__branding {
   height: 30px;
 }
+
+.sage-assistant__body {
+  .sage-btn-group {
+    padding: 0 sage-spacing(2xl);
+  }
+}
