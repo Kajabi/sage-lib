@@ -22,6 +22,8 @@ export const Pagination = ({
   maxPageButtons,
   onClickPage,
   pageCount,
+  pageCountPrefix,
+  pageCountSuffix,
   pageSize,
   pageURLFn,
 }) => {
@@ -75,8 +77,9 @@ export const Pagination = ({
 
       return (
         <span className={classNames}>
-          <strong>{first}</strong> – <strong>{last}</strong>{' '}
-          of <strong>{itemsTotalCount}</strong> {entryName}
+          {pageCountPrefix && <span className="sage-pagination__count-prefix">{pageCountPrefix}</span>}
+          <strong>{first}</strong> – <strong>{last}</strong>{' '} of <strong>{itemsTotalCount}</strong> {entryName}
+          {pageCountSuffix && <span className="sage-pagination__count-suffix">{pageCountSuffix}</span>}
         </span>
       );
     }
@@ -205,6 +208,8 @@ Pagination.defaultProps = {
   maxPageButtons: 4,
   onClickPage: null,
   pageCount: 1,
+  pageCountPrefix: null,
+  pageCountSuffix: null,
   pageSize: null,
   pageURLFn: null,
 };
@@ -222,6 +227,8 @@ Pagination.propTypes = {
   maxPageButtons: PropTypes.number,
   onClickPage: PropTypes.func,
   pageCount: PropTypes.number,
+  pageCountPrefix: PropTypes.string,
+  pageCountSuffix: PropTypes.string,
   pageSize: PropTypes.number,
   pageURLFn: PropTypes.func,
 };
