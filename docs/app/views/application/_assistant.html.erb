@@ -4,7 +4,7 @@
       value: "Foundations",
       attributes: {
         href: pages_foundation_path(:design_principles),
-        title: "Site Home"
+        title: "Foundations"
       },
       subtle: true,
       style: "secondary",
@@ -13,7 +13,7 @@
       value: "Content",
       attributes: {
         href: pages_content_path(:voice_tone),
-        title: "Site Home"
+        title: "Content Guides"
       },
       subtle: true,
       style: "secondary",
@@ -22,7 +22,7 @@
       value: "Design",
       attributes: {
         href: pages_design_path(:token),
-        title: "Site Home"
+        title: "Design Tokens"
       },
       subtle: true,
       style: "secondary",
@@ -31,7 +31,7 @@
       value: "Layout",
       attributes: {
         href: pages_layout_path(:container),
-        title: "Site Home"
+        title: "Layout Patterns"
       },
       subtle: true,
       style: "secondary",
@@ -39,8 +39,8 @@
     <%= sage_component SageButton, {
       value: "Elements",
       attributes: {
-        href: pages_elements_path,
-        title: "Site Home"
+        href: pages_element_path(sorted_sage_elements.first),
+        title: "Elements"
       },
       subtle: true,
       style: "secondary",
@@ -49,7 +49,7 @@
       value: "Objects",
       attributes: {
         href: pages_objects_path,
-        title: "Site Home"
+        title: "Objects"
       },
       subtle: true,
       style: "secondary",
