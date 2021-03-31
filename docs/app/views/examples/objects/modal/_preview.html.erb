@@ -199,7 +199,7 @@
   <% end %>
 
   <%# Animated Modals %>
-  <%= sage_component SageModal, { id: "cool-modal-animate-default", animate: true } do %>
+  <%= sage_component SageModal, { id: "cool-modal-animate-default", animate: true, css_classes: "custom-class-name-here" } do %>
     <%= sage_component SageModalContent, { title: "Example Modal" } do %>
       <% content_for :sage_header_aside do %>
         <%= sage_component SageButton, {
