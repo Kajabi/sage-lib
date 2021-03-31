@@ -1,7 +1,14 @@
 <%
-css_active_class = "sage-choice--active" 
-is_button = !component.attributes&.has_key?(:href)
-html_tag = is_button ? (component.content.present? ? "div" : "button") : "a"
+css_active_class = "sage-choice--active"
+is_label = component.radio_configs.present?
+is_link = component.attributes&.has_key?(:href)
+is_button = !is_link and !is_label
+html_tag = component.content.present? ? "div" : "button"
+if is_link
+  html_tag = "a"
+elsif is_label
+  html_tag = "label"
+end
 %>
 
 <<%= html_tag %>
@@ -29,7 +36,20 @@ html_tag = is_button ? (component.content.present? ? "div" : "button") : "a"
   data-sage-active-class="<%= css_active_class %>"
   role="tab"
   aria-controls="<%= component.target %>"
+  <% if component.radio_configs.present? %>
+    for="<%= component.radio_configs[:id] %>"
+  <% end %>
 >
+   <% if component.radio_configs.present? %>
+    <div class="sage-choice__radio visually-hidden">
+      <input
+        type="radio"
+        name="<%= component.radio_configs[:name] %>"
+        id="<%= component.radio_configs[:id] %>"
+        value="<%= component.radio_configs[:value] %>"
+      />
+    </div>
+  <% end %>
   <% if component.graphic.present? %>
     <div class="sage-choice__graphic">
       <%= component.graphic.html_safe %>
