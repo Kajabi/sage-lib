@@ -1,7 +1,11 @@
 <% hide_counter ||= false %>
 <nav class="sage-pagination<% if hide_counter %> sage-pagination--no-counter<% end %>" aria-label="pagination">
   <% unless hide_counter %>
-    <span class="sage-pagination__count"><strong><%= total_count %></strong> Records</span>
+    <span class="sage-pagination__count">
+      <span class="sage-pagination__count-prefix">Displaying</span>
+      <strong><%= total_count %></strong> Records
+      <span class="sage-pagination__count-suffix">in the last <strong>30 days</strong></span>
+    </span>
   <% end %>
   <ul class="sage-pagination__pages">
     <% pagination_items.each do |item| %>
