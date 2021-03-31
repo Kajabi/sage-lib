@@ -5,7 +5,7 @@
 ////
 
 
-$-pagination-padding: sage-spacing(2xs) sage-spacing(sm);
+$-pagination-padding: rem(6px) rem(17px);
 $-pagination-border: rem(1px) solid sage-color(grey, 300);
 $-pagination-radius: sage-border(radius);
 $-pagination-shadow: sage-shadow(md);
@@ -36,7 +36,7 @@ $-pagination-bg-color-dark: sage-color(grey, 300);
   flex-flow: row wrap;
   padding-left: 0;
   list-style-type: none;
-  border: $-pagination-border;
+  // border: $-pagination-border;
   border-radius: $-pagination-radius;
 
   
@@ -46,9 +46,10 @@ $-pagination-bg-color-dark: sage-color(grey, 300);
 }
 
 .sage-pagination__item {
+  margin-right: sage-spacing(xs);
   display: flex;
   align-items: center;
-  border-right: $-pagination-border;
+  // border-right: $-pagination-border;
 
   &:last-of-type {
     border: 0;
@@ -76,13 +77,20 @@ $-pagination-bg-color-dark: sage-color(grey, 300);
   align-items: center;
   padding: $-pagination-padding;
   color: $-pagination-text-color-dark;
+  border-radius: $-pagination-radius;
+  box-shadow: map-get($sage-toolbar-button-borders, default);
+
   &:hover {
-    box-shadow: $-pagination-shadow;
+    box-shadow: map-get($sage-toolbar-button-borders, hover);
   }
   &:active,
   &:focus {
-    background: $-pagination-bg-color;
-    box-shadow: none;
+    box-shadow: map-get($sage-toolbar-button-borders, focus);
+  }
+  
+  &:hover:active,
+  &:focus:active {
+    box-shadow: map-get($sage-toolbar-button-borders, active-hover);
   }
 
   .sage-pagination__pages--show-arrows & {
@@ -123,7 +131,7 @@ $-pagination-bg-color-dark: sage-color(grey, 300);
 }
 
 .sage-pagination__page--current {
-  background: $-pagination-bg-color-dark;
+  box-shadow: map-get($sage-toolbar-button-borders, focus);
 }
 
 .sage-pagination__page--disabled {
