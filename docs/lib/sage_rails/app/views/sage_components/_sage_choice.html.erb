@@ -47,6 +47,7 @@ end
         name="<%= component.radio_configs[:name] %>"
         id="<%= component.radio_configs[:id] %>"
         value="<%= component.radio_configs[:value] %>"
+        <%= "checked=checked" if component.active %>
       />
     </div>
   <% end %>
