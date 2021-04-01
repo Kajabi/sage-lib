@@ -3,6 +3,7 @@
     <%= "sage-modal--active" if component.active %>
     <%= "sage-modal--large" if component.large -%>
     <%= "sage-modal--no-blur" if component.disable_background_blur -%>
+    <%= component.css_classes.html_safe if component.css_classes.present? %>
   "
   <%= "data-sage-animate" if component.animate.present? %>
   <%- if component.animate.is_a?(Hash) -%>

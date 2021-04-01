@@ -6,7 +6,9 @@ class SagePagination < SageComponent
     hide_counter: [:optional, TrueClass],
     show_arrows: [:optional, TrueClass],
     additional_params: [:optional, Hash],
-    collection_name: [:optional, String]
+    collection_name: [:optional, String],
+    page_count_prefix: [:optional, String],
+    page_count_suffix: [:optional, String],
   })
 
   def initialize(attributes = {})
@@ -23,7 +25,7 @@ class SagePagination < SageComponent
   end
 
   def page_count(collection)
-    
+
     name = collection_name.presence || collection.entry_name || "Record"
     entry_name = name.titleize.pluralize(collection.total_count)
 

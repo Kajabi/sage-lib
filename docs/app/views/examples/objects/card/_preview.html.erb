@@ -146,3 +146,9 @@ Cards have three core areas:
     <%= image_tag("card-placeholder-sm.png", alt: "") %>
   <% end %>
 <% end %>
+
+<%= sage_component SagePanelHeader, { title: "Card Grid Utility <code>.sage-card-grid</code>".html_safe } %>
+<%= md("
+The `.sage-card-grid` utility class can be added onto containers in order to enforce the Card's internal grid settings.
+This is helpful in cases where a container of some sort is needed around contents but those contents should still recieve the standard Card-scoped gaps.
+", use_sage_type: true) %>

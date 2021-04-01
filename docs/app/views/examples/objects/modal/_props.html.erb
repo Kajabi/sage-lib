@@ -11,8 +11,14 @@
   <td><%= md('`nil`') %></td>
 </tr>
 <tr>
+  <td><%= md('`css_classes`') %></td>
+  <td><%= md('Outputs additional CSS classes as specified.') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
   <td><%= md('`direction`') %></td>
-  <td><%= md('Sets the direction of the animation. Options include "bottom" (default), "top", "left", and "right". Use caution when setting multiple `direction` modals within a page or view to ensure a consistent user experience. This option requires `animate` to be set to `true`.') %></td>
+  <td><%= md('Sets the direction of the animation when `animate` has been enabled. Options include "bottom" (default), "top", "left", and "right". Use caution when setting multiple `direction` modals within a page or view to ensure a consistent user experience. This option requires `animate` to be set to `true`.') %></td>
   <td><%= md('String') %></td>
   <td><%= md('`nil`') %></td>
 </tr>
@@ -50,6 +56,12 @@
   <td colspan="4">
     <strong>Modal Content</strong>
   </td>
+</tr>
+<tr>
+  <td><%= md('`header_image`') %></td>
+  <td><%= md('When present, sets the image in the header of the component') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil`') %></td>
 </tr>
 <tr>
   <td><%= md('`title`') %></td>

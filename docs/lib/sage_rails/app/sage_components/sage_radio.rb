@@ -9,6 +9,7 @@ class SageRadio < SageComponent
     has_error: [:optional, TrueClass],
     id: String,
     label_text: String,
+    message: [:optional, String],
     name: String,
     required: [:optional, TrueClass],
     standalone: [:optional, TrueClass],

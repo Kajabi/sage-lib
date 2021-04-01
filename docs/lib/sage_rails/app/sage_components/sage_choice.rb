@@ -11,6 +11,11 @@ class SageChoice < SageComponent
     target: [:optional, NilClass, String],
     text: [:optional, NilClass, String],
     type: [:optional, NilClass, Set.new(["arrow", "graphic", "icon", "radio"])],
-    vertical_align_icon: [:optional, NilClass, Set.new(["start"])]
+    vertical_align_icon: [:optional, NilClass, Set.new(["start"])],
+    radio_configs: [:optional, NilClass, {
+      value: String,
+      name: String,
+      id: String,
+    }]
   })
 end

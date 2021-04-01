@@ -27,5 +27,7 @@ export const SageClassnames = {
   TRUNCATE_TEXT: CLASSNAME_TRUNCATE_TEXT,
   GRID_TEMPLATES: { ...CLASSNAMES_GRID_TEMPLATES },
   LINK: { ...CLASSNAMES_LINK },
+  CARD_GRID: 'sage-card-grid',
+  PANEL_GRID: 'sage-panel-grid',
   lookupGridTemplate: lookupGridTemplateClassname,
 };
