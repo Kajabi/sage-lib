@@ -5,5 +5,6 @@ class SageSearch < SageComponent
     label_text: [:optional, String],
     placeholder: [:optional, String],
     value: [:optional, String, NilClass],
+    disable_search_on_clear: [:optional, TrueClass],
   })
 end

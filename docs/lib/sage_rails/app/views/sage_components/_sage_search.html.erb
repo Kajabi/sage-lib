@@ -15,6 +15,7 @@
   <input
     id="<%= component.id %>"
     class="sage-search__input"
+    <%= "data-js-disable-search-on-clear=true" if component.disable_search_on_clear %>
     type="search"
     placeholder="<%= component.placeholder.present? ? component.placeholder : "Search" %>"
     value="<%= component.value %>"
