@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.20.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.19.1...@kajabi/sage@3.20.0) (2021-04-01)
+
+
+### Bug Fixes
+
+* **modal:** add header image to modalcontent ([2d1ea00](https://github.com/Kajabi/sage-lib/commit/2d1ea00d5c5f1ba8f64eb8517a2a7b685c3329c6))
+* **pagination:** fix typo ([84120b4](https://github.com/Kajabi/sage-lib/commit/84120b4ad5c1bd8f1f252a5ad69ddd95a48ff6c7))
+* **pagination:** updated styles when arrows are present ([a4b90ad](https://github.com/Kajabi/sage-lib/commit/a4b90adec91a4d3523490e5660066658d37f2c24))
+* **panel-grid:** add generated_css_classes to missing grid or panel component ([fbc5127](https://github.com/Kajabi/sage-lib/commit/fbc51274a5388db637d6f029eb18a0192b3a0a46))
+* **sagesearch:** adds option to not execute search on clear ([89067bb](https://github.com/Kajabi/sage-lib/commit/89067bb2a69aee0d7193f10a8d739070d8e13d2c))
+
+
+### Features
+
+* **choice:** add checked state with active ([f7dda81](https://github.com/Kajabi/sage-lib/commit/f7dda81b51281166135920ad40b168e3063560e2))
+* **choice:** add hidden radio option in choice and tabs ([c376c72](https://github.com/Kajabi/sage-lib/commit/c376c72be8f65d416512d575024a180fd10e4a33))
+* **modal:** enable custom css classes for sage modals ([21f863c](https://github.com/Kajabi/sage-lib/commit/21f863c945fbe1a93404bacdc924d7d78752921c))
+* **pagination:** adds count prefix and suffix ([fdccd34](https://github.com/Kajabi/sage-lib/commit/fdccd342414cb5a118fa80bbdcc3047c8f625967))
+* **pagination:** update rails view and preview ([160ef3a](https://github.com/Kajabi/sage-lib/commit/160ef3a1cbb025fe8fda109059aaeb747932290c))
+* **toggles:** add constistent message to switch, radio, and checkbox ([c34ef79](https://github.com/Kajabi/sage-lib/commit/c34ef795ce32d347e640075d7c5f81d647f3e960))
+
+
+
+
+
 ## [3.19.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.19.0...@kajabi/sage@3.19.1) (2021-03-26)
 
 

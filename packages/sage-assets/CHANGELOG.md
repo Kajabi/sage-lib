@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.27.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.26.1...@kajabi/sage-assets@0.27.0) (2021-04-01)
+
+
+### Bug Fixes
+
+* **modal:** add header image to modalcontent ([2d1ea00](https://github.com/Kajabi/sage-lib/commit/2d1ea00d5c5f1ba8f64eb8517a2a7b685c3329c6))
+* **pagination:** left off one rule ([95f424d](https://github.com/Kajabi/sage-lib/commit/95f424dc12108be6183643c3bac63181fd78fbdb))
+* **pagination:** updated styles when arrows are present ([a4b90ad](https://github.com/Kajabi/sage-lib/commit/a4b90adec91a4d3523490e5660066658d37f2c24))
+* **radio:** m atch radio circle colors to spec ([0fd2bc2](https://github.com/Kajabi/sage-lib/commit/0fd2bc24cfd4f095d082ba94fb6d10c81b52ba42))
+
+
+### Features
+
+* add card and panel grid utility class ([5e5b90b](https://github.com/Kajabi/sage-lib/commit/5e5b90b99d5550bb26a595b4261c5a157d1dd97b))
+* **toggles:** add constistent message to switch, radio, and checkbox ([c34ef79](https://github.com/Kajabi/sage-lib/commit/c34ef795ce32d347e640075d7c5f81d647f3e960))
+
+
+
+
+
 ## [0.26.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.26.0...@kajabi/sage-assets@0.26.1) (2021-03-25)
 
 

@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.35.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.34.1...@kajabi/sage-react@0.35.0) (2021-04-01)
+
+
+### Features
+
+* **pagination:** add count prefix and suffix (react) ([6be3b19](https://github.com/Kajabi/sage-lib/commit/6be3b19e830c2c85cd203e3d68ed46657bc0462f))
+* add new grid utilty classnames to React ([603f020](https://github.com/Kajabi/sage-lib/commit/603f0201674b41dd613a6d024e3f413fda40db36))
+
+
+
+
+
 ## [0.34.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.34.0...@kajabi/sage-react@0.34.1) (2021-03-25)
 
 

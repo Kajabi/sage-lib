@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.5.0...@kajabi/sage-system@0.5.1) (2021-04-01)
+
+
+### Bug Fixes
+
+* **sagesearch:** adds option to not execute search on clear ([89067bb](https://github.com/Kajabi/sage-lib/commit/89067bb2a69aee0d7193f10a8d739070d8e13d2c))
+
+
+
+
+
 # [0.5.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.4.2...@kajabi/sage-system@0.5.0) (2021-03-25)
 
 
