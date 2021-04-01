@@ -112,7 +112,7 @@
     <ul class="sage-nav__list">
       <% sorted_sage_elements.each do |element| %>
         <li>
-          <a class="sage-nav__link" href="<%= pages_element_path(element) %>">
+          <a class="sage-nav__link" href="<%= pages_element_path(element[:title]) %>">
             <span class="sage-nav__label">
               <%= element[:title].titleize %>
             </span>
@@ -126,7 +126,7 @@
     <ul class="sage-nav__list">
       <% sorted_sage_objects.each do |object| %>
         <li>
-          <a class="sage-nav__link" href="<%= pages_object_path(object) %>">
+          <a class="sage-nav__link" href="<%= pages_object_path(object[:title]) %>">
             <span class="sage-nav__label">
               <%= object[:title].titleize %>
             </span>

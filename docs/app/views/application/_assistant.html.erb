@@ -55,7 +55,7 @@
     <%= sage_component SageButton, {
       value: "Elements",
       attributes: {
-        href: pages_element_path(sorted_sage_elements.first),
+        href: pages_element_path(sorted_sage_elements.first[:title]),
         title: "Elements"
       },
       subtle: true,
@@ -68,7 +68,7 @@
     <%= sage_component SageButton, {
       value: "Objects",
       attributes: {
-        href: pages_objects_path,
+        href: pages_object_path(sorted_sage_objects.first[:title]),
         title: "Objects"
       },
       subtle: true,
