@@ -5,7 +5,7 @@ Sage.modal = (function() {
   // ==================================================
 
   const SELECTOR_MODAL = 'data-js-modal';
-  const SELECTOR_MODAL_CONTAINER = '.sage-modal__container';
+  const SELECTOR_MODAL_CONTAINER = 'data-js-modal-container';
   const SELECTOR_MODAL_DISABLE_CLOSE = 'data-js-modal-disable-close';
   const SELECTOR_MODAL_REMOTE_URL = 'data-js-remote-url';
   const SELECTOR_MODAL_REMOVE_CONTENTS_ON_CLOSE = 'data-js-modal-remove-content-on-close';
@@ -117,7 +117,7 @@ Sage.modal = (function() {
 
   function removeModalContents(el) {
     if ( el.hasAttribute(SELECTOR_MODAL_REMOVE_CONTENTS_ON_CLOSE) ) {
-      let elContainer = el.querySelector(`${SELECTOR_MODAL_CONTAINER}`);
+      let elContainer = el.querySelector(`[${SELECTOR_MODAL_CONTAINER}]`);
       elContainer.innerHTML = "";
     }
   }
