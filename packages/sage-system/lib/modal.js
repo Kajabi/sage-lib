@@ -104,11 +104,12 @@ Sage.modal = (function() {
   }
 
   function fetchModalContent(el) {
+    let elContainer = el.querySelector(`[${SELECTOR_MODAL_CONTAINER}]`);
     let url = el.getAttribute(SELECTOR_MODAL_REMOTE_URL);
     const xhr = new XMLHttpRequest();
 
     xhr.addEventListener('load', (evt) => {
-      el.innerHTML = evt.currentTarget.response;
+      elContainer.innerHTML = evt.currentTarget.response;
     }, { once: true });
 
     xhr.open('GET', url, true);
