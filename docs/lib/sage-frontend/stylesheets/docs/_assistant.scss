@@ -1,9 +1,9 @@
 /* ==================================================
-  ** _theme.scss
+  ** _assistant.scss
+
   For Sage documentation use
 ================================================== */
 
-// Assistant
 .sage-assistant__branding {
   height: 30px;
 }
@@ -27,5 +27,12 @@
     @media screen and (min-width: sage-breakpoint(md-min)) {
       display: inline-flex;
     }
+  }
+}
+
+.sage-assistant__actions {
+  display: none;
+  @media screen and (min-width: sage-breakpoint(md-min)) {
+    display: inline-flex;
   }
 }
