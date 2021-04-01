@@ -22,6 +22,7 @@
         icon: item[:icon],
         attributes: item[:attributes],
         disabled: item[:disabled],
+        radio_configs: item[:radio_configs],
         vertical_align_icon: item[:vertical_align_icon],
       } do %>
         <%= item[:content].html_safe if defined?(item[:content]) and item[:content] %>

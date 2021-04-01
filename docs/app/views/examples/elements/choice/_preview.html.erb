@@ -11,6 +11,20 @@ long_description = "Description with longer text to cause wrapping and make the 
   }
 %>
 
+<h3 class="t-sage-heading-6">With Radio</h3>
+<%= sage_component SageChoice, {
+    target: "example",
+    text: "Option 1a",
+    type: "radio",
+    active: false,
+    radio_configs: {
+      id: 'cr-1a',
+      name: 'cr-1',
+      value: 'option-a',
+    }
+  }
+%>
+
 <h3 class="t-sage-heading-6">Multi-Line  (radio type)</h3>
 <%= sage_component SageChoice, {
     target: "example",
