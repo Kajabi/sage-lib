@@ -9,6 +9,7 @@ class SageModal < SageComponent
     disable_background_blur: [:optional, TrueClass],
     animate: [:optional, String, TrueClass, {
       direction: [:optional, String, Set.new(["bottom", "top", "left", "right"])]
-    }]
+    }],
+    remote_url: [:optional, String]
   })
 end

@@ -6,6 +6,7 @@
     <%= component.css_classes.html_safe if component.css_classes.present? %>
   "
   <%= "data-sage-animate" if component.animate.present? %>
+  <%= "data-js-remote-url='#{component.remote_url}'" if component.remote_url.present? %>
   <%- if component.animate.is_a?(Hash) -%>
     <%- component.animate.each do |key, value| -%>
       <%= "data-sage-animate-#{ key }=#{ value }" %>
