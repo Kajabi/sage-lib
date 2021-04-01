@@ -114,3 +114,107 @@
     } %>
   <% end %>
 <% end %>
+
+
+<h3 class="t-sage-heading-6">Using a custom <code>grid template : "te"</code></h3>
+<%= sage_component SageSortable, { resource_name: "link" } do %>
+  <% 3.times do %>
+    <%= sage_component SageSortableItemCustom, {
+      id: "id",
+      url_update: "update/endpoint",
+    } do %>
+      <%= sage_component SageCardRow, { grid_template: "te" } do %>
+        <a href="#">Field 1</a>
+        <%= sage_component SageDropdown, {
+          align: "right",
+          items: [
+            {
+              value: "Edit",
+              icon: "pen",
+              attributes: {},
+            },
+            {
+              value: "Preview",
+              icon: "preview-on",
+              attributes: {},
+            },
+            {
+              value: "Delete",
+              style: "danger",
+              border_before: true,
+              modifiers: ["border-before"],
+              icon: "trash",
+              attributes: {},
+            },
+          ]
+        } do %>
+          <%= sage_component SageButton,  {
+            style: "secondary",
+            subtle: true,
+            icon: { name: "dot-menu-horizontal", style: "only" },
+            value: "edit",
+          } %>
+        <% end %>
+      <% end %>
+    <% end %>
+  <% end %>
+
+  <%= sage_component_section :empty do %>
+    <%= sage_component SageEmptyState, {
+      title: "Empty State Title",
+      text: "Empty state text",
+    } %>
+  <% end %>
+<% end %>
+
+<h3 class="t-sage-heading-6">Using a custom <code>grid template : "me"</code></h3>
+<%= sage_component SageSortable, { resource_name: "link" } do %>
+  <% 3.times do %>
+    <%= sage_component SageSortableItemCustom, {
+      id: "id",
+      url_update: "update/endpoint",
+    } do %>
+      <%= sage_component SageCardRow, { grid_template: "me" } do %>
+        <a href="#">Field 1</a>
+        <span>Field 2</span>
+        <%= sage_component SageDropdown, {
+          align: "right",
+          items: [
+            {
+              value: "Edit",
+              icon: "pen",
+              attributes: {},
+            },
+            {
+              value: "Preview",
+              icon: "preview-on",
+              attributes: {},
+            },
+            {
+              value: "Delete",
+              style: "danger",
+              border_before: true,
+              modifiers: ["border-before"],
+              icon: "trash",
+              attributes: {},
+            },
+          ]
+        } do %>
+          <%= sage_component SageButton,  {
+            style: "secondary",
+            subtle: true,
+            icon: { name: "dot-menu-horizontal", style: "only" },
+            value: "edit",
+          } %>
+        <% end %>
+      <% end %>
+    <% end %>
+  <% end %>
+
+  <%= sage_component_section :empty do %>
+    <%= sage_component SageEmptyState, {
+      title: "Empty State Title",
+      text: "Empty state text",
+    } %>
+  <% end %>
+<% end %>

@@ -135,6 +135,10 @@
 
 .sage-card__row {
   @include sage-grid-card-row();
+
+  .sage-sortable__item--custom & {
+    width: 100%;
+  }
 }
 
 .sage-card__row--vertical-align-start {
