@@ -61,7 +61,7 @@ $ yarn lerna add babel-core
 ### Conventional Commits
 
 This repository utilizes the
-[Conventional Commits Standarard](https://www.conventionalcommits.org/en/v1.0.0/). Utilizing this standard allows us to automatically version our software during the Continuous Integration process as well as generate `CHANGELOG.md` files for each of the packages.
+[Conventional Commits Standard](https://www.conventionalcommits.org/en/v1.0.0/). Utilizing this standard allows us to automatically version our software during the Continuous Integration process as well as generate `CHANGELOG.md` files for each of the packages.
 
 Unsure how to format your commit message? Use `yarn commit` to launch a wizard to walk you through with [Commitizen](https://github.com/commitizen/cz-cli)
 
@@ -98,7 +98,7 @@ The Kajabi Products repository needs to be locally linked to your Sage repositor
 $ yarn bridge:kajabi-products
 ```
 
-If this is your first time using `yarn bridge` you will be prompted to provide your path to your local Kajabi Products repository. This path can be absolute (`~/home/me/code/kajabi-products`) or relative (`../kajabi-products`). The value you enter will be instered into your local `.env` file. If a `.env` file does not exist one will be created for you based on the `.env.dist` file in this repository.
+If this is your first time using `yarn bridge` you will be prompted to provide your path to your local Kajabi Products repository. This path can be absolute (`~/home/me/code/kajabi-products`) or relative (`../kajabi-products`). The value you enter will be inserted into your local `.env` file. If a `.env` file does not exist one will be created for you based on the `.env.dist` file in this repository.
 
 >*Note: In the event you mistype your repository path, or it's location changes you can edit it's value in the `.env` file*
 
