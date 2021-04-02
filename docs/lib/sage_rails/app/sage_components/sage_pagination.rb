@@ -5,7 +5,6 @@ class SagePagination < SageComponent
     window: [:optional, Integer],
     hide_pages: [:optional, TrueClass],
     hide_counter: [:optional, TrueClass],
-    show_arrows: [:optional, TrueClass],
     additional_params: [:optional, Hash],
     collection_name: [:optional, String],
     page_count_prefix: [:optional, String],
