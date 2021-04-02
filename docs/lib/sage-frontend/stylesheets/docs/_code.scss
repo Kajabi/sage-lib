@@ -12,7 +12,7 @@
   color: sage-color(sage, 200);
   font-size: sage-font-size(sm);
   font-weight: sage-font-weight(normal);
-  background-color: #011232;
+  background-color: $docs-code-editor-background;
   border-radius: sage-border(radius);
 
   &.prettyprinted {
