@@ -1,17 +1,3 @@
-<%= sage_component SagePanelHeader, {} do %>
-  <h2 id="<%= title %>-example-preview">Preview</h2>
-  <%= sage_component SageButton, {
-    value: "View React Component #{image_tag("logo-react.svg", width: "20px")}",
-    attributes: {
-      href: storybook_url(react_component_slug),
-      target: "_blank",
-      rel: "noopener noreferrer",
-      title: "Open Storybook React components site"
-    },
-    subtle: true,
-    style: "secondary",
-  } if defined?(react_component_slug) and react_component_slug %>
-<% end %>
 <%= sage_component SageCard, {} do %>
   <%= render "examples/#{type.pluralize}/#{title}/preview" %>
 <% end %>

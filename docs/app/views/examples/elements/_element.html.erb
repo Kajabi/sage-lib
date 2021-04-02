@@ -12,22 +12,67 @@
   dont_content: dont_content %>
 
 <div class="sage-panel-set">
-  <%= render "examples/shared/preview",
-    type: "element",
-    title: @title,
-    react_component_slug: defined?(info_content[:react_component_slug]) ? info_content[:react_component_slug] : nil
-  %>
+  <div class="sage-tabs-container">
+    <%= sage_component SagePanelRow, { grid_template: "te" } do %>
+      <%= sage_component SageTabs, {
+        id: "example-tabs2",
+        items: [
+          {
+            text: "Preview",
+            target: "preview",
+            active: true
+          },
+          {
+            text: "Code",
+            target: "code"
+          },
+          {
+            text: "Properties",
+            target: "props"
+          },
+          {
+            text: "Best Practices",
+            target: "rules"
+          } 
+        ]
+      } %>
+      <%= sage_component SageButton, {
+        value: "View React Component #{image_tag("logo-react.svg", width: "20px")}",
+        attributes: {
+          href: storybook_url(info_content[:react_component_slug]),
+          target: "_blank",
+          rel: "noopener noreferrer",
+          title: "Open Storybook React components site"
+        },
+        subtle: true,
+        style: "secondary",
+      } if defined?(info_content[:react_component_slug]) and info_content[:react_component_slug] %>
+    <% end %>
 
-  <%= render "examples/shared/props",
-    props_content: props_content,
-    title: @title %>
+    <%= sage_component SageTabsPane, { id: "preview" } do %>
+      <%= render "examples/shared/preview",
+        type: "element",
+        title: @title
+      %>
+    <% end %>
 
-  <%= render "examples/shared/code",
-    type: "element",
-    title: @title %>
+    <%= sage_component SageTabsPane, { id: "code" } do %>
+      <%= render "examples/shared/code",
+        type: "element",
+        title: @title %>
+    <% end %>
 
-  <%= render "examples/shared/rules",
-    do_content: do_content,
-    dont_content: dont_content,
-    title: @title %>
+    <%= sage_component SageTabsPane, { id: "props" } do %>
+      <%= render "examples/shared/props",
+        props_content: props_content,
+        title: @title %>
+    <% end %>
+
+    <%= sage_component SageTabsPane, { id: "rules" } do %>
+      <%= render "examples/shared/rules",
+        do_content: do_content,
+        dont_content: dont_content,
+        title: @title %>
+    <% end %>
+  </div>
 </div>
