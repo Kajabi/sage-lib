@@ -4,6 +4,10 @@
   For Sage documentation use
 ================================================== */
 
+.docs-sidebar-heading {
+  padding: rem(10px) rem(12px);
+}
+
 .sage-sidebar {
   .example__preview & {
     z-index: sage-z-index();

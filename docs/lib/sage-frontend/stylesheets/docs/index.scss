@@ -6,6 +6,7 @@
 @import "variables";
 
 // Documentation Styles
+@import "assistant";
 @import "colors";
 @import "text";
 @import "code";
@@ -14,6 +15,7 @@
 @import "heading";
 @import "specs";
 @import "icon";
+@import "panel";
 @import "quick_links";
 @import "section";
 @import "feature";
@@ -23,6 +25,5 @@
 @import "status_key";
 @import "status_table";
 @import "table";
-@import "theme";
 @import "docs_container";
 @import "rouge_theme";

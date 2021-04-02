@@ -1,190 +1,140 @@
 <%= sage_component SageSidebar, { id: "sage-sidebar-menu" } do %>
-  <%= sage_component SageNav, {
-    items: [
-      {
-        text: "Home",
-        link: pages_index_path,
-        active: current_page?(pages_index_path),
-      },
-      {
-        text: "Foundations",
-        link: pages_foundation_path(:ux_values),
-        active: current_page_foundations?,
-        items: [
-          {
-            text: "Experience Values",
-            link: pages_foundation_path(:ux_values),
-            active: current_page?(pages_foundation_path(:ux_values)),
-          },
-          {
-            text: "Design Principles",
-            link: pages_foundation_path(:design_principles),
-            active: current_page?(pages_foundation_path(:design_principles)),
-          },
-          {
-            text: "Accessibility",
-            link: pages_foundation_path(:accessibility),
-            active: current_page?(pages_foundation_path(:accessibility)),
-          }
-        ]
-      },
-      {
-        text: "Content",
-        link: pages_content_path(:voice_tone),
-        active: current_page_content?,
-        items: [
-          {
-            text: "Voice & Tone",
-            link: pages_content_path(:voice_tone),
-            active: current_page?(pages_content_path(:voice_tone)),
-          },
-          {
-            text: "Grammar",
-            link: pages_content_path(:grammar),
-            active: current_page?(pages_content_path(:grammar)),
-          },
-          {
-            text: "Branding",
-            link: pages_content_path(:branding),
-            active: current_page?(pages_content_path(:branding)),
-          },
-          {
-            text: "Product Content",
-            link: pages_content_path(:content),
-            active: current_page?(pages_content_path(:content)),
-          },
-          {
-            text: "Vocabulary",
-            link: pages_content_path(:vocabulary),
-            active: current_page?(pages_content_path(:vocabulary)),
-          },
-        ]
-      },
-      {
-        text: "Experiences",
-        link: pages_experiences_path(:null),
-        active: current_page_experiences?,
-        items: [
-          {
-            text: "Empty States",
-            link: pages_experiences_path(:null),
-            active: current_page?(pages_experiences_path(:null)),
-          },
-          {
-            text: "Onboarding",
-            link: pages_experiences_path(:onboarding),
-            active: current_page?(pages_experiences_path(:onboarding)),
-          },
-          {
-            text: "Create & Destroy",
-            link: pages_experiences_path(:crud),
-            active: current_page?(pages_experiences_path(:crud)),
-          },
-          {
-            text: "Loading",
-            link: pages_experiences_path(:loading),
-            active: current_page?(pages_experiences_path(:loading)),
-          },
-          {
-            text: "Navigation",
-            link: pages_experiences_path(:nav),
-            active: current_page?(pages_experiences_path(:nav)),
-          },
-          {
-            text: "Feedback",
-            link: pages_experiences_path(:feedback),
-            active: current_page?(pages_experiences_path(:feedback)),
-          },
-          {
-            text: "Help",
-            link: pages_experiences_path(:help),
-            active: current_page?(pages_experiences_path(:help)),
-          },
-        ]
-      },
-      {
-        text: "Design",
-        link: pages_design_path(:token),
-        active: current_page_design?,
-        items: [
-          {
-            text: "Tokens",
-            link: pages_design_path(:token),
-            active: current_page?(pages_design_path(:token)),
-          },
-          {
-            text: "Colors",
-            link: pages_design_path(:color),
-            active: current_page?(pages_design_path(:color)),
-          },
-          {
-            text: "Typography",
-            link: pages_design_path(:typography),
-            active: current_page?(pages_design_path(:typography)),
-          },
-          {
-            text: "Icons",
-            link: pages_design_path(:icon),
-            active: current_page?(pages_design_path(:icon)),
-          },
-          {
-            text: "Motion",
-            link: pages_design_path(:motion),
-            active: current_page?(pages_design_path(:motion)),
-          }
-        ]
-      },
-      {
-        text: "Layout",
-        link: pages_layout_path(:container),
-        active: current_page_layout?,
-        items: [
-          {
-            text: "Containers",
-            link: pages_layout_path(:container),
-            active: current_page?(pages_layout_path(:container)),
-          },
-          {
-            text: "Panels and Cards",
-            link: pages_layout_path(:panels_cards),
-            active: current_page?(pages_layout_path(:panels_cards)),
-          },
-          {
-            text: "12 Col Grid",
-            link: pages_layout_path(:grid),
-            active: current_page?(pages_layout_path(:grid)),
-          },
-          {
-            text: "Grid Templates",
-            link: pages_layout_path(:grid_templates),
-            active: current_page?(pages_layout_path(:grid_templates)),
-          }
-        ]
-      },
-      {
-        text: "Components",
-        link: pages_getting_started_path,
-        active: current_page_elements? || current_page_objects? || current_page?(pages_getting_started_path),
-        items: [
-          {
-            text: "Getting Started",
-            link: pages_getting_started_path,
-            active: current_page?(pages_getting_started_path)
-          },
-          {
-            text: "Elements",
-            link: pages_elements_path,
-            active: current_page_elements?
-          },
-          {
-            text: "Objects",
-            link: pages_objects_path,
-            active: current_page_objects?,
-          }
-        ]
-      }
-    ]
-  } %>
+  <% if current_page_foundations? %>
+    <h2 class="t-sage-heading-6 docs-sidebar-heading">FOUNDATIONS</h2>
+    <%= sage_component SageNav, { 
+      items: [
+        {
+          text: "Design Principles",
+          link: pages_foundation_path(:design_principles),
+          active: current_page?(pages_foundation_path(:design_principles)),
+        },
+        {
+          text: "Accessibility",
+          link: pages_foundation_path(:accessibility),
+          active: current_page?(pages_foundation_path(:accessibility)),
+        }
+      ]
+    } %>
+  <% end %>
+  <% if current_page_content? %>
+    <h2 class="t-sage-heading-6 docs-sidebar-heading">CONTENT</h2>
+    <%= sage_component SageNav, { 
+      items: [
+        {
+          text: "Voice & Tone",
+          link: pages_content_path(:voice_tone),
+          active: current_page?(pages_content_path(:voice_tone)),
+        },
+        {
+          text: "Grammar",
+          link: pages_content_path(:grammar),
+          active: current_page?(pages_content_path(:grammar)),
+        },
+        {
+          text: "Branding",
+          link: pages_content_path(:branding),
+          active: current_page?(pages_content_path(:branding)),
+        },
+        {
+          text: "Product Content",
+          link: pages_content_path(:content),
+          active: current_page?(pages_content_path(:content)),
+        },
+        {
+          text: "Vocabulary",
+          link: pages_content_path(:vocabulary),
+          active: current_page?(pages_content_path(:vocabulary)),
+        }
+      ]
+    } %>
+  <% end %>
+  <% if current_page_design? %>
+    <h2 class="t-sage-heading-6 docs-sidebar-heading">DESIGN</h2>
+    <%= sage_component SageNav, { 
+      items: [
+        {
+          text: "Tokens",
+          link: pages_design_path(:token),
+          active: current_page?(pages_design_path(:token)),
+        },
+        {
+          text: "Colors",
+          link: pages_design_path(:color),
+          active: current_page?(pages_design_path(:color)),
+        },
+        {
+          text: "Typography",
+          link: pages_design_path(:typography),
+          active: current_page?(pages_design_path(:typography)),
+        },
+        {
+          text: "Icons",
+          link: pages_design_path(:icon),
+          active: current_page?(pages_design_path(:icon)),
+        },
+        {
+          text: "Motion",
+          link: pages_design_path(:motion),
+          active: current_page?(pages_design_path(:motion)),
+        }
+      ]
+    } %>
+  <% end %>
+  <% if current_page_layout? %>
+    <h2 class="t-sage-heading-6 docs-sidebar-heading">LAYOUT</h2>
+    <%= sage_component SageNav, { 
+      items: [
+        {
+          text: "Containers",
+          link: pages_layout_path(:container),
+          active: current_page?(pages_layout_path(:container)),
+        },
+        {
+          text: "Panels and Cards",
+          link: pages_layout_path(:panels_cards),
+          active: current_page?(pages_layout_path(:panels_cards)),
+        },
+        {
+          text: "12 Col Grid",
+          link: pages_layout_path(:grid),
+          active: current_page?(pages_layout_path(:grid)),
+        },
+        {
+          text: "Grid Templates",
+          link: pages_layout_path(:grid_templates),
+          active: current_page?(pages_layout_path(:grid_templates)),
+        }
+      ]
+    } %>
+  <% end %>
+  <% if current_page_elements? %>
+    <h2 class="t-sage-heading-6 docs-sidebar-heading">ELEMENTS</h2>
+    <ul class="sage-nav__list">
+      <% sorted_sage_elements.each do |element| %>
+        <li>
+          <a class="sage-nav__link" href="<%= pages_element_path(element[:title]) %>">
+            <span class="sage-nav__label">
+              <%= element[:title].titleize %>
+            </span>
+          </a>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+  <% if current_page_objects? %>
+    <h2 class="t-sage-heading-6 docs-sidebar-heading">OBJECTS</h2>
+    <ul class="sage-nav__list">
+      <% sorted_sage_objects.each do |object| %>
+        <li>
+          <a class="sage-nav__link" href="<%= pages_object_path(object[:title]) %>">
+            <span class="sage-nav__label">
+              <%= object[:title].titleize %>
+            </span>
+          </a>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
 
   <%= content_for :sage_sidebar_footer do %>
     <%= sage_component SageNav, {
