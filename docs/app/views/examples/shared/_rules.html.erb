@@ -1,7 +1,4 @@
 <% if do_content.present? || dont_content.present? %>
-  <%= sage_component SagePanelHeader, {} do %>
-    <h2 id="<%= title %>-example-best-practices">Best Practices</h2>
-  <% end %>
   <%= sage_component SagePanelTiles, { tiles_in_row: 2 } do %>
     <%= sage_component SageCard, {} do %> 
       <%= sage_component SageLabel, {
