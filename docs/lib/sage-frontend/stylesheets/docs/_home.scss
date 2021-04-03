@@ -3,3 +3,33 @@
 
   For Sage documentation use
 ================================================== */
+
+.docs-hero {
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: sage-color(primary, 500);
+  color: #fff;
+  padding: sage-spacing() sage-spacing() 100px sage-spacing();
+
+  .sage-row {
+    align-items: center;
+    padding-top: 100px;
+  }
+
+  .sage-type {
+    h1 {
+      font-size: 4rem;
+      line-height: 4.5rem;
+      color: #fff;
+      margin-top: sage-spacing();
+    }
+  }
+
+  .sage-btn--subtle.sage-btn--secondary {
+    color: #fff;
+  }
+}

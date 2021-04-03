@@ -1,0 +1,21 @@
+/* ==================================================
+  ** _nav.scss
+
+  For Sage documentation use
+================================================== */
+
+.docs-nav {
+
+  .sage-btn::before {
+    @media screen and (min-width: sage-breakpoint(md-min)) {
+      display: none;
+    }
+  }
+
+  .sage-btn__truncate-text {
+    display: none;
+    @media screen and (min-width: sage-breakpoint(md-min)) {
+      display: inline-flex;
+    }
+  }
+}

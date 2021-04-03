@@ -9,29 +9,7 @@
     <%= render "application/content_skip_link",
       link_id: "main-content"
     -%>
-    <header class="sage-header">
-      <%= render "application/assistant" %>
-    </header>
-    <div class="sage-stage">
-      <main class="sage-content" id="main-content">
-        <div class="sage-container sage-container--sm">
-          <div class="docs-panel">
-            <div class="sage-row">
-              <div class="sage-col--lg-10 docs-heading">
-                <%= yield :heading %>
-              </div>
-            </div>
-            <div class="sage-row">
-              <div class="sage-col--lg-12">
-                <hr/>
-                <%= yield %>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-      <div class="sage-overlay" aria-hidden="true"></div>
-    </div>
+    <%= yield %>
     <%= render "scripts" %>
   </body>
 </html>

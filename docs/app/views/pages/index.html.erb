@@ -1,4 +1,47 @@
-<%= content_for :heading do %>
+<div class="docs-hero" style="background-image: url(<%= image_url "hero.jpg" %>);">
+  <%= sage_component SageContainer, { size: "md" } do %>
+    <header class="sage-header">
+      <%= render "application/nav" %>
+    </header>
+    <%= sage_component SageGridRow, {} do %> 
+      <%= sage_component SageGridCol, { breakpoint: "md", size: "4" } do %> 
+        <%= image_tag "sage_icon.png", style: "max-width:80px;height:auto", loading: "lazy" %>
+        <%= md("
+# Building with Sage
+Our system is our source of truth, providing everything you need to build the best experiences for all Kajabi entrepreneurs.
+", use_sage_type: true) %>
+        <%= sage_component SageButtonGroup, { gap: :sm, spacer: { top: :lg }, } do %>
+          <%= sage_component SageButton, {
+            value: "Get Started",
+            attributes: {
+              href: pages_element_path(sorted_sage_elements.first[:title]),
+              title: "Get Started"
+            },
+            style: "primary",
+          } %>
+          <%= sage_component SageButton, {
+            value: "View Github Repo",
+            attributes: {
+              href: "https://github.com/Kajabi/sage-lib",
+              title: "View Github Repo",
+              target: "_blank"
+            },
+            subtle: true,
+            icon: {
+              style: "right",
+              name: "launch"
+            },
+            style: "secondary",
+          } %>
+        <% end %>
+      <% end %>
+      <%= sage_component SageGridCol, { breakpoint: "md", size: "8" } do %> 
+        <%= image_tag "sage_ui.png", style: "max-width:100%;height:auto", loading: "lazy" %>
+      <% end %>
+    <% end %>
+  <% end %>
+</div>
+
 <%= md(%(
 # Getting Started
 <p class="docs-heading__lead">Sage is informed by customer outcomes and is the tool designers at Kajabi use to craft predictable patterns that are integrated throughout the admin experience. </p>
@@ -7,7 +50,6 @@ These reusable patterns are created from flexible building blocks we call compon
 
 This design system is not owned by any one person or group but is a collective effort across the UXD and Product Design teams at Kajabi. Each team member can make suggestions for enhancements, as well as propose new components and patterns.
 )) %>
-<% end %>
 <%= md("
 ## How It Works
 The UI of the Kajabi Core application is a combination of Rails Components, React Components and a custom SCSS Framework called Sage that applies a uniform style to both.
