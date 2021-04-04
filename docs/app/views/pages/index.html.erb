@@ -190,27 +190,14 @@ Our system is our source of truth, providing everything you need to build the be
       <%= sage_component SageGridCol, { breakpoint: "md", size: "6" } do %> 
         <%= sage_component SagePanel, {} do %>
           <%= sage_component SagePanelStack, {} do %>
-            <i class="sage-icon-automations-3xl t-sage--color-sage"></i>
-            <h3 class="t-sage-heading-3">Contributing</h3>
-            <p class="t-sage-body">This system is a work of shared ownership and we encourage any member of the Kajabi team to feel empowered to participate in its ongoing improvement. Understanding and contributing to the system are the keys to the system's longevity.</p>
+            <i class="sage-icon-check-circle-3xl t-sage--color-purple"></i>
+            <h3 class="t-sage-heading-3">Get up and running</h3>
+            <p class="t-sage-body">Getting started with Sage is meant to be easy and approachable. Check out these practical developer guides to understand how to get up and running with the Sage Design System quickly.</p>
             <%= sage_component SageButton, {
-              value: "Code Wiki",
+              value: "Readme",
               attributes: {
-                href: "https://github.com/Kajabi/sage-lib/wiki",
-                title: "Code Guidelines"
-              },
-              subtle: true,
-              icon: {
-                style: "right",
-                name: "arrow-right"
-              },
-              style: "primary",
-            } %>
-            <%= sage_component SageButton, {
-              value: "Conventional Commits",
-              attributes: {
-                href: "https://github.com/Kajabi/sage-lib#conventional-commits",
-                title: "Conventional Commits"
+                href: "https://github.com/Kajabi/sage-lib",
+                title: "Readme"
               },
               subtle: true,
               icon: {
@@ -223,75 +210,122 @@ Our system is our source of truth, providing everything you need to build the be
         <% end %>
       <% end %>
       <%= sage_component SageGridCol, { breakpoint: "md", size: "6" } do %> 
-
+        <%= sage_component SagePanel, {} do %>
+          <%= sage_component SagePanelStack, {} do %>
+            <i class="sage-icon-automations-3xl t-sage--color-purple"></i>
+            <h3 class="t-sage-heading-3">Contributing</h3>
+            <p class="t-sage-body">we encourage any member of the Kajabi team to feel empowered to participate. Understanding and contributing to the system are the keys to the system's longevity.</p>
+            <%= sage_component SageButton, {
+              value: "Guidelines",
+              attributes: {
+                href: "https://github.com/Kajabi/sage-lib/wiki",
+                title: "Readme"
+              },
+              subtle: true,
+              icon: {
+                style: "right",
+                name: "arrow-right"
+              },
+              style: "primary",
+            } %>
+          <% end %>
+        <% end %>
       <% end %>
     <% end %>
   <% end %>
 </div>
-
-<%= md(%(
-# Getting Started
-<p class="docs-heading__lead">Sage is informed by customer outcomes and is the tool designers at Kajabi use to craft predictable patterns that are integrated throughout the admin experience. </p>
-
-These reusable patterns are created from flexible building blocks we call components that share consistent visual foundations like color, iconography, typography, spacing, and interactive states.
-
-This design system is not owned by any one person or group but is a collective effort across the UXD and Product Design teams at Kajabi. Each team member can make suggestions for enhancements, as well as propose new components and patterns.
-)) %>
-<%= md("
-## How It Works
-The UI of the Kajabi Core application is a combination of Rails Components, React Components and a custom SCSS Framework called Sage that applies a uniform style to both.
-", use_sage_type: true) %>
-<%= sage_component SageGridRow, {} do %>
-  <%= sage_component SageGridCol, { breakpoint: :lg, size: "6" } do %>
-    <div class="docs-feature">
-      <i class="devicon devicon-sass-original colored"></i>
-      <h3 class="t-sage-heading-4">SCSS System</h3>
-      <p class="t-sage-body">The language-agnostic style system that allows us to service any app code choice. This is the cornerstone of Sage. This includes a library of Sass variables, functions, and mixins.</p>
-      <%= sage_component SageLink, { label: "View Sassdocs site", url: Rails.application.config.sassdocs_root_url, external: true, launch: true } %>
-    </div>
+<div class="docs-section">
+  <%= sage_component SageContainer, { size: "md" } do %>
+    <h2 class="docs-section__title t-sage-heading-2">How It Works</h2>
+    <%= sage_component SageGridRow, {} do %> 
+      <%= sage_component SageGridCol, { breakpoint: "md", size: "3" } do %> 
+        <%= sage_component SagePanel, {} do %>
+          <%= sage_component SagePanelStack, {} do %>
+            <i class="devicon devicon-sass-original colored"></i>
+            <h3 class="t-sage-heading-3">SCSS System</h3>
+            <p class="t-sage-body">The language-agnostic style system that allows us to service any app code choice.</p>
+            <%= sage_component SageButton, {
+              value: "View Sassdocs site",
+              attributes: {
+                href: Rails.application.config.sassdocs_root_url,
+                title: "View Sassdocs site"
+              },
+              subtle: true,
+              icon: {
+                style: "right",
+                name: "arrow-right"
+              },
+              style: "primary",
+            } %>
+          <% end %>
+        <% end %>
+      <% end %>
+      <%= sage_component SageGridCol, { breakpoint: "md", size: "3" } do %> 
+        <%= sage_component SagePanel, {} do %>
+          <%= sage_component SagePanelStack, {} do %>
+            <i class="devicon devicon-rails-plain-wordmark colored"></i>
+            <h3 class="t-sage-heading-3">Rails Components</h3>
+            <p class="t-sage-body">Our default approach, custom Rails View Components to serve our system to the app.</p>
+            <%= sage_component SageButton, {
+              value: "Guidelines",
+              attributes: {
+                href: "https://github.com/Kajabi/sage-lib/wiki",
+                title: "Readme"
+              },
+              subtle: true,
+              icon: {
+                style: "right",
+                name: "arrow-right"
+              },
+              style: "primary",
+            } %>
+          <% end %>
+        <% end %>
+      <% end %>
+      <%= sage_component SageGridCol, { breakpoint: "md", size: "3" } do %> 
+        <%= sage_component SagePanel, {} do %>
+          <%= sage_component SagePanelStack, {} do %>
+            <i class="devicon devicon-javascript-plain colored"></i>
+            <h3 class="t-sage-heading-3">Vanilla Javascript</h3>
+            <p class="t-sage-body">Clean, minimal JavaScript to ensure the necessary interactions and accessibility features.</p>
+            <%= sage_component SageButton, {
+              value: "Guidelines",
+              attributes: {
+                href: "https://github.com/Kajabi/sage-lib/wiki",
+                title: "Readme"
+              },
+              subtle: true,
+              icon: {
+                style: "right",
+                name: "arrow-right"
+              },
+              style: "primary",
+            } %>
+          <% end %>
+        <% end %>
+      <% end %>
+      <%= sage_component SageGridCol, { breakpoint: "md", size: "3" } do %> 
+        <%= sage_component SagePanel, {} do %>
+          <%= sage_component SagePanelStack, {} do %>
+            <i class="devicon devicon-react-original colored"></i>
+            <h3 class="t-sage-heading-3">React Components</h3>
+            <p class="t-sage-body">Versions of our components for when heavy state and interaction management is needed.</p>
+            <%= sage_component SageButton, {
+              value: "Guidelines",
+              attributes: {
+                href: "https://github.com/Kajabi/sage-lib/wiki",
+                title: "Readme"
+              },
+              subtle: true,
+              icon: {
+                style: "right",
+                name: "arrow-right"
+              },
+              style: "primary",
+            } %>
+          <% end %>
+        <% end %>
+      <% end %>
+    <% end %>
   <% end %>
-  <%= sage_component SageGridCol, { breakpoint: :lg, size: "6" } do %>
-    <div class="docs-feature">
-      <i class="devicon devicon-rails-plain-wordmark colored"></i>
-      <h3 class="t-sage-heading-4">Rails Components</h3>
-      <p class="t-sage-body">Our default approach to solving customer problems is via ROR. We use custom Rails Components to serve our system to the app. These are documented within this site under "Elements" and "Objects."</p>
-    </div>
-  <% end %>
-  <%= sage_component SageGridCol, { breakpoint: :lg, size: "6" } do %>
-    <div class="docs-feature">
-      <i class="devicon devicon-javascript-plain colored"></i>
-      <h3 class="t-sage-heading-4">Vanilla Javascript</h3>
-      <p class="t-sage-body">Our Rails components have clean, minimal JavaScript needed to ensure the necessary interactions and accessibility features are available right out of the box.</p>
-    </div>
-  <% end %>
-  <%= sage_component SageGridCol, { breakpoint: :lg, size: "6" } do %>
-    <div class="docs-feature">
-      <i class="devicon devicon-react-original colored"></i>
-      <h3 class="t-sage-heading-4">React Components</h3>
-      <p class="t-sage-body">We build React versions of many of our components that mimic the same functionality. A few of our components exist only as React components due to their complexity.</p>
-      <%= sage_component SageLink, { label: "View React components", url: Rails.application.config.storybook_root_url, external: true, launch: true } %>
-    </div>
-  <% end %>
-<% end %>
-<%= md("
-We think of our approach to UI at Kajabi in this way: We default to using Rails Components and a classic Rails approach to most problems and move to React where it counts.
-
-Rails does many things very well and gives us the ability to move quickly and solve complex problems with very simple, tried and true, code solutions. With that said, sometimes we come across a problem that we want to solve that the standard rails approach will just not be enough ( Think complex interactions with many versions of state ). In this case we move to React as our default approach to solving complex, Javascript heavy problems.
-
-", use_sage_type: true) %>
-<hr>
-<%= sage_component SageGridRow, {} do %>
-  <%= sage_component SageGridCol, { breakpoint: :lg, size: "7" } do %>
-<%= md("
-
-Because our system contains two different approaches to UI creation, we utilize a SCSS Design System to provide the styles to both types of components (Think Bootstrap, but customized for our products). Our Design System provides the styles for the core components that make up the UI of our product.
-
-[Explore Sage Elements](/pages/elements)
-
-[Explore Sage Objects](/pages/objects)
-", use_sage_type: true) %>
-  <% end %>
-  <%= sage_component SageGridCol, { breakpoint: :lg, size: "5" } do %>
-    <%= image_tag("components.svg", style: "display:block;max-width:500px;margin:0 auto;width:100%;height:auto", size: "1000x1036") %>
-  <% end %>
-<% end %>
+</div>
