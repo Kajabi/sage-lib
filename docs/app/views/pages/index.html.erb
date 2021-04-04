@@ -266,19 +266,6 @@ Our system is our source of truth, providing everything you need to build the be
             <i class="devicon devicon-rails-plain-wordmark colored"></i>
             <h3 class="t-sage-heading-3">Rails Components</h3>
             <p class="t-sage-body">Our default approach, custom Rails View Components to serve our system to the app.</p>
-            <%= sage_component SageButton, {
-              value: "Guidelines",
-              attributes: {
-                href: "https://github.com/Kajabi/sage-lib/wiki",
-                title: "Readme"
-              },
-              subtle: true,
-              icon: {
-                style: "right",
-                name: "arrow-right"
-              },
-              style: "primary",
-            } %>
           <% end %>
         <% end %>
       <% end %>
@@ -288,19 +275,6 @@ Our system is our source of truth, providing everything you need to build the be
             <i class="devicon devicon-javascript-plain colored"></i>
             <h3 class="t-sage-heading-3">Vanilla Javascript</h3>
             <p class="t-sage-body">Clean, minimal JavaScript to ensure the necessary interactions and accessibility features.</p>
-            <%= sage_component SageButton, {
-              value: "Guidelines",
-              attributes: {
-                href: "https://github.com/Kajabi/sage-lib/wiki",
-                title: "Readme"
-              },
-              subtle: true,
-              icon: {
-                style: "right",
-                name: "arrow-right"
-              },
-              style: "primary",
-            } %>
           <% end %>
         <% end %>
       <% end %>
@@ -311,10 +285,10 @@ Our system is our source of truth, providing everything you need to build the be
             <h3 class="t-sage-heading-3">React Components</h3>
             <p class="t-sage-body">Versions of our components for when heavy state and interaction management is needed.</p>
             <%= sage_component SageButton, {
-              value: "Guidelines",
+              value: "Storybook",
               attributes: {
-                href: "https://github.com/Kajabi/sage-lib/wiki",
-                title: "Readme"
+                href: Rails.application.config.storybook_root_url,
+                title: "Storybook"
               },
               subtle: true,
               icon: {
