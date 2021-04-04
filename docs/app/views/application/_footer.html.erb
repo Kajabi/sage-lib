@@ -1,6 +1,6 @@
 <div class="docs-footer">
   <%= sage_component SageContainer, { size: "md" } do %>
-    <div class="sage-btn-group sage-btn-group--gap-sm">
+    <%= sage_component SageButtonGroup, { gap: :md } do %>
       <%= sage_component SageButton, {
         value: "Version #{$SAGE_VERSION_GEM}",
         attributes: {
@@ -35,7 +35,7 @@
         style: "secondary",
       } %>
       <%= sage_component SageButton, {
-        value: "<i class=\"devicon devicon-sass-original colored\"></i> SASS Docs",
+        value: "SASS Docs",
         attributes: {
           href: Rails.application.config.sassdocs_root_url,
           target: "_blank",
@@ -46,7 +46,7 @@
         style: "secondary",
       } %>
       <%= sage_component SageButton, {
-        value: "<i class=\"devicon devicon-react-original colored\"></i> Storybook Documentation",
+        value: "React Storybook",
         attributes: {
           href: Rails.application.config.storybook_root_url,
           target: "_blank",
@@ -56,6 +56,6 @@
         subtle: true,
         style: "secondary",
       } %>
-    </div>
+    <% end %>
   <% end %>
 </div>

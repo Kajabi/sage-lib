@@ -13,7 +13,8 @@
   background-size: cover;
   background-color: sage-color(primary, 500);
   color: #fff;
-  padding: sage-spacing() sage-spacing() 100px sage-spacing();
+  padding: sage-spacing();
+  padding-bottom: rem(100px);
 
   .sage-row {
     padding-top: 100px;
@@ -31,4 +32,19 @@
   .sage-btn--subtle.sage-btn--secondary {
     color: #fff;
   }
+}
+
+.docs-section {
+  background: sage-color(gray, 200);
+  padding: sage-spacing(2xl);
+  i {
+    margin-bottom: sage-spacing();
+  }
+  .devicon {
+    font-size: rem(48px);
+  }
+}
+
+.docs-section__title {
+  margin-bottom: sage-spacing(2xl);
 }
