@@ -3,28 +3,6 @@
   <% sage_component_section :assistant_actions do %>
     <div class="sage-btn-group sage-btn-group--gap-sm">
       <%= sage_component SageButton, {
-        value: image_tag("logo-sass.svg", height: "20px"),
-        attributes: {
-          href: Rails.application.config.sassdocs_root_url,
-          target: "_blank",
-          rel: "noopener noreferrer",
-          title: "Open Sassdocs site"
-        },
-        subtle: true,
-        style: "secondary",
-      } %>
-      <%= sage_component SageButton, {
-        value: image_tag("logo-react.svg", height: "20px"),
-        attributes: {
-          href: Rails.application.config.storybook_root_url,
-          target: "_blank",
-          rel: "noopener noreferrer",
-          title: "Open Storybook React components site"
-        },
-        subtle: true,
-        style: "secondary",
-      } %>
-      <%= sage_component SageButton, {
         value: $SAGE_VERSION_GEM,
         attributes: {
           href: $SAGE_VERSION_GEM_URL,
