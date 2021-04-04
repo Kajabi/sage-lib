@@ -1,0 +1,44 @@
+<div class="docs-hero" style="background-image: url(<%= image_url "hero.jpg" %>);">
+  <%= sage_component SageContainer, { size: "md" } do %>
+    <header class="sage-header">
+      <%= render "application/nav" %>
+    </header>
+    <%= sage_component SageGridRow, {} do %> 
+      <%= sage_component SageGridCol, { breakpoint: "md", size: "4" } do %> 
+        <%= image_tag "sage_icon.png", style: "max-width:70px;height:auto", loading: "lazy" %>
+        <%= md("
+# Building with Sage
+Our system is our source of truth, providing everything you need to build the best experiences for all Kajabi entrepreneurs.
+", use_sage_type: true) %>
+        <%= sage_component SageButtonGroup, { gap: :sm, spacer: { top: :lg } } do %>
+          <%= sage_component SageButton, {
+            value: "Get Started",
+            attributes: {
+              href: pages_element_path(sorted_sage_elements.first[:title]),
+              title: "Get Started"
+            },
+            style: "primary",
+          } %>
+          <%= sage_component SageButton, {
+            value: "View Github Repo",
+            attributes: {
+              href: "https://github.com/Kajabi/sage-lib",
+              title: "View Github Repo",
+              target: "_blank"
+            },
+            subtle: true,
+            icon: {
+              style: "right",
+              name: "launch"
+            },
+            style: "secondary",
+          } %>
+        <% end %>
+      <% end %>
+      <%= sage_component SageGridCol, { breakpoint: "md", size: "1" } do %><% end %>
+      <%= sage_component SageGridCol, { breakpoint: "md", size: "7" } do %> 
+        <%= image_tag "sage_ui.png", style: "max-width:100%;height:auto", loading: "lazy" %>
+      <% end %>
+    <% end %>
+  <% end %>
+</div>

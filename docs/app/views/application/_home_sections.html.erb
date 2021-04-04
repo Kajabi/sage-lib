@@ -1,0 +1,141 @@
+<div class="docs-section">
+  <%= sage_component SageContainer, { size: "md" } do %>
+    <h2 class="docs-section__title t-sage-heading-2">Our Design System</h2>
+    <%= sage_component SageGridRow, { spacer: { bottom: :lg },} do %> 
+      <%= sage_component SageGridCol, { breakpoint: "md", size: "4" } do %> 
+        <%= sage_component SagePanel, {} do %>
+          <%= sage_component SagePanelStack, {} do %>
+            <i class="sage-icon-form-3xl t-sage--color-sage"></i>
+            <h3 class="t-sage-heading-3">Foundations</h3>
+            <p class="t-sage-body">Lorem ipsum dolor sit amet, non at set consectetur adipiscing elit. </p>
+            <%= sage_component SageButton, {
+              value: "Explore Foundations",
+              attributes: {
+                href: pages_foundation_path(:design_principles),
+                title: "Explore Foundations "
+              },
+              subtle: true,
+              icon: {
+                style: "right",
+                name: "arrow-right"
+              },
+              style: "primary",
+            } %>
+          <% end %>
+        <% end %>
+      <% end %>
+      <%= sage_component SageGridCol, { breakpoint: "md", size: "4" } do %> 
+        <%= sage_component SagePanel, {} do %>
+          <%= sage_component SagePanelStack, {} do %>
+            <i class="sage-icon-pen-3xl t-sage--color-sage"></i>
+            <h3 class="t-sage-heading-3">Content</h3>
+            <p class="t-sage-body">Lorem ipsum dolor sit amet, non at set consectetur adipiscing elit. </p>
+            <%= sage_component SageButton, {
+              value: "Content Guides",
+              attributes: {
+                href: pages_content_path(:voice_tone),
+                title: "Content Guides"
+              },
+              subtle: true,
+              icon: {
+                style: "right",
+                name: "arrow-right"
+              },
+              style: "primary",
+            } %>
+          <% end %>
+        <% end %>
+      <% end %>
+      <%= sage_component SageGridCol, { breakpoint: "md", size: "4" } do %> 
+        <%= sage_component SagePanel, {} do %>
+          <%= sage_component SagePanelStack, {} do %>
+            <i class="sage-icon-customize-3xl t-sage--color-sage"></i>
+            <h3 class="t-sage-heading-3">Design</h3>
+            <p class="t-sage-body">Lorem ipsum dolor sit amet, non at set consectetur adipiscing elit. </p>
+            <%= sage_component SageButton, {
+              value: "Style Tokens",
+              attributes: {
+                href: pages_design_path(:token),
+                title: "Browse Style Tokens"
+              },
+              subtle: true,
+              icon: {
+                style: "right",
+                name: "arrow-right"
+              },
+              style: "primary",
+            } %>
+          <% end %>
+        <% end %>
+      <% end %>
+    <% end %>
+    <%= sage_component SageGridRow, {} do %> 
+      <%= sage_component SageGridCol, { breakpoint: "md", size: "4" } do %> 
+        <%= sage_component SagePanel, {} do %>
+          <%= sage_component SagePanelStack, {} do %>
+            <i class="sage-icon-stack-3xl t-sage--color-sage"></i>
+            <h3 class="t-sage-heading-3">Layout</h3>
+            <p class="t-sage-body">Lorem ipsum dolor sit amet, non at set consectetur adipiscing elit. </p>
+            <%= sage_component SageButton, {
+              value: "Layout Patterns",
+              attributes: {
+                href: pages_layout_path(:container),
+                title: "Layout Patterns"
+              },
+              subtle: true,
+              icon: {
+                style: "right",
+                name: "arrow-right"
+              },
+              style: "primary",
+            } %>
+          <% end %>
+        <% end %>
+      <% end %>
+      <%= sage_component SageGridCol, { breakpoint: "md", size: "4" } do %> 
+        <%= sage_component SagePanel, {} do %>
+          <%= sage_component SagePanelStack, {} do %>
+            <i class="sage-icon-folder-3xl t-sage--color-sage"></i>
+            <h3 class="t-sage-heading-3">Elements</h3>
+            <p class="t-sage-body">Lorem ipsum dolor sit amet, non at set consectetur adipiscing elit. </p>
+            <%= sage_component SageButton, {
+              value: "Browse Elements",
+              attributes: {
+                href: pages_element_path(sorted_sage_elements.first[:title]),
+                title: "Browse Elements"
+              },
+              subtle: true,
+              icon: {
+                style: "right",
+                name: "arrow-right"
+              },
+              style: "primary",
+            } %>
+          <% end %>
+        <% end %>
+      <% end %>
+      <%= sage_component SageGridCol, { breakpoint: "md", size: "4" } do %> 
+        <%= sage_component SagePanel, {} do %>
+          <%= sage_component SagePanelStack, {} do %>
+            <i class="sage-icon-folder-group-3xl t-sage--color-sage"></i>
+            <h3 class="t-sage-heading-3">Objects</h3>
+            <p class="t-sage-body">Lorem ipsum dolor sit amet, non at set consectetur adipiscing elit. </p>
+            <%= sage_component SageButton, {
+              value: "Browse Objects",
+              attributes: {
+                href: pages_object_path(sorted_sage_objects.first[:title]),
+                title: "Browse Objects"
+              },
+              subtle: true,
+              icon: {
+                style: "right",
+                name: "arrow-right"
+              },
+              style: "primary",
+            } %>
+          <% end %>
+        <% end %>
+      <% end %>
+    <% end %>
+  <% end %>
+</div>

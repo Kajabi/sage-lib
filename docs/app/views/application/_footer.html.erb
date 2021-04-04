@@ -1,0 +1,61 @@
+<div class="docs-footer">
+  <%= sage_component SageContainer, { size: "md" } do %>
+    <div class="sage-btn-group sage-btn-group--gap-sm">
+      <%= sage_component SageButton, {
+        value: "Version #{$SAGE_VERSION_GEM}",
+        attributes: {
+          href: $SAGE_VERSION_GEM_URL,
+          target: "_blank",
+          rel: "noopener noreferrer",
+          title: "Open SageRails gem source"
+        },
+        subtle: true,
+        style: "secondary",
+      } %>
+      <%= sage_component SageButton, {
+        value: "Release Notes (#{$SAGE_VERSION_GEM})",
+        attributes: {
+          href: $SAGE_RELEASE_URL,
+          target: "_blank",
+          rel: "noopener noreferrer",
+          title: "Github release notes"
+        },
+        subtle: true,
+        style: "secondary",
+      } %>
+      <%= sage_component SageButton, {
+        value: "Changelog",
+        attributes: {
+          href: "#{$SAGE_GITHUB_URL}/releases",
+          target: "_blank",
+          rel: "noopener noreferrer",
+          title: "Github changelog"
+        },
+        subtle: true,
+        style: "secondary",
+      } %>
+      <%= sage_component SageButton, {
+        value: "<i class=\"devicon devicon-sass-original colored\"></i> SASS Docs",
+        attributes: {
+          href: Rails.application.config.sassdocs_root_url,
+          target: "_blank",
+          rel: "noopener noreferrer",
+          title: "Open Sassdocs site"
+        },
+        subtle: true,
+        style: "secondary",
+      } %>
+      <%= sage_component SageButton, {
+        value: "<i class=\"devicon devicon-react-original colored\"></i> Storybook Documentation",
+        attributes: {
+          href: Rails.application.config.storybook_root_url,
+          target: "_blank",
+          rel: "noopener noreferrer",
+          title: "Open Storybook React components site"
+        },
+        subtle: true,
+        style: "secondary",
+      } %>
+    </div>
+  <% end %>
+</div>
