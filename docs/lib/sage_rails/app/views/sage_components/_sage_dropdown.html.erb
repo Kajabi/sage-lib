@@ -3,6 +3,7 @@
     sage-dropdown
     <%= "sage-dropdown--anchor-right" if component.align == "right" %>
     <%= "sage-dropdown--contained" if component.contained %>
+    <%= "sage-dropdown--multi-select" if component.multiple_selections %>
     <%= "sage-dropdown--customized" if component.customized %>
     <%= "sage-dropdown--small" if component.panel_size == "small" %>
     <%= "sage-dropdown--#{component.custom_modifier}" if component.custom_modifier.present? %>
@@ -50,11 +51,12 @@
                 <% item[:modifiers]&.each do |item_modifier| %>
                   <%= "sage-dropdown__item--#{item_modifier}" %>
                 <% end %>
+                <%= "sage-dropdown__item--multi-select" if component.multiple_selections %>
               "
               role="none"
               <%= "aria-selected=true" if item[:selected] %>
             >
-              <% if item[:attributes].nil? || item[:attributes]&.keys&.include?(:href) || item[:attributes]&.keys&.include?("href") %>
+              <% if item[:attributes].nil? && item[:attributes]&.keys&.include?(:href) || item[:attributes]&.keys&.include?("href") %>
                 <a
                   <% item[:attributes].each do |key, value| %>
                     <%= key %>="<%= value %>"
@@ -74,7 +76,7 @@
                   <% item[:attributes].each do |key, value| %>
                     <%= key %>="<%= value %>"
                   <% end if item[:attributes]&.is_a?(Hash) %>
-                  role="menuitem"
+                  <%= "role=#{component.multiple_selections ? 'option' : 'menuitem'}" %>
                   tabindex="0"
                   type="button"
                   class="
@@ -91,6 +93,9 @@
       </ul>
     <% elsif content_for? :sage_dropdown_custom_panel_content %>
       <%= content_for :sage_dropdown_custom_panel_content %>
+    <% end %>
+    <% if content_for? :sage_dropdown_custom_panel_footer %>
+      <%= content_for :sage_dropdown_custom_panel_footer %>
     <% end %>
   </div>
 </div>

@@ -9,11 +9,17 @@ Sage.dropdown = (function () {
   // The class to toggle on the menu when the menu is disabled
   const dropdownDisabledClass = "sage-dropdown--disabled";
 
+  // The class enabling multiple selections in a menu
+  const dropdownMultipleClass = "sage-dropdown--multi-select";
+
   // Selector for a menu item
   const dropdownItemClass = "sage-dropdown__item-control";
 
   // The class to toggle on the menu when the menu is disabled
   const dropdownDisabledItemClass = "sage-dropdown__item--disabled";
+
+  // The class to toggle on the item when the multiple selections are enabled
+  const dropdownMultiItemClass = "sage-dropdown__item--multi-select";
 
   // Selector for seach item in menu
   const dropdownSearchItemClass = "sage-search__input";
@@ -112,6 +118,11 @@ Sage.dropdown = (function () {
       const val = (el.value || el.textContent).trim();
       updateTriggerLabel(val, elTrigger);
       updateStateClass(val, elDropdown);
+    }
+
+    if (evt.target.parentNode.classList.contains(dropdownMultiItemClass)) {
+      console.info(evt.target.value);
+      return;
     }
 
     isExpanded(elDropdown) ? close(elDropdown) : open(elDropdown);

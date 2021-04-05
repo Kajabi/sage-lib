@@ -17,6 +17,7 @@ class SageDropdown < SageComponent
       style: [:optional, String],
       value: String,
     }]]],
+    multiple_selections: [:optional, TrueClass],
     panel_size: [:optional, Set.new(["small"])],
     search: [:optional, TrueClass],
     trigger_type: [:optional, Set.new(["select", "select-labeled"])],
@@ -24,6 +25,10 @@ class SageDropdown < SageComponent
 
   def sections
     %w(dropdown_custom_panel_content)
+  end
+
+  def footer
+    %w(dropdown_custom_panel_footer)
   end
 
 end

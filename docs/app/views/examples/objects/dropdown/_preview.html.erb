@@ -137,7 +137,6 @@
 <%= sage_component SageDropdown, {
   search: true,
   trigger_type: "select",
-  align: "right",
   items: [{
     value: "-- None --"
   }, {
@@ -202,6 +201,31 @@
   <label class="sage-dropdown__trigger-label">Add an Element</label>
 <% end %>
 
+<h3 class="t-sage-heading-6">Dropdown w/ Custom List Content</h3>
+<%= sage_component SageDropdown, {
+  search: true,
+  trigger_type: "select",
+  contained: true,
+  multiple_selections: true,
+} do %>
+  <% content_for :sage_dropdown_custom_panel_content do %>
+    <%= sage_component SagePanel, {} do %>
+      <%= sage_component SagePanelStack, {} do %>
+        <p>Panel content here</p>
+      <% end %>
+    <% end %>
+  <% end %>
+  <% content_for :sage_dropdown_custom_panel_footer do %>
+    footer goes here
+  <% end %>
+  <%= sage_component SageButton, {
+    style: "secondary",
+    value: "",
+    css_classes: "sage-dropdown__trigger-selected-value",
+    icon: { style: "right", name: "caret-down" }
+  } %>
+  <label class="sage-dropdown__trigger-label">Add an Element</label>
+<% end %>
 
 <h3 class="t-sage-heading-6">Dropdown w/ Custom Content</h3>
 <%= sage_component SageDropdown, {
