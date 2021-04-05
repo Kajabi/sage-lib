@@ -7,9 +7,6 @@
 .docs-hero {
   background-repeat: no-repeat;
   background-position: center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
   background-color: sage-color(primary, 500);
   color: #fff;
@@ -20,26 +17,17 @@
     padding-bottom: sage-spacing(xl);
   }
 
-  .sage-row {
-    padding-top: 100px;
-
-    @media (max-width: sage-breakpoint(md-min)) {
-      padding-top: sage-spacing(xl);
-    }
-  }
-
-  .sage-type {
-    h1 {
-      font-size: 4rem;
-      line-height: 4.5rem;
-      color: #fff;
-      margin-top: sage-spacing();
-    }
-  }
-
   .sage-btn--subtle.sage-btn--secondary {
     color: #fff;
   }
+}
+
+.docs-hero__title {
+  font-size: 4rem;
+  line-height: 4.5rem;
+  margin-bottom: sage-spacing(sm);
+  color: #fff;
+  margin-top: sage-spacing();
 }
 
 .docs-hero__img {

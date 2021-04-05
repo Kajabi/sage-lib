@@ -18,4 +18,8 @@
       display: inline-flex;
     }
   }
+
+  .docs-hero & {
+    margin-bottom: rem(100px);
+  }
 }

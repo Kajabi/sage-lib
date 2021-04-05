@@ -6,10 +6,10 @@
     <%= sage_component SageGridRow, {} do %> 
       <%= sage_component SageGridCol, { breakpoint: "md", size: "4" } do %> 
         <%= image_tag "sage_icon.png", style: "max-width:70px;height:auto", loading: "lazy" %>
-        <%= md("
-# Building with Sage
-Our system is our source of truth, providing everything you need to build the best experiences for all Kajabi entrepreneurs.
-", use_sage_type: true) %>
+        <div class="sage-type">
+          <h1 class="docs-hero__title">Building with Sage</h1>
+          <p>Our system is our source of truth, providing everything you need to build the best experiences for all Kajabi entrepreneurs.</p>
+        </div>
         <%= sage_component SageButtonGroup, { gap: :sm, spacer: { top: :lg } } do %>
           <%= sage_component SageButton, {
             value: "Get Started",
