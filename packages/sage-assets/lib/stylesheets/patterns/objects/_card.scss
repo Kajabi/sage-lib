@@ -136,7 +136,7 @@
 .sage-card__row {
   @include sage-grid-card-row();
 
-  .sage-sortable__item--custom & {
+  .sage-sortable__row & {
     width: 100%;
   }
 }
