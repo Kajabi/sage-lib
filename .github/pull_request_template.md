@@ -2,17 +2,18 @@
 <!-- REQUIRED: add a short description of this update -->
 
 
-### Screenshots
+## Screenshots
 <!-- OPTIONAL(recommended): Show any visual updates -->
 |  Before  |  After  |
 |--------|--------|
 |<!-- Before img here -->|<!-- After img here -->|
 
 
-## Test notes
+## Testing in `sage-lib`
 <!-- REQUIRED: General notes here surrounding this change for observing the changes in `sage-lib` -->
 
-### Estimated impact
+
+## Testing in `kajabi-products`
 <!-- REQUIRED: to support QA testing when this work is brought into `kajabi-products`, describe this PR, its impact level (LOW/MEDIUM/HIGH/BREAKING) and areas its affect can be tested (or if a new feature, places you can demonstrate it has not had adverse effects)
   Read more here: https://github.com/Kajabi/sage-lib/wiki/Version-Bump-Process
   IMPORTANT: Once merged, the list below should be transferred to the anticipated version bump PR -->
