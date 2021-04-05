@@ -16,8 +16,16 @@
   padding: sage-spacing();
   padding-bottom: rem(100px);
 
+  @media (max-width: sage-breakpoint(md-min)) {
+    padding-bottom: sage-spacing(xl);
+  }
+
   .sage-row {
     padding-top: 100px;
+
+    @media (max-width: sage-breakpoint(md-min)) {
+      padding-top: sage-spacing(xl);
+    }
   }
 
   .sage-type {
@@ -34,17 +42,35 @@
   }
 }
 
+.docs-hero__img {
+  max-width: 100%;
+
+  @media (max-width: sage-breakpoint(md-min)) {
+    display: none;
+  }
+}
+
 .docs-section {
   background: sage-color(gray, 200);
   padding: sage-spacing(2xl) sage-spacing();
+
   i {
     margin-bottom: sage-spacing();
   }
+  
   .devicon {
     font-size: rem(48px);
+  }
+
+  @media (max-width: sage-breakpoint(md-min)) {
+    padding: sage-spacing();
   }
 }
 
 .docs-section__title {
   margin-bottom: sage-spacing(2xl);
+
+  @media (max-width: sage-breakpoint(md-min)) {
+    margin-bottom: sage-spacing();
+  }
 }

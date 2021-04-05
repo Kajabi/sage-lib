@@ -5,10 +5,15 @@
 ================================================== */
 
 .docs-footer {
-  padding: sage-spacing(2xl) 0;
+  padding: sage-spacing(2xl) sage-spacing();
   background: sage-color(gray, 200);
+
   .devicon {
     font-size: sage-font-size(2xl);
     align-self: center;
+  }
+  
+  .sage-stage & {
+    padding: sage-spacing(2xl) 0;
   }
 }
