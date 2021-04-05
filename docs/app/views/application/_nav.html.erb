@@ -1,6 +1,19 @@
 <div class="docs-nav">
   <%= sage_component SageButtonGroup, { gap: :sm } do %>
     <%= sage_component SageButton, {
+      value: "Home",
+      attributes: {
+        href: "/",
+        title: "Home"
+      },
+      subtle: true,
+      icon: {
+        style: "left",
+        name: "home"
+      },
+      style: "secondary",
+    } %>
+    <%= sage_component SageButton, {
       value: "Foundations",
       attributes: {
         href: pages_foundation_path(:design_principles),
