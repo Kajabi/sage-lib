@@ -32,7 +32,7 @@ export const PaginationItem = ({ children, current, disabled, onClick, url, }) =
         onClick={handleClick}
         {...attrs}
       >
-        <span class="sage-pagination__page-text">
+        <span className="sage-pagination__page-text">
           {children}
         </span>
       </a>
