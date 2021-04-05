@@ -3,7 +3,7 @@
     <h2 class="docs-section__title t-sage-heading-1">How It Works</h2>
     <%= sage_component SageGridRow, {} do %> 
       <%= sage_component SageGridCol, { breakpoint: "md", size: "3" } do %> 
-        <%= sage_component SagePanel, {} do %>
+        <%= sage_component SagePanel, { spacer: { bottom: :lg } } do %>
           <%= sage_component SagePanelStack, {} do %>
             <i class="devicon devicon-sass-original colored"></i>
             <h3 class="t-sage-heading-3">SCSS System</h3>
@@ -25,7 +25,7 @@
         <% end %>
       <% end %>
       <%= sage_component SageGridCol, { breakpoint: "md", size: "3" } do %> 
-        <%= sage_component SagePanel, {} do %>
+        <%= sage_component SagePanel, { spacer: { bottom: :lg } } do %>
           <%= sage_component SagePanelStack, {} do %>
             <i class="devicon devicon-rails-plain-wordmark colored"></i>
             <h3 class="t-sage-heading-3">Rails Components</h3>
@@ -34,7 +34,7 @@
         <% end %>
       <% end %>
       <%= sage_component SageGridCol, { breakpoint: "md", size: "3" } do %> 
-        <%= sage_component SagePanel, {} do %>
+        <%= sage_component SagePanel, { spacer: { bottom: :lg } } do %>
           <%= sage_component SagePanelStack, {} do %>
             <i class="devicon devicon-javascript-plain colored"></i>
             <h3 class="t-sage-heading-3">Vanilla Javascript</h3>
@@ -43,7 +43,7 @@
         <% end %>
       <% end %>
       <%= sage_component SageGridCol, { breakpoint: "md", size: "3" } do %> 
-        <%= sage_component SagePanel, {} do %>
+        <%= sage_component SagePanel, { spacer: { bottom: :lg } } do %>
           <%= sage_component SagePanelStack, {} do %>
             <i class="devicon devicon-react-original colored"></i>
             <h3 class="t-sage-heading-3">React Components</h3>

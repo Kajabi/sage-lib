@@ -4,32 +4,10 @@
       <%= sage_component SageButton, {
         value: "Version #{$SAGE_VERSION_GEM}",
         attributes: {
-          href: $SAGE_VERSION_GEM_URL,
-          target: "_blank",
-          rel: "noopener noreferrer",
-          title: "Open SageRails gem source"
-        },
-        subtle: true,
-        style: "secondary",
-      } %>
-      <%= sage_component SageButton, {
-        value: "Release Notes (#{$SAGE_VERSION_GEM})",
-        attributes: {
           href: $SAGE_RELEASE_URL,
           target: "_blank",
           rel: "noopener noreferrer",
-          title: "Github release notes"
-        },
-        subtle: true,
-        style: "secondary",
-      } %>
-      <%= sage_component SageButton, {
-        value: "Changelog",
-        attributes: {
-          href: "#{$SAGE_GITHUB_URL}/releases",
-          target: "_blank",
-          rel: "noopener noreferrer",
-          title: "Github changelog"
+          title: "Open SageRails gem source"
         },
         subtle: true,
         style: "secondary",
@@ -46,7 +24,7 @@
         style: "secondary",
       } %>
       <%= sage_component SageButton, {
-        value: "React Storybook",
+        value: "Storybook",
         attributes: {
           href: Rails.application.config.storybook_root_url,
           target: "_blank",

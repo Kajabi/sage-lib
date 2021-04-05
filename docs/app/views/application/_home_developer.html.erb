@@ -3,7 +3,7 @@
     <h2 class="docs-section__title t-sage-heading-1">Developer Guides</h2>
     <%= sage_component SageGridRow, {} do %> 
       <%= sage_component SageGridCol, { breakpoint: "md", size: "6" } do %> 
-        <%= sage_component SagePanel, {} do %>
+        <%= sage_component SagePanel, { spacer: { bottom: :lg } } do %>
           <%= sage_component SagePanelStack, {} do %>
             <i class="sage-icon-check-circle-3xl t-sage--color-purple"></i>
             <h3 class="t-sage-heading-3">Get up and running</h3>
@@ -25,7 +25,7 @@
         <% end %>
       <% end %>
       <%= sage_component SageGridCol, { breakpoint: "md", size: "6" } do %> 
-        <%= sage_component SagePanel, {} do %>
+        <%= sage_component SagePanel, { spacer: { bottom: :lg } } do %>
           <%= sage_component SagePanelStack, {} do %>
             <i class="sage-icon-automations-3xl t-sage--color-purple"></i>
             <h3 class="t-sage-heading-3">Contributing</h3>
