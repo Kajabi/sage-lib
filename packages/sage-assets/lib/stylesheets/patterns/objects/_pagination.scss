@@ -107,7 +107,10 @@ $-pagination-bg-color-dark: sage-color(grey, 300);
 }
 
 .sage-pagination__page-text {
-  @include visually-hidden();
+  .sage-pagination__item:first-child &,
+  .sage-pagination__item:last-child & {
+    @include visually-hidden();
+  }
 }
 
 .sage-pagination__page--current {
