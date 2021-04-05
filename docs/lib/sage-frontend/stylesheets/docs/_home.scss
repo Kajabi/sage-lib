@@ -32,6 +32,7 @@
 
 .docs-hero__img {
   max-width: 100%;
+  padding-left: rem(100px);
 
   @media (max-width: sage-breakpoint(md-min)) {
     display: none;
