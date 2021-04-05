@@ -7,5 +7,7 @@
   <%= "id=#{component.id}" if component.id %>
   <%= component.generated_html_attributes.html_safe %>
 >
-  <%= component.content %>
+  <%= sage_component SageCardRow, { grid_template: component.grid_template } do %>
+    <%= component.content %>
+  <% end %>
 </section>
