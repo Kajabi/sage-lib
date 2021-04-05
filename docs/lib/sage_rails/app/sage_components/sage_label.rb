@@ -1,5 +1,6 @@
 class SageLabel < SageComponent
   set_attribute_schema({
+    attributes: [:optional, Hash],
     color: Set.new(["danger", "draft", "info", "locked", "published", "success", "warning"]),
     icon: [:optional, String],
     interactive_type: [:optional, Set.new([:dropdown, :default, :secondary_button])],
