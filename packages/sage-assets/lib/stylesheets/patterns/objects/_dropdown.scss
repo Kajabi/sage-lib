@@ -301,7 +301,7 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
     min-width: 100%;
   }
 
-  .sage-dropdown--multi-select:not(.sage-dropdown--anchor-right) & {
+  .sage-dropdown--full-width:not(.sage-dropdown--anchor-right) & {
     min-width: 0;
     width: 100%;
   }

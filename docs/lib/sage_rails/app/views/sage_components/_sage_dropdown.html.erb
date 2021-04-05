@@ -1,10 +1,9 @@
 <div
-  class="
-    sage-dropdown
+  class="sage-dropdown
     <%= "sage-dropdown--anchor-right" if component.align == "right" %>
     <%= "sage-dropdown--contained" if component.contained %>
-    <%= "sage-dropdown--multi-select" if component.multiple_selections %>
     <%= "sage-dropdown--customized" if component.customized %>
+    <%= "sage-dropdown--full-width" if component.full_width_panel %>
     <%= "sage-dropdown--small" if component.panel_size == "small" %>
     <%= "sage-dropdown--#{component.custom_modifier}" if component.custom_modifier.present? %>
     <%= component.css_classes if component.css_classes.present? %>
@@ -51,7 +50,6 @@
                 <% item[:modifiers]&.each do |item_modifier| %>
                   <%= "sage-dropdown__item--#{item_modifier}" %>
                 <% end %>
-                <%= "sage-dropdown__item--multi-select" if component.multiple_selections %>
               "
               role="none"
               <%= "aria-selected=true" if item[:selected] %>
@@ -76,7 +74,7 @@
                   <% item[:attributes].each do |key, value| %>
                     <%= key %>="<%= value %>"
                   <% end if item[:attributes]&.is_a?(Hash) %>
-                  <%= "role=#{component.multiple_selections ? 'option' : 'menuitem'}" %>
+                  role="menuitem"
                   tabindex="0"
                   type="button"
                   class="
