@@ -5,8 +5,6 @@
   "
   data-js-search
 
-  <%# Prevents the default Kajabi-Products Search.js from binding to this input %>
-  data-kjb-disable-search
   <%= component.generated_html_attributes.html_safe %>
 >
   <label for="<%= component.id %>" class="sage-search__label">
@@ -15,6 +13,8 @@
   <input
     id="<%= component.id %>"
     class="sage-search__input"
+    <%# Prevents the default Kajabi-Products Search.js from binding to this input %>
+    data-kjb-disable-search
     type="search"
     placeholder="<%= component.placeholder.present? ? component.placeholder : "Search" %>"
     value="<%= component.value %>"
