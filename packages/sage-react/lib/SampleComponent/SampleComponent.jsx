@@ -14,7 +14,7 @@ export const SampleComponent = ({ children, className }) => {
   );
 };
 
-// Public assignment of component configuration tokens as needed=
+// Public assignment of component configuration tokens as needed
 SampleComponent.SAMPLE_TOKEN = SAMPLE_TOKEN;
 
 SampleComponent.defaultProps = {

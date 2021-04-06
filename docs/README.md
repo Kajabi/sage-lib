@@ -4,11 +4,11 @@ This folder contains the documentation site that exhibits the Sage design system
 
 It also contains the Gem for the Rails component library. See `lib/sage_rails`.
 
-This relies on the `sage-assets` and `sage-system` packages to provide the styles and Javascript for the base system. A library of corresponding React components can be found in `sage-react`, and all these pieces are pulled together and distrubited via `sage-packs` for use in Rails applications.
+This relies on the `sage-assets` and `sage-system` packages to provide the styles and JavaScript for the base system. A library of corresponding React components can be found in `sage-react`, and all these pieces are pulled together and distrubited via `sage-packs` for use in Rails applications.
 
 ### Creating
 
-New code may be generated in the system using one either a generator or based on some boilerplate code.
+New code may be generated in the system using either a generator or based on some boilerplate code.
 
 #### Rails Generators
 
@@ -16,7 +16,7 @@ The following generators will create the desired aspect in the main Documentatio
 
 📝 NOTE: All generators in the Sage Design System must be run from within the `<root directory>/docs` directory.
 
-- **Token** -- an SCSS map and function to use for system tokens.
+- **Token** -- a SCSS map and function to use for system tokens.
   ```
   rails generate sage_token <MY_TOKEN_NAME>
   ```
@@ -39,11 +39,6 @@ The following generators will create the desired aspect in the main Documentatio
 - **Page** -- a page within the documentation system.
   ```
   rails generate sage_page <MY_PAGE_NAME>
-  ```
-
-- **Utility (DEPRECATED)**
-  ```
-  rails generate sage_utility <MY_UTILITY_NAME>
   ```
 
 #### React and System JS

@@ -137,8 +137,7 @@ $sage-type-specs: (
 
 @mixin sage-type-spec-responsive($spec-name) {
   $spec-map: map-get($sage-type-specs, $spec-name);
-
-  --spec-font-weight: #{map-get($spec-map, weight)};
+  --spec-font-weight: #{map-get($spec-map, weight)}; // stylelint-disable order/order
   --spec-font-size: "...";
   --spec-letter-spacing: #{map-get($spec-map, kerning)};
   --spec-line-height: "...";
