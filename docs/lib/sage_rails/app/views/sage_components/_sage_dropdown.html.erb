@@ -92,8 +92,15 @@
     <% elsif content_for? :sage_dropdown_custom_panel_content %>
       <%= content_for :sage_dropdown_custom_panel_content %>
     <% end %>
+
     <% if content_for? :sage_dropdown_custom_panel_footer %>
-      <%= content_for :sage_dropdown_custom_panel_footer %>
+      <% if component.wrap_footer %>
+      <div class="sage-dropdown__panel-footer">
+      <% end %>
+        <%= content_for :sage_dropdown_custom_panel_footer %>
+      <% if component.wrap_footer %>
+      </div>
+      <% end %>
     <% end %>
   </div>
 </div>

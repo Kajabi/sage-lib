@@ -201,22 +201,45 @@
   <label class="sage-dropdown__trigger-label">Add an Element</label>
 <% end %>
 
-<h3 class="t-sage-heading-6">Dropdown w/ Custom List Content</h3>
+<h3 class="t-sage-heading-6">Dropdown Form field with Full-width Custom Content</h3>
 <%= sage_component SageDropdown, {
   search: true,
   trigger_type: "select",
   contained: true,
-  customized: true,
+  full_width_panel: true,
+  wrap_footer: true
 } do %>
   <% content_for :sage_dropdown_custom_panel_content do %>
-    <%= sage_component SagePanel, {} do %>
-      <%= sage_component SagePanelStack, {} do %>
-        <p>Panel content here</p>
+    <%= sage_component SagePanel, { clear_top_padding: true, clear_bottom_padding: true } do %>
+      <%= sage_component SagePanelList, {} do %>
+        <%= sage_component SagePanelListItem, { grid_template: "it" } do %>
+          <%= sage_component SageCheckbox, {
+            id:"checkbox-item-1",
+            label_text: "Checkbox",
+            checked: false,
+            disabled: false,
+            has_error: false,
+            partial_selection: false,
+            standalone: true
+          } %>
+          <label class="sage-checkbox__label" for="checkbox-item-1">Product title</label>
+        <% end %>
       <% end %>
     <% end %>
   <% end %>
   <% content_for :sage_dropdown_custom_panel_footer do %>
-    footer goes here
+    <%= sage_component SageButtonGroup, { gap: :xs, align: "end" } do %>
+      <%= sage_component SageButton, {
+        value: "Clear selections",
+        style: "secondary",
+        small: true
+      } %>
+      <%= sage_component SageButton, {
+        value: "Add to Offer",
+        style: "primary",
+        small: true
+      } %>
+    <% end %>
   <% end %>
   <%= sage_component SageButton, {
     style: "secondary",
@@ -227,7 +250,7 @@
   <label class="sage-dropdown__trigger-label">Add an Element</label>
 <% end %>
 
-<h3 class="t-sage-heading-6">Dropdown w/ Custom Content</h3>
+<h3 class="t-sage-heading-6">Dropdown Menu Button with Custom Content</h3>
 <%= sage_component SageDropdown, {
 } do %>
   <%= sage_component SageButton, {
@@ -242,7 +265,7 @@
         <p class="sage-spacer-bottom-sm">The <code>data-sage-dropdown-exit</code> attribute can be used on elements that need be able to close the custom panel.<p>
         <%= sage_component SageButton, {
           style: "primary",
-          value: "Click me exit",
+          value: "Click me to exit",
           attributes: {
             "data-sage-dropdown-exit": true,
           },

@@ -21,6 +21,7 @@ class SageDropdown < SageComponent
     panel_size: [:optional, Set.new(["small"])],
     search: [:optional, TrueClass],
     trigger_type: [:optional, Set.new(["select", "select-labeled"])],
+    wrap_footer: [:optional, TrueClass],
   })
 
   def sections

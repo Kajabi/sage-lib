@@ -319,6 +319,10 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
   padding: sage-spacing();
 }
 
+.sage-dropdown__panel-footer {
+  padding: sage-spacing(sm) sage-spacing();
+}
+
 .sage-dropdown__screen {
   display: none;
 
