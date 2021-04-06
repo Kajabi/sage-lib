@@ -18,7 +18,7 @@
   }
 
   .sage-btn--subtle.sage-btn--secondary {
-    color: #fff;
+    color: currentColor;
   }
 }
 
@@ -26,7 +26,6 @@
   font-size: 4rem;
   line-height: 4.5rem;
   margin-bottom: sage-spacing(sm);
-  color: #fff;
   margin-top: sage-spacing();
 }
 
@@ -43,14 +42,6 @@
   background: sage-color(gray, 200);
   padding: sage-spacing(2xl) sage-spacing();
 
-  i {
-    margin-bottom: sage-spacing();
-  }
-  
-  .devicon {
-    font-size: rem(48px);
-  }
-
   @media (max-width: sage-breakpoint(md-min)) {
     padding: sage-spacing();
   }
@@ -62,4 +53,13 @@
   @media (max-width: sage-breakpoint(md-min)) {
     margin-bottom: sage-spacing();
   }
+}
+
+.docs-section__icon {
+  margin-bottom: sage-spacing();
+}
+
+.docs-section__platform-icon {
+  font-size: rem(48px);
+  margin-bottom: sage-spacing();
 }
