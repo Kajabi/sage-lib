@@ -19,6 +19,10 @@
 
   .sage-btn--subtle.sage-btn--secondary {
     color: currentColor;
+
+    &:focus::after {
+      border-color: currentColor;
+    }
   }
 }
 
