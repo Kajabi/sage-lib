@@ -1,0 +1,51 @@
+<div class="docs-section">
+  <%= sage_component SageContainer, { size: "md" } do %>
+    <h2 class="docs-section__title t-sage-heading-1">Developer Guides</h2>
+    <%= sage_component SageGridRow, {} do %> 
+      <%= sage_component SageGridCol, { breakpoint: "md", size: "6" } do %> 
+        <%= sage_component SagePanel, { spacer: { bottom: :lg } } do %>
+          <%= sage_component SagePanelStack, {} do %>
+            <i class="docs-section__icon sage-icon-check-circle-3xl t-sage--color-purple"></i>
+            <h3 class="t-sage-heading-3">Get up and running</h3>
+            <p class="t-sage-body">Getting started with Sage is meant to be easy and approachable. Check out these practical developer guides to understand how to get up and running with the Sage Design System quickly.</p>
+            <%= sage_component SageButton, {
+              value: "Readme",
+              attributes: {
+                href: "https://github.com/Kajabi/sage-lib",
+                title: "Readme"
+              },
+              subtle: true,
+              icon: {
+                style: "right",
+                name: "arrow-right"
+              },
+              style: "primary",
+            } %>
+          <% end %>
+        <% end %>
+      <% end %>
+      <%= sage_component SageGridCol, { breakpoint: "md", size: "6" } do %> 
+        <%= sage_component SagePanel, { spacer: { bottom: :lg } } do %>
+          <%= sage_component SagePanelStack, {} do %>
+            <i class="docs-section__icon sage-icon-automations-3xl t-sage--color-purple"></i>
+            <h3 class="t-sage-heading-3">Contributing</h3>
+            <p class="t-sage-body">we encourage any member of the Kajabi team to feel empowered to participate. Understanding and contributing to the system are the keys to the system's longevity.</p>
+            <%= sage_component SageButton, {
+              value: "Guidelines",
+              attributes: {
+                href: "https://github.com/Kajabi/sage-lib/wiki",
+                title: "Guidelines"
+              },
+              subtle: true,
+              icon: {
+                style: "right",
+                name: "arrow-right"
+              },
+              style: "primary",
+            } %>
+          <% end %>
+        <% end %>
+      <% end %>
+    <% end %>
+  <% end %>
+</div>

@@ -1,0 +1,69 @@
+/* ==================================================
+  ** _home.scss
+
+  For Sage documentation use
+================================================== */
+
+.docs-hero {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-color: sage-color(primary, 500);
+  color: #fff;
+  padding: sage-spacing();
+  padding-bottom: rem(100px);
+
+  @media (max-width: sage-breakpoint(md-min)) {
+    padding-bottom: sage-spacing(xl);
+  }
+
+  .sage-btn--subtle.sage-btn--secondary {
+    color: currentColor;
+
+    &:focus::after {
+      border-color: currentColor;
+    }
+  }
+}
+
+.docs-hero__title {
+  font-size: 4rem;
+  line-height: 4.5rem;
+  margin-bottom: sage-spacing(sm);
+  margin-top: sage-spacing();
+}
+
+.docs-hero__img {
+  max-width: 100%;
+  padding-left: rem(100px);
+
+  @media (max-width: sage-breakpoint(md-min)) {
+    display: none;
+  }
+}
+
+.docs-section {
+  background: sage-color(gray, 200);
+  padding: sage-spacing(2xl) sage-spacing();
+
+  @media (max-width: sage-breakpoint(md-min)) {
+    padding: sage-spacing();
+  }
+}
+
+.docs-section__title {
+  margin-bottom: sage-spacing(2xl);
+
+  @media (max-width: sage-breakpoint(md-min)) {
+    margin-bottom: sage-spacing();
+  }
+}
+
+.docs-section__icon {
+  margin-bottom: sage-spacing();
+}
+
+.docs-section__platform-icon {
+  font-size: rem(48px);
+  margin-bottom: sage-spacing();
+}

@@ -1,0 +1,39 @@
+<div class="docs-footer">
+  <%= sage_component SageContainer, { size: "md" } do %>
+    <%= sage_component SageButtonGroup, { gap: :md } do %>
+      <%= sage_component SageButton, {
+        value: "Version #{$SAGE_VERSION_GEM}",
+        attributes: {
+          href: $SAGE_RELEASE_URL,
+          target: "_blank",
+          rel: "noopener noreferrer",
+          title: "Open SageRails gem source"
+        },
+        subtle: true,
+        style: "secondary",
+      } %>
+      <%= sage_component SageButton, {
+        value: "SASS Docs",
+        attributes: {
+          href: Rails.application.config.sassdocs_root_url,
+          target: "_blank",
+          rel: "noopener noreferrer",
+          title: "Open Sassdocs site"
+        },
+        subtle: true,
+        style: "secondary",
+      } %>
+      <%= sage_component SageButton, {
+        value: "Storybook",
+        attributes: {
+          href: Rails.application.config.storybook_root_url,
+          target: "_blank",
+          rel: "noopener noreferrer",
+          title: "Open Storybook React components site"
+        },
+        subtle: true,
+        style: "secondary",
+      } %>
+    <% end %>
+  <% end %>
+</div>
