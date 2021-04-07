@@ -210,22 +210,24 @@
   wrap_footer: true
 } do %>
   <% content_for :sage_dropdown_custom_panel_content do %>
-    <%= sage_component SagePanel, { clear_top_padding: true, clear_bottom_padding: true } do %>
-      <%= sage_component SagePanelList, {} do %>
-        <%= sage_component SagePanelListItem, { grid_template: "it" } do %>
-          <%= sage_component SageCheckbox, {
-            id:"checkbox-item-1",
-            label_text: "Checkbox",
-            checked: false,
-            disabled: false,
-            has_error: false,
-            partial_selection: false,
-            standalone: true
-          } %>
-          <label class="sage-checkbox__label" for="checkbox-item-1">Product title</label>
-        <% end %>
+    <ul class="sage-dropdown__menu sage-dropdown__menu--fixed-height">
+      <% 9.times do |i| %>
+        <li class="sage-dropdown__item">
+          <label for="checkbox-multi-item-<%= i + 1 %>" class="sage-dropdown__item-control sage-dropdown-item-control--group">
+            <%= sage_component SageCheckbox, {
+              id:"checkbox-multi-item-#{i + 1}",
+              css_classes: "sage-dropdown__item-checkbox",
+              checked: false,
+              disabled: false,
+              has_error: false,
+              partial_selection: false,
+              standalone: true
+            } %>
+            <span class="sage-dropdown__item-label">Product <%= i + 1 %></span>
+          </label>
+        </li>
       <% end %>
-    <% end %>
+    </ul>
   <% end %>
   <% content_for :sage_dropdown_custom_panel_footer do %>
     <%= sage_component SageButtonGroup, { gap: :xs, align: "end" } do %>
@@ -247,7 +249,7 @@
     css_classes: "sage-dropdown__trigger-selected-value",
     icon: { style: "right", name: "caret-down" }
   } %>
-  <label class="sage-dropdown__trigger-label">Add an Element</label>
+  <label class="sage-dropdown__trigger-label">Select Product(s)</label>
 <% end %>
 
 <h3 class="t-sage-heading-6">Dropdown Menu Button with Custom Content</h3>
