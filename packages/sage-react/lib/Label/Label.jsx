@@ -13,6 +13,7 @@ import { LabelGroup } from './LabelGroup';
 export const Label = React.forwardRef(({
   className,
   color,
+  containerAttributes,
   icon,
   interactiveType,
   isDropdown,
@@ -20,7 +21,6 @@ export const Label = React.forwardRef(({
   secondaryButton,
   style,
   value,
-  labelAttributes,
   ...rest
 }, ref) => {
   const TagName = interactiveType ? 'button' : 'span';
@@ -38,7 +38,7 @@ export const Label = React.forwardRef(({
   );
 
   return (
-    <span className={classNames} ref={ref} {...labelAttributes}>
+    <span className={classNames} ref={ref} {...containerAttributes}>
       <TagName
         className="sage-label__value"
         type={interactiveType ? 'button' : null}
@@ -69,7 +69,7 @@ Label.defaultProps = {
   interactiveType: null,
   isDropdown: false,
   isStatus: false,
-  labelAttributes: null,
+  containerAttributes: null,
   secondaryButton: null,
   style: LABEL_STYLES.DEFAULT,
 };
@@ -81,7 +81,7 @@ Label.propTypes = {
   interactiveType: PropTypes.oneOf(Object.values(LABEL_INTERACTIVE_TYPES)),
   isDropdown: PropTypes.bool,
   isStatus: PropTypes.bool,
-  labelAttributes: PropTypes.shape({}),
+  containerAttributes: PropTypes.shape({}),
   secondaryButton: PropTypes.node,
   style: PropTypes.oneOf(Object.values(LABEL_STYLES)),
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
