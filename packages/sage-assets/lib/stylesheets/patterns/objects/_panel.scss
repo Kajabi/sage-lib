@@ -8,11 +8,6 @@
 .sage-panel {
   @include sage-panel;
   @include sage-grid-panel;
-
-  .sage-dropdown__panel & {
-    border: 0;
-    box-shadow: none;
-  }
 }
 
 .sage-panel-grid {
