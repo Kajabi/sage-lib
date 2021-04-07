@@ -54,7 +54,7 @@
               role="none"
               <%= "aria-selected=true" if item[:selected] %>
             >
-              <% if item[:attributes].nil? && item[:attributes]&.keys&.include?(:href) || item[:attributes]&.keys&.include?("href") %>
+              <% if item[:attributes].nil? || item[:attributes]&.keys&.include?(:href) || item[:attributes]&.keys&.include?("href") %>
                 <a
                   <% item[:attributes].each do |key, value| %>
                     <%= key %>="<%= value %>"
