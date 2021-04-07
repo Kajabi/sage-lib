@@ -81,7 +81,7 @@ Label.propTypes = {
   interactiveType: PropTypes.oneOf(Object.values(LABEL_INTERACTIVE_TYPES)),
   isDropdown: PropTypes.bool,
   isStatus: PropTypes.bool,
-  labelAttributes: PropTypes.node,
+  labelAttributes: PropTypes.shape({}),
   secondaryButton: PropTypes.node,
   style: PropTypes.oneOf(Object.values(LABEL_STYLES)),
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
