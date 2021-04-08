@@ -41,6 +41,7 @@ export const Default = (args) => {
       numSelectedRows: 0,
       pageSize: 1,
       pageSizeOptions: [25, 50, 100],
+      pageSizeOptionSuffix: ' / pg',
       rowNoun: {
         singular: 'article',
         plural: 'articles',
