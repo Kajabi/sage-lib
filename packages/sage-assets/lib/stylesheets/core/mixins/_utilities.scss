@@ -152,3 +152,22 @@
   white-space: nowrap;
   border: 0;
 }
+
+///
+/// Media Queries to target Safari browser
+///
+@mixin target-safari {
+  @media not all and (min-resolution: 0.001dpcm) {
+    @supports (-webkit-appearance:none) {
+      @content;
+    }
+  }
+}
+// Target Safari 13.0 and below
+@mixin target-safari-13-and-below {
+  @supports (-webkit-marquee-repetition:infinite) and (object-fit:fill) {
+    @supports (-webkit-appearance:none) {
+      @content;
+    }
+  }
+}

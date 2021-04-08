@@ -1,4 +1,4 @@
-<h3 class="t-sage-heading-6">As a Panel list</h3>
+<h3 class="t-sage-heading-6"><code>SageSortableItem</code> as a Panel list</h3>
 <%= sage_component SagePanelList, {} do %>
   <%= sage_component SageSortable, { resource_name: "link" } do %>
 
@@ -43,7 +43,7 @@
   <% end %>
 <% end %>
 
-<h3 class="t-sage-heading-6">As cards with no subtitles</h3>
+<h3 class="t-sage-heading-6"><code>SageSortableItem</code> as cards with no subtitles</h3>
 <%= sage_component SageSortable, { resource_name: "link" } do %>
   <% 3.times do %>
     <%= sage_component SageSortableItem, {
@@ -85,7 +85,7 @@
   <% end %>
 <% end %>
 
-<h3 class="t-sage-heading-6">As cards with images and without subtitles</h3>
+<h3 class="t-sage-heading-6"><code>SageSortableItem</code> as cards with images and without subtitles</h3>
 <%= sage_component SageSortable, { resource_name: "link" } do %>
   <% 3.times do %>
     <%= sage_component SageSortableItem, {
@@ -116,7 +116,11 @@
 <% end %>
 
 
-<h3 class="t-sage-heading-6">Using a custom <code>grid template : "te"</code></h3>
+<%= md('
+`SageSortableRow` should be used when you want to create a layout within the Sortable Item that follows any pattern using specified dot and dash pattern denoted in the [Sage Grid Templates](http://sage-design-system.kajabi.com/pages/layout/grid_templates) docs. It its simpliest form, `SageSortableRow` is `SageSortableItem` as cards with no image or subtitles, but any combination Sage Grid Template.
+', use_sage_type: true) %>
+
+<h3 class="t-sage-heading-6"><code>SageSortableRow</code> using a custom <code>grid template : "te"</code></h3>
 <%= sage_component SageSortable, { resource_name: "link" } do %>
   <% 3.times do %>
     <%= sage_component SageSortableRow, {
@@ -166,7 +170,7 @@
   <% end %>
 <% end %>
 
-<h3 class="t-sage-heading-6">Using a custom <code>grid template : "me"</code></h3>
+<h3 class="t-sage-heading-6"><code>SageSortableRow</code> using a custom <code>grid template : "me"</code></h3>
 <%= sage_component SageSortable, { 
   resource_name: "link" } do %>
   <% 3.times do %>
@@ -217,3 +221,4 @@
     } %>
   <% end %>
 <% end %>
+

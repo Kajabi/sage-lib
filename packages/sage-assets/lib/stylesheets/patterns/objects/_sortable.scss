@@ -60,6 +60,14 @@ $-sortable-image-height: rem(48px);
 
   &.sage-sortable__row {
     display: flex;
+
+    @include target-safari {
+      /* stylelint-disable max-nesting-depth */
+      .sage-card__row {
+        margin-left: sage-spacing(sm);
+      }
+      /* stylelint-enable max-nesting-depth */
+    }
   }
 
   &.sage-sortable__item--active,
