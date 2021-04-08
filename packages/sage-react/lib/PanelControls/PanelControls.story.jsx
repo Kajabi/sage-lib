@@ -39,7 +39,7 @@ export const Default = (args) => {
       currentPage: 1,
       itemsOnThisPage: 0,
       numSelectedRows: 0,
-      pageSize: 1,
+      pageSize: 50,
       pageSizeOptions: [25, 50, 100],
       pageSizeOptionSuffix: ' / pg',
       rowNoun: {
