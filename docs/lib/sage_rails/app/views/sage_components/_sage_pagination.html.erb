@@ -3,6 +3,7 @@
     class="
       sage-pagination
       <% if component.hide_counter %>sage-pagination--no-counter<% end %>
+      <%= "sage-pagination--align-#{component.align}" if component.align.present? %>
       <%= component.generated_css_classes %>
     "
     role="pagination"
@@ -17,9 +18,9 @@
       </span>
     <% end %>
 
-    <ul class="sage-pagination__pages <% if component.show_arrows %>sage-pagination__pages--show-arrows<% end %>">
-      <% prev_text = component.show_arrows ? %(<span class="sage-pagination__page-text">#{component.prev_text}</span>).html_safe : component.prev_text %>
-      <% next_text = component.show_arrows ? %(<span class="sage-pagination__page-text">#{component.next_text}</span>).html_safe : component.next_text %>
+    <ul class="sage-pagination__pages">
+      <% prev_text = %(<span class="sage-pagination__page-text">Back</span>).html_safe %>
+      <% next_text = %(<span class="sage-pagination__page-text">Next</span>).html_safe %>
       <% if component.items.first_page? %>
       <li class="sage-pagination__item">
         <a href="#" class="sage-pagination__page sage-pagination__page--disabled">
