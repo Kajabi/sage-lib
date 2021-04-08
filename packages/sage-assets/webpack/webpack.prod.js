@@ -25,7 +25,7 @@ module.exports = {
             loader: MiniCssExtractPlugin.loader,
             options: {
               sourceMap: true,
-              sourceMapContents: false,
+              sourceMapContents: false
             },
           },
           "css-loader",
@@ -36,6 +36,10 @@ module.exports = {
       {
         test: /\.(woff|woff2|eot|ttf)$/,
         loader: "file-loader",
+        options: {
+          outputPath: './fonts',
+          publicPath: './fonts'
+        }
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/,
