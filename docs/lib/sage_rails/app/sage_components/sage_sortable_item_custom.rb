@@ -1,4 +1,4 @@
-class SageSortableRow < SageComponent
+class SageSortableItemCustom < SageComponent
   set_attribute_schema({
     grid_template: String,
     id: [:optional, Integer, String],

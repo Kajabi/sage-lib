@@ -38,7 +38,7 @@ $-sortable-image-height: rem(48px);
   }
 
   &.sage-sortable__item--card,
-  &.sage-sortable__row {
+  &.sage-sortable__item--custom {
     padding: sage-spacing(xs) sage-spacing(card);
     border-bottom: sage-border();
     border-left: sage-border();
@@ -58,7 +58,7 @@ $-sortable-image-height: rem(48px);
     }
   }
 
-  &.sage-sortable__row {
+  &.sage-sortable__item--custom {
     display: flex;
 
     @include target-safari {
