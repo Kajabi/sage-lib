@@ -59,7 +59,8 @@ $-alert-icon-colors: (
 }
 
 .sage-alert__title {
-  @extend %t-sage-body-semi;
+  @extend %t-sage-heading-6;
+
   @each $name, $color in $-alert-colors {
     .sage-alert--#{$name} & {
       color: sage-color($color, 500);
