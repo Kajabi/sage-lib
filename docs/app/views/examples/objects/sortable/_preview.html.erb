@@ -91,7 +91,7 @@
     <%= sage_component SageSortableItem, {
       title: "Fringilla Ullamcorper Dolor Adipiscing Ultricies",
       url_update: "update/endpoint",
-      image: "http://placehold.it/150",
+      image: "/assets/card-placeholder-sm.png",
       id: "id",
       card: true
     } do %>
@@ -171,7 +171,7 @@
 <% end %>
 
 <h3 class="t-sage-heading-6"><code>SageSortableItemCustom</code> using a custom <code>grid template : "me"</code></h3>
-<%= sage_component SageSortable, { 
+<%= sage_component SageSortable, {
   resource_name: "link" } do %>
   <% 3.times do %>
     <%= sage_component SageSortableItemCustom, {
