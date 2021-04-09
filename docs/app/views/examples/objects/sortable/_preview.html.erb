@@ -1,4 +1,4 @@
-<h3 class="t-sage-heading-6">As a Panel list</h3>
+<h3 class="t-sage-heading-6"><code>SageSortableItem</code> as a Panel list</h3>
 <%= sage_component SagePanelList, {} do %>
   <%= sage_component SageSortable, { resource_name: "link" } do %>
 
@@ -43,7 +43,7 @@
   <% end %>
 <% end %>
 
-<h3 class="t-sage-heading-6">As cards with no subtitles</h3>
+<h3 class="t-sage-heading-6"><code>SageSortableItem</code> as cards with no subtitles</h3>
 <%= sage_component SageSortable, { resource_name: "link" } do %>
   <% 3.times do %>
     <%= sage_component SageSortableItem, {
@@ -85,7 +85,7 @@
   <% end %>
 <% end %>
 
-<h3 class="t-sage-heading-6">As cards with images and without subtitles</h3>
+<h3 class="t-sage-heading-6"><code>SageSortableItem</code> as cards with images and without subtitles</h3>
 <%= sage_component SageSortable, { resource_name: "link" } do %>
   <% 3.times do %>
     <%= sage_component SageSortableItem, {
@@ -114,3 +114,111 @@
     } %>
   <% end %>
 <% end %>
+
+
+<%= md('
+`SageSortableItemCustom` should be used when you want to create a layout within the Sortable Item that follows any pattern using specified dot and dash pattern denoted in the [Sage Grid Templates](http://sage-design-system.kajabi.com/pages/layout/grid_templates) docs. At its simpliest form, `SageSortableItemCustom` is `SageSortableItem` as cards with no image or subtitles, but any combination Sage Grid Template.
+', use_sage_type: true) %>
+
+<h3 class="t-sage-heading-6"><code>SageSortableItemCustom</code> using a custom <code>grid template : "te"</code></h3>
+<%= sage_component SageSortable, { resource_name: "link" } do %>
+  <% 3.times do %>
+    <%= sage_component SageSortableItemCustom, {
+      grid_template: "te",
+      id: "id",
+      url_update: "update/endpoint",
+    } do %>
+      <a href="#">Field 1</a>
+      <%= sage_component SageDropdown, {
+        align: "right",
+        items: [
+          {
+            value: "Edit",
+            icon: "pen",
+            attributes: {},
+          },
+          {
+            value: "Preview",
+            icon: "preview-on",
+            attributes: {},
+          },
+          {
+            value: "Delete",
+            style: "danger",
+            border_before: true,
+            modifiers: ["border-before"],
+            icon: "trash",
+            attributes: {},
+          },
+        ]
+      } do %>
+        <%= sage_component SageButton,  {
+          style: "secondary",
+          subtle: true,
+          icon: { name: "dot-menu-horizontal", style: "only" },
+          value: "edit",
+        } %>
+      <% end %>
+    <% end %>
+  <% end %>
+
+  <%= sage_component_section :empty do %>
+    <%= sage_component SageEmptyState, {
+      title: "Empty State Title",
+      text: "Empty state text",
+    } %>
+  <% end %>
+<% end %>
+
+<h3 class="t-sage-heading-6"><code>SageSortableItemCustom</code> using a custom <code>grid template : "me"</code></h3>
+<%= sage_component SageSortable, { 
+  resource_name: "link" } do %>
+  <% 3.times do %>
+    <%= sage_component SageSortableItemCustom, {
+      grid_template: "me",
+      id: "id",
+      url_update: "update/endpoint",
+    } do %>
+      <a href="#">Field 1</a>
+      <span>Field 2</span>
+      <%= sage_component SageDropdown, {
+        align: "right",
+        items: [
+          {
+            value: "Edit",
+            icon: "pen",
+            attributes: {},
+          },
+          {
+            value: "Preview",
+            icon: "preview-on",
+            attributes: {},
+          },
+          {
+            value: "Delete",
+            style: "danger",
+            border_before: true,
+            modifiers: ["border-before"],
+            icon: "trash",
+            attributes: {},
+          },
+        ]
+      } do %>
+        <%= sage_component SageButton,  {
+          style: "secondary",
+          subtle: true,
+          icon: { name: "dot-menu-horizontal", style: "only" },
+          value: "edit",
+        } %>
+      <% end %>
+    <% end %>
+  <% end %>
+
+  <%= sage_component_section :empty do %>
+    <%= sage_component SageEmptyState, {
+      title: "Empty State Title",
+      text: "Empty state text",
+    } %>
+  <% end %>
+<% end %>
+
