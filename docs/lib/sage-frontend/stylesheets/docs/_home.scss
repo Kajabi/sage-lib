@@ -5,8 +5,7 @@
 ================================================== */
 
 .docs-hero {
-  padding: sage-spacing();
-  padding-bottom: rem(100px);
+  padding: sage-spacing() sage-spacing() rem(100px);
   color: sage-color(white);
   background-repeat: no-repeat;
   background-position: center center;
@@ -30,7 +29,7 @@
   margin-bottom: sage-spacing(sm);
   margin-top: sage-spacing();
   font-size: 4rem;
-  line-height: 4.5rem;
+  line-height: sage-baseline(16);
 }
 
 .docs-hero__img {
