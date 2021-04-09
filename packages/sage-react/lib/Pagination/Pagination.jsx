@@ -13,8 +13,10 @@ import { PaginationItem } from './PaginationItem';
 import { PaginationItemGap } from './PaginationItemGap';
 
 export const Pagination = ({
+  align,
   className,
   currentPage,
+  hideCounter,
   hidePageButtons,
   itemsNoun,
   itemsTotalCount,
@@ -50,13 +52,14 @@ export const Pagination = ({
     'sage-pagination',
     className,
     {
-      'sage-pagination--no-counter': !itemsTotalCount,
+      'sage-pagination--no-counter': !itemsTotalCount || hideCounter,
+      [`sage-pagination--align-${align}`]: align,
     }
   );
 
   const renderPageCount = () => {
     // Do not render page count if no itemsTotalCount is provided.
-    if (!itemsTotalCount) {
+    if (!itemsTotalCount || hideCounter) {
       return null;
     }
 
@@ -200,7 +203,9 @@ export const Pagination = ({
 };
 
 Pagination.defaultProps = {
+  align: null,
   className: null,
+  hideCounter: false,
   hidePageButtons: false,
   itemsTotalCount: null,
   itemsNoun: PAGINATION_DEFAULT_ITEMS_NOUN,
@@ -215,8 +220,10 @@ Pagination.defaultProps = {
 };
 
 Pagination.propTypes = {
+  align: PropTypes.string,
   className: PropTypes.string,
   currentPage: PropTypes.number.isRequired,
+  hideCounter: PropTypes.bool,
   hidePageButtons: PropTypes.bool,
   itemsTotalCount: PropTypes.number,
   itemsNoun: PropTypes.string,

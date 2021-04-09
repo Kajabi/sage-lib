@@ -5,8 +5,9 @@ Sage.modal = (function() {
   // ==================================================
 
   const SELECTOR_MODAL = 'data-js-modal';
-  const SELECTOR_MODAL_CONTAINER = '.sage-modal__container';
+  const SELECTOR_MODAL_CONTAINER = 'data-js-modal-container';
   const SELECTOR_MODAL_DISABLE_CLOSE = 'data-js-modal-disable-close';
+  const SELECTOR_MODAL_REMOTE_URL = 'data-js-remote-url';
   const SELECTOR_MODAL_REMOVE_CONTENTS_ON_CLOSE = 'data-js-modal-remove-content-on-close';
   const SELECTOR_MODAL_CLOSE = 'data-js-modal-close';
   const SELECTOR_MODALTRIGGER = 'data-js-modaltrigger';
@@ -55,6 +56,9 @@ Sage.modal = (function() {
   function openModal(modalId) {
     let modal = document.querySelector(`[${SELECTOR_MODAL}="${modalId}"]`);
     let focusableEls = modal.querySelectorAll(SELECTOR_FOCUSABLE_ELEMENTS);
+    if(modal.hasAttribute(SELECTOR_MODAL_REMOTE_URL)) {
+      fetchModalContent(modal);
+    }
 
     SELECTOR_LAST_FOCUSED = document.activeElement;
     modal.classList.add('sage-modal--active');
@@ -99,9 +103,22 @@ Sage.modal = (function() {
     removeModalContents(el);
   }
 
+  function fetchModalContent(el) {
+    let elContainer = el.querySelector(`[${SELECTOR_MODAL_CONTAINER}]`);
+    let url = el.getAttribute(SELECTOR_MODAL_REMOTE_URL);
+    const xhr = new XMLHttpRequest();
+
+    xhr.addEventListener('load', (evt) => {
+      elContainer.innerHTML = evt.currentTarget.response;
+    }, { once: true });
+
+    xhr.open('GET', url, true);
+    xhr.send();
+  }
+
   function removeModalContents(el) {
     if ( el.hasAttribute(SELECTOR_MODAL_REMOVE_CONTENTS_ON_CLOSE) ) {
-      let elContainer = el.querySelector(`${SELECTOR_MODAL_CONTAINER}`);
+      let elContainer = el.querySelector(`[${SELECTOR_MODAL_CONTAINER}]`);
       elContainer.innerHTML = "";
     }
   }

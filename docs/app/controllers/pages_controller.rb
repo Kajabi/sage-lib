@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   def index
+    render(layout: 'home')
   end
 
   def foundation
@@ -24,9 +25,6 @@ class PagesController < ApplicationController
 
   def element
     @title = params[:title]
-  end
-
-  def getting_started
   end
 
   def elements

@@ -6,23 +6,27 @@
 @import "variables";
 
 // Documentation Styles
+@import "assistant";
 @import "colors";
 @import "text";
 @import "code";
 @import "snippet";
 @import "grid";
 @import "heading";
+@import "home";
 @import "specs";
 @import "icon";
+@import "nav";
+@import "panel";
 @import "quick_links";
 @import "section";
 @import "feature";
+@import "footer";
 @import "token";
 @import "example";
 @import "sidebar";
 @import "status_key";
 @import "status_table";
 @import "table";
-@import "theme";
 @import "docs_container";
 @import "rouge_theme";

@@ -5,7 +5,6 @@ Sage.search = (function() {
 
   const SELECTOR_CLEAR_BUTTON = 'data-js-search-clear';
   const CLASS_HAS_TEXT = 'sage-search--has-text';
-  const DISABLE_SEARCH_ON_CLEAR = 'data-js-disable-search-on-clear';
 
 
   // ==================================================
@@ -38,10 +37,9 @@ Sage.search = (function() {
   function onClearButtonClick(evt) {
     let el = evt.target.parentNode,
         elInput = getInput(el);
+
     elInput.value = '';
-    if (!elInput.getAttribute(DISABLE_SEARCH_ON_CLEAR)){
-      search(elInput.value);
-    }
+    search(elInput.value);
     hasTextCssClassController(el);
   }
 

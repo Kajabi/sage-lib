@@ -12,7 +12,7 @@
   color: sage-color(sage, 200);
   font-size: sage-font-size(sm);
   font-weight: sage-font-weight(normal);
-  background-color: sage-color(primary, 500);
+  background-color: $docs-code-editor-background;
   border-radius: sage-border(radius);
 
   &.prettyprinted {
@@ -31,7 +31,7 @@ pre .nocode {
   background-color: none;
 }
 pre .str { /* string */
-  color: sage-color(sage, 200);
+  color: sage-color(orange, 200);
 }
 pre .kwd {
   color: sage-color(sage, 200);
@@ -48,13 +48,13 @@ pre .lit { /* literal */
   color: sage-color(sage, 200);
 }
 pre .pun { /* punctuation */
-  color: sage-color(sage, 200);
+  color: sage-color(purple, 200);
 }
 pre .pln { /* plaintext */
   color: sage-color(primary, 200);
 }
 pre .tag { /* html/xml tag */
-  color: sage-color(primary, 200);
+  color: sage-color(purple, 200);
   font-weight: bold;
 }
 pre .atn { /* attribute name */

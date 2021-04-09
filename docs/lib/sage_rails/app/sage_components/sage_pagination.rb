@@ -1,10 +1,10 @@
 class SagePagination < SageComponent
   set_attribute_schema({
+    align: [:optional, Set.new(["center"])],
     items: -> (v) { SageSchemaHelper.can_paginate?(v) },
     window: [:optional, Integer],
     hide_pages: [:optional, TrueClass],
     hide_counter: [:optional, TrueClass],
-    show_arrows: [:optional, TrueClass],
     additional_params: [:optional, Hash],
     collection_name: [:optional, String],
     page_count_prefix: [:optional, String],
@@ -14,14 +14,6 @@ class SagePagination < SageComponent
   def initialize(attributes = {})
     super
     self.additional_params ||= {}
-  end
-
-  def prev_text
-    "Back".html_safe
-  end
-
-  def next_text
-    "Next".html_safe
   end
 
   def page_count(collection)

@@ -1,38 +1,37 @@
-<% component_classname = "sage_#{title}".camelize %>
+<% component_classname = "sage_#{title}".camelize %> 
 
-<%= sage_component SagePanelHeader, {} do %>
-  <h2 id="<%= title %>-example-code">SageRails Component</h2>
-  <code><%= component_classname %></code>
-<% end %>
-
-<%= sage_component SageCard, {} do %>
-  <%= sage_component SageCardHeader, { title: "Preview Source" } %>
-  <div class="example__code">
-    <button class="example__expand-btn" aria-expanded="false" aria-controls="example-rails-code-<%= title %>">Expand this code snippet</button>
-    <div id="example-rails-code-<%= title %>" class="sage-code-snippet" tabindex="-1">
-      <pre class="prettyprint"><code><%= File.read(File.join(Rails.root, "app/views/examples/", type.pluralize, title, "_preview.html.erb")) %></code></pre>
+<div class="example__wrapper">
+  <%= sage_component SageCard, { spacer: { bottom: :md } } do %>
+    <%= sage_component SageCardHeader, { title: "Sage Component" } do %>
+      <code><%= component_classname %></code>
+    <% end %>
+    <div class="example__code">
+      <button class="example__expand-btn" aria-expanded="false" aria-controls="example-rails-code-<%= title %>">Expand this code snippet</button>
+      <div id="example-rails-code-<%= title %>" class="sage-code-snippet" tabindex="-1">
+        <pre class="prettyprint"><code><%= File.read(File.join(Rails.root, "app/views/examples/", type.pluralize, title, "_preview.html.erb")) %></code></pre>
+      </div>
     </div>
-  </div>
-<% end %>
-
-<%= sage_component SageCard, {} do %>
-  <%= sage_component SageCardHeader, { title: "Attribute Schema"} do %>
-    <code><%= component_classname %>::ATTRIBUTE_SCHEMA</code>
   <% end %>
-  <div class="example__code">
-    <button class="example__expand-btn" aria-expanded="false" aria-controls="example-rails-code-<%= title %>">Expand this code snippet</button>
-    <div id="example-rails-code-<%= title %>" class="sage-code-snippet" tabindex="-1">
-      <pre class="prettyprint"><code><%= component_classname.constantize::ATTRIBUTE_SCHEMA.pretty_inspect %></code></pre>
-    </div>
-  </div>
-<% end %>
 
-<%= sage_component SageCard, {} do %>
-  <%= sage_component SageCardHeader, { title: "Preview Generated HTML Code"} %>
-  <div class="example__code">
-    <button class="example__expand-btn" aria-expanded="false" aria-controls="example-html-code-<%= title %>">Expand this code snippet</button>
-    <div id="example-html-code-<%= title %>" class="sage-code-snippet" tabindex="-1">
-      <pre class="prettyprint"><code><%= CGI.unescapeHTML(CGI.escapeHTML(render("examples/#{type.pluralize}/#{title}/preview"))) %></code></pre>
+  <%= sage_component SageCard, { spacer: { bottom: :md } } do %>
+    <%= sage_component SageCardHeader, { title: "Attribute Schema"} do %>
+      <code><%= component_classname %>::ATTRIBUTE_SCHEMA</code>
+    <% end %>
+    <div class="example__code">
+      <button class="example__expand-btn" aria-expanded="false" aria-controls="example-rails-code-<%= title %>">Expand this code snippet</button>
+      <div id="example-rails-code-<%= title %>" class="sage-code-snippet" tabindex="-1">
+        <pre class="prettyprint"><code><%= component_classname.constantize::ATTRIBUTE_SCHEMA.pretty_inspect %></code></pre>
+      </div>
     </div>
-  </div>
-<% end %>
+  <% end %>
+
+  <%= sage_component SageCard, { spacer: { bottom: :md } } do %>
+    <%= sage_component SageCardHeader, { title: "Generated HTML Code"} %>
+    <div class="example__code">
+      <button class="example__expand-btn" aria-expanded="false" aria-controls="example-html-code-<%= title %>">Expand this code snippet</button>
+      <div id="example-html-code-<%= title %>" class="sage-code-snippet" tabindex="-1">
+        <pre class="prettyprint"><code><%= CGI.unescapeHTML(CGI.escapeHTML(render("examples/#{type.pluralize}/#{title}/preview"))) %></code></pre>
+      </div>
+    </div>
+  <% end %>
+</div>

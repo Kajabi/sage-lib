@@ -15,19 +15,21 @@
     <div class="sage-stage">
       <%= render "application/sidebar" %>
       <main class="sage-content" id="main-content">
-        <div class="sage-container sage-container--lg">
-          <div class="sage-row">
-            <div class="sage-col--lg-7 docs-heading">
-              <%= yield :heading %>
+        <div class="sage-container sage-container--sm">
+          <div class="docs-panel">
+            <div class="sage-row">
+              <div class="sage-col--lg-10 docs-heading">
+                <%= yield :heading %>
+              </div>
+            </div>
+            <div class="sage-row">
+              <div class="sage-col--lg-12">
+                <hr/>
+                <%= yield %>
+              </div>
             </div>
           </div>
-          <div class="sage-row">
-            <div class="sage-col--lg-9">
-              <hr/>
-              <%= yield %>
-            </div>
-            <div class="sage-col--lg-3 sage-col--md-hide"><%= yield :quick_links %></div>
-          </div>
+          <%= render "application/footer" %>
         </div>
       </main>
       <div class="sage-overlay" aria-hidden="true"></div>

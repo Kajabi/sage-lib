@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%= render "application/meta" %>
+    <%= render "application/styles" %>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css">
+  </head>
+  <body class="sage-docs">
+    <%= render "application/content_skip_link",
+      link_id: "main-content"
+    -%>
+    <%= yield %>
+    <%= render "application/footer" %>
+    <%= render "scripts" %>
+  </body>
+</html>
