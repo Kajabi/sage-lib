@@ -5,13 +5,12 @@
 ================================================== */
 
 .docs-hero {
+  padding: sage-spacing() sage-spacing() rem(100px);
+  color: sage-color(white);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   background-color: sage-color(primary, 500);
-  color: #fff;
-  padding: sage-spacing();
-  padding-bottom: rem(100px);
 
   @media (max-width: sage-breakpoint(md-min)) {
     padding-bottom: sage-spacing(xl);
@@ -27,10 +26,10 @@
 }
 
 .docs-hero__title {
-  font-size: 4rem;
-  line-height: 4.5rem;
   margin-bottom: sage-spacing(sm);
   margin-top: sage-spacing();
+  font-size: 4rem;
+  line-height: sage-baseline(16);
 }
 
 .docs-hero__img {
@@ -43,8 +42,8 @@
 }
 
 .docs-section {
-  background: sage-color(gray, 200);
   padding: sage-spacing(2xl) sage-spacing();
+  background: sage-color(gray, 200);
 
   @media (max-width: sage-breakpoint(md-min)) {
     padding: sage-spacing();
@@ -64,6 +63,6 @@
 }
 
 .docs-section__platform-icon {
-  font-size: rem(48px);
   margin-bottom: sage-spacing();
+  font-size: rem(48px);
 }

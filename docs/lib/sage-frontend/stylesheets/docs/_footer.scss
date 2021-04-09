@@ -9,11 +9,12 @@
   background: sage-color(gray, 200);
 
   .devicon {
-    font-size: sage-font-size(2xl);
     align-self: center;
+    font-size: sage-font-size(2xl);
   }
-  
+
   .sage-stage & {
     padding: sage-spacing(2xl) 0;
+    background: none;
   }
 }
