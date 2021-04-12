@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.27.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.27.0...@kajabi/sage-assets@0.27.1) (2021-04-12)
+
+
+### Bug Fixes
+
+* **pagination:** fixed hover on current pagination item ([19d94bd](https://github.com/Kajabi/sage-lib/commit/19d94bdd7d8bc00adb828615d7ffb945de672ad6))
+* **pagination:** removed show_arrows prop as the arrows are now always visible ([13f3d64](https://github.com/Kajabi/sage-lib/commit/13f3d64ddeec64d5576176264013d7d87209d86d))
+* **pagination:** update styles to match spec ([ae89583](https://github.com/Kajabi/sage-lib/commit/ae895835d2bc3faa167afe6fd29df7daaf470413))
+* **pagination:** updated styles and added react prop ([561a0d2](https://github.com/Kajabi/sage-lib/commit/561a0d219354071033c86259b1d92781e4edb247))
+* **pagination:** updates styles to all pagination items ([3e3e63c](https://github.com/Kajabi/sage-lib/commit/3e3e63c25ad29235f4d8f94e6bd26d033b0a1201))
+* **sortable:** updated padding after tag update ([285d33d](https://github.com/Kajabi/sage-lib/commit/285d33ddb3a689a264b145b7282f71631aa63cc6))
+* **sortable:** updates per review and added media query to target safari ([54b549b](https://github.com/Kajabi/sage-lib/commit/54b549bbe9c7237361ab3da1922070f64ac02722))
+* **sortable-custom:** updated naming for component ([2dd1f69](https://github.com/Kajabi/sage-lib/commit/2dd1f696ba23cf676840673593c925cb9a9ae7e0))
+* **sortable-item-custom:** added new rails subcomponent ([43f56ef](https://github.com/Kajabi/sage-lib/commit/43f56ef293cb190a9af3ef7272c8c4b3f6851ce8))
+* **sortable-row:** updated additional naming ([6ef20a6](https://github.com/Kajabi/sage-lib/commit/6ef20a6ea77ff0a06ed58ff2262f8372f4172571))
+
+
+
+
+
 # [0.27.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.26.1...@kajabi/sage-assets@0.27.0) (2021-04-01)
 
 

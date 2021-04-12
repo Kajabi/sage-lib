@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.5.1...@kajabi/sage-system@0.6.0) (2021-04-12)
+
+
+### Bug Fixes
+
+* **selector:** populate content in the correct element ([2f324c1](https://github.com/Kajabi/sage-lib/commit/2f324c19d74a42af7a1179409cd93662ad428275))
+* **selector:** use data-js-* attrs to select element ([10003e8](https://github.com/Kajabi/sage-lib/commit/10003e8d028cf6f5109af30399e426183465a54e))
+
+
+### Features
+
+* **modal:** adds remote_url option ([ec2ae20](https://github.com/Kajabi/sage-lib/commit/ec2ae20ac48014a4a2c623bcfa0cfab2b6f1d2f1))
+
+
+
+
+
 ## [0.5.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.5.0...@kajabi/sage-system@0.5.1) (2021-04-01)
 
 
