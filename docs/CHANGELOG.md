@@ -3,6 +3,39 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.21.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.20.0...@kajabi/sage@3.21.0) (2021-04-12)
+
+
+### Bug Fixes
+
+* **attr:** no need to quote the value ([3bd01cb](https://github.com/Kajabi/sage-lib/commit/3bd01cb9fd19e8025eccc51cbc62ac12270316dc))
+* **docs:** fixing the type for remote_url in the docs ([31c5736](https://github.com/Kajabi/sage-lib/commit/31c573646f62ccc2d0b6415f2c427d6b36be71ee))
+* **pagination:** fixed pagination docs ([2730a5e](https://github.com/Kajabi/sage-lib/commit/2730a5e1f855b39d3d774e4cb9b63ae16facfad6))
+* **pagination:** fixed pagination docs ([f2e55bd](https://github.com/Kajabi/sage-lib/commit/f2e55bdf2dd20259e3db8f285f7bfad656ad8850))
+* **pagination:** removed show_arrows prop as the arrows are now always visible ([13f3d64](https://github.com/Kajabi/sage-lib/commit/13f3d64ddeec64d5576176264013d7d87209d86d))
+* **pagination:** removed unused pagination markup file ([7f0e20c](https://github.com/Kajabi/sage-lib/commit/7f0e20c8ae8f0c64a20b8439d7a487c8c9301380))
+* **pagination:** updated styles and added react prop ([561a0d2](https://github.com/Kajabi/sage-lib/commit/561a0d219354071033c86259b1d92781e4edb247))
+* **search.js:** put data-kjb-disable-search on correct element that products searches for ([0937983](https://github.com/Kajabi/sage-lib/commit/09379835f53557781a8ee9464b8cb3f7d6bf72e0)), closes [/github.com/Kajabi/kajabi-products/blob/master/app/assets/javascripts/search.js#L1](https://github.com//github.com/Kajabi/kajabi-products/blob/master/app/assets/javascripts/search.js/issues/L1)
+* **sortable:** updated docs typo ([3500535](https://github.com/Kajabi/sage-lib/commit/3500535d78a1f6c45999d974babe5e1b4ca2e8c1))
+* **sortable:** updates per review and added media query to target safari ([54b549b](https://github.com/Kajabi/sage-lib/commit/54b549bbe9c7237361ab3da1922070f64ac02722))
+* **sortable-custom:** updated naming for component ([2dd1f69](https://github.com/Kajabi/sage-lib/commit/2dd1f696ba23cf676840673593c925cb9a9ae7e0))
+* **sortable-item-custom:** added new rails subcomponent ([43f56ef](https://github.com/Kajabi/sage-lib/commit/43f56ef293cb190a9af3ef7272c8c4b3f6851ce8))
+* **sortable-item-custom:** removed prop until followup ([42e0feb](https://github.com/Kajabi/sage-lib/commit/42e0febf7078448a42bb1ed656b741f1937f7b58))
+* **sortable-row:** updated additional naming ([6ef20a6](https://github.com/Kajabi/sage-lib/commit/6ef20a6ea77ff0a06ed58ff2262f8372f4172571))
+* **sortable-row:** updated docs ([8a21cc2](https://github.com/Kajabi/sage-lib/commit/8a21cc2387bcd53bb55e83082fa2e06a948b0b43))
+* **sortable-row:** updated naming and added grid_template props ([115a88f](https://github.com/Kajabi/sage-lib/commit/115a88fc39f112b13d5fc829d5575437010a8ee8))
+
+
+### Features
+
+* **label:** add attributes to label view ([382f47e](https://github.com/Kajabi/sage-lib/commit/382f47eea2c1773b96e7990927af3b626cf20834))
+* **label:** adds attributes to label ([40543f9](https://github.com/Kajabi/sage-lib/commit/40543f99858b049192bbf91dbc263577cdf61674))
+* **modal:** adds remote_url option ([ec2ae20](https://github.com/Kajabi/sage-lib/commit/ec2ae20ac48014a4a2c623bcfa0cfab2b6f1d2f1))
+
+
+
+
+
 # [3.20.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.19.1...@kajabi/sage@3.20.0) (2021-04-01)
 
 

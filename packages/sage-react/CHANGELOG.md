@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.36.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.35.0...@kajabi/sage-react@0.36.0) (2021-04-12)
+
+
+### Bug Fixes
+
+* **pagination:** linter fix ([10ac307](https://github.com/Kajabi/sage-lib/commit/10ac30797d1b2ae33bc8ad26d3b5da6f53c2c2ed))
+* **pagination:** updated styles and added react prop ([561a0d2](https://github.com/Kajabi/sage-lib/commit/561a0d219354071033c86259b1d92781e4edb247))
+* **pagination:** updates styles to all pagination items ([3e3e63c](https://github.com/Kajabi/sage-lib/commit/3e3e63c25ad29235f4d8f94e6bd26d033b0a1201))
+
+
+### Features
+
+* **label:** add labelAttributes to react label ([677e803](https://github.com/Kajabi/sage-lib/commit/677e80342fe48e971b15e70dc1f8b9d40813e2c2))
+
+
+
+
+
 # [0.35.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.34.1...@kajabi/sage-react@0.35.0) (2021-04-01)
 
 
