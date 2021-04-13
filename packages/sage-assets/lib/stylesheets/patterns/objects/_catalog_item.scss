@@ -14,15 +14,15 @@ $-catalogue-item-image-height-mobile: rem(120px);
   display: grid;
   grid-column-gap: sage-spacing(md);
   grid-row-gap: sage-spacing(xs);
-  padding: sage-spacing() sage-spacing();
-  margin-bottom: rem(-1px);
-  border-top: sage-border(light);
-  border-bottom: sage-border(light);
   grid-template-columns: 1fr min-content;
   grid-template-rows: auto auto;
   grid-template-areas:
     "title aside"
     "content aside";
+  padding: sage-spacing() sage-spacing();
+  margin-bottom: rem(-1px);
+  border-top: sage-border(light);
+  border-bottom: sage-border(light);
 
   &:only-child {
     border: 0;
