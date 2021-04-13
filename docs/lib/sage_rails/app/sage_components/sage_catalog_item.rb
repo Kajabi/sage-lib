@@ -3,6 +3,7 @@ class SageCatalogItem < SageComponent
     href: [:optional, String],
     image: [:optional, String],
     title: [:optional, String],
+    icon: [:optional, String],
   })
 
   def sections

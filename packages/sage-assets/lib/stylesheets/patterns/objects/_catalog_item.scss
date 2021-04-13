@@ -18,6 +18,11 @@ $-catalogue-item-image-height-mobile: rem(120px);
   margin-bottom: rem(-1px);
   border-top: sage-border(light);
   border-bottom: sage-border(light);
+  grid-template-columns: 1fr min-content;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "title aside"
+    "content aside";
 
   &:only-child {
     border: 0;
@@ -32,21 +37,23 @@ $-catalogue-item-image-height-mobile: rem(120px);
     cursor: wait;
   }
 
-  @media (min-width: sage-breakpoint(md-min)) {
-    grid-template-columns: $-catalogue-item-image-width 1fr min-content;
-    grid-template-rows: auto auto;
-    grid-template-areas:
-      "img title aside"
-      "img content aside";
-  }
-
-  @media (max-width: sage-breakpoint(md-min)) {
-    grid-template-columns: 1fr min-content;
-    grid-template-rows: $-catalogue-item-image-height-mobile auto auto;
-    grid-template-areas:
-      "img img"
-      "title aside"
-      "content content";
+  &.sage-catalog-item--img {
+    @media (min-width: sage-breakpoint(md-min)) {
+      grid-template-columns: $-catalogue-item-image-width 1fr min-content;
+      grid-template-rows: auto auto;
+      grid-template-areas:
+        "img title aside"
+        "img content aside";
+    }
+  
+    @media (max-width: sage-breakpoint(md-min)) {
+      grid-template-columns: 1fr min-content;
+      grid-template-rows: $-catalogue-item-image-height-mobile auto auto;
+      grid-template-areas:
+        "img img"
+        "title aside"
+        "content content";
+    }
   }
 }
 
