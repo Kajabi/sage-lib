@@ -55,6 +55,14 @@ $-catalogue-item-image-height-mobile: rem(120px);
         "content content";
     }
   }
+
+  &.sage-catalog-item--icon {
+    grid-template-columns: min-content 1fr min-content;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "icon title aside"
+      "icon content aside";
+  }
 }
 
 .sage-catalog-item__title {
@@ -90,6 +98,12 @@ $-catalogue-item-image-height-mobile: rem(120px);
     top: 50%;
     width: 100%;
   }
+}
+
+.sage-catalog-item__icon {
+  display: flex;
+  grid-area: icon;
+  align-items: center;
 }
 
 .sage-catalog-item__content {
