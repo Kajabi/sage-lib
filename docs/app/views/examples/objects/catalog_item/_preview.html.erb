@@ -1,4 +1,4 @@
-<% 3.times do %>
+<% 2.times do %>
   <%= sage_component SageCatalogItem, {
     title: "Fun For All – The Children Call: Their Favorite Time Of Year",
     image: "/assets/card-placeholder-sm.png",
@@ -17,13 +17,6 @@
       small: true,
       icon: { name: "users", style: "left" },
       value: "3 Geese A-Laying",
-    } %>
-    <%= sage_component SageButton, {
-      style: "secondary",
-      subtle: true,
-      small: true,
-      icon: { name: "coupon", style: "left" },
-      value: "1 Partridge In A Pear Tree",
     } %>
     <%= content_for :sage_aside do %>
       <%= sage_component SageDropdown, {
@@ -71,7 +64,7 @@
     <% end %>
   <% end %>
 <% end %>
-<% 3.times do %>
+<% 2.times do %>
   <%= sage_component SageCatalogItem, {
     title: "Fun For All – The Children Call: Their Favorite Time Of Year",
     icon: "sage-icon-mail-xl",
