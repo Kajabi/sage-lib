@@ -132,6 +132,7 @@ export const TOKENS_ICONS = {
   SUPERSCRIPT: 'superscript',
   SUPER_ADMIN: 'super-admin',
   TAG: 'tag',
+  THEME_STORE: 'theme-store',
   TRASH: 'trash',
   UNDERLINE: 'underline',
   UNDO: 'undo',
