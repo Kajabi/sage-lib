@@ -30,6 +30,7 @@ export const PanelControls = ({
     numSelectedRows: 0,
     pageSize: 1,
     pageSizeOptions: null,
+    pageSizeOptionSuffix: null,
     rowNoun: { ...DEFAULT_NOUN },
     selectionType: SELECTION_TYPES.NONE,
     totalItems: 0,
@@ -102,6 +103,45 @@ export const PanelControls = ({
   // Render
   //
 
+  const renderPageSizeDropdown = () => {
+    const pageSizeItems = selfConfigs.pageSizeOptions.map((size) => {
+      const suffix = selfConfigs.pageSizeOptionSuffix || '';
+      const label = `${size}${suffix}`;
+      return {
+        id: `page-size-${size}`,
+        label,
+        payload: {
+          id: `page-size-${size}`,
+          label,
+          size,
+        }
+      };
+    });
+
+    let initialPageSizeItem = pageSizeItems.filter(
+      (item) => item.payload.size === selfConfigs.pageSize
+    );
+
+    if (initialPageSizeItem && initialPageSizeItem.length >= 1) {
+      [initialPageSizeItem] = initialPageSizeItem;
+    } else {
+      initialPageSizeItem = pageSizeItems.length >= 1 ? pageSizeItems[0] : null;
+    }
+
+    return (
+      <SelectDropdown
+        align="right"
+        className="sage-dropdown--page-size sage-panel-controls__page-size"
+        customized={true}
+        initialSelectedValue={initialPageSizeItem}
+        items={pageSizeItems}
+        label="Page size"
+        onSelect={handlePageSizeSelection}
+        selectionBecomesLabel={true}
+      />
+    );
+  };
+
   // Primary render
   const classNames = classnames(
     'sage-panel-controls',
@@ -125,30 +165,12 @@ export const PanelControls = ({
           totalItems={selfConfigs.totalItems}
         />
         <div className="sage-panel-controls__toolbar">
-          {selfConfigs.pageSizeOptions && (
-            <SelectDropdown
-              align="right"
-              className="sage-dropdown--page-size sage-panel-controls__page-size"
-              customized={true}
-              items={selfConfigs.pageSizeOptions.map((size) => ({
-                id: `page-size-${size}`,
-                label: size,
-                payload: {
-                  id: `page-size-${size}`,
-                  label: size,
-                  size,
-                }
-              }))}
-              label="Page size"
-              onSelect={handlePageSizeSelection}
-              selectionBecomesLabel={false}
-            />
-          )}
           <PanelControlsPagination
             currentPage={selfConfigs.currentPage}
             onClickPagination={onClickPagination}
             totalPages={selfConfigs.totalPages}
           />
+          {selfConfigs.pageSizeOptions && renderPageSizeDropdown()}
           {selfConfigs.sortOptions && (
             <SelectDropdown
               align="right"
@@ -189,6 +211,7 @@ PanelControls.propTypes = {
     numSelectedRows: PropTypes.number,
     pageSize: PropTypes.number,
     pageSizeOptions: PropTypes.arrayOf(PropTypes.number),
+    pageSizeOptionSuffix: PropTypes.string,
     rowNoun: PropTypes.shape({
       singular: PropTypes.string,
       plural: PropTypes.string,

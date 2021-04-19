@@ -51,11 +51,23 @@ export const SelectDropdown = ({
     }
   );
 
+  const displaySelectedValue = () => {
+    if (!initialSelectedValue) {
+      return emptySelectedValue;
+    }
+
+    if (initialSelectedValue.label) {
+      return initialSelectedValue.label;
+    }
+
+    return initialSelectedValue;
+  };
+
   const [configs, setConfigs] = useState({
     classNames: setClassNames(!!initialSelectedValue),
     hasSelectedValue: !!initialSelectedValue,
     icon: defaultIcon,
-    selectedValue: initialSelectedValue || emptySelectedValue,
+    selectedValue: displaySelectedValue(),
   });
 
   const deselectValue = () => {
