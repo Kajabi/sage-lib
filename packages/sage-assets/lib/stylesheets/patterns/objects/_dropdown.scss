@@ -266,9 +266,9 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
 .sage-dropdown__panel {
   visibility: hidden;
   position: absolute;
-  z-index: sage-z-index(default, 100);
+  z-index: sage-z-index(negative);
   top: calc(100% + #{sage-spacing(xs)});
-  // Temporariliy removing animation as it causes
+  // Temporarily removing animation as it causes
   // a positioning issue with nested fixed positioned elements
   // transform: rotate3d(1, 0, 0, -90deg);
   transform-origin: top center;
@@ -301,16 +301,26 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
     min-width: 100%;
   }
 
+  .sage-dropdown--full-width:not(.sage-dropdown--anchor-right) & {
+    min-width: 0;
+    width: 100%;
+  }
+
   [aria-expanded="true"] > & {
     visibility: visible;
-    // Temporariliy removing animation as it causes
-    // a positioning issue with nested fiex positioned elements
+    z-index: sage-z-index(default, 100);
+    // Temporarily removing animation as it causes
+    // a positioning issue with nested flex positioned elements
     // transform: rotate3d(0, 0, 0, 0);
   }
 }
 
 .sage-dropdown__panel--custom {
   padding: sage-spacing();
+}
+
+.sage-dropdown__panel-footer {
+  padding: sage-spacing(sm) sage-spacing();
 }
 
 .sage-dropdown__screen {
