@@ -21,7 +21,7 @@ $-tooltip-shadow: sage-shadow(xl);
 $-tooltip-padding: sage-spacing(2xs) sage-spacing(sm);
 $-tooltip-small-padding: sage-spacing(2xs) sage-spacing(xs);
 $-tooltip-large-padding: sage-spacing(xs) sage-spacing(xs);
-$-tooltip-zindex: sage-z_index(overlay);
+$-tooltip-zindex: sage-z_index(modal, 10);
 $-tooltip-maxwidth: rem(200px);
 $-tooltip-large-maxwidth: rem(320px);
 
