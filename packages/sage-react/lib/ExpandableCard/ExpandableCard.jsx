@@ -41,9 +41,11 @@ export const ExpandableCard = ({ bodyBordered, children, className, sageType, tr
       >
         {triggerLabel}
       </Button>
-      <div id={id} className={bodyClassnames}>
-        {children}
-      </div>
+      {selfActive && (
+        <div id={id} className={bodyClassnames}>
+          {children}
+        </div>
+      )}
     </div>
   );
 };
