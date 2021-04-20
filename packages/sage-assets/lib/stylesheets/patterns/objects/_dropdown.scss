@@ -310,7 +310,7 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
     visibility: visible;
     z-index: sage-z-index(default, 100);
     // Temporarily removing animation as it causes
-    // a positioning issue with nested fiex positioned elements
+    // a positioning issue with nested flex positioned elements
     // transform: rotate3d(0, 0, 0, 0);
   }
 }
