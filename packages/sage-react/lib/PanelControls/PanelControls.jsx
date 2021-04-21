@@ -33,6 +33,7 @@ export const PanelControls = ({
     pageSizeOptionSuffix: null,
     rowNoun: { ...DEFAULT_NOUN },
     selectionType: SELECTION_TYPES.NONE,
+    showDefaultToolbar: false,
     totalItems: 0,
     totalPages: 1,
   });
@@ -151,39 +152,41 @@ export const PanelControls = ({
   return (
     <div className={classNames}>
       {children}
-      <div className="sage-panel-controls__default-controls">
-        <PanelControlsBulkActions
-          bulkActionsItems={selfConfigs.bulkActionsItems}
-          checked={selfConfigs.bulkActionsChecked}
-          currentPage={selfConfigs.currentPage}
-          itemsOnThisPage={selfConfigs.itemsOnThisPage}
-          numSelectedRows={selfConfigs.numSelectedRows}
-          onSelectBulkAction={onSelectBulkAction}
-          onToggleSelection={onChangeSelectAll}
-          rowNoun={selfConfigs.rowNoun}
-          selectionType={selfConfigs.selectionType}
-          totalItems={selfConfigs.totalItems}
-        />
-        <div className="sage-panel-controls__toolbar">
-          <PanelControlsPagination
+      {selfConfigs.showDefaultToolbar && (
+        <div className="sage-panel-controls__default-controls">
+          <PanelControlsBulkActions
+            bulkActionsItems={selfConfigs.bulkActionsItems}
+            checked={selfConfigs.bulkActionsChecked}
             currentPage={selfConfigs.currentPage}
-            onClickPagination={onClickPagination}
-            totalPages={selfConfigs.totalPages}
+            itemsOnThisPage={selfConfigs.itemsOnThisPage}
+            numSelectedRows={selfConfigs.numSelectedRows}
+            onSelectBulkAction={onSelectBulkAction}
+            onToggleSelection={onChangeSelectAll}
+            rowNoun={selfConfigs.rowNoun}
+            selectionType={selfConfigs.selectionType}
+            totalItems={selfConfigs.totalItems}
           />
-          {selfConfigs.pageSizeOptions && renderPageSizeDropdown()}
-          {selfConfigs.sortOptions && (
-            <SelectDropdown
-              align="right"
-              className="sage-dropdown--sort sage-panel-controls__sorts"
-              customized={true}
-              items={selfConfigs.sortOptions}
-              label="Sort"
-              onSelect={handleSortSelection}
-              selectionBecomesLabel={true}
+          <div className="sage-panel-controls__toolbar">
+            <PanelControlsPagination
+              currentPage={selfConfigs.currentPage}
+              onClickPagination={onClickPagination}
+              totalPages={selfConfigs.totalPages}
             />
-          )}
+            {selfConfigs.pageSizeOptions && renderPageSizeDropdown()}
+            {selfConfigs.sortOptions && (
+              <SelectDropdown
+                align="right"
+                className="sage-dropdown--sort sage-panel-controls__sorts"
+                customized={true}
+                items={selfConfigs.sortOptions}
+                label="Sort"
+                onSelect={handleSortSelection}
+                selectionBecomesLabel={true}
+              />
+            )}
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };
@@ -216,6 +219,7 @@ PanelControls.propTypes = {
       singular: PropTypes.string,
       plural: PropTypes.string,
     }),
+    showDefaultToolbar: PropTypes.bool,
     selectionType: PropTypes.oneOf(Object.values(SELECTION_TYPES)),
     sortOptions: PropTypes.arrayOf(PropTypes.shape({})),
     totalItems: PropTypes.number,
