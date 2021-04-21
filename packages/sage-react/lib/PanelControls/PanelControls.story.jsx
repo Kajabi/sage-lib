@@ -18,7 +18,11 @@ export default {
   decorators: [(Story) => <div style={{ padding: 50, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><Story /></div>],
   args: {
     children: (
-      <p><strong>Note:</strong> This component story uses the Rapid API Newscatcher service, which requires an API key to be provided.</p>
+      <p>
+        <strong>Note:</strong>
+        This component story uses the Rapid API Newscatcher service,
+        which requires an API key to be provided.
+      </p>
     )
   },
 };
@@ -171,29 +175,29 @@ export const Default = (args) => {
         />
         {selfData.items.length > 0 ? (
           <Table
-          onSelectRowHook={(data) => PanelControls.handlerUtils.handleSelection({
-            data,
-            stateData: selfData,
-            setStateDataFn: setSelfData,
-          })}
-          resetAbove={true}
-          resetBelow={true}
-          rows={selfData.items}
-          schema={{
-            title: {
-              label: 'Title',
-              dataType: Table.DATA_TYPES.HTML,
-            },
-            author: {
-              label: 'Author',
-              dataType: Table.DATA_TYPES.STRING,
-            },
-            published: {
-              label: 'Date',
-              dataType: Table.DATA_TYPES.STRING,
-            }
-          }}
-          selectedRows={selfData.selectedRows}
+            onSelectRowHook={(data) => PanelControls.handlerUtils.handleSelection({
+              data,
+              stateData: selfData,
+              setStateDataFn: setSelfData,
+            })}
+            resetAbove={true}
+            resetBelow={true}
+            rows={selfData.items}
+            schema={{
+              title: {
+                label: 'Title',
+                dataType: Table.DATA_TYPES.HTML,
+              },
+              author: {
+                label: 'Author',
+                dataType: Table.DATA_TYPES.STRING,
+              },
+              published: {
+                label: 'Date',
+                dataType: Table.DATA_TYPES.STRING,
+              }
+            }}
+            selectedRows={selfData.selectedRows}
           />
         ) : (
           <EmptyState
