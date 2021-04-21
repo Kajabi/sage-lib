@@ -3,6 +3,35 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.22.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.21.0...@kajabi/sage@3.22.0) (2021-04-21)
+
+
+### Bug Fixes
+
+* **assets:** adding resolve-url-loader to webpacker config on docs, moving fonts to their own folder ([8c8171d](https://github.com/Kajabi/sage-lib/commit/8c8171d4c76cbe584188bc48df7f1b151e5c6454))
+* **form-input:** updated autocomplete attribute schema valuue ([33e65ff](https://github.com/Kajabi/sage-lib/commit/33e65ff8084da4ea8d03c527f37d806ffdfd9b18))
+* **images:** replaces placehold.it images with local images ([40d1cae](https://github.com/Kajabi/sage-lib/commit/40d1cae16740caaea95950f26ed920a34495f5c2))
+
+
+### Features
+
+* **catalog_item:** adds ability to add icon to a catalog item ([0f95b89](https://github.com/Kajabi/sage-lib/commit/0f95b891241b2123091a35bce2e189690bdb5e57))
+* **catalog-item:** gives the Catalog Item Optional Image ([4122b47](https://github.com/Kajabi/sage-lib/commit/4122b470d3318f4643a2331eed54614f54cda0c9))
+* **dropdown:** altered structure for multi-select ability ([85fea77](https://github.com/Kajabi/sage-lib/commit/85fea77497cd3adb8a1d857f31de2d23083305eb))
+* **dropdown:** corrections to section definitions, revised props and preview ([0a5f7e8](https://github.com/Kajabi/sage-lib/commit/0a5f7e8fdf8df02e5f9ff3d87ed617658a06e8ac))
+* **dropdown:** modifications to example multi-select dropdown ([02cc19b](https://github.com/Kajabi/sage-lib/commit/02cc19b62274721a119daee671ebd1f694572bcf))
+* **expandable-card:** ensure content is hidden by default ([de2a866](https://github.com/Kajabi/sage-lib/commit/de2a866d107b14b6993083653ca78ac8f7ee104f))
+* **icons:** add theme store icon ([b15e0e4](https://github.com/Kajabi/sage-lib/commit/b15e0e4e3760a474558f2200971eec28ba53cc9c))
+
+
+### Reverts
+
+* **dropdown:** revert button/link conditional logic ([57d689f](https://github.com/Kajabi/sage-lib/commit/57d689fd756861fb8e26504f8c71c765d7efa47d))
+
+
+
+
+
 # [3.21.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.20.0...@kajabi/sage@3.21.0) (2021-04-12)
 
 

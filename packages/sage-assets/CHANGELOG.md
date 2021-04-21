@@ -3,6 +3,37 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.28.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.27.1...@kajabi/sage-assets@0.28.0) (2021-04-21)
+
+
+### Bug Fixes
+
+* **alerts:** correct line-height for sage-alert_title ([ddb117c](https://github.com/Kajabi/sage-lib/commit/ddb117c4b6682e581986775a3a9025ba577145a6)), closes [#410](https://github.com/Kajabi/sage-lib/issues/410)
+* **assets:** adding resolve-url-loader to webpacker config on docs, moving fonts to their own folder ([8c8171d](https://github.com/Kajabi/sage-lib/commit/8c8171d4c76cbe584188bc48df7f1b151e5c6454))
+* **sage-assets:** changed font loader to use `file-loader` ([866b8da](https://github.com/Kajabi/sage-lib/commit/866b8da5a8a01e5ea047727bf358f0472e543bae))
+* **tooltip:** align z-index with existing pattern ([b9f77de](https://github.com/Kajabi/sage-lib/commit/b9f77de72aaa4967e474e20153b12e69dc8f3674))
+* **tooltip:** update z-index to be higher than a modal ([45575c9](https://github.com/Kajabi/sage-lib/commit/45575c938fbcaea9eff22476d38a5095d49bdae1))
+
+
+### Features
+
+* **catalog_item:** adds ability to add icon to a catalog item ([0f95b89](https://github.com/Kajabi/sage-lib/commit/0f95b891241b2123091a35bce2e189690bdb5e57))
+* **catalog-item:** gives the Catalog Item Optional Image ([4122b47](https://github.com/Kajabi/sage-lib/commit/4122b470d3318f4643a2331eed54614f54cda0c9))
+* **dropdown:** altered structure for multi-select ability ([85fea77](https://github.com/Kajabi/sage-lib/commit/85fea77497cd3adb8a1d857f31de2d23083305eb))
+* **dropdown:** corrections to section definitions, revised props and preview ([0a5f7e8](https://github.com/Kajabi/sage-lib/commit/0a5f7e8fdf8df02e5f9ff3d87ed617658a06e8ac))
+* **dropdown:** modifications to example multi-select dropdown ([02cc19b](https://github.com/Kajabi/sage-lib/commit/02cc19b62274721a119daee671ebd1f694572bcf))
+* **icons:** add theme store icon ([b15e0e4](https://github.com/Kajabi/sage-lib/commit/b15e0e4e3760a474558f2200971eec28ba53cc9c))
+* **sage-assets:** adjusted the webpack config to force fonts to be external from the stylsheet ([ade4a84](https://github.com/Kajabi/sage-lib/commit/ade4a847744dc2068f81870f362eb1f646d88641))
+
+
+### Reverts
+
+* **dropdown:** remove unused JS and styles ([a098840](https://github.com/Kajabi/sage-lib/commit/a098840b5ddceeab41f4f4deeb7d1932528bae90))
+
+
+
+
+
 ## [0.27.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.27.0...@kajabi/sage-assets@0.27.1) (2021-04-12)
 
 

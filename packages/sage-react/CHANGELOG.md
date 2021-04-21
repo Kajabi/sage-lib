@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.37.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.36.0...@kajabi/sage-react@0.37.0) (2021-04-21)
+
+
+### Features
+
+* **expandable-card:** ensure content is hidden by default ([de2a866](https://github.com/Kajabi/sage-lib/commit/de2a866d107b14b6993083653ca78ac8f7ee104f))
+* **icons:** add theme store icon ([b15e0e4](https://github.com/Kajabi/sage-lib/commit/b15e0e4e3760a474558f2200971eec28ba53cc9c))
+* **panel-controls:** add page size suffix and adjust order ([9d54b76](https://github.com/Kajabi/sage-lib/commit/9d54b76958dfa4d85d24701dfe5c27622e785044))
+* **panel-controls:** ensure page size value appears selected ([5fff846](https://github.com/Kajabi/sage-lib/commit/5fff8464a814bb7804dbc0ec688130a86c24d25f))
+
+
+
+
+
 # [0.36.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.35.0...@kajabi/sage-react@0.36.0) (2021-04-12)
 
 
