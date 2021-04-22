@@ -1,94 +1,99 @@
-<fieldset class="sage-type">
-  <h3 class="t-sage-heading-6">Input group with button disabled</h3>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Input group with button disabled"} %><% end %>
+<!-- Docs Only Label End -->
 
-  <%= sage_component SageInputGroup, {
-    group_id: "input-group-search-example",
-    disabled: true,
-    has_button: true,
-    has_hint: false,
-    group_buttons: [{
-      icon: "sage-btn--icon-left-search",
-      text: "Search",
-      text_hidden: true,
-      tooltip: true,
-      tooltip_position: "top",
-      tooltip_size: "",
-      tooltip_text: "Search",
-    }],
+<%= sage_component SageInputGroup, {
+  group_id: "input-group-search-example",
+  disabled: true,
+  has_button: true,
+  has_hint: false,
+  group_buttons: [{
+    icon: "sage-btn--icon-left-search",
+    text: "Search",
+    text_hidden: true,
+    tooltip: true,
+    tooltip_position: "top",
+    tooltip_size: "",
+    tooltip_text: "Search",
+  }],
+  input_type: "search",
+} do %>
+  <%= sage_component SageFormInput, {
+    id: "input-group-search-field",
     input_type: "search",
-  } do %>
-    <%= sage_component SageFormInput, {
-      id: "input-group-search-field",
-      input_type: "search",
-      label_text: "Search",
-      placeholder: "Search",
-      required: true,
-      disabled: true,
-      has_error: false,
-      message_text: "",
-      has_placeholder: false
-    } %>
-  <% end %>
-  <h3 class="t-sage-heading-6">Input group with number controls</h3>
+    label_text: "Search",
+    placeholder: "Search",
+    required: true,
+    disabled: true,
+    has_error: false,
+    message_text: "",
+    has_placeholder: false
+  } %>
+<% end %>
 
-  <%= sage_component SageInputGroup, {
-    group_id: "input-group-save-example",
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Input group with number controls"} %><% end %>
+<!-- Docs Only Label End -->
+
+<%= sage_component SageInputGroup, {
+  group_id: "input-group-save-example",
+  disabled: false,
+  has_button: true,
+  has_hint: false,
+  group_buttons: [{
+    icon: "",
+    text: "Save",
+    tooltip: true,
+    tooltip_position: "top",
+    tooltip_size: "",
+    tooltip_text: "Save",
+  }],
+  input_type: "text"
+} do %>
+  <%= sage_component SageFormInput, {
+    id: "input-group-save-field",
+    max: "100",
+    min: "0",
+    input_type: "number",
+    input_mode: "numeric",
+    label_text: "Percentage",
+    placeholder: "Percentage",
+    required: false,
     disabled: false,
-    has_button: true,
-    has_hint: false,
-    group_buttons: [{
-      icon: "",
-      text: "Save",
-      tooltip: true,
-      tooltip_position: "top",
-      tooltip_size: "",
-      tooltip_text: "Save",
-    }],
-    input_type: "text"
+    has_error: false,
+    message_text: "",
+    has_placeholder: false
+  } %>
+<% end %>
+
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Input group with password reveal toggle and helper"} %><% end %>
+<!-- Docs Only Label End -->
+
+<%= sage_component SageInputGroup, {
+  group_id: "input-group-pw-example",
+  has_button: true,
+  has_hint: true,
+  group_buttons: [{
+    display_on_focus: true,
+    icon: "sage-btn--icon-left-preview-on",
+    text: "Toggle password visibility",
+    tooltip: true,
+    tooltip_position: "top",
+    tooltip_size: "small",
+    tooltip_text: "Toggle password visibility",
+  }],
+  input_type: "password"
   } do %>
-    <%= sage_component SageFormInput, {
-      id: "input-group-save-field",
-      max: "100",
-      min: "0",
-      input_type: "number",
-      input_mode: "numeric",
-      label_text: "Percentage",
-      placeholder: "Percentage",
-      required: false,
-      disabled: false,
-      has_error: false,
-      message_text: "",
-      has_placeholder: false
-    } %>
-  <% end %>
-
-  <h3 class="t-sage-heading-6">Input group with password reveal toggle and helper</h3>
-
-  <%= sage_component SageInputGroup, {
-    group_id: "input-group-pw-example",
-    has_button: true,
-    has_hint: true,
-    group_buttons: [{
-      display_on_focus: true,
-      icon: "sage-btn--icon-left-preview-on",
-      text: "Toggle password visibility",
-      tooltip: true,
-      tooltip_position: "top",
-      tooltip_size: "small",
-      tooltip_text: "Toggle password visibility",
-    }],
-    input_type: "password"
-    } do %>
-    <%= sage_component SageFormInput, {
-      id: "input-group-pw-example",
-      input_type: "password",
-      label_text: "Password",
-      placeholder: "Password",
-      required: true,
-      disabled: false,
-      has_error: false,
-      message_text: "",
-      has_placeholder: false
-    } %>
-  <% end %>
-</fieldset>
+  <%= sage_component SageFormInput, {
+    id: "input-group-pw-example",
+    input_type: "password",
+    label_text: "Password",
+    placeholder: "Password",
+    required: true,
+    disabled: false,
+    has_error: false,
+    message_text: "",
+    has_placeholder: false
+  } %>
+<% end %>

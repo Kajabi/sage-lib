@@ -1,10 +1,15 @@
-<h3 class="t-sage-heading-6">Initial State</h3>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Initial State"} %><% end %>
+<!-- Docs Only Label End -->
+
 <%= sage_component SageUploadCard, {
   selection_label: "Select a file",
   selection_subtext: "Body small, Charcoal 200",
 } %>
 
-<h3 class="t-sage-heading-6">Selected File State</h3>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Selected File State"} %><% end %>
+<!-- Docs Only Label End -->
 
 <%= sage_component SageUploadCard, {
   accepted_files: [
@@ -15,7 +20,9 @@
   selection_subtext: "Body small, Charcoal 200",
 } %>
 
-<h3 class="t-sage-heading-6">Error State</h3>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Error State"} %><% end %>
+<!-- Docs Only Label End -->
 
 <%= sage_component SageUploadCard, {
   has_error: true,

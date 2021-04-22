@@ -11,7 +11,10 @@
   } %>
 <% end %>
 
-<h2 class="t-sage-heading-6">Sage Hero with dismiss button</h3>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "With dismiss button"} %><% end %>
+<!-- Docs Only Label End -->
+
 <%= sage_component SageCardBlock, {} do %>
   <%= sage_component SageHero, {
     alt_text: "",

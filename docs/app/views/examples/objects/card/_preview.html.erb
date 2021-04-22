@@ -1,4 +1,7 @@
-<h3 class="t-sage-heading-6">Basic Card</h3>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Basic Card"} %><% end %>
+<!-- Docs Only Label End -->
+
 <%= sage_component SageCard, {} do %>
   <%= sage_component SageCardHeader, { title: "Card heading" } do %>
     <%= sage_component SageButton, {
@@ -86,7 +89,10 @@ Cards have three core areas:
   It employs the Sage Row layout base with `16px` gutters.
 ", use_sage_type: true) %>
 
-<h3 class="t-sage-heading-6">Card with stack and row blocks</h3>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Card with stack and row blocks"} %><% end %>
+<!-- Docs Only Label End -->
+
 <%= sage_component SageCard, {} do %>
   <%= sage_component SageCardHeader, { title: "Block:" } %>
   <%= sage_component SageCardBlock, {} do %>

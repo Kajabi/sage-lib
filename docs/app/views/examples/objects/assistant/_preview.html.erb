@@ -1,10 +1,16 @@
-<h3 class="t-sage-heading-6">With menu button (visible below medium breakpoint)</h3>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "With menu button (visible below medium breakpoint)"} %><% end %>
+<!-- Docs Only Label End -->
+
 <%= sage_component SageAssistant, {
   menu_button: true,
   logo: { path: "sage.svg" }
 } %>
 
-<h3 class="t-sage-heading-6">Without menu button</h3>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Without menu button"} %><% end %>
+<!-- Docs Only Label End -->
+
 <%= sage_component SageAssistant, {
   menu_button: false,
   logo: { path: "sage.svg" }

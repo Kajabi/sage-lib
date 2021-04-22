@@ -114,7 +114,10 @@ actions_items = [
 ]
 %>
 
-<h3 class="t-sage-heading-6">Tabs + Search</h3>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Tabs + Search"} %><% end %>
+<!-- Docs Only Label End -->
+
 <%= sage_component SagePanel, {} do %>
   <%= sage_component SagePanelControls, {} do %>
     <% content_for :sage_panel_controls_tabs do %>
@@ -129,7 +132,10 @@ actions_items = [
   <% end %>
 <% end %>
 
-<h3 class="t-sage-heading-6">No Pagination</h3>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "No Pagination"} %><% end %>
+<!-- Docs Only Label End -->
+
 <%= sage_component SagePanel, {} do %>
   <%= sage_component SagePanelControls, {
     item_count_label: "Text here",
@@ -142,7 +148,10 @@ actions_items = [
   } %>
 <% end %>
 
-<h3 class="t-sage-heading-6">Pagination</h3>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Pagination"} %><% end %>
+<!-- Docs Only Label End -->
+
 <%= sage_component SagePanel, {} do %>
   <%= sage_component SagePanelControls, {
     show_bulk_actions: false,
@@ -165,7 +174,10 @@ actions_items = [
   <% end %>
 <% end %>
 
-<h3 class="t-sage-heading-6">Pagination with Bulk actions</h3>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Pagination with Bulk actions"} %><% end %>
+<!-- Docs Only Label End -->
+
 <%= sage_component SagePanel, {} do %>
   <%= sage_component SagePanelControls, {
     show_bulk_actions: true,
@@ -186,7 +198,10 @@ actions_items = [
   <% end %>
 <% end %>
 
-<h3 class="t-sage-heading-6">Sample Custom Toolbar</h3>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Sample Custom Toolbar"} %><% end %>
+<!-- Docs Only Label End -->
+
 <%= sage_component SagePanel, {} do %>
   <%= sage_component SagePanelControls, {} do %>
     <% content_for :sage_panel_controls_toolbar do %>
@@ -196,7 +211,10 @@ actions_items = [
   <% end %>
 <% end %>
 
-<h3 class="t-sage-heading-6">Kitchen Sink</h3>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Kitchen Sink"} %><% end %>
+<!-- Docs Only Label End -->
+
 <%= sage_component SagePanel, {} do %>
   <%= sage_component SagePanelControls, {
     show_bulk_actions: true,

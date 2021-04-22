@@ -210,8 +210,11 @@
 
 <% end %>
 
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Animated"} %><% end %>
+<!-- Docs Only Label End -->
+
 <%= sage_component SagePanelBlock, {} do %>
-  <h3 class="t-sage-heading-6">Animated</h3>
   <%= sage_component SageButtonGroup, { gap: :sm, spacer: { bottom: :sm }} do %>
     <%= sage_component SageButton, {
       style: "primary",

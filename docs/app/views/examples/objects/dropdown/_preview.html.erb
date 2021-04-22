@@ -1,4 +1,7 @@
-<h3 class="t-sage-heading-6">Menu Button</h3>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Menu Button"} %><% end %>
+<!-- Docs Only Label End -->
+
 <%= sage_component SageDropdown, {
   items: [{
     value: "Edit",
@@ -47,7 +50,10 @@
   } %>
 <% end %>
 
-<h3 class="t-sage-heading-6">Dropdown menu with Headings</h3>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Dropdown menu with Headings"} %><% end %>
+<!-- Docs Only Label End -->
+
 <%= sage_component SageDropdown, {
   contained: true,
   items: [{
@@ -98,8 +104,10 @@
   } %>
 <% end %>
 
-<h3 class="t-sage-heading-6">SageLabel Button, with SageLabel Values, and aligned right</h3>
-<p>Note: The wrapping div with inline styles is for <i>preview-purposes only</i>. </p>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "SageLabel Button, with SageLabel Values, and aligned right"} %><% end %>
+<!-- Docs Only Label End -->
+
 <div style="display: flex; flex-direction: row-reverse;">
   <%= sage_component SageDropdown, {
     align: "right",
@@ -132,8 +140,19 @@
   <% end %>
 </div>
 
-<h3 class="t-sage-heading-6">Select</h3>
-<p>Note: This pattern is used with the SageReact implementation, please consult UXD before using this as SageRails.</p>
+<!-- Docs Only Note -->
+<%= sage_component SageAlert, {
+  color: "info",
+  title: "Note:",
+  desc: "The wrapping div with inline styles is for preview-purposes only.",
+  icon_name: "sage-icon-info-circle",
+} %>
+<!-- Docs Only Note End -->
+
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Select"} %><% end %>
+<!-- Docs Only Label End -->
+
 <%= sage_component SageDropdown, {
   search: true,
   trigger_type: "select",
@@ -172,8 +191,19 @@
   <label class="sage-dropdown__trigger-label">Add an Element</label>
 <% end %>
 
-<h3 class="t-sage-heading-6">Form Field</h3>
-<p>Note: This pattern is used with the SageReact implementation, please consult UXD before using this as SageRails.</p>
+<!-- Docs Only Note -->
+<%= sage_component SageAlert, {
+  color: "info",
+  title: "Note:",
+  desc: "This pattern is used with the SageReact implementation, please consult UXD before using this as SageRails.",
+  icon_name: "sage-icon-info-circle",
+} %>
+<!-- Docs Only Note End -->
+
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Form Field"} %><% end %>
+<!-- Docs Only Label End -->
+
 <%= sage_component SageDropdown, {
   search: true,
   trigger_type: "select-labeled",
@@ -201,7 +231,19 @@
   <label class="sage-dropdown__trigger-label">Add an Element</label>
 <% end %>
 
-<h3 class="t-sage-heading-6">Dropdown Field with full-width Custom Content and Footer</h3>
+<!-- Docs Only Note -->
+<%= sage_component SageAlert, {
+  color: "info",
+  title: "Note:",
+  desc: "This pattern is used with the SageReact implementation, please consult UXD before using this as SageRails.",
+  icon_name: "sage-icon-info-circle",
+} %>
+<!-- Docs Only Note End -->
+
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Dropdown Field with full-width Custom Content and Footer"} %><% end %>
+<!-- Docs Only Label End -->
+
 <%= sage_component SageDropdown, {
   search: true,
   trigger_type: "select",
@@ -252,7 +294,10 @@
   <label class="sage-dropdown__trigger-label">Select Product(s)</label>
 <% end %>
 
-<h3 class="t-sage-heading-6">Dropdown Menu Button with Custom Content</h3>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Dropdown Menu Button with Custom Content"} %><% end %>
+<!-- Docs Only Label End -->
+
 <%= sage_component SageDropdown, {
 } do %>
   <%= sage_component SageButton, {

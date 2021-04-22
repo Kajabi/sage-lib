@@ -1,4 +1,7 @@
-<h3 class="t-sage-heading-6">Bordered</h3>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Bordered"} %><% end %>
+<!-- Docs Only Label End -->
+
 <%= sage_component SageExpandableCard, {
   trigger_label: "Expand",
   body_bordered: true,
@@ -25,7 +28,11 @@
     has_error: false
   } %>
 <% end %>
-<h3 class="t-sage-heading-6">No Border</h3>
+
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "No Border"} %><% end %>
+<!-- Docs Only Label End -->
+
 <%= sage_component SageExpandableCard, {
   trigger_label: "Expand",
 } do %>

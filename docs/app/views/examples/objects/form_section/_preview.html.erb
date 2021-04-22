@@ -1,7 +1,9 @@
 <%= sage_component SagePanelStack, {} do %>
 
-  <!-- Default -->
-  <h3 class="t-sage-heading-6">Default</h3>
+  <!-- Docs Only Label -->
+  <%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Default"} %><% end %>
+  <!-- Docs Only Label End -->
+
   <%= sage_component SageFormSection, { 
     id:"c1",
     title: "Form Section Title",
@@ -14,8 +16,10 @@
       } %>
   <% end %>
 
-  <!-- Custom title_tag -->
-  <h3 class="t-sage-heading-6">Form Section with custom header tag</h3>
+  <!-- Docs Only Label -->
+  <%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Form Section with custom header tag"} %><% end %>
+  <!-- Docs Only Label End -->
+
   <%= sage_component SageFormSection, { 
     id:"c2",
     title: "Custom Title Tag",

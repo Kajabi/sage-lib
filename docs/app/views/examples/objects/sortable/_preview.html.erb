@@ -1,4 +1,7 @@
-<h3 class="t-sage-heading-6"><code>SageSortableItem</code> as a Panel list</h3>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "As a Panel list"} %><% end %>
+<!-- Docs Only Label End -->
+
 <%= sage_component SagePanelList, {} do %>
   <%= sage_component SageSortable, { resource_name: "link" } do %>
 
@@ -43,7 +46,10 @@
   <% end %>
 <% end %>
 
-<h3 class="t-sage-heading-6"><code>SageSortableItem</code> as cards with no subtitles</h3>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "As cards with no subtitles"} %><% end %>
+<!-- Docs Only Label End -->
+
 <%= sage_component SageSortable, { resource_name: "link" } do %>
   <% 3.times do %>
     <%= sage_component SageSortableItem, {
@@ -85,7 +91,10 @@
   <% end %>
 <% end %>
 
-<h3 class="t-sage-heading-6"><code>SageSortableItem</code> as cards with images and without subtitles</h3>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "As cards with images and without subtitles"} %><% end %>
+<!-- Docs Only Label End -->
+
 <%= sage_component SageSortable, { resource_name: "link" } do %>
   <% 3.times do %>
     <%= sage_component SageSortableItem, {
@@ -115,12 +124,23 @@
   <% end %>
 <% end %>
 
+<!-- Docs Only Note -->
+<%= sage_component SageAlert, {
+  color: "info",
+  title: "Note:",
+  desc: "`SageSortableItemCustom` should be used when you want to create a layout within the Sortable Item that follows any pattern using specified dot and dash pattern denoted in the Sage Grid Templates docs. At its simpliest form, `SageSortableItemCustom` is `SageSortableItem` as cards with no image or subtitles, but any combination Sage Grid Template.",
+  icon_name: "sage-icon-info-circle",
+} do %>
+  <% content_for :sage_alert_actions do %>
+    <%= link_to "Sage Grid Templates", "http://sage-design-system.kajabi.com/pages/layout/grid_templates" %>
+  <% end %>
+<% end %>
+<!-- Docs Only Note End -->
 
-<%= md('
-`SageSortableItemCustom` should be used when you want to create a layout within the Sortable Item that follows any pattern using specified dot and dash pattern denoted in the [Sage Grid Templates](http://sage-design-system.kajabi.com/pages/layout/grid_templates) docs. At its simpliest form, `SageSortableItemCustom` is `SageSortableItem` as cards with no image or subtitles, but any combination Sage Grid Template.
-', use_sage_type: true) %>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Using a custom grid template : 'te'"} %><% end %>
+<!-- Docs Only Label End -->
 
-<h3 class="t-sage-heading-6"><code>SageSortableItemCustom</code> using a custom <code>grid template : "te"</code></h3>
 <%= sage_component SageSortable, { resource_name: "link" } do %>
   <% 3.times do %>
     <%= sage_component SageSortableItemCustom, {
@@ -170,7 +190,10 @@
   <% end %>
 <% end %>
 
-<h3 class="t-sage-heading-6"><code>SageSortableItemCustom</code> using a custom <code>grid template : "me"</code></h3>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Using a custom grid template : 'me'"} %><% end %>
+<!-- Docs Only Label End -->
+
 <%= sage_component SageSortable, {
   resource_name: "link" } do %>
   <% 3.times do %>
@@ -221,4 +244,3 @@
     } %>
   <% end %>
 <% end %>
-
