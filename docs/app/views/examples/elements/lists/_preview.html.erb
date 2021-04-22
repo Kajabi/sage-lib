@@ -1,5 +1,6 @@
-<h3 class="t-sage-heading-6">Default Lists</h3>
-<p>Lists in Sage get simple default styling.</p>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Default Lists"} %><% end %>
+<!-- Docs Only Label End -->
 
 <%= sage_component SageLists, {
 } do %>
@@ -40,8 +41,18 @@
   </ol>
 <% end %>
 
-<h3 class="t-sage-heading-6">Unstyled List</h3>
-<p>Add <code>sage-list</code> to create an unstyled list such as for complex elements:</p>
+<!-- Docs Only Note -->
+<%= sage_component SageAlert, {
+  color: "info",
+  title: "Note:",
+  desc: "Lists in Sage get simple default styling.",
+  icon_name: "sage-icon-info-circle",
+} %>
+<!-- Docs Only Note End -->
+
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Unstyled List"} %><% end %>
+<!-- Docs Only Label End -->
 
 <%= sage_component SageLists, {
 } do %>
@@ -89,8 +100,18 @@
   </ol>
 <% end %>
 
-<h3 class="t-sage-heading-6">Inline List</h3>
-<p>Inline lists will wrap by default so this works best with items that have an intrinsically limited smaller width that affords space for other elements to a point.</p>
+<!-- Docs Only Note -->
+<%= sage_component SageAlert, {
+  color: "info",
+  title: "Note:",
+  desc: "Add 'sage-list' to create an unstyled list such as for complex elements:",
+  icon_name: "sage-icon-info-circle",
+} %>
+<!-- Docs Only Note End -->
+
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Inline List"} %><% end %>
+<!-- Docs Only Label End -->
 
 <%= sage_component SageLists, {
 } do %>
@@ -138,8 +159,18 @@
   </ul>
 <% end %>
 
-<h3 class="t-sage-heading-6">Non-wrapping Inline List</h3>
-<p>Non-wrapping list will stay packed on one line until 768px at which point it will wrap. This may be most relevant for inline lists for which wrapping is undesirable but has clear limitations inside restricted containers.</p>
+<!-- Docs Only Note -->
+<%= sage_component SageAlert, {
+  color: "info",
+  title: "Note:",
+  desc: "Inline lists will wrap by default so this works best with items that have an intrinsically limited smaller width that affords space for other elements to a point.",
+  icon_name: "sage-icon-info-circle",
+} %>
+<!-- Docs Only Note End -->
+
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Non-wrapping Inline List"} %><% end %>
+<!-- Docs Only Label End -->
 
 <%= sage_component SageLists, {
 } do %>
@@ -158,3 +189,12 @@
     </li>
   </ul>
 <% end %>
+
+<!-- Docs Only Note -->
+<%= sage_component SageAlert, {
+  color: "info",
+  title: "Note:",
+  desc: "Non-wrapping list will stay packed on one line until 768px at which point it will wrap. This may be most relevant for inline lists for which wrapping is undesirable but has clear limitations inside restricted containers.",
+  icon_name: "sage-icon-info-circle",
+} %>
+<!-- Docs Only Note End -->

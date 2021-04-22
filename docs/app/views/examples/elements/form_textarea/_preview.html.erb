@@ -1,41 +1,49 @@
-<fieldset class="sage-type">
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Default"} %><% end %>
+<!-- Docs Only Label End -->
 
-  <h3 class="t-sage-heading-6">Default</h3>
-  <%= sage_component SageFormTextarea, {
-    id: "txtarea-example",
-    name: "txtarea-custom-name",
-    placeholder: "Your message",
-    label_text: "Your message",
-    disabled: false,
-    has_error: false,
-  } %>
+<%= sage_component SageFormTextarea, {
+  id: "txtarea-example",
+  name: "txtarea-custom-name",
+  placeholder: "Your message",
+  label_text: "Your message",
+  disabled: false,
+  has_error: false,
+} %>
 
-  <h3 class="t-sage-heading-6">Error</h3>
-  <%= sage_component SageFormTextarea, {
-    id: "txtarea-example-error",
-    placeholder: "Your message",
-    label_text: "Your message",
-    disabled: false,
-    has_error: true,
-    message_text: "Error message"
-  } %>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Error"} %><% end %>
+<!-- Docs Only Label End -->
 
-  <h3 class="t-sage-heading-6">No label (placeholder only)</h3>
-  <%= sage_component SageFormTextarea, {
-    id: "txtarea-example-nolabel",
-    placeholder: "Your message",
-    disabled: false,
-    has_error: false,
-  } %>
+<%= sage_component SageFormTextarea, {
+  id: "txtarea-example-error",
+  placeholder: "Your message",
+  label_text: "Your message",
+  disabled: false,
+  has_error: true,
+  message_text: "Error message"
+} %>
 
-  <h3 class="t-sage-heading-6">Disabled</h3>
-  <%= sage_component SageFormTextarea, {
-    id: "txtarea-example-disabled",
-    placeholder: "Your message",
-    label_text: "Your message",
-    disabled: true,
-    has_error: false,
-    content: "Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.",
-  } %>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "No label (placeholder only)"} %><% end %>
+<!-- Docs Only Label End -->
 
-</fieldset>
+<%= sage_component SageFormTextarea, {
+  id: "txtarea-example-nolabel",
+  placeholder: "Your message",
+  disabled: false,
+  has_error: false,
+} %>
+
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Disabled"} %><% end %>
+<!-- Docs Only Label End -->
+
+<%= sage_component SageFormTextarea, {
+  id: "txtarea-example-disabled",
+  placeholder: "Your message",
+  label_text: "Your message",
+  disabled: true,
+  has_error: false,
+  content: "Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.",
+} %>

@@ -1,4 +1,6 @@
-<!-- Default -->
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Meter Input"} %><% end %>
+<!-- Docs Only Label End -->
 
 <%= sage_component SageFormInput, {
   id: "pw-meter-example",
@@ -19,6 +21,10 @@
   suffix: "",
   has_placeholder: false
 } %>
+
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Password Meter"} %><% end %>
+<!-- Docs Only Label End -->
 
 <%= sage_component SageMeter, {
   id: "pw-hint-meter",

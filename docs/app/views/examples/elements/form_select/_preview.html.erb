@@ -1,3 +1,7 @@
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Default"} %><% end %>
+<!-- Docs Only Label End -->
+
 <%= sage_component SageFormSelect, {
   name: "Characters",
   has_error: false,
@@ -33,6 +37,10 @@
   ],
   message: "This is a message"
 } %>
+
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "With Errors"} %><% end %>
+<!-- Docs Only Label End -->
 
 <%= sage_component SageFormSelect, {
   name: "Pets",
@@ -74,4 +82,11 @@
   message: "This is a message"
 } %>
 
-<p><strong>Note:</strong> For a fully styled dropdown selector, see the Dropdown object.</p>
+<!-- Docs Only Note -->
+<%= sage_component SageAlert, {
+  color: "info",
+  title: "Note:",
+  desc: "For a fully styled dropdown selector, see the Dropdown object.",
+  icon_name: "sage-icon-info-circle",
+} %>
+<!-- Docs Only Note End -->

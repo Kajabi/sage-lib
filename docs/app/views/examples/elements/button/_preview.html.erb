@@ -18,12 +18,10 @@ demo_configs = [
 ]
 %>
 <% demo_configs.each do | config | %>
-  <%= sage_component SageCardBlock, {} do %>
-    <%= sage_component SageLabel, {
-      color: "draft",
-      value: config[:heading],
-    } %>
-  <% end %>
+
+  <!-- Docs Only Label -->
+  <%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: config[:heading]} %><% end %>
+  <!-- Docs Only Label End -->
 
   <% [false, true].each do | disabled | %>
     <%= sage_component SageButtonGroup, { gap: :sm, spacer: { bottom: :sm }} do %>
@@ -81,12 +79,10 @@ demo_configs = [
 <% end %>
 
 <% demo_configs.each do | config | %>
-  <%= sage_component SageCardBlock, {} do %>
-    <%= sage_component SageLabel, {
-      color: "draft",
-      value: "Subtle #{config[:heading]}",
-    } %>
-  <% end %>
+
+  <!-- Docs Only Label -->
+  <%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Subtle #{config[:heading]}"} %><% end %>
+  <!-- Docs Only Label End -->
 
   <% [false, true].each do | size | %>
     <%= sage_component SageButtonGroup, { gap: :sm, spacer: { bottom: :sm }} do %>
@@ -148,12 +144,10 @@ demo_configs = [
   <% end %>
 <% end %>
 
-<%= sage_component SageCardBlock, {} do %>
-  <%= sage_component SageLabel, {
-    color: "draft",
-    value: "Button group: Align End",
-  } %>
-<% end %>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Button group: Align End"} %><% end %>
+<!-- Docs Only Label End -->
+
 <%= sage_component SageButtonGroup, { gap: :md, align: "end" } do %>
   <%= sage_component SageButton, {
     value: "Cancel",
@@ -165,12 +159,10 @@ demo_configs = [
   } %>
 <% end %>
 
-<%= sage_component SageCardBlock, {} do %>
-  <%= sage_component SageLabel, {
-    color: "draft",
-    value: "Button group: Align Space-Between",
-  } %>
-<% end %>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Button group: Align Space-Between"} %><% end %>
+<!-- Docs Only Label End -->
+
 <%= sage_component SageButtonGroup, { gap: :md, align: "space-between" } do %>
   <%= sage_component SageButton, {
     value: "Cancel",
@@ -182,12 +174,10 @@ demo_configs = [
   } %>
 <% end %>
 
-<%= sage_component SageCardBlock, {} do %>
-  <%= sage_component SageLabel, {
-    color: "draft",
-    value: "Button group: Align Space-Between with top border",
-  } %>
-<% end %>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Button group: Align Space-Between with top border"} %><% end %>
+<!-- Docs Only Label End -->
+
 <%= sage_component SageButtonGroup, { gap: :md, align: "space-between", borderTop: true } do %>
   <%= sage_component SageButton, {
     value: "Cancel",
@@ -199,18 +189,10 @@ demo_configs = [
   } %>
 <% end %>
 
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Shadow Treatment"} %><% end %>
+<!-- Docs Only Label End -->
 
-<%= sage_component SageCardBlock, {} do %>
-  <%= sage_component SageLabel, {
-    color: "draft",
-    value: "Shadow Treatment",
-  } %>
-<% end %>
-<p>
-  Regular buttons allow for a "raised" shadow treatement to be toggled on or off.
-  This is on by default for "Primary" button styles and can be toggled off with "no_shadow".
-  For the other styles it is off by default but can be toggled on with "raised".  
-</p>
 <%= sage_component SageButtonGroup, { gap: :md, spacer: { bottom: :md } } do %>
   <%= sage_component SageButton, {
     value: "Raised (default)",
@@ -244,3 +226,14 @@ demo_configs = [
     raised: true,
   } %>
 <% end %>
+
+<!-- Docs Only Note -->
+<%= sage_component SageAlert, {
+  color: "info",
+  title: "Note:",
+  desc: "Regular buttons allow for a 'raised' shadow treatement to be toggled on or off.
+  This is on by default for 'rimary' button styles and can be toggled off with 'no_shadow'.
+  For the other styles it is off by default but can be toggled on with 'raised'.",
+  icon_name: "sage-icon-info-circle",
+} %>
+<!-- Docs Only Note End -->

@@ -1,17 +1,26 @@
-<h2>Single item</h2>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Single item"} %><% end %>
+<!-- Docs Only Label End -->
+
 <%= sage_component SageDescription, {
   title: "Name",
   data: "John Doe",
 } %>
 
-<h2>Single item (title normal case)</h2>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Single item (title normal case)"} %><% end %>
+<!-- Docs Only Label End -->
+
 <%= sage_component SageDescription, {
   title: "Name",
   data: "John Doe",
   allcaps_titles: false,
 } %>
 
-<h2>Multiple items</h2>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Multiple items"} %><% end %>
+<!-- Docs Only Label End -->
+
 <%= sage_component SageDescription, {
   items: [
     {
@@ -33,7 +42,10 @@
   ],
 } %>
 
-<h2>Mulitple items (inline layout)</h2>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Mulitple items (inline layout)"} %><% end %>
+<!-- Docs Only Label End -->
+
 <%= sage_component SageDescription, {
   items: [
     {

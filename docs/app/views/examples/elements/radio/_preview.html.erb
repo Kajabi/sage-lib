@@ -53,7 +53,10 @@
   } %>
 <% end %>
 
-<h3 class="t-sage-heading-6">Bordered Radio</h3>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Bordered Radio"} %><% end %>
+<!-- Docs Only Label End -->
+
 <%= sage_component SageRadio, {
   caption: "caption text",
   id: "r6",

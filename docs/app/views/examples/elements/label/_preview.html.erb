@@ -26,9 +26,12 @@ configs = [
   }
 ]
 %>
-<%= md("**Note:** Examples on this page all use the `SageLabelGroup` to wrap them but this is not required. It simply makes a set of `Label`s display neatly :)") %>
 <%= sage_component SagePanelBlock, {} do %>
-  <h3 class="t-sage-heading-6">Default</h3>
+
+  <!-- Docs Only Label -->
+  <%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Default"} %><% end %>
+  <!-- Docs Only Label End -->
+
   <%= sage_component SageLabelGroup, {} do %>
     <% configs.each do | config | %>
       <%= sage_component SageLabel, {
@@ -41,7 +44,12 @@ configs = [
 
 
 <%= sage_component SagePanelBlock, {} do %>
-  <h3 class="t-sage-heading-6">Subtle</h3>
+
+  <!-- Docs Only Label -->
+  <br>
+  <%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Subtle"} %><% end %>
+  <!-- Docs Only Label End -->
+
   <%= sage_component SageLabelGroup, {} do %>
     <% configs.each do | config | %>
       <%= sage_component SageLabel, {
@@ -54,7 +62,12 @@ configs = [
 <% end %>
 
 <%= sage_component SagePanelBlock, {} do %>
-  <h3 class="t-sage-heading-6">Bold</h3>
+  
+  <!-- Docs Only Label -->
+  <br>
+  <%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Bold"} %><% end %>
+  <!-- Docs Only Label End -->
+
   <%= sage_component SageLabelGroup, {} do %>
     <% configs.each do | config | %>
       <%= sage_component SageLabel, {
@@ -67,7 +80,12 @@ configs = [
 <% end %>
 
 <%= sage_component SagePanelBlock, {} do %>
-  <h3 class="t-sage-heading-6">With Icons</h3>
+
+  <!-- Docs Only Label -->
+  <br>
+  <%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "With Icons"} %><% end %>
+  <!-- Docs Only Label End -->
+
   <%= sage_component SageLabelGroup, {} do %>
     <%= sage_component SageLabel, {
       color: "draft",
@@ -83,7 +101,12 @@ configs = [
 <% end %>
 
 <%= sage_component SagePanelBlock, {} do %>
-  <h3 class="t-sage-heading-6">Interactive Default</h3>
+
+  <!-- Docs Only Label -->
+  <br>
+  <%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Interactive Default"} %><% end %>
+  <!-- Docs Only Label End -->
+
   <%= sage_component SageLabelGroup, {} do %>
     <% configs.each do | config | %>
       <%= sage_component SageLabel, {
@@ -97,7 +120,12 @@ configs = [
 <% end %>
 
 <%= sage_component SagePanelBlock, {} do %>
-  <h3 class="t-sage-heading-6">Interactive With Secondary Button</h3>
+
+  <!-- Docs Only Label -->
+  <br>
+  <%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Interactive With Secondary Button"} %><% end %>
+  <!-- Docs Only Label End -->
+
   <%= sage_component SageLabelGroup, {} do %>
     <% configs.each do | config | %>
       <%= sage_component SageLabel, {
@@ -112,7 +140,12 @@ configs = [
 <% end %>
 
 <%= sage_component SagePanelBlock, {} do %>
-  <h3 class="t-sage-heading-6">Interactive With Dropdown Treatment</h3>
+
+  <!-- Docs Only Label -->
+  <br>
+  <%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Interactive With Dropdown Treatment"} %><% end %>
+  <!-- Docs Only Label End -->
+
   <%= sage_component SageLabelGroup, {} do %>
     <% configs.each do | config | %>
       <%= sage_component SageLabel, {
@@ -124,3 +157,12 @@ configs = [
     <% end %>
   <% end %>
 <% end %>
+
+<!-- Docs Only Note -->
+<%= sage_component SageAlert, {
+  color: "info",
+  title: "Note:",
+  desc: "Examples on this page all use the `SageLabelGroup` to wrap them but this is not required. It simply makes a set of `Label`s display neatly :)",
+  icon_name: "sage-icon-info-circle",
+} %>
+<!-- Docs Only Note End -->

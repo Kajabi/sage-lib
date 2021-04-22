@@ -1,175 +1,207 @@
-<fieldset class="sage-type">
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Text (default)"} %><% end %>
+<!-- Docs Only Label End -->
 
-  <h3 class="t-sage-heading-6">Text (default)</h3>
-  <%= sage_component SageFormInput, {
-    id: "form__fname1",
-    input_type: "text",
-    label_text: "First name",
-    placeholder: "First name",
-    required: true,
-    disabled: false,
-    has_error: false,
-    name: "custom_input_name",
-    message_text: "This is a message",
-    has_placeholder: false
-  } %>
+<%= sage_component SageFormInput, {
+  id: "form__fname1",
+  input_type: "text",
+  label_text: "First name",
+  placeholder: "First name",
+  required: true,
+  disabled: false,
+  has_error: false,
+  name: "custom_input_name",
+  message_text: "This is a message",
+  has_placeholder: false
+} %>
 
-  <h3 class="t-sage-heading-6">Text (with error)</h3>
-  <%= sage_component SageFormInput, {
-    id: "form__fname2",
-    input_type: "text",
-    label_text: "First name",
-    placeholder: "First name",
-    required: true,
-    disabled: false,
-    has_error: true,
-    message_text: "This is a message",
-    has_placeholder: false
-  } %>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Text (with error)"} %><% end %>
+<!-- Docs Only Label End -->
 
-  <h3 class="t-sage-heading-6">Text (prefilled)</h3>
-  <%= sage_component SageFormInput, {
-    id: "form__country",
-    input_type: "text",
-    label_text: "Country",
-    placeholder: "Country",
-    value: "USA",
-    required: true,
-    disabled: false,
-    has_error: false,
-    has_placeholder: false
-  } %>
+<%= sage_component SageFormInput, {
+  id: "form__fname2",
+  input_type: "text",
+  label_text: "First name",
+  placeholder: "First name",
+  required: true,
+  disabled: false,
+  has_error: true,
+  message_text: "This is a message",
+  has_placeholder: false
+} %>
 
-  <h3 class="t-sage-heading-6">Text (disabled)</h3>
-  <%= sage_component SageFormInput, {
-    id: "form__apt",
-    input_type: "text",
-    label_text: "PO Box",
-    placeholder: "PO Box",
-    required: true,
-    disabled: true,
-    has_error: false,
-    message_text: "This is a message",
-    has_placeholder: false
-  } %>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Text (prefilled)"} %><% end %>
+<!-- Docs Only Label End -->
 
-  <h3 class="t-sage-heading-6">Text (readonly)</h3>
-  <%= sage_component SageFormInput, {
-    id: "form__readonly",
-    value: "This text can't be modified by the user",
-    input_type: "text",
-    label_text: "Can't touch this",
-    placeholder: "Can't touch this",
-    required: false,
-    disabled: false,
-    readonly: true,
-    has_error: false,
-    message_text: "This is a message",
-    has_placeholder: false
-  } %>
+<%= sage_component SageFormInput, {
+  id: "form__country",
+  input_type: "text",
+  label_text: "Country",
+  placeholder: "Country",
+  value: "USA",
+  required: true,
+  disabled: false,
+  has_error: false,
+  has_placeholder: false
+} %>
 
-  <h3 class="t-sage-heading-6">Email</h3>
-  <%= sage_component SageFormInput, {
-    id: "form__email",
-    input_type: "email",
-    label_text: "Email address",
-    placeholder: "Email address",
-    required: true,
-    disabled: false,
-    has_error: false,
-    message_text: "This is a message",
-    has_placeholder: false
-  } %>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Text (disabled)"} %><% end %>
+<!-- Docs Only Label End -->
 
-  <h3 class="t-sage-heading-6">Password</h3>
-  <%= sage_component SageFormInput, {
-    id: "form__pw",
-    input_type: "password",
-    label_text: "Create a password",
-    placeholder: "Create a password",
-    required: true,
-    disabled: false,
-    minlength: "8",
-    maxlength: "128",
-    has_error: false,
-    has_placeholder: false
-  } %>
+<%= sage_component SageFormInput, {
+  id: "form__apt",
+  input_type: "text",
+  label_text: "PO Box",
+  placeholder: "PO Box",
+  required: true,
+  disabled: true,
+  has_error: false,
+  message_text: "This is a message",
+  has_placeholder: false
+} %>
 
-  <h3 class="t-sage-heading-6">Numbers</h3>
-  <%= sage_component SageFormInput, {
-    id: "form__num",
-    input_type: "number",
-    label_text: "Enter quantity (max 48)",
-    placeholder: "Enter quantity (max 48)",
-    required: true,
-    disabled: false,
-    input_mode: "numeric",
-    pattern: "[0-9]{2}",
-    max: "48",
-    maxlength: "2",
-    has_error: false,
-    has_placeholder: false
-  } %>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Text (readonly)"} %><% end %>
+<!-- Docs Only Label End -->
 
-  <h3 class="t-sage-heading-6">Numbers (incremented)</h3>
-  <%= sage_component SageFormInput, {
-    id: "form__num",
-    input_type: "number",
-    label_text: "Enter percentage (max 5%)",
-    placeholder: "Enter percentage (max 5%)",
-    required: true,
-    disabled: false,
-    input_mode: "numeric",
-    max: "5",
-    maxlength: "2",
-    min: "0",
-    step: "0.5",
-    has_error: false,
-    has_placeholder: false
-  } %>
+<%= sage_component SageFormInput, {
+  id: "form__readonly",
+  value: "This text can't be modified by the user",
+  input_type: "text",
+  label_text: "Can't touch this",
+  placeholder: "Can't touch this",
+  required: false,
+  disabled: false,
+  readonly: true,
+  has_error: false,
+  message_text: "This is a message",
+  has_placeholder: false
+} %>
 
-  <h3 class="t-sage-heading-6">Prefixed</h3>
-  <%= sage_component SageFormInput, {
-    id: "form__pre",
-    input_type: "text",
-    label_text: "Custom domain",
-    placeholder: "Custom domain",
-    required: true,
-    disabled: false,
-    input_mode: "text",
-    pattern: "[a-z]+\.[a-zA-Z0-9\/\-]+",
-    has_error: false,
-    prefix: "https://",
-    has_placeholder: false
-  } %>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Email"} %><% end %>
+<!-- Docs Only Label End -->
 
-  <h3 class="t-sage-heading-6">Suffixed</h3>
-  <%= sage_component SageFormInput, {
-    id: "form__suf",
-    input_type: "number",
-    label_text: "Price per month",
-    placeholder: "Price per month",
-    required: true,
-    disabled: false,
-    input_mode: "numeric",
-    pattern: "[0-9]{6}",
-    max: "100000",
-    maxlength: "6",
-    has_error: false,
-    suffix: ".00",
-    has_placeholder: false
-  } %>
+<%= sage_component SageFormInput, {
+  id: "form__email",
+  input_type: "email",
+  label_text: "Email address",
+  placeholder: "Email address",
+  required: true,
+  disabled: false,
+  has_error: false,
+  message_text: "This is a message",
+  has_placeholder: false
+} %>
 
-  <h3 class="t-sage-heading-6">Custom placeholder & label visible</h3>
-  <%= sage_component SageFormInput, {
-    id: "form__reply1",
-    input_type: "text",
-    label_text: "Reply-to email",
-    placeholder: "Custom placeholder text",
-    required: true,
-    disabled: false,
-    has_error: false,
-    has_placeholder: true
-  } %>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Password"} %><% end %>
+<!-- Docs Only Label End -->
 
-</fieldset>
+<%= sage_component SageFormInput, {
+  id: "form__pw",
+  input_type: "password",
+  label_text: "Create a password",
+  placeholder: "Create a password",
+  required: true,
+  disabled: false,
+  minlength: "8",
+  maxlength: "128",
+  has_error: false,
+  has_placeholder: false
+} %>
+
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Numbers"} %><% end %>
+<!-- Docs Only Label End -->
+
+<%= sage_component SageFormInput, {
+  id: "form__num",
+  input_type: "number",
+  label_text: "Enter quantity (max 48)",
+  placeholder: "Enter quantity (max 48)",
+  required: true,
+  disabled: false,
+  input_mode: "numeric",
+  pattern: "[0-9]{2}",
+  max: "48",
+  maxlength: "2",
+  has_error: false,
+  has_placeholder: false
+} %>
+
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Numbers (incremented)"} %><% end %>
+<!-- Docs Only Label End -->
+
+<%= sage_component SageFormInput, {
+  id: "form__num",
+  input_type: "number",
+  label_text: "Enter percentage (max 5%)",
+  placeholder: "Enter percentage (max 5%)",
+  required: true,
+  disabled: false,
+  input_mode: "numeric",
+  max: "5",
+  maxlength: "2",
+  min: "0",
+  step: "0.5",
+  has_error: false,
+  has_placeholder: false
+} %>
+
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Prefixed"} %><% end %>
+<!-- Docs Only Label End -->
+
+<%= sage_component SageFormInput, {
+  id: "form__pre",
+  input_type: "text",
+  label_text: "Custom domain",
+  placeholder: "Custom domain",
+  required: true,
+  disabled: false,
+  input_mode: "text",
+  pattern: "[a-z]+\.[a-zA-Z0-9\/\-]+",
+  has_error: false,
+  prefix: "https://",
+  has_placeholder: false
+} %>
+
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Suffixed"} %><% end %>
+<!-- Docs Only Label End -->
+
+<%= sage_component SageFormInput, {
+  id: "form__suf",
+  input_type: "number",
+  label_text: "Price per month",
+  placeholder: "Price per month",
+  required: true,
+  disabled: false,
+  input_mode: "numeric",
+  pattern: "[0-9]{6}",
+  max: "100000",
+  maxlength: "6",
+  has_error: false,
+  suffix: ".00",
+  has_placeholder: false
+} %>
+
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Custom placeholder & label visible"} %><% end %>
+<!-- Docs Only Label End -->
+
+<%= sage_component SageFormInput, {
+  id: "form__reply1",
+  input_type: "text",
+  label_text: "Reply-to email",
+  placeholder: "Custom placeholder text",
+  required: true,
+  disabled: false,
+  has_error: false,
+  has_placeholder: true
+} %>

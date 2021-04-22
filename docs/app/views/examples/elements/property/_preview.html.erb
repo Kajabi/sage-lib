@@ -1,7 +1,13 @@
-<h4>Single Property</h4>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Single Property"} %><% end %>
+<!-- Docs Only Label End -->
+
 <%= sage_component SageProperty, { icon: "calendar-date", value: "Created on April 20th, 2020" } %>
 
-<h4>Property group</h4>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Property group"} %><% end %>
+<!-- Docs Only Label End -->
+
 <%= sage_component SagePropertyGroup, {} do %>
   <%= sage_component SageProperty, { icon: "calendar-date", value: "April 20th, 2020" } %>
   <%= sage_component SageProperty, { icon: "users", value: "14 Users" } %>

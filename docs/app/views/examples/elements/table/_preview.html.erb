@@ -40,14 +40,20 @@ sample_table = {
 }
 %>
 
-<h3 class="t-sage-heading-6">Responsive table</h3>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Responsive table"} %><% end %>
+<!-- Docs Only Label End -->
+
 <%= sage_component SageTable, {
   headers: sample_table[:headers],
   rows: sample_table[:rows],
   caption: "Responsive tables require the use of two parent containers",
 } %>
 
-<h3 class="t-sage-heading-6">Striped table</h3>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Striped table"} %><% end %>
+<!-- Docs Only Label End -->
+
 <%= sage_component SageTable, {
   headers: sample_table[:headers],
   rows: sample_table[:rows],
@@ -55,7 +61,10 @@ sample_table = {
   striped: true
 } %>
 
-<h3 class="t-sage-heading-6">Sortable table</h3>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Sortable table"} %><% end %>
+<!-- Docs Only Label End -->
+
 <%= sage_component SageTable, {
   headers: sample_table[:headers],
   rows: sample_table[:rows],
@@ -64,7 +73,10 @@ sample_table = {
   striped: true
 } %>
 
-<h3 class="t-sage-heading-6">Table with highlighted rows and block cells</h3>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Table with highlighted rows and block cells"} %><% end %>
+<!-- Docs Only Label End -->
+
 <%= sage_component SageTable, {
   caption: %(
     Block cells can be used with anchor tags to link the entire cell, or <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> elements for content
@@ -108,8 +120,10 @@ sample_table = {
   ]
 } %>
 
-<h3 class="t-sage-heading-6">Striped table with selectively truncated cells</h3>
-<p>Individual cells should be assigned the <code>.sage-table-cell--truncate</code> class. Not suggested for use with long strings of <em>important</em> text: use the responsive (scrolling) table instead.</p>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Striped table with selectively truncated cells"} %><% end %>
+<!-- Docs Only Label End -->
+
 <%= sage_component SageTable, {
   headers: [
     "Malesuada",
@@ -141,9 +155,19 @@ sample_table = {
   ]
 } %>
 
-<h3 class="t-sage-heading-6">Hiding and showing cell content</h3>
-<p>Individual cells can make use of the <a href="<%= pages_design_path(:grid) %>">Sage Grid</a> classes for responsive display of content. Refer to the <a href="<%= pages_design_path(:icon) %>#grid-responsive-show-hide">Grid documentation</a> for more details.</p>
-<p>Remember to apply the same classes equally to <strong>all related vertical columns</strong>, or the structure of the table will be misaligned.</p>
+<!-- Docs Only Note -->
+<%= sage_component SageAlert, {
+  color: "info",
+  title: "Note:",
+  desc: "Individual cells should be assigned the '.sage-table-cell--truncate' class. Not suggested for use with long strings of important text: use the responsive (scrolling) table instead.",
+  icon_name: "sage-icon-info-circle",
+} %>
+<!-- Docs Only Note End -->
+  
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Hiding and showing cell content"} %><% end %>
+<!-- Docs Only Label End -->
+
 <%= sage_component SageTable, {
   headers: [
     "Malesuada",
@@ -167,3 +191,16 @@ sample_table = {
     ]
   ]
 } %>
+
+<%= sage_component SageAlert, {
+  color: "info",
+  title: "Our privacy policy has changed",
+  desc: "Individual cells can make use of the Sage Grid classes for responsive display of content.
+  Remember to apply the same classes equally to all related vertical columns, or the structure of the table will be misaligned.
+  Refer to the Grid documentation for more details.",
+  icon_name: "sage-icon-info-circle",
+} do %>
+  <% content_for :sage_alert_actions do %>
+    <%= link_to "Sage Grid", pages_design_path(:grid) %>
+  <% end %>
+<% end %>

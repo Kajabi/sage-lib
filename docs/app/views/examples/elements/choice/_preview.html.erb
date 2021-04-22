@@ -1,7 +1,9 @@
 <%
 long_description = "Description with longer text to cause wrapping and make the top alignment appear more necessary."
 %>
-<h3 class="t-sage-heading-6">Single Line (radio type)</h3>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Single Line (radio type)"} %><% end %>
+<!-- Docs Only Label End -->
 
 <%= sage_component SageChoice, {
     target: "example",
@@ -11,7 +13,10 @@ long_description = "Description with longer text to cause wrapping and make the 
   }
 %>
 
-<h3 class="t-sage-heading-6">With Radio</h3>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "With Radio"} %><% end %>
+<!-- Docs Only Label End -->
+
 <%= sage_component SageChoice, {
     target: "example",
     text: "Option 1a",
@@ -25,7 +30,10 @@ long_description = "Description with longer text to cause wrapping and make the 
   }
 %>
 
-<h3 class="t-sage-heading-6">Multi-Line  (radio type)</h3>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Multi-Line  (radio type)"} %><% end %>
+<!-- Docs Only Label End -->
+
 <%= sage_component SageChoice, {
     target: "example",
     text: "Option 1",
@@ -34,7 +42,10 @@ long_description = "Description with longer text to cause wrapping and make the 
   }
 %>
 
-<h3 class="t-sage-heading-6">Arrow Variation</h3>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Arrow Variation"} %><% end %>
+<!-- Docs Only Label End -->
+
 <%= sage_component SageChoice, {
     attributes: {
       href: "//example.com"
@@ -44,8 +55,10 @@ long_description = "Description with longer text to cause wrapping and make the 
   }
 %>
 
-<h3 class="t-sage-heading-6">Icon Variation</h3>
-<p>Select any icon to appear to the left of the text.</p>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Icon Variation"} %><% end %>
+<!-- Docs Only Label End -->
+
 <%= sage_component SageChoice, {
     target: "example",
     text: "Option 1",
@@ -54,8 +67,10 @@ long_description = "Description with longer text to cause wrapping and make the 
   }
 %>
 
-<h3 class="t-sage-heading-6">Graphic Variation (with link text)</h3>
-<p>Provide a graphic to the left of the text.</p>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Graphic Variation (with link text)"} %><% end %>
+<!-- Docs Only Label End -->
+
 <%= sage_component SageChoice, {
     target: "example",
     text: "Calendly",
@@ -68,8 +83,10 @@ long_description = "Description with longer text to cause wrapping and make the 
   }
 %>
 
-<h3 class="t-sage-heading-6">Rich text/Customized</h3>
-<p>Choice cards can also be opened up for custom content to be composed within.</p>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Rich text/Customized"} %><% end %>
+<!-- Docs Only Label End -->
+
 <%= sage_component SageChoice, {
   target: "example",
   attributes: {
@@ -83,9 +100,19 @@ long_description = "Description with longer text to cause wrapping and make the 
   <% end %>
 <% end %>
 
+<!-- Docs Only Note -->
+<%= sage_component SageAlert, {
+  color: "info",
+  title: "Note:",
+  desc: "Choice cards can also be opened up for custom content to be composed within.",
+  icon_name: "sage-icon-info-circle",
+} %>
+<!-- Docs Only Note End -->
 
-<h3 class="t-sage-heading-6">Icon alignment</h3>
-<p>While by default all icon types will align in the center of the choice card, they can be adjusted to align at the "start" or top of the card.</p>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Icon alignment"} %><% end %>
+<!-- Docs Only Label End -->
+
 <%= sage_component SageChoice, {
     target: "example",
     text: "Option 1",
@@ -103,3 +130,12 @@ long_description = "Description with longer text to cause wrapping and make the 
     vertical_align_icon: "start",
   }
 %>
+
+<!-- Docs Only Note -->
+<%= sage_component SageAlert, {
+  color: "info",
+  title: "Note:",
+  desc: "While by default all icon types will align in the center of the choice card, they can be adjusted to align at the 'start' or top of the card.",
+  icon_name: "sage-icon-info-circle",
+} %>
+<!-- Docs Only Note End -->

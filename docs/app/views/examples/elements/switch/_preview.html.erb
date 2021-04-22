@@ -126,7 +126,10 @@
   <% end %>
 <% end %>
 
-<h3 class="t-sage-heading-6">Bordered Switch</h3>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Bordered Switch"} %><% end %>
+<!-- Docs Only Label End -->
+
 <%= sage_component SageSwitch, { 
   type: "checkbox",
   id: "sage-switch-20",
@@ -149,7 +152,10 @@
   toggle_position: "right"
 } %>
 
-<h3 class="t-sage-heading-6">Bordered Switch (Radio)</h3>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Bordered Switch (Radio)"} %><% end %>
+<!-- Docs Only Label End -->
+
 <%= sage_component SageSwitch, { 
   type: "radio",
   id: "sage-switch-22",

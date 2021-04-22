@@ -1,4 +1,7 @@
-<h3 class="t-sage-heading-6">Standard link</h3>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Standard link"} %><% end %>
+<!-- Docs Only Label End -->
+
 <%= sage_component SagePanelStack, {} do %>
   <%= sage_component SageLink, {
     url: "#",
@@ -29,7 +32,10 @@
   } %>
 <% end %>
 
-<h3 class="t-sage-heading-6">External links</h3>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "External links"} %><% end %>
+<!-- Docs Only Label End -->
+
 <%= sage_component SagePanelStack, {} do %>
   <%= sage_component SageLink, {
     url: "https://example.com",
@@ -61,7 +67,10 @@
   } %>
 <% end %>
 
-<h3 class="t-sage-heading-6">Help/Info links</h3>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Help/Info links"} %><% end %>
+<!-- Docs Only Label End -->
+
 <%= sage_component SagePanelStack, {} do %>
   <%= sage_component SageLink, {
     url: "#",
@@ -93,6 +102,8 @@
   } %>
 <% end %>
 
-<h3 class="t-sage-heading-6">Subtext links</h3>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Subtext links"} %><% end %>
+<!-- Docs Only Label End -->
 
 <a href="//example.com" class="sage-link--subtext">Link for placement in subtext</a>

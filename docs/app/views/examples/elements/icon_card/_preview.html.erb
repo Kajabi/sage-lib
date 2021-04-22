@@ -1,4 +1,7 @@
-<h3 class="t-sage-heading-6">Icon Card</h3>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Icon Card"} %><% end %>
+<!-- Docs Only Label End -->
+
 <div class="sage-row">
   <% [
   "draft",
@@ -16,7 +19,11 @@
     </div>
   <% end %>
 </div>
-<h3 class="t-sage-heading-6">Icon Card with custom <code>background_color</code> and <code>foreground_color</code></h3>
+
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Icon Card with custom colors"} %><% end %>
+<!-- Docs Only Label End -->
+
 <div class="sage-row">
   <% [
   { background_color: "#A463F2", foreground_color: "#9EEBCF" },
@@ -35,3 +42,5 @@
     </div>
   <% end %>
 </div>
+
+<p><code>background_color</code> and <code>foreground_color</code></p>

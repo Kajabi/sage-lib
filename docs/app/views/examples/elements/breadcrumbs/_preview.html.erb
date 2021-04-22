@@ -1,9 +1,7 @@
-<%= sage_component SageCardBlock, {} do %>
-  <%= sage_component SageLabel, {
-    color: "draft",
-    value: "Default"
-  } %>
-<% end %>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Default"} %><% end %>
+<!-- Docs Only Label End -->
+
 <%= sage_component SageBreadcrumbs, {
   items: [
     {
@@ -21,12 +19,10 @@
   ]
 } %>
 
-<%= sage_component SageCardBlock, {} do %>
-  <%= sage_component SageLabel, {
-    color: "draft",
-    value: "Back Link Variation"
-  } %>
-<% end %>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Back Link"} %><% end %>
+<!-- Docs Only Label End -->
+
 <%= sage_component SageBreadcrumbs, {
   items: [
     {
@@ -36,12 +32,10 @@
   ]
 } %>
 
-<%= sage_component SageCardBlock, {} do %>
-  <%= sage_component SageLabel, {
-    color: "draft",
-    value: "Progress Bar Variation"
-  } %>
-<% end %>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Progress Bar"} %><% end %>
+<!-- Docs Only Label End -->
+
 <%= sage_component SageBreadcrumbs, {
   is_progressbar: true,
   items: [

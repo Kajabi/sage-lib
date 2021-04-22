@@ -1,12 +1,16 @@
-<div class="sage-row">
-  <div class="sage-col--md-6 example__block--lg">
-    <%= sage_component SageLoader, {
-      type: "bar"
-    } %>
-  </div>
-  <div class="sage-col--md-6 example__block--lg">
-    <%= sage_component SageLoader, {
-      type: "spinner"
-    } %>
-  </div>
-</div>
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Loading Bar"} %><% end %>
+<!-- Docs Only Label End -->
+
+<%= sage_component SageLoader, {
+  type: "bar"
+} %>
+
+<!-- Docs Only Label -->
+<%= sage_component SageCardBlock, {} do %><%= sage_component SageLabel, {color: "draft",value: "Loading Spinner"} %><% end %>
+<!-- Docs Only Label End -->
+
+<%= sage_component SageLoader, {
+  type: "spinner"
+} %>
+
