@@ -114,8 +114,8 @@ $-modal-header-image-size: rem(28px);
     width: 100vw;
     height: 100vh;
     max-width: none;
-    border-radius: 0;
     padding: rem(48px);
+    border-radius: 0;
 
     @media (min-width: sage-breakpoint(lg-min)) {
       margin-top: 0;
