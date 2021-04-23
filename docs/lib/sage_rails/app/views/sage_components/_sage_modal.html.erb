@@ -2,6 +2,7 @@
   class="sage-modal
     <%= "sage-modal--active" if component.active %>
     <%= "sage-modal--large" if component.large -%>
+    <%= "sage-modal--fullscreen" if component.fullscreen -%>
     <%= "sage-modal--no-blur" if component.disable_background_blur -%>
     <%= component.css_classes.html_safe if component.css_classes.present? %>
   "
@@ -18,6 +19,16 @@
   <%= component.generated_html_attributes.html_safe %>
 >
   <section class="sage-modal__container" data-js-modal-container tabindex="-1">
+    <% if component.fullscreen %>
+      <%= sage_component SageButton, {
+        style: "secondary",
+        subtle: true,
+        value: "Close Modal",
+        icon: { name: "remove", style: "only" },
+        attributes: { "data-js-modal": true },
+        css_classes: "sage-modal__close-btn",
+      } %>
+    <% end %>
     <% if component.content.present? %>
       <%= component.content %>
     <% else %>
