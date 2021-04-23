@@ -56,9 +56,10 @@ $-modal-header-image-size: rem(28px);
 }
 
 .sage-modal__close-btn {
-  position: absolute;
-  right: rem(48px);
-  top: rem(48px);
+  .sage-modal--fullscreen & {
+    position: absolute;
+    right: rem(48px);
+  }
 }
 
 .sage-modal__container {
