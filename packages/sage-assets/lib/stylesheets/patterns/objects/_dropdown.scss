@@ -264,7 +264,7 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
 }
 
 .sage-dropdown__panel {
-  visibility: hidden;
+  opacity: 0;
   position: absolute;
   z-index: sage-z-index(negative);
   top: calc(100% + #{sage-spacing(xs)});
@@ -307,7 +307,7 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
   }
 
   [aria-expanded="true"] > & {
-    visibility: visible;
+    opacity: 1;
     z-index: sage-z-index(default, 100);
     // Temporarily removing animation as it causes
     // a positioning issue with nested flex positioned elements
