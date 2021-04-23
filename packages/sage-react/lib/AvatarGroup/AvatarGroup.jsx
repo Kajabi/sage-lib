@@ -33,5 +33,7 @@ AvatarGroup.defaultProps = {
 
 AvatarGroup.propTypes = {
   className: PropTypes.string,
-  items: PropTypes.shape(Avatar.propTypes),
+  items: PropTypes.arrayOf(PropTypes.shape({
+    initials: PropTypes.string,
+  })),
 };
