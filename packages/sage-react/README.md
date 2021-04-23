@@ -47,3 +47,19 @@ Runs the linter that is also used during CI.
 ### `storybook`
 
 Runs the storybook server. Access at http://localhost:4100/
+
+### `test`
+
+Tuns Jest tests of React components and outputs a report in the console.
+
+### `test:coverage:watch`
+
+Runs all Jest tests in `watchAll` mode and with coverage output.
+
+### `test:coverage:server`
+
+Runs a `browsersync` server on http://localhost:4110/ with live reload to display the `coverage/lcov-report` output. See `test:dev`. You must run `test:coverage:watch` at least once before this command will work smoothly.
+
+### `test:dev`
+
+Runs `test:coverage:watch` and `test:coverage:server` in parallel for an integrated testing Jest experience. If on first load you see `Cannot GET /` simply make a change to a `.spec.jsx` file, watch for console test output to finish and then refresh the browser. Live reload should continue thereafter.
