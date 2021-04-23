@@ -22,12 +22,12 @@ describe('Rendering the Sage Icon Component', () => {
     it('renders the component', () => {
       expect(component).toHaveLength(1);
     });
-    
+
     it('has an icon class', () => {
       expect(component.get(0).props).toHaveProperty('className');
       expect(component.get(0).props.className).toContain(`sage-icon-${defaultProps.icon}`);
     });
-    
+
     it('label results in aria-label', () => {
       const label = 'New label';
       component.setProps({ label });

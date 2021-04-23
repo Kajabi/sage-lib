@@ -35,7 +35,7 @@ describe('Sage toggle:', () => {
     });
 
     it('renders a message', () => {
-      let message = 'Testing message';
+      const message = 'Testing message';
       component.setProps({ message });
       const messageElement = component.find('.sage-radio__message');
       expect(messageElement.length).toBe(1);
@@ -43,7 +43,7 @@ describe('Sage toggle:', () => {
   });
 
   describe('variations', () => {
-    it('has an input type of radio', () => {
+    it('has an input type of radio ', () => {
       const input = component.find('input').get(0);
       expect(input.props).toHaveProperty('type', Toggle.TYPES.RADIO);
     });

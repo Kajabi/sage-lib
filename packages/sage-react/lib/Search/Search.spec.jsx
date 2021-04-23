@@ -10,7 +10,7 @@ describe('Sage Search', () => {
 
   beforeEach(() => {
     defaultProps = {
-      onChange: data => data,
+      onChange: (data) => data,
       value: '',
     };
 

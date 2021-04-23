@@ -11,8 +11,8 @@ describe('Sage Sortable', () => {
   beforeEach(() => {
     defaultProps = {
       list: [],
-      setList: data => null,
-      onEnd: data => data,
+      setList: (data) => data,
+      onEnd: (data) => data,
       renderItem: (item) => (
         <p>{item}</p>
       ),
