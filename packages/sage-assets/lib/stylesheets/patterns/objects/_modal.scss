@@ -110,11 +110,11 @@ $-modal-header-image-size: rem(28px);
   }
 
   .sage-modal--fullscreen & {
-    border-radius: 0;
     width: 100vw;
     height: 100vh;
-    max-width: none;
     position: relative;
+    border-radius: 0;
+    max-width: none;
     padding: rem(48px);
 
     @media (min-width: sage-breakpoint(lg-min)) {
