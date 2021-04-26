@@ -4,23 +4,18 @@
       color: component.label_color,
       value: component.label_text,
     } %>
-    <% if component.dropdown_options.present? %>
-      <%= sage_component SageDropdown, {
-        align: "right",
-        items: component.dropdown_options
-      } do %>
-        <%= sage_component SageButton, {
-          style: "secondary",
-          icon: { name: "dot-menu-horizontal", style: "only" },
-          value: "Options",
-          align: "end",
-          subtle: true,
-        } %>
-      <% end %>
+    <% if component.state.present? %>
+      <div class="sage-transaction-card__state<%= " sage-transaction-card__state--#{component.state_color}" if component.state_color.present? %>"><%= component.state %></div>
     <% end %>
   </div>
   <div class="sage-transaction-card__body">
-    <h4 class="sage-transaction-card__name"><%= component.name %></h4>
+    <h4 class="sage-transaction-card__name">
+      <% if component.href.present? %>
+        <a class="sage-transaction-card__name-link" href="<%= component.href %>"><%= component.name %></a>
+      <% else %>
+        <%= component.name %>
+      <% end %>
+    </h4>
     <div class="sage-transaction-card__amount<%= " sage-transaction-card__amount--#{component.amount_color}" if component.amount_color.present? %>"><%= component.amount %></div>
   </div>
   <div class="sage-transaction-card__footer">

@@ -38,6 +38,10 @@
   max-width: 100%;
 }
 
+.sage-transaction-card__name-link {
+  color: inherit;
+}
+
 .sage-transaction-card__amount {
   @extend %t-sage-heading-5;
   white-space: nowrap;
@@ -47,5 +51,15 @@
   color: sage-color(sage, 300);
 }
 .sage-transaction-card__amount--red {
+  color: sage-color(red, 300);
+}
+
+.sage-transaction-card__state {
+  @extend %t-sage-body-small;
+}
+.sage-transaction-card__state--info {
+  color: sage-color(primary, 400);
+}
+.sage-transaction-card__state--red {
   color: sage-color(red, 300);
 }
