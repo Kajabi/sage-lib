@@ -219,7 +219,10 @@ A full set of the possibilities are demonstrated below.
             <%= sage_component SagePanelRow, { grid_template: "ete" } do %>
               <h4 style="width: 30px"><%= letter %></h4>
               <code><%= code %></code>
-              <code style="text-align: right">.sage-grid-template-<%= letter %></code>
+              <div class="<%= SageClassnames::TYPE_ALIGN_RIGHT %>">
+                Rails: <code>SageClassnames::GRID_TEMPLATES::<%= letter.upcase %></code><br/>
+                HTML: <code>.sage-grid-template-<%= letter %></code>
+              </div>
             <% end %>
             <%= sage_component SageCard, {} do %>
               <%= sage_component SageCardRow, { grid_template: letter.to_s, spacer: { top: :xs, bottom: :md }} do %>
@@ -245,13 +248,45 @@ A full set of the possibilities are demonstrated below.
     <% end %>
   </div>
   <%= md("
-## Responsive Considerations</h2>
+## Context
+
+The grid templates above apply the desired row-based layout along with a particular gutter between columns.
+These are typically already applied inside Panels, Cards, and other components.
+In other cases where this is not the case, the following utilities may be used to apply the desired grid spacing on a container:
+
+#{sage_component(SageTable, {
+  headers: [
+    "Name",
+    "Spacing",
+    "Code"
+  ],
+  rows: [
+    {
+      name: "panel",
+      spacing: "24px",
+      code: md(%(
+        HTML: `#{SageClassnames::GRID_PANEL}`<br/>
+        Rails: `SageClassnames::GRID_PANEL`
+      ))
+    },
+    {
+      name: "card",
+      spacing: "16px",
+      code: md(%(
+        HTML: `#{SageClassnames::GRID_CARD}`<br/>
+        Rails: `SageClassnames::GRID_CARD`
+      ))
+    }
+  ]
+})}
+
+## Responsive Considerations
 
 These layouts persist for tablet and desktop viewports,
 but for smartphone they will stack and flow with flexing elements filling the viewport
 and fixed elements lining up as long as space allows, wrapping otherwise.
 
-## Limitations and Customization</h2>
+## Limitations and Customization
 
 A number of limitations become apparent with this system, some of which include:
 

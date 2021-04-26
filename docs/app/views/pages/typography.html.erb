@@ -1,8 +1,11 @@
 <%
 type_specs = [
   {
-    style: %(<span class="t-sage-heading-1">Heading 1</span>),
-    class: %(<code>t-sage-heading-1</code>),
+    style: md(%(
+      <span class="t-sage-heading-1">Heading 1</span><br/>
+      HTML: `t-sage-heading-1`<br/>
+      Rails: `SageClassnames::TYPE::HEADING_1`
+    )),
     weight: "700",
     size: "29px",
     size_mobile: "25px",
@@ -10,8 +13,11 @@ type_specs = [
     kerning: "0.3px",
   },
   {
-    style: %(<span class="t-sage-heading-2">Heading 2</span>),
-    class: %(<code>t-sage-heading-2</code>),
+    style: md(%(
+      <span class="t-sage-heading-2">Heading 2</span><br/>
+      HTML: `t-sage-heading-2`<br/>
+      Rails: `SageClassnames::TYPE::HEADING_2`
+    )),
     weight: "700",
     size: "26px",
     size_mobile: "22px",
@@ -19,8 +25,11 @@ type_specs = [
     kerning: "0.3px",
   },
   {
-    style: %(<span class="t-sage-heading-3">Heading 3</span>),
-    class: %(<code>t-sage-heading-3</code>),
+    style: md(%(
+      <span class="t-sage-heading-3">Heading 3</span><br/>
+      HTML: `t-sage-heading-3`<br/>
+      Rails: `SageClassnames::TYPE::HEADING_3`
+    )),
     weight: "700",
     size: "23px",
     size_mobile: "20px",
@@ -28,8 +37,11 @@ type_specs = [
     kerning: "0.3px",
   },
   {
-    style: %(<span class="t-sage-heading-4">Heading 4</span>),
-    class: %(<code>t-sage-heading-4</code>),
+    style: md(%(
+      <span class="t-sage-heading-4">Heading 4</span><br/>
+      HTML: `t-sage-heading-4`<br/>
+      Rails: `SageClassnames::TYPE::HEADING_4`
+    )),
     weight: "600",
     size: "20px",
     size_mobile: "18px",
@@ -37,8 +49,11 @@ type_specs = [
     kerning: "0.3px",
   },
   {
-    style: %(<span class="t-sage-heading-5">Heading 5</span>),
-    class: %(<code>t-sage-heading-5</code>),
+    style: md(%(
+      <span class="t-sage-heading-5">Heading 5</span><br/>
+      HTML: `t-sage-heading-5`<br/>
+      Rails: `SageClassnames::TYPE::HEADING_5`
+    )),
     weight: "600",
     size: "18px",
     size_mobile: "16px",
@@ -46,8 +61,11 @@ type_specs = [
     kerning: "0.3px",
   },
   {
-    style: %(<span class="t-sage-heading-6">Heading 6</span>),
-    class: %(<code>t-sage-heading-6</code>),
+    style: md(%(
+      <span class="t-sage-heading-6">Heading 6</span><br/>
+      HTML: `<-sage-heading-6`<br/>
+      Rails: `SageClassnames::TYPE::HEADING_6`
+    )),
     weight: "600",
     size: "16px",
     size_mobile: "14px",
@@ -55,8 +73,11 @@ type_specs = [
     kerning: "0.3px",
   },
   {
-    style: %(<span class="t-sage-body">Body*</span>),
-    class: %(<code>t-sage-body</code>),
+    style: md(%(
+      <span class="t-sage-body">Body*</span><br/>
+      HTML: `t-sage-body`<br/>
+      Rails: `SageClassnames::TYPE::BODY`
+    )),
     weight: "400*",
     size: "16px",
     size_mobile: "14px",
@@ -64,8 +85,11 @@ type_specs = [
     kerning: "0.2px",
   },
   {
-    style: %(<span class="t-sage-body-small">Small Body*</span>),
-    class: %(<code>t-sage-body-small</code>),
+    style: md(%(
+      <span class="t-sage-body-small">Small Body*</span><br/>
+      HTML: `t-sage-body-small`<br/>
+      Rails: `SageClassnames::TYPE::BODY_SMALL`
+    )),
     weight: "400*",
     size: "14px",
     size_mobile: "13px",
@@ -73,8 +97,11 @@ type_specs = [
     kerning: "0.2px",
   },
   {
-    style: %(<span class="t-sage-body-xsmall">Extra Small Body*</span>),
-    class: %(<code>t-sage-body-xsmall</code>),
+    style: md(%(
+      <span class="t-sage-body-xsmall">Extra Small Body*</span><br/>
+      HTML: `t-sage-body-xsmall`<br/>
+      Rails: `SageClassnames::TYPE::BODY_XSMALL`
+    )),
     weight: "400*",
     size: "12px",
     size_mobile: "12px",
@@ -87,34 +114,42 @@ type_color_classes = [
   {
     color: %(<span class="t-sage-body-semi t-sage--color-primary">Primary</span>),
     type_class: %(<code>t-sage--color-primary</code>),
+    rails_class_const: %(<code>SageClassnames::TYPE_COLORS::PRIMARY</code>),
   },
   {
     color: %(<span class="t-sage-body-semi t-sage--color-charcoal">Charcoal</span>),
     type_class: %(<code>t-sage--color-charcoal</code>),
+    rails_class_const: %(<code>SageClassnames::TYPE_COLORS::CHARCOAL</code>),
   },
   {
     color: %(<span class="t-sage-body-semi t-sage--color-grey">Grey</span>),
     type_class: %(<code>t-sage--color-grey</code>),
+    rails_class_const: %(<code>SageClassnames::TYPE_COLORS::GREY</code>),
   },
   {
     color: %(<span class="t-sage-body-semi t-sage--color-red">Red</span>),
     type_class: %(<code>t-sage--color-red</code>),
+    rails_class_const: %(<code>SageClassnames::TYPE_COLORS::RED</code>),
   },
   {
     color: %(<span class="t-sage-body-semi t-sage--color-orange">Orange</span>),
     type_class: %(<code>t-sage--color-orange</code>),
+    rails_class_const: %(<code>SageClassnames::TYPE_COLORS::ORANGE</code>),
   },
   {
     color: %(<span class="t-sage-body-semi t-sage--color-yellow">Yellow</span>),
     type_class: %(<code>t-sage--color-yellow</code>),
+    rails_class_const: %(<code>SageClassnames::TYPE_COLORS::YELLOW</code>),
   },
   {
     color: %(<span class="t-sage-body-semi t-sage--color-sage">Sage</span>),
     type_class: %(<code>t-sage--color-sage</code>),
+    rails_class_const: %(<code>SageClassnames::TYPE_COLORS::SAGE</code>),
   },
   {
     color: %(<span class="t-sage-body-semi t-sage--color-purple">Purple</span>),
     type_class: %(<code>t-sage--color-purple</code>),
+    rails_class_const: %(<code>SageClassnames::TYPE_COLORS::PURPLE</code>),
   }
 ]
 %>
@@ -144,7 +179,6 @@ In the end, we prefer adding new entries to the type spec over including one-off
   <%= sage_component SageTable, {
     headers: [
       "Type Spec",
-      "Class",
       "Weight",
       "Size",
       "Size (mobile)",
@@ -206,7 +240,44 @@ we do provide the following utility classes for such cases where its most practi
     headers: [
       "Color",
       "Type class",
+      "Rails Constant",
     ],
     rows: type_color_classes
+  } %>
+
+    <%= md("
+## Additional Type Features
+
+While modifying type beyond the specs above is not encouraged a few type utilities are available:
+    ") %>
+
+  <%= sage_component SageTable, {
+    headers: [
+      "Description",
+      "Type class",
+      "Rails Constant",
+    ],
+    rows: [
+      {
+        description: md("Truncate text with an ellipsis when available space runs out"),
+        class: md("`t-sage--truncate`"),
+        constant: md("`SageClassnames::TRUNCATE_TEXT`"),
+      },
+      {
+        description: md("Adjust alignment of type to right"),
+        class: md("`t-sage--align-right`"),
+        constant: md("`SageClassnames::TYPE_ALIGN_RIGHT`"),
+      },
+      {
+        description: md("Adjust alignment of type to hang center"),
+        class: md("`t-sage--align-center`"),
+        constant: md("`SageClassnames::TYPE_ALIGN_CENTER`"),
+      },
+      {
+        description: md("Apply a strikethrough to text"),
+        class: md("`t-sage--strikethrough`"),
+        constant: md("`SageClassnames::TYPE_STRIKETHROUGH`"),
+      }
+    ]
   } %>
 <div>
