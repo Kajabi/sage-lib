@@ -264,9 +264,8 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
 }
 
 .sage-dropdown__panel {
-  position: absolute;
-  opacity: 0;
   z-index: sage-z-index(negative);
+  position: absolute;
   top: calc(100% + #{sage-spacing(xs)});
   // Temporarily removing animation as it causes
   // a positioning issue with nested fixed positioned elements
@@ -279,6 +278,7 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
   box-shadow: sage-shadow(md);
   transition: map-get($sage-transitions, default);
   transition-property: transform, z-index;
+  opacity: 0;
 
   // In the event that this dropdown is at the bottom of the page, add some margin below
   // to prevent it from touching the bottom of the viewport/page when it expands
