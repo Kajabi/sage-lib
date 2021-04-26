@@ -1,5 +1,5 @@
 class SageContainer < SageComponent
   set_attribute_schema({
-    size: SageSchemaHelper::CONTAINER_SIZE,
+    size: SageSchemas::CONTAINER_SIZE,
   })
 end
