@@ -35,6 +35,12 @@ class SageComponent
     end
   end
 
+  def sage_align=(align_hash)
+    align_hash.each do |key, value|
+      generated_css_classes << " sage-align-#{key}#{value != :md ? "-#{value}" : ""}"
+    end
+  end
+
   # SageComponent Custom Html Attributes
   #   Accepts a :html_attributes hash that generates additional html attributes for a component.
   #
