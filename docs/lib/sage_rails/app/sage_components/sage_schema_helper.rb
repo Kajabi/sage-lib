@@ -12,7 +12,7 @@ module SageSchemaHelper
     "ste", "sti", "sts", "sme", "smi", "sms", "soe", "soi", "sos",
   ])
 
-  SAGEALIGN = {
+  SAGE_ALIGN = {
     align_items: [:optional, Set.new([:"flex-start", :"flex-end", :center, :baseline, :stretch, "flex-start", "flex-end", "center", "baseline", "stretch"])],
     justify_content: [:optional, Set.new([:"flex-start", :"flex-end", :center, :"space-between", :"space-around", :"space-evenly", "flex-start", "flex-end", "center", "space-between", "space-around", "space-evenly"])],
   }
