@@ -5,6 +5,7 @@
   <%= "sage-catalog-item--loading" if is_loading %>
   <%= "sage-catalog-item--img" if component.image.present? %>
   <%= "sage-catalog-item--icon" if component.icon.present? %>
+  <%= component.generated_css_classes.html_safe %>
   "
   <%= component.generated_html_attributes.html_safe %>
 >
