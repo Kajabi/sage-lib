@@ -20,7 +20,7 @@ export default {
     stateColor: TransactionCard.STATE_COLORS.INFO,
     stateText: 'New',
     name: 'Lilly Jones',
-    href: "https://kajabi.com",
+    href: 'https://kajabi.com',
     productName: 'Total Product Blueprint',
     transactionTime: '10:32pm'
   }
