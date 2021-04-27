@@ -1,3 +1,7 @@
-<body class="sage-page <%= component.css_classes if component.css_classes.present? %>" <%= component.generated_html_attributes.html_safe %>>
+<body class="
+  sage-page 
+  <%= component.css_classes if component.css_classes.present? %>
+  <%= component.generated_css_classes %>" 
+  <%= component.generated_html_attributes.html_safe %>>
   <%= component.content %>
 </body>

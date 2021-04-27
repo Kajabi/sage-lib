@@ -1,5 +1,5 @@
 <button 
-  class="sage-btn sage-btn--primary" 
+  class="sage-btn sage-btn--primary <%= component.generated_css_classes %>" 
   data-js-tooltip="<%= component.text %>" 
   data-js-tooltip-position="<%= component.position %>" 
   <%= "data-js-tooltip-theme=#{component.theme}" if component.theme.present? -%>
