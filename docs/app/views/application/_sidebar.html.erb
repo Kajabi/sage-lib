@@ -107,28 +107,14 @@
       ]
     } %>
   <% end %>
-  <% if current_page_elements? %>
+  <% if current_page_components? %>
     <h2 class="t-sage-heading-6 docs-sidebar-heading">ELEMENTS</h2>
     <ul class="sage-nav__list">
-      <% sorted_sage_elements.each do |element| %>
+      <% sorted_sage_components.each do |component| %>
         <li>
-          <a class="sage-nav__link" href="<%= pages_element_path(element[:title]) %>">
+          <a class="sage-nav__link" href="<%= pages_component_path(component[:title]) %>">
             <span class="sage-nav__label">
-              <%= element[:title].titleize %>
-            </span>
-          </a>
-        </li>
-      <% end %>
-    </ul>
-  <% end %>
-  <% if current_page_objects? %>
-    <h2 class="t-sage-heading-6 docs-sidebar-heading">OBJECTS</h2>
-    <ul class="sage-nav__list">
-      <% sorted_sage_objects.each do |object| %>
-        <li>
-          <a class="sage-nav__link" href="<%= pages_object_path(object[:title]) %>">
-            <span class="sage-nav__label">
-              <%= object[:title].titleize %>
+              <%= component[:title].titleize %>
             </span>
           </a>
         </li>

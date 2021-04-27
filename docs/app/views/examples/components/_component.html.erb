@@ -1,7 +1,7 @@
-<% info_content = sage_objects.select { |object| object[:title] == @title }[0] %>
-<% props_content = render partial: "examples/objects/#{@title}/props" %>
-<% do_content = render partial: "examples/objects/#{@title}/rules_do" %>
-<% dont_content = render partial: "examples/objects/#{@title}/rules_dont" %>
+<% info_content = sage_components.select { |component| component[:title] == @title }[0] %>
+<% props_content = render partial: "examples/components/#{@title}/props" %>
+<% do_content = render partial: "examples/components/#{@title}/rules_do" %>
+<% dont_content = render partial: "examples/components/#{@title}/rules_dont" %>
 
 <%= render "examples/shared/heading",
   info_content: info_content %>
@@ -10,6 +10,7 @@
   props_content: props_content,
   do_content: do_content,
   dont_content: dont_content %>
+
 <div class="sage-panel-set">
   <div class="sage-tabs-container">
     <%= sage_component SagePanelRow, { grid_template: "te" } do %>
@@ -50,13 +51,14 @@
 
     <%= sage_component SageTabsPane, { id: "preview" } do %>
       <%= render "examples/shared/preview",
-        type: "object",
-        title: @title %>
+        type: "component",
+        title: @title
+      %>
     <% end %>
 
     <%= sage_component SageTabsPane, { id: "code" } do %>
       <%= render "examples/shared/code",
-        type: "object",
+        type: "component",
         title: @title %>
     <% end %>
 
@@ -67,10 +69,10 @@
     <% end %>
 
     <%= sage_component SageTabsPane, { id: "rules" } do %>
-        <%= render "examples/shared/rules",
-          do_content: do_content,
-          dont_content: dont_content,
-          title: @title %>
+      <%= render "examples/shared/rules",
+        do_content: do_content,
+        dont_content: dont_content,
+        title: @title %>
     <% end %>
   </div>
 </div>
