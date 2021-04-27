@@ -1,26 +1,22 @@
 <h3>Basic Usage</h3>
-<%= sage_component SageIcon, { icon: "pen" } %>
+<%= sage_component SageIcon, { icon: "pen", label: "Edit" } %>
 
 <h3>Colors</h3>
-<table class="sage-table">
+<%= sage_component SageCardList, {} do %>
   <% SageTokens::COLORS.each do | color | %>
-    <tr>
-      <td><%= color %></td>
-      <td>
-        <%= sage_component SageIcon, { icon: "pen", color: color } %>
-      </td>
-    </tr>
+    <%= sage_component SageCardListItem, { grid_template: "et" } do %>
+      <%= sage_component SageIcon, { icon: "pen", color: color } %>
+      <%= color %>
+    <% end %>
   <% end %>
-</table>
+<% end %>
 
 <h3>Sizes</h3>
-<table class="sage-table">
+<%= sage_component SageCardList, {} do %>
   <% SageTokens::ICON_SIZES.each do | size | %>
-    <tr>
-      <td><%= size == "md" ? "Default (#{size})" : size %></td>
-      <td>
-        <%= sage_component SageIcon, { icon: "pen", size: (size == "md" ? nil : size) } %>
-      </td>
-    </tr>
+    <%= sage_component SageCardListItem, { grid_template: "et" } do %>
+      <%= sage_component SageIcon, { icon: "pen", size: (size == "md" ? nil : size) } %>
+      <%= size == "md" ? "Default (#{size})" : size %>
+    <% end %>
   <% end %>
-</table>
+<% end %>
