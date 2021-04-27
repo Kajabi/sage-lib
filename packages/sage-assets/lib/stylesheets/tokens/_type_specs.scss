@@ -29,10 +29,6 @@ $-t-body-xsmall-spec: map-merge($-t-base-spec, (
 $sage-type-specs: (
   // Headings
   "heading-1": (
-    // type-levels: (
-    //   mobile: sage-type-level(29, 36),
-    //   desktop: ...
-    // ),
     weight: sage-font-weight(bold),
     size: sage-font-size(4xl),
     leading: sage-line-height(xl),
@@ -133,24 +129,6 @@ $sage-type-specs: (
   font-size: map-get($spec-map, size);
   letter-spacing: map-get($spec-map, kerning);
   line-height: map-get($spec-map, leading);
-}
-
-@mixin sage-type-spec-responsive($spec-name) {
-  $spec-map: map-get($sage-type-specs, $spec-name);
-  --spec-font-weight: #{map-get($spec-map, weight)}; // stylelint-disable order/order
-  --spec-font-size: "...";
-  --spec-letter-spacing: #{map-get($spec-map, kerning)};
-  --spec-line-height: "...";
-
-  font-weight: var(--spec-font-weight);
-  font-size: var(--spec-font-size);
-  letter-spacing: var(--spec-letter-spacing);
-  line-height: var(--spec-line-height);
-
-  @media (min-width: sage-breakpoint(md-min)) {
-    --spec-font-size: "...";
-    --spec-line-height: "...";
-  }
 }
 
 @each $spec-name, $spec-map in $sage-type-specs {
