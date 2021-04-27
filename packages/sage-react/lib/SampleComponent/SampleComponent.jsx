@@ -4,7 +4,6 @@ import classnames from 'classnames';
 import { SAMPLE_TOKEN } from './configs'; // component configurations as needed
 
 export const SampleComponent = ({ children, className }) => {
-
   const classNames = classnames('sage-sample-component', className);
 
   return (

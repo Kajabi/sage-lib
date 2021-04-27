@@ -15,7 +15,7 @@ The following can be of assistance when you need to add a new component to the p
 
 ## Usage
 
-Within a separate application that uses this package, import the desired component as follow:
+Within a separate application that uses this package, import the desired component as follows:
 
 ```js
 import { Button, Icon } from '@kajabi/sage-react'
