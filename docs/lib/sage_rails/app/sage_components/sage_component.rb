@@ -35,18 +35,6 @@ class SageComponent
     end
   end
 
-  # SageComponent Universal Alignment Attribute
-  #   Accepts a :sage_align hash that creates custom alignment by adding Sage css class
-  #   with eithr a main axis or a cross axis (align_items / justify_content) and an alignment value (`sage-align--justify-content-center`).
-  #
-  #   USAGE:
-  #   sage_component <CLASSNAME>, { sage_align: { align_items: :center } }
-  def sage_align=(align_hash)
-    align_hash.each do |key, value|
-      generated_css_classes << " sage-align--#{key.to_s.dasherize}#{value != :"flex-start" ? "-#{value}" : ""}"
-    end
-  end
-
   # SageComponent Custom Html Attributes
   #   Accepts a :html_attributes hash that generates additional html attributes for a component.
   #
