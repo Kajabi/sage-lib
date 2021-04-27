@@ -6,19 +6,9 @@
 <% end %>
 
 <div class="<%= SageClassnames::TYPE_BLOCK %>">
-  <%= md(%(
-  Within the Sage Design System, we use several different "tiers" of spacings as follows:
-
-  - Application-level: `32px` -- this is the outermost tier where foundational page elements such as the page heading and any organizing panels are contained.
-  - Panel-level: `24px` -- this is next layer in where groups of elements are presented with a slight smaller internal spacing.
-    This may be distinct panels or groups of content similar to such panels.
-  - Card-level: `16px` -- card components or smaller groups of content recieve this smaller spacing.
-  - Stack-level: `8px` -- stacks of content that are visually groups such as blocks of paragraphs or list items get this smallest spacing.
-
-  More generally, we use a `4px` baseline grid, so a full set of spacers includes:
-  )) %>
-
+  <p>The following spacing tokens are used throughout Sage:</p>
   <%= sage_component SageTable, {
+    striped: true,
     headers: [
       "Token",
       "Value",
@@ -54,6 +44,16 @@
       ]
     ]
   } %>
+
+  <%= md(%(
+  We use several different "tiers" of spacings as follows:
+
+  - Application-level: `32px` -- this is the outermost tier where foundational page elements such as the page heading and any organizing panels are contained.
+  - Panel-level: `24px` -- this is next layer in where groups of elements are presented with a slight smaller internal spacing.
+    This may be distinct panels or groups of content similar to such panels.
+  - Card-level: `16px` -- card components or smaller groups of content recieve this smaller spacing.
+  - Stack-level: `8px` -- stacks of content that are visually groups such as blocks of paragraphs or list items get this smallest spacing.
+  )) %>
 
   <%= md(%(
   A `spacer` attribute is available on all Sage Rails components that can apply a spacing value to any side of an element (`top`, `right`, `bottom`, `left`).
