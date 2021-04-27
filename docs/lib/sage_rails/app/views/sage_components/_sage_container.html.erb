@@ -1,3 +1,7 @@
-<div class="sage-container<%= " sage-container--#{component.size}" if defined?(component.size) %>" <%= component.generated_html_attributes.html_safe %>>
+<div class="
+    sage-container
+    <%= " sage-container--#{component.size}" if defined?(component.size) %>
+    <%= component.generated_css_classes %>
+  " <%= component.generated_html_attributes.html_safe %>>
   <%= component.content %>
 </div>

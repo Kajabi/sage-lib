@@ -1,12 +1,13 @@
 <div
-  class="sage-dropdown
-    <%= "sage-dropdown--anchor-right" if component.align == "right" %>
+  class="sage-dro    <%= "sage-dropdown--anchor-right" if component.align == "right" %>pdown
+
     <%= "sage-dropdown--contained" if component.contained %>
     <%= "sage-dropdown--customized" if component.customized %>
     <%= "sage-dropdown--full-width" if component.full_width_panel %>
     <%= "sage-dropdown--small" if component.panel_size == "small" %>
     <%= "sage-dropdown--#{component.custom_modifier}" if component.custom_modifier.present? %>
     <%= component.css_classes if component.css_classes.present? %>
+    <%= component.generated_css_classes %>
   "
   data-js-dropdown="<%= component.id %>"
   <%= component.generated_html_attributes.html_safe %>

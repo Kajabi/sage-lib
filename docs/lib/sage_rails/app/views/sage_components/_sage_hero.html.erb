@@ -1,6 +1,6 @@
 <% html_tag = component.title_tag ? component.title_tag : "h2" %>
 
-<article class="sage-hero" data-js-hero <%= component.generated_html_attributes.html_safe %>>
+<article class="sage-hero <%= component.generated_css_classes %>" data-js-hero <%= component.generated_html_attributes.html_safe %>>
   <<%= html_tag %> class="sage-hero__title"><%= component.title %></<%= html_tag %>>
   <div class="sage-hero__body">
     <p>

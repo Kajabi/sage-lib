@@ -1,5 +1,10 @@
 <div 
-  class="sage-popover" data-js-popover data-js-popover--position="<%= component.popover_position ? component.popover_position : "right" %>"
+  class="
+    sage-popover
+    <%= component.generated_css_classes %>
+  " 
+  data-js-popover 
+  data-js-popover--position="<%= component.popover_position ? component.popover_position : "right" %>"
   <%= component.generated_html_attributes.html_safe %>
 >
 

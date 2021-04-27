@@ -11,6 +11,7 @@ style = {
     sage-icon-card
     <%= "sage-icon-card--#{color}" if color.present? %>
     <%= component.css_classes if component.css_classes.present? %>
+    <%= component.generated_css_classes %>
   "
   <% component.attributes.each do |key, value| %>
     <%= "#{key}=\"#{value}\"".html_safe %>
