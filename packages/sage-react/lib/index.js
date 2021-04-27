@@ -34,6 +34,7 @@ export { Panel } from './Panel';
 export { PanelControls } from './PanelControls';
 export { Popover } from './Popover';
 export { Property } from './Property';
+export { SampleComponent } from './SampleComponent';
 export { Search } from './Search';
 export { Select } from './Select';
 export {
