@@ -53,11 +53,6 @@
     <%= sage_component SageNav, { 
       items: [
         {
-          text: "Tokens",
-          link: pages_design_path(:token),
-          active: current_page?(pages_design_path(:token)),
-        },
-        {
           text: "Colors",
           link: pages_design_path(:color),
           active: current_page?(pages_design_path(:color)),
@@ -93,6 +88,11 @@
           text: "Panels and Cards",
           link: pages_layout_path(:panels_cards),
           active: current_page?(pages_layout_path(:panels_cards)),
+        },
+        {
+          text: "Spacing",
+          link: pages_layout_path(:spacing),
+          active: current_page?(pages_layout_path(:spacing)),
         },
         {
           text: "12 Col Grid",

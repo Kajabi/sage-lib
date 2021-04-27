@@ -1,0 +1,75 @@
+<%= content_for :heading do %>
+<%= md(%(
+# Spacing
+<p class="docs-heading__lead">A set of prescribed spacers allow us to be consistent in our use of white space.</p>
+)) %>
+<% end %>
+
+<div class="<%= SageClassnames::TYPE_BLOCK %>">
+  <p>The following spacing tokens are used throughout Sage:</p>
+  <%= sage_component SageTable, {
+    striped: true,
+    headers: [
+      "Token",
+      "Value",
+    ],
+    rows: [
+      [
+        "2xs",
+        "4px",
+      ],
+      [
+        "xs",
+        "8px",
+      ],
+      [
+        "sm",
+        "16px",
+      ],
+      [
+        "md",
+        "24px",
+      ],
+      [
+        "lg",
+        "32px",
+      ],
+      [
+        "xl",
+        "48px",
+      ],
+      [
+        "2xl",
+        "64px",
+      ]
+    ]
+  } %>
+
+  <%= md(%(
+  We use several different "tiers" of spacings as follows:
+
+  - Application-level: `32px` -- this is the outermost tier where foundational page elements such as the page heading and any organizing panels are contained.
+  - Panel-level: `24px` -- this is next layer in where groups of elements are presented with a slight smaller internal spacing.
+    This may be distinct panels or groups of content similar to such panels.
+  - Card-level: `16px` -- card components or smaller groups of content recieve this smaller spacing.
+  - Stack-level: `8px` -- stacks of content that are visually groups such as blocks of paragraphs or list items get this smallest spacing.
+  )) %>
+
+  <%= md(%(
+  A `spacer` attribute is available on all Sage Rails components that can apply a spacing value to any side of an element (`top`, `right`, `bottom`, `left`).
+  Usage works like this:
+
+```erb
+\<\%\= sage_component SageButton, { value: "Sample", spacer: { top: "xs", bottom: "lg" }} \%\>
+```
+  )) %>
+  <%= sage_component SageButton, { style: "primary", value: "Sample", spacer: { top: "xs", bottom: "lg" }} %>
+  <%= md(%(
+    Finally, beyond component attributes, the `SageClassnames` module makes these same spacer classes available anywhere:
+
+```erb
+<b class="\<\%\= SageClassnames::SPACERS::LG_TOP \%\>">I have extra space above!</b>
+```
+  )) %>
+  <p class="<%= SageClassnames::SPACERS::LG_TOP %>"><b>I have extra space above!</b></p>
+</div>

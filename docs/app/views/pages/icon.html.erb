@@ -1,4 +1,6 @@
-<% action_icons = [
+<%
+
+action_icons = [
   {
     name: "add",
     action: "Add",
@@ -56,8 +58,8 @@
     action: "Upload",
   },
 ]
-%>
-<% feature_icons = [
+
+feature_icons = [
   {
     name: "automations",
     action: "Automations",
@@ -131,8 +133,8 @@
     action: "Partners",
   },
 ]
-%>
-<% dialogue_icons = [
+
+dialogue_icons = [
   {
     name: "check-circle",
     action: "Confirmation",
@@ -158,156 +160,9 @@
     action: "Warning",
   },
 ]
+
 %>
-<% all_icons = [
-  "add",
-  "add-circle",
-  "add-image",
-  "add-small",
-  "align-center",
-  "align-justify",
-  "align-left",
-  "align-right",
-  "arrow-corner",
-  "arrow-down",
-  "arrow-left",
-  "arrow-right",
-  "arrow-up",
-  "assessment",
-  "attach",
-  "automations",
-  "ban",
-  "bold",
-  "broadcast",
-  "calendar-date",
-  "calendar-schedule",
-  "calendar-simple",
-  "caret-down",
-  "caret-left",
-  "caret-right",
-  "caret-up",
-  "cart",
-  "chart",
-  "check",
-  "check-circle",
-  "circle-1",
-  "circle-2",
-  "circle-3",
-  "circle-4",
-  "circle-5",
-  "circle-6",
-  "circle-7",
-  "circle-8",
-  "circle-9",
-  "clock",
-  "closed-captions",
-  "code",
-  "color",
-  "comment",
-  "connect",
-  "conversation",
-  "copy",
-  "coupon",
-  "custom-field",
-  "customize",
-  "danger",
-  "delete-circle",
-  "delete-key",
-  "delete-x",
-  "dot-menu-horizontal",
-  "down-small",
-  "download",
-  "draft",
-  "drop",
-  "duplicate",
-  "email-activity",
-  "enlarge",
-  "enlarge-vertical",
-  "favorite",
-  "file",
-  "filters",
-  "flag",
-  "folder",
-  "folder-group",
-  "form",
-  "fullscreen",
-  "funnel",
-  "gear",
-  "handle",
-  "hashtag",
-  "help",
-  "horizontal-line",
-  "image",
-  "info-circle",
-  "italic",
-  "lab",
-  "launch",
-  "left-small",
-  "list-bullet",
-  "list-details",
-  "list-numbers",
-  "list-stack",
-  "location",
-  "lock",
-  "loop",
-  "mail",
-  "mapped",
-  "margin-left",
-  "margin-right",
-  "megaphone",
-  "menu",
-  "menu-alt",
-  "microphone",
-  "microphone-off",
-  "monitor",
-  "pen",
-  "play",
-  "play-outline",
-  "preview-off",
-  "preview-on",
-  "product",
-  "question-circle",
-  "quote",
-  "redo",
-  "refresh",
-  "remove",
-  "remove-circle",
-  "rename",
-  "restore",
-  "right-small",
-  "round-dollar",
-  "screen-share-off",
-  "screen-share-on",
-  "search",
-  "search-small",
-  "send-message",
-  "skipped",
-  "stack",
-  "star",
-  "stop",
-  "strikethrough",
-  "subscript",
-  "superscript",
-  "super-admin",
-  "success",
-  "tag",
-  "theme-store",
-  "trash",
-  "underline",
-  "undo",
-  "unmapped",
-  "up-small",
-  "upload",
-  "url",
-  "user",
-  "user-circle",
-  "user-star",
-  "users",
-  "video-off",
-  "video-on",
-  "warning"
-]
-%>
+
 <%= content_for :heading do %>
 <%= md(%(
 # Icons
@@ -402,7 +257,7 @@ Marketing uses the Megaphone icon. We do not use the megaphone icon for other tr
 <div id="all-icons" class="sage-type">
   <h2>All Icons</h2>
   <%= sage_component SageGridRow, {} do %>
-    <% all_icons.each do |icon| %>
+    <% SageTokens::ICONS.each do |icon| %>
       <%= sage_component SageGridCol, { breakpoint: "md", size: "4" } do %>
         <div class="docs-icon-block">
           <i class="sage-icon-<%= icon %>-2xl" aria-hidden="true"></i>

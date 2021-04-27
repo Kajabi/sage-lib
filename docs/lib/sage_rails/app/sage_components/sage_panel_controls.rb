@@ -5,7 +5,7 @@ class SagePanelControls < SageComponent
       value: String,
     }]]],
     item_count_label: [:optional, String],
-    items: [:optional, -> (v) { SageSchemaHelper.can_paginate?(v) }],
+    items: [:optional, -> (v) { SageSchemas.can_paginate?(v) }],
     show_bulk_actions: [:optional, TrueClass],
     show_checkboxes: [:optional, TrueClass],
     show_expand_collapse: [:optional, TrueClass],
