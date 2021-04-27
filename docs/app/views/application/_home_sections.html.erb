@@ -51,12 +51,15 @@
           <%= sage_component SagePanelStack, {} do %>
             <i class="docs-section__icon sage-icon-customize-3xl t-sage--color-sage"></i>
             <h3 class="t-sage-heading-3">Design</h3>
-            <p class="t-sage-body">Design tokens are the visual design atoms of the design system—specifically, they are named entities that store visual design attributes.</p>
+            <p class="t-sage-body">
+              Our system starts with some core visual elements: Type, Color, and Icons.
+              We also prescribe common practices for aspects such as motion.
+            </p>
             <%= sage_component SageButton, {
               value: "Style Tokens",
               attributes: {
-                href: pages_design_path(:token),
-                title: "Browse Style Tokens"
+                href: pages_design_path(:color),
+                title: "Browse Design"
               },
               subtle: true,
               icon: {
