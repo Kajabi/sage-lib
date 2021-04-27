@@ -2,8 +2,8 @@
   <%= sage_component SageContainer, { size: "md" } do %>
     <h2 class="docs-section__title t-sage-heading-1">Our Design System</h2>
     <%= sage_component SageGridRow, {} do %> 
-      <%= sage_component SageGridCol, { breakpoint: "md", size: "4" } do %> 
-        <%= sage_component SagePanel, { spacer: { bottom: :lg } } do %>
+      <%= sage_component SageGridCol, { breakpoint: "md", size: "4", spacer: { bottom: :lg } } do %> 
+        <%= sage_component SagePanel, {} do %>
           <%= sage_component SagePanelStack, {} do %>
             <i class="docs-section__icon sage-icon-form-3xl t-sage--color-sage"></i>
             <h3 class="t-sage-heading-3">Foundations</h3>
@@ -24,8 +24,8 @@
           <% end %>
         <% end %>
       <% end %>
-      <%= sage_component SageGridCol, { breakpoint: "md", size: "4" } do %> 
-        <%= sage_component SagePanel, { spacer: { bottom: :lg } } do %>
+      <%= sage_component SageGridCol, { breakpoint: "md", size: "4", spacer: { bottom: :lg } } do %> 
+        <%= sage_component SagePanel, {} do %>
           <%= sage_component SagePanelStack, {} do %>
             <i class="docs-section__icon sage-icon-pen-3xl t-sage--color-sage"></i>
             <h3 class="t-sage-heading-3">Content</h3>
@@ -46,8 +46,8 @@
           <% end %>
         <% end %>
       <% end %>
-      <%= sage_component SageGridCol, { breakpoint: "md", size: "4" } do %> 
-        <%= sage_component SagePanel, { spacer: { bottom: :lg } } do %>
+      <%= sage_component SageGridCol, { breakpoint: "md", size: "4", spacer: { bottom: :lg } } do %> 
+        <%= sage_component SagePanel, {} do %>
           <%= sage_component SagePanelStack, {} do %>
             <i class="docs-section__icon sage-icon-customize-3xl t-sage--color-sage"></i>
             <h3 class="t-sage-heading-3">Design</h3>
@@ -73,8 +73,8 @@
       <% end %>
     <% end %>
     <%= sage_component SageGridRow, {} do %> 
-      <%= sage_component SageGridCol, { breakpoint: "md", size: "4" } do %> 
-        <%= sage_component SagePanel, { spacer: { bottom: :lg } } do %>
+      <%= sage_component SageGridCol, { breakpoint: "md", size: "4", spacer: { bottom: :lg }} do %> 
+        <%= sage_component SagePanel, {} do %>
           <%= sage_component SagePanelStack, {} do %>
             <i class="docs-section__icon sage-icon-stack-3xl t-sage--color-sage"></i>
             <h3 class="t-sage-heading-3">Layout</h3>
@@ -95,8 +95,8 @@
           <% end %>
         <% end %>
       <% end %>
-      <%= sage_component SageGridCol, { breakpoint: "md", size: "4" } do %> 
-        <%= sage_component SagePanel, { spacer: { bottom: :lg } } do %>
+      <%= sage_component SageGridCol, { breakpoint: "md", size: "4", spacer: { bottom: :lg } } do %> 
+        <%= sage_component SagePanel, {} do %>
           <%= sage_component SagePanelStack, {} do %>
             <i class="docs-section__icon sage-icon-folder-3xl t-sage--color-sage"></i>
             <h3 class="t-sage-heading-3">Elements</h3>
@@ -117,8 +117,8 @@
           <% end %>
         <% end %>
       <% end %>
-      <%= sage_component SageGridCol, { breakpoint: "md", size: "4" } do %> 
-        <%= sage_component SagePanel, { spacer: { bottom: :lg } } do %>
+      <%= sage_component SageGridCol, { breakpoint: "md", size: "4", spacer: { bottom: :lg } } do %> 
+        <%= sage_component SagePanel, {} do %>
           <%= sage_component SagePanelStack, {} do %>
             <i class="docs-section__icon sage-icon-folder-group-3xl t-sage--color-sage"></i>
             <h3 class="t-sage-heading-3">Objects</h3>
