@@ -1,0 +1,26 @@
+<h3>Basic Usage</h3>
+<%= sage_component SageIcon, { icon: "pen" } %>
+
+<h3>Colors</h3>
+<table class="sage-table">
+  <% SageTokens::COLORS.each do | color | %>
+    <tr>
+      <td><%= color %></td>
+      <td>
+        <%= sage_component SageIcon, { icon: "pen", color: color } %>
+      </td>
+    </tr>
+  <% end %>
+</table>
+
+<h3>Sizes</h3>
+<table class="sage-table">
+  <% SageTokens::ICON_SIZES.each do | size | %>
+    <tr>
+      <td><%= size == "md" ? "Default (#{size})" : size %></td>
+      <td>
+        <%= sage_component SageIcon, { icon: "pen", size: (size == "md" ? nil : size) } %>
+      </td>
+    </tr>
+  <% end %>
+</table>

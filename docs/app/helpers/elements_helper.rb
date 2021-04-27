@@ -111,6 +111,15 @@ module ElementsHelper
         react_component_slug: "sage-textarea--default"
       },
       {
+        title: "icon",
+        description: "Display a standalone icon with a customizble size, color, and more!", 
+        scss: "todo",
+        rails: "todo",
+        react: "todo",
+        a11y: "todo",
+        react_component_slug: "sage-icon--default"
+      },
+      {
         title: "icon_card",
         description: "A simple component that allows an icon to be rendered on a field with a unified color scheme applied.",
         scss: "done",
