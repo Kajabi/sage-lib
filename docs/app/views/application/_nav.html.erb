@@ -66,28 +66,15 @@
       style: "secondary",
     } %>
     <%= sage_component SageButton, {
-      value: "Elements",
+      value: "Components",
       attributes: {
-        href: pages_element_path(sorted_sage_elements.first[:title]),
-        title: "Elements"
+        href: pages_component_path(sorted_sage_components.first[:title]),
+        title: "Components"
       },
       subtle: true,
       icon: {
         style: "left",
         name: "folder"
-      },
-      style: "secondary",
-    } %>
-    <%= sage_component SageButton, {
-      value: "Objects",
-      attributes: {
-        href: pages_object_path(sorted_sage_objects.first[:title]),
-        title: "Objects"
-      },
-      subtle: true,
-      icon: {
-        style: "left",
-        name: "folder-group"
       },
       style: "secondary",
     } %>

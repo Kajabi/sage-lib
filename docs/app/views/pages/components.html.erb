@@ -1,0 +1,29 @@
+<%= content_for :heading do %>
+<%= md(%(
+# Components
+<p class="docs-heading__lead">
+Our library of UI components balances stability with customization to deliver a consistent UI that delights our customers.
+</p>
+)) %>
+<% end %>
+<%= content_for :quick_links do %>
+  <div class="quick-links">
+    <h2 class="quick-links__title">Contents</h2>
+    <ul class="quick-links__body">
+      <% sorted_sage_components.each do |component| %>
+        <li class="quick-links__item">
+          <a href="#component-<%= component[:title] %>" class="quick-links__link"><%= component[:title].titleize %></a>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+<div class="sage-panel-set">
+  <% sorted_sage_components.each do |component| %>
+    <%= render "examples/components/component_preview",
+      title: component[:title],
+      description: component[:description],
+      react_component_slug: component[:react_component_slug] ? component[:react_component_slug] : false
+    %>
+  <% end %>
+</div>

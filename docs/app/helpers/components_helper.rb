@@ -1,4 +1,4 @@
-module ObjectsHelper
+module ComponentsHelper
   ########################################################
   # STATUS KEY
   # Done : done
@@ -8,10 +8,291 @@ module ObjectsHelper
   # Deprecated : stop
   ########################################################
 
-  # Lists out all the available sage objects
-  def sage_objects
+  # Lists out all the available sage components
+  def sage_components
     [
-      # Sage Generated Objects
+      # Sage Generated Components
+      {
+        title: "breadcrumbs",
+        description: "Breadcrumbs provide a sense of where we are in the site structure with hyperlinks to previous areas in that structure. Our component also provides a specific \"Back link\" variation",
+        scss: "done",
+        docs: "done",
+        rails: "done",
+        react: "done",
+        a11y: "done",
+        react_component_slug: "sage-breadcrumbs--single-item"
+      },
+      {
+        title: "button",
+        description: "Standard button styling with multiple display options. Can be applied on both button and link components.",
+        scss: "done",
+        docs: "done",
+        rails: "done",
+        react: "done",
+        a11y: "done",
+        react_component_slug: "sage-button--default"
+      },
+      {
+        title: "card_highlight",
+        description: "A special highlight edge to apply to Card components.",
+        scss: "done",
+        docs: "done",
+        rails: "done",
+        react: "done",
+        a11y: "done",
+        react_component_slug: "sage-card--card-highlight"
+      },
+      {
+        title: "checkbox",
+        description: "Checkboxes provide users with selectable options like toggling a single setting or selecting multiple options from a list.",
+        scss: "done",
+        docs: "todo",
+        rails: "no",
+        react: "no",
+        a11y: "todo",
+        react_component_slug: "sage-checkbox--default"
+      },
+      {
+        title: "choice",
+        description: "A radio button tab for making a choice. To be used inside a tabs object.",
+        scss: "done",
+        docs: "done",
+        rails: "done",
+        react: "todo",
+        a11y: "todo",
+        react_component_slug: "sage-tabs--default"
+      },
+      {
+        title: "copy_text",
+        description: "A small set of components to use in places where \"copy\" text is provided such as in a Copy Button or a block of text to be copied elsewhere.",
+        scss: "done",
+        rails: "done",
+        react: "done",
+        a11y: "done",
+        react_component_slug: "sage-copytext--default"
+      },
+      {
+        title: "description",
+        description: "A description is composed of title and data content and is structured as a definition list.",
+        scss: "done",
+        docs: "done",
+        rails: "done",
+        react: "todo",
+        a11y: "done"
+      },
+      {
+        title: "form_input",
+        description: "Basic text input form fields with 'floating' labels",
+        scss: "done",
+        docs: "done",
+        rails: "done",
+        react: "no",
+        a11y: "todo",
+        react_component_slug: "sage-input--default"
+      },
+      {
+        title: "form_select",
+        description: "The form select presents a selectable menu of options. The options within the menu are represented by <option> elements.",
+        scss: "done",
+        docs: "todo",
+        rails: "done",
+        react: "todo",
+        a11y: "todo",
+        react_component_slug: "sage-select--default"
+      },
+      {
+        title: "form_textarea",
+        description: "Basic text area input field with 'floating' label",
+        scss: "done",
+        docs: "done",
+        rails: "done",
+        react: "no",
+        a11y: "todo",
+        react_component_slug: "sage-textarea--default"
+      },
+      {
+        title: "icon",
+        description: "Display a standalone icon with a customizble size, color, and more! Our library of icons is available under the #{link_to("Design section's Icons page", pages_design_path(:icon))}.".html_safe, 
+        scss: "todo",
+        rails: "todo",
+        react: "todo",
+        a11y: "todo",
+        react_component_slug: "sage-icon--default"
+      },
+      {
+        title: "icon_card",
+        description: "A simple component that allows an icon to be rendered on a field with a unified color scheme applied.",
+        scss: "done",
+        docs: "done",
+        rails: "done",
+        react: "done",
+        a11y: "done",
+        react_component_slug: "sage-iconcard--default"
+      },
+      {
+        title: "indicator",
+        description: "A simple dot-styled position indicator bar. This is currently not intended to be used as navigation but only a visual indicator.",
+        scss: "doing",
+        docs: "doing",
+        rails: "done",
+        react: "todo",
+        a11y: "doing"
+      },
+      {
+        title: "label",
+        description: "Labels show concise metadata or indicate status in a compact format.",
+        scss: "done",
+        docs: "done",
+        rails: "done",
+        react: "done",
+        a11y: "done",
+        react_component_slug: "sage-label--default"
+      },
+      {
+        title: "link",
+        description: "While links have default styling in the app, some links deserve a little more ❤️",
+        scss: "done",
+        docs: "done",
+        rails: "done",
+        react: "done",
+        a11y: "done",
+        react_component_slug: "sage-link--primary"
+      },
+      {
+        title: "lists",
+        description: "Sage lists provide a few styling alternatives for unstyled and inline formatting.",
+        scss: "done",
+        docs: "done",
+        rails: "done",
+        react: "done",
+        a11y: "done",
+      },
+      {
+        title: "loader",
+        description: "Stylized loading animations for use with components",
+        scss: "done",
+        docs: "done",
+        rails: "yes",
+        react: "yes",
+        a11y: "done",
+        react_component_slug: "sage-loader--default"
+      },
+      {
+        title: "meter",
+        description: "A horizontal display indicating the measurement of a known (finite) quantity",
+        scss: "done",
+        docs: "done",
+        rails: "done",
+        react: "todo",
+        a11y: "todo"
+      },
+      {
+        title: "nav_link",
+        description: "These are links specifically defined within the Nav component",
+        scss: "done",
+        docs: "done",
+        rails: "done",
+        react: "no",
+        a11y: "todo"
+      },
+      {
+        title: "progress_bar",
+        description: "Displays progress with a value",
+        scss: "done",
+        docs: "todo",
+        rails: "done",
+        react: "todo",
+        a11y: "todo"
+      },
+      {
+        title: "property",
+        description: "TO BE NAMED – Displays a metadata item for a resource.",
+        scss: "done",
+        docs: "todo",
+        rails: "done",
+        react: "todo",
+        a11y: "todo",
+        react_component_slug: "sage-property--primary"
+      },
+      {
+        title: "radio",
+        description: "Radio components provide users a way to select only one option from a list of two or more options.",
+        scss: "done",
+        docs: "done",
+        rails: "done",
+        react: "no",
+        a11y: "todo",
+        react_component_slug: "sage-radio--default"
+      },
+      {
+        title: "search",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        scss: "doing",
+        docs: "doing",
+        rails: "todo",
+        react: "todo",
+        a11y: "doing",
+        react_component_slug: "sage-search--default"
+      },
+      {
+        title: "status_icon",
+        description: "Display the status of an item",
+        scss: "done",
+        docs: "done",
+        rails: "done",
+        react: "todo",
+        a11y: "done"
+      },
+      {
+        title: "switch",
+        description: "Checkbox or radio component styled to appear as a toggle",
+        scss: "done",
+        docs: "done",
+        rails: "done",
+        react: "no",
+        a11y: "todo",
+        react_component_slug: "sage-switch--default"
+      },
+      {
+        title: "tab",
+        description: "A tab button to be used inside a tabs object",
+        scss: "done",
+        docs: "done",
+        rails: "doing",
+        react: "todo",
+        a11y: "todo",
+        react_component_slug: "sage-tabs--default"
+      },
+      {
+        title: "table",
+        description: "Basic table component",
+        scss: "doing",
+        docs: "doing",
+        rails: "done",
+        react: "todo",
+        a11y: "done",
+        react_component_slug: "sage-table--default"
+      },
+      {
+        title: "toast",
+        description: "Displays a temporary notification to a user based an interaction.",
+        scss: "done",
+        docs: "no",
+        rails: "todo",
+        react: "todo",
+        a11y: "todo",
+        react_component_slug: "sage-toast--default"
+      },
+      {
+        title: "tooltip",
+        description: "Tooltips display helpful text when users hover over an element.",
+        scss: "done",
+        docs: "done",
+        rails: "done",
+        react: "todo",
+        a11y: "todo",
+        react_component_slug: "sage-tooltip--default"
+      },
       {
         title: "alert",
         description: "Alerts are used to indicate user-driven notifications.",
@@ -311,111 +592,48 @@ module ObjectsHelper
     ]
   end
 
-  # Sorts available objects based on alphabet
-  def sorted_sage_objects
-    sage_objects.sort_by { |h| h[:title] }
+  # Sorts available components based on alphabet
+  def sorted_sage_components
+    sage_components.sort_by { |h| h[:title] }
   end
 
-  # Archive of deprecated objects
-  def sage_deprecated_objects
+  # Archive of deprecated components
+  def sage_deprecated_components
     [
       {
-        title: "old_card",
-        description: "A card presents content and can guide the user toward a related action.",
-        scss: "stop",
-        docs: "stop",
-        rails: "stop",
-        react: "stop",
-        a11y: "stop"
-      },
-      {
-        title: "live_active_mic",
-        description: "The Live Active Mic icon is an animatable icon that shows a fill color rise and fall in the icon shape based on a given volume level.",
+        title: "link_button",
+        description: "",
         scss: "stop",
         docs: "stop",
         rails: "no",
         react: "stop",
-        a11y: "stop"
+        a11y: "no"
       },
       {
-        title: "live_option_menu",
-        description: "Live option menu is an accessible contextual menu to be used within the Live feature set. When the user clicks on an anchor the menu appears and stays until the user clicks somewhere else or on a given command from the menu.",
+        title: "live_stream_wrapper",
+        description: "A simple wrapper component for the Live stream application",
         scss: "stop",
         docs: "stop",
         rails: "no",
         react: "stop",
-        a11y: "stop"
-      },
-      {
-        title: "live_profile_card",
-        description: "Live Profile Cards are used to show the users logged into a Live session. Their role in the session will affect what content is visible and whether or not they are also given a ring around their avatar. They are organized into groups based on their role in the meeting.",
-        scss: "stop",
-        docs: "stop",
-        rails: "no",
-        react: "stop",
-        a11y: "stop"
-      },
-      {
-        title: "live_stream_control",
-        description: "The Live Stream Controls are a special class of button used in the frame for Live Streams.",
-        scss: "stop",
-        docs: "stop",
-        rails: "no",
-        react: "stop",
-        a11y: "stop"
-      },
-      {
-        title: "live_stream_footer",
-        description: "Footer component for the Live stream application. Contains an \"awake\" variation as well as the constant form. Must be nested within a wrapper as shown below.",
-        scss: "stop",
-        docs: "stop",
-        rails: "no",
-        react: "stop",
-        a11y: "stop"
-      },
-      {
-        title: "live_stream_header",
-        description: "Header component for the Live stream application. Contains an \"awake\" variation as well as the constant form. Must be nested within a wrapper as shown below.",
-        scss: "stop",
-        docs: "stop",
-        rails: "no",
-        react: "stop",
-        a11y: "stop"
-      },
-      {
-        title: "live_user_control",
-        description: "The Live User Control is a button class that presents a variety of icons and interactive states related to the Live feature's user controls.",
-        scss: "stop",
-        docs: "stop",
-        rails: "no",
-        react: "stop",
-        a11y: "stop"
-      },
-      {
-        title: "live_stream_video_grid",
-        description: "Adds the video grid setup for live stream. Toggle the `--fullscreen-demo` modifier on the wrapper to see at full screen.",
-        scss: "stop",
-        docs: "stop",
-        rails: "no",
-        react: "stop",
-        a11y: "stop"
-      },
+        a11y: "no"
+      }
     ]
   end
 
-  # Sorts deprecated objects based on alphabet
-  def sorted_sage_deprecated_objects
-    sage_deprecated_objects.sort_by { |h| h[:title] }
+  # Sorts deprecated components based on alphabet
+  def sorted_sage_deprecated_components
+    sage_deprecated_components.sort_by { |h| h[:title] }
   end
 
-  # Full list of active and deprecated objects
-  def sage_all_objects
-    sage_objects | sage_deprecated_objects
+  # Full list of active and deprecated components
+  def sage_all_components
+    sage_components | sage_deprecated_components
   end
 
-  # Sorts full list of active and deprecated objects based on alphabet
-  def sorted_sage_all_objects
-    sage_all_objects.sort_by { |h| h[:title] }
+  # Sorts full list of active and deprecated components based on alphabet
+  def sorted_sage_all_components
+    sage_all_components.sort_by { |h| h[:title] }
   end
 
 end

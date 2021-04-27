@@ -1,8 +1,8 @@
-<% permalink = "object-#{title}" %>
+<% permalink = "component-#{title}" %>
 
 <%= sage_component SagePanelHeader, {} do %>
   <h2 id="<%= permalink %>">
-    <%= link_to title.titleize, pages_object_path(title), class: "example__link" %>
+    <%= link_to title.titleize, pages_component_path(title), class: "example__link" %>
   </h2>
   <%= sage_component SageButtonGroup, { gap: :md } do %>
     <%= sage_component SageButton, {
@@ -22,8 +22,8 @@
       subtle: true,
       icon: { name: "preview-on", style: "only" },
       attributes: {
-        "data-js-tooltip": "Inspect element details",
-        href: pages_object_path(title),
+        "data-js-tooltip": "Inspect component details",
+        href: pages_component_path(title),
       }
     } %>
     <%= sage_component SageButton, {
@@ -33,7 +33,7 @@
       icon: { name: "launch", style: "only" },
       attributes: {
         "data-js-tooltip": "Open breakout page",
-        href: pages_breakout_path(type: :object, title: title),
+        href: pages_breakout_path(type: :component, title: title),
         target: "_blank",
       }
     } %>
@@ -41,6 +41,5 @@
 <% end %>
 
 <%= sage_component SageCard, {} do %>
-  <%= render "examples/objects/#{title}/preview" %>
+  <%= render "examples/components/#{title}/preview" %>
 <% end %>
-

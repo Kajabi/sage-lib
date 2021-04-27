@@ -98,36 +98,14 @@
       <%= sage_component SageGridCol, { breakpoint: "md", size: "4", spacer: { bottom: :lg } } do %> 
         <%= sage_component SagePanel, {} do %>
           <%= sage_component SagePanelStack, {} do %>
-            <i class="docs-section__icon sage-icon-folder-3xl t-sage--color-sage"></i>
-            <h3 class="t-sage-heading-3">Elements</h3>
-            <p class="t-sage-body">Elements are the basic building blocks. Applied to web interfaces, elements are our HTML tags, such as a form label, an input or a button.</p>
+            <i class="docs-section__icon sage-icon-product-3xl t-sage--color-sage"></i>
+            <h3 class="t-sage-heading-3">Components</h3>
+            <p class="t-sage-body">Find a full reference for our library or Rails UI components. Links to corresponding React components are provided as well.</p>
             <%= sage_component SageButton, {
-              value: "Browse Elements",
+              value: "Browse Components",
               attributes: {
-                href: pages_element_path(sorted_sage_elements.first[:title]),
-                title: "Browse Elements"
-              },
-              subtle: true,
-              icon: {
-                style: "right",
-                name: "arrow-right"
-              },
-              style: "primary",
-            } %>
-          <% end %>
-        <% end %>
-      <% end %>
-      <%= sage_component SageGridCol, { breakpoint: "md", size: "4", spacer: { bottom: :lg } } do %> 
-        <%= sage_component SagePanel, {} do %>
-          <%= sage_component SagePanelStack, {} do %>
-            <i class="docs-section__icon sage-icon-folder-group-3xl t-sage--color-sage"></i>
-            <h3 class="t-sage-heading-3">Objects</h3>
-            <p class="t-sage-body">Objects are groups of elements bonded together. These Objects take on their own properties and serve as the backbone of our design systems.</p>
-            <%= sage_component SageButton, {
-              value: "Browse Objects",
-              attributes: {
-                href: pages_object_path(sorted_sage_objects.first[:title]),
-                title: "Browse Objects"
+                href: pages_component_path(sorted_sage_components.first[:title]),
+                title: "Browse Components"
               },
               subtle: true,
               icon: {
