@@ -112,7 +112,7 @@ module ElementsHelper
       },
       {
         title: "icon",
-        description: "Display a standalone icon with a customizble size, color, and more!", 
+        description: "Display a standalone icon with a customizble size, color, and more! Our library of icons is available under the #{link_to("Design section's Icons page", pages_design_path(:icon))}.".html_safe, 
         scss: "todo",
         rails: "todo",
         react: "todo",
