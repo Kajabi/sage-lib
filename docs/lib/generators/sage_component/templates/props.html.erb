@@ -1,6 +1,8 @@
-<tr>
-  <td><%%= md('`property_name`') %></td>
-  <td><%%= md('The description of `property_name` goes here.') %></td>
-  <td><%%= md('`String`') %></td>
-  <td><%%= md('`Default`') %></td>
-</tr>
+<% @attributes.map do | attr | %>
+  <tr>
+    <td><%%= md('`<%= attr.name %>`') %></td>
+    <td><%%= md('The description of `<%= attr.name %>` goes here.') %></td>
+    <td><%%= md('`String`') %></td>
+    <td><%%= md('`nil`') %></td>
+  </tr>
+<% end %>
