@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.29.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.28.0...@kajabi/sage-assets@0.29.0) (2021-04-28)
+
+
+### Bug Fixes
+
+* **dropdown:** linter ([3cc05da](https://github.com/Kajabi/sage-lib/commit/3cc05da53e70cf86bbb3c34d223bb92686a4a13b))
+* **dropdown:** linter ([207cb76](https://github.com/Kajabi/sage-lib/commit/207cb76caa25bfcf64e993c50c0b12133306b640))
+* **dropdown:** resolve dropdown children flashing on close ([4e0e508](https://github.com/Kajabi/sage-lib/commit/4e0e508c9ecfc5fa20db58223b80f98430790a79))
+
+
+### Features
+
+* **icon:** add rails icon component and move older styles to element ([05ea04f](https://github.com/Kajabi/sage-lib/commit/05ea04feb395c9be673744c6975a34c722911575))
+
+
+
+
+
 # [0.28.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.27.1...@kajabi/sage-assets@0.28.0) (2021-04-21)
 
 
