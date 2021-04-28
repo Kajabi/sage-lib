@@ -22,12 +22,8 @@
                 <%= yield :heading %>
               </div>
             </div>
-            <div class="sage-row">
-              <div class="sage-col--lg-12">
-                <hr/>
-                <%= yield %>
-              </div>
-            </div>
+            <hr>
+            <%= yield %>
           </div>
           <%= render "application/footer" %>
         <% end %>
