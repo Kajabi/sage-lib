@@ -54,7 +54,7 @@ module ComponentsHelper
       },
       {
         title: "choice",
-        description: "A radio button tab for making a choice. To be used inside a tabs object.",
+        description: "A radio button tab for making a choice. To be used inside a tabs component.",
         scss: "done",
         docs: "done",
         rails: "done",
@@ -255,7 +255,7 @@ module ComponentsHelper
       },
       {
         title: "tab",
-        description: "A tab button to be used inside a tabs object",
+        description: "A tab button to be used inside a tabs component",
         scss: "done",
         docs: "done",
         rails: "doing",
@@ -314,7 +314,7 @@ module ComponentsHelper
       },
       {
         title: "avatar",
-        description: "The Avatar object shows a user's profile image in a circular frame and allows for a few helpful modifications for different uses.",
+        description: "The Avatar component shows a user's profile image in a circular frame and allows for a few helpful modifications for different uses.",
         scss: "done",
         docs: "done",
         rails: "no",
@@ -533,7 +533,7 @@ module ComponentsHelper
       },
       {
         title: "sidebar",
-        description: "The sidebar object is a fixed, vertical panel that typica11y displays navigation and/or page hierarchy.",
+        description: "The sidebar component is a fixed, vertical panel that typica11y displays navigation and/or page hierarchy.",
         scss: "done",
         docs: "done",
         rails: "done",
