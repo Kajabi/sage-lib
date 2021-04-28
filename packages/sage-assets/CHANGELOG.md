@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.29.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.29.0...@kajabi/sage-assets@0.29.1) (2021-04-28)
+
+
+### Bug Fixes
+
+* **dropdown:** linter ([58de364](https://github.com/Kajabi/sage-lib/commit/58de3647866dc060bb9986780fdb38b1f18e0482))
+* **dropdown:** updated styling props ([7f95d47](https://github.com/Kajabi/sage-lib/commit/7f95d4757c1f84f9c8e46f86acb05277757c4012))
+
+
+
+
+
 # [0.29.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.28.0...@kajabi/sage-assets@0.29.0) (2021-04-28)
 
 
