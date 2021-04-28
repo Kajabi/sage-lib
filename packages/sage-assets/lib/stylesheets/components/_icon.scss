@@ -1,0 +1,92 @@
+////
+/// Icon
+///
+/// @group sage
+////
+
+
+$-icon-font-path: "../fonts/sage";
+
+// Icon font setup
+@font-face {
+  font-family: "Sage";
+  src: url("#{$-icon-font-path}/Sage.woff");
+  src: url("#{$-icon-font-path}/Sage.woff") format("woff"),
+    url("#{$-icon-font-path}/Sage.ttf") format("truetype"),
+    url("#{$-icon-font-path}/Sage.svg") format("svg"),
+    url("#{$-icon-font-path}/Sage.eot") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+// Build icons as `sage-icon-icon-name` based on the map in `tokens/_icon`
+@each $icon-name, $icon-code in $sage-icons {
+  @each $size-name, $size in $sage-icon-sizes {
+    $suffix: "-#{$size-name}";
+
+    @if $size-name == md {
+      $suffix: "";
+    }
+
+    .sage-icon-#{$icon-name}#{$suffix} {
+      width: $size;
+      height: $size;
+
+      &::before {
+        @include sage-icon-base($icon-name, $size-name);
+      }
+    }
+  }
+
+  // Other icons generated here
+  @include sage-button-icon-generator($icon-name, $icon-code, only);
+  @include sage-button-icon-generator($icon-name, $icon-code, left);
+  @include sage-button-icon-generator($icon-name, $icon-code, right);
+
+  .sage-choice--icon-#{$icon-name}::before {
+    @include sage-icon-base($icon-name);
+  }
+
+  .sage-dropdown__item-control--icon-#{$icon-name}::before {
+    @include sage-icon-base($icon-name);
+    margin: 0 sage-spacing(xs) 0 0;
+  }
+
+  .sage-label--icon-#{$icon-name} .sage-label__value::before {
+    @include sage-icon-base($icon-name, md);
+    align-self: center;
+    position: relative;
+    margin: 0 sage-spacing(xs) 0 0;
+  }
+
+  .sage-label__decor-icon--#{$icon-name}::before {
+    @include sage-icon-base($icon-name, md);
+    align-self: center;
+  }
+
+  .sage-page-heading__toolbar-icon-#{$icon-name} {
+    white-space: nowrap;
+
+    &::before {
+      margin-right: sage-spacing(xs);
+
+      @include sage-icon-base($icon-name);
+    }
+  }
+
+  .sage-status-icon--#{$icon-name} {
+    &::before {
+      @include sage-icon-base($icon-name);
+    }
+  }
+}
+
+@keyframes sage-icon-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
