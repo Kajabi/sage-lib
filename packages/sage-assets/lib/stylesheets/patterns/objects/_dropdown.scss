@@ -264,6 +264,7 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
 }
 
 .sage-dropdown__panel {
+  display: none;
   z-index: sage-z-index(negative);
   position: absolute;
   top: calc(100% + #{sage-spacing(xs)});
@@ -278,7 +279,6 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
   box-shadow: sage-shadow(md);
   transition: map-get($sage-transitions, default);
   transition-property: transform, z-index;
-  display: none;
 
   // In the event that this dropdown is at the bottom of the page, add some margin below
   // to prevent it from touching the bottom of the viewport/page when it expands
@@ -307,8 +307,8 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
   }
 
   [aria-expanded="true"] > & {
-    z-index: sage-z-index(default, 100);
     display: block;
+    z-index: sage-z-index(default, 100);
     // Temporarily removing animation as it causes
     // a positioning issue with nested flex positioned elements
     // transform: rotate3d(0, 0, 0, 0);
