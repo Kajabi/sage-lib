@@ -22,6 +22,7 @@ end
   class="
     sage-choice
     <%= css_active_class if component.active %>
+    <%= component.generated_css_classes %>
     <% if component.type.present? %>
       <% if component.type == "icon" && component.icon.present? %>
         <%= "sage-choice--icon-#{component.icon}" %>

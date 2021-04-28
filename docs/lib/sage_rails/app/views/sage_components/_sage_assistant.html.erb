@@ -18,7 +18,7 @@ if component.menu_button_controls.present?
   menu_button_controls = component.menu_button_controls
 end
 %>
-<div class="sage-assistant" <%= component.generated_html_attributes.html_safe %>>
+<div class="sage-assistant <%= component.generated_css_classes %>" <%= component.generated_html_attributes.html_safe %>>
   <% if menu_button %>
     <button class="sage-menubutton" aria-expanded="false" aria-controls="<%= menu_button_controls %>" data-js-btn-target="<%= menu_button_controls %>" data-js-target-type="sidebar">
       <span class="sage-menubutton__bar"></span><span class="sage-menubutton__bar"></span><span class="sage-menubutton__bar"></span>

@@ -4,6 +4,7 @@
     <%= "sage-avatar--#{component.color}" if component.color.present? %>
     <%= "sage-avatar--centered" if component.centered.present? && component.centered %>
     <%= component.css_classes %>
+    <%= component.generated_css_classes %>
   "
   <%= component.generated_html_attributes.html_safe %>
   <% if component.size.present? %>

@@ -1,7 +1,7 @@
 class SagePagination < SageComponent
   set_attribute_schema({
     align: [:optional, Set.new(["center"])],
-    items: -> (v) { SageSchemaHelper.can_paginate?(v) },
+    items: -> (v) { SageSchemas.can_paginate?(v) },
     window: [:optional, Integer],
     hide_pages: [:optional, TrueClass],
     hide_counter: [:optional, TrueClass],

@@ -2,6 +2,7 @@
     sage-loader
     sage-loader--<%= component.type %>
     <%= "sage-loader--fill" if component.fill %>
+    <%= component.generated_css_classes %>
   "
   data-loading="true"
   aria-busy="true"

@@ -7,6 +7,6 @@ class SageIconCard < SageComponent
     foreground_color: [:optional, String],
     icon: String,
     label: [:optional, String],
-    size: [:optional, SageSchemaHelper::ICON_SIZE],
+    size: [:optional, SageSchemas::ICON_SIZE],
   })
 end

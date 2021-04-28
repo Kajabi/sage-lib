@@ -8,6 +8,26 @@
 ///
 /// Sage z-index token
 ///
+/// Initial increment levels must be in units `100` (unless negative, see below). For example, `sage-z-index('raised', 100)` will output `1100`.
+/// 
+/// If more granular adjustment is needed, the **smallest** increment should be a factor of `10` (`1110` and `1120`) **and never by `1`** (`1101` and `1102`), unless using a negative value or to prevent a collision.
+/// 
+/// NOTE: The expected use for negative (decremental) values will be to lower their value behind a positioned parent. However, it is still recommended to remain within the guidelines whenever possible, to avoid a potential `z-index` collision.
+/// 
+/// | key | value  | notes |
+/// |--------|--------|--------|
+/// |default| 0 | reset and parent for negative positioning |
+/// |negative| -1 | |
+/// |raised| 1000 | page widgets such as tooltips, dropdowns |
+/// | alert | 2000 | raised priority on-page items: banners |
+/// | underlay | 3000 | lower priority overlay, moved one level down from current position |
+/// | nav | 4000 | uses underlay, not overlay |
+/// | overlay | 5000 | |
+/// | modal | 6000 | this is typically the highest level needed |
+/// | -- | 7000 | reserved for future use |
+/// | priority | 8000 | |
+/// | nuclear | 9000 | use with extreme caution |
+///
 $sage-z-indexes: (
   negative: -1,
   default: 0,

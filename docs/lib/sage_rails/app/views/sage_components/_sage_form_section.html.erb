@@ -1,6 +1,6 @@
 <% html_tag = component.title_tag ? component.title_tag : "h5" %>
  
-<div <%= component.id ? "id=#{component.id}" : "" %> class="sage-form-section" <%= component.generated_html_attributes.html_safe %>>
+<div <%= component.id ? "id=#{component.id}" : "" %> class="sage-form-section <%= component.generated_css_classes %>" <%= component.generated_html_attributes.html_safe %>>
   <div class="sage-form-section__info">
     <% if component.title.present? %>
       <<%= html_tag %> class="sage-form-section__title t-sage-heading-5">
