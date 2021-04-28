@@ -2,6 +2,7 @@
   class="sage-card__figure
     <%= "sage-card__figure--bleed-#{component.bleed}" if component.bleed %>
     <%= "sage-card__figure--wistia" if component.is_wistia %>
+    <%= component.css_classes %>
     <%= component.generated_css_classes %>
   "
   <%= component.generated_html_attributes.html_safe %>

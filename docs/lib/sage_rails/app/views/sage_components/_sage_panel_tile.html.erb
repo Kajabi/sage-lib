@@ -1,5 +1,9 @@
 <div
-  class="sage-panel__tile <%= component.generated_css_classes %>"
+  class="
+    sage-panel__tile 
+    <%= component.css_classes %>
+    <%= component.generated_css_classes %>
+  "
   <%= component.generated_html_attributes.html_safe %>
 >
   <%= component.content %>

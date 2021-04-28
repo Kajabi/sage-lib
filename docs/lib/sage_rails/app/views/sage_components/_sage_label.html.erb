@@ -8,6 +8,7 @@
     <%= "sage-label--interactive" if component.interactive_type %>
     <%= "sage-label--interactive-right-cta-affordance" if (component.interactive_type === :dropdown) || (component.interactive_type === :secondary_button) %>
     <%= "sage-label--icon-#{component.icon}" if component.icon %>
+    <%= component.css_classes %>
     <%= component.generated_css_classes %>
   "
   <% component.container_attributes.each do |key, value| %>

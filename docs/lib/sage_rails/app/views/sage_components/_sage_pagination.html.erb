@@ -4,6 +4,7 @@
       sage-pagination
       <% if component.hide_counter %>sage-pagination--no-counter<% end %>
       <%= "sage-pagination--align-#{component.align}" if component.align.present? %>
+      <%= component.css_classes %>
       <%= component.generated_css_classes %>
     "
     role="pagination"

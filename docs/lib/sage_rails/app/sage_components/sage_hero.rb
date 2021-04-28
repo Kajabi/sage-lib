@@ -2,6 +2,7 @@ class SageHero < SageComponent
   set_attribute_schema({
     alt_text: [:optional, String],
     button: [:optional, String],
+    css_classes: [:optional, String],
     cta_attributes: [:optional, Hash],
     description: [:optional, String],
     image: [:optional, String],

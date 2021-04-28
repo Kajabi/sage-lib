@@ -15,6 +15,7 @@ html_tag = is_button ? "button" : "a"
   class="
     sage-tab 
     <%= css_active_class if component.active %>
+    <%= component.css_classes %>
     <%= component.generated_css_classes %>"
   data-js-tabs-target="<%= component.target %>"
   data-sage-active-class="<%= css_active_class %>"

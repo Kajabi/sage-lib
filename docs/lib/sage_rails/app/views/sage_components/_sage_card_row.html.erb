@@ -2,6 +2,7 @@
   class="sage-card__row
     <%= "sage-panel__row--vertical-align-#{component.vertical_align}" if component.vertical_align %>
     <%= "sage-grid-template-#{component.grid_template}" %>
+    <%= component.css_classes %>
     <%= component.generated_css_classes %>
   "
   <%= component.generated_html_attributes.html_safe %>

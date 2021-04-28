@@ -1,5 +1,9 @@
 <div
-  class="sage-card__stack <%= component.generated_css_classes %>"
+  class="
+    sage-card__stack 
+    <%= component.css_classes %>
+    <%= component.generated_css_classes %>
+  "
   <%= component.generated_html_attributes.html_safe %>
 >
   <%= component.content %>

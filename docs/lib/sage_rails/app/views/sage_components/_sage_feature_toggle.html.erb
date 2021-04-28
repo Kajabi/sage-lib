@@ -3,6 +3,7 @@
 <li class="
     sage-feature-toggle 
     <%= "sage-feature-toggle--no-image" if component.image.blank? && component.icon.blank? %>
+    <%= component.css_classes %>
     <%= component.generated_css_classes %>
   " 
   <%= component.generated_html_attributes.html_safe %>>

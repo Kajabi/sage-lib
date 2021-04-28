@@ -1,6 +1,7 @@
 class SagePopover < SageComponent
   set_attribute_schema({
     body: [:optional, String],
+    css_classes: [:optional, String],
     custom_content_class: [:optional, String],
     icon: [:optional, String],
     id: [:optional, String],

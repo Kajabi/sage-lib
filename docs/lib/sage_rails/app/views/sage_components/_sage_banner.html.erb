@@ -2,6 +2,7 @@
   <div class="
     sage-banner-wrapper
     <%= "sage-banner-wrapper--context-#{component.banner_context}" if component.banner_context.present? %>
+    <%= component.css_classes %>
     <%= component.generated_css_classes %>
   ">
 <% end %>

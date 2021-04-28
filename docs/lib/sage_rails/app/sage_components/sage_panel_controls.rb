@@ -4,6 +4,7 @@ class SagePanelControls < SageComponent
       attributes: [:optional, Hash],
       value: String,
     }]]],
+    css_classes: [:optional, String],
     item_count_label: [:optional, String],
     items: [:optional, -> (v) { SageSchemas.can_paginate?(v) }],
     show_bulk_actions: [:optional, TrueClass],

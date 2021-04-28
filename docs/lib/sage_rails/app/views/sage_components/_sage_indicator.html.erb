@@ -1,6 +1,6 @@
 <% num_items = component.num_items.present? ? component.num_items : 0 %>
 
-<ul class="sage-indicator-list <%= component.generated_css_classes %>" aria-label="<%= "Showing #{component.label} #{component.current_item} of #{component.num_items}"%>" <%= component.generated_html_attributes.html_safe %>>
+<ul class="sage-indicator-list <%= component.css_classes %> <%= component.generated_css_classes %>" aria-label="<%= "Showing #{component.label} #{component.current_item} of #{component.num_items}"%>" <%= component.generated_html_attributes.html_safe %>>
   <% for i in 1...(num_items + 1) %>
     <li class="sage-indicator<%= " sage-indicator--current" if component.current_item == i %>">
       <span class="visually-hidden">

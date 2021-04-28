@@ -3,6 +3,7 @@
     sage-panel
     <%= "sage-panel--clear-padding-top" if component.clear_top_padding %>
     <%= "sage-panel--clear-padding-bottom" if component.clear_bottom_padding %>
+    <%= component.css_classes %>
     <%= component.generated_css_classes %>
   "
   <%= component.generated_html_attributes.html_safe %>

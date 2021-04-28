@@ -4,6 +4,7 @@ class SageUploadCard < SageComponent
       name: [:optional, String],
       size: [:optional, String],
     ]]],
+    css_classes: [:optional, String],
     errors: [:optional, [[
       text: [:optional, String],
     ]]],

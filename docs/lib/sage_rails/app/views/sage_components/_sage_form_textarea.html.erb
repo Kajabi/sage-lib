@@ -1,6 +1,7 @@
 <div class="
     sage-textarea
     <%= " sage-textarea--error" if component.has_error %>
+    <%= component.css_classes %>
     <%= component.generated_css_classes %>
   " <%= component.generated_html_attributes.html_safe %>>
   <%# <textarea declaration needs to be on a single line. The line breaks bleeding into the <textarea> as content causing unexpected placeholder behavior %>

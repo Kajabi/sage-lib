@@ -4,6 +4,7 @@ class SageNav < SageComponent
     items: [:optional, [[
       active: [:optional, NilClass, TrueClass],
       attributes: [:optional, Hash],
+      css_classes: [:optional, String],
       icon: [:optional, String],
       items: [:optional, [[
         active: [:optional, NilClass, TrueClass],

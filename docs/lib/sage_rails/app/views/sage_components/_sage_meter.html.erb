@@ -1,4 +1,4 @@
-<div class="sage-meter <%= component.generated_css_classes %>" <%= component.generated_html_attributes.html_safe %>>
+<div class="sage-meter <%= component.css_classes %> <%= component.generated_css_classes %>" <%= component.generated_html_attributes.html_safe %>>
   <% if component.label != "" %><label for="<%= component.id -%>" class="sage-meter__label visually-hidden"><%= component.label -%></label><% end %>
   <p id="<%= component.id -%>-description" class="sage-meter__description" data-low-text="<%= component.low_value_text %>" data-med-text="<%= component.med_value_text %>" data-high-text="<%= component.high_value_text %>" data-max-text="<%= component.max_value_text %>"></p>
   <meter class="sage-meter__bar" id="<%= component.id -%>" max="<%= component.max_value -%>" <%= "optimum=#{component.optimum_value}" if component.optimum_value.present? -%> value="<%= component.value -%>" js-meter-type="password" aria-live="polite" aria-describedby="<%= component.id -%>-description"></meter>

@@ -1,6 +1,7 @@
 class SageSortableItem < SageComponent
   set_attribute_schema({
     card: [:optional, TrueClass],
+    css_classes: [:optional, String],
     id: [:optional, Integer, String],
     image: [:optional, String],
     label: [:optional, String],

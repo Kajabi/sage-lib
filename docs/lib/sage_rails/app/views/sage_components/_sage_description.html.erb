@@ -8,6 +8,7 @@ normalcase_titles = component.allcaps_titles == false ? true : false
     sage-description
     <%= "sage-description--inline-spread" if component.inline_spread.present? && component.inline_spread %>
     <%= "sage-description--normalcase-titles" if normalcase_titles %>
+    <%= component.css_classes %>
     <%= component.generated_css_classes %>
   "
   <%= component.generated_html_attributes.html_safe %>

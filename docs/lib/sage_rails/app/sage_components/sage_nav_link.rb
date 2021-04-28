@@ -2,6 +2,7 @@ class SageNavLink < SageComponent
   set_attribute_schema({
     active: [:optional, NilClass, TrueClass],
     attributes: [:optional, Hash],
+    css_classes: [:optional, String],
     icon: [:optional, String],
     items: [:optional, [[
       active: [:optional, NilClass, TrueClass],

@@ -3,6 +3,7 @@ class SageChoice < SageComponent
     active: [:optional, NilClass, TrueClass],
     align_center: [:optional, TrueClass],
     attributes: [:optional, NilClass, Hash],
+    css_classes: [:optional, String],
     disabled: [:optional, NilClass, TrueClass],
     graphic: [:optional, NilClass, String],
     icon: [:optional, NilClass, String],

@@ -8,6 +8,7 @@ item_count_text = component.item_count_label.present? ? component.item_count_lab
 <div class="
   sage-panel-controls
   <% if component.show_pagination %>sage-panel-controls--show-pagination<% end %>
+  <%= component.css_classes %>
   <%= component.generated_css_classes %>" 
   data-js-panel-controls="<%= component.target %>"
   <%= component.generated_html_attributes.html_safe %>>

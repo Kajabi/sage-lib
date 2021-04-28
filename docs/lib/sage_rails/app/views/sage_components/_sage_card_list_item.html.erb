@@ -2,6 +2,7 @@
   class="
     sage-card__list-item
     <%= "sage-grid-template-#{component.grid_template}" if component.grid_template %>
+    <%= component.css_classes %>
     <%= component.generated_css_classes %>
   "
   <%= component.generated_html_attributes.html_safe %>

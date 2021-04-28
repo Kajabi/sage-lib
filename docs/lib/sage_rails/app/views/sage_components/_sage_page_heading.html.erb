@@ -1,4 +1,4 @@
-<section class="sage-page-heading <%= "sage-page-heading--no-secondary-text" if component.secondary_text.blank? %> <%= component.generated_css_classes %>" <%= component.generated_html_attributes.html_safe %>>
+<section class="sage-page-heading <%= "sage-page-heading--no-secondary-text" if component.secondary_text.blank? %> <%= component.css_classes %> <%= component.generated_css_classes %>" <%= component.generated_html_attributes.html_safe %>>
   <% if content_for? :sage_breadcrumbs %>
     <div class="sage-page-heading__crumbs">
       <%= content_for :sage_breadcrumbs %>

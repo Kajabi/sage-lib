@@ -3,6 +3,7 @@
     sage-null-view
     <% if component.reversed.present? %> sage-null-view--reversed<% end %>
     <% if component.center_vertical.present? %> sage-null-view--center<% end %>
+    <%= component.css_classes %>
     <%= component.generated_css_classes %>
   "
   <%= component.generated_html_attributes.html_safe %>

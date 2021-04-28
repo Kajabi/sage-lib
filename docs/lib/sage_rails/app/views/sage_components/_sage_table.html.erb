@@ -6,6 +6,7 @@ is_responsive = component.responsive.present? ? component.responsive : true
   <%= "sage-table-wrapper--reset-above" if component.reset_above %>
   <%= "sage-table-wrapper--reset-below" if component.reset_below %>
   <%= "sage-table-wrapper--scroll" if is_responsive %>
+  <%= component.css_classes %>
   <%= component.generated_css_classes %>
 ">
   <% if is_responsive %>
