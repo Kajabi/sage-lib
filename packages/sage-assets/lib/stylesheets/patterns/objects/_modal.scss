@@ -49,6 +49,17 @@ $-modal-header-image-size: rem(28px);
     pointer-events: auto;
     opacity: 1;
   }
+
+  &.sage-modal--fullscreen {
+    padding: 0;
+  }
+}
+
+.sage-modal__close-btn {
+  .sage-modal--fullscreen & {
+    position: absolute;
+    right: rem(48px);
+  }
 }
 
 .sage-modal__container {
@@ -97,6 +108,19 @@ $-modal-header-image-size: rem(28px);
 
   .sage-modal--large & {
     max-width: sage-container(modal-lg);
+  }
+
+  .sage-modal--fullscreen & {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    max-width: none;
+    padding: rem(48px);
+    border-radius: 0;
+
+    @media (min-width: sage-breakpoint(lg-min)) {
+      margin-top: 0;
+    }
   }
 }
 

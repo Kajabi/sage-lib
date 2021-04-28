@@ -32,6 +32,14 @@
         "data-js-modaltrigger": "cool-modal-spaced",
       }
     } %>
+    <%= sage_component SageButton, {
+      style: "primary",
+      icon: { name: "launch", style: "right" },
+      value: "Fullscreen Modal",
+      attributes: {
+        "data-js-modaltrigger": "cool-modal-fullscreen",
+      }
+    } %>
   <% end %>
 
   <%# Standard Modal %>
@@ -158,6 +166,63 @@
   } do %>
     <%= sage_component SageModalContent, {
       title: "Example Spaced Modal",
+      spacing: "panel",
+    } do %>
+      <% content_for :sage_header_aside do %>
+        <%= sage_component SageButton, {
+          style: "secondary",
+          subtle: true,
+          value: "Close Modal",
+          icon: { name: "remove", style: "only" },
+          attributes: { "data-js-modal": true }
+        } %>
+      <% end %>
+
+      <%= sage_component SagePanelBlock, {} do %>
+        <h4 class="t-sage-heading-5">Lorem ipsum dolor sit amet</h4>
+        <p class="t-sage-body">
+          Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      <% end %>
+
+      <%= sage_component SagePanelTiles, { tiles_in_row: 2 } do %>
+        <%= sage_component SageCard, {} do %>
+          <p class="t-sage-body">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+        <% end %>
+        <%= sage_component SageCard, {} do %>
+          <p class="t-sage-body">
+            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        <% end %>
+      <% end %>
+
+      <% content_for :sage_footer do %>
+        <% content_for :sage_footer_aside do %>
+          <%= sage_component SageButton, {
+            style: "secondary",
+            subtle: true,
+            value: "Close Modal",
+            attributes: { "data-js-modal": true }
+          } %>
+        <% end %>
+        <%= sage_component SageButton, {
+          style: "primary",
+          icon: { name: "check", style: "left" },
+          value: "Take An Action",
+        } %>
+      <% end %>
+    <% end %>
+  <% end %>
+
+  <%# Fullscreen Modal %>
+  <%= sage_component SageModal, {
+    id: "cool-modal-fullscreen",
+    large: true
+  } do %>
+    <%= sage_component SageModalContent, {
+      title: "Example Fullscreen Modal",
       spacing: "panel",
     } do %>
       <% content_for :sage_header_aside do %>
