@@ -10,7 +10,9 @@ class SageTransactionCard < SageComponent
     label_color: [:optional, Set.new(["published", "draft", "danger", "info", "warning", "locked"])],
     label_text: [:optional, String],
     name: [:optional, String],
-    product_name: [:optional, String],
+    name_link: [:optional, String],
+    offer_name: [:optional, String],
+    offer_link: [:optional, String],
     transaction_time: [:optional, String],
   })
 end

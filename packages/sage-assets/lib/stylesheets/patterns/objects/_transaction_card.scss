@@ -35,6 +35,7 @@
 .sage-transaction-card__name {
   @include truncate;
   @extend %t-sage-heading-5;
+  color: sage-color(charcoal, 500);
   max-width: 100%;
 }
 

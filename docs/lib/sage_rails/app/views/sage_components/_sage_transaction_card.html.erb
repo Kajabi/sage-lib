@@ -20,11 +20,11 @@
     <% end %>
   </div>
   <div class="sage-transaction-card__body">
-    <h4 class="sage-transaction-card__name"><%= component.name %></h4>
+    <a href="<%= component.name_link %>" class="sage-transaction-card__name"><%= component.name %></a>
     <div class="sage-transaction-card__amount<%= " sage-transaction-card__amount--#{component.amount_color}" if component.amount_color.present? %>"><%= component.amount %></div>
   </div>
   <div class="sage-transaction-card__footer">
-    <%= sage_component SageProperty, { icon: "tag", value: component.product_name } %>
+    <a href="<%= component.offer_link %>"><%= sage_component SageProperty, { icon: "tag", value: component.offer_name } %></a>
     <%= sage_component SageProperty, { value: component.transaction_time } %>
   </div>
 </div>
