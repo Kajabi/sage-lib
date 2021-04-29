@@ -107,33 +107,21 @@
       ]
     } %>
   <% end %>
-  <% if current_page_elements? %>
-    <h2 class="t-sage-heading-6 docs-sidebar-heading">ELEMENTS</h2>
-    <ul class="sage-nav__list">
-      <% sorted_sage_elements.each do |element| %>
-        <li>
-          <a class="sage-nav__link" href="<%= pages_element_path(element[:title]) %>">
-            <span class="sage-nav__label">
-              <%= element[:title].titleize %>
-            </span>
-          </a>
-        </li>
-      <% end %>
-    </ul>
-  <% end %>
-  <% if current_page_objects? %>
-    <h2 class="t-sage-heading-6 docs-sidebar-heading">OBJECTS</h2>
-    <ul class="sage-nav__list">
-      <% sorted_sage_objects.each do |object| %>
-        <li>
-          <a class="sage-nav__link" href="<%= pages_object_path(object[:title]) %>">
-            <span class="sage-nav__label">
-              <%= object[:title].titleize %>
-            </span>
-          </a>
-        </li>
-      <% end %>
-    </ul>
+  <% if current_page_components? %>
+    <h2 class="t-sage-heading-6 docs-sidebar-heading">COMPONENTS</h2>
+    <% 
+      component_list = []
+      sorted_sage_components.each do |component|
+        component_list << {
+          text: component[:title].titleize,
+          link: pages_component_path(component[:title]),
+          active: current_page?(pages_component_path(component[:title])),
+        }
+      end
+    %>
+    <%= sage_component SageNav, { 
+      items: component_list
+    } %>
   <% end %>
 
   <%= content_for :sage_sidebar_footer do %>

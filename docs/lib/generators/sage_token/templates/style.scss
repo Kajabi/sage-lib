@@ -1,16 +1,23 @@
-/* ==================================================
-  ** <%= file_name %>
-  type: token
+////
+/// Sage <%= file_name %> tokens
+///
+/// @group sage
+////
 
-================================================== */
 
-/* stylelint-disable */
+///
+/// Sage <%= file_name %> token
+///
+$sage-<%=file_name%>s: (
+  default: #000,
+);
+
+///
+/// Sage <%= file_name %> token utility
+///
+/// @param {string} $key [default] The token to retrieve
+///
 @function sage-<%= file_name %>($key: default) {
   $value: map-get($sage-<%= file_name %>s, $key);
   @return $value;
 }
-
-$sage-<%=file_name%>s: (
-  default: #000,
-);
-/* stylelint-enable */

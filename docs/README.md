@@ -21,19 +21,9 @@ The following generators will create the desired aspect in the main Documentatio
   rails generate sage_token <MY_TOKEN_NAME>
   ```
 
-- **Element** -- generates documentation files and stylesheets for a system Element. See also Rails Component generator below.
+- **Component** -- generates source files, documentation files, and stylesheets for a component. See also Rails Component generator below.
   ```
-  rails generate sage_element <MY_ELEMENT_NAME>
-  ```
-
-- **Object** -- generates documentation files and stylesheets for a system Object. See also Rails Component generator below.
-  ```
-  rails generate sage_object <MY_OBJECT_NAME>
-  ```
-
-- **Rails Component** -- generates source code for a Rails component, be it an Element or an Object. A corresponding Element or Object should also be generated using one of the generators above.
-  ```
-  rails generate sage_rails_component <MY_OBJECT_NAME>
+  rails generate sage_component <MY_COMPONENT_NAME> <attributes...>
   ```
 
 - **Page** -- a page within the documentation system.

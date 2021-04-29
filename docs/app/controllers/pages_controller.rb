@@ -23,18 +23,11 @@ class PagesController < ApplicationController
     render params[:title]
   end
 
-  def element
+  def component
     @title = params[:title]
   end
 
-  def elements
-  end
-
-  def objects
-  end
-
-  def object
-    @title = params[:title]
+  def components
   end
 
   def sandbox
