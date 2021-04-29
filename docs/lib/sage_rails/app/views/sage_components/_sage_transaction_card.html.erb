@@ -10,8 +10,8 @@
   </div>
   <div class="sage-transaction-card__body">
     <h4 class="sage-transaction-card__name">
-      <% if component.href.present? %>
-        <a class="sage-transaction-card__name-link" href="<%= component.href %>"><%= component.name %></a>
+      <% if component.name_href.present? %>
+        <a class="sage-transaction-card__name-link" href="<%= component.name_href %>"><%= component.name %></a>
       <% else %>
         <%= component.name %>
       <% end %>
@@ -19,7 +19,13 @@
     <div class="sage-transaction-card__amount<%= " sage-transaction-card__amount--#{component.amount_color}" if component.amount_color.present? %>"><%= component.amount %></div>
   </div>
   <div class="sage-transaction-card__footer">
-    <%= sage_component SageProperty, { icon: "tag", value: component.product_name } %>
+  <% if component.offer_href.present? %>
+    <a class="sage-transaction-card__offer-link" href="<%= component.offer_href %>">
+      <%= sage_component SageProperty, { icon: "tag", value: component.offer } %>
+    </a>
+  <% else %>
+    <%= sage_component SageProperty, { icon: "tag", value: component.offer } %>
+  <% end %>
     <%= sage_component SageProperty, { value: component.transaction_time } %>
   </div>
 </div>
