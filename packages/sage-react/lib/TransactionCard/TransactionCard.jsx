@@ -12,10 +12,11 @@ export const TransactionCard = ({
   stateColor,
   stateText,
   name,
-  href,
+  nameHref,
   amount,
   amountColor,
-  productName,
+  offer,
+  offerHref,
   transactionTime,
 }) => (
   <div className="sage-transaction-card">
@@ -27,8 +28,8 @@ export const TransactionCard = ({
     </div>
     <div className="sage-transaction-card__body">
       <h4 className="sage-transaction-card__name">
-        {href ? (
-          <Link href={href} className="sage-transaction-card__name-link">{name}</Link>
+        {nameHref ? (
+          <Link href={nameHref} className="sage-transaction-card__name-link">{name}</Link>
         ) : name}
       </h4>
       {amount && (
@@ -38,7 +39,9 @@ export const TransactionCard = ({
       )}
     </div>
     <div className="sage-transaction-card__footer">
-      <Property icon={Icon.ICONS.TAG}>{productName}</Property>
+      {offerHref ? (
+        <Link href={nameHref}><Property icon={Icon.ICONS.TAG}>{offer}</Property></Link>
+      ) : <Property icon={Icon.ICONS.TAG}>{offer}</Property>}
       <Property>{transactionTime}</Property>
     </div>
   </div>
@@ -54,10 +57,11 @@ TransactionCard.defaultProps = {
   stateText: null,
   stateColor: null,
   name: '--',
-  href: null,
+  nameHref: null,
   amount: '0.00',
   amountColor: null,
-  productName: '--',
+  offer: '--',
+  offerHref: null,
   transactionTime: '--',
 };
 
@@ -67,9 +71,10 @@ TransactionCard.propTypes = {
   stateText: PropTypes.string,
   stateColor: PropTypes.oneOf(Object.values(TransactionCard.STATE_COLORS)),
   name: PropTypes.string,
-  href: PropTypes.string,
+  nameHref: PropTypes.string,
   amount: PropTypes.string,
   amountColor: PropTypes.oneOf(Object.values(TransactionCard.AMOUNT_COLORS)),
-  productName: PropTypes.string,
+  offer: PropTypes.string,
+  offerHref: PropTypes.string,
   transactionTime: PropTypes.string,
 };

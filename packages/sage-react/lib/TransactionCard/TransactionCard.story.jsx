@@ -20,8 +20,8 @@ export default {
     stateColor: TransactionCard.STATE_COLORS.INFO,
     stateText: 'New',
     name: 'Lilly Jones',
-    href: 'https://kajabi.com',
-    productName: 'Total Product Blueprint',
+    nameHref: 'https://kajabi.com',
+    offer: 'Total Product Blueprint',
     transactionTime: '10:32pm'
   }
 };
