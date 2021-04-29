@@ -128,10 +128,6 @@ $-textarea-color-success: map-get($sage-field-colors, success);
     }
   }
 
-  &:valid:not(:placeholder-shown):not(:focus):not(:active) {
-    border-color: currentColor;
-  }
-
   // TODO: add support for Simpleform classes
   .sage-textarea--error &,
   &:required:not(:placeholder-shown):not(:valid) {
