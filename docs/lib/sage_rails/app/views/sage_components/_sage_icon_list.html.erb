@@ -1,4 +1,4 @@
-<ul class="sage-icon-list" <%= component.generated_html_attributes.html_safe %>>
+<ul class="sage-icon-list <%= component.generated_css_classes %>" <%= component.generated_html_attributes.html_safe %>>
   <% component.items.each do | item | %>
     <li class="sage-icon-list-item" role="listitem">
       <div class="sage-icon-list-item__bullet<% if item[:bullet_type].present? %><%= " sage-icon-list-item__bullet--#{item[:bullet_type]}"%><% end %>">

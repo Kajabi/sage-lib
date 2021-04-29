@@ -2,6 +2,7 @@
   class="
     sage-sortable__item
     sage-sortable__item--custom
+    <%= component.generated_css_classes %>
   "
   data-js-sortable-update-url="<%= component.url_update %>"
   <%= "id=#{component.id}" if component.id %>

@@ -2,6 +2,7 @@
   class="
     sage-status-icon
     <%= "sage-status-icon--#{component.icon}" %>
+    <%= component.generated_css_classes %>
   "
   data-js-tooltip="<%= component.value %>"
   <%= component.generated_html_attributes.html_safe %>

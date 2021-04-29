@@ -3,6 +3,40 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.23.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.23.0...@kajabi/sage@3.23.1) (2021-04-28)
+
+**Note:** Version bump only for package @kajabi/sage
+
+
+
+
+
+# [3.23.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.22.0...@kajabi/sage@3.23.0) (2021-04-28)
+
+
+### Bug Fixes
+
+* **rails-components:** add alignment functionality to parent sage component ([d7694c0](https://github.com/Kajabi/sage-lib/commit/d7694c094c3ad52a0b911f38563a572ae2a18c2e))
+* **rails-components:** add generated_css_classes to remaining rails components ([b05f5e4](https://github.com/Kajabi/sage-lib/commit/b05f5e4cfd329a40ded6e7add19ba3dc8be20ff0))
+* **rails-components:** pr cleanup ([c9180e0](https://github.com/Kajabi/sage-lib/commit/c9180e0833f07f7a5b447c605228512e050738e7))
+* **rails-components:** removed schema related items ([b7ad10c](https://github.com/Kajabi/sage-lib/commit/b7ad10c6974dcabf2760aea173836c5b67669620))
+* **rails-components:** removed unnecessary file ([e13c9ba](https://github.com/Kajabi/sage-lib/commit/e13c9ba14595ad393d4773da26552a05461ac8ad))
+
+
+### Features
+
+* **docs:** add spacing page and update tokens ([5d6918e](https://github.com/Kajabi/sage-lib/commit/5d6918e45397e83ec5e9dd528f3cb51c27388eda))
+* **docs:** deorecate tokens page and update paths ([b910183](https://github.com/Kajabi/sage-lib/commit/b9101836378d2f884b78b3896205376bb42aaf8c))
+* **docs:** tidy home page tiles ([51e9495](https://github.com/Kajabi/sage-lib/commit/51e9495e248f52ba36cc46c5669e45d4783f1453))
+* **icon:** add rails icon component and move older styles to element ([05ea04f](https://github.com/Kajabi/sage-lib/commit/05ea04feb395c9be673744c6975a34c722911575))
+* **icon:** improve label, hidden, and css_classes applied ([73ff860](https://github.com/Kajabi/sage-lib/commit/73ff860f6777fb7423e0b614d158833d6042d379))
+* add sage classnames for rails ([a4108f4](https://github.com/Kajabi/sage-lib/commit/a4108f46e75e92871f014d9b64ba7bf41526bd3d))
+* add sage tokens for rails ([9198657](https://github.com/Kajabi/sage-lib/commit/919865772b09a8599da2037aa7d64ee59667b8a6))
+
+
+
+
+
 # [3.22.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.21.0...@kajabi/sage@3.22.0) (2021-04-21)
 
 

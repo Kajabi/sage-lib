@@ -2,6 +2,8 @@
 import React, { useEffect, useState } from 'react';
 import uuid from 'react-uuid';
 import { Button } from '../Button';
+import { EmptyState } from '../EmptyState';
+import { Grid } from '../Grid';
 import { Panel } from '../Panel';
 import { Table } from '../Table';
 import { getNews } from '../services/newsapi';
@@ -15,6 +17,13 @@ export default {
   component: PanelControls,
   decorators: [(Story) => <div style={{ padding: 50, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><Story /></div>],
   args: {
+    children: (
+      <p>
+        <strong>Note:</strong>
+        This component story uses the Rapid API Newscatcher service,
+        which requires an API key to be provided.
+      </p>
+    )
   },
 };
 
@@ -47,6 +56,7 @@ export const Default = (args) => {
         plural: 'articles',
       },
       selectionType: PanelControls.SELECTION_TYPES.NONE,
+      showDefaultToolbar: false,
       sortOptions: [
         {
           id: 'sort-title',
@@ -104,8 +114,9 @@ export const Default = (args) => {
         ...selfData.panelControlConfigs,
         // Rewrite those changed by this API result
         currentPage,
-        itemsOnThisPage: articles.length,
+        itemsOnThisPage: formattedArticles.length,
         pageSize,
+        showDefaultToolbar: formattedArticles.length > 0,
         totalPages,
         totalItems,
       },
@@ -147,45 +158,54 @@ export const Default = (args) => {
   //
 
   return (
-    <Panel>
-      <PanelControls
-        {...args}
-        controlSettings={{ ...selfData.panelControlConfigs }}
-        onRequestChange={(data) => PanelControls.handlerUtils.handleChange({
-          data,
-          stateData: selfData,
-          setStateDataFn: setSelfData,
-          sortHandlerFn: sortActionsHandler,
-          pageChangeHandlerFn: fetchData,
-          pageSizeChangeHandlerFn: pageSizeChangeHandler,
-          bulkActionsHandlerFn: bulkActionshandler,
-        })}
-      />
-      <Table
-        onSelectRowHook={(data) => PanelControls.handlerUtils.handleSelection({
-          data,
-          stateData: selfData,
-          setStateDataFn: setSelfData,
-        })}
-        resetAbove={true}
-        resetBelow={true}
-        rows={selfData.items}
-        schema={{
-          title: {
-            label: 'Title',
-            dataType: Table.DATA_TYPES.HTML,
-          },
-          author: {
-            label: 'Author',
-            dataType: Table.DATA_TYPES.STRING,
-          },
-          published: {
-            label: 'Date',
-            dataType: Table.DATA_TYPES.STRING,
-          }
-        }}
-        selectedRows={selfData.selectedRows}
-      />
-    </Panel>
+    <Grid container={Grid.CONTAINER_SIZES.FLUID}>
+      <Panel>
+        <PanelControls
+          {...args}
+          controlSettings={{ ...selfData.panelControlConfigs }}
+          onRequestChange={(data) => PanelControls.handlerUtils.handleChange({
+            data,
+            stateData: selfData,
+            setStateDataFn: setSelfData,
+            sortHandlerFn: sortActionsHandler,
+            pageChangeHandlerFn: fetchData,
+            pageSizeChangeHandlerFn: pageSizeChangeHandler,
+            bulkActionsHandlerFn: bulkActionshandler,
+          })}
+        />
+        {selfData.items.length > 0 ? (
+          <Table
+            onSelectRowHook={(data) => PanelControls.handlerUtils.handleSelection({
+              data,
+              stateData: selfData,
+              setStateDataFn: setSelfData,
+            })}
+            resetAbove={true}
+            resetBelow={true}
+            rows={selfData.items}
+            schema={{
+              title: {
+                label: 'Title',
+                dataType: Table.DATA_TYPES.HTML,
+              },
+              author: {
+                label: 'Author',
+                dataType: Table.DATA_TYPES.STRING,
+              },
+              published: {
+                label: 'Date',
+                dataType: Table.DATA_TYPES.STRING,
+              }
+            }}
+            selectedRows={selfData.selectedRows}
+          />
+        ) : (
+          <EmptyState
+            title="No Articles"
+            text="Sorry but we couldn't find any articles at this time."
+          />
+        )}
+      </Panel>
+    </Grid>
   );
 };

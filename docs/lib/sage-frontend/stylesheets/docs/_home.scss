@@ -45,6 +45,10 @@
   padding: sage-spacing(2xl) sage-spacing();
   background: sage-color(gray, 200);
 
+  .sage-panel {
+    height: 100%;
+  }
+
   @media (max-width: sage-breakpoint(md-min)) {
     padding: sage-spacing();
   }

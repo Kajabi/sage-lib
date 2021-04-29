@@ -1,0 +1,13 @@
+<i class="
+    sage-icon-<%= component.icon %><%= "-#{component.size}" if component.size.present? %>
+    <%= component.css_classes %>
+    <%= component.generated_css_classes %>
+    <%= "t-sage--color-#{component.color}" if component.color.present? %>
+  "
+  <% if component.label.present? %>
+    aria-label="<%= component.label %>"
+  <% else %>
+    aria-hidden=true
+  <% end %>
+  <%= component.generated_html_attributes.html_safe %>
+></i>

@@ -1,5 +1,5 @@
 <div id="<%= component.helper_id %>" 
-  class="sage-input-helper" 
+  class="sage-input-helper <%= component.generated_css_classes %>" 
   role="tooltip"<% if component.helper_target != "" %> 
   data-js-helper-target="<%= component.helper_target %>"<% end %>
   <%= component.generated_html_attributes.html_safe %>

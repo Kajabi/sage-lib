@@ -13,7 +13,9 @@ html_tag = is_button ? "button" : "a"
     <%= is_button ? "disabled" : "aria-disabled=true" %>
   <% end %>
   class="
-    sage-tab <%= css_active_class if component.active %>"
+    sage-tab 
+    <%= css_active_class if component.active %>
+    <%= component.generated_css_classes %>"
   data-js-tabs-target="<%= component.target %>"
   data-sage-active-class="<%= css_active_class %>"
   role="tab"

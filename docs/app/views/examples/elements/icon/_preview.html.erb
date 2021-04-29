@@ -1,0 +1,22 @@
+<h3>Basic Usage</h3>
+<%= sage_component SageIcon, { icon: "pen", label: "Edit" } %>
+
+<h3>Colors</h3>
+<%= sage_component SageCardList, {} do %>
+  <% SageTokens::COLORS.each do | color | %>
+    <%= sage_component SageCardListItem, { grid_template: "et" } do %>
+      <%= sage_component SageIcon, { icon: "pen", color: color } %>
+      <%= color %>
+    <% end %>
+  <% end %>
+<% end %>
+
+<h3>Sizes</h3>
+<%= sage_component SageCardList, {} do %>
+  <% SageTokens::ICON_SIZES.each do | size | %>
+    <%= sage_component SageCardListItem, { grid_template: "et" } do %>
+      <%= sage_component SageIcon, { icon: "pen", size: (size == "md" ? nil : size) } %>
+      <%= size == "md" ? "Default (#{size})" : size %>
+    <% end %>
+  <% end %>
+<% end %>

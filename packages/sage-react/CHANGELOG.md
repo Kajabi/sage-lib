@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.38.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.38.0...@kajabi/sage-react@0.38.1) (2021-04-28)
+
+**Note:** Version bump only for package @kajabi/sage-react
+
+
+
+
+
+# [0.38.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.37.0...@kajabi/sage-react@0.38.0) (2021-04-28)
+
+
+### Features
+
+* **panel-controls:** add ability toggle default controls at will ([d926642](https://github.com/Kajabi/sage-lib/commit/d9266421ec96694c900e0ad815f55cdbf87d0ed4))
+
+
+
+
+
 # [0.37.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.36.0...@kajabi/sage-react@0.37.0) (2021-04-21)
 
 
