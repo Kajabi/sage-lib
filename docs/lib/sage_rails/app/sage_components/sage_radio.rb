@@ -3,7 +3,6 @@ class SageRadio < SageComponent
     attributes: [:optional, Hash],
     caption: [:optional, String],
     checked: [:optional, TrueClass],
-    css_classes: [:optional, String],
     disabled: [:optional, TrueClass],
     has_border: [:optional, TrueClass],
     has_error: [:optional, TrueClass],

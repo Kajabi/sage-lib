@@ -1,7 +1,6 @@
 class SageModal < SageComponent
   set_attribute_schema({
     active: [:optional, TrueClass],
-    css_classes: [:optional, String],
     disable_close: [:optional, TrueClass],
     id: [:optional, String],
     large: [:optional, TrueClass],
