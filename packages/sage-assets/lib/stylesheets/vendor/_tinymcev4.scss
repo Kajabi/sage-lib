@@ -11,7 +11,6 @@
   border-radius: sage-border(radius);
 
   .mce-panel {
-    overflow-x: scroll;
     border: unset !important; /* stylelint-disable-line declaration-no-important */
 
     &.mce-toolbar-grp {
@@ -19,12 +18,8 @@
     }
   }
 
-  .mce-container-body {
-    white-space: nowrap;
-  }
-
   .mce-btn button {
-    padding: rem(8px) rem(12px) rem(12px) !important; /* stylelint-disable-line declaration-no-important */
+    padding: rem(8px) rem(10px) rem(10px) !important; /* stylelint-disable-line declaration-no-important */
   }
 
   .mce-btn.mce-colorbutton button[role="presentation"] {
