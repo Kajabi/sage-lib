@@ -247,7 +247,7 @@ $-table-sort-indicator-direction: rem(7px);
   .sage-panel & {
     @include overflow-scroll();
     overflow-y: visible;
-    max-width: calc(100% + #{ 2 * $-table-cell-padding-card});
+    max-width: calc(100% + #{ 2 * sage-spacing(md)});
   }
 }
 
