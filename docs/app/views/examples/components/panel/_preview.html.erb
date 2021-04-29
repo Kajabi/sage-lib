@@ -49,9 +49,10 @@ Panels are rich containers that allow for grouping and organizing content detail
 - **Body**
   While there is no specific container for the body itself,
   there are a variety of panel components that can be used to create most panel configurations.
-  The simplest of these **Panel Block** `.sage-panel__block` (shown above)
-  allows for open text or elements with no preset spacing is desired.
-  In the case of open text, the `sage-type` class can also be added to enforce open text spacing rules.
+  The simplest of these is **Panel Block** `.sage-panel__block` (shown above),
+  which allows for open text or elements without any preset spacing between them.
+  Others, such as **Panel Stack** `.sage-panel__stack` are more opinionated,
+  enforcing their own specific spacing and/or layout features.
   Each of the Panel components is explained and demonstrated in more detail below.
 
 - **Footer**
@@ -60,6 +61,14 @@ Panels are rich containers that allow for grouping and organizing content detail
   that can be sent to the right edge of the panel
   with the `sage-panel__footer--align-right` modifier.
   It employs the Sage Row layout base with `24px` gutters.
+", use_sage_type: true) %>
+
+<%= sage_component SagePanelHeader, { title: "Panel Block <code>.sage-panel__block</code>".html_safe } %>
+<%= md("
+A block is a completely unopinionated container meant to provide the most flexible way to group elements within a panel.
+This component is purely a wrapper and does not apply any layout or spacing by default
+so its great for blocks of text or small groups of content within some of the other panel components.
+Set `type_block` to `true` to enforce open text spacing rules as established by the `sage-type` class.
 ", use_sage_type: true) %>
 
 <%= sage_component SagePanelHeader, { title: "Panel Stack <code>.sage-panel__stack</code>".html_safe } %>
