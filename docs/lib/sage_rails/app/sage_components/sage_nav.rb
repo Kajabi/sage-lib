@@ -1,10 +1,10 @@
 class SageNav < SageComponent
   set_attribute_schema({
     aria_label: [:optional, String],
+    css_classes: [:optional, String],
     items: [:optional, [[
       active: [:optional, NilClass, TrueClass],
       attributes: [:optional, Hash],
-      css_classes: [:optional, String],
       icon: [:optional, String],
       items: [:optional, [[
         active: [:optional, NilClass, TrueClass],
