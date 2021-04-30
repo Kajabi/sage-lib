@@ -5,7 +5,8 @@ class SageComponent
 
   ATTRIBUTE_SCHEMA = {
     html_attributes: [:optional, Hash],
-    spacer: [:optional, SageSchemas::SPACER]
+    spacer: [:optional, SageSchemas::SPACER],
+    css_classes: [:optional, NilClass, String],
   }
 
   def generated_css_classes
@@ -14,6 +15,10 @@ class SageComponent
 
   def generated_html_attributes
     @generated_html_attributes ||= ""
+  end
+
+  def css_classes=(classes_string)
+    generated_css_classes << classes_string
   end
 
   def render
