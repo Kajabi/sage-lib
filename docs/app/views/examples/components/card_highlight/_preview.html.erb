@@ -23,7 +23,7 @@
 
 <h4>Colors</h4>
 <%= sage_component SagePanelTiles, { tiles_in_row: 3 } do %>
-  <% ["charcoal", "grey", "purple", "sage", "yellow", "orange", "red"].each do | color | %>
+  <% SageTokens::COLORS.each do | color | %>
     <%= sage_component SageCard, {} do %>
       <p>Highlighted with <%= color %></p>
       <%= sage_component SageCardHighlight, { color: color } %>

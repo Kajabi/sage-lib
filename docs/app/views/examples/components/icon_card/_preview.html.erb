@@ -1,12 +1,6 @@
 <h3 class="t-sage-heading-6">Icon Card</h3>
 <div class="sage-row">
-  <% [
-  "draft",
-  "published",
-  "info",
-  "warning",
-  "danger"
-].each do | color | %>
+  <% SageTokens::STATUSES.each do | color | %>
     <div class="sage-col-2">
       <%= sage_component SageIconCard, {
         color: color,
