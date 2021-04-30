@@ -93,11 +93,11 @@ $-icon-font-path: "../fonts/sage";
 
 .sage-icon-background {
   display: flex;
-  width: sage-spacing(xl);
-  height: sage-spacing(xl);
   align-items: center;
   justify-content: center;
   align-self: stretch;
+  width: sage-spacing(xl);
+  height: sage-spacing(xl);
   border-radius: sage-border(radius);
   background-color: var(--background-color, inherit);
 
