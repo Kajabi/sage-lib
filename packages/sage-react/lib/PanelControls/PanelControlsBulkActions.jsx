@@ -11,7 +11,7 @@ export const PanelControlsBulkActions = ({
   bulkActionsItems,
   checked,
   currentPage,
-  itemsOnThisPage,
+  itemsPerPage,
   numSelectedRows,
   onSelectBulkAction,
   onToggleSelection,
@@ -26,7 +26,7 @@ export const PanelControlsBulkActions = ({
     ? `Selected ${selectionCount} ${rowNoun.plural || 'items'}`
     : listDisplayString(
       currentPage,
-      itemsOnThisPage,
+      itemsPerPage,
       totalItems,
       rowNoun
     );
@@ -73,7 +73,7 @@ PanelControlsBulkActions.defaultProps = {
   bulkActionsItems: null,
   checked: false,
   currentPage: 1,
-  itemsOnThisPage: 0,
+  itemsPerPage: 1,
   numSelectedRows: 0,
   onSelectBulkAction: (data) => data,
   onToggleSelection: (data) => data,
@@ -86,7 +86,7 @@ PanelControlsBulkActions.propTypes = {
   bulkActionsItems: PropTypes.arrayOf(PropTypes.shape(Dropdown.ItemList.itemsPropTypes)),
   checked: PropTypes.bool,
   currentPage: PropTypes.number,
-  itemsOnThisPage: PropTypes.number,
+  itemsPerPage: PropTypes.number,
   numSelectedRows: PropTypes.number,
   onSelectBulkAction: PropTypes.func,
   onToggleSelection: PropTypes.func,
