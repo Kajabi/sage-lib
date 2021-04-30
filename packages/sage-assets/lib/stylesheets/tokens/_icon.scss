@@ -20,6 +20,20 @@ $sage-icon-sizes: (
 );
 
 ///
+/// Sage icon Background sizes
+///
+$sage-icon-background-sizes: (
+  xs: rem(30px),
+  sm: rem(40px),
+  md: rem(50px),
+  lg: rem(60px),
+  xl: rem(70px),
+  2xl: rem(80px),
+  3xl: rem(90px),
+  4xl: rem(100px),
+);
+
+///
 /// Sage icons
 ///
 $sage-icons: (

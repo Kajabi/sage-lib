@@ -90,3 +90,38 @@ $-icon-font-path: "../fonts/sage";
     transform: rotate(360deg);
   }
 }
+
+.sage-icon-background {
+  width: sage-spacing(xl);
+  height: sage-spacing(xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  border-radius: sage-border(radius);
+  background-color: var(--background-color, inherit);
+
+  [class*="sage-icon-"] {
+    display: flex;
+    color: var(--color, currentColor);
+  }
+}
+
+@each $size-name, $size in $sage-icon-background-sizes {
+  $suffix: "-#{$size-name}";
+
+  .sage-icon-background-#{$suffix} {
+    width: $size;
+    height: $size;
+  }
+}
+
+@each $-color, $-values in $sage-color-combos {
+  $-subtle-values: map-get($-values, subtle);
+  $-bold-values: map-get($-values, bold);
+
+  .sage-icon-background--#{$-color} {
+    --color: #{sage-color-combo($-color, default, foreground)};
+    --background-color: #{sage-color-combo($-color, default, background)};
+  }
+}
