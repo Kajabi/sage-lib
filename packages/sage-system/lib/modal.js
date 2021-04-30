@@ -14,6 +14,7 @@ Sage.modal = (function() {
   const SELECTOR_FOCUSABLE_ELEMENTS = 'a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled]), input[type="text"]:not([disabled]), input[type="radio"]:not([disabled]), input[type="checkbox"]:not([disabled]), select:not([disabled])';
   const MODAL_ACTIVE_CLASS = 'sage-modal--active';
   const EVENT_CLOSEALL = 'sage.modal.closeAll';
+  const EVENT_ACTIVE = 'sage.modal.active';
   const EVENT_OPENING = 'sage.modal.opening';
   const EVENT_OPEN = 'sage.modal.open';
   let SELECTOR_LAST_FOCUSED;
@@ -102,17 +103,18 @@ Sage.modal = (function() {
   }
 
   function dispatchOpenEvents(el) {
-    document.dispatchEvent(new Event(EVENT_OPENING));
+    document.dispatchEvent(new Event(EVENT_ACTIVE));
+    el.dispatchEvent(new Event(EVENT_OPENING));
 
     if (el.dataset.sageAnimate !== undefined) {
       const modalContainer = el.querySelector(".sage-modal__container");
       modalContainer.ontransitionend = (e) => {
         if ((e.propertyName === "transform") && el.classList.contains(MODAL_ACTIVE_CLASS)) {
-          document.dispatchEvent(new Event(EVENT_OPEN));
+          el.dispatchEvent(new Event(EVENT_OPEN));
         }
       };
     } else {
-      document.dispatchEvent(new Event(EVENT_OPEN));
+      el.dispatchEvent(new Event(EVENT_OPEN));
     }
   }
 
