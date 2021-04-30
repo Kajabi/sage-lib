@@ -7,7 +7,6 @@
       sage-checkbox--standalone
       <%= "sage-checkbox--partial-selection" if component.partial_selection %>
       <%= component.has_error ? "sage-checkbox--error" : "" %>
-      <%= component.css_classes if component.css_classes.present? %>
       <%= component.generated_css_classes %>
     "
     <% component.attributes.each do |key, value| %>
@@ -25,7 +24,7 @@
       sage-checkbox
       <%= "sage-checkbox--partial-selection" if component.partial_selection %>
       <%= component.has_error ? "sage-checkbox--error" : "" %>
-      <%= component.css_classes if component.css_classes.present? %>
+      <%= component.generated_css_classes %>
     "
   >
     <input

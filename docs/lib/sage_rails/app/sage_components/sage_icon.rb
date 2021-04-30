@@ -7,4 +7,4 @@ class SageIcon < SageComponent
     label: [:optional, NilClass, String],
     size: [:optional, NilClass, SageSchemas::ICON_SIZE]
   })
-end
+end 

@@ -7,6 +7,5 @@ class SageHero < SageComponent
     image: [:optional, String],
     title: [:optional, String],
     title_tag: [:optional, String],
-    css_classes: [:optional, String],
   })
 end

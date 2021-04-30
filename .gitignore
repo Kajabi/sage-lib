@@ -8,3 +8,4 @@ lerna-debug.log
 .bundle
 .env
 .DS_Store
+coverage
