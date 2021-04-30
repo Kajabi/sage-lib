@@ -21,7 +21,7 @@ export default {
     stateText: 'New',
     name: 'Lilly Jones',
     nameHref: 'https://kajabi.com',
-    NameTag: 'h3',
+    nameTag: 'h3',
     relatedProperty: 'Total Product Blueprint',
     relatedPropertyHref: 'https://kajabi.com',
     transactionTime: '10:32pm'
