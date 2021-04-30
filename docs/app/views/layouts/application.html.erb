@@ -5,35 +5,31 @@
     <%= render "application/styles" %>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css">
   </head>
-  <body class="sage-page sage-docs">
+  <%= sage_component(SageBody, { css_classes: "sage-docs" }) do %>
     <%= render "application/content_skip_link",
       link_id: "main-content"
     -%>
-    <header class="sage-header">
+    <%= sage_component(SageHeader, {}) do %>
       <%= render "application/assistant" %>
-    </header>
-    <div class="sage-stage">
+    <% end %>
+    <%= sage_component(SageStage, {}) do %>
       <%= render "application/sidebar" %>
-      <main class="sage-content" id="main-content">
-        <div class="sage-container sage-container--sm">
+      <%= sage_component(SageContent, { html_attributes: { id: "main-content" } }) do %>
+        <%= sage_component(SageContainer, { size: "sm" }) do %>
           <div class="docs-panel">
             <div class="sage-row">
               <div class="sage-col--lg-10 docs-heading">
                 <%= yield :heading %>
               </div>
             </div>
-            <div class="sage-row">
-              <div class="sage-col--lg-12">
-                <hr/>
-                <%= yield %>
-              </div>
-            </div>
+            <hr>
+            <%= yield %>
           </div>
           <%= render "application/footer" %>
-        </div>
-      </main>
-      <div class="sage-overlay" aria-hidden="true"></div>
-    </div>
+        <% end %>
+      <% end %>
+      <%= sage_component(SageOverlay, {}) %>
+    <% end %>
     <%= render "scripts" %>
-  </body>
+  <% end %>
 </html>

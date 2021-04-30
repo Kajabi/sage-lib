@@ -4,29 +4,27 @@
     <%= render "application/meta" %>
     <%= render "application/styles" %>
   </head>
-  <body class="sage-page sage-docs">
+  <%= sage_component(SageBody, { css_classes: "sage-docs" }) do %>
     <%= render "application/content_skip_link",
       link_id: "main-content"
     -%>
-    <header class="sage-header">
-      <%= render "application/assistant",
-        menu_button: true
-      -%>
-    </header>
-    <div class="sage-stage">
-      <main class="sage-content" id="main-content">
-        <div class="sage-container sage-container--md">
+    <%= sage_component(SageHeader, {}) do %>
+      <%= render "application/assistant" %>
+    <% end %>
+    <%= sage_component(SageStage, {}) do %>
+      <%= sage_component(SageContent, { html_attributes: { id: "main-content" } }) do %>
+        <%= sage_component(SageContainer, { size: "md" }) do %>
           <div class="sage-row">
-            <div class="sage-col--lg-12 sage-type">
+            <div class="sage-col--lg-12 docs-heading">
               <%= yield :heading %>
-              <hr/>
             </div>
           </div>
-        </div>
+        <% end %>
+        <hr>
         <%= yield %>
-      </main>
-      <div class="sage-overlay" aria-hidden="true"></div>
-    </div>
+      <% end %>
+      <%= sage_component(SageOverlay, {}) %>
+    <% end %>
     <%= render "scripts" %>
-  </body>
+  <% end %>
 </html>
