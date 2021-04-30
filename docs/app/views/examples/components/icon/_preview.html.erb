@@ -20,3 +20,28 @@
     <% end %>
   <% end %>
 <% end %>
+
+<h3>Background Colors</h3>
+<%= sage_component SageCardList, {} do %>
+  <% [
+    "draft",
+    "published",
+    "info",
+    "warning",
+    "danger"
+  ].each do | color | %>
+    <%= sage_component SageCardListItem, { grid_template: "et" } do %>
+      <%= sage_component SageIcon, { icon: "pen", card_color: color } %>
+      <%= color %>
+    <% end %>
+  <% end %>
+<% end %>
+<h3>Background Sizes</h3>
+<%= sage_component SageCardList, {} do %>
+  <% SageTokens::ICON_SIZES.each do | size | %>
+    <%= sage_component SageCardListItem, { grid_template: "et" } do %>
+      <%= sage_component SageIcon, { icon: "pen", size: (size == "md" ? nil : size), card_color: "draft" } %>
+      <%= size == "md" ? "Default (#{size})" : size %>
+    <% end %>
+  <% end %>
+<% end %>
