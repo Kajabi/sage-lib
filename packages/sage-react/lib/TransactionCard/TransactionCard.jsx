@@ -13,10 +13,11 @@ export const TransactionCard = ({
   stateText,
   name,
   nameHref,
+  NameTag,
   amount,
   amountColor,
-  offer,
-  offerHref,
+  relatedProperty,
+  relatedPropertyHref,
   transactionTime,
 }) => (
   <div className="sage-transaction-card">
@@ -27,11 +28,11 @@ export const TransactionCard = ({
       </div>
     </div>
     <div className="sage-transaction-card__body">
-      <h4 className="sage-transaction-card__name">
+      <NameTag className="sage-transaction-card__name">
         {nameHref ? (
           <Link href={nameHref} className="sage-transaction-card__name-link">{name}</Link>
         ) : name}
-      </h4>
+      </NameTag>
       {amount && (
         <div className={`sage-transaction-card__amount${amountColor ? ` sage-transaction-card__amount--${amountColor}` : ''}`}>
           {amount}
@@ -39,9 +40,11 @@ export const TransactionCard = ({
       )}
     </div>
     <div className="sage-transaction-card__footer">
-      {offerHref ? (
-        <Link href={nameHref}><Property icon={Icon.ICONS.TAG}>{offer}</Property></Link>
-      ) : <Property icon={Icon.ICONS.TAG}>{offer}</Property>}
+      {relatedPropertyHref ? (
+        <Link href={relatedPropertyHref}>
+          <Property icon={Icon.ICONS.TAG}>{relatedProperty}</Property>
+        </Link>
+      ) : <Property icon={Icon.ICONS.TAG}>{relatedProperty}</Property>}
       <Property>{transactionTime}</Property>
     </div>
   </div>
@@ -58,10 +61,11 @@ TransactionCard.defaultProps = {
   stateColor: null,
   name: '--',
   nameHref: null,
+  NameTag: 'h4',
   amount: '0.00',
   amountColor: null,
-  offer: '--',
-  offerHref: null,
+  relatedProperty: '--',
+  relatedPropertyHref: null,
   transactionTime: '--',
 };
 
@@ -72,9 +76,10 @@ TransactionCard.propTypes = {
   stateColor: PropTypes.oneOf(Object.values(TransactionCard.STATE_COLORS)),
   name: PropTypes.string,
   nameHref: PropTypes.string,
+  NameTag: PropTypes.string,
   amount: PropTypes.string,
   amountColor: PropTypes.oneOf(Object.values(TransactionCard.AMOUNT_COLORS)),
-  offer: PropTypes.string,
-  offerHref: PropTypes.string,
+  relatedProperty: PropTypes.string,
+  relatedPropertyHref: PropTypes.string,
   transactionTime: PropTypes.string,
 };
