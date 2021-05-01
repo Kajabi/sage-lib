@@ -7,10 +7,9 @@ type_specs = [
       Rails: `SageClassnames::TYPE::HEADING_1`
     )),
     weight: "700",
-    size: "29px",
-    size_mobile: "25px",
-    line_height: "36px",
     kerning: "0.3px",
+    desktop: "29px / 36px",
+    mobile: "26px / 32px",
   },
   {
     style: md(%(
@@ -19,10 +18,9 @@ type_specs = [
       Rails: `SageClassnames::TYPE::HEADING_2`
     )),
     weight: "700",
-    size: "26px",
-    size_mobile: "22px",
-    line_height: "32px",
     kerning: "0.3px",
+    desktop: "26px / 32px",
+    mobile: "23px / 32px",
   },
   {
     style: md(%(
@@ -31,10 +29,9 @@ type_specs = [
       Rails: `SageClassnames::TYPE::HEADING_3`
     )),
     weight: "700",
-    size: "23px",
-    size_mobile: "20px",
-    line_height: "32px",
     kerning: "0.3px",
+    desktop: "23px / 32px",
+    mobile: "20px / 28px",
   },
   {
     style: md(%(
@@ -43,10 +40,9 @@ type_specs = [
       Rails: `SageClassnames::TYPE::HEADING_4`
     )),
     weight: "600",
-    size: "20px",
-    size_mobile: "18px",
-    line_height: "28px",
     kerning: "0.3px",
+    desktop: "20px / 28px",
+    mobile: "18px / 28px",
   },
   {
     style: md(%(
@@ -55,10 +51,9 @@ type_specs = [
       Rails: `SageClassnames::TYPE::HEADING_5`
     )),
     weight: "600",
-    size: "18px",
-    size_mobile: "16px",
-    line_height: "24px",
     kerning: "0.3px",
+    desktop: "18px / 28px",
+    mobile: "16px / 28px",
   },
   {
     style: md(%(
@@ -67,10 +62,9 @@ type_specs = [
       Rails: `SageClassnames::TYPE::HEADING_6`
     )),
     weight: "600",
-    size: "16px",
-    size_mobile: "14px",
-    line_height: "20px",
     kerning: "0.3px",
+    desktop: "14px / 24px",
+    mobile: "16px / 28px",
   },
   {
     style: md(%(
@@ -79,10 +73,9 @@ type_specs = [
       Rails: `SageClassnames::TYPE::BODY`
     )),
     weight: "400*",
-    size: "16px",
-    size_mobile: "14px",
-    line_height: "28px",
     kerning: "0.2px",
+    desktop: "14px / 24px",
+    mobile: "16px / 28px",
   },
   {
     style: md(%(
@@ -91,10 +84,9 @@ type_specs = [
       Rails: `SageClassnames::TYPE::BODY_SMALL`
     )),
     weight: "400*",
-    size: "14px",
-    size_mobile: "13px",
-    line_height: "24px",
     kerning: "0.2px",
+    desktop: "13px / 24px",
+    mobile: "14px / 24px",
   },
   {
     style: md(%(
@@ -103,10 +95,9 @@ type_specs = [
       Rails: `SageClassnames::TYPE::BODY_XSMALL`
     )),
     weight: "400*",
-    size: "12px",
-    size_mobile: "12px",
-    line_height: "20px",
     kerning: "0.2px",
+    desktop: "12px / 20px",
+    mobile: "12px / 20px",
   }
 ]
 
@@ -168,7 +159,7 @@ In the end, we prefer adding new entries to the type spec over including one-off
 <% end %>
 <div class="sage-type">
     <%= md("
-      The Sage type system uses a major second modular scale (factor of 1.125) derived from an initial base font size of 14px. However, for improved readability with mobile / small screen devices, this base font size is increased to 16px.
+      The Sage type system uses a loose major second modular scale (factor of 1.125) derived from an initial base font size of 14px. However, for improved readability with mobile / small screen devices, this base font size is increased to 16px.
 
       Typography in our system uses `t-sage-` classes in order to apply a given typographical specification to an element
       These can be used on any element to apply the desired typographical styles regardless of the tag. This allows a
@@ -180,10 +171,9 @@ In the end, we prefer adding new entries to the type spec over including one-off
     headers: [
       "Type Spec",
       "Weight",
-      "Size",
-      "Size (mobile)",
-      "Line-height",
       "Kerning",
+      "Desktop<br/>(size / line)".html_safe,
+      "Mobile<br/>(size / line)".html_safe,
     ],
     rows: type_specs,
   } %>
