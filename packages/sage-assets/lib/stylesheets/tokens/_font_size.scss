@@ -4,41 +4,75 @@
 /// @group sage
 ////
 
+///
+/// Sage raw font sizes token (non-responsive)
+///
+$sage-raw-font-sizes: (
+  2xs: rem(12px),
+  xs: rem(13px),
+  sm: rem(14px),
+  md: rem(16px),
+  lg: rem(18px),
+  xl: rem(20px),
+  2xl: rem(23px),
+  3xl: rem(26px),
+  4xl: rem(29px)
+);
+
+///
+/// Sage raw font size token utility (non-responsive)
+///
+/// @param {string} $key [md] The token to retrieve
+///
+/// @return {length}} The value retrieved
+///
+@function sage-raw-font-size($key: md) {
+  $value: map-get($sage-raw-font-sizes, $key);
+  @return $value;
+}
+
+///
+/// Responsive type sizes
+///
 :root {
-  --sage-font-size-xs: #{rem(12px)};
-  --sage-font-size-sm: #{rem(14px)};
-  --sage-font-size-md: #{rem(16px)};
-  --sage-font-size-lg: #{rem(18px)};
-  --sage-font-size-xl: #{rem(20px)};
-  --sage-font-size-2xl: #{rem(23px)};
-  --sage-font-size-3xl: #{rem(26px)};
-  --sage-font-size-4xl: #{rem(29px)};
+  --sage-font-size-body-xs: #{sage-raw-font-size(2xs)};
+  --sage-font-size-body-sm: #{sage-raw-font-size(sm)};
+  --sage-font-size-body: #{sage-raw-font-size(md)};
+  --sage-font-size-h6: #{sage-raw-font-size(md)};
+  --sage-font-size-h5: #{sage-raw-font-size(md)};
+  --sage-font-size-h4: #{sage-raw-font-size(lg)};
+  --sage-font-size-h3: #{sage-raw-font-size(xl)};
+  --sage-font-size-h2: #{sage-raw-font-size(2xl)};
+  --sage-font-size-h1: #{sage-raw-font-size(3xl)};
 }
 
 @media screen and (min-width: sage-breakpoint(lg-min)) {
   :root {
-    --sage-font-size-sm: #{rem(13px)};
-    --sage-font-size-md: #{rem(14px)};
-    --sage-font-size-lg: #{rem(16px)};
-    --sage-font-size-xl: #{rem(18px)};
-    --sage-font-size-2xl: #{rem(20px)};
-    --sage-font-size-3xl: #{rem(22px)};
-    --sage-font-size-4xl: #{rem(25px)};
-  }
+    // --sage-font-size-body-xs is same
+    --sage-font-size-body-sm: #{sage-raw-font-size(xs)};
+    --sage-font-size-body: #{sage-raw-font-size(sm)};
+    --sage-font-size-h6: #{sage-raw-font-size(sm)};
+    --sage-font-size-h5: #{sage-raw-font-size(lg)};
+    --sage-font-size-h4: #{sage-raw-font-size(xl)};
+    --sage-font-size-h3: #{sage-raw-font-size(2xl)};
+    --sage-font-size-h2: #{sage-raw-font-size(3xl)};
+    --sage-font-size-h1: #{sage-raw-font-size(4xl)};
+  } 
 }
 
 ///
-/// Sage font sizes token
+/// Sage font sizes token (responsive)
 ///
 $sage-font-sizes: (
-  xs: var(--sage-font-size-xs),
-  sm: var(--sage-font-size-sm),
-  md: var(--sage-font-size-md),
-  lg: var(--sage-font-size-lg),
-  xl: var(--sage-font-size-xl),
-  2xl: var(--sage-font-size-2xl),
-  3xl: var(--sage-font-size-3xl),
-  4xl: var(--sage-font-size-4xl)
+  body-xs: var(--sage-font-size-body-xs),
+  body-sm: var(--sage-font-size-body-sm),
+  body: var(--sage-font-size-body),
+  h6: var(--sage-font-size-h6),
+  h5: var(--sage-font-size-h5),
+  h4: var(--sage-font-size-h4),
+  h3: var(--sage-font-size-h3),
+  h2: var(--sage-font-size-h2),
+  h1: var(--sage-font-size-h1)
 );
 
 ///
@@ -48,7 +82,7 @@ $sage-font-sizes: (
 ///
 /// @return {length}} The value retrieved
 ///
-@function sage-font-size($key: md) {
+@function sage-font-size($key: body) {
   $value: map-get($sage-font-sizes, $key);
   @return $value;
 }
