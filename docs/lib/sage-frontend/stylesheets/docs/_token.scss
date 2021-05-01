@@ -16,7 +16,7 @@
   justify-content: space-between;
   flex-wrap: wrap;
   padding: sage-spacing(xs) sage-spacing(sm);
-  font-size: sage-font-size(sm);
+  font-size: sage-font-size(body-sm);
   border-bottom: sage-border();
 
   &::after {

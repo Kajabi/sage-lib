@@ -13,11 +13,11 @@ $-t-base-spec: (
   kerning: sage-letter-spacing(xs)
 );
 $-t-body-small-spec: map-merge($-t-base-spec, (
-  size: sage-font-size(sm),
+  size: sage-font-size(body-sm),
   leading: sage-line-height(sm),
 ));
 $-t-body-xsmall-spec: map-merge($-t-base-spec, (
-  size: sage-font-size(xs),
+  size: sage-font-size(body-xs),
   leading: sage-line-height(xs),
 ));
 
