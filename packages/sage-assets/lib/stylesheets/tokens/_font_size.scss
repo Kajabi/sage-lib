@@ -7,6 +7,8 @@
 ///
 /// Sage raw font sizes token (non-responsive)
 ///
+/// Sage allows for responsive typography, that uses these raw font sizes as the source of truth for its possible sizes.
+///
 $sage-raw-font-sizes: (
   2xs: rem(12px),
   xs: rem(13px),
@@ -32,7 +34,9 @@ $sage-raw-font-sizes: (
 }
 
 ///
-/// Responsive type sizes
+/// Responsive font sizes
+///
+/// Responsive font sizes use CSS custom properties to apply a raw font size for a given breakpoint range.
 ///
 :root {
   --sage-font-size-body-xs: #{sage-raw-font-size(2xs)};
