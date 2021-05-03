@@ -34,7 +34,7 @@ $sage-raw-font-sizes: (
 }
 
 ///
-/// Responsive font sizes
+/// Sage responsive font sizes custom props
 ///
 /// Responsive font sizes use CSS custom properties to apply a raw font size for a given breakpoint range.
 ///
@@ -61,7 +61,7 @@ $sage-raw-font-sizes: (
     --sage-font-size-h3: #{sage-raw-font-size(2xl)};
     --sage-font-size-h2: #{sage-raw-font-size(3xl)};
     --sage-font-size-h1: #{sage-raw-font-size(4xl)};
-  } 
+  }
 }
 
 ///
@@ -80,7 +80,7 @@ $sage-font-sizes: (
 );
 
 ///
-/// Sage font size token utility
+/// Sage font size token utility (responsive)
 ///
 /// @param {string} $key [md] The token to retrieve
 ///
