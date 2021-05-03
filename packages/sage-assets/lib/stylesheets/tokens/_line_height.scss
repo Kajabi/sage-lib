@@ -61,15 +61,15 @@ $sage-raw-line-heights: (
 /// Sage line-height token (responsive)
 ///
 $sage-line-heights: (
-  body-xs: var(--sage-font-size-body-xs),
-  body-sm: var(--sage-font-size-body-sm),
-  body: var(--sage-font-size-body),
-  h6: var(--sage-font-size-h6),
-  h5: var(--sage-font-size-h5),
-  h4: var(--sage-font-size-h4),
-  h3: var(--sage-font-size-h3),
-  h2: var(--sage-font-size-h2),
-  h1: var(--sage-font-size-h1)
+  body-xs: var(--sage-line-height-body-xs),
+  body-sm: var(--sage-line-height-body-sm),
+  body: var(--sage-line-height-body),
+  h6: var(--sage-line-height-h6),
+  h5: var(--sage-line-height-h5),
+  h4: var(--sage-line-height-h4),
+  h3: var(--sage-line-height-h3),
+  h2: var(--sage-line-height-h2),
+  h1: var(--sage-line-height-h1)
 );
 
 ///
