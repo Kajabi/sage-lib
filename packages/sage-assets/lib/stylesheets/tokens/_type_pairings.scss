@@ -1,0 +1,86 @@
+////
+/// Sage type_pairings tokens
+///
+/// @group sage
+////
+
+
+///
+/// Sage Type_pairings token
+///
+$sage-raw-type-pairings: (
+  4xl: (
+    font-size: sage-raw-font-size(4xl),
+    line-height: sage-line-height(xl),
+  ),
+  3xl: (
+    font-size: sage-raw-font-size(3xl),
+    line-height: sage-line-height(lg),
+  ),
+  2xl: (
+    font-size: sage-raw-font-size(2xl),
+    line-height: sage-line-height(lg),
+  ),
+  xl: (
+    font-size: sage-raw-font-size(xl),
+    line-height: sage-line-height(md),
+  ),
+  lg: (
+    font-size: sage-raw-font-size(lg),
+    line-height: sage-line-height(md),
+  ),
+  md: (
+    font-size: sage-raw-font-size(md),
+    line-height: sage-line-height(md),
+  ),
+  sm: (
+    font-size: sage-raw-font-size(sm),
+    line-height: sage-line-height(sm),
+  ),
+  xs: (
+    font-size: sage-raw-font-size(xs),
+    line-height: sage-line-height(sm),
+  ),
+  2xs: (
+    font-size: sage-raw-font-size(2xs),
+    line-height: sage-line-height(xs),
+  ),
+);
+
+///
+/// Sage Type Pairing token utility
+///
+/// @param {string} $key [default] The token to retrieve
+///
+@function sage-raw-type-pairing($key: md) {
+  $value: map-get($sage-raw-type-pairings, $key);
+  @return $value;
+}
+
+
+///
+/// Sage Type Pairing mixin
+///
+/// @param {string} $key [body] The token to retrieve.
+///   If the `$responsive` parameter is true this is used to retrieve values from
+///   the responsive CSS custom properties `--sage-font-size-#{$key}` and `--sage-line-height-#{$key}`.
+///   Otherwise it is used to retrieve from `sage-raw-type-pairings`.
+///
+/// @param {bool} $responsive [false] Whether or not to use the responsive css custom properties
+///   for the provided pairing.
+///
+@mixin sage-type-pairing($key: body, $responsive: true) {
+  @if ($responsive == true) {
+    font-size: var(--sage-font-size-#{$key});
+    line-height: var(--sage-line-height-#{$key});
+  }
+
+  @else {
+    $pairings: sage-raw-type-pairing($key);
+
+    @if ($pairings) {
+      font-size: map-get($pairings, font-size);
+      line-height: map-get($pairings, line-height);
+    }
+  }
+}
