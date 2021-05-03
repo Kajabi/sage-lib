@@ -9,12 +9,11 @@
 /// Sage line height/leading token
 ///
 $sage-line-heights: (
-  2xs: sage-baseline(4),
-  xs: sage-baseline(5),
-  sm: sage-baseline(6),
-  md: sage-baseline(7),
-  lg: sage-baseline(8),
-  xl: sage-baseline(9),
+  xs: sage-baseline(5), // 20
+  sm: sage-baseline(6), // 24
+  md: sage-baseline(7), // 28
+  lg: sage-baseline(8), // 32
+  xl: sage-baseline(9), // 36
 );
 
 ///
