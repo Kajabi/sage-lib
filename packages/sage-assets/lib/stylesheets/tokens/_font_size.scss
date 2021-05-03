@@ -9,7 +9,7 @@
 ///
 /// Sage allows for responsive typography, that uses these raw font sizes as the source of truth for its possible sizes.
 ///
-$sage-raw-font-sizes: (
+$sage-font-sizes: (
   2xs: rem(12px),
   xs: rem(13px),
   sm: rem(14px),
@@ -22,71 +22,52 @@ $sage-raw-font-sizes: (
 );
 
 ///
-/// Sage raw font size token utility (non-responsive)
-///
-/// @param {string} $key [md] The token to retrieve
-///
-/// @return {length}} The value retrieved
-///
-@function sage-raw-font-size($key: md) {
-  $value: map-get($sage-raw-font-sizes, $key);
-  @return $value;
-}
-
-///
 /// Sage responsive font sizes custom props
 ///
 /// Responsive font sizes use CSS custom properties to apply a raw font size for a given breakpoint range.
 ///
 :root {
-  --sage-font-size-body-xs: #{sage-raw-font-size(2xs)};
-  --sage-font-size-body-sm: #{sage-raw-font-size(sm)};
-  --sage-font-size-body: #{sage-raw-font-size(md)};
-  --sage-font-size-h6: #{sage-raw-font-size(md)};
-  --sage-font-size-h5: #{sage-raw-font-size(md)};
-  --sage-font-size-h4: #{sage-raw-font-size(lg)};
-  --sage-font-size-h3: #{sage-raw-font-size(xl)};
-  --sage-font-size-h2: #{sage-raw-font-size(2xl)};
-  --sage-font-size-h1: #{sage-raw-font-size(3xl)};
+  --sage-font-size-body-xs: #{map-get($sage-font-sizes, 2xs)};
+  --sage-font-size-body-sm: #{map-get($sage-font-sizes, sm)};
+  --sage-font-size-body: #{map-get($sage-font-sizes, md)};
+  --sage-font-size-h6: #{map-get($sage-font-sizes, md)};
+  --sage-font-size-h5: #{map-get($sage-font-sizes, md)};
+  --sage-font-size-h4: #{map-get($sage-font-sizes, lg)};
+  --sage-font-size-h3: #{map-get($sage-font-sizes, xl)};
+  --sage-font-size-h2: #{map-get($sage-font-sizes, 2xl)};
+  --sage-font-size-h1: #{map-get($sage-font-sizes, 3xl)};
 }
 
 @media screen and (min-width: sage-breakpoint(lg-min)) {
   :root {
     // --sage-font-size-body-xs is same
-    --sage-font-size-body-sm: #{sage-raw-font-size(xs)};
-    --sage-font-size-body: #{sage-raw-font-size(sm)};
-    --sage-font-size-h6: #{sage-raw-font-size(sm)};
-    --sage-font-size-h5: #{sage-raw-font-size(lg)};
-    --sage-font-size-h4: #{sage-raw-font-size(xl)};
-    --sage-font-size-h3: #{sage-raw-font-size(2xl)};
-    --sage-font-size-h2: #{sage-raw-font-size(3xl)};
-    --sage-font-size-h1: #{sage-raw-font-size(4xl)};
+    --sage-font-size-body-sm: #{map-get($sage-font-sizes, xs)};
+    --sage-font-size-body: #{map-get($sage-font-sizes, sm)};
+    --sage-font-size-h6: #{map-get($sage-font-sizes, sm)};
+    --sage-font-size-h5: #{map-get($sage-font-sizes, lg)};
+    --sage-font-size-h4: #{map-get($sage-font-sizes, xl)};
+    --sage-font-size-h3: #{map-get($sage-font-sizes, 2xl)};
+    --sage-font-size-h2: #{map-get($sage-font-sizes, 3xl)};
+    --sage-font-size-h1: #{map-get($sage-font-sizes, 4xl)};
   }
 }
 
 ///
-/// Sage font sizes token (responsive)
-///
-$sage-font-sizes: (
-  body-xs: var(--sage-font-size-body-xs),
-  body-sm: var(--sage-font-size-body-sm),
-  body: var(--sage-font-size-body),
-  h6: var(--sage-font-size-h6),
-  h5: var(--sage-font-size-h5),
-  h4: var(--sage-font-size-h4),
-  h3: var(--sage-font-size-h3),
-  h2: var(--sage-font-size-h2),
-  h1: var(--sage-font-size-h1)
-);
-
-///
 /// Sage font size token utility (responsive)
 ///
-/// @param {string} $key [md] The token to retrieve
+/// @param {string} $key [body] The token to retrieve
+/// @param {bool} $responsive [true] Whether or not retrieve a responsive css custom property or a flat value
 ///
 /// @return {length}} The value retrieved
 ///
-@function sage-font-size($key: body) {
-  $value: map-get($sage-font-sizes, $key);
-  @return $value;
+@function sage-font-size($key: body, $responsive: true) {
+  $value: false;
+
+  @if ($responsive) {
+    @return var(--sage-font-size-#{$key});
+  }
+
+  @else {
+    @return map-get($sage-font-sizes, $key);
+  }
 }

@@ -57,7 +57,7 @@
     }
   }
   &-font-size::after {
-    content: "#{sage-raw-font-size()}";
+    content: "#{sage-font-size(md, false)}";
   }
   @each $name, $token in $sage-font-sizes {
     &-font-size-#{$name}::after {

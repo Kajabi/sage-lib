@@ -186,7 +186,7 @@ $-btn-interactive-label-icon-size: rem(24px);
     }
 
     &.sage-btn--tag::before {
-      font-size: sage-raw-font-size(md);
+      font-size: sage-font-size(md, false);
     }
   }
 
