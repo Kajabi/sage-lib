@@ -6,7 +6,7 @@ class SageLabel < SageComponent
     interactive_type: [:optional, Set.new([:dropdown, :default, :secondary_button])],
     secondary_button: [:optional, String, TrueClass, {
       attributes:       [:optional, NilClass, Hash],
-      css_classes:      [:optional, String],
+      css_classes:      [:optional, NilClass, String],
       icon:             [:optional, String],
       value:            [:optional, String],
     }],
