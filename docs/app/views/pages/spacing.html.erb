@@ -65,11 +65,18 @@
   )) %>
   <%= sage_component SageButton, { style: "primary", value: "Sample", spacer: { top: "xs", bottom: "lg" }} %>
   <%= md(%(
-    Finally, beyond component attributes, the `SageClassnames` module makes these same spacer classes available anywhere:
+    Finally, beyond component attributes, the `SageClassnames` module makes these same spacer classes available anywhere.
+    
+    In Rails:
 
 ```erb
 <b class="\<\%\= SageClassnames::SPACERS::LG_TOP \%\>">I have extra space above!</b>
 ```
+  
+  In React:
+
+```jsx
+<b className={SageClassnames.SPACERS.LG_TOP}>I have extra space above!</b>
+```
   )) %>
-  <p class="<%= SageClassnames::SPACERS::LG_TOP %>"><b>I have extra space above!</b></p>
 </div>
