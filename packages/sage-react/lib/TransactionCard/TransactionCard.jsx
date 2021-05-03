@@ -9,8 +9,8 @@ import { AMOUNT_COLORS, LABEL_COLORS, STATE_COLORS } from './configs';
 export const TransactionCard = ({
   labelColor,
   labelText,
-  stateColor,
-  stateText,
+  transactionState,
+  transactionStateColor,
   name,
   nameHref,
   nameTag,
@@ -22,11 +22,11 @@ export const TransactionCard = ({
 }) => {
   const NameTag = nameTag;
   return (
-    <div className="sage-transaction-card">
+    <article className="sage-transaction-card">
       <div className="sage-transaction-card__header">
         <Label value={labelText} color={labelColor} />
-        <div className={`sage-transaction-card__state${stateColor ? ` sage-transaction-card__state--${stateColor}` : ''}`}>
-          {stateText}
+        <div className={`sage-transaction-card__state${transactionStateColor ? ` sage-transaction-card__state--${transactionStateColor}` : ''}`}>
+          {transactionState}
         </div>
       </div>
       <div className="sage-transaction-card__body">
@@ -49,7 +49,7 @@ export const TransactionCard = ({
         ) : <Property icon={Icon.ICONS.TAG}>{relatedProperty}</Property>}
         <Property>{transactionTime}</Property>
       </div>
-    </div>
+    </article>
   );
 };
 
@@ -60,8 +60,8 @@ TransactionCard.STATE_COLORS = STATE_COLORS;
 TransactionCard.defaultProps = {
   labelText: '--',
   labelColor: LABEL_COLORS.PUBLISHED,
-  stateText: null,
-  stateColor: null,
+  transactionState: null,
+  transactionStateColor: null,
   name: '--',
   nameHref: null,
   nameTag: 'h4',
@@ -75,8 +75,8 @@ TransactionCard.defaultProps = {
 TransactionCard.propTypes = {
   labelText: PropTypes.string,
   labelColor: PropTypes.oneOf(Object.values(TransactionCard.LABEL_COLORS)),
-  stateText: PropTypes.string,
-  stateColor: PropTypes.oneOf(Object.values(TransactionCard.STATE_COLORS)),
+  transactionState: PropTypes.string,
+  transactionStateColor: PropTypes.oneOf(Object.values(TransactionCard.STATE_COLORS)),
   name: PropTypes.string,
   nameHref: PropTypes.string,
   nameTag: PropTypes.string,

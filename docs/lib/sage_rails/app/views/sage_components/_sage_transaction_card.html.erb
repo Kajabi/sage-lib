@@ -1,13 +1,13 @@
 <% html_tag = component.name_tag ? component.name_tag : "h4" %>
 
-<div class="sage-transaction-card <%= component.generated_css_classes %>" <%= component.generated_html_attributes.html_safe %>>
+<article class="sage-transaction-card <%= component.generated_css_classes %>" <%= component.generated_html_attributes.html_safe %>>
   <div class="sage-transaction-card__header">
     <%= sage_component SageLabel, {
       color: component.label_color,
       value: component.label_text,
     } %>
-    <% if component.state.present? %>
-      <div class="sage-transaction-card__state<%= " sage-transaction-card__state--#{component.state_color}" if component.state_color.present? %>"><%= component.state %></div>
+    <% if component.transaction_state.present? %>
+      <div class="sage-transaction-card__state<%= " sage-transaction-card__state--#{component.transaction_state_color}" if component.transaction_state_color.present? %>"><%= component.transaction_state %></div>
     <% end %>
   </div>
   <div class="sage-transaction-card__body">
@@ -30,4 +30,4 @@
     <% end %>
     <%= sage_component SageProperty, { value: component.transaction_time } %>
   </div>
-</div>
+</article>
