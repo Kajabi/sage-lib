@@ -12,3 +12,9 @@ export const LABEL_COLORS = {
   WARNING: 'warning',
   LOCKED: 'locked',
 };
+
+export const STATE_COLORS = {
+  DEFAULT: null,
+  RED: 'red',
+  INFO: 'info',
+};

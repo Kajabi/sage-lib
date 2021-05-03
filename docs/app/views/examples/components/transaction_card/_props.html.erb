@@ -5,6 +5,18 @@
   <td><%= md('`nil`') %></td>
 </tr>
 <tr>
+  <td><%= md('`name_href`') %></td>
+  <td><%= md('Optional link that gets applied to name') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`name_tag`') %></td>
+  <td><%= md('Sets the heading tag (h1 - h6) for the `name`') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('`h4`') %></td>
+</tr>
+<tr>
   <td><%= md('`amount`') %></td>
   <td><%= md('Amount of the transaction.') %></td>
   <td><%= md('String') %></td>
@@ -14,20 +26,6 @@
   <td><%= md('`amount_color`') %></td>
   <td><%= md('Color that can be applied to the transaction amount.') %></td>
   <td><%= md('`"red"`, `"sage"`') %></td>
-  <td><%= md('`nil`') %></td>
-</tr>
-<tr>
-  <td><%= md('`dropdown_options`') %></td>
-  <td><%= md('Array for dropdown options') %></td>
-  <td>
-    <%= md('```
-Array<{
-  attributes: Hash,
-  icon: String,
-  value: String,
-}>
-    ') %>
-  </td>
   <td><%= md('`nil`') %></td>
 </tr>
 <tr>
@@ -43,9 +41,27 @@ Array<{
   <td><%= md('`nil`') %></td>
 </tr>
 <tr>
-  <td><%= md('`product_name`') %></td>
-  <td><%= md('Name of product related to transaction.') %></td>
+  <td><%= md('`related_property`') %></td>
+  <td><%= md('Text displayed in bottom left property area.') %></td>
   <td><%= md('String') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`related_property_href`') %></td>
+  <td><%= md('Optional link that gets applied to related_property.') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`transaction_state`') %></td>
+  <td><%= md('Text that displays the state of transaction in top right corner') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`transaction_state_color`') %></td>
+  <td><%= md('Color that can be applied to the transaction_state.') %></td>
+  <td><%= md('`"info"`, `"red"`') %></td>
   <td><%= md('`nil`') %></td>
 </tr>
 <tr>
