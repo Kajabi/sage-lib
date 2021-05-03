@@ -49,7 +49,7 @@
     }
   }
   &-line-height::after {
-    content: "#{sage-raw-line-height()}";
+    content: "#{sage-line-height()}";
   }
   @each $name, $token in $sage-line-heights {
     &-line-height-#{$name}::after {
