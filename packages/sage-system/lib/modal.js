@@ -4,15 +4,19 @@ Sage.modal = (function() {
   // Variables
   // ==================================================
 
-  const SELECTOR_MODAL = 'data-js-modal';
-  const SELECTOR_MODAL_CONTAINER = 'data-js-modal-container';
-  const SELECTOR_MODAL_DISABLE_CLOSE = 'data-js-modal-disable-close';
-  const SELECTOR_MODAL_REMOTE_URL = 'data-js-remote-url';
-  const SELECTOR_MODAL_REMOVE_CONTENTS_ON_CLOSE = 'data-js-modal-remove-content-on-close';
-  const SELECTOR_MODAL_CLOSE = 'data-js-modal-close';
-  const SELECTOR_MODALTRIGGER = 'data-js-modaltrigger';
-  const SELECTOR_FOCUSABLE_ELEMENTS = 'a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled]), input[type="text"]:not([disabled]), input[type="radio"]:not([disabled]), input[type="checkbox"]:not([disabled]), select:not([disabled])';
-  const EVENT_CLOSEALL = 'sage.modal.closeAll';
+  const SELECTOR_MODAL = "data-js-modal";
+  const SELECTOR_MODAL_CONTAINER = "data-js-modal-container";
+  const SELECTOR_MODAL_DISABLE_CLOSE = "data-js-modal-disable-close";
+  const SELECTOR_MODAL_REMOTE_URL = "data-js-remote-url";
+  const SELECTOR_MODAL_REMOVE_CONTENTS_ON_CLOSE = "data-js-modal-remove-content-on-close";
+  const SELECTOR_MODAL_CLOSE = "data-js-modal-close";
+  const SELECTOR_MODALTRIGGER = "data-js-modaltrigger";
+  const SELECTOR_FOCUSABLE_ELEMENTS = "a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled]), input[type='text']:not([disabled]), input[type='radio']:not([disabled]), input[type='checkbox']:not([disabled]), select:not([disabled])";
+  const MODAL_ACTIVE_CLASS = "sage-modal--active";
+  const EVENT_CLOSEALL = "sage.modal.closeAll";
+  const EVENT_ACTIVE = "sage.modal.active";
+  const EVENT_OPENING = "sage.modal.opening";
+  const EVENT_OPEN = "sage.modal.open";
   let SELECTOR_LAST_FOCUSED;
 
   // ==================================================
@@ -23,7 +27,7 @@ Sage.modal = (function() {
     // If a modal has 'data-js-modal-disable-close' return early and don't init any handlers
     if (el.hasAttribute(SELECTOR_MODAL_DISABLE_CLOSE)) return;
 
-    el.addEventListener('click', function(evt){
+    el.addEventListener("click", function(evt) {
       let el = evt.target;
 
       // A JS Event is dispatched to call closeModal,
@@ -31,18 +35,18 @@ Sage.modal = (function() {
       // and perform cleanup actions like removing the modal's content.
 
       // Modal Container has been clicked
-      if ( el.hasAttribute(SELECTOR_MODAL) ) {
+      if (el.hasAttribute(SELECTOR_MODAL)) {
         dispatchCloseAll();
 
       // Modal Close Button has been clicked
-      } else if ( el.hasAttribute(SELECTOR_MODAL_CLOSE) || evt.target.parentElement.hasAttribute(SELECTOR_MODAL_CLOSE) ) {
+      } else if (el.hasAttribute(SELECTOR_MODAL_CLOSE) || evt.target.parentElement.hasAttribute(SELECTOR_MODAL_CLOSE)) {
         dispatchCloseAll();
       }
     });
   }
 
   function initTrigger(el) {
-    el.addEventListener('click', function(evt){
+    el.addEventListener("click", function(evt) {
       let modalId = evt.target.getAttribute(SELECTOR_MODALTRIGGER) || evt.target.parentElement.getAttribute(SELECTOR_MODALTRIGGER);
       openModal(modalId);
     });
@@ -56,28 +60,31 @@ Sage.modal = (function() {
   function openModal(modalId) {
     let modal = document.querySelector(`[${SELECTOR_MODAL}="${modalId}"]`);
     let focusableEls = modal.querySelectorAll(SELECTOR_FOCUSABLE_ELEMENTS);
+
+    dispatchOpenEvents(modal);
+
     if(modal.hasAttribute(SELECTOR_MODAL_REMOTE_URL)) {
       fetchModalContent(modal);
     }
 
     SELECTOR_LAST_FOCUSED = document.activeElement;
-    modal.classList.add('sage-modal--active');
+    modal.classList.add(MODAL_ACTIVE_CLASS);
     modal.setAttribute("open", "");
-    document.addEventListener('keyup', onModalKeypress);
-    modal.addEventListener('keydown', focusTrap.bind(focusableEls));
+    document.addEventListener("keyup", onModalKeypress);
+    modal.addEventListener("keydown", focusTrap.bind(focusableEls));
   }
 
   function focusTrap(evt) {
     let firstFocusableEl = this[0];
     let lastFocusableEl = this[this.length - 1];
     let KEYCODE_TAB = 9;
-    var isTabPressed = (evt.key === 'Tab' || evt.keyCode === KEYCODE_TAB);
+    var isTabPressed = (evt.key === "Tab" || evt.keyCode === KEYCODE_TAB);
 
-    if (!isTabPressed) { 
-      return; 
+    if (!isTabPressed) {
+      return;
     }
 
-    if ( evt.shiftKey ) /* shift + tab */ {
+    if (evt.shiftKey) /* shift + tab */ {
       if (document.activeElement === firstFocusableEl) {
         lastFocusableEl.focus();
         evt.preventDefault();
@@ -92,13 +99,29 @@ Sage.modal = (function() {
 
   function dispatchCloseAll() {
     document.dispatchEvent(new Event(EVENT_CLOSEALL));
-    document.removeEventListener('keyup', onModalKeypress);
+    document.removeEventListener("keyup", onModalKeypress);
+  }
+
+  function dispatchOpenEvents(el) {
+    document.dispatchEvent(new Event(EVENT_ACTIVE));
+    el.dispatchEvent(new Event(EVENT_OPENING));
+
+    if (el.dataset.sageAnimate !== undefined) {
+      const modalContainer = el.querySelector(".sage-modal__container");
+      modalContainer.ontransitionend = (e) => {
+        if ((e.propertyName === "transform") && el.classList.contains(MODAL_ACTIVE_CLASS)) {
+          el.dispatchEvent(new Event(EVENT_OPEN));
+        }
+      };
+    } else {
+      el.dispatchEvent(new Event(EVENT_OPEN));
+    }
   }
 
   function closeModal(el) {
-    el.classList.remove('sage-modal--active');
+    el.classList.remove(MODAL_ACTIVE_CLASS);
     el.removeAttribute("open");
-    el.removeEventListener('keydown', focusTrap);
+    el.removeEventListener("keydown", focusTrap);
     SELECTOR_LAST_FOCUSED.focus();
     removeModalContents(el);
   }
@@ -108,11 +131,11 @@ Sage.modal = (function() {
     let url = el.getAttribute(SELECTOR_MODAL_REMOTE_URL);
     const xhr = new XMLHttpRequest();
 
-    xhr.addEventListener('load', (evt) => {
+    xhr.addEventListener("load", (evt) => {
       elContainer.innerHTML = evt.currentTarget.response;
     }, { once: true });
 
-    xhr.open('GET', url, true);
+    xhr.open("GET", url, true);
     xhr.send();
   }
 
@@ -131,7 +154,9 @@ Sage.modal = (function() {
   return {
     init: init,
     initTrigger: initTrigger,
-    eventHandlerCloseAll: eventHandlerCloseAll
+    eventHandlerCloseAll: eventHandlerCloseAll,
+    openModal: openModal,
+    closeModal: closeModal
   }
 
 })();

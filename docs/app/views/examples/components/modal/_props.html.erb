@@ -99,3 +99,34 @@
   <td><%= md('String') %></td>
   <td><%= md('`nil`') %></td>
 </tr>
+<tr>
+  <td colspan="4">
+    <strong>Events</strong>
+  </td>
+</tr>
+<tr>
+  <td colspan="4">
+    <em>Global/window events</em>
+  </td>
+</tr>
+<tr>
+  <td><%= md('`sage.modal.active`') %></td>
+  <td colspan="3"><%= md('This event is fired immediately when any modal has been opened.') %></td>
+</tr>
+<tr>
+  <td><%= md('`sage.modal.closeAll`') %></td>
+  <td colspan="3"><%= md('Fires on when a modal has been closed, either from actuating a button, `esc` keypress, or clicking a modal\'s backdrop.') %></td>
+</tr>
+<tr>
+  <td colspan="4">
+    <em>Individual modal events</em>
+  </td>
+</tr>
+<tr>
+  <td><%= md('`sage.modal.opening`') %></td>
+  <td colspan="3"><%= md('This modal event is fired immediately when a modal has been opened.') %></td>
+</tr>
+<tr>
+  <td><%= md('`sage.modal.open`') %></td>
+  <td colspan="3"><%= md('Fired *after* a modal has completed its loading animation. Note that if `animate` has not been enabled, this event will fire at the same time as `sage.modal.opening`.') %></td>
+</tr>
