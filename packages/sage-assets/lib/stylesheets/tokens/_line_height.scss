@@ -6,9 +6,9 @@
 
 
 ///
-/// Sage line height/leading token
+/// Sage raw line height/leading token (non-responsive)
 ///
-$sage-line-heights: (
+$sage-raw-line-heights: (
   xs: sage-baseline(5), // 20
   sm: sage-baseline(6), // 24
   md: sage-baseline(7), // 28
@@ -17,13 +17,69 @@ $sage-line-heights: (
 );
 
 ///
-/// Sage line height/leading token utility
+/// Sage raw line height/leading token utility (non-responsive)
 ///
 /// @param {string} $key [md] The token to retrieve
 ///
 /// @return {length} The value retrieved
 ///
-@function sage-line-height($key: md) {
+@function sage-raw-line-height($key: md) {
+  $value: map-get($sage-raw-line-heights, $key);
+  @return $value;
+}
+
+///
+/// Sage responsive line height/leading custom props
+///
+:root {
+  --sage-line-height-body-xs: #{sage-raw-line-height(xs)};
+  --sage-line-height-body-sm: #{sage-raw-line-height(sm)};
+  --sage-line-height-body: #{sage-raw-line-height(md)};
+  --sage-line-height-h6: #{sage-raw-line-height(md)};
+  --sage-line-height-h5: #{sage-raw-line-height(md)};
+  --sage-line-height-h4: #{sage-raw-line-height(md)};
+  --sage-line-height-h3: #{sage-raw-line-height(md)};
+  --sage-line-height-h2: #{sage-raw-line-height(lg)};
+  --sage-line-height-h1: #{sage-raw-line-height(lg)};
+}
+
+@media screen and (min-width: sage-breakpoint(lg-min)) {
+  :root {
+    // --sage-line-height-body-xs: same
+    // --sage-line-height-body-sm: same
+    --sage-line-height-body: #{sage-raw-line-height(sm)};
+    --sage-line-height-h6: #{sage-raw-line-height(sm)};
+    // --sage-line-height-h5: same
+    // --sage-line-height-h4: same
+    --sage-line-height-h3: #{sage-raw-line-height(lg)};
+    // --sage-line-height-h2: same
+    --sage-line-height-h1: #{sage-raw-line-height(xl)};
+  }
+}
+
+///
+/// Sage line-height token (responsive)
+///
+$sage-line-heights: (
+  body-xs: var(--sage-font-size-body-xs),
+  body-sm: var(--sage-font-size-body-sm),
+  body: var(--sage-font-size-body),
+  h6: var(--sage-font-size-h6),
+  h5: var(--sage-font-size-h5),
+  h4: var(--sage-font-size-h4),
+  h3: var(--sage-font-size-h3),
+  h2: var(--sage-font-size-h2),
+  h1: var(--sage-font-size-h1)
+);
+
+///
+/// Sage line height token utility (responsive)
+///
+/// @param {string} $key [md] The token to retrieve
+///
+/// @return {length}} The value retrieved
+///
+@function sage-line-height($key: body) {
   $value: map-get($sage-line-heights, $key);
   @return $value;
 }

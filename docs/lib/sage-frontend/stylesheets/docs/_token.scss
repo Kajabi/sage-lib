@@ -49,7 +49,7 @@
     }
   }
   &-line-height::after {
-    content: "#{sage-line-height()}";
+    content: "#{sage-raw-line-height()}";
   }
   @each $name, $token in $sage-line-heights {
     &-line-height-#{$name}::after {
@@ -57,7 +57,7 @@
     }
   }
   &-font-size::after {
-    content: "#{sage-font-size()}";
+    content: "#{sage-raw-font-size()}";
   }
   @each $name, $token in $sage-font-sizes {
     &-font-size-#{$name}::after {
