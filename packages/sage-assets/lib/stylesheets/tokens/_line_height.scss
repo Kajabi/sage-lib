@@ -6,25 +6,59 @@
 
 
 ///
-/// Sage line height/leading token
+/// Sage raw line height/leading token (non-responsive)
 ///
 $sage-line-heights: (
-  2xs: sage-baseline(4),
-  xs: sage-baseline(5),
-  sm: sage-baseline(6),
-  md: sage-baseline(7),
-  lg: sage-baseline(8),
-  xl: sage-baseline(9),
+  xs: sage-baseline(5), // 20
+  sm: sage-baseline(6), // 24
+  md: sage-baseline(7), // 28
+  lg: sage-baseline(8), // 32
+  xl: sage-baseline(9), // 36
 );
 
 ///
-/// Sage line height/leading token utility
+/// Sage responsive line height/leading custom props
 ///
-/// @param {string} $key [md] The token to retrieve
+:root {
+  --sage-line-height-body-xs: #{map-get($sage-line-heights, xs)};
+  --sage-line-height-body-sm: #{map-get($sage-line-heights, sm)};
+  --sage-line-height-body: #{map-get($sage-line-heights, md)};
+  --sage-line-height-h6: #{map-get($sage-line-heights, md)};
+  --sage-line-height-h5: #{map-get($sage-line-heights, md)};
+  --sage-line-height-h4: #{map-get($sage-line-heights, md)};
+  --sage-line-height-h3: #{map-get($sage-line-heights, md)};
+  --sage-line-height-h2: #{map-get($sage-line-heights, lg)};
+  --sage-line-height-h1: #{map-get($sage-line-heights, lg)};
+}
+
+@media screen and (min-width: sage-breakpoint(lg-min)) {
+  :root {
+    // --sage-line-height-body-xs: same
+    // --sage-line-height-body-sm: same
+    --sage-line-height-body: #{map-get($sage-line-heights, sm)};
+    --sage-line-height-h6: #{map-get($sage-line-heights, sm)};
+    // --sage-line-height-h5: same
+    // --sage-line-height-h4: same
+    --sage-line-height-h3: #{map-get($sage-line-heights, lg)};
+    // --sage-line-height-h2: same
+    --sage-line-height-h1: #{map-get($sage-line-heights, xl)};
+  }
+}
+
+///
+/// Sage line height token utility
+///
+/// @param {string} $key [body] The token to retrieve
+/// @param {bool} $responsive [true] Whether or not retrieve a responsive css custom property or a flat value
 ///
 /// @return {length} The value retrieved
 ///
-@function sage-line-height($key: md) {
-  $value: map-get($sage-line-heights, $key);
-  @return $value;
+@function sage-line-height($key: body, $responsive: true) {
+  @if ($responsive) {
+    @return var(--sage-line-height-#{$key});
+  }
+
+  @else {
+    @return map-get($sage-line-heights, $key);
+  }
 }

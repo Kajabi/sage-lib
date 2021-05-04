@@ -87,10 +87,10 @@ $-alert-icon-colors: (
 
 .sage-alert__close {
   overflow: hidden;
-  height: rem(27.65px);
-  width: rem(27.65px);
+  height: rem(20px);
+  width: rem(20px);
   padding: 0;
-  font-size: sage-font-size(2xl);
+  font-size: sage-font-size(xl, false);
   line-height: 1;
   background-color: transparent;
   border: 0;

@@ -48,7 +48,7 @@ $-input-group-pw-field-button-color-text-hover: sage-color(black);
       left: 50%;
       transform: translate3d(-50%, -50%, 0) rotate(-45deg);
       height: rem(1px);
-      width: sage-font-size(xl);
+      width: sage-font-size(xl, false);
       background-color: currentColor;
       border: 0;
       transition: $-btn-transition;

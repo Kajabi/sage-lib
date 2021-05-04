@@ -10,7 +10,7 @@
 
 @mixin color-block-output {
   padding: sage-spacing(sm) sage-spacing();
-  font-size: sage-font-size(sm);
+  font-size: sage-font-size(body-sm);
   color: sage-color(white);
 
   &::after {
