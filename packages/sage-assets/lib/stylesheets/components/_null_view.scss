@@ -10,11 +10,11 @@
   grid-auto-flow: dense;
   grid-template-columns: auto;
   grid-gap: sage-spacing(lg);
+  justify-content: center;
   max-width: rem(960px);
   margin-left: auto;
   margin-right: auto;
   padding: sage-spacing();
-  justify-content: center;
   @media screen and (min-width: sage-breakpoint(lg-max)) {
     grid-template-columns: auto 1fr;
     grid-gap: 5rem;
