@@ -43,7 +43,16 @@
     style: "primary",
     raised: true,
     attributes: {
-      "onClick": "let toastId = Sage.toast.trigger({text: 'I will not dismiss via timer', timer: false}); alert(`Toast id:\n ${toastId} \n\n Dismiss with:\n Sage.toast.dismiss('${toastId}')`)",
+      "onClick": "let toastId = Sage.toast.trigger({text: 'I will not dismiss via timer', timer: false});
+                  document.getElementById('non-dismissing-toast-output-instructions').innerHTML = `
+                    <h3>Dismiss toast with:</h3>
+                    <br/>
+                    <div class='prettyprint'>
+                      <code>Sage.toast.dismiss('${toastId}')</code>
+                    </div>
+                    <br/>
+                    <strong>Toast Id:</strong> <code>${toastId}</code>
+                  `",
     },
   } %>
 
@@ -55,16 +64,11 @@
       "onClick": "Sage.toast.dismissAll()",
     },
   } %>
-
-  <%= sage_component SageButton, {
-    value: "Reset (Remove DOM Nodes)",
-    style: "danger",
-    raised: true,
-    attributes: {
-      "onClick": "Sage.toast.reset()",
-    },
-  } %>
 <% end %>
+
+<div id="non-dismissing-toast-output-instructions"></div>
+
+<hr />
 
 <pre class="prettyprint">
   <code>

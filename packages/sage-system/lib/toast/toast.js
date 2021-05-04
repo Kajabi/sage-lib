@@ -44,11 +44,6 @@ Sage.toast = (function () {
 
   function dismissAll() {
     const elContainer = document.getElementById(ID_TOAST_CONTAINER);
-    if (elContainer) elContainer.children.forEach(el => el.classList.add(CLASS_DISMISSED_STATE));
-  }
-
-  function reset() {
-    const elContainer = document.getElementById(ID_TOAST_CONTAINER);
     if (elContainer) elContainer.remove();
   }
 
@@ -87,7 +82,6 @@ Sage.toast = (function () {
     trigger: trigger,
     dismiss: dismiss,
     dismissAll: dismissAll,
-    reset: reset,
     init: init,
     unbind: unbind,
   };
