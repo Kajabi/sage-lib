@@ -12,6 +12,14 @@ module ComponentsHelper
   def sage_components
     [
       # Sage Generated Components
+        {
+          title: "stat_box",
+          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", 
+          scss: "todo",
+          rails: "todo",
+          react: "todo",
+          a11y: "todo",
+        },
       {
         title: "breadcrumbs",
         description: "Breadcrumbs provide a sense of where we are in the site structure with hyperlinks to previous areas in that structure. Our component also provides a specific \"Back link\" variation",
