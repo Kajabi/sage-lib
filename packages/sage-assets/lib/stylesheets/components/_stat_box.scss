@@ -6,4 +6,23 @@
 
 .sage-stat-box {
   // Styles here
+  @include sage-card();
+}
+
+.sage-stat-box__header {
+  display: flex;
+  align-items: center;
+}
+
+.sage-stat-box__body {
+  display: flex;
+  align-items: center;
+
+  .sage-label {
+    margin-left: auto;
+  }
+}
+
+.sage-stat-box__footer {
+
 }
