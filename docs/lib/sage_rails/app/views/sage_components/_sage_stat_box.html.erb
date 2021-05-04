@@ -1,8 +1,28 @@
-<div
-  class="sage-stat_box <%= component.generated_css_classes %>"
+<article
+  class="sage-stat-box <%= component.generated_css_classes %>"
   <%= component.generated_html_attributes.html_safe %>
 >
-  
-
-  <%= @content %>
-</div>
+  <header class="sage-stat-box__header">
+    <h2 class="t-sage-heading-6"><%= component.status %></h2>
+    <i class="sage-icon-info-circle"></i>
+  </header>
+  <main class="sage-stat-box__body">
+    <p>Actual Stat</p>
+    <% if component.timeframe.present? %>
+      <span><%= component.timeframe %></span>
+    <% end %>
+    <% if component.label_text.present? %>
+      <%= sage_component SageLabel, {
+        color: component.label_color,
+        icon: component.label_icon,
+        value: component.label_text,
+      } %>
+    <% end %>
+  </main>
+  <footer class="sage-stat-box__footer">
+    <%= sage_component SageLink, {
+      url: "#",
+      label: "View",
+    } %>
+  </footer>
+</article>
