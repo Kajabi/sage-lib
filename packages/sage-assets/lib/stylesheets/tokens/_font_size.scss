@@ -61,8 +61,6 @@ $sage-font-sizes: (
 /// @return {length}} The value retrieved
 ///
 @function sage-font-size($key: body, $responsive: true) {
-  $value: false;
-
   @if ($responsive) {
     @return var(--sage-font-size-#{$key});
   }
