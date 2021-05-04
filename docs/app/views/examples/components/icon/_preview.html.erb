@@ -23,13 +23,7 @@
 
 <h3>Background Colors</h3>
 <%= sage_component SageCardList, {} do %>
-  <% [
-    "draft",
-    "published",
-    "info",
-    "warning",
-    "danger"
-  ].each do | color | %>
+  <% SageTokens::STATUSES.each do | color | %>
     <%= sage_component SageCardListItem, { grid_template: "et" } do %>
       <%= sage_component SageIcon, { icon: "pen", card_color: color } %>
       <%= color %>

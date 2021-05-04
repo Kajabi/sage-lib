@@ -2,7 +2,7 @@ class SageTransactionCard < SageComponent
   set_attribute_schema({
     amount: [:optional, String],
     amount_color: [:optional, Set.new(["sage", "red"])],
-    label_color: [:optional, Set.new(["published", "draft", "danger", "info", "warning", "locked"])],
+    label_color: [:optional, SageSchemas::STATUSES],
     label_text: [:optional, String],
     name: [:optional, String],
     name_href: [:optional, String],
