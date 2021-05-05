@@ -4,7 +4,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { Toggle } from './Toggle';
 
-describe('Rendering the Sage Toggle Component', () => {
+describe('Sage toggle:', () => {
   let component,
     defaultProps;
 
@@ -23,12 +23,27 @@ describe('Rendering the Sage Toggle Component', () => {
     );
   });
 
-  it('renders the component', () => {
-    expect(component).toHaveLength(1);
+  describe('cosntruction', () => {
+    it('renders the component', () => {
+      expect(component).toHaveLength(1);
+    });
+
+    it('renders as an li when instructed', () => {
+      component.setProps({ itemInList: true });
+      const listItem = component.find('li');
+      expect(listItem.length).toBe(1);
+    });
+
+    it('renders a message', () => {
+      const message = 'Testing message';
+      component.setProps({ message });
+      const messageElement = component.find('.sage-radio__message');
+      expect(messageElement.length).toBe(1);
+    });
   });
 
-  describe('checking input type', () => {
-    it('has an input type of radio', () => {
+  describe('variations', () => {
+    it('has an input type of radio ', () => {
       const input = component.find('input').get(0);
       expect(input.props).toHaveProperty('type', Toggle.TYPES.RADIO);
     });
@@ -38,9 +53,17 @@ describe('Rendering the Sage Toggle Component', () => {
       const input = component.find('input').get(0);
       expect(input.props).toHaveProperty('type', Toggle.TYPES.CHECKBOX);
     });
+
+    it('renders standalone', () => {
+      component.setProps({ standalone: true });
+      const standaloneElement = component.find('.sage-radio--standalone');
+      expect(standaloneElement.length).toBe(1);
+      const inputElement = component.find('.sage-radio__input');
+      expect(inputElement.length).toBe(0);
+    });
   });
 
-  describe('updating checked state', () => {
+  describe('interactions', () => {
     it('does not render checked', () => {
       component.setProps({ checked: false });
       const input = component.find('input').get(0);
@@ -51,6 +74,10 @@ describe('Rendering the Sage Toggle Component', () => {
       component.setProps({ checked: true });
       const input = component.find('input').get(0);
       expect(input.props).toHaveProperty('checked', true);
+    });
+
+    it('handles input values', () => {
+      /// TBD
     });
   });
 });

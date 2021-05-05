@@ -2,39 +2,31 @@
 <%= md("
 # Code Status
 
-Our Elements and Objects and the platforms they're available in.
+Our Components and the platforms they're available in.
 ") %>
   <%= render "status_key" %>
 <% end %>
 <%= content_for :quick_links do %>
   <div class="quick-links">
     <h2 class="quick-links__title t-sage-heading-5">Contents</h2>
-    <h3 class="quick-links__subhead">Elements</h3>
+    <h3 class="quick-links__subhead">Components</h3>
     <ul class="quick-links__body">
-      <% sorted_sage_all_elements.each do |element| %>
+      <% sorted_sage_all_components.each do |component| %>
         <li class="quick-links__item">
-          <a href="#<%= element[:title] %>" class="quick-links__link"><%= element[:title].titleize %></a>
-        </li>
-      <% end %>
-    </ul>
-    <h3 class="quick-links__subhead">Objects</h3>
-    <ul class="quick-links__body">
-      <% sorted_sage_all_objects.each do |object| %>
-        <li class="quick-links__item">
-          <a href="#<%= object[:title] %>" class="quick-links__link"><%= object[:title].titleize %></a>
+          <a href="#<%= component[:title] %>" class="quick-links__link"><%= component[:title].titleize %></a>
         </li>
       <% end %>
     </ul>
   </div>
 <% end %>
 <div class="docs-container">
-  <h2 class="t-sage-heading-2">Elements</h2>
+  <h2 class="t-sage-heading-2">Components</h2>
   <div class="sage-table-wrapper">
     <div class="sage-table-wrapper__overflow">
       <table class="sage-table sage-table--status">
         <thead>
           <tr>
-            <th>Element</th>
+            <th>Component</th>
             <th>HTML/CSS</th>
             <th>A11y</th>
             <th>Documentation</th>
@@ -42,30 +34,8 @@ Our Elements and Objects and the platforms they're available in.
             <th>React</th>
           </tr>
         </thead>
-        <% sorted_sage_all_elements.each do |element| %>
-          <%= render "status_item", item: element %>
-        <% end %>
-      </table>
-    </div>
-  </div>
-</div>
-<div class="docs-container">
-  <h2 class="t-sage-heading-2">Objects</h2>
-  <div class="sage-table-wrapper">
-    <div class="sage-table-wrapper__overflow">
-      <table class="sage-table sage-table--status">
-        <thead>
-          <tr>
-            <th>Object</th>
-            <th>HTML/CSS</th>
-            <th>A11y</th>
-            <th>Documentation</th>
-            <th>Rails</th>
-            <th>React</th>
-          </tr>
-        </thead>
-        <% sorted_sage_all_objects.each do |object| %>
-          <%= render "status_item", item: object %>
+        <% sorted_sage_all_components.each do |component| %>
+          <%= render "status_item", item: component %>
         <% end %>
       </table>
     </div>

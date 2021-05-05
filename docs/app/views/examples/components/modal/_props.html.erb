@@ -1,0 +1,132 @@
+<tr>
+  <td><%= md('`active`') %></td>
+  <td><%= md('Enabling this property will return the JS early to not initialize any handlers.') %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`animate`') %></td>
+  <td><%= md('When `true`, in addition to the base fade transition assigned to all modals, the modal will animate into view while being displayed. Default direction of this animation runs from the top of the page down, and can be overridden using `animate_direction`. All animations are disabled when the user has <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion" target="_blank" rel="noopener">"reduce motion" enabled in their OS or browser.</a>') %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`css_classes`') %></td>
+  <td><%= md('Outputs additional CSS classes as specified.') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`direction`') %></td>
+  <td><%= md('Sets the direction of the animation when `animate` has been enabled. Options include "bottom" (default), "top", "left", and "right". Use caution when setting multiple `direction` modals within a page or view to ensure a consistent user experience. This option requires `animate` to be set to `true`.') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`disable_background_blur`') %></td>
+  <td><%= md('Disables the background blur filter, with a darkened background color. Recommended for increased animation performance when `animate` is enabled. This setting is ignored when "reduce motion" is enabled by the user\'s OS.') %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`disable_close`') %></td>
+  <td><%= md('Enabling this property will return the JS early to not initialize any handlers.') %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`id`') %></td>
+  <td><%= md('Unique identifier for component. Should match the `data-js-modaltrigger` property on the corresponding button') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil') %></td>
+</tr>
+<tr>
+  <td><%= md('`large`') %></td>
+  <td><%= md('Toggles whether to use the large variant of the modal by attaching `.sage-modal--large`') %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`remove_content_on_close`') %></td>
+  <td><%= md('Toggles whether to delete the `innerHTML` when closing the modal.') %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`remote_url`') %></td>
+  <td><%= md('Specify a url which from which to load the modal content on open. This will be requested & content replaced every time the modal is opened.') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td colspan="4">
+    <strong>Modal Content</strong>
+  </td>
+</tr>
+<tr>
+  <td><%= md('`header_image`') %></td>
+  <td><%= md('When present, sets the image in the header of the component') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`title`') %></td>
+  <td><%= md('Populates the `sage-modal__header` with a heading containing the provided content') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`spacing`') %></td>
+  <td><%= md('Optionally enforces either a `card`- or `panel`-based spacing grid on the `sage-modal__content`.') %></td>
+  <td><%= md('`panel` or `card`') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('Section: `header_aside`') %></td>
+  <td><%= md('Populates the `sage-modal__header-aside`.') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('Section: `footer`') %></td>
+  <td><%= md('Populates the `sage-modal__footer`.') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('Section: `footer_aside`') %></td>
+  <td><%= md('Populates the `sage-modal__footer-aside` for buttons or content set to the left of the panel footer.') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td colspan="4">
+    <strong>Events</strong>
+  </td>
+</tr>
+<tr>
+  <td colspan="4">
+    <em>Global/window events</em>
+  </td>
+</tr>
+<tr>
+  <td><%= md('`sage.modal.active`') %></td>
+  <td colspan="3"><%= md('This event is fired immediately when any modal has been opened.') %></td>
+</tr>
+<tr>
+  <td><%= md('`sage.modal.closeAll`') %></td>
+  <td colspan="3"><%= md('Fires on when a modal has been closed, either from actuating a button, `esc` keypress, or clicking a modal\'s backdrop.') %></td>
+</tr>
+<tr>
+  <td colspan="4">
+    <em>Individual modal events</em>
+  </td>
+</tr>
+<tr>
+  <td><%= md('`sage.modal.opening`') %></td>
+  <td colspan="3"><%= md('This modal event is fired immediately when a modal has been opened.') %></td>
+</tr>
+<tr>
+  <td><%= md('`sage.modal.open`') %></td>
+  <td colspan="3"><%= md('Fired *after* a modal has completed its loading animation. Note that if `animate` has not been enabled, this event will fire at the same time as `sage.modal.opening`.') %></td>
+</tr>

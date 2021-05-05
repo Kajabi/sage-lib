@@ -172,7 +172,9 @@ module SageTokens
     "warning",
   ]
 
-  ICON_SIZES = ["xs", "sm", "md", "lg", "xl", "2xl", "2xl", "3xl", "3xl", "4xl"]
+  ICON_SIZES = ["xs", "sm", "md", "lg", "xl", "2xl", "3xl", "4xl"]
 
   SPACER_SIZES = [:xs, :sm, :md, :lg, :xl, "2xs", "xs", "sm", "md", "lg", "xl", "2xl", "stage", "panel", "card", "stack"]
+
+  STATUSES = ["danger", "draft", "info", "locked", "published", "warning"]
 end

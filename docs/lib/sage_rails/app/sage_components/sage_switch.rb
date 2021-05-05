@@ -1,6 +1,5 @@
 class SageSwitch < SageComponent
   set_attribute_schema({
-    css_classes: [:optional, String],
     checked: [:optional, TrueClass],
     disabled: [:optional, TrueClass],
     has_border: [:optional, TrueClass],

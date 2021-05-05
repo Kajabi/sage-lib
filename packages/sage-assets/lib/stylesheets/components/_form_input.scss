@@ -1,0 +1,203 @@
+////
+/// Form Input (Singleline)
+///
+/// @group sage
+////
+
+
+$-input-border-radius: map-get($sage-field-configs, border-radius);
+$-input-border-width: map-get($sage-field-configs, border-width);
+$-input-bottom-gap: map-get($sage-field-configs, bottom-gap);
+$-input-box-shadow-size: map-get($sage-field-configs, box-shadow-size);
+$-input-color-border: map-get($sage-field-colors, border);
+$-input-color-default: map-get($sage-field-colors, default);
+$-input-color-disabled: map-get($sage-field-colors, disabled);
+$-input-color-disabled-background: map-get($sage-field-colors, disabled-background);
+$-input-color-error: map-get($sage-field-colors, error);
+$-input-color-label-background: map-get($sage-field-colors, label-background);
+$-input-color-success: map-get($sage-field-colors, success);
+$-input-height: map-get($sage-field-configs, height);
+$-input-label-offset: rem(12px);
+$-input-padding: map-get($sage-field-configs, padding);
+$-input-padding-filled: rem(4px);
+$-input-padding-label: map-get($sage-field-configs, padding-label);
+$-input-padding-offset: $-input-padding - $-input-border-width;
+$-input-text-height: sage-font-size(body);
+$-input-transition: border 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+
+
+.sage-input {
+  position: relative;
+
+  &:not(:last-child) {
+    margin-bottom: $-input-bottom-gap;
+  }
+
+  .sage-input-group & {
+    height: auto;
+    margin-bottom: 0;
+  }
+
+  .sage-panel__row > &,
+  .sage-panel__stack > &,
+  .sage-panel__block > &,
+  .sage-card__row > &,
+  .sage-card__stack > &,
+  .sage-card__block > & {
+    margin-bottom: 0;
+  }
+}
+
+.sage-input__affix {
+  position: absolute;
+  top: sage-spacing(xs);
+  z-index: sage-z-index(default, 1);
+
+  .sage-input--suffixed &,
+  .sage-input--prefixed & {
+    position: absolute;
+  }
+
+  &:hover {
+    cursor: default;
+  }
+}
+
+.sage-input__affix--prefix {
+  left: sage-spacing(xs);
+}
+
+.sage-input__affix--suffix {
+  right: sage-spacing(xs);
+}
+
+.sage-input__label {
+  @extend %t-sage-body-xsmall-semi;
+
+  position: absolute;
+  transform: translateY(calc(#{$-input-text-height} * -1));
+  padding-left: $-input-padding-label;
+  padding-right: $-input-padding-label;
+  color: inherit;
+  font-weight: sage-font-weight(semibold);
+  white-space: nowrap;
+  background-color: $-input-color-label-background;
+  pointer-events: none;
+  opacity: 0;
+
+  @include position(($-input-height / 2), unset, unset, $-input-label-offset);
+
+  @media screen and (min-width: sage-breakpoint(sm-min)) {
+    white-space: normal;
+  }
+
+  .sage-input--prefixed & {
+    transform: translateY(calc(#{$-input-text-height} * -1)) translateX(30px);
+    z-index: sage-z-index(default, 2);
+    position: absolute;
+  }
+}
+
+.sage-input__field {
+  @mixin floating-label-active {
+    transform: translateY(-($-input-text-height + $-input-padding-filled * 2)); // IE doesn't support calc in transforms so we provide a fallback
+    transform: translateY(calc(-50% - (#{$-input-text-height} + #{$-input-padding-filled}))); // we calculate the centered position minus the offset of the text height plus the spacing height
+    transition: opacity 0.1s ease-in, transform 0.15s ease-in-out, color 0.15s ease-out;
+    opacity: 1;
+  }
+
+  height: $-input-height;
+  width: 100%;
+  padding: $-input-padding-offset $-input-padding;
+  color: $-input-color-default;
+  appearance: none;
+  border: $-input-border-width solid $-input-color-border;
+  border-radius: $-input-border-radius;
+  background: transparent;
+  transition: $-input-transition;
+
+  @include placeholder {
+    color: sage-color(charcoal, 100);
+  }
+
+  &:hover:not(:disabled) {
+    border-color: currentColor;
+  }
+
+  &:focus:not(:disabled),
+  &:active:not(:disabled) {
+    outline: none;
+    border-color: $-input-color-success;
+    box-shadow: $-input-box-shadow-size $-input-color-success;
+
+    @include placeholder {
+      opacity: 0;
+    }
+
+    ~ .sage-input__label {
+      @include floating-label-active();
+      color: $-input-color-success;
+    }
+  }
+
+  &:valid:not(:placeholder-shown) {
+    outline: none;
+    background: transparent; // Prevent some browsers from coloring the background on 'valid'
+
+    @include placeholder {
+      opacity: 0;
+    }
+
+    ~ .sage-input__label {
+      @include floating-label-active();
+    }
+  }
+
+  .sage-input--error &,
+  .sage-input--error &:focus:not(:disabled),
+  .sage-input--error &:not(:placeholder-shown),
+  &:required:not(:placeholder-shown):not(:valid) {
+    border-color: $-input-color-error;
+    box-shadow: $-input-box-shadow-size $-input-color-error;
+
+    ~ .sage-input__label {
+      color: $-input-color-error;
+    }
+  }
+
+  .sage-input--showplaceholder & {
+    ~ .sage-input__label {
+      @include floating-label-active();
+    }
+  }
+
+  &:disabled {
+    color: $-input-color-disabled;
+    background-color: $-input-color-disabled-background;
+    cursor: not-allowed;
+    @include placeholder {
+      color: sage-color(grey, 400);
+    }
+
+    .sage-input--showplaceholder & ~ .sage-input__label {
+      opacity: 0.5;
+    }
+  }
+}
+
+.sage-input__message {
+  @extend %t-sage-body-xsmall;
+  margin-top: sage-spacing(xs);
+  color: sage-color(charcoal, 100);
+
+  .sage-input--error & {
+    color: $-input-color-error;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sage-input__label,
+  .sage-input__field {
+    transition: none !important; /* stylelint-disable-line declaration-no-important */
+  }
+}

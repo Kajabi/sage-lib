@@ -1,6 +1,7 @@
 {
   "extends": "stylelint-config-sass-guidelines",
   "defaultSeverity": "warning",
+  "ignoreFiles": ["docs/lib/generators/**/*.*"],
   "rules": {
     "at-rule-empty-line-before": null,
     "block-closing-brace-newline-after": "always",

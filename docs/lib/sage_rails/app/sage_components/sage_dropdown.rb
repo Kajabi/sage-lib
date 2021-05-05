@@ -1,7 +1,6 @@
 class SageDropdown < SageComponent
   set_attribute_schema({
     align: [:optional, Set.new(["right"])],
-    css_classes: [:optional, String],
     contained: [:optional, TrueClass],
     content: [:optional, String],
     customized: [:optional, TrueClass],

@@ -1,7 +1,6 @@
 class SageFormInput < SageComponent
   set_attribute_schema({
     autocomplete: [:optional, String],
-    css_classes: [:optional, String],
     disabled: [:optional, TrueClass],
     has_error: [:optional, TrueClass],
     has_placeholder: [:optional, TrueClass],

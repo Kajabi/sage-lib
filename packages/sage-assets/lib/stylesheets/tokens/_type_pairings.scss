@@ -1,0 +1,90 @@
+////
+/// Sage type_pairings tokens
+///
+/// @group sage
+////
+
+
+///
+/// Sage Type_pairings token
+///
+$sage-type-pairings: (
+  4xl: (
+    font-size: sage-font-size(4xl, false),
+    line-height: sage-line-height(xl),
+  ),
+  3xl: (
+    font-size: sage-font-size(3xl, false),
+    line-height: sage-line-height(lg),
+  ),
+  2xl: (
+    font-size: sage-font-size(2xl, false),
+    line-height: sage-line-height(lg),
+  ),
+  xl: (
+    font-size: sage-font-size(xl, false),
+    line-height: sage-line-height(md),
+  ),
+  lg: (
+    font-size: sage-font-size(lg, false),
+    line-height: sage-line-height(md),
+  ),
+  md: (
+    font-size: sage-font-size(md, false),
+    line-height: sage-line-height(md),
+  ),
+  sm: (
+    font-size: sage-font-size(sm, false),
+    line-height: sage-line-height(sm),
+  ),
+  xs: (
+    font-size: sage-font-size(xs, false),
+    line-height: sage-line-height(sm),
+  ),
+  2xs: (
+    font-size: sage-font-size(2xs, false),
+    line-height: sage-line-height(xs),
+  ),
+);
+
+///
+/// Sage Type Pairing token utility
+///
+/// @param {string} $key [default] The token to retrieve
+///
+@function sage-type-pairing($key: md) {
+  $value: map-get($sage-type-pairings, $key);
+  @return $value;
+}
+
+
+///
+/// Sage Type Pairing mixin
+///
+/// @param {string} $key [body] The token to retrieve.
+///   If the `$responsive` parameter is true this is used to retrieve values from
+///   the responsive CSS custom properties `--sage-font-size-#{$key}` and `--sage-line-height-#{$key}`.
+///   Otherwise it is used to retrieve from `sage-raw-type-pairings`.
+///
+/// @param {bool} $responsive [false] Whether or not to use the responsive css custom properties
+///   for the provided pairing.
+///
+@mixin sage-type-pairing($key: body, $responsive: true) {
+  // Responsive type pairings use the type spec key
+  // to retrieve responsive custom props from the corresponding token utility function
+  @if ($responsive == true) {
+    font-size: sage-font-size($key);
+    line-height: sage-line-height($key);
+  }
+
+  // Non-responsive type pairings need to look up values
+  // from the pairing token here in this file
+  @else {
+    $pairings: sage-type-pairing($key);
+
+    @if ($pairings) {
+      font-size: map-get($pairings, font-size);
+      line-height: map-get($pairings, line-height);
+    }
+  }
+}

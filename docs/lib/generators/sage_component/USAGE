@@ -1,0 +1,20 @@
+Description:
+============
+  Creates a new Rails component, accompanying styles, and documentation stubs.
+  Pass the under_scored component name and an optional list of attributes as arguments.
+
+Example:
+  rails generate sage_component <new_component_name> <attributes...>
+
+  This will create:
+    <root>/docs/app/views/examples/components/<new_component_name>/_preview.html.erb (documentation preview and description)
+    <root>/docs/app/views/examples/components/<new_component_name>/_props.html.erb (component property documentation)
+    <root>/docs/app/views/examples/components/<new_component_name>/_rules_do.html.erb ("do" quick usage tips for component)
+    <root>/docs/app/views/examples/components/<new_component_name>/_rules_dont.html.erb ("don't" quick usage tips for component)
+    <root>/docs/lib/sage_rails/sage_components/<new_component_name>.rb (component definition and schema)
+    <root>/docs/lib/sage_rails/views/sage_components/<new_component_name>.html.erb (view template for the component)
+    <root>/packages/sage-assets/lib/stylesheets/components/_<new_component_name>.scss (stylesheet for component)
+
+  This will update:
+    <root>/docs/app/helpers/components_helper.rb (component registry)
+    <root>/packages/sage-assets/lib/stylesheets/index.scss (imports component stylesheet)

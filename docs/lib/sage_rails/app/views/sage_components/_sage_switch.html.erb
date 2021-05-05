@@ -6,7 +6,6 @@
         sage-switch
         sage-switch--standalone
         <%= component.has_error ? "sage-switch--error" : "" %>
-        <%= component.css_classes if component.css_classes.present? %>
         <%= component.generated_css_classes %>
       " 
       name="<%= component.name %>" 
@@ -22,7 +21,6 @@
       <%= component.has_border ? "sage-switch--has-border" : "" %>
       <%= component.toggle_position ? "sage-switch--toggle-#{component.toggle_position}" : "" %>
       <%= component.has_error ? "sage-switch--error" : "" %>
-      <%= component.css_classes if component.css_classes.present? %>
       <%= component.generated_css_classes %>
     "
     <%= component.generated_html_attributes.html_safe %>

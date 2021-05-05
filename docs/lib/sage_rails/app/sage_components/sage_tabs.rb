@@ -1,7 +1,6 @@
 class SageTabs < SageComponent
   set_attribute_schema({
     align_items_center: [:optional, TrueClass],
-    css_classes: [:optional, String],
     id: [:optional, String],
     items: [:optional, [[
       active: [:optional, NilClass, TrueClass],

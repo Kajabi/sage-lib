@@ -1,68 +1,88 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Property } from '../Property';
+import { Link } from '../Link';
 import { Icon } from '../Icon';
 import { Label } from '../Label';
-import { OptionsDropdown } from '../Dropdown/OptionsDropdown';
-import { AMOUNT_COLORS, LABEL_COLORS } from './configs';
+import { AMOUNT_COLORS, LABEL_COLORS, STATE_COLORS } from './configs';
 
 export const TransactionCard = ({
   labelColor,
   labelText,
+  transactionState,
+  transactionStateColor,
   name,
+  nameHref,
+  nameTag,
   amount,
   amountColor,
-  productName,
+  relatedProperty,
+  relatedPropertyHref,
   transactionTime,
-  dropdownOptions
-}) => (
-  <div className="sage-transaction-card">
-    <div className="sage-transaction-card__header">
-      <Label value={labelText} color={labelColor} />
-      {dropdownOptions && (
-        <OptionsDropdown
-          align="right"
-          options={dropdownOptions}
-        />
-      )}
-    </div>
-    <div className="sage-transaction-card__body">
-      <h4 className="sage-transaction-card__name">{name}</h4>
-      {amount && (
-        <div className={`sage-transaction-card__amount${amountColor ? ` sage-transaction-card__amount--${amountColor}` : ''}`}>
-          {amount}
+}) => {
+  const NameTag = nameTag;
+  return (
+    <article className="sage-transaction-card">
+      <div className="sage-transaction-card__header">
+        <Label value={labelText} color={labelColor} />
+        <div className={`sage-transaction-card__state${transactionStateColor ? ` sage-transaction-card__state--${transactionStateColor}` : ''}`}>
+          {transactionState}
         </div>
-      )}
-    </div>
-    <div className="sage-transaction-card__footer">
-      <Property icon={Icon.ICONS.TAG}>{productName}</Property>
-      <Property>{transactionTime}</Property>
-    </div>
-  </div>
-);
+      </div>
+      <div className="sage-transaction-card__body">
+        <NameTag className="sage-transaction-card__name">
+          {nameHref ? (
+            <Link href={nameHref} className="sage-transaction-card__name-link">{name}</Link>
+          ) : name}
+        </NameTag>
+        {amount && (
+          <div className={`sage-transaction-card__amount${amountColor ? ` sage-transaction-card__amount--${amountColor}` : ''}`}>
+            {amount}
+          </div>
+        )}
+      </div>
+      <div className="sage-transaction-card__footer">
+        {relatedPropertyHref ? (
+          <Link href={relatedPropertyHref}>
+            <Property icon={Icon.ICONS.TAG}>{relatedProperty}</Property>
+          </Link>
+        ) : <Property icon={Icon.ICONS.TAG}>{relatedProperty}</Property>}
+        <Property>{transactionTime}</Property>
+      </div>
+    </article>
+  );
+};
 
 TransactionCard.LABEL_COLORS = LABEL_COLORS;
 TransactionCard.AMOUNT_COLORS = AMOUNT_COLORS;
+TransactionCard.STATE_COLORS = STATE_COLORS;
 
 TransactionCard.defaultProps = {
   labelText: '--',
   labelColor: LABEL_COLORS.PUBLISHED,
+  transactionState: null,
+  transactionStateColor: null,
   name: '--',
+  nameHref: null,
+  nameTag: 'h4',
   amount: '0.00',
   amountColor: null,
-  productName: '--',
+  relatedProperty: '--',
+  relatedPropertyHref: null,
   transactionTime: '--',
-  dropdownOptions: null,
 };
 
 TransactionCard.propTypes = {
   labelText: PropTypes.string,
   labelColor: PropTypes.oneOf(Object.values(TransactionCard.LABEL_COLORS)),
+  transactionState: PropTypes.string,
+  transactionStateColor: PropTypes.oneOf(Object.values(TransactionCard.STATE_COLORS)),
   name: PropTypes.string,
+  nameHref: PropTypes.string,
+  nameTag: PropTypes.string,
   amount: PropTypes.string,
   amountColor: PropTypes.oneOf(Object.values(TransactionCard.AMOUNT_COLORS)),
-  productName: PropTypes.string,
+  relatedProperty: PropTypes.string,
+  relatedPropertyHref: PropTypes.string,
   transactionTime: PropTypes.string,
-  dropdownOptions: PropTypes.arrayOf(PropTypes.shape({}))
-
 };
