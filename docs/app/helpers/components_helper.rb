@@ -14,9 +14,9 @@ module ComponentsHelper
       # Sage Generated Components
         {
           title: "stat_box",
-          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", 
-          scss: "todo",
-          rails: "todo",
+          description: "Stat Boxes, for use in the CRM Dashboard, display important statistics for users to make informed decisions about their business.", 
+          scss: "doing",
+          rails: "doing",
           react: "todo",
           a11y: "todo",
         },
