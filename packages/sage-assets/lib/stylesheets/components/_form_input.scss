@@ -22,7 +22,7 @@ $-input-padding: map-get($sage-field-configs, padding);
 $-input-padding-filled: rem(4px);
 $-input-padding-label: map-get($sage-field-configs, padding-label);
 $-input-padding-offset: $-input-padding - $-input-border-width;
-$-input-text-height: map-get(map-get($sage-type-specs, body), size);
+$-input-text-height: sage-font-size(body);
 $-input-transition: border 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 
 
