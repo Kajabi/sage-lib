@@ -17,7 +17,7 @@
   } %>
 
   <%= sage_component SageButton, {
-    value: "Custom Timer: 10 Seconds",
+    value: "Custom Timer: 10s",
     style: "secondary",
     raised: true,
     attributes: {
@@ -26,47 +26,78 @@
   } %>
 
   <%= sage_component SageButton, {
-    value: "Toast With Link",
+    value: "Very Long Text",
     style: "secondary",
     raised: true,
     attributes: {
-      "onClick": "Sage.toast.trigger({text: 'Congratulations on your success', link: {text: 'Go to next step', href: 'http://app.kajabi.com'}})",
+      "onClick": "Sage.toast.trigger({text: 'Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.'})",
     },
   } %>
 <% end %>
 
 <hr/>
 
+<h3>Non-Dismissing Examples:</h3>
+
 <%= sage_component SageButtonGroup, { gap: :sm } do %>
   <%= sage_component SageButton, {
-    value: "Non-Dismissing Toast",
+    value: "Example",
     style: "primary",
     raised: true,
     attributes: {
-      "onClick": "let toastId = Sage.toast.trigger({text: 'I will not dismiss via timer', timer: false});
-                  document.getElementById('non-dismissing-toast-output-instructions').innerHTML = `
-                    <h3>Dismiss toast with:</h3>
-                    <br/>
-                    <div class='prettyprint'>
-                      <code>Sage.toast.dismiss('${toastId}')</code>
-                    </div>
-                    <br/>
-                    <strong>Toast Id:</strong> <code>${toastId}</code>
-                  `",
+      "onClick": "showDismissInstructions(Sage.toast.trigger({text: 'I will not dismiss via timer', timer: false}))",
     },
   } %>
 
   <%= sage_component SageButton, {
-    value: "Dismiss All",
+    value: "Uploading",
+    style: "secondary",
+    raised: true,
+    attributes: {
+      "onClick": "showDismissInstructions(Sage.toast.trigger({text: 'Uploading image...', icon: 'upload', timer: false}))",
+    },
+  } %>
+
+  <%= sage_component SageButton, {
+    value: "Toast With Link",
+    style: "secondary",
+    raised: true,
+    attributes: {
+      "onClick": "showDismissInstructions(Sage.toast.trigger({text: 'Congratulations on your success', link: {text: 'Go to next step', href: 'http://app.kajabi.com'}, timer: false}))",
+    },
+  } %>
+
+  <%= sage_component SageButton, {
+    value: "Dismiss All (Reset)",
     style: "danger",
     raised: true,
     attributes: {
-      "onClick": "Sage.toast.dismissAll()",
+      "onClick": "Sage.toast.reset()",
     },
   } %>
 <% end %>
 
-<div id="non-dismissing-toast-output-instructions"></div>
+<script type="text/javascript">
+  const showDismissInstructions = (toastId) => {
+    document.getElementById('dismiss-instructions').innerHTML = `
+      <strong>Toast Id:</strong> <code>${toastId}</code>
+      <br/>
+      <br/>
+      <h4>Dismiss toast with:</h4>
+      <br/>
+      <div class='prettyprint'>
+        <code>Sage.toast.dismiss('${toastId}')</code>
+      </div>
+      <br/>
+      <h4>Dismiss all toasts with:</h4>
+      <br/>
+      <div class='prettyprint'>
+        <code>Sage.toast.reset()</code>
+      </div>
+    `
+  };
+</script>
+<div id="dismiss-instructions"></div>
 
 <hr />
 
