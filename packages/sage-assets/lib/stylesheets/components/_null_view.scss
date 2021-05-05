@@ -17,7 +17,7 @@
   padding: sage-spacing();
   @media screen and (min-width: sage-breakpoint(lg-max)) {
     grid-template-columns: auto 1fr;
-    grid-gap: 5rem;
+    grid-gap: rem(80px);
   }
 }
 
@@ -27,7 +27,7 @@
   flex-direction: column;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 450px;
+  max-width: rem(450px);
   @media screen and (min-width: sage-breakpoint(lg-max)) {
     order: 1;
     align-items: flex-start;
@@ -40,7 +40,7 @@
 
 .sage-null-view__title {
   @extend %t-sage-heading-1;
-  margin-bottom: sage-spacing(xs);
+  margin-bottom: sage-spacing(sm);
 }
 
 .sage-null-view__graphic {
