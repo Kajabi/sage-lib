@@ -131,7 +131,7 @@ $sage-type-specs: (
 
   @include sage-type-pairing(
     $key: map-get($spec-map, type-pairing),
-    $responsive: map-get($spec-map, responsive),
+    $responsive: map-get($spec-map, responsive)
   );
 
   font-weight: map-get($spec-map, weight);
