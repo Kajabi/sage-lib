@@ -1,28 +1,45 @@
+<% 
+change_value = component.change_value.present? ? component.change_value : "0"
+change_type = component.change_type.present? ? component.change_type : "neutral"
+label_configs = { color: "draft", value: component.change_value } 
+if component.change_type == "up"
+  label_configs = { color: "published", value: change_value, icon: "arrow-up" } 
+elsif component.change_type == "down"
+  label_configs = { color: "danger", value: change_value, icon: "arrow-down" } 
+elsif component.change_type == "neutral"
+  label_configs = { color: "draft", value: change_value } 
+end
+%>
 <article
   class="sage-stat-box <%= component.generated_css_classes %>"
   <%= component.generated_html_attributes.html_safe %>
 >
   <header class="sage-stat-box__header">
-    <h2 class="t-sage-heading-6"><%= component.status %></h2>
-    <i class="sage-icon-info-circle"></i>
+    <h2 class="sage-stat-box__title"><%= component.status %></h2>
+    <% if component.title_icon.present? %>
+      <%= sage_component SagePopover, {
+        icon: "info-circle",
+        trigger_value: "Open Menu",
+        trigger_icon_only: true,
+      } do %>
+        <p>Testing popover content</p>
+      <% end %>
+    <% end %>
   </header>
   <main class="sage-stat-box__body">
-    <p>Actual Stat</p>
+    <p class="sage-stat-box__data"><%= component.data %></p>
     <% if component.timeframe.present? %>
-      <span><%= component.timeframe %></span>
+      <span class="sage-stat-box-timeframe"><%= component.timeframe %></span>
     <% end %>
-    <% if component.label_text.present? %>
-      <%= sage_component SageLabel, {
-        color: component.label_color,
-        icon: component.label_icon,
-        value: component.label_text,
-      } %>
+    <% if component.custom_label.present? %>
+      <%= sage_component SageLabel, component.custom_label %>
+    <% else %>
+      <%= sage_component SageLabel, label_configs %>
     <% end %>
   </main>
-  <footer class="sage-stat-box__footer">
-    <%= sage_component SageLink, {
-      url: "#",
-      label: "View",
-    } %>
-  </footer>
+  <% if component.link_value.present? %>
+    <footer class="sage-stat-box__footer">
+      <a class="sage-stat-box__link" href="<%= component.link_href %>"><%= component.link_value %></a>
+    </footer>
+  <% end %>
 </article>
