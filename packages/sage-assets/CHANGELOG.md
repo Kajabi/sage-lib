@@ -3,6 +3,34 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.30.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.29.1...@kajabi/sage-assets@0.30.0) (2021-05-05)
+
+
+### Bug Fixes
+
+* **dialog:** add color reset to reboot file ([eeb4dbc](https://github.com/Kajabi/sage-lib/commit/eeb4dbc16d7a2059ecc67ed6b6075b7e1335554d))
+* **docs:** update all documentation reference of old font size vars ([12dff6b](https://github.com/Kajabi/sage-lib/commit/12dff6b4cf9ce1cfa2985b77dd45c77ad4523a2d))
+* **form-input:** adjust offset of label given new variable structure ([6e8b50d](https://github.com/Kajabi/sage-lib/commit/6e8b50d725ddfbcb7aab077c369398fd3ab4a63b))
+* **rails-components:** apply status token ([72575fe](https://github.com/Kajabi/sage-lib/commit/72575fe067320d704f5dc5521816795d605569eb))
+* **table:** resolved border not touching edge of parent for scrollable tables ([2c809fc](https://github.com/Kajabi/sage-lib/commit/2c809fcc8d4a13e4b74210666788c72e327320cb))
+* **textarea:** removed unnecessary style ([ea00a80](https://github.com/Kajabi/sage-lib/commit/ea00a803c4124fb695bf0de4748b47c7625a1c53))
+* **textarea:** updated border-color when texarea has a value ([a88207d](https://github.com/Kajabi/sage-lib/commit/a88207d60565efbffd6d621133701c7d2e60e595))
+* **tinymce:** remove toolbar button wrapping ([909bfa8](https://github.com/Kajabi/sage-lib/commit/909bfa85ccce13d4e35ee0152c4e22df19c767dd))
+* **type-specs:** remove stray comma ([dd0acc0](https://github.com/Kajabi/sage-lib/commit/dd0acc003b85980dafaee26e2865f9f0aacae076))
+
+
+### Features
+
+* **icon:** adds a card_color option to icon ([a61ab88](https://github.com/Kajabi/sage-lib/commit/a61ab884fa46897a6e92f68dbd0e949550bd223b)), closes [#449](https://github.com/Kajabi/sage-lib/issues/449)
+* **transaction card:** removes dropdown, adds optional href, and adds status text/colors (rails) ([af08e7f](https://github.com/Kajabi/sage-lib/commit/af08e7ff1219e741182d727af32c3f9f7bb81451))
+* **type:** add raw type scale and improved responsive specs ([74c432c](https://github.com/Kajabi/sage-lib/commit/74c432c64ca8555af7b3b27dc7121406f20db799))
+* **type:** add type pairings token ([a4388a3](https://github.com/Kajabi/sage-lib/commit/a4388a355291bb5a92c02957fd8a61747bb9412b))
+* **type:** sync type specs to design ([1309633](https://github.com/Kajabi/sage-lib/commit/130963381d85c4403b1cfaba8f5d49c1f6f93bc2))
+
+
+
+
+
 ## [0.29.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.29.0...@kajabi/sage-assets@0.29.1) (2021-04-28)
 
 

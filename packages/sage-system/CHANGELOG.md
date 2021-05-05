@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.6.0...@kajabi/sage-system@0.7.0) (2021-05-05)
+
+
+### Features
+
+* **modal:** adds global 'active' event and moves 'open' and 'opening' to instances ([8cbc5b4](https://github.com/Kajabi/sage-lib/commit/8cbc5b49589f7965d90dcd71f818c94e57121462))
+* **modal:** adds open events for modals ([d51d141](https://github.com/Kajabi/sage-lib/commit/d51d141140f081326c992c3e386dd7bcc22e523d))
+
+
+
+
+
 # [0.6.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.5.1...@kajabi/sage-system@0.6.0) (2021-04-12)
 
 

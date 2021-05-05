@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.39.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.38.1...@kajabi/sage-react@0.39.0) (2021-05-05)
+
+
+### Bug Fixes
+
+* **panel-controls:** patch item count logic with page size ([e0f4ee0](https://github.com/Kajabi/sage-lib/commit/e0f4ee0095d2b0f5ab786b53591564d4841b49c9))
+* **transaction card:** quote fix ([63e772d](https://github.com/Kajabi/sage-lib/commit/63e772d205837e069585bb11f0b6db0a56cb516d))
+* **transaction card:** update react component to match rails updates ([daacae0](https://github.com/Kajabi/sage-lib/commit/daacae0f490fa04789b15e264eb3c2585a8aaa0a))
+
+
+### Features
+
+* **transaction card:** removes dropdown, adds optional href, and adds status text/colors (react) ([3307004](https://github.com/Kajabi/sage-lib/commit/33070047b6e535e603888413e18f705c12f7a7ef))
+
+
+
+
+
 ## [0.38.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.38.0...@kajabi/sage-react@0.38.1) (2021-04-28)
 
 **Note:** Version bump only for package @kajabi/sage-react
