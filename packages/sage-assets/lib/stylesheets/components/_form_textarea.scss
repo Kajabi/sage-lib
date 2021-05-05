@@ -99,9 +99,8 @@ $-textarea-color-success: map-get($sage-field-colors, success);
     color: sage-color(charcoal, 100);
   }
 
-  &:hover:not(:active):not(:focus),
-  &:active:not(:disabled) {
-    border-color: sage-color(grey, 400);
+  &:hover:not(:disabled) {
+    border-color: currentColor;
   }
 
   &:focus:not(:disabled),
