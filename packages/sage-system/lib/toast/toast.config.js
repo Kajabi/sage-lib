@@ -6,5 +6,5 @@ export const CLASS_DISMISSED_STATE = 'sage-toast--dismissed';
 export const DEFAULT_CONFIG = {
   icon: 'check',
   type: 'notice',
-  timer: 4000,
+  timer: 4500,
 };

@@ -42,7 +42,7 @@ Sage.toast = (function () {
     return true;
   }
 
-  function dismissAll() {
+  function reset() {
     const elContainer = document.getElementById(ID_TOAST_CONTAINER);
     if (elContainer) elContainer.remove();
   }
@@ -81,7 +81,7 @@ Sage.toast = (function () {
   return {
     trigger: trigger,
     dismiss: dismiss,
-    dismissAll: dismissAll,
+    reset: reset,
     init: init,
     unbind: unbind,
   };
