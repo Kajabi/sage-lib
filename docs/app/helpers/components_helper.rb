@@ -15,10 +15,11 @@ module ComponentsHelper
         {
           title: "stat_box",
           description: "Stat Boxes, for use in the CRM Dashboard, display important statistics for users to make informed decisions about their business.", 
-          scss: "doing",
-          rails: "doing",
+          scss: "done",
+          rails: "done",
           react: "todo",
           a11y: "todo",
+          react_component_slug: "sage-statbox--default"
         },
       {
         title: "breadcrumbs",
