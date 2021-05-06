@@ -43,6 +43,7 @@ export {
   TabsPane
 } from './Tabs';
 export { Sortable } from './Sortable';
+export { StatBox } from './StatBox';
 export { Table } from './Table';
 export { Textarea } from './Textarea';
 export { Toast } from './Toast';
