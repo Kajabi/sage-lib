@@ -9,25 +9,29 @@
   display: grid;
   grid-auto-flow: dense;
   grid-template-columns: auto;
-  grid-gap: sage-spacing();
+  grid-gap: sage-spacing(lg);
+  justify-content: center;
   max-width: rem(960px);
   margin-left: auto;
   margin-right: auto;
   padding: sage-spacing();
   @media screen and (min-width: sage-breakpoint(lg-max)) {
     grid-template-columns: auto 1fr;
-    grid-gap: 128px;
+    grid-gap: rem(80px);
   }
 }
 
 .sage-null-view__content {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: column;
   justify-content: center;
   flex-wrap: wrap;
+  max-width: rem(450px);
   @media screen and (min-width: sage-breakpoint(lg-max)) {
     order: 1;
+    align-items: flex-start;
+    max-width: none;
   }
   .sage-null-view--reversed & {
     order: 2;
@@ -36,7 +40,7 @@
 
 .sage-null-view__title {
   @extend %t-sage-heading-1;
-  margin-bottom: sage-spacing();
+  margin-bottom: sage-spacing(sm);
 }
 
 .sage-null-view__graphic {
