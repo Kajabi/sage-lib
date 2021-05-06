@@ -22,7 +22,7 @@ export const toastTemplate = ({id, type, icon, text, link}) => (`
     >
       ${text}
     </output>
-      ${linkTemplate(link)}
+    ${linkTemplate(link)}
     <button
       class="sage-toast__button sage-toast__button--close"
       type="button"

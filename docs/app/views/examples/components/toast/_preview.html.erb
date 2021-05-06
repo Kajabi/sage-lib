@@ -1,3 +1,9 @@
+<h3>Triggering with <code>Sage.toast.trigger()</code></h3>
+<p>
+  Toasts do not have a SageRails component template. They are Javascript-only, <br/>templating is defined in
+  <a href="https://github.com/Kajabi/sage-lib/blob/master/packages/sage-system/lib/toast/toast.template.js" target="_blank"><code>sage-system/lib/toast/toast.template.js</code></a>.
+</p>
+
 <%= sage_component SageButtonGroup, { gap: :sm } do %>
   <%= sage_component SageButton, {
     value: "Toast",
@@ -12,7 +18,16 @@
     style: "danger",
     raised: true,
     attributes: {
-      "onClick": "Sage.toast.trigger({icon: 'danger', text: 'Danger toast created.', type: 'danger'})",
+      "onClick": "Sage.toast.trigger({text: 'An error has occured.', type: 'danger', icon: 'danger'})",
+    },
+  } %>
+
+  <%= sage_component SageButton, {
+    value: "Custom Icon",
+    style: "secondary",
+    raised: true,
+    attributes: {
+      "onClick": "Sage.toast.trigger({text: 'Invitation sent!', icon: 'mail'})",
     },
   } %>
 
@@ -21,23 +36,15 @@
     style: "secondary",
     raised: true,
     attributes: {
-      "onClick": "Sage.toast.trigger({text: 'This toast has a 10 second timer.', timer: 10000, icon: 'launch'})",
-    },
-  } %>
-
-  <%= sage_component SageButton, {
-    value: "Very Long Text",
-    style: "secondary",
-    raised: true,
-    attributes: {
-      "onClick": "Sage.toast.trigger({text: 'Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.'})",
+      "onClick": "Sage.toast.trigger({text: 'This toast has a 10 second timer.', timer: 10000})",
     },
   } %>
 <% end %>
 
 <hr/>
 
-<h3>Non-Dismissing Examples:</h3>
+<h3>Non-dismissing Toast patterns</h3>
+<p>Non-dismissable toasts are used in our app to display 'loading' messages or to provide a CTA upon a interaction.</p>
 
 <%= sage_component SageButtonGroup, { gap: :sm } do %>
   <%= sage_component SageButton, {
@@ -59,7 +66,7 @@
   } %>
 
   <%= sage_component SageButton, {
-    value: "Toast With Link",
+    value: "Goal Completion (non-dismissing with link)",
     style: "secondary",
     raised: true,
     attributes: {
@@ -68,7 +75,7 @@
   } %>
 
   <%= sage_component SageButton, {
-    value: "Dismiss All (Reset)",
+    value: "Reset",
     style: "danger",
     raised: true,
     attributes: {
@@ -103,27 +110,43 @@
 
 <pre class="prettyprint">
   <code>
-    // Pattern for a manually dismissable toast:
-
     // Sage.toast.trigger()
-    // -----------------------------------------------------------------------------------------------------
-    // Triggers a toast with the arg and returns the unique id of the toast.
+    // -------------------------------------------------------------
+    // Triggers a toast with a toast options object and
+    // returns the unique id of the toast.
     //
-    // @param {object} - Toast options, `message` key is required, all others are optional
+    // @param {{ message, icon, type, timer, link = {text, href} }} - Toast options
     // @returns {unique id}
     //
     // Example:
-    const myWonderfulToastId = Sage.toast.trigger({text: 'I will not dismiss via timer', timer: false});
+    const myWonderfulToastId = Sage.toast.trigger({
+        text: 'I will not dismiss via timer',
+        timer: false,
+        icon: 'check',
+        type: 'danger',
+        link: { text: 'next step', href 'example.com' },
+      });
 
 
     // Sage.toast.dismiss()
-    // -----------------------------------------------------------------------------------------------------
+    // -------------------------------------------------------------
     // Dismisses a toast with a unique id.
     //
     // @param {unique id}
-    // @returns {boolean} – `false` if no toast of that ID exists, `true` if it does exist and was successfully dismissed
+    // @returns {boolean} – `false` if no toast of that ID exists,
+    //                      `true` if exists and successfully dismissed
     //
     // Example:
     Sage.toast.dismiss(myWonderfulToastId);
+
+
+    // Sage.toast.reset()
+    // -------------------------------------------------------------
+    // Removes all toasts from DOM
+    //
+    // @returns {boolean} – `false` if none exist, `true` if removed
+    //
+    // Example:
+    Sage.toast.reset();
   </code>
 </pre>

@@ -5,26 +5,26 @@
   <td><%= md('`check`') %></td>
 </tr>
 <tr>
-  <td><%= md('`id`') %></td>
-  <td><%= md('Unique id') %></td>
-  <td><%= md('Integer') %></td>
-  <td><%= md('`Sage.util.generateId()`') %></td>
-</tr>
-<tr>
-  <td><%= md('`message`') %></td>
+  <td><%= md('`text`') %></td>
   <td><%= md('The message to be displayed in the toast.') %></td>
   <td><%= md('String') %></td>
   <td><%= md('`nil`') %></td>
 </tr>
 <tr>
   <td><%= md('`timer`') %></td>
-  <td><%= md('Time in milliseconds that toast should be displayed') %></td>
+  <td><%= md('Time in milliseconds that toast should be displayed.') %></td>
   <td><%= md('Integer or `false`') %></td>
-  <td><%= md('`4000`') %></td>
+  <td><%= md('`4500`') %></td>
 </tr>
 <tr>
   <td><%= md('`type`') %></td>
-  <td><%= md('Assign a type/style, options include: `notice` `danger`') %></td>
+  <td><%= md('Assign a type/style, options include: `notice` `danger`.') %></td>
   <td><%= md('String') %></td>
   <td><%= md('`notice`') %></td>
+</tr>
+<tr>
+  <td><%= md('`link`') %></td>
+  <td><%= md('Add a CTA button following `text` in the toast; expects `text` and `href` keys.') %></td>
+  <td><%= md('{ text: String, href: String }') %></td>
+  <td><%= md('`nil`') %></td>
 </tr>
