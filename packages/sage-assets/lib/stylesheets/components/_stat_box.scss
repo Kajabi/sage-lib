@@ -9,20 +9,39 @@
   @include sage-card();
 }
 
-.sage-stat-box__header {
-  display: flex;
-  align-items: center;
-}
-
-.sage-stat-box__body {
-  display: flex;
-  align-items: center;
-
-  .sage-label {
-    margin-left: auto;
+.sage-stat-box__body,
+.sage-stat-box__footer {
+  @include sage-grid-card-row;
+  @media (max-width: sage-breakpoint(sm-max)) {
+    flex-flow: nowrap;
   }
 }
 
-.sage-stat-box__footer {
+.sage-stat-box__header,
+.sage-stat-box__link {
+  display: flex;
+  align-items: center;
+}
 
+.sage-stat-box__title {
+  @extend %t-sage-body-small;
+  margin-right: sage-spacing(xs);
+  font-weight: sage-font-weight(medium);
+}
+
+.sage-stat-box__data {
+  @extend %t-sage-heading-5;
+}
+
+.sage-stat-box__timeframe {
+  @extend %t-sage-body-xsmall;
+}
+
+.sage-stat-box__link {
+  @extend %t-sage-body;
+  font-weight: sage-font-weight(medium);
+  &::after {
+    @include sage-icon-base(arrow-right);
+    margin-left: sage-spacing(xs);
+  }
 }
