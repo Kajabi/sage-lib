@@ -1,5 +1,6 @@
 class SageStatBox < SageComponent
   set_attribute_schema({
+    advanced: [:optional, TrueClass],
     custom_label: [:optional, NilClass, SageSchemas::LABEL],
     data: Integer,
     change_type: [:optional, Set.new(["up", "down", "neutral"])],

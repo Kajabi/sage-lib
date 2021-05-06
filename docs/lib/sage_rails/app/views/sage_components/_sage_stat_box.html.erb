@@ -3,9 +3,9 @@ change_value = component.change_value.present? ? component.change_value : "0"
 change_type = component.change_type.present? ? component.change_type : "neutral"
 label_configs = { color: "draft", value: component.change_value } 
 if component.change_type == "up"
-  label_configs = { color: "published", value: change_value, icon: "arrow-up" } 
+  label_configs = { color: "published", value: change_value, icon: "caret-up" } 
 elsif component.change_type == "down"
-  label_configs = { color: "danger", value: change_value, icon: "arrow-down" } 
+  label_configs = { color: "danger", value: change_value, icon: "caret-down" } 
 elsif component.change_type == "neutral"
   label_configs = { color: "draft", value: change_value } 
 end
@@ -26,10 +26,10 @@ end
       <% end %>
     <% end %>
   </header>
-  <main class="sage-stat-box__body">
+  <main class="sage-stat-box__body sage-grid-template-ete">
     <p class="sage-stat-box__data"><%= component.data %></p>
     <% if component.timeframe.present? %>
-      <span class="sage-stat-box-timeframe"><%= component.timeframe %></span>
+      <span class="sage-stat-box__timeframe"><%= component.timeframe %></span>
     <% end %>
     <% if component.custom_label.present? %>
       <%= sage_component SageLabel, component.custom_label %>
