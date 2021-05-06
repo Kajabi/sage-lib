@@ -74,6 +74,12 @@ $-loader-spinner-path-speed: 1.5s;
   width: sage-spacing(xl);
   height: sage-spacing(xl);
   animation: rotate $-loader-spinner-speed linear infinite;
+
+  .sage-toast & {
+    margin-right: sage-spacing(xs);
+    width: sage-spacing(sm);
+    height: sage-spacing(sm);
+  }
 }
 
 .sage-loader__spinner-path {
@@ -82,6 +88,10 @@ $-loader-spinner-path-speed: 1.5s;
   stroke-linecap: round;
   stroke: sage-color(primary, 300);
   animation: dash $-loader-spinner-path-speed ease-in-out infinite;
+
+  .sage-toast & {
+    stroke: sage-color(white);
+  }
 }
 
 

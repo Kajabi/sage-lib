@@ -13,8 +13,12 @@ export const toastTemplate = ({id, type, icon, text, link}) => (`
     class="sage-toast sage-toast--style-${type}"
     id="${id}"
     ${DATA_ATTR}
-  >
-    <i class="sage-toast__icon sage-icon-${icon}"></i>
+  > 
+    <div class="sage-loader sage-loader--spinner" aria-hidden="true"> 
+      <svg class="sage-loader__spinner" viewBox="25 25 50 50">
+        <circle class="sage-loader__spinner-path" cx="50" cy="50" r="20" fill="none" stroke="0072EF" stroke-width="4"></circle>
+      </svg>
+    </div>
     <output
       class="sage-toast__value"
       aria-live="assertive"
