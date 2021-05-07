@@ -36,7 +36,6 @@ Sage.init = function(elementNamesToInitLegacy) {
   initDocumentPresenceListener('[data-js-modal]',                                Sage.modal.init,         false);
   initDocumentPresenceListener('[data-js-modaltrigger]',                         Sage.modal.initTrigger,  false);
   initDocumentPresenceListener('[data-js-tooltip]',                              Sage.tooltip.init,       Sage.tooltip.unbind);
-  initDocumentPresenceListener('[data-js-toast]',                                Sage.toast.init,         Sage.toast.unbind);
   initDocumentPresenceListener('[data-js-dropdown]',                             Sage.dropdown.init,      Sage.dropdown.unbind);
   initDocumentPresenceListener('[data-js-sortable]',                             Sage.sortable.init,      Sage.sortable.unbind);
   initDocumentPresenceListener('[data-js-tabs]',                                 Sage.tabs.init,          Sage.tabs.unbind);
