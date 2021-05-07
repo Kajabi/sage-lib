@@ -7,8 +7,8 @@ class SageStatBox < SageComponent
     change_value: [:optional, String],
     link_href: [:optional, String],
     link_value: [:optional, String],
-    status: String,
     timeframe: [:optional, String],
+    title: String,
     title_icon: [:optional, TrueClass]
   })
 end

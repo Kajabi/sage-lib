@@ -10,13 +10,20 @@ export default {
     // such as shown below for icons
     ...selectArgs({
       // icon: SageTokens.ICONS,
+      changeType: StatBox.TYPE,
     }),
   },
   args: {
     // As needed, provide overall story defaults here
-    children: (
-      <p>Sample Component children showing up!</p>
-    ),
+    advanced: false,
+    data: 65535,
+    changeType: StatBox.TYPE.DEFAULT,
+    changeValue: "54%",
+    linkHref: "#",
+    linkValue: "View More",
+    timeframe: "in last 30 days",
+    title: "In Progress",
+    titleIcon: true
   }
 };
 const Template = (args) => <StatBox {...args} />;
