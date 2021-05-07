@@ -15,7 +15,7 @@ end
   <%= component.generated_html_attributes.html_safe %>
 >
   <header class="sage-stat-box__header">
-    <h2 class="sage-stat-box__title"><%= component.status %></h2>
+    <h2 class="sage-stat-box__title"><%= component.title %></h2>
     <% if component.title_icon.present? %>
       <%= sage_component SagePopover, {
         icon: "info-circle",

@@ -1,4 +1,11 @@
-export const SAMPLE_TOKEN = {
-  VALUE_1: 'value-1',
-  VALUE_2: 'value-2',
+export const LABEL_COLORS = {
+  DEFAULT: 'draft',
+  PUBLISHED: 'published',
+  DANGER: 'danger',
 };
+
+export const TYPE = {
+  DEFAULT: 'neutral',
+  DOWN: 'down',
+  UP: 'up',
+}
