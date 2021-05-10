@@ -14,9 +14,9 @@ export const toastTemplate = ({id, type, icon, text, link}) => (`
     id="${id}"
     ${DATA_ATTR}
   > 
-    <div class="sage-loader sage-loader--spinner" aria-hidden="true"> 
-      <svg class="sage-loader__spinner" viewBox="25 25 50 50">
-        <circle class="sage-loader__spinner-path" cx="50" cy="50" r="20" fill="none" stroke="0072EF" stroke-width="4"></circle>
+    <div class="sage-toast__loader" aria-hidden="true"> 
+      <svg class="sage-toast__spinner" viewBox="25 25 50 50">
+        <circle class="sage-toast__spinner-path" cx="50" cy="50" r="20" fill="none" stroke="0072EF" stroke-width="4"></circle>
       </svg>
     </div>
     <output
