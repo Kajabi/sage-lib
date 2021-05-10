@@ -204,8 +204,6 @@ $-radio-focus-outline-color: currentColor;
   }
 
   &:not(.sage-radio--standalone) {
-    margin-top: 5px;
-
     .sage-radio--has-border & {
       position: absolute;
       margin-top: 0;
@@ -214,6 +212,16 @@ $-radio-focus-outline-color: currentColor;
     .sage-radio--has-border &::after,
     .sage-radio--has-border &::before {
       border-color: transparent;
+    }
+  }
+
+  .sage-radio & {
+    @media (max-width: sage-breakpoint(md-max)) {
+      margin-top: rem(6px);
+    }
+
+    @media (min-width: sage-breakpoint(lg-min)) {
+      margin-top: sage-spacing(2xs);
     }
   }
 }
