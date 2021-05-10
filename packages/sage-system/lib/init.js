@@ -6,7 +6,7 @@ Sage.init = function(elementNamesToInitLegacy) {
   // Initers
   // ==================================================
 
-  let initDocumentPresenceListener = function(elParentSelector, initFunc, unbindFunc) {
+  const initDocumentPresenceListener = function(elParentSelector, initFunc, unbindFunc) {
     // Arrive.js: https://github.com/uzairfarooq/arrive
     const ARRIVE_SETTINGS = {
       fireOnAttributesModification: false,
@@ -19,13 +19,14 @@ Sage.init = function(elementNamesToInitLegacy) {
     });
 
     if (unbindFunc) {
-      document.leave(elParentSelector, ARRIVE_SETTINGS, function() {
-        unbindFunc(this);
+      document.leave(elParentSelector, ARRIVE_SETTINGS, function(el) {
+        // Confirm the element has been removed before unbinding, DOM re-ordering of a parent can trigger a 'leave' event.
+        if (!document.body.contains(el)) unbindFunc(this);
       });
     }
   }
 
-  let initDocumentEventListener = function(eventName, handlerFunc) {
+  const initDocumentEventListener = function(eventName, handlerFunc) {
     document.addEventListener(eventName, handlerFunc);
   }
 
