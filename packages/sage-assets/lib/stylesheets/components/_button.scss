@@ -99,9 +99,15 @@ $-btn-interactive-label-icon-size: rem(24px);
 
 
 // stylelint-disable max-nesting-depth
+:root {
+  --icon-block-padding: #{rem(6px)};
+
+  @media screen and (min-width: sage-breakpoint(lg-min)) {
+    --icon-block-padding: #{rem(4px)};
+  }
+}
 
 .sage-btn {
-  --icon-block-padding: #{rem(6px)}; // actually applied in the icon building loop in core/_icon.scss
   @extend %t-sage-body-med;
   @include sage-button-style-reset();
   @include sage-focus-outline;
@@ -407,8 +413,6 @@ $-btn-interactive-label-icon-size: rem(24px);
 
 .sage-btn--small {
   @extend %t-sage-body-small;
-
-  --icon-block-padding: #{rem(4px)};
 }
 
 // TODO: Investigate deprecating the float setting here
