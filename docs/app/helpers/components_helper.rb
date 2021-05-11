@@ -12,15 +12,6 @@ module ComponentsHelper
   def sage_components
     [
       # Sage Generated Components
-        {
-          title: "stat_box",
-          description: "Stat Boxes, for use in the CRM Dashboard, display important statistics for users to make informed decisions about their business.", 
-          scss: "done",
-          rails: "done",
-          react: "todo",
-          a11y: "todo",
-          react_component_slug: "sage-statbox--default"
-        },
       {
         title: "breadcrumbs",
         description: "Breadcrumbs provide a sense of where we are in the site structure with hyperlinks to previous areas in that structure. Our component also provides a specific \"Back link\" variation",
@@ -242,6 +233,15 @@ module ComponentsHelper
         react: "todo",
         a11y: "doing",
         react_component_slug: "sage-search--default"
+      },
+      {
+        title: "stat_box",
+        description: "Stat Boxes, for use in the CRM Dashboard, display important statistics for users to make informed decisions about their business.", 
+        scss: "done",
+        rails: "done",
+        react: "done",
+        a11y: "todo",
+        react_component_slug: "sage-statbox--default"
       },
       {
         title: "status_icon",
