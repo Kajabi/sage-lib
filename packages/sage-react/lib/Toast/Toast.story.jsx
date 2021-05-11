@@ -15,7 +15,6 @@ storiesOf('Sage/Toast', module)
         isActive={boolean('Active', true)}
         title={text('Title', 'Hello, world')}
         description={text('Description', 'Hello, world subtext')}
-        type={Toast.TYPES.LOADING}
         timeout={number('Timeout', 3500)}
       />
     </div>
