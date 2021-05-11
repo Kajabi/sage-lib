@@ -117,7 +117,6 @@ $-btn-interactive-label-icon-size: rem(24px);
   display: inline-flex;
   align-self: inherit;
   align-items: center;
-  position: relative;
   padding: $-padding-block sage-spacing(sm);
   text-align: left; // Prevents text alignment issue when inner text is truncated
   border: 0;
@@ -138,6 +137,10 @@ $-btn-interactive-label-icon-size: rem(24px);
   }
 
   // Contextual modifications
+  &.sage-banner__close {
+    position: absolute;
+  }
+
   .sage-dropdown--contained .sage-dropdown__trigger &,
   .sage-panel-controls__tabs-dropdown .sage-dropdown__trigger &,
   .sage-panel-controls__toolbar .sage-dropdown__trigger &,

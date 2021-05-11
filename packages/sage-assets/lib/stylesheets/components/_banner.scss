@@ -116,8 +116,8 @@ $-banner-el-icon: "before";
 }
 
 .sage-banner__close {
-  position: absolute;
   right: sage-spacing(card);
+  // Note: `position: absolute` is set in sage button
 }
 
 .sage-banner__close,
