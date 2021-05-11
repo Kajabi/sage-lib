@@ -15,7 +15,7 @@ storiesOf('Sage/Toast', module)
         isActive={boolean('Active', true)}
         title={text('Title', 'Hello, world')}
         description={text('Description', 'Hello, world subtext')}
-        color={select('Color', Toast.COLORS, Toast.COLORS.DEFAULT)}
+        type={Toast.TYPES.LOADING}
         timeout={number('Timeout', 3500)}
       />
     </div>
@@ -27,7 +27,7 @@ storiesOf('Sage/Toast', module)
         isActive={boolean('Active', true)}
         title={text('Title', 'Congratulations on your success')}
         link={{ href: text('Link Href', 'http://kajabi.com'), text: text('Link Text', 'Go to next step') }}
-        color={select('Color', Toast.COLORS, Toast.COLORS.DEFAULT)}
+        type={Toast.TYPES.LOADING}
         timeout={false}
       />
     </div>
