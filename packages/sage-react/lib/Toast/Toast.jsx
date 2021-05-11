@@ -60,17 +60,17 @@ export const Toast = ({
   const id = uuid();
 
   const renderAsset = () => {
-   if (type === Toast.TYPES.LOADING) {
-     return (
-      <svg className="sage-toast__spinner" aria-hidden="true" viewBox="25 25 50 50">
-        <circle className="sage-toast__spinner-path" cx="50" cy="50" r="20" fill="none" stroke="0072EF" stroke-width="4"></circle>
-      </svg>
-     );
-   } else if (icon) {
-    return (
-      <Icon className="sage-toast__icon" icon={icon} />
-    );
-   }
+    if (type === Toast.TYPES.LOADING) {
+      return (
+        <svg className="sage-toast__spinner" aria-hidden="true" viewBox="25 25 50 50">
+          <circle className="sage-toast__spinner-path" cx="50" cy="50" r="20" fill="none" stroke="0072EF" strokeWidth="4" />
+        </svg>
+      );
+    } else if (icon) {
+      return (
+        <Icon className="sage-toast__icon" icon={icon} />
+      );
+    }
   };
 
   return !isDismissed && (

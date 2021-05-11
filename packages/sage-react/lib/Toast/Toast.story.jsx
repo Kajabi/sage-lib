@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, select, text, boolean, number } from '@storybook/addon-knobs';
+import { withKnobs, text, boolean, number } from '@storybook/addon-knobs';
 import { centerX } from '../story-support/decorators';
 import { SageTokens } from '../configs';
 import { Toast } from './Toast';
