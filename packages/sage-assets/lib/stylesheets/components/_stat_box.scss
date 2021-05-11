@@ -24,9 +24,8 @@
 }
 
 .sage-stat-box__title {
-  @extend %t-sage-body-small;
+  @extend %t-sage-body-small-med;
   margin-right: sage-spacing(xs);
-  font-weight: sage-font-weight(medium);
 }
 
 .sage-stat-box__data {
@@ -38,8 +37,7 @@
 }
 
 .sage-stat-box__link {
-  @extend %t-sage-body;
-  font-weight: sage-font-weight(medium);
+  @extend %t-sage-body-med;
   &::after {
     @include sage-icon-base(arrow-right);
     margin-left: sage-spacing(xs);
