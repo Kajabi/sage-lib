@@ -40,6 +40,7 @@ export const Tooltip = ({
   );
 };
 
+Tooltip.Element = TooltipElement;
 Tooltip.POSITIONS = TOOLTIP_POSITIONS;
 Tooltip.SIZES = TOOLTIP_SIZES;
 Tooltip.THEMES = TOOLTIP_THEMES;

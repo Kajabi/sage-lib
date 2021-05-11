@@ -16,11 +16,9 @@ export default {
   },
   args: {
     children: (
-      <>
-        <Button>
-          I inherit Mouse &amp; Focus events 👋
-        </Button>
-      </>
+      <Button>
+        I inherit Mouse &amp; Focus events 👋
+      </Button>
     ),
     content: 'Hi, I provide more context for this element!',
     position: Tooltip.POSITIONS.DEFAULT,
@@ -31,3 +29,9 @@ export default {
 const Template = (args) => <Tooltip {...args} />;
 
 export const Default = Template.bind({});
+
+export const Static = () => {
+  return (
+    <Tooltip.Element content="Testing static tooltip" />
+  );
+};
