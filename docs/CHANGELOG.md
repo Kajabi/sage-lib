@@ -3,6 +3,41 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.24.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.24.0...@kajabi/sage@3.24.1) (2021-05-11)
+
+**Note:** Version bump only for package @kajabi/sage
+
+
+
+
+
+# [3.24.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.23.2...@kajabi/sage@3.24.0) (2021-05-05)
+
+
+### Bug Fixes
+
+* **docs:** update all documentation reference of old font size vars ([12dff6b](https://github.com/Kajabi/sage-lib/commit/12dff6b4cf9ce1cfa2985b77dd45c77ad4523a2d))
+* **icon:** fixing icons size and color classes ([9afd78c](https://github.com/Kajabi/sage-lib/commit/9afd78cd897549d52bc8332cb7fcbabf5b571314))
+* **icon sizes:** icon sizes had 2xsl twice and 3xl twice ([5659d13](https://github.com/Kajabi/sage-lib/commit/5659d137fcaad5c1bec9fb537ace5edc24035937))
+* **rails-components:** add css_classes to global sage component ([2da14f2](https://github.com/Kajabi/sage-lib/commit/2da14f2652d51e5f6133140723dd9029b280571f))
+* **rails-components:** apply status token ([72575fe](https://github.com/Kajabi/sage-lib/commit/72575fe067320d704f5dc5521816795d605569eb))
+* **rails-components:** removed all instances of css_classes on the outermost schema object ([71afb5e](https://github.com/Kajabi/sage-lib/commit/71afb5e07d6f6f11374fc02cdba033b48bc4a463))
+* **rails-components:** update to statuses value ([1394368](https://github.com/Kajabi/sage-lib/commit/1394368d2a09ee674d6372d67b4d0e6093cccf57))
+* **rails-components:** updates after rebase ([0799860](https://github.com/Kajabi/sage-lib/commit/07998606f1b8145f8c6a7b1f02dfeab5702f1b3c))
+
+
+### Features
+
+* **docs:** further update component and token generator ([8901162](https://github.com/Kajabi/sage-lib/commit/8901162af9be05616bf973614ecad17a29b7d2b4))
+* **icon:** adds a card_color option to icon ([a61ab88](https://github.com/Kajabi/sage-lib/commit/a61ab884fa46897a6e92f68dbd0e949550bd223b)), closes [#449](https://github.com/Kajabi/sage-lib/issues/449)
+* **modal:** adds open events for modals ([d51d141](https://github.com/Kajabi/sage-lib/commit/d51d141140f081326c992c3e386dd7bcc22e523d))
+* **transaction card:** removes dropdown, adds optional href, and adds status text/colors (rails) ([af08e7f](https://github.com/Kajabi/sage-lib/commit/af08e7ff1219e741182d727af32c3f9f7bb81451))
+* **transaction card:** rename product attr to offer and adjust available links ([cbbdbe7](https://github.com/Kajabi/sage-lib/commit/cbbdbe79b97faac036c53fac05e82fb8083135de))
+
+
+
+
+
 ## [3.23.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.23.1...@kajabi/sage@3.23.2) (2021-04-30)
 
 **Note:** Version bump only for package @kajabi/sage
