@@ -22,6 +22,7 @@ export const TooltipElement = ({
   const classNames = classnames(
     'sage-tooltip',
     {
+      'sage-tooltip--static': !parentDomRect,
       [`sage-tooltip--${position}`]: position,
       [`sage-tooltip--${size}`]: size,
       [`sage-tooltip--${theme}`]: theme,
@@ -29,6 +30,10 @@ export const TooltipElement = ({
   );
 
   useLayoutEffect(() => {
+    if (!parentDomRect) {
+      return;
+    }
+
     let left = 0,
       top = 0;
 
@@ -73,7 +78,7 @@ export const TooltipElement = ({
       role="tooltip"
       ref={tooltipRef}
       className={classNames}
-      style={coordinates}
+      style={parentDomRect ? coordinates : {}}
     >
       {content}
     </div>
@@ -81,6 +86,7 @@ export const TooltipElement = ({
 };
 
 TooltipElement.defaultProps = {
+  parentDomRect: null,
   position: TOOLTIP_POSITIONS.DEFAULT,
   size: TOOLTIP_SIZES.DEFAULT,
   theme: TOOLTIP_THEMES.DEFAULT,
@@ -94,7 +100,7 @@ TooltipElement.propTypes = {
     right: PropTypes.number,
     top: PropTypes.number,
     width: PropTypes.number,
-  }).isRequired,
+  }),
   position: PropTypes.oneOf(Object.values(TOOLTIP_POSITIONS)),
   size: PropTypes.oneOf(Object.values(TOOLTIP_SIZES)),
   theme: PropTypes.oneOf(Object.values(TOOLTIP_THEMES)),

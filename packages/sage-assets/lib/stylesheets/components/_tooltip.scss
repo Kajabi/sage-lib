@@ -47,6 +47,10 @@ $-tooltip-large-maxwidth: rem(320px);
   }
 }
 
+.sage-tooltip--static {
+  position: relative;
+}
+
 .sage-tooltip--top {
   &::after {
     left: 50%;
