@@ -1,12 +1,12 @@
 <% 
-change_value = component.change_value.present? ? component.change_value : "0"
-change_type = component.change_type.present? ? component.change_type : "neutral"
-label_configs = { color: "draft", value: component.change_value } 
-if component.change_type == "up"
+change_value = component.change.present? ? component.change[:value] : "No change"
+change_type = component.change.present? ? component.change[:type] : "neutral"
+label_configs = { color: "draft", value: change_value } 
+if change_type == "up"
   label_configs = { color: "published", value: change_value, icon: "caret-up" } 
-elsif component.change_type == "down"
+elsif change_type == "down"
   label_configs = { color: "danger", value: change_value, icon: "caret-down" } 
-elsif component.change_type == "neutral"
+elsif change_type == "neutral"
   label_configs = { color: "draft", value: change_value } 
 end
 %>
@@ -16,14 +16,8 @@ end
 >
   <header class="sage-stat-box__header">
     <h2 class="sage-stat-box__title"><%= component.title %></h2>
-    <% if component.title_icon.present? %>
-      <%= sage_component SagePopover, {
-        icon: "info-circle",
-        trigger_value: "Open Menu",
-        trigger_icon_only: true,
-      } do %>
-        <p>Testing popover content</p>
-      <% end %>
+    <% if component.popover.present? %>
+      <%= component.popover.html_safe %>
     <% end %>
   </header>
   <main class="sage-stat-box__body sage-grid-template-ete">
@@ -32,14 +26,14 @@ end
       <span class="sage-stat-box__timeframe"><%= component.timeframe %></span>
     <% end %>
     <% if component.custom_label.present? %>
-      <%= sage_component SageLabel, component.custom_label %>
-    <% else %>
+      <%= component.custom_label.html_safe %>
+    <% elsif component.change.present? %>
       <%= sage_component SageLabel, label_configs %>
     <% end %>
   </main>
-  <% if component.link_value.present? %>
+  <% if component.link.present? %>
     <footer class="sage-stat-box__footer">
-      <a class="sage-stat-box__link" href="<%= component.link_href %>"><%= component.link_value %></a>
+      <a class="sage-stat-box__link" href="<%= component.link[:href] %>"><%= component.link[:value] %></a>
     </footer>
   <% end %>
 </article>

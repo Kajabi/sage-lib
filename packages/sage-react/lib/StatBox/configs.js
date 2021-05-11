@@ -8,4 +8,4 @@ export const TYPE = {
   DEFAULT: 'neutral',
   DOWN: 'down',
   UP: 'up',
-}
+};

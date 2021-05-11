@@ -9,7 +9,11 @@ describe('Sage StatBox', () => {
     defaultProps;
 
   beforeEach(() => {
-    defaultProps = {};
+    defaultProps = {
+      data: 65535,
+      link: { href: '#', value: 'View More' },
+      title: 'In Progress',
+    };
 
     component = shallow(
       <StatBox {...defaultProps} />
