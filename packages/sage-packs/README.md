@@ -4,7 +4,7 @@ This package contains "packs" that are used to compile assets in a Rails environ
 
 ## Usage
 
-`import `@kajabi/sage-packs/lib/packs/system.js`
+`import @kajabi/sage-packs/lib/packs/system.js`
 
 ## Packs
 
