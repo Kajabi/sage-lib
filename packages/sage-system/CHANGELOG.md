@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.8.0...@kajabi/sage-system@0.8.1) (2021-05-12)
+
+
+### Bug Fixes
+
+* **readmes:** update all readme files to force version updates ([ed20578](https://github.com/Kajabi/sage-lib/commit/ed20578309dad744d2f365907b04bb32fb0519f5))
+
+
+
+
+
 # [0.8.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.7.0...@kajabi/sage-system@0.8.0) (2021-05-12)
 
 
