@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.40.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.39.0...@kajabi/sage-react@0.40.0) (2021-05-12)
+
+
+### Features
+
+* **icon:** add updated icon fonts ([104ee84](https://github.com/Kajabi/sage-lib/commit/104ee840456950614bd19c28549ee18193a7a18f))
+* **rails toast:** toast: Integrate a global container, animate out tooltip polish ([8e96eac](https://github.com/Kajabi/sage-lib/commit/8e96eac0b5e544f056a76c61eb4a676943689b29))
+
+
+
+
+
 # [0.39.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.38.1...@kajabi/sage-react@0.39.0) (2021-05-05)
 
 

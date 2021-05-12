@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.25.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.24.1...@kajabi/sage@3.25.0) (2021-05-12)
+
+
+### Bug Fixes
+
+* **docs:** adding resolve-url-loader to devDependencies for deploy ([f9c4e70](https://github.com/Kajabi/sage-lib/commit/f9c4e70b625fb31423f1f11c5336f31e5e2d429a))
+
+
+### Features
+
+* **icon:** add updated icon fonts ([104ee84](https://github.com/Kajabi/sage-lib/commit/104ee840456950614bd19c28549ee18193a7a18f))
+* **rails toast:** toast: Integrate a global container, animate out tooltip polish ([8e96eac](https://github.com/Kajabi/sage-lib/commit/8e96eac0b5e544f056a76c61eb4a676943689b29))
+
+
+
+
+
 ## [3.24.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.24.0...@kajabi/sage@3.24.1) (2021-05-11)
 
 **Note:** Version bump only for package @kajabi/sage
