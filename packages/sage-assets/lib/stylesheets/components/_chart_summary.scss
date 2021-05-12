@@ -1,0 +1,45 @@
+////
+/// Chart Summary
+///
+/// @group sage
+////
+
+.sage-chart-summary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  pointer-events: none;
+}
+
+.sage-chart-summary--centered {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+}
+
+.sage-chart-summary--donut {
+  max-width: 120px;
+}
+
+.sage-chart-summary__caption {
+  @extend %t-sage-body-xsmall-med;
+  @include clamp(1);
+
+  color: sage-color(charcoal, 100);
+}
+
+.sage-chart-summary__label {
+  @extend %t-sage-body-small-med;
+  @include clamp(2);
+
+  color: sage-color(charcoal, 200);
+}
+
+.sage-chart-summary__value {
+  @extend %t-sage-heading-5;
+
+  color: sage-color(charcoal, 500);
+  font-style: normal;
+}

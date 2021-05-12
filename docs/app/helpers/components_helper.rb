@@ -43,6 +43,15 @@ module ComponentsHelper
         react_component_slug: "sage-card--card-highlight"
       },
       {
+        title: "chart_summary",
+        description: "Chart summaries are used primary in React-based Recharts diagrams to display summary information with Sage type styling.", 
+        scss: "done",
+        rails: "done",
+        react: "done",
+        a11y: "done",
+        react_component_slug: "sage-chart--donut"
+      },
+      {
         title: "checkbox",
         description: "Checkboxes provide users with selectable options like toggling a single setting or selecting multiple options from a list.",
         scss: "done",
