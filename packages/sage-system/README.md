@@ -16,4 +16,4 @@ One time build of the package
 
 ### `build:watch`
 
-Continuely watch and buil the package
+Continually watch and build the package
