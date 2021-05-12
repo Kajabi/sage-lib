@@ -6,6 +6,23 @@
 
 
 ///
+/// Clamps an elements text to a maximum number of lines
+///
+/// @param {number} $lines Number of lines
+///
+/// @example scss - Basic usage
+///   .sage-box {
+///     @include clamp(2);
+///   }
+///
+@mixin clamp($lines: 2) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+///
 /// Adds a clearfix psuedo-element for use in containers that may include floated elements.
 /// Testing a new _item_.
 ///
