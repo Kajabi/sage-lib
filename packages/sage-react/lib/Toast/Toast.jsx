@@ -66,11 +66,13 @@ export const Toast = ({
           <circle className="sage-toast__spinner-path" cx="50" cy="50" r="20" fill="none" stroke="0072EF" strokeWidth="4" />
         </svg>
       );
-    } else if (icon) {
+    }
+    if (icon) {
       return (
         <Icon className="sage-toast__icon" icon={icon} />
       );
     }
+    return false;
   };
 
   return !isDismissed && (
