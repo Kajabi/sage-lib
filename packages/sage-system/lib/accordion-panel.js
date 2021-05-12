@@ -1,3 +1,5 @@
+import { generateId } from './utils/index';
+
 Sage.accordion = (function () {
   // ==================================================
   // Variables
@@ -17,11 +19,6 @@ Sage.accordion = (function () {
   // ==================================================
   // Functions
   // ==================================================
-
-  function generateId(prefix) {
-    const hash = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
-    return `${prefix}-${hash}`;
-  }
 
   function handleAccordionClick(ev) {
 

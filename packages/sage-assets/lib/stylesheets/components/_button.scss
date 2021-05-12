@@ -99,9 +99,15 @@ $-btn-interactive-label-icon-size: rem(24px);
 
 
 // stylelint-disable max-nesting-depth
+:root {
+  --icon-block-padding: #{rem(6px)};
+
+  @media screen and (min-width: sage-breakpoint(lg-min)) {
+    --icon-block-padding: #{rem(4px)};
+  }
+}
 
 .sage-btn {
-  --icon-block-padding: #{rem(6px)}; // actually applied in the icon building loop in core/_icon.scss
   @extend %t-sage-body-med;
   @include sage-button-style-reset();
   @include sage-focus-outline;
@@ -111,7 +117,6 @@ $-btn-interactive-label-icon-size: rem(24px);
   display: inline-flex;
   align-self: inherit;
   align-items: center;
-  position: relative;
   padding: $-padding-block sage-spacing(sm);
   text-align: left; // Prevents text alignment issue when inner text is truncated
   border: 0;
@@ -132,6 +137,10 @@ $-btn-interactive-label-icon-size: rem(24px);
   }
 
   // Contextual modifications
+  &.sage-banner__close {
+    position: absolute;
+  }
+
   .sage-dropdown--contained .sage-dropdown__trigger &,
   .sage-panel-controls__tabs-dropdown .sage-dropdown__trigger &,
   .sage-panel-controls__toolbar .sage-dropdown__trigger &,
@@ -390,8 +399,7 @@ $-btn-interactive-label-icon-size: rem(24px);
     }
   }
 
-  .sage-assistant &,
-  .sage-toast & {
+  .sage-assistant & {
     color: sage-color(grey, 100);
 
     @include sage-focus-outline--update-color(sage-color(white));
@@ -408,8 +416,6 @@ $-btn-interactive-label-icon-size: rem(24px);
 
 .sage-btn--small {
   @extend %t-sage-body-small;
-
-  --icon-block-padding: #{rem(4px)};
 }
 
 // TODO: Investigate deprecating the float setting here

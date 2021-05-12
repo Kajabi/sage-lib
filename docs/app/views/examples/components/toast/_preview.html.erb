@@ -1,26 +1,152 @@
+<h3>Triggering with <code>Sage.toast.trigger()</code></h3>
+<p>
+  Toasts do not have a SageRails component template. They are Javascript-only, <br/>templating is defined in
+  <a href="https://github.com/Kajabi/sage-lib/blob/master/packages/sage-system/lib/toast/toast.template.js" target="_blank"><code>sage-system/lib/toast/toast.template.js</code></a>.
+</p>
+
 <%= sage_component SageButtonGroup, { gap: :sm } do %>
   <%= sage_component SageButton, {
     value: "Toast",
     style: "primary",
     attributes: {
-      "onClick": "Sage.toast.trigger({message:'Toast created.'})",
+      "onClick": "Sage.toast.trigger({text: 'Toast created.'})",
     },
   } %>
 
   <%= sage_component SageButton, {
     value: "Danger Toast",
     style: "danger",
+    raised: true,
     attributes: {
-      "onClick": "Sage.toast.trigger({icon: 'danger', message:'Danger toast created.', type: 'danger'})",
+      "onClick": "Sage.toast.trigger({text: 'An error has occured.', type: 'danger', icon: 'danger'})",
     },
   } %>
 
   <%= sage_component SageButton, {
-    value: "Custom Timer",
+    value: "Custom Icon",
     style: "secondary",
     raised: true,
     attributes: {
-      "onClick": "Sage.toast.trigger({message:'This toast has a 10 second timer.', timer: 10000})",
+      "onClick": "Sage.toast.trigger({text: 'Invitation sent!', icon: 'mail'})",
+    },
+  } %>
+
+  <%= sage_component SageButton, {
+    value: "Custom Timer: 10s",
+    style: "secondary",
+    raised: true,
+    attributes: {
+      "onClick": "Sage.toast.trigger({text: 'This toast has a 10 second timer.', timer: 10000})",
     },
   } %>
 <% end %>
+
+<hr/>
+
+<h3>Non-dismissing Toast patterns</h3>
+<p>Non-dismissable toasts are used in our app to display 'loading' messages or to provide a CTA upon a interaction.</p>
+
+<%= sage_component SageButtonGroup, { gap: :sm } do %>
+  <%= sage_component SageButton, {
+    value: "Example",
+    style: "primary",
+    raised: true,
+    attributes: {
+      "onClick": "showDismissInstructions(Sage.toast.trigger({text: 'I will not dismiss via timer', timer: false}))",
+    },
+  } %>
+
+  <%= sage_component SageButton, {
+    value: "Uploading",
+    style: "secondary",
+    raised: true,
+    attributes: {
+      "onClick": "showDismissInstructions(Sage.toast.trigger({text: 'Uploading image...', icon: 'upload', timer: false}))",
+    },
+  } %>
+
+  <%= sage_component SageButton, {
+    value: "Goal Completion (non-dismissing with link)",
+    style: "secondary",
+    raised: true,
+    attributes: {
+      "onClick": "showDismissInstructions(Sage.toast.trigger({text: 'Congratulations on your success', link: {text: 'Go to next step', href: 'http://app.kajabi.com'}, timer: false}))",
+    },
+  } %>
+
+  <%= sage_component SageButton, {
+    value: "Reset",
+    style: "danger",
+    raised: true,
+    attributes: {
+      "onClick": "Sage.toast.reset()",
+    },
+  } %>
+<% end %>
+
+<script type="text/javascript">
+  const showDismissInstructions = (toastId) => {
+    document.getElementById('dismiss-instructions').innerHTML = `
+      <strong>Toast Id:</strong> <code>${toastId}</code>
+      <br/>
+      <br/>
+      <h4>Dismiss toast with:</h4>
+      <br/>
+      <div class='prettyprint'>
+        <code>Sage.toast.dismiss('${toastId}')</code>
+      </div>
+      <br/>
+      <h4>Dismiss all toasts with:</h4>
+      <br/>
+      <div class='prettyprint'>
+        <code>Sage.toast.reset()</code>
+      </div>
+    `
+  };
+</script>
+<div id="dismiss-instructions"></div>
+
+<hr />
+
+<pre class="prettyprint">
+  <code>
+    // Sage.toast.trigger()
+    // -------------------------------------------------------------
+    // Triggers a toast with a toast options object and
+    // returns the unique id of the toast.
+    //
+    // @param {{ message, icon, type, timer, link = {text, href} }} - Toast options
+    // @returns {unique id}
+    //
+    // Example:
+    const myWonderfulToastId = Sage.toast.trigger({
+        text: 'I will not dismiss via timer',
+        timer: false,
+        icon: 'check',
+        type: 'danger',
+        link: { text: 'next step', href 'example.com' },
+      });
+
+
+    // Sage.toast.dismiss()
+    // -------------------------------------------------------------
+    // Dismisses a toast with a unique id.
+    //
+    // @param {unique id}
+    // @returns {boolean} – `false` if no toast of that ID exists,
+    //                      `true` if exists and successfully dismissed
+    //
+    // Example:
+    Sage.toast.dismiss(myWonderfulToastId);
+
+
+    // Sage.toast.reset()
+    // -------------------------------------------------------------
+    // Removes all toasts from DOM
+    //
+    // @returns {boolean} – `false` if none exist, `true` if removed
+    //
+    // Example:
+    Sage.toast.reset();
+  </code>
+</pre>
