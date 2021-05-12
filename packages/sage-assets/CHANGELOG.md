@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.31.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.31.1...@kajabi/sage-assets@0.31.2) (2021-05-12)
+
+
+### Bug Fixes
+
+* **assets:** added file-loader to deps ([523c824](https://github.com/Kajabi/sage-lib/commit/523c824774f6f0ddb654daa13aa44ada1cd6099d))
+
+
+
+
+
 ## [0.31.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.31.0...@kajabi/sage-assets@0.31.1) (2021-05-12)
 
 
