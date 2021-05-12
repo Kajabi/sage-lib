@@ -44,6 +44,16 @@ Donut.args = {
       value: 153,
       fill: SageTokens.COLOR_PALETTE.RED_300,
     },
+    {
+      name: 'Hungry',
+      value: 80,
+      fill: SageTokens.COLOR_PALETTE.PRIMARY_300,
+    },
+    {
+      name: 'Grumpy',
+      value: 53,
+      fill: SageTokens.COLOR_PALETTE.PURPLE_300,
+    },
   ],
   configs: {
     summary: {

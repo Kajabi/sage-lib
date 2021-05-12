@@ -5,6 +5,16 @@ export const getCentered = (isCentered) => (
   } : {}
 );
 
+export const getDataEntries = (data, entriesLimit) => {
+  if (entriesLimit && data.length > entriesLimit) {
+    const topEntries = data.slice(0, entriesLimit);
+    const remainingValue = data.slice(entriesLimit).reduce((acc, curr) => acc + curr.value, 0);
+    return [...topEntries, { name: 'Other', value: remainingValue }];
+  }
+
+  return [...data];
+};
+
 export const getDonutRadiuses = (size, stroke) => ({
   innerRadius: (size - stroke) / 2,
   outerRadius: size / 2,

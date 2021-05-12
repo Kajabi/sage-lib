@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import * as Recharts from 'recharts';
 import { Summary, Tooltip } from '../parts';
-import { getCentered, getDonutRadiuses, getDonutStartPosition, getTotal } from '../utilities';
+import { getCentered, getDataEntries, getDonutRadiuses, getDonutStartPosition, getTotal } from '../utilities';
 
 export const Donut = ({
   caption,
   centered,
+  combineDataAfterItem,
   donutDiameter,
   donutWidth,
   data,
@@ -27,12 +28,14 @@ export const Donut = ({
     ...rest
   };
 
+  const [selfData, setSelfData] = useState(getDataEntries(data, combineDataAfterItem));
+
   return (
     <>
       <Recharts.ResponsiveContainer width={donutDiameter + paddingInline} aspect={1}>
         <Recharts.PieChart>
           <Recharts.Pie
-            data={data}
+            data={selfData}
             dataKey="value"
             nameKey="name"
             {...configs}
@@ -41,7 +44,7 @@ export const Donut = ({
         </Recharts.PieChart>
       </Recharts.ResponsiveContainer>
       {showSummary && (
-        <Summary chartType="donut" value={valueFormatterFn(getTotal(data))} {...summary} />
+        <Summary chartType="donut" value={valueFormatterFn(getTotal(selfData))} {...summary} />
       )}
     </>
   );
@@ -50,6 +53,7 @@ export const Donut = ({
 Donut.defaultProps = {
   caption: null,
   centered: true,
+  combineDataAfterItem: 3,
   donutDiameter: 192,
   donutWidth: 48,
   paddingInline: 64,
