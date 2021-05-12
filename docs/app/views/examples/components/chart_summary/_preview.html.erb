@@ -1,0 +1,15 @@
+<h3>Default</h3>
+<%= sage_component SageCard, {
+  css_classes: "sage-chart-container",
+  html_attributes: {
+    style: "width: 200px; height: 200px",
+  }
+} do %>
+  <%= sage_component SageChartSummary, {
+    caption: 'current',
+    centered: true,
+    chart_type: 'donut',
+    label: 'New today',
+    value: '6,452',
+  } %>
+<% end %>
