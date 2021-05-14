@@ -6,17 +6,21 @@ export const Tooltip = ({
   active,
   payload,
   contentFormatterFn,
-}) => {
-  console.log('tooltip');
-  if (active && payload && payload.length > 0) {
-    const [target] = payload;
-    return (
-      <TooltipElement content={contentFormatterFn(target)} position={null} />
-    );
-  }
-
-  return null;
-};
+}) => (active && payload && payload.length > 0) ? (
+  <TooltipElement
+    content={(
+      <>
+        {payload.map(({ name, value }, i) => (
+          <React.Fragment key={`${payload.name}-${i}-${payload.value}`}>
+            {contentFormatterFn({ name, value })}<br/>
+          </React.Fragment>
+        ))}
+      </>
+    )}
+    position={null}
+    theme={TooltipElement.THEMES.LIGHT}
+  />
+) : null;
 
 Tooltip.defaultProps = {};
 
