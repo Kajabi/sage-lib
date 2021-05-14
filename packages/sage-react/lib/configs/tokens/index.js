@@ -1,6 +1,7 @@
 import { TOKENS_COLORS, TOKENS_COLOR_PALETTE, TOKENS_COLOR_SLIDERS } from './colors';
 import { TOKENS_GRID_TEMPLATES } from './grid-templates';
 import { TOKENS_ICONS } from './icons';
+import { TOKENS_RECHARTS } from './recharts';
 import { TOKENS_SPACERS } from './spacers';
 
 export const SageTokens = {
@@ -9,5 +10,6 @@ export const SageTokens = {
   COLOR_SLIDERS: TOKENS_COLOR_SLIDERS,
   GRID_TEMPLATES: TOKENS_GRID_TEMPLATES,
   ICONS: TOKENS_ICONS,
+  RECHARTS: TOKENS_RECHARTS,
   SPACERS: TOKENS_SPACERS,
 };
