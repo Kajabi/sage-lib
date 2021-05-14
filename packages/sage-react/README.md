@@ -38,7 +38,7 @@ One time build of the package. Builds Storybook as well.
 
 ### `build:watch`
 
-Continuely watch and build the package
+Continually watch and build the package
 
 ### `lint`
 

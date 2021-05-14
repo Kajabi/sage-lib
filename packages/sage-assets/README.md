@@ -24,11 +24,11 @@ One time build of the SassDoc assets
 
 ### `build:sassdoc:watch`
 
-Continuely watch and build the SassDoc assets
+Continually watch and build the SassDoc assets
 
 ### `build:watch`
 
-Continuely watch and build the package
+Continually watch and build the package
 
 ### `preversion`
 

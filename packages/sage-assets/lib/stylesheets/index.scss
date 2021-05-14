@@ -28,8 +28,6 @@
 @import "utilities/spacer";
 
 // Components
-@import "components/chart_legend";
-@import "components/chart_summary";
 @import "components/alert";
 @import "components/assistant";
 @import "components/avatar";
@@ -40,6 +38,8 @@
 @import "components/card";
 @import "components/card_highlight";
 @import "components/catalog_item";
+@import "components/chart_legend";
+@import "components/chart_summary";
 @import "components/checkbox";
 @import "components/choice";
 @import "components/copy_text";
@@ -81,6 +81,7 @@
 @import "components/search";
 @import "components/sidebar";
 @import "components/sortable";
+@import "components/stat_box";
 @import "components/status_icon";
 @import "components/switch";
 @import "components/tab";

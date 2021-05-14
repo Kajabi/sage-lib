@@ -3,6 +3,54 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.31.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.31.1...@kajabi/sage-assets@0.31.2) (2021-05-12)
+
+
+### Bug Fixes
+
+* **assets:** added file-loader to deps ([523c824](https://github.com/Kajabi/sage-lib/commit/523c824774f6f0ddb654daa13aa44ada1cd6099d))
+
+
+
+
+
+## [0.31.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.31.0...@kajabi/sage-assets@0.31.1) (2021-05-12)
+
+
+### Bug Fixes
+
+* **readme:** one more readme ([75c7894](https://github.com/Kajabi/sage-lib/commit/75c7894b5f21d75c873c0f9f76f08c2139e14f76))
+
+
+
+
+
+# [0.31.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.30.0...@kajabi/sage-assets@0.31.0) (2021-05-12)
+
+
+### Bug Fixes
+
+* **banner:** improve specificity of selectors for close button ([8f45485](https://github.com/Kajabi/sage-lib/commit/8f45485682849a203d42459798cdd11f6651125f))
+* **button:** ensure icon-block-padding custom prop is set correctly ([b7a19bf](https://github.com/Kajabi/sage-lib/commit/b7a19bfcb2846d0448bc542ffcc19392807a1042))
+* **checkbox:** fix alignment with responsive type ([62ebd29](https://github.com/Kajabi/sage-lib/commit/62ebd29ad789afae2341cfd5691b3e2e2a7fba9a))
+* **icon:** repair errant value for circle-8 icon ([4911fe0](https://github.com/Kajabi/sage-lib/commit/4911fe00529acedd9097680f667ebe4e0599d17f))
+* **null-view:** styling changes ([bb0657d](https://github.com/Kajabi/sage-lib/commit/bb0657d8cb37e33ed1cebfcd5fde4e838ca458fc))
+* **panel-controls:** patch border issues in toolbar ([5f98d0d](https://github.com/Kajabi/sage-lib/commit/5f98d0d847534ff6a080e8c48eb8c185ce069c6e))
+* **panel-controls:** remove min-heigh form bulk actions checkbox ([476959d](https://github.com/Kajabi/sage-lib/commit/476959d150ddb3ce760844d473ccc328ad561334))
+* **radio:** fix alignmen with responsive type ([8592615](https://github.com/Kajabi/sage-lib/commit/859261550981eb6766bc9b56fc6b629829f6ae89))
+
+
+### Features
+
+* **icon:** add updated icon fonts ([104ee84](https://github.com/Kajabi/sage-lib/commit/104ee840456950614bd19c28549ee18193a7a18f))
+* **null-view:** linter fix ([5c50357](https://github.com/Kajabi/sage-lib/commit/5c50357832451b470376e0d254a86fab56934354))
+* **null-view:** update syntax to use rem utility ([cfacabf](https://github.com/Kajabi/sage-lib/commit/cfacabf37ccaf5fe2ebf4c1a6d107d251c3de8c9))
+* **rails toast:** toast: Integrate a global container, animate out tooltip polish ([8e96eac](https://github.com/Kajabi/sage-lib/commit/8e96eac0b5e544f056a76c61eb4a676943689b29))
+
+
+
+
+
 # [0.30.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.29.1...@kajabi/sage-assets@0.30.0) (2021-05-05)
 
 

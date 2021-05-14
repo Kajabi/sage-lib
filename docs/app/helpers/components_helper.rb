@@ -253,6 +253,15 @@ module ComponentsHelper
         react_component_slug: "sage-search--default"
       },
       {
+        title: "stat_box",
+        description: "Stat Boxes, for use in the CRM Dashboard, display important statistics for users to make informed decisions about their business.", 
+        scss: "done",
+        rails: "done",
+        react: "done",
+        a11y: "todo",
+        react_component_slug: "sage-statbox--default"
+      },
+      {
         title: "status_icon",
         description: "Display the status of an item",
         scss: "done",

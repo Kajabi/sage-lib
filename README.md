@@ -219,7 +219,7 @@ Install local packages for the main repository and `docs/` path
 
 ### `start` :star:
 
-Continuely compiles packages on changes and starts the applications
+Continually compiles packages on changes and starts the applications
 
 - To visit the primary documentation site: http://localhost:4000/
 - To visit the Storybook (React components) site: http://localhost:4100/
@@ -267,15 +267,15 @@ Run all `watch:*` scripts
 
 ### `watch:assets`
 
-Continuely watch and build the `@kajabi/sage-assets` npm package
+Continually watch and build the `@kajabi/sage-assets` npm package
 
 ### `watch:react`
 
-Continuely watch and build the `@kajabi/sage-react` npm package
+Continually watch and build the `@kajabi/sage-react` npm package
 
 ### `watch:system`
 
-Continuely watch and build the `@kajabi/sage-system` npm package
+Continually watch and build the `@kajabi/sage-system` npm package
 
 ## Contributing
 
