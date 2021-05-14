@@ -43,8 +43,17 @@ module ComponentsHelper
         react_component_slug: "sage-card--card-highlight"
       },
       {
+        title: "chart_legend",
+        description: "Sage charts legend are used primarily in React-based Recharts bar charts when multiple bars are used for a given data point.", 
+        scss: "done",
+        rails: "done",
+        react: "done",
+        a11y: "done",
+        react_component_slug: "sage-chart--multiple-bars"
+      },
+      {
         title: "chart_summary",
-        description: "Chart summaries are used primary in React-based Recharts diagrams to display summary information with Sage type styling.", 
+        description: "Chart summaries are used primarily in React-based Recharts diagrams to display summary information with Sage type styling.", 
         scss: "done",
         rails: "done",
         react: "done",
