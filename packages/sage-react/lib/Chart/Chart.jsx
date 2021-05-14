@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { EmptyState } from '../EmptyState';
 import { Loader } from '../Loader';
-import { Donut } from './types';
+import { Bar, Donut } from './types';
 import { CHART_TYPES, dataPropTypes } from './configs';
 import { SageTokens } from '../configs';
 
@@ -23,6 +23,9 @@ export const Chart = ({
 
     let chart = null;
     switch(type) {
+      case CHART_TYPES.BAR:
+        chart = <Bar data={data} {...configs} />
+        break;
       case CHART_TYPES.DONUT:
         chart = <Donut data={data} {...configs} />
         break;

@@ -7,7 +7,7 @@ export default {
   title: 'Sage/Chart',
   component: Chart,
   args: {
-    type: Chart.TYPES.DONUT,
+    type: Chart.TYPES.BAR,
   },
   argTypes: {
     ...selectArgs({
@@ -25,9 +25,91 @@ NoData.args = {
   loading: false,
 };
 
+export const Bar = Template.bind({});
+Bar.args = {
+  configs: {
+    width: 420,
+  },
+  data: [
+    {
+      name: 'Healthy',
+      value: 2467,
+    },
+    {
+      name: 'Unengaged',
+      value: 536,
+    },
+    {
+      name: 'Inactive',
+      value: 153,
+    },
+    {
+      name: 'Hungry',
+      value: 80,
+    },
+    {
+      name: 'Grumpy',
+      value: 53,
+    },
+  ],
+  loading: false,
+};
+
+export const MultipleBars = Template.bind({});
+MultipleBars.args = {
+  configs: {
+    bars: [
+      {
+        dataKey: 'thisYear',
+        name: 'This Year',
+        fill: SageTokens.COLOR_PALETTE.SAGE_200,
+      },
+      {
+        dataKey: 'lastYear',
+        name: 'Last Year',
+        fill: SageTokens.COLOR_PALETTE.YELLOW_300,
+      },
+    ],
+    showLegend: true,
+  },
+  data: [
+    {
+      name: 'Healthy',
+      lastYear: 2345,
+      thisYear: 2467,
+    },
+    {
+      name: 'Unengaged',
+      lastYear: 437,
+      thisYear: 536,
+    },
+    {
+      name: 'Inactive',
+      lastYear: 185,
+      thisYear: 153,
+    },
+    {
+      name: 'Hungry',
+      lastYear: 83,
+      thisYear: 80,
+    },
+    {
+      name: 'Grumpy',
+      lastYear: 60,
+      thisYear: 53,
+    },
+  ],
+  loading: false,
+};
+
 export const Donut = Template.bind({});
 Donut.args = {
-  loading: false,
+  configs: {
+    summary: {
+      label: 'Total subscribed',
+      caption: 'current',
+    },
+  },
   data: [
     {
       name: 'Healthy',
@@ -55,10 +137,6 @@ Donut.args = {
       fill: SageTokens.COLOR_PALETTE.PURPLE_300,
     },
   ],
-  configs: {
-    summary: {
-      label: 'Total subscribed',
-      caption: 'current',
-    },
-  },
+  loading: false,
+  type: Chart.TYPES.DONUT,
 };
