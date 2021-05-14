@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import * as Recharts from 'recharts';
 import { Legend, Tooltip as SageTooltip } from '../parts';
@@ -18,42 +18,37 @@ export const Bar = ({
   width,
   ...rest
 }) => {
-  const [selfData, setSelfData] = useState(data);
   const { BarChart, CartesianGrid, Tooltip, XAxis, YAxis } = { ...rest };
-  const gridConfigs = {
-    stroke: SageTokens.COLOR_PALETTE.GREY_200,
-  };
-  const tickConfigs = {
-    fill: SageTokens.COLOR_PALETTE.CHARCOAL_100,
-    fontSize: 12,
-  };
 
   return (
     <>
       <Recharts.ResponsiveContainer width={width} aspect={aspect}>
         <Recharts.BarChart
-          data={selfData}
+          data={data}
           {...SageTokens.RECHARTS.BarChart}
           {...BarChart}
         >
-          <Recharts.Tooltip
-            {...SageTokens.RECHARTS.Tooltip}
-            content={<SageTooltip contentFormatterFn={tooltipContentFormatterFn} />}
-            {...Tooltip}
-          />
-          {CartesianGrid && (
+          {(Tooltip !== false) && (
+            <Recharts.Tooltip
+              {...SageTokens.RECHARTS.Tooltip}
+              content={<SageTooltip contentFormatterFn={tooltipContentFormatterFn} />}
+              {...Tooltip}
+            />
+          )}
+          {(CartesianGrid !== false) && (
             <Recharts.CartesianGrid
               {...SageTokens.RECHARTS.CartesianGrid}
               {...CartesianGrid}
             />
           )}
-          {XAxis && (
+          {(XAxis !== false) && (
             <Recharts.XAxis
+              dataKey="name"
               {...SageTokens.RECHARTS.XAxis}
               {...XAxis}
             />
           )}
-          {YAxis && (
+          {(YAxis !== false) && (
             <Recharts.YAxis
               {...SageTokens.RECHARTS.XAxis}
               {...YAxis}
@@ -78,13 +73,10 @@ Bar.defaultProps = {
     fill: SageTokens.COLOR_PALETTE.SAGE_200,
     name: 'Value'
   }],
-  CartesianGrid: {},
   showLegend: false,
   tooltipContentFormatterFn: defaultTooltipContentFormatterFn,
   valueFormatterFn: defaultValueFormatterFn,
   width: 720,
-  XAxis: { dataKey: 'name' },
-  YAxis: {},
 };
 
 Bar.propTypes = {
@@ -92,6 +84,7 @@ Bar.propTypes = {
   bars: PropTypes.arrayOf(PropTypes.shape({
     dataKey: PropTypes.string,
     fill: PropTypes.string,
+    name: PropTypes.string,
   })),
   data: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string.isRequired,

@@ -22,12 +22,12 @@ export const Chart = ({
     }
 
     let chart = null;
-    switch(type) {
+    switch (type) {
       case CHART_TYPES.BAR:
-        chart = <Bar data={data} {...configs} />
+        chart = <Bar data={data} {...configs} />;
         break;
       case CHART_TYPES.DONUT:
-        chart = <Donut data={data} {...configs} />
+        chart = <Donut data={data} {...configs} />;
         break;
       default:
         break;

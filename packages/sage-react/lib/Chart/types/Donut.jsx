@@ -36,7 +36,7 @@ export const Donut = ({
 
   const { Tooltip, PieChart, Pie } = { ...rest };
 
-  const [selfData, setSelfData] = useState(getDataEntries(data, combineDataAfterItem));
+  const [selfData] = useState(getDataEntries(data, combineDataAfterItem));
 
   return (
     <>
@@ -49,11 +49,13 @@ export const Donut = ({
             {...propConfigs}
             {...Pie}
           />
-          <Recharts.Tooltip 
-            {...SageTokens.RECHARTS.Tooltip}
-            content={<SageTooltip contentFormatterFn={tooltipContentFormatterFn} />}
-            {...Tooltip}
-          />
+          {(Tooltip !== false) && (
+            <Recharts.Tooltip
+              {...SageTokens.RECHARTS.Tooltip}
+              content={<SageTooltip contentFormatterFn={tooltipContentFormatterFn} />}
+              {...Tooltip}
+            />
+          )}
         </Recharts.PieChart>
       </Recharts.ResponsiveContainer>
       {showSummary && (
@@ -72,13 +74,14 @@ Donut.defaultProps = {
   paddingBlock: 64,
   startPosition: 'top',
   showSummary: true,
-  smmary: null,
+  summary: null,
   tooltipContentFormatterFn: defaultTooltipContentFormatterFn,
   valueFormatterFn: defaultValueFormatterFn,
 };
 
 Donut.propTypes = {
   centered: PropTypes.bool,
+  combineDataAfterItem: PropTypes.number,
   donutDiameter: PropTypes.number,
   donutWidth: PropTypes.number,
   data: PropTypes.arrayOf(PropTypes.shape({

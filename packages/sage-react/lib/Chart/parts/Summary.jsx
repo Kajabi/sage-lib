@@ -37,6 +37,7 @@ Summary.defaultProps = {
   caption: null,
   centered: true,
   chartType: null,
+  className: null,
   label: null,
 };
 
@@ -44,6 +45,7 @@ Summary.propTypes = {
   caption: PropTypes.string,
   chartType: PropTypes.oneOf(Object.values(CHART_TYPES)),
   centered: PropTypes.bool,
+  className: PropTypes.string,
   label: PropTypes.string,
   value: PropTypes.string.isRequired,
 };
