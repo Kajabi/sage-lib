@@ -1,11 +1,11 @@
-export const defaultValueFormatterFn = val => new Intl.NumberFormat().format(val);
+export const defaultValueFormatterFn = (val) => new Intl.NumberFormat().format(val);
 
 export const defaultTooltipContentFormatterFn = ({ name, value }) => `${name} : ${defaultValueFormatterFn(value)}`;
 
 export const getCentered = (isCentered) => (
   isCentered ? {
-    cx: "50%",
-    cy: "50%",
+    cx: '50%',
+    cy: '50%',
   } : {}
 );
 
@@ -25,27 +25,25 @@ export const getDonutRadiuses = (size, stroke) => ({
 });
 
 export const getDonutStartPosition = (position) => {
-  let startAngle,
-    endAngle = -360;
-  switch(position) {
+  const endAngle = -360;
+  let startAngle;
+  switch (position) {
     case 'right':
       startAngle = 0;
-    break;
+      break;
     case 'bottom':
       startAngle = 270;
-    break;
+      break;
     case 'left':
       startAngle = 180;
-    break;
+      break;
     case 'top':
     default:
       startAngle = 90;
-    break;
+      break;
   }
 
   return { startAngle, endAngle };
 };
 
-export const getTotal = (data) => {
-  return data.reduce((acc, curr) => acc + curr.value, 0);
-};
+export const getTotal = (data) => data.reduce((acc, curr) => acc + curr.value, 0);

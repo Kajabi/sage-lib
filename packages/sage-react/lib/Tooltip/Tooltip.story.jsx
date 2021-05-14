@@ -30,8 +30,6 @@ const Template = (args) => <Tooltip {...args} />;
 
 export const Default = Template.bind({});
 
-export const Static = () => {
-  return (
-    <Tooltip.Element content="Testing static tooltip" />
-  );
-};
+export const Static = () => (
+  <Tooltip.Element content="Testing static tooltip" />
+);
