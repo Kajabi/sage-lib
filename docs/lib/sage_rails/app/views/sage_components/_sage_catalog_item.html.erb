@@ -4,6 +4,7 @@
   sage-catalog-item
   <%= "sage-catalog-item--loading" if is_loading %>
   <%= "sage-catalog-item--img" if component.image.present? %>
+  <%= "sage-catalog-item--img-#{component.image_aspect_ratio}" if component.image_aspect_ratio.present? %>
   <%= "sage-catalog-item--icon" if component.icon.present? %>
   <%= component.generated_css_classes %>
   "
