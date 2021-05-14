@@ -10,6 +10,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  z-index: sage-z-index(default);
   text-align: center;
   pointer-events: none;
 }
