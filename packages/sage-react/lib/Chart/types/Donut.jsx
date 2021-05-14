@@ -1,11 +1,19 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import * as Recharts from 'recharts';
-import { Summary, Tooltip } from '../parts';
-import { getCentered, getDataEntries, getDonutRadiuses, getDonutStartPosition, getTotal } from '../utilities';
+import { SageTokens } from '../../configs';
+import { Summary, Tooltip as SageTooltip } from '../parts';
+import {
+  defaultTooltipContentFormatterFn,
+  defaultValueFormatterFn,
+  getCentered,
+  getDataEntries,
+  getDonutRadiuses,
+  getDonutStartPosition,
+  getTotal,
+} from '../utilities';
 
 export const Donut = ({
-  caption,
   centered,
   combineDataAfterItem,
   donutDiameter,
@@ -17,30 +25,35 @@ export const Donut = ({
   showSummary,
   summary,
   tooltipContentFormatterFn,
-  title,
   valueFormatterFn,
   ...rest
 }) => {
-  const configs = {
+  const propConfigs = {
     ...getDonutRadiuses(donutDiameter, donutWidth),
     ...getDonutStartPosition(startPosition),
     ...getCentered(centered),
-    ...rest
   };
+
+  const { Tooltip, PieChart, Pie } = { ...rest };
 
   const [selfData, setSelfData] = useState(getDataEntries(data, combineDataAfterItem));
 
   return (
     <>
       <Recharts.ResponsiveContainer width={donutDiameter + paddingInline} aspect={1}>
-        <Recharts.PieChart>
+        <Recharts.PieChart {...PieChart}>
           <Recharts.Pie
             data={selfData}
             dataKey="value"
             nameKey="name"
-            {...configs}
+            {...propConfigs}
+            {...Pie}
           />
-          <Recharts.Tooltip content={<Tooltip contentFormatterFn={tooltipContentFormatterFn} />} />
+          <Recharts.Tooltip 
+            {...SageTokens.RECHARTS.Tooltip}
+            content={<SageTooltip contentFormatterFn={tooltipContentFormatterFn} />}
+            {...Tooltip}
+          />
         </Recharts.PieChart>
       </Recharts.ResponsiveContainer>
       {showSummary && (
@@ -51,7 +64,6 @@ export const Donut = ({
 };
 
 Donut.defaultProps = {
-  caption: null,
   centered: true,
   combineDataAfterItem: 3,
   donutDiameter: 192,
@@ -61,13 +73,11 @@ Donut.defaultProps = {
   startPosition: 'top',
   showSummary: true,
   smmary: null,
-  title: null,
-  tooltipContentFormatterFn: ({ name, value }) => `${name} : ${value}`,
-  valueFormatterFn: val => new Intl.NumberFormat().format(val),
+  tooltipContentFormatterFn: defaultTooltipContentFormatterFn,
+  valueFormatterFn: defaultValueFormatterFn,
 };
 
 Donut.propTypes = {
-  caption: PropTypes.string,
   centered: PropTypes.bool,
   donutDiameter: PropTypes.number,
   donutWidth: PropTypes.number,
@@ -85,7 +95,6 @@ Donut.propTypes = {
     label: PropTypes.string,
     value: PropTypes.string,
   }),
-  title: PropTypes.string,
   tooltipContentFormatterFn: PropTypes.func,
   valueFormatterFn: PropTypes.func,
 };

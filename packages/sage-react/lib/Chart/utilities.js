@@ -1,3 +1,7 @@
+export const defaultValueFormatterFn = val => new Intl.NumberFormat().format(val);
+
+export const defaultTooltipContentFormatterFn = ({ name, value }) => `${name} : ${defaultValueFormatterFn(value)}`;
+
 export const getCentered = (isCentered) => (
   isCentered ? {
     cx: "50%",
