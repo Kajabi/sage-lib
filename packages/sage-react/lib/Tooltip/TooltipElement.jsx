@@ -85,6 +85,10 @@ export const TooltipElement = ({
   );
 };
 
+TooltipElement.POSITIONS = TOOLTIP_POSITIONS;
+TooltipElement.SIZES = TOOLTIP_SIZES;
+TooltipElement.THEMES = TOOLTIP_THEMES;
+
 TooltipElement.defaultProps = {
   parentDomRect: null,
   position: TOOLTIP_POSITIONS.DEFAULT,
