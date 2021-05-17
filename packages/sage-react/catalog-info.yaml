@@ -26,6 +26,10 @@ metadata:
     - react
     - javascript
     - storybook
+  links:
+    - url: https://sage-lib-storybook.herokuapp.com/
+      title: Storybook Site
+      icon: dashboard
 spec:
   type: website
   lifecycle: production
