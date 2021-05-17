@@ -39,7 +39,7 @@ spec:
   owner: developer-experience
   system: sage
 ---
-apiVersion: backstage.io
+apiVersion: backstage.io/v1alpha1
 kind: Location
 metadata:
   name: sage-lib.mono-repo
