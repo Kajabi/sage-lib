@@ -1,0 +1,13 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: sage-system
+  description: System-level JavaScript for the Sage Design System
+  tags:
+    - javascript
+spec:
+  type: library
+  lifecycle: production
+  owner: user-experience
+  system: sage
+  subcomponentOf: sage-lib
