@@ -5,6 +5,8 @@ metadata:
   description: System-level JavaScript for the Sage Design System
   tags:
     - javascript
+  annotations:
+    circleci.com/project-slug: github/Kajabi/sage-lib
 spec:
   type: library
   lifecycle: production
