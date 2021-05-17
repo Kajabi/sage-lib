@@ -1,0 +1,20 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: sage-docs-site
+  description: The documentation site for Sage
+  tags:
+    - ruby
+    - rails
+    - javascript
+    - documentation
+  links:
+    - url: https://sage-lib-documentation.herokuapp.com/pages/index
+      title: Public Documentation Site
+      icon: dashboard
+spec:
+  type: website
+  lifecycle: production
+  owner: user-experience
+  system: sage
+  subcomponentOf: sage-lib
