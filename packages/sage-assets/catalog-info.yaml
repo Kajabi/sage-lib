@@ -28,6 +28,10 @@ metadata:
     - sassdocs
     - scss
     - sass
+  links:
+    - url: https://sage-lib-sassdocs.herokuapp.com/
+      title: SassDocs Site
+      icon: dashboard
 spec:
   type: website
   lifecycle: production
