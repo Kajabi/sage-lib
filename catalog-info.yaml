@@ -33,6 +33,8 @@ metadata:
     - javascript
     - lerna
     - monorepo
+  annotations:
+    circleci.com/project-slug: github/Kajabi/sage-lib
 spec:
   type: tool
   lifecycle: production

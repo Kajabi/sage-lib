@@ -6,6 +6,8 @@ metadata:
   tags:
     - integration
     - rails
+  annotations:
+    circleci.com/project-slug: github/Kajabi/sage-lib
 spec:
   type: library
   lifecycle: production
