@@ -194,8 +194,10 @@
 ///
 /// Adds the basic default card setup including grid, spacing, and border treatment
 ///
-@mixin sage-card() {
-  @include sage-grid-card();
+@mixin sage-card($grid: true) {
+  @if ($grid) {
+    @include sage-grid-card();
+  }
 
   padding: sage-spacing(card);
   border: sage-border();

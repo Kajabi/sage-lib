@@ -8,16 +8,11 @@ export default {
   argTypes: {
     // As needed, use this for elaboration of token properties
     // such as shown below for icons
-    ...selectArgs({
-      // icon: SageTokens.ICONS,
-      change: {
-        type: StatBox.TYPE
-      }
-    }),
+    ...selectArgs({}),
   },
   args: {
     // As needed, provide overall story defaults here
-    data: 65535,
+    data: '401',
     change: {
       type: StatBox.TYPE.DEFAULT,
       value: '54%',

@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Icon } from '../Icon';
 import { Label } from '../Label';
 import { LABEL_COLORS, TYPE } from './configs'; // component configurations as needed
 
@@ -14,16 +13,14 @@ export const StatBox = ({
   title,
 }) => {
   const renderLabelStatus = () => {
-    let icon = null;
+    const icon = change.icon || null;
     let color;
 
     switch (change.type) {
-      case StatBox.TYPE.UP:
-        icon = Icon.ICONS.CARET_UP;
+      case StatBox.TYPE.POSITIVE:
         color = StatBox.LABEL_COLORS.PUBLISHED;
         break;
-      case StatBox.TYPE.DOWN:
-        icon = Icon.ICONS.CARET_DOWN;
+      case StatBox.TYPE.NEGATIVE:
         color = StatBox.LABEL_COLORS.DANGER;
         break;
       default:
@@ -42,11 +39,13 @@ export const StatBox = ({
         <h2 className="sage-stat-box__title">{title}</h2>
         {popover}
       </header>
-      <main className="sage-stat-box__body sage-grid-template-ete">
-        <p className="sage-stat-box__data">{data}</p>
-        {timeframe && (
-          <span className="sage-stat-box__timeframe">{timeframe}</span>
-        )}
+      <main className="sage-stat-box__body sage-grid-template-te">
+        <p className="sage-stat-box__data">
+          {data}
+          {timeframe && (
+            <span className="sage-stat-box__timeframe">{timeframe}</span>
+          )}
+        </p>
         {customLabel || (change && (renderLabelStatus()))}
       </main>
       {link && (
@@ -63,22 +62,24 @@ StatBox.TYPE = TYPE;
 
 StatBox.defaultProps = {
   change: {
-    type: StatBox.TYPE.DOWN,
-    value: '38%',
+    icon: null,
+    type: StatBox.TYPE.DEFAULT,
+    value: null,
   },
   customLabel: null,
   link: {
     href: null,
-    value: 'View More',
+    value: null,
   },
   popover: null,
-  timeframe: 'Current',
+  timeframe: null,
 };
 
 StatBox.propTypes = {
   customLabel: PropTypes.node,
-  data: PropTypes.number.isRequired,
+  data: PropTypes.string.isRequired,
   change: PropTypes.shape({
+    icon: PropTypes.string.isRequired,
     type: PropTypes.oneOf(Object.values(StatBox.TYPE)).isRequired,
     value: PropTypes.string.isRequired,
   }),
