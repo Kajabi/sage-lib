@@ -2,7 +2,6 @@ class SageStatBox < SageComponent
   set_attribute_schema({
     custom_label: [:optional, NilClass, String],
     change: [:optional, {
-      icon: String,
       type: Set.new(["positive", "negative", "neutral"]),
       value: String,
     }],
