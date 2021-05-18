@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Icon } from '../Icon';
 import { Label } from '../Label';
 import { LABEL_COLORS, TYPE } from './configs'; // component configurations as needed
 
@@ -13,14 +14,16 @@ export const StatBox = ({
   title,
 }) => {
   const renderLabelStatus = () => {
-    const icon = change.icon || null;
+    let icon = null;
     let color;
 
     switch (change.type) {
       case StatBox.TYPE.POSITIVE:
+        icon = Icon.ICONS.CARET_UP;
         color = StatBox.LABEL_COLORS.PUBLISHED;
         break;
       case StatBox.TYPE.NEGATIVE:
+        icon = Icon.ICONS.CARET_DOWN;
         color = StatBox.LABEL_COLORS.DANGER;
         break;
       default:
@@ -62,7 +65,6 @@ StatBox.TYPE = TYPE;
 
 StatBox.defaultProps = {
   change: {
-    icon: null,
     type: StatBox.TYPE.DEFAULT,
     value: null,
   },
@@ -79,7 +81,6 @@ StatBox.propTypes = {
   customLabel: PropTypes.node,
   data: PropTypes.string.isRequired,
   change: PropTypes.shape({
-    icon: PropTypes.string.isRequired,
     type: PropTypes.oneOf(Object.values(StatBox.TYPE)).isRequired,
     value: PropTypes.string.isRequired,
   }),
