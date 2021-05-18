@@ -1,15 +1,13 @@
 <div class="docs-hero" style="background-image: url(<%= image_url "hero.jpg" %>);">
-  <%= sage_component SageContainer, { size: "md" } do %>
+  <%= sage_component SageContainer, { size: "md", css_classes: "sage-type" } do %>
     <header class="sage-header">
       <%= render "application/nav" %>
     </header>
-    <%= sage_component SageGridRow, {} do %> 
-      <%= sage_component SageGridCol, { breakpoint: "md", size: "4" } do %> 
+    <%= sage_component SageGridRow, {} do %>
+      <%= sage_component SageGridCol, { breakpoint: "md", size: "4" } do %>
         <%= image_tag "sage_icon.png", style: "max-width:70px;height:auto", loading: "lazy" %>
-        <div class="sage-type">
           <h1 class="docs-hero__title">Building with Sage</h1>
           <p>Our system is our source of truth, providing everything you need to build the best experiences for all Kajabi entrepreneurs.</p>
-        </div>
         <%= sage_component SageButtonGroup, { gap: :sm, spacer: { top: :lg } } do %>
           <%= sage_component SageButton, {
             value: "Get Started",
@@ -35,7 +33,7 @@
           } %>
         <% end %>
       <% end %>
-      <%= sage_component SageGridCol, { breakpoint: "md", size: "8" } do %> 
+      <%= sage_component SageGridCol, { breakpoint: "md", size: "8" } do %>
         <%= image_tag "sage_ui.png", class: "docs-hero__img", loading: "lazy", alt: "An example of a Sage component and its HTML markup" %>
       <% end %>
     <% end %>

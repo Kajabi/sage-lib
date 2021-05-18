@@ -1,5 +1,5 @@
 <h3 class="t-sage-heading-6">Standard link</h3>
-<%= sage_component SagePanelStack, {} do %>
+<%= sage_component SagePanelStack, { css_classes: "sage-type" } do %>
   <%= sage_component SageLink, {
     url: "#",
     label: "Standard link",
@@ -30,7 +30,7 @@
 <% end %>
 
 <h3 class="t-sage-heading-6">External links</h3>
-<%= sage_component SagePanelStack, {} do %>
+<%= sage_component SagePanelStack, { css_classes: "sage-type" } do %>
   <%= sage_component SageLink, {
     url: "https://example.com",
     label: "External link",
@@ -62,7 +62,7 @@
 <% end %>
 
 <h3 class="t-sage-heading-6">Help/Info links</h3>
-<%= sage_component SagePanelStack, {} do %>
+<%= sage_component SagePanelStack, { css_classes: "sage-type" } do %>
   <%= sage_component SageLink, {
     url: "#",
     label: "Get help",
