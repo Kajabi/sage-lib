@@ -20,7 +20,7 @@ end
       <%= component.popover.html_safe %>
     <% end %>
   </header>
-  <main class="sage-stat-box__body sage-grid-template-te">
+  <div class="sage-stat-box__body sage-grid-template-te">
     <p class="sage-stat-box__data">
       <%= component.data %>
       <% if component.timeframe.present? %>
@@ -32,7 +32,7 @@ end
     <% elsif component.change.present? %>
       <%= sage_component SageLabel, label_configs %>
     <% end %>
-  </main>
+  </div>
   <% if component.link.present? %>
     <footer class="sage-stat-box__footer">
       <a class="sage-stat-box__link" href="<%= component.link[:href] %>"><%= component.link[:value] %></a>

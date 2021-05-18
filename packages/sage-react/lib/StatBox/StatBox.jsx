@@ -42,7 +42,7 @@ export const StatBox = ({
         <h2 className="sage-stat-box__title">{title}</h2>
         {popover}
       </header>
-      <main className="sage-stat-box__body sage-grid-template-te">
+      <div className="sage-stat-box__body sage-grid-template-te">
         <p className="sage-stat-box__data">
           {data}
           {timeframe && (
@@ -50,7 +50,7 @@ export const StatBox = ({
           )}
         </p>
         {customLabel || (change && (renderLabelStatus()))}
-      </main>
+      </div>
       {link && (
         <footer className="sage-stat-box__footer">
           <a className="sage-stat-box__link" href={link.href}>{link.value}</a>
