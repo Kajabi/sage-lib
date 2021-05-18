@@ -6,7 +6,7 @@
 
 .sage-stat-box {
   // Styles here
-  @include sage-card();
+  @include sage-card($grid: false);
 }
 
 .sage-stat-box__body,
@@ -26,6 +26,7 @@
 .sage-stat-box__title {
   @extend %t-sage-body-small-med;
   margin-right: sage-spacing(xs);
+  color: sage-color(charcoal, 200);
 }
 
 .sage-stat-box__data {
@@ -34,10 +35,13 @@
 
 .sage-stat-box__timeframe {
   @extend %t-sage-body-xsmall;
+  margin-left: sage-spacing(xs);
+  color: sage-color(charcoal, 100);
 }
 
 .sage-stat-box__link {
   @extend %t-sage-body-med;
+  margin-top: sage-spacing(xs);
   &::after {
     @include sage-icon-base(arrow-right);
     margin-left: sage-spacing(xs);

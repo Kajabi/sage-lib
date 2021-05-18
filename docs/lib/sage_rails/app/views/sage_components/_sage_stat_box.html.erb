@@ -1,13 +1,14 @@
 <% 
 change_value = component.change.present? ? component.change[:value] : "No change"
 change_type = component.change.present? ? component.change[:type] : "neutral"
+change_icon = component.change.present? ? component.change[:icon] : ""
 label_configs = { color: "draft", value: change_value } 
-if change_type == "up"
-  label_configs = { color: "published", value: change_value, icon: "caret-up" } 
-elsif change_type == "down"
-  label_configs = { color: "danger", value: change_value, icon: "caret-down" } 
+if change_type == "positive"
+  label_configs = { color: "published", value: change_value, icon: change_icon } 
+elsif change_type == "negative"
+  label_configs = { color: "danger", value: change_value, icon: change_icon } 
 elsif change_type == "neutral"
-  label_configs = { color: "draft", value: change_value } 
+  label_configs = { color: "draft", value: change_value, icon: change_icon } 
 end
 %>
 <article
@@ -20,11 +21,13 @@ end
       <%= component.popover.html_safe %>
     <% end %>
   </header>
-  <main class="sage-stat-box__body sage-grid-template-ete">
-    <p class="sage-stat-box__data"><%= component.data %></p>
-    <% if component.timeframe.present? %>
-      <span class="sage-stat-box__timeframe"><%= component.timeframe %></span>
-    <% end %>
+  <main class="sage-stat-box__body sage-grid-template-te">
+    <p class="sage-stat-box__data">
+      <%= component.data %>
+      <% if component.timeframe.present? %>
+        <span class="sage-stat-box__timeframe"><%= component.timeframe %></span>
+      <% end %>
+    </p>
     <% if component.custom_label.present? %>
       <%= component.custom_label.html_safe %>
     <% elsif component.change.present? %>
