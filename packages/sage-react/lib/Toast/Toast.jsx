@@ -4,17 +4,17 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import { SageTokens } from '../configs';
 import { Icon } from '../Icon';
-import { TOAST_COLORS } from './configs';
+import { TOAST_TYPES } from './configs';
 
 export const Toast = ({
   className,
-  color,
   description,
   icon,
   isActive,
   onDismiss,
   timeout,
   link,
+  type,
   title,
 }) => {
   const [isDismissed, setDismissed] = useState(!isActive);
@@ -53,16 +53,32 @@ export const Toast = ({
     'sage-toast',
     className,
     {
-      [`sage-toast--style-${color}`]: color,
+      [`sage-toast--style-${type}`]: type,
     }
   );
 
   const id = uuid();
 
+  const renderAsset = () => {
+    if (type === Toast.TYPES.LOADING) {
+      return (
+        <svg className="sage-toast__spinner" aria-hidden="true" viewBox="25 25 50 50">
+          <circle className="sage-toast__spinner-path" cx="50" cy="50" r="20" fill="none" stroke="0072EF" strokeWidth="4" />
+        </svg>
+      );
+    }
+    if (icon) {
+      return (
+        <Icon className="sage-toast__icon" icon={icon} />
+      );
+    }
+    return false;
+  };
+
   return !isDismissed && (
     <div className="sage-toast-container">
       <dialog open className={classNames} aria-labelledby={`sage-toast-label-${id}`}>
-        {icon && <Icon className="sage-toast__icon" icon={icon} />}
+        {renderAsset()}
 
         <output
           className="sage-toast__value"
@@ -96,11 +112,10 @@ export const Toast = ({
   );
 };
 
-Toast.COLORS = TOAST_COLORS;
+Toast.TYPES = TOAST_TYPES;
 
 Toast.defaultProps = {
   className: null,
-  color: TOAST_COLORS.DEFAULT,
   description: null,
   icon: null,
   isActive: false,
@@ -108,11 +123,11 @@ Toast.defaultProps = {
   timeout: 4500,
   link: null,
   title: null,
+  type: Toast.TYPES.DEFAULT,
 };
 
 Toast.propTypes = {
   className: PropTypes.string,
-  color: PropTypes.oneOf(Object.values(TOAST_COLORS)),
   description: PropTypes.string,
   icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),
   isActive: PropTypes.bool,
@@ -125,5 +140,6 @@ Toast.propTypes = {
     text: PropTypes.string,
     href: PropTypes.string,
   }),
+  type: PropTypes.oneOf(Object.values(Toast.TYPES)),
   title: PropTypes.string,
 };

@@ -6,6 +6,6 @@ export const LABEL_COLORS = {
 
 export const TYPE = {
   DEFAULT: 'neutral',
-  DOWN: 'down',
-  UP: 'up',
+  NEGATIVE: 'negative',
+  POSITIVE: 'positive',
 };

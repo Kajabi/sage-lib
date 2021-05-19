@@ -6,7 +6,7 @@
 
 
 .sage-link--launch,
-.sage-type a[target="_blank"]:not(.sage-link--no-launch) {
+.sage-type a[target="_blank"]:not(.sage-link--no-launch):not([class*="icon-right-launch"]) {
   &::after {
     margin-left: sage-spacing(2xs);
     margin-right: sage-spacing(2xs);
