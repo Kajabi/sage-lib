@@ -28,6 +28,9 @@
 @import "utilities/spacer";
 
 // Components
+@import "components/stat_box";
+@import "components/chart_legend";
+@import "components/chart_summary";
 @import "components/alert";
 @import "components/assistant";
 @import "components/avatar";
@@ -93,3 +96,4 @@
 // Vendor Modifications
 @import "vendor/tinymcev4";
 @import "vendor/parsley";
+@import "vendor/recharts";

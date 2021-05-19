@@ -43,6 +43,24 @@ module ComponentsHelper
         react_component_slug: "sage-card--card-highlight"
       },
       {
+        title: "chart_legend",
+        description: "Sage charts legend are used primarily in React-based Recharts bar charts when multiple bars are used for a given data point.", 
+        scss: "done",
+        rails: "done",
+        react: "done",
+        a11y: "done",
+        react_component_slug: "sage-chart--multiple-bars"
+      },
+      {
+        title: "chart_summary",
+        description: "Chart summaries are used primarily in React-based Recharts diagrams to display summary information with Sage type styling.", 
+        scss: "done",
+        rails: "done",
+        react: "done",
+        a11y: "done",
+        react_component_slug: "sage-chart--donut"
+      },
+      {
         title: "checkbox",
         description: "Checkboxes provide users with selectable options like toggling a single setting or selecting multiple options from a list.",
         scss: "done",
@@ -233,6 +251,15 @@ module ComponentsHelper
         react: "todo",
         a11y: "doing",
         react_component_slug: "sage-search--default"
+      },
+      {
+        title: "stat_box",
+        description: "Stat Boxes, for use in the CRM Dashboard, display important statistics for users to make informed decisions about their business.", 
+        scss: "done",
+        rails: "done",
+        react: "done",
+        a11y: "todo",
+        react_component_slug: "sage-statbox--default"
       },
       {
         title: "status_icon",

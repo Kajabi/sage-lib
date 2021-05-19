@@ -1,0 +1,41 @@
+<% 
+change_value = component.change.present? ? component.change[:value] : "No change"
+change_type = component.change.present? ? component.change[:type] : "neutral"
+label_configs = { color: "draft", value: change_value } 
+if change_type == "positive"
+  label_configs = { color: "published", value: change_value, icon: "caret-up" } 
+elsif change_type == "negative"
+  label_configs = { color: "danger", value: change_value, icon: "caret-down" } 
+elsif change_type == "neutral"
+  label_configs = { color: "draft", value: change_value, } 
+end
+%>
+<article
+  class="sage-stat-box <%= component.generated_css_classes %>"
+  <%= component.generated_html_attributes.html_safe %>
+>
+  <header class="sage-stat-box__header">
+    <h2 class="sage-stat-box__title"><%= component.title %></h2>
+    <% if component.popover.present? %>
+      <%= component.popover.html_safe %>
+    <% end %>
+  </header>
+  <div class="sage-stat-box__body sage-grid-template-te">
+    <p class="sage-stat-box__data">
+      <%= component.data %>
+      <% if component.timeframe.present? %>
+        <span class="sage-stat-box__timeframe"><%= component.timeframe %></span>
+      <% end %>
+    </p>
+    <% if component.custom_label.present? %>
+      <%= component.custom_label.html_safe %>
+    <% elsif component.change.present? %>
+      <%= sage_component SageLabel, label_configs %>
+    <% end %>
+  </div>
+  <% if component.link.present? %>
+    <footer class="sage-stat-box__footer">
+      <a class="sage-stat-box__link" href="<%= component.link[:href] %>"><%= component.link[:value] %></a>
+    </footer>
+  <% end %>
+</article>

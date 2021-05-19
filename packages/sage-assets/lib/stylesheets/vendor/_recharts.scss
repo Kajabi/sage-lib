@@ -1,0 +1,26 @@
+////
+/// Reacharts settings
+///
+/// @group vendor
+////
+
+.sage-chart-container {
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  position: relative;
+}
+
+.recharts-responsive-container {
+  .sage-chart-container & {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    position: relative;
+    z-index: sage-z-index(default, 10);
+    max-width: 100%;
+  }
+
+  svg {
+    max-width: 100%;
+  }
+}

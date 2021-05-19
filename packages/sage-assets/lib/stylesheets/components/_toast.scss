@@ -108,6 +108,28 @@ $-toast-bottom-spacing: sage-spacing(xs);
   color: sage-color(white);
 }
 
+.sage-toast__loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.sage-toast__spinner {
+  width: sage-spacing(sm);
+  height: sage-spacing(sm);
+  margin-right: sage-spacing(xs);
+  animation: rotate $-loader-spinner-speed linear infinite;
+}
+
+.sage-toast__spinner-path {
+  stroke-dasharray: 150,200;
+  stroke-dashoffset: -10;
+  stroke-linecap: round;
+  stroke: sage-color(white);
+  animation: dash $-loader-spinner-path-speed ease-in-out infinite;
+}
+
 .sage-toast__value {
   @include truncate();
 
@@ -148,4 +170,25 @@ $-toast-bottom-spacing: sage-spacing(xs);
 
 .sage-toast__button--underline {
   text-decoration: underline;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1,200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89,200;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 89,200;
+    stroke-dashoffset: -124;
+  }
 }
