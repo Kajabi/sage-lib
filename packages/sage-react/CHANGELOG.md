@@ -3,6 +3,38 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.41.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.40.2...@kajabi/sage-react@0.41.0) (2021-05-19)
+
+
+### Bug Fixes
+
+* **stat box:** changes main element to div as per W3C specs ([f180066](https://github.com/Kajabi/sage-lib/commit/f18006629e445ada9a9ea1d10862e1116ab8706c))
+* **stat box:** removes option for custom icon and readds icon fallbacks; updates docs ([adef7af](https://github.com/Kajabi/sage-lib/commit/adef7af2a7561d392689f5de42282ffe3d6bda38))
+* **stat box:** updates styling, data prop type, and allows any icon to be used in label ([e89d357](https://github.com/Kajabi/sage-lib/commit/e89d357c05d35c663db73e3bd448c6c8acaf8058))
+* **toast:** linter ([8c480f6](https://github.com/Kajabi/sage-lib/commit/8c480f66f10e806db235f2af2222352d72bbb1a7))
+* **toast:** linter fixes ([a92e32d](https://github.com/Kajabi/sage-lib/commit/a92e32dfbef0cdf283cc7a746ce9c90cb6247f07))
+* **toast:** pairing with andrew ([506c93d](https://github.com/Kajabi/sage-lib/commit/506c93d1c375439b8ea5e7f1d0a5502f49d467d2))
+* **toast:** updated demo ([e2941ab](https://github.com/Kajabi/sage-lib/commit/e2941abc2d8c1d4d5b3fa004fe0d6c0a481c7868))
+
+
+### Features
+
+* **chart:** add Chart components in React ([710c4a7](https://github.com/Kajabi/sage-lib/commit/710c4a78db1aafb976be2ead76aa6ff963af0e73))
+* **chart:** add POC Bar charts ([8e49a19](https://github.com/Kajabi/sage-lib/commit/8e49a1990d3a961cade6ca28b379aa89eac36495))
+* **chart-legend:** add Chart Legend component ([314b945](https://github.com/Kajabi/sage-lib/commit/314b945a3be259f2dc6cdffc25993b2311bacac5))
+* **charts:** add ability to summar data past a given item ([9315d04](https://github.com/Kajabi/sage-lib/commit/9315d045ff6fe2e4d98a92969ae2c15374e4439d))
+* **react:** add color palette values to tokens ([c1ae6d8](https://github.com/Kajabi/sage-lib/commit/c1ae6d83140a268e3f6cda2096ee03254617ceac))
+* **sage-react:** add recharts library ([cbee5c0](https://github.com/Kajabi/sage-lib/commit/cbee5c06ce1e8e4180b882118cd64e2694c582aa))
+* **stat box:** adds configs and logic for React component ([72abe2d](https://github.com/Kajabi/sage-lib/commit/72abe2d8cd7ceeb372356b2b2e76cd3652668888))
+* **stat box:** cleans up styling and logic for React and Rails component ([fb2fe2e](https://github.com/Kajabi/sage-lib/commit/fb2fe2ee0141059eb039ba88f1e9740a590a00f7))
+* **stat box:** initializes React component ([4bf8f7f](https://github.com/Kajabi/sage-lib/commit/4bf8f7fb85f7420b59192354399a4a26e5523465))
+* **tokens:** add recharts defaults tokens ([4fc60a5](https://github.com/Kajabi/sage-lib/commit/4fc60a56eaceb1ff7424d7c30accd33bf7275807))
+* **tooltip:** allow for static Tooltip in React ([cb9253a](https://github.com/Kajabi/sage-lib/commit/cb9253a845c03aac934e97423d3cb176d4cc8ab5))
+
+
+
+
+
 ## [0.40.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.40.1...@kajabi/sage-react@0.40.2) (2021-05-12)
 
 **Note:** Version bump only for package @kajabi/sage-react

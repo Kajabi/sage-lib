@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.8.1...@kajabi/sage-system@0.8.2) (2021-05-19)
+
+
+### Bug Fixes
+
+* **copy button:** update toast property in copy-button.js ([9a52c15](https://github.com/Kajabi/sage-lib/commit/9a52c158e4f698e6942866aae4c13bed1161fa32))
+* **toast:** add classes for toast spinner ([0359816](https://github.com/Kajabi/sage-lib/commit/0359816001edc10dc8e83813517d610e4d958b94))
+* **toast:** add spinner to uploading state ([c7d105a](https://github.com/Kajabi/sage-lib/commit/c7d105a13ef2366b43152575dce14a37978ecc08))
+* **toast:** pairing with andrew ([506c93d](https://github.com/Kajabi/sage-lib/commit/506c93d1c375439b8ea5e7f1d0a5502f49d467d2))
+
+
+
+
+
 ## [0.8.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.8.0...@kajabi/sage-system@0.8.1) (2021-05-12)
 
 

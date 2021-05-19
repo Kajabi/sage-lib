@@ -3,6 +3,36 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.26.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.25.2...@kajabi/sage@3.26.0) (2021-05-19)
+
+
+### Bug Fixes
+
+* **button/link:** prevent duplicate launch link icon from appearing on focus & active state ([bfa41d6](https://github.com/Kajabi/sage-lib/commit/bfa41d6d465118aadec72436f3757d69d2d88e4b))
+* **stat box:** changes main element to div as per W3C specs ([f180066](https://github.com/Kajabi/sage-lib/commit/f18006629e445ada9a9ea1d10862e1116ab8706c))
+* **stat box:** removes option for custom icon and readds icon fallbacks; updates docs ([adef7af](https://github.com/Kajabi/sage-lib/commit/adef7af2a7561d392689f5de42282ffe3d6bda38))
+* **stat box:** updates styling, data prop type, and allows any icon to be used in label ([e89d357](https://github.com/Kajabi/sage-lib/commit/e89d357c05d35c663db73e3bd448c6c8acaf8058))
+* **toast:** pairing with andrew ([506c93d](https://github.com/Kajabi/sage-lib/commit/506c93d1c375439b8ea5e7f1d0a5502f49d467d2))
+
+
+### Features
+
+* **chart-legend:** add Chart Legend component ([314b945](https://github.com/Kajabi/sage-lib/commit/314b945a3be259f2dc6cdffc25993b2311bacac5))
+* **chart-summary:** add chart summary component ([b808671](https://github.com/Kajabi/sage-lib/commit/b8086714b3a6aa2046277dad76489b3e3103f6b4))
+* **stat box:** adds configs and logic for React component ([72abe2d](https://github.com/Kajabi/sage-lib/commit/72abe2d8cd7ceeb372356b2b2e76cd3652668888))
+* **stat box:** adds initial attributes and some styling ([d20aa86](https://github.com/Kajabi/sage-lib/commit/d20aa86abe28cb8878c5e19bf32ce163071a87fd))
+* **stat box:** adds more conditional markup logic and attributes ([038e59e](https://github.com/Kajabi/sage-lib/commit/038e59e80fe99459256f50146f887d1952dbea73))
+* **stat box:** cleans up styling ([075a91f](https://github.com/Kajabi/sage-lib/commit/075a91f7b62c4c7b744085c7c86b9f657dd4ea77))
+* **stat box:** cleans up styling and logic for React and Rails component ([fb2fe2e](https://github.com/Kajabi/sage-lib/commit/fb2fe2ee0141059eb039ba88f1e9740a590a00f7))
+* **stat box:** initializes React component ([4bf8f7f](https://github.com/Kajabi/sage-lib/commit/4bf8f7fb85f7420b59192354399a4a26e5523465))
+* **stat box:** rails component generation ([d353a73](https://github.com/Kajabi/sage-lib/commit/d353a73771db9332867cf8efe78c98d538733500))
+* **stat box:** updates components helper Ruby file ([9dd6952](https://github.com/Kajabi/sage-lib/commit/9dd6952df3a59ef9d241a38a5bf8144b307e9bd5))
+* **tokens:** add color palette values to sage rails tokens ([c1e1ef2](https://github.com/Kajabi/sage-lib/commit/c1e1ef2456dd540cbb8fdb3abb33eae054c126ef))
+
+
+
+
+
 ## [3.25.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.25.1...@kajabi/sage@3.25.2) (2021-05-12)
 
 **Note:** Version bump only for package @kajabi/sage
