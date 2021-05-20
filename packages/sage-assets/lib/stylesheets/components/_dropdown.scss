@@ -346,6 +346,10 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
   &.sage-dropdown__trigger--options {
     min-width: auto;
   }
+
+  > .sage-btn {
+    line-height: 28px;
+  }
 }
 
 .sage-dropdown__trigger--select,

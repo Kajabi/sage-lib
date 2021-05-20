@@ -2,6 +2,7 @@
 show_secondary_toolbar = component.show_pagination || component.show_sort || component.show_expand_collapse
 show_default_controls = component.show_bulk_actions || show_secondary_toolbar
 bulk_action_items = component.bulk_action_items.present? ? component.bulk_action_items : []
+sort_items = component.sort_items.present? ? component.sort_items : []
 item_count_text = component.item_count_label.present? ? component.item_count_label : ""
 %>
 <div class="
@@ -73,9 +74,7 @@ item_count_text = component.item_count_label.present? ? component.item_count_lab
           <% end %>
           
           <% if content_for? :sage_panel_controls_sort %>
-            <div class="sage-panel-controls__sort">
-              <%= content_for :sage_panel_controls_sort %>
-            </div>
+            <%= content_for :sage_panel_controls_sort %>
           <% end %>
 
           <% if component.show_expand_collapse %>
