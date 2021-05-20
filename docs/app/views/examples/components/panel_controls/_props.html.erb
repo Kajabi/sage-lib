@@ -60,19 +60,6 @@ Array<{
   <td><%= md('`false`') %></td>
 </tr>
 <tr>
-  <td><%= md('`sort_items`') %></td>
-  <td><%= md('The list of items to populate in the sort dropdown.') %></td>
-  <td>
-    <%= md('```
-Array<{
-  attributes: Hash,
-  value: String,
-}>
-    ') %>
-  </td>
-  <td><%= md('`nil`') %></td>
-</tr>
-<tr>
   <td><%= md('`show_pagination`') %></td>
   <td><%= md('TBD') %>
   </td>
@@ -84,8 +71,6 @@ Array<{
   <td>
     <%= md('
       Whether or not to render the sorting dropdown.
-      If set to `true`, the `sort_items`
-      should also be provided to populate the dropdown.
     ') %>
   </td>
   <td><%= md('Boolean') %></td>
