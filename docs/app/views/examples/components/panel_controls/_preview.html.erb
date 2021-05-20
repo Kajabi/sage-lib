@@ -72,30 +72,6 @@ search_filter_toolbar = %(
   </div>
 ).html_safe
 
-sort_items = [
-  {
-    value: "Name",
-    attributes: {
-      "href": "#",
-      "data-js-list-sort-by": "name"
-    },
-  },
-  {
-    value: "Email",
-    attributes: {
-      "href": "#",
-      "data-js-list-sort-by": "email"
-    },
-  },
-  {
-    value: "Join date",
-    attributes: {
-      "href": "#",
-      "data-js-list-sort-by": "join_date"
-    },
-  }
-]
-
 actions_items = [
   {
     value: "Delete",
@@ -138,7 +114,6 @@ actions_items = [
     show_pagination: false,
     show_sort: true,
     bulk_action_items: actions_items,
-    sort_items: sort_items,
   } %>
 <% end %>
 
@@ -150,7 +125,6 @@ actions_items = [
     show_pagination: true,
     show_sort: true,
     bulk_action_items: actions_items,
-    sort_items: sort_items,
   } do %>
     <% content_for :sage_panel_controls_pagination do %>
       <%= sage_component SagePagination, {
@@ -173,7 +147,6 @@ actions_items = [
     show_pagination: true,
     show_sort: true,
     bulk_action_items: actions_items,
-    sort_items: sort_items,
   } do %>
     <% content_for :sage_panel_controls_pagination do %>
       <%= sage_component SagePagination, {
@@ -204,7 +177,6 @@ actions_items = [
     show_pagination: true,
     show_sort: true,
     bulk_action_items: actions_items,
-    sort_items: sort_items,
     target: "demo-table",
   } do %>
     <% content_for :sage_panel_controls_tabs do %>
