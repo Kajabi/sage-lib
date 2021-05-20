@@ -11,6 +11,10 @@ class SagePanelControls < SageComponent
     show_expand_collapse: [:optional, TrueClass],
     show_pagination: [:optional, TrueClass],
     show_sort: [:optional, TrueClass],
+    sort_items: [:optional, [[{
+      attributes: [:optional, Hash],
+      value: String,
+    }]]],
     start_expanded: [:optional, TrueClass],
     target: [:optional, String],
   })
@@ -31,4 +35,12 @@ end
     :attributes=>{:href=>"#", :"data-js-list-action"=>"delete_selected"}},
    {:value=>"Set marketing",
     :attributes=>
-     {:href=>"#", :"data-js-list-action"=>"set_marketing_unsubscribed"}}]}
+     {:href=>"#", :"data-js-list-action"=>"set_marketing_unsubscribed"}}],
+     :sort_items=>
+      [{:value=>"Name",
+        :attributes=>{:href=>"#", :"data-js-list-sort-by"=>"name"}},
+       {:value=>"Email",
+        :attributes=>{:href=>"#", :"data-js-list-sort-by"=>"email"}},
+       {:value=>"Join date",
+        :attributes=>{:href=>"#", :"data-js-list-sort-by"=>"join_date"}}]}
+        

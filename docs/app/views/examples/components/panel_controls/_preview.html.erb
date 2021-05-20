@@ -72,6 +72,30 @@ search_filter_toolbar = %(
   </div>
 ).html_safe
 
+sort_items = [
+  {
+    value: "Name",
+    attributes: {
+      "href": "#",
+      "data-js-list-sort-by": "name"
+    },
+  },
+  {
+    value: "Email",
+    attributes: {
+      "href": "#",
+      "data-js-list-sort-by": "email"
+    },
+  },
+  {
+    value: "Join date",
+    attributes: {
+      "href": "#",
+      "data-js-list-sort-by": "join_date"
+    },
+  }
+]
+
 actions_items = [
   {
     value: "Delete",
@@ -114,7 +138,26 @@ actions_items = [
     show_pagination: false,
     show_sort: true,
     bulk_action_items: actions_items,
-  } %>
+  } do %>
+    <% content_for :sage_panel_controls_sort do %>
+      <%= sage_component SageDropdown, {
+        trigger_type: "select",
+        align: "right",
+        customized: true,
+        contained: true,
+        css_classes: "sage-dropdown--sort sage-panel-controls__sorts",
+        items: sort_items
+      } do %>
+        <%= sage_component SageButton, {
+          style: "secondary",
+          value: "",
+          css_classes: "sage-dropdown__trigger-selected-value",
+          icon: { style: "right", name: "caret-down" }
+        } %>
+        <label class="sage-dropdown__trigger-label">Sort</label>
+      <% end %>
+    <% end %>
+  <% end %>
 <% end %>
 
 <h3 class="t-sage-heading-6">Pagination</h3>
@@ -156,6 +199,24 @@ actions_items = [
         hide_pages: true,
       } %>
     <% end %>
+    <% content_for :sage_panel_controls_sort do %>
+      <%= sage_component SageDropdown, {
+        trigger_type: "select",
+        align: "right",
+        customized: true,
+        contained: true,
+        css_classes: "sage-dropdown--sort sage-panel-controls__sorts",
+        items: sort_items
+      } do %>
+        <%= sage_component SageButton, {
+          style: "secondary",
+          value: "",
+          css_classes: "sage-dropdown__trigger-selected-value",
+          icon: { style: "right", name: "caret-down" }
+        } %>
+        <label class="sage-dropdown__trigger-label">Sort</label>
+      <% end %>
+    <% end %>
   <% end %>
 <% end %>
 
@@ -193,6 +254,24 @@ actions_items = [
         window: 2,
         hide_pages: true,
       } %>
+    <% end %>
+    <% content_for :sage_panel_controls_sort do %>
+      <%= sage_component SageDropdown, {
+        trigger_type: "select",
+        align: "right",
+        customized: true,
+        contained: true,
+        css_classes: "sage-dropdown--sort sage-panel-controls__sorts",
+        items: sort_items
+      } do %>
+        <%= sage_component SageButton, {
+          style: "secondary",
+          value: "",
+          css_classes: "sage-dropdown__trigger-selected-value",
+          icon: { style: "right", name: "caret-down" }
+        } %>
+        <label class="sage-dropdown__trigger-label">Sort</label>
+      <% end %>
     <% end %>
   <% end %>
 
