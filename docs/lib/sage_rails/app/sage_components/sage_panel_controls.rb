@@ -20,7 +20,7 @@ class SagePanelControls < SageComponent
   })
 
   def sections
-    %w(panel_controls_pagination panel_controls_toolbar panel_controls_tabs panel_controls_tabs_dropdown panel_controls_sort)
+    %w(panel_controls_pagination panel_controls_toolbar panel_controls_tabs panel_controls_tabs_dropdown panel_controls_sort )
   end
 end
 
@@ -36,11 +36,10 @@ end
    {:value=>"Set marketing",
     :attributes=>
      {:href=>"#", :"data-js-list-action"=>"set_marketing_unsubscribed"}}],
-     :sort_items=>
-      [{:value=>"Name",
-        :attributes=>{:href=>"#", :"data-js-list-sort-by"=>"name"}},
-       {:value=>"Email",
-        :attributes=>{:href=>"#", :"data-js-list-sort-by"=>"email"}},
-       {:value=>"Join date",
-        :attributes=>{:href=>"#", :"data-js-list-sort-by"=>"join_date"}}]}
-        
+ :sort_items=>
+  [{:value=>"Name",
+    :attributes=>{:href=>"#", :"data-js-list-sort-by"=>"name"}},
+   {:value=>"Email",
+    :attributes=>{:href=>"#", :"data-js-list-sort-by"=>"email"}},
+   {:value=>"Join date",
+    :attributes=>{:href=>"#", :"data-js-list-sort-by"=>"join_date"}}]}
