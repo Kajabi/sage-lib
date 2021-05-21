@@ -43,3 +43,4 @@ end
     :attributes=>{:href=>"#", :"data-js-list-sort-by"=>"email"}},
    {:value=>"Join date",
     :attributes=>{:href=>"#", :"data-js-list-sort-by"=>"join_date"}}]}
+    
