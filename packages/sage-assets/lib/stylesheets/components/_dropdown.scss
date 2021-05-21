@@ -348,7 +348,7 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
   }
 
   > .sage-btn {
-    line-height: 28px;
+    line-height: sage-line-height(md),
   }
 }
 
