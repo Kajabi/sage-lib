@@ -125,7 +125,7 @@ $-modal-header-image-size: rem(28px);
   }
 
   p + p {
-    margin-top: sage-spacing(xs);
+    margin-top: sage-spacing();
   }
 
   @include clearfix;
