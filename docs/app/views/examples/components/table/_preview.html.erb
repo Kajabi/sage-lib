@@ -1,4 +1,34 @@
 <%
+sample_data = [
+  {
+    value_1: "Venenatis Condimentum",
+    value_2: "Ridiculus",
+    value_3: "Sem Elit",
+    value_4: "Nibh Aenean",
+    value_5: "Sem Elit"
+  },
+  {
+    value_1: "Nullam Porta",
+    value_2: "Adipiscing Ligula",
+    value_3: "Euismod Etiam",
+    value_4: "Malesuada",
+    value_5: "Etiam"
+  },
+  {
+    value_1: "Ridiculus",
+    value_2: "Cras Malesuada",
+    value_3: "Commodo",
+    value_4: "Cursus Pharetra",
+    value_5: "Fringilla"
+  },
+  {
+    value_1: "Pharetra Mattis",
+    value_2: "Magna",
+    value_3: "Elit Inceptos",
+    value_4: "Cursus Pharetra",
+    value_5: "Dolor Fringilla"
+  }
+]
 sample_table = {
   headers: [
     "Cras Porta",
@@ -7,36 +37,7 @@ sample_table = {
     "Mollis",
     "Ridiculus"
   ],
-  rows: [
-    {
-      value_1: "Venenatis Condimentum",
-      value_2: "Ridiculus",
-      value_3: "Sem Elit",
-      value_4: "Nibh Aenean",
-      value_5: "Sem Elit"
-    },
-    {
-      value_1: "Nullam Porta",
-      value_2: "Adipiscing Ligula",
-      value_3: "Euismod Etiam",
-      value_4: "Malesuada",
-      value_5: "Etiam"
-    },
-    {
-      value_1: "Ridiculus",
-      value_2: "Cras Malesuada",
-      value_3: "Commodo",
-      value_4: "Cursus Pharetra",
-      value_5: "Fringilla"
-    },
-    {
-      value_1: "Pharetra Mattis",
-      value_2: "Magna",
-      value_3: "Elit Inceptos",
-      value_4: "Cursus Pharetra",
-      value_5: "Dolor Fringilla"
-    }
-  ]
+  rows: sample_data
 }
 %>
 
@@ -167,3 +168,55 @@ sample_table = {
     ]
   ]
 } %>
+
+<h3>Using `sage_table_for`</h3>
+<%= md("
+As an alterative to directly calling the SageTable component,
+a helper variation is available that allows for formatting table columns
+in a more compositional fashion. This involves calling `sage_table_for` with a collection,
+and then using `t.column ... do |c|` blocks to provide templates for each column of data.
+See the \"Properties\" tab for documentation of the available parameters.
+
+**NOTE:** This is an MVP implementation based on a helper written earlier for `kajabi-products`
+and not completely aligned with SageTable yet.
+It is safe to use, but should be tracked against future updates.
+") %>
+
+<%= sage_table_for sample_data, striped: true, sortable: true, responsive: true, reset_below: true do |t| %>
+  <% t.column :name, label: "Cras Porta", data_type: "string" do |c| %>
+    <%= sage_component SageButton, {
+      subtle: true,
+      style: "primary",
+      value: c[:value_1],
+      attributes: {
+        href: "#test",
+      },
+    } %>
+  <% end %>
+  <% t.column :phone, label: "Dapibus Ridiculus" do |c| %>
+    <strong><%= c[:value_2] %></strong>
+    <%= c[:value_3] %>
+  <% end %>
+  <% t.column :actions, label: "Actions", data_type: "string" do |c| %>
+    <%= sage_component SageButtonGroup, {} do %>
+      <%= sage_component SageButton, {
+        subtle: true,
+        value: 'Edit',
+        icon: { name: 'pen', style: 'only' },
+        style: 'primary',
+        attributes: {
+          href: "?edit=#edit"
+        }
+      } %>
+      <%= sage_component SageButton, {
+        subtle: true,
+        value: 'Delete',
+        icon: { name: 'trash', style: 'only' },
+        style: 'danger',
+        attributes: {
+          href: "?remove=#delete"
+        }
+      } %>
+    <% end %>
+  <% end %>
+<% end %>

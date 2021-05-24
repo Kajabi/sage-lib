@@ -6,13 +6,3 @@ Use this scratchpad to test out elements and components in context. Just be sure
 ") %>
 <% end %>
 
-<%= sage_component SageModal, { id: "whatevz", html_attributes: { "data-something": "who knwows"} } do %>
-  <%= sage_component SageModalContent, { html_attributes: {"data-hey-there": "what up?"} } do %>
-  <%= sage_component SageLabel, {
-    color: 'info',
-    value: 'hey',
-    html_attributes: { "data-dog": "woof woof woof" }
-  } %>
-    Hey Mom
-  <% end %>
-<% end %>

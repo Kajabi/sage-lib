@@ -64,3 +64,58 @@
   <td><%= md('String:') %></td>
   <td><%= md('`nil`') %></td>
 </tr>
+<tr>
+  <td colspan="4">
+    <%= md('**Alternate:** `sage_table_for`') %>
+  </td>
+</tr>
+<tr>
+  <td><%= md('`collection`') %></td>
+  <td><%= md('A collection from which the table data will be formatted.') %></td>
+  <td><%= md('Array of Objects') %></td>
+  <td><%= md('Required') %></td>
+</tr>
+<tr>
+  <td><%= md('`options`') %></td>
+  <td><%= md('
+  A set of options that match the following options from SageTable above:
+
+  - `reset_above`
+  - `reset_below`
+  - `responsive`
+  - `sortable`
+  - `striped`  
+') %></td>
+  <td><%= md('See properties above') %></td>
+  <td><%= md('Varies') %></td>
+</tr>
+<tr>
+  <td colspan="4">
+    <%= md('**Alternate column formatter:** `t.column`') %>
+  </td>
+</tr>
+<tr>
+  <td><%= md('`attribute`') %></td>
+  <td><%= md('
+  An alias/identifier for the column/attribute. While this does not have to align to a property from the collection itself,
+  if `sortable` is on, those that do align with collection property will result in a sortable link being rendered.
+') %></td>
+  <td><%= md('Symbol') %></td>
+  <td><%= md('Required') %></td>
+</tr>
+<tr>
+  <td><%= md('`options`') %></td>
+  <td><%= md('
+  A set of options for the columns including:
+
+  - `label <string>` -- Content for the header of the column.
+  - `style <hash>` -- style attributes to render on cells.
+  - `class_name <string>` -- CSS class name to render on body cells (not on header cell).
+  - `data_type <"checkbox" | "avatar">` -- A data type from among the existing presets that will result in a sage cell format class applied to apply some default styling for that data type.
+  - `truncate <boolean>` -- Whether or not to truncate the cell if its content does not fit (rather than wrap).
+  - `align <"right" | nil>` -- Alignment direction for cells (body and header)
+  - `header_class <string>` -- CSS class name to render on header cells.
+') %></td>
+  <td><%= md('Hash') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
