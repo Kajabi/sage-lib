@@ -63,16 +63,18 @@ module SageTableHelper
   end
 
   class SageTableFor
-    attr_reader :columns, :template, :id, :class_name, :collection, :row_proc, :sortable, :responsive, :striped
+    attr_reader :columns, :template, :id, :class_name, :collection, :row_proc, :sortable, :responsive, :striped, :reset_above, :reset_below
     delegate :content_tag, :tag, to: :template
 
     def initialize(template, collection, opts={})
       @template = template
       @collection = collection
       @class_name = opts[:class]
+      @reset_above = opts[:reset_above]
+      @reset_below = opts[:reset_below]
+      @responsive = opts[:responsive]
       @sortable = opts[:sortable]
       @striped = opts[:striped]
-      @responsive = opts[:responsive]
       @id = opts[:id]
       @columns = []
     end
@@ -87,17 +89,34 @@ module SageTableHelper
     end
 
     def contents
+      wrapper_classes = "sage-table-wrapper"
+      wrapper_classes << " sage-table-wrapper--reset-above" if reset_above
+      wrapper_classes << " sage-table-wrapper--reset-below" if reset_below
+      wrapper_classes << " sage-table-wrapper--scroll" if responsive
+      
+      content_tag "div", class: wrapper_classes do
+        if responsive
+          content_tag "div", class: "sage-table-wrapper__overflow" do
+            table_contents
+          end
+        else
+          table_contents
+        end
+      end
+    end
+
+    protected
+
+    def table_contents
       table_classes = "sage-table"
       table_classes << " sage-table--sortable" if sortable
       table_classes << " sage-table--striped" if striped
-      table_classes << class_name
+      table_classes << " #{class_name}" if striped
 
       content_tag "table", id: id, class: table_classes do
         head + body
       end
     end
-
-    protected
 
     def head
       content_tag "thead" do
@@ -118,7 +137,7 @@ module SageTableHelper
       col_class << " sage-table-cell--truncate" if c.truncate
       col_class << " sage-table-cell--align-#{c.align}" if c.align
       col_class << " sage-table-cell--#{c.data_type}" if c.data_type
-      col_class << " #{c.class_name}"
+      col_class << " #{c.header_class}"
 
       content_tag "th", class: col_class do
         c.title
