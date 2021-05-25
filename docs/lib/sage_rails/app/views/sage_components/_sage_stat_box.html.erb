@@ -1,4 +1,6 @@
-<% 
+<%
+# Set up label configs for Sage Label as default
+
 change_value = component.change.present? ? component.change[:value] : "No change"
 change_type = component.change.present? ? component.change[:type] : "neutral"
 label_configs = { color: "draft", value: change_value } 
@@ -21,7 +23,8 @@ end
     <% end %>
   </header>
   <div class="sage-stat-box__body sage-grid-template-te">
-    <p class="sage-stat-box__data">
+    <p class="sage-stat-box__data
+    <%= "sage-stat-box__data--no-data" if !component.has_data %>">
       <%= component.data %>
       <% if component.timeframe.present? %>
         <span class="sage-stat-box__timeframe"><%= component.timeframe %></span>

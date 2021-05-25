@@ -1,13 +1,23 @@
+
+<h3 class="t-sage-heading-6">Default with Data</h3>
 <%= sage_component SageStatBox, {
   change: { 
     type: "positive", 
     value: "30%", 
   },
   data: "1,342",
+  has_data: true,
   link: {
     href: "#",
     value: "View More",
   },
   timeframe: "in last 30 days",
+  title: "Completed",
+} %>
+
+<h3 class="t-sage-heading-6">Null View</h3>
+<%= sage_component SageStatBox, {
+  data: "No insights to show",
+  has_data: false,
   title: "Completed",
 } %>
