@@ -6,22 +6,22 @@
 
 
 // Borders and sizing
-$-table-border: rem(1px) solid sage-color(grey);
 $-table-header-border: rem(1px) solid sage-color(grey, 300);
 $-table-cell-padding-xs: sage-spacing(xs);
 $-table-cell-padding-card: sage-spacing(sm);
 $-table-cell-padding-panel: sage-spacing();
-$-table-heading-padding-sm: sage-spacing(sm) rem(12px);
-$-table-heading-padding-lg: sage-spacing(sm) rem(12px);
+$-table-padding: rem(12px);
 $-table-max-width: none;
 
 // Text
 $-table-caption-font-size: "%t-sage-body-small";
 $-table-caption-alignment: center;
-$-table-cell-font-color: sage-color(charcoal, 400);
-$-table-cell-type-spec: "%t-sage-body-small";
-$-table-heading-font-color: sage-color(charcoal, 400);
-$-table-heading-type-spec: "%t-sage-body-small-semi";
+$-table-cell-font-color: sage-color(charcoal, 200);
+$-table-cell-type-spec: "%t-sage-body";
+$-table-cell-font-color-strong: sage-color(charcoal, 400);
+$-table-cell-type-spec-strong: "%t-sage-body-med";
+$-table-heading-font-color: sage-color(charcoal, 500);
+$-table-heading-type-spec: "%t-sage-heading-6";
 
 // Overflow gradient
 $-table-overflow-indicator-width: sage-spacing(sm);
@@ -32,11 +32,13 @@ $-table-overflow-indicator-gradient: linear-gradient(90deg, $-table-overflow-ind
 
 // Other
 $-table-row-color-stripe: sage-color(grey, 100);
-$-table-row-color-hover: sage-color(grey, 200);
+$-table-row-color-hover: sage-color(primary, 100);
 $-table-cell-focus: sage-color(charcoal);
 $-table-cell-truncate-width: 6.5em;
 $-table-sort-indicator-width: rem(5px);
 $-table-sort-indicator-direction: rem(7px);
+$-table-checkbox-width: rem(20px);
+$-table-avatar-width: rem(32px);
 
 
 // stylelint-disable selector-max-compound-selectors
@@ -60,7 +62,7 @@ $-table-sort-indicator-direction: rem(7px);
     th {
       @extend #{$-table-heading-type-spec};
 
-      padding: sage-spacing(sm) $-table-cell-padding-panel / 2;
+      padding: $-table-padding;
 
       &:first-child {
         padding-left: $-table-cell-padding-panel;
@@ -94,7 +96,7 @@ $-table-sort-indicator-direction: rem(7px);
     @extend #{$-table-cell-type-spec};
 
     // Cells should split the desired padding in half to make total desired space
-    padding: $-table-cell-padding-panel / 2;
+    padding: $-table-padding;
     color: inherit;
 
     // First and last cells in a row get the full outer spacing
@@ -104,6 +106,12 @@ $-table-sort-indicator-direction: rem(7px);
 
     &:last-child {
       padding-right: $-table-cell-padding-panel;
+    }
+
+    &.sage-table-cell--strong {
+      @extend #{$-table-cell-type-spec-strong};
+    
+      color: $-table-cell-font-color-strong;
     }
   }
 }
@@ -212,24 +220,18 @@ $-table-sort-indicator-direction: rem(7px);
     margin-left: -1 * $-table-cell-padding-card;
     margin-right: -1 * $-table-cell-padding-card;
 
-    td {
-      padding: $-table-cell-padding-card / 2;
+    td:first-child {
+      padding-left: $-table-cell-padding-card;
+    }
 
-      &:first-child {
-        padding-left: $-table-cell-padding-card;
-      }
-
-      &:last-child {
-        padding-right: $-table-cell-padding-card;
-      }
+    td:last-child {
+      padding-right: $-table-cell-padding-card;
     }
 
     thead,
     tfoot {
       th,
       td {
-        padding: sage-spacing(xs) $-table-cell-padding-card / 2;
-
         &:first-child {
           padding-left: $-table-cell-padding-card;
         }
@@ -292,23 +294,27 @@ $-table-sort-indicator-direction: rem(7px);
 }
 
 // Text overflow treatment in individual cells
-.sage-table-cell--truncate {
-  overflow: hidden;
+.sage-table-cell--truncate,
+.sage-table-cell__truncated-content {
+  @include truncate();
+
   max-width: $-table-cell-truncate-width;
-  white-space: nowrap;
-  text-overflow: ellipsis;
 }
 
 .sage-table-cell--checkbox {
-  width: rem(64px);
+  width: $-table-checkbox-width;
 }
 
 .sage-table-cell--avatar {
-  width: rem(52px);
+  width: $-table-avatar-width;
 }
 
 .sage-table-cell--align-right {
   text-align: right;
+}
+
+.sage-table-cell--align-center {
+  text-align: center;
 }
 
 // Stacked block content within cells
