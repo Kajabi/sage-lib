@@ -20,18 +20,17 @@ $-page-heading-image-height-mobile: rem(120px);
       "toolbar"
       "secondary";
 
-      &.sage-page-heading--has-image {
-        grid-template-areas:
-          "crumbs"
-          "image"
-          "title"
-          "intro"
-          "actions"
-          "toolbar"
-          "secondary";
-        grid-template-rows: auto $-page-heading-image-height-mobile auto auto auto auto auto;
-      }
-
+    &.sage-page-heading--has-image {
+      grid-template-areas:
+        "crumbs"
+        "image"
+        "title"
+        "intro"
+        "actions"
+        "toolbar"
+        "secondary";
+      grid-template-rows: auto $-page-heading-image-height-mobile auto auto auto auto auto;
+    }
   }
 
   @media (min-width: sage-breakpoint(md-min)) {
