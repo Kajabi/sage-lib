@@ -1,4 +1,10 @@
-<section class="sage-page-heading <%= "sage-page-heading--no-secondary-text" if component.secondary_text.blank? %> <%= component.generated_css_classes %>" <%= component.generated_html_attributes.html_safe %>>
+<section
+  class="sage-page-heading
+    <%= "sage-page-heading--no-secondary-text" if component.secondary_text.blank? %>
+    <%= "sage-page-heading--has-image" if content_for? :sage_page_heading_image %>
+    <%= component.generated_css_classes %>"
+  <%= component.generated_html_attributes.html_safe %>
+>
   <% if content_for? :sage_breadcrumbs %>
     <div class="sage-page-heading__crumbs">
       <%= content_for :sage_breadcrumbs %>
@@ -34,6 +40,11 @@
       <% end %>
     <% end %>
   </h1>
+  <% if content_for? :sage_page_heading_image %>
+    <div class="sage-page-heading__image">
+      <%= content_for :sage_page_heading_image %>
+    </div>
+  <% end %>
   <% if content_for? :sage_page_heading_actions %>
     <div class="sage-page-heading__actions">
       <%= content_for :sage_page_heading_actions %>
