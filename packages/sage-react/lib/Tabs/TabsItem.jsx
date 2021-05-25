@@ -37,8 +37,6 @@ export const TabsItem = ({
   const isRadioType = type && type === CHOICE_TYPES.RADIO;
   const baseClass = `sage-${itemStyleProtected}`;
 
-  console.log(isChoice, verticalAlignIcon, (isIconType || isRadioType));
-
   const classNames = classnames(
     className,
     {
