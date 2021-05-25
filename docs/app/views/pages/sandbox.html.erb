@@ -1,45 +1,4 @@
 <%
-sample_data = [
-  {
-    value_1: "Venenatis Condimentum",
-    value_2: "Ridiculus",
-    value_3: "Sem Elit",
-    value_4: "Nibh Aenean",
-    value_5: "Sem Elit"
-  },
-  {
-    value_1: "Nullam Porta",
-    value_2: "Adipiscing Ligula",
-    value_3: "Euismod Etiam",
-    value_4: "Malesuada",
-    value_5: "Etiam"
-  },
-  {
-    value_1: "Ridiculus",
-    value_2: "Cras Malesuada",
-    value_3: "Commodo",
-    value_4: "Cursus Pharetra",
-    value_5: "Fringilla"
-  },
-  {
-    value_1: "Pharetra Mattis",
-    value_2: "Magna",
-    value_3: "Elit Inceptos",
-    value_4: "Cursus Pharetra",
-    value_5: "Dolor Fringilla"
-  }
-]
-sample_table = {
-  headers: [
-    "Cras Porta",
-    "Dapibus Ridiculus",
-    "Purus",
-    "Mollis",
-    "Ridiculus"
-  ],
-  rows: sample_data
-}
-
 people_data = [
   {
     initials: 'AF',
@@ -115,101 +74,82 @@ Use this scratchpad to test out elements and components in context. Just be sure
 <% end %>
 
 <%= sage_component SagePanel, {} do %>
-  <%= sage_component SageCard, {} do %>
-    <h3>Using `sage_table_for`</h3>
-    <%= sage_table_for people_data, striped: true, sortable: true, responsive: true, caption: "<p>Testing <b>stuff</b></p>".html_safe do |t| %>
-      
-      <% t.column :initials, label: "", data_type: "checkbox" do |c| %>
-        <%= sage_component SageCheckbox, {
-          label_text: 'Select row',
-          standalone: true,
-          id: "table-row-#{c[:initials]}",
-        } %>
-      <% end %>
+  <%= sage_table_for people_data, striped: true, sortable: true, responsive: true, caption: "<p>Testing <b>stuff</b></p>".html_safe do |t| %>
+    
+    <% t.column :initials, label: "", data_type: "checkbox" do |c| %>
+      <%= sage_component SageCheckbox, {
+        label_text: 'Select row',
+        standalone: true,
+        id: "table-row-#{c[:initials]}",
+      } %>
+    <% end %>
 
-      <% t.column :initials, label: "", data_type: "avatar" do |c| %>
-        <%= sage_component SageAvatar, {
-          initials: c[:initials],
-          color: SageTokens::COLORS[rand(7)],
-        } %>
-      <% end %>
+    <% t.column :initials, label: "", data_type: "avatar" do |c| %>
+      <%= sage_component SageAvatar, {
+        initials: c[:initials],
+        color: SageTokens::COLORS[rand(7)],
+      } %>
+    <% end %>
 
-      <% t.column :name, label: "Name", strong: true, truncate: true do |c| %>
-        <span data-js-tooltip="<%= c[:name] %>">
-          <%= c[:name] %>
-        </span>
-      <% end %>
+    <% t.column :name, label: "Name", strong: true, truncate: true do |c| %>
+      <span data-js-tooltip="<%= c[:name] %>">
+        <%= c[:name] %>
+      </span>
+    <% end %>
 
-      <% t.column :email, label: "Email", truncate: true do |c| %>
-        <span data-js-tooltip="<%= c[:email] %>">
-          <%= c[:email] %>
-        </span>
-      <% end %>
+    <% t.column :email, label: "Email", truncate: true do |c| %>
+      <span data-js-tooltip="<%= c[:email] %>">
+        <%= c[:email] %>
+      </span>
+    <% end %>
 
-      <% t.column :price, label: "Price", style: "width: 140px", hide: { md: true } do |c| %>
-        <%= c[:price] %>
-      <% end %>
+    <% t.column :price, label: "Price", style: "width: 140px", hide: { md: true } do |c| %>
+      <%= c[:price] %>
+    <% end %>
 
-      <% t.column :amount, label: "Amount", style: "width: 100px", hide: { md: true } do |c| %>
-        <%= c[:amount] %>
-      <% end %>
+    <% t.column :amount, label: "Amount", style: "width: 100px", hide: { md: true } do |c| %>
+      <%= c[:amount] %>
+    <% end %>
 
-      <% t.column :labels, label: "Labels", style: "width: 150px",  hide: { sm: true } do |c| %>
-        <% c[:labels].each do |label| %>
-          <%= sage_component SageLabel, { 
-            value: label,
-            color: "info",
-          } %>
-        <% end %>
-      <% end %>
-
-      <% t.column :status, label: "Status",style: "width: 100px",  hide: { sm: true } do |c| %>
+    <% t.column :labels, label: "Labels", style: "width: 150px",  hide: { sm: true } do |c| %>
+      <% c[:labels].each do |label| %>
         <%= sage_component SageLabel, { 
-          value: c[:status].titlecase,
-          color: c[:status],
-          } %>
-      <% end %>
-
-      <% t.column :actions, label: "Actions",style: "width: 100px",  data_type: "string" do |c| %>
-        <%= sage_component SageButtonGroup, {} do %>
-          <%= sage_component SageButton, {
-            subtle: true,
-            value: 'Edit',
-            icon: { name: 'pen', style: 'only' },
-            style: 'primary',
-            attributes: {
-              href: "?edit=#edit",
-              "data-js-tooltip": "Edit",
-            }
-          } %>
-          <%= sage_component SageButton, {
-            subtle: true,
-            value: 'Delete',
-            icon: { name: 'trash', style: 'only' },
-            style: 'danger',
-            attributes: {
-              href: "?remove=#delete",
-              "data-js-tooltip": "Delete",
-            }
-          } %>
-        <% end %>
+          value: label,
+          color: "info",
+        } %>
       <% end %>
     <% end %>
 
-    <h3 class="t-sage-heading-6">Responsive table</h3>
-    <%= sage_component SageTable, {
-      headers: sample_table[:headers],
-      rows: sample_table[:rows],
-      caption: "Responsive tables require the use of two parent containers",
-    } %>
+    <% t.column :status, label: "Status",style: "width: 100px",  hide: { sm: true } do |c| %>
+      <%= sage_component SageLabel, { 
+        value: c[:status].titlecase,
+        color: c[:status],
+        } %>
+    <% end %>
 
-    <h3 class="t-sage-heading-6">Striped table</h3>
-    <%= sage_component SageTable, {
-      headers: sample_table[:headers],
-      rows: sample_table[:rows],
-      caption: "Striped tables display a background color on odd-numbered rows",
-      striped: true
-    } %>
-
+    <% t.column :actions, label: "Actions",style: "width: 100px",  data_type: "string" do |c| %>
+      <%= sage_component SageButtonGroup, {} do %>
+        <%= sage_component SageButton, {
+          subtle: true,
+          value: 'Edit',
+          icon: { name: 'pen', style: 'only' },
+          style: 'primary',
+          attributes: {
+            href: "?edit=#edit",
+            "data-js-tooltip": "Edit",
+          }
+        } %>
+        <%= sage_component SageButton, {
+          subtle: true,
+          value: 'Delete',
+          icon: { name: 'trash', style: 'only' },
+          style: 'danger',
+          attributes: {
+            href: "?remove=#delete",
+            "data-js-tooltip": "Delete",
+          }
+        } %>
+      <% end %>
+    <% end %>
   <% end %>
 <% end %>

@@ -1,34 +1,70 @@
 <%
-sample_data = [
+people_data = [
   {
-    value_1: "Venenatis Condimentum",
-    value_2: "Ridiculus",
-    value_3: "Sem Elit",
-    value_4: "Nibh Aenean",
-    value_5: "Sem Elit"
+    initials: 'AF',
+    name: 'Albert Flores',
+    email: 'albertflores@example.com',
+    price: '$420.00 USD',
+    amount: '1',
+    labels: ["green", "house"],
+    status: 'published'
   },
   {
-    value_1: "Nullam Porta",
-    value_2: "Adipiscing Ligula",
-    value_3: "Euismod Etiam",
-    value_4: "Malesuada",
-    value_5: "Etiam"
+    initials: 'EP',
+    name: 'Eleanor Pena',
+    email: 'e_pena@example.com',
+    price: '$420.00 USD',
+    amount: '1',
+    labels: ["red"],
+    status: 'draft'
   },
   {
-    value_1: "Ridiculus",
-    value_2: "Cras Malesuada",
-    value_3: "Commodo",
-    value_4: "Cursus Pharetra",
-    value_5: "Fringilla"
+    initials: 'LJ',
+    name: 'Lily Jones',
+    email: 'lilyjones@example.com',
+    price: '$420.00 USD',
+    amount: '1',
+    labels: ["house"],
+    status: 'warning'
   },
   {
-    value_1: "Pharetra Mattis",
-    value_2: "Magna",
-    value_3: "Elit Inceptos",
-    value_4: "Cursus Pharetra",
-    value_5: "Dolor Fringilla"
+    initials: 'KM',
+    name: 'Kathryn Murphy',
+    email: 'katmurphy@example.com',
+    price: '$420.00 USD',
+    amount: '1',
+    labels: ["red", "house"],
+    status: 'locked'
+  },
+  {
+    initials: 'DR',
+    name: 'Darelene Robertson',
+    email: 'd_robertson@example.com',
+    price: '$420.00 USD',
+    amount: '1',
+    labels: [],
+    status: 'danger'
+  },
+  {
+    initials: 'RE',
+    name: 'Ralph Edwards',
+    email: 'ralphedwards@example.com',
+    price: '$420.00 USD',
+    amount: '1',
+    labels: [],
+    status: 'draft'
+  },
+  {
+    initials: 'JW',
+    name: 'Jenny Wilson',
+    email: 'jennywilson@example.com',
+    price: '$420.00 USD',
+    amount: '1',
+    labels: [],
+    status: 'published'
   }
 ]
+
 sample_table = {
   headers: [
     "Cras Porta",
@@ -37,7 +73,36 @@ sample_table = {
     "Mollis",
     "Ridiculus"
   ],
-  rows: sample_data
+  rows: [
+    {
+      value_1: "Venenatis Condimentum",
+      value_2: "Ridiculus",
+      value_3: "Sem Elit",
+      value_4: "Nibh Aenean",
+      value_5: "Sem Elit"
+    },
+    {
+      value_1: "Nullam Porta",
+      value_2: "Adipiscing Ligula",
+      value_3: "Euismod Etiam",
+      value_4: "Malesuada",
+      value_5: "Etiam"
+    },
+    {
+      value_1: "Ridiculus",
+      value_2: "Cras Malesuada",
+      value_3: "Commodo",
+      value_4: "Cursus Pharetra",
+      value_5: "Fringilla"
+    },
+    {
+      value_1: "Pharetra Mattis",
+      value_2: "Magna",
+      value_3: "Elit Inceptos",
+      value_4: "Cursus Pharetra",
+      value_5: "Dolor Fringilla"
+    }
+  ]
 }
 %>
 
@@ -173,22 +238,59 @@ and not completely aligned with SageTable yet.
 It is safe to use, but should be tracked against future updates.
 ") %>
 
-<%= sage_table_for sample_data, striped: true, sortable: true, responsive: true do |t| %>
-  <% t.column :value_1, label: "Cras Porta", data_type: "string" do |c| %>
-    <%= sage_component SageButton, {
-      subtle: true,
-      style: "primary",
-      value: c[:value_1],
-      attributes: {
-        href: "#test",
-      },
+<%= sage_table_for people_data, striped: true, sortable: true, responsive: true, caption: "<p>Testing <b>stuff</b></p>".html_safe do |t| %>
+  <% t.column :initials, label: "", data_type: "checkbox" do |c| %>
+    <%= sage_component SageCheckbox, {
+      label_text: 'Select row',
+      standalone: true,
+      id: "table-row-#{c[:initials]}",
     } %>
   <% end %>
-  <% t.column :value_2, label: "Dapibus Ridiculus" do |c| %>
-    <strong><%= c[:value_2] %></strong>
-    <%= c[:value_3] %>
+
+  <% t.column :initials, label: "", data_type: "avatar" do |c| %>
+    <%= sage_component SageAvatar, {
+      initials: c[:initials],
+      color: SageTokens::COLORS[rand(7)],
+    } %>
   <% end %>
-  <% t.column :actions, label: "Actions", data_type: "string" do |c| %>
+
+  <% t.column :name, label: "Name", strong: true, truncate: true do |c| %>
+    <span data-js-tooltip="<%= c[:name] %>">
+      <%= c[:name] %>
+    </span>
+  <% end %>
+
+  <% t.column :email, label: "Email", truncate: true do |c| %>
+    <span data-js-tooltip="<%= c[:email] %>">
+      <%= c[:email] %>
+    </span>
+  <% end %>
+
+  <% t.column :price, label: "Price", style: "width: 140px", hide: { md: true } do |c| %>
+    <%= c[:price] %>
+  <% end %>
+
+  <% t.column :amount, label: "Amount", style: "width: 100px", hide: { md: true } do |c| %>
+    <%= c[:amount] %>
+  <% end %>
+
+  <% t.column :labels, label: "Labels", style: "width: 150px",  hide: { sm: true } do |c| %>
+    <% c[:labels].each do |label| %>
+      <%= sage_component SageLabel, { 
+        value: label,
+        color: "info",
+      } %>
+    <% end %>
+  <% end %>
+
+  <% t.column :status, label: "Status",style: "width: 100px",  hide: { sm: true } do |c| %>
+    <%= sage_component SageLabel, { 
+      value: c[:status].titlecase,
+      color: c[:status],
+      } %>
+  <% end %>
+
+  <% t.column :actions, label: "Actions",style: "width: 100px",  data_type: "string" do |c| %>
     <%= sage_component SageButtonGroup, {} do %>
       <%= sage_component SageButton, {
         subtle: true,
@@ -196,7 +298,8 @@ It is safe to use, but should be tracked against future updates.
         icon: { name: 'pen', style: 'only' },
         style: 'primary',
         attributes: {
-          href: "?edit=#edit"
+          href: "?edit=#edit",
+          "data-js-tooltip": "Edit",
         }
       } %>
       <%= sage_component SageButton, {
@@ -205,7 +308,8 @@ It is safe to use, but should be tracked against future updates.
         icon: { name: 'trash', style: 'only' },
         style: 'danger',
         attributes: {
-          href: "?remove=#delete"
+          href: "?remove=#delete",
+          "data-js-tooltip": "Delete",
         }
       } %>
     <% end %>
