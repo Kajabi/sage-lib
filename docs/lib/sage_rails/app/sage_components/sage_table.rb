@@ -8,7 +8,6 @@ class SageTable < SageComponent
     responsive: [:optional, TrueClass],
     rows: [:optional, Array],
     selectable: [:optional, TrueClass],
-    sortable: [:optional, TrueClass],
     striped: [:optional, TrueClass],
   })
 end
