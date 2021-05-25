@@ -57,6 +57,7 @@ Sage.search = (function() {
       searchParams.delete('search');
     } else {
       searchParams.set('search', value);
+      searchParams.delete('page');
     }
 
     window.location.search = searchParams.toString();
