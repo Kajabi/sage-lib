@@ -274,7 +274,7 @@ It is safe to use, but should be tracked against future updates.
     <%= c[:amount] %>
   <% end %>
 
-  <% t.column :labels, label: "Labels", style: "width: 150px",  hide: { sm: true } do |c| %>
+  <% t.column :labels, label: "Labels", style: "width: 150px", hide: { sm: true } do |c| %>
     <% c[:labels].each do |label| %>
       <%= sage_component SageLabel, { 
         value: label,
@@ -283,14 +283,14 @@ It is safe to use, but should be tracked against future updates.
     <% end %>
   <% end %>
 
-  <% t.column :status, label: "Status",style: "width: 100px",  hide: { sm: true } do |c| %>
+  <% t.column :status, label: "Status", style: "width: 100px", hide: { sm: true } do |c| %>
     <%= sage_component SageLabel, { 
       value: c[:status].titlecase,
       color: c[:status],
       } %>
   <% end %>
 
-  <% t.column :actions, label: "Actions",style: "width: 100px",  data_type: "string" do |c| %>
+  <% t.column :actions, label: "Actions", style: "width: 100px" do |c| %>
     <%= sage_component SageButtonGroup, {} do %>
       <%= sage_component SageButton, {
         subtle: true,

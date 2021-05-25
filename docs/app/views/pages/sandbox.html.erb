@@ -75,7 +75,6 @@ Use this scratchpad to test out elements and components in context. Just be sure
 
 <%= sage_component SagePanel, {} do %>
   <%= sage_table_for people_data, striped: true, sortable: true, responsive: true, caption: "<p>Testing <b>stuff</b></p>".html_safe do |t| %>
-    
     <% t.column :initials, label: "", data_type: "checkbox" do |c| %>
       <%= sage_component SageCheckbox, {
         label_text: 'Select row',
@@ -111,7 +110,7 @@ Use this scratchpad to test out elements and components in context. Just be sure
       <%= c[:amount] %>
     <% end %>
 
-    <% t.column :labels, label: "Labels", style: "width: 150px",  hide: { sm: true } do |c| %>
+    <% t.column :labels, label: "Labels", style: "width: 150px", hide: { sm: true } do |c| %>
       <% c[:labels].each do |label| %>
         <%= sage_component SageLabel, { 
           value: label,
@@ -120,14 +119,14 @@ Use this scratchpad to test out elements and components in context. Just be sure
       <% end %>
     <% end %>
 
-    <% t.column :status, label: "Status",style: "width: 100px",  hide: { sm: true } do |c| %>
+    <% t.column :status, label: "Status", style: "width: 100px", hide: { sm: true } do |c| %>
       <%= sage_component SageLabel, { 
         value: c[:status].titlecase,
         color: c[:status],
         } %>
     <% end %>
 
-    <% t.column :actions, label: "Actions",style: "width: 100px",  data_type: "string" do |c| %>
+    <% t.column :actions, label: "Actions", style: "width: 100px" do |c| %>
       <%= sage_component SageButtonGroup, {} do %>
         <%= sage_component SageButton, {
           subtle: true,
