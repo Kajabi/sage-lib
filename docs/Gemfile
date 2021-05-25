@@ -35,6 +35,8 @@ group :development do
   # CLI Version Bumping Utility
   #  Used by bin/sage-tag.sh to automate sage_rails version bump workflow
   gem "bump", "~> 0.9.0"
+
+  gem "listen", "~> 3.5.1"
 end
 
 gem "lockup", "~> 1.5"
