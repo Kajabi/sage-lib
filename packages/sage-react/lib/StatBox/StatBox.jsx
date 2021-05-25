@@ -6,8 +6,9 @@ import { LABEL_COLORS, TYPE } from './configs'; // component configurations as n
 
 export const StatBox = ({
   customLabel,
-  data,
   change,
+  data,
+  hasData,
   link,
   popover,
   timeframe,
@@ -43,7 +44,7 @@ export const StatBox = ({
         {popover}
       </header>
       <div className="sage-stat-box__body sage-grid-template-te">
-        <p className="sage-stat-box__data">
+        <p className={`sage-stat-box__data ${!hasData ? 'sage-stat-box__data--no-data' : null}`}>
           {data}
           {timeframe && (
             <span className="sage-stat-box__timeframe">{timeframe}</span>
@@ -69,6 +70,7 @@ StatBox.defaultProps = {
     value: null,
   },
   customLabel: null,
+  hasData: true,
   link: {
     href: null,
     value: null,
@@ -78,15 +80,16 @@ StatBox.defaultProps = {
 };
 
 StatBox.propTypes = {
+  change: PropTypes.shape({
+    type: PropTypes.oneOf(Object.values(StatBox.TYPE)),
+    value: PropTypes.string,
+  }),
   customLabel: PropTypes.node,
   data: PropTypes.string.isRequired,
-  change: PropTypes.shape({
-    type: PropTypes.oneOf(Object.values(StatBox.TYPE)).isRequired,
-    value: PropTypes.string.isRequired,
-  }),
+  hasData: PropTypes.bool,
   link: PropTypes.shape({
-    href: PropTypes.string.isRequired,
-    value: PropTypes.string.isRequired,
+    href: PropTypes.string,
+    value: PropTypes.string,
   }),
   popover: PropTypes.node,
   timeframe: PropTypes.string,
