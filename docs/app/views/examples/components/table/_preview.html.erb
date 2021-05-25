@@ -173,8 +173,8 @@ and not completely aligned with SageTable yet.
 It is safe to use, but should be tracked against future updates.
 ") %>
 
-<%= sage_table_for sample_data, striped: true, sortable: true, responsive: true, reset_below: true do |t| %>
-  <% t.column :name, label: "Cras Porta", data_type: "string" do |c| %>
+<%= sage_table_for sample_data, striped: true, sortable: true, responsive: true do |t| %>
+  <% t.column :value_1, label: "Cras Porta", data_type: "string" do |c| %>
     <%= sage_component SageButton, {
       subtle: true,
       style: "primary",
@@ -184,7 +184,7 @@ It is safe to use, but should be tracked against future updates.
       },
     } %>
   <% end %>
-  <% t.column :phone, label: "Dapibus Ridiculus" do |c| %>
+  <% t.column :value_2, label: "Dapibus Ridiculus" do |c| %>
     <strong><%= c[:value_2] %></strong>
     <%= c[:value_3] %>
   <% end %>
