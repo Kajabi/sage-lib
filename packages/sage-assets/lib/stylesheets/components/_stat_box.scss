@@ -23,14 +23,21 @@
   align-items: center;
 }
 
+.sage-stat-box__title,
+.sage-stat-box__data--no-data {
+  color: sage-color(charcoal, 200);
+}
+
 .sage-stat-box__title {
   @extend %t-sage-body-small-med;
   margin-right: sage-spacing(xs);
-  color: sage-color(charcoal, 200);
 }
 
 .sage-stat-box__data {
   @extend %t-sage-heading-5;
+}
+.sage-stat-box__data--no-data {
+  @extend %t-sage-body-small;
 }
 
 .sage-stat-box__timeframe {

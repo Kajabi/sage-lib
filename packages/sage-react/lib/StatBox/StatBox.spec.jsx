@@ -10,8 +10,7 @@ describe('Sage StatBox', () => {
 
   beforeEach(() => {
     defaultProps = {
-      data: 65535,
-      link: { href: '#', value: 'View More' },
+      data: '4,010',
       title: 'In Progress',
     };
 
