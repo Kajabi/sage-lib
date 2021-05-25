@@ -56,15 +56,6 @@ sample_table = {
   striped: true
 } %>
 
-<h3 class="t-sage-heading-6">Sortable table</h3>
-<%= sage_component SageTable, {
-  headers: sample_table[:headers],
-  rows: sample_table[:rows],
-  caption: "NOTE: this example is for mockup purposes only and does not implement sorting cells",
-  sortable: true,
-  striped: true
-} %>
-
 <h3 class="t-sage-heading-6">Table with highlighted rows and block cells</h3>
 <%= sage_component SageTable, {
   caption: %(
