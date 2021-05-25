@@ -18,12 +18,8 @@ module SageTableHelper
       end
     end
 
-    def value_for(record)
-      block.call record
-    end
-
-    def style
-      opts[:style]
+    def align
+      opts[:align]
     end
 
     def class_name
@@ -34,42 +30,65 @@ module SageTableHelper
       opts[:data_type]
     end
 
-    def truncate
-      opts[:truncate]
-    end
-
-    def align
-      opts[:align]
-    end
-
     def header_class
       opts[:header_class]
     end
 
+    def hide
+      opts[:hide]
+    end
+
+    def hide_classes
+      hide_classes_base = ""
+      hide_classes_base << " sage-col--sm-hide" if hide[:sm]
+      hide_classes_base << " sage-col--md-hide" if hide[:md]
+      hide_classes_base << " sage-col--lg-hide" if hide[:lg]
+
+      hide_classes_base
+    end
+
+    def strong
+      opts[:strong]
+    end
+
+    def style
+      opts[:style]
+    end
+
+    def truncate
+      opts[:truncate]
+    end
+
+    def value_for(record)
+      block.call record
+    end
+
     protected
 
-    def sortable_title
-      sage_table_sortable_header_link label, attribute
+    def asc?
+      template.sort_direction == "asc"
     end
 
     def current?
       attribute.to_s == template.sort_column
     end
 
-    def asc?
-      template.sort_direction == "asc"
+    def sortable_title
+      sage_table_sortable_header_link label, attribute
     end
 
   end
 
   class SageTableFor
-    attr_reader :columns, :template, :id, :class_name, :collection, :row_proc, :sortable, :responsive, :striped, :reset_above, :reset_below
+    attr_reader :caption, :columns, :condensed, :template, :id, :class_name, :collection, :row_proc, :sortable, :responsive, :striped, :reset_above, :reset_below
     delegate :content_tag, :tag, to: :template
 
     def initialize(template, collection, opts={})
       @template = template
-      @collection = collection
+      @caption = opts[:caption]
       @class_name = opts[:class]
+      @condensed = opts[:condensed]
+      @collection = collection
       @reset_above = opts[:reset_above]
       @reset_below = opts[:reset_below]
       @responsive = opts[:responsive]
@@ -109,12 +128,19 @@ module SageTableHelper
 
     def table_contents
       table_classes = "sage-table"
+      table_classes << " sage-table--condensed" if condensed
       table_classes << " sage-table--sortable" if sortable
       table_classes << " sage-table--striped" if striped
       table_classes << " #{class_name}" if striped
 
       content_tag "table", id: id, class: table_classes do
-        head + body
+        caption + head + body
+      end
+    end
+
+    def caption
+      content_tag "caption" do
+        @caption
       end
     end
 
@@ -134,12 +160,13 @@ module SageTableHelper
 
     def column_header(c)
       col_class = "sage-table__header sage-table-cell"
-      col_class << " sage-table-cell--truncate" if c.truncate
       col_class << " sage-table-cell--align-#{c.align}" if c.align
       col_class << " sage-table-cell--#{c.data_type}" if c.data_type
-      col_class << " #{c.header_class}"
+      col_class << " #{c.header_class}" if c.header_class
+      col_class << c.hide_classes if c.hide
+      col_class << " sage-table-cell--truncate" if c.truncate
 
-      content_tag "th", class: col_class do
+      content_tag "th", style: c.style, class: col_class do
         c.title
       end
     end
@@ -148,10 +175,12 @@ module SageTableHelper
       content_tag "tr", row_proc.call(record) do
         columns.map do |c|
           col_class = "sage-table-cell"
-          col_class << " sage-table-cell--truncate" if c.truncate
           col_class << " sage-table-cell--align-#{c.align}" if c.align
+          col_class << " #{c.class_name}" if c.class_name
           col_class << " sage-table-cell--#{c.data_type}" if c.data_type
-          col_class << " #{c.class_name}"
+          col_class << c.hide_classes if c.hide
+          col_class << " sage-table-cell--strong" if c.strong
+          col_class << " sage-table-cell--truncate" if c.truncate
 
           content_tag "td", style: c.style, class: col_class do
             c.value_for(record)

@@ -98,9 +98,6 @@ $-checkbox-focus-outline-color: sage-color(primary);
   .sage-table td > & {
     display: block;
   }
-  .sage-table td:first-child > & {
-    margin-left: sage-spacing(xs);
-  }
 }
 
 .sage-checkbox__label {
