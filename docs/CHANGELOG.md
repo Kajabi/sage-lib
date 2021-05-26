@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.0.0...@kajabi/sage@4.0.1) (2021-05-26)
+
+
+### Bug Fixes
+
+* **panel controls sort:** convert show_sort to an else if ([bc0643e](https://github.com/Kajabi/sage-lib/commit/bc0643ed05018021d0f143884dd937be6db86a14))
+* **panel controls sort:** revert the removal of the sort conditional ([29d2d94](https://github.com/Kajabi/sage-lib/commit/29d2d94bc78ea5a641ddd13696c81d1bd1ef65bd))
+
+
+
+
+
 # [4.0.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.26.1...@kajabi/sage@4.0.0) (2021-05-26)
 
 
