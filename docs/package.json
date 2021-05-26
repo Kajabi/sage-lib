@@ -8,6 +8,7 @@
     "test": "test"
   },
   "scripts": {
+    "lint": "yarn run stylelint \"./lib/sage-frontend/stylesheets/**/*.{css,scss,sass}\" --max-warnings 0",
     "rails:server": "bundle exec rails server -p 4000 -b 0.0.0.0",
     "rails:server:production": "bundle exec rails server -e production -b 0.0.0.0 -p $PORT",
     "heroku-postbuild": "bundle exec rake assets:precompile",
@@ -58,6 +59,9 @@
     "npm-run-all": "^4.1.5",
     "resolve-url-loader": "^3.1.1",
     "right-pad": "^1.0.1",
+    "stylelint": "^13.7.2",
+    "stylelint-config-sass-guidelines": "^7.0.0",
+    "stylelint-config-standard": "^20.0.0",
     "webpack": "4.44.2",
     "webpack-dev-server": "^3.11.0"
   }
