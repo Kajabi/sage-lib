@@ -3,6 +3,44 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.0.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.26.1...@kajabi/sage@4.0.0) (2021-05-26)
+
+
+### Bug Fixes
+
+* **copy-button:** fix attribute formatting error ([f9c0a90](https://github.com/Kajabi/sage-lib/commit/f9c0a904204ae580f7e401d4a94c499565754432))
+* **modal:** update spacing value and standard demo ([9b28b4f](https://github.com/Kajabi/sage-lib/commit/9b28b4f8a8108f57c9d73995a66c5f56f2ccccbc))
+* **page-header:** add conditional image ([111905a](https://github.com/Kajabi/sage-lib/commit/111905a3b867911bb815a5a106069f6861e7d49b))
+* **page-header:** update styles for mobile and desktop ([11236f7](https://github.com/Kajabi/sage-lib/commit/11236f796d6bb81df47dc2e0b98bb0cf3324a19d))
+
+
+### Features
+
+* **panel controls:** add end of line ([f2666dc](https://github.com/Kajabi/sage-lib/commit/f2666dcbd1614cf1ce0cce93a288243e28ba7725))
+* **panel controls:** remove unnecessary changes to rb file ([cbfd14b](https://github.com/Kajabi/sage-lib/commit/cbfd14b88bfeddf40d37f1956bda625b4459fbee))
+* **panel controls:** removing spaces ([4b72677](https://github.com/Kajabi/sage-lib/commit/4b726779d31f6c264578d1b9e0232fc8abec81af))
+* **panel controls:** revert the props changes ([3e3e3bd](https://github.com/Kajabi/sage-lib/commit/3e3e3bdf9eb2c7271057abc3c68f02f356c057b7))
+* **panel controls:** rework panel controls to use component ([a80e2ba](https://github.com/Kajabi/sage-lib/commit/a80e2baef0f8bfe3614fffbc92e0514c050bc4cf))
+* **panel controls:** update sort area of panel controls to use content_for rather than conditional ([3283c58](https://github.com/Kajabi/sage-lib/commit/3283c58dbdc54318650df713a778676ef35dfe51))
+* **stat box:** adds null view styling based on new attribute ([d98f8bd](https://github.com/Kajabi/sage-lib/commit/d98f8bd36f9a1f46259ea7e06160d278d2995106))
+* **table:** add rails documentation ([25b7daf](https://github.com/Kajabi/sage-lib/commit/25b7dafded41875e6ae95cd4db4296cd4b5355b9))
+* **table:** add rails table helper for experimentation ([5f091a8](https://github.com/Kajabi/sage-lib/commit/5f091a8590192f5bac0f100fbf1ec3713b76b18b))
+* **table:** remove non-functioning sortable prop from rails table ([c89c90f](https://github.com/Kajabi/sage-lib/commit/c89c90f56fe801d0a805504371e87bc69259f4c0))
+* **table:** sync styles and options to spec ([a9bee7f](https://github.com/Kajabi/sage-lib/commit/a9bee7fd47acdc88c9fff7d50a4aa66939b90dc1))
+* **table:** tighten up formatting in sage_table_for ([1c1078e](https://github.com/Kajabi/sage-lib/commit/1c1078e04ddf936a31d80b0c08e3398bd3d3e4b5))
+
+
+### BREAKING CHANGES
+
+* **panel controls:** Any use of sort within panel controls will need to be reviewed and likely updated
+to use a explicit dropdown within a content_for
+* **panel controls:** Any area of the app currently using SagePanelControl's and sort will need to be
+updated to work with the content_for
+
+
+
+
+
 ## [3.26.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@3.26.0...@kajabi/sage@3.26.1) (2021-05-25)
 
 **Note:** Version bump only for package @kajabi/sage

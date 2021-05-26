@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.42.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.41.0...@kajabi/sage-react@0.42.0) (2021-05-26)
+
+
+### Bug Fixes
+
+* **tabsitem react:** remove stray console log ([09126a9](https://github.com/Kajabi/sage-lib/commit/09126a9ae9f74fb0550eaad0c8ce0090108eb249))
+
+
+### Features
+
+* **stat box:** adds null view styling based on new attribute ([d98f8bd](https://github.com/Kajabi/sage-lib/commit/d98f8bd36f9a1f46259ea7e06160d278d2995106))
+
+
+
+
+
 # [0.41.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.40.2...@kajabi/sage-react@0.41.0) (2021-05-19)
 
 

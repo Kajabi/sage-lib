@@ -3,6 +3,37 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.33.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.32.0...@kajabi/sage-assets@0.33.0) (2021-05-26)
+
+
+### Bug Fixes
+
+* **modal:** update spacing between adjacent p tags ([b7fe04b](https://github.com/Kajabi/sage-lib/commit/b7fe04bf4ba1c26cebb63ac6454aa39254923871))
+* **modal:** update spacing value and standard demo ([9b28b4f](https://github.com/Kajabi/sage-lib/commit/9b28b4f8a8108f57c9d73995a66c5f56f2ccccbc))
+* **page-header:** add conditional image ([111905a](https://github.com/Kajabi/sage-lib/commit/111905a3b867911bb815a5a106069f6861e7d49b))
+* **page-header:** update styles for mobile and desktop ([11236f7](https://github.com/Kajabi/sage-lib/commit/11236f796d6bb81df47dc2e0b98bb0cf3324a19d))
+
+
+### Features
+
+* **panel controls:** adjust line height to use variable rather than hard code ([0ef7aa1](https://github.com/Kajabi/sage-lib/commit/0ef7aa122372578f9b753831c921479cbbf4b786))
+* **panel controls:** fix button font-weight on selected ([59b8389](https://github.com/Kajabi/sage-lib/commit/59b838927c1408ca16fe0bed4e688663233c4fbe))
+* **panel controls:** fix missing lint ([78ab801](https://github.com/Kajabi/sage-lib/commit/78ab801c32432d9482796800208f61d2b2cbfff9))
+* **panel controls:** update sort area of panel controls to use content_for rather than conditional ([3283c58](https://github.com/Kajabi/sage-lib/commit/3283c58dbdc54318650df713a778676ef35dfe51))
+* **panel controls:** update styles ([77cdddb](https://github.com/Kajabi/sage-lib/commit/77cdddbcc37278aa3eb9849eb5549d805a115c14))
+* **stat box:** adds null view styling based on new attribute ([d98f8bd](https://github.com/Kajabi/sage-lib/commit/d98f8bd36f9a1f46259ea7e06160d278d2995106))
+* **table:** sync styles and options to spec ([a9bee7f](https://github.com/Kajabi/sage-lib/commit/a9bee7fd47acdc88c9fff7d50a4aa66939b90dc1))
+
+
+### BREAKING CHANGES
+
+* **panel controls:** Any use of sort within panel controls will need to be reviewed and likely updated
+to use a explicit dropdown within a content_for
+
+
+
+
+
 # [0.32.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.31.2...@kajabi/sage-assets@0.32.0) (2021-05-19)
 
 
