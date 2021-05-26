@@ -72,6 +72,7 @@ item_count_text = component.item_count_label.present? ? component.item_count_lab
               <%= content_for :sage_panel_controls_pagination %>
             </div>
           <% end %>
+
           <% if component.show_sort %>
             <%= sage_component SageDropdown, {
               trigger_type: "select",
@@ -87,9 +88,9 @@ item_count_text = component.item_count_label.present? ? component.item_count_lab
                 css_classes: "sage-dropdown__trigger-selected-value",
                 icon: { style: "right", name: "caret-down" }
               } %>
-            <label class="sage-dropdown__trigger-label">Sort</label>
-          <% end %>
-          <% if content_for? :sage_panel_controls_sort %>
+              <label class="sage-dropdown__trigger-label">Sort</label>
+            <% end %>
+          <% elsif content_for? :sage_panel_controls_sort %>
             <%= content_for :sage_panel_controls_sort %>
           <% end %>
 
