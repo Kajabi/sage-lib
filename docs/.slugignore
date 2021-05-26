@@ -4,4 +4,5 @@
 /.cache/yarn
 /README.md
 /CHANGELOG.md
+/.stylelintrc.json
 /MIT-LICENSE
