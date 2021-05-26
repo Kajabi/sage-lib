@@ -47,6 +47,7 @@
     "gem:bump:type": "export SAGE_ORIGINAL_VER=$(bin/gem-version.sh); node bin/js/gem-bump-type.js",
     "lint": "yarn npm-run-all lint:*",
     "lint:assets": "yarn stylelint 'packages/sage-assets/lib/stylesheets/**/*.{css,scss}' --max-warnings 0",
+    "lint:docs": "cd docs && yarn lint",
     "lint:react": "cd packages/sage-react && yarn lint",
     "local": "bin/local-link-frontend.sh true",
     "sassdocs": "cd packages/sage-assets && yarn run start",
@@ -69,5 +70,6 @@
     "watch:assets": "cd packages/sage-assets && yarn build:watch",
     "watch:react": "cd packages/sage-react && yarn build:watch",
     "watch:system": "cd packages/sage-system && yarn build:watch"
-  }
+  },
+  "dependencies": {}
 }
