@@ -72,23 +72,9 @@ item_count_text = component.item_count_label.present? ? component.item_count_lab
               <%= content_for :sage_panel_controls_pagination %>
             </div>
           <% end %>
-          <% if component.show_sort %>
-            <%= sage_component SageDropdown, {
-              trigger_type: "select",
-              align: "right",
-              css_classes: "sage-panel-controls__sorts",
-              customized: true,
-              custom_modifier: "sort",
-              items: sort_items
-            } do %>
-              <%= sage_component SageButton, {
-                style: "secondary",
-                value: "",
-                css_classes: "sage-dropdown__trigger-selected-value",
-                icon: { style: "right", name: "caret-down" }
-              } %>
-              <label class="sage-dropdown__trigger-label">Sort</label>
-            <% end %>
+          
+          <% if content_for? :sage_panel_controls_sort %>
+            <%= content_for :sage_panel_controls_sort %>
           <% end %>
 
           <% if component.show_expand_collapse %>

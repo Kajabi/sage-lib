@@ -20,7 +20,7 @@ class SagePanelControls < SageComponent
   })
 
   def sections
-    %w(panel_controls_pagination panel_controls_toolbar panel_controls_tabs panel_controls_tabs_dropdown )
+    %w(panel_controls_pagination panel_controls_toolbar panel_controls_tabs panel_controls_tabs_dropdown panel_controls_sort)
   end
 end
 

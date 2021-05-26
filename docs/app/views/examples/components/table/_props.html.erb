@@ -1,10 +1,4 @@
 <tr>
-  <td><%= md('Block cells') %></td>
-  <td><%= md('`.sage-table-cell__block` creates vertical block layouts within table cells. These layouts can include `.sage-table-cell__heading` and `.sage-table-cell__body` content areas.') %></td>
-  <td><%= md('String:') %></td>
-  <td><%= md('`nil`') %></td>
-</tr>
-<tr>
   <td><%= md('`caption`') %></td>
   <td><%= md('Sets the caption for the component.') %></td>
   <td><%= md('Boolean') %></td>
@@ -12,7 +6,7 @@
 </tr>
 <tr>
   <td><%= md('`condensed`') %></td>
-  <td><%= md('`.sage-table--condensed` decreased vertical padding between items in the component.') %></td>
+  <td><%= md('Decreases vertical padding between items in the component.') %></td>
   <td><%= md('Boolean') %></td>
   <td><%= md('`nil`') %></td>
 </tr>
@@ -23,14 +17,14 @@
   <td><%= md('`nil`') %></td>
 </tr>
 <tr>
-  <td><%= md('`reset-above`') %></td>
-  <td><%= md('`.sage-table--reset-above` resets the top margin of the component.') %></td>
+  <td><%= md('`reset_above`') %></td>
+  <td><%= md('Resets the top margin of the component.') %></td>
   <td><%= md('Boolean') %></td>
   <td><%= md('`nil`') %></td>
 </tr>
 <tr>
-  <td><%= md('`reset-below`') %></td>
-  <td><%= md('`.sage-table--reset-below` resets the bottom margin of the component.') %></td>
+  <td><%= md('`reset_below`') %></td>
+  <td><%= md('Resets the bottom margin of the component.') %></td>
   <td><%= md('Boolean') %></td>
   <td><%= md('`nil`') %></td>
 </tr>
@@ -48,19 +42,74 @@
 </tr>
 <tr>
   <td><%= md('`selectable`') %></td>
-  <td><%= md('`.sage-table--selectable` adds a background color when a user hovers over rows.') %></td>
+  <td><%= md('Adds a background color when a user hovers over rows.') %></td>
   <td><%= md('String:') %></td>
   <td><%= md('`nil`') %></td>
 </tr>
 <tr>
   <td><%= md('`striped`') %></td>
-  <td><%= md('`.sage-table--striped` adds a background color to odd-numbered rows.') %></td>
+  <td><%= md('Adds a background color to odd-numbered rows.') %></td>
   <td><%= md('Boolean') %></td>
   <td><%= md('`nil`') %></td>
 </tr>
 <tr>
-  <td><%= md('Truncated cells') %></td>
-  <td><%= md('`.sage-table-cell--truncate` on individual cells truncates their content at smaller viewport sizes, displaying ellipses (&hellip;) in place of overflowing content. Take care not to use this with important pieces of information that should be displayed to users at all times.') %></td>
-  <td><%= md('String:') %></td>
+  <td colspan="4">
+    <%= md('**Alternate:** `sage_table_for`') %>
+  </td>
+</tr>
+<tr>
+  <td><%= md('`collection`') %></td>
+  <td><%= md('A collection from which the table data will be formatted.') %></td>
+  <td><%= md('Array of Objects') %></td>
+  <td><%= md('Required') %></td>
+</tr>
+<tr>
+  <td><%= md('`options`') %></td>
+  <td><%= md('
+  A set of options that match the following options from SageTable above:
+
+  - `condensed`
+  - `reset_above`
+  - `reset_below`
+  - `responsive`
+  - `striped`  
+
+  Also available, unique to `sage_table_for`:
+
+  - `sortable` -- enables sorting links and direction indicators on sorted columns.
+') %></td>
+  <td><%= md('See properties above') %></td>
+  <td><%= md('Varies') %></td>
+</tr>
+<tr>
+  <td colspan="4">
+    <%= md('**Alternate column formatter:** `t.column`') %>
+  </td>
+</tr>
+<tr>
+  <td><%= md('`attribute`') %></td>
+  <td><%= md('
+  An alias/identifier for the column/attribute. While this does not have to align to a property from the collection itself,
+  if `sortable` is on, those that do align with collection property will result in a sortable link being rendered.
+') %></td>
+  <td><%= md('Symbol') %></td>
+  <td><%= md('Required') %></td>
+</tr>
+<tr>
+  <td><%= md('`options`') %></td>
+  <td><%= md('
+  A set of options for the columns including:
+
+  - `align <"right" | "center" | nil>` -- Alignment direction for cells (body and header)
+  - `class_name <string>` -- CSS class name to render on body cells (not on header cell).
+  - `data_type <"checkbox" | "avatar">` -- Special cell data types to apply some preset styling for special cases.
+  - `header_class <string>` -- CSS class name to render on header cells.
+  - `hide <{ sm: boolean, md: boolean, lg: boolean}>` -- Set only the desired breakpoint to `true` to hide a given columnn at and below that breakpoint.
+  - `label <string>` -- Content for the header of the column.
+  - `strong <boolean>` -- Renders cell with strong style: weight of 500 and darker color.
+  - `style <string>` -- style attributes to render on cells.
+  - `truncate <boolean>` -- Whether or not to truncate the cell if its content does not fit (rather than wrap).
+') %></td>
+  <td><%= md('Hash') %></td>
   <td><%= md('`nil`') %></td>
 </tr>

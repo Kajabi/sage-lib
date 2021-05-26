@@ -6,6 +6,7 @@ class SageStatBox < SageComponent
       value: String,
     }],
     data: String,
+    has_data: [:optional, TrueClass],
     link: [:optional, {
       href: String,
       value: String,

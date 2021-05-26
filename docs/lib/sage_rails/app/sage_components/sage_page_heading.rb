@@ -8,7 +8,7 @@ class SagePageHeading < SageComponent
   })
 
   def sections
-    %w(breadcrumbs page_heading_toolbar page_heading_actions page_heading_intro help_content)
+    %w(breadcrumbs page_heading_toolbar page_heading_actions page_heading_intro page_heading_image help_content)
   end
 
 end

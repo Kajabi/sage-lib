@@ -1,4 +1,70 @@
 <%
+people_data = [
+  {
+    initials: 'AF',
+    name: 'Albert Flores',
+    email: 'albertflores@example.com',
+    price: '$420.00 USD',
+    amount: '1',
+    labels: ["green", "house"],
+    status: 'published'
+  },
+  {
+    initials: 'EP',
+    name: 'Eleanor Pena',
+    email: 'e_pena@example.com',
+    price: '$420.00 USD',
+    amount: '1',
+    labels: ["red"],
+    status: 'draft'
+  },
+  {
+    initials: 'LJ',
+    name: 'Lily Jones',
+    email: 'lilyjones@example.com',
+    price: '$420.00 USD',
+    amount: '1',
+    labels: ["house"],
+    status: 'warning'
+  },
+  {
+    initials: 'KM',
+    name: 'Kathryn Murphy',
+    email: 'katmurphy@example.com',
+    price: '$420.00 USD',
+    amount: '1',
+    labels: ["red", "house"],
+    status: 'locked'
+  },
+  {
+    initials: 'DR',
+    name: 'Darelene Robertson',
+    email: 'd_robertson@example.com',
+    price: '$420.00 USD',
+    amount: '1',
+    labels: [],
+    status: 'danger'
+  },
+  {
+    initials: 'RE',
+    name: 'Ralph Edwards',
+    email: 'ralphedwards@example.com',
+    price: '$420.00 USD',
+    amount: '1',
+    labels: [],
+    status: 'draft'
+  },
+  {
+    initials: 'JW',
+    name: 'Jenny Wilson',
+    email: 'jennywilson@example.com',
+    price: '$420.00 USD',
+    amount: '1',
+    labels: [],
+    status: 'published'
+  }
+]
+
 sample_table = {
   headers: [
     "Cras Porta",
@@ -52,15 +118,6 @@ sample_table = {
   headers: sample_table[:headers],
   rows: sample_table[:rows],
   caption: "Striped tables display a background color on odd-numbered rows",
-  striped: true
-} %>
-
-<h3 class="t-sage-heading-6">Sortable table</h3>
-<%= sage_component SageTable, {
-  headers: sample_table[:headers],
-  rows: sample_table[:rows],
-  caption: "NOTE: this example is for mockup purposes only and does not implement sorting cells",
-  sortable: true,
   striped: true
 } %>
 
@@ -167,3 +224,94 @@ sample_table = {
     ]
   ]
 } %>
+
+<h3>Using `sage_table_for`</h3>
+<%= md("
+As an alterative to directly calling the SageTable component,
+a helper variation is available that allows for formatting table columns
+in a more compositional fashion. This involves calling `sage_table_for` with a collection,
+and then using `t.column ... do |c|` blocks to provide templates for each column of data.
+See the \"Properties\" tab for documentation of the available parameters.
+
+**NOTE:** This is an MVP implementation based on a helper written earlier for `kajabi-products`
+and not completely aligned with SageTable yet.
+It is safe to use, but should be tracked against future updates.
+") %>
+
+<%= sage_table_for people_data, striped: true, sortable: true, responsive: true, caption: "<p>Testing <b>stuff</b></p>".html_safe do |t| %>
+  <% t.column :initials, label: "", data_type: "checkbox" do |c| %>
+    <%= sage_component SageCheckbox, {
+      label_text: 'Select row',
+      standalone: true,
+      id: "table-row-#{c[:initials]}",
+    } %>
+  <% end %>
+
+  <% t.column :initials, label: "", data_type: "avatar" do |c| %>
+    <%= sage_component SageAvatar, {
+      initials: c[:initials],
+      color: SageTokens::COLORS[rand(7)],
+    } %>
+  <% end %>
+
+  <% t.column :name, label: "Name", strong: true, truncate: true do |c| %>
+    <span data-js-tooltip="<%= c[:name] %>">
+      <%= c[:name] %>
+    </span>
+  <% end %>
+
+  <% t.column :email, label: "Email", truncate: true do |c| %>
+    <span data-js-tooltip="<%= c[:email] %>">
+      <%= c[:email] %>
+    </span>
+  <% end %>
+
+  <% t.column :price, label: "Price", style: "width: 140px", hide: { md: true } do |c| %>
+    <%= c[:price] %>
+  <% end %>
+
+  <% t.column :amount, label: "Amount", style: "width: 100px", hide: { md: true } do |c| %>
+    <%= c[:amount] %>
+  <% end %>
+
+  <% t.column :labels, label: "Labels", style: "width: 150px", hide: { sm: true } do |c| %>
+    <% c[:labels].each do |label| %>
+      <%= sage_component SageLabel, { 
+        value: label,
+        color: "info",
+      } %>
+    <% end %>
+  <% end %>
+
+  <% t.column :status, label: "Status", style: "width: 100px", hide: { sm: true } do |c| %>
+    <%= sage_component SageLabel, { 
+      value: c[:status].titlecase,
+      color: c[:status],
+      } %>
+  <% end %>
+
+  <% t.column :actions, label: "Actions", style: "width: 100px" do |c| %>
+    <%= sage_component SageButtonGroup, {} do %>
+      <%= sage_component SageButton, {
+        subtle: true,
+        value: 'Edit',
+        icon: { name: 'pen', style: 'only' },
+        style: 'primary',
+        attributes: {
+          href: "?edit=#edit",
+          "data-js-tooltip": "Edit",
+        }
+      } %>
+      <%= sage_component SageButton, {
+        subtle: true,
+        value: 'Delete',
+        icon: { name: 'trash', style: 'only' },
+        style: 'danger',
+        attributes: {
+          href: "?remove=#delete",
+          "data-js-tooltip": "Delete",
+        }
+      } %>
+    <% end %>
+  <% end %>
+<% end %>
