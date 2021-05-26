@@ -76,6 +76,10 @@
   spacer: { bottom: :xl },
   secondary_text: "1 Email in Sequence",
 } do %>
+
+    <% content_for :sage_page_heading_image do %>
+      <img src="/assets/card-placeholder-sm.png" alt=""/>
+    <% end %>
     <% content_for :sage_page_heading_toolbar do %>
       <%= sage_component SageButton, {
         style: "secondary",
@@ -171,6 +175,9 @@
         icon: { name: "gear", style: "left" },
         value: "Settings",
       }%>
+    <% end %>
+    <% content_for :sage_page_heading_image do %>
+      <img src="/assets/card-placeholder-sm.png" alt=""/>
     <% end %>
     <% content_for :sage_page_heading_intro do %>
       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo dolorum esse modi ut ipsa corporis.</p>

@@ -3,6 +3,34 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.32.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.31.2...@kajabi/sage-assets@0.32.0) (2021-05-19)
+
+
+### Bug Fixes
+
+* **button/link:** prevent duplicate launch link icon from appearing on focus & active state ([bfa41d6](https://github.com/Kajabi/sage-lib/commit/bfa41d6d465118aadec72436f3757d69d2d88e4b))
+* **property:** remove catalog reference in property CSS ([a3ee274](https://github.com/Kajabi/sage-lib/commit/a3ee27462d70664f07539b80dee89d50c4fc7e96))
+* **stat box:** updates styling, data prop type, and allows any icon to be used in label ([e89d357](https://github.com/Kajabi/sage-lib/commit/e89d357c05d35c663db73e3bd448c6c8acaf8058))
+* **toast:** add classes for toast spinner ([0359816](https://github.com/Kajabi/sage-lib/commit/0359816001edc10dc8e83813517d610e4d958b94))
+* **toast:** add spinner to uploading state ([c7d105a](https://github.com/Kajabi/sage-lib/commit/c7d105a13ef2366b43152575dce14a37978ecc08))
+
+
+### Features
+
+* **assets:** add line clamp mixin ([03240fb](https://github.com/Kajabi/sage-lib/commit/03240fb85332b30bc8991b548b6ff084d90aaa84))
+* **chart-legend:** add Chart Legend component ([314b945](https://github.com/Kajabi/sage-lib/commit/314b945a3be259f2dc6cdffc25993b2311bacac5))
+* **chart-summary:** add chart summary component ([b808671](https://github.com/Kajabi/sage-lib/commit/b8086714b3a6aa2046277dad76489b3e3103f6b4))
+* **stat box:** adds initial attributes and some styling ([d20aa86](https://github.com/Kajabi/sage-lib/commit/d20aa86abe28cb8878c5e19bf32ce163071a87fd))
+* **stat box:** cleans up styling ([075a91f](https://github.com/Kajabi/sage-lib/commit/075a91f7b62c4c7b744085c7c86b9f657dd4ea77))
+* **stat box:** cleans up styling and logic for React and Rails component ([fb2fe2e](https://github.com/Kajabi/sage-lib/commit/fb2fe2ee0141059eb039ba88f1e9740a590a00f7))
+* **stat box:** rails component generation ([d353a73](https://github.com/Kajabi/sage-lib/commit/d353a73771db9332867cf8efe78c98d538733500))
+* **tooltip:** allow for static Tooltip in React ([cb9253a](https://github.com/Kajabi/sage-lib/commit/cb9253a845c03aac934e97423d3cb176d4cc8ab5))
+* **vendor:** add recharts style setup ([fae1529](https://github.com/Kajabi/sage-lib/commit/fae15292ac074a22bfab871e797bab57aee7ff1c))
+
+
+
+
+
 ## [0.31.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.31.1...@kajabi/sage-assets@0.31.2) (2021-05-12)
 
 
