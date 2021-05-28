@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.0.2...@kajabi/sage@4.0.3) (2021-05-28)
+
+
+### Bug Fixes
+
+* include resolve-url-loader for prod, this threw an error on deploy ([a26b37b](https://github.com/Kajabi/sage-lib/commit/a26b37b14202a5a091e4d1cf0e90b0e9950eb398))
+
+
+
+
+
 ## [4.0.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.0.1...@kajabi/sage@4.0.2) (2021-05-28)
 
 **Note:** Version bump only for package @kajabi/sage
