@@ -1,5 +1,5 @@
 <button
-  class="sage-copy-btn <%= component.generated_css_classes %>"
+  class="sage-copy-btn <%= "sage-copy-btn--fill-container" if component.fill_container %> <%= component.generated_css_classes %>"
   data-js-copy-button="<%= component.value.html_safe %>"
   <%= component.generated_html_attributes.html_safe %>
 >
