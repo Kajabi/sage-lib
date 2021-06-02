@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.44.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.43.0...@kajabi/sage-react@0.44.0) (2021-06-02)
+
+
+### Features
+
+* **transaction-card:** update state color settings ([e32211c](https://github.com/Kajabi/sage-lib/commit/e32211c1f3740e347715ca13ae61fe38274d5b1d))
+
+
+
+
+
 # [0.43.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.42.0...@kajabi/sage-react@0.43.0) (2021-06-02)
 
 
