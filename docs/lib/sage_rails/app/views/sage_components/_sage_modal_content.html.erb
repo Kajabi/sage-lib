@@ -3,9 +3,14 @@
     <% if component.header_image.present? %>
       <img class="sage-modal__header-image" src=<%= component.header_image %> alt="" aria-hidden="true"/>
     <% end %>
-    <h1 class="t-sage-heading-4">
-      <%= component.title %>
-    </h1>
+    <div class="sage-modal__header-text">
+      <h1 class="t-sage-heading-4">
+        <%= component.title %>
+      </h1>
+      <% if content_for?(:sage_header_indicator) %>
+        <%= content_for :sage_header_indicator %>
+      <% end %>
+    </div>
     <% if content_for?(:sage_header_aside) %>
       <aside class="sage-modal__header-aside">
         <%= content_for :sage_header_aside %>
@@ -22,9 +27,9 @@
   <% end %>
 <% end %>
 
-<div 
+<div
   class="
-    sage-modal__content 
+    sage-modal__content
     <%= "sage-modal__content--spacing-#{component.spacing}" if component.spacing.present? %>
     <%= component.generated_css_classes %>"
   <%= component.generated_html_attributes.html_safe %>
