@@ -327,6 +327,14 @@
 }
 
 ///
+/// Adds the focus shadow to be used on all interactive elements
+///
+@mixin sage-focus-shadow($focus-shadow-width: 3px, $focus-shadow-color: #C2DFFF) {
+  box-shadow: 0 0 0 $focus-shadow-width $focus-shadow-color;
+  outline: none;
+}
+
+///
 /// Adds the basic default panel setup including grid, spacing, and border treatment
 ///
 @mixin sage-panel() {

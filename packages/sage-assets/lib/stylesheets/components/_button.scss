@@ -110,7 +110,8 @@ $-btn-interactive-label-icon-size: rem(24px);
 .sage-btn {
   @extend %t-sage-body-med;
   @include sage-button-style-reset();
-  @include sage-focus-outline;
+  // @include sage-focus-outline;
+  @include sage-focus-shadow;
 
   $-padding-block: rem(6px);
 
@@ -311,6 +312,10 @@ $-btn-interactive-label-icon-size: rem(24px);
   }
 
   // NOTE: Icon generation consolidated in `core/_icons.scss`
+}
+
+.sage-btn__content {
+
 }
 
 // Generate button style variations
