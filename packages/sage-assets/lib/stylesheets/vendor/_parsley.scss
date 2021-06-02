@@ -11,6 +11,20 @@ $-parsley-box-shadow-size: map-get($sage-field-configs, box-shadow-size);
 $-parsley-border-width: map-get($sage-field-configs, border-width);
 $-parsley-color-success: map-get($sage-field-colors, success);
 
+.sage-input .parsley-errors-list,
+.sage-textarea .parsley-errors-list,
+.sage-select .parsley-errors-list,
+.sage-checkbox .parsley-errors-list,
+.sage-radio .parsley-errors-list,
+.sage-choice .parsley-errors-list,
+.sage-type .parsley-errors-list {
+  display: none;
+
+  &.filled {
+    display: block;
+  }
+}
+
 .sage-input__field {
   &.parsley-error {
     color: inherit;

@@ -3,10 +3,13 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { CopyText } from '../CopyText';
 
-export const CopyButton = ({ children, className, semibold }) => {
+export const CopyButton = ({ children, className, fillContainer, semibold }) => {
   const classNames = classnames(
     'sage-copy-btn',
     className,
+    {
+      'sage-copy-btn--fill-container': fillContainer,
+    }
   );
 
   const copyBlockRef = useRef(null);
@@ -33,11 +36,13 @@ export const CopyButton = ({ children, className, semibold }) => {
 CopyButton.defaultProps = {
   children: null,
   className: null,
+  fillContainer: false,
   semibold: true,
 };
 
 CopyButton.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
+  fillContainer: PropTypes.bool,
   semibold: PropTypes.bool,
 };
