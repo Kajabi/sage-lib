@@ -312,6 +312,10 @@ $-btn-interactive-label-icon-size: rem(24px);
   // NOTE: Icon generation consolidated in `core/_icons.scss`
 }
 
+.sage-btn__content {
+
+}
+
 // Generate button style variations
 @each $-style-name, $-styles in $-btn-base-styles {
   .sage-btn--#{$-style-name} {
