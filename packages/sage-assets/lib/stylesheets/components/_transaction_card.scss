@@ -50,16 +50,21 @@
 .sage-transaction-card__amount--sage {
   color: sage-color(sage, 300);
 }
+
 .sage-transaction-card__amount--red {
   color: sage-color(red, 300);
 }
 
 .sage-transaction-card__state {
   @extend %t-sage-body-small;
+
+  color: sage-color(charcoal, 400);
 }
-.sage-transaction-card__state--info {
-  color: sage-color(primary, 400);
-}
+
 .sage-transaction-card__state--red {
   color: sage-color(red, 300);
+}
+
+.sage-transaction-card__state--sage {
+  color: sage-color(sage, 300);
 }

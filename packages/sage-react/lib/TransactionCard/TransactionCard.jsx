@@ -7,17 +7,17 @@ import { Label } from '../Label';
 import { AMOUNT_COLORS, LABEL_COLORS, STATE_COLORS } from './configs';
 
 export const TransactionCard = ({
+  amount,
+  amountColor,
   labelColor,
   labelText,
-  transactionState,
-  transactionStateColor,
   name,
   nameHref,
   nameTag,
-  amount,
-  amountColor,
   relatedProperty,
   relatedPropertyHref,
+  transactionState,
+  transactionStateColor,
   transactionTime,
 }) => {
   const NameTag = nameTag;
@@ -58,31 +58,31 @@ TransactionCard.AMOUNT_COLORS = AMOUNT_COLORS;
 TransactionCard.STATE_COLORS = STATE_COLORS;
 
 TransactionCard.defaultProps = {
-  labelText: '--',
+  amount: '0.00',
+  amountColor: null,
   labelColor: LABEL_COLORS.PUBLISHED,
-  transactionState: null,
-  transactionStateColor: null,
+  labelText: '--',
   name: '--',
   nameHref: null,
   nameTag: 'h4',
-  amount: '0.00',
-  amountColor: null,
   relatedProperty: '--',
   relatedPropertyHref: null,
+  transactionState: null,
+  transactionStateColor: null,
   transactionTime: '--',
 };
 
 TransactionCard.propTypes = {
-  labelText: PropTypes.string,
+  amount: PropTypes.string,
+  amountColor: PropTypes.oneOf(Object.values(TransactionCard.AMOUNT_COLORS)),
   labelColor: PropTypes.oneOf(Object.values(TransactionCard.LABEL_COLORS)),
-  transactionState: PropTypes.string,
-  transactionStateColor: PropTypes.oneOf(Object.values(TransactionCard.STATE_COLORS)),
+  labelText: PropTypes.string,
   name: PropTypes.string,
   nameHref: PropTypes.string,
   nameTag: PropTypes.string,
-  amount: PropTypes.string,
-  amountColor: PropTypes.oneOf(Object.values(TransactionCard.AMOUNT_COLORS)),
   relatedProperty: PropTypes.string,
   relatedPropertyHref: PropTypes.string,
+  transactionState: PropTypes.string,
+  transactionStateColor: PropTypes.oneOf(Object.values(TransactionCard.STATE_COLORS)),
   transactionTime: PropTypes.string,
 };

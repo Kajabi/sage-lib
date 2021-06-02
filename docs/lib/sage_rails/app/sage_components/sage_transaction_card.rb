@@ -10,7 +10,7 @@ class SageTransactionCard < SageComponent
     related_property: [:optional, String],
     related_property_href: [:optional, String],
     transaction_state: [:optional, String],
-    transaction_state_color: [:optional, Set.new(["info", "red"])],
+    transaction_state_color: [:optional, Set.new(["sage", "red"])],
     transaction_time: [:optional, String],
   })
 end
