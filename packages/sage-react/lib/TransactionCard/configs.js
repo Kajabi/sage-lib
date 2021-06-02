@@ -15,6 +15,6 @@ export const LABEL_COLORS = {
 
 export const STATE_COLORS = {
   DEFAULT: null,
+  SAGE: 'sage',
   RED: 'red',
-  INFO: 'info',
 };

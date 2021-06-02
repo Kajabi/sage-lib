@@ -9,7 +9,7 @@ export default {
     ...selectArgs({
       amountColor: TransactionCard.AMOUNT_COLORS,
       labelColor: TransactionCard.LABEL_COLORS,
-      stateColor: TransactionCard.STATE_COLORS,
+      transactionStateColor: TransactionCard.STATE_COLORS,
     }),
   },
   args: {
@@ -17,7 +17,7 @@ export default {
     amountColor: TransactionCard.AMOUNT_COLORS.DEFAULT,
     labelColor: TransactionCard.LABEL_COLORS.PUBLISHED,
     labelText: 'Multi-Payment',
-    transactionStateColor: TransactionCard.STATE_COLORS.INFO,
+    transactionStateColor: TransactionCard.STATE_COLORS.SAGE,
     transactionState: 'New',
     name: 'Lilly Jones',
     nameHref: 'https://kajabi.com',
