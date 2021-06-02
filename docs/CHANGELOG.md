@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.1.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.0.3...@kajabi/sage@4.1.0) (2021-06-02)
+
+
+### Bug Fixes
+
+* **docs:** adding back stylelintrc.json to slugignore ([ab41248](https://github.com/Kajabi/sage-lib/commit/ab412482f7eadc00ec11810130bb8c6a1e8c1e98))
+* **docs:** adding linting rules ([8f24ed1](https://github.com/Kajabi/sage-lib/commit/8f24ed11473cab655d21b9044c8f7a8d1765f473))
+* **docs:** removing Stylelint from docs site ([7bff574](https://github.com/Kajabi/sage-lib/commit/7bff57442db39744269f2d4dfac6da8f690a8ae9))
+
+
+### Features
+
+* **copy-button:** add prop to allow copy button to fill its container ([d221964](https://github.com/Kajabi/sage-lib/commit/d2219642ea7873db8d80789e3ebbde09f6acbc1c))
+
+
+
+
+
 ## [4.0.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.0.2...@kajabi/sage@4.0.3) (2021-05-28)
 
 

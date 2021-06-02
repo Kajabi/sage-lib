@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.8.2...@kajabi/sage-system@0.8.3) (2021-06-02)
+
+
+### Bug Fixes
+
+* remove 'page' key so that search results will default to showing on first page ([0f06743](https://github.com/Kajabi/sage-lib/commit/0f067431ebcf8cd4cc5965a144e22fcd2124a65b))
+
+
+
+
+
 ## [0.8.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.8.1...@kajabi/sage-system@0.8.2) (2021-05-19)
 
 

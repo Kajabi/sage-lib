@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.34.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.33.0...@kajabi/sage-assets@0.34.0) (2021-06-02)
+
+
+### Bug Fixes
+
+* **parsley:** removed error list until an error occurs ([99df32a](https://github.com/Kajabi/sage-lib/commit/99df32a2e5032d008389f47d1db160a63ba6efd0))
+
+
+### Features
+
+* **copy-button:** add prop to allow copy button to fill its container ([d221964](https://github.com/Kajabi/sage-lib/commit/d2219642ea7873db8d80789e3ebbde09f6acbc1c))
+
+
+
+
+
 # [0.33.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.32.0...@kajabi/sage-assets@0.33.0) (2021-05-26)
 
 

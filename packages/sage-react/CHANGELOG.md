@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.43.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.42.0...@kajabi/sage-react@0.43.0) (2021-06-02)
+
+
+### Features
+
+* **copy-button:** add prop to allow copy button to fill its container ([d221964](https://github.com/Kajabi/sage-lib/commit/d2219642ea7873db8d80789e3ebbde09f6acbc1c))
+
+
+
+
+
 # [0.42.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.41.0...@kajabi/sage-react@0.42.0) (2021-05-26)
 
 
