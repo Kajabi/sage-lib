@@ -27,6 +27,13 @@ $-indicator-size: rem(7px);
     margin-right: 8px;
   }
 }
+.sage-indicator-text {
+  margin-top: sage-spacing(2xs);
+
+  .sage-modal & {
+    margin-top: sage-spacing(2xs);
+  }
+}
 
 .sage-indicator--current {
   background-color: sage-color(grey, 500);
