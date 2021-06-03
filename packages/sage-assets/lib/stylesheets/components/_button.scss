@@ -348,7 +348,6 @@ $-btn-interactive-label-icon-size: rem(24px);
     }
 
     &:not(.sage-btn--subtle):not(:disabled):not([aria-disabled="true"]) {
-      @include sage-focus-shadow;
       &:focus {
         @include sage-focus-shadow;
       }

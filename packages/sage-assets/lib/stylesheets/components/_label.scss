@@ -49,6 +49,10 @@ $-label-inset-border: 0 0 0 1px inset;
   &:active {
     outline: none;
   }
+
+  .sage-label--interactive &:focus {
+    @include sage-focus-shadow();
+  }
 }
 
 .sage-label__value-text {
@@ -93,9 +97,6 @@ $-label-inset-border: 0 0 0 1px inset;
     }
 
     .sage-label__value {
-      @include sage-focus-outline();
-      @include sage-focus-outline--update-color( sage-color-combo($-color-name, default, foreground) );
-
       &:hover:not(:focus):not(:active):not(:disabled):not(.disabled) {
         color: sage-color-combo($-color-name, default, foreground-accent);
       }
@@ -106,10 +107,6 @@ $-label-inset-border: 0 0 0 1px inset;
 
       &:hover {
         background-color: sage-color-combo($-color-name, default, icon-background-accent);
-      }
-
-      &:focus {
-        @include sage-focus-outline--update-color( sage-color-combo($-color-name, default, foreground) );
       }
     }
 
@@ -145,7 +142,7 @@ $-label-inset-border: 0 0 0 1px inset;
       }
 
       &:focus {
-        @include sage-focus-outline--update-color( sage-color-combo($-color-name, default, foreground-accent) );
+        @include sage-focus-shadow();
       }
 
       &.sage-btn--tag::before {
