@@ -20,6 +20,7 @@ export { ExpandableCard } from './ExpandableCard';
 export { FormSection } from './FormSection';
 export { Grid } from './Grid';
 export { HelpLink } from './HelpLink';
+export { Hint } from './Hint';
 export { Icon } from './Icon';
 export { IconCard } from './IconCard';
 export { IconList } from './IconList';

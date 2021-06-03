@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export const Hint = ({ text = 'Hello, world!' }) => (
-  <h1>{text} This is a hint.</h1>
+  <div className="hint">
+    <h1 className="hint__text">{text} This is a hint, dude!</h1>
+  </div>
 );
 
 Hint.defaultProps = {
