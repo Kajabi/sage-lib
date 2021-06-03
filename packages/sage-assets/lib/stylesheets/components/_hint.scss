@@ -1,7 +1,10 @@
-.hint {
-  padding: 10px;
+////
+/// hint
+///
+/// @group sage
+////
+
+.sage-hint {
   background-color: red;
-  &__text {
-    color: purple;
-  }
+  padding: 10px;
 }
