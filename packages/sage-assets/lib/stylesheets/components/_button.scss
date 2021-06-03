@@ -110,8 +110,6 @@ $-btn-interactive-label-icon-size: rem(24px);
 .sage-btn {
   @extend %t-sage-body-med;
   @include sage-button-style-reset();
-  // @include sage-focus-outline;
-  @include sage-focus-shadow;
 
   $-padding-block: rem(6px);
 
@@ -132,6 +130,8 @@ $-btn-interactive-label-icon-size: rem(24px);
 
   &:focus:not(:disabled):not([aria-disabled="true"]),
   &:active:not(:disabled):not([aria-disabled="true"]) {
+    // @include sage-focus-shadow;
+
     .sage-dropdown__item > & {
       @include sage-focus-outline--update-color(transparent);
     }
@@ -314,10 +314,6 @@ $-btn-interactive-label-icon-size: rem(24px);
   // NOTE: Icon generation consolidated in `core/_icons.scss`
 }
 
-.sage-btn__content {
-
-}
-
 // Generate button style variations
 @each $-style-name, $-styles in $-btn-base-styles {
   .sage-btn--#{$-style-name} {
@@ -352,18 +348,34 @@ $-btn-interactive-label-icon-size: rem(24px);
     }
 
     &:not(.sage-btn--subtle):not(:disabled):not([aria-disabled="true"]) {
+      @include sage-focus-shadow;
+      &:focus {
+        @include sage-focus-shadow;
+      }
       // Shadow appears on Primary by default but can be toggled off with `--no-shadow`
       @if ($-style-name == primary) {
         box-shadow: $-btn-shadow-base;
 
+        &:focus {
+          @include sage-focus-shadow();
+        }
+
         &.sage-btn--no-shadow {
           box-shadow: none;
+
+          &:focus {
+            @include sage-focus-shadow;
+          }
         }
       }
       // All other buttons have no shadow by default but one can be toggled on with `--raised`
       @else {
         &.sage-btn--raised {
           box-shadow: $-btn-shadow-base;
+
+          &:focus {
+            @include sage-focus-shadow();
+          }
         }
       }
     }
@@ -383,7 +395,7 @@ $-btn-interactive-label-icon-size: rem(24px);
       color: map-get($-styles, default);
       background-color: transparent;
 
-      @include sage-focus-outline--update-color(map-get($-styles, default));
+      @include sage-focus-outline--update-color($sage-focus-color);
 
       &:hover {
         color: map-get($-styles, hover);
