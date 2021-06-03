@@ -49,12 +49,9 @@ $-switch-focus-outline-error-color: sage-color(red, 300);
     border: sage-border();
     border-radius: sage-border(radius);
 
-    &:focus-within {
-      box-shadow: 0 0 0 ($-switch-focus-outline-width * 1px) $-switch-focus-outline-color;
-    }
-
+    &:focus-within,
     &.sage-switch--error:focus-within {
-      box-shadow: 0 0 0 ($-switch-focus-outline-width * 1px) $-switch-focus-outline-error-color;
+      @include sage-focus-shadow();
     }
   }
 
@@ -117,11 +114,14 @@ $-switch-focus-outline-error-color: sage-color(red, 300);
   transition: background 0.3s ease-out;
   cursor: pointer;
 
+  &:focus {
+    @include sage-focus-shadow();
+  }
+
   .sage-switch--has-border & {
     position: absolute;
 
-    &::after,
-    &::before {
+    &::after {
       border-color: transparent;
     }
   }
@@ -155,24 +155,12 @@ $-switch-focus-outline-error-color: sage-color(red, 300);
     }
   }
 
-  &::before,
   &::after {
     content: "";
     display: block;
     position: absolute;
     left: 50%;
     top: 50%;
-  }
-
-  &::before { // switch background
-    transform: translate3d(-50%, -50%, 0) scale(0.94);
-    width: calc(100% + (#{$-switch-focus-outline-spacing * 2}));
-    height: calc(100% + (#{$-switch-focus-outline-spacing * 2}));
-    border: ($-switch-focus-outline-width * 1px) solid $-switch-focus-outline-color;
-    border-radius: $-switch-border-radius;
-    transition: opacity 0.15s ease-out 0.05s, transform 0.2s ease-in-out;
-    pointer-events: none;
-    opacity: 0;
   }
 
   &::after {  // switch toggle
@@ -195,13 +183,9 @@ $-switch-focus-outline-error-color: sage-color(red, 300);
     &:checked {
       background-color: sage-color(red);
     }
-    &::before {
-      border-color: sage-color(red);
-    }
   }
 
-  .sage-switch--has-border:not(.sage-switch--standalone) &::after,
-  .sage-switch--has-border:not(.sage-switch--standalone) &::before {
+  .sage-switch--has-border:not(.sage-switch--standalone) &::after {
     border-color: transparent;
   }
 
@@ -238,14 +222,6 @@ $-switch-focus-outline-error-color: sage-color(red, 300);
     &:checked ~ .sage-switch__label,
     &:checked ~ .sage-switch__message {
       color: $-switch-color-disabled-checked-text;
-    }
-  }
-
-  &:focus:not(:disabled),
-  &:active:not(:disabled) {
-    &::before {
-      transform: translate3d(-50%, -50%, 0);
-      opacity: 1;
     }
   }
 }
