@@ -63,8 +63,8 @@ $-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
   &:active,
   &:focus,
   &.sage-choice--active {
-    outline: none;
     color: $-choice-color-active;
+    outline: none;
 
     &::after {
       @include sage-focus-shadow();

@@ -334,7 +334,8 @@
 
   @if $inset {
     box-shadow: inset 0 0 0 3px $focus-shadow-color;
-  } @else {
+  }
+  @else {
     box-shadow: 0 0 0 3px $focus-shadow-color;
   }
 }
