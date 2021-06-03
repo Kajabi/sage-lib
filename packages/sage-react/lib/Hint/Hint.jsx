@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import { Icon } from '../Icon';
+import { SageTokens } from '../configs';
 
 export const Hint = ({
   className,
-  text,
+  content,
   ...rest
 }) => {
   const classNames = classnames(
@@ -13,16 +15,20 @@ export const Hint = ({
   );
   return (
     <div className={classNames} {...rest}>
-      <h1 className="sage-hint__text">{text} This is a hint, dude!</h1>
+      <Icon
+        className="sage-hint__icon"
+        icon={SageTokens.ICONS.INFO_CIRCLE}
+      />
+      <span className="sage-hint__content">{content}</span>
     </div>
   );
 };
 
 Hint.defaultProps = {
-  className: '',
+  className: ''
 };
 
 Hint.propTypes = {
   className: PropTypes.string,
-  text: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired,
 };
