@@ -60,20 +60,14 @@ $-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
     background-color: sage-color(grey, 100);
   }
 
-  &:focus {
-    outline: none;
-
-    &::after {
-      border-color: sage-color(grey, 400);
-    }
-  }
-
   &:active,
+  &:focus,
   &.sage-choice--active {
+    outline: none;
     color: $-choice-color-active;
 
     &::after {
-      border-color: sage-color(primary);
+      @include sage-focus-shadow();
     }
   }
 
