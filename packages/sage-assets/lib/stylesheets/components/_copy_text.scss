@@ -51,14 +51,13 @@ $-copy-text-color-hover: sage-color(charcoal, 500);
 
 .sage-copy-btn {
   @include sage-button-style-reset();
-  @include sage-focus-outline();
-  @include sage-focus-outline--update-color($-copy-text-color-hover);
 
   display: inline-flex;
   flex-flow: row-reverse;
   align-items: center;
   max-width: 100%;
   padding-right: sage-spacing(2xs);
+  border-radius: sage-border(radius);
 
   &::before {
     @include sage-icon-base(copy);
@@ -69,6 +68,10 @@ $-copy-text-color-hover: sage-color(charcoal, 500);
 
   &:hover::before {
     color: $-copy-text-color-hover;
+  }
+
+  &:focus {
+    @include sage-focus-shadow();
   }
 }
 
