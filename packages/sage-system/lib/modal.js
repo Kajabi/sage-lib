@@ -17,7 +17,7 @@ Sage.modal = (function() {
   const EVENT_ACTIVE = "sage.modal.active";
   const EVENT_OPENING = "sage.modal.opening";
   const EVENT_OPEN = "sage.modal.open";
-  let SELECTOR_LAST_FOCUSED;
+  let selectorLastFocused;
 
   // ==================================================
   // Functions
@@ -67,7 +67,7 @@ Sage.modal = (function() {
       fetchModalContent(modal);
     }
 
-    SELECTOR_LAST_FOCUSED = document.activeElement;
+    selectorLastFocused = document.activeElement;
     modal.classList.add(MODAL_ACTIVE_CLASS);
     modal.setAttribute("open", "");
     document.addEventListener("keyup", onModalKeypress);
@@ -122,7 +122,7 @@ Sage.modal = (function() {
     el.classList.remove(MODAL_ACTIVE_CLASS);
     el.removeAttribute("open");
     el.removeEventListener("keydown", focusTrap);
-    SELECTOR_LAST_FOCUSED.focus();
+    selectorLastFocused && selectorLastFocused.focus();
     removeModalContents(el);
   }
 
