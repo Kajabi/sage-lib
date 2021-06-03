@@ -170,8 +170,6 @@ $-checkbox-focus-outline-color: sage-color(primary);
     @include sage-focus-shadow();
   }
 
-
-  &::before,
   &::after {
     content: "";
     display: block;
@@ -180,21 +178,6 @@ $-checkbox-focus-outline-color: sage-color(primary);
     top: 50%;
     transition: opacity 0.2s ease-in-out, transform $-checkbox-transition;
     opacity: 0;
-  }
-
-  // focus outline
-  &::before {
-    // transform: translate3d(-50%, -50%, 0) scale(0.94);
-    // width: calc(100% + (#{$-checkbox-focus-outline-width * 2px} + #{$-checkbox-focus-outline-size * 2}));
-    // height: calc(100% + (#{$-checkbox-focus-outline-width * 2px} + #{$-checkbox-focus-outline-size * 2}));
-    // border: ($-checkbox-focus-outline-width * 1px) solid $-checkbox-focus-outline-color;
-    // border-radius: $-checkbox-border-radius-outer;
-    // pointer-events: none;
-    // opacity: 0;
-
-    .sage-panel-controls__bulk-actions--checked & {
-      display: none;
-    }
   }
 
   // Checkmark
@@ -218,7 +201,6 @@ $-checkbox-focus-outline-color: sage-color(primary);
     color: $-checkbox-color-checked;
     background: $-checkbox-color-checked;
     border-color: $-checkbox-color-checked;
-    box-shadow: sage-shadow(sm);
 
     &::after {
       opacity: 1;
@@ -233,21 +215,12 @@ $-checkbox-focus-outline-color: sage-color(primary);
   &:focus:not(:disabled),
   &:active:not(:disabled) {
     outline: none;
-
-    &::before {
-      transform: translate3d(-50%, -50%, 0) scale(1);
-      opacity: 1;
-    }
   }
 
   &:disabled {
     background: $-checkbox-color-disabled;
     cursor: not-allowed;
     opacity: 0.5;
-
-    &::before {
-      display: none;
-    }
 
     // disabled & checked
     &:checked {
@@ -272,10 +245,6 @@ $-checkbox-focus-outline-color: sage-color(primary);
     }
 
     &:hover:not(:checked):not(:disabled) {
-      border-color: sage-color(red);
-    }
-
-    &::before {
       border-color: sage-color(red);
     }
   }
