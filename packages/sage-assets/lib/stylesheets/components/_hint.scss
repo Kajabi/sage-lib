@@ -4,7 +4,21 @@
 /// @group sage
 ////
 
+// Colors
+$-hint-text-color: sage-color(charcoal, 400);
+$-hint-background-color: sage-color(grey, 200);
+
 .sage-hint {
-  background-color: red;
-  padding: 10px;
+  background-color: $-hint-background-color;
+  padding: sage-spacing(xs) 12px;
+  display: flex;
+  align-items: center;
+}
+
+.sage-hint__content {
+  margin-left: sage-spacing(xs);
+  color: $-hint-text-color;
+  font-size: sage-font-size(sm, false);
+  font-weight: sage-font-weight(regular);
+  line-height: sage-line-height(sm);
 }

@@ -5,7 +5,7 @@ export default {
   title: 'Sage/Hint',
   component: Hint,
   args: {
-    text: 'Hello, world!'
+    content: 'Avoid using the following spam trigger: "free"'
   }
 };
 
