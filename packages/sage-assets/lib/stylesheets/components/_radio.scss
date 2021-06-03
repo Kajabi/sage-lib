@@ -62,12 +62,9 @@ $-radio-focus-outline-color: currentColor;
   border: sage-border();
   border-radius: sage-border(radius);
 
-  &:focus-within {
-    box-shadow: 0 0 0 ($-radio-focus-outline-width * 1px) $-radio-color-focus-outline;
-  }
-
+  &:focus-within,
   &.sage-radio--error:focus-within {
-    box-shadow: 0 0 0 ($-radio-focus-outline-width * 1px) $-radio-color-focus-outline-error;
+    @include sage-focus-shadow();
   }
 }
 
@@ -115,7 +112,6 @@ $-radio-focus-outline-color: currentColor;
   transition: background 0.2s ease-in-out, box-shadow $-radio-transition, border $-radio-transition;
   cursor: pointer;
 
-  &::before,
   &::after {
     content: "";
     display: block;
@@ -126,16 +122,6 @@ $-radio-focus-outline-color: currentColor;
     color: inherit;
     border-radius: inherit;
     transition: opacity 0.2s ease-in-out, transform $-radio-transition;
-    opacity: 0;
-  }
-
-  // focus outline
-  &::before {
-    transform: translate3d(-50%, -50%, 0) scale(0.94);
-    width: calc(100% + ((#{$-radio-focus-outline-width} * 1px) + (#{$-radio-focus-outline-size} * 2)));
-    height: calc(100% + ((#{$-radio-focus-outline-width} * 1px) + (#{$-radio-focus-outline-size} * 2)));
-    border: calc(#{$-radio-focus-outline-width} * 1px) solid $-radio-color-default;
-    pointer-events: none;
     opacity: 0;
   }
 
@@ -151,7 +137,6 @@ $-radio-focus-outline-color: currentColor;
     color: $-radio-color-checked;
     background-color: $-radio-color-checked;
     border-color: transparent;
-    box-shadow: sage-shadow(sm);
 
     &::after {
       transform: translate3d(-50%, -50%, 0) scale(1);
@@ -168,13 +153,7 @@ $-radio-focus-outline-color: currentColor;
 
   &:focus:not(:disabled),
   &:active:not(:disabled) {
-    outline: none;
-    
-    &::before {
-      transform: translate3d(-50%, -50%, 0) scale(1);
-      border-color: $-radio-color-focus-outline;
-      opacity: 1;
-    }
+    @include sage-focus-shadow();
 
     &::after {
       transform: translate3d(-50%, -50%, 0) scale(1);
@@ -209,8 +188,7 @@ $-radio-focus-outline-color: currentColor;
       margin-top: 0;
     }
 
-    .sage-radio--has-border &::after,
-    .sage-radio--has-border &::before {
+    .sage-radio--has-border &::after {
       border-color: transparent;
     }
   }
@@ -240,9 +218,6 @@ $-radio-focus-outline-color: currentColor;
     }
     &::after {
       background-color: sage-color(white);
-    }
-    &:focus::before {
-      border-color: $-radio-color-focus-outline-error;
     }
   }
   :hover:not(:checked):not(:disabled) {
