@@ -107,12 +107,11 @@ $-banner-el-icon: "before";
 .sage-banner__link {
   color: inherit;
   text-decoration: underline;
+  border-radius: sage-border(radius);
 
   &:hover {
     text-decoration: underline;
   }
-
-  @include sage-focus-outline();
 }
 
 .sage-banner__close {
@@ -122,10 +121,15 @@ $-banner-el-icon: "before";
 
 .sage-banner__close,
 .sage-banner__link {
-  @include sage-focus-outline--update-color(map-get(map-get($-banner-colors, default), text));
 
   &:hover {
     color: map-get(map-get($-banner-colors, default), text-hover);
+  }
+
+  &.sage-btn--subtle {
+    @include sage-focus-outline($outline-offset-inline: 6px, $outline-offset-block: 0px);
+    @include sage-focus-outline--update-color(map-get(map-get($-banner-colors, default), text));
+    @include sage-focus-outline--update-color($sage-focus-color);
   }
 
   @each $name, $configs in $-banner-colors {
