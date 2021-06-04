@@ -1,5 +1,5 @@
 class SageHint < SageComponent
   set_attribute_schema({
-    content: String,
+    content: [:optional, String],
   })
 end
