@@ -12,13 +12,16 @@ $-hint-background-color: sage-color(grey, 200);
   background-color: $-hint-background-color;
   padding: sage-spacing(xs) 12px;
   display: flex;
-  align-items: center;
+}
+
+.sage-hint__icon {
+  @media (min-width: sage-breakpoint(lg-min)) {
+    margin-top: 3px;
+  }
 }
 
 .sage-hint__content {
+  @extend %t-sage-body-small;
   margin-left: sage-spacing(xs);
   color: $-hint-text-color;
-  font-size: sage-font-size(sm, false);
-  font-weight: sage-font-weight(regular);
-  line-height: sage-line-height(sm);
 }
