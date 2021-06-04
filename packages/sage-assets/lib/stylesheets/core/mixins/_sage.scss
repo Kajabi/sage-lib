@@ -329,14 +329,18 @@
 ///
 /// Adds the focus shadow to be used on all interactive elements
 ///
-@mixin sage-focus-shadow($focus-shadow-color: #C2DFFF, $inset: false) {
+@mixin sage-focus-shadow(
+  $focus-shadow-color: #C2DFFF,
+  $focus-shadow-inset: false,
+  $focus-shadow-width: 3px
+) {
   outline: none;
 
-  @if $inset {
-    box-shadow: inset 0 0 0 3px $focus-shadow-color;
+  @if $focus-shadow-inset {
+    box-shadow: inset 0 0 0 $focus-shadow-width $focus-shadow-color;
   }
   @else {
-    box-shadow: 0 0 0 3px $focus-shadow-color;
+    box-shadow: 0 0 0 $focus-shadow-width $focus-shadow-color;
   }
 }
 
