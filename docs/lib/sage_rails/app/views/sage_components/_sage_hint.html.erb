@@ -2,7 +2,6 @@
   class="sage-hint <%= component.generated_css_classes %>"
   <%= component.generated_html_attributes.html_safe %>
 >
-  
-
-  <%= @content %>
+  <i class="sage-hint__icon sage-icon-info-circle t-sage--color-inherit" aria-hidden="true"></i>
+  <span class="sage-hint__content"><%= component.content %></span>
 </div>
