@@ -115,7 +115,7 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
   &:focus-within {
     outline: none;
 
-    @include sage-focus-shadow($inset: true);
+    @include sage-focus-shadow($focus-shadow-inset: true);
   }
 }
 
@@ -129,7 +129,7 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
 
 .sage-dropdown__item--disabled {
   &:active {
-    @include sage-focus-shadow($inset: true);
+    @include sage-focus-shadow($focus-shadow-inset: true);
   }
 }
 

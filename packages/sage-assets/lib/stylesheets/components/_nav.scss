@@ -56,7 +56,7 @@ $-nav-icon-size: rem(20px);
   }
 
   &:focus {
-    @include sage-focus-shadow($inset: true);
+    @include sage-focus-shadow($focus-shadow-inset: true);
   }
 }
 
