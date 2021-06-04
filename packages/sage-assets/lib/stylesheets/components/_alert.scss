@@ -90,16 +90,23 @@ $-alert-icon-colors: (
   height: rem(20px);
   width: rem(20px);
   padding: 0;
+  align-self: flex-start;
   font-size: sage-font-size(xl, false);
   line-height: 1;
   background-color: transparent;
   border: 0;
   appearance: none;
+
   @each $name, $color in $-alert-colors {
     .sage-alert--#{$name} & {
       color: sage-color($color, 400);
+
+      &:focus {
+        @include sage-focus-shadow(sage-color($color, 400));
+      }
     }
   }
+
   &:hover {
     opacity: 0.7;
   }

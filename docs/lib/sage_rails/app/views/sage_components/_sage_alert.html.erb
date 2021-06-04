@@ -1,10 +1,10 @@
-<div 
+<div
   class="
-    sage-alert<%= component.color ? " 
+    sage-alert<%= component.color ? "
     sage-alert--#{component.color}" : ""%>
     <% if component.raised %> sage-alert--raised<% end %>
     <%= component.generated_css_classes %>
-  " 
+  "
   <%= component.generated_html_attributes.html_safe %>
 >
   <i class="sage-alert__icon <%= component.icon_name %>" aria-hidden="true"></i>
@@ -22,6 +22,15 @@
     <% end %>
   </div>
   <% if component.dismissable %>
-      <button type="button" class="sage-alert__close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-    <% end %>
+    <%= sage_component SageButton, {
+      value: "Close",
+      icon: {
+        style: "only",
+        name: "remove"
+      },
+      subtle: true,
+      small: true,
+      css_classes: "sage-alert__close"
+    } %>
+  <% end %>
 </div>
