@@ -143,15 +143,15 @@ $-toast-bottom-spacing: sage-spacing(xs);
 .sage-toast__button {
   @extend %t-sage-body-med;
   @include sage-button-style-reset();
-  @include sage-focus-outline;
-  @include sage-focus-outline--update-color(sage-color(white));
+  @include sage-focus-outline($outline-offset-inline: 4px, $outline-offset-block: 3px);
+  @include sage-focus-outline--update-color($sage-focus-color);
 
   display: inline-flex;
   align-items: center;
   margin-left: sage-spacing(sm);
   white-space: nowrap;
   color: sage-color(grey, 100);
-  border-radius: sage-border(radius-large);
+  border-radius: sage-border(radius);
 
   &:hover,
   &:focus {

@@ -13,7 +13,7 @@ export const toastTemplate = ({id, type, icon, text, link}) => (`
     class="sage-toast sage-toast--style-${type}"
     id="${id}"
     ${DATA_ATTR}
-  > 
+  >
     ${type === "loading" ? loadingTemplate() : iconTemplate(icon)}
     <output
       class="sage-toast__value"
@@ -24,7 +24,10 @@ export const toastTemplate = ({id, type, icon, text, link}) => (`
     </output>
     ${linkTemplate(link)}
     <button
-      class="sage-toast__button sage-toast__button--close"
+      class="sage-btn
+      sage-btn--subtle
+      sage-btn--small
+      sage-toast__button sage-toast__button--close"
       type="button"
       ${DATA_ATTR_CLOSE_BUTTON}
     >
