@@ -87,7 +87,7 @@ $-checkbox-focus-outline-color: sage-color(primary);
 
     &:focus-within {
       z-index: sage-z-index(default, 2);
-      box-shadow: map-get($sage-toolbar-button-borders, focus);
+      @include sage-focus-shadow;
     }
   }
 }

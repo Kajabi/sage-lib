@@ -33,6 +33,12 @@ $-search-icon: "::before";
     &:focus-within {
       border-radius: sage-border(radius);
       @include sage-focus-shadow;
+
+      /* stylelint-disable max-nesting-depth */
+      .sage-dropdown & {
+        @include sage-focus-shadow($focus-shadow-inset: true);
+      }
+      /* stylelint-enable max-nesting-depth */
     }
   }
 
