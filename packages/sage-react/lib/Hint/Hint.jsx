@@ -7,6 +7,7 @@ import { SageTokens } from '../configs';
 export const Hint = ({
   className,
   content,
+  icon,
   ...rest
 }) => {
   const classNames = classnames(
@@ -15,20 +16,24 @@ export const Hint = ({
   );
   return (
     <div className={classNames} {...rest}>
-      <Icon
-        className="sage-hint__icon"
-        icon={SageTokens.ICONS.INFO_CIRCLE}
-      />
+      {icon && (
+        <Icon
+          className="sage-hint__icon"
+          icon={icon}
+        />
+      )}
       <span className="sage-hint__content">{content}</span>
     </div>
   );
 };
 
 Hint.defaultProps = {
-  className: ''
+  className: '',
+  icon: null,
 };
 
 Hint.propTypes = {
   className: PropTypes.string,
   content: PropTypes.string.isRequired,
+  icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),
 };

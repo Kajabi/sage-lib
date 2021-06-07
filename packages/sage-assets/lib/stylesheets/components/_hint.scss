@@ -15,6 +15,7 @@ $-hint-background-color: sage-color(grey, 200);
 }
 
 .sage-hint__icon {
+  margin-right: sage-spacing(xs);
   @media (min-width: sage-breakpoint(lg-min)) {
     margin-top: 3px;
   }
@@ -22,6 +23,5 @@ $-hint-background-color: sage-color(grey, 200);
 
 .sage-hint__content {
   @extend %t-sage-body-small;
-  margin-left: sage-spacing(xs);
   color: $-hint-text-color;
 }
