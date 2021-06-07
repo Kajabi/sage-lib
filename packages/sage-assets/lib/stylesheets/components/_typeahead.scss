@@ -53,7 +53,7 @@ $-typeahead-item-height: rem(68px);
 
 .sage-typeahead__item-trigger {
   @include sage-button-style-reset;
-  @include sage-focus-outline($outline-offset-block: -6px, $outline-offset-inline: -6px, $outline-animation-speed: 0.05s);
+  @include sage-focus-outline($outline-offset-block: -3, $outline-offset-inline: -3, $outline-animation-speed: 0s);
   @include sage-focus-outline--update-color($sage-focus-color);
 
   display: grid;
@@ -68,6 +68,10 @@ $-typeahead-item-height: rem(68px);
   align-items: center;
   padding: sage-spacing(md) sage-spacing(sm);
   text-align: left;
+
+  &::after {
+    border-radius: 0;
+  }
 
   > * {
     @include truncate;
