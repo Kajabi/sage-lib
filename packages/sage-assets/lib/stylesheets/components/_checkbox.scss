@@ -15,7 +15,7 @@ $-checkbox-color-disabled-checked: sage-color(primary, 200);
 $-checkbox-size: rem(20px);
 $-checkbox-label-spacing: rem(12px);
 $-checkbox-border-radius-inner: sage-border(radius-small);
-$-checkbox-border-radius-outer: sage-border(radius);
+$-checkbox-border-radius-outer: sage-border(radius-large);
 $-checkbox-transition: 0.15s ease-in-out;
 
 $-checkbox-marker-border: rem(2px);
@@ -123,7 +123,7 @@ $-checkbox-focus-outline-color: sage-color(primary);
     display: none;
     white-space: nowrap;
   }
-  
+
   .sage-panel-controls__bulk-actions--checked & {
     display: unset;
   }
