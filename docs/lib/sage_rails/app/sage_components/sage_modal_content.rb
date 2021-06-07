@@ -6,6 +6,6 @@ class SageModalContent < SageComponent
   })
 
   def sections
-    %w(header_aside footer footer_aside)
+    %w(header_aside header_indicator footer footer_aside)
   end
 end
