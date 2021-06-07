@@ -1,4 +1,4 @@
-<div class="sage-container sage-container--xs" style="padding-top: 200px;">
+<%= sage_component SageContainer, { size: "md", html_attributes: { style: "padding-top: 200px;"}} do %>
   <%= image_tag("media/images/sage.svg", width: 100) %>
   <h1 class="t-sage-heading-1">Sage Design System</h1>
   <h2 class="t-sage-heading-6">SCSS Based Component Library for our applications UI</h2>
@@ -28,4 +28,4 @@
       <%= button_tag "Enter", class: "sage-input-group__button sage-btn sage-btn--primary sage-btn--icon-right-arrow-right" %>
     </div>
   <% end %>
-</div>
+<% end %>
