@@ -13,6 +13,7 @@ export default {
   },
   args: {
     content: 'Avoid using the following spam trigger: "free"',
+    icon: SageTokens.ICONS.INFO_CIRCLE,
   }
 };
 
