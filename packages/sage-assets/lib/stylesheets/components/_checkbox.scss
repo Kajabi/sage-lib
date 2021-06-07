@@ -168,6 +168,10 @@ $-checkbox-focus-outline-color: sage-color(primary);
 
   &:focus {
     @include sage-focus-shadow();
+
+    .sage-dropdown__item & {
+      box-shadow: none;
+    }
   }
 
   &::after {
