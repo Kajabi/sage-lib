@@ -130,10 +130,10 @@ module ComponentsHelper
       },
       {
         title: "hint",
-        description: "This is the description for the hint component.",
+        description: "A hint is used to display non-critical informative text.",
         scss: "doing",
-        rails: "doing",
-        react: "doing",
+        rails: "done",
+        react: "done",
         a11y: "todo",
       },
       {
