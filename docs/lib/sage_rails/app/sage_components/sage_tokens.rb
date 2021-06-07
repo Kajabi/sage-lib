@@ -57,7 +57,52 @@ module SageTokens
     "charcoal-500", "grey-500", "orange-500", "primary-500", "purple-500", "red-500", "sage-500", "yellow-500"
   ]
 
-  CONTAINER_SIZES = ["modal", "modal-lg", "xs", "sm", "md", "lg", "fluid"]
+  CONTAINER_SIZES = ["tiny", "xs", "sm", "md", "lg", "xl", "full", "fluid"]
+
+  CONTAINER_SPECS = [
+    {
+      alias: "tiny",
+      max_size: "200px",
+      name: "Tiny",
+      usage: "For smaller dropdowns.",
+    },
+    {
+      alias: "xs",
+      max_size: "240px",
+      name: "Extra Small",
+      usage: "For standard dropdowns and smaller modal panels.",
+    },
+    {
+      alias: "sm",
+      max_size: "352px",
+      name: "Small",
+      usage: "For one third of a trifold layout, the smaller portion of a side fold layout, standard modal panels, and narrow single-column layouts.",
+    },
+    {
+      alias: "md",
+      max_size: "544px",
+      name: "Medium",
+      usage: "For one half of a bifold layout, medium-sized single column layouts, and larger modal panels.",
+    },
+    {
+      alias: "lg",
+      max_size: "736px",
+      name: "Large",
+      usage: "For the larger part of a side fold layout, larger single-column layouts, and largest for modal panels.",
+    },
+    {
+      alias: "xl",
+      max_size: "1120px",
+      name: "Large",
+      usage: "For single-column layouts that span full portion of stage yet stay at a maximum of 1120px wide.",
+    },
+    {
+      alias: "full",
+      max_size: "1440px",
+      name: "Full",
+      usage: "For widest possible panels and containing layout patterns.",
+    }
+  ]
 
   GRID_TEMPLATES = [
     "m", "o", "ot", "om", "oo",
