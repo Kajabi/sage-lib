@@ -10,7 +10,7 @@ $-hint-background-color: sage-color(grey, 200);
 
 .sage-hint {
   background-color: $-hint-background-color;
-  padding: sage-spacing(xs) 12px;
+  padding: sage-spacing(xs) rem(12px);
   display: flex;
 }
 
