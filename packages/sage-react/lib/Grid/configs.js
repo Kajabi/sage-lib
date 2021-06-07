@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types';
 
 export const CONTAINER_SIZES = {
+  TINY: 'tiny',
   XS: 'xs',
   SM: 'sm',
   MD: 'md',
   LG: 'lg',
-  FLUID: 'fluid',
-  MODAL: 'modal',
-  NONE: null,
+  XL: 'xl',
+  FULL: 'full',
 };
 
 export const GRID_BREAKPOINT_TOGGLES = {
