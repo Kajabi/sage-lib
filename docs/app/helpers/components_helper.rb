@@ -82,7 +82,7 @@ module ComponentsHelper
       },
       {
         title: "container",
-        description: "For setting contents simple or complex inside a fixed space.",
+        description: "For setting contents of varying complexity inside a fixed space.",
         scss: "done",
         rails: "done",
         react: "done",
