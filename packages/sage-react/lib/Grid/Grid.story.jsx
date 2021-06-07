@@ -12,7 +12,7 @@ export default {
     'Grid.Col': Grid.Col
   },
   args: {
-    container: Grid.CONTAINER_SIZES.MD,
+    container: Grid.CONTAINER_SIZES.FULL,
     withRow: false
   },
   argTypes: {
