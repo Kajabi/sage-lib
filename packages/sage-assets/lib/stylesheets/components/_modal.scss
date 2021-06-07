@@ -55,7 +55,7 @@ $-modal-header-image-size: rem(28px);
   visibility: hidden;
   z-index: sage-z-index(modal);
   width: calc(100vw - #{sage-spacing(md)});
-  max-width: sage-container(modal);
+  max-width: sage-container(md);
   margin: 0;
   border-radius: sage-border(radius);
   background-color: sage-color(white);
@@ -96,7 +96,7 @@ $-modal-header-image-size: rem(28px);
   }
 
   .sage-modal--large & {
-    max-width: sage-container(modal-lg);
+    max-width: rem(900px); // TODO: Investigate this size necessity
   }
 }
 
