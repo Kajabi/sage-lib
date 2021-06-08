@@ -131,10 +131,11 @@ module ComponentsHelper
       {
         title: "hint",
         description: "A hint is used to display non-critical informative text.",
-        scss: "doing",
+        scss: "done",
         rails: "done",
         react: "done",
         a11y: "todo",
+        react_component_slug: "sage-hint--default"
       },
       {
         title: "icon",
