@@ -9,15 +9,15 @@ $-hint-text-color: sage-color(charcoal, 400);
 $-hint-background-color: sage-color(grey, 200);
 
 .sage-hint {
-  background-color: $-hint-background-color;
-  padding: sage-spacing(xs) rem(12px);
   display: flex;
+  padding: sage-spacing(xs) rem(12px);
+  background-color: $-hint-background-color;
 }
 
 .sage-hint__icon {
-  margin-right: sage-spacing(xs);
-  margin-top: 4px;
   display: flex;
+  margin-top: 4px;
+  margin-right: sage-spacing(xs);
 }
 
 .sage-hint__content {
