@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.3.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.2.0...@kajabi/sage@4.3.0) (2021-06-09)
+
+
+### Bug Fixes
+
+* **hint:** made content string optional in attribute_schema ([e156968](https://github.com/Kajabi/sage-lib/commit/e1569680306c01a58f6b0031cd01d2b46d4991b0))
+* **indicator:** add prop to show text representation of the current page ([937f1cb](https://github.com/Kajabi/sage-lib/commit/937f1cbcb5c6c6cce7acc417496314705369f45e))
+* **indicator:** updated copy per review ([12f3868](https://github.com/Kajabi/sage-lib/commit/12f38686c126ee271934826e5523ebda436565c4))
+
+
+### Features
+
+* **hint:** added attribute_schema for content on Hint component ([37d2b66](https://github.com/Kajabi/sage-lib/commit/37d2b66514195307801f50f5698a6f3fc24497bf))
+* **hint:** added hint description. Updated icon props text ([aa8334d](https://github.com/Kajabi/sage-lib/commit/aa8334d6dafa587d28f182b8bf8882d25c9cf5cc))
+* **hint:** added icon to attribute schema ([41bc74e](https://github.com/Kajabi/sage-lib/commit/41bc74ed5600bbb8975e7b2e395b3a5ff89d38a4))
+* **hint:** added icon to preview, props list, and rails view ([488ed4e](https://github.com/Kajabi/sage-lib/commit/488ed4edce85c2b0f2eb1e732bc1d92d144219c7))
+* **hint:** added Rails component and supporting documentation ([ad4f86f](https://github.com/Kajabi/sage-lib/commit/ad4f86f190d196db6c1206a7323ff07b16d01d06))
+* **hint:** added react_component_slug for hint component ([6158e38](https://github.com/Kajabi/sage-lib/commit/6158e38017bf39b302ef4a77ed0a8e105d67fccd))
+* **hint:** generated rails-y things and stylesheet for Hint component ([b28e4e8](https://github.com/Kajabi/sage-lib/commit/b28e4e8d7e9a30bacaab9a9a13e722a6192165db))
+
+
+
+
+
 # [4.2.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.1.0...@kajabi/sage@4.2.0) (2021-06-02)
 
 

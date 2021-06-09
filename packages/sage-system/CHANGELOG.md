@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.4](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.8.3...@kajabi/sage-system@0.8.4) (2021-06-09)
+
+
+### Bug Fixes
+
+* **modal js:** prevent modal JS from erroring on close when `active: true` attribute set ([b0a606d](https://github.com/Kajabi/sage-lib/commit/b0a606d71c3df222b15c17c8ed9af5a99878249e))
+* **tooltip:** show tooltip on either hover or focus ([4f2440b](https://github.com/Kajabi/sage-lib/commit/4f2440b96995698952765b48877d03cbe3ff8776))
+
+
+
+
+
 ## [0.8.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.8.2...@kajabi/sage-system@0.8.3) (2021-06-02)
 
 

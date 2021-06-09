@@ -3,6 +3,32 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.36.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.35.0...@kajabi/sage-assets@0.36.0) (2021-06-09)
+
+
+### Bug Fixes
+
+* **hint:** changed to use rem() for an uncommon pixel spacing amount ([3f9e41e](https://github.com/Kajabi/sage-lib/commit/3f9e41e3a54badbe8cacb5013961641245721bd9))
+* **hint:** fixed icon css, so styles apply to all devices ([c00eb22](https://github.com/Kajabi/sage-lib/commit/c00eb22996f6dc23494dc008e182cf62711e9bef))
+* **hint:** fixed icon placement for all breakpoints ([211d6c3](https://github.com/Kajabi/sage-lib/commit/211d6c3d1ffd65394c2fe2b5980c766f93bf3c8e))
+* **hint:** reordered styles per stylelint. This should fix build failure ([ed6ad0e](https://github.com/Kajabi/sage-lib/commit/ed6ad0eb35f63b9e850104d2e29c31d57a37c971))
+* **indicator:** add prop to show text representation of the current page ([937f1cb](https://github.com/Kajabi/sage-lib/commit/937f1cbcb5c6c6cce7acc417496314705369f45e))
+* **indicator:** removed duplicate rule ([a060910](https://github.com/Kajabi/sage-lib/commit/a0609105ffe9b1305c7f9b3bee9613191eda1758))
+* **sage-3:** align border-radius to sage 3 spec ([4e55633](https://github.com/Kajabi/sage-lib/commit/4e55633d8ff7ec93579923440c2d9b0e9b4b6ddc))
+
+
+### Features
+
+* **hint:** adde word-break: break-word to content to handle long words ([74fab42](https://github.com/Kajabi/sage-lib/commit/74fab42d4dc6556a307974b61dc93442a20a2345))
+* **hint:** added all Sage icons as options. No icon by default ([2acb688](https://github.com/Kajabi/sage-lib/commit/2acb6880b3466c6eed598553c18f2d130d154e55))
+* **hint:** added basic styling. Updated story text. Added Icon ([a0620ef](https://github.com/Kajabi/sage-lib/commit/a0620efc94ea78552c3d0471551208f25f419fc4))
+* **hint:** added styleheet for Hint styling ([476b160](https://github.com/Kajabi/sage-lib/commit/476b1603647b079f1d8600b75e1b379ea00efdb8))
+* **hint:** generated rails-y things and stylesheet for Hint component ([b28e4e8](https://github.com/Kajabi/sage-lib/commit/b28e4e8d7e9a30bacaab9a9a13e722a6192165db))
+
+
+
+
+
 # [0.35.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.34.0...@kajabi/sage-assets@0.35.0) (2021-06-02)
 
 

@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.45.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.44.0...@kajabi/sage-react@0.45.0) (2021-06-09)
+
+
+### Features
+
+* **hint:** added all Sage icons as options. No icon by default ([2acb688](https://github.com/Kajabi/sage-lib/commit/2acb6880b3466c6eed598553c18f2d130d154e55))
+* **hint:** added basic structure for Hint component ([ecc0798](https://github.com/Kajabi/sage-lib/commit/ecc079837e88290fa988962b3127354502add688))
+* **hint:** added basic styling. Updated story text. Added Icon ([a0620ef](https://github.com/Kajabi/sage-lib/commit/a0620efc94ea78552c3d0471551208f25f419fc4))
+* **hint:** added Hint spec in the same fashion as other components ([7aba52d](https://github.com/Kajabi/sage-lib/commit/7aba52d47e9146f8c8ff2f1ba3dd096785eb658e))
+* **hint:** added info_circle icon as default in story ([922e488](https://github.com/Kajabi/sage-lib/commit/922e488bf8ea3f265abe56c14788796c6ccc83a1))
+* **hint:** added Storybook entry for Hint ([8e1bfae](https://github.com/Kajabi/sage-lib/commit/8e1bfaeed8056d1406e9ec1894185bc5d28c45df))
+* **hint:** added styleheet for Hint styling ([476b160](https://github.com/Kajabi/sage-lib/commit/476b1603647b079f1d8600b75e1b379ea00efdb8))
+* **hint:** generated rails-y things and stylesheet for Hint component ([b28e4e8](https://github.com/Kajabi/sage-lib/commit/b28e4e8d7e9a30bacaab9a9a13e722a6192165db))
+
+
+
+
+
 # [0.44.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.43.0...@kajabi/sage-react@0.44.0) (2021-06-02)
 
 
