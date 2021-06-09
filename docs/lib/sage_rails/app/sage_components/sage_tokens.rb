@@ -57,7 +57,7 @@ module SageTokens
     "charcoal-500", "grey-500", "orange-500", "primary-500", "purple-500", "red-500", "sage-500", "yellow-500"
   ]
 
-  CONTAINER_SIZES = ["tiny", "xs", "sm", "md", "lg", "xl", "full", "fluid"]
+  CONTAINER_SIZES = ["tiny", "xs", "sm", "md", "lg", "xl", "full"]
 
   CONTAINER_SPECS = [
     {
