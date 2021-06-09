@@ -12,18 +12,21 @@ Sage.tooltip = (function() {
   // Functions
   // ==================================================
 
+  // TODO: Reverting tooltip reveal on focus/blur until further investigation of persistent focus
+  // can resolve it lingering when it shouldn't.
+
   function init(el) {
     el.addEventListener("mouseenter", buildToolTip);
-    el.addEventListener("focus", buildToolTip);
+    // el.addEventListener("focus", buildToolTip);
     el.addEventListener("mouseleave", removeTooltip);
-    el.addEventListener("blur", removeTooltip);
+    // el.addEventListener("blur", removeTooltip);
   }
 
   function unbind(el) {
     el.removeEventListener("mouseenter", buildToolTip);
-    el.removeEventListener("focus", buildToolTip);
+    // el.removeEventListener("focus", buildToolTip);
     el.removeEventListener("mouseleave", removeTooltip);
-    el.removeEventListener("blur", removeTooltip);
+    // el.removeEventListener("blur", removeTooltip);
   }
 
   // tooltip template
