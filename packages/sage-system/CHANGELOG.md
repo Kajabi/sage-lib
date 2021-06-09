@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.5](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.8.4...@kajabi/sage-system@0.8.5) (2021-06-09)
+
+
+### Bug Fixes
+
+* **tooltip:** hide focus/blur listeners ([ce2e529](https://github.com/Kajabi/sage-lib/commit/ce2e52979606983c7946699582d4ad25f1714d1d))
+
+
+
+
+
 ## [0.8.4](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.8.3...@kajabi/sage-system@0.8.4) (2021-06-09)
 
 
