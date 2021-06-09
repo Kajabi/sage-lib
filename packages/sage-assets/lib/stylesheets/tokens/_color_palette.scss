@@ -17,22 +17,22 @@ $sage-colors: (
     500: #07265f,
   ),
   sage: (
-    100: #d0f6ea,
+    100: #ddf8f0,
     200: #86d5bc,
     300: #23856d,
     400: #225d53,
     500: #183e3b,
   ),
   yellow: (
-    100: #fcf8e8,
-    200: #fdf0b9,
+    100: #f9f0cd,
+    200: #fce79c,
     300: #f0c024,
     400: #8d5c2f,
     500: #5c381e,
   ),
   red: (
-    100: #fff7f7,
-    200: #f9c0b9,
+    100: #ffe0e0,
+    200: #fdb0aa,
     300: #cf3c32,
     400: #99221e,
     500: #5e0d0d,
@@ -45,7 +45,7 @@ $sage-colors: (
     500: #5a260c,
   ),
   purple: (
-    100: #f5effa,
+    100: #eee4f6,
     200: #d9c2ef,
     300: #8e5ad8,
     400: #50348a,
@@ -61,7 +61,7 @@ $sage-colors: (
   charcoal: (
     100: #65778b,
     200: #526275,
-    300: #465462,
+    300: #435465,
     400: #304050,
     500: #263240,
   ),
@@ -84,10 +84,10 @@ $sage-colors: (
 ///
 /// Sage breakpoints token utility
 ///
-/// @param {string} $base The color token to retrieve
-/// @param {number} $value [300] The tint or shade to retrieve
+/// @param {string} $base the color token to retrieve
+/// @param {number} $value [300] the tint or shade to retrieve
 ///
-/// @return {color} The value retrieved
+/// @return {color} the value retrieved
 ///
 @function sage-color($base, $value: 300) {
   $color: map-get(map-get($sage-colors, $base), $value);
