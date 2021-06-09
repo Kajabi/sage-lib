@@ -44,7 +44,7 @@ module ComponentsHelper
       },
       {
         title: "chart_legend",
-        description: "Sage charts legend are used primarily in React-based Recharts bar charts when multiple bars are used for a given data point.", 
+        description: "Sage charts legend are used primarily in React-based Recharts bar charts when multiple bars are used for a given data point.",
         scss: "done",
         rails: "done",
         react: "done",
@@ -53,7 +53,7 @@ module ComponentsHelper
       },
       {
         title: "chart_summary",
-        description: "Chart summaries are used primarily in React-based Recharts diagrams to display summary information with Sage type styling.", 
+        description: "Chart summaries are used primarily in React-based Recharts diagrams to display summary information with Sage type styling.",
         scss: "done",
         rails: "done",
         react: "done",
@@ -127,6 +127,15 @@ module ComponentsHelper
         react: "no",
         a11y: "todo",
         react_component_slug: "sage-textarea--default"
+      },
+      {
+        title: "hint",
+        description: "A hint is used to display non-critical informative text.",
+        scss: "done",
+        rails: "done",
+        react: "done",
+        a11y: "todo",
+        react_component_slug: "sage-hint--default"
       },
       {
         title: "icon",
@@ -254,7 +263,7 @@ module ComponentsHelper
       },
       {
         title: "stat_box",
-        description: "Stat Boxes, for use in the CRM Dashboard, display important statistics for users to make informed decisions about their business.", 
+        description: "Stat Boxes, for use in the CRM Dashboard, display important statistics for users to make informed decisions about their business.",
         scss: "done",
         rails: "done",
         react: "done",

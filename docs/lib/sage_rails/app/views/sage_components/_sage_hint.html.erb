@@ -1,0 +1,10 @@
+<div
+  class="sage-hint <%= component.generated_css_classes %>"
+  <%= component.generated_html_attributes.html_safe %>
+>
+  <%= sage_component SageIcon, {
+    css_classes: "sage-hint__icon",
+    icon: component.icon,
+  } if component.icon.present? %>
+  <span class="sage-hint__content"><%= component.content %></span>
+</div>

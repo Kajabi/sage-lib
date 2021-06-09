@@ -1,0 +1,27 @@
+////
+/// hint
+///
+/// @group sage
+////
+
+// Colors
+$-hint-text-color: sage-color(charcoal, 400);
+$-hint-background-color: sage-color(grey, 200);
+
+.sage-hint {
+  display: flex;
+  padding: sage-spacing(xs) rem(12px);
+  background-color: $-hint-background-color;
+}
+
+.sage-hint__icon {
+  display: flex;
+  margin-top: 4px;
+  margin-right: sage-spacing(xs);
+}
+
+.sage-hint__content {
+  @extend %t-sage-body-small;
+  color: $-hint-text-color;
+  word-break: break-word;
+}

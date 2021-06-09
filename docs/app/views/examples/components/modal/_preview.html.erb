@@ -49,6 +49,15 @@
         } %>
       <% end %>
 
+      <% content_for :sage_header_indicator do %>
+        <%= sage_component SageIndicator, {
+          current_item: 2,
+          label: "Page",
+          num_items: 5,
+          show_text: true
+        } %>
+      <% end %>
+
       <p class="t-sage-body">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
