@@ -10,6 +10,7 @@ export const IconCard = ({
   color,
   icon,
   label,
+  round,
   size,
   ...rest
 }) => {
@@ -18,6 +19,7 @@ export const IconCard = ({
     className,
     {
       [`sage-icon-card--${color}`]: color,
+      [`sage-icon-card--round`]: round,
     }
   );
 
@@ -39,6 +41,7 @@ IconCard.defaultProps = {
   className: null,
   color: Label.COLORS.DRAFT,
   label: null,
+  round: false,
   size: Icon.SIZES.XXXL,
 };
 
@@ -47,5 +50,6 @@ IconCard.propTypes = {
   color: PropTypes.oneOf(Object.values(Label.COLORS)),
   icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)).isRequired,
   label: PropTypes.string,
+  round: PropTypes.bool,
   size: PropTypes.oneOf(Object.values(Icon.SIZES)),
 };
