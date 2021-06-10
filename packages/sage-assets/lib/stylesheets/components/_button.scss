@@ -432,6 +432,11 @@ $-btn-interactive-label-icon-size: rem(24px);
 .sage-btn__truncate-text {
   @include truncate;
   pointer-events: none;
+
+  .sage-dropdown__trigger & {
+    display: inline-flex;
+    align-items: center;
+  }
 }
 
 // Button groups allow for several buttons together to be spaced appropriately
