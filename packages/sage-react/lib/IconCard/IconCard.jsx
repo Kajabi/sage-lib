@@ -19,7 +19,7 @@ export const IconCard = ({
     className,
     {
       [`sage-icon-card--${color}`]: color,
-      [`sage-icon-card--round`]: round,
+      'sage-icon-card--round': round,
     }
   );
 
