@@ -137,7 +137,7 @@ $-switch-focus-outline-error-color: sage-color(red, 300);
 
     &::after {
       content: "" ;
-      z-index: sage-z-index(default);
+      z-index: sage-z-index(default, 1);
       position: absolute;
       top: 0;
       left: 0;
