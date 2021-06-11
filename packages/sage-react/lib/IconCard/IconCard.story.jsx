@@ -16,6 +16,7 @@ export default {
   args: {
     color: IconCard.COLORS.DRAFT,
     icon: IconCard.ICONS.CHECK_CIRCLE,
+    round: false,
     size: IconCard.SIZES.MD
   }
 };
