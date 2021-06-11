@@ -17,7 +17,7 @@ $-tooltip-arrow-inactive: $-tooltip-arrow-size solid transparent;
 $-tooltip-arrow-active: $-tooltip-arrow-size solid $-tooltip-bg-color;
 
 // Styling
-$-tooltip-shadow: sage-shadow(xl);
+$-tooltip-shadow: sage-shadow(lg);
 $-tooltip-padding: sage-spacing(2xs) sage-spacing(sm);
 $-tooltip-small-padding: sage-spacing(2xs) sage-spacing(xs);
 $-tooltip-large-padding: sage-spacing(xs) sage-spacing(xs);
