@@ -59,7 +59,7 @@ $-modal-header-image-size: rem(28px);
   margin: 0;
   border-radius: sage-border(radius);
   background-color: sage-color(white);
-  box-shadow: sage-shadow(2xl);
+  box-shadow: sage-shadow(modal);
   transition: opacity 0.1s ease-in 0.1s;
   pointer-events: none;
   opacity: 0;
