@@ -95,6 +95,7 @@ $-switch-focus-outline-error-color: sage-color(red, 300);
   @extend %t-sage-body-xsmall;
 
   .sage-switch--toggle-right & {
+    margin-left: 0;
     padding-left: 0;
   }
 }
