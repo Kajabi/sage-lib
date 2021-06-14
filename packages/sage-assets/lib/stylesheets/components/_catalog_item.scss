@@ -45,7 +45,7 @@ $-catalogue-item-image-height-mobile: rem(120px);
         "img title aside"
         "img content aside";
     }
-  
+
     @media (max-width: sage-breakpoint(md-min)) {
       grid-template-columns: 1fr min-content;
       grid-template-rows: $-catalogue-item-image-height-mobile auto auto;
@@ -112,8 +112,8 @@ $-catalogue-item-image-height-mobile: rem(120px);
   align-self: flex-start;
   flex-flow: row wrap;
 
-  > * + * {
-    margin-left: sage-spacing();
+  > :not(:last-child) {
+    margin-right: sage-spacing();
   }
 }
 
