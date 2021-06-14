@@ -86,11 +86,10 @@ $-alert-icon-colors: (
 }
 
 .sage-alert__close {
-  overflow: hidden;
+  align-self: flex-start;
   height: rem(20px);
   width: rem(20px);
   padding: 0;
-  align-self: flex-start;
   font-size: sage-font-size(xl, false);
   line-height: 1;
   background-color: transparent;
@@ -101,9 +100,8 @@ $-alert-icon-colors: (
     .sage-alert--#{$name} & {
       color: sage-color($color, 400);
 
-      &:focus {
-        @include sage-focus-shadow(sage-color($color, 400));
-      }
+      @include sage-focus-outline($outline-offset-inline: 4px, $outline-offset-block: 2px);
+      @include sage-focus-outline--update-color(sage-color($color, 400));
     }
   }
 

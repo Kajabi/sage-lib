@@ -72,7 +72,7 @@ $-breadcrumb-disabled-color: sage-color(grey, 500);
   }
 
   .sage-breadcrumbs:not(.sage-breadcrumbs--progressbar) &:focus {
-    @include sage-focus-outline($outline-offset-inline: 6px, $outline-offset-block: 0px);
+    @include sage-focus-outline($outline-offset-inline: 6px, $outline-offset-block: 0);
     @include sage-focus-outline--update-color($sage-focus-color);
   }
 }

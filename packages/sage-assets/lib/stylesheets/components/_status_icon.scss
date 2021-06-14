@@ -16,8 +16,8 @@
   transition: color map-get($sage-transitions, default), background-color map-get($sage-transitions, default);
   cursor: help;
 
-  // @include sage-focus-outline;
-  // @include sage-focus-outline--update-color(sage-color(charcoal, 200));
+  @include sage-focus-outline;
+  @include sage-focus-outline--update-color($sage-focus-color);
 
   &:hover:not(:focus):not(:active) {
     color: sage-color(charcoal, 400);
@@ -26,8 +26,6 @@
   &:focus,
   &:active {
     color: sage-color(charcoal, 200);
-
-    @include sage-focus-shadow();
   }
 
   .sage-sortable__item & {

@@ -127,9 +127,8 @@ $-banner-el-icon: "before";
   }
 
   &.sage-btn--subtle {
-    @include sage-focus-outline($outline-offset-inline: 6px, $outline-offset-block: 0px);
+    @include sage-focus-outline($outline-offset-inline: 6px, $outline-offset-block: 0);
     @include sage-focus-outline--update-color(map-get(map-get($-banner-colors, default), text));
-    @include sage-focus-outline--update-color($sage-focus-color);
   }
 
   @each $name, $configs in $-banner-colors {
