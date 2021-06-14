@@ -184,6 +184,13 @@ mark {
   }
 }
 
+.t-sage-link {
+  border-radius: sage-border(radius);
+
+  @include sage-focus-outline;
+  @include sage-focus-outline--update-color($sage-focus-color);
+}
+
 .t-sage--align-center {
   text-align: center;
 }
