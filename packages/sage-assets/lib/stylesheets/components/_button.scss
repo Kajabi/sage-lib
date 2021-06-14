@@ -130,8 +130,6 @@ $-btn-interactive-label-icon-size: rem(24px);
 
   &:focus:not(:disabled):not([aria-disabled="true"]),
   &:active:not(:disabled):not([aria-disabled="true"]) {
-    // @include sage-focus-shadow;
-
     .sage-dropdown__item > & {
       @include sage-focus-outline--update-color(transparent);
     }

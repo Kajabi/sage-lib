@@ -330,7 +330,7 @@
 /// Adds the focus shadow to be used on all interactive elements
 ///
 @mixin sage-focus-shadow(
-  $focus-shadow-color: #C2DFFF,
+  $focus-shadow-color: $sage-focus-color,
   $focus-shadow-inset: false,
   $focus-shadow-width: 3px
 ) {

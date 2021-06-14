@@ -140,13 +140,6 @@ a {
     color: inherit;
     text-decoration: none;
   }
-
-  &:focus-visible {
-    // TODO UXD: find better solution for non-button links
-    // @include sage-focus-outline($outline-offset-inline: 6px, $outline-offset-block: 0px);
-    // @include sage-focus-outline--update-color($sage-focus-color);
-  }
-
 }
 
 b,
