@@ -1,12 +1,5 @@
 Sage.disableClick = (function() {
   // ==================================================
-  // Variables
-  // ==================================================
-
-  const CLASS_DISABLED = 'sage-btn--disabled';
-  const ATTRIBUTE_ARIA_DISABLED = 'aria-disabled';
-
-  // ==================================================
   // Functions
   // ==================================================
 
