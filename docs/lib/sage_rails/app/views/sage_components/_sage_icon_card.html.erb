@@ -10,6 +10,7 @@ style = {
   class="
     sage-icon-card
     <%= "sage-icon-card--#{color}" if color.present? %>
+    <%= "sage-icon-card--round" if component.round %>
     <%= component.generated_css_classes %>
   "
   <% component.attributes.each do |key, value| %>
