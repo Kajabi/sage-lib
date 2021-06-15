@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.37.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.36.0...@kajabi/sage-assets@0.37.0) (2021-06-15)
+
+
+### Bug Fixes
+
+* **catalog-item:** move spacing to the right of catalog items links ([0b011bc](https://github.com/Kajabi/sage-lib/commit/0b011bce9d4e00c754cc3c4de11e5bbeb334c06c))
+* **dropdown:** resolve inner icon alignment issue ([ac7e9b2](https://github.com/Kajabi/sage-lib/commit/ac7e9b24fd9b0881b992297818336336e05febcc))
+* **icon-card:** added round property for circular border-radius ([5515ae9](https://github.com/Kajabi/sage-lib/commit/5515ae94684c93e0fe90c8888377592c63ea354a))
+* **shadows:** added sage 3 box-shadows ([385f968](https://github.com/Kajabi/sage-lib/commit/385f968212b0acaddaf5dd45d7ed912b23006880))
+* **shadows:** updated prop value ([af28812](https://github.com/Kajabi/sage-lib/commit/af288129c37f7a3f56adb5df2aed8bb2dda59a1f))
+* **switch:** message alignment on borderer variant ([07f52ff](https://github.com/Kajabi/sage-lib/commit/07f52ff29e3b174c927c1edd05311fa40237f52d))
+* **switch:** resolve clickable area ([8733f0c](https://github.com/Kajabi/sage-lib/commit/8733f0cf2bb539801182af02b30157888e1913e3))
+
+
+### Features
+
+* **container:** fully remove `fluid` size option ([3f7042b](https://github.com/Kajabi/sage-lib/commit/3f7042bedcc7d5fc69de2ce24b52a25a0f0d01ff))
+* **container:** update sage rails component with new size settings and docs ([8fcdf30](https://github.com/Kajabi/sage-lib/commit/8fcdf304966150cf79f65939c0c9a75cf72b72af))
+
+
+
+
+
 # [0.36.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.35.0...@kajabi/sage-assets@0.36.0) (2021-06-09)
 
 
