@@ -35,11 +35,10 @@
     icon: "users",
     attributes: {
       "data-js-tooltip": "Tooltip",
-      "data-js-tooltip-position": "right"
-      },
-    modifiers: ["disabled"]
-  }
-  ]
+      "data-js-tooltip-position": "right",
+      "aria-disabled": "true"
+    }
+  }]
 } do %>
   <%= sage_component SageButton, {
     style: "primary",
@@ -142,24 +141,25 @@
   }, {
     selected: true,
     value: "Option 1",
-   }, {
+  }, {
     value: "Option 2",
-   }, {
+  }, {
     value: "Option 3",
   }, {
     value: "Muted",
     style: "muted"
   }, {
     value: "Disabled",
-    modifiers: ["disabled"]
-  },
-  {
+    attributes: {
+      "aria-disabled": "true"
+    }
+  }, {
     value: "Disabled w/ tooltip",
-    modifiers: ["disabled"],
     attributes: {
       "data-js-tooltip": "Tooltip",
-      "data-js-tooltip-position": "left"
-    },
+      "data-js-tooltip-position": "left",
+      "aria-disabled": "true"
+    }
   }],
   contained: true
 } do %>

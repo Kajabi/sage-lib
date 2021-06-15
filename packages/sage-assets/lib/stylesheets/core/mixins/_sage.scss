@@ -40,7 +40,6 @@
   box-shadow: none;
   transition: none;
   cursor: not-allowed;
-  pointer-events: none;
 
   &:hover:not(:focus):not(:active):not(:disabled):not([aria-disabled="true"]),
   &:focus,

@@ -1,4 +1,4 @@
-<% 
+<%
 demo_configs = [
   {
     heading: "Primary (regular and disabled)",
@@ -76,6 +76,20 @@ demo_configs = [
         },
         disabled: disabled
       } %>
+
+      <!-- Primary button (tooltip) -->
+      <%= sage_component SageButton, {
+        value: "Icon only",
+        style: config[:style],
+        icon: {
+          style: "only",
+          name: "add-circle"
+        },
+        attributes: {
+          "data-js-tooltip": "Tooltip content",
+        },
+        disabled: disabled
+      } %>
     <% end %>
   <% end %>
 <% end %>
@@ -88,14 +102,15 @@ demo_configs = [
     } %>
   <% end %>
 
-  <% [false, true].each do | size | %>
+  <% [false, true].each do | disabled | %>
     <%= sage_component SageButtonGroup, { gap: :sm, spacer: { bottom: :sm }} do %>
       <!-- Primary button -->
       <%= sage_component SageButton, {
         value: "Button",
         style: config[:style],
         subtle: true,
-        small: size
+        small: true,
+        disabled: disabled
       } %>
 
       <!-- Primary button (link) -->
@@ -106,7 +121,8 @@ demo_configs = [
           href: "#element-button"
         },
         subtle: true,
-        small: size
+        small: true,
+        disabled: disabled
       } %>
 
       <!-- Primary button (icon-left) -->
@@ -118,7 +134,8 @@ demo_configs = [
           name: "gear"
         },
         subtle: true,
-        small: size
+        small: true,
+        disabled: disabled
       } %>
 
       <!-- Primary button (icon-right) -->
@@ -130,7 +147,8 @@ demo_configs = [
           name: "gear"
         },
         subtle: true,
-        small: size
+        small: true,
+        disabled: disabled
       } %>
 
       <!-- Primary button (icon-only) -->
@@ -139,10 +157,27 @@ demo_configs = [
         style: config[:style],
         icon: {
           style: "only",
-          name: "gear"
+          name: "dot-menu-horizontal"
         },
         subtle: true,
-        small: size
+        small: true,
+        disabled: disabled
+      } %>
+
+      <!-- Primary button (tooltip) -->
+      <%= sage_component SageButton, {
+        value: "Icon only",
+        style: config[:style],
+        icon: {
+          style: "only",
+          name: "copy"
+        },
+        attributes: {
+          "data-js-tooltip": "Tooltip content",
+        },
+        subtle: true,
+        small: true,
+        disabled: disabled
       } %>
     <% end %>
   <% end %>
@@ -209,7 +244,7 @@ demo_configs = [
 <p>
   Regular buttons allow for a "raised" shadow treatement to be toggled on or off.
   This is on by default for "Primary" button styles and can be toggled off with "no_shadow".
-  For the other styles it is off by default but can be toggled on with "raised".  
+  For the other styles it is off by default but can be toggled on with "raised".
 </p>
 <%= sage_component SageButtonGroup, { gap: :md, spacer: { bottom: :md } } do %>
   <%= sage_component SageButton, {
