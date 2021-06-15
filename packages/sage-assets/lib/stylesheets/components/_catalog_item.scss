@@ -68,7 +68,6 @@ $-catalogue-item-image-height-mobile: rem(120px);
 .sage-catalog-item__title {
   display: flex;
   grid-area: title;
-  overflow: hidden;
 
   @media (min-width: sage-breakpoint(md-min)) {
     align-self: flex-end;
@@ -76,10 +75,6 @@ $-catalogue-item-image-height-mobile: rem(120px);
 
   @media (max-width: sage-breakpoint(md-min)) {
     align-self: center;
-  }
-
-  > * {
-    @include truncate;
   }
 }
 

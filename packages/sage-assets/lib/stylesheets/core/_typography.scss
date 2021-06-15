@@ -187,7 +187,14 @@ mark {
 .t-sage-link {
   border-radius: sage-border(radius);
 
-  @include sage-focus-outline;
+  @include sage-focus-outline($outline-offset-inline: 6px, $outline-offset-block: 0);
+  @include sage-focus-outline--update-color($sage-focus-color);
+}
+
+.t-sage-link__text {
+  border-radius: sage-border(radius);
+
+  @include sage-focus-outline($outline-offset-inline: 6px, $outline-offset-block: 0);
   @include sage-focus-outline--update-color($sage-focus-color);
 }
 

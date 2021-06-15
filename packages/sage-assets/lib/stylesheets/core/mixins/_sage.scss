@@ -147,7 +147,7 @@
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate3d(-50%, -50%, 0) scale(0.94);
+    transform: translate3d(-50%, -50%, 0) scale(1);
     width: calc(100% + #{$-offset-inline});
     height: calc(100% + #{$-offset-block});
     border: $outline-width solid transparent;
