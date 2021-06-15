@@ -26,8 +26,7 @@
   <td>
     <%= md('
       Toggles whether or not the button is disabled.
-      On `button` this implements the "disabled" HTML attribute
-      but on hyperlinks it enables the `aria-disabled="true"`.
+      This **does not implement the standard "disabled" HTML attribute** and instead [makes use of `aria-disabled="true"`](https://css-tricks.com/making-disabled-buttons-more-inclusive/) with corresponding JavaScript to prevent click/keyboard events.
     ') %>
   </td>
   <td><%= md('Boolean') %></td>
