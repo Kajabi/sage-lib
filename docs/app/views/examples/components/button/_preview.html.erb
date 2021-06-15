@@ -114,7 +114,7 @@ demo_configs = [
         value: "Button",
         style: config[:style],
         subtle: true,
-        small: size
+        small: size,
       } %>
 
       <!-- Primary button (link) -->
@@ -125,7 +125,7 @@ demo_configs = [
           href: "#element-button"
         },
         subtle: true,
-        small: size
+        small: size,
       } %>
 
       <!-- Primary button (icon-left) -->
@@ -137,7 +137,7 @@ demo_configs = [
           name: "gear"
         },
         subtle: true,
-        small: size
+        small: size,
       } %>
 
       <!-- Primary button (icon-right) -->
@@ -149,7 +149,7 @@ demo_configs = [
           name: "gear"
         },
         subtle: true,
-        small: size
+        small: size,
       } %>
 
       <!-- Primary button (icon-only) -->
@@ -158,10 +158,25 @@ demo_configs = [
         style: config[:style],
         icon: {
           style: "only",
-          name: "gear"
+          name: "dot-menu-horizontal"
         },
         subtle: true,
-        small: size
+        small: size,
+      } %>
+
+      <!-- Primary button (tooltip) -->
+      <%= sage_component SageButton, {
+        value: "Icon only",
+        style: config[:style],
+        icon: {
+          style: "only",
+          name: "copy"
+        },
+        attributes: {
+          "data-js-tooltip": "Tooltip content",
+        },
+        subtle: true,
+        small: size,
       } %>
 
       <!-- Primary button (custom content) -->
