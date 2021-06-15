@@ -57,17 +57,21 @@ $-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
 
   &:hover {
     color: $-choice-color-active;
-    background-color: sage-color(grey, 100);
+    @include sage-focus-outline--update-color(sage-color(grey, 400));
+  }
+
+  &:focus {
+    outline: none;
+    @include sage-focus-outline--update-color($sage-focus-color);
   }
 
   &:active,
-  &:focus,
   &.sage-choice--active {
     color: $-choice-color-active;
-    outline: none;
+    @include sage-focus-outline--update-color(sage-color(primary));
 
-    &::after {
-      @include sage-focus-shadow();
+    &:hover {
+      @include sage-focus-outline--update-color(sage-color(primary, 400));
     }
   }
 
