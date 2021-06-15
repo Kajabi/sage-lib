@@ -112,4 +112,11 @@ $-alert-icon-colors: (
 
 .sage-alert__actions {
   display: flex;
+
+  @each $name, $color in $-alert-colors {
+    .sage-alert--#{$name} & > a {
+      @include sage-focus-outline($outline-offset-inline: 6px, $outline-offset-block: 0);
+      @include sage-focus-outline--update-color(sage-color($color, 400));
+    }
+  }
 }
