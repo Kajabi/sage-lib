@@ -13,15 +13,11 @@
     </header>
     <div class="sage-stage">
       <main class="sage-content" id="main-content">
-        <div class="sage-container sage-container--md">
-          <div class="sage-row">
-            <div class="sage-col-12 sage-type">
-              <%= yield :heading %>
-            </div>
-          </div>
+        <%= sage_component SageContainer, { size: "full", css_classes: "sage-type" } do %>
+          <%= yield :heading %>
           <hr/>
           <%= yield %>
-        </div>
+        <% end %>
       </main>
     </div>
     <div class="sage-overlay" aria-hidden="true"></div>

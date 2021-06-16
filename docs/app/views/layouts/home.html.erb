@@ -5,12 +5,14 @@
     <%= render "application/styles" %>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css">
   </head>
-  <body class="sage-docs">
+  <body class="sage-docs docs-home">
     <%= render "application/content_skip_link",
       link_id: "main-content"
     -%>
     <%= yield %>
-    <%= render "application/footer" %>
+    <%= sage_component SageContainer, { size: "xl" } do %>
+      <%= render "application/footer" %>
+    <% end %>
     <%= render "scripts" %>
   </body>
 </html>

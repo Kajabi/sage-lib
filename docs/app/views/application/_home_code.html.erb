@@ -1,67 +1,65 @@
 <div class="docs-section">
-  <%= sage_component SageContainer, { size: "md" } do %>
-    <h2 class="docs-section__title t-sage-heading-1">How It Works</h2>
-    <%= sage_component SageGridRow, {} do %> 
-      <%= sage_component SageGridCol, { breakpoint: "md", size: "3" } do %> 
-        <%= sage_component SagePanel, { spacer: { bottom: :lg } } do %>
-          <%= sage_component SagePanelStack, {} do %>
-            <i class="docs-section__platform-icon devicon devicon-sass-original colored"></i>
-            <h3 class="t-sage-heading-3">SCSS System</h3>
-            <p class="t-sage-body">The language-agnostic style system that allows us to service any app code choice.</p>
-            <%= sage_component SageButton, {
-              value: "View Sassdocs site",
-              attributes: {
-                href: Rails.application.config.sassdocs_root_url,
-                title: "View Sassdocs site"
-              },
-              subtle: true,
-              icon: {
-                style: "right",
-                name: "arrow-right"
-              },
-              style: "primary",
-            } %>
-          <% end %>
+  <h2 class="docs-section__title t-sage-heading-1">How It Works</h2>
+  <%= sage_component SageGridRow, {} do %> 
+    <%= sage_component SageGridCol, { breakpoint: "md", size: "3" } do %> 
+      <%= sage_component SagePanel, { spacer: { bottom: :lg } } do %>
+        <%= sage_component SagePanelStack, {} do %>
+          <i class="docs-section__platform-icon devicon devicon-sass-original colored"></i>
+          <h3 class="t-sage-heading-3">SCSS System</h3>
+          <p class="t-sage-body">The language-agnostic style system that allows us to service any app code choice.</p>
+          <%= sage_component SageButton, {
+            value: "View Sassdocs site",
+            attributes: {
+              href: Rails.application.config.sassdocs_root_url,
+              title: "View Sassdocs site"
+            },
+            subtle: true,
+            icon: {
+              style: "right",
+              name: "arrow-right"
+            },
+            style: "primary",
+          } %>
         <% end %>
       <% end %>
-      <%= sage_component SageGridCol, { breakpoint: "md", size: "3" } do %> 
-        <%= sage_component SagePanel, { spacer: { bottom: :lg } } do %>
-          <%= sage_component SagePanelStack, {} do %>
-            <i class="docs-section__platform-icon devicon devicon-rails-plain-wordmark colored"></i>
-            <h3 class="t-sage-heading-3">Rails Components</h3>
-            <p class="t-sage-body">Our default approach, custom Rails View Components to serve our system to the app.</p>
-          <% end %>
+    <% end %>
+    <%= sage_component SageGridCol, { breakpoint: "md", size: "3" } do %> 
+      <%= sage_component SagePanel, { spacer: { bottom: :lg } } do %>
+        <%= sage_component SagePanelStack, {} do %>
+          <i class="docs-section__platform-icon devicon devicon-rails-plain-wordmark colored"></i>
+          <h3 class="t-sage-heading-3">Rails Components</h3>
+          <p class="t-sage-body">Our default approach, custom Rails View Components to serve our system to the app.</p>
         <% end %>
       <% end %>
-      <%= sage_component SageGridCol, { breakpoint: "md", size: "3" } do %> 
-        <%= sage_component SagePanel, { spacer: { bottom: :lg } } do %>
-          <%= sage_component SagePanelStack, {} do %>
-            <i class="docs-section__platform-icon devicon devicon-javascript-plain colored"></i>
-            <h3 class="t-sage-heading-3">Vanilla Javascript</h3>
-            <p class="t-sage-body">Clean, minimal JavaScript to ensure the necessary interactions and accessibility features.</p>
-          <% end %>
+    <% end %>
+    <%= sage_component SageGridCol, { breakpoint: "md", size: "3" } do %> 
+      <%= sage_component SagePanel, { spacer: { bottom: :lg } } do %>
+        <%= sage_component SagePanelStack, {} do %>
+          <i class="docs-section__platform-icon devicon devicon-javascript-plain colored"></i>
+          <h3 class="t-sage-heading-3">Vanilla Javascript</h3>
+          <p class="t-sage-body">Clean, minimal JavaScript to ensure the necessary interactions and accessibility features.</p>
         <% end %>
       <% end %>
-      <%= sage_component SageGridCol, { breakpoint: "md", size: "3" } do %> 
-        <%= sage_component SagePanel, { spacer: { bottom: :lg } } do %>
-          <%= sage_component SagePanelStack, {} do %>
-            <i class="docs-section__platform-icon devicon devicon-react-original colored"></i>
-            <h3 class="t-sage-heading-3">React Components</h3>
-            <p class="t-sage-body">Versions of our components for when heavy state and interaction management is needed.</p>
-            <%= sage_component SageButton, {
-              value: "Storybook",
-              attributes: {
-                href: Rails.application.config.storybook_root_url,
-                title: "Storybook"
-              },
-              subtle: true,
-              icon: {
-                style: "right",
-                name: "arrow-right"
-              },
-              style: "primary",
-            } %>
-          <% end %>
+    <% end %>
+    <%= sage_component SageGridCol, { breakpoint: "md", size: "3" } do %> 
+      <%= sage_component SagePanel, { spacer: { bottom: :lg } } do %>
+        <%= sage_component SagePanelStack, {} do %>
+          <i class="docs-section__platform-icon devicon devicon-react-original colored"></i>
+          <h3 class="t-sage-heading-3">React Components</h3>
+          <p class="t-sage-body">Versions of our components for when heavy state and interaction management is needed.</p>
+          <%= sage_component SageButton, {
+            value: "Storybook",
+            attributes: {
+              href: Rails.application.config.storybook_root_url,
+              title: "Storybook"
+            },
+            subtle: true,
+            icon: {
+              style: "right",
+              name: "arrow-right"
+            },
+            style: "primary",
+          } %>
         <% end %>
       <% end %>
     <% end %>

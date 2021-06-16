@@ -158,7 +158,7 @@ export const Default = (args) => {
   //
 
   return (
-    <Grid container={Grid.CONTAINER_SIZES.FLUID}>
+    <Grid container={Grid.CONTAINER_SIZES.FULL}>
       <Panel>
         <PanelControls
           {...args}

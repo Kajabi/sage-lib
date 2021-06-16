@@ -1,11 +1,11 @@
 <% is_button = !component.attributes&.has_key?(:href) %>
 <% html_tag = is_button ? "button" : "a" %>
+<% merged_attributes = (is_button ? { :type => "button" } : {}).merge((component.attributes || {})) %>
 
 <<%= html_tag %>
-  <%= "type=button" if is_button %>
-  <% component.attributes.each do |key, value| %>
+  <% merged_attributes.each do |key, value| %>
     <%= "#{key}=\"#{value}\"".html_safe %>
-  <% end if component.attributes&.is_a?(Hash) %>
+  <% end if merged_attributes&.is_a?(Hash) %>
   <%= "aria-disabled=true disabled" if component.disabled %>
   class="
     sage-btn

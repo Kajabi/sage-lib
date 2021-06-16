@@ -16,7 +16,7 @@ export const Grid = ({
     className,
     {
       'sage-container': container,
-      [`sage-container--${container}`]: container && container !== CONTAINER_SIZES.FLUID,
+      [`sage-container--${container}`]: container,
     }
   );
 
@@ -55,7 +55,7 @@ Grid.CONTAINER_SIZES = CONTAINER_SIZES;
 Grid.defaultProps = {
   children: null,
   className: null,
-  container: CONTAINER_SIZES.NONE,
+  container: CONTAINER_SIZES.FULL,
   withRow: false,
 };
 

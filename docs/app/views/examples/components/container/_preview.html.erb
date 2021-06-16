@@ -1,0 +1,11 @@
+<h3>Default</h3>
+<% SageTokens::CONTAINER_SPECS.each do | c | %>
+  <%= sage_component SageContainer, { size: c[:alias] } do %>
+    <%= sage_component SageCard, {} do %>
+      <%= sage_component SageCardHeader, {
+        title: md("#{c[:name]} (max `#{c[:max_size]}`)")
+      } %>
+      <p><%= c[:usage] %></p>
+    <% end %>
+  <% end %>
+<% end %>

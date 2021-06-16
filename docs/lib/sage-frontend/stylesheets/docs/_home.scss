@@ -3,6 +3,9 @@
 
   For Sage documentation use
 ================================================== */
+.docs-home {
+  background: sage-color(gray, 200);
+}
 
 .docs-hero {
   padding: sage-spacing() sage-spacing() rem(100px);
@@ -42,8 +45,7 @@
 }
 
 .docs-section {
-  padding: sage-spacing(2xl) sage-spacing();
-  background: sage-color(gray, 200);
+  padding: sage-spacing(2xl) 0;
 
   .sage-panel {
     height: 100%;

@@ -76,7 +76,7 @@ export const Default = (args) => {
   );
 
   return (
-    <Grid container={Grid.CONTAINER_SIZES.XS}>
+    <Grid container={Grid.CONTAINER_SIZES.MD}>
       <Sortable
         list={state}
         setList={setState}

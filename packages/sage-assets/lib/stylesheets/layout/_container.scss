@@ -10,7 +10,7 @@
   margin: 0 auto;
 
   &:not([class*="sage-container--"]) {
-    max-width: sage-container(fluid);
+    max-width: sage-container(full);
   }
 }
 

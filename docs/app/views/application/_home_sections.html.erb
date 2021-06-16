@@ -1,120 +1,116 @@
 <div class="docs-section">
-  <%= sage_component SageContainer, { size: "md" } do %>
-    <h2 class="docs-section__title t-sage-heading-1">Our Design System</h2>
-    <%= sage_component SageGridRow, {} do %> 
-      <%= sage_component SageGridCol, { breakpoint: "md", size: "4", spacer: { bottom: :lg } } do %> 
-        <%= sage_component SagePanel, {} do %>
-          <%= sage_component SagePanelStack, {} do %>
-            <i class="docs-section__icon sage-icon-form-3xl t-sage--color-sage"></i>
-            <h3 class="t-sage-heading-3">Foundations</h3>
-            <p class="t-sage-body">Principles that reflect our design philosophy and inspire our team to shape great experiences for Knowledge Commerce businesses of any scale.</p>
-            <%= sage_component SageButton, {
-              value: "Explore Foundations",
-              attributes: {
-                href: pages_foundation_path(:design_principles),
-                title: "Explore Foundations"
-              },
-              subtle: true,
-              icon: {
-                style: "right",
-                name: "arrow-right"
-              },
-              style: "primary",
-            } %>
-          <% end %>
-        <% end %>
-      <% end %>
-      <%= sage_component SageGridCol, { breakpoint: "md", size: "4", spacer: { bottom: :lg } } do %> 
-        <%= sage_component SagePanel, {} do %>
-          <%= sage_component SagePanelStack, {} do %>
-            <i class="docs-section__icon sage-icon-pen-3xl t-sage--color-sage"></i>
-            <h3 class="t-sage-heading-3">Content</h3>
-            <p class="t-sage-body">Our content standards will help you understand how to think strategically about the language in your products and apps.</p>
-            <%= sage_component SageButton, {
-              value: "Content Guides",
-              attributes: {
-                href: pages_content_path(:voice_tone),
-                title: "Content Guides"
-              },
-              subtle: true,
-              icon: {
-                style: "right",
-                name: "arrow-right"
-              },
-              style: "primary",
-            } %>
-          <% end %>
-        <% end %>
-      <% end %>
-      <%= sage_component SageGridCol, { breakpoint: "md", size: "4", spacer: { bottom: :lg } } do %> 
-        <%= sage_component SagePanel, {} do %>
-          <%= sage_component SagePanelStack, {} do %>
-            <i class="docs-section__icon sage-icon-customize-3xl t-sage--color-sage"></i>
-            <h3 class="t-sage-heading-3">Design</h3>
-            <p class="t-sage-body">
-              Our system starts with some core visual elements: Type, Color, and Icons.
-              We also prescribe common practices for aspects such as motion.
-            </p>
-            <%= sage_component SageButton, {
-              value: "Style Tokens",
-              attributes: {
-                href: pages_design_path(:color),
-                title: "Browse Design"
-              },
-              subtle: true,
-              icon: {
-                style: "right",
-                name: "arrow-right"
-              },
-              style: "primary",
-            } %>
-          <% end %>
+  <h2 class="docs-section__title t-sage-heading-1">Our Design System</h2>
+  <%= sage_component SageGridRow, {} do %> 
+    <%= sage_component SageGridCol, { breakpoint: "md", size: "4", spacer: { bottom: :lg } } do %> 
+      <%= sage_component SagePanel, {} do %>
+        <%= sage_component SagePanelStack, {} do %>
+          <i class="docs-section__icon sage-icon-form-3xl t-sage--color-sage"></i>
+          <h3 class="t-sage-heading-3">Foundations</h3>
+          <p class="t-sage-body">Principles that reflect our design philosophy and inspire our team to shape great experiences for Knowledge Commerce businesses of any scale.</p>
+          <%= sage_component SageButton, {
+            value: "Explore Foundations",
+            attributes: {
+              href: pages_foundation_path(:design_principles),
+              title: "Explore Foundations"
+            },
+            subtle: true,
+            icon: {
+              style: "right",
+              name: "arrow-right"
+            },
+            style: "primary",
+          } %>
         <% end %>
       <% end %>
     <% end %>
-    <%= sage_component SageGridRow, {} do %> 
-      <%= sage_component SageGridCol, { breakpoint: "md", size: "4", spacer: { bottom: :lg }} do %> 
-        <%= sage_component SagePanel, {} do %>
-          <%= sage_component SagePanelStack, {} do %>
-            <i class="docs-section__icon sage-icon-stack-3xl t-sage--color-sage"></i>
-            <h3 class="t-sage-heading-3">Layout</h3>
-            <p class="t-sage-body">Patterns that allow us to position our content in various formats and locations without needing to change the content.</p>
-            <%= sage_component SageButton, {
-              value: "Layout Patterns",
-              attributes: {
-                href: pages_layout_path(:container),
-                title: "Layout Patterns"
-              },
-              subtle: true,
-              icon: {
-                style: "right",
-                name: "arrow-right"
-              },
-              style: "primary",
-            } %>
-          <% end %>
+    <%= sage_component SageGridCol, { breakpoint: "md", size: "4", spacer: { bottom: :lg } } do %> 
+      <%= sage_component SagePanel, {} do %>
+        <%= sage_component SagePanelStack, {} do %>
+          <i class="docs-section__icon sage-icon-pen-3xl t-sage--color-sage"></i>
+          <h3 class="t-sage-heading-3">Content</h3>
+          <p class="t-sage-body">Our content standards will help you understand how to think strategically about the language in your products and apps.</p>
+          <%= sage_component SageButton, {
+            value: "Content Guides",
+            attributes: {
+              href: pages_content_path(:voice_tone),
+              title: "Content Guides"
+            },
+            subtle: true,
+            icon: {
+              style: "right",
+              name: "arrow-right"
+            },
+            style: "primary",
+          } %>
         <% end %>
       <% end %>
-      <%= sage_component SageGridCol, { breakpoint: "md", size: "4", spacer: { bottom: :lg } } do %> 
-        <%= sage_component SagePanel, {} do %>
-          <%= sage_component SagePanelStack, {} do %>
-            <i class="docs-section__icon sage-icon-product-3xl t-sage--color-sage"></i>
-            <h3 class="t-sage-heading-3">Components</h3>
-            <p class="t-sage-body">Find a full reference for our library or Rails UI components. Links to corresponding React components are provided as well.</p>
-            <%= sage_component SageButton, {
-              value: "Browse Components",
-              attributes: {
-                href: pages_component_path(sorted_sage_components.first[:title]),
-                title: "Browse Components"
-              },
-              subtle: true,
-              icon: {
-                style: "right",
-                name: "arrow-right"
-              },
-              style: "primary",
-            } %>
-          <% end %>
+    <% end %>
+    <%= sage_component SageGridCol, { breakpoint: "md", size: "4", spacer: { bottom: :lg } } do %> 
+      <%= sage_component SagePanel, {} do %>
+        <%= sage_component SagePanelStack, {} do %>
+          <i class="docs-section__icon sage-icon-customize-3xl t-sage--color-sage"></i>
+          <h3 class="t-sage-heading-3">Design</h3>
+          <p class="t-sage-body">
+            Our system starts with some core visual elements: Type, Color, and Icons.
+            We also prescribe common practices for aspects such as motion.
+          </p>
+          <%= sage_component SageButton, {
+            value: "Style Tokens",
+            attributes: {
+              href: pages_design_path(:color),
+              title: "Browse Design"
+            },
+            subtle: true,
+            icon: {
+              style: "right",
+              name: "arrow-right"
+            },
+            style: "primary",
+          } %>
+        <% end %>
+      <% end %>
+    <% end %>
+    <%= sage_component SageGridCol, { breakpoint: "md", size: "4", spacer: { bottom: :lg }} do %> 
+      <%= sage_component SagePanel, {} do %>
+        <%= sage_component SagePanelStack, {} do %>
+          <i class="docs-section__icon sage-icon-stack-3xl t-sage--color-sage"></i>
+          <h3 class="t-sage-heading-3">Layout</h3>
+          <p class="t-sage-body">Patterns that allow us to position our content in various formats and locations without needing to change the content.</p>
+          <%= sage_component SageButton, {
+            value: "Layout Patterns",
+            attributes: {
+              href: pages_layout_path(:container),
+              title: "Layout Patterns"
+            },
+            subtle: true,
+            icon: {
+              style: "right",
+              name: "arrow-right"
+            },
+            style: "primary",
+          } %>
+        <% end %>
+      <% end %>
+    <% end %>
+    <%= sage_component SageGridCol, { breakpoint: "md", size: "4", spacer: { bottom: :lg } } do %> 
+      <%= sage_component SagePanel, {} do %>
+        <%= sage_component SagePanelStack, {} do %>
+          <i class="docs-section__icon sage-icon-product-3xl t-sage--color-sage"></i>
+          <h3 class="t-sage-heading-3">Components</h3>
+          <p class="t-sage-body">Find a full reference for our library or Rails UI components. Links to corresponding React components are provided as well.</p>
+          <%= sage_component SageButton, {
+            value: "Browse Components",
+            attributes: {
+              href: pages_component_path(sorted_sage_components.first[:title]),
+              title: "Browse Components"
+            },
+            subtle: true,
+            icon: {
+              style: "right",
+              name: "arrow-right"
+            },
+            style: "primary",
+          } %>
         <% end %>
       <% end %>
     <% end %>

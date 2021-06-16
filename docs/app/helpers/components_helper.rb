@@ -81,6 +81,15 @@ module ComponentsHelper
         react_component_slug: "sage-tabs--default"
       },
       {
+        title: "container",
+        description: "For setting contents of varying complexity inside a fixed space.",
+        scss: "done",
+        rails: "done",
+        react: "done",
+        a11y: "done",
+        react_component_slug: "sage-grid--default"
+      },
+      {
         title: "copy_text",
         description: "A small set of components to use in places where \"copy\" text is provided such as in a Copy Button or a block of text to be copied elsewhere.",
         scss: "done",

@@ -1,4 +1,4 @@
-<% 
+<%
 demo_configs = [
   {
     heading: "Primary (regular and disabled)",
@@ -32,6 +32,16 @@ demo_configs = [
         value: "Button",
         style: config[:style],
         disabled: disabled
+      } %>
+
+      <!-- Primary submit button -->
+      <%= sage_component SageButton, {
+        value: "Submit",
+        style: config[:style],
+        disabled: disabled,
+        attributes: {
+          type: "submit"
+        }
       } %>
 
       <!-- Primary button (link) -->
@@ -209,7 +219,7 @@ demo_configs = [
 <p>
   Regular buttons allow for a "raised" shadow treatement to be toggled on or off.
   This is on by default for "Primary" button styles and can be toggled off with "no_shadow".
-  For the other styles it is off by default but can be toggled on with "raised".  
+  For the other styles it is off by default but can be toggled on with "raised".
 </p>
 <%= sage_component SageButtonGroup, { gap: :md, spacer: { bottom: :md } } do %>
   <%= sage_component SageButton, {

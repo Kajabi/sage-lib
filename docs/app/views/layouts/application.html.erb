@@ -15,7 +15,7 @@
     <%= sage_component(SageStage, {}) do %>
       <%= render "application/sidebar" %>
       <%= sage_component(SageContent, { html_attributes: { id: "main-content" } }) do %>
-        <%= sage_component(SageContainer, { size: "sm" }) do %>
+        <%= sage_component(SageContainer, { size: "full" }) do %>
           <div class="docs-panel">
             <div class="sage-row">
               <div class="sage-col--lg-10 docs-heading">

@@ -24,7 +24,7 @@ export const Default = Template.bind({});
 Default.decorators = [
   (Story) => (
     <>
-      <Grid container={Grid.CONTAINER_SIZES.MODAL}>
+      <Grid container={Grid.CONTAINER_SIZES.MD}>
         <Card>
           <Story />
         </Card>

@@ -1,6 +1,9 @@
+<%
+size = component.size.present? ? component.size : "full"
+%>
 <div class="
     sage-container
-    <%= " sage-container--#{component.size}" if defined?(component.size) %>
+    sage-container--<%= size %>
     <%= component.generated_css_classes %>
   " <%= component.generated_html_attributes.html_safe %>>
   <%= component.content %>
