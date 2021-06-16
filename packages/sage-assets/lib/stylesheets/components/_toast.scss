@@ -149,6 +149,7 @@ $-toast-bottom-spacing: sage-spacing(xs);
   display: inline-flex;
   align-items: center;
   margin-left: sage-spacing(sm);
+  padding: 0;
   white-space: nowrap;
   color: sage-color(grey, 100);
   border-radius: sage-border(radius-large);
