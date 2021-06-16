@@ -24,7 +24,7 @@ export default {
   }
 };
 
-export const Template = (args) => <DataCard {...args} />;
+const Template = (args) => <DataCard {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
@@ -63,7 +63,7 @@ Default.args = {
 Default.decorators = [
   (Story) => (
     <>
-      <Grid container={Grid.CONTAINER_SIZES.XS}>
+      <Grid container={Grid.CONTAINER_SIZES.SM}>
         <Story />
       </Grid>
     </>
@@ -72,7 +72,7 @@ Default.decorators = [
 
 export const DataCardGroup = () => (
   <>
-    <Grid container={Grid.CONTAINER_SIZES.XS}>
+    <Grid container={Grid.CONTAINER_SIZES.SM}>
       <DataCard.Group color={DataCard.COLORS.DEFAULT}>
         <DataCard>
           <DataCard.Header title="Duis gravida" />
@@ -129,7 +129,7 @@ export const DataCardGroup = () => (
 
 export const DataCardScrollContainer = () => (
   <>
-    <Grid container={Grid.CONTAINER_SIZES.LG}>
+    <Grid container={Grid.CONTAINER_SIZES.FULL}>
       <DataCard.ScrollContainer>
         <DataCard.Group title="Aenean vehicula dignissim" color={DataCard.COLORS.DANGER}>
           <DataCard>

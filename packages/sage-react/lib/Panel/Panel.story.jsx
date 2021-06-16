@@ -26,7 +26,7 @@ export default {
 };
 
 export const Default = (args) => (
-  <Grid container={Grid.CONTAINER_SIZES.XS}>
+  <Grid container={Grid.CONTAINER_SIZES.LG}>
     <Panel {...args}>
       <Panel.Header title="Panel header">
         <OptionsDropdown
@@ -72,7 +72,7 @@ export const Default = (args) => (
 );
 
 export const PanelStack = (args) => (
-  <Grid container={Grid.CONTAINER_SIZES.XS}>
+  <Grid container={Grid.CONTAINER_SIZES.SM}>
     <Panel {...args}>
       <Panel.Header title="Panel with a stack" />
       <Panel.Stack>
@@ -89,7 +89,7 @@ export const PanelStack = (args) => (
 );
 
 export const PanelList = (args) => (
-  <Grid container={Grid.CONTAINER_SIZES.XS}>
+  <Grid container={Grid.CONTAINER_SIZES.MD}>
     <Panel {...args}>
       <Panel.Header title="Panel with a list" />
       <Panel.List
@@ -165,7 +165,7 @@ export const PanelList = (args) => (
 );
 
 export const PanelTiles = ({ tiles, ...args }) => (
-  <Grid container={Grid.CONTAINER_SIZES.XS}>
+  <Grid container={Grid.CONTAINER_SIZES.XL}>
     <Panel {...args}>
       <Panel.Header title="Panel with tiles" />
       <Panel.Subheader title="Tiles provided through props" />
@@ -342,7 +342,7 @@ PanelTiles.propTypes = {
 };
 
 export const PanelRow = (args) => (
-  <Grid container={Grid.CONTAINER_SIZES.XS}>
+  <Grid container={Grid.CONTAINER_SIZES.LG}>
     <Panel {...args}>
       <Panel.Header title="Panel with a row" />
       <Panel.Row gridTemplate={SageTokens.GRID_TEMPLATES.ETI}>
@@ -374,7 +374,7 @@ export const PanelRow = (args) => (
 );
 
 export const PanelFigure = ({ bleedDirection, ...args }) => (
-  <Grid container={Grid.CONTAINER_SIZES.XS}>
+  <Grid container={Grid.CONTAINER_SIZES.LG}>
     <p className={`${SageClassnames.TYPE.BODY_SMALL} ${SageClassnames.SPACERS.MD_BOTTOM}`}>
       <strong>Note:</strong> Normally there would be other content along with the figure.
       Content was ommitted here in order to demonstrate the bleed options through Knobs.

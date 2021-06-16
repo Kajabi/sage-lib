@@ -13,7 +13,7 @@
     <% end %>
     <%= sage_component(SageStage, {}) do %>
       <%= sage_component(SageContent, { html_attributes: { id: "main-content" } }) do %>
-        <%= sage_component(SageContainer, { size: "md" }) do %>
+        <%= sage_component(SageContainer, { size: "full" }) do %>
           <div class="sage-row">
             <div class="sage-col--lg-12 docs-heading">
               <%= yield :heading %>
