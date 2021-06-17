@@ -36,6 +36,7 @@
     "function-parentheses-space-inside": "never-single-line",
     "keyframe-declaration-no-important": true,
     "max-empty-lines": 2,
+    "max-nesting-depth": null,
     "media-query-list-comma-newline-after": null,
     "media-query-list-comma-space-after": ["always", { "severity": "error" }],
     "no-unknown-animations": [true, { "severity": "error" }],

@@ -97,8 +97,6 @@ $-btn-subtle-styles: (
 //
 $-btn-interactive-label-icon-size: rem(24px);
 
-
-// stylelint-disable max-nesting-depth
 :root {
   --icon-block-padding: #{rem(6px)};
 
@@ -416,10 +414,8 @@ $-btn-interactive-label-icon-size: rem(24px);
   @extend %t-sage-body-small;
 }
 
-// TODO: Investigate deprecating the float setting here
 .sage-btn--align-end {
   align-self: flex-end;
-  float: right;
 }
 
 .sage-btn--full-width {
