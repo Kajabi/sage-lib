@@ -6,7 +6,7 @@
 
 
 $-label-interactive-icon-size: rem(24px);
-$-label-interactive-icon-size-small: rem(28px);
+$-label-interactive-icon-size-decor: rem(28px);
 $-label-padding: 0 sage-spacing(xs);
 $-label-border-radius: sage-border(radius-x-large);
 $-label-inset-border: 0 0 0 1px inset;
@@ -31,7 +31,7 @@ $-label-inset-border: 0 0 0 1px inset;
 }
 
 .sage-label__value {
-  @extend %t-sage-body-small-semi;
+  @extend %t-sage-body-small-med;
 
   appearance: none;
   display: flex;
@@ -89,7 +89,7 @@ $-label-inset-border: 0 0 0 1px inset;
 
   #{$-color-modifier}.sage-label--interactive {
     &.sage-label--interactive-right-cta-affordance .sage-label__value {
-      padding-right: $-label-interactive-icon-size-small;
+      padding-right: $-label-interactive-icon-size-decor;
     }
 
     .sage-label__value {
@@ -132,13 +132,12 @@ $-label-inset-border: 0 0 0 1px inset;
       justify-content: center;
       position: absolute;
       right: 0;
-      width: $-label-interactive-icon-size-small;
+      width: $-label-interactive-icon-size-decor;
       min-height: $-label-interactive-icon-size;
       margin: auto 0;
       border-radius: 0 $-label-border-radius $-label-border-radius 0;
 
       &::before {
-        font-weight: sage-font-weight(bold);
         color: sage-color-combo($-color-name, default, foreground);
       }
 
