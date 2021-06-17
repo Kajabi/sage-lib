@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.46.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.45.0...@kajabi/sage-react@0.46.0) (2021-06-15)
+
+
+### Bug Fixes
+
+* **icon-card:** added round property for circular border-radius ([5515ae9](https://github.com/Kajabi/sage-lib/commit/5515ae94684c93e0fe90c8888377592c63ea354a))
+* **icon-card:** removed unnecessary computed property ([9e2dc6b](https://github.com/Kajabi/sage-lib/commit/9e2dc6ba437349b07e25c8e28c88bc8d205e6af5))
+
+
+### Features
+
+* **grid:** udpate react grid with new containers ([dd56c0a](https://github.com/Kajabi/sage-lib/commit/dd56c0a6061d198cf37f18722c6ff0357c67bcfa))
+
+
+
+
+
 # [0.45.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.44.0...@kajabi/sage-react@0.45.0) (2021-06-09)
 
 
