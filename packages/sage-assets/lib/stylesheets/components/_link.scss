@@ -5,8 +5,8 @@
 ////
 
 .sage-link {
-  position: relative;
   display: inline-flex;
+  position: relative;
   max-width: 100%;
 
   @include sage-focus-outline($outline-offset-inline: 6px, $outline-offset-block: 0);
