@@ -25,9 +25,13 @@
       <%= component.value.html_safe %>
     </span>
   <% else %>
+    <% if component.value %>
     <span class="sage-btn__truncate-text">
       <%# if the component.value is an empty string, add a `&nbsp;` to prevent height collapse %>
       <%= (component.value.strip.empty? ? "&nbsp;" : component.value).html_safe %>
     </span>
+    <% elsif component.content %>
+      <%= component.content %>
+    <% end %>
   <% end %>
 </<%= html_tag %>>
