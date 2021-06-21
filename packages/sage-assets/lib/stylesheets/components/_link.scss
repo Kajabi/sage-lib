@@ -4,9 +4,17 @@
 /// @group sage
 ////
 
+.sage-link {
+  position: relative;
+  display: inline-flex;
+  max-width: 100%;
 
-.sage-link--launch,
-.sage-type a[target="_blank"]:not(.sage-link--no-launch):not([class*="icon-right-launch"]) {
+  @include sage-focus-outline($outline-offset-inline: 6px, $outline-offset-block: 0);
+  @include sage-focus-outline--update-color($sage-focus-color);
+}
+
+.sage-link--launch .t-sage--truncate,
+.sage-type a[target="_blank"]:not(.sage-link--no-launch):not([class*="icon-right-launch"]) .t-sage--truncate {
   &::after {
     margin-left: sage-spacing(2xs);
     margin-right: sage-spacing(2xs);
@@ -65,7 +73,6 @@
   &:focus {
     color: sage-color(charcoal, 400);
     text-decoration: none;
-    box-shadow: 0 0 0 2px currentColor;
     outline: 0;
   }
 }
