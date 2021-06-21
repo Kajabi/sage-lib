@@ -177,7 +177,8 @@ $-btn-interactive-label-icon-size: rem(24px);
     border-radius: 0 sage-border(radius-x-large) sage-border(radius-x-large) 0;
 
     &::before {
-      font-size: sage-font-size(body-sm);
+      margin-top: 1px; /* needed as sage-font-size(sm) is equates 13px and not 14px. This 1px is accounting for that 1px */
+      font-size: sage-font-size(sm);
     }
 
     &::after {
