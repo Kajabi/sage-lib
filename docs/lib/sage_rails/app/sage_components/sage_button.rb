@@ -10,6 +10,6 @@ class SageButton < SageComponent
     small:            [:optional, NilClass, TrueClass],
     style:            [:optional, NilClass, Set.new(["primary", "secondary", "danger"])],
     subtle:           [:optional, NilClass, TrueClass],
-    value:            String,
+    value:            [:optional, String],
   })
 end
