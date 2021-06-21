@@ -86,6 +86,14 @@ demo_configs = [
         },
         disabled: disabled
       } %>
+
+      <!-- Primary button (custom content) -->
+      <%= sage_component SageButton, {
+        style: config[:style],
+        disabled: disabled
+      } do %>
+        <strong>Custom</strong> <em>content</em>
+      <% end %>
     <% end %>
   <% end %>
 <% end %>
