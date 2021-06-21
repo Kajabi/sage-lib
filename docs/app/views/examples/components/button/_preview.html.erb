@@ -154,6 +154,15 @@ demo_configs = [
         subtle: true,
         small: size
       } %>
+
+      <!-- Primary button (custom content) -->
+      <%= sage_component SageButton, {
+        style: config[:style],
+        subtle: true,
+        small: size
+      } do %>
+        <strong>Custom</strong> <em>content</em>
+      <% end %>
     <% end %>
   <% end %>
 <% end %>

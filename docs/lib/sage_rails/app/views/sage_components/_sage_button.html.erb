@@ -17,6 +17,7 @@
     <%= "sage-btn--#{component.style}" if component.style %>
     <%= "sage-btn--align-end" if (component.align == "end") %>
     <%= "sage-btn--icon-#{component.icon[:style]}-#{component.icon[:name]}" if component.icon %>
+    <%= "sage-btn--custom-content" if component.content %>
     <%= component.generated_css_classes %>
   "
 >
