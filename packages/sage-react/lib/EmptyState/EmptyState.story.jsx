@@ -48,4 +48,4 @@ PageScope.args = {
   actions: (
     <Button>Add Email Campaign</Button>
   )
-}
+};

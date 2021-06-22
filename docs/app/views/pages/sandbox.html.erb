@@ -1,70 +1,3 @@
-<%
-people_data = [
-  {
-    initials: 'AF',
-    name: 'Albert Flores',
-    email: 'albertflores@example.com',
-    price: '$420.00 USD',
-    amount: '1',
-    labels: ["green", "house"],
-    status: 'published'
-  },
-  {
-    initials: 'EP',
-    name: 'Eleanor Pena',
-    email: 'e_pena@example.com',
-    price: '$420.00 USD',
-    amount: '1',
-    labels: ["red"],
-    status: 'draft'
-  },
-  {
-    initials: 'LJ',
-    name: 'Lily Jones',
-    email: 'lilyjones@example.com',
-    price: '$420.00 USD',
-    amount: '1',
-    labels: ["house"],
-    status: 'warning'
-  },
-  {
-    initials: 'KM',
-    name: 'Kathryn Murphy',
-    email: 'katmurphy@example.com',
-    price: '$420.00 USD',
-    amount: '1',
-    labels: ["red", "house"],
-    status: 'locked'
-  },
-  {
-    initials: 'DR',
-    name: 'Darelene Robertson',
-    email: 'd_robertson@example.com',
-    price: '$420.00 USD',
-    amount: '1',
-    labels: [],
-    status: 'danger'
-  },
-  {
-    initials: 'RE',
-    name: 'Ralph Edwards',
-    email: 'ralphedwards@example.com',
-    price: '$420.00 USD',
-    amount: '1',
-    labels: [],
-    status: 'draft'
-  },
-  {
-    initials: 'JW',
-    name: 'Jenny Wilson',
-    email: 'jennywilson@example.com',
-    price: '$420.00 USD',
-    amount: '1',
-    labels: [],
-    status: 'published'
-  }
-]
-%>
 <%= content_for :heading do %>
 <%= md("
 # Sandbox
@@ -73,82 +6,67 @@ Use this scratchpad to test out elements and components in context. Just be sure
 ") %>
 <% end %>
 
-<%= sage_component SagePanel, {} do %>
-  <%= sage_table_for people_data, striped: true, sortable: true, responsive: true, caption: "<p>Testing <b>stuff</b></p>".html_safe do |t| %>
-    <% t.column :initials, label: "", data_type: "checkbox" do |c| %>
-      <%= sage_component SageCheckbox, {
-        label_text: 'Select row',
-        standalone: true,
-        id: "table-row-#{c[:initials]}",
-      } %>
-    <% end %>
-
-    <% t.column :initials, label: "", data_type: "avatar" do |c| %>
-      <%= sage_component SageAvatar, {
-        initials: c[:initials],
-        color: SageTokens::COLORS[rand(7)],
-      } %>
-    <% end %>
-
-    <% t.column :name, label: "Name", strong: true, truncate: true do |c| %>
-      <span data-js-tooltip="<%= c[:name] %>">
-        <%= c[:name] %>
-      </span>
-    <% end %>
-
-    <% t.column :email, label: "Email", truncate: true do |c| %>
-      <span data-js-tooltip="<%= c[:email] %>">
-        <%= c[:email] %>
-      </span>
-    <% end %>
-
-    <% t.column :price, label: "Price", style: "width: 140px", hide: { md: true } do |c| %>
-      <%= c[:price] %>
-    <% end %>
-
-    <% t.column :amount, label: "Amount", style: "width: 100px", hide: { md: true } do |c| %>
-      <%= c[:amount] %>
-    <% end %>
-
-    <% t.column :labels, label: "Labels", style: "width: 150px", hide: { sm: true } do |c| %>
-      <% c[:labels].each do |label| %>
-        <%= sage_component SageLabel, { 
-          value: label,
-          color: "info",
-        } %>
+<%= sage_component SageContainer, {} do %>
+  <%= sage_component SagePanelRow, { grid_template: "et" } do %>
+    <%= sage_component SageContainer, { size: "xs" } do %>
+      <%= sage_component SagePanel, {} do %>
+        <p>Sidebar</p>
       <% end %>
     <% end %>
+    <%= sage_component SageContainer, {} do %>
+      
 
-    <% t.column :status, label: "Status", style: "width: 100px", hide: { sm: true } do |c| %>
-      <%= sage_component SageLabel, { 
-        value: c[:status].titlecase,
-        color: c[:status],
-        } %>
-    <% end %>
+      <%= sage_component SageEmptyState, {
+        title: "Create your first Email Campaign",
+        graphic: image_tag("null-view-graphic.png", alt: ""), #%(<img src="//source.unsplash.com/random/530x500" alt="" />).html_safe,
+        scope: "page",
+      } do %>
+        <% content_for :sage_empty_state_text do %>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Elit arcu volutpat cursus ultricies ac, ultricies.
+            Platea sed nibh molestie ut.
+          </p>
+        <% end %>
+        <% content_for :sage_empty_state_actions do %>
+          <%= sage_component SageButtonGroup, {} do %>
+            <%= sage_component SageButton, {
+              attributes: { href: "#" },
+              raised: true,
+              style: "primary",
+              value: "Create Email Campaings",
+            } %>
+            <%= sage_component SageButton, {
+              attributes: { href: "#" },
+              raised: true,
+              style: "secondary",
+              value: "Learn More",
+            } %>
+          <% end %>
+        <% end %>
+      <% end %>
 
-    <% t.column :actions, label: "Actions", style: "width: 100px" do |c| %>
-      <%= sage_component SageButtonGroup, {} do %>
-        <%= sage_component SageButton, {
-          subtle: true,
-          value: 'Edit',
-          icon: { name: 'pen', style: 'only' },
-          style: 'primary',
-          attributes: {
-            href: "?edit=#edit",
-            "data-js-tooltip": "Edit",
-          }
-        } %>
-        <%= sage_component SageButton, {
-          subtle: true,
-          value: 'Delete',
-          icon: { name: 'trash', style: 'only' },
-          style: 'danger',
-          attributes: {
-            href: "?remove=#delete",
-            "data-js-tooltip": "Delete",
-          }
-        } %>
+      <%= sage_component SageEmptyState, {
+        title: "Create your first Email Campaign",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit arcu volutpat cursus ultricies ac, ultricies. Platea sed nibh molestie ut.",
+        graphic: %(<img src="//source.unsplash.com/random/530x500" alt="" />).html_safe
+      } do %>
+        <%= sage_component SageButtonGroup, {} do %>
+          <%= sage_component SageButton, {
+            attributes: { href: "#" },
+            raised: true,
+            style: "primary",
+            value: "Create Email Campaings",
+          } %>
+          <%= sage_component SageButton, {
+            attributes: { href: "#" },
+            raised: true,
+            style: "secondary",
+            value: "Learn More",
+          } %>
+        <% end %>
       <% end %>
     <% end %>
   <% end %>
 <% end %>
+

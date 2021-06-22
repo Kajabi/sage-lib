@@ -5,9 +5,9 @@ class SageEmptyState < SageComponent
     graphic: [:optional, String],
     icon: [:optional, String],
     scope: [:optional, Set.new(["page", "compact", nil])],
+    text: [:optional, String],
     title: [:optional, String],
     title_tag: [:optional, Set.new(["h1", "h2", "h3", "h4", "h5", "h5", "h6"])],
-    text: [:optional, String],
   })
   def sections
     %w(sage_empty_state_actions sage_empty_state_text)
