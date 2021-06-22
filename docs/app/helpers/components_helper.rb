@@ -520,11 +520,11 @@ module ComponentsHelper
       },
       {
         title: "null_view",
-        description: "Null view displays content, action items, and a graphic in order to introduce a customer to a section of the app that may not yet have content.",
-        scss: "todo",
-        rails: "todo",
-        react: "todo",
-        a11y: "todo",
+        description: "DEPRECATED: See Empty State.",
+        scss: "stop",
+        rails: "stop",
+        react: "stop",
+        a11y: "stop",
       },
       {
         title: "page_heading",
