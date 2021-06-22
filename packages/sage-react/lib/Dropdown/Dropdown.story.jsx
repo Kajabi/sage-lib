@@ -1,15 +1,13 @@
 import React from 'react';
 import { selectArgs } from '../story-support/helpers';
-import { Button } from '../Button';
-import { FormSection } from '../FormSection';
-import { Input } from '../Input';
 import { SageTokens } from '../configs';
 import { Dropdown } from './Dropdown';
 import { OptionsDropdown } from './OptionsDropdown';
 import { defaultOptionsItems, sampleMenuItems } from './stories/story-helper';
+import { CustomPanelStory } from './stories/CustomPanelStory';
+import { BulkActionsStory } from './stories/BulkActionsStory';
 import { MultiMenuStory } from './stories/MultiMenuStory';
 import { SelectDropdownDemo } from './stories/SelectDropdownDemo';
-import { BulkActionsStory } from './stories/BulkActionsStory';
 
 export default {
   title: 'Sage/Dropdown',
@@ -26,7 +24,7 @@ export default {
   },
   args: {
     align: null,
-    className: false,
+    className: null,
     closePanelOnExit: true,
     contained: false,
     customized: false,
@@ -122,29 +120,9 @@ Multiselect.decorators = [
   )
 ];
 
-export const MenuWithCustomPanel = Template.bind({});
-MenuWithCustomPanel.args = {
-  align: 'right',
-  children: (
-    <FormSection
-      style={{
-        width: '500px',
-        padding: '24px'
-      }}
-      title="Sign in"
-      subtitle="You must sign in order to use this feature."
-    >
-      <Input type="text" label="Username" />
-      <Input type="password" label="Password" />
-      <Button color={Button.COLORS.PRIMARY} alignEnd={true}>
-        Log in
-      </Button>
-    </FormSection>
-  ),
-  icon: SageTokens.ICONS.USERS,
-  isLabelVisible: true,
-  label: 'Login',
-};
+export const MenuWithCustomPanel = () => (
+  <CustomPanelStory />
+);
 MenuWithCustomPanel.decorators = [
   (Story) => (
     <>
