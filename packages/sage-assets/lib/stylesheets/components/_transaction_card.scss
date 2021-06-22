@@ -24,7 +24,6 @@ $-transaction-card-state-max-width: rem(80px);
 
 .sage-transaction-card__footer {
   > :first-child {
-    // @include truncate;
     max-width: 100%;
   }
 }

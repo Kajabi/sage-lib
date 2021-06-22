@@ -125,8 +125,4 @@ $-hero-play-icon-background-color-hover: rgba(sage-color(white, 100), 1);
     background-color: $-hero-play-icon-background-color;
     transition: background-color 0.2s ease;
   }
-
-  .sage-hero__artwork:focus & {
-    // @include sage-focus-shadow($focus-shadow-inset: true);
-  }
 }
