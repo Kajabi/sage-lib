@@ -8,6 +8,7 @@
   display: inline-flex;
   position: relative;
   max-width: 100%;
+  min-width: 0; /* the is needed so that truncation work when the link doesn't have an explicit width set  */
 
   @include sage-focus-outline($outline-offset-inline: 6px, $outline-offset-block: 0);
   @include sage-focus-outline--update-color($sage-focus-color);
@@ -29,7 +30,6 @@
   &::before {
     @include sage-icon-base(question-circle, lg);
 
-    transform: translateY(rem(1px));
     color: sage-color(grey, 500);
   }
 
@@ -46,6 +46,11 @@
   .sage-page-heading__title & {
     margin-left: sage-spacing(xs);
   }
+}
+
+.sage-link--help-icon-only {
+  @include sage-focus-outline($outline-offset-inline: 4px, $outline-offset-block: 2px);
+  @include sage-focus-outline--update-color($sage-focus-color);
 }
 
 .sage-link--help {
