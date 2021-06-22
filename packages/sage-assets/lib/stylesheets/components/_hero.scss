@@ -67,11 +67,40 @@ $-hero-play-icon-background-color-hover: rgba(sage-color(white, 100), 1);
   grid-area: artwork;
   position: relative;
   overflow: hidden;
+  outline: none;
 
   @media (max-width: sage-breakpoint(sm-max)) {
     height: 0;
     padding-top: $-hero-mobile-aspect-ratio;
   }
+
+  &:hover::after {
+    background-color: $-hero-play-icon-background-color-hover;
+  }
+
+  &:focus {
+    border: 3px solid $sage-focus-color;
+  }
+}
+
+.sage-hero__artwork-image {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+
+  @media (min-width: sage-breakpoint(md-min)) {
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.sage-hero__artwork-image-container {
+  width: 100%;
+  height: 100%;
+  display: block;
+
+
 
   &::before {
     @include sage-icon-base(play);
@@ -99,19 +128,7 @@ $-hero-play-icon-background-color-hover: rgba(sage-color(white, 100), 1);
     transition: background-color 0.2s ease;
   }
 
-  &:hover::after {
-    background-color: $-hero-play-icon-background-color-hover;
-  }
-}
-
-.sage-hero__artwork-image {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 100%;
-
-  @media (min-width: sage-breakpoint(md-min)) {
-    height: 100%;
-    object-fit: cover;
+  .sage-hero__artwork:focus & {
+    // @include sage-focus-shadow($focus-shadow-inset: true);
   }
 }
