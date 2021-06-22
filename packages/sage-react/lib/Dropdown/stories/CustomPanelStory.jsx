@@ -1,7 +1,9 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import uuid from 'react-uuid';
 import { SageTokens } from '../../configs';
-import { Dropdown } from '../../Dropdown';
+import { Dropdown } from '..';
 import { Button } from '../../Button';
 import { Card } from '../../Card';
 import { Input } from '../../Input';
@@ -11,6 +13,16 @@ const CustomPanelBody = ({ onExit, children }) => (
     {children}
   </Card.Stack>
 );
+
+CustomPanelBody.defaultProps = {
+  children: null,
+  onExit: () => {},
+};
+
+CustomPanelBody.propTypes = {
+  children: PropTypes.node,
+  onExit: PropTypes.func,
+};
 
 export const CustomPanelStory = () => {
   const [dropdownToken, setDropdownToken] = useState(uuid());
