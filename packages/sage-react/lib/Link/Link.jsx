@@ -21,14 +21,14 @@ export const Link = ({
       {tooltip ? (
         <Tooltip {...tooltip}>
           <SelfTag className="sage-link" {...rest}>
-            <span class="t-sage--truncate">
+            <span className="t-sage--truncate">
               {children}
             </span>
           </SelfTag>
         </Tooltip>
       ) : (
         <SelfTag className="sage-link" {...rest}>
-          <span class="t-sage--truncate">
+          <span className="t-sage--truncate">
             {children}
           </span>
         </SelfTag>

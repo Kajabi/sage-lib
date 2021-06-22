@@ -96,11 +96,9 @@ $-hero-play-icon-background-color-hover: rgba(sage-color(white, 100), 1);
 }
 
 .sage-hero__artwork-image-container {
+  display: block;
   width: 100%;
   height: 100%;
-  display: block;
-
-
 
   &::before {
     @include sage-icon-base(play);

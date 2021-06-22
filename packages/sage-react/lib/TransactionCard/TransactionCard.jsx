@@ -52,7 +52,7 @@ export const TransactionCard = ({
         <NameTag className="sage-transaction-card__name">
           {nameHref ? (
             <Link href={nameHref} className="sage-link sage-transaction-card__name-link">
-              <span class="t-sage--truncate">{name}</span>
+              <span className="t-sage--truncate">{name}</span>
             </Link>
           ) : name}
         </NameTag>
