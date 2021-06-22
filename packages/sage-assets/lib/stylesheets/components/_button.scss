@@ -215,7 +215,7 @@ $-btn-interactive-label-icon-size: rem(24px);
 
   .sage-page-heading__toolbar & {
     &:not(:last-child) {
-      margin-right: sage-spacing(lg);
+      margin-right: sage-spacing();
     }
   }
 
