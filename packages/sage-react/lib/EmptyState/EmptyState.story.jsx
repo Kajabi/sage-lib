@@ -9,7 +9,8 @@ export default {
   component: EmptyState,
   argTypes: {
     ...selectArgs({
-      icon: SageTokens.ICONS
+      icon: SageTokens.ICONS,
+      scope: EmptyState.SCOPES
     })
   },
   args: {
@@ -28,3 +29,23 @@ export default {
 const Template = (args) => <EmptyState {...args} />;
 
 export const Default = Template.bind({});
+
+export const PageScope = Template.bind({});
+PageScope.args = {
+  icon: null,
+  graphic: (<img src="//source.unsplash.com/random/530x500" alt="" />),
+  scope: EmptyState.SCOPES.PAGE,
+  text: (
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Elit arcu volutpat cursus ultricies ac, ultricies.
+      Platea sed nibh molestie ut.
+    </p>
+  ),
+  title: 'Create your first Email Campaign',
+  titleTag: 'h1',
+  children: null,
+  actions: (
+    <Button>Add Email Campaign</Button>
+  )
+};
