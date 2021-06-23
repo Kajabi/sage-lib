@@ -1,4 +1,4 @@
-.sage-form-field {
+.sage-form-field-group {
   position: relative;
 
   &:not(:last-child) {
@@ -61,6 +61,8 @@
     color: map-get($sage-field-colors, disabled);
     background-color: map-get($sage-field-colors, disabled-background);
     cursor: not-allowed;
+    resize: none;
+
     @include placeholder {
       color: sage-color(grey, 400);
     }
@@ -74,7 +76,6 @@
     @extend %t-sage-body-xsmall-semi;
 
     position: absolute;
-    transform: translateY(calc(#{map-get($sage-field-configs, height)} * -1));
     padding-left: map-get($sage-field-configs, padding-label);;
     padding-right: map-get($sage-field-configs, padding-label);;
     color: inherit;
