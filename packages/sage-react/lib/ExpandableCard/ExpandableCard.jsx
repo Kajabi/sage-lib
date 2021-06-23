@@ -34,7 +34,6 @@ export const ExpandableCard = ({ bodyBordered, children, className, sageType, tr
         aria-expanded={selfActive}
         className="sage-expandable-card__trigger"
         color="primary"
-        fullWidth={true}
         icon={SageTokens.ICONS.CARET_RIGHT}
         onClick={handleTriggerClick}
         subtle={true}
