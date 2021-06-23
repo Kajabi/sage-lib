@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.4.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.4.0...@kajabi/sage@4.4.1) (2021-06-23)
+
+
+### Bug Fixes
+
+* **docs:** added all section that are called using content_for to the property views ([69fb645](https://github.com/Kajabi/sage-lib/commit/69fb645d658248b4e2230c8851a2a6271c883247))
+* **docs:** added content_for to page headings ([a5ca936](https://github.com/Kajabi/sage-lib/commit/a5ca936edd787d039f4ceba486ed7af78ff23519))
+
+
+
+
+
 # [4.4.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.3.1...@kajabi/sage@4.4.0) (2021-06-15)
 
 

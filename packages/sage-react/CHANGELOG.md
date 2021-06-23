@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.47.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.46.0...@kajabi/sage-react@0.47.0) (2021-06-23)
+
+
+### Features
+
+* **dropdown:** add panel state token ([a6ad7f3](https://github.com/Kajabi/sage-lib/commit/a6ad7f39d1363791b02dc7fc4759490960819d29))
+
+
+
+
+
 # [0.46.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.45.0...@kajabi/sage-react@0.46.0) (2021-06-15)
 
 
