@@ -1,0 +1,131 @@
+.sage-form-field {
+  position: relative;
+
+  &:not(:last-child) {
+    margin-bottom: map-get($sage-field-configs, bottom-gap);
+  }
+
+  .sage-panel__row > &,
+  .sage-panel__stack > &,
+  .sage-panel__block > &,
+  .sage-card__row > &,
+  .sage-card__stack > &,
+  .sage-card__block > & {
+    margin-bottom: 0;
+  }
+}
+
+.sage-form-field {
+  width: 100%;
+  padding: map-get($sage-field-configs, padding) map-get($sage-field-configs, padding);
+  color: map-get($sage-field-colors, default);
+  appearance: none;
+  border: map-get($sage-field-configs, border-width) solid map-get($sage-field-colors, border);
+  border-radius: sage-border(radius);
+  background: transparent;
+  transition: border 0.2s ease-in-out, box-shadow 0.2s ease-in-out;;
+
+  @include placeholder {
+    color: sage-color(charcoal, 100);
+  }
+
+  &:hover:not(:disabled) {
+    border-color: currentColor;
+  }
+
+  &:focus:not(:disabled),
+  &:active:not(:disabled) {
+    outline: none;
+    border-color: map-get($sage-field-colors, success);
+    box-shadow: map-get($sage-field-configs, box-shadow-size) map-get($sage-field-colors, success);
+
+    @include placeholder {
+      opacity: 0;
+    }
+
+    ~ label {
+      color: map-get($sage-field-colors, success);
+    }
+  }
+
+  &:valid:not(:placeholder-shown) {
+    outline: none;
+    background: transparent; // Prevent some browsers from coloring the background on 'valid'
+
+    @include placeholder {
+      opacity: 0;
+    }
+  }
+
+  &:disabled {
+    color: map-get($sage-field-colors, disabled);
+    background-color: map-get($sage-field-colors, disabled-background);
+    cursor: not-allowed;
+    @include placeholder {
+      color: sage-color(grey, 400);
+    }
+
+    .sage-form-field--showplaceholder & ~ label {
+      opacity: 0.5;
+    }
+  }
+
+  & ~ label {
+    @extend %t-sage-body-xsmall-semi;
+
+    position: absolute;
+    transform: translateY(calc(#{map-get($sage-field-configs, height)} * -1));
+    padding-left: map-get($sage-field-configs, padding-label);;
+    padding-right: map-get($sage-field-configs, padding-label);;
+    color: inherit;
+    font-weight: sage-font-weight(semibold);
+    white-space: nowrap;
+    background-color: map-get($sage-field-colors, label-background);
+    pointer-events: none;
+    opacity: 0;
+  }
+
+  // TODO: add support for Simpleform classes
+  .sage-form-field--error &,
+  .sage-form-field--error &:focus:not(:disabled),
+  .sage-form-field--error &:not(:placeholder-shown),
+  &:required:not(:placeholder-shown):not(:valid) {
+    border-color: map-get($sage-field-colors, error);
+    box-shadow: map-get($sage-field-configs, box-shadow-size) map-get($sage-field-colors, error);
+
+    ~ label {
+      color: map-get($sage-field-colors, error);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    &,
+    & ~ label {
+      transition: none !important; /* stylelint-disable-line declaration-no-important */
+    }
+  }
+}
+
+.sage-form-field__label {
+  @extend %t-sage-body-xsmall-semi;
+
+  position: absolute;
+  // left: $-textarea-padding;
+  // top: $-textarea-border-width;
+  // padding-left: $-textarea-label-padding;
+  // padding-right: $-textarea-label-padding;
+  color: inherit;
+  white-space: nowrap;
+  background-color: sage-color(white);
+  pointer-events: none;
+  opacity: 0;
+}
+
+.sage-form-field__message {
+  @extend %t-sage-body-xsmall;
+  color: sage-color(charcoal, 100);
+
+  .sage-form-field--error & {
+    color: map-get($sage-field-colors, error);
+  }
+}
