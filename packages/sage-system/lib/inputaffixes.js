@@ -7,7 +7,7 @@ Sage.inputaffixes = (() => {
   const affixRootClass = "sage-input--affixed";
   const prefixRootClass = "sage-input--prefixed";
   const suffixRootClass = "sage-input--suffixed";
-  const fieldClass = "sage-input__field";
+  const fieldClass = "sage-form-field sage-input__field";
   const labelClass = "sage-label";
   const labelValueClass = "sage-label__value";
   const labelColorModifier = "draft";

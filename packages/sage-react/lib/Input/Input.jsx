@@ -23,7 +23,7 @@ export const Input = ({
     'sage-input',
     className,
     {
-      'sage-input--error': hasError,
+      'sage-form-field--error': hasError,
       'sage-input--prefixed': prefix,
       'sage-input--suffixed': suffix,
       'sage-input--standalone': standalone,
@@ -68,7 +68,7 @@ export const Input = ({
   return (
     <div className={classNames}>
       <input
-        className="sage-input__field"
+        className="sage-form-field sage-input__field"
         id={id}
         onChange={handleChange}
         placeholder={label}
