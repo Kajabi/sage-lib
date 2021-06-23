@@ -1,7 +1,18 @@
+<%
+variant = component.scope.present? ? component.scope : false
+if component.compact && !component.scope.present?
+  variant = "compact"
+end
+title_tag = variant == "feature" ? "h1" : "h2"
+if component.title_tag.present?
+  title_tag = component.title_tag
+end
+%>
 <section
   class="
     sage-empty-state
-    <%= "sage-empty-state--compact" if component.compact %>
+    <%= "sage-empty-state--#{variant}" if variant %>
+    <%= "sage-empty-state--center" if component.center_vertical %>
     <%= component.generated_css_classes %>
   "
   <%= component.generated_html_attributes.html_safe %>
@@ -11,8 +22,38 @@
       <%= component.graphic.html_safe %>
     </div>
   <% end %>
-  <%= "<i class='sage-empty-state__icon sage-icon-#{component.icon}-3xl'></i>".html_safe if component.icon %>
-  <%= "<h2 class='sage-empty-state__title'>#{component.title}</h2>".html_safe if component.title %>
-  <%= "<p class='sage-empty-state__text'>#{component.text}</p>".html_safe if component.text %>
-  <%= component.content %>
+
+  <%= sage_component SageIcon, {
+    icon: component.icon,
+    size: "3xl",
+    css_classes: "sage-empty-state__icon"
+  } if component.icon %>
+
+  <div class="sage-empty-state__content">
+    <% if component.title.present? %>
+      <<%= title_tag %> class="sage-empty-state__title">
+        <%= component.title %>
+      </<%= title_tag %>>
+    <% end %>
+    
+    <% if component.text.present? %>
+      <p class="sage-empty-state__text">
+        <%= component.text %>
+      </p>
+    <% end %>
+
+    <% if content_for? :sage_empty_state_text %>
+      <div class="sage-empty-state__text">
+        <%= content_for :sage_empty_state_text %>
+      </div>
+    <% end %>
+
+    <% if content_for? :sage_empty_state_actions %>
+      <div class="sage-empty-state__actions">
+        <%= content_for :sage_empty_state_actions %>
+      </div>
+    <% end %>
+  </div>
+
+  <%= component.content if !content_for? :sage_empty_state_text and !content_for? :sage_empty_state_actions %>
 </section>
