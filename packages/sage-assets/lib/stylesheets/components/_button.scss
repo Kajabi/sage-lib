@@ -343,19 +343,10 @@ $-btn-interactive-label-icon-size: rem(24px);
     }
 
     &:not(.sage-btn--subtle):not(:disabled):not([aria-disabled="true"]) {
-      // Shadow appears on Primary by default but can be toggled off with `--no-shadow`
-      @if ($-style-name == secondary) {
-        box-shadow: $-btn-shadow-base;
+      box-shadow: $-btn-shadow-base;
 
-        &.sage-btn--no-shadow {
-          box-shadow: none;
-        }
-      }
-      // All other buttons have no shadow by default but one can be toggled on with `--raised`
-      @else {
-        &.sage-btn--raised {
-          box-shadow: $-btn-shadow-base;
-        }
+      &.sage-btn--no-shadow {
+        box-shadow: none;
       }
     }
   }

@@ -217,9 +217,7 @@ demo_configs = [
   } %>
 <% end %>
 <p>
-  Regular buttons allow for a "raised" shadow treatement to be toggled on or off.
-  This is on by default for "Primary" button styles and can be toggled off with "no_shadow".
-  For the other styles it is off by default but can be toggled on with "raised".
+  The primary, secondary, and danger buttons all have a small shadow treatment by default. In addition, these buttons allow for a "no_shadow" treatment. Enable the "no_shadow" treatment by adding the attribute: <code>no_shadow: true</code>. 
 </p>
 <%= sage_component SageButtonGroup, { gap: :md, spacer: { bottom: :md } } do %>
   <%= sage_component SageButton, {
@@ -234,23 +232,23 @@ demo_configs = [
 <% end %>
 <%= sage_component SageButtonGroup, { gap: :md, spacer: { bottom: :md } } do %>
   <%= sage_component SageButton, {
-    value: "No shadow (default)",
+    value: "Raised (default)",
     style: "secondary",
   } %>
   <%= sage_component SageButton, {
-    value: "Raised",
+    value: "No shadow",
     style: "secondary",
-    raised: true,
+    no_shadow: true,
   } %>
 <% end %>
 <%= sage_component SageButtonGroup, { gap: :md } do %>
   <%= sage_component SageButton, {
-    value: "No shadow (default)",
+    value: "Raised (default)",
     style: "danger",
   } %>
   <%= sage_component SageButton, {
-    value: "Raised",
+    value: "No shadow",
     style: "danger",
-    raised: true,
+    no_shadow: true,
   } %>
 <% end %>
