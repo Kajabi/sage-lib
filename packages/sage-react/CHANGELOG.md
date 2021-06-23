@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.48.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.47.0...@kajabi/sage-react@0.48.0) (2021-06-23)
+
+
+### Features
+
+* **empty-state:** update to spec and consolidate null view ([5eed0c1](https://github.com/Kajabi/sage-lib/commit/5eed0c1fea6c61f90293de95b49cbc1f1c3d45c3))
+
+
+
+
+
 # [0.47.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.46.0...@kajabi/sage-react@0.47.0) (2021-06-23)
 
 

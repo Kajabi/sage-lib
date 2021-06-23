@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.5.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.4.1...@kajabi/sage@4.5.0) (2021-06-23)
+
+
+### Features
+
+* **empty-state:** update to spec and consolidate null view ([5eed0c1](https://github.com/Kajabi/sage-lib/commit/5eed0c1fea6c61f90293de95b49cbc1f1c3d45c3))
+
+
+
+
+
 ## [4.4.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.4.0...@kajabi/sage@4.4.1) (2021-06-23)
 
 
