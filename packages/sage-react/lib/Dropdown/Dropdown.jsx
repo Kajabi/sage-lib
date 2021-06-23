@@ -29,6 +29,7 @@ export const Dropdown = ({
   panelModifier,
   panelMaxWidth,
   panelSize,
+  panelStateToken,
   triggerButtonSubtle,
   triggerModifier,
 }) => {
@@ -84,6 +85,12 @@ export const Dropdown = ({
       window.removeEventListener('resize', onUpdate);
     };
   }, [wrapperRef, isActive, isPinned, onUpdate]);
+
+  useEffect(() => {
+    if (panelStateToken) {
+      setActive(!isActive);
+    }
+  }, [panelStateToken]);
 
   const a11yAttrs = {
     'aria-expanded': isActive,
@@ -180,6 +187,7 @@ Dropdown.defaultProps = {
   panelMaxWidth: null,
   panelModifier: 'default',
   panelSize: DROPDOWN_PANEL_SIZES.DEFAULT,
+  panelStateToken: null,
   triggerButtonSubtle: false,
   triggerModifier: 'default',
   label: null
@@ -206,6 +214,7 @@ Dropdown.propTypes = {
   panelMaxWidth: PropTypes.string,
   panelModifier: PropTypes.string,
   panelSize: PropTypes.oneOf(Object.values(DROPDOWN_PANEL_SIZES)),
+  panelStateToken: PropTypes.string,
   triggerButtonSubtle: PropTypes.bool,
   triggerModifier: PropTypes.string,
 };
