@@ -3,6 +3,49 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.5.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.4.1...@kajabi/sage@4.5.0) (2021-06-23)
+
+
+### Features
+
+* **empty-state:** update to spec and consolidate null view ([5eed0c1](https://github.com/Kajabi/sage-lib/commit/5eed0c1fea6c61f90293de95b49cbc1f1c3d45c3))
+
+
+
+
+
+## [4.4.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.4.0...@kajabi/sage@4.4.1) (2021-06-23)
+
+
+### Bug Fixes
+
+* **docs:** added all section that are called using content_for to the property views ([69fb645](https://github.com/Kajabi/sage-lib/commit/69fb645d658248b4e2230c8851a2a6271c883247))
+* **docs:** added content_for to page headings ([a5ca936](https://github.com/Kajabi/sage-lib/commit/a5ca936edd787d039f4ceba486ed7af78ff23519))
+
+
+
+
+
+# [4.4.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.3.1...@kajabi/sage@4.4.0) (2021-06-15)
+
+
+### Bug Fixes
+
+* **icon-card:** added round property for circular border-radius ([5515ae9](https://github.com/Kajabi/sage-lib/commit/5515ae94684c93e0fe90c8888377592c63ea354a))
+* **icon-card:** updated docs ([2937763](https://github.com/Kajabi/sage-lib/commit/29377630d3af693c59a8320887110c46f0910c51))
+
+
+### Features
+
+* **button:** enabled the `type` attribute ([1518ef3](https://github.com/Kajabi/sage-lib/commit/1518ef39d805cd6dcd9ade53d7963c67e78a843a)), closes [#567](https://github.com/Kajabi/sage-lib/issues/567)
+* **container:** fully remove `fluid` size option ([3f7042b](https://github.com/Kajabi/sage-lib/commit/3f7042bedcc7d5fc69de2ce24b52a25a0f0d01ff))
+* **container:** update sage rails component with new size settings and docs ([8fcdf30](https://github.com/Kajabi/sage-lib/commit/8fcdf304966150cf79f65939c0c9a75cf72b72af))
+* **docs:** update use of containers in documentation ([43583d6](https://github.com/Kajabi/sage-lib/commit/43583d62d0b9946c093bf135ad71a79fbd00cf3d))
+
+
+
+
+
 ## [4.3.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.3.0...@kajabi/sage@4.3.1) (2021-06-09)
 
 **Note:** Version bump only for package @kajabi/sage
