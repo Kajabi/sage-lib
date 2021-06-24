@@ -1,11 +1,12 @@
 module SageComponentHelper
   def sage_component(component, attributes, &block)
-    validate_sage_component_attributes(component, attributes)
+    relevant_attributes = attributes.slice(*component::ATTRIBUTE_SCHEMA.keys)
+    validate_sage_component_attributes(component, relevant_attributes)
 
     component.new({
       context: self,
       content: block_given? ? capture(&block) : nil
-    }.merge(attributes)).render
+    }.merge(relevant_attributes)).render
   end
 
   def sage_component_section(name, &block)
