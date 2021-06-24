@@ -1,5 +1,5 @@
 <div
-  class="sage-form-group sage-input
+  class="sage-input
     <%= "sage-form-field--error" if component.has_error %>
     <%= "sage-input--affixed" if component.prefix.present? or component.suffix.present? %>
     <%= "sage-form-field--showplaceholder" if component.has_placeholder %>
@@ -11,7 +11,7 @@
   <input
     type="<%= component.input_type %>"
     id="<%= component.id %>"
-    class="sage-form-field sage-input__field"
+    class="sage-input__field"
     name="<%= component.name.present? ? component.name : component.id %>"
     placeholder="<%= component.placeholder -%>"
     value="<%= component.value -%>"
@@ -27,11 +27,11 @@
     <%= "readonly" if component.readonly -%>
     <%= "disabled" if component.disabled %>
   >
-  <label for="<%= component.id %>" class="sage-form-field__label sage-input__label">
+  <label for="<%= component.id %>" class="sage-input__label">
     <%= component.label_text %>
   </label>
   <% if component.message_text.present? %>
-    <div class="sage-form-field__message sage-input__message">
+    <div class="sage-input__message">
       <%= component.message_text %>
     </div>
   <% end %>
