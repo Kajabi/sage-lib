@@ -1,15 +1,15 @@
 <div class="
-    sage-form-field-group sage-textarea
+    sage-textarea
     <%= " sage-form-field--error" if component.has_error %>
     <%= component.generated_css_classes %>
   "
   <%= component.generated_html_attributes.html_safe %>
 >
   <%# <textarea declaration needs to be on a single line. The line breaks bleeding into the <textarea> as content causing unexpected placeholder behavior %>
-  <textarea class="sage-form-field sage-textarea__field" id="<%= component.id %>"<%= " name=#{ component.name.present? ? component.name : component.id }" %> placeholder="<%= component.placeholder %>" <%= "disabled" if component.disabled -%>><%- component.content if component.content.present? -%></textarea>
-  <%- if component.label_text.present? -%><label for="<%= component.id %>" class="sage-form-field__label sage-textarea__label"><%= component.label_text -%></label><% end -%>
+  <textarea class="sage-textarea__field" id="<%= component.id %>"<%= " name=#{ component.name.present? ? component.name : component.id }" %> placeholder="<%= component.placeholder %>" <%= "disabled" if component.disabled -%>><%- component.content if component.content.present? -%></textarea>
+  <%- if component.label_text.present? -%><label for="<%= component.id %>" class="sage-textarea__label"><%= component.label_text -%></label><% end -%>
   <% if component.message_text.present? %>
-    <div class="sage-form-field__message sage-textarea__message">
+    <div class="sage-textarea__message">
       <%= component.message_text %>
     </div>
   <% end %>

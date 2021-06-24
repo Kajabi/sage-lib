@@ -16,6 +16,8 @@ $-input-text-height: sage-font-size(body);
 
 
 .sage-input {
+  @include sage-form-field-group;
+
   .sage-input-group & {
     height: auto;
     margin-bottom: 0;
@@ -52,6 +54,8 @@ $-input-text-height: sage-font-size(body);
 }
 
 .sage-input__label {
+  @include sage-form-field-label;
+
   top: ($-input-height / 2);
   left: $-input-label-offset;
   transform: translateY(calc(#{$-input-text-height} * -1));
@@ -66,6 +70,8 @@ $-input-text-height: sage-font-size(body);
 }
 
 .sage-input__field {
+  @include sage-form-field;
+
   @mixin floating-label-active {
     transform: translateY(-($-input-text-height + $-input-padding-filled * 2)); // IE doesn't support calc in transforms so we provide a fallback
     transform: translateY(calc(-50% - (#{$-input-text-height} + #{$-input-padding-filled}))); // we calculate the centered position minus the offset of the text height plus the spacing height
@@ -101,5 +107,7 @@ $-input-text-height: sage-font-size(body);
 }
 
 .sage-input__message {
+  @include sage-form-field-message;
+
   margin-top: sage-spacing(xs);
 }

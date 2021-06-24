@@ -296,6 +296,169 @@
 }
 
 ///
+/// Adds the basic default form spacing, and border treatment
+///
+@mixin sage-form-field-group() {
+  position: relative;
+
+  &:not(:last-child) {
+    margin-bottom: sage-spacing();
+  }
+
+  .sage-panel__row > &,
+  .sage-panel__stack > &,
+  .sage-panel__block > &,
+  .sage-card__row > &,
+  .sage-card__stack > &,
+  .sage-card__block > & {
+    margin-bottom: 0;
+  }
+}
+///
+/// Adds the basic default form spacing, and border treatment
+///
+@mixin sage-form-field() {
+  width: 100%;
+  padding: sage-spacing(sm) sage-spacing(sm);
+  color: sage-color(charcoal);
+  appearance: none;
+  border: rem(1px) solid sage-color(grey, 300);
+  border-radius: sage-border(radius);
+  background: transparent;
+  transition: border 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+
+  @include placeholder {
+    color: sage-color(charcoal, 100);
+  }
+
+  &:hover:not(:disabled) {
+    border-color: currentColor;
+  }
+
+  &:focus:not(:disabled),
+  &:active:not(:disabled) {
+    outline: none;
+    border-color: sage-color(primary);
+    box-shadow: 0 0 0 rem(1px) sage-color(primary);
+
+    @include placeholder {
+      opacity: 0;
+    }
+
+    ~ label {
+      color: sage-color(primary);
+    }
+  }
+
+  &:valid:not(:placeholder-shown) {
+    outline: none;
+    background: transparent; // Prevent some browsers from coloring the background on 'valid'
+
+    @include placeholder {
+      opacity: 0;
+    }
+  }
+
+  &:disabled {
+    color: sage-color(grey, 400);
+    background-color: sage-color(grey, 100);
+    cursor: not-allowed;
+    resize: none;
+
+    @include placeholder {
+      color: sage-color(grey, 400);
+    }
+
+    .sage-form-field--showplaceholder & ~ label {
+      opacity: 0.5;
+    }
+  }
+
+  ~ label {
+    @extend %t-sage-body-xsmall-semi;
+
+    position: absolute;
+    padding-left: rem(4px);
+    padding-right: rem(4px);
+    color: inherit;
+    font-weight: sage-font-weight(semibold);
+    white-space: nowrap;
+    background-color: sage-color(white);
+    pointer-events: none;
+    opacity: 0;
+  }
+
+  // TODO: add support for Simpleform classes
+  .sage-form-field--error &,
+  .sage-form-field--error &:focus:not(:disabled),
+  .sage-form-field--error &:not(:placeholder-shown),
+  &:required:not(:placeholder-shown):not(:valid) {
+    border-color: sage-color(red);
+    box-shadow: 0 0 0 rem(1px) sage-color(red);
+
+    ~ label {
+      color: sage-color(red);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    &,
+    ~ label {
+      transition: none !important; /* stylelint-disable-line declaration-no-important */
+    }
+  }
+}
+
+///
+/// Adds the basic default form label spacing, and border treatment
+///
+@mixin sage-form-field-label() {
+  @extend %t-sage-body-xsmall-semi;
+
+  position: absolute;
+  // left: $-textarea-padding;
+  // top: $-textarea-border-width;
+  // padding-left: $-textarea-label-padding;
+  // padding-right: $-textarea-label-padding;
+  color: inherit;
+  white-space: nowrap;
+  background-color: sage-color(white);
+  pointer-events: none;
+  opacity: 0;
+
+  @media screen and (min-width: sage-breakpoint(sm-min)) {
+    white-space: normal;
+  }
+}
+
+
+///
+/// Adds the basic default form label transition treatment
+///
+/// @param {length} $label-height [sage-font-size(body)] The height of the text in the form field
+/// @param {length} $label-padding [sage-spacing(sm)] Padding of the label used to calculate center positioning
+/// @param {length} $label-transform
+///
+// @mixin sage-floating-label-active($label-height: sage-font-size(body), $label-padding: sage-spacing(sm), $label-transform: sage-font-size(body)) {
+//   transform: translateY(-($label-height + $label-padding * 2)); // IE doesn't support calc in transforms so we provide a fallback
+//   transform: translateY(calc(-50% - (#{$label-height} + #{$label-padding}))); // we calculate the centered position minus the offset of the text height plus the spacing height
+//   transition: opacity 0.1s ease-in, transform 0.15s ease-in-out, color 0.15s ease-out;
+//   opacity: 1;
+// }
+
+///
+/// Adds the basic default form field message font sizing and color treatment
+///
+@mixin sage-form-field-message() {
+  @extend %t-sage-body-xsmall;
+  color: sage-color(charcoal, 100);
+
+  .sage-form-field--error & {
+    color: sage-color(red);
+  }
+}
+
+///
 /// Sets up an element to implement the sage icon font and basic settings related
 /// to displaying the icon. Usually implemented on a pseudo-element.
 ///

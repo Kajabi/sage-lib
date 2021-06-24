@@ -19,7 +19,12 @@ $-textarea-min-height: rem(90px);
 $-textarea-color-default: map-get($sage-field-colors, default);
 $-textarea-color-default-background: sage-color(white);
 
+.sage-textarea {
+  @include sage-form-field-group;
+}
+
 .sage-textarea__label {
+  @include sage-form-field-label;
   @extend %t-sage-body-xsmall-semi;
 
   top: $-textarea-border-width;
@@ -29,6 +34,7 @@ $-textarea-color-default-background: sage-color(white);
 }
 
 .sage-textarea__field {
+  @include sage-form-field;
   @mixin floating-label-textarea-active {
     transform: translateY($-textarea-label-padding - $-textarea-padding);
     transition: opacity 0.1s ease-in, transform 0.15s ease-in-out, color 0.15s ease-out;
@@ -57,4 +63,8 @@ $-textarea-color-default-background: sage-color(white);
       @include floating-label-textarea-active();
     }
   }
+}
+
+.sage-textarea__message {
+  @include sage-form-field-message;
 }
