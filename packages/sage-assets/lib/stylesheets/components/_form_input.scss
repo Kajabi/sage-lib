@@ -5,12 +5,12 @@
 ////
 
 
-$-input-border-width: map-get($sage-field-configs, border-width);
-$-input-height: map-get($sage-field-configs, height);
+$-input-border-width: rem(1px);
+$-input-height: rem(40px);
 $-input-label-offset: rem(12px);
-$-input-padding: map-get($sage-field-configs, padding);
-$-input-padding-filled: rem(4px);
-$-input-padding-label: map-get($sage-field-configs, padding-label);
+$-input-padding: sage-spacing(sm);
+$-input-padding-filled: sage-spacing(2xs);
+$-input-padding-label: sage-spacing(2xs);
 $-input-padding-offset: $-input-padding - $-input-border-width;
 $-input-text-height: sage-font-size(body);
 

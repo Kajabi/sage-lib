@@ -5,18 +5,18 @@
 ////
 
 // Border
-$-textarea-border-width: map-get($sage-field-configs, border-width);
+$-textarea-border-width: rem(1px);
 
 // Padding
 $-textarea-label-padding: rem(3px);
-$-textarea-padding: map-get($sage-field-configs, padding);
+$-textarea-padding: sage-spacing(sm);
 
 // Sizing
 $-textarea-height: 100%;
 $-textarea-min-height: rem(90px);
 
 // Colors
-$-textarea-color-default: map-get($sage-field-colors, default);
+$-textarea-color-default: sage-color(charcoal);
 $-textarea-color-default-background: sage-color(white);
 
 .sage-textarea {
@@ -49,6 +49,10 @@ $-textarea-color-default-background: sage-color(white);
   &:active:not(:disabled) {
     ~ .sage-textarea__label {
       @include floating-label-textarea-active();
+      // @include sage-floating-label-active(
+      //   $label-height: $-input-text-height,
+      //   $label-padding: $-input-padding-filled
+      // );
     }
   }
 
