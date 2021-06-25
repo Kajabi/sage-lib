@@ -34,7 +34,7 @@
 
 .sage-transaction-card__name {
   @include truncate;
-  @extend %t-sage-heading-5;
+  @extend %t-sage-heading-6;
   max-width: 100%;
 }
 
@@ -43,7 +43,7 @@
 }
 
 .sage-transaction-card__amount {
-  @extend %t-sage-heading-5;
+  @extend %t-sage-heading-6;
   white-space: nowrap;
 }
 
