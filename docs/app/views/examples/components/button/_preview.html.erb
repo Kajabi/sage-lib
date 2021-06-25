@@ -241,6 +241,17 @@ demo_configs = [
     no_shadow: true,
   } %>
 <% end %>
+<%= sage_component SageButtonGroup, { gap: :md, spacer: { bottom: :md } } do %>
+  <%= sage_component SageButton, {
+    value: "No shadow (default)",
+    style: "tertiary",
+  } %>
+  <%= sage_component SageButton, {
+    value: "Raised",
+    style: "tertiary",
+    raised: true,
+  } %>
+<% end %>
 <%= sage_component SageButtonGroup, { gap: :md } do %>
   <%= sage_component SageButton, {
     value: "Raised (default)",

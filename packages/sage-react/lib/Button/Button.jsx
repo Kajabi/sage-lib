@@ -18,6 +18,7 @@ export const Button = ({
   iconPosition,
   linkTag,
   noShadow,
+  raised,
   small,
   subtle,
   ...rest
@@ -25,6 +26,7 @@ export const Button = ({
   const { to, href } = rest;
   const isLink = to || href;
   const isPrimary = color === BUTTON_COLORS.PRIMARY;
+  const isTertiary = color === BUTTON_COLORS.TERTIARY;
   const TagName = isLink ? Link : 'button';
   const blockName = 'sage-btn';
   const classNames = classnames(
@@ -35,6 +37,7 @@ export const Button = ({
       [`${blockName}--${color}`]: color,
       [`${blockName}--full-width`]: fullWidth,
       [`${blockName}--no-shadow`]: noShadow && !subtle,
+      [`${blockName}--raised`]: raised && !subtle && isTertiary,
       [`${blockName}--small`]: small,
       [`${blockName}--subtle`]: subtle,
       [`${blockName}--icon-${iconPosition}-${icon}`]: icon && !iconOnly,
@@ -80,6 +83,7 @@ Button.defaultProps = {
   iconPosition: Button.ICON_POSITIONS.LEFT,
   linkTag: null,
   noShadow: null,
+  raised: null,
   onClick: null,
   small: false,
   subtle: false,
@@ -99,6 +103,7 @@ Button.propTypes = {
   linkTag: Link.tagPropTypes,
   noShadow: PropTypes.bool,
   onClick: PropTypes.func,
+  raised: PropTypes.bool,
   small: PropTypes.bool,
   subtle: PropTypes.bool,
   type: PropTypes.string,

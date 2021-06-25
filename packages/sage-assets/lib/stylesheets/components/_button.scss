@@ -308,6 +308,29 @@ $-btn-interactive-label-icon-size: rem(24px);
   }
 }
 
+// Tertiary
+.sage-btn--tertiary {
+  color: sage-color(charcoal, 400);
+  background-color: sage-color(white);
+
+  &::after {
+    border-color: sage-color(grey, 300);
+  }
+
+  &:hover {
+    &::after {
+      border-color: sage-color(grey, 400);
+    }
+  }
+
+  &:disabled,
+  &[aria-disabled="true"] {
+    color: sage-color(primary, 200);
+    background-color: sage-color(primary, 100);
+    box-shadow: none;
+  }
+}
+
 // Danger
 .sage-btn--danger {
   color: sage-color(white);
