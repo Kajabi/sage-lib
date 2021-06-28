@@ -6,35 +6,39 @@
 
 
 .sage-transaction-card {
-  @include sage-card();
+  @include sage-card;
+
   position: relative;
   width: 100%;
 }
 
-.sage-transaction-card__header,
-.sage-transaction-card__body,
-.sage-transaction-card__footer {
-  @include sage-grid-card-row;
+
+.sage-transaction-card__body {
+  @include sage-grid-stack;
+
   min-width: 0;
 }
 
-.sage-transaction-card__body,
-.sage-transaction-card__footer {
+.sage-transaction-card__body-group {
+  width: 100%;
+}
+
+.sage-transaction-card__body-group,
+.sage-transaction-card__footer,
+.sage-transaction-card__header {
+  @include sage-grid-card-row;
+
+  min-width: 0;
+
   @media (max-width: sage-breakpoint(sm-max)) {
     flex-flow: nowrap;
   }
 }
 
-.sage-transaction-card__footer {
-  > :first-child {
-    @include truncate;
-    max-width: 100%;
-  }
-}
-
 .sage-transaction-card__name {
-  @include truncate;
   @extend %t-sage-heading-6;
+  @include truncate;
+
   max-width: 100%;
 }
 
@@ -44,6 +48,7 @@
 
 .sage-transaction-card__amount {
   @extend %t-sage-heading-6;
+
   white-space: nowrap;
 }
 
