@@ -23,24 +23,27 @@ export const TransactionCard = ({
   transactionTime,
 }) => {
   const NameTag = nameTag;
+
   const amountClassNames = classnames(
     'sage-transaction-card__amount',
     {
       [`sage-transaction-card__amount--${amountColor}`]: amountColor,
     }
   );
+
   const stateClassNames = classnames(
     'sage-transaction-card__state',
     {
       [`sage-transaction-card__state--${transactionStateColor}`]: transactionStateColor,
     }
   );
+
   return (
     <article className="sage-transaction-card">
       <div className="sage-transaction-card__header">
-        <Label value={labelText} color={labelColor} />
+        <Label className="sage-transaction-card__label" value={labelText} color={labelColor} />
         <div className={stateClassNames}>
-          {transactionState}
+          {transactionState || 'Awesome'}
         </div>
       </div>
       <div className="sage-transaction-card__body">
@@ -64,6 +67,7 @@ export const TransactionCard = ({
         <div className="sage-transaction-card__body-group">
           {relatedPropertyHref ? (
             <Button
+              className="sage-transaction-card__product" 
               color={Button.COLORS.SECONDARY}
               href={relatedPropertyHref}
               icon={SageTokens.ICONS.TAG}
@@ -73,9 +77,9 @@ export const TransactionCard = ({
               {relatedProperty}
             </Button>
           ) : (
-            <Property icon={SageTokens.ICONS.TAG}>{relatedProperty}</Property>
+            <Property className="sage-transaction-card__product" icon={SageTokens.ICONS.TAG}>{relatedProperty}</Property>
           )}
-          <Property>{transactionTime}</Property>
+          <Property className="sage-transaction-card__time">{transactionTime}</Property>
         </div>
       </div>
     </article>
