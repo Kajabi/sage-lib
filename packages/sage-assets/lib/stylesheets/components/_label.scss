@@ -36,6 +36,7 @@ $-label-inset-border: 0 0 0 1px inset;
   appearance: none;
   display: flex;
   align-items: center;
+  max-width: 100%;
   min-height: $-label-interactive-icon-size;
   padding: $-label-padding;
   white-space: nowrap;
@@ -51,16 +52,15 @@ $-label-inset-border: 0 0 0 1px inset;
 }
 
 .sage-label__value-text {
+  @include truncate;
+
+  display: block;
+
   .sage-label--interactive-right-cta-affordance[class*="sage-label--icon-"] & {
     @media (max-width: sage-breakpoint(sm-max)) {
       @include visually-hidden();
     }
   }
-}
-
-.sage-label--truncate {
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .sage-label__decor-icon {
