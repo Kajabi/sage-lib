@@ -10,7 +10,8 @@ item_count_text = component.item_count_label.present? ? component.item_count_lab
   <% if component.show_pagination %>sage-panel-controls--show-pagination<% end %>
   <%= component.generated_css_classes %>" 
   data-js-panel-controls="<%= component.target %>"
-  <%= component.generated_html_attributes.html_safe %>>
+  <%= component.generated_html_attributes.html_safe %>
+>
   <% if content_for? :sage_panel_controls_tabs %>
     <div class="sage-panel-controls__tabs">
       <%= content_for :sage_panel_controls_tabs %>
@@ -28,6 +29,7 @@ item_count_text = component.item_count_label.present? ? component.item_count_lab
       <%= content_for :sage_panel_controls_toolbar %>
     </div>
   <% end %>
+
   <% if show_default_controls %>
     <div class="sage-panel-controls__default-controls">
       <% if component.show_bulk_actions %>
@@ -58,7 +60,6 @@ item_count_text = component.item_count_label.present? ? component.item_count_lab
             <label class="sage-dropdown__trigger-label">Actions</label>
           <% end %>
         </div>
-
       <% elsif component.item_count_label.present? %>
         <p class="sage-panel-controls__item-count-label">
           <%= item_count_text %>

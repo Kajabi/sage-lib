@@ -19,6 +19,7 @@ style = {
   <% if component.background_color.present? or component.foreground_color.present? %>
     style="<%= style %>"
   <% end %>
+  <%= component.generated_html_attributes.html_safe %>
 >
   <i
     class="sage-icon-<%= component.icon %><%= size %>"

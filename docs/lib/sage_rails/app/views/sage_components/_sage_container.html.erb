@@ -5,6 +5,8 @@ size = component.size.present? ? component.size : "full"
     sage-container
     sage-container--<%= size %>
     <%= component.generated_css_classes %>
-  " <%= component.generated_html_attributes.html_safe %>>
+  "
+  <%= component.generated_html_attributes.html_safe %>
+>
   <%= component.content %>
 </div>
