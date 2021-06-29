@@ -4,6 +4,7 @@ class SageComponent
   attr_accessor :content
 
   ATTRIBUTE_SCHEMA = {
+    test_id: [:optional, NilClass, String],
     html_attributes: [:optional, Hash],
     spacer: [:optional, SageSchemas::SPACER],
     css_classes: [:optional, NilClass, String],
@@ -48,6 +49,12 @@ class SageComponent
   def html_attributes=(html_attributes_hash)
     html_attributes_hash.each do |key, value|
       generated_html_attributes << " #{key}=\"#{value.to_s}\""
+    end
+  end
+
+  def test_id=(id_string)
+    if id_string
+      generated_html_attributes << " data-kjb-element=\"#{id_string}\""
     end
   end
 
