@@ -11,7 +11,7 @@ $-input-label-offset: rem(12px);
 $-input-padding: sage-spacing(sm);
 $-input-padding-filled: sage-spacing(2xs);
 $-input-padding-label: sage-spacing(2xs);
-$-input-padding-offset: $-input-padding - $-input-border-width;
+$-input-padding-offset: sage-spacing(sm) - $-input-border-width;
 $-input-text-height: sage-font-size(body);
 
 
@@ -59,8 +59,8 @@ $-input-text-height: sage-font-size(body);
   top: ($-input-height / 2);
   left: $-input-label-offset;
   transform: translateY(calc(#{$-input-text-height} * -1));
-  padding-left: $-input-padding-label;
-  padding-right: $-input-padding-label;
+  padding-left: sage-spacing(2xs);
+  padding-right: sage-spacing(2xs);
 
   .sage-input--prefixed & {
     transform: translateY(calc(#{$-input-text-height} * -1)) translateX(30px);
@@ -80,7 +80,7 @@ $-input-text-height: sage-font-size(body);
   }
 
   height: $-input-height;
-  padding: $-input-padding-offset $-input-padding;
+  padding: $-input-padding-offset sage-spacing(sm);
 
   &:focus:not(:disabled),
   &:active:not(:disabled) {
