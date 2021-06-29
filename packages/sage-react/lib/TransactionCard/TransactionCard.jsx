@@ -67,7 +67,7 @@ export const TransactionCard = ({
         <div className="sage-transaction-card__body-group">
           {relatedPropertyHref ? (
             <Button
-              className="sage-transaction-card__product" 
+              className="sage-transaction-card__product"
               color={Button.COLORS.SECONDARY}
               href={relatedPropertyHref}
               icon={SageTokens.ICONS.TAG}
