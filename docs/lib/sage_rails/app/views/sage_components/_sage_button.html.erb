@@ -19,6 +19,7 @@
     <%= "sage-btn--icon-#{component.icon[:style]}-#{component.icon[:name]}" if component.icon %>
     <%= component.generated_css_classes %>
   "
+  <%= component.generated_html_attributes.html_safe %>
 >
   <% if component.icon&.dig(:style) == "only" %>
     <span class="visually-hidden">

@@ -1,17 +1,69 @@
 <% if component.help_link && component.show_label %>
-  <a href="<%= component.url %>" class="sage-link--help" <% component.attributes.each do |key, value| %> <%= "#{key}=\"#{value}\"".html_safe %><% end if component.attributes&.is_a?(Hash) %>><%= component.label %></a>
+  <a
+    href="<%= component.url %>"
+    class="sage-link--help"
+    <% component.attributes.each do |key, value| %>
+      <%= "#{key}=\"#{value}\"".html_safe %>
+    <% end if component.attributes&.is_a?(Hash) %>
+    <%= component.generated_html_attributes.html_safe %>
+  >
+    <%= component.label %>
+  </a>
 <% elsif component.help_link && !component.show_label %>
-  <a href="<%= component.url %>" class="sage-link--help-icon-only" <% component.attributes.each do |key, value| %> <%= "#{key}=\"#{value}\"".html_safe %>
-  <% end if component.attributes&.is_a?(Hash) %>>
+  <a
+    href="<%= component.url %>"
+    class="sage-link--help-icon-only"
+    <% component.attributes.each do |key, value| %>
+      <%= "#{key}=\"#{value}\"".html_safe %>
+    <% end if component.attributes&.is_a?(Hash) %>
+    <%= component.generated_html_attributes.html_safe %>
+  >
     <span class="visually-hidden"><%= component.label %></span>
   </a>
 <% elsif !component.external && !component.launch %>
-  <a href="<%= component.url %>" <% component.attributes.each do |key, value| %> <%= "#{key}=\"#{value}\"".html_safe %><% end if component.attributes&.is_a?(Hash) %>
-  ><%= component.label %></a>
+  <a
+    href="<%= component.url %>"
+    <% component.attributes.each do |key, value| %>
+      <%= "#{key}=\"#{value}\"".html_safe %>
+    <% end if component.attributes&.is_a?(Hash) %>
+    <%= component.generated_html_attributes.html_safe %>
+  >
+    <%= component.label %>
+  </a>
 <% elsif !component.external && component.launch %>
-  <a href="<%= component.url %>" class="sage-link--launch" <% component.attributes.each do |key, value| %> <%= "#{key}=\"#{value}\"".html_safe %><% end if component.attributes&.is_a?(Hash) %>><%= component.label %></a>
+  <a
+    href="<%= component.url %>"
+    class="sage-link--launch"
+    <% component.attributes.each do |key, value| %>
+      <%= "#{key}=\"#{value}\"".html_safe %>
+    <% end if component.attributes&.is_a?(Hash) %>
+    <%= component.generated_html_attributes.html_safe %>
+  >
+    <%= component.label %>
+  </a>
 <% elsif component.external && component.launch %>
-  <a href="<%= component.url %>" target="_blank" rel="noopener noreferrer" <% component.attributes.each do |key, value| %> <%= "#{key}=\"#{value}\"".html_safe %><% end if component.attributes&.is_a?(Hash) %>><%= component.label %></a>
+  <a
+    href="<%= component.url %>"
+    target="_blank"
+    rel="noopener noreferrer"
+    <% component.attributes.each do |key, value| %>
+      <%= "#{key}=\"#{value}\"".html_safe %>
+    <% end if component.attributes&.is_a?(Hash) %>
+    <%= component.generated_html_attributes.html_safe %>
+  >
+    <%= component.label %>
+  </a>
 <% elsif component.external && !component.launch %>
-  <a href="<%= component.url %>" target="_blank" class="sage-link--no-launch" rel="noopener noreferrer" <% component.attributes.each do |key, value| %> <%= "#{key}=\"#{value}\"".html_safe %><% end if component.attributes&.is_a?(Hash) %>><%= component.label %></a>
+  <a
+    href="<%= component.url %>"
+    target="_blank"
+    class="sage-link--no-launch"
+    rel="noopener noreferrer"
+    <% component.attributes.each do |key, value| %> 
+      <%= "#{key}=\"#{value}\"".html_safe %>
+    <% end if component.attributes&.is_a?(Hash) %>
+    <%= component.generated_html_attributes.html_safe %>
+  >
+    <%= component.label %>
+  </a>
 <% end %>

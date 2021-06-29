@@ -17,6 +17,7 @@
     <%= "disabled" if component.disabled %>
     <%= "required" if component.required %>
     aria-label="<%= component.label_text %>"
+    <%= component.generated_html_attributes.html_safe %>
   />
 <% else %>
   <div class="
@@ -24,6 +25,7 @@
       <%= component.has_border ? "sage-radio--has-border" : "" %>
       <%= component.has_error ? "sage-radio--error" : "" %>
     "
+    <%= component.generated_html_attributes.html_safe %>
   >
     <input
       id="<%= component.id %>"

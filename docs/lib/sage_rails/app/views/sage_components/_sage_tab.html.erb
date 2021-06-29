@@ -20,6 +20,7 @@ html_tag = is_button ? "button" : "a"
   data-sage-active-class="<%= css_active_class %>"
   role="tab"
   aria-controls="<%= component.target.present? %>"
+  <%= component.generated_html_attributes.html_safe %>
 >
   <% if component.text.present? %>
     <%= component.text.html_safe %>

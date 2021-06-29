@@ -18,6 +18,7 @@
     <%= "disabled" if component.disabled %>
     <%= "required" if component.required %>
     aria-label="<%= component.label_text %>"
+    <%= component.generated_html_attributes.html_safe %>
   >
 <% else %>
   <div class="
@@ -26,6 +27,7 @@
       <%= component.has_error ? "sage-checkbox--error" : "" %>
       <%= component.generated_css_classes %>
     "
+    <%= component.generated_html_attributes.html_safe %>
   >
     <input
       id="<%= component.id %>"
