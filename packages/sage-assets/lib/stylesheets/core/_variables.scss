@@ -37,7 +37,7 @@ $sage-field-configs: (
   // Sizing
   height: rem(40px),
   padding: sage-spacing(sm),
-  padding-label: rem(4px),
+  padding-label: sage-spacing(2xs),
   // Outer spacing
   bottom-gap: sage-spacing(),
 );
@@ -54,6 +54,8 @@ $sage-field-colors: (
   label-background: sage-color(white),
   success: sage-color(primary),
 );
+
+// $sage-field
 
 ///
 /// Radio button colors
@@ -104,4 +106,4 @@ $sage-toolbar-button-borders: (
 $sage-transitions: (
   default: 0.1s ease-in-out,
 );
-// TODO: Audit use of trnasition values
+// TODO: Audit use of transition values
