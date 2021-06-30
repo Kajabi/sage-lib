@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.39.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.38.0...@kajabi/sage-assets@0.39.0) (2021-06-30)
+
+
+### Bug Fixes
+
+* **button:** added wrapper around custom content ([95d7451](https://github.com/Kajabi/sage-lib/commit/95d7451b542d75a3990a276110945a37918ad76f))
+
+
+### Features
+
+* **button:** added modifier class to accomodate custom content. Added example ([21e8a66](https://github.com/Kajabi/sage-lib/commit/21e8a66eeaed443fc9d88097f50918ee2574e0a8))
+* **label:** improve truncation on label ([ec3d404](https://github.com/Kajabi/sage-lib/commit/ec3d404ffa00b70453aded2d516fe5f71e54c06b))
+* **transaction-card:** adjustments for truncation ([8f82b56](https://github.com/Kajabi/sage-lib/commit/8f82b568d6e04073407ea61fece3526bbbc096c4))
+* **transaction-card:** update type specs ([673788e](https://github.com/Kajabi/sage-lib/commit/673788e3a18056c518f7ed501031cea5f057f39e))
+
+
+
+
+
 # [0.38.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.37.0...@kajabi/sage-assets@0.38.0) (2021-06-23)
 
 

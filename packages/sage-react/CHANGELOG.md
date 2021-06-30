@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.49.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.48.0...@kajabi/sage-react@0.49.0) (2021-06-30)
+
+
+### Features
+
+* **transaction-card:** adjustments for truncation ([8f82b56](https://github.com/Kajabi/sage-lib/commit/8f82b568d6e04073407ea61fece3526bbbc096c4))
+* **transaction-card:** sync up react component to rails ([987fa0d](https://github.com/Kajabi/sage-lib/commit/987fa0d4837f43c00abfa424bf58ac0ae366b63d))
+
+
+
+
+
 # [0.48.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.47.0...@kajabi/sage-react@0.48.0) (2021-06-23)
 
 

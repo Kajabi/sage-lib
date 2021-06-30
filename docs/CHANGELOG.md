@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.6.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.5.0...@kajabi/sage@4.6.0) (2021-06-30)
+
+
+### Bug Fixes
+
+* **button:** added wrapper around custom content ([95d7451](https://github.com/Kajabi/sage-lib/commit/95d7451b542d75a3990a276110945a37918ad76f))
+* **help_link:** update help_link to use `name` rather than `label` ([ba7678d](https://github.com/Kajabi/sage-lib/commit/ba7678db28ae753ab3c13801d5b4059d69e56abe))
+
+
+### Features
+
+* **transaction-card:** adjustments for truncation ([8f82b56](https://github.com/Kajabi/sage-lib/commit/8f82b568d6e04073407ea61fece3526bbbc096c4))
+* add test_id to rails components ([ad7a9c5](https://github.com/Kajabi/sage-lib/commit/ad7a9c59d89b7c77ee6add51d8577d525855c259))
+* **button:** added another example ([e5958e1](https://github.com/Kajabi/sage-lib/commit/e5958e13b749fac5bcdcce6b1b2ebc793b10fafc))
+* **button:** added modifier class to accomodate custom content. Added example ([21e8a66](https://github.com/Kajabi/sage-lib/commit/21e8a66eeaed443fc9d88097f50918ee2574e0a8))
+* **button:** made value prop optional and added the ability to provide custom content ([4f1adf3](https://github.com/Kajabi/sage-lib/commit/4f1adf386afdb2d557b7888e9b99636ace9a2ade))
+
+
+
+
+
 # [4.5.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.4.1...@kajabi/sage@4.5.0) (2021-06-23)
 
 
