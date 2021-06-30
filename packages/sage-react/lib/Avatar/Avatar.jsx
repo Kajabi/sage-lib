@@ -30,15 +30,13 @@ export const Avatar = ({
 
   return (
     <div className={classNames} style={style} {...rest}>
-      {img ?
-        (
-          <img alt={initials} className="sage-avatar__image" src={img}/>
-        ) :
-        (
+      {img
+        ? (
+          <img alt={initials} className="sage-avatar__image" src={img}/> )
+        : (
           <svg className="sage-avatar__initials" viewBox="0 0 32 32">
             <text x="16" y="20">{initials}</text>
-          </svg>
-        )}
+          </svg> )}
     </div>
   );
 };
