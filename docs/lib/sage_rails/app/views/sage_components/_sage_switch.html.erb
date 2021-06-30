@@ -1,20 +1,20 @@
 <% if component.standalone %>
   <input 
-      type="<%= component.type %>" 
-      id="<%= component.id %>" 
-      class="
-        sage-switch
-        sage-switch--standalone
-        <%= component.has_error ? "sage-switch--error" : "" %>
-        <%= component.generated_css_classes %>
-      " 
-      name="<%= component.name %>" 
-      value="<%= component.id %>"
-      <%= "checked" if component.checked %>
-      <%= "disabled" if component.disabled %>
-      <%= "required" if component.required %>
-      <%= component.generated_html_attributes.html_safe %>
-    >
+    type="<%= component.type %>" 
+    id="<%= component.id %>" 
+    class="
+      sage-switch
+      sage-switch--standalone
+      <%= component.has_error ? "sage-switch--error" : "" %>
+      <%= component.generated_css_classes %>
+    " 
+    name="<%= component.name %>" 
+    value="<%= component.id %>"
+    <%= "checked" if component.checked %>
+    <%= "disabled" if component.disabled %>
+    <%= "required" if component.required %>
+    <%= component.generated_html_attributes.html_safe %>
+  />
 <% else %>
   <div class="
       sage-switch

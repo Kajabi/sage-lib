@@ -19,15 +19,22 @@
     <%= "sage-btn--icon-#{component.icon[:style]}-#{component.icon[:name]}" if component.icon %>
     <%= component.generated_css_classes %>
   "
+  <%= component.generated_html_attributes.html_safe %>
 >
   <% if component.icon&.dig(:style) == "only" %>
     <span class="visually-hidden">
       <%= component.value.html_safe %>
     </span>
   <% else %>
-    <span class="sage-btn__truncate-text">
-      <%# if the component.value is an empty string, add a `&nbsp;` to prevent height collapse %>
-      <%= (component.value.strip.empty? ? "&nbsp;" : component.value).html_safe %>
-    </span>
+    <% if component.value %>
+      <span class="sage-btn__truncate-text">
+        <%# if the component.value is an empty string, add a `&nbsp;` to prevent height collapse %>
+        <%= (component.value.strip.empty? ? "&nbsp;" : component.value).html_safe %>
+      </span>
+    <% elsif component.content %>
+      <span class="sage-btn__custom-content">
+        <%= component.content %>
+      </span>
+    <% end %>
   <% end %>
 </<%= html_tag %>>

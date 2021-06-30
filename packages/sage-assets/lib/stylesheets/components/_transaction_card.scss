@@ -3,47 +3,44 @@
 ///
 /// @group sage
 ////
-
+$-transaction-card-item-gap: sage-spacing(xs);
+$-transaction-card-time-max-width: rem(96px);
+$-transaction-card-state-max-width: rem(80px);
 
 .sage-transaction-card {
-  @include sage-card();
+  @include sage-card;
+
   position: relative;
   width: 100%;
 }
 
-.sage-transaction-card__header,
-.sage-transaction-card__body,
-.sage-transaction-card__footer {
-  @include sage-grid-card-row;
+
+.sage-transaction-card__body {
+  @include sage-grid-stack;
+
   min-width: 0;
 }
 
-.sage-transaction-card__body,
-.sage-transaction-card__footer {
+.sage-transaction-card__body-group {
+  width: 100%;
+}
+
+.sage-transaction-card__body-group,
+.sage-transaction-card__footer,
+.sage-transaction-card__header {
+  display: flex;
+  gap: $-transaction-card-item-gap;
+  justify-content: space-between;
+  min-width: 0;
+
   @media (max-width: sage-breakpoint(sm-max)) {
     flex-flow: nowrap;
   }
 }
 
-.sage-transaction-card__footer {
-  > :first-child {
-    @include truncate;
-    max-width: 100%;
-  }
-}
-
-.sage-transaction-card__name {
-  @include truncate;
-  @extend %t-sage-heading-5;
-  max-width: 100%;
-}
-
-.sage-transaction-card__name-link {
-  color: inherit;
-}
-
 .sage-transaction-card__amount {
-  @extend %t-sage-heading-5;
+  @extend %t-sage-heading-6;
+
   white-space: nowrap;
 }
 
@@ -55,9 +52,25 @@
   color: sage-color(red, 300);
 }
 
+.sage-transaction-card__label {
+  max-width: calc(100% - #{$-transaction-card-state-max-width + $-transaction-card-item-gap});
+}
+
+.sage-transaction-card__name {
+  @extend %t-sage-heading-6;
+  @include truncate;
+
+  max-width: 100%;
+}
+
+.sage-transaction-card__name-link {
+  color: inherit;
+}
+
 .sage-transaction-card__state {
   @extend %t-sage-body-small;
 
+  max-width: $-transaction-card-state-max-width;
   color: sage-color(charcoal, 400);
 }
 
@@ -67,4 +80,12 @@
 
 .sage-transaction-card__state--sage {
   color: sage-color(sage, 300);
+}
+
+.sage-transaction-card__time {
+  max-width: $-transaction-card-time-max-width;
+}
+
+.sage-transaction-card__product {
+  max-width: calc(100% - #{$-transaction-card-time-max-width + $-transaction-card-item-gap});
 }

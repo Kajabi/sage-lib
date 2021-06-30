@@ -40,6 +40,7 @@ end
   <% if component.radio_configs.present? %>
     for="<%= component.radio_configs[:id] %>"
   <% end %>
+  <%= component.generated_html_attributes.html_safe %>
 >
    <% if component.radio_configs.present? %>
     <div class="sage-choice__radio visually-hidden">
