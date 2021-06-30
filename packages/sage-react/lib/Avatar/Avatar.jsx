@@ -23,11 +23,6 @@ export const Avatar = ({
 
   const style = {};
 
-  if (img) {
-    style.backgroundImage = `url('${img}')`;
-    style.backgroundSize = 'cover';
-  }
-
   if (size) {
     style.width = size;
     style.height = size;
