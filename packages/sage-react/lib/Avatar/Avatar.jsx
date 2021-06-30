@@ -7,6 +7,7 @@ export const Avatar = ({
   className,
   centered,
   color,
+  img,
   initials,
   size,
   ...rest
@@ -22,6 +23,11 @@ export const Avatar = ({
 
   const style = {};
 
+  if (img) {
+    style.backgroundImage = `url('${img}')`;
+    style.backgroundSize = 'cover';
+  }
+
   if (size) {
     style.width = size;
     style.height = size;
@@ -29,9 +35,15 @@ export const Avatar = ({
 
   return (
     <div className={classNames} style={style} {...rest}>
-      <svg className="sage-avatar__initials" viewBox="0 0 32 32">
-        <text x="16" y="20">{initials}</text>
-      </svg>
+      {img ?
+        (
+          <img alt={initials} className="sage-avatar__image" src={img}/>
+        ) :
+        (
+          <svg className="sage-avatar__initials" viewBox="0 0 32 32">
+            <text x="16" y="20">{initials}</text>
+          </svg>
+        )}
     </div>
   );
 };
@@ -42,6 +54,7 @@ Avatar.defaultProps = {
   centered: false,
   className: '',
   color: AVATAR_COLORS.DEFAULT,
+  img: '',
   initials: '',
   size: null,
 };
@@ -50,6 +63,7 @@ Avatar.propTypes = {
   centered: PropTypes.bool,
   className: PropTypes.string,
   color: PropTypes.oneOf(Object.values(AVATAR_COLORS)),
+  img: PropTypes.string,
   initials: PropTypes.string,
   size: PropTypes.string,
 };

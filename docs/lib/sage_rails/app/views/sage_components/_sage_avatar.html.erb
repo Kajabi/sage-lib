@@ -10,7 +10,11 @@
     style="width: <%= component.size %>; height: <%= component.size %>;"
   <% end %>
 >
-  <svg class="sage-avatar__initials" viewBox="0 0 32 32">
-    <text x="16" y="20"><%= component.initials %></text>
-  </svg>
+  <% if component.img %>
+    <img alt="<%= component.initials %>" class="sage-avatar__image" src="<%= component.img %>">
+  <% else %>
+    <svg class="sage-avatar__initials" viewBox="0 0 32 32">
+      <text x="16" y="20"><%= component.initials %></text>
+    </svg>
+  <% end %>
 </div>
