@@ -482,6 +482,16 @@ module ComponentsHelper
         react_component_slug: "sage-icon-list--default"
       },
       {
+        title: "image_card",
+        description: "Custom card component that allows for a full-width image on the top portion of the card.",
+        scss: "todo",
+        docs: "todo",
+        rails: "done",
+        react: "todo",
+        a11y: "todo",
+        react_component_slug: "sage-imagecard--default"
+      },
+      {
         title: "input_group",
         description: "Allows inline grouping of text inputs with buttons",
         scss: "done",

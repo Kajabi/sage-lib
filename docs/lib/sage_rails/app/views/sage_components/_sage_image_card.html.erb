@@ -1,0 +1,11 @@
+<div
+  class="sage-image-card <%= component.generated_css_classes %>"
+  <%= component.generated_html_attributes.html_safe %>
+>
+  <img class="sage-image-card__image" src="<%= component.image %>" alt="<%= component.alt_text %>">
+  <h3 class="sage-image-card__title"><%= component.title %></h3>
+  <div class="sage-image-card__body">
+    <%= component.content %>
+  </div>
+  <a class="sage-image-card__link" href="<%= component.link[:href] %>"><%= component.link[:value] %></a>
+</div>
