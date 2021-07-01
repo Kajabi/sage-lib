@@ -1,13 +1,24 @@
 <tr>
   <td><%= md('`align`') %></td>
   <td><%= md('Aligns a button to the "right" rather than its default position.') %></td>
-  <td><%= md('String: [ nil | "space-between" | "end" ]') %></td>
+  <td><%= md('[`"space-between"` | `"end"`]') %></td>
   <td><%= md('`nil`') %></td>
 </tr>
 <tr>
   <td><%= md('`attributes`') %></td>
   <td><%= md('For setting additional attributes not defined above. Accepts a Ruby hash of valid key-value properties, such as data-attributes') %></td>
   <td><%= md('Hash') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`custom_content_class`') %></td>
+  <td>
+    <%= md('
+      Passes a custom CSS class for when custom HTML content is provided as content in the component.
+      We recommend this be used primarily for controlling the layout of the custom content and to avoid any color modifications that would overrides system styles for buttons.
+    ') %>
+  </td>
+  <td><%= md('String') %></td>
   <td><%= md('`nil`') %></td>
 </tr>
 <tr>
@@ -33,12 +44,13 @@
   <td><%= md('Allows for configurations for an icon and its placement to be provided.') %>
   </td>
   <td>
-  <%= md('```
-    icon: {
-      name: String,
-      style: String [ "left" | "right" | "only" ],
-    }
-    ') %>
+    <%= md('```
+icon: {
+  name: String,
+  style: ["left" | "right" | "only"],
+}
+```')
+    %>
   </td>
   <td><%= md('`nil`') %></td>
 </tr>
@@ -63,7 +75,7 @@
 <tr>
   <td><%= md('`style`') %></td>
   <td><%= md('Buttons have three different "styles" that affect color appearance to create a "primary", "secondary", and "danger" variation.') %></td>
-  <td><%= md('String: [ "primary" | "secondary" | "danger" ]') %></td>
+  <td><%= md('[`"primary"` | `"secondary"` | `"danger"`]') %></td>
   <td><%= md('`primary`') %></td>
 </tr>
 <tr>
@@ -89,7 +101,7 @@
 <tr>
   <td><%= md('`align`') %></td>
   <td><%= md('Adjusts the alignment of the buttons within.') %></td>
-  <td><%= md('`"end"`, `"space-between"`') %></td>
+  <td><%= md('[`"end"` | `"space-between"`]') %></td>
   <td><%= md('`nil`') %></td>
 </tr>
 <tr>
@@ -101,6 +113,6 @@
 <tr>
   <td><%= md('`gap`') %></td>
   <td><%= md('Adjusts the size of the gap between buttons.') %></td>
-  <td><%= md('`:xs`, `:sm`, `:md`, `:lg`') %></td>
+  <td><%= md('[`:xs` | `:sm` | `:md` | `:lg`]') %></td>
   <td><%= md('`nil`') %></td>
 </tr>
