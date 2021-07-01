@@ -10,9 +10,11 @@ export const Button = ({
   alignEnd,
   children,
   className,
+  customContentClassName,
   color,
   disabled,
   fullWidth,
+  hasCustomContent,
   icon,
   iconOnly,
   iconPosition,
@@ -45,6 +47,35 @@ export const Button = ({
     }
   );
 
+  const renderContent = () => {
+    if (iconOnly) {
+      return (
+        <span className="visually-hidden">
+          {children}
+        </span>
+      );
+    }
+
+    if (hasCustomContent) {
+      return (
+        <span
+          className={classnames(
+            'sage-btn__custom-content',
+            customContentClassName,
+          )}
+        >
+          {children}
+        </span>
+      );
+    }
+
+    return (
+      <span className="sage-btn__truncate-text">
+        {children}
+      </span>
+    );
+  };
+
   return (
     <TagName
       className={classNames}
@@ -53,15 +84,7 @@ export const Button = ({
       tag={isLink ? linkTag : null}
       {...rest}
     >
-      {iconOnly ? (
-        <span className="visually-hidden">
-          {children}
-        </span>
-      ) : (
-        <span className="sage-btn__truncate-text">
-          {children}
-        </span>
-      )}
+      {renderContent()}
     </TagName>
   );
 };
@@ -74,9 +97,11 @@ Button.defaultProps = {
   alignEnd: false,
   children: null,
   className: '',
+  customContentClassName,
   color: Button.COLORS.PRIMARY,
   disabled: false,
   fullWidth: false,
+  hasCustomContent: false,
   icon: null,
   iconOnly: false,
   iconPosition: Button.ICON_POSITIONS.LEFT,
@@ -94,8 +119,10 @@ Button.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
   color: PropTypes.oneOf(Object.values(Button.COLORS)),
+  customContentClassName: PropTypes.string,
   disabled: PropTypes.bool,
   fullWidth: PropTypes.bool,
+  hasCustomContent: PropType.bool,
   icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),
   iconOnly: PropTypes.bool,
   iconPosition: PropTypes.oneOf(Object.values(Button.ICON_POSITIONS)),
