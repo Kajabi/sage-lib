@@ -174,3 +174,8 @@ $-example-code-preview-button-bg: rgba(sage-color(primary, 500), 0.75);
     }
   }
 }
+
+.demo-custom-class {
+  display: flex;
+  gap: 8px;
+}

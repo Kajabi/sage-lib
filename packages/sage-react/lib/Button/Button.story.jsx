@@ -40,3 +40,19 @@ CustomContent.args = {
   customContentClassName: 'demo-custom-class',
   subtle: true,
 };
+CustomContent.decorators = [
+  (Story) => (
+    <>
+      <div>
+        <style>
+          {`.demo-custom-class {
+            display: flex;
+            gap: 8px;
+            padding: 8px 0;
+          }`}
+        </style>
+        <Story />
+      </div>
+    </>
+  )
+];
