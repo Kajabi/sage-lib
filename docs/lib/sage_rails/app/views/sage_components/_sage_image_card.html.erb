@@ -3,9 +3,19 @@
   <%= component.generated_html_attributes.html_safe %>
 >
   <img class="sage-image-card__image" src="<%= component.image %>" alt="<%= component.alt_text %>">
-  <h3 class="sage-image-card__title"><%= component.title %></h3>
+  
   <div class="sage-image-card__body">
+    <h3 class="sage-image-card__title"><%= component.title %></h3>
     <%= component.content %>
+    <%= sage_component SageButton, {
+      value: component.link[:value],
+      style: "primary",
+      subtle: true,
+      icon: { name: "arrow-right", style: "right" },
+      attributes: {
+        "href": component.link[:href],
+        "title": "View more",
+      }
+    } %>
   </div>
-  <a class="sage-image-card__link" href="<%= component.link[:href] %>"><%= component.link[:value] %></a>
 </div>

@@ -1,0 +1,19 @@
+.sage-image-card {
+  max-width: 352px;
+  background: sage-color(white);
+  box-shadow: sage-shadow();
+  border-bottom-left-radius: 4px; // TODO add variable here
+  border-bottom-right-radius: 4px; // TODO add variable here
+}
+
+.sage-image-card__image {
+  width: 100%;
+  height: 198px;
+  object-fit: cover;
+  border-top-left-radius: 4px; // TODO add variable here
+  border-top-right-radius: 4px; // TODO add variable here
+}
+
+.sage-image-card__body {
+  padding: sage-spacing(md);
+}
