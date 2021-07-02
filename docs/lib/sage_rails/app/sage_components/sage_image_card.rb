@@ -9,4 +9,3 @@ class SageImageCard < SageComponent
     }],
   })
 end
-  
