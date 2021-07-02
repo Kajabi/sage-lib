@@ -484,11 +484,11 @@ module ComponentsHelper
       {
         title: "image_card",
         description: "Custom card component that allows for a full-width image on the top portion of the card.",
-        scss: "todo",
-        docs: "todo",
+        scss: "done",
+        docs: "done",
         rails: "done",
         react: "todo",
-        a11y: "todo",
+        a11y: "done",
         react_component_slug: "sage-imagecard--default"
       },
       {

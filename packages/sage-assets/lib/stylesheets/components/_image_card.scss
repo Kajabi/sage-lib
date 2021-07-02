@@ -1,17 +1,29 @@
+////
+/// image_card
+///
+/// @group sage
+////
+
 .sage-image-card {
   max-width: 352px;
   background: sage-color(white);
   box-shadow: sage-shadow();
-  border-bottom-left-radius: 4px; // TODO add variable here
-  border-bottom-right-radius: 4px; // TODO add variable here
+  border-bottom-left-radius: sage-border(radius-small);
+  border-bottom-right-radius: sage-border(radius-small);
 }
 
 .sage-image-card__image {
   width: 100%;
   height: 198px;
   object-fit: cover;
-  border-top-left-radius: 4px; // TODO add variable here
-  border-top-right-radius: 4px; // TODO add variable here
+  border-top-left-radius: sage-border(radius-small);
+  border-top-right-radius: sage-border(radius-small);
+}
+
+.sage-image-card__title {
+  @extend %t-sage-heading-5;
+
+  color: sage-color(charcoal, 500);
 }
 
 .sage-image-card__body {
