@@ -415,7 +415,7 @@ $-btn-interactive-label-icon-size: rem(24px);
 }
 
 .sage-btn--small {
-  @extend %t-sage-body-small;
+  @extend %t-sage-body-small-med;
 }
 
 // TODO: Investigate deprecating the float setting here
