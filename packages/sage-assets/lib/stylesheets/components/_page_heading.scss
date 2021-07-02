@@ -111,7 +111,6 @@ $-page-heading-image-height-mobile: rem(120px);
 .sage-page-heading__actions {
   display: flex;
   grid-area: actions;
-  align-items: flex-start;
 
   @media (max-width: sage-breakpoint(sm-max)) {
     flex-wrap: wrap;
