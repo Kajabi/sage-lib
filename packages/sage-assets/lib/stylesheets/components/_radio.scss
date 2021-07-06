@@ -61,14 +61,6 @@ $-radio-focus-outline-color: currentColor;
   padding: sage-spacing(card);
   border: sage-border();
   border-radius: sage-border(radius);
-
-  &:focus-within {
-    box-shadow: 0 0 0 ($-radio-focus-outline-width * 1px) $-radio-color-focus-outline;
-  }
-
-  &.sage-radio--error:focus-within {
-    box-shadow: 0 0 0 ($-radio-focus-outline-width * 1px) $-radio-color-focus-outline-error;
-  }
 }
 
 .sage-radio__label {
@@ -169,7 +161,7 @@ $-radio-focus-outline-color: currentColor;
   &:focus:not(:disabled),
   &:active:not(:disabled) {
     outline: none;
-    
+
     &::before {
       transform: translate3d(-50%, -50%, 0) scale(1);
       border-color: $-radio-color-focus-outline;
@@ -207,11 +199,6 @@ $-radio-focus-outline-color: currentColor;
     .sage-radio--has-border & {
       position: absolute;
       margin-top: 0;
-    }
-
-    .sage-radio--has-border &::after,
-    .sage-radio--has-border &::before {
-      border-color: transparent;
     }
   }
 

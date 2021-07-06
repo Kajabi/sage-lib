@@ -179,7 +179,7 @@ $-btn-interactive-label-icon-size: rem(24px);
     &::after {
       width: $-btn-interactive-label-icon-size;
       height: $-btn-interactive-label-icon-size;
-      border-radius: 0 sage-border(radius) sage-border(radius) 0;
+      border-radius: 0 sage-border(radius-x-large) sage-border(radius-x-large) 0;
     }
 
     &:first-child:not(:last-child) {

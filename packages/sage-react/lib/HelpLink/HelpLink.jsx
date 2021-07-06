@@ -10,7 +10,7 @@ export const HelpLink = ({
   ...rest
 }) => (
   <Link
-    className={`${labelIsVisible ? 'sage-link--help' : 'sage-link--help-icon-only'} ${className || ''}`}
+    className={`${labelIsVisible ? 'sage-link sage-link--help' : 'sage-link sage-link--help-icon-only'} ${className || ''}`}
     tag={linkTag}
     {...rest}
   >

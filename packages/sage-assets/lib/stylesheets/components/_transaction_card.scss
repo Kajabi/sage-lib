@@ -12,17 +12,26 @@ $-transaction-card-state-max-width: rem(80px);
 
   position: relative;
   width: 100%;
+
+  > * {
+    min-width: 0;
+  }
 }
 
 
 .sage-transaction-card__body {
   @include sage-grid-stack;
 
-  min-width: 0;
 }
 
 .sage-transaction-card__body-group {
   width: 100%;
+}
+
+.sage-transaction-card__footer {
+  > :first-child {
+    max-width: 100%;
+  }
 }
 
 .sage-transaction-card__body-group,
@@ -58,7 +67,6 @@ $-transaction-card-state-max-width: rem(80px);
 
 .sage-transaction-card__name {
   @extend %t-sage-heading-6;
-  @include truncate;
 
   max-width: 100%;
 }

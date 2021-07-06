@@ -128,8 +128,8 @@
 ///
 @mixin sage-focus-outline(
   $outline-width: 2px,
-  $outline-offset-block: 4px,
-  $outline-offset-inline: 4px,
+  $outline-offset-block: 2px,
+  $outline-offset-inline: 2px,
   $outline-animation-speed: 0.2s
 ) {
   position: relative;
@@ -157,6 +157,7 @@
       transform $outline-animation-speed ease-in-out;
     pointer-events: none;
     opacity: 0;
+    z-index: sage-z-index(default, 1);
   }
 
   &:focus:not(:disabled):not([aria-disabled="true"]),

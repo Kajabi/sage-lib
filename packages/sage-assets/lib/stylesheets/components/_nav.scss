@@ -40,7 +40,11 @@ $-nav-icon-size: rem(20px);
   }
 }
 
-.sage-nav__link {
+.sage-nav__link,
+.sage-nav__link--active {
+  @include sage-focus-outline($outline-offset-inline: 0, $outline-offset-block: 0);
+  @include sage-focus-outline--update-color(sage-color(primary));
+
   display: flex;
   align-items: center;
   padding: rem(10px) rem(12px);
@@ -54,11 +58,12 @@ $-nav-icon-size: rem(20px);
   &:focus {
     background-color: $-nav-color-background-hover;
   }
+}
 
-  &:focus {
-    box-shadow: inset 0 0 0 2px $-nav-color-focus;
-    outline: none;
-  }
+.sage-nav__link--active::after {
+  opacity: 1;
+  border-color: sage-color(primary);
+  transform: translate3d(-50%, -50%, 0) scale(1);
 }
 
 .sage-nav__link--sub {

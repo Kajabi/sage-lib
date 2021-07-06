@@ -180,8 +180,8 @@ $-checkbox-focus-outline-color: sage-color(primary);
   // focus outline
   &::before {
     transform: translate3d(-50%, -50%, 0) scale(0.94);
-    width: calc(100% + (#{$-checkbox-focus-outline-width * 2px} + #{$-checkbox-focus-outline-size * 2}));
-    height: calc(100% + (#{$-checkbox-focus-outline-width * 2px} + #{$-checkbox-focus-outline-size * 2}));
+    width: calc(100% + (#{$-checkbox-focus-outline-width * 1px} + #{$-checkbox-focus-outline-size * 2}));
+    height: calc(100% + (#{$-checkbox-focus-outline-width * 1px} + #{$-checkbox-focus-outline-size * 2}));
     border: ($-checkbox-focus-outline-width * 1px) solid $-checkbox-focus-outline-color;
     border-radius: $-checkbox-border-radius-outer;
     pointer-events: none;

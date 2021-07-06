@@ -112,7 +112,7 @@ $-banner-el-icon: "before";
     text-decoration: underline;
   }
 
-  @include sage-focus-outline();
+  // @include sage-focus-outline();
 }
 
 .sage-banner__close {
@@ -122,6 +122,7 @@ $-banner-el-icon: "before";
 
 .sage-banner__close,
 .sage-banner__link {
+  @include sage-focus-outline($outline-offset-inline: 6px, $outline-offset-block: 0);
   @include sage-focus-outline--update-color(map-get(map-get($-banner-colors, default), text));
 
   &:hover {
