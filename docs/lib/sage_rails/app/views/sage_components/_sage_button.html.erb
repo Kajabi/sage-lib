@@ -32,7 +32,7 @@
         <%= (component.value.strip.empty? ? "&nbsp;" : component.value).html_safe %>
       </span>
     <% elsif component.content %>
-      <span class="sage-btn__custom-content">
+      <span class="sage-btn__custom-content <%= component.custom_content_class if component.custom_content_class.present? %>">
         <%= component.content %>
       </span>
     <% end %>
