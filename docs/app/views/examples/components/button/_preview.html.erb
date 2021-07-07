@@ -90,7 +90,8 @@ demo_configs = [
       <!-- Primary button (custom content) -->
       <%= sage_component SageButton, {
         style: config[:style],
-        disabled: disabled
+        disabled: disabled,
+        custom_content_class: 'demo-custom-class',
       } do %>
         <strong>Custom</strong> <em>content</em>
       <% end %>
