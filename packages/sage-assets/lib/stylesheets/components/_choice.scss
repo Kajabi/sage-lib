@@ -26,9 +26,6 @@ $-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
   }
 }
 
-
-// stylelint-disable max-nesting-depth
-
 .sage-choice {
   @include sage-button-style-reset();
 

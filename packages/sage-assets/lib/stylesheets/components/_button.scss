@@ -4,101 +4,11 @@
 /// @group sage
 ////
 
-
-//
-// Base style variables
-//
-$-btn-transition: map-get($sage-transitions, default);
-$-btn-border-radius: sage-border(radius);
-$-btn-shadow-base: sage-shadow(sm);
-$-btn-base-styles: (
-  primary: (
-    default: (
-      color: sage-color(white),
-      background-color: sage-color(primary),
-      ring-color: sage-color(primary),
-    ),
-    hover: (
-      color: sage-color(white),
-      background-color: sage-color(primary, 400),
-    ),
-    focus: (
-      color: sage-color(white),
-      background-color: sage-color(primary),
-    ),
-    disabled: (
-      color: sage-color(primary, 200),
-      background-color: sage-color(primary, 100),
-    )
-  ),
-  secondary: (
-    default: (
-      color: sage-color(charcoal),
-      background-color: sage-color(white),
-      ring-color: sage-color(charcoal),
-    ),
-    hover: (
-      color: sage-color(charcoal),
-      background-color: sage-color(grey, 200),
-    ),
-    focus: (
-      color: sage-color(charcoal),
-      background-color: sage-color(white),
-    ),
-    disabled: (
-      color: sage-color(grey, 500),
-      background-color: sage-color(grey, 200),
-    )
-  ),
-  danger: (
-    default: (
-      color: sage-color(white),
-      background-color: sage-color(red),
-      ring-color: sage-color(red),
-    ),
-    hover: (
-      color: sage-color(white),
-      background-color: sage-color(red, 400),
-    ),
-    focus: (
-      color: sage-color(white),
-      background-color: sage-color(red),
-    ),
-    disabled: (
-      color: sage-color(red, 200),
-      background-color: sage-color(red, 100),
-    )
-  ),
-);
-
-$-btn-subtle-styles: (
-  primary: (
-    default: sage-color(primary),
-    hover: sage-color(primary, 400),
-    focus: sage-color(primary),
-    disabled: sage-color(primary, 200),
-  ),
-  secondary: (
-    default: sage-color(charcoal, 200),
-    hover: sage-color(charcoal, 500),
-    focus: sage-color(charcoal, 200),
-    disabled: sage-color(grey, 500),
-  ),
-  danger: (
-    default: sage-color(red),
-    hover: sage-color(red, 400),
-    focus: sage-color(red),
-    disabled: sage-color(red, 200),
-  ),
-);
-
 //
 // Custom variables
 //
 $-btn-interactive-label-icon-size: rem(24px);
 
-
-// stylelint-disable max-nesting-depth
 :root {
   --icon-block-padding: #{rem(6px)};
 
@@ -111,32 +21,31 @@ $-btn-interactive-label-icon-size: rem(24px);
   @extend %t-sage-body-med;
   @include sage-button-style-reset();
   @include sage-focus-outline;
-
+  
   $-padding-block: rem(6px);
 
   display: inline-flex;
-  align-self: inherit;
   align-items: center;
+  align-self: inherit;
   padding: $-padding-block sage-spacing(sm);
   text-align: left; // Prevents text alignment issue when inner text is truncated
-  border: 0;
-  border-radius: $-btn-border-radius;
-  transition: $-btn-transition;
+  border-radius: sage-border(radius);
+  transition: map-get($sage-transitions, default);
   transition-property: border, background-color, box-shadow;
 
   &:disabled,
   &[aria-disabled="true"] {
     @include sage-button-style-disabled;
   }
-
+  
   &:focus:not(:disabled):not([aria-disabled="true"]),
   &:active:not(:disabled):not([aria-disabled="true"]) {
     .sage-dropdown__item > & {
       @include sage-focus-outline--update-color(transparent);
     }
   }
-
-  // Contextual modifications
+  
+  // Component specific button classes
   &.sage-banner__close {
     position: absolute;
   }
@@ -194,8 +103,14 @@ $-btn-interactive-label-icon-size: rem(24px);
       margin-left: 0;
     }
 
-    &.sage-btn--tag::before {
-      font-size: sage-font-size(md, false);
+    &.sage-btn--tag {
+      &::before {
+        font-size: sage-font-size(md, false);
+      }
+    }
+
+    &.sage-btn--no-shadow {
+      box-shadow: none;
     }
   }
 
@@ -294,120 +209,256 @@ $-btn-interactive-label-icon-size: rem(24px);
       margin-right: sage-spacing(card);
     }
   }
-
-  // NOTE: Hope to use `gap` in the future instead
-  // but Safari does not currently support it for flexbox
-  @each $-key, $-value in $sage-spacings {
-    @if ($-key == xs) {
-      .sage-btn-group &:not(:last-child) {
-        margin-right: sage-spacing($-key);
-      }
-    }
-    @else if ($-key == sm or $-key == md or $-key == lg) {
-      .sage-btn-group--gap-#{$-key} &:not(:last-child) {
-        margin-right: sage-spacing($-key);
-      }
-    }
-  }
-
   // NOTE: Icon generation consolidated in `core/_icons.scss`
 }
 
-// Generate button style variations
-@each $-style-name, $-styles in $-btn-base-styles {
-  .sage-btn--#{$-style-name} {
-    @each $-style-type-name, $-style-type-configs in $-styles {
-      @if ($-style-type-name == hover) {
-        &:hover {
-          color: map-get($-style-type-configs, color);
-          background-color: map-get($-style-type-configs, background-color);
-        }
-      }
-      @else if ($-style-type-name == focus) {
-        &:focus,
-        &:active {
-          color: map-get($-style-type-configs, color);
-          background-color: map-get($-style-type-configs, background-color);
-        }
-      }
-      @else if ($-style-type-name == disabled) {
-        &:disabled,
-        &[aria-disabled="true"] {
-          color: map-get($-style-type-configs, color);
-          background-color: map-get($-style-type-configs, background-color);
-          box-shadow: none;
-        }
-      }
-      @else {
-        @include sage-focus-outline--update-color(map-get($-style-type-configs, ring-color));
+// Button group layout styles
+.sage-btn-group {
+  display: flex;
+  align-items: center;
+  grid-gap: 0.5rem;
+  gap: 0.5rem;
+}
 
-        color: map-get($-style-type-configs, color);
-        background-color: map-get($-style-type-configs, background-color);
-      }
-    }
+.sage-btn-group--gap-sm {
+  grid-gap: 1rem;
+  gap: 1rem;
+}
 
-    &:not(.sage-btn--subtle):not(:disabled):not([aria-disabled="true"]) {
-      // Shadow appears on Primary by default but can be toggled off with `--no-shadow`
-      @if ($-style-name == primary) {
-        box-shadow: $-btn-shadow-base;
+.sage-btn-group--gap-md {
+  grid-gap: 1.5rem;
+  gap: 1.5rem;
+}
 
-        &.sage-btn--no-shadow {
-          box-shadow: none;
-        }
-      }
-      // All other buttons have no shadow by default but one can be toggled on with `--raised`
-      @else {
-        &.sage-btn--raised {
-          box-shadow: $-btn-shadow-base;
-        }
-      }
-    }
+.sage-btn-group--gap-lg {
+  grid-gap: 2rem;
+  gap: 2rem;
+}
+
+.sage-btn-group--align-end {
+  justify-content: flex-end;
+}
+
+.sage-btn-group--align-space-between {
+  justify-content: space-between;
+}
+
+.sage-btn-group--border-top {
+  padding-top: sage-spacing(lg);
+  border-top: 1px solid sage-color(grey, 300);
+}
+
+// App-wide button styles
+// Primary
+.sage-btn--primary {
+  color: sage-color(white);
+  background-color: sage-color(primary);
+  box-shadow: sage-shadow(sm);
+
+  &::after {
+    border-color: sage-color(primary);
+  }
+
+  &:hover {
+    color: sage-color(white);
+    background-color: sage-color(primary, 400);
+  }
+
+  &:focus,
+  &:active {
+    color: sage-color(white);
+    background-color: sage-color(primary);
+  }
+
+  &:disabled,
+  &[aria-disabled="true"] {
+    color: sage-color(primary, 200);
+    background-color: sage-color(primary, 100);
+    box-shadow: none;
   }
 }
 
-// Subtle buttons are smaller with no padding or background color but still use a focus ring
+// Secondary
+.sage-btn--secondary {
+  color: sage-color(charcoal);
+  background-color: sage-color(white);
+  box-shadow: sage-shadow(sm);
+  cursor: not-allowed;
+
+  &::after {
+    border-color: sage-color(charcoal);
+  }
+  
+  &:hover {
+    color: sage-color(charcoal);
+    background-color: sage-color(grey, 200);
+  }
+  
+  &:focus,
+  &:active {
+    color: sage-color(charcoal);
+    background-color: sage-color(white);
+  }
+  
+  &:disabled,
+  &[aria-disabled="true"] {
+    color: sage-color(grey, 500);
+    background-color: sage-color(grey, 200);
+    box-shadow: none;
+  }
+}
+
+// Tertiary
+.sage-btn--tertiary {
+  color: sage-color(charcoal, 400);
+  background-color: sage-color(white);
+
+  &::after {
+    border-color: sage-color(grey, 300);
+  }
+
+  &:hover {
+    &::after {
+      border-color: sage-color(grey, 400);
+    }
+  }
+
+  &:disabled,
+  &[aria-disabled="true"] {
+    color: sage-color(primary, 200);
+    background-color: sage-color(primary, 100);
+    box-shadow: none;
+  }
+}
+
+// Danger
+.sage-btn--danger {
+  color: sage-color(white);
+  background-color: sage-color(red);
+  box-shadow: sage-shadow(sm);
+
+  &::after {
+    border-color: sage-color(red);
+  }
+  
+  &:hover {
+    color: sage-color(white);
+    background-color: sage-color(red, 400);
+  }
+  
+  &:focus,
+  &:active {
+    color: sage-color(white);
+    background-color: sage-color(red);
+  }
+  
+  &:disabled,
+  &[aria-disabled="true"] {
+    color: sage-color(red, 200);
+    background-color: sage-color(red, 100);
+    box-shadow: none;
+  }
+}
+
+// Subtle
 .sage-btn--subtle {
   padding: 0;
   box-shadow: none;
 
   @include sage-focus-outline($outline-offset-inline: 6px, $outline-offset-block: 0);
-
-  // Generate button style variations
-  @each $-style-name, $-styles in $-btn-subtle-styles {
-    &.sage-btn--#{$-style-name} {
-      color: map-get($-styles, default);
+  
+  // Subtle: Primary
+  &.sage-btn--primary {
+    color: sage-color(primary);
+    background-color: transparent;
+  
+    &::after {
+      border-color: sage-color(primary);
+    }
+    
+    &:hover {
+      color: sage-color(primary, 400);
       background-color: transparent;
-
-      @include sage-focus-outline--update-color(map-get($-styles, default));
-
-      &:hover {
-        color: map-get($-styles, hover);
-        background-color: transparent;
-      }
-
-      &:focus,
-      &:active {
-        color: map-get($-styles, focus);
-        background-color: transparent;
-      }
-
-      &:disabled,
-      &[aria-disabled="true"] {
-        color: map-get($-styles, disabled);
-        background-color: transparent;
-      }
+    }
+    
+    &:focus,
+    &:active {
+      color: sage-color(primary);
+      background-color: transparent;
+    }
+    
+    &:disabled,
+    &[aria-disabled="true"] {
+      color: sage-color(primary, 200);
+      background-color: transparent;
+    }
+  }
+  
+  // Subtle: Secondary
+  &.sage-btn--secondary {
+    color: sage-color(charcoal, 200);
+    background-color: transparent;
+  
+    &::after {
+      border-color: sage-color(charcoal, 200);
+    }
+    
+    &:hover {
+      color: sage-color(charcoal, 500);
+      background-color: transparent;
+    }
+    
+    &:focus,
+    &:active {
+      color: sage-color(charcoal, 200);
+      background-color: transparent;
+    }
+    
+    &:disabled,
+    &[aria-disabled="true"] {
+      color: sage-color(grey, 500);
+      background-color: transparent;
     }
   }
 
-  .sage-assistant & {
+  // Sutble: Danger
+  &.sage-btn--danger {
+    color: sage-color(red);
+    background-color: transparent;
+  
+    &::after {
+      border-color: sage-color(red);
+    }
+    
+    &:hover {
+      color: sage-color(red, 400);
+      background-color: transparent;
+    }
+    
+    &:focus,
+    &:active {
+      color: sage-color(red);
+      background-color: transparent;
+    }
+    
+    &:disabled,
+    &[aria-disabled="true"] {
+      color: sage-color(red, 200);
+      background-color: transparent;
+    }
+  }
+}
+
+
+.sage-assistant {
+  .sage-btn--subtle {
     color: sage-color(grey, 100);
 
-    @include sage-focus-outline--update-color(sage-color(white));
-
-    &:hover {
-      color: sage-color(white);
+    &::after {
+      border-color: sage-color(white);
     }
 
+    &:hover,
     &:focus {
       color: sage-color(white);
     }
@@ -418,10 +469,8 @@ $-btn-interactive-label-icon-size: rem(24px);
   @extend %t-sage-body-small-med;
 }
 
-// TODO: Investigate deprecating the float setting here
 .sage-btn--align-end {
   align-self: flex-end;
-  float: right;
 }
 
 .sage-btn--full-width {
@@ -437,23 +486,4 @@ $-btn-interactive-label-icon-size: rem(24px);
     display: inline-flex;
     align-items: center;
   }
-}
-
-// Button groups allow for several buttons together to be spaced appropriately
-.sage-btn-group {
-  display: flex;
-  align-items: center;
-}
-
-.sage-btn-group--align-end {
-  justify-content: flex-end;
-}
-
-.sage-btn-group--align-space-between {
-  justify-content: space-between;
-}
-
-.sage-btn-group--border-top {
-  padding-top: sage-spacing(lg);
-  border-top: 1px solid sage-color(grey, 300);
 }

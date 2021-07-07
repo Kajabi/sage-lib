@@ -9,9 +9,6 @@ $-tab-color-default: map-get($sage-tab-colors, default);
 $-tab-color-active: map-get($sage-tab-colors, active);
 $-tab-color-disabled: map-get($sage-tab-colors, disabled);
 
-
-// stylelint-disable max-nesting-depth
-
 .sage-tab {
   @include sage-button-style-reset();
 

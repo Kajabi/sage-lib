@@ -16,7 +16,6 @@
   <%= sage_component SageButton, {
     value: "Danger Toast",
     style: "danger",
-    raised: true,
     attributes: {
       "onClick": "Sage.toast.trigger({text: 'An error has occured.', type: 'danger', icon: 'danger'})",
     },
@@ -25,7 +24,6 @@
   <%= sage_component SageButton, {
     value: "Custom Icon",
     style: "secondary",
-    raised: true,
     attributes: {
       "onClick": "Sage.toast.trigger({text: 'Invitation sent!', icon: 'mail'})",
     },
@@ -34,7 +32,6 @@
   <%= sage_component SageButton, {
     value: "Custom Timer: 10s",
     style: "secondary",
-    raised: true,
     attributes: {
       "onClick": "Sage.toast.trigger({text: 'This toast has a 10 second timer.', timer: 10000})",
     },
@@ -50,7 +47,6 @@
   <%= sage_component SageButton, {
     value: "Example",
     style: "primary",
-    raised: true,
     attributes: {
       "onClick": "showDismissInstructions(Sage.toast.trigger({text: 'I will not dismiss via timer', timer: false}))",
     },
@@ -59,7 +55,6 @@
   <%= sage_component SageButton, {
     value: "Uploading",
     style: "secondary",
-    raised: true,
     attributes: {
       "onClick": "showDismissInstructions(Sage.toast.trigger({text: 'Uploading image...', type: 'loading', timer: false}))",
     },
@@ -68,7 +63,6 @@
   <%= sage_component SageButton, {
     value: "Goal Completion (non-dismissing with link)",
     style: "secondary",
-    raised: true,
     attributes: {
       "onClick": "showDismissInstructions(Sage.toast.trigger({text: 'Congratulations on your success', link: {text: 'Go to next step', href: 'http://app.kajabi.com'}, timer: false}))",
     },
@@ -77,7 +71,6 @@
   <%= sage_component SageButton, {
     value: "Reset",
     style: "danger",
-    raised: true,
     attributes: {
       "onClick": "Sage.toast.reset()",
     },
