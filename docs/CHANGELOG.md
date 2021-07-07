@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.7.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.6.0...@kajabi/sage@4.7.0) (2021-07-07)
+
+
+### Bug Fixes
+
+* **button:** added wrapper around custom content ([21ef735](https://github.com/Kajabi/sage-lib/commit/21ef7353411f9b2dfd25372c5391ad80d3d4da4e))
+
+
+### Features
+
+* **button:** added modifier class to accomodate custom content. Added example ([318c7dd](https://github.com/Kajabi/sage-lib/commit/318c7dd132e3e17ef706ef558f402b02ab21ceb7))
+* **button:** allow for a custom classname on custom content ([1951839](https://github.com/Kajabi/sage-lib/commit/1951839e278f833342e71be70648592cf97863c0))
+
+
+
+
+
 # [4.6.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.5.0...@kajabi/sage@4.6.0) (2021-06-30)
 
 

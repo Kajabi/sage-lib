@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.40.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.39.0...@kajabi/sage-assets@0.40.0) (2021-07-07)
+
+
+### Bug Fixes
+
+* **button:** added wrapper around custom content ([21ef735](https://github.com/Kajabi/sage-lib/commit/21ef7353411f9b2dfd25372c5391ad80d3d4da4e))
+* **button:** update font-weight for small buttons ([5caa4b7](https://github.com/Kajabi/sage-lib/commit/5caa4b733b62361e4740f2d9e41f256c0deab705))
+* **page-heading:** updated alignment for page heading actions ([2e4dd3d](https://github.com/Kajabi/sage-lib/commit/2e4dd3df7cd04657fbdc0439be2b4610904ec424))
+
+
+### Features
+
+* **button:** added modifier class to accomodate custom content. Added example ([318c7dd](https://github.com/Kajabi/sage-lib/commit/318c7dd132e3e17ef706ef558f402b02ab21ceb7))
+
+
+
+
+
 # [0.39.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.38.0...@kajabi/sage-assets@0.39.0) (2021-06-30)
 
 

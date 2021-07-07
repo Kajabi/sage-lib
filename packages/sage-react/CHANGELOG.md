@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.50.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.49.0...@kajabi/sage-react@0.50.0) (2021-07-07)
+
+
+### Features
+
+* **button:** catch up React button with custom content additions ([058436f](https://github.com/Kajabi/sage-lib/commit/058436f98b9100eada06bab499b588e8f8b4cf55))
+
+
+
+
+
 # [0.49.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.48.0...@kajabi/sage-react@0.49.0) (2021-06-30)
 
 
