@@ -9,6 +9,7 @@ export default {
   argTypes: {
     ...selectArgs({
       icon: SageTokens.ICONS,
+      position: Popover.POSITIONS,
     }),
   },
   args: {
@@ -17,7 +18,8 @@ export default {
     iconOnly: true,
     moreLinkURL: '//example.com',
     moreLinkText: 'Link text',
-    title: 'Amazing popover'
+    title: 'Amazing popover',
+    position: Popover.POSITIONS.BOTTOM,
   }
 };
 
@@ -26,7 +28,7 @@ export const Default = Template.bind({});
 Default.decorators = [
   (Story) => (
     <>
-      <div style={{ minHeight: 150 }}>
+      <div style={{ height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%', }}>
         <Story />
       </div>
     </>

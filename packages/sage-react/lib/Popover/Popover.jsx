@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import uuid from 'react-uuid';
 import { Button } from '../Button';
 import { SageTokens } from '../configs';
+import { POPOVER_POSITIONS } from './configs';
 
 export const Popover = ({
   className,
@@ -14,6 +15,7 @@ export const Popover = ({
   label,
   moreLinkURL,
   moreLinkText,
+  position,
   title,
   ...rest
 }) => {
@@ -38,6 +40,7 @@ export const Popover = ({
     className,
     {
       'sage-popover--is-expanded': selfActive,
+      [`sage-popover--${position}`]: position,
     }
   );
 
@@ -108,6 +111,8 @@ export const Popover = ({
   );
 };
 
+Popover.POSITIONS = POPOVER_POSITIONS;
+
 Popover.defaultProps = {
   className: null,
   children: null,
@@ -117,6 +122,7 @@ Popover.defaultProps = {
   label: 'Learn more',
   moreLinkURL: null,
   moreLinkText: 'Learn more',
+  position: Popover.POSITIONS.BOTTOM,
   title: null,
 };
 
@@ -129,5 +135,6 @@ Popover.propTypes = {
   label: PropTypes.string,
   moreLinkURL: PropTypes.string,
   moreLinkText: PropTypes.string,
+  position: PropTypes.oneOf(Object.values(Popover.POSITIONS)),
   title: PropTypes.string,
 };
