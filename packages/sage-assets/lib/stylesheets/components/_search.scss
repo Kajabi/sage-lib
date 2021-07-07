@@ -30,25 +30,14 @@ $-search-icon: "::before";
   &:not(.sage-search--contained) {
     border-bottom: 1px solid sage-color(grey, 300);
 
-    &::after {
-      content: "";
-      display: block;
-      position: absolute;
-      bottom: rem(-1px);
-      left: 50%;
-      right: 50%;
-      z-index: 3;
-      height: 0;
-      border-bottom: rem(2px) solid sage-color(primary);
-      transition: map-get($sage-transitions, default);
-      transition-property: left, right, opacity;
+    &:hover {
+      border-bottom: 1px solid sage-color(grey, 400);
     }
+  }
 
-    &:focus-within::after {
-      left: 0;
-      right: 0;
-      opacity: 1;
-    }
+  &:focus-within {
+    border-radius: sage-border(radius);
+    box-shadow: map-get($sage-toolbar-button-borders, focus);
   }
 
   &.sage-search--contained {

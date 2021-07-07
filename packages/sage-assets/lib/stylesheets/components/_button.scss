@@ -396,6 +396,11 @@ $-btn-interactive-label-icon-size: rem(24px);
         color: map-get($-styles, disabled);
         background-color: transparent;
       }
+
+      &[class*="icon-only"] {
+        @include sage-focus-outline($outline-offset-inline: 4px, $outline-offset-block: 0);
+        @include sage-focus-outline--update-color(map-get($-styles, default));
+      }
     }
   }
 

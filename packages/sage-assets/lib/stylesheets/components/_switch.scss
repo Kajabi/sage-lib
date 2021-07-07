@@ -49,13 +49,13 @@ $-switch-focus-outline-error-color: sage-color(red, 300);
     border: sage-border();
     border-radius: sage-border(radius);
 
-    &:focus-within {
-      box-shadow: 0 0 0 ($-switch-focus-outline-width * 1px) $-switch-focus-outline-color;
-    }
+    // &:focus-within {
+    //   box-shadow: 0 0 0 ($-switch-focus-outline-width * 1px) $-switch-focus-outline-color;
+    // }
 
-    &.sage-switch--error:focus-within {
-      box-shadow: 0 0 0 ($-switch-focus-outline-width * 1px) $-switch-focus-outline-error-color;
-    }
+    // &.sage-switch--error:focus-within {
+    //   box-shadow: 0 0 0 ($-switch-focus-outline-width * 1px) $-switch-focus-outline-error-color;
+    // }
   }
 
   &.sage-switch--toggle-right {
@@ -120,10 +120,10 @@ $-switch-focus-outline-error-color: sage-color(red, 300);
   .sage-switch--has-border & {
     position: absolute;
 
-    &::after,
-    &::before {
-      border-color: transparent;
-    }
+    // &::after,
+    // &::before {
+    //   border-color: transparent;
+    // }
   }
 
   + .sage-switch__label {
@@ -200,10 +200,10 @@ $-switch-focus-outline-error-color: sage-color(red, 300);
     }
   }
 
-  .sage-switch--has-border:not(.sage-switch--standalone) &::after,
-  .sage-switch--has-border:not(.sage-switch--standalone) &::before {
-    border-color: transparent;
-  }
+  // .sage-switch--has-border:not(.sage-switch--standalone) &::after,
+  // .sage-switch--has-border:not(.sage-switch--standalone) &::before {
+  //   border-color: transparent;
+  // }
 
   // checked
   &:checked {

@@ -42,7 +42,7 @@ $-nav-icon-size: rem(20px);
 
 .sage-nav__link,
 .sage-nav__link--active {
-  @include sage-focus-outline($outline-offset-inline: 0, $outline-offset-block: 0);
+  @include sage-focus-outline($outline-offset-inline: 0, $outline-offset-block: -1);
   @include sage-focus-outline--update-color(sage-color(primary));
 
   display: flex;

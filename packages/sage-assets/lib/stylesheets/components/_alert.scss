@@ -99,6 +99,8 @@ $-alert-icon-colors: (
   @each $name, $color in $-alert-colors {
     .sage-alert--#{$name} & {
       color: sage-color($color, 400);
+      @include sage-focus-outline($outline-offset-inline: 3px, $outline-offset-block: 3px);
+      @include sage-focus-outline--update-color(sage-color($color, 400));
     }
   }
 
