@@ -144,6 +144,7 @@
     $-offset-inline: $outline-width * 2 + $outline-offset-inline * 2;
 
     content: "";
+    z-index: sage-z-index(default, 1);
     position: absolute;
     left: 50%;
     top: 50%;
@@ -157,7 +158,6 @@
       transform $outline-animation-speed ease-in-out;
     pointer-events: none;
     opacity: 0;
-    z-index: sage-z-index(default, 1);
   }
 
   &:focus:not(:disabled):not([aria-disabled="true"]),

@@ -61,9 +61,9 @@ $-nav-icon-size: rem(20px);
 }
 
 .sage-nav__link--active::after {
-  opacity: 1;
-  border-color: sage-color(primary);
   transform: translate3d(-50%, -50%, 0) scale(1);
+  border-color: sage-color(primary);
+  opacity: 1;
 }
 
 .sage-nav__link--sub {

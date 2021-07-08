@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { Property } from '../Property';
+import { Icon } from '../Icon';
 import { Button } from '../Button';
 import { Link } from '../Link';
 import { Label } from '../Label';
@@ -23,13 +24,6 @@ export const TransactionCard = ({
   transactionTime,
 }) => {
   const NameTag = nameTag;
-
-  const amountClassNames = classnames(
-    'sage-transaction-card__amount',
-    {
-      [`sage-transaction-card__amount--${amountColor}`]: amountColor,
-    }
-  );
 
   const stateClassNames = classnames(
     'sage-transaction-card__state',
