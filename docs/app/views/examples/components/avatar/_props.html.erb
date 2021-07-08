@@ -18,11 +18,17 @@
   <td><%= md('`false`') %></td>
 </tr>
 <tr>
-  <td><%= md('`img`') %></td>
-  <td><%= md('
-    The image path for displaying a profile image.
-  ') %></td>
-  <td><%= md('String') %></td>
+  <td><%= md('`image`') %></td>
+  <td><%= md('Allows for configuration of an image.') %>
+  </td>
+  <td>
+  <%= md('```
+image: {
+  alt: String,
+  src: String,
+}
+    ') %>
+  </td>
   <td><%= md('`nil`') %></td>
 </tr>
 <tr>

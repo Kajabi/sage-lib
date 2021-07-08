@@ -6,7 +6,10 @@ export default {
   title: 'Sage/Avatar',
   component: Avatar,
   args: {
-    img: null,
+    image: {
+      alt: null,
+      src: null,
+    },
     initials: 'QJ',
     color: Avatar.COLORS.SAGE,
     size: null,
