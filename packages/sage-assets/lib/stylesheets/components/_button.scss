@@ -406,8 +406,10 @@ $-btn-interactive-label-icon-size: rem(24px);
           @include sage-focus-outline--update-color(map-get($-styles, default));
 
           position: absolute; /* this keeps the button inside a label within the visual bounds of the label component */
-          border-top-left-radius: 0;
-          border-bottom-left-radius: 0;
+
+          &::after {
+            border-radius: 0 sage-border(radius-x-large) sage-border(radius-x-large) 0
+          }
         }
       }
     }
