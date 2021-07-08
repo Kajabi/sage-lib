@@ -38,16 +38,22 @@ position = component.popover_position.present? ? component.popover_position : "r
   <%= sage_component SageButton, button_attributes %>
   <div class="sage-popover__overlay" data-js-popover--overlay></div>
   <div class="sage-popover__panel">
-    <% if component.title.present? %>
-      <div class="sage-popover__title">
-        <%= component.title %>
+    <% if content_for? :sage_popover_media %>
+      <div class="sage-popover__media">
+        <%= content_for :sage_popover_media %>
       </div>
     <% end %>
+
     <div class="
         sage-popover__content
         <%= "sage-popover__content--custom #{component.custom_content_class}" if component.custom_content_class.present? %>
       "
     >
+      <% if component.title.present? %>
+        <div class="sage-popover__title">
+          <%= component.title %>
+        </div>
+      <% end %>
       <%= component.content %>
     </div>
     <% if component.link %>

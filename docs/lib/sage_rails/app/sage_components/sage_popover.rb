@@ -13,4 +13,8 @@ class SagePopover < SageComponent
     trigger_icon_only: [:optional, TrueClass],
     trigger_value: [:optional, String],
   })
+
+  def sections
+    %w(popover_media)
+  end
 end

@@ -57,7 +57,6 @@ positions = [
     href: "#",
     name: "Learn more about a thing",
   },
-  custom_content_class: "demo-custom-popover-panel"
 } do %>
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -90,12 +89,14 @@ positions = [
     name: "Learn more",
   }
 } do %>
-  <div class="t-sage-body-small sage-spacer-bottom-xs t-sage--color-charcoal">
-    <p>This is a block of content.</p>
-    <p>This is a block of content.</p>
-    <p>This is a block of content.</p>
-    <p>This is a block of content.</p>
-  </div>
+  <%= content_for :sage_popover_media do %>
+    <%= image_tag("card-placeholder-lg.png", alt: "") %>
+  <% end %>
+
+  <p>
+    We can add graphics as well as freeform content blocks inside Popovers.
+    We can even provide a custom css class on the content container for additional finesse.
+  </p>
 <% end %>
 
 <%= sage_component SageCardBlock, {} do %>
@@ -106,12 +107,12 @@ positions = [
 <% end %>
 
 <%= sage_component SagePopover, {
-  custom_content_class: "u-popover-customized",
+  custom_content_class: "demo-custom-popover-panel",
   icon: "question-circle",
   trigger_value: "Open Menu",
   trigger_icon_only: true,
 } do %>
-  <p>I can put whatever content I want in here and use the cusotm class as a hook to style it like a good 'ol BEM mixin!</p>
+  <p>I can put whatever content I want in here and use the custom class as a hook to style it like a good 'ol BEM mixin!</p>
 <% end %>
 
 <%= sage_component SageCardBlock, {} do %>
@@ -122,12 +123,13 @@ positions = [
 <% end %>
 
 <%= sage_component SagePopover, {
+  custom_content_class: "demo-custom-popover-panel",
   icon: "send-message",
   trigger_icon_only: false,
   trigger_value: "Send Test Email",
   popover_position: "bottom",
 } do %>
-  <form>
+  <form style="width: 100%">
     <div class="sage-input">
       <input type="email" id="form__email1" class="sage-input__field" name="form__email1" placeholder="Email Address" required>
       <label for="form__email1" class="sage-input__label">Email Address</label>
@@ -160,12 +162,10 @@ positions = [
         name: "Learn more",
       }
     } do %>
-      <div class="t-sage-body-small sage-spacer-bottom-xs t-sage--color-charcoal">
-        <p>This is a block of content.</p>
-        <p>This is a block of content.</p>
-        <p>This is a block of content.</p>
-        <p>This is a block of content.</p>
-      </div>
+      <p>This is a block of content.</p>
+      <p>This is a block of content.</p>
+      <p>This is a block of content.</p>
+      <p>This is a block of content.</p>
     <% end %>
   <% end %>
 <% end %>

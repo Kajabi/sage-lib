@@ -20,6 +20,22 @@ export default {
     moreLinkText: 'Link text',
     title: 'Amazing popover',
     position: Popover.POSITIONS.BOTTOM,
+    children: (
+      <>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Mauris erat urna, eleifend quis mollis ut, vehicula vitae elit.
+          Quisque elementum risus congue, placerat tellus vulputate, ornare neque.
+          Mauris eu quam nisi.
+        </p>
+        <p>
+          Ut elementum, nulla sit amet viverra vulputate, mi risus dignissim odio, vel aliquam lorem mi nec diam.
+          Donec bibendum tincidunt est, non ultricies nisi efficitur eget.
+          Integer et libero aliquam, efficitur ante ac, auctor dolor.
+          Vivamus aliquet vehicula sollicitudin.
+        </p>
+      </>
+    )
   }
 };
 
