@@ -1,51 +1,42 @@
+<%
+
+button_attributes = {
+  value: component.trigger_value,
+  style: "secondary",
+  css_classes: "sage-popover__button",
+  subtle: true,
+  attributes: {
+    "aria-haspopup": true,
+    "aria-controls": "sage-popover",
+    "aria-expanded": false,
+    "data-js-popover--trigger": ""
+  },
+}
+
+if component.icon.present?
+  icon = component.icon.is_a?(Hash) ? component.icon : {
+    style: "left",
+    name: component.icon
+  }
+  if component.trigger_icon_only
+    icon[:style] = "only"
+  end
+  button_attributes[:icon] = icon
+end
+
+position = component.popover_position.present? ? component.popover_position : "right"
+%>
 <div 
   class="
     sage-popover
+    <%= "sage-popover--#{position}" %>
     <%= component.generated_css_classes %>
   " 
   data-js-popover 
-  data-js-popover--position="<%= component.popover_position ? component.popover_position : "right" %>"
   <%= component.generated_html_attributes.html_safe %>
 >
-
-  <% if component.trigger_icon_only %>
-    <%= sage_component SageButton, {
-      value: component.trigger_value,
-      style: "secondary",
-      css_classes: "sage-popover__button",
-      subtle: true,
-      icon: {
-        style: "only",
-        name: component.icon
-      },
-      attributes: {
-        "aria-haspopup": true,
-        "aria-controls": "sage-popover",
-        "aria-expanded": false,
-        "data-js-popover--trigger": "",
-      },
-    } %>
-  <% else %>
-    <%= sage_component SageButton, {
-      value: component.trigger_value,
-      style: "secondary",
-      css_classes: "sage-popover__button",
-      subtle: true,
-      icon: {
-        style: "left",
-        name: component.icon
-      },
-      attributes: {
-        "aria-haspopup": true,
-        "aria-controls": "sage-popover",
-        "aria-expanded": false,
-        "data-js-popover--trigger": ""
-      },
-    } %>
-  <% end %>
-
+  <%= sage_component SageButton, button_attributes %>
   <div class="sage-popover__overlay" data-js-popover--overlay></div>
-
   <div class="sage-popover__panel">
     <% if component.title.present? %>
       <div class="sage-popover__title">
@@ -78,5 +69,4 @@
       </div>
     <% end %>
   </div>
-
 </div>

@@ -1,6 +1,6 @@
 <tr>
-  <td><%= md('`body`') %></td>
-  <td><%= md('The content to display inside the popover panel.') %></td>
+  <td><%= md('`DEPRECATED: body`') %></td>
+  <td><%= md('DEPRECATED: User `content` block instead.') %></td>
   <td><%= md('String') %></td>
   <td><%= md('`nil`') %></td>
 </tr>
@@ -33,25 +33,19 @@
   <td><%= md('If provided, this turns on the actions area with a link that points to the provided URL.') %></td>
   <td>
 <%= md('```
-Array<{
+{
   href: String,
   name: String,
-}>
+}
 ') %>
   </td>
   <td><%= md('`nil`') %></td>
 </tr>
 <tr>
-  <td><%= md('`link`') %></td>
-  <td><%= md('If provided, this turns on the actions area with a link that points to the provided URL.') %></td>
-  <td><%= md('String') %></td>
-  <td><%= md('`nil`') %></td>
-</tr>
-<tr>
   <td><%= md('`popover_position`') %></td>
   <td><%= md('Where to position the popover panel in relation to the trigger button.') %></td>
-  <td><%= md('String') %></td>
-  <td><%= md('`right`') %></td>
+  <td><%= md("`\"#{SageTokens::POPOVER_POSITIONS.join("\"`, `\"")}\"`") %></td>
+  <td><%= md('`"right"`') %></td>
 </tr>
 <tr>
   <td><%= md('`title`') %></td>

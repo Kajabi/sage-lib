@@ -6,16 +6,21 @@
 
 
 $-popover-overlay-z-index: sage-z-index(modal);
-$-popover-panel-min-size: rem(250px);
+$-popover-panel-padding: sage-spacing(sm);
+$-popover-panel-min-size: sage-container(xs);
+$-popover-panel-contentmin-size: $-popover-panel-min-size - $-popover-panel-padding;
 $-popover-panel-max-size: rem(350px);
-$-popover-panel-offset-top: sage-spacing(2xs);
-$-popover-panel-offset-left: sage-spacing(md);
-$-popover-panel-offset: sage-spacing(xs);
+$-popover-panel-offset: sage-spacing(sm);
 
 
 .sage-popover {
   display: inline-flex;
   position: relative;
+
+  .docs-panel & {
+    justify-self: start;
+    width: min-content;
+  }
 }
 
 .sage-popover__actions {
@@ -30,10 +35,9 @@ $-popover-panel-offset: sage-spacing(xs);
   visibility: hidden;
   z-index: sage-z-index(modal);
   position: absolute;
-  width: 100%;
+  width: auto;
   min-width: $-popover-panel-min-size;
-  max-width: $-popover-panel-max-size;
-  padding: sage-spacing(sm);
+  padding: $-popover-panel-padding;
   background-color: sage-color(white);
   background-clip: padding-box;
   box-shadow: sage-shadow();
@@ -78,9 +82,9 @@ $-popover-panel-offset: sage-spacing(xs);
   position: relative;
 }
 
-.sage-popover__content:not(.sage-popover__content--custom) {
+.sage-popover__content {
   @extend %t-sage-body-small;	
-  @include sage-grid-stack();	
+  @include sage-grid-stack();
 
   color: sage-color(charcoal, 100);
 }
