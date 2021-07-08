@@ -29,7 +29,8 @@ export default {
           Mauris eu quam nisi.
         </p>
         <p>
-          Ut elementum, nulla sit amet viverra vulputate, mi risus dignissim odio, vel aliquam lorem mi nec diam.
+          Ut elementum, nulla sit amet viverra vulputate,
+          mi risus dignissim odio, vel aliquam lorem mi nec diam.
           Donec bibendum tincidunt est, non ultricies nisi efficitur eget.
           Integer et libero aliquam, efficitur ante ac, auctor dolor.
           Vivamus aliquet vehicula sollicitudin.
@@ -44,7 +45,15 @@ export const Default = Template.bind({});
 Default.decorators = [
   (Story) => (
     <>
-      <div style={{ height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%', }}>
+      <div
+        style={{
+          height: '100vh',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          width: '100%'
+        }}
+      >
         <Story />
       </div>
     </>

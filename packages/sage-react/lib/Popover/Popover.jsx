@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import uuid from 'react-uuid';
@@ -13,6 +13,7 @@ export const Popover = ({
   icon,
   iconOnly,
   label,
+  media,
   moreLinkURL,
   moreLinkText,
   position,
@@ -85,10 +86,13 @@ export const Popover = ({
         tabIndex={-1}
       />
       <div className="sage-popover__panel">
-        {title && (
-          <h5 className="sage-popover__title">{title}</h5>
+        {media && (
+          <div className="sage-popoever__media">{media}</div>
         )}
         <div className={contentClassNames}>
+          {title && (
+            <h5 className="sage-popover__title">{title}</h5>
+          )}
           {children}
         </div>
         {moreLinkURL && (
@@ -120,6 +124,7 @@ Popover.defaultProps = {
   icon: SageTokens.ICONS.QUESTION_CIRCLE,
   iconOnly: true,
   label: 'Learn more',
+  media: null,
   moreLinkURL: null,
   moreLinkText: 'Learn more',
   position: Popover.POSITIONS.BOTTOM,
@@ -133,6 +138,7 @@ Popover.propTypes = {
   icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),
   iconOnly: PropTypes.bool,
   label: PropTypes.string,
+  media: PropTypes.node,
   moreLinkURL: PropTypes.string,
   moreLinkText: PropTypes.string,
   position: PropTypes.oneOf(Object.values(Popover.POSITIONS)),
