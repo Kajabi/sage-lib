@@ -400,6 +400,15 @@ $-btn-interactive-label-icon-size: rem(24px);
       &[class*="icon-only"] {
         @include sage-focus-outline($outline-offset-inline: 4px, $outline-offset-block: 0);
         @include sage-focus-outline--update-color(map-get($-styles, default));
+
+        .sage-label & {
+          @include sage-focus-outline($outline-offset-inline: -2px, $outline-offset-block: -2px);
+          @include sage-focus-outline--update-color(map-get($-styles, default));
+
+          position: absolute; /* this keeps the button inside a label within the visual bounds of the label component */
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+        }
       }
     }
   }
