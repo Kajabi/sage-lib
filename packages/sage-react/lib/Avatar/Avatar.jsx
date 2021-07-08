@@ -30,7 +30,7 @@ export const Avatar = ({
 
   return (
     <div className={classNames} style={style} {...rest}>
-      {image.alt != null && image.src != null
+      {image?.alt !== null && image?.src !== null
         ? (
           <img alt={image.alt} className="sage-avatar__image" src={image.src} />
         )
@@ -49,7 +49,7 @@ Avatar.defaultProps = {
   centered: false,
   className: '',
   color: AVATAR_COLORS.DEFAULT,
-  image: null,
+  image: {},
   initials: null,
   size: null,
 };
