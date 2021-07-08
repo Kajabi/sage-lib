@@ -30,7 +30,7 @@ export const Avatar = ({
 
   return (
     <div className={classNames} style={style} {...rest}>
-      {image.alt && image.alt !== null && image.src && image.src !== null
+      {image.alt && image.src
         ? (
           <img alt={image.alt} className="sage-avatar__image" src={image.src} />
         )
