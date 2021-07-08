@@ -408,7 +408,7 @@ $-btn-interactive-label-icon-size: rem(24px);
           position: absolute; /* this keeps the button inside a label within the visual bounds of the label component */
 
           &::after {
-            border-radius: 0 sage-border(radius-x-large) sage-border(radius-x-large) 0
+            border-radius: 0 sage-border(radius-x-large) sage-border(radius-x-large) 0;
           }
         }
       }
