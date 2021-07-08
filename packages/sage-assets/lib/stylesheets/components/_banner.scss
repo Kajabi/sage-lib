@@ -105,8 +105,6 @@ $-banner-el-icon: "before";
 }
 
 .sage-banner__link {
-  @include sage-focus-outline($outline-offset-inline: 6px, $outline-offset-block: 0);
-
   color: inherit;
   text-decoration: underline;
 

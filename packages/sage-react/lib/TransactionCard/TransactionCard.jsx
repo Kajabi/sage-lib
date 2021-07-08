@@ -41,18 +41,20 @@ export const TransactionCard = ({
         </div>
       </div>
       <div className="sage-transaction-card__body">
-        <NameTag className="sage-transaction-card__name">
-          {nameHref ? (
-            <Link href={nameHref} className="sage-link sage-transaction-card__name-link">
-              <span className="t-sage--truncate">{name}</span>
-            </Link>
-          ) : name}
-        </NameTag>
-        {amount && (
-          <div className={`sage-transaction-card__amount${amountColor ? ` sage-transaction-card__amount--${amountColor}` : ''}`}>
-            {amount}
-          </div>
-        )}
+        <div className="sage-transaction-card__body-group">
+          <NameTag className="sage-transaction-card__name">
+            {nameHref ? (
+              <Link href={nameHref} className="sage-link sage-transaction-card__name-link">
+                <span className="t-sage--truncate">{name}</span>
+              </Link>
+            ) : name}
+          </NameTag>
+          {amount && (
+            <div className={`sage-transaction-card__amount${amountColor ? ` sage-transaction-card__amount--${amountColor}` : ''}`}>
+              {amount}
+            </div>
+          )}
+        </div>
       </div>
       <div className="sage-transaction-card__footer">
         {relatedPropertyHref ? (

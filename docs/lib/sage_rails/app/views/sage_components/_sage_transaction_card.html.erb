@@ -12,22 +12,24 @@
     <% end %>
   </div>
   <div class="sage-transaction-card__body">
-    <<%= html_tag %> class="sage-transaction-card__name">
-      <% if component.name_href.present? %>
-        <a class="sage-link sage-transaction-card__name-link" href="<%= component.name_href %>">
-          <span class="t-sage--truncate">
-            <%= component.name %>
-          </span>
-        </a>
-      <% else %>
-        <div class="sage-transaction-card__name-text">
-          <span class="sage-btn__truncate-text">
-            <%= component.name %>
-          </span>
-        </div>
-      <% end %>
-    </<%= html_tag %>>
-    <div class="sage-transaction-card__amount<%= " sage-transaction-card__amount--#{component.amount_color}" if component.amount_color.present? %>"><%= component.amount %></div>
+    <div className="sage-transaction-card__body-group">
+      <<%= html_tag %> class="sage-transaction-card__name">
+        <% if component.name_href.present? %>
+          <a class="sage-link sage-transaction-card__name-link" href="<%= component.name_href %>">
+            <span class="t-sage--truncate">
+              <%= component.name %>
+            </span>
+          </a>
+        <% else %>
+          <div class="sage-transaction-card__name-text">
+            <span class="sage-btn__truncate-text">
+              <%= component.name %>
+            </span>
+          </div>
+        <% end %>
+      </<%= html_tag %>>
+      <div class="sage-transaction-card__amount<%= " sage-transaction-card__amount--#{component.amount_color}" if component.amount_color.present? %>"><%= component.amount %></div>
+    </div>
   </div>
   <div class="sage-transaction-card__footer">
     <% if component.related_property_href.present? %>
