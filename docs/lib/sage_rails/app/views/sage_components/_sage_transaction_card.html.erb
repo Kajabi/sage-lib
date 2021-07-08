@@ -1,5 +1,4 @@
 <% html_tag = component.name_tag ? component.name_tag : "h4" %>
-
 <article class="sage-transaction-card <%= component.generated_css_classes %>" <%= component.generated_html_attributes.html_safe %>>
   <div class="sage-transaction-card__header">
     <%= sage_component SageLabel, {
@@ -12,42 +11,44 @@
     <% end %>
   </div>
   <div class="sage-transaction-card__body">
-    <div className="sage-transaction-card__body-group">
+    <div class="sage-transaction-card__body-group">
       <<%= html_tag %> class="sage-transaction-card__name">
         <% if component.name_href.present? %>
           <a class="sage-link sage-transaction-card__name-link" href="<%= component.name_href %>">
             <span class="t-sage--truncate">
-              <%= component.name %>
+            <%= component.name %>
             </span>
           </a>
         <% else %>
-          <div class="sage-transaction-card__name-text">
-            <span class="sage-btn__truncate-text">
-              <%= component.name %>
-            </span>
-          </div>
+          <%= component.name %>
         <% end %>
       </<%= html_tag %>>
-      <div class="sage-transaction-card__amount<%= " sage-transaction-card__amount--#{component.amount_color}" if component.amount_color.present? %>"><%= component.amount %></div>
+      <div class="sage-transaction-card__amount<%= " sage-transaction-card__amount--#{component.amount_color}" if component.amount_color.present? %>">
+        <%= component.amount %>
+      </div>
     </div>
-  </div>
-  <div class="sage-transaction-card__footer">
-    <% if component.related_property_href.present? %>
-      <%= sage_component SageButton, {
-        style: "secondary",
-        small: true,
-        subtle: true,
-        value: component.related_property,
-        icon: { name: "tag", style: "left" },
-        subtle: true,
-        css_classes: "sage-stat-box__link",
-        attributes: {
-          href: component.related_property_href
-        }
+    <div class="sage-transaction-card__body-group">
+      <% if component.related_property_href.present? %>
+        <%= sage_component SageButton, {
+          attributes: { href: component.related_property_href },
+          css_classes: "sage-transaction-card__product",
+          icon: { name: "tag", style: "left" },
+          subtle: true,
+          style: "secondary",
+          small: true,
+          value: component.related_property,
+        } %>
+      <% else %>
+        <%= sage_component SageProperty, {
+          css_classes: "sage-transaction-card__product",
+          icon: "tag",
+          value: component.related_property,
+        } %>
+      <% end %>
+      <%= sage_component SageProperty, {
+        css_classes: "sage-transaction-card__time",
+        value: component.transaction_time
       } %>
-    <% else %>
-      <%= sage_component SageProperty, { icon: "tag", value: component.related_property } %>
-    <% end %>
-    <%= sage_component SageProperty, { value: component.transaction_time } %>
+    </div>
   </div>
 </article>
