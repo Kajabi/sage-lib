@@ -7,6 +7,7 @@ import { Label } from '../Label';
 import { AMOUNT_COLORS, LABEL_COLORS, STATE_COLORS } from './configs';
 import { SageTokens } from '../configs';
 import { Button } from '../Button';
+
 export const TransactionCard = ({
   amount,
   amountColor,
