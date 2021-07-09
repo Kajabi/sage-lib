@@ -32,7 +32,7 @@ $-nav-icon-size: rem(20px);
   }
 
   .sage-nav__link--active & {
-    color: sage-color(charcoal, 500);
+    color: sage-color(primary, 300);
   }
 
   .sage-nav__link--sub.sage-nav__link--active & {
@@ -56,8 +56,12 @@ $-nav-icon-size: rem(20px);
   }
 
   &:focus {
-    box-shadow: inset 0 0 0 1px $-nav-color-focus;
+    box-shadow: inset 0 0 0 2px $-nav-color-focus;
     outline: none;
+  }
+
+  &--active {
+    background-color: $-nav-color-background;
   }
 }
 
@@ -71,11 +75,11 @@ $-nav-icon-size: rem(20px);
 
 .sage-nav__link-decorator {
   display: inline-block;
-  
+
   &:first-child {
     margin-right: sage-spacing(xs);
   }
-  
+
   &:not(:first-child) {
     margin-left: sage-spacing(xs);
   }
