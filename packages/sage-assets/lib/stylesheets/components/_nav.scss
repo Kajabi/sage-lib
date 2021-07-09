@@ -45,7 +45,7 @@ $-nav-icon-size: rem(20px);
   align-items: center;
   padding: rem(10px) rem(12px);
   color: $-nav-color-text;
-  border-radius: sage-border(radius);
+  border-radius: sage-border(radius-small);
   transition: map-get($sage-transitions, default);
   transition-property: background, box-shadow;
 
