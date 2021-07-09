@@ -1,16 +1,20 @@
 <div
   class="
     sage-avatar
-    <%= "sage-avatar--#{component.color}" if component.color.present? %>
-    <%= "sage-avatar--centered" if component.centered.present? && component.centered %>
+    <%= "sage-avatar--#{component.color}" if component.color %>
+    <%= "sage-avatar--centered" if component.centered %>
     <%= component.generated_css_classes %>
   "
   <%= component.generated_html_attributes.html_safe %>
-  <% if component.size.present? %>
+  <% if component.size %>
     style="width: <%= component.size %>; height: <%= component.size %>;"
   <% end %>
 >
-  <svg class="sage-avatar__initials" viewBox="0 0 32 32">
-    <text x="16" y="20"><%= component.initials %></text>
-  </svg>
+  <% if component.image %>
+    <img alt="<%= component.image[:alt] || "" %>" class="sage-avatar__image" src="<%= component.image[:src] %>">
+  <% else %>
+    <svg class="sage-avatar__initials" viewBox="0 0 32 32">
+      <text x="16" y="20"><%= component.initials %></text>
+    </svg>
+  <% end %>
 </div>
