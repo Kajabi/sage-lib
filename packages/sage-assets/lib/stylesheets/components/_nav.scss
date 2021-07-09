@@ -56,7 +56,7 @@ $-nav-icon-size: rem(20px);
   }
 
   &:focus {
-    box-shadow: inset 0 0 0 2px $-nav-color-focus;
+    box-shadow: inset 0 0 0 1px $-nav-color-focus;
     outline: none;
   }
 }
