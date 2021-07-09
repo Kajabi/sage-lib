@@ -1,115 +1,118 @@
 <%= sage_component SageSidebar, { id: "sage-sidebar-menu" } do %>
   <% if current_page_foundations? %>
-    <h2 class="t-sage-heading-6 docs-sidebar-heading">FOUNDATIONS</h2>
-    <%= sage_component SageNav, { 
+    <%= sage_component SageNav, {
       items: [
-        {
-          text: "Design Principles",
-          link: pages_foundation_path(:design_principles),
-          active: current_page?(pages_foundation_path(:design_principles)),
-        },
-        {
-          text: "Accessibility",
-          link: pages_foundation_path(:accessibility),
-          active: current_page?(pages_foundation_path(:accessibility)),
+        { link: "#", text: "FOUNDATIONS", items: [
+          {
+            text: "Design Principles",
+            link: pages_foundation_path(:design_principles),
+            active: current_page?(pages_foundation_path(:design_principles)),
+          },
+          {
+            text: "Accessibility",
+            link: pages_foundation_path(:accessibility),
+            active: current_page?(pages_foundation_path(:accessibility)),
+          }]
         }
       ]
     } %>
   <% end %>
   <% if current_page_content? %>
-    <h2 class="t-sage-heading-6 docs-sidebar-heading">CONTENT</h2>
-    <%= sage_component SageNav, { 
+    <%= sage_component SageNav, {
       items: [
-        {
-          text: "Voice & Tone",
-          link: pages_content_path(:voice_tone),
-          active: current_page?(pages_content_path(:voice_tone)),
-        },
-        {
-          text: "Grammar",
-          link: pages_content_path(:grammar),
-          active: current_page?(pages_content_path(:grammar)),
-        },
-        {
-          text: "Branding",
-          link: pages_content_path(:branding),
-          active: current_page?(pages_content_path(:branding)),
-        },
-        {
-          text: "Product Content",
-          link: pages_content_path(:content),
-          active: current_page?(pages_content_path(:content)),
-        },
-        {
-          text: "Vocabulary",
-          link: pages_content_path(:vocabulary),
-          active: current_page?(pages_content_path(:vocabulary)),
-        }
+        { link: "#", text: "CONTENT", items: [
+          {
+            text: "Voice & Tone",
+            link: pages_content_path(:voice_tone),
+            active: current_page?(pages_content_path(:voice_tone)),
+          },
+          {
+            text: "Grammar",
+            link: pages_content_path(:grammar),
+            active: current_page?(pages_content_path(:grammar)),
+          },
+          {
+            text: "Branding",
+            link: pages_content_path(:branding),
+            active: current_page?(pages_content_path(:branding)),
+          },
+          {
+            text: "Product Content",
+            link: pages_content_path(:content),
+            active: current_page?(pages_content_path(:content)),
+          },
+          {
+            text: "Vocabulary",
+            link: pages_content_path(:vocabulary),
+            active: current_page?(pages_content_path(:vocabulary)),
+          }
+        ] }
       ]
     } %>
   <% end %>
   <% if current_page_design? %>
-    <h2 class="t-sage-heading-6 docs-sidebar-heading">DESIGN</h2>
-    <%= sage_component SageNav, { 
+    <%= sage_component SageNav, {
       items: [
-        {
-          text: "Colors",
-          link: pages_design_path(:color),
-          active: current_page?(pages_design_path(:color)),
-        },
-        {
-          text: "Typography",
-          link: pages_design_path(:typography),
-          active: current_page?(pages_design_path(:typography)),
-        },
-        {
-          text: "Icons",
-          link: pages_design_path(:icon),
-          active: current_page?(pages_design_path(:icon)),
-        },
-        {
-          text: "Motion",
-          link: pages_design_path(:motion),
-          active: current_page?(pages_design_path(:motion)),
-        }
+        { link: "#", text: "DESIGN", items: [
+          {
+            text: "Colors",
+            link: pages_design_path(:color),
+            active: current_page?(pages_design_path(:color)),
+          },
+          {
+            text: "Typography",
+            link: pages_design_path(:typography),
+            active: current_page?(pages_design_path(:typography)),
+          },
+          {
+            text: "Icons",
+            link: pages_design_path(:icon),
+            active: current_page?(pages_design_path(:icon)),
+          },
+          {
+            text: "Motion",
+            link: pages_design_path(:motion),
+            active: current_page?(pages_design_path(:motion)),
+          }
+        ] }
       ]
     } %>
   <% end %>
   <% if current_page_layout? %>
-    <h2 class="t-sage-heading-6 docs-sidebar-heading">LAYOUT</h2>
-    <%= sage_component SageNav, { 
+    <%= sage_component SageNav, {
       items: [
-        {
-          text: "Containers",
-          link: pages_layout_path(:container),
-          active: current_page?(pages_layout_path(:container)),
-        },
-        {
-          text: "Panels and Cards",
-          link: pages_layout_path(:panels_cards),
-          active: current_page?(pages_layout_path(:panels_cards)),
-        },
-        {
-          text: "Spacing",
-          link: pages_layout_path(:spacing),
-          active: current_page?(pages_layout_path(:spacing)),
-        },
-        {
-          text: "12 Col Grid",
-          link: pages_layout_path(:grid),
-          active: current_page?(pages_layout_path(:grid)),
-        },
-        {
-          text: "Grid Templates",
-          link: pages_layout_path(:grid_templates),
-          active: current_page?(pages_layout_path(:grid_templates)),
-        }
+        { link: "#", text: "LAYOUT", items: [
+          {
+            text: "Containers",
+            link: pages_layout_path(:container),
+            active: current_page?(pages_layout_path(:container)),
+          },
+          {
+            text: "Panels and Cards",
+            link: pages_layout_path(:panels_cards),
+            active: current_page?(pages_layout_path(:panels_cards)),
+          },
+          {
+            text: "Spacing",
+            link: pages_layout_path(:spacing),
+            active: current_page?(pages_layout_path(:spacing)),
+          },
+          {
+            text: "12 Col Grid",
+            link: pages_layout_path(:grid),
+            active: current_page?(pages_layout_path(:grid)),
+          },
+          {
+            text: "Grid Templates",
+            link: pages_layout_path(:grid_templates),
+            active: current_page?(pages_layout_path(:grid_templates)),
+          }
+        ] }
       ]
     } %>
   <% end %>
   <% if current_page_components? %>
-    <h2 class="t-sage-heading-6 docs-sidebar-heading">COMPONENTS</h2>
-    <% 
+    <%
       component_list = []
       sorted_sage_components.each do |component|
         component_list << {
@@ -119,8 +122,10 @@
         }
       end
     %>
-    <%= sage_component SageNav, { 
-      items: component_list
+    <%= sage_component SageNav, {
+      items: [
+        { link: "#", text: "COMPONENTS", items: component_list }
+      ]
     } %>
   <% end %>
 
