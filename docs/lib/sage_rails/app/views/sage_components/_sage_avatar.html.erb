@@ -11,7 +11,7 @@
   <% end %>
 >
   <% if component.image %>
-    <img alt="<%= component.image[:alt] %>" class="sage-avatar__image" src="<%= component.image[:src] %>">
+    <img alt="<%= component.image[:alt] || "" %>" class="sage-avatar__image" src="<%= component.image[:src] %>">
   <% else %>
     <svg class="sage-avatar__initials" viewBox="0 0 32 32">
       <text x="16" y="20"><%= component.initials %></text>
