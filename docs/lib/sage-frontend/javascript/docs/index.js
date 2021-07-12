@@ -27,5 +27,5 @@ if (document.querySelector('.sage-docs') !== null) {
     Sage.docs.inputhelper.init();
   }
 
-  document.addEventListener("DOMContentLoaded", Sage.docs.scrollToActiveNavItem.init);
+  window.addEventListener("load", Sage.docs.scrollToActiveNavItem.init);
 }
