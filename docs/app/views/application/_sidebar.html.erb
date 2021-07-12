@@ -2,7 +2,7 @@
   <% if current_page_foundations? %>
     <%= sage_component SageNav, {
       items: [
-        { link: "#", text: "FOUNDATIONS", items: [
+        { link: pages_foundation_path(:design_principles), text: "FOUNDATIONS", items: [
           {
             text: "Design Principles",
             link: pages_foundation_path(:design_principles),
@@ -20,7 +20,7 @@
   <% if current_page_content? %>
     <%= sage_component SageNav, {
       items: [
-        { link: "#", text: "CONTENT", items: [
+        { link: pages_content_path(:voice_tone), text: "CONTENT", items: [
           {
             text: "Voice & Tone",
             link: pages_content_path(:voice_tone),
@@ -53,7 +53,7 @@
   <% if current_page_design? %>
     <%= sage_component SageNav, {
       items: [
-        { link: "#", text: "DESIGN", items: [
+        { link: pages_design_path(:color), text: "DESIGN", items: [
           {
             text: "Colors",
             link: pages_design_path(:color),
@@ -81,7 +81,7 @@
   <% if current_page_layout? %>
     <%= sage_component SageNav, {
       items: [
-        { link: "#", text: "LAYOUT", items: [
+        { link: pages_layout_path(:container), text: "LAYOUT", items: [
           {
             text: "Containers",
             link: pages_layout_path(:container),
@@ -124,7 +124,7 @@
     %>
     <%= sage_component SageNav, {
       items: [
-        { link: "#", text: "COMPONENTS", items: component_list }
+        { link: pages_component_path(sorted_sage_components[0][:title]), text: "COMPONENTS", items: component_list }
       ]
     } %>
   <% end %>

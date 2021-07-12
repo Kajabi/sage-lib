@@ -5,6 +5,7 @@ require('./example')
 require('./meter')
 require('./inputhelper')
 require('./example')
+require('./scroll-to-active-nav-item')
 
 // Conditional routing
 // NOTE: modules must be imported above to be initialized below
