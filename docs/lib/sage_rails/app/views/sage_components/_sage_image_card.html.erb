@@ -1,0 +1,23 @@
+<div
+  class="sage-image-card <%= component.generated_css_classes %>"
+  <%= component.generated_html_attributes.html_safe %>
+>
+  <img class="sage-image-card__image" src="<%= component.image %>" alt="<%= component.alt_text %>">
+  
+  <div class="sage-image-card__body ">
+    <h3 class="sage-image-card__title sage-spacer-bottom-xs"><%= component.title %></h3>
+
+    <%= component.content %>
+
+    <%= sage_component SageButton, {
+      value: component.link[:value],
+      style: "primary",
+      subtle: true,
+      icon: { name: "arrow-right", style: "right" },
+      attributes: {
+        "href": component.link[:href],
+        "title": "View more",
+      }
+    } %>
+  </div>
+</div>
