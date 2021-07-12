@@ -385,7 +385,7 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
   white-space: nowrap;
   pointer-events: none;
 
-  @include position(($-dropdown-height / 2), unset, unset, ($-dropdown-trigger-padding-x - $-dropdown-trigger-padding-label));
+  @include position(50%, unset, unset, ($-dropdown-trigger-padding-x - $-dropdown-trigger-padding-label));
   @include truncate();
 
   .sage-dropdown--value-selected & {
