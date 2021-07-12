@@ -158,6 +158,7 @@
       transform $outline-animation-speed ease-in-out;
     pointer-events: none;
     opacity: 0;
+    will-change: transform;
   }
 
   &:focus:not(:disabled):not([aria-disabled="true"]),
