@@ -3,13 +3,13 @@
 
 change_value = component.change.present? ? component.change[:value] : "No change"
 change_type = component.change.present? ? component.change[:type] : "neutral"
-label_configs = { color: "draft", value: change_value } 
+label_configs = { color: "draft", value: change_value }
 if change_type == "positive"
-  label_configs = { color: "published", value: change_value, icon: "caret-up" } 
+  label_configs = { color: "published", value: change_value, icon: "caret-up" }
 elsif change_type == "negative"
-  label_configs = { color: "danger", value: change_value, icon: "caret-down" } 
+  label_configs = { color: "danger", value: change_value, icon: "caret-down" }
 elsif change_type == "neutral"
-  label_configs = { color: "draft", value: change_value, } 
+  label_configs = { color: "draft", value: change_value, }
 end
 %>
 <article
@@ -38,7 +38,17 @@ end
   </div>
   <% if component.link.present? %>
     <footer class="sage-stat-box__footer">
-      <a class="sage-stat-box__link" href="<%= component.link[:href] %>"><%= component.link[:value] %></a>
+      <%= sage_component SageButton, {
+        style: "primary",
+        subtle: true,
+        value: component.link[:value],
+        icon: { name: "arrow-right", style: "right" },
+        subtle: true,
+        css_classes: "sage-stat-box__link",
+        attributes: {
+          href: component.link[:href]
+        }
+      } %>
     </footer>
   <% end %>
 </article>

@@ -16,10 +16,6 @@ $-expandable-card-padding-xs: sage-spacing(xs);
 .sage-expandable-card__body-bordered {
   margin-top: sage-spacing(xs);
 
-  [aria-expanded] + & {
-    overflow: hidden;
-  }
-
   [aria-expanded="false"] + & {
     height: 0;
     margin: 0;
@@ -48,6 +44,8 @@ $-expandable-card-padding-xs: sage-spacing(xs);
 }
 
 .sage-expandable-card__trigger {
+  display: inline-flex;
+
   &::before {
     justify-content: center;
     margin-right: rem(4px);

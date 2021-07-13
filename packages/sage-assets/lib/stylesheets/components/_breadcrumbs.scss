@@ -70,6 +70,11 @@ $-breadcrumb-disabled-color: sage-color(grey, 500);
 
     @include sage-tab-underline(".sage-breadcrumbs__link--current");
   }
+
+  .sage-breadcrumbs:not(.sage-breadcrumbs--progressbar) & {
+    @include sage-focus-outline($outline-offset-inline: 6px, $outline-offset-block: 0);
+    @include sage-focus-outline--update-color(sage-color(primary));
+  }
 }
 
 .sage-breadcrumbs__link--current {

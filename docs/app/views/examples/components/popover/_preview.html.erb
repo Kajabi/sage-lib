@@ -1,3 +1,46 @@
+<%
+positions = [
+  {
+    setting: "top",
+    label: "Top",
+    icon: "arrow-up",
+  },
+  {
+    setting: "top-right",
+    label: "Top Right",
+    icon: {
+      name: "arrow-up",
+      style: "right",
+    }
+  },
+  {
+    setting: "right",
+    label: "Right",
+    icon: {
+      name: "arrow-right",
+      style: "right",
+    },
+  },
+  {
+    setting: "bottom",
+    label: "Bottom",
+    icon: "arrow-down",
+  },
+  {
+    setting: "bottom-right",
+    label: "Bottom Right",
+    icon: {
+      name: "arrow-down",
+      style: "right",
+    }
+  },
+  {
+    setting: "left",
+    label: "Left",
+    icon: "arrow-left",
+  }
+]
+%>
 <%= sage_component SageCardBlock, {} do %>
   <%= sage_component SageLabel, {
     color: "draft",
@@ -13,12 +56,20 @@
   link: {
     href: "#",
     name: "Learn more about a thing",
-  }
+  },
 } do %>
-  <p>This is a block of content.</p>
-  <p>This is a block of content.</p>
-  <p>This is a block of content.</p>
-  <p>This is a block of content.</p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Mauris erat urna, eleifend quis mollis ut, vehicula vitae elit.
+    Quisque elementum risus congue, placerat tellus vulputate, ornare neque.
+    Mauris eu quam nisi.
+  </p>
+  <p>
+    Ut elementum, nulla sit amet viverra vulputate, mi risus dignissim odio, vel aliquam lorem mi nec diam.
+    Donec bibendum tincidunt est, non ultricies nisi efficitur eget.
+    Integer et libero aliquam, efficitur ante ac, auctor dolor.
+    Vivamus aliquet vehicula sollicitudin.
+  </p>
 <% end %>
 
 <%= sage_component SageCardBlock, {} do %>
@@ -38,12 +89,14 @@
     name: "Learn more",
   }
 } do %>
-  <div class="t-sage-body-small sage-spacer-bottom-xs t-sage--color-charcoal">
-    <p>This is a block of content.</p>
-    <p>This is a block of content.</p>
-    <p>This is a block of content.</p>
-    <p>This is a block of content.</p>
-  </div>
+  <%= content_for :sage_popover_media do %>
+    <%= image_tag("card-placeholder-lg.png", alt: "") %>
+  <% end %>
+
+  <p>
+    We can add graphics as well as freeform content blocks inside Popovers.
+    We can even provide a custom css class on the content container for additional finesse.
+  </p>
 <% end %>
 
 <%= sage_component SageCardBlock, {} do %>
@@ -54,12 +107,12 @@
 <% end %>
 
 <%= sage_component SagePopover, {
-  custom_content_class: "u-popover-customized",
+  custom_content_class: "demo-custom-popover-panel",
   icon: "question-circle",
   trigger_value: "Open Menu",
   trigger_icon_only: true,
 } do %>
-  <p>I can put whatever content I want in here and use the cusotm class as a hook to style it like a good 'ol BEM mixin!</p>
+  <p>I can put whatever content I want in here and use the custom class as a hook to style it like a good 'ol BEM mixin!</p>
 <% end %>
 
 <%= sage_component SageCardBlock, {} do %>
@@ -70,12 +123,13 @@
 <% end %>
 
 <%= sage_component SagePopover, {
+  custom_content_class: "demo-custom-popover-panel",
   icon: "send-message",
   trigger_icon_only: false,
   trigger_value: "Send Test Email",
   popover_position: "bottom",
 } do %>
-  <form>
+  <form style="width: 100%">
     <div class="sage-input">
       <input type="email" id="form__email1" class="sage-input__field" name="form__email1" placeholder="Email Address" required>
       <label for="form__email1" class="sage-input__label">Email Address</label>
@@ -95,82 +149,23 @@
   } %>
 <% end %>
 
-<div class="sage-card__row">
-
-  <%= sage_component SagePopover, {
-    title: "Popover Top",
-    icon: "arrow-up",
-    trigger_icon_only: false,
-    trigger_value: "Top",
-    popover_position: "top",
-    link: {
-      href: "#",
-      name: "Learn more",
-    }
-  } do %>
-    <div class="t-sage-body-small sage-spacer-bottom-xs t-sage--color-charcoal">
+<%= sage_component SageCardRow, { grid_template: "oo" } do %>
+  <% positions.each do | position | %>
+    <%= sage_component SagePopover, {
+      title: "Popover #{position[:label]}",
+      icon: position[:icon],
+      trigger_icon_only: false,
+      trigger_value: position[:label],
+      popover_position: position[:setting],
+      link: {
+        href: "#",
+        name: "Learn more",
+      }
+    } do %>
       <p>This is a block of content.</p>
       <p>This is a block of content.</p>
       <p>This is a block of content.</p>
       <p>This is a block of content.</p>
-    </div>
+    <% end %>
   <% end %>
-
-  <%= sage_component SagePopover, {
-    title: "Popover Right",
-    icon: "arrow-right",
-    trigger_icon_only: false,
-    trigger_value: "Right",
-    popover_position: "right",
-    link: {
-      href: "#",
-      name: "Learn more",
-    }
-  } do %>
-    <div class="t-sage-body-small sage-spacer-bottom-xs t-sage--color-charcoal">
-      <p>This is a block of content.</p>
-      <p>This is a block of content.</p>
-      <p>This is a block of content.</p>
-      <p>This is a block of content.</p>
-    </div>
-  <% end %>
-
-  <%= sage_component SagePopover, {
-    title: "Popover Bottom",
-    icon: "arrow-down",
-    trigger_icon_only: false,
-    trigger_value: "Bottom",
-    popover_position: "bottom",
-    link: {
-      href: "#",
-      name: "Learn more",
-    }
-  } do %>
-    <div class="t-sage-body-small sage-spacer-bottom-xs t-sage--color-charcoal">
-      <p>This is a block of content.</p>
-      <p>This is a block of content.</p>
-      <p>This is a block of content.</p>
-      <p>This is a block of content.</p>
-    </div>
-  <% end %>
-
-  <%= sage_component SagePopover, {
-    title: "Popover Left",
-    icon: "arrow-left",
-    trigger_icon_only: false,
-    trigger_value: "Left",
-    popover_position: "left",
-    link: {
-      href: "#",
-      name: "Learn more",
-    }
-  } do %>
-    <div class="t-sage-body-small sage-spacer-bottom-xs t-sage--color-charcoal">
-      <p>This is a block of content.</p>
-      <p>This is a block of content.</p>
-      <p>This is a block of content.</p>
-      <p>This is a block of content.</p>
-    </div>
-  <% end %>
-
-</div>
+<% end %>

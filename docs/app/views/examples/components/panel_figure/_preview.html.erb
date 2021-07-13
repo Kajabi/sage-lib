@@ -1,0 +1,91 @@
+<%
+sample_copy = md("
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Morbi rhoncus mauris ut turpis gravida bibendum.
+Donec feugiat accumsan velit et semper.
+Ut elementum id leo ac fringilla.
+")
+%>
+
+<%= md("
+A Panel Figure typically contains an image that occupies a substantive space in the panel.
+Any media content can be passed in through the component' content block,
+but note that Wistia objects need a little additional styling that can be enabled with `is_wistia: true`.
+", use_sage_type: true) %>
+
+<%= sage_component SagePanelSubheader, { title: "Bleed options" } %>
+<%= sage_component SagePanelRow, { grid_template: "ot", vertical_align: "start" } do %>
+  <%= sage_component SagePanel, {} do %>
+    <%= sage_component SagePanelFigure, {} do %>
+      <%= image_tag("card-placeholder-lg.png", alt: "") %>
+    <% end %>
+    <p>By default, Panel figures sit inside the normal padding of a panel.</p>
+  <% end %>
+
+  <%= sage_component SagePanel, {} do %>
+    <%= sage_component SagePanelFigure, { bleed: "top" } do %>
+      <%= image_tag("card-placeholder-lg.png", alt: "") %>
+    <% end %>
+    <p>A common pattern for a figure at the top of a panel is for it to be set to bleed to the edges of the panel.</p>
+  <% end %>
+
+  <%= sage_component SagePanel, {} do %>
+    <p>In larger or taller panels, a figure may sit among other content.</p>
+    <%= sage_component SagePanelFigure, { bleed: "sides" } do %>
+      <%= image_tag("card-placeholder-lg.png", alt: "") %>
+    <% end %>
+    <p>In such cases a side bleed option can be used.</p>
+  <% end %>
+
+  <%= sage_component SagePanel, {} do %>
+    <p>Less frequently, a figure at the very bottom of a panel may benefit from bleeding to those lower edges.</p>
+    <%= sage_component SagePanelFigure, { bleed: "bottom" } do %>
+      <%= image_tag("card-placeholder-lg.png", alt: "") %>
+    <% end %>
+  <% end %>
+<% end %>
+
+<%= sage_component SagePanelSubheader, { title: "Aspect ratio" } %>
+<%= sage_component SagePanelRow, { grid_template: "o", vertical_align: "start" } do %>
+  <%= sage_component SagePanel, {} do %>
+    <%= sage_component SagePanelFigure, { bleed: "top" } do %>
+      <%= image_tag("card-placeholder-lg.png", alt: "") %>
+    <% end %>
+    <p>By default, Panel figures are rendered using the image's native aspect ratio and scale accordingly.</p>
+  <% end %>
+
+  <%= sage_component SagePanel, {} do %>
+    <%= sage_component SagePanelFigure, { bleed: "top", aspect_ratio: 1 } do %>
+      <%= image_tag("card-placeholder-lg.png", alt: "") %>
+    <% end %>
+    <p>Square aspect ratio. Lorem ipsum dolor sit amet consectitor.</p>
+  <% end %>
+
+  <%= sage_component SagePanel, {} do %>
+    <%= sage_component SagePanelFigure, { bleed: "top", aspect_ratio: 0.8 } do %>
+      <%= image_tag("card-placeholder-lg.png", alt: "") %>
+    <% end %>
+    <p>A taller aspect ratio. Lorem ipsum dolor sit amet consectitor.</p>
+  <% end %>
+<% end %>
+
+<%= sage_component SagePanelSubheader, { title: "Padding and background" } %>
+<%= sage_component SagePanelRow, { grid_template: "o", vertical_align: "start" } do %>
+  <%= sage_component SagePanel, {} do %>
+    <%= sage_component SagePanelFigure, { bleed: "top", padded: true } do %>
+      <%= image_tag("card-placeholder-lg.png", alt: "") %>
+    <% end %>
+    <p>Padded figure with default background color (Grey 100).</p>
+  <% end %>
+
+  <%= sage_component SagePanel, {} do %>
+    <%= sage_component SagePanelFigure, {
+      bleed: "top",
+      padded: true,
+      background_color: SageTokens::COLOR_PALETTE[:GREY_500],
+    } do %>
+      <%= image_tag("card-placeholder-lg.png", alt: "") %>
+    <% end %>
+    <p>Padded figure with custom background color (Grey 500).</p>
+  <% end %>
+<% end %>

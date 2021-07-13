@@ -99,10 +99,6 @@ $-textarea-color-success: map-get($sage-field-colors, success);
     color: sage-color(charcoal, 100);
   }
 
-  &:hover:not(:disabled) {
-    border-color: currentColor;
-  }
-
   &:focus:not(:disabled),
   &:active:not(:disabled) {
     border-color: $-textarea-color-success;
@@ -117,6 +113,10 @@ $-textarea-color-success: map-get($sage-field-colors, success);
       @include floating-label-textarea-active();
       color: $-textarea-color-success;
     }
+  }
+
+  &:hover:not(:disabled) {
+    border-color: currentColor;
   }
 
   /* Separated so IE/Edge does not ignore focus styles. Note that Edge will not support these states */

@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { SageTokens } from '../configs';
 import { Icon } from '../Icon';
+import { Button } from '../Button';
 import { Label } from '../Label';
 import { LABEL_COLORS, TYPE } from './configs'; // component configurations as needed
 
@@ -54,7 +56,16 @@ export const StatBox = ({
       </div>
       {link && (
         <footer className="sage-stat-box__footer">
-          <a className="sage-stat-box__link" href={link.href}>{link.value}</a>
+          <Button
+            color={Button.COLORS.PRIMARY}
+            href={link.href}
+            icon={SageTokens.ICONS.ARROW_RIGHT}
+            iconPosition={Button.ICON_POSITIONS.RIGHT}
+            subtle={true}
+            className="sage-stat-box__link"
+          >
+            {link.value}
+          </Button>
         </footer>
       )}
     </article>

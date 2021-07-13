@@ -86,7 +86,7 @@ $-alert-icon-colors: (
 }
 
 .sage-alert__close {
-  overflow: hidden;
+  align-self: flex-start;
   height: rem(20px);
   width: rem(20px);
   padding: 0;
@@ -95,11 +95,15 @@ $-alert-icon-colors: (
   background-color: transparent;
   border: 0;
   appearance: none;
+
   @each $name, $color in $-alert-colors {
     .sage-alert--#{$name} & {
       color: sage-color($color, 400);
+      @include sage-focus-outline($outline-offset-inline: 3px, $outline-offset-block: 3px);
+      @include sage-focus-outline--update-color(sage-color($color, 400));
     }
   }
+
   &:hover {
     opacity: 0.7;
   }
@@ -107,4 +111,11 @@ $-alert-icon-colors: (
 
 .sage-alert__actions {
   display: flex;
+
+  @each $name, $color in $-alert-colors {
+    .sage-alert--#{$name} & > a {
+      @include sage-focus-outline($outline-offset-inline: 6px, $outline-offset-block: 0);
+      @include sage-focus-outline--update-color(sage-color($color, 400));
+    }
+  }
 }

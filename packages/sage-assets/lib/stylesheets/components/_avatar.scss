@@ -112,7 +112,7 @@ $-avatar-group-item-sizes: (
       bottom: 0;
       left: rem(16px);
     }
-  
+
     &:nth-child(4) {
       top: rem(8px);
       right: rem(8px);
@@ -174,6 +174,7 @@ $-avatar-group-item-sizes: (
   position: relative;
   z-index: sage-z-index(default, 2);
   grid-area: full;
+  height: 100%;
   width: 100%;
   border-radius: sage-border(radius-round);
   object-fit: cover;

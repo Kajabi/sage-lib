@@ -99,6 +99,10 @@ $-label-inset-border: 0 0 0 1px inset;
       &:hover:not(:focus):not(:active):not(:disabled):not(.disabled) {
         color: sage-color-combo($-color-name, default, foreground-accent);
       }
+
+      &::after {
+        border-radius: $-label-border-radius;
+      }
     }
 
     .sage-btn {
@@ -131,7 +135,7 @@ $-label-inset-border: 0 0 0 1px inset;
       width: $-label-interactive-icon-size-small;
       min-height: $-label-interactive-icon-size;
       margin: auto 0;
-      border-radius: 0 sage-border(radius) sage-border(radius) 0;
+      border-radius: 0 $-label-border-radius $-label-border-radius 0;
 
       &::before {
         font-weight: sage-font-weight(bold);
@@ -141,7 +145,7 @@ $-label-inset-border: 0 0 0 1px inset;
       &::after {
         width: $-label-interactive-icon-size;
         height: $-label-interactive-icon-size;
-        border-radius: 0 sage-border(radius) sage-border(radius) 0;
+        border-radius: 0 $-label-border-radius $-label-border-radius 0;
       }
 
       &:focus {

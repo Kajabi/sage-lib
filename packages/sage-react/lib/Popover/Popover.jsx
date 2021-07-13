@@ -4,6 +4,7 @@ import classnames from 'classnames';
 import uuid from 'react-uuid';
 import { Button } from '../Button';
 import { SageTokens } from '../configs';
+import { POPOVER_POSITIONS } from './configs';
 
 export const Popover = ({
   className,
@@ -12,8 +13,10 @@ export const Popover = ({
   icon,
   iconOnly,
   label,
+  media,
   moreLinkURL,
   moreLinkText,
+  position,
   title,
   ...rest
 }) => {
@@ -38,6 +41,7 @@ export const Popover = ({
     className,
     {
       'sage-popover--is-expanded': selfActive,
+      [`sage-popover--${position}`]: position,
     }
   );
 
@@ -82,10 +86,13 @@ export const Popover = ({
         tabIndex={-1}
       />
       <div className="sage-popover__panel">
-        {title && (
-          <h5 className="sage-popover__title">{title}</h5>
+        {media && (
+          <div className="sage-popoever__media">{media}</div>
         )}
         <div className={contentClassNames}>
+          {title && (
+            <h5 className="sage-popover__title">{title}</h5>
+          )}
           {children}
         </div>
         {moreLinkURL && (
@@ -108,6 +115,8 @@ export const Popover = ({
   );
 };
 
+Popover.POSITIONS = POPOVER_POSITIONS;
+
 Popover.defaultProps = {
   className: null,
   children: null,
@@ -115,8 +124,10 @@ Popover.defaultProps = {
   icon: SageTokens.ICONS.QUESTION_CIRCLE,
   iconOnly: true,
   label: 'Learn more',
+  media: null,
   moreLinkURL: null,
   moreLinkText: 'Learn more',
+  position: Popover.POSITIONS.BOTTOM,
   title: null,
 };
 
@@ -127,7 +138,9 @@ Popover.propTypes = {
   icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),
   iconOnly: PropTypes.bool,
   label: PropTypes.string,
+  media: PropTypes.node,
   moreLinkURL: PropTypes.string,
   moreLinkText: PropTypes.string,
+  position: PropTypes.oneOf(Object.values(Popover.POSITIONS)),
   title: PropTypes.string,
 };

@@ -1,0 +1,80 @@
+////
+/// Panel
+///
+/// @group sage/components/panel-figure
+////
+
+.sage-panel__figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 100%;
+  border-radius: sage-border(radius);
+  background-color: var(--sage-figure-background-color, #{$-panel-figure-default-background-color});
+  
+  img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+.sage-panel__figure--aspect-ratio {
+  position: relative;
+  height: 0;
+  padding-top: calc(100% / var(--sage-figure-aspect-ratio));
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+  }
+}
+
+.sage-panel__figure--padded {
+  align-items: flex-end;
+
+  img {
+    width: calc(100% - #{$-panel-figure-padding * 2});
+    height: calc(100% - #{$-panel-figure-padding});
+  }
+
+  &:not(.sage-panel__figure--aspect-ratio) {
+    padding-top: $-panel-figure-padding;
+  }
+
+  &.sage-panel__figure--aspect-ratio {
+    img {
+      top: calc(50% + #{$-panel-figure-padding / 2});
+    }
+  }
+}
+
+.sage-panel__figure--bleed-bottom {
+  width: calc(100% + #{2 * sage-spacing()});
+  margin: 0 (-1 * sage-spacing()) (-1 * sage-spacing());
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.sage-panel__figure--bleed-sides {
+  width: calc(100% + #{2 * sage-spacing()});
+  margin: 0 (-1 * sage-spacing());
+  border-radius: 0;
+}
+
+.sage-panel__figure--bleed-top {
+  width: calc(100% + #{2 * sage-spacing()});
+  margin: (-1 * sage-spacing()) (-1 * sage-spacing()) 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.sage-panel__figure--wistia {
+  display: block;
+}

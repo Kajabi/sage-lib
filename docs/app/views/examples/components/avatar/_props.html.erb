@@ -18,12 +18,26 @@
   <td><%= md('`false`') %></td>
 </tr>
 <tr>
+  <td><%= md('`image`') %></td>
+  <td><%= md('Allows for configuration of an image.') %>
+  </td>
+  <td>
+  <%= md('```
+image: {
+  alt: String (optional),
+  src: String,
+}
+    ') %>
+  </td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
   <td><%= md('`initials`') %></td>
   <td><%= md('
     The initials to display in the avatar circle
   ') %></td>
   <td><%= md('String') %></td>
-  <td><%= md('`required`') %></td>
+  <td><%= md('`nil`') %></td>
 </tr>
 <tr>
   <td><%= md('`size`') %></td>

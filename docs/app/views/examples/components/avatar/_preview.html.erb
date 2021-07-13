@@ -11,6 +11,14 @@
 
   <!-- Showing custom class -->
   <%= sage_component SageAvatar, { color: "orange", initials: "KJ", css_classes: "my-custom-class" } %>
+
+  <!-- Showing profile image -->
+  <%= sage_component SageAvatar, {
+    image: {
+      alt: "Court's profile image",
+      src: "/assets/avatar/court.png"
+    }
+  } %>
 </div>
 
 <h3>Avatar centered + custom size</h3>

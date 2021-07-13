@@ -120,10 +120,6 @@ $-input-transition: border 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     color: sage-color(charcoal, 100);
   }
 
-  &:hover:not(:disabled) {
-    border-color: currentColor;
-  }
-
   &:focus:not(:disabled),
   &:active:not(:disabled) {
     outline: none;
@@ -138,6 +134,10 @@ $-input-transition: border 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
       @include floating-label-active();
       color: $-input-color-success;
     }
+  }
+
+  &:hover:not(:disabled) {
+    border-color: currentColor;
   }
 
   &:valid:not(:placeholder-shown) {

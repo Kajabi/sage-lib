@@ -111,32 +111,34 @@ $-banner-el-icon: "before";
   &:hover {
     text-decoration: underline;
   }
-
-  @include sage-focus-outline();
 }
 
-.sage-banner__close {
+.sage-banner__close.sage-btn--subtle {
+  @include sage-focus-outline($outline-offset-inline: 4px, $outline-offset-block: 0);
+
   right: sage-spacing(card);
   // Note: `position: absolute` is set in sage button
 }
 
 .sage-banner__close,
 .sage-banner__link {
-  @include sage-focus-outline--update-color(map-get(map-get($-banner-colors, default), text));
+  &.sage-btn--subtle {
+    @include sage-focus-outline--update-color(map-get(map-get($-banner-colors, default), text));
 
-  &:hover {
-    color: map-get(map-get($-banner-colors, default), text-hover);
-  }
-
-  @each $name, $configs in $-banner-colors {
-    /* stylelint-disable max-nesting-depth */
-    .sage-banner--#{$name} & {
-      @include sage-focus-outline--update-color(map-get($configs, text));
-
-      &:hover {
-        color: map-get($configs, text-hover);
-      }
+    &:hover {
+      color: map-get(map-get($-banner-colors, default), text-hover);
     }
-    /* stylelint-enable max-nesting-depth */
+
+    @each $name, $configs in $-banner-colors {
+      /* stylelint-disable max-nesting-depth */
+      .sage-banner.sage-banner--#{$name} & {
+        @include sage-focus-outline--update-color(map-get($configs, text));
+
+        &:hover {
+          color: map-get($configs, text-hover);
+        }
+      }
+      /* stylelint-enable max-nesting-depth */
+    }
   }
 }
