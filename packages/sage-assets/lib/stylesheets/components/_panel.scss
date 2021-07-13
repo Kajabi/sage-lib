@@ -3,7 +3,13 @@
 ///
 /// @group sage/components/panel
 ////
+$-panel-figure-padding: sage-spacing(lg);
+$-panel-figure-default-background-color: sage-color(grey, 100);
 
+:root {
+  --sage-figure-aspect-ratio: auto;
+  --sage-figure-background-color: #{$-panel-figure-default-background-color};
+}
 
 .sage-panel {
   @include sage-panel;
@@ -42,46 +48,7 @@
   margin: 0 -#{sage-spacing(panel)};
 }
 
-.sage-panel__figure {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  width: 100%;
-  border-radius: sage-border(radius);
-
-  img {
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
-}
-
-.sage-panel__figure--bleed-bottom {
-  width: calc(100% + #{2 * sage-spacing()});
-  margin: 0 (-1 * sage-spacing()) (-1 * sage-spacing());
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
-
-.sage-panel__figure--bleed-sides {
-  width: calc(100% + #{2 * sage-spacing()});
-  margin: 0 (-1 * sage-spacing());
-  border-radius: 0;
-}
-
-.sage-panel__figure--bleed-top {
-  width: calc(100% + #{2 * sage-spacing()});
-  margin: (-1 * sage-spacing()) (-1 * sage-spacing()) 0;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-.sage-panel__figure--wistia {
-  display: block;
-}
+// Panel Figure moved to its own file
 
 .sage-panel__footer {
   @include sage-grid-panel-row();
@@ -173,6 +140,10 @@
 
 .sage-panel__title {
   @extend %t-sage-heading-5;
+
+  .sage-media-tile__header & {
+    @include clamp(1);
+  }
 }
 
 .sage-panel-set {

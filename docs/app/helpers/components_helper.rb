@@ -557,6 +557,16 @@ module ComponentsHelper
         react_component_slug: "sage-panel--default"
       },
       {
+        title: "panel_figure",
+        description: "Panel figures allow a veriety of options for display a graphic inside of a panel.",
+        scss: "done",
+        docs: "done",
+        rails: "done",
+        react: "todo",
+        a11y: "done",
+        react_component_slug: "sage-panel--default"
+      },
+      {
         title: "panel_controls",
         description: "Panel controls provides a unified interface for controlling lists inside of a panel.",
         scss: "doing",

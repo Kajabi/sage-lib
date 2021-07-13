@@ -247,39 +247,9 @@ Dividers can also be set to extend to the panel edges with the `--full-bleed` mo
 
 <%= sage_component SagePanelHeader, { title: "Panel Figure <code>.sage-panel__figure</code>".html_safe } %>
 <%= md("
-A Panel Figure contains an image that occupies a substantive space in the panel,
-typically filling edge to edge, and possibly even full bleed in the panel.
-We also have a modifier `.sage-panel__figure--wistia` for when Wistia videos are embedded in a figure.
+A Panel Figure contains an image that occupies a substantive space in the panel, typically filling edge to edge.
+See the #{link_to("Panel Figure component", pages_component_path("panel_figure"))} for more details.
 ", use_sage_type: true) %>
-
-<%= sage_component SagePanelSubheader, { title: "Example:" } %>
-<%= sage_component SagePanel, {} do %>
-  <p><i>This example shows a standard figure in context of this existing panel</i>.</p>
-  <%= sage_component SagePanelFigure, {} do %>
-    <%= image_tag("card-placeholder-lg.png", alt: "") %>
-  <% end %>
-  <p><i>This example shows a figure in context of this existing panel with side bleed</i>.</p>
-  <%= sage_component SagePanelFigure, { bleed: "sides" } do %>
-    <%= image_tag("card-placeholder-lg.png", alt: "") %>
-  <% end %>
-<% end %>
-<p><i>These examples demonstrate figures with top and bottom bleed respectively</i>.</p>
-<%= sage_component SagePanel, {} do %>
-  <%= sage_component SagePanelFigure, { bleed: "top" } do %>
-    <%= image_tag("card-placeholder-lg.png", alt: "") %>
-  <% end %>
-  <%= sage_component SagePanelBlock, { type_block: true } do %>
-    <%= sample_copy.html_safe %>
-  <% end %>
-<% end %>
-<%= sage_component SagePanel, {} do %>
-  <%= sage_component SagePanelBlock, { type_block: true } do %>
-    <%= sample_copy.html_safe %>
-  <% end %>
-  <%= sage_component SagePanelFigure, { bleed: "bottom" } do %>
-    <%= image_tag("card-placeholder-lg.png", alt: "") %>
-  <% end %>
-<% end %>
 
 <%= sage_component SagePanelHeader, { title: "Panel Grid Utility <code>.sage-panel-grid</code>".html_safe } %>
 <%= md("

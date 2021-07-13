@@ -1,9 +1,17 @@
 <div
   class="sage-panel__figure
+    <%= "sage-panel__figure--aspect-ratio" if component.aspect_ratio %>
     <%= "sage-panel__figure--bleed-#{component.bleed}" if component.bleed %>
+    <%= "sage-panel__figure--padded" if component.padded %>
     <%= "sage-panel__figure--wistia" if component.is_wistia %>
     <%= component.generated_css_classes %>
   "
+  <% if component.aspect_ratio or component.background_color %>
+    style="
+      <%= "--sage-figure-aspect-ratio: #{component.aspect_ratio};" if component.aspect_ratio %>
+      <%= "--sage-figure-background-color: #{component.background_color};" if component.background_color %>
+    "
+  <% end %>
   <%= component.generated_html_attributes.html_safe %>
 >
   <%= component.content %>
