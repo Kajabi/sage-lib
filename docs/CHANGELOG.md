@@ -3,6 +3,37 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.8.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.7.0...@kajabi/sage@4.8.0) (2021-07-13)
+
+
+### Bug Fixes
+
+* **avatar:** made the alt prop optional ([0a64732](https://github.com/Kajabi/sage-lib/commit/0a647324114de3986aa631afd0e568324adb0fc3))
+* **docs:** added call to Sage.docs.scrollToActiveNavItem.init ([8386449](https://github.com/Kajabi/sage-lib/commit/8386449bd4edc1985db278bec6db8a3a825704a0))
+* **docs:** changed to using window.load ([1d608b4](https://github.com/Kajabi/sage-lib/commit/1d608b4814f4cff9977d22d07679598313e8e0cd))
+* **docs:** moved script to nav item to module. Minor updates ([41e2221](https://github.com/Kajabi/sage-lib/commit/41e2221834125445240453cd23a6dc37438d82e1))
+* **docs:** removed console.log ([08d7575](https://github.com/Kajabi/sage-lib/commit/08d7575948066e50050a7f5206be01840c481457))
+* **interaction pattern:** updated banner link to use sage component ([f8e1c32](https://github.com/Kajabi/sage-lib/commit/f8e1c32e80109cadc98905eb3f5986092a8310ae))
+* **interaction patterns:** initial commit for updating interaction patterns ([dfab6e7](https://github.com/Kajabi/sage-lib/commit/dfab6e7fd79875112cb14db1f58c84aed9a4877e))
+* **interaction patterns:** save before context switch ([d0e120a](https://github.com/Kajabi/sage-lib/commit/d0e120a28dc6bfc65efdd33c3b4776ed368db38c))
+* **interactive pattern:** 2nd pass ([dfbf280](https://github.com/Kajabi/sage-lib/commit/dfbf280d3573f4c7e4f8521d4b14863ffabe86ad))
+* **interactive pattern:** updates per phil review ([5e155b0](https://github.com/Kajabi/sage-lib/commit/5e155b063693f0ad6b4f6abc5fb43731c9df69eb))
+* **interactive pattern:** updates per review ([8529921](https://github.com/Kajabi/sage-lib/commit/852992143b8cb4562bf9c57070c4af15bbe481df))
+
+
+### Features
+
+* **avatar:** added img prop to specify an image path ([84b779c](https://github.com/Kajabi/sage-lib/commit/84b779c613deb528ab1a4ff688c428cd22f84149))
+* **avatar:** refactored img prop to an image hash/object ([3aff461](https://github.com/Kajabi/sage-lib/commit/3aff461ee36f86ce34f6fe907fe7fbcd43ba7787))
+* **component:** add getters for common properties ([e93f27c](https://github.com/Kajabi/sage-lib/commit/e93f27c999e386f1e6ab92edda4498e38c3ad354))
+* **panel-figure:** separate panel figure and add new features ([db86fbc](https://github.com/Kajabi/sage-lib/commit/db86fbcbedcd4e6a235a76d6eb5b0aacb239572f))
+* **popover:** final style and documentation updates ([a37aa8e](https://github.com/Kajabi/sage-lib/commit/a37aa8ecd1ba1398b888b42a4eb09a7027a69f39))
+* **popover:** sync rails side and tweak styles ([8c96b0d](https://github.com/Kajabi/sage-lib/commit/8c96b0dc876f8947bb06d060f829b3d79c546503))
+
+
+
+
+
 # [4.7.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.6.0...@kajabi/sage@4.7.0) (2021-07-07)
 
 

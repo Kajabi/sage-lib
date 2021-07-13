@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.9.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.8.5...@kajabi/sage-system@0.9.0) (2021-07-13)
+
+
+### Features
+
+* **popover:** sync rails side and tweak styles ([8c96b0d](https://github.com/Kajabi/sage-lib/commit/8c96b0dc876f8947bb06d060f829b3d79c546503))
+
+
+
+
+
 ## [0.8.5](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.8.4...@kajabi/sage-system@0.8.5) (2021-06-09)
 
 

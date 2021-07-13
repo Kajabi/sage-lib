@@ -3,6 +3,34 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.51.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.50.0...@kajabi/sage-react@0.51.0) (2021-07-13)
+
+
+### Bug Fixes
+
+* **avatar:** added optional chains to img and src props ([ce6055c](https://github.com/Kajabi/sage-lib/commit/ce6055c816d19197a8bc6412d30729139df634d2))
+* **avatar:** lint fix ([5fa0026](https://github.com/Kajabi/sage-lib/commit/5fa00269598306b9a96d04ba6629a5e819e9c83a))
+* **avatar:** lint fix ([1bb4911](https://github.com/Kajabi/sage-lib/commit/1bb49116e9cdcdffa15e8c75351b69af03db5456))
+* **avatar:** made the alt prop optional ([0a64732](https://github.com/Kajabi/sage-lib/commit/0a647324114de3986aa631afd0e568324adb0fc3))
+* **avatar:** removed unneeded style changes ([25be8a7](https://github.com/Kajabi/sage-lib/commit/25be8a702fdfa2d505e01ff8890c0b0c33ea7eeb))
+* **avatar:** replaced optional chains with prop existence checks ([c77fdf1](https://github.com/Kajabi/sage-lib/commit/c77fdf1db934749dcad4c871b765664d74c33579))
+* **avatar:** simplified prop checks ([32ef4e7](https://github.com/Kajabi/sage-lib/commit/32ef4e787c94999ee99ea4e44df07d6ff26a78ac))
+* **interaction patterns:** initial commit for updating interaction patterns ([dfab6e7](https://github.com/Kajabi/sage-lib/commit/dfab6e7fd79875112cb14db1f58c84aed9a4877e))
+* **interactive pattern:** updates per phil review ([5e155b0](https://github.com/Kajabi/sage-lib/commit/5e155b063693f0ad6b4f6abc5fb43731c9df69eb))
+* **interactive pattern:** updates per review ([8529921](https://github.com/Kajabi/sage-lib/commit/852992143b8cb4562bf9c57070c4af15bbe481df))
+
+
+### Features
+
+* **avatar:** added img prop to specify an image path ([84b779c](https://github.com/Kajabi/sage-lib/commit/84b779c613deb528ab1a4ff688c428cd22f84149))
+* **avatar:** refactored img prop to an image hash/object ([3aff461](https://github.com/Kajabi/sage-lib/commit/3aff461ee36f86ce34f6fe907fe7fbcd43ba7787))
+* **popover:** add positiongs in React ([fb929ba](https://github.com/Kajabi/sage-lib/commit/fb929ba4b570b81cccef07bae9345b3956a49214))
+* **popover:** final style and documentation updates ([a37aa8e](https://github.com/Kajabi/sage-lib/commit/a37aa8ecd1ba1398b888b42a4eb09a7027a69f39))
+
+
+
+
+
 # [0.50.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.49.0...@kajabi/sage-react@0.50.0) (2021-07-07)
 
 

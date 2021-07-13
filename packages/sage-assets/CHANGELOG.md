@@ -3,6 +3,35 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.41.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.40.0...@kajabi/sage-assets@0.41.0) (2021-07-13)
+
+
+### Bug Fixes
+
+* **interaction pattern:** resolve subpixel rendering issue ([77518cd](https://github.com/Kajabi/sage-lib/commit/77518cd25e8ecdab016aa7a61ea4578c5c34f69a))
+* **interaction patterns:** initial commit for updating interaction patterns ([dfab6e7](https://github.com/Kajabi/sage-lib/commit/dfab6e7fd79875112cb14db1f58c84aed9a4877e))
+* **interaction patterns:** save before context switch ([d0e120a](https://github.com/Kajabi/sage-lib/commit/d0e120a28dc6bfc65efdd33c3b4776ed368db38c))
+* **interactive pattern:** 2nd pass ([dfbf280](https://github.com/Kajabi/sage-lib/commit/dfbf280d3573f4c7e4f8521d4b14863ffabe86ad))
+* **interactive pattern:** updates per review ([8529921](https://github.com/Kajabi/sage-lib/commit/852992143b8cb4562bf9c57070c4af15bbe481df))
+* **interactive patterns:** updated to form elements hover and label inner button ring ([6396a16](https://github.com/Kajabi/sage-lib/commit/6396a1679dc9172f9db5a60703d52e3668432edf))
+* **nav:** changed focus border width ([d9d6cd9](https://github.com/Kajabi/sage-lib/commit/d9d6cd9c71a30b397b29460c7b8b8537d969d537))
+* **nav:** reverted focus border width ([273ddc9](https://github.com/Kajabi/sage-lib/commit/273ddc9cda33eebf8e46f3288bd380fe4d3c6ff7))
+* **nav:** updated border radius ([4511bf0](https://github.com/Kajabi/sage-lib/commit/4511bf0fe77c372e878506ad10bf2b4d8ff7d787))
+* **panel controls:** adjust positioning of panel controls dropdown button ([5483453](https://github.com/Kajabi/sage-lib/commit/54834536e2a6cb4adaad8c538ad38b74a2103faa)), closes [#617](https://github.com/Kajabi/sage-lib/issues/617)
+
+
+### Features
+
+* **avatar:** refactored img prop to an image hash/object ([3aff461](https://github.com/Kajabi/sage-lib/commit/3aff461ee36f86ce34f6fe907fe7fbcd43ba7787))
+* **panel-figure:** separate panel figure and add new features ([db86fbc](https://github.com/Kajabi/sage-lib/commit/db86fbcbedcd4e6a235a76d6eb5b0aacb239572f))
+* **popover:** final style and documentation updates ([a37aa8e](https://github.com/Kajabi/sage-lib/commit/a37aa8ecd1ba1398b888b42a4eb09a7027a69f39))
+* **popover:** sync rails side and tweak styles ([8c96b0d](https://github.com/Kajabi/sage-lib/commit/8c96b0dc876f8947bb06d060f829b3d79c546503))
+* **popover:** use CSS for positions ([f2ed9e2](https://github.com/Kajabi/sage-lib/commit/f2ed9e2ebe3b73162742eb88df05f3067851700c))
+
+
+
+
+
 # [0.40.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.39.0...@kajabi/sage-assets@0.40.0) (2021-07-07)
 
 
