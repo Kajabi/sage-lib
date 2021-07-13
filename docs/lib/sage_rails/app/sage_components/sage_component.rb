@@ -18,7 +18,12 @@ class SageComponent
     @generated_html_attributes ||= ""
   end
 
+  def css_classes
+    @css_classes ||= ""
+  end
+
   def css_classes=(classes_string)
+    @css_classes = classes_string
     generated_css_classes << classes_string
   end
 
@@ -35,7 +40,12 @@ class SageComponent
   #
   #   USAGE:
   #   sage_component <CLASSNAME>, { spacer: { bottom: :lg } }
+  def spacer
+    @spacer ||= {}
+  end
+
   def spacer=(spacer_hash)
+    @spacer = spacer_hash
     spacer_hash.each do |key, value|
       generated_css_classes << " sage-spacer-#{key}#{value != :md ? "-#{value}" : ""}"
     end
@@ -46,13 +56,23 @@ class SageComponent
   #
   #   USAGE:
   #   sage_component <CLASSNAME>, { html_attributes: { "id": "my-cool-identifier" } }
+  def html_attributes
+    @html_attributes ||= {}
+  end
+
   def html_attributes=(html_attributes_hash)
+    @html_attributes = html_attributes_hash
     html_attributes_hash.each do |key, value|
       generated_html_attributes << " #{key}=\"#{value.to_s}\""
     end
   end
 
+  def test_id
+    @test_id ||= nil
+  end
+
   def test_id=(id_string)
+    @test_id = id_string
     if id_string
       generated_html_attributes << " data-kjb-element=\"#{id_string}\""
     end
