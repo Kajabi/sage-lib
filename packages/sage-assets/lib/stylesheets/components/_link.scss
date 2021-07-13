@@ -5,8 +5,18 @@
 ////
 
 
-.sage-link--launch,
-.sage-type a[target="_blank"]:not(.sage-link--no-launch):not([class*="icon-right-launch"]) {
+.sage-link {
+  display: inline-flex;
+  position: relative;
+  max-width: 100%;
+  min-width: 0; /* the is needed so that truncation work when the link doesn't have an explicit width set  */
+
+  @include sage-focus-outline($outline-offset-inline: 6px, $outline-offset-block: 0);
+  @include sage-focus-outline--update-color(sage-color(primary));
+}
+
+.sage-link--launch .t-sage--truncate,
+.sage-type a[target="_blank"]:not(.sage-link--no-launch):not([class*="icon-right-launch"]) .t-sage--truncate {
   &::after {
     margin-left: sage-spacing(2xs);
     margin-right: sage-spacing(2xs);
@@ -21,7 +31,6 @@
   &::before {
     @include sage-icon-base(question-circle, lg);
 
-    transform: translateY(rem(1px));
     color: sage-color(grey, 500);
   }
 
@@ -49,7 +58,14 @@
   }
 }
 
+.sage-link--help-icon-only {
+  @include sage-focus-outline($outline-offset-inline: 4px, $outline-offset-block: 2px);
+  @include sage-focus-outline--update-color(sage-color(primary));
+}
+
 .sage-link--subtext {
+  @include sage-focus-outline--update-color(currentColor);
+
   display: inline-block;
   position: relative;
   padding: 0 sage-spacing(2xs);
@@ -65,7 +81,5 @@
   &:focus {
     color: sage-color(charcoal, 400);
     text-decoration: none;
-    box-shadow: 0 0 0 2px currentColor;
-    outline: 0;
   }
 }

@@ -49,8 +49,4 @@
 .sage-stat-box__link {
   @extend %t-sage-body-med;
   margin-top: sage-spacing(xs);
-  &::after {
-    @include sage-icon-base(arrow-right);
-    margin-left: sage-spacing(xs);
-  }
 }

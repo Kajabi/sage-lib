@@ -15,7 +15,7 @@ $-tab-color-disabled: map-get($sage-tab-colors, disabled);
 .sage-tab {
   @include sage-button-style-reset();
 
-  display: flex;
+  display: inline-flex;
   position: relative;
   align-items: center;
   overflow: hidden;
@@ -68,7 +68,7 @@ $-tab-color-disabled: map-get($sage-tab-colors, disabled);
         z-index: 2;
         right: rem(-32px);
         color: sage-color(charcoal, 100);
-  
+
         @include sage-icon-base(right-small, xl);
       }
     }

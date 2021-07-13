@@ -23,21 +23,18 @@ export const TransactionCard = ({
   transactionTime,
 }) => {
   const NameTag = nameTag;
-
   const amountClassNames = classnames(
     'sage-transaction-card__amount',
     {
       [`sage-transaction-card__amount--${amountColor}`]: amountColor,
     }
   );
-
   const stateClassNames = classnames(
     'sage-transaction-card__state',
     {
       [`sage-transaction-card__state--${transactionStateColor}`]: transactionStateColor,
     }
   );
-
   return (
     <article className="sage-transaction-card">
       <div className="sage-transaction-card__header">
@@ -52,7 +49,7 @@ export const TransactionCard = ({
             {nameHref ? (
               <Link
                 href={nameHref}
-                className="sage-transaction-card__name-link"
+                className="sage-link sage-transaction-card__name-link"
               >
                 {name}
               </Link>
@@ -85,11 +82,9 @@ export const TransactionCard = ({
     </article>
   );
 };
-
 TransactionCard.LABEL_COLORS = LABEL_COLORS;
 TransactionCard.AMOUNT_COLORS = AMOUNT_COLORS;
 TransactionCard.STATE_COLORS = STATE_COLORS;
-
 TransactionCard.defaultProps = {
   amount: '0.00',
   amountColor: null,
@@ -104,7 +99,6 @@ TransactionCard.defaultProps = {
   transactionStateColor: null,
   transactionTime: '--',
 };
-
 TransactionCard.propTypes = {
   amount: PropTypes.string,
   amountColor: PropTypes.oneOf(Object.values(TransactionCard.AMOUNT_COLORS)),

@@ -1,4 +1,4 @@
-<% if component.banner_context.present? %>
+  <% if component.banner_context.present? %>
   <div class="
     sage-banner-wrapper
     <%= "sage-banner-wrapper--context-#{component.banner_context}" if component.banner_context.present? %>
@@ -23,14 +23,12 @@
   <% end %>
 
   <% if component.link.present? %>
-    <a
-      class="sage-banner__link"
-      <% component.link[:attributes].each do |key, value| %>
-        <%= "#{key}='#{value}'".html_safe %>
-      <% end if component.link[:attributes]&.is_a?(Hash) %>
-    >
-      <%= component.link[:name] %>
-    </a>
+    <%= sage_component SageButton, {
+      value: component.link[:name],
+      subtle: true,
+      css_classes: "sage-banner__link",
+      attributes: component.link[:attributes]
+    } %>
   <% end %>
 
   <%= component.content if component.content.present? %>

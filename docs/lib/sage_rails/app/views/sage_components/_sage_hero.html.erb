@@ -6,17 +6,19 @@
     <p>
       <%= component.description %>
     </p>
-    
+
     <% if component.button %>
       <%= component.button.html_safe %>
     <% end %>
   </div>
-  <a 
+  <a
     <% component.cta_attributes.each do |key, value| %>
       <%= "#{key}='#{value}'".html_safe %>
     <% end if component.cta_attributes&.is_a?(Hash) %>
     class="sage-hero__artwork"
   >
-    <img class="sage-hero__artwork-image" <%= "aria-hidden=true" if component.alt_text.blank? %> src=<%= component.image%> alt="<%= component.alt_text %>" />
+    <span class="sage-hero__artwork-image-container">
+      <img class="sage-hero__artwork-image" <%= "aria-hidden=true" if component.alt_text.blank? %> src=<%= component.image%> alt="<%= component.alt_text %>" />
+    </span>
   </a>
 </article>

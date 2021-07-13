@@ -1,5 +1,4 @@
 <% html_tag = component.name_tag ? component.name_tag : "h4" %>
-
 <article class="sage-transaction-card <%= component.generated_css_classes %>" <%= component.generated_html_attributes.html_safe %>>
   <div class="sage-transaction-card__header">
     <%= sage_component SageLabel, {
@@ -15,8 +14,10 @@
     <div class="sage-transaction-card__body-group">
       <<%= html_tag %> class="sage-transaction-card__name">
         <% if component.name_href.present? %>
-          <a class="sage-transaction-card__name-link" href="<%= component.name_href %>">
+          <a class="sage-link sage-transaction-card__name-link" href="<%= component.name_href %>">
+            <span class="t-sage--truncate">
             <%= component.name %>
+            </span>
           </a>
         <% else %>
           <%= component.name %>
@@ -40,7 +41,7 @@
       <% else %>
         <%= sage_component SageProperty, {
           css_classes: "sage-transaction-card__product",
-          icon: "tag", 
+          icon: "tag",
           value: component.related_property,
         } %>
       <% end %>

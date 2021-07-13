@@ -59,6 +59,7 @@ $-copy-text-color-hover: sage-color(charcoal, 500);
   align-items: center;
   max-width: 100%;
   padding-right: sage-spacing(2xs);
+  border-radius: sage-border(radius);
 
   &::before {
     @include sage-icon-base(copy);

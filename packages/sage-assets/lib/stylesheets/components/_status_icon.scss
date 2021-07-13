@@ -15,7 +15,7 @@
   transition: color map-get($sage-transitions, default), background-color map-get($sage-transitions, default);
   cursor: help;
 
-  @include sage-focus-outline;
+  @include sage-focus-outline($outline-offset-inline: 4px, $outline-offset-block: 4px);
   @include sage-focus-outline--update-color(sage-color(charcoal, 200));
 
   &:hover:not(:focus):not(:active) {
@@ -31,6 +31,10 @@
     &:not(:last-child) {
       margin-right: sage-spacing(sm);
     }
+  }
+
+  & + & {
+    margin-left: sage-spacing(2xs);
   }
 
   // NOTE: Icon generation consolidated in `core/_icons.scss`

@@ -136,6 +136,14 @@ $-select-padding-label: map-get($sage-field-configs, padding-label);
       box-shadow: $-select-border-box-shadow-size $-select-color-error;
     }
   }
+
+  &:hover:not(:disabled) {
+    border-color: $-select-color-default;
+
+    .sage-select--error {
+      border-color: currentColor;
+    }
+  }
 }
 
 .sage-select__message {
