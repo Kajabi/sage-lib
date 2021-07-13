@@ -23,14 +23,12 @@
   <% end %>
 
   <% if component.link.present? %>
-    <a
-      class="sage-banner__link sage-btn--subtle"
-      <% component.link[:attributes].each do |key, value| %>
-        <%= "#{key}='#{value}'".html_safe %>
-      <% end if component.link[:attributes]&.is_a?(Hash) %>
-    >
-      <%= component.link[:name] %>
-    </a>
+    <%= sage_component SageButton, {
+      value: component.link[:name],
+      subtle: true,
+      css_classes: "sage-banner__link",
+      attributes: component.link[:attributes]
+    } %>
   <% end %>
 
   <%= component.content if component.content.present? %>
