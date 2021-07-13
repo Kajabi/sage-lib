@@ -6,35 +6,38 @@
 
 
 $-popover-overlay-z-index: sage-z-index(modal);
-$-popover-panel-min-size: rem(250px);
+$-popover-panel-padding: sage-spacing(sm);
+$-popover-panel-min-size: sage-container(sm);
+$-popover-panel-contentmin-size: $-popover-panel-min-size - $-popover-panel-padding;
 $-popover-panel-max-size: rem(350px);
-$-popover-panel-offset-top: sage-spacing(2xs);
-$-popover-panel-offset-left: sage-spacing(md);
+$-popover-panel-offset: sage-spacing(sm);
 
 
 .sage-popover {
   display: inline-flex;
   position: relative;
+
+  .docs-panel & {
+    justify-self: start;
+    width: min-content;
+  }
 }
 
 .sage-popover__actions {
-  margin-top: sage-spacing(card);
-
   > a {
     max-width: 100%;
   }
 }
 
 .sage-popover__panel {
+  @include sage-grid-card();
+
   visibility: hidden;
   z-index: sage-z-index(modal);
   position: absolute;
-  top: $-popover-panel-offset-top;
-  left: $-popover-panel-offset-left;
-  width: 100%;
+  width: auto;
   min-width: $-popover-panel-min-size;
-  max-width: $-popover-panel-max-size;
-  padding: sage-spacing(sm);
+  padding: $-popover-panel-padding;
   background-color: sage-color(white);
   background-clip: padding-box;
   box-shadow: sage-shadow();
@@ -43,17 +46,57 @@ $-popover-panel-offset-left: sage-spacing(md);
   .sage-popover--is-expanded & {
     visibility: visible;
   }
+
+  .sage-popover--top & {
+    bottom: calc(100% + #{$-popover-panel-offset});
+    left: 0;
+  }
+  
+  .sage-popover--top-right & {
+    bottom: calc(100% + #{$-popover-panel-offset});
+    right: 0;
+  }
+  
+  .sage-popover--right & {
+    top: 0;
+    left: calc(100% + #{$-popover-panel-offset});
+  }
+  
+  .sage-popover--bottom & {
+    top: calc(100% + #{$-popover-panel-offset});
+    left: 0;
+  }
+  
+  .sage-popover--bottom-right & {
+    top: calc(100% + #{$-popover-panel-offset});
+    right: 0;
+  }
+  
+  .sage-popover--left & {
+    top: 0;
+    right: calc(100% + #{$-popover-panel-offset});
+  }
 }
 
 .sage-popover__button {
   position: relative;
 }
 
-.sage-popover__content:not(.sage-popover__content--custom) {
+.sage-popover__content {
   @extend %t-sage-body-small;	
-  @include sage-grid-stack();	
+  @include sage-grid-stack();
 
-  color: sage-color(charcoal, 100);
+  color: sage-color(charcoal, 200);
+}
+
+.sage-popover__media {
+  overflow: hidden;
+  width: 100%;
+  border-radius: sage-border(radius-small);
+
+  img {
+    max-width: 100%;
+  }
 }
 
 .sage-popover__overlay {
@@ -69,7 +112,5 @@ $-popover-panel-offset-left: sage-spacing(md);
 }
 
 .sage-popover__title {
-  @extend %t-sage-heading-5;
-
-  margin-bottom: sage-spacing(card);
+  @extend %t-sage-heading-6;
 }

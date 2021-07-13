@@ -266,6 +266,8 @@ module SageTokens
 
   ICON_SIZES = ["xs", "sm", "md", "lg", "xl", "2xl", "3xl", "4xl"]
 
+  POPOVER_POSITIONS = ["top", "top-right", "right", "bottom", "bottom-right", "left"]
+
   SPACER_SIZES = [:xs, :sm, :md, :lg, :xl, "2xs", "xs", "sm", "md", "lg", "xl", "2xl", "stage", "panel", "card", "stack"]
 
   STATUSES = ["danger", "draft", "info", "locked", "published", "warning"]

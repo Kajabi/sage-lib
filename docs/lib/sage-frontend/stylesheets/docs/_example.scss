@@ -179,3 +179,7 @@ $-example-code-preview-button-bg: rgba(sage-color(primary, 500), 0.75);
   display: flex;
   gap: sage-spacing(xs);
 }
+
+.demo-custom-popover-panel {
+  width: rem(400px);
+}
