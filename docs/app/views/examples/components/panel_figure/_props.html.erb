@@ -1,0 +1,40 @@
+<tr>
+  <td><%= md('`aspect_ratio`') %></td>
+  <td><%= md('
+  Allows a set specific aspect ratio (width / height) to control cropping and resizing the figure.
+  By default, the image appears at its natural
+  ') %></td>
+  <td><%= md('`Number`') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`background_color`') %></td>
+  <td><%= md('Provides a background color to show behind the figure, particularly for when aspect ratio or padding are employed.') %></td>
+  <td><%= md('`String`') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`bleed`') %></td>
+  <td><%= md('
+Allow for a figure to "bleed" into padded areas of the panel in different configurations:
+
+  - `nil` (default): No bleed.
+  - `top`: Bleed into top edge and both sides.
+  - `bottom`: Bleed into bottom edge and both sides.
+  - `sides`: Bleed into sides only.
+') %></td>
+  <td><%= md('[ `"top"` | `"bottom"` | `"sides"` ]') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`is_wistia`') %></td>
+  <td><%= md('Provides some additional styling for when a Wistia elemet is embedded within this figure.') %></td>
+  <td><%= md('`Boolean`') %></td>
+  <td><%= md('`false`') %></td>
+</tr>
+<tr>
+  <td><%= md('`padded`') %></td>
+  <td><%= md('When `true` a small area of the graphic is padded, revealing a background color around the image. Currently only configure to work best with the `bleed: "top"` setting.') %></td>
+  <td><%= md('`Boolean`') %></td>
+  <td><%= md('`false`') %></td>
+</tr>
