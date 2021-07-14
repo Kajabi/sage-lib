@@ -7,7 +7,7 @@ $-panel-figure-padding: sage-spacing(lg);
 $-panel-figure-default-background-color: sage-color(grey, 100);
 
 :root {
-  --sage-figure-aspect-ratio: auto;
+  --sage-figure-aspect-ratio: 1;
   --sage-figure-background-color: #{$-panel-figure-default-background-color};
 }
 
