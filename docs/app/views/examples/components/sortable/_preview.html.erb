@@ -129,9 +129,7 @@
       url_update: "update/endpoint",
     } do %>
       <div>
-        <a class="sage-link" href="#">
-          <span class="t-sage--truncate">Field 1</span>
-        </a>
+        <%= sage_component SageLink, { label: "Field 1", truncate: true, url: "#" } %>
       </div>
       <%= sage_component SageDropdown, {
         align: "right",
@@ -184,9 +182,7 @@
       url_update: "update/endpoint",
     } do %>
       <div>
-        <a class="sage-link" href="#">
-          <span class="t-sage--truncate">Field 1</span>
-        </a>
+        <%= sage_component SageLink, { label: "Field 1", truncate: true, url: "#" } %>
       </div>
       <span>Field 2</span>
       <%= sage_component SageDropdown, {

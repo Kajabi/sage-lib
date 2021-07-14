@@ -12,6 +12,7 @@ export const Link = ({
   children,
   tag,
   tooltip,
+  truncate,
   ...rest
 }) => {
   const SelfTag = tag || 'a';
@@ -21,16 +22,20 @@ export const Link = ({
       {tooltip ? (
         <Tooltip {...tooltip}>
           <SelfTag {...rest}>
-            <span className="t-sage--truncate">
-              {children}
-            </span>
+            {truncate ? (
+              <span className="t-sage--truncate">
+                {children}
+              </span>
+            ) : children}
           </SelfTag>
         </Tooltip>
       ) : (
         <SelfTag {...rest}>
-          <span className="t-sage--truncate">
-            {children}
-          </span>
+          {truncate ? (
+            <span className="t-sage--truncate">
+              {children}
+            </span>
+          ) : children}
         </SelfTag>
       )}
     </>
@@ -41,6 +46,7 @@ Link.defaultProps = {
   children: null,
   tag: null,
   tooltip: null,
+  truncate: false,
 };
 
 Link.CLASSNAMES = { ...SageClassnames.LINK };
@@ -55,4 +61,5 @@ Link.propTypes = {
     size: PropTypes.oneOf(Object.values(Tooltip.SIZES)),
     theme: PropTypes.oneOf(Object.values(Tooltip.THEMES)),
   }),
+  truncate: PropTypes.bool,
 };

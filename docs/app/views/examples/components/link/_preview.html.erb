@@ -94,7 +94,9 @@
 <% end %>
 
 <h3 class="t-sage-heading-6">Subtext links</h3>
-
-<a href="//example.com" class="sage-link sage-link--subtext">
-  <span class="t-sage--truncate">Link for placement in subtext</span>
-</a>
+<%= sage_component SageLink, {
+  css_classes: "sage-link--subtext",
+  label: "Link for placement in subtext",
+  truncate: true,
+  url: "//example.com"
+} %>
