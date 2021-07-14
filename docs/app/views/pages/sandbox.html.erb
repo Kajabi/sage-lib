@@ -4,4 +4,15 @@
 
 Use this scratchpad to test out elements and components in context. Just be sure not to commit your changes. ❤️
 ") %>
+<%= sage_component SageButton, {
+  value: "SASS Docs",
+  disableWith: true,
+  attributes: {
+    href: "#",
+    target: "_blank",
+    rel: "noopener noreferrer",
+    title: "Open Sassdocs site"
+  },
+  style: "primary",
+} %>
 <% end %>
