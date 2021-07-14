@@ -3,6 +3,8 @@ class SageButton < SageComponent
     align: [:optional, NilClass, String],
     attributes: [:optional, NilClass, Hash],
     disabled: [:optional, NilClass, TrueClass],
+    disableWith: [:optional, NilClass, TrueClass],
+    disableWithText: [:optional, NilClass, String],
     custom_content_class: [:optional, NilClass, String],
     full_width: [:optional, NilClass, TrueClass],
     icon: [:optional, { name: String, style: Set.new(["left", "right", "only"]) }],
