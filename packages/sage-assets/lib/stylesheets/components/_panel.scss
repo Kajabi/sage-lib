@@ -3,13 +3,6 @@
 ///
 /// @group sage/components/panel
 ////
-$-panel-figure-padding: sage-spacing(lg);
-$-panel-figure-default-background-color: sage-color(grey, 100);
-
-:root {
-  --sage-figure-aspect-ratio: auto;
-  --sage-figure-background-color: #{$-panel-figure-default-background-color};
-}
 
 .sage-panel {
   @include sage-panel;
