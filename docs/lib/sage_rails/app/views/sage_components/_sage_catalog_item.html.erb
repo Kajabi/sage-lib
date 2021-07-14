@@ -10,11 +10,18 @@
   <%= component.generated_html_attributes.html_safe %>
 >
   <strong class="sage-catalog-item__title">
-    <<%= link_tag %> class="t-sage-heading-6 sage-link" href="<%= component.href %>">
-      <span class="t-sage--truncate">
+    <% if is_loading %>
+      <div class="t-sage-heading-6 t-sage--truncate">
         <%= component.title %>
-      </span>
-    </<%= link_tag %>>
+      </div>
+    <% else %>
+      <%= sage_component SageLink, {
+        css_classes: SageClassnames::TYPE::HEADING_6,
+        label: component.title,
+        truncate: true,
+        url: component.href,
+      } %>
+    <% end %>
   </strong>
   <% if component.content.present? %>
     <div class="sage-catalog-item__content">
