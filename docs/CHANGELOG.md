@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.8.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.8.1...@kajabi/sage@4.8.2) (2021-07-14)
+
+
+### Bug Fixes
+
+* **catalog-item:** patch use of SageLink ([2e2a58b](https://github.com/Kajabi/sage-lib/commit/2e2a58bacdf8776ae308bf378a5ee8836144ccf1))
+* **docs:** patch use of SageLink in Docs ([aeceec1](https://github.com/Kajabi/sage-lib/commit/aeceec110bca44055e0425d59ef4a8fa55944f1c))
+* **link:** add truncate property ([3610d2e](https://github.com/Kajabi/sage-lib/commit/3610d2eda05f17e0804544d24c0aaf7dffd9234e))
+* **transaction-card:** patch use of SageLink ([d7b9e2b](https://github.com/Kajabi/sage-lib/commit/d7b9e2be60af5f048564dcabdc4e95d743a014c5))
+
+
+
+
+
 ## [4.8.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.8.0...@kajabi/sage@4.8.1) (2021-07-14)
 
 **Note:** Version bump only for package @kajabi/sage

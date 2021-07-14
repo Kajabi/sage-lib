@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.41.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.41.1...@kajabi/sage-assets@0.41.2) (2021-07-14)
+
+
+### Bug Fixes
+
+* **transaction-card:** patch use of SageLink ([d7b9e2b](https://github.com/Kajabi/sage-lib/commit/d7b9e2be60af5f048564dcabdc4e95d743a014c5))
+
+
+
+
+
 ## [0.41.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.41.0...@kajabi/sage-assets@0.41.1) (2021-07-14)
 
 
