@@ -14,11 +14,12 @@
     <div class="sage-transaction-card__body-group">
       <<%= html_tag %> class="sage-transaction-card__name">
         <% if component.name_href.present? %>
-          <a class="sage-link sage-transaction-card__name-link" href="<%= component.name_href %>">
-            <span class="t-sage--truncate">
-            <%= component.name %>
-            </span>
-          </a>
+          <%= sage_component SageLink, {
+            label: component.name,
+            truncate: true,
+            url: component.name_href,
+            css_classes: "sage-transaction-card__name-link",
+          } %>
         <% else %>
           <%= component.name %>
         <% end %>

@@ -6,6 +6,7 @@
 $-transaction-card-item-gap: sage-spacing(xs);
 $-transaction-card-time-max-width: rem(96px);
 $-transaction-card-state-max-width: rem(80px);
+$-transaction-card-price-max-width: rem(100px);
 
 .sage-transaction-card {
   @include sage-card;
@@ -21,7 +22,6 @@ $-transaction-card-state-max-width: rem(80px);
 
 .sage-transaction-card__body {
   @include sage-grid-stack;
-
 }
 
 .sage-transaction-card__body-group {
@@ -50,6 +50,7 @@ $-transaction-card-state-max-width: rem(80px);
 .sage-transaction-card__amount {
   @extend %t-sage-heading-6;
 
+  max-width: $-transaction-card-price-max-width;
   white-space: nowrap;
 }
 
@@ -68,7 +69,7 @@ $-transaction-card-state-max-width: rem(80px);
 .sage-transaction-card__name {
   @extend %t-sage-heading-6;
 
-  max-width: 100%;
+  max-width: calc(100% - #{$-transaction-card-price-max-width + $-transaction-card-item-gap});
 }
 
 .sage-transaction-card__name-link {
