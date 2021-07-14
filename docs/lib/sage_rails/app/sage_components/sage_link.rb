@@ -6,6 +6,7 @@ class SageLink < SageComponent
     label: [:optional, String],
     launch: [:optional, TrueClass],
     show_label: [:optional, TrueClass],
+    truncate: [:optional, TrueClass],
     url: [:optional, String],
   })
 end

@@ -1,14 +1,17 @@
 <%
-label = %(
-  <span class="t-sage--truncate">
-    #{component.label}
-  </span>
-).html_safe
+label = component.label.html_safe
+if component.truncate
+  label = %(
+    <span class="t-sage--truncate">
+      #{component.label}
+    </span>
+  ).html_safe
+end
 %>
 <% if component.help_link && component.show_label %>
   <a
+    class="sage-link sage-link--help <%= component.generated_css_classes %>"
     href="<%= component.url %>"
-    class="sage-link sage-link--help"
     <% component.attributes.each do |key, value| %>
       <%= "#{key}=\"#{value}\"".html_safe %>
     <% end if component.attributes&.is_a?(Hash) %>
@@ -18,8 +21,8 @@ label = %(
   </a>
 <% elsif component.help_link && !component.show_label %>
   <a
+    class="sage-link sage-link--help-icon-only <%= component.generated_css_classes %>"
     href="<%= component.url %>"
-    class="sage-link sage-link--help-icon-only"
     <% component.attributes.each do |key, value| %>
       <%= "#{key}=\"#{value}\"".html_safe %>
     <% end if component.attributes&.is_a?(Hash) %>
@@ -29,7 +32,7 @@ label = %(
   </a>
 <% elsif !component.external && !component.launch %>
   <a
-    class="sage-link"
+    class="sage-link <%= component.generated_css_classes %>"
     href="<%= component.url %>"
     <% component.attributes.each do |key, value| %>
       <%= "#{key}=\"#{value}\"".html_safe %>
@@ -40,8 +43,8 @@ label = %(
   </a>
 <% elsif !component.external && component.launch %>
   <a
+    class="sage-link sage-link--launch <%= component.generated_css_classes %>"
     href="<%= component.url %>"
-    class="sage-link sage-link--launch"
     <% component.attributes.each do |key, value| %>
       <%= "#{key}=\"#{value}\"".html_safe %>
     <% end if component.attributes&.is_a?(Hash) %>
@@ -51,7 +54,7 @@ label = %(
   </a>
 <% elsif component.external && component.launch %>
   <a
-    class="sage-link"
+    class="sage-link <%= component.generated_css_classes %>"
     href="<%= component.url %>"
     target="_blank"
     rel="noopener noreferrer"
@@ -64,15 +67,15 @@ label = %(
   </a>
 <% elsif component.external && !component.launch %>
   <a
+    class="sage-link sage-link--no-launch <%= component.generated_css_classes %>"
     href="<%= component.url %>"
     target="_blank"
-    class="sage-link sage-link--no-launch"
     rel="noopener noreferrer"
     <% component.attributes.each do |key, value| %>
       <%= "#{key}=\"#{value}\"".html_safe %>
     <% end if component.attributes&.is_a?(Hash) %>
     <%= component.generated_html_attributes.html_safe %>
   >
-    <%= component.label %>
+    <%= label %>
   </a>
 <% end %>
