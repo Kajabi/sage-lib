@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.8.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.8.2...@kajabi/sage@4.8.3) (2021-07-15)
+
+
+### Bug Fixes
+
+* **link:** add initial label value ([a35db96](https://github.com/Kajabi/sage-lib/commit/a35db9637e08aacfd704bfef5b09d80c9deda173))
+* **link:** adjust template logic for sagelink to correct spec failure ([26c37fc](https://github.com/Kajabi/sage-lib/commit/26c37fcc8e9e96a79c63640a7329e201b7244b3a))
+
+
+
+
+
 ## [4.8.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.8.1...@kajabi/sage@4.8.2) (2021-07-14)
 
 
