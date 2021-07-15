@@ -1,12 +1,16 @@
 <%
-label = component.label.html_safe
-if component.truncate
-  label = %(
-    <span class="t-sage--truncate">
-      #{component.label}
-    </span>
-  ).html_safe
-end
+  label = ""
+  if component.label.present?
+    label = if component.truncate.present?
+      %(
+        <span class="t-sage--truncate">
+          #{component.label}
+        </span>
+      ).html_safe
+    else
+      component.label.html_safe
+    end
+  end
 %>
 <% if component.help_link && component.show_label %>
   <a
