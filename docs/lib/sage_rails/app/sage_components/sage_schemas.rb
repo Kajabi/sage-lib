@@ -31,6 +31,22 @@ module SageSchemas
     value: String,
   }
 
+  MEDIA_TILE = {
+    action_options: [:optional, [[SageSchemas::DROPDOWN_ITEM]]],
+    actions: [:optional, NilClass, String],
+    body: [:optional, NilClass, String],
+    caption: [:optional, NilClass, String],
+    footer: [:optional, NilClass, String],
+    media: [:optional, NilClass, String],
+    media_configs: [:optional, NilClass, {
+      aspect_ratio: [:optional, NilClass, Integer, Float, Set.new(["1x", "2x", "3x"])],
+      is_wistia: [:optional, TrueClass],
+      key_color: [:optional, NilClass, String],
+      padded: [:optional, NilClass, TrueClass],
+    }],
+    title: [:optional, NilClass, String],
+  }
+
   # Accepts any Collection that can be paginated
   def self.can_paginate?(value)
     value.respond_to?(:total_pages)

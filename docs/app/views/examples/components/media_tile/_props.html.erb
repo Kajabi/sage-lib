@@ -1,0 +1,92 @@
+
+<tr>
+  <td colspan="4">
+    <strong>MediaTile</strong>
+  </td>
+</tr>
+<tr>
+  <td><%= md('`action_options`') %></td>
+  <td><%= md('Provide a list of dropdown items to be used with an actions dropdown menu in the actions slot next to the title of the tile.
+  This drodpown will appear on the far right of any other actions provided through `actions` property or the `:sage_media_tile_actions` slot.') %></td>
+  <td><%= md('See Dropdown items schema.') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`actions`') %></td>
+  <td><%= md('Provide any items you want to appear to the right of the title in an actions slot.
+  Alternatively, compose this using a `content_for :sage_media_tile_actions` block.') %></td>
+  <td><%= md('String  | HTML Content') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`body`') %></td>
+  <td><%= md('Provide content you want to appear in the body area of the tile.
+  Alternatively, compose this using a `content_for :sage_media_tile_body` block.
+  Note that this content clamps after two lines.') %></td>
+  <td><%= md('String  | HTML Content') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`caption`') %></td>
+  <td><%= md('Provide any items you want to appear in smaller type below the body area of the tile.
+  Alternatively, compose this using a `content_for :sage_media_tile_caption` block.
+  Note that this content clamps after one line.') %></td>
+  <td><%= md('String  | HTML Content') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`footer`') %></td>
+  <td><%= md('Provide any items you want to appear to very bottom of the tile such as an action button.
+  Alternatively, compose this using a `content_for :sage_media_tile_footer` block.') %></td>
+  <td><%= md('String  | HTML Content') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`media`') %></td>
+  <td><%= md('Provide the media markup to be displayed within the tile.
+  Alternatively, compose this using a `content_for :sage_media_tile_media` block.
+  Typically this is an image, but other mebed code can be provided as well.
+  Use the `media_configs` property to provide additional settings.') %></td>
+  <td><%= md('String  | HTML Content') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`media_configs`') %></td>
+  <td><%= md('Allows for a set of configurations for the media figure that plays a prominent role in this tiling component. Allows for the following settings:
+
+- `aspect_ratio`: provide either a number or one of several preset strings.
+  If a number, it is used to calculate an aspect ratio for the figure within the tile.
+  If one of the preset strings is provided the following scale is used:
+  - `1x` is a native 16:9 ratio. Good for standard images.
+  - `2x` is 2 times the normal height of the content area. Good for more square-like images.
+  - `3x` is 3 times the normal height of the content area. Good for taller images.
+- `background_color`: provide a color that will be visible while the image loads and/or if the `padded` setting is turned on.  
+- `is_wistia`: indicates whether the media provided is a standard Wistia embed object that requires additional styling on the tile\'s figure.
+- `padded`: indicates whether or not the image should be padded in from the top and sides to form a sort of simple decorative frame around it.
+') %></td>
+  <td><%= md('```
+{
+  aspect_ratio: <Number | "1x" | "2x" | "3x">
+  key_color: <String>
+  padded: <Boolean>
+}
+```') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`title`') %></td>
+  <td><%= md('Provide the "header" content for the tile.') %></td>
+  <td><%= md('`String`') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td colspan="4">
+    <strong>MediaTiles</strong>
+  </td>
+</tr>
+<tr>
+  <td><%= md('`items`') %></td>
+  <td><%= md('Provide a set of items to be rendered as MediaTiles.') %></td>
+  <td><%= md('See schema for `MediaTile` above.') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>

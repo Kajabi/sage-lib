@@ -44,10 +44,6 @@
     height: calc(100% - #{$-panel-figure-padding});
   }
 
-  &:not(.sage-panel__figure--aspect-ratio) {
-    padding-top: $-panel-figure-padding;
-  }
-
   &.sage-panel__figure--aspect-ratio {
     img {
       top: calc(50% + #{$-panel-figure-padding / 2});

@@ -1,0 +1,49 @@
+////
+/// Media Tile
+///
+/// @group sage
+////
+
+$-media-tile-max-col-size: relative-column(1, 3, sage-spacing(stage));
+$-media-tile-min-col-size: sage-container(sm);
+
+// .sage-media-tile {}
+
+.sage-media-tile__body {
+  @include clamp(2);
+
+  color: sage-color(charcoal, 200);
+
+  > p {
+    @extend %t-sage-body;
+  }
+}
+
+.sage-media-tile__caption {
+  @include clamp(1);
+
+  color: sage-color(charcoal, 100);
+
+  > p {
+    @extend %t-sage-body-small;
+  }
+}
+
+.sage-media-tile__content {
+  align-content: start;
+}
+
+.sage-media-tile__footer {
+  align-self: end;
+}
+
+.sage-media-tile__header {
+  width: 100%;
+}
+
+.sage-media-tile-container {
+  @include sage-grid-panel;
+
+  grid-template-columns: repeat(auto-fill, minmax($-media-tile-max-col-size, $-media-tile-min-col-size));
+  gap: sage-spacing(stage);
+}

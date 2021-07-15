@@ -1,0 +1,85 @@
+<%
+media_aspect_ratio = nil
+media_background_color = nil
+media_padded = false
+if component.media_configs.present?
+  media_aspect_ratio = component.media_configs[:aspect_ratio].present? ? component.media_configs[:aspect_ratio] : media_aspect_ratio
+  media_background_color = component.media_configs[:background_color].present? ? component.media_configs[:background_color] : media_background_color
+  media_padded = component.media_configs[:padded].present? ? component.media_configs[:padded] : media_padded
+end
+
+# Note: these sizes are approximately based on a ratio of
+# the tile's content area with just a title and body.
+preset_aspect_ratio = nil
+case media_aspect_ratio
+when "1x"
+  preset_aspect_ratio = 1.78 # 16 / 9
+when "2x"
+  preset_aspect_ratio = 1.33 # 4 / 3
+when "3x"
+  preset_aspect_ratio = 0.89 # 8 / 9
+else
+  preset_aspect_ratio = media_aspect_ratio
+end
+%>
+<%= sage_component SagePanel, {
+  css_classes: "sage-media-tile #{component.css_classes}",
+  html_attributes: component.html_attributes,
+  spacer: component.spacer,
+  test_id: component.test_id,
+} do %>
+<%= @preset_aspect_ratio %>
+  <%= sage_component SagePanelFigure, {
+    aspect_ratio: preset_aspect_ratio,
+    bleed: "top",
+    css_classes: "sage-media-tile__media",
+    background_color: media_background_color,
+    padded: media_padded,
+  } do %>
+    <%= content_for :sage_media_tile_media if content_for? :sage_media_tile_media %>
+    <%= component.media.html_safe if component.media.present? %>
+  <% end if component.media.present? or content_for? :sage_media_tile_media %>
+
+  <%= sage_component SagePanelStack, {
+    css_classes: "sage-media-tile__content",
+  } do %>
+    <%= sage_component SagePanelHeader, {
+      css_classes: "sage-media-tile__header",
+      title: component.title,
+    } do %>
+      <%= sage_component SageButtonGroup, { gap: :sm } do %>
+        <%= content_for :sage_media_tile_actions if content_for? :sage_media_tile_actions %>
+        <%= component.actions.html_safe if component.actions.present? %>
+        <%= sage_component SageDropdown, {
+          align: "right",
+          items: component.action_options,
+        } do %>
+          <%= sage_component SageButton, {
+            value: "Options",
+            icon: { name: "dot-menu-horizontal", style: "only" },
+            subtle: true,
+            style: "secondary",
+          } %>
+        <% end if component.action_options %>
+      <% end if component.action_options or component.actions.present? or content_for? :sage_media_tile_actions  %>
+    <% end if component.title %>
+
+    <%= sage_component SagePanelBlock, { css_classes: "sage-media-tile__body" } do %>
+      <%= content_for :sage_media_tile_body if content_for? :sage_media_tile_body%>
+      <%= component.body.html_safe if component.body.present? %>
+    <% end if component.body.present? or content_for? :sage_media_tile_body %>
+
+    <%= sage_component SagePanelBlock, { css_classes: "sage-media-tile__caption" } do %>
+      <%= content_for :sage_media_tile_caption if content_for? :sage_media_tile_caption %>
+      <%= component.caption.html_safe if component.caption.present? %>
+    <% end if component.caption.present? or content_for? :sage_media_tile_caption %>
+  <% end %>
+
+  <%= sage_component SagePanelFooter, {
+    align_spread: true,
+    css_classes: "sage-media-tile__footer"
+  } do %>
+    <%= content_for :sage_media_tile_footer if content_for? :sage_media_tile_footer %>
+    <%= component.footer.html_safe if component.footer.present? %>
+  <% end if component.footer.present? or content_for? :sage_media_tile_footer %>
+<% end %>
