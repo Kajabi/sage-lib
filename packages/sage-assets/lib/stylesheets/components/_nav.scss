@@ -70,6 +70,8 @@ $-nav-icon-size: rem(20px);
   padding: sage-spacing(2xs) sage-spacing(xs);
 
   &.sage-nav__link--active {
+    @include sage-focus-outline--update-color(transparent);
+
     background: $-nav-color-background;
   }
 }
@@ -90,6 +92,12 @@ $-nav-icon-size: rem(20px);
   margin: 0;
   padding: 0;
   list-style: none;
+
+  &:not(.sage-nav__list--sub) {
+    .sage-nav__link--active {
+      @include sage-focus-outline--update-color(transparent);
+    }
+  }
 }
 
 .sage-nav__list--sub-with-icon,
