@@ -69,35 +69,6 @@
 }
 
 ///
-/// Returns a relative size for a block that spans a certain number of columns in a grid space, included gutters size.
-///
-/// @param {number} $-col-span How many columns this block spans.
-/// @param {number} $-num-cols The total number of columns in the grid.
-/// @param {length} $-gap-size The size of the gutters int he grid.
-///
-/// @return {length} A `calc()` for the flexible relative column size.
-///
-@function relative-column($-col-span: 1, $-num-cols: 3, $-gap-size: sage-spacing(lg)) {
-  $-num-gutters: $-num-cols - 1;
-  $-total-gutter-space: $-num-gutters * $-gap-size;
-
-  $-size-per-column: "100% / #{$-num-cols}";
-  @if $-total-gutter-space > 0 {
-    $-size-per-column: "(100% - #{$-total-gutter-space}) / #{$-num-cols}";
-  }
-  
-  $-gutters-included: $-col-span - 1;
-  $-included-gutter-space: $-gutters-included * $-gap-size;
-
-  @if $-included-gutter-space > 0 {
-    @return calc((#{$-size-per-column}) * #{$-col-span} + #{$-included-gutter-space});
-  }
-  @else {
-    @return calc((#{$-size-per-column}) * #{$-col-span});
-  }
-}
-
-///
 /// Converts an integer to a rem value based on 16 as the base size.
 ///
 /// @param {length} $value Length value, typically a `px` or `pt` that is to be converted to `rem`
