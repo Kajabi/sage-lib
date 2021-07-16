@@ -156,7 +156,7 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
   text-align: left;
   user-select: none;
 
-  .sage-dropdown &::after {
+  .sage-dropdown .sage-dropdown__menu &::after {
     border-radius: 0;
   }
 
