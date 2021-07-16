@@ -48,11 +48,11 @@ end
       title: component.title,
     } do %>
       <%= sage_component SageButtonGroup, { gap: :sm } do %>
-        <%= content_for :sage_media_tile_actions if content_for? :sage_media_tile_actions %>
-        <%= component.actions.html_safe if component.actions.present? %>
+        <%= content_for :sage_media_tile_actions_custom if content_for? :sage_media_tile_actions_custom %>
+        <%= component.actions_custom.html_safe if component.actions_custom.present? %>
         <%= sage_component SageDropdown, {
           align: "right",
-          items: component.action_options,
+          items: component.actions_dropdown_items,
         } do %>
           <%= sage_component SageButton, {
             value: "Options",
@@ -60,8 +60,8 @@ end
             subtle: true,
             style: "secondary",
           } %>
-        <% end if component.action_options %>
-      <% end if component.action_options or component.actions.present? or content_for? :sage_media_tile_actions  %>
+        <% end if component.actions_dropdown_items %>
+      <% end if component.actions_dropdown_items or component.actions_custom.present? or content_for? :sage_media_tile_actions_custom  %>
     <% end if component.title %>
 
     <%= sage_component SagePanelBlock, { css_classes: "sage-media-tile__body" } do %>

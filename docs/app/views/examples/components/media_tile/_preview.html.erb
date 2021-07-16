@@ -1,5 +1,5 @@
 <%
-common_action_options = [
+common_actions_dropdown_items = [
   {
     value: "Edit",
     attributes: { href: "#edit" }
@@ -14,7 +14,7 @@ common_action_options = [
   }
 ]
 
-common_additional_actions = sage_component(SageButton, {
+common_additional_actions_custom = sage_component(SageButton, {
   value: "Preview",
   icon: { name: "preview-on", style: "only" },
   subtle: true,
@@ -46,7 +46,7 @@ panels = [
     ),
     media: %(<img src="//source.unsplash.com/Ssj4uWXcvS4/600x400?1" />),
     media_configs: {
-      aspect_ratio: "2x",
+      aspect_ratio: "3x",
       background_color: "#A5BCC0",
       padded: true,
     },
@@ -63,7 +63,7 @@ panels = [
     ),
     media: %(<img src="//source.unsplash.com/gkJCCn1hZDk/600x400?2" />),
     media_configs: {
-      aspect_ratio: "2x",
+      aspect_ratio: "3x",
       background_color: "#DBD7D5",
       padded: true,
     },
@@ -80,7 +80,7 @@ panels = [
     ),
     media: %(<img src="//source.unsplash.com/3lqEqS1s7mw/600x400?3" />),
     media_configs: {
-      aspect_ratio: "2x",
+      aspect_ratio: "3x",
       background_color: "#AEB8AD",
       padded: true,
     },
@@ -95,7 +95,7 @@ Therefore, the `MediaTiles` (plural) component is used in examples here.
 
 <h3>Basic Tiles</h3>
 <%= md('
-Tiles can include a title, body, and caption. The title and caption clamp to one line, while the body clamps to two lines.
+Tiles can include a title, body, and caption.
 An optional footer can also be used to provide additional final content such as a primary action.
 While typically a part of this component, the `media` area is also optional.
 ', use_sage_type: true) %>
@@ -106,7 +106,7 @@ While typically a part of this component, the `media` area is also optional.
       body: panels[0][:body],
       caption: panels[0][:caption],
       media: panels[0][:media],
-      action_options: common_action_options,
+      actions_dropdown_items: common_actions_dropdown_items,
       footer: common_footer,
     },
     {
@@ -114,7 +114,7 @@ While typically a part of this component, the `media` area is also optional.
       body: panels[1][:body],
       caption: panels[1][:caption],
       media: panels[1][:media],
-      action_options: common_action_options,
+      actions_dropdown_items: common_actions_dropdown_items,
       footer: common_footer,
     },
     {
@@ -122,7 +122,7 @@ While typically a part of this component, the `media` area is also optional.
       body: panels[2][:body],
       caption: panels[2][:caption],
       media: panels[2][:media],
-      action_options: common_action_options,
+      actions_dropdown_items: common_actions_dropdown_items,
       footer: common_footer,
     }
   ]
@@ -139,13 +139,13 @@ While typically a part of this component, the `media` area is also optional.
     {
       title: "Actions dropdown",
       body: md('Since an "options" dropdown is common, you can easily pass a list of items to this default slot.'),
-      action_options: common_action_options,
+      actions_dropdown_items: common_actions_dropdown_items,
       footer: common_footer,
     },
     {
       title: "Custom actions",
       body: md('Additional actions can be provided in lieu of or even in combination with the default dropdown.'),
-      actions: common_additional_actions,
+      actions_custom: common_additional_actions_custom,
       footer: common_footer,
     }
   ]
@@ -186,7 +186,7 @@ The default is to show images at their native aspect ratio, scaled to the width 
       body: md('The default background color (which shows when `padded` is `true` is Grey 100.'),
       media: panels[0][:media],
       media_configs: {
-        aspect_ratio: "2x",
+        aspect_ratio: "3x",
         padded: true,
       }
     },

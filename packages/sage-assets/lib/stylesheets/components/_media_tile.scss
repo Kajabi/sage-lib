@@ -4,14 +4,21 @@
 /// @group sage
 ////
 
-$-media-tile-max-col-size: relative-column(1, 3, sage-spacing(stage));
+$-media-tile-max-col-size: sage-container(md);
 $-media-tile-min-col-size: sage-container(sm);
+$-media-tile-breakpoints: (
+  1-col-max: rem(1079px),
+  2-col-min: rem(1080px),
+  2-col-max: rem(1443px),
+  3-col-min: rem(1444px),
+);
 
-// .sage-media-tile {}
+.sage-media-tile {
+  min-width: $-media-tile-min-col-size;
+  max-width: $-media-tile-max-col-size;
+}
 
 .sage-media-tile__body {
-  @include clamp(2);
-
   color: sage-color(charcoal, 200);
 
   > p {
@@ -20,8 +27,6 @@ $-media-tile-min-col-size: sage-container(sm);
 }
 
 .sage-media-tile__caption {
-  @include clamp(1);
-
   color: sage-color(charcoal, 100);
 
   > p {
@@ -44,6 +49,18 @@ $-media-tile-min-col-size: sage-container(sm);
 .sage-media-tile-container {
   @include sage-grid-panel;
 
-  grid-template-columns: repeat(auto-fill, minmax($-media-tile-max-col-size, $-media-tile-min-col-size));
+  justify-content: center;
   gap: sage-spacing(stage);
+  
+  @media (max-width: map-get($-media-tile-breakpoints, 1-col-max)) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
+  @media (min-width: map-get($-media-tile-breakpoints, 2-col-min)) and (max-width: map-get($-media-tile-breakpoints, 2-col-max)) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @media (min-width: map-get($-media-tile-breakpoints, 3-col-min)) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

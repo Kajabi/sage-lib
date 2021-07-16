@@ -32,8 +32,8 @@ module SageSchemas
   }
 
   MEDIA_TILE = {
-    action_options: [:optional, [[SageSchemas::DROPDOWN_ITEM]]],
-    actions: [:optional, NilClass, String],
+    actions_dropdown_items: [:optional, [[SageSchemas::DROPDOWN_ITEM]]],
+    actions_custom: [:optional, NilClass, String],
     body: [:optional, NilClass, String],
     caption: [:optional, NilClass, String],
     footer: [:optional, NilClass, String],

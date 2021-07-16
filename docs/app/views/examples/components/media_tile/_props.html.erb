@@ -5,32 +5,30 @@
   </td>
 </tr>
 <tr>
-  <td><%= md('`action_options`') %></td>
+  <td><%= md('`actions_dropdown_items`') %></td>
   <td><%= md('Provide a list of dropdown items to be used with an actions dropdown menu in the actions slot next to the title of the tile.
-  This drodpown will appear on the far right of any other actions provided through `actions` property or the `:sage_media_tile_actions` slot.') %></td>
+  This drodpown will appear on the far right of any other actions provided through `actions_custom` property or the `:sage_media_tile_actions_custom` slot.') %></td>
   <td><%= md('See Dropdown items schema.') %></td>
   <td><%= md('`nil`') %></td>
 </tr>
 <tr>
-  <td><%= md('`actions`') %></td>
-  <td><%= md('Provide any items you want to appear to the right of the title in an actions slot.
-  Alternatively, compose this using a `content_for :sage_media_tile_actions` block.') %></td>
+  <td><%= md('`actions_custom`') %></td>
+  <td><%= md('Provide any items you want to appear to the right of the title in an actions_custom slot.
+  Alternatively, compose this using a `content_for :sage_media_tile_actions_custom` block.') %></td>
   <td><%= md('String  | HTML Content') %></td>
   <td><%= md('`nil`') %></td>
 </tr>
 <tr>
   <td><%= md('`body`') %></td>
   <td><%= md('Provide content you want to appear in the body area of the tile.
-  Alternatively, compose this using a `content_for :sage_media_tile_body` block.
-  Note that this content clamps after two lines.') %></td>
+  Alternatively, compose this using a `content_for :sage_media_tile_body` block.') %></td>
   <td><%= md('String  | HTML Content') %></td>
   <td><%= md('`nil`') %></td>
 </tr>
 <tr>
   <td><%= md('`caption`') %></td>
   <td><%= md('Provide any items you want to appear in smaller type below the body area of the tile.
-  Alternatively, compose this using a `content_for :sage_media_tile_caption` block.
-  Note that this content clamps after one line.') %></td>
+  Alternatively, compose this using a `content_for :sage_media_tile_caption` block.') %></td>
   <td><%= md('String  | HTML Content') %></td>
   <td><%= md('`nil`') %></td>
 </tr>
