@@ -50,25 +50,8 @@
 </tr>
 <tr>
   <td><%= md('`media_configs`') %></td>
-  <td><%= md('Allows for a set of configurations for the media figure that plays a prominent role in this tiling component. Allows for the following settings:
-
-- `aspect_ratio`: provide either a number or one of several preset strings.
-  If a number, it is used to calculate an aspect ratio for the figure within the tile.
-  If one of the preset strings is provided the following scale is used:
-  - `1x` is a native 16:9 ratio. Good for standard images.
-  - `2x` is 2 times the normal height of the content area. Good for more square-like images.
-  - `3x` is 3 times the normal height of the content area. Good for taller images.
-- `background_color`: provide a color that will be visible while the image loads and/or if the `padded` setting is turned on.  
-- `is_wistia`: indicates whether the media provided is a standard Wistia embed object that requires additional styling on the tile\'s figure.
-- `padded`: indicates whether or not the image should be padded in from the top and sides to form a sort of simple decorative frame around it.
-') %></td>
-  <td><%= md('```
-{
-  aspect_ratio: <Number | "1x" | "2x" | "3x">
-  key_color: <String>
-  padded: <Boolean>
-}
-```') %></td>
+  <td><%= md('Allows for a set of configurations for the media figure that plays a prominent role in this tiling component.') %></td>
+  <td><%= md("See schema for [Panel Figure](#{pages_component_path(:panel_figure)})") %></td>
   <td><%= md('`nil`') %></td>
 </tr>
 <tr>
