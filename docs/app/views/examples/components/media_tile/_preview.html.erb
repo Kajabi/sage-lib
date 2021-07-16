@@ -151,56 +151,9 @@ While typically a part of this component, the `media` area is also optional.
   ]
 } %>
 
-<h3>Preset Aspect Ratios</h3>
-<%= md('Media Tile exposes a few preset aspect ratios (shown below) but also allows for custom numeric ratios to be provided.
-The default is to show images at their native aspect ratio, scaled to the width of the tile.') %>
-<%= sage_component SageMediaTiles, {
-  items: [
-    {
-      title: "1x Preset Aspect Ratio",
-      body: md('This size fits a standard 16:9 ratio.'),
-      media: panels[0][:media],
-      media_configs: { aspect_ratio: "1x" }
-    },
-    {
-      title: "2x Preset Aspect Ratio",
-      body: md('This size is roughly twice the height of a typical content area below the image.'),
-      media: panels[1][:media],
-      media_configs: { aspect_ratio: "2x" }
-    },
-    {
-      title: "3x Preset Aspect Ratio",
-      body: md('This size is roughly twice the height of a typical content area below the image.'),
-      media: panels[2][:media],
-      media_configs: { aspect_ratio: "3x" }
-    }
-  ],
-  html_attributes: { style: "align-items: start" }
-} %>
-
-<h3>Padding and Backgrounds</h3>
-<%= sage_component SageMediaTiles, {
-  items: [
-    {
-      title: "Default background",
-      body: md('The default background color (which shows when `padded` is `true` is Grey 100.'),
-      media: panels[0][:media],
-      media_configs: {
-        aspect_ratio: "3x",
-        padded: true,
-      }
-    },
-    {
-      title: "Custom background",
-      body: md('Custom colors can be provided as well in order to coordinate with key colors from the image.'),
-      media: panels[1][:media],
-      media_configs: panels[1][:media_configs]
-    },
-    {
-      title: "Another custom background",
-      body: md('Each tile can have its own custom background color if desired.'),
-      media: panels[2][:media],
-      media_configs: panels[2][:media_configs]
-    },
-  ]
-} %>
+<h3>Other Settings for Media</h3>
+<%= md("
+Media Tile uses the [Panel Figure](#{pages_component_path(:panel_figure)}) to display the desired media.
+You can pass the desired media markup (images, embed code, etc.) in through `media` or with `content_for :sage_media_tile_media`.
+You can also pass configurations such as padding, background color, and aspect ratios through the `media_configs` property.
+") %>
