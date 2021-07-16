@@ -183,3 +183,27 @@ $-example-code-preview-button-bg: rgba(sage-color(primary, 500), 0.75);
 .demo-custom-popover-panel {
   width: rem(400px);
 }
+
+
+.docs-panel {
+  $-media-tile-breakpoints: (
+    1-col-max: 1239px,
+    2-col-min: 1240px,
+    2-col-max: 1619px,
+    3-col-min: 1620px,
+  );
+  // Local overrides to better showcase the responsive grid in the docs context.
+  .sage-media-tile-container {
+    @media (max-width: map-get($-media-tile-breakpoints, 1-col-max)) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    
+    @media (min-width: map-get($-media-tile-breakpoints, 2-col-min)) and (max-width: map-get($-media-tile-breakpoints, 2-col-max)) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @media (min-width: map-get($-media-tile-breakpoints, 3-col-min)) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
