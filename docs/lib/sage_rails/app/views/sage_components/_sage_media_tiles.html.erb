@@ -1,0 +1,10 @@
+<%= sage_component SageContainer, {
+  css_classes: "sage-media-tile-container #{component.css_classes}",
+  html_attributes: component.html_attributes,
+  spacer: component.spacer,
+  test_id: component.test_id,
+} do %>
+  <% component.items.each do | panel | %>
+    <%= sage_component SageMediaTile, panel %>
+  <% end if component.items %>
+<% end %>
