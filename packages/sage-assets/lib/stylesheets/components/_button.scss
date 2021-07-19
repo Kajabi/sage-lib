@@ -96,6 +96,7 @@ $-btn-subtle-styles: (
 // Custom variables
 //
 $-btn-interactive-label-icon-size: rem(24px);
+$-btn-loading-min-height: rem(36px);
 
 
 // stylelint-disable max-nesting-depth
@@ -312,6 +313,15 @@ $-btn-interactive-label-icon-size: rem(24px);
   }
 
   // NOTE: Icon generation consolidated in `core/_icons.scss`
+}
+
+.sage-btn--is-loading {
+  min-height: $-btn-loading-min-height;
+  pointer-events: none;
+
+  svg {
+    margin-right: 0;
+  }
 }
 
 // Generate button style variations
