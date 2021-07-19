@@ -19,7 +19,7 @@
     <%= "sage-btn--icon-#{component.icon[:style]}-#{component.icon[:name]}" if component.icon %>
     <%= component.generated_css_classes %>
   "
-  <%= "data-js-sage-disabled-with=#{component.disable_with}" if component.disable_with.present? %>
+  <%= "data-js-sage-disable-on-submit=#{component.disable_on_submit}" if component.disable_on_submit.present? %>
   <%= component.generated_html_attributes.html_safe %>
 >
   <% if component.icon&.dig(:style) == "only" %>
