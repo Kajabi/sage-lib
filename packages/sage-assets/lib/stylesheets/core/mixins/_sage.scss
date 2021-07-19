@@ -455,10 +455,10 @@
 
   .sage-form-field--error & {
     color: sage-color(red);
-  }
 
-  &::before {
-    @include sage-icon-warning(question-circle, md);
+    &::before {
+      @include sage-icon-base(warning, md);
+    }
   }
 }
 
