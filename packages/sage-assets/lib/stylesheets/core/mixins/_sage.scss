@@ -300,6 +300,8 @@
 ///
 @mixin sage-form-field-group() {
   position: relative;
+  display: flex;
+  flex-direction: column;
 
   &:not(:last-child) {
     margin-bottom: sage-spacing();
@@ -431,33 +433,24 @@
   }
 }
 
-
-///
-/// Adds the basic default form label transition treatment
-///
-/// @param {length} $label-height [sage-font-size(body)] The height of the text in the form field
-/// @param {length} $label-padding [sage-spacing(sm)] Padding of the label used to calculate center positioning
-/// @param {length} $label-transform
-///
-// @mixin sage-floating-label-active($label-height: sage-font-size(body), $label-padding: sage-spacing(sm), $label-transform: sage-font-size(body)) {
-//   transform: translateY(-($label-height + $label-padding * 2)); // IE doesn't support calc in transforms so we provide a fallback
-//   transform: translateY(calc(-50% - (#{$label-height} + #{$label-padding}))); // we calculate the centered position minus the offset of the text height plus the spacing height
-//   transition: opacity 0.1s ease-in, transform 0.15s ease-in-out, color 0.15s ease-out;
-//   opacity: 1;
-// }
-
 ///
 /// Adds the basic default form field message font sizing and color treatment
 ///
 @mixin sage-form-field-message() {
   @extend %t-sage-body-xsmall;
+
+  margin-top: sage-spacing(xs);
   color: sage-color(charcoal, 100);
 
   .sage-form-field--error & {
     color: sage-color(red);
 
     &::before {
-      @include sage-icon-base(warning, md);
+      @include sage-icon-base(danger, md);
+
+      position: relative;
+      top: 3px;
+      padding-right: sage-spacing(xs);
     }
   }
 }

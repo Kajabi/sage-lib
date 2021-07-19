@@ -9,8 +9,6 @@
   <textarea class="sage-textarea__field" id="<%= component.id %>"<%= " name=#{ component.name.present? ? component.name : component.id }" %> placeholder="<%= component.placeholder %>" <%= "disabled" if component.disabled -%>><%- component.content if component.content.present? -%></textarea>
   <%- if component.label_text.present? -%><label for="<%= component.id %>" class="sage-textarea__label"><%= component.label_text -%></label><% end -%>
   <% if component.message_text.present? %>
-    <div class="sage-textarea__message">
-      <%= component.message_text %>
-    </div>
+    <div class="sage-textarea__message"><%= component.message_text %></div>
   <% end %>
 </div>

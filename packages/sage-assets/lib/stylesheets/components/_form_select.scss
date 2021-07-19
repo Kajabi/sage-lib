@@ -58,6 +58,7 @@ $-select-padding-label: sage-spacing(2xs);
 .sage-select__arrow::before {
   @include sage-icon-base(caret-down);
   @include position(0, sage-spacing(sm), unset, unset);
+
   position: absolute;
   align-items: center;
   height: $-select-height;

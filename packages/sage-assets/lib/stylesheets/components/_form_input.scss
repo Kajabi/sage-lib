@@ -108,6 +108,4 @@ $-input-text-height: sage-font-size(body);
 
 .sage-input__message {
   @include sage-form-field-message;
-
-  margin-top: sage-spacing(xs);
 }

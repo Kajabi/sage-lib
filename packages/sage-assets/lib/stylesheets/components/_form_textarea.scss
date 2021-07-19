@@ -49,10 +49,6 @@ $-textarea-color-default-background: sage-color(white);
   &:active:not(:disabled) {
     ~ .sage-textarea__label {
       @include floating-label-textarea-active();
-      // @include sage-floating-label-active(
-      //   $label-height: $-input-text-height,
-      //   $label-padding: $-input-padding-filled
-      // );
     }
   }
 
