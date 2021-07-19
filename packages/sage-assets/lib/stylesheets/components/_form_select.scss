@@ -41,8 +41,8 @@ $-select-padding-label: sage-spacing(2xs);
   .sage-select__field ~ &,
   .sage-select__field:focus:not(:disabled) ~ &,
   .sage-select__field:active:not(:disabled) ~ & {
-    opacity: 1;
     color: inherit;
+    opacity: 1;
   }
 
   .sage-select--value-selected &,
