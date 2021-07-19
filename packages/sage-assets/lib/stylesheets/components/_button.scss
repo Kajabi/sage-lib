@@ -174,7 +174,12 @@ $-btn-interactive-label-icon-size: rem(24px);
     right: 0;
     width: $-btn-interactive-label-icon-size;
     margin: auto 0;
-    border-radius: 0 sage-border(radius) sage-border(radius) 0;
+    border-radius: 0 sage-border(radius-x-large) sage-border(radius-x-large) 0;
+
+    &::before {
+      transform: translateY(1px); /* needed as sage-font-size(sm) equates to 13px, not 14px. This 1px is accounting for that 1px */
+      font-size: sage-font-size(sm);
+    }
 
     &::after {
       width: $-btn-interactive-label-icon-size;
@@ -184,10 +189,6 @@ $-btn-interactive-label-icon-size: rem(24px);
 
     &:first-child:not(:last-child) {
       margin-right: sage-spacing(xs);
-    }
-
-    &:last-child:not(:first-child) {
-      margin-left: sage-spacing(xs);
     }
 
     + & {
