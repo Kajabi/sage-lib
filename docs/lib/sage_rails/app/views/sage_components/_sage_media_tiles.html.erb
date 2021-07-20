@@ -7,4 +7,6 @@
   <% component.items.each do | panel | %>
     <%= sage_component SageMediaTile, panel %>
   <% end if component.items %>
+
+  <%= component.content %>
 <% end %>
