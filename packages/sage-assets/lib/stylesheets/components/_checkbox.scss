@@ -12,7 +12,7 @@ $-checkbox-color-checked: sage-color(primary);
 $-checkbox-color-disabled: sage-color(grey, 200);
 $-checkbox-color-disabled-checked: sage-color(primary, 200);
 
-$-checkbox-size: rem(20px);
+$-checkbox-size: rem(16px);
 $-checkbox-label-spacing: rem(12px);
 $-checkbox-border-radius-inner: sage-border(radius-small);
 $-checkbox-border-radius-outer: sage-border(radius-large);
@@ -288,11 +288,11 @@ $-checkbox-focus-outline-color: sage-color(primary);
 
   .sage-checkbox & {
     @media (max-width: sage-breakpoint(md-max)) {
-      margin-top: sage-spacing(2xs);
+      margin-top: rem(6px);
     }
 
     @media (min-width: sage-breakpoint(lg-min)) {
-      margin-top: sage-spacing(3xs);
+      margin-top: sage-spacing(2xs);
     }
   }
 
