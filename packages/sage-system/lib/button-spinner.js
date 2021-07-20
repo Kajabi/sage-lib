@@ -1,4 +1,4 @@
-Sage.buttonDisable = (function () {
+Sage.buttonSpinner = (function () {
   // ==================================================
   // Variables
   // ==================================================
