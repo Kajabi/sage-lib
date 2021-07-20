@@ -70,6 +70,7 @@ $-toast-bottom-spacing: sage-spacing(xs);
   padding-top: sage-spacing(xs);
   padding-bottom: sage-spacing(xs);
   padding: 0 sage-spacing(md);
+  color: sage-color(white);
   border-radius: sage-border(radius);
   box-shadow: sage-shadow(lg);
   background-color: sage-color(charcoal);
@@ -122,7 +123,7 @@ $-toast-bottom-spacing: sage-spacing(xs);
 }
 
 .sage-loader__spinner-path--loading-button {
-  stroke: sage-color(white);
+  stroke: currentColor;
 }
 
 .sage-toast__value {

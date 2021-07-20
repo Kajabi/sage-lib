@@ -17,6 +17,7 @@ export const toastTemplate = ({id, type, icon, text, link}) => (`
     ${type === "loading" ? loadingTemplate() : iconTemplate(icon)}
     <output
       class="sage-toast__value"
+      aria-busy="true"
       aria-live="assertive"
       aria-atomic="true"
     >
