@@ -23,7 +23,7 @@ Sage.buttonDisable = (function () {
     currentTarget.setAttribute(ATTRIBUTE_ARIA_BUSY, true);
     currentTarget.setAttribute(ATTRIBUTE_ARIA_LIVE, 'polite');
 
-    let element = document.createElement('div');
+    let element = document.createElement('span');
     element.innerHTML = BUTTON_LOADING_SPINNER;
 
     currentTarget.appendChild(element)
