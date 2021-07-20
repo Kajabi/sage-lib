@@ -227,6 +227,27 @@ demo_configs = [
   } %>
 <% end %>
 
+<%= sage_component SageCardBlock, {} do %>
+  <%= sage_component SageLabel, {
+    color: "draft",
+    value: "Loading State",
+  } %>
+<% end %>
+<p>
+  When a button is used to submit a form, there's the option to provide a loading state. Populating the <code>spinner_on_submit</code> property will active the loading and place the corresponding text as the <code>aria-label</code>.
+</p>
+<div>
+  <%= sage_component SageButton, {
+    value: "Click me",
+    spinner_on_submit: "my aria label",
+    attributes: {
+      href: "#",
+      rel: "noopener noreferrer",
+      title: "Open Sassdocs site"
+    },
+    style: "primary",
+  } %>
+</div>
 
 <%= sage_component SageCardBlock, {} do %>
   <%= sage_component SageLabel, {

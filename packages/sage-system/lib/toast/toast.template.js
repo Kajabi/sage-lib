@@ -13,10 +13,11 @@ export const toastTemplate = ({id, type, icon, text, link}) => (`
     class="sage-toast sage-toast--style-${type}"
     id="${id}"
     ${DATA_ATTR}
-  > 
+  >
     ${type === "loading" ? loadingTemplate() : iconTemplate(icon)}
     <output
       class="sage-toast__value"
+      aria-busy="true"
       aria-live="assertive"
       aria-atomic="true"
     >
@@ -57,8 +58,8 @@ const linkTemplate = (link) => {
 };
 
 const loadingTemplate = () => (
-  `<svg class="sage-toast__spinner" viewBox="25 25 50 50" aria-hidden="true">
-    <circle class="sage-toast__spinner-path" cx="50" cy="50" r="20" fill="none" stroke="0072EF" stroke-width="4"></circle>
+  `<svg class="sage-loader__spinner sage-loader__spinner--loading-button" viewBox="25 25 50 50" aria-hidden="true">
+    <circle class="sage-loader__spinner-path sage-loader__spinner-path--loading-button" cx="50" cy="50" r="20" fill="none" stroke="0072EF" stroke-width="4"></circle>
   </svg>`
 );
 

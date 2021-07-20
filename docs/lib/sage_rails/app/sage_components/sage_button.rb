@@ -2,8 +2,9 @@ class SageButton < SageComponent
   set_attribute_schema({
     align: [:optional, NilClass, String],
     attributes: [:optional, NilClass, Hash],
-    disabled: [:optional, NilClass, TrueClass],
     custom_content_class: [:optional, NilClass, String],
+    disabled: [:optional, NilClass, TrueClass],
+    spinner_on_submit: [:optional, NilClass, String],
     full_width: [:optional, NilClass, TrueClass],
     icon: [:optional, { name: String, style: Set.new(["left", "right", "only"]) }],
     no_shadow: [:optional, NilClass, TrueClass],

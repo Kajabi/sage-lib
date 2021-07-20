@@ -70,6 +70,7 @@ $-toast-bottom-spacing: sage-spacing(xs);
   padding-top: sage-spacing(xs);
   padding-bottom: sage-spacing(xs);
   padding: 0 sage-spacing(md);
+  color: sage-color(white);
   border-radius: sage-border(radius);
   box-shadow: sage-shadow(lg);
   background-color: sage-color(charcoal);
@@ -115,19 +116,14 @@ $-toast-bottom-spacing: sage-spacing(xs);
   position: relative;
 }
 
-.sage-toast__spinner {
+.sage-loader__spinner--loading-button {
   width: sage-spacing(sm);
   height: sage-spacing(sm);
   margin-right: sage-spacing(xs);
-  animation: rotate $-loader-spinner-speed linear infinite;
 }
 
-.sage-toast__spinner-path {
-  stroke-dasharray: 150,200;
-  stroke-dashoffset: -10;
-  stroke-linecap: round;
-  stroke: sage-color(white);
-  animation: dash $-loader-spinner-path-speed ease-in-out infinite;
+.sage-loader__spinner-path--loading-button {
+  stroke: currentColor;
 }
 
 .sage-toast__value {
