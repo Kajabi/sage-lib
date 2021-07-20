@@ -176,8 +176,24 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
     @include sage-focus-outline($outline-offset-inline: -2px, $outline-offset-block: -2px);
     @include sage-focus-outline--update-color(sage-color(primary, 300));
 
+    // .sage-dropdown:not(.sage-dropdown--checkbox) &,
+    // .sage-dropdown:not(.sage-dropdown--choice) &,
+    // .sage-dropdown:not(.sage-dropdown--searchable) & {
+    //   &::after {
+    //     opacity: 1;
+    //   }
+    // }
+
     &::after {
       opacity: 1;
+    }
+
+    .sage-dropdown.sage-dropdown--checkbox &,
+    .sage-dropdown.sage-dropdown--choice &,
+    .sage-dropdown.sage-dropdown--searchable & {
+      &::after {
+        opacity: 0;
+      }
     }
   }
 

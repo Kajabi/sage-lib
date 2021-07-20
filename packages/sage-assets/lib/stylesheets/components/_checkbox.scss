@@ -193,8 +193,7 @@ $-checkbox-focus-outline-color: sage-color(primary);
     pointer-events: none;
     opacity: 0;
 
-    .sage-panel-controls__bulk-actions--checked &,
-    .sage-dropdown__item-control:focus-within & {
+    .sage-panel-controls__bulk-actions--checked & {
       display: none;
     }
   }
