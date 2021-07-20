@@ -3,7 +3,7 @@ Sage.buttonDisable = (function () {
   // Variables
   // ==================================================
 
-  const SELECTOR_BUTTON_DISABLE_ON_SUBMIT = "data-js-sage-disable-on-submit"
+  const SELECTOR_BUTTON_spinner_on_submit = "data-js-sage-disable-on-submit"
   const BUTTON_LOADING_SPINNER = `<svg class='sage-loader__spinner sage-loader__spinner--loading-button' viewBox='25 25 50 50' aria-hidden='true'><circle class='sage-loader__spinner-path sage-loader__spinner-path--loading-button' cx='50' cy='50' r='20' fill='none' stroke='0072EF' stroke-width='4'></circle></svg>`;
 
   const ATTRIBUTE_ARIA_LABEL = 'aria-label';
@@ -16,7 +16,7 @@ Sage.buttonDisable = (function () {
 
   function renderDisabledButtonSpinner(evt) {
     let currentTarget = evt.currentTarget;
-    let spinnerLabel = currentTarget.getAttribute(SELECTOR_BUTTON_DISABLE_ON_SUBMIT);
+    let spinnerLabel = currentTarget.getAttribute(SELECTOR_BUTTON_spinner_on_submit);
 
     currentTarget.classList.add('sage-btn--is-loading');
     currentTarget.setAttribute(ATTRIBUTE_ARIA_LABEL, spinnerLabel)

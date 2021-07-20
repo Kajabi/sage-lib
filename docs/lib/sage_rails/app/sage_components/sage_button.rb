@@ -4,7 +4,7 @@ class SageButton < SageComponent
     attributes: [:optional, NilClass, Hash],
     custom_content_class: [:optional, NilClass, String],
     disabled: [:optional, NilClass, TrueClass],
-    disable_on_submit: [:optional, NilClass, String],
+    spinner_on_submit: [:optional, NilClass, String],
     full_width: [:optional, NilClass, TrueClass],
     icon: [:optional, { name: String, style: Set.new(["left", "right", "only"]) }],
     no_shadow: [:optional, NilClass, TrueClass],
