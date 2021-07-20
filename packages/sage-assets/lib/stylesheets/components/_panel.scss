@@ -140,10 +140,6 @@ $-panel-figure-default-background-color: sage-color(grey, 100);
 
 .sage-panel__title {
   @extend %t-sage-heading-5;
-
-  .sage-media-tile__header & {
-    @include clamp(1);
-  }
 }
 
 .sage-panel-set {
