@@ -1,0 +1,69 @@
+////
+/// Media Tile
+///
+/// @group sage
+////
+
+$-media-tile-max-col-size: sage-container(md);
+$-media-tile-min-col-size: sage-container(sm);
+$-media-tile-breakpoints: (
+  1-col-max: rem(1079px),
+  2-col-min: rem(1080px),
+  2-col-max: rem(1443px),
+  3-col-min: rem(1444px),
+);
+
+.sage-media-tile {
+  max-width: $-media-tile-max-col-size;
+
+  @media (min-width: map-get($-media-tile-breakpoints, 2-col-min)) {
+    min-width: $-media-tile-min-col-size;
+  }
+}
+
+.sage-media-tile__body {
+  color: sage-color(charcoal, 200);
+
+  > p {
+    @extend %t-sage-body;
+  }
+}
+
+.sage-media-tile__caption {
+  color: sage-color(charcoal, 100);
+
+  > p {
+    @extend %t-sage-body-small;
+  }
+}
+
+.sage-media-tile__content {
+  align-content: start;
+}
+
+.sage-media-tile__footer {
+  align-self: end;
+}
+
+.sage-media-tile__header {
+  width: 100%;
+}
+
+.sage-media-tile-container {
+  @include sage-grid-panel;
+
+  justify-content: center;
+  gap: sage-spacing(stage);
+  
+  @media (max-width: map-get($-media-tile-breakpoints, 1-col-max)) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
+  @media (min-width: map-get($-media-tile-breakpoints, 2-col-min)) and (max-width: map-get($-media-tile-breakpoints, 2-col-max)) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @media (min-width: map-get($-media-tile-breakpoints, 3-col-min)) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

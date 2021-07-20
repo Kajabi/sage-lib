@@ -1,0 +1,73 @@
+
+<tr>
+  <td colspan="4">
+    <strong>MediaTile</strong>
+  </td>
+</tr>
+<tr>
+  <td><%= md('`actions_dropdown_items`') %></td>
+  <td><%= md('Provide a list of dropdown items to be used with an actions dropdown menu in the actions slot next to the title of the tile.
+  This dropdown will appear on the far right of any other actions provided through `actions_custom` property or the `:sage_media_tile_actions_custom` slot.') %></td>
+  <td><%= md('See Dropdown items schema.') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`actions_custom`') %></td>
+  <td><%= md('Provide any items you want to appear to the right of the title in an actions_custom slot.
+  Alternatively, compose this using a `content_for :sage_media_tile_actions_custom` block.') %></td>
+  <td><%= md('String  | HTML Content') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`body`') %></td>
+  <td><%= md('Provide content you want to appear in the body area of the tile.
+  Alternatively, compose this using a `content_for :sage_media_tile_body` block.') %></td>
+  <td><%= md('String  | HTML Content') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`caption`') %></td>
+  <td><%= md('Provide any items you want to appear in smaller type below the body area of the tile.
+  Alternatively, compose this using a `content_for :sage_media_tile_caption` block.') %></td>
+  <td><%= md('String  | HTML Content') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`footer`') %></td>
+  <td><%= md('Provide any items you want to appear to very bottom of the tile such as an action button.
+  Alternatively, compose this using a `content_for :sage_media_tile_footer` block.') %></td>
+  <td><%= md('String  | HTML Content') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`media`') %></td>
+  <td><%= md('Provide the media markup to be displayed within the tile.
+  Alternatively, compose this using a `content_for :sage_media_tile_media` block.
+  Typically this is an image, but other mebed code can be provided as well.
+  Use the `media_configs` property to provide additional settings.') %></td>
+  <td><%= md('String  | HTML Content') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`media_configs`') %></td>
+  <td><%= md('Allows for a set of configurations for the media figure that plays a prominent role in this tiling component.') %></td>
+  <td><%= md("See schema for [Panel Figure](#{pages_component_path(:panel_figure)})") %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`title`') %></td>
+  <td><%= md('Provide the "header" content for the tile.') %></td>
+  <td><%= md('`String`') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td colspan="4">
+    <strong>MediaTiles</strong>
+  </td>
+</tr>
+<tr>
+  <td><%= md('`items`') %></td>
+  <td><%= md('Provide a set of items to be rendered as MediaTiles.') %></td>
+  <td><%= md('See schema for `MediaTile` above.') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>

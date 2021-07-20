@@ -1,0 +1,144 @@
+<%
+common_actions_dropdown_items = [
+  {
+    value: "Edit",
+    attributes: { href: "#edit" }
+  },
+  {
+    value: "Duplicate",
+    attributes: { href: "#duplicate" }
+  },
+  {
+    value: "Delete",
+    attributes: { href: "#delete" }
+  }
+]
+
+common_additional_actions_custom = sage_component(SageButton, {
+  value: "Preview",
+  icon: { name: "preview-on", style: "only" },
+  subtle: true,
+  style: "secondary",
+}) << sage_component(SageButton, {
+  value: "Edit",
+  icon: { name: "pen", style: "only" },
+  subtle: true,
+  style: "secondary",
+})
+
+common_footer = sage_component(SageButton, {
+  value: "More",
+  icon: { name: "arrow-right", style: "right" },
+  subtle: true,
+  style: "primary",
+})
+
+panels = [
+  {
+    body: %(
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Etiam rhoncus aliquam odio.
+      </p>
+    ),
+    caption: %(
+      <p>Vivamus dictum rutrum dui, nec placerat ante</p>
+    ),
+    media: %(<img src="//source.unsplash.com/Ssj4uWXcvS4/600x400?1" alt="Image of Product Abra" />),
+    title: "Product Abra",
+  },
+  {
+    body: %(
+      <p>
+        Praesent in magna in diam luctus accumsan.
+      </p>
+    ),
+    caption: %(
+      <p>Suspendisse eu tellus quis arcu sagittis semper</p>
+    ),
+    media: %(<img src="//source.unsplash.com/gkJCCn1hZDk/600x400?2" />),
+    title: "Product Cadabra",
+  },
+  {
+    body: %(
+      <p>
+        Nam gravida, ligula vel varius porttitor, mauris lectus pulvinar orci, sit amet luctus tortor ipsum rutrum est.
+      </p>
+    ),
+    caption: %(
+      <p>Maecenas vitae leo eu tellus efficitur viverra sit amet ut tortor vestibulum</p>
+    ),
+    media: %(<img src="//source.unsplash.com/3lqEqS1s7mw/600x400?3" />),
+    title: "Product Jimminycricket",
+  },
+]
+%>
+<%= md('
+NOTE: While `MediaTile` (singular) can be used on its own, it will commonly be implemented in a set.
+Therefore, the `MediaTiles` (plural) component is used in examples here.
+', use_sage_type: true) %>
+
+<h3>Basic Tiles</h3>
+<%= md('
+Tiles can include a title, body, and caption.
+An optional footer can also be used to provide additional final content such as a primary action.
+While typically a part of this component, the `media` area is also optional.
+', use_sage_type: true) %>
+<%= sage_component SageMediaTiles, {
+  items: [
+    {
+      title: panels[0][:title],
+      body: panels[0][:body],
+      caption: panels[0][:caption],
+      media: panels[0][:media],
+      actions_dropdown_items: common_actions_dropdown_items,
+      footer: common_footer,
+    },
+    {
+      title: panels[1][:title],
+      body: panels[1][:body],
+      caption: panels[1][:caption],
+      media: panels[1][:media],
+      actions_dropdown_items: common_actions_dropdown_items,
+      footer: common_footer,
+    },
+    {
+      title: panels[2][:title],
+      body: panels[2][:body],
+      caption: panels[2][:caption],
+      media: panels[2][:media],
+      actions_dropdown_items: common_actions_dropdown_items,
+      footer: common_footer,
+    }
+  ]
+} %>
+
+<h3>Actions</h3>
+<%= sage_component SageMediaTiles, {
+  items: [
+    {
+      title: "Plain and simple",
+      body: md('Tiles do not have to include an actions area if its not needed.'),
+      footer: common_footer,
+    },
+    {
+      title: "Actions dropdown",
+      body: md('Since an "options" dropdown is common, you can easily pass a list of items to this default slot.'),
+      actions_dropdown_items: common_actions_dropdown_items,
+      footer: common_footer,
+    },
+    {
+      title: "Custom actions",
+      body: md('Additional actions can be provided in lieu of or even in combination with the default dropdown.'),
+      actions_custom: common_additional_actions_custom,
+      footer: common_footer,
+    }
+  ]
+} %>
+
+<h3>Other Settings for Media</h3>
+<%= md("
+Media Tile uses the [Panel Figure](#{pages_component_path(:panel_figure)}) to display the desired media.
+You can pass the desired media markup (images, embed code, etc.) in through `media` or with `content_for :sage_media_tile_media`.
+You can also pass configurations such as padding, background color, and aspect ratios through the `media_configs` property.
+") %>
