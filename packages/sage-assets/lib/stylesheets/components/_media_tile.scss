@@ -14,8 +14,11 @@ $-media-tile-breakpoints: (
 );
 
 .sage-media-tile {
-  min-width: $-media-tile-min-col-size;
   max-width: $-media-tile-max-col-size;
+
+  @media (min-width: map-get($-media-tile-breakpoints, 2-col-min)) {
+    min-width: $-media-tile-min-col-size;
+  }
 }
 
 .sage-media-tile__body {
