@@ -1,4 +1,16 @@
 <tr>
+  <td><%= md('`card_color`') %></td>
+  <td><%= md('Rather than just changing the icon color with the `color` property, this option adds a padded background behind the icon in one of the brand status color options.') %></td>
+  <td><%= md("`#{SageTokens::STATUSES.inspect()}`") %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`circular`') %></td>
+  <td><%= md('Optionally, when an icon has a background color, present the shape inside a circle (as opposed to default square with rounded corners.') %></td>
+  <td><%= md('`Boolean`') %></td>
+  <td><%= md('`false`') %></td>
+</tr>
+<tr>
   <td><%= md('`color`') %></td>
   <td><%= md('Which color to use to render the icon. See Sage Colors under "Design."') %></td>
   <td><%= md('Color slider values such as "primary", "prmary-100".') %></td>
@@ -19,7 +31,6 @@
 <tr>
   <td><%= md('`size`') %></td>
   <td><%= md('Adjusts the size of the icon.') %></td>
-  <td><%= md("`#{SageTokens::ICON_SIZES.inspect()}`") %>
-  </td>
+  <td><%= md("`#{SageTokens::ICON_SIZES.inspect()}`") %></td>
   <td><%= md('`nil` (Default is "md" size)') %></td>
 </tr>
