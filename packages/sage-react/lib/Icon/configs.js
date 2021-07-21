@@ -13,10 +13,10 @@ export const ICON_SIZES = {
 };
 
 export const ICON_CARD_COLORS = {
-  DANGER: "danger",
-  DRAFT: "draft",
-  INFO: "info",
-  LOCKED: "locked",
-  PUBLISHED: "published",
-  WARNING: "warning",
+  DANGER: 'danger',
+  DRAFT: 'draft',
+  INFO: 'info',
+  LOCKED: 'locked',
+  PUBLISHED: 'published',
+  WARNING: 'warning',
 };
