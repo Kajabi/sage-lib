@@ -27,7 +27,7 @@ export const Icon = ({
     'sage-icon-background',
     {
       [`sage-icon-background--${cardColor}`]: cardColor,
-      [`sage-icon-background--${size}`]: size.present,
+      [`sage-icon-background--${size}`]: size,
       'sage-icon-background--circular': circular,
     },
   );
