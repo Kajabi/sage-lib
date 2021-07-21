@@ -24,9 +24,10 @@
 <h3>Background Colors</h3>
 <%= sage_component SageCardList, {} do %>
   <% SageTokens::STATUSES.each do | color | %>
-    <%= sage_component SageCardListItem, { grid_template: "et" } do %>
-      <%= sage_component SageIcon, { icon: "pen", card_color: color } %>
+    <%= sage_component SageCardListItem, { grid_template: "o" } do %>
       <%= color %>
+      <%= sage_component SageIcon, { icon: "pen", card_color: color } %>
+      <%= sage_component SageIcon, { icon: "pen", card_color: color, circular: true, } %>
     <% end %>
   <% end %>
 <% end %>
