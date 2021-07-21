@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.9.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.8.3...@kajabi/sage@4.9.0) (2021-07-21)
+
+
+### Bug Fixes
+
+* **button:** add disabled loading state ([e359c4f](https://github.com/Kajabi/sage-lib/commit/e359c4fe23089cfbcf03fc5d82718d378f2b6ea8))
+* **button:** more updates to loading state ([6591ee7](https://github.com/Kajabi/sage-lib/commit/6591ee72ef1fd82272737c4994a5c3908128291c))
+* **button:** rename html attr ([a0a4267](https://github.com/Kajabi/sage-lib/commit/a0a4267809643b0b76564da967280dafb561f606))
+* **button:** updated to prop name ([5562845](https://github.com/Kajabi/sage-lib/commit/5562845c15f3ab3fbf849cd1e1cf79e04db27218))
+* **button:** updates per review ([fd3356d](https://github.com/Kajabi/sage-lib/commit/fd3356d61829a45275fcfd1e94f727375097f3e3))
+* **button:** updates to disabled button ([294d60e](https://github.com/Kajabi/sage-lib/commit/294d60e7601350c705bcf18f231b0f24161b0b20))
+* **button:** updates to docs page ([5a00625](https://github.com/Kajabi/sage-lib/commit/5a0062539b99126bbda19fb845313fc9542c4332))
+* adjust grid in docs context ([c3add39](https://github.com/Kajabi/sage-lib/commit/c3add3969e018d76bf34bdbf2fc61f5e297a2083))
+
+
+### Features
+
+* **icons:** add new icons ([44ca7e4](https://github.com/Kajabi/sage-lib/commit/44ca7e4ff54749c66d4113c6279c52a37c1282df))
+* **media-tile:** add new component ([d6cf1fa](https://github.com/Kajabi/sage-lib/commit/d6cf1fae3a3e787f6b243282db756bb43b4dacfa))
+* **media-tiles:** add content to media tiles ([21379e9](https://github.com/Kajabi/sage-lib/commit/21379e92203c4d596f13f8db4a9444fe15575789))
+
+
+
+
+
 ## [4.8.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.8.2...@kajabi/sage@4.8.3) (2021-07-15)
 
 

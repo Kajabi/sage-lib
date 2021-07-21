@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.42.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.41.2...@kajabi/sage-assets@0.42.0) (2021-07-21)
+
+
+### Bug Fixes
+
+* **button:** more updates to loading state ([6591ee7](https://github.com/Kajabi/sage-lib/commit/6591ee72ef1fd82272737c4994a5c3908128291c))
+* **button:** updates per review ([fd3356d](https://github.com/Kajabi/sage-lib/commit/fd3356d61829a45275fcfd1e94f727375097f3e3))
+* **button:** updates to disabled button ([294d60e](https://github.com/Kajabi/sage-lib/commit/294d60e7601350c705bcf18f231b0f24161b0b20))
+* **dropdown:** resolve incorrect border-radius ([ad7ba27](https://github.com/Kajabi/sage-lib/commit/ad7ba27553c6e1137027e208c2a721f332ef7375))
+* **label:** align to spec ([a37c7b0](https://github.com/Kajabi/sage-lib/commit/a37c7b0a03f074fdfcec34b056e8fd91f3915f5e))
+* **label:** self review ([9584468](https://github.com/Kajabi/sage-lib/commit/9584468ae1dacc4a624489f1e3a47af76be5fa42))
+* **label:** update interaction colors to match spec ([5a8be4d](https://github.com/Kajabi/sage-lib/commit/5a8be4dc54ab7a43d33944677634f5708be810f9))
+* **label:** updates per review ([4be601a](https://github.com/Kajabi/sage-lib/commit/4be601af491c00c8a0da92152b89a0390bc92f9e))
+* **nav:** updated nav interaction patterns ([2e39b18](https://github.com/Kajabi/sage-lib/commit/2e39b184397d4adc210006de29c16456584dec9a))
+
+
+### Features
+
+* **assets:** add relative column SCSS function ([59c9f43](https://github.com/Kajabi/sage-lib/commit/59c9f43fe4d873f0e749a870563a17bb0cd84ce9))
+* **icons:** add new fonts ([12c5e53](https://github.com/Kajabi/sage-lib/commit/12c5e534699965ef653662cbde672dd75190bcd9))
+* **icons:** add new icons ([44ca7e4](https://github.com/Kajabi/sage-lib/commit/44ca7e4ff54749c66d4113c6279c52a37c1282df))
+* **media-tile:** add new component ([d6cf1fa](https://github.com/Kajabi/sage-lib/commit/d6cf1fae3a3e787f6b243282db756bb43b4dacfa))
+
+
+
+
+
 ## [0.41.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.41.1...@kajabi/sage-assets@0.41.2) (2021-07-14)
 
 

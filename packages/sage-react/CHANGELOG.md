@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.52.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.51.2...@kajabi/sage-react@0.52.0) (2021-07-21)
+
+
+### Bug Fixes
+
+* **button:** updates to disabled button ([294d60e](https://github.com/Kajabi/sage-lib/commit/294d60e7601350c705bcf18f231b0f24161b0b20))
+
+
+### Features
+
+* **icons:** add new icons ([44ca7e4](https://github.com/Kajabi/sage-lib/commit/44ca7e4ff54749c66d4113c6279c52a37c1282df))
+
+
+
+
+
 ## [0.51.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.51.1...@kajabi/sage-react@0.51.2) (2021-07-14)
 
 
