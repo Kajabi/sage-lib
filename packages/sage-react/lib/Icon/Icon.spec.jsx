@@ -32,7 +32,7 @@ describe('Rendering the Sage Icon Component', () => {
       expect(component.get(0).props).toHaveProperty('aria-hidden', true);
     });
   });
-  
+
   describe('variations', () => {
     it('label results in aria-label', () => {
       const label = 'New label';
