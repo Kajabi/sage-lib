@@ -8,12 +8,15 @@ export default {
   component: Icon,
   argTypes: {
     ...selectArgs({
+      cardColor: Icon.CARD_COLORS,
       color: Icon.COLORS,
       icon: SageTokens.ICONS,
       size: Icon.SIZES
     }),
   },
   args: {
+    cardColor: null,
+    circular: false,
     color: Icon.COLORS.CHARCOAL,
     icon: Icon.ICONS.CHECK_CIRCLE,
     label: 'Click me',
