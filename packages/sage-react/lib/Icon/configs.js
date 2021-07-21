@@ -11,3 +11,12 @@ export const ICON_SIZES = {
   '4XL': '4xl',
   XXXXL: '4xl',
 };
+
+export const ICON_CARD_COLORS = {
+  DANGER: "danger",
+  DRAFT: "draft",
+  INFO: "info",
+  LOCKED: "locked",
+  PUBLISHED: "published",
+  WARNING: "warning",
+};
