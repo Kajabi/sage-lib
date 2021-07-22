@@ -47,7 +47,7 @@ class SageComponent
   def spacer=(spacer_hash)
     @spacer = spacer_hash
     spacer_hash.each do |key, value|
-      generated_css_classes << " sage-spacer-#{key}#{value != :md ? "-#{value}" : ""}"
+      generated_css_classes << " sage-spacer-#{key}#{(value != :md and value != "md") ? "-#{value}" : ""}"
     end
   end
 
