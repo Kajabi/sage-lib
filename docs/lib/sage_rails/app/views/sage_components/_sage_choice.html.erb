@@ -58,7 +58,11 @@ end
       <%= component.graphic.html_safe %>
     </div>
   <% end %>
-  <div class="sage-choice__content <%= "sage-choice__content--custom" if component.content.present? %>">
+  <div class="
+    sage-choice__content
+    <%= "sage-choice__content--custom" if component.content.present? %>
+    <%= component.custom_content_class if component.custom_content_class.present? %>
+  ">
     <% if component.text.present? %>
       <em class="sage-choice__text"><%= component.text.html_safe %></em>
     <% end %>
