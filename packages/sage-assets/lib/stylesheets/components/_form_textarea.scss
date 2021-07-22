@@ -39,9 +39,11 @@ $-textarea-color-success: map-get($sage-field-colors, success);
     margin-bottom: $-textarea-bottom-gap;
   }
 
+  .sage-panel-grid > &,
   .sage-panel__row > &,
   .sage-panel__stack > &,
   .sage-panel__block > &,
+  .sage-card-grid > &,
   .sage-card__row > &,
   .sage-card__stack > &,
   .sage-card__block > & {
