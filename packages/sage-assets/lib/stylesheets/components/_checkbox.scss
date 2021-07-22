@@ -44,9 +44,11 @@ $-checkbox-focus-outline-color: sage-color(primary);
     margin-bottom: sage-spacing(card) / 2;
   }
 
+  .sage-panel-grid > &,
   .sage-panel__row > &,
   .sage-panel__stack > &,
   .sage-panel__block > &,
+  .sage-card-grid > &,
   .sage-card__row > &,
   .sage-card__stack > &,
   .sage-card__block > &,

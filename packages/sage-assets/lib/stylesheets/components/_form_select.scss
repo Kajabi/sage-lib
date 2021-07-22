@@ -28,9 +28,11 @@ $-select-padding-label: map-get($sage-field-configs, padding-label);
     margin-bottom: $-select-bottom-gap;
   }
 
+  .sage-panel-grid > &,
   .sage-panel__row > &,
   .sage-panel__stack > &,
   .sage-panel__block > &,
+  .sage-card-grid > &,
   .sage-card__row > &,
   .sage-card__stack > &,
   .sage-card__block > & {
