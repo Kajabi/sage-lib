@@ -29,6 +29,7 @@ module SageSchemas
     active: [:optional, NilClass, TrueClass],
     align_center: [:optional, TrueClass],
     attributes: [:optional, NilClass, Hash],
+    custom_content_class: [:optional, NilClass, String],
     disabled: [:optional, NilClass, TrueClass],
     graphic: [:optional, NilClass, String],
     icon: [:optional, NilClass, String],
