@@ -98,13 +98,20 @@ $-icon-font-path: "../fonts/sage";
   align-self: stretch;
   width: sage-spacing(xl);
   height: sage-spacing(xl);
-  border-radius: sage-border(radius);
   background-color: var(--background-color, inherit);
 
   [class*="sage-icon-"] {
     display: flex;
     color: var(--color, currentColor);
   }
+
+  &:not(.sage-icon-background--circular) {
+    border-radius: sage-border(radius);
+  }
+}
+
+.sage-icon-background--circular {
+  border-radius: sage-border(radius-round);
 }
 
 @each $size-name, $size in $sage-icon-background-sizes {
