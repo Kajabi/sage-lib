@@ -1,4 +1,7 @@
 module SageSchemas
+
+  # Miscellaneous
+
   ICON = Set.new(SageTokens::ICONS)
   
   ICON_SIZE = Set.new(SageTokens::ICON_SIZES)
@@ -18,6 +21,28 @@ module SageSchemas
     right: [:optional, Set.new(SageTokens::SPACER_SIZES)],
     bottom: [:optional, Set.new(SageTokens::SPACER_SIZES)],
     left: [:optional, Set.new(SageTokens::SPACER_SIZES)],
+  }
+
+  # Components
+
+  CHOICE = {
+    active: [:optional, NilClass, TrueClass],
+    align_center: [:optional, TrueClass],
+    attributes: [:optional, NilClass, Hash],
+    disabled: [:optional, NilClass, TrueClass],
+    graphic: [:optional, NilClass, String],
+    icon: [:optional, NilClass, String],
+    link_text: [:optional, NilClass, String],
+    subtext: [:optional, NilClass, String],
+    target: [:optional, NilClass, String],
+    text: [:optional, NilClass, String],
+    type: [:optional, NilClass, Set.new(["arrow", "graphic", "icon", "radio"])],
+    vertical_align_icon: [:optional, NilClass, Set.new(["start"])],
+    radio_configs: [:optional, NilClass, {
+      value: String,
+      name: String,
+      id: String,
+    }]
   }
 
   DROPDOWN_ITEM = {
@@ -48,6 +73,14 @@ module SageSchemas
     media: [:optional, NilClass, String],
     media_configs: [:optional, NilClass, SageSchemas::PANEL_FIGURE],
     title: [:optional, NilClass, String],
+  }
+
+  TAB = {
+    active: [:optional, NilClass, TrueClass],
+    attributes: [:optional, NilClass, Hash],
+    disabled: [:optional, NilClass, TrueClass],
+    target: [:optional, NilClass, String],
+    text: String,
   }
 
   # Accepts any Collection that can be paginated
