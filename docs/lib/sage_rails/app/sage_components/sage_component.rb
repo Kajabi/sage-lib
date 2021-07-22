@@ -24,7 +24,7 @@ class SageComponent
 
   def css_classes=(classes_string)
     @css_classes = classes_string
-    generated_css_classes << classes_string
+    generated_css_classes << " #{classes_string}"
   end
 
   def render
