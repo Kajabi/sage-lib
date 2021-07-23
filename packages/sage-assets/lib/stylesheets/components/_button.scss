@@ -221,6 +221,10 @@ $-btn-loading-min-height: rem(36px);
     }
   }
 
+  .sage-page-heading__actions & {
+    align-self: flex-start;
+  }
+
   .sage-sortable__item-actions & {
     &:not(:last-child) {
       margin-right: sage-spacing(sm);
