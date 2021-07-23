@@ -1,10 +1,10 @@
 <% feature_toggle_title_tag = component.title_tag ? component.title_tag : "h3" %>
 
 <li class="
-    sage-feature-toggle 
+    sage-feature-toggle
     <%= "sage-feature-toggle--no-image" if component.image.blank? && component.icon.blank? %>
     <%= component.generated_css_classes %>
-  " 
+  "
   <%= component.generated_html_attributes.html_safe %>>
   <<%= feature_toggle_title_tag %> class="sage-feature-toggle__title"><%= component.title %></<%= feature_toggle_title_tag %>>
   <div class="sage-feature-toggle__content">
@@ -27,6 +27,14 @@
             } %>
           <% end %>
         <% end %>
+      <% end %>
+      <% if component.label.present? %>
+        <div class="sage-feature-toggle__label">
+          <%= sage_component SageLabel, {
+            color: component.label[:color],
+            value: component.label[:value]
+          } %>
+        </div>
       <% end %>
     </div>
   </div>
