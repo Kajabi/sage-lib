@@ -7,10 +7,8 @@ assignees: ''
 
 ---
 
-## Detailed Description
+## Detailed description
 <!-- A clear and concise description of what the bug is -->
-
-
 > Describe in detail the issue you're having.
 
 > Is this issue related to a specific component?
