@@ -10,6 +10,10 @@ class SageFeatureToggle < SageComponent
       target: [:optional, String],
       text: [:optional, String],
     }]]],
+    label: [:optional, {
+      color: [:optional, SageSchemas::STATUSES],
+      value: [:optional, String],
+    }],
     title: [:optional, String],
     title_tag: [:optional, String],
   })
