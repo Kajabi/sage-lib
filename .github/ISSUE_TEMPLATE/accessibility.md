@@ -13,7 +13,7 @@ assignees: ''
 
 > Browser
 
-> Automated testing tool 
+> Testing tool used
 
 > Assistive technology used to verify
 
