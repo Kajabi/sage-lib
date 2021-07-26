@@ -56,7 +56,11 @@
           size: (component.icon[:size] if component.icon[:size].present?),
         }.compact %>
       <% elsif component.image.present? %>
-        <img class="sage-feature-toggle__image" src=<%= component.image %> alt="<%= component.alt_text %>" <%= "aria-hidden=true" if component.alt_text.blank? %> />
+        <% image_options = {
+          alt: component.alt_text,
+          class: "sage-feature-toggle__image"
+        }.merge((component.alt_text.blank? ? { "aria-hidden": true } : {})) %>
+        <%= image_tag component.image, image_options %>
       <% end %>
     </div>
   <% end %>
