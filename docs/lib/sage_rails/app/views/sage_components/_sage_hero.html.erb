@@ -18,7 +18,11 @@
     class="sage-hero__artwork"
   >
     <span class="sage-hero__artwork-image-container">
-      <img class="sage-hero__artwork-image" <%= "aria-hidden=true" if component.alt_text.blank? %> src=<%= component.image%> alt="<%= component.alt_text %>" />
+      <% image_options = {
+        alt: component.alt_text,
+        class: "sage-hero__artwork-image"
+      }.merge((component.alt_text.blank? ? { "aria-hidden": true } : {})) %>
+      <%= image_tag component.image, image_options %>
     </span>
   </a>
 </article>
