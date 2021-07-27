@@ -95,8 +95,9 @@ $-feature-toggle-image-height-mobile: rem(96px);
 }
 
 .sage-feature-toggle__aside {
+  display: flex;
   grid-area: aside;
-  padding-right: sage-spacing(xs);
+  justify-content: flex-end;
 
   .sage-feature-toggle--no-image & {
     align-self: center;
@@ -115,11 +116,6 @@ $-feature-toggle-image-height-mobile: rem(96px);
   margin-right: sage-spacing(sm);
 }
 
-.sage-feature-toggle__aside {
-  grid-area: aside;
-  padding-right: sage-spacing(xs);
-}
-
 .sage-feature-toggle__image-link {
   display: flex;
   position: relative;
@@ -132,7 +128,7 @@ $-feature-toggle-image-height-mobile: rem(96px);
 
 .sage-feature-toggle__image {
   align-self: flex-start;
-  max-width: $-feature-toggle-image-width;
+
   width: $-feature-toggle-image-width;
   height: $-feature-toggle-image-width;
   border-radius: sage-border(radius);
