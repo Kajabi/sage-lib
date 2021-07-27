@@ -5,9 +5,9 @@
 ////
 
 
-$-feature-toggle-image-width: rem(120px);
+$-feature-toggle-image-width: rem(96px);
 $-feature-toggle-image-height-min: rem(64px);
-$-feature-toggle-image-height-mobile: rem(120px);
+$-feature-toggle-image-height-mobile: rem(96px);
 
 
 .sage-feature-toggle {
@@ -132,7 +132,7 @@ $-feature-toggle-image-height-mobile: rem(120px);
 
 .sage-feature-toggle__image {
   align-self: flex-start;
-  max-width: rem(140px);
+  max-width: $-feature-toggle-image-width;
   width: $-feature-toggle-image-width;
   height: $-feature-toggle-image-width;
   border-radius: sage-border(radius);
