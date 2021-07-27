@@ -134,13 +134,17 @@ module SageTableHelper
       table_classes << " #{class_name}" if striped
 
       content_tag "table", id: id, class: table_classes do
-        caption + head + body
+        (caption << head << body).html_safe
       end
     end
 
     def caption
-      content_tag "caption" do
-        @caption
+      if @caption
+        content_tag "caption" do
+          @caption
+        end
+      else
+        ""
       end
     end
 
