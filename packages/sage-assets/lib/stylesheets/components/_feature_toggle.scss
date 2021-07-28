@@ -90,6 +90,8 @@ $-feature-toggle-image-height-mobile: rem(120px);
 .sage-feature-toggle__links {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  margin-top: sage-spacing(xs);
 }
 
 .sage-feature-toggle__aside {
@@ -101,8 +103,15 @@ $-feature-toggle-image-height-mobile: rem(120px);
   }
 }
 
+.sage-feature-toggle__label {
+  align-self: center;
+  margin-left: auto;
+  @media (max-width: sage-breakpoint(md-min)) {
+    margin-left: 0;
+  }
+}
+
 .sage-feature-toggle__link-item {
-  margin-top: sage-spacing(xs);
   margin-right: sage-spacing(sm);
 }
 

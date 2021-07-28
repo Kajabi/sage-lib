@@ -24,18 +24,20 @@
 <h3>Background Colors</h3>
 <%= sage_component SageCardList, {} do %>
   <% SageTokens::STATUSES.each do | color | %>
-    <%= sage_component SageCardListItem, { grid_template: "et" } do %>
-      <%= sage_component SageIcon, { icon: "pen", card_color: color } %>
+    <%= sage_component SageCardListItem, { grid_template: "o" } do %>
       <%= color %>
+      <%= sage_component SageIcon, { icon: "pen", card_color: color } %>
+      <%= sage_component SageIcon, { icon: "pen", card_color: color, circular: true, } %>
     <% end %>
   <% end %>
 <% end %>
 <h3>Background Sizes</h3>
 <%= sage_component SageCardList, {} do %>
   <% SageTokens::ICON_SIZES.each do | size | %>
-    <%= sage_component SageCardListItem, { grid_template: "et" } do %>
-      <%= sage_component SageIcon, { icon: "pen", size: (size == "md" ? nil : size), card_color: "draft" } %>
+    <%= sage_component SageCardListItem, { grid_template: "o" } do %>
       <%= size == "md" ? "Default (#{size})" : size %>
+      <%= sage_component SageIcon, { icon: "pen", size: (size == "md" ? nil : size), card_color: "draft" } %>
+      <%= sage_component SageIcon, { icon: "pen", size: (size == "md" ? nil : size), card_color: "draft", circular: true, } %>
     <% end %>
   <% end %>
 <% end %>

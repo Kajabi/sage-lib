@@ -38,9 +38,11 @@ $-input-transition: border 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     margin-bottom: 0;
   }
 
+  .sage-panel-grid > &,
   .sage-panel__row > &,
   .sage-panel__stack > &,
   .sage-panel__block > &,
+  .sage-card-grid > &,
   .sage-card__row > &,
   .sage-card__stack > &,
   .sage-card__block > & {

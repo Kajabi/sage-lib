@@ -24,7 +24,7 @@ class SageComponent
 
   def css_classes=(classes_string)
     @css_classes = classes_string
-    generated_css_classes << classes_string
+    generated_css_classes << " #{classes_string}"
   end
 
   def render
@@ -47,7 +47,7 @@ class SageComponent
   def spacer=(spacer_hash)
     @spacer = spacer_hash
     spacer_hash.each do |key, value|
-      generated_css_classes << " sage-spacer-#{key}#{value != :md ? "-#{value}" : ""}"
+      generated_css_classes << " sage-spacer-#{key}#{(value != :md and value != "md") ? "-#{value}" : ""}"
     end
   end
 

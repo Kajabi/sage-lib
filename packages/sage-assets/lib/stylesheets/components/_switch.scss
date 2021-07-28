@@ -59,9 +59,11 @@ $-switch-focus-outline-error-color: sage-color(red, 300);
     margin-bottom: sage-spacing(card) / 2;
   }
 
+  .sage-panel-grid > &,
   .sage-panel__row > &,
   .sage-panel__stack > &,
   .sage-panel__block > &,
+  .sage-card-grid > &,
   .sage-card__row > &,
   .sage-card__stack > &,
   .sage-card__block > & {

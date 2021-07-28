@@ -28,16 +28,16 @@ describe('Rendering the Sage Icon Component', () => {
       expect(component.get(0).props.className).toContain(`sage-icon-${defaultProps.icon}`);
     });
 
-    it('label results in aria-label', () => {
-      const label = 'New label';
-      component.setProps({ label });
-      expect(component.get(0).props).toHaveProperty('aria-label', label);
+    it('no label results in aria-hidden', () => {
+      expect(component.get(0).props).toHaveProperty('aria-hidden', true);
     });
   });
 
   describe('variations', () => {
-    it('no label results in aria-hidden', () => {
-      expect(component.get(0).props).toHaveProperty('aria-hidden', true);
+    it('label results in aria-label', () => {
+      const label = 'New label';
+      component.setProps({ label });
+      expect(component.get(0).props).toHaveProperty('aria-label', label);
     });
   });
 });

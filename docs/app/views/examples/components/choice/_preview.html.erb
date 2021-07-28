@@ -70,11 +70,22 @@ long_description = "Description with longer text to cause wrapping and make the 
 
 <h3 class="t-sage-heading-6">Rich text/Customized</h3>
 <p>Choice cards can also be opened up for custom content to be composed within.</p>
+<style>
+.custom-choice {
+  max-width: 352px;
+}
+.custom-choice__content {
+  text-align: center;
+  justify-items: center;
+}
+</style>
 <%= sage_component SageChoice, {
-  target: "example",
   attributes: {
     href: "http://example.com",
   },
+  css_classes: "custom-choice",
+  custom_content_class: "custom-choice__content",
+  target: "example",
 } do %>
   <%= sage_component SageAvatar, { initials: 'PS' } %>
   <%= sage_component SageCardBlock, {} do %>

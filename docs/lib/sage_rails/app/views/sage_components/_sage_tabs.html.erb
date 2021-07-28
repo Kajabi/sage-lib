@@ -12,28 +12,9 @@
 >
   <% component.items.each do |item| %>
     <% if component.style.present? && component.style === "choice" %>
-      <%= sage_component SageChoice, {
-        target: item[:target],
-        text: item[:text],
-        subtext: item[:subtext],
-        active: item[:active],
-        type: item[:type],
-        icon: item[:icon],
-        attributes: item[:attributes],
-        disabled: item[:disabled],
-        radio_configs: item[:radio_configs],
-        vertical_align_icon: item[:vertical_align_icon],
-      } do %>
-        <%= item[:content].html_safe if defined?(item[:content]) and item[:content] %>
-      <% end %>
+      <%= sage_component SageChoice, item %>
     <% else %>
-      <%= sage_component SageTab,
-        target: item[:target],
-        text: item[:text],
-        active: item[:active],
-        attributes: item[:attributes],
-        disabled: item[:disabled]
-      %>
+      <%= sage_component SageTab, item %>
     <% end %>
   <% end  if component.items.present? %>
   <%= component.content if component.content.present? %>

@@ -86,7 +86,7 @@ module SageTableHelper
     def initialize(template, collection, opts={})
       @template = template
       @caption = opts[:caption]
-      @class_name = opts[:class]
+      @class_name = opts[:class_name]
       @condensed = opts[:condensed]
       @collection = collection
       @reset_above = opts[:reset_above]
@@ -131,16 +131,20 @@ module SageTableHelper
       table_classes << " sage-table--condensed" if condensed
       table_classes << " sage-table--sortable" if sortable
       table_classes << " sage-table--striped" if striped
-      table_classes << " #{class_name}" if striped
+      table_classes << " #{class_name}" if class_name
 
       content_tag "table", id: id, class: table_classes do
-        caption + head + body
+        (caption << head << body).html_safe
       end
     end
 
     def caption
-      content_tag "caption" do
-        @caption
+      if @caption
+        content_tag "caption" do
+          @caption
+        end
+      else
+        ""
       end
     end
 

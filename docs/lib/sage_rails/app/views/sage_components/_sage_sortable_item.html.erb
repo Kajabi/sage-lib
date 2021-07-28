@@ -10,10 +10,7 @@
 >
   <% if component.image.present? %>
     <div class="sage-sortable__item-image">
-      <img
-        src="<%= component.image %>"
-        alt="Cover for <%= component.title %>"
-      />
+      <%= image_tag component.image, alt: "Cover for #{component.title}" %>
     </div>
   <% end %>
   <div class="sage-sortable__item-content">
