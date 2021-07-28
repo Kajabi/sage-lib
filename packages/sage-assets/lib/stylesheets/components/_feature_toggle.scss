@@ -46,7 +46,9 @@ $-feature-toggle-image-height-mobile: rem(96px);
   grid-area: title;
   @extend %t-sage-heading-5;
 
-  @include truncate();
+  @media (min-width: sage-breakpoint(md-min)) {
+    @include truncate();
+  }
 }
 
 .sage-feature-toggle__content {
