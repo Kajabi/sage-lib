@@ -5,5 +5,16 @@
 ////
 
 .sage-upsell {
-  background-color: #f00;
+  display: block;
+}
+
+.sage-upsell__icon {
+  display: flex;
+  align-items: center;
+  margin-bottom: sage-spacing(sm);
+}
+
+.sage-upsell__allowance-text {
+  margin-left: sage-spacing(sm);
+  font-size: rem(16px);
 }
