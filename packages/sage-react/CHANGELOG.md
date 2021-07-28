@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.53.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.52.0...@kajabi/sage-react@0.53.0) (2021-07-28)
+
+
+### Features
+
+* **icon:** add card color and circular to React component ([15fb34b](https://github.com/Kajabi/sage-lib/commit/15fb34b2abcca4539487a89b6b7d8e70ac4c66e1))
+
+
+
+
+
 # [0.52.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.51.2...@kajabi/sage-react@0.52.0) (2021-07-21)
 
 

@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.43.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.42.0...@kajabi/sage-assets@0.43.0) (2021-07-28)
+
+
+### Bug Fixes
+
+* **catalog items:** update alignment when title wrapping occur ([17e6e70](https://github.com/Kajabi/sage-lib/commit/17e6e704c83d34222a12e91af8c10fb128d1e5e8))
+* **catalog items:** updates per review ([3f59161](https://github.com/Kajabi/sage-lib/commit/3f59161643820f28a72e9725ffd9cef6f8552d8c))
+* **panel-tiles:** remove unnecessary margin and padding settings ([7d944e9](https://github.com/Kajabi/sage-lib/commit/7d944e99fb5542739272298fcd48a04e057c1c0c))
+* **radio:** move radio label pseudo element styles to only apply to bordered variant ([a7f3de9](https://github.com/Kajabi/sage-lib/commit/a7f3de9a8f50918dc57b94a06795f934d141dacb))
+
+
+### Features
+
+* **feature toggle:** adds labels and updates styling ([2162268](https://github.com/Kajabi/sage-lib/commit/21622681d7ce72f3cd282ec82b65fc48012bee37))
+* expand where spacing is reset for form fields ([7f2b60e](https://github.com/Kajabi/sage-lib/commit/7f2b60e85890af1f481a5d79216288c25d121088))
+* **icon:** add circular option for background ([3535ce5](https://github.com/Kajabi/sage-lib/commit/3535ce58c6c6bb3e0b7b6865db65095254abb750))
+
+
+
+
+
 # [0.42.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.41.2...@kajabi/sage-assets@0.42.0) (2021-07-21)
 
 
