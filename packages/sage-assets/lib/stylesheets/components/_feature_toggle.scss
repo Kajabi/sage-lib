@@ -97,9 +97,9 @@ $-feature-toggle-image-height-mobile: rem(96px);
 }
 
 .sage-feature-toggle__aside {
-  align-items: flex-start;
   display: flex;
   grid-area: aside;
+  align-items: flex-start;
   justify-content: flex-end;
 
   .sage-feature-toggle--no-image & {
@@ -110,6 +110,7 @@ $-feature-toggle-image-height-mobile: rem(96px);
 .sage-feature-toggle__label {
   align-self: center;
   margin-left: auto;
+
   @media (max-width: sage-breakpoint(md-min)) {
     margin-left: 0;
   }
