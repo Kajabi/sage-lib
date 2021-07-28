@@ -97,6 +97,7 @@ $-feature-toggle-image-height-mobile: rem(96px);
 }
 
 .sage-feature-toggle__aside {
+  align-items: flex-start;
   display: flex;
   grid-area: aside;
   justify-content: flex-end;
