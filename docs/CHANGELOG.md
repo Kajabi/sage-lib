@@ -3,31 +3,6 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-# [4.10.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.9.0...@kajabi/sage@4.10.0) (2021-07-28)
-
-
-### Bug Fixes
-
-* **multiple:** changed img tag instances to `image_tag` and updated image paths in docs ([edecf2e](https://github.com/Kajabi/sage-lib/commit/edecf2e75b0d6bfbbc46481bc12b5c332eb15fd4))
-* **table:** ensure caption is optional ([3160b1f](https://github.com/Kajabi/sage-lib/commit/3160b1f587dc38cea5f466d4772302b08e079ea4))
-* **table:** ensure class_name outputs ([38ae346](https://github.com/Kajabi/sage-lib/commit/38ae3460f0a460277472be2118e7e14b2533a01d))
-* adjust spacer logic for `md` to check both string and symbol values ([0b53140](https://github.com/Kajabi/sage-lib/commit/0b5314036b0ec2389405b4696ebaa8b4b855e25b))
-* ensure a space preceds any custom classes ([0dcfc7e](https://github.com/Kajabi/sage-lib/commit/0dcfc7ea0ea81d89c3e743d8f8b14be658f3b661))
-
-
-### Features
-
-* **choice:** add custom content class ([c9080ef](https://github.com/Kajabi/sage-lib/commit/c9080efa8262aff4e72a71086ebf73f7eea78c5a))
-* **feature toggle:** adds label attributes ([1f2dacd](https://github.com/Kajabi/sage-lib/commit/1f2dacd31b57894698340a0f23cf0b1166cf3b25))
-* **feature toggle:** adds labels and updates styling ([2162268](https://github.com/Kajabi/sage-lib/commit/21622681d7ce72f3cd282ec82b65fc48012bee37))
-* **feature toggle:** update preview and props documentation ([a9331e9](https://github.com/Kajabi/sage-lib/commit/a9331e903c37d55d68721e348280242478c023c6))
-* **icon:** add circular option for background ([3535ce5](https://github.com/Kajabi/sage-lib/commit/3535ce58c6c6bb3e0b7b6865db65095254abb750))
-* **panel-row:** make `grid_template` optional ([48fbfe0](https://github.com/Kajabi/sage-lib/commit/48fbfe0b86ec5641231a23d5cc224f1470d098bc))
-
-
-
-
-
 # [4.9.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.8.3...@kajabi/sage@4.9.0) (2021-07-21)
 
 
