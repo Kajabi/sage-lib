@@ -113,6 +113,12 @@ $-table-avatar-width: rem(32px);
       color: $-table-cell-font-color-strong;
     }
   }
+
+  .sage-table-wrapper__overflow & {
+    // This pushes table to use GPU rendering
+    // in order to solve a painting bug in Safari
+    transform: rotateX(0);
+  }
 }
 
 // Decreased vertical padding
