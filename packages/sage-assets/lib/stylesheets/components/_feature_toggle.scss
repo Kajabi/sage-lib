@@ -5,9 +5,9 @@
 ////
 
 
-$-feature-toggle-image-width: rem(120px);
+$-feature-toggle-image-width: rem(96px);
 $-feature-toggle-image-height-min: rem(64px);
-$-feature-toggle-image-height-mobile: rem(120px);
+$-feature-toggle-image-height-mobile: rem(96px);
 
 
 .sage-feature-toggle {
@@ -46,7 +46,9 @@ $-feature-toggle-image-height-mobile: rem(120px);
   grid-area: title;
   @extend %t-sage-heading-5;
 
-  @include truncate();
+  @media (min-width: sage-breakpoint(md-min)) {
+    @include truncate();
+  }
 }
 
 .sage-feature-toggle__content {
@@ -95,8 +97,10 @@ $-feature-toggle-image-height-mobile: rem(120px);
 }
 
 .sage-feature-toggle__aside {
+  display: flex;
   grid-area: aside;
-  padding-right: sage-spacing(xs);
+  align-items: flex-start;
+  justify-content: flex-end;
 
   .sage-feature-toggle--no-image & {
     align-self: center;
@@ -106,6 +110,7 @@ $-feature-toggle-image-height-mobile: rem(120px);
 .sage-feature-toggle__label {
   align-self: center;
   margin-left: auto;
+
   @media (max-width: sage-breakpoint(md-min)) {
     margin-left: 0;
   }
@@ -113,11 +118,6 @@ $-feature-toggle-image-height-mobile: rem(120px);
 
 .sage-feature-toggle__link-item {
   margin-right: sage-spacing(sm);
-}
-
-.sage-feature-toggle__aside {
-  grid-area: aside;
-  padding-right: sage-spacing(xs);
 }
 
 .sage-feature-toggle__image-link {
@@ -132,7 +132,7 @@ $-feature-toggle-image-height-mobile: rem(120px);
 
 .sage-feature-toggle__image {
   align-self: flex-start;
-  max-width: rem(140px);
+
   width: $-feature-toggle-image-width;
   height: $-feature-toggle-image-width;
   border-radius: sage-border(radius);
