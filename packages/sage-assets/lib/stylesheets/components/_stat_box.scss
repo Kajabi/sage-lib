@@ -23,7 +23,8 @@
 }
 
 .sage-stat-box__header,
-.sage-stat-box__link {
+.sage-stat-box__link,
+.sage-stat-box__title {
   display: flex;
   align-items: center;
 }
@@ -36,6 +37,34 @@
 .sage-stat-box__title {
   @extend %t-sage-body-small-med;
   margin-right: sage-spacing(xs);
+}
+
+.sage-stat-box__title--legend-custom {
+  &::before {
+    content: "";
+    display: block;
+    width: rem(8px);
+    height: rem(8px);
+    margin-right: sage-spacing(xs);
+    border-radius: sage-border(radius);
+    background-color: var(--legend-color);
+  }
+}
+
+@each $-color-name, $-color-sliders in $sage-colors {
+  .sage-stat-box__title--legend-#{"" + $-color-name} {
+    --legend-color: #{sage-color($-color-name)};
+
+    &::before {
+      content: "";
+      display: block;
+      width: rem(8px);
+      height: rem(8px);
+      margin-right: sage-spacing(xs);
+      border-radius: sage-border(radius);
+      background-color: var(--legend-color);
+    }
+  }
 }
 
 .sage-stat-box__data {
@@ -55,3 +84,5 @@
   @extend %t-sage-body-med;
   margin-top: sage-spacing(xs);
 }
+
+

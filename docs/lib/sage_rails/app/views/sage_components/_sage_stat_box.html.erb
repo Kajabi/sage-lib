@@ -11,7 +11,13 @@ elsif change_type == "negative"
 elsif change_type == "neutral"
   label_configs = { color: "draft", value: change_value, }
 end
+
+# Set up default color
+color = false
+
+
 %>
+
 <article
   class="sage-stat-box
   <%= "sage-stat-box--raised" if component.raised %>
@@ -24,7 +30,18 @@ end
     </div>
   <% end %>
   <header class="sage-stat-box__header">
-    <h2 class="sage-stat-box__title"><%= component.title %></h2>
+    <h2 
+      class="
+        sage-stat-box__title
+        <%= "sage-stat-box__title--legend-#{component.legend_dot_color}" if component.legend_dot_color %>
+        <%= "sage-stat-box__title--legend-custom" if component.legend_dot_custom_color %>
+      "
+      <% if component.legend_dot_custom_color.present? %>
+        style="--legend-color: <%= component.legend_dot_custom_color %>"
+      <% end %>
+    >
+      <%= component.title %>
+    </h2>
     <% if component.popover.present? %>
       <%= component.popover.html_safe %>
     <% end %>
