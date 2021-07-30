@@ -94,6 +94,7 @@ $-pagination-bg-color-dark: sage-color(grey, 300);
   &:active,
   &:focus {
     box-shadow: map-get($sage-toolbar-button-borders, focus);
+    outline: none;
   }
 }
 
