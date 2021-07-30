@@ -9,6 +9,11 @@
   @include sage-card($grid: false);
 }
 
+.sage-stat-box--raised {
+  box-shadow: sage-shadow(sm);
+  border: 0;
+}
+
 .sage-stat-box__body,
 .sage-stat-box__footer {
   @include sage-grid-card-row;

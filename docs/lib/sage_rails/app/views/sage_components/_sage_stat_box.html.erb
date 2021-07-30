@@ -13,9 +13,16 @@ elsif change_type == "neutral"
 end
 %>
 <article
-  class="sage-stat-box <%= component.generated_css_classes %>"
+  class="sage-stat-box
+  <%= "sage-stat-box--raised" if component.raised %>
+  <%= component.generated_css_classes %>"
   <%= component.generated_html_attributes.html_safe %>
 >
+  <% if component.image.present? %>
+    <div class="sage-stat-box__image">
+      <%= component.image.html_safe %>
+    </div>
+  <% end %>
   <header class="sage-stat-box__header">
     <h2 class="sage-stat-box__title"><%= component.title %></h2>
     <% if component.popover.present? %>

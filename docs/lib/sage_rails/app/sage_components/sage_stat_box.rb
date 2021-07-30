@@ -7,10 +7,12 @@ class SageStatBox < SageComponent
     }],
     data: String,
     has_data: [:optional, TrueClass],
+    image: [:optional, String],
     link: [:optional, {
       href: String,
       value: String,
     }],
+    raised: [:optional, TrueClass],
     timeframe: [:optional, String],
     title: String,
     popover: [:optional, String],

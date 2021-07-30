@@ -7,11 +7,37 @@
   },
   data: "1,342",
   has_data: true,
+  
   link: {
     href: "#",
     value: "View More",
   },
   timeframe: "in last 30 days",
+  title: "Completed",
+} %>
+
+<h3 class="t-sage-heading-6">Default with Data - Raised</h3>
+<%= sage_component SageStatBox, {
+  change: { 
+    type: "positive", 
+    value: "30%", 
+  },
+  data: "1,342",
+  has_data: true,
+  link: {
+    href: "#",
+    value: "View More",
+  },
+  raised: true,
+  timeframe: "in last 30 days",
+  title: "Completed",
+} %>
+
+<h3 class="t-sage-heading-6">Simple with Image</h3>
+<%= sage_component SageStatBox, {
+  data: "No insights to show",
+  has_data: false,
+  image: image_tag("https://via.placeholder.com/150", alt: "Example"),
   title: "Completed",
 } %>
 
