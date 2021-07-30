@@ -48,8 +48,9 @@
             <li class="
                 sage-dropdown__item
                 <% item[:modifiers]&.each do |item_modifier| %>
-                  <%= "sage-dropdown__item--#{item_modifier}" %>
+                  <%= "sage-dropdown__item--#{item_modifier}" if item_modifier %>
                 <% end %>
+                <%= item[:css_classes] if item[:css_classes].present? %>
               "
               role="none"
               <%= "aria-selected=true" if item[:selected] %>

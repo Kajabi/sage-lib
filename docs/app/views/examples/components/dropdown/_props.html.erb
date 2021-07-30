@@ -54,12 +54,14 @@
   <td><%= md('```
 Array<{
   attributes: String,
-  border_before: String,
+  css_classes: String,
   icon: String,
   is_heading: Boolean,
-  modifiers: Array,
+  modifiers: [
+    "disabled" | "border-before" | "border-after" | nil,
+  ],
   selected: Boolean,
-  style: String,
+  style: "primary" | "danger" | "muted",
   value: String,
 }>
 ```
