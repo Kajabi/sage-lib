@@ -73,7 +73,7 @@ $-toast-bottom-spacing: sage-spacing(xs);
   color: sage-color(white);
   border-radius: sage-border(radius);
   box-shadow: sage-shadow(lg);
-  background-color: sage-color(charcoal);
+  background-color: sage-color(charcoal, 400);
   animation: 0.5s ease;
 
   @media #{$-toast-breakpoint-default} {
@@ -161,7 +161,7 @@ $-toast-bottom-spacing: sage-spacing(xs);
 }
 
 .sage-toast__button--close::before {
-  @include sage-icon-base(remove, lg);
+  @include sage-icon-base(remove);
 }
 
 .sage-toast__button--underline {
