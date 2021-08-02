@@ -7,7 +7,10 @@ class SageStatBox < SageComponent
     }],
     data: String,
     has_data: [:optional, TrueClass],
-    image: [:optional, String],
+    image: [:optional, {
+      alt: [:optional, String],
+      src: String
+    }],
     legend_dot_color: [:optional, SageSchemas::COLORS],
     legend_dot_custom_color: [:optional, String],
     link: [:optional, {

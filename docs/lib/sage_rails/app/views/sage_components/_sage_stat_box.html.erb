@@ -21,12 +21,13 @@ color = false
 <article
   class="sage-stat-box
   <%= "sage-stat-box--raised" if component.raised %>
+  <%= "sage-stat-box--with-img" if component.image %>
   <%= component.generated_css_classes %>"
   <%= component.generated_html_attributes.html_safe %>
 >
   <% if component.image.present? %>
-    <div class="sage-stat-box__image">
-      <%= component.image.html_safe %>
+    <div class="sage-stat-box__img">
+      <%= image_tag component.image[:src], alt: component.image[:alt] %>
     </div>
   <% end %>
   <header class="sage-stat-box__header">
