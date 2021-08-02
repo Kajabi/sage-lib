@@ -6,11 +6,13 @@
 
 
 $-pagination-padding: rem(6px) rem(16px);
+$-pagination-padding-arrows: rem(10px) rem(12px);
 $-pagination-border: rem(1px) solid sage-color(grey, 300);
-$-pagination-radius: sage-border(radius-small);
+$-pagination-radius: sage-border(radius);
 $-pagination-shadow: sage-shadow(md);
-$-pagination-text-color: sage-color(grey, 400);
-$-pagination-text-color-dark: sage-color(charcoal);
+$-pagination-text-color: sage-color(grey, 500);
+$-pagination-text-current: sage-color(primary, 300);
+$-pagination-text-color-dark: sage-color(charcoal, 100);
 $-pagination-bg-color: sage-color(grey, 200);
 $-pagination-bg-color-dark: sage-color(grey, 300);
 
@@ -23,7 +25,7 @@ $-pagination-bg-color-dark: sage-color(grey, 300);
   flex-grow: 1;
 
   .sage-panel-controls__default-controls & {
-    margin-right: sage-spacing(md);
+    margin-right: sage-spacing();
   }
 }
 
@@ -76,7 +78,7 @@ $-pagination-bg-color-dark: sage-color(grey, 300);
   display: flex;
   flex-flow: row wrap;
   align-items: center;
-  min-height: rem(40px);
+  min-height: rem(36px);
   padding: $-pagination-padding;
   color: $-pagination-text-color-dark;
   border: 0;
@@ -85,15 +87,22 @@ $-pagination-bg-color-dark: sage-color(grey, 300);
   box-shadow: map-get($sage-toolbar-button-borders, default);
 
   &:hover {
+    color: $-pagination-text-color-dark;
     box-shadow: map-get($sage-toolbar-button-borders, hover);
   }
 
   &:active,
   &:focus {
     box-shadow: map-get($sage-toolbar-button-borders, focus);
+    outline: none;
   }
 }
 
+
+.sage-pagination__item:first-of-type .sage-pagination__page,
+.sage-pagination__item:last-of-type .sage-pagination__page {
+  padding: $-pagination-padding-arrows;
+}
 .sage-pagination__item:first-of-type .sage-pagination__page::before {
   @include sage-icon-base(arrow-left);
 }
@@ -110,17 +119,19 @@ $-pagination-bg-color-dark: sage-color(grey, 300);
 
 .sage-pagination__page--current,
 .sage-pagination__page--current:hover {
+  color: $-pagination-text-current;
   box-shadow: map-get($sage-toolbar-button-borders, focus);
 }
 
-.sage-pagination__page--disabled,
-.sage-pagination__gap {
+.sage-pagination__page--disabled {
   color: $-pagination-text-color;
   pointer-events: none;
 }
 
 .sage-pagination__gap {
+  color: $-pagination-text-color-dark;
   cursor: default;
+  pointer-events: none;
 }
 
 .sage-pagination__count {
