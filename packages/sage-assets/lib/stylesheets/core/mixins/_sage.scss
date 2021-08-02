@@ -299,17 +299,19 @@
 /// Adds the basic default form spacing, and border treatment
 ///
 @mixin sage-form-field-group() {
-  position: relative;
   display: flex;
+  position: relative;
   flex-direction: column;
 
   &:not(:last-child) {
     margin-bottom: sage-spacing();
   }
 
+  .sage-panel-grid > &,
   .sage-panel__row > &,
   .sage-panel__stack > &,
   .sage-panel__block > &,
+  .sage-card-grid > &,
   .sage-card__row > &,
   .sage-card__stack > &,
   .sage-card__block > & {
