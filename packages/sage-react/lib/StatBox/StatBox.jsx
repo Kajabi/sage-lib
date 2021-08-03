@@ -1,21 +1,40 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 import { SageTokens } from '../configs';
 import { Icon } from '../Icon';
 import { Button } from '../Button';
 import { Label } from '../Label';
-import { LABEL_COLORS, TYPE } from './configs'; // component configurations as needed
+import { LABEL_COLORS, LEGEND_COLORS, TYPE } from './configs'; // component configurations as needed
 
 export const StatBox = ({
   customLabel,
   change,
   data,
   hasData,
+  image,
+  legendDotColor,
+  legendDotCustomColor,
   link,
   popover,
+  raised,
   timeframe,
   title,
 }) => {
+  const statBoxContainer = classnames(
+    'sage-stat-box',
+    {
+      'sage-stat-box--raised': raised,
+      'sage-stat-box--with-img': image,
+    }
+  );
+  const statBoxTitle = classnames(
+    'sage-stat-box__title',
+    {
+      [`sage-stat-box__title--legend-${legendDotColor}`]: legendDotColor,
+      'sage-stat-box__title--legend-custom': legendDotCustomColor,
+    }
+  );
   const renderLabelStatus = () => {
     let icon = null;
     let color;
@@ -40,9 +59,23 @@ export const StatBox = ({
   };
 
   return (
-    <article className="sage-stat-box">
+    <article
+      className={statBoxContainer}
+    >
+      {image && (
+        <div className="sage-stat-box__img">
+          <img src={image.src} alt={image.alt} />
+        </div>
+      )}
       <header className="sage-stat-box__header">
-        <h2 className="sage-stat-box__title">{title}</h2>
+        <h2
+          className={statBoxTitle}
+          style={(legendDotCustomColor && legendDotCustomColor !== '') && ({
+            '--legend-color': legendDotCustomColor
+          })}
+        >
+          {title}
+        </h2>
         {popover}
       </header>
       <div className="sage-stat-box__body sage-grid-template-te">
@@ -73,6 +106,7 @@ export const StatBox = ({
 };
 
 StatBox.LABEL_COLORS = LABEL_COLORS;
+StatBox.LEGEND_COLORS = LEGEND_COLORS;
 StatBox.TYPE = TYPE;
 
 StatBox.defaultProps = {
@@ -82,11 +116,18 @@ StatBox.defaultProps = {
   },
   customLabel: null,
   hasData: true,
+  image: {
+    alt: null,
+    src: null
+  },
+  legendDotColor: null,
+  legendDotCustomColor: null,
   link: {
     href: null,
     value: null,
   },
   popover: null,
+  raised: false,
   timeframe: null,
 };
 
@@ -98,11 +139,18 @@ StatBox.propTypes = {
   customLabel: PropTypes.node,
   data: PropTypes.string.isRequired,
   hasData: PropTypes.bool,
+  image: PropTypes.shape({
+    alt: PropTypes.string,
+    src: PropTypes.string
+  }),
+  legendDotColor: PropTypes.oneOf(['charcoal', 'grey', 'orange', 'primary', 'purple', 'red', 'sage', 'yellow']),
+  legendDotCustomColor: PropTypes.string,
   link: PropTypes.shape({
     href: PropTypes.string,
     value: PropTypes.string,
   }),
   popover: PropTypes.node,
+  raised: PropTypes.bool,
   timeframe: PropTypes.string,
   title: PropTypes.string.isRequired,
 };

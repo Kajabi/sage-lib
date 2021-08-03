@@ -37,6 +37,7 @@ $-stat-box-image-max-width: rem(48px);
     transform: translateY(-50%);
     top: 50%;
     width: 100%;
+    border-radius: sage-border(radius);
   }
 }
 
