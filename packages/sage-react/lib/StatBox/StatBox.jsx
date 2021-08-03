@@ -64,7 +64,7 @@ export const StatBox = ({
     >
       {image && (
         <div className="sage-stat-box__img">
-          <img src={image.src} alt={image.alt} />
+          <img src={image.src} alt={image.alt || ''} />
         </div>
       )}
       <header className="sage-stat-box__header">
@@ -143,7 +143,7 @@ StatBox.propTypes = {
     alt: PropTypes.string,
     src: PropTypes.string
   }),
-  legendDotColor: PropTypes.oneOf(['charcoal', 'grey', 'orange', 'primary', 'purple', 'red', 'sage', 'yellow']),
+  legendDotColor: PropTypes.oneOf(Object.values(StatBox.LEGEND_COLORS)),
   legendDotCustomColor: PropTypes.string,
   link: PropTypes.shape({
     href: PropTypes.string,

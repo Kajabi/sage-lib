@@ -1,9 +1,15 @@
 import React from 'react';
+import { selectArgs } from '../story-support/helpers';
 import { StatBox } from './StatBox';
 
 export default {
   title: 'Sage/StatBox',
   component: StatBox,
+  argTypes: {
+    ...selectArgs({
+      legendDotColor: StatBox.LEGEND_COLORS,
+    }),
+  }
 };
 const Template = (args) => <StatBox {...args} />;
 

@@ -23,7 +23,7 @@ end
 >
   <% if component.image.present? %>
     <div class="sage-stat-box__img">
-      <%= image_tag component.image[:src], alt: component.image[:alt] %>
+      <%= image_tag component.image[:src], alt: component.image[:alt] or '' %>
     </div>
   <% end %>
   <header class="sage-stat-box__header">
