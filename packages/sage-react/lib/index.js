@@ -4,7 +4,8 @@ export { AvatarGroup } from './AvatarGroup';
 export { Breadcrumbs } from './Breadcrumbs';
 export { Button } from './Button';
 export { Card } from './Card';
-// export { Chart } from './Chart';
+export { Chart } from './Chart';
+export { Choice } from './Choice';
 export {
   Dropdown,
   OptionsDropdown,
