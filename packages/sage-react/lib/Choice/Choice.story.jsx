@@ -8,5 +8,10 @@ export default {
   args: {},
 };
 
-const Template = (args) => <Choice {...args} />;
+const Template = (args) => (
+  <>
+    <Choice {...args} />
+    <Choice {...args} />
+  </>
+);
 export const Default = Template.bind({});
