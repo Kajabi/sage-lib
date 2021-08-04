@@ -101,7 +101,7 @@ export const Table = ({
         // Fetch configs for this schema item
         let {
           attributes,
-          classname,
+          className,
           dataType,
           label,
           style,
@@ -114,14 +114,14 @@ export const Table = ({
           if (overrides) {
             const {
               attributes: overrideAttributes,
-              classname: overrideClassname,
+              className: overrideClassname,
               dataType: overrideDataType,
               label: overrideLabel,
               style: overrideStyle,
             } = overrides;
 
             attributes = overrideAttributes || attributes;
-            classname = overrideClassname || classname;
+            className = overrideClassname || className;
             dataType = overrideDataType || dataType;
             label = overrideLabel || label;
             style = overrideStyle || style;
@@ -130,7 +130,7 @@ export const Table = ({
 
         return {
           attributes,
-          classname,
+          className,
           dataType,
           field,
           style,
