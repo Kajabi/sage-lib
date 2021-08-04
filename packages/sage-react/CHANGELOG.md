@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.54.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.54.0...@kajabi/sage-react@0.54.1) (2021-08-04)
+
+
+### Bug Fixes
+
+* **table:** fix classname typo in table header processing ([44dabde](https://github.com/Kajabi/sage-lib/commit/44dabde8250f2d829be30f8481800f07fe2b7075))
+
+
+
+
+
 # [0.54.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.53.0...@kajabi/sage-react@0.54.0) (2021-08-04)
 
 
