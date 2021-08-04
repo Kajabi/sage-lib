@@ -17,7 +17,8 @@ export default {
   args: {
     icon: SageTokens.ICONS.VIDEO_ON,
     label: 'Option 1',
-    subtext: 'Description of Option 1'
+    subtext: 'Description of Option 1',
+    verticalAlignIcon: CHOICE_ICON_ALIGNMENTS.DEFAULT,
   }
 };
 
