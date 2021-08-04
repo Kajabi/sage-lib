@@ -16,11 +16,15 @@ export default {
   },
   args: {
     icon: SageTokens.ICONS.VIDEO_ON,
-    label: 'Option 1',
     subtext: 'Description of Option 1',
+    text: 'Option 1',
     verticalAlignIcon: CHOICE_ICON_ALIGNMENTS.DEFAULT,
   }
 };
 
-const Template = (args) => <Choice {...args} />;
+const Template = (args) => (
+  <div style={{ maxWidth: '600px' }}>
+    <Choice {...args} />
+  </div>
+);
 export const Default = Template.bind({});

@@ -11,8 +11,9 @@ export const Choice = ({
   graphic,
   icon,
   isActive,
-  label,
+  linkText,
   subtext,
+  text,
   type,
   verticalAlignIcon,
   ...rest
@@ -47,14 +48,21 @@ export const Choice = ({
           <img src={graphic} alt="" />
         </span>
       )}
-      {label && (
-        <em className="sage-choice__text">
-          {label}
-        </em>
-      )}
-      {subtext && (
-        <span className="sage-choice__subtext">
-          {subtext}
+      <div className="sage-choice__content">
+        {text && (
+          <em className="sage-choice__text">
+            {text}
+          </em>
+        )}
+        {subtext && (
+          <span className="sage-choice__subtext">
+            {subtext}
+          </span>
+        )}
+      </div>
+      {linkText && (
+        <span className="sage-choice__link-text">
+          {linkText}
         </span>
       )}
     </div>
@@ -71,6 +79,7 @@ Choice.defaultProps = {
   graphic: null,
   icon: null,
   isActive: false,
+  linkText: null,
   subtext: null,
   type: null,
   verticalAlignIcon: CHOICE_ICON_ALIGNMENTS.DEFAULT,
@@ -83,8 +92,9 @@ Choice.propTypes = {
   graphic: PropTypes.string,
   icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),
   isActive: PropTypes.bool,
-  label: PropTypes.string.isRequired,
+  linkText: PropTypes.string,
   subtext: PropTypes.string,
+  text: PropTypes.string.isRequired,
   type: PropTypes.oneOf(Object.values(Choice.CHOICE_TYPES)),
   verticalAlignIcon: PropTypes.oneOf(Object.values(Choice.CHOICE_ICON_ALIGNMENTS))
 };
