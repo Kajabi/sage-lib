@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { SageTokens } from '../configs';
-import { CHOICE_TYPES } from './config';
+import { CHOICE_ICON_ALIGNMENTS, CHOICE_TYPES } from './configs';
 
 export const Choice = ({
   className,
@@ -11,11 +11,12 @@ export const Choice = ({
   label,
   subtext,
   type,
+  verticalAlignIcon,
   ...rest
 }) => {
   const baseClass = 'sage-choice';
   const isIconType = type && type === CHOICE_TYPES.ICON;
-  // const isRadioType = type && type === CHOICE_TYPES.RADIO;
+  const isRadioType = type && type === CHOICE_TYPES.RADIO;
 
   const classNames = classnames(
     baseClass,
@@ -25,6 +26,7 @@ export const Choice = ({
       [`${baseClass}--active`]: isActive,
       [`${baseClass}--${type}`]: type && !isIconType,
       [`${baseClass}--icon-${icon}`]: isIconType && icon,
+      [`${baseClass}--vertical-align-icon-${verticalAlignIcon}`]: verticalAlignIcon && (isIconType || isRadioType),
     }
   );
   return (
@@ -44,6 +46,7 @@ export const Choice = ({
 };
 
 Choice.CHOICE_TYPES = CHOICE_TYPES;
+Choice.CHOICE_ICON_ALIGNMENTS = CHOICE_ICON_ALIGNMENTS;
 
 Choice.defaultProps = {
   className: '',
@@ -51,6 +54,7 @@ Choice.defaultProps = {
   isActive: false,
   subtext: null,
   type: null,
+  verticalAlignIcon: CHOICE_ICON_ALIGNMENTS.DEFAULT,
 };
 
 Choice.propTypes = {
@@ -60,4 +64,5 @@ Choice.propTypes = {
   label: PropTypes.string.isRequired,
   subtext: PropTypes.string,
   type: PropTypes.oneOf(Object.values(Choice.CHOICE_TYPES)),
+  verticalAlignIcon: PropTypes.oneOf(Object.values(Choice.CHOICE_ICON_ALIGNMENTS))
 };
