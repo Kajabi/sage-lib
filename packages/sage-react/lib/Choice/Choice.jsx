@@ -8,6 +8,7 @@ export const Choice = ({
   alignCenter,
   className,
   disabled,
+  graphic,
   icon,
   isActive,
   label,
@@ -41,6 +42,11 @@ export const Choice = ({
 
   return (
     <div className={classNames} {...attrs}>
+      {graphic && (
+        <span className="sage-choice__graphic">
+          <img src={graphic} alt="" />
+        </span>
+      )}
       {label && (
         <em className="sage-choice__text">
           {label}
@@ -62,6 +68,7 @@ Choice.defaultProps = {
   alignCenter: false,
   className: '',
   disabled: false,
+  graphic: null,
   icon: null,
   isActive: false,
   subtext: null,
@@ -73,6 +80,7 @@ Choice.propTypes = {
   alignCenter: PropTypes.bool,
   className: PropTypes.string,
   disabled: PropTypes.bool,
+  graphic: PropTypes.string,
   icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),
   isActive: PropTypes.bool,
   label: PropTypes.string.isRequired,
