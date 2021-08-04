@@ -1,6 +1,6 @@
 <tr>
   <td><%= md('`change`') %></td>
-  <td><%= md('Sets the `type` and `value` properties for the label.') %></td>
+  <td><%= md('Optional. Sets the `type` and `value` properties for the label.') %></td>
   <td><%= md('```
   {
     type: "positive, negative, neutral",
@@ -11,25 +11,48 @@
 </tr>
 <tr>
   <td><%= md('`custom_label`') %></td>
-  <td><%= md('Optional custom label or content.') %></td>
+  <td><%= md('Optional. Custom label or content.') %></td>
   <td><%= md('String') %></td>
   <td><%= md('`nil`') %></td>
 </tr>
 <tr>
   <td><%= md('`data`') %></td>
-  <td><%= md('Numeric data displayed.') %></td>
+  <td><%= md('**Required.** Numeric data displayed.') %></td>
   <td><%= md('String') %></td>
   <td><%= md('`nil`') %></td>
 </tr>
 <tr>
   <td><%= md('`has_data`') %></td>
-  <td><%= md('Boolean that determines styling for `data`.') %></td>
+  <td><%= md('Optional. Boolean that determines styling for `data`.') %></td>
   <td><%= md('Bool') %></td>
   <td><%= md('`nil`') %></td>
 </tr>
 <tr>
+  <td><%= md('`image`') %></td>
+  <td><%= md('Optional. Shows image to the left of data.') %></td>
+  <td><%= md('```
+  {
+    alt: String (optional)
+    value: String
+  }
+  ```') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`legend_dot_color`') %></td>
+  <td><%= md('Optional. Show Legend dot with preset Sage system colors.') %></td>
+  <td><%= md('Sage system colors') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`legend_dot_custom_color`') %></td>
+  <td><%= md('Optional. Show Legend dot with any custom color.') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
   <td><%= md('`link`') %></td>
-  <td><%= md('Sets the `href` and `value` properties for the link.') %></td>
+  <td><%= md('Optional. Sets the `href` and `value` properties for a given link.') %></td>
   <td><%= md('```
   {
     href: String,
@@ -39,20 +62,26 @@
   <td><%= md('`nil`') %></td>
 </tr>
 <tr>
+  <td><%= md('`raised`') %></td>
+  <td><%= md('Optional. Sets "raised panel" styling.') %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`popover`') %></td>
+  <td><%= md('Optional. Slot for popover or custom content.') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
   <td><%= md('`timeframe`') %></td>
-  <td><%= md('Optional timeframe for data.') %></td>
+  <td><%= md('Optional. Timeframe for data.') %></td>
   <td><%= md('String') %></td>
   <td><%= md('`nil`') %></td>
 </tr>
 <tr>
   <td><%= md('`title`') %></td>
-  <td><%= md('Text displayed as the title.') %></td>
-  <td><%= md('String') %></td>
-  <td><%= md('`nil`') %></td>
-</tr>
-<tr>
-  <td><%= md('`popover`') %></td>
-  <td><%= md('Optional slot for popover or custom content.') %></td>
+  <td><%= md('**Required**. Text displayed as the title.') %></td>
   <td><%= md('String') %></td>
   <td><%= md('`nil`') %></td>
 </tr>
