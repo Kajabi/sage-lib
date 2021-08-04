@@ -4,9 +4,53 @@
 /// @group sage
 ////
 
+$-stat-box-image-max-width: rem(48px);
+
 .sage-stat-box {
   // Styles here
   @include sage-card($grid: false);
+
+  &.sage-stat-box--raised {
+    box-shadow: sage-shadow(sm);
+    border: 0;
+  }
+
+  &.sage-stat-box--with-img {
+    display: grid;
+
+    grid-template-areas: 
+      "image header header"
+      "image body body";
+    grid-template-columns: $-stat-box-image-max-width 1fr;
+  }
+}
+
+.sage-stat-box__img {
+  position: relative;
+  grid-area: image;
+  overflow: hidden;
+  min-height: $-stat-box-image-max-width;
+  margin-right: sage-spacing(xs);
+
+  img {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    width: 100%;
+    border-radius: sage-border(radius);
+  }
+}
+
+.sage-stat-box__header {
+  grid-area: header;
+}
+
+.sage-stat-box__body {
+  grid-area: body;
+}
+
+.sage-stat-box__footer {
+  grid-area: footer;
 }
 
 .sage-stat-box__body,
@@ -18,7 +62,8 @@
 }
 
 .sage-stat-box__header,
-.sage-stat-box__link {
+.sage-stat-box__link,
+.sage-stat-box__title {
   display: flex;
   align-items: center;
 }
@@ -31,6 +76,24 @@
 .sage-stat-box__title {
   @extend %t-sage-body-small-med;
   margin-right: sage-spacing(xs);
+}
+
+[class*="sage-stat-box__title--legend"] {
+  &::before {
+    content: "";
+    display: block;
+    width: rem(8px);
+    height: rem(8px);
+    margin-right: sage-spacing(xs);
+    border-radius: sage-border(radius);
+    background-color: var(--legend-color);
+  }
+}
+
+@each $-color-name, $-color-sliders in $sage-colors {
+  .sage-stat-box__title--legend-#{"" + $-color-name} {
+    --legend-color: #{sage-color($-color-name)};
+  }
 }
 
 .sage-stat-box__data {

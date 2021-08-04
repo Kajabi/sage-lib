@@ -48,12 +48,12 @@ module SageSchemas
 
   DROPDOWN_ITEM = {
     attributes: [:optional, Hash],
-    border_before: [:optional, TrueClass],
     icon: [:optional, NilClass, String],
+    css_classes: [:optional, NilClass, String],
     is_heading: [:optional, TrueClass],
-    modifiers: [:optional, Array],
+    modifiers: [:optional, [[Set.new(["disabled", "border-before", "border-after", nil])]]],
     selected: [:optional, TrueClass],
-    style: [:optional, String],
+    style: [:optional, Set.new(["primary", "danger", "muted"])],
     value: String,
   }
 
