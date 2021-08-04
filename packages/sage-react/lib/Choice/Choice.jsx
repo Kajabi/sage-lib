@@ -8,6 +8,8 @@ export const Choice = ({
   className,
   icon,
   isActive,
+  label,
+  subtext,
   type,
   ...rest
 }) => {
@@ -27,7 +29,16 @@ export const Choice = ({
   );
   return (
     <div className={classNames} {...rest}>
-      <h1>Choice!</h1>
+      {label && (
+        <em className="sage-choice__text">
+          {label}
+        </em>
+      )}
+      {subtext && (
+        <span className="sage-choice__subtext">
+          {subtext}
+        </span>
+      )}
     </div>
   );
 };
@@ -38,6 +49,7 @@ Choice.defaultProps = {
   className: '',
   icon: null,
   isActive: false,
+  subtext: null,
   type: null,
 };
 
@@ -45,5 +57,7 @@ Choice.propTypes = {
   className: PropTypes.string,
   icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),
   isActive: PropTypes.bool,
+  label: PropTypes.string.isRequired,
+  subtext: PropTypes.string,
   type: PropTypes.oneOf(Object.values(Choice.CHOICE_TYPES)),
 };
