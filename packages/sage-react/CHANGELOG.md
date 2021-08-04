@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.54.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.53.0...@kajabi/sage-react@0.54.0) (2021-08-04)
+
+
+### Bug Fixes
+
+* **stat box:** adds fallback for image alt and updates legend color prop ([61373d8](https://github.com/Kajabi/sage-lib/commit/61373d833ddcb0fd16a7f5c10b0ec5938d69080d))
+
+
+### Features
+
+* **stat box:** adds new attributes to React component ([bdd4987](https://github.com/Kajabi/sage-lib/commit/bdd4987abc8d84ef2e782a4d4b1eaa5d7f24664d))
+
+
+
+
+
 # [0.53.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.52.0...@kajabi/sage-react@0.53.0) (2021-07-28)
 
 

@@ -3,6 +3,32 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.44.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.43.0...@kajabi/sage-assets@0.44.0) (2021-08-04)
+
+
+### Bug Fixes
+
+* **feature-toggle:** added align-items to aside to move items to the start ([273018e](https://github.com/Kajabi/sage-lib/commit/273018ea0dd88f1d29d2a020cfeb286078687587))
+* **feature-toggle:** adjusted size of the image to match the default icon size ([92bf158](https://github.com/Kajabi/sage-lib/commit/92bf1589b445769a35c18e760814f8783bad66b4))
+* **feature-toggle:** aligned items to end in aside. Removed width from Switch ([3d42f7f](https://github.com/Kajabi/sage-lib/commit/3d42f7f2fa8b32cd670ad9b83c0ed8855ec396e6))
+* **feature-toggle:** moved the title truncation mixin to a md-min breakpoint ([a80d837](https://github.com/Kajabi/sage-lib/commit/a80d8375e8de9e83019290dfdd0926aced75b0e8))
+* **feature-toggle:** property order fix ([3dbbe60](https://github.com/Kajabi/sage-lib/commit/3dbbe60ebfc9d7fecae94b84c79ce422b4f94aeb))
+* **files:** fix ([d2421aa](https://github.com/Kajabi/sage-lib/commit/d2421aabdf06ca64f4b76f5bc89152318373c024))
+* **switch:** removed width ([80bb692](https://github.com/Kajabi/sage-lib/commit/80bb69234e2e9b912a3132a0354a7d7f683446fe))
+* **table:** use gpu to solve paint flakiness in safari ([de65087](https://github.com/Kajabi/sage-lib/commit/de65087c7a10b717131cc1dda024de15ab27001d))
+
+
+### Features
+
+* **stat box:** add Legend dot attribute ([5bc6a92](https://github.com/Kajabi/sage-lib/commit/5bc6a922312dcf345db9da76ed0c647473df4f9b))
+* **stat box:** adds image attribute and prop in docs ([da82b83](https://github.com/Kajabi/sage-lib/commit/da82b838602f68a89191f932e6969e764dccfd28))
+* **stat box:** adds new attributes to React component ([bdd4987](https://github.com/Kajabi/sage-lib/commit/bdd4987abc8d84ef2e782a4d4b1eaa5d7f24664d))
+* **stat box:** adds raised attribute and cleans up props list ([c094d15](https://github.com/Kajabi/sage-lib/commit/c094d1503450f0b9cb39197d663622c532ae6521))
+
+
+
+
+
 # [0.43.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.42.0...@kajabi/sage-assets@0.43.0) (2021-07-28)
 
 

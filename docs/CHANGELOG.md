@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.11.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.10.0...@kajabi/sage@4.11.0) (2021-08-04)
+
+
+### Bug Fixes
+
+* **stat box:** adds fallback for image alt and updates legend color prop ([61373d8](https://github.com/Kajabi/sage-lib/commit/61373d833ddcb0fd16a7f5c10b0ec5938d69080d))
+* **stat box:** updates image alt logic ([76f68d7](https://github.com/Kajabi/sage-lib/commit/76f68d7f8339d6ccafa148f84a9aa0423889544e))
+
+
+### Features
+
+* **stat box:** add Legend dot attribute ([5bc6a92](https://github.com/Kajabi/sage-lib/commit/5bc6a922312dcf345db9da76ed0c647473df4f9b))
+* **stat box:** adds image attribute and prop in docs ([da82b83](https://github.com/Kajabi/sage-lib/commit/da82b838602f68a89191f932e6969e764dccfd28))
+* **stat box:** adds new attributes to React component ([bdd4987](https://github.com/Kajabi/sage-lib/commit/bdd4987abc8d84ef2e782a4d4b1eaa5d7f24664d))
+* **stat box:** adds raised attribute and cleans up props list ([c094d15](https://github.com/Kajabi/sage-lib/commit/c094d1503450f0b9cb39197d663622c532ae6521))
+
+
+
+
+
 # [4.10.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.9.0...@kajabi/sage@4.10.0) (2021-07-28)
 
 
