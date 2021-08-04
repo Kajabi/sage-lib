@@ -5,7 +5,9 @@ import { SageTokens } from '../configs';
 import { CHOICE_ICON_ALIGNMENTS, CHOICE_TYPES } from './configs';
 
 export const Choice = ({
+  alignCenter,
   className,
+  disabled,
   icon,
   isActive,
   label,
@@ -21,16 +23,24 @@ export const Choice = ({
   const classNames = classnames(
     baseClass,
     className,
-    'sage-choice--radio',
     {
       [`${baseClass}--active`]: isActive,
+      [`${baseClass}--align-center`]: isIconType && alignCenter,
       [`${baseClass}--${type}`]: type && !isIconType,
       [`${baseClass}--icon-${icon}`]: isIconType && icon,
       [`${baseClass}--vertical-align-icon-${verticalAlignIcon}`]: verticalAlignIcon && (isIconType || isRadioType),
     }
   );
+
+  const attrs = {
+    'aria-selected': isActive,
+    className: classNames,
+    disabled,
+    ...rest,
+  };
+
   return (
-    <div className={classNames} {...rest}>
+    <div className={classNames} {...attrs}>
       {label && (
         <em className="sage-choice__text">
           {label}
@@ -49,7 +59,9 @@ Choice.CHOICE_TYPES = CHOICE_TYPES;
 Choice.CHOICE_ICON_ALIGNMENTS = CHOICE_ICON_ALIGNMENTS;
 
 Choice.defaultProps = {
+  alignCenter: false,
   className: '',
+  disabled: false,
   icon: null,
   isActive: false,
   subtext: null,
@@ -58,7 +70,9 @@ Choice.defaultProps = {
 };
 
 Choice.propTypes = {
+  alignCenter: PropTypes.bool,
   className: PropTypes.string,
+  disabled: PropTypes.bool,
   icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),
   isActive: PropTypes.bool,
   label: PropTypes.string.isRequired,
