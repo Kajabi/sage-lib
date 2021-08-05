@@ -7,7 +7,7 @@ The Sage Design System (SDS) is our single source of truth, providing everything
 
 ## Structure
 
-There are 5 total packages in the monorepo:
+There are five total packages in the monorepo:
 
 | Package | Description | Location | README | CHANGELOG |
 |--|--|--|---|--|
