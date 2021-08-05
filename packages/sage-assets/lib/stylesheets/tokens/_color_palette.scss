@@ -115,11 +115,11 @@ $sage-colors: (
 @mixin sage-color-names($token, $opacity: 1) {
   @each $color, $color-values in $token {
     @each $tint, $value in $color-values {
-      --sage-color-#{"" + $color}-#{$tint}: hsla(#{hex-to-hsl($value)}, 1);
+      --sage-color-#{"" + $color}-#{$tint}: hsla(#{hex-to-hsl($value)}, #{$opacity});
     }
   }
 }
 
 :root {
-  @include sage-color-names($sage-colors, 1);
+  @include sage-color-names($sage-colors);
 }
