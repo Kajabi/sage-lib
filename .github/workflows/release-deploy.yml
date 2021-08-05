@@ -16,7 +16,7 @@ jobs:
 
       - name: Install dependencies
         env:
-          BUILD_PACKAGES: bash build-base cyrus-sasl-dev git libtool libsasl snappy-dev tzdata tar curl xz
+          BUILD_PACKAGES: bash build-base cyrus-sasl-dev git git-subtree libtool libsasl snappy-dev tzdata tar curl xz
         run: |
           apk add --update --no-cache $BUILD_PACKAGES
 
@@ -64,11 +64,12 @@ jobs:
         run: yarn build
 
       # Lerna Bootstrap and Publish package
-      - name: Lerna Bootstrap
-        run: npx lerna bootstrap --ci
+      # TODO: Bring back in once deploy is verified
+      # - name: Lerna Bootstrap
+      #   run: npx lerna bootstrap --ci
 
-      - name: Lerna Publish
-        run: npx lerna publish --registry github --yes
+      # - name: Lerna Publish
+      #   run: npx lerna publish --registry github --yes
 
       # Deploy site
       - name: Documentation Site Deploy
