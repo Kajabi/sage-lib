@@ -10,8 +10,24 @@ jobs:
     name: Release and Deploy
     runs-on: ubuntu-latest
     container:
-      image: circleci/ruby:2.4.9-node
+      image: kajabiprodeng/ruby:2.4.9-alpine3.13
     steps:
+      - name: Install node and yarn
+        env:
+          YARN_VERSION: 1.22.5
+          NODE_VERSION: 14.14.0
+          ARCH: "x64"
+        run: |
+          curl -fsSLO --compressed "https://unofficial-builds.nodejs.org/download/release/v$NODE_VERSION/node-v$NODE_VERSION-linux-$ARCH-musl.tar.xz"; \
+          tar -xJf "node-v$NODE_VERSION-linux-$ARCH-musl.tar.xz" -C /usr/local --strip-components=1 --no-same-owner \
+          && ln -s /usr/local/bin/node /usr/local/bin/nodejs \
+          && curl -fSLO --compressed "https://yarnpkg.com/downloads/$YARN_VERSION/yarn-v$YARN_VERSION.tar.gz" \
+          && tar -xzf yarn-v$YARN_VERSION.tar.gz -C /opt/ \
+          && ln -snf /opt/yarn-v$YARN_VERSION/bin/yarn /usr/local/bin/yarn \
+          && ln -snf /opt/yarn-v$YARN_VERSION/bin/yarnpkg /usr/local/bin/yarnpkg \
+          && rm yarn-v$YARN_VERSION.tar.gz \
+          && rm node-v$NODE_VERSION-linux-$ARCH-musl.tar.xz
+
       # Setup Auth token to push to github packages
       - name: Set NPM Config
         run: npm config set '//npm.pkg.github.com/:_authToken' '${{ secrets.ACCESS_TOKEN }}'
