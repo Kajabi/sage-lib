@@ -11,17 +11,13 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Yarn Install
-        working-directory: ./sage-lib
         run: yarn install
 
       - name: Yarn Lint
-        working-directory: ./sage-lib
         run: yarn lint
 
       - name: Yarn Test
-        working-directory: ./sage-lib
         run: yarn test
 
       - name: Yarn Build
-        working-directory: ./sage-lib
         run: yarn build
