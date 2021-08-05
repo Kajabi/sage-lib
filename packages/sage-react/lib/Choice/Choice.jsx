@@ -2,10 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { SageTokens } from '../configs';
-import { CHOICE_ICON_ALIGNMENTS, CHOICE_TYPES } from './configs';
+import { ICON_ALIGNMENTS, TYPES } from './configs';
 
 export const Choice = ({
   alignCenter,
+  attributes,
   className,
   customContentClass,
   disabled,
@@ -20,8 +21,8 @@ export const Choice = ({
   ...rest
 }) => {
   const baseClass = 'sage-choice';
-  const isIconType = type && type === CHOICE_TYPES.ICON;
-  const isRadioType = type && type === CHOICE_TYPES.RADIO;
+  const isIconType = type && type === TYPES.ICON;
+  const isRadioType = type && type === TYPES.RADIO;
 
   const classNames = classnames(
     baseClass,
@@ -43,7 +44,7 @@ export const Choice = ({
   };
 
   return (
-    <div className={classNames} {...attrs}>
+    <div className={classNames} {...attrs} {...attributes}>
       {graphic && (
         <span className="sage-choice__graphic">
           <img src={graphic} alt="" />
@@ -70,11 +71,12 @@ export const Choice = ({
   );
 };
 
-Choice.CHOICE_TYPES = CHOICE_TYPES;
-Choice.CHOICE_ICON_ALIGNMENTS = CHOICE_ICON_ALIGNMENTS;
+Choice.TYPES = TYPES;
+Choice.ICON_ALIGNMENTS = ICON_ALIGNMENTS;
 
 Choice.defaultProps = {
   alignCenter: false,
+  attributes: null,
   className: '',
   customContentClass: '',
   disabled: false,
@@ -84,11 +86,12 @@ Choice.defaultProps = {
   linkText: null,
   subtext: null,
   type: null,
-  verticalAlignIcon: CHOICE_ICON_ALIGNMENTS.DEFAULT,
+  verticalAlignIcon: ICON_ALIGNMENTS.DEFAULT,
 };
 
 Choice.propTypes = {
   alignCenter: PropTypes.bool,
+  attributes: PropTypes.shape({}),
   className: PropTypes.string,
   customContentClass: PropTypes.string,
   disabled: PropTypes.bool,
@@ -98,6 +101,6 @@ Choice.propTypes = {
   linkText: PropTypes.string,
   subtext: PropTypes.string,
   text: PropTypes.string.isRequired,
-  type: PropTypes.oneOf(Object.values(Choice.CHOICE_TYPES)),
-  verticalAlignIcon: PropTypes.oneOf(Object.values(Choice.CHOICE_ICON_ALIGNMENTS))
+  type: PropTypes.oneOf(Object.values(Choice.TYPES)),
+  verticalAlignIcon: PropTypes.oneOf(Object.values(Choice.ICON_ALIGNMENTS))
 };
