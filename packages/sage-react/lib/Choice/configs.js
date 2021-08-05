@@ -1,11 +1,11 @@
-export const CHOICE_TYPES = {
+export const TYPES = {
   ARROW: 'arrow',
   GRAPHIC: 'graphic',
   ICON: 'icon',
   RADIO: 'radio',
 };
 
-export const CHOICE_ICON_ALIGNMENTS = {
+export const ICON_ALIGNMENTS = {
   DEFAULT: null,
   START: 'start',
 };
