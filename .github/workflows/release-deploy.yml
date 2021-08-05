@@ -11,7 +11,15 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: kajabiprodeng/ruby:2.4.9-alpine3.13
+
     steps:
+
+      - name: Install dependencies
+        env:
+          BUILD_PACKAGES: bash build-base cyrus-sasl-dev git libtool libsasl snappy-dev tzdata tar curl xz
+        run: |
+          apk add --update --no-cache $BUILD_PACKAGES
+
       - name: Install node and yarn
         env:
           YARN_VERSION: 1.22.5
