@@ -19,48 +19,37 @@ jobs:
 
       # Setup Git Credentials to come from the Bot
       - name: Set Bot Email
-        working-directory: ./sage-lib
         run: git config user.email "dev+github-bot@kajabi.com"
 
       - name: Set Bot Name
-        working-directory: ./sage-lib
         run: git config user.name "Kajabi Automation Bot"
 
       # Install/Lint/Test/Build
       - name: Yarn Install
-        working-directory: ./sage-lib
         run: yarn install
 
       - name: Yarn Lint
-        working-directory: ./sage-lib
         run: yarn lint
 
       - name: Yarn Test
-        working-directory: ./sage-lib
         run: yarn test
 
       - name: Yarn Build
-        working-directory: ./sage-lib
         run: yarn build
 
       # Lerna Bootstrap and Publish package
       - name: Lerna Bootstrap
-        working-directory: ./sage-lib
         run: npx lerna bootstrap --ci
 
       - name: Lerna Publish
-        working-directory: ./sage-lib
         run: npx lerna publish --registry github --yes
 
       # Deploy site
       - name: Documentation Site Deploy
-        working-directory: ./sage-lib
         run: yarn docs:deploy
 
       - name: Storybook Site Deploy
-        working-directory: ./sage-lib
         run: yarn storybook:deploy
 
       - name: SassDocs Site Deploy
-        working-directory: ./sage-lib
         run: yarn sassdocs:deploy
