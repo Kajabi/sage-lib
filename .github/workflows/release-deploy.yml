@@ -1,7 +1,7 @@
 name: Release-Deploy
 on:
   # !!Emergency override!! uncomment the below and access the actions tab in GitHub
-  # workflow_dispatch:
+  workflow_dispatch:
   push:
     branches:
       - main
@@ -9,6 +9,8 @@ jobs:
   release_deploy:
     name: Release and Deploy
     runs-on: ubuntu-latest
+    container:
+      image: circleci/ruby:2.4.9-node
     steps:
       # Setup Auth token to push to github packages
       - name: Set NPM Config
