@@ -54,11 +54,12 @@ jobs:
       - name: Yarn Install
         run: yarn install
 
-      - name: Yarn Lint
-        run: yarn lint
+      # TODO: Bring back in once deploy is verified
+      # - name: Yarn Lint
+      #   run: yarn lint
 
-      - name: Yarn Test
-        run: yarn test
+      # - name: Yarn Test
+      #   run: yarn test
 
       - name: Yarn Build
         run: yarn build
@@ -73,10 +74,19 @@ jobs:
 
       # Deploy site
       - name: Documentation Site Deploy
+        env:
+          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+          HEROKU_DOCS_APP_NAME: ${{ secrets.HEROKU_DOCS_APP_NAME }}
         run: yarn docs:deploy
 
       - name: Storybook Site Deploy
+        env:
+          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+          HEROKU_STORYBOOK_APP_NAME: ${{ secrets.HEROKU_STORYBOOK_APP_NAME }}
         run: yarn storybook:deploy
 
       - name: SassDocs Site Deploy
+        env:
+          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+          HEROKU_SASSDOCS_APP_NAME: ${{ secrets.HEROKU_SASSDOCS_APP_NAME }}
         run: yarn sassdocs:deploy
