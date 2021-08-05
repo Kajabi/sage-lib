@@ -8,81 +8,83 @@
 ///
 /// Sage color palette token
 ///
+/// * requires decimal values for accurate hex conversion
+///
 $sage-colors: (
   primary: (
-    100: #e6f4fe,
-    200: #8ecafb,
-    300: #0072ef,
-    400: #054fb8,
-    500: #07265f,
+    100: hsl(205, 92.3%, 95%), // *
+    200: hsl(207, 93%, 77%),
+    300: hsl(211.4, 100%, 46.9%), // *
+    400: hsl(215, 95%, 37%),
+    500: hsl(219, 86%, 20%),
   ),
   sage: (
-    100: #ddf8f0,
-    200: #86d5bc,
-    300: #23856d,
-    400: #225d53,
-    500: #183e3b,
+    100: hsl(161, 68%, 92%),
+    200: hsl(161, 48%, 68%),
+    300: hsl(165, 58%, 33%),
+    400: hsl(170, 46%, 25%),
+    500: hsl(175, 44%, 17%),
   ),
   yellow: (
-    100: #f9f0cd,
-    200: #fce79c,
-    300: #f0c024,
-    400: #8d5c2f,
-    500: #5c381e,
+    100: hsl(48, 77%, 89%),
+    200: hsl(47, 94%, 80%),
+    300: hsl(46, 87%, 54%),
+    400: hsl(28.7, 50%, 36.8%), // *
+    500: hsl(25, 51%, 24%),
   ),
   red: (
-    100: #ffe0e0,
-    200: #fdb0aa,
-    300: #cf3c32,
-    400: #99221e,
-    500: #5e0d0d,
+    100: hsl(360, 100%, 94%),
+    200: hsl(4, 96%, 83%),
+    300: hsl(3.8, 62%, 50.4%), // *
+    400: hsl(2, 67%, 36%),
+    500: hsl(0, 76%, 21%),
   ),
   orange: (
-    100: #fbefe4,
-    200: #f7bd8b,
-    300: #f89035,
-    400: #a2411a,
-    500: #5a260c,
+    100: hsl(29, 74%, 94%),
+    200: hsl(27.8, 87%, 75.6%), // *
+    300: hsl(28, 93%, 59%),
+    400: hsl(17, 72%, 37%),
+    500: hsl(20, 76%, 20%),
   ),
   purple: (
-    100: #eee4f6,
-    200: #d9c2ef,
-    300: #8e5ad8,
-    400: #50348a,
-    500: #381c5e,
+    100: hsl(272, 52%, 93%),
+    200: hsl(270, 59%, 85%),
+    300: hsl(265, 62%, 60%),
+    400: hsl(259.5, 45%, 37.3%), // *
+    500: hsl(265, 54%, 24%),
   ),
   grey: (
-    100: #f8fafb,
-    200: #f4f8fa,
-    300: #e0e7f1,
-    400: #bbcad8,
-    500: #94a6b8,
+    100: hsl(206, 30%, 98%),
+    200: hsl(207, 40%, 97%),
+    300: hsl(212, 37%, 91%),
+    400: hsl(208, 27%, 79%),
+    500: hsl(209, 20%, 65%),
   ),
   charcoal: (
-    100: #526275,
-    200: #405264,
-    300: #304050,
-    400: #263240,
-    500: #1c2530,
+    100: hsl(213, 18%, 39%),
+    200: hsl(210, 22%, 32%),
+    300: hsl(210, 25%, 25%),
+    400: hsl(212, 25%, 20%),
+    500: hsl(213, 26%, 15%),
   ),
   white: (
-    100: #fff,
-    200: #fff,
-    300: #fff,
-    400: #fff,
-    500: #fff,
+    100: hsl(0, 0%, 100%),
+    200: hsl(0, 0%, 100%),
+    300: hsl(0, 0%, 100%),
+    400: hsl(0, 0%, 100%),
+    500: hsl(0, 0%, 100%),
   ),
   black: (
-    100: #000,
-    200: #000,
-    300: #000,
-    400: #000,
-    500: #000,
+    100: hsl(0, 0%, 100%),
+    200: hsl(0, 0%, 100%),
+    300: hsl(0, 0%, 100%),
+    400: hsl(0, 0%, 100%),
+    500: hsl(0, 0%, 100%),
   ),
 );
 
 ///
-/// Sage breakpoints token utility
+/// Sage color token utility
 ///
 /// @param {string} $base the color token to retrieve
 /// @param {number} $value [300] the tint or shade to retrieve
@@ -92,4 +94,32 @@ $sage-colors: (
 @function sage-color($base, $value: 300) {
   $color: map-get(map-get($sage-colors, $base), $value);
   @return $color;
+}
+
+///
+/// Sage Hex to HSL color conversion utility
+///
+/// @param {color} $hex the hexadecimal color value
+/// @return {string} the hue, saturation, and lightness values
+///
+@function hex-to-hsl($hex) {
+  @return hue($hex), saturation($hex), lightness($hex);
+}
+
+///
+/// Outputs color values as CSS properties.
+///
+/// @param {string} $token Name of the color map
+/// @param {Number} $opacity Opacity (alpha) value
+///
+@mixin sage-color-names($token, $opacity: 1) {
+  @each $color, $color-values in $token {
+    @each $tint, $value in $color-values {
+      --sage-color-#{"" + $color}-#{$tint}: hsla(#{hex-to-hsl($value)}, 1);
+    }
+  }
+}
+
+:root {
+  @include sage-color-names($sage-colors, 1);
 }
