@@ -1,0 +1,27 @@
+name: Lint-Test-Build
+on:
+  workflow_dispatch:
+  pull_request:
+jobs:
+  lint_test_build:
+    name: Lint, Test, Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone Sage-Lib Repo
+        uses: actions/checkout@v2
+
+      - name: Yarn Install
+        working-directory: ./sage-lib
+        run: yarn install
+
+      - name: Yarn Lint
+        working-directory: ./sage-lib
+        run: yarn lint
+
+      - name: Yarn Test
+        working-directory: ./sage-lib
+        run: yarn test
+
+      - name: Yarn Build
+        working-directory: ./sage-lib
+        run: yarn build
