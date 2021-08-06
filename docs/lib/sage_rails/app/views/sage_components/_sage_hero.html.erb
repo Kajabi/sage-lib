@@ -1,6 +1,22 @@
-<% html_tag = component.title_tag ? component.title_tag : "h2" %>
+<%
+html_tag = component.title_tag ? component.title_tag : "h2"
 
-<article class="sage-hero <%= component.generated_css_classes %>" data-js-hero <%= component.generated_html_attributes.html_safe %>>
+case component.size
+when "small"
+  size = "lg"
+else
+  size = "xl"
+end
+%>
+
+<%= sage_component SageContainer, {
+  css_classes: "sage-hero #{component.generated_css_classes}",
+  html_attributes: ({
+    "data-js-hero": true,
+  }).merge(component.html_attributes),
+  size: size,
+  tag: "article"
+} do %>
   <<%= html_tag %> class="sage-hero__title"><%= component.title %></<%= html_tag %>>
   <div class="sage-hero__body">
     <p>
@@ -25,4 +41,4 @@
       <%= image_tag component.image, image_options %>
     </span>
   </a>
-</article>
+<% end %>

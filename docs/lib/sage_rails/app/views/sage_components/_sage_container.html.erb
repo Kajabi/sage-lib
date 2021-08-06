@@ -1,7 +1,8 @@
 <%
 size = component.size.present? ? component.size : "full"
+tag = component.tag ? component.tag : "div"
 %>
-<div class="
+<<%= tag %> class="
     sage-container
     sage-container--<%= size %>
     <%= component.generated_css_classes %>
@@ -9,4 +10,4 @@ size = component.size.present? ? component.size : "full"
   <%= component.generated_html_attributes.html_safe %>
 >
   <%= component.content %>
-</div>
+</<%= tag %>>
