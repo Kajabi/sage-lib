@@ -1,17 +1,4 @@
 <%= sage_component SageSidebar, { id: "sage-sidebar-menu" } do %>
-  <% if current_page_content? %>
-    <%= sage_component SageNav, {
-      items: [
-        { link: pages_content_path(:voice_tone), text: "CONTENT", items: [
-          {
-            text: "Voice & Tone",
-            link: pages_content_path(:voice_tone),
-            active: current_page?(pages_content_path(:voice_tone)),
-          },
-        ] }
-      ]
-    } %>
-  <% end %>
   <% if current_page_design? %>
     <%= sage_component SageNav, {
       items: [

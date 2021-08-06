@@ -4,28 +4,6 @@
     <%= sage_component SageGridCol, { breakpoint: "md", size: "4", spacer: { bottom: :lg } } do %> 
       <%= sage_component SagePanel, {} do %>
         <%= sage_component SagePanelStack, {} do %>
-          <i class="docs-section__icon sage-icon-pen-3xl t-sage--color-sage"></i>
-          <h3 class="t-sage-heading-3">Content</h3>
-          <p class="t-sage-body">Our content standards will help you understand how to think strategically about the language in your products and apps.</p>
-          <%= sage_component SageButton, {
-            value: "Content Guides",
-            attributes: {
-              href: pages_content_path(:voice_tone),
-              title: "Content Guides"
-            },
-            subtle: true,
-            icon: {
-              style: "right",
-              name: "arrow-right"
-            },
-            style: "primary",
-          } %>
-        <% end %>
-      <% end %>
-    <% end %>
-    <%= sage_component SageGridCol, { breakpoint: "md", size: "4", spacer: { bottom: :lg } } do %> 
-      <%= sage_component SagePanel, {} do %>
-        <%= sage_component SagePanelStack, {} do %>
           <i class="docs-section__icon sage-icon-customize-3xl t-sage--color-sage"></i>
           <h3 class="t-sage-heading-3">Design</h3>
           <p class="t-sage-body">

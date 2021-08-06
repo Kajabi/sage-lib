@@ -3,10 +3,6 @@ class PagesController < ApplicationController
     render(layout: 'home')
   end
 
-  def content
-    render params[:title]
-  end
-
   def experiences
     render params[:title]
   end
