@@ -1,7 +1,7 @@
 name: Release-Deploy
 on:
-  # !!Emergency override!! uncomment the below and access the actions tab in GitHub
-  workflow_dispatch:
+  # !!Emergency override!! uncomment below and access the actions tab in GitHub to run a release/deploy
+  # workflow_dispatch:
   push:
     branches:
       - main
@@ -51,26 +51,26 @@ jobs:
         run: git config user.name "Kajabi Automation Bot"
 
       # Install/Lint/Test/Build
+      # Since Lint-Test-Build runs on every PR this is only really necessary
+      # to ensure we don't get a crash prior to the release.
       - name: Yarn Install
         run: yarn install
 
-      # TODO: Bring back in once deploy is verified
-      # - name: Yarn Lint
-      #   run: yarn lint
+      - name: Yarn Lint
+        run: yarn lint
 
-      # - name: Yarn Test
-      #   run: yarn test
+      - name: Yarn Test
+        run: yarn test
 
       - name: Yarn Build
         run: yarn build
 
       # Lerna Bootstrap and Publish package
-      # TODO: Bring back in once deploy is verified
-      # - name: Lerna Bootstrap
-      #   run: npx lerna bootstrap --ci
+      - name: Lerna Bootstrap
+        run: npx lerna bootstrap --ci
 
-      # - name: Lerna Publish
-      #   run: npx lerna publish --registry github --yes
+      - name: Lerna Publish
+        run: npx lerna publish --registry github --yes
 
       # Deploy site
       - name: Documentation Site Deploy
