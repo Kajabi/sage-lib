@@ -78,7 +78,6 @@ export const TOKENS_ICONS = {
   EXPAND: 'expand',
   FAVORITE: 'favorite',
   FILE: 'file',
-  FILE_MENU: 'file-menu',
   FILE_MONEY: 'file-money',
   FILTERS: 'filters',
   FLAG: 'flag',
