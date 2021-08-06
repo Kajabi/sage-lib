@@ -196,7 +196,6 @@ module SageTokens
     "expand",
     "favorite",
     "file",
-    "file-menu",
     "file-money",
     "filters",
     "flag",
