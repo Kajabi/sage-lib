@@ -4,28 +4,6 @@
     <%= sage_component SageGridCol, { breakpoint: "md", size: "4", spacer: { bottom: :lg } } do %> 
       <%= sage_component SagePanel, {} do %>
         <%= sage_component SagePanelStack, {} do %>
-          <i class="docs-section__icon sage-icon-form-3xl t-sage--color-sage"></i>
-          <h3 class="t-sage-heading-3">Foundations</h3>
-          <p class="t-sage-body">Principles that reflect our design philosophy and inspire our team to shape great experiences for Knowledge Commerce businesses of any scale.</p>
-          <%= sage_component SageButton, {
-            value: "Explore Foundations",
-            attributes: {
-              href: pages_foundation_path(:design_principles),
-              title: "Explore Foundations"
-            },
-            subtle: true,
-            icon: {
-              style: "right",
-              name: "arrow-right"
-            },
-            style: "primary",
-          } %>
-        <% end %>
-      <% end %>
-    <% end %>
-    <%= sage_component SageGridCol, { breakpoint: "md", size: "4", spacer: { bottom: :lg } } do %> 
-      <%= sage_component SagePanel, {} do %>
-        <%= sage_component SagePanelStack, {} do %>
           <i class="docs-section__icon sage-icon-pen-3xl t-sage--color-sage"></i>
           <h3 class="t-sage-heading-3">Content</h3>
           <p class="t-sage-body">Our content standards will help you understand how to think strategically about the language in your products and apps.</p>

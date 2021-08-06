@@ -2,10 +2,6 @@ require "pp"
 
 module ApplicationHelper
 
-  def current_page_foundations?
-    current_page?(pages_foundation_path(:ux_values)) || (params[:title] && current_page?(pages_foundation_path(params[:title])))
-  end
-
   def current_page_content?
     current_page?(pages_content_path(:voice_tone)) || (params[:title] && current_page?(pages_content_path(params[:title])))
   end

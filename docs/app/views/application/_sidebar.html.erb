@@ -1,17 +1,4 @@
 <%= sage_component SageSidebar, { id: "sage-sidebar-menu" } do %>
-  <% if current_page_foundations? %>
-    <%= sage_component SageNav, {
-      items: [
-        { link: pages_foundation_path(:design_principles), text: "FOUNDATIONS", items: [
-          {
-            text: "Design Principles",
-            link: pages_foundation_path(:design_principles),
-            active: current_page?(pages_foundation_path(:design_principles)),
-          }]
-        }
-      ]
-    } %>
-  <% end %>
   <% if current_page_content? %>
     <%= sage_component SageNav, {
       items: [
