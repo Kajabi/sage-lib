@@ -13,6 +13,7 @@ export const Choice = ({
   icon,
   isActive,
   linkText,
+  radioConfigs,
   subtext,
   text,
   type,
@@ -39,11 +40,23 @@ export const Choice = ({
     'aria-selected': isActive,
     className: classNames,
     disabled,
+    for: radioConfigs.id,
     ...rest,
   };
 
   return (
     <div className={classNames} {...attrs}>
+      {(radioConfigs.name && radioConfigs.id && radioConfigs.value) && (
+        <div className="sage-choice__radio visually-hidden">
+          <input
+            type="radio"
+            name={radioConfigs.name}
+            id={radioConfigs.id}
+            value={radioConfigs.value}
+            checked={isActive}
+          />
+        </div>
+      )}
       {graphic && (
         <span className="sage-choice__graphic">
           <img src={graphic} alt="" />
@@ -82,6 +95,11 @@ Choice.defaultProps = {
   icon: null,
   isActive: false,
   linkText: null,
+  radioConfigs: {
+    name: null,
+    id: null,
+    value: null,
+  },
   subtext: null,
   type: null,
   verticalAlignIcon: ICON_ALIGNMENTS.DEFAULT,
@@ -96,6 +114,11 @@ Choice.propTypes = {
   icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),
   isActive: PropTypes.bool,
   linkText: PropTypes.string,
+  radioConfigs: PropTypes.shape({
+    name: PropTypes.string,
+    id: PropTypes.string,
+    value: PropTypes.string,
+  }),
   subtext: PropTypes.string,
   text: PropTypes.string.isRequired,
   type: PropTypes.oneOf(Object.values(Choice.TYPES)),
