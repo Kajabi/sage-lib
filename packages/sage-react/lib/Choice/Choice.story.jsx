@@ -25,7 +25,7 @@ export default {
 
 const Template = (args) => (
   <div style={{ maxWidth: '400px' }}>
-    <Choice {...args} style={{ display: 'flex' }} />
+    <Choice {...args} />
   </div>
 );
 export const Default = Template.bind({});

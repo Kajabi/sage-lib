@@ -198,6 +198,10 @@ $-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
   }
 }
 
+.sage-choice--full-width {
+  display: flex;
+}
+
 .sage-choice__content {
   display: flex;
   flex: 1;
