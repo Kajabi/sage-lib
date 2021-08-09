@@ -34,12 +34,17 @@ $-upload-card-background-hover: sage-color(grey, 100);
     justify-content: flex-start;
     align-items: flex-start;
   }
+
+  .sage-upload-card--selected & {
+    flex-basis: rem(200px);
+  }
 }
 
 .sage-upload-card__dropzone {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  gap: .5rem;
   padding: sage-spacing(md);
   background-color: $-upload-card-background;
   border-radius: $-upload-card-border-radius;
@@ -54,13 +59,13 @@ $-upload-card-background-hover: sage-color(grey, 100);
 
     &:hover {
       background-color: $-upload-card-background-hover;
-  
+
       @include sage-dashed-border(
         $color: $-upload-card-border-color-hover,
         $border-radius: $-upload-card-border-radius,
       );
     }
-  
+
     &:focus,
     &:focus-within {
       outline: 0;
@@ -73,7 +78,8 @@ $-upload-card-background-hover: sage-color(grey, 100);
   }
 
   .sage-upload-card--selected & {
-    flex-flow: row;
+    flex-flow: row wrap;
+    gap: 1.5rem;
     border: 1px solid $-upload-card-border-color-default;
   }
 
@@ -126,7 +132,15 @@ $-upload-card-background-hover: sage-color(grey, 100);
 
 .sage-upload-card__preview {
   width: rem(190px);
-  margin-right: sage-spacing(md);
+  width: 32px;
+  max-width: 190px;
+  margin-right: 0;
+  text-align: center;
+  border-radius: sage-border(radius-sm);
+
+  .sage-upload-card--selected & {
+    width: 100%;
+  }
 }
 
 .sage-upload-card__subtext {
