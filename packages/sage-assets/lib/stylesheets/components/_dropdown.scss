@@ -300,6 +300,11 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
     // a positioning issue with nested flex positioned elements
     // transform: rotate3d(0, 0, 0, 0);
   }
+
+  .sage-upload-card .sage-dropdown & {
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 .sage-dropdown__panel--custom {
