@@ -49,9 +49,27 @@ export const Choice = ({
     ...rest,
   };
 
+  // is_label = component.radio_configs.present?
+  // is_link = component.attributes&.has_key?(:href)
+  // is_button = !is_link and !is_label
+  // html_tag = component.content.present? ? "div" : "button"
+  // if is_link
+  //   html_tag = "a"
+  // elsif is_label
+  //   html_tag = "label"
+  // end
+
+  const hasRadioConfigs = (radioConfigs.name && radioConfigs.id && radioConfigs.value);
+  const isLabel = hasRadioConfigs;
+  // const isLink = ('href' in rest.attributes);
+  // const isButton = !isLink && !isLabel;
+  let TagType = 'div';
+  // if (isLink) TagType = 'a';
+  if (isLabel) TagType = 'label';
+
   return (
-    <div className={classNames} {...attrs}>
-      {(radioConfigs.name && radioConfigs.id && radioConfigs.value) && (
+    <TagType className={classNames} {...attrs}>
+      {hasRadioConfigs && (
         <div className="sage-choice__radio visually-hidden">
           <input
             type="radio"
@@ -84,7 +102,7 @@ export const Choice = ({
           {linkText}
         </span>
       )}
-    </div>
+    </TagType>
   );
 };
 
