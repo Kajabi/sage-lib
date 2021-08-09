@@ -9,6 +9,7 @@ export const Choice = ({
   className,
   customContentClass,
   disabled,
+  fullWidth,
   graphic,
   icon,
   isActive,
@@ -32,6 +33,7 @@ export const Choice = ({
       [`${baseClass}--align-center`]: isIconType && alignCenter,
       [`${baseClass}--${type}`]: type && !isIconType,
       [`${baseClass}--icon-${icon}`]: isIconType && icon,
+      [`${baseClass}--full-width`]: fullWidth,
       [`${baseClass}--vertical-align-icon-${verticalAlignIcon}`]: verticalAlignIcon && (isIconType || isRadioType),
     }
   );
@@ -91,6 +93,7 @@ Choice.defaultProps = {
   className: '',
   customContentClass: '',
   disabled: false,
+  fullWidth: false,
   graphic: null,
   icon: null,
   isActive: false,
@@ -110,6 +113,7 @@ Choice.propTypes = {
   className: PropTypes.string,
   customContentClass: PropTypes.string,
   disabled: PropTypes.bool,
+  fullWidth: PropTypes.bool,
   graphic: PropTypes.string,
   icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),
   isActive: PropTypes.bool,
