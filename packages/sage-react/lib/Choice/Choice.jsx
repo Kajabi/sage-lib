@@ -6,7 +6,6 @@ import { ICON_ALIGNMENTS, TYPES } from './configs';
 
 export const Choice = ({
   alignCenter,
-  attributes,
   className,
   customContentClass,
   disabled,
@@ -44,7 +43,7 @@ export const Choice = ({
   };
 
   return (
-    <div className={classNames} {...attrs} {...attributes}>
+    <div className={classNames} {...attrs}>
       {graphic && (
         <span className="sage-choice__graphic">
           <img src={graphic} alt="" />
@@ -76,7 +75,6 @@ Choice.ICON_ALIGNMENTS = ICON_ALIGNMENTS;
 
 Choice.defaultProps = {
   alignCenter: false,
-  attributes: null,
   className: '',
   customContentClass: '',
   disabled: false,
@@ -91,7 +89,6 @@ Choice.defaultProps = {
 
 Choice.propTypes = {
   alignCenter: PropTypes.bool,
-  attributes: PropTypes.shape({}),
   className: PropTypes.string,
   customContentClass: PropTypes.string,
   disabled: PropTypes.bool,
