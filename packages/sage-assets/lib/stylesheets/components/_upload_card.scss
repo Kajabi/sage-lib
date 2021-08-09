@@ -44,7 +44,7 @@ $-upload-card-background-hover: sage-color(grey, 100);
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: .5rem;
+  gap: sage-spacing(xs);
   padding: sage-spacing(md);
   background-color: $-upload-card-background;
   border-radius: $-upload-card-border-radius;
@@ -79,7 +79,7 @@ $-upload-card-background-hover: sage-color(grey, 100);
 
   .sage-upload-card--selected & {
     flex-flow: row wrap;
-    gap: 1.5rem;
+    gap: sage-spacing();
     border: 1px solid $-upload-card-border-color-default;
   }
 
@@ -131,9 +131,8 @@ $-upload-card-background-hover: sage-color(grey, 100);
 }
 
 .sage-upload-card__preview {
-  width: rem(190px);
-  width: 32px;
-  max-width: 190px;
+  width: rem(32px);
+  max-width: rem(190px);
   margin-right: 0;
   text-align: center;
   border-radius: sage-border(radius-sm);
