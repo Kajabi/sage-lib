@@ -16,6 +16,7 @@ export const Choice = ({
   linkText,
   radioConfigs,
   subtext,
+  target,
   text,
   type,
   verticalAlignIcon,
@@ -39,8 +40,10 @@ export const Choice = ({
   );
 
   const attrs = {
+    'aria-controls': target,
     'aria-selected': isActive,
     className: classNames,
+    'data-js-tabs-target': target,
     disabled,
     for: radioConfigs.id,
     ...rest,
@@ -104,6 +107,7 @@ Choice.defaultProps = {
     value: null,
   },
   subtext: null,
+  target: null,
   type: null,
   verticalAlignIcon: ICON_ALIGNMENTS.DEFAULT,
 };
@@ -124,6 +128,7 @@ Choice.propTypes = {
     value: PropTypes.string,
   }),
   subtext: PropTypes.string,
+  target: PropTypes.string,
   text: PropTypes.string.isRequired,
   type: PropTypes.oneOf(Object.values(Choice.TYPES)),
   verticalAlignIcon: PropTypes.oneOf(Object.values(Choice.ICON_ALIGNMENTS))
