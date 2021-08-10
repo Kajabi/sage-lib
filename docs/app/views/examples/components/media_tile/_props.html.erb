@@ -14,6 +14,7 @@
 <tr>
   <td><%= md('`actions_custom`') %></td>
   <td><%= md('Provide any items you want to appear to the right of the title in an actions_custom slot.
+  NOTE: It is preferrable to use the `actions_dropdown_items` to contain interactive features.
   Alternatively, compose this using a `content_for :sage_media_tile_actions_custom` block.') %></td>
   <td><%= md('String  | HTML Content') %></td>
   <td><%= md('`nil`') %></td>
@@ -52,6 +53,13 @@
   <td><%= md('`media_configs`') %></td>
   <td><%= md('Allows for a set of configurations for the media figure that plays a prominent role in this tiling component.') %></td>
   <td><%= md("See schema for [Panel Figure](#{pages_component_path(:panel_figure)})") %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`tile_link`') %></td>
+  <td><%= md('Provide a primary action link configuration that makes the whole tile clickable.
+  Similar to `attributes` on `SageButton`, this is a Hash that can contain ant HTML attribute desired for this link.') %></td>
+  <td><%= md('`Hash`') %></td>
   <td><%= md('`nil`') %></td>
 </tr>
 <tr>
