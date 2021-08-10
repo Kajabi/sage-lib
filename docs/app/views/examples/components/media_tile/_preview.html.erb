@@ -14,18 +14,6 @@ common_actions_dropdown_items = [
   }
 ]
 
-common_additional_actions_custom = sage_component(SageButton, {
-  value: "Preview",
-  icon: { name: "preview-on", style: "only" },
-  subtle: true,
-  style: "secondary",
-}) << sage_component(SageButton, {
-  value: "Edit",
-  icon: { name: "pen", style: "only" },
-  subtle: true,
-  style: "secondary",
-})
-
 common_footer = sage_component(SageButton, {
   value: "More",
   icon: { name: "arrow-right", style: "right" },
@@ -92,7 +80,7 @@ While typically a part of this component, the `media` area is also optional.
       caption: panels[0][:caption],
       media: panels[0][:media],
       actions_dropdown_items: common_actions_dropdown_items,
-      footer: common_footer,
+      tile_link: { href: "#tile-link" }
     },
     {
       title: panels[1][:title],
@@ -100,7 +88,7 @@ While typically a part of this component, the `media` area is also optional.
       caption: panels[1][:caption],
       media: panels[1][:media],
       actions_dropdown_items: common_actions_dropdown_items,
-      footer: common_footer,
+      tile_link: { href: "#tile-link" }
     },
     {
       title: panels[2][:title],
@@ -108,29 +96,35 @@ While typically a part of this component, the `media` area is also optional.
       caption: panels[2][:caption],
       media: panels[2][:media],
       actions_dropdown_items: common_actions_dropdown_items,
-      footer: common_footer,
+      tile_link: { href: "#tile-link" }
     }
   ]
 } %>
 
 <h3>Actions</h3>
+<%= md('Tiles can include the following actionable features:
+
+- A primary action that makes the whole tile clickable through `tile_link`
+- Dropdown next to the title through `actions_dropdown_items`
+- Additional action buttons/links in the `footer`
+
+', use_sage_type: true) %>
+
 <%= sage_component SageMediaTiles, {
   items: [
     {
       title: "Plain and simple",
-      body: md('Tiles do not have to include an actions area if its not needed.'),
-      footer: common_footer,
+      body: md("Tiles do not have to include an actions area if they're not needed."),
     },
     {
       title: "Actions dropdown",
       body: md('Since an "options" dropdown is common, you can easily pass a list of items to this default slot.'),
       actions_dropdown_items: common_actions_dropdown_items,
-      footer: common_footer,
+      tile_link: { href: "#" },
     },
     {
       title: "Custom actions",
-      body: md('Additional actions can be provided in lieu of or even in combination with the default dropdown.'),
-      actions_custom: common_additional_actions_custom,
+      body: md('In lieu of a whole clickable tile, additional actions can be provided as links in the footer area.'),
       footer: common_footer,
     }
   ]
