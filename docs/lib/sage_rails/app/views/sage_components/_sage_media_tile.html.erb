@@ -3,6 +3,7 @@ is_interactive = component.tile_link.present? ? true : false
 media_aspect_ratio = nil
 media_background_color = nil
 media_padded = false
+title_tag = component.title_tag.present? ? component.title_tag : 'h3'
 if component.media_configs.present?
   media_aspect_ratio = component.media_configs[:aspect_ratio].present? ? component.media_configs[:aspect_ratio] : media_aspect_ratio
   media_background_color = component.media_configs[:background_color].present? ? component.media_configs[:background_color] : media_background_color
@@ -31,7 +32,7 @@ end
     css_classes: "sage-media-tile__content",
   } do %>
     <%= sage_component SagePanelRow, { css_classes: "sage-media-tile__header" } do %>
-      <h3 class="sage-media-tile__title">
+      <<%= title_tag %> class="sage-media-tile__title">
         <% if component.tile_link.present? %>
           <a
             class="sage-media-tile__link <%= component.tile_link[:class] if component.tile_link[:class] %>"
@@ -44,7 +45,7 @@ end
         <% else %>
           <%= component.title %>
         <% end %>
-      </h3>
+      </<%= title_tag %>>
 
       <%= sage_component SageButtonGroup, { gap: :sm } do %>
         <%= content_for :sage_media_tile_actions_custom if content_for? :sage_media_tile_actions_custom %>
