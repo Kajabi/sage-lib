@@ -73,6 +73,7 @@ module SageSchemas
     footer: [:optional, NilClass, String],
     media: [:optional, NilClass, String],
     media_configs: [:optional, NilClass, SageSchemas::PANEL_FIGURE],
+    tile_link: [:optional, NilClass, Hash],
     title: [:optional, NilClass, String],
   }
 

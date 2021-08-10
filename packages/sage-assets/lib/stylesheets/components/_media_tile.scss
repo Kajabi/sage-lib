@@ -14,10 +14,19 @@ $-media-tile-breakpoints: (
 );
 
 .sage-media-tile {
+  position: relative;
   max-width: $-media-tile-max-col-size;
 
   @media (min-width: map-get($-media-tile-breakpoints, 2-col-min)) {
     min-width: $-media-tile-min-col-size;
+  }
+}
+
+.sage-media-tile--interactive {
+  &:hover {
+    box-shadow: sage-shadow(md);
+    transition: map-get($sage-transitions, default);
+    transition-property: box-shadow;
   }
 }
 
@@ -47,6 +56,33 @@ $-media-tile-breakpoints: (
 
 .sage-media-tile__header {
   width: 100%;
+}
+
+.sage-media-tile__link {
+  color: inherit;
+
+  &::after {
+    @include position-full();
+
+    content: "";
+    position: absolute;
+    border: 2px solid transparent;
+    border-radius: sage-border(radius-large);
+    transition: map-get($sage-transitions, default);
+    transition-property: border-color;
+  }
+
+  &:hover {
+    color: inherit;
+  }
+
+  &:focus {
+    outline: 0;
+
+    &::after {
+      border-color: sage-color(primary);
+    }
+  }
 }
 
 .sage-media-tile-container {
