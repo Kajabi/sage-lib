@@ -63,7 +63,7 @@ panels = [
 %>
 <%= md('
 NOTE: While `MediaTile` (singular) can be used on its own, it will commonly be implemented in a set.
-Therefore, the `MediaTiles` (plural) component is used in examples here.
+Therefore, the `MediaTiles` (plural) component is used these initial examples.
 ', use_sage_type: true) %>
 
 <h3>Basic Tiles</h3>
@@ -138,6 +138,46 @@ NOTE: the examples below omit `media` but this can safely be used as well with t
     }
   ]
 } %>
+
+<h3>Standalone/Kitchen Sink Example</h3>
+<%= md('Previous examples have shown tiles in sets. Below is an example of a standalone tile that makes use of the compositional sections more explicitly.', use_sage_type: true) %>
+<%= sage_component SageMediaTile, {
+  media_configs: {
+    aspect_ratio: 0.89,
+    padded: true,
+    background_color: SageTokens::COLOR_PALETTE[:SAGE_100],
+  },
+  tile_link: {
+    href: "#",
+    "data-js-modaltoggle": "pretend-modal",
+  },
+  title: "TITLE Kitchen Sink Example",
+  title_tag: "h2",
+} do %>
+  <%= content_for :sage_media_tile_media do %>
+    <img src="//source.unsplash.com/Ssj4uWXcvS4/600x400?1" alt="MEDIA Image of Product Abra" />
+  <% end %>
+  <%= content_for :sage_media_tile_actions_custom do %>
+    <%= sage_component SageLabel, { value: "CUSTOM Draft", color: "draft" } %>
+  <% end %>
+  <%= content_for :sage_media_tile_body do %>
+    <p>
+      BODY Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Etiam rhoncus aliquam odio.
+    </p>
+  <% end %>
+  <%= content_for :sage_media_tile_caption do %>
+    <p>CAPTION Vivamus dictum rutrum dui, nec placerat ante</p>
+  <% end %>
+  <%= content_for :sage_media_tile_footer do %>
+    <%= sage_component SageButton, {
+      value: "FOOTER More",
+      icon: { name: "arrow-right", style: "right" },
+      subtle: true,
+      style: "primary",
+    } %>
+  <% end %>
+<% end %>
 
 <h3>Other Settings for Media</h3>
 <%= md("
