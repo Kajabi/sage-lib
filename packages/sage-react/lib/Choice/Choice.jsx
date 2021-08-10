@@ -6,6 +6,7 @@ import { ICON_ALIGNMENTS, TYPES } from './configs';
 
 export const Choice = ({
   alignCenter,
+  children,
   className,
   customContentClass,
   disabled,
@@ -39,6 +40,14 @@ export const Choice = ({
     }
   );
 
+  const hasRadioConfigs = (radioConfigs.name && radioConfigs.id && radioConfigs.value);
+  const isLabel = hasRadioConfigs;
+  const isLink = ('href' in rest);
+  const isButton = !isLink && !isLabel;
+  let TagName = children ? 'div' : 'button';
+  if (isLabel) TagName = 'label';
+  if (isLink) TagName = 'a';
+
   const attrs = {
     'aria-controls': target,
     'aria-selected': isActive,
@@ -46,35 +55,12 @@ export const Choice = ({
     'data-js-tabs-target': target,
     disabled,
     htmlFor: radioConfigs.id,
+    ...(isButton && { type: 'button' }),
     ...rest,
   };
 
-  // is_label = component.radio_configs.present?
-  // is_link = component.attributes&.has_key?(:href)
-  // is_button = !is_link and !is_label
-  // html_tag = component.content.present? ? "div" : "button"
-  // if is_link
-  //   html_tag = "a"
-  // elsif is_label
-  //   html_tag = "label"
-  // end
-
-  const hasRadioConfigs = (radioConfigs.name && radioConfigs.id && radioConfigs.value);
-  const isLabel = hasRadioConfigs;
-  function isLink() {
-    if ('attributes' in rest) {
-      const { attributes } = rest;
-      if ('href' in attributes) return true;
-    }
-    return false;
-  }
-  // const isButton = !isLink && !isLabel;
-  let TagType = 'div';
-  if (isLink) TagType = 'a';
-  if (isLabel) TagType = 'label';
-
   return (
-    <TagType className={classNames} {...attrs}>
+    <TagName className={classNames} {...attrs}>
       {hasRadioConfigs && (
         <div className="sage-choice__radio visually-hidden">
           <input
@@ -102,13 +88,14 @@ export const Choice = ({
             {subtext}
           </span>
         )}
+        {children}
       </div>
       {linkText && (
         <span className="sage-choice__link-text">
           {linkText}
         </span>
       )}
-    </TagType>
+    </TagName>
   );
 };
 
@@ -117,6 +104,7 @@ Choice.ICON_ALIGNMENTS = ICON_ALIGNMENTS;
 
 Choice.defaultProps = {
   alignCenter: false,
+  children: null,
   className: '',
   customContentClass: '',
   disabled: false,
@@ -138,6 +126,7 @@ Choice.defaultProps = {
 
 Choice.propTypes = {
   alignCenter: PropTypes.bool,
+  children: PropTypes.node,
   className: PropTypes.string,
   customContentClass: PropTypes.string,
   disabled: PropTypes.bool,
