@@ -75,6 +75,7 @@ module SageSchemas
     media_configs: [:optional, NilClass, SageSchemas::PANEL_FIGURE],
     tile_link: [:optional, NilClass, Hash],
     title: [:optional, NilClass, String],
+    title_tag: [:optional, NilClass, Set.new(["h1", "h2", "h3", "h4", "h5", "h5", "h6"])],
   }
 
   TAB = {

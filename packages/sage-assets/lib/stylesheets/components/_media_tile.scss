@@ -85,6 +85,10 @@ $-media-tile-breakpoints: (
   }
 }
 
+.sage-media-tile__title {
+  @extend %t-sage-heading-5;
+}
+
 .sage-media-tile-container {
   @include sage-grid-panel;
 
