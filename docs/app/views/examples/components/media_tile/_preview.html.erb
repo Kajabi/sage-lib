@@ -108,17 +108,26 @@ While typically a part of this component, the `media` area is also optional.
 - Dropdown next to the title through `actions_dropdown_items`
 - Additional action buttons/links in the `footer`
 
+NOTE: the examples below omit `media` but this can safely be used as well with these actions affordances.
+
 ', use_sage_type: true) %>
 
 <%= sage_component SageMediaTiles, {
   items: [
     {
       title: "Plain and simple",
+      title_tag: "h1",
       body: md("Tiles do not have to include an actions area if they're not needed."),
     },
     {
+      title: "Clickable Tile",
+      body: md('As tiles may often be desired as an entire clickable element, the `tile_link` can be provided with link configurations to enable this functionality.'),
+      tile_link: { href: "#" },
+    },
+    {
       title: "Actions dropdown",
-      body: md('Since an "options" dropdown is common, you can easily pass a list of items to this default slot.'),
+      body: md('Since an "options" dropdown is common, you can easily pass a list of items to this default slot.
+      This can be used in combinaton with `tile_link` or independently as desired.'),
       actions_dropdown_items: common_actions_dropdown_items,
       tile_link: { href: "#" },
     },
