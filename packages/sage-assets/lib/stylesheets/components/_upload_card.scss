@@ -6,6 +6,9 @@
 
 
 $-upload-card-border-radius: sage-border(radius);
+$-upload-card-selected-width: rem(200px);
+$-upload-card-preview-width: rem(32px);
+$-upload-card-preview-max-width: rem(190px);
 $-upload-card-border-color-default: sage-color(grey, 300);
 $-upload-card-border-color-hover: sage-color(grey, 400);
 $-upload-card-border-color-error: sage-color(red, 300);
@@ -36,7 +39,7 @@ $-upload-card-background-hover: sage-color(grey, 100);
   }
 
   .sage-upload-card--selected & {
-    flex-basis: rem(200px);
+    flex-basis: $-upload-card-selected-width;
   }
 }
 
@@ -131,8 +134,8 @@ $-upload-card-background-hover: sage-color(grey, 100);
 }
 
 .sage-upload-card__preview {
-  width: rem(32px);
-  max-width: rem(190px);
+  width: $-upload-card-preview-width;
+  max-width: $-upload-card-preview-max-width;
   margin-right: 0;
   text-align: center;
   border-radius: sage-border(radius-sm);
