@@ -45,7 +45,7 @@ export const Choice = ({
     className: classNames,
     'data-js-tabs-target': target,
     disabled,
-    for: radioConfigs.id,
+    htmlFor: radioConfigs.id,
     ...rest,
   };
 
@@ -61,10 +61,16 @@ export const Choice = ({
 
   const hasRadioConfigs = (radioConfigs.name && radioConfigs.id && radioConfigs.value);
   const isLabel = hasRadioConfigs;
-  // const isLink = ('href' in rest.attributes);
+  function isLink() {
+    if ('attributes' in rest) {
+      const { attributes } = rest;
+      if ('href' in attributes) return true;
+    }
+    return false;
+  }
   // const isButton = !isLink && !isLabel;
   let TagType = 'div';
-  // if (isLink) TagType = 'a';
+  if (isLink) TagType = 'a';
   if (isLabel) TagType = 'label';
 
   return (
