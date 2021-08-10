@@ -1,4 +1,5 @@
 <%
+is_interactive = component.tile_link.present? ? true : false
 media_aspect_ratio = nil
 media_background_color = nil
 media_padded = false
@@ -9,7 +10,7 @@ if component.media_configs.present?
 end
 %>
 <%= sage_component SagePanel, {
-  css_classes: "sage-media-tile #{component.css_classes}",
+  css_classes: "sage-media-tile #{component.css_classes} #{is_interactive ? "sage-media-tile--interactive" : ""}",
   html_attributes: component.html_attributes,
   spacer: component.spacer,
   test_id: component.test_id,
@@ -29,10 +30,22 @@ end
   <%= sage_component SagePanelStack, {
     css_classes: "sage-media-tile__content",
   } do %>
-    <%= sage_component SagePanelHeader, {
-      css_classes: "sage-media-tile__header",
-      title: component.title,
-    } do %>
+    <%= sage_component SagePanelRow, { css_classes: "sage-media-tile__header" } do %>
+      <h3 class="sage-media-tile__title">
+        <% if component.tile_link.present? %>
+          <a
+            class="sage-media-tile__link <%= component.tile_link[:class] if component.tile_link[:class] %>"
+            <% component.tile_link.each do |key, value| %>
+              <%= "#{key}=\"#{value}\"".html_safe if key != "class" %>
+            <% end if component.tile_link&.is_a?(Hash) %>
+          >
+            <%= component.title %>
+          </a>
+        <% else %>
+          <%= component.title %>
+        <% end %>
+      </h3>
+
       <%= sage_component SageButtonGroup, { gap: :sm } do %>
         <%= content_for :sage_media_tile_actions_custom if content_for? :sage_media_tile_actions_custom %>
         <%= component.actions_custom.html_safe if component.actions_custom.present? %>
