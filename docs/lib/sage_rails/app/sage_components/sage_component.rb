@@ -31,7 +31,10 @@ class SageComponent
     context.render(
       partial: "sage_components/#{template_path}",
       locals: { component: self }
-    ).tap { cleanup_section_vars }
+    )
+    .tap { cleanup_section_vars }
+    .squish
+    .html_safe
   end
 
   # SageComponent Universal Spacer Attribute
