@@ -15,7 +15,7 @@ $-select-color-default: map-get($sage-field-colors, default);
 $-select-color-error: map-get($sage-field-colors, error);
 $-select-color-label-background: map-get($sage-field-colors, label-background);
 $-select-color-success: map-get($sage-field-colors, success);
-$-select-filled-top-padding: rem(6);
+$-select-filled-top-padding: rem(4.4);
 $-select-height: map-get($sage-field-configs, height);
 $-select-padding-x: map-get($sage-field-configs, padding);
 $-select-padding-label: map-get($sage-field-configs, padding-label);
