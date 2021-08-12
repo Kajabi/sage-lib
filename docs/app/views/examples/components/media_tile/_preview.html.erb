@@ -14,18 +14,6 @@ common_actions_dropdown_items = [
   }
 ]
 
-common_additional_actions_custom = sage_component(SageButton, {
-  value: "Preview",
-  icon: { name: "preview-on", style: "only" },
-  subtle: true,
-  style: "secondary",
-}) << sage_component(SageButton, {
-  value: "Edit",
-  icon: { name: "pen", style: "only" },
-  subtle: true,
-  style: "secondary",
-})
-
 common_footer = sage_component(SageButton, {
   value: "More",
   icon: { name: "arrow-right", style: "right" },
@@ -56,7 +44,7 @@ panels = [
     caption: %(
       <p>Suspendisse eu tellus quis arcu sagittis semper</p>
     ),
-    media: %(<img src="//source.unsplash.com/gkJCCn1hZDk/600x400?2" />),
+    media: %(<img src="//source.unsplash.com/gkJCCn1hZDk/600x400?2" alt="Image of Product Cadabra" />),
     title: "Product Cadabra",
   },
   {
@@ -68,14 +56,14 @@ panels = [
     caption: %(
       <p>Maecenas vitae leo eu tellus efficitur viverra sit amet ut tortor vestibulum</p>
     ),
-    media: %(<img src="//source.unsplash.com/3lqEqS1s7mw/600x400?3" />),
+    media: %(<img src="//source.unsplash.com/3lqEqS1s7mw/600x400?3" alt="Image of Product Jimminycricket" />),
     title: "Product Jimminycricket",
   },
 ]
 %>
 <%= md('
 NOTE: While `MediaTile` (singular) can be used on its own, it will commonly be implemented in a set.
-Therefore, the `MediaTiles` (plural) component is used in examples here.
+Therefore, the `MediaTiles` (plural) component is used these initial examples.
 ', use_sage_type: true) %>
 
 <h3>Basic Tiles</h3>
@@ -92,7 +80,7 @@ While typically a part of this component, the `media` area is also optional.
       caption: panels[0][:caption],
       media: panels[0][:media],
       actions_dropdown_items: common_actions_dropdown_items,
-      footer: common_footer,
+      tile_link: { href: "#tile-link" }
     },
     {
       title: panels[1][:title],
@@ -100,7 +88,7 @@ While typically a part of this component, the `media` area is also optional.
       caption: panels[1][:caption],
       media: panels[1][:media],
       actions_dropdown_items: common_actions_dropdown_items,
-      footer: common_footer,
+      tile_link: { href: "#tile-link" }
     },
     {
       title: panels[2][:title],
@@ -108,33 +96,88 @@ While typically a part of this component, the `media` area is also optional.
       caption: panels[2][:caption],
       media: panels[2][:media],
       actions_dropdown_items: common_actions_dropdown_items,
-      footer: common_footer,
+      tile_link: { href: "#tile-link" }
     }
   ]
 } %>
 
 <h3>Actions</h3>
+<%= md('Tiles can include the following actionable features:
+
+- A primary action that makes the whole tile clickable through `tile_link`
+- Dropdown next to the title through `actions_dropdown_items`
+- Additional action buttons/links in the `footer`
+
+NOTE: the examples below omit `media` but this can safely be used as well with these actions affordances.
+
+', use_sage_type: true) %>
+
 <%= sage_component SageMediaTiles, {
   items: [
     {
       title: "Plain and simple",
-      body: md('Tiles do not have to include an actions area if its not needed.'),
-      footer: common_footer,
+      title_tag: "h1",
+      body: md("Tiles do not have to include an actions area if they're not needed."),
+    },
+    {
+      title: "Clickable Tile",
+      body: md('As tiles may often be desired as an entire clickable element, the `tile_link` can be provided with link configurations to enable this functionality.'),
+      tile_link: { href: "#" },
     },
     {
       title: "Actions dropdown",
-      body: md('Since an "options" dropdown is common, you can easily pass a list of items to this default slot.'),
+      body: md('Since an "options" dropdown is common, you can easily pass a list of items to this default slot.
+      This can be used in combinaton with `tile_link` or independently as desired.'),
       actions_dropdown_items: common_actions_dropdown_items,
-      footer: common_footer,
+      tile_link: { href: "#" },
     },
     {
       title: "Custom actions",
-      body: md('Additional actions can be provided in lieu of or even in combination with the default dropdown.'),
-      actions_custom: common_additional_actions_custom,
+      body: md('In lieu of a whole clickable tile, additional actions can be provided as links in the footer area.'),
       footer: common_footer,
     }
   ]
 } %>
+
+<h3>Standalone/Kitchen Sink Example</h3>
+<%= md('Previous examples have shown tiles in sets. Below is an example of a standalone tile that makes use of the compositional sections more explicitly.', use_sage_type: true) %>
+<%= sage_component SageMediaTile, {
+  media_configs: {
+    aspect_ratio: 0.89,
+    padded: true,
+    background_color: SageTokens::COLOR_PALETTE[:SAGE_100],
+  },
+  tile_link: {
+    href: "#",
+    "data-js-modaltoggle": "pretend-modal",
+  },
+  title: "TITLE Kitchen Sink Example",
+  title_tag: "h2",
+} do %>
+  <%= content_for :sage_media_tile_media do %>
+    <img src="//source.unsplash.com/Ssj4uWXcvS4/600x400?1" alt="MEDIA Image of Product Abra" />
+  <% end %>
+  <%= content_for :sage_media_tile_actions_custom do %>
+    <%= sage_component SageLabel, { value: "CUSTOM Draft", color: "draft" } %>
+  <% end %>
+  <%= content_for :sage_media_tile_body do %>
+    <p>
+      BODY Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Etiam rhoncus aliquam odio.
+    </p>
+  <% end %>
+  <%= content_for :sage_media_tile_caption do %>
+    <p>CAPTION Vivamus dictum rutrum dui, nec placerat ante</p>
+  <% end %>
+  <%= content_for :sage_media_tile_footer do %>
+    <%= sage_component SageButton, {
+      value: "FOOTER More",
+      icon: { name: "arrow-right", style: "right" },
+      subtle: true,
+      style: "primary",
+    } %>
+  <% end %>
+<% end %>
 
 <h3>Other Settings for Media</h3>
 <%= md("

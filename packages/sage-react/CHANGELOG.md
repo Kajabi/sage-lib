@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.54.5 (2021-08-11)
+
+**Note:** Version bump only for package @kajabi/sage-react
+
+
+
+
+
+## 0.54.4 (2021-08-11)
+
+**Note:** Version bump only for package @kajabi/sage-react
+
+
+
+
+
+## 0.54.3 (2021-08-11)
+
+**Note:** Version bump only for package @kajabi/sage-react
+
+
+
+
+
 ## 0.54.2 (2021-08-05)
 
 **Note:** Version bump only for package @kajabi/sage-react
