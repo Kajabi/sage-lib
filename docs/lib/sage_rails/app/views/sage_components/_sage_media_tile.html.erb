@@ -1,7 +1,9 @@
 <%
+is_interactive = component.tile_link.present? ? true : false
 media_aspect_ratio = nil
 media_background_color = nil
 media_padded = false
+title_tag = component.title_tag.present? ? component.title_tag : 'h3'
 if component.media_configs.present?
   media_aspect_ratio = component.media_configs[:aspect_ratio].present? ? component.media_configs[:aspect_ratio] : media_aspect_ratio
   media_background_color = component.media_configs[:background_color].present? ? component.media_configs[:background_color] : media_background_color
@@ -9,12 +11,11 @@ if component.media_configs.present?
 end
 %>
 <%= sage_component SagePanel, {
-  css_classes: "sage-media-tile #{component.css_classes}",
+  css_classes: "sage-media-tile #{component.css_classes} #{is_interactive ? "sage-media-tile--interactive" : ""}",
   html_attributes: component.html_attributes,
   spacer: component.spacer,
   test_id: component.test_id,
 } do %>
-<%= @preset_aspect_ratio %>
   <%= sage_component SagePanelFigure, {
     aspect_ratio: media_aspect_ratio,
     bleed: "top",
@@ -29,10 +30,22 @@ end
   <%= sage_component SagePanelStack, {
     css_classes: "sage-media-tile__content",
   } do %>
-    <%= sage_component SagePanelHeader, {
-      css_classes: "sage-media-tile__header",
-      title: component.title,
-    } do %>
+    <%= sage_component SagePanelRow, { css_classes: "sage-media-tile__header" } do %>
+      <<%= title_tag %> class="sage-media-tile__title">
+        <% if component.tile_link.present? %>
+          <a
+            class="sage-media-tile__link <%= component.tile_link[:class] if component.tile_link[:class] %>"
+            <% component.tile_link.each do |key, value| %>
+              <%= "#{key}=\"#{value}\"".html_safe if key != "class" %>
+            <% end if component.tile_link&.is_a?(Hash) %>
+          >
+            <%= component.title %>
+          </a>
+        <% else %>
+          <%= component.title %>
+        <% end %>
+      </<%= title_tag %>>
+
       <%= sage_component SageButtonGroup, { gap: :sm } do %>
         <%= content_for :sage_media_tile_actions_custom if content_for? :sage_media_tile_actions_custom %>
         <%= component.actions_custom.html_safe if component.actions_custom.present? %>

@@ -14,6 +14,7 @@
 <tr>
   <td><%= md('`actions_custom`') %></td>
   <td><%= md('Provide any items you want to appear to the right of the title in an actions_custom slot.
+  NOTE: It is preferrable to use the `actions_dropdown_items` to contain interactive features.
   Alternatively, compose this using a `content_for :sage_media_tile_actions_custom` block.') %></td>
   <td><%= md('String  | HTML Content') %></td>
   <td><%= md('`nil`') %></td>
@@ -55,11 +56,56 @@
   <td><%= md('`nil`') %></td>
 </tr>
 <tr>
+  <td><%= md('`tile_link`') %></td>
+  <td><%= md('Provide a primary action link configuration that makes the whole tile clickable.
+  Similar to `attributes` on `SageButton`, this is a Hash that can contain any HTML attribute desired for this link.') %></td>
+  <td><%= md('`Hash`') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
   <td><%= md('`title`') %></td>
   <td><%= md('Provide the "header" content for the tile.') %></td>
   <td><%= md('`String`') %></td>
   <td><%= md('`nil`') %></td>
 </tr>
+<tr>
+  <td><%= md('`title_tag`') %></td>
+  <td><%= md('Sets which HTML heading tag to use on the title.') %></td>
+  <td><%= md('One of `h1` through `h6`') %></td>
+  <td><%= md('`h3`') %></td>
+</tr>
+
+<tr>
+  <td colspan="2"><%= md('**Sections**') %></td>
+  <td colspan="2"><%= md('**`Element`**') %></td>
+</tr>
+<tr>
+  <td><%= md('`sage_media_tile_media`') %></td>
+  <td><%= md('Provides the HTML content for the media area at the top of the tile; same purpose as the `media` property.') %></td>
+  <td colspan="2"><%= md('Any; typically images or video embeds.') %></td>
+</tr>
+<tr>
+  <td><%= md('`sage_media_tile_actions_custom`') %></td>
+  <td><%= md('Provides the HTML content for a custom set of actions or other content that is placed to the right of the title; same purpose as the `acttions_custom` property.') %></td>
+  <td colspan="2"><%= md('Any; typically `SageButton` or `SageLabel`.') %></td>
+</tr>
+<tr>
+  <td><%= md('`sage_media_tile_body`') %></td>
+  <td><%= md('Provides HTML content for the main body copy area; same purpose as the `body` property.') %></td>
+  <td colspan="2"><%= md('Any; formatted as HTML.') %></td>
+</tr>
+<tr>
+  <td><%= md('`sage_media_tile_caption`') %></td>
+  <td><%= md('Provides HTML content for the smaller "caption" copy area below the `body`; same purpose as the `caption` property.') %></td>
+  <td colspan="2"><%= md('Any; formatted as HTML.') %></td>
+</tr>
+<tr>
+  <td><%= md('`sage_media_tile_footer`') %></td>
+  <td><%= md('Provides HTML content for the very bottom portion of the tile that is also aligned to the bottom consistently when tiles are stretched; same purpose as the `caption` property.') %></td>
+  <td colspan="2"><%= md('Any; typically `SageButton` or `SageLink`.') %></td>
+</tr>
+
+
 <tr>
   <td colspan="4">
     <strong>MediaTiles</strong>
