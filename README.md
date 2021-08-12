@@ -1,11 +1,33 @@
-# Sage Design System
+<a href="https://sage-design-system.kajabi.com" style="display: block; position: relative;">
+  <img src="readme/sage-hero-bkgd.jpg" alt="" width="100%; position: relative; z-index: -1;" />
+  <img src="readme/sage-icon-wordmark.svg" alt="" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1;" />
+</a>
 
-The Sage Design System (SDS) is our single source of truth, providing everything you need to build great products for our customers. It is the culmination of designers and developers working together to give teams the ability to ship high-quality products faster.
+<h1 style="text-align: center;">
+  Sage Design System
+</h1>
 
+> The Sage Design System is our single source of truth, providing everything you need to build great products for our customers. It is the culmination of designers and developers working together to give teams the ability to ship high-quality products faster.
 
-[Visit Sage Design System Documentation →](https://sage-lib-documentation.herokuapp.com)
+## 📚 Documentation
 
-## Structure
+* To use Sage in your application, see our [Documentation Site](https://sage-design-system.kajabi.com/pages/index)
+* To view the documentation for contributing to Sage, see our [internal Wiki](https://github.com/Kajabi/sage-lib/wiki)
+
+## 👩‍💻 Contributing
+
+### Conventional Commits
+
+This repository utilizes the
+[Conventional Commits Standard](https://www.conventionalcommits.org/en/v1.0.0/). Utilizing this standard allows us to automatically version our software during the Continuous Integration process as well as generate `CHANGELOG.md` files for each of the packages.
+
+### Unsure how to format your commit message? 
+
+Use `yarn commit` to launch a wizard to walk you through with [Commitizen](https://github.com/commitizen/cz-cli)
+
+A `commit-msg` hook has been added to the repository to enforce this behavior. Ensure you have read over the convention and understand it prior to making a Pull Request.
+
+### Repo Structure
 
 There are five total packages in the monorepo:
 
@@ -16,10 +38,6 @@ There are five total packages in the monorepo:
 | **@kajabi/sage-packs** | Packs `sage-assets`, `sage-system`, and `sage-react` for use in Rails applications. | `./packages/sage-packs` | [README](./packages/sage-packs/README.md) | [CHANGELOG](./packages/sage-packs/CHANGELOG.md) | 
 | **@kajabi/sage-react** | React component library and Storybook for documentation | `./packages/sage-react` | [README](./packages/sage-react/README.md) | [CHANGELOG](./packages/sage-react/CHANGELOG.md) | 
 | **@kajabi/sage-system** | JS scripts for use with the Rails components | `./packages/sage-system` | [README](./packages/sage-system/README.md) | [CHANGELOG](./packages/sage-system/CHANGELOG.md) |
-
-This diagram illustrates how these all pull together for use in Kajabi's `kajabi-products` system:
-
-![Sage Structure](readme/sage-structure.png "Sage Structure")
 
 ### Lerna Mono-Repository
 
@@ -33,10 +51,9 @@ The Sage Design System is a [Lerna Mono-Repository](https://github.com/lerna/ler
 >
 > Lerna can also reduce the time and space requirements for numerous copies of packages in development and build environments - normally a downside of dividing a project into many separate NPM packages.
 
-
 ### Adding Packages
 
-This repository utilizes Yarn Workspaces which allows for setup of multiple packages in such a way that you only need to run `yarn install` from the root of the repository and all packages will be updated. In addition syntax is provided to target installation towards specific packages or the entire suite. Below are examples of adding packages:
+This repository utilizes [Yarn Workspaces](https://classic.yarnpkg.com/en/docs/workspaces/) which allows for setup of multiple packages in such a way that you only need to run `yarn install` from the root of the repository and all packages will be updated. In addition, syntax is provided to target installation towards specific packages or the entire suite. Below are examples of adding packages:
 
 ```bash
 # Adds the module-1 package to the packages in the 'prefix-' prefixed folders
@@ -58,18 +75,9 @@ $ yarn lerna add @kajabi/sage-assets
 $ yarn lerna add babel-core
 ```
 
-### Conventional Commits
+### Local Development
 
-This repository utilizes the
-[Conventional Commits Standard](https://www.conventionalcommits.org/en/v1.0.0/). Utilizing this standard allows us to automatically version our software during the Continuous Integration process as well as generate `CHANGELOG.md` files for each of the packages.
-
-Unsure how to format your commit message? Use `yarn commit` to launch a wizard to walk you through with [Commitizen](https://github.com/commitizen/cz-cli)
-
-A `commit-msg` hook has been added to the repository to enforce this behavior. Ensure you have read over the convention and understand it prior to making a Pull Request.
-
-## Local Development: Sage
-
-### Getting Started
+#### Getting Started
 
 Run the Setup script:
 
@@ -90,7 +98,7 @@ To visit the Storybook (React components) site: http://localhost:4100/
 
 To visit the Sassdocs (Sass documentation) site: http://localhost:4200/
 
-### Bridging Kajabi Products
+#### Bridging Kajabi Products
 
 The Kajabi Products repository needs to be locally linked to your Sage repository in order to have live reloading of your changes during your development cycle. This process is natively handled by Sage:
 
@@ -114,16 +122,16 @@ $ heroku local
 $ bin/webpack-dev-server
 ```
 
-### Destroying the Kajabi Products Bridge
+#### Destroying the Kajabi Products Bridge
 
 From time to time you will need to destroy your Kajabi Products Bridge and utilize the production version of the packages on the branch. To destroy the bridge:
 
 ```bash
 $ yarn bridge:kajabi-products:destroy
 ```
-## Update Kajabi-Products To The Latest Sage Version
+### Update `kajabi-products` to the latest Sage version
 
-More to come...
+The Version Bump Process is documented in this [wiki article](https://github.com/Kajabi/sage-lib/wiki/Version-Bump-Process).
 
 ## Local Scripts
 
