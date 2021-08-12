@@ -1,3 +1,20 @@
+<h3 class="t-sage-heading-6">Usage</h3>
+<%= md("
+Upload Card lives in kajabi-products in `admin/shared/sage_iamge_upload_card.html.erb`. This is not a drop-in solution as it will require contextual knowledge of the domain and the `filepicker`. The following code snippets displays usage within the context of the Coaching Programs edit view, where `@program` is the designated resource.</p>
+") %>
+
+<pre class="prettyprint"><code>
+<%%= render "admin/shared/sage_image_upload_card",
+  object: @program,
+  field: :thumbnail,
+  policy: @program.thumbnail_policy,
+  convert_options: @program.thumbnail_convert_options,
+  extensions: "png,jpg,jpeg",
+  select_file_text: "Choose thumbnail",
+  replace_file_text: "Replace thumbnail"
+ %>
+</code></pre>
+
 <h3 class="t-sage-heading-6">Initial State</h3>
 <%= sage_component SageUploadCard, {
   selection_label: "Select a file",
