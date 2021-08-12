@@ -38,6 +38,14 @@ export const Choice = ({
     }
   );
 
+  const contentClassNames = classnames(
+    `${baseClass}__content`,
+    {
+      [`${baseClass}__content--custom`]: children,
+      [`${customContentClassName}`]: customContentClassName,
+    }
+  );
+
   const hasRadioConfigs = !!radioConfigs;
   const isLabel = hasRadioConfigs;
   const isLink = ('href' in rest);
@@ -73,7 +81,7 @@ export const Choice = ({
           <img src={graphic} alt="" />
         </span>
       )}
-      <div className={`sage-choice__content ${customContentClassName}`}>
+      <div className={contentClassNames}>
         {text && (
           <em className="sage-choice__text">
             {text}
