@@ -8,7 +8,7 @@ export const Choice = ({
   alignCenter,
   children,
   className,
-  customContentClass,
+  customContentClassName,
   disabled,
   graphic,
   icon,
@@ -75,7 +75,7 @@ export const Choice = ({
           <img src={graphic} alt="" />
         </span>
       )}
-      <div className={`sage-choice__content ${customContentClass}`}>
+      <div className={`sage-choice__content ${customContentClassName}`}>
         {text && (
           <em className="sage-choice__text">
             {text}
@@ -104,7 +104,7 @@ Choice.defaultProps = {
   alignCenter: false,
   children: null,
   className: '',
-  customContentClass: '',
+  customContentClassName: '',
   disabled: false,
   graphic: null,
   icon: null,
@@ -125,7 +125,7 @@ Choice.propTypes = {
   alignCenter: PropTypes.bool,
   children: PropTypes.node,
   className: PropTypes.string,
-  customContentClass: PropTypes.string,
+  customContentClassName: PropTypes.string,
   disabled: PropTypes.bool,
   graphic: PropTypes.string,
   icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),
