@@ -1,0 +1,29 @@
+
+<div class="
+  sage-dynamic-select
+  <%= "sage-select--error" if component.has_error %>
+  <%= component.generated_css_classes %>">
+  <% if component.theme == 'sage' %>
+    <label class="sage-select__label" for="<%= component.id %>"><%= component.label || component.id %></label>
+  <% end %>
+  <select
+      class="sage-dynamic-select__data"
+      <%= component.generated_html_attributes.html_safe %>
+      name="<%= component.name %>"
+      id="<%= component.id %>"
+      tabindex="-1"
+      aria-hidden="true"
+      data-js-dynamic-select="true"
+      data-url=<%= component.url %>
+      data-default-value="<%= component.default_value if component.default_value.present? %>"
+      data-default-text="<%= component.default_text if component.default_text.present? %>"
+      data-paginate="<%= component.paginate if component.paginate.present? %>"
+      data-search="<%= component.search if component.search.present? %>"
+      data-clear="<%= component.clear if component.clear.present? %>"
+      data-placeholder="<%= component.placeholder || component.label || component.id %>"
+      data-theme="<%= component.theme if component.theme.present? %>"
+      <%= 'required' if component.required.present? %>
+      >
+  </select>
+  <div class="sage-select__message"><%= component.message %></div>
+</div>
