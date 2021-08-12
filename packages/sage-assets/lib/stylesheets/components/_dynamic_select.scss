@@ -34,19 +34,20 @@ $-dynamic-select-open-arrow: rotate(180deg) scaleX(-1);
       height: $-dynamic-select-default-height;
       padding: $-dynamic-select-default-padding;
 
-      & .select2-selection__placeholder {
-        color: $-dynamic-select-placeholder-color;
-      }
-      & .select2-selection__clear {
-        float: right;
-      }
-      & .select2-selection__arrow b {
-        display: none;
-      }
+    }
+
+    .select2-selection--single.sage-select__field .select2-selection__placeholder {
+      color: $-dynamic-select-placeholder-color;
+    }
+    .select2-selection--single.sage-select__field .select2-selection__clear {
+      float: right;
+    }
+    .select2-selection--single.sage-select__field .select2-selection__arrow b {
+      display: none;
     }
 
     // open state //
-    &.select2-container--open .select2-selection--single.sage-select__field  {
+    &.select2-container--open .select2-selection--single.sage-select__field {
       border-color: $-dynamic-select-color-success;
       box-shadow: $-dynamic-select-border-box-shadow-size $-dynamic-select-color-success;
     }
@@ -55,7 +56,8 @@ $-dynamic-select-open-arrow: rotate(180deg) scaleX(-1);
       transform: $-dynamic-select-open-arrow;
     }
 
-    &.select2-container--open  .sage-select__arrow::before, &:hover .sage-select__arrow::before {
+    &.select2-container--open  .sage-select__arrow::before,
+    &:hover .sage-select__arrow::before {
       color: $-dynamic-select-color-success;
     }
 
@@ -72,22 +74,22 @@ $-dynamic-select-open-arrow: rotate(180deg) scaleX(-1);
     top: rem(6);
   }
   .select2-selection--single.sage-select__field {
-    border-color: $-dynamic-select-border-color;
     height: $-dynamic-select-selected-height;
     padding: $-dynamic-select-selected-padding;
+    border-color: $-dynamic-select-border-color;
     .select2-selection__rendered {
       @extend %t-sage-body-small-semi;
-      color: $-dynamic-select-selected-tag-color;
-      background-color: $-dynamic-select-selected-tag-background-color;
-      height: $-dynamic-select-selected-tag-height;
       display: inline-flex;
       flex-direction: row-reverse;
       align-items: center;
+      height: $-dynamic-select-selected-tag-height;
       padding: $-dynamic-select-selected-tag-padding;
+      color: $-dynamic-select-selected-tag-color;
+      background-color: $-dynamic-select-selected-tag-background-color;
       border-radius: $-dynamic-select-selected-tag-border-radius;
-      & .select2-selection__clear {
-        font-weight: $-dynamic-select-clear-font-weight;
-      }
+    }
+    .select2-selection__rendered .select2-selection__clear {
+      font-weight: $-dynamic-select-clear-font-weight;
     }
   }
 }
