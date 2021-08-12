@@ -20,7 +20,7 @@ $-expandable-card-padding-xs: sage-spacing(xs);
   padding: 0;
   
   [aria-expanded="true"] + & {
-    overflow: auto;
+    overflow: initial;
     height: auto;
     margin-top: sage-spacing(xs);
   }
