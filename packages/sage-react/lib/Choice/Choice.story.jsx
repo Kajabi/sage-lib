@@ -15,7 +15,6 @@ export default {
   },
   args: {
     icon: SageTokens.ICONS.VIDEO_ON,
-    radioConfigs: { name: 'alpha', id: 'bravo', value: 'charlie' },
     subtext: 'Description of Option 1',
     text: 'Option 1',
     verticalAlignIcon: Choice.ICON_ALIGNMENTS.DEFAULT,

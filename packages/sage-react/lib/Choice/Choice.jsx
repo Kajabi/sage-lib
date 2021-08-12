@@ -38,7 +38,7 @@ export const Choice = ({
     }
   );
 
-  const hasRadioConfigs = (radioConfigs.name && radioConfigs.id && radioConfigs.value);
+  const hasRadioConfigs = !!radioConfigs;
   const isLabel = hasRadioConfigs;
   const isLink = ('href' in rest);
   const isButton = !isLink && !isLabel;
@@ -52,7 +52,7 @@ export const Choice = ({
     className: classNames,
     'data-js-tabs-target': target,
     disabled,
-    htmlFor: radioConfigs.id,
+    ...(hasRadioConfigs && { htmlFor: radioConfigs.id }),
     ...(isButton && { type: 'button' }),
     ...rest,
   };
@@ -62,11 +62,9 @@ export const Choice = ({
       {hasRadioConfigs && (
         <div className="sage-choice__radio visually-hidden">
           <input
-            type="radio"
-            name={radioConfigs.name}
-            id={radioConfigs.id}
-            value={radioConfigs.value}
+            {...radioConfigs}
             checked={isActive}
+            type="radio"
           />
         </div>
       )}
@@ -110,11 +108,7 @@ Choice.defaultProps = {
   icon: null,
   isActive: false,
   linkText: null,
-  radioConfigs: {
-    name: null,
-    id: null,
-    value: null,
-  },
+  radioConfigs: null,
   subtext: null,
   target: null,
   type: null,
@@ -132,9 +126,10 @@ Choice.propTypes = {
   isActive: PropTypes.bool,
   linkText: PropTypes.string,
   radioConfigs: PropTypes.shape({
-    name: PropTypes.string,
-    id: PropTypes.string,
-    value: PropTypes.string,
+    name: PropTypes.string.isRequired,
+    id: PropTypes.string.isRequired,
+    onChange: PropTypes.func.isRequired,
+    value: PropTypes.string.isRequired,
   }),
   subtext: PropTypes.string,
   target: PropTypes.string,
