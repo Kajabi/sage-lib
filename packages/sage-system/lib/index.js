@@ -24,5 +24,6 @@ require('./hero')
 require('./panel-controls')
 require('./popover')
 require('./search')
+require('./dynamicSelect')
 
 require('./init')
