@@ -1,0 +1,93 @@
+$-dynamic-select-default-height: rem(44);
+$-dynamic-select-default-padding: rem(4.4) sage-spacing(sm) 0;
+$-dynamic-select-border-color: sage-color(gray, 400);
+$-dynamic-select-placeholder-color: sage-color(gray, 400);
+$-dynamic-select-color-success: map-get($sage-field-colors, success);
+$-dynamic-select-border-box-shadow-size: map-get($sage-field-configs, box-shadow-size);
+$-dynamic-select-selected-height: rem(52);
+$-dynamic-select-selected-padding: rem(10.8) sage-spacing(sm) 0;
+$-dynamic-select-selected-tag-color: sage-color(primary, 400);
+$-dynamic-select-selected-tag-background-color: sage-color(primary, 100);
+$-dynamic-select-selected-tag-border-radius: sage-border(radius-x-large);
+$-dynamic-select-selected-tag-padding: 0 sage-spacing(xs);
+$-dynamic-select-selected-tag-height: rem(30);
+$-dynamic-select-clear-font-weight: sage-font-weight(regular);
+$-dynamic-select-open-arrow: rotate(180deg) scaleX(-1);
+
+// empty state //
+.sage-dynamic-select {
+  position: relative;
+  &__data {
+    bottom: sage-spacing(xs);
+    left: 50%;
+  }
+  .select2-container--sage {
+    .sage-select__arrow::before {
+      top: rem(3);
+    }
+
+    .select2-dropdown--below {
+      margin-top: sage-spacing(xs);
+    }
+
+    .select2-selection--single.sage-select__field {
+      height: $-dynamic-select-default-height;
+      padding: $-dynamic-select-default-padding;
+
+      & .select2-selection__placeholder {
+        color: $-dynamic-select-placeholder-color;
+      }
+      & .select2-selection__clear {
+        float: right;
+      }
+      & .select2-selection__arrow b {
+        display: none;
+      }
+    }
+
+    // open state //
+    &.select2-container--open .select2-selection--single.sage-select__field  {
+      border-color: $-dynamic-select-color-success;
+      box-shadow: $-dynamic-select-border-box-shadow-size $-dynamic-select-color-success;
+    }
+
+    &.select2-container--open  .sage-select__arrow::before {
+      transform: $-dynamic-select-open-arrow;
+    }
+
+    &.select2-container--open  .sage-select__arrow::before, &:hover .sage-select__arrow::before {
+      color: $-dynamic-select-color-success;
+    }
+
+    // focused state //
+    &.select2-container--focus .select2-selection--single.sage-select__field {
+      border-color: $-dynamic-select-border-color;
+    }
+  }
+}
+
+// selected state //
+.sage-dynamic-select.sage-select--value-selected .select2-container--sage {
+  .sage-select__arrow::before {
+    top: rem(6);
+  }
+  .select2-selection--single.sage-select__field {
+    border-color: $-dynamic-select-border-color;
+    height: $-dynamic-select-selected-height;
+    padding: $-dynamic-select-selected-padding;
+    .select2-selection__rendered {
+      @extend %t-sage-body-small-semi;
+      color: $-dynamic-select-selected-tag-color;
+      background-color: $-dynamic-select-selected-tag-background-color;
+      height: $-dynamic-select-selected-tag-height;
+      display: inline-flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      padding: $-dynamic-select-selected-tag-padding;
+      border-radius: $-dynamic-select-selected-tag-border-radius;
+      & .select2-selection__clear {
+        font-weight: $-dynamic-select-clear-font-weight;
+      }
+    }
+  }
+}
