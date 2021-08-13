@@ -48,8 +48,10 @@ $sage-line-heights: (
 ///
 /// Sage line height token utility
 ///
-/// @param {string} $key [body] The token to retrieve
-/// @param {bool} $responsive [true] Whether or not retrieve a responsive css custom property or a flat value
+/// @param {string} $key [body] The token to retrieve.
+///    By default, this should be a type spec token.
+///    If the next parameter is `false` then this should be a line height token.
+/// @param {bool} $responsive [true] Whether or not retrieve a responsive css custom property (based on type specs) or a flat value (based on line-height tokens).
 ///
 /// @return {length} The value retrieved
 ///
