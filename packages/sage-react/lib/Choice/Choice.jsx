@@ -119,6 +119,7 @@ Choice.defaultProps = {
   radioConfigs: null,
   subtext: null,
   target: null,
+  text: null,
   type: null,
   verticalAlignIcon: ICON_ALIGNMENTS.DEFAULT,
 };
@@ -141,7 +142,7 @@ Choice.propTypes = {
   }),
   subtext: PropTypes.string,
   target: PropTypes.string,
-  text: PropTypes.string.isRequired,
+  text: PropTypes.string,
   type: PropTypes.oneOf(Object.values(Choice.TYPES)),
   verticalAlignIcon: PropTypes.oneOf(Object.values(Choice.ICON_ALIGNMENTS))
 };
