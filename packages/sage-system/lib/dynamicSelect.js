@@ -104,11 +104,7 @@ Sage.dynamicSelect = (function() {
     updateInput();
   }
 
-  function unbind() {
-  }
-
   return {
     init,
-    unbind,
   }
 })();
