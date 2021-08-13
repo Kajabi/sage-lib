@@ -53,6 +53,26 @@ $sage-line-heights: (
 ///    If the next parameter is `false` then this should be a line height token.
 /// @param {bool} $responsive [true] Whether or not retrieve a responsive css custom property (based on type specs) or a flat value (based on line-height tokens).
 ///
+/// @example scss - Responsive setting
+///   .sage-box {
+///     line-height: sage-line-height(body-sm);
+///   }
+///
+///   // Output
+///   .sage-box {
+///     line-height: var(--sage-line-height-body-sm);
+///   }
+///
+/// @example scss - Flat setting
+///   .sage-box {
+///     @include sage-line-height(md, false);
+///   }
+///
+///   // Output
+///   .sage-box {
+///     line-height: 1.75rem;
+///   }
+///
 /// @return {length} The value retrieved
 ///
 @function sage-line-height($key: body, $responsive: true) {
