@@ -152,7 +152,7 @@ $-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
 [class*="sage-choice--icon-"] {
   &::#{$-choice-el-icon} {
     /* See icon generator */
-    margin: 0 sage-spacing(xs) 0 0;
+    margin: 0 sage-spacing(sm) 0 0;
     color: currentColor;
     transition: color map-get($sage-transitions, default);
   }
