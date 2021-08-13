@@ -15,13 +15,25 @@
       aria-hidden="true"
       data-js-dynamic-select="true"
       data-url=<%= component.url %>
-      data-default-value="<%= component.default_value if component.default_value.present? %>"
-      data-default-text="<%= component.default_text if component.default_text.present? %>"
-      data-paginate="<%= component.paginate if component.paginate.present? %>"
-      data-search="<%= component.search if component.search.present? %>"
-      data-clear="<%= component.clear if component.clear.present? %>"
       data-placeholder="<%= component.placeholder || component.label || component.id %>"
-      data-theme="<%= component.theme if component.theme.present? %>"
+      <% if component.default_value.present? %>
+        data-default-value="<%= component.default_value %>"
+      <% end %>
+      <% if component.default_value.present? %>
+        data-default-text="<%= component.default_text %>"
+      <% end %>
+      <% if component.paginate.present? %>
+        data-paginate="<%= component.paginate %>"
+      <% end %>
+      <% if component.search.present? %>
+        data-search="<%= component.search %>"
+      <% end %>
+      <% if component.clear.present? %>
+        data-clear="<%= component.clear %>"
+      <% end %>
+      <% if component.theme.present? %>
+        data-theme="<%= component.theme %>"
+      <% end %>
       <%= 'required' if component.required.present? %>
       >
   </select>
