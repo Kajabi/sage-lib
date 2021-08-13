@@ -233,8 +233,10 @@ demo_configs = [
     value: "Button group: Allow wrap",
   } %>
 <% end %>
-<p>When enabled, button groups are no longer restricted to a single row, allowing contents to wrap to multiple lines. <strong>Note: all button groups regardless of this attribute will wrap at breakpoints below `sm-min` to prevent horizontal scrolling on small screen devices.</strong></p>
-<p>Click the button below to toggle button group wrapping throughout the page, and resize your browser to view the resulting change.</p>
+<%= md("
+  When enabled, button groups are no longer restricted to a single row, allowing contents to wrap to multiple lines. **Note: all button groups regardless of this attribute will wrap at breakpoints below `sm-min` to prevent horizontal scrolling on small screen devices.**
+  Click the button below to toggle button group wrapping throughout the page, and resize your browser to view the resulting change.
+", use_sage_type: true) %>
 <div>
   <%= sage_component SageButton, {
     value: "Toggle button group wrap",
@@ -255,9 +257,9 @@ demo_configs = [
     value: "Loading State",
   } %>
 <% end %>
-<p>
-  Displays a loading indicator in the button, such as when a button is used to submit a form. Including the <code>spinner_on_submit</code> property will activate the loading state, and place the corresponding text as the <code>aria-label</code>.
-</p>
+<%= md("
+  Displays a loading indicator in the button, such as when a button is used to submit a form. Including the `spinner_on_submit` property will activate the loading state, and place the corresponding text as the `aria-label`.
+", use_sage_type: true) %>
 <div>
   <%= sage_component SageButton, {
     value: "Click me",
@@ -277,11 +279,11 @@ demo_configs = [
     value: "Shadow Treatment",
   } %>
 <% end %>
-<p>
-  Regular buttons allow for a "raised" shadow treatment to be toggled on or off.
-  This is on by default for "Primary" button styles and can be toggled off with "no_shadow".
-  For the other styles it is off by default but can be toggled on with "raised".
-</p>
+<%= md("
+  Regular buttons allow for a `raised` shadow treatment to be toggled on or off.
+  This is on by default for 'Primary' button styles and can be toggled off with `no_shadow`.
+  For the other styles it is off by default but can be toggled on with `raised`.
+", use_sage_type: true) %>
 <%= sage_component SageButtonGroup, { gap: :md, spacer: { bottom: :md } } do %>
   <%= sage_component SageButton, {
     value: "Raised (default)",
