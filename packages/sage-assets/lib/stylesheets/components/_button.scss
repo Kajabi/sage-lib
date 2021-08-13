@@ -301,21 +301,6 @@ $-btn-loading-min-height: rem(36px);
     }
   }
 
-  // NOTE: Hope to use `gap` in the future instead
-  // but Safari does not currently support it for flexbox
-  @each $-key, $-value in $sage-spacings {
-    @if ($-key == xs) {
-      .sage-btn-group &:not(:last-child) {
-        margin-right: sage-spacing($-key);
-      }
-    }
-    @else if ($-key == sm or $-key == md or $-key == lg) {
-      .sage-btn-group--gap-#{$-key} &:not(:last-child) {
-        margin-right: sage-spacing($-key);
-      }
-    }
-  }
-
   // NOTE: Icon generation consolidated in `core/_icons.scss`
 }
 
@@ -486,6 +471,23 @@ $-btn-loading-min-height: rem(36px);
 .sage-btn-group {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+
+  @media screen and (min-width: sage-breakpoint(sm-min)) {
+    flex-wrap: nowrap;
+  }
+}
+
+@each $-key, $-value in $sage-spacings {
+  .sage-btn-group--gap-#{$-key} {
+    gap: sage-spacing($-key);
+  }
+}
+
+.sage-btn-group--wrap {
+  @media screen and (min-width: sage-breakpoint(sm-min)) {
+    flex-wrap: wrap;
+  }
 }
 
 .sage-btn-group--align-end {
