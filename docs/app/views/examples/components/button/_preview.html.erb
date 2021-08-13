@@ -237,8 +237,12 @@ demo_configs = [
 <p>Click the button below to toggle button group wrapping throughout the page, and resize your browser to view the resulting change.</p>
 <div>
   <%= sage_component SageButton, {
-    value: "Toggle button group wrapping",
+    value: "Toggle button group wrap",
     style: "primary",
+    icon: {
+      style: "right",
+      name: "menu-bordered"
+    },
     attributes: {
       id: "button-group-wrap-example"
     }
