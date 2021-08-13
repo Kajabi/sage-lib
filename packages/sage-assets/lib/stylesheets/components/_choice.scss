@@ -110,20 +110,6 @@ $-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
   .sage-tabs--align-items-center & {
     justify-content: center;
   }
-
-  // NOTE: This can be simplified once Safari supports flexbox gap
-  @each $-key, $-value in $sage-spacings {
-    @if ($-key == xs) {
-      .sage-btn-group &:not(:last-child) {
-        margin-right: sage-spacing($-key);
-      }
-    }
-    @else if ($-key == sm or $-key == md or $-key == lg) {
-      .sage-btn-group--gap-#{$-key} &:not(:last-child) {
-        margin-right: sage-spacing($-key);
-      }
-    }
-  }
 }
 
 .sage-choice--align-center {
