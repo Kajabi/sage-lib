@@ -95,8 +95,7 @@ Sage.dynamicSelect = (function() {
       const selectLabel = $($container).parent().find('.sage-select__label');
 
       Sage.util.isEmptyString(selectedValue) ? selectWrapper.removeClass(classActive) : selectWrapper.addClass(classActive)
-      Sage.util.isEmptyString(selectedValue) ? selectLabel.hide() : selectLabel.fadeIn(200);
-      $(this.data).focusout();
+      Sage.util.isEmptyString(selectedValue) ? selectLabel.hide() : selectLabel.fadeIn(500);
     }.bind(this);
 
     // input change event listener
