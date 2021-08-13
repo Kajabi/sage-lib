@@ -4,6 +4,7 @@ require('./live-option-menu')
 require('./example')
 require('./meter')
 require('./inputhelper')
+require('./button-group')
 require('./example')
 require('./scroll-to-active-nav-item')
 
@@ -17,6 +18,10 @@ if (document.querySelector('.sage-docs') !== null) {
 
   if (document.getElementById('pw-meter-example') !== null) {
     Sage.docs.meter.init();
+  }
+
+  if (document.getElementById('button-group-wrap-example') !== null) {
+    Sage.docs.buttonGroup.init();
   }
 
   if (document.querySelector('.example__code') !== null && document.querySelector('.example__expand-btn') !== null) {
