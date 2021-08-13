@@ -164,7 +164,7 @@ $-btn-loading-min-height: rem(36px);
   }
 
   .sage-dropdown__trigger > & {
-    line-height: sage-line-height(md);
+    line-height: sage-line-height(body);
   }
 
   .sage-dropdown__trigger--select & {
