@@ -5,7 +5,14 @@
       <%= sage_component SageGridCol, { breakpoint: "md", size: "4", spacer: { bottom: :lg } } do %>
         <%= sage_component SagePanel, {} do %>
           <%= sage_component SagePanelStack, {} do %>
-            <i class="docs-section__icon sage-icon-form-3xl t-sage--color-sage"></i>
+            <%= sage_component SageIcon, {
+              icon: "form",
+              size: "3xl",
+              color: "sage",
+              spacer: {
+                "bottom": "md"
+              }
+            } %>
             <h3 class="t-sage-heading-3">Foundations</h3>
             <p class="t-sage-body">Principles that reflect our design philosophy and inspire our team to shape great experiences for Knowledge Commerce businesses of any scale.</p>
             <%= sage_component SageButton, {
@@ -27,7 +34,14 @@
       <%= sage_component SageGridCol, { breakpoint: "md", size: "4", spacer: { bottom: :lg } } do %>
         <%= sage_component SagePanel, {} do %>
           <%= sage_component SagePanelStack, {} do %>
-            <i class="docs-section__icon sage-icon-pen-3xl t-sage--color-sage"></i>
+            <%= sage_component SageIcon, {
+              icon: "pen",
+              size: "3xl",
+              color: "sage",
+              spacer: {
+                "bottom": "md"
+              }
+            } %>
             <h3 class="t-sage-heading-3">Content</h3>
             <p class="t-sage-body">Our content standards will help you understand how to think strategically about the language in your products and apps.</p>
             <%= sage_component SageButton, {
@@ -49,7 +63,14 @@
       <%= sage_component SageGridCol, { breakpoint: "md", size: "4", spacer: { bottom: :lg } } do %>
         <%= sage_component SagePanel, {} do %>
           <%= sage_component SagePanelStack, {} do %>
-            <i class="docs-section__icon sage-icon-customize-3xl t-sage--color-sage"></i>
+            <%= sage_component SageIcon, {
+              icon: "customize",
+              size: "3xl",
+              color: "sage",
+              spacer: {
+                "bottom": "md"
+              }
+            } %>
             <h3 class="t-sage-heading-3">Design</h3>
             <p class="t-sage-body">
               Our system starts with some core visual elements: Type, Color, and Icons.
@@ -74,7 +95,14 @@
       <%= sage_component SageGridCol, { breakpoint: "md", size: "4", spacer: { bottom: :lg }} do %>
         <%= sage_component SagePanel, {} do %>
           <%= sage_component SagePanelStack, {} do %>
-            <i class="docs-section__icon sage-icon-stack-3xl t-sage--color-sage"></i>
+            <%= sage_component SageIcon, {
+              icon: "stack",
+              size: "3xl",
+              color: "sage",
+              spacer: {
+                "bottom": "md"
+              }
+            } %>
             <h3 class="t-sage-heading-3">Layout</h3>
             <p class="t-sage-body">Patterns that allow us to position our content in various formats and locations without needing to change the content.</p>
             <%= sage_component SageButton, {
@@ -96,7 +124,14 @@
       <%= sage_component SageGridCol, { breakpoint: "md", size: "4", spacer: { bottom: :lg } } do %>
         <%= sage_component SagePanel, {} do %>
           <%= sage_component SagePanelStack, {} do %>
-            <i class="docs-section__icon sage-icon-product-3xl t-sage--color-sage"></i>
+            <%= sage_component SageIcon, {
+              icon: "product",
+              size: "3xl",
+              color: "sage",
+              spacer: {
+                "bottom": "md"
+              }
+            } %>
             <h3 class="t-sage-heading-3">Components</h3>
             <p class="t-sage-body">Find a full reference for our library or Rails UI components. Links to corresponding React components are provided as well.</p>
             <%= sage_component SageButton, {
