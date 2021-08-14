@@ -1,4 +1,10 @@
+<% footerContainer ||= false %>
+
 <div class="docs-footer">
+  <% if footerContainer %>
+    <div class="sage-container sage-container--xl">
+  <% end %>
+
   <%= sage_component SageButtonGroup, { gap: :md } do %>
     <%= sage_component SageButton, {
       value: "Version #{$SAGE_VERSION_GEM}",
@@ -33,5 +39,9 @@
       subtle: true,
       style: "secondary",
     } %>
+  <% end %>
+
+  <% if footerContainer %>
+    </div>
   <% end %>
 </div>
