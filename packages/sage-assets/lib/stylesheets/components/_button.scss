@@ -322,7 +322,7 @@ $-btn-loading-min-height: rem(36px);
 .sage-btn--is-loading {
   pointer-events: none;
 
-  &.sage-btn--icon-only-check::before {
+  &[class*="sage-btn--icon"]::before {
     content: "";
   }
 
