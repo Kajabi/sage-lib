@@ -48,6 +48,10 @@ $-alert-icon-colors: (
       text-decoration: underline;
     }
 
+    .sage-alert__icon::before {
+      line-height: sage-line-height(medium);
+    }
+
     .sage-alert__actions a:not([class]) {
       margin-right: sage-spacing(md);
     }
@@ -87,7 +91,7 @@ $-alert-icon-colors: (
 
 .sage-alert__close {
   align-self: flex-start;
-  height: rem(40px);
+  height: rem(20px);
   width: rem(20px);
   padding: 0;
   font-size: sage-font-size(xl, false);
