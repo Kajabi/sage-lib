@@ -129,7 +129,13 @@
       url_update: "update/endpoint",
     } do %>
       <div>
-        <%= sage_component SageLink, { label: "Field 1", truncate: true, url: "#" } %>
+        <%= sage_component SageCheckbox, {
+          id: "c2",
+          label_text: "Checked",
+          checked: true,
+          disabled: false,
+          has_error: false
+        } %>
       </div>
       <%= sage_component SageDropdown, {
         align: "right",
