@@ -3,7 +3,7 @@
   sage-dynamic-select
   <%= "sage-select--error" if component.has_error %>
   <%= component.generated_css_classes %>">
-  <% if component.theme == 'sage' %>
+  <% unless component.theme.present? && component.theme != 'sage' %>
     <label class="sage-select__label" for="<%= component.id %>"><%= component.label || component.id %></label>
   <% end %>
   <select
@@ -33,6 +33,8 @@
       <% end %>
       <% if component.theme.present? %>
         data-theme="<%= component.theme %>"
+      <% else %>
+        data-theme="sage" %>
       <% end %>
       <%= 'required' if component.required.present? %>
       >
