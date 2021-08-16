@@ -323,7 +323,7 @@ $-btn-loading-min-height: rem(36px);
   pointer-events: none;
 
   &.sage-btn--icon-only-check::before {
-    content: '';
+    content: "";
   }
 
   svg {
