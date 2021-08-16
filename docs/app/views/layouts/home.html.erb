@@ -10,9 +10,7 @@
       link_id: "main-content"
     -%>
     <%= yield %>
-    <%= sage_component SageContainer, { size: "xl" } do %>
-      <%= render "application/footer" %>
-    <% end %>
+    <%= render "application/footer", footerContainer: true %>
     <%= render "scripts" %>
   </body>
 </html>
