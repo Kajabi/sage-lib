@@ -320,8 +320,11 @@ $-btn-loading-min-height: rem(36px);
 }
 
 .sage-btn--is-loading {
-  min-height: $-btn-loading-min-height;
   pointer-events: none;
+
+  &[class*="sage-btn--icon"]::before {
+    content: "";
+  }
 
   svg {
     position: absolute;
