@@ -122,14 +122,20 @@
 
 <h3 class="t-sage-heading-6"><code>SageSortableItemCustom</code> using a custom <code>grid template : "te"</code></h3>
 <%= sage_component SageSortable, { resource_name: "link" } do %>
-  <% 3.times do %>
+  <% 3.times do |i| %>
     <%= sage_component SageSortableItemCustom, {
       grid_template: "te",
       id: "id",
       url_update: "update/endpoint",
     } do %>
       <div>
-        <%= sage_component SageLink, { label: "Field 1", truncate: true, url: "#" } %>
+        <%= sage_component SageCheckbox, {
+          id: "c#{i + 1}",
+          label_text: "Checked",
+          checked: true,
+          disabled: false,
+          has_error: false
+        } %>
       </div>
       <%= sage_component SageDropdown, {
         align: "right",
