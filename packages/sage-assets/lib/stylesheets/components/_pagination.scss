@@ -45,6 +45,7 @@ $-pagination-bg-color-dark: sage-color(grey, 300);
   display: flex;
   flex-flow: row wrap;
   padding-left: 0;
+  margin-top: rem(-8px);
   list-style-type: none;
   border-radius: $-pagination-radius;
 
@@ -57,6 +58,11 @@ $-pagination-bg-color-dark: sage-color(grey, 300);
   display: flex;
   align-items: center;
   margin-right: sage-spacing(xs);
+  margin-top: sage-spacing(xs);
+
+  @media screen and (min-width: sage-breakpoint(lg-max)) {
+    margin-top: 0;
+  }
 
   &:last-of-type {
     border: 0;
