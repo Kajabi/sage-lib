@@ -44,10 +44,14 @@ $-pagination-bg-color-dark: sage-color(grey, 300);
 .sage-pagination__pages {
   display: flex;
   flex-flow: row wrap;
+  gap: sage-spacing(xs);
   padding-left: 0;
-  margin-top: rem(-8px);
   list-style-type: none;
   border-radius: $-pagination-radius;
+
+  @media screen and (min-width: sage-breakpoint(lg-max)) {
+    gap: 0 sage-spacing(xs);
+  }
 
   .sage-panel-controls & {
     margin-left: auto;
@@ -57,13 +61,6 @@ $-pagination-bg-color-dark: sage-color(grey, 300);
 .sage-pagination__item {
   display: flex;
   align-items: center;
-  margin-right: sage-spacing(xs);
-  margin-top: sage-spacing(xs);
-
-  @media screen and (min-width: sage-breakpoint(lg-max)) {
-    margin-top: 0;
-  }
-
   &:last-of-type {
     border: 0;
   }
