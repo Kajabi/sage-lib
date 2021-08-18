@@ -50,6 +50,12 @@ $-input-transition: border 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
   }
 }
 
+.sage-input--error {
+  .sage-upload-card & {
+    margin-top: sage-spacing(sm);
+  }
+}
+
 .sage-input__affix {
   position: absolute;
   top: sage-spacing(xs);
