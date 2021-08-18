@@ -27,6 +27,16 @@
       "data-js-tooltip-position": "right",
     },
   } %>
+  <%= sage_component SageLink, {
+    url: "#",
+    external: false,
+    help_link: false,
+    show_label: true,
+  } do %>
+    <span class="custom-content">
+      Internal link with <strong>custom content</strong>
+    </span>
+  <% end %>
 <% end %>
 
 <h3 class="t-sage-heading-6">External links</h3>
