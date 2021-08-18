@@ -1,10 +1,10 @@
 <%
+css_classes = ["sage-link", component.generated_css_classes]
 html_attributes = {}
   .merge(component.attributes || {})
   .merge(component.html_attributes || {})
-css_classes = ["sage-link", component.generated_css_classes]
-
 label = component.content
+
 if component.label.present?
   label = if component.truncate.present?
     tag.span component.label, class: "t-sage--truncate"
