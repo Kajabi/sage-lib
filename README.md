@@ -139,7 +139,7 @@ The following scripts can be ran by typing `yarn <script_name>` in the root of t
 
 ### `bootstrap`
 
-Proxy for the Lerna [bootstrap](https://github.com/lerna/lerna/tree/master/commands/bootstrap) command. This will install all dependencies and link any cross-dependencies of the monorepo.
+Proxy for the Lerna [bootstrap](https://github.com/lerna/lerna/tree/main/commands/bootstrap) command. This will install all dependencies and link any cross-dependencies of the monorepo.
 
 ### `bridge:kajabi-products` :star:
 
