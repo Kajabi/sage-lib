@@ -14,8 +14,8 @@ A Git Hook is provided to enforce this behavior on `commit-msg`
 
 To contribute to Sage development you must be an authorized contributor, typically as an employee of Kajabi. Otherwise:
 
-* Create a branch off of master on which to add your changes. Push the branch and open a PR.
-* Once approval has been given merge the PR into master. Ensure your commit history accurately represents the changes made to the invidivual packages.
+* Create a branch off of `develop` on which to add your changes. Push the branch and open a PR.
+* Once approval has been given, merge the PR into `develop`. Ensure your commit history accurately represents the changes made to the invidivual packages.
 * *Do not* Squash and Merge your history into one commit. Automated Changelogs are generated based on the commit messages you supply to individual package directories. If you squash the changes the changelog will no longer reflect accurate adjustments to the system.
 
 ## Code of Conduct

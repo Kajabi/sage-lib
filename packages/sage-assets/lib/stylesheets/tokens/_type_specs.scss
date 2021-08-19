@@ -26,7 +26,7 @@ $-t-body-xsmall-spec: (
 );
 
 ///
-/// Master map of type specs. This is used to generate both `%t-` classes for each entry.
+/// Main map of type specs. This is used to generate both `%t-` classes for each entry.
 /// These are used to create base classes as well as to apply type specs in
 /// context with `@extend %t-` etc.
 ///
