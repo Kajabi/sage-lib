@@ -39,6 +39,15 @@
       subtle: true,
       style: "secondary",
     } %>
+    <%= sage_component SageButton, {
+      value: "Component Status",
+      attributes: {
+        href: pages_status_path,
+        title: "Current status of each system component"
+      },
+      subtle: true,
+      style: "secondary",
+    } %>
   <% end %>
 
   <% if footerContainer %>

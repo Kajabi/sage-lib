@@ -18,8 +18,8 @@
   }
 
   &__icon {
-    display: inline-block;
-    flex: 0 0 $status-key-icon-size;
+    display: block;
+    margin: 0 auto;
     width: $status-key-icon-size;
     height: $status-key-icon-size;
     border: 2px solid sage-color(grey);
