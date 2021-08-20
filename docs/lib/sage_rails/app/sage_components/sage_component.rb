@@ -31,7 +31,16 @@ class SageComponent
     context.render(
       partial: "sage_components/#{template_path}",
       locals: { component: self }
-    ).tap { cleanup_section_vars }
+    ).tap do |html|
+      cleanup_section_vars
+
+      # We strip additional whitespace out of the partial's html
+      # to allow for cleaner rendering in the browser.
+      # In cases where <pre></pre> html tags exist in the returned html,
+      # we do not strip any of the whitespace in the partial.
+      # In the future we may want more specific string matching as <pre></pre> tag usage grows.
+      return html.squish.html_safe unless html.include?("</pre>")
+    end
   end
 
   # SageComponent Universal Spacer Attribute

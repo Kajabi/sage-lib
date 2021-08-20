@@ -213,10 +213,10 @@ demo_configs = [
 <%= sage_component SageCardBlock, {} do %>
   <%= sage_component SageLabel, {
     color: "draft",
-    value: "Button group: Align Space-Between with top border",
+    value: "Button group: Align End with top border",
   } %>
 <% end %>
-<%= sage_component SageButtonGroup, { gap: :md, align: "space-between", borderTop: true } do %>
+<%= sage_component SageButtonGroup, { gap: :md, align: "end", borderTop: true } do %>
   <%= sage_component SageButton, {
     value: "Cancel",
     style: "secondary",
@@ -230,12 +230,36 @@ demo_configs = [
 <%= sage_component SageCardBlock, {} do %>
   <%= sage_component SageLabel, {
     color: "draft",
+    value: "Button group: Allow wrap",
+  } %>
+<% end %>
+<%= md("
+  When enabled, button groups are no longer restricted to a single row, allowing contents to wrap to multiple lines. **Note: all button groups regardless of this attribute will wrap at breakpoints below `sm-min` to prevent horizontal scrolling on small screen devices.**
+  Click the button below to toggle button group wrapping throughout the page, and resize your browser to view the resulting change.
+", use_sage_type: true) %>
+<div>
+  <%= sage_component SageButton, {
+    value: "Toggle button group wrap",
+    style: "primary",
+    icon: {
+      style: "right",
+      name: "menu-bordered"
+    },
+    attributes: {
+      id: "button-group-wrap-example"
+    }
+  } %>
+</div>
+
+<%= sage_component SageCardBlock, {} do %>
+  <%= sage_component SageLabel, {
+    color: "draft",
     value: "Loading State",
   } %>
 <% end %>
-<p>
-  When a button is used to submit a form, there's the option to provide a loading state. Populating the <code>spinner_on_submit</code> property will active the loading and place the corresponding text as the <code>aria-label</code>.
-</p>
+<%= md("
+  Displays a loading indicator in the button, such as when a button is used to submit a form. Including the `spinner_on_submit` property will activate the loading state, and place the corresponding text as the `aria-label`.
+", use_sage_type: true) %>
 <div>
   <%= sage_component SageButton, {
     value: "Click me",
@@ -255,11 +279,11 @@ demo_configs = [
     value: "Shadow Treatment",
   } %>
 <% end %>
-<p>
-  Regular buttons allow for a "raised" shadow treatement to be toggled on or off.
-  This is on by default for "Primary" button styles and can be toggled off with "no_shadow".
-  For the other styles it is off by default but can be toggled on with "raised".
-</p>
+<%= md("
+  Regular buttons allow for a `raised` shadow treatment to be toggled on or off.
+  This is on by default for 'Primary' button styles and can be toggled off with `no_shadow`.
+  For the other styles it is off by default but can be toggled on with `raised`.
+", use_sage_type: true) %>
 <%= sage_component SageButtonGroup, { gap: :md, spacer: { bottom: :md } } do %>
   <%= sage_component SageButton, {
     value: "Raised (default)",
@@ -293,3 +317,4 @@ demo_configs = [
     raised: true,
   } %>
 <% end %>
+
