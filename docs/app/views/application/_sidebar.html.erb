@@ -86,6 +86,55 @@
       ]
     } %>
   <% end %>
+  <% if current_page_patterns? %>
+    <%= sage_component SageNav, {
+      items: [
+        { link: pages_patterns_path(:panels_cards), text: "PATTERNS", items: [
+          {
+            text: "Organization",
+            link: pages_patterns_path(:panels_cards),
+            active: current_page?(pages_patterns_path(:panels_cards)),
+          },
+          {
+            text: "12 Col Grid",
+            link: pages_patterns_path(:grid),
+            active: current_page?(pages_patterns_path(:grid)),
+          },
+          {
+            text: "Grid Templates",
+            link: pages_patterns_path(:grid_templates),
+            active: current_page?(pages_patterns_path(:grid_templates)),
+          }
+        ] }
+      ]
+    } %>
+  <% end %>
+  <% if current_page_interactions? %>
+    <%= sage_component SageNav, {
+      items: [
+        { link: pages_interactions_path(:container), text: "INTERACTIONS", items: [
+          {
+            text: "Containers",
+            link: pages_interactions_path(:container),
+            active: current_page?(pages_interactions_path(:container)),
+          }
+        ] }
+      ]
+    } %>
+  <% end %>
+  <% if current_page_helpers? %>
+    <%= sage_component SageNav, {
+      items: [
+        { link: pages_helpers_path(:spacing), text: "HELPERS", items: [
+          {
+            text: "Spacing",
+            link: pages_helpers_path(:spacing),
+            active: current_page?(pages_helpers_path(:spacing)),
+          }
+        ] }
+      ]
+    } %>
+  <% end %>
   <% if current_page_components? %>
     <%
       component_list = []

@@ -73,5 +73,45 @@
         name: "code"
       },
     } %>
+    <%= sage_component SageButton, {
+      value: "Patterns",
+      attributes: {
+        href: pages_patterns_path(:panels_cards),
+        title: "Common Patterns"
+      },
+      subtle: true,
+      icon: {
+        style: "left",
+        name: "window-paragraph"
+      },
+      style: "secondary",
+    } %>
+    <!-- COMING SOON 
+    <%= sage_component SageButton, {
+      value: "Interactions",
+      attributes: {
+        href: pages_interactions_path(:container),
+        title: "JS Interactions"
+      },
+      subtle: true,
+      icon: {
+        style: "left",
+        name: "select"
+      },
+      style: "secondary",
+    } %>-->
+    <%= sage_component SageButton, {
+      value: "Helpers",
+      attributes: {
+        href: pages_helpers_path(:spacing),
+        title: "Style Helpers"
+      },
+      subtle: true,
+      icon: {
+        style: "left",
+        name: "add"
+      },
+      style: "secondary",
+    } %>
   <% end %>
 </div>
