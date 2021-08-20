@@ -54,6 +54,10 @@ class PagesController < ApplicationController
     render(layout: 'full_page')
   end
 
+  def support
+    render(layout: 'full_page')
+  end
+
   def breakout
     @type = params[:type]
     @title = params[:title]

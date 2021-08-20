@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   get 'pages/component/:title', to: 'pages#component', as: 'pages_component'
   get 'pages/utilities'
   get 'pages/status'
+  get 'pages/support'
   get 'pages/sandbox'
 
 end
