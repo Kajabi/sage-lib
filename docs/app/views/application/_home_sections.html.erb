@@ -60,10 +60,17 @@
                 style: "primary",
               } %>
               <%= sage_component SageButton, {
+<<<<<<< HEAD
                 value: "Search Components",
                 attributes: {
                   href: pages_search_path,
                   title: "Search Components"
+=======
+                value: "Component Status Guide",
+                attributes: {
+                  href: pages_status_path,
+                  title: "Component Status Guide"
+>>>>>>> 380f057b (docs(sections): updating the index Sections)
                 },
                 subtle: true,
                 icon: {
@@ -73,6 +80,7 @@
                 style: "primary",
               } %>
             <% end %>
+<<<<<<< HEAD
           <% end %>
         <% end %>
       <% end %>
@@ -102,6 +110,8 @@
               },
               style: "primary",
             } %>
+=======
+>>>>>>> 380f057b (docs(sections): updating the index Sections)
           <% end %>
         <% end %>
       <% end %>
@@ -116,6 +126,51 @@
                 "bottom": "md"
               }
             } %>
+<<<<<<< HEAD
+            <h3 class="t-sage-heading-3">Interactions</h3>
+            <p class="t-sage-body">A guided list of common interactive experiences that the system supports to answer key presentational JS needs.</p>
+=======
+            <h3 class="t-sage-heading-3">Patterns</h3>
+            <p class="t-sage-body">Patterns that allow us to position our content in various formats and locations without needing to change the content.</p>
+>>>>>>> 380f057b (docs(sections): updating the index Sections)
+            <%= sage_component SageButton, {
+              value: "Coming Soon...",
+              attributes: {
+                href: "#",
+                title: "Coming Soon..."
+              },
+              subtle: true,
+              icon: {
+                style: "right",
+                name: "arrow-right"
+              },
+              style: "primary",
+            } %>
+          <% end %>
+        <% end %>
+      <% end %>
+      <%= sage_component SageGridCol, { breakpoint: "md", size: "4", spacer: { bottom: :lg }} do %>
+        <%= sage_component SagePanel, {} do %>
+          <%= sage_component SagePanelStack, {} do %>
+            <%= sage_component SageIcon, {
+<<<<<<< HEAD
+              icon: "code",
+=======
+              icon: "select",
+>>>>>>> 380f057b (docs(sections): updating the index Sections)
+              size: "3xl",
+              color: "sage",
+              spacer: {
+                "bottom": "md"
+              }
+            } %>
+<<<<<<< HEAD
+            <h3 class="t-sage-heading-3">Helpers</h3>
+            <p class="t-sage-body">Helpers that are designed to give the system the flexibility it requires for developers to use at scale.</p>
+            <%= sage_component SageButton, {
+              value: "Browse Helpers",
+              attributes: {
+=======
             <h3 class="t-sage-heading-3">Interactions</h3>
             <p class="t-sage-body">A guided list of common interactive experiences that the system supports to answer key presentational JS needs.</p>
             <%= sage_component SageButton, {
@@ -146,10 +201,11 @@
               }
             } %>
             <h3 class="t-sage-heading-3">Helpers</h3>
-            <p class="t-sage-body">Helpers that are designed to give the system the flexibility it requires for developers to use at scale.</p>
+            <p class="t-sage-body">Helpers that are designed to give the system the flexability it requires for developers to use it at scale.</p>
             <%= sage_component SageButton, {
               value: "Browse Helpers",
               attributes: {
+>>>>>>> 380f057b (docs(sections): updating the index Sections)
                 href: pages_helpers_path(:spacing),
                 title: "Browse Helpers"
               },
