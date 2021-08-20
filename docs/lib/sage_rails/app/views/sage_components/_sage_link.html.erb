@@ -1,5 +1,5 @@
 <%
-css_classes = ["sage-link", component.generated_css_classes]
+css_classes = ["sage-link"]
 html_attributes = {}
   .merge(component.attributes || {})
   .merge(component.html_attributes || {})
@@ -30,6 +30,9 @@ elsif component.external && !component.launch
   html_attributes[:target] = "_blank"
 end
 
-html_attributes[:class] = css_classes.join(" ").squish
+html_attributes[:class] = css_classes
+  .push(component.generated_css_classes)
+  .join(" ")
+  .squish
 %>
 <%= link_to label, component.url, html_attributes %>
