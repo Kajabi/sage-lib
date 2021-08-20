@@ -33,8 +33,7 @@
     help_link: false,
     show_label: true,
   } do %>
-    <% content = "Internal link with #{tag.strong "custom content"}".html_safe %>
-    <%= tag.span content, class: "custom-content" %>
+    <%= tag.span "Internal link with #{tag.strong "custom content"}".html_safe, class: "custom-content" %>
   <% end %>
 <% end %>
 

@@ -9,8 +9,9 @@ if component.label.present?
   label = if component.truncate.present?
     tag.span component.label, class: "t-sage--truncate"
   else
-    component.label.html_safe
+    component.label
   end
+  label.html_safe
 end
 
 if component.help_link && component.show_label
