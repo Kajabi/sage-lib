@@ -19,6 +19,7 @@ if component.help_link && component.show_label
 elsif component.help_link && !component.show_label
   css_classes.append("sage-link--help-icon-only")
   label = tag.span label, class: "visually-hidden"
+elsif !component.external && !component.launch
 elsif !component.external && component.launch
   css_classes.append("sage-link--launch")
 elsif component.external && component.launch
