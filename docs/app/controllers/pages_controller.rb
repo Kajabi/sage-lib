@@ -69,7 +69,7 @@ class PagesController < ApplicationController
 
   def search
     @search = params[:search]
-    
+
     render(layout: 'full_page')
   end
 

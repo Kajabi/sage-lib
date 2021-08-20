@@ -1,45 +1,91 @@
-require "pp"
-
-module ApplicationHelper
-
-  def current_page_foundations?
-    current_page?(pages_foundation_path(:ux_values)) || (params[:title] && current_page?(pages_foundation_path(params[:title])))
+class PagesController < ApplicationController
+  def index
+    render(layout: 'home')
   end
 
-  def current_page_content?
-    current_page?(pages_content_path(:voice_tone)) || (params[:title] && current_page?(pages_content_path(params[:title])))
+  def foundation
+    render params[:title]
   end
 
-  def current_page_experiences?
-    current_page?(pages_experiences_path(:onboarding)) || (params[:title] && current_page?(pages_experiences_path(params[:title])))
+  def content
+    render params[:title]
   end
 
-  def current_page_design?
-    current_page?(pages_design_path(:color)) || (params[:title] && current_page?(pages_design_path(params[:title])))
+  def experiences
+    render params[:title]
   end
 
-  def current_page_patterns?
-    current_page?(pages_patterns_path(:panels_cards)) || (params[:title] && current_page?(pages_patterns_path(params[:title])))
+  def design
+    render params[:title]
   end
 
-  def current_page_interactions?
-    current_page?(pages_interactions_path(:container)) || (params[:title] && current_page?(pages_interactions_path(params[:title])))
+  def mock
+    @alias = params[:alias]
+
+    render(layout: 'mocks')
   end
 
-  def current_page_helpers?
-    current_page?(pages_helpers_path(:spacing)) || (params[:title] && current_page?(pages_helpers_path(params[:title])))
+  def mocks
+    render(layout: 'mocks')
   end
 
-  def current_page_components?
-    current_page?(pages_components_path) || (params[:title] && current_page?(pages_component_path(params[:title])))
+  def patterns
+    render params[:title]
   end
 
-  def current_page_mocks?
-    current_page?(pages_mocks_path) || (params[:alias] && current_page?(pages_mock_path(params[:alias])))
+  def interactions
+    render params[:title]
   end
 
-  def storybook_url(slug)
-    "#{Rails.application.config.storybook_root_url}#{slug}"
+  def helpers
+    render params[:title]
   end
 
+  def patterns
+    render params[:title]
+  end
+
+  def interactions
+    render params[:title]
+  end
+
+  def helpers
+    render params[:title]
+  end
+
+  def component
+    @title = params[:title]
+  end
+
+  def components
+  end
+
+  def sandbox
+    render(layout: 'sandbox')
+  end
+
+  def utilities
+  end
+
+  def search
+    @search = params[:search]
+
+    render(layout: 'full_page')
+  end
+
+  # Generator Pages
+  def status
+    render(layout: 'full_page')
+  end
+
+  def support
+    render(layout: 'full_page')
+  end
+
+  def breakout
+    @type = params[:type]
+    @title = params[:title]
+
+    render(layout: 'breakout')
+  end
 end
