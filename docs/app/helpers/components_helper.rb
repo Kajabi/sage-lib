@@ -108,6 +108,15 @@ module ComponentsHelper
         a11y: "done"
       },
       {
+        title: "dynamic_select",
+        description: "A description is about the dynamic select.",
+        scss: "done",
+        docs: "todo",
+        rails: "done",
+        react: "todo",
+        a11y: "todo"
+      },
+      {
         title: "form_input",
         description: "Basic text input form fields with 'floating' labels",
         scss: "done",
