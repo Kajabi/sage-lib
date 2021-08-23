@@ -10,6 +10,7 @@ export const ButtonGroup = ({
   children,
   className,
   gap,
+  wrap,
   ...rest
 }) => {
   const classNames = classnames(
@@ -20,6 +21,7 @@ export const ButtonGroup = ({
       [`sage-btn-group--align-${align}`]: align,
       'sage-btn-group--border-top': borderTop,
       [`sage-btn-group--gap-${gap}`]: gap,
+      'sage-btn-group--wrap': wrap,
     }
   );
 
@@ -40,6 +42,7 @@ ButtonGroup.defaultProps = {
   className: null,
   children: null,
   gap: ButtonGroup.GAP_OPTIONS.XS,
+  wrap: false,
 };
 
 ButtonGroup.propTypes = {
@@ -49,4 +52,5 @@ ButtonGroup.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node,
   gap: PropTypes.oneOf(Object.values(ButtonGroup.GAP_OPTIONS)),
+  wrap: PropTypes.bool,
 };

@@ -1,5 +1,6 @@
 class SageSortableItemCustom < SageComponent
   set_attribute_schema({
+    card: [:optional, TrueClass],
     grid_template: String,
     id: [:optional, Integer, String],
     url_update: [:optional, String],

@@ -120,16 +120,22 @@
 `SageSortableItemCustom` should be used when you want to create a layout within the Sortable Item that follows any pattern using specified dot and dash pattern denoted in the [Sage Grid Templates](http://sage-design-system.kajabi.com/pages/layout/grid_templates) docs. At its simpliest form, `SageSortableItemCustom` is `SageSortableItem` as cards with no image or subtitles, but any combination Sage Grid Template.
 ', use_sage_type: true) %>
 
-<h3 class="t-sage-heading-6"><code>SageSortableItemCustom</code> using a custom <code>grid template : "te"</code></h3>
+<h3 class="t-sage-heading-6"><code>SageSortableItemCustom</code> using a custom <code>grid template : "te"</code> as a Panel List</h3>
 <%= sage_component SageSortable, { resource_name: "link" } do %>
-  <% 3.times do %>
+  <% 3.times do |i| %>
     <%= sage_component SageSortableItemCustom, {
       grid_template: "te",
       id: "id",
       url_update: "update/endpoint",
     } do %>
       <div>
-        <%= sage_component SageLink, { label: "Field 1", truncate: true, url: "#" } %>
+        <%= sage_component SageCheckbox, {
+          id: "c#{i + 1}",
+          label_text: "Checked",
+          checked: true,
+          disabled: false,
+          has_error: false
+        } %>
       </div>
       <%= sage_component SageDropdown, {
         align: "right",
@@ -172,11 +178,12 @@
   <% end %>
 <% end %>
 
-<h3 class="t-sage-heading-6"><code>SageSortableItemCustom</code> using a custom <code>grid template : "me"</code></h3>
+<h3 class="t-sage-heading-6"><code>SageSortableItemCustom</code> using a custom <code>grid template : "me"</code>as cards</h3>
 <%= sage_component SageSortable, {
   resource_name: "link" } do %>
   <% 3.times do %>
     <%= sage_component SageSortableItemCustom, {
+      card: true,
       grid_template: "me",
       id: "id",
       url_update: "update/endpoint",

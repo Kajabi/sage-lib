@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 4.11.7 (2021-08-18)
+
+**Note:** Version bump only for package @kajabi/sage
+
+
+
+
+
+## 4.11.6 (2021-08-18)
+
+**Note:** Version bump only for package @kajabi/sage
+
+
+
+
+
 ## 4.11.5 (2021-08-11)
 
 **Note:** Version bump only for package @kajabi/sage
