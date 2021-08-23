@@ -1,8 +1,6 @@
 <%
 css_classes = ["sage-link"]
-html_attributes = {}
-  .merge(component.attributes || {})
-  .merge(component.html_attributes || {})
+html_attributes = component.html_attributes || {}
 label = component.content
 
 if component.label
