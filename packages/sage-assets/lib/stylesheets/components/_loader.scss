@@ -84,6 +84,24 @@ $-loader-spinner-path-speed: 1.5s;
   animation: dash $-loader-spinner-path-speed ease-in-out infinite;
 }
 
+.sage-loader__success {
+  width: sage-spacing(xl);
+  height: sage-spacing(xl);
+}
+
+.sage-loader__success-path {
+  stroke-dasharray: 150,200;
+  stroke-linecap: round;
+  stroke: sage-color(sage, 300);
+}
+
+.sage-loader__success-check {
+  transform: translate(76%, 84%);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+  stroke: sage-color(sage, 300)
+}
 
 @keyframes loader-bar {
   0% {
