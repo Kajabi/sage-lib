@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.44.6 (2021-08-18)
+
+**Note:** Version bump only for package @kajabi/sage-assets
+
+
+
+
+
+## 0.44.5 (2021-08-18)
+
+**Note:** Version bump only for package @kajabi/sage-assets
+
+
+
+
+
 ## 0.44.4 (2021-08-11)
 
 **Note:** Version bump only for package @kajabi/sage-assets
