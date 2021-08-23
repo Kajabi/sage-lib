@@ -242,7 +242,7 @@ $-btn-loading-min-height: rem(36px);
   .sage-input-group & {
     position: absolute;
     top: rem(2px);
-    right: calc(0.125rem / 2);
+    right: rem(1px);
     background-color: sage-color(white);
     box-shadow: rem(-1px) 0 0 0 sage-color(grey, 300);
 
