@@ -5,9 +5,9 @@ html_attributes = {}
   .merge(component.html_attributes || {})
 label = component.content
 
-if component.label.present?
-  label = if component.truncate.present?
-    tag.span component.label, class: "t-sage--truncate"
+if component.label
+  label = if component.truncate
+    content_tag(:span, component.label, class: "t-sage--truncate")
   else
     component.label
   end
@@ -17,12 +17,13 @@ if component.help_link && component.show_label
   css_classes.append("sage-link--help")
 elsif component.help_link && !component.show_label
   css_classes.append("sage-link--help-icon-only")
-  label = tag.span label, class: "visually-hidden"
+  label = content_tag(:span, label, class: "visually-hidden")
 elsif !component.external && !component.launch
 elsif !component.external && component.launch
+  label = content_tag(:span, component.label, class: "t-sage--truncate")
   css_classes.append("sage-link--launch")
 elsif component.external && component.launch
-  label = tag.span component.label, class: "t-sage--truncate"
+  label = content_tag(:span, component.label, class: "t-sage--truncate")
   html_attributes[:rel] = "noreferrer"
   html_attributes[:target] = "_blank"
 elsif component.external && !component.launch
