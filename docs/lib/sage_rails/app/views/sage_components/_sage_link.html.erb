@@ -23,11 +23,11 @@ elsif !component.external && component.launch
   css_classes.append("sage-link--launch")
 elsif component.external && component.launch
   label = tag.span component.label, class: "t-sage--truncate"
-  html_attributes[:rel] = "noopener noreferrer"
+  html_attributes[:rel] = "noreferrer"
   html_attributes[:target] = "_blank"
 elsif component.external && !component.launch
   css_classes.append("sage-link--no-launch")
-  html_attributes[:rel] = "noopener noreferrer"
+  html_attributes[:rel] = "noreferrer"
   html_attributes[:target] = "_blank"
 end
 
