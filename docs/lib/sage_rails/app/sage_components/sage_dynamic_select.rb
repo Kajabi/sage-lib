@@ -9,6 +9,7 @@ class SageDynamicSelect < SageComponent
     default_value: [:optional, String, Integer],
     default_text: [:optional, String],
     paginate: [:optional, TrueClass],
+    paginate_size: [:optional, Integer],
     search: [:optional, TrueClass],
     clear: [:optional, TrueClass],
     placeholder: [:optional, String],

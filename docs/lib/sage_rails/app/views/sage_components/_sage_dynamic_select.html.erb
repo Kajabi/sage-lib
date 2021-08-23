@@ -24,6 +24,7 @@
       <% end %>
       <% if component.paginate.present? %>
         data-paginate="<%= component.paginate %>"
+        data-paginate-size="<%= component.paginate_size || 25 %>"
       <% end %>
       <% if component.search.present? %>
         data-search="<%= component.search %>"
