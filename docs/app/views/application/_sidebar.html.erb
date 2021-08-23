@@ -24,11 +24,6 @@
             active: current_page?(pages_foundation_path(:icon)),
           },
           {
-            text: "Tokens",
-            link: pages_foundation_path(:token),
-            active: current_page?(pages_foundation_path(:token)),
-          },
-          {
             text: "Content Strategy",
             link: pages_foundation_path(:content),
             active: current_page?(pages_foundation_path(:content)),
@@ -39,29 +34,6 @@
             active: current_page?(pages_foundation_path(:vocabulary)),
           }]
         }
-      ]
-    } %>
-  <% end %>
-  <% if current_page_layout? %>
-    <%= sage_component SageNav, {
-      items: [
-        { link: pages_layout_path(:container), text: "LAYOUT", items: [
-          {
-            text: "Organization",
-            link: pages_layout_path(:panels_cards),
-            active: current_page?(pages_layout_path(:panels_cards)),
-          },
-          {
-            text: "12 Col Grid",
-            link: pages_layout_path(:grid),
-            active: current_page?(pages_layout_path(:grid)),
-          },
-          {
-            text: "Grid Templates",
-            link: pages_layout_path(:grid_templates),
-            active: current_page?(pages_layout_path(:grid_templates)),
-          }
-        ] }
       ]
     } %>
   <% end %>
