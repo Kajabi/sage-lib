@@ -7,6 +7,8 @@ Sage.dynamicSelect = (function() {
       // Enable pagination, the dropdown will infinitely scroll until the result
       // set returns 0 results.
       paginate: data.data('paginate'),
+      // Amount of items per page
+      paginate_size: data.data('paginate-size'),
       // Enables typeahead search for the resource, passing a "search" param in
       // the requested url
       search: data.data('search'),
@@ -51,7 +53,7 @@ Sage.dynamicSelect = (function() {
 
           params.page = params.page || 1;
           $(data).select2.data = formattedData;
-          var showMore = data.totalCount ? (params.page * 25) < data.totalCount : true;
+          var showMore = data.totalCount ? (params.page * this.opts.paginate_size) < data.totalCount : true;
 
           return {
             results: formattedData,
