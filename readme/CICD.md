@@ -6,7 +6,7 @@ Continuous Integration is being handled by CircleCI with deployments going to He
 
 ### lint-test-build
 
-The `lint-build-test` job is reponsible for verifying the integrity of the suite. It ensures all linting, testing, and build procedures pass before allowing a merge. This job is run as part of every PR and push to `main``.
+The `lint-build-test` job is reponsible for verifying the integrity of the suite. It ensures all linting, testing, and build procedures pass before allowing a merge. This job is run as part of every PR and push to `main`.
 
 *NOTE: Do not ever push to `main` directly*
 
