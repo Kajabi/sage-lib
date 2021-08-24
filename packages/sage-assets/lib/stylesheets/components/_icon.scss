@@ -6,6 +6,17 @@
 
 
 $-icon-font-path: "../fonts/sage";
+$-icon-beside-type: (
+  "h1",
+  "h2",
+  "h3",
+  "h4",
+  "h5",
+  "h6",
+  "body",
+  "body-sm",
+  "body-xs",
+);
 
 // NOTE: These should be kept in sync with line-height pairings from `packages/sage-assets/lib/stylesheets/tokens/_line_height.scss`
 $-icon-beside-type: (
