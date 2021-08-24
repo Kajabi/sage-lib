@@ -1,8 +1,5 @@
-<div class="docs-hero" style="background-image: url(<%= image_url "hero.jpg" %>);">
+<section class="docs-hero" style="background-image: url(<%= image_url "hero.jpg" %>);">
   <%= sage_component SageContainer, { size: "xl", css_classes: "sage-type" } do %>
-    <header class="sage-header">
-      <%= render "application/nav" %>
-    </header>
     <%= sage_component SageGridRow, {} do %>
       <%= sage_component SageGridCol, { breakpoint: "md", size: "4" } do %>
         <%= image_tag "sage_icon.png", style: "max-width:70px;height:auto", loading: "lazy" %>
@@ -38,4 +35,4 @@
       <% end %>
     <% end %>
   <% end %>
-</div>
+</section>
