@@ -1,4 +1,4 @@
-<h3 class="t-sage-heading-6">Dark Tooltips</h3>
+<h3 class="t-sage-heading-6">Tooltips</h3>
 <%= sage_component SagePanelBlock, {} do %>
   <%= sage_component SageTooltip, {
     position: "top",
@@ -16,31 +16,5 @@
   <%= sage_component SageTooltip, {
     position: "right",
     text: "Bibendum Condimentum",
-  } %>
-<% end %>
-
-<h3 class="t-sage-heading-6">Light Tooltips</h3>
-<%= sage_component SagePanelBlock, {} do %>
-  <%= sage_component SageTooltip, {
-    position: "top",
-    text: "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.",
-    theme: "light",
-    size: "large"
-  } %>
-  <%= sage_component SageTooltip, {
-    position: "bottom",
-    text: "Magnis dis parturient montes",
-    theme: "light",
-  } %>
-  <%= sage_component SageTooltip, {
-    position: "left",
-    text: "$12.99",
-    theme: "light",
-    size: "small"
-  } %>
-  <%= sage_component SageTooltip, {
-    position: "right",
-    text: "Sociis natoque et",
-    theme: "light",
   } %>
 <% end %>

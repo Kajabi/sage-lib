@@ -5,7 +5,6 @@ import { TooltipElement } from './TooltipElement';
 import {
   TOOLTIP_SIZES,
   TOOLTIP_POSITIONS,
-  TOOLTIP_THEMES,
 } from './configs';
 
 export const Tooltip = ({
@@ -43,7 +42,6 @@ export const Tooltip = ({
 Tooltip.Element = TooltipElement;
 Tooltip.POSITIONS = TOOLTIP_POSITIONS;
 Tooltip.SIZES = TOOLTIP_SIZES;
-Tooltip.THEMES = TOOLTIP_THEMES;
 
 Tooltip.defaultProps = {
 };

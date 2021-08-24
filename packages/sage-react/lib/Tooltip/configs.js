@@ -11,8 +11,3 @@ export const TOOLTIP_POSITIONS = {
   BOTTOM: 'bottom',
   LEFT: 'left',
 };
-
-export const TOOLTIP_THEMES = {
-  DEFAULT: null,
-  LIGHT: 'light',
-};

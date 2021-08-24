@@ -11,7 +11,6 @@ export default {
     ...selectArgs({
       position: Tooltip.POSITIONS,
       size: Tooltip.SIZES,
-      theme: Tooltip.THEMES
     }),
   },
   args: {
@@ -23,7 +22,6 @@ export default {
     content: 'Hi, I provide more context for this element!',
     position: Tooltip.POSITIONS.DEFAULT,
     size: Tooltip.SIZES.DEFAULT,
-    theme: Tooltip.THEMES.DEFAULT,
   }
 };
 const Template = (args) => <Tooltip {...args} />;

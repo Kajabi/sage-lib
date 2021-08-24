@@ -7,9 +7,7 @@
 
 // Colors
 $-tooltip-bg-color: sage-color(charcoal, 400);
-$-tooltip-light-bg-color: sage-color(white);
 $-tooltip-font-color: sage-color(white);
-$-tooltip-light-font-color: sage-color(charcoal, 400);
 
 // Indicator arrow
 $-tooltip-arrow-size: rem(6px);
@@ -92,24 +90,6 @@ $-tooltip-large-maxwidth: rem(320px);
     border-top: $-tooltip-arrow-inactive;
     border-bottom: $-tooltip-arrow-inactive;
     border-right: $-tooltip-arrow-active;
-  }
-}
-
-.sage-tooltip--light {
-  color: $-tooltip-light-font-color;
-  background: $-tooltip-light-bg-color;
-
-  &.sage-tooltip--top::after {
-    border-top-color: sage-color(white);
-  }
-  &.sage-tooltip--bottom::after {
-    border-bottom-color: sage-color(white);
-  }
-  &.sage-tooltip--left::after {
-    border-left-color: sage-color(white);
-  }
-  &.sage-tooltip--right::after {
-    border-right-color: sage-color(white);
   }
 }
 

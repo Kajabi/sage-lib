@@ -4,7 +4,6 @@ import classnames from 'classnames';
 import {
   TOOLTIP_SIZES,
   TOOLTIP_POSITIONS,
-  TOOLTIP_THEMES,
 } from './configs';
 
 const TOOLTIP_DISTANCE = 8;
@@ -14,7 +13,6 @@ export const TooltipElement = ({
   parentDomRect,
   position,
   size,
-  theme,
 }) => {
   const tooltipRef = useRef(null);
   const [coordinates, setCoordinates] = useState({ top: null, left: null });
@@ -25,7 +23,6 @@ export const TooltipElement = ({
       'sage-tooltip--static': !parentDomRect,
       [`sage-tooltip--${position}`]: position,
       [`sage-tooltip--${size}`]: size,
-      [`sage-tooltip--${theme}`]: theme,
     }
   );
 
@@ -87,13 +84,11 @@ export const TooltipElement = ({
 
 TooltipElement.POSITIONS = TOOLTIP_POSITIONS;
 TooltipElement.SIZES = TOOLTIP_SIZES;
-TooltipElement.THEMES = TOOLTIP_THEMES;
 
 TooltipElement.defaultProps = {
   parentDomRect: null,
   position: TOOLTIP_POSITIONS.DEFAULT,
   size: TOOLTIP_SIZES.DEFAULT,
-  theme: TOOLTIP_THEMES.DEFAULT,
 };
 
 TooltipElement.propTypes = {
@@ -107,5 +102,4 @@ TooltipElement.propTypes = {
   }),
   position: PropTypes.oneOf(Object.values(TOOLTIP_POSITIONS)),
   size: PropTypes.oneOf(Object.values(TOOLTIP_SIZES)),
-  theme: PropTypes.oneOf(Object.values(TOOLTIP_THEMES)),
 };
