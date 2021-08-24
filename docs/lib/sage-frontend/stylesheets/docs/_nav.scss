@@ -3,8 +3,15 @@
 
   For Sage documentation use
 ================================================== */
+.sage-header .sage-container {
+  position: relative; // note: for use with absolute positioning in `.docs-nav`
+}
 
 .docs-nav {
+  position: absolute;
+  left: 0;
+  top: 24px;
+  color: sage-color(white);
 
   .sage-btn::before {
     @media screen and (min-width: sage-breakpoint(md-min)) {

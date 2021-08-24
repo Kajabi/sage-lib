@@ -5,10 +5,18 @@
 ================================================== */
 .docs-home {
   background: sage-color(gray, 200);
+
+  .sage-btn--subtle.sage-btn--secondary {
+    color: currentColor;
+
+    &:focus::after {
+      border-color: currentColor;
+    }
+  }
 }
 
 .docs-hero {
-  padding: sage-spacing() sage-spacing() rem(100px);
+  padding: rem(148px) sage-spacing() rem(100px);
   color: sage-color(white);
   background-repeat: no-repeat;
   background-position: center center;
@@ -17,14 +25,6 @@
 
   @media (max-width: sage-breakpoint(md-min)) {
     padding-bottom: sage-spacing(xl);
-  }
-
-  .sage-btn--subtle.sage-btn--secondary {
-    color: currentColor;
-
-    &:focus::after {
-      border-color: currentColor;
-    }
   }
 }
 
