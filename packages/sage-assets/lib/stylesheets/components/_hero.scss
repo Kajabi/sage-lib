@@ -41,6 +41,14 @@ $-hero-play-icon-background-color-hover: rgba(sage-color(white, 100), 1);
   }
 }
 
+.sage-hero--small {
+  max-width: map-get($sage-containers, "lg");
+}
+
+.sage-hero--large {
+  max-width: map-get($sage-containers, "xl");
+}
+
 .sage-hero__title {
   @extend %t-sage-heading-3;
   grid-area: title;
@@ -68,6 +76,14 @@ $-hero-play-icon-background-color-hover: rgba(sage-color(white, 100), 1);
   position: relative;
   overflow: hidden;
   outline: none;
+
+  .sage-hero--large & {
+    max-width: rem(652px);
+  }
+
+  .sage-hero--small & {
+    max-width: rem(400px);
+  }
 
   @media (max-width: sage-breakpoint(sm-max)) {
     height: 0;
