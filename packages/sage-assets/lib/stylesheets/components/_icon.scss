@@ -6,6 +6,17 @@
 
 
 $-icon-font-path: "../fonts/sage";
+$-icon-beside-type: (
+  "h1",
+  "h2",
+  "h3",
+  "h4",
+  "h5",
+  "h6",
+  "body",
+  "body-sm",
+  "body-xs",
+);
 
 // Icon font setup
 @font-face {
@@ -78,6 +89,17 @@ $-icon-font-path: "../fonts/sage";
   .sage-status-icon--#{$icon-name} {
     &::before {
       @include sage-icon-base($icon-name);
+    }
+  }
+}
+
+@each $type-spec in $-icon-beside-type {
+  .sage-icon--beside-type-#{$type-spec} {
+    height: sage-line-height($type-spec);
+
+    &::before {
+      height: sage-line-height($type-spec);
+      line-height: sage-line-height($type-spec);
     }
   }
 }

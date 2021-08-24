@@ -295,4 +295,20 @@ module SageTokens
   SPACER_SIZES = [:xs, :sm, :md, :lg, :xl, "2xs", "xs", "sm", "md", "lg", "xl", "2xl", "stage", "panel", "card", "stack"]
 
   STATUSES = ["danger", "draft", "info", "locked", "published", "warning"]
+
+  # All type specs. See `type-specs_scss` to keep in sync.
+  TYPE_SPECS = [
+    "heading-1", "heading-2", "heading-3", "heading-4", "heading-5", "heading-6",
+    "nav", "nav-sub",
+    "body", "body-med", "body-semi", "body-bold",
+    "body-small", "body-small-med", "body-small-semi", "body-small-bold",
+    "body-xsmall", "body-xsmall-med", "body-xsmall-semi", "body-xsmall-bold",
+  ]
+
+  # Only the base type specs for which we have responsive pairings of size and leading. See `sage-font-size` token as an example.
+  RESPONSIVE_TYPE_SPECS = [
+    "h1", "h2", "h3", "h4", "h5", "h6",
+    "body", "body-sm", "body-xs",
+  ]
+
 end
