@@ -1,85 +1,38 @@
 <%
-  label = ""
-  if component.label.present?
-    label = if component.truncate.present?
-      %(
-        <span class="t-sage--truncate">
-          #{component.label}
-        </span>
-      ).html_safe
-    else
-      component.label.html_safe
-    end
+css_classes = ["sage-link"]
+html_attributes = component.html_attributes || {}
+label = component.content
+
+if component.label
+  label = if component.truncate
+    content_tag(:span, component.label, class: "t-sage--truncate")
+  else
+    component.label
   end
+end
+
+if component.help_link && component.show_label
+  css_classes.append("sage-link--help")
+elsif component.help_link && !component.show_label
+  css_classes.append("sage-link--help-icon-only")
+  label = content_tag(:span, label, class: "visually-hidden")
+elsif !component.external && !component.launch
+elsif !component.external && component.launch
+  label = content_tag(:span, component.label, class: "t-sage--truncate")
+  css_classes.append("sage-link--launch")
+elsif component.external && component.launch
+  label = content_tag(:span, component.label, class: "t-sage--truncate")
+  html_attributes[:rel] = "noreferrer"
+  html_attributes[:target] = "_blank"
+elsif component.external && !component.launch
+  css_classes.append("sage-link--no-launch")
+  html_attributes[:rel] = "noreferrer"
+  html_attributes[:target] = "_blank"
+end
+
+html_attributes[:class] = css_classes
+  .push(component.generated_css_classes)
+  .join(" ")
+  .squish
 %>
-<% if component.help_link && component.show_label %>
-  <a
-    class="sage-link sage-link--help <%= component.generated_css_classes %>"
-    href="<%= component.url %>"
-    <% component.attributes.each do |key, value| %>
-      <%= "#{key}=\"#{value}\"".html_safe %>
-    <% end if component.attributes&.is_a?(Hash) %>
-    <%= component.generated_html_attributes.html_safe %>
-  >
-    <%= label %>
-  </a>
-<% elsif component.help_link && !component.show_label %>
-  <a
-    class="sage-link sage-link--help-icon-only <%= component.generated_css_classes %>"
-    href="<%= component.url %>"
-    <% component.attributes.each do |key, value| %>
-      <%= "#{key}=\"#{value}\"".html_safe %>
-    <% end if component.attributes&.is_a?(Hash) %>
-    <%= component.generated_html_attributes.html_safe %>
-  >
-    <span class="visually-hidden"><%= label %></span>
-  </a>
-<% elsif !component.external && !component.launch %>
-  <a
-    class="sage-link <%= component.generated_css_classes %>"
-    href="<%= component.url %>"
-    <% component.attributes.each do |key, value| %>
-      <%= "#{key}=\"#{value}\"".html_safe %>
-    <% end if component.attributes&.is_a?(Hash) %>
-    <%= component.generated_html_attributes.html_safe %>
-  >
-    <%= label %>
-  </a>
-<% elsif !component.external && component.launch %>
-  <a
-    class="sage-link sage-link--launch <%= component.generated_css_classes %>"
-    href="<%= component.url %>"
-    <% component.attributes.each do |key, value| %>
-      <%= "#{key}=\"#{value}\"".html_safe %>
-    <% end if component.attributes&.is_a?(Hash) %>
-    <%= component.generated_html_attributes.html_safe %>
-  >
-    <%= label %>
-  </a>
-<% elsif component.external && component.launch %>
-  <a
-    class="sage-link <%= component.generated_css_classes %>"
-    href="<%= component.url %>"
-    target="_blank"
-    rel="noopener noreferrer"
-    <% component.attributes.each do |key, value| %>
-      <%= "#{key}=\"#{value}\"".html_safe %>
-    <% end if component.attributes&.is_a?(Hash) %>
-    <%= component.generated_html_attributes.html_safe %>
-  >
-    <%= label %>
-  </a>
-<% elsif component.external && !component.launch %>
-  <a
-    class="sage-link sage-link--no-launch <%= component.generated_css_classes %>"
-    href="<%= component.url %>"
-    target="_blank"
-    rel="noopener noreferrer"
-    <% component.attributes.each do |key, value| %>
-      <%= "#{key}=\"#{value}\"".html_safe %>
-    <% end if component.attributes&.is_a?(Hash) %>
-    <%= component.generated_html_attributes.html_safe %>
-  >
-    <%= label %>
-  </a>
-<% end %>
+<%= link_to label, component.url, html_attributes %>

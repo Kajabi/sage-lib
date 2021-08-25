@@ -1,0 +1,42 @@
+<h3>Working with the<code>Sage Dynamic Select Input (Select2)</code></h3>
+<p>
+  The dynamic select input is a sagified version of the select2 input that resides in <code>Kajabi Products.</code> The input fuctionality leverages the Javascript library select2 and includes several options for tailoring the input to the UI. The input can retrieve options from any arbitrary API that will return validly structured JSON.<br/> <br/> Basic usage and complete documentation ca be found
+  <a href="https://select2.org/getting-started/basic-usage" target="_blank"><code>here</code></a>.
+</p>
+
+<h4>Error Handling</h4>
+<p>Much like other sage inputs, the dynamic select includes options to render error messages from the server. By using the <code>has_error</code> attribute, one can trigger the erros states and print an error message that gets placed below the input.</p>
+
+<pre class="prettyprint">
+  <code>
+  // Component API
+  name: "Input Form Name",
+  label: "Input Label",
+  id: "Input id",
+  required: true
+  has_error: false
+  message: "Error message goes here"
+  url: "Endpoint for API",
+  default_value: "Prefill select input with default value",
+  default_text: "Prefill select input with default title",
+  theme: "Choose Sage or Bootstrap for legacy input",
+  search: "Allow user to search through retrieved results",
+  clear: "Allow user to clear input value"
+
+  // Example Implementation
+  sage_component SageDynamicSelect, {
+    name: "site[home_landing_page_id]",
+    label: "Landing Page",
+    id: "site_home_landing_page_id",
+    url: admin_site_select_options_path(site, :landing_page, { published: true }, format: :json),
+    default_value: site.home_landing_page.id,
+    default_text: site.home_landing_page.title,
+    theme: "sage",
+    search: true,
+    clear: false
+  }
+
+  </code>
+</pre>
+
+

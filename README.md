@@ -1,7 +1,4 @@
-<a href="https://sage-design-system.kajabi.com" style="display: block; position: relative;">
-  <img src="readme/sage-hero-bkgd.jpg" alt="" width="100%; position: relative; z-index: -1;" />
-  <img src="readme/sage-icon-wordmark.svg" alt="" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1;" />
-</a>
+![sage design system logo](readme/sage-hero.jpg)
 
 <h1 style="text-align: center;">
   Sage Design System
@@ -13,6 +10,10 @@
 
 * To use Sage in your application, see our [Documentation Site](https://sage-design-system.kajabi.com/pages/index)
 * To view the documentation for contributing to Sage, see our [internal Wiki](https://github.com/Kajabi/sage-lib/wiki)
+
+## 🗒️ Create an Issue
+
+Do you have an issue, bug, or suggestion you would like to add to the Design System? [Create an issue](https://github.com/Kajabi/sage-lib/issues/new/choose)!
 
 ## 👩‍💻 Contributing
 
@@ -139,7 +140,7 @@ The following scripts can be ran by typing `yarn <script_name>` in the root of t
 
 ### `bootstrap`
 
-Proxy for the Lerna [bootstrap](https://github.com/lerna/lerna/tree/master/commands/bootstrap) command. This will install all dependencies and link any cross-dependencies of the monorepo.
+Proxy for the Lerna [bootstrap](https://github.com/lerna/lerna/tree/main/commands/bootstrap) command. This will install all dependencies and link any cross-dependencies of the monorepo.
 
 ### `bridge:kajabi-products` :star:
 

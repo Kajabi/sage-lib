@@ -22,11 +22,19 @@
     external: false,
     help_link: false,
     show_label: true,
-    attributes: {
+    html_attributes: {
       "data-js-tooltip": "Tooltip",
       "data-js-tooltip-position": "right",
     },
   } %>
+  <%= sage_component SageLink, {
+    url: "#",
+    external: false,
+    help_link: false,
+    show_label: true,
+  } do %>
+    <%= tag.span "Internal link with #{tag.strong "custom content"}".html_safe, class: "custom-content" %>
+  <% end %>
 <% end %>
 
 <h3 class="t-sage-heading-6">External links</h3>
@@ -54,7 +62,7 @@
     launch: false,
     help_link: false,
     show_label: true,
-    attributes: {
+    html_attributes: {
       "data-js-tooltip": "Tooltip",
       "data-js-tooltip-position": "top"
     },
@@ -86,7 +94,7 @@
     launch: false,
     help_link: true,
     show_label: true,
-    attributes: {
+    html_attributes: {
       "data-js-tooltip": "Tooltip",
       "data-js-tooltip-position": "bottom"
     },

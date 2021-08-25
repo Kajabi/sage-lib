@@ -16,7 +16,7 @@ Configuration for [commitlint](https://github.com/conventional-changelog/commitl
 
 ### `pre-commit`
 
-A hook prior to commit is in place to ensure the integrity of the `yarn.lock` file. If the `yarn.lock` file is not in-sync during release then the CI job will throw an error indicating that the `yarn.lock` is out of date. A script located at `bin/yarn-check.sh` in the root of this repository is designed to verify if yarn is out of sync, and if it is we will [bootstrap](https://github.com/lerna/lerna/tree/master/commands/bootstrap#readme) the Lerna monorepository, add the updated `yarn.lock` and create a separate `chore` commit for the new lock file.
+A hook prior to commit is in place to ensure the integrity of the `yarn.lock` file. If the `yarn.lock` file is not in-sync during release then the CI job will throw an error indicating that the `yarn.lock` is out of date. A script located at `bin/yarn-check.sh` in the root of this repository is designed to verify if yarn is out of sync, and if it is we will [bootstrap](https://github.com/lerna/lerna/tree/main/commands/bootstrap#readme) the Lerna monorepository, add the updated `yarn.lock` and create a separate `chore` commit for the new lock file.
 
 ### `pre-push`
 

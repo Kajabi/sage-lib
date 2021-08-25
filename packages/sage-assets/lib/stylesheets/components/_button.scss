@@ -163,6 +163,14 @@ $-btn-loading-min-height: rem(36px);
     border-radius: 0;
   }
 
+  .sage-dropdown__trigger > & {
+    line-height: sage-line-height(body);
+  }
+
+  .sage-dropdown__trigger--select & {
+    font-weight: sage-font-weight(regular);
+  }
+
   .sage-input-group & {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
@@ -233,10 +241,8 @@ $-btn-loading-min-height: rem(36px);
 
   .sage-input-group & {
     position: absolute;
-    transform: translateY(-50%);
-    top: 50%;
-    right: calc(#{rem(2px)} / 2);
-    height: calc(100% - #{rem(2px)});
+    top: rem(2px);
+    right: rem(1px);
     background-color: sage-color(white);
     box-shadow: rem(-1px) 0 0 0 sage-color(grey, 300);
 
@@ -298,21 +304,6 @@ $-btn-loading-min-height: rem(36px);
 
     &:not(:last-child) {
       margin-right: sage-spacing(card);
-    }
-  }
-
-  // NOTE: Hope to use `gap` in the future instead
-  // but Safari does not currently support it for flexbox
-  @each $-key, $-value in $sage-spacings {
-    @if ($-key == xs) {
-      .sage-btn-group &:not(:last-child) {
-        margin-right: sage-spacing($-key);
-      }
-    }
-    @else if ($-key == sm or $-key == md or $-key == lg) {
-      .sage-btn-group--gap-#{$-key} &:not(:last-child) {
-        margin-right: sage-spacing($-key);
-      }
     }
   }
 
@@ -486,6 +477,23 @@ $-btn-loading-min-height: rem(36px);
 .sage-btn-group {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+
+  @media screen and (min-width: sage-breakpoint(sm-min)) {
+    flex-wrap: nowrap;
+  }
+}
+
+@each $-key, $-value in $sage-spacings {
+  .sage-btn-group--gap-#{$-key} {
+    gap: sage-spacing($-key);
+  }
+}
+
+.sage-btn-group--wrap {
+  @media screen and (min-width: sage-breakpoint(sm-min)) {
+    flex-wrap: wrap;
+  }
 }
 
 .sage-btn-group--align-end {
