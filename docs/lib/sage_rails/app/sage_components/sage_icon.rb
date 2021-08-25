@@ -1,6 +1,6 @@
 class SageIcon < SageComponent
   set_attribute_schema({
-    beside_type: [:optional, NilClass, Set.new(SageTokens::RESPONSIVE_TYPE_SPECS)],
+    adjacent_type: [:optional, NilClass, Set.new(SageTokens::RESPONSIVE_TYPE_SPECS)],
     card_color: [:optional, SageSchemas::STATUSES],
     circular: [:optional, NilClass, TrueClass],
     color: [:optional, NilClass, SageSchemas::COLOR_SLIDER],
