@@ -93,6 +93,10 @@ $-icon-beside-type: (
   }
 }
 
+//
+// Sets up height and line-height adjustments to better align next to
+// various responsive type specs
+//
 @each $type-spec in $-icon-beside-type {
   .sage-icon--beside-type-#{$type-spec} {
     height: sage-line-height($type-spec);
@@ -154,3 +158,4 @@ $-icon-beside-type: (
     --background-color: #{sage-color-combo($-color, default, background)};
   }
 }
+
