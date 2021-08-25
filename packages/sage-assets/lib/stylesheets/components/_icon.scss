@@ -100,7 +100,7 @@ $-icon-beside-type: (
 // various responsive type specs
 //
 @each $type-spec in $-icon-beside-type {
-  .sage-icon--beside-type-#{$type-spec} {
+  .sage-icon--adjacent-type-#{$type-spec} {
     height: sage-line-height($type-spec);
 
     &::before {
