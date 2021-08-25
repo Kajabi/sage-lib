@@ -8,12 +8,14 @@
 $-alert-colors: (
   info: primary,
   published: sage,
+  success: sage,
   warning: yellow,
   danger: red,
 );
 $-alert-icon-colors: (
   info: primary,
   published: sage,
+  success: sage,
   warning: orange,
   danger: red,
 );
@@ -46,6 +48,10 @@ $-alert-icon-colors: (
     a:not([class]) {
       color: sage-color($color, 400);
       text-decoration: underline;
+    }
+
+    .sage-alert__icon::before {
+      line-height: sage-line-height(h6);
     }
 
     .sage-alert__actions a:not([class]) {
@@ -116,6 +122,7 @@ $-alert-icon-colors: (
     .sage-alert--#{$name} & > a {
       @include sage-focus-outline($outline-offset-inline: 6px, $outline-offset-block: 0);
       @include sage-focus-outline--update-color(sage-color($color, 400));
+      font-weight: sage-font-weight(medium);
     }
   }
 }
