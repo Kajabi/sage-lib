@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.10.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.9.7...@kajabi/sage-system@0.10.0) (2021-08-25)
+
+
+### Bug Fixes
+
+* **dynamic_select:** add param for pagination size ([1c63d38](https://github.com/Kajabi/sage-lib/commit/1c63d389c75d4d6d9ee2833844fef5cbfb3e27d1))
+* **dynamic_select:** remove unused function ([9fe0310](https://github.com/Kajabi/sage-lib/commit/9fe0310536c3b5d7c16cc45615d238db3d3d6092))
+* **dynamic-select:** update js animation, remove focusout ([18a93c1](https://github.com/Kajabi/sage-lib/commit/18a93c14141a79aa4db62cb6d5a81f924ac0890a))
+
+
+### Features
+
+* **dynamic-select:** add js and input logic ([a62ca6d](https://github.com/Kajabi/sage-lib/commit/a62ca6d5028a757539f15817702f2ac25aad01f4))
+
+
+
+
+
 ## 0.9.7 (2021-08-18)
 
 **Note:** Version bump only for package @kajabi/sage-system

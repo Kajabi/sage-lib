@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.55.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.54.7...@kajabi/sage-react@0.55.0) (2021-08-25)
+
+
+### Bug Fixes
+
+* **icons:** menu rename ([da4d059](https://github.com/Kajabi/sage-lib/commit/da4d059978d8ca47917cb77f2fca82f548d5ad62))
+* **icons:** menu rename ([bf4b20a](https://github.com/Kajabi/sage-lib/commit/bf4b20aafe8109b01e503bbb6e5e4db64b9885b7))
+* **icons:** menu rename ([59a6538](https://github.com/Kajabi/sage-lib/commit/59a65387106f7e18c5ed0b42a621c29abaa106ec))
+* **icons:** updated icon names ([71f58b1](https://github.com/Kajabi/sage-lib/commit/71f58b11645d33794a3bd136cd77f79f21d34f6b))
+* **icons:** updated icon names ([1ed3d70](https://github.com/Kajabi/sage-lib/commit/1ed3d7079e836639f7f3a636659232e7a4a13cdd))
+* **icons:** updated icon names ([38ec6b2](https://github.com/Kajabi/sage-lib/commit/38ec6b24f0c8a8c393b8cef72aa2ad410e0a4120))
+
+
+### Features
+
+* **button group:** update react component ([750eac2](https://github.com/Kajabi/sage-lib/commit/750eac2fef77b4292bc760f11dd0c87009faa6c6))
+* **icons:** added new icons ([6f67737](https://github.com/Kajabi/sage-lib/commit/6f6773733ea63c4778860ea40bf27669e4360b16))
+* **icons:** added new icons ([2376723](https://github.com/Kajabi/sage-lib/commit/23767238384a303ae2a542a5a7e3a54a2ed428e9))
+* **icons:** added new icons ([e98c541](https://github.com/Kajabi/sage-lib/commit/e98c541d797a9f1ef30eba95682d6ccc2d00ee9d))
+* **loader:** updates React component ([8832e3e](https://github.com/Kajabi/sage-lib/commit/8832e3e4ff3eceff355b80a19af5d3b1bf7c4f1d))
+
+
+
+
+
 ## 0.54.7 (2021-08-18)
 
 **Note:** Version bump only for package @kajabi/sage-react
