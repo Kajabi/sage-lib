@@ -30,6 +30,11 @@ $-t-body-xsmall-spec: (
 /// These are used to create base classes as well as to apply type specs in
 /// context with `@extend %t-` etc.
 ///
+/// NOTE: Changes here should be made with care as a potentially large number of paired
+/// configurations would be affected. Known locations include:
+///   - `docs/lib/sage_rails/app/sage_components/sage_tokens.rb`
+///   - `packages/sage-react/lib/configs/classnames/type.js`
+///
 $sage-type-specs: (
   // Headings
   "heading-1": (
