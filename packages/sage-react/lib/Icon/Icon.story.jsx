@@ -29,16 +29,19 @@ const Template = (args) => <Icon {...args} />;
 export const Default = Template.bind({});
 export const AdjactentType = Template.bind({});
 AdjactentType.decorators = [
-  (Story) => {
-    console.log(Story().props);
-    return (
-      <>
-        <div style={{ display: 'flex' }}>
-          <Story />
-          <p className={`${SageClassnames.TYPE.HEADING_2} ${SageClassnames.SPACERS.XS_LEFT}`}>I am a Heading 2 type spec</p>
-        </div>
-        <p>Watch how the icon becomes more aligned when you set the <code>adjacentType</code> property to match the type spec to which it is adjacent.</p>
-      </>
-    )
-  },
+  (Story) => (
+    <>
+      <div style={{ display: 'flex' }}>
+        <Story />
+        <p className={`${SageClassnames.TYPE.HEADING_2} ${SageClassnames.SPACERS.XS_LEFT}`}>
+          I am a Heading 2 type spec
+        </p>
+      </div>
+      <p>
+        Watch how the icon becomes more aligned when you set
+        the <code>adjacentType</code> property to match
+        the type spec to which it is adjacent.
+      </p>
+    </>
+  )
 ];

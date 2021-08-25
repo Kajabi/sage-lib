@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { SageTokens } from '../configs';
-import { ICON_ADJACENT_TYPES ,ICON_CARD_COLORS, ICON_SIZES } from './configs';
+import { ICON_ADJACENT_TYPES, ICON_CARD_COLORS, ICON_SIZES } from './configs';
 
 export const Icon = ({
   adjacentType,
