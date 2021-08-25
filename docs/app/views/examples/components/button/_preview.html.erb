@@ -107,14 +107,15 @@ demo_configs = [
     } %>
   <% end %>
 
-  <% [false, true].each do | size | %>
+  <% [false, true].each do | disabled | %>
     <%= sage_component SageButtonGroup, { gap: :sm, spacer: { bottom: :sm }} do %>
       <!-- <%= config[:style].capitalize %> button -->
       <%= sage_component SageButton, {
         value: "Button",
         style: config[:style],
         subtle: true,
-        small: size,
+        small: true,
+        disabled: disabled
       } %>
 
       <!-- <%= config[:style].capitalize %> button (link) -->
@@ -125,7 +126,8 @@ demo_configs = [
           href: "#element-button"
         },
         subtle: true,
-        small: size,
+        small: true,
+        disabled: disabled
       } %>
 
       <!-- <%= config[:style].capitalize %> button (icon-left) -->
@@ -137,7 +139,8 @@ demo_configs = [
           name: "gear"
         },
         subtle: true,
-        small: size,
+        small: true,
+        disabled: disabled
       } %>
 
       <!-- <%= config[:style].capitalize %> button (icon-right) -->
@@ -149,7 +152,8 @@ demo_configs = [
           name: "gear"
         },
         subtle: true,
-        small: size,
+        small: true,
+        disabled: disabled
       } %>
 
       <!-- <%= config[:style].capitalize %> button (icon-only) -->
@@ -161,7 +165,8 @@ demo_configs = [
           name: "dot-menu-horizontal"
         },
         subtle: true,
-        small: size,
+        small: true,
+        disabled: disabled
       } %>
 
       <!-- <%= config[:style].capitalize %> button (tooltip) -->
@@ -176,32 +181,19 @@ demo_configs = [
           "data-js-tooltip": "Tooltip content",
         },
         subtle: true,
-        small: size,
+        small: true,
+        disabled: disabled
       } %>
 
       <!-- <%= config[:style].capitalize %> button (custom content) -->
       <%= sage_component SageButton, {
         style: config[:style],
         subtle: true,
-        small: size
+        small: true,
+        disabled: disabled
       } do %>
         <strong>Custom</strong> <em>content</em>
       <% end %>
-
-      <!-- <%= config[:style].capitalize %> button (tooltip) -->
-      <%= sage_component SageButton, {
-        value: "Icon only",
-        style: config[:style],
-        icon: {
-          style: "only",
-          name: "add-circle"
-        },
-        attributes: {
-          "data-js-tooltip": "Tooltip content",
-        },
-        small: size,
-        disabled: true
-      } %>
 
     <% end %>
   <% end %>
