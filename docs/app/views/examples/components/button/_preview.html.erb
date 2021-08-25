@@ -27,14 +27,14 @@ demo_configs = [
 
   <% [false, true].each do | disabled | %>
     <%= sage_component SageButtonGroup, { gap: :sm, spacer: { bottom: :sm }} do %>
-      <!-- Primary button -->
+      <!-- <%= config[:style].capitalize %> button -->
       <%= sage_component SageButton, {
         value: "Button",
         style: config[:style],
         disabled: disabled
       } %>
 
-      <!-- Primary submit button -->
+      <!-- <%= config[:style].capitalize %> submit button -->
       <%= sage_component SageButton, {
         value: "Submit",
         style: config[:style],
@@ -44,7 +44,7 @@ demo_configs = [
         }
       } %>
 
-      <!-- Primary button (link) -->
+      <!-- <%= config[:style].capitalize %> button (link) -->
       <%= sage_component SageButton, {
         value: "Link",
         style: config[:style],
@@ -54,7 +54,7 @@ demo_configs = [
         disabled: disabled
       } %>
 
-      <!-- Primary button (icon-left) -->
+      <!-- <%= config[:style].capitalize %> button (icon-left) -->
       <%= sage_component SageButton, {
         value: "Left icon",
         style: config[:style],
@@ -65,7 +65,7 @@ demo_configs = [
         disabled: disabled
       } %>
 
-      <!-- Primary button (icon-right) -->
+      <!-- <%= config[:style].capitalize %> button (icon-right) -->
       <%= sage_component SageButton, {
         value: "Right icon",
         style: config[:style],
@@ -76,7 +76,7 @@ demo_configs = [
         disabled: disabled
       } %>
 
-      <!-- Primary button (icon-only) -->
+      <!-- <%= config[:style].capitalize %> button (icon-only) -->
       <%= sage_component SageButton, {
         value: "Icon only",
         style: config[:style],
@@ -87,7 +87,7 @@ demo_configs = [
         disabled: disabled
       } %>
 
-      <!-- Primary button (custom content) -->
+      <!-- <%= config[:style].capitalize %> button (custom content) -->
       <%= sage_component SageButton, {
         style: config[:style],
         disabled: disabled,
@@ -109,7 +109,7 @@ demo_configs = [
 
   <% [false, true].each do | size | %>
     <%= sage_component SageButtonGroup, { gap: :sm, spacer: { bottom: :sm }} do %>
-      <!-- Primary button -->
+      <!-- <%= config[:style].capitalize %> button -->
       <%= sage_component SageButton, {
         value: "Button",
         style: config[:style],
@@ -117,7 +117,7 @@ demo_configs = [
         small: size,
       } %>
 
-      <!-- Primary button (link) -->
+      <!-- <%= config[:style].capitalize %> button (link) -->
       <%= sage_component SageButton, {
         value: "Link",
         style: config[:style],
@@ -128,7 +128,7 @@ demo_configs = [
         small: size,
       } %>
 
-      <!-- Primary button (icon-left) -->
+      <!-- <%= config[:style].capitalize %> button (icon-left) -->
       <%= sage_component SageButton, {
         value: "Left icon",
         style: config[:style],
@@ -140,7 +140,7 @@ demo_configs = [
         small: size,
       } %>
 
-      <!-- Primary button (icon-right) -->
+      <!-- <%= config[:style].capitalize %> button (icon-right) -->
       <%= sage_component SageButton, {
         value: "Right icon",
         style: config[:style],
@@ -152,7 +152,7 @@ demo_configs = [
         small: size,
       } %>
 
-      <!-- Primary button (icon-only) -->
+      <!-- <%= config[:style].capitalize %> button (icon-only) -->
       <%= sage_component SageButton, {
         value: "Icon only",
         style: config[:style],
@@ -164,7 +164,7 @@ demo_configs = [
         small: size,
       } %>
 
-      <!-- Primary button (tooltip) -->
+      <!-- <%= config[:style].capitalize %> button (tooltip) -->
       <%= sage_component SageButton, {
         value: "Icon only",
         style: config[:style],
@@ -179,7 +179,7 @@ demo_configs = [
         small: size,
       } %>
 
-      <!-- Primary button (custom content) -->
+      <!-- <%= config[:style].capitalize %> button (custom content) -->
       <%= sage_component SageButton, {
         style: config[:style],
         subtle: true,
@@ -187,6 +187,22 @@ demo_configs = [
       } do %>
         <strong>Custom</strong> <em>content</em>
       <% end %>
+
+      <!-- <%= config[:style].capitalize %> button (tooltip) -->
+      <%= sage_component SageButton, {
+        value: "Icon only",
+        style: config[:style],
+        icon: {
+          style: "only",
+          name: "add-circle"
+        },
+        attributes: {
+          "data-js-tooltip": "Tooltip content",
+        },
+        small: size,
+        disabled: true
+      } %>
+
     <% end %>
   <% end %>
 <% end %>
