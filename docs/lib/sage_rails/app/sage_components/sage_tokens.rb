@@ -296,7 +296,7 @@ module SageTokens
 
   STATUSES = ["danger", "draft", "info", "locked", "published", "warning"]
 
-  # All type specs. See `type-specs_scss` to keep in sync.
+  # All type specs. Keep in sync with `packages/sage-assets/lib/stylesheets/tokens/_type_specs.scss`
   TYPE_SPECS = [
     "heading-1", "heading-2", "heading-3", "heading-4", "heading-5", "heading-6",
     "nav", "nav-sub",
@@ -305,7 +305,7 @@ module SageTokens
     "body-xsmall", "body-xsmall-med", "body-xsmall-semi", "body-xsmall-bold",
   ]
 
-  # Only the base type specs for which we have responsive pairings of size and leading. See `sage-font-size` token as an example.
+  # Aliasses for responsive pairings of size and leading. Keep in sync with `sage-font-size` token as an example.
   RESPONSIVE_TYPE_SPECS = [
     "h1", "h2", "h3", "h4", "h5", "h6",
     "body", "body-sm", "body-xs",
