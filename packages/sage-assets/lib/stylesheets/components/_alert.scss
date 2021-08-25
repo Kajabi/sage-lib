@@ -51,7 +51,7 @@ $-alert-icon-colors: (
     }
 
     .sage-alert__icon::before {
-      line-height: sage-line-height(medium);
+      line-height: sage-line-height(h6);
     }
 
     .sage-alert__actions a:not([class]) {
