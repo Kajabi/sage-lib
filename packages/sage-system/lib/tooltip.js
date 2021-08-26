@@ -16,8 +16,8 @@ Sage.tooltip = (function() {
   // can resolve it lingering when it shouldn't.
 
   function init(el) {
-    el.addEventListener("mouseenter", buildToolTip);
-    // el.addEventListener("focus", buildToolTip);
+    // el.addEventListener("mouseenter", buildToolTip);
+    el.addEventListener("focus", buildToolTip);
     el.addEventListener("mouseleave", removeTooltip);
     // el.addEventListener("blur", removeTooltip);
   }
@@ -33,12 +33,12 @@ Sage.tooltip = (function() {
   function buildToolTip(evt) {
     if (!evt.target.hasAttribute(DATA_ATTR)) return;
 
-    var pos = evt.target.getAttribute(`${DATA_ATTR}-position`) || "top";
+    var pos = evt.target.getAttribute(`${DATA_ATTR}-position`) || "center";
     var tooltip = document.createElement("div");
     tooltip.className = TOOLTIP_CLASS;
     tooltip.innerHTML = evt.target.getAttribute(DATA_ATTR);
     tooltip.position = evt.target.getAttribute(`${DATA_ATTR}-position`);
-    tooltip.dataItems = [`${DATA_ATTR}-theme`, `${DATA_ATTR}-size`];
+    tooltip.dataItems = [`${DATA_ATTR}-size`];
 
     if (!tooltip.innerHTML.length > 0) return;
     generateClasses(tooltip, evt);
@@ -73,36 +73,31 @@ Sage.tooltip = (function() {
     var parentCoords = parent.getBoundingClientRect(),
       dist = 8,
       left,
-      top;
+      top,
+      minWidth = 60,
+      pointerLeft,
+      pointerRight;
 
-    switch (position) {
-      case "left":
-        top = (parseInt(parentCoords.top) + parseInt(parentCoords.bottom)) / 2 - tooltip.offsetHeight / 2;
-        left = parseInt(parentCoords.left) - dist - tooltip.offsetWidth;
-        if (parseInt(parentCoords.left) - tooltip.offsetWidth < 0) {
-          left = dist;
-        }
-        break;
-      case "right":
-        top = (parseInt(parentCoords.top) + parseInt(parentCoords.bottom)) / 2 - tooltip.offsetHeight / 2;
-        left = parentCoords.right + dist;
-        if (parseInt(parentCoords.right) + tooltip.offsetWidth > document.documentElement.clientWidth) {
-          left =  document.documentElement.clientWidth - tooltip.offsetWidth - dist;
-        }
-        break;
-      case "bottom":
-        top = parseInt(parentCoords.bottom) + dist;
-        left = parseInt(parentCoords.left) + (parent.offsetWidth - tooltip.offsetWidth) / 2;
-        break;
-      default:
-      case "top":
-        top = parseInt(parentCoords.top) - tooltip.offsetHeight - dist;
-        left = parseInt(parentCoords.left) + (parent.offsetWidth - tooltip.offsetWidth) / 2;
+    console.log(parentCoords);
+
+    top = parseInt(parentCoords.top) - tooltip.offsetHeight - dist;
+    left = parseInt(parentCoords.left) + (parent.offsetWidth - tooltip.offsetWidth) / 2;
+
+    pointerLeft = (parent.offsetWidth - tooltip.offsetWidth) / 2 + "px";
+    pointerRight = ((tooltip.offsetWidth / 2) - (parent.offsetWidth / 2)) + "px";
+
+    if (tooltip.offsetWidth < minWidth) {
+      pointerLeft = "-50%";
+      pointerRight = "50%";
     }
+
+    console.log("pointer position: ", pointerLeft);
 
     tooltip.style.left = left + "px";
     tooltip.style.top = top + pageYOffset + "px";
     tooltip.classList.add(`${TOOLTIP_CLASS}--${position}`);
+    tooltip.style.setProperty("--pointer-left", pointerLeft);
+    tooltip.style.setProperty("--pointer-right", pointerRight);
   }
 
   return {

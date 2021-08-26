@@ -42,6 +42,7 @@ $-tooltip-large-maxwidth: rem(320px);
   &::after {
     content: "";
     position: absolute;
+    
   }
 }
 
@@ -49,7 +50,7 @@ $-tooltip-large-maxwidth: rem(320px);
   position: relative;
 }
 
-.sage-tooltip--top {
+.sage-tooltip--center {
   &::after {
     left: 50%;
     top: 100%;
@@ -60,36 +61,25 @@ $-tooltip-large-maxwidth: rem(320px);
   }
 }
 
-.sage-tooltip--bottom {
-  &::after {
-    left: 50%;
-    bottom: 100%;
-    transform: translate3d(-50%, 0, 0);
-    border-left: $-tooltip-arrow-inactive;
-    border-right: $-tooltip-arrow-inactive;
-    border-bottom: $-tooltip-arrow-active;
-  }
-}
-
 .sage-tooltip--left {
   &::after {
-    left: 100%;
-    bottom: 50%;
-    transform: translate3d(0, 50%, 0);
-    border-top: $-tooltip-arrow-inactive;
-    border-bottom: $-tooltip-arrow-inactive;
-    border-left: $-tooltip-arrow-active;
+    left: 50%;
+    top: 100%;
+    transform: translate3d(var(--pointer-left), 0, 0);
+    border-left: $-tooltip-arrow-inactive;
+    border-right: $-tooltip-arrow-inactive;
+    border-top: $-tooltip-arrow-active;
   }
 }
 
 .sage-tooltip--right {
   &::after {
-    left: 0;
-    bottom: 50%;
-    transform: translate3d(-100%, 50%, 0);
-    border-top: $-tooltip-arrow-inactive;
-    border-bottom: $-tooltip-arrow-inactive;
-    border-right: $-tooltip-arrow-active;
+    right: 50%;
+    top: 100%;
+    transform: translate3d(var(--pointer-right), 0, 0);
+    border-left: $-tooltip-arrow-inactive;
+    border-right: $-tooltip-arrow-inactive;
+    border-top: $-tooltip-arrow-active;
   }
 }
 
