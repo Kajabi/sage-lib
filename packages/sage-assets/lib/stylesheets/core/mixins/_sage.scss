@@ -290,8 +290,10 @@
 
   @media (min-width: sage-breakpoint(md-min)) {
     display: grid;
+    // grid-auto-columns: auto;
+    // grid-auto-flow: column;
+    grid-template-columns: 1fr auto;
     grid-auto-columns: auto;
-    grid-auto-flow: column;
   }
 }
 

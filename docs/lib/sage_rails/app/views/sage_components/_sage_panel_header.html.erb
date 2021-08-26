@@ -8,4 +8,9 @@
     </h1>
   <% end %>
   <%= component.content %>
+  <% if component.subtext %>
+    <h2 class="sage-panel__subtext">
+      <%= component.subtext %>
+    </h2>
+  <% end %>
 </header>
