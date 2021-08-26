@@ -7,6 +7,19 @@
 
 $-icon-font-path: "../fonts/sage";
 
+// NOTE: These should be kept in sync with line-height pairings from `packages/sage-assets/lib/stylesheets/tokens/_line_height.scss`
+$-icon-beside-type: (
+  "h1",
+  "h2",
+  "h3",
+  "h4",
+  "h5",
+  "h6",
+  "body",
+  "body-sm",
+  "body-xs",
+);
+
 // Icon font setup
 @font-face {
   font-family: "Sage";
@@ -82,6 +95,21 @@ $-icon-font-path: "../fonts/sage";
   }
 }
 
+//
+// Sets up height and line-height adjustments to better align next to
+// various responsive type specs
+//
+@each $type-spec in $-icon-beside-type {
+  .sage-icon--adjacent-type-#{$type-spec} {
+    height: sage-line-height($type-spec);
+
+    &::before {
+      height: sage-line-height($type-spec);
+      line-height: sage-line-height($type-spec);
+    }
+  }
+}
+
 @keyframes sage-icon-spin {
   0% {
     transform: rotate(0deg);
@@ -132,3 +160,4 @@ $-icon-font-path: "../fonts/sage";
     --background-color: #{sage-color-combo($-color, default, background)};
   }
 }
+

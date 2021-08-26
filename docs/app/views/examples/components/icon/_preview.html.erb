@@ -21,6 +21,30 @@
   <% end %>
 <% end %>
 
+<h3>Alignment next to Type</h3>
+<%= md("
+Since a common use is to place an icon inline next to text in a variety of forms, we provide the opportunity to indicate that an icon is beside content a particular type spec.
+The effect is that the icon's `height` and `line-height` are updated to match the spec responsively.
+This can be used in combination with the different icon sizes.
+and also be used with a vareity of layout techniques or components such as CSS flexbox (used below) or grid templates within `SageCardRow` or `SagePanelRow`.
+") %>
+<div style="display: flex;">
+  <%= sage_component SageIcon, { icon: "check-circle", beside_type: "h2", spacer: { right: "xs" } } %>
+  <h2 class="<%= SageClassnames::TYPE::HEADING_2 %>">Heading 2 Lorem ipsum dolor sit</h2>
+</div>
+<div style="display: flex;">
+  <%= sage_component SageIcon, { icon: "check-circle", beside_type: "h4", spacer: { right: "xs" } } %>
+  <h4 class="<%= SageClassnames::TYPE::HEADING_4 %>">Heading 4 Lorem ipsum dolor sit</h4>
+</div>
+<div style="display: flex;">
+  <%= sage_component SageIcon, { icon: "check-circle", beside_type: "body", spacer: { right: "xs" } } %>
+  <p class="<%= SageClassnames::TYPE::BODY %>">Body Lorem ipsum dolor sit</p>
+</div>
+<div style="display: flex;">
+  <%= sage_component SageIcon, { icon: "check-circle", beside_type: "body-sm", spacer: { right: "xs" } } %>
+  <p class="<%= SageClassnames::TYPE::BODY_SMALL %>">Body Small Lorem ipsum dolor sit</p>
+</div>
+
 <h3>Background Colors</h3>
 <%= sage_component SageCardList, {} do %>
   <% SageTokens::STATUSES.each do | color | %>
