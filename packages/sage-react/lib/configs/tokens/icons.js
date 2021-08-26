@@ -25,6 +25,7 @@ export const TOKENS_ICONS = {
   CALENDAR_DATE: 'calendar-date',
   CALENDAR_SCHEDULE: 'calendar-schedule',
   CALENDAR_SIMPLE: 'calendar-simple',
+  CALENDLY: 'calendly',
   CARD_UPDATE: 'card-update',
   CARET_DOWN: 'caret-down',
   CARET_LEFT: 'caret-left',
