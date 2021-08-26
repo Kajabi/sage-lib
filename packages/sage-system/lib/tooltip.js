@@ -16,8 +16,8 @@ Sage.tooltip = (function() {
   // can resolve it lingering when it shouldn't.
 
   function init(el) {
-    // el.addEventListener("mouseenter", buildToolTip);
-    el.addEventListener("focus", buildToolTip);
+    el.addEventListener("mouseenter", buildToolTip);
+    // el.addEventListener("focus", buildToolTip);
     el.addEventListener("mouseleave", removeTooltip);
     // el.addEventListener("blur", removeTooltip);
   }
