@@ -27,45 +27,6 @@
       style: "secondary",
     } %>
     <%= sage_component SageButton, {
-      value: "Content",
-      attributes: {
-        href: pages_content_path(:voice_tone),
-        title: "Content Guides"
-      },
-      subtle: true,
-      icon: {
-        style: "left",
-        name: "pen"
-      },
-      style: "secondary",
-    } %>
-    <%= sage_component SageButton, {
-      value: "Design",
-      attributes: {
-        href: pages_design_path(:color),
-        title: "Design Core"
-      },
-      subtle: true,
-      icon: {
-        style: "left",
-        name: "customize"
-      },
-      style: "secondary",
-    } %>
-    <%= sage_component SageButton, {
-      value: "Layout",
-      attributes: {
-        href: pages_layout_path(:container),
-        title: "Layout Patterns"
-      },
-      subtle: true,
-      icon: {
-        style: "left",
-        name: "stack"
-      },
-      style: "secondary",
-    } %>
-    <%= sage_component SageButton, {
       value: "Components",
       attributes: {
         href: pages_component_path(sorted_sage_components.first[:title]),
@@ -75,6 +36,46 @@
       icon: {
         style: "left",
         name: "folder"
+      },
+      style: "secondary",
+    } %>
+    <%= sage_component SageButton, {
+      value: "Patterns",
+      attributes: {
+        href: pages_patterns_path(:panels_cards),
+        title: "Common Patterns"
+      },
+      subtle: true,
+      icon: {
+        style: "left",
+        name: "stack"
+      },
+      style: "secondary",
+    } %>
+    <!-- COMING SOON 
+    <%= sage_component SageButton, {
+      value: "Interactions",
+      attributes: {
+        href: pages_interactions_path(:container),
+        title: "JS Interactions"
+      },
+      subtle: true,
+      icon: {
+        style: "left",
+        name: "select"
+      },
+      style: "secondary",
+    } %>-->
+    <%= sage_component SageButton, {
+      value: "Helpers",
+      attributes: {
+        href: pages_helpers_path(:spacing),
+        title: "Style Helpers"
+      },
+      subtle: true,
+      icon: {
+        style: "left",
+        name: "code"
       },
       style: "secondary",
     } %>

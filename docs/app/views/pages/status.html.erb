@@ -1,43 +1,27 @@
 <%= content_for :heading do %>
-<%= md("
+<%= md(%(
 # Code Status
 
-Our Components and the platforms they're available in.
-") %>
+<p class="docs-heading__lead">Our Components and the platforms that they are available on.</p>
+)) %>
   <%= render "status_key" %>
 <% end %>
-<%= content_for :quick_links do %>
-  <div class="quick-links">
-    <h2 class="quick-links__title t-sage-heading-5">Contents</h2>
-    <h3 class="quick-links__subhead">Components</h3>
-    <ul class="quick-links__body">
-      <% sorted_sage_all_components.each do |component| %>
-        <li class="quick-links__item">
-          <a href="#<%= component[:title] %>" class="quick-links__link"><%= component[:title].titleize %></a>
-        </li>
+<div class="sage-table-wrapper">
+  <div class="sage-table-wrapper__overflow">
+    <table class="sage-table sage-table--status">
+      <thead>
+        <tr>
+          <th>Component</th>
+          <th>HTML/CSS</th>
+          <th>A11y</th>
+          <th>Documentation</th>
+          <th>Rails</th>
+          <th>React</th>
+        </tr>
+      </thead>
+      <% sorted_sage_all_components.each do |item| %>
+        <%= render "status_item", item: item %>
       <% end %>
-    </ul>
-  </div>
-<% end %>
-<div class="docs-container">
-  <h2 class="t-sage-heading-2">Components</h2>
-  <div class="sage-table-wrapper">
-    <div class="sage-table-wrapper__overflow">
-      <table class="sage-table sage-table--status">
-        <thead>
-          <tr>
-            <th>Component</th>
-            <th>HTML/CSS</th>
-            <th>A11y</th>
-            <th>Documentation</th>
-            <th>Rails</th>
-            <th>React</th>
-          </tr>
-        </thead>
-        <% sorted_sage_all_components.each do |component| %>
-          <%= render "status_item", item: component %>
-        <% end %>
-      </table>
-    </div>
+    </table>
   </div>
 </div>
