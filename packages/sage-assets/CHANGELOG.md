@@ -3,6 +3,43 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.45.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.44.6...@kajabi/sage-assets@0.45.0) (2021-08-25)
+
+
+### Bug Fixes
+
+* **button:** adjust line-height for trigger to valid setting ([0f9b9b8](https://github.com/Kajabi/sage-lib/commit/0f9b9b8999165e12a8f0ed8f92cd2ec3f8f00f8d))
+* **dynamic_select:** update spacing values to int ([5fdd3ca](https://github.com/Kajabi/sage-lib/commit/5fdd3ca3a4f515afa84cb2cf1bcda1ec29b97d10))
+* **dynamic-select:** fix scss linter errors ([60489f4](https://github.com/Kajabi/sage-lib/commit/60489f4d33f7af3bcdb4301b9d91d58e3a4f0c7a))
+* **dynamic-select:** fix scss nesting ([d2191da](https://github.com/Kajabi/sage-lib/commit/d2191da73770118f16517abbed08c7bc4e609344))
+* **expandable-card:** ensure card is hidden by default ([662f570](https://github.com/Kajabi/sage-lib/commit/662f5701a0ce3863bd6381f185666e26e0aa331d))
+* **grid-template:** free up the fixed item vertical positioning control a bit ([5e33efd](https://github.com/Kajabi/sage-lib/commit/5e33efdb8ba06afd7bf960798e0ccf7173ffc1cd))
+* **icons:** menu rename ([da4d059](https://github.com/Kajabi/sage-lib/commit/da4d059978d8ca47917cb77f2fca82f548d5ad62))
+* **icons:** menu rename ([bf4b20a](https://github.com/Kajabi/sage-lib/commit/bf4b20aafe8109b01e503bbb6e5e4db64b9885b7))
+* **icons:** menu rename ([59a6538](https://github.com/Kajabi/sage-lib/commit/59a65387106f7e18c5ed0b42a621c29abaa106ec))
+* **icons:** updated icon names ([71f58b1](https://github.com/Kajabi/sage-lib/commit/71f58b11645d33794a3bd136cd77f79f21d34f6b))
+* **icons:** updated icon names ([1ed3d70](https://github.com/Kajabi/sage-lib/commit/1ed3d7079e836639f7f3a636659232e7a4a13cdd))
+* **icons:** updated icon names ([38ec6b2](https://github.com/Kajabi/sage-lib/commit/38ec6b24f0c8a8c393b8cef72aa2ad410e0a4120))
+* **input group:** adjust styling to allow including a message in input group to not break layout ([63b3b19](https://github.com/Kajabi/sage-lib/commit/63b3b19b85ec2759404a64cea0c816a4430f72a6))
+* **input group:** update position styles ([f49a38f](https://github.com/Kajabi/sage-lib/commit/f49a38f65eb3a4001cc3cbb503b2e3408ea52421))
+* **loader:** fix linting ([b74c53a](https://github.com/Kajabi/sage-lib/commit/b74c53a3f5b6dbfd1e49bf52a01f782aca0139fc))
+
+
+### Features
+
+* **button group:** adds wrap option to button group ([9e98fe2](https://github.com/Kajabi/sage-lib/commit/9e98fe20fd98b22510dea4a1a8dab137fbc2bb3e)), closes [#690](https://github.com/Kajabi/sage-lib/issues/690)
+* **dynamic-select:** add styles for the dynamic select ([2184692](https://github.com/Kajabi/sage-lib/commit/2184692576ef9d6bdf26ba15d739f63f528b4a4e))
+* **form-select:** reduce top padding ([b580590](https://github.com/Kajabi/sage-lib/commit/b5805908e342c91a43bdba1fd878be4b11ca2a5f))
+* **icons:** added new icons ([6f67737](https://github.com/Kajabi/sage-lib/commit/6f6773733ea63c4778860ea40bf27669e4360b16))
+* **icons:** added new icons ([2376723](https://github.com/Kajabi/sage-lib/commit/23767238384a303ae2a542a5a7e3a54a2ed428e9))
+* **icons:** added new icons ([e98c541](https://github.com/Kajabi/sage-lib/commit/e98c541d797a9f1ef30eba95682d6ccc2d00ee9d))
+* **loader:** adds new 'success' variant ([7390936](https://github.com/Kajabi/sage-lib/commit/7390936ff7c351cfd1ae55a18ef96e60a7372738))
+* **sage choice:** removes margin on choice tabs using button group container ([99fa1c0](https://github.com/Kajabi/sage-lib/commit/99fa1c01480cc19c269b7d796c4a9d1ffdb1fc81))
+
+
+
+
+
 ## 0.44.6 (2021-08-18)
 
 **Note:** Version bump only for package @kajabi/sage-assets

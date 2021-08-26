@@ -3,6 +3,53 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.12.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.11.7...@kajabi/sage@4.12.0) (2021-08-25)
+
+
+### Bug Fixes
+
+* **card-row:** correct vertical align schema ([6928b80](https://github.com/Kajabi/sage-lib/commit/6928b802ba07ff618e9f0c6a91173bf81327bdda))
+* **dynamic_select:** add documentation and sample code ([4fdc169](https://github.com/Kajabi/sage-lib/commit/4fdc16981d68cbd74008fc601396d14da96009ae))
+* **dynamic_select:** add param for pagination size ([1c63d38](https://github.com/Kajabi/sage-lib/commit/1c63d389c75d4d6d9ee2833844fef5cbfb3e27d1))
+* **dynamic_select:** conditionally render data attrs ([0b4564e](https://github.com/Kajabi/sage-lib/commit/0b4564e75c93c1c8fb3815e2b8ebf066ca7e5355))
+* **icons:** menu rename ([da4d059](https://github.com/Kajabi/sage-lib/commit/da4d059978d8ca47917cb77f2fca82f548d5ad62))
+* **icons:** menu rename ([bf4b20a](https://github.com/Kajabi/sage-lib/commit/bf4b20aafe8109b01e503bbb6e5e4db64b9885b7))
+* **icons:** menu rename ([59a6538](https://github.com/Kajabi/sage-lib/commit/59a65387106f7e18c5ed0b42a621c29abaa106ec))
+* **icons:** updated icon names ([71f58b1](https://github.com/Kajabi/sage-lib/commit/71f58b11645d33794a3bd136cd77f79f21d34f6b))
+* **icons:** updated icon names ([1ed3d70](https://github.com/Kajabi/sage-lib/commit/1ed3d7079e836639f7f3a636659232e7a4a13cdd))
+* **icons:** updated icon names ([38ec6b2](https://github.com/Kajabi/sage-lib/commit/38ec6b24f0c8a8c393b8cef72aa2ad410e0a4120))
+* **link:** added component.generated_css_classes last ([56234fb](https://github.com/Kajabi/sage-lib/commit/56234fbd17f27886725472d5c3e9f8a02a79e567))
+* **link:** logic fix ([fc918c3](https://github.com/Kajabi/sage-lib/commit/fc918c3bbc85412716e79db66f95d6cb399c274f))
+* **link:** logic fix ([b7065bd](https://github.com/Kajabi/sage-lib/commit/b7065bd3bffd66071eaf8dc00d6046873378fdd4))
+* **link:** remove noopener value ([3048325](https://github.com/Kajabi/sage-lib/commit/30483253244bedc893efcef05cf8f7cceae8df3f))
+* **link:** removed the attribute prop in favor of html_attributes ([bfe70ea](https://github.com/Kajabi/sage-lib/commit/bfe70ea509633d4a304dc349d5cc2254246ec2aa))
+* **link:** switch to content_tag for generating elements ([ebd84cd](https://github.com/Kajabi/sage-lib/commit/ebd84cd88a85e555216475a96e44bb6f6864536d))
+* **rails sagecomponent class:** avoid stripping whitespace if component contains pre html tags ([f68bbb5](https://github.com/Kajabi/sage-lib/commit/f68bbb5641d9082d00510d790272c2ad802c2d6e))
+
+
+### Features
+
+* **button group:** adds wrap option to button group ([9e98fe2](https://github.com/Kajabi/sage-lib/commit/9e98fe20fd98b22510dea4a1a8dab137fbc2bb3e)), closes [#690](https://github.com/Kajabi/sage-lib/issues/690)
+* **dynamic-select:** add markup and ruby class ([4819e50](https://github.com/Kajabi/sage-lib/commit/4819e50a9ad69e6fcda90e28b44d790c06b9dc5a))
+* **icons:** added new icons ([6f67737](https://github.com/Kajabi/sage-lib/commit/6f6773733ea63c4778860ea40bf27669e4360b16))
+* **icons:** added new icons ([2376723](https://github.com/Kajabi/sage-lib/commit/23767238384a303ae2a542a5a7e3a54a2ed428e9))
+* **icons:** added new icons ([e98c541](https://github.com/Kajabi/sage-lib/commit/e98c541d797a9f1ef30eba95682d6ccc2d00ee9d))
+* **link:** added preview example ([913ee7e](https://github.com/Kajabi/sage-lib/commit/913ee7eb268c877306d037a1cc58f53cc2b4a5bc))
+* **link:** added prop update ([cd2af01](https://github.com/Kajabi/sage-lib/commit/cd2af01fd1e7d6a0a37aba09d259fca2eaf0df79))
+* **link:** preview updates ([d656ec6](https://github.com/Kajabi/sage-lib/commit/d656ec69c988e253dbdc3d8a69a1ad00245d064a))
+* **link:** refactored to use link_to ([f4a8bba](https://github.com/Kajabi/sage-lib/commit/f4a8bbaa5c4759f7eae5c1799cdb26ee9af41b06))
+* **loader:** adds new 'success' variant ([7390936](https://github.com/Kajabi/sage-lib/commit/7390936ff7c351cfd1ae55a18ef96e60a7372738))
+* **loader:** updates React component ([8832e3e](https://github.com/Kajabi/sage-lib/commit/8832e3e4ff3eceff355b80a19af5d3b1bf7c4f1d))
+
+
+### Reverts
+
+* **revert whitespace:** remove changes that reverted a revert ([1b0efd8](https://github.com/Kajabi/sage-lib/commit/1b0efd8fb110189df1f594502fc1290ab7f6385e))
+
+
+
+
+
 ## 4.11.7 (2021-08-18)
 
 **Note:** Version bump only for package @kajabi/sage

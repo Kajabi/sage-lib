@@ -1,6 +1,6 @@
 import React from 'react';
 import { selectArgs } from '../story-support/helpers';
-import { SageTokens } from '../configs';
+import { SageClassnames, SageTokens } from '../configs';
 import { Icon } from './Icon';
 
 export default {
@@ -8,6 +8,7 @@ export default {
   component: Icon,
   argTypes: {
     ...selectArgs({
+      adjacentType: Icon.ADJACENT_TYPES,
       cardColor: Icon.CARD_COLORS,
       color: Icon.COLORS,
       icon: SageTokens.ICONS,
@@ -26,3 +27,21 @@ export default {
 const Template = (args) => <Icon {...args} />;
 
 export const Default = Template.bind({});
+export const AdjactentType = Template.bind({});
+AdjactentType.decorators = [
+  (Story) => (
+    <>
+      <div style={{ display: 'flex' }}>
+        <Story />
+        <p className={`${SageClassnames.TYPE.HEADING_2} ${SageClassnames.SPACERS.XS_LEFT}`}>
+          I am a Heading 2 type spec
+        </p>
+      </div>
+      <p>
+        Watch how the icon becomes more aligned when you set
+        the <code>adjacentType</code> property to match
+        the type spec to which it is adjacent.
+      </p>
+    </>
+  )
+];

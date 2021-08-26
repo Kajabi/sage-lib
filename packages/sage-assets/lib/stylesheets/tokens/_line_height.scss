@@ -19,6 +19,10 @@ $sage-line-heights: (
 ///
 /// Sage responsive line height/leading custom props
 ///
+/// NOTE: Changes to these configurations should also be synced up in the following know places:
+///   - `docs/lib/sage_rails/app/sage_components/sage_tokens.rb`
+///   - `packages/sage-assets/lib/stylesheets/components/_icon.scss`
+///   - `packages/sage-react/lib/Icon/configs.js`
 :root {
   --sage-line-height-body-xs: #{map-get($sage-line-heights, xs)};
   --sage-line-height-body-sm: #{map-get($sage-line-heights, sm)};
