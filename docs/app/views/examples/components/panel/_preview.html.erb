@@ -17,7 +17,10 @@ Ut elementum id leo ac fringilla.
 <%= sage_component SagePanelHeader, { title: "Basic Panel" } %>
 
 <%= sage_component SagePanel, {} do %>
-  <%= sage_component SagePanelHeader, { title: "Panel Header" } do %>
+  <%= sage_component SagePanelHeader, {
+      subtext: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      title: "Panel Header"
+    } do %>
     <%= sage_component SageButton, {
       value: "More info",
       subtle: true,
@@ -41,7 +44,7 @@ Ut elementum id leo ac fringilla.
 Panels are rich containers that allow for grouping and organizing content details. They have the following overall setup available:
 
 - **Header**
-  `.sage-panel__header` 
+  `.sage-panel__header`
   (optional) This area usually contains at least a title (`sage-panel__title`)
   and often an icon or menu flanking the right corner.
   It employs the Sage Row layout base with `24px` gutters.
@@ -56,7 +59,7 @@ Panels are rich containers that allow for grouping and organizing content detail
   Each of the Panel components is explained and demonstrated in more detail below.
 
 - **Footer**
-  `.sage-panel__footer` 
+  `.sage-panel__footer`
   (optional) This area often contains one or more buttons
   that can be sent to the right edge of the panel
   with the `sage-panel__footer--align-right` modifier.
