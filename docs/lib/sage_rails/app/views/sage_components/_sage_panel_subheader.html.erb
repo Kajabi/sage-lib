@@ -8,4 +8,10 @@
     </h2>
   <% end %>
   <%= component.content %>
+  <% if component.subtext.present? or content_for? :sage_panel_header_subtext %>
+    <div class="sage-panel__subtext">
+      <%= component.subtext if component.subtext.present? %>
+      <%= content_for :sage_panel_header_subtext if content_for? :sage_panel_header_subtext %>
+    </div>
+  <% end %>
 </header>
