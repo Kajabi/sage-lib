@@ -18,7 +18,7 @@ Ut elementum id leo ac fringilla.
 
 <%= sage_component SagePanel, {} do %>
   <%= sage_component SagePanelHeader, {
-      subtext: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      # subtext: "<p>All kinds of awesome, wonderful content can go in here!</p>".html_safe,
       title: "Panel Header"
     } do %>
     <%= sage_component SageButton, {
@@ -30,6 +30,9 @@ Ut elementum id leo ac fringilla.
         style: "only"
       }
     } %>
+    <%= content_for :sage_panel_header_subtext do %>
+      <p>All kinds of awesome, wonderful content can go in here! <%= link_to "Learn more", "//example.com" %></p>
+    <% end %>
   <% end %>
   <%= sage_component SagePanelBlock, { type_block: true } do %>
     <%= sample_copy.html_safe %>
