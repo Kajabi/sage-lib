@@ -59,6 +59,7 @@
   grid-template-columns: 1fr auto;
   grid-auto-columns: auto;
   column-gap: sage-spacing();
+  row-gap: sage-spacing(2xs);
 }
 
 .sage-panel__list {
@@ -111,7 +112,6 @@
 
 .sage-panel__subtext {
   grid-column: 1 / -1;
-  margin-top: sage-spacing(2xs);
   color: sage-color(charcoal, 100);
 }
 
