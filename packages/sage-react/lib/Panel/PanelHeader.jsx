@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { PanelSubtext } from './PanelSubtext';
 import { PanelTitle } from './PanelTitle';
 
 export const PanelHeader = ({
   children,
   className,
+  subtext,
   title,
   titleTag,
   ...rest
@@ -14,12 +16,16 @@ export const PanelHeader = ({
       <PanelTitle tag={titleTag}>{title}</PanelTitle>
     )}
     {children}
+    {subtext && (
+      <PanelSubtext>{subtext}</PanelSubtext>
+    )}
   </div>
 );
 
 PanelHeader.defaultProps = {
   children: null,
   className: '',
+  subtext: null,
   title: null,
   titleTag: 'h2',
 };
@@ -27,6 +33,7 @@ PanelHeader.defaultProps = {
 PanelHeader.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
+  subtext: PropTypes.node,
   title: PropTypes.string,
   titleTag: PropTypes.string,
 };
