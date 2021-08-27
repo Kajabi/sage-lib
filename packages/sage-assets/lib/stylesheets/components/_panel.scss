@@ -53,8 +53,12 @@
 
 .sage-panel__header,
 .sage-panel__subheader {
-  @include sage-grid-panel-row();
-  row-gap: 0;
+  display: grid;
+  justify-content: space-between;
+  align-items: center;
+  grid-template-columns: 1fr auto;
+  grid-auto-columns: auto;
+  column-gap: sage-spacing();
 }
 
 .sage-panel__list {
@@ -107,6 +111,7 @@
 
 .sage-panel__subtext {
   @extend %t-sage-body;
+  grid-column: 1 / -1;
   margin-top: sage-spacing(2xs);
   color: sage-color(charcoal, 100);
 }
