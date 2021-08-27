@@ -107,7 +107,6 @@
 
 .sage-panel__subtext {
   @extend %t-sage-body;
-  grid-column: 1 / -1;
   margin-top: sage-spacing(2xs);
   color: sage-color(charcoal, 100);
 }
