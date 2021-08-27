@@ -3,6 +3,13 @@
     <% if component.header_image.present? %>
       <%= image_tag component.header_image, alt: "", "aria-hidden": true, class: "sage-modal__header-image" %>
     <% end %>
+    <% if component.icon.present? %>
+      <%= sage_component SageIcon, {
+        icon: component.icon[:name],
+        color: component.icon[:color],
+        css_classes: "sage-modal__header-icon"
+      } %>
+    <% end %>
     <div class="sage-modal__header-text">
       <h1 class="t-sage-heading-4">
         <%= component.title %>
