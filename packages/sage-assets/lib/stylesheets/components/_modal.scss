@@ -113,6 +113,10 @@ $-modal-header-image-size: rem(28px);
   margin-right: sage-spacing(xs);
 }
 
+.sage-modal__header-icon {
+  margin-right: sage-spacing(xs);
+}
+
 .sage-modal__header-aside {
   margin-left: auto;
 }
