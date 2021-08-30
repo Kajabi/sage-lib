@@ -59,6 +59,13 @@
   grid-template-columns: 1fr auto;
   grid-auto-columns: auto;
   column-gap: sage-spacing();
+}
+
+.sage-panel__header {
+  row-gap: sage-spacing(xs);
+}
+
+.sage-panel__subheader {
   row-gap: sage-spacing(2xs);
 }
 
