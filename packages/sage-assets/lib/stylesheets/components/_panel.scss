@@ -63,6 +63,9 @@
 
 .sage-panel__header {
   row-gap: sage-spacing(xs);
+  .sage-panel__subtext {
+    @extend %t-sage-body;
+  }
 }
 
 .sage-panel__list {
@@ -115,6 +118,9 @@
 
 .sage-panel__subheader {
   row-gap: sage-spacing(2xs);
+  .sage-panel__subtext {
+    @extend %t-sage-body-small;
+  }
 }
 
 .sage-panel__subtext {
