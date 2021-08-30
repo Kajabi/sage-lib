@@ -5,7 +5,10 @@ class SageModalContent < SageComponent
       name: SageSchemas::ICON,
       color: [:optional, SageSchemas::COLOR_SLIDER]
     }],
+    help_link: [:optional, Hash],
+    help_title: [:optional, String],
     spacing: [:optional, NilClass, Set.new(["panel", "card"])],
+    subheader: [:optional, String],
     title: [:optional, String],
   })
 

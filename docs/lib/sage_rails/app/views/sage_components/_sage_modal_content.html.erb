@@ -1,28 +1,47 @@
 <% if component.title.present? %>
   <header class="sage-modal__header">
-    <% if component.header_image.present? %>
-      <%= image_tag component.header_image, alt: "", "aria-hidden": true, class: "sage-modal__header-image" %>
-    <% end %>
-    <% if component.icon.present? %>
-      <%= sage_component SageIcon, {
-        icon: component.icon[:name],
-        color: component.icon[:color],
-        css_classes: "sage-modal__header-icon"
-      } %>
-    <% end %>
     <div class="sage-modal__header-text">
-      <h1 class="t-sage-heading-4">
-        <%= component.title %>
-      </h1>
+      <%= sage_component SageCardRow, { grid_template: component.header_image.present? || component.icon.present? ? "ete" : "te" } do %>
+        <% if component.header_image.present? %>
+          <%= image_tag component.header_image, alt: "", "aria-hidden": true, class: "sage-modal__header-image" %>
+        <% end %>
+        <% if component.icon.present? %>
+          <%= sage_component SageIcon, {
+            icon: component.icon[:name],
+            color: component.icon[:color],
+            css_classes: "sage-modal__header-icon"
+          } %>
+        <% end %>
+        <h1 class="t-sage-heading-4">
+          <%= component.title %>
+        </h1>
+        <% if content_for?(:sage_header_aside) %>
+          <aside class="sage-modal__header-aside">
+            <%= content_for :sage_header_aside %>
+          </aside>
+        <% end %>
+      <% end %>
+      <% if component.subheader %>
+        <%= sage_component SageCardRow, { grid_template: "te" } do %>
+          <h2 class="t-sage-heading-6">
+            <%= component.subheader %>
+          </h2>
+          <% if component.help_title %>
+            <%= sage_component SagePopover, {
+              title: component.help_title,
+              icon: "question-circle",
+              trigger_value: "Open Menu",
+              trigger_icon_only: true,
+              link: component.help_link,
+            } %>
+          <% end %>
+        <% end %>
+      <% end %>
       <% if content_for?(:sage_header_indicator) %>
         <%= content_for :sage_header_indicator %>
       <% end %>
     </div>
-    <% if content_for?(:sage_header_aside) %>
-      <aside class="sage-modal__header-aside">
-        <%= content_for :sage_header_aside %>
-      </aside>
-    <% end %>
+    
   </header>
 <% else %>
   <% if content_for?(:sage_header_aside) %>
