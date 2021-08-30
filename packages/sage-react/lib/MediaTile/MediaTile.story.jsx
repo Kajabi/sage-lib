@@ -4,6 +4,7 @@ import { selectArgs } from '../story-support/helpers';
 import { Button } from '../Button';
 import { Label } from '../Label';
 import { MediaTile } from './MediaTile';
+import { MediaTiles } from './MediaTiles';
 
 export default {
   title: 'Sage/Media Tile',
