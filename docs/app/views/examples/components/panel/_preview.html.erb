@@ -50,6 +50,7 @@ Panels are rich containers that allow for grouping and organizing content detail
   `.sage-panel__header`
   (optional) This area usually contains at least a title (`sage-panel__title`)
   and often an icon or menu flanking the right corner.
+  There is also an optional subtext element (`sage-panel__subtext`), useful for documenting the panel objective.
   It employs the Sage Row layout base with `24px` gutters.
 
 - **Body**
@@ -219,6 +220,7 @@ Use one of the tiling pattern modifiers to determine how many tiles appear in a 
 The Panel Subheader provides specific styles for a subheading within a panel.
 It is very similar in configuration to the panel header but shows with smaller type.
 Format the text content itself with `.sage-panel__subtitle`, which can also be used independently.
+There is also an optional subtext element (`sage-panel__subtext`), useful for documenting the panel objective.
 ", use_sage_type: true) %>
 
 <%= sage_component SagePanelSubheader, { title: "Example:" } %>
