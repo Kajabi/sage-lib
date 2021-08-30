@@ -32,6 +32,7 @@ export { Link } from './Link';
 export { Loader } from './Loader';
 export {
   MediaTile,
+  MediaTiles,
 } from './MediaTile';
 export { Modal } from './Modal';
 export { PageHeading } from './PageHeading';
