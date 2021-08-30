@@ -26,11 +26,11 @@ export const PanelFigure = ({
 
   const customStyles = {};
   if (aspectRatio) {
-    customStyles[`--sage-figure-aspect-ratio`] = aspectRatio;
+    customStyles['--sage-figure-aspect-ratio'] = aspectRatio;
   }
 
   if (backgroundColor) {
-    customStyles[`--sage-figure-background-color`] = backgroundColor;
+    customStyles['--sage-figure-background-color'] = backgroundColor;
   }
 
   return (

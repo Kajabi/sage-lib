@@ -2,9 +2,9 @@ require('../test/testHelper');
 
 import React from 'react';
 import { shallow } from 'enzyme';
-import { MediaTile } from './MediaTile';
+import { MediaTiles } from './MediaTiles';
 
-describe('Sage MediaTile', () => {
+describe('Sage MediaTiles', () => {
   let component,
     defaultProps;
 
@@ -12,7 +12,7 @@ describe('Sage MediaTile', () => {
     defaultProps = {};
 
     component = shallow(
-      <MediaTile {...defaultProps} />
+      <MediaTiles {...defaultProps} />
     );
   });
 

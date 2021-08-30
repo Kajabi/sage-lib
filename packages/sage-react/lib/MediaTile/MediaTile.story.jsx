@@ -4,7 +4,6 @@ import { selectArgs } from '../story-support/helpers';
 import { Button } from '../Button';
 import { Label } from '../Label';
 import { MediaTile } from './MediaTile';
-import { MediaTiles } from './MediaTiles';
 
 export default {
   title: 'Sage/Media Tile',
@@ -13,7 +12,7 @@ export default {
     ...selectArgs({}),
   },
   args: {
-    title: "Lorem Ipsum Dolor Sit",
+    title: 'Lorem Ipsum Dolor Sit',
     actionsCustom: null,
     actionsDropdownItems: [
       {
@@ -61,7 +60,7 @@ export const Default = Template.bind({});
 
 export const KitchenSink = Template.bind({});
 KitchenSink.args = {
-  title: "Lorem Ipsum Dolor Sit",
+  title: 'Lorem Ipsum Dolor Sit',
   actionsCustom: (
     <Label value="Published" color={Label.COLORS.PUBLISHED} />
   ),
