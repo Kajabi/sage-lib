@@ -36,7 +36,7 @@ export const MediaTile = ({
         <Panel.Figure
           bleed={Panel.Figure.BLEED_OPTIONS.TOP}
           {...mediaConfigs}
-          className={`sage-media-tile__media ${mediaConfigs && mediaConfigs.className || ''}`}
+          className={`sage-media-tile__media ${(mediaConfigs && mediaConfigs.className) || ''}`}
         >
           {media}
         </Panel.Figure>

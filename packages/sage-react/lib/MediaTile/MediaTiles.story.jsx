@@ -41,7 +41,7 @@ export default {
   args: {
     items: [
       {
-        title: "Lorem Ipsum Dolor Sit",
+        title: 'Lorem Ipsum Dolor Sit',
         actionsCustom: null,
         actionsDropdownItems,
         children: commonChildren,
@@ -52,7 +52,7 @@ export default {
         tileLink: commonTileLink,
       },
       {
-        title: "Lorem Ipsum Dolor Sit",
+        title: 'Lorem Ipsum Dolor Sit',
         actionsCustom: null,
         actionsDropdownItems,
         children: commonChildren,
@@ -63,7 +63,7 @@ export default {
         tileLink: commonTileLink,
       },
       {
-        title: "Lorem Ipsum Dolor Sit",
+        title: 'Lorem Ipsum Dolor Sit',
         actionsCustom: null,
         actionsDropdownItems,
         children: commonChildren,
@@ -74,7 +74,7 @@ export default {
         tileLink: commonTileLink,
       },
       {
-        title: "Lorem Ipsum Dolor Sit",
+        title: 'Lorem Ipsum Dolor Sit',
         actionsCustom: null,
         actionsDropdownItems,
         children: commonChildren,
