@@ -63,10 +63,6 @@
 
 .sage-panel__header {
   row-gap: sage-spacing(xs);
-
-  .sage-panel__subtext {
-    @extend %t-sage-body;
-  }
 }
 
 .sage-panel__list {
@@ -119,15 +115,19 @@
 
 .sage-panel__subheader {
   row-gap: sage-spacing(2xs);
-
-  .sage-panel__subtext {
-    @extend %t-sage-body-small;
-  }
 }
 
 .sage-panel__subtext {
   grid-column: 1 / -1;
   color: sage-color(charcoal, 100);
+
+  .sage-panel__header & {
+    @extend %t-sage-body;
+  }
+
+  .sage-panel__subheader & {
+    @extend %t-sage-body-small;
+  }
 }
 
 .sage-panel__subtitle {
