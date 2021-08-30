@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 import { PanelSubtext } from './PanelSubtext';
 import { PanelTitle } from './PanelTitle';
 
@@ -10,17 +11,27 @@ export const PanelHeader = ({
   title,
   titleTag,
   ...rest
-}) => (
-  <div className={`sage-panel__header ${className || ''}`} {...rest}>
-    {title && (
-      <PanelTitle tag={titleTag}>{title}</PanelTitle>
-    )}
-    {children}
-    {subtext && (
-      <PanelSubtext>{subtext}</PanelSubtext>
-    )}
-  </div>
-);
+}) => {
+  const classNames = classnames(
+    'sage-panel__header',
+    className,
+    {
+      // 'sage-panel__header--custom': !!children && !subtext
+    }
+  );
+
+  return (
+    <div className={classNames} {...rest}>
+      {title && (
+        <PanelTitle tag={titleTag}>{title}</PanelTitle>
+      )}
+      {children}
+      {subtext && (
+        <PanelSubtext>{subtext}</PanelSubtext>
+      )}
+    </div>
+  );
+};
 
 PanelHeader.defaultProps = {
   children: null,
