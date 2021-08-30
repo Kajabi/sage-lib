@@ -1,5 +1,5 @@
 <header
-  class="sage-panel__header <%= component.generated_css_classes %>"
+  class="sage-panel__header <%= "sage-panel__header--custom" if component.content %> <%= component.generated_css_classes %>"
   <%= component.generated_html_attributes.html_safe %>
 >
   <% if component.title %>

@@ -54,15 +54,18 @@
 .sage-panel__header,
 .sage-panel__subheader {
   display: grid;
+}
+
+.sage-panel__header {
+  row-gap: sage-spacing(xs);
+}
+
+.sage-panel__header--custom {
   justify-content: space-between;
   align-items: center;
   grid-template-columns: 1fr auto;
   grid-auto-columns: auto;
   column-gap: sage-spacing();
-}
-
-.sage-panel__header {
-  row-gap: sage-spacing(xs);
 }
 
 .sage-panel__list {
