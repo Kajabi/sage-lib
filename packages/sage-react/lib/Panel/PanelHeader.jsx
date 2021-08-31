@@ -12,11 +12,20 @@ export const PanelHeader = ({
   titleTag,
   ...rest
 }) => {
+  let hasSubtextChild = false;
+  let childCount = 0;
+  React.Children.forEach(children, (child) => {
+    childCount += 1;
+    if (child.type.name === 'PanelSubtext') hasSubtextChild = true;
+  });
+  let isCustom = false;
+  if ((childCount === 1 && (!hasSubtextChild || !subtext)) || childCount > 1) isCustom = true;
+
   const classNames = classnames(
     'sage-panel__header',
     className,
     {
-      // 'sage-panel__header--custom': !!children && !subtext
+      'sage-panel__header--custom': isCustom
     }
   );
 
