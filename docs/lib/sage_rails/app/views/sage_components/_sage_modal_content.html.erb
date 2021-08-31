@@ -1,14 +1,14 @@
 <% if component.title.present? %>
   <header class="sage-modal__header">
     <div class="sage-modal__header-text">
-      <%= sage_component SageCardRow, { grid_template: component.header_image.present? || component.icon.present? ? "ete" : "te" } do %>
+      <%= sage_component SageCardRow, { grid_template: component.header_image.present? || component.header_icon.present? ? "ete" : "te" } do %>
         <% if component.header_image.present? %>
           <%= image_tag component.header_image, alt: "", "aria-hidden": true, class: "sage-modal__header-image" %>
         <% end %>
-        <% if component.icon.present? %>
+        <% if component.header_icon.present? %>
           <%= sage_component SageIcon, {
-            icon: component.icon[:name],
-            color: component.icon[:color],
+            icon: component.header_icon[:name],
+            color: component.header_icon[:color],
             css_classes: "sage-modal__header-icon"
           } %>
         <% end %>
@@ -33,7 +33,9 @@
               trigger_value: "Open Menu",
               trigger_icon_only: true,
               link: component.help_link,
-            } %>
+            } do %>
+              <%= component.help_content.html_safe %>
+            <% end %>
           <% end %>
         <% end %>
       <% end %>
