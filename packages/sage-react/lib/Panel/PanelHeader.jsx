@@ -30,7 +30,7 @@ export const PanelHeader = ({
   );
 
   return (
-    <div className={classNames} {...rest}>
+    <header className={classNames} {...rest}>
       {title && (
         <PanelTitle tag={titleTag}>{title}</PanelTitle>
       )}
@@ -38,7 +38,7 @@ export const PanelHeader = ({
       {subtext && (
         <PanelSubtext>{subtext}</PanelSubtext>
       )}
-    </div>
+    </header>
   );
 };
 
