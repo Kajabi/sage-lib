@@ -47,6 +47,7 @@
     <%= sage_component SageModalContent, {
       title: "Example Modal",
       subheader: "Example Subheader",
+      help_content: "<p>Popover content</p>",
       help_title: "Example Popover Title",
       help_link: {
         href: "#",
@@ -142,7 +143,7 @@
   <%# Standard Modal with Header Icon %>
   <%= sage_component SageModal, { id: "cool-modal-header-icon" } do %>
     <%= sage_component SageModalContent, {
-      icon: {
+      header_icon: {
         name: "danger",
         color: "red"
       },

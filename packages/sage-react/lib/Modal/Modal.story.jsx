@@ -1,14 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { Button } from '../Button';
+import { Icon } from '../Icon';
 import { SageTokens, SageClassnames } from '../configs';
 import { disableArgs } from '../story-support/helpers';
 import { Modal } from './Modal';
 
 const DefaultBody = ({ onExit }) => (
   <>
-    <Modal.Header title="Example Sage Modal">
-      <Modal.HeaderAside>
+    <Modal.Header
+      icon={{ color: Icon.COLORS.RED_300, name: Icon.ICONS.DANGER }}
+      title="Example Sage Modal"
+      subheader="Example subheader"
+      popover={{
+        title: 'Example popover title',
+        link: '#',
+        linkText: 'Learn more about modals',
+        content: 'Popover content'
+      }}
+      aside={(
         <Button
           color={Button.COLORS.SECONDARY}
           iconOnly={true}
@@ -18,8 +28,8 @@ const DefaultBody = ({ onExit }) => (
         >
           Menu
         </Button>
-      </Modal.HeaderAside>
-    </Modal.Header>
+      )}
+    />
     <Modal.Body>
       <p className={SageClassnames.TYPE.BODY}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -32,6 +42,7 @@ const DefaultBody = ({ onExit }) => (
         <Button
           color={Button.COLORS.SECONDARY}
           onClick={onExit}
+          subtle={true}
         >
           Close Modal
         </Button>
