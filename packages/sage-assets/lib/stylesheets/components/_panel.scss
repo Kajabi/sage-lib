@@ -60,7 +60,8 @@
   row-gap: sage-spacing(xs);
 }
 
-.sage-panel__header--custom {
+.sage-panel__header--custom,
+.sage-panel__subheader--custom {
   justify-content: space-between;
   align-items: center;
   grid-template-columns: 1fr auto;
