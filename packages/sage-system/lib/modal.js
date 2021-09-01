@@ -48,7 +48,7 @@ Sage.modal = (function() {
   function initTrigger(el) {
     el.addEventListener("click", function(evt) {
       let modalId = evt.target.getAttribute(SELECTOR_MODALTRIGGER) || evt.target.parentElement.getAttribute(SELECTOR_MODALTRIGGER);
-      openModal(modalId);
+      openModal(modalId, el);
     });
   }
 
@@ -57,13 +57,15 @@ Sage.modal = (function() {
     if (keyNum === 27) dispatchCloseAll();
   }
 
-  function openModal(modalId) {
+  function openModal(modalId, trigger) {
     let modal = document.querySelector(`[${SELECTOR_MODAL}="${modalId}"]`);
     let focusableEls = modal.querySelectorAll(SELECTOR_FOCUSABLE_ELEMENTS);
 
     dispatchOpenEvents(modal);
 
-    if(modal.hasAttribute(SELECTOR_MODAL_REMOTE_URL)) {
+    if(trigger.hasAttribute(SELECTOR_MODAL_REMOTE_URL)) {
+      fetchModalContent(modal, trigger.dataset.jsRemoteUrl);
+    } else if (modal.hasAttribute(SELECTOR_MODAL_REMOTE_URL)) {
       fetchModalContent(modal);
     }
 
@@ -126,9 +128,12 @@ Sage.modal = (function() {
     removeModalContents(el);
   }
 
-  function fetchModalContent(el) {
+  function fetchModalContent(el, url) {
+    if (!url) {
+      url = el.getAttribute(SELECTOR_MODAL_REMOTE_URL);
+    }
+
     let elContainer = el.querySelector(`[${SELECTOR_MODAL_CONTAINER}]`);
-    let url = el.getAttribute(SELECTOR_MODAL_REMOTE_URL);
     const xhr = new XMLHttpRequest();
 
     xhr.addEventListener("load", (evt) => {
