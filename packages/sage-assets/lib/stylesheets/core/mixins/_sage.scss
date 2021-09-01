@@ -453,6 +453,15 @@
   margin-bottom: sage-spacing(card);
 }
 
+@mixin sage-form-toggle-label() {
+  display: inline-block;
+  flex: 1;
+  margin-left: sage-spacing(sm);
+  vertical-align: top;
+  cursor: pointer;
+  @extend %t-sage-body;
+}
+
 ///
 /// Adds the basic default form field message font sizing and color treatment
 ///

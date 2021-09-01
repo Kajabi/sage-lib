@@ -15,7 +15,7 @@ $-switch-color-disabled-checked: sage-color(primary, 200);
 $-switch-color-disabled-checked-text: sage-color(charcoal, 100);
 
 // Switch
-$-switch-label-left-spacing: sage-spacing(sm);
+// $-switch-label-left-spacing: sage-spacing(sm);
 $-switch-border-radius: rem(16px);
 $-switch-height: rem(24px);
 $-switch-width: rem(44px);
@@ -107,13 +107,7 @@ $-switch-focus-outline-error-color: sage-color(red, 300);
   }
 
   + .sage-switch__label {
-    display: inline-block;
-    flex: 1;
-    margin-left: $-switch-label-left-spacing;
-    vertical-align: top;
-    cursor: pointer;
-
-    @extend %t-sage-body;
+    @include sage-form-toggle-label;
 
     &::after {
       content: "" ;
