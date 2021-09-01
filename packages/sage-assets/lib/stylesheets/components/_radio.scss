@@ -18,7 +18,7 @@ $-radio-color-focus-outline-error: sage-color(red, 300);
 
 // Additional configurations
 $-radio-button-size: $sage-radio-size;
-$-radio-label-spacing: sage-spacing(sm);
+// $-radio-label-spacing: sage-spacing(sm);
 $-radio-transition: 0.15s ease-in-out;
 $-radio-selected-indicator-size: rem(7px);
 
@@ -63,13 +63,7 @@ $-radio-focus-outline-color: currentColor;
 }
 
 .sage-radio__label {
-  display: inline-block;
-  flex: 1;
-  margin-left: $-radio-label-spacing;
-  vertical-align: top;
-  cursor: pointer;
-
-  @extend %t-sage-body;
+  @include sage-form-toggle-label;
 
   .sage-radio--has-border & {
     margin-left: sage-spacing(lg);
