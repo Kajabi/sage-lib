@@ -32,10 +32,7 @@ $-radio-focus-outline-color: currentColor;
   position: relative;
 
   &:not(.sage-radio--standalone) {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: flex-start;
-    margin-bottom: sage-spacing(card);
+    @include sage-form-toggle;
   }
 
   .sage-list & {
