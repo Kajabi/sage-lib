@@ -45,6 +45,12 @@ class PagesController < ApplicationController
   def utilities
   end
 
+  def search
+    @search = params[:search]
+    
+    render(layout: 'full_page')
+  end
+
   # Generator Pages
   def status
     render(layout: 'full_page')

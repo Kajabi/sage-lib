@@ -1,18 +1,18 @@
 <%= sage_component SageAssistant, { logo: { path: "sage.svg" }} do %>
   <%= render "application/nav" %>
   <% sage_component_section :assistant_actions do %>
-    <div class="sage-btn-group sage-btn-group--gap-sm">
-      <%= sage_component SageButton, {
-        value: $SAGE_VERSION_GEM,
-        attributes: {
-          href: $SAGE_VERSION_GEM_URL,
-          target: "_blank",
-          rel: "noopener noreferrer",
-          title: "Open SageRails gem source"
-        },
-        subtle: true,
-        style: "secondary",
-      } %>
-    </div>
+    <%= sage_component SageButton, {
+      value: "Search",
+      attributes: {
+        href: pages_search_path,
+        title: "Search Components"
+      },
+      subtle: true,
+      icon: {
+        style: "left",
+        name: "search"
+      },
+      style: "secondary",
+    } %>
   <% end %>
 <% end %>

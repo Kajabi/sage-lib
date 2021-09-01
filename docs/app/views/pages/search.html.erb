@@ -1,0 +1,50 @@
+<%= content_for :heading do %>
+<%= md("
+# Component Search
+") %>
+<% end %>
+<%= sage_component SageCard, {
+  spacer: { bottom: "lg" }
+} do %>
+  <%= form_tag(pages_search_path, method: :get) do %>
+    <%= sage_component SageGridRow, {} do %>
+      <%= sage_component SageGridCol, { breakpoint: "md", size: "10" } do %>
+        <div class="sage-input">
+          <%= text_field_tag(:search, params[:search], class: "sage-input__field", placeholder: "Search Components") %>
+          <label class="sage-input__label">
+            Search Components
+          </label>
+        </div>
+      <% end %>
+      <%= sage_component SageGridCol, { breakpoint: "md", size: "2" } do %>
+        <%= submit_tag("Search", :class=>"sage-btn sage-btn--primary" ) %>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>
+<% if @search.present? %>
+  <%= sage_component SageCard, {} do %>
+    <% sorted_sage_components.each do |component| %>
+      <% if component[:title].include? @search %>
+        <%= sage_component SageChoice, {
+            attributes: {
+              href: pages_component_path(component[:title])
+            },
+            text: component[:title].titleize,
+            subtext: component[:description],
+            type: "arrow",
+          }
+        %>
+      <% end %>
+    <% end %>
+  <% end %>
+<% else %>
+  <%= sage_component SageCard, {} do %>
+    <%= sage_component SageEmptyState, {
+      icon: "search",
+      title: "Search for components available in the system",
+      text: "All components that contain any of your search team will return in results."
+    } do %>
+    <% end %>
+  <% end %>
+<% end %>
