@@ -469,6 +469,18 @@
 }
 
 ///
+/// Adds the basic default form field message font sizing and color treatment
+///
+@mixin sage-form-toggle-message() {
+  position: relative;
+  z-index: sage-z-index(default);
+  width: 100%;
+  color: sage-color(charcoal, 200);
+
+  @extend %t-sage-body-xsmall;
+}
+
+///
 /// Sets up an element to implement the sage icon font and basic settings related
 /// to displaying the icon. Usually implemented on a pseudo-element.
 ///
