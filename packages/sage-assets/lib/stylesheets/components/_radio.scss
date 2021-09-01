@@ -242,11 +242,6 @@ $-radio-focus-outline-color: currentColor;
 
 .sage-radio__message,
 .sage-radio__caption {
-  position: relative;
-  z-index: sage-z-index(default);
-  width: 100%;
+  @include sage-form-toggle-message;
   margin-left: #{$-radio-button-size + $-radio-label-spacing};
-  color: sage-color(charcoal, 200);
-
-  @extend %t-sage-body-xsmall;
 }

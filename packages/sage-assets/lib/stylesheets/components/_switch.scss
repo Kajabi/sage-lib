@@ -79,13 +79,8 @@ $-switch-focus-outline-error-color: sage-color(red, 300);
 }
 
 .sage-switch__message {
-  position: relative;
-  z-index: sage-z-index(default);
-  width: 100%;
+  @include sage-form-toggle-message;
   margin-left: ($-switch-width + $-switch-label-left-spacing);
-  color: sage-color(charcoal, 200);
-
-  @extend %t-sage-body-xsmall;
 
   .sage-switch--toggle-right & {
     margin-left: 0;
