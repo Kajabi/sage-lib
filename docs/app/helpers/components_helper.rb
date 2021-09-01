@@ -226,9 +226,11 @@ module ComponentsHelper
         title: "media_tile",
         description: "Easily display a tile or set of tiles that showcase products, templates, or other media-based content.", 
         scss: "done",
+        docs: "done",
         rails: "done",
-        react: "yes",
+        react: "done",
         a11y: "done",
+        react_component_slug: "sage-media-tile--default"
       },
       {
         title: "meter",

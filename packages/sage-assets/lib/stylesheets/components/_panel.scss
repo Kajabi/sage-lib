@@ -53,7 +53,20 @@
 
 .sage-panel__header,
 .sage-panel__subheader {
-  @include sage-grid-panel-row();
+  display: grid;
+}
+
+.sage-panel__header {
+  row-gap: sage-spacing(xs);
+}
+
+.sage-panel__header--custom,
+.sage-panel__subheader--custom {
+  justify-content: space-between;
+  align-items: center;
+  grid-template-columns: 1fr auto;
+  grid-auto-columns: auto;
+  column-gap: sage-spacing();
 }
 
 .sage-panel__list {
@@ -102,6 +115,23 @@
 .sage-panel__stack--spacing-form {
   justify-items: stretch;
   gap: sage-spacing(card);
+}
+
+.sage-panel__subheader {
+  row-gap: sage-spacing(2xs);
+}
+
+.sage-panel__subtext {
+  grid-column: 1 / -1;
+  color: sage-color(charcoal, 100);
+
+  .sage-panel__header & {
+    @extend %t-sage-body;
+  }
+
+  .sage-panel__subheader & {
+    @extend %t-sage-body-small;
+  }
 }
 
 .sage-panel__subtitle {

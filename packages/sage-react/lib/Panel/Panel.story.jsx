@@ -19,6 +19,7 @@ export default {
     'Panel.Stack': Panel.Stack,
     'Panel.List': Panel.List,
     'Panel.Subheader': Panel.Subheader,
+    'Panel.Subtext': Panel.Subtext,
     'Panel.Tiles': Panel.Tiles,
     'Panel.Figure': Panel.Figure,
     'Panel.Row': Panel.Row
@@ -47,6 +48,9 @@ export const Default = (args) => (
           ]}
           panelMaxWidth="240px"
         />
+        <Panel.Subtext>
+          <p>All kinds of awesome, wonderful content can go in here! <a href="https://example.com">Learn more</a></p>
+        </Panel.Subtext>
       </Panel.Header>
       <Panel.Block sageType={true}>
         <p>
@@ -373,35 +377,49 @@ export const PanelRow = (args) => (
   </Grid>
 );
 
-export const PanelFigure = ({ bleedDirection, ...args }) => (
+export const PanelFigure = ({ aspectRatio, backgroundColor, bleed, padded }) => (
   <Grid container={Grid.CONTAINER_SIZES.LG}>
     <p className={`${SageClassnames.TYPE.BODY_SMALL} ${SageClassnames.SPACERS.MD_BOTTOM}`}>
       <strong>Note:</strong> Normally there would be other content along with the figure.
       Content was ommitted here in order to demonstrate the bleed options through Knobs.
       Observe the space that remains inside the panel outside the figure with each setting.
     </p>
-    <Panel {...args}>
-      <Panel.Figure bleed={bleedDirection}>
+    <Panel>
+      <Panel.Figure
+        aspectRatio={aspectRatio}
+        backgroundColor={backgroundColor}
+        bleed={bleed}
+        padded={padded}
+      >
         <img src="//source.unsplash.com/800x500" alt="" />
       </Panel.Figure>
     </Panel>
   </Grid>
 );
 PanelFigure.args = {
-  bleedDirection: 3,
+  aspectRatio: null,
+  backgroundColor: null,
+  bleed: null,
+  padded: false,
 };
 // fully custom ArgsTable
 PanelFigure.argTypes = {
-  bleedDirection: {
+  bleed: {
     control: {
       type: 'radio',
       options: Panel.Figure.BLEED_OPTIONS
     }
-  }
+  },
 };
 PanelFigure.defaultProps = {
-  bleedDirection: null
+  aspectRatio: null,
+  backgroundColor: null,
+  bleed: null,
+  padded: false,
 };
 PanelFigure.propTypes = {
-  bleedDirection: PropTypes.oneOf(Object.values(Panel.Figure.BLEED_OPTIONS))
+  aspectRatio: PropTypes.number,
+  backgroundColor: PropTypes.string,
+  bleed: PropTypes.oneOf(Object.values(Panel.Figure.BLEED_OPTIONS)),
+  padded: PropTypes.bool,
 };

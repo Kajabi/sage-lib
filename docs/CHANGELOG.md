@@ -3,6 +3,41 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.13.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.12.0...@kajabi/sage@4.13.0) (2021-09-01)
+
+
+### Bug Fixes
+
+* **icons:** menu rename ([aa3fa40](https://github.com/Kajabi/sage-lib/commit/aa3fa40e1dbfad70a3d87d209c40f8a3fd97518e))
+* **icons:** menu rename ([47660cb](https://github.com/Kajabi/sage-lib/commit/47660cbd08f422725946abf5a34e358c3e21435f))
+* **icons:** menu rename ([74490f0](https://github.com/Kajabi/sage-lib/commit/74490f06829ec549f6c8dda4f21bd24b8f66c4fa))
+* **icons:** menu rename ([4b7c6b3](https://github.com/Kajabi/sage-lib/commit/4b7c6b33810a35f52b11f45a1ec8f25c6f4ea37f))
+* **icons:** updated icon names ([7aed9cc](https://github.com/Kajabi/sage-lib/commit/7aed9cc6b893d8e98459745ed2cb88c0a8accf14))
+* **icons:** updated icon names ([e496010](https://github.com/Kajabi/sage-lib/commit/e4960105e1d07f617dc004cee3ba7e71cdc14f56))
+* **icons:** updated icon names ([6f607f2](https://github.com/Kajabi/sage-lib/commit/6f607f21006e8eeede86270fad0f3e365434bddf))
+* **icons:** updated icon names ([625e3a1](https://github.com/Kajabi/sage-lib/commit/625e3a1df47a160c6bd597fa96af394a9bc85403))
+
+
+### Features
+
+* **icon:** add `beside_type` property in Rails ([6672ff9](https://github.com/Kajabi/sage-lib/commit/6672ff90542f3614c3bddaf495b92224447097b4))
+* **icons:** added new icons ([6f8796d](https://github.com/Kajabi/sage-lib/commit/6f8796d4c54c127cbf74156158bb8e5a56d3418a))
+* **icons:** added new icons ([dcffc68](https://github.com/Kajabi/sage-lib/commit/dcffc687e94bcb3cf9a0af0a860da50c24a0bc56))
+* **icons:** added new icons ([d16fb8f](https://github.com/Kajabi/sage-lib/commit/d16fb8f23d17ce8cd81c92071db3d5334368c8e5))
+* **icons:** added new icons ([a2faba6](https://github.com/Kajabi/sage-lib/commit/a2faba6673c12041762c663295fdcd87ded56116))
+* **modal:** adds header icon prop ([f8f8b8b](https://github.com/Kajabi/sage-lib/commit/f8f8b8bf72d53b2f2eb375463155e6402c4400ec))
+* **modal:** cleans up Ruby markup for subheader and adds props to documentation ([6a59949](https://github.com/Kajabi/sage-lib/commit/6a5994952d9ecb1646d70a9ce228e5f51f8d0a7e))
+* **modal:** updates React component and documentation ([e508d93](https://github.com/Kajabi/sage-lib/commit/e508d93d80e30db73413259f02a00d208f684d87))
+* **panel:** added custom class for PanelSubheading components ([4340bc0](https://github.com/Kajabi/sage-lib/commit/4340bc094784dbd8307ceb08e90d0c15617e347e))
+* **panel:** added custom class when children are present in Rails component ([a7fde7d](https://github.com/Kajabi/sage-lib/commit/a7fde7d37b59233711b4589896383ea967d5eb50))
+* **panel:** added subtext to sage_panel_subheader ([5818a49](https://github.com/Kajabi/sage-lib/commit/5818a497454799d32743a0fb96f4f231ff3337a0))
+* **panel:** adds subtext block to header, updates grid styling ([f2ef4a0](https://github.com/Kajabi/sage-lib/commit/f2ef4a048a0f1ad73089b23cf59d04f244689232))
+* **panel:** got subtext working as attribute or content_for ([16a8d70](https://github.com/Kajabi/sage-lib/commit/16a8d70505c18853dd25349a582e01a9442c3040))
+
+
+
+
+
 # [4.12.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.11.7...@kajabi/sage@4.12.0) (2021-08-25)
 
 
