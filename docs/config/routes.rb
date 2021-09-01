@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   get 'pages/mock/:alias', to: 'pages#mock', as: 'pages_mock'
   get 'pages/utilities'
   get 'pages/status'
+  get 'pages/search'
   get 'pages/support'
   get 'pages/sandbox'
 
