@@ -18,8 +18,16 @@ module ApplicationHelper
     current_page?(pages_design_path(:color)) || (params[:title] && current_page?(pages_design_path(params[:title])))
   end
 
-  def current_page_layout?
-    current_page?(pages_layout_path(:container)) || (params[:title] && current_page?(pages_layout_path(params[:title])))
+  def current_page_patterns?
+    current_page?(pages_patterns_path(:panels_cards)) || (params[:title] && current_page?(pages_patterns_path(params[:title])))
+  end
+
+  def current_page_interactions?
+    current_page?(pages_interactions_path(:container)) || (params[:title] && current_page?(pages_interactions_path(params[:title])))
+  end
+
+  def current_page_helpers?
+    current_page?(pages_helpers_path(:spacing)) || (params[:title] && current_page?(pages_helpers_path(params[:title])))
   end
 
   def current_page_components?

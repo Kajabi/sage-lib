@@ -17,7 +17,10 @@ Ut elementum id leo ac fringilla.
 <%= sage_component SagePanelHeader, { title: "Basic Panel" } %>
 
 <%= sage_component SagePanel, {} do %>
-  <%= sage_component SagePanelHeader, { title: "Panel Header" } do %>
+  <%= sage_component SagePanelHeader, {
+    # subtext: "<p>All kinds of awesome, wonderful content can go in here!</p>".html_safe,
+    title: "Panel Header"
+  } do %>
     <%= sage_component SageButton, {
       value: "More info",
       subtle: true,
@@ -27,6 +30,9 @@ Ut elementum id leo ac fringilla.
         style: "only"
       }
     } %>
+    <%= content_for :sage_panel_header_subtext do %>
+      <p>All kinds of awesome, wonderful content can go in here! <%= link_to "Learn more", "//example.com" %></p>
+    <% end %>
   <% end %>
   <%= sage_component SagePanelBlock, { type_block: true } do %>
     <%= sample_copy.html_safe %>
@@ -41,9 +47,10 @@ Ut elementum id leo ac fringilla.
 Panels are rich containers that allow for grouping and organizing content details. They have the following overall setup available:
 
 - **Header**
-  `.sage-panel__header` 
+  `.sage-panel__header`
   (optional) This area usually contains at least a title (`sage-panel__title`)
   and often an icon or menu flanking the right corner.
+  There is also an optional subtext element (`sage-panel__subtext`), useful for documenting the panel objective.
   It employs the Sage Row layout base with `24px` gutters.
 
 - **Body**
@@ -56,7 +63,7 @@ Panels are rich containers that allow for grouping and organizing content detail
   Each of the Panel components is explained and demonstrated in more detail below.
 
 - **Footer**
-  `.sage-panel__footer` 
+  `.sage-panel__footer`
   (optional) This area often contains one or more buttons
   that can be sent to the right edge of the panel
   with the `sage-panel__footer--align-right` modifier.
@@ -213,6 +220,7 @@ Use one of the tiling pattern modifiers to determine how many tiles appear in a 
 The Panel Subheader provides specific styles for a subheading within a panel.
 It is very similar in configuration to the panel header but shows with smaller type.
 Format the text content itself with `.sage-panel__subtitle`, which can also be used independently.
+There is also an optional subtext element (`sage-panel__subtext`), useful for documenting the panel objective.
 ", use_sage_type: true) %>
 
 <%= sage_component SagePanelSubheader, { title: "Example:" } %>

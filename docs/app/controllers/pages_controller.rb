@@ -19,7 +19,15 @@ class PagesController < ApplicationController
     render params[:title]
   end
 
-  def layout
+  def patterns
+    render params[:title]
+  end
+
+  def interactions
+    render params[:title]
+  end
+
+  def helpers
     render params[:title]
   end
 
@@ -39,6 +47,11 @@ class PagesController < ApplicationController
 
   # Generator Pages
   def status
+    render(layout: 'full_page')
+  end
+
+  def support
+    render(layout: 'full_page')
   end
 
   def breakout

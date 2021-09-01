@@ -9,103 +9,78 @@
             active: current_page?(pages_foundation_path(:design_principles)),
           },
           {
-            text: "Accessibility",
-            link: pages_foundation_path(:accessibility),
-            active: current_page?(pages_foundation_path(:accessibility)),
+            text: "Colors",
+            link: pages_foundation_path(:color),
+            active: current_page?(pages_foundation_path(:color)),
+          },
+          {
+            text: "Typography",
+            link: pages_foundation_path(:typography),
+            active: current_page?(pages_foundation_path(:typography)),
+          },
+          {
+            text: "Icons",
+            link: pages_foundation_path(:icon),
+            active: current_page?(pages_foundation_path(:icon)),
+          },
+          {
+            text: "Content Strategy",
+            link: pages_foundation_path(:content),
+            active: current_page?(pages_foundation_path(:content)),
+          },
+          {
+            text: "Vocabulary",
+            link: pages_foundation_path(:vocabulary),
+            active: current_page?(pages_foundation_path(:vocabulary)),
           }]
         }
       ]
     } %>
   <% end %>
-  <% if current_page_content? %>
+  <% if current_page_patterns? %>
     <%= sage_component SageNav, {
       items: [
-        { link: pages_content_path(:voice_tone), text: "CONTENT", items: [
+        { link: pages_patterns_path(:panels_cards), text: "PATTERNS", items: [
           {
-            text: "Voice & Tone",
-            link: pages_content_path(:voice_tone),
-            active: current_page?(pages_content_path(:voice_tone)),
-          },
-          {
-            text: "Grammar",
-            link: pages_content_path(:grammar),
-            active: current_page?(pages_content_path(:grammar)),
-          },
-          {
-            text: "Branding",
-            link: pages_content_path(:branding),
-            active: current_page?(pages_content_path(:branding)),
-          },
-          {
-            text: "Product Content",
-            link: pages_content_path(:content),
-            active: current_page?(pages_content_path(:content)),
-          },
-          {
-            text: "Vocabulary",
-            link: pages_content_path(:vocabulary),
-            active: current_page?(pages_content_path(:vocabulary)),
-          }
-        ] }
-      ]
-    } %>
-  <% end %>
-  <% if current_page_design? %>
-    <%= sage_component SageNav, {
-      items: [
-        { link: pages_design_path(:color), text: "DESIGN", items: [
-          {
-            text: "Colors",
-            link: pages_design_path(:color),
-            active: current_page?(pages_design_path(:color)),
-          },
-          {
-            text: "Typography",
-            link: pages_design_path(:typography),
-            active: current_page?(pages_design_path(:typography)),
-          },
-          {
-            text: "Icons",
-            link: pages_design_path(:icon),
-            active: current_page?(pages_design_path(:icon)),
-          },
-          {
-            text: "Motion",
-            link: pages_design_path(:motion),
-            active: current_page?(pages_design_path(:motion)),
-          }
-        ] }
-      ]
-    } %>
-  <% end %>
-  <% if current_page_layout? %>
-    <%= sage_component SageNav, {
-      items: [
-        { link: pages_layout_path(:container), text: "LAYOUT", items: [
-          {
-            text: "Containers",
-            link: pages_layout_path(:container),
-            active: current_page?(pages_layout_path(:container)),
-          },
-          {
-            text: "Panels and Cards",
-            link: pages_layout_path(:panels_cards),
-            active: current_page?(pages_layout_path(:panels_cards)),
-          },
-          {
-            text: "Spacing",
-            link: pages_layout_path(:spacing),
-            active: current_page?(pages_layout_path(:spacing)),
+            text: "Organization",
+            link: pages_patterns_path(:panels_cards),
+            active: current_page?(pages_patterns_path(:panels_cards)),
           },
           {
             text: "12 Col Grid",
-            link: pages_layout_path(:grid),
-            active: current_page?(pages_layout_path(:grid)),
+            link: pages_patterns_path(:grid),
+            active: current_page?(pages_patterns_path(:grid)),
           },
           {
             text: "Grid Templates",
-            link: pages_layout_path(:grid_templates),
-            active: current_page?(pages_layout_path(:grid_templates)),
+            link: pages_patterns_path(:grid_templates),
+            active: current_page?(pages_patterns_path(:grid_templates)),
+          }
+        ] }
+      ]
+    } %>
+  <% end %>
+  <% if current_page_interactions? %>
+    <%= sage_component SageNav, {
+      items: [
+        { link: pages_interactions_path(:container), text: "INTERACTIONS", items: [
+          {
+            text: "Containers",
+            link: pages_interactions_path(:container),
+            active: current_page?(pages_interactions_path(:container)),
+          }
+        ] }
+      ]
+    } %>
+  <% end %>
+  <% if current_page_helpers? %>
+    <%= sage_component SageNav, {
+      items: [
+        { link: pages_helpers_path(:spacing), text: "HELPERS", items: [
+          {
+            text: "Spacing",
+            link: pages_helpers_path(:spacing),
+            active: current_page?(pages_helpers_path(:spacing)),
           }
         ] }
       ]
@@ -134,17 +109,9 @@
       aria_label: "Secondary",
       items: [
         {
-          text: "Sandbox",
-          link: pages_sandbox_path,
-          active: current_page?(pages_sandbox_path),
-        },
-        {
-          text: "Code Guidelines",
-          link: "#{$SAGE_GITHUB_URL}",
-          attributes: {
-            target: "_blank",
-            rel: "noopener noreferrer"
-          }
+          text: "Get Support",
+          link: pages_support_path,
+          active: current_page?(pages_support_path),
         }
       ]
     } %>
