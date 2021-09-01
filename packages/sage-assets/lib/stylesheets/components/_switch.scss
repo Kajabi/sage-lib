@@ -31,11 +31,8 @@ $-switch-focus-outline-error-color: sage-color(red, 300);
 
 
 .sage-switch {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: flex-start;
+  @include sage-form-toggle;
   position: relative;
-  margin-bottom: sage-spacing(card);
   color: $-switch-color-default-text;
 
   & + & {
