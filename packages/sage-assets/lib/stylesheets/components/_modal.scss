@@ -101,7 +101,7 @@ $-modal-header-image-size: rem(28px);
 }
 
 .sage-modal__header {
-  display: grid;
+  display: flex;
   align-items: baseline;
   margin: $-modal-padding-y $-modal-padding-x;
 }
