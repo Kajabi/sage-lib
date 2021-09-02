@@ -35,7 +35,7 @@ export const TOKENS_ICONS = {
   CHART: 'chart',
   CHECK: 'check',
   CHECK_CIRCLE: 'check-circle',
-  CHECK_CIRCLE: 'check-circle-filled',
+  CHECK_CIRCLE_FILLED: 'check-circle-filled',
   CIRCLE_1: 'circle-1',
   CIRCLE_2: 'circle-2',
   CIRCLE_3: 'circle-3',
