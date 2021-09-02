@@ -19,7 +19,6 @@ export default {
     'Panel.Stack': Panel.Stack,
     'Panel.List': Panel.List,
     'Panel.Subheader': Panel.Subheader,
-    'Panel.Subtext': Panel.Subtext,
     'Panel.Tiles': Panel.Tiles,
     'Panel.Figure': Panel.Figure,
     'Panel.Row': Panel.Row
@@ -48,9 +47,6 @@ export const Default = (args) => (
           ]}
           panelMaxWidth="240px"
         />
-        <Panel.Subtext>
-          <p>All kinds of awesome, wonderful content can go in here! <a href="https://example.com">Learn more</a></p>
-        </Panel.Subtext>
       </Panel.Header>
       <Panel.Block sageType={true}>
         <p>
