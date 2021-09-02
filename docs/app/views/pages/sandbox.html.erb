@@ -17,7 +17,7 @@ Use this scratchpad to test out elements and components in context. Just be sure
   <%= sage_component SageButton, {
     html_attributes: {
       "data-js-modaltrigger": "test-modal",
-      "data-js-remote-url": "/pages/async/test2",
+      "data-js-remote-url": async_path("test2"),
     },
     style: "primary",
     value: "Open modal B",
@@ -25,14 +25,14 @@ Use this scratchpad to test out elements and components in context. Just be sure
   <%= sage_component SageButton, {
     html_attributes: {
       "data-js-modaltrigger": "test-modal",
-      "data-js-remote-url": "/pages/async/test3",
+      "data-js-remote-url": async_path("test3"),
     },
     style: "primary",
     value: "Open modal C",
   } %>
 <% end %>
 
-<%= sage_component SageModal, { id: "test-modal", remote_url: "/pages/async/test", remove_content_on_close: true, } do %>
+<%= sage_component SageModal, { id: "test-modal", remote_url: async_path("test1"), remove_content_on_close: true, } do %>
   <%= sage_component SageModalContent, {} do %>
     <p>Loading...</p>
   <% end %>

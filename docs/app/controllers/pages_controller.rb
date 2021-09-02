@@ -3,12 +3,6 @@ class PagesController < ApplicationController
     render(layout: 'home')
   end
 
-  def async
-    @stub = params[:stub]
-
-    render(layout: 'async')
-  end
-
   def foundation
     render params[:title]
   end
