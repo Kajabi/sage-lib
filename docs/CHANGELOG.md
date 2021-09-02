@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.13.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.13.0...@kajabi/sage@4.13.1) (2021-09-02)
+
+
+### Bug Fixes
+
+* **container:** updates path issue to fix docs page ([04a535c](https://github.com/Kajabi/sage-lib/commit/04a535c1473487ee62f4ffc6653ef993e2e4ac60))
+* **icon:** updates Icon prop to fixes error in docs page ([98faf35](https://github.com/Kajabi/sage-lib/commit/98faf358fd4a9b9079fbbaab30ab32c72f0a1b20))
+* **web-console update:** update web-console to 3.0+ to fix error details ([44b5dfb](https://github.com/Kajabi/sage-lib/commit/44b5dfbdfb9f885bad27dd73e34de2dd5948536d))
+
+
+
+
+
 # [4.13.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.12.0...@kajabi/sage@4.13.0) (2021-09-01)
 
 
