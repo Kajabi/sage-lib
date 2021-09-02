@@ -318,6 +318,7 @@
     margin-bottom: 0;
   }
 }
+
 ///
 /// Adds the basic default form spacing, and border treatment
 ///
@@ -446,6 +447,9 @@
   }
 }
 
+///
+/// Mixins for common styles between the form toggles Radio, Checkbox, and Switch
+///
 @mixin sage-form-toggle() {
   display: flex;
   flex-flow: row wrap;
