@@ -140,7 +140,6 @@ module SageTokens
     "calendar-date",
     "calendar-schedule",
     "calendar-simple",
-    "calendly",
     "card-update",
     "caret-down",
     "caret-left",
