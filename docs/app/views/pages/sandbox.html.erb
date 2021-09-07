@@ -5,35 +5,3 @@
 Use this scratchpad to test out elements and components in context. Just be sure not to commit your changes. ❤️
 ") %>
 <% end %>
-
-<%= sage_component SageButtonGroup, { gap: :sm } do %>
-<%= sage_component SageButton, {
-    html_attributes: {
-      "data-js-modaltrigger": "test-modal",
-    },
-    style: "primary",
-    value: "Open modal A",
-  } %>
-  <%= sage_component SageButton, {
-    html_attributes: {
-      "data-js-modaltrigger": "test-modal",
-      "data-js-remote-url": async_path("test2"),
-    },
-    style: "primary",
-    value: "Open modal B",
-  } %>
-  <%= sage_component SageButton, {
-    html_attributes: {
-      "data-js-modaltrigger": "test-modal",
-      "data-js-remote-url": async_path("test3"),
-    },
-    style: "primary",
-    value: "Open modal C",
-  } %>
-<% end %>
-
-<%= sage_component SageModal, { id: "test-modal", remote_url: async_path("test1"), remove_content_on_close: true, } do %>
-  <%= sage_component SageModalContent, {} do %>
-    <p>Loading...</p>
-  <% end %>
-<% end %>
