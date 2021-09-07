@@ -18,6 +18,7 @@ Sage.modal = (function() {
   const EVENT_OPENING = "sage.modal.opening";
   const EVENT_OPEN = "sage.modal.open";
   let selectorLastFocused;
+  let containerInitialContent;
 
   // ==================================================
   // Functions
@@ -134,6 +135,10 @@ Sage.modal = (function() {
     }
 
     let elContainer = el.querySelector(`[${SELECTOR_MODAL_CONTAINER}]`);
+    if (elContainer.innerHTML) {
+      containerInitialContent = elContainer.innerHTML;
+    }
+
     const xhr = new XMLHttpRequest();
 
     xhr.addEventListener("load", (evt) => {
@@ -147,7 +152,7 @@ Sage.modal = (function() {
   function removeModalContents(el) {
     if ( el.hasAttribute(SELECTOR_MODAL_REMOVE_CONTENTS_ON_CLOSE) ) {
       let elContainer = el.querySelector(`[${SELECTOR_MODAL_CONTAINER}]`);
-      elContainer.innerHTML = "";
+      elContainer.innerHTML = containerInitialContent || "";
     }
   }
 
