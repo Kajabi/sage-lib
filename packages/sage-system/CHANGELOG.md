@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.11.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.10.0...@kajabi/sage-system@0.11.0) (2021-09-08)
+
+
+### Features
+
+* **modal:** allow modal trigger to load a remote URL in modal ([8e971a6](https://github.com/Kajabi/sage-lib/commit/8e971a66e33269648201be1b9741936e3771d982))
+
+
+
+
+
 # [0.10.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.9.7...@kajabi/sage-system@0.10.0) (2021-08-25)
 
 

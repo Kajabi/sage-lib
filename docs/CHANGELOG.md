@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.14.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.13.1...@kajabi/sage@4.14.0) (2021-09-08)
+
+
+### Bug Fixes
+
+* **icons:** menu rename ([deeff31](https://github.com/Kajabi/sage-lib/commit/deeff313a38e983bf6d4a1562bc79afd43d78db2))
+* **icons:** updated icon names ([cdf0a3e](https://github.com/Kajabi/sage-lib/commit/cdf0a3e3d15877bdd5cd00e29968806f54294345))
+
+
+### Features
+
+* stub the wip async aspects ([89e81da](https://github.com/Kajabi/sage-lib/commit/89e81daba93abb3481fa184dd981829ee89bed24))
+* **icons:** added new icons ([2989f2a](https://github.com/Kajabi/sage-lib/commit/2989f2a9b58e6db4dd1b7d87a7830f8e2c10aa9c))
+
+
+
+
+
 ## [4.13.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.13.0...@kajabi/sage@4.13.1) (2021-09-02)
 
 
