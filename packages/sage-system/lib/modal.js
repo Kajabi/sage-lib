@@ -64,7 +64,7 @@ Sage.modal = (function() {
 
     dispatchOpenEvents(modal);
 
-    if(trigger.hasAttribute(SELECTOR_MODAL_REMOTE_URL)) {
+    if(trigger && trigger.hasAttribute(SELECTOR_MODAL_REMOTE_URL)) {
       fetchModalContent(modal, trigger.dataset.jsRemoteUrl);
     } else if (modal.hasAttribute(SELECTOR_MODAL_REMOTE_URL)) {
       fetchModalContent(modal);
