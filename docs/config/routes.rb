@@ -19,4 +19,6 @@ Rails.application.routes.draw do
   get 'pages/support'
   get 'pages/sandbox'
 
+  get 'async/:template', to: 'async#show', as: 'async'
+
 end
