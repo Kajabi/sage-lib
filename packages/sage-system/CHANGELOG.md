@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.11.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.11.0...@kajabi/sage-system@0.11.1) (2021-09-08)
+
+
+### Bug Fixes
+
+* **modal:** gracefully check for a trigger ([86e5e8d](https://github.com/Kajabi/sage-lib/commit/86e5e8dd3739fc1843c3a045d828170f99703590))
+
+
+
+
+
 # [0.11.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.10.0...@kajabi/sage-system@0.11.0) (2021-09-08)
 
 
