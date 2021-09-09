@@ -4,6 +4,7 @@ class SageFormInput < SageComponent
     disabled: [:optional, TrueClass],
     has_error: [:optional, TrueClass],
     has_placeholder: [:optional, TrueClass],
+    icon: [:optional, NilClass, SageSchemas::ICON],
     id: String,
     input_mode: [:optional, String],
     input_type: [:optional, String],
