@@ -188,6 +188,7 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
       opacity: 1;
     }
 
+    /* stylelint-disable max-nesting-depth */
     .sage-dropdown.sage-dropdown--checkbox &,
     .sage-dropdown.sage-dropdown--choice &,
     .sage-dropdown.sage-dropdown--searchable & {
@@ -195,6 +196,7 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
         opacity: 0;
       }
     }
+    /* stylelint-enable max-nesting-depth */
   }
 
   .sage-dropdown__item--with-options > & {
