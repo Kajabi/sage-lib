@@ -4,53 +4,46 @@
 /// @group sage
 ////
 
-$-select-border-radius: map-get($sage-field-configs, border-radius);
-$-select-border-width: map-get($sage-field-configs, border-width);
+$-select-border-radius: sage-border(radius);
+$-select-border-width: rem(1px);
 $-select-border-box-shadow-size: map-get($sage-field-configs, box-shadow-size);
-$-select-bottom-gap: map-get($sage-field-configs, bottom-gap);
-$-select-color-border: map-get($sage-field-colors, border);
-$-select-color-border-hover: sage-color(charcoal);
+$-select-bottom-gap: sage-spacing();
+$-select-color-border: sage-color(grey, 300);
+$-select-color-border-hover: sage-color(charcoal, 300);
 $-select-color-border-selected: sage-color(grey, 400);
-$-select-color-default: map-get($sage-field-colors, default);
-$-select-color-error: map-get($sage-field-colors, error);
-$-select-color-label-background: map-get($sage-field-colors, label-background);
-$-select-color-success: map-get($sage-field-colors, success);
+$-select-color-default: sage-color(charcoal, 300);
+$-select-color-error: sage-color(red);
+$-select-color-label-background: sage-color(white);
+$-select-color-success: sage-color(primary);
 $-select-filled-top-padding: rem(4.4);
-$-select-height: map-get($sage-field-configs, height);
-$-select-padding-x: map-get($sage-field-configs, padding);
-$-select-padding-label: map-get($sage-field-configs, padding-label);
+$-select-height: rem(40px);
+$-select-padding-x: sage-spacing(sm);
+$-select-padding-label: sage-spacing(2xs);
 
 
 .sage-select {
-  position: relative;
-
-  &:not(:last-child):not(.sage-dropdown__trigger-selected-value) {
-    margin-bottom: $-select-bottom-gap;
-  }
-
-  .sage-panel-grid > &,
-  .sage-panel__row > &,
-  .sage-panel__stack > &,
-  .sage-panel__block > &,
-  .sage-card-grid > &,
-  .sage-card__row > &,
-  .sage-card__stack > &,
-  .sage-card__block > & {
-    margin-bottom: 0;
-  }
+  @include sage-form-field-group;
 }
 
 .sage-select__label {
-  @extend %t-sage-body;
+  @include sage-form-field-label;
+
   z-index: sage-z-index(default, 2);
-  position: absolute;
   transform: translateY(-50%);
   padding: 0 $-select-padding-label;
-  color: $-select-color-default;
-  white-space: nowrap;
-  pointer-events: none;
 
   @include position(($-select-height / 2), unset, unset, ($-select-padding-x - $-select-padding-label));
+
+  .sage-select__field ~ & {
+    @extend %t-sage-body;
+  }
+
+  .sage-select__field ~ &,
+  .sage-select__field:focus:not(:disabled) ~ &,
+  .sage-select__field:active:not(:disabled) ~ & {
+    color: inherit;
+    opacity: 1;
+  }
 
   .sage-select--value-selected &,
   .sage-dropdown--value-selected & {
@@ -60,20 +53,12 @@ $-select-padding-label: map-get($sage-field-configs, padding-label);
     background-color: $-select-color-label-background;
     transition: transform 0.15s ease-in-out, color 0.15s ease-out;
   }
-
-  .sage-select--value-selected:not(.sage-select--error) :focus + &,
-  .sage-select--value-selected:not(.sage-select--error) :active + & {
-    color: $-select-color-success;
-  }
-
-  .sage-select--error & {
-    color: $-select-color-error;
-  }
 }
 
 .sage-select__arrow::before {
   @include sage-icon-base(caret-down);
   @include position(0, sage-spacing(sm), unset, unset);
+
   position: absolute;
   align-items: center;
   height: $-select-height;
@@ -82,16 +67,13 @@ $-select-padding-label: map-get($sage-field-configs, padding-label);
 }
 
 .sage-select__field {
+  @include sage-form-field();
+
   z-index: sage-z-index(default, 1);
   position: relative;
   height: $-select-height;
-  width: 100%;
-  padding: $-select-filled-top-padding $-select-padding-x 0;
-  appearance: none;
+  padding: 0 $-select-padding-x 0;
   color: transparent;
-  border: $-select-border-width solid $-select-color-border;
-  border-radius: $-select-border-radius;
-  background: transparent;
   outline: none;
   transition: border map-get($sage-transitions, default);
   cursor: pointer;
@@ -112,12 +94,8 @@ $-select-padding-label: map-get($sage-field-configs, padding-label);
     box-shadow: $-select-border-box-shadow-size $-select-color-error;
   }
 
-  &:hover {
+  &:hover:not(:disabled) {
     border-color: $-select-color-border-selected;
-
-    ~ .sage-select__arrow::before {
-      color: $-select-color-success;
-    }
 
     .sage-select--error & {
       border-color: $-select-color-error;
@@ -128,10 +106,6 @@ $-select-padding-label: map-get($sage-field-configs, padding-label);
   &:active {
     border-color: $-select-color-success;
     box-shadow: $-select-border-box-shadow-size $-select-color-success;
-
-    ~ .sage-select__arrow::before {
-      color: $-select-color-success;
-    }
 
     .sage-select--error & {
       border-color: $-select-color-error;
@@ -149,9 +123,5 @@ $-select-padding-label: map-get($sage-field-configs, padding-label);
 }
 
 .sage-select__message {
-  @extend %t-sage-body-small;
-
-  .sage-select--error & {
-    color: $-select-color-error;
-  }
+  @include sage-form-field-message;
 }
