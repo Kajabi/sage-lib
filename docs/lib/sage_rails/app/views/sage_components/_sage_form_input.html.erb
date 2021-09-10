@@ -30,6 +30,11 @@
   <label for="<%= component.id %>" class="sage-input__label">
     <%= component.label_text %>
   </label>
+  <% if component.icon.present? %>
+    <div class="sage-input__icon">
+      <%= sage_component SageIcon, { icon: component.icon } %>
+    </div>
+  <% end %>
   <% if component.message_text.present? %>
     <div class="sage-input__message"><%= component.message_text %></div>
   <% end %>

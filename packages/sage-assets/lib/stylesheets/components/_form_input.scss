@@ -106,6 +106,22 @@ $-input-text-height: sage-font-size(body);
   }
 }
 
+.sage-input__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: $-input-height;
+  width: $-input-height;
+  pointer-events: none;
+
+  > i {
+    color: sage-color(charcoal, 100);
+  }
+}
+
 .sage-input__message {
   @include sage-form-field-message;
 }
