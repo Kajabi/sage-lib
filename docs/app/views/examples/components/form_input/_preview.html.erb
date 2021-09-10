@@ -2,7 +2,6 @@
 
   <h3 class="t-sage-heading-6">Text (default)</h3>
   <%= sage_component SageFormInput, {
-    icon: "info-circle",
     id: "form__fname1",
     input_type: "text",
     label_text: "First name",
@@ -13,7 +12,15 @@
     name: "custom_input_name",
     message_text: "This is a message",
     has_placeholder: false
-  } %>
+  } do %>
+  <%= sage_component SagePopover, {
+    icon: "info-circle",
+    trigger_value: "Open Menu",
+    trigger_icon_only: true,
+  } do %>
+    <p>I can put whatever content I want in here and use the custom class as a hook to style it like a good 'ol BEM mixin!</p>
+  <% end %>
+<% end %>
 
   <h3 class="t-sage-heading-6">Text (with error)</h3>
   <%= sage_component SageFormInput, {

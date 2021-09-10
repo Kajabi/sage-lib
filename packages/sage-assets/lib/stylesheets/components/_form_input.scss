@@ -12,6 +12,7 @@ $-input-padding: sage-spacing(sm);
 $-input-padding-filled: sage-spacing(2xs);
 $-input-padding-label: sage-spacing(2xs);
 $-input-padding-offset: sage-spacing(sm) - $-input-border-width;
+$-input-popover-size: $-input-height;
 $-input-text-height: sage-font-size(body);
 
 
@@ -21,6 +22,21 @@ $-input-text-height: sage-font-size(body);
   .sage-input-group & {
     height: auto;
     margin-bottom: 0;
+  }
+
+  .sage-popover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: $-input-popover-size;
+    width: $-input-popover-size;
+
+    .docs-panel & {
+      width: $-input-popover-size;
+    }
   }
 }
 
