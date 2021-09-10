@@ -1,11 +1,19 @@
 import React, { useState } from 'react';
+import { selectArgs } from '../story-support/helpers';
+import { SageTokens } from '../configs';
 import { Input } from './Input';
 
 export default {
   title: 'Sage/Input',
   component: Input,
+  argTypes: {
+    ...selectArgs({
+      icon: SageTokens.ICONS,
+    }),
+  },
   args: {
-    label: 'Label'
+    icon: SageTokens.ICONS.INFO_CIRCLE,
+    label: 'Label',
   }
 };
 
@@ -21,6 +29,7 @@ export const Default = (args) => {
         className={args.className}
         disabled={args.disabled}
         hasError={args.hasError}
+        icon={args.icon}
         id={args.id}
         label={args.label}
         message={null}

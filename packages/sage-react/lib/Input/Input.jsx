@@ -1,11 +1,14 @@
 import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import { Icon } from '../Icon';
 import { Label } from '../Label';
+import { SageTokens } from '../configs';
 
 export const Input = ({
   className,
   hasError,
+  icon,
   id,
   label,
   message,
@@ -27,6 +30,7 @@ export const Input = ({
       'sage-input--prefixed': prefix,
       'sage-input--suffixed': suffix,
       'sage-input--standalone': standalone,
+      'sage-input--has-icon': icon,
     }
   );
 
@@ -99,6 +103,11 @@ export const Input = ({
           value={suffix}
         />
       )}
+      {icon && (
+        <div className="sage-input__icon">
+          <Icon icon={icon} />
+        </div>
+      )}
       {message && (
         <div className="sage-input__message">{message}</div>
       )}
@@ -109,6 +118,7 @@ export const Input = ({
 Input.defaultProps = {
   className: null,
   hasError: false,
+  icon: null,
   label: null,
   message: null,
   onChange: null,
@@ -120,6 +130,7 @@ Input.defaultProps = {
 
 Input.propTypes = {
   className: PropTypes.string,
+  icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),
   id: PropTypes.string.isRequired,
   hasError: PropTypes.bool,
   label: PropTypes.string,
