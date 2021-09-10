@@ -30,6 +30,32 @@ export const Default = (args) => {
         className={args.className}
         disabled={args.disabled}
         hasError={args.hasError}
+        id={args.id}
+        label={args.label}
+        message={null}
+        onChange={onChange}
+        prefix={null}
+        required={false}
+        standalone={args.standalone}
+        suffix={null}
+        value={value}
+      />
+    </>
+  );
+};
+
+export const InputWithStaticIcon = (args) => {
+  const [value, updateValue] = useState('Test');
+  const onChange = (e) => {
+    updateValue(e.target.value);
+  };
+
+  return (
+    <>
+      <Input
+        className={args.className}
+        disabled={args.disabled}
+        hasError={args.hasError}
         icon={args.icon}
         id={args.id}
         label={args.label}
@@ -87,6 +113,10 @@ export const InputWithPopover = (args) => {
 Default.args = {
   id: 'field-1',
   label: 'First name'
+};
+
+InputWithStaticIcon.args = {
+  label: 'First name',
 };
 
 InputWithPopover.args = {
