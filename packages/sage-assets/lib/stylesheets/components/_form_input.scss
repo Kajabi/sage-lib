@@ -33,6 +33,34 @@ $-input-text-height: sage-font-size(body);
     height: auto;
     margin-bottom: 0;
   }
+}
+
+.sage-input--error {
+  .sage-upload-card & {
+    margin-top: sage-spacing(sm);
+  }
+}
+
+.sage-input--has-icon {
+  .sage-input__field {
+    padding-right: $-input-popover-size;
+  }
+
+  .sage-input__icon {
+    @include form-input-icon;
+
+    pointer-events: none;
+
+    > i {
+      color: sage-color(charcoal, 200);
+    }
+  }
+}
+
+.sage-input--has-popover {
+  .sage-input__field {
+    padding-right: $-input-popover-size;
+  }
 
   .sage-popover {
     @include form-input-icon;
@@ -40,12 +68,6 @@ $-input-text-height: sage-font-size(body);
     .docs-panel & {
       width: $-input-popover-size;
     }
-  }
-}
-
-.sage-input--error {
-  .sage-upload-card & {
-    margin-top: sage-spacing(sm);
   }
 }
 
@@ -122,16 +144,6 @@ $-input-text-height: sage-font-size(body);
     ~ .sage-input__label {
       @include floating-label-active();
     }
-  }
-}
-
-.sage-input__icon {
-  @include form-input-icon;
-
-  pointer-events: none;
-
-  > i {
-    color: sage-color(charcoal, 200);
   }
 }
 

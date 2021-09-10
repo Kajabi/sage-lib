@@ -3,6 +3,8 @@
     <%= "sage-form-field--error" if component.has_error %>
     <%= "sage-input--affixed" if component.prefix.present? or component.suffix.present? %>
     <%= "sage-form-field--showplaceholder" if component.has_placeholder %>
+    <%= "sage-input--has-popover" if component.content.present? %>
+    <%= "sage-input--has-icon" if component.icon.present? %>
     <%= component.generated_css_classes %>"
   <%= "data-js-input-prefix=#{component.prefix}" if component.prefix.present? -%>
   <%= "data-js-input-suffix=#{component.suffix}" if component.suffix.present? -%>
