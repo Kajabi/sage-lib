@@ -129,8 +129,8 @@ $-input-text-height: sage-font-size(body);
   position: absolute;
   right: 0;
   top: 0;
-  height: $-input-height;
-  width: $-input-height;
+  height: $-input-popover-size;
+  width: $-input-popover-size;
   pointer-events: none;
 
   > i {
