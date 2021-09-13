@@ -448,25 +448,6 @@
 }
 
 ///
-/// Mixins for common styles between the form toggles Radio, Checkbox, and Switch
-///
-@mixin sage-form-toggle() {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: flex-start;
-  margin-bottom: sage-spacing(card);
-}
-
-@mixin sage-form-toggle-label() {
-  display: inline-block;
-  flex: 1;
-  margin-left: sage-spacing(sm);
-  vertical-align: top;
-  cursor: pointer;
-  @extend %t-sage-body;
-}
-
-///
 /// Adds the basic default form field message font sizing and color treatment
 ///
 @mixin sage-form-field-message() {
@@ -489,8 +470,24 @@
 }
 
 ///
-/// Adds the basic default form field message font sizing and color treatment
+/// Mixins for common styles between the form toggles Radio, Checkbox, and Switch
 ///
+@mixin sage-form-toggle() {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  margin-bottom: sage-spacing(card);
+}
+
+@mixin sage-form-toggle-label() {
+  display: inline-block;
+  flex: 1;
+  margin-left: sage-spacing(sm);
+  vertical-align: top;
+  cursor: pointer;
+  @extend %t-sage-body;
+}
+
 @mixin sage-form-toggle-message() {
   position: relative;
   z-index: sage-z-index(default);
