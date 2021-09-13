@@ -482,7 +482,7 @@
 @mixin sage-form-toggle-label() {
   display: inline-block;
   flex: 1;
-  margin-left: sage-spacing(sm);
+  margin-left: sage-spacing(xs);
   vertical-align: top;
   cursor: pointer;
   @extend %t-sage-body;
