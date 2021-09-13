@@ -104,6 +104,7 @@
   <%= sage_component SageDropdown, {
     align: "right",
     panel_size: "small",
+    panel_type: "status",
     items: [{
       value: sage_component(SageLabel, { color: "published", value: "Publish" }),
       attributes: {},
@@ -136,6 +137,7 @@
 <p>Note: This pattern is used with the SageReact implementation, please consult UXD before using this as SageRails.</p>
 <%= sage_component SageDropdown, {
   search: true,
+  panel_type: "searchable",
   trigger_type: "select",
   items: [{
     value: "-- None --"
@@ -176,6 +178,7 @@
 <p>Note: This pattern is used with the SageReact implementation, please consult UXD before using this as SageRails.</p>
 <%= sage_component SageDropdown, {
   search: true,
+  panel_type: "searchable",
   trigger_type: "select-labeled",
   align: "right",
   items: [{
@@ -203,6 +206,7 @@
 
 <h3 class="t-sage-heading-6">Dropdown Field with full-width Custom Content and Footer</h3>
 <%= sage_component SageDropdown, {
+  panel_type: "searchable",
   search: true,
   trigger_type: "select",
   contained: true,
