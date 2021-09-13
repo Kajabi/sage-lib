@@ -149,6 +149,7 @@ module SageTokens
     "chart",
     "check",
     "check-circle",
+    "check-circle-filled",
     "circle-1",
     "circle-2",
     "circle-3",
