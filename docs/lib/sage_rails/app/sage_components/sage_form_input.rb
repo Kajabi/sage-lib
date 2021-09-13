@@ -24,4 +24,8 @@ class SageFormInput < SageComponent
     suffix: [:optional, String],
     value: [:optional, String]
   })
+
+  def sections
+    %w(form_input_popover)
+  end
 end

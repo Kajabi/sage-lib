@@ -198,17 +198,19 @@
     name: "custom_input_name",
     has_placeholder: false
   } do %>
-    <%= sage_component SagePopover, {
-      icon: "info-circle",
-      link: {
-        href: "#",
-        name: "Learn more about a thing",
-      },
-      popover_position: "left",
-      trigger_value: "Open Menu",
-      trigger_icon_only: true,
-    } do %>
-      <p>I can put whatever content I want in here and use the custom class as a hook to style it like a good 'ol BEM mixin!</p>
+    <%= content_for :sage_form_input_popover do %>
+      <%= sage_component SagePopover, {
+        icon: "info-circle",
+        link: {
+          href: "#",
+          name: "Learn more about a thing",
+        },
+        popover_position: "left",
+        trigger_value: "Open Menu",
+        trigger_icon_only: true,
+      } do %>
+        <p>I can put whatever content I want in here and use the custom class as a hook to style it like a good 'ol BEM mixin!</p>
+      <% end %>
     <% end %>
   <% end %>
 
