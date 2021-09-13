@@ -6,7 +6,6 @@ import { Label } from '../Label';
 import { SageTokens } from '../configs';
 
 export const Input = ({
-  children,
   className,
   hasError,
   icon,
@@ -14,6 +13,7 @@ export const Input = ({
   label,
   message,
   onChange,
+  popover,
   prefix,
   standalone,
   suffix,
@@ -24,11 +24,6 @@ export const Input = ({
   const [fieldValue, updateFieldValue] = useState(null);
   const [inputStyles, updateStyles] = useState(rest.style || {});
 
-  let hasPopoverChild = false;
-  React.Children.forEach(children, (child) => {
-    if (child.type.name === 'Popover') hasPopoverChild = true;
-  });
-
   const classNames = classnames(
     'sage-input',
     className,
@@ -38,7 +33,7 @@ export const Input = ({
       'sage-input--suffixed': suffix,
       'sage-input--standalone': standalone,
       'sage-input--has-icon': icon,
-      'sage-input--has-popover': hasPopoverChild,
+      'sage-input--has-popover': popover,
     }
   );
 
@@ -119,19 +114,19 @@ export const Input = ({
       {message && (
         <div className="sage-input__message">{message}</div>
       )}
-      {children}
+      {popover}
     </div>
   );
 };
 
 Input.defaultProps = {
-  children: null,
   className: null,
   hasError: false,
   icon: null,
   label: null,
   message: null,
   onChange: null,
+  popover: null,
   prefix: null,
   standalone: false,
   suffix: null,
@@ -139,7 +134,6 @@ Input.defaultProps = {
 };
 
 Input.propTypes = {
-  children: PropTypes.node,
   className: PropTypes.string,
   icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),
   id: PropTypes.string.isRequired,
@@ -147,6 +141,7 @@ Input.propTypes = {
   label: PropTypes.string,
   message: PropTypes.string,
   onChange: PropTypes.func,
+  popover: PropTypes.node,
   prefix: PropTypes.string,
   standalone: PropTypes.bool,
   suffix: PropTypes.string,

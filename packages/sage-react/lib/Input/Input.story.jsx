@@ -13,8 +13,7 @@ export default {
     }),
   },
   args: {
-    icon: SageTokens.ICONS.INFO_CIRCLE,
-    label: 'Label',
+    label: 'First name',
   }
 };
 
@@ -30,6 +29,7 @@ export const Default = (args) => {
         className={args.className}
         disabled={args.disabled}
         hasError={args.hasError}
+        icon={args.icon}
         id={args.id}
         label={args.label}
         message={null}
@@ -83,42 +83,43 @@ export const InputWithPopover = (args) => {
         className={args.className}
         disabled={args.disabled}
         hasError={args.hasError}
+        icon={args.icon}
         id={args.id}
         label={args.label}
         message={null}
         onChange={onChange}
+        popover={args.popover}
         prefix={null}
         required={false}
         standalone={args.standalone}
         suffix={null}
         value={value}
-      >
-        <Popover
-          icon={SageTokens.ICONS.INFO_CIRCLE}
-          moreLinkText="Link text"
-          moreLinkURL="https://example.com"
-          position="left"
-          title="Amazing popover"
-        >
-          <p>
-            I can put whatever content I want in here and use the custom class
-            as a hook to style it like a good &apos;ol BEM mixin!
-          </p>
-        </Popover>
-      </Input>
+      />
     </>
   );
 };
 
 Default.args = {
   id: 'field-1',
-  label: 'First name'
 };
 
 InputWithStaticIcon.args = {
-  label: 'First name',
+  icon: SageTokens.ICONS.INFO_CIRCLE,
 };
 
 InputWithPopover.args = {
-  label: 'First name',
+  popover: (
+    <Popover
+      icon={SageTokens.ICONS.INFO_CIRCLE}
+      moreLinkText="Link text"
+      moreLinkURL="https://example.com"
+      position="left"
+      title="Amazing popover"
+    >
+      <p>
+        I can put whatever content I want in here and use the custom class
+        as a hook to style it like a good &apos;ol BEM mixin!
+      </p>
+    </Popover>
+  )
 };
