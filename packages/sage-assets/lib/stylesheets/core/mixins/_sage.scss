@@ -414,6 +414,21 @@
 }
 
 ///
+/// Adds layout styles for form input icon container. This is used for a
+/// static icon and popover icon placement.
+///
+@mixin sage-form-field-icon() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: rem(40px);
+  width: rem(40px);
+}
+
+///
 /// Adds the basic default form label spacing, and border treatment
 ///
 @mixin sage-form-field-label() {
