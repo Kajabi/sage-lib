@@ -102,7 +102,7 @@ $-upload-card-background-hover: sage-color(grey, 100);
   margin-top: sage-spacing(sm);
 
   > p {
-    @extend %t-sage-body-small-semi;
+    @extend %t-sage-body-small;
 
     color: sage-color(red, 300);
 
