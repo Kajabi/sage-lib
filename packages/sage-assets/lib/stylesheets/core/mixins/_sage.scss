@@ -493,6 +493,14 @@
   }
 }
 
+@mixin sage-form-toggle-input() {
+  appearance: none;
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  cursor: pointer;
+}
+
 @mixin sage-form-toggle-label() {
   @extend %t-sage-body;
 
