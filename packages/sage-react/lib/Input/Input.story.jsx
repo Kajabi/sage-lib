@@ -24,23 +24,21 @@ export const Default = (args) => {
   };
 
   return (
-    <>
-      <Input
-        className={args.className}
-        disabled={args.disabled}
-        hasError={args.hasError}
-        icon={args.icon}
-        id={args.id}
-        label={args.label}
-        message={null}
-        onChange={onChange}
-        prefix={null}
-        required={false}
-        standalone={args.standalone}
-        suffix={null}
-        value={value}
-      />
-    </>
+    <Input
+      className={args.className}
+      disabled={args.disabled}
+      hasError={args.hasError}
+      icon={args.icon}
+      id={args.id}
+      label={args.label}
+      message={null}
+      onChange={onChange}
+      prefix={null}
+      required={false}
+      standalone={args.standalone}
+      suffix={null}
+      value={value}
+    />
   );
 };
 
@@ -51,23 +49,21 @@ export const InputWithStaticIcon = (args) => {
   };
 
   return (
-    <>
-      <Input
-        className={args.className}
-        disabled={args.disabled}
-        hasError={args.hasError}
-        icon={args.icon}
-        id={args.id}
-        label={args.label}
-        message={null}
-        onChange={onChange}
-        prefix={null}
-        required={false}
-        standalone={args.standalone}
-        suffix={null}
-        value={value}
-      />
-    </>
+    <Input
+      className={args.className}
+      disabled={args.disabled}
+      hasError={args.hasError}
+      icon={args.icon}
+      id={args.id}
+      label={args.label}
+      message={null}
+      onChange={onChange}
+      prefix={null}
+      required={false}
+      standalone={args.standalone}
+      suffix={null}
+      value={value}
+    />
   );
 };
 
@@ -78,24 +74,22 @@ export const InputWithPopover = (args) => {
   };
 
   return (
-    <>
-      <Input
-        className={args.className}
-        disabled={args.disabled}
-        hasError={args.hasError}
-        icon={args.icon}
-        id={args.id}
-        label={args.label}
-        message={null}
-        onChange={onChange}
-        popover={args.popover}
-        prefix={null}
-        required={false}
-        standalone={args.standalone}
-        suffix={null}
-        value={value}
-      />
-    </>
+    <Input
+      className={args.className}
+      disabled={args.disabled}
+      hasError={args.hasError}
+      icon={args.icon}
+      id={args.id}
+      label={args.label}
+      message={null}
+      onChange={onChange}
+      popover={args.popover}
+      prefix={null}
+      required={false}
+      standalone={args.standalone}
+      suffix={null}
+      value={value}
+    />
   );
 };
 
