@@ -12,8 +12,8 @@ $-checkbox-color-checked: sage-color(primary);
 $-checkbox-color-disabled: sage-color(grey, 200);
 $-checkbox-color-disabled-checked: sage-color(primary, 200);
 
-$-checkbox-size: rem(20px);
-$-checkbox-label-spacing: rem(12px);
+$-checkbox-size: rem(16px);
+$-checkbox-label-spacing: sage-spacing(xs);
 $-checkbox-border-radius-inner: sage-border(radius-small);
 $-checkbox-border-radius-outer: sage-border(radius-large);
 $-checkbox-transition: 0.15s ease-in-out;
