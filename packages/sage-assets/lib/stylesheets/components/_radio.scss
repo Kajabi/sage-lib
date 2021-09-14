@@ -76,21 +76,18 @@ $-radio-focus-outline-color: currentColor;
 
 .sage-radio--standalone,
 .sage-radio__input {
-  display: inline-block;
+  @include sage-form-toggle-input;
+
   z-index: sage-z-index(default, 1);
-  position: relative;
   height: $-radio-button-size;
   width: $-radio-button-size;
   margin: 0;
-  appearance: none;
   color: $-radio-color-default;
-  vertical-align: top;
   outline: none;
   background-color: sage-color(white);
   border: rem(1px) solid $-radio-color-default;
   border-radius: sage-border(radius-round);
   transition: background 0.2s ease-in-out, box-shadow $-radio-transition, border $-radio-transition;
-  cursor: pointer;
 
   &::before,
   &::after {

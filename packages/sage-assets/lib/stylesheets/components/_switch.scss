@@ -77,21 +77,18 @@ $-switch-focus-outline-error-color: sage-color(red, 300);
 }
 
 .sage-switch__input {
-  display: inline-block;
+  @include sage-form-toggle-input;
+
   z-index: sage-z-index(default, 1);
-  position: relative;
   transform: translateY(2px);
   height: $-switch-height;
   width: $-switch-width;
-  vertical-align: top;
-  appearance: none;
   color: $-switch-color-default;
   background: $-switch-color-default;
   border: 0;
   border-radius: $-switch-border-radius;
   outline: none !important; /* stylelint-disable-line declaration-no-important */
   transition: background 0.3s ease-out;
-  cursor: pointer;
 
   .sage-switch--has-border & {
     position: absolute;

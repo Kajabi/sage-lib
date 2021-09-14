@@ -137,20 +137,17 @@ $-checkbox-focus-outline-color: sage-color(primary);
 
 .sage-checkbox--standalone,
 .sage-checkbox__input {
-  appearance: none;
-  display: inline-block;
-  position: relative;
+  @include sage-form-toggle-input;
+
   height: $-checkbox-size;
   width: $-checkbox-size;
   margin: 0;
-  vertical-align: top;
   color: $-checkbox-color-default;
   border: 1px solid $-checkbox-color-default;
   border-radius: $-checkbox-border-radius-inner;
   outline: none;
   transition: $-checkbox-transition;
   transition-property: background, box-shadow, border;
-  cursor: pointer;
 
   &::before,
   &::after {
