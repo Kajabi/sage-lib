@@ -21,6 +21,10 @@ $-popover-panel-offset: sage-spacing(sm);
     justify-self: start;
     width: min-content;
   }
+
+  .sage-input--has-popover & {
+    @include sage-form-field-icon;
+  }
 }
 
 .sage-popover__actions {
@@ -51,27 +55,27 @@ $-popover-panel-offset: sage-spacing(sm);
     bottom: calc(100% + #{$-popover-panel-offset});
     left: 0;
   }
-  
+
   .sage-popover--top-right & {
     bottom: calc(100% + #{$-popover-panel-offset});
     right: 0;
   }
-  
+
   .sage-popover--right & {
     top: 0;
     left: calc(100% + #{$-popover-panel-offset});
   }
-  
+
   .sage-popover--bottom & {
     top: calc(100% + #{$-popover-panel-offset});
     left: 0;
   }
-  
+
   .sage-popover--bottom-right & {
     top: calc(100% + #{$-popover-panel-offset});
     right: 0;
   }
-  
+
   .sage-popover--left & {
     top: 0;
     right: calc(100% + #{$-popover-panel-offset});
@@ -83,7 +87,7 @@ $-popover-panel-offset: sage-spacing(sm);
 }
 
 .sage-popover__content {
-  @extend %t-sage-body-small;	
+  @extend %t-sage-body-small;
   @include sage-grid-stack();
 
   color: sage-color(charcoal, 200);

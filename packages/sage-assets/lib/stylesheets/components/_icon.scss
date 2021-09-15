@@ -66,6 +66,11 @@ $-icon-beside-type: (
     margin: 0 sage-spacing(xs) 0 0;
   }
 
+  .sage-input__icon .sage-icon-#{$icon-name} {
+    color: sage-color(charcoal, 200);
+    line-height: sage-line-height(body-xs);
+  }
+
   .sage-label--icon-#{$icon-name} .sage-label__value::before {
     @include sage-icon-base($icon-name, md);
     align-self: center;
