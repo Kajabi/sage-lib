@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.11.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.11.1...@kajabi/sage-system@0.11.2) (2021-09-15)
+
+
+### Bug Fixes
+
+* **input:** added a generic form field class for shared form elements styled ([c62e766](https://github.com/Kajabi/sage-lib/commit/c62e76600cfa48bed9f2f37d2eaf983be4157c89))
+* **input:** move updates to mixin instead of shared classes ([e457f8a](https://github.com/Kajabi/sage-lib/commit/e457f8a6513d4d4f1c1a5e6f8ae53f532eda24d7))
+
+
+
+
+
 ## [0.11.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.11.0...@kajabi/sage-system@0.11.1) (2021-09-08)
 
 

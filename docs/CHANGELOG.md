@@ -3,6 +3,35 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.15.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.14.1...@kajabi/sage@4.15.0) (2021-09-15)
+
+
+### Bug Fixes
+
+* **dropdown:** added panel type to handle different spacing ([bf1edd3](https://github.com/Kajabi/sage-lib/commit/bf1edd3cfcb9e967430085eca173dbe51ccd032f))
+* **dropdown:** updates per phil review ([a1161a8](https://github.com/Kajabi/sage-lib/commit/a1161a84e840be6f743ad230f4ea2847b18ac1c6))
+* **font:** removed calendly icon for the moment ([3e6b8ee](https://github.com/Kajabi/sage-lib/commit/3e6b8ee4d72b2862173b6d84fd45ab3f62969136))
+* **form elements:** self review and some cleanup ([a0d958d](https://github.com/Kajabi/sage-lib/commit/a0d958dbdd4e195e72263b33fc2fe32357d377cf))
+* **input:** added a generic form field class for shared form elements styled ([c62e766](https://github.com/Kajabi/sage-lib/commit/c62e76600cfa48bed9f2f37d2eaf983be4157c89))
+* **input:** move updates to mixin instead of shared classes ([e457f8a](https://github.com/Kajabi/sage-lib/commit/e457f8a6513d4d4f1c1a5e6f8ae53f532eda24d7))
+* **select:** updates to align to spec ([e4d58fa](https://github.com/Kajabi/sage-lib/commit/e4d58fa84cd9e0806a78fb9c57cf7cdb657e492b))
+* **textarea:** updates to textarea element ([551ce05](https://github.com/Kajabi/sage-lib/commit/551ce05783bb1575cddcb623a7545d2625b71dfc))
+
+
+### Features
+
+* **font:** updated Sage font ([19c4ce8](https://github.com/Kajabi/sage-lib/commit/19c4ce8572d14b2f1013e5869564e5f0256cfb0e))
+* **form input icon:** added classes for specific styling and padding for spacing ([e5f2972](https://github.com/Kajabi/sage-lib/commit/e5f297292438453b926c5256b215a9ba2990f90d))
+* **form input icon:** added docs for sage_form_input_popover, removed unused Fragment tags ([dc811c3](https://github.com/Kajabi/sage-lib/commit/dc811c3736002e1ee289720b128c5d287c320f10))
+* **form input icon:** added icon attribute to attribute_schema ([1649a65](https://github.com/Kajabi/sage-lib/commit/1649a6574e7bd440b247a9757b550bea3e581822))
+* **form input icon:** added link attribute to popover component ([1c76d14](https://github.com/Kajabi/sage-lib/commit/1c76d1466c14e7f0ed692d0d557bdff42b6b6b40))
+* **form input icon:** added markup and styling for static icon ([8434054](https://github.com/Kajabi/sage-lib/commit/84340543e3b1058bf19a63a4a9a7ac4e9de4aac7))
+* **form input icon:** added styling for popover affordance ([3dd2b97](https://github.com/Kajabi/sage-lib/commit/3dd2b974058cd74a65749b725ef715587f052abd))
+
+
+
+
+
 ## [4.14.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.14.0...@kajabi/sage@4.14.1) (2021-09-08)
 
 **Note:** Version bump only for package @kajabi/sage

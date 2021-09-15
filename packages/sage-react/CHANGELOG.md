@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.57.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.56.1...@kajabi/sage-react@0.57.0) (2021-09-15)
+
+
+### Bug Fixes
+
+* **dropdown:** added panel type to handle different spacing ([bf1edd3](https://github.com/Kajabi/sage-lib/commit/bf1edd3cfcb9e967430085eca173dbe51ccd032f))
+* **dropdown:** updates per phil review ([a1161a8](https://github.com/Kajabi/sage-lib/commit/a1161a84e840be6f743ad230f4ea2847b18ac1c6))
+* **font:** removed calendly icon for the moment ([3e6b8ee](https://github.com/Kajabi/sage-lib/commit/3e6b8ee4d72b2862173b6d84fd45ab3f62969136))
+* **font:** updated icon name ([e76ec85](https://github.com/Kajabi/sage-lib/commit/e76ec853425cdfefc30b6aaed4052984f5e8af9b))
+* **input:** added a generic form field class for shared form elements styled ([c62e766](https://github.com/Kajabi/sage-lib/commit/c62e76600cfa48bed9f2f37d2eaf983be4157c89))
+
+
+### Features
+
+* **font:** updated Sage font ([19c4ce8](https://github.com/Kajabi/sage-lib/commit/19c4ce8572d14b2f1013e5869564e5f0256cfb0e))
+* **form input icon:** added docs for sage_form_input_popover, removed unused Fragment tags ([dc811c3](https://github.com/Kajabi/sage-lib/commit/dc811c3736002e1ee289720b128c5d287c320f10))
+* **form input icon:** added React component children and additional story ([20824f4](https://github.com/Kajabi/sage-lib/commit/20824f433ccff299bc541b9e3945fa022f63c576))
+* **form input icon:** added static icon to React component and story ([7f38ecd](https://github.com/Kajabi/sage-lib/commit/7f38ecde44a9a7d10d9beba9131e8cd93df4a3da))
+* **form input icon:** fixed static icon line-height, added static icon story ([e2048da](https://github.com/Kajabi/sage-lib/commit/e2048da5c7916769767ec1e4fc7df0ca0e06c232))
+
+
+
+
+
 ## [0.56.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.56.0...@kajabi/sage-react@0.56.1) (2021-09-02)
 
 **Note:** Version bump only for package @kajabi/sage-react

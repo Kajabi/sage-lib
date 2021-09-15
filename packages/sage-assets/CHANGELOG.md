@@ -3,6 +3,38 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.47.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.46.1...@kajabi/sage-assets@0.47.0) (2021-09-15)
+
+
+### Bug Fixes
+
+* **dropdown:** added panel type to handle different spacing ([bf1edd3](https://github.com/Kajabi/sage-lib/commit/bf1edd3cfcb9e967430085eca173dbe51ccd032f))
+* **dropdown:** update interactive state of the row ([e3b9357](https://github.com/Kajabi/sage-lib/commit/e3b9357a53d2e55935d0ae307df382e2bd5ddbcb))
+* **font:** removed calendly icon for the moment ([3e6b8ee](https://github.com/Kajabi/sage-lib/commit/3e6b8ee4d72b2862173b6d84fd45ab3f62969136))
+* **font:** updated Sage icon font ([27328af](https://github.com/Kajabi/sage-lib/commit/27328affa80b88849e8658dbe9b61fe09a08a404))
+* **form elements:** added grid to spacing list and linter fix ([32bd69a](https://github.com/Kajabi/sage-lib/commit/32bd69a82bbc2247459713126b9d49f34473cf11))
+* **form elements:** added icon to error message ([b626601](https://github.com/Kajabi/sage-lib/commit/b626601c6511395b081bd4e67a1d9e96f249bfc8))
+* **form elements:** self review and some cleanup ([a0d958d](https://github.com/Kajabi/sage-lib/commit/a0d958dbdd4e195e72263b33fc2fe32357d377cf))
+* **input:** added a generic form field class for shared form elements styled ([c62e766](https://github.com/Kajabi/sage-lib/commit/c62e76600cfa48bed9f2f37d2eaf983be4157c89))
+* **input:** move updates to mixin instead of shared classes ([e457f8a](https://github.com/Kajabi/sage-lib/commit/e457f8a6513d4d4f1c1a5e6f8ae53f532eda24d7))
+* **input:** updates to input and textarea vars ([65a9120](https://github.com/Kajabi/sage-lib/commit/65a9120c0e243f75343639cc46d47d3cbf70552d))
+* **select:** updates to align to spec ([e4d58fa](https://github.com/Kajabi/sage-lib/commit/e4d58fa84cd9e0806a78fb9c57cf7cdb657e492b))
+* **textarea:** updates to textarea element ([551ce05](https://github.com/Kajabi/sage-lib/commit/551ce05783bb1575cddcb623a7545d2625b71dfc))
+
+
+### Features
+
+* **font:** updated Sage font ([19c4ce8](https://github.com/Kajabi/sage-lib/commit/19c4ce8572d14b2f1013e5869564e5f0256cfb0e))
+* **form input icon:** added classes for specific styling and padding for spacing ([e5f2972](https://github.com/Kajabi/sage-lib/commit/e5f297292438453b926c5256b215a9ba2990f90d))
+* **form input icon:** added markup and styling for static icon ([8434054](https://github.com/Kajabi/sage-lib/commit/84340543e3b1058bf19a63a4a9a7ac4e9de4aac7))
+* **form input icon:** added styling for popover affordance ([3dd2b97](https://github.com/Kajabi/sage-lib/commit/3dd2b974058cd74a65749b725ef715587f052abd))
+* **form input icon:** fixed static icon line-height, added static icon story ([e2048da](https://github.com/Kajabi/sage-lib/commit/e2048da5c7916769767ec1e4fc7df0ca0e06c232))
+* **form input icon:** updated variables for width/height on form input icon ([e3106b7](https://github.com/Kajabi/sage-lib/commit/e3106b78f4364ba33d39f461d6920fee62421a1d))
+
+
+
+
+
 ## [0.46.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.46.0...@kajabi/sage-assets@0.46.1) (2021-09-02)
 
 **Note:** Version bump only for package @kajabi/sage-assets
