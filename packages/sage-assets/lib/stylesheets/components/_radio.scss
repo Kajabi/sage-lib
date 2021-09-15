@@ -8,12 +8,13 @@
 // Colors
 $-radio-color-checked: map-get($sage-radio-colors, checked);
 $-radio-color-checked-disabled: map-get($sage-radio-colors, checked-disabled);
+$-radio-color-checked-hover: map-get($sage-radio-colors, checked-hover);
 $-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
 $-radio-color-default: map-get($sage-radio-colors, default);
 $-radio-color-disabled: map-get($sage-radio-colors, disabled);
 $-radio-color-hover: map-get($sage-radio-colors, hover);
 $-radio-color-text-disabled: sage-color(charcoal, 100);
-$-radio-color-focus-outline: sage-color(primary, 300);
+$-radio-color-focus-outline: sage-color(primary, 400);
 $-radio-color-focus-outline-error: sage-color(red, 300);
 
 // Additional configurations
@@ -130,6 +131,12 @@ $-radio-focus-outline-color: currentColor;
     &::after {
       transform: translate3d(-50%, -50%, 0) scale(1);
       opacity: 1;
+    }
+
+    &:hover {
+      color: $-radio-color-checked-hover;
+      background: $-radio-color-checked-hover;
+      border-color: $-radio-color-checked-hover;
     }
   }
 
