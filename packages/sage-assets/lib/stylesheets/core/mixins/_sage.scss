@@ -448,6 +448,23 @@
 }
 
 ///
+/// Adds the basic default styling for floating input labels
+///
+@mixin sage-form-field-floating-label($textarea: true, $input-text-height, $input-padding, $textarea-label-padding, $textarea-padding) {
+  @if ($textarea) {
+    transform: translateY($textarea-label-padding - $textarea-padding);
+    transition: opacity 0.1s ease-in, transform 0.15s ease-in-out, color 0.15s ease-out;
+    opacity: 1;
+  }
+  @else {
+    transform: translateY(-($input-text-height + $-input-padding * 2)); // IE doesn't support calc in transforms so we provide a fallback
+    transform: translateY(calc(-50% - (#{$-input-text-height} + #{$-input-padding}))); // we calculate the centered position minus the offset of the text height plus the spacing height
+    transition: opacity 0.1s ease-in, transform 0.15s ease-in-out, color 0.15s ease-out;
+    opacity: 1;
+  }
+}
+
+///
 /// Adds the basic default form field message font sizing and color treatment
 ///
 @mixin sage-form-field-message() {
