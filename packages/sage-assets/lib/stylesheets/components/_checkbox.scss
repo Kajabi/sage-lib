@@ -260,6 +260,12 @@ $-checkbox-focus-outline-color: sage-color(primary, 400);
       color: sage-color(red);
     }
 
+    &:hover {
+      color: sage-color(red);
+      background: sage-color(red, 100);
+      border-color: sage-color(red);
+    }
+
     &:hover:not(:checked):not(:disabled) {
       border-color: sage-color(red);
     }

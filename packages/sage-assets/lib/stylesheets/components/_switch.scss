@@ -157,6 +157,10 @@ $-switch-focus-outline-error-color: sage-color(red, 300);
     }
     &:checked {
       background-color: sage-color(red);
+
+      &:hover {
+        background: sage-color(red);
+      }
     }
     &::before {
       border-color: sage-color(red);

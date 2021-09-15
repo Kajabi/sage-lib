@@ -54,6 +54,12 @@ $-radio-focus-outline-color: currentColor;
   border-radius: sage-border(radius);
 }
 
+.sage-radio__caption {
+  .sage-radio--has-border & {
+    margin-left: sage-spacing(lg);
+  }
+}
+
 .sage-radio__label {
   @include sage-form-toggle-label;
 
@@ -72,7 +78,6 @@ $-radio-focus-outline-color: currentColor;
       height: 100%;
     }
   }
-
 }
 
 .sage-radio--standalone,
@@ -219,6 +224,9 @@ $-radio-focus-outline-color: currentColor;
     }
     &:focus::before {
       border-color: $-radio-color-focus-outline-error;
+    }
+    &:hover {
+      border-color: sage-color(red);
     }
   }
   :hover:not(:checked):not(:disabled) {
