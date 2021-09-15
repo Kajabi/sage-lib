@@ -72,12 +72,12 @@ $-input-text-height: sage-font-size(body);
 .sage-input__field {
   @include sage-form-field;
 
-  @mixin floating-label-active {
-    transform: translateY(-($-input-text-height + $-input-padding-filled * 2)); // IE doesn't support calc in transforms so we provide a fallback
-    transform: translateY(calc(-50% - (#{$-input-text-height} + #{$-input-padding-filled}))); // we calculate the centered position minus the offset of the text height plus the spacing height
-    transition: opacity 0.1s ease-in, transform 0.15s ease-in-out, color 0.15s ease-out;
-    opacity: 1;
-  }
+  // @mixin floating-label-active {
+  //   transform: translateY(-($-input-text-height + $-input-padding-filled * 2)); // IE doesn't support calc in transforms so we provide a fallback
+  //   transform: translateY(calc(-50% - (#{$-input-text-height} + #{$-input-padding-filled}))); // we calculate the centered position minus the offset of the text height plus the spacing height
+  //   transition: opacity 0.1s ease-in, transform 0.15s ease-in-out, color 0.15s ease-out;
+  //   opacity: 1;
+  // }
 
   height: $-input-height;
   padding: $-input-padding-offset sage-spacing(sm);
@@ -85,7 +85,11 @@ $-input-text-height: sage-font-size(body);
   &:focus:not(:disabled),
   &:active:not(:disabled) {
     ~ .sage-input__label {
-      @include floating-label-active();
+      @include sage-form-field-floating-label(
+        $input-text-height: $-input-text-height,
+        $input-padding: $-input-padding-filled
+      );
+      // @include floating-label-active();
     }
   }
 
@@ -95,13 +99,21 @@ $-input-text-height: sage-font-size(body);
 
   &:valid:not(:placeholder-shown) {
     ~ .sage-input__label {
-      @include floating-label-active();
+      // @include floating-label-active();
+      @include sage-form-field-floating-label(
+        $input-text-height: $-input-text-height,
+        $input-padding: $-input-padding-filled
+      );
     }
   }
 
   .sage-form-field--showplaceholder & {
     ~ .sage-input__label {
-      @include floating-label-active();
+      // @include floating-label-active();
+      @include sage-form-field-floating-label(
+        $input-text-height: $-input-text-height,
+        $input-padding: $-input-padding-filled
+      );
     }
   }
 
