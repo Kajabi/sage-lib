@@ -9,6 +9,7 @@
 $-switch-color-default: sage-color(grey, 400);
 $-switch-color-default-text: sage-color(charcoal, 300);
 $-switch-color-checked: sage-color(primary);
+$-switch-color-checked-hover: sage-color(primary, 400);
 $-switch-color-disabled: sage-color(grey, 200);
 $-switch-color-disabled-text: sage-color(grey, 400);
 $-switch-color-disabled-checked: sage-color(primary, 200);
@@ -25,8 +26,8 @@ $-switch-toggle-size: rem(16px);
 
 // Focus state
 $-switch-focus-outline-spacing: sage-spacing(2xs);
-$-switch-focus-outline-width: 2;
-$-switch-focus-outline-color: sage-color(primary);
+$-switch-focus-outline-width: 3;
+$-switch-focus-outline-color: sage-color(primary, 400);
 $-switch-focus-outline-error-color: sage-color(red, 300);
 
 
@@ -128,8 +129,8 @@ $-switch-focus-outline-error-color: sage-color(red, 300);
 
   &::before { // switch background
     transform: translate3d(-50%, -50%, 0) scale(0.94);
-    width: calc(100% + (#{$-switch-focus-outline-spacing * 2}));
-    height: calc(100% + (#{$-switch-focus-outline-spacing * 2}));
+    width: calc(100% + (#{$-switch-focus-outline-spacing}));
+    height: calc(100% + (#{$-switch-focus-outline-spacing}));
     border: ($-switch-focus-outline-width * 1px) solid $-switch-focus-outline-color;
     border-radius: $-switch-border-radius;
     transition: opacity 0.15s ease-out 0.05s, transform 0.2s ease-in-out;
@@ -169,6 +170,12 @@ $-switch-focus-outline-error-color: sage-color(red, 300);
 
     &::after {
       transform: translate3d(0, -50%, 0);
+    }
+
+    &:hover {
+      color: $-switch-color-checked-hover;
+      background: $-switch-color-checked-hover;
+      border-color: $-switch-color-checked-hover;
     }
   }
 
