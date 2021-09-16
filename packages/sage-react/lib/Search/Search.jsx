@@ -34,7 +34,7 @@ export const Search = ({
         data-kjb-disable-search
         {...rest}
       />
-      <label class="sage-search__label">
+      <label className="sage-search__label">
         {placeholder}
       </label>
       {onClear && (
