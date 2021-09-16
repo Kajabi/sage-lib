@@ -318,6 +318,7 @@
     margin-bottom: 0;
   }
 }
+
 ///
 /// Adds the basic default form spacing, and border treatment
 ///
@@ -466,6 +467,57 @@
       padding-right: sage-spacing(xs);
     }
   }
+}
+
+///
+/// Mixins for common styles between the form toggles Radio, Checkbox, and Switch
+///
+@mixin sage-form-toggle() {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  margin-bottom: sage-spacing(card);
+}
+
+@mixin sage-form-toggle-parents() {
+  .sage-panel-grid > &,
+  .sage-panel__row > &,
+  .sage-panel__stack > &,
+  .sage-panel__block > &,
+  .sage-card-grid > &,
+  .sage-card__row > &,
+  .sage-card__stack > &,
+  .sage-card__block > & {
+    margin-bottom: 0;
+    @content;
+  }
+}
+
+@mixin sage-form-toggle-input() {
+  appearance: none;
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  cursor: pointer;
+}
+
+@mixin sage-form-toggle-label() {
+  @extend %t-sage-body;
+
+  display: inline-block;
+  flex: 1;
+  margin-left: sage-spacing(xs);
+  vertical-align: top;
+  cursor: pointer;
+}
+
+@mixin sage-form-toggle-message() {
+  @extend %t-sage-body-xsmall;
+
+  position: relative;
+  z-index: sage-z-index(default);
+  width: 100%;
+  color: sage-color(charcoal, 200);
 }
 
 ///
