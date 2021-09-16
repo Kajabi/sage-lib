@@ -5,8 +5,6 @@
 ////
 
 $-search-icon: "::before";
-$-search-input-height: rem(40px);
-$-search-input-label-offset: rem(12px);
 
 .sage-search {
   display: flex;
@@ -99,8 +97,8 @@ $-search-input-label-offset: rem(12px);
 .sage-search__label {
   @include sage-form-field-label;
 
-  top: ($-search-input-height / 2);
-  left: $-search-input-label-offset;
+  top: rem(18px);
+  left: rem(12px);
   padding-left: sage-spacing(2xs);
   padding-right: sage-spacing(2xs);
 }
@@ -131,9 +129,19 @@ $-search-input-label-offset: rem(12px);
   .sage-search--contained &:focus:not(:placeholder-shown),
   .sage-search--contained &:active,
   .sage-search--contained &:active:not(:placeholder-shown) {
+    @include placeholder {
+      opacity: 0;
+    }
+
     ~ .sage-search__label {
       @include sage-form-field-floating-label();
-      color: inherit;
+      color: sage-color(primary);
+    }
+  }
+
+  .sage-search--has-text & {
+    ~ .sage-search__label {
+      @include sage-form-field-floating-label();
     }
   }
 
