@@ -6,7 +6,7 @@
         <code><%= klass %></code>
       <% end %>
       <div class="example__code">
-        <button class="example__expand-btn" ="false" aria-controls="example-rails-code-<%= title %>">Expand this code snippet</button>
+        <button class="example__expand-btn" aria-controls="example-rails-code-<%= title %>">Expand this code snippet</button>
         <div id="example-rails-code-<%= title %>" class="sage-code-snippet" tabindex="-1">
           <pre class="prettyprint"><code><%= File.read(File.join(Rails.root, "app/views/examples/", type.pluralize, title, "_preview.html.erb")) %></code></pre>
         </div>
@@ -17,7 +17,7 @@
         <code><%= klass %>::ATTRIBUTE_SCHEMA</code>
       <% end %>
       <div class="example__code">
-        <button class="example__expand-btn" ="false" aria-controls="example-rails-code-<%= title %>">Expand this code snippet</button>
+        <button class="example__expand-btn" aria-controls="example-rails-code-<%= title %>">Expand this code snippet</button>
         <div id="example-rails-code-<%= title %>" class="sage-code-snippet" tabindex="-1">
           <pre class="prettyprint"><code><%= klass::ATTRIBUTE_SCHEMA.pretty_inspect %></code></pre>
         </div>
@@ -33,7 +33,7 @@
   <%= sage_component SageCard, { spacer: { bottom: :md } } do %>
     <%= sage_component SageCardHeader, { title: "Generated HTML Code"} %>
     <div class="example__code">
-      <button class="example__expand-btn" ="false" aria-controls="example-html-code-<%= title %>">Expand this code snippet</button>
+      <button class="example__expand-btn" aria-controls="example-html-code-<%= title %>">Expand this code snippet</button>
       <div id="example-html-code-<%= title %>" class="sage-code-snippet" tabindex="-1">
         <pre class="prettyprint"><code><%= CGI.unescapeHTML(CGI.escapeHTML(render("examples/#{type.pluralize}/#{title}/preview"))) %></code></pre>
       </div>
