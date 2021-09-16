@@ -61,7 +61,6 @@ Sage.accordion = (function () {
     }
 
     // Add a11y attributes
-    // header.setAttribute('aria-expanded', false);
     header.setAttribute('aria-controls', bodyId);
     header.setAttribute('role', 'button');
     header.setAttribute('tabindex', 0);
