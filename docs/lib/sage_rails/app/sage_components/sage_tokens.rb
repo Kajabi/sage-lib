@@ -113,6 +113,8 @@ module SageTokens
     "ste", "sti", "sts", "sme", "smi", "sms", "soe", "soi", "sos",
   ]
 
+  HERO_SIZES = ["small", "large"]
+
   ICONS = [
     "add",
     "add-circle",
