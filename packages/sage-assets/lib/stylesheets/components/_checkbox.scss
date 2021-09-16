@@ -16,7 +16,7 @@ $-checkbox-color-disabled-checked: sage-color(primary, 200);
 $-checkbox-size: rem(16px);
 $-checkbox-label-spacing: sage-spacing(xs);
 $-checkbox-border-radius-inner: sage-border(radius-small);
-$-checkbox-border-radius-outer: sage-border(radius-large);
+$-checkbox-border-radius-outer: sage-border(radius);
 $-checkbox-transition: 0.15s ease-in-out;
 
 $-checkbox-marker-border: rem(2px);
@@ -28,7 +28,7 @@ $-checkbox-marker-offset: $-checkbox-marker-border * 2;
 //
 // Focus state
 //
-$-checkbox-focus-outline-size: sage-spacing(2xs);
+$-checkbox-focus-outline-size: rem(3px);
 $-checkbox-focus-outline-width: 2;
 $-checkbox-focus-outline-color: sage-color(primary, 400);
 
