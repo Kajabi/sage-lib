@@ -5,6 +5,8 @@
 ////
 
 $-search-icon: "::before";
+$-search-input-height: rem(40px);
+$-search-input-label-offset: rem(12px);
 
 .sage-search {
   display: flex;
@@ -90,9 +92,17 @@ $-search-icon: "::before";
   }
 }
 
-.sage-search__label,
 .sage-search__clear-button-text {
   @include visually-hidden();
+}
+
+.sage-search__label {
+  @include sage-form-field-label;
+
+  top: ($-search-input-height / 2);
+  left: $-search-input-label-offset;
+  padding-left: sage-spacing(2xs);
+  padding-right: sage-spacing(2xs);
 }
 
 .sage-search__input {
@@ -115,6 +125,16 @@ $-search-icon: "::before";
 
   .sage-panel-controls__toolbar & {
     border-radius: sage-border(radius);
+  }
+
+  .sage-search--contained &:focus,
+  .sage-search--contained &:focus:not(:placeholder-shown),
+  .sage-search--contained &:active,
+  .sage-search--contained &:active:not(:placeholder-shown) {
+    ~ .sage-search__label {
+      @include sage-form-field-floating-label();
+      color: inherit;
+    }
   }
 
   // remove default webkit search field styling
