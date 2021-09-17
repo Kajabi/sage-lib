@@ -60,6 +60,10 @@
     @include sage-icon-base(strikethrough, md);
   }
 
+  .mce-ico.mce-i-hr::before {
+    @include sage-icon-base(horizontal-line, md);
+  }
+
   .mce-ico.mce-i-underline::before {
     @include sage-icon-base(underline, md);
   }
