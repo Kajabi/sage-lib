@@ -397,7 +397,7 @@
   .sage-form-field--error &,
   .sage-form-field--error &:focus:not(:disabled),
   .sage-form-field--error &:not(:placeholder-shown),
-  &:required:not(:placeholder-shown):not(:valid) {
+  .sage-form-field--error &:required:not(:placeholder-shown):not(:valid) {
     border-color: sage-color(red);
     box-shadow: 0 0 0 rem(1px) sage-color(red);
 
@@ -452,9 +452,9 @@
 ///
 @mixin sage-form-field-floating-label(
   $textarea: false,
-  $input-text-height: sage-font-size(body), 
+  $input-text-height: sage-font-size(body),
   $input-padding: sage-spacing(2xs),
-  $textarea-label-padding: rem(3px), 
+  $textarea-label-padding: rem(3px),
   $textarea-padding: sage-spacing(sm)
 ) {
   @if ($textarea == true) {
