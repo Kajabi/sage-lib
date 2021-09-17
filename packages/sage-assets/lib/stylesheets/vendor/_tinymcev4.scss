@@ -89,6 +89,10 @@
     @include sage-icon-base(margin-right, md);
   }
 
+  .mce-ico.mce-i-link::before {
+    @include sage-icon-base(url, md);
+  }
+
   .mce-ico.mce-i-image::before {
     @include sage-icon-base(image, md);
   }
