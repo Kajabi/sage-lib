@@ -64,6 +64,10 @@
     @include sage-icon-base(horizontal-line, md);
   }
 
+  .mce-ico.mce-i-blockquote::before {
+    @include sage-icon-base(quote, md);
+  }
+
   .mce-ico.mce-i-underline::before {
     @include sage-icon-base(underline, md);
   }
