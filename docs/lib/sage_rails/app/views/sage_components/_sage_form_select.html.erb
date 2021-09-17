@@ -7,7 +7,11 @@
   data-js-select="true"
   <%= component.generated_html_attributes.html_safe %>
 >
-  <select class="sage-select__field" name="<%= selectID %>" id="<%= selectID %>">
+  <select 
+    class="sage-select__field" 
+    name="<%= selectID %>" 
+    id="<%= selectID %>" 
+    <%= "disabled" if component.disabled %>
     <% component.select_options.each do |option| %>
       <option value="<%= option[:value] %>"><%= option[:text] %></option>
     <% end %>
