@@ -31,6 +31,7 @@ export const ExpandableCard = ({
   const containerClassnames = classnames({
     'sage-expandable-card sage-expandable-card--expanded': expanded,
     'sage-expandable-card': !expanded,
+    'sage-expandable-card--expanded': selfActive
   });
 
   const bodyClassnames = classnames({
@@ -53,11 +54,9 @@ export const ExpandableCard = ({
       >
         {triggerLabel}
       </Button>
-      {selfActive && (
-        <div id={id} className={bodyClassnames}>
-          {children}
-        </div>
-      )}
+      <div id={id} className={bodyClassnames}>
+        {children}
+      </div>
     </div>
   );
 };
