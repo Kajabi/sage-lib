@@ -8,22 +8,23 @@
 // Colors
 $-radio-color-checked: map-get($sage-radio-colors, checked);
 $-radio-color-checked-disabled: map-get($sage-radio-colors, checked-disabled);
+$-radio-color-checked-hover: map-get($sage-radio-colors, checked-hover);
 $-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
 $-radio-color-default: map-get($sage-radio-colors, default);
 $-radio-color-disabled: map-get($sage-radio-colors, disabled);
 $-radio-color-hover: map-get($sage-radio-colors, hover);
 $-radio-color-text-disabled: sage-color(charcoal, 100);
-$-radio-color-focus-outline: sage-color(primary, 300);
+$-radio-color-focus-outline: sage-color(primary, 400);
 $-radio-color-focus-outline-error: sage-color(red, 300);
 
 // Additional configurations
 $-radio-button-size: $sage-radio-size;
-$-radio-label-spacing: sage-spacing(sm);
+$-radio-label-spacing: sage-spacing(xs);
 $-radio-transition: 0.15s ease-in-out;
 $-radio-selected-indicator-size: rem(7px);
 
 // Focus state
-$-radio-focus-outline-size: sage-spacing(2xs);
+$-radio-focus-outline-size: rem(3px);
 $-radio-focus-outline-width: 2;
 $-radio-focus-outline-color: currentColor;
 
@@ -32,26 +33,14 @@ $-radio-focus-outline-color: currentColor;
   position: relative;
 
   &:not(.sage-radio--standalone) {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: flex-start;
-    margin-bottom: sage-spacing(card);
+    @include sage-form-toggle;
   }
 
   .sage-list & {
     margin-bottom: sage-spacing(card) / 2;
   }
 
-  .sage-panel-grid > &,
-  .sage-panel__row > &,
-  .sage-panel__stack > &,
-  .sage-panel__block > &,
-  .sage-card-grid > &,
-  .sage-card__row > &,
-  .sage-card__stack > &,
-  .sage-card__block > & {
-    margin-bottom: 0;
-  }
+  @include sage-form-toggle-parents;
 }
 
 .sage-radio--standalone {
@@ -65,14 +54,14 @@ $-radio-focus-outline-color: currentColor;
   border-radius: sage-border(radius);
 }
 
-.sage-radio__label {
-  display: inline-block;
-  flex: 1;
-  margin-left: $-radio-label-spacing;
-  vertical-align: top;
-  cursor: pointer;
+.sage-radio__caption {
+  .sage-radio--has-border & {
+    margin-left: sage-spacing(lg);
+  }
+}
 
-  @extend %t-sage-body;
+.sage-radio__label {
+  @include sage-form-toggle-label;
 
   .sage-radio--has-border & {
     margin-left: sage-spacing(lg);
@@ -89,26 +78,22 @@ $-radio-focus-outline-color: currentColor;
       height: 100%;
     }
   }
-
 }
 
 .sage-radio--standalone,
 .sage-radio__input {
-  display: inline-block;
+  @include sage-form-toggle-input;
+
   z-index: sage-z-index(default, 1);
-  position: relative;
   height: $-radio-button-size;
   width: $-radio-button-size;
   margin: 0;
-  appearance: none;
   color: $-radio-color-default;
-  vertical-align: top;
   outline: none;
   background-color: sage-color(white);
   border: rem(1px) solid $-radio-color-default;
   border-radius: sage-border(radius-round);
   transition: background 0.2s ease-in-out, box-shadow $-radio-transition, border $-radio-transition;
-  cursor: pointer;
 
   &::before,
   &::after {
@@ -151,6 +136,12 @@ $-radio-focus-outline-color: currentColor;
     &::after {
       transform: translate3d(-50%, -50%, 0) scale(1);
       opacity: 1;
+    }
+
+    &:hover {
+      color: $-radio-color-checked-hover;
+      background: $-radio-color-checked-hover;
+      border-color: $-radio-color-checked-hover;
     }
   }
 
@@ -234,6 +225,9 @@ $-radio-focus-outline-color: currentColor;
     &:focus::before {
       border-color: $-radio-color-focus-outline-error;
     }
+    &:hover {
+      border-color: sage-color(red);
+    }
   }
   :hover:not(:checked):not(:disabled) {
     border-color: sage-color(red);
@@ -242,11 +236,6 @@ $-radio-focus-outline-color: currentColor;
 
 .sage-radio__message,
 .sage-radio__caption {
-  position: relative;
-  z-index: sage-z-index(default);
-  width: 100%;
+  @include sage-form-toggle-message;
   margin-left: #{$-radio-button-size + $-radio-label-spacing};
-  color: sage-color(charcoal, 200);
-
-  @extend %t-sage-body-xsmall;
 }
