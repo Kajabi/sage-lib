@@ -55,7 +55,6 @@ $-textarea-color-default-background: sage-color(white);
   &:valid:not(:placeholder-shown),
   &:required:not(:placeholder-shown) {
     ~ .sage-textarea__label {
-      // @include floating-label-textarea-active();
       @include sage-form-field-floating-label($textarea: true);
     }
   }
