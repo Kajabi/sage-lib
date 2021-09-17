@@ -34,7 +34,7 @@ Sage.accordion = (function () {
     // Toggle target
     const toggle = el.getAttribute('aria-expanded') === 'true';
     el.setAttribute('aria-expanded', !toggle);
-    el.nextElementSibling.hidden = toggle;
+    el.parentNode.classList.toggle('sage-expandable-card--expanded');
   }
 
   function init(el) {
@@ -58,11 +58,9 @@ Sage.accordion = (function () {
     if (!bodyId) {
       bodyId = generateId(JS_ACCORDION_ID_BODY_PREFIX);
       body.setAttribute('id', bodyId);
-      body.hidden = true;
     }
 
     // Add a11y attributes
-    header.setAttribute('aria-expanded', false);
     header.setAttribute('aria-controls', bodyId);
     header.setAttribute('role', 'button');
     header.setAttribute('tabindex', 0);
