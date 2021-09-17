@@ -119,6 +119,28 @@ $-select-padding-label: sage-spacing(2xs);
       border-color: currentColor;
     }
   }
+
+  &:disabled {
+    color: sage-color(charcoal, 100);
+    background-color: sage-color(grey, 200);
+
+    ~ .sage-select__label {
+      color: sage-color(charcoal, 100);
+      background-image: linear-gradient(
+        to bottom,
+        sage-color(white) 0% 55%,
+        sage-color(grey, 200) 55% 100%,
+      );
+    }
+
+    ~ .sage-select__arrow::before {
+      color: sage-color(charcoal, 100);
+    }
+
+    @include placeholder {
+      color: sage-color(charcoal, 100);
+    }
+  }
 }
 
 .sage-select__message {
