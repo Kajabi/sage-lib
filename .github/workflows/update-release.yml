@@ -4,7 +4,7 @@ name: "Update-Release"
 on:
   push:
     tags:
-      - "v*"
+      - "@kajabi/sage@*"
 
 jobs:
   update-release:
@@ -12,8 +12,8 @@ jobs:
     runs-on: "ubuntu-latest"
 
     steps:
-      - name: "Update release based on tag"
-      - uses: "marvinpinto/action-automatic-releases@latest"
+      - name: "Update release based on Sage tag"
+      - uses: ""
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           prerelease: false
