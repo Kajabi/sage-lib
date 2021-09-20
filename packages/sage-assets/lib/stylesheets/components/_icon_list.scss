@@ -42,15 +42,16 @@
 
 .sage-icon-list-item__label {
   @extend %t-sage-heading-6;
+  margin-bottom: sage-spacing(2xs);
 }
 
 .sage-icon-list-item__label-subtext {
-  @extend %t-sage-body-small;
-  color: sage-color(charcoal, 200);
+  @extend %t-sage-body;
+  color: sage-color(charcoal, 400);
 }
 
 .sage-icon-list-item__title {
   @extend %t-sage-heading-6;
-  margin-bottom: sage-spacing(xs);
+  margin-bottom: sage-spacing(2xs);
 }
 
