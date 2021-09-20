@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.16.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.15.0...@kajabi/sage@4.16.0) (2021-09-20)
+
+
+### Bug Fixes
+
+* **hero:** added hero sizes ([67fdc57](https://github.com/Kajabi/sage-lib/commit/67fdc57873e677279caf53f12b49e432b383fc25))
+* **hero:** prop fix ([da0b6a6](https://github.com/Kajabi/sage-lib/commit/da0b6a6762e4c9cbcecb0ca7e03de1954af06589))
+* **hero:** removed container changes ([9181321](https://github.com/Kajabi/sage-lib/commit/9181321d2764bc3bc43b2f443b8bce73423da180))
+* **hero:** tab fix ([c01f75b](https://github.com/Kajabi/sage-lib/commit/c01f75b6405f2aa1227d1c37affa97da1aeab320))
+
+
+### Features
+
+* **expandable-card:** add option to have expandable card expanded by default ([438367d](https://github.com/Kajabi/sage-lib/commit/438367dcabb5e83f45cb9fce3c0b894222482aa5))
+* **expanded-card:** add expanded attribute boolean ([549f038](https://github.com/Kajabi/sage-lib/commit/549f038a72d991f6811f1fc4c77725e5dd389631))
+* **expanded-card:** remove boolean from shared _code ([e54a1aa](https://github.com/Kajabi/sage-lib/commit/e54a1aa6e3afbe1ee21d9bcac502c56d1f2788ce))
+* **expanded-card:** remove change in the shared code file ([d69557e](https://github.com/Kajabi/sage-lib/commit/d69557e518c4c7de474252335b3eecd53ebc2726))
+* **expanded-card:** rework CSS for new option ([fb0c5f0](https://github.com/Kajabi/sage-lib/commit/fb0c5f0af200772a252783c70561872e9316759f))
+* **figma embed:** add figma embed iframe and update documentation ([18ec83f](https://github.com/Kajabi/sage-lib/commit/18ec83feda4f910eb27cdda658924fc5c8f38812))
+* **hero:** added heights for each hero size ([60eaa5c](https://github.com/Kajabi/sage-lib/commit/60eaa5c8f8ae6e1a7fa9d7796e3fec31734615c3))
+* **hero:** updated to match Sage 3 specs ([513cee5](https://github.com/Kajabi/sage-lib/commit/513cee5099ae4483dc90e105fcafe1cd82612aac))
+* **panel:** added first batch of files for panel updates ([dc5a8d2](https://github.com/Kajabi/sage-lib/commit/dc5a8d282a30bdaa07646c767a0bde4db80541d6))
+
+
+
+
+
 # [4.15.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.14.1...@kajabi/sage@4.15.0) (2021-09-15)
 
 

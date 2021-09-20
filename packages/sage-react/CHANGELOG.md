@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.58.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.57.0...@kajabi/sage-react@0.58.0) (2021-09-20)
+
+
+### Bug Fixes
+
+* **search:** fixes linting ([1d14712](https://github.com/Kajabi/sage-lib/commit/1d147125ffe7f3112d7294e362511240cc202d7e))
+
+
+### Features
+
+* **expanded card:** update react side of the house ([b0a79b4](https://github.com/Kajabi/sage-lib/commit/b0a79b4a05e0f25f960314aadb527368c9635cf5))
+* **expanded state:** react side of expandabled card prop expanded ([966782f](https://github.com/Kajabi/sage-lib/commit/966782f0f74e3fda52a74bc2d5cc85d914a67e76))
+* **panel:** added first batch of files for panel updates ([dc5a8d2](https://github.com/Kajabi/sage-lib/commit/dc5a8d282a30bdaa07646c767a0bde4db80541d6))
+* **panel:** updated panel header and subheader React components ([402f257](https://github.com/Kajabi/sage-lib/commit/402f257b99f962adfd4cc40e857d886c66bb2b94))
+* **search:** adds label to React component ([3fd90e8](https://github.com/Kajabi/sage-lib/commit/3fd90e8d475f463fda7212e9c24b27e336197177))
+
+
+
+
+
 # [0.57.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.56.1...@kajabi/sage-react@0.57.0) (2021-09-15)
 
 
