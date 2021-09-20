@@ -12,8 +12,22 @@ jobs:
     runs-on: "ubuntu-latest"
 
     steps:
-      - name: "Update release based on Sage tag"
-      - uses: ""
+      # Checkout the repository
+      - name: "Checkout this repo to find Sage version"
+        uses: "actions/checkout@v2"
+
+      # Find Sage version from package.json in docs/
+      - name: "Find Sage version from docs -> package.json version"
+        id: "extract_version"
+        uses: "Saionaro/extract-package-version@v1.1.1"
         with:
-          repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          prerelease: false
+          path: 'docs/'
+
+      # Update release using name from script above
+      - name: "Update Release based on Tag"
+        uses: "ncipollo/release-action@v1"
+        with:
+          token: "${{ secrets.GITHUB_TOKEN }}"
+          tag: "v${{ steps.extract_version.outputs.version }}"
+          body: "See [changelog](https://github.com/Kajabi/sage-lib/blob/main/docs/CHANGELOG.md) for more information."
+
