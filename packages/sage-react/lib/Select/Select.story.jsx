@@ -46,7 +46,7 @@ export const SearchDisabled = (args) => {
   );
 };
 SearchDisabled.args = {
-  id:'field-3',
+  id: 'field-3',
   label: 'Choose...',
   options: [
     'Option 1',
@@ -55,4 +55,4 @@ SearchDisabled.args = {
     'Option 4',
   ],
   disabled: true
-}
+};
