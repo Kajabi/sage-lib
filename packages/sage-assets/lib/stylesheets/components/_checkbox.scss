@@ -9,13 +9,14 @@
 //
 $-checkbox-color-default: sage-color(grey, 400);
 $-checkbox-color-checked: sage-color(primary);
+$-checkbox-color-checked-hover: sage-color(primary, 400);
 $-checkbox-color-disabled: sage-color(grey, 200);
 $-checkbox-color-disabled-checked: sage-color(primary, 200);
 
 $-checkbox-size: rem(16px);
-$-checkbox-label-spacing: rem(12px);
+$-checkbox-label-spacing: sage-spacing(xs);
 $-checkbox-border-radius-inner: sage-border(radius-small);
-$-checkbox-border-radius-outer: sage-border(radius-large);
+$-checkbox-border-radius-outer: sage-border(radius);
 $-checkbox-transition: 0.15s ease-in-out;
 
 $-checkbox-marker-border: rem(2px);
@@ -27,31 +28,22 @@ $-checkbox-marker-offset: $-checkbox-marker-border * 2;
 //
 // Focus state
 //
-$-checkbox-focus-outline-size: sage-spacing(2xs);
+$-checkbox-focus-outline-size: rem(3px);
 $-checkbox-focus-outline-width: 2;
-$-checkbox-focus-outline-color: sage-color(primary);
+$-checkbox-focus-outline-color: sage-color(primary, 400);
 
 
 .sage-checkbox {
   &:not(.sage-checkbox--standalone) {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: flex-start;
-    margin-bottom: sage-spacing(card);
+    @include sage-form-toggle;
   }
 
   .sage-list & {
     margin-bottom: sage-spacing(card) / 2;
   }
 
-  .sage-panel-grid > &,
-  .sage-panel__row > &,
-  .sage-panel__stack > &,
-  .sage-panel__block > &,
-  .sage-card-grid > &,
-  .sage-card__row > &,
-  .sage-card__stack > &,
-  .sage-card__block > &,
+  @include sage-form-toggle-parents;
+
   .sage-panel-controls__bulk-actions & {
     margin-bottom: 0;
   }
@@ -107,13 +99,7 @@ $-checkbox-focus-outline-color: sage-color(primary);
 }
 
 .sage-checkbox__label {
-  display: inline-block;
-  flex: 1;
-  margin-left: $-checkbox-label-spacing;
-  vertical-align: top;
-  cursor: pointer;
-
-  @extend %t-sage-body;
+  @include sage-form-toggle-label;
 
   .sage-checkbox__input:disabled + & {
     color: $-checkbox-color-default;
@@ -136,13 +122,8 @@ $-checkbox-focus-outline-color: sage-color(primary);
 }
 
 .sage-checkbox__message {
-  position: relative;
-  z-index: sage-z-index(default);
-  width: 100%;
+  @include sage-form-toggle-message;
   margin-left: #{$-checkbox-size + $-checkbox-label-spacing};
-  color: sage-color(charcoal, 200);
-
-  @extend %t-sage-body-xsmall;
 
   .sage-checkbox--error &,
   .sage-checkbox__input:invalid + & {
@@ -157,20 +138,17 @@ $-checkbox-focus-outline-color: sage-color(primary);
 
 .sage-checkbox--standalone,
 .sage-checkbox__input {
-  appearance: none;
-  display: inline-block;
-  position: relative;
+  @include sage-form-toggle-input;
+
   height: $-checkbox-size;
   width: $-checkbox-size;
   margin: 0;
-  vertical-align: top;
   color: $-checkbox-color-default;
   border: 1px solid $-checkbox-color-default;
   border-radius: $-checkbox-border-radius-inner;
   outline: none;
   transition: $-checkbox-transition;
   transition-property: background, box-shadow, border;
-  cursor: pointer;
 
   &::before,
   &::after {
@@ -225,6 +203,12 @@ $-checkbox-focus-outline-color: sage-color(primary);
       opacity: 1;
     }
 
+    &:hover {
+      color: $-checkbox-color-checked-hover;
+      background: $-checkbox-color-checked-hover;
+      border-color: $-checkbox-color-checked-hover;
+    }
+
     .sage-sortable__item & + .sage-checkbox__label {
       text-decoration: line-through;
     }
@@ -274,6 +258,12 @@ $-checkbox-focus-outline-color: sage-color(primary);
 
     &::after {
       color: sage-color(red);
+    }
+
+    &:hover {
+      color: sage-color(red);
+      background: sage-color(red, 100);
+      border-color: sage-color(red);
     }
 
     &:hover:not(:checked):not(:disabled) {

@@ -3,6 +3,42 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.48.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.47.0...@kajabi/sage-assets@0.48.0) (2021-09-20)
+
+
+### Bug Fixes
+
+* **form toggles:** fixed commented out variable to fix yarn build ([21b48cd](https://github.com/Kajabi/sage-lib/commit/21b48cd9f7c0bb51c9b38a4e083c945771357290))
+* **form toggles:** fixed hover background for error states ([e8e6e89](https://github.com/Kajabi/sage-lib/commit/e8e6e89eb87366ec78ed9075dd380c23662baadc))
+* **form toggles:** fixed margin-left for messages on all toggles ([275a3fe](https://github.com/Kajabi/sage-lib/commit/275a3fe811e21a967386296845e1348582313114))
+* **form toggles:** fixed radio and checkbox focus outline styles ([353b27d](https://github.com/Kajabi/sage-lib/commit/353b27d8235f49651873bc36d2abbf6b08dd96d3))
+* **form toggles:** fixed radio, switch, and checkbox for yarn build ([16fc16e](https://github.com/Kajabi/sage-lib/commit/16fc16ed2d4123bea34a9fdb9cd9dcc376523227))
+* **form toggles:** fixed switch width so theres equal border on either side ([8f12814](https://github.com/Kajabi/sage-lib/commit/8f12814ca6e521bf1ea84f20ae0522ba09b549ec))
+* **hero:** added hero sizes ([67fdc57](https://github.com/Kajabi/sage-lib/commit/67fdc57873e677279caf53f12b49e432b383fc25))
+* **search:** removes margin from reset button and removes unused mixin from textarea component ([1ca85a8](https://github.com/Kajabi/sage-lib/commit/1ca85a847e71c513e40dabd1e79e61e7904937ce))
+* **select:** resolved incorrectly shown error state ([25cadae](https://github.com/Kajabi/sage-lib/commit/25cadaec5cc1f8e794de7a8c99b621b85f38ac4e))
+
+
+### Features
+
+* **expanded-card:** rework CSS for new option ([fb0c5f0](https://github.com/Kajabi/sage-lib/commit/fb0c5f0af200772a252783c70561872e9316759f))
+* **form toggles:** added sage-form-toggle-input mixin ([ee5e881](https://github.com/Kajabi/sage-lib/commit/ee5e8810f06e9f7b98c96e05d9d56220ecceb551))
+* **form toggles:** added sage-form-toggle-parents mixin with passing of content ([856cf20](https://github.com/Kajabi/sage-lib/commit/856cf20eb6f647ce145bbae82e9a85d6f5b938ce))
+* **form toggles:** changed switch size to mimic app. refactored mixins for extends to come first ([401b40a](https://github.com/Kajabi/sage-lib/commit/401b40aed586e6416f5ab705e2ca4166dd6d99ee))
+* **form toggles:** updated hover and focus colors for checkbox ([56007d6](https://github.com/Kajabi/sage-lib/commit/56007d6c86077187f96d1991ca0b293683a86ce5))
+* **form toggles:** updated hover and focus colors for radio ([3aa4d4f](https://github.com/Kajabi/sage-lib/commit/3aa4d4f7a39d7f84da332c66a252041b9257c1cf))
+* **form toggles:** updated hover and focus colors for switch ([139253f](https://github.com/Kajabi/sage-lib/commit/139253f7a83cb9668cb061a737b6ef12cc659f03))
+* **hero:** added heights for each hero size ([60eaa5c](https://github.com/Kajabi/sage-lib/commit/60eaa5c8f8ae6e1a7fa9d7796e3fec31734615c3))
+* **hero:** updated to match Sage 3 specs ([513cee5](https://github.com/Kajabi/sage-lib/commit/513cee5099ae4483dc90e105fcafe1cd82612aac))
+* **panel:** added styling for header, subheader ([057abfd](https://github.com/Kajabi/sage-lib/commit/057abfdb117d086a7dd77888f8fb7a94bda6b6e4))
+* **tinymce icons:** added blockquote icon ([13f8994](https://github.com/Kajabi/sage-lib/commit/13f8994bed47ed670d96e62a2bc627014fbf2a42))
+* **tinymce icons:** added horizontal-line icon ([59bfb6c](https://github.com/Kajabi/sage-lib/commit/59bfb6c9e48d6a464f49ab706a42343ae32f2cb1))
+* **tinymce icons:** added url icon for link ([1050372](https://github.com/Kajabi/sage-lib/commit/10503729e4c0a22b17a2827c6d24ed97a2ddbe9d))
+
+
+
+
+
 # [0.47.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.46.1...@kajabi/sage-assets@0.47.0) (2021-09-15)
 
 

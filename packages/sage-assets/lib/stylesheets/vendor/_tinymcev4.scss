@@ -60,6 +60,14 @@
     @include sage-icon-base(strikethrough, md);
   }
 
+  .mce-ico.mce-i-hr::before {
+    @include sage-icon-base(horizontal-line, md);
+  }
+
+  .mce-ico.mce-i-blockquote::before {
+    @include sage-icon-base(quote, md);
+  }
+
   .mce-ico.mce-i-underline::before {
     @include sage-icon-base(underline, md);
   }
@@ -83,6 +91,10 @@
 
   .mce-ico.mce-i-outdent::before {
     @include sage-icon-base(margin-right, md);
+  }
+
+  .mce-ico.mce-i-link::before {
+    @include sage-icon-base(url, md);
   }
 
   .mce-ico.mce-i-image::before {

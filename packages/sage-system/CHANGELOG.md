@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.12.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.11.2...@kajabi/sage-system@0.12.0) (2021-09-20)
+
+
+### Features
+
+* **expanded-card:** remove comment ([981f83e](https://github.com/Kajabi/sage-lib/commit/981f83e3b7c2afac0a9114454f53775f482d3a83))
+* **expanded-card:** rework CSS for new option ([fb0c5f0](https://github.com/Kajabi/sage-lib/commit/fb0c5f0af200772a252783c70561872e9316759f))
+
+
+
+
+
 ## [0.11.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.11.1...@kajabi/sage-system@0.11.2) (2021-09-15)
 
 
