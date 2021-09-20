@@ -88,6 +88,16 @@ $-select-padding-label: sage-spacing(2xs);
     border-color: $-select-color-border-selected;
   }
 
+  .sage-select--value-selected &:disabled {
+    ~ .sage-select__label {
+      background-image: linear-gradient(
+        to bottom,
+        sage-color(white) 0% 55%,
+        sage-color(grey, 200) 55% 100%,
+      );
+    }
+  }
+
   .sage-select--error & {
     border-color: $-select-color-error;
     box-shadow: $-select-border-box-shadow-size $-select-color-error;
@@ -126,11 +136,7 @@ $-select-padding-label: sage-spacing(2xs);
 
     ~ .sage-select__label {
       color: sage-color(charcoal, 100);
-      background-image: linear-gradient(
-        to bottom,
-        sage-color(white) 0% 55%,
-        sage-color(grey, 200) 55% 100%,
-      );
+      background-color: sage-color(grey, 200);
     }
 
     ~ .sage-select__arrow::before {
