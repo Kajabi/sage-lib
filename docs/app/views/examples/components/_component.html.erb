@@ -11,33 +11,43 @@
   do_content: do_content,
   dont_content: dont_content %>
 
+<%
+  tabs = []
+
+  tabs << {
+    text: "Preview",
+    target: "preview",
+    active: true
+  }
+  tabs << {
+    text: "Code",
+    target: "code"
+  }
+  tabs << {
+    text: "Properties",
+    target: "props"
+  }
+  tabs << {
+    text: "Best Practices",
+    target: "rules"
+  }
+
+  if info_content[:figma_embed].present?
+    tabs << {
+      text: "#{image_tag("logo-figma.svg", style: "margin-right: 4px", height: "18px")} Figma Designs",
+      target: "figma_embed"
+    }
+  end
+%>
 <div class="sage-panel-set">
   <div class="sage-tabs-container">
     <%= sage_component SagePanelRow, { grid_template: "te" } do %>
       <%= sage_component SageTabs, {
         id: "code-example-tabs",
-        items: [
-          {
-            text: "Preview",
-            target: "preview",
-            active: true
-          },
-          {
-            text: "Code",
-            target: "code"
-          },
-          {
-            text: "Properties",
-            target: "props"
-          },
-          {
-            text: "Best Practices",
-            target: "rules"
-          } 
-        ]
+        items: tabs
       } %>
       <%= sage_component SageButton, {
-        value: "View React Component #{image_tag("logo-react.svg", width: "20px")}",
+        value: "#{image_tag("logo-react.svg", height: "20px")} React Component",
         attributes: {
           href: storybook_url(info_content[:react_component_slug]),
           target: "_blank",
@@ -73,6 +83,14 @@
         do_content: do_content,
         dont_content: dont_content,
         title: @title %>
+    <% end %>
+
+    <%= sage_component SageTabsPane, { id: "figma_embed" } do %>
+      <%= render "examples/shared/figma_embed",
+        type: "component",
+        title: @title,
+        figma_embed: info_content[:figma_embed]
+      %>
     <% end %>
   </div>
 </div>

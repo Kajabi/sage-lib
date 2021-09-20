@@ -5,7 +5,14 @@ import uuid from 'react-uuid';
 import { Button } from '../Button';
 import { SageClassnames, SageTokens } from '../configs';
 
-export const ExpandableCard = ({ bodyBordered, children, className, sageType, triggerLabel, }) => {
+export const ExpandableCard = ({
+  bodyBordered,
+  expanded,
+  children,
+  className,
+  sageType,
+  triggerLabel,
+}) => {
   const [selfActive, setSelfActive] = useState(false);
 
   const handleBodyToggle = () => {
@@ -21,6 +28,12 @@ export const ExpandableCard = ({ bodyBordered, children, className, sageType, tr
 
   const id = uuid();
 
+  const containerClassnames = classnames({
+    'sage-expandable-card sage-expandable-card--expanded': expanded,
+    'sage-expandable-card': !expanded,
+    'sage-expandable-card--expanded': selfActive
+  });
+
   const bodyClassnames = classnames({
     'sage-expandable-card__body-bordered': bodyBordered,
     'sage-expandable-card__body': !bodyBordered,
@@ -28,7 +41,7 @@ export const ExpandableCard = ({ bodyBordered, children, className, sageType, tr
   });
 
   return (
-    <div className={`sage-expandable-card ${className || ''}`}>
+    <div className={`${containerClassnames} ${className || ''}`}>
       <Button
         aria-controls={id}
         aria-expanded={selfActive}
@@ -41,17 +54,16 @@ export const ExpandableCard = ({ bodyBordered, children, className, sageType, tr
       >
         {triggerLabel}
       </Button>
-      {selfActive && (
-        <div id={id} className={bodyClassnames}>
-          {children}
-        </div>
-      )}
+      <div id={id} className={bodyClassnames}>
+        {children}
+      </div>
     </div>
   );
 };
 
 ExpandableCard.defaultProps = {
   bodyBordered: false,
+  expanded: false,
   children: null,
   className: null,
   sageType: false,
@@ -60,6 +72,7 @@ ExpandableCard.defaultProps = {
 
 ExpandableCard.propTypes = {
   bodyBordered: PropTypes.bool,
+  expanded: PropTypes.bool,
   className: PropTypes.string,
   children: PropTypes.node,
   sageType: PropTypes.bool,

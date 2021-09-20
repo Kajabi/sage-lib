@@ -1,4 +1,9 @@
-<div class="sage-expandable-card <%= component.generated_css_classes %>" <%= component.generated_html_attributes.html_safe %>>
+<div 
+  class="sage-expandable-card 
+    <%= component.generated_css_classes %>
+    <% if component.expanded.present? %>sage-expandable-card--expanded<% end %>"
+    <%= component.generated_html_attributes.html_safe %>
+>
   <%= sage_component SageButton, {
     style: "primary",
     value: component.trigger_label,
@@ -7,7 +12,7 @@
     css_classes: "sage-expandable-card__trigger",
     attributes: {
       "data-js-accordion": "header",
-      "aria-expanded": "false",
+      "aria-expanded": (component.expanded.present? ? true : false)
     },
   } %>
   <div class="

@@ -5,6 +5,7 @@ class SageHero < SageComponent
     cta_attributes: [:optional, Hash],
     description: [:optional, String],
     image: [:optional, String],
+    size: [:optional, SageSchemas::HERO_SIZE],
     title: [:optional, String],
     title_tag: [:optional, String],
   })

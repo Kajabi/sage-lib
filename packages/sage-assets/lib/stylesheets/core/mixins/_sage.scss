@@ -318,6 +318,7 @@
     margin-bottom: 0;
   }
 }
+
 ///
 /// Adds the basic default form spacing, and border treatment
 ///
@@ -396,7 +397,7 @@
   .sage-form-field--error &,
   .sage-form-field--error &:focus:not(:disabled),
   .sage-form-field--error &:not(:placeholder-shown),
-  &:required:not(:placeholder-shown):not(:valid) {
+  .sage-form-field--error &:required:not(:placeholder-shown):not(:valid) {
     border-color: sage-color(red);
     box-shadow: 0 0 0 rem(1px) sage-color(red);
 
@@ -447,6 +448,27 @@
 }
 
 ///
+/// Adds the basic default styling for floating input labels
+///
+@mixin sage-form-field-floating-label(
+  $textarea: false,
+  $input-text-height: sage-font-size(body),
+  $input-padding: sage-spacing(2xs),
+  $textarea-label-padding: rem(3px),
+  $textarea-padding: sage-spacing(sm)
+) {
+  @if ($textarea == true) {
+    transform: translateY($textarea-label-padding - $textarea-padding);
+  }
+  @else {
+    transform: translateY(-($input-text-height + $input-padding * 2)); // IE doesn't support calc in transforms so we provide a fallback
+    transform: translateY(calc(-50% - (#{$input-text-height} + #{$input-padding}))); // we calculate the centered position minus the offset of the text height plus the spacing height
+  }
+  transition: opacity 0.1s ease-in, transform 0.15s ease-in-out, color 0.15s ease-out;
+  opacity: 1;
+}
+
+///
 /// Adds the basic default form field message font sizing and color treatment
 ///
 @mixin sage-form-field-message() {
@@ -466,6 +488,57 @@
       padding-right: sage-spacing(xs);
     }
   }
+}
+
+///
+/// Mixins for common styles between the form toggles Radio, Checkbox, and Switch
+///
+@mixin sage-form-toggle() {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  margin-bottom: sage-spacing(card);
+}
+
+@mixin sage-form-toggle-parents() {
+  .sage-panel-grid > &,
+  .sage-panel__row > &,
+  .sage-panel__stack > &,
+  .sage-panel__block > &,
+  .sage-card-grid > &,
+  .sage-card__row > &,
+  .sage-card__stack > &,
+  .sage-card__block > & {
+    margin-bottom: 0;
+    @content;
+  }
+}
+
+@mixin sage-form-toggle-input() {
+  appearance: none;
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  cursor: pointer;
+}
+
+@mixin sage-form-toggle-label() {
+  @extend %t-sage-body;
+
+  display: inline-block;
+  flex: 1;
+  margin-left: sage-spacing(xs);
+  vertical-align: top;
+  cursor: pointer;
+}
+
+@mixin sage-form-toggle-message() {
+  @extend %t-sage-body-xsmall;
+
+  position: relative;
+  z-index: sage-z-index(default);
+  width: 100%;
+  color: sage-color(charcoal, 200);
 }
 
 ///
