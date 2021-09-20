@@ -21,6 +21,7 @@
 .sage-icon-list-item__bullet {
   min-width: rem(20px);
   margin-right: sage-spacing(sm);
+  padding-top: rem(3px);
   text-align: center;
 }
 
@@ -29,7 +30,7 @@
 }
 
 .sage-icon-list-item__bullet--radio {
-  padding-top: rem(6px);
+  padding-top: sage-spacing(2xs);
 }
 
 .sage-icon-list-item__body {
