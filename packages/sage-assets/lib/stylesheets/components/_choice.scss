@@ -235,5 +235,6 @@ $-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
 .sage-choice__subtext {
   @extend %t-sage-body-xsmall;
 
+  margin-top: sage-spacing(2xs);
   color: sage-color(charcoal, 100);
 }
