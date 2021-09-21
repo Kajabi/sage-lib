@@ -21,6 +21,7 @@
 .sage-icon-list-item__bullet {
   min-width: rem(20px);
   margin-right: sage-spacing(sm);
+  padding-top: rem(3px);
   text-align: center;
 }
 
@@ -29,11 +30,15 @@
 }
 
 .sage-icon-list-item__bullet--radio {
-  padding-top: rem(6px);
+  padding-top: sage-spacing(2xs);
 }
 
 .sage-icon-list-item__body {
   flex: 1;
+
+  > p {
+    @extend %t-sage-body;
+  }
 
   > p:not(:last-child) {
     margin-bottom: sage-spacing(xs);
@@ -41,16 +46,17 @@
 }
 
 .sage-icon-list-item__label {
-  @extend %t-sage-body-med;
+  @extend %t-sage-heading-6;
+  margin-bottom: sage-spacing(2xs);
 }
 
 .sage-icon-list-item__label-subtext {
-  @extend %t-sage-body-small;
-  color: sage-color(charcoal, 200);
+  @extend %t-sage-body;
+  color: sage-color(charcoal, 400);
 }
 
 .sage-icon-list-item__title {
   @extend %t-sage-heading-6;
-  margin-bottom: sage-spacing(xs);
+  margin-bottom: sage-spacing(2xs);
 }
 
