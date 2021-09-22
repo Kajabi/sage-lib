@@ -44,12 +44,18 @@ $-input-text-height: sage-font-size(body);
   }
 }
 
+.sage-input__affix-value {
+  color: sage-color(charcoal, 100);
+}
+
 .sage-input__affix--prefix {
   left: sage-spacing(sm);
+  padding-right: sage-spacing(2xs);
 }
 
 .sage-input__affix--suffix {
   right: sage-spacing(sm);
+  padding-left: sage-spacing(2xs);
 }
 
 .sage-input__label {
