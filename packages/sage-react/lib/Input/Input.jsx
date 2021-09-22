@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { Icon } from '../Icon';
-import { Label } from '../Label';
 import { SageTokens } from '../configs';
 
 export const Input = ({
@@ -89,22 +88,22 @@ export const Input = ({
         </label>
       )}
       {prefix && (
-        <Label
-          aria-label={`Prefixed with ${prefix}`}
+        <span
+          aria-label={`prefixed with ${prefix}`}
           className="sage-input__affix sage-input__affix--prefix"
-          color={Label.COLORS.DRAFT}
           ref={prefixRef}
-          value={prefix}
-        />
+        >
+          <span className="sage-input__affix-value">{prefix}</span>
+        </span>
       )}
       {suffix && (
-        <Label
+        <span
           aria-label={`Suffixed with ${suffix}`}
           className="sage-input__affix sage-input__affix--suffix"
-          color={Label.COLORS.DRAFT}
           ref={suffixRef}
-          value={suffix}
-        />
+        >
+          <span className="sage-input__affix-value">{suffix}</span>
+        </span>
       )}
       {icon && (
         <div className="sage-input__icon">
