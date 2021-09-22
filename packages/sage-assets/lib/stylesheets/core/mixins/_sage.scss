@@ -478,7 +478,6 @@
   color: sage-color(charcoal, 100);
 
   .sage-form-field--error & {
-    margin-left: 0;
     color: sage-color(red);
 
     &::before {
