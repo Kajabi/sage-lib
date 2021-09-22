@@ -5,6 +5,7 @@ import { selectItemPropTypes, selectStructuredItemPropTypes } from './configs';
 
 export const Select = ({
   className,
+  disabled,
   hasError,
   id,
   label,
@@ -31,6 +32,7 @@ export const Select = ({
         onChange={onChange}
         placeholder={label}
         value={value}
+        disabled={disabled}
         {...rest}
       >
         {label && <option label={label} />}
@@ -67,6 +69,7 @@ Select.structuredItemPropTypes = selectStructuredItemPropTypes;
 
 Select.defaultProps = {
   className: null,
+  disabled: false,
   hasError: false,
   label: null,
   message: null,
@@ -78,6 +81,7 @@ Select.defaultProps = {
 Select.propTypes = {
   className: PropTypes.string,
   id: PropTypes.string.isRequired,
+  disabled: PropTypes.bool,
   hasError: PropTypes.bool,
   label: PropTypes.string,
   message: PropTypes.string,

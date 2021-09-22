@@ -41,7 +41,6 @@ $-select-padding-label: sage-spacing(2xs);
   .sage-select__field ~ &,
   .sage-select__field:focus:not(:disabled) ~ &,
   .sage-select__field:active:not(:disabled) ~ & {
-    color: inherit;
     opacity: 1;
   }
 
@@ -89,6 +88,16 @@ $-select-padding-label: sage-spacing(2xs);
     border-color: $-select-color-border-selected;
   }
 
+  .sage-select--value-selected &:disabled {
+    ~ .sage-select__label {
+      background-image: linear-gradient(
+        to bottom,
+        sage-color(white) 0% 55%,
+        sage-color(grey, 200) 55% 100%,
+      );
+    }
+  }
+
   .sage-select--error & {
     border-color: $-select-color-error;
     box-shadow: $-select-border-box-shadow-size $-select-color-error;
@@ -118,6 +127,24 @@ $-select-padding-label: sage-spacing(2xs);
 
     .sage-select--error {
       border-color: currentColor;
+    }
+  }
+
+  &:disabled {
+    color: sage-color(charcoal, 100);
+    background-color: sage-color(grey, 200);
+
+    ~ .sage-select__label {
+      color: sage-color(charcoal, 100);
+      background-color: sage-color(grey, 200);
+    }
+
+    ~ .sage-select__arrow::before {
+      color: sage-color(charcoal, 100);
+    }
+
+    @include placeholder {
+      color: sage-color(charcoal, 100);
     }
   }
 }
