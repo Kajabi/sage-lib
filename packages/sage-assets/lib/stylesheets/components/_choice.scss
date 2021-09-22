@@ -17,12 +17,12 @@ $-choice-radio-color-checked: map-get($sage-radio-colors, checked);
 $-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
 
 :root {
-  --icon-top-offset: #{rem(7px)};
+  --icon-top-offset: #{rem(6px)};
 }
 
 @media (max-width: sage-breakpoint(md-min)) {
   :root {
-    --icon-top-offset: #{rem(6px)};
+    --icon-top-offset: #{rem(5px)};
   }
 }
 
