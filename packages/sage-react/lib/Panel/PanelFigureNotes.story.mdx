@@ -7,3 +7,9 @@ Figues in Panels sit inside the panel's padding by default, but the `bleed` prop
 - `top` is meant for a figure as the very first child of a Panel and will bleed into the top and sides of the panel.
 - `sides` is meant for a figure in the middle of a panel and will bleed just to the edges.
 - `bottom` opposite of `top`, this is meant for a figure as the very last child of a panel and will bleed into the sides and bottom of the panel.
+
+Figures also allow for some particular configurations for the being shown:
+
+- `aspectRatio` allows you to specify an aspect ratio that will be used for rendering and resizing the media.
+- `backgroundColor` allows you to specify the background color that is used. A light grey will appear by default.
+- `padded` allows you to set whether or not the media has a standardized padding around it that allows a background color to show through. Note that this is designed currently to work best with the `bleed: "top"` setting.

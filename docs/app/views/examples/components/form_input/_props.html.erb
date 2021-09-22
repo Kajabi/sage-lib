@@ -12,15 +12,21 @@
 </tr>
 <tr>
   <td><%= md('`has_error`') %></td>
-  <td><%= md('Enabling this property adds the `.sage-input--error` class to the component.') %></td>
+  <td><%= md('Enabling this property adds the `.sage-form-field--error` class to the component.') %></td>
   <td><%= md('Boolean') %></td>
   <td><%= md('`false`') %></td>
 </tr>
 <tr>
   <td><%= md('`has_placeholder`') %></td>
-  <td><%= md('Enabling this property adds the `.sage-input--showplaceholder` class to the component.') %></td>
+  <td><%= md('Enabling this property adds the `.sage-form-field--showplaceholder` class to the component.') %></td>
   <td><%= md('Boolean') %></td>
   <td><%= md('`false`') %></td>
+</tr>
+<tr>
+  <td><%= md('`icon`') %></td>
+  <td><%= md('Adds a static icon for visual context. See Sage Icons under "Design."') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil`') %></td>
 </tr>
 <tr>
   <td><%= md('`id`') %></td>
@@ -137,3 +143,12 @@
   <td><%= md('`nil`') %></td>
 </tr>
 
+<tr>
+  <td colspan="2"><%= md('**Sections**') %></td>
+  <td colspan="2"><%= md('**`Element`**') %></td>
+</tr>
+<tr>
+  <td><%= md('`sage_form_input_popover`') %></td>
+  <td><%= md('Provides the HTML content for the popover component, rendered at the right end of the form input.') %></td>
+  <td colspan="2"><%= md('Restricted to Popover `sage_component`.') %></td>
+</tr>

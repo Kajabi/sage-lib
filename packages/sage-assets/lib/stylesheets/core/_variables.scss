@@ -37,7 +37,7 @@ $sage-field-configs: (
   // Sizing
   height: rem(40px),
   padding: sage-spacing(sm),
-  padding-label: rem(4px),
+  padding-label: sage-spacing(2xs),
   // Outer spacing
   bottom-gap: sage-spacing(),
 );
@@ -55,12 +55,15 @@ $sage-field-colors: (
   success: sage-color(primary),
 );
 
+// $sage-field
+
 ///
 /// Radio button colors
 ///
 $sage-radio-colors: (
   checked: sage-color(primary),
   checked-disabled: sage-color(primary, 200),
+  checked-hover: sage-color(primary, 400),
   checked-inner: sage-color(white),
   default: sage-color(grey, 400),
   hover: sage-color(grey, 500),
@@ -104,4 +107,4 @@ $sage-toolbar-button-borders: (
 $sage-transitions: (
   default: 0.1s ease-in-out,
 );
-// TODO: Audit use of trnasition values
+// TODO: Audit use of transition values

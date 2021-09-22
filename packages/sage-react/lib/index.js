@@ -30,6 +30,10 @@ export { Input } from './Input';
 export { Label } from './Label';
 export { Link } from './Link';
 export { Loader } from './Loader';
+export {
+  MediaTile,
+  MediaTiles,
+} from './MediaTile';
 export { Modal } from './Modal';
 export { PageHeading } from './PageHeading';
 export { Pagination } from './Pagination';

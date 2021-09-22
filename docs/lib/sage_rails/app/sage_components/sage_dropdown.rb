@@ -9,6 +9,7 @@ class SageDropdown < SageComponent
     id: [:optional, String],
     items: [:optional, [[SageSchemas::DROPDOWN_ITEM]]],
     panel_size: [:optional, Set.new(["small"])],
+    panel_type: [:optional, Set.new(["custom", "dropdown", "choice", "checkbox", "status", "searchable"])],
     search: [:optional, TrueClass],
     trigger_type: [:optional, Set.new(["select", "select-labeled"])],
     wrap_footer: [:optional, TrueClass],

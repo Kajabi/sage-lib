@@ -3,6 +3,94 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.58.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.57.0...@kajabi/sage-react@0.58.0) (2021-09-20)
+
+
+### Bug Fixes
+
+* **search:** fixes linting ([1d14712](https://github.com/Kajabi/sage-lib/commit/1d147125ffe7f3112d7294e362511240cc202d7e))
+
+
+### Features
+
+* **expanded card:** update react side of the house ([b0a79b4](https://github.com/Kajabi/sage-lib/commit/b0a79b4a05e0f25f960314aadb527368c9635cf5))
+* **expanded state:** react side of expandabled card prop expanded ([966782f](https://github.com/Kajabi/sage-lib/commit/966782f0f74e3fda52a74bc2d5cc85d914a67e76))
+* **panel:** added first batch of files for panel updates ([dc5a8d2](https://github.com/Kajabi/sage-lib/commit/dc5a8d282a30bdaa07646c767a0bde4db80541d6))
+* **panel:** updated panel header and subheader React components ([402f257](https://github.com/Kajabi/sage-lib/commit/402f257b99f962adfd4cc40e857d886c66bb2b94))
+* **search:** adds label to React component ([3fd90e8](https://github.com/Kajabi/sage-lib/commit/3fd90e8d475f463fda7212e9c24b27e336197177))
+
+
+
+
+
+# [0.57.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.56.1...@kajabi/sage-react@0.57.0) (2021-09-15)
+
+
+### Bug Fixes
+
+* **dropdown:** added panel type to handle different spacing ([bf1edd3](https://github.com/Kajabi/sage-lib/commit/bf1edd3cfcb9e967430085eca173dbe51ccd032f))
+* **dropdown:** updates per phil review ([a1161a8](https://github.com/Kajabi/sage-lib/commit/a1161a84e840be6f743ad230f4ea2847b18ac1c6))
+* **font:** removed calendly icon for the moment ([3e6b8ee](https://github.com/Kajabi/sage-lib/commit/3e6b8ee4d72b2862173b6d84fd45ab3f62969136))
+* **font:** updated icon name ([e76ec85](https://github.com/Kajabi/sage-lib/commit/e76ec853425cdfefc30b6aaed4052984f5e8af9b))
+* **input:** added a generic form field class for shared form elements styled ([c62e766](https://github.com/Kajabi/sage-lib/commit/c62e76600cfa48bed9f2f37d2eaf983be4157c89))
+
+
+### Features
+
+* **font:** updated Sage font ([19c4ce8](https://github.com/Kajabi/sage-lib/commit/19c4ce8572d14b2f1013e5869564e5f0256cfb0e))
+* **form input icon:** added docs for sage_form_input_popover, removed unused Fragment tags ([dc811c3](https://github.com/Kajabi/sage-lib/commit/dc811c3736002e1ee289720b128c5d287c320f10))
+* **form input icon:** added React component children and additional story ([20824f4](https://github.com/Kajabi/sage-lib/commit/20824f433ccff299bc541b9e3945fa022f63c576))
+* **form input icon:** added static icon to React component and story ([7f38ecd](https://github.com/Kajabi/sage-lib/commit/7f38ecde44a9a7d10d9beba9131e8cd93df4a3da))
+* **form input icon:** fixed static icon line-height, added static icon story ([e2048da](https://github.com/Kajabi/sage-lib/commit/e2048da5c7916769767ec1e4fc7df0ca0e06c232))
+
+
+
+
+
+## [0.56.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.56.0...@kajabi/sage-react@0.56.1) (2021-09-02)
+
+**Note:** Version bump only for package @kajabi/sage-react
+
+
+
+
+
+# [0.56.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.55.0...@kajabi/sage-react@0.56.0) (2021-09-01)
+
+
+### Bug Fixes
+
+* **icons:** menu rename ([aa3fa40](https://github.com/Kajabi/sage-lib/commit/aa3fa40e1dbfad70a3d87d209c40f8a3fd97518e))
+* **icons:** menu rename ([47660cb](https://github.com/Kajabi/sage-lib/commit/47660cbd08f422725946abf5a34e358c3e21435f))
+* **icons:** menu rename ([74490f0](https://github.com/Kajabi/sage-lib/commit/74490f06829ec549f6c8dda4f21bd24b8f66c4fa))
+* **icons:** menu rename ([4b7c6b3](https://github.com/Kajabi/sage-lib/commit/4b7c6b33810a35f52b11f45a1ec8f25c6f4ea37f))
+* **icons:** updated icon names ([7aed9cc](https://github.com/Kajabi/sage-lib/commit/7aed9cc6b893d8e98459745ed2cb88c0a8accf14))
+* **icons:** updated icon names ([e496010](https://github.com/Kajabi/sage-lib/commit/e4960105e1d07f617dc004cee3ba7e71cdc14f56))
+* **icons:** updated icon names ([6f607f2](https://github.com/Kajabi/sage-lib/commit/6f607f21006e8eeede86270fad0f3e365434bddf))
+* **icons:** updated icon names ([625e3a1](https://github.com/Kajabi/sage-lib/commit/625e3a1df47a160c6bd597fa96af394a9bc85403))
+
+
+### Features
+
+* **icon:** add adjacentType on React component ([f7731f7](https://github.com/Kajabi/sage-lib/commit/f7731f70b4e569e262d4b551dca086c936cf6d54))
+* **icons:** added new icons ([6f8796d](https://github.com/Kajabi/sage-lib/commit/6f8796d4c54c127cbf74156158bb8e5a56d3418a))
+* **icons:** added new icons ([dcffc68](https://github.com/Kajabi/sage-lib/commit/dcffc687e94bcb3cf9a0af0a860da50c24a0bc56))
+* **icons:** added new icons ([d16fb8f](https://github.com/Kajabi/sage-lib/commit/d16fb8f23d17ce8cd81c92071db3d5334368c8e5))
+* **icons:** added new icons ([a2faba6](https://github.com/Kajabi/sage-lib/commit/a2faba6673c12041762c663295fdcd87ded56116))
+* **media-tile:** add react component ([cf845ba](https://github.com/Kajabi/sage-lib/commit/cf845babee6657f9ec9a316d6c06a345c82905f0))
+* **media-tile:** further refine react component and add group component and stories ([aab6f9d](https://github.com/Kajabi/sage-lib/commit/aab6f9dd831fa536a25b5e1c9b86101f97f56153))
+* **modal:** updates React component and documentation ([e508d93](https://github.com/Kajabi/sage-lib/commit/e508d93d80e30db73413259f02a00d208f684d87))
+* **panel:** added custom class for PanelSubheading components ([4340bc0](https://github.com/Kajabi/sage-lib/commit/4340bc094784dbd8307ceb08e90d0c15617e347e))
+* **panel:** added custom class logic to PanelHeader React component ([888a729](https://github.com/Kajabi/sage-lib/commit/888a729b7073e0eeb07cb4c38cbb21bf098cf21d))
+* **panel:** added custom class when children are present in Rails component ([a7fde7d](https://github.com/Kajabi/sage-lib/commit/a7fde7d37b59233711b4589896383ea967d5eb50))
+* **panel:** added subtext React component, story context ([c66f311](https://github.com/Kajabi/sage-lib/commit/c66f3114b1d566ab6877de836a52904e92c8cd61))
+* **panel:** added subtext to subheader React component ([4c04ff3](https://github.com/Kajabi/sage-lib/commit/4c04ff37b5372f7b57b50541ff33ba08ea6b8c1f))
+* **panel-figure:** add latest media configurations to react component ([4ea615d](https://github.com/Kajabi/sage-lib/commit/4ea615d08a860eb05c336fe9efb2564ab5e2bdab))
+
+
+
+
+
 # [0.55.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.54.7...@kajabi/sage-react@0.55.0) (2021-08-25)
 
 

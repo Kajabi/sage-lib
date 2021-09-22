@@ -148,13 +148,25 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
   @include sage-focus-outline($outline-offset-inline: -2px, $outline-offset-block: -2px);
   @include sage-focus-outline--update-color(sage-color(primary, 300));
 
+  @extend %t-sage-body-med;
+
   display: flex;
   position: relative;
   align-items: center;
   width: 100%;
-  padding: rem(9px) sage-spacing(sm);
+  padding: rem(9px) sage-spacing();
   text-align: left;
   user-select: none;
+
+  .sage-dropdown--checkbox &,
+  .sage-dropdown--choice &,
+  .sage-dropdown--searchable & {
+    padding: rem(6px) sage-spacing();
+  }
+
+  .sage-dropdown--status & {
+    padding: rem(7px) sage-spacing();
+  }
 
   .sage-dropdown .sage-dropdown__menu &::after {
     border-radius: 0;
@@ -167,6 +179,16 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
     &::after {
       opacity: 1;
     }
+
+    /* stylelint-disable max-nesting-depth */
+    .sage-dropdown.sage-dropdown--checkbox &,
+    .sage-dropdown.sage-dropdown--choice &,
+    .sage-dropdown.sage-dropdown--searchable & {
+      &::after {
+        opacity: 0;
+      }
+    }
+    /* stylelint-enable max-nesting-depth */
   }
 
   .sage-dropdown__item--with-options > & {

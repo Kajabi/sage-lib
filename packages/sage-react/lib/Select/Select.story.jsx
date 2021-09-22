@@ -34,3 +34,25 @@ SearchWithState.args = {
     'Option 4',
   ]
 };
+
+export const SearchDisabled = (args) => {
+  const [value, updateValue] = useState('');
+  return (
+    <Select
+      {...args}
+      value={value}
+      onChange={(evt) => updateValue(evt.target.value)}
+    />
+  );
+};
+SearchDisabled.args = {
+  id: 'field-3',
+  label: 'Choose...',
+  options: [
+    'Option 1',
+    'Option 2',
+    'Option 3',
+    'Option 4',
+  ],
+  disabled: true
+};

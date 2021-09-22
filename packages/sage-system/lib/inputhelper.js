@@ -10,7 +10,7 @@ Sage.inputhelper = (function() {
 
   var visibleHintClass = "sage-input-helper--visible";
   var passingClass = "sage-hint__list-item--success";
-  var inputErrorClass = "sage-input--error";
+  var inputErrorClass = "sage-form-field--error";
   var sageMeterBar = ".sage-meter__bar";
   var sageMeterBarDesc = document.querySelector(".sage-meter__description");
 

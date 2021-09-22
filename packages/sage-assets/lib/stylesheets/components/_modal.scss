@@ -101,16 +101,26 @@ $-modal-header-image-size: rem(28px);
 }
 
 .sage-modal__header {
-  display: flex;
+  display: grid;
   align-items: baseline;
   margin: $-modal-padding-y $-modal-padding-x;
+}
+
+.sage-modal__header-text {
+  .sage-card__row {
+    gap: sage-spacing(xs);
+  }
+  @media (max-width: sage-breakpoint(sm-max)) {
+    .sage-card__row {
+      flex-wrap: nowrap;
+    }
+  }
 }
 
 .sage-modal__header-image {
   align-self: center;
   width: $-modal-header-image-size;
   height: $-modal-header-image-size;
-  margin-right: sage-spacing(xs);
 }
 
 .sage-modal__header-aside {

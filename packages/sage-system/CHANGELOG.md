@@ -3,6 +3,52 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.12.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.11.2...@kajabi/sage-system@0.12.0) (2021-09-20)
+
+
+### Features
+
+* **expanded-card:** remove comment ([981f83e](https://github.com/Kajabi/sage-lib/commit/981f83e3b7c2afac0a9114454f53775f482d3a83))
+* **expanded-card:** rework CSS for new option ([fb0c5f0](https://github.com/Kajabi/sage-lib/commit/fb0c5f0af200772a252783c70561872e9316759f))
+
+
+
+
+
+## [0.11.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.11.1...@kajabi/sage-system@0.11.2) (2021-09-15)
+
+
+### Bug Fixes
+
+* **input:** added a generic form field class for shared form elements styled ([c62e766](https://github.com/Kajabi/sage-lib/commit/c62e76600cfa48bed9f2f37d2eaf983be4157c89))
+* **input:** move updates to mixin instead of shared classes ([e457f8a](https://github.com/Kajabi/sage-lib/commit/e457f8a6513d4d4f1c1a5e6f8ae53f532eda24d7))
+
+
+
+
+
+## [0.11.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.11.0...@kajabi/sage-system@0.11.1) (2021-09-08)
+
+
+### Bug Fixes
+
+* **modal:** gracefully check for a trigger ([86e5e8d](https://github.com/Kajabi/sage-lib/commit/86e5e8dd3739fc1843c3a045d828170f99703590))
+
+
+
+
+
+# [0.11.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.10.0...@kajabi/sage-system@0.11.0) (2021-09-08)
+
+
+### Features
+
+* **modal:** allow modal trigger to load a remote URL in modal ([8e971a6](https://github.com/Kajabi/sage-lib/commit/8e971a66e33269648201be1b9741936e3771d982))
+
+
+
+
+
 # [0.10.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.9.7...@kajabi/sage-system@0.10.0) (2021-08-25)
 
 
