@@ -7,7 +7,7 @@
 
 $-input-border-width: rem(1px);
 $-input-height: rem(40px);
-$-input-label-offset: sage-spacing(xs);
+$-input-label-offset: rem(12px);
 $-input-padding-offset: sage-spacing(sm) - $-input-border-width;
 $-input-popover-size: rem(40px);
 $-input-text-height: sage-font-size(body);
@@ -45,15 +45,11 @@ $-input-text-height: sage-font-size(body);
 }
 
 .sage-input__affix--prefix {
-  left: rem(12px);
+  left: sage-spacing(sm);
 }
 
 .sage-input__affix--suffix {
-  right: rem(12px);
-}
-
-.sage-input__affix-value {
-  color: sage-color(charcoal, 100);
+  right: sage-spacing(sm);
 }
 
 .sage-input__label {
@@ -76,7 +72,7 @@ $-input-text-height: sage-font-size(body);
   @include sage-form-field;
 
   height: $-input-height;
-  padding: 0 rem(12px);
+  padding: $-input-padding-offset sage-spacing(sm);
 
   &:focus:not(:disabled),
   &:active:not(:disabled) {
