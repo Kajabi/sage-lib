@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.59.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.58.0...@kajabi/sage-react@0.59.0) (2021-09-22)
+
+
+### Bug Fixes
+
+* **form select:** fixes linting errors ([94212d1](https://github.com/Kajabi/sage-lib/commit/94212d1378d53438f036ba72f68a583c38933fa3))
+
+
+### Features
+
+* **form select:** adds disabled prop to React component and fixes label background color ([7155fb9](https://github.com/Kajabi/sage-lib/commit/7155fb90dfba931c2c2814829fb754a7a4722bbf))
+
+
+
+
+
 # [0.58.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.57.0...@kajabi/sage-react@0.58.0) (2021-09-20)
 
 

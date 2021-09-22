@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.17.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.16.0...@kajabi/sage@4.17.0) (2021-09-22)
+
+
+### Features
+
+* **form select:** adds disabled prop and styling ([f705979](https://github.com/Kajabi/sage-lib/commit/f7059797987324b7e49bee45f87b76abf118ff2e))
+* **panel:** added first batch of files for panel updates ([b3ad067](https://github.com/Kajabi/sage-lib/commit/b3ad067cc4a8657b409c819efb13dbb2b4258c1d))
+
+
+
+
+
 # [4.16.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.15.0...@kajabi/sage@4.16.0) (2021-09-20)
 
 
