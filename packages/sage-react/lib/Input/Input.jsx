@@ -98,7 +98,7 @@ export const Input = ({
       )}
       {suffix && (
         <span
-          aria-label={`Suffixed with ${suffix}`}
+          aria-label={`suffixed with ${suffix}`}
           className="sage-input__affix sage-input__affix--suffix"
           ref={suffixRef}
         >
