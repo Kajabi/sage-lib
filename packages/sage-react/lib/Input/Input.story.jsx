@@ -33,10 +33,10 @@ export const Default = (args) => {
       label={args.label}
       message={null}
       onChange={onChange}
-      prefix={null}
+      prefix={args.prefix}
       required={false}
       standalone={args.standalone}
-      suffix={null}
+      suffix={args.suffix}
       value={value}
     />
   );
