@@ -173,8 +173,7 @@ $-btn-loading-min-height: rem(36px);
     }
   }
 
-  &.sage-btn--tertiary {
-    // padding: rem(5px) calc(#{sage-spacing(sm)} - 1);
+  &.sage-btn--tertiary:not(.sage-btn--subtle) {
     border: 1px solid sage-color(grey, 300);
 
     &:hover {
