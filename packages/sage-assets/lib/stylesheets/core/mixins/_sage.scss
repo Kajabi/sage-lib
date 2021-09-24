@@ -461,7 +461,6 @@
     transform: translateY($textarea-label-padding - $textarea-padding);
   }
   @else {
-    transform: translateY(-50%) translateY(-($input-text-height + $input-padding)); // IE doesn't support calc in transforms so we provide a fallback
     transform: translateY(calc(-50% - (#{$input-text-height} + #{$input-padding}))); // we calculate the centered position minus the offset of the text height plus the spacing height
   }
   transition: opacity 0.1s ease-in, transform 0.15s ease-in-out, color 0.15s ease-out;
