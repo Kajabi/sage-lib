@@ -39,7 +39,7 @@ $-btn-base-styles: (
     ),
     hover: (
       color: sage-color(charcoal),
-      background-color: sage-color(grey, 200),
+      background-color: sage-color(grey, 100),
     ),
     focus: (
       color: sage-color(charcoal),
@@ -47,7 +47,24 @@ $-btn-base-styles: (
     ),
     disabled: (
       color: sage-color(grey, 500),
-      background-color: sage-color(grey, 200),
+      background-color: sage-color(grey, 300),
+    )
+  ),
+  tertiary: (
+    default: (
+      color: sage-color(charcoal),
+      background-color: sage-color(white),
+      ring-color: sage-color(charcoal),
+    ),
+    hover: (
+      color: sage-color(charcoal),
+    ),
+    focus: (
+      color: sage-color(charcoal),
+      background-color: sage-color(white),
+    ),
+    disabled: (
+      color: sage-color(grey, 500),
     )
   ),
   danger: (
@@ -153,6 +170,15 @@ $-btn-loading-min-height: rem(36px);
 
     &:hover {
       background-color: sage-color(white);
+    }
+  }
+
+  &.sage-btn--tertiary {
+    // padding: rem(5px) calc(#{sage-spacing(sm)} - 1);
+    border: 1px solid sage-color(grey, 300);
+
+    &:hover {
+      border: 1px solid sage-color(grey, 500);
     }
   }
 
@@ -366,14 +392,13 @@ $-btn-loading-min-height: rem(36px);
 
     &:not(.sage-btn--subtle):not(:disabled):not([aria-disabled="true"]) {
       // Shadow appears on Primary by default but can be toggled off with `--no-shadow`
-      @if ($-style-name == primary) {
+      @if ($-style-name == primary or $-style-name == secondary) {
         box-shadow: $-btn-shadow-base;
 
         &.sage-btn--no-shadow {
           box-shadow: none;
         }
       }
-      // All other buttons have no shadow by default but one can be toggled on with `--raised`
       @else {
         &.sage-btn--raised {
           box-shadow: $-btn-shadow-base;

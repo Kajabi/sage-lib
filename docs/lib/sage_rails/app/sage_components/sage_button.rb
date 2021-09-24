@@ -10,7 +10,7 @@ class SageButton < SageComponent
     raised: [:optional, NilClass, TrueClass],
     small: [:optional, NilClass, TrueClass],
     spinner_on_submit: [:optional, NilClass, String],
-    style: [:optional, NilClass, Set.new(["primary", "secondary", "danger"])],
+    style: [:optional, NilClass, Set.new(["primary", "secondary", "tertiary", "danger"])],
     subtle: [:optional, NilClass, TrueClass],
     value: [:optional, String],
   })
