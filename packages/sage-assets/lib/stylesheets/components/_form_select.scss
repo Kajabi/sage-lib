@@ -152,3 +152,24 @@ $-select-padding-label: sage-spacing(2xs);
 .sage-select__message {
   @include sage-form-field-message;
 }
+
+// Shim for handling Select Labels within Simpleform markup
+.sage-select {
+  .form-group ~ .sage-select__label {
+    @extend %t-sage-body;
+
+    opacity: 1;
+  }
+
+  &.sage-select--value-selected .form-group ~ .sage-select__label {
+    @extend %t-sage-body-xsmall-semi;
+
+    transform: translateY(calc(#{-$-select-height} + 50%));
+    background-color: $-select-color-label-background;
+    transition: transform 0.15s ease-in-out, color 0.15s ease-out;
+  }
+
+  &.sage-select--value-selected .form-group:focus-within:not(:disabled) ~ .sage-select__label {
+    color: sage-color(primary);
+  }
+}
