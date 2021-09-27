@@ -6,10 +6,10 @@
 
 
 // Colors
-$-tooltip-bg-color: sage-color(charcoal, 400);
-$-tooltip-light-bg-color: sage-color(white);
+$-tooltip-bg-color: sage-color(charcoal, 500);
+$-tooltip-light-bg-color: sage-color(charcoal, 500);
 $-tooltip-font-color: sage-color(white);
-$-tooltip-light-font-color: sage-color(charcoal, 400);
+$-tooltip-light-font-color: sage-color(white);
 
 // Indicator arrow
 $-tooltip-arrow-size: rem(6px);
@@ -18,7 +18,7 @@ $-tooltip-arrow-active: $-tooltip-arrow-size solid $-tooltip-bg-color;
 
 // Styling
 $-tooltip-shadow: sage-shadow(lg);
-$-tooltip-padding: sage-spacing(2xs) sage-spacing(sm);
+$-tooltip-padding: rem(6px) sage-spacing(xs);
 $-tooltip-small-padding: sage-spacing(2xs) sage-spacing(xs);
 $-tooltip-large-padding: sage-spacing(xs) sage-spacing(xs);
 $-tooltip-zindex: sage-z_index(modal, 10);
@@ -39,7 +39,7 @@ $-tooltip-large-maxwidth: rem(320px);
   background-color: $-tooltip-bg-color;
   box-shadow: $-tooltip-shadow;
 
-  @extend %t-sage-body-small;
+  @extend %t-sage-body-xsmall;
 
   &::after {
     content: "";
@@ -100,16 +100,16 @@ $-tooltip-large-maxwidth: rem(320px);
   background: $-tooltip-light-bg-color;
 
   &.sage-tooltip--top::after {
-    border-top-color: sage-color(white);
+    border-top-color: sage-color(charcoal, 500);
   }
   &.sage-tooltip--bottom::after {
-    border-bottom-color: sage-color(white);
+    border-bottom-color: sage-color(charcoal, 500);
   }
   &.sage-tooltip--left::after {
-    border-left-color: sage-color(white);
+    border-left-color: sage-color(charcoal, 500);
   }
   &.sage-tooltip--right::after {
-    border-right-color: sage-color(white);
+    border-right-color: sage-color(charcoal, 500);
   }
 }
 
