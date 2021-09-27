@@ -8,10 +8,8 @@ Sage.inputaffixes = (() => {
   const prefixRootClass = "sage-input--prefixed";
   const suffixRootClass = "sage-input--suffixed";
   const fieldClass = "sage-input__field";
-  const labelClass = "sage-label";
-  const labelValueClass = "sage-label__value";
-  const labelColorModifier = "draft";
-  const labelElement = "span";
+  const valueClass = "sage-input__affix-value";
+  const valueElement = "span";
   const inputPaddingOffset = 16;
 
 
@@ -44,26 +42,24 @@ Sage.inputaffixes = (() => {
 
   // Make the sage-label that will display the affix content
   const makeLabel = (content, type) => {
-    const elLabel = document.createElement(labelElement);
-    const elLabelValue = document.createElement(labelElement);
+    const elLabel = document.createElement(valueElement);
+    const elLabelValue = document.createElement(valueElement);
     elLabel.appendChild(elLabelValue);
     elLabelValue.appendChild(document.createTextNode(content));
     elLabel.setAttribute("aria-label", `${type}ed with ${content}`);
     elLabel.classList.add(
-      labelClass,
       affixClass,
-      `${labelClass}--${labelColorModifier}`,
       `${affixClass}--${type}`
     );
     elLabelValue.classList.add(
-      labelValueClass
+      valueClass
     );
 
     return elLabel;
   };
 
   const handleAffixClick = (ev) => {
-    if (ev.target.classList.contains(labelValueClass)) {
+    if (ev.target.classList.contains(valueClass)) {
       // Find neighboring input and focus on it
       ev.target.parentNode.parentNode.querySelector(`.${fieldClass}`).focus();
     }

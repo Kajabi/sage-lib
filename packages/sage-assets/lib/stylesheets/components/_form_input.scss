@@ -8,9 +8,6 @@
 $-input-border-width: rem(1px);
 $-input-height: rem(40px);
 $-input-label-offset: rem(12px);
-$-input-padding: sage-spacing(sm);
-$-input-padding-filled: sage-spacing(2xs);
-$-input-padding-label: sage-spacing(2xs);
 $-input-padding-offset: sage-spacing(sm) - $-input-border-width;
 $-input-popover-size: rem(40px);
 $-input-text-height: sage-font-size(body);
@@ -31,9 +28,11 @@ $-input-text-height: sage-font-size(body);
 }
 
 .sage-input__affix {
+  display: flex;
+  align-items: center;
   position: absolute;
-  top: sage-spacing(xs);
   z-index: sage-z-index(default, 1);
+  height: $-input-height;
 
   .sage-input--suffixed &,
   .sage-input--prefixed & {
@@ -45,12 +44,18 @@ $-input-text-height: sage-font-size(body);
   }
 }
 
+.sage-input__affix-value {
+  color: sage-color(charcoal, 100);
+}
+
 .sage-input__affix--prefix {
-  left: sage-spacing(xs);
+  left: sage-spacing(sm);
+  padding-right: sage-spacing(2xs);
 }
 
 .sage-input__affix--suffix {
-  right: sage-spacing(xs);
+  right: sage-spacing(sm);
+  padding-left: sage-spacing(2xs);
 }
 
 .sage-input__label {

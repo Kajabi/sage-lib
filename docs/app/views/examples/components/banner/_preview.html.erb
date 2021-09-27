@@ -1,4 +1,4 @@
-<h3 class="t-sage-heading-6">Announcement (with link)</h3>
+<h3 class="t-sage-heading-6">Default (with link)</h3>
 <%= sage_component SageBanner, {
   banner_context: "sage-demo",
   active: true,
@@ -36,7 +36,6 @@
   dismissable: true,
   type: "warning",
   text: "Execute Order 66.",
-  icon: "sage-icon-warning",
   link: {
     name: "Link here",
     attributes: {
@@ -55,8 +54,8 @@
   text: "It's over, Anakin. I have the high ground.",
 } %>
 
-<h3 class="t-sage-heading-6">Primary fixed (Ladera top context)</h3>
-<p>See active example at top of page</p>
+<h3 class="t-sage-heading-6">Default fixed (Ladera top context)</h3>
+<p>Select "Toggle banner" to trigger banner at top of page</p>
 <%= sage_component SageButton, {
   style: "primary",
   value: "Toggle banner",
