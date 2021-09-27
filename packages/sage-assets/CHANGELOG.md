@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.49.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.49.0...@kajabi/sage-assets@0.49.1) (2021-09-27)
+
+
+### Bug Fixes
+
+* **banner icon:** correct announcement icon and fix docs for icon usage ([f5490f0](https://github.com/Kajabi/sage-lib/commit/f5490f07a03d70d67b52f920f149c2bc3614133f))
+* **form input:** fixes floating label alignment ([45f77c9](https://github.com/Kajabi/sage-lib/commit/45f77c93609af1e94a1802db022b1d87706d5b33))
+* **form input affix:** abandoned layout changes per Sage design team. Can follow up later ([7a46e7b](https://github.com/Kajabi/sage-lib/commit/7a46e7b9f8ce783a727c50e600811ecf34341fc6))
+* **form input affix:** fixed spacing for form inputs, labels, affixes from 16px to 12px ([62fff91](https://github.com/Kajabi/sage-lib/commit/62fff91bfca8a6b07e594a0e8446ae6fc2c687b8))
+* **form input affix:** fixed styling for affix. changed color and tweaked spacing ([4eff9d0](https://github.com/Kajabi/sage-lib/commit/4eff9d0016dfef1b3c4ca2cbbbb20554903b629b))
+* **form input affix:** moved non-error message text margin-left per Figma specs ([5f8c19e](https://github.com/Kajabi/sage-lib/commit/5f8c19e008bace0a81ef57f42521c364c6a12a72))
+* **form input affix:** removed unused margin-left for error message from layout changes ([d96acfc](https://github.com/Kajabi/sage-lib/commit/d96acfc6dfbcf7aab0ac8ce0c3e62333546adfc8))
+
+
+
+
+
 # [0.49.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.48.0...@kajabi/sage-assets@0.49.0) (2021-09-22)
 
 

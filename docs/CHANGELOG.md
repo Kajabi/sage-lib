@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.17.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.17.0...@kajabi/sage@4.17.1) (2021-09-27)
+
+
+### Bug Fixes
+
+* **banner icon:** correct announcement icon and fix docs for icon usage ([f5490f0](https://github.com/Kajabi/sage-lib/commit/f5490f07a03d70d67b52f920f149c2bc3614133f))
+* **sage_form_select:** adds closing to select element ([9a04e3d](https://github.com/Kajabi/sage-lib/commit/9a04e3d2074ab212997b7425e0aa97b4182d59ca))
+
+
+
+
+
 # [4.17.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.16.0...@kajabi/sage@4.17.0) (2021-09-22)
 
 

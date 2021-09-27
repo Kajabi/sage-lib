@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.59.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.59.0...@kajabi/sage-react@0.59.1) (2021-09-27)
+
+
+### Bug Fixes
+
+* **form input affix:** changed Suffixed to lowercase like all remaining aria-labels ([82763cc](https://github.com/Kajabi/sage-lib/commit/82763cc636f330b6a07394b657a28d653b5add44))
+* **form input affix:** made updates to React component and story ([9b3dab1](https://github.com/Kajabi/sage-lib/commit/9b3dab1d09972a1d2269d463e8a31dac41762459))
+
+
+
+
+
 # [0.59.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.58.0...@kajabi/sage-react@0.59.0) (2021-09-22)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.13.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.12.0...@kajabi/sage-system@0.13.0) (2021-09-27)
+
+
+### Features
+
+* **form input affix:** modified inputaffixes script to use custom child instead of label ([14df1ee](https://github.com/Kajabi/sage-lib/commit/14df1ee6b006c9f79c260fa7103a0d8545695d93))
+
+
+
+
+
 # [0.12.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.11.2...@kajabi/sage-system@0.12.0) (2021-09-20)
 
 
