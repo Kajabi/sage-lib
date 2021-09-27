@@ -71,8 +71,8 @@ Sage.accordion = (function () {
   }
 
   function unbind(el) {
-    header.removeEventListener('click', handleAccordionClick);
-    header.removeEventListener('keydown', handleAccordionClick);
+    el.removeEventListener('click', handleAccordionClick);
+    el.removeEventListener('keydown', handleAccordionClick);
   }
 
   return {
