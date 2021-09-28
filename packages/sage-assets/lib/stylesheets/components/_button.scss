@@ -93,7 +93,7 @@ $-btn-subtle-styles: (
     default: sage-color(primary),
     hover: sage-color(primary),
     hover-background: sage-color(primary, 100),
-    focus: sage-color(primary),
+    focus: sage-color(primary, 400),
     disabled: sage-color(primary, 200),
   ),
   secondary: (
@@ -107,7 +107,7 @@ $-btn-subtle-styles: (
     default: sage-color(red),
     hover: sage-color(red),
     hover-background: sage-color(red, 100),
-    focus: sage-color(red),
+    focus: sage-color(red, 400),
     disabled: sage-color(red, 200),
   ),
 );
