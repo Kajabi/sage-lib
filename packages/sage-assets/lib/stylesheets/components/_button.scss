@@ -91,19 +91,22 @@ $-btn-base-styles: (
 $-btn-subtle-styles: (
   primary: (
     default: sage-color(primary),
-    hover: sage-color(primary, 400),
+    hover: sage-color(primary),
+    hover-background: sage-color(primary, 100),
     focus: sage-color(primary),
     disabled: sage-color(primary, 200),
   ),
   secondary: (
     default: sage-color(charcoal, 200),
-    hover: sage-color(charcoal, 500),
+    hover: sage-color(charcoal, 200),
+    hover-background: sage-color(grey, 200),
     focus: sage-color(charcoal, 200),
     disabled: sage-color(grey, 500),
   ),
   danger: (
     default: sage-color(red),
-    hover: sage-color(red, 400),
+    hover: sage-color(red),
+    hover-background: sage-color(red, 100),
     focus: sage-color(red),
     disabled: sage-color(red, 200),
   ),
@@ -390,8 +393,7 @@ $-btn-loading-min-height: rem(36px);
     }
 
     &:not(.sage-btn--subtle):not(:disabled):not([aria-disabled="true"]) {
-      // Shadow appears on Primary by default but can be toggled off with `--no-shadow`
-      @if ($-style-name == primary or $-style-name == secondary) {
+      @if ($-style-name != tertiary) {
         box-shadow: $-btn-shadow-base;
 
         &.sage-btn--no-shadow {
@@ -407,12 +409,16 @@ $-btn-loading-min-height: rem(36px);
   }
 }
 
-// Subtle buttons are smaller with no padding or background color but still use a focus ring
 .sage-btn--subtle {
-  padding: 0;
+  padding: 0 rem(8px);
   box-shadow: none;
 
   @include sage-focus-outline($outline-offset-inline: 6px, $outline-offset-block: 0);
+
+  // overrides the height from mixin sage-focus-outline
+  &::after {
+    height: calc(100% + #{$rem(2px)});
+  }
 
   // Generate button style variations
   @each $-style-name, $-styles in $-btn-subtle-styles {
@@ -424,7 +430,7 @@ $-btn-loading-min-height: rem(36px);
 
       &:hover {
         color: map-get($-styles, hover);
-        background-color: transparent;
+        background-color: map-get($-styles, hover-background);
       }
 
       &:focus,
@@ -476,10 +482,8 @@ $-btn-loading-min-height: rem(36px);
   @extend %t-sage-body-small-med;
 }
 
-// TODO: Investigate deprecating the float setting here
 .sage-btn--align-end {
   align-self: flex-end;
-  float: right;
 }
 
 .sage-btn--full-width {

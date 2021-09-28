@@ -55,7 +55,6 @@ demo_configs_subtle = [
 
   <% [false, true].each do | disabled | %>
     <%= sage_component SageButtonGroup, { gap: :sm, spacer: { bottom: :sm }} do %>
-      <!-- Primary button -->
       <%= sage_component SageButton, {
         value: "Button",
         style: config[:style],
@@ -121,7 +120,6 @@ demo_configs_subtle = [
   <% end %>
 <% end %>
 
-
 <h3>Subtle Buttons</h3>
 <% demo_configs_subtle.each do | config | %>
   <%= sage_component SageCardBlock, {} do %>
@@ -133,7 +131,6 @@ demo_configs_subtle = [
 
   <% [false, true].each do | disabled | %>
     <%= sage_component SageButtonGroup, { gap: :sm, spacer: { bottom: :sm }} do %>
-      <!-- Primary button -->
       <%= sage_component SageButton, {
         value: "Button",
         style: config[:style],
@@ -273,7 +270,7 @@ demo_configs_subtle = [
 ", use_sage_type: true) %>
 <div>
   <%= sage_component SageButton, {
-    value: "Click me",
+    value: "Select to activate loading state",
     spinner_on_submit: "my aria label",
     attributes: {
       href: "#",
@@ -281,6 +278,19 @@ demo_configs_subtle = [
       title: "Open Sassdocs site"
     },
     style: "primary",
+  } %>
+</div>
+
+<h3>Small Button</h3>
+<%= md("
+  Sets a subtle button to be smaller in `font-size` and `line-height`. Enable the `small` treatment by adding the attribute: `small: true`.
+", use_sage_type: true) %>
+<div>
+  <%= sage_component SageButton, {
+    value: "Small button here",
+    style: "primary",
+    subtle: true,
+    small: true
   } %>
 </div>
 
@@ -299,37 +309,15 @@ demo_configs_subtle = [
     no_shadow: true,
   } %>
 <% end %>
-<%= sage_component SageButtonGroup, { gap: :md, spacer: { bottom: :md } } do %>
-  <%= sage_component SageButton, {
-    value: "No shadow (default)",
-    style: "secondary",
-  } %>
-  <%= sage_component SageButton, {
-    value: "Raised",
-    style: "secondary",
-    raised: true,
-  } %>
-<% end %>
-<%= sage_component SageButtonGroup, { gap: :md, spacer: { bottom: :md } } do %>
-  <%= sage_component SageButton, {
-    value: "No shadow (default)",
-    style: "tertiary",
-  } %>
-  <%= sage_component SageButton, {
-    value: "Raised",
-    style: "tertiary",
-    raised: true,
-  } %>
-<% end %>
-<%= sage_component SageButtonGroup, { gap: :md } do %>
-  <%= sage_component SageButton, {
-    value: "No shadow (default)",
-    style: "danger",
-  } %>
-  <%= sage_component SageButton, {
-    value: "Raised",
-    style: "danger",
-    raised: true,
-  } %>
-<% end %>
 
+<h3>Full Width</h3>
+<%= md("
+  Displays a button that takes up 100% of the width of its container. Enable the `full_width` treatment by adding the attribute: `full_width: true`.
+", use_sage_type: true) %>
+<div>
+  <%= sage_component SageButton, {
+    value: "Full width button example",
+    style: "primary",
+    full_width: true
+  } %>
+</div>
