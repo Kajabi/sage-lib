@@ -7,9 +7,9 @@
 
 // Colors
 $-tooltip-bg-color: sage-color(charcoal, 500);
-$-tooltip-light-bg-color: sage-color(charcoal, 500);
+$-tooltip-light-bg-color: $-tooltip-bg-color;
 $-tooltip-font-color: sage-color(white);
-$-tooltip-light-font-color: sage-color(white);
+$-tooltip-light-font-color: $-tooltip-font-color;
 
 // Indicator arrow
 $-tooltip-arrow-size: rem(6px);
@@ -100,16 +100,16 @@ $-tooltip-large-maxwidth: rem(320px);
   background: $-tooltip-light-bg-color;
 
   &.sage-tooltip--top::after {
-    border-top-color: sage-color(charcoal, 500);
+    border-top-color: $-tooltip-bg-color;
   }
   &.sage-tooltip--bottom::after {
-    border-bottom-color: sage-color(charcoal, 500);
+    border-bottom-color: $-tooltip-bg-color;
   }
   &.sage-tooltip--left::after {
-    border-left-color: sage-color(charcoal, 500);
+    border-left-color: $-tooltip-bg-color;
   }
   &.sage-tooltip--right::after {
-    border-right-color: sage-color(charcoal, 500);
+    border-right-color: $-tooltip-bg-color;
   }
 }
 
