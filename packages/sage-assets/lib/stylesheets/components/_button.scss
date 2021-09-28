@@ -16,7 +16,7 @@ $-btn-base-styles: (
     default: (
       color: sage-color(white),
       background-color: sage-color(primary),
-      ring-color: sage-color(primary),
+      ring-color: sage-color(primary, 400),
     ),
     hover: (
       color: sage-color(white),
@@ -71,7 +71,7 @@ $-btn-base-styles: (
     default: (
       color: sage-color(white),
       background-color: sage-color(red),
-      ring-color: sage-color(red),
+      ring-color: sage-color(red, 400),
     ),
     hover: (
       color: sage-color(white),
