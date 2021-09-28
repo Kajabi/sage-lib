@@ -415,11 +415,6 @@ $-btn-loading-min-height: rem(36px);
 
   @include sage-focus-outline($outline-offset-inline: 6px, $outline-offset-block: 0);
 
-  // overrides the height from mixin sage-focus-outline
-  &::after {
-    height: calc(100% + #{$rem(2px)});
-  }
-
   // Generate button style variations
   @each $-style-name, $-styles in $-btn-subtle-styles {
     &.sage-btn--#{$-style-name} {
