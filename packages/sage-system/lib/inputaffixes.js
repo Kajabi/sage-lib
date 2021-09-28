@@ -70,6 +70,7 @@ Sage.inputaffixes = (() => {
   };
 
   const init = () => {
+    console.log("kaboom!");
     if (document.querySelector(`.${affixRootClass}`) !== null) {
       const affixElements = Sage.util.nodelistToArray(document.querySelectorAll(`.${affixRootClass}`));
       affixElements.forEach((el) => {

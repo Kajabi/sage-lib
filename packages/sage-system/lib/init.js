@@ -97,6 +97,11 @@ Sage.init = function(elementNamesToInitLegacy) {
   }
 
   // Initialize Input groups
+  //if ( shouldInitLegacy('inputarrows', '.sage-input') ) {
+    Sage.inputarrows.init();
+  //}
+
+  // Initialize Input groups
   if ( shouldInitLegacy('inputgroup', '.sage-input-group') ) {
     Sage.inputgroup.init();
   }

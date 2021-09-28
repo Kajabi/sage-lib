@@ -1,5 +1,21 @@
 <fieldset class="sage-type">
 
+  <h3 class="t-sage-heading-6">Numeric</h3>
+  <%= sage_component SageFormInput, {
+    id: "form__fname1",
+    input_type: "text",
+    label_text: "Numeric Keyboard",
+    placeholder: "Numeric Keyboard",
+    required: true,
+    disabled: false,
+    input_mode: "numeric",
+    pattern: "[0-9]{2}",
+    has_error: false,
+    name: "custom_input_name",
+    message_text: "This is a message",
+    has_placeholder: false
+  } %>
+
   <h3 class="t-sage-heading-6">Text (default)</h3>
   <%= sage_component SageFormInput, {
     id: "form__fname1",
