@@ -5,8 +5,8 @@ import { shallow } from 'enzyme';
 import { Hint } from './Hint';
 
 describe('Sage Hint', () => {
-  let component,
-    defaultProps;
+  let component: any
+  let defaultProps: any
 
   beforeEach(() => {
     defaultProps = {};

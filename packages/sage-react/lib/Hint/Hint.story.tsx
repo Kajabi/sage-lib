@@ -17,5 +17,5 @@ export default {
   }
 };
 
-const Template = (args) => <Hint {...args} />;
+const Template = (args: any) => <Hint {...args} />;
 export const Default = Template.bind({});

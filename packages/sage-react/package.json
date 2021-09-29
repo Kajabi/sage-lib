@@ -56,8 +56,8 @@
     "@storybook/addon-links": "^6.0.26",
     "@storybook/addon-storysource": "^6.0.28",
     "@storybook/react": "^6.0.26",
-    "@types/classnames": "^2.3.1",
     "@types/jest": "^27.0.2",
+    "@types/enzyme": "^3.10.9",
     "axios": "^0.21.0",
     "babel-loader": "^8.1.0",
     "browser-sync": "^2.26.14",
@@ -84,7 +84,7 @@
   },
   "dependencies": {
     "@kajabi/sage-assets": "^0.63.3",
-    "classnames": "^2.2.6",
+    "classnames": "^2.3.1",
     "debounce": "^1.2.0",
     "focus-trap": "^6.2.2",
     "html-react-parser": "^0.14.2",
