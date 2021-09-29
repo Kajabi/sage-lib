@@ -56,6 +56,8 @@
     "@storybook/addon-links": "^6.0.26",
     "@storybook/addon-storysource": "^6.0.28",
     "@storybook/react": "^6.0.26",
+    "@types/classnames": "^2.3.1",
+    "@types/jest": "^27.0.2",
     "axios": "^0.21.0",
     "babel-loader": "^8.1.0",
     "browser-sync": "^2.26.14",
@@ -74,10 +76,11 @@
     "react-is": "16.13.1",
     "react-test-renderer": "16.13.1",
     "sass-loader": "^10.0.2",
+    "ts-loader": "^9.2.6",
     "typescript": "4.0.3",
     "url-loader": "^4.1.0",
-    "webpack": "^4.44.2",
-    "webpack-cli": "^3.3.12"
+    "webpack": "^5.55.1",
+    "webpack-cli": "^4.8.0"
   },
   "dependencies": {
     "@kajabi/sage-assets": "^0.63.3",

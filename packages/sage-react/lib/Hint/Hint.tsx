@@ -4,7 +4,13 @@ import classnames from 'classnames';
 import { Icon } from '../Icon';
 import { SageTokens } from '../configs';
 
-export const Hint = ({
+interface Props {
+  className: any,
+  content: any,
+  icon: any,
+}
+
+export const Hint: React.FC<Props> = ({
   className,
   content,
   icon,
@@ -20,6 +26,12 @@ export const Hint = ({
         <Icon
           className="sage-hint__icon"
           icon={icon}
+          adjacentType={undefined}
+          cardColor={undefined}
+          circular={undefined}
+          color={undefined}
+          label={undefined}
+          size={undefined}
         />
       )}
       <span className="sage-hint__content">{content}</span>

@@ -1,5 +1,5 @@
-var path = require('path');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   mode: 'production',
@@ -9,7 +9,7 @@ module.exports = {
   },
   entry: {
     main: [
-      './lib/index.js'
+      './lib/index.ts'
     ]
   },
   output: {
@@ -21,12 +21,17 @@ module.exports = {
     filename: '[name].css'
   })],
   externals: {
-    react: "react",
-    reactDOM: "react-dom",
-    reactRouterDom: "react-router-dom",
+    react: 'react',
+    reactDOM: 'react-dom',
+    reactRouterDom: 'react-router-dom',
   },
   module: {
     rules: [
+      {
+        test: /\.(ts|tsx)$/,
+        exclude: /node_modules/,
+        use: [{ loader: 'ts-loader' }],
+      },
       {
         test: /\.(js|jsx)$/,
         use: {
@@ -71,6 +76,8 @@ module.exports = {
     extensions: [
       '.js',
       '.jsx',
+      '.ts',
+      '.tsx',
       '.css',
       '.scss',
       '.sass',
@@ -85,4 +92,4 @@ module.exports = {
       '.gif'
     ]
   }
-}
+};
