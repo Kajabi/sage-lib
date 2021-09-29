@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid } from '..';
+import { Grid } from '../Grid';
 import { UploadCard } from './UploadCard';
 
 export default {

@@ -1,4 +1,4 @@
-import { SageTokens } from '..';
+import { SageTokens } from '../configs';
 
 export const CARD_FOOTER_ALIGNMENTS = {
   DEFAULT: null,
