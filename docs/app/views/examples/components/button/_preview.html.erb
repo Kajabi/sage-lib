@@ -11,9 +11,10 @@ demo_configs_standard = [
     style: "secondary",
   },
   {
-    heading: "Tertiary",
-    label: "Tertiary",
-    style: "tertiary",
+    heading: "Secondary - no shadow",
+    label: "Secondary - no shadow",
+    style: "secondary",
+    raised: false,
   },
   {
     heading: "Danger",
@@ -58,13 +59,15 @@ demo_configs_subtle = [
       <%= sage_component SageButton, {
         value: "Button",
         style: config[:style],
-        disabled: disabled
+        disabled: disabled,
+        raised: config[:raised],
       } %>
 
       <%= sage_component SageButton, {
         value: "Submit",
         style: config[:style],
         disabled: disabled,
+        raised: config[:raised],
         attributes: {
           type: "submit"
         }
@@ -73,6 +76,7 @@ demo_configs_subtle = [
       <%= sage_component SageButton, {
         value: "Link",
         style: config[:style],
+        raised: config[:raised],
         attributes: {
           href: "#element-button"
         },
@@ -82,6 +86,7 @@ demo_configs_subtle = [
       <%= sage_component SageButton, {
         value: "Left icon",
         style: config[:style],
+        raised: config[:raised],
         icon: {
           style: "left",
           name: "menu"
@@ -92,6 +97,7 @@ demo_configs_subtle = [
       <%= sage_component SageButton, {
         value: "Right icon",
         style: config[:style],
+        raised: config[:raised],
         icon: {
           style: "right",
           name: "menu"
@@ -102,6 +108,7 @@ demo_configs_subtle = [
       <%= sage_component SageButton, {
         value: "Icon only",
         style: config[:style],
+        raised: config[:raised],
         icon: {
           style: "only",
           name: "menu"
@@ -112,6 +119,7 @@ demo_configs_subtle = [
       <%= sage_component SageButton, {
         style: config[:style],
         disabled: disabled,
+        raised: config[:raised],
         custom_content_class: 'demo-custom-class',
       } do %>
         <strong>Custom</strong> <em>content</em>
@@ -296,7 +304,7 @@ demo_configs_subtle = [
 
 <h3>Shadow Treatments</h3>
 <%= md("
-  The primary, secondary, and danger buttons all have a small shadow treatment by default. In addition, these buttons allow for a `no_shadow` treatment. Enable the `no_shadow` treatment by adding the attribute: `no_shadow: true`.
+  The primary, secondary, and danger buttons all have a small shadow treatment by default. In addition, these buttons allow for a 'no-shadow' treatment. Enable the treatment by adding the attribute: `raised: false`.
 ", use_sage_type: true) %>
 <%= sage_component SageButtonGroup, { gap: :md, spacer: { bottom: :md } } do %>
   <%= sage_component SageButton, {
@@ -306,7 +314,7 @@ demo_configs_subtle = [
   <%= sage_component SageButton, {
     value: "No shadow",
     style: "primary",
-    no_shadow: true,
+    raised: false,
   } %>
 <% end %>
 
