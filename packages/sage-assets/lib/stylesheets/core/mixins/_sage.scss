@@ -57,8 +57,9 @@
 
   @include truncate();
 
+  padding: rem(6px) sage-spacing(sm);
   color: sage-color(charcoal, 400);
-  background-color: sage-color(grey, 200);
+  background-color: transparent;
   border: $-copy-text-border;
   border-radius: sage-border(radius);
 }
