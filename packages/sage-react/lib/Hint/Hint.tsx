@@ -1,12 +1,12 @@
 import React from 'react';
 import classnames from 'classnames';
 import { Icon } from '../Icon';
+import { TOKENS_ICONS_ENUM } from 'lib/configs/tokens/icons';
 
 interface Props {
   className?: string,
   content: string,
-  // This would be better served as an ENUM
-  icon: string | null | undefined,
+  icon: TOKENS_ICONS_ENUM | null | undefined,
 }
 
 export const Hint: React.FC<Props> = ({
