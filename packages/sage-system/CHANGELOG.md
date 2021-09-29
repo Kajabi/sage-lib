@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.13.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.13.0...@kajabi/sage-system@0.13.1) (2021-09-29)
+
+
+### Bug Fixes
+
+* **expandable-card:** updated arguments in unbind function ([0f78a10](https://github.com/Kajabi/sage-lib/commit/0f78a103dc153aabbe744558f95638c42bf1185b))
+
+
+
+
+
 # [0.13.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.12.0...@kajabi/sage-system@0.13.0) (2021-09-27)
 
 
