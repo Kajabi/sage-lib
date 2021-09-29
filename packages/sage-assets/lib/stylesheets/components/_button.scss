@@ -93,7 +93,8 @@ $-btn-subtle-styles: (
     default: sage-color(primary),
     hover: sage-color(primary),
     hover-background: sage-color(primary, 100),
-    focus: sage-color(primary, 400),
+    focus: sage-color(primary),
+    focus-outline: sage-color(primary, 400),
     disabled: sage-color(primary, 200),
   ),
   secondary: (
@@ -101,13 +102,15 @@ $-btn-subtle-styles: (
     hover: sage-color(charcoal, 200),
     hover-background: sage-color(grey, 200),
     focus: sage-color(charcoal, 200),
+    focus-outline: sage-color(charcoal),
     disabled: sage-color(grey, 500),
   ),
   danger: (
     default: sage-color(red),
     hover: sage-color(red),
     hover-background: sage-color(red, 100),
-    focus: sage-color(red, 400),
+    focus: sage-color(red),
+    focus-outline: sage-color(red, 400),
     disabled: sage-color(red, 200),
   ),
 );
@@ -421,7 +424,7 @@ $-btn-loading-min-height: rem(36px);
       color: map-get($-styles, default);
       background-color: transparent;
 
-      @include sage-focus-outline--update-color(map-get($-styles, default));
+      @include sage-focus-outline--update-color(map-get($-styles, focus-outline));
 
       &:hover {
         color: map-get($-styles, hover);
