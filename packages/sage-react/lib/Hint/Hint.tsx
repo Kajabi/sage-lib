@@ -6,7 +6,7 @@ import { TOKENS_ICONS_ENUM } from 'lib/configs/tokens/icons';
 interface Props {
   className?: string,
   content: string,
-  icon: TOKENS_ICONS_ENUM | null | undefined,
+  icon?: TOKENS_ICONS_ENUM | null,
 }
 
 export const Hint: React.FC<Props> = ({
