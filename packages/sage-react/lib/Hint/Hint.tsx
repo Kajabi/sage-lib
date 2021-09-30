@@ -1,18 +1,18 @@
 import React from 'react';
 import classnames from 'classnames';
 import { Icon } from '../Icon';
-import { TOKENS_ICONS_ENUM } from 'lib/configs/tokens/icons';
+import { TokensIcons } from 'lib/configs/tokens/icons';
 
 interface Props {
   className?: string,
   content: string,
-  icon?: TOKENS_ICONS_ENUM | null,
+  icon?: TokensIcons | null,
 }
 
 export const Hint: React.FC<Props> = ({
-  className,
+  className = "",
   content,
-  icon,
+  icon = null,
   ...rest
 }) => {
   const classNames = classnames(
