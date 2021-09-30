@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.18.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.17.2...@kajabi/sage@4.18.0) (2021-09-30)
+
+
+### Features
+
+* **button:** modify the loops for subtle buttons ([f283924](https://github.com/Kajabi/sage-lib/commit/f2839240871436da3533c29cf7331443e1ec1cc9))
+
+
+
+
+
 ## [4.17.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.17.1...@kajabi/sage@4.17.2) (2021-09-29)
 
 **Note:** Version bump only for package @kajabi/sage
