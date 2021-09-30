@@ -11,6 +11,7 @@
 $-btn-transition: map-get($sage-transitions, default);
 $-btn-border-radius: sage-border(radius);
 $-btn-shadow-base: sage-shadow(sm);
+
 $-btn-base-styles: (
   primary: (
     default: (
@@ -33,16 +34,16 @@ $-btn-base-styles: (
   ),
   secondary: (
     default: (
-      color: sage-color(charcoal),
+      color: sage-color(charcoal, 400),
       background-color: sage-color(white),
       ring-color: sage-color(charcoal),
     ),
     hover: (
-      color: sage-color(charcoal),
+      color: sage-color(charcoal, 400),
       background-color: sage-color(grey, 100),
     ),
     focus: (
-      color: sage-color(charcoal),
+      color: sage-color(charcoal, 400),
       background-color: sage-color(white),
     ),
     disabled: (
