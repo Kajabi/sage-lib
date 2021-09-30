@@ -157,7 +157,7 @@ module ComponentsHelper
         react: "done",
         a11y: "done",
         react_component_slug: "sage-copytext--default",
-        figma_embed: "",
+        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F9Km09NjlZHYWsMP7EGT8tI%2FSage-3-for-Admin%3Fnode-id%3D4195%253A20283",
       },
       {
         title: "description",
