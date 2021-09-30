@@ -53,7 +53,7 @@
 /// Sets up styles for sage "copy" (system) text.
 ///
 @mixin sage-copy-text() {
-  @extend %t-sage-body-small;
+  @extend %t-sage-body;
 
   @include truncate();
 
