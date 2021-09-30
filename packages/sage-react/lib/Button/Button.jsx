@@ -38,7 +38,7 @@ export const Button = ({
       [`${blockName}--${color}`]: color,
       [`${blockName}--full-width`]: fullWidth,
       [`${blockName}--no-shadow`]: noShadow && !subtle && isPrimary,
-      [`${blockName}--raised`]: raised && !subtle && !isPrimary,
+      [`${blockName}--raised`]: raised && !subtle,
       [`${blockName}--small`]: small,
       [`${blockName}--subtle`]: subtle,
       [`${blockName}--icon-${iconPosition}-${icon}`]: icon && !iconOnly,
