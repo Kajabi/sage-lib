@@ -27,7 +27,7 @@ export const Button = ({
 }) => {
   const { to, href } = rest;
   const isLink = to || href;
-  const isTertiary = color === BUTTON_COLORS.TERTIARY;
+  const isPrimary = color === BUTTON_COLORS.PRIMARY;
   const TagName = isLink ? Link : 'button';
   const blockName = 'sage-btn';
   const classNames = classnames(
@@ -37,8 +37,8 @@ export const Button = ({
       [`${blockName}--align-end`]: alignEnd,
       [`${blockName}--${color}`]: color,
       [`${blockName}--full-width`]: fullWidth,
-      [`${blockName}--no-shadow`]: noShadow && !subtle,
-      [`${blockName}--raised`]: raised && !subtle && !isTertiary,
+      [`${blockName}--no-shadow`]: noShadow && !subtle && isPrimary,
+      [`${blockName}--raised`]: raised && !subtle && !isPrimary,
       [`${blockName}--small`]: small,
       [`${blockName}--subtle`]: subtle,
       [`${blockName}--icon-${iconPosition}-${icon}`]: icon && !iconOnly,
