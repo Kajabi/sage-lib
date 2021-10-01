@@ -53,12 +53,13 @@
 /// Sets up styles for sage "copy" (system) text.
 ///
 @mixin sage-copy-text() {
-  @extend %t-sage-body-small;
+  @extend %t-sage-body;
 
   @include truncate();
 
+  padding: rem(6px) sage-spacing(sm);
   color: sage-color(charcoal, 400);
-  background-color: sage-color(grey, 200);
+  background-color: transparent;
   border: $-copy-text-border;
   border-radius: sage-border(radius);
 }

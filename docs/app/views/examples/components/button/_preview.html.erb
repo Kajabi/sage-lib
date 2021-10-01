@@ -1,23 +1,52 @@
 <%
-demo_configs = [
+demo_configs_standard = [
   {
-    heading: "Primary (regular and disabled)",
+    heading: "Primary",
     label: "Primary",
     style: "primary",
   },
   {
-    heading: "Secondary (regular and disabled)",
+    heading: "Secondary",
     label: "Secondary",
     style: "secondary",
   },
   {
-    heading: "Danger (regular and disabled)",
+    heading: "Secondary - no shadow",
+    label: "Secondary - no shadow",
+    style: "secondary",
+    raised: false,
+  },
+  {
+    heading: "Danger",
     label: "Danger",
     style: "danger",
   }
 ]
 %>
-<% demo_configs.each do | config | %>
+
+<%
+demo_configs_subtle = [
+  {
+    heading: "Primary",
+    label: "Primary",
+    style: "primary",
+  },
+  {
+    heading: "Secondary",
+    label: "Secondary",
+    style: "secondary",
+  },
+  {
+    heading: "Danger",
+    label: "Danger",
+    style: "danger",
+  }
+]
+%>
+
+<h3>Standard Buttons</h3>
+
+<% demo_configs_standard.each do | config | %>
   <%= sage_component SageCardBlock, {} do %>
     <%= sage_component SageLabel, {
       color: "draft",
@@ -27,37 +56,37 @@ demo_configs = [
 
   <% [false, true].each do | disabled | %>
     <%= sage_component SageButtonGroup, { gap: :sm, spacer: { bottom: :sm }} do %>
-      <!-- Primary button -->
       <%= sage_component SageButton, {
         value: "Button",
         style: config[:style],
-        disabled: disabled
+        disabled: disabled,
+        raised: config[:raised],
       } %>
 
-      <!-- Primary submit button -->
       <%= sage_component SageButton, {
         value: "Submit",
         style: config[:style],
         disabled: disabled,
+        raised: config[:raised],
         attributes: {
           type: "submit"
         }
       } %>
 
-      <!-- Primary button (link) -->
       <%= sage_component SageButton, {
         value: "Link",
         style: config[:style],
+        raised: config[:raised],
         attributes: {
           href: "#element-button"
         },
         disabled: disabled
       } %>
 
-      <!-- Primary button (icon-left) -->
       <%= sage_component SageButton, {
         value: "Left icon",
         style: config[:style],
+        raised: config[:raised],
         icon: {
           style: "left",
           name: "menu"
@@ -65,10 +94,10 @@ demo_configs = [
         disabled: disabled
       } %>
 
-      <!-- Primary button (icon-right) -->
       <%= sage_component SageButton, {
         value: "Right icon",
         style: config[:style],
+        raised: config[:raised],
         icon: {
           style: "right",
           name: "menu"
@@ -76,10 +105,10 @@ demo_configs = [
         disabled: disabled
       } %>
 
-      <!-- Primary button (icon-only) -->
       <%= sage_component SageButton, {
         value: "Icon only",
         style: config[:style],
+        raised: config[:raised],
         icon: {
           style: "only",
           name: "menu"
@@ -87,10 +116,10 @@ demo_configs = [
         disabled: disabled
       } %>
 
-      <!-- Primary button (custom content) -->
       <%= sage_component SageButton, {
         style: config[:style],
         disabled: disabled,
+        raised: config[:raised],
         custom_content_class: 'demo-custom-class',
       } do %>
         <strong>Custom</strong> <em>content</em>
@@ -99,7 +128,8 @@ demo_configs = [
   <% end %>
 <% end %>
 
-<% demo_configs.each do | config | %>
+<h3>Subtle Buttons</h3>
+<% demo_configs_subtle.each do | config | %>
   <%= sage_component SageCardBlock, {} do %>
     <%= sage_component SageLabel, {
       color: "draft",
@@ -107,17 +137,15 @@ demo_configs = [
     } %>
   <% end %>
 
-  <% [false, true].each do | size | %>
+  <% [false, true].each do | disabled | %>
     <%= sage_component SageButtonGroup, { gap: :sm, spacer: { bottom: :sm }} do %>
-      <!-- Primary button -->
       <%= sage_component SageButton, {
         value: "Button",
         style: config[:style],
         subtle: true,
-        small: size
+        disabled: disabled
       } %>
 
-      <!-- Primary button (link) -->
       <%= sage_component SageButton, {
         value: "Link",
         style: config[:style],
@@ -125,10 +153,9 @@ demo_configs = [
           href: "#element-button"
         },
         subtle: true,
-        small: size
+        disabled: disabled
       } %>
 
-      <!-- Primary button (icon-left) -->
       <%= sage_component SageButton, {
         value: "Left icon",
         style: config[:style],
@@ -137,10 +164,9 @@ demo_configs = [
           name: "gear"
         },
         subtle: true,
-        small: size
+        disabled: disabled
       } %>
 
-      <!-- Primary button (icon-right) -->
       <%= sage_component SageButton, {
         value: "Right icon",
         style: config[:style],
@@ -149,10 +175,9 @@ demo_configs = [
           name: "gear"
         },
         subtle: true,
-        small: size
+        disabled: disabled
       } %>
 
-      <!-- Primary button (icon-only) -->
       <%= sage_component SageButton, {
         value: "Icon only",
         style: config[:style],
@@ -161,14 +186,13 @@ demo_configs = [
           name: "gear"
         },
         subtle: true,
-        small: size
+        disabled: disabled
       } %>
 
-      <!-- Primary button (custom content) -->
       <%= sage_component SageButton, {
         style: config[:style],
         subtle: true,
-        small: size
+        disabled: disabled
       } do %>
         <strong>Custom</strong> <em>content</em>
       <% end %>
@@ -176,6 +200,7 @@ demo_configs = [
   <% end %>
 <% end %>
 
+<h3>Button Groups</h3>
 <%= sage_component SageCardBlock, {} do %>
   <%= sage_component SageLabel, {
     color: "draft",
@@ -216,6 +241,7 @@ demo_configs = [
     value: "Button group: Align End with top border",
   } %>
 <% end %>
+
 <%= sage_component SageButtonGroup, { gap: :md, align: "end", borderTop: true } do %>
   <%= sage_component SageButton, {
     value: "Cancel",
@@ -227,14 +253,9 @@ demo_configs = [
   } %>
 <% end %>
 
-<%= sage_component SageCardBlock, {} do %>
-  <%= sage_component SageLabel, {
-    color: "draft",
-    value: "Button group: Allow wrap",
-  } %>
-<% end %>
+<h3>Button Group Wrap</h3>
 <%= md("
-  When enabled, button groups are no longer restricted to a single row, allowing contents to wrap to multiple lines. **Note: all button groups regardless of this attribute will wrap at breakpoints below `sm-min` to prevent horizontal scrolling on small screen devices.**
+  When enabled, button groups are no longer restricted to a single row, allowing contents to wrap to multiple lines via `flex-wrap: wrap`. **Note: all button groups regardless of this attribute will wrap at breakpoints below `sm-min` to prevent horizontal scrolling on small screen devices.**
   Click the button below to toggle button group wrapping throughout the page, and resize your browser to view the resulting change.
 ", use_sage_type: true) %>
 <div>
@@ -251,18 +272,13 @@ demo_configs = [
   } %>
 </div>
 
-<%= sage_component SageCardBlock, {} do %>
-  <%= sage_component SageLabel, {
-    color: "draft",
-    value: "Loading State",
-  } %>
-<% end %>
+<h3>Loading State</h3>
 <%= md("
   Displays a loading indicator in the button, such as when a button is used to submit a form. Including the `spinner_on_submit` property will activate the loading state, and place the corresponding text as the `aria-label`.
 ", use_sage_type: true) %>
 <div>
   <%= sage_component SageButton, {
-    value: "Click me",
+    value: "Select to activate loading state",
     spinner_on_submit: "my aria label",
     attributes: {
       href: "#",
@@ -273,16 +289,22 @@ demo_configs = [
   } %>
 </div>
 
-<%= sage_component SageCardBlock, {} do %>
-  <%= sage_component SageLabel, {
-    color: "draft",
-    value: "Shadow Treatment",
-  } %>
-<% end %>
+<h3>Small Button</h3>
 <%= md("
-  Regular buttons allow for a `raised` shadow treatment to be toggled on or off.
-  This is on by default for 'Primary' button styles and can be toggled off with `no_shadow`.
-  For the other styles it is off by default but can be toggled on with `raised`.
+  Sets a subtle button to be smaller in `font-size` and `line-height`. Enable the `small` treatment by adding the attribute: `small: true`.
+", use_sage_type: true) %>
+<div>
+  <%= sage_component SageButton, {
+    value: "Small button here",
+    style: "primary",
+    subtle: true,
+    small: true
+  } %>
+</div>
+
+<h3>Shadow Treatments</h3>
+<%= md("
+  The primary, secondary, and danger buttons all have a small shadow treatment by default. In addition, these buttons allow for a 'no-shadow' treatment. Enable the treatment by adding the attribute: `raised: false`.
 ", use_sage_type: true) %>
 <%= sage_component SageButtonGroup, { gap: :md, spacer: { bottom: :md } } do %>
   <%= sage_component SageButton, {
@@ -292,29 +314,18 @@ demo_configs = [
   <%= sage_component SageButton, {
     value: "No shadow",
     style: "primary",
-    no_shadow: true,
-  } %>
-<% end %>
-<%= sage_component SageButtonGroup, { gap: :md, spacer: { bottom: :md } } do %>
-  <%= sage_component SageButton, {
-    value: "No shadow (default)",
-    style: "secondary",
-  } %>
-  <%= sage_component SageButton, {
-    value: "Raised",
-    style: "secondary",
-    raised: true,
-  } %>
-<% end %>
-<%= sage_component SageButtonGroup, { gap: :md } do %>
-  <%= sage_component SageButton, {
-    value: "No shadow (default)",
-    style: "danger",
-  } %>
-  <%= sage_component SageButton, {
-    value: "Raised",
-    style: "danger",
-    raised: true,
+    raised: false,
   } %>
 <% end %>
 
+<h3>Full Width</h3>
+<%= md("
+  Displays a button that takes up 100% of the width of its container. Enable the `full_width` treatment by adding the attribute: `full_width: true`.
+", use_sage_type: true) %>
+<div>
+  <%= sage_component SageButton, {
+    value: "Full width button example",
+    style: "primary",
+    full_width: true
+  } %>
+</div>

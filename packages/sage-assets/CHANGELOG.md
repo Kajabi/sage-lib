@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.50.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.50.0...@kajabi/sage-assets@0.50.1) (2021-10-01)
+
+
+### Bug Fixes
+
+* **subtle-btn:** remove left and right padding on subtle btn ([4477d63](https://github.com/Kajabi/sage-lib/commit/4477d63f87529069b64c394733eb4a11da20b6f4))
+
+
+
+
+
+# [0.50.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.49.2...@kajabi/sage-assets@0.50.0) (2021-09-30)
+
+
+### Features
+
+* **button:** modify the loops for subtle buttons ([f283924](https://github.com/Kajabi/sage-lib/commit/f2839240871436da3533c29cf7331443e1ec1cc9))
+
+
+
+
+
 ## [0.49.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.49.1...@kajabi/sage-assets@0.49.2) (2021-09-29)
 
 **Note:** Version bump only for package @kajabi/sage-assets
