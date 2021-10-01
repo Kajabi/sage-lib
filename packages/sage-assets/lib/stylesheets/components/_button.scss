@@ -412,7 +412,7 @@ $-btn-loading-min-height: rem(36px);
 }
 
 .sage-btn--subtle {
-  padding: 0 rem(8px);
+  padding: 0;
   box-shadow: none;
 
   @include sage-focus-outline($outline-offset-inline: 6px, $outline-offset-block: 0);
@@ -425,15 +425,35 @@ $-btn-loading-min-height: rem(36px);
 
       @include sage-focus-outline--update-color(map-get($-styles, focus-outline));
 
-      &:hover {
+      // TODO: refactor the subtle button hover state, after Sage 3.0 conversion
+      &::after {
+        border-color: transparent;
+      }
+
+      &:not(:focus):hover {
         color: map-get($-styles, hover);
-        background-color: map-get($-styles, hover-background);
+
+        &::after {
+          z-index: 0 !important; /* stylelint-disable-line declaration-no-important */
+          border-color: transparent !important; /* stylelint-disable-line declaration-no-important */
+          background-color: map-get($-styles, hover-background);
+          opacity: 1 !important; /* stylelint-disable-line declaration-no-important */
+        }
+
+        &::before,
+        span {
+          z-index: 1;
+        }
       }
 
       &:focus,
       &:active {
         color: map-get($-styles, focus);
         background-color: transparent;
+
+        &::after {
+          border-color: map-get($-styles, focus-outline);
+        }
       }
 
       &:disabled,
