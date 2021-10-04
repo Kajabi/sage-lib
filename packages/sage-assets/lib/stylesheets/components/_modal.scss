@@ -7,6 +7,8 @@
 
 $-modal-padding-x: sage-spacing(md);
 $-modal-padding-y: sage-spacing(md);
+$-modal-margin-lg: 6vh;
+$-modal-margin-xl: 8vh;
 $-modal-header-image-size: rem(28px);
 
 
@@ -58,7 +60,7 @@ $-modal-header-image-size: rem(28px);
   overflow-y: scroll;
   width: calc(100vw - #{sage-spacing(md)});
   max-width: sage-container(md);
-  max-height: calc(100vh - #{sage-spacing(xl)});
+  max-height: calc(100vh - #{$-modal-margin-xl});
   margin: 0;
   border-radius: sage-border(radius);
   background-color: sage-color(white);
@@ -68,11 +70,11 @@ $-modal-header-image-size: rem(28px);
   opacity: 0;
 
   @media (min-width: sage-breakpoint(lg-min)) {
-    margin-top: 6vh;
+    margin-top: $-modal-margin-lg;
   }
 
   @media (min-width: sage-breakpoint(xl-min)) {
-    margin-top: 8vh;
+    margin-top: $-modal-margin-xl;
   }
 
   [data-sage-animate] & {
