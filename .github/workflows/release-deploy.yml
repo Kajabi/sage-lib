@@ -73,7 +73,7 @@ jobs:
         run: npx lerna bootstrap --ci
 
       - name: Lerna Publish
-        run: sudo npx lerna publish --registry github --yes
+        run: npx lerna publish --registry github --yes
 
       # Deploy site
       - name: Documentation Site Deploy
