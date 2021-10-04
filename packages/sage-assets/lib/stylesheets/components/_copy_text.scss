@@ -5,7 +5,8 @@
 ////
 
 
-$-copy-text-border: 1px solid sage-color(grey, 400);
+$-copy-text-border: 1px solid sage-color(grey, 300);
+$-copy-text-border-focus-color: sage-color(primary);
 $-copy-text-color: sage-color(charcoal, 400);
 $-copy-text-color-hover: sage-color(charcoal, 500);
 
@@ -15,17 +16,15 @@ $-copy-text-color-hover: sage-color(charcoal, 500);
 
   display: inline-block;
   max-width: 100%;
-  padding: 0 sage-spacing(xs);
 
   .sage-copy-btn & {
-    transition: map-get($sage-transitions, default);
-    transition-property: color, background-color;
+    transition-property: border;
+    transition: map-get($sage-transitions, input);
   }
 
   .sage-copy-btn:hover & {
     color: $-copy-text-color-hover;
-    background-color: sage-color(grey, 100);
-    border-color: sage-color(grey, 500);
+    border-color: currentColor;
   }
 
   .sage-copy-btn--fill-container & {
@@ -52,7 +51,7 @@ $-copy-text-color-hover: sage-color(charcoal, 500);
 .sage-copy-btn {
   @include sage-button-style-reset();
   @include sage-focus-outline();
-  @include sage-focus-outline--update-color($-copy-text-color-hover);
+  @include sage-focus-outline--update-color($-copy-text-border-focus-color);
 
   display: inline-flex;
   flex-flow: row-reverse;
@@ -64,7 +63,7 @@ $-copy-text-color-hover: sage-color(charcoal, 500);
   &::before {
     @include sage-icon-base(copy);
 
-    margin-left: sage-spacing(xs);
+    margin-left: sage-spacing(sm);
     color: $-copy-text-color;
   }
 
@@ -80,5 +79,5 @@ $-copy-text-color-hover: sage-color(charcoal, 500);
 
 .sage-copy-text--semibold,
 .sage-copy-text-card--semibold {
-  @extend %t-sage-body-small-semi;
+  @extend %t-sage-body-semi;
 }
