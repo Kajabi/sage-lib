@@ -1,0 +1,234 @@
+{
+  "color": {
+    "combos": {
+      "draft": {
+        "default": {
+          "foreground": {
+            "value": "{color.slider.charcoal-400}"
+          },
+          "foreground-accent": {
+            "value": "{color.slider.charcoal-500}"
+          },
+          "background": {
+            "value": "{color.slider.grey-300}"
+          },
+          "background-accent": {
+            "value": "{color.slider.grey-400}"
+          },
+          "icon-background-accent": {
+            "value": "{color.slider.grey-500}"
+          }
+        },
+        "subtle": {
+          "foreground": {
+            "value": "{color.slider.charcoal-200}"
+          },
+          "foreground-accent": {
+            "value": "{color.slider.charcoal-100}"
+          },
+          "background": {
+            "value": "{color.slider.grey-500}"
+          }
+        },
+        "bold": {
+          "foreground": {
+            "value": "{color.slider.grey-100}"
+          },
+          "background": {
+            "value": "{color.slider.charcoal-400}"
+          }
+        }
+      },
+      "published": {
+        "default": {
+          "foreground": {
+            "value": "{color.slider.sage-400}"
+          },
+          "foreground-accent": {
+            "value": "{color.slider.sage-500}"
+          },
+          "background": {
+            "value": "{color.slider.sage-100}"
+          },
+          "background-accent": {
+            "value": "{color.slider.sage-200}"
+          },
+          "icon-background-accent": {
+            "value": "{color.slider.sage-300}"
+          }
+        },
+        "subtle": {
+          "foreground": {
+            "value": "{color.slider.sage-400}"
+          },
+          "foreground-accent": {
+            "value": "{color.slider.sage-300}"
+          },
+          "background": {
+            "value": "{color.slider.sage-300}"
+          }
+        },
+        "bold": {
+          "foreground": {
+            "value": "{color.base.white}"
+          },
+          "background": {
+            "value": "{color.slider.sage-300}"
+          }
+        }
+      },
+      "info": {
+        "default": {
+          "foreground": {
+            "value": "{color.slider.primary-400}"
+          },
+          "foreground-accent": {
+            "value": "{color.slider.primary-500}"
+          },
+          "background": {
+            "value": "{color.slider.primary-100}"
+          },
+          "background-accent": {
+            "value": "{color.slider.primary-200}"
+          },
+          "icon-background-accent": {
+            "value": "{color.custom.label-primary-icon-background-accent}"
+          }
+        },
+        "subtle": {
+          "foreground": {
+            "value": "{color.slider.primary-400}"
+          },
+          "foreground-accent": {
+            "value": "{color.slider.primary-300}"
+          },
+          "background": {
+            "value": "{color.slider.primary-200}"
+          }
+        },
+        "bold": {
+          "foreground": {
+            "value": "{color.slider.primary-100}"
+          },
+          "background": {
+            "value": "{color.slider.primary-300}"
+          }
+        }
+      },
+      "locked": {
+        "default": {
+          "foreground": {
+            "value": "{color.slider.purple-400}"
+          },
+          "foreground-accent": {
+            "value": "{color.slider.purple-500}"
+          },
+          "background": {
+            "value": "{color.slider.purple-100}"
+          },
+          "background-accent": {
+            "value": "{color.slider.purple-200}"
+          },
+          "icon-background-accent": {
+            "value": "{color.slider.purple-300}"
+          }
+        },
+        "subtle": {
+          "foreground": {
+            "value": "{color.slider.purple-400}"
+          },
+          "foreground-accent": {
+            "value": "{color.slider.purple-300}"
+          },
+          "background": {
+            "value": "{color.slider.purple-200}"
+          }
+        },
+        "bold": {
+          "foreground": {
+            "value": "{color.slider.purple-100}"
+          },
+          "background": {
+            "value": "{color.slider.purple-300}"
+          }
+        }
+      },
+      "warning": {
+        "default": {
+          "foreground": {
+            "value": "{color.slider.yellow-400}"
+          },
+          "foreground-accent": {
+            "value": "{color.slider.yellow-500}"
+          },
+          "background": {
+            "value": "{color.slider.yellow-200}"
+          },
+          "background-accent": {
+            "value": "{color.custom.label-warning-background-accent}"
+          },
+          "icon-background-accent": {
+            "value": "{color.slider.yellow-300}"
+          }
+        },
+        "subtle": {
+          "foreground": {
+            "value": "{color.slider.yellow-400}"
+          },
+          "foreground-accent": {
+            "value": "{color.slider.yellow-300}"
+          },
+          "background": {
+            "value": "{color.slider.yellow-300}"
+          }
+        },
+        "bold": {
+          "foreground": {
+            "value": "{color.base.white}"
+          },
+          "background": {
+            "value": "{color.slider.yellow-300}"
+          }
+        }
+      },
+      "danger": {
+        "default": {
+          "foreground": {
+            "value": "{color.slider.red-400}"
+          },
+          "foreground-accent": {
+            "value": "{color.slider.red-500}"
+          },
+          "background": {
+            "value": "{color.slider.red-200}"
+          },
+          "background-accent": {
+            "value": "{color.custom.label-danger-background-accent}"
+          },
+          "icon-background-accent": {
+            "value": "{color.custom.label-danger-icon-background-accent}"
+          }
+        },
+        "subtle": {
+          "foreground": {
+            "value": "{color.slider.red-400}"
+          },
+          "foreground-accent": {
+            "value": "{color.slider.red-300}"
+          },
+          "background": {
+            "value": "{color.slider.red-300}"
+          }
+        },
+        "bold": {
+          "foreground": {
+            "value": "{color.slider.red-100}"
+          },
+          "background": {
+            "value": "{color.slider.red-300}"
+          }
+        }
+      }
+    }
+  }
+}

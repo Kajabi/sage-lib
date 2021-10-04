@@ -1,0 +1,39 @@
+{
+  "size": {
+    "spacer": {
+      "xxs": {
+        "value": 4
+      },
+      "xs": {
+        "value": 8
+      },
+      "sm": {
+        "value": 16
+      },
+      "md": {
+        "value": 24
+      },
+      "lg": {
+        "value": 32
+      },
+      "xl": {
+        "value": 48
+      },
+      "xxl": {
+        "value": 64
+      },
+      "stack": {
+        "value": "{size.spacer.xs}"
+      },
+      "card": {
+        "value": "{size.spacer.sm}"
+      },
+      "panel": {
+        "value": "{size.spacer.md}"
+      },
+      "stage": {
+        "value": "{size.spacer.lg}"
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "size": {
+    "icon-background": {
+      "xs": {
+        "value": 30
+      },
+      "sm": {
+        "value": 40
+      },
+      "md": {
+        "value": 50
+      },
+      "lg": {
+        "value": 60
+      },
+      "xl": {
+        "value": 70
+      },
+      "xxl": {
+        "value": 80
+      },
+      "xxxl": {
+        "value": 90
+      },
+      "xxxxl": {
+        "value": 100
+      }
+    }
+  }
+}

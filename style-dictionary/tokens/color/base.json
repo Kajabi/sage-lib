@@ -1,0 +1,36 @@
+{
+  "color": {
+    "base": {
+      "primary": {
+        "value": "#0072ef"
+      },
+      "sage": {
+        "value": "#23856d"
+      },
+      "yellow": {
+        "value": "#f0c024"
+      },
+      "red": {
+        "value": "#cf3c32"
+      },
+      "orange": {
+        "value": "#f89035"
+      },
+      "purple": {
+        "value": "#8e5ad8"
+      },
+      "grey": {
+        "value": "#e0e7f1"
+      },
+      "charcoal": {
+        "value": "#304050"
+      },
+      "white": {
+        "value": "#ffffff"
+      },
+      "black": {
+        "value": "#000000"
+      }
+    }
+  }
+}
