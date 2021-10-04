@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.18.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.18.1...@kajabi/sage@4.18.2) (2021-10-04)
+
+
+### Bug Fixes
+
+* **copy text:** adds 'type=button' attribute to prevent form submissions ([86404ba](https://github.com/Kajabi/sage-lib/commit/86404ba34d7e79ae6ac08ad8d642b274f4bc0dfc))
+* docs/Gemfile to reduce vulnerabilities ([901e27e](https://github.com/Kajabi/sage-lib/commit/901e27ec312a81007eeacf785531a15f34212d5b))
+
+
+
+
+
 ## [4.18.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.18.0...@kajabi/sage@4.18.1) (2021-10-01)
 
 **Note:** Version bump only for package @kajabi/sage
