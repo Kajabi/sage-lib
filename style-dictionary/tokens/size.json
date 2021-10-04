@@ -1,0 +1,73 @@
+{
+  "size": {
+    "spacer": {
+      "xxs": {
+        "value": 4
+      },
+      "xs": {
+        "value": 8
+      },
+      "sm": {
+        "value": 16
+      },
+      "md": {
+        "value": 24
+      },
+      "lg": {
+        "value": 32
+      },
+      "xl": {
+        "value": 48
+      },
+      "xxl": {
+        "value": 64
+      }
+    },
+    "line-height": {
+      "xs": {
+        "value": 20
+      },
+      "sm": {
+        "value": 24
+      },
+      "md": {
+        "value": 28
+      },
+      "lg": {
+        "value": 32
+      },
+      "xl": {
+        "value": 36
+      }
+    },
+    "font": {
+      "xxs": {
+        "value": 12
+      },
+      "xs": {
+        "value": 13
+      },
+      "sm": {
+        "value": 14
+      },
+      "md": {
+        "value": 16
+      },
+      "lg": {
+        "value": 18
+      },
+      "xl": {
+        "value": 20
+      },
+      "xxl": {
+        "value": 23
+      },
+      "xxxl": {
+        "value": 26
+      },
+      "xxxxl": {
+        "value": 29
+      }
+    }
+  }
+}

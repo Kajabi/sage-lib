@@ -1,0 +1,21 @@
+{
+  "size": {
+    "line-height": {
+      "xs": {
+        "value": 20
+      },
+      "sm": {
+        "value": 24
+      },
+      "md": {
+        "value": 28
+      },
+      "lg": {
+        "value": 32
+      },
+      "xl": {
+        "value": 36
+      }
+    }
+  }
+}

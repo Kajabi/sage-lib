@@ -1,0 +1,27 @@
+{
+  "size": {
+    "container": {
+      "tiny": {
+        "value": 200
+      },
+      "xs": {
+        "value": 240
+      },
+      "sm": {
+        "value": 352
+      },
+      "md": {
+        "value": 544
+      },
+      "lg": {
+        "value": 736
+      },
+      "xl": {
+        "value": 1120
+      },
+      "full": {
+        "value": 1440
+      }
+    }
+  }
+}

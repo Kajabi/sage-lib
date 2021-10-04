@@ -1,0 +1,36 @@
+{
+  "style": {
+    "z-index": {
+      "negative": {
+        "value": -1
+      },
+      "default": {
+        "value": 0
+      },
+      "raised": {
+        "value": 1000
+      },
+      "alert": {
+        "value": 2000
+      },
+      "underlay": {
+        "value": 3000
+      },
+      "nav": {
+        "value": 4000
+      },
+      "overlay": {
+        "value": 5000
+      },
+      "modal": {
+        "value": 6000
+      },
+      "priority": {
+        "value": 8000
+      },
+      "nuclear": {
+        "value": 9000
+      }
+    }
+  }
+}

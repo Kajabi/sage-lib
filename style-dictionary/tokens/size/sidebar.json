@@ -1,0 +1,18 @@
+{
+  "size": {
+    "sidebar": {
+      "sm": {
+        "value": 240
+      },
+      "md": {
+        "value": 320
+      },
+      "lg": {
+        "value": 400
+      },
+      "xl": {
+        "value": "80vw"
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "style": {
+    "border": {
+      "light": {
+        "value": "rem(1px) solid sage-color(grey, 200)"
+      },
+      "default": {
+        "value": "rem(1px) solid sage-color(grey, 300)"
+      },
+      "radius-small": {
+        "value": "{size.border-radius.small}"
+      },
+      "radius": {
+        "value": "{size.border-radius.default}"
+      },
+      "radius-large": {
+        "value": "{size.border-radius.large}"
+      },
+      "radius-x-large": {
+        "value": "{size.border-radius.x-large}"
+      },
+      "radius-round": {
+        "value": "{size.border-radius.round}"
+      }
+    }
+  }
+}

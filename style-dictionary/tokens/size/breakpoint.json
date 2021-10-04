@@ -1,0 +1,33 @@
+{
+  "size": {
+    "breakpoint": {
+      "xs-max": {
+        "value": 544
+      },
+      "sm-min": {
+        "value": 545
+      },
+      "sm-max": {
+        "value": 767
+      },
+      "md-min": {
+        "value": 768
+      },
+      "md-max": {
+        "value": 991
+      },
+      "lg-min": {
+        "value": 992
+      },
+      "lg-max": {
+        "value": 1199
+      },
+      "xl-min": {
+        "value": 1200
+      },
+      "xxl-min": {
+        "value": 1440
+      }
+    }
+  }
+}
