@@ -1,0 +1,106 @@
+{
+  "type": {
+    "spec": {
+      "heading-1": {
+        "kerning": "{size.letter-spacing.sm}",
+        "responsive": "{type.responsive.h1}",
+        "weight": "{type.weight.xbold}"
+      },
+      "heading-2": {
+        "kerning": "{size.letter-spacing.sm}",
+        "responsive": "{type.responsive.h2",
+        "weight": "{type.weight.xbold}"
+      },
+      "heading-3": {
+        "kerning": "{size.letter-spacing.sm}",
+        "responsive": "{type.responsive.h3}",
+        "weight": "{type.weight.bold}"
+      },
+      "heading-4": {
+        "kerning": "{size.letter-spacing.sm}",
+        "responsive": "{type.responsive.h4}",
+        "weight": "{type.weight.semibold}"
+      },
+      "heading-5": {
+        "kerning": "{size.letter-spacing.sm}",
+        "responsive": "{type.responsive.h5}",
+        "weight": "{type.weight.semibold}"
+      },
+      "heading-6": {
+        "kerning": "{size.letter-spacing.sm}",
+        "responsive": "{type.responsive.h6}",
+        "weight": "{type.weight.semibold}"
+      },
+      "nav": {
+        "kerning": "{size.letter-spacing.sm}",
+        "responsive": "{type.responsive.body}",
+        "weight": "{type.weight.medium}"
+      },
+      "nav-sub": {
+        "kerning": "{size.letter-spacing.sm}",
+        "responsive": "{type.responsive.body-sm}",
+        "weight": "{type.weight.medium}"
+      },
+      "body": {
+        "kerning": "{size.letter-spacing.xs}",
+        "responsive": "{type.responsive.body}",
+        "weight": "{type.weight.normal}"
+      },
+      "body-med": {
+        "kerning": "{size.letter-spacing.xs}",
+        "responsive": "{type.responsive.body}",
+        "weight": "{type.weight.medium}"
+      },
+      "body-semi": {
+        "kerning": "{size.letter-spacing.xs}",
+        "responsive": "{type.responsive.body}",
+        "weight": "{type.weight.semibold}"
+      },
+      "body-bold": {
+        "kerning": "{size.letter-spacing.xs}",
+        "responsive": "{type.responsive.body}",
+        "weight": "{type.weight.bold}"
+      },
+      "body-small": {
+        "kerning": "{size.letter-spacing.xs}",
+        "responsive": "{type.responsive.body-sm}",
+        "weight": "{type.weight.normal}"
+      },
+      "body-small-med": {
+        "kerning": "{size.letter-spacing.xs}",
+        "responsive": "{type.responsive.body-sm}",
+        "weight": "{type.weight.medium}"
+      },
+      "body-small-semi": {
+        "kerning": "{size.letter-spacing.xs}",
+        "responsive": "{type.responsive.body-sm}",
+        "weight": "{type.weight.semibold}"
+      },
+      "body-small-bold": {
+        "kerning": "{size.letter-spacing.xs}",
+        "responsive": "{type.responsive.body-sm}",
+        "weight": "{type.weight.bold}"
+      },
+      "body-xsmall": {
+        "kerning": "{size.letter-spacing.xs}",
+        "responsive": "{type.responsive.body-xs}",
+        "weight": "{type.weight.normal}"
+      },
+      "body-xsmall-med": {
+        "kerning": "{size.letter-spacing.xs}",
+        "responsive": "{type.responsive.body-xs}",
+        "weight": "{type.weight.medium}"
+      },
+      "body-xsmall-semi": {
+        "kerning": "{size.letter-spacing.xs}",
+        "responsive": "{type.responsive.body-xs}",
+        "weight": "{type.weight.semibold}"
+      },
+      "body-xsmall-bold": {
+        "kerning": "{size.letter-spacing.xs}",
+        "responsive": "{type.responsive.body-xs}",
+        "weight": "{type.weight.bold}"
+      }
+    }
+  }
+}

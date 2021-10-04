@@ -1,0 +1,78 @@
+{
+  "type": {
+    "responsive": {
+      "h1": {
+        "mobile": {
+          "value": "{type.pairing.xxxl}"
+        },
+        "desktop": {
+          "value": "{type.pairing.xxxxl}"
+        }
+      },
+      "h2": {
+        "mobile": {
+          "value": "{type.pairing.xxl}"
+        },
+        "desktop": {
+          "value": "{type.pairing.xxxl}"
+        }
+      },
+      "h3": {
+        "mobile": {
+          "value": "{type.pairing.xl}"
+        },
+        "desktop": {
+          "value": "{type.pairing.xxl}"
+        }
+      },
+      "h4": {
+        "mobile": {
+          "value": "{type.pairing.lg}"
+        },
+        "desktop": {
+          "value": "{type.pairing.xl}"
+        }
+      },
+      "h5": {
+        "mobile": {
+          "value": "{type.pairing.md}"
+        },
+        "desktop": {
+          "value": "{type.pairing.lg}"
+        }
+      },
+      "h6": {
+        "mobile": {
+          "value": "{type.pairing.md}"
+        },
+        "desktop": {
+          "value": "{type.pairing.sm}"
+        }
+      },
+      "body": {
+        "mobile": {
+          "value": "{type.pairing.md}"
+        },
+        "desktop": {
+          "value": "{type.pairing.sm}"
+        }
+      },
+      "body-sm": {
+        "mobile": {
+          "value": "{type.pairing.sm}"
+        },
+        "desktop": {
+          "value": "{type.pairing.xs}"
+        }
+      },
+      "body-xs": {
+        "mobile": {
+          "value": "{type.pairing.xxs}"
+        },
+        "desktop": {
+          "value": "{type.pairing.xxs}"
+        }
+      }
+    }
+  }
+}

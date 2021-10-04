@@ -1,0 +1,31 @@
+{
+  "component": {
+    "schema": {
+      "html": {
+        "rb": "presets.rb.html",
+        "ts": "React.Node",
+        "jsx": "node"
+      },
+      "string": {
+        "rb": "String",
+        "ts": "string",
+        "jsx": "string"
+      },
+      "boolean": {
+        "rb": "Trueclass",
+        "ts": "boolean",
+        "jsx": "bool"
+      },
+      "number": {
+        "rb": "Integer, Float",
+        "ts": "number",
+        "jsx": "number"
+      },
+      "list": {
+        "rb": "presets.rb.list",
+        "ts": "presets.ts.list",
+        "jsx": "presets..jsx.list"
+      }
+    }
+  }
+}

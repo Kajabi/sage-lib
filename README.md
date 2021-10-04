@@ -40,6 +40,8 @@ There are five total packages in the monorepo:
 | **@kajabi/sage-react** | React component library and Storybook for documentation | `./packages/sage-react` | [README](./packages/sage-react/README.md) | [CHANGELOG](./packages/sage-react/CHANGELOG.md) | 
 | **@kajabi/sage-system** | JS scripts for use with the Rails components | `./packages/sage-system` | [README](./packages/sage-system/README.md) | [CHANGELOG](./packages/sage-system/CHANGELOG.md) |
 
+Outside of these packages is a dictionary of tokens built using [Style Dictionary](https://amzn.github.io/style-dictionary/). This provides a central location for storing constant values and component configurations that is distributed to each respective package. [Learn more](DICTIONARY.md)
+
 ### Lerna Mono-Repository
 
 The Sage Design System is a [Lerna Mono-Repository](https://github.com/lerna/lerna) (or a monorepo for short). From the Lerna README:

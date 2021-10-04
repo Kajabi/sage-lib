@@ -1,0 +1,39 @@
+{
+  "spacer": {
+    "base": {
+      "xxs": {
+        "value": "{size.spacer.xxs}"
+      },
+      "xs": {
+        "value": "{size.spacer.xs}"
+      },
+      "sm": {
+        "value": "{size.spacer.sm}"
+      },
+      "md": {
+        "value": "{size.spacer.md}"
+      },
+      "lg": {
+        "value": "{size.spacer.lg}"
+      },
+      "xl": {
+        "value": "{size.spacer.xl}"
+      },
+      "xxl": {
+        "value": "{size.spacer.xxl}"
+      },
+      "stack": {
+        "value": "{spacer.base.xs}"
+      },
+      "card": {
+        "value": "{spacer.base.sm}"
+      },
+      "panel": {
+        "value": "{spacer.base.md}"
+      },
+      "stage": {
+        "value": "{spacer.base.lg}"
+      }
+    }
+  }
+}
