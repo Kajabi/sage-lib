@@ -306,16 +306,40 @@ demo_configs_subtle = [
 <%= md("
   The primary, secondary, and danger buttons all have a small shadow treatment by default. In addition, these buttons allow for a 'no-shadow' treatment. Enable the treatment by adding the attribute: `raised: false`.
 ", use_sage_type: true) %>
-<%= sage_component SageButtonGroup, { gap: :md, spacer: { bottom: :md } } do %>
-  <%= sage_component SageButton, {
-    value: "Raised (default)",
-    style: "primary",
-  } %>
-  <%= sage_component SageButton, {
-    value: "No shadow",
-    style: "primary",
-    raised: false,
-  } %>
+<%= sage_component SageCardStack, {} do %>
+  <%= sage_component SageButtonGroup, { gap: :md } do %>
+    <%= sage_component SageButton, {
+      value: "Raised (default)",
+      style: "primary",
+    } %>
+    <%= sage_component SageButton, {
+      value: "No shadow",
+      style: "primary",
+      raised: false,
+    } %>
+  <% end %>
+  <%= sage_component SageButtonGroup, { gap: :md } do %>
+    <%= sage_component SageButton, {
+      value: "Raised (default)",
+      style: "secondary",
+    } %>
+    <%= sage_component SageButton, {
+      value: "No shadow",
+      style: "secondary",
+      raised: false,
+    } %>
+  <% end %>
+  <%= sage_component SageButtonGroup, { gap: :md } do %>
+    <%= sage_component SageButton, {
+      value: "Raised (default)",
+      style: "danger",
+    } %>
+    <%= sage_component SageButton, {
+      value: "No shadow",
+      style: "danger",
+      raised: false,
+    } %>
+  <% end %>
 <% end %>
 
 <h3>Full Width</h3>
