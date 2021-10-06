@@ -16,6 +16,7 @@ export const PanelControlsPagination = ({
       icon={SageTokens.ICONS.ARROW_LEFT}
       iconOnly={true}
       onClick={() => onClickPagination(currentPage - 1)}
+      raised={false}
     >
       Previous Page
     </Button>
@@ -26,6 +27,7 @@ export const PanelControlsPagination = ({
       icon={SageTokens.ICONS.ARROW_RIGHT}
       iconOnly={true}
       onClick={() => onClickPagination(currentPage + 1)}
+      raised={false}
     >
       Next Page
     </Button>

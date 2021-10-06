@@ -47,6 +47,7 @@ CustomContent.decorators = [
         <style>
           {`.demo-custom-class {
             display: flex;
+            align-items: center;
             gap: 8px;
             padding: 8px 0;
           }`}

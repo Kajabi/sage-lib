@@ -40,6 +40,9 @@ jobs:
       - name: Set NPM Config
         run: npm config set '//npm.pkg.github.com/:_authToken' '${{ secrets.ACCESS_TOKEN }}'
 
+      - name: Unsafe Perm set
+        run: npm config set unsafe-perm true
+
       - name: Clone Sage-Lib Repo
         uses: actions/checkout@v2
         with:
