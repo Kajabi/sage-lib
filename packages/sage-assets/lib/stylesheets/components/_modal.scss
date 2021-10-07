@@ -57,7 +57,7 @@ $-modal-header-image-size: rem(28px);
   visibility: hidden;
   z-index: sage-z-index(modal);
   overflow: hidden;
-  overflow-y: scroll;
+  overflow-y: auto;
   width: calc(100vw - #{sage-spacing(md)});
   max-width: sage-container(md);
   max-height: calc(100vh - #{$-modal-margin-xl});
