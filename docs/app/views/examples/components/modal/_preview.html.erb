@@ -93,6 +93,11 @@
           } %>
         <% end %>
         <%= sage_component SageButton, {
+          style: "secondary",
+          icon: { name: "check", style: "left" },
+          value: "Take An Action",
+        } %>
+        <%= sage_component SageButton, {
           style: "primary",
           icon: { name: "check", style: "left" },
           value: "Take An Action",
