@@ -5,9 +5,16 @@
 ////
 
 .sage-description {
+  width: 100%;
   margin-bottom: sage-spacing();
 
   &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .sage-panel__block > &,
+  .sage-panel__row > &,
+  .sage-panel__stack > & {
     margin-bottom: 0;
   }
 }
