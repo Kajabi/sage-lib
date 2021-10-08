@@ -26,7 +26,7 @@ $-alert-icon-colors: (
   grid-auto-columns: auto;
   grid-auto-flow: column;
   grid-template-columns: auto 1fr;
-  grid-gap: sage-spacing(sm);
+  gap: sage-spacing(sm);
   position: relative;
   margin-bottom: sage-spacing(md);
   padding: sage-spacing(sm);
@@ -105,6 +105,7 @@ $-alert-icon-colors: (
   @each $name, $color in $-alert-colors {
     .sage-alert--#{$name} & {
       color: sage-color($color, 400);
+
       @include sage-focus-outline($outline-offset-inline: 3px, $outline-offset-block: 3px);
       @include sage-focus-outline--update-color(sage-color($color, 400));
     }
@@ -117,6 +118,7 @@ $-alert-icon-colors: (
 
 .sage-alert__actions {
   display: flex;
+  flex-wrap: wrap;
 
   @each $name, $color in $-alert-colors {
     .sage-alert--#{$name} & > a {
