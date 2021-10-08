@@ -59,3 +59,14 @@ $-expandable-card-padding-xs: sage-spacing(xs);
     transform: rotateZ(90deg);
   }
 }
+
+.sage-expandable-card--align-right {
+  .sage-btn {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .sage-btn__truncate-text {
+    order: -1;
+  }
+}
