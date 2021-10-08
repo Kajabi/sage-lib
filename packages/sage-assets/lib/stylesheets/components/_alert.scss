@@ -35,10 +35,22 @@ $-alert-icon-colors: (
   .sage-panel > & {
     margin-bottom: 0;
   }
-}
 
-.sage-alert--raised {
-  box-shadow: sage-shadow(sm);
+  &.sage-alert--info {
+    border: 1px solid sage-color(primary, 200);
+  }
+
+  &.sage-alert--success {
+    border: 1px solid sage-color(sage, 200);
+  }
+
+  &.sage-alert--warning {
+    border: 1px solid sage-color(yellow);
+  }
+
+  &.sage-alert--danger {
+    border: 1px solid sage-color(red);
+  }
 }
 
 @each $name, $color in $-alert-colors {
