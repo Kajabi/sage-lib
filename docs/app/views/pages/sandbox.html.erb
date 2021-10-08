@@ -1,7 +1,317 @@
+
+<%#
+
+Design notes:
+
+- Irregular spacing above and below the avatar. Recommend 24 above and 16 below.
+- New dropdown separator style: spacing on all isdes differs from current
+- Need new icons:
+  - expand
+  - reset password
+  - offer/gift
+
+Changes included:
+
+- margin on centered Avatar adjusted to only set left and right rather than also top and bottom (was cancelling spacers)
+- buttons had too much side padding to show icons correctly
+- button group needed center align option
+- tweak spacing under description list
+
+Changes to unpack
+
+- Description list: new component or use existing?
+  - Existing is used extensively in super_admin but only once in merge contacts
+  - Hover effects for when there's a link inline
+  - Link arrow at end rather than hyperlink on data?
+  - Inverted type styles
+  - new layout rather than spread out
+  - new spacing
+- Are label styles up to spec?
+  - Type spec seems different
+  - How do accomplish badge style check mark?
+- Label group
+  - Need smaller spacer for packing tags closer?
+  - Should button group be used instead?
+  - Need alignment class for the "view all" text to appear as desired
+- Copy button
+  - shown here without a label (the email text is the value to be copied):
+    should a normal button with the copy attribute be used
+    or should copy button be updated with a button-only varation?
+
+Other notes
+
+- Are labels up to spec? type seemed different
+- Label interactive buttons overflow oddly
+
+%>
+
+<%
+
+data = {
+  name: "Court Mcfadzean",
+  email: "court@kajabi.com",
+  initials: "CM",
+  avatar_image: "avatar/court.png",
+  user_stats: [
+    [
+      {
+        title: "Lifetime value",
+        data: "$230",
+      },
+      {
+        title: "Total offers",
+        data: "3",
+        link: "#offers"
+      },
+      {
+        title: "Total products",
+        data: "6",
+        link: "#products"
+      },
+    ],
+    [
+      {
+        title: "Last sign-in",
+        data: "Aug. 12, 2021",
+      },
+      {
+        title: "Total sign-in",
+        data: "32",
+      },
+    ],
+    [
+      {
+        title: "Contact status",
+        # TODO: Is Label up to spec?
+        data: sage_component(SageLabel, {
+          value: "Member",
+          color: "info",
+          icon: "check" # TODO: Consider icon boadge style and coloring
+        }),
+      },
+      {
+        title: "Marketing status",
+        data: "Subscribed",
+      },
+      {
+        title: "Contact added",
+        data: "Jan. 23, 2021",
+      },
+      {
+        title: "Opt-in status",
+        data: "Unconfirmed",
+      },
+      {
+        title: "Affiliate referral",
+        data: "Abe Lincoln",
+      },
+    ]
+  ],
+  tags: [
+    "2021",
+    "Hello",
+    "Summer",
+    "Holiday",
+    "Welcome",
+    "Tag",
+    "Tuesday",
+  ]
+}
+
+button_bar_items = [
+  {
+    href: "#edit-contact",
+    icon: "pen",
+    label: "Edit contact",
+  },
+  {
+    href: "#reset-password",
+    icon: "ban", # TODO: Need reset password icon
+    label: "Reset password",
+  },
+  {
+    href: "#add-tag",
+    icon: "tag",
+    label: "Add tag",
+  },
+  {
+    href: "#grant-offer",
+    icon: "ban", # TODO: Need "gift" icon
+    label: "Grant offer",
+  },
+]
+
+more_options_items = [
+  {
+    value: "Change password",
+    attributes: { href: "#change-password" },
+  },
+  {
+    value: "Add a note",
+    attributes: { href: "#add-a-note" },
+  },
+  {
+    value: "Mute",
+    attributes: { href: "#mute" },
+  },
+  {
+    value: "Hide",
+    attributes: { href: "#hide" },
+  },
+  {
+    value: "Delete",
+    attributes: { href: "#delete" },
+    style: "danger",
+    modifiers: ["border-before"],
+  }
+]
+
+%>
+
 <%= content_for :heading do %>
 <%= md("
 # Sandbox
 
 Use this scratchpad to test out elements and components in context. Just be sure not to commit your changes. ❤️
 ") %>
+<% end %>
+<%= sage_component SageContainer, { size: "sm" } do %>
+  <%= sage_component SagePanel, {} do %>
+    <%= sage_component SagePanelRow, {} do %>
+      <%= sage_component SageButton, {
+        attributes: { href: "#TODO-open-full-profile" },
+        value: "Open full profile",
+        subtle: true,
+        small: true,
+        style: "secondary",
+        icon: {
+          name: "ban", # TODO: Need expand icon
+          style: "left",
+        },
+      } %>
+      <%= sage_component SageButton, {
+        attributes: { href: "#TODO-close-preview" },
+        icon: {
+          name: "remove",
+          style: "only",
+        },
+        subtle: true,
+        style: "secondary",
+        value: "Close preview",
+      } %>
+    <% end %>
+    <%= sage_component SagePanelBlock, { css_classes: SageClassnames::TYPE_ALIGN_CENTER } do %>
+      <%= sage_component SageAvatar, {
+        centered: true,
+        image: {
+          src: data[:avatar_image],
+          alt: data[:name],
+        },
+        initials: data[:initials],
+        size: "68px",
+        spacer: { bottom: "sm" },
+        # TODO: Add `badge` property
+      } %>
+      <h3 class="<%= SageClassnames::TYPE::HEADING_4 %> <%= SageClassnames::TYPE_COLORS::CHARCOAL_500 %>">
+        <%= data[:name] %>
+      </h3>
+      <%= sage_component SageButton, {
+        value: data[:email],
+        icon: { name: "copy", style: "right" },
+        subtle: true,
+        style: "secondary",
+        attributes: {
+          "data-js-copy-button": data[:email],
+        }
+      } %>
+    <% end %>
+    <%= sage_component SageButtonGroup, {
+      gap: :md,
+      align: "center"
+    } do %>
+      <% button_bar_items.each do | btn | %>
+        <%= sage_component SageButton, {
+          value: btn[:label],
+          style: "secondary",
+          raised: false,
+          icon: {
+            style: "only",
+            name: btn[:icon],
+          },
+          html_attributes: {
+            "data-js-tooltip": btn[:label],
+            href: btn[:href],
+          },
+        } %>
+      <% end %>
+      <%= sage_component SageDropdown, { items: more_options_items } do %>
+        <%= sage_component SageButton, {
+          value: "More",
+          style: "secondary",
+          raised: false,
+          icon: {
+            style: "only",
+            name: "dot-menu-horizontal",
+          },
+          html_attributes: {
+            "data-js-tooltip": "More",
+          },
+        } %>
+      <% end %>
+    <% end %>
+    <%= sage_component SagePanelStack, {} do %>
+      <% data[:user_stats].each do | data_group | %>
+        <% data_group.each do | datum | %>
+          <%= sage_component SagePanelRow, { grid_template: "me", html_attributes: { style: "width: 100%" } } do %>
+            <span class="<%= SageClassnames::TYPE::BODY %> <%= SageClassnames::TYPE_COLORS::CHARCOAL_100 %>">
+              <%= datum[:title] %>
+            </span>
+            <span class="<%= SageClassnames::TYPE::BODY_MED %> <%= SageClassnames::TYPE_COLORS::CHARCOAL_500 %>">
+              <%= datum[:data].html_safe %>
+            </span>
+            <% if datum[:link] %>
+              <%= sage_component SageButton, {
+                attributes: { href: "#view" },
+                icon: {
+                  name: "caret-right",
+                  style: "only",
+                },
+                style: "primary",
+                subtle: true,
+                value: "View",
+              } %>
+            <% end %>
+          <% end %>
+        <% end %>
+        <%# sage_component SageDescription, {
+          allcaps_titles: false,
+          inline_spread: true,
+          items: data_group,
+        } %>
+        <%= sage_component SagePanelDivider, { bleed: true } %>
+      <% end %>
+      <%= sage_component SageLabelGroup, {} do %>
+        <% data[:tags].each do | tag | %>
+          <%= sage_component SageLabel, {
+            color: "draft",
+            interactive_type: :secondary_button,
+            secondary_button: {
+              attributes: { href: "#remove" },
+              icon: "remove",
+              value: "Remove tag",
+            },
+            value: tag,
+          } %>
+        <% end %>
+        <%= sage_component SageButton, {
+          attributes: {
+            href: "#view-more",
+          },
+          style: "primary",
+          subtle: true,
+          value: "view all",
+        } %>
+      <% end %>
+    <% end %>
+  <% end %>
 <% end %>
