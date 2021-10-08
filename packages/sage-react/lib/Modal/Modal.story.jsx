@@ -48,6 +48,14 @@ const DefaultBody = ({ onExit }) => (
         </Button>
       </Modal.FooterAside>
       <Button
+        color={Button.COLORS.SECONDARY}
+        icon={SageTokens.ICONS.CHECK}
+        iconPosition={Button.ICON_POSITIONS.LEFT}
+        onClick={onExit}
+      >
+        Take An Action
+      </Button>
+      <Button
         color={Button.COLORS.PRIMARY}
         icon={SageTokens.ICONS.CHECK}
         iconPosition={Button.ICON_POSITIONS.LEFT}
