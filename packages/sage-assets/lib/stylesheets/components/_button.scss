@@ -109,9 +109,11 @@ $-btn-loading-min-height: rem(36px);
 // stylelint-disable max-nesting-depth
 :root {
   --icon-block-padding: #{rem(6px)};
+  --button-block-padding: #{rem(4px)};
 
   @media screen and (min-width: sage-breakpoint(lg-min)) {
     --icon-block-padding: #{rem(4px)};
+    --button-block-padding: #{rem(6px)};
   }
 }
 
@@ -120,12 +122,10 @@ $-btn-loading-min-height: rem(36px);
   @include sage-button-style-reset();
   @include sage-focus-outline;
 
-  $-padding-block: rem(6px);
-
   display: inline-flex;
   align-self: inherit;
   align-items: center;
-  padding: $-padding-block sage-spacing(sm);
+  padding: var(--button-block-padding) sage-spacing(sm);
   text-align: left; // Prevents text alignment issue when inner text is truncated
   border: 0;
   border-radius: $-btn-border-radius;
@@ -567,6 +567,10 @@ $-btn-loading-min-height: rem(36px);
 
 .sage-btn-group--align-end {
   justify-content: flex-end;
+}
+
+.sage-btn-group--align-center {
+  justify-content: center;
 }
 
 .sage-btn-group--align-space-between {
