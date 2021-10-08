@@ -4,7 +4,6 @@ class SageAlert < SageComponent
     desc: [:optional, String],
     dismissable: [:optional, TrueClass],
     icon_name: [:optional, String],
-    raised: [:optional, TrueClass],
     title: String,
   })
 
