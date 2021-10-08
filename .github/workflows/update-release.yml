@@ -15,6 +15,8 @@ jobs:
       # Checkout the repository
       - name: "Checkout this repo to find Sage version"
         uses: "actions/checkout@v2"
+        with:
+          fetch-depth: "0"
 
       # Find Sage version from package.json in docs/
       - name: "Find Sage version from docs -> package.json version"
@@ -27,7 +29,7 @@ jobs:
       - name: "Update Release based on Tag"
         uses: "ncipollo/release-action@v1"
         with:
-          token: "${{ secrets.GITHUB_TOKEN }}"
+          token: "${{ secrets.UPDATE_RELEASE_WORKFLOW_TOKEN }}"
           tag: "v${{ steps.extract_version.outputs.version }}"
           body: "See [changelog](https://github.com/Kajabi/sage-lib/blob/main/docs/CHANGELOG.md) for more information."
 
