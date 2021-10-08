@@ -78,3 +78,30 @@
     has_error: false
   } %>
 <% end %>
+<h3 class="t-sage-heading-6">Arrow Aligned Right</h3>
+<%= sage_component SageExpandableCard, {
+  trigger_label: "Expand",
+  align_right: true,
+} do %>
+  <%= sage_component SageCheckbox, {
+    id:"c4",
+    label_text: "Grant offers",
+    checked: false,
+    disabled: false,
+    has_error: false
+  } %>
+  <%= sage_component SageCheckbox, {
+    id:"c5",
+    label_text: "Add tags",
+    checked: false,
+    disabled: false,
+    has_error: false
+  } %>
+  <%= sage_component SageCheckbox, {
+    id:"c6",
+    label_text: "Subscribe to emails",
+    checked: false,
+    disabled: false,
+    has_error: false
+  } %>
+<% end %>
