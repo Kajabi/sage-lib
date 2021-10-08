@@ -11,7 +11,6 @@ export const Alert = ({
   color,
   description,
   dismissable,
-  raised,
   title,
   ...rest
 }) => {
@@ -21,8 +20,7 @@ export const Alert = ({
     'sage-alert',
     className,
     {
-      [`sage-alert--${color}`]: color,
-      'sage-alert--raised': raised,
+      [`sage-alert--${color}`]: color
     }
   );
 
@@ -88,7 +86,6 @@ Alert.defaultProps = {
   className: '',
   description: null,
   dismissable: false,
-  raised: false,
   title: null,
 };
 
@@ -98,6 +95,5 @@ Alert.propTypes = {
   color: PropTypes.oneOf(Object.values(ALERT_COLORS)).isRequired,
   description: PropTypes.string,
   dismissable: PropTypes.bool,
-  raised: PropTypes.bool,
   title: PropTypes.string,
 };
