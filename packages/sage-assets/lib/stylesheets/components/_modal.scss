@@ -56,11 +56,8 @@ $-modal-header-image-size: rem(28px);
 .sage-modal__container {
   visibility: hidden;
   z-index: sage-z-index(modal);
-  overflow: hidden;
-  overflow-y: auto;
   width: calc(100vw - #{sage-spacing(md)});
   max-width: sage-container(md);
-  max-height: calc(100vh - #{$-modal-margin-xl});
   margin: 0;
   border-radius: sage-border(radius);
   background-color: sage-color(white);
