@@ -168,8 +168,8 @@ $-modal-header-image-size: rem(28px);
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin: $-modal-padding-y $-modal-padding-x;
   gap: sage-spacing(sm);
+  margin: $-modal-padding-y $-modal-padding-x;
 }
 
 .sage-modal__footer-aside {
