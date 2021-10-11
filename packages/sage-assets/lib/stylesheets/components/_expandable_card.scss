@@ -65,6 +65,10 @@ $-expandable-card-padding-xs: sage-spacing(xs);
     display: flex;
     justify-content: space-between;
     width: 100%;
+
+    &::after {
+      transform: translate3d(-50%, -50%, 0);
+    }
   }
   .sage-btn__truncate-text {
     order: -1;
