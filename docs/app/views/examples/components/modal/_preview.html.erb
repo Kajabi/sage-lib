@@ -93,6 +93,11 @@
           } %>
         <% end %>
         <%= sage_component SageButton, {
+          style: "secondary",
+          icon: { name: "check", style: "left" },
+          value: "Take An Action",
+        } %>
+        <%= sage_component SageButton, {
           style: "primary",
           icon: { name: "check", style: "left" },
           value: "Take An Action",
@@ -578,6 +583,41 @@ As shown elsewhere on this page default content (such as `SageLoader`) can also 
   <% end %>
 
   <%# Event-enabled Modals %>
+  <%= sage_component SageModal, { id: "cool-modal-event-active", disable_background_blur: true, animate: true } do %>
+    <%= sage_component SageModalContent, { title: "Example 'Active' Event Modal" } do %>
+      <% content_for :sage_header_aside do %>
+        <%= sage_component SageButton, {
+          style: "secondary",
+          subtle: true,
+          value: "Close Modal",
+          icon: { name: "remove", style: "only" },
+          attributes: { "data-js-modal": true }
+        } %>
+      <% end %>
+
+      <p class="t-sage-body">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+
+      <% content_for :sage_footer do %>
+        <% content_for :sage_footer_aside do %>
+          <%= sage_component SageButton, {
+            style: "secondary",
+            subtle: true,
+            value: "Close Modal",
+            attributes: { "data-js-modal": true }
+          } %>
+        <% end %>
+        <%= sage_component SageButton, {
+          style: "primary",
+          icon: { name: "check", style: "left" },
+          value: "Take An Action",
+        } %>
+      <% end %>
+    <% end %>
+  <% end %>
+
   <%= sage_component SageModal, { id: "cool-modal-event-open", disable_background_blur: true, animate: true, css_classes: "custom-class-name-here" } do %>
     <%= sage_component SageModalContent, { title: "Example 'Open' Event Modal" } do %>
       <% content_for :sage_header_aside do %>
