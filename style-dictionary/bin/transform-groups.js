@@ -13,4 +13,7 @@ module.exports = {
     'sage/name/constant',
     'sage/value/globalTypes/transitive',
   ],
+  'sage/rails/schema': [
+    'attribute/cti',
+  ],
 };

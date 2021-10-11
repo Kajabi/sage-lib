@@ -1,53 +1,184 @@
 const _ = require('lodash');
 
-const getCategoryCollection = (tokens, options) => {
-  const tokensGrouped = _.groupBy(tokens, (token) => token.attributes.category);
+const formatName = (key, format) => {
+  if (!key) {
+    return;
+  }
+  console.log(key, format);
 
-  const categories = [];
+  let name = key;
+  switch (format) {
+    case 'constant':
+      name = key.toUpperCase().replace('-', '_');
+      break;
+    case 'snake':
+      name = key.toLowerCase().replace('-', '_');
+      break;
+    case 'pascal':
+      name = key.replace(/(\w)(\w*)/g, (g0, g1, g2) => `${g1.toUpperCase()}${g2.toLowerCase()}`);
+      break;
+    default: 
+      name = key;
+      break;
+  }
+
+  return name;
+};
+
+const parseCollection = (tokens, parentKey, options) => {
+  const results = [];
+  const tokensGrouped = _.groupBy(tokens, (token) => token.attributes[parentKey]);
+
   Object.keys(tokensGrouped).forEach(key => {
-    if (options && options.categoriesAsConstants) {
-      console.log(key, key.toUpperCase().replace('-', '_'), tokensGrouped[key]);
+    let obj = {};
+
+    if (tokensGrouped[key].length <= 1) {
+      obj = tokensGrouped[key][0];
+      obj.tokens = [];
+      console.log(obj);
+    } else {
+      obj.tokens = tokensGrouped[key];
     }
-    return categories.push({
-      category: options && options.categoriesAsConstants
-        ? key.toUpperCase().replace('-', '_')
-        : key,
-      tokens: tokensGrouped[key],
-    });
+
+    if (parentKey) {
+      obj[parentKey] = formatName(key, options && options[`${parentKey}Format`]);
+    }
+
+    return results.push(obj);
   });
 
-  return categories;
+  return results;
+};
+
+const getCategoryCollection = (tokens, options) => {
+  return parseCollection(tokens, 'category', options).map(res => {
+    return {
+      ...res,
+      types: getTypeCollection(res.tokens, options),
+    };
+  });
 };
 
 const getTypeCollection = (tokens, options) => {
-  const tokensGrouped = _.groupBy(tokens, (token) => token.attributes.type);
-
-  const types = [];
-  Object.keys(tokensGrouped).forEach(key => {
-    types.push({
-      type: options && options.typesAsConstants
-        ? key.toUpperCase().replace('-', '_')
-        : key,
-      tokens: tokensGrouped[key],
-    });
+  return parseCollection(tokens, 'type', options).map(res => {
+    return {
+      ...res,
+      items: getItemCollection(res.tokens, options),
+    };
   });
-
-  return types;
 };
 
-const getCTICollection = (tokens, options) => {
-  const categories = getCategoryCollection(tokens, options);
-  const collection = categories.map(category => {
+const getItemCollection = (tokens, options) => {
+  return parseCollection(tokens, 'item', options).map(res => {
     return {
-      ...category,
-      types: getTypeCollection(category.tokens, options),
-    }
+      ...res,
+      subitems: getSubitemCollection(res.tokens, options),
+    };
   });
-  return collection;
+};
+
+const getSubitemCollection = (tokens, options) => {
+  return parseCollection(tokens, 'subitem', options).map(res => {
+    return {
+      ...res,
+      states: getStateCollection(res.tokens, options),
+    };
+  });
+};
+
+const getStateCollection = (tokens, options) => {
+  return parseCollection(tokens, 'state', options);
+};
+
+const getValue = (value) => {
+  if (!value) {
+    return value;
+  }
+  
+  let val;
+  switch (typeof value) {
+    case 'object':
+      val = value.value;
+      break;
+    default:
+      val = value;
+    break;
+  }
+
+  return val;
+};
+
+const getComponentSchemas = (tokens) => {
+  const ctiCollection = getCategoryCollection(
+    tokens,
+    {
+      categoryFormat: 'pascal',
+      typeFormat: 'pascal',
+      itemFormat: 'snake',
+      subitemFormat: 'snake',
+      stateFormat: 'constant',
+    }
+  );
+
+  const allComponents = [];
+  
+  ctiCollection.map(({ category, types: _components }) => {
+    _components.map(({ type: _component, items: _props }) => {
+      if (_component === 'schema') return null;
+
+      const component = {
+        name: _component,
+        props: []
+      };
+
+      _props.map(({ item: _prop, subitems: _attrs }) => {
+        const prop = {
+          name: _prop,
+        };
+        _attrs.map(({ subitem: _attr, states, value }) => {
+          switch (_attr) {
+            case 'default':
+              // console.log('--- --- default:', getValue(value));
+              prop.default = getValue(value);
+              break;
+            case 'schema':
+              // TODO: Determine how to handle schema
+              // console.log('--- --- schema:', value);
+              prop.schema = 'TBD';
+              break;
+            case 'options':
+              // console.log('--- --- options:', states);
+              prop.options = states.map(({ state, value }) => {
+                console.log(state);
+                return {
+                  name: state,
+                  value,
+                };
+              });
+              break;
+            default:
+              // console.log('--- --- UNKNOWN', _attr);
+            break;
+          }
+        });
+
+        component.props.push(prop);
+      });
+
+      allComponents.push(component);
+    });
+
+    return true;
+  });
+
+  return allComponents;
 };
 
 module.exports = {
   getCategoryCollection,
-  getCTICollection,
+  getComponentSchemas,
   getTypeCollection,
+  getItemCollection,
+  getSubitemCollection,
+  getStateCollection,
 };
