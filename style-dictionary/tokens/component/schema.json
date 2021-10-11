@@ -2,29 +2,59 @@
   "component": {
     "schema": {
       "html": {
-        "rb": "presets.rb.html",
-        "ts": "React.Node",
-        "jsx": "node"
+        "rb": {
+          "value": "presets.rb.html"
+        },
+        "ts": {
+          "value": "React.Node"
+        },
+        "jsx": {
+          "value": "node"
+        }
       },
       "string": {
-        "rb": "String",
-        "ts": "string",
-        "jsx": "string"
+        "rb": {
+          "value": "String"
+        },
+        "ts": {
+          "value": "string"
+        },
+        "jsx": {
+          "value": "string"
+        }
       },
       "boolean": {
-        "rb": "Trueclass",
-        "ts": "boolean",
-        "jsx": "bool"
+        "rb": {
+          "value": "Trueclass"
+        },
+        "ts": {
+          "value": "boolean"
+        },
+        "jsx": {
+          "value": "bool"
+        }
       },
       "number": {
-        "rb": "Integer, Float",
-        "ts": "number",
-        "jsx": "number"
+        "rb": {
+          "value": "Integer, Float"
+        },
+        "ts": {
+          "value": "number"
+        },
+        "jsx": {
+          "value": "number"
+        }
       },
       "list": {
-        "rb": "presets.rb.list",
-        "ts": "presets.ts.list",
-        "jsx": "presets..jsx.list"
+        "rb": {
+          "value": "presets.rb.list"
+        },
+        "ts": {
+          "value": "presets.ts.list"
+        },
+        "jsx": {
+          "value": "presets.jsx.list"
+        }
       }
     }
   }
