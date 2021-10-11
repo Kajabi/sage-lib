@@ -6,53 +6,56 @@
 # See `/style-dictionary` directory for tokens and configurations.
 #
 
+module SageConfigs
+
 {{#each components}}
 
-#
-# {{name}}
-#
-module {{name}}
+  {{#if name}}
+
+  #
+  # {{name}}
+  #
+  module {{name}}
   {{!-- First look in props for any with options and output options tokens --}}
-  TOKENS = {
-  {{#each tokens}}
-    {{name}}: [
-    {{#each options}}
-      "{{{value}}}",
-    {{/each}}
-    ],
-  {{/each}}
-  }
-
-  {{!-- Next look in props for any defaults to set up --}}
-  DEFAULTS = {
-  {{#each props}}
-    {{name}}: {{{default.value}}},
-  {{/each}}
-  }
-
-  {{!-- Lastly, output the actual Props type declaration --}}
-  SCHEMA = {
-  {{#each props}}
-    {{#if comment}}
-    # {{{comment}}}
-    {{/if}}
-    {{name}}: [
-      {{#if required}}:optional,{{/if}}
+    TOKENS = {
+    {{#each props}}
       {{#if options}}
-        # TODO: Can we do `TOKENS[:{{name}}]` here?
-      Set.new([
+      {{name}}: {
         {{#each options}}
-        "{{{value}}}",
+        {{name}}: "{{{value}}}",
         {{/each}}
-      ]),
-      {{else}}
-      {{type.value}},
+      },
       {{/if}}
-    ],
-  {{/each}}
-  }
+    {{/each}}
+    }
 
-  {{!-- Output the actual Props type declaration --}}
-  SECTIONS = %w({{#each sections}}{{name}} {{/each}})
-end
+    {{!-- Next look in props for any defaults to set up --}}
+    DEFAULTS = {
+    {{#each props}}
+      {{name}}: {{#if default}}"{{{default}}}"{{else}}nil{{/if}},
+    {{/each}}
+    }
+
+    {{!-- Lastly, output the actual Props type declaration --}}
+    SCHEMA = {
+    {{#each props}}
+      {{#if comment}}
+      # {{{comment}}}
+      {{/if}}
+      {{name}}: [
+        {{#if required}}{{else}}:optional,{{/if}}
+      {{#if options}}
+        Set.new(tokens[:{{name}}]),
+      {{else}}
+        {{{schema}}},
+      {{/if}}
+      ],
+    {{/each}}
+    }
+
+    {{!-- Output the actual Props type declaration --}}
+    SECTIONS = %w({{#each sections}}{{name}} {{/each}})
+  end
+  {{/if}}
 {{/each}}
+end

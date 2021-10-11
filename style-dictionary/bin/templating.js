@@ -10,8 +10,9 @@ Handlebars.registerHelper('isBaseType', function (value) {
 const templatePath = 'style-dictionary/templates';
 
 const templateFiles = {
-  scssTokens: 'scss-tokens',
-  railsTokens: 'rails-tokens',
+  scssTokens: 'presets/scss/tokens',
+  railsSchema: 'presets/rb/schema',
+  railsTokens: 'presets/rb/tokens',
 };
 
 const compileHbsTemplates = () => {
