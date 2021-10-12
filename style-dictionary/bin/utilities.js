@@ -4,7 +4,6 @@ const formatName = (key, format) => {
   if (!key) {
     return;
   }
-  console.log(key, format);
 
   let name = key;
   switch (format) {
@@ -35,7 +34,6 @@ const parseCollection = (tokens, parentKey, options) => {
     if (tokensGrouped[key].length <= 1) {
       obj = tokensGrouped[key][0];
       obj.tokens = [];
-      console.log(obj);
     } else {
       obj.tokens = tokensGrouped[key];
     }
@@ -124,7 +122,7 @@ const getComponentSchemas = (tokens) => {
   
   ctiCollection.map(({ category, types: _components }) => {
     _components.map(({ type: _component, items: _props }) => {
-      if (_component === 'schema') return null;
+      if (_component === 'Schema') return null;
 
       const component = {
         name: _component,
@@ -135,21 +133,28 @@ const getComponentSchemas = (tokens) => {
         const prop = {
           name: _prop,
         };
+
+        // console.log(_prop, _attrs);
+
         _attrs.map(({ subitem: _attr, states, value }) => {
+          // console.log('--- --- prop:', _prop, value);
           switch (_attr) {
             case 'default':
-              // console.log('--- --- default:', getValue(value));
+              // console.log('--- --- --- default:', getValue(value));
               prop.default = getValue(value);
               break;
             case 'schema':
               // TODO: Determine how to handle schema
-              // console.log('--- --- schema:', value);
-              prop.schema = 'TBD';
+              // console.log('--- --- --- schema:', value);
+              prop.schema = value;
+              if (value.original.value === 'html') {
+                if (!component.sections) component.sections = []; 
+                component.sections.push(_prop);
+              }
               break;
             case 'options':
-              // console.log('--- --- options:', states);
+              // console.log('--- --- --- options:', states);
               prop.options = states.map(({ state, value }) => {
-                console.log(state);
                 return {
                   name: state,
                   value,
@@ -157,7 +162,7 @@ const getComponentSchemas = (tokens) => {
               });
               break;
             default:
-              // console.log('--- --- UNKNOWN', _attr);
+              // console.log('--- --- --- UNKNOWN', _attr);
             break;
           }
         });

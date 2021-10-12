@@ -8,6 +8,8 @@
 
 module SageConfigs
 
+  TBD = ''
+
 {{#each components}}
 
   {{#if name}}
@@ -22,7 +24,7 @@ module SageConfigs
       {{#if options}}
       {{name}}: {
         {{#each options}}
-        {{name}}: "{{{value}}}",
+        {{name}}: {{{asRubyPrimitive value}}},
         {{/each}}
       },
       {{/if}}
@@ -32,7 +34,9 @@ module SageConfigs
     {{!-- Next look in props for any defaults to set up --}}
     DEFAULTS = {
     {{#each props}}
-      {{name}}: {{#if default}}"{{{default}}}"{{else}}nil{{/if}},
+      {{#if (isPresent default)}}
+      {{name}}: {{{asRubyPrimitive default}}},
+      {{/if}}
     {{/each}}
     }
 
@@ -45,16 +49,16 @@ module SageConfigs
       {{name}}: [
         {{#if required}}{{else}}:optional,{{/if}}
       {{#if options}}
-        Set.new(tokens[:{{name}}]),
+        Set.new(TOKENS[:{{name}}].values),
       {{else}}
-        {{{schema}}},
+        {{{schema.rb.value}}},
       {{/if}}
       ],
     {{/each}}
     }
 
     {{!-- Output the actual Props type declaration --}}
-    SECTIONS = %w({{#each sections}}{{name}} {{/each}})
+    SECTIONS = %w({{#each sections}}{{lowercase ../name}}_{{.}} {{/each}})
   end
   {{/if}}
 {{/each}}
