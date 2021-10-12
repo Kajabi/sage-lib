@@ -59,19 +59,4 @@ $-expandable-card-padding-xs: sage-spacing(xs);
     transform: rotateZ(90deg);
   }
 }
-
-.sage-expandable-card--align-right {
-  .sage-btn {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-
-    &::after {
-      transform: translate3d(-50%, -50%, 0);
-    }
-  }
-
-  .sage-btn__truncate-text {
-    order: -1;
-  }
-}
+// NOTE: Styles for align_arrow_right prop added in `_button`
