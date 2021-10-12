@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.50.4](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.50.3...@kajabi/sage-assets@0.50.4) (2021-10-11)
+
+
+### Bug Fixes
+
+* **modal:** add spacing between sibling buttons ([3b15682](https://github.com/Kajabi/sage-lib/commit/3b15682f1fc0a246b8a1280dd2de30b163c654ab))
+* **modal:** fixes scrollbar showing on modals on Windows browsers ([e1f81e1](https://github.com/Kajabi/sage-lib/commit/e1f81e10d14ff9f722a5c8ca95adec96562b59af))
+* **modal:** reverts scrollbar scrolling styles ([af16ab3](https://github.com/Kajabi/sage-lib/commit/af16ab320c5deabfb0a0741947bd824e5b0e8b59))
+* **property:** moved spacing to the right to resolve alignment on mobile ([6a03672](https://github.com/Kajabi/sage-lib/commit/6a0367291b69ce98a40c96ea623e5ab09df208b4))
+
+
+
+
+
 ## [0.50.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.50.2...@kajabi/sage-assets@0.50.3) (2021-10-06)
 
 **Note:** Version bump only for package @kajabi/sage-assets

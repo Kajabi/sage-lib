@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.18.4](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.18.3...@kajabi/sage@4.18.4) (2021-10-11)
+
+
+### Bug Fixes
+
+* **gemfile version:** manually update version so further automations will be correct ([f696710](https://github.com/Kajabi/sage-lib/commit/f6967101bef9ec1db8a7b0b8997710cec42620cb))
+
+
+
+
+
 ## [4.18.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.18.2...@kajabi/sage@4.18.3) (2021-10-06)
 
 
