@@ -1,57 +1,15 @@
 
-<%#
-
-Design notes:
-
-- Irregular spacing above and below the avatar. Recommend 24 above and 16 below.
-- New dropdown separator style: spacing on all isdes differs from current
-- Need new icons:
-  - expand
-  - reset password
-  - offer/gift
-
-Changes included:
-
-- margin on centered Avatar adjusted to only set left and right rather than also top and bottom (was cancelling spacers)
-- buttons had too much side padding to show icons correctly
-- button group needed center align option
-- tweak spacing under description list
-
-Changes to unpack
-
-- Description list: new component or use existing?
-  - Existing is used extensively in super_admin but only once in merge contacts
-  - Hover effects for when there's a link inline
-  - Link arrow at end rather than hyperlink on data?
-  - Inverted type styles
-  - new layout rather than spread out
-  - new spacing
-- Are label styles up to spec?
-  - Type spec seems different
-  - How do accomplish badge style check mark?
-- Label group
-  - Need smaller spacer for packing tags closer?
-  - Should button group be used instead?
-  - Need alignment class for the "view all" text to appear as desired
-- Copy button
-  - shown here without a label (the email text is the value to be copied):
-    should a normal button with the copy attribute be used
-    or should copy button be updated with a button-only varation?
-
-Other notes
-
-- Are labels up to spec? type seemed different
-- Label interactive buttons overflow oddly
-
-%>
-
 <%
 
+# mock_data_as = "panel_rows"
+mock_data_as = "description"
+
+# potential data structure
 data = {
-  name: "Court Mcfadzean",
+  avatar_image: "avatar/court.png",
   email: "court@kajabi.com",
   initials: "CM",
-  avatar_image: "avatar/court.png",
+  name: "Court McFadzean",
   user_stats: [
     [
       {
@@ -82,11 +40,10 @@ data = {
     [
       {
         title: "Contact status",
-        # TODO: Is Label up to spec?
         data: sage_component(SageLabel, {
           value: "Member",
           color: "info",
-          icon: "check" # TODO: Consider icon boadge style and coloring
+          icon: "check-circle-filled"
         }),
       },
       {
@@ -107,17 +64,10 @@ data = {
       },
     ]
   ],
-  tags: [
-    "2021",
-    "Hello",
-    "Summer",
-    "Holiday",
-    "Welcome",
-    "Tag",
-    "Tuesday",
-  ]
+  tags: ["2021", "Hello", "Summer", "Holiday", "Welcome", "Tag", "Tuesday"]
 }
 
+# configs for profile buttons
 button_bar_items = [
   {
     href: "#edit-contact",
@@ -141,6 +91,7 @@ button_bar_items = [
   },
 ]
 
+# configs for more options dropdown
 more_options_items = [
   {
     value: "Change password",
@@ -166,6 +117,8 @@ more_options_items = [
   }
 ]
 
+# ------------------------------------------------------------------------------------------
+
 %>
 
 <%= content_for :heading do %>
@@ -176,7 +129,11 @@ Use this scratchpad to test out elements and components in context. Just be sure
 ") %>
 <% end %>
 <%= sage_component SageContainer, { size: "sm" } do %>
+  
+  <%# TODO: Need a drawer or modal to house this content rather than Panel %>
   <%= sage_component SagePanel, {} do %>
+
+    <%# --- Header --- %>
     <%= sage_component SagePanelRow, {} do %>
       <%= sage_component SageButton, {
         attributes: { href: "#TODO-open-full-profile" },
@@ -200,6 +157,9 @@ Use this scratchpad to test out elements and components in context. Just be sure
         value: "Close preview",
       } %>
     <% end %>
+    <%# /-- Header --- %>
+
+    <%# --- Profile --- %>
     <%= sage_component SagePanelBlock, { css_classes: SageClassnames::TYPE_ALIGN_CENTER } do %>
       <%= sage_component SageAvatar, {
         centered: true,
@@ -215,6 +175,7 @@ Use this scratchpad to test out elements and components in context. Just be sure
       <h3 class="<%= SageClassnames::TYPE::HEADING_4 %> <%= SageClassnames::TYPE_COLORS::CHARCOAL_500 %>">
         <%= data[:name] %>
       </h3>
+      <%# TODO: Use a new variation of copy button rather than this hacked Button approach? %>
       <%= sage_component SageButton, {
         value: data[:email],
         icon: { name: "copy", style: "right" },
@@ -226,7 +187,7 @@ Use this scratchpad to test out elements and components in context. Just be sure
       } %>
     <% end %>
     <%= sage_component SageButtonGroup, {
-      gap: :md,
+      gap: :sm,
       align: "center"
     } do %>
       <% button_bar_items.each do | btn | %>
@@ -259,37 +220,50 @@ Use this scratchpad to test out elements and components in context. Just be sure
         } %>
       <% end %>
     <% end %>
+    <%# /-- Profile --- %>
+
+    <%# --- Data --- %>
     <%= sage_component SagePanelStack, {} do %>
       <% data[:user_stats].each do | data_group | %>
-        <% data_group.each do | datum | %>
-          <%= sage_component SagePanelRow, { grid_template: "me", html_attributes: { style: "width: 100%" } } do %>
-            <span class="<%= SageClassnames::TYPE::BODY %> <%= SageClassnames::TYPE_COLORS::CHARCOAL_100 %>">
-              <%= datum[:title] %>
-            </span>
-            <span class="<%= SageClassnames::TYPE::BODY_MED %> <%= SageClassnames::TYPE_COLORS::CHARCOAL_500 %>">
-              <%= datum[:data].html_safe %>
-            </span>
-            <% if datum[:link] %>
-              <%= sage_component SageButton, {
-                attributes: { href: "#view" },
-                icon: {
-                  name: "caret-right",
-                  style: "only",
-                },
-                style: "primary",
-                subtle: true,
-                value: "View",
-              } %>
+
+        <%# NOTE: Mock variation "panel_rows" %>
+        <% case mock_data_as
+          when "panel_rows" %>
+          <% data_group.each do | datum | %>
+            <%= sage_component SagePanelRow, { grid_template: "me", html_attributes: { style: "width: 100%" } } do %>
+              <span class="<%= SageClassnames::TYPE::BODY %> <%= SageClassnames::TYPE_COLORS::CHARCOAL_100 %>">
+                <%= datum[:title] %>
+              </span>
+              <span class="<%= SageClassnames::TYPE::BODY_MED %> <%= SageClassnames::TYPE_COLORS::CHARCOAL_500 %>">
+                <%= datum[:data].html_safe %>
+              </span>
+              <% if datum[:link] %>
+                <%= sage_component SageButton, {
+                  attributes: { href: "#view" },
+                  icon: {
+                    name: "caret-right",
+                    style: "only",
+                  },
+                  style: "primary",
+                  subtle: true,
+                  value: "View",
+                } %>
+              <% end %>
             <% end %>
           <% end %>
+
+        <%# NOTE: Mock variation "description" %>
+        <% when "description" %>
+          <%= sage_component SageDescription, {
+            allcaps_titles: false,
+            inline_spread: true,
+            items: data_group,
+          } %>
         <% end %>
-        <%# sage_component SageDescription, {
-          allcaps_titles: false,
-          inline_spread: true,
-          items: data_group,
-        } %>
-        <%= sage_component SagePanelDivider, { bleed: true } %>
+
+        <%= sage_component SagePanelDivider, {} %>
       <% end %>
+
       <%= sage_component SageLabelGroup, {} do %>
         <% data[:tags].each do | tag | %>
           <%= sage_component SageLabel, {
@@ -313,5 +287,7 @@ Use this scratchpad to test out elements and components in context. Just be sure
         } %>
       <% end %>
     <% end %>
+    <%# /-- Data --- %>
+
   <% end %>
 <% end %>
