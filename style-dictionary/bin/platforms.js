@@ -14,17 +14,17 @@ module.exports = {
   //     }
   //   }]
   // },
-  // sassTokens: {
-  //   transformGroup: 'sage/scss/tokens',
-  //   buildPath: 'packages/sage-assets/lib/stylesheets/dictionary/',
-  //   files: [{
-  //     destination: '_tokens.scss',
-  //     format: 'sage/scss/tokens',
-  //     options: {
-  //       outputReferences: false
-  //     }
-  //   }]
-  // },
+  sassTokens: {
+    transformGroup: 'sage/scss/tokens',
+    buildPath: 'packages/sage-assets/lib/stylesheets/dictionary/',
+    files: [{
+      destination: '_tokens.scss',
+      format: 'sage/scss/tokens',
+      options: {
+        outputReferences: false
+      }
+    }]
+  },
   // testFormatter: {
   //   transformGroup: 'sage/js',
   //   buildPath: 'packages/sage-react/lib/dictionary/',

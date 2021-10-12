@@ -505,6 +505,140 @@ $sage-undefined-undefined: (
 
 /// ----------
 ///
+/// Category: component
+///
+/// ----------
+
+///
+/// Type: alert
+///
+
+///
+/// Static vars for component alert
+///
+$sage-component-alert-actions-default: ;
+$sage-component-alert-actions-schema: [object Object];
+$sage-component-alert-color-options-info: info;
+$sage-component-alert-color-options-success: success;
+$sage-component-alert-color-options-warning: warning;
+$sage-component-alert-color-options-danger: danger;
+$sage-component-alert-color-options-published: published;
+$sage-component-alert-color-default: info;
+$sage-component-alert-color-schema: [object Object];
+$sage-component-alert-description-default: ;
+$sage-component-alert-description-schema: [object Object];
+$sage-component-alert-dismissable-default: false;
+$sage-component-alert-dismissable-schema: [object Object];
+$sage-component-alert-icon-default: ;
+$sage-component-alert-icon-schema: [object Object];
+$sage-component-alert-raised-default: false;
+$sage-component-alert-raised-schema: [object Object];
+$sage-component-alert-title-default: ;
+$sage-component-alert-title-schema: [object Object];
+
+/// Custom type
+///
+/// Map for component alert
+///
+$sage-component-alert: (
+  actions-default: $sage-component-alert-actions-default,
+  actions-schema: $sage-component-alert-actions-schema,
+  color-options-info: $sage-component-alert-color-options-info,
+  color-options-success: $sage-component-alert-color-options-success,
+  color-options-warning: $sage-component-alert-color-options-warning,
+  color-options-danger: $sage-component-alert-color-options-danger,
+  color-options-published: $sage-component-alert-color-options-published,
+  color-default: $sage-component-alert-color-default,
+  color-schema: $sage-component-alert-color-schema,
+  description-default: $sage-component-alert-description-default,
+  description-schema: $sage-component-alert-description-schema,
+  dismissable-default: $sage-component-alert-dismissable-default,
+  dismissable-schema: $sage-component-alert-dismissable-schema,
+  icon-default: $sage-component-alert-icon-default,
+  icon-schema: $sage-component-alert-icon-schema,
+  raised-default: $sage-component-alert-raised-default,
+  raised-schema: $sage-component-alert-raised-schema,
+  title-default: $sage-component-alert-title-default,
+  title-schema: $sage-component-alert-title-schema,
+);
+
+///
+/// Sage component alert token utility
+///
+/// @param {string} $key [default] The token to retrieve
+///
+@function sage-component-alert($key: default) {
+  $value: map-get($sage-component-alert, $key);
+  @return $value;
+}
+
+///
+/// Type: schema
+///
+
+///
+/// Static vars for component schema
+///
+$sage-component-schema-html-original: html;
+$sage-component-schema-html-rb: String;
+$sage-component-schema-html-ts: React.Node;
+$sage-component-schema-html-jsx: node;
+$sage-component-schema-string-original: string;
+$sage-component-schema-string-rb: String;
+$sage-component-schema-string-ts: string;
+$sage-component-schema-string-jsx: string;
+$sage-component-schema-boolean-original: boolean;
+$sage-component-schema-boolean-rb: TrueClass;
+$sage-component-schema-boolean-ts: boolean;
+$sage-component-schema-boolean-jsx: bool;
+$sage-component-schema-number-original: number;
+$sage-component-schema-number-rb: Integer, Float;
+$sage-component-schema-number-ts: number;
+$sage-component-schema-number-jsx: number;
+$sage-component-schema-list-original: list;
+$sage-component-schema-list-rb: presets.rb.list;
+$sage-component-schema-list-ts: presets.ts.list;
+$sage-component-schema-list-jsx: presets.jsx.list;
+
+/// Custom type
+///
+/// Map for component schema
+///
+$sage-component-schema: (
+  html-original: $sage-component-schema-html-original,
+  html-rb: $sage-component-schema-html-rb,
+  html-ts: $sage-component-schema-html-ts,
+  html-jsx: $sage-component-schema-html-jsx,
+  string-original: $sage-component-schema-string-original,
+  string-rb: $sage-component-schema-string-rb,
+  string-ts: $sage-component-schema-string-ts,
+  string-jsx: $sage-component-schema-string-jsx,
+  boolean-original: $sage-component-schema-boolean-original,
+  boolean-rb: $sage-component-schema-boolean-rb,
+  boolean-ts: $sage-component-schema-boolean-ts,
+  boolean-jsx: $sage-component-schema-boolean-jsx,
+  number-original: $sage-component-schema-number-original,
+  number-rb: $sage-component-schema-number-rb,
+  number-ts: $sage-component-schema-number-ts,
+  number-jsx: $sage-component-schema-number-jsx,
+  list-original: $sage-component-schema-list-original,
+  list-rb: $sage-component-schema-list-rb,
+  list-ts: $sage-component-schema-list-ts,
+  list-jsx: $sage-component-schema-list-jsx,
+);
+
+///
+/// Sage component schema token utility
+///
+/// @param {string} $key [default] The token to retrieve
+///
+@function sage-component-schema($key: default) {
+  $value: map-get($sage-component-schema, $key);
+  @return $value;
+}
+
+/// ----------
+///
 /// Category: content
 ///
 /// ----------
