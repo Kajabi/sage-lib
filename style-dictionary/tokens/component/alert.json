@@ -13,23 +13,6 @@
           "description": "Provide actionable content such as buttons or hyperlinks."
         }
       },
-      "alignment": {
-        "options": {
-          "left": {
-            "value": "left"
-          }
-        },
-        "default": {
-          "value": null
-        },
-        "schema": {
-          "value": "{component.schema.list}"
-        },
-        "attributes": {
-          "required": false,
-          "description": "Temporary testing value"
-        }
-      },
       "color": {
         "options": {
           "info": {
@@ -43,6 +26,9 @@
           },
           "danger": {
             "value": "danger"
+          },
+          "published": {
+            "value": "published"
           }
         },
         "default": {
@@ -54,6 +40,66 @@
         "attributes": {
           "required": false,
           "description": "Applies color to the background and text of the component."
+        }
+      },
+      "description": {
+        "default": {
+          "value": null
+        },
+        "schema": {
+          "value": "{component.schema.string}"
+        },
+        "attributes": {
+          "required": false,
+          "description": "TBD"
+        }
+      },
+      "dismissable": {
+        "default": {
+          "value": false
+        },
+        "schema": {
+          "value": "{component.schema.boolean}"
+        },
+        "attributes": {
+          "required": false,
+          "description": "TBD"
+        }
+      },
+      "icon": {
+        "default": {
+          "value": null
+        },
+        "schema": {
+          "value": "{component.schema.string}"
+        },
+        "attributes": {
+          "required": false,
+          "description": "TBD"
+        }
+      },
+      "raised": {
+        "default": {
+          "value": false
+        },
+        "schema": {
+          "value": "{component.schema.boolean}"
+        },
+        "attributes": {
+          "required": false,
+          "description": "TBD"
+        }
+      },
+      "title": {
+        "default": {
+          "value": null
+        },
+        "schema": {
+          "value": "{component.schema.string}"
+        },
+        "attributes": {
+          "required": true,
+          "description": "TBD"
         }
       }
     }

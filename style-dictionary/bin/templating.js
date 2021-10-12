@@ -1,9 +1,33 @@
 const Handlebars = require('Handlebars');
 const fs = require('fs');
 
+
+Handlebars.registerHelper('asRubyPrimitive', function (value) {
+  if (typeof value === 'string') return `"${value}"`;
+  if (typeof value === 'boolean') return value ? 'true' : 'false';
+  if (value === null) return 'nil';
+  return value;
+});
+
+Handlebars.registerHelper('asJSPrimitive', function (value) {
+  if (typeof value === 'string') return `'${value}'`;
+  if (typeof value === 'boolean') return value ? 'true' : 'false';
+  if (value === null) return 'null';
+  return value;
+});
+
 Handlebars.registerHelper('isBaseType', function (value) {
   return value.toLowerCase() === "base";
 });
+
+Handlebars.registerHelper('isPresent', function (value) {
+  return value !== undefined;
+});
+
+Handlebars.registerHelper('lowercase', function (value) {
+  return value.toLowerCase();
+});
+
 //
 // Templates
 //
