@@ -1,6 +1,6 @@
 class SageExpandableCard < SageComponent
   set_attribute_schema({
-    align_right: [:optional, TrueClass],
+    align_arrow_right: [:optional, TrueClass],
     body_bordered: [:optional, TrueClass],
     sage_type: [:optional, TrueClass],
     expanded: [:optional, TrueClass],
