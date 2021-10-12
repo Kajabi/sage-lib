@@ -2,8 +2,11 @@
   "component": {
     "schema": {
       "html": {
+        "original": {
+          "value": "html"
+        },
         "rb": {
-          "value": "presets.rb.html"
+          "value": "String"
         },
         "ts": {
           "value": "React.Node"
@@ -13,6 +16,9 @@
         }
       },
       "string": {
+        "original": {
+          "value": "string"
+        },
         "rb": {
           "value": "String"
         },
@@ -24,8 +30,11 @@
         }
       },
       "boolean": {
+        "original": {
+          "value": "boolean"
+        },
         "rb": {
-          "value": "Trueclass"
+          "value": "TrueClass"
         },
         "ts": {
           "value": "boolean"
@@ -35,6 +44,9 @@
         }
       },
       "number": {
+        "original": {
+          "value": "number"
+        },
         "rb": {
           "value": "Integer, Float"
         },
@@ -46,6 +58,9 @@
         }
       },
       "list": {
+        "original": {
+          "value": "list"
+        },
         "rb": {
           "value": "presets.rb.list"
         },

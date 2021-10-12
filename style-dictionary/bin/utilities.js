@@ -139,6 +139,7 @@ const getComponentSchemas = (tokens) => {
         };
 
         _attrs.map(({ subitem: _attr, states, value }) => {
+          // console.log('--- --- prop:', _prop, value);
           switch (_attr) {
             case 'default':
               prop.default = getValue(value);

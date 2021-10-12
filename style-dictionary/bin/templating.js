@@ -111,7 +111,6 @@ Handlebars.registerHelper('lowercase', function (value) {
   return value.toLowerCase();
 });
 
-
 //
 // Templates compilation
 //
