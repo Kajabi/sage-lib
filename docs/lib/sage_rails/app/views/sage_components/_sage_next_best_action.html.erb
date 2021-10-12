@@ -1,7 +1,7 @@
 <div
   class="
-    sage-next-best-action<%= component.color ? "
-    sage-next-best-action--#{component.color}" : "" %>
+    sage-next-best-action<%= component.card_color ? "
+    sage-next-best-action--#{component.card_color}" : "" %>
     <%= component.generated_css_classes %>
   "
   <%= component.generated_html_attributes.html_safe %>
@@ -12,9 +12,11 @@
   <% if component.desc %>
     <p class="sage-next-best-action__desc"><%= component.desc %></p>
   <% end %>
-  <%= sage_component SageButton, {
-    style: "primary",
-    value: "Add an Upsell",
-  } %>
+  <% if component.button_text %>
+    <%= sage_component SageButton, {
+      style: component.button_style,
+      value: component.button_text,
+    } %>
+  <% end %>
   <%= @content %>
 </div>
