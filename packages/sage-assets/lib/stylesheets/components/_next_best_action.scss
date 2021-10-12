@@ -4,6 +4,23 @@
 /// @group sage
 ////
 
+$-next-best-action-colors: (
+  draft: grey,
+  info: primary,
+  published: sage,
+  success: sage,
+  warning: yellow,
+  danger: red,
+);
+
 .sage-next-best-action {
-  // Styles here
+  padding: sage-spacing(md);
+  border-radius: sage-border(radius-large);
+}
+
+@each $name, $color in $-next-best-action-colors {
+  .sage-next-best-action--#{$name} {
+    background: sage-color($color, 100);
+    border: 1px solid sage-color($color, 400);
+  }
 }
