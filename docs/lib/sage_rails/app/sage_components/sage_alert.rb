@@ -1,5 +1,6 @@
 class SageAlert < SageComponent
   set_attribute_schema(SageConfigs::Alert::SCHEMA.merge({
+    # Deprecations
     desc: [:optional, String],
     icon_name: [:optional, String],
     primary_action: [:optional, {

@@ -1,5 +1,5 @@
 const { templates } = require('./templating');
-const { getCTCollection, getComponentSchemas } = require('./utilities');
+const { getCategoryCollection, getComponentSchemas } = require('./utilities');
 
 //
 // Formats
