@@ -58,5 +58,17 @@ module.exports = {
       },
       filter: (token) => token.attributes && token.attributes.category === 'component',
     }]
+  },
+  reactComponents: {
+    transformGroup: 'sage/react/schema',
+    buildPath: 'packages/sage-react/lib/configs/types/',
+    files: [{
+      destination: 'prop-types.js',
+      format: 'sage/react/schema',
+      options: {
+        outputReferences: true
+      },
+      filter: (token) => token.attributes && token.attributes.category === 'component',
+    }]
   }
 };

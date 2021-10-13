@@ -11,33 +11,42 @@
 //
 // {{name}}
 //
-export {{name}} = {
+
+  {{#each props}}
+    {{#if options}}
+const {{../name}}_{{name}}_token = {
+      {{#each options}}
+  '{{name}}': {{{asJSPrimitive value}}},
+      {{/each}}
+};
+
+    {{/if}}
+  {{/each}}
+export const {{name}} = {
   {{!-- First look in props for any with options and output union types and token --}}
   tokens: {
-    {{#each props}}
-      {{#if options}}
-    {{name}}: {
-        {{#each options}}
-      "{{name}}": {{{value}}}
-        {{/each}}
-      {{/if}}
-    },
-    {{/each}}
+  {{#each props}}
+    {{#if options}}
+    {{name}}: {{../name}}_{{name}}_token,
+    {{/if}}
+  {{/each}}
   },
   {{!-- Next look in props for any defaultProps to set up --}}
   defaults: {
-    {{#each props}}
-      {{name}}: {{{default.value}}},
-    {{/each}}
+  {{#each props}}
+    {{#if (isPresent default)}}
+    {{name}}: {{{asJSPrimitive default}}},
+    {{/if}}
+  {{/each}}
   },
   {{!-- Last, output the actual PropType declaration --}}
-  props: {
-    {{#each props}}
-      {{#if comment}}
+  schema: {
+  {{#each props}}
+    {{#if comment}}
     // {{{comment}}}
-      {{/if}}
-    {{name}}: {{type.value}},
-    {{/each}}
+    {{/if}}
+    {{name}}: PropTypes{{#if options}}.oneOf(Object.values({{../name}}_{{name}}_token)){{else}}.{{{schema.jsx.value}}}{{/if}}{{#if required}}.isRequired{{/if}},
+  {{/each}}
   },
 };
 {{/each}}
