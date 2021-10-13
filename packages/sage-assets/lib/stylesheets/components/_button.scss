@@ -178,6 +178,20 @@ $-btn-loading-min-height: rem(36px);
     font-weight: sage-font-weight(regular);
   }
 
+  .sage-expandable-card--align-arrow-right & {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    &::before {
+      margin-right: 0;
+    }
+
+    &::after {
+      transform: translate3D(-50%, -50%, 0);
+    }
+  }
+
   .sage-input-group & {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
@@ -516,6 +530,10 @@ $-btn-loading-min-height: rem(36px);
   .sage-dropdown__trigger & {
     display: inline-flex;
     align-items: center;
+  }
+
+  .sage-expandable-card--align-arrow-right & {
+    order: -1;
   }
 }
 

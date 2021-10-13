@@ -6,6 +6,7 @@ import { Button } from '../Button';
 import { SageClassnames, SageTokens } from '../configs';
 
 export const ExpandableCard = ({
+  alignArrowRight,
   bodyBordered,
   expanded,
   children,
@@ -29,6 +30,7 @@ export const ExpandableCard = ({
   const id = uuid();
 
   const containerClassnames = classnames({
+    'sage-expandable-card--align-arrow-right': alignArrowRight,
     'sage-expandable-card sage-expandable-card--expanded': expanded,
     'sage-expandable-card': !expanded,
     'sage-expandable-card--expanded': selfActive
@@ -62,6 +64,7 @@ export const ExpandableCard = ({
 };
 
 ExpandableCard.defaultProps = {
+  alignArrowRight: false,
   bodyBordered: false,
   expanded: false,
   children: null,
@@ -71,6 +74,7 @@ ExpandableCard.defaultProps = {
 };
 
 ExpandableCard.propTypes = {
+  alignArrowRight: PropTypes.bool,
   bodyBordered: PropTypes.bool,
   expanded: PropTypes.bool,
   className: PropTypes.string,

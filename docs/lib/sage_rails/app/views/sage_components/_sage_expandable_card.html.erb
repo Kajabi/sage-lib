@@ -1,7 +1,8 @@
 <div 
   class="sage-expandable-card 
     <%= component.generated_css_classes %>
-    <% if component.expanded.present? %>sage-expandable-card--expanded<% end %>"
+    <% if component.expanded.present? %>sage-expandable-card--expanded<% end %>
+    <% if component.align_arrow_right %>sage-expandable-card--align-arrow-right<% end %>"
     <%= component.generated_html_attributes.html_safe %>
 >
   <%= sage_component SageButton, {
