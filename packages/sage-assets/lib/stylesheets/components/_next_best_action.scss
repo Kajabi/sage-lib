@@ -17,15 +17,29 @@ $-next-best-action-colors: (
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   padding: sage-spacing(md);
   border-radius: sage-border(radius-large);
 }
 
+.sage-next-best-action--reverse {
+  flex-direction: row-reverse;
+}
+
 .sage-next-best-action__image-content {
-  width: 136px;
+  min-width: 136px;
   height: 136px;
   margin-right: sage-spacing(md);
   background-color: #f00;
+
+  .sage-next-best-action--reversed & {
+    margin-right: 0;
+    margin-left: sage-spacing(md);
+  }
+}
+
+.sage-next-best-action__text-content {
+  width: 100%;
 }
 
 .sage-next-best-action__title {
