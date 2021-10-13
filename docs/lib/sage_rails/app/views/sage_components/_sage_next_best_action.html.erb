@@ -6,17 +6,21 @@
   "
   <%= component.generated_html_attributes.html_safe %>
 >
-  <% if component.title %>
-    <h3 class="sage-next-best-action__title"><%= component.title %></h3>
-  <% end %>
-  <% if component.desc %>
-    <p class="sage-next-best-action__desc"><%= component.desc %></p>
-  <% end %>
-  <% if component.button_text %>
-    <%= sage_component SageButton, {
-      style: component.button_style,
-      value: component.button_text,
-    } %>
-  <% end %>
-  <%= @content %>
+  <div class="sage-next-best-action__image-content">
+
+  </div>
+  <div class="sage-next-best-action__text-content">
+    <% if component.title %>
+      <h3 class="sage-next-best-action__title"><%= component.title %></h3>
+    <% end %>
+    <% if component.desc %>
+      <p class="sage-next-best-action__desc"><%= component.desc %></p>
+    <% end %>
+    <% if component.button %>
+      <%= sage_component SageButton, {
+        style: component.button[:style],
+        value: component.button[:text],
+      } %>
+    <% end %>
+  </div>
 </div>

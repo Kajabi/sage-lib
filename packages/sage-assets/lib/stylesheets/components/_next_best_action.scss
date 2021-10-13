@@ -14,8 +14,26 @@ $-next-best-action-colors: (
 );
 
 .sage-next-best-action {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   padding: sage-spacing(md);
   border-radius: sage-border(radius-large);
+}
+
+.sage-next-best-action__image-content {
+  width: 136px;
+  height: 136px;
+  margin-right: sage-spacing(md);
+  background-color: #f00;
+}
+
+.sage-next-best-action__title {
+  margin-bottom: sage-spacing(xs);
+}
+
+.sage-next-best-action__desc {
+  margin-bottom: sage-spacing(sm);
 }
 
 @each $name, $color in $-next-best-action-colors {
