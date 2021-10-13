@@ -1,13 +1,13 @@
-
+<h3>Dismissable Alert</h3>
 <!-- Info -->
 <%= sage_component SageAlert, {
   color: "info",
   title: "Our privacy policy has changed",
   desc: "Make sure you know how these changes affect you.",
   icon_name: "sage-icon-info-circle",
+  dismissable: true
 } do %>
   <% content_for :sage_alert_actions do %>
-    <%= link_to "Action Link", "#" %>
     <%= link_to "Action Link", "#" %>
   <% end %>
 <% end %>
@@ -32,8 +32,10 @@
   title: "Exceeded product amount limit",
   desc: "Make sure you know how these changes affect you.",
   icon_name: "sage-icon-warning",
+  dismissable: true
 } do %>
   <% content_for :sage_alert_actions do %>
+    <%= link_to "Action Link", "#" %>
     <%= link_to "Action Link", "#" %>
     <%= link_to "Action Link", "#" %>
   <% end %>
@@ -53,16 +55,13 @@
   <% end %>
 <% end %>
 
-
-<h3 class="t-sage-heading-6">Raised Variant</h3>
-
+<h3>Non-Dismissable Alert (no close button)</h3>
 <!-- Info -->
 <%= sage_component SageAlert, {
   color: "info",
   title: "Our privacy policy has changed",
   desc: "Make sure you know how these changes affect you.",
-  icon_name: "sage-icon-info-circle",
-  raised: true
+  icon_name: "sage-icon-info-circle"
 } do %>
   <% content_for :sage_alert_actions do %>
     <%= link_to "Action Link", "#" %>
@@ -75,9 +74,7 @@
   color: "published",
   title: "Account settings updated",
   desc: "Make sure you know how these changes affect you.",
-  icon_name: "sage-icon-check-circle",
-  dismissable: true,
-  raised: true
+  icon_name: "sage-icon-check-circle"
 } do %>
   <% content_for :sage_alert_actions do %>
     <%= link_to "Action Link", "#" %>
@@ -90,8 +87,7 @@
   color: "warning",
   title: "Exceeded product amount limit",
   desc: "Make sure you know how these changes affect you.",
-  icon_name: "sage-icon-warning",
-  raised: true
+  icon_name: "sage-icon-warning"
 } do %>
   <% content_for :sage_alert_actions do %>
     <%= link_to "Action Link", "#" %>
@@ -104,9 +100,7 @@
   color: "danger",
   title: "App outage tonight at 12am",
   desc: "Make sure you know how these changes affect you.",
-  icon_name: "sage-icon-warning",
-  dismissable: true,
-  raised: true
+  icon_name: "sage-icon-warning"
 } do %>
   <% content_for :sage_alert_actions do %>
     <%= link_to "Action Link", "#" %>

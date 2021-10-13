@@ -16,7 +16,6 @@ export default {
     color: Alert.COLORS.SUCCESS,
     description: 'Testing a description',
     dismissable: true,
-    raised: false,
     title: 'Title goes here',
   },
   argTypes: {
