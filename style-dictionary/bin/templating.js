@@ -37,6 +37,7 @@ const templateFiles = {
   scssTokens: 'presets/scss/tokens',
   railsSchema: 'presets/rb/schema',
   railsTokens: 'presets/rb/tokens',
+  reactSchema: 'presets/jsx/schema',
 };
 
 const compileHbsTemplates = () => {

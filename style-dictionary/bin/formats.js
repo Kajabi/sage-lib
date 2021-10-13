@@ -24,10 +24,11 @@ module.exports = {
     return templates.railsTokens({ categories });
   },
   'sage/rails/schema': ({ dictionary, platform }) => {
-    // TODO: Parse CTISS to X > component > props > [options | default | schema] > 
     const components = getComponentSchemas(dictionary.allTokens);
-    console.log(components[0].sections);
-
     return templates.railsSchema({ components });
+  },
+  'sage/react/schema': ({ dictionary, platform }) => {
+    const components = getComponentSchemas(dictionary.allTokens);
+    return templates.reactSchema({ components });
   },
 };

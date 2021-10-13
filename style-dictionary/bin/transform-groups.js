@@ -16,4 +16,7 @@ module.exports = {
   'sage/rails/schema': [
     'attribute/cti',
   ],
+  'sage/react/schema': [
+    'attribute/cti',
+  ],
 };
