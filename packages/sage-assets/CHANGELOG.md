@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.50.5](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.50.4...@kajabi/sage-assets@0.50.5) (2021-10-13)
+
+
+### Bug Fixes
+
+* **modal:** add spacing between sibling buttons ([1af2803](https://github.com/Kajabi/sage-lib/commit/1af28038c86dd979b0695ce5887e2e457c8f6523))
+
+
+
+
+
 ## [0.50.4](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.50.3...@kajabi/sage-assets@0.50.4) (2021-10-11)
 
 
