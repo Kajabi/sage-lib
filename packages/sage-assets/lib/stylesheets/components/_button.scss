@@ -183,6 +183,10 @@ $-btn-loading-min-height: rem(36px);
     justify-content: space-between;
     width: 100%;
 
+    &::before {
+      margin-right: 0;
+    }
+
     &::after {
       transform: translate3D(-50%, -50%, 0);
     }
