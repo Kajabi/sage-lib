@@ -21,4 +21,16 @@
       } %>
     <% end %>
   </div>
+  <% if component.dismissable %>
+    <%= sage_component SageButton, {
+      value: "Close",
+      icon: {
+        style: "only",
+        name: "remove"
+      },
+      subtle: true,
+      small: true,
+      css_classes: "sage-next-best-action__close"
+    } %>
+  <% end %>
 </div>
