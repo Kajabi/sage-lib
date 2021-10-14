@@ -1,13 +1,11 @@
 <div
-  class="
-    sage-next-best-action<%= component.card_color ? "
-    sage-next-best-action--#{component.card_color}" : "" %>
-    <%= component.generated_css_classes %>
-  "
+  class="sage-next-best-action
+  <%= component.card_color ? "sage-next-best-action--#{component.card_color}" : "" %>
+  <%= component.generated_css_classes %>"
   <%= component.generated_html_attributes.html_safe %>
 >
   <div class="sage-next-best-action__image-content">
-
+    <%= image_tag component.image[:src], alt: component.image[:alt].present? ? component.image[:alt] : '' %>
   </div>
   <div class="sage-next-best-action__text-content">
     <% if component.title %>
