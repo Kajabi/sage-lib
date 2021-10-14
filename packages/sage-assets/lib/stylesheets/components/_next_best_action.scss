@@ -49,6 +49,31 @@ $-next-best-action-colors: (
   margin-bottom: sage-spacing(sm);
 }
 
+.sage-next-best-action__close {
+  align-self: flex-start;
+  height: rem(20px);
+  width: rem(20px);
+  padding: 0;
+  font-size: sage-font-size(xl, false);
+  line-height: 1;
+  background-color: transparent;
+  border: 0;
+  appearance: none;
+
+  @each $name, $color in $-next-best-action-colors {
+    .sage-next-best-action--#{$name} & {
+      color: sage-color($color, 500);
+
+      @include sage-focus-outline($outline-offset-inline: 3px, $outline-offset-block: 3px);
+      @include sage-focus-outline--update-color(sage-color($color, 500));
+    }
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
 @each $name, $color in $-next-best-action-colors {
   .sage-next-best-action--#{$name} {
     background: sage-color($color, 100);
