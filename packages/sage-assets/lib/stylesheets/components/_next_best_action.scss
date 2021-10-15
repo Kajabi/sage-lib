@@ -36,6 +36,8 @@ $-next-best-action-colors: (
 }
 
 .sage-next-best-action__text-content {
+  flex-grow: 1;
+
   .sage-next-best-action--reverse & {
     width: 100%;
   }

@@ -9,6 +9,7 @@ export const NextBestAction = ({
   cardColor,
   className,
   desc,
+  image,
   title,
 }) => {
   const baseClass = 'sage-next-best-action';
@@ -23,6 +24,11 @@ export const NextBestAction = ({
 
   return (
     <div className={classNames}>
+      {image && (
+        <div className="sage-next-best-action__image-content">
+          <img src={image.src} alt={image.alt} />
+        </div>
+      )}
       <div className="sage-next-best-action__text-content">
         {title && (
           <h3 className="sage-next-best-action__title">{title}</h3>
@@ -52,6 +58,10 @@ NextBestAction.defaultProps = {
   },
   className: '',
   desc: '',
+  image: {
+    alt: '',
+    src: '',
+  },
   title: '',
 };
 
@@ -63,5 +73,9 @@ NextBestAction.propTypes = {
   cardColor: PropTypes.oneOf(Object.values(NEXT_BEST_ACTION_COLORS)).isRequired,
   className: PropTypes.string,
   desc: PropTypes.string,
+  image: PropTypes.shape({
+    alt: PropTypes.string,
+    src: PropTypes.string,
+  }),
   title: PropTypes.string,
 };
