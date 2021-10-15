@@ -6,6 +6,7 @@ import { NEXT_BEST_ACTION_COLORS } from './configs';
 export const NextBestAction = ({
   cardColor,
   className,
+  title,
 }) => {
   const baseClass = 'sage-next-best-action';
 
@@ -19,7 +20,11 @@ export const NextBestAction = ({
 
   return (
     <div className={classNames}>
-      <h1>Hello, world!</h1>
+      <div className="sage-next-best-action__text-content">
+        {title && (
+          <h3 className="sage-next-best-action__title">{title}</h3>
+        )}
+      </div>
     </div>
   );
 };
@@ -28,9 +33,11 @@ NextBestAction.COLORS = NEXT_BEST_ACTION_COLORS;
 
 NextBestAction.defaultProps = {
   className: '',
+  title: '',
 };
 
 NextBestAction.propTypes = {
   cardColor: PropTypes.oneOf(Object.values(NEXT_BEST_ACTION_COLORS)).isRequired,
   className: PropTypes.string,
+  title: PropTypes.string,
 };

@@ -7,9 +7,7 @@ export default {
   component: NextBestAction,
   args: {
     cardColor: NextBestAction.COLORS.DRAFT,
-    children: (
-      <p>Sample Component children showing up!</p>
-    ),
+    title: 'Offer an additional buy with Upsell',
   },
   argTypes: {
     ...selectArgs({
