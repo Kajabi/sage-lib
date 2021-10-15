@@ -7,6 +7,7 @@ export default {
   component: NextBestAction,
   args: {
     cardColor: NextBestAction.COLORS.DRAFT,
+    desc: 'Maximize your profit by adding an Upsell to your order flow. This section might wrap to two lines. Maximize your profit by adding an Upsell to your order flow. This section might wrap to two lines.',
     title: 'Offer an additional buy with Upsell',
   },
   argTypes: {
