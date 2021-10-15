@@ -1,4 +1,7 @@
-export const SAMPLE_TOKEN = {
-  VALUE_1: 'value-1',
-  VALUE_2: 'value-2',
+export const NEXT_BEST_ACTION_COLORS = {
+  DRAFT: 'draft',
+  INFO: 'info',
+  SUCCESS: 'success',
+  WARNING: 'warning',
+  DANGER: 'danger',
 };
