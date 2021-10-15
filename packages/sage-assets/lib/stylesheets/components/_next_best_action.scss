@@ -28,14 +28,12 @@ $-next-best-action-colors: (
   flex-direction: row-reverse;
 }
 
-.sage-next-best-action__image-content {
-  flex: 0 0 $-next-best-action-image-size;
-  img {
-    width: 100%;
-  }
+.sage-next-best-action__image {
+  width: $-next-best-action-image-size;
+  // flex: 0 0 $-next-best-action-image-size;
 }
 
-.sage-next-best-action__text-content {
+.sage-next-best-action__text {
   flex-grow: 1;
 
   .sage-next-best-action--reverse & {

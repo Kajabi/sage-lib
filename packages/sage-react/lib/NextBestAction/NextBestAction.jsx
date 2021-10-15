@@ -25,11 +25,13 @@ export const NextBestAction = ({
   return (
     <div className={classNames}>
       {image && (
-        <div className="sage-next-best-action__image-content">
-          <img src={image.src} alt={image.alt} />
-        </div>
+        <img
+          alt={image.alt}
+          className="sage-next-best-action__image"
+          src={image.src}
+        />
       )}
-      <div className="sage-next-best-action__text-content">
+      <div className="sage-next-best-action__text">
         {title && (
           <h3 className="sage-next-best-action__title">{title}</h3>
         )}
