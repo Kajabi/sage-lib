@@ -14,7 +14,7 @@ export const ExpandableCard = ({
   sageType,
   triggerLabel,
 }) => {
-  const [selfActive, setSelfActive] = useState(false);
+  const [selfActive, setSelfActive] = useState(expanded);
 
   const handleBodyToggle = () => {
     if (selfActive) {
@@ -31,8 +31,7 @@ export const ExpandableCard = ({
 
   const containerClassnames = classnames({
     'sage-expandable-card--align-arrow-right': alignArrowRight,
-    'sage-expandable-card sage-expandable-card--expanded': expanded,
-    'sage-expandable-card': !expanded,
+    'sage-expandable-card': !selfActive,
     'sage-expandable-card--expanded': selfActive
   });
 
