@@ -272,6 +272,23 @@ demo_configs_subtle = [
   } %>
 </div>
 
+<h3>Copy Button</h3>
+<%= md("
+  A variation of the Copy Button can be created with the Button component. This can be achieved by creating a Sage Button and passing in the `data-js-copy-button` attribute under `attributes`.
+  ", use_sage_type: true) %>
+
+<div>
+  <%= sage_component SageButton, {
+    value: "example@example.com",
+    icon: { name: "copy", style: "right" },
+    style: "secondary",
+    subtle: true,
+    attributes: {
+      "data-js-copy-button": "example@example.com"
+    }
+  } %>
+</div>
+
 <h3>Loading State</h3>
 <%= md("
   Displays a loading indicator in the button, such as when a button is used to submit a form. Including the `spinner_on_submit` property will activate the loading state, and place the corresponding text as the `aria-label`.
