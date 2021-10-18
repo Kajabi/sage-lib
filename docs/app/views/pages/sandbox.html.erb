@@ -1,3 +1,42 @@
+<%= sage_component SageAlert, {
+  color: "warning",
+  desc: "Upgrade your plan to access more [feature_name].",
+  dismissable: true,
+  icon_name: "sage-icon-warning",
+  title: "You’ve used [percentage] of available [feature_name]",
+} do %>
+  <% content_for :sage_alert_actions do %>
+    <%= link_to "Upgrade plan", "#" %>
+    <%= link_to "Check usage", "#" %>
+  <% end %>
+<% end %>
+
+<%= sage_component SageAlert, {
+  color: "warning",
+  desc: "Upgrade your plan to access more [feature_name].",
+  dismissable: true,
+  icon_name: "sage-icon-flag",
+  title: "You’ve reached your [feature_name] limit",
+} do %>
+  <% content_for :sage_alert_actions do %>
+    <%= link_to "Upgrade plan", "#" %>
+    <%= link_to "Check usage", "#" %>
+  <% end %>
+<% end %>
+
+<%= sage_component SageAlert, {
+  color: "danger",
+  desc: "To avoid any issues with your experience, upgrade your plan now.",
+  dismissable: true,
+  icon_name: "sage-icon-danger",
+  title: "You’ve exceeded your [feature_name] limit",
+} do %>
+  <% content_for :sage_alert_actions do %>
+    <%= link_to "Upgrade plan", "#" %>
+    <%= link_to "Check usage", "#" %>
+  <% end %>
+<% end %>
+
 <%= content_for :heading do %>
 <%= md("
 # Sandbox
