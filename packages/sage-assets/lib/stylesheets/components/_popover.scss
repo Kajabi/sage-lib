@@ -38,6 +38,7 @@ $-popover-panel-offset: sage-spacing(sm);
 
   visibility: hidden;
   z-index: sage-z-index(modal);
+  grid-template-columns: minmax(auto, $-popover-panel-max-size);
   position: absolute;
   width: auto;
   min-width: $-popover-panel-min-size;
