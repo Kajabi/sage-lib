@@ -1,3 +1,55 @@
+<%
+upsell_items = [
+  {
+    value: "Preview",
+    icon: "preview-on",
+    attributes: {
+      "href": "#",
+    },
+  },
+  {
+    value: "Remove",
+    icon: "remove-circle",
+    attributes: {
+      "href": "#",
+    },
+    style: "danger",
+  }
+]
+upsell_items_full = [
+  {
+    value: "Preview",
+    icon: "preview-on",
+    attributes: {
+      "href": "#",
+    },
+  },
+  {
+    value: "Add Downsell",
+    icon: "arrow-corner",
+    attributes: {
+      "href": "#",
+    },
+  },
+  {
+    value: "Remove",
+    icon: "remove-circle",
+    attributes: {
+      "href": "#",
+    },
+    style: "danger",
+  },
+]
+status_items = [
+  {
+    value: "Active",
+  },
+  {
+    value: "Inactive",
+  },
+]
+%>
+
 
 <%= sage_component SageFormSection, {
   title: "Upsells",
@@ -44,14 +96,7 @@
               <%= sage_component SageDropdown, {
                 align: "right",
                 panel_size: "small",
-                items: [
-                  {
-                    value: "Active",
-                  },
-                  {
-                    value: "Inactive",
-                  },
-                ]
+                items: status_items,
               } do %>
                 <%= sage_component SageLabel, {
                   color: "published",
@@ -61,23 +106,7 @@
               <% end %>
               <%= sage_component SageDropdown, {
                 align: "right",
-                items: [
-                  {
-                    value: "Preview",
-                    icon: "preview-on",
-                    attributes: {
-                      "href": "#",
-                    },
-                  },
-                  {
-                    value: "Remove",
-                    icon: "remove-circle",
-                    attributes: {
-                      "href": "#",
-                    },
-                    style: "danger",
-                  },
-                ]
+                items: upsell_items
               } do %>
                 <%= sage_component SageButton, {
                   style: "secondary",
@@ -113,14 +142,7 @@
               <%= sage_component SageDropdown, {
                   align: "right",
                   panel_size: "small",
-                  items: [
-                    {
-                      value: "Active",
-                    },
-                    {
-                      value: "Inactive",
-                    },
-                  ]
+                  items: status_items,
                 } do %>
                 <%= sage_component SageLabel, {
                   color: "published",
@@ -130,23 +152,7 @@
               <% end %>
               <%= sage_component SageDropdown, {
                 align: "right",
-                items: [
-                  {
-                    value: "Preview",
-                    icon: "preview-on",
-                    attributes: {
-                      "href": "#",
-                    },
-                  },
-                  {
-                    value: "Remove",
-                    icon: "remove-circle",
-                    attributes: {
-                      "href": "#",
-                    },
-                    style: "danger",
-                  },
-                ]
+                items: upsell_items,
               } do %>
                 <%= sage_component SageButton, {
                   style: "secondary",
@@ -188,14 +194,7 @@
               <%= sage_component SageDropdown, {
                 align: "right",
                 panel_size: "small",
-                items: [
-                  {
-                    value: "Active",
-                  },
-                  {
-                    value: "Inactive",
-                  },
-                ]
+                items: status_items
               } do %>
                 <%= sage_component SageLabel, {
                   color: "published",
@@ -205,30 +204,7 @@
               <% end %>
               <%= sage_component SageDropdown, {
                 align: "right",
-                items: [
-                  {
-                    value: "Preview",
-                    icon: "preview-on",
-                    attributes: {
-                      "href": "#",
-                    },
-                  },
-                  {
-                    value: "Add Downsell",
-                    icon: "arrow-corner",
-                    attributes: {
-                      "href": "#",
-                    },
-                  },
-                  {
-                    value: "Remove",
-                    icon: "remove-circle",
-                    attributes: {
-                      "href": "#",
-                    },
-                    style: "danger",
-                  },
-                ]
+                items: upsell_items_full
               } do %>
                 <%= sage_component SageButton, {
                   style: "secondary",
