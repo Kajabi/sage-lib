@@ -1,3 +1,5 @@
+<h3 class="<%= SageClassnames::SPACERS::XS_BOTTOM %>">Button Trigger</h3>
+
 <%= sage_component SageButton, {
   attributes: {
     "data-js-modaltrigger": "plan-upgrade-modal",
@@ -36,10 +38,10 @@
         } %>
       <% end %>
       <%= sage_component SageButton, {
+        attributes: { "data-js-modal": true },
         raised: false,
         style: "secondary",
         value: "Maybe later",
-        attributes: { "data-js-modal": true }
       } %>
       <%= sage_component SageButton, {
         style: "primary",
@@ -48,6 +50,11 @@
     <% end %>
   <% end %>
 <% end %>
+
+<h3 class="<%= "#{SageClassnames::SPACERS::XS_BOTTOM} #{SageClassnames::SPACERS::SM_TOP}" %>">Manual Trigger</h3>
+<code>
+Sage.modal.openModal("plan-upgrade-modal");
+</code>
 
 <%= content_for :heading do %>
 <%= md("
