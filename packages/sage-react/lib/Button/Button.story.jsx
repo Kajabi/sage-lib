@@ -64,9 +64,9 @@ CopyButton.args = {
   icon: SageTokens.ICONS.COPY,
   iconPosition: Button.ICON_POSITIONS.RIGHT,
   subtle: true,
-  ['data-js-copy-button']: "example@example.com",
-  children: "example@example.com",
-}
+  'data-js-copy-button': 'example@example.com',
+  children: 'example@example.com',
+};
 CopyButton.decorators = [
   (Story) => (
     <>
