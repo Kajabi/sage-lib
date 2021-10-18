@@ -105,7 +105,6 @@
                 },
                 color: "draft",
                 icon: "image",
-                css_classes: "offer-upsells__img-thumb",
               } %>
               <div>
                 <h2 class="t-sage-body-semi">Downsell Title</h2>
@@ -124,9 +123,9 @@
                   ]
                 } do %>
                 <%= sage_component SageLabel, {
-                  color: "draft",
+                  color: "published",
                   interactive_type: :dropdown,
-                  value: "Inactive",
+                  value: "Active",
                 } %>
               <% end %>
               <%= sage_component SageDropdown, {
@@ -173,7 +172,7 @@
         <%= sage_component SageCardList, {} do %>
           <%= sage_component SageCardListItem, {html_attributes: {"style": "display:block"}} do %>
             <%= sage_component SageCardHeader, { title: "Upsell offer", spacer: {bottom: :xs} } %>
-            <%= sage_component SageCardRow, {grid_template: "ets"}  do %>
+            <%= sage_component SageCardRow, {grid_template: "eti"}  do %>
               <%= sage_component SageIconCard, {
                 spacer: { bottom: :xs },
                 html_attributes: {
@@ -199,9 +198,9 @@
                 ]
               } do %>
                 <%= sage_component SageLabel, {
-                  color: "draft",
+                  color: "published",
                   interactive_type: :dropdown,
-                  value: "Inactive",
+                  value: "Active",
                 } %>
               <% end %>
               <%= sage_component SageDropdown, {
@@ -259,7 +258,7 @@
   } do %>
     <%= sage_component SageCardBlock, {
       type_block: true,
-      css_classes: "t-sage--align-center"
+      css_classes: SageClassnames::TYPE_ALIGN_CENTER,
     } do %>
       <%= sage_component SageButton, {
         value: "Add an Upsell",
