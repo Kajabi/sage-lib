@@ -11,17 +11,17 @@
 // Alert
 //
 
-const Alert_color_token = {
-  'INFO': 'info',
-  'SUCCESS': 'success',
-  'WARNING': 'warning',
-  'DANGER': 'danger',
-  'PUBLISHED': 'published',
+export const ALERT_COLOR_OPTIONS = {
+  INFO: 'info',
+  SUCCESS: 'success',
+  WARNING: 'warning',
+  DANGER: 'danger',
+  PUBLISHED: 'published',
 };
 
 export const Alert = {
   tokens: {
-    color: Alert_color_token,
+    color: ALERT_COLOR_OPTIONS,
   },
   defaults: {
     actions: null,
@@ -34,7 +34,7 @@ export const Alert = {
   },
   schema: {
     actions: PropTypes.node,
-    color: PropTypes.oneOf(Object.values(Alert_color_token)),
+    color: PropTypes.oneOf(Object.values(ALERT_COLOR_OPTIONS)),
     description: PropTypes.string,
     dismissable: PropTypes.bool,
     icon: PropTypes.string,

@@ -14,9 +14,9 @@
 
   {{#each props}}
     {{#if options}}
-const {{../name}}_{{name}}_token = {
+export const {{constantCase ../name}}_{{constantCase name}}_OPTIONS = {
       {{#each options}}
-  '{{name}}': {{{asJSPrimitive value}}},
+  {{constantCase name}}: {{{asJSPrimitive value}}},
       {{/each}}
 };
 
@@ -27,7 +27,7 @@ export const {{name}} = {
   tokens: {
   {{#each props}}
     {{#if options}}
-    {{name}}: {{../name}}_{{name}}_token,
+    {{name}}: {{constantCase ../name}}_{{constantCase name}}_OPTIONS,
     {{/if}}
   {{/each}}
   },
@@ -45,7 +45,7 @@ export const {{name}} = {
     {{#if comment}}
     // {{{comment}}}
     {{/if}}
-    {{name}}: PropTypes{{#if options}}.oneOf(Object.values({{../name}}_{{name}}_token)){{else}}.{{{schema.jsx.value}}}{{/if}}{{#if required}}.isRequired{{/if}},
+    {{name}}: PropTypes{{#if options}}.oneOf(Object.values({{constantCase ../name}}_{{constantCase name}}_OPTIONS)){{else}}.{{{schema.jsx.value}}}{{/if}}{{#if required}}.isRequired{{/if}},
   {{/each}}
   },
 };
