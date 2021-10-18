@@ -28,7 +28,7 @@
               title: "Upsell offer",
               spacer: { bottom: :xs }
             } %>
-            <%= sage_component SageCardRow, { grid_template: "ets" }  do %>
+            <%= sage_component SageCardRow, { grid_template: "eti" }  do %>
               <%= sage_component SageIconCard, {
                 spacer: { bottom: :xs },
                 html_attributes: {
@@ -54,9 +54,9 @@
                 ]
               } do %>
                 <%= sage_component SageLabel, {
-                  color: "draft",
+                  color: "published",
                   interactive_type: :dropdown,
-                  value: "Inactive",
+                  value: "Active",
                 } %>
               <% end %>
               <%= sage_component SageDropdown, {
@@ -96,7 +96,7 @@
               title: "Downsell offer",
               spacer: { bottom: :xs }
             } %>
-            <%= sage_component SageCardRow, { grid_template: "its" }  do %>
+            <%= sage_component SageCardRow, { grid_template: "iti" }  do %>
               <i class="sage-icon-arrow-corner sage-spacer-left" aria-hidden="true"></i>
               <%= sage_component SageIconCard, {
                 spacer: { bottom: :xs },
