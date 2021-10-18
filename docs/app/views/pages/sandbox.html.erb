@@ -6,7 +6,15 @@
   title: "You’ve used [percentage] of available [feature_name]",
 } do %>
   <% content_for :sage_alert_actions do %>
-    <%= link_to "Upgrade plan", "#" %>
+    <%= sage_component SageButton, {
+      attributes: {
+        href: "#",
+      },
+      css_classes: SageClassnames::SPACERS::SM_RIGHT,
+      raised: false,
+      style: "secondary",
+      value: "Upgrade plan",
+    } %>
     <%= link_to "Check usage", "#" %>
   <% end %>
 <% end %>
