@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.19.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.19.0...@kajabi/sage@4.19.1) (2021-10-18)
+
+
+### Bug Fixes
+
+* add `content` as a possible default component property ([7a31f42](https://github.com/Kajabi/sage-lib/commit/7a31f4269b01e7655644da45affbaa8d0aa2afe5))
+
+
+
+
+
 # [4.19.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.18.5...@kajabi/sage@4.19.0) (2021-10-18)
 
 
