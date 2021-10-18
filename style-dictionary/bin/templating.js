@@ -16,6 +16,10 @@ Handlebars.registerHelper('asJSPrimitive', function (value) {
   return value;
 });
 
+Handlebars.registerHelper('constantCase', function (value) {
+  return value.toUpperCase().replace('-', '_');
+});
+
 Handlebars.registerHelper('isBaseType', function (value) {
   return value.toLowerCase() === "base";
 });
