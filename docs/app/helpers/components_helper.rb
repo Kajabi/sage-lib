@@ -12,14 +12,6 @@ module ComponentsHelper
   def sage_components
     [
       # Sage Generated Components
-        {
-          title: "next_best_action",
-          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", 
-          scss: "todo",
-          rails: "todo",
-          react: "todo",
-          a11y: "todo",
-        },
       {
         title: "alert",
         description: "Alerts are used to indicate user-driven notifications.",
@@ -306,7 +298,7 @@ module ComponentsHelper
       },
       {
         title: "media_tile",
-        description: "Easily display a tile or set of tiles that showcase products, templates, or other media-based content.", 
+        description: "Easily display a tile or set of tiles that showcase products, templates, or other media-based content.",
         scss: "done",
         docs: "done",
         rails: "done",
@@ -334,6 +326,15 @@ module ComponentsHelper
         react: "no",
         a11y: "todo",
         figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F9Km09NjlZHYWsMP7EGT8tI%2F%255BWIP%255D-Sage-3-%25E2%2580%2594-Admin-Components%3Fnode-id%3D3371%253A9903",
+      },
+      {
+        title: "next_best_action",
+        description: "A specialized component that showcases a Call to Action we'd like the customer to take.",
+        scss: "done",
+        docs: "todo",
+        rails: "done",
+        react: "done",
+        a11y: "todo",
       },
       {
         title: "progress_bar",
