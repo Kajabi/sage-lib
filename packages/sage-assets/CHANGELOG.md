@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.51.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.50.5...@kajabi/sage-assets@0.51.0) (2021-10-18)
+
+
+### Bug Fixes
+
+* **expandable card:** removes right margin from button before element ([a13e90f](https://github.com/Kajabi/sage-lib/commit/a13e90f8d29991f024d483614718550e3d091d3d))
+* **popover:** adds max width to popover and truncates popover links ([c1a0225](https://github.com/Kajabi/sage-lib/commit/c1a02251e4597f5b7892c6401fbf065a93459d78))
+
+
+### Features
+
+* **expandable card:** adds prop to align arrow to right ([fb0aebc](https://github.com/Kajabi/sage-lib/commit/fb0aebc047b6c186702b32a5bfa20978a3a3da33))
+* **expandable card:** adds prop to React component ([5a3931c](https://github.com/Kajabi/sage-lib/commit/5a3931c45779fb33a373fbbaf7c36ff216b566e2))
+* **expandable card:** updates prop name and relocates prop styling ([887eb42](https://github.com/Kajabi/sage-lib/commit/887eb420329a6df7c65e559332fe5e13ee767cdb))
+
+
+
+
+
 ## [0.50.5](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.50.4...@kajabi/sage-assets@0.50.5) (2021-10-13)
 
 

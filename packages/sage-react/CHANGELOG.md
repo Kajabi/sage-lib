@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.60.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.59.8...@kajabi/sage-react@0.60.0) (2021-10-18)
+
+
+### Bug Fixes
+
+* **expandable-card:** patch how state for exanded is initiated to use prop ([db41a9a](https://github.com/Kajabi/sage-lib/commit/db41a9a3ae006f82f91f737b1c5b420eb04431ed))
+
+
+### Features
+
+* **expandable card:** adds prop to React component ([5a3931c](https://github.com/Kajabi/sage-lib/commit/5a3931c45779fb33a373fbbaf7c36ff216b566e2))
+* **expandable card:** updates prop name and relocates prop styling ([887eb42](https://github.com/Kajabi/sage-lib/commit/887eb420329a6df7c65e559332fe5e13ee767cdb))
+
+
+
+
+
 ## [0.59.8](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.59.7...@kajabi/sage-react@0.59.8) (2021-10-13)
 
 **Note:** Version bump only for package @kajabi/sage-react

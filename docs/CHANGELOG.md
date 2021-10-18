@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.19.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.18.5...@kajabi/sage@4.19.0) (2021-10-18)
+
+
+### Bug Fixes
+
+* only allow for assignable component attributes ([b20e6c4](https://github.com/Kajabi/sage-lib/commit/b20e6c45ebf5b653cb524daa4ed82054dbb7cb65))
+
+
+### Features
+
+* **expandable card:** adds prop to align arrow to right ([fb0aebc](https://github.com/Kajabi/sage-lib/commit/fb0aebc047b6c186702b32a5bfa20978a3a3da33))
+* **expandable card:** updates prop name and relocates prop styling ([887eb42](https://github.com/Kajabi/sage-lib/commit/887eb420329a6df7c65e559332fe5e13ee767cdb))
+
+
+
+
+
 ## [4.18.5](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.18.4...@kajabi/sage@4.18.5) (2021-10-13)
 
 **Note:** Version bump only for package @kajabi/sage
