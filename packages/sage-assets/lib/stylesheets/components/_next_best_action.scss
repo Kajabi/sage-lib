@@ -30,6 +30,10 @@ $-next-best-action-colors: (
   .sage-next-best-action--image-on-right & {
     order: 2;
   }
+
+  @media screen and (max-width: sage-breakpoint(md-max)) {
+    display: none;
+  }
 }
 
 .sage-next-best-action__text {
