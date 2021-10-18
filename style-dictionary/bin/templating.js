@@ -65,6 +65,10 @@ Handlebars.registerHelper('constantCase', function (value) {
   return transformed;
 });
 
+Handlebars.registerHelper('constantCase', function (value) {
+  return value.toUpperCase().replace('-', '_');
+});
+
 Handlebars.registerHelper('isBaseType', function (value) {
   return value.toLowerCase() === "base";
 });
