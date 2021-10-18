@@ -20,6 +20,7 @@ export const NextBestAction = ({
     className,
     {
       [`${baseClass}--${cardColor}`]: cardColor,
+      [`${baseClass}--image-on-right`]: image.onRight,
     }
   );
 
@@ -75,6 +76,7 @@ NextBestAction.defaultProps = {
   dismissable: true,
   image: {
     alt: '',
+    onRight: false,
     src: '',
   },
   title: '',
@@ -91,6 +93,7 @@ NextBestAction.propTypes = {
   dismissable: PropTypes.bool,
   image: PropTypes.shape({
     alt: PropTypes.string,
+    onRight: PropTypes.bool,
     src: PropTypes.string,
   }),
   title: PropTypes.string,
