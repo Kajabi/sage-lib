@@ -1,1 +1,55 @@
-
+<tr>
+  <td><%= md('`button`') %></td>
+  <td><%= md('Allows for configurations for a button style and text to be provided.') %>
+  </td>
+  <td>
+    <%= md('```
+button: {
+  style: ["primary" | "secondary" | "danger"],
+  text: String,
+}
+```')
+    %>
+  </td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`card_color`') %></td>
+  <td><%= md('Applies color to card. Options include `draft`, `info`, `success`, `warning`, `danger`') %></td>
+  <td><%= md('`"draft"`, `"info"`, `"success"`, `"warming"`, `"danger"`') %></td>
+  <td><%= md('`"draft"`') %></td>
+</tr>
+<tr>
+  <td><%= md('`desc`') %></td>
+  <td><%= md('Sets the description text to be displayed.') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`dismissable`') %></td>
+  <td><%= md('Allows for a remove icon that can dismiss the component.') %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`true`') %></td>
+</tr>
+<tr>
+  <td><%= md('`image`') %></td>
+  <td><%= md('Allows for configurations for an image `src`, `alt`, and placement.') %>
+  </td>
+  <td>
+    <%= md('```
+image: {
+  alt: String,
+  onRight: Boolean
+  src: String,
+}
+```')
+    %>
+  </td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`title`') %></td>
+  <td><%= md('Sets the title text to be displayed.') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>

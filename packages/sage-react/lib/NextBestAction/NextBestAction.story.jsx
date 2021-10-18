@@ -31,7 +31,7 @@ export default {
 const Template = (args) => <NextBestAction {...args} />;
 export const Default = Template.bind({});
 
-// Wired Click Example
+// Image on Right Example
 export const ImageOnRight = (args) => (
   <NextBestAction
     {...args}
