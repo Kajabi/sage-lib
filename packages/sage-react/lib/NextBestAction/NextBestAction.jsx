@@ -9,6 +9,7 @@ export const NextBestAction = ({
   cardColor,
   className,
   desc,
+  dismissable,
   image,
   title,
 }) => {
@@ -46,6 +47,17 @@ export const NextBestAction = ({
           </Button>
         )}
       </div>
+      {dismissable && (
+        <Button
+          className="sage-next-best-action__close"
+          icon="remove"
+          iconOnly="true"
+          subtle="true"
+          small="true"
+        >
+          Close
+        </Button>
+      )}
     </div>
   );
 };
@@ -60,6 +72,7 @@ NextBestAction.defaultProps = {
   },
   className: '',
   desc: '',
+  dismissable: true,
   image: {
     alt: '',
     src: '',
@@ -75,6 +88,7 @@ NextBestAction.propTypes = {
   cardColor: PropTypes.oneOf(Object.values(NEXT_BEST_ACTION_COLORS)).isRequired,
   className: PropTypes.string,
   desc: PropTypes.string,
+  dismissable: PropTypes.bool,
   image: PropTypes.shape({
     alt: PropTypes.string,
     src: PropTypes.string,
