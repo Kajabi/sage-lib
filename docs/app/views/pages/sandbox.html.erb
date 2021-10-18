@@ -1,3 +1,54 @@
+<%= sage_component SageButton, {
+  attributes: {
+    "data-js-modaltrigger": "plan-upgrade-modal",
+  },
+  style: "primary",
+  value: "Launch upgrade modal",
+} %>
+
+<%= sage_component SageModal, { id: "plan-upgrade-modal" } do %>
+  <%= sage_component SageModalContent, {
+    header_icon: {
+      name: "ban",
+    },
+    title: "&nbsp;".html_safe
+  } do %>
+    <% content_for :sage_header_aside do %>
+      <%= sage_component SageButton, {
+        attributes: { "data-js-modal": true },
+        icon: { name: "remove", style: "only" },
+        style: "secondary",
+        subtle: true,
+        value: "Close Modal",
+      } %>
+    <% end %>
+
+    <h3 class="<%= SageClassnames::SPACERS::XS_BOTTOM %>">Upgrade plan for more [feature]</h3>
+    <p class="<%= SageClassnames::TYPE::BODY %>">You&rsquo;ve reached the [feature] limit for your plan. To [action] a [feature], upgrade your plan.</p>
+
+    <% content_for :sage_footer do %>
+      <% content_for :sage_footer_aside do %>
+        <%= sage_component SageButton, {
+          icon: { name: "email-activity", style: "left" },
+          style: "primary",
+          subtle: true,
+          value: "Check usage",
+        } %>
+      <% end %>
+      <%= sage_component SageButton, {
+        raised: false,
+        style: "secondary",
+        value: "Maybe later",
+        attributes: { "data-js-modal": true }
+      } %>
+      <%= sage_component SageButton, {
+        style: "primary",
+        value: "Upgrade now",
+      } %>
+    <% end %>
+  <% end %>
+<% end %>
+
 <%= content_for :heading do %>
 <%= md("
 # Sandbox
