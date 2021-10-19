@@ -1,3 +1,154 @@
+<%
+plans = [
+  {
+    name: "Beginner",
+    price: 69,
+    duration: "mo",
+    billing: "Billed annually",
+    description: "Try out the core features",
+    current: true,
+    features: [
+      "1 Products",
+      "250 Members",
+      "1k marketing emails",
+      "10K Contacts",
+      "1 Pipeline",
+      "50 landing pages",
+      "1 Admin user",
+      "1 Site",
+      "Kajabi branding",
+      "0% Transaction fee",
+      "Chat bot support",
+      "Live webinars",
+      "Standard analytics",
+    ]
+  },
+
+  {
+    name: "Basic",
+    price: 149,
+    duration: "mo",
+    billing: "Billed annually",
+    description: "All the basics for starting your new business",
+    current: false,
+    features: [
+      "3 Products",
+      "1k Members",
+      "Unlimited marketing emails",
+      "10K Contacts",
+      "3 Pipelines",
+      "Unlimited landing pages",
+      "1 Admin user",
+      "1 Site",
+      "Kajabi branding",
+      "0% Transaction fee",
+      "Email support",
+      "9-5 PST chat support",
+      "Activation call",
+      "Live webinars",
+      "Standard analytics",
+      "Standard integrations",
+    ]
+  },
+
+  {
+    name: "Growth",
+    price: 199,
+    duration: "mo",
+    billing: "Billed annually",
+    description: "Everything you need for your growing business",
+    current: false,
+    features: [
+      "15 Products",
+      "10k Members",
+      "Unlimited marketing emails",
+      "25K Contacts",
+      "100 Pipelines",
+      "Unlimited landing pages",
+      "10 Admin user",
+      "1 Site",
+      "Custom branding",
+      "0% Transaction fee",
+      "Email support",
+      "24/7 chat support",
+      "Activation call",
+      "Live webinars",
+      "Affiliate program",
+      "Standard analytics",
+      "Standard integrations",
+    ]
+  },
+
+  {
+    name: "Pro",
+    price: 399,
+    duration: "mo",
+    billing: "Billed annually",
+    description: "Advanced features for scaling your business",
+    current: false,
+    features: [
+      "100 Products",
+      "20k Members",
+      "Unlimited marketing emails",
+      "100K Contacts",
+      "100 Pipelines",
+      "Unlimited landing pages",
+      "25 Admin user",
+      "3 Sites",
+      "Custom branding",
+      "0% Transaction fee",
+      "Email support",
+      "24/7 chat support",
+      "Activation call",
+      "Live webinars",
+      "Affiliate program",
+      "Standard analytics",
+      "Standard integrations",
+    ]
+  }
+]
+%>
+
+<%= sage_component SagePanelRow, { grid_template: "ot", vertical_align: "start" } do %>
+  <% plans.each do |plan| %>
+    <%= sage_component SagePanel, {} do %>
+      <%= sage_component SagePanelHeader, {
+        title: plan[:name]
+      } %>
+      <%= sage_component SagePanelBlock, { type_block: true } do %>
+        <h2 class="<%= SageClassnames::TYPE::HEADING_2 %>">
+          $<%= plan[:price] %><span style="font-weight: 500">/<%= plan[:duration] %></span>
+        </h2>
+        <h3 class="<%= "#{SageClassnames::TYPE::BODY} #{SageClassnames::TYPE_COLORS::CHARCOAL}" %>">
+          <%= plan[:billing] %>
+        </h3>
+        <p class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_400}" %>">
+          <%= plan[:description] %>
+        </p>
+      <% end %>
+      <%= sage_component SagePanelBlock, { type_block: true } do %>
+        <%= sage_component SageButton, {
+          disabled: plan[:current],
+          full_width: true,
+          style: "primary",
+          value: plan[:current] ? "Current plan" : "Select",
+        } %>
+        <hr>
+        <%= sage_component SagePanelStack, {} do %>
+          <h3 class="<%= "#{SageClassnames::TYPE::HEADING_6} #{SageClassnames::SPACERS::XS_BOTTOM}" %>">Features</h3>
+
+          <% plan[:features].each do | feature | %>
+            <%= sage_component SagePanelRow, { grid_template: "et" } do %>
+              <%= sage_component SageIcon, { icon: "check-circle", color: "sage", size: "lg" } %>
+              <span class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_400}" %>"><%= feature %></span>
+            <% end %>
+          <% end %>
+        <% end %>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>
+
 <%= content_for :heading do %>
 <%= md("
 # Sandbox
