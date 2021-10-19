@@ -7,14 +7,13 @@
   card_color: "draft",
   desc: "Maximize your profit by adding an Upsell to your order flow. This section might wrap to two lines.",
   dismissable: true,
-  image: {
-    alt: "This is the image alt",
-    src: "next_best_action_graphic.png",
+  graphic: {
+    element: image_tag("next_best_action_graphic.png", alt: ""),
   },
   title: "Offer an additional buy with Upsell",
 } %>
 
-<h3>Image on Right</h3>
+<h3>Graphic on Right</h3>
 <%= sage_component SageNextBestAction, {
   button: {
     style: "primary",
@@ -23,10 +22,9 @@
   card_color: "draft",
   desc: "Maximize your profit by adding an Upsell to your order flow. This section might wrap to two lines.",
   dismissable: true,
-  image: {
-    alt: "This is the image alt",
+  graphic: {
+    element: image_tag("next_best_action_graphic.png", alt: ""),
     onRight: true,
-    src: "next_best_action_graphic.png",
   },
   title: "Offer an additional buy with Upsell",
 } %>

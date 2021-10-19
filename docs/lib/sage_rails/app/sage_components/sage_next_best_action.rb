@@ -7,10 +7,9 @@ class SageNextBestAction < SageComponent
     card_color: [:optional, SageSchemas::STATUSES],
     desc: [:optional, String],
     dismissable: [:optional, TrueClass],
-    image: [:optional, {
-      alt: [:optional, String],
+    graphic: [:optional, {
+      element: [:optional, String],
       onRight: [:optional, TrueClass],
-      src: String
     }],
     title: [:optional, String],
   })

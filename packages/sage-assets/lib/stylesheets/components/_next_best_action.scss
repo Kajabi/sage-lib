@@ -4,7 +4,7 @@
 /// @group sage
 ////
 
-$-next-best-action-image-size: rem(136px);
+$-next-best-action-graphic-size: rem(136px);
 
 $-next-best-action-colors: (
   draft: grey,
@@ -24,10 +24,16 @@ $-next-best-action-colors: (
   border-radius: sage-border(radius-large);
 }
 
-.sage-next-best-action__image {
-  width: $-next-best-action-image-size;
+.sage-next-best-action__graphic {
+  width: $-next-best-action-graphic-size;
 
-  .sage-next-best-action--image-on-right & {
+  > * {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .sage-next-best-action--graphic-on-right & {
     order: 2;
   }
 
@@ -76,7 +82,7 @@ $-next-best-action-colors: (
     opacity: 0.7;
   }
 
-  .sage-next-best-action--image-on-right & {
+  .sage-next-best-action--graphic-on-right & {
     order: 2;
   }
 }

@@ -1,15 +1,14 @@
 <div
   class="sage-next-best-action
   <%= component.card_color ? "sage-next-best-action--#{component.card_color}" : "" %>
-  <%= component.image[:onRight] ? "sage-next-best-action--image-on-right" : "" %>
+  <%= component.graphic[:onRight] ? "sage-next-best-action--graphic-on-right" : "" %>
   <%= component.generated_css_classes %>"
   <%= component.generated_html_attributes.html_safe %>
 >
-  <% if component.image %>
-    <%= image_tag component.image[:src],
-      alt: component.image[:alt].present? ? component.image[:alt] : '',
-      class: "sage-next-best-action__image"
-    %>
+  <% if component.graphic[:element].present? %>
+    <div class="sage-next-best-action__graphic">
+      <%= component.graphic[:element].html_safe %>
+    </div>
   <% end %>
   <div class="sage-next-best-action__text">
     <% if component.title %>

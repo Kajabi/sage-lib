@@ -10,7 +10,7 @@ export const NextBestAction = ({
   className,
   desc,
   dismissable,
-  image,
+  graphic,
   title,
 }) => {
   const baseClass = 'sage-next-best-action';
@@ -20,18 +20,16 @@ export const NextBestAction = ({
     className,
     {
       [`${baseClass}--${cardColor}`]: cardColor,
-      [`${baseClass}--image-on-right`]: image.onRight,
+      [`${baseClass}--graphic-on-right`]: graphic.onRight,
     }
   );
 
   return (
     <div className={classNames}>
-      {image && (
-        <img
-          alt={image.alt}
-          className="sage-next-best-action__image"
-          src={image.src}
-        />
+      {graphic && (
+        <div className="sage-next-best-action__graphic">
+          {graphic.element}
+        </div>
       )}
       <div className="sage-next-best-action__text">
         {title && (
@@ -74,10 +72,9 @@ NextBestAction.defaultProps = {
   className: '',
   desc: '',
   dismissable: true,
-  image: {
-    alt: '',
+  graphic: {
+    element: '',
     onRight: false,
-    src: '',
   },
   title: '',
 };
@@ -91,10 +88,9 @@ NextBestAction.propTypes = {
   className: PropTypes.string,
   desc: PropTypes.string,
   dismissable: PropTypes.bool,
-  image: PropTypes.shape({
-    alt: PropTypes.string,
+  graphic: PropTypes.shape({
+    element: PropTypes.string,
     onRight: PropTypes.bool,
-    src: PropTypes.string,
   }),
   title: PropTypes.string,
 };
