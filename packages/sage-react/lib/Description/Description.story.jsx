@@ -1,6 +1,5 @@
 import React from 'react';
 import { selectArgs } from '../story-support/helpers';
-import { Link } from '../Link';
 import { Description } from './Description';
 
 export default {

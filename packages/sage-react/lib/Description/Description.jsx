@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import uuid from 'react-uuid';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
@@ -20,38 +20,36 @@ export const Description = ({
     'sage-description',
     className,
     {
-      ['sage-description--inline-spread']: inlineSpread,
-      ['sage-description--normalcase-titles']: !allcapsTitles,
+      'sage-description--inline-spread': inlineSpread,
+      'sage-description--normalcase-titles': !allcapsTitles,
     }
   );
 
-  const renderItem = ({ title, data, link }) => {
-    return (
-      <>
-        {title && (
-          <dt className="sage-description__title">
-            {title}
-          </dt>
-        )}
-        {(data && link) && (
-          <Link {...link}>
-            <dd className="sage-description__data">
-              {data}
-            </dd>
-          </Link>
-        )}
-        {(data && !link) && (
+  const renderItem = ({ title, data, link }) => (
+    <>
+      {title && (
+        <dt className="sage-description__title">
+          {title}
+        </dt>
+      )}
+      {(data && link) && (
+        <Link {...link}>
           <dd className="sage-description__data">
             {data}
           </dd>
-        )}
-      </>
-    )
-  };
+        </Link>
+      )}
+      {(data && !link) && (
+        <dd className="sage-description__data">
+          {data}
+        </dd>
+      )}
+    </>
+  );
 
   const renderItems = () => {
     if (items && items.length > 0) {
-      return items.map(item => (
+      return items.map((item) => (
         <div key={item.id || uuid()} className="sage-description__term-group">
           {renderItem(item)}
         </div>
@@ -94,7 +92,7 @@ Description.propTypes = {
   items: PropTypes.arrayOf(PropTypes.shape({
     data: PropTypes.node,
     id: PropTypes.string,
-    link: PropType.string,
+    link: PropTypes.string,
     title: PropTypes.string,
   })),
   title: PropTypes.string,
