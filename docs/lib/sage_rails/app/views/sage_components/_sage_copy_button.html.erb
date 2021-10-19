@@ -1,8 +1,20 @@
-<button
-  class="sage-copy-btn <%= "sage-copy-btn--fill-container" if component.fill_container %> <%= component.generated_css_classes %>"
-  data-js-copy-button="<%= component.value.html_safe %>"
-  type="button"
-  <%= component.generated_html_attributes.html_safe %>
->
-  <%= sage_component SageCopyText, { value: component.value, semibold: component.semibold.present? && component.semibold } %>
-</button>
+<% if component.borderless %>
+  <%= sage_component SageButton, {
+    value: component.value.html_safe,
+    icon: { name: "copy", style: "right" },
+    subtle: true,
+    style: "secondary",
+    attributes: {
+      "data-js-copy-button": component.value.html_safe
+    }
+  } %>
+<% else %>
+  <button
+    class="sage-copy-btn <%= "sage-copy-btn--fill-container" if component.fill_container %> <%= component.generated_css_classes %>"
+    data-js-copy-button="<%= component.value.html_safe %>"
+    type="button"
+    <%= component.generated_html_attributes.html_safe %>
+  >
+    <%= sage_component SageCopyText, { value: component.value, semibold: component.semibold.present? && component.semibold } %>
+  </button>
+<% end %>
