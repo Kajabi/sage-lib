@@ -39,7 +39,7 @@ export const mockProfile = {
       {
         title: 'Contact status',
         data: (
-          <Label 
+          <Label
             value="Member"
             color={Label.COLORS.INFO}
             icon={SageTokens.ICONS.CHECK_CIRCLE_FILLED}
