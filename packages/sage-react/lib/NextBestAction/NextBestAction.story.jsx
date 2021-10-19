@@ -15,7 +15,7 @@ export default {
     dismissable: true,
     image: {
       alt: 'This is the image alt',
-      src: 'https://pyxis.nymag.com/v1/imgs/993/469/02ca372a54c41c1913a15223280297100a-28-indiana-jones.rsquare.w1200.jpg',
+      src: '//source.unsplash.com/random/272x272',
     },
     title: 'Offer an additional buy with Upsell',
   },
