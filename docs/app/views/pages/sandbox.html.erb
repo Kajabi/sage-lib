@@ -225,57 +225,17 @@ Use this scratchpad to test out elements and components in context. Just be sure
     <%# --- Data --- %>
     <%= sage_component SagePanelStack, {} do %>
       <% data[:user_stats].each do | data_group | %>
-
-        <%# NOTE: Mock variation "panel_rows" %>
-        <% case mock_data_as
-          when "panel_rows" %>
-          <% data_group.each do | datum | %>
-            <%= sage_component SagePanelRow, { grid_template: "me", html_attributes: { style: "width: 100%" } } do %>
-              <span class="<%= SageClassnames::TYPE::BODY %> <%= SageClassnames::TYPE_COLORS::CHARCOAL_100 %>">
-                <%= datum[:title] %>
-              </span>
-              <span class="<%= SageClassnames::TYPE::BODY_MED %> <%= SageClassnames::TYPE_COLORS::CHARCOAL_500 %>">
-                <%= datum[:data].html_safe %>
-              </span>
-              <% if datum[:link] %>
-                <%= sage_component SageButton, {
-                  attributes: { href: "#view" },
-                  icon: {
-                    name: "caret-right",
-                    style: "only",
-                  },
-                  style: "primary",
-                  subtle: true,
-                  value: "View",
-                } %>
-              <% end %>
-            <% end %>
-          <% end %>
-
-        <%# NOTE: Mock variation "description" %>
-        <% when "description" %>
-          <%= sage_component SageDescription, {
-            allcaps_titles: false,
-            inline_spread: true,
-            items: data_group,
-          } %>
-        <% end %>
-
+        <%= sage_component SageDescription, {
+          allcaps_titles: false,
+          inline_spread: true,
+          items: data_group,
+        } %>
         <%= sage_component SagePanelDivider, {} %>
       <% end %>
 
       <%= sage_component SageLabelGroup, {} do %>
         <% data[:tags].each do | tag | %>
-          <%= sage_component SageLabel, {
-            color: "draft",
-            interactive_type: :secondary_button,
-            secondary_button: {
-              attributes: { href: "#remove" },
-              icon: "remove",
-              value: "Remove tag",
-            },
-            value: tag,
-          } %>
+          <%= sage_component SageLabel, { color: "draft", value: tag } %>
         <% end %>
         <%= sage_component SageButton, {
           attributes: {
@@ -283,7 +243,7 @@ Use this scratchpad to test out elements and components in context. Just be sure
           },
           style: "primary",
           subtle: true,
-          value: "view all",
+          value: "View all",
         } %>
       <% end %>
     <% end %>
