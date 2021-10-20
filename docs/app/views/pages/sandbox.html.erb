@@ -50,7 +50,6 @@ status_items = [
 ]
 %>
 
-
 <%= sage_component SageFormSection, {
   title: "Upsells",
   subtitle: "An Upsell is an additional and optional Offer that members can also purchase. It is prompted to members after they finish purchasing your initial Offer.",
@@ -59,15 +58,14 @@ status_items = [
     title: "After-purchase flow",
     spacer: {bottom: :xs}
   } %>
-  <%= sage_component SagePanelDivider, {} %>
+  <%= sage_component SagePanelDivider, {
+    text: "After checkout"
+  } %>
   <%= sage_component SageSortable, {
     resource_name: "upsells",
-    spacer: { top: :md }
+    spacer: { top: :xs }
   } do %>
-    <%= sage_component SageSortableItemCustom, {
-      spacer: { bottom: :md },
-      html_attributes: { "style": "padding:0" }
-    } do %>
+    <%= sage_component SageSortableItemCustom, {} do %>
       <%= sage_component SageCard, {
           clear_bottom_padding: true,
           clear_top_padding: true,
@@ -167,10 +165,7 @@ status_items = [
         <% end %>
       <% end %>
     <% end %>
-    <%= sage_component SageSortableItemCustom, {
-      spacer: { bottom: :md },
-      html_attributes: { "style": "padding:0" }
-    } do %>
+    <%= sage_component SageSortableItemCustom, {} do %>
       <%= sage_component SageCard, {
         clear_bottom_padding: true,
         clear_top_padding: true,
@@ -230,7 +225,7 @@ status_items = [
   <% end %>
   <%= sage_component SageCard, {
     border_dashed: true,
-    spacer: { top: "2xs", bottom: :sm }
+    spacer: { top: :sm, bottom: :sm }
   } do %>
     <%= sage_component SageCardBlock, {
       type_block: true,
@@ -247,11 +242,13 @@ status_items = [
       } %>
     <% end %>
   <% end %>
-  <%= sage_component SagePanelDivider, {} %>
+  <%= sage_component SagePanelDivider, {
+    text: "End of flow"
+  } %>
 <% end %>
 <%= sage_component SagePanelDivider, {} %>
 <%= sage_component SageButton, {
-  spacer: {top: :md},
+  spacer: {top: :sm},
   value: "Clear all",
   style: "danger",
   subtle: true,
