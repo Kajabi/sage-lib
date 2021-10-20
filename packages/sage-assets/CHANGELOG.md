@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.51.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.51.0...@kajabi/sage-assets@0.51.1) (2021-10-20)
+
+
+### Bug Fixes
+
+* **avatar:** remove margin top and bottom for centering ([da16813](https://github.com/Kajabi/sage-lib/commit/da16813590d48ce1d2cf6cd3ac475da87397f728))
+
+
+
+
+
 # [0.51.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.50.5...@kajabi/sage-assets@0.51.0) (2021-10-18)
 
 

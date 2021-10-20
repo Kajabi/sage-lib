@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.61.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.60.0...@kajabi/sage-react@0.61.0) (2021-10-20)
+
+
+### Features
+
+* **chart:** stabilizes Chart component by externalizing the charting framework ([a71f585](https://github.com/Kajabi/sage-lib/commit/a71f58566a0a3d61eefc46afa92d58b7c07fb47d))
+* **switch:** sync react features with rails ([cb2c1f4](https://github.com/Kajabi/sage-lib/commit/cb2c1f44601986aa16f2f2fedbabdf65201417ab))
+
+
+
+
+
 # [0.60.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.59.8...@kajabi/sage-react@0.60.0) (2021-10-18)
 
 
