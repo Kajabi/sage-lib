@@ -16,7 +16,10 @@
     <%= component.generated_html_attributes.html_safe %>
   />
 <% else %>
-  <div class="
+<%
+tag = component.in_list ? 'li' : 'div'
+%>
+  <<%= tag %> class="
       sage-switch
       <%= component.has_border ? "sage-switch--has-border" : "" %>
       <%= component.toggle_position ? "sage-switch--toggle-#{component.toggle_position}" : "" %>
@@ -39,5 +42,5 @@
     <% if component.message.present? %>
       <div class="sage-switch__message"><%= component.message %></div>
     <% end %>
-  </div>
+  </<%= tag %>>
 <% end %>

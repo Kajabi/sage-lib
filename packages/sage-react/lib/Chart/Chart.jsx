@@ -8,6 +8,7 @@ import { SageTokens } from '../configs';
 
 export const Chart = ({
   configs,
+  framework,
   data,
   noDataText,
   loading,
@@ -24,10 +25,10 @@ export const Chart = ({
     let chart = null;
     switch (type) {
       case CHART_TYPES.BAR:
-        chart = <Bar data={data} {...configs} />;
+        chart = <Bar data={data} chartingFramework={framework} {...configs} />;
         break;
       case CHART_TYPES.DONUT:
-        chart = <Donut data={data} {...configs} />;
+        chart = <Donut data={data} chartingFramework={framework} {...configs} />;
         break;
       default:
         break;
@@ -59,6 +60,7 @@ Chart.propTypes = {
   configs: PropTypes.shape({}),
   containerStyles: PropTypes.shape({}),
   data: PropTypes.arrayOf(PropTypes.shape(dataPropTypes)),
+  framework: PropTypes.shape({}).isRequired,
   loading: PropTypes.bool,
   noDataText: PropTypes.string,
   type: PropTypes.oneOf(Object.values(Chart.TYPES)).isRequired,
