@@ -23,7 +23,7 @@ jobs:
       - name: Install node and yarn
         env:
           YARN_VERSION: 1.22.5
-          NODE_VERSION: 14.14.0
+          NODE_VERSION: 12.16.1
           ARCH: "x64"
         run: |
           curl -fsSLO --compressed "https://unofficial-builds.nodejs.org/download/release/v$NODE_VERSION/node-v$NODE_VERSION-linux-$ARCH-musl.tar.xz"; \
