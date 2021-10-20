@@ -1,0 +1,99 @@
+<tr>
+  <td><%= md('`active`') %></td>
+  <td><%= md('Enabling this property will return the JS early to not initialize any handlers.') %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`animate`') %></td>
+  <td><%= md('When `true`, in addition to the base fade transition assigned to the drawer, the drawer will animate into view while being displayed. Default direction of this animation runs from the right to left.') %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`css_classes`') %></td>
+  <td><%= md('Outputs additional CSS classes as specified.') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`direction`') %></td>
+  <td><%= md('Sets the direction of the animation when `animate` has been enabled. The option available at this time is "left". This option requires `animate` to be set to `true`.') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`disable_close`') %></td>
+  <td><%= md('Enabling this property will return the JS early to not initialize any handlers.') %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`id`') %></td>
+  <td><%= md('Unique identifier for component. Should match the `data-js-drawertrigger` property on the corresponding button') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil') %></td>
+</tr>
+<tr>
+  <td><%= md('`full`') %></td>
+  <td><%= md('Toggles whether to use the full screen variant of the drawer by attaching `.sage-drawer--full`') %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`remove_content_on_close`') %></td>
+  <td><%= md('Toggles whether to delete the `innerHTML` when closing the drawer.') %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`remote_url`') %></td>
+  <td><%= md('Specify a url which from which to load the drawer content on open. This will be requested & content replaced every time the drawer is opened.') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td colspan="4">
+    <strong>Drawer Content</strong>
+  </td>
+</tr>
+<tr>
+  <td colspan="4">
+    <strong>Events</strong>
+  </td>
+</tr>
+<tr>
+  <td colspan="4">
+    <em>Global/window events</em>
+  </td>
+</tr>
+<tr>
+  <td><%= md('`sage.drawer.active`') %></td>
+  <td colspan="3"><%= md('This event is fired immediately when any drawer has been opened.') %></td>
+</tr>
+<tr>
+  <td><%= md('`sage.drawer.closeAll`') %></td>
+  <td colspan="3"><%= md('Fires on when a drawer has been closed, either from actuating a button, `esc` keypress, or clicking a drawer\'s backdrop.') %></td>
+</tr>
+<tr>
+  <td colspan="4">
+    <em>Individual drawer events</em>
+  </td>
+</tr>
+<tr>
+  <td><%= md('`sage.drawer.opening`') %></td>
+  <td colspan="3"><%= md('This drawer event is fired immediately when a drawer has been opened.') %></td>
+</tr>
+<tr>
+  <td><%= md('`sage.drawer.open`') %></td>
+  <td colspan="3"><%= md('Fired *after* a drawer has completed its loading animation. Note that if `animate` has not been enabled, this event will fire at the same time as `sage.drawer.opening`.') %></td>
+</tr>
+<tr>
+  <td colspan="2"><%= md('**Sections**') %></td>
+  <td colspan="2"><%= md('**`Element`**') %></td>
+</tr>
+<tr>
+  <td><%= md('`sage_header`') %></td>
+  <td><%= md('This area holds the button that closes the drawer. This resides in the header of the component.') %></td>
+  <td colspan="2"><%= md('`SageButton`') %></td>
+</tr>

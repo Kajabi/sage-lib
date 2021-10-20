@@ -1,0 +1,174 @@
+////
+/// Drawer
+///
+/// @group sage
+////
+
+
+$-drawer-padding-x: sage-spacing(md);
+$-drawer-padding-y: sage-spacing(md);
+$-drawer-margin-lg: 6vh;
+$-drawer-margin-xl: 8vh;
+$-drawer-header-image-size: rem(28px);
+
+
+.sage-drawer {
+  visibility: hidden;
+  display: flex;
+  align-items: flex-start;
+  position: fixed;
+  justify-content: center;
+  overflow-y: scroll;
+  z-index: sage-z-index(negative);
+  padding: sage-spacing(md);
+  background-color: rgba(sage-color(charcoal, 500), 0.4);
+  background-image: linear-gradient(
+    rgba(sage-color(charcoal, 200), 0.35) 0%,
+    rgba(sage-color(charcoal, 500), 0.4) 100%
+  );
+  transition: opacity 0.1s ease-out;
+  pointer-events: none;
+  opacity: 0;
+  cursor: default;
+
+  @include position-full;
+
+  @supports (backdrop-filter: blur(3px)) {
+    backdrop-filter: blur(3px);
+  }
+
+  &.sage-drawer--active {
+    visibility: visible;
+    z-index: sage-z-index(drawer, -1);
+    pointer-events: auto;
+    opacity: 1;
+  }
+}
+
+.sage-drawer__container {
+  visibility: hidden;
+  z-index: sage-z-index(drawer);
+  width: calc(100vw - #{sage-spacing(md)});
+  max-width: sage-container(md);
+  margin: 0;
+  border-radius: sage-border(radius);
+  background-color: sage-color(white);
+  box-shadow: sage-shadow(drawer);
+  transition: opacity 0.1s ease-in 0.1s;
+  pointer-events: none;
+  opacity: 0;
+
+  @media (min-width: sage-breakpoint(lg-min)) {
+    margin-top: $-drawer-margin-lg;
+  }
+
+  @media (min-width: sage-breakpoint(xl-min)) {
+    margin-top: $-drawer-margin-xl;
+  }
+
+  [data-sage-animate] & {
+    transform: translateY(-#{sage-spacing(md)});
+    transition: opacity 0.1s ease-in, transform 0.15s ease-out;
+    transition-delay: 0.1s, 0.15s;
+  }
+
+  [data-sage-animate-direction="left"] & {
+    transform: translateX(#{sage-spacing(lg)});
+  }
+
+  .sage-drawer--active & {
+    visibility: visible;
+    transform: none;
+    pointer-events: auto;
+    opacity: 1;
+  }
+
+  .sage-drawer--full & {
+    width: 100%; // TODO: Investigate this size 
+  }
+}
+
+.sage-drawer__header {
+  display: grid;
+  align-items: baseline;
+  margin: $-drawer-padding-y $-drawer-padding-x;
+}
+
+.sage-drawer__header-text {
+  .sage-card__row {
+    gap: sage-spacing(xs);
+  }
+  @media (max-width: sage-breakpoint(sm-max)) {
+    .sage-card__row {
+      flex-wrap: nowrap;
+    }
+  }
+}
+
+.sage-drawer__header-image {
+  align-self: center;
+  width: $-drawer-header-image-size;
+  height: $-drawer-header-image-size;
+}
+
+.sage-drawer__header-aside {
+  margin-left: auto;
+}
+
+.sage-drawer__content {
+  margin: $-drawer-padding-y $-drawer-padding-x;
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+
+  p + p {
+    margin-top: sage-spacing();
+  }
+
+  @include clearfix;
+}
+
+.sage-drawer__content--spacing-panel {
+  @include sage-grid-panel();
+
+  // Undo clearfix
+  &::after {
+    display: none;
+  }
+}
+
+.sage-drawer__content--spacing-card {
+  @include sage-grid-card();
+
+  // Undo clearfix
+  &::after {
+    display: none;
+  }
+}
+
+.sage-drawer__footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: sage-spacing(sm);
+  margin: $-drawer-padding-y $-drawer-padding-x;
+}
+
+.sage-drawer__footer-aside {
+  margin-right: auto;
+}
+
+@media (prefers-reduced-motion) {
+  .sage-drawer {
+    background-color: rgba(sage-color(charcoal, 500), 0.85);
+    backdrop-filter: none;
+  }
+
+  .sage-drawer,
+  .sage-drawer__container,
+  [data-sage-animate] .sage-drawer__container {
+    transform: none;
+    transition: none;
+  }
+}

@@ -1,0 +1,31 @@
+<dialog
+  class="sage-drawer
+    <%= "sage-drawer--active" if component.active %>
+    <%= "sage-drawer--large" if component.large -%>
+    <%= component.generated_css_classes %>
+  "
+  <%= "data-sage-animate" if component.animate.present? %>
+  <%= "data-js-remote-url=#{component.remote_url}" if component.remote_url.present? %>
+  <%- if component.animate.is_a?(Hash) -%>
+    <%- component.animate.each do |key, value| -%>
+      <%= "data-sage-animate-#{ key }=#{ value }" %>
+    <%- end -%>
+  <%- end -%>
+  <%= "data-js-drawer-disable-close" if component.disable_close %>
+  <%= "data-js-drawer-remove-content-on-close" if component.remove_content_on_close %>
+  data-js-drawer="<%= component.id %>"
+  <%= component.generated_html_attributes.html_safe %>
+>
+  <header class="sage-drawer__header">
+    <%= component.header %>
+  </header>
+  <section class="sage-drawer__container" data-js-drawer-container tabindex="-1">
+    <% if component.content.present? %>
+      <%= component.content %>
+    <% else %>
+      <%= sage_component SageModalContent, {} do %>
+        <%= sage_component SageLoader, { type: "spinner" } %>
+      <% end %>
+    <% end %>
+  </section>
+</dialog>
