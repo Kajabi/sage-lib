@@ -17,9 +17,9 @@
     "sassdoc/*"
   ],
   "engines": {
-    "node": "12.x",
-    "npm": "6.x",
-    "yarn": "1.x"
+    "node": ">=12.16.1 <12.x",
+    "npm": ">=6.14.8",
+    "yarn": ">=1.22.0"
   },
   "scripts": {
     "build": "yarn build:sassdoc && yarn build:webpack",
