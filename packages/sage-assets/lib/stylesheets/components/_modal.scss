@@ -108,12 +108,12 @@ $-modal-fullscreen-top-spacing: rem(108px);
   }
 
   .sage-modal--fullscreen & {
-    margin: 0;
-    height: 100%;
-    width: 100%;
-    max-width: 100%;
-    border-radius: 0;
     overflow-y: scroll;
+    height: 100%;
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
   }
 }
 
@@ -124,11 +124,11 @@ $-modal-fullscreen-top-spacing: rem(108px);
   background-color: sage-color(white);
 
   .sage-modal--fullscreen & {
-    margin: 0;
-    padding: $-modal-fullscreen-padding-y $-modal-padding-x;
     position: fixed;
     left: 0;
     right: 0;
+    margin: 0;
+    padding: $-modal-fullscreen-padding-y $-modal-padding-x;
     box-shadow: sage-shadow(sm);
   }
 }
