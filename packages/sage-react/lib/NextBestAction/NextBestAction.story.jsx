@@ -16,10 +16,13 @@ export default {
     ),
     cardColor: NextBestAction.COLORS.DRAFT,
     description: (
-      <div>
-        <p>Maximize your profit by adding an Upsell to your order flow. This section might wrap to two lines.</p>
-        <p>Here's the second line. It has some text also.</p>
-      </div>
+      <>
+        <p>
+          Maximize your profit by adding an Upsell to your order flow.
+          This section might wrap to two lines.
+        </p>
+        <p>Here is the second line. It has some text also.</p>
+      </>
     ),
     dismissable: true,
     graphic: {
