@@ -9,7 +9,7 @@ class SageNextBestAction < SageComponent
     dismissable: [:optional, TrueClass],
     graphic: [:optional, {
       element: [:optional, String],
-      onRight: [:optional, TrueClass],
+      on_right: [:optional, TrueClass],
     }],
     title: [:optional, String],
   })
