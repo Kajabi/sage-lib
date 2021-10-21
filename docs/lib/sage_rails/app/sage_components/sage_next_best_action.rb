@@ -1,7 +1,6 @@
 class SageNextBestAction < SageComponent
   set_attribute_schema({
     card_color: [:optional, SageSchemas::STATUSES],
-    description: [:optional, String],
     dismissable: [:optional, TrueClass],
     graphic: [:optional, {
       element: [:optional, String],
@@ -11,6 +10,6 @@ class SageNextBestAction < SageComponent
   })
 
   def sections
-    %w(actions)
+    %w(actions description)
   end
 end

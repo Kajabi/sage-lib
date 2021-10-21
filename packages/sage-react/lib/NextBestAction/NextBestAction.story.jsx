@@ -1,17 +1,26 @@
 import React from 'react';
 import { selectArgs } from '../story-support/helpers';
 import { NextBestAction } from './NextBestAction';
+import { Button } from '../Button';
 
 export default {
   title: 'Sage/Next Best Action',
   component: NextBestAction,
   args: {
-    button: {
-      style: NextBestAction.BUTTON_COLORS.PRIMARY,
-      text: 'Add an Upsell',
-    },
+    actions: (
+      <Button
+        color={Button.COLORS.PRIMARY}
+      >
+        Add an Upsell
+      </Button>
+    ),
     cardColor: NextBestAction.COLORS.DRAFT,
-    description: (<div><p>Maximize your profit by adding an Upsell to your order flow. This section might wrap to two lines.</p><p>Here's the second line. It has some text also.</p></div>),
+    description: (
+      <div>
+        <p>Maximize your profit by adding an Upsell to your order flow. This section might wrap to two lines.</p>
+        <p>Here's the second line. It has some text also.</p>
+      </div>
+    ),
     dismissable: true,
     graphic: {
       element: (<img src="//source.unsplash.com/random/272x272" alt="" />)
@@ -20,9 +29,6 @@ export default {
   },
   argTypes: {
     ...selectArgs({
-      button: {
-        style: NextBestAction.BUTTON_COLORS,
-      },
       cardColor: NextBestAction.COLORS,
     }),
   },

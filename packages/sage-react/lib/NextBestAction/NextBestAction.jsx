@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { Button } from '../Button';
-import { NEXT_BEST_ACTION_BUTTON_COLORS, NEXT_BEST_ACTION_COLORS } from './configs';
+import { NEXT_BEST_ACTION_COLORS } from './configs';
 
 export const NextBestAction = ({
-  button,
+  actions,
   cardColor,
   className,
   description,
@@ -26,7 +26,7 @@ export const NextBestAction = ({
 
   return (
     <div className={classNames}>
-      {graphic && (
+      {graphic.element && (
         <div className="sage-next-best-action__graphic">
           {graphic.element}
         </div>
@@ -40,21 +40,15 @@ export const NextBestAction = ({
             {description}
           </div>
         )}
-        {button && (
-          <Button
-            color={button.style}
-          >
-            {button.text}
-          </Button>
-        )}
+        {actions}
       </div>
       {dismissable && (
         <Button
           className="sage-next-best-action__close"
           icon="remove"
-          iconOnly="true"
-          subtle="true"
-          small="true"
+          iconOnly={true}
+          subtle={true}
+          small={true}
         >
           Close
         </Button>
@@ -63,35 +57,28 @@ export const NextBestAction = ({
   );
 };
 
-NextBestAction.BUTTON_COLORS = NEXT_BEST_ACTION_BUTTON_COLORS;
 NextBestAction.COLORS = NEXT_BEST_ACTION_COLORS;
 
 NextBestAction.defaultProps = {
-  button: {
-    style: NextBestAction.BUTTON_COLORS.DANGER,
-    text: '',
-  },
+  actions: null,
   className: '',
-  description: '',
+  description: null,
   dismissable: true,
   graphic: {
-    element: '',
+    element: null,
     onRight: false,
   },
   title: '',
 };
 
 NextBestAction.propTypes = {
-  button: PropTypes.shape({
-    style: PropTypes.oneOf(Object.values(NEXT_BEST_ACTION_BUTTON_COLORS)),
-    text: PropTypes.string,
-  }),
+  actions: PropTypes.node,
   cardColor: PropTypes.oneOf(Object.values(NEXT_BEST_ACTION_COLORS)).isRequired,
   className: PropTypes.string,
-  description: PropTypes.string,
+  description: PropTypes.node,
   dismissable: PropTypes.bool,
   graphic: PropTypes.shape({
-    element: PropTypes.string,
+    element: PropTypes.node,
     onRight: PropTypes.bool,
   }),
   title: PropTypes.string,

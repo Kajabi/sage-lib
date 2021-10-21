@@ -14,9 +14,9 @@
     <% if component.title %>
       <h3 class="sage-next-best-action__title"><%= component.title %></h3>
     <% end %>
-    <% if component.description %>
+    <% if content_for? :sage_description %>
       <div class="sage-next-best-action__description">
-        <%= component.description.html_safe %>
+        <%= content_for :sage_description %>
       </div>
     <% end %>
     <% if content_for? :sage_actions %>
