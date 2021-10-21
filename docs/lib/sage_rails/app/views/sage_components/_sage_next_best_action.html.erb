@@ -14,8 +14,10 @@
     <% if component.title %>
       <h3 class="sage-next-best-action__title"><%= component.title %></h3>
     <% end %>
-    <% if component.desc %>
-      <p class="sage-next-best-action__desc"><%= component.desc %></p>
+    <% if component.description %>
+      <div class="sage-next-best-action__description">
+        <%= component.description.html_safe %>
+      </div>
     <% end %>
     <% if component.button %>
       <%= sage_component SageButton, {

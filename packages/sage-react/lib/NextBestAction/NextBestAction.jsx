@@ -8,7 +8,7 @@ export const NextBestAction = ({
   button,
   cardColor,
   className,
-  desc,
+  description,
   dismissable,
   graphic,
   title,
@@ -35,8 +35,10 @@ export const NextBestAction = ({
         {title && (
           <h3 className="sage-next-best-action__title">{title}</h3>
         )}
-        {desc && (
-          <p className="sage-next-best-action__desc">{desc}</p>
+        {description && (
+          <div className="sage-next-best-action__description">
+            {description}
+          </div>
         )}
         {button && (
           <Button
@@ -70,7 +72,7 @@ NextBestAction.defaultProps = {
     text: '',
   },
   className: '',
-  desc: '',
+  description: '',
   dismissable: true,
   graphic: {
     element: '',
@@ -86,7 +88,7 @@ NextBestAction.propTypes = {
   }),
   cardColor: PropTypes.oneOf(Object.values(NEXT_BEST_ACTION_COLORS)).isRequired,
   className: PropTypes.string,
-  desc: PropTypes.string,
+  description: PropTypes.string,
   dismissable: PropTypes.bool,
   graphic: PropTypes.shape({
     element: PropTypes.string,

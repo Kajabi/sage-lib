@@ -11,7 +11,7 @@ export default {
       text: 'Add an Upsell',
     },
     cardColor: NextBestAction.COLORS.DRAFT,
-    desc: 'Maximize your profit by adding an Upsell to your order flow. This section might wrap to two lines.',
+    description: (<div><p>Maximize your profit by adding an Upsell to your order flow. This section might wrap to two lines.</p><p>Here's the second line. It has some text also.</p></div>),
     dismissable: true,
     graphic: {
       element: (<img src="//source.unsplash.com/random/272x272" alt="" />)

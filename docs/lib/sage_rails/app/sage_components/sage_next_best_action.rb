@@ -5,7 +5,7 @@ class SageNextBestAction < SageComponent
       text: String
     }],
     card_color: [:optional, SageSchemas::STATUSES],
-    desc: [:optional, String],
+    description: [:optional, String],
     dismissable: [:optional, TrueClass],
     graphic: [:optional, {
       element: [:optional, String],
