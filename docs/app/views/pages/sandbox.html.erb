@@ -94,8 +94,8 @@ status_items = [
                 <div class="upsell__graphic">
                   <%= sage_component SageIcon, { icon: "image", color: "grey-500", size: "3xl" } %>
                 </div>
-                <div>
-                  <h2 class="<%= SageClassnames::TYPE::BODY_SEMI %>"><%= upsell[:title] %></h2>
+                <div class="<%= SageClassnames::TYPE::BODY %>">
+                  <h2><%= link_to upsell[:title], "#", class: SageClassnames::TYPE::BODY_SEMI %></h2>
                   <p class="<%= SageClassnames::TYPE_COLORS::CHARCOAL_100 %>"><%= upsell[:price] %></p>
                 </div>
                 <%= sage_component SageDropdown, {
@@ -148,8 +148,8 @@ status_items = [
                   <div class="upsell__graphic">
                     <%= sage_component SageIcon, { icon: "image", color: "grey-500", size: "3xl" } %>
                   </div>
-                  <div>
-                    <h2 class="<%= SageClassnames::TYPE::BODY_SEMI %>"><%= upsell[:downsell][:title] %></h2>
+                  <div class="<%= SageClassnames::TYPE::BODY %>">
+                    <h2><%= link_to upsell[:downsell][:title], "#", class: SageClassnames::TYPE::BODY_SEMI %></h2>
                     <p class="<%= SageClassnames::TYPE_COLORS::CHARCOAL_100 %>"><%= upsell[:downsell][:price] %></p>
                   </div>
                   <%= sage_component SageDropdown, {
