@@ -335,6 +335,7 @@ module ComponentsHelper
         rails: "done",
         react: "done",
         a11y: "todo",
+        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2Fc8Wj1s2jJJriXqZf016Tw3%2FNext-Best-Actions%3Fnode-id%3D1973%253A13595"
       },
       {
         title: "progress_bar",
