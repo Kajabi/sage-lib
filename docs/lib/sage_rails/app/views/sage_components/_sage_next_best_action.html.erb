@@ -25,6 +25,7 @@
   </div>
   <% if component.dismissable %>
     <%= sage_component SageButton, {
+      attributes: component.dismiss_attributes.present? ? component.dismiss_attributes : nil,
       value: "Close",
       icon: {
         style: "only",

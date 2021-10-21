@@ -2,6 +2,9 @@
 <%= sage_component SageNextBestAction, {
   card_color: "draft",
   dismissable: true,
+  dismiss_attributes: {
+    onclick: "console.log('Im a js message')",
+  },
   graphic: {
     element: image_tag("next_best_action_graphic.png", alt: ""),
   },
