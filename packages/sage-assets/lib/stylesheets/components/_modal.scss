@@ -10,8 +10,7 @@ $-modal-padding-y: sage-spacing(md);
 $-modal-margin-lg: 6vh;
 $-modal-margin-xl: 8vh;
 $-modal-header-image-size: rem(28px);
-$-modal-fullscreen-padding-y: rem(18px);
-$-modal-fullscreen-top-spacing: rem(108px);
+$-modal-fullscreen-top-spacing: rem(104px);
 
 
 .sage-modal {
@@ -128,7 +127,7 @@ $-modal-fullscreen-top-spacing: rem(108px);
     left: 0;
     right: 0;
     margin: 0;
-    padding: $-modal-fullscreen-padding-y $-modal-padding-x;
+    padding: sage-spacer(sm) $-modal-padding-x;
     box-shadow: sage-shadow(sm);
   }
 }
