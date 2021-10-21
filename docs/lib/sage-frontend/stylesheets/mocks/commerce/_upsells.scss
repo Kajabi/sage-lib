@@ -1,0 +1,13 @@
+$-upsell-graphic-width: rem(92px);
+$-upsell-graphic-height: rem(52px);
+
+.upsell {}
+
+.upsell__graphic {
+  width: $-upsell-graphic-width;
+  height: $-upsell-graphic-height;
+}
+
+.upsell__add-downsell-icon {
+  width: $-upsell-graphic-width;
+}
