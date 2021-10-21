@@ -3,7 +3,7 @@
   card_color: "draft",
   dismissable: true,
   dismiss_attributes: {
-    onclick: "console.log('Im a js message')",
+    onclick: "console.log('Add your own dismiss functionality here!')",
   },
   graphic: {
     element: image_tag("next_best_action_graphic.png", alt: ""),
@@ -26,6 +26,9 @@
 <%= sage_component SageNextBestAction, {
   card_color: "draft",
   dismissable: true,
+  dismiss_attributes: {
+    onclick: "console.log('Add your own dismiss functionality here!')",
+  },
   graphic: {
     element: image_tag("next_best_action_graphic.png", alt: ""),
     on_right: true,

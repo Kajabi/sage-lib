@@ -11,6 +11,7 @@ export const NextBestAction = ({
   description,
   dismissable,
   graphic,
+  onClickDismiss,
   title,
 }) => {
   const baseClass = 'sage-next-best-action';
@@ -47,6 +48,7 @@ export const NextBestAction = ({
           className="sage-next-best-action__close"
           icon="remove"
           iconOnly={true}
+          onClick={onClickDismiss}
           subtle={true}
           small={true}
         >
@@ -68,6 +70,7 @@ NextBestAction.defaultProps = {
     element: null,
     onRight: false,
   },
+  onClickDismiss: null,
   title: '',
 };
 
@@ -81,5 +84,6 @@ NextBestAction.propTypes = {
     element: PropTypes.node,
     onRight: PropTypes.bool,
   }),
+  onClickDismiss: PropTypes.func,
   title: PropTypes.string,
 };
