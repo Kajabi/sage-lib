@@ -5,3 +5,50 @@
 Use this scratchpad to test out elements and components in context. Just be sure not to commit your changes. ❤️
 ") %>
 <% end %>
+<%= sage_component SageButton, {
+  style: "primary",
+  icon: { name: "launch", style: "right" },
+  value: "Modal with Header Image",
+  attributes: {
+    "data-js-modaltrigger": "cool-modal-header-image",
+  }
+} %>
+<%= sage_component SageModal, {
+  id: "cool-modal-header-image",
+  fullscreen: true
+} do %>
+  <%= sage_component SageModalContent, {
+    title: "Example Modal"
+  } do %>
+    <% content_for :sage_header_aside do %>
+      <%= sage_component SageButton, {
+        style: "secondary",
+        subtle: true,
+        value: "Close Modal",
+        icon: { name: "remove", style: "only" },
+        attributes: { "data-js-modal": true }
+      } %>
+    <% end %>
+
+    <p class="t-sage-body">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </p>
+
+    <% content_for :sage_footer do %>
+      <% content_for :sage_footer_aside do %>
+        <%= sage_component SageButton, {
+          style: "secondary",
+          subtle: true,
+          value: "Close Modal",
+          attributes: { "data-js-modal": true }
+        } %>
+      <% end %>
+      <%= sage_component SageButton, {
+        style: "primary",
+        icon: { name: "check", style: "left" },
+        value: "Take An Action",
+      } %>
+    <% end %>
+  <% end %>
+<% end %>
