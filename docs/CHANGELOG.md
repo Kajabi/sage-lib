@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.20.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.20.0...@kajabi/sage@4.20.1) (2021-10-20)
+
+**Note:** Version bump only for package @kajabi/sage
+
+
+
+
+
+# [4.20.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.19.1...@kajabi/sage@4.20.0) (2021-10-20)
+
+
+### Features
+
+* **switch:** sync rails switch to have `in_list` and tidy docs ([744dd99](https://github.com/Kajabi/sage-lib/commit/744dd990e423029e4155397a81047508ef7f2c4f))
+
+
+
+
+
 ## [4.19.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.19.0...@kajabi/sage@4.19.1) (2021-10-18)
 
 

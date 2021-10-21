@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.51.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.51.1...@kajabi/sage-assets@0.51.2) (2021-10-20)
+
+
+### Bug Fixes
+
+* **set versions of node, npm, and yarn to match kp:** fix failing release deploy ([971988f](https://github.com/Kajabi/sage-lib/commit/971988fc624c1bcc425296449450bc4ff23c27ee))
+
+
+
+
+
+## [0.51.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.51.0...@kajabi/sage-assets@0.51.1) (2021-10-20)
+
+
+### Bug Fixes
+
+* **avatar:** remove margin top and bottom for centering ([da16813](https://github.com/Kajabi/sage-lib/commit/da16813590d48ce1d2cf6cd3ac475da87397f728))
+
+
+
+
+
 # [0.51.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.50.5...@kajabi/sage-assets@0.51.0) (2021-10-18)
 
 
