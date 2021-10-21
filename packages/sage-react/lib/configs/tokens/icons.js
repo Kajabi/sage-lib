@@ -87,7 +87,7 @@ export const TOKENS_ICONS = {
   GRAPH: 'graph',
   GRANT_OFFER: 'grant-offer',
   HANDLE: 'handle',
-  HANDLE_1: 'handle-1',
+  HANDLE_2: 'handle-2',
   HASHTAG: 'hashtag',
   HELP: 'help',
   HOME: 'home',
