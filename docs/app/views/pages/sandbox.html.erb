@@ -123,9 +123,9 @@ status_items = [
                 <% end %>
               <% end %>
               <% if !upsell[:downsell] %>
-                <%= sage_component SageCardRow, { grid_template: "et", spacer: {top: :xs} }  do %>
+                <%= sage_component SageCardRow, { grid_template: "et", spacer: { top: :xs } }  do %>
                   <div class="upsell__add-downsell-icon">
-                    <i class="sage-icon-arrow-corner sage-spacer-left" aria-hidden="true"></i>
+                    <%= sage_component SageIcon, { icon: "arrow-corner" } %>
                   </div>
                   <%= sage_component SageButton, {
                     style: "primary",
