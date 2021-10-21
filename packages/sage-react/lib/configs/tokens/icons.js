@@ -109,8 +109,6 @@ export const TOKENS_ICONS = {
   LOCK_ALT: 'lock-alt',
   LOOP: 'loop',
   MAIL: 'mail',
-  MAIL_1: 'mail-1',
-  MAIL_2: 'mail-2',
   MAPPED: 'mapped',
   MARGIN_LEFT: 'margin-left',
   MARGIN_RIGHT: 'margin-right',

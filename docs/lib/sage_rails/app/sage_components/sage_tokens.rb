@@ -226,8 +226,6 @@ module SageTokens
     "lock-alt",
     "loop",
     "mail",
-    "mail-1",
-    "mail-2",
     "mapped",
     "margin-left",
     "margin-right",
