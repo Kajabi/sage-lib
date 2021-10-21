@@ -111,7 +111,7 @@ status_items = [
                 <% end %>
                 <%= sage_component SageDropdown, {
                   align: "right",
-                  items: upsell_items
+                  items: upsell[:downsell] ? upsell_items : upsell_items_full,
                 } do %>
                   <%= sage_component SageButton, {
                     style: "secondary",
@@ -135,7 +135,6 @@ status_items = [
                 <% end %>
               <% end %>
             <% end %>
-
             <% if upsell[:downsell] %>
               <%= sage_component SageCardListItem, {
                 html_attributes: { "style": "display:block" }
