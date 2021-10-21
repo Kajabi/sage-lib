@@ -19,11 +19,8 @@
         <%= component.description.html_safe %>
       </div>
     <% end %>
-    <% if component.button %>
-      <%= sage_component SageButton, {
-        style: component.button[:style],
-        value: component.button[:text],
-      } %>
+    <% if content_for? :sage_actions %>
+      <%= content_for :sage_actions %>
     <% end %>
   </div>
   <% if component.dismissable %>

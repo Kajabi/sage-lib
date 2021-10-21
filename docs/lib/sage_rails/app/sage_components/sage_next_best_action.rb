@@ -1,9 +1,5 @@
 class SageNextBestAction < SageComponent
   set_attribute_schema({
-    button: [:optional, {
-      style: [:optional, NilClass, Set.new(["primary", "secondary", "danger"])],
-      text: String
-    }],
     card_color: [:optional, SageSchemas::STATUSES],
     description: [:optional, String],
     dismissable: [:optional, TrueClass],
@@ -13,4 +9,8 @@ class SageNextBestAction < SageComponent
     }],
     title: [:optional, String],
   })
+
+  def sections
+    %w(actions)
+  end
 end

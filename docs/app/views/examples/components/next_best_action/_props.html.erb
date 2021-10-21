@@ -1,19 +1,4 @@
 <tr>
-  <td><%= md('`button`') %></td>
-  <td><%= md('Allows for configurations for a button style and text to be provided.') %>
-  </td>
-  <td>
-    <%= md('```
-button: {
-  style: ["primary" | "secondary" | "danger"],
-  text: String,
-}
-```')
-    %>
-  </td>
-  <td><%= md('`nil`') %></td>
-</tr>
-<tr>
   <td><%= md('`card_color`') %></td>
   <td><%= md('Applies color to card. Options include `draft`, `info`, `success`, `warning`, `danger`') %></td>
   <td><%= md('`"draft"`, `"info"`, `"success"`, `"warning"`, `"danger"`') %></td>
@@ -50,4 +35,13 @@ graphic: {
   <td><%= md('Sets the title text to be displayed.') %></td>
   <td><%= md('String') %></td>
   <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td colspan="2"><%= md('**Sections**') %></td>
+  <td colspan="2"><%= md('**`Element`**') %></td>
+</tr>
+<tr>
+  <td><%= md('`sage_actions`') %></td>
+  <td><%= md('Provides the HTML content for the button component, rendered underneath the title and description.') %></td>
+  <td colspan="2"><%= md('Restricted to Button `sage_component`.') %></td>
 </tr>
