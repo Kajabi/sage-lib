@@ -48,8 +48,25 @@ status_items = [
     value: "Inactive",
   },
 ]
-%>
 
+data = {
+  upsells: [
+    {
+      title: "Upsell Title",
+      price: "$10.00 USD",
+      downsell: {
+        title: "Downsell Title",
+        price: "$10.00 USD"
+      }
+    },
+    {
+      title: "Upsell Title 2",
+      price: "$12.00 USD",
+      downsell: nil
+    }
+  ]
+}
+%>
 <%= sage_component SageFormSection, {
   title: "Upsells",
   subtitle: "An Upsell is an additional and optional Offer that members can also purchase. It is prompted to members after they finish purchasing your initial Offer.",
@@ -61,168 +78,128 @@ status_items = [
   <%= sage_component SagePanelDivider, {
     text: "After checkout"
   } %>
+
   <%= sage_component SageSortable, {
     resource_name: "upsells",
     spacer: { top: :xs }
   } do %>
-    <%= sage_component SageSortableItemCustom, {} do %>
-      <%= sage_component SageCard, {
+    <% data[:upsells].each do | upsell | %>
+      <%= sage_component SageSortableItemCustom, {} do %>
+        <%= sage_component SageCard, {
           clear_bottom_padding: true,
           clear_top_padding: true,
         } do %>
-        <%= sage_component SageCardList, {} do %>
-          <%= sage_component SageCardListItem, {
-            html_attributes: { "style": "display:block" }
-          } do %>
-            <%= sage_component SageCardHeader, {
-              title: "Upsell offer",
-              spacer: { bottom: :xs }
-            } %>
-            <%= sage_component SageCardRow, { grid_template: "eti" }  do %>
-              <%= sage_component SageIconCard, {
-                spacer: { bottom: :xs },
-                html_attributes: {
-                  "style": "height:4rem;width:7.125rem"
-                },
-                color: "draft",
-                icon: "image",
+          <%= sage_component SageCardList, {} do %>
+            <%= sage_component SageCardListItem, {
+              html_attributes: { "style": "display:block" }
+            } do %>
+              <%= sage_component SageCardHeader, {
+                title: "Upsell offer",
+                spacer: { bottom: :xs }
               } %>
-              <div>
-                <h2 class="t-sage-body-semi">Upsell Title</h2>
-                <p class="t-sage--color-charcoal-100">$10.00 USD</p>
-              </div>
-              <%= sage_component SageDropdown, {
-                align: "right",
-                panel_size: "small",
-                items: status_items,
-              } do %>
-                <%= sage_component SageLabel, {
-                  color: "published",
-                  interactive_type: :dropdown,
-                  value: "Active",
+              <%= sage_component SageCardRow, { grid_template: "eti" }  do %>
+                <%= sage_component SageIconCard, {
+                  spacer: { bottom: :xs },
+                  css_classes: "upsell__graphic",
+                  color: "draft",
+                  icon: "image",
                 } %>
-              <% end %>
-              <%= sage_component SageDropdown, {
-                align: "right",
-                items: upsell_items
-              } do %>
-                <%= sage_component SageButton, {
-                  style: "secondary",
-                  icon: { name: "dot-menu-horizontal", style: "only" },
-                  value: "Options",
-                  align: "end",
-                  subtle: true,
-                } %>
-              <% end %>
-            <% end %>
-          <% end %>
-          <%= sage_component SageCardListItem, {
-            html_attributes: { "style": "display:block" }
-          } do %>
-            <%= sage_component SageCardHeader, {
-              title: "Downsell offer",
-              spacer: { bottom: :xs }
-            } %>
-            <%= sage_component SageCardRow, { grid_template: "iti" }  do %>
-              <i class="sage-icon-arrow-corner sage-spacer-left" aria-hidden="true"></i>
-              <%= sage_component SageIconCard, {
-                spacer: { bottom: :xs },
-                html_attributes: {
-                  "style": "height:4rem;width:7.125rem"
-                },
-                color: "draft",
-                icon: "image",
-              } %>
-              <div>
-                <h2 class="t-sage-body-semi">Downsell Title</h2>
-                <p class="t-sage--color-charcoal-100">$10.00 USD</p>
-              </div>
-              <%= sage_component SageDropdown, {
+                <div>
+                  <h2 class="t-sage-body-semi"><%= upsell[:title] %></h2>
+                  <p class="t-sage--color-charcoal-100"><%= upsell[:price] %></p>
+                </div>
+                <%= sage_component SageDropdown, {
                   align: "right",
                   panel_size: "small",
                   items: status_items,
                 } do %>
-                <%= sage_component SageLabel, {
-                  color: "published",
-                  interactive_type: :dropdown,
-                  value: "Active",
-                } %>
+                  <%= sage_component SageLabel, {
+                    color: "published",
+                    interactive_type: :dropdown,
+                    value: "Active",
+                  } %>
+                <% end %>
+                <%= sage_component SageDropdown, {
+                  align: "right",
+                  items: upsell_items
+                } do %>
+                  <%= sage_component SageButton, {
+                    style: "secondary",
+                    icon: { name: "dot-menu-horizontal", style: "only" },
+                    value: "Options",
+                    align: "end",
+                    subtle: true,
+                  } %>
+                <% end %>
               <% end %>
-              <%= sage_component SageDropdown, {
-                align: "right",
-                items: upsell_items,
-              } do %>
-                <%= sage_component SageButton, {
-                  style: "secondary",
-                  icon: { name: "dot-menu-horizontal", style: "only" },
-                  value: "Options",
-                  align: "end",
-                  subtle: true,
-                } %>
-              <% end %>
-            <% end %>
-          <% end %>
-        <% end %>
-      <% end %>
-    <% end %>
-    <%= sage_component SageSortableItemCustom, {} do %>
-      <%= sage_component SageCard, {
-        clear_bottom_padding: true,
-        clear_top_padding: true,
-      } do %>
-        <%= sage_component SageCardList, {} do %>
-          <%= sage_component SageCardListItem, {html_attributes: {"style": "display:block"}} do %>
-            <%= sage_component SageCardHeader, { title: "Upsell offer", spacer: {bottom: :xs} } %>
-            <%= sage_component SageCardRow, {grid_template: "eti"}  do %>
-              <%= sage_component SageIconCard, {
-                spacer: { bottom: :xs },
-                html_attributes: {
-                  "style": "height:4rem;width:7.125rem"
-                },
-                color: "draft",
-                icon: "image",
-              } %>
-              <div>
-                <h2 class="t-sage-body-semi">Upsell Title</h2>
-                <p class="t-sage--color-charcoal-100">$10.00 USD</p>
-              </div>
-              <%= sage_component SageDropdown, {
-                align: "right",
-                panel_size: "small",
-                items: status_items
-              } do %>
-                <%= sage_component SageLabel, {
-                  color: "published",
-                  interactive_type: :dropdown,
-                  value: "Active",
-                } %>
-              <% end %>
-              <%= sage_component SageDropdown, {
-                align: "right",
-                items: upsell_items_full
-              } do %>
-                <%= sage_component SageButton, {
-                  style: "secondary",
-                  icon: { name: "dot-menu-horizontal", style: "only" },
-                  value: "Options",
-                  align: "end",
-                  subtle: true,
-                } %>
+              <% if !upsell[:downsell] %>
+                <%= sage_component SageCardRow, { grid_template: "et" }  do %>
+                  <div class="upsell__add-downsell-icon">
+                    <i class="sage-icon-arrow-corner sage-spacer-left" aria-hidden="true"></i>
+                  </div>
+                  <%= sage_component SageButton, {
+                    style: "primary",
+                    subtle: true,
+                    value: "Add downsell",
+                  } %>
+                <% end %>
               <% end %>
             <% end %>
-          <% end %>
-          <%= sage_component SageCardListItem, { grid_template: "et" } do %>
-            <i class="sage-icon-arrow-corner sage-spacer-left" aria-hidden="true"></i>
-            <%= sage_component SageButton, {
-              style: "primary",
-              subtle: true,
-              value: "Add downsell",
-            } %>
+
+            <% if upsell[:downsell] %>
+              <%= sage_component SageCardListItem, {
+                html_attributes: { "style": "display:block" }
+              } do %>
+                <%= sage_component SageCardHeader, {
+                  title: "Downsell offer",
+                  spacer: { bottom: :xs }
+                } %>
+                <%= sage_component SageCardRow, { grid_template: "iti" }  do %>
+                  <i class="sage-icon-arrow-corner sage-spacer-left" aria-hidden="true"></i>
+                  <%= sage_component SageIconCard, {
+                    spacer: { bottom: :xs },
+                    html_attributes: {
+                      "style": "height:4rem;width:7.125rem"
+                    },
+                    color: "draft",
+                    icon: "image",
+                  } %>
+                  <div>
+                    <h2 class="t-sage-body-semi"><%= upsell[:downsell][:title] %></h2>
+                    <p class="t-sage--color-charcoal-100"><%= upsell[:downsell][:price] %></p>
+                  </div>
+                  <%= sage_component SageDropdown, {
+                      align: "right",
+                      panel_size: "small",
+                      items: status_items,
+                    } do %>
+                    <%= sage_component SageLabel, {
+                      color: "published",
+                      interactive_type: :dropdown,
+                      value: "Active",
+                    } %>
+                  <% end %>
+                  <%= sage_component SageDropdown, {
+                    align: "right",
+                    items: upsell[:downsell] ? upsell_items : upsell_items_full,
+                  } do %>
+                    <%= sage_component SageButton, {
+                      style: "secondary",
+                      icon: { name: "dot-menu-horizontal", style: "only" },
+                      value: "Options",
+                      align: "end",
+                      subtle: true,
+                    } %>
+                  <% end %>
+                <% end %>
+              <% end %>
+            <% end %>
           <% end %>
         <% end %>
       <% end %>
     <% end %>
   <% end %>
+
   <%= sage_component SageCard, {
     border_dashed: true,
     spacer: { top: :sm, bottom: :sm }
@@ -246,7 +223,9 @@ status_items = [
     text: "End of flow"
   } %>
 <% end %>
+
 <%= sage_component SagePanelDivider, {} %>
+
 <%= sage_component SageButton, {
   spacer: {top: :sm},
   value: "Clear all",
