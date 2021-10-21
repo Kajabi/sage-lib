@@ -28,7 +28,8 @@ export default {
     graphic: {
       element: (<img src="//source.unsplash.com/random/272x272" alt="" />)
     },
-    onClickDismiss: () => { console.log('Add your own dismiss functionality here!') },
+    // eslint-disable-next-line no-console
+    onClickDismiss: () => { console.log('Add your own dismiss functionality here!'); },
     title: 'Offer an additional buy with Upsell',
   },
   argTypes: {
