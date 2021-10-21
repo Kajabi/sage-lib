@@ -1,4 +1,21 @@
 <%
+data = {
+  upsells: [
+    {
+      title: "Upsell Title",
+      price: "$10.00 USD",
+      downsell: {
+        title: "Downsell Title",
+        price: "$10.00 USD"
+      }
+    },
+    {
+      title: "Upsell Title 2",
+      price: "$12.00 USD",
+      downsell: nil
+    }
+  ]
+}
 upsell_items = [
   {
     value: "Preview",
@@ -48,40 +65,16 @@ status_items = [
     value: "Inactive",
   },
 ]
-
-data = {
-  upsells: [
-    {
-      title: "Upsell Title",
-      price: "$10.00 USD",
-      downsell: {
-        title: "Downsell Title",
-        price: "$10.00 USD"
-      }
-    },
-    {
-      title: "Upsell Title 2",
-      price: "$12.00 USD",
-      downsell: nil
-    }
-  ]
-}
 %>
 <%= sage_component SageFormSection, {
   title: "Upsells",
   subtitle: "An Upsell is an additional and optional Offer that members can also purchase. It is prompted to members after they finish purchasing your initial Offer.",
 } do %>
-  <%= sage_component SagePanelHeader, {
-    title: "After-purchase flow",
-    spacer: {bottom: :xs}
-  } %>
-  <%= sage_component SagePanelDivider, {
-    text: "After checkout"
-  } %>
-
+  <%= sage_component SagePanelHeader, { title: "After-purchase flow", spacer: { bottom: :xs } } %>
+  <%= sage_component SagePanelDivider, { text: "After checkout" } %>
   <%= sage_component SageSortable, {
     resource_name: "upsells",
-    spacer: { top: :xs }
+    spacer: { top: :sm }
   } do %>
     <% data[:upsells].each do | upsell | %>
       <%= sage_component SageSortableItemCustom, {} do %>
@@ -98,15 +91,12 @@ data = {
                 spacer: { bottom: :xs }
               } %>
               <%= sage_component SageCardRow, { grid_template: "eti" }  do %>
-                <%= sage_component SageIconCard, {
-                  spacer: { bottom: :xs },
-                  css_classes: "upsell__graphic",
-                  color: "draft",
-                  icon: "image",
-                } %>
+                <div class="upsell__graphic">
+                  <%= sage_component SageIcon, { icon: "image", color: "grey-500", size: "3xl" } %>
+                </div>
                 <div>
-                  <h2 class="t-sage-body-semi"><%= upsell[:title] %></h2>
-                  <p class="t-sage--color-charcoal-100"><%= upsell[:price] %></p>
+                  <h2 class="<%= SageClassnames::TYPE::BODY_SEMI %>"><%= upsell[:title] %></h2>
+                  <p class="<%= SageClassnames::TYPE_COLORS::CHARCOAL_100 %>"><%= upsell[:price] %></p>
                 </div>
                 <%= sage_component SageDropdown, {
                   align: "right",
@@ -133,7 +123,7 @@ data = {
                 <% end %>
               <% end %>
               <% if !upsell[:downsell] %>
-                <%= sage_component SageCardRow, { grid_template: "et" }  do %>
+                <%= sage_component SageCardRow, { grid_template: "et", spacer: {top: :xs} }  do %>
                   <div class="upsell__add-downsell-icon">
                     <i class="sage-icon-arrow-corner sage-spacer-left" aria-hidden="true"></i>
                   </div>
@@ -155,18 +145,13 @@ data = {
                   spacer: { bottom: :xs }
                 } %>
                 <%= sage_component SageCardRow, { grid_template: "iti" }  do %>
-                  <i class="sage-icon-arrow-corner sage-spacer-left" aria-hidden="true"></i>
-                  <%= sage_component SageIconCard, {
-                    spacer: { bottom: :xs },
-                    html_attributes: {
-                      "style": "height:4rem;width:7.125rem"
-                    },
-                    color: "draft",
-                    icon: "image",
-                  } %>
+                  <%= sage_component SageIcon, { icon: "arrow-corner", spacer: { left: :md } } %>
+                  <div class="upsell__graphic">
+                    <%= sage_component SageIcon, { icon: "image", color: "grey-500", size: "3xl" } %>
+                  </div>
                   <div>
-                    <h2 class="t-sage-body-semi"><%= upsell[:downsell][:title] %></h2>
-                    <p class="t-sage--color-charcoal-100"><%= upsell[:downsell][:price] %></p>
+                    <h2 class="<%= SageClassnames::TYPE::BODY_SEMI %>"><%= upsell[:downsell][:title] %></h2>
+                    <p class="<%= SageClassnames::TYPE_COLORS::CHARCOAL_100 %>"><%= upsell[:downsell][:price] %></p>
                   </div>
                   <%= sage_component SageDropdown, {
                       align: "right",
@@ -199,35 +184,23 @@ data = {
       <% end %>
     <% end %>
   <% end %>
-
-  <%= sage_component SageCard, {
-    border_dashed: true,
-    spacer: { top: :sm, bottom: :sm }
-  } do %>
-    <%= sage_component SageCardBlock, {
-      type_block: true,
-      css_classes: SageClassnames::TYPE_ALIGN_CENTER,
-    } do %>
-      <%= sage_component SageButton, {
+  <div class="<%= SageClassnames::TYPE_ALIGN_CENTER %>">
+    <%= sage_component SageButton, {
+        spacer: { top: :lg, bottom: :lg },
         value: "Add an Upsell",
-        style: "primary",
-        subtle: true,
+        style: "secondary",
+        raised: false,
         icon: {
           style: "left",
           name: "add"
         },
       } %>
-    <% end %>
-  <% end %>
-  <%= sage_component SagePanelDivider, {
-    text: "End of flow"
-  } %>
+  </div>
+  <%= sage_component SagePanelDivider, { text: "End of flow" } %>
 <% end %>
-
 <%= sage_component SagePanelDivider, {} %>
-
 <%= sage_component SageButton, {
-  spacer: {top: :sm},
+  spacer: { top: :sm },
   value: "Clear all",
   style: "danger",
   subtle: true,
