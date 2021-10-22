@@ -18,7 +18,7 @@ const DefaultBody = ({ onExit }) => (
         content: 'Popover content'
       }}
       actions={(
-        <React.Fragment>
+        <>
           <Button
             color={Button.COLORS.PRIMARY}
             onClick={onExit}
@@ -32,7 +32,7 @@ const DefaultBody = ({ onExit }) => (
           >
             Publish changes
           </Button>
-        </React.Fragment>
+        </>
       )}
       aside={(
         <Button
