@@ -11,6 +11,6 @@ class SageNextBestAction < SageComponent
   })
 
   def sections
-    %w(actions description)
+    %w(next_best_action_actions next_best_action_description)
   end
 end

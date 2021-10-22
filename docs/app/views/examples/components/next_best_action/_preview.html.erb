@@ -10,11 +10,11 @@
   },
   title: "Offer an additional buy with Upsell",
 } do %>
-  <%= content_for :sage_description do %>
+  <%= content_for :sage_next_best_action_description do %>
     <p>Maximize your profit by adding an Upsell to your order flow. This section might wrap to two lines.</p>
     <p>Here is the second line. It has some text also.</p>
   <% end %>
-  <%= content_for :sage_actions do %>
+  <%= content_for :sage_next_best_action_actions do %>
     <%= sage_component SageButton, {
       style: "primary",
       value: "Add an Upsell",
@@ -35,11 +35,11 @@
   },
   title: "Offer an additional buy with Upsell",
 } do %>
-  <%= content_for :sage_description do %>
+  <%= content_for :sage_next_best_action_description do %>
     <p>Maximize your profit by adding an Upsell to your order flow. This section might wrap to two lines.</p>
     <p>Here is the second line. It has some text also.</p>
   <% end %>
-  <%= content_for :sage_actions do %>
+  <%= content_for :sage_next_best_action_actions do %>
     <%= sage_component SageButton, {
       style: "primary",
       value: "Add an Upsell",
