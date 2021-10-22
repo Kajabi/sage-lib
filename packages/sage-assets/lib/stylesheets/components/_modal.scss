@@ -133,7 +133,7 @@ $-modal-fullscreen-top-spacing: rem(104px);
 }
 
 .sage-modal__title {
-  .sage-modal--fullscreen & {
+  .sage-modal__header--has-header-actions & {
     order: -1; /* causes the header-title area to be second in the visual order */
   }
 }
@@ -164,7 +164,7 @@ $-modal-fullscreen-top-spacing: rem(104px);
 .sage-modal__header-aside {
   margin-left: auto;
 
-  .sage-modal--fullscreen & {
+  .sage-modal__header--has-header-actions & {
     order: -2; /* causes the header-aside area to be first in the visual order */
     margin-left: 0;
   }
