@@ -23,6 +23,9 @@ export const ModalHeader = ({
   const classNames = classnames(
     'sage-modal__header',
     className,
+    {
+      'sage-modal__header--has-header-actions': actions,
+    },
   );
 
   const headerActionsClassNames = classnames(
