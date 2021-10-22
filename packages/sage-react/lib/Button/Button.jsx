@@ -6,7 +6,7 @@ import { SageTokens } from '../configs';
 import { ButtonGroup } from './ButtonGroup';
 import { BUTTON_COLORS, BUTTON_ICON_POSITIONS } from './configs';
 
-export const Button = ({
+export const Button = React.forwardRef(({
   alignEnd,
   children,
   className,
@@ -23,7 +23,7 @@ export const Button = ({
   small,
   subtle,
   ...rest
-}) => {
+}, ref) => {
   const { to, href } = rest;
   const isLink = to || href;
   const TagName = isLink ? Link : 'button';
@@ -76,6 +76,7 @@ export const Button = ({
 
   return (
     <TagName
+      ref={ref}
       className={classNames}
       aria-disabled={isLink && disabled}
       disabled={!isLink && disabled}
@@ -85,7 +86,7 @@ export const Button = ({
       {renderContent()}
     </TagName>
   );
-};
+});
 
 Button.Group = ButtonGroup;
 Button.COLORS = BUTTON_COLORS;
