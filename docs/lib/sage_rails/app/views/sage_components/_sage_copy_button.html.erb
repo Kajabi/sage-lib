@@ -1,9 +1,10 @@
 <% if component.borderless %>
   <%= sage_component SageButton, {
-    value: component.value.html_safe,
+    css_classes: "sage-copy-btn sage-copy-btn--borderless",
     icon: { name: "copy", style: "right" },
     subtle: true,
     style: "secondary",
+    value: component.value.html_safe,
     attributes: {
       "data-js-copy-button": component.value.html_safe
     }
