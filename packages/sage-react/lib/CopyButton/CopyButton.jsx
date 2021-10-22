@@ -1,39 +1,74 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import { Button } from '../Button';
 import { CopyText } from '../CopyText';
+import { Toast } from '../Toast';
+import { SageTokens } from '../configs';
+import { render } from 'enzyme';
 
-export const CopyButton = ({ children, className, fillContainer, semibold }) => {
+export const CopyButton = ({
+  borderless,
+  children,
+  className,
+  fillContainer,
+  semibold
+ }) => {
   const classNames = classnames(
     'sage-copy-btn',
     className,
     {
       'sage-copy-btn--fill-container': fillContainer,
+      'sage-copy-btn--borderless': borderless,
     }
   );
 
-  const copyBlockRef = useRef(null);
   const btnRef = useRef(null);
 
   const onClick = () => {
-    copyBlockRef.current.select();
-    document.execCommand('copy');
-    btnRef.current.focus();
+    navigator.clipboard.writeText(btnRef.current.innerText);
   };
-
-  return (
-    <>
-      <button ref={btnRef} className={classNames} type="button" onClick={onClick}>
-        <CopyText semibold={semibold}>
+  
+  const renderCopyButton = () => {
+    if (borderless) {
+      return (
+        <Button
+          ref={btnRef}
+          className={classNames}
+          color={Button.COLORS.SECONDARY}
+          icon={SageTokens.ICONS.COPY}
+          iconPosition={Button.ICON_POSITIONS.RIGHT}
+          subtle={true}
+          type="button"
+          onClick={onClick}
+        >
           {children}
-        </CopyText>
-      </button>
-      <textarea ref={copyBlockRef} className="visually-hidden" defaultValue={children} />
-    </>
+        </Button>
+      )
+    } else {
+      return (
+        <>
+          <button 
+            ref={btnRef} 
+            className={classNames} 
+            type="button" 
+            onClick={onClick}
+          >
+            <CopyText semibold={semibold}>
+              {children}
+            </CopyText>
+          </button>
+        </>
+      )
+    }
+  };
+  return (
+    renderCopyButton()
   );
 };
 
 CopyButton.defaultProps = {
+  borderless: false,
   children: null,
   className: null,
   fillContainer: false,
@@ -41,6 +76,7 @@ CopyButton.defaultProps = {
 };
 
 CopyButton.propTypes = {
+  borderless: PropTypes.bool,
   children: PropTypes.node,
   className: PropTypes.string,
   fillContainer: PropTypes.bool,
