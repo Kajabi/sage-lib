@@ -20,6 +20,11 @@
             <%= content_for :sage_header_aside %>
           </aside>
         <% end %>
+        <% if content_for?(:sage_header_actions) %>
+          <div class="sage-modal__header-actions">
+            <%= content_for :sage_header_actions %>
+          </div>
+        <% end %>
       <% end %>
       <% if component.subheader %>
         <%= sage_component SageCardRow, { grid_template: "te" } do %>
@@ -43,7 +48,7 @@
         <%= content_for :sage_header_indicator %>
       <% end %>
     </div>
-    
+
   </header>
 <% else %>
   <% if content_for?(:sage_header_aside) %>

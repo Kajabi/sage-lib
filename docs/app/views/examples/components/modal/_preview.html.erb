@@ -40,6 +40,14 @@
         "data-js-modaltrigger": "cool-modal-spaced",
       }
     } %>
+    <%= sage_component SageButton, {
+      style: "primary",
+      icon: { name: "launch", style: "right" },
+      value: "Fullscreen Modal",
+      attributes: {
+        "data-js-modaltrigger": "cool-modal-fullscreen",
+      }
+    } %>
   <% end %>
 
   <%# Standard Modal %>
@@ -280,6 +288,43 @@
           value: "Take An Action",
         } %>
       <% end %>
+    <% end %>
+  <% end %>
+
+  <%# Fullscreen Modal %>
+  <%= sage_component SageModal, {
+    id: "cool-modal-fullscreen",
+    fullscreen: true
+  } do %>
+    <%= sage_component SageModalContent, {
+      title: "Example Modal"
+    } do %>
+      <% content_for :sage_header_aside do %>
+        <%= sage_component SageButton, {
+          style: "secondary",
+          subtle: true,
+          value: "Close Modal",
+          icon: { name: "remove", style: "only" },
+          attributes: { "data-js-modal": true }
+        } %>
+      <% end %>
+
+      <% content_for :sage_header_actions do %>
+        <%= sage_component SageButton, {
+          value: "Save changes",
+          subtle: true,
+          style: "primary",
+        } %>
+        <%= sage_component SageButton, {
+          value: "Publish changes",
+          style: "primary",
+        } %>
+      <% end %>
+
+      <p class="t-sage-body">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
     <% end %>
   <% end %>
 
