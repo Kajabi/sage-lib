@@ -1,0 +1,95 @@
+////
+/// next_best_action
+///
+/// @group sage
+////
+
+$-next-best-action-graphic-size: rem(136px);
+
+$-next-best-action-colors: (
+  draft: grey,
+  info: primary,
+  published: sage,
+  success: sage,
+  warning: yellow,
+  danger: red,
+);
+
+.sage-next-best-action {
+  display: flex;
+  gap: sage-spacing(md);
+  flex-direction: row;
+  align-items: center;
+  padding: sage-spacing(md);
+  border-radius: sage-border(radius-large);
+}
+
+.sage-next-best-action__graphic {
+  width: $-next-best-action-graphic-size;
+
+  > * {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .sage-next-best-action--graphic-on-right & {
+    order: 2;
+  }
+
+  @media screen and (max-width: sage-breakpoint(md-max)) {
+    display: none;
+  }
+}
+
+.sage-next-best-action__text {
+  flex-grow: 1;
+
+  .sage-next-best-action--reverse & {
+    width: 100%;
+  }
+}
+
+.sage-next-best-action__title {
+  margin-bottom: sage-spacing(xs);
+}
+
+.sage-next-best-action__description {
+  margin-bottom: sage-spacing(sm);
+}
+
+.sage-next-best-action__close {
+  align-self: flex-start;
+  height: rem(20px);
+  width: rem(20px);
+  padding: 0;
+  font-size: sage-font-size(xl, false);
+  line-height: 1;
+  background-color: transparent;
+  border: 0;
+  appearance: none;
+
+  @each $name, $color in $-next-best-action-colors {
+    .sage-next-best-action--#{$name} & {
+      color: sage-color($color, 500);
+
+      @include sage-focus-outline($outline-offset-inline: 3px, $outline-offset-block: 3px);
+      @include sage-focus-outline--update-color(sage-color($color, 500));
+    }
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  .sage-next-best-action--graphic-on-right & {
+    order: 2;
+  }
+}
+
+@each $name, $color in $-next-best-action-colors {
+  .sage-next-best-action--#{$name} {
+    background: sage-color($color, 100);
+    border: 1px solid sage-color($color, 400);
+  }
+}

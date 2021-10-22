@@ -1,0 +1,48 @@
+<h3>Default</h3>
+<%= sage_component SageNextBestAction, {
+  card_color: "draft",
+  dismissable: true,
+  dismiss_attributes: {
+    onclick: "console.log('Add your own dismiss functionality here!')",
+  },
+  graphic: {
+    element: image_tag("next_best_action_graphic.png", alt: ""),
+  },
+  title: "Offer an additional buy with Upsell",
+} do %>
+  <%= content_for :sage_next_best_action_description do %>
+    <p>Maximize your profit by adding an Upsell to your order flow. This section might wrap to two lines.</p>
+    <p>Here is the second line. It has some text also.</p>
+  <% end %>
+  <%= content_for :sage_next_best_action_actions do %>
+    <%= sage_component SageButton, {
+      style: "primary",
+      value: "Add an Upsell",
+    } %>
+  <% end %>
+<% end %>
+
+<h3>Graphic on Right</h3>
+<%= sage_component SageNextBestAction, {
+  card_color: "draft",
+  dismissable: true,
+  dismiss_attributes: {
+    onclick: "console.log('Add your own dismiss functionality here!')",
+  },
+  graphic: {
+    element: image_tag("next_best_action_graphic.png", alt: ""),
+    on_right: true,
+  },
+  title: "Offer an additional buy with Upsell",
+} do %>
+  <%= content_for :sage_next_best_action_description do %>
+    <p>Maximize your profit by adding an Upsell to your order flow. This section might wrap to two lines.</p>
+    <p>Here is the second line. It has some text also.</p>
+  <% end %>
+  <%= content_for :sage_next_best_action_actions do %>
+    <%= sage_component SageButton, {
+      style: "primary",
+      value: "Add an Upsell",
+    } %>
+  <% end %>
+<% end %>

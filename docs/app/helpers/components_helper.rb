@@ -298,7 +298,7 @@ module ComponentsHelper
       },
       {
         title: "media_tile",
-        description: "Easily display a tile or set of tiles that showcase products, templates, or other media-based content.", 
+        description: "Easily display a tile or set of tiles that showcase products, templates, or other media-based content.",
         scss: "done",
         docs: "done",
         rails: "done",
@@ -326,6 +326,17 @@ module ComponentsHelper
         react: "no",
         a11y: "todo",
         figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F9Km09NjlZHYWsMP7EGT8tI%2F%255BWIP%255D-Sage-3-%25E2%2580%2594-Admin-Components%3Fnode-id%3D3371%253A9903",
+      },
+      {
+        title: "next_best_action",
+        description: "A specialized component that showcases a Call to Action we'd like the customer to take.",
+        scss: "done",
+        docs: "todo",
+        rails: "done",
+        react: "done",
+        react_component_slug: "sage-next-best-action--default",
+        a11y: "todo",
+        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2Fc8Wj1s2jJJriXqZf016Tw3%2FNext-Best-Actions%3Fnode-id%3D1973%253A13595"
       },
       {
         title: "progress_bar",
