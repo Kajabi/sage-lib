@@ -71,8 +71,10 @@ export const ModalHeader = ({
 };
 
 ModalHeader.Aside = ModalHeaderAside;
+ModalHeader.Actions = ModalHeaderActions;
 
 ModalHeader.defaultProps = {
+  actions: null,
   aside: null,
   children: null,
   className: null,
@@ -84,6 +86,7 @@ ModalHeader.defaultProps = {
 };
 
 ModalHeader.propTypes = {
+  actions: PropTypes.node,
   aside: PropTypes.node,
   children: PropTypes.node,
   className: PropTypes.string,
