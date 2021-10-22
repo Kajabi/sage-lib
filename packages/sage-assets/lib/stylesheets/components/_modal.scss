@@ -134,7 +134,7 @@ $-modal-fullscreen-top-spacing: rem(104px);
 
 .sage-modal__title {
   .sage-modal--fullscreen & {
-    order: -1;
+    order: -1; /* causes the header-title area to be second in the visual order */
   }
 }
 
@@ -165,7 +165,7 @@ $-modal-fullscreen-top-spacing: rem(104px);
   margin-left: auto;
 
   .sage-modal--fullscreen & {
-    order: -2;
+    order: -2; /* causes the header-aside area to be first in the visual order */
     margin-left: 0;
   }
 }
