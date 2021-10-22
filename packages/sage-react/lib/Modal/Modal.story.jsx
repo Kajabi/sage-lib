@@ -9,7 +9,6 @@ import { Modal } from './Modal';
 const DefaultBody = ({ onExit }) => (
   <>
     <Modal.Header
-      icon={{ color: Icon.COLORS.RED_300, name: Icon.ICONS.DANGER }}
       title="Example Sage Modal"
       popover={{
         title: 'Example popover title',
@@ -17,6 +16,16 @@ const DefaultBody = ({ onExit }) => (
         linkText: 'Learn more about modals',
         content: 'Popover content'
       }}
+      actions={(
+        <Button
+          color={Button.COLORS.PRIMARY}
+          onClick={onExit}
+          subtle={true}
+        >
+          Save changes
+        </Button>
+
+      )}
       aside={(
         <Button
           color={Button.COLORS.SECONDARY}
