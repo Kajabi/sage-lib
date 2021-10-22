@@ -144,7 +144,9 @@ status_items = [
                   spacer: { bottom: :xs }
                 } %>
                 <%= sage_component SageCardRow, { grid_template: "iti" }  do %>
-                  <%= sage_component SageIcon, { icon: "arrow-corner", spacer: { left: :md } } %>
+                  <div class="upsell__add-downsell-icon">
+                    <%= sage_component SageIcon, { icon: "arrow-corner" } %>
+                  </div>
                   <div class="upsell__graphic">
                     <%= sage_component SageIcon, { icon: "image", color: "grey-500", size: "3xl" } %>
                   </div>
@@ -185,7 +187,7 @@ status_items = [
   <% end %>
   <div class="<%= SageClassnames::TYPE_ALIGN_CENTER %>">
     <%= sage_component SageButton, {
-        spacer: { top: :lg, bottom: :lg },
+        spacer: { top: :md, bottom: :md },
         value: "Add an Upsell",
         style: "secondary",
         raised: false,
