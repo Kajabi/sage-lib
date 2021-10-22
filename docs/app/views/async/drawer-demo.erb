@@ -1,0 +1,13 @@
+<%= sage_component SageModalContent, {
+  title: "Drawer Demo" 
+} do %>
+  <% content_for :sage_header_aside do %>
+    <%= sage_component SageButton, {
+      style: "secondary",
+      subtle: true,
+      value: "Close drawer",
+      icon: { name: "remove", style: "only" },
+      attributes: { "data-js-modal": true }
+    } %>
+  <% end %>
+<% end %>

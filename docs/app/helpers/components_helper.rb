@@ -180,6 +180,16 @@ module ComponentsHelper
         figma_embed: "",
       },
       {
+        title: "drawer",
+        description: "A drawer is a component that animates in, over content, to provide more information. A drawer is composed of a header and a content area.",
+        scss: "todo",
+        rails: "todo",
+        react: "todo",
+        a11y: "todo",
+        react_component_slug: "sage-drawer--default",
+        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F9Km09NjlZHYWsMP7EGT8tI%2FSage-3-for-Admin%3Fnode-id%3D14488%253A23019",
+      },
+      {
         title: "dynamic_select",
         description: "A description is about the dynamic select.",
         scss: "done",

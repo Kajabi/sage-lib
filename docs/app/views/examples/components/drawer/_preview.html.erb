@@ -1,0 +1,23 @@
+<%= sage_component SageButton, {
+  value: "Open Drawer",
+  style: "primary",
+  html_attributes: {
+    "data-js-modaltrigger": "test-drawer",
+    "data-js-remote-url": async_path("drawer-demo"),
+  },
+} %>
+
+<%= sage_component SageModal, {
+  drawer: true,
+  id: "test-drawer",
+  remote_url: async_path("modal-demo"),
+  remove_content_on_close: true,
+  disable_background_blur: true,
+  animate: {
+    direction: "left"
+  },
+} do %>
+  <%= sage_component SageModalContent, {} do %>
+    <%= sage_component SageLoader, { type: "spinner" } %>
+  <% end %>
+<% end %>
