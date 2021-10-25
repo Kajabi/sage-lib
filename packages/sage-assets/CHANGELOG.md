@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.52.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.51.2...@kajabi/sage-assets@0.52.0) (2021-10-25)
+
+
+### Features
+
+* **icons:** remove extra mail icons ([dda8155](https://github.com/Kajabi/sage-lib/commit/dda81554655b7404445c70affae8b23f11ceed36))
+* **icons:** update icons per design ([1543c5c](https://github.com/Kajabi/sage-lib/commit/1543c5cf0e4d2101a7cf8be23a466bdea50155a0))
+* **nba:** added hiding of image below md-max breakpoint ([a2920c5](https://github.com/Kajabi/sage-lib/commit/a2920c5eede157afe5f02c51c10fff4b4561f96f))
+* **nba:** added image props to REact component, fixed Rails component conditional ([310251e](https://github.com/Kajabi/sage-lib/commit/310251efcaaafdca34ec6137ca8f570509612e17))
+* **nba:** added option to place image on right of text ([499e1b3](https://github.com/Kajabi/sage-lib/commit/499e1b3f2585b6569fdcdc94be21f7b54f40726b))
+* **nba:** added reverse option ([2f4bb2b](https://github.com/Kajabi/sage-lib/commit/2f4bb2be433a6e44819ba1ee5ea57b07805427f9))
+* **nba:** added styling for close button ([24f922c](https://github.com/Kajabi/sage-lib/commit/24f922cda896b0b3ef7265bf15b2249acbc3e0a3))
+* **nba:** adjusted attributes to be simpler, fixed flex styling ([ddcac81](https://github.com/Kajabi/sage-lib/commit/ddcac81430746b331b4a759c405ffbc89aa8378e))
+* **nba:** began simple styling and markup additions ([7da15b9](https://github.com/Kajabi/sage-lib/commit/7da15b91622e41a9a742168d9e7b6f42aa44c263))
+* **nba:** fixed flex layout, image attributes, and reverse layout ([03b002c](https://github.com/Kajabi/sage-lib/commit/03b002c0f69f118ae221af6ac4d2f74b260dd4ee))
+* **nba:** generated files needed for new nba component ([bec6bd8](https://github.com/Kajabi/sage-lib/commit/bec6bd8423572850496f6191bf6b61fde093dcf6))
+* **nba:** simplified markup and styling for both React and Rails components ([d7dae36](https://github.com/Kajabi/sage-lib/commit/d7dae36e1468f621cc058279777d5b99adcf31e1))
+* **nba:** switched from image to graphic to handle more use cases ([967eb47](https://github.com/Kajabi/sage-lib/commit/967eb47414df1ca998c3d50fffbf667bf693d8a7))
+* **nba:** switched to an open slot for description ([e71c300](https://github.com/Kajabi/sage-lib/commit/e71c3001f1f9c81086820be311330dd386e76f5f))
+
+
+
+
+
 ## [0.51.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.51.1...@kajabi/sage-assets@0.51.2) (2021-10-20)
 
 

@@ -3,6 +3,43 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.62.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.61.1...@kajabi/sage-react@0.62.0) (2021-10-25)
+
+
+### Bug Fixes
+
+* **nba:** fixed graphic proptype, description slot, button props ([afc149a](https://github.com/Kajabi/sage-lib/commit/afc149aa1b57c7409baa6353c64dbeb94829490a))
+* **nba:** fixed linter errors ([b7f8c94](https://github.com/Kajabi/sage-lib/commit/b7f8c94f47f4613a6b2da64c4d5862a0c480987a))
+* **nba:** fixed linter errors ([eef85df](https://github.com/Kajabi/sage-lib/commit/eef85df56b2fc2edf1ce55bd3c086934a5a6a669))
+
+
+### Features
+
+* **icons:** fix js handle-2 icon name ([f2a9f24](https://github.com/Kajabi/sage-lib/commit/f2a9f242a174044d44f1c3ea0516bf44d83564e4))
+* **icons:** remove extra mail icons ([dda8155](https://github.com/Kajabi/sage-lib/commit/dda81554655b7404445c70affae8b23f11ceed36))
+* **icons:** update icons per design ([1543c5c](https://github.com/Kajabi/sage-lib/commit/1543c5cf0e4d2101a7cf8be23a466bdea50155a0))
+* **nba:** added basic markup for React component ([7ad61d7](https://github.com/Kajabi/sage-lib/commit/7ad61d73b4c1e567033f298e12628b07aea27fa3))
+* **nba:** added basic React spec for nba component ([eff2b0a](https://github.com/Kajabi/sage-lib/commit/eff2b0a02f2980d51602f8a326844c45be2fc81b))
+* **nba:** added button props for React component ([f95ef7b](https://github.com/Kajabi/sage-lib/commit/f95ef7b1e42ff91794667d005be170e1114c153a))
+* **nba:** added cardColor to React component ([20c1b9c](https://github.com/Kajabi/sage-lib/commit/20c1b9cd26c74e9e44c3d11e0cc38719580e2499))
+* **nba:** added close button to React component ([5b73531](https://github.com/Kajabi/sage-lib/commit/5b73531aef7112002513643419920b7f2fe00e8d))
+* **nba:** added desc prop to React component ([c92fb18](https://github.com/Kajabi/sage-lib/commit/c92fb18a7b0c069258f877130077ad0cbdfa7683))
+* **nba:** added dismiss_attributes and onClickDismiss for custom functionality ([b805cc6](https://github.com/Kajabi/sage-lib/commit/b805cc6aae0de323f7d7f2352b94bfd3d386d520))
+* **nba:** added graphic for Rails and React components ([cbcbf53](https://github.com/Kajabi/sage-lib/commit/cbcbf530dfcb3e60e49968dda552bcd87a981bc2))
+* **nba:** added image props to REact component, fixed Rails component conditional ([310251e](https://github.com/Kajabi/sage-lib/commit/310251efcaaafdca34ec6137ca8f570509612e17))
+* **nba:** added image.onRight to React story ([35a1893](https://github.com/Kajabi/sage-lib/commit/35a1893483e2ea7d7ca9e9498cd1846bf56c6a8c))
+* **nba:** added option to place image on right of text ([499e1b3](https://github.com/Kajabi/sage-lib/commit/499e1b3f2585b6569fdcdc94be21f7b54f40726b))
+* **nba:** added props table for style guide ([8a55431](https://github.com/Kajabi/sage-lib/commit/8a55431250560a842ec60271e6aca2e7c75dee64))
+* **nba:** added scaffolding for React NBA component ([547c646](https://github.com/Kajabi/sage-lib/commit/547c6464144d48226316a072ecc14448384d8f8d))
+* **nba:** added title to React component ([06cac0d](https://github.com/Kajabi/sage-lib/commit/06cac0d5c1414032f3a8ed01d1573977b8ec8b1a))
+* **nba:** simplified markup and styling for both React and Rails components ([d7dae36](https://github.com/Kajabi/sage-lib/commit/d7dae36e1468f621cc058279777d5b99adcf31e1))
+* **nba:** switched from image to graphic to handle more use cases ([967eb47](https://github.com/Kajabi/sage-lib/commit/967eb47414df1ca998c3d50fffbf667bf693d8a7))
+* **nba:** switched to an open slot for description ([e71c300](https://github.com/Kajabi/sage-lib/commit/e71c3001f1f9c81086820be311330dd386e76f5f))
+
+
+
+
+
 ## [0.61.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.61.0...@kajabi/sage-react@0.61.1) (2021-10-20)
 
 **Note:** Version bump only for package @kajabi/sage-react

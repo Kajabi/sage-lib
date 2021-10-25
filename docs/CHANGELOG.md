@@ -3,6 +3,46 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.21.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.20.1...@kajabi/sage@4.21.0) (2021-10-25)
+
+
+### Bug Fixes
+
+* **nba:** changed onRight to on_right in Rails component ([1728fde](https://github.com/Kajabi/sage-lib/commit/1728fdeb35fb6a72d10319fb3a5d2c58fed70cc5))
+* **nba:** fixed graphic proptype, description slot, button props ([afc149a](https://github.com/Kajabi/sage-lib/commit/afc149aa1b57c7409baa6353c64dbeb94829490a))
+* **nba:** fixed linter errors ([eef85df](https://github.com/Kajabi/sage-lib/commit/eef85df56b2fc2edf1ce55bd3c086934a5a6a669))
+* **nba:** fixed the prop title from iamge to graphic ([1abacc5](https://github.com/Kajabi/sage-lib/commit/1abacc588f2246af00f55780936dbe8012f68c07))
+* **nba:** reverted unrelated stat box Rails component white space ([a73d13f](https://github.com/Kajabi/sage-lib/commit/a73d13f878015f042f63f9a22ed5a784472d91c1))
+* **nba:** switched to using a slot for actions and buttons ([05d4d58](https://github.com/Kajabi/sage-lib/commit/05d4d587c25edbc783a9283a90f17b31bb87ad86))
+
+
+### Features
+
+* **icons:** remove extra mail icons ([dda8155](https://github.com/Kajabi/sage-lib/commit/dda81554655b7404445c70affae8b23f11ceed36))
+* **icons:** update icons per design ([1543c5c](https://github.com/Kajabi/sage-lib/commit/1543c5cf0e4d2101a7cf8be23a466bdea50155a0))
+* **nba:** added button options, renamed color to card_color ([e9139c3](https://github.com/Kajabi/sage-lib/commit/e9139c3ad30c41836ee1bf5bdf141769d6a16a1a))
+* **nba:** added dismiss_attributes and onClickDismiss for custom functionality ([b805cc6](https://github.com/Kajabi/sage-lib/commit/b805cc6aae0de323f7d7f2352b94bfd3d386d520))
+* **nba:** added dismissable option with button ([efb6835](https://github.com/Kajabi/sage-lib/commit/efb68351d2d45d7b61e8d0c5a89d3ec20288013f))
+* **nba:** added figma link, made text updates ([e2fdfcf](https://github.com/Kajabi/sage-lib/commit/e2fdfcf48124c5faa8ca917890c47385e5fa54ed))
+* **nba:** added graphic for Rails and React components ([cbcbf53](https://github.com/Kajabi/sage-lib/commit/cbcbf530dfcb3e60e49968dda552bcd87a981bc2))
+* **nba:** added image props to REact component, fixed Rails component conditional ([310251e](https://github.com/Kajabi/sage-lib/commit/310251efcaaafdca34ec6137ca8f570509612e17))
+* **nba:** added option to place image on right of text ([499e1b3](https://github.com/Kajabi/sage-lib/commit/499e1b3f2585b6569fdcdc94be21f7b54f40726b))
+* **nba:** added props table for style guide ([8a55431](https://github.com/Kajabi/sage-lib/commit/8a55431250560a842ec60271e6aca2e7c75dee64))
+* **nba:** added React Storybook component link ([5e6563f](https://github.com/Kajabi/sage-lib/commit/5e6563f5e08b09bbaa94871f13a81744bcafa2b0))
+* **nba:** adjusted attributes to be simpler, fixed flex styling ([ddcac81](https://github.com/Kajabi/sage-lib/commit/ddcac81430746b331b4a759c405ffbc89aa8378e))
+* **nba:** began simple styling and markup additions ([7da15b9](https://github.com/Kajabi/sage-lib/commit/7da15b91622e41a9a742168d9e7b6f42aa44c263))
+* **nba:** fixed flex layout, image attributes, and reverse layout ([03b002c](https://github.com/Kajabi/sage-lib/commit/03b002c0f69f118ae221af6ac4d2f74b260dd4ee))
+* **nba:** generated files needed for new nba component ([bec6bd8](https://github.com/Kajabi/sage-lib/commit/bec6bd8423572850496f6191bf6b61fde093dcf6))
+* **nba:** simplified markup and styling for both React and Rails components ([d7dae36](https://github.com/Kajabi/sage-lib/commit/d7dae36e1468f621cc058279777d5b99adcf31e1))
+* **nba:** switched from image to graphic to handle more use cases ([967eb47](https://github.com/Kajabi/sage-lib/commit/967eb47414df1ca998c3d50fffbf667bf693d8a7))
+* **nba:** switched to an open slot for description ([e71c300](https://github.com/Kajabi/sage-lib/commit/e71c3001f1f9c81086820be311330dd386e76f5f))
+* **nba:** updated components helper with statuses and a short description ([2c0d4fd](https://github.com/Kajabi/sage-lib/commit/2c0d4fd83cf8b9ef35a9edfd45057dcb275be349))
+* **next-best-actions:** add dismiss_actions ([a7006a3](https://github.com/Kajabi/sage-lib/commit/a7006a338f0467796b480884888f59e2f199f251))
+
+
+
+
+
 ## [4.20.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.20.0...@kajabi/sage@4.20.1) (2021-10-20)
 
 **Note:** Version bump only for package @kajabi/sage
