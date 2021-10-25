@@ -17,23 +17,6 @@ const DefaultBody = ({ onExit }) => (
         linkText: 'Learn more about modals',
         content: 'Popover content'
       }}
-      actions={(
-        <>
-          <Button
-            color={Button.COLORS.PRIMARY}
-            onClick={onExit}
-            subtle={true}
-          >
-            Save changes
-          </Button>
-          <Button
-            color={Button.COLORS.PRIMARY}
-            onClick={onExit}
-          >
-            Publish changes
-          </Button>
-        </>
-      )}
       aside={(
         <Button
           color={Button.COLORS.SECONDARY}
