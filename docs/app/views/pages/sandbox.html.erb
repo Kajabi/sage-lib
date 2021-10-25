@@ -1,68 +1,75 @@
-<%= sage_component SageContainer, { html_attributes: { style: "background-color: #fff; "} } do %>
-  <%= sage_component SageCard, {} do %>
-    <%= sage_component SageCardRow, { grid_template: "ete" } do %>
-      <%= sage_component SageIcon, { icon: "product" } %>
-      <h2 class="<%= "#{SageClassnames::TYPE::HEADING_6}" %>">
-        [#] [feature_name]</span>
-      </h2>
-      <span class="<%= "#{SageClassnames::TYPE::BODY_XSMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_100}" %>">Limit <strong class="<%= "#{SageClassnames::TYPE::BODY_XSMALL_MED}" %>">[#] [feature_name]</strong></span>
-    <% end %>
-    <%= sage_component SageProgressBar, {
-      percent: 50,
-      label: "[#] [feature_name]"
+<style>
+.feature-usage-display {
+  background-color: #fff;
+  border-radius: 0;
+}
+
+.feature-usage-display:not(:last-child) {
+  border-bottom: 0;
+}
+</style>
+
+<%= sage_component SageCard, { css_classes: "feature-usage-display" } do %>
+  <%= sage_component SageCardRow, { grid_template: "ete" } do %>
+    <%= sage_component SageIcon, { icon: "product" } %>
+    <h2 class="<%= "#{SageClassnames::TYPE::HEADING_6}" %>">
+      [#] [feature_name]</span>
+    </h2>
+    <span class="<%= "#{SageClassnames::TYPE::BODY_XSMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_100}" %>">Limit <strong class="<%= "#{SageClassnames::TYPE::BODY_XSMALL_MED}" %>">[#] [feature_name]</strong></span>
+  <% end %>
+  <%= sage_component SageProgressBar, {
+    percent: 50,
+    label: "[#] [feature_name]"
+  } %>
+<% end %>
+<%= sage_component SageCard, { css_classes: "feature-usage-display" } do %>
+  <%= sage_component SageCardRow, { grid_template: "eti" } do %>
+    <%= sage_component SageIcon, { color: "yellow", icon: "warning" } %>
+    <h2 class="<%= "#{SageClassnames::TYPE::HEADING_6}" %>">
+      [#] [feature_name]</span>
+    </h2>
+    <span class="<%= "#{SageClassnames::TYPE::BODY_XSMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_100}" %>">Limit <strong class="<%= "#{SageClassnames::TYPE::BODY_XSMALL_MED}" %>">[#] [feature_name]</strong></span>
+    <%= sage_component SageButton, {
+      icon: {
+        name: "caret-down",
+        style: "only"
+      },
+      style: "secondary",
+      subtle: true,
+      value: "Expand"
     } %>
   <% end %>
-<% end %>
-<%= sage_component SageContainer, { html_attributes: { style: "background-color: #fff; "} } do %>
-  <%= sage_component SageCard, {} do %>
-    <%= sage_component SageCardRow, { grid_template: "eti" } do %>
-      <%= sage_component SageIcon, { color: "yellow", icon: "warning" } %>
-      <h2 class="<%= "#{SageClassnames::TYPE::HEADING_6}" %>">
-        [#] [feature_name]</span>
-      </h2>
-      <span class="<%= "#{SageClassnames::TYPE::BODY_XSMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_100}" %>">Limit <strong class="<%= "#{SageClassnames::TYPE::BODY_XSMALL_MED}" %>">[#] [feature_name]</strong></span>
-      <%= sage_component SageButton, {
-        icon: {
-          name: "caret-down",
-          style: "only"
-        },
-        style: "secondary",
-        subtle: true,
-        value: "Expand"
-      } %>
-    <% end %>
-    <%= sage_component SageProgressBar, {
-      percent: 50,
-      label: "[#] [feature_name]"
+  <%= sage_component SageProgressBar, {
+    percent: 50,
+    label: "[#] [feature_name]"
+  } %>
+  <%= sage_component SageCardBlock, { spacer: { bottom: :xs, top: :xs } } do %>
+    <p class="<%= "#{SageClassnames::TYPE::BODY_SMALL_MED} #{SageClassnames::TYPE_COLORS::CHARCOAL}" %>">You are about to reach the maximum number of landing pages available on your current plan.</p>
+    <p class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL}" %>">Upgrade your plan to unlock unlimited landing pages.</p>
+  <% end %>
+  <%= sage_component SageCardBlock, { spacer: { bottom: :xs } } do %>
+    <%= sage_component SageButton, {
+      attributes: {
+        href: "#"
+      },
+      style: "primary",
+      value: "Choose new plan"
     } %>
-    <%= sage_component SageCardBlock, { spacer: { bottom: :xs, top: :xs } } do %>
-      <p class="<%= "#{SageClassnames::TYPE::BODY_SMALL_MED} #{SageClassnames::TYPE_COLORS::CHARCOAL}" %>">You are about to reach the maximum number of landing pages available on your current plan.</p>
-      <p class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL}" %>">Upgrade your plan to unlock unlimited landing pages.</p>
+  <% end %>
+    <%= sage_component SageCardBlock, {} do %>
+    <%= sage_component SageCardRow, { grid_template: "te" } do %>
+      <h3 class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_500}" %>">Broadcasts</h3>
+      <span class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_100}" %>">200</span>
     <% end %>
-    <%= sage_component SageCardBlock, { spacer: { bottom: :xs } } do %>
-      <%= sage_component SageButton, {
-        attributes: {
-          href: "#"
-        },
-        style: "primary",
-        value: "Choose new plan"
-      } %>
+    <%= sage_component SageCardDivider, {} %>
+    <%= sage_component SageCardRow, { grid_template: "te" } do %>
+      <h3 class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_500}" %>">Sequences</h3>
+      <span class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_100}" %>">600</span>
     <% end %>
-      <%= sage_component SageCardBlock, {} do %>
-      <%= sage_component SageCardRow, { grid_template: "te" } do %>
-        <h3 class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_500}" %>">Broadcasts</h3>
-        <span class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_100}" %>">200</span>
-      <% end %>
-      <%= sage_component SageCardDivider, {} %>
-      <%= sage_component SageCardRow, { grid_template: "te" } do %>
-        <h3 class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_500}" %>">Sequences</h3>
-        <span class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_100}" %>">600</span>
-      <% end %>
-      <%= sage_component SageCardDivider, {} %>
-      <%= sage_component SageCardRow, { grid_template: "te" } do %>
-        <h3 class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_500}" %>">Events</h3>
-        <span class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_100}" %>">200</span>
-      <% end %>
+    <%= sage_component SageCardDivider, {} %>
+    <%= sage_component SageCardRow, { grid_template: "te" } do %>
+      <h3 class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_500}" %>">Events</h3>
+      <span class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_100}" %>">200</span>
     <% end %>
   <% end %>
 <% end %>
