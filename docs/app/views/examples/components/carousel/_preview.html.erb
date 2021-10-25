@@ -1,13 +1,13 @@
 <h3>Default</h3>
 <%= sage_component SageCarousel, {
   options: {
-    autoWidth: true,
     items: 1,
+    fixedWidth: 544,
+    gutter: 30,
     loop: false,
     mouseDrag: true,
-    swipeAngle: false,
     speed: 400,
-    gutter: 30,
+    swipeAngle: false,
   },
 } do %>
   <%= content_for :sage_carousel_items do %>
@@ -25,7 +25,6 @@
       } do %>
         <%= content_for :sage_next_best_action_description do %>
           <p>Maximize your profit by adding an Upsell to your order flow. This section might wrap to two lines.</p>
-          <p>Here is the second line. It has some text also.</p>
         <% end %>
         <%= content_for :sage_next_best_action_actions do %>
           <%= sage_component SageButton, {
