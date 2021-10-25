@@ -1,4 +1,25 @@
 <h3>Default</h3>
 <%= sage_component SageCarousel, {
-  
-} %>
+  options: {
+    autoWidth: true,
+    container: '.my-slider',
+    items: 3,
+    loop: false,
+    mouseDrag: true,
+    swipeAngle: false,
+    speed: 400
+  }
+} do %>
+  <%= content_for :sage_carousel_items do %>
+    <h1>alpha</h1>
+    <h1>bravo</h1>
+    <h1>charlie</h1>
+    <h1>delta</h1>
+    <h1>echo</h1>
+    <h1>foxtrot</h1>
+    <h1>golf</h1>
+    <h1>hotel</h1>
+    <h1>india</h1>
+    <h1>juliet</h1>
+  <% end %>
+<% end %>
