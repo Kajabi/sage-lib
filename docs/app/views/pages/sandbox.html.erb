@@ -1,3 +1,51 @@
+<%= sage_component SagePanel, {} do %>
+  <%= sage_component SagePanelHeader, {
+    title: "Basic plan"
+  } do %>
+    <%= content_for :sage_panel_header_subtext do %>
+      <p>$1,428.00/year (plus tax)</p>
+    <% end %>
+  <% end %>
+  <%= sage_component SagePanelBlock, {} do %>
+    <%= sage_component SageLink, {
+      label: "Your billing cycle will begin today.",
+      url: "#"
+    } %>
+    <%= sage_component SageCard, { spacer: { top: :md } } do %>
+      <%= sage_component SageCardBlock, {} do %>
+        <h2 class="<%= SageClassnames::TYPE::HEADING_6 %>">Billed today</h2>
+        <%= sage_component SageCardDivider, {} %>
+        <%= sage_component SageCardRow, { grid_template: "te", spacer: { top: :xs } } do %>
+          <strong class="<%= SageClassnames::TYPE::BODY_MED %>">Total</strong>
+          <span class="<%= SageClassnames::TYPE::BODY %>">$0</span>
+        <% end %>
+      <% end %>
+    <% end %>
+    <%= sage_component SageCard, { spacer: { top: :md } } do %>
+      <%= sage_component SageCardBlock, {} do %>
+        <h2 class="<%= "#{SageClassnames::TYPE::HEADING_6} #{SageClassnames::SPACERS::SM_BOTTOM}" %>">Billed Oct 4, 2022</h2>
+        <%= sage_component SageCardRow, { grid_template: "te", spacer: { top: :xs } } do %>
+          <p class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL}" %>">Basic plan</p>
+          <span class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL}" %>">$1,428.00</span>
+        <% end %>
+        <%= sage_component SageCardDivider, {} %>
+        <%= sage_component SageCardRow, { grid_template: "te", spacer: { top: :xs } } do %>
+          <strong class="<%= SageClassnames::TYPE::BODY_MED %>">Total</strong>
+          <span class="<%= SageClassnames::TYPE::BODY %>">$1,428.00</span>
+        <% end %>
+      <% end %>
+    <% end %>
+  <% end %>
+  <%= sage_component SagePanelFooter, {} do %>
+    <%= sage_component SageButton, {
+      raised: false,
+      style: "secondary",
+      value: "Cancel",
+    } %>
+    <%= sage_component SageButton, { value: "Confirm upgrade", style: "primary" } %>
+  <% end %>
+<% end %>
+
 <%= content_for :heading do %>
 <%= md("
 # Sandbox
