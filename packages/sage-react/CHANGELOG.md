@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.62.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.62.0...@kajabi/sage-react@0.62.1) (2021-10-25)
+
+
+### Bug Fixes
+
+* **node version:** update all packages to use 14.x for node ([5d01915](https://github.com/Kajabi/sage-lib/commit/5d019156ff1e5390d4a4cf809a2cb559d666fb3d))
+
+
+
+
+
 # [0.62.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.61.1...@kajabi/sage-react@0.62.0) (2021-10-25)
 
 
