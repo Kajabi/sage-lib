@@ -1,8 +1,13 @@
 <div
   class="sage-carousel <%= component.generated_css_classes %>"
   <%= component.generated_html_attributes.html_safe %>
-  data-js-carousel
+  data-js-carousel data-js-carousel-speed="500"
 >
   <h1>Carousel!</h1>
+  <div class="my-slider">
+    <% if content_for? :sage_carousel_items %>
+      <%= content_for :sage_carousel_items %>
+    <% end %>
+  </div>
   <%= @content %>
 </div>
