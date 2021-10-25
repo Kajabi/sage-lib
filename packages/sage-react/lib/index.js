@@ -35,6 +35,7 @@ export {
   MediaTiles,
 } from './MediaTile';
 export { Modal } from './Modal';
+export { NextBestAction } from './NextBestAction';
 export { PageHeading } from './PageHeading';
 export { Pagination } from './Pagination';
 export { Panel } from './Panel';

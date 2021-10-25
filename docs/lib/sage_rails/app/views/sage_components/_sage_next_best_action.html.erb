@@ -1,0 +1,39 @@
+<div
+  class="sage-next-best-action
+  <%= component.card_color ? "sage-next-best-action--#{component.card_color}" : "" %>
+  <%= component.graphic[:on_right] ? "sage-next-best-action--graphic-on-right" : "" %>
+  <%= component.generated_css_classes %>"
+  <%= component.generated_html_attributes.html_safe %>
+>
+  <% if component.graphic[:element].present? %>
+    <div class="sage-next-best-action__graphic">
+      <%= component.graphic[:element].html_safe %>
+    </div>
+  <% end %>
+  <div class="sage-next-best-action__text">
+    <% if component.title %>
+      <h3 class="sage-next-best-action__title"><%= component.title %></h3>
+    <% end %>
+    <% if content_for? :sage_next_best_action_description %>
+      <div class="sage-next-best-action__description">
+        <%= content_for :sage_next_best_action_description %>
+      </div>
+    <% end %>
+    <% if content_for? :sage_next_best_action_actions %>
+      <%= content_for :sage_next_best_action_actions %>
+    <% end %>
+  </div>
+  <% if component.dismissable %>
+    <%= sage_component SageButton, {
+      attributes: component.dismiss_attributes.present? ? component.dismiss_attributes : nil,
+      value: "Close",
+      icon: {
+        style: "only",
+        name: "remove"
+      },
+      subtle: true,
+      small: true,
+      css_classes: "sage-next-best-action__close"
+    } %>
+  <% end %>
+</div>
