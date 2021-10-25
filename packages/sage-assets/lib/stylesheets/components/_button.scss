@@ -560,6 +560,10 @@ $-btn-loading-min-height: rem(36px);
   }
 }
 
+.sage-btn-group--align-center {
+  justify-content: center;
+}
+
 .sage-btn-group--align-end {
   justify-content: flex-end;
 }
