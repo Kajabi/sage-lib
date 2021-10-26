@@ -11,13 +11,19 @@ $-alert-colors: (
   success: sage,
   warning: yellow,
   danger: red,
+  exceeded: red,
+  reached: orange,
+  approaching: yellow,
 );
 $-alert-icon-colors: (
   info: primary,
   published: sage,
   success: sage,
-  warning: orange,
+  warning: yellow,
   danger: red,
+  exceeded: red,
+  reached: orange,
+  approaching: yellow,
 );
 
 

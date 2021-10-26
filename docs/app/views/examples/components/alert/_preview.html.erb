@@ -1,3 +1,43 @@
+<h3>New Alerts</h3>
+<h4>Approaching</h4>
+<%= sage_component SageAlert, {
+  color: "approaching",
+  title: "You've used [percentage] of available [feature_name]",
+  desc: "Upgrade your plan to access more [feature_name].",
+  icon_name: "sage-icon-warning",
+  dismissable: true
+} do %>
+  <% content_for :sage_alert_actions do %>
+    <%= link_to "Check usage", "#" %>
+  <% end %>
+<% end %>
+
+<h4>Reached</h4>
+<%= sage_component SageAlert, {
+  color: "reached",
+  title: "You've reached your [feature_name] limit",
+  desc: "Upgrade your plan to access more [feature_name].",
+  icon_name: "sage-icon-flag",
+  dismissable: true
+} do %>
+  <% content_for :sage_alert_actions do %>
+    <%= link_to "Check usage", "#" %>
+  <% end %>
+<% end %>
+
+<h4>Exceeded</h4>
+<%= sage_component SageAlert, {
+  color: "exceeded",
+  title: "You've exceeded your [feature_name] limit",
+  desc: "To avoid any issues with your experience, upgrade your plan now.",
+  icon_name: "sage-icon-danger",
+  dismissable: true
+} do %>
+  <% content_for :sage_alert_actions do %>
+    <%= link_to "Check usage", "#" %>
+  <% end %>
+<% end %>
+
 <h3>Dismissable Alert</h3>
 <!-- Info -->
 <%= sage_component SageAlert, {
