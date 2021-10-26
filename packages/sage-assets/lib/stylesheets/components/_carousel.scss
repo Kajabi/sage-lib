@@ -6,11 +6,14 @@
 
 $-sage-carousel-dot-size: rem(6px);
 $-sage-carousel-arrow-width: sage-spacing(lg);
+$-sage-carousel-active-color: sage-color(charcoal, 100);
+$-sage-carousel-inactive-color: sage-color(grey, 400);
 
 .sage-carousel {
   display: block;
   overflow: hidden;
   width: 100%;
+  user-select: none;
 }
 
 .sage-carousel__container {
@@ -20,8 +23,28 @@ $-sage-carousel-arrow-width: sage-spacing(lg);
 .sage-carousel__arrow {
   display: flex;
   align-items: center;
-  justify-content: center;
   width: $-sage-carousel-arrow-width;
+  cursor: pointer;
+
+  [class*="sage-icon-"] {
+    color: $-sage-carousel-active-color;
+  }
+}
+
+.sage-carousel__arrow--disabled {
+  cursor: not-allowed;
+
+  [class*="sage-icon-"] {
+    color: $-sage-carousel-inactive-color;
+  }
+}
+
+.sage-carousel__arrow--prev {
+  justify-content: flex-start;
+}
+
+.sage-carousel__arrow--next {
+  justify-content: flex-end;
 }
 
 .sage-carousel__sizer {
@@ -39,11 +62,11 @@ $-sage-carousel-arrow-width: sage-spacing(lg);
   width: $-sage-carousel-dot-size;
   height: $-sage-carousel-dot-size;
   margin: 0 sage-spacing(2xs);
-  background-color: sage-color(grey, 400);
+  background-color: $-sage-carousel-inactive-color;
   border-radius: 50%;
   cursor: pointer;
 }
 
 .sage-carousel__dot--active {
-  background-color: sage-color(charcoal, 100);
+  background-color: $-sage-carousel-active-color;
 }

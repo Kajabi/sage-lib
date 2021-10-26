@@ -5,7 +5,13 @@
   data-js-carousel-options="<%= component.options.to_json %>"
 >
   <div class="sage-carousel__container">
-    <div class="sage-carousel__arrow sage-carousel__arrow--prev">Prev</div>
+    <div class="sage-carousel__arrow sage-carousel__arrow--prev">
+      <%= sage_component SageIcon, {
+        icon: "caret-left",
+        label: "Prev",
+        size: "xl",
+      } %>
+    </div>
     <div class="sage-carousel__sizer">
       <div class="sage-carousel__carousel">
         <% if content_for? :sage_carousel_items %>
@@ -13,7 +19,13 @@
         <% end %>
       </div>
     </div>
-    <div class="sage-carousel__arrow sage-carousel__arrow--next">Next</div>
+    <div class="sage-carousel__arrow sage-carousel__arrow--next">
+      <%= sage_component SageIcon, {
+        icon: "caret-right",
+        label: "Next",
+        size: "xl",
+      } %>
+    </div>
   </div>
   <div class="sage-carousel__dots"></div>
   <%= @content %>

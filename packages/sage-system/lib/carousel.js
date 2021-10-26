@@ -4,6 +4,10 @@ Sage.carousel = (function() {
 
   const containerClass = '.sage-carousel__carousel';
   const dotActiveClass = 'sage-carousel__dot--active';
+  const arrowDisabledClass = 'sage-carousel__arrow--disabled';
+
+  let arrowPrev;
+  let arrowNext;
   let slidesLength;
   let mySlider;
   let mySliderInfo;
@@ -33,12 +37,11 @@ Sage.carousel = (function() {
     mySliderInfo = mySlider.getInfo();
     mySlider.events.on('dragEnd', handleDragEnd);
 
-    document
-      .querySelector('.sage-carousel__arrow--prev')
-      .addEventListener('click', handlePrevArrowClick);
-    document
-      .querySelector('.sage-carousel__arrow--next')
-      .addEventListener('click', handleNextArrowClick);
+    arrowPrev = document.querySelector('.sage-carousel__arrow--prev');
+    arrowPrev.addEventListener('click', handlePrevArrowClick);
+
+    arrowNext = document.querySelector('.sage-carousel__arrow--next');
+    arrowNext.addEventListener('click', handleNextArrowClick);
 
     let dots = document.querySelector('.sage-carousel__dots');
     let dot;
@@ -55,6 +58,10 @@ Sage.carousel = (function() {
 
   let dots;
   function goToSlide(num) {
+    if (num === 0) arrowPrev.classList.add(arrowDisabledClass);
+    else arrowPrev.classList.remove(arrowDisabledClass);
+    if (num === slidesLength - 1) arrowNext.classList.add(arrowDisabledClass);
+    else arrowNext.classList.remove(arrowDisabledClass);
     dots = [...document.getElementsByClassName('sage-carousel__dot')];
     dots.forEach((dot) => {
       dot.classList.remove(dotActiveClass);
@@ -64,7 +71,7 @@ Sage.carousel = (function() {
   }
 
   function handleDotClick(evt) {
-    goToSlide(evt.target.getAttribute('index'));
+    goToSlide(parseInt(evt.target.getAttribute('index')));
   }
 
   function handlePrevArrowClick() {
