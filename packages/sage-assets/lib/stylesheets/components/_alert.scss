@@ -77,14 +77,6 @@ $-alert-icon-colors: (
   }
 }
 
-.sage-alert__desc {
-  @each $name, $color in $-alert-colors {
-    .sage-alert--#{$name} & {
-      color: sage-color($color, 400);
-    }
-  }
-}
-
 .sage-alert__icon {
   display: inline-flex;
   @each $name, $color in $-alert-icon-colors {
