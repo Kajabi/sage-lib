@@ -69,12 +69,7 @@ $-alert-icon-colors: (
 
 .sage-alert__title {
   @extend %t-sage-heading-6;
-
-  @each $name, $color in $-alert-colors {
-    .sage-alert--#{$name} & {
-      color: sage-color($color, 500);
-    }
-  }
+  color: sage-color(charcoal, 500);
 }
 
 .sage-alert__icon {
@@ -84,8 +79,15 @@ $-alert-icon-colors: (
       color: sage-color($color, 300);
     }
   }
-  .sage-alert--warning & {
+  .sage-alert--warning &,
+  .sage-alert--approaching & {
     color: sage-color(yellow, 400);
+  }
+  .sage-alert--reached & {
+    color: sage-color(orange, 400);
+  }
+  .sage-alert--exceeded & {
+    color: sage-color(red, 400);
   }
 }
 
