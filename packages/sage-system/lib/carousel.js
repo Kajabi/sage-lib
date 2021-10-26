@@ -4,11 +4,14 @@ Sage.carousel = (function() {
 
   const containerClass = '.sage-carousel__carousel';
   const dotActiveClass = 'sage-carousel__dot--active';
+  let slidesLength;
   let mySlider;
+  let mySliderInfo;
 
   function init(el) {
     const slider = document.querySelector(containerClass);
     const slides = [...slider.children];
+    slidesLength = slides.length;
     slides.forEach((slide) => {
       let slideContainer = document.createElement('div');
       slideContainer.classList.add('slide');
@@ -17,7 +20,6 @@ Sage.carousel = (function() {
     });
 
     const options = JSON.parse(document.querySelector('.sage-carousel').getAttribute('data-js-carousel-options'));
-    console.log('options:', options);
     mySlider = tns(
       {
         ...options,
@@ -26,36 +28,49 @@ Sage.carousel = (function() {
         nav: false,
       }
     );
+    mySliderInfo = mySlider.getInfo();
 
     let arrowPrev = document.querySelector('.sage-carousel__arrow--prev');
-    arrowPrev.addEventListener('click', () => {
-      mySlider.goTo('prev');
-    });
+    arrowPrev.addEventListener('click', handlePrevArrowClick);
 
     let arrowNext = document.querySelector('.sage-carousel__arrow--next');
-    arrowNext.addEventListener('click', () => {
-      mySlider.goTo('next');
-    });
+    arrowNext.addEventListener('click', handleNextArrowClick);
 
     let dots = document.querySelector('.sage-carousel__dots');
-    for (let i = 0; i < slides.length; i++) {
+    for (let i = 0; i < slidesLength; i++) {
       let dot = document.createElement('div');
       dot.classList.add('sage-carousel__dot');
       dot.setAttribute('index', i);
       dot.addEventListener('click', handleDotClick);
-      if (i === 0) dot.classList.add(dotActiveClass);
       dots.appendChild(dot);
     };
+
+    goToSlide(0);
   }
 
-  function handleDotClick(evt) {
-    console.log('handleDotClick:', evt);
-    let dots = [...document.getElementsByClassName('sage-carousel__dot')];
+  let dots;
+  function goToSlide(num) {
+    console.log('goToSlide:', num);
+    dots = [...document.getElementsByClassName('sage-carousel__dot')];
     dots.forEach((dot) => {
       dot.classList.remove(dotActiveClass);
     });
-    evt.target.classList.add(dotActiveClass);
-    mySlider.goTo(evt.target.getAttribute('index'));
+    dots[num].classList.add(dotActiveClass);
+    mySlider.goTo(num);
+  }
+
+  function handleDotClick(evt) {
+    goToSlide(evt.target.getAttribute('index'));
+  }
+
+  function handlePrevArrowClick(evt) {
+    mySliderInfo = mySlider.getInfo();
+    if (mySliderInfo.index !== 0) goToSlide(mySliderInfo.index - 1);
+  }
+
+  function handleNextArrowClick(evt) {
+    mySliderInfo = mySlider.getInfo();
+    if (mySliderInfo.index !== slidesLength - 1) goToSlide(mySliderInfo.index + 1);
   }
 
   return {
