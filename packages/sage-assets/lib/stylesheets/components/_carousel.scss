@@ -9,3 +9,37 @@
   overflow: hidden;
   width: 100%;
 }
+
+.sage-carousel__container {
+  display: flex;
+}
+
+.sage-carousel__arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+}
+
+.sage-carousel__sizer {
+  width: calc(100% - 160px);
+}
+
+.sage-carousel__dots {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.sage-carousel__dot {
+  width: 8px;
+  height: 8px;
+  margin: 0 4px;
+  background-color: #999;
+  border-radius: 50%;
+}
+
+.sage-carousel__dot--active {
+  background-color: #f00;
+}

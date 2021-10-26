@@ -5,11 +5,16 @@
   data-js-carousel-options="<%= component.options.to_json %>"
 >
   <div class="sage-carousel__container">
-    <% if content_for? :sage_carousel_items %>
-      <%= content_for :sage_carousel_items %>
-    <% end %>
+    <div class="sage-carousel__arrow sage-carousel__arrow--prev">Prev</div>
+    <div class="sage-carousel__sizer">
+      <div class="sage-carousel__carousel">
+        <% if content_for? :sage_carousel_items %>
+          <%= content_for :sage_carousel_items %>
+        <% end %>
+      </div>
+    </div>
+    <div class="sage-carousel__arrow sage-carousel__arrow--next">Next</div>
   </div>
-  <div class="sage-carousel__arrows"></div>
   <div class="sage-carousel__dots"></div>
   <%= @content %>
 </div>
