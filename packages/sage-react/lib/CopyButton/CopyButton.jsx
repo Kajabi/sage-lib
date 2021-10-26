@@ -1,11 +1,9 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { Button } from '../Button';
 import { CopyText } from '../CopyText';
-import { Toast } from '../Toast';
 import { SageTokens } from '../configs';
-import { render } from 'enzyme';
 
 export const CopyButton = ({
   borderless,
@@ -13,7 +11,7 @@ export const CopyButton = ({
   className,
   fillContainer,
   semibold
- }) => {
+}) => {
   const classNames = classnames(
     'sage-copy-btn',
     className,
@@ -28,39 +26,40 @@ export const CopyButton = ({
   const onClick = () => {
     navigator.clipboard.writeText(btnRef.current.innerText);
   };
-  
+
   const renderCopyButton = () => {
     if (borderless) {
       return (
-        <Button
+        <>
+          <Button
+            ref={btnRef}
+            className={classNames}
+            color={Button.COLORS.SECONDARY}
+            icon={SageTokens.ICONS.COPY}
+            iconPosition={Button.ICON_POSITIONS.RIGHT}
+            subtle={true}
+            type="button"
+            onClick={onClick}
+          >
+            {children}
+          </Button>
+        </>
+      );
+    }
+    return (
+      <>
+        <button
           ref={btnRef}
           className={classNames}
-          color={Button.COLORS.SECONDARY}
-          icon={SageTokens.ICONS.COPY}
-          iconPosition={Button.ICON_POSITIONS.RIGHT}
-          subtle={true}
           type="button"
           onClick={onClick}
         >
-          {children}
-        </Button>
-      )
-    } else {
-      return (
-        <>
-          <button 
-            ref={btnRef} 
-            className={classNames} 
-            type="button" 
-            onClick={onClick}
-          >
-            <CopyText semibold={semibold}>
-              {children}
-            </CopyText>
-          </button>
-        </>
-      )
-    }
+          <CopyText semibold={semibold}>
+            {children}
+          </CopyText>
+        </button>
+      </>
+    );
   };
   return (
     renderCopyButton()
