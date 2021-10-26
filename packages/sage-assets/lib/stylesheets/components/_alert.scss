@@ -49,7 +49,7 @@ $-alert-icon-colors: (
     border: 1px solid sage-color($color, 200);
 
     a:not([class]) {
-      color: sage-color($color, 400);
+      color: sage-color(charcoal, 400);
       text-decoration: underline;
     }
 
