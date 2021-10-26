@@ -84,6 +84,9 @@ $-alert-icon-colors: (
       color: sage-color($color, 300);
     }
   }
+  .sage-alert--warning & {
+    color: sage-color(yellow, 400);
+  }
 }
 
 .sage-alert__close {
