@@ -1,13 +1,10 @@
 <h3>Default</h3>
 <%= sage_component SageCarousel, {
   options: {
-    items: 1,
     fixedWidth: 544,
-    gutter: 30,
+    gutter: 24,
     loop: false,
     mouseDrag: true,
-    speed: 400,
-    swipeAngle: false,
   },
 } do %>
   <%= content_for :sage_carousel_items do %>

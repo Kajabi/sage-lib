@@ -31,6 +31,7 @@ Sage.carousel = (function() {
       nav: false,
     });
     mySliderInfo = mySlider.getInfo();
+    mySlider.events.on('dragEnd', handleDragEnd);
 
     document
       .querySelector('.sage-carousel__arrow--prev')
@@ -74,6 +75,11 @@ Sage.carousel = (function() {
   function handleNextArrowClick() {
     mySliderInfo = mySlider.getInfo();
     if (mySliderInfo.index !== slidesLength - 1) goToSlide(mySliderInfo.index + 1);
+  }
+
+  function handleDragEnd() {
+    mySliderInfo = mySlider.getInfo();
+    goToSlide(mySliderInfo.index);
   }
 
   return {
