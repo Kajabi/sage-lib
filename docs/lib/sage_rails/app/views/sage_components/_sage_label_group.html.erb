@@ -1,3 +1,11 @@
-<div class="sage-label-group <%= component.generated_css_classes %>" <%= component.generated_html_attributes.html_safe %>>
+<div class="
+  sage-label-group
+  <%= "sage-label-group--align-#{component.align}" if component.align.present? %>
+  <%= "sage-label-group--wrap" if component.wrap %>
+  <%= "sage-label-group--gap-#{component.gap}" if component.gap.present %>
+  <%= component.generated_css_classes %>
+  "
+  <%= component.generated_html_attributes.html_safe %>
+>
   <%= component.content %>
 </div>
