@@ -37,26 +37,10 @@ $-alert-icon-colors: (
   }
 }
 
-.sage-alert--info {
-  border: 1px solid sage-color(primary, 200);
-}
-
-.sage-alert--success,
-.sage-alert--published {
-  border: 1px solid sage-color(sage, 200);
-}
-
-.sage-alert--warning {
-  border: 1px solid sage-color(yellow);
-}
-
-.sage-alert--danger {
-  border: 1px solid sage-color(red);
-}
-
 @each $name, $color in $-alert-colors {
   .sage-alert--#{$name} {
     background: sage-color($color, 100);
+    border: 1px solid sage-color($color, 200);
 
     a:not([class]) {
       color: sage-color($color, 400);
