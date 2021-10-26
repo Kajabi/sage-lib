@@ -1,0 +1,34 @@
+name: Deploy
+on:
+  workflow_dispatch:
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    container:
+      image: kajabiprodeng/ruby:2.4.9-alpine3.13
+
+    steps:
+      - name: Install dependencies
+        env:
+          BUILD_PACKAGES: bash build-base cyrus-sasl-dev git git-subtree libtool libsasl snappy-dev tzdata tar curl xz
+        run: |
+          apk add --update --no-cache $BUILD_PACKAGES
+
+      - name: Documentation Site Deploy
+        env:
+          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+          HEROKU_DOCS_APP_NAME: ${{ secrets.HEROKU_DOCS_APP_NAME }}
+        run: yarn docs:deploy
+
+      - name: Storybook Site Deploy
+        env:
+          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+          HEROKU_STORYBOOK_APP_NAME: ${{ secrets.HEROKU_STORYBOOK_APP_NAME }}
+        run: yarn storybook:deploy
+
+      - name: SassDocs Site Deploy
+        env:
+          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+          HEROKU_SASSDOCS_APP_NAME: ${{ secrets.HEROKU_SASSDOCS_APP_NAME }}
+        run: yarn sassdocs:deploy
