@@ -119,6 +119,7 @@ $-alert-icon-colors: (
 .sage-alert__actions {
   display: flex;
   flex-wrap: wrap;
+  margin-top: sage-spacing(xs); // note: total spacing is sm (16px) but grid stack adds 8px already
 
   @each $name, $color in $-alert-colors {
     .sage-alert--#{$name} & > a {
