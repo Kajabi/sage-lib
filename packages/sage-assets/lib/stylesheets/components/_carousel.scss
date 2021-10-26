@@ -4,6 +4,9 @@
 /// @group sage
 ////
 
+$-sage-carousel-dot-size: rem(6px);
+$-sage-carousel-arrow-width: sage-spacing(lg);
+
 .sage-carousel {
   display: block;
   overflow: hidden;
@@ -18,28 +21,29 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 80px;
+  width: $-sage-carousel-arrow-width;
 }
 
 .sage-carousel__sizer {
-  width: calc(100% - 160px);
+  width: calc(100% - (#{$-sage-carousel-arrow-width} * 2));
 }
 
 .sage-carousel__dots {
   display: flex;
   justify-content: center;
   width: 100%;
-  margin: 20px 0;
+  margin-top: sage-spacing(sm);
 }
 
 .sage-carousel__dot {
-  width: 8px;
-  height: 8px;
-  margin: 0 4px;
-  background-color: #999;
+  width: $-sage-carousel-dot-size;
+  height: $-sage-carousel-dot-size;
+  margin: 0 sage-spacing(2xs);
+  background-color: sage-color(grey, 400);
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .sage-carousel__dot--active {
-  background-color: #f00;
+  background-color: sage-color(charcoal, 100);
 }
