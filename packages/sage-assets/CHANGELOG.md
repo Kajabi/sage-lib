@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.53.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.52.0...@kajabi/sage-assets@0.53.0) (2021-10-26)
+
+
+### Features
+
+* **button:** adds center align option ([5dab67b](https://github.com/Kajabi/sage-lib/commit/5dab67bfd4c3e6be30dfbbeffe7c84bc0c69cc3a))
+
+
+
+
+
 # [0.52.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.51.2...@kajabi/sage-assets@0.52.0) (2021-10-25)
 
 

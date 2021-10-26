@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.22.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.21.1...@kajabi/sage@4.22.0) (2021-10-26)
+
+
+### Features
+
+* **button:** adds center align option ([5dab67b](https://github.com/Kajabi/sage-lib/commit/5dab67bfd4c3e6be30dfbbeffe7c84bc0c69cc3a))
+
+
+
+
+
 ## [4.21.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.21.0...@kajabi/sage@4.21.1) (2021-10-25)
 
 **Note:** Version bump only for package @kajabi/sage
