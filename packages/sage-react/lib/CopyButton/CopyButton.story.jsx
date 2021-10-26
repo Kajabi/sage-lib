@@ -16,4 +16,4 @@ export const Borderless = Template.bind({});
 Borderless.args = {
   borderless: true,
   children: 'example@example.com',
-}
+};
