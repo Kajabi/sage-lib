@@ -21,8 +21,8 @@ $-catalogue-item-image-height-mobile: rem(120px);
     "content aside";
   padding: sage-spacing() sage-spacing();
   margin-bottom: rem(-1px);
-  border-top: sage-border(light);
-  border-bottom: sage-border(light);
+  border-top: sage-border(default);
+  border-bottom: sage-border(default);
 
   > * {
     min-width: 0; /* to prevent grid blowout */
