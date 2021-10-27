@@ -108,6 +108,10 @@
       justify-content: center;
       text-align: center;
 
+      &:not(.sage-btn--subtle) {
+        padding: rem(6px) rem(10px);
+      }
+
       &::before {
         @include sage-icon-base($icon-name);
 
