@@ -111,15 +111,8 @@ export const Carousel = ({
   }
 
   useEffect(() => {
-    tns({
-      ...options,
-      container: '.sage-carousel__carousel',
-      controls: false,
-      nav: false,
-    });
-
     init();
-  }, [options]);
+  });
 
   return (
     <div className={classNames}>
