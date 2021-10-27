@@ -113,6 +113,7 @@ $-modal-fullscreen-top-spacing: rem(104px);
     width: 100%;
     margin: 0;
     border-radius: 0;
+    opacity: 1;
   }
 }
 
@@ -132,10 +133,22 @@ $-modal-fullscreen-top-spacing: rem(104px);
   }
 }
 
+.sage-modal__title {
+  .sage-modal__header--has-header-actions & {
+    order: -1; /* causes the header-title area to be second in the visual order */
+  }
+}
+
 .sage-modal__header-text {
   .sage-card__row {
     gap: sage-spacing(xs);
+
+    .sage-modal--fullscreen & {
+      display: flex;
+      justify-content: space-between;
+    }
   }
+
   @media (max-width: sage-breakpoint(sm-max)) {
     .sage-card__row {
       flex-wrap: nowrap;
@@ -151,11 +164,24 @@ $-modal-fullscreen-top-spacing: rem(104px);
 
 .sage-modal__header-aside {
   margin-left: auto;
+
+  .sage-modal__header--has-header-actions & {
+    order: -2; /* causes the header-aside area to be first in the visual order */
+    margin-left: 0;
+  }
+}
+
+.sage-modal__header-actions {
+  display: flex;
+  gap: sage-spacing(md);
 }
 
 .sage-modal__content {
   margin: $-modal-padding-y $-modal-padding-x;
-  margin-top: $-modal-fullscreen-top-spacing;
+
+  .sage-modal--fullscreen & {
+    margin-top: $-modal-fullscreen-top-spacing;
+  }
 
   > :last-child {
     margin-bottom: 0;
