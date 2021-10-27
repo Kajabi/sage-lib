@@ -27,43 +27,28 @@ export const CopyButton = ({
     navigator.clipboard.writeText(btnRef.current.innerText);
   };
 
-  const renderCopyButton = () => {
-    if (borderless) {
-      return (
-        <>
-          <Button
-            ref={btnRef}
-            className={classNames}
-            color={Button.COLORS.SECONDARY}
-            icon={SageTokens.ICONS.COPY}
-            iconPosition={Button.ICON_POSITIONS.RIGHT}
-            subtle={true}
-            type="button"
-            onClick={onClick}
-          >
-            {children}
-          </Button>
-        </>
-      );
-    }
-    return (
-      <>
-        <button
-          ref={btnRef}
-          className={classNames}
-          type="button"
-          onClick={onClick}
-        >
+  return (
+    <>
+      <Button
+        ref={btnRef}
+        className={classNames}
+        color={borderless ? Button.COLORS.SECONDARY : null}
+        icon={borderless ? SageTokens.ICONS.COPY : null}
+        iconPosition={Button.ICON_POSITIONS.RIGHT}
+        subtle={true}
+        type="button"
+        onClick={onClick}
+      >
+        {borderless ? (
+          children
+        ) : (
           <CopyText semibold={semibold}>
             {children}
           </CopyText>
-        </button>
-      </>
-    );
-  };
-  return (
-    renderCopyButton()
-  );
+        )}
+      </Button>
+    </>
+  )
 };
 
 CopyButton.defaultProps = {

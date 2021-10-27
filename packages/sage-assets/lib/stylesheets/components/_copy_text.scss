@@ -49,28 +49,26 @@ $-copy-text-color-hover: sage-color(charcoal, 500);
 }
 
 .sage-copy-btn {
-  &:not(.sage-btn) {
-    @include sage-button-style-reset();
-    @include sage-focus-outline();
-    @include sage-focus-outline--update-color($-copy-text-border-focus-color);
-  
-    display: inline-flex;
-    flex-flow: row-reverse;
-    align-items: center;
-    max-width: 100%;
-    padding-right: sage-spacing(2xs);
-    border-radius: sage-border(radius);
-  
-    &::before {
-      @include sage-icon-base(copy);
-  
-      margin-left: sage-spacing(sm);
-      color: $-copy-text-color;
-    }
-  
-    &:hover::before {
-      color: $-copy-text-color-hover;
-    }
+  @include sage-button-style-reset();
+  @include sage-focus-outline();
+  @include sage-focus-outline--update-color($-copy-text-border-focus-color);
+
+  display: inline-flex;
+  flex-flow: row-reverse;
+  align-items: center;
+  max-width: 100%;
+  padding-right: sage-spacing(2xs);
+  border-radius: sage-border(radius);
+
+  &::before {
+    @include sage-icon-base(copy);
+
+    margin-left: sage-spacing(sm);
+    color: $-copy-text-color;
+  }
+
+  &:hover::before {
+    color: $-copy-text-color-hover;
   }
 }
 
