@@ -48,7 +48,7 @@ export const CopyButton = ({
         )}
       </Button>
     </>
-  )
+  );
 };
 
 CopyButton.defaultProps = {
