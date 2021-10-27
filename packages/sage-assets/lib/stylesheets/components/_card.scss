@@ -44,15 +44,30 @@
 }
 
 .sage-card__divider {
+  position: relative;
+  height: rem(16px);
+  line-height: sage-font-size(body-xs);
   margin: 0;
-  padding-top: rem(11px); // 16 - 1px element - 4px bottom padding
-  padding-bottom: rem(4px);
+  text-align: center;
   border: 0;
-
+  outline: 0;
   &::before {
     content: "";
-    display: block;
-    border-top: 1px solid sage-color(grey, 300);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+    background: sage-color(grey, 300);
+  }
+  &::after {
+    content: attr(data-divider-label);
+    display: inline-block;
+    position: relative;
+    padding: 0 sage-spacing(sm);
+    color: sage-color(grey, 500);
+    font-size: sage-font-size(body-xs);
+    background-color: sage-color(white);
   }
 }
 
