@@ -4,12 +4,14 @@ import { Button } from '../Button';
 import { Grid } from '../Grid';
 import { SageTokens } from '../configs';
 import { Sortable } from './Sortable';
+import { SortableItemCustom } from './SortableItemCustom';
 
 export default {
   title: 'Sage/Sortable',
   component: Sortable,
   subcomponents: {
-    'Sortable.Item': Sortable.Item
+    'Sortable.Item': Sortable.Item,
+    'Sortable.ItemCustom': SortableItemCustom
   }
 };
 
@@ -93,4 +95,19 @@ Default.argTypes = {
   ...selectArgs({
     type: Sortable.Item.TYPES
   }),
+};
+
+const Template = (args) => <SortableItemCustom {...args} />;
+
+export const CustomItem = Template.bind({});
+
+CustomItem.args = {
+  gridTemplate: "te",
+  children: (
+    <>
+      <p>oh1</p>
+      <p>oh2</p>
+      <p>oh3</p>
+    </>
+  )
 };
