@@ -7,18 +7,8 @@
   },
 } %>
 
-<%= sage_component SageModal, {
-  drawer: true,
-  id: "test-drawer",
-  remote_url: async_path("modal-demo"),
-  remove_content_on_close: true,
-  disable_background_blur: true,
-  animate: {
-    direction: "left"
-  },
-} do %>
-  <%= sage_component SageModalContent, {} do %>
-    <%= sage_component SageLoader, { type: "spinner" } %>
+  <%= sage_component SageDrawer, {} do %>
+    <%= sage_component SageModalContent, {} do %>
+      <%= sage_component SageLoader, { type: "spinner" } %>
+    <% end %>
   <% end %>
-<% end %>
-

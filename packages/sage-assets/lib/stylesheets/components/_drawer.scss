@@ -7,14 +7,16 @@
 // The Drawer component is an extension of the Modal component. 
 // This file is used to isolate the Drawer specific styles.
 
-.sage-modal--drawer {
-  justify-content: flex-end;
-  padding: 0;
+.sage-drawer {
+  .sage-modal {
+    justify-content: flex-end;
+    padding: 0;
 
-  .sage-modal__container {
-    overflow-y: scroll;
-    height: 100vh;
-    margin-top: 0;
-    border-radius: 0;
+    .sage-modal__container {
+      overflow-y: scroll;
+      height: 100vh;
+      margin-top: 0;
+      border-radius: 0;
+    }
   }
 }

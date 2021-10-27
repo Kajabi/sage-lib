@@ -1,6 +1,5 @@
 class SageModal < SageComponent
   set_attribute_schema({
-    drawer: [:optional, NilClass, TrueClass],
     active: [:optional, TrueClass],
     disable_close: [:optional, TrueClass],
     id: [:optional, String],
