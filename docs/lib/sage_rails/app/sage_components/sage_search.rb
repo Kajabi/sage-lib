@@ -7,4 +7,3 @@ class SageSearch < SageComponent
     value: [:optional, String, NilClass],
   })
 end
-
