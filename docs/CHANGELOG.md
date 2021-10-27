@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.22.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.22.0...@kajabi/sage@4.22.1) (2021-10-27)
+
+
+### Bug Fixes
+
+* **input error class:** deprecate and remove sage-input--error class ([09276b1](https://github.com/Kajabi/sage-lib/commit/09276b1cb069dcc695342288385610d90af2ba73))
+
+
+
+
+
 # [4.22.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.21.1...@kajabi/sage@4.22.0) (2021-10-26)
 
 
