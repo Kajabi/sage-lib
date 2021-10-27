@@ -12,8 +12,8 @@ Sage.carousel = (function() {
   let mySliderInfo;
   let options;
   let slidesLength;
-  let notLooping;
   let dots;
+  let looping;
 
   function init() {
     const slider = document.querySelector(containerClass);
@@ -32,7 +32,7 @@ Sage.carousel = (function() {
       .getAttribute('data-js-carousel-options')
     );
 
-    notLooping = options.loop !== undefined && !options.loop;
+    looping = !(options.loop !== undefined && !options.loop);
 
     mySlider = tns({
       ...options,
@@ -49,7 +49,7 @@ Sage.carousel = (function() {
     arrowNext = document.querySelector('.sage-carousel__arrow--next');
     arrowNext.addEventListener('click', handleNextArrowClick);
 
-    if (notLooping) {
+    if (!looping) {
       let dot;
       for (let i = 0; i < slidesLength; i++) {
         dot = document.createElement('div');
@@ -64,7 +64,7 @@ Sage.carousel = (function() {
   }
 
   function goToSlide(num) {
-    if (notLooping) {
+    if (!looping) {
       if (num === 0) arrowPrev.classList.add(arrowDisabledClass);
       else arrowPrev.classList.remove(arrowDisabledClass);
       if (num === slidesLength - 1) arrowNext.classList.add(arrowDisabledClass);
@@ -84,7 +84,7 @@ Sage.carousel = (function() {
 
   function handlePrevArrowClick() {
     mySliderInfo = mySlider.getInfo();
-    if (notLooping) {
+    if (!looping) {
       if (mySliderInfo.index !== 0) goToSlide(mySliderInfo.index - 1);
     } else {
       mySlider.goTo('prev');
@@ -93,7 +93,7 @@ Sage.carousel = (function() {
 
   function handleNextArrowClick() {
     mySliderInfo = mySlider.getInfo();
-    if (notLooping) {
+    if (!looping) {
       if (mySliderInfo.index !== slidesLength - 1) goToSlide(mySliderInfo.index + 1);
     } else {
       mySlider.goTo('next');
