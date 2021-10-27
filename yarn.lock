@@ -18078,11 +18078,6 @@ tiny-invariant@^1.0.2, tiny-invariant@^1.1.0:
   resolved "https://registry.yarnpkg.com/tiny-invariant/-/tiny-invariant-1.1.0.tgz#634c5f8efdc27714b7f386c35e6760991d230875"
   integrity sha512-ytxQvrb1cPc9WBEI/HSeYYoGD0kWnGEOR8RY6KomWLBVhqz0RgTwVO9dLrGz7dC+nN9llyI7OKAgRq8Vq4ZBSw==
 
-tiny-slider@^2.9.3:
-  version "2.9.3"
-  resolved "https://registry.yarnpkg.com/tiny-slider/-/tiny-slider-2.9.3.tgz#94d8158f704f3192fef1634c0ae6779fb14ea04e"
-  integrity sha512-KZY45m+t3fb3Kwlqsic0PIos1lgTNXBEC5N/AhI3aNEcryrd0nXohZMbVPMkcNYdbLjY1IUJAXWYAO6/RGJnKw==
-
 tiny-slider@^2.9.4:
   version "2.9.4"
   resolved "https://registry.yarnpkg.com/tiny-slider/-/tiny-slider-2.9.4.tgz#dd5cbf3065f1688ade8383ea6342aefcba22ccc4"
