@@ -12,6 +12,8 @@ Sage.carousel = (function() {
   let mySliderInfo;
   let options;
   let slidesLength;
+  let notLooping;
+  let dots;
 
   function init() {
     const slider = document.querySelector(containerClass);
@@ -29,6 +31,9 @@ Sage.carousel = (function() {
       .querySelector('.sage-carousel')
       .getAttribute('data-js-carousel-options')
     );
+
+    notLooping = options.loop !== undefined && !options.loop;
+
     mySlider = tns({
       ...options,
       container: containerClass,
@@ -44,24 +49,22 @@ Sage.carousel = (function() {
     arrowNext = document.querySelector('.sage-carousel__arrow--next');
     arrowNext.addEventListener('click', handleNextArrowClick);
 
-    if (!options.loop) {
-      let dots = document.querySelector('.sage-carousel__dots');
+    if (notLooping) {
       let dot;
       for (let i = 0; i < slidesLength; i++) {
         dot = document.createElement('div');
         dot.classList.add('sage-carousel__dot');
         dot.setAttribute('index', i);
         dot.addEventListener('click', handleDotClick);
-        dots.appendChild(dot);
+        document.querySelector('.sage-carousel__dots').appendChild(dot);
       };
     }
 
     goToSlide(0);
   }
 
-  let dots;
   function goToSlide(num) {
-    if (!options.loop) {
+    if (notLooping) {
       if (num === 0) arrowPrev.classList.add(arrowDisabledClass);
       else arrowPrev.classList.remove(arrowDisabledClass);
       if (num === slidesLength - 1) arrowNext.classList.add(arrowDisabledClass);
@@ -81,7 +84,7 @@ Sage.carousel = (function() {
 
   function handlePrevArrowClick() {
     mySliderInfo = mySlider.getInfo();
-    if (!options.loop) {
+    if (notLooping) {
       if (mySliderInfo.index !== 0) goToSlide(mySliderInfo.index - 1);
     } else {
       mySlider.goTo('prev');
@@ -90,7 +93,7 @@ Sage.carousel = (function() {
 
   function handleNextArrowClick() {
     mySliderInfo = mySlider.getInfo();
-    if (!options.loop) {
+    if (notLooping) {
       if (mySliderInfo.index !== slidesLength - 1) goToSlide(mySliderInfo.index + 1);
     } else {
       mySlider.goTo('next');
