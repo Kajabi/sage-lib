@@ -291,8 +291,17 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
   // to prevent it from touching the bottom of the viewport/page when it expands
   margin-bottom: sage-spacing(); /* stylelint-disable-line order/properties-order */
 
+  .sage-dropdown--anchor-left & {
+    left: 0;
+  }
+
   .sage-dropdown--anchor-right & {
     right: 0;
+  }
+
+  .sage-dropdown--anchor-center & {
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .sage-dropdown--pinned & {
@@ -319,11 +328,6 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
     // Temporarily removing animation as it causes
     // a positioning issue with nested flex positioned elements
     // transform: rotate3d(0, 0, 0, 0);
-  }
-
-  .sage-upload-card .sage-dropdown & {
-    left: 50%;
-    transform: translateX(-50%);
   }
 }
 
