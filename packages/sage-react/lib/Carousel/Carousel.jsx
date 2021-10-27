@@ -24,9 +24,10 @@ export const Carousel = ({
   let mySliderInfo;
   let slidesLength;
   let dots;
+  let notLooping;
 
   function goToSlide(num) {
-    if (!options.loop) {
+    if (notLooping) {
       if (num === 0) arrowPrev.classList.add(arrowDisabledClass);
       else arrowPrev.classList.remove(arrowDisabledClass);
       if (num === slidesLength - 1) arrowNext.classList.add(arrowDisabledClass);
@@ -46,7 +47,7 @@ export const Carousel = ({
 
   function handlePrevArrowClick() {
     mySliderInfo = mySlider.getInfo();
-    if (!options.loop) {
+    if (notLooping) {
       if (mySliderInfo.index !== 0) goToSlide(mySliderInfo.index - 1);
     } else {
       mySlider.goTo('prev');
@@ -55,7 +56,7 @@ export const Carousel = ({
 
   function handleNextArrowClick() {
     mySliderInfo = mySlider.getInfo();
-    if (!options.loop) {
+    if (notLooping) {
       if (mySliderInfo.index !== slidesLength - 1) goToSlide(mySliderInfo.index + 1);
     } else {
       mySlider.goTo('next');
@@ -93,10 +94,12 @@ export const Carousel = ({
     mySliderInfo = mySlider.getInfo();
     mySlider.events.on('dragEnd', handleDragEnd);
 
+    notLooping = options.loop !== undefined && !options.loop;
+
     arrowPrev = document.querySelector('.sage-carousel__arrow--prev');
     arrowNext = document.querySelector('.sage-carousel__arrow--next');
 
-    if (!options.loop) {
+    if (notLooping) {
       let dot;
       for (let i = 0; i < slidesLength; i += 1) {
         dot = document.createElement('div');
