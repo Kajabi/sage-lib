@@ -3,7 +3,7 @@ import { selectArgs } from '../story-support/helpers';
 import { Button } from '../Button';
 import { Grid } from '../Grid';
 import { OptionsDropdown } from '../Dropdown/OptionsDropdown';
-import { defaultOptionsItems } from '../Dropdown/stories/story-helper'
+import { defaultOptionsItems } from '../Dropdown/stories/story-helper';
 import { SageTokens } from '../configs';
 import { Sortable } from './Sortable';
 import { SortableItemCustom } from './SortableItemCustom';
@@ -99,29 +99,29 @@ Default.argTypes = {
   }),
 };
 
-export const SortableCustomItem = (args) => {
+export const SortableCustomItem = () => {
   const renderChild = () => (
     <>
       <p>Title</p>
       <OptionsDropdown options={defaultOptionsItems} isPinned={false} />
     </>
-  )
+  );
 
   const [state, setState] = useState([
     {
       id: '1',
       children: renderChild(),
-      gridTemplate: "te"
+      gridTemplate: 'te'
     },
     {
       id: '2',
       children: renderChild(),
-      gridTemplate: "te"
+      gridTemplate: 'te'
     },
     {
       id: '3',
       children: renderChild(),
-      gridTemplate: "te"
+      gridTemplate: 'te'
     },
   ]);
 
@@ -133,6 +133,5 @@ export const SortableCustomItem = (args) => {
         setList={setState}
       />
     </Grid>
-  )
+  );
 };
-
