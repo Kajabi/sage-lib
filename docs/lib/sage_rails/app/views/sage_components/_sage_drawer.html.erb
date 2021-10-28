@@ -1,19 +1,31 @@
-<div class="sage-drawer">
+<div 
+  class="sage-drawer
+  <%= component.generated_css_classes %>
+">
   <%= sage_component SageModal, {
     id: "test-drawer",
-    remote_url: async_path("modal-demo"),
     remove_content_on_close: true,
     disable_background_blur: true,
     animate: {
       direction: "left"
     },
   } do %>
-    <% if content_for? :sage_drawer_header_action %>
-      <%= content_for :sage_drawer_header_action %>
-    <% end %>
 
-    <%= sage_component SageModalContent, {} do %>
-      <%= sage_component SageLoader, { type: "spinner" } %>
+    <%= sage_component SageModalContent, {
+      title: component.title, 
+    } do %>
+      <% content_for :sage_header_aside do %>
+        <%= sage_component SageButton, {
+          style: "secondary",
+          subtle: true,
+          value: "Close Modal",
+          icon: { name: "remove", style: "only" },
+          attributes: { "data-js-modal": true }
+        } %>
+      <% end %>
+      <% if content_for?(:sage_drawer_content) %>
+        <%= content_for :sage_drawer_content %>
+      <% end %>
     <% end %>
   <% end %>
 </div>

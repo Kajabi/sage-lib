@@ -3,12 +3,18 @@
   style: "primary",
   html_attributes: {
     "data-js-modaltrigger": "test-drawer",
-    "data-js-remote-url": async_path("drawer-demo"),
   },
 } %>
 
-<%= sage_component SageDrawer, {} do %>
-  <%= sage_component SageModalContent, {} do %>
-    <%= sage_component SageLoader, { type: "spinner" } %>
+<%= sage_component SageDrawer, {
+  title: "Drawer Demo",
+} do %>
+  <% content_for :sage_drawer_content do %>
+    <p>
+      Sed maximus neque vitae magna facilisis, non finibus nulla malesuada.
+      Aliquam hendrerit vitae nibh at lacinia.
+      Pellentesque mauris ante, imperdiet nec scelerisque quis, fermentum a sapien.
+      Curabitur varius fringilla risus vitae scelerisque.
+    </p>
   <% end %>
 <% end %>
