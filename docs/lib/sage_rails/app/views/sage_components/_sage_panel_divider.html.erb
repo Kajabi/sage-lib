@@ -8,3 +8,6 @@
   <% end %>
   <%= component.generated_html_attributes.html_safe %>
 />
+<% if component.label %>
+  <span class="visually-hidden"><%= component.label %></span>
+<% end %>
