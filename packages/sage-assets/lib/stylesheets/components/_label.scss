@@ -164,3 +164,21 @@ $-label-inset-border: 0 0 0 1px inset;
   display: flex;
   flex-flow: row wrap;
 }
+
+@each $-key, $-value in $sage-spacings {
+  .sage-label-group--gap-#{$-key} {
+    gap: sage-spacing($-key);
+  }
+}
+
+.sage-label-group--align-center {
+  justify-content: center;
+}
+
+.sage-label-group--align-end {
+  justify-content: flex-end;
+}
+
+.sage-label-group--align-space-between {
+  justify-content: space-between;
+}

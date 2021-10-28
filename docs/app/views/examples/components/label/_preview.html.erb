@@ -124,3 +124,17 @@ configs = [
     <% end %>
   <% end %>
 <% end %>
+
+<%= sage_component SagePanelBlock, {} do %>
+  <h3 class="t-sage-heading-6">Label Group with Gap and Align</h3>
+  <%= sage_component SageLabelGroup, { gap: :sm, align: "center" } do %>
+    <% configs.each do | config | %>
+      <%= sage_component SageLabel, {
+        color: config[:color],
+        value: config[:color].capitalize,
+        icon: config[:icon],
+        interactive_type: :dropdown
+      } %>
+    <% end %>
+  <% end %>
+<% end %>
