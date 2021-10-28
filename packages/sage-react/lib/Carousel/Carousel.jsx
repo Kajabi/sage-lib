@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { tns } from 'tiny-slider/src/tiny-slider';
+import { tns } from 'tiny-slider/dist/tiny-slider';
 import { Icon } from '../Icon';
 
 export const Carousel = ({
