@@ -1,6 +1,5 @@
 <div class="sage-drawer">
   <%= sage_component SageModal, {
-    drawer: true,
     id: "test-drawer",
     remote_url: async_path("modal-demo"),
     remove_content_on_close: true,
@@ -9,9 +8,12 @@
       direction: "left"
     },
   } do %>
+    <% if content_for? :sage_drawer_header_action %>
+      <%= content_for :sage_drawer_header_action %>
+    <% end %>
+
     <%= sage_component SageModalContent, {} do %>
       <%= sage_component SageLoader, { type: "spinner" } %>
     <% end %>
   <% end %>
 </div>
-
