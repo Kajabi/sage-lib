@@ -67,6 +67,10 @@ $-copy-text-color-hover: sage-color(charcoal, 500);
     color: $-copy-text-color;
   }
 
+  &::after {
+    transform: translate3d(-50%, -50%, 0) scale(1);
+  }
+
   &:hover::before {
     color: $-copy-text-color-hover;
   }
