@@ -1,0 +1,73 @@
+////
+/// carousel
+///
+/// @group sage
+////
+
+$-sage-carousel-arrow-width: sage-spacing(lg);
+$-sage-carousel-dot-size: rem(6px);
+$-sage-carousel-dot-spacing: sage-spacing(2xs);
+$-sage-carousel-active-color: sage-color(charcoal, 100);
+$-sage-carousel-inactive-color: sage-color(grey, 400);
+
+.sage-carousel {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  user-select: none;
+}
+
+.sage-carousel__container {
+  display: flex;
+}
+
+.sage-carousel__arrow {
+  display: flex;
+  align-items: center;
+  width: $-sage-carousel-arrow-width;
+  cursor: pointer;
+
+  [class*="sage-icon-"] {
+    color: $-sage-carousel-active-color;
+  }
+}
+
+.sage-carousel__arrow--disabled {
+  cursor: not-allowed;
+
+  [class*="sage-icon-"] {
+    color: $-sage-carousel-inactive-color;
+  }
+}
+
+.sage-carousel__arrow--prev {
+  justify-content: flex-start;
+}
+
+.sage-carousel__arrow--next {
+  justify-content: flex-end;
+}
+
+.sage-carousel__sizer {
+  width: calc(100% - (#{$-sage-carousel-arrow-width} * 2));
+}
+
+.sage-carousel__dots {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: sage-spacing(sm);
+}
+
+.sage-carousel__dot {
+  width: $-sage-carousel-dot-size;
+  height: $-sage-carousel-dot-size;
+  margin: 0 $-sage-carousel-dot-spacing;
+  background-color: $-sage-carousel-inactive-color;
+  border-radius: sage-border(radius-round);
+  cursor: pointer;
+}
+
+.sage-carousel__dot--active {
+  background-color: $-sage-carousel-active-color;
+}

@@ -25,6 +25,7 @@ $-next-best-action-colors: (
 }
 
 .sage-next-best-action__graphic {
+  flex-shrink: 0;
   width: $-next-best-action-graphic-size;
 
   > * {
