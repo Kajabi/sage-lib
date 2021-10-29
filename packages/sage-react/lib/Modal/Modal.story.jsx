@@ -11,7 +11,6 @@ const DefaultBody = ({ onExit }) => (
     <Modal.Header
       icon={{ color: Icon.COLORS.RED_300, name: Icon.ICONS.DANGER }}
       title="Example Sage Modal"
-      subheader="Example subheader"
       popover={{
         title: 'Example popover title',
         link: '#',
