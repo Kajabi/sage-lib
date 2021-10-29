@@ -90,7 +90,7 @@ status_items = [
                 title: "Upsell offer",
                 spacer: { bottom: :xs }
               } %>
-              <%= sage_component SageCardRow, { grid_template: "eti" }  do %>
+              <%= sage_component SageCardRow, { grid_template: "eti", spacer: { bottom: :xs } }  do %>
                 <div class="upsell__graphic">
                   <%= sage_component SageIcon, { icon: "image", color: "grey-500", size: "3xl" } %>
                 </div>
@@ -125,7 +125,7 @@ status_items = [
               <% if !upsell[:downsell] %>
                 <%= sage_component SageCardRow, { grid_template: "et", spacer: { top: :xs } }  do %>
                   <div class="upsell__add-downsell-icon">
-                    <%= sage_component SageIcon, { icon: "arrow-corner" } %>
+                    <%= sage_component SageIcon, { icon: "downsell" } %>
                   </div>
                   <%= sage_component SageButton, {
                     style: "primary",
@@ -143,9 +143,9 @@ status_items = [
                   title: "Downsell offer",
                   spacer: { bottom: :xs }
                 } %>
-                <%= sage_component SageCardRow, { grid_template: "iti" }  do %>
+                <%= sage_component SageCardRow, { grid_template: "iti", spacer: { bottom: :xs } }  do %>
                   <div class="upsell__add-downsell-icon">
-                    <%= sage_component SageIcon, { icon: "arrow-corner" } %>
+                    <%= sage_component SageIcon, { icon: "downsell" } %>
                   </div>
                   <div class="upsell__graphic">
                     <%= sage_component SageIcon, { icon: "image", color: "grey-500", size: "3xl" } %>
