@@ -107,6 +107,8 @@ export const Carousel = ({
         dot = document.createElement('div');
         dot.classList.add('sage-carousel__dot');
         dot.setAttribute('index', i);
+        dot.setAttribute('role', 'button');
+        dot.setAttribute('tabIndex', '-1');
         dot.addEventListener('click', handleDotClick);
         document.querySelector('.sage-carousel__dots').appendChild(dot);
       }
