@@ -5,7 +5,11 @@
   data-js-carousel-options="<%= component.options.to_json %>"
 >
   <div class="sage-carousel__container" aria-roledescription="carousel">
-    <div class="sage-carousel__arrow sage-carousel__arrow--prev">
+    <div
+      class="sage-carousel__arrow sage-carousel__arrow--prev"
+      role="button"
+      tabindex="-1"
+    >
       <%= sage_component SageIcon, {
         icon: "caret-left",
         label: "Prev",
@@ -19,7 +23,11 @@
         <% end %>
       </div>
     </div>
-    <div class="sage-carousel__arrow sage-carousel__arrow--next">
+    <div
+      class="sage-carousel__arrow sage-carousel__arrow--next"
+      role="button"
+      tabindex="-1"
+    >
       <%= sage_component SageIcon, {
         icon: "caret-right",
         label: "Next",
