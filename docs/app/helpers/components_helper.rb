@@ -339,7 +339,7 @@ module ComponentsHelper
       },
       {
         title: "next_best_action",
-        description: "A specialized component that showcases a Call to Action we'd like the customer to take.",
+        description: "A specialized component that showcases a call to action we'd like the customer to take. To view the common use of Next Best Actions, see the Patterns navigation, then Next Best Actions.",
         scss: "done",
         docs: "todo",
         rails: "done",
