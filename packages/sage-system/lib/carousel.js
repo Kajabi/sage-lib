@@ -20,9 +20,12 @@ Sage.carousel = (function() {
     const slides = [...slider.children];
     let slideContainer;
     slidesLength = slides.length;
-    slides.forEach((slide) => {
+    slides.forEach((slide, index) => {
       slideContainer = document.createElement('div');
       slideContainer.classList.add('slide');
+      slideContainer.setAttribute('aria-roledescription', 'slide');
+      slideContainer.setAttribute('role', 'group');
+      slideContainer.setAttribute('aria-label', `${index + 1} of ${slidesLength}`);
       slideContainer.appendChild(slide);
       slider.appendChild(slideContainer);
     });
