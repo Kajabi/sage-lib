@@ -116,8 +116,8 @@
 
   margin-bottom: rem(-1px);
   padding: sage-spacing(xs) sage-spacing(sm);
-  border-top: 1px solid sage-color(grey, 200);
-  border-bottom: 1px solid sage-color(grey, 200);
+  border-top: sage-border(default);
+  border-bottom: sage-border(default);
 
   .sage-card__list--block-space-sm & {
     padding-top: sage-spacing(sm);

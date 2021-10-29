@@ -78,8 +78,8 @@
 .sage-panel__list-item {
   margin-bottom: rem(-1px);
   padding: sage-spacing(sm) sage-spacing();
-  border-top: 1px solid sage-color(grey, 200);
-  border-bottom: 1px solid sage-color(grey, 200);
+  border-top: sage-border(default);
+  border-bottom: sage-border(default);
 
   @include sage-grid-card-row;
 
