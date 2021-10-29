@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { tns } from 'tiny-slider/dist/tiny-slider';
 import { Icon } from '../Icon';
+import { Panel } from '../Panel';
 
 export const Carousel = ({
   children,
@@ -122,34 +123,40 @@ export const Carousel = ({
   });
 
   return (
-    <div className={classNames} aria-roledescription="carousel">
-      <div className="sage-carousel__container">
-        <div
-          className="sage-carousel__arrow sage-carousel__arrow--prev"
-          onClick={handlePrevArrowClick}
-          onKeyDown={handleKeyDown}
-          role="button"
-          tabIndex={-1}
-        >
-          <Icon icon="caret-left" size="lg" />
-        </div>
-        <div className="sage-carousel__sizer">
-          <div className="sage-carousel__carousel">
-            {children}
+    <Panel>
+      <Panel.Header
+        title="What to do next"
+        subtext="Your next best step based on your personal goals and current status"
+      />
+      <div className={classNames} aria-roledescription="carousel">
+        <div className="sage-carousel__container">
+          <div
+            className="sage-carousel__arrow sage-carousel__arrow--prev"
+            onClick={handlePrevArrowClick}
+            onKeyDown={handleKeyDown}
+            role="button"
+            tabIndex={-1}
+          >
+            <Icon icon="caret-left" size="lg" />
+          </div>
+          <div className="sage-carousel__sizer">
+            <div className="sage-carousel__carousel">
+              {children}
+            </div>
+          </div>
+          <div
+            className="sage-carousel__arrow sage-carousel__arrow--next"
+            onClick={handleNextArrowClick}
+            onKeyDown={handleKeyDown}
+            role="button"
+            tabIndex={-1}
+          >
+            <Icon icon="caret-right" size="lg" />
           </div>
         </div>
-        <div
-          className="sage-carousel__arrow sage-carousel__arrow--next"
-          onClick={handleNextArrowClick}
-          onKeyDown={handleKeyDown}
-          role="button"
-          tabIndex={-1}
-        >
-          <Icon icon="caret-right" size="lg" />
-        </div>
+        <div className="sage-carousel__dots" />
       </div>
-      <div className="sage-carousel__dots" />
-    </div>
+    </Panel>
   );
 };
 

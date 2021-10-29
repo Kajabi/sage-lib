@@ -1,39 +1,45 @@
-<div
-  class="sage-carousel <%= component.generated_css_classes %>"
-  <%= component.generated_html_attributes.html_safe %>
-  data-js-carousel
-  data-js-carousel-options="<%= component.options.to_json %>"
->
-  <div class="sage-carousel__container" aria-roledescription="carousel">
-    <div
-      class="sage-carousel__arrow sage-carousel__arrow--prev"
-      role="button"
-      tabindex="-1"
-    >
-      <%= sage_component SageIcon, {
-        icon: "caret-left",
-        label: "Prev",
-        size: "xl",
-      } %>
-    </div>
-    <div class="sage-carousel__sizer">
-      <div class="sage-carousel__carousel">
-        <% if content_for? :sage_carousel_items %>
-          <%= content_for :sage_carousel_items %>
-        <% end %>
+<%= sage_component SagePanel, {} do %>
+  <%= sage_component SagePanelHeader, {
+    title: "What to do next",
+    subtext: "Your next best step based on your personal goals and current status"
+  } %>
+  <div
+    class="sage-carousel <%= component.generated_css_classes %>"
+    <%= component.generated_html_attributes.html_safe %>
+    data-js-carousel
+    data-js-carousel-options="<%= component.options.to_json %>"
+  >
+    <div class="sage-carousel__container" aria-roledescription="carousel">
+      <div
+        class="sage-carousel__arrow sage-carousel__arrow--prev"
+        role="button"
+        tabindex="-1"
+      >
+        <%= sage_component SageIcon, {
+          icon: "caret-left",
+          label: "Prev",
+          size: "xl",
+        } %>
+      </div>
+      <div class="sage-carousel__sizer">
+        <div class="sage-carousel__carousel">
+          <% if content_for? :sage_carousel_items %>
+            <%= content_for :sage_carousel_items %>
+          <% end %>
+        </div>
+      </div>
+      <div
+        class="sage-carousel__arrow sage-carousel__arrow--next"
+        role="button"
+        tabindex="-1"
+      >
+        <%= sage_component SageIcon, {
+          icon: "caret-right",
+          label: "Next",
+          size: "xl",
+        } %>
       </div>
     </div>
-    <div
-      class="sage-carousel__arrow sage-carousel__arrow--next"
-      role="button"
-      tabindex="-1"
-    >
-      <%= sage_component SageIcon, {
-        icon: "caret-right",
-        label: "Next",
-        size: "xl",
-      } %>
-    </div>
+    <div class="sage-carousel__dots"></div>
   </div>
-  <div class="sage-carousel__dots"></div>
-</div>
+<% end %>
