@@ -77,9 +77,12 @@ export const Carousel = ({
     const slides = [...slider.children];
     let slideContainer;
     slidesLength = slides.length;
-    slides.forEach((slide) => {
+    slides.forEach((slide, index) => {
       slideContainer = document.createElement('div');
       slideContainer.classList.add('slide');
+      slideContainer.setAttribute('aria-roledescription', 'slide');
+      slideContainer.setAttribute('role', 'group');
+      slideContainer.setAttribute('aria-label', `${index + 1} of ${slidesLength}`);
       slideContainer.appendChild(slide);
       slider.appendChild(slideContainer);
     });
@@ -117,7 +120,7 @@ export const Carousel = ({
   });
 
   return (
-    <div className={classNames}>
+    <div className={classNames} aria-roledescription="carousel">
       <div className="sage-carousel__container">
         <div
           className="sage-carousel__arrow sage-carousel__arrow--prev"
