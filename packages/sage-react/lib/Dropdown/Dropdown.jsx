@@ -8,7 +8,7 @@ import { DropdownItemList } from './DropdownItemList';
 import { DropdownItemSearch } from './DropdownItemSearch';
 import { DropdownPanel } from './DropdownPanel';
 import { DropdownTrigger } from './DropdownTrigger';
-import { DROPDOWN_ITEM_COLORS, DROPDOWN_PANEL_SIZES, DROPDOWN_PANEL_TYPES } from './configs';
+import { DROPDOWN_ITEM_COLORS, DROPDOWN_PANEL_SIZES, DROPDOWN_PANEL_TYPES, DROPDOWN_POSITIONS } from './configs';
 
 export const Dropdown = ({
   align,
@@ -171,9 +171,10 @@ Dropdown.Trigger = DropdownTrigger;
 Dropdown.ITEM_COLORS = DROPDOWN_ITEM_COLORS;
 Dropdown.PANEL_SIZES = DROPDOWN_PANEL_SIZES;
 Dropdown.PANEL_TYPES = DROPDOWN_PANEL_TYPES;
+Dropdown.POSITIONS = DROPDOWN_POSITIONS;
 
 Dropdown.defaultProps = {
-  align: null,
+  align: DROPDOWN_POSITIONS.DEFAULT,
   children: null,
   className: null,
   clickTriggerHandler: null,
@@ -198,9 +199,7 @@ Dropdown.defaultProps = {
 };
 
 Dropdown.propTypes = {
-  align: PropTypes.oneOf([
-    'right',
-  ]),
+  align: PropTypes.oneOf(Object.values(Dropdown.POSITIONS)),
   children: PropTypes.node,
   className: PropTypes.string,
   clickTriggerHandler: PropTypes.func,

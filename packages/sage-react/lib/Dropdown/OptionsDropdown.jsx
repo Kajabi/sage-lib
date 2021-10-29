@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { SageTokens } from '../configs';
 import { Dropdown } from './Dropdown';
 import { DropdownItemList } from './DropdownItemList';
-import { DROPDOWN_PANEL_SIZES } from './configs';
+import { DROPDOWN_PANEL_SIZES, DROPDOWN_POSITIONS } from './configs';
 
 export const OptionsDropdown = ({
   align,
@@ -34,9 +34,10 @@ export const OptionsDropdown = ({
 );
 
 OptionsDropdown.PANEL_SIZES = DROPDOWN_PANEL_SIZES;
+OptionsDropdown.POSITIONS = DROPDOWN_POSITIONS;
 
 OptionsDropdown.defaultProps = {
-  align: null,
+  align: DROPDOWN_POSITIONS.DEFAULT,
   className: null,
   exitPanelHandler: (evt) => evt,
   isPinned: true,
@@ -47,9 +48,7 @@ OptionsDropdown.defaultProps = {
 };
 
 OptionsDropdown.propTypes = {
-  align: PropTypes.oneOf([
-    'right',
-  ]),
+  align: PropTypes.oneOf(Object.values(DROPDOWN_POSITIONS)),
   className: PropTypes.string,
   exitPanelHandler: PropTypes.func,
   isPinned: PropTypes.bool,
