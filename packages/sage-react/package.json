@@ -90,7 +90,8 @@
     "react-sortablejs": "^6.0.0",
     "react-uuid": "^1.0.2",
     "recharts": "^2.0.9",
-    "sortablejs": "^1.12.0"
+    "sortablejs": "^1.12.0",
+    "tiny-slider": "^2.9.4"
   },
   "peerDependencies": {
     "react": ">=16.13.1",
