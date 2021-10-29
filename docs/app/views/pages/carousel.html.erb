@@ -1,9 +1,11 @@
 <%= content_for :heading do %>
 <%= md(%(
-# Carousel
-<p class="docs-heading__lead">Yadda yadda yadda</p>
+# Next Best Actions
+<p class="docs-heading__lead">This Pattern shows a reusable combination of components that handle a common usecase of Carousels and Next Best Actions within a Panel in the application.</p>
 )) %>
 <% end %>
+
+<h3 class="t-sage-heading-5 sage-spacer-top sage-spacer-bottom-sm">Rendered Example</h3>
 <%= sage_component SagePanel, {} do %>
   <%= sage_component SagePanelHeader, {
     title: "What to do next",
@@ -44,3 +46,50 @@
     <% end %>
   <% end %>
 <% end %>
+
+<h3 class="t-sage-heading-5 sage-spacer-top sage-spacer-bottom-sm">Example Code</h3>
+
+<pre class="prettyprint">
+<code>
+&lt;%= sage_component SagePanel, {} do %&gt; 
+  &lt;%= sage_component SagePanelHeader, {
+    title: &quot;What to do next&quot;,
+    subtext: &quot;Your next best step based on your personal goals and current status&quot;,
+  } %&gt;
+  &lt;%= sage_component SageCarousel, {
+    options: {
+      fixedWidth: 544,
+      gutter: 24,
+      loop: false,
+      mouseDrag: true,
+    }
+  } do %&gt;
+    &lt;%= content_for :sage_carousel_items do %&gt; &lt;%
+      6.times do %&gt;
+        &lt;%= sage_component SageNextBestAction, {
+          card_color: &quot;draft&quot;,
+          dismissable: true,
+          dismiss_attributes: {
+            onclick: &quot;console.log('Add your own dismiss functionality here!')&quot;,
+          },
+          graphic: {
+            element: image_tag(&quot;next_best_action_graphic.png&quot;, alt: &quot;&quot;),
+          },
+          title: &quot;Offer an additional buy with Upsell&quot;,
+        } do %&gt; 
+          &lt;%= content_for :sage_next_best_action_description do %&gt;
+            &lt;p&gt;Maximize your profit by adding an Upsell to your order flow. This section might wrap to two lines.&lt;/p&gt;
+          &lt;% end %&gt;
+          &lt;%= content_for :sage_next_best_action_actions do %&gt; 
+            &lt;%= sage_component SageButton, {
+              style: &quot;primary&quot;,
+              value: &quot;Add an Upsell&quot;,
+            } %&gt; 
+          &lt;% end %&gt;
+        &lt;% end %&gt;
+      &lt;% end %&gt;
+    &lt;% end %&gt;
+  &lt;% end %&gt;
+&lt;% end %&gt;
+</code>
+</pre>
