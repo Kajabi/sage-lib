@@ -1,3 +1,9 @@
+<%= content_for :heading do %>
+<%= md(%(
+# Carousel
+<p class="docs-heading__lead">Yadda yadda yadda</p>
+)) %>
+<% end %>
 <%= sage_component SagePanel, {} do %>
   <%= sage_component SagePanelHeader, {
     title: "What to do next",
