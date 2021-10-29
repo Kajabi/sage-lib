@@ -71,7 +71,7 @@ status_items = [
   subtitle: "An Upsell is an additional and optional Offer that members can also purchase. It is prompted to members after they finish purchasing your initial Offer.",
 } do %>
   <%= sage_component SagePanelHeader, { title: "After-purchase flow", spacer: { bottom: :xs } } %>
-  <%= sage_component SagePanelDivider, { text: "After checkout" } %>
+  <%= sage_component SagePanelDivider, { label: "After checkout" } %>
   <%= sage_component SageSortable, {
     resource_name: "upsells",
     spacer: { top: :sm }
@@ -191,13 +191,9 @@ status_items = [
         value: "Add an Upsell",
         style: "secondary",
         raised: false,
-        icon: {
-          style: "left",
-          name: "add"
-        },
       } %>
   </div>
-  <%= sage_component SagePanelDivider, { text: "End of flow" } %>
+  <%= sage_component SagePanelDivider, { label: "End of flow" } %>
 <% end %>
 <%= sage_component SagePanelDivider, {} %>
 <%= sage_component SageButton, {
