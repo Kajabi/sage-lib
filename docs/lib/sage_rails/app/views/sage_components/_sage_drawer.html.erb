@@ -4,24 +4,36 @@
 ">
   <%= sage_component SageModal, {
     id: "test-drawer",
-    remove_content_on_close: true,
     disable_background_blur: true,
     animate: {
-      direction: "left"
+      direction: "left",
     },
   } do %>
 
     <%= sage_component SageModalContent, {
-      title: component.title, 
     } do %>
       <% content_for :sage_header_aside do %>
-        <%= sage_component SageButton, {
-          style: "secondary",
-          subtle: true,
-          value: "Close Modal",
-          icon: { name: "remove", style: "only" },
-          attributes: { "data-js-modal": true }
-        } %>
+        <%= sage_component SageButtonGroup, { gap: :md, align: "space-between" } do %>
+          <%= sage_component SageButton, {
+            style: "secondary",
+            subtle: true,
+            value: "Open full profile",
+            icon: { name: "expand", style: "left" }
+          } %>
+          <% if component.dismissable %>
+            <%= sage_component SageButton, {
+              value: "Close Drawer",
+              icon: {
+                style: "only",
+                name: "remove"
+              },
+              subtle: true,
+              style: "secondary",
+              css_classes: "sage-drawer__close",
+              attributes: { "data-js-modal": true }
+            } %>
+          <% end %>
+        <% end %>
       <% end %>
       <% if content_for?(:sage_drawer_content) %>
         <%= content_for :sage_drawer_content %>

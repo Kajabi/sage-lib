@@ -1,6 +1,6 @@
 class SageDrawer < SageComponent
   set_attribute_schema({
-    title: String,
+    dismissable: [:optional, TrueClass],
   })
   def sections
     %w(drawer_content)

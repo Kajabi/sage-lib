@@ -7,14 +7,16 @@
 } %>
 
 <%= sage_component SageDrawer, {
-  title: "Drawer Demo",
+  dismissable: true,
 } do %>
   <% content_for :sage_drawer_content do %>
+    <h3 class="<%= SageClassnames::TYPE::HEADING_4 %> <%= SageClassnames::SPACERS::MD_BOTTOM %> <%= SageClassnames::TYPE_COLORS::CHARCOAL_500 %>">
+      Drawer
+    </h3>
     <p>
-      Sed maximus neque vitae magna facilisis, non finibus nulla malesuada.
-      Aliquam hendrerit vitae nibh at lacinia.
-      Pellentesque mauris ante, imperdiet nec scelerisque quis, fermentum a sapien.
-      Curabitur varius fringilla risus vitae scelerisque.
+      👋 Any content can go here.
     </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quam assumenda a ut, architecto rerum vel quisquam, repellendus nemo quo saepe at voluptatem eveniet earum laudantium nostrum quibusdam? Repellendus, repudiandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum in deleniti doloribus sequi ipsam unde pariatur perspiciatis ex molestias temporibus accusantium fuga debitis, voluptates hic eos ab perferendis ad quo.</p>
   <% end %>
 <% end %>
