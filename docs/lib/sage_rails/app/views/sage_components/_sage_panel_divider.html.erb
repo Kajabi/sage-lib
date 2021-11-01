@@ -1,8 +1,13 @@
-<hr
-  class="
+<hr class="
     sage-panel__divider
     <%= "sage-panel__divider--full-bleed" if component.bleed %>
     <%= component.generated_css_classes %>
   "
+  <% if component.label %>
+    data-divider-label="<%= component.label %>"
+  <% end %>
   <%= component.generated_html_attributes.html_safe %>
 />
+<% if component.label %>
+  <span class="visually-hidden"><%= component.label %></span>
+<% end %>

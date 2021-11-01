@@ -10,6 +10,7 @@ $-modal-padding-y: sage-spacing(md);
 $-modal-margin-lg: 6vh;
 $-modal-margin-xl: 8vh;
 $-modal-header-image-size: rem(28px);
+$-modal-fullscreen-top-spacing: rem(104px);
 
 
 .sage-modal {
@@ -50,6 +51,10 @@ $-modal-header-image-size: rem(28px);
     z-index: sage-z-index(modal, -1);
     pointer-events: auto;
     opacity: 1;
+  }
+
+  &.sage-modal--fullscreen {
+    padding: 0;
   }
 }
 
@@ -100,18 +105,50 @@ $-modal-header-image-size: rem(28px);
   .sage-modal--large & {
     max-width: rem(900px); // TODO: Investigate this size necessity
   }
+
+  .sage-modal--fullscreen & {
+    overflow-y: scroll;
+    height: 100%;
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+    opacity: 1;
+  }
 }
 
 .sage-modal__header {
   display: grid;
   align-items: baseline;
   margin: $-modal-padding-y $-modal-padding-x;
+  background-color: sage-color(white);
+
+  .sage-modal--fullscreen & {
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: sage-spacer(sm) $-modal-padding-x;
+    box-shadow: sage-shadow(sm);
+  }
+}
+
+.sage-modal__title {
+  .sage-modal__header--has-header-actions & {
+    order: -1; /* causes the header-title area to be second in the visual order */
+  }
 }
 
 .sage-modal__header-text {
   .sage-card__row {
     gap: sage-spacing(xs);
+
+    .sage-modal--fullscreen & {
+      display: flex;
+      justify-content: space-between;
+    }
   }
+
   @media (max-width: sage-breakpoint(sm-max)) {
     .sage-card__row {
       flex-wrap: nowrap;
@@ -127,10 +164,24 @@ $-modal-header-image-size: rem(28px);
 
 .sage-modal__header-aside {
   margin-left: auto;
+
+  .sage-modal__header--has-header-actions & {
+    order: -2; /* causes the header-aside area to be first in the visual order */
+    margin-left: 0;
+  }
+}
+
+.sage-modal__header-actions {
+  display: flex;
+  gap: sage-spacing(md);
 }
 
 .sage-modal__content {
   margin: $-modal-padding-y $-modal-padding-x;
+
+  .sage-modal--fullscreen & {
+    margin-top: $-modal-fullscreen-top-spacing;
+  }
 
   > :last-child {
     margin-bottom: 0;

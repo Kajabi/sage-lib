@@ -14,6 +14,7 @@ export const Modal = ({
   children,
   className,
   containerClassName,
+  fullScreen,
   large,
   noBlur,
   onExit,
@@ -25,6 +26,7 @@ export const Modal = ({
     {
       'sage-modal--active': active,
       'sage-modal--large': large,
+      'sage-modal--fullscreen': fullScreen,
       'sage-modal--no-blur': noBlur,
     }
   );
@@ -85,6 +87,7 @@ Modal.defaultProps = {
   children: null,
   containerClassName: null,
   className: '',
+  fullScreen: false,
   large: false,
   noBlur: false,
   onExit: (val) => val,
@@ -101,6 +104,7 @@ Modal.propTypes = {
   children: PropTypes.node,
   containerClassName: PropTypes.string,
   className: PropTypes.string,
+  fullScreen: PropTypes.bool,
   large: PropTypes.bool,
   noBlur: PropTypes.bool,
   onExit: PropTypes.func,

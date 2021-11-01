@@ -1,5 +1,5 @@
 <% if component.title.present? %>
-  <header class="sage-modal__header">
+  <header class="sage-modal__header <%= "sage-modal__header--has-header-actions" if content_for?(:sage_header_actions) %>">
     <div class="sage-modal__header-text">
       <%= sage_component SageCardRow, { grid_template: component.header_image.present? || component.header_icon.present? ? "ete" : "te" } do %>
         <% if component.header_image.present? %>
@@ -19,6 +19,11 @@
           <aside class="sage-modal__header-aside">
             <%= content_for :sage_header_aside %>
           </aside>
+        <% end %>
+        <% if content_for?(:sage_header_actions) %>
+          <div class="sage-modal__header-actions">
+            <%= content_for :sage_header_actions %>
+          </div>
         <% end %>
       <% end %>
       <% if component.subheader %>
@@ -43,7 +48,6 @@
         <%= content_for :sage_header_indicator %>
       <% end %>
     </div>
-    
   </header>
 <% else %>
   <% if content_for?(:sage_header_aside) %>

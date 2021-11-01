@@ -98,6 +98,16 @@ module ComponentsHelper
         figma_embed: "",
       },
       {
+        title: "carousel",
+        description: "A wrapper for Tiny Slider for slideshow/carousel layouts. (http://ganlanyuan.github.io/tiny-slider/)",
+        scss: "done",
+        rails: "done",
+        react: "done",
+        react_component_slug: "sage-carousel--default",
+        a11y: "todo",
+        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2Fc8Wj1s2jJJriXqZf016Tw3%2FNext-Best-Actions%3Fnode-id%3D1973%253A13595"
+      },
+      {
         title: "chart_legend",
         description: "Sage charts legend are used primarily in React-based Recharts bar charts when multiple bars are used for a given data point.",
         scss: "done",

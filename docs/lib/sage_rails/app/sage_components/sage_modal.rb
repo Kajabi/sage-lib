@@ -3,6 +3,7 @@ class SageModal < SageComponent
     active: [:optional, TrueClass],
     disable_close: [:optional, TrueClass],
     id: [:optional, String],
+    fullscreen: [:optional, TrueClass],
     large: [:optional, TrueClass],
     remove_content_on_close: [:optional, TrueClass],
     disable_background_blur: [:optional, TrueClass],

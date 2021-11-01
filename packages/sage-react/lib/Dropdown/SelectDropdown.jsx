@@ -7,7 +7,7 @@ import { SageTokens } from '../configs';
 import { Label } from '../Label';
 import { Dropdown } from './Dropdown';
 import { DropdownTriggerSelect } from './DropdownTriggerSelect';
-import { DROPDOWN_PANEL_SIZES } from './configs';
+import { DROPDOWN_PANEL_SIZES, DROPDOWN_POSITIONS } from './configs';
 
 export const SelectDropdown = ({
   align,
@@ -245,9 +245,10 @@ export const SelectDropdown = ({
 };
 
 SelectDropdown.PANEL_SIZES = DROPDOWN_PANEL_SIZES;
+SelectDropdown.POSITIONS = DROPDOWN_POSITIONS;
 
 SelectDropdown.defaultProps = {
-  align: null,
+  align: DROPDOWN_POSITIONS.DEFAULT,
   allowDeselect: false,
   allowMultiselect: false,
   className: null,
@@ -276,9 +277,7 @@ SelectDropdown.defaultProps = {
 };
 
 SelectDropdown.propTypes = {
-  align: PropTypes.oneOf([
-    'right',
-  ]),
+  align: PropTypes.oneOf(Object.values(DROPDOWN_POSITIONS)),
   allowDeselect: PropTypes.bool,
   allowMultiselect: PropTypes.bool,
   className: PropTypes.string,

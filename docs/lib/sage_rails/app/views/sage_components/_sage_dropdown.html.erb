@@ -1,6 +1,8 @@
 <div
   class="sage-dropdown
+    <%= "sage-dropdown--anchor-left" if component.align == "left" %>
     <%= "sage-dropdown--anchor-right" if component.align == "right" %>
+    <%= "sage-dropdown--anchor-center" if component.align == "center" %>
     <%= "sage-dropdown--contained" if component.contained %>
     <%= "sage-dropdown--customized" if component.customized %>
     <%= "sage-dropdown--full-width" if component.full_width_panel %>

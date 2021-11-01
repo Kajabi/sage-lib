@@ -137,7 +137,10 @@ Cards have three core areas:
       }
     } %>
   <% end %>
-
+  <%= sage_component SageCardHeader, { title: "Divider:" } %>
+  <%= sage_component SageCardDivider, {} %>
+  <%= sage_component SageCardHeader, { title: "Divider (w/ label):" } %>
+  <%= sage_component SageCardDivider, { label: "Label text" } %>
   <%= sage_component SageCardHeader, { title: "Divider (full bleed):" } %>
   <%= sage_component SageCardDivider, { bleed: true } %>
 

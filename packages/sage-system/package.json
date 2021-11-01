@@ -54,6 +54,7 @@
     "arrive": "^2.4.1",
     "babel-loader": "^8.1.0",
     "sortablejs": "^1.12.0",
+    "tiny-slider": "^2.9.4",
     "zxcvbn": "^4.4.2"
   }
 }

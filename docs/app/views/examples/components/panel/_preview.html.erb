@@ -237,20 +237,17 @@ The Divider is a thin rule that helps to provide additional visual separation be
 ", use_sage_type: true) %>
 
 <%= sage_component SagePanelSubheader, { title: "Example:" } %>
-<%= sage_component SagePanel, {} do %>
-  <%= sage_component SagePanelHeader, { title: "Panel header here" } %>
-  <%= sage_component SagePanelBlock, { type_block: true } do %>
-    <%= sample_copy.html_safe %>
-  <% end %>
-  <%= sage_component SagePanelDivider, {} %>
-  <%= sage_component SagePanelSubheader, { title: "Panel subheader here" } %>
-  <%= sage_component SagePanelBlock, { type_block: true } do %>
-    <%= sample_copy.html_safe %>
-  <% end %>
-<% end %>
 <%= md("
-Dividers can also be set to extend to the panel edges with the `--full-bleed` modifier
+Dividers can also be set to extend to the panel edges with the `--full-bleed` modifier. They may also contain label text.
 ", use_sage_type: true) %>
+<%= sage_component SagePanel, {} do %>
+  <%= sage_component SagePanelHeader, { title: "Divider:" } %>
+  <%= sage_component SagePanelDivider, {} %>
+  <%= sage_component SagePanelHeader, { title: "Divider (w/ label):" } %>
+  <%= sage_component SagePanelDivider, { label: "Label text" } %>
+  <%= sage_component SagePanelHeader, { title: "Divider (full bleed):" } %>
+  <%= sage_component SagePanelDivider, { bleed: true } %>
+<% end %>
 
 <%= sage_component SagePanelHeader, { title: "Panel Figure <code>.sage-panel__figure</code>".html_safe } %>
 <%= md("
