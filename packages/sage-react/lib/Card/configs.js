@@ -18,6 +18,14 @@ export const CARD_ROW_ALIGNMENT_OPTIONS = {
   TOP: 'start',
 };
 
+export const CARD_ROW_GAP_OPTIONS = {
+  DEFAULT: null,
+  XS: 'xs',
+  SM: 'sm',
+  MD: 'md',
+  LG: 'lg',
+};
+
 export const CARD_HIGHLIGHT_COLORS = {
   CHARCOAL: SageTokens.COLORS.CHARCOAL,
   GREY: SageTokens.COLORS.GREY,
