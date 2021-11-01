@@ -26,6 +26,8 @@ export const CARD_ROW_GAP_OPTIONS = {
   LG: 'lg',
 };
 
+export const CARD_LIST_GAP_OPTIONS = CARD_ROW_GAP_OPTIONS;
+
 export const CARD_HIGHLIGHT_COLORS = {
   CHARCOAL: SageTokens.COLORS.CHARCOAL,
   GREY: SageTokens.COLORS.GREY,
