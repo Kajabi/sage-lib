@@ -1,6 +1,6 @@
 # Sage Design System Automations
 
-The following document describes the internal automations of the Sage Design System
+The following document describes the internal automations of the Sage Design System.
 
 ## Lefthook
 
