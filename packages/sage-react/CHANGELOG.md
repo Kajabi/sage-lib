@@ -3,6 +3,39 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.64.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.63.1...@kajabi/sage-react@0.64.0) (2021-11-01)
+
+
+### Bug Fixes
+
+* **carousel:** fixed yarn test with tiny-slider import ([8ffb72b](https://github.com/Kajabi/sage-lib/commit/8ffb72bb9fe6992f7ee5a3562a4affb7aa080a43))
+* **carousel:** moved tiny-slider import after React import ([4bb68a5](https://github.com/Kajabi/sage-lib/commit/4bb68a50607e4efd53adfcd5d3487f43c794bb33))
+* **carousel:** trying to fix yarn test errors ([604b2c7](https://github.com/Kajabi/sage-lib/commit/604b2c7eb1327a11f35a81d1ce8baa0dc83ea65f))
+* **dropdown:** add new options to react component, updated story ([365c747](https://github.com/Kajabi/sage-lib/commit/365c7477a3902ef02bc9ae348197bffb374b5519))
+* **modal:** add fullscreen variant ([a459425](https://github.com/Kajabi/sage-lib/commit/a4594253224f28087ef75b41eafc5703204560b4))
+* **modal:** add header_actions ([bc83918](https://github.com/Kajabi/sage-lib/commit/bc8391811b8e9f0d1b1e379a8d18daed9b0775ff))
+* **modal:** update class when header-actions is present react ([709dcfc](https://github.com/Kajabi/sage-lib/commit/709dcfcd79dd0b105ba75cde9095d5af4189dc63))
+
+
+### Features
+
+* **carousel:** added a11y attributes per Quinton's guidance ([a58b7ed](https://github.com/Kajabi/sage-lib/commit/a58b7ed289d189f21fb1a703b250ca18aafb682d))
+* **carousel:** added basic React component structure ([6f4f95d](https://github.com/Kajabi/sage-lib/commit/6f4f95d95f8fd423884838e46f46edf3297baf19))
+* **carousel:** added missing button role and tab index attributes to arrows and dots ([7e3d4c6](https://github.com/Kajabi/sage-lib/commit/7e3d4c644d908b17c3a7173705b044279bdccfc7))
+* **carousel:** fixed looping conditional ([2ee8f5d](https://github.com/Kajabi/sage-lib/commit/2ee8f5db9870ce1e888f0b77642befd561ac6b34))
+* **carousel:** fixed looping conditional, added props and rules ([96e386f](https://github.com/Kajabi/sage-lib/commit/96e386f47744282459c2902858553b0dd47cd773))
+* **carousel:** fixed useEffect hook ([aacb927](https://github.com/Kajabi/sage-lib/commit/aacb9271687712ed88485878b775a357dcac495c))
+* **carousel:** got carousel working with useEffect ([4b839d2](https://github.com/Kajabi/sage-lib/commit/4b839d235ca2fdf9cd173c07399aa6c9ea9a2749))
+* **carousel:** got React component working correctly, could be improvement capability ([3978b6d](https://github.com/Kajabi/sage-lib/commit/3978b6d525ca997e03e01edb224e1441babe2edd))
+* **carousel:** removed unused configs React file ([142e949](https://github.com/Kajabi/sage-lib/commit/142e9494b4d6f43e526b85f58e9dc073bbcd3b0f))
+* **copy text:** adds borderless React prop ([a661f85](https://github.com/Kajabi/sage-lib/commit/a661f85d5114db815bfd419e84511a8ccc9ff991))
+* **copy text:** adds borderless React prop ([08888a1](https://github.com/Kajabi/sage-lib/commit/08888a1c47df6ff72a8d7383d88fe2dbb88ab490))
+* **label:** adds gap and alignment props to React component ([372e06c](https://github.com/Kajabi/sage-lib/commit/372e06cb7421b3ec565a07329edcc4d955d69e6c))
+
+
+
+
+
 ## [0.63.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.63.0...@kajabi/sage-react@0.63.1) (2021-10-27)
 
 **Note:** Version bump only for package @kajabi/sage-react

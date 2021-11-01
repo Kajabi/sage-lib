@@ -3,6 +3,50 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.23.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.22.1...@kajabi/sage@4.23.0) (2021-11-01)
+
+
+### Bug Fixes
+
+* **carddivider:** add hidden span when label present ([08d798f](https://github.com/Kajabi/sage-lib/commit/08d798fb1b938d8b5f4127dd7f5579ec91486b3d))
+* **carddivider:** update colors and add label to card divider ([d72d257](https://github.com/Kajabi/sage-lib/commit/d72d2572b5b8e955de9d6c5ea022d16b445496b0))
+* **carousel:** updated props per Monica's wordsmithing ([c5c71ad](https://github.com/Kajabi/sage-lib/commit/c5c71ad1a1b98c92b68294960fff726cd1bfae50))
+* **copy text:** updates value for value in Rails ([c33099a](https://github.com/Kajabi/sage-lib/commit/c33099a997e69dee8e86d0d5beaa3ae9ff53fc8b))
+* **dropdown:** corrects dropdown position override in upload card ([3abc789](https://github.com/Kajabi/sage-lib/commit/3abc789760291ea5f0260e92e6cca77c4eac443e))
+* **modal:** add fullscreen variant ([a459425](https://github.com/Kajabi/sage-lib/commit/a4594253224f28087ef75b41eafc5703204560b4))
+* **modal:** add header_actions ([bc83918](https://github.com/Kajabi/sage-lib/commit/bc8391811b8e9f0d1b1e379a8d18daed9b0775ff))
+* **modal:** update class when header-actions is present ([937289c](https://github.com/Kajabi/sage-lib/commit/937289c1360e8ebee163a05c9b3223391326fd82))
+* **paneldivider:** add hidden span when label present ([c2c9b2d](https://github.com/Kajabi/sage-lib/commit/c2c9b2d742082efcb86d7d5cdcedf53962e02d06))
+* **paneldivider:** update colors and add label to panel divider ([9afa864](https://github.com/Kajabi/sage-lib/commit/9afa8641046a9f4458581abb40ca76fbc373cbe3))
+
+
+### Features
+
+* **carousel:** added a11y attributes per Quinton's guidance ([a58b7ed](https://github.com/Kajabi/sage-lib/commit/a58b7ed289d189f21fb1a703b250ca18aafb682d))
+* **carousel:** added arrow caret icons, disabled state and logic ([0c715fd](https://github.com/Kajabi/sage-lib/commit/0c715fd86b89bcb5a88394cfa55accd0b9a50ec6))
+* **carousel:** added dragEnd event to change active dot, simplified some styling ([a4d1ebb](https://github.com/Kajabi/sage-lib/commit/a4d1ebb003ccd206ffe91837534e609f941e694d))
+* **carousel:** added missing button role and tab index attributes to arrows and dots ([7e3d4c6](https://github.com/Kajabi/sage-lib/commit/7e3d4c644d908b17c3a7173705b044279bdccfc7))
+* **carousel:** fixed looping conditional, added props and rules ([96e386f](https://github.com/Kajabi/sage-lib/commit/96e386f47744282459c2902858553b0dd47cd773))
+* **carousel:** fixed width of item, fixed NBA graphic width ([65e6721](https://github.com/Kajabi/sage-lib/commit/65e67216190c3ce46afc4b47ada29a3abbe99ce1))
+* **carousel:** got basic JS setup ([61e3a95](https://github.com/Kajabi/sage-lib/commit/61e3a95e8531c82bb496eef3ce009d4032561dcd))
+* **carousel:** got basic markup with content_for going ([c0e1a8a](https://github.com/Kajabi/sage-lib/commit/c0e1a8a829e30daaa64dc347aea2ec0c5b491ea6))
+* **carousel:** got basic prev/next and dot click working ([5466db2](https://github.com/Kajabi/sage-lib/commit/5466db245ff6c12b3270a0be1d7bb5a9e3fafdc2))
+* **carousel:** got carousel working with useEffect ([4b839d2](https://github.com/Kajabi/sage-lib/commit/4b839d235ca2fdf9cd173c07399aa6c9ea9a2749))
+* **carousel:** got options passing working ([06a8845](https://github.com/Kajabi/sage-lib/commit/06a8845ab0c721b0e93e9881a34c1478f20b167d))
+* **carousel:** got the appending to slide container div working ([531ddc9](https://github.com/Kajabi/sage-lib/commit/531ddc9b1f543d53b8eeac0febba263f5fb9bc56))
+* **carousel:** initial commit ([a9f5472](https://github.com/Kajabi/sage-lib/commit/a9f54722604d33c34577157fd03437fd2fb14fde))
+* **carousel:** moved container out of editable options ([e5c6189](https://github.com/Kajabi/sage-lib/commit/e5c6189bf36f8d4f40b6bcf2920864482737f52c))
+* **carousel:** simplified styling, fixed naming and options ([e1f729e](https://github.com/Kajabi/sage-lib/commit/e1f729eb9ee0193fa48f0c97fb8dea9db5982ba5))
+* **carousel:** updated properties list ([b4634e0](https://github.com/Kajabi/sage-lib/commit/b4634e0086f429d7b378c0fbed86749bcec94996))
+* **copy text:** adds borderless React prop ([08888a1](https://github.com/Kajabi/sage-lib/commit/08888a1c47df6ff72a8d7383d88fe2dbb88ab490))
+* **copy text:** adds borderless variation copy button ([589cb00](https://github.com/Kajabi/sage-lib/commit/589cb00ca97f7cc3071f8c938d2898cc6dbc18ec))
+* **label:** adds styling for new props ([2482ae7](https://github.com/Kajabi/sage-lib/commit/2482ae73ac245e6b7d1dd6b1fe63afa2bff73269))
+* **label:** adds wrap, align, and gap props for label group ([6ad80a8](https://github.com/Kajabi/sage-lib/commit/6ad80a837ef6e79cbedd754f82e89a7d300efcb7))
+
+
+
+
+
 ## [4.22.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.22.0...@kajabi/sage@4.22.1) (2021-10-27)
 
 

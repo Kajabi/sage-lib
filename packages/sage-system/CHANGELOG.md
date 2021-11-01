@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.14.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.13.2...@kajabi/sage-system@0.14.0) (2021-11-01)
+
+
+### Features
+
+* **carousel:** added a11y attributes per Quinton's guidance ([a58b7ed](https://github.com/Kajabi/sage-lib/commit/a58b7ed289d189f21fb1a703b250ca18aafb682d))
+* **carousel:** added arrow caret icons, disabled state and logic ([0c715fd](https://github.com/Kajabi/sage-lib/commit/0c715fd86b89bcb5a88394cfa55accd0b9a50ec6))
+* **carousel:** added dragEnd event to change active dot, simplified some styling ([a4d1ebb](https://github.com/Kajabi/sage-lib/commit/a4d1ebb003ccd206ffe91837534e609f941e694d))
+* **carousel:** added missing button role and tab index attributes to arrows and dots ([7e3d4c6](https://github.com/Kajabi/sage-lib/commit/7e3d4c644d908b17c3a7173705b044279bdccfc7))
+* **carousel:** cleaned up and simplified js ([0134072](https://github.com/Kajabi/sage-lib/commit/01340725ea28caaf56c11dc00c7dbc32514063ce))
+* **carousel:** fixed looping conditional ([2ee8f5d](https://github.com/Kajabi/sage-lib/commit/2ee8f5db9870ce1e888f0b77642befd561ac6b34))
+* **carousel:** fixed looping conditional, added props and rules ([96e386f](https://github.com/Kajabi/sage-lib/commit/96e386f47744282459c2902858553b0dd47cd773))
+* **carousel:** fixed package.json and yarn.lock files version for tiny-slider ([c9ac14a](https://github.com/Kajabi/sage-lib/commit/c9ac14a0bff41c37616e0fc470a065e774167033))
+* **carousel:** got arrows and dots syncing properly, simplified js ([3f4ff1f](https://github.com/Kajabi/sage-lib/commit/3f4ff1fd9a0ee8ab98edda8eebc5509fdeaebf25))
+* **carousel:** got basic JS setup ([61e3a95](https://github.com/Kajabi/sage-lib/commit/61e3a95e8531c82bb496eef3ce009d4032561dcd))
+* **carousel:** got basic markup with content_for going ([c0e1a8a](https://github.com/Kajabi/sage-lib/commit/c0e1a8a829e30daaa64dc347aea2ec0c5b491ea6))
+* **carousel:** got basic prev/next and dot click working ([5466db2](https://github.com/Kajabi/sage-lib/commit/5466db245ff6c12b3270a0be1d7bb5a9e3fafdc2))
+* **carousel:** got options passing working ([06a8845](https://github.com/Kajabi/sage-lib/commit/06a8845ab0c721b0e93e9881a34c1478f20b167d))
+* **carousel:** got the appending to slide container div working ([531ddc9](https://github.com/Kajabi/sage-lib/commit/531ddc9b1f543d53b8eeac0febba263f5fb9bc56))
+* **carousel:** moved container out of editable options ([e5c6189](https://github.com/Kajabi/sage-lib/commit/e5c6189bf36f8d4f40b6bcf2920864482737f52c))
+* **carousel:** removed dots if the carousel is infinitely looping ([570e8dd](https://github.com/Kajabi/sage-lib/commit/570e8dd90431e831c9c1c185d495b9f8c5f34dde))
+* **carousel:** simplified styling, fixed naming and options ([e1f729e](https://github.com/Kajabi/sage-lib/commit/e1f729eb9ee0193fa48f0c97fb8dea9db5982ba5))
+
+
+
+
+
 ## [0.13.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.13.1...@kajabi/sage-system@0.13.2) (2021-10-25)
 
 
