@@ -114,7 +114,8 @@
 }
 
 @each $-key, $-value in $sage-spacings {
-  .sage-panel__row--gap-#{$-key} {
+  .sage-panel__row--gap-#{$-key}
+  .sage-panel__list-item--gap-#{$-key} {
     gap: sage-spacing($-key);
   }
 }
