@@ -258,7 +258,7 @@
 /// Adjusts to a wrapping flex layout below the `min` breakpoint.
 ///
 @mixin sage-grid-card-row() {
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
   gap: sage-spacing(card);
 
@@ -280,7 +280,7 @@
 /// Adjusts to a wrapping flex layout below the `min` breakpoint.
 ///
 @mixin sage-grid-panel-row() {
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
   gap: sage-spacing();
 
