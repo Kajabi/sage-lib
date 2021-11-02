@@ -4,12 +4,14 @@ import classnames from 'classnames';
 
 export const Indicator = ({
   currentItem,
+  label,
   numItems,
 }) => {
   let classNames;
   const baseClass = 'sage-indicator';
   const items = [];
-  for (let i = 0; i <= numItems; i += 1) {
+  currentItem -= 1;
+  for (let i = 0; i <= numItems - 1; i += 1) {
     if (i === currentItem) {
       classNames = classnames(
         baseClass,
@@ -34,7 +36,7 @@ export const Indicator = ({
     <>
       <ul
         className="sage-indicator-list"
-        aria-label={`Showing ${currentItem} of ${numItems}`}
+        aria-label={`Showing ${label} ${currentItem} of ${numItems}`}
       >
         {items}
       </ul>
@@ -44,10 +46,12 @@ export const Indicator = ({
 
 Indicator.defaultProps = {
   currentItem: null,
-  numItems: null,
+  label: null,
+  numItems: 0,
 };
 
 Indicator.propTypes = {
   currentItem: PropTypes.number,
+  label: PropTypes.string,
   numItems: PropTypes.number,
 };

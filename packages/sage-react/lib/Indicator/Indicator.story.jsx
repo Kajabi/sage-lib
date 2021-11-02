@@ -5,8 +5,8 @@ export default {
   title: 'Sage/Indicator',
   component: Indicator,
   args: {
-    className: 'benzo',
     currentItem: 3,
+    label: 'benzo',
     numItems: 6,
   }
 };
