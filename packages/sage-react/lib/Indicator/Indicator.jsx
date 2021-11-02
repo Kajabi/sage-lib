@@ -7,6 +7,7 @@ export const Indicator = ({
   label,
   numItems,
   showText,
+  textSeparator,
 }) => {
   let classNames;
   const baseClass = 'sage-indicator';
@@ -35,11 +36,11 @@ export const Indicator = ({
   return (
     <>
       {showText ? (
-        <p className="sage-indicator-text">{label} {currentItem} of {numItems}</p>
+        <p className="sage-indicator-text">{label} {currentItem} {textSeparator} {numItems}</p>
       ) : (
         <ul
           className="sage-indicator-list"
-          aria-label={`Showing ${label} ${currentItem} of ${numItems}`}
+          aria-label={`Showing ${label} ${currentItem} ${textSeparator} ${numItems}`}
         >
           {items}
         </ul>
@@ -53,6 +54,7 @@ Indicator.defaultProps = {
   label: null,
   numItems: 0,
   showText: null,
+  textSeparator: 'of',
 };
 
 Indicator.propTypes = {
@@ -60,4 +62,5 @@ Indicator.propTypes = {
   label: PropTypes.string,
   numItems: PropTypes.number,
   showText: PropTypes.bool,
+  textSeparator: PropTypes.string,
 };
