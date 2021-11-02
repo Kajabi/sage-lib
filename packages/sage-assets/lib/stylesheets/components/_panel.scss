@@ -113,6 +113,13 @@
   @include sage-grid-panel-row();
 }
 
+@each $-key, $-value in $sage-spacings {
+  .sage-panel__row--gap-#{$-key}
+  .sage-panel__list-item--gap-#{$-key} {
+    gap: sage-spacing($-key);
+  }
+}
+
 .sage-panel__row--media {
   grid-template-columns: 160px 1fr;
 }

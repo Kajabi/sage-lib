@@ -156,6 +156,13 @@
   }
 }
 
+@each $-key, $-value in $sage-spacings {
+  .sage-card__row--gap-#{$-key},
+  .sage-card__list-item--gap-#{$-key} {
+    gap: sage-spacing($-key);
+  }
+}
+
 .sage-card__row--vertical-align-start {
   align-items: start;
 }
