@@ -27,6 +27,7 @@ export { Hint } from './Hint';
 export { Icon } from './Icon';
 export { IconCard } from './IconCard';
 export { IconList } from './IconList';
+export { Indicator } from './Indicator';
 export { Input } from './Input';
 export { Label } from './Label';
 export { Link } from './Link';
