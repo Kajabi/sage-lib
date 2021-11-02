@@ -27,7 +27,7 @@ export const Indicator = ({
         key={i}
       >
         <span className="visually-hidden">
-          <h1>Item</h1>
+          {`${label} ${i}`}
         </span>
       </li>
     );
