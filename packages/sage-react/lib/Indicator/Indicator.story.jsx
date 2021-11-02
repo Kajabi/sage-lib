@@ -8,9 +8,14 @@ export default {
     currentItem: 3,
     label: 'Page',
     numItems: 6,
-    showText: true,
+    showText: false,
   }
 };
 
 const Template = (args) => <Indicator {...args} />;
 export const Default = Template.bind({});
+
+export const ShowText = Template.bind({});
+ShowText.args = {
+  showText: true,
+};
