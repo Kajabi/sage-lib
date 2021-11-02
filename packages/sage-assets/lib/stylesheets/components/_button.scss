@@ -409,6 +409,10 @@ $-btn-loading-min-height: rem(36px);
       color: sage-color(charcoal);
       background-color: sage-color(white);
       border: 1px solid sage-color(grey, 500);
+
+      &[class*="icon-only"] {
+        border: 1px solid sage-color(grey, 400);
+      }
     }
 
     &:focus,
@@ -416,6 +420,17 @@ $-btn-loading-min-height: rem(36px);
       color: sage-color(charcoal);
       background-color: sage-color(white);
       border: 1px solid sage-color(grey);
+
+      &[class*="icon-only"] {
+        background-color: sage-color(grey);
+        border: 1px solid sage-color(grey, 400);
+
+        @include sage-focus-outline--update-color(transparent);
+
+        &::after {
+          transform: translate3d(-50%, -50%, 0) scale(0.94);
+        }
+      }
     }
 
     &[aria-disabled="true"] {
@@ -437,7 +452,7 @@ $-btn-loading-min-height: rem(36px);
       color: map-get($-styles, default);
       background-color: transparent;
 
-      @include sage-focus-outline--update-color(map-get($-styles, focus-outline));
+      // @include sage-focus-outline--update-color(map-get($-styles, focus-outline));
 
       // TODO: refactor the subtle button hover state, after Sage 3.0 conversion
       &::after {
@@ -477,8 +492,18 @@ $-btn-loading-min-height: rem(36px);
       }
 
       &[class*="icon-only"] {
-        @include sage-focus-outline($outline-offset-inline: 4px, $outline-offset-block: 0);
-        @include sage-focus-outline--update-color(map-get($-styles, default));
+        // @include sage-focus-outline($outline-offset-inline: 4px, $outline-offset-block: 0);
+        // @include sage-focus-outline--update-color(map-get($-styles, default));
+
+        &:hover::after {
+          opacity: 0;
+          border-color: transparent;
+          transform: translate3d(-50%, -50%, 0) scale(0.94);
+        }
+
+        &:focus::after {
+          border-color: map-get($-styles, focus-outline);
+        }
 
         .sage-label & {
           @include sage-focus-outline($outline-offset-inline: -2px, $outline-offset-block: -2px);

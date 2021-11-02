@@ -112,6 +112,10 @@
         padding: rem(6px) rem(10px);
       }
 
+      &.sage-btn--subtle::after {
+        // transform: translate3d(-50%, -50%, 0) scale(0.7857);
+      }
+
       &::before {
         @include sage-icon-base($icon-name);
 
