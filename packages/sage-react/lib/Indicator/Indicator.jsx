@@ -3,19 +3,26 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
 export const Indicator = ({
-  className,
+  currentItem,
   numItems,
 }) => {
-  const classNames = classnames(
-    'sage-indicator',
-    className,
-    {}
-  );
-
+  let classNames;
+  const baseClass = 'sage-indicator';
   const items = [];
   for (let i = 0; i <= numItems; i += 1) {
+    if (i === currentItem) {
+      classNames = classnames(
+        baseClass,
+        `${baseClass}--current`,
+      );
+    } else {
+      classNames = classnames(baseClass);
+    }
     items.push(
-      <li className="sage-indicator" key={i}>
+      <li
+        className={classNames}
+        key={i}
+      >
         <span className="visually-hidden">
           <h1>Item</h1>
         </span>
@@ -24,23 +31,23 @@ export const Indicator = ({
   }
 
   return (
-    <div className={classNames}>
+    <>
       <ul
         className="sage-indicator-list"
-        ariaLabel={`Showing x of ${numItems}`}
+        aria-label={`Showing ${currentItem} of ${numItems}`}
       >
         {items}
       </ul>
-    </div>
+    </>
   );
 };
 
 Indicator.defaultProps = {
-  className: null,
+  currentItem: null,
   numItems: null,
 };
 
 Indicator.propTypes = {
-  className: PropTypes.string,
+  currentItem: PropTypes.number,
   numItems: PropTypes.number,
 };
