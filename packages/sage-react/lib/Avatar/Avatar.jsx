@@ -9,6 +9,7 @@ export const Avatar = ({
   color,
   image,
   initials,
+  lazyLoadInitials,
   size,
   ...rest
 }) => {
@@ -30,15 +31,14 @@ export const Avatar = ({
 
   return (
     <div className={classNames} style={style} {...rest}>
-      {image.src
-        ? (
-          <img alt={image.alt || ''} className="sage-avatar__image" src={image.src} />
-        )
-        : (
-          <svg className="sage-avatar__initials" viewBox="0 0 32 32">
-            <text x="16" y="20">{initials}</text>
-          </svg>
-        )}
+      {image.src && (
+        <img alt={image.alt || ''} className="sage-avatar__image" src={image.src} />
+      )}
+      {lazyLoadInitials && (
+        <svg className="sage-avatar__initials" viewBox="0 0 32 32">
+          <text x="16" y="20">{initials}</text>
+        </svg>
+      )}
     </div>
   );
 };
@@ -50,7 +50,8 @@ Avatar.defaultProps = {
   className: '',
   color: AVATAR_COLORS.DEFAULT,
   image: {},
-  initials: null,
+  initials: '',
+  lazyLoadInitials: true,
   size: null,
 };
 
@@ -63,5 +64,6 @@ Avatar.propTypes = {
     src: PropTypes.string
   }),
   initials: PropTypes.string,
+  lazyLoadInitials: PropTypes.bool,
   size: PropTypes.string,
 };

@@ -6,7 +6,7 @@
     sets the initials color and background color to variants of the
     system\'s orange swatch.
   ') %></td>
-  <td><%= md('String') %></td>
+  <td><%= md("`#{SageTokens::COLORS.inspect()}`") %></td>
   <td><%= md('`nil` (primary color)') %></td>
 </tr>
 <tr>
@@ -23,11 +23,11 @@
   </td>
   <td>
   <%= md('```
-image: {
+{
   alt: String (optional),
   src: String,
 }
-    ') %>
+```') %>
   </td>
   <td><%= md('`nil`') %></td>
 </tr>
@@ -38,6 +38,14 @@ image: {
   ') %></td>
   <td><%= md('String') %></td>
   <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`lazy_load_initials`') %></td>
+  <td><%= md('
+    Whether or not to layer initials behind an image as a lazy loading helper.
+  ') %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`true`') %></td>
 </tr>
 <tr>
   <td><%= md('`size`') %></td>

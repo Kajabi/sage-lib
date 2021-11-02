@@ -27,6 +27,15 @@ module SageSchemas
 
   # Components
 
+  AVATAR = {
+    centered: [:optional, TrueClass],
+    color: [:optional, NilClass, SageSchemas::COLORS],
+    image: [:optional, {alt: [:optional, String], src: String}],
+    initials: [:optional, String],
+    lazy_load_initials: [:optional, NilClass, TrueClass],
+    size: [:optional, String],
+  }
+
   CHOICE = {
     active: [:optional, NilClass, TrueClass],
     align_center: [:optional, TrueClass],
