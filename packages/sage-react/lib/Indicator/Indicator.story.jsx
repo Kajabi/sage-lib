@@ -6,8 +6,9 @@ export default {
   component: Indicator,
   args: {
     currentItem: 3,
-    label: 'benzo',
+    label: 'Page',
     numItems: 6,
+    showText: true,
   }
 };
 
