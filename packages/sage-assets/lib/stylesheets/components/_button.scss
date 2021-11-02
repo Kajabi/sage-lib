@@ -11,6 +11,8 @@
 $-btn-transition: map-get($sage-transitions, default);
 $-btn-border-radius: sage-border(radius);
 $-btn-shadow-base: sage-shadow(sm);
+$-btn-icon-only-hover-size: rem(26px);
+$-btn-icon-only-focus-size: rem(28px);
 
 $-btn-base-styles: (
   primary: (
@@ -425,10 +427,12 @@ $-btn-loading-min-height: rem(36px);
         background-color: sage-color(grey);
         border: 1px solid sage-color(grey, 400);
 
-        @include sage-focus-outline--update-color(transparent);
+        // @include sage-focus-outline--update-color(transparent);
 
         &::after {
           transform: translate3d(-50%, -50%, 0) scale(0.94);
+          border-color: transparent;
+          opacity: 0;
         }
       }
     }
@@ -463,10 +467,9 @@ $-btn-loading-min-height: rem(36px);
         color: map-get($-styles, hover);
 
         &::after {
-          z-index: 0 !important; /* stylelint-disable-line declaration-no-important */
-          border-color: transparent !important; /* stylelint-disable-line declaration-no-important */
+          z-index: 0;
           background-color: map-get($-styles, hover-background);
-          opacity: 1 !important; /* stylelint-disable-line declaration-no-important */
+          opacity: 1;
         }
 
         &::before,
@@ -492,17 +495,26 @@ $-btn-loading-min-height: rem(36px);
       }
 
       &[class*="icon-only"] {
-        // @include sage-focus-outline($outline-offset-inline: 4px, $outline-offset-block: 0);
-        // @include sage-focus-outline--update-color(map-get($-styles, default));
+        &::before,
+        &::after {
+          border-radius: sage-border(radius);
+        }
+
+        &::after {
+          width: $-btn-icon-only-hover-size;
+          height: $-btn-icon-only-hover-size;
+        }
 
         &:hover::after {
-          opacity: 0;
+          opacity: 1;
           border-color: transparent;
-          transform: translate3d(-50%, -50%, 0) scale(0.94);
         }
 
         &:focus::after {
           border-color: map-get($-styles, focus-outline);
+          width: $-btn-icon-only-focus-size;
+          height: $-btn-icon-only-focus-size;
+
         }
 
         .sage-label & {
