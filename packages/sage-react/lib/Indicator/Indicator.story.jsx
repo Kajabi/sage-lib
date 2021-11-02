@@ -6,7 +6,8 @@ export default {
   component: Indicator,
   args: {
     className: 'benzo',
-    numItems: 3,
+    currentItem: 3,
+    numItems: 6,
   }
 };
 
