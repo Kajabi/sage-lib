@@ -1,3 +1,6 @@
+<%
+lazy_load_initials = component.lazy_load_initials.present? ? component.lazy_load_initials : true
+%>
 <div
   class="
     sage-avatar
@@ -12,7 +15,9 @@
 >
   <% if component.image %>
     <%= image_tag component.image[:src], alt: (component.image[:alt] || ""), class: "sage-avatar__image" %>
-  <% else %>
+  <% end %>
+
+  <% if lazy_load_initials %>
     <svg class="sage-avatar__initials" viewBox="0 0 32 32">
       <text x="16" y="20"><%= component.initials %></text>
     </svg>
