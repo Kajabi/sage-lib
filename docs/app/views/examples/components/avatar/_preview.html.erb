@@ -53,3 +53,34 @@
     ]
   } %>
 </div>
+
+<h3>Layering and lazy loading</h3>
+<%= md('
+By default, Avatars with both an `image` and `initials` provided will stack with the image on top of the initials.
+The result is a lazy loading effect where initials appear immediately and an image will appear later on slower or delayed connetions.
+If this effect is not desired when an `image` is used, then also set `lazy_load_initials: false`.
+
+NOTE: This also allows for a fallback approach with image APIs such as Gravatar that return a default image when no user image is available.
+In such cases a transparent PNG image can be provided as the default image so that when this default image is layered on top of the initials,
+the initials are seen rather than a generic "anonymous user" image.
+') %>
+
+<p>Invalid Gravatar with blank fallback to initials:</p>
+<%= sage_component SageAvatar, {
+  initials: "PS",
+  image: { src: "https://s.gravatar.com/avatar/000?default=blank" }
+} %>
+
+<p>Valid Gravatar with lazy loading:</p>
+<%= sage_component SageAvatar, {
+  initials: "PS",
+  image: { src: "https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?" }
+} %>
+
+<p>Valid Gravatar with NO lazy loading:</p>
+<%= sage_component SageAvatar, {
+  initials: "PS",
+  image: { src: "https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?" },
+  lazy_load_initials: false
+} %>
+
