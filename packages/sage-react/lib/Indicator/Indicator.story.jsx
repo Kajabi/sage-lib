@@ -8,6 +8,7 @@ export default {
     currentItem: 3,
     label: 'Page',
     numItems: 6,
+    preposition: 'benzo',
     showText: false,
   }
 };
