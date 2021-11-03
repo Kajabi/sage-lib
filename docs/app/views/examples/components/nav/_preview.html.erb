@@ -1,14 +1,27 @@
 <%= sage_component SageNav, {
   aria_label: "Example Navigation",
   items: [
-    { link: "#", text: "Nav Link 1", active: true },
-    { link: "#", text: "Nav Link 2" },
-    { link: "#", text: "Nav Link 3", items: [
-      { link: "#", text: "Nav Sub Link 1", type: "sub" },
-      { link: "#", text: "Nav Sub Link 2", type: "sub" },
-      { link: "#", text: "Nav Sub Link 3", type: "sub" }
-    ]},
-    { link: "#", text: "Nav Link 4" },
-    { link: "#", text: "Nav Link 5" }
+    { link: "#", text: "Website", icon: 'monitor', items: [
+      {
+        text: "Design",
+        link: "#",
+        active: true,
+      },
+      {
+        text: "Pages",
+        link: "#",
+      },
+      {
+        text: "Blog",
+        link: "#",
+      },
+      {
+        text: "Analytics",
+        link: "#",
+      }
+    ] },
+    { link: "#", text: "Products", icon: 'product' },
+    { link: "#", text: "Marketing", icon: 'megaphone' },
+    { link: "#", text: "People", icon: 'user-circle' }
   ]
 } %>
