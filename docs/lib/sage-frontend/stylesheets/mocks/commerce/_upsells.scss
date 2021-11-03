@@ -16,3 +16,15 @@ $-upsell-graphic-height: rem(52px);
   width: $-upsell-graphic-width;
   text-align: right;
 }
+
+.sage-card__row {
+  .upsell__custom-sortable > & {
+    justify-content: initial;
+  }
+}
+
+.sage-card__list-item {
+  .upsell__custom-sortable & {
+    display:block;
+  }
+}

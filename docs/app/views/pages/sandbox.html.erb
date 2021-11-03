@@ -77,15 +77,13 @@ status_items = [
     spacer: { top: :sm }
   } do %>
     <% data[:upsells].each do | upsell | %>
-      <%= sage_component SageSortableItemCustom, {} do %>
+      <%= sage_component SageSortableItemCustom, { css_classes: "upsell__custom-sortable" } do %>
         <%= sage_component SageCard, {
           clear_bottom_padding: true,
           clear_top_padding: true,
         } do %>
           <%= sage_component SageCardList, {} do %>
-            <%= sage_component SageCardListItem, {
-              html_attributes: { "style": "display:block" }
-            } do %>
+            <%= sage_component SageCardListItem, {} do %>
               <%= sage_component SageCardHeader, {
                 title: "Upsell offer",
                 spacer: { bottom: :xs }
@@ -136,9 +134,7 @@ status_items = [
               <% end %>
             <% end %>
             <% if upsell[:downsell] %>
-              <%= sage_component SageCardListItem, {
-                html_attributes: { "style": "display:block" }
-              } do %>
+              <%= sage_component SageCardListItem, {} do %>
                 <%= sage_component SageCardHeader, {
                   title: "Downsell offer",
                   spacer: { bottom: :xs }
