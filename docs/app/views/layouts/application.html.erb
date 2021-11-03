@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css">
   </head>
   <%= sage_component(SageBody, { css_classes: "sage-docs" }) do %>
+    <%= render "application/content_skip_link", link_id: "main-content" %>
     <%= render "application/sidebar" %>
     <%= sage_component(SageStage, {}) do %>
       <%= sage_component(SageHeader, {}) do %>
