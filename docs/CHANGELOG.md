@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.24.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.24.0...@kajabi/sage@4.24.1) (2021-11-03)
+
+
+### Bug Fixes
+
+* **sortable:** open up sortable layout when no grid template is provided ([2e395f9](https://github.com/Kajabi/sage-lib/commit/2e395f9a7a5837a25b92b16aa2023dab02b2083f))
+
+
+
+
+
 # [4.24.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.23.0...@kajabi/sage@4.24.0) (2021-11-03)
 
 

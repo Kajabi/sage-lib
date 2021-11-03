@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.55.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.55.1...@kajabi/sage-assets@0.55.2) (2021-11-03)
+
+
+### Bug Fixes
+
+* revert panel and card row justification to space-between as a safeguard ([9d21250](https://github.com/Kajabi/sage-lib/commit/9d2125071125e16afb54967294e13055dfb0efad))
+
+
+
+
+
 ## [0.55.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.55.0...@kajabi/sage-assets@0.55.1) (2021-11-03)
 
 
