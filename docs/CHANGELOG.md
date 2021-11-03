@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.24.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.23.0...@kajabi/sage@4.24.0) (2021-11-03)
+
+
+### Bug Fixes
+
+* **cardlistitem:** make grid template optional and add gap attribute ([63e51c5](https://github.com/Kajabi/sage-lib/commit/63e51c5def24bf3e2d65060ccca8ca07cdbb49b6))
+* **cardrow:** make grid template optional and add gap attribute ([22b03c2](https://github.com/Kajabi/sage-lib/commit/22b03c299d035a2cee2155bd53d063e06994acc0))
+* **panellistitem:** make grid template optional and add gap attribute ([0769f1c](https://github.com/Kajabi/sage-lib/commit/0769f1c39ed56846c07a0050e500efe072b58d25))
+* **panelrow:** add gap attribute rails ([84dcbe8](https://github.com/Kajabi/sage-lib/commit/84dcbe8ed1aea699dbd727db19ad6fe2ad99893d))
+* **panelrow:** make grid template optional and add gap attribute ([218c60f](https://github.com/Kajabi/sage-lib/commit/218c60fc8588e1d1ec4b17a999b14542d47eb2fc))
+* **sortablecustomitem:** add gap ([e75e0f7](https://github.com/Kajabi/sage-lib/commit/e75e0f73ceda466fae0064d080439bbb4d56b147))
+* **sortableitemcustom:** adds optional to grid template ([39a68bf](https://github.com/Kajabi/sage-lib/commit/39a68bf4fe901c12268af3305b2e04c07e3daa06))
+
+
+### Features
+
+* **avatar:** add image layering with initials ([2429c07](https://github.com/Kajabi/sage-lib/commit/2429c0780907c075ae9c87b23fcf9feb6b6de763))
+* **avatar:** add lazy load example and patch lazy load false ([3bd0691](https://github.com/Kajabi/sage-lib/commit/3bd069132369130e158ff5b94d487fcbd11e7b6d))
+
+
+
+
+
 # [4.23.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.22.1...@kajabi/sage@4.23.0) (2021-11-01)
 
 

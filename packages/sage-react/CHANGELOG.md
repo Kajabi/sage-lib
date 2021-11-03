@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.65.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.64.0...@kajabi/sage-react@0.65.0) (2021-11-03)
+
+
+### Bug Fixes
+
+* **cardlistitem:** make grid template optional and add gap attribute ([63e51c5](https://github.com/Kajabi/sage-lib/commit/63e51c5def24bf3e2d65060ccca8ca07cdbb49b6))
+* **cardrow:** make grid template optional and add gap attribute ([22b03c2](https://github.com/Kajabi/sage-lib/commit/22b03c299d035a2cee2155bd53d063e06994acc0))
+* **panellistitem:** make grid template optional and add gap attribute ([0769f1c](https://github.com/Kajabi/sage-lib/commit/0769f1c39ed56846c07a0050e500efe072b58d25))
+* **panelrow:** make grid template optional and add gap attribute ([218c60f](https://github.com/Kajabi/sage-lib/commit/218c60fc8588e1d1ec4b17a999b14542d47eb2fc))
+
+
+### Features
+
+* **avatar:** add image layering with initials ([2429c07](https://github.com/Kajabi/sage-lib/commit/2429c0780907c075ae9c87b23fcf9feb6b6de763))
+
+
+
+
+
 # [0.64.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.63.1...@kajabi/sage-react@0.64.0) (2021-11-01)
 
 
