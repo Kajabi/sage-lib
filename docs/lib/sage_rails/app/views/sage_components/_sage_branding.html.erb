@@ -1,0 +1,5 @@
+<a href="<%= component.url || "/" %>" 
+  class="sage-branding <%= component.generated_css_classes %>"
+  <%= component.generated_html_attributes.html_safe %>>
+  <%= image_tag component.image[:src], alt: (component.image[:alt] || ""), class: "sage-branding__image", height: component.size || "" %>
+</a>

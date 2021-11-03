@@ -1,5 +1,12 @@
 <%= sage_component SageSidebar, { id: "sage-sidebar-menu" } do %>
-  <%= image_tag "sage.svg", style: "max-height: 30px; width: auto", loading: "lazy" %>
+  <%= sage_component SageBranding, {
+    spacer: { bottom: :md },
+    size: "32",
+    image: {
+      alt: "Sage Logo",
+      src: "sage.svg"
+    }
+  } %>
   <% if current_page_foundations? %>
     <%= sage_component SageNav, {
       items: [

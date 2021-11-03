@@ -65,6 +65,16 @@ module ComponentsHelper
         figma_embed: "",
       },
       {
+        title: "branding",
+        description: "Branding is meant to state the name of the overall experience and navigate the user to their home location.",
+        scss: "done",
+        docs: "done",
+        rails: "done",
+        react: "todo",
+        a11y: "todo",
+        figma_embed: "",
+      },
+      {
         title: "breadcrumbs",
         description: "Breadcrumbs provide a sense of where we are in the site structure with hyperlinks to previous areas in that structure. Our component also provides a specific \"Back link\" variation",
         scss: "done",
