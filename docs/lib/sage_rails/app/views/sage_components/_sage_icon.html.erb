@@ -2,11 +2,12 @@
   <div class="sage-icon-background 
     <%= "sage-icon-background--#{component.card_color}" %>
     <%= "sage-icon-background--#{component.size}" if component.size.present? %>
+    <%= "sage-icon-background--custom" if component.background_height || component.background_width %>
     <%= "sage-icon-background--circular" if component.circular %>
   "
   style="
-    <%= "--background-height: #{component.background_height}" if component.background_height %>
-    <%= "--background-width: #{component.background_width}" if component.background_width %>
+    <%= "--background-height: #{component.background_height};" if component.background_height %>
+    <%= "--background-width: #{component.background_width};" if component.background_width %>
   ">
 <% end %>
   <i class="
