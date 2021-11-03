@@ -6,14 +6,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css">
   </head>
   <%= sage_component(SageBody, { css_classes: "sage-docs" }) do %>
-    <%= render "application/content_skip_link",
-      link_id: "main-content"
-    -%>
-    <%= sage_component(SageHeader, {}) do %>
-      <%= render "application/assistant" %>
-    <% end %>
+    <%= render "application/sidebar" %>
     <%= sage_component(SageStage, {}) do %>
-      <%= render "application/sidebar" %>
+      <%= sage_component(SageHeader, {}) do %>
+        <%= render "application/assistant" %>
+      <% end %>
       <%= sage_component(SageContent, { html_attributes: { id: "main-content" } }) do %>
         <%= sage_component(SageContainer, { size: "full" }) do %>
           <div class="docs-panel">
