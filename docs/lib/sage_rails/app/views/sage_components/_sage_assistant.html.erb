@@ -1,13 +1,4 @@
 <%
-# TEMP: provide fallbacks in order to avoid breaking change in `products`
-logo = {
-  path: "nav_logo_white.png",
-  method: nil,
-}
-if component.logo.present?
-  logo = component.logo
-end
-
 menu_button = true
 if component.menu_button.present?
   menu_button = component.menu_button
@@ -24,11 +15,6 @@ end
       <span class="sage-menubutton__bar"></span><span class="sage-menubutton__bar"></span><span class="sage-menubutton__bar"></span>
       <span class="visually-hidden">Toggle main menu</span>
     </button>
-  <% end %>
-  <% if logo[:method] == "pack" %>
-    <%= image_pack_tag(logo[:path], class: "sage-assistant__branding")%>
-  <% else %>
-    <%= image_tag logo[:path], class: "sage-assistant__branding" %>
   <% end %>
   <div class="sage-assistant__body"><%= component.content %></div>
   <div class="sage-assistant__actions">

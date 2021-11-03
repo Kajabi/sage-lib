@@ -1,4 +1,5 @@
 <%= sage_component SageSidebar, { id: "sage-sidebar-menu" } do %>
+  <%= image_tag "sage.svg", style: "max-height: 30px; width: auto", loading: "lazy" %>
   <% if current_page_foundations? %>
     <%= sage_component SageNav, {
       items: [
