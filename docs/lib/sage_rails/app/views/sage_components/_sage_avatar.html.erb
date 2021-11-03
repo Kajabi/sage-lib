@@ -1,6 +1,12 @@
 <%
-lazy_load_initials = component.lazy_load_initials.present? ? component.lazy_load_initials : true
+lazy_load_initials = true
+
+if component.lazy_load_initials == false
+  lazy_load_initials = false
+end
 %>
+<%= component.lazy_load_initials.inspect() %>
+<%= lazy_load_initials.inspect() %>
 <div
   class="
     sage-avatar
