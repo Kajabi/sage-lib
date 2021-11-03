@@ -62,6 +62,7 @@ and also be used with a vareity of layout techniques or components such as CSS f
       <%= size == "md" ? "Default (#{size})" : size %>
       <%= sage_component SageIcon, { icon: "pen", size: (size == "md" ? nil : size), card_color: "draft" } %>
       <%= sage_component SageIcon, { icon: "pen", size: (size == "md" ? nil : size), card_color: "draft", circular: true, } %>
+      <%= sage_component SageIcon, { icon: "pen", background_height: "40px", background_width: "40px", card_color: "draft", circular: true, } %>
     <% end %>
   <% end %>
 <% end %>

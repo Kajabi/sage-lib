@@ -125,12 +125,14 @@ $-icon-beside-type: (
 }
 
 .sage-icon-background {
+  --background-height: sage-spacing(xl);
+  --background-width: sage-spacing(xl);
   display: flex;
   align-items: center;
   justify-content: center;
   align-self: stretch;
-  width: sage-spacing(xl);
-  height: sage-spacing(xl);
+  width: var(--background-width);
+  height: var(--background-height);
   background-color: var(--background-color, inherit);
 
   [class*="sage-icon-"] {
