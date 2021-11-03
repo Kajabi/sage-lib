@@ -85,7 +85,7 @@ export const mockProfileActions = [
   },
   {
     href: '#grant-offer',
-    icon: SageTokens.ICONS.BAN, // TODO: Need 'gift' icon
+    icon: SageTokens.ICONS.GRANT_OFFER,
     label: 'Grant offer',
   },
 ];

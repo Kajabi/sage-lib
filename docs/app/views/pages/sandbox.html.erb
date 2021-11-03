@@ -86,7 +86,7 @@ button_bar_items = [
   },
   {
     href: "#grant-offer",
-    icon: "ban", # TODO: Need "gift" icon
+    icon: "grant-offer",
     label: "Grant offer",
   },
 ]
@@ -134,7 +134,7 @@ Use this scratchpad to test out elements and components in context. Just be sure
   <%= sage_component SagePanel, {} do %>
 
     <%# --- Header --- %>
-    <%= sage_component SagePanelRow, {} do %>
+    <%= sage_component SagePanelRow, { grid_template: "te" } do %>
       <%= sage_component SageButton, {
         attributes: { href: "#TODO-open-full-profile" },
         value: "Open full profile",
@@ -142,7 +142,7 @@ Use this scratchpad to test out elements and components in context. Just be sure
         small: true,
         style: "secondary",
         icon: {
-          name: "ban", # TODO: Need expand icon
+          name: "expand",
           style: "left",
         },
       } %>
@@ -175,15 +175,9 @@ Use this scratchpad to test out elements and components in context. Just be sure
       <h3 class="<%= SageClassnames::TYPE::HEADING_4 %> <%= SageClassnames::TYPE_COLORS::CHARCOAL_500 %>">
         <%= data[:name] %>
       </h3>
-      <%# TODO: Use a new variation of copy button rather than this hacked Button approach? %>
-      <%= sage_component SageButton, {
+      <%= sage_component SageCopyButton, {
         value: data[:email],
-        icon: { name: "copy", style: "right" },
-        subtle: true,
-        style: "secondary",
-        attributes: {
-          "data-js-copy-button": data[:email],
-        }
+        borderless: true,
       } %>
     <% end %>
     <%= sage_component SageButtonGroup, {
@@ -223,29 +217,27 @@ Use this scratchpad to test out elements and components in context. Just be sure
     <%# /-- Profile --- %>
 
     <%# --- Data --- %>
-    <%= sage_component SagePanelStack, {} do %>
-      <% data[:user_stats].each do | data_group | %>
-        <%= sage_component SageDescription, {
-          allcaps_titles: false,
-          inline_spread: true,
-          items: data_group,
-        } %>
-        <%= sage_component SagePanelDivider, {} %>
-      <% end %>
+    <% data[:user_stats].each do | data_group | %>
+      <%= sage_component SageDescription, {
+        allcaps_titles: false,
+        inline_spread: true,
+        items: data_group,
+      } %>
+      <%= sage_component SagePanelDivider, {} %>
+    <% end %>
 
-      <%= sage_component SageLabelGroup, {} do %>
-        <% data[:tags].each do | tag | %>
-          <%= sage_component SageLabel, { color: "draft", value: tag } %>
-        <% end %>
-        <%= sage_component SageButton, {
-          attributes: {
-            href: "#view-more",
-          },
-          style: "primary",
-          subtle: true,
-          value: "View all",
-        } %>
+    <%= sage_component SageLabelGroup, { gap: :xs } do %>
+      <% data[:tags].each do | tag | %>
+        <%= sage_component SageLabel, { color: "draft", value: tag } %>
       <% end %>
+      <%= sage_component SageButton, {
+        attributes: {
+          href: "#view-more",
+        },
+        style: "primary",
+        subtle: true,
+        value: "View all",
+      } %>
     <% end %>
     <%# /-- Data --- %>
 
