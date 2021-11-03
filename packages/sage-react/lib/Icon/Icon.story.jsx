@@ -27,8 +27,8 @@ export default {
 const Template = (args) => <Icon {...args} />;
 
 export const Default = Template.bind({});
-export const AdjactentType = Template.bind({});
-AdjactentType.decorators = [
+export const AdjacentType = Template.bind({});
+AdjacentType.decorators = [
   (Story) => (
     <>
       <div style={{ display: 'flex' }}>
