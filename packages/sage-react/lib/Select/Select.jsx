@@ -9,6 +9,7 @@ export const Select = ({
   hasError,
   id,
   label,
+  includeLabelInOptions,
   message,
   onChange,
   options,
@@ -36,7 +37,7 @@ export const Select = ({
         disabled={disabled}
         {...rest}
       >
-        {label && <option label={label} />}
+        {(label && includeLabelInOptions) && <option label={label} />}
 
         {options.map((option, i) => {
           let optionLabel,
@@ -72,6 +73,7 @@ Select.defaultProps = {
   className: null,
   disabled: false,
   hasError: false,
+  includeLabelInOptions: false,
   label: null,
   message: null,
   onChange: (evt) => evt,
@@ -84,6 +86,7 @@ Select.propTypes = {
   id: PropTypes.string.isRequired,
   disabled: PropTypes.bool,
   hasError: PropTypes.bool,
+  includeLabelInOptions: PropTypes.bool,
   label: PropTypes.string,
   message: PropTypes.string,
   onChange: PropTypes.func,
