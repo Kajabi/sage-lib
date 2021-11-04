@@ -5,7 +5,7 @@
   disable_background_dismiss: true,
   id: "test-drawer",
 } do %>
-  <%= sage_component SageModalContent, { spacing: "panel" } do %>
+  <%= sage_component SageModalContent, { spacing: "panel", title: component.title } do %>
     <% if content_for?(:sage_drawer_header) %>
       <% content_for :sage_modal_custom_header do %>
         <div class="sage-drawer__header">
@@ -27,8 +27,6 @@
       <% end %>
     <% end %>
 
-    <% if content_for?(:sage_drawer_content) %>
-      <%= content_for :sage_drawer_content %>
-    <% end %>
+    <%= component.content %>
   <% end %>
 <% end %>
