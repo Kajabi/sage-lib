@@ -14,6 +14,7 @@ export const OptionsDropdown = ({
   panelMaxWidth,
   panelSize,
   options,
+  triggerButtonSubtle,
 }) => (
   <Dropdown
     align={align}
@@ -27,7 +28,7 @@ export const OptionsDropdown = ({
     panelMaxWidth={panelMaxWidth}
     panelSize={panelSize}
     triggerModifier="options"
-    triggerButtonSubtle={true}
+    triggerButtonSubtle={triggerButtonSubtle}
   >
     <Dropdown.ItemList items={options} />
   </Dropdown>
@@ -45,6 +46,7 @@ OptionsDropdown.defaultProps = {
   panelMaxWidth: null,
   panelSize: DROPDOWN_PANEL_SIZES.DEFAULT,
   options: null,
+  triggerButtonSubtle: true,
 };
 
 OptionsDropdown.propTypes = {
@@ -56,4 +58,5 @@ OptionsDropdown.propTypes = {
   panelMaxWidth: PropTypes.string,
   panelSize: PropTypes.oneOf(Object.values(DROPDOWN_PANEL_SIZES)),
   options: DropdownItemList.itemsPropTypes,
+  triggerButtonSubtle: PropTypes.bool,
 };
