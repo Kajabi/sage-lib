@@ -1,15 +1,16 @@
 <% num_items = component.num_items.present? ? component.num_items : 0 %>
+<% preposition = component.preposition.present? ? component.preposition : "of" %>
 
 <% if component.show_text %>
   <p class="sage-indicator-text <%= component.generated_css_classes %>"
     <%= component.generated_html_attributes.html_safe %>
   >
-    <%= "#{component.label} #{component.current_item} of #{component.num_items}" %>
+    <%= "#{component.label} #{component.current_item} #{preposition} #{component.num_items}" %>
   </p>
 <% else %>
   <ul
     class="sage-indicator-list <%= component.generated_css_classes %>"
-    aria-label="<%= "Showing #{component.label} #{component.current_item} of #{component.num_items}"%>"
+    aria-label="<%= "Showing #{component.label} #{component.current_item} #{preposition} #{component.num_items}"%>"
     <%= component.generated_html_attributes.html_safe %>
   >
     <% for i in 1...(num_items + 1) %>
