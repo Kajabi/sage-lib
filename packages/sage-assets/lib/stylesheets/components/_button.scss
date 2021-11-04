@@ -484,14 +484,14 @@ $-btn-loading-min-height: rem(36px);
         }
 
         &:hover::after {
-          opacity: 1;
           border-color: transparent;
+          opacity: 1;
         }
 
         &:focus::after {
-          border-color: map-get($-styles, focus-outline);
           width: $-btn-icon-only-focus-size;
           height: $-btn-icon-only-focus-size;
+          border-color: map-get($-styles, focus-outline);
 
         }
 
