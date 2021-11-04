@@ -10,5 +10,3 @@ export const SORTABLE_ROW_GAP_OPTIONS = {
   MD: 'md',
   LG: 'lg',
 };
-
-
