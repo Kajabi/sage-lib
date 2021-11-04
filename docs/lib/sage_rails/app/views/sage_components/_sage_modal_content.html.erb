@@ -16,11 +16,11 @@
 
         <% if content_for?(:sage_modal_custom_header) %>
           <%= content_for :sage_modal_custom_header %>
+        <% else %>
+          <h1 class="t-sage-heading-4">
+            <%= component.title %>
+          </h1>
         <% end %>
-
-        <h1 class="t-sage-heading-4">
-          <%= component.title %>
-        </h1>
 
         <% if content_for?(:sage_header_aside) %>
           <aside class="sage-modal__header-aside">

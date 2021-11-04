@@ -10,7 +10,7 @@ class SageModalContent < SageComponent
     help_title: [:optional, String],
     spacing: [:optional, NilClass, Set.new(["panel", "card"])],
     subheader: [:optional, String],
-    title: [:optional, String],
+    title: [:optional, NilClass, String],
   })
 
   def sections
