@@ -1,8 +1,9 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { tns } from 'tiny-slider/dist/tiny-slider';
 import { Icon } from '../Icon';
+import { Indicator } from '../Indicator';
 
 export const Carousel = ({
   children,
@@ -12,18 +13,21 @@ export const Carousel = ({
   const classNames = classnames(
     baseClass
   );
-
   const containerClass = '.sage-carousel__carousel';
-  const dotActiveClass = 'sage-carousel__dot--active';
+  // const dotActiveClass = 'sage-carousel__dot--active';
   const arrowDisabledClass = 'sage-carousel__arrow--disabled';
+
+  const [indicatorDotsIndex, setIndicatorDotsIndex] = useState(1);
+  const [indicatorDotsNum, setIndicatorDotsNum] = useState(0);
 
   let arrowPrev;
   let arrowNext;
   let mySlider;
   let mySliderInfo;
   let slidesLength;
-  let dots;
+  // let dots;
   let looping;
+  // let indicatorElement;
 
   function goToSlide(num) {
     if (!looping) {
@@ -31,18 +35,19 @@ export const Carousel = ({
       else arrowPrev.classList.remove(arrowDisabledClass);
       if (num === slidesLength - 1) arrowNext.classList.add(arrowDisabledClass);
       else arrowNext.classList.remove(arrowDisabledClass);
-      dots = [...document.getElementsByClassName('sage-carousel__dot')];
-      dots.forEach((dot) => {
-        dot.classList.remove(dotActiveClass);
-      });
-      dots[num].classList.add(dotActiveClass);
+      // dots = [...document.getElementsByClassName('sage-carousel__dot')];
+      // dots.forEach((dot) => {
+      //   dot.classList.remove(dotActiveClass);
+      // });
+      // dots[num].classList.add(dotActiveClass);
+      setIndicatorDotsIndex(num + 1);
       mySlider.goTo(num);
     }
   }
 
-  function handleDotClick(evt) {
-    goToSlide(parseInt(evt.target.getAttribute('index'), 10));
-  }
+  // function handleDotClick(evt) {
+  //   goToSlide(parseInt(evt.target.getAttribute('index'), 10));
+  // }
 
   function handlePrevArrowClick() {
     mySliderInfo = mySlider.getInfo();
@@ -77,6 +82,7 @@ export const Carousel = ({
     const slides = [...slider.children];
     let slideContainer;
     slidesLength = slides.length;
+    setIndicatorDotsNum(slidesLength);
     slides.forEach((slide, index) => {
       slideContainer = document.createElement('div');
       slideContainer.classList.add('slide');
@@ -101,18 +107,18 @@ export const Carousel = ({
     arrowPrev = document.querySelector('.sage-carousel__arrow--prev');
     arrowNext = document.querySelector('.sage-carousel__arrow--next');
 
-    if (!looping) {
-      let dot;
-      for (let i = 0; i < slidesLength; i += 1) {
-        dot = document.createElement('div');
-        dot.classList.add('sage-carousel__dot');
-        dot.setAttribute('index', i);
-        dot.setAttribute('role', 'button');
-        dot.setAttribute('tabIndex', '-1');
-        dot.addEventListener('click', handleDotClick);
-        document.querySelector('.sage-carousel__dots').appendChild(dot);
-      }
-    }
+    // if (!looping) {
+    //   let dot;
+    //   for (let i = 0; i < slidesLength; i += 1) {
+    //     dot = document.createElement('div');
+    //     dot.classList.add('sage-carousel__dot');
+    //     dot.setAttribute('index', i);
+    //     dot.setAttribute('role', 'button');
+    //     dot.setAttribute('tabIndex', '-1');
+    //     dot.addEventListener('click', handleDotClick);
+    //     document.querySelector('.sage-carousel__dots').appendChild(dot);
+    //   }
+    // }
 
     goToSlide(0);
   }
@@ -148,7 +154,12 @@ export const Carousel = ({
           <Icon icon="caret-right" size="lg" />
         </div>
       </div>
-      <div className="sage-carousel__dots" />
+      <div className="sage-carousel__dots">
+        <Indicator
+          numItems={indicatorDotsNum}
+          currentItem={indicatorDotsIndex}
+        />
+      </div>
     </div>
   );
 };
