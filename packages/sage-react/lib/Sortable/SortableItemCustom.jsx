@@ -27,9 +27,11 @@ export const SortableItemCustom = ({
       className={className}
 
     >
-      <CardRow gridTemplate={gridTemplate} gap={gap}>
-        {children}
-      </CardRow>
+      {gridTemplate ? (
+        <CardRow gridTemplate={gridTemplate} gap={gap}>
+          {children}
+        </CardRow>
+      ) : children}
     </section>
   );
 };
