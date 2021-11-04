@@ -8,22 +8,9 @@
 // This file is used to isolate the Drawer specific styles.
 
 .sage-drawer {
-  .sage-modal {
-    justify-content: flex-end;
-    padding: 0;
-    background: none;
-
-    .sage-modal__header-aside {
-      margin-left: initial;
-    }
-    .sage-modal__container {
-      overflow-y: scroll;
-      height: 100vh;
-      max-width: rem(400px);
-      margin-top: 0;
-      border-radius: 0;
-    }
-  }
+  justify-content: flex-end;
+  padding: 0;
+  background: none;
 }
 
 .sage-drawer__close {
