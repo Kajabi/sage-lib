@@ -423,10 +423,6 @@ $-alert-colors: (
       color: sage-color(charcoal);
       background-color: sage-color(white);
       border: 1px solid sage-color(grey, 500);
-
-      &[class*="icon-only"] {
-        border: 1px solid sage-color(grey, 400);
-      }
     }
 
     &:focus,
@@ -434,19 +430,6 @@ $-alert-colors: (
       color: sage-color(charcoal);
       background-color: sage-color(white);
       border: 1px solid sage-color(grey);
-
-      &[class*="icon-only"] {
-        background-color: sage-color(grey);
-        border: 1px solid sage-color(grey, 400);
-
-        // @include sage-focus-outline--update-color(transparent);
-
-        &::after {
-          transform: translate3d(-50%, -50%, 0) scale(0.94);
-          border-color: transparent;
-          opacity: 0;
-        }
-      }
     }
 
     &[aria-disabled="true"] {
