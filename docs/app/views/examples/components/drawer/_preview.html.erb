@@ -1,3 +1,124 @@
+<%
+
+# mock_data_as = "panel_rows"
+mock_data_as = "description"
+
+# potential data structure
+data = {
+  avatar_image: "avatar/court.png",
+  email: "court@kajabi.com",
+  initials: "CM",
+  name: "Court McFadzean",
+  user_stats: [
+    [
+      {
+        title: "Lifetime value",
+        data: "$230",
+      },
+      {
+        title: "Total offers",
+        data: "3",
+        link: "#offers"
+      },
+      {
+        title: "Total products",
+        data: "6",
+        link: "#products"
+      },
+    ],
+    [
+      {
+        title: "Last sign-in",
+        data: "Aug. 12, 2021",
+      },
+      {
+        title: "Total sign-in",
+        data: "32",
+      },
+    ],
+    [
+      {
+        title: "Contact status",
+        data: sage_component(SageLabel, {
+          value: "Member",
+          color: "info",
+          icon: "check-circle-filled"
+        }),
+      },
+      {
+        title: "Marketing status",
+        data: "Subscribed",
+      },
+      {
+        title: "Contact added",
+        data: "Jan. 23, 2021",
+      },
+      {
+        title: "Opt-in status",
+        data: "Unconfirmed",
+      },
+      {
+        title: "Affiliate referral",
+        data: "Abe Lincoln",
+      },
+    ]
+  ],
+  tags: ["2021", "Hello", "Summer", "Holiday", "Welcome", "Tag", "Tuesday"]
+}
+
+# configs for profile buttons
+button_bar_items = [
+  {
+    href: "#edit-contact",
+    icon: "pen",
+    label: "Edit contact",
+  },
+  {
+    href: "#reset-password",
+    icon: "ban", # TODO: Need reset password icon
+    label: "Reset password",
+  },
+  {
+    href: "#add-tag",
+    icon: "tag",
+    label: "Add tag",
+  },
+  {
+    href: "#grant-offer",
+    icon: "grant-offer",
+    label: "Grant offer",
+  },
+]
+
+# configs for more options dropdown
+more_options_items = [
+  {
+    value: "Change password",
+    attributes: { href: "#change-password" },
+  },
+  {
+    value: "Add a note",
+    attributes: { href: "#add-a-note" },
+  },
+  {
+    value: "Mute",
+    attributes: { href: "#mute" },
+  },
+  {
+    value: "Hide",
+    attributes: { href: "#hide" },
+  },
+  {
+    value: "Delete",
+    attributes: { href: "#delete" },
+    style: "danger",
+    modifiers: ["border-before"],
+  }
+]
+
+# ------------------------------------------------------------------------------------------
+%>
+
 <%= sage_component SageButton, {
   value: "Open Drawer",
   style: "primary",
@@ -6,17 +127,31 @@
   },
 } %>
 
-<%= sage_component SageDrawer, {
-  dismissable: true,
-} do %>
-  <% content_for :sage_drawer_content do %>
-    <h3 class="<%= SageClassnames::TYPE::HEADING_4 %> <%= SageClassnames::SPACERS::MD_BOTTOM %> <%= SageClassnames::TYPE_COLORS::CHARCOAL_500 %>">
-      Drawer
-    </h3>
-    <p>
-      👋 Any content can go here.
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quam assumenda a ut, architecto rerum vel quisquam, repellendus nemo quo saepe at voluptatem eveniet earum laudantium nostrum quibusdam? Repellendus, repudiandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum in deleniti doloribus sequi ipsam unde pariatur perspiciatis ex molestias temporibus accusantium fuga debitis, voluptates hic eos ab perferendis ad quo.</p>
+<% content_for :sage_docs_modals do %>
+  <%= sage_component SageDrawer, { show_close: true } do %>
+    <% content_for :sage_drawer_header do %>
+      <%= sage_component SageButton, {
+        style: "secondary",
+        subtle: true,
+        value: "Open full profile",
+        icon: { name: "expand", style: "left" }
+      } %>
+    <% end %>
+
+    <% content_for :sage_drawer_content do %>
+      <h3 class="<%= SageClassnames::TYPE::HEADING_4 %> <%= SageClassnames::SPACERS::MD_BOTTOM %> <%= SageClassnames::TYPE_COLORS::CHARCOAL_500 %>">
+        Drawer
+      </h3>
+      <p>
+        👋 Any content can go here.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Esse quam assumenda a ut, architecto rerum vel quisquam, repellendus nemo quo saepe at voluptatem eveniet earum laudantium nostrum quibusdam?
+        Repellendus, repudiandae.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Eum in deleniti doloribus sequi ipsam unde pariatur perspiciatis ex molestias temporibus accusantium fuga debitis, voluptates hic eos ab perferendis ad quo.
+      </p>
+    <% end %>
   <% end %>
 <% end %>

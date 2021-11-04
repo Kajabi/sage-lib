@@ -1,10 +1,10 @@
 class SageModalContent < SageComponent
   set_attribute_schema({
-    header_image: [:optional, String],
     header_icon: [:optional, {
+      color: [:optional, SageSchemas::COLOR_SLIDER],
       name: SageSchemas::ICON,
-      color: [:optional, SageSchemas::COLOR_SLIDER]
     }],
+    header_image: [:optional, String],
     help_content: [:optional, String],
     help_link: [:optional, Hash],
     help_title: [:optional, String],
