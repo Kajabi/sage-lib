@@ -32,18 +32,21 @@ export const CardRow = ({
   );
 };
 
+CardRow.GAP_OPTIONS = CARD_ROW_GAP_OPTIONS;
+CardRow.ALIGNMENT_OPTIONS = CARD_ROW_ALIGNMENT_OPTIONS;
+
 CardRow.defaultProps = {
   children: null,
   className: '',
   gridTemplate: null,
-  verticalAlign: CARD_ROW_ALIGNMENT_OPTIONS.DEFAULT,
-  gap: CARD_ROW_GAP_OPTIONS.DEFAULT,
+  verticalAlign: CardRow.ALIGNMENT_OPTIONS.DEFAULT,
+  gap: CardRow.GAP_OPTIONS.DEFAULT,
 };
 
 CardRow.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
+  gap: PropTypes.oneOf(Object.values(CardRow.GAP_OPTIONS)),
   gridTemplate: PropTypes.oneOf(Object.values(SageTokens.GRID_TEMPLATES)),
-  verticalAlign: PropTypes.oneOf(Object.values(CARD_ROW_ALIGNMENT_OPTIONS)),
-  gap: CARD_ROW_GAP_OPTIONS.DEFAULT
+  verticalAlign: PropTypes.oneOf(Object.values(CardRow.ALIGNMENT_OPTIONS)),
 };
