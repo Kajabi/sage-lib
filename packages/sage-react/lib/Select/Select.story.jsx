@@ -7,6 +7,13 @@ export default {
   decorators: [(Story) => <div style={{ width: 300, marginLeft: 'auto', marginRight: 'auto' }}><Story /></div>],
   args: {
     label: 'Select',
+    includeLabelInOptions: false,
+    options: [
+      "Option 1",
+      "Option 2",
+      "Option 3",
+      "Option 4",
+    ]
   },
 };
 
@@ -26,13 +33,14 @@ export const SearchWithState = (args) => {
 };
 SearchWithState.args = {
   id: 'field-2',
-  label: 'Choose...',
+  label: 'Cool stuff',
   options: [
     'Option 1',
     'Option 2',
     'Option 3',
     'Option 4',
-  ]
+  ],
+  placeholder: 'Choose...'
 };
 
 export const SearchDisabled = (args) => {
