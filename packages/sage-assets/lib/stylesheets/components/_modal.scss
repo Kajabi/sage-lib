@@ -128,7 +128,7 @@ $-modal-fullscreen-top-spacing: rem(104px);
     left: 0;
     right: 0;
     margin: 0;
-    padding: sage-spacer(sm) $-modal-padding-x;
+    padding: sage-spacing(sm) $-modal-padding-x;
     box-shadow: sage-shadow(sm);
   }
 }
