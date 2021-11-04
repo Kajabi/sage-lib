@@ -47,10 +47,7 @@ export const ModalHeader = ({
         >
           {icon && <Icon className="sage-modal__header-icon" icon={icon.name} color={icon.color} /> }
           {image && <img src={image.src} alt={image.alt || ''} />}
-          {customHeader
-            ? customHeader
-            : <h1 className={headerActionsClassNames}>{title}</h1>
-          }
+          {customHeader || <h1 className={headerActionsClassNames}>{title}</h1>}
           {actions && <ModalHeaderActions>{actions}</ModalHeaderActions>}
           {aside && <ModalHeaderAside>{aside}</ModalHeaderAside>}
 

@@ -11,10 +11,14 @@ const drawerChildren = (
     <p>👋  Any content can go here.</p>
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      Esse quam assumenda a ut, architecto rerum vel quisquam, repellendus nemo quo saepe at voluptatem eveniet earum laudantium nostrum quibusdam?
+      Esse quam assumenda a ut, architecto rerum vel quisquam,
+      repellendus nemo quo saepe at voluptatem eveniet earum
+      laudantium nostrum quibusdam?
       Repellendus, repudiandae.
       Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      Eum in deleniti doloribus sequi ipsam unde pariatur perspiciatis ex molestias temporibus accusantium fuga debitis, voluptates hic eos ab perferendis ad quo.
+      Eum in deleniti doloribus sequi ipsam unde pariatur perspiciatis
+      ex molestias temporibus accusantium fuga debitis,
+      voluptates hic eos ab perferendis ad quo.
     </p>
   </>
 );
@@ -63,5 +67,5 @@ export const WiredExample = () => {
         {drawerChildren}
       </Drawer>
     </>
-  )
+  );
 };
