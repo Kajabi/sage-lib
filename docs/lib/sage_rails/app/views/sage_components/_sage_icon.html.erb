@@ -1,3 +1,13 @@
+<%
+# Set the custom height to equal the width when the height isn't defined
+bg_height = component.background_height ? component.background_height : component.background_width;
+bg_width = component.background_width ? component.background_width : component.background_height;
+
+if component.circular
+  bg_width = bg_height
+end
+
+%>
 <% if component.card_color.present? %>
   <div class="sage-icon-background 
     <%= "sage-icon-background--#{component.card_color}" %>
@@ -5,9 +15,15 @@
     <%= "sage-icon-background--custom" if component.background_height || component.background_width %>
     <%= "sage-icon-background--circular" if component.circular %>
   "
+  <% if component.background_height || component.background_width %>
+    style="
+      --background-height: <%= bg_height %>;
+      --background-width: <%= bg_width %>;
+    "
+  <% end %>
   style="
-    <%= "--background-height: #{component.background_height};" if component.background_height %>
-    <%= "--background-width: #{component.background_width};" if component.background_width %>
+    <%= "--background-height: #{bg_height};" if component.background_height || component.background_width %>
+    <%= "--background-width: #{bg_width};" if component.background_height || component.background_width %>
   ">
 <% end %>
   <i class="

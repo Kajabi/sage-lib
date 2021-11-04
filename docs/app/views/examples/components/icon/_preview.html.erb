@@ -62,7 +62,14 @@ and also be used with a vareity of layout techniques or components such as CSS f
       <%= size == "md" ? "Default (#{size})" : size %>
       <%= sage_component SageIcon, { icon: "pen", size: (size == "md" ? nil : size), card_color: "draft" } %>
       <%= sage_component SageIcon, { icon: "pen", size: (size == "md" ? nil : size), card_color: "draft", circular: true, } %>
-      <%= sage_component SageIcon, { icon: "pen", background_height: "40px", background_width: "40px", card_color: "draft", circular: true, } %>
     <% end %>
+  <% end %>
+<% end %>
+
+<h3>Custom Background Sizes</h3>
+<%= sage_component SageCardList, {} do %>
+  <%= sage_component SageCardListItem, { grid_template: "o" } do %>
+    <%= sage_component SageIcon, { icon: "pen", background_width: "64px", background_height: "20px", card_color: "draft" } %>
+    <%= sage_component SageIcon, { icon: "pen", size: "4xl", background_height: "64px", background_width: "10px", card_color: "draft", circular: true, } %>
   <% end %>
 <% end %>
