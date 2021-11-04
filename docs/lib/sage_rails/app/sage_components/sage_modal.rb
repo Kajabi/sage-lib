@@ -7,6 +7,7 @@ class SageModal < SageComponent
     large: [:optional, TrueClass],
     remove_content_on_close: [:optional, TrueClass],
     disable_background_blur: [:optional, TrueClass],
+    disable_background_dismiss: [:optional, NilClass, TrueClass],
     animate: [:optional, String, TrueClass, {
       direction: [:optional, String, Set.new(["bottom", "top", "left", "right"])]
     }],
