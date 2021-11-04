@@ -15,16 +15,13 @@ end
     <%= "sage-icon-background--custom" if component.background_height || component.background_width %>
     <%= "sage-icon-background--circular" if component.circular %>
   "
-  <% if component.background_height || component.background_width %>
-    style="
-      --background-height: <%= bg_height %>;
-      --background-width: <%= bg_width %>;
-    "
-  <% end %>
-  style="
-    <%= "--background-height: #{bg_height};" if component.background_height || component.background_width %>
-    <%= "--background-width: #{bg_width};" if component.background_height || component.background_width %>
-  ">
+    <% if component.background_height || component.background_width %>
+      style="
+        --background-height: <%= bg_height %>;
+        --background-width: <%= bg_width %>;
+      "
+    <% end %>
+  >
 <% end %>
   <i class="
       <%= "sage-icon-#{component.icon}" %><%= "-#{component.size}" if component.size.present? %>
