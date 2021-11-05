@@ -59,13 +59,12 @@ export const Carousel = ({
       slider.appendChild(slideContainer);
     });
 
-    const basicSlider = tns({
+    setMySlider(tns({
       ...options,
       container: containerClass,
       controls: false,
       nav: false,
-    });
-    setMySlider(basicSlider);
+    }));
 
     setLooping(!(options.loop !== undefined && !options.loop));
 
@@ -74,8 +73,13 @@ export const Carousel = ({
   }, [options, slidesLength]);
 
   useEffect(() => {
-    if (mySlider !== null) mySlider.goTo(slidesIndex);
-  }, [mySlider, slidesIndex]);
+    if (mySlider !== null) {
+      mySlider.goTo(slidesIndex);
+      mySlider.events.on('dragEnd', () => {
+        goToSlide(mySlider.getInfo().index);
+      });
+    }
+  });
 
   return (
     <div className={classNames} aria-roledescription="carousel">
