@@ -1,13 +1,16 @@
 module MocksHelper
 
+  # Mock statuses
   TODO = "todo"
   DOING = "doing"
   DONE = "done"
   ARCHIVED = "archived"
 
+  # Github URLs
   GITHUB_REPO_URL = "https://github.com/Kajabi/sage-lib"
   GITHUB_FILES_BASE_URL = "#{GITHUB_REPO_URL}/tree/main/docs" # TODO: can we read the current git branch here by chance?
   
+  # Storybook live URL
   STORYBOOK_BASE_URL = "https://sage-lib-storybook.herokuapp.com"
   
   # Lists out all the available sage mocks
@@ -15,7 +18,7 @@ module MocksHelper
     [
       {
         alias: "test",
-        milestone_id: "21",
+        milestone_id: nil,
         name: "Test",
         status: ARCHIVED,
         team: "UXD",
@@ -23,7 +26,7 @@ module MocksHelper
       },
       {
         alias: "contact_profile",
-        milestone_id: "21",
+        milestone_id: 21,
         name: "Contact Profile",
         status: DOING,
         team: "Manage",
@@ -86,16 +89,11 @@ module MocksHelper
   end
 
   def mock_code_items(mock)
-    mock_repo_partials_url =  "#{GITHUB_FILES_BASE_URL}/app/views/mocks/#{mock[:alias]}/"
-    mock_repo_helpers_url =   "#{GITHUB_FILES_BASE_URL}/app/helpers/mocks/#{mock[:alias]}_helper.rb"
-    mock_repo_js_url =        "#{GITHUB_FILES_BASE_URL}/lib/sage-frontend/javascript/docs/mocks/#{mock[:alias]}/"
-    mock_repo_scss_url =      "#{GITHUB_FILES_BASE_URL}/lib/sage-frontend/stylesheets/docs/mocks/#{mock[:alias]}/"
-
     mock_code_items = [
       {
         value: "Rails partials",
         attributes: {
-          href: mock_repo_partials_url,
+          href: "#{GITHUB_FILES_BASE_URL}/app/views/mocks/#{mock[:alias]}/",
           target: "_blank",
           rel: "noreferrer noopener",
         },
@@ -103,7 +101,7 @@ module MocksHelper
       {
         value: "Rails helpers",
         attributes: {
-          href: mock_repo_helpers_url,
+          href: "#{GITHUB_FILES_BASE_URL}/app/helpers/mocks/#{mock[:alias]}_helper.rb",
           target: "_blank",
           rel: "noreferrer noopener",
         },
@@ -111,7 +109,7 @@ module MocksHelper
       {
         value: "Rails JavaScript",
         attributes: {
-          href: mock_repo_js_url,
+          href: "#{GITHUB_FILES_BASE_URL}/lib/sage-frontend/javascript/docs/mocks/#{mock[:alias]}/",
           target: "_blank",
           rel: "noreferrer noopener",
         },
@@ -119,7 +117,7 @@ module MocksHelper
       {
         value: "SCSS Styles",
         attributes: {
-          href: mock_repo_scss_url,
+          href: "#{GITHUB_FILES_BASE_URL}/lib/sage-frontend/stylesheets/docs/mocks/_#{mock[:alias]}.scss",
           target: "_blank",
           rel: "noreferrer noopener",
         },
@@ -141,6 +139,10 @@ module MocksHelper
   end
 
   def mock_milestone_url(mock)
-    "#{GITHUB_REPO_URL}/milestone/#{mock[:milestone_id]}"
+    if mock[:milestone_id]
+      "#{GITHUB_REPO_URL}/milestone/#{mock[:milestone_id].to_s}"
+    else
+      nil
+    end
   end
 end
