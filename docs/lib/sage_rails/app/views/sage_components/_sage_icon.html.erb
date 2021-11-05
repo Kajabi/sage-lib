@@ -12,13 +12,13 @@ end
   <div class="sage-icon-background 
     <%= "sage-icon-background--#{component.card_color}" %>
     <%= "sage-icon-background--#{component.size}" if component.size.present? %>
-    <%= "sage-icon-background--custom" if component.background_height || component.background_width %>
+    <%= "sage-icon-background--custom-size" if component.background_height || component.background_width %>
     <%= "sage-icon-background--circular" if component.circular %>
   "
     <% if component.background_height || component.background_width %>
       style="
-        --background-height: <%= bg_height %>;
-        --background-width: <%= bg_width %>;
+        --sage-icon-background-height: <%= bg_height %>;
+        --sage-icon-background-width: <%= bg_width %>;
       "
     <% end %>
   >

@@ -30,7 +30,7 @@ export const Icon = ({
   const wrapperClassNames = classnames(
     'sage-icon-background',
     {
-      'sage-icon-background--custom': backgroundHeight || backgroundWidth,
+      'sage-icon-background--custom-size': backgroundHeight || backgroundWidth,
       [`sage-icon-background--${cardColor}`]: cardColor,
       [`sage-icon-background--${size}`]: size,
       'sage-icon-background--circular': circular,
@@ -58,8 +58,8 @@ export const Icon = ({
       backgroundWidth = backgroundHeight;
     }
 
-    props['--background-height'] = backgroundHeight;
-    props['--background-width'] = backgroundWidth;
+    props['--sage-icon-background-height'] = backgroundHeight;
+    props['--sage-icon-background-width'] = backgroundWidth;
 
     return props;
   };
