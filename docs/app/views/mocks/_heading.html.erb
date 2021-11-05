@@ -4,7 +4,16 @@
     text: "Back",
     url: pages_mocks_path(),
   }]} %>
-  <h1><%= mock[:name] %></h1>
+  <h1>
+    <%= mock[:name] %>
+    <%= sage_component SageProperty, {
+      icon: "users-alt",
+      value: "#{mock[:team]}",
+      html_attributes: {
+        "data-js-tooltip": "Who this is for",
+      },
+    } %>
+  </h1>
   <div class="docs-heading__meta">
     <div class="docs-heading__meta-primary">
       <% mock_status = mock_status_configs(mock) %>
@@ -15,13 +24,7 @@
           "data-js-tooltip": "Development status",
         },
       } %>
-      <%= sage_component SageProperty, {
-        icon: "users-alt",
-        value: "#{mock[:team]}",
-        html_attributes: {
-          "data-js-tooltip": "Who this is for",
-        },
-      } %>
+      
       <%= sage_component SageDropdown, { items: mock_code_items(mock) } do %>
         <%= sage_component SageButton, {
           icon: { name: "code", style: "left" },
