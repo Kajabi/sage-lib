@@ -439,8 +439,6 @@ $-btn-loading-min-height: rem(36px);
       color: map-get($-styles, default);
       background-color: transparent;
 
-      // @include sage-focus-outline--update-color(map-get($-styles, focus-outline));
-
       // TODO: refactor the subtle button hover state, after Sage 3.0 conversion
       &::after {
         border-color: transparent;
