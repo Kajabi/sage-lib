@@ -11,11 +11,15 @@
     "lint": "yarn run stylelint \"./lib/sage-frontend/stylesheets/**/*.{css,scss,sass}\" --max-warnings 0",
     "rails:server": "bundle exec rails server -p 4000 -b 0.0.0.0",
     "rails:server:production": "bundle exec rails server -e production -b 0.0.0.0 -p $PORT",
-    "heroku-postbuild": "bundle exec rake assets:precompile",
     "start": "npm-run-all --parallel webpack:server rails:server",
     "version": "../bin/bump-gem.sh",
     "webpack": "./bin/webpack",
     "webpack:server": "./bin/webpack-dev-server"
+  },
+  "engines": {
+    "node": "14.x",
+    "npm": "6.x",
+    "yarn": "1.x"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
