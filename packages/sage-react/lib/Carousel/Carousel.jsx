@@ -71,6 +71,10 @@ export const Carousel = ({
   }, [options, slidesLength]);
 
   useEffect(() => {
+    if (mySlider !== null) arrowPrev.classList.add(arrowDisabledClass);
+  }, [arrowPrev, mySlider]);
+
+  useEffect(() => {
     if (mySlider !== null) {
       mySlider.goTo(slidesIndex);
       mySlider.events.on('indexChanged', () => {
