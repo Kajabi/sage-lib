@@ -6,12 +6,11 @@ export const CarouselArrow = ({
   icon,
   id,
   onClickCallback,
-  onKeyDownCallback,
 }) => (
+  // eslint-disable-next-line jsx-a11y/click-events-have-key-events
   <div
     className={`sage-carousel__arrow sage-carousel__arrow--${id}`}
     onClick={onClickCallback}
-    onKeyDown={onKeyDownCallback}
     role="button"
     tabIndex={-1}
   >
@@ -23,5 +22,4 @@ CarouselArrow.propTypes = {
   icon: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
   onClickCallback: PropTypes.func.isRequired,
-  onKeyDownCallback: PropTypes.func.isRequired,
 };

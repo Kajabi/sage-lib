@@ -34,8 +34,6 @@ export const Carousel = ({
     }
   }
 
-  function handleKeyDown() {}
-
   function handlePrevArrowClick() {
     if (slidesIndex !== 0) goToSlide(slidesIndex - 1);
   }
@@ -75,7 +73,7 @@ export const Carousel = ({
   useEffect(() => {
     if (mySlider !== null) {
       mySlider.goTo(slidesIndex);
-      mySlider.events.on('dragEnd', () => {
+      mySlider.events.on('indexChanged', () => {
         goToSlide(mySlider.getInfo().index);
       });
     }
@@ -88,7 +86,6 @@ export const Carousel = ({
           icon="caret-left"
           id="prev"
           onClickCallback={handlePrevArrowClick}
-          onKeyDownCallback={handleKeyDown}
         />
         <div className="sage-carousel__sizer">
           <div className="sage-carousel__carousel">
@@ -99,7 +96,6 @@ export const Carousel = ({
           icon="caret-right"
           id="next"
           onClickCallback={handleNextArrowClick}
-          onKeyDownCallback={handleKeyDown}
         />
       </div>
       <div className="sage-carousel__dots">
