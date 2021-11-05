@@ -8,6 +8,8 @@ require('./button-group')
 require('./example')
 require('./scroll-to-active-nav-item')
 
+require('./mocks')
+
 // Conditional routing
 // NOTE: modules must be imported above to be initialized below
 if (document.querySelector('.sage-docs') !== null) {

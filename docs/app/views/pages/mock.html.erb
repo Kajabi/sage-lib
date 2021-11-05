@@ -1,9 +1,4 @@
 <% @mock = get_mock(@alias) %>
-<%= content_for :heading do %>
-<%= md("
-# #{@mock[:name] || "Mock not found"}
-<p class=\"docs-heading__lead\">Coming Soon...</p>
-") %>
-<% end %>
+<%= render "mocks/heading", mock: @mock %>
 
 <%= render(get_mock_path(@mock)) %>
