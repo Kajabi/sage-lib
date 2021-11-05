@@ -13,47 +13,64 @@ export const Carousel = ({
   const classNames = classnames(
     baseClass
   );
+
   const containerClass = '.sage-carousel__carousel';
+  const arrowDisabledClass = 'sage-carousel__arrow--disabled';
 
   const [slidesIndex, setSlidesIndex] = useState(0);
   const [slidesLength, setSlidesLength] = useState(0);
   const [mySlider, setMySlider] = useState(null);
+  const [looping, setLooping] = useState(false);
+  const [arrowPrev, setArrowPrev] = useState(null);
+  const [arrowNext, setArrowNext] = useState(null);
+
+  function goToSlide(num) {
+    if (!looping) {
+      if (num === 0) arrowPrev.classList.add(arrowDisabledClass);
+      else arrowPrev.classList.remove(arrowDisabledClass);
+      if (num === slidesLength - 1) arrowNext.classList.add(arrowDisabledClass);
+      else arrowNext.classList.remove(arrowDisabledClass);
+      setSlidesIndex(num);
+    }
+  }
 
   function handleKeyDown() {}
 
   function handlePrevArrowClick() {
-    if (slidesIndex !== 0) setSlidesIndex(slidesIndex - 1);
+    if (slidesIndex !== 0) goToSlide(slidesIndex - 1);
   }
 
   function handleNextArrowClick() {
-    if (slidesIndex !== slidesLength - 1) setSlidesIndex(slidesIndex + 1);
+    if (slidesIndex !== slidesLength - 1) goToSlide(slidesIndex + 1);
   }
 
   useEffect(() => {
-    function init() {
-      const slider = document.querySelector(containerClass);
-      const slides = [...slider.children];
-      let slideContainer;
-      setSlidesLength(slides.length);
-      slides.forEach((slide, index) => {
-        slideContainer = document.createElement('div');
-        slideContainer.classList.add('slide');
-        slideContainer.setAttribute('aria-roledescription', 'slide');
-        slideContainer.setAttribute('role', 'group');
-        slideContainer.setAttribute('aria-label', `${index + 1} of ${slidesLength}`);
-        slideContainer.appendChild(slide);
-        slider.appendChild(slideContainer);
-      });
+    const slider = document.querySelector(containerClass);
+    const slides = [...slider.children];
+    let slideContainer;
+    setSlidesLength(slides.length);
+    slides.forEach((slide, index) => {
+      slideContainer = document.createElement('div');
+      slideContainer.classList.add('slide');
+      slideContainer.setAttribute('aria-roledescription', 'slide');
+      slideContainer.setAttribute('role', 'group');
+      slideContainer.setAttribute('aria-label', `${index + 1} of ${slidesLength}`);
+      slideContainer.appendChild(slide);
+      slider.appendChild(slideContainer);
+    });
 
-      const basicSlider = tns({
-        ...options,
-        container: containerClass,
-        controls: false,
-        nav: false,
-      });
-      setMySlider(basicSlider);
-    }
-    init();
+    const basicSlider = tns({
+      ...options,
+      container: containerClass,
+      controls: false,
+      nav: false,
+    });
+    setMySlider(basicSlider);
+
+    setLooping(!(options.loop !== undefined && !options.loop));
+
+    setArrowPrev(document.querySelector('.sage-carousel__arrow--prev'));
+    setArrowNext(document.querySelector('.sage-carousel__arrow--next'));
   }, [options, slidesLength]);
 
   useEffect(() => {
