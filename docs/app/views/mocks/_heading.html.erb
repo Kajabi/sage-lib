@@ -38,15 +38,16 @@
     <div class="docs-heading__meta-secondary">
       <%= sage_component SageButton, {
         attributes: {
-          href: "#{mock_milestone_base_url}/#{mock[:milestone_id]}",
+          href: mock_milestone_url(mock),
           target: "_blank",
           rel: "noreferrer noopener",
         },
+        disabled: mock[:milestone_id] == nil ? true : false,
         icon: { name: "arrow-right", style: "right" },
         style: "secondary",
         subtle: true,
         value: "Development milestone",
-      } if mock[:milestone_url] %>
+      } %>
     </div>
   </div>
 <% end %>
