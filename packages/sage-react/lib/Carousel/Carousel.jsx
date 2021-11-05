@@ -14,118 +14,51 @@ export const Carousel = ({
     baseClass
   );
   const containerClass = '.sage-carousel__carousel';
-  // const dotActiveClass = 'sage-carousel__dot--active';
-  const arrowDisabledClass = 'sage-carousel__arrow--disabled';
 
-  const [indicatorDotsIndex, setIndicatorDotsIndex] = useState(1);
-  const [indicatorDotsNum, setIndicatorDotsNum] = useState(0);
+  const [slidesIndex, setSlidesIndex] = useState(0);
+  const [slidesLength, setSlidesLength] = useState(0);
+  const [mySlider, setMySlider] = useState(null);
 
-  let arrowPrev;
-  let arrowNext;
-  let mySlider;
-  let mySliderInfo;
-  let slidesLength;
-  // let dots;
-  let looping;
-  // let indicatorElement;
-
-  function goToSlide(num) {
-    if (!looping) {
-      if (num === 0) arrowPrev.classList.add(arrowDisabledClass);
-      else arrowPrev.classList.remove(arrowDisabledClass);
-      if (num === slidesLength - 1) arrowNext.classList.add(arrowDisabledClass);
-      else arrowNext.classList.remove(arrowDisabledClass);
-      // dots = [...document.getElementsByClassName('sage-carousel__dot')];
-      // dots.forEach((dot) => {
-      //   dot.classList.remove(dotActiveClass);
-      // });
-      // dots[num].classList.add(dotActiveClass);
-      setIndicatorDotsIndex(num + 1);
-      mySlider.goTo(num);
-    }
-  }
-
-  // function handleDotClick(evt) {
-  //   goToSlide(parseInt(evt.target.getAttribute('index'), 10));
-  // }
+  function handleKeyDown() {}
 
   function handlePrevArrowClick() {
-    mySliderInfo = mySlider.getInfo();
-    if (!looping) {
-      if (mySliderInfo.index !== 0) goToSlide(mySliderInfo.index - 1);
-    } else {
-      mySlider.goTo('prev');
-    }
+    if (slidesIndex !== 0) setSlidesIndex(slidesIndex - 1);
   }
 
   function handleNextArrowClick() {
-    mySliderInfo = mySlider.getInfo();
-    if (!looping) {
-      if (mySliderInfo.index !== slidesLength - 1) goToSlide(mySliderInfo.index + 1);
-    } else {
-      mySlider.goTo('next');
-    }
-  }
-
-  function handleDragEnd() {
-    mySliderInfo = mySlider.getInfo();
-    goToSlide(mySliderInfo.index);
-  }
-
-  function handleKeyDown(evt) {
-    if (evt.keyCode === 37) handlePrevArrowClick();
-    else if (evt.keyCode === 39) handleNextArrowClick();
-  }
-
-  function init() {
-    const slider = document.querySelector(containerClass);
-    const slides = [...slider.children];
-    let slideContainer;
-    slidesLength = slides.length;
-    setIndicatorDotsNum(slidesLength);
-    slides.forEach((slide, index) => {
-      slideContainer = document.createElement('div');
-      slideContainer.classList.add('slide');
-      slideContainer.setAttribute('aria-roledescription', 'slide');
-      slideContainer.setAttribute('role', 'group');
-      slideContainer.setAttribute('aria-label', `${index + 1} of ${slidesLength}`);
-      slideContainer.appendChild(slide);
-      slider.appendChild(slideContainer);
-    });
-
-    mySlider = tns({
-      ...options,
-      container: containerClass,
-      controls: false,
-      nav: false,
-    });
-    mySliderInfo = mySlider.getInfo();
-    mySlider.events.on('dragEnd', handleDragEnd);
-
-    looping = !(options.loop !== undefined && !options.loop);
-
-    arrowPrev = document.querySelector('.sage-carousel__arrow--prev');
-    arrowNext = document.querySelector('.sage-carousel__arrow--next');
-
-    // if (!looping) {
-    //   let dot;
-    //   for (let i = 0; i < slidesLength; i += 1) {
-    //     dot = document.createElement('div');
-    //     dot.classList.add('sage-carousel__dot');
-    //     dot.setAttribute('index', i);
-    //     dot.setAttribute('role', 'button');
-    //     dot.setAttribute('tabIndex', '-1');
-    //     dot.addEventListener('click', handleDotClick);
-    //     document.querySelector('.sage-carousel__dots').appendChild(dot);
-    //   }
-    // }
-
-    goToSlide(0);
+    if (slidesIndex !== slidesLength - 1) setSlidesIndex(slidesIndex + 1);
   }
 
   useEffect(() => {
+    function init() {
+      const slider = document.querySelector(containerClass);
+      const slides = [...slider.children];
+      let slideContainer;
+      setSlidesLength(slides.length);
+      slides.forEach((slide, index) => {
+        slideContainer = document.createElement('div');
+        slideContainer.classList.add('slide');
+        slideContainer.setAttribute('aria-roledescription', 'slide');
+        slideContainer.setAttribute('role', 'group');
+        slideContainer.setAttribute('aria-label', `${index + 1} of ${slidesLength}`);
+        slideContainer.appendChild(slide);
+        slider.appendChild(slideContainer);
+      });
+
+      const basicSlider = tns({
+        ...options,
+        container: containerClass,
+        controls: false,
+        nav: false,
+      });
+      setMySlider(basicSlider);
+    }
     init();
-  });
+  }, [options, slidesLength]);
+
+  useEffect(() => {
+    if (mySlider !== null) mySlider.goTo(slidesIndex);
+  }, [mySlider, slidesIndex]);
 
   return (
     <div className={classNames} aria-roledescription="carousel">
@@ -156,8 +89,8 @@ export const Carousel = ({
       </div>
       <div className="sage-carousel__dots">
         <Indicator
-          numItems={indicatorDotsNum}
-          currentItem={indicatorDotsIndex}
+          numItems={slidesLength}
+          currentItem={slidesIndex + 1}
         />
       </div>
     </div>
