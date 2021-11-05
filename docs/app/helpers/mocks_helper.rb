@@ -38,6 +38,7 @@ module MocksHelper
         name: "Test",
         status: ARCHIVED,
         team: "UXD",
+        storybook_url: nil,
       },
       {
         alias: "contact_profile",
