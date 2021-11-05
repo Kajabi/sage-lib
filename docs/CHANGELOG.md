@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.24.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.24.1...@kajabi/sage@4.24.2) (2021-11-05)
+
+
+### Bug Fixes
+
+* **docs:** patch build/ci process for heroku issues ([e9c35d0](https://github.com/Kajabi/sage-lib/commit/e9c35d0ea792c1032549ceef820a77426f311c3c))
+
+
+
+
+
 ## [4.24.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.24.0...@kajabi/sage@4.24.1) (2021-11-03)
 
 
