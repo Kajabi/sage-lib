@@ -3,6 +3,45 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.66.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.65.2...@kajabi/sage-react@0.66.0) (2021-11-08)
+
+
+### Bug Fixes
+
+* **card:** update proptypes for Card row ([dec9764](https://github.com/Kajabi/sage-lib/commit/dec9764fb414ea340e3f8650c60edbab577de467))
+* **icons:** updated mappings for missing icons ([4f80b28](https://github.com/Kajabi/sage-lib/commit/4f80b28aa39ad0192fffd5a80f1dd3974afea4a7))
+* **select:** ensure React select can toggle whether or not to include label in options ([14c7663](https://github.com/Kajabi/sage-lib/commit/14c766331b4e39e5574d0d5e280d1213f151b753))
+* **select:** fix error state in React Select ([7a97e00](https://github.com/Kajabi/sage-lib/commit/7a97e00d8e5c455df3d0693322850455f53d4551))
+* **sortable:** add gap property ([4775369](https://github.com/Kajabi/sage-lib/commit/47753695c75df4777173623c0c97735d9045aeea))
+* **sortable:** add SortableItemCustom to react ([40e749d](https://github.com/Kajabi/sage-lib/commit/40e749d5de804c2c80b3cab4e34154d531e4df15))
+* **sortable:** linter ([c61fe3e](https://github.com/Kajabi/sage-lib/commit/c61fe3e44cbb5dcb65f118d5ac1c5b387a077619))
+* **sortable:** updates per phil review ([c232d5a](https://github.com/Kajabi/sage-lib/commit/c232d5af494dc4fa0c8f53d8b7298931de5ae9fd))
+* **sortable:** updates per phil review ([a0262ed](https://github.com/Kajabi/sage-lib/commit/a0262ede1b9f509300d57b4e3b563c07cbbdbda0))
+* **sortable:** updates to sortablecustomitem story ([50fb81f](https://github.com/Kajabi/sage-lib/commit/50fb81fc574e7525c613cbe3282b47615cc98b4d))
+* **sortable:** updates to sortablecustomitem story ([c79ae5a](https://github.com/Kajabi/sage-lib/commit/c79ae5a37ec05010aa97c4b11121adeed0ccd651))
+
+
+### Features
+
+* **dropdown:** make options dropdown able to change subtle trigger ([3ff19bf](https://github.com/Kajabi/sage-lib/commit/3ff19bfc93cf83098d4ead40453cc28d8f0327ac))
+* **icon:** adds new props to React component ([2cbef34](https://github.com/Kajabi/sage-lib/commit/2cbef342a991d038f5e5f20909c4f0e4b56210ff))
+* **icon:** updates custom prop variable names ([2db2a46](https://github.com/Kajabi/sage-lib/commit/2db2a460dd5f79a1efe16d4f7a5523603754aa91))
+* **icons:** update sage icons to v1.17 ([68c7da1](https://github.com/Kajabi/sage-lib/commit/68c7da1b9128abb2e782c9b46c2a7ddecfb6175f))
+* **indicator:** added basic React scaffolding ([32cbdb2](https://github.com/Kajabi/sage-lib/commit/32cbdb267cb2cb7772990edeb348c67c6b11a35b))
+* **indicator:** added currentItem prop ([55669bb](https://github.com/Kajabi/sage-lib/commit/55669bbc322f12956d442d765f4cfd0f75ba05dd))
+* **indicator:** added numItems prop ([fe15e37](https://github.com/Kajabi/sage-lib/commit/fe15e37bf168fa7f8d0afb5cce2e2cc0eeb6e2ee))
+* **indicator:** added optional textSeparator prop for cases where "of" isn't apporpriate ([bcd6baf](https://github.com/Kajabi/sage-lib/commit/bcd6bafac488a6b0e9b9c6f9b7663f843f60c120))
+* **indicator:** added showText prop ([41e6e63](https://github.com/Kajabi/sage-lib/commit/41e6e6391a50d7efba9e62d15179e970fecd9783))
+* **indicator:** added showText story variant ([270ddbb](https://github.com/Kajabi/sage-lib/commit/270ddbb83ea439665ee7e66618ef8f0296ae2570))
+* **indicator:** added visually-hidden label and index span ([09b1035](https://github.com/Kajabi/sage-lib/commit/09b1035ddd7ab12be67dd31116c2061a9592b737))
+* **indicator:** changed textSeparator to preposition, better logically ([c307ddd](https://github.com/Kajabi/sage-lib/commit/c307ddda5833706543727b2f2bd4579184c8895e))
+* **indicator:** fixed indices of numItems and currentItem ([e57d93f](https://github.com/Kajabi/sage-lib/commit/e57d93f75e6254a344522aa4045453cc78d43632))
+* **indicator:** removed preposition prop from showText story variant ([6acc12c](https://github.com/Kajabi/sage-lib/commit/6acc12c1faac1df2e38c51a30f9b2f3414468383))
+
+
+
+
+
 ## [0.65.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.65.1...@kajabi/sage-react@0.65.2) (2021-11-05)
 
 **Note:** Version bump only for package @kajabi/sage-react

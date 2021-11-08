@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.25.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.24.3...@kajabi/sage@4.25.0) (2021-11-08)
+
+
+### Bug Fixes
+
+* **icons:** updated mappings for missing icons ([4f80b28](https://github.com/Kajabi/sage-lib/commit/4f80b28aa39ad0192fffd5a80f1dd3974afea4a7))
+* **tabs:** fix for aria-controls reference ([2359970](https://github.com/Kajabi/sage-lib/commit/235997067d39eb2922437e03b8738385abf18c0c)), closes [#969](https://github.com/Kajabi/sage-lib/issues/969)
+
+
+### Features
+
+* **icon:** adds custom prop to stylesheet ([69fb4fa](https://github.com/Kajabi/sage-lib/commit/69fb4faf3f13303e02d6f4dd2510a2871a6d1218))
+* **icon:** adds new class based on custom height and width props ([3b7b11f](https://github.com/Kajabi/sage-lib/commit/3b7b11fb83eb5459a572ccc8a312ab8a08c3528d))
+* **icon:** adds new height and width props ([8c6d113](https://github.com/Kajabi/sage-lib/commit/8c6d1136324471f5349680ea101a6f78c0930f17))
+* **icon:** adds new props to React component ([2cbef34](https://github.com/Kajabi/sage-lib/commit/2cbef342a991d038f5e5f20909c4f0e4b56210ff))
+* **icon:** refactors background size logic ([675a862](https://github.com/Kajabi/sage-lib/commit/675a86252eb7ac7682c2c445a8a3eee1ffa135f1))
+* **icon:** updates custom prop variable names ([2db2a46](https://github.com/Kajabi/sage-lib/commit/2db2a460dd5f79a1efe16d4f7a5523603754aa91))
+* **icons:** update sage icons to v1.17 ([68c7da1](https://github.com/Kajabi/sage-lib/commit/68c7da1b9128abb2e782c9b46c2a7ddecfb6175f))
+* **indicator:** ported preposition prop to Rails component ([fb29f80](https://github.com/Kajabi/sage-lib/commit/fb29f801b216f82caba161bce44ae0dd04c87d8a))
+
+
+
+
+
 ## [4.24.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.24.2...@kajabi/sage@4.24.3) (2021-11-05)
 
 **Note:** Version bump only for package @kajabi/sage

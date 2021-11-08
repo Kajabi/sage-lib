@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.56.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.55.2...@kajabi/sage-assets@0.56.0) (2021-11-08)
+
+
+### Bug Fixes
+
+* **icons:** updated mappings for missing icons ([4f80b28](https://github.com/Kajabi/sage-lib/commit/4f80b28aa39ad0192fffd5a80f1dd3974afea4a7))
+* **modal:** fixed spacer typo ([d8eb7d3](https://github.com/Kajabi/sage-lib/commit/d8eb7d3decba59ef73e9ad4eef10ea799aca2c5e))
+
+
+### Features
+
+* **icon:** adds custom prop to stylesheet ([69fb4fa](https://github.com/Kajabi/sage-lib/commit/69fb4faf3f13303e02d6f4dd2510a2871a6d1218))
+* **icon:** adds new class based on custom height and width props ([3b7b11f](https://github.com/Kajabi/sage-lib/commit/3b7b11fb83eb5459a572ccc8a312ab8a08c3528d))
+* **icon:** updates custom prop variable names ([2db2a46](https://github.com/Kajabi/sage-lib/commit/2db2a460dd5f79a1efe16d4f7a5523603754aa91))
+* **icons:** update sage icons to v1.17 ([68c7da1](https://github.com/Kajabi/sage-lib/commit/68c7da1b9128abb2e782c9b46c2a7ddecfb6175f))
+
+
+
+
+
 ## [0.55.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.55.1...@kajabi/sage-assets@0.55.2) (2021-11-03)
 
 
