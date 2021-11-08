@@ -1,1 +1,1 @@
-console.log('contact profile js');
+// JS for this mock goes here (as needed)
