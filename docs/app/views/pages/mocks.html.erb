@@ -1,7 +1,10 @@
 <%= content_for :heading do %>
 <%= md(%(
 # Product Mockups
-<p class="docs-heading__lead">To support adoption of Sage we provide proof of concept mockups for Product Teams completing work involving new or modified components</p>
+<p class="docs-heading__lead">
+  Product Mockups are to demonstrate “proof of concept” prototypes for new or in-flight feature work.
+  Mockups are typically prepared for a specific product team based on design comps.
+</p>
 )) %>
 <% end %>
 
@@ -20,9 +23,9 @@
       }),
       caption: sage_component(SageProperty, {
         icon: "users-alt",
-        value: "#{mock[:team]}",
+        value: "#{mock[:team]} team",
         html_attributes: {
-          "data-js-tooltip": "Who this is for",
+          "data-js-tooltip": "Built for #{mock[:team]} team",
         },
       }).html_safe,
     } %>

@@ -1,3 +1,2 @@
-require('./contact_profile')
-
-console.log('mocks js loaded');
+// Import mock JS packs here
+require('./contact_profile');

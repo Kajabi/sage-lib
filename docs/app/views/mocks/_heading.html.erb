@@ -1,4 +1,3 @@
-
 <%= content_for :heading do %>
   <%= sage_component SageBreadcrumbs, { items: [{
     text: "Back",
@@ -10,7 +9,7 @@
       icon: "users-alt",
       value: "#{mock[:team]}",
       html_attributes: {
-        "data-js-tooltip": "Who this is for",
+        "data-js-tooltip": "Built for #{mock[:team]} team",
       },
     } %>
   </h1>
