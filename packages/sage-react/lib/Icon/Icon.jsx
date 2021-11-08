@@ -6,6 +6,8 @@ import { ICON_ADJACENT_TYPES, ICON_CARD_COLORS, ICON_SIZES } from './configs';
 
 export const Icon = ({
   adjacentType,
+  backgroundHeight,
+  backgroundWidth,
   cardColor,
   circular,
   className,
@@ -28,6 +30,7 @@ export const Icon = ({
   const wrapperClassNames = classnames(
     'sage-icon-background',
     {
+      'sage-icon-background--custom-size': backgroundHeight || backgroundWidth,
       [`sage-icon-background--${cardColor}`]: cardColor,
       [`sage-icon-background--${size}`]: size,
       'sage-icon-background--circular': circular,
@@ -45,8 +48,27 @@ export const Icon = ({
     <i className={classNames} {...attributes} {...rest} />
   );
 
+  const setBackgroundDimensions = () => {
+    const props = {};
+
+    backgroundHeight = backgroundHeight || backgroundWidth;
+    backgroundWidth = backgroundWidth || backgroundHeight;
+
+    if (circular) {
+      backgroundWidth = backgroundHeight;
+    }
+
+    props['--sage-icon-background-height'] = backgroundHeight;
+    props['--sage-icon-background-width'] = backgroundWidth;
+
+    return props;
+  };
+
   return cardColor ? (
-    <div className={wrapperClassNames}>
+    <div
+      style={setBackgroundDimensions()}
+      className={wrapperClassNames}
+    >
       {renderIcon()}
     </div>
   ) : renderIcon();
@@ -60,6 +82,8 @@ Icon.SIZES = ICON_SIZES;
 
 Icon.defaultProps = {
   adjacentType: null,
+  backgroundHeight: null,
+  backgroundWidth: null,
   cardColor: null,
   circular: false,
   className: '',
@@ -70,6 +94,8 @@ Icon.defaultProps = {
 
 Icon.propTypes = {
   adjacentType: PropTypes.oneOf(Object.values(Icon.ADJACENT_TYPES)),
+  backgroundHeight: PropTypes.string,
+  backgroundWidth: PropTypes.string,
   cardColor: PropTypes.oneOf(Object.values(Icon.CARD_COLORS)),
   circular: PropTypes.bool,
   className: PropTypes.string,

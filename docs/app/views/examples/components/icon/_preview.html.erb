@@ -65,3 +65,11 @@ and also be used with a vareity of layout techniques or components such as CSS f
     <% end %>
   <% end %>
 <% end %>
+
+<h3>Custom Background Sizes</h3>
+<%= sage_component SageCardList, {} do %>
+  <%= sage_component SageCardListItem, { grid_template: "o" } do %>
+    <%= sage_component SageIcon, { icon: "pen", size: "2xl", background_width: "128px", background_height: "64px", card_color: "draft" } %>
+    <%= sage_component SageIcon, { icon: "pen", size: "xl", background_height: "64px", card_color: "draft", circular: true, } %>
+  <% end %>
+<% end %>

@@ -1,25 +1,26 @@
-<% 
+<%
 css_active_class = "sage-tab--active"
 is_button = !component.attributes&.has_key?(:href)
 html_tag = is_button ? "button" : "a"
 %>
 
 <<%= html_tag %>
-  <%= "type=button" if is_button %>
+  <%= "type=button role=tab" if is_button %>
   <% component.attributes.each do |key, value| %>
     <%= "#{key}='#{value}'".html_safe %>
   <% end if component.attributes&.is_a?(Hash) %>
   <% if component.disabled %>
     <%= is_button ? "disabled" : "aria-disabled=true" %>
   <% end %>
+  <% if component.target.present? %>
+    data-js-tabs-target="<%= component.target %>"
+    aria-controls="<%= component.target %>"
+  <% end %>
   class="
-    sage-tab 
+    sage-tab
     <%= css_active_class if component.active %>
     <%= component.generated_css_classes %>"
-  data-js-tabs-target="<%= component.target %>"
   data-sage-active-class="<%= css_active_class %>"
-  role="tab"
-  aria-controls="<%= component.target.present? %>"
   <%= component.generated_html_attributes.html_safe %>
 >
   <% if component.text.present? %>

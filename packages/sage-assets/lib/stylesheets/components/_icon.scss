@@ -156,6 +156,14 @@ $-icon-beside-type: (
   }
 }
 
+.sage-icon-background--custom-size {
+  --sage-icon-background-height: sage-spacing(xl);
+  --sage-icon-background-width: sage-spacing(xl);
+
+  width: var(--sage-icon-background-width);
+  height: var(--sage-icon-background-height);
+}
+
 @each $-color, $-values in $sage-color-combos {
   $-subtle-values: map-get($-values, subtle);
   $-bold-values: map-get($-values, bold);
