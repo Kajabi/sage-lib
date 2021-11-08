@@ -3,7 +3,7 @@ import { tns } from "tiny-slider/src/tiny-slider";
 Sage.carousel = (function() {
 
   const containerClass = '.sage-carousel__carousel';
-  const dotActiveClass = 'sage-carousel__dot--active';
+  // const dotActiveClass = 'sage-carousel__dot--active';
   const arrowDisabledClass = 'sage-carousel__arrow--disabled';
 
   let arrowPrev;
@@ -54,14 +54,15 @@ Sage.carousel = (function() {
 
     if (!looping) {
       let dot;
+      let dotNumber;
       for (let i = 0; i < slidesLength; i++) {
-        dot = document.createElement('div');
-        dot.classList.add('sage-carousel__dot');
-        dot.setAttribute('index', i);
-        dot.setAttribute('role', 'button');
-        dot.setAttribute('tabIndex', '-1');
-        dot.addEventListener('click', handleDotClick);
-        document.querySelector('.sage-carousel__dots').appendChild(dot);
+        dot = document.createElement('li');
+        dot.classList.add('sage-indicator');
+        dotNumber = document.createElement('span');
+        dotNumber.classList.add('visually-hidden');
+        dotNumber.innerHTML = i + 1;
+        dot.appendChild(dotNumber);
+        document.querySelector('.sage-indicator-list').appendChild(dot);
       };
     }
 
@@ -74,11 +75,11 @@ Sage.carousel = (function() {
       else arrowPrev.classList.remove(arrowDisabledClass);
       if (num === slidesLength - 1) arrowNext.classList.add(arrowDisabledClass);
       else arrowNext.classList.remove(arrowDisabledClass);
-      dots = [...document.getElementsByClassName('sage-carousel__dot')];
-      dots.forEach((dot) => {
-        dot.classList.remove(dotActiveClass);
-      });
-      dots[num].classList.add(dotActiveClass);
+      // dots = [...document.getElementsByClassName('sage-carousel__dot')];
+      // dots.forEach((dot) => {
+      //   dot.classList.remove(dotActiveClass);
+      // });
+      // dots[num].classList.add(dotActiveClass);
       mySlider.goTo(num);
     };
   }

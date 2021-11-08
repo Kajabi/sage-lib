@@ -35,5 +35,10 @@
       } %>
     </div>
   </div>
-  <div class="sage-carousel__dots"></div>
+  <div class="sage-carousel__dots">
+    <%= sage_component SageIndicator, {
+      current_item: 1,
+      num_items: 4,
+    } %>
+  </div>
 </div>
