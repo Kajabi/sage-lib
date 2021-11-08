@@ -8,7 +8,9 @@ Sage.docs.scrollToActiveNavItem = (function() {
     const activeNavItemClass = ".sage-nav__list--sub .sage-nav__link--active";
     const activeNavItem = document.querySelector(activeNavItemClass);
 
-    activeNavItem.scrollIntoView({ behavior: "smooth", block: "center" });
+    if (activeNavItem) {
+      activeNavItem.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
   }
 
   return {

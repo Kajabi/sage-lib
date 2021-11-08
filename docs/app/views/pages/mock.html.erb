@@ -1,0 +1,4 @@
+<% @mock = get_mock(@alias) %>
+<%= render "mocks/heading", mock: @mock %>
+
+<%= render(get_mock_path(@mock)) %>

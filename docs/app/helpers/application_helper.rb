@@ -34,6 +34,10 @@ module ApplicationHelper
     current_page?(pages_components_path) || (params[:title] && current_page?(pages_component_path(params[:title])))
   end
 
+  def current_page_mocks?
+    current_page?(pages_mocks_path) || (params[:alias] && current_page?(pages_mock_path(params[:alias])))
+  end
+
   def storybook_url(slug)
     "#{Rails.application.config.storybook_root_url}#{slug}"
   end

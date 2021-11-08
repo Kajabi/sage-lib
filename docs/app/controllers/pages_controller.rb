@@ -19,6 +19,16 @@ class PagesController < ApplicationController
     render params[:title]
   end
 
+  def mock
+    @alias = params[:alias]
+
+    render(layout: 'mocks')
+  end
+
+  def mocks
+    render(layout: 'mocks')
+  end
+
   def patterns
     render params[:title]
   end
