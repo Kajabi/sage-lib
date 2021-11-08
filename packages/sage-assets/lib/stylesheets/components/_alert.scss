@@ -54,6 +54,10 @@ $-alert-icon-colors: (
   border: 1px solid sage-color(red);
 }
 
+.sage-alert--no-icon {
+  grid-template-columns: 1fr auto;
+}
+
 @each $name, $color in $-alert-colors {
   .sage-alert--#{$name} {
     background: sage-color($color, 100);
