@@ -1,0 +1,32 @@
+<%= sage_component SageButton, {
+  value: "Open Drawer",
+  style: "primary",
+  html_attributes: {
+    "data-js-modaltrigger": "test-drawer",
+  },
+} %>
+
+<% content_for :sage_docs_modals do %>
+  <%= sage_component SageDrawer, { show_close: true } do %>
+    <% content_for :sage_drawer_header do %>
+      <%= sage_component SageButton, {
+        style: "secondary",
+        subtle: true,
+        value: "Open full profile",
+        icon: { name: "expand", style: "left" }
+      } %>
+    <% end %>
+
+    <h3 class="<%= SageClassnames::TYPE::HEADING_4 %> <%= SageClassnames::TYPE_COLORS::CHARCOAL_500 %>">
+      Drawer
+    </h3>
+    <p>👋  Any content can go here.</p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Esse quam assumenda a ut, architecto rerum vel quisquam, repellendus nemo quo saepe at voluptatem eveniet earum laudantium nostrum quibusdam?
+      Repellendus, repudiandae.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Eum in deleniti doloribus sequi ipsam unde pariatur perspiciatis ex molestias temporibus accusantium fuga debitis, voluptates hic eos ab perferendis ad quo.
+    </p>
+  <% end %>
+<% end %>

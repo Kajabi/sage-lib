@@ -13,6 +13,7 @@ export const ModalHeader = ({
   aside,
   children,
   className,
+  customHeader,
   popover,
   icon,
   image,
@@ -46,7 +47,7 @@ export const ModalHeader = ({
         >
           {icon && <Icon className="sage-modal__header-icon" icon={icon.name} color={icon.color} /> }
           {image && <img src={image.src} alt={image.alt || ''} />}
-          {title && <h1 className={headerActionsClassNames}>{title}</h1>}
+          {customHeader || <h1 className={headerActionsClassNames}>{title}</h1>}
           {actions && <ModalHeaderActions>{actions}</ModalHeaderActions>}
           {aside && <ModalHeaderAside>{aside}</ModalHeaderAside>}
 
@@ -81,6 +82,7 @@ ModalHeader.defaultProps = {
   aside: null,
   children: null,
   className: null,
+  customHeader: null,
   icon: null,
   image: null,
   popover: null,
@@ -93,6 +95,7 @@ ModalHeader.propTypes = {
   aside: PropTypes.node,
   children: PropTypes.node,
   className: PropTypes.string,
+  customHeader: PropTypes.node,
   icon: PropTypes.shape({
     color: PropTypes.oneOf(Object.values(Icon.COLORS)),
     name: PropTypes.oneOf(Object.values(Icon.ICONS)),

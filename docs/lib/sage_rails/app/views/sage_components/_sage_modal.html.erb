@@ -4,6 +4,7 @@
     <%= "sage-modal--large" if component.large -%>
     <%= "sage-modal--fullscreen" if component.fullscreen -%>
     <%= "sage-modal--no-blur" if component.disable_background_blur -%>
+    <%= "sage-modal--no-background-dismiss" if component.disable_background_dismiss -%>
     <%= component.generated_css_classes %>
   "
   <%= "data-sage-animate" if component.animate.present? %>
