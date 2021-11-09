@@ -33,23 +33,23 @@ export const Alert = ({
   const renderIcon = () => {
     let icon;
     switch (color) {
+      case ALERT_COLORS.INFO:
+        icon = SageTokens.ICONS.INFO_CIRCLE;
+        break;
       case ALERT_COLORS.WARNING:
+        icon = SageTokens.ICONS.WARNING;
+        break;
+      case ALERT_COLORS.APPROACHING:
         icon = SageTokens.ICONS.WARNING;
         break;
       case ALERT_COLORS.DANGER:
         icon = SageTokens.ICONS.DANGER;
         break;
-      case ALERT_COLORS.INFO:
-        icon = SageTokens.ICONS.INFO_CIRCLE;
-        break;
-      case ALERT_COLORS.APPROACHING:
-        icon = SageTokens.ICONS.WARNING;
+      case ALERT_COLORS.EXCEEDED:
+        icon = SageTokens.ICONS.DANGER;
         break;
       case ALERT_COLORS.REACHED:
         icon = SageTokens.ICONS.FLAG;
-        break;
-      case ALERT_COLORS.EXCEEDED:
-        icon = SageTokens.ICONS.DANGER;
         break;
       case ALERT_COLORS.SUCCESS:
       default:
@@ -66,8 +66,7 @@ export const Alert = ({
     <div className={classNames} {...rest}>
       {icon
         ? <Icon icon={icon} className="sage-alert__icon" />
-        : renderIcon()
-      }
+        : renderIcon()}
       <div className="sage-alert__copy">
         {title && (
           <h3 className="sage-alert__title">
