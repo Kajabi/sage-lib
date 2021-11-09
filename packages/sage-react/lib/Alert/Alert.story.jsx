@@ -32,7 +32,6 @@ export default {
     titleAddon: '(# of # pages)',
     description: 'Upgrade your plan to access unlimited landing pages.',
     dismissable: true,
-    icon: 'warning',
   },
 };
 
