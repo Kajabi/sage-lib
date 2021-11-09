@@ -3,7 +3,7 @@ import { tns } from "tiny-slider/src/tiny-slider";
 Sage.carousel = (function() {
 
   const containerClass = '.sage-carousel__carousel';
-  // const dotActiveClass = 'sage-carousel__dot--active';
+  const dotActiveClass = 'sage-indicator--current';
   const arrowDisabledClass = 'sage-carousel__arrow--disabled';
 
   let arrowPrev;
@@ -12,7 +12,6 @@ Sage.carousel = (function() {
   let mySliderInfo;
   let options;
   let slidesLength;
-  let dots;
   let looping;
 
   function init() {
@@ -44,7 +43,6 @@ Sage.carousel = (function() {
       nav: false,
     });
     mySliderInfo = mySlider.getInfo();
-    mySlider.events.on('dragEnd', handleDragEnd);
 
     arrowPrev = document.querySelector('.sage-carousel__arrow--prev');
     arrowPrev.addEventListener('click', handlePrevArrowClick);
@@ -55,6 +53,11 @@ Sage.carousel = (function() {
     if (!looping) {
       let dot;
       let dotNumber;
+      let dotContainer = document.createElement('ul');
+      let dots = document.querySelector('.sage-carousel__dots');
+      dotContainer.classList.add('sage-indicator-list');
+      dotContainer.setAttribute('aria-label', 'Showing 1 of ' + slidesLength);
+      dots.appendChild(dotContainer);
       for (let i = 0; i < slidesLength; i++) {
         dot = document.createElement('li');
         dot.classList.add('sage-indicator');
@@ -66,6 +69,15 @@ Sage.carousel = (function() {
       };
     }
 
+    const indicators = document.querySelectorAll('.sage-indicator');
+    indicators[0].classList.add(dotActiveClass);
+    mySlider.events.on('indexChanged', () => {
+      indicators.forEach((indicator) => {
+        indicator.classList.remove(dotActiveClass);
+      });
+      indicators[mySlider.getInfo().index].classList.add(dotActiveClass);
+    });
+
     goToSlide(0);
   }
 
@@ -75,17 +87,8 @@ Sage.carousel = (function() {
       else arrowPrev.classList.remove(arrowDisabledClass);
       if (num === slidesLength - 1) arrowNext.classList.add(arrowDisabledClass);
       else arrowNext.classList.remove(arrowDisabledClass);
-      // dots = [...document.getElementsByClassName('sage-carousel__dot')];
-      // dots.forEach((dot) => {
-      //   dot.classList.remove(dotActiveClass);
-      // });
-      // dots[num].classList.add(dotActiveClass);
       mySlider.goTo(num);
     };
-  }
-
-  function handleDotClick(evt) {
-    goToSlide(parseInt(evt.target.getAttribute('index')));
   }
 
   function handlePrevArrowClick() {
@@ -104,11 +107,6 @@ Sage.carousel = (function() {
     } else {
       mySlider.goTo('next');
     }
-  }
-
-  function handleDragEnd() {
-    mySliderInfo = mySlider.getInfo();
-    goToSlide(mySliderInfo.index);
   }
 
   return {
