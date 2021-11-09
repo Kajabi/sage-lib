@@ -74,7 +74,7 @@ module Mocks::ContactProfileHelper
       },
       {
         href: "#reset-password",
-        icon: "ban", # TODO: Need reset password icon
+        icon: "reset-password",
         label: "Reset password",
       },
       {

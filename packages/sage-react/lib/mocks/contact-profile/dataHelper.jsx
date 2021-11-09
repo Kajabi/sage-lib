@@ -75,7 +75,7 @@ export const mockProfileActions = [
   },
   {
     href: '#reset-password',
-    icon: SageTokens.ICONS.BAN, // TODO: Need reset password icon
+    icon: SageTokens.ICONS.RESET_PASSWORD,
     label: 'Reset password',
   },
   {
