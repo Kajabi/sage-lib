@@ -4,7 +4,7 @@
 /// @group sage
 ////
 
-
+// Note: duplicated in _button.scss; update there when _alert.scss changes
 $-alert-colors: (
   info: primary,
   published: sage,
@@ -15,17 +15,6 @@ $-alert-colors: (
   reached: orange,
   approaching: yellow,
 );
-$-alert-icon-colors: (
-  info: primary,
-  published: sage,
-  success: sage,
-  warning: yellow,
-  danger: red,
-  exceeded: red,
-  reached: orange,
-  approaching: yellow,
-);
-
 
 .sage-alert {
   display: grid;
@@ -74,7 +63,7 @@ $-alert-icon-colors: (
 
 .sage-alert__icon {
   display: inline-flex;
-  @each $name, $color in $-alert-icon-colors {
+  @each $name, $color in $-alert-colors {
     .sage-alert--#{$name} & {
       color: sage-color($color, 300);
     }
@@ -133,63 +122,3 @@ $-alert-icon-colors: (
   }
 }
 
-// TODO - create a `sage-btn--` class for this in the _button.scss file
-.sage-alert__primary-action {
-  &.sage-btn {
-    background-color: transparent !important;
-  }
-
-  @each $name, $color in $-alert-colors {
-    .sage-alert--#{$name} & {
-      &.sage-btn {
-        border: 1px solid sage-color($color, 200);
-
-        &:hover {
-          border-color: sage-color($color, 300);
-          color: sage-color(charcoal, 500);
-        }
-
-        &:focus,
-        &:active {
-          border-color: sage-color($color, 200);
-          color: sage-color(charcoal, 400);
-        }
-      }
-
-      @include sage-focus-outline--update-color(sage-color($color, 400));
-    }
-  }
-}
-
-// TODO - create a `sage-btn--` class for this in the _button.scss file
-.sage-alert__secondary-action {
-  &.sage-btn {
-    background: transparent !important;
-    color: sage-color(charcoal, 400) !important;
-    border: none !important;
-    text-decoration: underline;
-  }
-
-  @each $name, $color in $-alert-colors {
-    .sage-alert--#{$name} & {
-      &.sage-btn {
-        &:hover::after {
-          background: transparent !important;
-        }
-
-        &:focus,
-        &:active {
-          border-color: sage-color($color, 200) !important;
-          color: sage-color(charcoal, 400);
-        }
-
-        &:focus::after,
-        &:active::after {
-          border-color: sage-color($color, 400) !important;
-        }
-      }
-
-      @include sage-focus-outline--update-color(sage-color($color, 400));
-    }
-  }
-}
