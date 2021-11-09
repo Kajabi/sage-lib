@@ -12,48 +12,53 @@
   <i class="sage-alert__icon <%= component.icon_name %>" aria-hidden="true"></i>
   <div class="sage-alert__copy">
     <% if component.title %>
-      <h3 class="sage-alert__title"><%= component.title %></h3>
+      <h3 class="sage-alert__title">
+        <%= component.title %>
+        <% if component.title_addon %>
+          <span class="sage-alert__title--add-on"><%= component.title_addon %></span>
+        <% end %>
+      </h3>
     <% end %>
     <% if component.desc %>
       <p class="sage-alert__desc"><%= component.desc %></p>
     <% end %>
-    <% if content_for? :sage_alert_actions %>
-      <div class="sage-alert__actions">
-        <% if component.primary_action %>
-          <% if is_primary_button %>
-            <%= sage_component SageButton, {
-              value: component.primary_action[:value],
-              style: "secondary",
-              raised: false,
-              css_classes: "sage-alert__primary-action",
-            } %>
-          <% else %>
-            <%= sage_component SageButton, {
-              value: component.primary_action[:value],
-              style: "secondary",
-              raised: false,
-              css_classes: "sage-alert__primary-action",
-              attributes: {
-                href: component.primary_action[:url]
-              },
-            } %>
-          <% end %>
+    <div class="sage-alert__actions">
+      <% if component.primary_action %>
+        <% if is_primary_button %>
+          <%= sage_component SageButton, {
+            value: component.primary_action[:value],
+            style: "secondary",
+            raised: false,
+            css_classes: "sage-alert__primary-action",
+          } %>
+        <% else %>
+          <%= sage_component SageButton, {
+            value: component.primary_action[:value],
+            style: "secondary",
+            raised: false,
+            css_classes: "sage-alert__primary-action",
+            attributes: {
+              href: component.primary_action[:url]
+            },
+          } %>
         <% end %>
-        <% if component.secondary_action %>
-          <% if is_secondary_button %>
-            <%= sage_component SageButton, {
-              value: component.secondary_action[:value],
-              style: "secondary",
-              subtle: true,
-              css_classes: "sage-alert__secondary-action",
-            } %>
-          <% else %>
-          <%= link_to component.secondary_action[:value], component.secondary_action[:url] %>
-          <% end %>
+      <% end %>
+      <% if component.secondary_action %>
+        <% if is_secondary_button %>
+          <%= sage_component SageButton, {
+            value: component.secondary_action[:value],
+            style: "secondary",
+            subtle: true,
+            css_classes: "sage-alert__secondary-action",
+          } %>
+        <% else %>
+        <%= link_to component.secondary_action[:value], component.secondary_action[:url] %>
         <% end %>
+      <% end %>
+      <% if content_for? :sage_alert_actions %>
         <%= content_for :sage_alert_actions %>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
   <% if component.dismissable %>
     <%= sage_component SageButton, {

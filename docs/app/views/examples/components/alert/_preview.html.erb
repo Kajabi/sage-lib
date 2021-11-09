@@ -1,21 +1,18 @@
 <h3>New Alerts</h3>
 <%= sage_component SageAlert, {
   color: "approaching",
-  title: "You've used [percentage] of available [feature_name]",
-  desc: "Upgrade your plan to access more [feature_name].",
+  title: "You've used 80% of available pages",
+  title_addon: "(# of # used)",
+  desc: "Upgrade your plan to access unlimited landing pages.",
   icon_name: "sage-icon-warning",
   dismissable: true,
   primary_action: {
-    value: "Primary",
+    value: "Get unlimited pages",
   },
   secondary_action: {
-    value: "Secondary",
-  },
-} do %>
-  <% content_for :sage_alert_actions do %>
-    <%= link_to "Check usage", "#" %>
-  <% end %>
-<% end %>
+    value: "Check usage",
+  }
+} %>
 
 <%= sage_component SageAlert, {
   color: "reached",
@@ -25,11 +22,11 @@
   dismissable: true,
   primary_action: {
     value: "Primary",
-    url: "https://www.sage.com/pricing"
+    url: "#"
   },
   secondary_action: {
     value: "Secondary",
-    url: "https://www.sage.com/pricing"
+    url: "#"
   },
 } do %>
   <% content_for :sage_alert_actions do %>
@@ -43,9 +40,6 @@
   desc: "To avoid any issues with your experience, upgrade your plan now.",
   icon_name: "sage-icon-danger",
   dismissable: true,
-  primary_action: {
-    value: "Primary"
-  },
 } do %>
   <% content_for :sage_alert_actions do %>
     <%= link_to "Check usage", "#" %>

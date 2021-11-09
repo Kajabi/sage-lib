@@ -13,6 +13,7 @@ class SageAlert < SageComponent
       url: [:optional, String],
     }],
     title: String,
+    title_addon: [:optional, String],
   })
 
   def sections

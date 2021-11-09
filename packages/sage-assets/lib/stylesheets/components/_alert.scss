@@ -68,6 +68,10 @@ $-alert-icon-colors: (
   color: sage-color(charcoal, 500);
 }
 
+.sage-alert__title--add-on {
+  font-weight: normal;
+}
+
 .sage-alert__icon {
   display: inline-flex;
   @each $name, $color in $-alert-icon-colors {
@@ -158,6 +162,7 @@ $-alert-icon-colors: (
 .sage-alert__secondary-action {
   &.sage-btn {
     background: transparent !important;
+    color: sage-color(charcoal, 400) !important;
     border: none !important;
     text-decoration: underline;
   }
