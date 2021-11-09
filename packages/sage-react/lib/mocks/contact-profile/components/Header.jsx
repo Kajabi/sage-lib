@@ -5,7 +5,7 @@ import {
   SageTokens,
 } from '../../..';
 
-export const Header = ({}) => (
+export const Header = () => (
   <Panel.Row gridTemplate={SageTokens.GRID_TEMPLATES.TE}>
     <Button
       color={Button.COLORS.SECONDARY}

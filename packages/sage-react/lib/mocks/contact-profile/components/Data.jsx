@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import uuid from 'react-uuid';
 import { Description } from '../../../Description';
 import {
@@ -9,7 +10,7 @@ import {
 
 export const Data = ({ stats, tags }) => (
   <>
-    {stats.map((dataGroup) => (
+    {stats && stats.map((dataGroup) => (
       <React.Fragment key={uuid()}>
         <Description
           allcapsTitles={false}
@@ -20,7 +21,7 @@ export const Data = ({ stats, tags }) => (
       </React.Fragment>
     ))}
     <Label.Group gap={Label.Group.GAP_OPTIONS.XS}>
-      {tags.map((tag) => (
+      {tags && tags.map((tag) => (
         <Label color={Label.COLORS.DRAFT} key={uuid()} value={tag} />
       ))}
       <Button
@@ -33,3 +34,13 @@ export const Data = ({ stats, tags }) => (
     </Label.Group>
   </>
 );
+
+Data.defaultProps = {
+  stats: [],
+  tags: [],
+};
+
+Data.propTypes = {
+  stats: PropTypes.arrayOf(PropTypes.shape({})),
+  tags: PropTypes.arrayOf(PropTypes.string),
+};
