@@ -3,7 +3,7 @@ import {
   Button,
   Panel,
   SageTokens,
-} from '../../../';
+} from '../../..';
 
 export const Header = ({}) => (
   <Panel.Row gridTemplate={SageTokens.GRID_TEMPLATES.TE}>

@@ -5,7 +5,7 @@ import {
   Button,
   Label,
   Panel,
-} from '../../../';
+} from '../../..';
 
 export const Data = ({ stats, tags }) => (
   <>
