@@ -48,6 +48,13 @@ module MocksHelper
         status: DOING,
         storybook_path: '/story/mocks-contact-profile--default',
         team: "Manage",
+      },
+      {
+        alias: "upsell_downsell",
+        milestone_id: 25,
+        name: "Upsell Downsell",
+        status: DONE,
+        team: "Commerce",
       }
     ]
   end
