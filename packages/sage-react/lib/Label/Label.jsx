@@ -13,6 +13,7 @@ import { LabelGroup } from './LabelGroup';
 export const Label = React.forwardRef(({
   className,
   color,
+  customIconColor,
   containerAttributes,
   icon,
   interactiveType,
@@ -34,11 +35,26 @@ export const Label = React.forwardRef(({
       'sage-label--interactive': interactiveType,
       'sage-label--interactive-right-cta-affordance': interactiveType && interactiveType !== LABEL_INTERACTIVE_TYPES.DEFAULT,
       [`sage-label--icon-${icon}`]: icon,
+      'sage-label--icon--custom-color': customIconColor,
     }
   );
 
+  const setCustomIconColor = () => {
+    const props = {};
+
+    if (customIconColor) {
+      props['--sage-label-custom-icon-color'] = customIconColor;
+    }
+     return props;
+  };
+
   return (
-    <span className={classNames} ref={ref} {...containerAttributes}>
+    <span
+      className={classNames}
+      ref={ref}
+      style={setCustomIconColor()}
+      {...containerAttributes}
+    >
       <TagName
         className="sage-label__value"
         type={interactiveType ? 'button' : null}
@@ -65,6 +81,7 @@ Label.Group = LabelGroup;
 Label.defaultProps = {
   className: null,
   color: LABEL_COLORS.DRAFT,
+  customIconColor: null,
   icon: null,
   interactiveType: null,
   isDropdown: false,
@@ -77,6 +94,7 @@ Label.defaultProps = {
 Label.propTypes = {
   className: PropTypes.string,
   color: PropTypes.oneOf(Object.values(LABEL_COLORS)),
+  customIconColor: PropTypes.string,
   icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),
   interactiveType: PropTypes.oneOf(Object.values(LABEL_INTERACTIVE_TYPES)),
   isDropdown: PropTypes.bool,
