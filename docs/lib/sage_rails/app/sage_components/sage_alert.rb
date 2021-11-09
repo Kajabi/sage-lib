@@ -4,6 +4,14 @@ class SageAlert < SageComponent
     desc: [:optional, String],
     dismissable: [:optional, TrueClass],
     icon_name: [:optional, String],
+    primary_action: [:optional, TrueClass, {
+      value: [:optional, String],
+      url: [:optional, String],
+    }],
+    secondary_action: [:optional, TrueClass, {
+      value: [:optional, String],
+      url: [:optional, String],
+    }],
     title: String,
   })
 

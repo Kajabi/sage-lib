@@ -56,10 +56,6 @@ $-alert-icon-colors: (
     .sage-alert__icon::before {
       line-height: sage-line-height(h6);
     }
-
-    .sage-alert__actions a:not([class]) {
-      margin-right: sage-spacing(md);
-    }
   }
 }
 
@@ -119,13 +115,73 @@ $-alert-icon-colors: (
 .sage-alert__actions {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  gap: sage-spacing(md);
   margin-top: sage-spacing(xs); // note: total spacing is sm (16px) but grid stack adds 8px already
 
   @each $name, $color in $-alert-colors {
     .sage-alert--#{$name} & > a {
-      @include sage-focus-outline($outline-offset-inline: 6px, $outline-offset-block: 0);
+      @include sage-focus-outline($outline-offset-inline: 2px, $outline-offset-block: 2px);
       @include sage-focus-outline--update-color(sage-color($color, 400));
       font-weight: sage-font-weight(medium);
+    }
+  }
+}
+
+.sage-alert__primary-action {
+  &.sage-btn {
+    background-color: transparent !important;
+  }
+
+  @each $name, $color in $-alert-colors {
+    .sage-alert--#{$name} & {
+      &.sage-btn {
+        border-color: sage-color($color, 200);
+
+        &:hover {
+          border-color: sage-color($color, 300);
+          color: sage-color(charcoal, 500);
+        }
+
+        &:focus,
+        &:active {
+          border-color: sage-color($color, 200);
+          color: sage-color(charcoal, 400);
+        }
+      }
+
+      @include sage-focus-outline--update-color(sage-color($color, 400));
+    }
+  }
+}
+
+.sage-alert__secondary-action {
+  &.sage-btn {
+    background: transparent !important;
+    border: none !important;
+    text-decoration: underline;
+  }
+
+  @each $name, $color in $-alert-colors {
+    .sage-alert--#{$name} & {
+      &.sage-btn {
+        &:hover::after {
+          background: transparent !important;
+        }
+
+        &:focus,
+        &:active {
+          border-color: sage-color($color, 200) !important;
+          color: sage-color(charcoal, 400);
+        }
+
+        &:focus::after,
+        &:active::after {
+          border-color: sage-color($color, 400) !important;
+        }
+      }
+
+      @include sage-focus-outline--update-color(sage-color($color, 400));
     }
   }
 }

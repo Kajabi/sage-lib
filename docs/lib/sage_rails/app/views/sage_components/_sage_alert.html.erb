@@ -1,3 +1,6 @@
+<% is_primary_button = !component.primary_action&.has_key?(:url) %>
+<% is_secondary_button = !component.secondary_action&.has_key?(:url) %>
+
 <div
   class="
     sage-alert<%= component.color ? "
@@ -16,6 +19,38 @@
     <% end %>
     <% if content_for? :sage_alert_actions %>
       <div class="sage-alert__actions">
+        <% if component.primary_action %>
+          <% if is_primary_button %>
+            <%= sage_component SageButton, {
+              value: component.primary_action[:value],
+              style: "secondary",
+              raised: false,
+              css_classes: "sage-alert__primary-action",
+            } %>
+          <% else %>
+            <%= sage_component SageButton, {
+              value: component.primary_action[:value],
+              style: "secondary",
+              raised: false,
+              css_classes: "sage-alert__primary-action",
+              attributes: {
+                href: component.primary_action[:url]
+              },
+            } %>
+          <% end %>
+        <% end %>
+        <% if component.secondary_action %>
+          <% if is_secondary_button %>
+            <%= sage_component SageButton, {
+              value: component.secondary_action[:value],
+              style: "secondary",
+              subtle: true,
+              css_classes: "sage-alert__secondary-action",
+            } %>
+          <% else %>
+          <%= link_to component.secondary_action[:value], component.secondary_action[:url] %>
+          <% end %>
+        <% end %>
         <%= content_for :sage_alert_actions %>
       </div>
     <% end %>

@@ -4,7 +4,13 @@
   title: "You've used [percentage] of available [feature_name]",
   desc: "Upgrade your plan to access more [feature_name].",
   icon_name: "sage-icon-warning",
-  dismissable: true
+  dismissable: true,
+  primary_action: {
+    value: "Primary",
+  },
+  secondary_action: {
+    value: "Secondary",
+  },
 } do %>
   <% content_for :sage_alert_actions do %>
     <%= link_to "Check usage", "#" %>
@@ -16,7 +22,15 @@
   title: "You've reached your [feature_name] limit",
   desc: "Upgrade your plan to access more [feature_name].",
   icon_name: "sage-icon-flag",
-  dismissable: true
+  dismissable: true,
+  primary_action: {
+    value: "Primary",
+    url: "https://www.sage.com/pricing"
+  },
+  secondary_action: {
+    value: "Secondary",
+    url: "https://www.sage.com/pricing"
+  },
 } do %>
   <% content_for :sage_alert_actions do %>
     <%= link_to "Check usage", "#" %>
@@ -28,7 +42,10 @@
   title: "You've exceeded your [feature_name] limit",
   desc: "To avoid any issues with your experience, upgrade your plan now.",
   icon_name: "sage-icon-danger",
-  dismissable: true
+  dismissable: true,
+  primary_action: {
+    value: "Primary"
+  },
 } do %>
   <% content_for :sage_alert_actions do %>
     <%= link_to "Check usage", "#" %>
@@ -42,7 +59,10 @@
   title: "Our privacy policy has changed",
   desc: "Make sure you know how these changes affect you.",
   icon_name: "sage-icon-flag",
-  dismissable: true
+  dismissable: true,
+  primary_action: {
+    value: "Primary"
+  },
 } do %>
   <% content_for :sage_alert_actions do %>
     <%= link_to "Action Link", "#" %>
@@ -55,7 +75,10 @@
   title: "Account settings updated",
   desc: "Make sure you know how these changes affect you.",
   icon_name: "sage-icon-check-circle",
-  dismissable: true
+  dismissable: true,
+  primary_action: {
+    value: "Primary"
+  },
 } do %>
   <% content_for :sage_alert_actions do %>
     <%= link_to "Action Link", "#" %>
@@ -69,7 +92,10 @@
   title: "Exceeded product amount limit",
   desc: "Make sure you know how these changes affect you.",
   icon_name: "sage-icon-warning",
-  dismissable: true
+  dismissable: true,
+  primary_action: {
+    value: "Primary"
+  },
 } do %>
   <% content_for :sage_alert_actions do %>
     <%= link_to "Action Link", "#" %>
@@ -84,7 +110,10 @@
   title: "App outage tonight at 12am",
   desc: "Make sure you know how these changes affect you.",
   icon_name: "sage-icon-warning",
-  dismissable: true
+  dismissable: true,
+  primary_action: {
+    value: "Primary"
+  },
 } do %>
   <% content_for :sage_alert_actions do %>
     <%= link_to "Action Link", "#" %>
@@ -98,7 +127,10 @@
   color: "info",
   title: "Our privacy policy has changed",
   desc: "Make sure you know how these changes affect you.",
-  icon_name: "sage-icon-info-circle"
+  icon_name: "sage-icon-info-circle",
+  primary_action: {
+    value: "Primary"
+  },
 } do %>
   <% content_for :sage_alert_actions do %>
     <%= link_to "Action Link", "#" %>
@@ -111,7 +143,10 @@
   color: "published",
   title: "Account settings updated",
   desc: "Make sure you know how these changes affect you.",
-  icon_name: "sage-icon-check-circle"
+  icon_name: "sage-icon-check-circle",
+  primary_action: {
+    value: "Primary"
+  },
 } do %>
   <% content_for :sage_alert_actions do %>
     <%= link_to "Action Link", "#" %>
@@ -124,7 +159,10 @@
   color: "warning",
   title: "Exceeded product amount limit",
   desc: "Make sure you know how these changes affect you.",
-  icon_name: "sage-icon-warning"
+  icon_name: "sage-icon-warning",
+  primary_action: {
+    value: "Primary"
+  },
 } do %>
   <% content_for :sage_alert_actions do %>
     <%= link_to "Action Link", "#" %>
@@ -137,7 +175,10 @@
   color: "danger",
   title: "App outage tonight at 12am",
   desc: "Make sure you know how these changes affect you.",
-  icon_name: "sage-icon-warning"
+  icon_name: "sage-icon-warning",
+  primary_action: {
+    value: "Primary"
+  },
 } do %>
   <% content_for :sage_alert_actions do %>
     <%= link_to "Action Link", "#" %>
