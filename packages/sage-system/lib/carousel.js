@@ -3,8 +3,8 @@ import { tns } from "tiny-slider/src/tiny-slider";
 Sage.carousel = (function() {
 
   const containerClass = '.sage-carousel__carousel';
-  const dotActiveClass = 'sage-indicator--current';
   const arrowDisabledClass = 'sage-carousel__arrow--disabled';
+  const indicatorActiveClass = 'sage-indicator--current';
 
   let arrowPrev;
   let arrowNext;
@@ -51,31 +51,31 @@ Sage.carousel = (function() {
     arrowNext.addEventListener('click', handleNextArrowClick);
 
     if (!looping) {
-      let dot;
-      let dotNumber;
-      let dotContainer = document.createElement('ul');
-      let dots = document.querySelector('.sage-carousel__dots');
-      dotContainer.classList.add('sage-indicator-list');
-      dotContainer.setAttribute('aria-label', 'Showing 1 of ' + slidesLength);
-      dots.appendChild(dotContainer);
+      let indicator;
+      let indicatorNumber;
+      let indicatorList = document.createElement('ul');
+      let indicatorContainer = document.querySelector('.sage-carousel__indicator');
+      indicatorList.classList.add('sage-indicator-list');
+      indicatorList.setAttribute('aria-label', 'Showing 1 of ' + slidesLength);
+      indicatorContainer.appendChild(indicatorList);
       for (let i = 0; i < slidesLength; i++) {
-        dot = document.createElement('li');
-        dot.classList.add('sage-indicator');
-        dotNumber = document.createElement('span');
-        dotNumber.classList.add('visually-hidden');
-        dotNumber.innerHTML = i + 1;
-        dot.appendChild(dotNumber);
-        document.querySelector('.sage-indicator-list').appendChild(dot);
+        indicator = document.createElement('li');
+        indicator.classList.add('sage-indicator');
+        indicatorNumber = document.createElement('span');
+        indicatorNumber.classList.add('visually-hidden');
+        indicatorNumber.innerHTML = i + 1;
+        indicator.appendChild(indicatorNumber);
+        document.querySelector('.sage-indicator-list').appendChild(indicator);
       };
     }
 
     const indicators = document.querySelectorAll('.sage-indicator');
-    indicators[0].classList.add(dotActiveClass);
+    indicators[0].classList.add(indicatorActiveClass);
     mySlider.events.on('indexChanged', () => {
       indicators.forEach((indicator) => {
-        indicator.classList.remove(dotActiveClass);
+        indicator.classList.remove(indicatorActiveClass);
       });
-      indicators[mySlider.getInfo().index].classList.add(dotActiveClass);
+      indicators[mySlider.getInfo().index].classList.add(indicatorActiveClass);
     });
 
     goToSlide(0);

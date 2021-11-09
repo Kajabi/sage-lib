@@ -5,8 +5,6 @@
 ////
 
 $-sage-carousel-arrow-width: sage-spacing(lg);
-$-sage-carousel-dot-size: rem(6px);
-$-sage-carousel-dot-spacing: sage-spacing(2xs);
 $-sage-carousel-active-color: sage-color(charcoal, 100);
 $-sage-carousel-inactive-color: sage-color(grey, 400);
 
@@ -52,22 +50,9 @@ $-sage-carousel-inactive-color: sage-color(grey, 400);
   width: calc(100% - (#{$-sage-carousel-arrow-width} * 2));
 }
 
-.sage-carousel__dots {
+.sage-carousel__indicator {
   display: flex;
   justify-content: center;
   width: 100%;
   margin-top: sage-spacing(sm);
-}
-
-.sage-carousel__dot {
-  width: $-sage-carousel-dot-size;
-  height: $-sage-carousel-dot-size;
-  margin: 0 $-sage-carousel-dot-spacing;
-  background-color: $-sage-carousel-inactive-color;
-  border-radius: sage-border(radius-round);
-  cursor: pointer;
-}
-
-.sage-carousel__dot--active {
-  background-color: $-sage-carousel-active-color;
 }

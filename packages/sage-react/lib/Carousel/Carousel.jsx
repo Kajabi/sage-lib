@@ -102,7 +102,7 @@ export const Carousel = ({
           onClickCallback={handleNextArrowClick}
         />
       </div>
-      <div className="sage-carousel__dots">
+      <div className="sage-carousel__indicator">
         <Indicator
           numItems={slidesLength}
           currentItem={slidesIndex + 1}
