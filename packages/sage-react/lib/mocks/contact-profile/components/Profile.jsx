@@ -8,7 +8,7 @@ import {
   Panel,
   SageClassnames,
   Tooltip,
-} from '../../../';
+} from '../../..';
 import { mockProfileActions, mockProfileMoreActions } from '../dataHelper';
 
 export const Profile = ({ avatarImage, email, initials, name }) => (
