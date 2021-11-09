@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import uuid from 'react-uuid';
 import {
   Avatar,
@@ -59,3 +60,12 @@ export const Profile = ({ avatarImage, email, initials, name }) => (
     </Button.Group>
   </>
 );
+
+Profile.defaultProps = {};
+
+Profile.propTypes = {
+  avatarImage: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired,
+  initials: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+};

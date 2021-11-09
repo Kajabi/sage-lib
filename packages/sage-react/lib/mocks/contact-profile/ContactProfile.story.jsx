@@ -1,5 +1,5 @@
 import React from 'react';
-import { mockProfile } from './dataHelper.jsx';
+import { mockProfile } from './dataHelper';
 import { Grid } from '../../Grid';
 import { Panel } from '../../Panel';
 import { Header, Profile, Data } from './components';

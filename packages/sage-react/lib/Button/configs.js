@@ -19,7 +19,6 @@ export const BUTTON_GROUP_GAP_OPTIONS = {
 export const BUTTON_GROUP_ALIGN_OPTIONS = {
   CENTER: 'center',
   NONE: 'none',
-  CENTER: 'center',
   END: 'end',
   SPACEBETWEEN: 'space-between'
 };
