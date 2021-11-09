@@ -69,7 +69,7 @@ $-alert-icon-colors: (
 }
 
 .sage-alert__title--add-on {
-  font-weight: normal;
+  @extend %t-sage-body-small;
 }
 
 .sage-alert__icon {
