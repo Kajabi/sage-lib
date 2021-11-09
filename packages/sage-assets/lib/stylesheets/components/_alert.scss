@@ -96,6 +96,7 @@ $-alert-icon-colors: (
   height: rem(20px);
   width: rem(20px);
   padding: 0;
+  margin-left: auto;
   font-size: sage-font-size(xl, false);
   line-height: 1;
   background-color: transparent;
@@ -132,6 +133,7 @@ $-alert-icon-colors: (
   }
 }
 
+// TODO - create a `sage-btn--` class for this in the _button.scss file
 .sage-alert__primary-action {
   &.sage-btn {
     background-color: transparent !important;
@@ -159,6 +161,7 @@ $-alert-icon-colors: (
   }
 }
 
+// TODO - create a `sage-btn--` class for this in the _button.scss file
 .sage-alert__secondary-action {
   &.sage-btn {
     background: transparent !important;

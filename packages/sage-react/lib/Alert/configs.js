@@ -3,4 +3,7 @@ export const ALERT_COLORS = {
   SUCCESS: 'success',
   WARNING: 'warning',
   DANGER: 'danger',
+  APPROACHING: 'approaching',
+  EXCEEDED: 'exceeded',
+  REACHED: 'reached',
 };

@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { Icon } from '../Icon';
-import { SageTokens } from '../configs';
 import { ALERT_COLORS } from './configs';
+import { SageTokens } from '../configs';
 
 export const Alert = ({
   actions,
@@ -11,7 +11,9 @@ export const Alert = ({
   color,
   description,
   dismissable,
+  icon,
   title,
+  titleAddon,
   ...rest
 }) => {
   const [selfDismissed, setSelfDismissed] = useState(false);
@@ -24,37 +26,21 @@ export const Alert = ({
     }
   );
 
-  const renderIcon = () => {
-    let icon;
-    switch (color) {
-      case ALERT_COLORS.WARNING:
-      case ALERT_COLORS.DANGER:
-        icon = SageTokens.ICONS.WARNING;
-        break;
-      case ALERT_COLORS.INFO:
-        icon = SageTokens.ICONS.INFO_CIRCLE;
-        break;
-      case ALERT_COLORS.SUCCESS:
-      default:
-        icon = SageTokens.ICONS.CHECK_CIRCLE;
-        break;
-    }
-
-    return (
-      <Icon icon={icon} className="sage-alert__icon" />
-    );
-  };
-
   const onClickDismiss = () => {
     setSelfDismissed(true);
   };
 
   return !selfDismissed ? (
     <div className={classNames} {...rest}>
-      {renderIcon()}
+      {icon && (
+        <Icon icon={icon} className="sage-alert__icon" />
+      )}
       <div className="sage-alert__copy">
         {title && (
-          <h3 className="sage-alert__title">{title}</h3>
+          <h3 className="sage-alert__title">
+            {title}
+            <span className="sage-alert__title--add-on"> {titleAddon}</span>
+          </h3>
         )}
         {description && (
           <p className="sage-alert__desc">{description}</p>
@@ -86,7 +72,9 @@ Alert.defaultProps = {
   className: '',
   description: null,
   dismissable: false,
+  icon: null,
   title: null,
+  titleAddon: null,
 };
 
 Alert.propTypes = {
@@ -95,5 +83,7 @@ Alert.propTypes = {
   color: PropTypes.oneOf(Object.values(ALERT_COLORS)).isRequired,
   description: PropTypes.string,
   dismissable: PropTypes.bool,
+  icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),
   title: PropTypes.string,
+  titleAddon: PropTypes.string,
 };
