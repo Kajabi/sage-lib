@@ -45,7 +45,8 @@ export const Label = React.forwardRef(({
     if (customIconColor) {
       props['--sage-label-custom-icon-color'] = customIconColor;
     }
-     return props;
+
+    return props;
   };
 
   return (
