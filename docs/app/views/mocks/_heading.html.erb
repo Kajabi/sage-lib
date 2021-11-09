@@ -11,7 +11,7 @@
       html_attributes: {
         "data-js-tooltip": "Built for #{mock[:team]} team",
       },
-    } %>
+    } if mock[:team].present? %>
   </h1>
   <div class="docs-heading__meta">
     <div class="docs-heading__meta-primary">
@@ -23,6 +23,19 @@
           "data-js-tooltip": "Development status",
         },
       } %>
+
+      <%= sage_component SageButton, {
+        attributes: {
+          "data-js-tooltip": "View React mock in Storybook",
+          href: mock_storybook_url(mock),
+          rel: "noreferrer noopener",
+          target: "_blank",
+        },
+        icon: { name: "preview-on", style: "left" },
+        subtle: true,
+        style: "secondary",
+        value: "React mock",
+      } if mock[:storybook_path] %>
       
       <%= sage_component SageDropdown, { items: mock_code_items(mock) } do %>
         <%= sage_component SageButton, {
