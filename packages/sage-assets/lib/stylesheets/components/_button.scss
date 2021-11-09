@@ -564,29 +564,29 @@ $-alert-colors: (
     text-decoration: underline;
     border: 0;
 
-  @each $name, $color in $-alert-colors {
-    .sage-alert--#{$name} & {
-      &.sage-btn {
-        &:hover::after {
-          background: transparent;
+    @each $name, $color in $-alert-colors {
+      .sage-alert--#{$name} & {
+        &.sage-btn {
+          &:hover::after {
+            background: transparent;
+          }
+
+          &:focus,
+          &:active {
+            color: sage-color(charcoal, 400);
+            border-color: sage-color($color, 200);
+          }
+
+          &:focus::after,
+          &:active::after {
+            border-color: sage-color($color, 400);
+          }
         }
 
-        &:focus,
-        &:active {
-          color: sage-color(charcoal, 400);
-          border-color: sage-color($color, 200);
-        }
-
-        &:focus::after,
-        &:active::after {
-          border-color: sage-color($color, 400);
-        }
+        @include sage-focus-outline--update-color(sage-color($color, 400));
       }
-
-      @include sage-focus-outline--update-color(sage-color($color, 400));
     }
   }
-}
 }
 
 .sage-btn--small {
