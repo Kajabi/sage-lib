@@ -16,8 +16,9 @@ export const Carousel = ({
 
   const containerClass = '.sage-carousel__carousel';
   const arrowDisabledClass = 'sage-carousel__arrow--disabled';
+  const startIndex = options.startIndex !== undefined ? options.startIndex : 0;
 
-  const [slidesIndex, setSlidesIndex] = useState(options.startIndex || 0);
+  const [slidesIndex, setSlidesIndex] = useState(startIndex);
   const [slidesLength, setSlidesLength] = useState(0);
   const [mySlider, setMySlider] = useState(null);
   const [looping, setLooping] = useState(false);
