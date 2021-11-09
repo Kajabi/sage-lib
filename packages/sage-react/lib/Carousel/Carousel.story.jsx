@@ -60,6 +60,40 @@ export default {
           }}
           title="Hello, world"
         />
+        <NextBestAction
+          actions={(
+            <Button
+              color={Button.COLORS.PRIMARY}
+            >
+              Add an Upsell
+            </Button>
+          )}
+          cardColor="draft"
+          description={(
+            <p>Lorem ipsum dolor sit amet.</p>
+          )}
+          graphic={{
+            element: (<img src="//source.unsplash.com/random/272x272" alt="" />)
+          }}
+          title="Hello, world"
+        />
+        <NextBestAction
+          actions={(
+            <Button
+              color={Button.COLORS.PRIMARY}
+            >
+              Add an Upsell
+            </Button>
+          )}
+          cardColor="draft"
+          description={(
+            <p>Lorem ipsum dolor sit amet.</p>
+          )}
+          graphic={{
+            element: (<img src="//source.unsplash.com/random/272x272" alt="" />)
+          }}
+          title="Hello, world"
+        />
       </>
     ),
     options: {

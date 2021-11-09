@@ -17,29 +17,19 @@ export const Carousel = ({
   const containerClass = '.sage-carousel__carousel';
   const arrowDisabledClass = 'sage-carousel__arrow--disabled';
 
-  const [slidesIndex, setSlidesIndex] = useState(0);
+  const [slidesIndex, setSlidesIndex] = useState(options.startIndex || 0);
   const [slidesLength, setSlidesLength] = useState(0);
   const [mySlider, setMySlider] = useState(null);
   const [looping, setLooping] = useState(false);
   const [arrowPrev, setArrowPrev] = useState(null);
   const [arrowNext, setArrowNext] = useState(null);
 
-  function goToSlide(num) {
-    if (!looping) {
-      if (num === 0) arrowPrev.classList.add(arrowDisabledClass);
-      else arrowPrev.classList.remove(arrowDisabledClass);
-      if (num === slidesLength - 1) arrowNext.classList.add(arrowDisabledClass);
-      else arrowNext.classList.remove(arrowDisabledClass);
-      setSlidesIndex(num);
-    }
-  }
-
   function handlePrevArrowClick() {
-    if (slidesIndex !== 0) goToSlide(slidesIndex - 1);
+    if (slidesIndex !== 0) setSlidesIndex(slidesIndex - 1);
   }
 
   function handleNextArrowClick() {
-    if (slidesIndex !== slidesLength - 1) goToSlide(slidesIndex + 1);
+    if (slidesIndex !== slidesLength - 1) setSlidesIndex(slidesIndex + 1);
   }
 
   useEffect(() => {
@@ -68,17 +58,20 @@ export const Carousel = ({
 
     setArrowPrev(document.querySelector('.sage-carousel__arrow--prev'));
     setArrowNext(document.querySelector('.sage-carousel__arrow--next'));
-  }, [options, slidesLength]);
-
-  useEffect(() => {
-    if (mySlider !== null) arrowPrev.classList.add(arrowDisabledClass);
-  }, [arrowPrev, mySlider]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [options]);
 
   useEffect(() => {
     if (mySlider !== null) {
+      if (!looping) {
+        if (slidesIndex === 0) arrowPrev.classList.add(arrowDisabledClass);
+        else arrowPrev.classList.remove(arrowDisabledClass);
+        if (slidesIndex === slidesLength - 1) arrowNext.classList.add(arrowDisabledClass);
+        else arrowNext.classList.remove(arrowDisabledClass);
+      }
       mySlider.goTo(slidesIndex);
       mySlider.events.on('indexChanged', () => {
-        goToSlide(mySlider.getInfo().index);
+        setSlidesIndex(mySlider.getInfo().index);
       });
     }
   });
@@ -121,5 +114,6 @@ Carousel.propTypes = {
   children: PropTypes.node,
   options: PropTypes.shape({
     loop: PropTypes.bool,
+    startIndex: PropTypes.number,
   }),
 };

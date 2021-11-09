@@ -13,6 +13,7 @@ Sage.carousel = (function() {
   let options;
   let slidesLength;
   let looping;
+  let startingSlide;
 
   function init() {
     const slider = document.querySelector(containerClass);
@@ -35,6 +36,7 @@ Sage.carousel = (function() {
     );
 
     looping = !(options.loop !== undefined && !options.loop);
+    startingSlide = options.startIndex || 0;
 
     mySlider = tns({
       ...options,
@@ -70,7 +72,7 @@ Sage.carousel = (function() {
     }
 
     const indicators = document.querySelectorAll('.sage-indicator');
-    indicators[0].classList.add(indicatorActiveClass);
+    indicators[mySlider.getInfo().index].classList.add(indicatorActiveClass);
     mySlider.events.on('indexChanged', () => {
       indicators.forEach((indicator) => {
         indicator.classList.remove(indicatorActiveClass);
@@ -78,7 +80,7 @@ Sage.carousel = (function() {
       indicators[mySlider.getInfo().index].classList.add(indicatorActiveClass);
     });
 
-    goToSlide(0);
+    goToSlide(startingSlide);
   }
 
   function goToSlide(num) {
