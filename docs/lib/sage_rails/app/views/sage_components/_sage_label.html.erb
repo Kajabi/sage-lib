@@ -8,7 +8,7 @@
     <%= "sage-label--interactive" if component.interactive_type %>
     <%= "sage-label--interactive-right-cta-affordance" if (component.interactive_type === :dropdown) || (component.interactive_type === :secondary_button) %>
     <%= "sage-label--icon-#{component.icon}" if component.icon %>
-    <%= "sage-label--icon-#{component.icon}--custom-color" if component.icon && component.custom_icon_color %>
+    <%= "sage-label--icon--custom-color" if component.icon && component.custom_icon_color %>
     <%= component.generated_css_classes %>
   "
   <% if component.icon && component.custom_icon_color %>
