@@ -4,6 +4,6 @@ export const ALERT_COLORS = {
   WARNING: 'warning',
   DANGER: 'danger',
   APPROACHING: 'approaching',
-  EXCEEDED: 'exceeded',
   REACHED: 'reached',
+  EXCEEDED: 'exceeded',
 };

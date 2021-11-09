@@ -142,7 +142,7 @@ $-alert-icon-colors: (
   @each $name, $color in $-alert-colors {
     .sage-alert--#{$name} & {
       &.sage-btn {
-        border-color: sage-color($color, 200);
+        border: 1px solid sage-color($color, 200);
 
         &:hover {
           border-color: sage-color($color, 300);

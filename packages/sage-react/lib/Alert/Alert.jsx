@@ -53,12 +53,16 @@ export const Alert = ({
       </div>
       {dismissable && (
         <button
-          aria-label="Close"
+          aria-label="Close Alert"
           className="sage-alert__close"
           onClick={onClickDismiss}
           type="button"
         >
-          <span aria-hidden="true">&times;</span>
+          <Icon
+            color="charcoal-100"
+            icon="remove"
+            size="md"
+          />
         </button>
       )}
     </div>
