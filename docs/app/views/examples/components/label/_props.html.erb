@@ -7,10 +7,17 @@
   <td><%= md('Required') %></td>
 </tr>
 <tr>
-<tr>
   <td><%= md('`container_attributes`') %></td>
   <td><%= md('Additional attributes to provide bindings or actions to the label container.') %></td>
   <td><%= md('Hash') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`custom_icon_color`') %></td>
+  <td><%= md('
+    Sets a custom color for the icon.
+  ') %></td>
+  <td><%= md('String') %></td>
   <td><%= md('`nil`') %></td>
 </tr>
 <tr>
@@ -38,7 +45,7 @@
     If `true` is passed then a `LabelSecondaryButton` is rendered with default configurations.
     If a hash is passed it is treated as configurations for the prepackaged `LabelSecondaryButton` (see below).
   ') %></td>
-  <td><%= md('`String`, `true`, or has with configurations for `LabelSecondaryButton` (see below)') %></td>
+  <td><%= md('String, `true`, or has with configurations for `LabelSecondaryButton` (see below)') %></td>
   <td><%= md('`nil`') %></td>
 </tr>
 <tr>
@@ -50,7 +57,7 @@
 <tr>
   <td><%= md('`value`') %></td>
   <td><%= md('The text to use as the label\'s content') %></td>
-  <td><%= md('`String`') %></td>
+  <td><%= md('String') %></td>
   <td><%= md('Required') %></td>
 </tr>
 <tr>
@@ -59,7 +66,7 @@
 <tr>
   <td><%= md('`attributes`') %></td>
   <td><%= md('Additional attributes such as to provide `data-` bindings or actions to the button.') %></td>
-  <td><%= md('`String`') %></td>
+  <td><%= md('String') %></td>
   <td><%= md('`"Remove"`') %></td>
 </tr>
 <tr>
@@ -79,7 +86,7 @@
     so this label should accurately reflect the purpose of this button for accessibility.
     Default value is based on the common use of a "remove" button with Label values.
   ') %></td>
-  <td><%= md('`String`') %></td>
+  <td><%= md('String') %></td>
   <td><%= md('`"Remove"`') %></td>
 </tr>
 
