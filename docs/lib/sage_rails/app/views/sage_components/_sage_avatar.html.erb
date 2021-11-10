@@ -17,6 +17,13 @@ end
     style="width: <%= component.size %>; height: <%= component.size %>;"
   <% end %>
 >
+  <% if component.badge %>
+    <%= sage_component SageIcon, {
+      icon: "check-circle-filled",
+      size: "xs"
+    } %>
+  <% end %>
+
   <% if component.image %>
     <%= image_tag component.image[:src], alt: (component.image[:alt] || ""), class: "sage-avatar__image" %>
   <% end %>

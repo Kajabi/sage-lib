@@ -28,6 +28,7 @@ module SageSchemas
   # Components
 
   AVATAR = {
+    badge: [:optional, TrueClass],
     centered: [:optional, TrueClass],
     color: [:optional, NilClass, SageSchemas::COLORS],
     image: [:optional, {alt: [:optional, String], src: String}],
