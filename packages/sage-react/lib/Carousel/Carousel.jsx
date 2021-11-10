@@ -83,6 +83,14 @@ export const Carousel = ({
     }
   });
 
+  useEffect(() => {
+    if (mySlider !== null) {
+      mySlider.events.on('dragEnd', () => {
+        setSlidesIndex(mySlider.getInfo().index);
+      });
+    }
+  }, [mySlider]);
+
   return (
     <div className={classNames} aria-roledescription="carousel">
       <div className="sage-carousel__container">

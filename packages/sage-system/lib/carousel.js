@@ -45,6 +45,9 @@ Sage.carousel = (function() {
       controls: false,
       nav: false,
     });
+    mySlider.events.on('dragEnd', () => {
+      goToSlide(mySlider.getInfo().index);
+    });
     mySliderInfo = mySlider.getInfo();
 
     arrowPrev = document.querySelector('.sage-carousel__arrow--prev');
