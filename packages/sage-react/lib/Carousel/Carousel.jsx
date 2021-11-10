@@ -16,9 +16,8 @@ export const Carousel = ({
 
   const containerClass = '.sage-carousel__carousel';
   const arrowDisabledClass = 'sage-carousel__arrow--disabled';
-  const startIndex = options.startIndex !== undefined ? options.startIndex : 0;
 
-  const [slidesIndex, setSlidesIndex] = useState(startIndex);
+  const [slidesIndex, setSlidesIndex] = useState(0);
   const [slidesLength, setSlidesLength] = useState(0);
   const [mySlider, setMySlider] = useState(null);
   const [looping, setLooping] = useState(false);
@@ -67,6 +66,8 @@ export const Carousel = ({
 
     setArrowPrev(document.querySelector('.sage-carousel__arrow--prev'));
     setArrowNext(document.querySelector('.sage-carousel__arrow--next'));
+
+    setSlidesIndex(options.startIndex !== undefined ? options.startIndex : 0);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
