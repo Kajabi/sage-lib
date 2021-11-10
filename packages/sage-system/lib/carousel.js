@@ -14,6 +14,7 @@ Sage.carousel = (function() {
   let slidesLength;
   let looping;
   let startingSlide;
+  let indicators;
 
   function init() {
     const slider = document.querySelector(containerClass);
@@ -71,14 +72,7 @@ Sage.carousel = (function() {
       };
     }
 
-    const indicators = document.querySelectorAll('.sage-indicator');
-    indicators[mySlider.getInfo().index].classList.add(indicatorActiveClass);
-    mySlider.events.on('indexChanged', () => {
-      indicators.forEach((indicator) => {
-        indicator.classList.remove(indicatorActiveClass);
-      });
-      indicators[mySlider.getInfo().index].classList.add(indicatorActiveClass);
-    });
+    indicators = document.querySelectorAll('.sage-indicator');
 
     goToSlide(startingSlide);
   }
@@ -89,6 +83,10 @@ Sage.carousel = (function() {
       else arrowPrev.classList.remove(arrowDisabledClass);
       if (num === slidesLength - 1) arrowNext.classList.add(arrowDisabledClass);
       else arrowNext.classList.remove(arrowDisabledClass);
+      indicators.forEach((indicator) => {
+        indicator.classList.remove(indicatorActiveClass);
+      });
+      indicators[num].classList.add(indicatorActiveClass);
       mySlider.goTo(num);
     };
   }
