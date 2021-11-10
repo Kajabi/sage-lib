@@ -1,0 +1,32 @@
+<% show_close = component.show_close.present? ? component.show_close : true %>
+<%= sage_component SageModal, {
+  animate: { direction: "left" },
+  css_classes: "sage-drawer #{component.generated_css_classes}",
+  disable_background_dismiss: true,
+  id: "test-drawer",
+} do %>
+  <%= sage_component SageModalContent, { spacing: "panel", title: component.title } do %>
+    <% if content_for?(:sage_drawer_header) %>
+      <% content_for :sage_modal_custom_header do %>
+        <div class="sage-drawer__header">
+          <%= content_for :sage_drawer_header %>
+        </div>
+      <% end %>
+    <% end %>
+
+    <% if component.show_close %>
+      <% content_for :sage_header_aside do %>
+        <%= sage_component SageButton, {
+          attributes: { "data-js-modal": true },
+          css_classes: "sage-drawer__close",
+          icon: { style: "only", name: "remove" },
+          style: "secondary",
+          subtle: true,
+          value: "Close Drawer",
+        } %>
+      <% end %>
+    <% end %>
+
+    <%= component.content %>
+  <% end %>
+<% end %>

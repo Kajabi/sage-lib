@@ -1,0 +1,24 @@
+$-upsell-graphic-width: rem(92px);
+$-upsell-graphic-height: rem(52px);
+
+.upsell__graphic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: $-upsell-graphic-width;
+  height: $-upsell-graphic-height;
+  padding: sage-spacing(lg);
+  background: sage-color(grey, 300);
+  border-radius: sage-border(radius);
+}
+
+.upsell__add-downsell-icon {
+  width: $-upsell-graphic-width;
+  text-align: right;
+}
+
+.sage-card__list-item {
+  .upsell__custom-sortable & {
+    display: block;
+  }
+}

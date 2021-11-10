@@ -1,10 +1,11 @@
-<% if component.title.present? %>
+<% if component.title.present? or content_for?(:sage_modal_custom_header) %>
   <header class="sage-modal__header <%= "sage-modal__header--has-header-actions" if content_for?(:sage_header_actions) %>">
     <div class="sage-modal__header-text">
       <%= sage_component SageCardRow, { grid_template: component.header_image.present? || component.header_icon.present? ? "ete" : "te" } do %>
         <% if component.header_image.present? %>
           <%= image_tag component.header_image, alt: "", "aria-hidden": true, class: "sage-modal__header-image" %>
         <% end %>
+
         <% if component.header_icon.present? %>
           <%= sage_component SageIcon, {
             icon: component.header_icon[:name],
@@ -12,25 +13,34 @@
             css_classes: "sage-modal__header-icon"
           } %>
         <% end %>
-        <h1 class="t-sage-heading-4">
-          <%= component.title %>
-        </h1>
+
+        <% if content_for?(:sage_modal_custom_header) %>
+          <%= content_for :sage_modal_custom_header %>
+        <% else %>
+          <h1 class="t-sage-heading-4">
+            <%= component.title %>
+          </h1>
+        <% end %>
+
         <% if content_for?(:sage_header_aside) %>
           <aside class="sage-modal__header-aside">
             <%= content_for :sage_header_aside %>
           </aside>
         <% end %>
+
         <% if content_for?(:sage_header_actions) %>
           <div class="sage-modal__header-actions">
             <%= content_for :sage_header_actions %>
           </div>
         <% end %>
       <% end %>
+
       <% if component.subheader %>
         <%= sage_component SageCardRow, { grid_template: "te" } do %>
           <h2 class="t-sage-heading-6">
             <%= component.subheader %>
           </h2>
+
           <% if component.help_title %>
             <%= sage_component SagePopover, {
               title: component.help_title,
@@ -44,6 +54,7 @@
           <% end %>
         <% end %>
       <% end %>
+
       <% if content_for?(:sage_header_indicator) %>
         <%= content_for :sage_header_indicator %>
       <% end %>

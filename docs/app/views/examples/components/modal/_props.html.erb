@@ -29,8 +29,20 @@
   <td><%= md('`nil`') %></td>
 </tr>
 <tr>
+  <td><%= md('`disable_background_dismiss`') %></td>
+  <td><%= md('Enabling this property will return the JS early to not initialize any handlers.') %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
   <td><%= md('`disable_close`') %></td>
   <td><%= md('Enabling this property will return the JS early to not initialize any handlers.') %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`fullscreen`') %></td>
+  <td><%= md('Toggles whether to use the fullscreen variant of the modal by attaching `.sage-modal--fullscreen`') %></td>
   <td><%= md('Boolean') %></td>
   <td><%= md('`nil`') %></td>
 </tr>
@@ -39,12 +51,6 @@
   <td><%= md('Unique identifier for component. Should match the `data-js-modaltrigger` property on the corresponding button') %></td>
   <td><%= md('String') %></td>
   <td><%= md('`nil') %></td>
-</tr>
-<tr>
-  <td><%= md('`fullscreen`') %></td>
-  <td><%= md('Toggles whether to use the fullscreen variant of the modal by attaching `.sage-modal--fullscreen`') %></td>
-  <td><%= md('Boolean') %></td>
-  <td><%= md('`nil`') %></td>
 </tr>
 <tr>
   <td><%= md('`large`') %></td>
@@ -78,18 +84,6 @@
       name: SageSchemas::ICON
     }
   ```') %></td>
-  <td><%= md('`nil`') %></td>
-</tr>
-<tr>
-  <td><%= md('`header_actions`') %></td>
-  <td><%= md('When present, this will show containing `SageButton`s in the header of the component') %></td>
-  <td><%= md('String') %></td>
-  <td><%= md('`nil`') %></td>
-</tr>
-<tr>
-  <td><%= md('`header_image`') %></td>
-  <td><%= md('When present, sets the image in the header of the component') %></td>
-  <td><%= md('String') %></td>
   <td><%= md('`nil`') %></td>
 </tr>
 <tr>
@@ -182,14 +176,29 @@
   <td colspan="2"><%= md('**`Element`**') %></td>
 </tr>
 <tr>
+  <td><%= md('`sage_header_actions`') %></td>
+  <td><%= md('When present, this will show containing `SageButton`s in the header of the component') %></td>
+  <td colspan="2"><%= md('`SageButton`') %></td>
+</tr>
+<tr>
   <td><%= md('`sage_header_aside`') %></td>
   <td><%= md('This area holds the button that closes the modal. This resides in the header of the component.') %></td>
   <td colspan="2"><%= md('`SageButton`') %></td>
 </tr>
 <tr>
+  <td><%= md('`sage_header_image`') %></td>
+  <td><%= md('When present, sets the image in the header of the component') %></td>
+  <td colspan="2"><%= md('`HTML image`') %></td>
+</tr>
+<tr>
   <td><%= md('`sage_header_indicator`') %></td>
   <td><%= md('This area holds the page indicator for the modal. This is to be used on multi-page modals.') %></td>
   <td colspan="2"><%= md('`SageIndicator`') %></td>
+</tr>
+<tr>
+  <td><%= md('`sage_modal_custom_header`') %></td>
+  <td><%= md('This can be used to provide custom header content, typically in lieue of the `title` or other header-related configurations for more tailored control of this area.') %></td>
+  <td colspan="2"><%= md('`string/HTML`') %></td>
 </tr>
 <tr>
   <td><%= md('`sage_footer`') %></td>

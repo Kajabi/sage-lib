@@ -38,14 +38,6 @@ $-modal-fullscreen-top-spacing: rem(104px);
     backdrop-filter: blur(3px);
   }
 
-  &.sage-modal--no-blur {
-    backdrop-filter: none;
-    background-image: linear-gradient(
-      rgba(sage-color(charcoal, 300), 0.5) 0%,
-      rgba(sage-color(charcoal, 500), 0.5) 100%
-    );
-  }
-
   &.sage-modal--active {
     visibility: visible;
     z-index: sage-z-index(modal, -1);
@@ -55,6 +47,21 @@ $-modal-fullscreen-top-spacing: rem(104px);
 
   &.sage-modal--fullscreen {
     padding: 0;
+  }
+
+  &.sage-modal--no-blur {
+    backdrop-filter: none;
+    background-image: linear-gradient(
+      rgba(sage-color(charcoal, 300), 0.5) 0%,
+      rgba(sage-color(charcoal, 500), 0.5) 100%
+    );
+  }
+
+  &.sage-modal--no-background-dismiss {
+    background-color: transparent;
+    backdrop-filter: none;
+    background-image: none;
+    pointer-events: none;
   }
 }
 
@@ -71,12 +78,26 @@ $-modal-fullscreen-top-spacing: rem(104px);
   pointer-events: none;
   opacity: 0;
 
+  .sage-drawer & {
+    height: 100vh;
+    max-width: rem(400px);
+    border-radius: 0;
+  }
+
   @media (min-width: sage-breakpoint(lg-min)) {
     margin-top: $-modal-margin-lg;
+
+    .sage-drawer & {
+      margin-top: 0;
+    }
   }
 
   @media (min-width: sage-breakpoint(xl-min)) {
     margin-top: $-modal-margin-xl;
+
+    .sage-drawer & {
+      margin-top: 0;
+    }
   }
 
   [data-sage-animate] & {
@@ -183,11 +204,17 @@ $-modal-fullscreen-top-spacing: rem(104px);
     margin-top: $-modal-fullscreen-top-spacing;
   }
 
+  .sage-drawer & {
+    overflow-y: auto;
+    align-content: start;
+    height: calc(100% - var(--sage-drawer-header-height, 24px) - #{3 * sage-spacing(md)}); // a customizable height value for the header area minus top and bottom padding and one gap between header and content (sage-spacing(md))
+  }
+
   > :last-child {
     margin-bottom: 0;
   }
 
-  p + p {
+  &:not([class*="sage-modal__content--spacing-"]) p + p {
     margin-top: sage-spacing();
   }
 

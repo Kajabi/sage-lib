@@ -11,6 +11,8 @@
 $-btn-transition: map-get($sage-transitions, default);
 $-btn-border-radius: sage-border(radius);
 $-btn-shadow-base: sage-shadow(sm);
+$-btn-icon-only-hover-size: rem(26px);
+$-btn-icon-only-focus-size: rem(28px);
 
 $-btn-base-styles: (
   primary: (
@@ -437,8 +439,6 @@ $-btn-loading-min-height: rem(36px);
       color: map-get($-styles, default);
       background-color: transparent;
 
-      @include sage-focus-outline--update-color(map-get($-styles, focus-outline));
-
       // TODO: refactor the subtle button hover state, after Sage 3.0 conversion
       &::after {
         border-color: transparent;
@@ -448,10 +448,9 @@ $-btn-loading-min-height: rem(36px);
         color: map-get($-styles, hover);
 
         &::after {
-          z-index: 0 !important; /* stylelint-disable-line declaration-no-important */
-          border-color: transparent !important; /* stylelint-disable-line declaration-no-important */
+          z-index: 0;
           background-color: map-get($-styles, hover-background);
-          opacity: 1 !important; /* stylelint-disable-line declaration-no-important */
+          opacity: 1;
         }
 
         &::before,
@@ -477,8 +476,22 @@ $-btn-loading-min-height: rem(36px);
       }
 
       &[class*="icon-only"] {
-        @include sage-focus-outline($outline-offset-inline: 4px, $outline-offset-block: 0);
-        @include sage-focus-outline--update-color(map-get($-styles, default));
+        &::after {
+          width: $-btn-icon-only-hover-size;
+          height: $-btn-icon-only-hover-size;
+        }
+
+        &:hover::after {
+          border-color: transparent;
+          opacity: 1;
+        }
+
+        &:focus::after {
+          width: $-btn-icon-only-focus-size;
+          height: $-btn-icon-only-focus-size;
+          border-color: map-get($-styles, focus-outline);
+
+        }
 
         .sage-label & {
           @include sage-focus-outline($outline-offset-inline: -2px, $outline-offset-block: -2px);

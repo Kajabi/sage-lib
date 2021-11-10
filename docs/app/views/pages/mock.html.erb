@@ -1,0 +1,15 @@
+<% @mock = get_mock(@alias) %>
+<%= render "mocks/heading", mock: @mock %>
+
+<% if@mock[:no_rails_partials] %>
+  <p>
+    No Rails mock available at this time.
+    
+    <% if %>
+      See <%= link_to "React mock in Storybook", mock_storybook_url(@mock) %>
+    <% end %>
+  </p>
+
+<% else %>
+  <%= render(get_mock_path(@mock)) %>
+<% end %>
