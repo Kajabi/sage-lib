@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.67.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.66.0...@kajabi/sage-react@0.67.0) (2021-11-10)
+
+
+### Features
+
+* add center button group option in React ([f248178](https://github.com/Kajabi/sage-lib/commit/f2481780ee4f9115a620d80af3b00fce9ad31be0))
+* add contact profile mock in React ([481bdb0](https://github.com/Kajabi/sage-lib/commit/481bdb0ccf58fd4204c1e033a0b12d556425adcb))
+* add description stub for react ([755a548](https://github.com/Kajabi/sage-lib/commit/755a548672d8328cccb6ae2b67b655d19ec81c17))
+* **copy text:** adds borderless React prop ([b2a7f0b](https://github.com/Kajabi/sage-lib/commit/b2a7f0bfab0ea41651ed4a9e564eac8934123889))
+* **drawer:** add React component synced to Rails one ([abe7f4e](https://github.com/Kajabi/sage-lib/commit/abe7f4ec0e121113ca9334c825055d5f22fe6bfb))
+* **drawer:** use modal as a base to new Drawer component ([8e5fca0](https://github.com/Kajabi/sage-lib/commit/8e5fca0765f58ba390f1c08bed7d270975663a91))
+* **modal:** sync up React Modal to Rails changes ([9318cf9](https://github.com/Kajabi/sage-lib/commit/9318cf9fe011815c7b7035bbe324a2cac5ab7c82))
+
+
+
+
+
 # [0.66.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.65.2...@kajabi/sage-react@0.66.0) (2021-11-08)
 
 

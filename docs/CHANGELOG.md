@@ -3,6 +3,51 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.26.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.25.0...@kajabi/sage@4.26.0) (2021-11-10)
+
+
+### Bug Fixes
+
+* adjust spacing and icons ([91749a0](https://github.com/Kajabi/sage-lib/commit/91749a01604c1fb046ecb10f42be70bba51ccd2a))
+* adjust upsell item dropdown ([22b1aaa](https://github.com/Kajabi/sage-lib/commit/22b1aaa515143ae91a13fe02600167466c905790))
+* layout adjustment ([866320e](https://github.com/Kajabi/sage-lib/commit/866320ee1d1a78fa03253b966261717e16f08901))
+* lint fix ([b469b2a](https://github.com/Kajabi/sage-lib/commit/b469b2a6d31bcb10ef9ae90b9af43d2273edcd13))
+* remove unused styling ([5d940ff](https://github.com/Kajabi/sage-lib/commit/5d940ffa090fd0e43f2aa7ccb87b731d1ecb4a71))
+* update divider label and remove button icon after rebase ([2e34d68](https://github.com/Kajabi/sage-lib/commit/2e34d680ab50607eaae84d7194fda08d0154daea))
+* update icon to use comoponent ([aa864b1](https://github.com/Kajabi/sage-lib/commit/aa864b1f9e5ad182d817ecee999cae0eb957b77e))
+* **button:** save point before starting a small refactor ([eeaaf99](https://github.com/Kajabi/sage-lib/commit/eeaaf99e8954c4d8b1349fc2d713c35d7f6d9a55))
+
+
+### Features
+
+* **docs:** convert mock to new system ([e6320f5](https://github.com/Kajabi/sage-lib/commit/e6320f501699d2cdc2afd89741e39ddf0d0f57a2))
+* add contact profile mock and notes ([83e238b](https://github.com/Kajabi/sage-lib/commit/83e238b1651e1ee742120577809302a548a94c39))
+* add mock stylesheet precedent ([b036a95](https://github.com/Kajabi/sage-lib/commit/b036a95f10b0a63c7c4bc446bf393df5de5355c3))
+* add poc to sandbox ([df02e7c](https://github.com/Kajabi/sage-lib/commit/df02e7cbc85fa0ce7d1650b9da06b6414f8d2d72))
+* **docs:** add basic mocks page structure ([8e0afc1](https://github.com/Kajabi/sage-lib/commit/8e0afc1a2d2259a6a65654926cdef1c7f7508524))
+* **docs:** continue to build out mocks structure ([0e3a5d1](https://github.com/Kajabi/sage-lib/commit/0e3a5d1aecc26755e919ab547362820e3f41685c))
+* **docs:** further improve flexibility with mocks system ([27eeee7](https://github.com/Kajabi/sage-lib/commit/27eeee76d6d34e5fa0b73d5d8970ec03dff11422))
+* clean up rails mock ([e1aa5b9](https://github.com/Kajabi/sage-lib/commit/e1aa5b97a147d7376587c737bc77c7fb478f94de))
+* **docs:** continue mocks build ([a63f849](https://github.com/Kajabi/sage-lib/commit/a63f8494c6118cb838f13257816a92ecd0861d2f))
+* **docs:** move team to beside title ([4a38eb2](https://github.com/Kajabi/sage-lib/commit/4a38eb21d8548b5de93270f5c33bce8e9d379547))
+* **drawer:** fix missin eols ([c8ddc8f](https://github.com/Kajabi/sage-lib/commit/c8ddc8f50c860e3ed2e27590cd67406552b6d19d))
+* **drawer:** hone given modal modifications ([67cc40c](https://github.com/Kajabi/sage-lib/commit/67cc40c016679fa07ea5f8ee2f97b0abf38f42e5))
+* **drawer:** iron out some component details ([2e645e9](https://github.com/Kajabi/sage-lib/commit/2e645e93298a42d7b7514ee8652ab4e508d69ba2))
+* **drawer:** more updates to align drawer with standalone component ([6f4ed03](https://github.com/Kajabi/sage-lib/commit/6f4ed03a4bbdb53f6d3d9b9f97b819d989064aff))
+* **drawer:** optional close drawer option ([9f99f4e](https://github.com/Kajabi/sage-lib/commit/9f99f4ef5749f639d20a383a064cd4b45488ddf1))
+* **drawer:** remove search files from commits ([fc77345](https://github.com/Kajabi/sage-lib/commit/fc77345382abad098d17ba75780ed28200a8a980))
+* **drawer:** rework drawer into isolated component ([ac6eab0](https://github.com/Kajabi/sage-lib/commit/ac6eab0f2ba6236f69f8452747f616211630ab53))
+* **drawer:** start process of wrapping Drawer in a component ([641f25e](https://github.com/Kajabi/sage-lib/commit/641f25e4cc1596afaa70fea7755f77144d6fae9d))
+* **drawer:** sync rails drawer with react work ([6b6bb20](https://github.com/Kajabi/sage-lib/commit/6b6bb208d5154bc327553192dbf3bd97a344d515))
+* **drawer:** use modal as a base to new Drawer component ([8e5fca0](https://github.com/Kajabi/sage-lib/commit/8e5fca0765f58ba390f1c08bed7d270975663a91))
+* **modal:** adjust `p` spacing rules when modal uses spacing grid ([7499e42](https://github.com/Kajabi/sage-lib/commit/7499e420bb2b7ad0be1603564a11b477943e14b5))
+* **modal:** further revise modal with drawer affordances ([8139d95](https://github.com/Kajabi/sage-lib/commit/8139d9519a7bc45843ab238ef6f3e09f7c1495dc))
+* **modal:** sync up Rails modal from React work ([0377141](https://github.com/Kajabi/sage-lib/commit/037714100b68e529661aa2c60fad3fa62b861169))
+
+
+
+
+
 # [4.25.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.24.3...@kajabi/sage@4.25.0) (2021-11-08)
 
 

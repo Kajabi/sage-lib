@@ -3,6 +3,35 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.57.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.56.0...@kajabi/sage-assets@0.57.0) (2021-11-10)
+
+
+### Bug Fixes
+
+* **button:** iterate on the subtle button ([321bdbc](https://github.com/Kajabi/sage-lib/commit/321bdbcd04bff0326c72edba09d886d25c57c17c))
+* **button:** save point before starting a small refactor ([eeaaf99](https://github.com/Kajabi/sage-lib/commit/eeaaf99e8954c4d8b1349fc2d713c35d7f6d9a55))
+* **button:** update padding for non subtle buttons ([d62906f](https://github.com/Kajabi/sage-lib/commit/d62906f2f4a7fe96e91d2bc560514bddcb75b708))
+* **button:** updates per design update ([c2af17c](https://github.com/Kajabi/sage-lib/commit/c2af17c46c9090e657bb286a04c2fda354c4c122))
+* **panel:** updates to gap selector ([cba1256](https://github.com/Kajabi/sage-lib/commit/cba125685547d6407a53ba97ca28c0e9b7fc84ac))
+* button and group adjustments to size and spacing ([4818a6c](https://github.com/Kajabi/sage-lib/commit/4818a6c119cc4e372622ad55f1f7b01f0042715c))
+* description full width and spacing adjustment ([fa22eb5](https://github.com/Kajabi/sage-lib/commit/fa22eb5c1377e6e830508c1d148e52d1ae2c6ef5))
+* panel divider to full size ([222584d](https://github.com/Kajabi/sage-lib/commit/222584daa071e8f6a900c60226dcad93800ad344))
+
+
+### Features
+
+* **drawer:** hone given modal modifications ([67cc40c](https://github.com/Kajabi/sage-lib/commit/67cc40c016679fa07ea5f8ee2f97b0abf38f42e5))
+* **drawer:** more updates to align drawer with standalone component ([6f4ed03](https://github.com/Kajabi/sage-lib/commit/6f4ed03a4bbdb53f6d3d9b9f97b819d989064aff))
+* **drawer:** optional close drawer option ([9f99f4e](https://github.com/Kajabi/sage-lib/commit/9f99f4ef5749f639d20a383a064cd4b45488ddf1))
+* **drawer:** rework drawer into isolated component ([ac6eab0](https://github.com/Kajabi/sage-lib/commit/ac6eab0f2ba6236f69f8452747f616211630ab53))
+* **drawer:** use modal as a base to new Drawer component ([8e5fca0](https://github.com/Kajabi/sage-lib/commit/8e5fca0765f58ba390f1c08bed7d270975663a91))
+* **modal:** adjust `p` spacing rules when modal uses spacing grid ([7499e42](https://github.com/Kajabi/sage-lib/commit/7499e420bb2b7ad0be1603564a11b477943e14b5))
+* **modal:** further revise modal with drawer affordances ([8139d95](https://github.com/Kajabi/sage-lib/commit/8139d9519a7bc45843ab238ef6f3e09f7c1495dc))
+
+
+
+
+
 # [0.56.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.55.2...@kajabi/sage-assets@0.56.0) (2021-11-08)
 
 
