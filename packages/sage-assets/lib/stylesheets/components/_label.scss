@@ -21,13 +21,13 @@ $-label-inset-border: 0 0 0 1px inset;
     background-color: transparent;
   }
 
-  .sage-label-group &:not(:last-child) {
-    margin-right: sage-spacing(xs);
-  }
+  // .sage-label-group &:not(:last-child) {
+  //   margin-right: sage-spacing(xs);
+  // }
 
-  .sage-label-group & {
-    margin-top: sage-spacing(xs);
-  }
+  // .sage-label-group & {
+  //   margin-top: sage-spacing(xs);
+  // }
 }
 
 .sage-label__value {
