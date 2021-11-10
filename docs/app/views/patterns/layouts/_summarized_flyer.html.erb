@@ -1,0 +1,19 @@
+<%
+heading_classes = "#{SageClassnames::TYPE::HEADING_4} #{SageClassnames::TYPE_COLORS::CHARCOAL_400} #{SageClassnames::SPACERS::MD_BOTTOM}"
+summary_classes = "#{SageClassnames::TYPE::BODY} #{SageClassnames::TYPE_COLORS::CHARCOAL_100}"
+%>
+<%= sage_component SageContainer, { size: "full", html_attributes: { style: "display: flex; gap: 24px;" }} do %>
+  <%= sage_component SageContainer, { size: "sm", css_classes: SageClassnames::TYPE_BLOCK } do %>
+    <h2 class="<%= heading_classes %>">[block title]</h2>
+    <% ["[summary]"].each do | text | %>
+      <p class="<%= summary_classes %>">
+        <%= text %>
+      </p>
+    <% end %>
+  <% end %>
+  <%= sage_component SageContainer, { size: "lg" } do %>
+    <%= sage_component SagePanel, {} do %>
+      [content here]
+    <% end %>
+  <% end %>
+<% end %>

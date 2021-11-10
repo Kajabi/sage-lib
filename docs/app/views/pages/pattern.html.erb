@@ -1,0 +1,9 @@
+<% @pattern = get_pattern(params[:segment]) %>
+<%= content_for :heading do %>
+  <h1><%= @pattern[:title] %></h1>
+<% end %>
+<div class="sage-panel-grid">
+  <% @pattern[:examples].each do | example | %>
+    <%= render_pattern_example(slug: @pattern[:slug], example: example) %>
+  <% end %>
+</div>

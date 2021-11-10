@@ -38,38 +38,35 @@
     } %>
   <% end %>
   <% if current_page_patterns? %>
+  <%
+    pattern_items = [
+      {
+        text: "Organization",
+        link: pages_patterns_path(:panels_cards),
+        active: current_page?(pages_patterns_path(:panels_cards)),
+      },
+      {
+        text: "12 Col Grid",
+        link: pages_patterns_path(:grid),
+        active: current_page?(pages_patterns_path(:grid)),
+      }
+    ]
+
+    sage_patterns.each do | pattern |
+      pattern_items.push({
+        text: pattern[:title],
+        link: pages_patterns_path(pattern[:slug]),
+        active: current_page?(pages_patterns_path(pattern[:slug])),
+      })
+    end
+  %>
     <%= sage_component SageNav, {
       items: [
-        { link: pages_patterns_path(:panels_cards), text: "PATTERNS", items: [
-          {
-            text: "Organization",
-            link: pages_patterns_path(:panels_cards),
-            active: current_page?(pages_patterns_path(:panels_cards)),
-          },
-          {
-            text: "12 Col Grid",
-            link: pages_patterns_path(:grid),
-            active: current_page?(pages_patterns_path(:grid)),
-          },
-          {
-            text: "Grid Templates",
-            link: pages_patterns_path(:grid_templates),
-            active: current_page?(pages_patterns_path(:grid_templates)),
-          }
-        ] }
-      ]
-    } %>
-  <% end %>
-  <% if current_page_interactions? %>
-    <%= sage_component SageNav, {
-      items: [
-        { link: pages_interactions_path(:container), text: "INTERACTIONS", items: [
-          {
-            text: "Containers",
-            link: pages_interactions_path(:container),
-            active: current_page?(pages_interactions_path(:container)),
-          }
-        ] }
+        {
+          link: pages_patterns_path(:panels_cards),
+          text: "PATTERNS",
+          items: pattern_items
+        }
       ]
     } %>
   <% end %>
@@ -81,6 +78,11 @@
             text: "Spacing",
             link: pages_helpers_path(:spacing),
             active: current_page?(pages_helpers_path(:spacing)),
+          },
+          {
+            text: "Grid Templates",
+            link: pages_helpers_path(:grid_templates),
+            active: current_page?(pages_helpers_path(:grid_templates)),
           }
         ] }
       ]

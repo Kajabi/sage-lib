@@ -18,21 +18,24 @@ class PagesController < ApplicationController
   end
 
   def patterns
-    render params[:title]
+    if params[:segment] == "grid" || params[:segment] == "panels_cards"
+      render params[:segment]
+    else
+      render("pattern", segment: params[:segment])
+    end
   end
-  end
-
+  
   def helpers
     render params[:title]
   end
-
+  
   def component
     @title = params[:title]
   end
-
+  
   def components
   end
-
+  
   def sandbox
     render(layout: 'sandbox')
   end

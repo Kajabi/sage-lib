@@ -1,0 +1,32 @@
+<%= sage_component SagePanelStack, {} do %>
+  <h2><%= example[:title] %></h2>
+  <%= md(example[:description], use_sage_type: true).html_safe if example[:description] %>
+  <div class="sage-tabs-container">
+    <%= sage_component SageTabs, {
+      id: "code-example-tabs-#{example[:partial]}}",
+      items: [
+        {
+          text: "Preview",
+          target: "preview-#{example[:partial]}",
+          active: true
+        },
+        {
+          text: "Code",
+          target: "code-#{example[:partial]}",
+        }
+      ]
+    } %>
+    <%= sage_component SageTabsPane, { id: "preview-#{example[:partial]}" } do %>
+      <%= render "patterns/#{slug}/#{example[:partial]}" %>
+    <% end %>
+    <%= sage_component SageTabsPane, { id: "code-#{example[:partial]}" } do %>
+      <div class="example__code">
+        <button class="example__expand-btn" aria-expanded="false" aria-controls="example-rails-code-#{example[:partial]}">Expand this code snippet</button>
+        <div id="example-rails-code-#{example[:partial]}" class="sage-code-snippet" tabindex="-1">
+          <pre class="prettyprint"><code><%= File.read(File.join(Rails.root, "app/views/patterns", slug, "_#{example[:partial]}.html.erb")) %></code></pre>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% end %>
+<%= sage_component SagePanelDivider, {} %>

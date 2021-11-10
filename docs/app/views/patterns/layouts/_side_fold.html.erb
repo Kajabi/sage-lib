@@ -1,0 +1,12 @@
+<%= sage_component SageContainer, { size: "full", html_attributes: { style: "display: flex; gap: 24px;" }} do %>
+  <%= sage_component SageContainer, { size: "sm" } do %>
+    <%= sage_component SagePanel, {} do %>
+      [content here]
+    <% end %>
+  <% end %>
+  <%= sage_component SageContainer, { size: "lg" } do %>
+    <%= sage_component SagePanel, {} do %>
+      [content here]
+    <% end %>
+  <% end %>
+<% end %>

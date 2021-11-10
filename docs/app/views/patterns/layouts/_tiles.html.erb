@@ -1,0 +1,9 @@
+<%= sage_component SageContainer, { size: "full", html_attributes: { style: "display: flex; gap: 24px; flex-flow: row wrap;" }} do %>
+  <% [1, 2, 3, 4, 5].each do | tile | %>
+    <%= sage_component SageContainer, { size: "sm" } do %>
+      <%= sage_component SagePanel, {} do %>
+        [content here]
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>

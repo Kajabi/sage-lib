@@ -32,6 +32,8 @@
 
 .sage-tabs-container {
   @include sage-grid-panel();
+
+  width: 100%;
 }
 
 .sage-tabs-divider,
