@@ -26,6 +26,12 @@ const Template = (args) => <Label {...args} />;
 
 export const Default = Template.bind({});
 
+export const CustomIconColor = Template.bind({});
+CustomIconColor.args = {
+  icon: SageTokens.ICONS.ADD,
+  customIconColor: '#ff33ff',
+};
+
 export const InteractiveDefault = Template.bind({});
 InteractiveDefault.args = {
   interactiveType: Label.INTERACTIVE_TYPES.DEFAULT

@@ -83,6 +83,24 @@ configs = [
 <% end %>
 
 <%= sage_component SagePanelBlock, {} do %>
+  <h3 class="t-sage-heading-6">With Icons - Custom Icon Color</h3>
+  <%= sage_component SageLabelGroup, {} do %>
+    <%= sage_component SageLabel, {
+      custom_icon_color: "#e08a1f",
+      color: "draft",
+      value: "Add",
+      icon: "add-small",
+    } %>
+    <%= sage_component SageLabel, {
+      custom_icon_color: "#f58cc2",
+      color: "draft",
+      value: "Tag",
+      icon: "tag"
+    } %>
+  <% end %>
+<% end %>
+
+<%= sage_component SagePanelBlock, {} do %>
   <h3 class="t-sage-heading-6">Interactive Default</h3>
   <%= sage_component SageLabelGroup, {} do %>
     <% configs.each do | config | %>
