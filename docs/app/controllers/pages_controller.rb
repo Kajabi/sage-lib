@@ -7,18 +7,6 @@ class PagesController < ApplicationController
     render params[:title]
   end
 
-  def content
-    render params[:title]
-  end
-
-  def experiences
-    render params[:title]
-  end
-
-  def design
-    render params[:title]
-  end
-
   def mock
     @alias = params[:alias]
 
@@ -32,9 +20,6 @@ class PagesController < ApplicationController
   def patterns
     render params[:title]
   end
-
-  def interactions
-    render params[:title]
   end
 
   def helpers
@@ -50,6 +35,24 @@ class PagesController < ApplicationController
 
   def sandbox
     render(layout: 'sandbox')
+  end
+  
+  # archives
+  
+  def content
+    render params[:title]
+  end
+
+  def design
+    render params[:title]
+  end
+  
+  def experiences
+    render params[:title]
+  end
+  
+  def interactions
+    render params[:title]
   end
 
   def utilities
