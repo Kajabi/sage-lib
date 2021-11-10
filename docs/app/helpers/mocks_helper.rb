@@ -53,6 +53,7 @@ module MocksHelper
         alias: "upsell_downsell",
         milestone_id: 25,
         name: "Upsell Downsell",
+        no_rails_js: true,
         status: DONE,
         team: "Commerce",
       }
