@@ -26,11 +26,19 @@ export const Carousel = ({
   const [arrowNext, setArrowNext] = useState(null);
 
   function handlePrevArrowClick() {
-    if (slidesIndex !== 0) setSlidesIndex(slidesIndex - 1);
+    if (!looping) {
+      if (slidesIndex !== 0) setSlidesIndex(slidesIndex - 1);
+    } else {
+      mySlider.goTo('prev');
+    }
   }
 
   function handleNextArrowClick() {
-    if (slidesIndex !== slidesLength - 1) setSlidesIndex(slidesIndex + 1);
+    if (!looping) {
+      if (slidesIndex !== slidesLength - 1) setSlidesIndex(slidesIndex + 1);
+    } else {
+      mySlider.goTo('next');
+    }
   }
 
   useEffect(() => {
@@ -60,7 +68,7 @@ export const Carousel = ({
     setArrowPrev(document.querySelector('.sage-carousel__arrow--prev'));
     setArrowNext(document.querySelector('.sage-carousel__arrow--next'));
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [options]);
+  }, []);
 
   useEffect(() => {
     if (mySlider !== null) {
@@ -71,9 +79,6 @@ export const Carousel = ({
         else arrowNext.classList.remove(arrowDisabledClass);
       }
       mySlider.goTo(slidesIndex);
-      mySlider.events.on('indexChanged', () => {
-        setSlidesIndex(mySlider.getInfo().index);
-      });
     }
   });
 
@@ -97,10 +102,12 @@ export const Carousel = ({
         />
       </div>
       <div className="sage-carousel__indicator">
-        <Indicator
-          numItems={slidesLength}
-          currentItem={slidesIndex + 1}
-        />
+        {!looping && (
+          <Indicator
+            numItems={slidesLength}
+            currentItem={slidesIndex + 1}
+          />
+        )}
       </div>
     </div>
   );

@@ -101,7 +101,6 @@ export default {
       fixedWidth: 544,
       gutter: 24,
       loop: false,
-      mouseDrag: true,
     },
   },
 };
