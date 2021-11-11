@@ -126,7 +126,7 @@ configs = [
 <% end %>
 
 <%= sage_component SagePanelBlock, {} do %>
-  <h3 class="t-sage-heading-6">Label Group with Gap and Align</h3>
+  <h3 class="t-sage-heading-6">Label Group with `:sm` Gap and Align</h3>
   <%= sage_component SageLabelGroup, { gap: :sm, align: "center" } do %>
     <% configs.each do | config | %>
       <%= sage_component SageLabel, {
