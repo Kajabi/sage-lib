@@ -38,14 +38,14 @@ primary_action: {
 </tr>
 </tr>
 <tr>
-  <td><%= md('`secondary_action`') %></td>
-  <td><%= md('Creates a secondary action button that is used along with a primary action button.') %></td>
+  <td><%= md('`secondary_actions`') %></td>
+  <td><%= md('An array of optional secondary actions.') %></td>
   <td>
     <%= md('```
-secondary_action: {
-  value: Check Usage,
-  url: #,
-}
+Array<{
+  value: String,
+  url: String
+}>
 ```')
     %>
   </td>

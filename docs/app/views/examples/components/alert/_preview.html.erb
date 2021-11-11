@@ -9,9 +9,11 @@
   primary_action: {
     value: "Get unlimited pages",
   },
-  secondary_action: {
-    value: "Check usage",
-  }
+  secondary_actions: [
+    {
+      value: "Check usage",
+    },
+  ],
 } %>
 
 <%= sage_component SageAlert, {
@@ -24,10 +26,15 @@
     value: "Primary",
     url: "#"
   },
-  secondary_action: {
-    value: "Secondary",
-    url: "#"
-  },
+  secondary_actions: [
+    {
+      value: "Secondary Action 1",
+      url: "#"
+    },
+    {
+      value: "Secondary Action 2"
+    },
+  ],
 } do %>
   <% content_for :sage_alert_actions do %>
     <%= link_to "Check usage", "#" %>
