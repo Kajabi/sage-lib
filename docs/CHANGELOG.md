@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.26.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.26.0...@kajabi/sage@4.26.1) (2021-11-11)
+
+
+### Bug Fixes
+
+* **docs:** update paths so react works :) ([6c36ad7](https://github.com/Kajabi/sage-lib/commit/6c36ad7370240989c47dacf8dee8db0ba4e19571))
+
+
+
+
+
 # [4.26.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.25.0...@kajabi/sage@4.26.0) (2021-11-10)
 
 
