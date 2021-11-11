@@ -62,8 +62,7 @@ export const Carousel = ({
     }));
     setLooping(!(options.loop !== undefined && !options.loop));
     setSlidesIndex(options.startIndex !== undefined ? options.startIndex : 0);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [options, slidesLength]);
 
   useEffect(() => {
     if (mySlider !== null) {
