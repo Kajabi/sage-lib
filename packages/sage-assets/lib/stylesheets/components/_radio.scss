@@ -205,6 +205,10 @@ $-radio-focus-outline-color: currentColor;
       margin-top: sage-spacing(2xs);
     }
   }
+
+  .sage-sortable & {
+    margin-top: 0;
+  }
 }
 
 .sage-radio--error {
