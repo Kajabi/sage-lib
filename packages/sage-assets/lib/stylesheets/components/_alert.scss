@@ -49,9 +49,9 @@ $-alert-colors: (
 }
 
 .sage-alert--small {
-  padding: sage-spacing(xs) sage-spacing(sm);
   gap: sage-spacing(xs);
   align-items: center;
+  padding: sage-spacing(xs) sage-spacing(sm);
   margin-bottom: 0;
 
   .sage-alert__icon {
