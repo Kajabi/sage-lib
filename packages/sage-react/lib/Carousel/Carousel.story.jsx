@@ -37,7 +37,6 @@ export default {
       </>
     ),
     options: {
-      arrowKeys: true,
       fixedWidth: 544,
       gutter: 24,
       loop: false,
