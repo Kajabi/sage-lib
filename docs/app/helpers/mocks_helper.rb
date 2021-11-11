@@ -8,7 +8,7 @@ module MocksHelper
 
   # Github URLs
   GITHUB_REPO_URL = "https://github.com/Kajabi/sage-lib"
-  GITHUB_FILES_BASE_URL = "#{GITHUB_REPO_URL}/tree/main/docs" # TODO: can we read the current git branch here by chance?
+  GITHUB_FILES_BASE_URL = "#{GITHUB_REPO_URL}/tree/main" # TODO: can we read the current git branch here by chance?
   
   # Storybook live URL
   STORYBOOK_BASE_URL = "https://sage-lib-storybook.herokuapp.com"
@@ -134,7 +134,7 @@ module MocksHelper
       mock_code_items << {
         value: "Rails partials",
         attributes: {
-          href: "#{GITHUB_FILES_BASE_URL}/app/views/mocks/#{mock[:alias]}/",
+          href: "#{GITHUB_FILES_BASE_URL}/docs/app/views/mocks/#{mock[:alias]}/",
           target: "_blank",
           rel: "noreferrer noopener",
         },
@@ -145,7 +145,7 @@ module MocksHelper
       mock_code_items << {
         value: "Rails helpers",
         attributes: {
-          href: "#{GITHUB_FILES_BASE_URL}/app/helpers/mocks/#{mock[:alias]}_helper.rb",
+          href: "#{GITHUB_FILES_BASE_URL}/docs/app/helpers/mocks/#{mock[:alias]}_helper.rb",
           target: "_blank",
           rel: "noreferrer noopener",
         },
@@ -156,7 +156,7 @@ module MocksHelper
       mock_code_items << {
         value: "Rails JavaScript",
         attributes: {
-          href: "#{GITHUB_FILES_BASE_URL}/lib/sage-frontend/javascript/docs/mocks/#{mock[:alias]}/",
+          href: "#{GITHUB_FILES_BASE_URL}/docs/lib/sage-frontend/javascript/docs/mocks/#{mock[:alias]}/",
           target: "_blank",
           rel: "noreferrer noopener",
         },
@@ -167,7 +167,7 @@ module MocksHelper
       mock_code_items << {
         value: "SCSS Styles",
         attributes: {
-          href: "#{GITHUB_FILES_BASE_URL}/lib/sage-frontend/stylesheets/docs/mocks/_#{mock[:alias]}.scss",
+          href: "#{GITHUB_FILES_BASE_URL}/docs/lib/sage-frontend/stylesheets/docs/mocks/_#{mock[:alias]}.scss",
           target: "_blank",
           rel: "noreferrer noopener",
         },
