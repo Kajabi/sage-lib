@@ -15,14 +15,13 @@ export const Carousel = ({
   );
 
   const containerClass = '.sage-carousel__carousel';
-  const arrowDisabledClass = 'sage-carousel__arrow--disabled';
 
   const [slidesIndex, setSlidesIndex] = useState(0);
   const [slidesLength, setSlidesLength] = useState(0);
   const [mySlider, setMySlider] = useState(null);
   const [looping, setLooping] = useState(false);
-  const [arrowPrev, setArrowPrev] = useState(null);
-  const [arrowNext, setArrowNext] = useState(null);
+  const [arrowPrevDisabled, setArrowPrevDisabled] = useState(false);
+  const [arrowNextDisabled, setArrowNextDisabled] = useState(false);
 
   function handlePrevArrowClick() {
     if (!looping) {
@@ -61,12 +60,7 @@ export const Carousel = ({
       controls: false,
       nav: false,
     }));
-
     setLooping(!(options.loop !== undefined && !options.loop));
-
-    setArrowPrev(document.querySelector('.sage-carousel__arrow--prev'));
-    setArrowNext(document.querySelector('.sage-carousel__arrow--next'));
-
     setSlidesIndex(options.startIndex !== undefined ? options.startIndex : 0);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -74,14 +68,14 @@ export const Carousel = ({
   useEffect(() => {
     if (mySlider !== null) {
       if (!looping) {
-        if (slidesIndex === 0) arrowPrev.classList.add(arrowDisabledClass);
-        else arrowPrev.classList.remove(arrowDisabledClass);
-        if (slidesIndex === slidesLength - 1) arrowNext.classList.add(arrowDisabledClass);
-        else arrowNext.classList.remove(arrowDisabledClass);
+        if (slidesIndex === 0) setArrowPrevDisabled(true);
+        else setArrowPrevDisabled(false);
+        if (slidesIndex === slidesLength - 1) setArrowNextDisabled(true);
+        else setArrowNextDisabled(false);
       }
       mySlider.goTo(slidesIndex);
     }
-  });
+  }, [mySlider, looping, slidesIndex, slidesLength]);
 
   useEffect(() => {
     if (mySlider !== null) {
@@ -95,6 +89,7 @@ export const Carousel = ({
     <div className={classNames} aria-roledescription="carousel">
       <div className="sage-carousel__container">
         <CarouselArrow
+          disabled={arrowPrevDisabled}
           icon="caret-left"
           id="prev"
           onClickCallback={handlePrevArrowClick}
@@ -105,6 +100,7 @@ export const Carousel = ({
           </div>
         </div>
         <CarouselArrow
+          disabled={arrowNextDisabled}
           icon="caret-right"
           id="next"
           onClickCallback={handleNextArrowClick}
