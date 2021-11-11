@@ -5,11 +5,14 @@
   class="
     sage-alert<%= component.color ? "
     sage-alert--#{component.color}" : ""%>
+    <%= "sage-alert--small" if component.small %>
     <%= component.generated_css_classes %>
   "
   <%= component.generated_html_attributes.html_safe %>
 >
-  <i class="sage-alert__icon <%= component.icon_name %>" aria-hidden="true"></i>
+  <% if component.icon_name %>
+    <i class="sage-alert__icon <%= component.icon_name %>" aria-hidden="true"></i>
+  <% end %>
   <div class="sage-alert__copy">
     <% if component.title %>
       <h3 class="sage-alert__title">

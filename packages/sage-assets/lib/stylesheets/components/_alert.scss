@@ -23,7 +23,7 @@ $-alert-colors: (
   grid-template-columns: auto 1fr;
   gap: sage-spacing(sm);
   position: relative;
-  margin-bottom: sage-spacing(md);
+  margin-bottom: sage-spacing(md); // TODO: follow-up, remove this and audit app for all uses of Alerts
   padding: sage-spacing(sm);
   border-radius: sage-border(radius);
 
@@ -45,6 +45,25 @@ $-alert-colors: (
     .sage-alert__icon::before {
       line-height: sage-line-height(h6);
     }
+  }
+}
+
+.sage-alert--small {
+  padding: sage-spacing(xs) sage-spacing(sm);
+  gap: sage-spacing(xs);
+  align-items: center;
+
+  .sage-alert__icon {
+    line-height: normal;
+  }
+
+  .sage-alert__icon::before {
+    line-height: sage-spacing(sm);
+  }
+
+  .sage-alert__desc {
+    @include truncate();
+    max-width: 100%;
   }
 }
 

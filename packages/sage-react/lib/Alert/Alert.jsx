@@ -14,6 +14,7 @@ export const Alert = ({
   icon,
   title,
   titleAddon,
+  small,
   ...rest
 }) => {
   const [selfDismissed, setSelfDismissed] = useState(false);
@@ -22,7 +23,8 @@ export const Alert = ({
     'sage-alert',
     className,
     {
-      [`sage-alert--${color}`]: color
+      [`sage-alert--${color}`]: color,
+      'sage-alert--small': small,
     }
   );
 
@@ -111,6 +113,7 @@ Alert.defaultProps = {
   icon: null,
   title: null,
   titleAddon: null,
+  small: false,
 };
 
 Alert.propTypes = {
@@ -122,4 +125,5 @@ Alert.propTypes = {
   icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),
   title: PropTypes.string,
   titleAddon: PropTypes.string,
+  small: PropTypes.bool,
 };
