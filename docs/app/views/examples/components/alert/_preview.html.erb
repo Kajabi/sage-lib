@@ -103,7 +103,7 @@
   color: "danger",
   title: "App outage tonight at 12am",
   desc: "Make sure you know how these changes affect you.",
-  icon_name: "sage-icon-warning",
+  icon_name: "sage-icon-danger",
   dismissable: true,
   primary_action: {
     value: "Primary"
@@ -169,7 +169,7 @@
   color: "danger",
   title: "App outage tonight at 12am",
   desc: "Make sure you know how these changes affect you.",
-  icon_name: "sage-icon-warning",
+  icon_name: "sage-icon-danger",
   primary_action: {
     value: "Primary"
   },
@@ -179,3 +179,32 @@
     <%= link_to "Action Link", "#" %>
   <% end %>
 <% end %>
+
+<h3>Small Alerts</h3>
+<!-- Info -->
+<%= sage_component SageAlert, {
+  color: "info",
+  desc: "Make sure you know how these changes affect you.",
+  icon_name: "sage-icon-flag",
+} %>
+
+<!-- Success -->
+<%= sage_component SageAlert, {
+  color: "published",
+  desc: "Make sure you know how these changes affect you.",
+  icon_name: "sage-icon-check-circle",
+} %>
+
+<!-- Warning -->
+<%= sage_component SageAlert, {
+  color: "warning",
+  desc: "Make sure you know how these changes affect you.",
+  icon_name: "sage-icon-warning",
+} %>
+
+<!-- Danger -->
+<%= sage_component SageAlert, {
+  color: "danger",
+  desc: "Make sure you know how these changes affect you.",
+  icon_name: "sage-icon-danger",
+} %>

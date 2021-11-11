@@ -12,7 +12,7 @@ class SageAlert < SageComponent
       value: [:optional, String],
       url: [:optional, String],
     }],
-    title: String,
+    title: [:optional, String],
     title_addon: [:optional, String],
   })
 
