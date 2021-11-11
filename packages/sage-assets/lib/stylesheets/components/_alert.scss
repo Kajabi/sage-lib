@@ -23,7 +23,7 @@ $-alert-colors: (
   grid-template-columns: auto 1fr;
   gap: sage-spacing(sm);
   position: relative;
-  margin-bottom: sage-spacing(md); // TODO: follow-up, remove this and audit app for all uses of Alerts
+  margin-bottom: sage-spacing(md);
   padding: sage-spacing(sm);
   border-radius: sage-border(radius);
 
@@ -52,6 +52,7 @@ $-alert-colors: (
   padding: sage-spacing(xs) sage-spacing(sm);
   gap: sage-spacing(xs);
   align-items: center;
+  margin-bottom: 0;
 
   .sage-alert__icon {
     line-height: normal;
