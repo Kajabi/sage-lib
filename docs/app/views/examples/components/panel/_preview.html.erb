@@ -145,7 +145,7 @@ Panels are rich containers that allow for grouping and organizing content detail
 
 <%= sage_component SagePanelSubheader, { title: "Example:" } %>
 <%= sage_component SagePanel, {} do %>
-  <%= sage_component SagePanelRow, { grid_template: "ete" } do %>
+  <%= sage_component SagePanelRow, { grid_template: "ete", gap: :xs, css_classes: "#{SageClassnames::GRID_GAP_OPTIONS::SM}" } do %>
     <i class="sage-icon-check-circle-xl t-sage--color-sage"></i>
     <%= sage_component SagePanelBlock, {} do %>
       <p class="t-sage-body-semi">Lorem ipsum dolor sit amet</p>
