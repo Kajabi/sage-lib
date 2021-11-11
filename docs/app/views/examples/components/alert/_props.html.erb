@@ -23,6 +23,41 @@
   <td><%= md('See Sage Icons.') %></td>
 </tr>
 <tr>
+  <td><%= md('`primary_action`') %></td>
+  <td><%= md('Creates a custom primary action button for the Alert.') %></td>
+  <td>
+    <%= md('```
+primary_action: {
+  value: Get unlimited pages,
+  url: #,
+}
+```')
+    %>
+  </td>
+  <td><%= md('`nil`') %></td>
+</tr>
+</tr>
+<tr>
+  <td><%= md('`secondary_action`') %></td>
+  <td><%= md('Creates a secondary action button that is used along with a primary action button.') %></td>
+  <td>
+    <%= md('```
+secondary_action: {
+  value: Check Usage,
+  url: #,
+}
+```')
+    %>
+  </td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`small`') %></td>
+  <td><%= md('This property allows for a small variation of the Alert component. Per design specs, do not include a `title`, `title_addon`, or any actions.') %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`false`') %></td>
+</tr>
+<tr>
   <td><%= md('`title`') %></td>
   <td><%= md('Title text to be displayed.') %></td>
   <td><%= md('String') %></td>
@@ -40,6 +75,6 @@
 </tr>
 <tr>
   <td><%= md('`sage_alert_actions`') %></td>
-  <td><%= md('This area holds the action links for the component.') %></td>
+  <td><%= md('This area holds additional action links for the component. This should be used only if more than a primary and secondary button is needed. See properties `primary_action` and `secondary_action`.') %></td>
   <td colspan="2"><%= md('`link_to`(s)') %></td>
 </tr>
