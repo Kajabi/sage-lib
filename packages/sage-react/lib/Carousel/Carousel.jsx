@@ -4,6 +4,7 @@ import classnames from 'classnames';
 import { tns } from 'tiny-slider/dist/tiny-slider';
 import { CarouselArrow } from './CarouselArrow';
 import { Indicator } from '../Indicator';
+import { CarouselSlide } from './CarouselSlide';
 
 export const Carousel = ({
   children,
@@ -18,6 +19,7 @@ export const Carousel = ({
 
   const [slidesIndex, setSlidesIndex] = useState(0);
   const [slidesLength, setSlidesLength] = useState(0);
+  const [slides, setSlides] = useState(null);
   const [mySlider, setMySlider] = useState(null);
   const [looping, setLooping] = useState(false);
   const [arrowPrevDisabled, setArrowPrevDisabled] = useState(false);
@@ -40,20 +42,14 @@ export const Carousel = ({
   }
 
   useEffect(() => {
-    const slider = document.querySelector(containerClass);
-    const slides = [...slider.children];
-    let slideContainer;
-    setSlidesLength(slides.length);
-    slides.forEach((slide, index) => {
-      slideContainer = document.createElement('div');
-      slideContainer.classList.add('slide');
-      slideContainer.setAttribute('aria-roledescription', 'slide');
-      slideContainer.setAttribute('role', 'group');
-      slideContainer.setAttribute('aria-label', `${index + 1} of ${slidesLength}`);
-      slideContainer.appendChild(slide);
-      slider.appendChild(slideContainer);
-    });
+    const childrenArray = children.props.children;
+    setSlides(childrenArray.map((item) => (
+      <CarouselSlide content={item} />
+    )));
+    setSlidesLength(childrenArray.length);
+  }, [children]);
 
+  useEffect(() => {
     setMySlider(tns({
       ...options,
       container: containerClass,
@@ -62,10 +58,10 @@ export const Carousel = ({
     }));
     setLooping(!(options.loop !== undefined && !options.loop));
     setSlidesIndex(options.startIndex !== undefined ? options.startIndex : 0);
-  }, [options, slidesLength]);
+  }, [options, slides]);
 
   useEffect(() => {
-    if (mySlider !== null) {
+    if (mySlider) {
       if (!looping) {
         if (slidesIndex === 0) setArrowPrevDisabled(true);
         else setArrowPrevDisabled(false);
@@ -77,7 +73,7 @@ export const Carousel = ({
   }, [mySlider, looping, slidesIndex, slidesLength]);
 
   useEffect(() => {
-    if (mySlider !== null) {
+    if (mySlider) {
       mySlider.events.on('dragEnd', () => {
         setSlidesIndex(mySlider.getInfo().index);
       });
@@ -95,7 +91,7 @@ export const Carousel = ({
         />
         <div className="sage-carousel__sizer">
           <div className="sage-carousel__carousel">
-            {children}
+            {slides}
           </div>
         </div>
         <CarouselArrow
