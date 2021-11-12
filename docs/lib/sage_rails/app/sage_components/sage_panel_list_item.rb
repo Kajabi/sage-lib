@@ -1,6 +1,6 @@
 class SagePanelListItem < SageComponent
   set_attribute_schema({
     grid_template: [:optional, SageSchemas::GRID_TEMPLATE],
-    gap: [:optional, Set.new([:xs, :sm, :md, :lg])],
+    gap: [:optional, SageSchemas::GRID_GAP_OPTION],
   })
 end
