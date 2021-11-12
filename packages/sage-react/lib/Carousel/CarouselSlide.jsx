@@ -2,10 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export const CarouselSlide = ({
-  content
+  content,
+  index,
+  length,
 }) => (
   <div
-    aria-label="benzo"
+    aria-label={`${index + 1} of ${length}`}
     aria-roledescription="slide"
     className="sage-carousel__slide"
     role="group"
@@ -20,4 +22,6 @@ CarouselSlide.defaultProps = {
 
 CarouselSlide.propTypes = {
   content: PropTypes.node,
+  index: PropTypes.number.isRequired,
+  length: PropTypes.number.isRequired,
 };

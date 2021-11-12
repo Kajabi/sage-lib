@@ -1,22 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
 import { tns } from 'tiny-slider/dist/tiny-slider';
 import { CarouselArrow } from './CarouselArrow';
-import { Indicator } from '../Indicator';
 import { CarouselSlide } from './CarouselSlide';
+import { Indicator } from '../Indicator';
 
 export const Carousel = ({
   children,
   options,
 }) => {
-  const baseClass = 'sage-carousel';
-  const classNames = classnames(
-    baseClass
-  );
-
-  const containerClass = '.sage-carousel__carousel';
-
   const [slidesIndex, setSlidesIndex] = useState(0);
   const [slidesLength, setSlidesLength] = useState(0);
   const [slides, setSlides] = useState(null);
@@ -43,16 +35,21 @@ export const Carousel = ({
 
   useEffect(() => {
     const childrenArray = children.props.children;
-    setSlides(childrenArray.map((item) => (
-      <CarouselSlide content={item} />
+    const childrenLength = childrenArray.length;
+    setSlides(childrenArray.map((item, index) => (
+      <CarouselSlide
+        content={item}
+        index={index}
+        length={childrenLength}
+      />
     )));
-    setSlidesLength(childrenArray.length);
+    setSlidesLength(childrenLength);
   }, [children]);
 
   useEffect(() => {
     setMySlider(tns({
       ...options,
-      container: containerClass,
+      container: '.sage-carousel__carousel',
       controls: false,
       nav: false,
     }));
@@ -81,7 +78,7 @@ export const Carousel = ({
   }, [mySlider]);
 
   return (
-    <div className={classNames} aria-roledescription="carousel">
+    <div className="sage-carousel" aria-roledescription="carousel">
       <div className="sage-carousel__container">
         <CarouselArrow
           disabled={arrowPrevDisabled}
