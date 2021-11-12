@@ -3,8 +3,8 @@ import { tns } from "tiny-slider/src/tiny-slider";
 Sage.carousel = (function() {
 
   const containerClass = '.sage-carousel__carousel';
-  const dotActiveClass = 'sage-carousel__dot--active';
   const arrowDisabledClass = 'sage-carousel__arrow--disabled';
+  const indicatorActiveClass = 'sage-indicator--current';
 
   let arrowPrev;
   let arrowNext;
@@ -12,8 +12,9 @@ Sage.carousel = (function() {
   let mySliderInfo;
   let options;
   let slidesLength;
-  let dots;
   let looping;
+  let startingSlide;
+  let indicators;
 
   function init() {
     const slider = document.querySelector(containerClass);
@@ -36,6 +37,7 @@ Sage.carousel = (function() {
     );
 
     looping = !(options.loop !== undefined && !options.loop);
+    startingSlide = options.startIndex || 0;
 
     mySlider = tns({
       ...options,
@@ -43,8 +45,10 @@ Sage.carousel = (function() {
       controls: false,
       nav: false,
     });
+    mySlider.events.on('dragEnd', () => {
+      goToSlide(mySlider.getInfo().index);
+    });
     mySliderInfo = mySlider.getInfo();
-    mySlider.events.on('dragEnd', handleDragEnd);
 
     arrowPrev = document.querySelector('.sage-carousel__arrow--prev');
     arrowPrev.addEventListener('click', handlePrevArrowClick);
@@ -53,19 +57,27 @@ Sage.carousel = (function() {
     arrowNext.addEventListener('click', handleNextArrowClick);
 
     if (!looping) {
-      let dot;
+      let indicator;
+      let indicatorNumber;
+      let indicatorList = document.createElement('ul');
+      let indicatorContainer = document.querySelector('.sage-carousel__indicator');
+      indicatorList.classList.add('sage-indicator-list');
+      indicatorList.setAttribute('aria-label', 'Showing 1 of ' + slidesLength);
+      indicatorContainer.appendChild(indicatorList);
       for (let i = 0; i < slidesLength; i++) {
-        dot = document.createElement('div');
-        dot.classList.add('sage-carousel__dot');
-        dot.setAttribute('index', i);
-        dot.setAttribute('role', 'button');
-        dot.setAttribute('tabIndex', '-1');
-        dot.addEventListener('click', handleDotClick);
-        document.querySelector('.sage-carousel__dots').appendChild(dot);
+        indicator = document.createElement('li');
+        indicator.classList.add('sage-indicator');
+        indicatorNumber = document.createElement('span');
+        indicatorNumber.classList.add('visually-hidden');
+        indicatorNumber.innerHTML = i + 1;
+        indicator.appendChild(indicatorNumber);
+        document.querySelector('.sage-indicator-list').appendChild(indicator);
       };
     }
 
-    goToSlide(0);
+    indicators = document.querySelectorAll('.sage-indicator');
+
+    goToSlide(startingSlide);
   }
 
   function goToSlide(num) {
@@ -74,17 +86,12 @@ Sage.carousel = (function() {
       else arrowPrev.classList.remove(arrowDisabledClass);
       if (num === slidesLength - 1) arrowNext.classList.add(arrowDisabledClass);
       else arrowNext.classList.remove(arrowDisabledClass);
-      dots = [...document.getElementsByClassName('sage-carousel__dot')];
-      dots.forEach((dot) => {
-        dot.classList.remove(dotActiveClass);
+      indicators.forEach((indicator) => {
+        indicator.classList.remove(indicatorActiveClass);
       });
-      dots[num].classList.add(dotActiveClass);
+      indicators[num].classList.add(indicatorActiveClass);
       mySlider.goTo(num);
     };
-  }
-
-  function handleDotClick(evt) {
-    goToSlide(parseInt(evt.target.getAttribute('index')));
   }
 
   function handlePrevArrowClick() {
@@ -103,11 +110,6 @@ Sage.carousel = (function() {
     } else {
       mySlider.goTo('next');
     }
-  }
-
-  function handleDragEnd() {
-    mySliderInfo = mySlider.getInfo();
-    goToSlide(mySliderInfo.index);
   }
 
   return {
