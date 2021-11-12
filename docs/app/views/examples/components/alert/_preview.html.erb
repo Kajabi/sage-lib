@@ -1,27 +1,12 @@
-<h3>New Alerts</h3>
+<h3>Dismissable Alert</h3>
+<!-- Info -->
 <%= sage_component SageAlert, {
-  color: "approaching",
-  title: "You've used 80% of available pages",
-  title_addon: "(# of # used)",
-  desc: "Upgrade your plan to access unlimited landing pages.",
-  icon_name: "sage-icon-warning",
-  dismissable: true,
-  primary_action: {
-    value: "Get unlimited pages",
-  },
-  secondary_actions: [
-    {
-      value: "Check usage",
-    },
-  ],
-} %>
-
-<%= sage_component SageAlert, {
-  color: "reached",
-  title: "You've reached your [feature_name] limit",
-  desc: "Upgrade your plan to access more [feature_name].",
+  color: "info",
+  title: "Our privacy policy has changed",
+  desc: "Make sure you know how these changes affect you.",
   icon_name: "sage-icon-flag",
   dismissable: true,
+  
   primary_action: {
     value: "Primary",
     url: "#"
@@ -38,35 +23,6 @@
 } do %>
   <% content_for :sage_alert_actions do %>
     <%= link_to "Check usage", "#" %>
-  <% end %>
-<% end %>
-
-<%= sage_component SageAlert, {
-  color: "exceeded",
-  title: "You've exceeded your [feature_name] limit",
-  desc: "To avoid any issues with your experience, upgrade your plan now.",
-  icon_name: "sage-icon-danger",
-  dismissable: true,
-} do %>
-  <% content_for :sage_alert_actions do %>
-    <%= link_to "Check usage", "#" %>
-  <% end %>
-<% end %>
-
-<h3>Dismissable Alert</h3>
-<!-- Info -->
-<%= sage_component SageAlert, {
-  color: "info",
-  title: "Our privacy policy has changed",
-  desc: "Make sure you know how these changes affect you.",
-  icon_name: "sage-icon-flag",
-  dismissable: true,
-  primary_action: {
-    value: "Primary"
-  },
-} do %>
-  <% content_for :sage_alert_actions do %>
-    <%= link_to "Action Link", "#" %>
   <% end %>
 <% end %>
 

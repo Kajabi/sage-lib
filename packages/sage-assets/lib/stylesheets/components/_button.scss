@@ -567,8 +567,12 @@ $-alert-colors: (
     @each $name, $color in $-alert-colors {
       .sage-alert--#{$name} & {
         &.sage-btn {
+          border-color: transparent;
+
           &:hover::after {
             background: transparent;
+            border-color: transparent;
+            opacity: 0;
           }
 
           &:focus,
