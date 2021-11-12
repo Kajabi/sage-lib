@@ -14,7 +14,10 @@
   text-align: center;
   background: sage-color(grey, 100);
   border-radius: sage-border(radius);
-  cursor: pointer;
+
+  > i[class*="sage-icon-"] {
+    cursor: pointer;
+  }
 }
 
 .docs-icon-block__label {
