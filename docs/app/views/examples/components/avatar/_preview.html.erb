@@ -1,7 +1,5 @@
 <h3>Sample Avatars</h3>
 <div class="sage-avatar-wrapper">
-  <!-- Showing default -->
-  <%= sage_component SageAvatar, { badge: true, color: nil, initials: "JC" } %>
 
   <!-- Showing default -->
   <%= sage_component SageAvatar, { color: nil, initials: "JC" } %>
@@ -54,6 +52,17 @@
       { color: "sage", initials: "Q" },
       { color: "orange", initials: "KJ" },
     ]
+  } %>
+</div>
+
+<!-- Showing default -->
+<h3>Avatar With Badge</h3>
+<div class="sage-avatar-wrapper">
+  <%= sage_component SageAvatar, {
+    badge: true,
+    size: "64px",
+    color: nil,
+    initials: "JC"
   } %>
 </div>
 
