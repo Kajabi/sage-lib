@@ -25,6 +25,8 @@ module SageSchemas
     left: [:optional, Set.new(SageTokens::SPACER_SIZES)],
   }
 
+  HORIZONAL_ALIGNMENT = Set.new(SageTokens::HORIZONAL_ALIGNMENT)
+
   # Components
 
   AVATAR = {

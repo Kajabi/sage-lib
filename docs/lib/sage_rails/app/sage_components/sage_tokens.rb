@@ -319,6 +319,8 @@ module SageTokens
 
   POPOVER_POSITIONS = ["top", "top-right", "right", "bottom", "bottom-right", "left"]
 
+  HORIZONAL_ALIGNMENT = ["start", "end", "center", "justify"]
+
   SPACER_SIZES = [:xs, :sm, :md, :lg, :xl, "2xs", "xs", "sm", "md", "lg", "xl", "2xl", "stage", "panel", "card", "stack"]
 
   STATUSES = ["danger", "draft", "info", "locked", "published", "warning", "reached", "exceeded", "approaching"]

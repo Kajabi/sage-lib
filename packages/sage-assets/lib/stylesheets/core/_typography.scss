@@ -184,12 +184,18 @@ mark {
   }
 }
 
-.t-sage--align-center {
-  text-align: center;
+.t-sage--align-left,
+.t-sage--align-start {
+  text-align: start; // aligns left in LTR, aligns right in RTL
 }
 
-.t-sage--align-right {
-  text-align: right;
+.t-sage--align-right,
+.t-sage--align-end {
+  text-align: end; // aligns right in LTR, aligns left in RTL
+}
+
+.t-sage--align-center {
+  text-align: center;
 }
 
 .t-sage--align-justify {

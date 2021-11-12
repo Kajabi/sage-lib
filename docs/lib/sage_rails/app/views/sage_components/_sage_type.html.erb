@@ -1,0 +1,14 @@
+<% component.text.each do | content | %>
+  <<%= component.tag %>
+    class="
+      <% if component.type_spec.present? %>t-sage-<%= component.type_spec %><% end %>
+      <% if component.type_spec.present? and component.weight.present? %>t-sage-<%= component.type_spec %>-<%= component.weight %><% end %>
+      <% if component.color.present? %>t-sage--color-<%= component.color %><% end %>
+      <% if component.alignment.present? %>t-sage--align-<%= component.alignment %><% end %>
+      <%= component.generated_css_classes %>
+    "
+    <%= component.generated_html_attributes.html_safe %>
+  >
+    <%= content[:content] %>
+  </<%= component.tag %>>
+<% end %>
