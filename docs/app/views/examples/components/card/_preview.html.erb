@@ -111,7 +111,7 @@ Cards have three core areas:
 
   <%= sage_component SageCardHeader, { title: "List:" } %>
   <%= sage_component SageCardList, {} do %>
-    <%= sage_component SageCardListItem, { grid_template: "et" } do %>
+    <%= sage_component SageCardListItem, { grid_template: "et", gap: :xs } do %>
       <i class="sage-icon-check t-sage--color-sage"></i>
       <span class="t-sage-body-small">Stack items here.</span>
     <% end %>
@@ -122,7 +122,7 @@ Cards have three core areas:
   <% end %>
 
   <%= sage_component SageCardHeader, { title: "Row:" } %>
-  <%= sage_component SageCardRow, { grid_template: "ete" } do %>
+  <%= sage_component SageCardRow, { grid_template: "ete", gap: :xs } do %>
     <i class="sage-icon-drop" aria-label="Product"></i>
     <strong class="t-sage-body">
       Row here -- $8.99/mo

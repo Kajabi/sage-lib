@@ -12,7 +12,7 @@
     $suffix: "";
   }
 
-  .sage-grid-gap-#{$suffix} {
+  .sage-grid-gap#{$suffix} {
     gap: $-value;
   }
 }
