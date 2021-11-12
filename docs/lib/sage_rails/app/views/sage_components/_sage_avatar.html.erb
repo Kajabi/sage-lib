@@ -34,11 +34,13 @@ end
   <% end %>
 >
   <% if component.badge %>
-    <%= sage_component SageIcon, {
-      icon: "check-circle-filled",
-      size: badge_icon_size,
-      color: "primary-300",
-    } %>
+    <div class="sage-avatar__badge">
+      <%= sage_component SageIcon, {
+        icon: "check-circle-filled",
+        size: badge_icon_size,
+        color: "primary-300",
+      } %>
+    </div>
   <% end %>
 
   <% if component.image %>

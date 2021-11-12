@@ -146,6 +146,18 @@ $-avatar-group-item-sizes: (
   }
 }
 
+.sage-avatar__badge {
+  position: absolute;
+  background-color: sage-color(white);
+  border-radius: sage-border(radius-round);
+  bottom: 0;
+  right: 0;
+
+  i {
+    display: flex;
+  }
+}
+
 .sage-avatar__initials {
   grid-area: full;
   width: 100%;
