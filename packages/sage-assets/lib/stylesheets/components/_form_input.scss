@@ -21,14 +21,6 @@ $-input-text-height: sage-font-size(body);
   }
 }
 
-// TODO: deprecated in favor of sage-form-field--error
-.sage-input--error {
-  .sage-upload-card & {
-    margin-top: sage-spacing(sm);
-  }
-}
-
-// Note: this will be the block of code remaining after above is removed
 .sage-form-field--error {
   .sage-upload-card & {
     margin-top: sage-spacing(sm);
