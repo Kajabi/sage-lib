@@ -5,8 +5,8 @@ if component.lazy_load_initials == false
   lazy_load_initials = false
 end
 
+# Sets badge icon size based on Avatar size
 badge_icon_size = 'sm';
-
 avatar_size_as_integer = component.size.to_i;
 
 case avatar_size_as_integer
@@ -36,7 +36,8 @@ end
   <% if component.badge %>
     <%= sage_component SageIcon, {
       icon: "check-circle-filled",
-      size: badge_icon_size
+      size: badge_icon_size,
+      color: "primary-300",
     } %>
   <% end %>
 
