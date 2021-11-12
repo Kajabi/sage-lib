@@ -14,7 +14,7 @@ export default {
     },
     initials: 'QJ',
     lazyLoadInitials: true,
-    size: null,
+    size: '48px',
   },
   argTypes: {
     ...selectArgs({
@@ -25,3 +25,6 @@ export default {
 
 const Template = (args) => <Avatar {...args} />;
 export const Default = Template.bind({});
+
+export const WithBadge = Template.bind({})
+WithBadge.args = { badge: true, size: '64px' }
