@@ -262,7 +262,7 @@ Marketing uses the Megaphone icon. We do not use the megaphone icon for other tr
             icon: icon,
             size: "2xl",
             html_attributes: {
-              "data-js-copy-button": "icon code will go here"
+              "data-js-copy-button": "<&#37;= sage_component SageIcon, { icon: '#{icon}' } &#37;>"
             }
           } %>
           <p class="docs-icon-block__label"><%= icon %></p>
@@ -271,6 +271,3 @@ Marketing uses the Megaphone icon. We do not use the megaphone icon for other tr
     <% end %>
   <% end %>
 </div>
-
-# TODO - this is the code that will be copied to the clipboard
-#<%= sage_component SageIcon, { icon: "pen", label: "Edit" } %>
