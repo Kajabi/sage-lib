@@ -33,8 +33,8 @@ export const Avatar = ({
 
   const setBadgeSize = () => {
     let badgeIconSize = 'xs';
-    let avatarSizeAsInteger = size.replace(/[^0-9]/g, '');
-    
+    const avatarSizeAsInteger = size.replace(/[^0-9]/g, '');
+
     if (avatarSizeAsInteger >= 32 && avatarSizeAsInteger <= 44) {
       badgeIconSize = Icon.SIZES.SM;
     } else if (avatarSizeAsInteger >= 48 && avatarSizeAsInteger <= 60) {
@@ -51,7 +51,7 @@ export const Avatar = ({
       badgeIconSize = Icon.SIZES.XXXXL;
     }
     return badgeIconSize;
-  }
+  };
 
   return (
     <div className={classNames} style={style} {...rest}>
