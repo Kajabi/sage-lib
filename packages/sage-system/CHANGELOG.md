@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.15.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.14.0...@kajabi/sage-system@0.15.0) (2021-11-15)
+
+
+### Features
+
+* **carousel:** added logic for startIndex option ([bc5e1e1](https://github.com/Kajabi/sage-lib/commit/bc5e1e18de6b6e0e7728fa8fcf3442daa8deb799))
+* **carousel:** changed dots phrasing to indicator, removed unused dot styles ([2b816d6](https://github.com/Kajabi/sage-lib/commit/2b816d607cafbc9c527e39d5312aff04f49aa03c))
+* **carousel:** fixed pagination index for Rails component ([1a80e78](https://github.com/Kajabi/sage-lib/commit/1a80e783aa81206e9abf7fae28bc46340f677b9c))
+* **carousel:** got Rails indicator pagination working ([de3e020](https://github.com/Kajabi/sage-lib/commit/de3e020e6e76ba7af37306bbd96d5c54b9933812))
+* **carousel:** re-added the mouseDrag option with dragEnd event to update arrows/indicator ([91b96b5](https://github.com/Kajabi/sage-lib/commit/91b96b5dac921be9e7c7360188e919eeef7d1304))
+* **carousel:** updating to use indicator in Rails component ([ca91e3a](https://github.com/Kajabi/sage-lib/commit/ca91e3aae9e313aed59be8b4cf14a27273838d49))
+
+
+
+
+
 # [0.14.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.13.2...@kajabi/sage-system@0.14.0) (2021-11-01)
 
 
