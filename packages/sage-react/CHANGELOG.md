@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.69.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.68.0...@kajabi/sage-react@0.69.0) (2021-11-15)
+
+
+### Features
+
+* **drawer:** add Drawer export in Sage React ([0491a1e](https://github.com/Kajabi/sage-lib/commit/0491a1e4f52038d543f3c7fd0c4410eb973ff732))
+
+
+
+
+
 # [0.68.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.67.0...@kajabi/sage-react@0.68.0) (2021-11-15)
 
 
