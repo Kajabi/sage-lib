@@ -89,12 +89,12 @@
         } %>
       <% end %>
 
-      <p class="t-sage-body">
+      <p class="<%= SageClassnames::TYPE::BODY %>">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       </p>
 
-      <p class="t-sage-body">
+      <p class="<%= SageClassnames::TYPE::BODY %>">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       </p>
@@ -138,7 +138,7 @@
         } %>
       <% end %>
 
-      <p class="t-sage-body">
+      <p class="<%= SageClassnames::TYPE::BODY %>">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       </p>
@@ -180,7 +180,7 @@
         } %>
       <% end %>
 
-      <p class="t-sage-body">
+      <p class="<%= SageClassnames::TYPE::BODY %>">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       </p>
@@ -219,7 +219,7 @@
         } %>
       <% end %>
 
-      <p class="t-sage-body">
+      <p class="<%= SageClassnames::TYPE::BODY %>">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       </p>
@@ -262,20 +262,20 @@
       <% end %>
 
       <%= sage_component SagePanelBlock, {} do %>
-        <h4 class="t-sage-heading-5">Lorem ipsum dolor sit amet</h4>
-        <p class="t-sage-body">
+        <h4 class="<%= SageClassnames::TYPE::HEADING_5 %>">Lorem ipsum dolor sit amet</h4>
+        <p class="<%= SageClassnames::TYPE::BODY %>">
           Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
       <% end %>
 
       <%= sage_component SagePanelTiles, { tiles_in_row: 2 } do %>
         <%= sage_component SageCard, {} do %>
-          <p class="t-sage-body">
+          <p class="<%= SageClassnames::TYPE::BODY %>">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </p>
         <% end %>
         <%= sage_component SageCard, {} do %>
-          <p class="t-sage-body">
+          <p class="<%= SageClassnames::TYPE::BODY %>">
             Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
         <% end %>
@@ -317,7 +317,7 @@
         } %>
       <% end %>
 
-      <p class="t-sage-body">
+      <p class="<%= SageClassnames::TYPE::BODY %>">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       </p>
@@ -370,7 +370,7 @@
         } %>
       <% end %>
 
-      <p class="t-sage-body">
+      <p class="<%= SageClassnames::TYPE::BODY %>">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       </p>
@@ -380,7 +380,7 @@
 <% end %>
 
 <%= sage_component SagePanelBlock, {} do %>
-  <h3 class="t-sage-heading-6">Animated</h3>
+  <h3 class="<%= SageClassnames::TYPE::HEADING_6 %>">Animated</h3>
   <%= sage_component SageButtonGroup, { gap: :sm, spacer: { bottom: :sm }} do %>
     <%= sage_component SageButton, {
       style: "primary",
@@ -429,7 +429,7 @@
         } %>
       <% end %>
 
-      <p class="t-sage-body">
+      <p class="<%= SageClassnames::TYPE::BODY %>">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       </p>
@@ -464,7 +464,7 @@
         } %>
       <% end %>
 
-      <p class="t-sage-body">
+      <p class="<%= SageClassnames::TYPE::BODY %>">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       </p>
@@ -499,7 +499,7 @@
         } %>
       <% end %>
 
-      <p class="t-sage-body">
+      <p class="<%= SageClassnames::TYPE::BODY %>">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       </p>
@@ -534,7 +534,7 @@
         } %>
       <% end %>
 
-      <p class="t-sage-body">
+      <p class="<%= SageClassnames::TYPE::BODY %>">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       </p>
@@ -559,7 +559,7 @@
 <% end %>
 
 <%= md("
-<h3 class=\"t-sage-heading-6\">Asyncronous Modals</h3>
+<h3 class=\"SageClassnames::TYPE::HEADING_6\">Asyncronous Modals</h3>
 There are a number of situations where it might be most practical to load content for a modal asyncronously.
 For example, in a list of products, each product may allow an option to edit that product's details in a modal.
 In this case you may have a route that delivers only the contents of the modal that can be called asyncronously when the modal trigger is clicked.
@@ -614,7 +614,7 @@ As shown elsewhere on this page default content (such as `SageLoader`) can also 
 <% end %>
 
 <%= sage_component SagePanelStack, {} do %>
-  <h3 class="t-sage-heading-6">Events (monitor in browser console)</h3>
+  <h3 class="<%= SageClassnames::TYPE::HEADING_6 %>">Events (monitor in browser console)</h3>
   <p>Use these events for hooking into modal functionality using JS event listeners.</p>
 
   <%= sage_component SageTable, {
@@ -689,7 +689,7 @@ As shown elsewhere on this page default content (such as `SageLoader`) can also 
         } %>
       <% end %>
 
-      <p class="t-sage-body">
+      <p class="<%= SageClassnames::TYPE::BODY %>">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       </p>
@@ -724,7 +724,7 @@ As shown elsewhere on this page default content (such as `SageLoader`) can also 
         } %>
       <% end %>
 
-      <p class="t-sage-body">
+      <p class="<%= SageClassnames::TYPE::BODY %>">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       </p>
@@ -759,7 +759,7 @@ As shown elsewhere on this page default content (such as `SageLoader`) can also 
         } %>
       <% end %>
 
-      <p class="t-sage-body">
+      <p class="<%= SageClassnames::TYPE::BODY %>">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       </p>
@@ -794,7 +794,7 @@ As shown elsewhere on this page default content (such as `SageLoader`) can also 
         } %>
       <% end %>
 
-      <p class="t-sage-body">
+      <p class="<%= SageClassnames::TYPE::BODY %>">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       </p>
