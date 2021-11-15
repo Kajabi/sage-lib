@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.27.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.26.1...@kajabi/sage@4.27.0) (2021-11-15)
+
+
+### Bug Fixes
+
+* **label group:** update documentation on gap size ([0154832](https://github.com/Kajabi/sage-lib/commit/015483221306913390bbd0e54a99052b69597626))
+* **spacing:** remove code ticks in heading ([3117908](https://github.com/Kajabi/sage-lib/commit/3117908274ac84f23b36161ff58aeef9a3868c08))
+* **spacing:** update documentation for gap ([da3005e](https://github.com/Kajabi/sage-lib/commit/da3005ea34acc3d67f37db13b463914114ca2133))
+
+
+### Features
+
+* **carousel:** changed dots phrasing to indicator, removed unused dot styles ([2b816d6](https://github.com/Kajabi/sage-lib/commit/2b816d607cafbc9c527e39d5312aff04f49aa03c))
+* **carousel:** got looping and not looping scenarios working ([cb711ad](https://github.com/Kajabi/sage-lib/commit/cb711ad91375ce845c0da165fa849dac2c67462e))
+* **carousel:** got Rails indicator pagination working ([de3e020](https://github.com/Kajabi/sage-lib/commit/de3e020e6e76ba7af37306bbd96d5c54b9933812))
+* **carousel:** re-added the mouseDrag option with dragEnd event to update arrows/indicator ([91b96b5](https://github.com/Kajabi/sage-lib/commit/91b96b5dac921be9e7c7360188e919eeef7d1304))
+* **carousel:** updating to use indicator in Rails component ([ca91e3a](https://github.com/Kajabi/sage-lib/commit/ca91e3aae9e313aed59be8b4cf14a27273838d49))
+* **icons:** add new icons ([5065c24](https://github.com/Kajabi/sage-lib/commit/5065c246de2fd34272b2278bdb2d74fde7a248f8))
+* **label:** adds new prop for custom icon color ([0625a28](https://github.com/Kajabi/sage-lib/commit/0625a283dbe82264dfa65c8fc5edf2675bce7a98))
+* **label:** adds new prop for custom icon color ([3c2d65a](https://github.com/Kajabi/sage-lib/commit/3c2d65a300aafda4b94cd25794e6157e8e770f85))
+* **label:** fully implements new prop for custom icon color in Rails component ([0208f43](https://github.com/Kajabi/sage-lib/commit/0208f4323c0394169b9b1e14820723d62c6ca128))
+* **label:** fully implements new prop for custom icon color in Rails component ([86c68d7](https://github.com/Kajabi/sage-lib/commit/86c68d7be6182cefe157a190b1d68efeb4ec25c4))
+
+
+
+
+
 ## [4.26.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.26.0...@kajabi/sage@4.26.1) (2021-11-11)
 
 

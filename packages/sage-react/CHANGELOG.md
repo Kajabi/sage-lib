@@ -3,6 +3,38 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.68.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.67.0...@kajabi/sage-react@0.68.0) (2021-11-15)
+
+
+### Features
+
+* **carousel:** added CarouselArrow component for cleaner code ([880c8d0](https://github.com/Kajabi/sage-lib/commit/880c8d0e642d44d3ca8e81b9bfc0d531163b65bc))
+* **carousel:** added drag end handler ([1ed7be4](https://github.com/Kajabi/sage-lib/commit/1ed7be49dccbf6943bf925fd31d0641175960fd0))
+* **carousel:** added initial state for the prevArrow to start disabled ([66060fa](https://github.com/Kajabi/sage-lib/commit/66060fae3af0f4dfec37308a14f9a354d6f40082))
+* **carousel:** added logic for startIndex option ([bc5e1e1](https://github.com/Kajabi/sage-lib/commit/bc5e1e18de6b6e0e7728fa8fcf3442daa8deb799))
+* **carousel:** added loop for rendering carousel slides in React, updated graphic ([3baadc9](https://github.com/Kajabi/sage-lib/commit/3baadc9e18ab197bcc21f0b3c642445ab5ccfdbf))
+* **carousel:** added looping and arrows state ([c0d8231](https://github.com/Kajabi/sage-lib/commit/c0d8231a8a47562f972c4dd92aa6820aab7b1f1c))
+* **carousel:** changed arrow disabled to use state instead of DOM manipulation ([7f1bdd3](https://github.com/Kajabi/sage-lib/commit/7f1bdd3f52555a32deda026f02d838884be91402))
+* **carousel:** changed dots phrasing to indicator, removed unused dot styles ([2b816d6](https://github.com/Kajabi/sage-lib/commit/2b816d607cafbc9c527e39d5312aff04f49aa03c))
+* **carousel:** fixed dependencies in the initial useEffect hook ([5a8048f](https://github.com/Kajabi/sage-lib/commit/5a8048f06c74aea07468cdd9913d79054996859d))
+* **carousel:** fixed drag and arrow keys navigation with 'indexChanged' event ([7a61ff7](https://github.com/Kajabi/sage-lib/commit/7a61ff7ad47cd5e099551e6a638c92244c2ba12a))
+* **carousel:** fixed linting error when options.startIndex is undefined ([b51c7b6](https://github.com/Kajabi/sage-lib/commit/b51c7b655fb0dd145f27113e593b7c8fefbdbad4))
+* **carousel:** fixed yarn test linting error ([2d2f9db](https://github.com/Kajabi/sage-lib/commit/2d2f9dbe270eb18b0e5de9d88c79c6bf9f280476))
+* **carousel:** got looping and not looping scenarios working ([cb711ad](https://github.com/Kajabi/sage-lib/commit/cb711ad91375ce845c0da165fa849dac2c67462e))
+* **carousel:** got state working for indicator ([e199e54](https://github.com/Kajabi/sage-lib/commit/e199e5455d1684856ac664cc575f788cd22d9221))
+* **carousel:** re-added the mouseDrag option with dragEnd event to update arrows/indicator ([91b96b5](https://github.com/Kajabi/sage-lib/commit/91b96b5dac921be9e7c7360188e919eeef7d1304))
+* **carousel:** removed arrowKeys from React story ([10e554c](https://github.com/Kajabi/sage-lib/commit/10e554c5f901d920774461835e9b3ab5254b2423))
+* **carousel:** removed unnecessary indicator wrapper ([fcc6773](https://github.com/Kajabi/sage-lib/commit/fcc6773f266c309cbec8cb28691a93bc315448b6))
+* **carousel:** removed unused classnames, cleaned up some single-use variables ([df93c0f](https://github.com/Kajabi/sage-lib/commit/df93c0f10e2f40b785e32841267452e48031d67f))
+* **carousel:** simplified a lot of functionality with hooks ([47a1462](https://github.com/Kajabi/sage-lib/commit/47a1462305f74d969b3f582f66a502873df2e1a4))
+* **carousel:** switched to using CarouselSlide component ([7d2eeea](https://github.com/Kajabi/sage-lib/commit/7d2eeeac3587263b27b232222422c086f5119f47))
+* **icons:** add new icons ([5065c24](https://github.com/Kajabi/sage-lib/commit/5065c246de2fd34272b2278bdb2d74fde7a248f8))
+* **label:** adds new prop to React component ([d7af821](https://github.com/Kajabi/sage-lib/commit/d7af821ef1877ed4d0cf170b373dacef9cff4ca4))
+
+
+
+
+
 # [0.67.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.66.0...@kajabi/sage-react@0.67.0) (2021-11-10)
 
 
