@@ -49,7 +49,7 @@ and also be used with a vareity of layout techniques or components such as CSS f
 <%= sage_component SageCardList, {} do %>
   <% SageTokens::STATUSES.each do | color | %>
     <%= sage_component SageCardListItem, { grid_template: "o" } do %>
-      <%= color %>
+      <p><%= color %></p>
       <%= sage_component SageIcon, { icon: "pen", card_color: color } %>
       <%= sage_component SageIcon, { icon: "pen", card_color: color, circular: true, } %>
     <% end %>
@@ -59,7 +59,7 @@ and also be used with a vareity of layout techniques or components such as CSS f
 <%= sage_component SageCardList, {} do %>
   <% SageTokens::ICON_SIZES.each do | size | %>
     <%= sage_component SageCardListItem, { grid_template: "o" } do %>
-      <%= size == "md" ? "Default (#{size})" : size %>
+      <p><%= size == "md" ? "Default (#{size})" : size %></p>
       <%= sage_component SageIcon, { icon: "pen", size: (size == "md" ? nil : size), card_color: "draft" } %>
       <%= sage_component SageIcon, { icon: "pen", size: (size == "md" ? nil : size), card_color: "draft", circular: true, } %>
     <% end %>
