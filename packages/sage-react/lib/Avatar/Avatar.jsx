@@ -35,19 +35,19 @@ export const Avatar = ({
     let badgeIconSize = 'xs';
     const avatarSizeAsInteger = size.replace(/[^0-9]/g, '');
 
-    if (avatarSizeAsInteger >= 32 && avatarSizeAsInteger <= 44) {
+    if (avatarSizeAsInteger >= 32 && avatarSizeAsInteger < 48) {
       badgeIconSize = Icon.SIZES.SM;
-    } else if (avatarSizeAsInteger >= 48 && avatarSizeAsInteger <= 60) {
+    } else if (avatarSizeAsInteger >= 48 && avatarSizeAsInteger < 64) {
       badgeIconSize = Icon.SIZES.MD;
-    } else if (avatarSizeAsInteger >= 64 && avatarSizeAsInteger <= 76) {
+    } else if (avatarSizeAsInteger >= 64 && avatarSizeAsInteger < 80) {
       badgeIconSize = Icon.SIZES.LG;
-    } else if (avatarSizeAsInteger >= 80 && avatarSizeAsInteger <= 92) {
+    } else if (avatarSizeAsInteger >= 80 && avatarSizeAsInteger < 96) {
       badgeIconSize = Icon.SIZES.XL;
-    } else if (avatarSizeAsInteger >= 96 && avatarSizeAsInteger <= 108) {
+    } else if (avatarSizeAsInteger >= 96 && avatarSizeAsInteger < 112) {
       badgeIconSize = Icon.SIZES.XXL;
-    } else if (avatarSizeAsInteger >= 112 && avatarSizeAsInteger <= 124) {
+    } else if (avatarSizeAsInteger >= 112 && avatarSizeAsInteger < 128) {
       badgeIconSize = Icon.SIZES.XXXL;
-    } else if (avatarSizeAsInteger >= 128 && avatarSizeAsInteger <= 140) {
+    } else if (avatarSizeAsInteger >= 128) {
       badgeIconSize = Icon.SIZES.XXXXL;
     }
     return badgeIconSize;
