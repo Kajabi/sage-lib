@@ -9,13 +9,16 @@
   dismissable: true,
   primary_action: {
     value: "Primary",
+    test_id: "primary_action",
   },
   secondary_actions: [
     {
-      value: "Secondary Action 1",
+      value: "Button",
+      test_id: "secondary_action",
     },
     {
-      value: "Secondary Action 2"
+      value: "Another button",
+      test_id: "secondary_action_two",
     },
   ],
 } do %>
@@ -32,8 +35,20 @@
   icon_name: "sage-icon-check-circle",
   dismissable: true,
   primary_action: {
-    value: "Primary"
+    value: "Primary - Link",
+    attributes: {
+      href: "#element-button"
+    },
   },
+  secondary_actions: [
+    {
+      value: "Secondary - Link",
+      test_id: "secondary_action_three",
+      attributes: {
+        href: "#element-button"
+      },
+    },
+  ],
 } do %>
   <% content_for :sage_alert_actions do %>
     <%= link_to "Action Link", "#" %>
@@ -48,9 +63,6 @@
   desc: "Make sure you know how these changes affect you.",
   icon_name: "sage-icon-warning",
   dismissable: true,
-  primary_action: {
-    value: "Primary"
-  },
 } do %>
   <% content_for :sage_alert_actions do %>
     <%= link_to "Action Link", "#" %>
@@ -68,13 +80,8 @@
   dismissable: true,
   primary_action: {
     value: "Primary"
-  },
-} do %>
-  <% content_for :sage_alert_actions do %>
-    <%= link_to "Action Link", "#" %>
-    <%= link_to "Action Link", "#" %>
-  <% end %>
-<% end %>
+  } 
+} %>
 
 <h3>Non-Dismissable Alert (no close button)</h3>
 <!-- Info -->
