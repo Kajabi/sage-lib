@@ -40,11 +40,11 @@
           <% component.secondary_actions.each do | secondary_action | %>
             <%= sage_component SageButton, {
               value: secondary_action[:value],
-              test_id: component.secondary_action[:test_id],
+              test_id: secondary_action[:test_id],
               style: "secondary",
               subtle: true,
               css_classes: "sage-alert__secondary-action",
-              attributes: component.secondary_action[:attributes]
+              attributes: secondary_action[:attributes]
             } %>
           <% end %>
         <% end %>
