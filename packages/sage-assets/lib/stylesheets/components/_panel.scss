@@ -172,7 +172,19 @@
 
 @for $i from 2 through 4 {
   .sage-panel__tiles--#{$i}-up {
-    grid-template-columns: repeat(#{$i}, calc((100% - #{sage-spacing() * ($i - 1)}) / #{$i}));
+    grid-template-columns: repeat(100%);
+  }
+
+  @media (min-width: sage-breakpoint(sm-min)) and (max-width: sage-breakpoint(md-max)) {
+    .sage-panel__tiles--#{$i}-up {
+      grid-template-columns: repeat(2, calc((100% - #{sage-spacing() * ($i - 1)}) / 2));
+    }
+  }
+
+  @media (min-width: sage-breakpoint(lg-min)) {
+    .sage-panel__tiles--#{$i}-up {
+      grid-template-columns: repeat(#{$i}, calc((100% - #{sage-spacing() * ($i - 1)}) / #{$i}));
+    }
   }
 
   .sage-panel__tiles--#{$i}-up-condensed {
