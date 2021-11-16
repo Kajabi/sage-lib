@@ -7,6 +7,7 @@ export { Card } from './Card';
 export { Carousel } from './Carousel';
 export { Chart } from './Chart';
 export { Choice } from './Choice';
+export { Drawer } from './Drawer';
 export {
   Dropdown,
   OptionsDropdown,

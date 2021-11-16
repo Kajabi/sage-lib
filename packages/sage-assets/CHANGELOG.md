@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.58.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.57.0...@kajabi/sage-assets@0.58.0) (2021-11-15)
+
+
+### Bug Fixes
+
+* **input error:** remove deprecated form field error class ([e03cc17](https://github.com/Kajabi/sage-lib/commit/e03cc177daf4e617b6c988247f7e117b123d9fc7))
+* **radio:** update alignment within sortable component ([a912fac](https://github.com/Kajabi/sage-lib/commit/a912fac0733f314e0451503a48b4498ac15768ac))
+
+
+### Features
+
+* **carousel:** changed dots phrasing to indicator, removed unused dot styles ([2b816d6](https://github.com/Kajabi/sage-lib/commit/2b816d607cafbc9c527e39d5312aff04f49aa03c))
+* **gap:** fix missing gap, remove comments ([d3b285b](https://github.com/Kajabi/sage-lib/commit/d3b285bbba4616788a40a595ad07ecca527ad5c8))
+* **icons:** add new icons ([5065c24](https://github.com/Kajabi/sage-lib/commit/5065c246de2fd34272b2278bdb2d74fde7a248f8))
+* **icons:** remove capitalize of glyph name for headings ([553d29d](https://github.com/Kajabi/sage-lib/commit/553d29d4ea37d64914dd10614d2f20017cdf49d0))
+* **label:** fully implements new prop for custom icon color in Rails component ([0208f43](https://github.com/Kajabi/sage-lib/commit/0208f4323c0394169b9b1e14820723d62c6ca128))
+* **label:** fully implements new prop for custom icon color in Rails component ([86c68d7](https://github.com/Kajabi/sage-lib/commit/86c68d7be6182cefe157a190b1d68efeb4ec25c4))
+* **label group:** add gap ([04df5af](https://github.com/Kajabi/sage-lib/commit/04df5af81614bc4ce4d6443c6dd7233534934fee))
+
+
+
+
+
 # [0.57.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.56.0...@kajabi/sage-assets@0.57.0) (2021-11-10)
 
 

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
 export const Indicator = ({
+  className,
   currentItem,
   label,
   numItems,
@@ -39,7 +40,7 @@ export const Indicator = ({
         <p className="sage-indicator-text">{label} {currentItem} {preposition} {numItems}</p>
       ) : (
         <ul
-          className="sage-indicator-list"
+          className={`sage-indicator-list ${className}`}
           aria-label={`Showing ${label} ${currentItem} ${preposition} ${numItems}`}
         >
           {items}
@@ -50,6 +51,7 @@ export const Indicator = ({
 };
 
 Indicator.defaultProps = {
+  className: null,
   currentItem: null,
   label: null,
   numItems: 0,
@@ -58,6 +60,7 @@ Indicator.defaultProps = {
 };
 
 Indicator.propTypes = {
+  className: PropTypes.string,
   currentItem: PropTypes.number,
   label: PropTypes.string,
   numItems: PropTypes.number,
