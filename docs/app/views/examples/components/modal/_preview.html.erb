@@ -1,5 +1,8 @@
+<%
+  sample_body_text = "<p class='#{SageClassnames::TYPE::BODY}'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>".html_safe
+%>
 <%= sage_component SagePanelBlock, {} do %>
-  <%= sage_component SageButtonGroup, { gap: :sm, spacer: { bottom: :sm }} do %>
+  <%= sage_component SageButtonGroup, { wrap: true, gap: :sm, spacer: { bottom: :sm }} do %>
     <%= sage_component SageButton, {
       style: "primary",
       icon: { name: "launch", style: "right" },
@@ -89,15 +92,9 @@
         } %>
       <% end %>
 
-      <p class="<%= SageClassnames::TYPE::BODY %>">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      </p>
+      <%= sample_body_text %>
 
-      <p class="<%= SageClassnames::TYPE::BODY %>">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      </p>
+      <%= sample_body_text %>
 
       <% content_for :sage_footer do %>
         <% content_for :sage_footer_aside do %>
@@ -138,10 +135,7 @@
         } %>
       <% end %>
 
-      <p class="<%= SageClassnames::TYPE::BODY %>">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      </p>
+      <%= sample_body_text %>
 
       <% content_for :sage_footer do %>
         <% content_for :sage_footer_aside do %>
@@ -180,10 +174,7 @@
         } %>
       <% end %>
 
-      <p class="<%= SageClassnames::TYPE::BODY %>">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      </p>
+      <%= sample_body_text %>
 
       <% content_for :sage_footer do %>
         <% content_for :sage_footer_aside do %>
@@ -219,10 +210,7 @@
         } %>
       <% end %>
 
-      <p class="<%= SageClassnames::TYPE::BODY %>">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      </p>
+      <%= sample_body_text %>
 
       <% content_for :sage_footer do %>
         <% content_for :sage_footer_aside do %>
@@ -317,10 +305,7 @@
         } %>
       <% end %>
 
-      <p class="<%= SageClassnames::TYPE::BODY %>">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      </p>
+      <%= sample_body_text %>
 
       <% content_for :sage_footer do %>
         <% content_for :sage_footer_aside do %>
@@ -370,10 +355,7 @@
         } %>
       <% end %>
 
-      <p class="<%= SageClassnames::TYPE::BODY %>">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      </p>
+      <%= sample_body_text %>
     <% end %>
   <% end %>
 
@@ -429,10 +411,7 @@
         } %>
       <% end %>
 
-      <p class="<%= SageClassnames::TYPE::BODY %>">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      </p>
+      <%= sample_body_text %>
 
       <% content_for :sage_footer do %>
         <% content_for :sage_footer_aside do %>
@@ -464,10 +443,7 @@
         } %>
       <% end %>
 
-      <p class="<%= SageClassnames::TYPE::BODY %>">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      </p>
+      <%= sample_body_text %>
 
       <% content_for :sage_footer do %>
         <% content_for :sage_footer_aside do %>
@@ -499,10 +475,7 @@
         } %>
       <% end %>
 
-      <p class="<%= SageClassnames::TYPE::BODY %>">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      </p>
+      <%= sample_body_text %>
 
       <% content_for :sage_footer do %>
         <% content_for :sage_footer_aside do %>
@@ -534,10 +507,7 @@
         } %>
       <% end %>
 
-      <p class="<%= SageClassnames::TYPE::BODY %>">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      </p>
+      <%= sample_body_text %>
 
       <% content_for :sage_footer do %>
         <% content_for :sage_footer_aside do %>
@@ -689,10 +659,7 @@ As shown elsewhere on this page default content (such as `SageLoader`) can also 
         } %>
       <% end %>
 
-      <p class="<%= SageClassnames::TYPE::BODY %>">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      </p>
+      <%= sample_body_text %>
 
       <% content_for :sage_footer do %>
         <% content_for :sage_footer_aside do %>
@@ -724,10 +691,7 @@ As shown elsewhere on this page default content (such as `SageLoader`) can also 
         } %>
       <% end %>
 
-      <p class="<%= SageClassnames::TYPE::BODY %>">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      </p>
+      <%= sample_body_text %>
 
       <% content_for :sage_footer do %>
         <% content_for :sage_footer_aside do %>
@@ -759,10 +723,7 @@ As shown elsewhere on this page default content (such as `SageLoader`) can also 
         } %>
       <% end %>
 
-      <p class="<%= SageClassnames::TYPE::BODY %>">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      </p>
+      <%= sample_body_text %>
 
       <% content_for :sage_footer do %>
         <% content_for :sage_footer_aside do %>
@@ -794,10 +755,7 @@ As shown elsewhere on this page default content (such as `SageLoader`) can also 
         } %>
       <% end %>
 
-      <p class="<%= SageClassnames::TYPE::BODY %>">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      </p>
+      <%= sample_body_text %>
 
       <% content_for :sage_footer do %>
         <% content_for :sage_footer_aside do %>
