@@ -165,35 +165,26 @@
 }
 
 .sage-panel__tiles {
-  display: grid;
-  grid-gap: sage-spacing();
-  list-style: none;
-}
+  --sage-panel-tiles-gap: #{sage-spacing()};
 
-@for $i from 2 through 4 {
-  .sage-panel__tiles--#{$i}-up-condensed {
-    grid-gap: sage-spacing(xs);
+  display: grid;
+  grid-gap: var(--sage-panel-tiles-gap);
+  grid-template-columns: repeat(var(--sage-panel-tiles-columns), calc((100% - (var(--sage-panel-tiles-gap) * (var(--sage-panel-tiles-columns) - 1))) / var(--sage-panel-tiles-columns)));
+  list-style: none;
+
+  @media (max-width: sage-breakpoint(xs-max)) {
+    --sage-panel-tiles-columns: 1;
   }
 
   @media (min-width: sage-breakpoint(sm-min)) and (max-width: sage-breakpoint(md-max)) {
-    .sage-panel__tiles--#{$i}-up {
-      grid-template-columns: repeat(2, calc((100% - #{sage-spacing() * ($i - 1)}) / 2));
-    }
-
-    .sage-panel__tiles--#{$i}-up-condensed {
-      grid-gap: sage-spacing(xs);
-      grid-template-columns: repeat(2, calc((100% - #{sage-spacing(xs) * ($i - 1)}) / 2));
-    }
+    --sage-panel-tiles-columns: 2;
   }
+}
 
+@for $i from 2 through 4 {
   @media (min-width: sage-breakpoint(lg-min)) {
     .sage-panel__tiles--#{$i}-up {
-      grid-template-columns: repeat(#{$i}, calc((100% - #{sage-spacing() * ($i - 1)}) / #{$i}));
-    }
-
-    .sage-panel__tiles--#{$i}-up-condensed {
-      grid-gap: sage-spacing(xs);
-      grid-template-columns: repeat(#{$i}, calc((100% - #{sage-spacing(xs) * ($i - 1)}) / #{$i}));
+      --sage-panel-tiles-columns: #{$i};
     }
   }
 }
