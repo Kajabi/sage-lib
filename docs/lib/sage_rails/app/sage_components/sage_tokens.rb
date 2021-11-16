@@ -320,7 +320,7 @@ module SageTokens
 
   SPACER_SIZES = [:xs, :sm, :md, :lg, :xl, "2xs", "xs", "sm", "md", "lg", "xl", "2xl", "stage", "panel", "card", "stack"]
 
-  STATUSES = ["danger", "draft", "info", "locked", "published", "warning"]
+  STATUSES = ["danger", "draft", "info", "locked", "published", "warning", "reached", "exceeded", "approaching"]
 
   # All type specs. Keep in sync with `packages/sage-assets/lib/stylesheets/tokens/_type_specs.scss`
   TYPE_SPECS = [

@@ -400,6 +400,18 @@ $-btn-loading-min-height: rem(36px);
   }
 }
 
+// Note: duplicated from _alert.scss; update here when _alert.scss changes
+$-alert-colors: (
+  info: primary,
+  published: sage,
+  success: sage,
+  warning: yellow,
+  danger: red,
+  exceeded: red,
+  reached: orange,
+  approaching: yellow,
+);
+
 // Secondary styles, no shadow variation
 .sage-btn--secondary {
   &.sage-btn--no-shadow {
@@ -423,6 +435,31 @@ $-btn-loading-min-height: rem(36px);
     &[aria-disabled="true"] {
       color: sage-color(grey, 500);
       background-color: sage-color(white);
+    }
+  }
+
+  &.sage-alert__primary-action {
+    background-color: transparent;
+
+    @each $name, $color in $-alert-colors {
+      .sage-alert--#{$name} & {
+        border: 1px solid sage-color($color, 200);
+
+        &:hover {
+          color: sage-color(charcoal, 500);
+          border-color: sage-color($color, 300);
+          background-color: transparent;
+        }
+
+        &:focus,
+        &:active {
+          color: sage-color(charcoal, 400);
+          border-color: sage-color($color, 200);
+          background-color: transparent;
+        }
+  
+        @include sage-focus-outline--update-color(sage-color($color, 400));
+      }
     }
   }
 }
@@ -518,6 +555,40 @@ $-btn-loading-min-height: rem(36px);
 
     &:focus {
       color: sage-color(white);
+    }
+  }
+
+
+  &.sage-alert__secondary-action {
+    color: sage-color(charcoal, 400);
+    text-decoration: underline;
+    border: 0;
+
+    @each $name, $color in $-alert-colors {
+      .sage-alert--#{$name} & {
+        &.sage-btn {
+          border-color: transparent;
+
+          &:hover::after {
+            background: transparent;
+            border-color: transparent;
+            opacity: 0;
+          }
+
+          &:focus,
+          &:active {
+            color: sage-color(charcoal, 400);
+            border-color: sage-color($color, 200);
+          }
+
+          &:focus::after,
+          &:active::after {
+            border-color: sage-color($color, 400);
+          }
+        }
+
+        @include sage-focus-outline--update-color(sage-color($color, 400));
+      }
     }
   }
 }
