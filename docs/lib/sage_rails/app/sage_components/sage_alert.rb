@@ -5,12 +5,14 @@ class SageAlert < SageComponent
     dismissable: [:optional, TrueClass],
     icon_name: [:optional, String],
     primary_action: [:optional, {
-      value: [:optional, String],
-      url: [:optional, String],
+      value: String,
+      test_id: [:optional, NilClass, String],
+      attributes: [:optional, NilClass, Hash]
     }],
     secondary_actions: [:optional, [[{
-      value: [:optional, String],
-      url: [:optional, String],
+      value: String,
+      test_id: [:optional, NilClass, String],
+      attributes: [:optional, NilClass, Hash]
     }]]],
     small: [:optional, TrueClass],
     title: [:optional, String],

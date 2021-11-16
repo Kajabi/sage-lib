@@ -14,3 +14,5 @@ class SageButton < SageComponent
     value: [:optional, String],
   })
 end
+
+#TODO - look at `value` being a required

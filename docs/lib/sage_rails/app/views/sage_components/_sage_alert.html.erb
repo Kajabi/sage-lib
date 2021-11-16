@@ -26,45 +26,31 @@
     <% end %>
     <% if component.primary_action or component.secondary_actions or content_for? :sage_alert_actions then %>
       <div class="sage-alert__actions">
-    <% end %>
-      <% if component.primary_action %>
-        <% if is_primary_button %>
+        <% if component.primary_action %>
           <%= sage_component SageButton, {
             value: component.primary_action[:value],
+            test_id: component.primary_action[:test_id],
             style: "secondary",
             raised: false,
             css_classes: "sage-alert__primary-action",
-          } %>
-        <% else %>
-          <%= sage_component SageButton, {
-            value: component.primary_action[:value],
-            style: "secondary",
-            raised: false,
-            css_classes: "sage-alert__primary-action",
-            attributes: {
-              href: component.primary_action[:url]
-            },
+            attributes: component.primary_action[:attributes]
           } %>
         <% end %>
-      <% end %>
-      <% if component.secondary_actions %>
-        <% component.secondary_actions.each do | secondary_action | %>
-          <% if secondary_action[:value].present? %>
+        <% if component.secondary_actions %>
+          <% component.secondary_actions.each do | secondary_action | %>
             <%= sage_component SageButton, {
               value: secondary_action[:value],
+              test_id: component.secondary_action[:test_id],
               style: "secondary",
               subtle: true,
               css_classes: "sage-alert__secondary-action",
+              attributes: component.secondary_action[:attributes]
             } %>
-          <% else %>
-          <%= link_to secondary_action[:value], secondary_action[:url] %>
           <% end %>
         <% end %>
-      <% end %>
-      <% if content_for? :sage_alert_actions %>
-        <%= content_for :sage_alert_actions %>
-      <% end %>
-    <% if component.primary_action or component.secondary_actions or content_for? :sage_alert_actions then %>
+        <% if content_for? :sage_alert_actions %>
+          <%= content_for :sage_alert_actions %>
+        <% end %>
       </div>
     <% end %>
   </div>
@@ -79,5 +65,5 @@
       small: true,
       css_classes: "sage-alert__close"
     } %>
-    <% end %>
+  <% end %>
 </div>
