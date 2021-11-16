@@ -22,7 +22,7 @@
     <% if component.desc %>
       <p class="sage-alert__desc"><%= component.desc %></p>
     <% end %>
-    <% if component.primary_action or component.secondary_actions or content_for? :sage_alert_actions then %>
+    <% if component.primary_action or component.secondary_actions or content_for? :sage_alert_actions %>
       <div class="sage-alert__actions">
         <% if component.primary_action %>
           <%= sage_component SageButton, {
