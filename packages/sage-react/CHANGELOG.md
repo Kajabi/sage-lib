@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.71.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.70.0...@kajabi/sage-react@0.71.0) (2021-11-17)
+
+
+### Features
+
+* **description:** add Description export ([a3f8e48](https://github.com/Kajabi/sage-lib/commit/a3f8e488d000f9c58fb17df9946ff6d12277f67e))
+
+
+
+
+
 # [0.70.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.69.0...@kajabi/sage-react@0.70.0) (2021-11-17)
 
 
