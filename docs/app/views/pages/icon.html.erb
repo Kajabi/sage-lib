@@ -256,9 +256,15 @@ Marketing uses the Megaphone icon. We do not use the megaphone icon for other tr
   <h2>All Icons</h2>
   <%= sage_component SageGridRow, {} do %>
     <% SageTokens::ICONS.each do |icon| %>
-      <%= sage_component SageGridCol, { breakpoint: "md", size: "4" } do %>
-        <div class="docs-icon-block">
-          <i class="sage-icon-<%= icon %>-2xl" aria-hidden="true"></i>
+      <%= sage_component SageGridCol, { breakpoint: "md", size: "3" } do %>
+        <div
+          class="docs-icon-block"
+          data-js-copy-button="<&#37;= sage_component SageIcon, { icon: &quot;<%= icon %>&quot; } &#37;>"
+          title="Copy <%= icon %> icon to clipboard">
+          <%= sage_component SageIcon, {
+            icon: icon,
+            size: "2xl",
+          } %>
           <p class="docs-icon-block__label"><%= icon %></p>
         </div>
       <% end %>

@@ -147,6 +147,10 @@ $-icon-beside-type: (
   &:not(.sage-icon-background--circular) {
     border-radius: sage-border(radius);
   }
+
+  @media screen and (max-width: sage-breakpoint(md-max)) {
+    max-width: sage-spacing(xl);
+  }
 }
 
 .sage-icon-background--circular {
@@ -159,6 +163,9 @@ $-icon-beside-type: (
   .sage-icon-background-#{$suffix} {
     width: $size;
     height: $size;
+    @media screen and (max-width: sage-breakpoint(md-max)) {
+      max-width: $size;
+    }
   }
 }
 

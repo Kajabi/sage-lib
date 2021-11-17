@@ -4,22 +4,17 @@
 /// @group sage
 ////
 
-
+// Note: duplicated in _button.scss; update there when _alert.scss changes
 $-alert-colors: (
   info: primary,
   published: sage,
   success: sage,
   warning: yellow,
   danger: red,
+  exceeded: red,
+  reached: orange,
+  approaching: yellow,
 );
-$-alert-icon-colors: (
-  info: primary,
-  published: sage,
-  success: sage,
-  warning: orange,
-  danger: red,
-);
-
 
 .sage-alert {
   display: grid;
@@ -37,39 +32,39 @@ $-alert-icon-colors: (
   }
 }
 
-.sage-alert--info {
-  border: 1px solid sage-color(primary, 200);
-}
-
-.sage-alert--success,
-.sage-alert--published {
-  border: 1px solid sage-color(sage, 200);
-}
-
-.sage-alert--warning {
-  border: 1px solid sage-color(yellow);
-}
-
-.sage-alert--danger {
-  border: 1px solid sage-color(red);
-}
-
 @each $name, $color in $-alert-colors {
   .sage-alert--#{$name} {
     background: sage-color($color, 100);
+    border: 1px solid sage-color($color, 200);
 
     a:not([class]) {
-      color: sage-color($color, 400);
+      color: sage-color(charcoal, 400);
       text-decoration: underline;
     }
 
     .sage-alert__icon::before {
       line-height: sage-line-height(h6);
     }
+  }
+}
 
-    .sage-alert__actions a:not([class]) {
-      margin-right: sage-spacing(md);
-    }
+.sage-alert--small {
+  gap: sage-spacing(xs);
+  align-items: center;
+  padding: sage-spacing(xs) sage-spacing(sm);
+  margin-bottom: 0;
+
+  .sage-alert__icon {
+    line-height: normal;
+  }
+
+  .sage-alert__icon::before {
+    line-height: sage-spacing(sm);
+  }
+
+  .sage-alert__desc {
+    @include truncate();
+    max-width: 100%;
   }
 }
 
@@ -79,28 +74,29 @@ $-alert-icon-colors: (
 
 .sage-alert__title {
   @extend %t-sage-heading-6;
-
-  @each $name, $color in $-alert-colors {
-    .sage-alert--#{$name} & {
-      color: sage-color($color, 500);
-    }
-  }
+  color: sage-color(charcoal, 500);
 }
 
-.sage-alert__desc {
-  @each $name, $color in $-alert-colors {
-    .sage-alert--#{$name} & {
-      color: sage-color($color, 400);
-    }
-  }
+.sage-alert__title--add-on {
+  @extend %t-sage-body-small;
 }
 
 .sage-alert__icon {
   display: inline-flex;
-  @each $name, $color in $-alert-icon-colors {
+  @each $name, $color in $-alert-colors {
     .sage-alert--#{$name} & {
       color: sage-color($color, 300);
     }
+  }
+  .sage-alert--warning &,
+  .sage-alert--approaching & {
+    color: sage-color(yellow, 400);
+  }
+  .sage-alert--reached & {
+    color: sage-color(orange, 400);
+  }
+  .sage-alert--exceeded & {
+    color: sage-color(red, 400);
   }
 }
 
@@ -109,6 +105,7 @@ $-alert-icon-colors: (
   height: rem(20px);
   width: rem(20px);
   padding: 0;
+  margin-left: auto;
   font-size: sage-font-size(xl, false);
   line-height: 1;
   background-color: transparent;
@@ -117,7 +114,7 @@ $-alert-icon-colors: (
 
   @each $name, $color in $-alert-colors {
     .sage-alert--#{$name} & {
-      color: sage-color($color, 400);
+      color: sage-color(charcoal, 100);
 
       @include sage-focus-outline($outline-offset-inline: 3px, $outline-offset-block: 3px);
       @include sage-focus-outline--update-color(sage-color($color, 400));
@@ -132,12 +129,16 @@ $-alert-icon-colors: (
 .sage-alert__actions {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  gap: sage-spacing(md);
+  margin-top: sage-spacing(xs); // note: total spacing is sm (16px) but grid stack adds 8px already
 
   @each $name, $color in $-alert-colors {
     .sage-alert--#{$name} & > a {
-      @include sage-focus-outline($outline-offset-inline: 6px, $outline-offset-block: 0);
+      @include sage-focus-outline($outline-offset-inline: 2px, $outline-offset-block: 2px);
       @include sage-focus-outline--update-color(sage-color($color, 400));
       font-weight: sage-font-weight(medium);
     }
   }
 }
+

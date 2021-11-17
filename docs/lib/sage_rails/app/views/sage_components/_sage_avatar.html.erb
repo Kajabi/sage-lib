@@ -4,7 +4,23 @@ lazy_load_initials = true
 if component.lazy_load_initials == false
   lazy_load_initials = false
 end
+
+# Sets badge icon size based on Avatar size
+badge_icon_size = 'xs';
+avatar_size_as_integer = component.size.to_i;
+
+case avatar_size_as_integer
+  when 32..47 then badge_icon_size = "sm"
+  when 48..63 then badge_icon_size = "md"
+  when 64..79 then badge_icon_size = "lg"
+  when 80..95 then badge_icon_size = "xl"
+  when 96..111 then badge_icon_size = "2xl"
+  when 112..127 then badge_icon_size = "3xl"
+  when 128..140 then badge_icon_size = "4xl"
+end
+
 %>
+
 <div
   class="
     sage-avatar
@@ -17,6 +33,16 @@ end
     style="width: <%= component.size %>; height: <%= component.size %>;"
   <% end %>
 >
+  <% if component.badge %>
+    <div class="sage-avatar__badge">
+      <%= sage_component SageIcon, {
+        icon: "check-circle-filled",
+        size: badge_icon_size,
+        color: "primary-300",
+      } %>
+    </div>
+  <% end %>
+
   <% if component.image %>
     <%= image_tag component.image[:src], alt: (component.image[:alt] || ""), class: "sage-avatar__image" %>
   <% end %>
