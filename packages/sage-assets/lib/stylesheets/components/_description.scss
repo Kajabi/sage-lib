@@ -20,7 +20,8 @@
 }
 
 .sage-description__data {
-  @extend %t-sage-body;
+  @extend %t-sage-body-semi;
+  color: sage-color(charcoal, 400);
 
   .sage-description--inline-spread & {
     flex: 1;
@@ -49,8 +50,8 @@
 }
 
 .sage-description__title {
-  @extend %t-sage-body-small-semi;
-  color: sage-color(charcoal, 300);
+  @extend %t-sage-body;
+  color: sage-color(charcoal, 100);
 
   .sage-description:not(.sage-description--normalcase-titles) & {
     text-transform: uppercase;
