@@ -3,6 +3,65 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.28.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.27.1...@kajabi/sage@4.28.0) (2021-11-17)
+
+
+### Bug Fixes
+
+* **alerts:** update minor alignment in dont doc ([07e3f19](https://github.com/Kajabi/sage-lib/commit/07e3f190782cb077f38666434c86555f71014581))
+* **avatar:** fixes avatar badge size ranges ([b426196](https://github.com/Kajabi/sage-lib/commit/b426196155f17b37028085af4ae56c32e0e89117))
+* **sageicon:** adjust documentation for better layout on smaller screens ([3648e21](https://github.com/Kajabi/sage-lib/commit/3648e213735e6cf7509ecaeebb7a3d80b91e8336))
+* adjust spacing and icons ([afe7b74](https://github.com/Kajabi/sage-lib/commit/afe7b74d8e0c567a6fdc40383eb8f5d30a01439a))
+* adjust upsell item dropdown ([4ca140e](https://github.com/Kajabi/sage-lib/commit/4ca140e85f71336d3181c51c54a58886c90cd566))
+* layout adjustment ([aadf993](https://github.com/Kajabi/sage-lib/commit/aadf993773b6e7440628ca087702c6ec696dc828))
+* lint fix ([b3879a7](https://github.com/Kajabi/sage-lib/commit/b3879a701572592ee34c8d62a39a7db02a3ae750))
+* remove unused styling ([6f03c00](https://github.com/Kajabi/sage-lib/commit/6f03c00bd537463c409e9b2938cde5ed22593a0c))
+* update divider label and remove button icon after rebase ([e6b03ca](https://github.com/Kajabi/sage-lib/commit/e6b03caac4c4531a28f567c2a4fbecec003c84b0))
+* update icon to use comoponent ([ddf191f](https://github.com/Kajabi/sage-lib/commit/ddf191f30de09ddc9570d287efa54f0b25e7f114))
+* **button:** save point before starting a small refactor ([f86b3c6](https://github.com/Kajabi/sage-lib/commit/f86b3c6244d7ce7bc46bf23dbe35498e3b8455ba))
+
+
+### Features
+
+* **alert:** cleanup ([660b2cf](https://github.com/Kajabi/sage-lib/commit/660b2cfd84dac930be1321dcd3afacb3a61aeb89))
+* **alert:** cleanup property values ([ede8c92](https://github.com/Kajabi/sage-lib/commit/ede8c92d2537f63897d16cfe656df9d68904abbe))
+* **alert:** minor updates to spelling and grammar ([65e46aa](https://github.com/Kajabi/sage-lib/commit/65e46aa370a02d7e0d30ce6dd563a0234022ca27))
+* **alert:** remove 'then' from conditional statement ([4dcb5ec](https://github.com/Kajabi/sage-lib/commit/4dcb5ece64635a4d3308b3834b875d395eec7ac2))
+* **alert:** review updates for attributes ([68eea32](https://github.com/Kajabi/sage-lib/commit/68eea323a0cb2a56a8a176ba65f8fc2b0b9eb39e))
+* **alert:** update button options rails ([5ac0ba9](https://github.com/Kajabi/sage-lib/commit/5ac0ba95a7c876a4094c0cfa52a95c01b9bf162c))
+* **alert:** update documentation for props ([138be11](https://github.com/Kajabi/sage-lib/commit/138be11cda32e8518a3614514ed4e2174bdf2dcd))
+* **alert:** update rails properties for array of secondary actions ([d2d8757](https://github.com/Kajabi/sage-lib/commit/d2d8757602c4d8adfe9bad910e2da6af05926d59))
+* **alerts:** add example of title_addon ([16c78a6](https://github.com/Kajabi/sage-lib/commit/16c78a6ee6846075ede18f8b501be138ce3e0a1b))
+* **alerts:** add new orange variation and include new names ([9ab7e34](https://github.com/Kajabi/sage-lib/commit/9ab7e3459e2649061796dd280aea63687b789429))
+* **alerts:** add title_addon property ([4b84d66](https://github.com/Kajabi/sage-lib/commit/4b84d66d0dca48dc201d3d84e1b4b9839b29fdd3))
+* **alerts:** remove kp specific alert examples ([ea6107e](https://github.com/Kajabi/sage-lib/commit/ea6107e5dbab28c85a2400daa2fd0bc347d08b22))
+* **alerts:** remove new alert headings ([ee69202](https://github.com/Kajabi/sage-lib/commit/ee69202dc0b300ffdbb471e1711a45141ce52fad))
+* **alerts:** revert colors to move to separate PR ([e440372](https://github.com/Kajabi/sage-lib/commit/e44037299ecb1b24d096f4d404e0c838f1080b38))
+* **alerts:** review fixes for documentation ([31cf81e](https://github.com/Kajabi/sage-lib/commit/31cf81e32a22fa04dd0a5c979c656229dcd28614))
+* **avatar:** adds badge prop to Rails component ([2476dff](https://github.com/Kajabi/sage-lib/commit/2476dffd484cbe2a56036fd5e4f68cbe21038b8c))
+* **avatar:** adds logic to change badge size based on avatar ([a297c60](https://github.com/Kajabi/sage-lib/commit/a297c604bda5d7b0dcd6e7f5b04bf492dab7f0aa))
+* **avatar:** gives badge default icon color ([ed2ebfa](https://github.com/Kajabi/sage-lib/commit/ed2ebfa492bfa756bf7801121840378a92fbb2e4))
+* **docs:** add basic mocks page structure ([7806b86](https://github.com/Kajabi/sage-lib/commit/7806b8673c2b975164738fe154d65c7f72cb3e7a))
+* **docs:** continue to build out mocks structure ([da6f5e4](https://github.com/Kajabi/sage-lib/commit/da6f5e458d684be48c3ee60815336c35760b0d24))
+* **docs:** convert mock to new system ([49688be](https://github.com/Kajabi/sage-lib/commit/49688be676f62de4835fea2bda39f7dadccf7524))
+* **docs:** further improve flexibility with mocks system ([0cc4dc9](https://github.com/Kajabi/sage-lib/commit/0cc4dc9d7f3f50c1b5c458baf264a68b8b15130b))
+* **icon:** add character entity quotes ([46283ef](https://github.com/Kajabi/sage-lib/commit/46283ef98f92699904c091058dc1f4e5a27e9696))
+* **icon:** move copy to entire doc icon block ([5530985](https://github.com/Kajabi/sage-lib/commit/553098507be4f5211fca6c01876408b46677076c))
+* **icon copy:** add feature to copy icon code to clipboard ([163f2ac](https://github.com/Kajabi/sage-lib/commit/163f2ac1c7bfebb99ec8927a5a7fc47260040626))
+* **icon copy:** correct code copied to clipboard ([b4ef1c7](https://github.com/Kajabi/sage-lib/commit/b4ef1c70606e1f62246c58b63a802ec63c611ffd))
+* **icon copy:** polish the copied code ([0db6fe1](https://github.com/Kajabi/sage-lib/commit/0db6fe12d237039a5319c95ade82ba844aaa4c24))
+* **icons:** update from fancy to plain quotes ([3e6ff43](https://github.com/Kajabi/sage-lib/commit/3e6ff43150e6b27a10e8bd7689b6fd7c7ec836bc))
+* **small alert:** update alerts to include small variation ([5270265](https://github.com/Kajabi/sage-lib/commit/52702652e30a4ac315d0749c5926e89d78fe1142))
+* **small alerts:** polish alerts when small variation ([23dcd2c](https://github.com/Kajabi/sage-lib/commit/23dcd2c66542730e3c6b61737c03c51535d64264))
+* add contact profile mock and notes ([6f0b83b](https://github.com/Kajabi/sage-lib/commit/6f0b83bad6d795c8be0540de7c3c2c1a2dc8f775))
+* add mock stylesheet precedent ([82ade4d](https://github.com/Kajabi/sage-lib/commit/82ade4d21481c0125d5e50fdc18401b7ea5e5efa))
+* add poc to sandbox ([6683d34](https://github.com/Kajabi/sage-lib/commit/6683d345929ee59d6d5745f64e3b2b81e3d3358b))
+* clean up rails mock ([323ce95](https://github.com/Kajabi/sage-lib/commit/323ce9521363f3ea5db1617d370034328b4806aa))
+
+
+
+
+
 ## [4.27.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.27.0...@kajabi/sage@4.27.1) (2021-11-15)
 
 **Note:** Version bump only for package @kajabi/sage

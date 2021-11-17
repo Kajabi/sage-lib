@@ -3,6 +3,46 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.59.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.58.0...@kajabi/sage-assets@0.59.0) (2021-11-17)
+
+
+### Bug Fixes
+
+* **button:** iterate on the subtle button ([43a219a](https://github.com/Kajabi/sage-lib/commit/43a219a678f398e0b698e65590ed621a617b0a1a))
+* **button:** save point before starting a small refactor ([f86b3c6](https://github.com/Kajabi/sage-lib/commit/f86b3c6244d7ce7bc46bf23dbe35498e3b8455ba))
+* **button:** updates per design update ([c93e3dd](https://github.com/Kajabi/sage-lib/commit/c93e3dd8f9ea582c9f349bac761a5c1249a096c3))
+* **sageicon:** adjust width on smaller screen sizes ([3e5d587](https://github.com/Kajabi/sage-lib/commit/3e5d5870cee4bf590eb090d898dffe49bccfcfa3))
+* **small alert:** remove defined margin-bottom ([b582457](https://github.com/Kajabi/sage-lib/commit/b582457f41aafa60685078e211dee75269fb98de))
+* button and group adjustments to size and spacing ([2d00a45](https://github.com/Kajabi/sage-lib/commit/2d00a45ec05736642b337dac0f95668175d9f737))
+* panel divider to full size ([668a6ab](https://github.com/Kajabi/sage-lib/commit/668a6ab2de9c398533ccb1db28b5d9b2e97b08d0))
+
+
+### Features
+
+* **alert:** polish icons and close button ([3526809](https://github.com/Kajabi/sage-lib/commit/3526809fd084c5a3f31e846779e9525a22df106a))
+* **alert:** react updates ([7c3a8b9](https://github.com/Kajabi/sage-lib/commit/7c3a8b9f3f8369ed545dbc6a6cf6c6db8150a354))
+* **alert:** refactor colors for border ([9f35665](https://github.com/Kajabi/sage-lib/commit/9f356654874fed3b71b0a6ec0f7d45fa35dd2896))
+* **alert:** update button options rails ([5ac0ba9](https://github.com/Kajabi/sage-lib/commit/5ac0ba95a7c876a4094c0cfa52a95c01b9bf162c))
+* **alert:** update rails properties for array of secondary actions ([d2d8757](https://github.com/Kajabi/sage-lib/commit/d2d8757602c4d8adfe9bad910e2da6af05926d59))
+* **alert:** use extend for typography ([553af52](https://github.com/Kajabi/sage-lib/commit/553af52e288dc8cb93c232fb4de82fff231b3f6d))
+* **alerts:** add new orange variation and include new names ([9ab7e34](https://github.com/Kajabi/sage-lib/commit/9ab7e3459e2649061796dd280aea63687b789429))
+* **alerts:** add spacing to match specs ([27a9a79](https://github.com/Kajabi/sage-lib/commit/27a9a79ad11a98313fa925fbdbf1a1969a221be8))
+* **alerts:** add title_addon property ([4b84d66](https://github.com/Kajabi/sage-lib/commit/4b84d66d0dca48dc201d3d84e1b4b9839b29fdd3))
+* **alerts:** adjust colors for new alert variations ([33c0b7f](https://github.com/Kajabi/sage-lib/commit/33c0b7fe624110d80a3f307e42bf9916243e335b))
+* **alerts:** change color of link text to charcoal ([5680a96](https://github.com/Kajabi/sage-lib/commit/5680a96b6c17b91108a1d228b7909bb9c37c480a))
+* **alerts:** fix linting errors ([67bbd86](https://github.com/Kajabi/sage-lib/commit/67bbd862c7a01c7ee7e276862b6a8f70ce106946))
+* **alerts:** icon colors per design; mixed color values ([d94b50b](https://github.com/Kajabi/sage-lib/commit/d94b50ba8f88425d104f1cd828408202702c47fe))
+* **alerts:** refactor btn to _button.scss file ([74e2dc8](https://github.com/Kajabi/sage-lib/commit/74e2dc8c7f7f9b5cd61afedf3203db5352d25646))
+* **alerts:** remove color for description text, uses charcoal now ([7b87c42](https://github.com/Kajabi/sage-lib/commit/7b87c420773afe23214f86504eafdf27a35006fa))
+* **alerts:** remove kp specific alert examples ([ea6107e](https://github.com/Kajabi/sage-lib/commit/ea6107e5dbab28c85a2400daa2fd0bc347d08b22))
+* **alerts:** revert colors to move to separate PR ([e440372](https://github.com/Kajabi/sage-lib/commit/e44037299ecb1b24d096f4d404e0c838f1080b38))
+* **alerts:** update color of close button ([7595731](https://github.com/Kajabi/sage-lib/commit/759573148b61505670c449183a9b6b2171eee677))
+* **small alerts:** polish alerts when small variation ([23dcd2c](https://github.com/Kajabi/sage-lib/commit/23dcd2c66542730e3c6b61737c03c51535d64264))
+
+
+
+
+
 # [0.58.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.57.0...@kajabi/sage-assets@0.58.0) (2021-11-15)
 
 

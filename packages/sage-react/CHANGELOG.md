@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.70.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.69.0...@kajabi/sage-react@0.70.0) (2021-11-17)
+
+
+### Bug Fixes
+
+* **avatar:** fixes avatar badge size ranges ([b426196](https://github.com/Kajabi/sage-lib/commit/b426196155f17b37028085af4ae56c32e0e89117))
+
+
+### Features
+
+* **avatar:** adds badge to React component ([89c081d](https://github.com/Kajabi/sage-lib/commit/89c081db1ea1e4bc0bce3651786e6ad7ad173b71))
+* **small alerts:** polish alerts when small variation ([23dcd2c](https://github.com/Kajabi/sage-lib/commit/23dcd2c66542730e3c6b61737c03c51535d64264))
+* add center button group option in React ([025bccc](https://github.com/Kajabi/sage-lib/commit/025bccc0b0c6b8836ac1f3f617b818cd053f6cb5))
+* add contact profile mock in React ([85c4aa9](https://github.com/Kajabi/sage-lib/commit/85c4aa99aa1284beaf5becbde7f1d659ecfe75ab))
+* add description stub for react ([9c0fa65](https://github.com/Kajabi/sage-lib/commit/9c0fa656b80e49b9c64b43cf780202dc1c9517f5))
+* **alert:** minor updates to spelling and grammar ([65e46aa](https://github.com/Kajabi/sage-lib/commit/65e46aa370a02d7e0d30ce6dd563a0234022ca27))
+* **alert:** polish icons and close button ([3526809](https://github.com/Kajabi/sage-lib/commit/3526809fd084c5a3f31e846779e9525a22df106a))
+* **alert:** react updates ([7c3a8b9](https://github.com/Kajabi/sage-lib/commit/7c3a8b9f3f8369ed545dbc6a6cf6c6db8150a354))
+* **alert:** update switch statement for icons ([cd715d4](https://github.com/Kajabi/sage-lib/commit/cd715d459ff437ce220024b6ae23f02a9a11b665))
+
+
+
+
+
 # [0.69.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.68.0...@kajabi/sage-react@0.69.0) (2021-11-15)
 
 
