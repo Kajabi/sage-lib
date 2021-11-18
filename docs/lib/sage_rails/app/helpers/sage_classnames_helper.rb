@@ -52,11 +52,22 @@ module SageClassnamesHelper
     classes = ""
     tokens.each_with_index do |token, index|
       kn = token[:key_name]
+      val = obj[kn]
       if obj.key?(kn)
-        if token[:arr].include?(obj[kn])
-          classes += token[:class_prefix].to_s + obj[kn] + " "
+        if val.kind_of?(Array)
+          val.each do |item|
+            if token[:arr].include?(item)
+              classes += token[:class_prefix].to_s + item + " "
+            else
+              raise "#{kn.to_s} value is not valid"
+            end
+          end
         else
-          raise "#{kn.to_s} value is not valid"
+          if token[:arr].include?(val)
+            classes += token[:class_prefix].to_s + val + " "
+          else
+            raise "#{kn.to_s} value is not valid"
+          end
         end
       end
     end
