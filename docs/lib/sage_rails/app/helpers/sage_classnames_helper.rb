@@ -8,20 +8,20 @@ TYPE_SPECS = [
 
 module SageClassnamesHelper
   def sage_classnames(obj)
-    text = ""
-    if obj.key?(:color)
-      text += "t-sage--color-#{obj[:color]} "
-    end
+    classes = ""
     if obj.key?(:align)
-      text += "t-sage--align-#{obj[:align]} "
+      classes += "t-sage--align-#{obj[:align]} "
+    end
+    if obj.key?(:color)
+      classes += "t-sage--color-#{obj[:color]} "
     end
     if obj.key?(:type_spec)
       if TYPE_SPECS.include?(obj[:type_spec])
-        text += "t-sage-#{obj[:type_spec]} "
+        classes += "t-sage-#{obj[:type_spec]} "
       else
         raise "type_spec is not valid"
       end
     end
-    text
+    classes
   end
 end
