@@ -31,7 +31,7 @@
   "license": "MIT",
   "scripts": {
     "bootstrap": "yarn lerna bootstrap",
-    "branches:update": "git checkout main && git pull && git checkout develop && git pull && git rebase main",
+    "branches:update": "bin/branches.sh true",
     "bridge:kajabi-products": "bin/bridge.sh true",
     "bridge:kajabi-products:status": "bin/bridge.sh status",
     "bridge:kajabi-products:destroy": "bin/bridge.sh false",
