@@ -2,9 +2,11 @@
 <% cn = sage_classnames({
   align: "center",
   color: "red",
+  spacer: "bottom-3xs",
+  text_modifier: "strikethrough",
   type_spec: "heading-1",
 }) %>
 <%= sage_component SageClassnamesTest, {} do %>
-  <h1 class="<%= cn %>" style="margin-bottom: 20px;">Hello, world</h1>
+  <h1 class="<%= cn %>">Hello, world</h1>
   <p><%= cn %></p>
 <% end %>
