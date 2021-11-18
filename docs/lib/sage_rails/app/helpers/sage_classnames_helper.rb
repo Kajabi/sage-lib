@@ -1,25 +1,29 @@
-TYPE_SPECS = [
-  "heading-1", "heading-2", "heading-3", "heading-4", "heading-5", "heading-6",
-  "nav", "nav-sub",
-  "body", "body-med", "body-semi", "body-bold",
-  "body-small", "body-small-med", "body-small-semi", "body-small-bold",
-  "body-xsmall", "body-xsmall-med", "body-xsmall-semi", "body-xsmall-bold",
-]
+include SageTokens
+
+ALIGNMENTS = ["left", "center", "right", "justify"]
 
 module SageClassnamesHelper
   def sage_classnames(obj)
     classes = ""
     if obj.key?(:align)
-      classes += "t-sage--align-#{obj[:align]} "
+      if ALIGNMENTS.include?(obj[:align])
+        classes += "t-sage--align-#{obj[:align]} "
+      else
+        raise "align value is not valid"
+      end
     end
     if obj.key?(:color)
-      classes += "t-sage--color-#{obj[:color]} "
+      if COLOR_SLIDERS.include?(obj[:color])
+        classes += "t-sage--color-#{obj[:color]} "
+      else
+        raise "color value is not valid"
+      end
     end
     if obj.key?(:type_spec)
       if TYPE_SPECS.include?(obj[:type_spec])
         classes += "t-sage-#{obj[:type_spec]} "
       else
-        raise "type_spec is not valid"
+        raise "type_spec value is not valid"
       end
     end
     classes
