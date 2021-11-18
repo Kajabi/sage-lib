@@ -5,8 +5,8 @@ class SageType < SageComponent
     color: [:optional, SageSchemas::COLOR_SLIDER],
     alignment: [:optional, SageSchemas::HORIZONAL_ALIGNMENT],
     weight: [:optional, Set.new(["med", "semi", "bold"])],
-    text: [[[{
-      content: [:optional, String],
-    }]]],
+    text: [[
+      :optional, String
+    ]],
   })
 end
