@@ -50,6 +50,9 @@ module SageClassnamesHelper
 
   def sage_classnames(obj)
     classes = ""
+    if obj.key?(:base_classes)
+      classes += obj[:base_classes] + " "
+    end
     tokens.each_with_index do |token, index|
       kn = token[:key_name]
       val = obj[kn]
