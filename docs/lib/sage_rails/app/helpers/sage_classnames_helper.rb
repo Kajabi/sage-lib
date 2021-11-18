@@ -56,20 +56,22 @@ module SageClassnamesHelper
     tokens.each_with_index do |token, index|
       kn = token[:key_name]
       val = obj[kn]
+      exception_message = "#{kn.to_s} value is not valid"
+      class_prefix_string = token[:class_prefix].to_s
       if obj.key?(kn)
         if val.kind_of?(Array)
           val.each do |item|
             if token[:arr].include?(item)
-              classes += token[:class_prefix].to_s + item + " "
+              classes += class_prefix_string + item + " "
             else
-              raise "#{kn.to_s} value is not valid"
+              raise exception_message
             end
           end
         else
           if token[:arr].include?(val)
-            classes += token[:class_prefix].to_s + val + " "
+            classes += class_prefix_string + val + " "
           else
-            raise "#{kn.to_s} value is not valid"
+            raise exception_message
           end
         end
       end
