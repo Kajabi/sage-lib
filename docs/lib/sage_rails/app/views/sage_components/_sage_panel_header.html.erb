@@ -2,16 +2,24 @@
   class="sage-panel__header <%= "sage-panel__header--custom" if component.content %> <%= component.generated_css_classes %>"
   <%= component.generated_html_attributes.html_safe %>
 >
-  <% if component.title %>
-    <h1 class="sage-panel__title">
-      <%= component.title %>
-    </h1>
-  <% end %>
+  <div class="sage-panel__header-inner">
+    <% if component.title %>
+      <% if component.title_tag.present? %>
+        <<%= component.title_tag %> class="sage-panel__title">
+          <%= component.title %>
+        </<%= component.title_tag %>>
+      <% else %>
+        <h2 class="sage-panel__title">
+          <%= component.title %>
+        </h2>
+      <% end %>
+    <% end %>
+    <% if component.subtext.present? or content_for? :sage_panel_header_subtext %>
+      <div class="sage-panel__subtext">
+        <%= component.subtext if component.subtext.present? %>
+        <%= content_for :sage_panel_header_subtext if content_for? :sage_panel_header_subtext %>
+      </div>
+    <% end %>
+  </div>
   <%= component.content %>
-  <% if component.subtext.present? or content_for? :sage_panel_header_subtext %>
-    <div class="sage-panel__subtext">
-      <%= component.subtext if component.subtext.present? %>
-      <%= content_for :sage_panel_header_subtext if content_for? :sage_panel_header_subtext %>
-    </div>
-  <% end %>
 </header>
