@@ -23,5 +23,21 @@ Array<{
   <td><%= md('`layout`') %></td>
   <td><%= md('Determines the layout of items.') %></td>
   <td><%= md('[`"inline"` | `"stacked"`]') %></td>
+  <td><%= md('`inline`') %></td>
+</tr>
+<tr>
+  <td><%= md('`primary_action`') %></td>
+  <td><%= md('Creates a custom primary action button in the last column of the row.') %></td>
+  <td>
+    <%= md('```
+primary_action: {
+  attributes: Hash,
+  icon_only: Boolean,
+  value: String,
+  test_id: String,
+}
+```')
+    %>
+  </td>
   <td><%= md('`nil`') %></td>
 </tr>
