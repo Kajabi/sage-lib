@@ -25,7 +25,9 @@
 }
 
 .sage-description__term-group {
-  @include sage-grid-card-row;
+  display: grid;
+  grid-template-columns: var(--sage-description-title-width, auto) 1fr var(--sage-description-action-width, auto);
+  gap: sage-spacing(sm);
   padding: sage-spacing(xs) 0;
   border-top: sage-border();
   width: 100%;
@@ -36,7 +38,7 @@
   }
 
   .sage-description--stacked & {
-    grid-auto-flow: row;
+    grid-auto-flow: column;
     gap: sage-spacing(2xs);
   }
 }
