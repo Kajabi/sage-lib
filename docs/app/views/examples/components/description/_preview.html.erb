@@ -30,8 +30,32 @@
   ],
 } %>
 
-<h2>Multiple items (inline layout)</h2>
+<h2>Mulitple Items - Inline</h2>
 <%= sage_component SageDescription, {
+  items: [
+    {
+      title: "Name",
+      data: "John Doe",
+    },
+    {
+      title: "Name",
+      data: "John Doe",
+    },
+    {
+      title: "Name",
+      data: "John Doe",
+    },
+    {
+      title: "Name",
+      data: "#{image_tag("card-placeholder-sm.png", height: 16, width: 24)} John Doe".html_safe,
+    }
+  ],
+  inline_spread: true,
+} %>
+
+<h2>Mulitple Items - Stacked</h2>
+<%= sage_component SageDescription, {
+  layout: "stacked",
   items: [
     {
       title: "Name",

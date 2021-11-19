@@ -9,5 +9,6 @@ class SageDescription < SageComponent
       link: [:optional, String],
       title: [:optional, String],
     }]]],
+    layout: [:optional, Set.new(["inline", "stacked"])]
   })
 end
