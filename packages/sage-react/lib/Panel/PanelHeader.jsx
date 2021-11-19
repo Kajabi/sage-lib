@@ -31,13 +31,15 @@ export const PanelHeader = ({
 
   return (
     <header className={classNames} {...rest}>
-      {title && (
-        <PanelTitle tag={titleTag}>{title}</PanelTitle>
-      )}
+      <div className="hi-phil">
+        {title && (
+          <PanelTitle tag={titleTag}>{title}</PanelTitle>
+        )}
+        {subtext && (
+          <PanelSubtext>{subtext}</PanelSubtext>
+        )}
+      </div>
       {children}
-      {subtext && (
-        <PanelSubtext>{subtext}</PanelSubtext>
-      )}
     </header>
   );
 };
