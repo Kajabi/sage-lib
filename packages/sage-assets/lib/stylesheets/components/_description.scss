@@ -25,14 +25,14 @@
 }
 
 .sage-description__term-group {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  margin-bottom: sage-spacing(2xs);
+  @include sage-grid-card-row;
+  padding: sage-spacing(xs) 0;
+  border-top: sage-border();
   width: 100%;
 
   &:last-of-type {
     margin-bottom: 0;
+    border-bottom: sage-border();
   }
 }
 
