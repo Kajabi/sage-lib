@@ -5,6 +5,7 @@
   <%= component.id ? "id=#{component.id}" : "" %>
   class="
     sage-description
+    <%= "sage-description--stacked" if component.layout == "stacked" %>
     <%= component.generated_css_classes %>
   "
   <%= component.generated_html_attributes.html_safe %>
