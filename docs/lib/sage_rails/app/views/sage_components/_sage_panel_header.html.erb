@@ -3,9 +3,15 @@
   <%= component.generated_html_attributes.html_safe %>
 >
   <% if component.title %>
-    <h1 class="sage-panel__title">
-      <%= component.title %>
-    </h1>
+    <% if component.title_tag.present? %>
+      <<%= component.title_tag %> class="sage-panel__title">
+        <%= component.title %>
+      </<%= component.title_tag %>>
+    <% else %>
+      <h2 class="sage-panel__title">
+        <%= component.title %>
+      </h2>
+    <% end %>
   <% end %>
   <%= component.content %>
   <% if component.subtext.present? or content_for? :sage_panel_header_subtext %>

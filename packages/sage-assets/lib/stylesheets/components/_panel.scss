@@ -84,6 +84,33 @@
   column-gap: sage-spacing();
 }
 
+.sage-panel__subheader {
+  row-gap: sage-spacing(2xs);
+}
+
+.sage-panel__title {
+  @extend %t-sage-heading-5;
+  color: sage-color(charcoal, 500);
+}
+
+.sage-panel__subtext {
+  grid-column: 1 / -1;
+  color: sage-color(charcoal, 100);
+
+  .sage-panel__header & {
+    @extend %t-sage-body;
+  }
+
+  .sage-panel__subheader & {
+    @extend %t-sage-body-small;
+  }
+}
+
+.sage-panel__subtitle {
+  @extend %t-sage-heading-6;
+}
+
+
 .sage-panel__list {
   padding: 0;
   margin: 0 -#{sage-spacing(panel)};
@@ -139,27 +166,6 @@
   gap: sage-spacing(card);
 }
 
-.sage-panel__subheader {
-  row-gap: sage-spacing(2xs);
-}
-
-.sage-panel__subtext {
-  grid-column: 1 / -1;
-  color: sage-color(charcoal, 100);
-
-  .sage-panel__header & {
-    @extend %t-sage-body;
-  }
-
-  .sage-panel__subheader & {
-    @extend %t-sage-body-small;
-  }
-}
-
-.sage-panel__subtitle {
-  @extend %t-sage-heading-6;
-}
-
 .sage-panel__tile {
   @include sage-grid-card();
 }
@@ -187,10 +193,6 @@
       --sage-panel-tiles-columns: #{$i};
     }
   }
-}
-
-.sage-panel__title {
-  @extend %t-sage-heading-5;
 }
 
 .sage-panel-set {

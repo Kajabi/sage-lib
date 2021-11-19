@@ -7,18 +7,19 @@ Ut elementum id leo ac fringilla.
 ")
 %>
 
-<%= md('
-<strong class="t-sage--color-orange">
-  While this page depicts panels within cards this merely a consequence of our documentation structure
-  and NOT a pattern that should be implemented elsewhere.
-</strong>
-', use_sage_type: true) %>
+<%= sage_component SageAlert, {
+  color: "warning",
+  desc: "While this page depicts Panels within Cards, this merely is a consequence of our documentation structure and not a pattern that should be implemented elsewhere.",
+  icon_name: "sage-icon-warning",
+} %>
 
 <%= sage_component SagePanelHeader, { title: "Basic Panel" } %>
 
 <%= sage_component SagePanel, {} do %>
   <%= sage_component SagePanelHeader, {
-    title: "Panel Header"
+    title: "Panel Header Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Morbi rhoncus mauris ut turpis gravida bibendum",
+    tag: "h3",
   } do %>
     <%= sage_component SageButton, {
       value: "More info",
@@ -26,11 +27,11 @@ Ut elementum id leo ac fringilla.
       style: "secondary",
       icon: {
         name: "info-circle",
-        style: "only"
+        style: "left"
       }
     } %>
     <%= content_for :sage_panel_header_subtext do %>
-      <p>All kinds of awesome, wonderful content can go in here! <%= link_to "Learn more", "//example.com" %></p>
+      <p><%= sample_copy.html_safe %></p>
     <% end %>
   <% end %>
   <%= sage_component SagePanelBlock, { type_block: true } do %>
