@@ -1,4 +1,4 @@
-<h2>Single item</h2>
+<h3>Single item</h3>
 <%= sage_component SageDescription, {
   items: [
     {
@@ -8,7 +8,7 @@
   ]
 } %>
 
-<h2>Multiple items</h2>
+<h3>Multiple items</h3>
 <%= sage_component SageDescription, {
   items: [
     {
@@ -30,7 +30,7 @@
   ],
 } %>
 
-<h2>Mulitple Items - Inline</h2>
+<h3>Mulitple Items - Inline</h3>
 <%= sage_component SageDescription, {
   items: [
     {
@@ -50,10 +50,9 @@
       data: "#{image_tag("card-placeholder-sm.png", height: 16, width: 24)} John Doe".html_safe,
     }
   ],
-  inline_spread: true,
 } %>
 
-<h2>Mulitple Items - Stacked</h2>
+<h3>Mulitple Items - Stacked</h3>
 <%= sage_component SageDescription, {
   layout: "stacked",
   items: [
@@ -74,5 +73,31 @@
       data: "#{image_tag("card-placeholder-sm.png", height: 16, width: 24)} John Doe".html_safe,
     }
   ],
-  inline_spread: true,
+} %>
+
+<h3>Action Button</h3>
+<%= sage_component SageDescription, {
+  primary_action: {
+    value: "Button",
+  },
+  items: [
+    {
+      title: "Name",
+      data: "John Doe",
+    }
+  ]
+} %>
+
+<h3>Action Button - Icon Only</h3>
+<%= sage_component SageDescription, {
+  primary_action: {
+    value: "Button",
+    icon_only: true,
+  },
+  items: [
+    {
+      title: "Name",
+      data: "John Doe",
+    }
+  ]
 } %>
