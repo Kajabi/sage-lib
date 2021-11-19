@@ -31,7 +31,7 @@ Ut elementum id leo ac fringilla.
       }
     } %>
     <%= content_for :sage_panel_header_subtext do %>
-      <p><%= sample_copy.html_safe %></p>
+      <%= sample_copy.html_safe %>
     <% end %>
   <% end %>
   <%= sage_component SagePanelBlock, { type_block: true } do %>
@@ -45,8 +45,7 @@ Ut elementum id leo ac fringilla.
 
 <%= sage_component SagePanel, {} do %>
   <%= sage_component SagePanelHeader, {
-    title: "Panel Header Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    Morbi rhoncus mauris ut turpis gravida bibendum",
+    title: "Panel Header",
     tag: "h3",
   } do %>
     <%= sage_component SageButton, {
@@ -59,15 +58,11 @@ Ut elementum id leo ac fringilla.
       }
     } %>
     <%= content_for :sage_panel_header_subtext do %>
-      <p><%= sample_copy.html_safe %></p>
+      <%= sample_copy.html_safe %>
     <% end %>
   <% end %>
   <%= sage_component SagePanelBlock, { type_block: true } do %>
     <%= sample_copy.html_safe %>
-  <% end %>
-  <%= sage_component SagePanelFooter, {} do %>
-    <%= sage_component SageButton, { value: "Cancel", style: "secondary" } %>
-    <%= sage_component SageButton, { value: "Save", style: "primary" } %>
   <% end %>
 <% end %>
 
