@@ -48,14 +48,13 @@ Ut elementum id leo ac fringilla.
     title: "Panel Header",
     tag: "h3",
   } do %>
-    <%= sage_component SageButton, {
-      value: "More info",
-      subtle: true,
-      style: "secondary",
-      icon: {
-        name: "info-circle",
-        style: "left"
-      }
+    <%= sage_component SageSwitch, {
+      hide_text: true,
+      id: "sage-switch-1",
+      label_text: "Switch (checkbox)",
+      name: "sage-switch-1",
+      type: "checkbox",
+      value: "switch-1-value",
     } %>
     <%= content_for :sage_panel_header_subtext do %>
       <%= sample_copy.html_safe %>

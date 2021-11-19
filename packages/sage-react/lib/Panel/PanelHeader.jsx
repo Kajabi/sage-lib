@@ -31,7 +31,7 @@ export const PanelHeader = ({
 
   return (
     <header className={classNames} {...rest}>
-      <div className="hi-phil">
+      <div className="sage-panel__header-inner">
         {title && (
           <PanelTitle tag={titleTag}>{title}</PanelTitle>
         )}
