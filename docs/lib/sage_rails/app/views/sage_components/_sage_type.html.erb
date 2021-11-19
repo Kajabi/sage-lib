@@ -1,5 +1,7 @@
 <% if component.content.kind_of?(Array) %>
   <% component.content.each do | item | %>
+    <%# TODO: add conditional to render `p` tag if no tag is provided %>
+    <%# TODO: render `body` type_spec if none tag is provided %>
     <<%= component.tag %>
       class="
         <% if component.type_spec.present? %>t-sage-<%= component.type_spec %><% end %>

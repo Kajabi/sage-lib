@@ -3,7 +3,7 @@
 <%= sage_component SageType, {
   tag: "h3",
 } do %>
-  <i>Heading 3</i>
+  Heading 3 - in a <code>do</code> block
 <% end %>
 
 <%= sage_component SageType, { tag: "h2", content: "Body" } %>
@@ -24,9 +24,14 @@
 <%= sage_component SageType, {
   tag: "p",
   color: "sage",
-  content: [
-    "Color Sage: Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  ]
+  content: "Color Sage: Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+} %>
+
+<%= sage_component SageType, {
+  tag: "p",
+  color: "primary",
+  spacer: { bottom: :lg },
+  content:  "Color Primary and bottom space large: Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
 } %>
 
 <%= sage_component SageType, { tag: "h2", content: "Weight" } %>
@@ -34,14 +39,24 @@
 <%= sage_component SageType, {
   tag: "p",
   type_spec: "body",
-  color: "sage",
+  weight: "med",
+  content:  "Weight - med: Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+} %>
+
+<%= sage_component SageType, {
+  tag: "p",
+  type_spec: "body",
   weight: "semi",
-  spacer: { bottom: :lg },
   css_classes: "sage-type-custom-class",
   test_id: "sage-type-custom-id",
-  content: [
-    "Color Sage: Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  ]
+  content: "Weight - semi: Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+} %>
+
+<%= sage_component SageType, {
+  tag: "p",
+  type_spec: "body",
+  weight: "bold",
+  content:  "Weight - bold: Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
 } %>
 
 <%= sage_component SageType, { tag: "h2", content: "Alignment" } %>
@@ -51,9 +66,7 @@
 <%= sage_component SageType, {
   tag: "p",
   alignment: "end",
-  content: [
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut finibus fringilla ligula, vitae tincidunt lorem blandit sit amet. Morbi pharetra elementum lectus id sollicitudi orem ipsum dolor sit amet, consectetur adipiscing elit. Ut finibus fringilla ligula, vitae ti.",
-  ]
+  content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut finibus fringilla ligula, vitae tincidunt lorem blandit sit amet. Morbi pharetra elementum lectus id sollicitudi orem ipsum dolor sit amet, consectetur adipiscing elit. Ut finibus fringilla ligula, vitae ti.",
 } %>
 
 <%= sage_component SageType, { tag: "h3", content: "Alignment - center" } %>
@@ -61,9 +74,7 @@
 <%= sage_component SageType, {
   tag: "p",
   alignment: "center",
-  content: [
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut finibus fringilla ligula, vitae tincidunt lorem blandit sit amet. Morbi pharetra elementum lectus id sollicitudin dorem ipsum dolor sit amet, consectetur adipiscing elit. Ut finibus fringilla ligula, vitae ti.",
-  ]
+  content:  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut finibus fringilla ligula, vitae tincidunt lorem blandit sit amet. Morbi pharetra elementum lectus id sollicitudin dorem ipsum dolor sit amet, consectetur adipiscing elit. Ut finibus fringilla ligula, vitae ti.",
 } %>
 
 <%= sage_component SageType, { tag: "h3", content: "Alignment - justify" } %>
@@ -71,7 +82,5 @@
 <%= sage_component SageType, {
   tag: "p",
   alignment: "justify",
-  content: [
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut finibus fringilla ligula, vitae tincidunt lorem blandit sit amet. Morbi pharetra elementum lectus id sollicitudin. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut finibus fringilla ligula, vitae tincidunt lorem blandit sit amet. Morbi pharetra elementum lectus id sollicitudin. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut finibus fringilla ligula, vitae tincidunt lorem blandit sit amet. Morbi pharetra elementum lectus id sollicitudin.",
-  ]
+  content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut finibus fringilla ligula, vitae tincidunt lorem blandit sit amet. Morbi pharetra elementum lectus id sollicitudin. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut finibus fringilla ligula, vitae tincidunt lorem blandit sit amet. Morbi pharetra elementum lectus id sollicitudin. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut finibus fringilla ligula, vitae tincidunt lorem blandit sit amet. Morbi pharetra elementum lectus id sollicitudin.",
 } %>
