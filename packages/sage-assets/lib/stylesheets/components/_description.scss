@@ -28,9 +28,9 @@
   display: grid;
   grid-template-columns: var(--sage-description-title-width, auto) 1fr var(--sage-description-action-width, auto);
   gap: sage-spacing(sm);
+  width: 100%;
   padding: sage-spacing(xs) 0;
   border-top: sage-border();
-  width: 100%;
 
   &:last-of-type {
     margin-bottom: 0;
