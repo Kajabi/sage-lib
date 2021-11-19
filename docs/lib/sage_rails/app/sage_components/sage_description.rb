@@ -2,6 +2,7 @@ class SageDescription < SageComponent
   # TODO: simplify to items only (remove data, link, title from root)
   # once instances are converted to the lists format.
   set_attribute_schema({
+    action_width: [:optional, String],
     id: [:optional, String],
     inline_spread: [:optional, TrueClass],
     items: [:optional, [[{
@@ -16,5 +17,6 @@ class SageDescription < SageComponent
       test_id: [:optional, NilClass, String],
       value: String,
     }],
+    title_width: [:optional, String],
   })
 end

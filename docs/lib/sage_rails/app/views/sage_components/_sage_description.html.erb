@@ -8,6 +8,12 @@
     <%= "sage-description--stacked" if component.layout == "stacked" %>
     <%= component.generated_css_classes %>
   "
+  <% if component.action_width || component.title_width %>
+    style="
+      --sage-description-action-width: <%= component.action_width if component.action_width %>;
+      --sage-description-title-width: <%= component.title_width if component.title_width %>
+    "
+  <% end %>
   <%= component.generated_html_attributes.html_safe %>
 >
   <% component.items.each do | item | %>
@@ -38,6 +44,7 @@
           test_id: component.primary_action[:test_id],
           attributes: component.primary_action[:attributes],
         } %>
+      </div>
     <% end %>
   <% end %>
   <%= component.content %>
