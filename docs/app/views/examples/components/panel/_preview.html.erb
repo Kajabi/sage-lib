@@ -19,7 +19,7 @@ Ut elementum id leo ac fringilla.
   <%= sage_component SagePanelHeader, {
     title: "Panel Header Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     Morbi rhoncus mauris ut turpis gravida bibendum",
-    tag: "h3",
+    title_tag: "h3",
   } do %>
     <%= sage_component SageButton, {
       value: "More info",
@@ -70,10 +70,10 @@ Panels are rich containers that allow for grouping and organizing content detail
 
 - **Header**
   `SagePanelHeader`
-  (optional) This area usually contains at least a title (`sage-panel__title`) and often an icon or menu positioned in the right corner. There is also an optional subtext element (`sage-panel__subtext`), useful for documenting the panel objective. It employs the Sage Row layout base with `24px` gutters.
+  (optional) This area usually contains at least a title (`sage-panel__title`) and often an icon or menu positioned in the right corner. An optional subtext element (`sage-panel__subtext`) is useful for documenting the panel objective. It employs the Sage Row layout base with `24px` gutters.
 
 - **Body**
-  While there is no specific container for the body itself, there are a variety of panel components that can be used to create most panel configurations. The simplest of these is **Panel Block** `SagePanelBlock` (shown above), which allows for open text or elements without any preset spacing between them. Others, such as **Panel Stack** `SagePanelStack` are more opinionated, enforcing their own specific spacing and/or layout features. Each of the Panel components is explained and demonstrated in more detail below.
+  While there is no specific container for the body itself, there are a variety of panel components that can be used to create most panel configurations. The simplest of these is **Panel Block** `SagePanelBlock` (shown above), allowing open text or elements without any preset spacing between them. Others, such as **Panel Stack** `SagePanelStack` are more opinionated, enforcing specific spacing or layout features. Each of the Panel components is explained and demonstrated in more detail below.
 
 - **Footer**
   `SagePanelFooter` (optional) This area often contains one or more buttons that can be sent to the right edge of the panel with the `align_spread: true` component attribute. It employs the Sage Row layout base with `24px` gutters.", use_sage_type: true) %>
@@ -141,7 +141,7 @@ Panels are rich containers that allow for grouping and organizing content detail
 <% end %>
 
 <%= sage_component SagePanelHeader, { title: "Panel Row <code>.sage-panel__row</code>".html_safe } %>
-<%= md("A row is a single or isolated inline arrangement or elements. It can either be a custom component or employ one of the standard Grid Template Patterns.", use_sage_type: true) %>
+<%= md("A panel row is a single or isolated inline arrangement of elements. It can either be a custom component or employ one of the standard Grid Template Patterns.", use_sage_type: true) %>
 
 <%= sage_component SagePanelSubheader, { title: "Example:" } %>
 <%= sage_component SagePanel, {} do %>
@@ -203,7 +203,7 @@ Panels are rich containers that allow for grouping and organizing content detail
 <% end %>
 
 <%= sage_component SagePanelHeader, { title: "Panel Subheader <code>.sage-panel__subheader</code>".html_safe } %>
-<%= md("The Panel Subheader provides specific styles for a subheading within a panel. It is very similar in configuration to the panel header but shows with smaller type. Format the text content itself with `.sage-panel__subtitle`, which can also be used independently. There is also an optional subtext attribute (`subtext: ""`), which is useful for documenting the panel objective", use_sage_type: true) %>
+<%= md("The Panel Subheader provides specific styles for a subheading within a panel. It is very similar in configuration to the panel header but shows with smaller type. Format the text content itself with `.sage-panel__subtitle`, which can also be used independently. An optional subtext attribute (`subtext: ""`) is useful for documenting the panel objective.", use_sage_type: true) %>
 
 <%= sage_component SagePanelSubheader, { title: "Example:" } %>
 <%= sage_component SagePanel, {} do %>
