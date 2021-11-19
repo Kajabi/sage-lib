@@ -1,13 +1,11 @@
 <h2>Single item</h2>
 <%= sage_component SageDescription, {
-  title: "Name",
-  data: "John Doe",
-} %>
-
-<h2>Single item (title normal case)</h2>
-<%= sage_component SageDescription, {
-  title: "Name",
-  data: "John Doe",
+  items: [
+    {
+      title: "Name",
+      data: "John Doe",
+    }
+  ]
 } %>
 
 <h2>Multiple items</h2>
@@ -53,5 +51,4 @@
     }
   ],
   inline_spread: true,
-  allcaps_titles: false,
 } %>

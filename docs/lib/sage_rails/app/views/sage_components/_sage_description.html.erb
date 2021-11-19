@@ -10,36 +10,21 @@
   "
   <%= component.generated_html_attributes.html_safe %>
 >
-  <% if component.items.present? %>
-    <% component.items.each do | item | %>
-      <div class="sage-description__term-group">
-        <% if item[:title] %>
-          <dt class="sage-description__title"><%= item[:title] %></dt>
-        <% end %>
-        <% if item[:data] %>
-          <% if item[:link] %>
-            <%= link_to item[:link] do %>
-              <dd class="sage-description__data"><%= item[:data] %></dd>
-            <% end %>
-          <% else %>
+  <% component.items.each do | item | %>
+    <div class="sage-description__term-group">
+      <% if item[:title] %>
+        <dt class="sage-description__title"><%= item[:title] %></dt>
+      <% end %>
+      <% if item[:data] %>
+        <% if item[:link] %>
+          <%= link_to item[:link] do %>
             <dd class="sage-description__data"><%= item[:data] %></dd>
           <% end %>
+        <% else %>
+          <dd class="sage-description__data"><%= item[:data] %></dd>
         <% end %>
-      </div>
-    <% end %>
-  <% else %>
-    <% if component.title.present? %>
-      <dt class="sage-description__title"><%= component.title %></dt>
-    <% end %>
-    <% if component.data.present? %>
-      <% if component.link.present? %>
-        <%= link_to component.link do %>
-          <dd class="sage-description__data"><%= component.data %></dd>
-        <% end %>
-      <% else %>
-        <dd class="sage-description__data"><%= component.data %></dd>
       <% end %>
-    <% end %>
+    </div>
   <% end %>
   <%= component.content %>
 </dl>
