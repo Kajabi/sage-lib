@@ -11,7 +11,32 @@
   <td><%= md('`false`') %></code></td>
 </tr>
 <tr>
-  <td colspan="4"><%= md('**Panel List**') %></td>
+  <td colspan="4">
+    <strong>Panel Header</strong>
+  </td>
+</tr>
+<tr>
+  <td><%= md('`title`') %></td>
+  <td><%= md('Sets the title for the Panel.') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('') %></td>
+</tr>
+<tr>
+  <td><%= md('`title_tag`') %></td>
+  <td><%= md('Optional. Sets a title tag for the title. Default is `h2`.') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('') %></td>
+</tr>
+<tr>
+  <td><%= md('`subtext`') %></td>
+  <td><%= md('Optional. Sets a subtext following the title.') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('') %></td>
+</tr>
+<tr>
+  <td colspan="4">
+    <strong>Panel List</strong>
+  </td>
 </tr>
 <tr>
   <td><%= md('`block_spacing`') %></td>
@@ -20,7 +45,9 @@
   <td><%= md('`--`') %></td>
 </tr>
 <tr>
-  <td colspan="4"><%= md('**Panel ListItem**') %></td>
+  <td colspan="4">
+    <strong>Panel ListItem</strong>
+  </td>
 </tr>
 <tr>
   <td><%= md('`grid_template`') %></td>
@@ -35,7 +62,9 @@
   <td><%= md('`nil`') %></td>
 </tr>
 <tr>
-  <td colspan="4"><%= md('**Panel Row**') %></td>
+  <td colspan="4">
+    <strong>Panel Row</strong>
+  </td>
 </tr>
 <tr>
   <td><%= md('`grid_template`') %></td>
@@ -47,5 +76,27 @@
   <td><%= md('`gap`') %></td>
   <td><%= md('Adjusts the size of the gap between items in a panel row.') %></td>
   <td><%= md('Optionally: [`:xs` | `:sm` | `:md` | `:lg`]') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td colspan="4">
+    <strong>Panel Stack</strong>
+  </td>
+</tr>
+<tr>
+  <td><%= md('`spacing`') %></td>
+  <td><%= md('Creates unique spacing using the `sage-spacing(card)` size.') %></td>
+  <td><%= md('Optionally: `form`') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td colspan="4">
+    <strong>Panel Footer</strong>
+  </td>
+</tr>
+<tr>
+  <td><%= md('`align_spread`') %></td>
+  <td><%= md('Aligns the footer content to the right of the footer. Typically this is used with buttons.') %></td>
+  <td><%= md('Boolean') %></td>
   <td><%= md('`nil`') %></td>
 </tr>

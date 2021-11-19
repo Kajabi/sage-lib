@@ -56,8 +56,6 @@
   margin: 0 -#{sage-spacing(panel)};
 }
 
-// Panel Figure moved to its own file
-
 .sage-panel__footer {
   @include sage-grid-panel-row();
 
@@ -78,7 +76,7 @@
 .sage-panel__header--custom,
 .sage-panel__subheader--custom {
   justify-content: space-between;
-  align-items: center;
+  align-items: start;
   grid-template-columns: 1fr auto;
   grid-auto-columns: auto;
   column-gap: sage-spacing();
@@ -90,6 +88,7 @@
 
 .sage-panel__title {
   @extend %t-sage-heading-5;
+  margin-bottom: sage-spacing(xs);
   color: sage-color(charcoal, 500);
 }
 
