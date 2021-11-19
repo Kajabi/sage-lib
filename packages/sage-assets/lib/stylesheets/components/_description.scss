@@ -20,41 +20,23 @@
 }
 
 .sage-description__data {
-  @extend %t-sage-body-semi;
+  @extend %t-sage-body-med;
   color: sage-color(charcoal, 400);
-
-  .sage-description--inline-spread & {
-    flex: 1;
-    text-align: right;
-  }
-}
-
-.sage-description--inline-spread {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
 }
 
 .sage-description__term-group {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
   margin-bottom: sage-spacing(2xs);
+  width: 100%;
 
   &:last-of-type {
     margin-bottom: 0;
-  }
-
-  .sage-description--inline-spread & {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
   }
 }
 
 .sage-description__title {
   @extend %t-sage-body;
   color: sage-color(charcoal, 100);
-
-  .sage-description--inline-spread & {
-    flex: 1;
-    transform: translateY(rem(3px));
-  }
 }
