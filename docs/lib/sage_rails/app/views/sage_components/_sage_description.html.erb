@@ -1,13 +1,11 @@
 <%
 # ensure default is to treat titles with all caps; `allcaps_titles` must be set to false to change this
-normalcase_titles = component.allcaps_titles == false ? true : false
 %>
 <dl
   <%= component.id ? "id=#{component.id}" : "" %>
   class="
     sage-description
     <%= "sage-description--inline-spread" if component.inline_spread.present? && component.inline_spread %>
-    <%= "sage-description--normalcase-titles" if normalcase_titles %>
     <%= component.generated_css_classes %>
   "
   <%= component.generated_html_attributes.html_safe %>

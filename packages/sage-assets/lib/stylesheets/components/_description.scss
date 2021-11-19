@@ -53,10 +53,6 @@
   @extend %t-sage-body;
   color: sage-color(charcoal, 100);
 
-  .sage-description:not(.sage-description--normalcase-titles) & {
-    text-transform: uppercase;
-  }
-
   .sage-description--inline-spread & {
     flex: 1;
     transform: translateY(rem(3px));
