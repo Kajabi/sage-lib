@@ -5,7 +5,6 @@
   <%= component.id ? "id=#{component.id}" : "" %>
   class="
     sage-description
-    <%= "sage-description--inline-spread" if component.inline_spread.present? && component.inline_spread %>
     <%= component.generated_css_classes %>
   "
   <%= component.generated_html_attributes.html_safe %>
