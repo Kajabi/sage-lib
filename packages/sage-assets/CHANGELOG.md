@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.60.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.59.0...@kajabi/sage-assets@0.60.0) (2021-11-22)
+
+
+### Bug Fixes
+
+* **colors:** update tokens to match color palette updates ([8858299](https://github.com/Kajabi/sage-lib/commit/8858299a2a9e6c515d143b20e9127b6573ce5c03))
+* **page heading:** add alignment to page heading actions ([5723131](https://github.com/Kajabi/sage-lib/commit/5723131e4ef200de40725d50681fac455fd0adea))
+* **panel header:** color adjustment and doc updates ([fefcf86](https://github.com/Kajabi/sage-lib/commit/fefcf86c8e11513d97739ddac2c48cf016942311))
+* **panel header:** documentation updates ([6e3f41c](https://github.com/Kajabi/sage-lib/commit/6e3f41c174433c130702c38d3f28032dbe8164d0))
+
+
+### Features
+
+* **paneltile:** added responsiveness for mobile, tablet, and desktop ([1265efb](https://github.com/Kajabi/sage-lib/commit/1265efb5eb775d74bd7233462d7491078e2bc837))
+* **paneltile:** moved condensed versions into the media queries ([d65a537](https://github.com/Kajabi/sage-lib/commit/d65a5377e4eac5fc3006d4b95c9fbe1ae9a72ddc))
+* **paneltile:** removed unused mobile sizing style ([74d6bc3](https://github.com/Kajabi/sage-lib/commit/74d6bc36c5b662880e289e1af88ae817022768e8))
+* **paneltiles:** cleaned up css with custom properties to handle columns ([ddf0e85](https://github.com/Kajabi/sage-lib/commit/ddf0e85610c4628fe9afc3f8cd457875e1b665c6))
+
+
+
+
+
 # [0.59.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.58.0...@kajabi/sage-assets@0.59.0) (2021-11-17)
 
 

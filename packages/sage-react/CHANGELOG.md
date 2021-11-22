@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.71.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.71.0...@kajabi/sage-react@0.71.1) (2021-11-22)
+
+
+### Bug Fixes
+
+* **panel header:** finesse example ([f3f0fab](https://github.com/Kajabi/sage-lib/commit/f3f0fab2a5abb501b1862fc78a5ada8b3b2e14cc))
+* **panel header:** react ([536887c](https://github.com/Kajabi/sage-lib/commit/536887cbfa31e6b7cc17fa9929b58dba744348f2))
+
+
+
+
+
 # [0.71.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.70.0...@kajabi/sage-react@0.71.0) (2021-11-17)
 
 

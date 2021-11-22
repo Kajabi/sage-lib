@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.28.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.28.1...@kajabi/sage@4.28.2) (2021-11-22)
+
+
+### Bug Fixes
+
+* **colors:** update tokens to match color palette updates ([8858299](https://github.com/Kajabi/sage-lib/commit/8858299a2a9e6c515d143b20e9127b6573ce5c03))
+* **page heading:** add alignment to page heading actions ([5723131](https://github.com/Kajabi/sage-lib/commit/5723131e4ef200de40725d50681fac455fd0adea))
+* **panel header:** color adjustment and doc updates ([fefcf86](https://github.com/Kajabi/sage-lib/commit/fefcf86c8e11513d97739ddac2c48cf016942311))
+* **panel header:** documentation updates ([6e3f41c](https://github.com/Kajabi/sage-lib/commit/6e3f41c174433c130702c38d3f28032dbe8164d0))
+* **panel header:** documentation updates per review ([a74f786](https://github.com/Kajabi/sage-lib/commit/a74f78695b3811adca8a2327765126b8aa3b8e0d))
+* **panel header:** finesse example ([f3f0fab](https://github.com/Kajabi/sage-lib/commit/f3f0fab2a5abb501b1862fc78a5ada8b3b2e14cc))
+* **panel header:** remove extra p tags ([5254454](https://github.com/Kajabi/sage-lib/commit/5254454a8e7784fe79a126be493da3ac62b80948))
+
+
+
+
+
 ## [4.28.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.28.0...@kajabi/sage@4.28.1) (2021-11-17)
 
 **Note:** Version bump only for package @kajabi/sage
