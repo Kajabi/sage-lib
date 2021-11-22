@@ -54,6 +54,9 @@
 
 <h3>Mulitple Items - Stacked</h3>
 <%= sage_component SageDescription, {
+  primary_action: {
+    value: "Button",
+  },
   layout: "stacked",
   items: [
     {
@@ -77,7 +80,7 @@
 
 <h3>Multiple Items - Custom Title and Action Widths</h3>
 <%= sage_component SageDescription, {
-  title_width: "100px",
+  title_width: "128px",
   primary_action: {
     value: "Button",
     icon_only: true,
