@@ -1,12 +1,17 @@
 <%= content_for :heading do %>
-<%= md(%(
-# Colors
 
-<p class="docs-heading__lead">Our color palette is built with a minimal approach to reduce decision fatigue and save time making design decisions.</p>
 
-All of our colors and text color combinations meet AA requirements
-with a 4.5:1 passing grade at the bare minimum.
-)) %>
+<%= sage_component SageType, {
+  tag: "p",
+  type_spec: "heading-4",
+  weight: "med",
+  content: [
+    "Our color palette is built with a minimal approach to reduce decision fatigue and save time making design decisions.",
+    "All of our colors and text color combinations meet AA requirements    with a 4.5:1 passing grade at the bare minimum."
+  ],
+  css_classes: "docs-heading__lead"
+} %>
+
 <% end %>
 <%= content_for :quick_links do %>
   <div class="quick-links">

@@ -1,11 +1,16 @@
 <% if component.content.kind_of?(Array) %>
   <% component.content.each do | item | %>
     <%# TODO: add conditional to render `p` tag if no tag is provided %>
-    <%# TODO: render `body` type_spec if none tag is provided %>
     <<%= component.tag %>
       class="
         <% if component.type_spec.present? %>t-sage-<%= component.type_spec %><% end %>
-        <% if component.type_spec.present? and component.weight.present? %>t-sage-<%= component.type_spec %>-<%= component.weight %><% end %>
+        
+        <% if component.type_spec.nil? and component.weight.present? %>
+          t-sage-body-<%= component.weight %>
+        <% elsif component.type_spec.present? and component.weight.present? %>
+          t-sage-<%= component.type_spec %>-<%= component.weight %>
+        <% end %>
+
         <% if component.color.present? %>t-sage--color-<%= component.color %><% end %>
         <% if component.alignment.present? %>t-sage--align-<%= component.alignment %><% end %>
         <%= component.generated_css_classes %>
@@ -19,7 +24,13 @@
   <<%= component.tag %>
     class="
       <% if component.type_spec.present? %>t-sage-<%= component.type_spec %><% end %>
-      <% if component.type_spec.present? and component.weight.present? %>t-sage-<%= component.type_spec %>-<%= component.weight %><% end %>
+        
+      <% if component.type_spec.nil? and component.weight.present? %>
+        t-sage-body-<%= component.weight %>
+      <% elsif component.type_spec.present? and component.weight.present? %>
+        t-sage-<%= component.type_spec %>-<%= component.weight %>
+      <% end %>
+
       <% if component.color.present? %>t-sage--color-<%= component.color %><% end %>
       <% if component.alignment.present? %>t-sage--align-<%= component.alignment %><% end %>
       <%= component.generated_css_classes %>

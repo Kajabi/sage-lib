@@ -2,6 +2,7 @@
 
 <%= sage_component SageType, {
   tag: "h3",
+  spacer: { bottom: :lg },
 } do %>
   Heading 3 - in a <code>do</code> block
 <% end %>
@@ -34,11 +35,10 @@
   content:  "Color Primary and bottom space large: Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
 } %>
 
-<%= sage_component SageType, { tag: "h2", content: "Weight" } %>
+<%= sage_component SageType, { tag: "h2", type_spec: "heading-2", content: "Weight" } %>
 
 <%= sage_component SageType, {
   tag: "p",
-  type_spec: "body",
   weight: "med",
   content:  "Weight - med: Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
 } %>
@@ -56,6 +56,7 @@
   tag: "p",
   type_spec: "body",
   weight: "bold",
+  spacer: { bottom: :lg },
   content:  "Weight - bold: Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
 } %>
 
