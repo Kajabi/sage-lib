@@ -2,26 +2,28 @@ import React from 'react';
 import uuid from 'react-uuid';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import { LAYOUT_TYPES } from './configs';
 import { Link } from '../Link';
 
 export const Description = ({
-  allcapsTitles,
+  actionWidth,
   children,
   className,
   data,
   id,
-  inlineSpread,
+  layout,
   link,
   items,
+  primaryAction,
   title,
+  titleWidth,
   ...rest
 }) => {
   const classNames = classnames(
     'sage-description',
     className,
     {
-      'sage-description--inline-spread': inlineSpread,
-      'sage-description--normalcase-titles': !allcapsTitles,
+      [`sage-description--${layout}`]: layout
     }
   );
 
@@ -59,41 +61,65 @@ export const Description = ({
     return renderItem({ title, data, link });
   };
 
+  const setCustomProps = () => {
+    const props = {};
+
+    if (actionWidth) {
+      props['--sage-description-action-width'] = actionWidth || "auto";
+    }
+    
+    if (titleWidth) {
+      props['--sage-description-title-width'] = titleWidth || "auto";
+    }
+
+    return props;
+  }
+
   return (
-    <div className={classNames} id={id} {...rest}>
+    <div 
+      className={classNames} 
+      id={id} 
+      style={setCustomProps()}
+      {...rest}>
       {renderItems()}
       {children}
     </div>
   );
 };
 
+Description.LAYOUT = LAYOUT_TYPES;
+
 Description.defaultProps = {
-  allcapsTitles: false,
+  actionWidth: null,
   children: null,
   className: null,
   data: null,
   id: null,
-  inlineSpread: false,
-  link: null,
   items: [],
+  layout: null,
+  link: null,
+  primaryAction: null,
   title: null,
+  titleWidth: null,
 };
 
 Description.propTypes = {
-  allcapsTitles: PropTypes.bool,
+  actionWidth: PropTypes.string,
   children: PropTypes.node,
   className: PropTypes.string,
   data: PropTypes.node,
   id: PropTypes.string,
-  inlineSpread: PropTypes.bool,
-  link: PropTypes.shape({
-    href: PropTypes.string,
-  }),
   items: PropTypes.arrayOf(PropTypes.shape({
     data: PropTypes.node,
     id: PropTypes.string,
     link: PropTypes.string,
     title: PropTypes.string,
   })),
+  layout: PropTypes.oneOf(Object.values(LAYOUT_TYPES)),
+  link: PropTypes.shape({
+    href: PropTypes.string,
+  }),
+  primaryAction: PropTypes.node,
   title: PropTypes.string,
+  titleWidth: PropTypes.string,
 };
