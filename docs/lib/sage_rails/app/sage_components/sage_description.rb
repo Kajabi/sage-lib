@@ -4,7 +4,6 @@ class SageDescription < SageComponent
   set_attribute_schema({
     action_width: [:optional, String],
     id: [:optional, String],
-    inline_spread: [:optional, TrueClass],
     items: [:optional, [[{
       data: [:optional, NilClass, String, Integer, Hash],
       link: [:optional, String],
