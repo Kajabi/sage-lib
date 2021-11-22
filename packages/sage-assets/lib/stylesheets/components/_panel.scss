@@ -90,7 +90,7 @@
   @extend %t-sage-heading-5;
   color: sage-color(charcoal, 500);
 
-  & + .sage-panel__subtext {
+  + .sage-panel__subtext {
     margin-top: sage-spacing(xs);
   }
 }
