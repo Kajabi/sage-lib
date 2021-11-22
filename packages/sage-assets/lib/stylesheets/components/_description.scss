@@ -26,7 +26,7 @@
 
 .sage-description__term-group {
   display: grid;
-  grid-template-columns: var(--sage-description-title-width, auto) 1fr var(--sage-description-action-width, auto);
+  grid-template-columns: var(--sage-description-title-width, 50%) 1fr var(--sage-description-action-width, auto);
   gap: sage-spacing(sm);
   width: 100%;
   padding: sage-spacing(xs) 0;
