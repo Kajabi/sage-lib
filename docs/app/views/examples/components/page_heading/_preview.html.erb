@@ -55,11 +55,14 @@
   spacer: { bottom: :xl },
 } do %>
     <% content_for :sage_page_heading_actions do %>
-      <%= sage_component SageButton, {
-        style: "secondary",
-        icon: { name: "preview-on", style: "left" },
-        value: "Preview",
-      } %>
+      <%= sage_component SagePopover, {
+        icon: "preview-on",
+        trigger_value: "Preview",
+        trigger_icon_only: false,
+        popover_position: "bottom-right"
+      } do %>
+        👋
+      <% end %>
       <%= sage_component SageButton, {
         style: "primary",
         icon: { name: "add", style: "left" },
