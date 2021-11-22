@@ -10,8 +10,8 @@
   "
   <% if component.action_width || component.title_width %>
     style="
-      --sage-description-action-width: <%= component.action_width if component.action_width %>;
-      --sage-description-title-width: <%= component.title_width if component.title_width %>
+      --sage-description-action-width: <%= component.action_width || "auto" %>;
+      --sage-description-title-width: <%= component.title_width || "auto" %>
     "
   <% end %>
   <%= component.generated_html_attributes.html_safe %>
@@ -30,22 +30,22 @@
           <dd class="sage-description__data"><%= item[:data] %></dd>
         <% end %>
       <% end %>
+      <% if component.primary_action %>
+        <div class="sage-description__action-button">
+          <%= sage_component SageButton, {
+            value: component.primary_action[:value],
+            style: "primary",
+            subtle: true,
+            icon: {
+              name: "caret-right",
+              style: component.primary_action[:icon_only] ? "only" : "right",
+            },
+            test_id: component.primary_action[:test_id],
+            attributes: component.primary_action[:attributes],
+          } %>
+        </div>
+      <% end %>
     </div>
-    <% if component.primary_action %>
-      <div class="sage-description__action-button">
-        <%= sage_component SageButton, {
-          value: component.primary_action[:value],
-          style: "primary",
-          subtle: true,
-          icon: {
-            name: "caret-right",
-            style: component.primary_action[:icon_only] ? "only" : "right",
-          },
-          test_id: component.primary_action[:test_id],
-          attributes: component.primary_action[:attributes],
-        } %>
-      </div>
-    <% end %>
   <% end %>
   <%= component.content %>
 </dl>
