@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.60.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.60.0...@kajabi/sage-assets@0.60.1) (2021-11-22)
+
+
+### Bug Fixes
+
+* **panel header:** remove unnecessary nesting selector ([26db216](https://github.com/Kajabi/sage-lib/commit/26db21671457d242e35078b96d45d8041d67e1c1))
+* **panel heading:** fix spacing for title within panel heading ([cb978b3](https://github.com/Kajabi/sage-lib/commit/cb978b3cb6eb183d2957ec4b773fbe47126c7591))
+
+
+
+
+
 # [0.60.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.59.0...@kajabi/sage-assets@0.60.0) (2021-11-22)
 
 
