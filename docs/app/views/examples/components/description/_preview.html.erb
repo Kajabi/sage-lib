@@ -47,7 +47,7 @@
     },
     {
       title: "Name",
-      data: "#{image_tag("card-placeholder-sm.png", height: 16, width: 24)} John Doe".html_safe,
+      data: "John Doe",
     }
   ],
 } %>
@@ -70,9 +70,36 @@
     },
     {
       title: "Name",
-      data: "#{image_tag("card-placeholder-sm.png", height: 16, width: 24)} John Doe".html_safe,
+      data: "John Doe",
     }
   ],
+} %>
+
+<h3>Multiple Items - Custom Title and Action Widths</h3>
+<%= sage_component SageDescription, {
+  title_width: "100px",
+  primary_action: {
+    value: "Button",
+    icon_only: true,
+  },
+  items: [
+    {
+      title: "Very Long Title",
+      data: "John Doe",
+    },
+    {
+      title: "Name",
+      data: "John Doe",
+    },
+    {
+      title: "Name",
+      data: "John Doe",
+    },
+    {
+      title: "Name",
+      data: "John Doe",
+    }
+  ]
 } %>
 
 <h3>Action Button</h3>
@@ -90,12 +117,23 @@
 
 <h3>Action Button - Icon Only</h3>
 <%= sage_component SageDescription, {
-  title_width: "100px",
   primary_action: {
     value: "Button",
     icon_only: true,
   },
   items: [
+    {
+      title: "Name",
+      data: "John Doe",
+    },
+    {
+      title: "Name",
+      data: "John Doe",
+    },
+    {
+      title: "Name",
+      data: "John Doe",
+    },
     {
       title: "Name",
       data: "John Doe",
