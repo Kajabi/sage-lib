@@ -88,8 +88,11 @@
 
 .sage-panel__title {
   @extend %t-sage-heading-5;
-  margin-bottom: sage-spacing(xs);
   color: sage-color(charcoal, 500);
+
+  + .sage-panel__subtext {
+    margin-top: sage-spacing(xs);
+  }
 }
 
 .sage-panel__subtext {
