@@ -52,14 +52,14 @@ MultipleItemsWithActionButton.args = {
     {
       title: 'Name',
       data: 'John Doe',
-      primaryAction: {
+      action: {
         value: 'Button',
       }
     },
     {
       title: 'Name',
       data: 'John Doe',
-      primaryAction: {
+      action: {
         value: 'Button',
         iconOnly: true
       }
@@ -82,7 +82,7 @@ StackedLayout.args = {
     {
       title: 'Name',
       data: 'John Doe',
-      primaryAction: {
+      action: {
         value: 'Button'
       }
     }
@@ -97,7 +97,7 @@ CustomTitleAndActionWidths.args = {
     {
       title: 'Very Long Title',
       data: 'John Doe',
-      primaryAction: {
+      action: {
         value: 'Button',
         iconOnly: true,
       }
@@ -105,7 +105,7 @@ CustomTitleAndActionWidths.args = {
     {
       title: 'Name',
       data: 'John Doe',
-      primaryAction: {
+      action: {
         value: 'Button',
         iconOnly: true,
       }

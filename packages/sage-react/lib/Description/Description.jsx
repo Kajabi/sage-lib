@@ -4,10 +4,10 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { LAYOUT_TYPES } from './configs';
 import { Button } from '../Button';
-import { Link } from '../Link';
 import { SageTokens } from '../configs';
 
 export const Description = ({
+  action,
   actionWidth,
   children,
   className,
@@ -16,7 +16,6 @@ export const Description = ({
   layout,
   link,
   items,
-  primaryAction,
   title,
   titleWidth,
   ...rest
@@ -29,37 +28,30 @@ export const Description = ({
     }
   );
 
-  const renderItem = ({ title, data, link, primaryAction }) => (
+  const renderItem = ({ title, data, action }) => (
     <>
       {title && (
         <dt className="sage-description__title">
           {title}
         </dt>
       )}
-      {(data && link) && (
-        <Link {...link}>
-          <dd className="sage-description__data">
-            {data}
-          </dd>
-        </Link>
-      )}
-      {(data && !link) && (
+      {data && (
         <dd className="sage-description__data">
           {data}
         </dd>
       )}
-      {primaryAction && (
+      {action && (
         <div className="sage-description__action-button">
           <Button
-            value={primaryAction.value}
+            value={action.value}
             color={Button.COLORS.PRIMARY}
             subtle={true}
             icon={SageTokens.ICONS.CARET_RIGHT}
             iconPosition={Button.ICON_POSITIONS.RIGHT}
-            iconOnly={primaryAction.iconOnly}
-            {...primaryAction.attributes}
+            iconOnly={action.iconOnly}
+            {...action.attributes}
           >
-            {primaryAction.value}
+            {action.value}
           </Button>
         </div>
       )}
@@ -75,7 +67,7 @@ export const Description = ({
       ));
     }
 
-    return renderItem({ title, data, link, primaryAction });
+    return renderItem({ title, data, action });
   };
 
   const setCustomProps = () => {
@@ -108,6 +100,7 @@ export const Description = ({
 Description.LAYOUT = LAYOUT_TYPES;
 
 Description.defaultProps = {
+  action: {},
   actionWidth: null,
   children: null,
   className: null,
@@ -116,12 +109,16 @@ Description.defaultProps = {
   items: [],
   layout: null,
   link: null,
-  primaryAction: {},
   title: null,
   titleWidth: null,
 };
 
 Description.propTypes = {
+  action: PropTypes.shape({
+    attributes: PropTypes.objectOf(PropTypes.object),
+    iconOnly: PropTypes.bool,
+    value: PropTypes.string,
+  }),
   actionWidth: PropTypes.string,
   children: PropTypes.node,
   className: PropTypes.string,
@@ -136,11 +133,6 @@ Description.propTypes = {
   layout: PropTypes.oneOf(Object.values(LAYOUT_TYPES)),
   link: PropTypes.shape({
     href: PropTypes.string,
-  }),
-  primaryAction: PropTypes.shape({
-    attributes: PropTypes.objectOf(PropTypes.object),
-    iconOnly: PropTypes.bool,
-    value: PropTypes.string,
   }),
   title: PropTypes.string,
   titleWidth: PropTypes.string,

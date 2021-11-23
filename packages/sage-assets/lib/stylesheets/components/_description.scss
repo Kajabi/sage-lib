@@ -24,7 +24,7 @@
   grid-template-columns: var(--sage-description-title-width, 50%) 1fr var(--sage-description-action-width, auto);
   gap: sage-spacing(sm);
   width: 100%;
-  padding: sage-spacing(xs) 0;
+  padding: sage-spacing(md) 0;
   border-top: sage-border();
 
   &:last-of-type {
@@ -37,6 +37,7 @@
       "title title button"
       "data data button";
     align-items: center;
+    row-gap: sage-spacing(2xs);
   }
 }
 

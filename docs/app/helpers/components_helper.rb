@@ -177,7 +177,8 @@ module ComponentsHelper
         rails: "done",
         react: "todo",
         a11y: "done",
-        figma_embed: "",
+        react_component_slug: "sage-description--default",
+        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F9Km09NjlZHYWsMP7EGT8tI%2FSage-3-for-Admin%3Fnode-id%3D19727%253A25817",
       },
       {
         title: "drawer",
