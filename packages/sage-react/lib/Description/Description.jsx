@@ -61,11 +61,10 @@ export const Description = ({
   const renderItems = () => {
     if (items && items.length > 0) {
       return items.map((item) => (
-        <div 
-          key={item.id || uuid()} 
-          className={`sage-description__term-group ${!item.action ? "sage-description__term-group--no-action" : ""}`}
+        <div
+          key={item.id || uuid()}
+          className={`sage-description__term-group ${!item.action ? 'sage-description__term-group--no-action' : ''}`}
         >
-          {console.log(item.action)}
           {renderItem(item)}
         </div>
       ));
