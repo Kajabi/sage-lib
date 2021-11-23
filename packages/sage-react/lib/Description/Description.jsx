@@ -49,7 +49,6 @@ export const Description = ({
         </dd>
       )}
       {primaryAction && (
-        console.log(primaryAction.iconOnly),
         <div className="sage-description__action-button">
           <Button
             value={primaryAction.value}
@@ -83,22 +82,23 @@ export const Description = ({
     const props = {};
 
     if (actionWidth) {
-      props['--sage-description-action-width'] = actionWidth || "auto";
+      props['--sage-description-action-width'] = actionWidth || 'auto';
     }
-    
+
     if (titleWidth) {
-      props['--sage-description-title-width'] = titleWidth || "auto";
+      props['--sage-description-title-width'] = titleWidth || 'auto';
     }
 
     return props;
-  }
+  };
 
   return (
-    <div 
-      className={classNames} 
-      id={id} 
+    <div
+      className={classNames}
+      id={id}
       style={setCustomProps()}
-      {...rest}>
+      {...rest}
+    >
       {renderItems()}
       {children}
     </div>
@@ -138,7 +138,7 @@ Description.propTypes = {
     href: PropTypes.string,
   }),
   primaryAction: PropTypes.shape({
-    attributes: PropTypes.object,
+    attributes: PropTypes.objectOf(PropTypes.object),
     iconOnly: PropTypes.bool,
     value: PropTypes.string,
   }),
