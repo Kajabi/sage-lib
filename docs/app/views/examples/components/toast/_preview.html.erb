@@ -48,7 +48,7 @@
     value: "Example",
     style: "primary",
     attributes: {
-      "onClick": "showDismissInstructions(Sage.toast.trigger({text: 'I will not dismiss via timer', timer: false}))",
+      "onClick": "showDismissInstructions(Sage.toast.trigger({text: 'I will not dismiss via timer', timer: false, testId: 'toast_example'}))",
     },
   } %>
 
@@ -56,7 +56,7 @@
     value: "Uploading",
     style: "secondary",
     attributes: {
-      "onClick": "showDismissInstructions(Sage.toast.trigger({text: 'Uploading image...', type: 'loading', timer: false}))",
+      "onClick": "showDismissInstructions(Sage.toast.trigger({text: 'Uploading image...', type: 'loading', timer: false, testId: 'uploading_toast'}))",
     },
   } %>
 
