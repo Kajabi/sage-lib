@@ -62,10 +62,17 @@
     {
       title: "Name",
       data: "John Doe",
+      primary_action: {
+        value: "Button"
+      }
     },
     {
       title: "Name",
       data: "John Doe",
+      primary_action: {
+        value: "Button",
+        icon_only: true
+      }
     },
     {
       title: "Name",
@@ -81,10 +88,6 @@
 <h3>Multiple Items - Custom Title and Action Widths</h3>
 <%= sage_component SageDescription, {
   title_width: "128px",
-  primary_action: {
-    value: "Button",
-    icon_only: true,
-  },
   items: [
     {
       title: "Very Long Title",
@@ -114,24 +117,31 @@
     {
       title: "Name",
       data: "John Doe",
+      primary_action: {
+        value: "Button"
+      }
     }
   ]
 } %>
 
 <h3>Action Button - Icon Only</h3>
 <%= sage_component SageDescription, {
-  primary_action: {
-    value: "Button",
-    icon_only: true,
-  },
   items: [
     {
       title: "Name",
       data: "John Doe",
+      primary_action: {
+        value: "Button",
+        icon_only: true
+      }
     },
     {
       title: "Name",
       data: "John Doe",
+      primary_action: {
+        value: "Button",
+        icon_only: true
+      }
     },
     {
       title: "Name",

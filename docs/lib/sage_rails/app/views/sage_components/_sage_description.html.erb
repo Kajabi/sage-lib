@@ -27,18 +27,18 @@
           <dd class="sage-description__data"><%= item[:data] %></dd>
         <% end %>
       <% end %>
-      <% if component.primary_action %>
+      <% if item[:primary_action] %>
         <div class="sage-description__action-button">
           <%= sage_component SageButton, {
-            value: component.primary_action[:value],
+            value: item[:primary_action][:value],
             style: "primary",
             subtle: true,
             icon: {
               name: "caret-right",
-              style: component.primary_action[:icon_only] ? "only" : "right",
+              style: item[:primary_action][:icon_only] ? "only" : "right",
             },
-            test_id: component.primary_action[:test_id],
-            attributes: component.primary_action[:attributes],
+            test_id: item[:primary_action][:test_id],
+            attributes: item[:primary_action][:attributes],
           } %>
         </div>
       <% end %>
