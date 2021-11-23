@@ -15,7 +15,9 @@ export default {
     ]
   },
   argTypes: {
-    ...selectArgs({})
+    ...selectArgs({
+      layout: Description.LAYOUT,
+    })
   }
 };
 
@@ -42,4 +44,19 @@ MultipleItems.args = {
       data: "John Doe"
     },
   ]
-}
+};
+
+export const MultipleItemsWithActionButton = Template.bind({});
+MultipleItemsWithActionButton.args = {
+  primaryAction: {
+    value: "Button",
+  }
+};
+
+export const StackedLayout = Template.bind({});
+StackedLayout.args = {
+  layout: Description.LAYOUT.STACKED,
+  primaryAction: {
+    value: "Button",
+  }
+};
