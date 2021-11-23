@@ -88,9 +88,7 @@ Sage.toast = (function () {
   }
 
   function dispatchEvent(evt) {
-    var event = new Event(evt);
-    console.info(event);
-    document.dispatchEvent(event);
+    document.dispatchEvent(new Event(evt));
   }
 
   return {
