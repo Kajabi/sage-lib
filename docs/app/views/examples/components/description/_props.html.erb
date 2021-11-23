@@ -7,7 +7,7 @@
 <tr>
   <td><%= md('`items`') %></td>
   <td><%= md('
-    An array of items to create a set of `title`: `description` pairs.
+    An array of items to create a set of `title`: `description` pairs with an optional action button.
    ') %></td>
   <td><%= md('```
 Array<{
@@ -23,4 +23,25 @@ Array<{
   <td><%= md('Determines the layout of items.') %></td>
   <td><%= md('[`"inline"` | `"stacked"`]') %></td>
   <td><%= md('`inline`') %></td>
+</tr>
+<tr>
+  <td colspan="4"><%= md('**Action**') %></td>
+</tr>
+<tr>
+  <td><%= md('`attributes`') %></td>
+  <td><%= md('Button attributes that can be applied as a hash.') %></td>
+  <td><%= md('`Hash`') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`icon_only`') %></td>
+  <td><%= md('Determines whether the action button will render without text.') %></td>
+  <td><%= md('`Boolean`') %></td>
+  <td><%= md('`false`') %></td>
+</tr>
+<tr>
+  <td><%= md('`value`') %></td>
+  <td><%= md('The required value of the action button text. Hidden if `icon_only` is set to `true`.') %></td>
+  <td><%= md('`String`') %></td>
+  <td><%= md('`nil`') %></td>
 </tr>
