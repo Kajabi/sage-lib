@@ -9,8 +9,8 @@ export default {
     actionWidth: null,
     items: [
       {
-        title: "Name",
-        data: "John Doe",
+        title: 'Name',
+        data: 'John Doe',
       }
     ]
   },
@@ -28,20 +28,20 @@ export const MultipleItems = Template.bind({});
 MultipleItems.args = {
   items: [
     {
-      title: "Name",
-      data: "John Doe"
+      title: 'Name',
+      data: 'John Doe'
     },
     {
-      title: "Name",
-      data: "John Doe"
+      title: 'Name',
+      data: 'John Doe'
     },
     {
-      title: "Name",
-      data: "John Doe"
+      title: 'Name',
+      data: 'John Doe'
     },
     {
-      title: "Name",
-      data: "John Doe"
+      title: 'Name',
+      data: 'John Doe'
     },
   ]
 };
@@ -50,27 +50,27 @@ export const MultipleItemsWithActionButton = Template.bind({});
 MultipleItemsWithActionButton.args = {
   items: [
     {
-      title: "Name",
-      data: "John Doe",
+      title: 'Name',
+      data: 'John Doe',
       primaryAction: {
-        value: "Button",
+        value: 'Button',
       }
     },
     {
-      title: "Name",
-      data: "John Doe",
+      title: 'Name',
+      data: 'John Doe',
       primaryAction: {
-        value: "Button",
+        value: 'Button',
         iconOnly: true
       }
     },
     {
-      title: "Name",
-      data: "John Doe"
+      title: 'Name',
+      data: 'John Doe'
     },
     {
-      title: "Name",
-      data: "John Doe"
+      title: 'Name',
+      data: 'John Doe'
     },
   ]
 };
@@ -80,10 +80,10 @@ StackedLayout.args = {
   layout: Description.LAYOUT.STACKED,
   items: [
     {
-      title: "Name",
-      data: "John Doe",
+      title: 'Name',
+      data: 'John Doe',
       primaryAction: {
-        value: "Button"
+        value: 'Button'
       }
     }
   ]
@@ -91,22 +91,22 @@ StackedLayout.args = {
 
 export const CustomTitleAndActionWidths = Template.bind({});
 CustomTitleAndActionWidths.args = {
-  actionWidth: "64px",
-  titleWidth: "128px",
+  actionWidth: '64px',
+  titleWidth: '128px',
   items: [
     {
-      title: "Very Long Title",
-      data: "John Doe",
+      title: 'Very Long Title',
+      data: 'John Doe',
       primaryAction: {
-        value: "Button",
+        value: 'Button',
         iconOnly: true,
       }
     },
     {
-      title: "Name",
-      data: "John Doe",
+      title: 'Name',
+      data: 'John Doe',
       primaryAction: {
-        value: "Button",
+        value: 'Button',
         iconOnly: true,
       }
     },

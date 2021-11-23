@@ -1,4 +1,4 @@
 export const LAYOUT_TYPES = {
-	INLINE: 'inline',
-	STACKED: 'stacked'
+  INLINE: 'inline',
+  STACKED: 'stacked'
 };
