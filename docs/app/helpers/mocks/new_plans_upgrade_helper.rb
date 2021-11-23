@@ -43,4 +43,26 @@ module Mocks::NewPlansUpgradeHelper
       label: "#{props[:current_value]} out of #{props[:limit_value]} #{props[:feature_name]}",
     }
   end
+
+  def plan_ugrade_panel_demo_plan
+    {
+      title: "Basic plan",
+      total_cost: 1428,
+      billing: [
+        {
+          label: "today",
+          items: []
+        },
+        {
+          label: "Oct 4, 2022",
+          items: [
+            {
+              label: "Basic plan",
+              amount: 1428,
+            },
+          ]
+        }
+      ]
+    }
+  end
 end

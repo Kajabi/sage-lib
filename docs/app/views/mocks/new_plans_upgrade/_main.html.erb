@@ -3,8 +3,12 @@
     id: "example-tabs1",
     items: [
       {
-        text: "Feature Usage Display",
+        text: "Feature usage display",
         target: "feature-1",
+      },
+      {
+        text: "Plan upgrade panel",
+        target: "feature-2",
         active: true
       },
       {
@@ -14,11 +18,13 @@
     ]
   } %>
 
-  <%= sage_component SageTabsPane, { id: "feature-1", panel_spacing: true } do %>
-    <div>
-      <%= render "mocks/new_plans_upgrade/feature_usage_display", usage_data: feature_usage_display_demo_data(), opened: false %>
-      <%= render "mocks/new_plans_upgrade/feature_usage_display", usage_data: feature_usage_display_demo_data(), opened: true %>
-    </div>
+  <%= sage_component SageTabsPane, { id: "feature-1" } do %>
+    <%= render "mocks/new_plans_upgrade/feature_usage_display", usage_data: feature_usage_display_demo_data(), opened: false %>
+    <%= render "mocks/new_plans_upgrade/feature_usage_display", usage_data: feature_usage_display_demo_data(), opened: true %>
+  <% end %>
+
+  <%= sage_component SageTabsPane, { id: "feature-2" } do %>
+    <%= render "mocks/new_plans_upgrade/plan_upgrade_panel", plan: plan_ugrade_panel_demo_plan %>
   <% end %>
 
   <%= sage_component SageTabsPane, { id: "feature-2", panel_spacing: true } do %>

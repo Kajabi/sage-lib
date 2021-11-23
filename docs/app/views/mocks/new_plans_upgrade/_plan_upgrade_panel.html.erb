@@ -1,0 +1,47 @@
+<%= sage_component SagePanel, {} do %>
+  <%= sage_component SagePanelHeader, { title: plan[:title] } do %>
+    <%= content_for :sage_panel_header_subtext do %>
+      <p>$<%= plan[:total_cost] %>/year (plus tax)</p>
+    <% end %>
+  <% end %>
+  <%= sage_component SagePanelBlock, {} do %>
+    <%= sage_component SageLink, {
+      label: "Your billing cycle will begin today.",
+      url: "#"
+    } %>
+    <% plan[:billing].each do | b | %>
+      <%= sage_component SageCard, { spacer: { top: :md } } do %>
+        <%= sage_component SageCardBlock, {} do %>
+          <h2 class="<%= "#{SageClassnames::TYPE::HEADING_6} #{SageClassnames::SPACERS::SM_BOTTOM}" %>">
+            Billed <%= b[:label] %>
+          </h2>
+          <% total = 0 %>
+          <% b[:items].each do | item | %>
+            <% total += item[:amount] %>
+            <%= sage_component SageCardRow, { grid_template: "te", spacer: { top: :xs } } do %>
+              <p class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL}" %>">
+                <%= item[:label] %>
+              </p>
+              <span class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL}" %>">
+                $<%= item[:amount] %>
+              </span>
+            <% end %>
+          <% end %>
+          <%= sage_component SageCardDivider, {} %>
+          <%= sage_component SageCardRow, { grid_template: "te", spacer: { top: :xs } } do %>
+            <strong class="<%= SageClassnames::TYPE::BODY_MED %>">Total</strong>
+            <span class="<%= SageClassnames::TYPE::BODY %>">$<%= total %></span>
+          <% end %>
+        <% end %>
+      <% end %>
+    <% end %>
+  <% end %>
+  <%= sage_component SagePanelFooter, {} do %>
+    <%= sage_component SageButton, {
+      raised: false,
+      style: "secondary",
+      value: "Cancel",
+    } %>
+    <%= sage_component SageButton, { value: "Confirm upgrade", style: "primary" } %>
+  <% end %>
+<% end %>
