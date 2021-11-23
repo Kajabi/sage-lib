@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.71.4](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.71.3...@kajabi/sage-react@0.71.4) (2021-11-23)
+
+
+### Bug Fixes
+
+* **modal:** add id to react implementation ([1489584](https://github.com/Kajabi/sage-lib/commit/1489584d896fb0a4f80d9ff37ac0bcf0bf4c858e))
+
+
+
+
+
 ## [0.71.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.71.2...@kajabi/sage-react@0.71.3) (2021-11-23)
 
 
