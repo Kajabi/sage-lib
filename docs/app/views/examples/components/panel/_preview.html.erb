@@ -7,18 +7,19 @@ Ut elementum id leo ac fringilla.
 ")
 %>
 
-<%= md('
-<strong class="t-sage--color-orange">
-  While this page depicts panels within cards this merely a consequence of our documentation structure
-  and NOT a pattern that should be implemented elsewhere.
-</strong>
-', use_sage_type: true) %>
+<%= sage_component SageAlert, {
+  color: "warning",
+  desc: "While this page depicts Panels within Cards, this is merely a consequence of our documentation structure and not a pattern that should be implemented elsewhere.",
+  icon_name: "sage-icon-warning",
+} %>
 
 <%= sage_component SagePanelHeader, { title: "Basic Panel" } %>
 
 <%= sage_component SagePanel, {} do %>
   <%= sage_component SagePanelHeader, {
-    title: "Panel Header"
+    title: "Panel Header Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Morbi rhoncus mauris ut turpis gravida bibendum",
+    title_tag: "h3",
   } do %>
     <%= sage_component SageButton, {
       value: "More info",
@@ -26,11 +27,11 @@ Ut elementum id leo ac fringilla.
       style: "secondary",
       icon: {
         name: "info-circle",
-        style: "only"
+        style: "left"
       }
     } %>
     <%= content_for :sage_panel_header_subtext do %>
-      <p>All kinds of awesome, wonderful content can go in here! <%= link_to "Learn more", "//example.com" %></p>
+      <%= sample_copy.html_safe %>
     <% end %>
   <% end %>
   <%= sage_component SagePanelBlock, { type_block: true } do %>
@@ -42,48 +43,46 @@ Ut elementum id leo ac fringilla.
   <% end %>
 <% end %>
 
+<%= sage_component SagePanel, {} do %>
+  <%= sage_component SagePanelHeader, {
+    title: "Panel Header",
+    tag: "h3",
+  } do %>
+    <%= sage_component SageSwitch, {
+      hide_text: true,
+      id: "sage-switch-1",
+      label_text: "Switch (checkbox)",
+      name: "sage-switch-1",
+      type: "checkbox",
+      value: "switch-1-value",
+    } %>
+    <%= content_for :sage_panel_header_subtext do %>
+      <%= sample_copy.html_safe %>
+    <% end %>
+  <% end %>
+  <%= sage_component SagePanelBlock, { type_block: true } do %>
+    <%= sample_copy.html_safe %>
+  <% end %>
+<% end %>
+
 <%= md("
 Panels are rich containers that allow for grouping and organizing content details. They have the following overall setup available:
 
 - **Header**
-  `.sage-panel__header`
-  (optional) This area usually contains at least a title (`sage-panel__title`)
-  and often an icon or menu flanking the right corner.
-  There is also an optional subtext element (`sage-panel__subtext`), useful for documenting the panel objective.
-  It employs the Sage Row layout base with `24px` gutters.
+  `SagePanelHeader`
+  (optional) This area usually contains at least a title (`sage-panel__title`) and often an icon or menu positioned in the right corner. An optional subtext element (`sage-panel__subtext`) is useful for documenting the panel objective. It employs the Sage Row layout base with `24px` gutters.
 
 - **Body**
-  While there is no specific container for the body itself,
-  there are a variety of panel components that can be used to create most panel configurations.
-  The simplest of these is **Panel Block** `.sage-panel__block` (shown above),
-  which allows for open text or elements without any preset spacing between them.
-  Others, such as **Panel Stack** `.sage-panel__stack` are more opinionated,
-  enforcing their own specific spacing and/or layout features.
-  Each of the Panel components is explained and demonstrated in more detail below.
+  While there is no specific container for the body itself, there are a variety of panel components that can be used to create most panel configurations. The simplest of these is **Panel Block** `SagePanelBlock` (shown above), allowing open text or elements without any preset spacing between them. Others, such as **Panel Stack** `SagePanelStack` are more opinionated, enforcing specific spacing or layout features. Each of the Panel components is explained and demonstrated in more detail below.
 
 - **Footer**
-  `.sage-panel__footer`
-  (optional) This area often contains one or more buttons
-  that can be sent to the right edge of the panel
-  with the `sage-panel__footer--align-right` modifier.
-  It employs the Sage Row layout base with `24px` gutters.
-", use_sage_type: true) %>
+  `SagePanelFooter` (optional) This area often contains one or more buttons that can be sent to the right edge of the panel with the `align_spread: true` component attribute. It employs the Sage Row layout base with `24px` gutters.", use_sage_type: true) %>
 
 <%= sage_component SagePanelHeader, { title: "Panel Block <code>.sage-panel__block</code>".html_safe } %>
-<%= md("
-A block is a completely unopinionated container meant to provide the most flexible way to group elements within a panel.
-This component is purely a wrapper and does not apply any layout or spacing by default
-so its great for blocks of text or small groups of content within some of the other panel components.
-Set `type_block` to `true` to enforce open text spacing rules as established by the `sage-type` class.
-", use_sage_type: true) %>
+<%= md("A block is a completely unopinionated container meant to provide the most flexible way to group elements within a panel. This component is purely a wrapper and does not apply any layout or spacing by default so it is great for blocks of text or small groups of content within some of the other panel components. Set `type_block` to `true` to enforce open text spacing rules as established by the `sage-type` class.", use_sage_type: true) %>
 
 <%= sage_component SagePanelHeader, { title: "Panel Stack <code>.sage-panel__stack</code>".html_safe } %>
-<%= md("
-A stack is a single column of elements sitting atop each other
-with the standard 8px gap between each item in the stack.
-A common use is for stacking cards, but this is also help for
-presentation of several distinct lines of text content beyond open type formatting.
-", use_sage_type: true) %>
+<%= md("A stack is a single column of elements sitting atop each other with the standard 8px gap between each item in the stack. A common use is for stacking cards, but this is also help for presentation of several distinct lines of text content beyond open type formatting.", use_sage_type: true) %>
 
 <%= sage_component SagePanelSubheader, { title: "Example:" } %>
 
@@ -117,11 +116,7 @@ presentation of several distinct lines of text content beyond open type formatti
 <% end %>
 
 <%= sage_component SagePanelHeader, { title: "Panel List <code>.sage-panel__list</code>".html_safe } %>
-<%= md("
-A list is a similar to a stack but has no space between items,
-and each item has a border that extends into the panel's outer gutters.
-Lists can also have row-like layouts with elements setup inline.
-", use_sage_type: true) %>
+<%= md("A list is a similar to a stack but has no space between items, and each item has a border that extends into the panel's outer gutters. Lists can also have row-like layouts with elements setup inline.", use_sage_type: true) %>
 
 <%= sage_component SagePanelSubheader, { title: "Example:" } %>
 <%= sage_component SagePanel, {} do %>
@@ -146,10 +141,7 @@ Lists can also have row-like layouts with elements setup inline.
 <% end %>
 
 <%= sage_component SagePanelHeader, { title: "Panel Row <code>.sage-panel__row</code>".html_safe } %>
-<%= md("
-A row is a single or isolated inline arrangement or elements.
-It can either be a custom component or employ one of the standard Grid Template Patterns.
-", use_sage_type: true) %>
+<%= md("A panel row is a single or isolated inline arrangement of elements. It can either be a custom component or employ one of the standard Grid Template Patterns.", use_sage_type: true) %>
 
 <%= sage_component SagePanelSubheader, { title: "Example:" } %>
 <%= sage_component SagePanel, {} do %>
@@ -172,11 +164,7 @@ It can either be a custom component or employ one of the standard Grid Template 
 <% end %>
 
 <%= sage_component SagePanelHeader, { title: "Panel Tiles <code>.sage-panel__tiles</code>".html_safe } %>
-<%= md("
-Tiles are groups of elements that typically also each contain additional content but are laid out in a neat tiling pattern.
-Items can use the generic `.sage-panel__tile`, or be another Sage Component such as a Card.
-Use one of the tiling pattern modifiers to determine how many tiles appear in a row of the grid: 2-up, 3-up, and 4-up patterns.
-", use_sage_type: true) %>
+<%= md("Tiles are groups of elements that typically also each contain additional content but are laid out in a neat tiling pattern. Items can use the generic `.sage-panel__tile`, or be another Sage Component such as a Card. Use one of the tiling pattern modifiers to determine how many tiles appear in a row of the grid: 2-up, 3-up, and 4-up patterns.", use_sage_type: true) %>
 
 <%= sage_component SagePanelSubheader, { title: "Example:" } %>
 <%= sage_component SagePanel, {} do %>
@@ -215,12 +203,7 @@ Use one of the tiling pattern modifiers to determine how many tiles appear in a 
 <% end %>
 
 <%= sage_component SagePanelHeader, { title: "Panel Subheader <code>.sage-panel__subheader</code>".html_safe } %>
-<%= md("
-The Panel Subheader provides specific styles for a subheading within a panel.
-It is very similar in configuration to the panel header but shows with smaller type.
-Format the text content itself with `.sage-panel__subtitle`, which can also be used independently.
-There is also an optional subtext element (`sage-panel__subtext`), useful for documenting the panel objective
-", use_sage_type: true) %>
+<%= md("The Panel Subheader provides specific styles for a subheading within a panel. It is very similar in configuration to the panel header but shows with smaller type. Format the text content itself with `.sage-panel__subtitle`, which can also be used independently. An optional subtext attribute (`subtext: ""`) is useful for documenting the panel objective.", use_sage_type: true) %>
 
 <%= sage_component SagePanelSubheader, { title: "Example:" } %>
 <%= sage_component SagePanel, {} do %>
@@ -232,14 +215,10 @@ There is also an optional subtext element (`sage-panel__subtext`), useful for do
 <% end %>
 
 <%= sage_component SagePanelHeader, { title: "Panel Divider <code>.sage-panel__divider</code>".html_safe } %>
-<%= md("
-The Divider is a thin rule that helps to provide additional visual separation between groups within the panel.
-", use_sage_type: true) %>
+<%= md("The Divider is a thin rule that helps to provide additional visual separation between groups within the panel.", use_sage_type: true) %>
 
 <%= sage_component SagePanelSubheader, { title: "Example:" } %>
-<%= md("
-Dividers can also be set to extend to the panel edges with the `--full-bleed` modifier. They may also contain label text.
-", use_sage_type: true) %>
+<%= md("Dividers can also be set to extend to the panel edges with the `--full-bleed` modifier. They may also contain label text.", use_sage_type: true) %>
 <%= sage_component SagePanel, {} do %>
   <%= sage_component SagePanelHeader, { title: "Divider:" } %>
   <%= sage_component SagePanelDivider, {} %>
@@ -250,13 +229,7 @@ Dividers can also be set to extend to the panel edges with the `--full-bleed` mo
 <% end %>
 
 <%= sage_component SagePanelHeader, { title: "Panel Figure <code>.sage-panel__figure</code>".html_safe } %>
-<%= md("
-A Panel Figure contains an image that occupies a substantive space in the panel, typically filling edge to edge.
-See the #{link_to("Panel Figure component", pages_component_path("panel_figure"))} for more details.
-", use_sage_type: true) %>
+<%= md("A Panel Figure contains an image that occupies a substantive space in the panel, typically filling edge to edge.See the #{link_to("Panel Figure component", pages_component_path("panel_figure"))} for more details.", use_sage_type: true) %>
 
 <%= sage_component SagePanelHeader, { title: "Panel Grid Utility <code>.sage-panel-grid</code>".html_safe } %>
-<%= md("
-The `.sage-panel-grid` utility class can be added onto containers in order to enforce the Panel's internal grid settings.
-This is helpful in cases where a container of some sort is needed around contents but those contents should still recieve the standard Panel-scoped gaps.
-", use_sage_type: true) %>
+<%= md("The `.sage-panel-grid` utility class can be added onto containers in order to enforce the Panel's internal grid settings.This is helpful in cases where a container of some sort is needed around contents but those contents should still recieve the standard Panel-scoped gaps.", use_sage_type: true) %>
