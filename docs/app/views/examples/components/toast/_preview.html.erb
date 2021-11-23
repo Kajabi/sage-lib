@@ -38,7 +38,7 @@
   } %>
 <% end %>
 
-<hr/>
+<hr>
 
 <h3>Non-dismissing Toast patterns</h3>
 <p>Non-dismissable toasts are used in our app to display 'loading' messages or to provide a CTA upon a interaction.</p>
@@ -77,7 +77,7 @@
   } %>
 <% end %>
 
-<script type="text/javascript">
+<script>
   const showDismissInstructions = (toastId) => {
     document.getElementById('dismiss-instructions').innerHTML = `
       <strong>Toast Id:</strong> <code>${toastId}</code>
@@ -99,7 +99,7 @@
 </script>
 <div id="dismiss-instructions"></div>
 
-<hr />
+<hr>
 
 <pre class="prettyprint">
   <code>
@@ -143,3 +143,49 @@
     Sage.toast.reset();
   </code>
 </pre>
+
+<hr>
+<%= sage_component SagePanelStack, {} do %>
+  <h3>Events</h3>
+
+  <%= sage_component SageTable, {
+    striped: true,
+    responsive: true,
+    headers: [
+      "Event name",
+      "Event type",
+      "Description"
+    ],
+    rows: [
+      {
+        col_1: md("`sage.toast.open`"),
+        col_2: "global",
+        col_3: md("Sent when a toast has been opened")
+      },
+      {
+        col_1: md("`sage.toast.close`"),
+        col_2: "global",
+        col_3: md("Sent when a toast has been closed")
+      },
+      {
+        col_1: md("`sage.toast.dismiss`"),
+        col_2: "global",
+        col_3: "Sent when a toast has been dismissed by user interaction, such as clicking the close button"
+      },
+    ]
+  } %>
+<% end %>
+
+<script>
+  (function() {
+    document.addEventListener("sage.toast.open", function(e) {
+      console.info("sage.toast.open event", e);
+    });
+    document.addEventListener("sage.toast.close", function(e) {
+      console.info("sage.toast.close event fired", e);
+    });
+    document.addEventListener("sage.toast.dismiss", function(e) {
+      console.info("sage.toast.dismiss event fired", e);
+    });
+  })();
+</script>
