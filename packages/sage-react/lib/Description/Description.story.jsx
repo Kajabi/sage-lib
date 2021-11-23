@@ -83,9 +83,13 @@ StackedLayout.args = {
       title: 'Name',
       data: 'John Doe',
       action: {
-        value: 'Button'
-      }
-    }
+        value: "Button"
+      },
+    },
+    {
+      title: 'Name',
+      data: 'John Doe',
+    },
   ]
 };
 
