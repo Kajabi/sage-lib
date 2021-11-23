@@ -56,6 +56,14 @@ module MocksHelper
         no_rails_js: true,
         status: DONE,
         team: "Commerce",
+      },
+      {
+        alias: "new_plans_upgrade",
+        milestone_id: 23,
+        name: "New Plans and Upgrade",
+        no_rails_js: true,
+        status: DOING,
+        team: "Growth",
       }
     ]
   end

@@ -1,0 +1,27 @@
+<div class="sage-tabs-container">
+  <%= sage_component SageTabs, {
+    id: "example-tabs1",
+    items: [
+      {
+        text: "Feature Usage Display",
+        target: "feature-1",
+        active: true
+      },
+      {
+        text: "Other features",
+        target: "feature-2",
+      },
+    ]
+  } %>
+
+  <%= sage_component SageTabsPane, { id: "feature-1", panel_spacing: true } do %>
+    <div>
+      <%= render "mocks/new_plans_upgrade/feature_usage_display", usage_data: feature_usage_display_demo_data(), opened: false %>
+      <%= render "mocks/new_plans_upgrade/feature_usage_display", usage_data: feature_usage_display_demo_data(), opened: true %>
+    </div>
+  <% end %>
+
+  <%= sage_component SageTabsPane, { id: "feature-2", panel_spacing: true } do %>
+    <p>Coming soon</p>
+  <% end %>
+</div>
