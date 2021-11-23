@@ -36,7 +36,7 @@ Sage.toast = (function () {
     if (!elToast) return false;
 
     elToast.classList.add(CLASS_DISMISSED_STATE);
-    dispatchEvent(EVENT_CLOSE);
+    _dispatchEvent(EVENT_CLOSE);
     _unbindEvents(elToast);
     return true;
   }
@@ -45,7 +45,7 @@ Sage.toast = (function () {
     const elContainer = document.getElementById(ID_TOAST_CONTAINER);
     if (!elContainer) return false;
 
-    dispatchEvent(EVENT_CLOSE);
+    _dispatchEvent(EVENT_CLOSE);
     _unbindEvents(elContainer);
     elContainer.remove();
     return true;
@@ -66,7 +66,7 @@ Sage.toast = (function () {
 
     const toastFragment = stringToHtmlFragment(content);
     _bindEvents(toastFragment);
-    dispatchEvent(EVENT_OPEN);
+    _dispatchEvent(EVENT_OPEN);
     scope.appendChild(toastFragment);
   }
 
@@ -84,10 +84,10 @@ Sage.toast = (function () {
 
   function _handleCloseButtonClick(evt) {
     dismiss(evt.target.parentElement.id);
-    dispatchEvent(EVENT_DISMISS);
+    _dispatchEvent(EVENT_DISMISS);
   }
 
-  function dispatchEvent(evt) {
+  function _dispatchEvent(evt) {
     document.dispatchEvent(new Event(evt));
   }
 
