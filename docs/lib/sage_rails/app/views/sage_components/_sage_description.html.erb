@@ -19,26 +19,20 @@
         <dt class="sage-description__title"><%= item[:title] %></dt>
       <% end %>
       <% if item[:data] %>
-        <% if item[:link] %>
-          <%= link_to item[:link] do %>
-            <dd class="sage-description__data"><%= item[:data] %></dd>
-          <% end %>
-        <% else %>
-          <dd class="sage-description__data"><%= item[:data] %></dd>
-        <% end %>
+        <dd class="sage-description__data"><%= item[:data] %></dd>
       <% end %>
-      <% if item[:primary_action] %>
+      <% if item[:action] %>
         <div class="sage-description__action-button">
           <%= sage_component SageButton, {
-            value: item[:primary_action][:value],
+            value: item[:action][:value],
             style: "primary",
             subtle: true,
             icon: {
               name: "caret-right",
-              style: item[:primary_action][:icon_only] ? "only" : "right",
+              style: item[:action][:icon_only] ? "only" : "right",
             },
-            test_id: item[:primary_action][:test_id],
-            attributes: item[:primary_action][:attributes],
+            test_id: item[:action][:test_id],
+            attributes: item[:action][:attributes],
           } %>
         </div>
       <% end %>
