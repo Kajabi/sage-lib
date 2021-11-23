@@ -41,6 +41,15 @@
   }
 }
 
+.sage-description__term-group--no-action {
+  grid-template-columns: var(--sage-description-title-width, 50%) 1fr;
+  .sage-description--stacked & {
+    grid-template-areas:
+      "title title"
+      "data data";
+  }
+}
+
 .sage-description__title {
   @extend %t-sage-body;
   color: sage-color(charcoal, 100);

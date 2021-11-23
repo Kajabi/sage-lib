@@ -14,7 +14,12 @@
   <%= component.generated_html_attributes.html_safe %>
 >
   <% component.items.each do | item | %>
-    <div class="sage-description__term-group">
+    <div 
+      class="
+        sage-description__term-group
+        <%= "sage-description__term-group--no-action" if !item[:action] %>
+      "
+    >
       <% if item[:title] %>
         <dt class="sage-description__title"><%= item[:title] %></dt>
       <% end %>
