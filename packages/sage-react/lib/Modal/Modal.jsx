@@ -17,6 +17,7 @@ export const Modal = ({
   disableBackgroundBlur,
   disableBackgroundDismiss,
   fullScreen,
+  id,
   large,
   onExit,
   ...rest
@@ -66,6 +67,7 @@ export const Modal = ({
   return (
     <div
       className={classNames}
+      id={id}
       open={active}
       {...animationAttributes}
       {...attrs}
@@ -97,6 +99,7 @@ Modal.defaultProps = {
   className: '',
   fullScreen: false,
   large: false,
+  id: null,
   disableBackgroundBlur: false,
   disableBackgroundDismiss: false,
   onExit: (val) => val,
@@ -116,6 +119,7 @@ Modal.propTypes = {
   disableBackgroundBlur: PropTypes.bool,
   disableBackgroundDismiss: PropTypes.bool,
   fullScreen: PropTypes.bool,
+  id: PropTypes.string,
   large: PropTypes.bool,
   onExit: PropTypes.func,
 };
