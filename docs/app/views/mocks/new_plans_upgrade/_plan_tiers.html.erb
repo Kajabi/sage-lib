@@ -1,0 +1,50 @@
+<%= sage_component SageContainer, { size: "xl" } do %>
+  <%= sage_component SagePanelRow, { grid_template: "ot", vertical_align: "start" } do %>
+    <% plans.each do |plan| %>
+      <%= sage_component SagePanel, {} do %>
+        <%= sage_component SagePanelHeader, {
+          title: plan[:name]
+        } %>
+        <%= sage_component SagePanelBlock, { } do %>
+          <h2 class="<%= "#{SageClassnames::TYPE::HEADING_2} #{SageClassnames::SPACERS::XS_BOTTOM}" %>">
+            $<%= plan[:price] %><span style="font-weight: 500">/<%= plan[:duration] %></span>
+          </h2>
+
+          <h3 class="<%= "#{SageClassnames::TYPE::BODY} #{SageClassnames::TYPE_COLORS::CHARCOAL} #{SageClassnames::SPACERS::SM_BOTTOM}" %>">
+            <%= plan[:billing] %>
+          </h3>
+
+          <p class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_400} #{SageClassnames::SPACERS::MD_BOTTOM}" %>">
+            <%= plan[:description] %>
+          </p>
+
+          <%= sage_component SageButton, {
+            disabled: plan[:current],
+            full_width: true,
+            style: "primary",
+            value: plan[:current] ? "Current plan" : "Select",
+          } %>
+
+          <hr>
+
+          <%= sage_component SagePanelStack, {} do %>
+            <h3 class="<%= "#{SageClassnames::TYPE::HEADING_6} #{SageClassnames::SPACERS::XS_BOTTOM}" %>">Features</h3>
+
+            <% plan[:features].each do | feature | %>
+              <%= sage_component SageCardRow, { grid_template: "et" } do %>
+                <%= sage_component SageIcon, {
+                  card_color: "published",
+                  circular: true,
+                  color: "sage",
+                  icon: "check",
+                  size: "sm"
+                } %>
+                <span class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_400}" %>"><%= feature %></span>
+              <% end %>
+            <% end %>
+          <% end %>
+        <% end %>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>

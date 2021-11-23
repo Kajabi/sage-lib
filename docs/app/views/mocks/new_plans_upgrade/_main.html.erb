@@ -9,11 +9,15 @@
       {
         text: "Plan upgrade panel",
         target: "feature-2",
+      },
+      {
+        text: "Plan Tiers",
+        target: "feature-3",
         active: true
       },
       {
         text: "Other features",
-        target: "feature-2",
+        target: "feature-4",
       },
     ]
   } %>
@@ -27,7 +31,11 @@
     <%= render "mocks/new_plans_upgrade/plan_upgrade_panel", plan: plan_ugrade_panel_demo_plan %>
   <% end %>
 
-  <%= sage_component SageTabsPane, { id: "feature-2", panel_spacing: true } do %>
+  <%= sage_component SageTabsPane, { id: "feature-3" } do %>
+    <%= render "mocks/new_plans_upgrade/plan_tiers", plans: plan_tiers_demo_plans %>
+  <% end %>
+
+  <%= sage_component SageTabsPane, { id: "feature-4" } do %>
     <p>Coming soon</p>
   <% end %>
 </div>
