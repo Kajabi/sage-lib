@@ -65,11 +65,15 @@
 
 <h3>Multiple Items - Custom Title and Action Widths</h3>
 <%= sage_component SageDescription, {
+  action_width: "128px",
   title_width: "128px",
   items: [
     {
       title: "Very Long Title",
       data: "John Doe",
+      primary_action: {
+        value: "Button",
+      }
     },
     {
       title: "Name",
