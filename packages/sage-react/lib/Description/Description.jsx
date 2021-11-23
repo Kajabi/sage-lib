@@ -29,7 +29,7 @@ export const Description = ({
     }
   );
 
-  const renderItem = ({ title, data, link }) => (
+  const renderItem = ({ title, data, link, primaryAction }) => (
     <>
       {title && (
         <dt className="sage-description__title">
@@ -48,6 +48,22 @@ export const Description = ({
           {data}
         </dd>
       )}
+      {primaryAction && (
+        console.log(primaryAction.iconOnly),
+        <div className="sage-description__action-button">
+          <Button
+            value={primaryAction.value}
+            color={Button.COLORS.PRIMARY}
+            subtle={true}
+            icon={SageTokens.ICONS.CARET_RIGHT}
+            iconPosition={Button.ICON_POSITIONS.RIGHT}
+            iconOnly={primaryAction.iconOnly}
+            {...primaryAction.attributes}
+          >
+            {primaryAction.value}
+          </Button>
+        </div>
+      )}
     </>
   );
 
@@ -56,24 +72,11 @@ export const Description = ({
       return items.map((item) => (
         <div key={item.id || uuid()} className="sage-description__term-group">
           {renderItem(item)}
-          {primaryAction && (
-            <div className="sage-description__action-button">
-              <Button
-                value={primaryAction.value}
-                color={Button.COLORS.PRIMARY}
-                subtle={true}
-                icon={SageTokens.ICONS.CARET_RIGHT}
-                iconPosition={Button.ICON_POSITIONS.RIGHT}
-                iconOnly={primaryAction.iconOnly || false}
-                {...primaryAction.attributes}
-              />
-            </div>
-          )}
         </div>
       ));
     }
 
-    return renderItem({ title, data, link });
+    return renderItem({ title, data, link, primaryAction });
   };
 
   const setCustomProps = () => {
@@ -113,7 +116,7 @@ Description.defaultProps = {
   items: [],
   layout: null,
   link: null,
-  primaryAction: null,
+  primaryAction: {},
   title: null,
   titleWidth: null,
 };

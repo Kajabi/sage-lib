@@ -48,15 +48,67 @@ MultipleItems.args = {
 
 export const MultipleItemsWithActionButton = Template.bind({});
 MultipleItemsWithActionButton.args = {
-  primaryAction: {
-    value: "Button",
-  }
+  items: [
+    {
+      title: "Name",
+      data: "John Doe",
+      primaryAction: {
+        value: "Button",
+      }
+    },
+    {
+      title: "Name",
+      data: "John Doe",
+      primaryAction: {
+        value: "Button",
+        iconOnly: true
+      }
+    },
+    {
+      title: "Name",
+      data: "John Doe"
+    },
+    {
+      title: "Name",
+      data: "John Doe"
+    },
+  ]
 };
 
 export const StackedLayout = Template.bind({});
 StackedLayout.args = {
   layout: Description.LAYOUT.STACKED,
-  primaryAction: {
-    value: "Button",
-  }
+  items: [
+    {
+      title: "Name",
+      data: "John Doe",
+      primaryAction: {
+        value: "Button"
+      }
+    }
+  ]
+};
+
+export const CustomTitleAndActionWidths = Template.bind({});
+CustomTitleAndActionWidths.args = {
+  actionWidth: "64px",
+  titleWidth: "128px",
+  items: [
+    {
+      title: "Very Long Title",
+      data: "John Doe",
+      primaryAction: {
+        value: "Button",
+        iconOnly: true,
+      }
+    },
+    {
+      title: "Name",
+      data: "John Doe",
+      primaryAction: {
+        value: "Button",
+        iconOnly: true,
+      }
+    },
+  ]
 };
