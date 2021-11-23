@@ -3,7 +3,9 @@ import uuid from 'react-uuid';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { LAYOUT_TYPES } from './configs';
+import { Button } from '../Button';
 import { Link } from '../Link';
+import { SageTokens } from '../configs';
 
 export const Description = ({
   actionWidth,
@@ -54,6 +56,19 @@ export const Description = ({
       return items.map((item) => (
         <div key={item.id || uuid()} className="sage-description__term-group">
           {renderItem(item)}
+          {primaryAction && (
+            <div className="sage-description__action-button">
+              <Button
+                value={primaryAction.value}
+                color={Button.COLORS.PRIMARY}
+                subtle={true}
+                icon={SageTokens.ICONS.CARET_RIGHT}
+                iconPosition={Button.ICON_POSITIONS.RIGHT}
+                iconOnly={primaryAction.iconOnly || false}
+                {...primaryAction.attributes}
+              />
+            </div>
+          )}
         </div>
       ));
     }
@@ -119,7 +134,11 @@ Description.propTypes = {
   link: PropTypes.shape({
     href: PropTypes.string,
   }),
-  primaryAction: PropTypes.node,
+  primaryAction: PropTypes.shape({
+    attributes: PropTypes.object,
+    iconOnly: PropTypes.bool,
+    value: PropTypes.string,
+  }),
   title: PropTypes.string,
   titleWidth: PropTypes.string,
 };
