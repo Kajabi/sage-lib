@@ -11,13 +11,17 @@
         target: "feature-2",
       },
       {
-        text: "Plan Tiers",
+        text: "Plan tiers",
         target: "feature-3",
-        active: true
       },
       {
-        text: "Other features",
+        text: "Usag alerts",
         target: "feature-4",
+      },
+      {
+        text: "Upgrade modal",
+        target: "feature-5",
+        active: true
       },
     ]
   } %>
@@ -36,6 +40,23 @@
   <% end %>
 
   <%= sage_component SageTabsPane, { id: "feature-4" } do %>
-    <p>Coming soon</p>
+    <%= render "mocks/new_plans_upgrade/usage_alert", feature: { name: "[feature name]", percentage: 50 } %>
+    <%= render "mocks/new_plans_upgrade/usage_alert", feature: { name: "[feature name]", percentage: 100 } %>
+    <%= render "mocks/new_plans_upgrade/usage_alert", feature: { name: "[feature name]", percentage: 101 } %>
+  <% end %>
+
+  <%= sage_component SageTabsPane, { id: "feature-5" } do %>
+    <%= render "mocks/new_plans_upgrade/upgrade_modal", feature: "[feature name]", action: "[act on]" %>
+    <%= sage_component SageButton, {
+      attributes: {
+        "data-js-modaltrigger": "plan-upgrade-modal",
+      },
+      style: "primary",
+      value: "Launch upgrade modal",
+    } %>
+    <h3 class="<%= "#{SageClassnames::SPACERS::XS_BOTTOM} #{SageClassnames::SPACERS::SM_TOP}" %>">Manual Trigger</h3>
+    <code>
+    Sage.modal.openModal("plan-upgrade-modal");
+    </code>
   <% end %>
 </div>

@@ -173,4 +173,53 @@ module Mocks::NewPlansUpgradeHelper
       }
     ]
   end
+
+  def plan_usage_alert_configs(feature)
+    actions = {
+      primary: {
+        value: "Upgrade plan",
+        attributes: {
+          href: "#",
+        },
+      },
+      secondary: {
+        value: "Check usage",
+        attributes: {
+          href: "#",
+        },
+      }
+    }
+
+    configs = {
+      dismissable: true,
+      primary_action: actions[:primary],
+      secondary_actions: [actions[:secondary]],
+    }
+
+    case feature[:percentage]
+    when 0..99
+      configs = configs.merge({
+        color: "warning",
+        desc: "Upgrade your plan to access more #{feature[:name]}.",
+        icon_name: "sage-icon-warning",
+        title: "You’ve used #{feature[:percentage]}% of available #{feature[:name]}",
+      })
+    when 100
+      configs = configs.merge({
+        color: "warning",
+        desc: "Upgrade your plan to access more #{feature[:name]}.",
+        icon_name: "sage-icon-flag",
+        title: "You’ve reached your #{feature[:name]} limit",
+      })
+    else
+      configs = configs.merge({
+        color: "danger",
+        desc: "To avoid any issues with your experience, upgrade your plan now.",
+        icon_name: "sage-icon-danger",
+        title: "You’ve exceeded your #{feature[:name]} limit",
+      })
+    end
+
+    configs
+  end
 end
