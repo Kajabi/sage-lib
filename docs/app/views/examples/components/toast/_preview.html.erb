@@ -108,7 +108,7 @@
     // Triggers a toast with a toast options object and
     // returns the unique id of the toast.
     //
-    // @param {{ message, icon, type, timer, link = {text, href} }} - Toast options
+    // @param {{ message, icon, testId, type, timer, link = {text, href} }} - Toast options
     // @returns {unique id}
     //
     // Example:
@@ -118,6 +118,7 @@
         icon: 'check',
         type: 'danger',
         link: { text: 'next step', href 'example.com' },
+        testId: 'toast_test_example',
       });
 
 
@@ -153,24 +154,20 @@
     responsive: true,
     headers: [
       "Event name",
-      "Event type",
       "Description"
     ],
     rows: [
       {
         col_1: md("`sage.toast.open`"),
-        col_2: "global",
-        col_3: md("Sent when a toast has been opened")
+        col_2: md("Sent when a Toast has been opened")
       },
       {
         col_1: md("`sage.toast.close`"),
-        col_2: "global",
-        col_3: md("Sent when a toast has been closed")
+        col_2: md("Sent when a Toast has been closed")
       },
       {
         col_1: md("`sage.toast.dismiss`"),
-        col_2: "global",
-        col_3: "Sent when a toast has been dismissed by user interaction, such as clicking the close button"
+        col_2: md("Sent when a Toast has been dismissed by user interaction, such as clicking the close button. The `sage.toast.close` event will follow afterwards.")
       },
     ]
   } %>
@@ -182,10 +179,10 @@
       console.info("sage.toast.open event", e);
     });
     document.addEventListener("sage.toast.close", function(e) {
-      console.info("sage.toast.close event fired", e);
+      console.info("sage.toast.close event", e);
     });
     document.addEventListener("sage.toast.dismiss", function(e) {
-      console.info("sage.toast.dismiss event fired", e);
+      console.info("sage.toast.dismiss event", e);
     });
   })();
 </script>
