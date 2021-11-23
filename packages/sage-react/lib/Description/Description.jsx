@@ -74,11 +74,11 @@ export const Description = ({
     const props = {};
 
     if (actionWidth) {
-      props['--sage-description-action-width'] = actionWidth || 'auto';
+      props['--sage-description-action-width'] = actionWidth;
     }
 
     if (titleWidth) {
-      props['--sage-description-title-width'] = titleWidth || 'auto';
+      props['--sage-description-title-width'] = titleWidth;
     }
 
     return props;

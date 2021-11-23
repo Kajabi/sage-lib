@@ -5,10 +5,10 @@
     <%= "sage-description--stacked" if component.layout == "stacked" %>
     <%= component.generated_css_classes %>
   "
-  <% if component.action_width || component.title_width %>
+  <% if component.title_width || component.action_width %>
     style="
-      --sage-description-action-width: <%= component.action_width || "auto" %>;
-      --sage-description-title-width: <%= component.title_width || "auto" %>
+      <%= "--sage-description-action-width: #{component.action_width};" if component.action_width %>
+      <%= "--sage-description-title-width: #{component.title_width};" if component.title_width %>
     "
   <% end %>
   <%= component.generated_html_attributes.html_safe %>
