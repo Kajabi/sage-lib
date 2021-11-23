@@ -45,6 +45,7 @@ Sage.toast = (function () {
     const elContainer = document.getElementById(ID_TOAST_CONTAINER);
     if (!elContainer) return false;
 
+    dispatchEvent(EVENT_CLOSE);
     _unbindEvents(elContainer);
     elContainer.remove();
     return true;
