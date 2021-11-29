@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.28.6](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.28.5...@kajabi/sage@4.28.6) (2021-11-29)
+
+
+### Bug Fixes
+
+* **switch:** fixes overriding id on switch value ([f268fb7](https://github.com/Kajabi/sage-lib/commit/f268fb738d0a4b247f2e6bb46a9bf794e6338f19)), closes [#1042](https://github.com/Kajabi/sage-lib/issues/1042)
+
+
+
+
+
 ## [4.28.5](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.28.4...@kajabi/sage@4.28.5) (2021-11-23)
 
 **Note:** Version bump only for package @kajabi/sage
