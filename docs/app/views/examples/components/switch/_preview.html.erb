@@ -1,7 +1,7 @@
 <%= sage_component SagePanelRow, { grid_template: "m" } do %>
   <%= sage_component SagePanelStack, {} do %>
     <!-- Checkbox Default -->
-    <%= sage_component SageSwitch, { 
+    <%= sage_component SageSwitch, {
       id: "sage-switch-1",
       label_text: "Switch (checkbox)",
       name: "sage-switch-1",
@@ -9,7 +9,7 @@
       value: "switch-1-value",
     } %>
     <!-- Checkbox Error -->
-    <%= sage_component SageSwitch, { 
+    <%= sage_component SageSwitch, {
       has_error: true,
       id: "sage-switch-2",
       label_text: "Switch (checkbox) with error",
@@ -19,7 +19,7 @@
       value: "switch-2-value",
     } %>
     <!-- Checkbox Disabled -->
-    <%= sage_component SageSwitch, { 
+    <%= sage_component SageSwitch, {
       disabled: true,
       id: "sage-switch-3",
       label_text: "Switch disabled",
@@ -28,7 +28,7 @@
       value: "switch-3-value",
     } %>
     <!-- Checkbox On & Disabled -->
-    <%= sage_component SageSwitch, { 
+    <%= sage_component SageSwitch, {
       checked: true,
       disabled: true,
       id: "sage-switch-4",
@@ -38,7 +38,7 @@
       value: "switch-4-value",
     } %>
     <!-- Checkbox w/ Message -->
-    <%= sage_component SageSwitch, { 
+    <%= sage_component SageSwitch, {
       id: "sage-switch-5",
       label_text: "Switch (checkbox) with info",
       message: "Additional Info 1",
@@ -46,7 +46,7 @@
       type: "checkbox",
       value: "switch-5-value",
     } %>
-    <%= sage_component SageSwitch, { 
+    <%= sage_component SageSwitch, {
       has_error: true,
       id: "sage-switch-6",
       label_text: "Switch (checkbox) error with info",
@@ -59,7 +59,7 @@
   <% end %>
   <%= sage_component SagePanelStack, {} do %>
     <!-- Radio Default -->
-    <%= sage_component SageSwitch, { 
+    <%= sage_component SageSwitch, {
       checked: true,
       id: "sage-switch-7",
       label_text: "Switch (radio)",
@@ -67,7 +67,7 @@
       type: "radio",
       value: "switch-7-value",
     } %>
-    <%= sage_component SageSwitch, { 
+    <%= sage_component SageSwitch, {
       id: "sage-switch-8",
       label_text: "Switch (radio)",
       name: "sage-switch-7",
@@ -76,7 +76,7 @@
     } %>
     <hr/>
     <!-- Radio Error -->
-    <%= sage_component SageSwitch, { 
+    <%= sage_component SageSwitch, {
       has_error: true,
       id: "sage-switch-9",
       label_text: "Switch (radio) error",
@@ -86,7 +86,7 @@
       value: "switch-9-value",
     } %>
     <!-- Radio Disabled -->
-    <%= sage_component SageSwitch, { 
+    <%= sage_component SageSwitch, {
       disabled: true,
       id: "sage-switch-10",
       label_text: "Switch (radio) disabled",
@@ -95,7 +95,7 @@
       value: "switch-10-value",
     } %>
     <!-- Radio On & Disabled -->
-    <%= sage_component SageSwitch, { 
+    <%= sage_component SageSwitch, {
       checked: true,
       disabled: true,
       id: "sage-switch-11",
@@ -105,7 +105,7 @@
       value: "switch-11-value",
     } %>
     <!-- Hidden Label Text -->
-    <%= sage_component SageSwitch, { 
+    <%= sage_component SageSwitch, {
       hide_text: true,
       id: "sage-switch-12",
       label_text: "Switch - visually hidden text",
@@ -117,7 +117,7 @@
 <% end %>
 
 <h3 class="t-sage-heading-6">Right aligned</h3>
-<%= sage_component SageSwitch, { 
+<%= sage_component SageSwitch, {
   id: "sage-switch-20",
   label_text: "Switch (checkbox) with info",
   message: "Additional Info",
@@ -128,7 +128,7 @@
 } %>
 
 <h3 class="t-sage-heading-6">Bordered Switch</h3>
-<%= sage_component SageSwitch, { 
+<%= sage_component SageSwitch, {
   has_border: true,
   id: "sage-switch-21",
   label_text: "Switch (checkbox) with info",
@@ -138,7 +138,7 @@
   toggle_position: "right",
   value: "switch-21-value",
 } %>
-<%= sage_component SageSwitch, { 
+<%= sage_component SageSwitch, {
   has_border: true,
   has_error: true,
   id: "sage-switch-22",
@@ -151,7 +151,7 @@
 } %>
 
 <h3 class="t-sage-heading-6">Bordered Switch (Radio)</h3>
-<%= sage_component SageSwitch, { 
+<%= sage_component SageSwitch, {
   has_border: true,
   id: "sage-switch-23",
   label_text: "Switch (radio) with info",
@@ -161,7 +161,7 @@
   type: "radio",
   value: "switch-23-value",
 } %>
-<%= sage_component SageSwitch, { 
+<%= sage_component SageSwitch, {
   has_border: true,
   id: "sage-switch-24",
   label_text: "Switch (radio) with info",
@@ -174,7 +174,7 @@
 
 <h3 class="t-sage-heading-6">Multiple switches in a list</h3>
 <ul>
-  <%= sage_component SageSwitch, { 
+  <%= sage_component SageSwitch, {
     id: "sage-switch-25",
     in_list: true,
     label_text: "Option A",
@@ -182,7 +182,7 @@
     type: "checkbox",
     value: "switch-25-value",
   } %>
-  <%= sage_component SageSwitch, { 
+  <%= sage_component SageSwitch, {
     id: "sage-switch-26",
     in_list: true,
     label_text: "Option B",
@@ -190,7 +190,7 @@
     type: "checkbox",
     value: "switch-26-value",
   } %>
-  <%= sage_component SageSwitch, { 
+  <%= sage_component SageSwitch, {
     id: "sage-switch-27",
     in_list: true,
     label_text: "Option C",
