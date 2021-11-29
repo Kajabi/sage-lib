@@ -2,15 +2,21 @@
 
 <%= sage_component SageType, {
   tag: "h3",
-  spacer: { bottom: :lg },
 } do %>
-  Heading 3 - in a <code>do</code> block
+  Heading 3 - in a <code>do</code> block, no <code>type_spec</code>
 <% end %>
 
-<%= sage_component SageType, { tag: "h2", content: "Body" } %>
+<%= sage_component SageType, {
+  tag: "h4",
+  type_spec: "heading-5",
+  spacer: { bottom: :lg },
+} do %>
+  h4 - in a <code>do</code> block, with <code>type_spec: "heading-5"</code>
+<% end %>
+
+<%= sage_component SageType, { tag: "h2", content: "Content strings in array, default tag type" } %>
 
 <%= sage_component SageType, {
-  tag: "p",
   type_spec: "body-sm",
   color: "charcoal-200",
   content: [

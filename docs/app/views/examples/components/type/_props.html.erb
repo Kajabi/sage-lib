@@ -2,11 +2,11 @@
   <td><%= md('`tag`') %></td>
   <td><%= md('Sets the wrapping HTML element for the content.') %></td>
   <td><%= md('String') %></td>
-  <td><%= md('`nil`') %></td>
+  <td><%= md('`<p>`') %></td>
 </tr>
 <tr>
   <td><%= md('`text`') %></td>
-  <td><%= md('Sets the copy content.') %></td>
+  <td><%= md('Sets the copy content. Can either be an array of strings or a single string.') %></td>
   <td>
       <%= md('```
 Hash<{
@@ -17,7 +17,7 @@ Hash<{
 </tr>
 <tr>
   <td><%= md('`type_spec`') %></td>
-  <td><%= md('Optional. Sets the type spec for the tag.') %></td>
+  <td><%= md('Optional. Sets the type spec for the tag. If the tag is a heading tag, the component will automatically add the `t-sage-heading-#` heading class to the tag.') %></td>
   <td><%= md('String') %></td>
   <td><%= md('`nil`') %></td>
 </tr>

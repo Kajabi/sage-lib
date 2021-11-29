@@ -1,8 +1,28 @@
+<%
+  tag_type = "p"
+  if component.tag.present?
+    tag_type = component.tag
+
+    if component.tag.start_with?("h") && !component.type_spec.present?
+      given_heading_value = component.tag.scan(/\d/).first.to_i
+    end
+
+    case given_heading_value
+    when 1 then heading_type = "t-sage-heading-1"
+    when 2 then heading_type = "t-sage-heading-2"
+    when 3 then heading_type = "t-sage-heading-3"
+    when 4 then heading_type = "t-sage-heading-4"
+    when 5 then heading_type = "t-sage-heading-5"
+    when 6 then heading_type = "t-sage-heading-6"
+    end
+  end
+%>
+
 <% if component.content.kind_of?(Array) %>
   <% component.content.each do | item | %>
-    <%# TODO: add conditional to render `p` tag if no tag is provided %>
-    <<%= component.tag %>
+    <<%= tag_type %>
       class="
+        <%= heading_type %>
         <% if component.type_spec.present? %>t-sage-<%= component.type_spec %><% end %>
         
         <% if component.type_spec.nil? and component.weight.present? %>
@@ -18,11 +38,13 @@
       <%= component.generated_html_attributes.html_safe %>
     >
       <%= item %>
-    </<%= component.tag %>>
+    </<%= tag_type %>>
+
   <% end %>
 <% else %>
-  <<%= component.tag %>
+  <<%= tag_type %>
     class="
+      <%= heading_type %>
       <% if component.type_spec.present? %>t-sage-<%= component.type_spec %><% end %>
         
       <% if component.type_spec.nil? and component.weight.present? %>
@@ -38,5 +60,5 @@
     <%= component.generated_html_attributes.html_safe %>
   >
     <%= component.content %>
-  </<%= component.tag %>>
+  </<%= tag_type %>>
 <% end %>
