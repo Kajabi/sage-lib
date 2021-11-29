@@ -1,7 +1,6 @@
 <h3>Triggering with <code>Sage.toast.trigger()</code></h3>
 <p>
-  Toasts do not have a SageRails component template. They are Javascript-only, <br/>templating is defined in
-  <a href="https://github.com/Kajabi/sage-lib/blob/main/packages/sage-system/lib/toast/toast.template.js" target="_blank"><code>sage-system/lib/toast/toast.template.js</code></a>.
+  Toasts do not have a SageRails component template. They are JavaScript-only, templating is defined in <a href="https://github.com/Kajabi/sage-lib/blob/main/packages/sage-system/lib/toast/toast.template.js" target="_blank" rel="noopener"><code>sage-system/lib/toast/toast.template.js</code></a>.
 </p>
 
 <%= sage_component SageButtonGroup, { gap: :sm } do %>
@@ -38,7 +37,7 @@
   } %>
 <% end %>
 
-<hr/>
+<%= sage_component SageCardDivider, {} %>
 
 <h3>Non-dismissing Toast patterns</h3>
 <p>Non-dismissable toasts are used in our app to display 'loading' messages or to provide a CTA upon a interaction.</p>
@@ -48,7 +47,7 @@
     value: "Example",
     style: "primary",
     attributes: {
-      "onClick": "showDismissInstructions(Sage.toast.trigger({text: 'I will not dismiss via timer', timer: false}))",
+      "onClick": "showDismissInstructions(Sage.toast.trigger({text: 'I will not dismiss via timer', timer: false, testId: 'toast_example'}))",
     },
   } %>
 
@@ -56,7 +55,7 @@
     value: "Uploading",
     style: "secondary",
     attributes: {
-      "onClick": "showDismissInstructions(Sage.toast.trigger({text: 'Uploading image...', type: 'loading', timer: false}))",
+      "onClick": "showDismissInstructions(Sage.toast.trigger({text: 'Uploading image...', type: 'loading', timer: false, testId: 'uploading_toast'}))",
     },
   } %>
 
@@ -77,29 +76,9 @@
   } %>
 <% end %>
 
-<script type="text/javascript">
-  const showDismissInstructions = (toastId) => {
-    document.getElementById('dismiss-instructions').innerHTML = `
-      <strong>Toast Id:</strong> <code>${toastId}</code>
-      <br/>
-      <br/>
-      <h4>Dismiss toast with:</h4>
-      <br/>
-      <div class='prettyprint'>
-        <code>Sage.toast.dismiss('${toastId}')</code>
-      </div>
-      <br/>
-      <h4>Dismiss all toasts with:</h4>
-      <br/>
-      <div class='prettyprint'>
-        <code>Sage.toast.reset()</code>
-      </div>
-    `
-  };
-</script>
 <div id="dismiss-instructions"></div>
 
-<hr />
+<%= sage_component SageCardDivider, {} %>
 
 <pre class="prettyprint">
   <code>
@@ -108,7 +87,7 @@
     // Triggers a toast with a toast options object and
     // returns the unique id of the toast.
     //
-    // @param {{ message, icon, type, timer, link = {text, href} }} - Toast options
+    // @param {{ message, icon, testId, type, timer, link = {text, href} }} - Toast options
     // @returns {unique id}
     //
     // Example:
@@ -118,6 +97,7 @@
         icon: 'check',
         type: 'danger',
         link: { text: 'next step', href 'example.com' },
+        testId: 'toast_test_example',
       });
 
 
@@ -143,3 +123,62 @@
     Sage.toast.reset();
   </code>
 </pre>
+
+<%= sage_component SageCardDivider, {} %>
+
+<%= sage_component SagePanelStack, {} do %>
+  <h3>Events</h3>
+
+  <%= sage_component SageTable, {
+    striped: true,
+    responsive: true,
+    headers: [
+      "Event name",
+      "Description"
+    ],
+    rows: [
+      {
+        col_1: md("`sage.toast.open`"),
+        col_2: md("Sent when a Toast has been opened")
+      },
+      {
+        col_1: md("`sage.toast.close`"),
+        col_2: md("Sent when a Toast has been closed")
+      },
+      {
+        col_1: md("`sage.toast.dismiss`"),
+        col_2: md("Sent when a Toast has been dismissed by user interaction, such as clicking the close button. The `sage.toast.close` event will follow afterwards.")
+      },
+    ]
+  } %>
+<% end %>
+
+<script>
+  const showDismissInstructions = (toastId) => {
+    document.getElementById('dismiss-instructions').innerHTML = `
+      <strong>Toast Id:</strong> <code>${toastId}</code>
+      <br/>
+      <br/>
+      <h4>Dismiss toast with:</h4>
+      <br/>
+      <div class='prettyprint'>
+        <code>Sage.toast.dismiss('${toastId}')</code>
+      </div>
+      <br/>
+      <h4>Dismiss all toasts with:</h4>
+      <br/>
+      <div class='prettyprint'>
+        <code>Sage.toast.reset()</code>
+      </div>
+    `
+  };
+  document.addEventListener("sage.toast.open", function(e) {
+    console.info("sage.toast.open event", e);
+  });
+  document.addEventListener("sage.toast.close", function(e) {
+    console.info("sage.toast.close event", e);
+  });
+  document.addEventListener("sage.toast.dismiss", function(e) {
+    console.info("sage.toast.dismiss event", e);
+  });
+</script>
