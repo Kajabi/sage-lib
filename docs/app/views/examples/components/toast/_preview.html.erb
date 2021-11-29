@@ -172,15 +172,13 @@
       </div>
     `
   };
-  (function() {
-    document.addEventListener("sage.toast.open", function(e) {
-      console.info("sage.toast.open event", e);
-    });
-    document.addEventListener("sage.toast.close", function(e) {
-      console.info("sage.toast.close event", e);
-    });
-    document.addEventListener("sage.toast.dismiss", function(e) {
-      console.info("sage.toast.dismiss event", e);
-    });
-  })();
+  document.addEventListener("sage.toast.open", function(e) {
+    console.info("sage.toast.open event", e);
+  });
+  document.addEventListener("sage.toast.close", function(e) {
+    console.info("sage.toast.close event", e);
+  });
+  document.addEventListener("sage.toast.dismiss", function(e) {
+    console.info("sage.toast.dismiss event", e);
+  });
 </script>
