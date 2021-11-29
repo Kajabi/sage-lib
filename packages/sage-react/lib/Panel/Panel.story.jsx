@@ -31,6 +31,7 @@ export const Default = (args) => (
     <Panel {...args}>
       <Panel.Header
         title="Panel header"
+        titleClassName="custom-panel-header-class"
         subtext={(
           <p>All kinds of awesome, wonderful content can go in here! <a href="https://example.com">Learn more</a></p>
         )}

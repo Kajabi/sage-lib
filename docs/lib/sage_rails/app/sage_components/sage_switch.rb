@@ -14,6 +14,6 @@ class SageSwitch < SageComponent
     standalone: [:optional, TrueClass],
     toggle_position: [:optional, Set.new(["right"])],
     type: String,
-    value: String,
+    value: [:optional, String],
   })
 end

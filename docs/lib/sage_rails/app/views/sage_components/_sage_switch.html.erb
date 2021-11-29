@@ -1,15 +1,15 @@
 <% if component.standalone %>
-  <input 
-    type="<%= component.type %>" 
-    id="<%= component.id %>" 
+  <input
+    type="<%= component.type %>"
+    id="<%= component.id %>"
     class="
       sage-switch
       sage-switch--standalone
       <%= component.has_error ? "sage-switch--error" : "" %>
       <%= component.generated_css_classes %>
-    " 
-    name="<%= component.name %>" 
-    value="<%= component.id %>"
+    "
+    name="<%= component.name %>"
+    value="<%= component.value.present?  ? component.value : component.id %>"
     <%= "checked" if component.checked %>
     <%= "disabled" if component.disabled %>
     <%= "required" if component.required %>
@@ -28,12 +28,12 @@ tag = component.in_list ? 'li' : 'div'
     "
     <%= component.generated_html_attributes.html_safe %>
   >
-    <input 
-      type="<%= component.type %>" 
-      id="<%= component.id %>" 
-      class="sage-switch__input" 
-      name="<%= component.name %>" 
-      value="<%= component.id %>"
+    <input
+      type="<%= component.type %>"
+      id="<%= component.id %>"
+      class="sage-switch__input"
+      name="<%= component.name %>"
+      value="<%= component.value.present?  ? component.value : component.id %>"
       <%= "checked" if component.checked %>
       <%= "disabled" if component.disabled %>
       <%= "required" if component.required %>
