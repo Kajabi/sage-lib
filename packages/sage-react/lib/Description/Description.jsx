@@ -7,16 +7,12 @@ import { Button } from '../Button';
 import { SageTokens } from '../configs';
 
 export const Description = ({
-  action,
   actionWidth,
   children,
   className,
-  data,
   id,
   layout,
-  link,
   items,
-  title,
   titleWidth,
   ...rest
 }) => {
@@ -28,52 +24,83 @@ export const Description = ({
     }
   );
 
-  const renderItem = ({ title, data, action }) => (
-    <>
-      {title && (
-        <dt className="sage-description__title">
-          {title}
-        </dt>
-      )}
-      {data && (
-        <dd className="sage-description__data">
-          {data}
-        </dd>
-      )}
-      {action && (
-        <div className="sage-description__action-button">
-          <Button
-            value={action.value}
-            color={Button.COLORS.PRIMARY}
-            subtle={true}
-            icon={SageTokens.ICONS.CARET_RIGHT}
-            iconPosition={Button.ICON_POSITIONS.RIGHT}
-            iconOnly={action.iconOnly}
-            {...action.attributes}
-          >
-            {action.value}
-          </Button>
-        </div>
-      )}
-    </>
-  );
+  const renderItem = ({ title, data, action }) => {
+    let iconOnly = true;
+
+    if (action && action.value) {
+      iconOnly = false;
+    }
+
+    if (action && action.iconOnly !== undefined) {
+      iconOnly = action.iconOnly;
+    }
+
+    console.log('action', !!action, iconOnly);
+
+    return (
+      <>
+        {title && (
+          <dt className="sage-description__title">
+            {title}
+          </dt>
+        )}
+        {data && (
+          <dd className="sage-description__data">
+            {data}
+          </dd>
+        )}
+        {action && (
+          <div className="sage-description__action">
+            <Button
+              color={Button.COLORS.PRIMARY}
+              subtle={true}
+              icon={SageTokens.ICONS.CARET_RIGHT}
+              iconPosition={!iconOnly && Button.ICON_POSITIONS.RIGHT}
+              iconOnly={iconOnly}
+              {...action.attributes}
+            >
+              {action.value || 'View more'}
+            </Button>
+          </div>
+        )}
+      </>
+    );
+  };
 
   const renderItems = () => {
-    if (items && items.length > 0) {
-      return items.map((item) => (
+    if (!items || items.length === 0) {
+      return null;
+    }
+
+    let hasActions = false;
+    items.forEach(item => {
+      if (item.action) {
+        hasActions = true;
+      }
+    });
+
+    
+    return items.map((item) => {
+      const termGroupClassnames = classnames(
+        'sage-description__term-group',
+        {
+          'sage-description__term-group--no-action': !hasActions,
+          'sage-description__term-group--hide-title': item.hideTitle,
+        }
+      );
+
+      return (
         <div
           key={item.id || uuid()}
-          className={`sage-description__term-group ${!item.action ? 'sage-description__term-group--no-action' : ''}`}
+          className={termGroupClassnames}
         >
           {renderItem(item)}
         </div>
-      ));
-    }
-
-    return renderItem({ title, data, action });
+      )
+    });
   };
 
-  const setCustomProps = () => {
+  const getCustomProps = () => {
     const props = {};
 
     if (actionWidth) {
@@ -91,7 +118,7 @@ export const Description = ({
     <div
       className={classNames}
       id={id}
-      style={setCustomProps()}
+      style={getCustomProps()}
       {...rest}
     >
       {renderItems()}
@@ -103,40 +130,29 @@ export const Description = ({
 Description.LAYOUT = LAYOUT_TYPES;
 
 Description.defaultProps = {
-  action: {},
   actionWidth: null,
   children: null,
   className: null,
-  data: null,
   id: null,
   items: [],
   layout: null,
-  link: null,
-  title: null,
   titleWidth: null,
 };
 
 Description.propTypes = {
-  action: PropTypes.shape({
-    attributes: PropTypes.objectOf(PropTypes.object),
-    iconOnly: PropTypes.bool,
-    value: PropTypes.string,
-  }),
   actionWidth: PropTypes.string,
   children: PropTypes.node,
   className: PropTypes.string,
-  data: PropTypes.node,
   id: PropTypes.string,
   items: PropTypes.arrayOf(PropTypes.shape({
+    action: PropTypes.shape({
+      attributes: PropTypes.objectOf(PropTypes.object),
+      iconOnly: PropTypes.bool,
+      value: PropTypes.string,
+    }),
     data: PropTypes.node,
-    id: PropTypes.string,
-    link: PropTypes.string,
     title: PropTypes.string,
   })),
   layout: PropTypes.oneOf(Object.values(LAYOUT_TYPES)),
-  link: PropTypes.shape({
-    href: PropTypes.string,
-  }),
-  title: PropTypes.string,
   titleWidth: PropTypes.string,
 };
