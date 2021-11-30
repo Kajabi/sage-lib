@@ -12,11 +12,11 @@ end
 classes = "#{component.generated_css_classes} t-sage-#{type_spec}"
 
 if component.color.present?
-  classes << "t-sage--color-#{component.color}"
+  classes << " t-sage--color-#{component.color}"
 end
 
 if component.alignment.present?
-  classes << "t-sage--align-#{component.alignment}"
+  classes << " t-sage--align-#{component.alignment}"
 end
 %>
 

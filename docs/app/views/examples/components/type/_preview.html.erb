@@ -45,23 +45,21 @@
 
 <%= sage_component SageType, {
   tag: "p",
-  weight: "med",
-  content:  "Weight - med: Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  type_spec: "body-xsmall-med",
+  content:  "Weight - med and xsmall: Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
 } %>
 
 <%= sage_component SageType, {
   tag: "p",
-  type_spec: "body",
-  weight: "semi",
+  type_spec: "body-small-semi",
   css_classes: "sage-type-custom-class",
   test_id: "sage-type-custom-id",
-  content: "Weight - semi: Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  content: "Weight - semi and small: Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
 } %>
 
 <%= sage_component SageType, {
   tag: "p",
-  type_spec: "body",
-  weight: "bold",
+  type_spec: "body-bold",
   spacer: { bottom: :lg },
   content:  "Weight - bold: Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
 } %>

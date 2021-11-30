@@ -4,7 +4,6 @@ class SageType < SageComponent
     type_spec: [:optional, String, Set.new(SageTokens::TYPE_SPECS)],
     color: [:optional, SageSchemas::COLOR_SLIDER],
     alignment: [:optional, SageSchemas::HORIZONAL_ALIGNMENT],
-    weight: [:optional, Set.new(["med", "semi", "bold"])],
     content: [:optional, String, [[
       :optional, String,
     ]]],
