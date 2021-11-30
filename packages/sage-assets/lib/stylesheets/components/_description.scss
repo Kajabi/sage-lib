@@ -4,6 +4,11 @@
 /// @group sage
 ////
 
+$-description-action-size: rem(16px);
+$-description-action-var: var(--sage-description-action-width, #{$-description-action-size});
+$-description-title-size: calc(50% - #{$-description-action-var});
+$-description-title-var: var(--sage-description-title-width, #{$-description-title-size});
+
 .sage-description {
   width: 100%;
   margin-bottom: sage-spacing();
@@ -21,7 +26,8 @@
 
 .sage-description__term-group {
   display: grid;
-  grid-template-columns: var(--sage-description-title-width, 50%) 1fr var(--sage-description-action-width, auto);
+  grid-template-columns: #{$-description-title-var} 1fr #{$-description-action-var};
+  grid-template-areas: "title data action";
   gap: sage-spacing(sm);
   width: 100%;
   padding: sage-spacing(md) 0;
@@ -34,42 +40,47 @@
 
   .sage-description--stacked & {
     grid-template-areas:
-      "title title button"
-      "data data button";
+      "title title action"
+      "data  data  action";
     align-items: center;
     row-gap: sage-spacing(2xs);
   }
 }
 
 .sage-description__term-group--no-action {
-  grid-template-columns: var(--sage-description-title-width, 50%) 1fr;
+  grid-template-areas: "title data data";
+
   .sage-description--stacked & {
     grid-template-areas:
-      "title title"
-      "data data";
+      "title title title"
+      "data  data  data";
+  }
+}
+
+.sage-description__term-group--hide-title {
+  grid-template-areas: "data data action";
+
+  &.sage-description__term-group--no-action,
+  .sage-description--stacked & {
+    grid-template-areas:
+      "data data data";
   }
 }
 
 .sage-description__title {
   @extend %t-sage-body;
-  color: sage-color(charcoal, 100);
 
-  .sage-description--stacked & {
-    grid-area: title;
-  }
+  color: sage-color(charcoal, 100);
+  grid-area: title;
 }
 
 .sage-description__data {
   @extend %t-sage-body-med;
+
   color: sage-color(charcoal, 400);
-  
-  .sage-description--stacked & {
-    grid-area: data;
-  }
+  grid-area: data;
 }
 
-.sage-description__action-button {
-  .sage-description--stacked & {
-    grid-area: button;
-  }
+.sage-description__action {
+  grid-area: action;
 }

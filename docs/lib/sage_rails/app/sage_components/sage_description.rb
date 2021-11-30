@@ -7,9 +7,9 @@ class SageDescription < SageComponent
       title: [:optional, String],
       action: [:optional, {
         attributes: [:optional, NilClass, Hash],
-        icon_only: [:optional, TrueClass],
+        icon_only: [:optional, NilClass, TrueClass],
         test_id: [:optional, NilClass, String],
-        value: String,
+        value: [:optional, NilClass, String],
       }],
     }]]],
     layout: [:optional, Set.new(["inline", "stacked"])],
