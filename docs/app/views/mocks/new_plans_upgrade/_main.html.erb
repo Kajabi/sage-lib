@@ -1,0 +1,62 @@
+<div class="sage-tabs-container">
+  <%= sage_component SageTabs, {
+    id: "example-tabs1",
+    items: [
+      {
+        text: "Feature usage display",
+        target: "feature-1",
+        active: true
+      },
+      {
+        text: "Plan upgrade panel",
+        target: "feature-2",
+      },
+      {
+        text: "Plan tiers",
+        target: "feature-3",
+      },
+      {
+        text: "Usag alerts",
+        target: "feature-4",
+      },
+      {
+        text: "Upgrade modal",
+        target: "feature-5",
+      },
+    ]
+  } %>
+
+  <%= sage_component SageTabsPane, { id: "feature-1" } do %>
+    <%= render "mocks/new_plans_upgrade/feature_usage_display", usage_data: feature_usage_display_demo_data(), opened: false %>
+    <%= render "mocks/new_plans_upgrade/feature_usage_display", usage_data: feature_usage_display_demo_data(), opened: true %>
+  <% end %>
+
+  <%= sage_component SageTabsPane, { id: "feature-2" } do %>
+    <%= render "mocks/new_plans_upgrade/plan_upgrade_panel", plan: plan_ugrade_panel_demo_plan %>
+  <% end %>
+
+  <%= sage_component SageTabsPane, { id: "feature-3" } do %>
+    <%= render "mocks/new_plans_upgrade/plan_tiers", plans: plan_tiers_demo_plans %>
+  <% end %>
+
+  <%= sage_component SageTabsPane, { id: "feature-4" } do %>
+    <%= render "mocks/new_plans_upgrade/usage_alert", feature: { name: "[feature name]", percentage: 50 } %>
+    <%= render "mocks/new_plans_upgrade/usage_alert", feature: { name: "[feature name]", percentage: 100 } %>
+    <%= render "mocks/new_plans_upgrade/usage_alert", feature: { name: "[feature name]", percentage: 101 } %>
+  <% end %>
+
+  <%= sage_component SageTabsPane, { id: "feature-5" } do %>
+    <%= render "mocks/new_plans_upgrade/upgrade_modal", feature: "[feature name]", action: "[act on]" %>
+    <%= sage_component SageButton, {
+      attributes: {
+        "data-js-modaltrigger": "plan-upgrade-modal",
+      },
+      style: "primary",
+      value: "Launch upgrade modal",
+    } %>
+    <h3 class="<%= "#{SageClassnames::SPACERS::XS_BOTTOM} #{SageClassnames::SPACERS::SM_TOP}" %>">Manual Trigger</h3>
+    <code>
+    Sage.modal.openModal("plan-upgrade-modal");
+    </code>
+  <% end %>
+</div>
