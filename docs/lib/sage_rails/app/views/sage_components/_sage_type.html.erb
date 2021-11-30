@@ -26,7 +26,7 @@ end
       class="<%= classes %>"
       <%= component.generated_html_attributes.html_safe %>
     >
-      <%= item %>
+      <%= item.html_safe %>
     </<%= tag_type %>>
   <% end %>
 <% else %>
