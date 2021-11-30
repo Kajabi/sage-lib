@@ -1,62 +1,37 @@
 <%
-  tag_type = "p"
-  if component.tag.present?
-    tag_type = component.tag
+tag_type = "p"
+type_spec = component.type_spec.present? ? component.type_spec : "body"
+if component.tag.present?
+  tag_type = component.tag
 
-    if component.tag.start_with?("h") && !component.type_spec.present?
-      given_heading_value = component.tag.scan(/\d/).first.to_i
-    end
-
-    case given_heading_value
-    when 1 then heading_type = "t-sage-heading-1"
-    when 2 then heading_type = "t-sage-heading-2"
-    when 3 then heading_type = "t-sage-heading-3"
-    when 4 then heading_type = "t-sage-heading-4"
-    when 5 then heading_type = "t-sage-heading-5"
-    when 6 then heading_type = "t-sage-heading-6"
-    end
+  if component.tag.start_with?("h") && !component.type_spec.present?
+    type_spec = "heading-#{component.tag.scan(/\d/).first}"
   end
+end
+
+classes = "#{component.generated_css_classes} t-sage-#{type_spec}"
+
+if component.color.present?
+  classes << "t-sage--color-#{component.color}"
+end
+
+if component.alignment.present?
+  classes << "t-sage--align-#{component.alignment}"
+end
 %>
 
 <% if component.content.kind_of?(Array) %>
   <% component.content.each do | item | %>
     <<%= tag_type %>
-      class="
-        <%= heading_type %>
-        <% if component.type_spec.present? %>t-sage-<%= component.type_spec %><% end %>
-        
-        <% if component.type_spec.nil? and component.weight.present? %>
-          t-sage-body-<%= component.weight %>
-        <% elsif component.type_spec.present? and component.weight.present? %>
-          t-sage-<%= component.type_spec %>-<%= component.weight %>
-        <% end %>
-
-        <% if component.color.present? %>t-sage--color-<%= component.color %><% end %>
-        <% if component.alignment.present? %>t-sage--align-<%= component.alignment %><% end %>
-        <%= component.generated_css_classes %>
-      "
+      class="<%= classes %>"
       <%= component.generated_html_attributes.html_safe %>
     >
-      <%= item.html_safe %>
+      <%= item %>
     </<%= tag_type %>>
-
   <% end %>
 <% else %>
   <<%= tag_type %>
-    class="
-      <%= heading_type %>
-      <% if component.type_spec.present? %>t-sage-<%= component.type_spec %><% end %>
-        
-      <% if component.type_spec.nil? and component.weight.present? %>
-        t-sage-body-<%= component.weight %>
-      <% elsif component.type_spec.present? and component.weight.present? %>
-        t-sage-<%= component.type_spec %>-<%= component.weight %>
-      <% end %>
-
-      <% if component.color.present? %>t-sage--color-<%= component.color %><% end %>
-      <% if component.alignment.present? %>t-sage--align-<%= component.alignment %><% end %>
-      <%= component.generated_css_classes %>
-    "
+    class="<%= classes %>"
     <%= component.generated_html_attributes.html_safe %>
   >
     <%= component.content %>
