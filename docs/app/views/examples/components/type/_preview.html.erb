@@ -8,16 +8,16 @@
 
 <%= sage_component SageType, {
   tag: "h4",
-  type_spec: "heading-5",
+  type_spec: "HEADING_5",
   spacer: { bottom: :lg },
 } do %>
-  h4 - in a <code>do</code> block, with <code>type_spec: "heading-5"</code>
+  h4 - in a <code>do</code> block, with <code>type_spec: "HEADING_5"</code>
 <% end %>
 
 <%= sage_component SageType, { tag: "h2", content: "Content strings in array, default tag type" } %>
 
 <%= sage_component SageType, {
-  type_spec: "body-sm",
+  type_spec: "BODY_SMALL",
   color: "charcoal-200",
   content: [
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut finibus fringilla ligula, vitae tincidunt lorem blandit sit amet. Morbi pharetra elementum lectus id sollicitudin.",
@@ -41,17 +41,17 @@
   content:  "Color Primary and bottom space large: Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
 } %>
 
-<%= sage_component SageType, { tag: "h2", type_spec: "heading-2", content: "Weight" } %>
+<%= sage_component SageType, { tag: "h2", type_spec: "HEADING_2", content: "Weight" } %>
 
 <%= sage_component SageType, {
   tag: "p",
-  type_spec: "body-xsmall-med",
+  type_spec: "BODY_XSMALL_MED",
   content:  "Weight - med and xsmall: Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
 } %>
 
 <%= sage_component SageType, {
   tag: "p",
-  type_spec: "body-small-semi",
+  type_spec: "BODY_SMALL_SEMI",
   css_classes: "sage-type-custom-class",
   test_id: "sage-type-custom-id",
   content: "Weight - semi and small: Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -59,7 +59,7 @@
 
 <%= sage_component SageType, {
   tag: "p",
-  type_spec: "body-bold",
+  type_spec: "BODY_BOLD",
   spacer: { bottom: :lg },
   content:  "Weight - bold: Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
 } %>

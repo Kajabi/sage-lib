@@ -1,15 +1,17 @@
 <%
 tag_type = "p"
-type_spec = component.type_spec.present? ? component.type_spec : "body"
+type_spec = component.type_spec.present? ? component.type_spec : "BODY"
 if component.tag.present?
   tag_type = component.tag
 
   if component.tag.start_with?("h") && !component.type_spec.present?
-    type_spec = "heading-#{component.tag.scan(/\d/).first}"
+    type_spec = "HEADING_#{component.tag.scan(/\d/).first}"
   end
 end
 
-classes = "#{component.generated_css_classes} t-sage-#{type_spec}".strip
+type_classname = "SageClassnames::TYPE::#{type_spec}".constantize
+
+classes = "#{component.generated_css_classes} #{type_classname}".strip
 
 if component.color.present?
   classes << " t-sage--color-#{component.color}"

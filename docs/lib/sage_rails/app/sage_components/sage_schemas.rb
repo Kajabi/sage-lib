@@ -10,6 +10,8 @@ module SageSchemas
 
   COLOR_SLIDER = Set.new(SageTokens::COLOR_SLIDERS)
 
+  COLOR_VALUE = Set.new(SageTokens::COLOR_VALUES)
+
   CONTAINER_SIZE = [:optional, Set.new(SageTokens::CONTAINER_SIZES)]
 
   GRID_TEMPLATE = Set.new(SageTokens::GRID_TEMPLATES)
