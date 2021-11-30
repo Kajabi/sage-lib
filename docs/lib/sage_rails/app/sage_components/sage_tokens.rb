@@ -49,6 +49,7 @@ module SageTokens
     BLACK: '#000',
   }
 
+  # TODO: deprecate COLOR_SLIDERS in favor of COLOR_VALUES
   COLOR_SLIDERS = [
     "charcoal", "grey", "orange", "primary", "purple", "red", "sage", "yellow",
     "charcoal-100", "grey-100", "orange-100", "primary-100", "purple-100", "red-100", "sage-100", "yellow-100",
@@ -56,6 +57,15 @@ module SageTokens
     "charcoal-300", "grey-300", "orange-300", "primary-300", "purple-300", "red-300", "sage-300", "yellow-300",
     "charcoal-400", "grey-400", "orange-400", "primary-400", "purple-400", "red-400", "sage-400", "yellow-400",
     "charcoal-500", "grey-500", "orange-500", "primary-500", "purple-500", "red-500", "sage-500", "yellow-500"
+  ]
+
+  COLOR_VALUES = [
+    "CHARCOAL", "GREY", "ORANGE", "PRIMARY", "PURPLE", "RED", "SAGE", "YELLOW",
+    "CHARCOAL_100", "GREY_100", "ORANGE_100", "PRIMARY_100", "PURPLE_100", "RED_100", "SAGE_100", "YELLOW_100",
+    "CHARCOAL_200", "GREY_200", "ORANGE_200", "PRIMARY_200", "PURPLE_200", "RED_200", "SAGE_200", "YELLOW_200",
+    "CHARCOAL_300", "GREY_300", "ORANGE_300", "PRIMARY_300", "PURPLE_300", "RED_300", "SAGE_300", "YELLOW_300",
+    "CHARCOAL_400", "GREY_400", "ORANGE_400", "PRIMARY_400", "PURPLE_400", "RED_400", "SAGE_400", "YELLOW_400",
+    "CHARCOAL_500", "GREY_500", "ORANGE_500", "PRIMARY_500", "PURPLE_500", "RED_500", "SAGE_500", "YELLOW_500"
   ]
 
   CONTAINER_SIZES = ["tiny", "xs", "sm", "md", "lg", "xl", "full"]
@@ -327,11 +337,11 @@ module SageTokens
 
   # All type specs. Keep in sync with `packages/sage-assets/lib/stylesheets/tokens/_type_specs.scss`
   TYPE_SPECS = [
-    "heading-1", "heading-2", "heading-3", "heading-4", "heading-5", "heading-6",
-    "nav", "nav-sub",
-    "body", "body-med", "body-semi", "body-bold",
-    "body-small", "body-small-med", "body-small-semi", "body-small-bold",
-    "body-xsmall", "body-xsmall-med", "body-xsmall-semi", "body-xsmall-bold",
+    "HEADING_1", "HEADING_2", "HEADING_3", "HEADING_4", "HEADING_5", "HEADING_6",
+    "NAV", "NAV_SUB",
+    "BODY", "BODY_MED", "BODY_SEMI", "BODY_BOLD",
+    "BODY_SMALL", "BODY_SMALL_MED", "BODY_SMALL_SEMI", "BODY_SMALL_BOLD",
+    "BODY_XSMALL", "BODY_XSMALL_MED", "BODY_XSMALL_SEMI", "BODY_XSMALL_BOLD",
   ]
 
   # Aliasses for responsive pairings of size and leading. Keep in sync with `sage-font-size` token as an example.

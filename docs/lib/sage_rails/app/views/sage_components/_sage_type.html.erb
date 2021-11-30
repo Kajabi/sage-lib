@@ -9,7 +9,7 @@ if component.tag.present?
   end
 end
 
-classes = "#{component.generated_css_classes} t-sage-#{type_spec}"
+classes = "#{component.generated_css_classes} t-sage-#{type_spec}".strip
 
 if component.color.present?
   classes << " t-sage--color-#{component.color}"
