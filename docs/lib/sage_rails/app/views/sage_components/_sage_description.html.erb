@@ -1,3 +1,11 @@
+<%
+has_actions = false
+component.items.each do | item |
+  if item[:action]
+    has_actions = true
+  end
+end
+%>
 <dl
   <%= component.id ? "id=#{component.id}" : "" %>
   class="
@@ -14,27 +22,40 @@
   <%= component.generated_html_attributes.html_safe %>
 >
   <% component.items.each do | item | %>
+    <%
+    icon_only = true
+    if item[:action].present?
+      if item[:action][:value].present?
+        icon_only = false
+      end
+
+      if item[:action][:icon_only] != nil
+        icon_only = item[:action][:icon_only]
+      end
+    end
+    %>
     <div 
       class="
         sage-description__term-group
-        <%= "sage-description__term-group--no-action" if !item[:action] %>
+        <%= "sage-description__term-group--hide-title" if item[:hide_title] %>
+        <%= "sage-description__term-group--no-action" if !has_actions %>
       "
     >
       <% if item[:title] %>
-        <dt class="sage-description__title"><%= item[:title] %></dt>
+        <dt class="sage-description__title <%= "visually-hidden" if item[:hide_title] %>"><%= item[:title] %></dt>
       <% end %>
       <% if item[:data] %>
         <dd class="sage-description__data"><%= item[:data] %></dd>
       <% end %>
       <% if item[:action] %>
-        <div class="sage-description__action-button">
+        <div class="sage-description__action">
           <%= sage_component SageButton, {
-            value: item[:action][:value],
+            value: item[:action][:value] || "View more",
             style: "primary",
             subtle: true,
             icon: {
               name: "caret-right",
-              style: item[:action][:icon_only] ? "only" : "right",
+              style: icon_only ? "only" : "right",
             },
             test_id: item[:action][:test_id],
             attributes: item[:action][:attributes],
