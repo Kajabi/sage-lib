@@ -150,6 +150,7 @@ $-modal-fullscreen-top-spacing: rem(104px);
     right: 0;
     margin: 0;
     padding: sage-spacing(sm) $-modal-padding-x;
+    background-color: sage-color(white);
     box-shadow: sage-shadow(sm);
   }
 }
