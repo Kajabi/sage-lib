@@ -1,0 +1,8 @@
+.feature-usage-display {
+  background-color: sage-color(white);
+  border-radius: 0;
+
+  &:not(:last-child) {
+    border-bottom: 0;
+  }
+}
