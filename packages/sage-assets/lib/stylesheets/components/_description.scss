@@ -11,17 +11,10 @@ $-description-title-var: var(--sage-description-title-width, #{$-description-tit
 
 .sage-description {
   width: 100%;
-  margin-bottom: sage-spacing();
+  gap: sage-spacing(md);
+  display: flex;
+  flex-direction: column;
 
-  &:last-of-type {
-    margin-bottom: 0;
-  }
-
-  .sage-panel__block > &,
-  .sage-panel__row > &,
-  .sage-panel__stack > & {
-    margin-bottom: 0;
-  }
 }
 
 .sage-description__term-group {
