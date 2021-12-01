@@ -62,23 +62,22 @@ $-description-title-var: var(--sage-description-title-width, #{$-description-tit
 
   &.sage-description__term-group--no-action,
   .sage-description--stacked & {
-    grid-template-areas:
-      "data data data";
+    grid-template-areas: "data data data";
   }
 }
 
 .sage-description__title {
   @extend %t-sage-body;
 
-  color: sage-color(charcoal, 100);
   grid-area: title;
+  color: sage-color(charcoal, 100);
 }
 
 .sage-description__data {
   @extend %t-sage-body-med;
 
-  color: sage-color(charcoal, 400);
   grid-area: data;
+  color: sage-color(charcoal, 400);
 }
 
 .sage-description__action {

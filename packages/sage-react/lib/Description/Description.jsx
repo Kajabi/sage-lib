@@ -35,8 +35,6 @@ export const Description = ({
       iconOnly = action.iconOnly;
     }
 
-    console.log('action', !!action, iconOnly);
-
     return (
       <>
         {title && (
@@ -73,13 +71,12 @@ export const Description = ({
     }
 
     let hasActions = false;
-    items.forEach(item => {
+    items.forEach((item) => {
       if (item.action) {
         hasActions = true;
       }
     });
 
-    
     return items.map((item) => {
       const termGroupClassnames = classnames(
         'sage-description__term-group',
@@ -96,7 +93,7 @@ export const Description = ({
         >
           {renderItem(item)}
         </div>
-      )
+      );
     });
   };
 
