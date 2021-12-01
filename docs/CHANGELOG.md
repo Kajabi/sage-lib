@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.29.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.28.6...@kajabi/sage@4.29.0) (2021-12-01)
+
+
+### Bug Fixes
+
+* **mock:** added styles ([2892657](https://github.com/Kajabi/sage-lib/commit/2892657eefd9aae8fb6ae66a40405aeb3cf48aa8))
+
+
+### Features
+
+* **container:** added feature usage display ([a5962a2](https://github.com/Kajabi/sage-lib/commit/a5962a2dd6a267de20752bc1f0dedb00b35c8cae))
+* **mocks:** add new plans upgrade and first feature ([2fccc86](https://github.com/Kajabi/sage-lib/commit/2fccc865bda4e5defff79a098b3e66df66dce468))
+* **mocks:** add plan tiers to new plan upgrades mocks ([a974ffa](https://github.com/Kajabi/sage-lib/commit/a974ffa3a274b96009ef875be82bc7eeaa84c9f2))
+* **mocks:** add plan upgrade panel to new plans upgrade mock ([adfa4c6](https://github.com/Kajabi/sage-lib/commit/adfa4c6eeaf7efa003bf96c08449af2d24ec6096))
+* **mocks:** add remaining features to new plan upgrade mocks ([82a7b10](https://github.com/Kajabi/sage-lib/commit/82a7b102850496ec09d5ff10e8c0d0fe051b6e1e))
+* **toast:** enable test_id ([99b635f](https://github.com/Kajabi/sage-lib/commit/99b635fa1a816c140c254ec4923234a4e5e1488a))
+
+
+
+
+
 ## [4.28.6](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.28.5...@kajabi/sage@4.28.6) (2021-11-29)
 
 
