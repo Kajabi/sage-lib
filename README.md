@@ -20,13 +20,13 @@ Do you have an issue, bug, or suggestion you would like to add to the Design Sys
 ### Conventional Commits
 
 This repository utilizes the
-[Conventional Commits Standard](https://www.conventionalcommits.org/en/v1.0.0/). Utilizing this standard allows us to automatically version our software during the Continuous Integration process as well as generate `CHANGELOG.md` files for each of the packages.
+[Conventional Commits Standard](https://www.conventionalcommits.org/en/v1.0.0/). Utilizing this standard allows us to automatically version our software during the Continuous Integration process and generate `CHANGELOG.md` files for each of the packages.
 
 ### Unsure how to format your commit message? 
 
 Use `yarn commit` to launch a wizard to walk you through with [Commitizen](https://github.com/commitizen/cz-cli)
 
-A `commit-msg` hook has been added to the repository to enforce this behavior. Ensure you have read over the convention and understand it prior to making a Pull Request.
+A `commit-msg` hook has been added to the repository to enforce this behavior. Ensure you have read over the convention and understand it before making a Pull Request.
 
 ### Repo Structure
 
@@ -46,15 +46,15 @@ The Sage Design System is a [Lerna Mono-Repository](https://github.com/lerna/ler
 
 >Splitting up large codebases into separate independently versioned packages is extremely useful for code sharing. However, making changes across many repositories is messy and difficult to track, and testing across repositories becomes complicated very quickly.
 >
-> To solve these (and many other) problems, some projects will organize their codebases into multi-package repositories (sometimes called monorepos). Projects like Babel, React, Angular, Ember, Meteor, Jest, and many others develop all of their packages within a single repository.
+> To solve these (and many other) problems, some projects will organize their codebases into multi-package repositories (sometimes called monorepos). Projects like Babel, React, Angular, Ember, Meteor, Jest, and many others develop their packages within a single repository.
 >
 > Lerna is a tool that optimizes the workflow around managing multi-package repositories with git and npm.
 >
-> Lerna can also reduce the time and space requirements for numerous copies of packages in development and build environments - normally a downside of dividing a project into many separate NPM packages.
+> Lerna can also reduce the time and space requirements for numerous copies of packages in development and build environments - usually a downside of dividing a project into many separate NPM packages.
 
 ### Adding Packages
 
-This repository utilizes [Yarn Workspaces](https://classic.yarnpkg.com/en/docs/workspaces/) which allows for setup of multiple packages in such a way that you only need to run `yarn install` from the root of the repository and all packages will be updated. In addition, syntax is provided to target installation towards specific packages or the entire suite. Below are examples of adding packages:
+This repository utilizes [Yarn Workspaces](https://classic.yarnpkg.com/en/docs/workspaces/), which allows for the setup of multiple packages in such a way that you only need to run `yarn install` from the root of the repository, and all packages will be updated. In addition, the syntax is provided to target installation towards specific packages or the entire suite. Below are examples of adding packages:
 
 ```bash
 # Adds the module-1 package to the packages in the 'prefix-' prefixed folders
@@ -109,11 +109,11 @@ $ yarn bridge:kajabi-products
 
 If this is your first time using `yarn bridge` you will be prompted to provide your path to your local Kajabi Products repository. This path can be absolute (`~/home/me/code/kajabi-products`) or relative (`../kajabi-products`). The value you enter will be inserted into your local `.env` file. If a `.env` file does not exist one will be created for you based on the `.env.dist` file in this repository.
 
->*Note: In the event you mistype your repository path, or it's location changes you can edit it's value in the `.env` file*
+>*Note: In the event you mistype your repository path or its location changes, you can edit its value in the `.env` file*
 
-When running the `bridge` you *must* have `yarn start` running in this repository in order for your changes to be actively compiled.
+When running the `bridge`, you *must* have `yarn start` running in this repository for your changes to be actively compiled.
 
-Within your Kajabi Products repository, run the project as you normally would and in tandem also run Kajabi-Products' `webpack-dev-server`. In order for Kajabi Products to watch changes within your local Sage repo `webpack-dev-server` needs to be running.
+Within your Kajabi Products repository, run the project as you usually would and in tandem also run Kajabi-Products' `webpack-dev-server`. For Kajabi Products to watch changes within your local Sage repo `webpack-dev-server` needs to be running.
 
 ```bash
 $ heroku local
@@ -136,7 +136,7 @@ The Version Bump Process is documented in this [wiki article](https://github.com
 
 ## Local Scripts
 
-The following scripts can be ran by typing `yarn <script_name>` in the root of this repository. :star:'s have been added to signify common user initiated tasks.
+The following scripts can be run by typing `yarn <script_name>` in the root of this repository. :star:'s have been added to signify typical user-initiated tasks.
 
 ### `bootstrap`
 
@@ -144,7 +144,7 @@ Proxy for the Lerna [bootstrap](https://github.com/lerna/lerna/tree/main/command
 
 ### `bridge:kajabi-products` :star:
 
-Creates a local "bridge" between your local Sage packages and the Kajabi Products repo. Use this bridge when you want to be able to locally edit changes in Sage and see them live in Kajabi Products.
+This command creates a local "bridge" between your local Sage packages and the Kajabi Products repo. Use this bridge when you want to locally edit changes in Sage and see them live in Kajabi Products.
 
 ### `bridge:kajabi-products:status`
 
@@ -184,7 +184,7 @@ Run `bundle install` on the `docs/` folder.
 
 ### `docs:deploy`
 
-For deploying the Documentation Site application to Heroku. This is an automated process through Continuous Deployment.
+This command is to deploy the Documentation Site application to Heroku. This is an automated process through Continuous Deployment.
 
 ### `docs:initialize`
 
@@ -216,7 +216,7 @@ Run the SassDoc server from the `@kajabi/sage-assets` package.
 
 ### `sassdocs:deploy`
 
-For deploying the SassDocs application to Heroku. This is an automated process through Continuous Deployment.
+This command is for deploying the SassDocs application to Heroku. This is an automated process through Continuous Deployment.
 
 ### `setup` :star:
 
@@ -228,7 +228,7 @@ Install local packages for the main repository and `docs/` path
 
 ### `start` :star:
 
-Continually compiles packages on changes and starts the applications
+Continually compiles packages on changes and starts the applications.
 
 - To visit the primary documentation site: http://localhost:4000/
 - To visit the Storybook (React components) site: http://localhost:4100/
@@ -240,7 +240,7 @@ Launch "storybook" from the `@kajabi/sage-react` package
 
 ### `storybook:deploy`
 
-For deploying the Storybook application to Heroku. This is an automated process through Contiuous Integration.
+This command is for deploying the Storybook application to Heroku. This is an automated process through Continuous Integration.
 
 ### `test`
 
