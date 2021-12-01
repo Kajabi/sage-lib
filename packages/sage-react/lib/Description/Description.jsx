@@ -10,6 +10,7 @@ export const Description = ({
   actionWidth,
   children,
   className,
+  condensed,
   id,
   layout,
   items,
@@ -20,7 +21,8 @@ export const Description = ({
     'sage-description',
     className,
     {
-      [`sage-description--${layout}`]: layout
+      'sage-description--condensed': condensed,
+      [`sage-description--${layout}`]: layout,
     }
   );
 
@@ -130,6 +132,7 @@ Description.defaultProps = {
   actionWidth: null,
   children: null,
   className: null,
+  condensed: false,
   id: null,
   items: [],
   layout: null,
@@ -140,6 +143,7 @@ Description.propTypes = {
   actionWidth: PropTypes.string,
   children: PropTypes.node,
   className: PropTypes.string,
+  condensed: PropTypes.bool,
   id: PropTypes.string,
   items: PropTypes.arrayOf(PropTypes.shape({
     action: PropTypes.shape({

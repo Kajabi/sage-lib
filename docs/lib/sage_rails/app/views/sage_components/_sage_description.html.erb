@@ -10,6 +10,7 @@ end
   <%= component.id ? "id=#{component.id}" : "" %>
   class="
     sage-description
+    <%= "sage-description--condensed" if component.condensed %>
     <%= "sage-description--stacked" if component.layout == "stacked" %>
     <%= component.generated_css_classes %>
   "
