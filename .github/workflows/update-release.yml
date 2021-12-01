@@ -29,7 +29,7 @@ jobs:
       - name: "Update Release based on Tag"
         uses: "ncipollo/release-action@v1"
         with:
-          token: "${{ secrets.ACCESS_TOKEN }}"
+          token: "${{ secrets.UPDATE_RELEASE_WORKFLOW_TOKEN }}"
           tag: "v${{ steps.extract_version.outputs.version }}"
           body: "See [changelog](https://github.com/Kajabi/sage-lib/blob/main/docs/CHANGELOG.md) for more information."
 
