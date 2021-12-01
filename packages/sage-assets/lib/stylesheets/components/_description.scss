@@ -16,7 +16,7 @@ $-description-title-var: var(--sage-description-title-width, #{$-description-tit
   flex-direction: column;
 }
 
-.sage-description--condensed {
+.sage-description--no-dividers {
   gap: sage-spacing(sm);
 }
 
@@ -31,7 +31,7 @@ $-description-title-var: var(--sage-description-title-width, #{$-description-tit
     padding-bottom: sage-spacing(md);
     border-bottom: sage-border();
 
-    .sage-description--condensed & {
+    .sage-description--no-dividers & {
       padding-bottom: 0;
       border-bottom: 0;
     }

@@ -1,8 +1,7 @@
 class SageDescription < SageComponent
   set_attribute_schema({
     action_width: [:optional, String],
-    condensed: [:optional, NilClass, TrueClass],
-    id: [:optional, String],
+    no_dividers: [:optional, NilClass, TrueClass],
     items: [:optional, [[{
       action: [:optional, {
         attributes: [:optional, NilClass, Hash],
@@ -12,6 +11,7 @@ class SageDescription < SageComponent
       }],
       data: [:optional, NilClass, String, Integer, Hash],
       hide_title: [:optional, NilClass, TrueClass],
+      id: [:optional, String],
       title: [:optional, String],
     }]]],
     layout: [:optional, Set.new(["inline", "stacked"])],
