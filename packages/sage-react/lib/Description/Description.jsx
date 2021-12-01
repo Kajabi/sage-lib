@@ -10,8 +10,7 @@ export const Description = ({
   actionWidth,
   children,
   className,
-  condensed,
-  id,
+  noDividers,
   layout,
   items,
   titleWidth,
@@ -21,7 +20,7 @@ export const Description = ({
     'sage-description',
     className,
     {
-      'sage-description--condensed': condensed,
+      'sage-description--no-dividers': noDividers,
       [`sage-description--${layout}`]: layout,
     }
   );
@@ -91,6 +90,7 @@ export const Description = ({
       return (
         <div
           key={item.id || uuid()}
+          id={item.id}
           className={termGroupClassnames}
         >
           {renderItem(item)}
@@ -116,7 +116,6 @@ export const Description = ({
   return (
     <div
       className={classNames}
-      id={id}
       style={getCustomProps()}
       {...rest}
     >
@@ -132,10 +131,10 @@ Description.defaultProps = {
   actionWidth: null,
   children: null,
   className: null,
-  condensed: false,
   id: null,
   items: [],
   layout: null,
+  noDividers: false,
   titleWidth: null,
 };
 
@@ -143,8 +142,6 @@ Description.propTypes = {
   actionWidth: PropTypes.string,
   children: PropTypes.node,
   className: PropTypes.string,
-  condensed: PropTypes.bool,
-  id: PropTypes.string,
   items: PropTypes.arrayOf(PropTypes.shape({
     action: PropTypes.shape({
       attributes: PropTypes.objectOf(PropTypes.object),
@@ -152,8 +149,10 @@ Description.propTypes = {
       value: PropTypes.string,
     }),
     data: PropTypes.node,
+    id: PropTypes.string,
     title: PropTypes.string,
   })),
   layout: PropTypes.oneOf(Object.values(LAYOUT_TYPES)),
+  noDividers: PropTypes.bool,
   titleWidth: PropTypes.string,
 };

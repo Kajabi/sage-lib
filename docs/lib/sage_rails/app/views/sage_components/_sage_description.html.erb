@@ -7,10 +7,9 @@ component.items.each do | item |
 end
 %>
 <dl
-  <%= component.id ? "id=#{component.id}" : "" %>
   class="
     sage-description
-    <%= "sage-description--condensed" if component.condensed %>
+    <%= "sage-description--no-dividers" if component.no_dividers %>
     <%= "sage-description--stacked" if component.layout == "stacked" %>
     <%= component.generated_css_classes %>
   "
@@ -41,6 +40,7 @@ end
         <%= "sage-description__term-group--hide-title" if item[:hide_title] %>
         <%= "sage-description__term-group--no-action" if !has_actions %>
       "
+      <%= "id=#{item[:id]}" if item[:id] %>
     >
       <% if item[:title] %>
         <dt class="sage-description__title <%= "visually-hidden" if item[:hide_title] %>"><%= item[:title] %></dt>
