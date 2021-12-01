@@ -2,112 +2,274 @@
 type_specs = [
   {
     style: md(%(
-      <span class="t-sage-heading-1">Heading 1</span><br/>
-      HTML: `t-sage-heading-1`<br/>
-      Rails: `SageClassnames::TYPE::HEADING_1`<br/>
-      React: `SageClassnames.TYPE.HEADING_1`
+      <span class="t-sage-heading-1">Heading 1</span>
     )),
-    weight: "700",
-    kerning: "0.3px",
-    desktop: "29px / 36px",
-    mobile: "26px / 32px",
+    spec: "HEADING_1",
+    button: %(#{
+      sage_component SageButton, {
+        value: "Copy HEADING_1 SageType code",
+        style: "secondary",
+        attributes: {
+          "data-js-copy-button": "<&#37;= sage_component SageType, { tag: &quot;h1&quot;, content: &quot;Heading 1&quot; } &#37;>",
+        }
+      }
+    }).html_safe
   },
   {
     style: md(%(
-      <span class="t-sage-heading-2">Heading 2</span><br/>
-      HTML: `t-sage-heading-2`<br/>
-      Rails: `SageClassnames::TYPE::HEADING_2`<br/>
-      React: `SageClassnames.TYPE.HEADING_2`
+      <span class="t-sage-heading-2">Heading 2</span>
     )),
-    weight: "700",
-    kerning: "0.3px",
-    desktop: "26px / 32px",
-    mobile: "23px / 32px",
+    spec: "HEADING_2",
+    button: %(#{
+      sage_component SageButton, {
+        value: "Copy HEADING_2 SageType code",
+        style: "secondary",
+        attributes: {
+          "data-js-copy-button": "<&#37;= sage_component SageType, { tag: &quot;h2&quot;, content: &quot;Heading 2&quot; } &#37;>",
+        }
+      }
+    }).html_safe
   },
   {
     style: md(%(
-      <span class="t-sage-heading-3">Heading 3</span><br/>
-      HTML: `t-sage-heading-3`<br/>
-      Rails: `SageClassnames::TYPE::HEADING_3`<br/>
-      React: `SageClassnames.TYPE.HEADING_3`
+      <span class="t-sage-heading-3">Heading 3</span>
     )),
-    weight: "700",
-    kerning: "0.3px",
-    desktop: "23px / 32px",
-    mobile: "20px / 28px",
+    spec: "HEADING_3",
+    button: %(#{
+      sage_component SageButton, {
+        value: "Copy HEADING_3 SageType code",
+        style: "secondary",
+        attributes: {
+          "data-js-copy-button": "<&#37;= sage_component SageType, { tag: &quot;h3&quot;, content: &quot;Heading 3&quot; } &#37;>",
+        }
+      }
+    }).html_safe
   },
   {
     style: md(%(
-      <span class="t-sage-heading-4">Heading 4</span><br/>
-      HTML: `t-sage-heading-4`<br/>
-      Rails: `SageClassnames::TYPE::HEADING_4`<br/>
-      React: `SageClassnames.TYPE.HEADING_4`
+      <span class="t-sage-heading-4">Heading 4</span>
     )),
-    weight: "600",
-    kerning: "0.3px",
-    desktop: "20px / 28px",
-    mobile: "18px / 28px",
+    spec: "HEADING_4",
+    button: %(#{
+      sage_component SageButton, {
+        value: "Copy HEADING_4 SageType code",
+        style: "secondary",
+        attributes: {
+          "data-js-copy-button": "<&#37;= sage_component SageType, { tag: &quot;h4&quot;, content: &quot;Heading 4&quot; } &#37;>",
+        }
+      }
+    }).html_safe
   },
   {
     style: md(%(
-      <span class="t-sage-heading-5">Heading 5</span><br/>
-      HTML: `t-sage-heading-5`<br/>
-      Rails: `SageClassnames::TYPE::HEADING_5`<br/>
-      React: `SageClassnames.TYPE.HEADING_5`
+      <span class="t-sage-heading-5">Heading 5</span>
     )),
-    weight: "600",
-    kerning: "0.3px",
-    desktop: "18px / 28px",
-    mobile: "16px / 28px",
+    spec: "HEADING_5",
+    button: %(#{
+      sage_component SageButton, {
+        value: "Copy HEADING_5 SageType code",
+        style: "secondary",
+        attributes: {
+          "data-js-copy-button": "<&#37;= sage_component SageType, { tag: &quot;h5&quot;, content: &quot;Heading 5&quot; } &#37;>",
+        }
+      }
+    }).html_safe
   },
   {
     style: md(%(
-      <span class="t-sage-heading-6">Heading 6</span><br/>
-      HTML: `t-sage-heading-6`<br/>
-      Rails: `SageClassnames::TYPE::HEADING_6`<br/>
-      React: `SageClassnames.TYPE.HEADING_6`
+      <span class="t-sage-heading-6">Heading 6</span>
     )),
-    weight: "600",
-    kerning: "0.3px",
-    desktop: "14px / 24px",
-    mobile: "16px / 28px",
+    spec: "HEADING_6",
+    button: %(#{
+      sage_component SageButton, {
+        value: "Copy HEADING_6 SageType code",
+        style: "secondary",
+        attributes: {
+          "data-js-copy-button": "<&#37;= sage_component SageType, { tag: &quot;h6&quot;, content: &quot;Heading 6&quot; } &#37;>",
+        }
+      }
+    }).html_safe
   },
   {
     style: md(%(
-      <span class="t-sage-body">Body*</span><br/>
-      HTML: `t-sage-body`<br/>
-      Rails: `SageClassnames::TYPE::BODY`<br/>
-      React: `SageClassnames.TYPE.BODY`
+      <span class="t-sage-body">Body</span>
     )),
-    weight: "400*",
-    kerning: "0.2px",
-    desktop: "14px / 24px",
-    mobile: "16px / 28px",
+    spec: "BODY",
+    button: %(#{
+      sage_component SageButton, {
+        value: "Copy BODY SageType code",
+        style: "secondary",
+        attributes: {
+          "data-js-copy-button": "<&#37;= sage_component SageType, { content: &quot;Body&quot; } &#37;>",
+        }
+      }
+    }).html_safe
   },
   {
     style: md(%(
-      <span class="t-sage-body-small">Small Body*</span><br/>
-      HTML: `t-sage-body-small`<br/>
-      Rails: `SageClassnames::TYPE::BODY_SMALL`<br/>
-      React: `SageClassnames.TYPE.BODY_SMALL`
+      <span class="t-sage-body-med">Body - Medium weight</span>
     )),
-    weight: "400*",
-    kerning: "0.2px",
-    desktop: "13px / 24px",
-    mobile: "14px / 24px",
+    spec: "BODY_MED",
+    button: %(#{
+      sage_component SageButton, {
+        value: "Copy BODY_MED SageType code",
+        style: "secondary",
+        attributes: {
+          "data-js-copy-button": "<&#37;= sage_component SageType, { type_spec: &quot;BODY_MED&quot;, content: &quot;Body - Medium Weight&quot; } &#37;>",
+        }
+      }
+    }).html_safe
   },
   {
     style: md(%(
-      <span class="t-sage-body-xsmall">Extra Small Body*</span><br/>
-      HTML: `t-sage-body-xsmall`<br/>
-      Rails: `SageClassnames::TYPE::BODY_XSMALL`<br/>
-      React: `SageClassnames.TYPE.BODY_XSMALL`
+      <span class="t-sage-body-semi">Body - Semibold weight</span>
     )),
-    weight: "400*",
-    kerning: "0.2px",
-    desktop: "12px / 20px",
-    mobile: "12px / 20px",
-  }
+    spec: "BODY_SEMI",
+    button: %(#{
+      sage_component SageButton, {
+        value: "Copy BODY_SEMI SageType code",
+        style: "secondary",
+        attributes: {
+          "data-js-copy-button": "<&#37;= sage_component SageType, { type_spec: &quot;BODY_SEMI&quot;, content: &quot;Body - Semibold Weight&quot; } &#37;>",
+        }
+      }
+    }).html_safe
+  },
+  {
+    style: md(%(
+      <span class="t-sage-body-bold">Body - Bold weight</span>
+    )),
+    spec: "BODY_BOLD",
+    button: %(#{
+      sage_component SageButton, {
+        value: "Copy BODY_BOLD SageType code",
+        style: "secondary",
+        attributes: {
+          "data-js-copy-button": "<&#37;= sage_component SageType, { type_spec: &quot;BODY_BOLD&quot;, content: &quot;Body - Bold Weight&quot; } &#37;>",
+        }
+      }
+    }).html_safe
+  },
+  {
+    style: md(%(
+      <span class="t-sage-body-small">Small Body</span>
+    )),
+    spec: "BODY_SMALL",
+    button: %(#{
+      sage_component SageButton, {
+        value: "Copy BODY_SMALL SageType code",
+        style: "secondary",
+        attributes: {
+          "data-js-copy-button": "<&#37;= sage_component SageType, { type_spec: &quot;BODY_SMALL&quot;, content: &quot;Body - Small&quot; } &#37;>",
+        }
+      }
+    }).html_safe
+  },
+  {
+    style: md(%(
+      <span class="t-sage-body-small-med">Small Body - Medium weight</span>
+    )),
+    spec: "BODY_SMALL_MED",
+    button: %(#{
+      sage_component SageButton, {
+        value: "Copy BODY_SMALL_MED SageType code",
+        style: "secondary",
+        attributes: {
+          "data-js-copy-button": "<&#37;= sage_component SageType, { type_spec: &quot;BODY_SMALL_MED&quot;, content: &quot;Body - Small - Medium Weight&quot; } &#37;>",
+        }
+      }
+    }).html_safe
+  },
+  {
+    style: md(%(
+      <span class="t-sage-body-small-semi">Small Body - Semibold weight</span>
+    )),
+    spec: "BODY_SMALL_SEMI",
+    button: %(#{
+      sage_component SageButton, {
+        value: "Copy BODY_SMALL_SEMI SageType code",
+        style: "secondary",
+        attributes: {
+          "data-js-copy-button": "<&#37;= sage_component SageType, { type_spec: &quot;BODY_SMALL_SEMI&quot;, content: &quot;Body - Small - Semibold Weight&quot; } &#37;>",
+        }
+      }
+    }).html_safe
+  },
+  {
+    style: md(%(
+      <span class="t-sage-body-small-bold">Small Body - Bold weight</span>
+    )),
+    spec: "BODY_SMALL_BOLD",
+    button: %(#{
+      sage_component SageButton, {
+        value: "Copy BODY_SMALL_BOLD SageType code",
+        style: "secondary",
+        attributes: {
+          "data-js-copy-button": "<&#37;= sage_component SageType, { type_spec: &quot;BODY_SMALL_BOLD&quot;, content: &quot;Body - Small - Bold Weight&quot; } &#37;>",
+        }
+      }
+    }).html_safe
+  },
+  {
+    style: md(%(
+      <span class="t-sage-body-xsmall">Extra Small Body</span>
+    )),
+    spec: "BODY_XSMALL",
+    button: %(#{
+      sage_component SageButton, {
+        value: "Copy BODY_XSMALL SageType code",
+        style: "secondary",
+        attributes: {
+          "data-js-copy-button": "<&#37;= sage_component SageType, { type_spec: &quot;BODY_XSMALL&quot;,content: &quot;Body - XSmall&quot; } &#37;>",
+        }
+      }
+    }).html_safe
+  },
+  {
+    style: md(%(
+      <span class="t-sage-body-xsmall-med">Extra Small Body - Medium weight</span>
+    )),
+    spec: "BODY_XSMALL_MED",
+    button: %(#{
+      sage_component SageButton, {
+        value: "Copy BODY_XSMALL_MED SageType code",
+        style: "secondary",
+        attributes: {
+          "data-js-copy-button": "<&#37;= sage_component SageType, { type_spec: &quot;BODY_XSMALL_MED&quot;, content: &quot;Body - XSmall - Medium Weight&quot; } &#37;>",
+        }
+      }
+    }).html_safe
+  },
+  {
+    style: md(%(
+      <span class="t-sage-body-xsmall-semi">Extra Small Body - Semibold weight</span>
+    )),
+    spec: "BODY_XSMALL_SEMI",
+    button: %(#{
+      sage_component SageButton, {
+        value: "Copy BODY_XSMALL_SEMI SageType code",
+        style: "secondary",
+        attributes: {
+          "data-js-copy-button": "<&#37;= sage_component SageType, { type_spec: &quot;BODY_XSMALL_SEMI&quot;, content: &quot;Body - XSmall - Semibold Weight&quot; } &#37;>",
+        }
+      }
+    }).html_safe
+  },
+  {
+    style: md(%(
+      <span class="t-sage-body-xsmall-bold">Extra Small Body - Bold weight</span>
+    )),
+    spec: "BODY_XSMALL_BOLD",
+    button: %(#{
+      sage_component SageButton, {
+        value: "Copy BODY_XSMALL_BOLD SageType code",
+        style: "secondary",
+        attributes: {
+          "data-js-copy-button": "<&#37;= sage_component SageType, { type_spec: &quot;BODY_XSMALL_BOLD&quot;, content: &quot;Body - XSmall - Bold Weight&quot; } &#37;>",
+        }
+      }
+    }).html_safe
+  },
 ]
 
 type_color_classes = [
@@ -213,92 +375,31 @@ type_other_features = [
 ]
 %>
 <%= content_for :heading do %>
-<%= md(%(
-# Typography
-<p class="docs-heading__lead">
-Sage provides a constrained, purposeful set of typographic styles.
-These styles map as much as possible to functional roles so you know when each can be used.
-</p>
-
-Setting individual styles manually should be avoided, but where needed, should be sure to use the appropriate
-[design tokens](/pages/foundations/token).
-In the end, we prefer adding new entries to the type spec over including one-off styling.
-)) %>
+  <%= sage_component SageType, {
+    tag: "h1",
+    content: "Typography"
+  } %>
 <% end %>
+
 <div class="sage-type">
-    <%= md("
-      The Sage type system uses a loose major second modular scale (factor of 1.125) derived from an initial base font size of 14px. However, for improved readability with mobile / small screen devices, this base font size is increased to 16px.
-
-      Typography in our system uses `t-sage-` classes in order to apply a given typographical specification to an element
-      These can be used on any element to apply the desired typographical styles regardless of the tag. This allows a
-      wide range of flexibility for applying a desired style to an element while still using the most semantic element possible
-      for a given context.
-    ") %>
-
   <%= sage_component SageTable, {
     headers: [
+      "Example",
       "Type Spec",
-      "Weight",
-      "Kerning",
-      "Desktop<br/>(size / line)".html_safe,
-      "Mobile<br/>(size / line)".html_safe,
+      "Copy SageType Component"
     ],
     rows: type_specs,
   } %>
 
-    <%= md('
-\* The `t-sage-body{-size}` classes also have weight variations:
-append `-med` for <span class="t-sage-body-med">medium (500)</span>;
-append `-semi` for <span class="t-sage-body-semi">semibold (600)</span>;
-append `-bold` for <span class="t-sage-body-bold">bold (700)</span>
-
-The type specs above map logically to corresponding HTML elements, as well as the following:
-
-- Body (`t-sage-body`) is used as the default type style, and is thus applied to elements such as
-  `li`, `dd`, `td`, `blockquote`, and more.
-- <strong>Body Bold</strong> (`t-sage-body-semi`) is used for elements that are typically bolded such as
-  `tr`, `dt`, `strong`, and `b`.
-
-As an example, see here how the \"Heading 3\" type spec can be applied to an `h3` element:
-') %>
-
-  <h3 class="t-sage-heading-3">Lorem ipsum dolor sit</h3>
-  <div class="sage-code-snippet">
-    <pre class="prettyprint"><code>&lt;h3 class="t-sage-heading-3"&gt;Lorem ipsum dolor sit&lt;/h3&gt;</code></pre>
-  </div>
-
-    <%= md("
-      But the exact specs can also be applied to any element such as a `span`.
-      This is not meant to be an excuse for using non-semantic markup, but rather,
-      to free a spec to be applied to the most semantic element in context regardless
-      of the spec's name.
-    ") %>
-
-  <h3 class="t-sage-heading-3">Lorem ipsum dolor sit</h3>
-  <div class="sage-code-snippet">
-    <pre class="prettyprint"><code>&lt;span class="t-sage-heading-3"&gt;Lorem ipsum dolor sit&lt;/span&gt;</code></pre>
-  </div>
-
-    <%= md("
-      For setting text in open areas where simpler markup is desired, or where a
-      content management system controls the markup being output, we recommend applying
-      the `sage-type` class on a container around such content. This
-      leads to some default styling applied to the tags within the container
-      include our preferred colors and block spacing.
-    ") %>
-
-    <%= md("
-## Coloring Type
-
-While applying colors to type on-the-fly should generally be avoided
-we do provide the following utility classes for such cases where its most practical:
-    ") %>
+  <%= sage_component SageType, {
+    tag: "h1",
+    content: "Coloring Type"
+  } %>
 
   <%= sage_component SageTable, {
     headers: [
       {
         value: "Color",
-        html_attributes: { style: "width:100px" }
       },
       "Type class",
       "Constants",
@@ -306,17 +407,17 @@ we do provide the following utility classes for such cases where its most practi
     rows: type_color_classes
   } %>
 
-    <%= md("
-## Additional Type Features
 
-While modifying type beyond the specs above is not encouraged a few type utilities are available:
-    ") %>
+  <%= sage_component SageType, {
+    tag: "h1",
+    content: "Additional Type Features"
+  } %>
+    <%= md("While modifying type beyond the specs above is not encouraged a few type utilities are available:") %>
 
   <%= sage_component SageTable, {
     headers: [
       {
         value: "Description",
-        html_attributes: { style: "width:180px" }
       },
       "Type class",
       "Constants",
