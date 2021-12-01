@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.16.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.15.0...@kajabi/sage-system@0.16.0) (2021-12-01)
+
+
+### Features
+
+* **toast:** add close event to reset ([d852cf3](https://github.com/Kajabi/sage-lib/commit/d852cf3190414bb923b6c6875d3ee5033ffdc17e))
+* **toast:** enable test_id ([99b635f](https://github.com/Kajabi/sage-lib/commit/99b635fa1a816c140c254ec4923234a4e5e1488a))
+* **toast:** toast JS events ([994a783](https://github.com/Kajabi/sage-lib/commit/994a7831670cdf8ce4a8baf1c232e2e03deee1d8))
+
+
+
+
+
 # [0.15.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.14.0...@kajabi/sage-system@0.15.0) (2021-11-15)
 
 

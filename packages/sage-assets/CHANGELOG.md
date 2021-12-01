@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.60.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.60.1...@kajabi/sage-assets@0.60.2) (2021-12-01)
+
+
+### Bug Fixes
+
+* **modal:** add background color fullscreen modal header ([0947574](https://github.com/Kajabi/sage-lib/commit/094757497a2970abedd89d0bc0eb414b144f8b2c))
+
+
+
+
+
 ## [0.60.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.60.0...@kajabi/sage-assets@0.60.1) (2021-11-22)
 
 
