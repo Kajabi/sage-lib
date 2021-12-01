@@ -1,6 +1,7 @@
 class SageDescription < SageComponent
   set_attribute_schema({
     action_width: [:optional, String],
+    condensed: [:optional, NilClass, TrueClass],
     id: [:optional, String],
     items: [:optional, [[{
       action: [:optional, {
