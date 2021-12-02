@@ -3,7 +3,7 @@ class SageDescription < SageComponent
     action_width: [:optional, String],
     no_dividers: [:optional, NilClass, TrueClass],
     items: [:optional, [[{
-      action: [:optional, {
+      action: [:optional, NilClass, {
         attributes: [:optional, NilClass, Hash],
         icon_only: [:optional, NilClass, TrueClass],
         test_id: [:optional, NilClass, String],
