@@ -114,6 +114,7 @@ StackedLayout.args = {
       title: 'Short item',
       data: 'John Doe',
     },
+    null,
     {
       title: 'Wrapping item',
       data: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dignissim fringilla eros, at faucibus mauris aliquam at.',
