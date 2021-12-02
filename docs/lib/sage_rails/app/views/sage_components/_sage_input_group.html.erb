@@ -7,30 +7,6 @@
   <%= component.generated_html_attributes.html_safe %>
 >
   <%= component.content %>
-  <%- if component.has_hint -%>
-    <%= sage_component SageInputHelper,
-      helper_id: "",
-      helper_target: "input-group-pw-example",
-      description: "Your password must meet the following criteria:",
-      hints: [
-        {
-          id: "pw-hint-characters",
-          type_detect: "characters",
-          text: "At least eight characters"
-        },
-        {
-          id: "pw-hint-numbers",
-          type_detect: "numbers",
-          text: "Has one or more numbers"
-        },
-        {
-          id: "pw-hint-symbols",
-          type_detect: "symbols",
-          text: "Includes at least one symbol ($@!#%)"
-        }
-      ]
-    %>
-  <%- end -%>
   <%- if component.has_button -%>
     <%- component.group_buttons.each do |button| -%>
       <button class="sage-input-group__button sage-btn<% if button[:display_on_focus] %> sage-input-group__toggle<% end %> <%= button[:icon] if button[:icon].present? %>"
