@@ -1,9 +1,3 @@
-# TODO: table of contents
-
-# TODO: add font family information
-
-# TODO: describe the scale, base size and sizes
-
 <%
 type_specs = [
   {
@@ -281,109 +275,118 @@ type_specs = [
 type_color_classes = [
   {
     color: %(<span class="t-sage-body-semi t-sage--color-primary">Primary</span>),
-    type_class: md("`t-sage--color-primary`"),
-    constants: md(%(
-      Rails: `SageClassnames::TYPE_COLORS::PRIMARY`<br/>
-      React: `SageClassnames.TYPE_COLORS.PRIMARY`
-    )),
+    type_color: md("PRIMARY"),
   },
   {
     color: %(<span class="t-sage-body-semi t-sage--color-charcoal">Charcoal</span>),
-    type_class: md("`t-sage--color-charcoal`"),
-    constants: md(%(
-      Rails: `SageClassnames::TYPE_COLORS::CHARCOAL`<br/>
-      React: `SageClassnames.TYPE_COLORS.CHARCOAL`
-    )),
+    type_color: md("CHARCOAL"),
   },
   {
     color: %(<span class="t-sage-body-semi t-sage--color-grey">Grey</span>),
-    type_class: md("`t-sage--color-grey`"),
-    constants: md(%(
-      Rails: `SageClassnames::TYPE_COLORS::GREY`<br/>
-      React: `SageClassnames.TYPE_COLORS.GREY`
-    )),
+    type_color: md("GREY"),
   },
   {
     color: %(<span class="t-sage-body-semi t-sage--color-red">Red</span>),
-    type_class: md("`t-sage--color-red`"),
-    constants: md(%(
-      Rails: `SageClassnames::TYPE_COLORS::RED`<br/>
-      React: `SageClassnames.TYPE_COLORS.RED`
-    )),
+    type_color: md("RED"),
   },
   {
     color: %(<span class="t-sage-body-semi t-sage--color-orange">Orange</span>),
-    type_class: md("`t-sage--color-orange`"),
-    constants: md(%(
-      Rails: `SageClassnames::TYPE_COLORS::ORANGE`<br/>
-      React: `SageClassnames.TYPE_COLORS.ORANGE`
-    )),
+    type_color: md("ORANGE"),
   },
   {
     color: %(<span class="t-sage-body-semi t-sage--color-yellow">Yellow</span>),
-    type_class: md("`t-sage--color-yellow`"),
-    constants: md(%(
-      Rails: `SageClassnames::TYPE_COLORS::YELLOW`<br/>
-      React: `SageClassnames.TYPE_COLORS.YELLOW`
-    )),
+    type_color: md("YELLOW"),
   },
   {
     color: %(<span class="t-sage-body-semi t-sage--color-sage">Sage</span>),
-    type_class: md("`t-sage--color-sage`"),
-    constants: md(%(
-      Rails: `SageClassnames::TYPE_COLORS::SAGE`<br/>
-      React: `SageClassnames.TYPE_COLORS.SAGE`
-    )),
+    type_color: md("SAGE"),
   },
   {
     color: %(<span class="t-sage-body-semi t-sage--color-purple">Purple</span>),
-    type_class: md("`t-sage--color-purple`"),
-    constants: md(%(
-      Rails: `SageClassnames::TYPE_COLORS::PURPLE`<br/>
-      React: `SageClassnames.TYPE_COLORS.PURPLE`
-    )),
+    type_color: md("PURPLE"),
   }
 ]
 
-type_other_features = [
+type_other_options = [
   {
     description: md("Truncate text with an ellipsis when available space runs out"),
-    class: md("`t-sage--truncate`"),
-    constants: md(%(
-      Rails: `SageClassnames::TRUNCATE_TEXT`<br />
-      React: `SageClassnames.TRUNCATE_TEXT`
-    ))
+    type_option: md("TRUNCATE_TEXT")
   },
   {
     description: md("Adjust alignment of type to right"),
-    class: md("`t-sage--align-right`"),
-    constants: md(%(
-      Rails: `SageClassnames::TYPE_ALIGN_RIGHT`<br />
-      React: `SageClassnames.TYPE_ALIGN_RIGHT`
-    ))
+    type_option: md("TYPE_ALIGN_RIGHT")
   },
   {
     description: md("Adjust alignment of type to hang center"),
-    class: md("`t-sage--align-center`"),
-    constants: md(%(
-      Rails: `SageClassnames::TYPE_ALIGN_CENTER`<br />
-      React: `SageClassnames.TYPE_ALIGN_CENTER`
-    ))
+    type_option: md("TYPE_ALIGN_CENTER")
   },
   {
     description: md("Apply a strikethrough to text"),
-    class: md("`t-sage--strikethrough`"),
-    constants: md(%(
-      Rails: `SageClassnames::TYPE_STRIKETHROUGH`<br />
-      React: `SageClassnames.TYPE_STRIKETHROUGH`
-    ))
+    type_option: md("TYPE_STRIKETHROUGH")
   }
 ]
 %>
+
 <%= content_for :heading do %>
   <%= sage_component SageType, {
     tag: "h1",
-    content: "Typography"
+    content: "Typography",
+    html_attributes: {
+      id: "typography"
+    }
+  } %>
+
+  <%= sage_component SageType, {
+    type_spec: "HEADING_4",
+    content: "Sage provides a constrained, purposeful set of typographic styles. These styles map as much as possible to functional roles so you know when to use each style.",
+  } %>
+
+  <ul>
+    <%= sage_component SageType, {
+      tag: "li",
+    } do %>
+      <%= sage_component SageLink, {
+        url: "#type-specs",
+        label: "Type Specs",
+        external: false,
+        launch: false,
+        help_link: false,
+        show_label: true
+      } %>
+    <% end %>
+    <%= sage_component SageType, {
+      tag: "li",
+    } do %>
+      <%= sage_component SageLink, {
+        url: "#colors",
+        label: "Colors",
+        external: false,
+        launch: false,
+        help_link: false,
+        show_label: true
+      } %>
+    <% end %>
+    <%= sage_component SageType, {
+      tag: "li",
+    } do %>
+      <%= sage_component SageLink, {
+        url: "#type-options",
+        label: "Type Options",
+        external: false,
+        launch: false,
+        help_link: false,
+        show_label: true,
+        spacer: { bottom: :lg }
+      } %>
+    <% end %>
+  </ul>
+
+  <%= sage_component SageType, {
+    tag: "h2",
+    content: "Type Specs",
+    html_attributes: {
+      id: "type-specs"
+    }
   } %>
 <% end %>
 
@@ -391,8 +394,8 @@ type_other_features = [
   <%= sage_component SageTable, {
     headers: [
       "Output",
-      "Type Spec",
-      "Copy SageType Component"
+      "Type token",
+      "Copy component code"
     ],
     rows: type_specs,
     striped: true,
@@ -400,8 +403,11 @@ type_other_features = [
   } %>
 
   <%= sage_component SageType, {
-    tag: "h1",
-    content: "Coloring Type"
+    tag: "h2",
+    content: "Colors",
+    html_attributes: {
+      id: "colors"
+    }
   } %>
 
   <%= sage_component SageTable, {
@@ -409,8 +415,7 @@ type_other_features = [
       {
         value: "Color",
       },
-      "Type class",
-      "Constants",
+      "Color token",
     ],
     rows: type_color_classes,
     striped: true,
@@ -419,19 +424,20 @@ type_other_features = [
 
 
   <%= sage_component SageType, {
-    tag: "h1",
-    content: "Additional Type Features"
+    tag: "h2",
+    content: "Type Options",
+    html_attributes: {
+      id: "type-options"
+    }
   } %>
-    <%= md("While modifying type beyond the specs above is not encouraged a few type utilities are available:") %>
 
   <%= sage_component SageTable, {
     headers: [
       {
         value: "Description",
       },
-      "Type class",
-      "Constants",
+      "Option token",
     ],
-    rows: type_other_features
+    rows: type_other_options
   } %>
 <div>
