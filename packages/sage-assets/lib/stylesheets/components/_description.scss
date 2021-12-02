@@ -10,10 +10,10 @@ $-description-title-size: calc(50% - #{$-description-action-var});
 $-description-title-var: var(--sage-description-title-width, #{$-description-title-size});
 
 .sage-description {
-  width: 100%;
-  gap: sage-spacing(md);
   display: flex;
   flex-direction: column;
+  gap: sage-spacing(md);
+  width: 100%;
 }
 
 .sage-description--no-dividers {

@@ -79,6 +79,10 @@ export const Description = ({
     });
 
     return items.map((item) => {
+      if (!item) {
+        return null;
+      }
+
       const termGroupClassnames = classnames(
         'sage-description__term-group',
         {
@@ -131,7 +135,6 @@ Description.defaultProps = {
   actionWidth: null,
   children: null,
   className: null,
-  id: null,
   items: [],
   layout: null,
   noDividers: false,
