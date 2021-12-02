@@ -2,7 +2,7 @@ class SageDescription < SageComponent
   set_attribute_schema({
     action_width: [:optional, String],
     no_dividers: [:optional, NilClass, TrueClass],
-    items: [:optional, [[{
+    items: [:optional, [[NilClass, {
       action: [:optional, NilClass, {
         attributes: [:optional, NilClass, Hash],
         icon_only: [:optional, NilClass, TrueClass],

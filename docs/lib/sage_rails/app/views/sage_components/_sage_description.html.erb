@@ -1,7 +1,7 @@
 <%
 has_actions = false
 component.items.each do | item |
-  if item[:action]
+  if item && item[:action]
     has_actions = true
   end
 end
@@ -23,6 +23,10 @@ end
 >
   <% component.items.each do | item | %>
     <%
+    if !item
+      next
+    end
+
     icon_only = true
     if item[:action].present?
       if item[:action][:value].present?
