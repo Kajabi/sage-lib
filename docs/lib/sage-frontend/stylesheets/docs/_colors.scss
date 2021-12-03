@@ -31,7 +31,7 @@
       color: sage-color($color, 500);
     }
 
-    &::after {
+    .colors__block::after {
       content: "#{$hex}";
       padding-left: sage-spacing(xs);
       font-weight: sage-font-weight(semibold);
@@ -55,6 +55,12 @@
 
   @media screen and (min-width: sage-breakpoint(lg-min)) {
     flex-direction: row;
+  }
+}
+
+.colors__tokens {
+  code {
+    background-color: transparent;
   }
 }
 
