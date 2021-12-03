@@ -3,6 +3,19 @@
 </div>
 <div class="colors">
   <% (1..5).each do |i| %>
-    <div class="colors__block color-<%= color %>-<%= i %>00">sage-color(<%= color %>, <%= i %>00)</div>
+    <div class="colors__block color-<%= color %>-<%= i %>00">
+      <div class="colors__tokens">
+        <div class="colors__classname-token">
+          <h3>Classname Tokens</h3>
+          <p>Rails: <code>SageClassnames::TYPE_COLORS::<%= color.upcase %>_<%= i %>00</code></p>
+          <p>React: <code>SageClassnames.TYPE_COLORS.<%= color.upcase %>_<%= i %>00</code></p>
+        </div>
+        <div class="colors__hex-token"> 
+          <h3>Hex Tokens</h3>
+          <p>Rails: <code>SageTokens::COLOR_PALETTE::<%= color.upcase %>_<%= i %>00</code></p>
+          <p>React: <code>SageTokens.COLOR_PALETTE::<%= color.upcase %>_<%= i %>00</code></p>
+        </div>
+      </div>
+    </div>
   <% end %>
 </div>
