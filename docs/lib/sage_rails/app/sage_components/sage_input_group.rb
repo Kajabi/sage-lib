@@ -13,6 +13,6 @@ class SageInputGroup < SageComponent
     }]]],
     group_id: [:optional, String],
     has_button: [:optional, TrueClass],
-    input_type: [:optional, String]
+    input_type: [:optional, String],
   })
 end
