@@ -1,13 +1,13 @@
 
 <h3 class="t-sage-heading-6">Default with Data</h3>
 <%= sage_component SageStatBox, {
-  change: { 
-    type: "positive", 
-    value: "30%", 
+  change: {
+    type: "positive",
+    value: "30%",
   },
   data: "1,342",
   has_data: true,
-  
+
   link: {
     href: "#",
     value: "View More",
@@ -18,9 +18,9 @@
 
 <h3 class="t-sage-heading-6">Default with Legend Dot - Sage Color</h3>
 <%= sage_component SageStatBox, {
-  change: { 
-    type: "positive", 
-    value: "30%", 
+  change: {
+    type: "positive",
+    value: "30%",
   },
   data: "1,342",
   has_data: true,
@@ -35,9 +35,9 @@
 
 <h3 class="t-sage-heading-6">Default with Legend Dot - Custom Color</h3>
 <%= sage_component SageStatBox, {
-  change: { 
-    type: "positive", 
-    value: "30%", 
+  change: {
+    type: "positive",
+    value: "30%",
   },
   data: "1,342",
   has_data: true,
@@ -52,9 +52,9 @@
 
 <h3 class="t-sage-heading-6">Default with Data - Raised</h3>
 <%= sage_component SageStatBox, {
-  change: { 
-    type: "positive", 
-    value: "30%", 
+  change: {
+    type: "positive",
+    value: "30%",
   },
   data: "1,342",
   has_data: true,
@@ -73,6 +73,17 @@
   has_data: false,
   image: {
     src: "card-placeholder-sm.png"
+  },
+  title: "Completed",
+} %>
+
+<h3 class="t-sage-heading-6">Simple with Icon</h3>
+<%= sage_component SageStatBox, {
+  data: "No insights to show",
+  has_data: false,
+  icon: {
+    name: "check",
+    card_color: "published"
   },
   title: "Completed",
 } %>
