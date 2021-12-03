@@ -593,16 +593,6 @@ module ComponentsHelper
         figma_embed: "",
       },
       {
-        title: "input_helper",
-        description: "Provides an extended tooltip/popup for text inputs",
-        scss: "doing",
-        docs: "done",
-        rails: "done",
-        react: "todo",
-        a11y: "todo",
-        figma_embed: "",
-      },
-      {
         title: "modal",
         description: "Sage modal",
         scss: "done",
