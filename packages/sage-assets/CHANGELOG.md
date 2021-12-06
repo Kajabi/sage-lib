@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.61.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.60.2...@kajabi/sage-assets@0.61.0) (2021-12-06)
+
+
+### Features
+
+* **description:** add collapsed variant poc ([ff35968](https://github.com/Kajabi/sage-lib/commit/ff35968ec4b9e19499c803f89ebca76aa4e8c535))
+* **description:** adds title width and action width props ([a352732](https://github.com/Kajabi/sage-lib/commit/a352732e8345f68afe3870415b8019388f4817eb))
+* **description:** adjust `condensed` to `no_divider` and move id to items ([40998a7](https://github.com/Kajabi/sage-lib/commit/40998a702248658e3648703ed57672167594e150))
+* **description:** further sync with latest specs ([4fa5df9](https://github.com/Kajabi/sage-lib/commit/4fa5df9ef111190c207ad886fbc02426b04da892))
+* **description:** remove default bottom margin altogether ([58f0e33](https://github.com/Kajabi/sage-lib/commit/58f0e339c45eff7ac281a949d5876cc00d40b11b))
+* **description:** removes all caps prop for deprecation ([5cc80ab](https://github.com/Kajabi/sage-lib/commit/5cc80ab9e3c3b4c7784144883009bd97b6dfce51))
+* **description:** removes inline-spread prop for deprecation ([0e738f9](https://github.com/Kajabi/sage-lib/commit/0e738f9402a4ab3a073109deaebae20cc53e321b))
+* **description:** updates prop name and logic, removes link prop ([3d0e85b](https://github.com/Kajabi/sage-lib/commit/3d0e85b280b9393e4c7b0c99c6a7dbcf4d54e782))
+
+
+
+
+
 ## [0.60.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.60.1...@kajabi/sage-assets@0.60.2) (2021-12-01)
 
 

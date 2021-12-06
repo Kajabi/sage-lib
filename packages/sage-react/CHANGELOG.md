@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.72.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.71.5...@kajabi/sage-react@0.72.0) (2021-12-06)
+
+
+### Features
+
+* **description:** add collapsed variant poc ([ff35968](https://github.com/Kajabi/sage-lib/commit/ff35968ec4b9e19499c803f89ebca76aa4e8c535))
+* **description:** adds new props to React component ([cd2b287](https://github.com/Kajabi/sage-lib/commit/cd2b2877c38d26883deaaf4d44fde7ae2f634009))
+* **description:** adds primary action prop to React component ([ffaa52f](https://github.com/Kajabi/sage-lib/commit/ffaa52f70f5f1f2494c46962e4c2390cc4aeb846))
+* **description:** adjust `condensed` to `no_divider` and move id to items ([40998a7](https://github.com/Kajabi/sage-lib/commit/40998a702248658e3648703ed57672167594e150))
+* **description:** move action button inside items prop ([95a610e](https://github.com/Kajabi/sage-lib/commit/95a610e1306dab5af58a7cd2f33bba3813d4dd32))
+* **description:** sync up React component ([14e5d47](https://github.com/Kajabi/sage-lib/commit/14e5d47ff99aa5a4b56ce256e4e1442102de3871))
+* **description:** updates prop name and logic, removes link prop ([3d0e85b](https://github.com/Kajabi/sage-lib/commit/3d0e85b280b9393e4c7b0c99c6a7dbcf4d54e782))
+
+
+
+
+
 ## [0.71.5](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.71.4...@kajabi/sage-react@0.71.5) (2021-12-01)
 
 **Note:** Version bump only for package @kajabi/sage-react

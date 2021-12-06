@@ -3,6 +3,34 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.30.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.29.1...@kajabi/sage@4.30.0) (2021-12-06)
+
+
+### Bug Fixes
+
+* **docs:** add window property with description ([ce97248](https://github.com/Kajabi/sage-lib/commit/ce9724842b6e1b25b370efba9756c120e4b9284a))
+
+
+### Features
+
+* **description:** add collapsed variant poc ([ff35968](https://github.com/Kajabi/sage-lib/commit/ff35968ec4b9e19499c803f89ebca76aa4e8c535))
+* **description:** adds new layout prop ([5ea1d8c](https://github.com/Kajabi/sage-lib/commit/5ea1d8c2a60bcde0389ddfa414e8f39c9029c61a))
+* **description:** adds new primary action prop ([079e7f9](https://github.com/Kajabi/sage-lib/commit/079e7f9776288171637ee0712c7551012c6041a4))
+* **description:** adds title width and action width props ([a352732](https://github.com/Kajabi/sage-lib/commit/a352732e8345f68afe3870415b8019388f4817eb))
+* **description:** adjust `condensed` to `no_divider` and move id to items ([40998a7](https://github.com/Kajabi/sage-lib/commit/40998a702248658e3648703ed57672167594e150))
+* **description:** further sync with latest specs ([4fa5df9](https://github.com/Kajabi/sage-lib/commit/4fa5df9ef111190c207ad886fbc02426b04da892))
+* **description:** make `nil` rows possible ([a0945a5](https://github.com/Kajabi/sage-lib/commit/a0945a5bdef3b18f65fd55db687116ff1431b734))
+* **description:** make actions able to be `nil` ([356effd](https://github.com/Kajabi/sage-lib/commit/356effdce4c48a404b6959e26df702d9951b3c85))
+* **description:** removes all caps prop for deprecation ([5cc80ab](https://github.com/Kajabi/sage-lib/commit/5cc80ab9e3c3b4c7784144883009bd97b6dfce51))
+* **description:** removes inline-spread prop for deprecation ([0e738f9](https://github.com/Kajabi/sage-lib/commit/0e738f9402a4ab3a073109deaebae20cc53e321b))
+* **description:** removes title, data, link props for deprecation ([fbe2190](https://github.com/Kajabi/sage-lib/commit/fbe2190f54c599ae193e08360df4a732a1852501))
+* **description:** sync up React component ([14e5d47](https://github.com/Kajabi/sage-lib/commit/14e5d47ff99aa5a4b56ce256e4e1442102de3871))
+* **description:** updates prop name and logic, removes link prop ([3d0e85b](https://github.com/Kajabi/sage-lib/commit/3d0e85b280b9393e4c7b0c99c6a7dbcf4d54e782))
+
+
+
+
+
 ## [4.29.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.29.0...@kajabi/sage@4.29.1) (2021-12-03)
 
 **Note:** Version bump only for package @kajabi/sage
