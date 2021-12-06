@@ -1,59 +1,163 @@
-<h2>Single item</h2>
-<%= sage_component SageDescription, {
-  title: "Name",
-  data: "John Doe",
-} %>
-
-<h2>Single item (title normal case)</h2>
-<%= sage_component SageDescription, {
-  title: "Name",
-  data: "John Doe",
-  allcaps_titles: false,
-} %>
-
-<h2>Multiple items</h2>
+<h3>Single Item</h3>
 <%= sage_component SageDescription, {
   items: [
     {
       title: "Name",
       data: "John Doe",
-    },
-    {
-      title: "Name",
-      data: "John Doe",
-    },
-    {
-      title: "Name",
-      data: "John Doe",
-    },
-    {
-      title: "Name",
-      data: "John Doe",
     }
-  ],
+  ]
 } %>
 
-<h2>Multiple items (inline layout)</h2>
+<h3>Multiple Items</h3>
 <%= sage_component SageDescription, {
   items: [
     {
-      title: "Name",
+      title: "Short item",
       data: "John Doe",
     },
+    nil,
     {
-      title: "Name",
-      data: "John Doe",
+      title: "Wrapping item",
+      data: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dignissim fringilla eros, at faucibus mauris aliquam at.",
     },
     {
-      title: "Name",
-      data: "John Doe",
+      title: "Item with hidden title",
+      hide_title: true,
+      data: "This item's title is hidden. Suspendisse potenti. Pellentesque rhoncus nisi ut ultricies facilisis. Praesent facilisis pretium posuere. Sed odio risus, dignissim et augue sed, dapibus suscipit nisl. Donec sed auctor lorem. Curabitur ac fermentum est. Donec eget ultrices nisl, non rutrum sapien. Maecenas tempus aliquet mollis. Etiam efficitur sit amet ligula nec tincidunt. Nulla faucibus nunc ac odio facilisis, sollicitudin consequat augue euismod.",
     },
     {
-      title: "Name",
-      data: "#{image_tag("card-placeholder-sm.png", height: 16, width: 24)} John Doe".html_safe,
+      title: "Item with HTML content",
+      data: sage_component(SageLabelGroup, {
+        content: %(
+          #{sage_component(SageLabel, { value: "Lorem", color: "draft" })}
+          #{sage_component(SageLabel, { value: "Ipsum", color: "draft" })}
+          #{sage_component(SageLabel, { value: "Dolor", color: "draft" })}
+          #{sage_component(SageLabel, { value: "Sit", color: "draft" })}
+          #{sage_component(SageLabel, { value: "Amet", color: "draft" })}
+          #{sage_component(SageLabel, { value: "consectetur", color: "draft" })}
+          #{sage_component(SageLabel, { value: "adipiscing", color: "draft" })}
+          #{sage_component(SageLabel, { value: "elit", color: "draft" })}
+          #{sage_component(SageLabel, { value: "Duis", color: "draft" })}
+          #{sage_component(SageLabel, { value: "dignissim", color: "draft" })}
+          #{sage_component(SageLabel, { value: "fringilla", color: "draft" })}
+          #{sage_component(SageLabel, { value: "eros", color: "draft" })}
+        ).html_safe,
+      }),
     }
   ],
-  inline_spread: true,
-  allcaps_titles: false,
 } %>
 
+<h3>Stacked layout</h3>
+<p>As an alternate for some contexts the stacked layout places the title above the data.</p>
+<%= sage_component SageDescription, {
+  layout: "stacked",
+  items: [
+    {
+      title: "Short item",
+      data: "John Doe",
+    },
+    {
+      title: "Wrapping item",
+      data: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dignissim fringilla eros, at faucibus mauris aliquam at.",
+    },
+    {
+      title: "Item with hidden title",
+      hide_title: true,
+      data: "This item's title is hidden. Suspendisse potenti. Pellentesque rhoncus nisi ut ultricies facilisis. Praesent facilisis pretium posuere. Sed odio risus, dignissim et augue sed, dapibus suscipit nisl. Donec sed auctor lorem. Curabitur ac fermentum est. Donec eget ultrices nisl, non rutrum sapien. Maecenas tempus aliquet mollis. Etiam efficitur sit amet ligula nec tincidunt. Nulla faucibus nunc ac odio facilisis, sollicitudin consequat augue euismod.",
+    },
+    {
+      title: "Item with HTML content",
+      data: sage_component(SageLabelGroup, {
+        content: %(
+          #{sage_component(SageLabel, { value: "Lorem", color: "draft" })}
+          #{sage_component(SageLabel, { value: "Ipsum", color: "draft" })}
+          #{sage_component(SageLabel, { value: "Dolor", color: "draft" })}
+          #{sage_component(SageLabel, { value: "Sit", color: "draft" })}
+          #{sage_component(SageLabel, { value: "Amet", color: "draft" })}
+          #{sage_component(SageLabel, { value: "consectetur", color: "draft" })}
+          #{sage_component(SageLabel, { value: "adipiscing", color: "draft" })}
+          #{sage_component(SageLabel, { value: "elit", color: "draft" })}
+          #{sage_component(SageLabel, { value: "Duis", color: "draft" })}
+          #{sage_component(SageLabel, { value: "dignissim", color: "draft" })}
+          #{sage_component(SageLabel, { value: "fringilla", color: "draft" })}
+          #{sage_component(SageLabel, { value: "eros", color: "draft" })}
+        ).html_safe,
+      }),
+    }
+  ],
+} %>
+
+<h3>Action Buttons</h3>
+<%= md(
+  "Items may also contain an action button.
+  Add the `action` property on any item and set at least the `attributes` property,
+  containing either an `href` or other HTML event action such as `onclick`.
+  If a label is desired for the button, provide the `value` and `show_label`.",
+  use_sage_type: true
+) %>
+<%= sage_component SageDescription, {
+  action_width: "108px",
+  items: [
+    {
+      title: "No action",
+      data: "Action buttons are not required in every row.",
+    },
+    {
+      title: "Default action",
+      data: "Default actions show just an arrow icon.",
+      action: {
+        attributes: { href: "#" }
+      }
+    },
+    {
+      title: "Default action showing label",
+      data: md("Set `icon_only: false` to show the default label."),
+      action: {
+        icon_only: false,
+        attributes: { href: "#" }
+      }
+    },
+    {
+      title: "Custom labeled action",
+      data: "Actions can be set to use a label. In such cases an custom action width may also be needed.",
+      action: {
+        value: "Details",
+        attributes: { href: "#" }
+      }
+    },
+    {
+      title: "Custom labeled action visually hidden",
+      data: md("Custom labels can also be made visually hidden with `value` set but `icon_only: true`"),
+      action: {
+        value: "Details",
+        icon_only: true,
+        attributes: { href: "#" }
+      }
+    },
+  ]
+} %>
+
+<h3>Custom Widths for Title and Action</h3>
+<%= md(
+  "For a variety for reasons there may be cases where a particular width
+  is needed for the title column or the action column.
+  Simply set the `title_width` and/or `action_width` to the desired size,
+  including a valid CSS unit such as `px` or `%`.",
+  use_sage_type: true
+) %>
+<%= sage_component SageDescription, {
+  action_width: "88px",
+  title_width: "128px",
+  items: [
+    {
+      title: "Very Long Title",
+      data: "John Doe",
+      action: { value: "More" }
+    },
+    {
+      title: "Name",
+      data: "John Doe",
+      action: { value: "Preview" }
+    },
+  ]
+} %>

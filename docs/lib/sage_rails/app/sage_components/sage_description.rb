@@ -1,17 +1,20 @@
 class SageDescription < SageComponent
-  # TODO: simplify to items only (remove data, link, title from root)
-  # once instances are converted to the lists format.
   set_attribute_schema({
-    allcaps_titles: [:optional, TrueClass],
-    data: [:optional, NilClass, String, Integer, Hash],
-    id: [:optional, String],
-    inline_spread: [:optional, TrueClass],
-    link: [:optional, String],
-    items: [:optional, [[{
+    action_width: [:optional, String],
+    no_dividers: [:optional, NilClass, TrueClass],
+    items: [:optional, [[NilClass, {
+      action: [:optional, NilClass, {
+        attributes: [:optional, NilClass, Hash],
+        icon_only: [:optional, NilClass, TrueClass],
+        test_id: [:optional, NilClass, String],
+        value: [:optional, NilClass, String],
+      }],
       data: [:optional, NilClass, String, Integer, Hash],
-      link: [:optional, String],
+      hide_title: [:optional, NilClass, TrueClass],
+      id: [:optional, String],
       title: [:optional, String],
     }]]],
-    title: [:optional, String],
+    layout: [:optional, Set.new(["inline", "stacked"])],
+    title_width: [:optional, String],
   })
 end

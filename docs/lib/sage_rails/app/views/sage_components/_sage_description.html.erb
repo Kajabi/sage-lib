@@ -1,47 +1,73 @@
 <%
-# ensure default is to treat titles with all caps; `allcaps_titles` must be set to false to change this
-normalcase_titles = component.allcaps_titles == false ? true : false
+has_actions = false
+component.items.each do | item |
+  if item && item[:action]
+    has_actions = true
+  end
+end
 %>
 <dl
-  <%= component.id ? "id=#{component.id}" : "" %>
   class="
     sage-description
-    <%= "sage-description--inline-spread" if component.inline_spread.present? && component.inline_spread %>
-    <%= "sage-description--normalcase-titles" if normalcase_titles %>
+    <%= "sage-description--no-dividers" if component.no_dividers %>
+    <%= "sage-description--stacked" if component.layout == "stacked" %>
     <%= component.generated_css_classes %>
   "
+  <% if component.title_width || component.action_width %>
+    style="
+      <%= "--sage-description-action-width: #{component.action_width};" if component.action_width %>
+      <%= "--sage-description-title-width: #{component.title_width};" if component.title_width %>
+    "
+  <% end %>
   <%= component.generated_html_attributes.html_safe %>
 >
-  <% if component.items.present? %>
-    <% component.items.each do | item | %>
-      <div class="sage-description__term-group">
-        <% if item[:title] %>
-          <dt class="sage-description__title"><%= item[:title] %></dt>
-        <% end %>
-        <% if item[:data] %>
-          <% if item[:link] %>
-            <%= link_to item[:link] do %>
-              <dd class="sage-description__data"><%= item[:data] %></dd>
-            <% end %>
-          <% else %>
-            <dd class="sage-description__data"><%= item[:data] %></dd>
-          <% end %>
-        <% end %>
-      </div>
-    <% end %>
-  <% else %>
-    <% if component.title.present? %>
-      <dt class="sage-description__title"><%= component.title %></dt>
-    <% end %>
-    <% if component.data.present? %>
-      <% if component.link.present? %>
-        <%= link_to component.link do %>
-          <dd class="sage-description__data"><%= component.data %></dd>
-        <% end %>
-      <% else %>
-        <dd class="sage-description__data"><%= component.data %></dd>
+  <% component.items.each do | item | %>
+    <%
+    if !item
+      next
+    end
+
+    icon_only = true
+    if item[:action].present?
+      if item[:action][:value].present?
+        icon_only = false
+      end
+
+      if item[:action][:icon_only] != nil
+        icon_only = item[:action][:icon_only]
+      end
+    end
+    %>
+    <div 
+      class="
+        sage-description__term-group
+        <%= "sage-description__term-group--hide-title" if item[:hide_title] %>
+        <%= "sage-description__term-group--no-action" if !has_actions %>
+      "
+      <%= "id=#{item[:id]}" if item[:id] %>
+    >
+      <% if item[:title] %>
+        <dt class="sage-description__title <%= "visually-hidden" if item[:hide_title] %>"><%= item[:title] %></dt>
       <% end %>
-    <% end %>
+      <% if item[:data] %>
+        <dd class="sage-description__data"><%= item[:data] %></dd>
+      <% end %>
+      <% if item[:action] %>
+        <div class="sage-description__action">
+          <%= sage_component SageButton, {
+            value: item[:action][:value] || "View more",
+            style: "primary",
+            subtle: true,
+            icon: {
+              name: "caret-right",
+              style: icon_only ? "only" : "right",
+            },
+            test_id: item[:action][:test_id],
+            attributes: item[:action][:attributes],
+          } %>
+        </div>
+      <% end %>
+    </div>
   <% end %>
   <%= component.content %>
 </dl>
