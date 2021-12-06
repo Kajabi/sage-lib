@@ -37,6 +37,7 @@ const TypeaheadWithAPI = () => {
         onClearHook={() => setSelectedArticle(null)}
       />
       {selectedArticle && (
+        // eslint-disable-next-line react/jsx-no-target-blank
         <a href={selectedArticle.link} rel="noopener" target="_blank">
           {selectedArticle.title}
         </a>
