@@ -10,6 +10,7 @@ $-stat-box-icon-max-width: auto;
 .sage-stat-box {
   // Styles here
   @include sage-card($grid: false);
+  padding: rem(18px) sage-spacing(sm);
 
   &.sage-stat-box--raised {
     box-shadow: sage-shadow(sm);
@@ -36,7 +37,7 @@ $-stat-box-icon-max-width: auto;
   grid-area: image;
   overflow: hidden;
   min-height: $-stat-box-image-max-width;
-  margin-right: sage-spacing(xs);
+  margin-right: sage-spacing(sm);
 
   img {
     position: absolute;
@@ -49,7 +50,7 @@ $-stat-box-icon-max-width: auto;
 
 .sage-stat-box__icon {
   grid-area: image;
-  margin-right: sage-spacing(xs);
+  margin-right: sage-spacing(sm);
 }
 
 .sage-stat-box__header {
