@@ -28,7 +28,7 @@
         attributes: {
           "data-js-tooltip": "View React mock in Storybook",
           href: mock_storybook_url(mock),
-          rel: "noreferrer noopener",
+          rel: "noopener",
           target: "_blank",
         },
         icon: { name: "preview-on", style: "left" },
@@ -36,7 +36,7 @@
         style: "secondary",
         value: "React mock",
       } if mock[:storybook_path] %>
-      
+
       <%= sage_component SageDropdown, { items: mock_code_items(mock) } do %>
         <%= sage_component SageButton, {
           icon: { name: "code", style: "left" },
@@ -55,7 +55,7 @@
         attributes: {
           href: mock_milestone_url(mock),
           target: "_blank",
-          rel: "noreferrer noopener",
+          rel: "noopener",
         },
         disabled: mock[:milestone_id] == nil ? true : false,
         icon: { name: "arrow-right", style: "right" },

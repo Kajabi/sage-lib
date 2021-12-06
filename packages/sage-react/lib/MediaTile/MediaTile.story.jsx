@@ -49,7 +49,7 @@ export default {
     ),
     tileLink: {
       href: '//example.com',
-      rel: 'noopener noreferrer',
+      rel: 'noopener',
       target: '_blank',
     },
   }

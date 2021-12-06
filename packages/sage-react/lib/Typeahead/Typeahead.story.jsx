@@ -37,7 +37,7 @@ const TypeaheadWithAPI = () => {
         onClearHook={() => setSelectedArticle(null)}
       />
       {selectedArticle && (
-        <a href={selectedArticle.link} rel="noopener noreferrer" target="_blank">
+        <a href={selectedArticle.link} rel="noopener" target="_blank">
           {selectedArticle.title}
         </a>
       )}
