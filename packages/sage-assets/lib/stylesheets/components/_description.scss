@@ -4,60 +4,81 @@
 /// @group sage
 ////
 
+$-description-action-size: rem(16px);
+$-description-action-var: var(--sage-description-action-width, #{$-description-action-size});
+$-description-title-size: calc(50% - #{$-description-action-var});
+$-description-title-var: var(--sage-description-title-width, #{$-description-title-size});
+
 .sage-description {
-  width: 100%;
-  margin-bottom: sage-spacing();
-
-  &:last-of-type {
-    margin-bottom: 0;
-  }
-
-  .sage-panel__block > &,
-  .sage-panel__row > &,
-  .sage-panel__stack > & {
-    margin-bottom: 0;
-  }
-}
-
-.sage-description__data {
-  @extend %t-sage-body;
-
-  .sage-description--inline-spread & {
-    flex: 1;
-    text-align: right;
-  }
-}
-
-.sage-description--inline-spread {
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: sage-spacing(md);
+  width: 100%;
+}
+
+.sage-description--no-dividers {
+  gap: sage-spacing(sm);
 }
 
 .sage-description__term-group {
-  margin-bottom: sage-spacing(2xs);
+  display: grid;
+  grid-template-columns: #{$-description-title-var} 1fr #{$-description-action-var};
+  grid-template-areas: "title data action";
+  gap: sage-spacing(sm);
+  width: 100%;
 
-  &:last-of-type {
-    margin-bottom: 0;
+  &:not(:last-child) {
+    padding-bottom: sage-spacing(md);
+    border-bottom: sage-border();
+
+    .sage-description--no-dividers & {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
   }
 
-  .sage-description--inline-spread & {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+  .sage-description--stacked & {
+    grid-template-areas:
+      "title title action"
+      "data  data  action";
+    align-items: center;
+    row-gap: sage-spacing(2xs);
+  }
+}
+
+.sage-description__term-group--no-action {
+  grid-template-areas: "title data data";
+
+  .sage-description--stacked & {
+    grid-template-areas:
+      "title title title"
+      "data  data  data";
+  }
+}
+
+.sage-description__term-group--hide-title {
+  grid-template-areas: "data data action";
+
+  &.sage-description__term-group--no-action,
+  .sage-description--stacked & {
+    grid-template-areas: "data data data";
   }
 }
 
 .sage-description__title {
-  @extend %t-sage-body-small-semi;
-  color: sage-color(charcoal, 300);
+  @extend %t-sage-body;
 
-  .sage-description:not(.sage-description--normalcase-titles) & {
-    text-transform: uppercase;
-  }
+  grid-area: title;
+  color: sage-color(charcoal, 100);
+}
 
-  .sage-description--inline-spread & {
-    flex: 1;
-    transform: translateY(rem(3px));
-  }
+.sage-description__data {
+  @extend %t-sage-body-med;
+
+  grid-area: data;
+  color: sage-color(charcoal, 400);
+}
+
+.sage-description__action {
+  grid-area: action;
 }

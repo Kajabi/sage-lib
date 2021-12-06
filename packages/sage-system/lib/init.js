@@ -102,11 +102,6 @@ Sage.init = function(elementNamesToInitLegacy) {
     Sage.inputgroup.init();
   }
 
-  // Initialize Input groups
-  if ( shouldInitLegacy('inputhelper', '.sage-input-helper') ) {
-    Sage.inputhelper.init();
-  }
-
   // Initialize Meter
   if ( shouldInitLegacy('meter', '.sage-meter') ) {
     Sage.meter.init();
