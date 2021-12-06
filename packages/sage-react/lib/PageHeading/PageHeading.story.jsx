@@ -9,7 +9,7 @@ export default {
     children: (
       <>
         Page heading goes here
-        <HelpLink href="//example.com" target="_blank" referrer="no-referrer" />
+        <HelpLink href="//example.com" target="_blank" rel="noopener" />
       </>
     ),
     breadcrumbs: [
