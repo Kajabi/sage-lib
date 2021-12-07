@@ -31,12 +31,14 @@
       color: sage-color($color, 500);
     }
 
-    .colors__block::after {
+    &::after {
       content: "#{$hex}";
       padding-left: sage-spacing(xs);
       font-weight: sage-font-weight(semibold);
     }
   }
+
+
 }
 
 // color block groupings
