@@ -9,6 +9,7 @@ export const Drawer = ({
   children,
   className,
   customHeader,
+  id,
   onExit,
   showClose,
   title,
@@ -18,6 +19,7 @@ export const Drawer = ({
     animation={{ direction: Modal.ANIMATION_DIRECTIONS.LEFT }}
     className={`sage-drawer ${className || ''}`}
     disableBackgroundDismiss={true}
+    id={id}
   >
     <Modal.Header
       customHeader={customHeader ? (
@@ -58,6 +60,7 @@ Drawer.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
   customHeader: PropTypes.node,
+  id: PropTypes.string.isRequired,
   onExit: PropTypes.func,
   showClose: PropTypes.bool,
   title: PropTypes.string,
