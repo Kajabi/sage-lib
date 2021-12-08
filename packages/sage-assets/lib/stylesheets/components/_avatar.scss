@@ -148,6 +148,7 @@ $-avatar-group-item-sizes: (
 
 .sage-avatar__badge {
   position: absolute;
+  z-index: sage-z-index(default, 3);
   bottom: 0;
   right: 0;
   background-color: sage-color(white);
