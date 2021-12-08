@@ -9,7 +9,6 @@
 
   <% content_for :sage_docs_modals do %>
     <%= sage_component SageDrawer, {
-      active: true,
       id: "contact-profile",
       show_close: true
     } do %>
@@ -32,6 +31,7 @@
       <%# --- Profile --- %>
       <%= sage_component SagePanelBlock, { css_classes: SageClassnames::TYPE_ALIGN_CENTER } do %>
         <%= sage_component SageAvatar, {
+          badge: true,
           centered: true,
           image: {
             src: contact_profile_data[:avatar_image],
@@ -40,7 +40,6 @@
           initials: contact_profile_data[:initials],
           size: "68px",
           spacer: { bottom: "sm" },
-          # TODO: Add `badge` property
         } %>
         <h3 class="<%= SageClassnames::TYPE::HEADING_4 %> <%= SageClassnames::TYPE_COLORS::CHARCOAL_500 %>">
           <%= contact_profile_data[:name] %>
@@ -90,7 +89,10 @@
       <%# /-- Profile --- %>
 
       <%# --- Data --- %>
-      <%= sage_component SagePanelStack, { spacing: "form", html_attributes: { style: "padding: 16px" }} do %>
+      <%= sage_component SagePanelStack, {
+        spacing: "form",
+        html_attributes: { style: "padding: 16px" }
+      } do %>
         <% contact_profile_data[:user_stats].each do | data_group | %>
           <%= sage_component SageDescription, {
             items: data_group,
@@ -98,7 +100,10 @@
           } %>
           <%= sage_component SagePanelDivider, {} %>
         <% end %>
-        <%= sage_component SageLabelGroup, { gap: :xs, html_attributes: { "aria-label": "Tags" } } do %>
+        <%= sage_component SageLabelGroup, {
+          gap: :xs,
+          html_attributes: { "aria-label": "Tags" }
+        } do %>
           <% contact_profile_data[:tags].each do | tag | %>
             <%= sage_component SageLabel, { color: "draft", value: tag } %>
           <% end %>
