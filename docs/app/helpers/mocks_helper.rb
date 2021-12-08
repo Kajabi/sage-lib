@@ -9,13 +9,13 @@ module MocksHelper
   # Github URLs
   GITHUB_REPO_URL = "https://github.com/Kajabi/sage-lib"
   GITHUB_FILES_BASE_URL = "#{GITHUB_REPO_URL}/tree/main" # TODO: can we read the current git branch here by chance?
-  
+
   # Storybook live URL
   STORYBOOK_BASE_URL = "https://sage-lib-storybook.herokuapp.com"
 
 
   # -------------------------------------------------------
-  # 
+  #
   # Lists out all the available sage mocks. Properties include:
   #
   #   alias - <string> required unique snake_case alias for the profile
@@ -144,7 +144,7 @@ module MocksHelper
         attributes: {
           href: "#{GITHUB_FILES_BASE_URL}/docs/app/views/mocks/#{mock[:alias]}/",
           target: "_blank",
-          rel: "noreferrer noopener",
+          rel: "noopener",
         },
       }
     end
@@ -155,7 +155,7 @@ module MocksHelper
         attributes: {
           href: "#{GITHUB_FILES_BASE_URL}/docs/app/helpers/mocks/#{mock[:alias]}_helper.rb",
           target: "_blank",
-          rel: "noreferrer noopener",
+          rel: "noopener",
         },
       }
     end
@@ -166,7 +166,7 @@ module MocksHelper
         attributes: {
           href: "#{GITHUB_FILES_BASE_URL}/docs/lib/sage-frontend/javascript/docs/mocks/#{mock[:alias]}/",
           target: "_blank",
-          rel: "noreferrer noopener",
+          rel: "noopener",
         },
       }
     end
@@ -177,7 +177,7 @@ module MocksHelper
         attributes: {
           href: "#{GITHUB_FILES_BASE_URL}/docs/lib/sage-frontend/stylesheets/docs/mocks/_#{mock[:alias]}.scss",
           target: "_blank",
-          rel: "noreferrer noopener",
+          rel: "noopener",
         },
       }
     end
@@ -188,7 +188,7 @@ module MocksHelper
         attributes: {
           href: "#{GITHUB_FILES_BASE_URL}/packages/sage-react/lib/mocks/#{get_mock_alias_kebab(mock[:alias])}",
           target: "_blank",
-          rel: "noreferrer noopener",
+          rel: "noopener",
         },
       }
     end

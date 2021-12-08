@@ -9,6 +9,6 @@ export default {
     children: 'Learn something'
   }
 };
-const Template = (args) => <HelpLink href="http://example.com" target="_blank" referrer="no-referrer" {...args} />;
+const Template = (args) => <HelpLink href="http://example.com" target="_blank" rel="noopener" {...args} />;
 
 export const Default = Template.bind({});

@@ -28,7 +28,7 @@ const commonChildren = (
 
 const commonTileLink = {
   href: '//example.com',
-  rel: 'noopener noreferrer',
+  rel: 'noopener',
   target: '_blank',
 };
 
