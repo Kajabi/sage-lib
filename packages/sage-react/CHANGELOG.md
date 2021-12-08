@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.72.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.72.0...@kajabi/sage-react@0.72.1) (2021-12-08)
+
+
+### Bug Fixes
+
+* update incorrect referrer attributes ([f151256](https://github.com/Kajabi/sage-lib/commit/f1512562083788f6107b821d0aa94b7f2dfb1634))
+* update/replace noreferrer to noopener ([a734f0e](https://github.com/Kajabi/sage-lib/commit/a734f0e94fa8f9549fa5f63de6ac6cea395e0084))
+
+
+
+
+
 # [0.72.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.71.5...@kajabi/sage-react@0.72.0) (2021-12-06)
 
 

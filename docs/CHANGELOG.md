@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.30.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.30.0...@kajabi/sage@4.30.1) (2021-12-08)
+
+
+### Bug Fixes
+
+* update incorrect referrer attributes ([f151256](https://github.com/Kajabi/sage-lib/commit/f1512562083788f6107b821d0aa94b7f2dfb1634))
+* update sage_link rel ([539f24b](https://github.com/Kajabi/sage-lib/commit/539f24bfea426d49fe327962dda6043c1cb0ff88))
+* update/replace noreferrer to noopener ([a734f0e](https://github.com/Kajabi/sage-lib/commit/a734f0e94fa8f9549fa5f63de6ac6cea395e0084))
+
+
+
+
+
 # [4.30.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.29.1...@kajabi/sage@4.30.0) (2021-12-06)
 
 
