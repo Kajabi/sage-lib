@@ -25,12 +25,14 @@
 
 .sage-panel__divider {
   position: relative;
+  width: 100%;
   height: rem(16px);
   margin: 0;
   line-height: sage-font-size(body-xs);
   text-align: center;
   border: 0;
   outline: 0;
+
   &::before {
     content: "";
     position: absolute;
@@ -40,6 +42,7 @@
     height: 1px;
     background: sage-color(grey, 300);
   }
+
   &::after {
     content: attr(data-divider-label);
     display: inline-block;
@@ -111,7 +114,6 @@
 .sage-panel__subtitle {
   @extend %t-sage-heading-6;
 }
-
 
 .sage-panel__list {
   padding: 0;
