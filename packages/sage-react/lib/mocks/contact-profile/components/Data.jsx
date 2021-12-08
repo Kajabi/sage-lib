@@ -9,7 +9,7 @@ import {
 } from '../../..';
 
 export const Data = ({ stats, tags }) => (
-  <Panel.Stack spacing={Panel.Stack.SPACINGS.FORM} style={{ padding: "16px" }}>
+  <Panel.Stack spacing={Panel.Stack.SPACINGS.FORM} style={{ padding: '16px' }}>
     {stats && stats.map((dataGroup) => (
       <React.Fragment key={uuid()}>
         <Description
