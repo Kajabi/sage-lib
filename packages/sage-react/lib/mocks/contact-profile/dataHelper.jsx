@@ -41,6 +41,7 @@ export const mockProfile = {
         data: (
           <Label
             value="Member"
+            customIconColor={SageTokens.COLOR_PALETTE.PRIMARY_300}
             color={Label.COLORS.INFO}
             icon={SageTokens.ICONS.CHECK_CIRCLE_FILLED}
           />
