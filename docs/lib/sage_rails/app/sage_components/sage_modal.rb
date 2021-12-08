@@ -1,6 +1,6 @@
 class SageModal < SageComponent
   set_attribute_schema({
-    active: [:optional, TrueClass],
+    active: [:optional, NilClass, TrueClass],
     animate: [:optional, String, TrueClass, {
       direction: [:optional, String, Set.new(["bottom", "top", "left", "right"])]
     }],
@@ -8,7 +8,7 @@ class SageModal < SageComponent
     disable_background_dismiss: [:optional, NilClass, TrueClass],
     disable_close: [:optional, TrueClass],
     fullscreen: [:optional, TrueClass],
-    id: [:optional, String],
+    id: [:optional, NilClass, String],
     large: [:optional, TrueClass],
     remove_content_on_close: [:optional, TrueClass],
     remote_url: [:optional, String]
