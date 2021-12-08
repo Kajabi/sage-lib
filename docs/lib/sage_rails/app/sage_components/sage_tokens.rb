@@ -50,7 +50,7 @@ module SageTokens
   }
 
   COLOR_SLIDERS = [
-    "charcoal", "grey", "orange", "primary", "purple", "red", "sage", "yellow",
+    "charcoal", "grey", "orange", "primary", "purple", "red", "sage", "yellow", "black", "white",
     "charcoal-100", "grey-100", "orange-100", "primary-100", "purple-100", "red-100", "sage-100", "yellow-100",
     "charcoal-200", "grey-200", "orange-200", "primary-200", "purple-200", "red-200", "sage-200", "yellow-200",
     "charcoal-300", "grey-300", "orange-300", "primary-300", "purple-300", "red-300", "sage-300", "yellow-300",
