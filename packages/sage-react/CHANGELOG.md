@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.73.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.72.1...@kajabi/sage-react@0.73.0) (2021-12-09)
+
+
+### Features
+
+* **docs:** sync react mock for contact profile ([4fbb174](https://github.com/Kajabi/sage-lib/commit/4fbb174c94a4dc75ce79ab532a7a95a78b3aedfc))
+* **drawer:** enhance drawer props with ID and active ([eb9fa91](https://github.com/Kajabi/sage-lib/commit/eb9fa91ea13d15fa80f3f7dbc66c6fbbd3ecb1b5))
+* **drawer:** ensure header is optionally rendered ([356b818](https://github.com/Kajabi/sage-lib/commit/356b81830ed7cebee790e24408d93876602ed708))
+
+
+
+
+
 ## [0.72.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.72.0...@kajabi/sage-react@0.72.1) (2021-12-08)
 
 

@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.31.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.30.1...@kajabi/sage@4.31.0) (2021-12-09)
+
+
+### Features
+
+* **docs:** add badge to contact profile mock ([e70dcef](https://github.com/Kajabi/sage-lib/commit/e70dcef3ea4f478f75faa7103517d62ce67bf115))
+* **docs:** add modal block to mocks layout ([0d8a3fa](https://github.com/Kajabi/sage-lib/commit/0d8a3faedcec93405ae93ac6d14546d1a580cd3a))
+* **docs:** sync up contact profile mocks with latest ([115b9ce](https://github.com/Kajabi/sage-lib/commit/115b9cef989550a8ed797503941f67900e8e97dd))
+* **drawer:** enhance drawer props with ID and active ([eb9fa91](https://github.com/Kajabi/sage-lib/commit/eb9fa91ea13d15fa80f3f7dbc66c6fbbd3ecb1b5))
+* **modal:** ensure nil values are possible on optional modal props ([1ca85f1](https://github.com/Kajabi/sage-lib/commit/1ca85f1fead2db22be4e688f46f5687a888fdb9e))
+
+
+
+
+
 ## [4.30.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.30.0...@kajabi/sage@4.30.1) (2021-12-08)
 
 

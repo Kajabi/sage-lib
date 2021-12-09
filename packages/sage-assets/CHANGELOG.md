@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.62.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.61.0...@kajabi/sage-assets@0.62.0) (2021-12-09)
+
+
+### Features
+
+* **avatar:** fix z-idnex on Avatar badge to stack above image and initials ([8e0ebc2](https://github.com/Kajabi/sage-lib/commit/8e0ebc26982e46de309c4983c4daec386bc5b571))
+* **panel:** adjust divider width ([42395d8](https://github.com/Kajabi/sage-lib/commit/42395d8a4450413086a9640e3286ecc48c26b969))
+
+
+
+
+
 # [0.61.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.60.2...@kajabi/sage-assets@0.61.0) (2021-12-06)
 
 
