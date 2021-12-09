@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.62.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.62.0...@kajabi/sage-assets@0.62.1) (2021-12-09)
+
+
+### Bug Fixes
+
+* **panel:** ensure full bleed divider works as expected ([fa5ad0b](https://github.com/Kajabi/sage-lib/commit/fa5ad0b25c6f0c632c5b0d623597fefc73e9861e))
+
+
+
+
+
 # [0.62.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.61.0...@kajabi/sage-assets@0.62.0) (2021-12-09)
 
 
