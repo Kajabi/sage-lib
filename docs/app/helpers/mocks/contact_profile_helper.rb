@@ -15,12 +15,12 @@ module Mocks::ContactProfileHelper
           {
             title: "Total offers",
             data: "3",
-            link: "#offers"
+            action: { attributes: { href: "#offers" }}
           },
           {
             title: "Total products",
             data: "6",
-            link: "#products"
+            action: { attributes: { href: "#products" }}
           },
         ],
         [
@@ -39,7 +39,8 @@ module Mocks::ContactProfileHelper
             data: sage_component(SageLabel, {
               value: "Member",
               color: "info",
-              icon: "check-circle-filled"
+              icon: "check-circle-filled",
+              custom_icon_color: SageTokens::COLOR_PALETTE[:PRIMARY_300],
             }),
           },
           {

@@ -9,6 +9,7 @@ export const Drawer = ({
   children,
   className,
   customHeader,
+  id,
   onExit,
   showClose,
   title,
@@ -18,25 +19,28 @@ export const Drawer = ({
     animation={{ direction: Modal.ANIMATION_DIRECTIONS.LEFT }}
     className={`sage-drawer ${className || ''}`}
     disableBackgroundDismiss={true}
+    id={id}
   >
-    <Modal.Header
-      customHeader={customHeader ? (
-        <div className="sage-drawer__header">{customHeader}</div>
-      ) : null}
-      title={title}
-      aside={showClose && (
-        <Button
-          className="sage-drawer__close"
-          color={Button.COLORS.SECONDARY}
-          iconOnly={true}
-          icon={SageTokens.ICONS.REMOVE}
-          onClick={onExit}
-          subtle={true}
-        >
-          Close Drawer
-        </Button>
-      )}
-    />
+    {(customHeader || title || showClose) && (
+      <Modal.Header
+        customHeader={customHeader ? (
+          <div className="sage-drawer__header">{customHeader}</div>
+        ) : null}
+        title={title}
+        aside={showClose && (
+          <Button
+            className="sage-drawer__close"
+            color={Button.COLORS.SECONDARY}
+            iconOnly={true}
+            icon={SageTokens.ICONS.REMOVE}
+            onClick={onExit}
+            subtle={true}
+          >
+            Close Drawer
+          </Button>
+        )}
+      />
+    )}
     <Modal.Body spacing={Modal.Body.SPACINGS.PANEL}>
       {children}
     </Modal.Body>
@@ -58,6 +62,7 @@ Drawer.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
   customHeader: PropTypes.node,
+  id: PropTypes.string.isRequired,
   onExit: PropTypes.func,
   showClose: PropTypes.bool,
   title: PropTypes.string,

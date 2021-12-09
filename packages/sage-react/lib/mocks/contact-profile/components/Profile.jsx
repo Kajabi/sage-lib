@@ -5,6 +5,7 @@ import {
   Avatar,
   Button,
   CopyButton,
+  Dropdown,
   OptionsDropdown,
   Panel,
   SageClassnames,
@@ -16,6 +17,7 @@ export const Profile = ({ avatarImage, email, initials, name }) => (
   <>
     <Panel.Block className={SageClassnames.TYPE_ALIGN_CENTER}>
       <Avatar
+        badge={true}
         centered={true}
         image={{
           src: avatarImage,
@@ -24,7 +26,6 @@ export const Profile = ({ avatarImage, email, initials, name }) => (
         initials={initials}
         size="68px"
         className={SageClassnames.SPACERS.SM_BOTTOM}
-        // TODO: Add `badge` property
       />
       <h3 className={`${SageClassnames.TYPE.HEADING_4} ${SageClassnames.TYPE_COLORS.CHARCOAL_500}`}>
         {name}
@@ -56,6 +57,7 @@ export const Profile = ({ avatarImage, email, initials, name }) => (
         data-js-tooltip="More"
         options={mockProfileMoreActions}
         triggerButtonSubtle={false}
+        align={Dropdown.POSITIONS.RIGHT}
       />
     </Button.Group>
   </>

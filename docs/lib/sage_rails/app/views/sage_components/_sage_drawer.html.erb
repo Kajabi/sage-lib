@@ -1,9 +1,10 @@
 <% show_close = component.show_close.present? ? component.show_close : true %>
 <%= sage_component SageModal, {
+  active: component.active,
   animate: { direction: "left" },
   css_classes: "sage-drawer #{component.generated_css_classes}",
   disable_background_dismiss: true,
-  id: "test-drawer",
+  id: component.id,
 } do %>
   <%= sage_component SageModalContent, { spacing: "panel", title: component.title } do %>
     <% if content_for?(:sage_drawer_header) %>

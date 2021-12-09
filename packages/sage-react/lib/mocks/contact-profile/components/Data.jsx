@@ -1,26 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import uuid from 'react-uuid';
-import { Description } from '../../../Description';
 import {
+  Description,
   Button,
   Label,
   Panel,
 } from '../../..';
 
 export const Data = ({ stats, tags }) => (
-  <>
+  <Panel.Stack spacing={Panel.Stack.SPACINGS.FORM} style={{ padding: '16px' }}>
     {stats && stats.map((dataGroup) => (
       <React.Fragment key={uuid()}>
         <Description
-          allcapsTitles={false}
-          inlineSpread={true}
           items={dataGroup}
+          noDividers={true}
         />
         <Panel.Divider />
       </React.Fragment>
     ))}
-    <Label.Group gap={Label.Group.GAP_OPTIONS.XS}>
+    <Label.Group gap={Label.Group.GAP_OPTIONS.XS} aria-label="Tags">
       {tags && tags.map((tag) => (
         <Label color={Label.COLORS.DRAFT} key={uuid()} value={tag} />
       ))}
@@ -32,7 +31,7 @@ export const Data = ({ stats, tags }) => (
         View all
       </Button>
     </Label.Group>
-  </>
+  </Panel.Stack>
 );
 
 Data.defaultProps = {
