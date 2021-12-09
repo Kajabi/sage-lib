@@ -57,6 +57,7 @@
 .sage-panel__divider--full-bleed {
   padding: 0;
   margin: 0 -#{sage-spacing(panel)};
+  width: calc(100% + #{sage-spacing(panel) * 2});
 }
 
 .sage-panel__footer {
