@@ -17,7 +17,7 @@ Sage.alert = (function () {
   });
 
   function init(el) {
-    addCloseHandler(el);
+    if (el) addCloseHandler(el);
   }
 
   function addCloseHandler(el) {
