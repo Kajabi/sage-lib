@@ -1,5 +1,6 @@
 import React from 'react';
 import { selectArgs } from '../story-support/helpers';
+import { Icon } from '../Icon';
 import { StatBox } from './StatBox';
 
 export default {
@@ -88,6 +89,19 @@ SimpleWithImage.args = {
   image: {
     alt: 'Example',
     src: 'https://via.placeholder.com/150'
+  },
+  link: null,
+  title: 'Title'
+};
+
+export const SimpleWithIcon = Template.bind({});
+SimpleWithIcon.args = {
+  change: null,
+  data: '1,000',
+  image: null,
+  icon: {
+    cardColor: Icon.CARD_COLORS.PUBLISHED,
+    name: Icon.ICONS.CHECK
   },
   link: null,
   title: 'Title'
