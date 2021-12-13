@@ -5,7 +5,7 @@ on:
       - develop
 jobs:
   release_deploy:
-    name: Release and Deploy
+    name: Pre-Release
     runs-on: ubuntu-latest
     container:
       image: kajabiprodeng/ruby:2.4.9-alpine3.13
