@@ -77,7 +77,7 @@ jobs:
 
       - name: Lerna Version and Publish
         run: |
-          npx lerna version  --conventional-commits --conventional-graduate --yes
+          npx lerna version --conventional-commits --conventional-graduate --yes
           npx lerna publish from-git --registry github --yes
 
       # Deploy site
