@@ -1,5 +1,8 @@
-<% content = component.label ? "#{component.label}: " : "" %>
-<% content << "#{component.percent}%&nbsp;progress" %>
+<%
+content = component.label ? "#{component.label}: " : ""
+content << "#{component.percent}%&nbsp;progress"
+color = component.color || SageTokens::COLOR_PALETTE[:SAGE_300]
+%>
 
 <div
   class="sage-progress-bar <%= component.generated_css_classes %>"
@@ -17,5 +20,5 @@
   >
     <%= content %>
   </progress>
-  <div class="sage-progress-bar__value" style="width: <%= component.percent %>%;"></div>
+  <div class="sage-progress-bar__value" style="--progress-bar-value-color: <%= color %>; width: <%= component.percent %>%;"></div>
 </div>
