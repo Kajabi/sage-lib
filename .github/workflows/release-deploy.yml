@@ -75,10 +75,8 @@ jobs:
       - name: Lerna Bootstrap
         run: npx lerna bootstrap --ci
 
-      - name: Lerna Version and Publish
-        run: |
-          npx lerna version --conventional-commits --conventional-graduate --yes
-          npx lerna publish from-git --registry github --yes
+      - name: Lerna Publish
+        run: npx lerna publish --registry github --yes
 
       # Deploy site
       - name: Documentation Site Deploy
