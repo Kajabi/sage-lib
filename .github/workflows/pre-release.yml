@@ -1,10 +1,8 @@
-name: Release-Deploy
+name: Pre-Release
 on:
-  # !!Emergency override!! uncomment below and access the actions tab in GitHub to run a release/deploy
-  # workflow_dispatch:
   push:
     branches:
-      - main
+      - develop
 jobs:
   release_deploy:
     name: Release and Deploy
@@ -75,26 +73,7 @@ jobs:
       - name: Lerna Bootstrap
         run: npx lerna bootstrap --ci
 
-      - name: Lerna Version and Publish
+      - name: Lerna Version and Publish Pre-Release
         run: |
-          npx lerna version --conventional-commits --conventional-graduate --yes
+          npx lerna version --conventional-commits --conventional-prerelease --preid alpha --yes
           npx lerna publish from-git --registry github --yes
-
-      # Deploy site
-      - name: Documentation Site Deploy
-        env:
-          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-          HEROKU_DOCS_APP_NAME: ${{ secrets.HEROKU_DOCS_APP_NAME }}
-        run: yarn docs:deploy
-
-      - name: Storybook Site Deploy
-        env:
-          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-          HEROKU_STORYBOOK_APP_NAME: ${{ secrets.HEROKU_STORYBOOK_APP_NAME }}
-        run: yarn storybook:deploy
-
-      - name: SassDocs Site Deploy
-        env:
-          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-          HEROKU_SASSDOCS_APP_NAME: ${{ secrets.HEROKU_SASSDOCS_APP_NAME }}
-        run: yarn sassdocs:deploy
