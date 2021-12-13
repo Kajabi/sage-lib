@@ -5,7 +5,6 @@
 ////
 
 $-stat-box-image-max-width: rem(48px);
-$-stat-box-icon-max-width: auto;
 
 .sage-stat-box {
   // Styles here
@@ -20,29 +19,20 @@ $-stat-box-icon-max-width: auto;
   &.sage-stat-box--with-img,
   &.sage-stat-box--with-icon {
     display: grid;
+    grid-column-gap: sage-spacing(sm);
 
     grid-template-areas:
       "image header header"
       "image body body";
     grid-template-columns: $-stat-box-image-max-width 1fr;
   }
-
-  &.sage-stat-box--with-icon {
-    grid-template-columns: $-stat-box-icon-max-width 1fr;
-  }
 }
 
 .sage-stat-box__img {
   position: relative;
   grid-area: image;
-  overflow: hidden;
-  min-height: $-stat-box-image-max-width;
-  margin-right: sage-spacing(sm);
 
   img {
-    position: absolute;
-    transform: translateY(-50%);
-    top: 50%;
     width: 100%;
     border-radius: sage-border(radius);
   }
@@ -50,7 +40,6 @@ $-stat-box-icon-max-width: auto;
 
 .sage-stat-box__icon {
   grid-area: image;
-  margin-right: sage-spacing(sm);
 }
 
 .sage-stat-box__header {
