@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.31.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.31.1...@kajabi/sage@4.31.2) (2021-12-14)
+
+
+### Bug Fixes
+
+* **webpacker:** update version ([8e1e3d6](https://github.com/Kajabi/sage-lib/commit/8e1e3d6fa8039a0ed55b2199870cd66a21ddad03))
+
+
+
+
+
 ## [4.31.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.31.0...@kajabi/sage@4.31.1) (2021-12-09)
 
 **Note:** Version bump only for package @kajabi/sage
