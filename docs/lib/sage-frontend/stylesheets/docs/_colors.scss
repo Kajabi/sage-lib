@@ -10,7 +10,7 @@
 
 @mixin color-block-output {
   padding: sage-spacing(sm) sage-spacing();
-  font-size: sage-font-size(body-sm);
+  font-size: sage-font-size(body);
   color: sage-color(white);
 
   &::after {
@@ -37,8 +37,6 @@
       font-weight: sage-font-weight(semibold);
     }
   }
-
-
 }
 
 // color block groupings
@@ -64,6 +62,15 @@
   code {
     background-color: transparent;
   }
+}
+
+.sage-btn {
+  font-size: sage-font-size(body-sm);
+}
+
+.sage-btn--subtle.sage-btn--secondary,
+.sage-btn--subtle.sage-btn--secondary::before {
+  color: inherit;
 }
 
 // build individual color blocks
