@@ -13,19 +13,26 @@ echo_custom "[GEM]" "Bumping gem version..."
 
 echo_custom "[GEM]" "Installing latest gems..."
 
-(cd $sage_docs_path && bundle install)
+# (cd $sage_docs_path && bundle install)
 # Get the type of bump
 cd $sage_repo_path
 PRERELEASE_TYPES=("premajor", "preminor" "prepatch", "prerelease")
 BUMP_TYPE=$(yarn run --silent gem:bump:type)
 
-echo $BUMP_TYPE
-
 elementIn $BUMP_TYPE "${PRERELEASE_TYPES[@]}"
 if [[ $? == 0 ]]; then
-  echo "MADE IT"
+
+  if [[ $BUMP_TYPE == "premajor" ]]; then
+    (cd $sage_docs_path && bundle exec bump major --no-commit)
+  elif [[ $BUMP_TYPE == "preminor" ]]; then
+    (cd $sage_docs_path && bundle exec bump minor --no-commit)
+  elif [[ $BUMP_TYPE == "prepatch" ]]; then
+    (cd $sage_docs_path && bundle exec bump patch --no-commit)
+  fi;
+
   BUMP_TYPE="pre"
 fi;
+
 
 if [[ $BUMP_TYPE != 'null' ]]; then
   # Bump the gem with no commit
