@@ -16,17 +16,26 @@ echo_custom "[GEM]" "Installing latest gems..."
 (cd $sage_docs_path && bundle install)
 # Get the type of bump
 cd $sage_repo_path
+PRERELEASE_TYPES=("premajor", "preminor" "prepatch", "prerelease")
 BUMP_TYPE=$(yarn run --silent gem:bump:type)
+
+echo $BUMP_TYPE
+
+elementIn $BUMP_TYPE "${PRERELEASE_TYPES[@]}"
+if [[ $? == 0 ]]; then
+  echo "MADE IT"
+  BUMP_TYPE="pre"
+fi;
 
 if [[ $BUMP_TYPE != 'null' ]]; then
   # Bump the gem with no commit
   (cd $sage_docs_path && bundle exec bump $BUMP_TYPE --no-commit)
   # Install to update the Gemfile.lock
-  (cd $sage_docs_path && bundle install)
+  # (cd $sage_docs_path && bundle install)
   # Add the new files to the commit
-  git add $sage_docs_path/Gemfile.lock
-  git add $sage_docs_path/lib/sage_rails/lib/sage_rails/version.rb
-  git commit -m "chore(ci): updating rails gem version [ci skip]"
+  # git add $sage_docs_path/Gemfile.lock
+  # git add $sage_docs_path/lib/sage_rails/lib/sage_rails/version.rb
+  # git commit -m "chore(ci): updating rails gem version [ci skip]"
 else
   echo 'Nothing to bump!'
 fi;
