@@ -14,6 +14,10 @@
 /// 
 /// NOTE: The expected use for negative (decremental) values will be to lower their value behind a positioned parent. However, it is still recommended to remain within the guidelines whenever possible, to avoid a potential `z-index` collision.
 /// 
+/// NOTE: These values are duplicated in the following spots and any changes here should be synced there as well:
+/// - packages/sage-react/lib/configs/tokens/z-indexes.js
+/// - docs/lib/sage_rails/app/sage_components/sage_tokens.rb
+///
 /// | key | value  | notes |
 /// |--------|--------|--------|
 /// |default| 0 | reset and parent for negative positioning |
