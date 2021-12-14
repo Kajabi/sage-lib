@@ -338,6 +338,7 @@ module SageTokens
     "body", "body-sm", "body-xs",
   ]
 
+  # Keep in sync with `packages/sage-assets/lib/stylesheets/tokens/_z_index.scss`
   Z_INDEXES = {
     NEGATIVE: -1,
     DEFAULT: 0,
