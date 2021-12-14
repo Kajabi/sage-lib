@@ -38,7 +38,7 @@
     "@babel/core": "^7.12.3",
     "@babel/plugin-transform-runtime": "^7.12.1",
     "@kajabi/sage-packs": "^0.1.92",
-    "@rails/webpacker": "4.2.2",
+    "@rails/webpacker": "5.2.2",
     "arrive": "^2.4.1",
     "core-js": "^3.6.5",
     "css-loader": "^5.1.1",
