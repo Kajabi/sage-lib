@@ -3,6 +3,7 @@ import { TOKENS_GRID_TEMPLATES } from './grid-templates';
 import { TOKENS_ICONS } from './icons';
 import { TOKENS_RECHARTS } from './recharts';
 import { TOKENS_SPACERS } from './spacers';
+import { TOKENS_Z_INDEXES } from './z-indexes';
 
 export const SageTokens = {
   COLORS: TOKENS_COLORS,
@@ -12,4 +13,5 @@ export const SageTokens = {
   ICONS: TOKENS_ICONS,
   RECHARTS: TOKENS_RECHARTS,
   SPACERS: TOKENS_SPACERS,
+  Z_INDEXES: TOKENS_Z_INDEXES,
 };

@@ -338,4 +338,17 @@ module SageTokens
     "body", "body-sm", "body-xs",
   ]
 
+  Z_INDEXES = {
+    NEGATIVE: -1,
+    DEFAULT: 0,
+    RAISED: 1000,
+    ALERT: 2000,
+    UNDERLAY: 3000,
+    NAV: 4000,
+    OVERLAY: 5000,
+    MODAL: 6000,
+    PRIORITY: 8000,
+    NUCLEAR: 9000,
+  }
+
 end
