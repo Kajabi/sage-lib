@@ -20,7 +20,7 @@ Do you have an issue, bug, or suggestion you would like to add to the Design Sys
 ### Conventional Commits
 
 This repository utilizes the
-[Conventional Commits Standard](https://www.conventionalcommits.org/en/v1.0.0/). Utilizing this standard allows us to automatically version our software during the Continuous Integration process and generate `CHANGELOG.md` files for each of the packages.
+[Conventional Commits Standard](https://www.conventionalcommits.org/en/v1.0.0/). Utilizing this standard allows us to automatically version our software during the Continuous Integration process and generate `CHANGELOG.md` files for each package.
 
 ### Unsure how to format your commit message? 
 
