@@ -127,21 +127,11 @@ StatBox.defaultProps = {
   },
   customLabel: null,
   hasData: true,
-  icon: {
-    cardColor: null,
-    color: null,
-    name: null,
-  },
-  image: {
-    alt: null,
-    src: null
-  },
+  icon: null,
+  image: null,
   legendDotColor: null,
   legendDotCustomColor: null,
-  link: {
-    href: null,
-    value: null,
-  },
+  link: null,
   popover: null,
   raised: false,
   timeframe: null,
