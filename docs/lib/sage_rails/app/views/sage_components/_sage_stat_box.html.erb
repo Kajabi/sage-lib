@@ -18,6 +18,7 @@ end
   class="sage-stat-box
   <%= "sage-stat-box--raised" if component.raised %>
   <%= "sage-stat-box--with-img" if component.image %>
+  <%= "sage-stat-box--with-icon" if component.icon %>
   <%= component.generated_css_classes %>"
   <%= component.generated_html_attributes.html_safe %>
 >
@@ -26,8 +27,18 @@ end
       <%= image_tag component.image[:src], alt: component.image[:alt].present? ? component.image[:alt] : '' %>
     </div>
   <% end %>
+
+  <% if component.icon.present? %>
+    <div class="sage-stat-box__icon">
+      <%= sage_component SageIcon, {
+        icon: component.icon[:name],
+        card_color: component.icon[:card_color],
+        color: component.icon[:color]
+      } %>
+    </div>
+  <% end %>
   <header class="sage-stat-box__header">
-    <h2 
+    <h2
       class="
         sage-stat-box__title
         <%= "sage-stat-box__title--legend-#{component.legend_dot_color}" if component.legend_dot_color %>

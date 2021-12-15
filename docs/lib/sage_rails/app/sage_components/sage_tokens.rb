@@ -50,7 +50,7 @@ module SageTokens
   }
 
   COLOR_SLIDERS = [
-    "charcoal", "grey", "orange", "primary", "purple", "red", "sage", "yellow",
+    "charcoal", "grey", "orange", "primary", "purple", "red", "sage", "yellow", "black", "white",
     "charcoal-100", "grey-100", "orange-100", "primary-100", "purple-100", "red-100", "sage-100", "yellow-100",
     "charcoal-200", "grey-200", "orange-200", "primary-200", "purple-200", "red-200", "sage-200", "yellow-200",
     "charcoal-300", "grey-300", "orange-300", "primary-300", "purple-300", "red-300", "sage-300", "yellow-300",
@@ -337,5 +337,19 @@ module SageTokens
     "h1", "h2", "h3", "h4", "h5", "h6",
     "body", "body-sm", "body-xs",
   ]
+
+  # Keep in sync with `packages/sage-assets/lib/stylesheets/tokens/_z_index.scss`
+  Z_INDEXES = {
+    NEGATIVE: -1,
+    DEFAULT: 0,
+    RAISED: 1000,
+    ALERT: 2000,
+    UNDERLAY: 3000,
+    NAV: 4000,
+    OVERLAY: 5000,
+    MODAL: 6000,
+    PRIORITY: 8000,
+    NUCLEAR: 9000,
+  }
 
 end

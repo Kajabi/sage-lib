@@ -12,6 +12,7 @@ export const StatBox = ({
   change,
   data,
   hasData,
+  icon,
   image,
   legendDotColor,
   legendDotCustomColor,
@@ -26,6 +27,7 @@ export const StatBox = ({
     {
       'sage-stat-box--raised': raised,
       'sage-stat-box--with-img': image,
+      'sage-stat-box--with-icon': icon,
     }
   );
   const statBoxTitle = classnames(
@@ -62,6 +64,15 @@ export const StatBox = ({
     <article
       className={statBoxContainer}
     >
+      {icon && (
+        <div className="sage-stat-box__icon">
+          <Icon
+            cardColor={icon.cardColor}
+            color={icon.color}
+            icon={icon.name}
+          />
+        </div>
+      )}
       {image && (
         <div className="sage-stat-box__img">
           <img src={image.src} alt={image.alt || ''} />
@@ -116,6 +127,11 @@ StatBox.defaultProps = {
   },
   customLabel: null,
   hasData: true,
+  icon: {
+    cardColor: null,
+    color: null,
+    name: null,
+  },
   image: {
     alt: null,
     src: null
@@ -139,6 +155,11 @@ StatBox.propTypes = {
   customLabel: PropTypes.node,
   data: PropTypes.string.isRequired,
   hasData: PropTypes.bool,
+  icon: PropTypes.shape({
+    cardColor: PropTypes.oneOf(Object.values(Icon.CARD_COLORS)),
+    color: PropTypes.oneOf(Object.values(Icon.COLORS)),
+    name: PropTypes.oneOf(Object.values(Icon.ICONS)),
+  }),
   image: PropTypes.shape({
     alt: PropTypes.string,
     src: PropTypes.string
