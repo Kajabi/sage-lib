@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.17.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.16.1...@kajabi/sage-system@0.17.0) (2021-12-15)
+
+
+### Bug Fixes
+
+* **alert:** minor fix ([370a313](https://github.com/Kajabi/sage-lib/commit/370a3137052aca806c0ac8337edf9eebfbe73558))
+
+
+### Features
+
+* **alert:** added presence listener for alerts ([fe54591](https://github.com/Kajabi/sage-lib/commit/fe54591e7fd7cc65151a8f230a60e82fe22cccf9))
+
+
+
+
+
 ## [0.16.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.16.0...@kajabi/sage-system@0.16.1) (2021-12-06)
 
 **Note:** Version bump only for package @kajabi/sage-system

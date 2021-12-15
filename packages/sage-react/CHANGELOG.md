@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.74.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.73.1...@kajabi/sage-react@0.74.0) (2021-12-15)
+
+
+### Bug Fixes
+
+* **statbox:** add optional icon ([9f9cce5](https://github.com/Kajabi/sage-lib/commit/9f9cce588fac62b78ddf2e290370cd0b31d55dea))
+
+
+### Features
+
+* add z index tokens to rails and js ([e2f9d4d](https://github.com/Kajabi/sage-lib/commit/e2f9d4dca1854a1a78e5f9ff6954cf5a5f278c5f))
+
+
+
+
+
 ## [0.73.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.73.0...@kajabi/sage-react@0.73.1) (2021-12-09)
 
 **Note:** Version bump only for package @kajabi/sage-react

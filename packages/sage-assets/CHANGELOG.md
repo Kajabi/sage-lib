@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.63.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.62.1...@kajabi/sage-assets@0.63.0) (2021-12-15)
+
+
+### Bug Fixes
+
+* **statbox:** add optional icon ([9f9cce5](https://github.com/Kajabi/sage-lib/commit/9f9cce588fac62b78ddf2e290370cd0b31d55dea))
+* **statbox:** removed absolute positioning ([be79842](https://github.com/Kajabi/sage-lib/commit/be798421b343edef5db8f725b5017abf29afa6f1))
+* **statbox:** spacing updates per review ([a9357b5](https://github.com/Kajabi/sage-lib/commit/a9357b55bec91646b458901a2a6ebe4968c5cacb))
+
+
+### Features
+
+* **progress:** added optional color prop ([2256e79](https://github.com/Kajabi/sage-lib/commit/2256e797c3d459242408acf71478420350128318))
+
+
+
+
+
 ## [0.62.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.62.0...@kajabi/sage-assets@0.62.1) (2021-12-09)
 
 

@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.32.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.31.2...@kajabi/sage@4.32.0) (2021-12-15)
+
+
+### Bug Fixes
+
+* **docs:** fixes white color section styling ([fe85561](https://github.com/Kajabi/sage-lib/commit/fe8556131f38b6513f3b1dc34196945d3286db43))
+* **progress:** color prop verbiage fixes ([95cc7f4](https://github.com/Kajabi/sage-lib/commit/95cc7f4c67ce45da5c32e5b63d74f9687d19ea8b))
+* **statbox:** add optional icon ([9f9cce5](https://github.com/Kajabi/sage-lib/commit/9f9cce588fac62b78ddf2e290370cd0b31d55dea))
+
+
+### Features
+
+* **docs:** adds black and white info ([6d973d9](https://github.com/Kajabi/sage-lib/commit/6d973d93a26fde59393a6b9301a460fe8ed6aeb9))
+* **docs:** reformats color tokens with copy buttons ([c27ab5d](https://github.com/Kajabi/sage-lib/commit/c27ab5dbb3aa3d180c5cb2eb58ef09e0d3da356c))
+* add z index tokens to rails and js ([e2f9d4d](https://github.com/Kajabi/sage-lib/commit/e2f9d4dca1854a1a78e5f9ff6954cf5a5f278c5f))
+* **progress:** added optional color prop ([2256e79](https://github.com/Kajabi/sage-lib/commit/2256e797c3d459242408acf71478420350128318))
+
+
+
+
+
 ## [4.31.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.31.1...@kajabi/sage@4.31.2) (2021-12-14)
 
 
