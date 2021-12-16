@@ -25,48 +25,38 @@
 $sage-{{../../category}}-{{../type}}-{{name}}: {{#if value.value}}{{{value.value}}}{{else}}{{{value}}}{{/if}};
     {{/each}}
 
-    {{#if (isBaseType type)}}
-/// Base type
 ///
 /// Map for {{../category}} {{type}}
 ///
-$sage-{{../category}}-{{type}}: (
-      {{#each tokens}}
-  {{name}}: $sage-{{../../category}}-{{../type}}-{{name}},
-      {{/each}}
-);
-
-///
-/// Sage {{../category}} token utility
-///
-/// @param {string} $key [default] The token to retrieve
-///
-@function sage-{{../category}}($key: default) {
-  $value: map-get($sage-{{../category}}-{{type}}, $key);
-  @return $value;
-}
-
-    {{else}}
-/// Custom type
-///
-/// Map for {{../category}} {{type}}
-///
-$sage-{{../category}}-{{type}}: (
-      {{#each tokens}}
-  {{name}}: $sage-{{../../category}}-{{../type}}-{{name}},
-      {{/each}}
+$sage-{{../category}}{{#if (notBaseType type)}}-{{type}}{{/if}}: (
+    {{#each items}}
+      {{#if (hasAny subitems)}}
+  {{item}}: (
+        {{#each subitems}}
+    {{subitem}}: $sage-{{../../../category}}-{{../../type}}-{{../item}}-{{subitem}},
+        {{/each}}
+  ),
+      {{else}}
+  {{item}}: $sage-{{../../category}}-{{../type}}-{{item}},
+      {{/if}}
+    {{/each}}
 );
 
 ///
 /// Sage {{../category}} {{type}} token utility
 ///
 /// @param {string} $key [default] The token to retrieve
+    {{#if (hasAnySubitems items)}}
+/// @param {string} $subkey [default] The subtoken to retrieve
+    {{/if}}
 ///
-@function sage-{{../category}}-{{type}}($key: default) {
+@function sage-{{../category}}{{#if (notBaseType type)}}-{{type}}{{/if}}($key: default{{#if (hasAnySubitems items)}}, $subkey: default{{/if}}) {
   $value: map-get($sage-{{../category}}-{{type}}, $key);
+    {{#if (hasAnySubitems items)}}
+  $value: map-get($value, $subkey);
+    {{/if}}
   @return $value;
 }
 
-    {{/if}}
   {{/each}}
 {{/each}}
