@@ -10,6 +10,18 @@
 const Handlebars = require('handlebars');
 const fs = require('fs');
 
+const hasAny = (val) => {
+  if (!val) {
+    return false;
+  }
+
+  if (val.length === 0) {
+    return false;
+  }
+
+  return true;
+};
+
 
 //
 // Utilities

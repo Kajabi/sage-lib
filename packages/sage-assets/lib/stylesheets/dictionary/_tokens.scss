@@ -1165,7 +1165,7 @@ $sd-sage-color-combos-danger-bold-foreground: #ffe0e0;
 $sd-sage-color-combos-danger-bold-background: #cf3c32;
 
 ///
-/// Map for color combos
+/// Map for color core
 ///
 $sd-sage-color-combos: (
   draft: (
@@ -1279,7 +1279,7 @@ $sd-sage-color-combos: (
 );
 
 ///
-/// Sage color combos token utility
+/// Sage color core token utility
 ///
 /// @param {string} $key The token to retrieve
 /// @param {string} $subkey The subtoken to retrieve
