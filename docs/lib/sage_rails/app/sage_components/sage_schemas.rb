@@ -31,7 +31,7 @@ module SageSchemas
     badge: [:optional, TrueClass],
     centered: [:optional, TrueClass],
     color: [:optional, NilClass, SageSchemas::COLORS],
-    image: [:optional, {alt: [:optional, String], src: String}],
+    image: [:optional, {alt: [:optional, String], src: String, id: [:optional, String]}],
     initials: [:optional, String],
     lazy_load_initials: [:optional, NilClass, TrueClass],
     size: [:optional, String],
