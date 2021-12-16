@@ -44,11 +44,11 @@ end
   <% end %>
 
   <% if component.image %>
-  <%
-    image_id = nil
-    if component.image[:id]
-      image_id = component.image[:id]
-    end
+    <%
+      image_id = nil
+      if component.image[:id]
+        image_id = component.image[:id]
+      end
     %>
     <%= image_tag component.image[:src], alt: (component.image[:alt] || ""), class: "sage-avatar__image", id: image_id  %>
   <% end %>
