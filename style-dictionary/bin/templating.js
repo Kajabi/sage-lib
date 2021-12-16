@@ -1,6 +1,18 @@
 const Handlebars = require('Handlebars');
 const fs = require('fs');
 
+const hasAny = (val) => {
+  if (!val) {
+    return false;
+  }
+
+  if (val.length === 0) {
+    return false;
+  }
+
+  return true;
+};
+
 
 Handlebars.registerHelper('asRubyPrimitive', function (value) {
   if (typeof value === 'string') return `"${value}"`;
@@ -24,8 +36,24 @@ Handlebars.registerHelper('isBaseType', function (value) {
   return value.toLowerCase() === "base";
 });
 
+Handlebars.registerHelper('notBaseType', function (value) {
+  return value.toLowerCase() !== "base";
+});
+
 Handlebars.registerHelper('isPresent', function (value) {
   return value !== undefined;
+});
+
+Handlebars.registerHelper('hasAny', function (value) {
+  return hasAny(value);
+});
+
+Handlebars.registerHelper('hasAnySubitems', function (items) {
+  if (!hasAny(items)) {
+    return false;
+  }
+
+  return items.some((item) => hasAny(item.subitems));
 });
 
 Handlebars.registerHelper('lowercase', function (value) {

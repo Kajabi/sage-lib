@@ -179,6 +179,8 @@ const getComponentSchemas = (tokens) => {
   return allComponents;
 };
 
+const hasAny = (val) => val && val.length > 0;
+
 module.exports = {
   getCategoryCollection,
   getComponentSchemas,
