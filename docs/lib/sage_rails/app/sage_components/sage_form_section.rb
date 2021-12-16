@@ -5,4 +5,8 @@ class SageFormSection < SageComponent
     title_tag: [:optional, String],
     title: [:optional, NilClass, String],
   })
+
+  def sections
+    %w(form_section_subtitle)
+  end
 end
