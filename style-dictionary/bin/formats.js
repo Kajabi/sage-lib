@@ -5,6 +5,7 @@ const { getCategoryCollection, getComponentSchemas } = require('./utilities');
 // Formats
 //
 module.exports = {
+  // TODO: In development
   'sage/js': ({ dictionary, platform }) => {
     return dictionary.allTokens.map(token => `export const ${token.name} = ${token.value};`).join('\n');
   },
@@ -23,10 +24,12 @@ module.exports = {
 
     return templates.railsTokens({ categories });
   },
+  // TODO: In development
   'sage/rails/schema': ({ dictionary, platform }) => {
     const components = getComponentSchemas(dictionary.allTokens);
     return templates.railsSchema({ components });
   },
+  // TODO: In development
   'sage/react/schema': ({ dictionary, platform }) => {
     const components = getComponentSchemas(dictionary.allTokens);
     return templates.reactSchema({ components });

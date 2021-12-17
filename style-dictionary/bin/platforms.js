@@ -3,6 +3,7 @@
 // Platforms
 //
 module.exports = {
+  // TODO: In development
   // cssCustomProps: {
   //   transformGroup: 'scss',
   //   buildPath: 'packages/sage-assets/lib/stylesheets/dictionary/',
@@ -25,7 +26,8 @@ module.exports = {
       }
     }]
   },
-  // testFormatter: {
+  // TODO: In development
+  // reactTokens: {
   //   transformGroup: 'sage/js',
   //   buildPath: 'packages/sage-react/lib/dictionary/',
   //   files: [{
@@ -36,6 +38,7 @@ module.exports = {
   //     }
   //   }]
   // },
+  // TODO: In development
   // railsTokens: {
   //   transformGroup: 'sage/rails/tokens',
   //   buildPath: 'docs/lib/sage_rails/app/dictionary/',
@@ -47,28 +50,30 @@ module.exports = {
   //     }
   //   }],
   // },
-  railsComponents: {
-    transformGroup: 'sage/rails/schema',
-    buildPath: 'docs/lib/sage_rails/app/sage_components/',
-    files: [{
-      destination: 'sage_configs.rb',
-      format: 'sage/rails/schema',
-      options: {
-        outputReferences: true
-      },
-      filter: (token) => token.attributes && token.attributes.category === 'component',
-    }]
-  },
-  reactComponents: {
-    transformGroup: 'sage/react/schema',
-    buildPath: 'packages/sage-react/lib/configs/types/',
-    files: [{
-      destination: 'prop-types.js',
-      format: 'sage/react/schema',
-      options: {
-        outputReferences: true
-      },
-      filter: (token) => token.attributes && token.attributes.category === 'component',
-    }]
-  }
+  // TODO: In development
+  // railsComponents: {
+  //   transformGroup: 'sage/rails/schema',
+  //   buildPath: 'docs/lib/sage_rails/app/sage_components/',
+  //   files: [{
+  //     destination: 'sage_configs.rb',
+  //     format: 'sage/rails/schema',
+  //     options: {
+  //       outputReferences: true
+  //     },
+  //     filter: (token) => token.attributes && token.attributes.category === 'component',
+  //   }]
+  // },
+  // TODO: In development
+  // reactComponents: {
+  //   transformGroup: 'sage/react/schema',
+  //   buildPath: 'packages/sage-react/lib/configs/types/',
+  //   files: [{
+  //     destination: 'prop-types.js',
+  //     format: 'sage/react/schema',
+  //     options: {
+  //       outputReferences: true
+  //     },
+  //     filter: (token) => token.attributes && token.attributes.category === 'component',
+  //   }]
+  // }
 };
