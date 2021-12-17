@@ -2447,9 +2447,9 @@ $sage-color-custom: (
 ///
 /// Sage color custom token utility
 ///
-/// @param {string} $key [default] The token to retrieve
+/// @param {string} $key The token to retrieve
 ///
-@function sage-color-custom($key: default) {
+@function sage-color-custom($key) {
   $value: map-get($sage-color-custom, $key);
   @return $value;
 }
