@@ -37,7 +37,7 @@ $-switch-focus-outline-error-color: sage-color(red, 300);
   color: $-switch-color-default-text;
 
   & + & {
-    margin-top: -(sage-spacing(card) / 2);
+    margin-top: -(sage-spacing(card) * 0.5);
   }
 
   &.sage-switch--has-border {
@@ -53,7 +53,7 @@ $-switch-focus-outline-error-color: sage-color(red, 300);
 
   .sage-list & {
     margin-top: 0;
-    margin-bottom: sage-spacing(card) / 2;
+    margin-bottom: sage-spacing(card) * 0.5;
   }
 
   @include sage-form-toggle-parents {

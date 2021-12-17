@@ -20,7 +20,6 @@ $-select-height: rem(40px);
 $-select-padding-x: sage-spacing(sm);
 $-select-padding-label: sage-spacing(2xs);
 
-
 .sage-select {
   @include sage-form-field-group;
 }
@@ -32,7 +31,7 @@ $-select-padding-label: sage-spacing(2xs);
   transform: translateY(-50%);
   padding: 0 $-select-padding-label;
 
-  @include position(($-select-height / 2), unset, unset, ($-select-padding-x - $-select-padding-label));
+  @include position(($-select-height * 0.5), unset, unset, ($-select-padding-x - $-select-padding-label));
 
   .sage-select__field ~ & {
     @extend %t-sage-body;

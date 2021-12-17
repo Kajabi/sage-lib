@@ -37,7 +37,7 @@ $-radio-focus-outline-color: currentColor;
   }
 
   .sage-list & {
-    margin-bottom: sage-spacing(card) / 2;
+    margin-bottom: sage-spacing(card) * 0.5;
   }
 
   @include sage-form-toggle-parents;

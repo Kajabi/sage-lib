@@ -61,7 +61,7 @@ $-input-text-height: sage-font-size(body);
 .sage-input__label {
   @include sage-form-field-label;
 
-  top: ($-input-height / 2);
+  top: ($-input-height * 0.5);
   left: $-input-label-offset;
   transform: translateY(calc(#{$-input-text-height} * -1));
   padding-left: sage-spacing(2xs);
