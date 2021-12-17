@@ -2,34 +2,34 @@
   "color": {
     "core": {
       "primary": {
-        "value": "#0072ef"
+        "value": "{color.base.primary.300}"
       },
       "sage": {
-        "value": "#23856d"
+        "value": "{color.base.sage.300}"
       },
       "yellow": {
-        "value": "#f0c024"
+        "value": "{color.base.yellow.300}"
       },
       "red": {
-        "value": "#cf3c32"
+        "value": "{color.base.red.300}"
       },
       "orange": {
-        "value": "#f89035"
+        "value": "{color.base.orange.300}"
       },
       "purple": {
-        "value": "#8e5ad8"
+        "value": "{color.base.purple.300}"
       },
       "grey": {
-        "value": "#e0e7f1"
+        "value": "{color.base.grey.300}"
       },
       "charcoal": {
-        "value": "#304050"
+        "value": "{color.base.charcoal.300}"
       },
       "white": {
-        "value": "#ffffff"
+        "value": "{color.base.white.300}"
       },
       "black": {
-        "value": "#000000"
+        "value": "{color.base.black.300}"
       }
     }
   }

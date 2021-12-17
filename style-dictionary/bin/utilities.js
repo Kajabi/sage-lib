@@ -29,6 +29,10 @@ const parseCollection = (tokens, parentKey, options) => {
   const tokensGrouped = _.groupBy(tokens, (token) => token.attributes[parentKey]);
 
   Object.keys(tokensGrouped).forEach(key => {
+    if (!key) {
+      return;
+    }
+
     let obj = {};
 
     if (tokensGrouped[key].length <= 1) {
@@ -42,7 +46,7 @@ const parseCollection = (tokens, parentKey, options) => {
       obj[parentKey] = formatName(key, options && options[`${parentKey}Format`]);
     }
 
-    return results.push(obj);
+    results.push(obj);
   });
 
   return results;
