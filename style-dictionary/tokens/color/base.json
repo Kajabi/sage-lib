@@ -9,7 +9,7 @@
           "value": "#8ecafb"
         },
         "300": {
-          "value": "{color.core.primary}"
+          "value": "#0072ef"
         },
         "400": {
           "value": "#054fb8"
@@ -26,7 +26,7 @@
           "value": "#86d5bc"
         },
         "300": {
-          "value": "{color.core.sage}"
+          "value": "#23856d"
         },
         "400": {
           "value": "#225d53"
@@ -43,7 +43,7 @@
           "value": "#fce79c"
         },
         "300": {
-          "value": "{color.core.yellow}"
+          "value": "#f0c024"
         },
         "400": {
           "value": "#8d5c2f"
@@ -60,7 +60,7 @@
           "value": "#fdb0aa"
         },
         "300": {
-          "value": "{color.core.red}"
+          "value": "#cf3c32"
         },
         "400": {
           "value": "#99221e"
@@ -77,7 +77,7 @@
           "value": "#f7bd8b"
         },
         "300": {
-          "value": "{color.core.orange}"
+          "value": "#f89035"
         },
         "400": {
           "value": "#a2411a"
@@ -94,7 +94,7 @@
           "value": "#d9c2ef"
         },
         "300": {
-          "value": "{color.core.purple}"
+          "value": "#8e5ad8"
         },
         "400": {
           "value": "#50348a"
@@ -111,7 +111,7 @@
           "value": "#f4f8fa"
         },
         "300": {
-          "value": "{color.core.grey}"
+          "value": "#e0e7f1"
         },
         "400": {
           "value": "#bbcad8"
@@ -128,7 +128,7 @@
           "value": "#405264"
         },
         "300": {
-          "value": "{color.core.charcoal}"
+          "value": "#304050"
         },
         "400": {
           "value": "#263240"
@@ -139,36 +139,36 @@
       },
       "white": {
         "100": {
-          "value": "{color.core.white}"
+          "value": "#ffffff"
         },
         "200": {
-          "value": "{color.core.white}"
+          "value": "#ffffff"
         },
         "300": {
-          "value": "{color.core.white}"
+          "value": "#ffffff"
         },
         "400": {
-          "value": "{color.core.white}"
+          "value": "#ffffff"
         },
         "500": {
-          "value": "{color.core.white}"
+          "value": "#ffffff"
         }
       },
       "black": {
         "100": {
-          "value": "{color.core.black}"
+          "value": "#000000"
         },
         "200": {
-          "value": "{color.core.black}"
+          "value": "#000000"
         },
         "300": {
-          "value": "{color.core.black}"
+          "value": "#000000"
         },
         "400": {
-          "value": "{color.core.black}"
+          "value": "#000000"
         },
         "500": {
-          "value": "{color.core.black}"
+          "value": "#000000"
         }
       }
     }

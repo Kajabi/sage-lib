@@ -150,10 +150,126 @@ $sage-color: (
 /// Sage color base token utility
 ///
 /// @param {string} $key [default] The token to retrieve
-/// @param {string} $subkey [default] The subtoken to retrieve
+/// @param {string} $subkey [defult] The subtoken to retrieve
 ///
 @function sage-color($key: default, $subkey: default) {
   $value: map-get($sage-color-base, $key);
+  $value: map-get($value, $subkey);
+  @return $value;
+}
+
+///
+/// Type: combos
+///
+
+///
+/// Static vars for color combos
+///
+$sage-color-combos-draft-default-foreground: #263240;
+$sage-color-combos-draft-default-foreground-accent: #1c2530;
+$sage-color-combos-draft-default-background: #e0e7f1;
+$sage-color-combos-draft-default-background-accent: #bbcad8;
+$sage-color-combos-draft-default-icon-background-accent: #94a6b8;
+$sage-color-combos-draft-subtle-foreground: #405264;
+$sage-color-combos-draft-subtle-foreground-accent: #526275;
+$sage-color-combos-draft-subtle-background: #94a6b8;
+$sage-color-combos-draft-bold-foreground: #f8fafb;
+$sage-color-combos-draft-bold-background: #263240;
+$sage-color-combos-published-default-foreground: #225d53;
+$sage-color-combos-published-default-foreground-accent: #183e3b;
+$sage-color-combos-published-default-background: #ddf8f0;
+$sage-color-combos-published-default-background-accent: #86d5bc;
+$sage-color-combos-published-default-icon-background-accent: #23856d;
+$sage-color-combos-published-subtle-foreground: #225d53;
+$sage-color-combos-published-subtle-foreground-accent: #23856d;
+$sage-color-combos-published-subtle-background: #23856d;
+$sage-color-combos-published-bold-foreground: #ffffff;
+$sage-color-combos-published-bold-background: #23856d;
+$sage-color-combos-info-default-foreground: #054fb8;
+$sage-color-combos-info-default-foreground-accent: #07265f;
+$sage-color-combos-info-default-background: #e6f4fe;
+$sage-color-combos-info-default-background-accent: #8ecafb;
+$sage-color-combos-info-default-icon-background-accent: #3e92ee;
+$sage-color-combos-info-subtle-foreground: #054fb8;
+$sage-color-combos-info-subtle-foreground-accent: #0072ef;
+$sage-color-combos-info-subtle-background: #8ecafb;
+$sage-color-combos-info-bold-foreground: #e6f4fe;
+$sage-color-combos-info-bold-background: #0072ef;
+$sage-color-combos-locked-default-foreground: #50348a;
+$sage-color-combos-locked-default-foreground-accent: #381c5e;
+$sage-color-combos-locked-default-background: #eee4f6;
+$sage-color-combos-locked-default-background-accent: #d9c2ef;
+$sage-color-combos-locked-default-icon-background-accent: #8e5ad8;
+$sage-color-combos-locked-subtle-foreground: #50348a;
+$sage-color-combos-locked-subtle-foreground-accent: #8e5ad8;
+$sage-color-combos-locked-subtle-background: #d9c2ef;
+$sage-color-combos-locked-bold-foreground: #eee4f6;
+$sage-color-combos-locked-bold-background: #8e5ad8;
+$sage-color-combos-warning-default-foreground: #8d5c2f;
+$sage-color-combos-warning-default-foreground-accent: #5c381e;
+$sage-color-combos-warning-default-background: #fce79c;
+$sage-color-combos-warning-default-background-accent: #f9df8b;
+$sage-color-combos-warning-default-icon-background-accent: #f0c024;
+$sage-color-combos-warning-subtle-foreground: #8d5c2f;
+$sage-color-combos-warning-subtle-foreground-accent: #f0c024;
+$sage-color-combos-warning-subtle-background: #f0c024;
+$sage-color-combos-warning-bold-foreground: #ffffff;
+$sage-color-combos-warning-bold-background: #f0c024;
+$sage-color-combos-danger-default-foreground: #99221e;
+$sage-color-combos-danger-default-foreground-accent: #5e0d0d;
+$sage-color-combos-danger-default-background: #fdb0aa;
+$sage-color-combos-danger-default-background-accent: #f3988c;
+$sage-color-combos-danger-default-icon-background-accent: #da665e;
+$sage-color-combos-danger-subtle-foreground: #99221e;
+$sage-color-combos-danger-subtle-foreground-accent: #cf3c32;
+$sage-color-combos-danger-subtle-background: #cf3c32;
+$sage-color-combos-danger-bold-foreground: #ffe0e0;
+$sage-color-combos-danger-bold-background: #cf3c32;
+
+///
+/// Map for color combos
+///
+$sage-color-combos: (
+  draft: (
+    default: $sage-color-combos-draft-default,
+    subtle: $sage-color-combos-draft-subtle,
+    bold: $sage-color-combos-draft-bold,
+  ),
+  published: (
+    default: $sage-color-combos-published-default,
+    subtle: $sage-color-combos-published-subtle,
+    bold: $sage-color-combos-published-bold,
+  ),
+  info: (
+    default: $sage-color-combos-info-default,
+    subtle: $sage-color-combos-info-subtle,
+    bold: $sage-color-combos-info-bold,
+  ),
+  locked: (
+    default: $sage-color-combos-locked-default,
+    subtle: $sage-color-combos-locked-subtle,
+    bold: $sage-color-combos-locked-bold,
+  ),
+  warning: (
+    default: $sage-color-combos-warning-default,
+    subtle: $sage-color-combos-warning-subtle,
+    bold: $sage-color-combos-warning-bold,
+  ),
+  danger: (
+    default: $sage-color-combos-danger-default,
+    subtle: $sage-color-combos-danger-subtle,
+    bold: $sage-color-combos-danger-bold,
+  ),
+);
+
+///
+/// Sage color combos token utility
+///
+/// @param {string} $key [default] The token to retrieve
+/// @param {string} $subkey [defult] The subtoken to retrieve
+///
+@function sage-color-combos($key: default, $subkey: default) {
+  $value: map-get($sage-color-combos, $key);
   $value: map-get($value, $subkey);
   @return $value;
 }
@@ -199,6 +315,38 @@ $sage-color-core: (
 ///
 @function sage-color-core($key: default) {
   $value: map-get($sage-color-core, $key);
+  @return $value;
+}
+
+///
+/// Type: custom
+///
+
+///
+/// Static vars for color custom
+///
+$sage-color-custom-label-primary-icon-background-accent: #3e92ee;
+$sage-color-custom-label-warning-background-accent: #f9df8b;
+$sage-color-custom-label-danger-background-accent: #f3988c;
+$sage-color-custom-label-danger-icon-background-accent: #da665e;
+
+///
+/// Map for color custom
+///
+$sage-color-custom: (
+  label-primary-icon-background-accent: $sage-color-custom-label-primary-icon-background-accent,
+  label-warning-background-accent: $sage-color-custom-label-warning-background-accent,
+  label-danger-background-accent: $sage-color-custom-label-danger-background-accent,
+  label-danger-icon-background-accent: $sage-color-custom-label-danger-icon-background-accent,
+);
+
+///
+/// Sage color custom token utility
+///
+/// @param {string} $key [default] The token to retrieve
+///
+@function sage-color-custom($key: default) {
+  $value: map-get($sage-color-custom, $key);
   @return $value;
 }
 
