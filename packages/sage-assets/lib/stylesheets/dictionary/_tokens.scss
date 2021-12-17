@@ -2422,3 +2422,35 @@ $sd-sage-content-grid-template: (
   @return $value;
 }
 
+///
+/// Type: custom
+///
+
+///
+/// Static vars for color custom
+///
+$sage-color-custom-label-primary-icon-background-accent: #3e92ee;
+$sage-color-custom-label-warning-background-accent: #f9df8b;
+$sage-color-custom-label-danger-background-accent: #f3988c;
+$sage-color-custom-label-danger-icon-background-accent: #da665e;
+
+///
+/// Map for color custom
+///
+$sage-color-custom: (
+  label-primary-icon-background-accent: $sage-color-custom-label-primary-icon-background-accent,
+  label-warning-background-accent: $sage-color-custom-label-warning-background-accent,
+  label-danger-background-accent: $sage-color-custom-label-danger-background-accent,
+  label-danger-icon-background-accent: $sage-color-custom-label-danger-icon-background-accent,
+);
+
+///
+/// Sage color custom token utility
+///
+/// @param {string} $key [default] The token to retrieve
+///
+@function sage-color-custom($key: default) {
+  $value: map-get($sage-color-custom, $key);
+  @return $value;
+}
+
