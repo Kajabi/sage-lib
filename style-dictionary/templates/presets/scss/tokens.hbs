@@ -45,12 +45,12 @@ $sage-{{../category}}{{#if (notBaseType type)}}-{{type}}{{/if}}: (
 ///
 /// Sage {{../category}} {{type}} token utility
 ///
-/// @param {string} $key [default] The token to retrieve
+/// @param {string} $key The token to retrieve
     {{#if (hasAnySubitems items)}}
-/// @param {string} $subkey [defult] The subtoken to retrieve
+/// @param {string} $subkey The subtoken to retrieve
     {{/if}}
 ///
-@function sage-{{../category}}{{#if (notBaseType type)}}-{{type}}{{/if}}($key: default{{#if (hasAnySubitems items)}}, $subkey: default{{/if}}) {
+@function sage-{{../category}}{{#if (notBaseType type)}}-{{type}}{{/if}}($key{{#if (hasAnySubitems items)}}, $subkey{{/if}}) {
   $value: map-get($sage-{{../category}}-{{type}}, $key);
     {{#if (hasAnySubitems items)}}
   $value: map-get($value, $subkey);

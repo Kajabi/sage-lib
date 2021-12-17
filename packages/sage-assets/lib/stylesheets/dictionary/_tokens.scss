@@ -149,10 +149,10 @@ $sage-color: (
 ///
 /// Sage color base token utility
 ///
-/// @param {string} $key [default] The token to retrieve
-/// @param {string} $subkey [defult] The subtoken to retrieve
+/// @param {string} $key The token to retrieve
+/// @param {string} $subkey The subtoken to retrieve
 ///
-@function sage-color($key: default, $subkey: default) {
+@function sage-color($key, $subkey) {
   $value: map-get($sage-color-base, $key);
   $value: map-get($value, $subkey);
   @return $value;
@@ -265,10 +265,10 @@ $sage-color-combos: (
 ///
 /// Sage color combos token utility
 ///
-/// @param {string} $key [default] The token to retrieve
-/// @param {string} $subkey [defult] The subtoken to retrieve
+/// @param {string} $key The token to retrieve
+/// @param {string} $subkey The subtoken to retrieve
 ///
-@function sage-color-combos($key: default, $subkey: default) {
+@function sage-color-combos($key, $subkey) {
   $value: map-get($sage-color-combos, $key);
   $value: map-get($value, $subkey);
   @return $value;
@@ -311,9 +311,9 @@ $sage-color-core: (
 ///
 /// Sage color core token utility
 ///
-/// @param {string} $key [default] The token to retrieve
+/// @param {string} $key The token to retrieve
 ///
-@function sage-color-core($key: default) {
+@function sage-color-core($key) {
   $value: map-get($sage-color-core, $key);
   @return $value;
 }
@@ -343,9 +343,9 @@ $sage-color-custom: (
 ///
 /// Sage color custom token utility
 ///
-/// @param {string} $key [default] The token to retrieve
+/// @param {string} $key The token to retrieve
 ///
-@function sage-color-custom($key: default) {
+@function sage-color-custom($key) {
   $value: map-get($sage-color-custom, $key);
   @return $value;
 }
