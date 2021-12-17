@@ -65,7 +65,7 @@ export const Avatar = ({
         </div>
       )}
       {image.src && (
-        <img alt={image.alt || ''} className="sage-avatar__image" src={image.src} />
+        <img alt={image.alt || ''} className="sage-avatar__image" src={image.src} id={image.id} />
       )}
       {lazyLoadInitials && (
         <svg className="sage-avatar__initials" viewBox="0 0 32 32">
@@ -96,7 +96,8 @@ Avatar.propTypes = {
   color: PropTypes.oneOf(Object.values(AVATAR_COLORS)),
   image: PropTypes.shape({
     alt: PropTypes.string,
-    src: PropTypes.string
+    src: PropTypes.string,
+    id: PropTypes.string
   }),
   initials: PropTypes.string,
   lazyLoadInitials: PropTypes.bool,
