@@ -20,8 +20,6 @@
 ///
 /// @return {map} See documentation above
 ///
-@use "sass:math";
-
 @function parse-morse-code($-code) {
   $-pattern: ();
   $-dash-slots: ();
@@ -90,7 +88,7 @@
 /// @return {length} Provided value as a `rem`.
 ///
 @function rem($value) {
-  @return math.div(strip-unit($value), 16) * 1rem;
+  @return strip-unit($value) / 16 * 1rem;
 }
 
 ///
@@ -102,7 +100,7 @@
 ///
 @function strip-unit($number) {
   @if type-of($number) == "number" and not unitless($number) {
-    @return math.div($number, $number * 0 + 1);
+    @return $number / ($number * 0 + 1);
   }
 
   @return $number;
