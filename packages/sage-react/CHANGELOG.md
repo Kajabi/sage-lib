@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.74.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.74.0...@kajabi/sage-react@0.74.1) (2021-12-20)
+
+
+### Bug Fixes
+
+* **sageavatar:** add id to react avatar image ([e387c60](https://github.com/Kajabi/sage-lib/commit/e387c606a81ca127a71ce7f1acbd2c9f4c104dd6))
+* **stat box:** updates image, icon, and link default props to null ([f5e8466](https://github.com/Kajabi/sage-lib/commit/f5e8466f1151ec99c0eb9b5d441fd8aaa487724d))
+
+
+
+
+
 # [0.74.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.73.1...@kajabi/sage-react@0.74.0) (2021-12-15)
 
 
