@@ -11,6 +11,7 @@ export default {
     image: {
       alt: null,
       src: null,
+      id: null,
     },
     initials: 'QJ',
     lazyLoadInitials: true,

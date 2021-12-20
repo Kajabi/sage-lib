@@ -31,6 +31,7 @@
 .sage-panel-controls__default-controls {
   display: flex;
   flex-flow: row wrap;
+  row-gap: sage-spacing(xs);
   align-items: center;
   justify-content: space-between;
 
