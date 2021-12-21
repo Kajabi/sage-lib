@@ -19,130 +19,130 @@
 ///
 /// Static vars for color base
 ///
-$sage-color-base-primary-100: #e6f4fe;
-$sage-color-base-primary-200: #8ecafb;
-$sage-color-base-primary-300: #0072ef;
-$sage-color-base-primary-400: #054fb8;
-$sage-color-base-primary-500: #07265f;
-$sage-color-base-sage-100: #ddf8f0;
-$sage-color-base-sage-200: #86d5bc;
-$sage-color-base-sage-300: #23856d;
-$sage-color-base-sage-400: #225d53;
-$sage-color-base-sage-500: #183e3b;
-$sage-color-base-yellow-100: #f9f0cd;
-$sage-color-base-yellow-200: #fce79c;
-$sage-color-base-yellow-300: #f0c024;
-$sage-color-base-yellow-400: #8d5c2f;
-$sage-color-base-yellow-500: #5c381e;
-$sage-color-base-red-100: #ffe0e0;
-$sage-color-base-red-200: #fdb0aa;
-$sage-color-base-red-300: #cf3c32;
-$sage-color-base-red-400: #99221e;
-$sage-color-base-red-500: #5e0d0d;
-$sage-color-base-orange-100: #fbefe4;
-$sage-color-base-orange-200: #f7bd8b;
-$sage-color-base-orange-300: #f89035;
-$sage-color-base-orange-400: #a2411a;
-$sage-color-base-orange-500: #5a260c;
-$sage-color-base-purple-100: #eee4f6;
-$sage-color-base-purple-200: #d9c2ef;
-$sage-color-base-purple-300: #8e5ad8;
-$sage-color-base-purple-400: #50348a;
-$sage-color-base-purple-500: #381c5e;
-$sage-color-base-grey-100: #f8fafb;
-$sage-color-base-grey-200: #f4f8fa;
-$sage-color-base-grey-300: #e0e7f1;
-$sage-color-base-grey-400: #bbcad8;
-$sage-color-base-grey-500: #94a6b8;
-$sage-color-base-charcoal-100: #526275;
-$sage-color-base-charcoal-200: #405264;
-$sage-color-base-charcoal-300: #304050;
-$sage-color-base-charcoal-400: #263240;
-$sage-color-base-charcoal-500: #1c2530;
-$sage-color-base-white-100: #ffffff;
-$sage-color-base-white-200: #ffffff;
-$sage-color-base-white-300: #ffffff;
-$sage-color-base-white-400: #ffffff;
-$sage-color-base-white-500: #ffffff;
-$sage-color-base-black-100: #000000;
-$sage-color-base-black-200: #000000;
-$sage-color-base-black-300: #000000;
-$sage-color-base-black-400: #000000;
-$sage-color-base-black-500: #000000;
+$sd-sage-color-primary-100: #e6f4fe;
+$sd-sage-color-primary-200: #8ecafb;
+$sd-sage-color-primary-300: #0072ef;
+$sd-sage-color-primary-400: #054fb8;
+$sd-sage-color-primary-500: #07265f;
+$sd-sage-color-sage-100: #ddf8f0;
+$sd-sage-color-sage-200: #86d5bc;
+$sd-sage-color-sage-300: #23856d;
+$sd-sage-color-sage-400: #225d53;
+$sd-sage-color-sage-500: #183e3b;
+$sd-sage-color-yellow-100: #f9f0cd;
+$sd-sage-color-yellow-200: #fce79c;
+$sd-sage-color-yellow-300: #f0c024;
+$sd-sage-color-yellow-400: #8d5c2f;
+$sd-sage-color-yellow-500: #5c381e;
+$sd-sage-color-red-100: #ffe0e0;
+$sd-sage-color-red-200: #fdb0aa;
+$sd-sage-color-red-300: #cf3c32;
+$sd-sage-color-red-400: #99221e;
+$sd-sage-color-red-500: #5e0d0d;
+$sd-sage-color-orange-100: #fbefe4;
+$sd-sage-color-orange-200: #f7bd8b;
+$sd-sage-color-orange-300: #f89035;
+$sd-sage-color-orange-400: #a2411a;
+$sd-sage-color-orange-500: #5a260c;
+$sd-sage-color-purple-100: #eee4f6;
+$sd-sage-color-purple-200: #d9c2ef;
+$sd-sage-color-purple-300: #8e5ad8;
+$sd-sage-color-purple-400: #50348a;
+$sd-sage-color-purple-500: #381c5e;
+$sd-sage-color-grey-100: #f8fafb;
+$sd-sage-color-grey-200: #f4f8fa;
+$sd-sage-color-grey-300: #e0e7f1;
+$sd-sage-color-grey-400: #bbcad8;
+$sd-sage-color-grey-500: #94a6b8;
+$sd-sage-color-charcoal-100: #526275;
+$sd-sage-color-charcoal-200: #405264;
+$sd-sage-color-charcoal-300: #304050;
+$sd-sage-color-charcoal-400: #263240;
+$sd-sage-color-charcoal-500: #1c2530;
+$sd-sage-color-white-100: #ffffff;
+$sd-sage-color-white-200: #ffffff;
+$sd-sage-color-white-300: #ffffff;
+$sd-sage-color-white-400: #ffffff;
+$sd-sage-color-white-500: #ffffff;
+$sd-sage-color-black-100: #000000;
+$sd-sage-color-black-200: #000000;
+$sd-sage-color-black-300: #000000;
+$sd-sage-color-black-400: #000000;
+$sd-sage-color-black-500: #000000;
 
 ///
 /// Map for color base
 ///
-$sage-color: (
+$sd-sage-color: (
   primary: (
-    100: $sage-color-base-primary-100,
-    200: $sage-color-base-primary-200,
-    300: $sage-color-base-primary-300,
-    400: $sage-color-base-primary-400,
-    500: $sage-color-base-primary-500,
+    100: $sd-sage-color-primary-100,
+    200: $sd-sage-color-primary-200,
+    300: $sd-sage-color-primary-300,
+    400: $sd-sage-color-primary-400,
+    500: $sd-sage-color-primary-500,
   ),
   sage: (
-    100: $sage-color-base-sage-100,
-    200: $sage-color-base-sage-200,
-    300: $sage-color-base-sage-300,
-    400: $sage-color-base-sage-400,
-    500: $sage-color-base-sage-500,
+    100: $sd-sage-color-sage-100,
+    200: $sd-sage-color-sage-200,
+    300: $sd-sage-color-sage-300,
+    400: $sd-sage-color-sage-400,
+    500: $sd-sage-color-sage-500,
   ),
   yellow: (
-    100: $sage-color-base-yellow-100,
-    200: $sage-color-base-yellow-200,
-    300: $sage-color-base-yellow-300,
-    400: $sage-color-base-yellow-400,
-    500: $sage-color-base-yellow-500,
+    100: $sd-sage-color-yellow-100,
+    200: $sd-sage-color-yellow-200,
+    300: $sd-sage-color-yellow-300,
+    400: $sd-sage-color-yellow-400,
+    500: $sd-sage-color-yellow-500,
   ),
   red: (
-    100: $sage-color-base-red-100,
-    200: $sage-color-base-red-200,
-    300: $sage-color-base-red-300,
-    400: $sage-color-base-red-400,
-    500: $sage-color-base-red-500,
+    100: $sd-sage-color-red-100,
+    200: $sd-sage-color-red-200,
+    300: $sd-sage-color-red-300,
+    400: $sd-sage-color-red-400,
+    500: $sd-sage-color-red-500,
   ),
   orange: (
-    100: $sage-color-base-orange-100,
-    200: $sage-color-base-orange-200,
-    300: $sage-color-base-orange-300,
-    400: $sage-color-base-orange-400,
-    500: $sage-color-base-orange-500,
+    100: $sd-sage-color-orange-100,
+    200: $sd-sage-color-orange-200,
+    300: $sd-sage-color-orange-300,
+    400: $sd-sage-color-orange-400,
+    500: $sd-sage-color-orange-500,
   ),
   purple: (
-    100: $sage-color-base-purple-100,
-    200: $sage-color-base-purple-200,
-    300: $sage-color-base-purple-300,
-    400: $sage-color-base-purple-400,
-    500: $sage-color-base-purple-500,
+    100: $sd-sage-color-purple-100,
+    200: $sd-sage-color-purple-200,
+    300: $sd-sage-color-purple-300,
+    400: $sd-sage-color-purple-400,
+    500: $sd-sage-color-purple-500,
   ),
   grey: (
-    100: $sage-color-base-grey-100,
-    200: $sage-color-base-grey-200,
-    300: $sage-color-base-grey-300,
-    400: $sage-color-base-grey-400,
-    500: $sage-color-base-grey-500,
+    100: $sd-sage-color-grey-100,
+    200: $sd-sage-color-grey-200,
+    300: $sd-sage-color-grey-300,
+    400: $sd-sage-color-grey-400,
+    500: $sd-sage-color-grey-500,
   ),
   charcoal: (
-    100: $sage-color-base-charcoal-100,
-    200: $sage-color-base-charcoal-200,
-    300: $sage-color-base-charcoal-300,
-    400: $sage-color-base-charcoal-400,
-    500: $sage-color-base-charcoal-500,
+    100: $sd-sage-color-charcoal-100,
+    200: $sd-sage-color-charcoal-200,
+    300: $sd-sage-color-charcoal-300,
+    400: $sd-sage-color-charcoal-400,
+    500: $sd-sage-color-charcoal-500,
   ),
   white: (
-    100: $sage-color-base-white-100,
-    200: $sage-color-base-white-200,
-    300: $sage-color-base-white-300,
-    400: $sage-color-base-white-400,
-    500: $sage-color-base-white-500,
+    100: $sd-sage-color-white-100,
+    200: $sd-sage-color-white-200,
+    300: $sd-sage-color-white-300,
+    400: $sd-sage-color-white-400,
+    500: $sd-sage-color-white-500,
   ),
   black: (
-    100: $sage-color-base-black-100,
-    200: $sage-color-base-black-200,
-    300: $sage-color-base-black-300,
-    400: $sage-color-base-black-400,
-    500: $sage-color-base-black-500,
+    100: $sd-sage-color-black-100,
+    200: $sd-sage-color-black-200,
+    300: $sd-sage-color-black-300,
+    400: $sd-sage-color-black-400,
+    500: $sd-sage-color-black-500,
   ),
 );
 
@@ -152,8 +152,11 @@ $sage-color: (
 /// @param {string} $key The token to retrieve
 /// @param {string} $subkey The subtoken to retrieve
 ///
-@function sage-color($key, $subkey) {
-  $value: map-get($sage-color-base, $key);
+@function sd-sage-color(
+  $key,
+  $subkey,
+) {
+  $value: map-get($sd-sage-color, $key);
   $value: map-get($value, $subkey);
   @return $value;
 }
@@ -165,100 +168,178 @@ $sage-color: (
 ///
 /// Static vars for color combos
 ///
-$sage-color-combos-draft-default-foreground: #263240;
-$sage-color-combos-draft-default-foreground-accent: #1c2530;
-$sage-color-combos-draft-default-background: #e0e7f1;
-$sage-color-combos-draft-default-background-accent: #bbcad8;
-$sage-color-combos-draft-default-icon-background-accent: #94a6b8;
-$sage-color-combos-draft-subtle-foreground: #405264;
-$sage-color-combos-draft-subtle-foreground-accent: #526275;
-$sage-color-combos-draft-subtle-background: #94a6b8;
-$sage-color-combos-draft-bold-foreground: #f8fafb;
-$sage-color-combos-draft-bold-background: #263240;
-$sage-color-combos-published-default-foreground: #225d53;
-$sage-color-combos-published-default-foreground-accent: #183e3b;
-$sage-color-combos-published-default-background: #ddf8f0;
-$sage-color-combos-published-default-background-accent: #86d5bc;
-$sage-color-combos-published-default-icon-background-accent: #23856d;
-$sage-color-combos-published-subtle-foreground: #225d53;
-$sage-color-combos-published-subtle-foreground-accent: #23856d;
-$sage-color-combos-published-subtle-background: #23856d;
-$sage-color-combos-published-bold-foreground: #ffffff;
-$sage-color-combos-published-bold-background: #23856d;
-$sage-color-combos-info-default-foreground: #054fb8;
-$sage-color-combos-info-default-foreground-accent: #07265f;
-$sage-color-combos-info-default-background: #e6f4fe;
-$sage-color-combos-info-default-background-accent: #8ecafb;
-$sage-color-combos-info-default-icon-background-accent: #3e92ee;
-$sage-color-combos-info-subtle-foreground: #054fb8;
-$sage-color-combos-info-subtle-foreground-accent: #0072ef;
-$sage-color-combos-info-subtle-background: #8ecafb;
-$sage-color-combos-info-bold-foreground: #e6f4fe;
-$sage-color-combos-info-bold-background: #0072ef;
-$sage-color-combos-locked-default-foreground: #50348a;
-$sage-color-combos-locked-default-foreground-accent: #381c5e;
-$sage-color-combos-locked-default-background: #eee4f6;
-$sage-color-combos-locked-default-background-accent: #d9c2ef;
-$sage-color-combos-locked-default-icon-background-accent: #8e5ad8;
-$sage-color-combos-locked-subtle-foreground: #50348a;
-$sage-color-combos-locked-subtle-foreground-accent: #8e5ad8;
-$sage-color-combos-locked-subtle-background: #d9c2ef;
-$sage-color-combos-locked-bold-foreground: #eee4f6;
-$sage-color-combos-locked-bold-background: #8e5ad8;
-$sage-color-combos-warning-default-foreground: #8d5c2f;
-$sage-color-combos-warning-default-foreground-accent: #5c381e;
-$sage-color-combos-warning-default-background: #fce79c;
-$sage-color-combos-warning-default-background-accent: #f9df8b;
-$sage-color-combos-warning-default-icon-background-accent: #f0c024;
-$sage-color-combos-warning-subtle-foreground: #8d5c2f;
-$sage-color-combos-warning-subtle-foreground-accent: #f0c024;
-$sage-color-combos-warning-subtle-background: #f0c024;
-$sage-color-combos-warning-bold-foreground: #ffffff;
-$sage-color-combos-warning-bold-background: #f0c024;
-$sage-color-combos-danger-default-foreground: #99221e;
-$sage-color-combos-danger-default-foreground-accent: #5e0d0d;
-$sage-color-combos-danger-default-background: #fdb0aa;
-$sage-color-combos-danger-default-background-accent: #f3988c;
-$sage-color-combos-danger-default-icon-background-accent: #da665e;
-$sage-color-combos-danger-subtle-foreground: #99221e;
-$sage-color-combos-danger-subtle-foreground-accent: #cf3c32;
-$sage-color-combos-danger-subtle-background: #cf3c32;
-$sage-color-combos-danger-bold-foreground: #ffe0e0;
-$sage-color-combos-danger-bold-background: #cf3c32;
+$sd-sage-color-combos-draft-default-foreground: #263240;
+$sd-sage-color-combos-draft-default-foreground-accent: #1c2530;
+$sd-sage-color-combos-draft-default-background: #e0e7f1;
+$sd-sage-color-combos-draft-default-background-accent: #bbcad8;
+$sd-sage-color-combos-draft-default-icon-background-accent: #94a6b8;
+$sd-sage-color-combos-draft-subtle-foreground: #405264;
+$sd-sage-color-combos-draft-subtle-foreground-accent: #526275;
+$sd-sage-color-combos-draft-subtle-background: #94a6b8;
+$sd-sage-color-combos-draft-bold-foreground: #f8fafb;
+$sd-sage-color-combos-draft-bold-background: #263240;
+$sd-sage-color-combos-published-default-foreground: #225d53;
+$sd-sage-color-combos-published-default-foreground-accent: #183e3b;
+$sd-sage-color-combos-published-default-background: #ddf8f0;
+$sd-sage-color-combos-published-default-background-accent: #86d5bc;
+$sd-sage-color-combos-published-default-icon-background-accent: #23856d;
+$sd-sage-color-combos-published-subtle-foreground: #225d53;
+$sd-sage-color-combos-published-subtle-foreground-accent: #23856d;
+$sd-sage-color-combos-published-subtle-background: #23856d;
+$sd-sage-color-combos-published-bold-foreground: #ffffff;
+$sd-sage-color-combos-published-bold-background: #23856d;
+$sd-sage-color-combos-info-default-foreground: #054fb8;
+$sd-sage-color-combos-info-default-foreground-accent: #07265f;
+$sd-sage-color-combos-info-default-background: #e6f4fe;
+$sd-sage-color-combos-info-default-background-accent: #8ecafb;
+$sd-sage-color-combos-info-default-icon-background-accent: #3e92ee;
+$sd-sage-color-combos-info-subtle-foreground: #054fb8;
+$sd-sage-color-combos-info-subtle-foreground-accent: #0072ef;
+$sd-sage-color-combos-info-subtle-background: #8ecafb;
+$sd-sage-color-combos-info-bold-foreground: #e6f4fe;
+$sd-sage-color-combos-info-bold-background: #0072ef;
+$sd-sage-color-combos-locked-default-foreground: #50348a;
+$sd-sage-color-combos-locked-default-foreground-accent: #381c5e;
+$sd-sage-color-combos-locked-default-background: #eee4f6;
+$sd-sage-color-combos-locked-default-background-accent: #d9c2ef;
+$sd-sage-color-combos-locked-default-icon-background-accent: #8e5ad8;
+$sd-sage-color-combos-locked-subtle-foreground: #50348a;
+$sd-sage-color-combos-locked-subtle-foreground-accent: #8e5ad8;
+$sd-sage-color-combos-locked-subtle-background: #d9c2ef;
+$sd-sage-color-combos-locked-bold-foreground: #eee4f6;
+$sd-sage-color-combos-locked-bold-background: #8e5ad8;
+$sd-sage-color-combos-warning-default-foreground: #8d5c2f;
+$sd-sage-color-combos-warning-default-foreground-accent: #5c381e;
+$sd-sage-color-combos-warning-default-background: #fce79c;
+$sd-sage-color-combos-warning-default-background-accent: #f9df8b;
+$sd-sage-color-combos-warning-default-icon-background-accent: #f0c024;
+$sd-sage-color-combos-warning-subtle-foreground: #8d5c2f;
+$sd-sage-color-combos-warning-subtle-foreground-accent: #f0c024;
+$sd-sage-color-combos-warning-subtle-background: #f0c024;
+$sd-sage-color-combos-warning-bold-foreground: #ffffff;
+$sd-sage-color-combos-warning-bold-background: #f0c024;
+$sd-sage-color-combos-danger-default-foreground: #99221e;
+$sd-sage-color-combos-danger-default-foreground-accent: #5e0d0d;
+$sd-sage-color-combos-danger-default-background: #fdb0aa;
+$sd-sage-color-combos-danger-default-background-accent: #f3988c;
+$sd-sage-color-combos-danger-default-icon-background-accent: #da665e;
+$sd-sage-color-combos-danger-subtle-foreground: #99221e;
+$sd-sage-color-combos-danger-subtle-foreground-accent: #cf3c32;
+$sd-sage-color-combos-danger-subtle-background: #cf3c32;
+$sd-sage-color-combos-danger-bold-foreground: #ffe0e0;
+$sd-sage-color-combos-danger-bold-background: #cf3c32;
 
 ///
 /// Map for color combos
 ///
-$sage-color-combos: (
+$sd-sage-color-combos: (
   draft: (
-    default: $sage-color-combos-draft-default,
-    subtle: $sage-color-combos-draft-subtle,
-    bold: $sage-color-combos-draft-bold,
+    default: (
+      foreground: $sd-sage-color-combos-draft-default-foreground,
+      foreground-accent: $sd-sage-color-combos-draft-default-foreground-accent,
+      background: $sd-sage-color-combos-draft-default-background,
+      background-accent: $sd-sage-color-combos-draft-default-background-accent,
+      icon-background-accent: $sd-sage-color-combos-draft-default-icon-background-accent,
+    ),
+    subtle: (
+      foreground: $sd-sage-color-combos-draft-subtle-foreground,
+      foreground-accent: $sd-sage-color-combos-draft-subtle-foreground-accent,
+      background: $sd-sage-color-combos-draft-subtle-background,
+    ),
+    bold: (
+      foreground: $sd-sage-color-combos-draft-bold-foreground,
+      background: $sd-sage-color-combos-draft-bold-background,
+    ),
   ),
   published: (
-    default: $sage-color-combos-published-default,
-    subtle: $sage-color-combos-published-subtle,
-    bold: $sage-color-combos-published-bold,
+    default: (
+      foreground: $sd-sage-color-combos-published-default-foreground,
+      foreground-accent: $sd-sage-color-combos-published-default-foreground-accent,
+      background: $sd-sage-color-combos-published-default-background,
+      background-accent: $sd-sage-color-combos-published-default-background-accent,
+      icon-background-accent: $sd-sage-color-combos-published-default-icon-background-accent,
+    ),
+    subtle: (
+      foreground: $sd-sage-color-combos-published-subtle-foreground,
+      foreground-accent: $sd-sage-color-combos-published-subtle-foreground-accent,
+      background: $sd-sage-color-combos-published-subtle-background,
+    ),
+    bold: (
+      foreground: $sd-sage-color-combos-published-bold-foreground,
+      background: $sd-sage-color-combos-published-bold-background,
+    ),
   ),
   info: (
-    default: $sage-color-combos-info-default,
-    subtle: $sage-color-combos-info-subtle,
-    bold: $sage-color-combos-info-bold,
+    default: (
+      foreground: $sd-sage-color-combos-info-default-foreground,
+      foreground-accent: $sd-sage-color-combos-info-default-foreground-accent,
+      background: $sd-sage-color-combos-info-default-background,
+      background-accent: $sd-sage-color-combos-info-default-background-accent,
+      icon-background-accent: $sd-sage-color-combos-info-default-icon-background-accent,
+    ),
+    subtle: (
+      foreground: $sd-sage-color-combos-info-subtle-foreground,
+      foreground-accent: $sd-sage-color-combos-info-subtle-foreground-accent,
+      background: $sd-sage-color-combos-info-subtle-background,
+    ),
+    bold: (
+      foreground: $sd-sage-color-combos-info-bold-foreground,
+      background: $sd-sage-color-combos-info-bold-background,
+    ),
   ),
   locked: (
-    default: $sage-color-combos-locked-default,
-    subtle: $sage-color-combos-locked-subtle,
-    bold: $sage-color-combos-locked-bold,
+    default: (
+      foreground: $sd-sage-color-combos-locked-default-foreground,
+      foreground-accent: $sd-sage-color-combos-locked-default-foreground-accent,
+      background: $sd-sage-color-combos-locked-default-background,
+      background-accent: $sd-sage-color-combos-locked-default-background-accent,
+      icon-background-accent: $sd-sage-color-combos-locked-default-icon-background-accent,
+    ),
+    subtle: (
+      foreground: $sd-sage-color-combos-locked-subtle-foreground,
+      foreground-accent: $sd-sage-color-combos-locked-subtle-foreground-accent,
+      background: $sd-sage-color-combos-locked-subtle-background,
+    ),
+    bold: (
+      foreground: $sd-sage-color-combos-locked-bold-foreground,
+      background: $sd-sage-color-combos-locked-bold-background,
+    ),
   ),
   warning: (
-    default: $sage-color-combos-warning-default,
-    subtle: $sage-color-combos-warning-subtle,
-    bold: $sage-color-combos-warning-bold,
+    default: (
+      foreground: $sd-sage-color-combos-warning-default-foreground,
+      foreground-accent: $sd-sage-color-combos-warning-default-foreground-accent,
+      background: $sd-sage-color-combos-warning-default-background,
+      background-accent: $sd-sage-color-combos-warning-default-background-accent,
+      icon-background-accent: $sd-sage-color-combos-warning-default-icon-background-accent,
+    ),
+    subtle: (
+      foreground: $sd-sage-color-combos-warning-subtle-foreground,
+      foreground-accent: $sd-sage-color-combos-warning-subtle-foreground-accent,
+      background: $sd-sage-color-combos-warning-subtle-background,
+    ),
+    bold: (
+      foreground: $sd-sage-color-combos-warning-bold-foreground,
+      background: $sd-sage-color-combos-warning-bold-background,
+    ),
   ),
   danger: (
-    default: $sage-color-combos-danger-default,
-    subtle: $sage-color-combos-danger-subtle,
-    bold: $sage-color-combos-danger-bold,
+    default: (
+      foreground: $sd-sage-color-combos-danger-default-foreground,
+      foreground-accent: $sd-sage-color-combos-danger-default-foreground-accent,
+      background: $sd-sage-color-combos-danger-default-background,
+      background-accent: $sd-sage-color-combos-danger-default-background-accent,
+      icon-background-accent: $sd-sage-color-combos-danger-default-icon-background-accent,
+    ),
+    subtle: (
+      foreground: $sd-sage-color-combos-danger-subtle-foreground,
+      foreground-accent: $sd-sage-color-combos-danger-subtle-foreground-accent,
+      background: $sd-sage-color-combos-danger-subtle-background,
+    ),
+    bold: (
+      foreground: $sd-sage-color-combos-danger-bold-foreground,
+      background: $sd-sage-color-combos-danger-bold-background,
+    ),
   ),
 );
 
@@ -267,10 +348,16 @@ $sage-color-combos: (
 ///
 /// @param {string} $key The token to retrieve
 /// @param {string} $subkey The subtoken to retrieve
+/// @param {string} $subsubkey The sub-subtoken to retrieve
 ///
-@function sage-color-combos($key, $subkey) {
-  $value: map-get($sage-color-combos, $key);
+@function sd-sage-color-combos(
+  $key,
+  $subkey,
+  $subsubkey,
+) {
+  $value: map-get($sd-sage-color-combos, $key);
   $value: map-get($value, $subkey);
+  $value: map-get($value, $subsubkey);
   @return $value;
 }
 
@@ -281,31 +368,31 @@ $sage-color-combos: (
 ///
 /// Static vars for color core
 ///
-$sage-color-core-primary: #0072ef;
-$sage-color-core-sage: #23856d;
-$sage-color-core-yellow: #f0c024;
-$sage-color-core-red: #cf3c32;
-$sage-color-core-orange: #f89035;
-$sage-color-core-purple: #8e5ad8;
-$sage-color-core-grey: #e0e7f1;
-$sage-color-core-charcoal: #304050;
-$sage-color-core-white: #ffffff;
-$sage-color-core-black: #000000;
+$sd-sage-color-core-primary: #0072ef;
+$sd-sage-color-core-sage: #23856d;
+$sd-sage-color-core-yellow: #f0c024;
+$sd-sage-color-core-red: #cf3c32;
+$sd-sage-color-core-orange: #f89035;
+$sd-sage-color-core-purple: #8e5ad8;
+$sd-sage-color-core-grey: #e0e7f1;
+$sd-sage-color-core-charcoal: #304050;
+$sd-sage-color-core-white: #ffffff;
+$sd-sage-color-core-black: #000000;
 
 ///
 /// Map for color core
 ///
-$sage-color-core: (
-  primary: $sage-color-core-primary,
-  sage: $sage-color-core-sage,
-  yellow: $sage-color-core-yellow,
-  red: $sage-color-core-red,
-  orange: $sage-color-core-orange,
-  purple: $sage-color-core-purple,
-  grey: $sage-color-core-grey,
-  charcoal: $sage-color-core-charcoal,
-  white: $sage-color-core-white,
-  black: $sage-color-core-black,
+$sd-sage-color-core: (
+  primary: $sd-sage-color-core-primary,
+  sage: $sd-sage-color-core-sage,
+  yellow: $sd-sage-color-core-yellow,
+  red: $sd-sage-color-core-red,
+  orange: $sd-sage-color-core-orange,
+  purple: $sd-sage-color-core-purple,
+  grey: $sd-sage-color-core-grey,
+  charcoal: $sd-sage-color-core-charcoal,
+  white: $sd-sage-color-core-white,
+  black: $sd-sage-color-core-black,
 );
 
 ///
@@ -313,8 +400,10 @@ $sage-color-core: (
 ///
 /// @param {string} $key The token to retrieve
 ///
-@function sage-color-core($key) {
-  $value: map-get($sage-color-core, $key);
+@function sd-sage-color-core(
+  $key,
+) {
+  $value: map-get($sd-sage-color-core, $key);
   @return $value;
 }
 
@@ -325,19 +414,19 @@ $sage-color-core: (
 ///
 /// Static vars for color custom
 ///
-$sage-color-custom-label-primary-icon-background-accent: #3e92ee;
-$sage-color-custom-label-warning-background-accent: #f9df8b;
-$sage-color-custom-label-danger-background-accent: #f3988c;
-$sage-color-custom-label-danger-icon-background-accent: #da665e;
+$sd-sage-color-custom-label-primary-icon-background-accent: #3e92ee;
+$sd-sage-color-custom-label-warning-background-accent: #f9df8b;
+$sd-sage-color-custom-label-danger-background-accent: #f3988c;
+$sd-sage-color-custom-label-danger-icon-background-accent: #da665e;
 
 ///
 /// Map for color custom
 ///
-$sage-color-custom: (
-  label-primary-icon-background-accent: $sage-color-custom-label-primary-icon-background-accent,
-  label-warning-background-accent: $sage-color-custom-label-warning-background-accent,
-  label-danger-background-accent: $sage-color-custom-label-danger-background-accent,
-  label-danger-icon-background-accent: $sage-color-custom-label-danger-icon-background-accent,
+$sd-sage-color-custom: (
+  label-primary-icon-background-accent: $sd-sage-color-custom-label-primary-icon-background-accent,
+  label-warning-background-accent: $sd-sage-color-custom-label-warning-background-accent,
+  label-danger-background-accent: $sd-sage-color-custom-label-danger-background-accent,
+  label-danger-icon-background-accent: $sd-sage-color-custom-label-danger-icon-background-accent,
 );
 
 ///
@@ -345,8 +434,10 @@ $sage-color-custom: (
 ///
 /// @param {string} $key The token to retrieve
 ///
-@function sage-color-custom($key) {
-  $value: map-get($sage-color-custom, $key);
+@function sd-sage-color-custom(
+  $key,
+) {
+  $value: map-get($sd-sage-color-custom, $key);
   @return $value;
 }
 

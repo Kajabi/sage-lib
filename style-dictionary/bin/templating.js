@@ -56,6 +56,24 @@ Handlebars.registerHelper('hasAnySubitems', function (items) {
   return items.some((item) => hasAny(item.subitems));
 });
 
+Handlebars.registerHelper('hasAnyStates', function (items) {
+  if (!hasAny(items)) {
+    return false;
+  }
+
+  if (!items.some((item) => hasAny(item.subitems))) {
+    return false;
+  }
+
+  return items.some((item) => {
+    if (item.subitems) {
+      return item.subitems.some((subitem) => hasAny(subitem.states))
+    }
+
+    return false;
+  });
+});
+
 Handlebars.registerHelper('lowercase', function (value) {
   return value.toLowerCase();
 });

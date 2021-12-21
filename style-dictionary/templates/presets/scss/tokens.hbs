@@ -22,22 +22,30 @@
 /// Static vars for {{../category}} {{type}}
 ///
     {{#each tokens}}
-$sage-{{../../category}}-{{../type}}-{{name}}: {{#if value.value}}{{{value.value}}}{{else}}{{{value}}}{{/if}};
+$sd-sage-{{../../category}}{{#if (notBaseType ../type)}}-{{../type}}{{/if}}-{{name}}: {{#if value.value}}{{{value.value}}}{{else}}{{{value}}}{{/if}};
     {{/each}}
 
 ///
 /// Map for {{../category}} {{type}}
 ///
-$sage-{{../category}}{{#if (notBaseType type)}}-{{type}}{{/if}}: (
+$sd-sage-{{../category}}{{#if (notBaseType type)}}-{{type}}{{/if}}: (
     {{#each items}}
       {{#if (hasAny subitems)}}
   {{item}}: (
         {{#each subitems}}
-    {{subitem}}: $sage-{{../../../category}}-{{../../type}}-{{../item}}-{{subitem}},
+          {{#if (hasAny states)}}
+    {{subitem}}: (
+            {{#each states}}
+      {{state}}: $sd-sage-{{../../../../category}}{{#if (notBaseType ../../../type)}}-{{../../../type}}{{/if}}-{{../../item}}-{{../subitem}}-{{state}},
+            {{/each}}
+    ),
+          {{else}}
+    {{subitem}}: $sd-sage-{{../../../category}}{{#if (notBaseType ../../type)}}-{{../../type}}{{/if}}-{{../item}}-{{subitem}},
+          {{/if}}
         {{/each}}
   ),
       {{else}}
-  {{item}}: $sage-{{../../category}}-{{../type}}-{{item}},
+  {{item}}: $sd-sage-{{../../category}}{{#if (notBaseType ../type)}}-{{../type}}{{/if}}-{{item}},
       {{/if}}
     {{/each}}
 );
@@ -49,11 +57,21 @@ $sage-{{../category}}{{#if (notBaseType type)}}-{{type}}{{/if}}: (
     {{#if (hasAnySubitems items)}}
 /// @param {string} $subkey The subtoken to retrieve
     {{/if}}
+    {{#if (hasAnyStates items)}}
+/// @param {string} $subsubkey The sub-subtoken to retrieve
+    {{/if}}
 ///
-@function sage-{{../category}}{{#if (notBaseType type)}}-{{type}}{{/if}}($key{{#if (hasAnySubitems items)}}, $subkey{{/if}}) {
-  $value: map-get($sage-{{../category}}-{{type}}, $key);
+@function sd-sage-{{../category}}{{#if (notBaseType type)}}-{{type}}{{/if}}(
+  $key,{{#if (hasAnySubitems items)}}
+  $subkey,{{#if (hasAnyStates items)}}
+  $subsubkey,{{/if}}{{/if}}
+) {
+  $value: map-get($sd-sage-{{../category}}{{#if (notBaseType type)}}-{{type}}{{/if}}, $key);
     {{#if (hasAnySubitems items)}}
   $value: map-get($value, $subkey);
+    {{/if}}
+    {{#if (hasAnyStates items)}}
+  $value: map-get($value, $subsubkey);
     {{/if}}
   @return $value;
 }

@@ -10,78 +10,13 @@
 ///
 /// Sage color palette token
 ///
-$sage-colors: (
-  primary: (
-    100: #e6f4fe,
-    200: #8ecafb,
-    300: #0072ef,
-    400: #054fb8,
-    500: #07265f,
-  ),
-  sage: (
-    100: #ddf8f0,
-    200: #86d5bc,
-    300: #23856d,
-    400: #225d53,
-    500: #183e3b,
-  ),
-  yellow: (
-    100: #fef9e7,
-    200: #fad980,
-    300: #ffc505,
-    400: #986501,
-    500: #5c381e,
-  ),
-  red: (
-    100: #fff0f0,
-    200: #fdb0aa,
-    300: #cf3c32,
-    400: #99221e,
-    500: #5e0d0d,
-  ),
-  orange: (
-    100: #fef1e1,
-    200: #ffb36b,
-    300: #fb7e09,
-    400: #b3501e,
-    500: #5a260c,
-  ),
-  purple: (
-    100: #eee4f6,
-    200: #d9c2ef,
-    300: #8e5ad8,
-    400: #50348a,
-    500: #381c5e,
-  ),
-  grey: (
-    100: #f8fafb,
-    200: #f4f8fa,
-    300: #e0e7f1,
-    400: #bbcad8,
-    500: #94a6b8,
-  ),
-  charcoal: (
-    100: #526275,
-    200: #405264,
-    300: #304050,
-    400: #263240,
-    500: #1c2530,
-  ),
-  white: (
-    100: #fff,
-    200: #fff,
-    300: #fff,
-    400: #fff,
-    500: #fff,
-  ),
-  black: (
-    100: #000,
-    200: #000,
-    300: #000,
-    400: #000,
-    500: #000,
-  ),
-);
+$sage-colors: $sd-sage-color;
+
+///
+/// Sage default color
+///
+$sage-color-default: $sd-sage-color-charcoal-400;
+
 
 ///
 /// Sage breakpoints token utility
@@ -92,6 +27,13 @@ $sage-colors: (
 /// @return {color} the value retrieved
 ///
 @function sage-color($base, $value: 300) {
-  $color: map-get(map-get($sage-colors, $base), $value);
-  @return $color;
+  $color: sd-sage-color($base, $value);
+
+  @if $color {
+    @return $color;
+  }
+
+  @debug "Could not retrieve color #{$base} #{$value}. Got #{$color}";
+  
+  @return $sage-color-default;
 }
