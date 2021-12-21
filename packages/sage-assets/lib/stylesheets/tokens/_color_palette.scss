@@ -17,6 +17,11 @@ $sage-colors: $sd-sage-color;
 ///
 $sage-color-default: $sd-sage-color-charcoal-400;
 
+///
+/// Sage default color name for debug output.
+///
+$sage-color-default-name: "charcoal 400";
+
 
 ///
 /// Sage breakpoints token utility
@@ -33,7 +38,11 @@ $sage-color-default: $sd-sage-color-charcoal-400;
     @return $color;
   }
 
-  @debug "Could not retrieve color #{$base} #{$value}. Got #{$color}";
+  @warn "Could not retrieve color: #{$base} #{$value}. Got `#{$color}` from `sd-sage-color()`. Default color #{$sage-color-default-name} (`#{$sage-color-default}`) returned instead.";
   
   @return $sage-color-default;
+}
+
+body {
+  color: sage-color(red, 600);
 }
