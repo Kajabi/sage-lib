@@ -1,5 +1,5 @@
-import * as SageTypesRaw from './prop-types';
+// import * as SageTypesRaw from './prop-types';
 
 export const SageTypes = {
-  ...SageTypesRaw
+  // ...SageTypesRaw
 };
