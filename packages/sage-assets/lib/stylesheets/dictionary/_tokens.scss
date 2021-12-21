@@ -2429,19 +2429,19 @@ $sd-sage-content-grid-template: (
 ///
 /// Static vars for color custom
 ///
-$sage-color-custom-label-primary-icon-background-accent: #3e92ee;
-$sage-color-custom-label-warning-background-accent: #f9df8b;
-$sage-color-custom-label-danger-background-accent: #f3988c;
-$sage-color-custom-label-danger-icon-background-accent: #da665e;
+$sd-sage-color-custom-label-primary-icon-background-accent: #3e92ee;
+$sd-sage-color-custom-label-warning-background-accent: #f9df8b;
+$sd-sage-color-custom-label-danger-background-accent: #f3988c;
+$sd-sage-color-custom-label-danger-icon-background-accent: #da665e;
 
 ///
 /// Map for color custom
 ///
-$sage-color-custom: (
-  label-primary-icon-background-accent: $sage-color-custom-label-primary-icon-background-accent,
-  label-warning-background-accent: $sage-color-custom-label-warning-background-accent,
-  label-danger-background-accent: $sage-color-custom-label-danger-background-accent,
-  label-danger-icon-background-accent: $sage-color-custom-label-danger-icon-background-accent,
+$sd-sage-color-custom: (
+  label-primary-icon-background-accent: $sd-sage-color-custom-label-primary-icon-background-accent,
+  label-warning-background-accent: $sd-sage-color-custom-label-warning-background-accent,
+  label-danger-background-accent: $sd-sage-color-custom-label-danger-background-accent,
+  label-danger-icon-background-accent: $sd-sage-color-custom-label-danger-icon-background-accent,
 );
 
 ///
@@ -2449,8 +2449,10 @@ $sage-color-custom: (
 ///
 /// @param {string} $key The token to retrieve
 ///
-@function sage-color-custom($key) {
-  $value: map-get($sage-color-custom, $key);
+@function sd-sage-color-custom(
+  $key,
+) {
+  $value: map-get($sd-sage-color-custom, $key);
   @return $value;
 }
 
