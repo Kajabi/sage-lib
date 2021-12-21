@@ -1,7 +1,8 @@
 class SageAlert < SageComponent
-  set_attribute_schema(SageConfigs::Alert::SCHEMA.merge({
-    # Deprecations
+  set_attribute_schema({
+    color: [:optional, SageSchemas::STATUSES],
     desc: [:optional, String],
+    dismissable: [:optional, TrueClass],
     icon_name: [:optional, String],
     primary_action: [:optional, {
       value: String,
@@ -19,6 +20,6 @@ class SageAlert < SageComponent
   })
 
   def sections
-    SageConfigs::Alert::SECTIONS
+    %w(alert_actions)
   end
 end
