@@ -51,11 +51,11 @@
       </div>
     <% end %>
     <%= sage_component SageGridCol, { breakpoint: :lg, size: "8" } do %>
-      <div class="sage-form-section__content">
-        <%= sage_component SagePanel, {} do %>
-          <%= component.content %>
-        <% end %>
-      </div>
+      <%= sage_component SagePanel, {} do %>
+        <div class="sage-form-section__content">
+            <%= component.content %>
+        </div>
+      <% end %>
     <% end %>
   <% end %>
 </div>
