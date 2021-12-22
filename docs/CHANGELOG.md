@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.33.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.32.1...@kajabi/sage@4.33.0) (2021-12-22)
+
+
+### Bug Fixes
+
+* **form section:** adds sage classnames to preview paragraphs ([2aab19a](https://github.com/Kajabi/sage-lib/commit/2aab19a74935ca50d36bc380ccf6b9339c718e22))
+
+
+### Features
+
+* **form section:** adds content_for section for component ([18a7ccb](https://github.com/Kajabi/sage-lib/commit/18a7ccbb2e3a250269cca98306af8d78cb4ead1c))
+
+
+
+
+
 ## [4.32.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.32.0...@kajabi/sage@4.32.1) (2021-12-20)
 
 
