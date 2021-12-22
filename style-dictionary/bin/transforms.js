@@ -1,7 +1,7 @@
 //
-// Tranforms
+// Transforms
 //
-// Tansforms are configurations that convert particular aspects
+// Transforms are configurations that convert particular aspects
 // of the raw JSON data in some fashion such as converting a property name to snake case.
 // 
 // Style Dictionary comes with a number of presets.
@@ -10,8 +10,8 @@
 // These are custom transformations for Sage specifically.
 //
 // In keeping with CTI format, names should all start with `sage/`
-// followed by the `type` being transformed such as `value/` or `name/`.
-// Specific names can follow.
+// followed by the `type` being transformed: `value/`, `attribute/`, or `name/`.
+// Specific names for the transformation can follow.
 //
 module.exports = {
   //
@@ -53,48 +53,47 @@ module.exports = {
   //
   // Similar to `sage/value/globalTypes` but works with transitive values
   //
-  'sage/value/globalTypes/transitive': {
-    type: 'value',
-    transitive: true,
-    transformer: (token) => {
-      let { name, value } = token;
-      if (typeof value === 'string') {
-        value = `'${value}'`;
-      } else if (typeof value === 'object') {
-        value = value.value;
-      }
-
-      return value;
-    }
-  },
+  // 'sage/value/globalTypes/transitive': {
+  //   type: 'value',
+  //   transitive: true,
+  //   transformer: (token) => {
+  //     let { name, value } = token;
+  //     if (typeof value === 'string') {
+  //       value = `'${value}'`;
+  //     } else if (typeof value === 'object') {
+  //       value = value.value;
+  //     }
+  //     return value;
+  //   }
+  // },
   //
   // Ensures that Type and Item are exported as the name
   // and that any snake_case is output as kebab-case.
   //
-  'sage/name/ti/kebab': {
-    type: 'name',
-    transformer: (token, options) => {
-      return token.path.slice(1, token.path.length).join('-').replace('_', '-');
-    },
-  },
+  // 'sage/name/ti/kebab': {
+  //   type: 'name',
+  //   transformer: (token, options) => {
+  //     return token.path.slice(1, token.path.length).join('-').replace('_', '-');
+  //   },
+  // },
   //
   // Ensures that Item only is exported as the name
   // and that any snake_case is output as kebab-case.
   //
-  'sage/name/kebab': {
-    type: 'name',
-    transformer: (token, options) => {
-      return token.path.slice(2, token.path.length).join('-').replace('_', '-').toLowerCase();
-    },
-  },
+  // 'sage/name/kebab': {
+  //   type: 'name',
+  //   transformer: (token, options) => {
+  //     return token.path.slice(2, token.path.length).join('-').replace('_', '-').toLowerCase();
+  //   },
+  // },
   //
   // Ensures that Item only is exported as the name
   // and that any snake_case is output as kebab-case.
   //
-  'sage/name/constant': {
-    type: 'name',
-    transformer: (token, options) => {
-      return token.path.slice(2, token.path.length).join('-').replace('-', '_').toUpperCase();
-    },
-  }
+  // 'sage/name/constant': {
+  //   type: 'name',
+  //   transformer: (token, options) => {
+  //     return token.path.slice(2, token.path.length).join('-').replace('-', '_').toUpperCase();
+  //   },
+  // }
 };
