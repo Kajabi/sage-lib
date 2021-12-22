@@ -11,7 +11,7 @@ export const FormSection = ({
     <div className="sage-form-section__info">
       <h3 className="sage-form-section__title">{title}</h3>
       {subtitle && (
-        <p className="sage-form-section__subtitle">{subtitle}</p>
+        <div className="sage-form-section__subtitle">{subtitle}</div>
       )}
     </div>
     <div className="sage-form-section__content">
@@ -29,6 +29,6 @@ FormSection.defaultProps = {
 
 FormSection.propTypes = {
   children: PropTypes.node,
-  subtitle: PropTypes.string,
+  subtitle: PropTypes.node,
   title: PropTypes.string.isRequired,
 };
