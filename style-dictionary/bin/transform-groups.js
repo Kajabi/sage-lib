@@ -6,7 +6,6 @@ module.exports = {
   ],
   'sage/scss/tokens': [
     'attribute/cti',
-    'sage/name/kebab'
   ],
   'sage/rails/tokens': [
     'attribute/cti',
@@ -18,5 +17,7 @@ module.exports = {
   ],
   'sage/react/schema': [
     'attribute/cti',
+    'name/cti/kebab',
+    'sage/value/sassSafe'
   ],
 };

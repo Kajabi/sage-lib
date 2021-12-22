@@ -16,21 +16,40 @@
 module.exports = {
   //
   // Ensures that a string value from the JSON
-  // gets sent to the formatter with string markers
-  // such as for use in Rails or JS contexts.
+  // gets sent to the formatter with CSS-safe values
   //
-  'sage/value/globalTypes': {
+  'sage/value/sassSafe': {
     type: 'value',
     transitive: false,
     transformer: (token) => {
       let { name, value } = token;
-      if (typeof value === 'string') {
-        value = `'${value}'`;
+      if (typeof value !== 'string') {
+        return value;
       }
 
-      return value;
+      if (value.charAt(0) === '#') {
+        return value;
+      }
+      
+      return `"${value}"`;
     }
   },
+  //
+  // Ensures that a string value from the JSON
+  // gets sent to the formatter with string markers
+  // such as for use in Rails or JS contexts.
+  //
+  // 'sage/value/globalTypes': {
+  //   type: 'value',
+  //   transitive: false,
+  //   transformer: (token) => {
+  //     let { name, value } = token;
+  //     if (typeof value === 'string') {
+  //       value = `'${value}'`;
+  //     }
+  //     return value;
+  //   }
+  // },
   //
   // Similar to `sage/value/globalTypes` but works with transitive values
   //
