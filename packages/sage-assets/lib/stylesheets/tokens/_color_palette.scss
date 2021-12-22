@@ -8,14 +8,14 @@
 // When colors are updated here, update in sage_tokens.rb as well.
 
 ///
-/// Sage color palette token
 ///
+/// Sage color palette token
 $sage-colors: $sd-sage-color;
 
 ///
 /// Sage default color
 ///
-$sage-color-default: $sd-sage-color-charcoal-400;
+$sage-color-default: $sd-sage-color-base-charcoal-400-hex;
 
 ///
 /// Sage default color name for debug output.
@@ -32,8 +32,8 @@ $sage-color-default-name: "charcoal 400";
 /// @return {color} the value retrieved
 ///
 @function sage-color($base, $value: 300) {
-  $color: sd-sage-color($base, $value);
-
+  $color: sd-sage-color($base, $value, hex);
+  
   @if $color {
     @return $color;
   }
