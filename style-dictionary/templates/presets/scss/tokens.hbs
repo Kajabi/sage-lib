@@ -32,7 +32,7 @@
 ///
 /// {{../../category}}{{#if (notBaseType ../type)}} {{../type}}{{/if}} {{name}}
 ///
-$sd-sage-{{../../category}}{{#if (notBaseType ../type)}}-{{../type}}{{/if}}-{{name}}: {{#if value.value}}{{{value.value}}}{{else}}{{{value}}}{{/if}};
+$sd-sage-{{name}}: {{#if value.value}}{{{value.value}}}{{else}}{{{value}}}{{/if}};
     {{/each}}
 
 ///
@@ -46,16 +46,16 @@ $sd-sage-{{../category}}{{#if (notBaseType type)}}-{{type}}{{/if}}: (
           {{#if (hasAny states)}}
     {{subitem}}: (
             {{#each states}}
-      {{state}}: $sd-sage-{{../../../../category}}{{#if (notBaseType ../../../type)}}-{{../../../type}}{{/if}}-{{../../item}}-{{../subitem}}-{{state}},
+      {{state}}: $sd-sage-{{name}},
             {{/each}}
     ),
           {{else}}
-    {{subitem}}: $sd-sage-{{../../../category}}{{#if (notBaseType ../../type)}}-{{../../type}}{{/if}}-{{../item}}-{{subitem}},
+    {{subitem}}: $sd-sage-{{name}},
           {{/if}}
         {{/each}}
   ),
       {{else}}
-  {{item}}: $sd-sage-{{../../category}}{{#if (notBaseType ../type)}}-{{../type}}{{/if}}-{{item}},
+  {{item}}: $sd-sage-{{name}},
       {{/if}}
     {{/each}}
 );
