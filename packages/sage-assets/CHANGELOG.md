@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.63.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.63.1...@kajabi/sage-assets@0.63.2) (2021-12-22)
+
+
+### Bug Fixes
+
+* **form-section:** adjust form section subtitle for a temporary stop-gap while patching in `kp` ([3b7cbef](https://github.com/Kajabi/sage-lib/commit/3b7cbefca6f92e85d8994a17fdbd17564e4e05ea))
+* **form-section:** patch dupcliate property ([4975bb6](https://github.com/Kajabi/sage-lib/commit/4975bb60ca925f01e3430dc4a1904bf05bd7957e))
+
+
+
+
+
 ## [0.63.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.63.0...@kajabi/sage-assets@0.63.1) (2021-12-20)
 
 **Note:** Version bump only for package @kajabi/sage-assets

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.33.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.33.0...@kajabi/sage@4.33.1) (2021-12-22)
+
+
+### Bug Fixes
+
+* **form-section:** adjust form section subtitle for a temporary stop-gap while patching in `kp` ([3b7cbef](https://github.com/Kajabi/sage-lib/commit/3b7cbefca6f92e85d8994a17fdbd17564e4e05ea))
+
+
+
+
+
 # [4.33.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.32.1...@kajabi/sage@4.33.0) (2021-12-22)
 
 
