@@ -2,19 +2,10 @@
 //
 // Platforms
 //
+// Platforms are sets of configurations for parsing and compiling tokens for a particular contexts
+// such as a language context (Sass, Rails, React, etc.).
+//
 module.exports = {
-  // TODO: In development
-  // cssCustomProps: {
-  //   transformGroup: 'scss',
-  //   buildPath: 'packages/sage-assets/lib/stylesheets/dictionary/',
-  //   files: [{
-  //     destination: '_custom-props.scss',
-  //     format: 'css/variables',
-  //     options: {
-  //       outputReferences: true
-  //     }
-  //   }]
-  // },
   sassTokens: {
     transformGroup: 'sage/scss/tokens',
     buildPath: 'packages/sage-assets/lib/stylesheets/dictionary/',
@@ -27,6 +18,18 @@ module.exports = {
     }]
   },
   // TODO: In development
+  //
+  // cssCustomProps: {
+  //   transformGroup: 'scss',
+  //   buildPath: 'packages/sage-assets/lib/stylesheets/dictionary/',
+  //   files: [{
+  //     destination: '_custom-props.scss',
+  //     format: 'css/variables',
+  //     options: {
+  //       outputReferences: true
+  //     }
+  //   }]
+  // },
   // reactTokens: {
   //   transformGroup: 'sage/js',
   //   buildPath: 'packages/sage-react/lib/dictionary/',
@@ -38,7 +41,6 @@ module.exports = {
   //     }
   //   }]
   // },
-  // TODO: In development
   // railsTokens: {
   //   transformGroup: 'sage/rails/tokens',
   //   buildPath: 'docs/lib/sage_rails/app/dictionary/',
@@ -50,7 +52,6 @@ module.exports = {
   //     }
   //   }],
   // },
-  // TODO: In development
   // railsComponents: {
   //   transformGroup: 'sage/rails/schema',
   //   buildPath: 'docs/lib/sage_rails/app/sage_components/',
@@ -63,7 +64,6 @@ module.exports = {
   //     filter: (token) => token.attributes && token.attributes.category === 'component',
   //   }]
   // },
-  // TODO: In development
   // reactComponents: {
   //   transformGroup: 'sage/react/schema',
   //   buildPath: 'packages/sage-react/lib/configs/types/',
