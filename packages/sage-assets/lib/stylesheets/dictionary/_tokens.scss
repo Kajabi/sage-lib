@@ -2434,15 +2434,15 @@ $sd-sage-content-grid-template: (
 ///
 $sd-sage-color-custom-label-primary-icon-background-accent: #3e92ee;
 ///
-/// color custom label-warning-background-accent
+/// color custom color-custom-label-warning-background-accent
 ///
 $sd-sage-color-custom-label-warning-background-accent: #f9df8b;
 ///
-/// color custom label-danger-background-accent
+/// color custom color-custom-label-danger-background-accent
 ///
 $sd-sage-color-custom-label-danger-background-accent: #f3988c;
 ///
-/// color custom label-danger-icon-background-accent
+/// color custom color-custom-label-danger-icon-background-accent
 ///
 $sd-sage-color-custom-label-danger-icon-background-accent: #da665e;
 
@@ -2465,6 +2465,1010 @@ $sd-sage-color-custom: (
   $key,
 ) {
   $value: map-get($sd-sage-color-custom, $key);
+  @return $value;
+}
+
+// ----------
+//
+// Category: content
+//
+// ----------
+
+//
+// Type: grid-template
+//
+
+//
+// Static vars for content grid-template
+//
+///
+/// content grid-template content-grid-template-e-code
+///
+$sd-sage-content-grid-template-e-code: ".";
+///
+/// content grid-template content-grid-template-e-symbol
+///
+$sd-sage-content-grid-template-e-symbol: "e";
+///
+/// content grid-template content-grid-template-e-classname
+///
+$sd-sage-content-grid-template-e-classname: "sage-grid-teamplate-e";
+///
+/// content grid-template content-grid-template-i-code
+///
+$sd-sage-content-grid-template-i-code: "..";
+///
+/// content grid-template content-grid-template-i-symbol
+///
+$sd-sage-content-grid-template-i-symbol: "i";
+///
+/// content grid-template content-grid-template-i-classname
+///
+$sd-sage-content-grid-template-i-classname: "sage-grid-teamplate-i";
+///
+/// content grid-template content-grid-template-s-code
+///
+$sd-sage-content-grid-template-s-code: "...";
+///
+/// content grid-template content-grid-template-s-symbol
+///
+$sd-sage-content-grid-template-s-symbol: "s";
+///
+/// content grid-template content-grid-template-s-classname
+///
+$sd-sage-content-grid-template-s-classname: "sage-grid-teamplate-s";
+///
+/// content grid-template content-grid-template-t-code
+///
+$sd-sage-content-grid-template-t-code: "-";
+///
+/// content grid-template content-grid-template-t-symbol
+///
+$sd-sage-content-grid-template-t-symbol: "t";
+///
+/// content grid-template content-grid-template-t-classname
+///
+$sd-sage-content-grid-template-t-classname: "sage-grid-teamplate-t";
+///
+/// content grid-template content-grid-template-m-code
+///
+$sd-sage-content-grid-template-m-code: "--";
+///
+/// content grid-template content-grid-template-m-symbol
+///
+$sd-sage-content-grid-template-m-symbol: "m";
+///
+/// content grid-template content-grid-template-m-classname
+///
+$sd-sage-content-grid-template-m-classname: "sage-grid-teamplate-m";
+///
+/// content grid-template content-grid-template-o-code
+///
+$sd-sage-content-grid-template-o-code: "---";
+///
+/// content grid-template content-grid-template-o-symbol
+///
+$sd-sage-content-grid-template-o-symbol: "o";
+///
+/// content grid-template content-grid-template-o-classname
+///
+$sd-sage-content-grid-template-o-classname: "sage-grid-teamplate-o";
+///
+/// content grid-template content-grid-template-se-code
+///
+$sd-sage-content-grid-template-se-code: "....";
+///
+/// content grid-template content-grid-template-se-symbol
+///
+$sd-sage-content-grid-template-se-symbol: "se";
+///
+/// content grid-template content-grid-template-se-classname
+///
+$sd-sage-content-grid-template-se-classname: "sage-grid-teamplate-se";
+///
+/// content grid-template content-grid-template-si-code
+///
+$sd-sage-content-grid-template-si-code: ".....";
+///
+/// content grid-template content-grid-template-si-symbol
+///
+$sd-sage-content-grid-template-si-symbol: "si";
+///
+/// content grid-template content-grid-template-si-classname
+///
+$sd-sage-content-grid-template-si-classname: "sage-grid-teamplate-si";
+///
+/// content grid-template content-grid-template-ss-code
+///
+$sd-sage-content-grid-template-ss-code: "......";
+///
+/// content grid-template content-grid-template-ss-symbol
+///
+$sd-sage-content-grid-template-ss-symbol: "ss";
+///
+/// content grid-template content-grid-template-ss-classname
+///
+$sd-sage-content-grid-template-ss-classname: "sage-grid-teamplate-ss";
+///
+/// content grid-template content-grid-template-ot-code
+///
+$sd-sage-content-grid-template-ot-code: "----";
+///
+/// content grid-template content-grid-template-ot-symbol
+///
+$sd-sage-content-grid-template-ot-symbol: "ot";
+///
+/// content grid-template content-grid-template-ot-classname
+///
+$sd-sage-content-grid-template-ot-classname: "sage-grid-teamplate-ot";
+///
+/// content grid-template content-grid-template-om-code
+///
+$sd-sage-content-grid-template-om-code: "-----";
+///
+/// content grid-template content-grid-template-om-symbol
+///
+$sd-sage-content-grid-template-om-symbol: "om";
+///
+/// content grid-template content-grid-template-om-classname
+///
+$sd-sage-content-grid-template-om-classname: "sage-grid-teamplate-om";
+///
+/// content grid-template content-grid-template-oo-code
+///
+$sd-sage-content-grid-template-oo-code: "------";
+///
+/// content grid-template content-grid-template-oo-symbol
+///
+$sd-sage-content-grid-template-oo-symbol: "oo";
+///
+/// content grid-template content-grid-template-oo-classname
+///
+$sd-sage-content-grid-template-oo-classname: "sage-grid-teamplate-oo";
+///
+/// content grid-template content-grid-template-et-code
+///
+$sd-sage-content-grid-template-et-code: ".-";
+///
+/// content grid-template content-grid-template-et-symbol
+///
+$sd-sage-content-grid-template-et-symbol: "et";
+///
+/// content grid-template content-grid-template-et-classname
+///
+$sd-sage-content-grid-template-et-classname: "sage-grid-teamplate-et";
+///
+/// content grid-template content-grid-template-em-code
+///
+$sd-sage-content-grid-template-em-code: ".--";
+///
+/// content grid-template content-grid-template-em-symbol
+///
+$sd-sage-content-grid-template-em-symbol: "em";
+///
+/// content grid-template content-grid-template-em-classname
+///
+$sd-sage-content-grid-template-em-classname: "sage-grid-teamplate-em";
+///
+/// content grid-template content-grid-template-eo-code
+///
+$sd-sage-content-grid-template-eo-code: ".---";
+///
+/// content grid-template content-grid-template-eo-symbol
+///
+$sd-sage-content-grid-template-eo-symbol: "eo";
+///
+/// content grid-template content-grid-template-eo-classname
+///
+$sd-sage-content-grid-template-eo-classname: "sage-grid-teamplate-eo";
+///
+/// content grid-template content-grid-template-it-code
+///
+$sd-sage-content-grid-template-it-code: "..-";
+///
+/// content grid-template content-grid-template-it-symbol
+///
+$sd-sage-content-grid-template-it-symbol: "it";
+///
+/// content grid-template content-grid-template-it-classname
+///
+$sd-sage-content-grid-template-it-classname: "sage-grid-teamplate-it";
+///
+/// content grid-template content-grid-template-im-code
+///
+$sd-sage-content-grid-template-im-code: "..--";
+///
+/// content grid-template content-grid-template-im-symbol
+///
+$sd-sage-content-grid-template-im-symbol: "im";
+///
+/// content grid-template content-grid-template-im-classname
+///
+$sd-sage-content-grid-template-im-classname: "sage-grid-teamplate-im";
+///
+/// content grid-template content-grid-template-io-code
+///
+$sd-sage-content-grid-template-io-code: "..---";
+///
+/// content grid-template content-grid-template-io-symbol
+///
+$sd-sage-content-grid-template-io-symbol: "io";
+///
+/// content grid-template content-grid-template-io-classname
+///
+$sd-sage-content-grid-template-io-classname: "sage-grid-teamplate-io";
+///
+/// content grid-template content-grid-template-st-code
+///
+$sd-sage-content-grid-template-st-code: "...-";
+///
+/// content grid-template content-grid-template-st-symbol
+///
+$sd-sage-content-grid-template-st-symbol: "st";
+///
+/// content grid-template content-grid-template-st-classname
+///
+$sd-sage-content-grid-template-st-classname: "sage-grid-teamplate-st";
+///
+/// content grid-template content-grid-template-sm-code
+///
+$sd-sage-content-grid-template-sm-code: "...--";
+///
+/// content grid-template content-grid-template-sm-symbol
+///
+$sd-sage-content-grid-template-sm-symbol: "sm";
+///
+/// content grid-template content-grid-template-sm-classname
+///
+$sd-sage-content-grid-template-sm-classname: "sage-grid-teamplate-sm";
+///
+/// content grid-template content-grid-template-so-code
+///
+$sd-sage-content-grid-template-so-code: "...---";
+///
+/// content grid-template content-grid-template-so-symbol
+///
+$sd-sage-content-grid-template-so-symbol: "so";
+///
+/// content grid-template content-grid-template-so-classname
+///
+$sd-sage-content-grid-template-so-classname: "sage-grid-teamplate-so";
+///
+/// content grid-template content-grid-template-te-code
+///
+$sd-sage-content-grid-template-te-code: "-.";
+///
+/// content grid-template content-grid-template-te-symbol
+///
+$sd-sage-content-grid-template-te-symbol: "te";
+///
+/// content grid-template content-grid-template-te-classname
+///
+$sd-sage-content-grid-template-te-classname: "sage-grid-teamplate-te";
+///
+/// content grid-template content-grid-template-ti-code
+///
+$sd-sage-content-grid-template-ti-code: "-..";
+///
+/// content grid-template content-grid-template-ti-symbol
+///
+$sd-sage-content-grid-template-ti-symbol: "ti";
+///
+/// content grid-template content-grid-template-ti-classname
+///
+$sd-sage-content-grid-template-ti-classname: "sage-grid-teamplate-ti";
+///
+/// content grid-template content-grid-template-ts-code
+///
+$sd-sage-content-grid-template-ts-code: "-...";
+///
+/// content grid-template content-grid-template-ts-symbol
+///
+$sd-sage-content-grid-template-ts-symbol: "ts";
+///
+/// content grid-template content-grid-template-ts-classname
+///
+$sd-sage-content-grid-template-ts-classname: "sage-grid-teamplate-ts";
+///
+/// content grid-template content-grid-template-me-code
+///
+$sd-sage-content-grid-template-me-code: "--.";
+///
+/// content grid-template content-grid-template-me-symbol
+///
+$sd-sage-content-grid-template-me-symbol: "me";
+///
+/// content grid-template content-grid-template-me-classname
+///
+$sd-sage-content-grid-template-me-classname: "sage-grid-teamplate-me";
+///
+/// content grid-template content-grid-template-mi-code
+///
+$sd-sage-content-grid-template-mi-code: "--..";
+///
+/// content grid-template content-grid-template-mi-symbol
+///
+$sd-sage-content-grid-template-mi-symbol: "mi";
+///
+/// content grid-template content-grid-template-mi-classname
+///
+$sd-sage-content-grid-template-mi-classname: "sage-grid-teamplate-mi";
+///
+/// content grid-template content-grid-template-ms-code
+///
+$sd-sage-content-grid-template-ms-code: "--...";
+///
+/// content grid-template content-grid-template-ms-symbol
+///
+$sd-sage-content-grid-template-ms-symbol: "ms";
+///
+/// content grid-template content-grid-template-ms-classname
+///
+$sd-sage-content-grid-template-ms-classname: "sage-grid-teamplate-ms";
+///
+/// content grid-template content-grid-template-oe-code
+///
+$sd-sage-content-grid-template-oe-code: "---.";
+///
+/// content grid-template content-grid-template-oe-symbol
+///
+$sd-sage-content-grid-template-oe-symbol: "oe";
+///
+/// content grid-template content-grid-template-oe-classname
+///
+$sd-sage-content-grid-template-oe-classname: "sage-grid-teamplate-oe";
+///
+/// content grid-template content-grid-template-oi-code
+///
+$sd-sage-content-grid-template-oi-code: "---..";
+///
+/// content grid-template content-grid-template-oi-symbol
+///
+$sd-sage-content-grid-template-oi-symbol: "oi";
+///
+/// content grid-template content-grid-template-oi-classname
+///
+$sd-sage-content-grid-template-oi-classname: "sage-grid-teamplate-oi";
+///
+/// content grid-template content-grid-template-os-code
+///
+$sd-sage-content-grid-template-os-code: "---...";
+///
+/// content grid-template content-grid-template-os-symbol
+///
+$sd-sage-content-grid-template-os-symbol: "os";
+///
+/// content grid-template content-grid-template-os-classname
+///
+$sd-sage-content-grid-template-os-classname: "sage-grid-teamplate-os";
+///
+/// content grid-template content-grid-template-ete-code
+///
+$sd-sage-content-grid-template-ete-code: ".-.";
+///
+/// content grid-template content-grid-template-ete-symbol
+///
+$sd-sage-content-grid-template-ete-symbol: "ete";
+///
+/// content grid-template content-grid-template-ete-classname
+///
+$sd-sage-content-grid-template-ete-classname: "sage-grid-teamplate-ete";
+///
+/// content grid-template content-grid-template-eti-code
+///
+$sd-sage-content-grid-template-eti-code: ".-..";
+///
+/// content grid-template content-grid-template-eti-symbol
+///
+$sd-sage-content-grid-template-eti-symbol: "eti";
+///
+/// content grid-template content-grid-template-eti-classname
+///
+$sd-sage-content-grid-template-eti-classname: "sage-grid-teamplate-eti";
+///
+/// content grid-template content-grid-template-ets-code
+///
+$sd-sage-content-grid-template-ets-code: ".-...";
+///
+/// content grid-template content-grid-template-ets-symbol
+///
+$sd-sage-content-grid-template-ets-symbol: "ets";
+///
+/// content grid-template content-grid-template-ets-classname
+///
+$sd-sage-content-grid-template-ets-classname: "sage-grid-teamplate-ets";
+///
+/// content grid-template content-grid-template-eme-code
+///
+$sd-sage-content-grid-template-eme-code: ".--.";
+///
+/// content grid-template content-grid-template-eme-symbol
+///
+$sd-sage-content-grid-template-eme-symbol: "eme";
+///
+/// content grid-template content-grid-template-eme-classname
+///
+$sd-sage-content-grid-template-eme-classname: "sage-grid-teamplate-eme";
+///
+/// content grid-template content-grid-template-emi-code
+///
+$sd-sage-content-grid-template-emi-code: ".--..";
+///
+/// content grid-template content-grid-template-emi-symbol
+///
+$sd-sage-content-grid-template-emi-symbol: "emi";
+///
+/// content grid-template content-grid-template-emi-classname
+///
+$sd-sage-content-grid-template-emi-classname: "sage-grid-teamplate-emi";
+///
+/// content grid-template content-grid-template-ems-code
+///
+$sd-sage-content-grid-template-ems-code: ".--...";
+///
+/// content grid-template content-grid-template-ems-symbol
+///
+$sd-sage-content-grid-template-ems-symbol: "ems";
+///
+/// content grid-template content-grid-template-ems-classname
+///
+$sd-sage-content-grid-template-ems-classname: "sage-grid-teamplate-ems";
+///
+/// content grid-template content-grid-template-eoe-code
+///
+$sd-sage-content-grid-template-eoe-code: ".---.";
+///
+/// content grid-template content-grid-template-eoe-symbol
+///
+$sd-sage-content-grid-template-eoe-symbol: "eoe";
+///
+/// content grid-template content-grid-template-eoe-classname
+///
+$sd-sage-content-grid-template-eoe-classname: "sage-grid-teamplate-eoe";
+///
+/// content grid-template content-grid-template-eoi-code
+///
+$sd-sage-content-grid-template-eoi-code: ".---..";
+///
+/// content grid-template content-grid-template-eoi-symbol
+///
+$sd-sage-content-grid-template-eoi-symbol: "eoi";
+///
+/// content grid-template content-grid-template-eoi-classname
+///
+$sd-sage-content-grid-template-eoi-classname: "sage-grid-teamplate-eoi";
+///
+/// content grid-template content-grid-template-eos-code
+///
+$sd-sage-content-grid-template-eos-code: ".---...";
+///
+/// content grid-template content-grid-template-eos-symbol
+///
+$sd-sage-content-grid-template-eos-symbol: "eos";
+///
+/// content grid-template content-grid-template-eos-classname
+///
+$sd-sage-content-grid-template-eos-classname: "sage-grid-teamplate-eos";
+///
+/// content grid-template content-grid-template-ite-code
+///
+$sd-sage-content-grid-template-ite-code: "..-.";
+///
+/// content grid-template content-grid-template-ite-symbol
+///
+$sd-sage-content-grid-template-ite-symbol: "ite";
+///
+/// content grid-template content-grid-template-ite-classname
+///
+$sd-sage-content-grid-template-ite-classname: "sage-grid-teamplate-ite";
+///
+/// content grid-template content-grid-template-iti-code
+///
+$sd-sage-content-grid-template-iti-code: "..-..";
+///
+/// content grid-template content-grid-template-iti-symbol
+///
+$sd-sage-content-grid-template-iti-symbol: "iti";
+///
+/// content grid-template content-grid-template-iti-classname
+///
+$sd-sage-content-grid-template-iti-classname: "sage-grid-teamplate-iti";
+///
+/// content grid-template content-grid-template-its-code
+///
+$sd-sage-content-grid-template-its-code: "..-...";
+///
+/// content grid-template content-grid-template-its-symbol
+///
+$sd-sage-content-grid-template-its-symbol: "its";
+///
+/// content grid-template content-grid-template-its-classname
+///
+$sd-sage-content-grid-template-its-classname: "sage-grid-teamplate-its";
+///
+/// content grid-template content-grid-template-ime-code
+///
+$sd-sage-content-grid-template-ime-code: "..--.";
+///
+/// content grid-template content-grid-template-ime-symbol
+///
+$sd-sage-content-grid-template-ime-symbol: "ime";
+///
+/// content grid-template content-grid-template-ime-classname
+///
+$sd-sage-content-grid-template-ime-classname: "sage-grid-teamplate-ime";
+///
+/// content grid-template content-grid-template-imi-code
+///
+$sd-sage-content-grid-template-imi-code: "..--..";
+///
+/// content grid-template content-grid-template-imi-symbol
+///
+$sd-sage-content-grid-template-imi-symbol: "imi";
+///
+/// content grid-template content-grid-template-imi-classname
+///
+$sd-sage-content-grid-template-imi-classname: "sage-grid-teamplate-imi";
+///
+/// content grid-template content-grid-template-ims-code
+///
+$sd-sage-content-grid-template-ims-code: "..--...";
+///
+/// content grid-template content-grid-template-ims-symbol
+///
+$sd-sage-content-grid-template-ims-symbol: "ims";
+///
+/// content grid-template content-grid-template-ims-classname
+///
+$sd-sage-content-grid-template-ims-classname: "sage-grid-teamplate-ims";
+///
+/// content grid-template content-grid-template-ioe-code
+///
+$sd-sage-content-grid-template-ioe-code: "..---.";
+///
+/// content grid-template content-grid-template-ioe-symbol
+///
+$sd-sage-content-grid-template-ioe-symbol: "ioe";
+///
+/// content grid-template content-grid-template-ioe-classname
+///
+$sd-sage-content-grid-template-ioe-classname: "sage-grid-teamplate-ioe";
+///
+/// content grid-template content-grid-template-ioi-code
+///
+$sd-sage-content-grid-template-ioi-code: "..---..";
+///
+/// content grid-template content-grid-template-ioi-symbol
+///
+$sd-sage-content-grid-template-ioi-symbol: "ioi";
+///
+/// content grid-template content-grid-template-ioi-classname
+///
+$sd-sage-content-grid-template-ioi-classname: "sage-grid-teamplate-ioi";
+///
+/// content grid-template content-grid-template-ios-code
+///
+$sd-sage-content-grid-template-ios-code: "..---...";
+///
+/// content grid-template content-grid-template-ios-symbol
+///
+$sd-sage-content-grid-template-ios-symbol: "ios";
+///
+/// content grid-template content-grid-template-ios-classname
+///
+$sd-sage-content-grid-template-ios-classname: "sage-grid-teamplate-ios";
+///
+/// content grid-template content-grid-template-ste-code
+///
+$sd-sage-content-grid-template-ste-code: "...-.";
+///
+/// content grid-template content-grid-template-ste-symbol
+///
+$sd-sage-content-grid-template-ste-symbol: "ste";
+///
+/// content grid-template content-grid-template-ste-classname
+///
+$sd-sage-content-grid-template-ste-classname: "sage-grid-teamplate-ste";
+///
+/// content grid-template content-grid-template-sti-code
+///
+$sd-sage-content-grid-template-sti-code: "...-..";
+///
+/// content grid-template content-grid-template-sti-symbol
+///
+$sd-sage-content-grid-template-sti-symbol: "sti";
+///
+/// content grid-template content-grid-template-sti-classname
+///
+$sd-sage-content-grid-template-sti-classname: "sage-grid-teamplate-sti";
+///
+/// content grid-template content-grid-template-sts-code
+///
+$sd-sage-content-grid-template-sts-code: "...-...";
+///
+/// content grid-template content-grid-template-sts-symbol
+///
+$sd-sage-content-grid-template-sts-symbol: "sts";
+///
+/// content grid-template content-grid-template-sts-classname
+///
+$sd-sage-content-grid-template-sts-classname: "sage-grid-teamplate-sts";
+///
+/// content grid-template content-grid-template-sme-code
+///
+$sd-sage-content-grid-template-sme-code: "...--.";
+///
+/// content grid-template content-grid-template-sme-symbol
+///
+$sd-sage-content-grid-template-sme-symbol: "sme";
+///
+/// content grid-template content-grid-template-sme-classname
+///
+$sd-sage-content-grid-template-sme-classname: "sage-grid-teamplate-sme";
+///
+/// content grid-template content-grid-template-smi-code
+///
+$sd-sage-content-grid-template-smi-code: "...--..";
+///
+/// content grid-template content-grid-template-smi-symbol
+///
+$sd-sage-content-grid-template-smi-symbol: "smi";
+///
+/// content grid-template content-grid-template-smi-classname
+///
+$sd-sage-content-grid-template-smi-classname: "sage-grid-teamplate-smi";
+///
+/// content grid-template content-grid-template-sms-code
+///
+$sd-sage-content-grid-template-sms-code: "...--...";
+///
+/// content grid-template content-grid-template-sms-symbol
+///
+$sd-sage-content-grid-template-sms-symbol: "sms";
+///
+/// content grid-template content-grid-template-sms-classname
+///
+$sd-sage-content-grid-template-sms-classname: "sage-grid-teamplate-sms";
+///
+/// content grid-template content-grid-template-soe-code
+///
+$sd-sage-content-grid-template-soe-code: "...---.";
+///
+/// content grid-template content-grid-template-soe-symbol
+///
+$sd-sage-content-grid-template-soe-symbol: "soe";
+///
+/// content grid-template content-grid-template-soe-classname
+///
+$sd-sage-content-grid-template-soe-classname: "sage-grid-teamplate-soe";
+///
+/// content grid-template content-grid-template-soi-code
+///
+$sd-sage-content-grid-template-soi-code: "...---..";
+///
+/// content grid-template content-grid-template-soi-symbol
+///
+$sd-sage-content-grid-template-soi-symbol: "soi";
+///
+/// content grid-template content-grid-template-soi-classname
+///
+$sd-sage-content-grid-template-soi-classname: "sage-grid-teamplate-soi";
+///
+/// content grid-template content-grid-template-sos-code
+///
+$sd-sage-content-grid-template-sos-code: "...---...";
+///
+/// content grid-template content-grid-template-sos-symbol
+///
+$sd-sage-content-grid-template-sos-symbol: "sos";
+///
+/// content grid-template content-grid-template-sos-classname
+///
+$sd-sage-content-grid-template-sos-classname: "sage-grid-teamplate-sos";
+
+///
+/// Map for content grid-template
+///
+$sd-sage-content-grid-template: (
+  e: (
+    code: $sd-sage-content-grid-template-e-code,
+    symbol: $sd-sage-content-grid-template-e-symbol,
+    classname: $sd-sage-content-grid-template-e-classname,
+  ),
+  i: (
+    code: $sd-sage-content-grid-template-i-code,
+    symbol: $sd-sage-content-grid-template-i-symbol,
+    classname: $sd-sage-content-grid-template-i-classname,
+  ),
+  s: (
+    code: $sd-sage-content-grid-template-s-code,
+    symbol: $sd-sage-content-grid-template-s-symbol,
+    classname: $sd-sage-content-grid-template-s-classname,
+  ),
+  t: (
+    code: $sd-sage-content-grid-template-t-code,
+    symbol: $sd-sage-content-grid-template-t-symbol,
+    classname: $sd-sage-content-grid-template-t-classname,
+  ),
+  m: (
+    code: $sd-sage-content-grid-template-m-code,
+    symbol: $sd-sage-content-grid-template-m-symbol,
+    classname: $sd-sage-content-grid-template-m-classname,
+  ),
+  o: (
+    code: $sd-sage-content-grid-template-o-code,
+    symbol: $sd-sage-content-grid-template-o-symbol,
+    classname: $sd-sage-content-grid-template-o-classname,
+  ),
+  se: (
+    code: $sd-sage-content-grid-template-se-code,
+    symbol: $sd-sage-content-grid-template-se-symbol,
+    classname: $sd-sage-content-grid-template-se-classname,
+  ),
+  si: (
+    code: $sd-sage-content-grid-template-si-code,
+    symbol: $sd-sage-content-grid-template-si-symbol,
+    classname: $sd-sage-content-grid-template-si-classname,
+  ),
+  ss: (
+    code: $sd-sage-content-grid-template-ss-code,
+    symbol: $sd-sage-content-grid-template-ss-symbol,
+    classname: $sd-sage-content-grid-template-ss-classname,
+  ),
+  ot: (
+    code: $sd-sage-content-grid-template-ot-code,
+    symbol: $sd-sage-content-grid-template-ot-symbol,
+    classname: $sd-sage-content-grid-template-ot-classname,
+  ),
+  om: (
+    code: $sd-sage-content-grid-template-om-code,
+    symbol: $sd-sage-content-grid-template-om-symbol,
+    classname: $sd-sage-content-grid-template-om-classname,
+  ),
+  oo: (
+    code: $sd-sage-content-grid-template-oo-code,
+    symbol: $sd-sage-content-grid-template-oo-symbol,
+    classname: $sd-sage-content-grid-template-oo-classname,
+  ),
+  et: (
+    code: $sd-sage-content-grid-template-et-code,
+    symbol: $sd-sage-content-grid-template-et-symbol,
+    classname: $sd-sage-content-grid-template-et-classname,
+  ),
+  em: (
+    code: $sd-sage-content-grid-template-em-code,
+    symbol: $sd-sage-content-grid-template-em-symbol,
+    classname: $sd-sage-content-grid-template-em-classname,
+  ),
+  eo: (
+    code: $sd-sage-content-grid-template-eo-code,
+    symbol: $sd-sage-content-grid-template-eo-symbol,
+    classname: $sd-sage-content-grid-template-eo-classname,
+  ),
+  it: (
+    code: $sd-sage-content-grid-template-it-code,
+    symbol: $sd-sage-content-grid-template-it-symbol,
+    classname: $sd-sage-content-grid-template-it-classname,
+  ),
+  im: (
+    code: $sd-sage-content-grid-template-im-code,
+    symbol: $sd-sage-content-grid-template-im-symbol,
+    classname: $sd-sage-content-grid-template-im-classname,
+  ),
+  io: (
+    code: $sd-sage-content-grid-template-io-code,
+    symbol: $sd-sage-content-grid-template-io-symbol,
+    classname: $sd-sage-content-grid-template-io-classname,
+  ),
+  st: (
+    code: $sd-sage-content-grid-template-st-code,
+    symbol: $sd-sage-content-grid-template-st-symbol,
+    classname: $sd-sage-content-grid-template-st-classname,
+  ),
+  sm: (
+    code: $sd-sage-content-grid-template-sm-code,
+    symbol: $sd-sage-content-grid-template-sm-symbol,
+    classname: $sd-sage-content-grid-template-sm-classname,
+  ),
+  so: (
+    code: $sd-sage-content-grid-template-so-code,
+    symbol: $sd-sage-content-grid-template-so-symbol,
+    classname: $sd-sage-content-grid-template-so-classname,
+  ),
+  te: (
+    code: $sd-sage-content-grid-template-te-code,
+    symbol: $sd-sage-content-grid-template-te-symbol,
+    classname: $sd-sage-content-grid-template-te-classname,
+  ),
+  ti: (
+    code: $sd-sage-content-grid-template-ti-code,
+    symbol: $sd-sage-content-grid-template-ti-symbol,
+    classname: $sd-sage-content-grid-template-ti-classname,
+  ),
+  ts: (
+    code: $sd-sage-content-grid-template-ts-code,
+    symbol: $sd-sage-content-grid-template-ts-symbol,
+    classname: $sd-sage-content-grid-template-ts-classname,
+  ),
+  me: (
+    code: $sd-sage-content-grid-template-me-code,
+    symbol: $sd-sage-content-grid-template-me-symbol,
+    classname: $sd-sage-content-grid-template-me-classname,
+  ),
+  mi: (
+    code: $sd-sage-content-grid-template-mi-code,
+    symbol: $sd-sage-content-grid-template-mi-symbol,
+    classname: $sd-sage-content-grid-template-mi-classname,
+  ),
+  ms: (
+    code: $sd-sage-content-grid-template-ms-code,
+    symbol: $sd-sage-content-grid-template-ms-symbol,
+    classname: $sd-sage-content-grid-template-ms-classname,
+  ),
+  oe: (
+    code: $sd-sage-content-grid-template-oe-code,
+    symbol: $sd-sage-content-grid-template-oe-symbol,
+    classname: $sd-sage-content-grid-template-oe-classname,
+  ),
+  oi: (
+    code: $sd-sage-content-grid-template-oi-code,
+    symbol: $sd-sage-content-grid-template-oi-symbol,
+    classname: $sd-sage-content-grid-template-oi-classname,
+  ),
+  os: (
+    code: $sd-sage-content-grid-template-os-code,
+    symbol: $sd-sage-content-grid-template-os-symbol,
+    classname: $sd-sage-content-grid-template-os-classname,
+  ),
+  ete: (
+    code: $sd-sage-content-grid-template-ete-code,
+    symbol: $sd-sage-content-grid-template-ete-symbol,
+    classname: $sd-sage-content-grid-template-ete-classname,
+  ),
+  eti: (
+    code: $sd-sage-content-grid-template-eti-code,
+    symbol: $sd-sage-content-grid-template-eti-symbol,
+    classname: $sd-sage-content-grid-template-eti-classname,
+  ),
+  ets: (
+    code: $sd-sage-content-grid-template-ets-code,
+    symbol: $sd-sage-content-grid-template-ets-symbol,
+    classname: $sd-sage-content-grid-template-ets-classname,
+  ),
+  eme: (
+    code: $sd-sage-content-grid-template-eme-code,
+    symbol: $sd-sage-content-grid-template-eme-symbol,
+    classname: $sd-sage-content-grid-template-eme-classname,
+  ),
+  emi: (
+    code: $sd-sage-content-grid-template-emi-code,
+    symbol: $sd-sage-content-grid-template-emi-symbol,
+    classname: $sd-sage-content-grid-template-emi-classname,
+  ),
+  ems: (
+    code: $sd-sage-content-grid-template-ems-code,
+    symbol: $sd-sage-content-grid-template-ems-symbol,
+    classname: $sd-sage-content-grid-template-ems-classname,
+  ),
+  eoe: (
+    code: $sd-sage-content-grid-template-eoe-code,
+    symbol: $sd-sage-content-grid-template-eoe-symbol,
+    classname: $sd-sage-content-grid-template-eoe-classname,
+  ),
+  eoi: (
+    code: $sd-sage-content-grid-template-eoi-code,
+    symbol: $sd-sage-content-grid-template-eoi-symbol,
+    classname: $sd-sage-content-grid-template-eoi-classname,
+  ),
+  eos: (
+    code: $sd-sage-content-grid-template-eos-code,
+    symbol: $sd-sage-content-grid-template-eos-symbol,
+    classname: $sd-sage-content-grid-template-eos-classname,
+  ),
+  ite: (
+    code: $sd-sage-content-grid-template-ite-code,
+    symbol: $sd-sage-content-grid-template-ite-symbol,
+    classname: $sd-sage-content-grid-template-ite-classname,
+  ),
+  iti: (
+    code: $sd-sage-content-grid-template-iti-code,
+    symbol: $sd-sage-content-grid-template-iti-symbol,
+    classname: $sd-sage-content-grid-template-iti-classname,
+  ),
+  its: (
+    code: $sd-sage-content-grid-template-its-code,
+    symbol: $sd-sage-content-grid-template-its-symbol,
+    classname: $sd-sage-content-grid-template-its-classname,
+  ),
+  ime: (
+    code: $sd-sage-content-grid-template-ime-code,
+    symbol: $sd-sage-content-grid-template-ime-symbol,
+    classname: $sd-sage-content-grid-template-ime-classname,
+  ),
+  imi: (
+    code: $sd-sage-content-grid-template-imi-code,
+    symbol: $sd-sage-content-grid-template-imi-symbol,
+    classname: $sd-sage-content-grid-template-imi-classname,
+  ),
+  ims: (
+    code: $sd-sage-content-grid-template-ims-code,
+    symbol: $sd-sage-content-grid-template-ims-symbol,
+    classname: $sd-sage-content-grid-template-ims-classname,
+  ),
+  ioe: (
+    code: $sd-sage-content-grid-template-ioe-code,
+    symbol: $sd-sage-content-grid-template-ioe-symbol,
+    classname: $sd-sage-content-grid-template-ioe-classname,
+  ),
+  ioi: (
+    code: $sd-sage-content-grid-template-ioi-code,
+    symbol: $sd-sage-content-grid-template-ioi-symbol,
+    classname: $sd-sage-content-grid-template-ioi-classname,
+  ),
+  ios: (
+    code: $sd-sage-content-grid-template-ios-code,
+    symbol: $sd-sage-content-grid-template-ios-symbol,
+    classname: $sd-sage-content-grid-template-ios-classname,
+  ),
+  ste: (
+    code: $sd-sage-content-grid-template-ste-code,
+    symbol: $sd-sage-content-grid-template-ste-symbol,
+    classname: $sd-sage-content-grid-template-ste-classname,
+  ),
+  sti: (
+    code: $sd-sage-content-grid-template-sti-code,
+    symbol: $sd-sage-content-grid-template-sti-symbol,
+    classname: $sd-sage-content-grid-template-sti-classname,
+  ),
+  sts: (
+    code: $sd-sage-content-grid-template-sts-code,
+    symbol: $sd-sage-content-grid-template-sts-symbol,
+    classname: $sd-sage-content-grid-template-sts-classname,
+  ),
+  sme: (
+    code: $sd-sage-content-grid-template-sme-code,
+    symbol: $sd-sage-content-grid-template-sme-symbol,
+    classname: $sd-sage-content-grid-template-sme-classname,
+  ),
+  smi: (
+    code: $sd-sage-content-grid-template-smi-code,
+    symbol: $sd-sage-content-grid-template-smi-symbol,
+    classname: $sd-sage-content-grid-template-smi-classname,
+  ),
+  sms: (
+    code: $sd-sage-content-grid-template-sms-code,
+    symbol: $sd-sage-content-grid-template-sms-symbol,
+    classname: $sd-sage-content-grid-template-sms-classname,
+  ),
+  soe: (
+    code: $sd-sage-content-grid-template-soe-code,
+    symbol: $sd-sage-content-grid-template-soe-symbol,
+    classname: $sd-sage-content-grid-template-soe-classname,
+  ),
+  soi: (
+    code: $sd-sage-content-grid-template-soi-code,
+    symbol: $sd-sage-content-grid-template-soi-symbol,
+    classname: $sd-sage-content-grid-template-soi-classname,
+  ),
+  sos: (
+    code: $sd-sage-content-grid-template-sos-code,
+    symbol: $sd-sage-content-grid-template-sos-symbol,
+    classname: $sd-sage-content-grid-template-sos-classname,
+  ),
+);
+
+///
+/// Sage content grid-template token utility
+///
+/// @param {string} $key The token to retrieve
+/// @param {string} $subkey The subtoken to retrieve
+///
+@function sd-sage-content-grid-template(
+  $key,
+  $subkey,
+) {
+  $value: map-get($sd-sage-content-grid-template, $key);
+  $value: map-get($value, $subkey);
   @return $value;
 }
 
