@@ -17,7 +17,7 @@ export const FormSection = ({
           {subtitle && (
             <div className="sage-form-section__subtitle">{subtitle}</div>
           )}
-        </div> 
+        </div>
       </Grid.Col>
       <Grid.Col size={8} small={12} large={8}>
         <Panel>
