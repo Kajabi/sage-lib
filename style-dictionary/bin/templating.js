@@ -13,23 +13,37 @@ const hasAny = (val) => {
   return true;
 };
 
-
-Handlebars.registerHelper('asRubyPrimitive', function (value) {
+const getPrimitiveValue = (value) => {
   if (typeof value === 'string') return `"${value}"`;
   if (typeof value === 'boolean') return value ? 'true' : 'false';
   if (value === null) return 'nil';
+  console.log(value);
   return value;
+}
+
+Handlebars.registerHelper('stripCTFromName', function (name) {
+  return name.split('_').slice(2).join('_');
+});
+
+Handlebars.registerHelper('asRubyPrimitive', function (value) {
+  if (value && value.value) {
+    return getPrimitiveValue(value.value);
+  }
+
+  return getPrimitiveValue(value);
 });
 
 Handlebars.registerHelper('asJSPrimitive', function (value) {
-  if (typeof value === 'string') return `'${value}'`;
-  if (typeof value === 'boolean') return value ? 'true' : 'false';
-  if (value === null) return 'null';
-  return value;
+  if (value.value) {
+    return getPrimitiveValue(value.value);
+  }
+
+  return getPrimitiveValue(value);
 });
 
 Handlebars.registerHelper('constantCase', function (value) {
-  return value.toUpperCase().replace('-', '_');
+  const transformed = value.toUpperCase().replace(/-/g, '_');
+  return transformed;
 });
 
 Handlebars.registerHelper('isBaseType', function (value) {

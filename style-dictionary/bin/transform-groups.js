@@ -13,16 +13,17 @@ module.exports = {
     'name/cti/kebab',
     'sage/value/sassSafe'
   ],
+  'sage/rails/tokens': [
+    'attribute/cti',
+    'name/cti/constant',
+    // 'sage/name/constant',
+    // 'sage/value/globalTypes/transitive',
+  ],
   // TODO: In development
   //
   // 'sage/js': [
   //   'attribute/cti',
   //   'name/cti/camel',
-  //   'sage/value/globalTypes/transitive',
-  // ],
-  // 'sage/rails/tokens': [
-  //   'attribute/cti',
-  //   'sage/name/constant',
   //   'sage/value/globalTypes/transitive',
   // ],
   // 'sage/rails/schema': [
