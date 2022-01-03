@@ -47,6 +47,11 @@ module SageTokens
     sliders
   end
 
+  # Extract grid template symbols
+  def SageTokens.grid_templates
+    SageDictionary::SD_SAGE_CONTENT_GRID_TEMPLATE.map { |k,v| v[:SYMBOL] }
+  end
+
   #
   # Constants
   #
@@ -104,14 +109,7 @@ module SageTokens
     }
   ]
 
-  GRID_TEMPLATES = [
-    "m", "o", "ot", "om", "oo",
-    "et", "em", "eo", "it", "im", "io", "se", "sm", "so",
-    "te", "ti", "ts", "me", "mi", "ms", "oe", "oi", "os",
-    "ete", "eti", "ets", "eme", "emi", "ems", "eoe", "eoi", "eos",
-    "ite", "iti", "its", "ime", "imi", "ims", "ioe", "ioi", "ios",
-    "ste", "sti", "sts", "sme", "smi", "sms", "soe", "soi", "sos",
-  ]
+  GRID_TEMPLATES = SageTokens.grid_templates()
 
   HERO_SIZES = ["small", "large"]
 

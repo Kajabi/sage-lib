@@ -1,0 +1,291 @@
+{
+  "content": {
+    "grid-template": {
+      "e": {
+        "code": { "value": "." },
+        "symbol": { "value": "e" },
+        "classname": { "value": "sage-grid-teamplate-e" }
+      },
+      "i": {
+        "code": { "value": ".." },
+        "symbol": { "value": "i" },
+        "classname": { "value": "sage-grid-teamplate-i" }
+      },
+      "s": {
+        "code": { "value": "..." },
+        "symbol": { "value": "s" },
+        "classname": { "value": "sage-grid-teamplate-s" }
+      },
+      "t": {
+        "code": { "value": "-" },
+        "symbol": { "value": "t" },
+        "classname": { "value": "sage-grid-teamplate-t" }
+      },
+      "m": {
+        "code": { "value": "--" },
+        "symbol": { "value": "m" },
+        "classname": { "value": "sage-grid-teamplate-m" }
+      },
+      "o": {
+        "code": { "value": "---" },
+        "symbol": { "value": "o" },
+        "classname": { "value": "sage-grid-teamplate-o" }
+      },
+      "se": {
+        "code": { "value": "...." },
+        "symbol": { "value": "se" },
+        "classname": { "value": "sage-grid-teamplate-se" }
+      },
+      "si": {
+        "code": { "value": "....." },
+        "symbol": { "value": "si" },
+        "classname": { "value": "sage-grid-teamplate-si" }
+      },
+      "ss": {
+        "code": { "value": "......" },
+        "symbol": { "value": "ss" },
+        "classname": { "value": "sage-grid-teamplate-ss" }
+      },
+      "ot": {
+        "code": { "value": "----" },
+        "symbol": { "value": "ot" },
+        "classname": { "value": "sage-grid-teamplate-ot" }
+      },
+      "om": {
+        "code": { "value": "-----" },
+        "symbol": { "value": "om" },
+        "classname": { "value": "sage-grid-teamplate-om" }
+      },
+      "oo": {
+        "code": { "value": "------" },
+        "symbol": { "value": "oo" },
+        "classname": { "value": "sage-grid-teamplate-oo" }
+      },
+      "et": {
+        "code": { "value": ".-" },
+        "symbol": { "value": "et" },
+        "classname": { "value": "sage-grid-teamplate-et" }
+      },
+      "em": {
+        "code": { "value": ".--" },
+        "symbol": { "value": "em" },
+        "classname": { "value": "sage-grid-teamplate-em" }
+      },
+      "eo": {
+        "code": { "value": ".---" },
+        "symbol": { "value": "eo" },
+        "classname": { "value": "sage-grid-teamplate-eo" }
+      },
+      "it": {
+        "code": { "value": "..-" },
+        "symbol": { "value": "it" },
+        "classname": { "value": "sage-grid-teamplate-it" }
+      },
+      "im": {
+        "code": { "value": "..--" },
+        "symbol": { "value": "im" },
+        "classname": { "value": "sage-grid-teamplate-im" }
+      },
+      "io": {
+        "code": { "value": "..---" },
+        "symbol": { "value": "io" },
+        "classname": { "value": "sage-grid-teamplate-io" }
+      },
+      "st": {
+        "code": { "value": "...-" },
+        "symbol": { "value": "st" },
+        "classname": { "value": "sage-grid-teamplate-st" }
+      },
+      "sm": {
+        "code": { "value": "...--" },
+        "symbol": { "value": "sm" },
+        "classname": { "value": "sage-grid-teamplate-sm" }
+      },
+      "so": {
+        "code": { "value": "...---" },
+        "symbol": { "value": "so" },
+        "classname": { "value": "sage-grid-teamplate-so" }
+      },
+      "te": {
+        "code": { "value": "-." },
+        "symbol": { "value": "te" },
+        "classname": { "value": "sage-grid-teamplate-te" }
+      },
+      "ti": {
+        "code": { "value": "-.." },
+        "symbol": { "value": "ti" },
+        "classname": { "value": "sage-grid-teamplate-ti" }
+      },
+      "ts": {
+        "code": { "value": "-..." },
+        "symbol": { "value": "ts" },
+        "classname": { "value": "sage-grid-teamplate-ts" }
+      },
+      "me": {
+        "code": { "value": "--." },
+        "symbol": { "value": "me" },
+        "classname": { "value": "sage-grid-teamplate-me" }
+      },
+      "mi": {
+        "code": { "value": "--.." },
+        "symbol": { "value": "mi" },
+        "classname": { "value": "sage-grid-teamplate-mi" }
+      },
+      "ms": {
+        "code": { "value": "--..." },
+        "symbol": { "value": "ms" },
+        "classname": { "value": "sage-grid-teamplate-ms" }
+      },
+      "oe": {
+        "code": { "value": "---." },
+        "symbol": { "value": "oe" },
+        "classname": { "value": "sage-grid-teamplate-oe" }
+      },
+      "oi": {
+        "code": { "value": "---.." },
+        "symbol": { "value": "oi" },
+        "classname": { "value": "sage-grid-teamplate-oi" }
+      },
+      "os": {
+        "code": { "value": "---..." },
+        "symbol": { "value": "os" },
+        "classname": { "value": "sage-grid-teamplate-os" }
+      },
+      "ete": {
+        "code": { "value": ".-." },
+        "symbol": { "value": "ete" },
+        "classname": { "value": "sage-grid-teamplate-ete" }
+      },
+      "eti": {
+        "code": { "value": ".-.." },
+        "symbol": { "value": "eti" },
+        "classname": { "value": "sage-grid-teamplate-eti" }
+      },
+      "ets": {
+        "code": { "value": ".-..." },
+        "symbol": { "value": "ets" },
+        "classname": { "value": "sage-grid-teamplate-ets" }
+      },
+      "eme": {
+        "code": { "value": ".--." },
+        "symbol": { "value": "eme" },
+        "classname": { "value": "sage-grid-teamplate-eme" }
+      },
+      "emi": {
+        "code": { "value": ".--.." },
+        "symbol": { "value": "emi" },
+        "classname": { "value": "sage-grid-teamplate-emi" }
+      },
+      "ems": {
+        "code": { "value": ".--..." },
+        "symbol": { "value": "ems" },
+        "classname": { "value": "sage-grid-teamplate-ems" }
+      },
+      "eoe": {
+        "code": { "value": ".---." },
+        "symbol": { "value": "eoe" },
+        "classname": { "value": "sage-grid-teamplate-eoe" }
+      },
+      "eoi": {
+        "code": { "value": ".---.." },
+        "symbol": { "value": "eoi" },
+        "classname": { "value": "sage-grid-teamplate-eoi" }
+      },
+      "eos": {
+        "code": { "value": ".---..." },
+        "symbol": { "value": "eos" },
+        "classname": { "value": "sage-grid-teamplate-eos" }
+      },
+      "ite": {
+        "code": { "value": "..-." },
+        "symbol": { "value": "ite" },
+        "classname": { "value": "sage-grid-teamplate-ite" }
+      },
+      "iti": {
+        "code": { "value": "..-.." },
+        "symbol": { "value": "iti" },
+        "classname": { "value": "sage-grid-teamplate-iti" }
+      },
+      "its": {
+        "code": { "value": "..-..." },
+        "symbol": { "value": "its" },
+        "classname": { "value": "sage-grid-teamplate-its" }
+      },
+      "ime": {
+        "code": { "value": "..--." },
+        "symbol": { "value": "ime" },
+        "classname": { "value": "sage-grid-teamplate-ime" }
+      },
+      "imi": {
+        "code": { "value": "..--.." },
+        "symbol": { "value": "imi" },
+        "classname": { "value": "sage-grid-teamplate-imi" }
+      },
+      "ims": {
+        "code": { "value": "..--..." },
+        "symbol": { "value": "ims" },
+        "classname": { "value": "sage-grid-teamplate-ims" }
+      },
+      "ioe": {
+        "code": { "value": "..---." },
+        "symbol": { "value": "ioe" },
+        "classname": { "value": "sage-grid-teamplate-ioe" }
+      },
+      "ioi": {
+        "code": { "value": "..---.." },
+        "symbol": { "value": "ioi" },
+        "classname": { "value": "sage-grid-teamplate-ioi" }
+      },
+      "ios": {
+        "code": { "value": "..---..." },
+        "symbol": { "value": "ios" },
+        "classname": { "value": "sage-grid-teamplate-ios" }
+      },
+      "ste": {
+        "code": { "value": "...-." },
+        "symbol": { "value": "ste" },
+        "classname": { "value": "sage-grid-teamplate-ste" }
+      },
+      "sti": {
+        "code": { "value": "...-.." },
+        "symbol": { "value": "sti" },
+        "classname": { "value": "sage-grid-teamplate-sti" }
+      },
+      "sts": {
+        "code": { "value": "...-..." },
+        "symbol": { "value": "sts" },
+        "classname": { "value": "sage-grid-teamplate-sts" }
+      },
+      "sme": {
+        "code": { "value": "...--." },
+        "symbol": { "value": "sme" },
+        "classname": { "value": "sage-grid-teamplate-sme" }
+      },
+      "smi": {
+        "code": { "value": "...--.." },
+        "symbol": { "value": "smi" },
+        "classname": { "value": "sage-grid-teamplate-smi" }
+      },
+      "sms": {
+        "code": { "value": "...--..." },
+        "symbol": { "value": "sms" },
+        "classname": { "value": "sage-grid-teamplate-sms" }
+      },
+      "soe": {
+        "code": { "value": "...---." },
+        "symbol": { "value": "soe" },
+        "classname": { "value": "sage-grid-teamplate-soe" }
+      },
+      "soi": {
+        "code": { "value": "...---.." },
+        "symbol": { "value": "soi" },
+        "classname": { "value": "sage-grid-teamplate-soi" }
+      },
+      "sos": {
+        "code": { "value": "...---..." },
+        "symbol": { "value": "sos" },
+        "classname": { "value": "sage-grid-teamplate-sos" }
+      }
+    }
+  }
+}

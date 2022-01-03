@@ -12,56 +12,9 @@ module SageClassnames
   GRID_PANEL = "sage-panel-grid"
 
   module GRID_TEMPLATES
-    M   = "sage-grid-template-m"   # --
-    O   = "sage-grid-template-o"   # ---
-    OT  = "sage-grid-template-ot"  # ----
-    OM  = "sage-grid-template-om"  # -----
-    OO  = "sage-grid-template-oo"  # ------
-    ET  = "sage-grid-template-et"  # .-
-    EM  = "sage-grid-template-em"  # .--
-    EO  = "sage-grid-template-eo"  # .---
-    IT  = "sage-grid-template-it"  # ..-
-    IM  = "sage-grid-template-im"  # ..--
-    IO  = "sage-grid-template-io"  # ..---
-    SE  = "sage-grid-template-se"  # ...-
-    SM  = "sage-grid-template-sm"  # ...--
-    SO  = "sage-grid-template-so"  # ...---
-    TE  = "sage-grid-template-te"  # -.
-    TI  = "sage-grid-template-ti"  # -..
-    TS  = "sage-grid-template-ts"  # -...
-    ME  = "sage-grid-template-me"  # --.
-    MI  = "sage-grid-template-mi"  # --..
-    MS  = "sage-grid-template-ms"  # --...
-    OE  = "sage-grid-template-oe"  # ---.
-    OI  = "sage-grid-template-oi"  # ---..
-    OS  = "sage-grid-template-os"  # ---...
-    ETE = "sage-grid-template-ete" # .-.
-    ETI = "sage-grid-template-eti" # .-..
-    ETS = "sage-grid-template-ets" # .-...
-    EME = "sage-grid-template-eme" # .--.
-    EMI = "sage-grid-template-emi" # .--..
-    EMS = "sage-grid-template-ems" # .--...
-    EOE = "sage-grid-template-eoe" # .---.
-    EOI = "sage-grid-template-eoi" # .---..
-    EOS = "sage-grid-template-eos" # .---...
-    ITE = "sage-grid-template-ite" # ..-.
-    ITI = "sage-grid-template-iti" # ..-..
-    ITS = "sage-grid-template-its" # ..-...
-    IME = "sage-grid-template-ime" # ..--.
-    IMI = "sage-grid-template-imi" # ..--..
-    IMS = "sage-grid-template-ims" # ..--...
-    IOE = "sage-grid-template-ioe" # ..---.
-    IOI = "sage-grid-template-ioi" # ..---..
-    IOS = "sage-grid-template-ios" # ..---...
-    STE = "sage-grid-template-ste" # ...-.
-    STI = "sage-grid-template-sti" # ...-..
-    STS = "sage-grid-template-sts" # ...-...
-    SME = "sage-grid-template-sme" # ...--.
-    SMI = "sage-grid-template-smi" # ...--..
-    SMS = "sage-grid-template-sms" # ...--...
-    SOE = "sage-grid-template-soe" # ...---.
-    SOI = "sage-grid-template-soi" # ...---..
-    SOS = "sage-grid-template-sos" # ...---...
+    SageDictionary::SD_SAGE_CONTENT_GRID_TEMPLATE.map do |k, v|
+      const_set("#{k}", v[:CLASSNAME])
+    end
   end
 
   module LINK
