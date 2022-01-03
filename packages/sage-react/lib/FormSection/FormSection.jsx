@@ -11,7 +11,7 @@ export const FormSection = ({
 }) => (
   <div className="sage-form-section" {...rest}>
     <Grid.Row>
-      <Grid.Col size="4">
+      <Grid.Col size={4} small={12} large={4}>
         <div className="sage-form-section__info">
           <h3 className="sage-form-section__title">{title}</h3>
           {subtitle && (
@@ -19,7 +19,7 @@ export const FormSection = ({
           )}
         </div> 
       </Grid.Col>
-      <Grid.Col size="8">
+      <Grid.Col size={8} small={12} large={8}>
         <Panel>
           <div className="sage-form-section__content">
             {children}
