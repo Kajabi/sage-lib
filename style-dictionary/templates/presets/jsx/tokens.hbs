@@ -6,6 +6,49 @@
 // See `/style-dictionary` directory for tokens and configurations.
 //
 
-{{#each tokens}}
-const {{name}} = {{{value}}};
+{{#each categories}}
+// ----------
+//
+// Category: {{category}}
+//
+// ----------
+
+  {{#each types}}
+//
+// Type: {{type}}
+//
+
+//
+// Static vars for {{../category}} {{type}}
+//
+    {{#each tokens}}
+export const {{name}} = {{{asJSPrimitive value}}};
+    {{/each}}
+
+//
+// Map for {{../category}} {{type}}
+//
+export const {{constantCase ../category}}{{#if (notBaseType type)}}_{{constantCase type}}{{/if}} = {
+    {{#each items}}
+      {{#if (hasAny subitems)}}
+  '{{constantCase item}}': {
+        {{#each subitems}}
+          {{#if (hasAny states)}}
+    '{{constantCase subitem}}': {
+            {{#each states}}
+      '{{constantCase state}}': {{name}},
+            {{/each}}
+    },
+          {{else}}
+    '{{constantCase subitem}}': {{name}},
+          {{/if}}
+        {{/each}}
+  },
+      {{else}}
+  '{{constantCase item}}': {{name}},
+      {{/if}}
+    {{/each}}
+};
+
+  {{/each}}
 {{/each}}

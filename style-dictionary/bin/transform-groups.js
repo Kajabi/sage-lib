@@ -16,16 +16,13 @@ module.exports = {
   'sage/rails/tokens': [
     'attribute/cti',
     'name/cti/constant',
-    // 'sage/name/constant',
-    // 'sage/value/globalTypes/transitive',
+  ],
+  'sage/jsx/tokens': [
+    'attribute/cti',
+    'name/cti/constant',
   ],
   // TODO: In development
   //
-  // 'sage/js': [
-  //   'attribute/cti',
-  //   'name/cti/camel',
-  //   'sage/value/globalTypes/transitive',
-  // ],
   // 'sage/rails/schema': [
   //   'attribute/cti',
   // ],

@@ -24,9 +24,20 @@ module.exports = {
       destination: 'sage_dictionary.rb',
       format: 'sage/rails/tokens',
       options: {
-        outputReferences: true
+        outputReferences: false
       }
     }],
+  },
+  reactTokens: {
+    transformGroup: 'sage/jsx/tokens',
+    buildPath: 'packages/sage-react/lib/dictionary/',
+    files: [{
+      destination: 'tokens.js',
+      format: 'sage/jsx/tokens',
+      options: {
+        outputReferences: false
+      }
+    }]
   },
   // TODO: In development
   //
@@ -38,17 +49,6 @@ module.exports = {
   //     format: 'css/variables',
   //     options: {
   //       outputReferences: true
-  //     }
-  //   }]
-  // },
-  // reactTokens: {
-  //   transformGroup: 'sage/js',
-  //   buildPath: 'packages/sage-react/lib/dictionary/',
-  //   files: [{
-  //     destination: 'tokens.js',
-  //     format: 'sage/js',
-  //     options: {
-  //       outputReferences: false
   //     }
   //   }]
   // },
