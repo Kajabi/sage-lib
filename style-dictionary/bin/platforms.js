@@ -17,6 +17,17 @@ module.exports = {
       }
     }]
   },
+  railsTokens: {
+    transformGroup: 'sage/rails/tokens',
+    buildPath: 'docs/lib/sage_rails/app/sage_components/',
+    files: [{
+      destination: 'sage_dictionary.rb',
+      format: 'sage/rails/tokens',
+      options: {
+        outputReferences: true
+      }
+    }],
+  },
   // TODO: In development
   //
   // cssCustomProps: {
@@ -40,17 +51,6 @@ module.exports = {
   //       outputReferences: false
   //     }
   //   }]
-  // },
-  // railsTokens: {
-  //   transformGroup: 'sage/rails/tokens',
-  //   buildPath: 'docs/lib/sage_rails/app/dictionary/',
-  //   files: [{
-  //     destination: 'sage_tokens.rb',
-  //     format: 'sage/rails/tokens',
-  //     options: {
-  //       outputReferences: false
-  //     }
-  //   }],
   // },
   // railsComponents: {
   //   transformGroup: 'sage/rails/schema',
