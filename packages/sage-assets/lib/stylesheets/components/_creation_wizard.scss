@@ -1,0 +1,29 @@
+////
+/// Creation Wizard
+///
+/// @group sage
+////
+
+.sage-creation-wizard__modal-content {
+  min-height: calc(100vh - 6.5rem - 1.5rem);
+  display: flex;
+
+  .sage-panel__row {
+    width: 100%;
+  }
+}
+
+.sage-creation-wizard__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.sage-creation-wizard__form-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.sage-creation-wizard__form-actions {
+  margin-top: auto;
+}
