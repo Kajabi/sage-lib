@@ -134,7 +134,6 @@ module SageClassnames
   module TYPE_COLORS
     SageDictionary::SD_SAGE_COLOR.each do |color, hash|
       hash.each do |index, values|
-        puts index
         if index.to_s == "300"
           const_set(color, values[:CLASSNAME])
         end
