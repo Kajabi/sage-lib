@@ -1,5 +1,13 @@
 module SageClassnames
 
+  #
+  # Style dictionary utilities
+  #
+
+  #
+  # Constants
+  #
+
   GRID_CARD = "sage-card-grid"
   GRID_PANEL = "sage-panel-grid"
 
@@ -124,54 +132,16 @@ module SageClassnames
   TYPE_BLOCK = "sage-type"
 
   module TYPE_COLORS
-    SAGE = "t-sage--color-sage"
-    SAGE_100 = "t-sage--color-sage-100"
-    SAGE_200 = "t-sage--color-sage-200"
-    SAGE_300 = "t-sage--color-sage-300"
-    SAGE_400 = "t-sage--color-sage-400"
-    SAGE_500 = "t-sage--color-sage-500"
-    PRIMARY = "t-sage--color-primary"
-    PRIMARY_100 = "t-sage--color-primary-100"
-    PRIMARY_200 = "t-sage--color-primary-200"
-    PRIMARY_300 = "t-sage--color-primary-300"
-    PRIMARY_400 = "t-sage--color-primary-400"
-    PRIMARY_500 = "t-sage--color-primary-500"
-    PURPLE = "t-sage--color-purple"
-    PURPLE_100 = "t-sage--color-purple-100"
-    PURPLE_200 = "t-sage--color-purple-200"
-    PURPLE_300 = "t-sage--color-purple-300"
-    PURPLE_400 = "t-sage--color-purple-400"
-    PURPLE_500 = "t-sage--color-purple-500"
-    RED = "t-sage--color-red"
-    RED_100 = "t-sage--color-red-100"
-    RED_200 = "t-sage--color-red-200"
-    RED_300 = "t-sage--color-red-300"
-    RED_400 = "t-sage--color-red-400"
-    RED_500 = "t-sage--color-red-500"
-    ORANGE = "t-sage--color-orange"
-    ORANGE_100 = "t-sage--color-orange-100"
-    ORANGE_200 = "t-sage--color-orange-200"
-    ORANGE_300 = "t-sage--color-orange-300"
-    ORANGE_400 = "t-sage--color-orange-400"
-    ORANGE_500 = "t-sage--color-orange-500"
-    YELLOW = "t-sage--color-yellow"
-    YELLOW_100 = "t-sage--color-yellow-100"
-    YELLOW_200 = "t-sage--color-yellow-200"
-    YELLOW_300 = "t-sage--color-yellow-300"
-    YELLOW_400 = "t-sage--color-yellow-400"
-    YELLOW_500 = "t-sage--color-yellow-500"
-    CHARCOAL = "t-sage--color-charcoal"
-    CHARCOAL_100 = "t-sage--color-charcoal-100"
-    CHARCOAL_200 = "t-sage--color-charcoal-200"
-    CHARCOAL_300 = "t-sage--color-charcoal-300"
-    CHARCOAL_400 = "t-sage--color-charcoal-400"
-    CHARCOAL_500 = "t-sage--color-charcoal-500"
-    GREY = "t-sage--color-grey"
-    GREY_100 = "t-sage--color-grey-100"
-    GREY_200 = "t-sage--color-grey-200"
-    GREY_300 = "t-sage--color-grey-300"
-    GREY_400 = "t-sage--color-grey-400"
-    GREY_500 = "t-sage--color-grey-500"
+    SageDictionary::SD_SAGE_COLOR.each do |color, hash|
+      hash.each do |index, values|
+        puts index
+        if index.to_s == "300"
+          const_set(color, values[:CLASSNAME])
+        end
+
+        const_set("#{color}_#{index}", values[:CLASSNAME])
+      end
+    end
   end
 
   TYPE_STRIKETHROUGH = "t-sage--strikethrough"
