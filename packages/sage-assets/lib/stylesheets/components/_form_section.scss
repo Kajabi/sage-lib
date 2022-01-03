@@ -12,7 +12,7 @@
 // TODO: refactor extends following final design of form section
 .sage-form-section__info {
 
-  @media (max-width: sage-breakpoint(sm-max)) {
+  @media (max-width: sage-breakpoint(md-max)) {
     margin-bottom: sage-spacing(md);
   }
 }

@@ -9,7 +9,7 @@ export const FormSection = ({
   title,
   ...rest
 }) => (
-  <div className="sage-form-section" {...rest}>
+  <Grid className="sage-form-section" {...rest}>
     <Grid.Row>
       <Grid.Col size={4} small={12} large={4}>
         <div className="sage-form-section__info">
@@ -27,7 +27,7 @@ export const FormSection = ({
         </Panel>
       </Grid.Col>
     </Grid.Row>
-  </div>
+  </Grid>
 );
 
 FormSection.defaultProps = {
