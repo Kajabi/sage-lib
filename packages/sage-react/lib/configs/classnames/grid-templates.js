@@ -6,6 +6,7 @@ Object.keys(SageDictionary.CONTENT_GRID_TEMPLATE).forEach((template) => {
   CLASSNAMES_GRID_TEMPLATES[template] = SageDictionary.CONTENT_GRID_TEMPLATE[template].CLASSNAME;
 });
 
+
 export const lookupGridTemplateClassname = (gridTemplate) => {
   let matchingClassname = null;
   Object.keys(SageDictionary.CONTENT_GRID_TEMPLATE).forEach((gridTemplateToken) => {
