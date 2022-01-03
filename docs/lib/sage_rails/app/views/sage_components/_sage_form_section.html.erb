@@ -13,10 +13,14 @@
             <%= component.title %>
           </<%= html_tag %>>
         <% end %>
-        <% if component.subtitle.present? or content_for? :sage_form_section_subtitle %>
+        <% if component.subtitle.present? %>
+          <p class="sage-form-section__subtitle sage-form-section__subtitle--legacy">
+            <%= component.subtitle %>
+          </p>
+        <% end %>
+        <% if content_for? :sage_form_section_subtitle %>
           <div class="sage-form-section__subtitle">
-            <%= component.subtitle if component.subtitle.present? %>
-            <%= content_for :sage_form_section_subtitle if content_for? :sage_form_section_subtitle %>
+            <%= content_for :sage_form_section_subtitle %>
           </div>
         <% end %>
       </div>
