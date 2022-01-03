@@ -78,7 +78,8 @@ Handlebars.registerHelper('constantCase', function (value) {
 });
 
 Handlebars.registerHelper('constantCase', function (value) {
-  return value.toUpperCase().replace('-', '_');
+  const transformed = value.toUpperCase().replace(/-/g, '_');
+  return transformed;
 });
 
 Handlebars.registerHelper('isBaseType', function (value) {
