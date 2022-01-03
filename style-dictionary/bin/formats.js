@@ -19,6 +19,16 @@ module.exports = {
     );
     return templates.railsTokens({ categories });
   },
+  'sage/jsx/tokens': ({ dictionary, platform }) => {
+    const categories = getCategoryCollection(
+      dictionary.allTokens,
+      {
+        categoryFormat: 'constant',
+        typeFormat: 'constant'
+      }
+    );
+    return templates.jsxTokens({ categories });
+  },
   // TODO: In development
   //
   // 'sage/js': ({ dictionary, platform }) => {

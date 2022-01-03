@@ -13,8 +13,8 @@ const hasAny = (val) => {
   return true;
 };
 
-const getPrimitiveValue = (value) => {
-  if (typeof value === 'string') return `"${value}"`;
+const getPrimitiveValue = (value, useDbQuotes = false) => {
+  if (typeof value === 'string') return useDbQuotes ? `"${value}"` : `'${value}'`;
   if (typeof value === 'boolean') return value ? 'true' : 'false';
   if (value === null) return 'nil';
   console.log(value);
@@ -27,10 +27,10 @@ Handlebars.registerHelper('stripCTFromName', function (name) {
 
 Handlebars.registerHelper('asRubyPrimitive', function (value) {
   if (value && value.value) {
-    return getPrimitiveValue(value.value);
+    return getPrimitiveValue(value.value, true);
   }
 
-  return getPrimitiveValue(value);
+  return getPrimitiveValue(value, true);
 });
 
 Handlebars.registerHelper('asJSPrimitive', function (value) {
@@ -101,6 +101,7 @@ const templateFiles = {
   scssTokens: 'presets/scss/tokens',
   railsSchema: 'presets/rb/schema',
   railsTokens: 'presets/rb/tokens',
+  jsxTokens: 'presets/jsx/tokens',
   reactSchema: 'presets/jsx/schema',
 };
 
