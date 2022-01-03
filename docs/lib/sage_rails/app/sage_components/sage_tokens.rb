@@ -1,62 +1,61 @@
 module SageTokens
-  COLORS = [
-    "charcoal", "grey", "orange", "primary", "purple", "red", "sage", "yellow"
-  ]
 
-  # When _color_pallette.scss is updated, this should be updated as well.
-  COLOR_PALETTE = {
-    PRIMARY_100: '#e6f4fe',
-    PRIMARY_200: '#8ecafb',
-    PRIMARY_300: '#0072ef',
-    PRIMARY_400: '#054fb8',
-    PRIMARY_500: '#07265f',
-    SAGE_100: '#ddf8f0',
-    SAGE_200: '#86d5bc',
-    SAGE_300: '#23856d',
-    SAGE_400: '#225d53',
-    SAGE_500: '#183e3b',
-    YELLOW_100: '#fef9e7',
-    YELLOW_200: '#fad980',
-    YELLOW_300: '#ffc505',
-    YELLOW_400: '#986501',
-    YELLOW_500: '#5c381e',
-    RED_100: '#fff0f0',
-    RED_200: '#fdb0aa',
-    RED_300: '#cf3c32',
-    RED_400: '#99221e',
-    RED_500: '#5e0d0d',
-    ORANGE_100: '#fef1e1',
-    ORANGE_200: '#ffb36b',
-    ORANGE_300: '#fb7e09',
-    ORANGE_400: '#b3501e',
-    ORANGE_500: '#5a260c',
-    PURPLE_100: '#eee4f6',
-    PURPLE_200: '#d9c2ef',
-    PURPLE_300: '#8e5ad8',
-    PURPLE_400: '#50348a',
-    PURPLE_500: '#381c5e',
-    GREY_100: '#f8fafb',
-    GREY_200: '#f4f8fa',
-    GREY_300: '#e0e7f1',
-    GREY_400: '#bbcad8',
-    GREY_500: '#94a6b8',
-    CHARCOAL_100: '#526275',
-    CHARCOAL_200: '#405264',
-    CHARCOAL_300: '#304050',
-    CHARCOAL_400: '#263240',
-    CHARCOAL_500: '#1c2530',
-    WHITE: '#fff',
-    BLACK: '#000',
-  }
+  #
+  # Style dictionary utility methods
+  #
 
-  COLOR_SLIDERS = [
-    "charcoal", "grey", "orange", "primary", "purple", "red", "sage", "yellow", "black", "white",
-    "charcoal-100", "grey-100", "orange-100", "primary-100", "purple-100", "red-100", "sage-100", "yellow-100",
-    "charcoal-200", "grey-200", "orange-200", "primary-200", "purple-200", "red-200", "sage-200", "yellow-200",
-    "charcoal-300", "grey-300", "orange-300", "primary-300", "purple-300", "red-300", "sage-300", "yellow-300",
-    "charcoal-400", "grey-400", "orange-400", "primary-400", "purple-400", "red-400", "sage-400", "yellow-400",
-    "charcoal-500", "grey-500", "orange-500", "primary-500", "purple-500", "red-500", "sage-500", "yellow-500"
-  ]
+  # Extract color names from dictionary core map
+  def SageTokens.color
+    SageDictionary::SD_SAGE_COLOR_CORE.map { | k, v | k.to_s.downcase }
+  end
+
+  # Extract color palette hex values from base color map
+  def SageTokens.color_palette
+    palette = {}
+    SageDictionary::SD_SAGE_COLOR.each do |color, hash|
+      hash.each do |index, values|
+        case color
+        when :BLACK
+          # omit index for black value
+          palette = palette.merge({ "#{color}": values[:HEX] })
+        when :WHITE
+          # omit index for white value
+          palette = palette.merge({ "#{color}": values[:HEX] })
+        else
+          palette = palette.merge({ "#{color}_#{index}": values[:HEX] })
+        end
+      end
+    end
+    palette
+  end
+
+  # Extract color palette hex values from base color map
+  def SageTokens.color_sliders
+    sliders = SageTokens.color()
+    SageDictionary::SD_SAGE_COLOR.each do |color, hash|
+      hash.each do |index, values|
+        case color
+        when :BLACK
+          # skip black values
+        when :WHITE
+          # skip white values
+        else
+          sliders.push(values[:CODE])
+        end
+      end
+    end
+    sliders
+  end
+
+  #
+  # Constants
+  #
+
+  COLORS = SageTokens.color()
+
+  COLOR_PALETTE = SageTokens.color_palette()
+
+  COLOR_SLIDERS = SageTokens.color_sliders()
 
   CONTAINER_SIZES = ["tiny", "xs", "sm", "md", "lg", "xl", "full"]
 
