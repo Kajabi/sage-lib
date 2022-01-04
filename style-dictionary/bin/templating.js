@@ -1,5 +1,19 @@
+//
+// Templating
+//
+// Our implementation of Style Dictionary uses Handlebars templates
+// in order to afford a customized output for each of our system's contexts.
+// This file contains the library of utilities, helpers, and complied templates
+// that are consumed by our formatters.
+//
+
 const Handlebars = require('Handlebars');
 const fs = require('fs');
+
+
+//
+// Utilities
+//
 
 const hasAny = (val) => {
   if (!val) {
@@ -20,6 +34,11 @@ const getPrimitiveValue = (value, useDbQuotes = false) => {
   console.log(value);
   return value;
 }
+
+
+//
+// Helpers
+//
 
 Handlebars.registerHelper('stripCTFromName', function (name) {
   return name.split('_').slice(2).join('_');
@@ -92,9 +111,11 @@ Handlebars.registerHelper('lowercase', function (value) {
   return value.toLowerCase();
 });
 
+
 //
-// Templates
+// Templates compilation
 //
+
 const templatePath = 'style-dictionary/templates';
 
 const templateFiles = {

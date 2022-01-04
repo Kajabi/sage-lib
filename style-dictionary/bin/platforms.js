@@ -1,9 +1,11 @@
-
 //
 // Platforms
 //
-// Platforms are sets of configurations for parsing and compiling tokens for a particular contexts
+// Platforms are the primary sets of configurations
+// for parsing and compiling tokens for a particular context
 // such as a language context (Sass, Rails, React, etc.).
+// They pull together a set of transformations into a formatter,
+// and determine where to output the result.
 //
 module.exports = {
   sassTokens: {

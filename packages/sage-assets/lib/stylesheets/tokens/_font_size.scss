@@ -40,7 +40,7 @@ $sage-font-sizes: (
 
 @media screen and (min-width: sage-breakpoint(lg-min)) {
   :root {
-    // --sage-font-size-body-xs: same
+    // --sage-font-size-body-xs is same
     --sage-font-size-body-sm: #{map-get($sage-font-sizes, xs)};
     --sage-font-size-body: #{map-get($sage-font-sizes, sm)};
     --sage-font-size-h6: #{map-get($sage-font-sizes, sm)};
