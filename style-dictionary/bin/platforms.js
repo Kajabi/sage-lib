@@ -30,7 +30,7 @@ module.exports = {
   },
   reactTokens: {
     transformGroup: 'sage/jsx/tokens',
-    buildPath: 'packages/sage-react/lib/dictionary/',
+    buildPath: 'packages/sage-react/lib/configs/dictionary/',
     files: [{
       destination: 'tokens.js',
       format: 'sage/jsx/tokens',

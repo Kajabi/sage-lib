@@ -1,4 +1,4 @@
-import { SageDictionary } from '../../dictionary';
+import { SageDictionary } from '../dictionary';
 
 // TOKENS_COLORS.GREY --> `'grey'`
 export const TOKENS_COLORS = {
