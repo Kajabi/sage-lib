@@ -10,6 +10,11 @@
 const Handlebars = require('handlebars');
 const fs = require('fs');
 
+
+//
+// Utilities
+//
+
 const hasAny = (val) => {
   if (!val) {
     return false;
@@ -127,6 +132,7 @@ Handlebars.registerHelper('hasAnyStates', function (items) {
 Handlebars.registerHelper('lowercase', function (value) {
   return value.toLowerCase();
 });
+
 
 //
 // Templates compilation
