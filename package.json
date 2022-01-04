@@ -59,7 +59,7 @@
     "sassdocs:deploy": "git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_SASSDOCS_APP_NAME.git `git subtree split --prefix packages/sage-assets main`:master --force",
     "setup": "bin/setup.sh",
     "setup:init": "yarn install && yarn docs:initialize",
-    "start": "yarn npm-run-all --parallel watch docs storybook sassdocs",
+    "start": "yarn npm-run-all --parallel build:sd watch docs storybook sassdocs",
     "storybook": "cd packages/sage-react && yarn storybook",
     "storybook:deploy": "git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_STORYBOOK_APP_NAME.git `git subtree split --prefix packages/sage-react main`:master --force",
     "test": "yarn npm-run-all test:prod:*",
