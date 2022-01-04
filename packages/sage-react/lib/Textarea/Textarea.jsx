@@ -17,7 +17,7 @@ export const Textarea = ({
     'sage-textarea',
     className,
     {
-      'sage-textarea--error': hasError,
+      'sage-form-field--error': hasError,
     }
   );
 
