@@ -22,7 +22,7 @@ $sage-color-combos: $sd-sage-color-combos;
   $color: sd-sage-color-combos($color-key, $combo-set-key, $color-type);
 
   @if $color {
-    @return $color
+    @return $color;
   }
 
   @warn "Could not retrieve color combo: #{$color-key} #{$combo-set-key} #{$color-type}. Got `#{$color}` from `sd-sage-color-combos()`. Default color #{$sage-color-default-name} (`#{$sage-color-default}`) returned instead.";
