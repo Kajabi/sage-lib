@@ -6,16 +6,13 @@
 
 
 .sage-form-section {
-  @include sage-row();
   margin-bottom: sage-spacing();
 }
 
 // TODO: refactor extends following final design of form section
 .sage-form-section__info {
-  /* stylelint-disable-next-line scss/at-extend-no-missing-placeholder */
-  @extend .sage-col--md-4;
 
-  @media (max-width: sage-breakpoint(sm-max)) {
+  @media (max-width: sage-breakpoint(md-max)) {
     margin-bottom: sage-spacing(md);
   }
 }
@@ -40,15 +37,7 @@
 }
 
 .sage-form-section__content {
-  /* stylelint-disable-next-line scss/at-extend-no-missing-placeholder */
-  @extend .sage-col--md-8;
-}
-
-.sage-form-section__panel {
   position: relative;
-  margin-bottom: sage-spacing();
-  
-  @include sage-panel;
 
   // Form Section Panels commonly wrap a <form> tag generated within rails.
   // In the event that a form tag is not present, ensure the children behave identically.
