@@ -120,10 +120,10 @@ const templatePath = 'style-dictionary/templates';
 
 const templateFiles = {
   scssTokens: 'presets/scss/tokens',
-  railsSchema: 'presets/rb/schema',
   railsTokens: 'presets/rb/tokens',
   jsxTokens: 'presets/jsx/tokens',
-  reactSchema: 'presets/jsx/schema',
+  // railsSchema: 'presets/rb/schema',
+  // reactSchema: 'presets/jsx/schema',
 };
 
 const compileHbsTemplates = () => {
