@@ -9,7 +9,7 @@ Object.keys(SageDictionary.COLOR_CORE).forEach((colorName) => {
 });
 
 // TOKENS_COLOR_PALETTE.GREY_400 --> `#bbcad8`
-export const TOKENS_COLOR_PALETTE = {}
+export const TOKENS_COLOR_PALETTE = {};
 Object.keys(SageDictionary.COLOR).forEach((colorName) => {
   Object.keys(SageDictionary.COLOR[colorName]).forEach((index) => {
     switch (colorName) {
