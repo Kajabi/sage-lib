@@ -1,9 +1,13 @@
-const { templates } = require('./templating');
-const { getCategoryCollection, getComponentSchemas } = require('./utilities');
-
 //
 // Formats
 //
+// Formats are configurations that handle loading, parsing and formatting the tokens
+// for particular uses. They are dependent on transformations configured for a given platform.
+//
+
+const { templates } = require('./templating');
+const { getCategoryCollection, getComponentSchemas } = require('./utilities');
+
 module.exports = {
   'sage/scss/tokens': ({ dictionary, platform }) => {
     const categories = getCategoryCollection(dictionary.allTokens);

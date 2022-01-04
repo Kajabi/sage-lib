@@ -138,18 +138,13 @@ const getComponentSchemas = (tokens) => {
           name: _prop,
         };
 
-        // console.log(_prop, _attrs);
-
         _attrs.map(({ subitem: _attr, states, value }) => {
-          // console.log('--- --- prop:', _prop, value);
           switch (_attr) {
             case 'default':
-              // console.log('--- --- --- default:', getValue(value));
               prop.default = getValue(value);
               break;
             case 'schema':
               // TODO: Determine how to handle schema
-              // console.log('--- --- --- schema:', value);
               prop.schema = value;
               if (value.original.value === 'html') {
                 if (!component.sections) component.sections = []; 
@@ -157,7 +152,6 @@ const getComponentSchemas = (tokens) => {
               }
               break;
             case 'options':
-              // console.log('--- --- --- options:', states);
               prop.options = states.map(({ state, value }) => {
                 return {
                   name: state,
@@ -166,7 +160,6 @@ const getComponentSchemas = (tokens) => {
               });
               break;
             default:
-              // console.log('--- --- --- UNKNOWN', _attr);
             break;
           }
         });
