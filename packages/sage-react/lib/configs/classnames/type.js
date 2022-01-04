@@ -1,4 +1,4 @@
-import { SageDictionary } from '../../dictionary';
+import { SageDictionary } from '../dictionary';
 
 const typeClassPrefix = 't-sage';
 

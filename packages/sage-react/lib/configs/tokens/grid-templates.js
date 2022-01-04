@@ -1,4 +1,4 @@
-import { SageDictionary } from '../../dictionary';
+import { SageDictionary } from '../dictionary';
 
 export const TOKENS_GRID_TEMPLATES = {};
 Object.keys(SageDictionary.CONTENT_GRID_TEMPLATE).forEach((template) => {
