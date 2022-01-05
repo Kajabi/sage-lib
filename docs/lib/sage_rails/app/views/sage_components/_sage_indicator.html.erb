@@ -2,7 +2,7 @@
 <% preposition = component.preposition.present? ? component.preposition : "of" %>
 
 <% if component.show_text %>
-  <p class="sage-indicator-text <%= component.generated_css_classes %>"
+  <p class="sage-indicator-text <%= component.generated_css_classes %>" style="--progress: <%= "#{((component.current_item.to_f / component.num_items.to_f) * 100).floor}%" %>"
     <%= component.generated_html_attributes.html_safe %>
   >
     <%= "#{component.label} #{component.current_item} #{preposition} #{component.num_items}" %>

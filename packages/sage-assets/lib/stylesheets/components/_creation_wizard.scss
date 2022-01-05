@@ -4,6 +4,12 @@
 /// @group sage
 ////
 
+.sage-creation-wizard {
+  &.sage-modal--fullscreen .sage-modal__header {
+    box-shadow: none;
+  }
+}
+
 .sage-creation-wizard__modal-content {
   display: flex;
   min-height: calc(100vh - 6.5rem - 1.5rem);

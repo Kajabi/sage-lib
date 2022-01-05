@@ -56,22 +56,30 @@
       <p>scroll me</p>
     <% end %>
 
+
+      <%= sage_component SageIndicator, {
+        current_item: 2,
+        label: "Page",
+        num_items: 5,
+        show_text: true
+      } %>
+
     <% content_for :sage_creation_wizard_body_actions do %>
-    <%= sage_component SageButton, {
-      style: "secondary",
-      value: "Go back",
-      raised: false,
-      attributes: {
-        href: "#"
-      },
-    } %>
-    <%= sage_component SageButton, {
-      style: "primary",
-      value: "Save and continue",
-      attributes: {
-        href: "#"
-      },
-    } %>
+      <%= sage_component SageButton, {
+        style: "secondary",
+        value: "Go back",
+        raised: false,
+        attributes: {
+          href: "#"
+        },
+      } %>
+      <%= sage_component SageButton, {
+        style: "primary",
+        value: "Save and continue",
+        attributes: {
+          href: "#"
+        },
+      } %>
     <% end %>
 
     <% content_for :sage_creation_wizard_feature do %>
