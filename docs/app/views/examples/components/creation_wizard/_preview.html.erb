@@ -12,10 +12,14 @@
 
 <% content_for :sage_docs_modals do %>
   <%= sage_component SageCreationWizard, {
-    indicator_current_item: 2,
-    indicator_label: "Page",
-    indicator_num_items: 7,
-    show_close: true
+    id: "cool-modal",
+    indicator: {
+      current_item: 2,
+      label: "Page",
+      num_items: 7,
+    },
+    show_close: true,
+    title: "Creation Wizard"
   } do %>
     <% content_for :sage_creation_wizard_body do %>
       <p>scroll me</p>

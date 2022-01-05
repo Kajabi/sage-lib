@@ -7,6 +7,10 @@
 
 $-indicator-size: rem(7px);
 
+:root {
+  --progress: 0;
+}
+
 .sage-indicator-list {
   display: flex;
   align-items: center;
@@ -34,9 +38,15 @@ $-indicator-size: rem(7px);
     margin-top: sage-spacing(2xs);
   }
 
+  .sage-creation-wizard & {
+    height: 0; /* see if there's a better way to achieve hiding here */
+    color: transparent;
+    user-select: none;
+  }
+
   .sage-creation-wizard &::before,
   .sage-creation-wizard &::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 0;
@@ -44,14 +54,14 @@ $-indicator-size: rem(7px);
   }
 
   .sage-creation-wizard &::before {
+    width: 100%;
     background-color: sage-color(grey, 200);
     box-shadow: inset sage-shadow(sm);
-    width: 100%;
   }
 
   .sage-creation-wizard &::after {
-    background-color: sage-color(primary);
     width: var(--progress, 0);
+    background-color: sage-color(primary);
   }
 }
 
