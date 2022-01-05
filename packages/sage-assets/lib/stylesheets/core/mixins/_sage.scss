@@ -479,6 +479,7 @@
   @extend %t-sage-body-xsmall;
 
   margin-top: sage-spacing(xs);
+  padding-left: sage-spacing(sm);
   color: sage-color(charcoal, 100);
 
   .sage-form-field--error & {
