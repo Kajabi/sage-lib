@@ -7,7 +7,7 @@
 // that are consumed by our formatters.
 //
 
-const Handlebars = require('Handlebars');
+const Handlebars = require('handlebars');
 const fs = require('fs');
 
 
