@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.33.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.33.1...@kajabi/sage@4.33.2) (2022-01-05)
+
+
+### Bug Fixes
+
+* **sageavatar:** add avatar image id in sage_schemas ([1c47cc4](https://github.com/Kajabi/sage-lib/commit/1c47cc4aa32e3302723e1e0337ae3d11aab62bd8))
+* **sageavatar:** adds optional id to image_tag ([45090c9](https://github.com/Kajabi/sage-lib/commit/45090c98fc07b76aa150c47ab9e96a297d8ff6ce))
+
+
+
+
+
 ## [4.33.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.33.0...@kajabi/sage@4.33.1) (2021-12-22)
 
 

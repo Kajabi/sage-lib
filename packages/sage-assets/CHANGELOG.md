@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.63.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.63.2...@kajabi/sage-assets@0.63.3) (2022-01-05)
+
+
+### Bug Fixes
+
+* **form-elements:** update message spacing and select color ([3eb15d4](https://github.com/Kajabi/sage-lib/commit/3eb15d4694c0fb8fefc0009bf65a5c81e5399a18))
+
+
+
+
+
 ## [0.63.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.63.1...@kajabi/sage-assets@0.63.2) (2021-12-22)
 
 
