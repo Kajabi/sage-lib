@@ -21,7 +21,7 @@
     <% end %>
 
     <% content_for :sage_header_indicator do %>
-      <%# sage_component SageIndicator, {
+      <% sage_component SageIndicator, {
         current_item: 2,
         label: "Page",
         num_items: 5,
@@ -44,7 +44,7 @@
         <%= sage_component SageButtonGroup, {
           gap: :md,
           css_classes: "sage-creation-wizard__form-actions"
-        } do %>
+          } do %>
           <%= content_for :sage_creation_wizard_body_actions %>
         <% end %>
       <% end %>

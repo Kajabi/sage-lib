@@ -3,6 +3,6 @@ class SageCreationWizard < SageComponent
     show_close: [:optional, TrueClass],
   })
   def sections
-    %w(creation_wizard_header creation_wizard_body creation_wizard_body_actions creation_wizard_feature)
+    %w(creation_wizard_body creation_wizard_body_actions creation_wizard_header creation_wizard_header_indicator creation_wizard_feature)
   end
 end
