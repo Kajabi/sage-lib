@@ -17,21 +17,21 @@ export const Carousel = ({
   const [arrowPrevDisabled, setArrowPrevDisabled] = useState(false);
   const [arrowNextDisabled, setArrowNextDisabled] = useState(false);
 
-  function handlePrevArrowClick() {
+  const handlePrevArrowClick = () => {
     if (!looping) {
       if (slidesIndex !== 0) setSlidesIndex(slidesIndex - 1);
     } else {
       mySlider.goTo('prev');
     }
-  }
+  };
 
-  function handleNextArrowClick() {
+  const handleNextArrowClick = () => {
     if (!looping) {
       if (slidesIndex !== slidesLength - 1) setSlidesIndex(slidesIndex + 1);
     } else {
       mySlider.goTo('next');
     }
-  }
+  };
 
   useEffect(() => {
     const childrenArray = children.props.children;
