@@ -22,9 +22,9 @@
 
     <% content_for :sage_header_indicator do %>
       <% sage_component SageIndicator, {
-        current_item: 2,
-        label: "Page",
-        num_items: 5,
+        current_item: component.indicator_current_item,
+        label: component.indicator_label,
+        num_items: component.indicator_num_items,
         show_text: true
       } %>
     <% end %>

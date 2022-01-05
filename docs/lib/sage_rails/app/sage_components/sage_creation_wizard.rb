@@ -1,5 +1,8 @@
 class SageCreationWizard < SageComponent
   set_attribute_schema({
+    indicator_current_item: [:optional, Integer],
+    indicator_label: [:optional, String],
+    indicator_num_items: [:optional, Integer],
     show_close: [:optional, TrueClass],
   })
   def sections
