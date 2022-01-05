@@ -21,7 +21,11 @@ is_responsive = component.responsive.present? ? component.responsive : true
     <%= component.generated_html_attributes.html_safe %>
   >
     <% if component.caption.present? %>
-      <caption><%= component.caption.html_safe %></caption>
+      <caption class="
+        <%= "sage-table__caption--#{component.caption_side}" %>
+      ">
+        <%= component.caption.html_safe %>
+      </caption>
     <% end %>
     <% if component.headers.present? %>
       <thead>
