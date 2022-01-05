@@ -67,9 +67,9 @@ $sd-sage-{{../category}}{{#if (notBaseType type)}}-{{type}}{{/if}}: (
     {{/if}}
 ///
 @function sd-sage-{{../category}}{{#if (notBaseType type)}}-{{type}}{{/if}}(
-  $key,{{#if (hasAnySubitems items)}}
-  $subkey,{{#if (hasAnyStates items)}}
-  $subsubkey,{{/if}}{{/if}}
+  $key{{#if (hasAnySubitems items)}},
+  $subkey{{#if (hasAnyStates items)}},
+  $subsubkey{{/if}}{{/if}}
 ) {
   $value: map-get($sd-sage-{{../category}}{{#if (notBaseType type)}}-{{type}}{{/if}}, $key);
     {{#if (hasAnySubitems items)}}
