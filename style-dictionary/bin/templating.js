@@ -4,7 +4,7 @@
 // Our implementation of Style Dictionary uses Handlebars templates
 // in order to afford a customized output for each of our system's contexts.
 // This file contains the library of utilities, helpers, and complied templates
-// that are consumed by our formatters.
+// that are consumed by our Formatters.
 //
 
 const Handlebars = require('handlebars');
