@@ -170,6 +170,16 @@ module ComponentsHelper
         figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F9Km09NjlZHYWsMP7EGT8tI%2FSage-3-for-Admin%3Fnode-id%3D4195%253A20283",
       },
       {
+        title: "creation_wizard",
+        description: "The creation wizard is composed of a fullscreen modal with a form and an accompanying live preview.",
+        scss: "done",
+        rails: "done",
+        react: "done",
+        a11y: "done",
+        react_component_slug: "sage-creationwizard--default",
+        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FaYygNca9JqBoQs1VwwFyRd%2FProduct-Creation-Flow%3Fnode-id%3D1354%253A12288",
+      },
+      {
         title: "description",
         description: "A description is composed of title and data content and is structured as a definition list.",
         scss: "done",
