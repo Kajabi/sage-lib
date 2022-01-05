@@ -16,7 +16,7 @@
 module.exports = {
   //
   // Ensures that a string value from the JSON
-  // gets sent to the formatter with CSS-safe values
+  // gets sent to the Formatter with CSS-safe values
   //
   'sage/value/sassSafe': {
     type: 'value',
@@ -36,7 +36,7 @@ module.exports = {
   },
   //
   // Ensures that a string value from the JSON
-  // gets sent to the formatter with string markers
+  // gets sent to the Formatter with string markers
   // such as for use in Rails or JS contexts.
   //
   // 'sage/value/globalTypes': {

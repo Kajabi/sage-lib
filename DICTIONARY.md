@@ -3,7 +3,17 @@
 The Sage Dictionary is a library of tokens and component configurations built using [Style Dictionary](https://amzn.github.io/style-dictionary/).
 This allows us to keep a simple JSON structure for these values but allow each to be formatted and distributed to the other Sage packages automatically.
 
-More coming soon!
+In summary, Style Dictionary allows the following:
+
+1. We set up `json` files in `/style-dictionary/tokens` that follow a particular format for centralizing token values. For now we have just shown what is possible with the various color and grid template tokens.
+2. `yarn build:sd` runs within `yarn start` and our normal build process and compiles these token values out to the other formats based on the configurations set up in `/style-dictionary/configs.js`:
+    - `packages/sage-assets/lib/stylesheets/dictionary/_tokens.scss` for a series of Sass variables with a prefix of `$sd-sage-`
+    - `docs/lib/sage_rails/app/sage_components/sage_dictionary.rb` from `SageDictionary` within Rails.
+    - `packages/sage-react/lib/configs/dictionary/tokens.js` for `SageDictionary` within React.
+
+    Note that `yarn build:sd` must be run manually whenever changes are made to any of the `style-dictionary` files. Future will include an automated watch script.
+
+3. These compiled tokens are manually implement underneath each platform's existing variables/constants to ensure minimal external change for consuming Sage tokens at this time.
 
 ## CTI structure
 
@@ -11,32 +21,33 @@ Style Dictionary follows the "Category Type Item (CTI)" structure as a baseline 
 
 We have followed CTI as much as possible in our system. We've also made use of some categories as follows within the `style-dictionary/tokens/` directory by using the following categories:
 
-- `color` - Style dictionary provides transforms that take any standard color values and automatically provide additional format values.
+- `color` - Style dictionary provides Transforms that take any standard color values and automatically provide additional format values.
   This makes it easy to set colors as hex values in our data structure but consumer them in other formats elsewhere.
   We have set up the following `types`:
-  - `base` -- the small set of core color values for our system
-  - `slider` -- the expanded set of color slides for each of our base colors
+  - `base` -- the full set of color values for our system including each one's hex value, type color classname, and alias/code such as `primary-100`
   - `combos` -- configurations of color combinations used by several different components
+  - `core` -- the abbreviated set of base color values that correspond to the `300` value for each color.
   - `custom` -- additional colors used in the system beyond the base palette.
-- `content` - Style dictionary provides transforms for treating content formats as strings.
+- `content` - Style dictionary provides Transforms for treating content formats as strings.
   We have set up the following `types`:
-  - `icons` - Unicode values for the icons in our icon fonts.
   - `grid-templates` - "morse code"-like grid template configurations. See Documentation > Grid Templates.
-- `size` - Style dictioanry provides transforms for taking size measurements (numbers) and converting them to other units.
-  In our case, we built a custom transform based on Style Dictioanry's `size/object` preset that adds a `rem()` output for our Sass context.
-  We have set up the following `types`:
-  - `border-radius`
-  - `breakpoint` (media query `min` and `max`)
-  - `container` - Options for system layout containers
-  - `font-size`
-  - `icon` - Options for sizing icons
-  - `icon-background` - Options for sizing the background space in which icons can be placed.
-  - `letter-spacing`
-  - `line-height`
-  - `sidebar` - Options for our system sidebar size
-  - `spacer` - Standard spacers used throughout the system
+- FUTURE:
+  - `content/icons` - Unicode values for the icons in our icon fonts.
+  - `size` - Style dictioanry provides Transforms for taking size measurements (numbers) and converting them to other units.
+    In our case, we built a custom Transform based on Style Dictioanry's `size/object` preset that adds a `rem()` output for our Sass context.
+    We have set up the following `types`:
+    - `border-radius`
+    - `breakpoint` (media query `min` and `max`)
+    - `container` - Options for system layout containers
+    - `font-size`
+    - `icon` - Options for sizing icons
+    - `icon-background` - Options for sizing the background space in which icons can be placed.
+    - `letter-spacing`
+    - `line-height`
+    - `sidebar` - Options for our system sidebar size
+    - `spacer` - Standard spacers used throughout the system
 
-We have extended this structure with the following custom categories:
+We have plans to further extend this structure with the following custom categories:
 
 - `component` -- configurations for each of our system components so as to ensure a consistent structure is used by all packages. These use the following data structure:
   - [compoent]
@@ -60,35 +71,49 @@ We have extended this structure with the following custom categories:
 ## Platforms
 
 Platforms are the core set of configurations that determine the ways that dictionary data is output.
-These take the core data, mutated by "transforms", and output based on "formats" so that dictionary content can be distributed to different areas of our system.
+These take the core data, mutated by "Transforms", and output based on "Formats" so that dictionary
+content can be distributed to different areas of our system.
 
 We have configured the following platforms:
 
-- React Tokens
-- React Component Typings
 - Rails Tokens
-- Rails Component Schemas
+- React Tokens
 - Sass Tokens
+
+In the future we intend to develop platforms for the following:
+
+- React Component Typescript Typings
+- Rails Component Schemas
+
+See [Style Dictionary's documentation for Configuring Platforms](https://amzn.github.io/style-dictionary/#/config) and `style-dictionary/bin/platforms.js` for our implementation.
 
 ## Transforms
 
 While core dictionary values are stored in JSON format, Style Dictionary provides Transforms that allow us to mutate this core data in many different ways.
-There are transforms delivered with Style Dictionary and we have added our own custom transformations for a few different places.
+There are Transforms delivered with Style Dictionary and we have added our own custom Transformations for a few different places.
 
-Details coming soon.
+See [Style Dictionary's documentation for Transforms](https://amzn.github.io/style-dictionary/#/Transforms) and `style-dictionary/bin/Transforms.js` for our implementation.
+
+Note that groups of Transforms can be set up for a platform as well. See `style-dictionary/bin/Transform-groups.js` for our implementation of this feature.
 
 ## Formats
 
-Style Dictionary Platforms rely on transforms and formats to generate the desired output.
-In the case of formats, these provide specific templates for how values are output in platform-specific files and syntax.
+Style Dictionary Platforms rely on Transforms and Formats to generate the desired output.
+Formats provide specific templates for how values are output in platform-specific files and syntax.
 
-While Style Dictionary provides a number of default formats, for Sage we built custom formats that use Handlebars templates to generate the desired output. See the `style-dictionary/templates/` folder.
+While Style Dictionary provides a number of default Formats, for Sage we built custom Formats that use Handlebars templates to generate the desired output. See the `style-dictionary/templates/` folder.
 Any new templates must be registerred in the `templateFiles` array set within `style-dictionary/bin/templating.js`.
 
-Details coming soon.
+See [Style Dictionary's documentation for Transforms](https://amzn.github.io/style-dictionary/#/formats) and `style-dictionary/bin/formats.js` for our implementation.
+
+## Templates
+
+Style Dictionary provides the opportunity within Formats to use a variety of templating approaches for controlling how tokens are output. We have chosen to use Handlebars to create templates for such purposes.
+
+See `style-dictionary/bin/templating.js` and `style-dictionary/templates` for more.
 
 ## Utilities
 
 Outside of the Style Dictionary system we built a small library of utilities that support aspects of our custom additions.
 
-Details coming soon.
+See `style-dictionary/bin/utilities.js` for more.

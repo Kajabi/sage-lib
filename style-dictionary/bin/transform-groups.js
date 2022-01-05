@@ -1,7 +1,7 @@
 //
 // Transform Groups
 //
-// Transform groups are combinations of transforms intended to apply to all the tokens in a given platform.
+// Transform groups are combinations of Transforms intended to apply to all the tokens in a given platform.
 // Following convention, name these using `sage/` followed by the general context such as `scss/`, `rails/`, `react/`, etc.
 // Then provide a move specific name for the group.
 // Note that Style dictionary provides a number of presets found here: 
