@@ -14,7 +14,7 @@ export const Hint: React.FC<Props> = ({
   content,
   icon = null,
   ...rest
-}) => {
+}): JSX.Element => {
   const classNames = classnames(
     'sage-hint',
     className,
@@ -31,6 +31,8 @@ export const Hint: React.FC<Props> = ({
           color={undefined}
           label={undefined}
           size={undefined}
+          backgroundHeight={undefined}
+          backgroundWidth={undefined}
         />
       )}
       <span className="sage-hint__content">{content}</span>
