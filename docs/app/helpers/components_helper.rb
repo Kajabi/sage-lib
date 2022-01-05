@@ -560,6 +560,7 @@ module ComponentsHelper
         rails: "done",
         react: "todo",
         a11y: "todo",
+        react_component_slug: "sage-formsection--default",
         figma_embed: "",
       },
       {
