@@ -38,7 +38,7 @@
     "bridge:kajabi-products": "bin/bridge.sh true",
     "bridge:kajabi-products:status": "bin/bridge.sh status",
     "bridge:kajabi-products:destroy": "bin/bridge.sh false",
-    "build": "yarn npm-run-all --parallel build:*",
+    "build": "yarn npm-run-all build:*",
     "build:sd": "yarn style-dictionary build --config ./style-dictionary/config.js",
     "build:assets": "cd packages/sage-assets && yarn build",
     "build:react": "cd packages/sage-react && yarn build",
