@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Modal } from '../Modal';
+import { Grid } from '../Grid';
 import { Button } from '../Button';
+import { Indicator } from '../Indicator';
 import { SageTokens } from '../configs';
 
 export const CreationWizard = ({
@@ -23,7 +25,7 @@ export const CreationWizard = ({
   <Modal
     active={active}
     className={`sage-creation-wizard ${className || ''}`}
-    fullscreen={true}
+    fullScreen={true}
     id={id}
   >
     <Modal.Header
@@ -41,8 +43,36 @@ export const CreationWizard = ({
         </Button>
       )}
     />
-    <Modal.Body>
+    <Modal.Body className="sage-creation-wizard__modal-content">
+      {headerIndicator && (
+        <>
+          <Indicator
+            currentItem={indicator.currentItem}
+            label={indicator.label}
+            numItems={indicator.numItems}
+          />
+        </>
+      )}
 
+      {body && (
+        <Grid.Col size="5" className="sage-creation-wizard__form">
+          <div className="sage-creation-wizard__form-content">
+            {body}
+          </div>
+
+          {bodyActions && (
+            <div className="sage-creation-wizard__form-actions">
+              {bodyActions}
+            </div>
+          )}
+        </Grid.Col>
+      )}
+
+      {feature && (
+        <Grid.Col size="7" className="sage-creation-wizard__live-preview">
+          {feature}
+        </Grid.Col>
+      )}
     </Modal.Body>
   </Modal>
 );
@@ -58,7 +88,11 @@ CreationWizard.defaultProps = {
   headerIndicator: null,
   id: null,
   image: null,
-  indicator: null,
+  indicator: {
+    currentItem: null,
+    label: null,
+    numItems: null
+  },
   onExit: (val) => val,
   showClose: true,
   title: null,
