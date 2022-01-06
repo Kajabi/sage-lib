@@ -1,5 +1,10 @@
 import PropTypes from 'prop-types';
 
+export const CAPTION_SIDE = {
+  BOTTOM: 'bottom',
+  TOP: 'top',
+};
+
 // Basic data value types
 export const dataPropTypes = PropTypes.oneOfType([
   PropTypes.string,

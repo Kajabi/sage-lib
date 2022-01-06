@@ -3,10 +3,16 @@ import { Panel } from '../Panel';
 import { Table } from './Table';
 import { dataCollection } from './sample-data/contacts';
 import { domains } from './sample-data/domains';
+import { selectArgs } from '../story-support/helpers';
 
 export default {
   title: 'Sage/Table',
   component: Table,
+  argTypes: {
+    ...selectArgs({
+      captionSide: Table.CAPTION_SIDE
+    })
+  },
   args: {
     headers: {
       first: {
