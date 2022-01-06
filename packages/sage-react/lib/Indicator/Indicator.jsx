@@ -34,10 +34,14 @@ export const Indicator = ({
     );
   }
 
+  const renderIndicatorProgress = () => {
+    return currentItem / numItems * 100
+  }
+
   return (
     <>
       {showText ? (
-        <p className="sage-indicator-text">{label} {currentItem} {preposition} {numItems}</p>
+        <p className="sage-indicator-text" style={{"--progress": `${renderIndicatorProgress()}%`}}>{label} {currentItem} {preposition} {numItems}</p>
       ) : (
         <ul
           className={`sage-indicator-list ${className}`}
