@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import { Icon } from '../Icon';
 import { TokensIcons } from '../configs/tokens/icons'
 
-interface Props {
+export interface HintProps {
   className?: string,
   content: string,
   icon?: TokensIcons | null,
@@ -14,7 +14,7 @@ export const Hint = ({
   content,
   icon = null,
   ...rest
-}: Props): JSX.Element => {
+}: HintProps): JSX.Element => {
   const classNames = classnames(
     'sage-hint',
     className,

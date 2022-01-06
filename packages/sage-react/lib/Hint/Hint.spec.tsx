@@ -1,15 +1,17 @@
 require('../test/testHelper');
 
 import React from 'react';
-import { shallow } from 'enzyme';
-import { Hint } from './Hint';
+import { shallow, ShallowWrapper } from 'enzyme';
+import { Hint, HintProps} from './Hint';
 
 describe('Sage Hint', () => {
-  let component,
-    defaultProps;
+  let component: ShallowWrapper
+  let defaultProps: HintProps;
 
   beforeEach(() => {
-    defaultProps = {};
+    defaultProps = {
+      content: ""
+    };
 
     component = shallow(
       <Hint {...defaultProps} />
