@@ -13,7 +13,7 @@ In summary, Style Dictionary allows the following:
 
     Note that `yarn build:sd` must be run manually whenever changes are made to any of the `style-dictionary` files. Future will include an automated watch script.
 
-3. These compiled tokens are manually implement underneath each platform's existing variables/constants to ensure minimal external change for consuming Sage tokens at this time.
+3. These compiled tokens are manually implemented underneath each platform's existing variables/constants to ensure minimal external change for consuming Sage tokens at this time.
 
 ## CTI structure
 
