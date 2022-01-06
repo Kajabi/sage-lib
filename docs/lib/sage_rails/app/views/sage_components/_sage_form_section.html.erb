@@ -1,23 +1,36 @@
 <% html_tag = component.title_tag ? component.title_tag : "h5" %>
- 
+
 <div
   class="sage-form-section <%= component.generated_css_classes %>"
   <%= "id=#{component.id}" if component.id.present? %>
   <%= component.generated_html_attributes.html_safe %>
 >
-  <div class="sage-form-section__info">
-    <% if component.title.present? %>
-      <<%= html_tag %> class="sage-form-section__title t-sage-heading-5">
-        <%= component.title %>
-      </<%= html_tag %>>
+  <%= sage_component SageGridRow, {} do %>
+    <%= sage_component SageGridCol, { breakpoint: :lg, size: "4" } do %>
+      <div class="sage-form-section__info">
+        <% if component.title.present? %>
+          <<%= html_tag %> class="sage-form-section__title t-sage-heading-5">
+            <%= component.title %>
+          </<%= html_tag %>>
+        <% end %>
+        <% if component.subtitle.present? %>
+          <p class="sage-form-section__subtitle sage-form-section__subtitle--legacy">
+            <%= component.subtitle %>
+          </p>
+        <% end %>
+        <% if content_for? :sage_form_section_subtitle %>
+          <div class="sage-form-section__subtitle">
+            <%= content_for :sage_form_section_subtitle %>
+          </div>
+        <% end %>
+      </div>
     <% end %>
-    <% if component.subtitle.present? %>
-      <p class="sage-form-section__subtitle"><%= component.subtitle %></p>
+    <%= sage_component SageGridCol, { breakpoint: :lg, size: "8" } do %>
+      <%= sage_component SagePanel, {} do %>
+        <div class="sage-form-section__content">
+          <%= component.content %>
+        </div>
+      <% end %>
     <% end %>
-  </div>
-  <div class="sage-form-section__content">
-    <div class="sage-form-section__panel">
-      <%= component.content %>
-    </div>
-  </div>
+  <% end %>
 </div>

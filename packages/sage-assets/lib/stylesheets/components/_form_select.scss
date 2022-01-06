@@ -84,7 +84,6 @@ $-select-padding-label: sage-spacing(2xs);
 
   .sage-select--value-selected & {
     color: $-select-color-default;
-    border-color: $-select-color-border-selected;
   }
 
   .sage-select--value-selected &:disabled {

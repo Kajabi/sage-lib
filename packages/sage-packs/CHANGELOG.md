@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.97](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.1.96...@kajabi/sage-packs@0.1.97) (2022-01-05)
+
+**Note:** Version bump only for package @kajabi/sage-packs
+
+
+
+
+
+## [0.1.96](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.1.95...@kajabi/sage-packs@0.1.96) (2021-12-22)
+
+**Note:** Version bump only for package @kajabi/sage-packs
+
+
+
+
+
+## [0.1.95](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.1.94...@kajabi/sage-packs@0.1.95) (2021-12-22)
+
+**Note:** Version bump only for package @kajabi/sage-packs
+
+
+
+
+
 ## [0.1.94](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.1.93...@kajabi/sage-packs@0.1.94) (2021-12-20)
 
 **Note:** Version bump only for package @kajabi/sage-packs

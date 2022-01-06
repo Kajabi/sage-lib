@@ -14,12 +14,14 @@ $-expandable-card-padding-xs: sage-spacing(xs);
 
 .sage-expandable-card__body,
 .sage-expandable-card__body-bordered {
+  visibility: hidden;
   overflow: hidden;
   height: 0;
   margin: 0;
   padding: 0;
   
   .sage-expandable-card--expanded & {
+    visibility: visible;
     overflow: initial;
     height: auto;
     margin-top: sage-spacing(xs);

@@ -3,6 +3,35 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.74.4](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.74.3...@kajabi/sage-react@0.74.4) (2022-01-05)
+
+
+### Bug Fixes
+
+* **form section:** adds breakpoints for grid ([d44f751](https://github.com/Kajabi/sage-lib/commit/d44f751f0e399f7aef758abe824e37a07842f064))
+* **sortable:** added drag class option ([4e58d2e](https://github.com/Kajabi/sage-lib/commit/4e58d2e121787592c91da8daeacb589926daeeae))
+* **textarea:** update error state ([9a54885](https://github.com/Kajabi/sage-lib/commit/9a54885989b0634cb1b5bc8e59f79400e0be7b2b))
+
+
+
+
+
+## [0.74.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.74.2...@kajabi/sage-react@0.74.3) (2021-12-22)
+
+**Note:** Version bump only for package @kajabi/sage-react
+
+
+
+
+
+## [0.74.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.74.1...@kajabi/sage-react@0.74.2) (2021-12-22)
+
+**Note:** Version bump only for package @kajabi/sage-react
+
+
+
+
+
 ## [0.74.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.74.0...@kajabi/sage-react@0.74.1) (2021-12-20)
 
 
