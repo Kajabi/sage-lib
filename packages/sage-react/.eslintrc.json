@@ -27,7 +27,8 @@
   "settings": {
     "import/resolver": {
       "node": {
-        "paths": ["app/javascript"]
+        "paths": ["app/javascript"],
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
       }
     }
   },
@@ -46,6 +47,16 @@
     }],
     "import/no-named-as-default": ["off"],
     "import/prefer-default-export": ["off"],
+    "import/extensions": [
+        "error",
+        "ignorePackages",
+        {
+          "js": "never",
+          "jsx": "never",
+          "ts": "never",
+          "tsx": "never"
+        }
+    ],
     "no-param-reassign": ["off"],
     "no-shadow": ["off"],
     "no-undef": ["error"],
