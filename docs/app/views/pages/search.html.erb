@@ -10,7 +10,11 @@
       placeholder: "Search Sage Components",
       value: params[:search] || "",
     } %>
-    <%= sage_component SageButton, { value: "Search", style: "primary", attributes: { type: "submit" } } %>
+    <%= sage_component SageButton, {
+      value: "Search",
+      style: "primary",
+      attributes: { type: "submit" }
+    } %>
   <% end %>
 <% end %>
 <% if @search.present? %>
