@@ -24,11 +24,15 @@ export default {
     ),
     body: (
       <>
-        <p>
-          Maximize your profit by adding an Upsell to your order flow.
-          This section might wrap to two lines.
-        </p>
-        <p>Here is the second line. It has some text also.</p>
+        <p>Scroll me</p>
+        <p>Scroll me</p>
+        <p>Scroll me</p>
+        <p>Scroll me</p>
+        <p>Scroll me</p>
+        <p>Scroll me</p>
+        <p>Scroll me</p>
+        <p>Scroll me</p>
+        <p>Scroll me</p>
       </>
     ),
     headerIndicator: true,
@@ -39,12 +43,7 @@ export default {
     },
     onExit: () => { console.log('Add your own dismiss functionality here!'); },
     title: 'Creation Wizard Title',
-  },
-  argTypes: {
-    ...selectArgs({
-      // cardColor: NextBestAction.COLORS,
-    }),
-  },
+  }
 };
 const Template = (args) => <CreationWizard {...args} />;
 export const Default = Template.bind({});
