@@ -4,6 +4,11 @@
 /// @group sage
 ////
 
+$-creation-wizard-modal-top-spacing: 8rem;
+$-creation-wizard-column-top-spacing: rem(60px);
+$-creation-wizard-form-height: rem(84px);
+$-creation-wizard-form-content-height: rem(140px);
+
 .sage-creation-wizard {
   &.sage-modal--fullscreen .sage-modal__header {
     box-shadow: none;
@@ -12,7 +17,7 @@
 
 .sage-creation-wizard__modal-content {
   display: flex;
-  min-height: calc(100vh - 6.5rem - 1.5rem);
+  min-height: calc(100vh - $-creation-wizard-top-spacing);
 
   .sage-creation-wizard .sage-modal__container & {
     margin-top: 0;
@@ -28,7 +33,7 @@
   }
 
   > [class*="sage-col"] {
-    margin-top: rem(60px);
+    margin-top: $-creation-wizard-column-top-spacing;
   }
 }
 
@@ -36,7 +41,7 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  height: calc(100vh - 84px);
+  height: calc(100vh - $-creation-wizard-form-height);
 }
 
 .sage-creation-wizard__form-content {
@@ -44,7 +49,7 @@
   flex-direction: column;
   flex-grow: 1;
   overflow: scroll;
-  height: calc(100vh - 140px);
+  height: calc(100vh - $-creation-wizard-form-content-height);
   padding-bottom: sage-spacing();
   padding-top: sage-spacing();
 }
