@@ -14,6 +14,7 @@ export const ModalHeader = ({
   children,
   className,
   customHeader,
+  headerIndicator,
   popover,
   icon,
   image,
@@ -50,7 +51,6 @@ export const ModalHeader = ({
           {customHeader || <h1 className={headerActionsClassNames}>{title}</h1>}
           {actions && <ModalHeaderActions>{actions}</ModalHeaderActions>}
           {aside && <ModalHeaderAside>{aside}</ModalHeaderAside>}
-
         </Card.Row>
         {subheader && (
           <Card.Row>
@@ -69,6 +69,7 @@ export const ModalHeader = ({
           </Card.Row>
         )}
         {children}
+        {headerIndicator && <>{headerIndicator}</>}
       </div>
     </header>
   );
@@ -83,6 +84,7 @@ ModalHeader.defaultProps = {
   children: null,
   className: null,
   customHeader: null,
+  headerIndicator: null,
   icon: null,
   image: null,
   popover: null,
@@ -96,6 +98,7 @@ ModalHeader.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
   customHeader: PropTypes.node,
+  headerIndicator: PropTypes.arrayOf(PropTypes.node),
   icon: PropTypes.shape({
     color: PropTypes.oneOf(Object.values(Icon.COLORS)),
     name: PropTypes.oneOf(Object.values(Icon.ICONS)),

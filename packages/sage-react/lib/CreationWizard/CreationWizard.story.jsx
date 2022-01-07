@@ -31,14 +31,12 @@ export default {
         <p>Here is the second line. It has some text also.</p>
       </>
     ),
-    headerIndicator: (
-      <>
-      </>
-    ),
-    // graphic: {
-    //   element: (<img src="//source.unsplash.com/random/272x272" alt="" />)
-    // },
-    // eslint-disable-next-line no-console
+    headerIndicator: true,
+    indicator: {
+      currentItem: 2,
+      label: 'Pages',
+      numItems: 7
+    },
     onExit: () => { console.log('Add your own dismiss functionality here!'); },
     title: 'Creation Wizard Title',
   },
@@ -51,7 +49,7 @@ export default {
 const Template = (args) => <CreationWizard {...args} />;
 export const Default = Template.bind({});
 
-export const WiredExample = () => {
+export const WiredExample = (args) => {
   const [creationWizardActive, setCreationWizardActive] = React.useState(false);
 
   return (
@@ -63,18 +61,20 @@ export const WiredExample = () => {
         Toggle creation wizard
       </Button>
       <CreationWizard
+        {...args}
         active={creationWizardActive}
         bodyActions={(
           <>
             <Button
-              color={Button.COLORS.SECONCARY}
+              color={Button.COLORS.SECONDARY}
+              raised={false}
             >
               Go Back
             </Button>
             <Button
               color={Button.COLORS.PRIMARY}
             >
-              Add an Upsell
+              Save and continue
             </Button>
           </>
         )}
@@ -128,6 +128,11 @@ export const WiredExample = () => {
             <p>live preview</p>
           </>
         )}
+        indicator={{
+          currentItem: args.indicator.currentItem,
+          label: args.indicator.label,
+          numItems: args.indicator.numItems
+        }}
         onExit={() => setCreationWizardActive(false)}
         title="Creation Wizard Title"
       />

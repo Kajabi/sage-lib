@@ -12,8 +12,6 @@ export const CreationWizard = ({
   bodyActions,
   feature,
   header,
-  headerIndicator,
-  children,
   className,
   id,
   image,
@@ -42,18 +40,20 @@ export const CreationWizard = ({
           Close Drawer
         </Button>
       )}
-    />
-    <Modal.Body className="sage-creation-wizard__modal-content">
-      {headerIndicator && (
+      >
+      {/* sure up this conditional, very weak at the moment; it should be if any indicator value is present or if the shape is met*/}
+      {indicator.currentItem !== null && (
         <>
           <Indicator
             currentItem={indicator.currentItem}
             label={indicator.label}
             numItems={indicator.numItems}
+            showText={true}
           />
         </>
       )}
-
+    </Modal.Header>
+    <Modal.Body className="sage-creation-wizard__modal-content">
       {body && (
         <Grid.Col size="5" className="sage-creation-wizard__form">
           <div className="sage-creation-wizard__form-content">
@@ -61,9 +61,12 @@ export const CreationWizard = ({
           </div>
 
           {bodyActions && (
-            <div className="sage-creation-wizard__form-actions">
+            <Button.Group
+              gap={Button.Group.GAP_OPTIONS.MD}
+              className="sage-creation-wizard__form-actions"
+            >
               {bodyActions}
-            </div>
+            </Button.Group>
           )}
         </Grid.Col>
       )}
@@ -85,7 +88,6 @@ CreationWizard.defaultProps = {
   className: null,
   feature: null,
   header: null,
-  headerIndicator: null,
   id: null,
   image: null,
   indicator: {
@@ -106,7 +108,6 @@ CreationWizard.propTypes = {
   className: PropTypes.string,
   feature: PropTypes.arrayOf(PropTypes.node),
   header: PropTypes.arrayOf(PropTypes.node),
-  headerIndicator: PropTypes.arrayOf(PropTypes.node),
   id: PropTypes.string.isRequired,
   image: PropTypes.shape({
     alt: PropTypes.string,
