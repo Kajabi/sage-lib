@@ -14,8 +14,11 @@ export const Modal = ({
   children,
   className,
   containerClassName,
+  disableBackgroundBlur,
+  disableBackgroundDismiss,
+  fullScreen,
+  id,
   large,
-  noBlur,
   onExit,
   ...rest
 }) => {
@@ -25,7 +28,9 @@ export const Modal = ({
     {
       'sage-modal--active': active,
       'sage-modal--large': large,
-      'sage-modal--no-blur': noBlur,
+      'sage-modal--fullscreen': fullScreen,
+      'sage-modal--no-blur': disableBackgroundBlur,
+      'sage-modal--no-background-dismiss': disableBackgroundDismiss,
     }
   );
 
@@ -50,15 +55,22 @@ export const Modal = ({
     // console.log(e.keyCode);
   };
 
+  const attrs = {};
+
+  if (!disableBackgroundDismiss) {
+    attrs.onClick = handleBackgroundClick;
+    attrs.onKeyPress = handleBackgroundKeypress;
+    attrs.role = 'button';
+    attrs.tabIndex = '0';
+  }
+
   return (
     <div
       className={classNames}
+      id={id}
       open={active}
-      onClick={handleBackgroundClick}
-      onKeyPress={handleBackgroundKeypress}
-      role="button"
-      tabIndex="0"
       {...animationAttributes}
+      {...attrs}
     >
       <div
         className={`sage-modal__container ${containerClassName || ''}`}
@@ -85,8 +97,11 @@ Modal.defaultProps = {
   children: null,
   containerClassName: null,
   className: '',
+  fullScreen: false,
   large: false,
-  noBlur: false,
+  id: null,
+  disableBackgroundBlur: false,
+  disableBackgroundDismiss: false,
   onExit: (val) => val,
 };
 
@@ -101,7 +116,10 @@ Modal.propTypes = {
   children: PropTypes.node,
   containerClassName: PropTypes.string,
   className: PropTypes.string,
+  disableBackgroundBlur: PropTypes.bool,
+  disableBackgroundDismiss: PropTypes.bool,
+  fullScreen: PropTypes.bool,
+  id: PropTypes.string,
   large: PropTypes.bool,
-  noBlur: PropTypes.bool,
   onExit: PropTypes.func,
 };

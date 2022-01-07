@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import * as Recharts from 'recharts';
 import { Legend, Tooltip as SageTooltip } from '../parts';
 import {
   defaultTooltipContentFormatterFn,
@@ -11,6 +10,7 @@ import { SageTokens } from '../../configs';
 export const Bar = ({
   aspect,
   bars,
+  chartingFramework,
   data,
   showLegend,
   tooltipContentFormatterFn,
@@ -19,6 +19,8 @@ export const Bar = ({
   ...rest
 }) => {
   const { BarChart, CartesianGrid, Tooltip, XAxis, YAxis } = { ...rest };
+
+  const Recharts = chartingFramework;
 
   return (
     <>
@@ -86,6 +88,7 @@ Bar.propTypes = {
     fill: PropTypes.string,
     name: PropTypes.string,
   })),
+  chartingFramework: PropTypes.shape({}).isRequired,
   data: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string.isRequired,
     value: PropTypes.number,

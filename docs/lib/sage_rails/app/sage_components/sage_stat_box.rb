@@ -7,6 +7,11 @@ class SageStatBox < SageComponent
     }],
     data: String,
     has_data: [:optional, TrueClass],
+    icon: [:optional, {
+      card_color: [:optional, SageSchemas::STATUSES],
+      color: [:optional, SageSchemas::COLOR_SLIDER],
+      name: SageSchemas::ICON,
+    }],
     image: [:optional, {
       alt: [:optional, String],
       src: String

@@ -29,7 +29,13 @@ export default {
 export const Default = (args) => (
   <Grid container={Grid.CONTAINER_SIZES.LG}>
     <Panel {...args}>
-      <Panel.Header title="Panel header">
+      <Panel.Header
+        title="Panel header"
+        titleClassName="custom-panel-header-class"
+        subtext={(
+          <p>All kinds of awesome, wonderful content can go in here! <a href="https://example.com">Learn more</a></p>
+        )}
+      >
         <OptionsDropdown
           align="right"
           options={[
@@ -48,9 +54,6 @@ export const Default = (args) => (
           ]}
           panelMaxWidth="240px"
         />
-        <Panel.Subtext>
-          <p>All kinds of awesome, wonderful content can go in here! <a href="https://example.com">Learn more</a></p>
-        </Panel.Subtext>
       </Panel.Header>
       <Panel.Block sageType={true}>
         <p>

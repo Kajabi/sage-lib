@@ -3,6 +3,369 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.97](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.1.96...@kajabi/sage-packs@0.1.97) (2022-01-05)
+
+**Note:** Version bump only for package @kajabi/sage-packs
+
+
+
+
+
+## [0.1.96](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.1.95...@kajabi/sage-packs@0.1.96) (2021-12-22)
+
+**Note:** Version bump only for package @kajabi/sage-packs
+
+
+
+
+
+## [0.1.95](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.1.94...@kajabi/sage-packs@0.1.95) (2021-12-22)
+
+**Note:** Version bump only for package @kajabi/sage-packs
+
+
+
+
+
+## [0.1.94](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.1.93...@kajabi/sage-packs@0.1.94) (2021-12-20)
+
+**Note:** Version bump only for package @kajabi/sage-packs
+
+
+
+
+
+## [0.1.93](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.1.92...@kajabi/sage-packs@0.1.93) (2021-12-15)
+
+**Note:** Version bump only for package @kajabi/sage-packs
+
+
+
+
+
+## [0.1.92](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.1.91...@kajabi/sage-packs@0.1.92) (2021-12-09)
+
+**Note:** Version bump only for package @kajabi/sage-packs
+
+
+
+
+
+## [0.1.91](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.1.90...@kajabi/sage-packs@0.1.91) (2021-12-09)
+
+**Note:** Version bump only for package @kajabi/sage-packs
+
+
+
+
+
+## [0.1.90](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.1.89...@kajabi/sage-packs@0.1.90) (2021-12-08)
+
+**Note:** Version bump only for package @kajabi/sage-packs
+
+
+
+
+
+## [0.1.89](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.1.88...@kajabi/sage-packs@0.1.89) (2021-12-06)
+
+**Note:** Version bump only for package @kajabi/sage-packs
+
+
+
+
+
+## [0.1.88](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.1.87...@kajabi/sage-packs@0.1.88) (2021-12-01)
+
+**Note:** Version bump only for package @kajabi/sage-packs
+
+
+
+
+
+## [0.1.87](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.1.86...@kajabi/sage-packs@0.1.87) (2021-11-23)
+
+**Note:** Version bump only for package @kajabi/sage-packs
+
+
+
+
+
+## [0.1.86](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.1.85...@kajabi/sage-packs@0.1.86) (2021-11-23)
+
+**Note:** Version bump only for package @kajabi/sage-packs
+
+
+
+
+
+## [0.1.85](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.1.84...@kajabi/sage-packs@0.1.85) (2021-11-22)
+
+**Note:** Version bump only for package @kajabi/sage-packs
+
+
+
+
+
+## [0.1.84](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.1.83...@kajabi/sage-packs@0.1.84) (2021-11-22)
+
+**Note:** Version bump only for package @kajabi/sage-packs
+
+
+
+
+
+## [0.1.83](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.1.82...@kajabi/sage-packs@0.1.83) (2021-11-17)
+
+**Note:** Version bump only for package @kajabi/sage-packs
+
+
+
+
+
+## [0.1.82](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.1.81...@kajabi/sage-packs@0.1.82) (2021-11-17)
+
+**Note:** Version bump only for package @kajabi/sage-packs
+
+
+
+
+
+## [0.1.81](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.1.80...@kajabi/sage-packs@0.1.81) (2021-11-15)
+
+**Note:** Version bump only for package @kajabi/sage-packs
+
+
+
+
+
+## [0.1.80](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.1.79...@kajabi/sage-packs@0.1.80) (2021-11-15)
+
+**Note:** Version bump only for package @kajabi/sage-packs
+
+
+
+
+
+## [0.1.79](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.1.78...@kajabi/sage-packs@0.1.79) (2021-11-10)
+
+**Note:** Version bump only for package @kajabi/sage-packs
+
+
+
+
+
+## [0.1.78](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.1.77...@kajabi/sage-packs@0.1.78) (2021-11-08)
+
+**Note:** Version bump only for package @kajabi/sage-packs
+
+
+
+
+
+## [0.1.77](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.1.76...@kajabi/sage-packs@0.1.77) (2021-11-05)
+
+**Note:** Version bump only for package @kajabi/sage-packs
+
+
+
+
+
+## [0.1.76](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.1.75...@kajabi/sage-packs@0.1.76) (2021-11-03)
+
+**Note:** Version bump only for package @kajabi/sage-packs
+
+
+
+
+
+## [0.1.75](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.1.74...@kajabi/sage-packs@0.1.75) (2021-11-03)
+
+**Note:** Version bump only for package @kajabi/sage-packs
+
+
+
+
+
+## [0.1.74](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.1.73...@kajabi/sage-packs@0.1.74) (2021-11-01)
+
+**Note:** Version bump only for package @kajabi/sage-packs
+
+
+
+
+
+## [0.1.73](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.1.72...@kajabi/sage-packs@0.1.73) (2021-10-27)
+
+**Note:** Version bump only for package @kajabi/sage-packs
+
+
+
+
+
+## [0.1.72](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.1.71...@kajabi/sage-packs@0.1.72) (2021-10-26)
+
+**Note:** Version bump only for package @kajabi/sage-packs
+
+
+
+
+
+## [0.1.71](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.1.70...@kajabi/sage-packs@0.1.71) (2021-10-25)
+
+
+### Bug Fixes
+
+* **node version:** update all packages to use 14.x for node ([5d01915](https://github.com/Kajabi/sage-lib/commit/5d019156ff1e5390d4a4cf809a2cb559d666fb3d))
+
+
+
+
+
+## [0.1.70](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.1.69...@kajabi/sage-packs@0.1.70) (2021-10-25)
+
+**Note:** Version bump only for package @kajabi/sage-packs
+
+
+
+
+
+## [0.1.69](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.1.68...@kajabi/sage-packs@0.1.69) (2021-10-20)
+
+**Note:** Version bump only for package @kajabi/sage-packs
+
+
+
+
+
+## [0.1.68](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.1.67...@kajabi/sage-packs@0.1.68) (2021-10-20)
+
+**Note:** Version bump only for package @kajabi/sage-packs
+
+
+
+
+
+## [0.1.67](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.1.66...@kajabi/sage-packs@0.1.67) (2021-10-18)
+
+**Note:** Version bump only for package @kajabi/sage-packs
+
+
+
+
+
+## [0.1.66](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.1.65...@kajabi/sage-packs@0.1.66) (2021-10-13)
+
+**Note:** Version bump only for package @kajabi/sage-packs
+
+
+
+
+
+## [0.1.65](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.1.64...@kajabi/sage-packs@0.1.65) (2021-10-11)
+
+**Note:** Version bump only for package @kajabi/sage-packs
+
+
+
+
+
+## [0.1.64](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.1.63...@kajabi/sage-packs@0.1.64) (2021-10-06)
+
+**Note:** Version bump only for package @kajabi/sage-packs
+
+
+
+
+
+## [0.1.63](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.1.62...@kajabi/sage-packs@0.1.63) (2021-10-04)
+
+**Note:** Version bump only for package @kajabi/sage-packs
+
+
+
+
+
+## [0.1.62](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.1.61...@kajabi/sage-packs@0.1.62) (2021-10-01)
+
+**Note:** Version bump only for package @kajabi/sage-packs
+
+
+
+
+
+## [0.1.61](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.1.60...@kajabi/sage-packs@0.1.61) (2021-09-30)
+
+**Note:** Version bump only for package @kajabi/sage-packs
+
+
+
+
+
+## [0.1.60](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.1.59...@kajabi/sage-packs@0.1.60) (2021-09-29)
+
+**Note:** Version bump only for package @kajabi/sage-packs
+
+
+
+
+
+## [0.1.59](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.1.58...@kajabi/sage-packs@0.1.59) (2021-09-27)
+
+**Note:** Version bump only for package @kajabi/sage-packs
+
+
+
+
+
+## [0.1.58](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.1.57...@kajabi/sage-packs@0.1.58) (2021-09-22)
+
+**Note:** Version bump only for package @kajabi/sage-packs
+
+
+
+
+
+## [0.1.57](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.1.56...@kajabi/sage-packs@0.1.57) (2021-09-20)
+
+**Note:** Version bump only for package @kajabi/sage-packs
+
+
+
+
+
+## [0.1.56](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.1.55...@kajabi/sage-packs@0.1.56) (2021-09-15)
+
+**Note:** Version bump only for package @kajabi/sage-packs
+
+
+
+
+
+## [0.1.55](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.1.54...@kajabi/sage-packs@0.1.55) (2021-09-08)
+
+**Note:** Version bump only for package @kajabi/sage-packs
+
+
+
+
+
+## [0.1.54](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.1.53...@kajabi/sage-packs@0.1.54) (2021-09-08)
+
+**Note:** Version bump only for package @kajabi/sage-packs
+
+
+
+
+
+## [0.1.53](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.1.52...@kajabi/sage-packs@0.1.53) (2021-09-02)
+
+**Note:** Version bump only for package @kajabi/sage-packs
+
+
+
+
+
 ## [0.1.52](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.1.51...@kajabi/sage-packs@0.1.52) (2021-09-01)
 
 **Note:** Version bump only for package @kajabi/sage-packs

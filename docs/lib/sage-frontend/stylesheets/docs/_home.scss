@@ -25,6 +25,10 @@
     &:focus::after {
       border-color: currentColor;
     }
+
+    &:hover {
+      background-color: transparent;
+    }
   }
 }
 

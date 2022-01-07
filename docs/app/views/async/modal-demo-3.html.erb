@@ -1,0 +1,24 @@
+<%= sage_component SageModalContent, { title: "Demo Modal C" } do %>
+  <% content_for :sage_header_aside do %>
+    <%= sage_component SageButton, {
+      style: "secondary",
+      subtle: true,
+      value: "Close Modal",
+      icon: { name: "remove", style: "only" },
+      attributes: { "data-js-modal": true }
+    } %>
+  <% end %>
+
+  <p>
+    Nam ullamcorper vitae lacus sit amet vestibulum.
+    Integer vitae egestas libero.
+    Sed magna dolor, dapibus ut sodales eu, blandit vitae ligula.
+  </p>
+  <p>
+    Vivamus ut malesuada velit.
+    Nulla suscipit risus non nisi viverra consectetur.
+    Mauris quis pellentesque diam.
+    Praesent ultricies purus elit, at tincidunt turpis pharetra vel.
+    Curabitur et pulvinar neque.
+  </p>
+<% end %>

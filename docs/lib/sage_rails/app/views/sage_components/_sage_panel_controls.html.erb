@@ -55,7 +55,8 @@ item_count_text = component.item_count_label.present? ? component.item_count_lab
               style: "secondary",
               value: "",
               css_classes: "sage-dropdown__trigger-selected-value",
-              icon: { style: "right", name: "caret-down" }
+              icon: { style: "right", name: "caret-down" },
+              raised: false,
             } %>
             <label class="sage-dropdown__trigger-label">Actions</label>
           <% end %>
@@ -87,7 +88,8 @@ item_count_text = component.item_count_label.present? ? component.item_count_lab
                 style: "secondary",
                 value: "",
                 css_classes: "sage-dropdown__trigger-selected-value",
-                icon: { style: "right", name: "caret-down" }
+                icon: { style: "right", name: "caret-down" },
+                raised: false,
               } %>
               <label class="sage-dropdown__trigger-label">Sort</label>
             <% end %>
@@ -106,13 +108,15 @@ item_count_text = component.item_count_label.present? ? component.item_count_lab
                 value: "Expand",
                 style: "secondary",
                 icon: { name: "list-details", style: "only" },
-                css_classes: "sage-panel-controls__expand-btn"
+                css_classes: "sage-panel-controls__expand-btn",
+                raised: false,
               } %>
               <%= sage_component SageButton, {
                 value: "Collapse",
                 style: "secondary",
                 icon: { name: "list-stack", style: "only" },
-                css_classes: "sage-panel-controls__collapse-btn"
+                css_classes: "sage-panel-controls__collapse-btn",
+                raised: false,
               } %>
             </div>
           <% end %>

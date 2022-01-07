@@ -5,115 +5,45 @@
 ////
 
 // Border
-$-textarea-border-radius: map-get($sage-field-configs, border-radius);
-$-textarea-border-width: map-get($sage-field-configs, border-width);
-$-textarea-box-shadow-size: map-get($sage-field-configs, box-shadow-size);
+$-textarea-border-width: rem(1px);
 
 // Padding
 $-textarea-label-padding: rem(3px);
-$-textarea-padding: map-get($sage-field-configs, padding);
+$-textarea-padding: sage-spacing(sm);
 
 // Sizing
 $-textarea-height: 100%;
 $-textarea-min-height: rem(90px);
-$-textarea-width: 100%;
-
-// Outer spacing
-$-textarea-bottom-gap: map-get($sage-field-configs, bottom-gap);
 
 // Colors
-$-textarea-color-border: map-get($sage-field-colors, border);
-$-textarea-color-default: map-get($sage-field-colors, default);
+$-textarea-color-default: sage-color(charcoal);
 $-textarea-color-default-background: sage-color(white);
-$-textarea-color-disabled: map-get($sage-field-colors, disabled);
-$-textarea-color-disabled-background: map-get($sage-field-colors, disabled-background);
-$-textarea-color-error: map-get($sage-field-colors, error);
-$-textarea-color-label-background: $-textarea-color-default-background;
-$-textarea-color-success: map-get($sage-field-colors, success);
-
 
 .sage-textarea {
-  position: relative;
-
-  &:not(:last-child) {
-    margin-bottom: $-textarea-bottom-gap;
-  }
-
-  .sage-panel-grid > &,
-  .sage-panel__row > &,
-  .sage-panel__stack > &,
-  .sage-panel__block > &,
-  .sage-card-grid > &,
-  .sage-card__row > &,
-  .sage-card__stack > &,
-  .sage-card__block > & {
-    margin-bottom: 0;
-  }
+  @include sage-form-field-group;
 }
 
 .sage-textarea__label {
+  @include sage-form-field-label;
   @extend %t-sage-body-xsmall-semi;
 
-  position: absolute;
-  left: $-textarea-padding;
   top: $-textarea-border-width;
+  left: $-textarea-padding;
   padding-left: $-textarea-label-padding;
   padding-right: $-textarea-label-padding;
-  color: inherit;
-  white-space: nowrap;
-  background-color: $-textarea-color-label-background;
-  pointer-events: none;
-  opacity: 0;
-
-  @media screen and (min-width: sage-breakpoint(sm-min)) {
-    white-space: normal;
-  }
-}
-
-.sage-textarea__message {
-  @extend %t-sage-body-xsmall;
-  color: sage-color(charcoal, 100);
-
-  .sage-textarea--error & {
-    color: $-textarea-color-error;
-  }
 }
 
 .sage-textarea__field {
-  @mixin floating-label-textarea-active {
-    transform: translateY($-textarea-label-padding - $-textarea-padding);
-    transition: opacity 0.1s ease-in, transform 0.15s ease-in-out, color 0.15s ease-out;
-    opacity: 1;
-  }
+  @include sage-form-field;
 
   min-height: $-textarea-min-height;
   height: $-textarea-height;
-  width: $-textarea-width;
-  padding: $-textarea-padding;
-  color: $-textarea-color-default;
-  appearance: none;
-  border: $-textarea-border-width solid $-textarea-color-border;
-  border-radius: $-textarea-border-radius;
   background: $-textarea-color-default-background;
-  transition: border 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-
-  @include placeholder {
-    color: sage-color(charcoal, 100);
-  }
 
   &:focus:not(:disabled),
   &:active:not(:disabled) {
-    border-color: $-textarea-color-success;
-    box-shadow: $-textarea-box-shadow-size $-textarea-color-success;
-    outline: none;
-
-    @include placeholder {
-      opacity: 0;
-    }
-
     ~ .sage-textarea__label {
-      @include floating-label-textarea-active();
-      color: $-textarea-color-success;
+      @include sage-form-field-floating-label($textarea: true);
     }
   }
 
@@ -125,29 +55,11 @@ $-textarea-color-success: map-get($sage-field-colors, success);
   &:valid:not(:placeholder-shown),
   &:required:not(:placeholder-shown) {
     ~ .sage-textarea__label {
-      @include floating-label-textarea-active();
+      @include sage-form-field-floating-label($textarea: true);
     }
   }
+}
 
-  // TODO: add support for Simpleform classes
-  .sage-textarea--error &,
-  &:required:not(:placeholder-shown):not(:valid) {
-    border-color: $-textarea-color-error;
-    box-shadow: $-textarea-box-shadow-size $-textarea-color-error;
-
-    ~ .sage-textarea__label {
-      color: $-textarea-color-error;
-    }
-
-    ~ .sage-textarea__label {
-      color: $-textarea-color-error;
-    }
-  }
-
-  &:disabled {
-    color: $-textarea-color-disabled;
-    background-color: $-textarea-color-disabled-background;
-    cursor: not-allowed;
-    resize: none;
-  }
+.sage-textarea__message {
+  @include sage-form-field-message;
 }

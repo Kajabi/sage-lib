@@ -18,7 +18,7 @@ export default {
         <p>
           Nunc egestas nunc sapien, non laoreet mi dictum aliquam.
           Vivamus vehicula sapien{' '}
-          <Link href="//example.com" target="_blank" referrer="no-referrer">
+          <Link href="//example.com" target="_blank" rel="noopener">
             amolestie gravida
           </Link>.
           Praesent <strong>congue feugiat ipsum</strong>, in venenatis nunc tempor vitae.

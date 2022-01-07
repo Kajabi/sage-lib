@@ -29,6 +29,11 @@
         <% end %>
       <% end %>
       <%= sage_component(SageOverlay, {}) %>
+      <% if content_for? :sage_docs_modals %>
+        <div id="sage-docs-modals">
+          <%= content_for :sage_docs_modals %>
+        </div>
+      <% end %>
     <% end %>
     <%= render "scripts" %>
   <% end %>

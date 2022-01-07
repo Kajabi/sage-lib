@@ -4,8 +4,11 @@ export { AvatarGroup } from './AvatarGroup';
 export { Breadcrumbs } from './Breadcrumbs';
 export { Button } from './Button';
 export { Card } from './Card';
-// export { Chart } from './Chart';
+export { Carousel } from './Carousel';
+export { Chart } from './Chart';
 export { Choice } from './Choice';
+export { Description } from './Description';
+export { Drawer } from './Drawer';
 export {
   Dropdown,
   OptionsDropdown,
@@ -26,6 +29,7 @@ export { Hint } from './Hint';
 export { Icon } from './Icon';
 export { IconCard } from './IconCard';
 export { IconList } from './IconList';
+export { Indicator } from './Indicator';
 export { Input } from './Input';
 export { Label } from './Label';
 export { Link } from './Link';
@@ -35,6 +39,7 @@ export {
   MediaTiles,
 } from './MediaTile';
 export { Modal } from './Modal';
+export { NextBestAction } from './NextBestAction';
 export { PageHeading } from './PageHeading';
 export { Pagination } from './Pagination';
 export { Panel } from './Panel';

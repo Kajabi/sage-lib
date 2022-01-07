@@ -1,0 +1,51 @@
+<%= sage_component SageCard, { css_classes: "feature-usage-display" } do %>
+  <%= sage_component SageCardRow, { grid_template: "eti" } do %>
+    <%= sage_component SageIcon, { icon: "product" } %>
+    <h2 class="<%= "#{SageClassnames::TYPE::HEADING_6}" %>">
+      <%= feature_usage_display_current_display(usage_data) %>
+    </h2>
+    <span class="<%= "#{SageClassnames::TYPE::BODY_XSMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_100}" %>">
+      Limit
+      <strong class="<%= "#{SageClassnames::TYPE::BODY_XSMALL_MED}" %>">
+        <%= feature_usage_display_limit_display(usage_data) %>
+      </strong>
+    </span>
+    <%= sage_component SageButton, feature_usage_display_button_configs(opened) %>
+  <% end %>
+
+  <%= sage_component SageProgressBar, feature_usage_display_progress_configs(usage_data) %>
+  
+  <% if opened %>
+    <div class="sage-card-grid">
+      <%= sage_component SageCardBlock, { spacer: { bottom: :xs, top: :xs } } do %>
+        <p class="<%= "#{SageClassnames::TYPE::BODY_SMALL_MED} #{SageClassnames::TYPE_COLORS::CHARCOAL}" %>">
+          You are about to reach the maximum number of landing pages available on your current plan.
+        </p>
+        <p class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL}" %>">
+          Upgrade your plan to unlock unlimited landing pages.
+        </p>
+
+        <%= sage_component SageButton, {
+          attributes: usage_data[:upgrade_action][:attributes],
+          style: "primary",
+          value: usage_data[:upgrade_action][:value],
+          spacer: { top: "xs" }
+        } %>
+      <% end if usage_data[:upgrade_action] %>
+
+      <%= sage_component SageCardBlock, {} do %>
+        <% usage_data[:data].each_with_index do | d, i | %>
+          <%= sage_component SageCardDivider, {} if i > 0 %>
+          <%= sage_component SageCardRow, { grid_template: "te" } do %>
+            <h3 class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_500}" %>">
+              <%= d[:label] %>
+            </h3>
+            <span class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_100}" %>">
+              <%= d[:value] %>
+            </span>
+          <% end %>
+        <% end %>
+      <% end %>
+    </div>
+  <% end %>
+<% end %>

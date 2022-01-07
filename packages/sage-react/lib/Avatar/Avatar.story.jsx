@@ -6,14 +6,16 @@ export default {
   title: 'Sage/Avatar',
   component: Avatar,
   args: {
+    centered: true,
+    color: Avatar.COLORS.SAGE,
     image: {
       alt: null,
       src: null,
+      id: null,
     },
     initials: 'QJ',
-    color: Avatar.COLORS.SAGE,
-    size: null,
-    centered: true,
+    lazyLoadInitials: true,
+    size: '48px',
   },
   argTypes: {
     ...selectArgs({
@@ -24,3 +26,6 @@ export default {
 
 const Template = (args) => <Avatar {...args} />;
 export const Default = Template.bind({});
+
+export const WithBadge = Template.bind({});
+WithBadge.args = { badge: true, size: '64px' };

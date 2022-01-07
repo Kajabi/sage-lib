@@ -1,4 +1,5 @@
 import React from 'react';
+import * as Recharts from 'recharts';
 import { selectArgs } from '../story-support/helpers';
 import { SageTokens } from '../configs';
 import { Chart } from './Chart';
@@ -8,6 +9,7 @@ export default {
   component: Chart,
   args: {
     type: Chart.TYPES.BAR,
+    framework: Recharts,
   },
   argTypes: {
     ...selectArgs({

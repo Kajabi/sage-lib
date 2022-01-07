@@ -20,6 +20,7 @@ export const Sortable = ({
         onEnd={onEnd}
         ghostClass="sage-sortable__item--ghost"
         chosenClass="sage-sortable__item--active"
+        dragClass="sage-sortable__item--drag"
         {...rest}
       >
         {list.map((item) => renderItem(item))}

@@ -1,0 +1,33 @@
+<%= content_for :heading do %>
+<%= md(%(
+# Product Mockups
+<p class="docs-heading__lead">
+  Product Mockups are to demonstrate “proof of concept” prototypes for new or in-flight feature work.
+  Mockups are typically prepared for a specific product team based on design comps.
+</p>
+)) %>
+<% end %>
+
+<%= sage_component SageMediaTiles, {} do %>
+  <% sorted_sage_mocks.each do | mock | %>
+    <% mock_status = mock_status_configs(mock) %>
+    <%= sage_component SageMediaTile, {
+      title: mock[:name],
+      tile_link: { href: pages_mock_path(mock[:alias]) },
+      actions_custom: sage_component(SageLabel, {
+        value: mock_status[:value],
+        color: mock_status[:color],
+        html_attributes: {
+          "data-js-tooltip": "Development status",
+        },
+      }),
+      caption: sage_component(SageProperty, {
+        icon: "users-alt",
+        value: "#{mock[:team]} team",
+        html_attributes: {
+          "data-js-tooltip": "Built for #{mock[:team]} team",
+        },
+      }).html_safe,
+    } %>
+  <% end %>
+<% end %>

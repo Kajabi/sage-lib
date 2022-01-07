@@ -3,6 +3,587 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.63.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.63.2...@kajabi/sage-assets@0.63.3) (2022-01-05)
+
+
+### Bug Fixes
+
+* **form-elements:** update message spacing and select color ([3eb15d4](https://github.com/Kajabi/sage-lib/commit/3eb15d4694c0fb8fefc0009bf65a5c81e5399a18))
+
+
+
+
+
+## [0.63.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.63.1...@kajabi/sage-assets@0.63.2) (2021-12-22)
+
+
+### Bug Fixes
+
+* **form-section:** adjust form section subtitle for a temporary stop-gap while patching in `kp` ([3b7cbef](https://github.com/Kajabi/sage-lib/commit/3b7cbefca6f92e85d8994a17fdbd17564e4e05ea))
+* **form-section:** patch dupcliate property ([4975bb6](https://github.com/Kajabi/sage-lib/commit/4975bb60ca925f01e3430dc4a1904bf05bd7957e))
+
+
+
+
+
+## [0.63.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.63.0...@kajabi/sage-assets@0.63.1) (2021-12-20)
+
+**Note:** Version bump only for package @kajabi/sage-assets
+
+
+
+
+
+# [0.63.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.62.1...@kajabi/sage-assets@0.63.0) (2021-12-15)
+
+
+### Bug Fixes
+
+* **statbox:** add optional icon ([9f9cce5](https://github.com/Kajabi/sage-lib/commit/9f9cce588fac62b78ddf2e290370cd0b31d55dea))
+* **statbox:** removed absolute positioning ([be79842](https://github.com/Kajabi/sage-lib/commit/be798421b343edef5db8f725b5017abf29afa6f1))
+* **statbox:** spacing updates per review ([a9357b5](https://github.com/Kajabi/sage-lib/commit/a9357b55bec91646b458901a2a6ebe4968c5cacb))
+
+
+### Features
+
+* **progress:** added optional color prop ([2256e79](https://github.com/Kajabi/sage-lib/commit/2256e797c3d459242408acf71478420350128318))
+
+
+
+
+
+## [0.62.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.62.0...@kajabi/sage-assets@0.62.1) (2021-12-09)
+
+
+### Bug Fixes
+
+* **panel:** ensure full bleed divider works as expected ([fa5ad0b](https://github.com/Kajabi/sage-lib/commit/fa5ad0b25c6f0c632c5b0d623597fefc73e9861e))
+
+
+
+
+
+# [0.62.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.61.0...@kajabi/sage-assets@0.62.0) (2021-12-09)
+
+
+### Features
+
+* **avatar:** fix z-idnex on Avatar badge to stack above image and initials ([8e0ebc2](https://github.com/Kajabi/sage-lib/commit/8e0ebc26982e46de309c4983c4daec386bc5b571))
+* **panel:** adjust divider width ([42395d8](https://github.com/Kajabi/sage-lib/commit/42395d8a4450413086a9640e3286ecc48c26b969))
+
+
+
+
+
+# [0.61.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.60.2...@kajabi/sage-assets@0.61.0) (2021-12-06)
+
+
+### Features
+
+* **description:** add collapsed variant poc ([ff35968](https://github.com/Kajabi/sage-lib/commit/ff35968ec4b9e19499c803f89ebca76aa4e8c535))
+* **description:** adds title width and action width props ([a352732](https://github.com/Kajabi/sage-lib/commit/a352732e8345f68afe3870415b8019388f4817eb))
+* **description:** adjust `condensed` to `no_divider` and move id to items ([40998a7](https://github.com/Kajabi/sage-lib/commit/40998a702248658e3648703ed57672167594e150))
+* **description:** further sync with latest specs ([4fa5df9](https://github.com/Kajabi/sage-lib/commit/4fa5df9ef111190c207ad886fbc02426b04da892))
+* **description:** remove default bottom margin altogether ([58f0e33](https://github.com/Kajabi/sage-lib/commit/58f0e339c45eff7ac281a949d5876cc00d40b11b))
+* **description:** removes all caps prop for deprecation ([5cc80ab](https://github.com/Kajabi/sage-lib/commit/5cc80ab9e3c3b4c7784144883009bd97b6dfce51))
+* **description:** removes inline-spread prop for deprecation ([0e738f9](https://github.com/Kajabi/sage-lib/commit/0e738f9402a4ab3a073109deaebae20cc53e321b))
+* **description:** updates prop name and logic, removes link prop ([3d0e85b](https://github.com/Kajabi/sage-lib/commit/3d0e85b280b9393e4c7b0c99c6a7dbcf4d54e782))
+
+
+
+
+
+## [0.60.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.60.1...@kajabi/sage-assets@0.60.2) (2021-12-01)
+
+
+### Bug Fixes
+
+* **modal:** add background color fullscreen modal header ([0947574](https://github.com/Kajabi/sage-lib/commit/094757497a2970abedd89d0bc0eb414b144f8b2c))
+
+
+
+
+
+## [0.60.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.60.0...@kajabi/sage-assets@0.60.1) (2021-11-22)
+
+
+### Bug Fixes
+
+* **panel header:** remove unnecessary nesting selector ([26db216](https://github.com/Kajabi/sage-lib/commit/26db21671457d242e35078b96d45d8041d67e1c1))
+* **panel heading:** fix spacing for title within panel heading ([cb978b3](https://github.com/Kajabi/sage-lib/commit/cb978b3cb6eb183d2957ec4b773fbe47126c7591))
+
+
+
+
+
+# [0.60.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.59.0...@kajabi/sage-assets@0.60.0) (2021-11-22)
+
+
+### Bug Fixes
+
+* **colors:** update tokens to match color palette updates ([8858299](https://github.com/Kajabi/sage-lib/commit/8858299a2a9e6c515d143b20e9127b6573ce5c03))
+* **page heading:** add alignment to page heading actions ([5723131](https://github.com/Kajabi/sage-lib/commit/5723131e4ef200de40725d50681fac455fd0adea))
+* **panel header:** color adjustment and doc updates ([fefcf86](https://github.com/Kajabi/sage-lib/commit/fefcf86c8e11513d97739ddac2c48cf016942311))
+* **panel header:** documentation updates ([6e3f41c](https://github.com/Kajabi/sage-lib/commit/6e3f41c174433c130702c38d3f28032dbe8164d0))
+
+
+### Features
+
+* **paneltile:** added responsiveness for mobile, tablet, and desktop ([1265efb](https://github.com/Kajabi/sage-lib/commit/1265efb5eb775d74bd7233462d7491078e2bc837))
+* **paneltile:** moved condensed versions into the media queries ([d65a537](https://github.com/Kajabi/sage-lib/commit/d65a5377e4eac5fc3006d4b95c9fbe1ae9a72ddc))
+* **paneltile:** removed unused mobile sizing style ([74d6bc3](https://github.com/Kajabi/sage-lib/commit/74d6bc36c5b662880e289e1af88ae817022768e8))
+* **paneltiles:** cleaned up css with custom properties to handle columns ([ddf0e85](https://github.com/Kajabi/sage-lib/commit/ddf0e85610c4628fe9afc3f8cd457875e1b665c6))
+
+
+
+
+
+# [0.59.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.58.0...@kajabi/sage-assets@0.59.0) (2021-11-17)
+
+
+### Bug Fixes
+
+* **button:** iterate on the subtle button ([43a219a](https://github.com/Kajabi/sage-lib/commit/43a219a678f398e0b698e65590ed621a617b0a1a))
+* **button:** save point before starting a small refactor ([f86b3c6](https://github.com/Kajabi/sage-lib/commit/f86b3c6244d7ce7bc46bf23dbe35498e3b8455ba))
+* **button:** updates per design update ([c93e3dd](https://github.com/Kajabi/sage-lib/commit/c93e3dd8f9ea582c9f349bac761a5c1249a096c3))
+* **sageicon:** adjust width on smaller screen sizes ([3e5d587](https://github.com/Kajabi/sage-lib/commit/3e5d5870cee4bf590eb090d898dffe49bccfcfa3))
+* **small alert:** remove defined margin-bottom ([b582457](https://github.com/Kajabi/sage-lib/commit/b582457f41aafa60685078e211dee75269fb98de))
+* button and group adjustments to size and spacing ([2d00a45](https://github.com/Kajabi/sage-lib/commit/2d00a45ec05736642b337dac0f95668175d9f737))
+* panel divider to full size ([668a6ab](https://github.com/Kajabi/sage-lib/commit/668a6ab2de9c398533ccb1db28b5d9b2e97b08d0))
+
+
+### Features
+
+* **alert:** polish icons and close button ([3526809](https://github.com/Kajabi/sage-lib/commit/3526809fd084c5a3f31e846779e9525a22df106a))
+* **alert:** react updates ([7c3a8b9](https://github.com/Kajabi/sage-lib/commit/7c3a8b9f3f8369ed545dbc6a6cf6c6db8150a354))
+* **alert:** refactor colors for border ([9f35665](https://github.com/Kajabi/sage-lib/commit/9f356654874fed3b71b0a6ec0f7d45fa35dd2896))
+* **alert:** update button options rails ([5ac0ba9](https://github.com/Kajabi/sage-lib/commit/5ac0ba95a7c876a4094c0cfa52a95c01b9bf162c))
+* **alert:** update rails properties for array of secondary actions ([d2d8757](https://github.com/Kajabi/sage-lib/commit/d2d8757602c4d8adfe9bad910e2da6af05926d59))
+* **alert:** use extend for typography ([553af52](https://github.com/Kajabi/sage-lib/commit/553af52e288dc8cb93c232fb4de82fff231b3f6d))
+* **alerts:** add new orange variation and include new names ([9ab7e34](https://github.com/Kajabi/sage-lib/commit/9ab7e3459e2649061796dd280aea63687b789429))
+* **alerts:** add spacing to match specs ([27a9a79](https://github.com/Kajabi/sage-lib/commit/27a9a79ad11a98313fa925fbdbf1a1969a221be8))
+* **alerts:** add title_addon property ([4b84d66](https://github.com/Kajabi/sage-lib/commit/4b84d66d0dca48dc201d3d84e1b4b9839b29fdd3))
+* **alerts:** adjust colors for new alert variations ([33c0b7f](https://github.com/Kajabi/sage-lib/commit/33c0b7fe624110d80a3f307e42bf9916243e335b))
+* **alerts:** change color of link text to charcoal ([5680a96](https://github.com/Kajabi/sage-lib/commit/5680a96b6c17b91108a1d228b7909bb9c37c480a))
+* **alerts:** fix linting errors ([67bbd86](https://github.com/Kajabi/sage-lib/commit/67bbd862c7a01c7ee7e276862b6a8f70ce106946))
+* **alerts:** icon colors per design; mixed color values ([d94b50b](https://github.com/Kajabi/sage-lib/commit/d94b50ba8f88425d104f1cd828408202702c47fe))
+* **alerts:** refactor btn to _button.scss file ([74e2dc8](https://github.com/Kajabi/sage-lib/commit/74e2dc8c7f7f9b5cd61afedf3203db5352d25646))
+* **alerts:** remove color for description text, uses charcoal now ([7b87c42](https://github.com/Kajabi/sage-lib/commit/7b87c420773afe23214f86504eafdf27a35006fa))
+* **alerts:** remove kp specific alert examples ([ea6107e](https://github.com/Kajabi/sage-lib/commit/ea6107e5dbab28c85a2400daa2fd0bc347d08b22))
+* **alerts:** revert colors to move to separate PR ([e440372](https://github.com/Kajabi/sage-lib/commit/e44037299ecb1b24d096f4d404e0c838f1080b38))
+* **alerts:** update color of close button ([7595731](https://github.com/Kajabi/sage-lib/commit/759573148b61505670c449183a9b6b2171eee677))
+* **small alerts:** polish alerts when small variation ([23dcd2c](https://github.com/Kajabi/sage-lib/commit/23dcd2c66542730e3c6b61737c03c51535d64264))
+
+
+
+
+
+# [0.58.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.57.0...@kajabi/sage-assets@0.58.0) (2021-11-15)
+
+
+### Bug Fixes
+
+* **input error:** remove deprecated form field error class ([e03cc17](https://github.com/Kajabi/sage-lib/commit/e03cc177daf4e617b6c988247f7e117b123d9fc7))
+* **radio:** update alignment within sortable component ([a912fac](https://github.com/Kajabi/sage-lib/commit/a912fac0733f314e0451503a48b4498ac15768ac))
+
+
+### Features
+
+* **carousel:** changed dots phrasing to indicator, removed unused dot styles ([2b816d6](https://github.com/Kajabi/sage-lib/commit/2b816d607cafbc9c527e39d5312aff04f49aa03c))
+* **gap:** fix missing gap, remove comments ([d3b285b](https://github.com/Kajabi/sage-lib/commit/d3b285bbba4616788a40a595ad07ecca527ad5c8))
+* **icons:** add new icons ([5065c24](https://github.com/Kajabi/sage-lib/commit/5065c246de2fd34272b2278bdb2d74fde7a248f8))
+* **icons:** remove capitalize of glyph name for headings ([553d29d](https://github.com/Kajabi/sage-lib/commit/553d29d4ea37d64914dd10614d2f20017cdf49d0))
+* **label:** fully implements new prop for custom icon color in Rails component ([0208f43](https://github.com/Kajabi/sage-lib/commit/0208f4323c0394169b9b1e14820723d62c6ca128))
+* **label:** fully implements new prop for custom icon color in Rails component ([86c68d7](https://github.com/Kajabi/sage-lib/commit/86c68d7be6182cefe157a190b1d68efeb4ec25c4))
+* **label group:** add gap ([04df5af](https://github.com/Kajabi/sage-lib/commit/04df5af81614bc4ce4d6443c6dd7233534934fee))
+
+
+
+
+
+# [0.57.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.56.0...@kajabi/sage-assets@0.57.0) (2021-11-10)
+
+
+### Bug Fixes
+
+* **button:** iterate on the subtle button ([321bdbc](https://github.com/Kajabi/sage-lib/commit/321bdbcd04bff0326c72edba09d886d25c57c17c))
+* **button:** save point before starting a small refactor ([eeaaf99](https://github.com/Kajabi/sage-lib/commit/eeaaf99e8954c4d8b1349fc2d713c35d7f6d9a55))
+* **button:** update padding for non subtle buttons ([d62906f](https://github.com/Kajabi/sage-lib/commit/d62906f2f4a7fe96e91d2bc560514bddcb75b708))
+* **button:** updates per design update ([c2af17c](https://github.com/Kajabi/sage-lib/commit/c2af17c46c9090e657bb286a04c2fda354c4c122))
+* **panel:** updates to gap selector ([cba1256](https://github.com/Kajabi/sage-lib/commit/cba125685547d6407a53ba97ca28c0e9b7fc84ac))
+* button and group adjustments to size and spacing ([4818a6c](https://github.com/Kajabi/sage-lib/commit/4818a6c119cc4e372622ad55f1f7b01f0042715c))
+* description full width and spacing adjustment ([fa22eb5](https://github.com/Kajabi/sage-lib/commit/fa22eb5c1377e6e830508c1d148e52d1ae2c6ef5))
+* panel divider to full size ([222584d](https://github.com/Kajabi/sage-lib/commit/222584daa071e8f6a900c60226dcad93800ad344))
+
+
+### Features
+
+* **drawer:** hone given modal modifications ([67cc40c](https://github.com/Kajabi/sage-lib/commit/67cc40c016679fa07ea5f8ee2f97b0abf38f42e5))
+* **drawer:** more updates to align drawer with standalone component ([6f4ed03](https://github.com/Kajabi/sage-lib/commit/6f4ed03a4bbdb53f6d3d9b9f97b819d989064aff))
+* **drawer:** optional close drawer option ([9f99f4e](https://github.com/Kajabi/sage-lib/commit/9f99f4ef5749f639d20a383a064cd4b45488ddf1))
+* **drawer:** rework drawer into isolated component ([ac6eab0](https://github.com/Kajabi/sage-lib/commit/ac6eab0f2ba6236f69f8452747f616211630ab53))
+* **drawer:** use modal as a base to new Drawer component ([8e5fca0](https://github.com/Kajabi/sage-lib/commit/8e5fca0765f58ba390f1c08bed7d270975663a91))
+* **modal:** adjust `p` spacing rules when modal uses spacing grid ([7499e42](https://github.com/Kajabi/sage-lib/commit/7499e420bb2b7ad0be1603564a11b477943e14b5))
+* **modal:** further revise modal with drawer affordances ([8139d95](https://github.com/Kajabi/sage-lib/commit/8139d9519a7bc45843ab238ef6f3e09f7c1495dc))
+
+
+
+
+
+# [0.56.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.55.2...@kajabi/sage-assets@0.56.0) (2021-11-08)
+
+
+### Bug Fixes
+
+* **icons:** updated mappings for missing icons ([4f80b28](https://github.com/Kajabi/sage-lib/commit/4f80b28aa39ad0192fffd5a80f1dd3974afea4a7))
+* **modal:** fixed spacer typo ([d8eb7d3](https://github.com/Kajabi/sage-lib/commit/d8eb7d3decba59ef73e9ad4eef10ea799aca2c5e))
+
+
+### Features
+
+* **icon:** adds custom prop to stylesheet ([69fb4fa](https://github.com/Kajabi/sage-lib/commit/69fb4faf3f13303e02d6f4dd2510a2871a6d1218))
+* **icon:** adds new class based on custom height and width props ([3b7b11f](https://github.com/Kajabi/sage-lib/commit/3b7b11fb83eb5459a572ccc8a312ab8a08c3528d))
+* **icon:** updates custom prop variable names ([2db2a46](https://github.com/Kajabi/sage-lib/commit/2db2a460dd5f79a1efe16d4f7a5523603754aa91))
+* **icons:** update sage icons to v1.17 ([68c7da1](https://github.com/Kajabi/sage-lib/commit/68c7da1b9128abb2e782c9b46c2a7ddecfb6175f))
+
+
+
+
+
+## [0.55.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.55.1...@kajabi/sage-assets@0.55.2) (2021-11-03)
+
+
+### Bug Fixes
+
+* revert panel and card row justification to space-between as a safeguard ([9d21250](https://github.com/Kajabi/sage-lib/commit/9d2125071125e16afb54967294e13055dfb0efad))
+
+
+
+
+
+## [0.55.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.55.0...@kajabi/sage-assets@0.55.1) (2021-11-03)
+
+
+### Bug Fixes
+
+* **cardlistitem:** make grid template optional and add gap attribute ([63e51c5](https://github.com/Kajabi/sage-lib/commit/63e51c5def24bf3e2d65060ccca8ca07cdbb49b6))
+* **cardrow:** make grid template optional and add gap attribute ([22b03c2](https://github.com/Kajabi/sage-lib/commit/22b03c299d035a2cee2155bd53d063e06994acc0))
+* **panellistitem:** make grid template optional and add gap attribute ([0769f1c](https://github.com/Kajabi/sage-lib/commit/0769f1c39ed56846c07a0050e500efe072b58d25))
+* **panelrow:** make grid template optional and add gap attribute ([218c60f](https://github.com/Kajabi/sage-lib/commit/218c60fc8588e1d1ec4b17a999b14542d47eb2fc))
+
+
+
+
+
+# [0.55.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.54.0...@kajabi/sage-assets@0.55.0) (2021-11-01)
+
+
+### Bug Fixes
+
+* **button:** center full-width button ([abbc60d](https://github.com/Kajabi/sage-lib/commit/abbc60d3c76a409ca534680279d1386670b4a47c))
+* **card:** adjust card list item border color ([cb46437](https://github.com/Kajabi/sage-lib/commit/cb464375e55c0a65794647a992dda7540e82d351))
+* **carddivider:** update colors and add label to card divider ([d72d257](https://github.com/Kajabi/sage-lib/commit/d72d2572b5b8e955de9d6c5ea022d16b445496b0))
+* **catalog item:** adjust catalog item border color ([364b140](https://github.com/Kajabi/sage-lib/commit/364b1408205a74b3c8186aeb4854384dd7e86831))
+* **dropdown:** corrects dropdown position override in upload card ([3abc789](https://github.com/Kajabi/sage-lib/commit/3abc789760291ea5f0260e92e6cca77c4eac443e))
+* **modal:** add fullscreen variant ([a459425](https://github.com/Kajabi/sage-lib/commit/a4594253224f28087ef75b41eafc5703204560b4))
+* **modal:** add header_actions ([bc83918](https://github.com/Kajabi/sage-lib/commit/bc8391811b8e9f0d1b1e379a8d18daed9b0775ff))
+* **modal:** resolve fullscreen modal flash ([99d5fb1](https://github.com/Kajabi/sage-lib/commit/99d5fb14858a7524a4c8d7d64bcb5ecbceeae630))
+* **modal:** update class when header-actions is present ([937289c](https://github.com/Kajabi/sage-lib/commit/937289c1360e8ebee163a05c9b3223391326fd82))
+* **modal:** updates per phil review ([a8a745a](https://github.com/Kajabi/sage-lib/commit/a8a745a7741b594f3c5e247e6a111d1a3e05a6d5))
+* **panel:** adjust panel list item border color ([c4c1199](https://github.com/Kajabi/sage-lib/commit/c4c1199ea721ac2aa50eab0f5c1d6ae4e8c01d2e))
+* **paneldivider:** update colors and add label to panel divider ([9afa864](https://github.com/Kajabi/sage-lib/commit/9afa8641046a9f4458581abb40ca76fbc373cbe3))
+
+
+### Features
+
+* **carousel:** added arrow caret icons, disabled state and logic ([0c715fd](https://github.com/Kajabi/sage-lib/commit/0c715fd86b89bcb5a88394cfa55accd0b9a50ec6))
+* **carousel:** added dragEnd event to change active dot, simplified some styling ([a4d1ebb](https://github.com/Kajabi/sage-lib/commit/a4d1ebb003ccd206ffe91837534e609f941e694d))
+* **carousel:** cleaned up some css styles, added yarn.lock ([4235dc7](https://github.com/Kajabi/sage-lib/commit/4235dc7953be8591e501ef47d2f7b89f42988a05))
+* **carousel:** fixed width of item, fixed NBA graphic width ([65e6721](https://github.com/Kajabi/sage-lib/commit/65e67216190c3ce46afc4b47ada29a3abbe99ce1))
+* **carousel:** got basic markup with content_for going ([c0e1a8a](https://github.com/Kajabi/sage-lib/commit/c0e1a8a829e30daaa64dc347aea2ec0c5b491ea6))
+* **carousel:** got basic prev/next and dot click working ([5466db2](https://github.com/Kajabi/sage-lib/commit/5466db245ff6c12b3270a0be1d7bb5a9e3fafdc2))
+* **carousel:** got the appending to slide container div working ([531ddc9](https://github.com/Kajabi/sage-lib/commit/531ddc9b1f543d53b8eeac0febba263f5fb9bc56))
+* **carousel:** initial commit ([a9f5472](https://github.com/Kajabi/sage-lib/commit/a9f54722604d33c34577157fd03437fd2fb14fde))
+* **carousel:** simplified styling, fixed naming and options ([e1f729e](https://github.com/Kajabi/sage-lib/commit/e1f729eb9ee0193fa48f0c97fb8dea9db5982ba5))
+* **label:** adds styling for new props ([2482ae7](https://github.com/Kajabi/sage-lib/commit/2482ae73ac245e6b7d1dd6b1fe63afa2bff73269))
+
+
+
+
+
+# [0.54.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.53.0...@kajabi/sage-assets@0.54.0) (2021-10-27)
+
+
+### Bug Fixes
+
+* **input error class:** deprecate and remove sage-input--error class ([09276b1](https://github.com/Kajabi/sage-lib/commit/09276b1cb069dcc695342288385610d90af2ba73))
+
+
+### Features
+
+* **colors:** update to new color specs ([71f7a41](https://github.com/Kajabi/sage-lib/commit/71f7a4143b08c3dbb6a2e2f6ec443a927198d331))
+
+
+
+
+
+# [0.53.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.52.0...@kajabi/sage-assets@0.53.0) (2021-10-26)
+
+
+### Features
+
+* **button:** adds center align option ([5dab67b](https://github.com/Kajabi/sage-lib/commit/5dab67bfd4c3e6be30dfbbeffe7c84bc0c69cc3a))
+
+
+
+
+
+# [0.52.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.51.2...@kajabi/sage-assets@0.52.0) (2021-10-25)
+
+
+### Features
+
+* **icons:** remove extra mail icons ([dda8155](https://github.com/Kajabi/sage-lib/commit/dda81554655b7404445c70affae8b23f11ceed36))
+* **icons:** update icons per design ([1543c5c](https://github.com/Kajabi/sage-lib/commit/1543c5cf0e4d2101a7cf8be23a466bdea50155a0))
+* **nba:** added hiding of image below md-max breakpoint ([a2920c5](https://github.com/Kajabi/sage-lib/commit/a2920c5eede157afe5f02c51c10fff4b4561f96f))
+* **nba:** added image props to REact component, fixed Rails component conditional ([310251e](https://github.com/Kajabi/sage-lib/commit/310251efcaaafdca34ec6137ca8f570509612e17))
+* **nba:** added option to place image on right of text ([499e1b3](https://github.com/Kajabi/sage-lib/commit/499e1b3f2585b6569fdcdc94be21f7b54f40726b))
+* **nba:** added reverse option ([2f4bb2b](https://github.com/Kajabi/sage-lib/commit/2f4bb2be433a6e44819ba1ee5ea57b07805427f9))
+* **nba:** added styling for close button ([24f922c](https://github.com/Kajabi/sage-lib/commit/24f922cda896b0b3ef7265bf15b2249acbc3e0a3))
+* **nba:** adjusted attributes to be simpler, fixed flex styling ([ddcac81](https://github.com/Kajabi/sage-lib/commit/ddcac81430746b331b4a759c405ffbc89aa8378e))
+* **nba:** began simple styling and markup additions ([7da15b9](https://github.com/Kajabi/sage-lib/commit/7da15b91622e41a9a742168d9e7b6f42aa44c263))
+* **nba:** fixed flex layout, image attributes, and reverse layout ([03b002c](https://github.com/Kajabi/sage-lib/commit/03b002c0f69f118ae221af6ac4d2f74b260dd4ee))
+* **nba:** generated files needed for new nba component ([bec6bd8](https://github.com/Kajabi/sage-lib/commit/bec6bd8423572850496f6191bf6b61fde093dcf6))
+* **nba:** simplified markup and styling for both React and Rails components ([d7dae36](https://github.com/Kajabi/sage-lib/commit/d7dae36e1468f621cc058279777d5b99adcf31e1))
+* **nba:** switched from image to graphic to handle more use cases ([967eb47](https://github.com/Kajabi/sage-lib/commit/967eb47414df1ca998c3d50fffbf667bf693d8a7))
+* **nba:** switched to an open slot for description ([e71c300](https://github.com/Kajabi/sage-lib/commit/e71c3001f1f9c81086820be311330dd386e76f5f))
+
+
+
+
+
+## [0.51.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.51.1...@kajabi/sage-assets@0.51.2) (2021-10-20)
+
+
+### Bug Fixes
+
+* **set versions of node, npm, and yarn to match kp:** fix failing release deploy ([971988f](https://github.com/Kajabi/sage-lib/commit/971988fc624c1bcc425296449450bc4ff23c27ee))
+
+
+
+
+
+## [0.51.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.51.0...@kajabi/sage-assets@0.51.1) (2021-10-20)
+
+
+### Bug Fixes
+
+* **avatar:** remove margin top and bottom for centering ([da16813](https://github.com/Kajabi/sage-lib/commit/da16813590d48ce1d2cf6cd3ac475da87397f728))
+
+
+
+
+
+# [0.51.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.50.5...@kajabi/sage-assets@0.51.0) (2021-10-18)
+
+
+### Bug Fixes
+
+* **expandable card:** removes right margin from button before element ([a13e90f](https://github.com/Kajabi/sage-lib/commit/a13e90f8d29991f024d483614718550e3d091d3d))
+* **popover:** adds max width to popover and truncates popover links ([c1a0225](https://github.com/Kajabi/sage-lib/commit/c1a02251e4597f5b7892c6401fbf065a93459d78))
+
+
+### Features
+
+* **expandable card:** adds prop to align arrow to right ([fb0aebc](https://github.com/Kajabi/sage-lib/commit/fb0aebc047b6c186702b32a5bfa20978a3a3da33))
+* **expandable card:** adds prop to React component ([5a3931c](https://github.com/Kajabi/sage-lib/commit/5a3931c45779fb33a373fbbaf7c36ff216b566e2))
+* **expandable card:** updates prop name and relocates prop styling ([887eb42](https://github.com/Kajabi/sage-lib/commit/887eb420329a6df7c65e559332fe5e13ee767cdb))
+
+
+
+
+
+## [0.50.5](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.50.4...@kajabi/sage-assets@0.50.5) (2021-10-13)
+
+
+### Bug Fixes
+
+* **modal:** add spacing between sibling buttons ([1af2803](https://github.com/Kajabi/sage-lib/commit/1af28038c86dd979b0695ce5887e2e457c8f6523))
+
+
+
+
+
+## [0.50.4](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.50.3...@kajabi/sage-assets@0.50.4) (2021-10-11)
+
+
+### Bug Fixes
+
+* **modal:** add spacing between sibling buttons ([3b15682](https://github.com/Kajabi/sage-lib/commit/3b15682f1fc0a246b8a1280dd2de30b163c654ab))
+* **modal:** fixes scrollbar showing on modals on Windows browsers ([e1f81e1](https://github.com/Kajabi/sage-lib/commit/e1f81e10d14ff9f722a5c8ca95adec96562b59af))
+* **modal:** reverts scrollbar scrolling styles ([af16ab3](https://github.com/Kajabi/sage-lib/commit/af16ab320c5deabfb0a0741947bd824e5b0e8b59))
+* **property:** moved spacing to the right to resolve alignment on mobile ([6a03672](https://github.com/Kajabi/sage-lib/commit/6a0367291b69ce98a40c96ea623e5ab09df208b4))
+
+
+
+
+
+## [0.50.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.50.2...@kajabi/sage-assets@0.50.3) (2021-10-06)
+
+**Note:** Version bump only for package @kajabi/sage-assets
+
+
+
+
+
+## [0.50.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.50.1...@kajabi/sage-assets@0.50.2) (2021-10-04)
+
+**Note:** Version bump only for package @kajabi/sage-assets
+
+
+
+
+
+## [0.50.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.50.0...@kajabi/sage-assets@0.50.1) (2021-10-01)
+
+
+### Bug Fixes
+
+* **subtle-btn:** remove left and right padding on subtle btn ([4477d63](https://github.com/Kajabi/sage-lib/commit/4477d63f87529069b64c394733eb4a11da20b6f4))
+
+
+
+
+
+# [0.50.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.49.2...@kajabi/sage-assets@0.50.0) (2021-09-30)
+
+
+### Features
+
+* **button:** modify the loops for subtle buttons ([f283924](https://github.com/Kajabi/sage-lib/commit/f2839240871436da3533c29cf7331443e1ec1cc9))
+
+
+
+
+
+## [0.49.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.49.1...@kajabi/sage-assets@0.49.2) (2021-09-29)
+
+**Note:** Version bump only for package @kajabi/sage-assets
+
+
+
+
+
+## [0.49.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.49.0...@kajabi/sage-assets@0.49.1) (2021-09-27)
+
+
+### Bug Fixes
+
+* **banner icon:** correct announcement icon and fix docs for icon usage ([f5490f0](https://github.com/Kajabi/sage-lib/commit/f5490f07a03d70d67b52f920f149c2bc3614133f))
+* **form input:** fixes floating label alignment ([45f77c9](https://github.com/Kajabi/sage-lib/commit/45f77c93609af1e94a1802db022b1d87706d5b33))
+* **form input affix:** abandoned layout changes per Sage design team. Can follow up later ([7a46e7b](https://github.com/Kajabi/sage-lib/commit/7a46e7b9f8ce783a727c50e600811ecf34341fc6))
+* **form input affix:** fixed spacing for form inputs, labels, affixes from 16px to 12px ([62fff91](https://github.com/Kajabi/sage-lib/commit/62fff91bfca8a6b07e594a0e8446ae6fc2c687b8))
+* **form input affix:** fixed styling for affix. changed color and tweaked spacing ([4eff9d0](https://github.com/Kajabi/sage-lib/commit/4eff9d0016dfef1b3c4ca2cbbbb20554903b629b))
+* **form input affix:** moved non-error message text margin-left per Figma specs ([5f8c19e](https://github.com/Kajabi/sage-lib/commit/5f8c19e008bace0a81ef57f42521c364c6a12a72))
+* **form input affix:** removed unused margin-left for error message from layout changes ([d96acfc](https://github.com/Kajabi/sage-lib/commit/d96acfc6dfbcf7aab0ac8ce0c3e62333546adfc8))
+
+
+
+
+
+# [0.49.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.48.0...@kajabi/sage-assets@0.49.0) (2021-09-22)
+
+
+### Bug Fixes
+
+* correct icon unicode for folder ([a54dacd](https://github.com/Kajabi/sage-lib/commit/a54dacd8f93e5a3d35d24c11534f0444b0bc8360))
+
+
+### Features
+
+* **form select:** adds disabled prop and styling ([f705979](https://github.com/Kajabi/sage-lib/commit/f7059797987324b7e49bee45f87b76abf118ff2e))
+* **form select:** adds disabled prop to React component and fixes label background color ([7155fb9](https://github.com/Kajabi/sage-lib/commit/7155fb90dfba931c2c2814829fb754a7a4722bbf))
+
+
+
+
+
+# [0.48.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.47.0...@kajabi/sage-assets@0.48.0) (2021-09-20)
+
+
+### Bug Fixes
+
+* **form toggles:** fixed commented out variable to fix yarn build ([21b48cd](https://github.com/Kajabi/sage-lib/commit/21b48cd9f7c0bb51c9b38a4e083c945771357290))
+* **form toggles:** fixed hover background for error states ([e8e6e89](https://github.com/Kajabi/sage-lib/commit/e8e6e89eb87366ec78ed9075dd380c23662baadc))
+* **form toggles:** fixed margin-left for messages on all toggles ([275a3fe](https://github.com/Kajabi/sage-lib/commit/275a3fe811e21a967386296845e1348582313114))
+* **form toggles:** fixed radio and checkbox focus outline styles ([353b27d](https://github.com/Kajabi/sage-lib/commit/353b27d8235f49651873bc36d2abbf6b08dd96d3))
+* **form toggles:** fixed radio, switch, and checkbox for yarn build ([16fc16e](https://github.com/Kajabi/sage-lib/commit/16fc16ed2d4123bea34a9fdb9cd9dcc376523227))
+* **form toggles:** fixed switch width so theres equal border on either side ([8f12814](https://github.com/Kajabi/sage-lib/commit/8f12814ca6e521bf1ea84f20ae0522ba09b549ec))
+* **hero:** added hero sizes ([67fdc57](https://github.com/Kajabi/sage-lib/commit/67fdc57873e677279caf53f12b49e432b383fc25))
+* **search:** removes margin from reset button and removes unused mixin from textarea component ([1ca85a8](https://github.com/Kajabi/sage-lib/commit/1ca85a847e71c513e40dabd1e79e61e7904937ce))
+* **select:** resolved incorrectly shown error state ([25cadae](https://github.com/Kajabi/sage-lib/commit/25cadaec5cc1f8e794de7a8c99b621b85f38ac4e))
+
+
+### Features
+
+* **expanded-card:** rework CSS for new option ([fb0c5f0](https://github.com/Kajabi/sage-lib/commit/fb0c5f0af200772a252783c70561872e9316759f))
+* **form toggles:** added sage-form-toggle-input mixin ([ee5e881](https://github.com/Kajabi/sage-lib/commit/ee5e8810f06e9f7b98c96e05d9d56220ecceb551))
+* **form toggles:** added sage-form-toggle-parents mixin with passing of content ([856cf20](https://github.com/Kajabi/sage-lib/commit/856cf20eb6f647ce145bbae82e9a85d6f5b938ce))
+* **form toggles:** changed switch size to mimic app. refactored mixins for extends to come first ([401b40a](https://github.com/Kajabi/sage-lib/commit/401b40aed586e6416f5ab705e2ca4166dd6d99ee))
+* **form toggles:** updated hover and focus colors for checkbox ([56007d6](https://github.com/Kajabi/sage-lib/commit/56007d6c86077187f96d1991ca0b293683a86ce5))
+* **form toggles:** updated hover and focus colors for radio ([3aa4d4f](https://github.com/Kajabi/sage-lib/commit/3aa4d4f7a39d7f84da332c66a252041b9257c1cf))
+* **form toggles:** updated hover and focus colors for switch ([139253f](https://github.com/Kajabi/sage-lib/commit/139253f7a83cb9668cb061a737b6ef12cc659f03))
+* **hero:** added heights for each hero size ([60eaa5c](https://github.com/Kajabi/sage-lib/commit/60eaa5c8f8ae6e1a7fa9d7796e3fec31734615c3))
+* **hero:** updated to match Sage 3 specs ([513cee5](https://github.com/Kajabi/sage-lib/commit/513cee5099ae4483dc90e105fcafe1cd82612aac))
+* **panel:** added styling for header, subheader ([057abfd](https://github.com/Kajabi/sage-lib/commit/057abfdb117d086a7dd77888f8fb7a94bda6b6e4))
+* **tinymce icons:** added blockquote icon ([13f8994](https://github.com/Kajabi/sage-lib/commit/13f8994bed47ed670d96e62a2bc627014fbf2a42))
+* **tinymce icons:** added horizontal-line icon ([59bfb6c](https://github.com/Kajabi/sage-lib/commit/59bfb6c9e48d6a464f49ab706a42343ae32f2cb1))
+* **tinymce icons:** added url icon for link ([1050372](https://github.com/Kajabi/sage-lib/commit/10503729e4c0a22b17a2827c6d24ed97a2ddbe9d))
+
+
+
+
+
+# [0.47.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.46.1...@kajabi/sage-assets@0.47.0) (2021-09-15)
+
+
+### Bug Fixes
+
+* **dropdown:** added panel type to handle different spacing ([bf1edd3](https://github.com/Kajabi/sage-lib/commit/bf1edd3cfcb9e967430085eca173dbe51ccd032f))
+* **dropdown:** update interactive state of the row ([e3b9357](https://github.com/Kajabi/sage-lib/commit/e3b9357a53d2e55935d0ae307df382e2bd5ddbcb))
+* **font:** removed calendly icon for the moment ([3e6b8ee](https://github.com/Kajabi/sage-lib/commit/3e6b8ee4d72b2862173b6d84fd45ab3f62969136))
+* **font:** updated Sage icon font ([27328af](https://github.com/Kajabi/sage-lib/commit/27328affa80b88849e8658dbe9b61fe09a08a404))
+* **form elements:** added grid to spacing list and linter fix ([32bd69a](https://github.com/Kajabi/sage-lib/commit/32bd69a82bbc2247459713126b9d49f34473cf11))
+* **form elements:** added icon to error message ([b626601](https://github.com/Kajabi/sage-lib/commit/b626601c6511395b081bd4e67a1d9e96f249bfc8))
+* **form elements:** self review and some cleanup ([a0d958d](https://github.com/Kajabi/sage-lib/commit/a0d958dbdd4e195e72263b33fc2fe32357d377cf))
+* **input:** added a generic form field class for shared form elements styled ([c62e766](https://github.com/Kajabi/sage-lib/commit/c62e76600cfa48bed9f2f37d2eaf983be4157c89))
+* **input:** move updates to mixin instead of shared classes ([e457f8a](https://github.com/Kajabi/sage-lib/commit/e457f8a6513d4d4f1c1a5e6f8ae53f532eda24d7))
+* **input:** updates to input and textarea vars ([65a9120](https://github.com/Kajabi/sage-lib/commit/65a9120c0e243f75343639cc46d47d3cbf70552d))
+* **select:** updates to align to spec ([e4d58fa](https://github.com/Kajabi/sage-lib/commit/e4d58fa84cd9e0806a78fb9c57cf7cdb657e492b))
+* **textarea:** updates to textarea element ([551ce05](https://github.com/Kajabi/sage-lib/commit/551ce05783bb1575cddcb623a7545d2625b71dfc))
+
+
+### Features
+
+* **font:** updated Sage font ([19c4ce8](https://github.com/Kajabi/sage-lib/commit/19c4ce8572d14b2f1013e5869564e5f0256cfb0e))
+* **form input icon:** added classes for specific styling and padding for spacing ([e5f2972](https://github.com/Kajabi/sage-lib/commit/e5f297292438453b926c5256b215a9ba2990f90d))
+* **form input icon:** added markup and styling for static icon ([8434054](https://github.com/Kajabi/sage-lib/commit/84340543e3b1058bf19a63a4a9a7ac4e9de4aac7))
+* **form input icon:** added styling for popover affordance ([3dd2b97](https://github.com/Kajabi/sage-lib/commit/3dd2b974058cd74a65749b725ef715587f052abd))
+* **form input icon:** fixed static icon line-height, added static icon story ([e2048da](https://github.com/Kajabi/sage-lib/commit/e2048da5c7916769767ec1e4fc7df0ca0e06c232))
+* **form input icon:** updated variables for width/height on form input icon ([e3106b7](https://github.com/Kajabi/sage-lib/commit/e3106b78f4364ba33d39f461d6920fee62421a1d))
+
+
+
+
+
+## [0.46.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.46.0...@kajabi/sage-assets@0.46.1) (2021-09-02)
+
+**Note:** Version bump only for package @kajabi/sage-assets
+
+
+
+
+
 # [0.46.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.45.0...@kajabi/sage-assets@0.46.0) (2021-09-01)
 
 

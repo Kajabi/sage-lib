@@ -1,7 +1,7 @@
 PATH
   remote: lib/sage_rails
   specs:
-    sage_rails (4.11.1)
+    sage_rails (4.33.2)
       classy_hash
       rails
 
@@ -50,8 +50,7 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     arel (9.0.0)
-    binding_of_caller (0.8.0)
-      debug_inspector (>= 0.0.1)
+    bindex (0.8.1)
     builder (3.2.4)
     bump (0.9.0)
     byebug (11.1.3)
@@ -59,7 +58,6 @@ GEM
     coderay (1.1.3)
     concurrent-ruby (1.1.8)
     crass (1.0.6)
-    debug_inspector (0.0.3)
     diff-lcs (1.4.4)
     erubi (1.10.0)
     execjs (2.7.0)
@@ -184,11 +182,11 @@ GEM
       thread_safe (~> 0.1)
     uglifier (4.2.0)
       execjs (>= 0.3.0, < 3)
-    web-console (2.3.0)
-      activemodel (>= 4.0)
-      binding_of_caller (>= 0.7.2)
-      railties (>= 4.0)
-      sprockets-rails (>= 2.0, < 4.0)
+    web-console (3.7.0)
+      actionview (>= 5.0)
+      activemodel (>= 5.0)
+      bindex (>= 0.4.0)
+      railties (>= 5.0)
     webpacker (4.3.0)
       activesupport (>= 4.2)
       rack-proxy (>= 0.6.1)
@@ -205,19 +203,19 @@ DEPENDENCIES
   byebug
   kaminari (~> 1.2.1)
   listen (~> 3.5.1)
-  lockup (~> 1.5)
+  lockup (~> 1.5, >= 1.5.1)
   pry
   rails (= 5.2.6)
   rails_12factor
   redcarpet
   rouge
-  rspec-rails
+  rspec-rails (>= 4.0.1)
   sage_rails!
-  sass-rails (~> 5.0)
+  sass-rails (~> 5.0, >= 5.0.7)
   spring (= 1.3.3)
   uglifier (>= 1.3.0)
-  web-console (~> 2.0)
-  webpacker (~> 4.x)
+  web-console (~> 3.7, >= 3.7.0)
+  webpacker (~> 4.3, >= 4.3.0)
 
 RUBY VERSION
    ruby 2.4.9p362

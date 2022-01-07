@@ -1,0 +1,44 @@
+<%= sage_component SageSortableItemCustom, { css_classes: "upsell__custom-sortable" } do %>
+  <%= sage_component SageCard, {
+    clear_bottom_padding: true,
+    clear_top_padding: true,
+  } do %>
+    <%= sage_component SageCardList, {} do %>
+      <%= sage_component SageCardListItem, {} do %>
+        <%= sage_component SageCardHeader, {
+          title: "Upsell offer",
+          spacer: { bottom: :xs }
+        } %>
+        <%= sage_component SageCardRow, { grid_template: "eti", spacer: { bottom: :xs } }  do %>
+          <%= render "mocks/upsell_downsell/upsell_card_content", content: upsell %>
+        <% end %>
+        <% if !upsell[:downsell] %>
+          <%= sage_component SageCardRow, { grid_template: "et", spacer: { top: :xs } }  do %>
+            <div class="upsell__add-downsell-icon">
+              <%= sage_component SageIcon, { icon: "downsell" } %>
+            </div>
+            <%= sage_component SageButton, {
+              style: "primary",
+              subtle: true,
+              value: "Add downsell",
+            } %>
+          <% end %>
+        <% end %>
+      <% end %>
+      <% if upsell[:downsell] %>
+        <%= sage_component SageCardListItem, {} do %>
+          <%= sage_component SageCardHeader, {
+            title: "Downsell offer",
+            spacer: { bottom: :xs }
+          } %>
+          <%= sage_component SageCardRow, { grid_template: "iti", spacer: { bottom: :xs } }  do %>
+            <div class="upsell__add-downsell-icon">
+              <%= sage_component SageIcon, { icon: "downsell" } %>
+            </div>
+            <%= render "mocks/upsell_downsell/upsell_card_content", content: upsell[:downsell], is_downsell: true %>
+          <% end %>
+        <% end %>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>

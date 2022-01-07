@@ -3,6 +3,7 @@ class SageIndicator < SageComponent
     current_item: [:optional, Integer],
     label: [:optional, String],
     num_items: [:optional, Integer],
+    preposition: [:optional, String],
     show_text: [:optional, TrueClass],
   })
 end

@@ -1,5 +1,6 @@
 import React from 'react';
 import { selectArgs } from '../story-support/helpers';
+import { Icon } from '../Icon';
 import { StatBox } from './StatBox';
 
 export default {
@@ -21,7 +22,6 @@ Default.args = {
     value: '38%',
   },
   data: '4,010',
-  image: null,
   link: {
     value: 'View More',
     href: '#'
@@ -37,7 +37,6 @@ DefaultWithSageColorLegendDot.args = {
     value: '38%',
   },
   data: '4,010',
-  image: null,
   legendDotColor: StatBox.LEGEND_COLORS.PRIMARY,
   link: {
     value: 'View More',
@@ -54,7 +53,6 @@ DefaultWithSageCustomColorLegendDot.args = {
     value: '42%',
   },
   data: '242',
-  image: null,
   legendDotCustomColor: '#cf23a9',
   link: {
     value: 'View More',
@@ -71,7 +69,6 @@ DefaultRaised.args = {
     value: '76%',
   },
   data: '309',
-  image: null,
   link: {
     value: 'View More',
     href: '#'
@@ -89,7 +86,17 @@ SimpleWithImage.args = {
     alt: 'Example',
     src: 'https://via.placeholder.com/150'
   },
-  link: null,
+  title: 'Title'
+};
+
+export const SimpleWithIcon = Template.bind({});
+SimpleWithIcon.args = {
+  change: null,
+  data: '1,000',
+  icon: {
+    cardColor: Icon.CARD_COLORS.PUBLISHED,
+    name: Icon.ICONS.CHECK
+  },
   title: 'Title'
 };
 
@@ -98,7 +105,5 @@ NullView.args = {
   change: null,
   data: 'No insights to show',
   hasData: false,
-  image: null,
-  link: null,
   title: 'In Progress'
 };

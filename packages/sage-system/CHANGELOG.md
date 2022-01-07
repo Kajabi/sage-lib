@@ -3,6 +3,165 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.17.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.16.1...@kajabi/sage-system@0.17.0) (2021-12-15)
+
+
+### Bug Fixes
+
+* **alert:** minor fix ([370a313](https://github.com/Kajabi/sage-lib/commit/370a3137052aca806c0ac8337edf9eebfbe73558))
+
+
+### Features
+
+* **alert:** added presence listener for alerts ([fe54591](https://github.com/Kajabi/sage-lib/commit/fe54591e7fd7cc65151a8f230a60e82fe22cccf9))
+
+
+
+
+
+## [0.16.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.16.0...@kajabi/sage-system@0.16.1) (2021-12-06)
+
+**Note:** Version bump only for package @kajabi/sage-system
+
+
+
+
+
+# [0.16.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.15.0...@kajabi/sage-system@0.16.0) (2021-12-01)
+
+
+### Features
+
+* **toast:** add close event to reset ([d852cf3](https://github.com/Kajabi/sage-lib/commit/d852cf3190414bb923b6c6875d3ee5033ffdc17e))
+* **toast:** enable test_id ([99b635f](https://github.com/Kajabi/sage-lib/commit/99b635fa1a816c140c254ec4923234a4e5e1488a))
+* **toast:** toast JS events ([994a783](https://github.com/Kajabi/sage-lib/commit/994a7831670cdf8ce4a8baf1c232e2e03deee1d8))
+
+
+
+
+
+# [0.15.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.14.0...@kajabi/sage-system@0.15.0) (2021-11-15)
+
+
+### Features
+
+* **carousel:** added logic for startIndex option ([bc5e1e1](https://github.com/Kajabi/sage-lib/commit/bc5e1e18de6b6e0e7728fa8fcf3442daa8deb799))
+* **carousel:** changed dots phrasing to indicator, removed unused dot styles ([2b816d6](https://github.com/Kajabi/sage-lib/commit/2b816d607cafbc9c527e39d5312aff04f49aa03c))
+* **carousel:** fixed pagination index for Rails component ([1a80e78](https://github.com/Kajabi/sage-lib/commit/1a80e783aa81206e9abf7fae28bc46340f677b9c))
+* **carousel:** got Rails indicator pagination working ([de3e020](https://github.com/Kajabi/sage-lib/commit/de3e020e6e76ba7af37306bbd96d5c54b9933812))
+* **carousel:** re-added the mouseDrag option with dragEnd event to update arrows/indicator ([91b96b5](https://github.com/Kajabi/sage-lib/commit/91b96b5dac921be9e7c7360188e919eeef7d1304))
+* **carousel:** updating to use indicator in Rails component ([ca91e3a](https://github.com/Kajabi/sage-lib/commit/ca91e3aae9e313aed59be8b4cf14a27273838d49))
+
+
+
+
+
+# [0.14.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.13.2...@kajabi/sage-system@0.14.0) (2021-11-01)
+
+
+### Features
+
+* **carousel:** added a11y attributes per Quinton's guidance ([a58b7ed](https://github.com/Kajabi/sage-lib/commit/a58b7ed289d189f21fb1a703b250ca18aafb682d))
+* **carousel:** added arrow caret icons, disabled state and logic ([0c715fd](https://github.com/Kajabi/sage-lib/commit/0c715fd86b89bcb5a88394cfa55accd0b9a50ec6))
+* **carousel:** added dragEnd event to change active dot, simplified some styling ([a4d1ebb](https://github.com/Kajabi/sage-lib/commit/a4d1ebb003ccd206ffe91837534e609f941e694d))
+* **carousel:** added missing button role and tab index attributes to arrows and dots ([7e3d4c6](https://github.com/Kajabi/sage-lib/commit/7e3d4c644d908b17c3a7173705b044279bdccfc7))
+* **carousel:** cleaned up and simplified js ([0134072](https://github.com/Kajabi/sage-lib/commit/01340725ea28caaf56c11dc00c7dbc32514063ce))
+* **carousel:** fixed looping conditional ([2ee8f5d](https://github.com/Kajabi/sage-lib/commit/2ee8f5db9870ce1e888f0b77642befd561ac6b34))
+* **carousel:** fixed looping conditional, added props and rules ([96e386f](https://github.com/Kajabi/sage-lib/commit/96e386f47744282459c2902858553b0dd47cd773))
+* **carousel:** fixed package.json and yarn.lock files version for tiny-slider ([c9ac14a](https://github.com/Kajabi/sage-lib/commit/c9ac14a0bff41c37616e0fc470a065e774167033))
+* **carousel:** got arrows and dots syncing properly, simplified js ([3f4ff1f](https://github.com/Kajabi/sage-lib/commit/3f4ff1fd9a0ee8ab98edda8eebc5509fdeaebf25))
+* **carousel:** got basic JS setup ([61e3a95](https://github.com/Kajabi/sage-lib/commit/61e3a95e8531c82bb496eef3ce009d4032561dcd))
+* **carousel:** got basic markup with content_for going ([c0e1a8a](https://github.com/Kajabi/sage-lib/commit/c0e1a8a829e30daaa64dc347aea2ec0c5b491ea6))
+* **carousel:** got basic prev/next and dot click working ([5466db2](https://github.com/Kajabi/sage-lib/commit/5466db245ff6c12b3270a0be1d7bb5a9e3fafdc2))
+* **carousel:** got options passing working ([06a8845](https://github.com/Kajabi/sage-lib/commit/06a8845ab0c721b0e93e9881a34c1478f20b167d))
+* **carousel:** got the appending to slide container div working ([531ddc9](https://github.com/Kajabi/sage-lib/commit/531ddc9b1f543d53b8eeac0febba263f5fb9bc56))
+* **carousel:** moved container out of editable options ([e5c6189](https://github.com/Kajabi/sage-lib/commit/e5c6189bf36f8d4f40b6bcf2920864482737f52c))
+* **carousel:** removed dots if the carousel is infinitely looping ([570e8dd](https://github.com/Kajabi/sage-lib/commit/570e8dd90431e831c9c1c185d495b9f8c5f34dde))
+* **carousel:** simplified styling, fixed naming and options ([e1f729e](https://github.com/Kajabi/sage-lib/commit/e1f729eb9ee0193fa48f0c97fb8dea9db5982ba5))
+
+
+
+
+
+## [0.13.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.13.1...@kajabi/sage-system@0.13.2) (2021-10-25)
+
+
+### Bug Fixes
+
+* **node version:** update all packages to use 14.x for node ([5d01915](https://github.com/Kajabi/sage-lib/commit/5d019156ff1e5390d4a4cf809a2cb559d666fb3d))
+
+
+
+
+
+## [0.13.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.13.0...@kajabi/sage-system@0.13.1) (2021-09-29)
+
+
+### Bug Fixes
+
+* **expandable-card:** updated arguments in unbind function ([0f78a10](https://github.com/Kajabi/sage-lib/commit/0f78a103dc153aabbe744558f95638c42bf1185b))
+
+
+
+
+
+# [0.13.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.12.0...@kajabi/sage-system@0.13.0) (2021-09-27)
+
+
+### Features
+
+* **form input affix:** modified inputaffixes script to use custom child instead of label ([14df1ee](https://github.com/Kajabi/sage-lib/commit/14df1ee6b006c9f79c260fa7103a0d8545695d93))
+
+
+
+
+
+# [0.12.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.11.2...@kajabi/sage-system@0.12.0) (2021-09-20)
+
+
+### Features
+
+* **expanded-card:** remove comment ([981f83e](https://github.com/Kajabi/sage-lib/commit/981f83e3b7c2afac0a9114454f53775f482d3a83))
+* **expanded-card:** rework CSS for new option ([fb0c5f0](https://github.com/Kajabi/sage-lib/commit/fb0c5f0af200772a252783c70561872e9316759f))
+
+
+
+
+
+## [0.11.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.11.1...@kajabi/sage-system@0.11.2) (2021-09-15)
+
+
+### Bug Fixes
+
+* **input:** added a generic form field class for shared form elements styled ([c62e766](https://github.com/Kajabi/sage-lib/commit/c62e76600cfa48bed9f2f37d2eaf983be4157c89))
+* **input:** move updates to mixin instead of shared classes ([e457f8a](https://github.com/Kajabi/sage-lib/commit/e457f8a6513d4d4f1c1a5e6f8ae53f532eda24d7))
+
+
+
+
+
+## [0.11.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.11.0...@kajabi/sage-system@0.11.1) (2021-09-08)
+
+
+### Bug Fixes
+
+* **modal:** gracefully check for a trigger ([86e5e8d](https://github.com/Kajabi/sage-lib/commit/86e5e8dd3739fc1843c3a045d828170f99703590))
+
+
+
+
+
+# [0.11.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.10.0...@kajabi/sage-system@0.11.0) (2021-09-08)
+
+
+### Features
+
+* **modal:** allow modal trigger to load a remote URL in modal ([8e971a6](https://github.com/Kajabi/sage-lib/commit/8e971a66e33269648201be1b9741936e3771d982))
+
+
+
+
+
 # [0.10.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.9.7...@kajabi/sage-system@0.10.0) (2021-08-25)
 
 

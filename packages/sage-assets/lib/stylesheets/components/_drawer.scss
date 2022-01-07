@@ -1,0 +1,18 @@
+////
+/// Drawer
+///
+/// @group sage
+////
+
+// The Drawer component is an extension of the Modal component. 
+// This file is used to isolate the Drawer specific styles.
+
+.sage-drawer {
+  justify-content: flex-end;
+  padding: 0;
+  background: none;
+}
+
+.sage-drawer__close {
+  margin-left: auto; // preserves alignment when only close button is present
+}

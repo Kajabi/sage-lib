@@ -3,7 +3,6 @@ class SageBanner < SageComponent
     active: [:optional, TrueClass],
     banner_context: [:optional, Set.new(["ladera-top", "sage-demo"])],
     dismissable: [:optional, TrueClass],
-    icon: [:optional, String],
     id: [:optional, String],
     link: [:optional, {name: String, attributes: Hash}],
     text: String,

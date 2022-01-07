@@ -11,7 +11,6 @@ const DefaultBody = ({ onExit }) => (
     <Modal.Header
       icon={{ color: Icon.COLORS.RED_300, name: Icon.ICONS.DANGER }}
       title="Example Sage Modal"
-      subheader="Example subheader"
       popover={{
         title: 'Example popover title',
         link: '#',
@@ -47,6 +46,14 @@ const DefaultBody = ({ onExit }) => (
           Close Modal
         </Button>
       </Modal.FooterAside>
+      <Button
+        color={Button.COLORS.SECONDARY}
+        icon={SageTokens.ICONS.CHECK}
+        iconPosition={Button.ICON_POSITIONS.LEFT}
+        onClick={onExit}
+      >
+        Take An Action
+      </Button>
       <Button
         color={Button.COLORS.PRIMARY}
         icon={SageTokens.ICONS.CHECK}

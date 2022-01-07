@@ -8,6 +8,9 @@ import {
   DEFAULT_CONFIG,
   CLASS_DISMISSED_STATE,
   DATA_ATTR_CLOSE_BUTTON,
+  EVENT_OPEN,
+  EVENT_CLOSE,
+  EVENT_DISMISS,
 } from './toast.config.js';
 
 import {
@@ -33,6 +36,7 @@ Sage.toast = (function () {
     if (!elToast) return false;
 
     elToast.classList.add(CLASS_DISMISSED_STATE);
+    _dispatchEvent(EVENT_CLOSE);
     _unbindEvents(elToast);
     return true;
   }
@@ -41,6 +45,7 @@ Sage.toast = (function () {
     const elContainer = document.getElementById(ID_TOAST_CONTAINER);
     if (!elContainer) return false;
 
+    _dispatchEvent(EVENT_CLOSE);
     _unbindEvents(elContainer);
     elContainer.remove();
     return true;
@@ -61,6 +66,7 @@ Sage.toast = (function () {
 
     const toastFragment = stringToHtmlFragment(content);
     _bindEvents(toastFragment);
+    _dispatchEvent(EVENT_OPEN);
     scope.appendChild(toastFragment);
   }
 
@@ -78,6 +84,11 @@ Sage.toast = (function () {
 
   function _handleCloseButtonClick(evt) {
     dismiss(evt.target.parentElement.id);
+    _dispatchEvent(EVENT_DISMISS);
+  }
+
+  function _dispatchEvent(evt) {
+    document.dispatchEvent(new Event(evt));
   }
 
   return {

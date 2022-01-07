@@ -1,16 +1,15 @@
-import { SageTokens } from '../tokens';
+import { SageDictionary } from '../dictionary';
 
-// Generates grid template classnames from grid template tokens such as:
-// CLASSNAMES_GRID_TEMPLATES.ETE ---> `sage-grid-template-ete`
+// CLASSNAMES_GRID_TEMPLATES.ETE --> `sage-grid-template-ete`
 export const CLASSNAMES_GRID_TEMPLATES = {};
-Object.keys(SageTokens.GRID_TEMPLATES).forEach((gridTemplateToken) => {
-  CLASSNAMES_GRID_TEMPLATES[gridTemplateToken] = `sage-grid-template-${SageTokens.GRID_TEMPLATES[gridTemplateToken]}`;
+Object.keys(SageDictionary.CONTENT_GRID_TEMPLATE).forEach((template) => {
+  CLASSNAMES_GRID_TEMPLATES[template] = SageDictionary.CONTENT_GRID_TEMPLATE[template].CLASSNAME;
 });
 
 export const lookupGridTemplateClassname = (gridTemplate) => {
   let matchingClassname = null;
-  Object.keys(SageTokens.GRID_TEMPLATES).forEach((gridTemplateToken) => {
-    if (SageTokens.GRID_TEMPLATES[gridTemplateToken] === gridTemplate) {
+  Object.keys(SageDictionary.CONTENT_GRID_TEMPLATE).forEach((gridTemplateToken) => {
+    if (SageDictionary.CONTENT_GRID_TEMPLATE[gridTemplateToken].SYMBOL === gridTemplate) {
       matchingClassname = CLASSNAMES_GRID_TEMPLATES[gridTemplateToken];
     }
   });

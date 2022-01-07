@@ -5,8 +5,16 @@ import uuid from 'react-uuid';
 import { Button } from '../Button';
 import { SageClassnames, SageTokens } from '../configs';
 
-export const ExpandableCard = ({ bodyBordered, children, className, sageType, triggerLabel, }) => {
-  const [selfActive, setSelfActive] = useState(false);
+export const ExpandableCard = ({
+  alignArrowRight,
+  bodyBordered,
+  expanded,
+  children,
+  className,
+  sageType,
+  triggerLabel,
+}) => {
+  const [selfActive, setSelfActive] = useState(expanded);
 
   const handleBodyToggle = () => {
     if (selfActive) {
@@ -21,6 +29,12 @@ export const ExpandableCard = ({ bodyBordered, children, className, sageType, tr
 
   const id = uuid();
 
+  const containerClassnames = classnames({
+    'sage-expandable-card--align-arrow-right': alignArrowRight,
+    'sage-expandable-card': !selfActive,
+    'sage-expandable-card--expanded': selfActive
+  });
+
   const bodyClassnames = classnames({
     'sage-expandable-card__body-bordered': bodyBordered,
     'sage-expandable-card__body': !bodyBordered,
@@ -28,7 +42,7 @@ export const ExpandableCard = ({ bodyBordered, children, className, sageType, tr
   });
 
   return (
-    <div className={`sage-expandable-card ${className || ''}`}>
+    <div className={`${containerClassnames} ${className || ''}`}>
       <Button
         aria-controls={id}
         aria-expanded={selfActive}
@@ -41,17 +55,17 @@ export const ExpandableCard = ({ bodyBordered, children, className, sageType, tr
       >
         {triggerLabel}
       </Button>
-      {selfActive && (
-        <div id={id} className={bodyClassnames}>
-          {children}
-        </div>
-      )}
+      <div id={id} className={bodyClassnames}>
+        {children}
+      </div>
     </div>
   );
 };
 
 ExpandableCard.defaultProps = {
+  alignArrowRight: false,
   bodyBordered: false,
+  expanded: false,
   children: null,
   className: null,
   sageType: false,
@@ -59,7 +73,9 @@ ExpandableCard.defaultProps = {
 };
 
 ExpandableCard.propTypes = {
+  alignArrowRight: PropTypes.bool,
   bodyBordered: PropTypes.bool,
+  expanded: PropTypes.bool,
   className: PropTypes.string,
   children: PropTypes.node,
   sageType: PropTypes.bool,

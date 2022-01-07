@@ -17,7 +17,7 @@ export const Launch = Template.bind({});
 Launch.args = {
   children: 'Link to launch a new window',
   className: Link.CLASSNAMES.LAUNCH,
-  rel: 'noopener noreferrer',
+  rel: 'noopener',
   target: '_blank',
   href: '//example.com',
 };

@@ -1,0 +1,43 @@
+<%= sage_component SageModal, { id: "plan-upgrade-modal" } do %>
+  <%= sage_component SageModalContent, {} do %>
+    <%= sage_component SagePanelRow, { grid_template: "te", spacer: { bottom: :sm } } do %>
+      <svg width="52" height="52" xmlns="http://www.w3.org/2000/svg"><g transform="translate(4 4)" fill="none" fill-rule="evenodd"><rect fill="#86D5BC" fill-rule="nonzero" width="44" height="44" rx="22"/><path d="M23.188 13.746c.331.156.522.51.47.872l-.697 4.882H29.5a.833.833 0 0 1 .616 1.394l-8.333 9.167a.833.833 0 0 1-1.441-.679l.697-4.882h-6.54a.833.833 0 0 1-.616-1.394l8.334-9.167c.246-.27.64-.349.971-.193Zm-6.804 9.087H22a.833.833 0 0 1 .825.952l-.45 3.147 5.241-5.765H22a.834.834 0 0 1-.825-.952l.45-3.147-5.241 5.765Z" fill="#183E3B"/><rect stroke="#DDF8F0" stroke-width="8" width="44" height="44" rx="22"/></g></svg>
+      <%= sage_component SageButton, {
+        attributes: { "data-js-modal": true },
+        icon: { name: "remove", style: "only" },
+        style: "secondary",
+        subtle: true,
+        value: "Close Modal",
+      } %>
+    <% end %>
+
+    <h3 class="<%= SageClassnames::SPACERS::XS_BOTTOM %>">
+      Upgrade plan for more <%= feature %>
+    </h3>
+    <p class="<%= SageClassnames::TYPE::BODY %>">
+      You&rsquo;ve reached the <%= feature %> limit for your plan.
+      To <%= action %> a <%= feature %>, upgrade your plan.
+    </p>
+
+    <% content_for :sage_footer do %>
+      <% content_for :sage_footer_aside do %>
+        <%= sage_component SageButton, {
+          icon: { name: "email-activity", style: "left" },
+          style: "primary",
+          subtle: true,
+          value: "Check usage",
+        } %>
+      <% end %>
+      <%= sage_component SageButton, {
+        attributes: { "data-js-modal": true },
+        raised: false,
+        style: "secondary",
+        value: "Maybe later",
+      } %>
+      <%= sage_component SageButton, {
+        style: "primary",
+        value: "Upgrade now",
+      } %>
+    <% end %>
+  <% end %>
+<% end %>

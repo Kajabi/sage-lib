@@ -19,11 +19,12 @@ export default {
   argTypes: {
     ...selectArgs({
       icon: SageTokens.ICONS,
+      align: Dropdown.POSITIONS,
       panelSize: Dropdown.PANEL_SIZES
     }),
   },
   args: {
-    align: null,
+    align: Dropdown.POSITIONS.DEFAULT,
     className: null,
     closePanelOnExit: true,
     contained: false,

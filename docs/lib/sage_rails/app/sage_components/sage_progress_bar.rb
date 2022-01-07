@@ -1,6 +1,7 @@
 class SageProgressBar < SageComponent
   set_attribute_schema({
-    percent: 0..100,
+    color: [:optional, String],
     label: String,
+    percent: 0..100,
   })
 end

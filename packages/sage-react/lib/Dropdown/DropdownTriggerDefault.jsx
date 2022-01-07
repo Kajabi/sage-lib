@@ -9,6 +9,7 @@ export const DropdownTriggerDefault = ({
   isLabelVisible,
   label,
   onClick,
+  raised,
   subtle,
 }) => (
   <Button
@@ -18,6 +19,7 @@ export const DropdownTriggerDefault = ({
     iconOnly={!isLabelVisible}
     onClick={onClick}
     type="button"
+    raised={raised}
     subtle={subtle}
   >
     {label}
@@ -28,6 +30,7 @@ DropdownTriggerDefault.defaultProps = {
   disabled: false,
   isLabelVisible: true,
   icon: null,
+  raised: false,
   subtle: false,
 };
 
@@ -37,5 +40,6 @@ DropdownTriggerDefault.propTypes = {
   label: PropTypes.string.isRequired,
   icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),
   isLabelVisible: PropTypes.bool,
+  raised: PropTypes.bool,
   subtle: PropTypes.bool,
 };

@@ -10,3 +10,17 @@
   @extend %t-sage-heading-4;
   font-weight: sage-font-weight(regular);
 }
+
+.docs-heading__meta {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  gap: sage-spacing(lg);
+}
+
+.docs-heading__meta-primary,
+.docs-heading__meta-secondary {
+  display: flex;
+  flex-flow: row wrap;
+  gap: sage-spacing();
+}

@@ -2,14 +2,18 @@ import React, { useState } from 'react';
 import { selectArgs } from '../story-support/helpers';
 import { Button } from '../Button';
 import { Grid } from '../Grid';
+import { OptionsDropdown } from '../Dropdown/OptionsDropdown';
+import { defaultOptionsItems } from '../Dropdown/stories/story-helper';
 import { SageTokens } from '../configs';
 import { Sortable } from './Sortable';
+import { SortableItemCustom } from './SortableItemCustom';
 
 export default {
   title: 'Sage/Sortable',
   component: Sortable,
   subcomponents: {
-    'Sortable.Item': Sortable.Item
+    'Sortable.Item': Sortable.Item,
+    'Sortable.ItemCustom': SortableItemCustom
   }
 };
 
@@ -93,4 +97,41 @@ Default.argTypes = {
   ...selectArgs({
     type: Sortable.Item.TYPES
   }),
+};
+
+export const SortableCustomItem = () => {
+  const renderChild = () => (
+    <>
+      <p>Title</p>
+      <OptionsDropdown options={defaultOptionsItems} isPinned={false} />
+    </>
+  );
+
+  const [state, setState] = useState([
+    {
+      id: '1',
+      children: renderChild(),
+      gridTemplate: 'te'
+    },
+    {
+      id: '2',
+      children: renderChild(),
+      gridTemplate: 'te'
+    },
+    {
+      id: '3',
+      children: renderChild(),
+      gridTemplate: 'te'
+    },
+  ]);
+
+  return (
+    <Grid container={Grid.CONTAINER_SIZES.MD}>
+      <Sortable
+        list={state}
+        renderItem={SortableItemCustom}
+        setList={setState}
+      />
+    </Grid>
+  );
 };

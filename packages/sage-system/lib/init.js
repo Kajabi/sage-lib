@@ -51,6 +51,8 @@ Sage.init = function(elementNamesToInitLegacy) {
   initDocumentPresenceListener('[data-js-popover]',                              Sage.popover.init,       Sage.popover.unbind);
   initDocumentPresenceListener('[data-js-banner], [data-js-toggle-banner]',      Sage.banner.init,        Sage.banner.unbind);
   initDocumentPresenceListener('[data-js-input-suffix], [data-js-input-prefix]', Sage.inputaffixes.init,  Sage.inputaffixes.unbind);
+  initDocumentPresenceListener('[data-js-carousel]',                             Sage.carousel.init,      false);
+  initDocumentPresenceListener('[data-js-alert]', Sage.alert.init, false);
 
   // ==================================================
   // Event Listeners
@@ -99,11 +101,6 @@ Sage.init = function(elementNamesToInitLegacy) {
   // Initialize Input groups
   if ( shouldInitLegacy('inputgroup', '.sage-input-group') ) {
     Sage.inputgroup.init();
-  }
-
-  // Initialize Input groups
-  if ( shouldInitLegacy('inputhelper', '.sage-input-helper') ) {
-    Sage.inputhelper.init();
   }
 
   // Initialize Meter

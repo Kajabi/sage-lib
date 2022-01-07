@@ -8,9 +8,6 @@
 
   <%= component.generated_html_attributes.html_safe %>
 >
-  <label for="<%= component.id %>" class="sage-search__label">
-    <%= component.label_text %>
-  </label>
   <input
     id="<%= component.id %>"
     class="sage-search__input"
@@ -20,6 +17,9 @@
     placeholder="<%= component.placeholder.present? ? component.placeholder : "Search" %>"
     value="<%= component.value %>"
   />
+  <label for="<%= component.id %>" class="sage-search__label">
+    <%= component.label_text %>
+  </label>
   <%= sage_component SageButton, {
     value: "Clear Search",
     style: "secondary",

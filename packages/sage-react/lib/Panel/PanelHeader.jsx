@@ -10,6 +10,7 @@ export const PanelHeader = ({
   subtext,
   title,
   titleTag,
+  titleClassName,
   ...rest
 }) => {
   let hasSubtextChild = false;
@@ -31,23 +32,26 @@ export const PanelHeader = ({
 
   return (
     <header className={classNames} {...rest}>
-      {title && (
-        <PanelTitle tag={titleTag}>{title}</PanelTitle>
-      )}
+      <div className="sage-panel__header-inner">
+        {title && (
+          <PanelTitle className={titleClassName} tag={titleTag}>{title}</PanelTitle>
+        )}
+        {subtext && (
+          <PanelSubtext>{subtext}</PanelSubtext>
+        )}
+      </div>
       {children}
-      {subtext && (
-        <PanelSubtext>{subtext}</PanelSubtext>
-      )}
     </header>
   );
 };
 
 PanelHeader.defaultProps = {
   children: null,
-  className: '',
+  className: null,
   subtext: null,
   title: null,
   titleTag: 'h2',
+  titleClassName: null,
 };
 
 PanelHeader.propTypes = {
@@ -56,4 +60,5 @@ PanelHeader.propTypes = {
   subtext: PropTypes.node,
   title: PropTypes.string,
   titleTag: PropTypes.string,
+  titleClassName: PropTypes.string,
 };

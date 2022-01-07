@@ -3,6 +3,608 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.74.4](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.74.3...@kajabi/sage-react@0.74.4) (2022-01-05)
+
+
+### Bug Fixes
+
+* **form section:** adds breakpoints for grid ([d44f751](https://github.com/Kajabi/sage-lib/commit/d44f751f0e399f7aef758abe824e37a07842f064))
+* **sortable:** added drag class option ([4e58d2e](https://github.com/Kajabi/sage-lib/commit/4e58d2e121787592c91da8daeacb589926daeeae))
+* **textarea:** update error state ([9a54885](https://github.com/Kajabi/sage-lib/commit/9a54885989b0634cb1b5bc8e59f79400e0be7b2b))
+
+
+
+
+
+## [0.74.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.74.2...@kajabi/sage-react@0.74.3) (2021-12-22)
+
+**Note:** Version bump only for package @kajabi/sage-react
+
+
+
+
+
+## [0.74.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.74.1...@kajabi/sage-react@0.74.2) (2021-12-22)
+
+**Note:** Version bump only for package @kajabi/sage-react
+
+
+
+
+
+## [0.74.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.74.0...@kajabi/sage-react@0.74.1) (2021-12-20)
+
+
+### Bug Fixes
+
+* **sageavatar:** add id to react avatar image ([e387c60](https://github.com/Kajabi/sage-lib/commit/e387c606a81ca127a71ce7f1acbd2c9f4c104dd6))
+* **stat box:** updates image, icon, and link default props to null ([f5e8466](https://github.com/Kajabi/sage-lib/commit/f5e8466f1151ec99c0eb9b5d441fd8aaa487724d))
+
+
+
+
+
+# [0.74.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.73.1...@kajabi/sage-react@0.74.0) (2021-12-15)
+
+
+### Bug Fixes
+
+* **statbox:** add optional icon ([9f9cce5](https://github.com/Kajabi/sage-lib/commit/9f9cce588fac62b78ddf2e290370cd0b31d55dea))
+
+
+### Features
+
+* add z index tokens to rails and js ([e2f9d4d](https://github.com/Kajabi/sage-lib/commit/e2f9d4dca1854a1a78e5f9ff6954cf5a5f278c5f))
+
+
+
+
+
+## [0.73.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.73.0...@kajabi/sage-react@0.73.1) (2021-12-09)
+
+**Note:** Version bump only for package @kajabi/sage-react
+
+
+
+
+
+# [0.73.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.72.1...@kajabi/sage-react@0.73.0) (2021-12-09)
+
+
+### Features
+
+* **docs:** sync react mock for contact profile ([4fbb174](https://github.com/Kajabi/sage-lib/commit/4fbb174c94a4dc75ce79ab532a7a95a78b3aedfc))
+* **drawer:** enhance drawer props with ID and active ([eb9fa91](https://github.com/Kajabi/sage-lib/commit/eb9fa91ea13d15fa80f3f7dbc66c6fbbd3ecb1b5))
+* **drawer:** ensure header is optionally rendered ([356b818](https://github.com/Kajabi/sage-lib/commit/356b81830ed7cebee790e24408d93876602ed708))
+
+
+
+
+
+## [0.72.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.72.0...@kajabi/sage-react@0.72.1) (2021-12-08)
+
+
+### Bug Fixes
+
+* update incorrect referrer attributes ([f151256](https://github.com/Kajabi/sage-lib/commit/f1512562083788f6107b821d0aa94b7f2dfb1634))
+* update/replace noreferrer to noopener ([a734f0e](https://github.com/Kajabi/sage-lib/commit/a734f0e94fa8f9549fa5f63de6ac6cea395e0084))
+
+
+
+
+
+# [0.72.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.71.5...@kajabi/sage-react@0.72.0) (2021-12-06)
+
+
+### Features
+
+* **description:** add collapsed variant poc ([ff35968](https://github.com/Kajabi/sage-lib/commit/ff35968ec4b9e19499c803f89ebca76aa4e8c535))
+* **description:** adds new props to React component ([cd2b287](https://github.com/Kajabi/sage-lib/commit/cd2b2877c38d26883deaaf4d44fde7ae2f634009))
+* **description:** adds primary action prop to React component ([ffaa52f](https://github.com/Kajabi/sage-lib/commit/ffaa52f70f5f1f2494c46962e4c2390cc4aeb846))
+* **description:** adjust `condensed` to `no_divider` and move id to items ([40998a7](https://github.com/Kajabi/sage-lib/commit/40998a702248658e3648703ed57672167594e150))
+* **description:** move action button inside items prop ([95a610e](https://github.com/Kajabi/sage-lib/commit/95a610e1306dab5af58a7cd2f33bba3813d4dd32))
+* **description:** sync up React component ([14e5d47](https://github.com/Kajabi/sage-lib/commit/14e5d47ff99aa5a4b56ce256e4e1442102de3871))
+* **description:** updates prop name and logic, removes link prop ([3d0e85b](https://github.com/Kajabi/sage-lib/commit/3d0e85b280b9393e4c7b0c99c6a7dbcf4d54e782))
+
+
+
+
+
+## [0.71.5](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.71.4...@kajabi/sage-react@0.71.5) (2021-12-01)
+
+**Note:** Version bump only for package @kajabi/sage-react
+
+
+
+
+
+## [0.71.4](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.71.3...@kajabi/sage-react@0.71.4) (2021-11-23)
+
+
+### Bug Fixes
+
+* **modal:** add id to react implementation ([1489584](https://github.com/Kajabi/sage-lib/commit/1489584d896fb0a4f80d9ff37ac0bcf0bf4c858e))
+
+
+
+
+
+## [0.71.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.71.2...@kajabi/sage-react@0.71.3) (2021-11-23)
+
+
+### Bug Fixes
+
+* **panel header title:** allow react component title to get custom classnames ([32ea35b](https://github.com/Kajabi/sage-lib/commit/32ea35b48ba3e3e4e9a9c342e5a130ae1a9117ca))
+
+
+
+
+
+## [0.71.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.71.1...@kajabi/sage-react@0.71.2) (2021-11-22)
+
+**Note:** Version bump only for package @kajabi/sage-react
+
+
+
+
+
+## [0.71.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.71.0...@kajabi/sage-react@0.71.1) (2021-11-22)
+
+
+### Bug Fixes
+
+* **panel header:** finesse example ([f3f0fab](https://github.com/Kajabi/sage-lib/commit/f3f0fab2a5abb501b1862fc78a5ada8b3b2e14cc))
+* **panel header:** react ([536887c](https://github.com/Kajabi/sage-lib/commit/536887cbfa31e6b7cc17fa9929b58dba744348f2))
+
+
+
+
+
+# [0.71.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.70.0...@kajabi/sage-react@0.71.0) (2021-11-17)
+
+
+### Features
+
+* **description:** add Description export ([a3f8e48](https://github.com/Kajabi/sage-lib/commit/a3f8e488d000f9c58fb17df9946ff6d12277f67e))
+
+
+
+
+
+# [0.70.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.69.0...@kajabi/sage-react@0.70.0) (2021-11-17)
+
+
+### Bug Fixes
+
+* **avatar:** fixes avatar badge size ranges ([b426196](https://github.com/Kajabi/sage-lib/commit/b426196155f17b37028085af4ae56c32e0e89117))
+
+
+### Features
+
+* **avatar:** adds badge to React component ([89c081d](https://github.com/Kajabi/sage-lib/commit/89c081db1ea1e4bc0bce3651786e6ad7ad173b71))
+* **small alerts:** polish alerts when small variation ([23dcd2c](https://github.com/Kajabi/sage-lib/commit/23dcd2c66542730e3c6b61737c03c51535d64264))
+* add center button group option in React ([025bccc](https://github.com/Kajabi/sage-lib/commit/025bccc0b0c6b8836ac1f3f617b818cd053f6cb5))
+* add contact profile mock in React ([85c4aa9](https://github.com/Kajabi/sage-lib/commit/85c4aa99aa1284beaf5becbde7f1d659ecfe75ab))
+* add description stub for react ([9c0fa65](https://github.com/Kajabi/sage-lib/commit/9c0fa656b80e49b9c64b43cf780202dc1c9517f5))
+* **alert:** minor updates to spelling and grammar ([65e46aa](https://github.com/Kajabi/sage-lib/commit/65e46aa370a02d7e0d30ce6dd563a0234022ca27))
+* **alert:** polish icons and close button ([3526809](https://github.com/Kajabi/sage-lib/commit/3526809fd084c5a3f31e846779e9525a22df106a))
+* **alert:** react updates ([7c3a8b9](https://github.com/Kajabi/sage-lib/commit/7c3a8b9f3f8369ed545dbc6a6cf6c6db8150a354))
+* **alert:** update switch statement for icons ([cd715d4](https://github.com/Kajabi/sage-lib/commit/cd715d459ff437ce220024b6ae23f02a9a11b665))
+
+
+
+
+
+# [0.69.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.68.0...@kajabi/sage-react@0.69.0) (2021-11-15)
+
+
+### Features
+
+* **drawer:** add Drawer export in Sage React ([0491a1e](https://github.com/Kajabi/sage-lib/commit/0491a1e4f52038d543f3c7fd0c4410eb973ff732))
+
+
+
+
+
+# [0.68.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.67.0...@kajabi/sage-react@0.68.0) (2021-11-15)
+
+
+### Features
+
+* **carousel:** added CarouselArrow component for cleaner code ([880c8d0](https://github.com/Kajabi/sage-lib/commit/880c8d0e642d44d3ca8e81b9bfc0d531163b65bc))
+* **carousel:** added drag end handler ([1ed7be4](https://github.com/Kajabi/sage-lib/commit/1ed7be49dccbf6943bf925fd31d0641175960fd0))
+* **carousel:** added initial state for the prevArrow to start disabled ([66060fa](https://github.com/Kajabi/sage-lib/commit/66060fae3af0f4dfec37308a14f9a354d6f40082))
+* **carousel:** added logic for startIndex option ([bc5e1e1](https://github.com/Kajabi/sage-lib/commit/bc5e1e18de6b6e0e7728fa8fcf3442daa8deb799))
+* **carousel:** added loop for rendering carousel slides in React, updated graphic ([3baadc9](https://github.com/Kajabi/sage-lib/commit/3baadc9e18ab197bcc21f0b3c642445ab5ccfdbf))
+* **carousel:** added looping and arrows state ([c0d8231](https://github.com/Kajabi/sage-lib/commit/c0d8231a8a47562f972c4dd92aa6820aab7b1f1c))
+* **carousel:** changed arrow disabled to use state instead of DOM manipulation ([7f1bdd3](https://github.com/Kajabi/sage-lib/commit/7f1bdd3f52555a32deda026f02d838884be91402))
+* **carousel:** changed dots phrasing to indicator, removed unused dot styles ([2b816d6](https://github.com/Kajabi/sage-lib/commit/2b816d607cafbc9c527e39d5312aff04f49aa03c))
+* **carousel:** fixed dependencies in the initial useEffect hook ([5a8048f](https://github.com/Kajabi/sage-lib/commit/5a8048f06c74aea07468cdd9913d79054996859d))
+* **carousel:** fixed drag and arrow keys navigation with 'indexChanged' event ([7a61ff7](https://github.com/Kajabi/sage-lib/commit/7a61ff7ad47cd5e099551e6a638c92244c2ba12a))
+* **carousel:** fixed linting error when options.startIndex is undefined ([b51c7b6](https://github.com/Kajabi/sage-lib/commit/b51c7b655fb0dd145f27113e593b7c8fefbdbad4))
+* **carousel:** fixed yarn test linting error ([2d2f9db](https://github.com/Kajabi/sage-lib/commit/2d2f9dbe270eb18b0e5de9d88c79c6bf9f280476))
+* **carousel:** got looping and not looping scenarios working ([cb711ad](https://github.com/Kajabi/sage-lib/commit/cb711ad91375ce845c0da165fa849dac2c67462e))
+* **carousel:** got state working for indicator ([e199e54](https://github.com/Kajabi/sage-lib/commit/e199e5455d1684856ac664cc575f788cd22d9221))
+* **carousel:** re-added the mouseDrag option with dragEnd event to update arrows/indicator ([91b96b5](https://github.com/Kajabi/sage-lib/commit/91b96b5dac921be9e7c7360188e919eeef7d1304))
+* **carousel:** removed arrowKeys from React story ([10e554c](https://github.com/Kajabi/sage-lib/commit/10e554c5f901d920774461835e9b3ab5254b2423))
+* **carousel:** removed unnecessary indicator wrapper ([fcc6773](https://github.com/Kajabi/sage-lib/commit/fcc6773f266c309cbec8cb28691a93bc315448b6))
+* **carousel:** removed unused classnames, cleaned up some single-use variables ([df93c0f](https://github.com/Kajabi/sage-lib/commit/df93c0f10e2f40b785e32841267452e48031d67f))
+* **carousel:** simplified a lot of functionality with hooks ([47a1462](https://github.com/Kajabi/sage-lib/commit/47a1462305f74d969b3f582f66a502873df2e1a4))
+* **carousel:** switched to using CarouselSlide component ([7d2eeea](https://github.com/Kajabi/sage-lib/commit/7d2eeeac3587263b27b232222422c086f5119f47))
+* **icons:** add new icons ([5065c24](https://github.com/Kajabi/sage-lib/commit/5065c246de2fd34272b2278bdb2d74fde7a248f8))
+* **label:** adds new prop to React component ([d7af821](https://github.com/Kajabi/sage-lib/commit/d7af821ef1877ed4d0cf170b373dacef9cff4ca4))
+
+
+
+
+
+# [0.67.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.66.0...@kajabi/sage-react@0.67.0) (2021-11-10)
+
+
+### Features
+
+* add center button group option in React ([f248178](https://github.com/Kajabi/sage-lib/commit/f2481780ee4f9115a620d80af3b00fce9ad31be0))
+* add contact profile mock in React ([481bdb0](https://github.com/Kajabi/sage-lib/commit/481bdb0ccf58fd4204c1e033a0b12d556425adcb))
+* add description stub for react ([755a548](https://github.com/Kajabi/sage-lib/commit/755a548672d8328cccb6ae2b67b655d19ec81c17))
+* **copy text:** adds borderless React prop ([b2a7f0b](https://github.com/Kajabi/sage-lib/commit/b2a7f0bfab0ea41651ed4a9e564eac8934123889))
+* **drawer:** add React component synced to Rails one ([abe7f4e](https://github.com/Kajabi/sage-lib/commit/abe7f4ec0e121113ca9334c825055d5f22fe6bfb))
+* **drawer:** use modal as a base to new Drawer component ([8e5fca0](https://github.com/Kajabi/sage-lib/commit/8e5fca0765f58ba390f1c08bed7d270975663a91))
+* **modal:** sync up React Modal to Rails changes ([9318cf9](https://github.com/Kajabi/sage-lib/commit/9318cf9fe011815c7b7035bbe324a2cac5ab7c82))
+
+
+
+
+
+# [0.66.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.65.2...@kajabi/sage-react@0.66.0) (2021-11-08)
+
+
+### Bug Fixes
+
+* **card:** update proptypes for Card row ([dec9764](https://github.com/Kajabi/sage-lib/commit/dec9764fb414ea340e3f8650c60edbab577de467))
+* **icons:** updated mappings for missing icons ([4f80b28](https://github.com/Kajabi/sage-lib/commit/4f80b28aa39ad0192fffd5a80f1dd3974afea4a7))
+* **select:** ensure React select can toggle whether or not to include label in options ([14c7663](https://github.com/Kajabi/sage-lib/commit/14c766331b4e39e5574d0d5e280d1213f151b753))
+* **select:** fix error state in React Select ([7a97e00](https://github.com/Kajabi/sage-lib/commit/7a97e00d8e5c455df3d0693322850455f53d4551))
+* **sortable:** add gap property ([4775369](https://github.com/Kajabi/sage-lib/commit/47753695c75df4777173623c0c97735d9045aeea))
+* **sortable:** add SortableItemCustom to react ([40e749d](https://github.com/Kajabi/sage-lib/commit/40e749d5de804c2c80b3cab4e34154d531e4df15))
+* **sortable:** linter ([c61fe3e](https://github.com/Kajabi/sage-lib/commit/c61fe3e44cbb5dcb65f118d5ac1c5b387a077619))
+* **sortable:** updates per phil review ([c232d5a](https://github.com/Kajabi/sage-lib/commit/c232d5af494dc4fa0c8f53d8b7298931de5ae9fd))
+* **sortable:** updates per phil review ([a0262ed](https://github.com/Kajabi/sage-lib/commit/a0262ede1b9f509300d57b4e3b563c07cbbdbda0))
+* **sortable:** updates to sortablecustomitem story ([50fb81f](https://github.com/Kajabi/sage-lib/commit/50fb81fc574e7525c613cbe3282b47615cc98b4d))
+* **sortable:** updates to sortablecustomitem story ([c79ae5a](https://github.com/Kajabi/sage-lib/commit/c79ae5a37ec05010aa97c4b11121adeed0ccd651))
+
+
+### Features
+
+* **dropdown:** make options dropdown able to change subtle trigger ([3ff19bf](https://github.com/Kajabi/sage-lib/commit/3ff19bfc93cf83098d4ead40453cc28d8f0327ac))
+* **icon:** adds new props to React component ([2cbef34](https://github.com/Kajabi/sage-lib/commit/2cbef342a991d038f5e5f20909c4f0e4b56210ff))
+* **icon:** updates custom prop variable names ([2db2a46](https://github.com/Kajabi/sage-lib/commit/2db2a460dd5f79a1efe16d4f7a5523603754aa91))
+* **icons:** update sage icons to v1.17 ([68c7da1](https://github.com/Kajabi/sage-lib/commit/68c7da1b9128abb2e782c9b46c2a7ddecfb6175f))
+* **indicator:** added basic React scaffolding ([32cbdb2](https://github.com/Kajabi/sage-lib/commit/32cbdb267cb2cb7772990edeb348c67c6b11a35b))
+* **indicator:** added currentItem prop ([55669bb](https://github.com/Kajabi/sage-lib/commit/55669bbc322f12956d442d765f4cfd0f75ba05dd))
+* **indicator:** added numItems prop ([fe15e37](https://github.com/Kajabi/sage-lib/commit/fe15e37bf168fa7f8d0afb5cce2e2cc0eeb6e2ee))
+* **indicator:** added optional textSeparator prop for cases where "of" isn't apporpriate ([bcd6baf](https://github.com/Kajabi/sage-lib/commit/bcd6bafac488a6b0e9b9c6f9b7663f843f60c120))
+* **indicator:** added showText prop ([41e6e63](https://github.com/Kajabi/sage-lib/commit/41e6e6391a50d7efba9e62d15179e970fecd9783))
+* **indicator:** added showText story variant ([270ddbb](https://github.com/Kajabi/sage-lib/commit/270ddbb83ea439665ee7e66618ef8f0296ae2570))
+* **indicator:** added visually-hidden label and index span ([09b1035](https://github.com/Kajabi/sage-lib/commit/09b1035ddd7ab12be67dd31116c2061a9592b737))
+* **indicator:** changed textSeparator to preposition, better logically ([c307ddd](https://github.com/Kajabi/sage-lib/commit/c307ddda5833706543727b2f2bd4579184c8895e))
+* **indicator:** fixed indices of numItems and currentItem ([e57d93f](https://github.com/Kajabi/sage-lib/commit/e57d93f75e6254a344522aa4045453cc78d43632))
+* **indicator:** removed preposition prop from showText story variant ([6acc12c](https://github.com/Kajabi/sage-lib/commit/6acc12c1faac1df2e38c51a30f9b2f3414468383))
+
+
+
+
+
+## [0.65.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.65.1...@kajabi/sage-react@0.65.2) (2021-11-05)
+
+**Note:** Version bump only for package @kajabi/sage-react
+
+
+
+
+
+## [0.65.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.65.0...@kajabi/sage-react@0.65.1) (2021-11-03)
+
+**Note:** Version bump only for package @kajabi/sage-react
+
+
+
+
+
+# [0.65.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.64.0...@kajabi/sage-react@0.65.0) (2021-11-03)
+
+
+### Bug Fixes
+
+* **cardlistitem:** make grid template optional and add gap attribute ([63e51c5](https://github.com/Kajabi/sage-lib/commit/63e51c5def24bf3e2d65060ccca8ca07cdbb49b6))
+* **cardrow:** make grid template optional and add gap attribute ([22b03c2](https://github.com/Kajabi/sage-lib/commit/22b03c299d035a2cee2155bd53d063e06994acc0))
+* **panellistitem:** make grid template optional and add gap attribute ([0769f1c](https://github.com/Kajabi/sage-lib/commit/0769f1c39ed56846c07a0050e500efe072b58d25))
+* **panelrow:** make grid template optional and add gap attribute ([218c60f](https://github.com/Kajabi/sage-lib/commit/218c60fc8588e1d1ec4b17a999b14542d47eb2fc))
+
+
+### Features
+
+* **avatar:** add image layering with initials ([2429c07](https://github.com/Kajabi/sage-lib/commit/2429c0780907c075ae9c87b23fcf9feb6b6de763))
+
+
+
+
+
+# [0.64.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.63.1...@kajabi/sage-react@0.64.0) (2021-11-01)
+
+
+### Bug Fixes
+
+* **carousel:** fixed yarn test with tiny-slider import ([8ffb72b](https://github.com/Kajabi/sage-lib/commit/8ffb72bb9fe6992f7ee5a3562a4affb7aa080a43))
+* **carousel:** moved tiny-slider import after React import ([4bb68a5](https://github.com/Kajabi/sage-lib/commit/4bb68a50607e4efd53adfcd5d3487f43c794bb33))
+* **carousel:** trying to fix yarn test errors ([604b2c7](https://github.com/Kajabi/sage-lib/commit/604b2c7eb1327a11f35a81d1ce8baa0dc83ea65f))
+* **dropdown:** add new options to react component, updated story ([365c747](https://github.com/Kajabi/sage-lib/commit/365c7477a3902ef02bc9ae348197bffb374b5519))
+* **modal:** add fullscreen variant ([a459425](https://github.com/Kajabi/sage-lib/commit/a4594253224f28087ef75b41eafc5703204560b4))
+* **modal:** add header_actions ([bc83918](https://github.com/Kajabi/sage-lib/commit/bc8391811b8e9f0d1b1e379a8d18daed9b0775ff))
+* **modal:** update class when header-actions is present react ([709dcfc](https://github.com/Kajabi/sage-lib/commit/709dcfcd79dd0b105ba75cde9095d5af4189dc63))
+
+
+### Features
+
+* **carousel:** added a11y attributes per Quinton's guidance ([a58b7ed](https://github.com/Kajabi/sage-lib/commit/a58b7ed289d189f21fb1a703b250ca18aafb682d))
+* **carousel:** added basic React component structure ([6f4f95d](https://github.com/Kajabi/sage-lib/commit/6f4f95d95f8fd423884838e46f46edf3297baf19))
+* **carousel:** added missing button role and tab index attributes to arrows and dots ([7e3d4c6](https://github.com/Kajabi/sage-lib/commit/7e3d4c644d908b17c3a7173705b044279bdccfc7))
+* **carousel:** fixed looping conditional ([2ee8f5d](https://github.com/Kajabi/sage-lib/commit/2ee8f5db9870ce1e888f0b77642befd561ac6b34))
+* **carousel:** fixed looping conditional, added props and rules ([96e386f](https://github.com/Kajabi/sage-lib/commit/96e386f47744282459c2902858553b0dd47cd773))
+* **carousel:** fixed useEffect hook ([aacb927](https://github.com/Kajabi/sage-lib/commit/aacb9271687712ed88485878b775a357dcac495c))
+* **carousel:** got carousel working with useEffect ([4b839d2](https://github.com/Kajabi/sage-lib/commit/4b839d235ca2fdf9cd173c07399aa6c9ea9a2749))
+* **carousel:** got React component working correctly, could be improvement capability ([3978b6d](https://github.com/Kajabi/sage-lib/commit/3978b6d525ca997e03e01edb224e1441babe2edd))
+* **carousel:** removed unused configs React file ([142e949](https://github.com/Kajabi/sage-lib/commit/142e9494b4d6f43e526b85f58e9dc073bbcd3b0f))
+* **copy text:** adds borderless React prop ([a661f85](https://github.com/Kajabi/sage-lib/commit/a661f85d5114db815bfd419e84511a8ccc9ff991))
+* **copy text:** adds borderless React prop ([08888a1](https://github.com/Kajabi/sage-lib/commit/08888a1c47df6ff72a8d7383d88fe2dbb88ab490))
+* **label:** adds gap and alignment props to React component ([372e06c](https://github.com/Kajabi/sage-lib/commit/372e06cb7421b3ec565a07329edcc4d955d69e6c))
+
+
+
+
+
+## [0.63.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.63.0...@kajabi/sage-react@0.63.1) (2021-10-27)
+
+**Note:** Version bump only for package @kajabi/sage-react
+
+
+
+
+
+# [0.63.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.62.1...@kajabi/sage-react@0.63.0) (2021-10-26)
+
+
+### Features
+
+* **button:** adds center align option ([5dab67b](https://github.com/Kajabi/sage-lib/commit/5dab67bfd4c3e6be30dfbbeffe7c84bc0c69cc3a))
+
+
+
+
+
+## [0.62.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.62.0...@kajabi/sage-react@0.62.1) (2021-10-25)
+
+
+### Bug Fixes
+
+* **node version:** update all packages to use 14.x for node ([5d01915](https://github.com/Kajabi/sage-lib/commit/5d019156ff1e5390d4a4cf809a2cb559d666fb3d))
+
+
+
+
+
+# [0.62.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.61.1...@kajabi/sage-react@0.62.0) (2021-10-25)
+
+
+### Bug Fixes
+
+* **nba:** fixed graphic proptype, description slot, button props ([afc149a](https://github.com/Kajabi/sage-lib/commit/afc149aa1b57c7409baa6353c64dbeb94829490a))
+* **nba:** fixed linter errors ([b7f8c94](https://github.com/Kajabi/sage-lib/commit/b7f8c94f47f4613a6b2da64c4d5862a0c480987a))
+* **nba:** fixed linter errors ([eef85df](https://github.com/Kajabi/sage-lib/commit/eef85df56b2fc2edf1ce55bd3c086934a5a6a669))
+
+
+### Features
+
+* **icons:** fix js handle-2 icon name ([f2a9f24](https://github.com/Kajabi/sage-lib/commit/f2a9f242a174044d44f1c3ea0516bf44d83564e4))
+* **icons:** remove extra mail icons ([dda8155](https://github.com/Kajabi/sage-lib/commit/dda81554655b7404445c70affae8b23f11ceed36))
+* **icons:** update icons per design ([1543c5c](https://github.com/Kajabi/sage-lib/commit/1543c5cf0e4d2101a7cf8be23a466bdea50155a0))
+* **nba:** added basic markup for React component ([7ad61d7](https://github.com/Kajabi/sage-lib/commit/7ad61d73b4c1e567033f298e12628b07aea27fa3))
+* **nba:** added basic React spec for nba component ([eff2b0a](https://github.com/Kajabi/sage-lib/commit/eff2b0a02f2980d51602f8a326844c45be2fc81b))
+* **nba:** added button props for React component ([f95ef7b](https://github.com/Kajabi/sage-lib/commit/f95ef7b1e42ff91794667d005be170e1114c153a))
+* **nba:** added cardColor to React component ([20c1b9c](https://github.com/Kajabi/sage-lib/commit/20c1b9cd26c74e9e44c3d11e0cc38719580e2499))
+* **nba:** added close button to React component ([5b73531](https://github.com/Kajabi/sage-lib/commit/5b73531aef7112002513643419920b7f2fe00e8d))
+* **nba:** added desc prop to React component ([c92fb18](https://github.com/Kajabi/sage-lib/commit/c92fb18a7b0c069258f877130077ad0cbdfa7683))
+* **nba:** added dismiss_attributes and onClickDismiss for custom functionality ([b805cc6](https://github.com/Kajabi/sage-lib/commit/b805cc6aae0de323f7d7f2352b94bfd3d386d520))
+* **nba:** added graphic for Rails and React components ([cbcbf53](https://github.com/Kajabi/sage-lib/commit/cbcbf530dfcb3e60e49968dda552bcd87a981bc2))
+* **nba:** added image props to REact component, fixed Rails component conditional ([310251e](https://github.com/Kajabi/sage-lib/commit/310251efcaaafdca34ec6137ca8f570509612e17))
+* **nba:** added image.onRight to React story ([35a1893](https://github.com/Kajabi/sage-lib/commit/35a1893483e2ea7d7ca9e9498cd1846bf56c6a8c))
+* **nba:** added option to place image on right of text ([499e1b3](https://github.com/Kajabi/sage-lib/commit/499e1b3f2585b6569fdcdc94be21f7b54f40726b))
+* **nba:** added props table for style guide ([8a55431](https://github.com/Kajabi/sage-lib/commit/8a55431250560a842ec60271e6aca2e7c75dee64))
+* **nba:** added scaffolding for React NBA component ([547c646](https://github.com/Kajabi/sage-lib/commit/547c6464144d48226316a072ecc14448384d8f8d))
+* **nba:** added title to React component ([06cac0d](https://github.com/Kajabi/sage-lib/commit/06cac0d5c1414032f3a8ed01d1573977b8ec8b1a))
+* **nba:** simplified markup and styling for both React and Rails components ([d7dae36](https://github.com/Kajabi/sage-lib/commit/d7dae36e1468f621cc058279777d5b99adcf31e1))
+* **nba:** switched from image to graphic to handle more use cases ([967eb47](https://github.com/Kajabi/sage-lib/commit/967eb47414df1ca998c3d50fffbf667bf693d8a7))
+* **nba:** switched to an open slot for description ([e71c300](https://github.com/Kajabi/sage-lib/commit/e71c3001f1f9c81086820be311330dd386e76f5f))
+
+
+
+
+
+## [0.61.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.61.0...@kajabi/sage-react@0.61.1) (2021-10-20)
+
+**Note:** Version bump only for package @kajabi/sage-react
+
+
+
+
+
+# [0.61.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.60.0...@kajabi/sage-react@0.61.0) (2021-10-20)
+
+
+### Features
+
+* **chart:** stabilizes Chart component by externalizing the charting framework ([a71f585](https://github.com/Kajabi/sage-lib/commit/a71f58566a0a3d61eefc46afa92d58b7c07fb47d))
+* **switch:** sync react features with rails ([cb2c1f4](https://github.com/Kajabi/sage-lib/commit/cb2c1f44601986aa16f2f2fedbabdf65201417ab))
+
+
+
+
+
+# [0.60.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.59.8...@kajabi/sage-react@0.60.0) (2021-10-18)
+
+
+### Bug Fixes
+
+* **expandable-card:** patch how state for exanded is initiated to use prop ([db41a9a](https://github.com/Kajabi/sage-lib/commit/db41a9a3ae006f82f91f737b1c5b420eb04431ed))
+
+
+### Features
+
+* **expandable card:** adds prop to React component ([5a3931c](https://github.com/Kajabi/sage-lib/commit/5a3931c45779fb33a373fbbaf7c36ff216b566e2))
+* **expandable card:** updates prop name and relocates prop styling ([887eb42](https://github.com/Kajabi/sage-lib/commit/887eb420329a6df7c65e559332fe5e13ee767cdb))
+
+
+
+
+
+## [0.59.8](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.59.7...@kajabi/sage-react@0.59.8) (2021-10-13)
+
+**Note:** Version bump only for package @kajabi/sage-react
+
+
+
+
+
+## [0.59.7](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.59.6...@kajabi/sage-react@0.59.7) (2021-10-11)
+
+**Note:** Version bump only for package @kajabi/sage-react
+
+
+
+
+
+## [0.59.6](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.59.5...@kajabi/sage-react@0.59.6) (2021-10-06)
+
+
+### Bug Fixes
+
+* apply `raised: false` to dropdown and panel controls sub elements ([8da8c31](https://github.com/Kajabi/sage-lib/commit/8da8c31b4d48aebc935c09d5b8d45c9bbda3b421))
+
+
+
+
+
+## [0.59.5](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.59.4...@kajabi/sage-react@0.59.5) (2021-10-04)
+
+**Note:** Version bump only for package @kajabi/sage-react
+
+
+
+
+
+## [0.59.4](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.59.3...@kajabi/sage-react@0.59.4) (2021-10-01)
+
+**Note:** Version bump only for package @kajabi/sage-react
+
+
+
+
+
+## [0.59.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.59.2...@kajabi/sage-react@0.59.3) (2021-09-30)
+
+**Note:** Version bump only for package @kajabi/sage-react
+
+
+
+
+
+## [0.59.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.59.1...@kajabi/sage-react@0.59.2) (2021-09-29)
+
+**Note:** Version bump only for package @kajabi/sage-react
+
+
+
+
+
+## [0.59.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.59.0...@kajabi/sage-react@0.59.1) (2021-09-27)
+
+
+### Bug Fixes
+
+* **form input affix:** changed Suffixed to lowercase like all remaining aria-labels ([82763cc](https://github.com/Kajabi/sage-lib/commit/82763cc636f330b6a07394b657a28d653b5add44))
+* **form input affix:** made updates to React component and story ([9b3dab1](https://github.com/Kajabi/sage-lib/commit/9b3dab1d09972a1d2269d463e8a31dac41762459))
+
+
+
+
+
+# [0.59.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.58.0...@kajabi/sage-react@0.59.0) (2021-09-22)
+
+
+### Bug Fixes
+
+* **form select:** fixes linting errors ([94212d1](https://github.com/Kajabi/sage-lib/commit/94212d1378d53438f036ba72f68a583c38933fa3))
+
+
+### Features
+
+* **form select:** adds disabled prop to React component and fixes label background color ([7155fb9](https://github.com/Kajabi/sage-lib/commit/7155fb90dfba931c2c2814829fb754a7a4722bbf))
+
+
+
+
+
+# [0.58.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.57.0...@kajabi/sage-react@0.58.0) (2021-09-20)
+
+
+### Bug Fixes
+
+* **search:** fixes linting ([1d14712](https://github.com/Kajabi/sage-lib/commit/1d147125ffe7f3112d7294e362511240cc202d7e))
+
+
+### Features
+
+* **expanded card:** update react side of the house ([b0a79b4](https://github.com/Kajabi/sage-lib/commit/b0a79b4a05e0f25f960314aadb527368c9635cf5))
+* **expanded state:** react side of expandabled card prop expanded ([966782f](https://github.com/Kajabi/sage-lib/commit/966782f0f74e3fda52a74bc2d5cc85d914a67e76))
+* **panel:** added first batch of files for panel updates ([dc5a8d2](https://github.com/Kajabi/sage-lib/commit/dc5a8d282a30bdaa07646c767a0bde4db80541d6))
+* **panel:** updated panel header and subheader React components ([402f257](https://github.com/Kajabi/sage-lib/commit/402f257b99f962adfd4cc40e857d886c66bb2b94))
+* **search:** adds label to React component ([3fd90e8](https://github.com/Kajabi/sage-lib/commit/3fd90e8d475f463fda7212e9c24b27e336197177))
+
+
+
+
+
+# [0.57.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.56.1...@kajabi/sage-react@0.57.0) (2021-09-15)
+
+
+### Bug Fixes
+
+* **dropdown:** added panel type to handle different spacing ([bf1edd3](https://github.com/Kajabi/sage-lib/commit/bf1edd3cfcb9e967430085eca173dbe51ccd032f))
+* **dropdown:** updates per phil review ([a1161a8](https://github.com/Kajabi/sage-lib/commit/a1161a84e840be6f743ad230f4ea2847b18ac1c6))
+* **font:** removed calendly icon for the moment ([3e6b8ee](https://github.com/Kajabi/sage-lib/commit/3e6b8ee4d72b2862173b6d84fd45ab3f62969136))
+* **font:** updated icon name ([e76ec85](https://github.com/Kajabi/sage-lib/commit/e76ec853425cdfefc30b6aaed4052984f5e8af9b))
+* **input:** added a generic form field class for shared form elements styled ([c62e766](https://github.com/Kajabi/sage-lib/commit/c62e76600cfa48bed9f2f37d2eaf983be4157c89))
+
+
+### Features
+
+* **font:** updated Sage font ([19c4ce8](https://github.com/Kajabi/sage-lib/commit/19c4ce8572d14b2f1013e5869564e5f0256cfb0e))
+* **form input icon:** added docs for sage_form_input_popover, removed unused Fragment tags ([dc811c3](https://github.com/Kajabi/sage-lib/commit/dc811c3736002e1ee289720b128c5d287c320f10))
+* **form input icon:** added React component children and additional story ([20824f4](https://github.com/Kajabi/sage-lib/commit/20824f433ccff299bc541b9e3945fa022f63c576))
+* **form input icon:** added static icon to React component and story ([7f38ecd](https://github.com/Kajabi/sage-lib/commit/7f38ecde44a9a7d10d9beba9131e8cd93df4a3da))
+* **form input icon:** fixed static icon line-height, added static icon story ([e2048da](https://github.com/Kajabi/sage-lib/commit/e2048da5c7916769767ec1e4fc7df0ca0e06c232))
+
+
+
+
+
+## [0.56.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.56.0...@kajabi/sage-react@0.56.1) (2021-09-02)
+
+**Note:** Version bump only for package @kajabi/sage-react
+
+
+
+
+
 # [0.56.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.55.0...@kajabi/sage-react@0.56.0) (2021-09-01)
 
 

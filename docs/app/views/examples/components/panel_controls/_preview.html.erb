@@ -39,7 +39,8 @@ dropdown = sage_component(SageDropdown, {
       style: "secondary",
       value: "",
       css_classes: "sage-dropdown__trigger-selected-value",
-      icon: { style: "right", name: "caret-down" }
+      icon: { style: "right", name: "caret-down" },
+      raised: false,
     })}
   <label class="sage-dropdown__trigger-label">Select an option...</label>
   ).html_safe
@@ -52,21 +53,24 @@ search_filter_toolbar = %(
       sage_component(SageButton, {
         value: "Saved filters",
         style: "secondary",
-        icon: { name: "favorite", style: "left" }
+        icon: { name: "favorite", style: "left" },
+        raised: false,
       })
     }
     #{
       sage_component(SageButton, {
         value: "Filters",
         style: "secondary",
-        icon: { name: "filters", style: "left" }
+        icon: { name: "filters", style: "left" },
+        raised: false,
       })
     }
     #{
       sage_component(SageButton, {
         value: "Clear filters",
         style: "secondary",
-        icon: { name: "remove", style: "left" }
+        icon: { name: "remove", style: "left" },
+        raised: false,
       })
     }
   </div>
@@ -152,7 +156,8 @@ actions_items = [
           style: "secondary",
           value: "",
           css_classes: "sage-dropdown__trigger-selected-value",
-          icon: { style: "right", name: "caret-down" }
+          icon: { style: "right", name: "caret-down" },
+          raised: false,
         } %>
         <label class="sage-dropdown__trigger-label">Sort</label>
       <% end %>
@@ -212,7 +217,8 @@ actions_items = [
           style: "secondary",
           value: "",
           css_classes: "sage-dropdown__trigger-selected-value",
-          icon: { style: "right", name: "caret-down" }
+          icon: { style: "right", name: "caret-down" },
+          raised: false,
         } %>
         <label class="sage-dropdown__trigger-label">Sort</label>
       <% end %>
@@ -268,7 +274,8 @@ actions_items = [
           style: "secondary",
           value: "",
           css_classes: "sage-dropdown__trigger-selected-value",
-          icon: { style: "right", name: "caret-down" }
+          icon: { style: "right", name: "caret-down" },
+          raised: false,
         } %>
         <label class="sage-dropdown__trigger-label">Sort</label>
       <% end %>

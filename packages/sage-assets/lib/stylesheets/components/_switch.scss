@@ -9,33 +9,31 @@
 $-switch-color-default: sage-color(grey, 400);
 $-switch-color-default-text: sage-color(charcoal, 300);
 $-switch-color-checked: sage-color(primary);
+$-switch-color-checked-hover: sage-color(primary, 400);
 $-switch-color-disabled: sage-color(grey, 200);
 $-switch-color-disabled-text: sage-color(grey, 400);
 $-switch-color-disabled-checked: sage-color(primary, 200);
 $-switch-color-disabled-checked-text: sage-color(charcoal, 100);
 
 // Switch
-$-switch-label-left-spacing: sage-spacing(sm);
+$-switch-label-left-spacing: sage-spacing(xs);
 $-switch-border-radius: rem(16px);
-$-switch-height: rem(24px);
-$-switch-width: rem(44px);
+$-switch-height: rem(20px);
+$-switch-width: rem(36px);
 
 // Toggle
-$-switch-toggle-size: rem(20px);
+$-switch-toggle-size: rem(16px);
 
 // Focus state
 $-switch-focus-outline-spacing: sage-spacing(2xs);
-$-switch-focus-outline-width: 2;
-$-switch-focus-outline-color: sage-color(primary);
+$-switch-focus-outline-width: 3;
+$-switch-focus-outline-color: sage-color(primary, 400);
 $-switch-focus-outline-error-color: sage-color(red, 300);
 
 
 .sage-switch {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: flex-start;
+  @include sage-form-toggle;
   position: relative;
-  margin-bottom: sage-spacing(card);
   color: $-switch-color-default-text;
 
   & + & {
@@ -58,16 +56,7 @@ $-switch-focus-outline-error-color: sage-color(red, 300);
     margin-bottom: sage-spacing(card) / 2;
   }
 
-  .sage-panel-grid > &,
-  .sage-panel__row > &,
-  .sage-panel__stack > &,
-  .sage-panel__block > &,
-  .sage-card-grid > &,
-  .sage-card__row > &,
-  .sage-card__stack > &,
-  .sage-card__block > & {
-    margin-bottom: 0;
-
+  @include sage-form-toggle-parents {
     + .sage-switch {
       margin-top: 0;
     }
@@ -79,13 +68,8 @@ $-switch-focus-outline-error-color: sage-color(red, 300);
 }
 
 .sage-switch__message {
-  position: relative;
-  z-index: sage-z-index(default);
-  width: 100%;
+  @include sage-form-toggle-message;
   margin-left: ($-switch-width + $-switch-label-left-spacing);
-  color: sage-color(charcoal, 200);
-
-  @extend %t-sage-body-xsmall;
 
   .sage-switch--toggle-right & {
     margin-left: 0;
@@ -94,34 +78,25 @@ $-switch-focus-outline-error-color: sage-color(red, 300);
 }
 
 .sage-switch__input {
-  display: inline-block;
+  @include sage-form-toggle-input;
+
   z-index: sage-z-index(default, 1);
-  position: relative;
   transform: translateY(2px);
   height: $-switch-height;
   width: $-switch-width;
-  vertical-align: top;
-  appearance: none;
   color: $-switch-color-default;
   background: $-switch-color-default;
   border: 0;
   border-radius: $-switch-border-radius;
   outline: none !important; /* stylelint-disable-line declaration-no-important */
   transition: background 0.3s ease-out;
-  cursor: pointer;
 
   .sage-switch--has-border & {
     position: absolute;
   }
 
   + .sage-switch__label {
-    display: inline-block;
-    flex: 1;
-    margin-left: $-switch-label-left-spacing;
-    vertical-align: top;
-    cursor: pointer;
-
-    @extend %t-sage-body;
+    @include sage-form-toggle-label;
 
     &::after {
       content: "" ;
@@ -154,8 +129,8 @@ $-switch-focus-outline-error-color: sage-color(red, 300);
 
   &::before { // switch background
     transform: translate3d(-50%, -50%, 0) scale(0.94);
-    width: calc(100% + (#{$-switch-focus-outline-spacing * 2}));
-    height: calc(100% + (#{$-switch-focus-outline-spacing * 2}));
+    width: calc(100% + (#{$-switch-focus-outline-spacing}));
+    height: calc(100% + (#{$-switch-focus-outline-spacing}));
     border: ($-switch-focus-outline-width * 1px) solid $-switch-focus-outline-color;
     border-radius: $-switch-border-radius;
     transition: opacity 0.15s ease-out 0.05s, transform 0.2s ease-in-out;
@@ -183,6 +158,9 @@ $-switch-focus-outline-error-color: sage-color(red, 300);
     &:checked {
       background-color: sage-color(red);
     }
+    &:checked:hover {
+      background-color: sage-color(red);
+    }
     &::before {
       border-color: sage-color(red);
     }
@@ -195,6 +173,12 @@ $-switch-focus-outline-error-color: sage-color(red, 300);
 
     &::after {
       transform: translate3d(0, -50%, 0);
+    }
+
+    &:hover {
+      color: $-switch-color-checked-hover;
+      background: $-switch-color-checked-hover;
+      border-color: $-switch-color-checked-hover;
     }
   }
 

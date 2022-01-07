@@ -12,12 +12,15 @@
     "commitizen": "^4.2.2",
     "dotenv": "8.2.0",
     "eslint": "^7.10.0",
+    "handlebars": "^4.7.7",
     "lerna": "^3.22.1",
+    "lodash": "^4.17.21",
     "npm-run-all": "4.1.5",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-router-dom": "5.2.0",
     "semver": "^7.3.2",
+    "style-dictionary": "^3.0.2",
     "stylelint": "^13.7.2",
     "stylelint-config-sass-guidelines": "^7.0.0",
     "stylelint-config-standard": "^20.0.0",
@@ -31,10 +34,12 @@
   "license": "MIT",
   "scripts": {
     "bootstrap": "yarn lerna bootstrap",
+    "branches:update": "bin/branches.sh true",
     "bridge:kajabi-products": "bin/bridge.sh true",
     "bridge:kajabi-products:status": "bin/bridge.sh status",
     "bridge:kajabi-products:destroy": "bin/bridge.sh false",
     "build": "yarn npm-run-all --parallel build:*",
+    "build:sd": "yarn style-dictionary build --config ./style-dictionary/config.js",
     "build:assets": "cd packages/sage-assets && yarn build",
     "build:react": "cd packages/sage-react && yarn build",
     "build:system": "cd packages/sage-system && yarn build",
@@ -54,7 +59,7 @@
     "sassdocs:deploy": "git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_SASSDOCS_APP_NAME.git `git subtree split --prefix packages/sage-assets main`:master --force",
     "setup": "bin/setup.sh",
     "setup:init": "yarn install && yarn docs:initialize",
-    "start": "yarn npm-run-all --parallel watch docs storybook sassdocs",
+    "start": "yarn npm-run-all --parallel build:sd watch docs storybook sassdocs",
     "storybook": "cd packages/sage-react && yarn storybook",
     "storybook:deploy": "git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_STORYBOOK_APP_NAME.git `git subtree split --prefix packages/sage-react main`:master --force",
     "test": "yarn npm-run-all test:prod:*",
@@ -70,6 +75,5 @@
     "watch:assets": "cd packages/sage-assets && yarn build:watch",
     "watch:react": "cd packages/sage-react && yarn build:watch",
     "watch:system": "cd packages/sage-system && yarn build:watch"
-  },
-  "dependencies": {}
+  }
 }

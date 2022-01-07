@@ -1,15 +1,18 @@
 import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { Label } from '../Label';
+import { Icon } from '../Icon';
+import { SageTokens } from '../configs';
 
 export const Input = ({
   className,
   hasError,
+  icon,
   id,
   label,
   message,
   onChange,
+  popover,
   prefix,
   standalone,
   suffix,
@@ -19,14 +22,17 @@ export const Input = ({
   const inputPaddingOffset = 16;
   const [fieldValue, updateFieldValue] = useState(null);
   const [inputStyles, updateStyles] = useState(rest.style || {});
+
   const classNames = classnames(
     'sage-input',
     className,
     {
-      'sage-input--error': hasError,
+      'sage-form-field--error': hasError,
       'sage-input--prefixed': prefix,
       'sage-input--suffixed': suffix,
       'sage-input--standalone': standalone,
+      'sage-input--has-icon': icon,
+      'sage-input--has-popover': popover,
     }
   );
 
@@ -68,7 +74,7 @@ export const Input = ({
   return (
     <div className={classNames}>
       <input
-        className="sage-input__field"
+        className="sage-form-field sage-input__field"
         id={id}
         onChange={handleChange}
         placeholder={label}
@@ -82,26 +88,32 @@ export const Input = ({
         </label>
       )}
       {prefix && (
-        <Label
-          aria-label={`Prefixed with ${prefix}`}
+        <span
+          aria-label={`prefixed with ${prefix}`}
           className="sage-input__affix sage-input__affix--prefix"
-          color={Label.COLORS.DRAFT}
           ref={prefixRef}
-          value={prefix}
-        />
+        >
+          <span className="sage-input__affix-value">{prefix}</span>
+        </span>
       )}
       {suffix && (
-        <Label
-          aria-label={`Suffixed with ${suffix}`}
+        <span
+          aria-label={`suffixed with ${suffix}`}
           className="sage-input__affix sage-input__affix--suffix"
-          color={Label.COLORS.DRAFT}
           ref={suffixRef}
-          value={suffix}
-        />
+        >
+          <span className="sage-input__affix-value">{suffix}</span>
+        </span>
+      )}
+      {icon && (
+        <div className="sage-input__icon">
+          <Icon icon={icon} />
+        </div>
       )}
       {message && (
         <div className="sage-input__message">{message}</div>
       )}
+      {popover}
     </div>
   );
 };
@@ -109,9 +121,11 @@ export const Input = ({
 Input.defaultProps = {
   className: null,
   hasError: false,
+  icon: null,
   label: null,
   message: null,
   onChange: null,
+  popover: null,
   prefix: null,
   standalone: false,
   suffix: null,
@@ -120,11 +134,13 @@ Input.defaultProps = {
 
 Input.propTypes = {
   className: PropTypes.string,
+  icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),
   id: PropTypes.string.isRequired,
   hasError: PropTypes.bool,
   label: PropTypes.string,
   message: PropTypes.string,
   onChange: PropTypes.func,
+  popover: PropTypes.node,
   prefix: PropTypes.string,
   standalone: PropTypes.bool,
   suffix: PropTypes.string,

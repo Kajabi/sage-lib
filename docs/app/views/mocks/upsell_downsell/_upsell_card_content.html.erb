@@ -1,0 +1,33 @@
+<div class="upsell__graphic">
+  <%= sage_component SageIcon, { icon: "image", color: "grey-500", size: "3xl" } %>
+</div>
+
+<div class="<%= SageClassnames::TYPE::BODY %>">
+  <h2><%= link_to content[:title], "#", class: SageClassnames::TYPE::BODY_SEMI %></h2>
+  <p class="<%= SageClassnames::TYPE_COLORS::CHARCOAL_100 %>"><%= content[:price] %></p>
+</div>
+
+<%= sage_component SageDropdown, {
+  align: "right",
+  panel_size: "small",
+  items: upsell_downsell_status_dropdown_options,
+} do %>
+  <%= sage_component SageLabel, {
+    color: "published",
+    interactive_type: :dropdown,
+    value: "Active",
+  } %>
+<% end %>
+
+<%= sage_component SageDropdown, {
+  align: "right",
+  items: upsell_downsell_get_options(content, is_downsell: defined?(is_downsell) ? is_downsell : false),
+} do %>
+  <%= sage_component SageButton, {
+    style: "secondary",
+    icon: { name: "dot-menu-horizontal", style: "only" },
+    value: "Options",
+    align: "end",
+    subtle: true,
+  } %>
+<% end %>

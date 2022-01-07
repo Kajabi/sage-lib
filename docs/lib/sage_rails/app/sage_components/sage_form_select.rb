@@ -1,5 +1,6 @@
 class SageFormSelect < SageComponent
   set_attribute_schema({
+    disabled: [:optional, TrueClass],
     has_error: [:optional, TrueClass],
     message: [:optional, String],
     multiple: [:optional, TrueClass],

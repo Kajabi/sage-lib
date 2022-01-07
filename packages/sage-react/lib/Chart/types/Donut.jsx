@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import * as Recharts from 'recharts';
 import { SageTokens } from '../../configs';
 import { Summary, Tooltip as SageTooltip } from '../parts';
 import {
@@ -15,6 +14,7 @@ import {
 
 export const Donut = ({
   centered,
+  chartingFramework,
   combineDataAfterItem,
   donutDiameter,
   donutWidth,
@@ -37,6 +37,8 @@ export const Donut = ({
   const { Tooltip, PieChart, Pie } = { ...rest };
 
   const [selfData] = useState(getDataEntries(data, combineDataAfterItem));
+
+  const Recharts = chartingFramework;
 
   return (
     <>
@@ -81,6 +83,7 @@ Donut.defaultProps = {
 
 Donut.propTypes = {
   centered: PropTypes.bool,
+  chartingFramework: PropTypes.shape({}).isRequired,
   combineDataAfterItem: PropTypes.number,
   donutDiameter: PropTypes.number,
   donutWidth: PropTypes.number,

@@ -172,4 +172,46 @@
     has_placeholder: true
   } %>
 
+  <h3 class="t-sage-heading-6">With Static Icon</h3>
+  <%= sage_component SageFormInput, {
+    icon: "info-circle",
+    id: "form__fname1",
+    input_type: "text",
+    label_text: "First name",
+    placeholder: "First name",
+    required: true,
+    disabled: false,
+    has_error: false,
+    name: "custom_input_name",
+    has_placeholder: false
+  } %>
+
+  <h3 class="t-sage-heading-6">With Popover</h3>
+  <%= sage_component SageFormInput, {
+    id: "form__fname1",
+    input_type: "text",
+    label_text: "First name",
+    placeholder: "First name",
+    required: true,
+    disabled: false,
+    has_error: false,
+    name: "custom_input_name",
+    has_placeholder: false
+  } do %>
+    <%= content_for :sage_form_input_popover do %>
+      <%= sage_component SagePopover, {
+        icon: "info-circle",
+        link: {
+          href: "#",
+          name: "Learn more about a thing",
+        },
+        popover_position: "left",
+        trigger_value: "Open Menu",
+        trigger_icon_only: true,
+      } do %>
+        <p>I can put whatever content I want in here and use the custom class as a hook to style it like a good 'ol BEM mixin!</p>
+      <% end %>
+    <% end %>
+  <% end %>
+
 </fieldset>

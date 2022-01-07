@@ -36,11 +36,9 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
   .sage-panel-controls__toolbar > &,
   .sage-panel-controls__toolbar-btn-group > & {
     position: relative;
-    box-shadow: map-get($sage-toolbar-button-borders, default);
     border: 0;
 
     &:hover {
-      box-shadow: map-get($sage-toolbar-button-borders, hover);
       background-color: sage-color(white);
     }
 
@@ -148,13 +146,25 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
   @include sage-focus-outline($outline-offset-inline: -2px, $outline-offset-block: -2px);
   @include sage-focus-outline--update-color(sage-color(primary, 300));
 
+  @extend %t-sage-body-med;
+
   display: flex;
   position: relative;
   align-items: center;
   width: 100%;
-  padding: rem(9px) sage-spacing(sm);
+  padding: rem(9px) sage-spacing();
   text-align: left;
   user-select: none;
+
+  .sage-dropdown--checkbox &,
+  .sage-dropdown--choice &,
+  .sage-dropdown--searchable & {
+    padding: rem(6px) sage-spacing();
+  }
+
+  .sage-dropdown--status & {
+    padding: rem(7px) sage-spacing();
+  }
 
   .sage-dropdown .sage-dropdown__menu &::after {
     border-radius: 0;
@@ -167,6 +177,16 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
     &::after {
       opacity: 1;
     }
+
+    /* stylelint-disable max-nesting-depth */
+    .sage-dropdown.sage-dropdown--checkbox &,
+    .sage-dropdown.sage-dropdown--choice &,
+    .sage-dropdown.sage-dropdown--searchable & {
+      &::after {
+        opacity: 0;
+      }
+    }
+    /* stylelint-enable max-nesting-depth */
   }
 
   .sage-dropdown__item--with-options > & {
@@ -271,8 +291,17 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
   // to prevent it from touching the bottom of the viewport/page when it expands
   margin-bottom: sage-spacing(); /* stylelint-disable-line order/properties-order */
 
+  .sage-dropdown--anchor-left & {
+    left: 0;
+  }
+
   .sage-dropdown--anchor-right & {
     right: 0;
+  }
+
+  .sage-dropdown--anchor-center & {
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .sage-dropdown--pinned & {
@@ -296,14 +325,6 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
   [aria-expanded="true"] > & {
     display: block;
     z-index: sage-z-index(default, 100);
-    // Temporarily removing animation as it causes
-    // a positioning issue with nested flex positioned elements
-    // transform: rotate3d(0, 0, 0, 0);
-  }
-
-  .sage-upload-card .sage-dropdown & {
-    left: 50%;
-    transform: translateX(-50%);
   }
 }
 

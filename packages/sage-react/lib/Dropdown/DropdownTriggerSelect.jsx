@@ -19,6 +19,7 @@ export const DropdownTriggerSelect = ({
       disabled={disabled}
       icon={SageTokens.ICONS.CARET_DOWN}
       iconPosition={Button.ICON_POSITIONS.RIGHT}
+      raised={false}
       type="button"
       onClick={onClick}
     >

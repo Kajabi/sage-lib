@@ -1,6 +1,6 @@
 {
   "name": "@kajabi/sage-packs",
-  "version": "0.1.52",
+  "version": "0.1.97",
   "description": "Sage Packs",
   "keywords": [
     "sage",
@@ -16,6 +16,11 @@
   "files": [
     "lib"
   ],
+  "engines": {
+    "node": "14.x",
+    "npm": "6.x",
+    "yarn": "1.x"
+  },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
@@ -27,9 +32,9 @@
     "url": "https://github.com/Kajabi/sage-lib/issues"
   },
   "dependencies": {
-    "@kajabi/sage-assets": "^0.46.0",
-    "@kajabi/sage-react": "^0.56.0",
-    "@kajabi/sage-system": "^0.10.0"
+    "@kajabi/sage-assets": "^0.63.3",
+    "@kajabi/sage-react": "^0.74.4",
+    "@kajabi/sage-system": "^0.17.0"
   },
   "devDependencies": {
     "eslint": "^7.17.0",

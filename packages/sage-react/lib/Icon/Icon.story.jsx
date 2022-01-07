@@ -27,8 +27,8 @@ export default {
 const Template = (args) => <Icon {...args} />;
 
 export const Default = Template.bind({});
-export const AdjactentType = Template.bind({});
-AdjactentType.decorators = [
+export const AdjacentType = Template.bind({});
+AdjacentType.decorators = [
   (Story) => (
     <>
       <div style={{ display: 'flex' }}>
@@ -45,3 +45,17 @@ AdjactentType.decorators = [
     </>
   )
 ];
+export const CustomBackgroundSize = Template.bind({});
+CustomBackgroundSize.args = {
+  cardColor: 'draft',
+  backgroundWidth: '96px',
+  backgroundHeight: '48px',
+  size: Icon.SIZES.LG
+};
+export const CustomBackgroundSizeCircular = Template.bind({});
+CustomBackgroundSizeCircular.args = {
+  cardColor: 'draft',
+  circular: true,
+  backgroundHeight: '48px',
+  size: Icon.SIZES.LG
+};

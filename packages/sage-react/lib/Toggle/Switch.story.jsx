@@ -9,16 +9,21 @@ export default {
   decorators: [(Story) => <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}><Story /></div>],
   argTypes: {
     ...selectArgs({
-      type: Toggle.TYPES
+      togglePosition: Toggle.POSITIONS,
+      type: Toggle.TYPES,
     }),
   },
   args: {
     checked: false,
     disabled: false,
     hasError: false,
+    hasBorder: false,
+    hideText: false,
     label: 'Switch label',
     message: 'Subtext appears',
     name: 'switch-demo',
+    required: false,
+    togglePosition: Toggle.POSITIONS.DEFAULT,
     type: Toggle.TYPES.CHECKBOX,
     value: 'Demo'
   }

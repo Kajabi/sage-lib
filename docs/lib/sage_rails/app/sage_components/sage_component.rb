@@ -8,6 +8,7 @@ class SageComponent
     html_attributes: [:optional, Hash],
     spacer: [:optional, SageSchemas::SPACER],
     css_classes: [:optional, NilClass, String],
+    content: [:optional, String],
   }
 
   def generated_css_classes

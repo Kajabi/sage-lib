@@ -4,13 +4,16 @@ import classnames from 'classnames';
 import { Card } from '../Card';
 import { Icon } from '../Icon';
 import { Popover } from '../Popover';
+import { ModalHeaderActions } from './ModalHeaderActions';
 import { ModalHeaderAside } from './ModalHeaderAside';
 import { SageClassnames, SageTokens } from '../configs';
 
 export const ModalHeader = ({
+  actions,
   aside,
   children,
   className,
+  customHeader,
   popover,
   icon,
   image,
@@ -20,6 +23,15 @@ export const ModalHeader = ({
 }) => {
   const classNames = classnames(
     'sage-modal__header',
+    className,
+    {
+      'sage-modal__header--has-header-actions': actions,
+    },
+  );
+
+  const headerActionsClassNames = classnames(
+    SageClassnames.TYPE.HEADING_4,
+    'sage-modal__title',
     className,
   );
 
@@ -35,8 +47,10 @@ export const ModalHeader = ({
         >
           {icon && <Icon className="sage-modal__header-icon" icon={icon.name} color={icon.color} /> }
           {image && <img src={image.src} alt={image.alt || ''} />}
-          {title && <h1 className={SageClassnames.TYPE.HEADING_4}>{title}</h1>}
+          {customHeader || <h1 className={headerActionsClassNames}>{title}</h1>}
+          {actions && <ModalHeaderActions>{actions}</ModalHeaderActions>}
           {aside && <ModalHeaderAside>{aside}</ModalHeaderAside>}
+
         </Card.Row>
         {subheader && (
           <Card.Row>
@@ -61,11 +75,14 @@ export const ModalHeader = ({
 };
 
 ModalHeader.Aside = ModalHeaderAside;
+ModalHeader.Actions = ModalHeaderActions;
 
 ModalHeader.defaultProps = {
+  actions: null,
   aside: null,
   children: null,
   className: null,
+  customHeader: null,
   icon: null,
   image: null,
   popover: null,
@@ -74,9 +91,11 @@ ModalHeader.defaultProps = {
 };
 
 ModalHeader.propTypes = {
+  actions: PropTypes.node,
   aside: PropTypes.node,
   children: PropTypes.node,
   className: PropTypes.string,
+  customHeader: PropTypes.node,
   icon: PropTypes.shape({
     color: PropTypes.oneOf(Object.values(Icon.COLORS)),
     name: PropTypes.oneOf(Object.values(Icon.ICONS)),

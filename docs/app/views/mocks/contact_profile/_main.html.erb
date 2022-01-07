@@ -1,0 +1,121 @@
+<%= sage_component SageContainer, { size: "sm" } do %>
+  <%= sage_component SageButton, {
+    value: "View profile",
+    style: "primary",
+    html_attributes: {
+      "data-js-modaltrigger": "contact-profile",
+    }
+  } %>
+
+  <% content_for :sage_docs_modals do %>
+    <%= sage_component SageDrawer, {
+      id: "contact-profile",
+      show_close: true
+    } do %>
+      <%# --- Header --- %>
+      <% content_for :sage_drawer_header do %>
+        <%= sage_component SageButton, {
+          attributes: { href: "#TODO-open-full-profile" },
+          value: "Open full profile",
+          subtle: true,
+          small: true,
+          style: "secondary",
+          icon: {
+            name: "expand",
+            style: "left",
+          },
+        } %>
+      <% end %>
+      <%# /-- Header --- %>
+
+      <%# --- Profile --- %>
+      <%= sage_component SagePanelBlock, { css_classes: SageClassnames::TYPE_ALIGN_CENTER } do %>
+        <%= sage_component SageAvatar, {
+          badge: true,
+          centered: true,
+          image: {
+            src: contact_profile_data[:avatar_image],
+            alt: contact_profile_data[:name],
+          },
+          initials: contact_profile_data[:initials],
+          size: "68px",
+          spacer: { bottom: "sm" },
+        } %>
+        <h3 class="<%= SageClassnames::TYPE::HEADING_4 %> <%= SageClassnames::TYPE_COLORS::CHARCOAL_500 %>">
+          <%= contact_profile_data[:name] %>
+        </h3>
+        <%= sage_component SageCopyButton, {
+          value: contact_profile_data[:email],
+          borderless: true,
+        } %>
+      <% end %>
+      <%= sage_component SageButtonGroup, {
+        gap: :sm,
+        align: "center"
+      } do %>
+        <% contact_profile_button_bar_items.each do | btn | %>
+          <%= sage_component SageButton, {
+            value: btn[:label],
+            style: "secondary",
+            raised: false,
+            icon: {
+              style: "only",
+              name: btn[:icon],
+            },
+            html_attributes: {
+              "data-js-tooltip": btn[:label],
+              href: btn[:href],
+            },
+          } %>
+        <% end %>
+        <%= sage_component SageDropdown, {
+          items: contact_profile_more_options_items,
+          align: "right",
+        } do %>
+          <%= sage_component SageButton, {
+            value: "More",
+            style: "secondary",
+            raised: false,
+            icon: {
+              style: "only",
+              name: "dot-menu-horizontal",
+            },
+            html_attributes: {
+              "data-js-tooltip": "More",
+            },
+          } %>
+        <% end %>
+      <% end %>
+      <%# /-- Profile --- %>
+
+      <%# --- Data --- %>
+      <%= sage_component SagePanelStack, {
+        spacing: "form",
+        html_attributes: { style: "padding: 16px" }
+      } do %>
+        <% contact_profile_data[:user_stats].each do | data_group | %>
+          <%= sage_component SageDescription, {
+            items: data_group,
+            no_dividers: true,
+          } %>
+          <%= sage_component SagePanelDivider, {} %>
+        <% end %>
+        <%= sage_component SageLabelGroup, {
+          gap: :xs,
+          html_attributes: { "aria-label": "Tags" }
+        } do %>
+          <% contact_profile_data[:tags].each do | tag | %>
+            <%= sage_component SageLabel, { color: "draft", value: tag } %>
+          <% end %>
+          <%= sage_component SageButton, {
+            attributes: { href: "#view-more" },
+            style: "primary",
+            subtle: true,
+            value: "View all",
+          } %>
+        <% end %>
+      <% end %>
+      <%# /-- Data --- %>
+    <% end %>
+  <% end %>
+<% end %>

@@ -24,24 +24,41 @@
 }
 
 .sage-panel__divider {
+  position: relative;
+  width: 100%;
+  height: rem(16px);
   margin: 0;
-  padding-top: rem(11px); // 16 - 1px element - 4px bottom padding
-  padding-bottom: rem(4px);
+  line-height: sage-font-size(body-xs);
+  text-align: center;
   border: 0;
+  outline: 0;
 
   &::before {
     content: "";
-    display: block;
-    border-top: 1px solid sage-color(grey, 300);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+    background: sage-color(grey, 300);
+  }
+
+  &::after {
+    content: attr(data-divider-label);
+    display: inline-block;
+    position: relative;
+    padding: 0 sage-spacing(sm);
+    color: sage-color(grey, 500);
+    font-size: sage-font-size(body-xs);
+    background-color: sage-color(white);
   }
 }
 
 .sage-panel__divider--full-bleed {
+  width: calc(100% + #{sage-spacing(panel) * 2});
   padding: 0;
   margin: 0 -#{sage-spacing(panel)};
 }
-
-// Panel Figure moved to its own file
 
 .sage-panel__footer {
   @include sage-grid-panel-row();
@@ -63,10 +80,40 @@
 .sage-panel__header--custom,
 .sage-panel__subheader--custom {
   justify-content: space-between;
-  align-items: center;
+  align-items: start;
   grid-template-columns: 1fr auto;
   grid-auto-columns: auto;
   column-gap: sage-spacing();
+}
+
+.sage-panel__subheader {
+  row-gap: sage-spacing(2xs);
+}
+
+.sage-panel__title {
+  @extend %t-sage-heading-5;
+  color: sage-color(charcoal, 500);
+
+  + .sage-panel__subtext {
+    margin-top: sage-spacing(xs);
+  }
+}
+
+.sage-panel__subtext {
+  grid-column: 1 / -1;
+  color: sage-color(charcoal, 100);
+
+  .sage-panel__header & {
+    @extend %t-sage-body;
+  }
+
+  .sage-panel__subheader & {
+    @extend %t-sage-body-small;
+  }
+}
+
+.sage-panel__subtitle {
+  @extend %t-sage-heading-6;
 }
 
 .sage-panel__list {
@@ -78,8 +125,8 @@
 .sage-panel__list-item {
   margin-bottom: rem(-1px);
   padding: sage-spacing(sm) sage-spacing();
-  border-top: 1px solid sage-color(grey, 200);
-  border-bottom: 1px solid sage-color(grey, 200);
+  border-top: sage-border(default);
+  border-bottom: sage-border(default);
 
   @include sage-grid-card-row;
 
@@ -96,6 +143,13 @@
 
 .sage-panel__row {
   @include sage-grid-panel-row();
+}
+
+@each $-key, $-value in $sage-spacings {
+  .sage-panel__row--gap-#{$-key},
+  .sage-panel__list-item--gap-#{$-key} {
+    gap: sage-spacing($-key);
+  }
 }
 
 .sage-panel__row--media {
@@ -117,50 +171,33 @@
   gap: sage-spacing(card);
 }
 
-.sage-panel__subheader {
-  row-gap: sage-spacing(2xs);
-}
-
-.sage-panel__subtext {
-  grid-column: 1 / -1;
-  color: sage-color(charcoal, 100);
-
-  .sage-panel__header & {
-    @extend %t-sage-body;
-  }
-
-  .sage-panel__subheader & {
-    @extend %t-sage-body-small;
-  }
-}
-
-.sage-panel__subtitle {
-  @extend %t-sage-heading-6;
-}
-
 .sage-panel__tile {
   @include sage-grid-card();
 }
 
 .sage-panel__tiles {
+  --sage-panel-tiles-gap: #{sage-spacing()};
+
   display: grid;
-  grid-gap: sage-spacing();
+  grid-gap: var(--sage-panel-tiles-gap);
+  grid-template-columns: repeat(var(--sage-panel-tiles-columns), calc((100% - (var(--sage-panel-tiles-gap) * (var(--sage-panel-tiles-columns) - 1))) / var(--sage-panel-tiles-columns)));
   list-style: none;
+
+  @media (max-width: sage-breakpoint(xs-max)) {
+    --sage-panel-tiles-columns: 1;
+  }
+
+  @media (min-width: sage-breakpoint(sm-min)) and (max-width: sage-breakpoint(md-max)) {
+    --sage-panel-tiles-columns: 2;
+  }
 }
 
 @for $i from 2 through 4 {
-  .sage-panel__tiles--#{$i}-up {
-    grid-template-columns: repeat(#{$i}, calc((100% - #{sage-spacing() * ($i - 1)}) / #{$i}));
+  @media (min-width: sage-breakpoint(lg-min)) {
+    .sage-panel__tiles--#{$i}-up {
+      --sage-panel-tiles-columns: #{$i};
+    }
   }
-
-  .sage-panel__tiles--#{$i}-up-condensed {
-    grid-gap: sage-spacing(xs);
-    grid-template-columns: repeat(#{$i}, calc((100% - #{sage-spacing(xs) * ($i - 1)}) / #{$i}));
-  }
-}
-
-.sage-panel__title {
-  @extend %t-sage-heading-5;
 }
 
 .sage-panel-set {

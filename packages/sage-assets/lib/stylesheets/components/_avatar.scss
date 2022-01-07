@@ -121,7 +121,8 @@ $-avatar-group-item-sizes: (
 }
 
 .sage-avatar--centered {
-  margin: 0 auto;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 // Documentation-specific styles
@@ -142,6 +143,19 @@ $-avatar-group-item-sizes: (
   .sage-avatar--#{"" + $color} {
     color: map-get($settings, main);
     background-color: map-get($settings, bg);
+  }
+}
+
+.sage-avatar__badge {
+  position: absolute;
+  z-index: sage-z-index(default, 3);
+  bottom: 0;
+  right: 0;
+  background-color: sage-color(white);
+  border-radius: sage-border(radius-round);
+
+  i {
+    display: flex;
   }
 }
 

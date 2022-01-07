@@ -1,0 +1,37 @@
+<%= sage_component SageFormSection, {
+  title: "Upsells",
+  subtitle: "An Upsell is an additional and optional Offer that members can also purchase. It is prompted to members after they finish purchasing your initial Offer.",
+} do %>
+  <%= sage_component SagePanelHeader, { title: "After-purchase flow", spacer: { bottom: :xs } } %>
+  <%= sage_component SagePanelDivider, { label: "After checkout" } %>
+  <%= sage_component SageSortable, {
+    resource_name: "upsells",
+    spacer: { top: :sm }
+  } do %>
+    <% upsell_downsell_data[:upsells].each do | upsell | %>
+      <%= render "mocks/upsell_downsell/upsell_card", upsell: upsell %>
+    <% end %>
+  <% end %>
+  <div class="<%= SageClassnames::TYPE_ALIGN_CENTER %>">
+    <%= sage_component SageButton, {
+        spacer: { top: :md, bottom: :md },
+        value: "Add an Upsell",
+        style: "secondary",
+        raised: false,
+      } %>
+  </div>
+  <%= sage_component SagePanelDivider, { label: "End of flow" } %>
+<% end %>
+
+<%= sage_component SagePanelDivider, {} %>
+
+<%= sage_component SageButton, {
+  spacer: { top: :sm },
+  value: "Clear all",
+  style: "danger",
+  subtle: true,
+  icon: {
+    style: "left",
+    name: "trash"
+  },
+} %>

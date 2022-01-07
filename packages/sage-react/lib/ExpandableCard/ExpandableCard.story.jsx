@@ -7,6 +7,7 @@ export default {
   component: ExpandableCard,
   args: {
     bodyBordered: false,
+    expanded: false,
     children: (
       <>
         <Checkbox

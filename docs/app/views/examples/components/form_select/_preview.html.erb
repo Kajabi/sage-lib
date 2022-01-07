@@ -74,4 +74,31 @@
   message: "This is a message"
 } %>
 
+<%= sage_component SageFormSelect, {
+  name: "Sports",
+  disabled: true,
+  select_options: [
+    {
+      text: "Basketball",
+      value: "basketball"
+    },
+    {
+      text: "Football",
+      value: "football"
+    },
+    {
+      text: "Lacrosse",
+      value: "lacrosse"
+    },
+    {
+      text: "Baseball",
+      value: "baseball"
+    },
+    {
+      text: "Blitzball",
+      value: "blitzball"
+    },
+  ]
+} %>
+
 <p><strong>Note:</strong> For a fully styled dropdown selector, see the Dropdown component.</p>

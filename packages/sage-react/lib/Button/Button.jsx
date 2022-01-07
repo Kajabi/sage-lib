@@ -6,7 +6,7 @@ import { SageTokens } from '../configs';
 import { ButtonGroup } from './ButtonGroup';
 import { BUTTON_COLORS, BUTTON_ICON_POSITIONS } from './configs';
 
-export const Button = ({
+export const Button = React.forwardRef(({
   alignEnd,
   children,
   className,
@@ -19,15 +19,13 @@ export const Button = ({
   iconOnly,
   iconPosition,
   linkTag,
-  noShadow,
   raised,
   small,
   subtle,
   ...rest
-}) => {
+}, ref) => {
   const { to, href } = rest;
   const isLink = to || href;
-  const isPrimary = color === BUTTON_COLORS.PRIMARY;
   const TagName = isLink ? Link : 'button';
   const blockName = 'sage-btn';
   const classNames = classnames(
@@ -37,8 +35,8 @@ export const Button = ({
       [`${blockName}--align-end`]: alignEnd,
       [`${blockName}--${color}`]: color,
       [`${blockName}--full-width`]: fullWidth,
-      [`${blockName}--no-shadow`]: noShadow && !subtle && isPrimary,
-      [`${blockName}--raised`]: raised && !subtle && !isPrimary,
+      [`${blockName}--no-shadow`]: !raised && !subtle,
+      [`${blockName}--raised`]: raised && !subtle,
       [`${blockName}--small`]: small,
       [`${blockName}--subtle`]: subtle,
       [`${blockName}--icon-${iconPosition}-${icon}`]: icon && !iconOnly,
@@ -78,6 +76,7 @@ export const Button = ({
 
   return (
     <TagName
+      ref={ref}
       className={classNames}
       aria-disabled={isLink && disabled}
       disabled={!isLink && disabled}
@@ -87,7 +86,7 @@ export const Button = ({
       {renderContent()}
     </TagName>
   );
-};
+});
 
 Button.Group = ButtonGroup;
 Button.COLORS = BUTTON_COLORS;
@@ -106,9 +105,8 @@ Button.defaultProps = {
   iconOnly: false,
   iconPosition: Button.ICON_POSITIONS.LEFT,
   linkTag: null,
-  noShadow: null,
   onClick: null,
-  raised: null,
+  raised: true,
   small: false,
   subtle: false,
   type: 'button',
@@ -127,7 +125,6 @@ Button.propTypes = {
   iconOnly: PropTypes.bool,
   iconPosition: PropTypes.oneOf(Object.values(Button.ICON_POSITIONS)),
   linkTag: Link.tagPropTypes,
-  noShadow: PropTypes.bool,
   onClick: PropTypes.func,
   raised: PropTypes.bool,
   small: PropTypes.bool,

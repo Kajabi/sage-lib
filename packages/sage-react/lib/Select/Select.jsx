@@ -5,9 +5,11 @@ import { selectItemPropTypes, selectStructuredItemPropTypes } from './configs';
 
 export const Select = ({
   className,
+  disabled,
   hasError,
   id,
   label,
+  includeLabelInOptions,
   message,
   onChange,
   options,
@@ -18,6 +20,7 @@ export const Select = ({
     'sage-select',
     className,
     {
+      'sage-form-field--error': hasError,
       'sage-select--error': hasError,
       'sage-select--value-selected': value,
     }
@@ -31,9 +34,10 @@ export const Select = ({
         onChange={onChange}
         placeholder={label}
         value={value}
+        disabled={disabled}
         {...rest}
       >
-        {label && <option label={label} />}
+        {(label && includeLabelInOptions) && <option label={label} />}
 
         {options.map((option, i) => {
           let optionLabel,
@@ -67,7 +71,9 @@ Select.structuredItemPropTypes = selectStructuredItemPropTypes;
 
 Select.defaultProps = {
   className: null,
+  disabled: false,
   hasError: false,
+  includeLabelInOptions: false,
   label: null,
   message: null,
   onChange: (evt) => evt,
@@ -78,7 +84,9 @@ Select.defaultProps = {
 Select.propTypes = {
   className: PropTypes.string,
   id: PropTypes.string.isRequired,
+  disabled: PropTypes.bool,
   hasError: PropTypes.bool,
+  includeLabelInOptions: PropTypes.bool,
   label: PropTypes.string,
   message: PropTypes.string,
   onChange: PropTypes.func,

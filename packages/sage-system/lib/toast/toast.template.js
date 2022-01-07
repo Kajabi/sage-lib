@@ -8,10 +8,11 @@ import {
   DATA_ATTR_CLOSE_BUTTON,
 } from './toast.config.js';
 
-export const toastTemplate = ({id, type, icon, text, link}) => (`
+export const toastTemplate = ({id, type, icon, text, link, testId = null}) => (`
   <dialog
     class="sage-toast sage-toast--style-${type}"
     id="${id}"
+    ${(testId !== null) ? `data-kjb-element="${testId}"` : ""}
     ${DATA_ATTR}
   >
     ${type === "loading" ? loadingTemplate() : iconTemplate(icon)}

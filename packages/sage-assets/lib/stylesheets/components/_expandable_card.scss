@@ -14,12 +14,14 @@ $-expandable-card-padding-xs: sage-spacing(xs);
 
 .sage-expandable-card__body,
 .sage-expandable-card__body-bordered {
+  visibility: hidden;
   overflow: hidden;
   height: 0;
   margin: 0;
   padding: 0;
   
-  [aria-expanded="true"] + & {
+  .sage-expandable-card--expanded & {
+    visibility: visible;
     overflow: initial;
     height: auto;
     margin-top: sage-spacing(xs);
@@ -34,7 +36,7 @@ $-expandable-card-padding-xs: sage-spacing(xs);
   padding-left: $-expandable-card-padding;
   padding-right: $-expandable-card-padding;
 
-  [aria-expanded="true"] + & {
+  .sage-expandable-card--expanded & {
     padding-top: $-expandable-card-padding;
     padding-bottom: $-expandable-card-padding;
     border-radius: $-expandable-card-border-radius;
@@ -52,8 +54,11 @@ $-expandable-card-padding-xs: sage-spacing(xs);
     font-size: rem(8px);
     transition: transform 0.2s linear;
   }
+}
 
-  &[aria-expanded="true"]::before {
+.sage-expandable-card--expanded {
+  .sage-expandable-card__trigger::before {
     transform: rotateZ(90deg);
   }
 }
+// NOTE: Styles for align_arrow_right prop added in `_button`

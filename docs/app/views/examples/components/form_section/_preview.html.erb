@@ -8,10 +8,10 @@
     subtitle: "Helpful text that lets the customer have an idea how to work with the section.",
   } do %>
     <%= sage_component SageAlert, {
-        title: "Form Section Content Will Go Here",
-        desc: "This component is designed to be very flexible and take any sort of content you want to pass to it.",
-        icon_name: "sage-icon-info-circle",
-      } %>
+      title: "Form Section Content Will Go Here",
+      desc: "This component is designed to be very flexible and take any sort of content you want to pass to it.",
+      icon_name: "sage-icon-info-circle",
+    } %>
   <% end %>
 
   <!-- Custom title_tag -->
@@ -23,9 +23,25 @@
     title_tag: "h3"
   } do %>
     <%= sage_component SageAlert, {
-        title: "Form Section Content Will Go Here",
-        desc: "This component is designed to be very flexible and take any sort of content you want to pass to it.",
-        icon_name: "sage-icon-info-circle",
-      } %>
+      title: "Form Section Content Will Go Here",
+      desc: "This component is designed to be very flexible and take any sort of content you want to pass to it.",
+      icon_name: "sage-icon-info-circle",
+    } %>
+  <% end %>
+
+  <h3 class="t-sage-heading-6">With Custom Subtitle</h3>
+  <%= sage_component SageFormSection, { 
+    id:"c1",
+    title: "Form Section Title",
+  } do %>
+    <%= sage_component SageAlert, {
+      title: "Form Section Content Will Go Here",
+      desc: "This component is designed to be very flexible and take any sort of content you want to pass to it.",
+      icon_name: "sage-icon-info-circle",
+    } %>
+    <%= content_for :sage_form_section_subtitle do %>
+      <p>Helpful text that lets the customer have an idea how to work with the section.</p>
+      <p>Additional helpful text that lets the customer have an idea how to work with the section.</p>
+    <% end %>
   <% end %>
 <% end %>

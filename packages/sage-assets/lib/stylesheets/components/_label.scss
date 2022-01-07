@@ -20,14 +20,6 @@ $-label-inset-border: 0 0 0 1px inset;
   &[class*="sage-label--icon-only"] {
     background-color: transparent;
   }
-
-  .sage-label-group &:not(:last-child) {
-    margin-right: sage-spacing(xs);
-  }
-
-  .sage-label-group & {
-    margin-top: sage-spacing(xs);
-  }
 }
 
 .sage-label__value {
@@ -163,4 +155,23 @@ $-label-inset-border: 0 0 0 1px inset;
 .sage-label-group {
   display: flex;
   flex-flow: row wrap;
+  gap: sage-spacing(xs);
+}
+
+@each $-key, $-value in $sage-spacings {
+  .sage-label-group--gap-#{$-key} {
+    gap: sage-spacing($-key);
+  }
+}
+
+.sage-label-group--align-center {
+  justify-content: center;
+}
+
+.sage-label-group--align-end {
+  justify-content: flex-end;
+}
+
+.sage-label-group--align-space-between {
+  justify-content: space-between;
 }

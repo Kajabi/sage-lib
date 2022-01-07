@@ -9,3 +9,4 @@ lerna-debug.log
 .env
 .DS_Store
 coverage
+package-lock.json

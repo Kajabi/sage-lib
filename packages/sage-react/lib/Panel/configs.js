@@ -11,6 +11,16 @@ export const PANEL_ROW_ALIGNMENT_OPTIONS = {
   TOP: 'start',
 };
 
+export const PANEL_ROW_GAP_OPTIONS = {
+  DEFAULT: null,
+  XS: 'xs',
+  SM: 'sm',
+  MD: 'md',
+  LG: 'lg',
+};
+
+export const PANEL_LIST_GAP_OPTIONS = PANEL_ROW_GAP_OPTIONS;
+
 export const PANEL_TILE_OPTIONS_ARRAY = [2, 3, 4];
 
 export const PANEL_LIST_BLOCK_SPACING = {

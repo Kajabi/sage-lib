@@ -1,7 +1,7 @@
 <h3 class="t-sage-heading-6">Initial State</h3>
 <%= sage_component SageUploadCard, {
   selection_label: "Select a file",
-  selection_subtext: "Body small, Charcoal 200",
+  selection_subtext: "Recommended dimensions or file size requirements",
 } %>
 
 <h3 class="t-sage-heading-6">Selected File State</h3>
@@ -12,7 +12,7 @@
   ],
   file_selected: true,
   selection_label: "Replace file",
-  selection_subtext: "Body small, Charcoal 200",
+  selection_subtext: "Recommended dimensions or file size requirements",
 } %>
 
 <h3 class="t-sage-heading-6">Error State</h3>
@@ -20,8 +20,8 @@
 <%= sage_component SageUploadCard, {
   has_error: true,
   selection_label: "Select a file",
-  selection_subtext: "Body small, Charcoal 200",
+  selection_subtext: "Recommended dimensions or file size requirements",
   errors: [
-    {text: "Body small medium, Red 300 Errors here..."},
+    {text: "This is the error message."},
   ]
 } %>
