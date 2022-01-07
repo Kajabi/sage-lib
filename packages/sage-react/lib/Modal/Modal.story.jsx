@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { Button } from '../Button';
+import { Indicator } from '../Indicator';
 import { Icon } from '../Icon';
 import { SageTokens, SageClassnames } from '../configs';
 import { disableArgs } from '../story-support/helpers';
@@ -27,6 +28,14 @@ const DefaultBody = ({ onExit }) => (
         >
           Menu
         </Button>
+      )}
+      headerIndicator={(
+        <Indicator
+          currentItem='2'
+          label='Page'
+          numItems='5'
+          showText={true}
+        />
       )}
     />
     <Modal.Body>
