@@ -34,9 +34,7 @@ export const Indicator = ({
     );
   }
 
-  const renderIndicatorProgress = () => {
-    return currentItem / numItems * 100;
-  };
+  const renderIndicatorProgress = () => (currentItem / numItems) * 100;
 
   return (
     <>
