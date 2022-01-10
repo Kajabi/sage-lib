@@ -13,4 +13,7 @@ class SageCheckbox < SageComponent
     standalone:  [:optional, TrueClass],
     value: [:optional, String],
   })
+
+  def sections
+    %w(checkbox_custom_content)
 end
