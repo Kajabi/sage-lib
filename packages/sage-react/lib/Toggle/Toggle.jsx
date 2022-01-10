@@ -6,6 +6,7 @@ import { TOGGLE_POSITIONS, TOGGLE_STYLES, TOGGLE_TYPES } from './configs';
 export const Toggle = ({
   checked,
   className,
+  customContent,
   disabled,
   hasBorder,
   hasError,
@@ -70,6 +71,16 @@ export const Toggle = ({
 
   const Tag = itemInList ? 'li' : 'div';
 
+  const renderCustomContent = ()=> {
+    if (customContent && type == Toggle.TYPES.CHECKBOX) {
+      return (
+        <div className={`${baseClass}__custom-content`}>
+          {customContent}
+        </div>
+      );
+    }
+  };
+
   return (
     <Tag className={classNames}>
       <input
@@ -88,6 +99,7 @@ export const Toggle = ({
       {message && (
         <div className={`${baseClass}__message`}>{message}</div>
       )}
+      {renderCustomContent()}
     </Tag>
   );
 };
@@ -99,6 +111,7 @@ Toggle.TYPES = TOGGLE_TYPES;
 Toggle.defaultProps = {
   checked: false,
   className: null,
+  customContent: null,
   disabled: false,
   hasBorder: false,
   hasError: false,
@@ -116,6 +129,7 @@ Toggle.defaultProps = {
 Toggle.propTypes = {
   checked: PropTypes.bool,
   className: PropTypes.string,
+  customContent: PropTypes.node,
   disabled: PropTypes.bool,
   hasBorder: PropTypes.bool,
   hasError: PropTypes.bool,
