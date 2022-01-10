@@ -1,8 +1,6 @@
 import React from 'react';
-import { selectArgs } from '../story-support/helpers';
 import { CreationWizard } from './CreationWizard';
 import { Button } from '../Button';
-import { Indicator } from '../Indicator';
 
 export default {
   title: 'Sage/Creation Wizard',

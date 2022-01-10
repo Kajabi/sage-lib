@@ -31,9 +31,9 @@ const DefaultBody = ({ onExit }) => (
       )}
       headerIndicator={(
         <Indicator
-          currentItem='2'
-          label='Page'
-          numItems='5'
+          currentItem="2"
+          label="Page"
+          numItems="5"
           showText={true}
         />
       )}

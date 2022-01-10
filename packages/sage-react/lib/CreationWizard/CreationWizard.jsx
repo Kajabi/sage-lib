@@ -11,10 +11,8 @@ export const CreationWizard = ({
   body,
   bodyActions,
   feature,
-  header,
   className,
   id,
-  image,
   indicator,
   onExit,
   showClose,
@@ -40,8 +38,10 @@ export const CreationWizard = ({
           Close Drawer
         </Button>
       )}
-      >
-      {/* sure up this conditional, very weak at the moment; it should be if any indicator value is present or if the shape is met*/}
+    >
+      {/* sure up this conditional, very weak at the moment;
+      it should be if any indicator value is present or if the
+      shape is met */}
       {indicator.currentItem !== null && (
         <>
           <Indicator
@@ -84,12 +84,8 @@ CreationWizard.defaultProps = {
   active: false,
   body: null,
   bodyActions: null,
-  children: null,
   className: null,
   feature: null,
-  header: null,
-  id: null,
-  image: null,
   indicator: {
     currentItem: null,
     label: null,
@@ -104,15 +100,9 @@ CreationWizard.propTypes = {
   active: PropTypes.bool,
   body: PropTypes.arrayOf(PropTypes.node),
   bodyActions: PropTypes.arrayOf(PropTypes.node),
-  children: PropTypes.node,
   className: PropTypes.string,
   feature: PropTypes.arrayOf(PropTypes.node),
-  header: PropTypes.arrayOf(PropTypes.node),
   id: PropTypes.string.isRequired,
-  image: PropTypes.shape({
-    alt: PropTypes.string,
-    src: PropTypes.string
-  }),
   indicator: PropTypes.shape({
     currentItem: PropTypes.number,
     label: PropTypes.string,
