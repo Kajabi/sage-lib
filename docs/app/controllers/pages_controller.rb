@@ -41,6 +41,18 @@ class PagesController < ApplicationController
     render params[:title]
   end
 
+  def patterns
+    render params[:title]
+  end
+
+  def interactions
+    render params[:title]
+  end
+
+  def helpers
+    render params[:title]
+  end
+
   def component
     @title = params[:title]
   end
@@ -53,6 +65,12 @@ class PagesController < ApplicationController
   end
 
   def utilities
+  end
+
+  def search
+    @search = params[:search]
+    
+    render(layout: 'full_page')
   end
 
   # Generator Pages

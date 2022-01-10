@@ -8,37 +8,6 @@
 // MIXINS
 // ==================================================
 
-@mixin color-block-output {
-  padding: sage-spacing(sm) sage-spacing();
-  font-size: sage-font-size(body);
-  color: sage-color(white);
-
-  &::after {
-    text-transform: uppercase;
-  }
-}
-
-@mixin generate-color-tones($color, $tone, $hex) {
-  &-#{$tone} {
-    @include color-block-output();
-    background: $hex;
-
-    @if (($color == grey) or ($color == white)) {
-      color: sage-color(charcoal, 500);
-    }
-
-    @else if (lightness($hex) > 60) {
-      color: sage-color($color, 500);
-    }
-
-    &::after {
-      content: "#{$hex}";
-      padding-left: sage-spacing(xs);
-      font-weight: sage-font-weight(semibold);
-    }
-  }
-}
-
 // color block groupings
 .colors {
   overflow: hidden;
@@ -75,9 +44,32 @@
 
 // build individual color blocks
 @each $name, $color in $sage-colors {
-  .color-#{"" + $name} {
-    @each $tone, $hex in $color {
-      @include generate-color-tones($name, $tone, $hex);
+  @each $value, $map in $color {
+    $hex: sage-color($name, $value);
+
+    .color-#{"" + $name}-#{$value} {
+      padding: sage-spacing(sm) sage-spacing();
+      font-size: sage-font-size(body);
+      background: $hex;
+      
+      @if (($name == grey) or ($name == white)) {
+        color: sage-color(charcoal, 500);
+      }
+      
+      @else if (lightness($hex) > 60) {
+        color: sage-color($name, 500);
+      }
+      
+      @else {
+        color: sage-color(white);
+      }
+      
+      &::after {
+        content: "#{$hex}";
+        padding-left: sage-spacing(xs);
+        font-weight: sage-font-weight(semibold);
+        text-transform: uppercase;
+      }
     }
   }
 }
