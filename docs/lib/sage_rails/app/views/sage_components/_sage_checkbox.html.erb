@@ -48,9 +48,9 @@
     <% if component.message.present? %>
       <div class="sage-checkbox__message"><%= component.message %></div>
     <% end %>
-    <% if :sage_checkbox_custom_content %>
+    <% if content_for? :sage_checkbox_custom_content %>
       <div class="sage-checkbox__custom-content">
-        <%= :sage_checkbox_custom_content %>
+        <%= content_for :sage_checkbox_custom_content %>
       </div>
     <% end %>
   </div>

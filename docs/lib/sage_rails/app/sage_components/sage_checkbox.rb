@@ -16,4 +16,5 @@ class SageCheckbox < SageComponent
 
   def sections
     %w(checkbox_custom_content)
+  end
 end
