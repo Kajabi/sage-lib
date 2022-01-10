@@ -7,7 +7,11 @@
     disabled: false,
     has_error: false,
     partial_selection: true
-  } %>
+  } do %>
+    <% content_for :sage_checkbox_custom_content do %>
+      <h1>Testing</h1>
+    <% end %>
+  <% end %>
 
   <%= sage_component SageCheckbox, {
     id:"c1b",
