@@ -22,7 +22,8 @@ is_responsive = component.responsive.present? ? component.responsive : true
   >
     <% if component.caption.present? %>
       <caption class="
-        <%= "sage-table__caption--#{component.caption_side}" %>
+        sage-table__caption
+        <%= "sage-table__caption--#{component.caption_side}" if component.caption_side %>
       ">
         <%= component.caption.html_safe %>
       </caption>
