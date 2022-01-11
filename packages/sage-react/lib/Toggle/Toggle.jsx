@@ -40,6 +40,7 @@ export const Toggle = ({
     className,
     {
       [`${baseClass}--has-border`]: hasBorder,
+      [`${baseClass}--custom`]: customContent && type === Toggle.TYPES.CHECKBOX,
       [`${baseClass}--error`]: hasError,
       [`${baseClass}--toggle-${togglePosition}`]: togglePosition,
     }
@@ -71,14 +72,16 @@ export const Toggle = ({
 
   const Tag = itemInList ? 'li' : 'div';
 
-  const renderCustomContent = ()=> {
-    if (customContent && type == Toggle.TYPES.CHECKBOX) {
+  const renderCustomContent = () => {
+    if (customContent && type === Toggle.TYPES.CHECKBOX) {
       return (
         <div className={`${baseClass}__custom-content`}>
           {customContent}
         </div>
       );
     }
+
+    return null;
   };
 
   return (

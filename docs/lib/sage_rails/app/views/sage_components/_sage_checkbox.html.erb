@@ -23,6 +23,7 @@
 <% else %>
   <div class="
       sage-checkbox
+      <%= "sage-checkbox--custom" if content_for :sage_checkbox_custom_content %>
       <%= "sage-checkbox--partial-selection" if component.partial_selection %>
       <%= component.has_error ? "sage-checkbox--error" : "" %>
       <%= component.generated_css_classes %>
@@ -55,4 +56,3 @@
     <% end %>
   </div>
 <% end %>
-
