@@ -25,9 +25,9 @@ export const Default = Template.bind({});
 export const DefaultWithCustomContent = Template.bind({});
 DefaultWithCustomContent.args = {
   customContent: (
-    <div>hi</div>
+    <p>Custom Content</p>
   )
-}
+};
 
 export const MultipleExample = (args) => {
   const items = [
