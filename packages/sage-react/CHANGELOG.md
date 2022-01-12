@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.76.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.75.0...@kajabi/sage-react@0.76.0) (2022-01-12)
+
+
+### Features
+
+* **checkbox:** adds custom content slot to React component ([97ee970](https://github.com/Kajabi/sage-lib/commit/97ee9708623f88c5c3b5b8ee436de729942ded3f))
+* **table:** adds caption prop to React component ([12ea91a](https://github.com/Kajabi/sage-lib/commit/12ea91a27941203f848aa34765f82ecf7a459d52))
+
+
+
+
+
 # [0.75.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.74.4...@kajabi/sage-react@0.75.0) (2022-01-10)
 
 

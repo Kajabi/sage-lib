@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.65.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.64.0...@kajabi/sage-assets@0.65.0) (2022-01-12)
+
+
+### Features
+
+* **table:** adds prop for caption-side CSS style ([f3ac2ca](https://github.com/Kajabi/sage-lib/commit/f3ac2caae867d9005a853d552282c514d4ffae2b))
+
+
+
+
+
 # [0.64.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.63.3...@kajabi/sage-assets@0.64.0) (2022-01-10)
 
 
