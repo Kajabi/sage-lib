@@ -1,0 +1,34 @@
+<%= sage_component SageGridRow, {} do %>
+  <%= sage_component SageGridCol, { breakpoint: "md", size: "5" } do %>
+    <h2 class="<%= SageClassnames::TYPE::HEADING_5 %> <%= SageClassnames::SPACERS::MD_BOTTOM %>">What do you want to create?</h2>
+    <div class="sage-tabs-container">
+      <%= sage_component SageTabs, {
+        css_classes: "creation-product-tabs",
+        id: "creation-prod-tabs",
+        items: creation_product_types[:product_types],
+        style: "choice",
+      } %>
+      <% creation_product_details[:product_details].each do | details | %>
+        <%= sage_component SageTabsPane, { id: details[:id], card: false } do %>
+          <h4 class="<%= SageClassnames::TYPE::HEADING_5 %> <%= SageClassnames::SPACERS::XS_BOTTOM %>">
+            <%= details[:name] %>
+          </h4>
+          <div class="<%= SageClassnames::TYPE::BODY %> <%= SageClassnames::SPACERS::MD_BOTTOM %>">
+            <p><%= details[:desc] %></p>
+          </div>
+          <h5 class="<%= SageClassnames::TYPE::HEADING_6 %> <%= SageClassnames::SPACERS::XS_BOTTOM %>">Available features:</h5>
+          <%= sage_component SageLists, {} do %>
+            <ul class="sage-list creation-product-list">
+              <% details[:avail_features].each do | feature | %>
+                <li><%= sage_component SageProperty, { icon: feature[:icon], value: feature[:value] } %></li>
+              <% end %>
+            </ul>
+          <% end %>
+        <% end %>
+      <% end %>
+    </div>
+  <% end %>
+  <%= sage_component SageGridCol, { breakpoint: "md", size: "7" } do %>
+    RIGHT SIDE CONTENT
+  <% end %>
+<% end %>
