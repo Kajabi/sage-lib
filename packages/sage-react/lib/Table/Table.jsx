@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import uuid from 'react-uuid';
 import { TableHelpers } from '../helpers';
-import { cellPropTypes, dataPropTypes } from './configs';
+import { CAPTION_SIDE, cellPropTypes, dataPropTypes } from './configs';
 import { TableHeader } from './TableHeader';
 import { TableRow } from './TableRow';
 import { SELECTION_TYPES } from '../PanelControls/configs';
@@ -32,6 +32,8 @@ import { SELECTION_TYPES } from '../PanelControls/configs';
 // for a properly formatted table.
 //
 export const Table = ({
+  caption,
+  captionSide,
   className,
   headers,
   isResponsive,
@@ -238,6 +240,11 @@ export const Table = ({
   // Renders the table itself
   const renderTable = () => (
     <table className={tableClassNames} {...tableAttributes}>
+      {caption && (
+        <caption className={`sage-table__caption--${captionSide}`}>
+          {caption}
+        </caption>
+      )}
       {selfHeaders && (
         <thead>
           <tr>
@@ -265,9 +272,12 @@ export const Table = ({
 
 Table.Header = TableHeader;
 Table.Row = TableRow;
+Table.CAPTION_SIDE = CAPTION_SIDE;
 Table.DATA_TYPES = TableHelpers.DATA_TYPES;
 
 Table.defaultProps = {
+  caption: null,
+  captionSide: null,
   className: null,
   headers: [],
   isResponsive: true,
@@ -283,6 +293,8 @@ Table.defaultProps = {
 };
 
 Table.propTypes = {
+  caption: PropTypes.string,
+  captionSide: PropTypes.oneOf(Object.values(Table.CAPTION_SIDE)),
   className: PropTypes.string,
   // Headers provide a simpler alternative to schema
   headers: PropTypes.oneOfType([

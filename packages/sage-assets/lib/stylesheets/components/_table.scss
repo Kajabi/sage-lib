@@ -121,6 +121,14 @@ $-table-avatar-width: rem(32px);
   }
 }
 
+.sage-table__caption--bottom {
+  caption-side: bottom;
+}
+
+.sage-table__caption--top {
+  caption-side: top;
+}
+
 // Decreased vertical padding
 .sage-table--condensed {
   thead,
