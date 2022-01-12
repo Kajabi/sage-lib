@@ -19,7 +19,7 @@
 .creation-product-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, 1fr);
-  margin-bottom: 1rem;
+  margin-bottom: sage-spacing();
   @media screen and (min-width: sage-breakpoint(md-max)) {
     grid-template-columns: repeat(2, 1fr);
   }
