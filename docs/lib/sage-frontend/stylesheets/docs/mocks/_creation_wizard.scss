@@ -1,0 +1,31 @@
+// product selection styles
+.sage-choice,
+.sage-choice:not(:last-child) {
+  .creation-product-tabs & {
+    margin: 0;
+  }
+}
+.creation-product-tabs {
+  display: grid;
+  grid-gap: sage-spacing();
+  grid-template-columns: 1fr 1fr;
+}
+.sage-choice--active {
+  .creation-product-tabs & {
+    background: sage-color(primary, 100);
+  }
+}
+.creation-product-img {
+  display: none;
+  @media screen and (min-width: sage-breakpoint(md-max)) {
+    display: block;
+  }
+}
+.creation-product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 1fr);
+  margin-bottom: 1rem;
+  @media screen and (min-width: sage-breakpoint(md-max)) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
