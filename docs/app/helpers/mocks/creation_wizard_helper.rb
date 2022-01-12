@@ -54,7 +54,7 @@ module Mocks::CreationWizardHelper
         avail_features: [
           {
             icon: "assessment",
-            value: "Quizzes and surveys"\
+            value: "Quizzes and surveys"
           },
           {
             icon: "download",
@@ -92,7 +92,7 @@ module Mocks::CreationWizardHelper
             value: "Text posts"
           },{
             icon: "assessment",
-            value: "Quizzes and surveys"\
+            value: "Quizzes and surveys"
           },
           {
             icon: "microphone",
@@ -115,7 +115,7 @@ module Mocks::CreationWizardHelper
         avail_features: [
           {
             icon: "assessment",
-            value: "Quizzes and surveys"\
+            value: "Quizzes and surveys"
           },
           {
             icon: "microphone",
@@ -162,7 +162,7 @@ module Mocks::CreationWizardHelper
           },
           {
             icon: "assessment",
-            value: "Quizzes and surveys"\
+            value: "Quizzes and surveys"
           },
           {
             icon: "download",
