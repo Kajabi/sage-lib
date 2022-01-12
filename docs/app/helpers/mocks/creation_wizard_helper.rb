@@ -173,5 +173,4 @@ module Mocks::CreationWizardHelper
     ]
   }
   end
-
 end
