@@ -16,7 +16,11 @@
     disabled: false,
     has_error: false,
     message: 'This is where a "hint" message would appear.',
-  } %>
+  } do %>
+    <% content_for :sage_checkbox_custom_content do %>
+      <p>Paragraph for testing custom content.</p>
+    <% end %>
+  <% end %>
 
   <%= sage_component SageCheckbox, {
     id:"c1c",
