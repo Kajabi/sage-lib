@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.75.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.74.4...@kajabi/sage-react@0.75.0) (2022-01-10)
+
+
+### Bug Fixes
+
+* **icons:** menu rename ([763945a](https://github.com/Kajabi/sage-lib/commit/763945a306382172d91a9e62b2ef186a2ae444ea))
+* **icons:** menu rename ([90dcdf9](https://github.com/Kajabi/sage-lib/commit/90dcdf95abcfc9fab486ae7b39dba195465ffd4b))
+* **icons:** updated icon names ([5f39d95](https://github.com/Kajabi/sage-lib/commit/5f39d95e02e415646efd18b5482edd0e933cd146))
+* **icons:** updated icon names ([d87307a](https://github.com/Kajabi/sage-lib/commit/d87307ac1042e31d82a07d2cfd175ed037ee71bf))
+
+
+### Features
+
+* add wip templates and customizations ([0297d02](https://github.com/Kajabi/sage-lib/commit/0297d028e78b8aa4cac575a31032eda523d3f59a))
+* implement grid templates using style dictionary ([40a216f](https://github.com/Kajabi/sage-lib/commit/40a216f427ab47f299ef81a9333ef9f9a4d7f631))
+* update react tokens and classnames to use style dictionary values ([78c389d](https://github.com/Kajabi/sage-lib/commit/78c389dc5d6da262298eeb4ee447d1b2ee73c7d8))
+* wip adding proptypes schema ([5c43000](https://github.com/Kajabi/sage-lib/commit/5c4300056c1d00b5cfd1fa02ccf5717c84f6e3b1))
+* wip adding react types to style dictionary ([db9dbbe](https://github.com/Kajabi/sage-lib/commit/db9dbbebd88523322ea066f4d007f1341686c596))
+* **icons:** added new icons ([dde20a4](https://github.com/Kajabi/sage-lib/commit/dde20a4d8cb232b713832cd12cf1386a05ba0b9c))
+* **icons:** added new icons ([91067ad](https://github.com/Kajabi/sage-lib/commit/91067ade4a230690c5a7c4993785ad0a9d50ac9a))
+
+
+
+
+
 ## [0.74.4](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.74.3...@kajabi/sage-react@0.74.4) (2022-01-05)
 
 

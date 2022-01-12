@@ -3,6 +3,35 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.34.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.33.2...@kajabi/sage@4.34.0) (2022-01-10)
+
+
+### Bug Fixes
+
+* **container:** remove change ([7112f3d](https://github.com/Kajabi/sage-lib/commit/7112f3dee6c9bc2806fc80d68519e195060cb7f3))
+* patch the docs color page ([9a566d9](https://github.com/Kajabi/sage-lib/commit/9a566d97a54c0d235a8f4bc3bae195879b7772d1))
+* **form section:** adds react link to component ([9f73900](https://github.com/Kajabi/sage-lib/commit/9f739004737e7751f9dc8a88c7451af964a8dea5))
+* **icons:** menu rename ([763945a](https://github.com/Kajabi/sage-lib/commit/763945a306382172d91a9e62b2ef186a2ae444ea))
+* **icons:** menu rename ([90dcdf9](https://github.com/Kajabi/sage-lib/commit/90dcdf95abcfc9fab486ae7b39dba195465ffd4b))
+* **icons:** updated icon names ([5f39d95](https://github.com/Kajabi/sage-lib/commit/5f39d95e02e415646efd18b5482edd0e933cd146))
+* **icons:** updated icon names ([d87307a](https://github.com/Kajabi/sage-lib/commit/d87307ac1042e31d82a07d2cfd175ed037ee71bf))
+
+
+### Features
+
+* **search:** update for review suggestions ([aa1634a](https://github.com/Kajabi/sage-lib/commit/aa1634a82e714cb6735070a370a86c3a289ce559))
+* add rails tokens output to style dictionary ([3a9d150](https://github.com/Kajabi/sage-lib/commit/3a9d1505ac1337a44969c2031881e90654da0677))
+* add wip templates and customizations ([0297d02](https://github.com/Kajabi/sage-lib/commit/0297d028e78b8aa4cac575a31032eda523d3f59a))
+* implement grid templates using style dictionary ([40a216f](https://github.com/Kajabi/sage-lib/commit/40a216f427ab47f299ef81a9333ef9f9a4d7f631))
+* patch sage rails use of color tokens to use dictionary values ([4455929](https://github.com/Kajabi/sage-lib/commit/44559293f14f51aef95feee01741ba292e6f961f))
+* wip applying generated configs to ruby component ([1a9e21f](https://github.com/Kajabi/sage-lib/commit/1a9e21f27e7a1b9e510c4298a42e889230f54a59))
+* **icons:** added new icons ([dde20a4](https://github.com/Kajabi/sage-lib/commit/dde20a4d8cb232b713832cd12cf1386a05ba0b9c))
+* **icons:** added new icons ([91067ad](https://github.com/Kajabi/sage-lib/commit/91067ade4a230690c5a7c4993785ad0a9d50ac9a))
+
+
+
+
+
 ## [4.33.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.33.1...@kajabi/sage@4.33.2) (2022-01-05)
 
 

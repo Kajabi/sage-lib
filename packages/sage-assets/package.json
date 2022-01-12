@@ -1,6 +1,6 @@
 {
   "name": "@kajabi/sage-assets",
-  "version": "0.63.3",
+  "version": "0.64.0",
   "description": "Assets",
   "main": "dist/main.css",
   "repository": {
@@ -29,7 +29,7 @@
     "build:sassdoc:watch": "nodemon -e scss --watch lib/stylesheets -x \"yarn run build:sassdoc\"",
     "build:watch": "npm-run-all -p build:webpack:watch build:sassdoc:watch",
     "preversion": "yarn run build",
-    "server": "npx http-server sassdoc/ -p 4200",
+    "server": "yarn ws --directory sassdoc -p 4200",
     "prestart": "yarn build:sassdoc",
     "start": "yarn server",
     "start:local": "npm-run-all -p server build:watch"
@@ -48,6 +48,7 @@
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "file-loader": "^6.2.0",
+    "local-web-server": "^5.1.1",
     "mini-css-extract-plugin": "^0.11.3",
     "nodemon": "2.0.6",
     "npm-run-all": "^4.1.5",

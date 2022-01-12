@@ -4,83 +4,16 @@
 /// @group sage
 ////
 
-
 ///
-/// Sage grid template codes
-///
-$sage-grid-template-codes: (
-  // Base codes
-  e:   ".",
-  i:   "..",
-  s:   "...",
-  t:   "-",
-  m:   "--",
-  o:   "---",
-  // Mono comobos --- maximum of two letters, largest first
-  se:  "....",
-  si:  ".....",
-  ss:  "......",
-  ot:  "----",
-  om:  "-----",
-  oo:  "------",
-  // Dots then dashes
-  et:  ".-",
-  em:  ".--",
-  eo:  ".---",
-  it:  "..-",
-  im:  "..--",
-  io:  "..---",
-  st:  "...-",
-  sm:  "...--",
-  so:  "...---",
-  // Dashes then dots
-  te:  "-.",
-  ti:  "-..",
-  ts:  "-...",
-  me:  "--.",
-  mi:  "--..",
-  ms:  "--...",
-  oe:  "---.",
-  oi:  "---..",
-  os:  "---...",
-  // Dots, dashes, dots
-  ete: ".-.",
-  eti: ".-..",
-  ets: ".-...",
-  eme: ".--.",
-  emi: ".--..",
-  ems: ".--...",
-  eoe: ".---.",
-  eoi: ".---..",
-  eos: ".---...",
-  ite: "..-.",
-  iti: "..-..",
-  its: "..-...",
-  ime: "..--.",
-  imi: "..--..",
-  ims: "..--...",
-  ioe: "..---.",
-  ioi: "..---..",
-  ios: "..---...",
-  ste: "...-.",
-  sti: "...-..",
-  sts: "...-...",
-  sme: "...--.",
-  smi: "...--..",
-  sms: "...--...",
-  soe: "...---.",
-  soi: "...---..",
-  sos: "...---...",
-);
-
-///
-/// Stores a full map of grid configurations
+/// Stores a full map of grid configurationsfrom Style Dictionary.
+/// See `style-dictionary/tokens/content/grid-template.json`.
 /// Result is a map of codes.
 ///
 /// @see parse-morse-code
 ///
 $sage-grid-templates: ();
-@each $-ltr, $-code in $sage-grid-template-codes {
+@each $-ltr, $-map in $sd-sage-content-grid-template {
+  $-code: map-get($-map, code);
   $sage-grid-templates: map-merge(
     $sage-grid-templates,
     (

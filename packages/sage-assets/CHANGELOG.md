@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.64.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.63.3...@kajabi/sage-assets@0.64.0) (2022-01-10)
+
+
+### Features
+
+* add color tokens to style dictionary ([d6e8e76](https://github.com/Kajabi/sage-lib/commit/d6e8e760dcb3c5f82cde2d49269b99e38d39e74c))
+* add wip templates and customizations ([0297d02](https://github.com/Kajabi/sage-lib/commit/0297d028e78b8aa4cac575a31032eda523d3f59a))
+* implement color palette token ([b9c3550](https://github.com/Kajabi/sage-lib/commit/b9c355017110f000e6112839b17cd0f047f842ee))
+* implement grid templates using style dictionary ([40a216f](https://github.com/Kajabi/sage-lib/commit/40a216f427ab47f299ef81a9333ef9f9a4d7f631))
+* **icon:** add `beside_type` property in Rails ([afcc1e2](https://github.com/Kajabi/sage-lib/commit/afcc1e29ff20e17e1dbd191e765a66e4fa84ce72))
+
+
+
+
+
 ## [0.63.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.63.2...@kajabi/sage-assets@0.63.3) (2022-01-05)
 
 
