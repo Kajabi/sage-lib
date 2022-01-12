@@ -44,7 +44,6 @@ module Mocks::CreationWizardHelper
     }
   end
 
-
   def creation_product_details
   {
     product_details: [
