@@ -58,6 +58,7 @@ $-sidebar-top-offset: $sage-assistant-height;
   padding: sage-spacing(sm);
 }
 
+/* stylelint-disable function-calc-no-unspaced-operator */ 
 .sage-sidebar__footer::before {
   content: "";
   display: block;
@@ -68,6 +69,7 @@ $-sidebar-top-offset: $sage-assistant-height;
   height: sage-spacing(sm);
   background: linear-gradient(to top, #{$-sidebar-color-background} 0%, rgba(255, 255, 255, 0) 60%);
 }
+/* stylelint-enable function-calc-no-unspaced-operator */ 
 
 .sage-sidebar__footer {
   position: relative;

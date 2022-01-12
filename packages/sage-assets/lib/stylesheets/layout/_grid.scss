@@ -19,6 +19,7 @@ $-grid-breakpoint-xl: sage-breakpoint(xl-min);
 /// Rows
 ///
 
+/* stylelint-disable function-calc-no-unspaced-operator */
 @mixin sage-row {
   display: flex;
   flex-direction: row;
@@ -57,6 +58,7 @@ $-grid-breakpoint-xl: sage-breakpoint(xl-min);
     margin-bottom: sage-spacing(card);
   }
 }
+/* stylelint-enable function-calc-no-unspaced-operator */
 
 // horizontal alignment
 .sage-row--align-center {
