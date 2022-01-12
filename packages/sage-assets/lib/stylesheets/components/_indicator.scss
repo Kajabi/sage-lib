@@ -33,14 +33,14 @@ $-indicator-size: rem(7px);
     margin-top: sage-spacing(2xs);
   }
 
-  .sage-creation-wizard & {
+  .sage-modal__header--has-header-indicator & {
     height: 0; /* see if there's a better way to achieve hiding here */
     color: transparent;
     user-select: none;
   }
 
-  .sage-creation-wizard &::before,
-  .sage-creation-wizard &::after {
+  .sage-modal__header--has-header-indicator &::before,
+  .sage-modal__header--has-header-indicator &::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -48,13 +48,13 @@ $-indicator-size: rem(7px);
     height: rem(6px);
   }
 
-  .sage-creation-wizard &::before {
+  .sage-modal__header--has-header-indicator &::before {
     width: 100%;
     background-color: sage-color(grey, 200);
     box-shadow: inset sage-shadow(sm);
   }
 
-  .sage-creation-wizard &::after {
+  .sage-modal__header--has-header-indicator &::after {
     width: var(--progress, 0);
     background-color: sage-color(primary);
   }

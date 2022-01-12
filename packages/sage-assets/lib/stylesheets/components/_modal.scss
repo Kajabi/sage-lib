@@ -151,7 +151,10 @@ $-modal-fullscreen-top-spacing: rem(104px);
     margin: 0;
     padding: sage-spacing(sm) $-modal-padding-x;
     background-color: sage-color(white);
-    box-shadow: sage-shadow(sm);
+
+    &:not(.sage-modal__header--has-header-indicator) {
+      box-shadow: sage-shadow(sm);
+    }
   }
 }
 
