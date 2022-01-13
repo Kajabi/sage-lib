@@ -7,6 +7,7 @@ class SageModal < SageComponent
     disable_background_blur: [:optional, TrueClass],
     disable_background_dismiss: [:optional, NilClass, TrueClass],
     disable_close: [:optional, TrueClass],
+    fixed: [:optional, TrueClass],
     fullscreen: [:optional, TrueClass],
     id: [:optional, NilClass, String],
     large: [:optional, TrueClass],
