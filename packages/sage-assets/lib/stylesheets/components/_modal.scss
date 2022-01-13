@@ -219,8 +219,8 @@ $-modal-fixed-fullscreen-column-scroll-height: rem(140px);
   }
 
   .sage-modal--fixed & {
-    height: calc(100vh - 24px);
     overflow: hidden;
+    height: calc(100vh - 24px);
     margin-top: rem(62px);
     margin-bottom: 0;
 
