@@ -130,6 +130,7 @@ $-modal-fullscreen-top-spacing: rem(104px);
   .sage-modal--fixed & {
     display: flex;
     flex-direction: column;
+    position: relative;
   }
 
   .sage-modal--fullscreen & {
@@ -216,8 +217,8 @@ $-modal-fullscreen-top-spacing: rem(104px);
   .sage-modal--fixed & {
     height: calc(100vh - 24px);
     overflow: scroll;
-    margin-top: 0;
-    padding-top: 6.5rem;
+    margin-top: rem(62px);
+    padding-top: sage-spacing();
   }
 
   .sage-drawer & {

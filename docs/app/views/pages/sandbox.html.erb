@@ -94,7 +94,19 @@ Use this scratchpad to test out elements and components in context. Just be sure
           <p>scroll me</p>
           <p>scroll me</p>
           <p>scroll me</p>
-          <footer>left side footer</footer>
+          <footer>
+             <%= sage_component SageButton, {
+              style: "secondary",
+              raised: false,
+              value: "Close Modal",
+              attributes: { "data-js-modal": true }
+            } %>
+            <%= sage_component SageButton, {
+              style: "primary",
+              value: "Save and Continue",
+              attributes: { "data-js-modal": true }
+            } %>
+          </footer>
         <% end %>
 
         <%= sage_component(SageGridCol, {
