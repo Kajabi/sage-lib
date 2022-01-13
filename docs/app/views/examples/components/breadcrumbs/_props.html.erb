@@ -11,11 +11,11 @@
   <td><%= md('`false`') %></td>
 </tr>
 <tr>
-  <td><%= md('`items`') %></td>
+  <td><%= md('`items`') %><%= sage_component SageLabel, { color: "published", value: "required" } %></td>
   <td>
     <%= md('
       The set of items to display.
-      Array of items following schema
+      Array of items following schema.
     ') %>
   </td>
   <td>
