@@ -52,126 +52,118 @@ Use this scratchpad to test out elements and components in context. Just be sure
         <%= sage_component(SageGridCol, {
           breakpoint: "lg",
           size: "5",
+          css_classes: "sage-modal__fixed-column",
         }) do %>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <footer>
-             <%= sage_component SageButton, {
-              style: "secondary",
-              raised: false,
-              value: "Close Modal",
-              attributes: { "data-js-modal": true }
-            } %>
+          <div class="sage-modal__fixed-column-scroll">
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+          </div>
+          <%= sage_component SageButtonGroup, {
+            gap: :md,
+            css_classes: "sage-modal__fixed-column-actions"
+          } do %>
             <%= sage_component SageButton, {
-              style: "primary",
-              value: "Save and Continue",
-              attributes: { "data-js-modal": true }
-            } %>
-          </footer>
+                style: "secondary",
+                raised: false,
+                value: "Close Modal",
+                attributes: { "data-js-modal": true }
+              } %>
+              <%= sage_component SageButton, {
+                style: "primary",
+                value: "Save and Continue",
+                attributes: { "data-js-modal": true }
+              } %>
+          <% end %>
         <% end %>
 
         <%= sage_component(SageGridCol, {
           breakpoint: "lg",
           size: "7",
         }) do %>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
-          <p>scroll me</p>
+          <div class="sage-modal__fixed-column-scroll sage-modal__fixed-column-scroll--no-footer">
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+          </div>
         <% end %>
       <% end %>
-    <% end %>
-
-    <% content_for :sage_footer do %>
-      <% content_for :sage_footer_aside do %>
-        <%= sage_component SageButton, {
-          style: "secondary",
-          subtle: true,
-          value: "Close Modal",
-          attributes: { "data-js-modal": true }
-        } %>
-      <% end %>
-      <%= sage_component SageButton, {
-        style: "primary",
-        icon: { name: "check", style: "left" },
-        value: "Take An Action",
-      } %>
     <% end %>
   <% end %>
 <% end %>

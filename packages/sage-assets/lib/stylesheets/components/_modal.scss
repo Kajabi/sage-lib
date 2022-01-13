@@ -11,6 +11,10 @@ $-modal-margin-lg: 6vh;
 $-modal-margin-xl: 8vh;
 $-modal-header-image-size: rem(28px);
 $-modal-fullscreen-top-spacing: rem(104px);
+$-modal-fixed-fullscreen-top-spacing: 8rem;
+$-modal-fixed-fullscreen-column-top-spacing: rem(60px);
+$-modal-fixed-fullscreen-column-height: rem(62px);
+$-modal-fixed-fullscreen-column-scroll-height: rem(140px);
 
 
 .sage-modal {
@@ -216,9 +220,13 @@ $-modal-fullscreen-top-spacing: rem(104px);
 
   .sage-modal--fixed & {
     height: calc(100vh - 24px);
-    overflow: scroll;
+    overflow: hidden;
     margin-top: rem(62px);
-    padding-top: sage-spacing();
+    margin-bottom: 0;
+
+    .sage-row {
+      overflow: scroll;
+    }
   }
 
   .sage-drawer & {
@@ -266,6 +274,33 @@ $-modal-fullscreen-top-spacing: rem(104px);
 
 .sage-modal__footer-aside {
   margin-right: auto;
+}
+
+.sage-modal__fixed-column {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: calc(100vh - #{$-modal-fixed-fullscreen-column-height});
+}
+
+.sage-modal__fixed-column-scroll {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow: scroll;
+  height: calc(100vh - #{$-modal-fixed-fullscreen-column-scroll-height});
+  padding-bottom: sage-spacing();
+  padding-top: sage-spacing();
+
+  &.sage-modal__fixed-column-scroll--no-footer {
+    height: calc(100vh - #{$-modal-fixed-fullscreen-column-height});
+  }
+}
+
+.sage-modal__fixed-column-actions {
+  margin-top: auto;
+  padding-bottom: sage-spacing();
+  padding-top: sage-spacing();
 }
 
 @media (prefers-reduced-motion) {
