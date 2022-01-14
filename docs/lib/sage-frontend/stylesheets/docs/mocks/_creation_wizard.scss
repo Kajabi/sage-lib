@@ -40,22 +40,22 @@
 ================================================== */
 
 .creation-prod-dropdown {
+  gap: 0;
+  width: 100%;
+  padding: 0;
   background: sage-color(white);
   cursor: pointer;
-  gap: 0;
-  padding: 0;
-  width: 100%;
 }
 /* could this become a helper class for the img?  */
 .creation-prod-dropdown-img {
-  border-radius: sage-border(radius);
   height: sage-spacing(xl);
   width: sage-spacing(xl);
+  border-radius: sage-border(radius);
 }
 .sage-dropdown__panel {
   .creation-prod-dropdown & {
-    max-height: 360px;
     overflow: scroll;
+    max-height: 360px;
     width: 100%;
   }
 }
@@ -73,13 +73,13 @@
 }
 .sage-panel__row:first-child {
   .creation-prod-dropdown & {
+    position: sticky;
+    top: 0;
+    padding-bottom: sage-spacing(sm);
     background-color: sage-color(white);
     border-bottom: sage-border();
     border-top-left-radius: sage-border(radius);
     border-top-right-radius: sage-border(radius);
-    padding-bottom: sage-spacing(sm);
-    position: sticky;
-    top: 0;
   }
 }
 .sage-panel__row:first-child:hover {
