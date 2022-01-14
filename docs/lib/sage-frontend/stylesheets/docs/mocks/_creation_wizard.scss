@@ -30,3 +30,66 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+/* ==================================================
+  product dropdown styles
+
+  !!! Note: some if not all of these styles should
+      be incorporated into components if possible
+      before the final release !!!
+================================================== */
+
+.creation-prod-dropdown {
+  background: sage-color(white);
+  cursor: pointer;
+  gap: 0;
+  padding: 0;
+  width: 100%;
+}
+/* could this become a helper class for the img?  */
+.creation-prod-dropdown-img {
+  border-radius: sage-border(radius);
+  height: sage-spacing(xl);
+  width: sage-spacing(xl);
+}
+.sage-dropdown__panel {
+  .creation-prod-dropdown & {
+    max-height: 360px;
+    overflow: scroll;
+    width: 100%;
+  }
+}
+.sage-panel__row {
+  .creation-prod-dropdown & {
+    gap: sage-spacing(sm);
+    padding: sage-spacing(sm);
+  }
+}
+.sage-panel__row:hover {
+  .creation-prod-dropdown & {
+    background-color: sage-color(grey, 100);
+    cursor: pointer;
+  }
+}
+.sage-panel__row:first-child {
+  .creation-prod-dropdown & {
+    background-color: sage-color(white);
+    border-bottom: sage-border();
+    border-top-left-radius: sage-border(radius);
+    border-top-right-radius: sage-border(radius);
+    padding-bottom: sage-spacing(sm);
+    position: sticky;
+    top: 0;
+  }
+}
+.sage-panel__row:first-child:hover {
+  .creation-prod-dropdown & {
+    background-color: sage-color(grey, 100);
+  }
+}
+.sage-panel__row:last-child {
+  .creation-prod-dropdown & {
+    border-bottom-right-radius: sage-border(radius);
+    border-bottom-left-radius: sage-border(radius);
+  }
+}
