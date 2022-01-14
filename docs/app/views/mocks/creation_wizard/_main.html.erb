@@ -1,0 +1,15 @@
+<div class="sage-tabs-container">
+  <%= sage_component SageTabs, {
+    id: "example-tabs1",
+    items: [
+      {
+        text: "Product Selection",
+        target: "feature-1",
+        active: true
+      },
+    ]
+  } %>
+  <%= sage_component SageTabsPane, { id: "feature-1" } do %>
+    <%= render "mocks/creation_wizard/product_selection" %>
+  <% end %>
+</div>
