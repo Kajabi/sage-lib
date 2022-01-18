@@ -10,6 +10,10 @@
   }
 }
 
-.docs-table td:first-of-type p {
-  display: inline-block;
+.docs-table td:first-of-type {
+  white-space: nowrap;
+
+  p {
+    display: inline-block;
+  }
 }
