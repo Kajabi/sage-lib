@@ -38,18 +38,17 @@
   const paymentDropdownClass = ".creation-payment-dropdown";
   const paymentDropdown = document.querySelector(paymentDropdownClass);
   const paymentOptions = paymentDropdown.querySelectorAll(".sage-dropdown__panel > .sage-panel__row");
-  const paymentOptionSelected = document.querySelector(".creation-payment-selected.sage-panel__row") != null;
 
-  document.addEventListener("DOMContentLoaded", function(){
+  document.addEventListener("DOMContentLoaded", function() {
     let chosenOption = document.querySelector(".creation-payment-selected.sage-panel__row")
-    if (paymentOptionSelected) {
+    if (paymentOptionSelected != null) {
       updateOption(chosenOption);
     }
   });
 
   paymentOptions.forEach(function(option) {
     option.addEventListener('click', function () {
-      updateSelected()
+      updateSelected();
       updateOption(option);
     });
   });
@@ -71,6 +70,6 @@
     paymentDropdown.querySelector(".sage-icon-background").outerHTML = icon;
 
     option.classList.add("creation-payment-selected");
-    screen.click()
+    screen.click();
   }
 </script>
