@@ -1,0 +1,64 @@
+<%= sage_component SageGridRow, {} do %>
+  <%= sage_component SageGridCol, { breakpoint: "md", size: "5" } do %>
+    <h2 class="<%= SageClassnames::TYPE::HEADING_4 %> <%= SageClassnames::SPACERS::MD_BOTTOM %>">Dropdown mock:</h2>
+    <%= sage_component SageDropdown, {
+      css_classes: "creation-prod-dropdown"
+    } do %>
+      <%= sage_component SageCard, {} do %>
+        <%= sage_component SageCardRow, { grid_template: "ete" } do %>
+          <%= sage_component SageIcon, { icon: "add", card_color: "draft" } %>
+          <div class="<%= SageClassnames::TYPE::BODY %>">
+            <h2 class="<%= SageClassnames::TYPE::HEADING_6 %>">Add a product</h2>
+            <p>Select all the products in this package.</p>
+          </div>
+          <%= sage_component SageIcon, { icon: "caret-down" } %>
+        <% end %>
+      <% end %>
+      <% content_for :sage_dropdown_custom_panel_content do %>
+        <%= sage_component SagePanelRow, { grid_template: "et" } do %>
+          <%= sage_component SageIcon, { icon: "product", card_color: "info" } %>
+          <div class="<%= SageClassnames::TYPE::BODY %>">
+            <h2 class="<%= SageClassnames::TYPE::HEADING_6 %>">Make a new product</h2>
+            <p class="<%= SageClassnames::TYPE_COLORS::CHARCOAL_200 %>">Set up a course, podcast, or community</p>
+          </div>
+        <% end %>
+        <% creation_prod_dropdown_options[:product_options].each do | option | %>
+          <%= sage_component SagePanelRow, { grid_template: "et" } do %>
+            <% if option[:image].present? %>
+              <%= image_tag option[:image], class: "creation-prod-dropdown-img", alt: "" %>
+            <% else %>
+              <%= sage_component SageIcon, { icon: "product", card_color: "draft" } %>
+            <% end %>
+            <div class="<%= SageClassnames::TYPE::BODY %>">
+              <h2 class="<%= SageClassnames::TYPE::HEADING_6 %>"><%= option[:name] %></h2>
+              <p class="<%= SageClassnames::TYPE_COLORS::CHARCOAL_200 %>"><%= option[:type] %></p>
+            </div>
+          <% end %>
+        <% end %>
+      <% end %>
+    <% end %>
+  <% end %>
+  <%= sage_component SageGridCol, { breakpoint: "md", size: "7" } do %>
+    <%= sage_component SagePanel, {} do %>
+      <h2 class="<%= SageClassnames::TYPE::HEADING_4 %>">Selected item mock:</h2>
+      <%= sage_component SageCard, {} do %>
+        <%= sage_component SageCardRow, { grid_template: "ete" } do %>
+          <%= image_tag "https://images.unsplash.com/photo-1552826533-b8508864bcb3", class: "creation-prod-dropdown-img", alt: "" %>
+          <div class="<%= SageClassnames::TYPE::BODY %>">
+            <h2 class="<%= SageClassnames::TYPE::HEADING_6 %>">Cut Flower Garden Mini Course</h2>
+            <p>Course</p>
+          </div>
+          <%= sage_component SageButton, {
+            value: "Icon only",
+            style: "secondary",
+            icon: {
+            style: "only",
+            name: "remove"
+            },
+            subtle: true,
+          } %>
+        <% end %>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>

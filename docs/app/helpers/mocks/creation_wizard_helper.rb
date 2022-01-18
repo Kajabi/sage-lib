@@ -173,4 +173,49 @@ module Mocks::CreationWizardHelper
     ]
   }
   end
+
+  def creation_prod_dropdown_options
+      {
+        product_options: [
+          {
+            image: "https://images.unsplash.com/photo-1552826533-b8508864bcb3",
+            name: "Cut Flower Garden Mini Course",
+            type: "Course",
+          },
+          {
+            image: "https://images.unsplash.com/photo-1552826533-b8508864bcb3",
+            name: "Bouquets for Beginners",
+            type: "Podcast",
+          },
+          {
+            name: "Fall 2022 Workshop",
+            type: "Community",
+          },
+          {
+            image: "https://images.unsplash.com/photo-1552826533-b8508864bcb3",
+            name: "Fall 2022 Workshop",
+            type: "Community",
+          },
+          {
+            image: "https://images.unsplash.com/photo-1552826533-b8508864bcb3",
+            name: "Cut Flower Garden Mini Course",
+            type: "Course",
+          },
+          {
+            name: "Bouquets for Beginners",
+            type: "Podcast",
+          },
+          {
+            image: "https://images.unsplash.com/photo-1552826533-b8508864bcb3",
+            name: "Fall 2022 Workshop",
+            type: "Community",
+          },
+          {
+            name: "Fall 2022 Workshop",
+            type: "Community",
+          },
+        ],
+      }
+  end
+
 end
