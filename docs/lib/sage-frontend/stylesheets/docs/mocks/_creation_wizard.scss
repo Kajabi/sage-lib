@@ -93,3 +93,49 @@
     border-bottom-left-radius: sage-border(radius);
   }
 }
+
+
+
+/* ==================================================
+  payment dropdown styles
+
+  !!! Note: some if not all of these styles should
+      be incorporated into components if possible
+      before the final release !!!
+================================================== */
+.creation-payment-dropdown {
+  gap: 0;
+  width: 100%;
+  padding: 0;
+  background: sage-color(white);
+  cursor: pointer;
+}
+.sage-dropdown__panel {
+  .creation-payment-dropdown & {
+    width: 100%;
+  }
+}
+.sage-panel__row {
+  .creation-payment-dropdown & {
+    gap: sage-spacing(sm);
+    padding: sage-spacing(sm);
+  }
+}
+.sage-panel__row:hover {
+  .creation-payment-dropdown & {
+    background-color: sage-color(grey, 100);
+    cursor: pointer;
+  }
+}
+.sage-panel__row:first-child {
+  .creation-payment-dropdown & {
+    border-top-left-radius: sage-border(radius);
+    border-top-right-radius: sage-border(radius);
+  }
+}
+.sage-panel__row:last-child {
+  .creation-payment-dropdown & {
+    border-bottom-right-radius: sage-border(radius);
+    border-bottom-left-radius: sage-border(radius);
+  }
+}
