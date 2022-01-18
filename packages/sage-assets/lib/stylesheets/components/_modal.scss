@@ -220,8 +220,8 @@ $-modal-fixed-fullscreen-column-scroll-height: rem(140px);
 
   .sage-modal--fixed & {
     overflow: hidden;
-    height: calc(100vh - 24px);
-    margin-top: rem(62px);
+    height: calc(100vh - #{sage-spacing()});
+    margin-top: $-modal-fixed-fullscreen-column-height;
     margin-bottom: 0;
 
     .sage-row {
