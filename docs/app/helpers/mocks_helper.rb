@@ -64,6 +64,14 @@ module MocksHelper
         no_rails_js: true,
         status: DOING,
         team: "Growth",
+      },
+      {
+        alias: "creation_wizard",
+        milestone_id: nil,
+        name: "Creation Wizard",
+        no_rails_js: true,
+        status: DOING,
+        team: "Build/Commerce",
       }
     ]
   end

@@ -6,8 +6,12 @@
     <%= "sage-input--has-popover" if content_for? :sage_form_input_popover %>
     <%= "sage-input--has-icon" if component.icon.present? %>
     <%= component.generated_css_classes %>"
-  <%= "data-js-input-prefix=#{component.prefix}" if component.prefix.present? -%>
-  <%= "data-js-input-suffix=#{component.suffix}" if component.suffix.present? -%>
+  <% if component.prefix.present? %>
+    data-js-input-prefix="<%= component.prefix %>"
+  <% end %>
+  <% if component.suffix.present? %>
+    data-js-input-suffix="<%= component.suffix %>"
+  <% end %>
   <%= component.generated_html_attributes.html_safe -%>
 >
   <input
