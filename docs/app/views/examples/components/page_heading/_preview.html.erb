@@ -7,10 +7,9 @@
 
 <pre class="prettyprint">
   <code>
-    <%%= sage_component SagePageHeading, {
-      title: "Page Title",
-      spacer: { bottom: :xl },
-    } %>
+<%= File.read(
+  File.join(Rails.root, "app/views/examples/components/page_heading/snippets/_standalone.html.erb")
+) %>
   </code>
 </pre>
 
@@ -31,13 +30,14 @@
       } %>
   <% end %>
 <% end %>
-<h1>hey</h1>
+
 <pre class="prettyprint">
   <code>
-    <%= render "examples/components/page_heading/demo/basic" %>
+<%= File.read(
+  File.join(Rails.root, "app/views/examples/components/page_heading/snippets/_pageheading_back_link.html.erb")
+) %>
   </code>
 </pre>
-
 <h3 class="t-sage-heading-6">Page Heading with Help Link</h3>
 
 <%= sage_component SagePageHeading, {
@@ -49,6 +49,13 @@
     name: "Help"
   },
 } %>
+<pre class="prettyprint">
+  <code>
+<%= File.read(
+  File.join(Rails.root, "app/views/examples/components/page_heading/snippets/_pageheading_help_link.html.erb")
+) %>
+  </code>
+</pre>
 
 <h3 class="t-sage-heading-6">Page Heading with Help Content</h3>
 
@@ -62,6 +69,13 @@
     name: "Learn more about cool things"
   },
 } %>
+<pre class="prettyprint">
+  <code>
+<%= File.read(
+  File.join(Rails.root, "app/views/examples/components/page_heading/snippets/_pageheading_help_content.html.erb")
+) %>
+  </code>
+</pre>
 
 <h3 class="t-sage-heading-6">Page Heading with Action Buttons</h3>
 
@@ -85,6 +99,13 @@
       } %>
     <% end %>
 <% end %>
+<pre class="prettyprint">
+  <code>
+<%= File.read(
+  File.join(Rails.root, "app/views/examples/components/page_heading/snippets/_pageheading_action_buttons.html.erb")
+) %>
+  </code>
+</pre>
 
 <h3 class="t-sage-heading-6">Page Heading w/ Toolbar + Secondary Text</h3>
 
@@ -118,7 +139,13 @@
       }%>
     <% end %>
 <% end %>
-
+<pre class="prettyprint">
+  <code>
+<%= File.read(
+  File.join(Rails.root, "app/views/examples/components/page_heading/snippets/_pageheading_toolbar_secondary_text.html.erb")
+) %>
+  </code>
+</pre>
 
 <h3 class="t-sage-heading-6">Page Heading w/ Intro</h3>
 
@@ -130,6 +157,13 @@
       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo dolorum esse modi ut ipsa corporis.</p>
     <% end %>
 <% end %>
+<pre class="prettyprint">
+  <code>
+<%= File.read(
+  File.join(Rails.root, "app/views/examples/components/page_heading/snippets/_pageheading_intro.html.erb")
+) %>
+  </code>
+</pre>
 
 
 <h3 class="t-sage-heading-6">Page Heading w/ All Items</h3>
@@ -199,3 +233,10 @@
       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo dolorum esse modi ut ipsa corporis.</p>
     <% end %>
 <% end %>
+<pre class="prettyprint">
+  <code>
+<%= File.read(
+  File.join(Rails.root, "app/views/examples/components/page_heading/snippets/_pageheading_all_items.html.erb")
+) %>
+  </code>
+</pre>

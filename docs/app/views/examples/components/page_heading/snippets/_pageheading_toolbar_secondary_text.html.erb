@@ -1,0 +1,30 @@
+<%= sage_component SagePageHeading, {
+  title: "Page Title",
+  spacer: { bottom: :xl },
+  secondary_text: "1 Email in Sequence",
+} do %>
+
+    <% content_for :sage_page_heading_image do %>
+      <%= image_tag "card-placeholder-sm.png" %>
+    <% end %>
+    <% content_for :sage_page_heading_toolbar do %>
+      <%= sage_component SageButton, {
+        style: "secondary",
+        subtle: true,
+        icon: { name: "preview-on", style: "left" },
+        value: "Preview",
+      }%>
+      <%= sage_component SageButton, {
+        style: "secondary",
+        subtle: true,
+        icon: { name: "chart", style: "left" },
+        value: "Report",
+      }%>
+      <%= sage_component SageButton, {
+        style: "secondary",
+        subtle: true,
+        icon: { name: "gear", style: "left" },
+        value: "Settings",
+      }%>
+    <% end %>
+<% end %>
