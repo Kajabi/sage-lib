@@ -42,7 +42,7 @@
 
   document.addEventListener("DOMContentLoaded", function(){
     let paymentOptionSelected = document.querySelector(".creation-payment-selected.sage-panel__row");
-    if (paymentOptionSelected != null) {
+    if (paymentOptionSelected !== null) {
       updateOption(paymentOptionSelected);
     }
   });
