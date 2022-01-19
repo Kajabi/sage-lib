@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.36.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.35.0...@kajabi/sage@4.36.0) (2022-01-19)
+
+
+### Bug Fixes
+
+* **button:** adjust data attribute output for loading state button ([7b35d7b](https://github.com/Kajabi/sage-lib/commit/7b35d7b4c4fd022ded9c2fd33a42db08b6b3389d))
+* **creation wizard:** remove custom active styling ([592d60f](https://github.com/Kajabi/sage-lib/commit/592d60fed8a55a985387cae75aa241ea29dc7112))
+* **form input:** fixes issue with affixes not appending entire string ([119c395](https://github.com/Kajabi/sage-lib/commit/119c395c4349f50b2a7abf08986d665da9efba68))
+
+
+### Features
+
+* **creation wizard:** add creation_wizard stylesheet ([c5f88bc](https://github.com/Kajabi/sage-lib/commit/c5f88bc2ec22d8d6257f357bc61a937f7bfbf59e))
+* **creation wizard:** add creation_wizard to mocks_helper.rb ([3d53820](https://github.com/Kajabi/sage-lib/commit/3d538208c566d3c39890b1cbeb944b98436270ee))
+* **creation wizard:** add dropdown options to helper ([9f71f2b](https://github.com/Kajabi/sage-lib/commit/9f71f2bd18970ee25399851a09bcfd2090a3d79d))
+* **creation wizard:** add initial dropdown markup and styling ([189c1fc](https://github.com/Kajabi/sage-lib/commit/189c1fc56340ec336b05784a749aa57f1d163e3a))
+* **creation wizard:** add markup and creation_wizard_helper.rb ([49dfeac](https://github.com/Kajabi/sage-lib/commit/49dfeac9b43fa041ea3bdbbb25f57ee1f6002c83))
+* **creation wizard:** add product dropdown to mock view ([88cd20a](https://github.com/Kajabi/sage-lib/commit/88cd20ad1ce68d88585ed1e8d4cc93674ea1e666))
+
+
+
+
+
 # [4.35.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.34.0...@kajabi/sage@4.35.0) (2022-01-12)
 
 
