@@ -1,0 +1,12 @@
+<ul class="sage-control-list <%= component.generated_css_classes %>" <%= component.generated_html_attributes.html_safe %>>
+  <% component.items.each do | item | %>
+    <li class="sage-control-list-item" role="listitem">
+      <div class="sage-control-list-item__bullet<% if item[:bullet_type].present? %><%= " sage-control-list-item__bullet--#{item[:bullet_type]}"%><% end %>">
+        <%= item[:bullet].html_safe %>
+      </div>
+      <div class="sage-control-list-item__body">
+        <%= item[:body].html_safe %>
+      </div>
+    </li>
+  <% end %>
+</ul>

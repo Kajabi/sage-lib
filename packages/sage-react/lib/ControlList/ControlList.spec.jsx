@@ -2,9 +2,9 @@ require('../test/testHelper');
 
 import React from 'react';
 import { shallow } from 'enzyme';
-import { IconList } from './IconList';
+import { ControlList } from './ControlList';
 
-describe('Sage IconList', () => {
+describe('Sage ControlList', () => {
   let component,
     defaultProps;
 
@@ -12,7 +12,7 @@ describe('Sage IconList', () => {
     defaultProps = {};
 
     component = shallow(
-      <IconList {...defaultProps} />
+      <ControlList {...defaultProps} />
     );
   });
 

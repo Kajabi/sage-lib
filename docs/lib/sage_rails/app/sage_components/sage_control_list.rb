@@ -1,4 +1,4 @@
-class SageIconList < SageComponent
+class SageControlList < SageComponent
   set_attribute_schema({
     items: [[{
       bullet: String,

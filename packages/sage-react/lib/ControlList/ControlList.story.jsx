@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
 import { centerXY } from '../story-support/decorators';
-import { IconList } from './IconList';
-import IconListNotes from './IconListNotes.md';
+import { ControlList } from './ControlList';
+import ControlListNotes from './ControlListNotes.md';
 
 const CheckboxesWithState = () => {
   const [selectedValues, setSelectedValues] = useState([]);
@@ -36,25 +36,25 @@ const CheckboxesWithState = () => {
     },
   ];
   return (
-    <IconList>
+    <ControlList>
       {items.map(({ id, value, label, subText }) => (
-        <IconList.Item
+        <ControlList.Item
           onChangeInput={onChange}
-          input={IconList.Item.INPUT_TYPES.CHECKBOX}
+          input={ControlList.Item.INPUT_TYPES.CHECKBOX}
           inputName="checkboxes"
           inputId={id}
           inputValue={value}
           checked={selectedValues.includes(value)}
         >
-          <IconList.ItemLabel htmlFor={id}>
+          <ControlList.ItemLabel htmlFor={id}>
             {label}
-          </IconList.ItemLabel>
-          <IconList.ItemSubtext>
+          </ControlList.ItemLabel>
+          <ControlList.ItemSubtext>
             {subText}
-          </IconList.ItemSubtext>
-        </IconList.Item>
+          </ControlList.ItemSubtext>
+        </ControlList.Item>
       ))}
-    </IconList>
+    </ControlList>
   );
 };
 const RadiosWithState = () => {
@@ -83,63 +83,64 @@ const RadiosWithState = () => {
     },
   ];
   return (
-    <IconList>
+    <ControlList>
       {items.map(({ id, value, label, subText }) => (
-        <IconList.Item
+        <ControlList.Item
           onChangeInput={onChange}
-          input={IconList.Item.INPUT_TYPES.RADIO}
+          input={ControlList.Item.INPUT_TYPES.RADIO}
           inputName="radios"
           inputId={id}
           inputValue={value}
           checked={selectedValue === value}
         >
-          <IconList.ItemLabel htmlFor={id}>
+          <ControlList.ItemLabel htmlFor={id}>
             {label}
-          </IconList.ItemLabel>
-          <IconList.ItemSubtext>
+          </ControlList.ItemLabel>
+          <ControlList.ItemSubtext>
             {subText}
-          </IconList.ItemSubtext>
-        </IconList.Item>
+          </ControlList.ItemSubtext>
+        </ControlList.Item>
       ))}
-    </IconList>
+    </ControlList>
   );
 };
-storiesOf('Sage/Icon List', module)
+storiesOf('Sage/Control List', module)
+  .addDecorator(withKnobs)
   .addDecorator(centerXY)
   .add('Default', () => (
     <div style={{ maxWidth: '480px' }}>
-      <IconList>
-        <IconList.Item>
-          <IconList.ItemTitle>
+      <ControlList>
+        <ControlList.Item>
+          <ControlList.ItemTitle>
             Cras ut lectus ac dolor hendrerit venenatis.
-          </IconList.ItemTitle>
+          </ControlList.ItemTitle>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Suspendisse lobortis commodo est sit amet vehicula.
           </p>
-        </IconList.Item>
-        <IconList.Item>
-          <IconList.ItemTitle>
+        </ControlList.Item>
+        <ControlList.Item>
+          <ControlList.ItemTitle>
             Cras ut lectus ac dolor hendrerit venenatis.
-          </IconList.ItemTitle>
+          </ControlList.ItemTitle>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Suspendisse lobortis commodo est sit amet vehicula.
           </p>
-        </IconList.Item>
-        <IconList.Item>
-          <IconList.ItemTitle>
+        </ControlList.Item>
+        <ControlList.Item>
+          <ControlList.ItemTitle>
             Cras ut lectus ac dolor hendrerit venenatis.
-          </IconList.ItemTitle>
+          </ControlList.ItemTitle>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Suspendisse lobortis commodo est sit amet vehicula.
           </p>
-        </IconList.Item>
-      </IconList>
+        </ControlList.Item>
+      </ControlList>
     </div>
   ), {
-    notes: { markdown: IconListNotes },
+    notes: { markdown: ControlListNotes },
   })
   .add('Radio List Example', () => (
     <div style={{ maxWidth: '480px' }}>

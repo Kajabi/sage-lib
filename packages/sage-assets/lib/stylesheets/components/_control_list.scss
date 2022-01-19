@@ -1,15 +1,15 @@
 ////
-/// Icon List
+/// Control List
 ///
 /// @group sage
 ////
 
 
-.sage-icon-list {
+.sage-control-list {
   padding-left: 0;
 }
 
-.sage-icon-list-item {
+.sage-control-list-item {
   display: flex;
   list-style: none;
 
@@ -18,22 +18,22 @@
   }
 }
 
-.sage-icon-list-item__bullet {
+.sage-control-list-item__bullet {
   min-width: rem(20px);
   margin-right: sage-spacing(sm);
   padding-top: rem(3px);
   text-align: center;
 }
 
-.sage-icon-list-item__bullet--checkbox {
+.sage-control-list-item__bullet--checkbox {
   padding-top: sage-spacing(2xs);
 }
 
-.sage-icon-list-item__bullet--radio {
+.sage-control-list-item__bullet--radio {
   padding-top: sage-spacing(2xs);
 }
 
-.sage-icon-list-item__body {
+.sage-control-list-item__body {
   flex: 1;
 
   > p {
@@ -45,17 +45,17 @@
   }
 }
 
-.sage-icon-list-item__label {
+.sage-control-list-item__label {
   @extend %t-sage-heading-6;
   margin-bottom: sage-spacing(2xs);
 }
 
-.sage-icon-list-item__label-subtext {
+.sage-control-list-item__label-subtext {
   @extend %t-sage-body;
   color: sage-color(charcoal, 400);
 }
 
-.sage-icon-list-item__title {
+.sage-control-list-item__title {
   @extend %t-sage-heading-6;
   margin-bottom: sage-spacing(2xs);
 }

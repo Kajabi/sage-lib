@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { Icon } from '../Icon';
 import { Checkbox, Radio } from '../Toggle';
-import { ICON_LIST_ITEM_INPUT_TYPES } from './configs';
-import { IconListItemLabel } from './IconListItemLabel';
-import { IconListItemSubtext } from './IconListItemSubtext';
-import { IconListItemTitle } from './IconListItemTitle';
+import { CONTROL_LIST_ITEM_INPUT_TYPES } from './configs';
+import { ControlListItemLabel } from './ControlListItemLabel';
+import { ControlListItemSubtext } from './ControlListItemSubtext';
+import { ControlListItemTitle } from './ControlListItemTitle';
 
-export const IconListItem = ({
+export const ControlListItem = ({
   checked,
   children,
   className,
@@ -23,7 +23,7 @@ export const IconListItem = ({
   ...rest
 }) => {
   const classNames = classnames(
-    'sage-icon-list-item',
+    'sage-control-list-item',
     className,
   );
 
@@ -73,22 +73,22 @@ export const IconListItem = ({
 
   return (
     <li className={classNames} {...rest}>
-      <div className={`sage-icon-list-item__bullet ${input ? `sage-icon-list-item__bullet--${input}` : ''}`}>
+      <div className={`sage-control-list-item__bullet ${input ? `sage-control-list-item__bullet--${input}` : ''}`}>
         {bulletContents}
       </div>
-      <div className="sage-icon-list-item__body">
+      <div className="sage-control-list-item__body">
         {children}
       </div>
     </li>
   );
 };
 
-IconListItem.Label = IconListItemLabel;
-IconListItem.Subtext = IconListItemSubtext;
-IconListItem.Title = IconListItemTitle;
-IconListItem.INPUT_TYPES = ICON_LIST_ITEM_INPUT_TYPES;
+ControlListItem.Label = ControlListItemLabel;
+ControlListItem.Subtext = ControlListItemSubtext;
+ControlListItem.Title = ControlListItemTitle;
+ControlListItem.INPUT_TYPES = CONTROL_LIST_ITEM_INPUT_TYPES;
 
-IconListItem.defaultProps = {
+ControlListItem.defaultProps = {
   checked: false,
   children: null,
   className: null,
@@ -102,13 +102,13 @@ IconListItem.defaultProps = {
   onChangeInput: (val) => val,
 };
 
-IconListItem.propTypes = {
+ControlListItem.propTypes = {
   checked: PropTypes.bool,
   children: PropTypes.node,
   className: PropTypes.string,
   icon: PropTypes.oneOf(Object.values(Icon.ICONS)),
   iconColor: PropTypes.oneOf(Object.values(Icon.COLORS)),
-  input: PropTypes.oneOf(Object.values(ICON_LIST_ITEM_INPUT_TYPES)),
+  input: PropTypes.oneOf(Object.values(CONTROL_LIST_ITEM_INPUT_TYPES)),
   inputId: PropTypes.string,
   inputName: PropTypes.string,
   inputValue: PropTypes.string,

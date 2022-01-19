@@ -2,29 +2,31 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-export const IconListItemSubtext = ({
+export const ControlListItemLabel = ({
   children,
   className,
+  htmlFor,
   ...rest
 }) => {
   const classNames = classnames(
-    'sage-icon-list-item__label-subtext',
+    'sage-control-list-item__label',
     className,
   );
 
   return (
-    <div className={classNames} {...rest}>
+    <label className={classNames} htmlFor={htmlFor} {...rest}>
       {children}
-    </div>
+    </label>
   );
 };
 
-IconListItemSubtext.defaultProps = {
+ControlListItemLabel.defaultProps = {
   children: null,
   className: null,
 };
 
-IconListItemSubtext.propTypes = {
+ControlListItemLabel.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
+  htmlFor: PropTypes.string.isRequired,
 };
