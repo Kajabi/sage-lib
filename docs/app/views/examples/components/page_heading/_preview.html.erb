@@ -1,11 +1,11 @@
 <h3 class="t-sage-heading-6">Standalone Page Heading</h3>
+<p>Use a default page header for a title underneath breadcrumbs</p>
 
 <%= sage_component SagePageHeading, {
   title: "Page Title",
-  spacer: { bottom: :xl },
 } %>
 
-<pre class="prettyprint">
+<pre class="prettyprint <%= "#{SageClassnames::SPACERS::XL_BOTTOM} "%> ">
   <code>
 <%= File.read(
   File.join(Rails.root, "app/views/examples/components/page_heading/snippets/_standalone.html.erb")
@@ -17,7 +17,6 @@
 
 <%= sage_component SagePageHeading, {
   title: "Page Title",
-  spacer: { bottom: :xl },
 } do %>
     <% content_for :sage_breadcrumbs do %>
       <%= sage_component SageBreadcrumbs, {
@@ -31,7 +30,7 @@
   <% end %>
 <% end %>
 
-<pre class="prettyprint">
+<pre class="prettyprint <%= "#{SageClassnames::SPACERS::XL_BOTTOM} "%>">
   <code>
 <%= File.read(
   File.join(Rails.root, "app/views/examples/components/page_heading/snippets/_pageheading_back_link.html.erb")
@@ -42,14 +41,13 @@
 
 <%= sage_component SagePageHeading, {
   title: "Page Title",
-  spacer: { bottom: :xl },
   help_title: "About This Cool Thing",
   help_link: {
     href: "#",
     name: "Help"
   },
 } %>
-<pre class="prettyprint">
+<pre class="prettyprint <%= "#{SageClassnames::SPACERS::XL_BOTTOM} "%>">
   <code>
 <%= File.read(
   File.join(Rails.root, "app/views/examples/components/page_heading/snippets/_pageheading_help_link.html.erb")
@@ -61,7 +59,6 @@
 
 <%= sage_component SagePageHeading, {
   title: "Page Title",
-  spacer: { bottom: :xl },
   help_title: "About This Cool Thing",
   help_html: "<p class=\"t-sage-body-small\">This is a block of content.</p>",
   help_link: {
@@ -69,7 +66,7 @@
     name: "Learn more about cool things"
   },
 } %>
-<pre class="prettyprint">
+<pre class="prettyprint <%= "#{SageClassnames::SPACERS::XL_BOTTOM} "%>">
   <code>
 <%= File.read(
   File.join(Rails.root, "app/views/examples/components/page_heading/snippets/_pageheading_help_content.html.erb")
@@ -81,7 +78,6 @@
 
 <%= sage_component SagePageHeading, {
   title: "Page Title",
-  spacer: { bottom: :xl },
 } do %>
     <% content_for :sage_page_heading_actions do %>
       <%= sage_component SagePopover, {
@@ -99,7 +95,7 @@
       } %>
     <% end %>
 <% end %>
-<pre class="prettyprint">
+<pre class="prettyprint <%= "#{SageClassnames::SPACERS::XL_BOTTOM} "%>">
   <code>
 <%= File.read(
   File.join(Rails.root, "app/views/examples/components/page_heading/snippets/_pageheading_action_buttons.html.erb")
@@ -111,7 +107,6 @@
 
 <%= sage_component SagePageHeading, {
   title: "Page Title",
-  spacer: { bottom: :xl },
   secondary_text: "1 Email in Sequence",
 } do %>
 
@@ -139,7 +134,7 @@
       }%>
     <% end %>
 <% end %>
-<pre class="prettyprint">
+<pre class="prettyprint <%= "#{SageClassnames::SPACERS::XL_BOTTOM} "%>">
   <code>
 <%= File.read(
   File.join(Rails.root, "app/views/examples/components/page_heading/snippets/_pageheading_toolbar_secondary_text.html.erb")
@@ -151,13 +146,12 @@
 
 <%= sage_component SagePageHeading, {
   title: "Page Title",
-  spacer: { bottom: :xl },
 } do %>
     <% content_for :sage_page_heading_intro do %>
       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo dolorum esse modi ut ipsa corporis.</p>
     <% end %>
 <% end %>
-<pre class="prettyprint">
+<pre class="prettyprint <%= "#{SageClassnames::SPACERS::XL_BOTTOM} "%>">
   <code>
 <%= File.read(
   File.join(Rails.root, "app/views/examples/components/page_heading/snippets/_pageheading_intro.html.erb")
@@ -170,7 +164,6 @@
 
 <%= sage_component SagePageHeading, {
   title: "Page Title",
-  spacer: { bottom: :xl },
   help_title: "About This Cool Thing",
   help_html: "<p class=\"t-sage-body-small\">This is a block of content.</p>",
   help_link: {
@@ -233,7 +226,7 @@
       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo dolorum esse modi ut ipsa corporis.</p>
     <% end %>
 <% end %>
-<pre class="prettyprint">
+<pre class="prettyprint <%= "#{SageClassnames::SPACERS::XL_BOTTOM} "%>">
   <code>
 <%= File.read(
   File.join(Rails.root, "app/views/examples/components/page_heading/snippets/_pageheading_all_items.html.erb")
