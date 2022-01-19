@@ -55,7 +55,7 @@
   <td><%= md('`nil`') %></td>
 </tr>
 <tr>
-  <td><%= md('`value`') %></td>
+  <td><%= md('`value`') %><%= sage_component SageLabel, { color: "published", value: "required" } %></td>
   <td><%= md('The text to use as the label\'s content') %></td>
   <td><%= md('String') %></td>
   <td><%= md('Required') %></td>
@@ -79,7 +79,7 @@
   <td><%= md('`"remove"`') %></td>
 </tr>
 <tr>
-  <td><%= md('`value`') %><%= sage_component SageLabel, { color: "published", value: "required" } %></td>
+  <td><%= md('`value`') %></td>
   <td><%= md('
     Incidates which accessible label to use for this button.
     Note that this will render as an `icon-only` button,
