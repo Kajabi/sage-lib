@@ -1,7 +1,8 @@
 <%= sage_component SageGridRow, {} do %>
   <%= sage_component SageGridCol, { breakpoint: "md", size: "5" } do %>
     <%= sage_component SageDropdown, {
-      css_classes: "creation-payment-dropdown"
+      css_classes: "creation-payment-dropdown",
+      html_attributes: { "tabindex": "0" },
     } do %>
       <%= sage_component SageCard, {} do %>
         <%= sage_component SageCardRow, { grid_template: "ete" } do %>
