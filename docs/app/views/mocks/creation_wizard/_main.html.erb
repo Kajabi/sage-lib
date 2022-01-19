@@ -1,7 +1,14 @@
+
+
 <div class="sage-tabs-container">
   <%= sage_component SageTabs, {
     id: "example-tabs1",
     items: [
+      {
+        text: "Modal Example",
+        target: "feature-0",
+        active: true
+      },
       {
         text: "Product Selection",
         target: "feature-1",
@@ -13,6 +20,9 @@
       },
     ]
   } %>
+  <%= sage_component SageTabsPane, { id: "feature-0" } do %>
+    <%= render "mocks/creation_wizard/modal" %>
+  <% end %>
   <%= sage_component SageTabsPane, { id: "feature-1" } do %>
     <%= render "mocks/creation_wizard/product_selection" %>
   <% end %>

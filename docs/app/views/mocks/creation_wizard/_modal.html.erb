@@ -1,0 +1,118 @@
+
+<%= sage_component SageButton, {
+  style: "primary",
+  icon: { name: "launch", style: "right" },
+  value: "Fullscreen Modal",
+  attributes: {
+    "data-js-modaltrigger": "cool-modal-fullscreen",
+  }
+} %>
+
+<%= sage_component SageModal, {
+  id: "cool-modal-fullscreen",
+  fixed: true,
+  fullscreen: true
+} do %>
+  <%= sage_component SageModalContent, {
+    header_image: "card-placeholder-sm.png",
+    title: "Example Modal"
+  } do %>
+    <% content_for :sage_header_aside do %>
+      <%= sage_component SageButton, {
+        style: "secondary",
+        subtle: true,
+        value: "Close Modal",
+        icon: { name: "remove", style: "only" },
+        attributes: { "data-js-modal": true }
+      } %>
+    <% end %>
+
+    <% content_for :sage_header_indicator do %>
+      <%= sage_component SageIndicator, {
+        current_item: 2,
+        label: "Page",
+        num_items: 5,
+        show_text: true
+      } %>
+    <% end %>
+
+    <% content_for :sage_modal_body do %>
+      <%= sage_component SageGridRow, {} do %>
+        <%= sage_component(SageGridCol, {
+          breakpoint: "lg",
+          size: "5",
+          css_classes: "sage-modal__fixed-column",
+        }) do %>
+          <div class="sage-modal__fixed-column-scroll">
+            <%= render "mocks/creation_wizard/product_selection" %>
+          </div>
+          <%= sage_component SageButtonGroup, {
+            gap: :md,
+            css_classes: "sage-modal__fixed-column-actions"
+          } do %>
+            <%= sage_component SageButton, {
+                style: "secondary",
+                raised: false,
+                value: "Close Modal",
+                attributes: { "data-js-modal": true }
+              } %>
+              <%= sage_component SageButton, {
+                style: "primary",
+                value: "Save and Continue",
+                attributes: { "data-js-modal": true }
+              } %>
+          <% end %>
+        <% end %>
+
+        <%= sage_component(SageGridCol, {
+          breakpoint: "lg",
+          size: "7",
+        }) do %>
+          <div class="sage-modal__fixed-column-scroll sage-modal__fixed-column-scroll--no-footer">
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+          </div>
+        <% end %>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>
