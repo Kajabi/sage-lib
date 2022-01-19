@@ -9,3 +9,11 @@
     margin-bottom: sage-spacing();
   }
 }
+
+.docs-table td:first-of-type {
+  white-space: nowrap;
+
+  p {
+    display: inline-block;
+  }
+}
