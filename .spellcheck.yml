@@ -15,6 +15,7 @@ matrix:
         ignores:
         - code
         - pre
-  sources:
-    - 'docs/app/views/examples/*/*.*', 'packages/sage-react/lib/*/*.*'
+  sources: |
+    docs/app/views/examples/*/*.*
+    packages/sage-react/lib/*/*.*
   default_encoding: utf-8
