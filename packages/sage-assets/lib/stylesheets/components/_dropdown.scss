@@ -4,6 +4,7 @@
 /// @group sage
 ////
 
+/* stylelint-disable selector-max-compound-selectors */
 
 $-dropdown-height: map-get($sage-field-configs, height);
 $-dropdown-width: rem(280px);
@@ -36,19 +37,19 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
   .sage-panel-controls__toolbar > &,
   .sage-panel-controls__toolbar-btn-group > &
   .sage-toolbar > &,
-  .sage-toolbar__group > &  {
+  .sage-toolbar__group > & {
     position: relative;
     border: 0;
 
     &:hover {
-      background-color: sage-color(white);
       z-index: sage-z-index(default, 1);
+      background-color: sage-color(white);
     }
 
     &:focus,
     &:focus-within {
-      box-shadow: map-get($sage-toolbar-button-borders, focus);
       z-index: sage-z-index(default, 2);
+      box-shadow: map-get($sage-toolbar-button-borders, focus);
     }
   }
 

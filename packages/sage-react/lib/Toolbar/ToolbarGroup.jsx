@@ -11,12 +11,12 @@ export const ToolbarGroup = ({
   </div>
 );
 
-ToolbarButtonGroup.defaultProps = {
+ToolbarGroup.defaultProps = {
   children: null,
   className: null,
 };
 
-ToolbarButtonGroup.propTypes = {
+ToolbarGroup.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
 };
