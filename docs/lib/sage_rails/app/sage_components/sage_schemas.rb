@@ -65,7 +65,7 @@ module SageSchemas
     is_heading: [:optional, TrueClass],
     modifiers: [:optional, [[Set.new(["disabled", "border-before", "border-after", nil])]]],
     selected: [:optional, TrueClass],
-    style: [:optional, Set.new(["primary", "danger", "muted"])],
+    style: [:optional, NilClass, Set.new(["primary", "danger", "muted"])],
     value: String,
   }
 
