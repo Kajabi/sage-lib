@@ -62,7 +62,7 @@ export const Choice = ({
     'data-js-tabs-target': target,
     disabled: TagName !== 'div' && disabled,
     tabIndex: TagName === 'div' ? '0' : null,
-    role: "tab",
+    role: 'tab',
     ...(hasRadioConfigs && { htmlFor: radioConfigs.id }),
     ...(isButton && { type: 'button' }),
     ...rest,

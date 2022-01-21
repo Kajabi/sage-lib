@@ -7,10 +7,8 @@ long_description = "Description with longer text to cause wrapping and make the 
     target: "example",
     text: "Option 1",
     type: "radio",
-    disabled: true,
-  } do %>
-  <h1>test</h1>
-<% end %>
+    active: true,
+} %>
 
 <h3 class="t-sage-heading-6">With Radio</h3>
 <%= sage_component SageChoice, {
