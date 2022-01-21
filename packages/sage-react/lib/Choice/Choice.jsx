@@ -56,7 +56,7 @@ export const Choice = ({
 
   const attrs = {
     'aria-controls': target,
-    'aria-disabled': TagName === 'div' && disabled,
+    'aria-disabled': TagName === 'div' ? disabled : null,
     'aria-selected': isActive,
     className: classNames,
     'data-js-tabs-target': target,
