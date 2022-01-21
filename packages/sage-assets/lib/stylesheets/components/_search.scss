@@ -61,12 +61,14 @@ $-search-icon: "::before";
       box-shadow: map-get($sage-toolbar-button-borders, focus);
     }
 
-    .sage-panel-controls__toolbar &:first-child:not(:only-child) {
+    .sage-panel-controls__toolbar &:first-child:not(:only-child),
+    .sage-toolbar__group &:first-child:not(:only-child) {
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
     }
 
-    .sage-panel-controls__toolbar &:last-child:not(:only-child) {
+    .sage-panel-controls__toolbar &:last-child:not(:only-child),
+    .sage-toolbar__group &:last-child:not(:only-child) {
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
     }

@@ -34,17 +34,21 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
   .sage-panel-controls__bulk-actions > &,
   .sage-panel-controls__tabs-dropdown > &,
   .sage-panel-controls__toolbar > &,
-  .sage-panel-controls__toolbar-btn-group > & {
+  .sage-panel-controls__toolbar-btn-group > &
+  .sage-toolbar > &,
+  .sage-toolbar__group > &  {
     position: relative;
     border: 0;
 
     &:hover {
       background-color: sage-color(white);
+      z-index: sage-z-index(default, 1);
     }
 
     &:focus,
     &:focus-within {
       box-shadow: map-get($sage-toolbar-button-borders, focus);
+      z-index: sage-z-index(default, 2);
     }
   }
 
@@ -57,7 +61,9 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
   .sage-panel-controls__bulk-actions > &,
   .sage-panel-controls__bulk-actions > &.sage-dropdown--contained,
   .sage-panel-controls__toolbar-btn-group > &,
-  .sage-panel-controls__toolbar-btn-group > &.sage-dropdown--contained {
+  .sage-panel-controls__toolbar-btn-group > &.sage-dropdown--contained,
+  .sage-toolbar__group > &,
+  .sage-toolbar__group > &.sage-dropdown--contained {
     border-radius: 0;
 
     &:first-child {
@@ -73,7 +79,8 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
 
   &.sage-dropdown--contained,
   .sage-panel-controls__tabs-dropdown > &,
-  .sage-panel-controls__toolbar > & {
+  .sage-panel-controls__toolbar > &,
+  .sage-toolbar > & {
     border-radius: sage-border(radius);
   }
 }
