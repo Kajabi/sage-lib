@@ -171,7 +171,7 @@ $-btn-loading-min-height: rem(36px);
   .sage-panel-controls__toolbar > &,
   .sage-panel-controls__toolbar-btn-group > &,
   .sage-panel-controls__pagination > &,
-  .sage-toolbar > & 
+  .sage-toolbar > &
   .sage-toolbar__group > & {
     position: relative;
     z-index: sage-z-index(default);
@@ -277,10 +277,6 @@ $-btn-loading-min-height: rem(36px);
     &:not(:last-child) {
       margin-right: sage-spacing();
     }
-  }
-
-  .sage-page-heading__actions & {
-    align-self: flex-start;
   }
 
   .sage-sortable__item-actions & {
@@ -390,10 +386,10 @@ $-btn-loading-min-height: rem(36px);
       }
       @else {
         @include sage-focus-outline--update-color(map-get($-style-type-configs, ring-color));
-        
+
         color: map-get($-style-type-configs, color);
         background-color: map-get($-style-type-configs, background-color);
-        
+
         .sage-toolbar > &,
         .sage-toolbar__group > & {
           @include sage-focus-outline--update-color(transparent);
@@ -417,7 +413,7 @@ $-btn-loading-min-height: rem(36px);
       .sage-toolbar__group > .sage-dropdown .sage-dropdown__trigger &:hover {
         box-shadow: map-get($sage-toolbar-button-borders, hover);
       }
-    
+
       .sage-toolbar > &:focus,
       .sage-toolbar > .sage-dropdown .sage-dropdown__trigger &:focus,
       .sage-toolbar__group > &:focus,
@@ -486,7 +482,7 @@ $-alert-colors: (
           border-color: sage-color($color, 200);
           background-color: transparent;
         }
-  
+
         @include sage-focus-outline--update-color(sage-color($color, 400));
       }
     }

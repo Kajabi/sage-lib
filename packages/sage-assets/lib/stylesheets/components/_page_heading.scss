@@ -62,6 +62,7 @@ $-page-heading-image-height-mobile: rem(120px);
 .sage-page-heading__title {
   @extend %t-sage-heading-1;
   grid-area: title;
+  margin-right: sage-spacing(sm);
 }
 
 .sage-page-heading__intro {
@@ -111,7 +112,7 @@ $-page-heading-image-height-mobile: rem(120px);
 .sage-page-heading__actions {
   display: flex;
   grid-area: actions;
-  align-items: center;
+  align-items: flex-start;
 
   @media (max-width: sage-breakpoint(sm-max)) {
     flex-wrap: wrap;
