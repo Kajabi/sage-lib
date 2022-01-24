@@ -467,6 +467,17 @@ module ComponentsHelper
         figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F9Km09NjlZHYWsMP7EGT8tI%2F%255BWIP%255D-Sage-3-%25E2%2580%2594-Admin-Components%3Fnode-id%3D3435%253A11",
       },
       {
+        title: "toolbar",
+        description: "Toolbars apply special formatting to supported elements for use as list controls and other similar places.",
+        scss: "done",
+        docs: "done",
+        rails: "done",
+        react: "done",
+        a11y: "todo",
+        react_component_slug: "sage-toolbar--default",
+        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F9Km09NjlZHYWsMP7EGT8tI%2F%255BWIP%255D-Sage-3-%25E2%2580%2594-Admin-Components%3Fnode-id%3D6999%3A22248",
+      },
+      {
         title: "tooltip",
         description: "Tooltips display helpful text when users hover over an element.",
         scss: "done",

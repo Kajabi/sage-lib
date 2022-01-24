@@ -4,6 +4,7 @@
 /// @group sage
 ////
 
+/* stylelint-disable selector-max-compound-selectors */
 
 //
 // Base style variables
@@ -154,7 +155,8 @@ $-btn-loading-min-height: rem(36px);
   .sage-dropdown--contained .sage-dropdown__trigger &,
   .sage-panel-controls__tabs-dropdown .sage-dropdown__trigger &,
   .sage-panel-controls__toolbar .sage-dropdown__trigger &,
-  .sage-panel-controls__bulk-actions .sage-dropdown__trigger & {
+  .sage-panel-controls__bulk-actions .sage-dropdown__trigger &,
+  .sage-toolbar .sage-dropdown__trigger & {
     @include sage-focus-outline--update-color(transparent);
 
     width: inherit;
@@ -162,6 +164,31 @@ $-btn-loading-min-height: rem(36px);
 
     &:hover {
       background-color: sage-color(white);
+    }
+  }
+
+  .sage-panel-controls__bulk-actions > &,
+  .sage-panel-controls__toolbar > &,
+  .sage-panel-controls__toolbar-btn-group > &,
+  .sage-panel-controls__pagination > &,
+  .sage-toolbar > & 
+  .sage-toolbar__group > & {
+    position: relative;
+    z-index: sage-z-index(default);
+    box-shadow: map-get($sage-toolbar-button-borders, default);
+    border: 0;
+
+    @include sage-focus-outline--update-color(transparent);
+
+    &:hover {
+      z-index: sage-z-index(default, 1);
+      box-shadow: map-get($sage-toolbar-button-borders, hover);
+      background-color: sage-color(white);
+    }
+
+    &:focus {
+      z-index: sage-z-index(default, 2);
+      box-shadow: map-get($sage-toolbar-button-borders, focus);
     }
   }
 
@@ -280,30 +307,8 @@ $-btn-loading-min-height: rem(36px);
     }
   }
 
-  .sage-panel-controls__bulk-actions > &,
-  .sage-panel-controls__toolbar > &,
   .sage-panel-controls__toolbar-btn-group > &,
-  .sage-panel-controls__pagination > & {
-    position: relative;
-    z-index: sage-z-index(default);
-    box-shadow: map-get($sage-toolbar-button-borders, default);
-    border: 0;
-
-    @include sage-focus-outline--update-color(transparent);
-
-    &:hover {
-      z-index: sage-z-index(default, 1);
-      box-shadow: map-get($sage-toolbar-button-borders, hover);
-      background-color: sage-color(white);
-    }
-
-    &:focus {
-      z-index: sage-z-index(default, 2);
-      box-shadow: map-get($sage-toolbar-button-borders, focus);
-    }
-  }
-
-  .sage-panel-controls__toolbar-btn-group > & {
+  .sage-toolbar__group > & {
     border-radius: 0;
 
     &:first-child {
@@ -322,9 +327,13 @@ $-btn-loading-min-height: rem(36px);
   }
 
   .sage-panel-controls__toolbar > &,
+  .sage-toolbar > &,
   .sage-panel-controls__pagination > & {
     border-radius: sage-border(radius);
+  }
 
+  .sage-panel-controls__toolbar > &,
+  .sage-panel-controls__pagination > & {
     &:not(:last-child) {
       margin-right: sage-spacing(card);
     }
@@ -381,9 +390,14 @@ $-btn-loading-min-height: rem(36px);
       }
       @else {
         @include sage-focus-outline--update-color(map-get($-style-type-configs, ring-color));
-
+        
         color: map-get($-style-type-configs, color);
         background-color: map-get($-style-type-configs, background-color);
+        
+        .sage-toolbar > &,
+        .sage-toolbar__group > & {
+          @include sage-focus-outline--update-color(transparent);
+        }
       }
     }
 
@@ -395,6 +409,21 @@ $-btn-loading-min-height: rem(36px);
       }
       &.sage-btn--raised {
         box-shadow: $-btn-shadow-base;
+      }
+
+      .sage-toolbar > &:hover,
+      .sage-toolbar > .sage-dropdown .sage-dropdown__trigger &:hover,
+      .sage-toolbar__group > &:hover,
+      .sage-toolbar__group > .sage-dropdown .sage-dropdown__trigger &:hover {
+        box-shadow: map-get($sage-toolbar-button-borders, hover);
+      }
+    
+      .sage-toolbar > &:focus,
+      .sage-toolbar > .sage-dropdown .sage-dropdown__trigger &:focus,
+      .sage-toolbar__group > &:focus,
+      .sage-toolbar__group > .sage-dropdown .sage-dropdown__trigger &:focus {
+        z-index: sage-z-index(default, 2);
+        box-shadow: map-get($sage-toolbar-button-borders, focus);
       }
     }
   }

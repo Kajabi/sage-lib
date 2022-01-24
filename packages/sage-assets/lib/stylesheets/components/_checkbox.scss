@@ -89,7 +89,9 @@ $-checkbox-focus-outline-color: sage-color(primary, 400);
     }
   }
 
-  .sage-sortable & {
+  .sage-sortable &,
+  .sage-toolbar > &,
+  .sage-toolbar__group > & {
     margin-bottom: 0;
   }
 }
