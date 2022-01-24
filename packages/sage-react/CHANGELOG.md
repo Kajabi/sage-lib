@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.77.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.76.0...@kajabi/sage-react@0.77.0) (2022-01-24)
+
+
+### Features
+
+* **docs:** add documentation ([3c3aec5](https://github.com/Kajabi/sage-lib/commit/3c3aec57293803dbc4224c9175495b71a5c831f2))
+* **toolbar:** add react component ([973f78c](https://github.com/Kajabi/sage-lib/commit/973f78c0dbaea39d8ba19115471a6aa86f6a70f1))
+
+
+
+
+
 # [0.76.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.75.0...@kajabi/sage-react@0.76.0) (2022-01-12)
 
 

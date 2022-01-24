@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.66.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.65.0...@kajabi/sage-assets@0.66.0) (2022-01-24)
+
+
+### Features
+
+* **docs:** add documentation ([3c3aec5](https://github.com/Kajabi/sage-lib/commit/3c3aec57293803dbc4224c9175495b71a5c831f2))
+* **toolbar:** distinguish styles from panel controls ([86df81d](https://github.com/Kajabi/sage-lib/commit/86df81d9fe502b38eb719bbf252e4858b83c88e7))
+
+
+
+
+
 # [0.65.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.64.0...@kajabi/sage-assets@0.65.0) (2022-01-12)
 
 

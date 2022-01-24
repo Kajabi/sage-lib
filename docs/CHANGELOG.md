@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.37.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.36.0...@kajabi/sage@4.37.0) (2022-01-24)
+
+
+### Bug Fixes
+
+* **sagedropdown:** allow nil as option in dropdown item styles ([5899c66](https://github.com/Kajabi/sage-lib/commit/5899c6600397ce95da7e40162fc21f6350806076))
+* adds label to proper value prop in Label component ([05a55f2](https://github.com/Kajabi/sage-lib/commit/05a55f23e6975c0ce61b66dcd9b6729f76ddbff1))
+
+
+### Features
+
+* **docs:** add documentation ([3c3aec5](https://github.com/Kajabi/sage-lib/commit/3c3aec57293803dbc4224c9175495b71a5c831f2))
+* **toolbar:** add toolbar and toolbar group rails components ([38e36fd](https://github.com/Kajabi/sage-lib/commit/38e36fdb3f6b826396e414714f6c592ea9a0f0a1))
+
+
+
+
+
 # [4.36.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.35.0...@kajabi/sage@4.36.0) (2022-01-19)
 
 
