@@ -10,3 +10,5 @@ lerna-debug.log
 .DS_Store
 coverage
 package-lock.json
+packages/sage-assets/lib/fonts/circular/*
+!packages/sage-assets/lib/fonts/circular/.gitkeep
