@@ -4,86 +4,87 @@
 /// @group sage
 ////
 
-$-body-font-path: "#{$sage-font-cdn-root}/inter" !default;
+$-body-font-path: "#{$sage-font-cdn-root}/circular" !default; // pathname of font directory
+$-body-font-name: "CircularXXWeb";
 $-body-font-version: 4;
 
 @font-face {
-  font-family: "Inter";
+  font-family: "Circular";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local("Inter-Regular"), url("#{$-body-font-path}/Inter-Regular.woff2?v=#{$-body-font-version}") format("woff2"), url("#{$-body-font-path}/Inter-Regular.woff?v=#{$-body-font-version}") format("woff");
+  src: local("#{$-body-font-name}-Regular"), url("#{$-body-font-path}/#{$-body-font-name}-Regular.woff2?v=#{$-body-font-version}") format("woff2"), url("#{$-body-font-path}/#{$-body-font-name}Regular.woff?v=#{$-body-font-version}") format("woff");
 }
 
 @font-face {
-  font-family: "Inter";
+  font-family: "Circular";
   font-style: italic;
   font-weight: 400;
   font-display: swap;
-  src: local("Inter-Italic"), url("#{$-body-font-path}/Inter-Italic.woff2?v=#{$-body-font-version}") format("woff2"), url("#{$-body-font-path}/Inter-Italic.woff?v=#{$-body-font-version}") format("woff");
+  src: local("#{$-body-font-name}-Italic"), url("#{$-body-font-path}/#{$-body-font-name}-Italic.woff2?v=#{$-body-font-version}") format("woff2"), url("#{$-body-font-path}/#{$-body-font-name}-Italic.woff?v=#{$-body-font-version}") format("woff");
 }
 
 @font-face {
-  font-family: "Inter";
+  font-family: "Circular";
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: local("Inter-Medium"), url("#{$-body-font-path}/Inter-Medium.woff2?v=#{$-body-font-version}") format("woff2"), url("#{$-body-font-path}/Inter-Medium.woff?v=#{$-body-font-version}") format("woff");
+  src: local("#{$-body-font-name}-Medium"), url("#{$-body-font-path}/#{$-body-font-name}-Medium.woff2?v=#{$-body-font-version}") format("woff2"), url("#{$-body-font-path}/#{$-body-font-name}-Medium.woff?v=#{$-body-font-version}") format("woff");
 }
 
 @font-face {
-  font-family: "Inter";
+  font-family: "Circular";
   font-style: italic;
   font-weight: 500;
   font-display: swap;
-  src: local("Inter-MediumItalic"), url("#{$-body-font-path}/Inter-MediumItalic.woff2?v=#{$-body-font-version}") format("woff2"), url("#{$-body-font-path}/Inter-MediumItalic.woff?v=#{$-body-font-version}") format("woff");
+  src: local("#{$-body-font-name}-MediumItalic"), url("#{$-body-font-path}/#{$-body-font-name}-MediumItalic.woff2?v=#{$-body-font-version}") format("woff2"), url("#{$-body-font-path}/#{$-body-font-name}-MediumItalic.woff?v=#{$-body-font-version}") format("woff");
 }
 
 @font-face {
-  font-family: "Inter";
+  font-family: "Circular";
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: local("Inter-SemiBold"), url("#{$-body-font-path}/Inter-SemiBold.woff2?v=#{$-body-font-version}") format("woff2"), url("#{$-body-font-path}/Inter-SemiBold.woff?v=#{$-body-font-version}") format("woff");
+  src: local("#{$-body-font-name}-SemiBold"), url("#{$-body-font-path}/#{$-body-font-name}-SemiBold.woff2?v=#{$-body-font-version}") format("woff2"), url("#{$-body-font-path}/#{$-body-font-name}-SemiBold.woff?v=#{$-body-font-version}") format("woff");
 }
 
 @font-face {
-  font-family: "Inter";
+  font-family: "Circular";
   font-style: italic;
   font-weight: 600;
   font-display: swap;
-  src: local("Inter-SemiBoldItalic"), url("#{$-body-font-path}/Inter-SemiBoldItalic.woff2?v=#{$-body-font-version}") format("woff2"), url("#{$-body-font-path}/Inter-SemiBoldItalic.woff?v=#{$-body-font-version}") format("woff");
+  src: local("#{$-body-font-name}-SemiBoldItalic"), url("#{$-body-font-path}/#{$-body-font-name}-SemiBoldItalic.woff2?v=#{$-body-font-version}") format("woff2"), url("#{$-body-font-path}/#{$-body-font-name}-SemiBoldItalic.woff?v=#{$-body-font-version}") format("woff");
 }
 
 @font-face {
-  font-family: "Inter";
+  font-family: "Circular";
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: local("Inter-Bold"), url("#{$-body-font-path}/Inter-Bold.woff2?v=#{$-body-font-version}") format("woff2"), url("#{$-body-font-path}/Inter-Bold.woff?v=#{$-body-font-version}") format("woff");
+  src: local("#{$-body-font-name}-Bold"), url("#{$-body-font-path}/#{$-body-font-name}-Bold.woff2?v=#{$-body-font-version}") format("woff2"), url("#{$-body-font-path}/#{$-body-font-name}-Bold.woff?v=#{$-body-font-version}") format("woff");
 }
 
 @font-face {
-  font-family: "Inter";
+  font-family: "Circular";
   font-style: italic;
   font-weight: 700;
   font-display: swap;
-  src: local("Inter-BoldItalic"), url("#{$-body-font-path}/Inter-BoldItalic.woff2?v=#{$-body-font-version}") format("woff2"), url("#{$-body-font-path}/Inter-BoldItalic.woff?v=#{$-body-font-version}") format("woff");
+  src: local("#{$-body-font-name}-BoldItalic"), url("#{$-body-font-path}/#{$-body-font-name}-BoldItalic.woff2?v=#{$-body-font-version}") format("woff2"), url("#{$-body-font-path}/#{$-body-font-name}-BoldItalic.woff?v=#{$-body-font-version}") format("woff");
 }
 
 ///
 /// Variable font
 ///
 /// @example scss - Variable font usage
-///   html { font-family: "Inter", sans-serif; }
+///   html { font-family: "Circular", sans-serif; }
 ///   @supports (font-variation-settings: normal) {
-///     html { font-family: "Inter var", sans-serif; }
+///     html { font-family: "Circular var", sans-serif; }
 ///   }
 ///
 @font-face {
-  font-family: "Inter var";
+  font-family: "Circular var";
   font-weight: 100 900;
   font-style: oblique 0deg 20deg;
   font-display: swap;
-  src: url("#{$-body-font-path}/Inter.var.woff2?v=#{$-body-font-version}") format("woff2");
+  src: url("#{$-body-font-path}#{$-body-font-name}.var.woff2?v=#{$-body-font-version}") format("woff2");
 }
