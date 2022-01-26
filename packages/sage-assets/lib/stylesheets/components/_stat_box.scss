@@ -19,7 +19,7 @@ $-stat-box-image-max-width: rem(48px);
   &.sage-stat-box--with-img,
   &.sage-stat-box--with-icon {
     display: grid;
-    grid-column-gap: sage-spacing(sm);
+    grid-column-gap: sage-spacing();
 
     grid-template-areas:
       "image header header"
