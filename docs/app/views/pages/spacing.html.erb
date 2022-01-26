@@ -5,6 +5,13 @@
 )) %>
 <% end %>
 
+<%= md("
+## Coloring Type
+
+While applying colors to type on-the-fly should generally be avoided
+we do provide the following utility classes for such cases where its most practical:
+    ") %>
+
 <div class="<%= SageClassnames::TYPE_BLOCK %>">
   <p>The following spacing tokens are used throughout Sage:</p>
   <%= sage_component SageTable, {
@@ -66,13 +73,13 @@
   <%= sage_component SageButton, { style: "primary", value: "Sample", spacer: { top: "xs", bottom: "lg" }} %>
   <%= md(%(
     Finally, beyond component attributes, the `SageClassnames` module makes these same spacer classes available anywhere.
-    
+
     In Rails:
 
 ```erb
 <b class="\<\%\= SageClassnames::SPACERS::LG_TOP \%\>">I have extra space above!</b>
 ```
-  
+
   In React:
 
 ```jsx
