@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.38.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.37.0...@kajabi/sage@4.38.0) (2022-01-26)
+
+
+### Bug Fixes
+
+* **choice:** updates logic for disabled prop and adds tabindex for div variation ([171a964](https://github.com/Kajabi/sage-lib/commit/171a9646e77dda6c247f0fe1b84c49b2b00b828d))
+* **pageheading:** add child div within sage-page-heading__actions ([f984394](https://github.com/Kajabi/sage-lib/commit/f984394800fbed5647a59cb50fc69716fb6649a8))
+
+
+### Features
+
+* **choice:** updates disabled logic for React component ([60514ba](https://github.com/Kajabi/sage-lib/commit/60514ba65de55d3128ac9b633bc0b42bfc7f537d))
+* **tab:** adjust schema and add icon class to markup ([43d3cb4](https://github.com/Kajabi/sage-lib/commit/43d3cb4138c2ccab939cc72d878bbf4f126b7194))
+
+
+
+
+
 # [4.37.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.36.0...@kajabi/sage@4.37.0) (2022-01-24)
 
 

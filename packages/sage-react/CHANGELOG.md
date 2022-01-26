@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.78.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.77.0...@kajabi/sage-react@0.78.0) (2022-01-26)
+
+
+### Bug Fixes
+
+* **choice:** adds role=tab attribute ([752458b](https://github.com/Kajabi/sage-lib/commit/752458bab8eb3d6995bbee34f986f94847440d13))
+* **choice:** fixes logic for aria-disabled in React component ([ace14d1](https://github.com/Kajabi/sage-lib/commit/ace14d1209d420a5ac35abdeb0eacdf5618a40a5))
+
+
+### Features
+
+* **choice:** updates disabled logic for React component ([60514ba](https://github.com/Kajabi/sage-lib/commit/60514ba65de55d3128ac9b633bc0b42bfc7f537d))
+
+
+
+
+
 # [0.77.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.76.0...@kajabi/sage-react@0.77.0) (2022-01-24)
 
 
