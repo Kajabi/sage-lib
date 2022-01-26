@@ -8,7 +8,7 @@
 // Borders and sizing
 $-table-header-border: rem(1px) solid sage-color(grey, 300);
 $-table-cell-padding-xs: sage-spacing(xs);
-$-table-cell-padding-card: sage-spacing(sm);
+$-table-cell-padding-card: sage-spacing();
 $-table-cell-padding-panel: sage-spacing();
 $-table-padding: rem(12px);
 $-table-max-width: none;
@@ -109,7 +109,7 @@ $-table-avatar-width: rem(32px);
 
     &.sage-table-cell--strong {
       @extend #{$-table-cell-type-spec-strong};
-    
+
       color: $-table-cell-font-color-strong;
     }
   }
