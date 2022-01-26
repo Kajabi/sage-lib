@@ -70,6 +70,11 @@ $-icon-beside-type: (
   @include sage-button-icon-generator($icon-name, $icon-code, left);
   @include sage-button-icon-generator($icon-name, $icon-code, right);
 
+  .sage-tab--icon-#{$icon-name}::before {
+    @include sage-icon-base($icon-name);
+    margin-right: sage-spacing(xs);
+  }
+
   .sage-choice--icon-#{$icon-name}::before {
     @include sage-icon-base($icon-name);
   }

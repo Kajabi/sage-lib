@@ -56,10 +56,13 @@ export const Choice = ({
 
   const attrs = {
     'aria-controls': target,
+    'aria-disabled': TagName === 'div' ? disabled : null,
     'aria-selected': isActive,
     className: classNames,
     'data-js-tabs-target': target,
-    disabled,
+    disabled: TagName !== 'div' && disabled,
+    tabIndex: TagName === 'div' ? '0' : null,
+    role: 'tab',
     ...(hasRadioConfigs && { htmlFor: radioConfigs.id }),
     ...(isButton && { type: 'button' }),
     ...rest,

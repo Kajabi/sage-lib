@@ -18,6 +18,7 @@ html_tag = is_button ? "button" : "a"
   <% end %>
   class="
     sage-tab
+    <%= "sage-tab--icon-#{component.icon}" if component.icon.present? %>
     <%= css_active_class if component.active %>
     <%= component.generated_css_classes %>"
   data-sage-active-class="<%= css_active_class %>"

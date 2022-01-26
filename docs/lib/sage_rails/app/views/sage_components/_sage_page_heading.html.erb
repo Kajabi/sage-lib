@@ -47,7 +47,9 @@
   <% end %>
   <% if content_for? :sage_page_heading_actions %>
     <div class="sage-page-heading__actions">
-      <%= content_for :sage_page_heading_actions %>
+      <div class="sage-page-heading__actions-inner">
+        <%= content_for :sage_page_heading_actions %>
+      </div>
     </div>
   <% end %>
   <% if content_for? :sage_page_heading_toolbar %>

@@ -94,6 +94,7 @@ module SageSchemas
     active: [:optional, NilClass, TrueClass],
     attributes: [:optional, NilClass, Hash],
     disabled: [:optional, NilClass, TrueClass],
+    icon: [:optional, NilClass, String],
     target: [:optional, NilClass, String],
     text: String,
   }

@@ -148,7 +148,9 @@
     <% content_for :sage_page_heading_actions do %>
       <%= sage_component SageButton, {
         style: "secondary",
-        icon: { name: "preview-on", style: "left" },
+        icon: { name: "preview-on", style: "only" },
+        attributes: { "data-js-tooltip": "Preview" },
+        subtle: true,
         value: "Preview",
       } %>
       <%= sage_component SageButton, {
