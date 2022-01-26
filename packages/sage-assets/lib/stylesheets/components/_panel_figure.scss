@@ -19,7 +19,7 @@ $-panel-figure-default-background-color: sage-color(grey, 100);
   width: 100%;
   border-radius: sage-border(radius);
   background-color: var(--sage-figure-background-color, #{$-panel-figure-default-background-color});
-  
+
   img {
     display: block;
     width: 100%;
@@ -59,21 +59,21 @@ $-panel-figure-default-background-color: sage-color(grey, 100);
 }
 
 .sage-panel__figure--bleed-bottom {
-  width: calc(100% + #{2 * sage-spacing()});
-  margin: 0 (-1 * sage-spacing()) (-1 * sage-spacing());
+  width: calc(100% + #{2 * sage-spacing(lg)});
+  margin: 0 (-1 * sage-spacing(lg)) (-1 * sage-spacing(lg));
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
 
 .sage-panel__figure--bleed-sides {
-  width: calc(100% + #{2 * sage-spacing()});
-  margin: 0 (-1 * sage-spacing());
+  width: calc(100% + #{2 * sage-spacing(lg)});
+  margin: 0 (-1 * sage-spacing(lg));
   border-radius: 0;
 }
 
 .sage-panel__figure--bleed-top {
-  width: calc(100% + #{2 * sage-spacing()});
-  margin: (-1 * sage-spacing()) (-1 * sage-spacing()) 0;
+  width: calc(100% + #{2 * sage-spacing(lg)});
+  margin: (-1 * sage-spacing(lg)) (-1 * sage-spacing(lg)) 0;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
