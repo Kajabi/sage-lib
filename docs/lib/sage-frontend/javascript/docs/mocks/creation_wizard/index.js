@@ -4,21 +4,23 @@
 
 const paymentDropdownClass = ".creation-payment-dropdown";
 const paymentDropdown = document.querySelector(paymentDropdownClass);
-const paymentOptions = paymentDropdown.querySelectorAll(".sage-dropdown__panel > .sage-panel__row");
+const paymentOptions = paymentDropdown ? paymentDropdown.querySelectorAll(".sage-dropdown__panel > .sage-panel__row") : null;
 
-document.addEventListener("DOMContentLoaded", function () {
-  let paymentOptionSelected = document.querySelector(".creation-payment-selected.sage-panel__row");
-  if (paymentOptionSelected !== null) {
-    updateOption(paymentOptionSelected);
-  }
-});
-
-paymentOptions.forEach(function (option) {
-  option.addEventListener("click", function () {
-    updateSelected();
-    updateOption(option);
+if (paymentDropdown) {
+  document.addEventListener("DOMContentLoaded", function () {
+    let paymentOptionSelected = document.querySelector(".creation-payment-selected.sage-panel__row");
+    if (paymentOptionSelected !== null) {
+      updateOption(paymentOptionSelected);
+    }
   });
-});
+  
+  paymentOptions.forEach(function (option) {
+    option.addEventListener("click", function () {
+      updateSelected();
+      updateOption(option);
+    });
+  });
+}
 
 function updateSelected(option) {
   paymentOptions.forEach(function (option) {
