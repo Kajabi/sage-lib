@@ -79,4 +79,4 @@ $-body-font-version: 1;
   font-display: swap;
   src: local("#{$-body-font-name}-BoldItalic"), url("#{$-body-font-path}/#{$-body-font-name}-BoldItalic.woff2?v=#{$-body-font-version}") format("woff2"), url("#{$-body-font-path}/#{$-body-font-name}-BoldItalic.woff?v=#{$-body-font-version}") format("woff");
 }
-
+/* stylelint-enable */
