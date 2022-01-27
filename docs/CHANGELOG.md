@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.39.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.38.0...@kajabi/sage@4.39.0) (2022-01-27)
+
+
+### Features
+
+* **docs:** add font CDN test file for temp production testing ([e12211b](https://github.com/Kajabi/sage-lib/commit/e12211b9e47fc09fc0bca130e436e1e644e53de0))
+
+
+
+
+
 # [4.38.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.37.0...@kajabi/sage@4.38.0) (2022-01-26)
 
 
