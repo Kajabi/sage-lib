@@ -8,83 +8,75 @@ $-body-font-path: "../fonts/circular"; // pathname of font directory
 $-body-font-name: "CircularXXWeb";
 $-body-font-version: 3.15;
 
+// Regular
 @font-face {
-  font-family: "Circular";
+  font-family: "CircularXXWeb-Regular";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
   src: local("#{$-body-font-name}-Regular"), url("#{$-body-font-path}/#{$-body-font-name}-Regular.woff2?v=#{$-body-font-version}") format("woff2"), url("#{$-body-font-path}/#{$-body-font-name}Regular.woff?v=#{$-body-font-version}") format("woff");
 }
 
+// Regular Italic
 @font-face {
-  font-family: "Circular";
+  font-family: "CircularXXWeb-Italic";
   font-style: italic;
   font-weight: 400;
   font-display: swap;
   src: local("#{$-body-font-name}-Italic"), url("#{$-body-font-path}/#{$-body-font-name}-Italic.woff2?v=#{$-body-font-version}") format("woff2"), url("#{$-body-font-path}/#{$-body-font-name}-Italic.woff?v=#{$-body-font-version}") format("woff");
 }
 
+// Medium
 @font-face {
-  font-family: "Circular";
+  font-family: "CircularXXWeb-Book";
   font-style: normal;
   font-weight: 500;
+  font-display: swap;
+  src: local("#{$-body-font-name}-Book"), url("#{$-body-font-path}/#{$-body-font-name}-Book.woff2?v=#{$-body-font-version}") format("woff2"), url("#{$-body-font-path}/#{$-body-font-name}-Book.woff?v=#{$-body-font-version}") format("woff");
+}
+
+// Medium Italic
+@font-face {
+  font-family: "CircularXXWeb-BookItalic";
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: local("#{$-body-font-name}-BookItalic"), url("#{$-body-font-path}/#{$-body-font-name}-BookItalic.woff2?v=#{$-body-font-version}") format("woff2"), url("#{$-body-font-path}/#{$-body-font-name}-BookItalic.woff?v=#{$-body-font-version}") format("woff");
+}
+
+// Semibold
+@font-face {
+  font-family: "CircularXXWeb-Medium";
+  font-style: normal;
+  font-weight: 600;
   font-display: swap;
   src: local("#{$-body-font-name}-Medium"), url("#{$-body-font-path}/#{$-body-font-name}-Medium.woff2?v=#{$-body-font-version}") format("woff2"), url("#{$-body-font-path}/#{$-body-font-name}-Medium.woff?v=#{$-body-font-version}") format("woff");
 }
 
+// Semibold Italic
 @font-face {
-  font-family: "Circular";
+  font-family: "CircularXXWeb-MediumItalic";
   font-style: italic;
-  font-weight: 500;
+  font-weight: 600;
   font-display: swap;
   src: local("#{$-body-font-name}-MediumItalic"), url("#{$-body-font-path}/#{$-body-font-name}-MediumItalic.woff2?v=#{$-body-font-version}") format("woff2"), url("#{$-body-font-path}/#{$-body-font-name}-MediumItalic.woff?v=#{$-body-font-version}") format("woff");
 }
 
+// Bold
 @font-face {
-  font-family: "Circular";
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: local("#{$-body-font-name}-SemiBold"), url("#{$-body-font-path}/#{$-body-font-name}-SemiBold.woff2?v=#{$-body-font-version}") format("woff2"), url("#{$-body-font-path}/#{$-body-font-name}-SemiBold.woff?v=#{$-body-font-version}") format("woff");
-}
-
-@font-face {
-  font-family: "Circular";
-  font-style: italic;
-  font-weight: 600;
-  font-display: swap;
-  src: local("#{$-body-font-name}-SemiBoldItalic"), url("#{$-body-font-path}/#{$-body-font-name}-SemiBoldItalic.woff2?v=#{$-body-font-version}") format("woff2"), url("#{$-body-font-path}/#{$-body-font-name}-SemiBoldItalic.woff?v=#{$-body-font-version}") format("woff");
-}
-
-@font-face {
-  font-family: "Circular";
+  font-family: "CircularXXWeb-Bold";
   font-style: normal;
   font-weight: 700;
   font-display: swap;
   src: local("#{$-body-font-name}-Bold"), url("#{$-body-font-path}/#{$-body-font-name}-Bold.woff2?v=#{$-body-font-version}") format("woff2"), url("#{$-body-font-path}/#{$-body-font-name}-Bold.woff?v=#{$-body-font-version}") format("woff");
 }
 
+// Bold Italic
 @font-face {
-  font-family: "Circular";
+  font-family: "CircularXXWeb-BoldItalic";
   font-style: italic;
   font-weight: 700;
   font-display: swap;
   src: local("#{$-body-font-name}-BoldItalic"), url("#{$-body-font-path}/#{$-body-font-name}-BoldItalic.woff2?v=#{$-body-font-version}") format("woff2"), url("#{$-body-font-path}/#{$-body-font-name}-BoldItalic.woff?v=#{$-body-font-version}") format("woff");
 }
 
-///
-/// Variable font
-///
-/// @example scss - Variable font usage
-///   html { font-family: "Circular", sans-serif; }
-///   @supports (font-variation-settings: normal) {
-///     html { font-family: "Circular var", sans-serif; }
-///   }
-///
-@font-face {
-  font-family: "Circular var";
-  font-weight: 100 900;
-  font-style: oblique 0deg 20deg;
-  font-display: swap;
-  src: url("#{$-body-font-path}#{$-body-font-name}.var.woff2?v=#{$-body-font-version}") format("woff2");
-}
