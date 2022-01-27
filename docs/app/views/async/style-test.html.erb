@@ -1,0 +1,54 @@
+<style type="text/css">
+@font-face {
+  font-family: "Circular";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Circular"),
+    url("https://sage.kajabi-cdn.com/fonts/circular/CircularXXSub-Black.woff2") format("woff2"),
+    url("https://sage.kajabi-cdn.com/fonts/circular/CircularXXSub-Black.woff") format("woff");
+}
+
+.font-not {
+  font-family: cursive, sans-serif;
+}
+
+.font-circular {
+  font-family: "Circular", cursive, sans-serif;
+}
+
+.lineup {
+  display: flex;
+  gap: 48px;
+}
+</style>
+
+<div class="lineup">
+  <div>
+    <p>This side should use the Circular font. It should be a bold sans serif font. Check the lowercase t's for a rounded bevel on the top left side of the ascender.</p>
+    <div class="font-circular">
+      <h1>Vivamus id sagittis dolor.</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Maecenas condimentum ipsum sem, in gravida est accumsan non.
+        Maecenas sagittis interdum condimentum.
+        Etiam ultricies lorem sit amet ex gravida, nec porta erat porta.
+        Pellentesque blandit mi sem, ac varius turpis pulvinar eu.
+      </p>
+    </div>
+  </div>
+
+  <div>
+    <p>This is side shows an obvious cursive fallback font. If both sides looke like this side then the Circular font is not applying in this context.</p>
+    <div class="font-not">
+      <h1>Vivamus id sagittis dolor.</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Maecenas condimentum ipsum sem, in gravida est accumsan non.
+        Maecenas sagittis interdum condimentum.
+        Etiam ultricies lorem sit amet ex gravida, nec porta erat porta.
+        Pellentesque blandit mi sem, ac varius turpis pulvinar eu.
+      </p>
+    </div>
+  </div>
+</div>
