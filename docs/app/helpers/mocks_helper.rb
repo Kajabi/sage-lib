@@ -72,6 +72,14 @@ module MocksHelper
         no_rails_js: true,
         status: DOING,
         team: "Build/Commerce",
+      },
+      {
+        alias: "payments_index",
+        milestone_id: nil,
+        name: "Payments Index",
+        no_rails_js: true,
+        status: DOING,
+        team: "Commerce",
       }
     ]
   end

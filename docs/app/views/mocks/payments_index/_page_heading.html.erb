@@ -1,0 +1,14 @@
+<%= sage_component SagePageHeading, {
+  title: "Payments",
+  spacer: { bottom: :lg },
+} do %>
+  <% content_for :sage_page_heading_toolbar do %>
+    <%= sage_component SageButton, {
+      style: "secondary",
+      subtle: true,
+      icon: { name: "gear", style: "left" },
+      value: "Settings",
+      attributes: { href: "#TODO-payment-settings-url" },
+    } %>
+  <% end if show_settings %>
+<% end %>
