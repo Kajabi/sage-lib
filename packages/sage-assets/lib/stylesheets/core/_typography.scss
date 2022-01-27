@@ -19,7 +19,7 @@ $-headings-margin-bottom: sage-spacing(sm);
   }
 }
 
-body {
+body:not([class*="sage-body--disable-font"]) {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
