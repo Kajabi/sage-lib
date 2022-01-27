@@ -31,12 +31,6 @@ jobs:
           && rm yarn-v$YARN_VERSION.tar.gz \
           && rm node-v$NODE_VERSION-linux-$ARCH-musl.tar.xz
 
-      - name: Clone Sage-Lib Repo
-        uses: actions/checkout@v2
-        with:
-          # pulls all commits (needed for lerna / semantic release to correctly version)
-          fetch-depth: "0"
-
       - name: Documentation Site Deploy
         env:
           HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
