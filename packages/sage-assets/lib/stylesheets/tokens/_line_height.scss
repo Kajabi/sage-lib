@@ -9,11 +9,14 @@
 /// Sage raw line height/leading token (non-responsive)
 ///
 $sage-line-heights: (
-  xs: sage-baseline(5), // 20
-  sm: sage-baseline(6), // 24
-  md: sage-baseline(7), // 28
-  lg: sage-baseline(8), // 32
-  xl: sage-baseline(9), // 36
+  xs: sage-baseline(4), // 16
+  sm: sage-baseline(5), // 20
+  md: sage-baseline(6), // 24
+  lg: sage-baseline(7), // 28
+  xl: sage-baseline(8), // 32
+  2xl: sage-baseline(10), // 40
+  3xl: sage-baseline(12), // 48
+  4xl: sage-baseline(15), // 60
 );
 
 ///
