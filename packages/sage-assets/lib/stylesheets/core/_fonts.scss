@@ -6,7 +6,7 @@
 
 $-body-font-path: "../fonts/circular"; // pathname of font directory
 $-body-font-name: "CircularXXWeb";
-$-body-font-version: 3.15;
+$-body-font-version: 1;
 
 // Regular
 @font-face {
@@ -14,7 +14,7 @@ $-body-font-version: 3.15;
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local("#{$-body-font-name}-Regular"), url("#{$-body-font-path}/#{$-body-font-name}-Regular.woff2?v=#{$-body-font-version}") format("woff2"), url("#{$-body-font-path}/#{$-body-font-name}Regular.woff?v=#{$-body-font-version}") format("woff");
+  src: local("#{$-body-font-name}-Regular"), url("#{$-body-font-path}/#{$-body-font-name}-Regular.woff2?v=#{$-body-font-version}") format("woff2"), url("#{$-body-font-path}/#{$-body-font-name}-Regular.woff?v=#{$-body-font-version}") format("woff");
 }
 
 // Regular Italic
