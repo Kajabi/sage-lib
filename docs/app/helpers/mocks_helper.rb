@@ -10,6 +10,9 @@ module MocksHelper
   GITHUB_REPO_URL = "https://github.com/Kajabi/sage-lib"
   GITHUB_FILES_BASE_URL = "#{GITHUB_REPO_URL}/tree/main" # TODO: can we read the current git branch here by chance?
 
+  # Jira URLs
+  JIRA_BASE_URL = "https://kajabi.atlassian.net/"
+  
   # Storybook live URL
   STORYBOOK_BASE_URL = "https://sage-lib-storybook.herokuapp.com"
 
@@ -19,7 +22,8 @@ module MocksHelper
   # Lists out all the available sage mocks. Properties include:
   #
   #   alias - <string> required unique snake_case alias for the profile
-  #   milestone_id - <int> Github milestone id. For example, in `https://github.com/Kajabi/sage-lib/milestone/21` the id is `21`
+  #   jira_epic - <int> Jira epic id. For example, in `https://github.com/Kajabi/sage-lib/milestone/21` the id is `21`
+  #   milestone_id - <int> Github milestone id. For example, in `https://kajabi.atlassian.net/browse/SAGE-172` the id is `SAGE-172`
   #   name - <string> user-friendly name for the mock
   #   no_rails_partials -- <bool> (passive) use if no rails partials (suppress link to partials in repo)
   #   no_rails_helper -- <bool> (passive) use if no rails helper (suppress link to helpers in repo)
@@ -75,7 +79,7 @@ module MocksHelper
       },
       {
         alias: "payments_index",
-        milestone_id: nil,
+        jira_epic: "SAGE-172",
         name: "Payments Index",
         no_rails_js: true,
         status: DOING,
@@ -222,5 +226,23 @@ module MocksHelper
     else
       nil
     end
+  end
+
+  def mock_epic_url(mock)
+    if mock[:jira_epic]
+      "#{JIRA_BASE_URL}/browse/#{mock[:jira_epic].to_s}"
+    else
+      nil
+    end
+  end
+
+  def mock_has_epic(mock)
+    has_epic = false
+
+    if mock[:milestone_id] || mock[:jira_epic]
+      has_epic = true
+    end
+
+    has_epic
   end
 end

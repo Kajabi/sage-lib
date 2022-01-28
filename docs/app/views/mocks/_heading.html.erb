@@ -1,3 +1,4 @@
+<% has_epic = mock_has_epic(mock) %>
 <%= content_for :heading do %>
   <%= sage_component SageBreadcrumbs, { items: [{
     text: "Back",
@@ -50,19 +51,20 @@
       <% end %>
     </div>
 
-    <div class="docs-heading__meta-secondary">
-      <%= sage_component SageButton, {
-        attributes: {
-          href: mock_milestone_url(mock),
-          target: "_blank",
-          rel: "noopener",
-        },
-        disabled: mock[:milestone_id] == nil ? true : false,
-        icon: { name: "arrow-right", style: "right" },
-        style: "secondary",
-        subtle: true,
-        value: "Development milestone",
-      } %>
-    </div>
+    <% if has_epic %>
+      <div class="docs-heading__meta-secondary">
+        <%= sage_component SageButton, {
+          attributes: {
+            href: has_epic ? mock_epic_url(mock) : mock_milestone_url(mock),
+            target: "_blank",
+            rel: "noopener",
+          },
+          icon: { name: "arrow-right", style: "right" },
+          style: "secondary",
+          subtle: true,
+          value: "Development Epic",
+        } %>
+      </div>
+    <% end %>
   </div>
 <% end %>
