@@ -4,8 +4,8 @@
 /// @group sage
 ////
 
-$-body-font-path: "../fonts/inter"; // pathname of font directory
-$-body-font-version: 3.15;
+$-body-font-path: "#{$sage-font-cdn-root}/inter" !default;
+$-body-font-version: 4.0;
 
 @font-face {
   font-family: "Inter";

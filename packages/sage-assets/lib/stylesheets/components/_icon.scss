@@ -4,8 +4,8 @@
 /// @group sage
 ////
 
-
-$-icon-font-path: "../fonts/sage";
+$-icon-font-path: "#{$sage-font-cdn-root}/sage" !default;
+$-icon-font-version: 4.1;
 
 // NOTE: These should be kept in sync with line-height pairings from `packages/sage-assets/lib/stylesheets/tokens/_line_height.scss`
 $-icon-beside-type: (
@@ -36,11 +36,11 @@ $-icon-beside-type: (
 // Icon font setup
 @font-face {
   font-family: "Sage";
-  src: url("#{$-icon-font-path}/Sage.woff");
-  src: url("#{$-icon-font-path}/Sage.woff") format("woff"),
-    url("#{$-icon-font-path}/Sage.ttf") format("truetype"),
-    url("#{$-icon-font-path}/Sage.svg") format("svg"),
-    url("#{$-icon-font-path}/Sage.eot") format("embedded-opentype");
+  src: url("#{$-icon-font-path}/Sage.woff?v=#{$-icon-font-version}");
+  src: url("#{$-icon-font-path}/Sage.woff?v=#{$-icon-font-version}") format("woff"),
+    url("#{$-icon-font-path}/Sage.ttf?v=#{$-icon-font-version}") format("truetype"),
+    url("#{$-icon-font-path}/Sage.svg?v=#{$-icon-font-version}") format("svg"),
+    url("#{$-icon-font-path}/Sage.eot?v=#{$-icon-font-version}") format("embedded-opentype");
   font-weight: normal;
   font-style: normal;
   font-display: block;
