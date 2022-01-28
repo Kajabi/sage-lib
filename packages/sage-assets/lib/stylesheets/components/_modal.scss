@@ -71,7 +71,7 @@ $-modal-fullscreen-top-spacing: rem(104px);
   width: calc(100vw - #{sage-spacing(md)});
   max-width: sage-container(md);
   margin: 0;
-  border-radius: sage-border(radius);
+  border-radius: sage-border(radius-large);
   background-color: sage-color(white);
   box-shadow: sage-shadow(modal);
   transition: opacity 0.1s ease-in 0.1s;
