@@ -56,17 +56,15 @@
 
   <%= sage_component SageTabsPane, { id: "feature-5" } do %>
     <%= render "mocks/payments_index/page_heading", show_settings: true %>
+    <!-- TODO: Need to enable actions slot in small variation of alert -->
     <%= sage_component SageAlert, {
       color: "warning",
       desc: "Chip Skylark failed a payment for Cancle Making 101 on Dec 6, 2021.",
       icon_name: "sage-icon-warning",
       dismissable: true,
-    } do %>
-      <!-- TODO: Need to enable actions slot in small variation of alert -->
-      <% content_for :sage_alert_actions do %>
-        <%= link_to "View details", "#TODO-failed-payment-info-url" %>
-      <% end %>
-    <% end %>
+      small: true,
+      secondary_actions: [{ value: "View details", actions: { href: "#DEVTODO-failed-payment-info-url" }}],
+    } %>
     <p>TODO: Custom banner: How to Market Your Course or Membership</p>
     <%= render "mocks/payments_index/comparison_selections_bar" %>
     <%= render "mocks/payments_index/payment_cards", with_data: true, payments_adopted: true %>
