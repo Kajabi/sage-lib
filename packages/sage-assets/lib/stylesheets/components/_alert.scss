@@ -25,7 +25,7 @@ $-alert-colors: (
   position: relative;
   margin-bottom: sage-spacing(md);
   padding: sage-spacing(sm);
-  border-radius: sage-border(radius);
+  border-radius: sage-border(radius-large);
 
   .sage-panel > & {
     margin-bottom: 0;
@@ -53,6 +53,7 @@ $-alert-colors: (
   align-items: center;
   padding: sage-spacing(xs) sage-spacing(sm);
   margin-bottom: 0;
+  border-radius: sage-border(radius);
 
   .sage-alert__icon {
     line-height: normal;

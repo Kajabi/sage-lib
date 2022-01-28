@@ -21,7 +21,7 @@ $-hero-play-icon-background-color-hover: rgba(sage-color(white, 100), 1);
   overflow: hidden;
   min-height: $-hero-min-height;
   background-color: sage-color(white);
-  border-radius: sage-border(radius);
+  border-radius: sage-border(radius-large);
   box-shadow: sage-shadow(sm);
 
   @media (max-width: sage-breakpoint(sm-max)) {
