@@ -1,0 +1,43 @@
+<%= sage_component SagePanelRow, { gap: :sm, grid_template: "st", spacer: { top: :lg, bottom: :lg }} do %>
+  <!-- TODO: Need to allow custom layouts within dropdown items -->
+  <%= sage_component SageDropdown, {
+    contained: true,
+    items: [
+      { value: "Today (Feb 12, 2022)" },
+      { value: "Month-to-date (Feb 1, 2022—Feb 12, 2022)" },
+      { value: "Previous Month (Jan 1, 2022—Jan 31, 2022)" },
+    ],
+    trigger_type: "select",
+  } do %>
+    <%= sage_component SageButton, {
+      css_classes: "sage-dropdown__trigger-selected-value",
+      icon: { style: "right", name: "caret-down" },
+      style: "secondary",
+      raised: false,
+      value: "",
+    } %>
+    <label class="sage-dropdown__trigger-label">Select date range</label>
+  <% end %>
+
+  <p class="<%= "#{SageClassnames::TYPE::BODY_XSMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_100}" %>">
+    compared to
+  </p>
+  
+  <%= sage_component SageDropdown, {
+    contained: true,
+    items: [
+      { value: "Previous period (Jan 1, 2022—Jan 31, 2022)" },
+      { value: "Previous year (Jan 1, 2022—Jan 31, 2022)" },
+    ],
+    trigger_type: "select",
+  } do %>
+    <%= sage_component SageButton, {
+      css_classes: "sage-dropdown__trigger-selected-value",
+      icon: { style: "right", name: "caret-down" },
+      raised: false,
+      style: "secondary",
+      value: "",
+    } %>
+    <label class="sage-dropdown__trigger-label">Select date range</label>
+  <% end %>
+<% end %>

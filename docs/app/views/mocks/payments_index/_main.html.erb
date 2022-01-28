@@ -1,0 +1,71 @@
+<div class="sage-tabs-container">
+  <%= sage_component SageTabs, {
+    id: "example-tabs1",
+    items: [
+      {
+        text: "Connected, no payments",
+        target: "feature-1",
+        active: true
+      },
+      {
+        text: "Offer, no sales",
+        target: "feature-2",
+      },
+      {
+        text: "Offer, with sales",
+        target: "feature-3",
+      },
+      {
+        text: "PAYMENTS, not adopted",
+        target: "feature-4",
+      },
+      {
+        text: "PAYMENTS, adopted",
+        target: "feature-5",
+      },
+    ]
+  } %>
+
+  <%= sage_component SageTabsPane, { id: "feature-1" } do %>
+    <%= render "mocks/payments_index/page_heading", show_settings: false %>
+    <p>TODO: Custom banner: Create your first offer</p>
+    <%= render "mocks/payments_index/comparison_selections_bar" %>
+    <%= render "mocks/payments_index/payment_cards", with_data: false, payments_adopted: false %>
+  <% end %>
+
+  <%= sage_component SageTabsPane, { id: "feature-2" } do %>
+    <%= render "mocks/payments_index/page_heading", show_settings: false %>
+    <p>TODO: Custom banner: Webinar Basics: Learn how to run a successful webinar</p>
+    <%= render "mocks/payments_index/comparison_selections_bar" %>
+    <%= render "mocks/payments_index/payment_cards", with_data: false, payments_adopted: false %>
+  <% end %>
+
+  <%= sage_component SageTabsPane, { id: "feature-3" } do %>
+    <%= render "mocks/payments_index/page_heading", show_settings: false %>
+    <p>TODO: Custom banner: How to Market Your Course or Membership</p>
+    <%= render "mocks/payments_index/comparison_selections_bar" %>
+    <%= render "mocks/payments_index/payment_cards", with_data: true, payments_adopted: false %>
+  <% end %>
+
+  <%= sage_component SageTabsPane, { id: "feature-4" } do %>
+    <%= render "mocks/payments_index/page_heading", show_settings: true %>
+    <%= render "mocks/payments_index/banner" %>
+    <%= render "mocks/payments_index/comparison_selections_bar" %>
+    <%= render "mocks/payments_index/payment_cards", with_data: true, payments_adopted: false %>
+  <% end %>
+
+  <%= sage_component SageTabsPane, { id: "feature-5" } do %>
+    <%= render "mocks/payments_index/page_heading", show_settings: true %>
+    <!-- TODO: Need to enable actions slot in small variation of alert -->
+    <%= sage_component SageAlert, {
+      color: "warning",
+      desc: "Chip Skylark failed a payment for Cancle Making 101 on Dec 6, 2021.",
+      icon_name: "sage-icon-warning",
+      dismissable: true,
+      small: true,
+      secondary_actions: [{ value: "View details", actions: { href: "#DEVTODO-failed-payment-info-url" }}],
+    } %>
+    <p>TODO: Custom banner: How to Market Your Course or Membership</p>
+    <%= render "mocks/payments_index/comparison_selections_bar" %>
+    <%= render "mocks/payments_index/payment_cards", with_data: true, payments_adopted: true %>
+  <% end %>
