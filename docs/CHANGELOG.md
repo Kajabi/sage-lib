@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.41.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.40.0...@kajabi/sage@4.41.0) (2022-01-28)
+
+
+### Features
+
+* **docs:** add jira epic option to mock pages ([c81737c](https://github.com/Kajabi/sage-lib/commit/c81737ccf6517df4c3189efdeb8cefa3c3a20394))
+
+
+
+
+
 # [4.40.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.39.0...@kajabi/sage@4.40.0) (2022-01-28)
 
 
