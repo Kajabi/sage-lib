@@ -59,20 +59,20 @@ $-panel-figure-default-background-color: sage-color(grey, 100);
 }
 
 .sage-panel__figure--bleed-bottom {
-  width: calc(100% + #{2 * sage-spacing(lg)});
+  width: calc(100% + #{2 * $-panel-figure-padding});
   margin: 0 (-1 * sage-spacing(lg)) (-1 * sage-spacing(lg));
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
 
 .sage-panel__figure--bleed-sides {
-  width: calc(100% + #{2 * sage-spacing(lg)});
+  width: calc(100% + #{2 * $-panel-figure-padding});
   margin: 0 (-1 * sage-spacing(lg));
   border-radius: 0;
 }
 
 .sage-panel__figure--bleed-top {
-  width: calc(100% + #{2 * sage-spacing(lg)});
+  width: calc(100% + #{2 * $-panel-figure-padding});
   margin: (-1 * sage-spacing(lg)) (-1 * sage-spacing(lg)) 0;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
