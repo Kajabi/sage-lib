@@ -11,23 +11,23 @@
 $sage-type-pairings: (
   4xl: (
     font-size: sage-font-size(4xl, false),
-    line-height: sage-line-height(xl),
+    line-height: sage-line-height(4xl),
   ),
   3xl: (
     font-size: sage-font-size(3xl, false),
-    line-height: sage-line-height(lg),
+    line-height: sage-line-height(3xl),
   ),
   2xl: (
     font-size: sage-font-size(2xl, false),
-    line-height: sage-line-height(lg),
+    line-height: sage-line-height(2xl),
   ),
   xl: (
     font-size: sage-font-size(xl, false),
-    line-height: sage-line-height(md),
+    line-height: sage-line-height(xl),
   ),
   lg: (
     font-size: sage-font-size(lg, false),
-    line-height: sage-line-height(md),
+    line-height: sage-line-height(lg),
   ),
   md: (
     font-size: sage-font-size(md, false),
@@ -39,10 +39,6 @@ $sage-type-pairings: (
   ),
   xs: (
     font-size: sage-font-size(xs, false),
-    line-height: sage-line-height(sm),
-  ),
-  2xs: (
-    font-size: sage-font-size(2xs, false),
     line-height: sage-line-height(xs),
   ),
 );
