@@ -31,24 +31,24 @@ $sage-line-heights: (
   --sage-line-height-body-sm: #{map-get($sage-line-heights, sm)};
   --sage-line-height-body: #{map-get($sage-line-heights, md)};
   --sage-line-height-h6: #{map-get($sage-line-heights, md)};
-  --sage-line-height-h5: #{map-get($sage-line-heights, md)};
-  --sage-line-height-h4: #{map-get($sage-line-heights, md)};
-  --sage-line-height-h3: #{map-get($sage-line-heights, md)};
-  --sage-line-height-h2: #{map-get($sage-line-heights, lg)};
-  --sage-line-height-h1: #{map-get($sage-line-heights, lg)};
+  --sage-line-height-h5: #{map-get($sage-line-heights, lg)};
+  --sage-line-height-h4: #{map-get($sage-line-heights, xl)};
+  --sage-line-height-h3: #{map-get($sage-line-heights, 2xl)};
+  --sage-line-height-h2: #{map-get($sage-line-heights, 3xl)};
+  --sage-line-height-h1: #{map-get($sage-line-heights, 4xl)};
 }
 
 @media screen and (min-width: sage-breakpoint(lg-min)) {
   :root {
     // --sage-line-height-body-xs: same
     // --sage-line-height-body-sm: same
-    --sage-line-height-body: #{map-get($sage-line-heights, sm)};
-    --sage-line-height-h6: #{map-get($sage-line-heights, sm)};
+    // --sage-line-height-body: same
+    // --sage-line-height-h6: same
     // --sage-line-height-h5: same
     // --sage-line-height-h4: same
-    --sage-line-height-h3: #{map-get($sage-line-heights, lg)};
+    // --sage-line-height-h3: same
     // --sage-line-height-h2: same
-    --sage-line-height-h1: #{map-get($sage-line-heights, xl)};
+    // --sage-line-height-h1: same
   }
 }
 
