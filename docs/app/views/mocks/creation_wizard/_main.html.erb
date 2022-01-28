@@ -11,10 +11,6 @@
         text: "Product Dropdown",
         target: "feature-2",
       },
-      {
-        text: "Payment Dropdown",
-        target: "feature-3",
-      },
     ]
   } %>
   <%= sage_component SageTabsPane, { id: "feature-1" } do %>
@@ -22,8 +18,5 @@
   <% end %>
   <%= sage_component SageTabsPane, { id: "feature-2" } do %>
     <%= render "mocks/creation_wizard/product_dropdown" %>
-  <% end %>
-  <%= sage_component SageTabsPane, { id: "feature-3" } do %>
-    <%= render "mocks/creation_wizard/payment_dropdown" %>
   <% end %>
 </div>

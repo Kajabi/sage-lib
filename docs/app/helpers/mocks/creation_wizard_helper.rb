@@ -217,31 +217,4 @@ module Mocks::CreationWizardHelper
         ],
       }
   end
-
-  def creation_payment_dropdown_options
-    {
-      payment_options: [
-        {
-          icon: "circle-1",
-          icon_bg: "info",
-          type: "One-time",
-          desc: "Customer is charged only once for the product",
-        },
-        {
-          icon: "round-dollar",
-          icon_bg: "published",
-          type: "Subscription",
-          desc: "Bill customers on weekly or monthly intervals",
-        },
-        {
-          icon: "world",
-          icon_bg: "locked",
-          type: "Multi-pay",
-          desc: "Require several individual payments over time",
-          selected: true,
-        },
-      ],
-    }
-end
-
 end
