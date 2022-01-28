@@ -5,13 +5,6 @@
 )) %>
 <% end %>
 
-<%= md("
-## Coloring Type
-
-While applying colors to type on-the-fly should generally be avoided
-we do provide the following utility classes for such cases where its most practical:
-    ") %>
-
 <div class="<%= SageClassnames::TYPE_BLOCK %>">
   <p>The following spacing tokens are used throughout Sage:</p>
   <%= sage_component SageTable, {
