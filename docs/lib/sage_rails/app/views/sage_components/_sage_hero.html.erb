@@ -5,6 +5,11 @@
 
 <article class="sage-hero sage-hero--<%= size %> <%= component.generated_css_classes %>" data-js-hero <%= component.generated_html_attributes.html_safe %>>
   <div class="sage-hero__header">
+    <% if content_for? :sage_hero_branding %>
+      <div class="sage-hero__branding">
+        <%= content_for :sage_hero_branding %>
+      </div>
+    <% end %>
     <<%= html_tag %> class="sage-hero__title"><%= component.title %></<%= html_tag %>>
   </div>
   <div class="sage-hero__body">
@@ -17,8 +22,10 @@
     <% end %>
 
     <% if content_for? :sage_hero_footer_actions %>
-      <div class="sage-hero__footer-actions">
-        <%= content_for :sage_hero_footer_actions %>
+      <div class="sage-hero__footer-actions ">
+        <%= sage_component SageButtonGroup, { gap: :md } do %>
+          <%= content_for :sage_hero_footer_actions %>
+        <% end %>
       </div>
     <% end %>
   </div>
