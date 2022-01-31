@@ -1,3 +1,8 @@
+<%# 
+  JAY: FFR this whole file is the full "demo" page for dropdown;
+  I'll put my desired demos below but you can see how other aspects
+  of dropdown are demonstrated here.
+%>
 <h3 class="t-sage-heading-6">Menu Button</h3>
 <%= sage_component SageDropdown, {
   items: [{
@@ -333,4 +338,97 @@
       <% end %>
     <% end %>
   <% end %>
+<% end %>
+
+
+<%# JAY: Desired approach is demonstrated here %>
+
+<%# Option 1 (ideal): template is provided through a "content slot" %>
+<%= sage_component SageDropdown, {
+  items: [
+    {
+      value: {
+        image: "//single--image",
+        name: "One-time",
+        description: "Customer is chared...",
+      },
+      attributes: { "href": "#" },
+    },
+    {
+      value: {
+        image: "//recurring-image",
+        name: "Subscription",
+        description: "Bill customers on...",
+      },
+      attributes: { "href": "#" },
+    }, {
+      value: {
+        image: "//multiple-image",
+        name: "Multi-pay",
+        description: "Require several...",
+      },
+      attributes: { "href": "#" },
+    },
+  ],
+} do %>
+  <%= sage_component SageButton, {
+    style: "primary",
+    value: "Add An Element"
+  } %>
+
+  <%# JAY: is this even possible? %>
+  <% content_for :sage_dropdown_items_template | item | do %>
+    <div class="custom-layout-class">
+      <img src="<%= item[:value][:image] %>" alt="" />
+      <div>
+        <h3><%= item[:value][:name] %></h3>
+        <p><%= item[:value][:description] %></p>
+      </div>
+    </div>
+  <% end %>
+<% end %>
+
+<%# Option 2 (acceptable alternative): template is provided through a parameter on the component %>
+<%= sage_component SageDropdown, {
+  items: [
+    {
+      value: {
+        image: "//single--image",
+        name: "One-time",
+        description: "Customer is chared...",
+      },
+      attributes: { "href": "#" },
+    },
+    {
+      value: {
+        image: "//recurring-image",
+        name: "Subscription",
+        description: "Bill customers on...",
+      },
+      attributes: { "href": "#" },
+    }, {
+      value: {
+        image: "//multiple-image",
+        name: "Multi-pay",
+        description: "Require several...",
+      },
+      attributes: { "href": "#" },
+    },
+  ],
+  items_template: | item | {
+    %(
+      <div class="custom-layout-class">
+        <img src="#{item[:value][:image]}" alt="" />
+        <div>
+          <h3>#{item[:value][:name]}</h3>
+          <p>#{item[:value][:description]}</p>
+        </div>
+      </div>
+    )
+  }
+} do %>
+  <%= sage_component SageButton, {
+    style: "primary",
+    value: "Add An Element"
+  } %>
 <% end %>

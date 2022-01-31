@@ -240,6 +240,12 @@ It is safe to use, but should be tracked against future updates.
 ") %>
 
 <%= sage_table_for people_data, striped: true, sortable: true, responsive: true, caption: "<p>Testing <b>stuff</b></p>".html_safe do |t| %>
+  <%#
+    JAY: here is an example of a similar "templating" approach
+    that is similar to what I'd hope we can do in dropdown and elsewhere.
+    The key to me is a) passing a param representing the data we want to inject,
+    and b) the "template" in rails/markup form into which the data is injected.
+  %>
   <% t.column :initials, label: "", data_type: "checkbox" do |c| %>
     <%= sage_component SageCheckbox, {
       label_text: 'Select row',

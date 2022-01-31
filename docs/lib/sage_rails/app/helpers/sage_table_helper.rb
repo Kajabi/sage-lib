@@ -1,3 +1,7 @@
+# JAY: For reference, here's the code for the sage table helper
+# that is a partial solution for what we're after but not ideal
+# due to being very ruby-driven (we prefer HTML rails templating)
+
 module SageTableHelper
 
   class SageColumn

@@ -66,6 +66,14 @@
               role="none"
               <%= "aria-selected=true" if item[:selected] %>
             >
+
+              <%#
+                JAY: Here-ish is where I might try to insert a template rendering function
+                or slot block to output the injected data if the template is provided?
+                We'd probably do this or the content that follows in some fashion.
+                Or we may insert this solution below where the `item[:value]` is being output.
+              %>
+
               <% if item[:attributes].nil? || item[:attributes]&.keys&.include?(:href) || item[:attributes]&.keys&.include?("href") %>
                 <a
                   <% item[:attributes].each do |key, value| %>
