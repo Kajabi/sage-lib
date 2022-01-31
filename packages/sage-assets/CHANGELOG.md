@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.68.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.67.0...@kajabi/sage-assets@0.68.0) (2022-01-31)
+
+
+### Features
+
+* **assets:** remove fonts in lieue of CDN ([e694d09](https://github.com/Kajabi/sage-lib/commit/e694d09ffeed3d5081b62a054cc3b429919c38eb))
+
+
+
+
+
 # [0.67.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.66.0...@kajabi/sage-assets@0.67.0) (2022-01-26)
 
 

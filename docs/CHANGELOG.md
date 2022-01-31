@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.42.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.41.0...@kajabi/sage@4.42.0) (2022-01-31)
+
+
+### Bug Fixes
+
+* **creation wizard mock:** scopes payment wizard dropdown JS to page ([54aba26](https://github.com/Kajabi/sage-lib/commit/54aba2659455e4c2f7c3e5f79bc8ab97e4f53bf6))
+* **rails:** updates to the components helper ([f3e5ae6](https://github.com/Kajabi/sage-lib/commit/f3e5ae61d4c154344aab5f2a299478272dc97eb4))
+
+
+### Features
+
+* **creation wizard:** add markup and styling for payment dropdown ([480ccf3](https://github.com/Kajabi/sage-lib/commit/480ccf39784e6fcdb777c5912ff2d5ed3271a774))
+* **creation wizard:** add payment dropdown options to helper ([4cbbff6](https://github.com/Kajabi/sage-lib/commit/4cbbff614a865b159f58a6f61f41efcb7bb4f2ca))
+* **creation wizard:** add payment dropdown tab ([358347a](https://github.com/Kajabi/sage-lib/commit/358347abda378218fed910cc57d366ce819388dc))
+* **creation wizard:** add tab index to payment dropdown ([c35d5c0](https://github.com/Kajabi/sage-lib/commit/c35d5c09d5e5873de2b4672aa7239ed3f77c8fa6))
+
+
+
+
+
 # [4.41.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.40.0...@kajabi/sage@4.41.0) (2022-01-28)
 
 
