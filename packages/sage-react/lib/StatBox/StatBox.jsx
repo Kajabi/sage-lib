@@ -102,6 +102,7 @@ export const StatBox = ({
         <footer className="sage-stat-box__footer">
           <Button
             color={Button.COLORS.PRIMARY}
+            disabled={link.disabled}
             href={link.href}
             icon={SageTokens.ICONS.ARROW_RIGHT}
             iconPosition={Button.ICON_POSITIONS.RIGHT}
@@ -157,6 +158,7 @@ StatBox.propTypes = {
   legendDotColor: PropTypes.oneOf(Object.values(StatBox.LEGEND_COLORS)),
   legendDotCustomColor: PropTypes.string,
   link: PropTypes.shape({
+    disabled: PropTypes.bool,
     href: PropTypes.string,
     value: PropTypes.string,
   }),

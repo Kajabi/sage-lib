@@ -19,6 +19,7 @@ class SageStatBox < SageComponent
     legend_dot_color: [:optional, SageSchemas::COLORS],
     legend_dot_custom_color: [:optional, String],
     link: [:optional, {
+      disabled: [:optional, TrueClass],
       href: String,
       value: String
     }],
