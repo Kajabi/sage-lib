@@ -33,8 +33,7 @@ $-hero-play-icon-background-color-hover: rgba(sage-color(white, 100), 1);
   @media (min-width: sage-breakpoint(md-min)) {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: min-content;
-    grid-template-areas:
-      "content artwork";
+    grid-template-areas: "content artwork";
   }
 }
 
@@ -51,12 +50,12 @@ $-hero-play-icon-background-color-hover: rgba(sage-color(white, 100), 1);
 }
 
 .sage-hero__container {
-  padding-top: sage-spacing();
-  padding-bottom: sage-spacing();
-  grid-area: content;
   display: flex;
+  grid-area: content;
   flex-direction: column;
   flex: 1 1 0;
+  padding-top: sage-spacing();
+  padding-bottom: sage-spacing();
 
   @media (min-width: sage-breakpoint(md-min)) {
     padding-left: sage-spacing(md);
@@ -96,9 +95,9 @@ $-hero-play-icon-background-color-hover: rgba(sage-color(white, 100), 1);
 }
 
 .sage-hero__description {
-  margin-top: sage-spacing();
   flex: 1 1 0;
   min-width: 100%;
+  margin-top: sage-spacing();
 }
 
 .sage-hero__artwork {

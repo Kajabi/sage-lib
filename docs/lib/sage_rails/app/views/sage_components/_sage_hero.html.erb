@@ -14,7 +14,7 @@
       <<%= html_tag %> class="sage-hero__title"><%= component.title %></<%= html_tag %>>
     </div>
     <div class="sage-hero__body">
-      <% if content_for? :sage_hero_footer_actions %>
+      <% if component.description %>
         <div class="sage-hero__description">
           <%= component.description %>
         </div>
