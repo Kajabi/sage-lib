@@ -4,7 +4,6 @@ import { Hero } from './Hero';
 import { Button } from '../Button';
 import { Card } from '../Card';
 import { SageClassnames, SageTokens } from '../configs';
-import { HERO_SIZES } from './configs';
 
 export default {
   title: 'Sage/Hero',
@@ -16,14 +15,14 @@ export default {
   },
   args: {
     description: 'Get early access to new unreleased features and work along side our team by beta testing features before they go live.',
-    image : {
-      src: "//source.unsplash.com/random/28X28"
+    image: {
+      src: '//source.unsplash.com/random/28X28'
     },
     branding: (
       <>
         <Card.Row gridTemplate={SageTokens.GRID_TEMPLATES.TE}>
-          <img className="sage-hero__branding-image" src="//source.unsplash.com/random/28X28" alt="" width='28px' height='28px' />
-          <span className={`${SageClassnames.TYPE.HEADING_5}`}>Websites</span>
+          <img className="sage-hero__branding-image" src="//source.unsplash.com/random/28X28" alt="" width="28px" height="28px" />
+          <span className={`${SageClassnames.TYPE.HEADING_5}  ${SageClassnames.TYPE_COLORS.CHARCOAL_100}`}>Websites</span>
         </Card.Row>
       </>
     ),
@@ -46,7 +45,7 @@ export default {
         </Button>
       </>
     ),
-    title: "My Title",
+    title: 'My Title',
   }
 };
 const Template = (args) => <Hero {...args} />;

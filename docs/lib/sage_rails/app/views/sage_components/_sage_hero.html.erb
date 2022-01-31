@@ -20,12 +20,8 @@
         </div>
       <% end %>
 
-      <% if component.button %>
-        <%= component.button.html_safe %>
-      <% end %>
-
       <% if content_for? :sage_hero_footer_actions %>
-        <div class="sage-hero__footer-actions ">
+        <div class="sage-hero__footer-actions">
           <%= sage_component SageButtonGroup, { gap: :md } do %>
             <%= content_for :sage_hero_footer_actions %>
           <% end %>
