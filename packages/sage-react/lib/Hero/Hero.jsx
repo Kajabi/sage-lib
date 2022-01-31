@@ -12,7 +12,7 @@ export const Hero = ({
   branding,
   footerActions,
   image,
-  panelSize,
+  heroSize,
   title,
   titleTag,
   ...rest
@@ -20,7 +20,7 @@ export const Hero = ({
   const className = classnames(
     'sage-hero',
     {
-      [`sage-hero--${panelSize}`]: panelSize,
+      [`sage-hero--${heroSize}`]: heroSize,
     },
   );
 
@@ -83,7 +83,7 @@ Hero.defaultProps = {
     alt: null,
     src: null
   },
-  panelSize: Hero.Sizes.LARGE,
+  heroSize: Hero.Sizes.LARGE,
   title: null,
   titleTag: 'h2',
 };
@@ -99,7 +99,7 @@ Hero.propTypes = {
     alt: PropTypes.string,
     src: PropTypes.string
   }),
-  panelSize: PropTypes.oneOf(Hero.Sizes),
+  heroSize: PropTypes.oneOf(Hero.Sizes),
   title: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   titleTag: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6'])
 };

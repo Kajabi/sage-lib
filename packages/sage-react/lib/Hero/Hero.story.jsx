@@ -10,13 +10,13 @@ export default {
   component: Hero,
   argTypes: {
     ...selectArgs({
-      panelSize: Hero.Sizes,
+      heroSize: Hero.Sizes,
     }),
   },
   args: {
     description: 'Get early access to new unreleased features and work along side our team by beta testing features before they go live.',
     image: {
-      src: '//source.unsplash.com/random/28X28'
+      src: '//source.unsplash.com/random/600X600'
     },
     branding: (
       <>
