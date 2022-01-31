@@ -9,4 +9,8 @@ class SageHero < SageComponent
     title: [:optional, String],
     title_tag: [:optional, String],
   })
+
+  def sections
+    %w(hero_footer_actions)
+  end
 end
