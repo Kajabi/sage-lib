@@ -1,0 +1,36 @@
+<%= sage_component SageGridRow, {} do %>
+  <%= sage_component SageGridCol, { breakpoint: "md", size: "5" } do %>
+    <%= sage_component SageDropdown, {
+      css_classes: "creation-payment-dropdown",
+      html_attributes: { "tabindex": "0" },
+    } do %>
+      <%= sage_component SageCard, {} do %>
+        <%= sage_component SageCardRow, { grid_template: "ete" } do %>
+          <%= sage_component SageIcon, { icon: "circle-1", card_color: "info" } %>
+          <div class="<%= SageClassnames::TYPE::BODY %>">
+            <h2 class="<%= SageClassnames::TYPE::HEADING_6 %>">One-time</h2>
+            <p>Customer is charged only once for the product</p>
+          </div>
+          <%= sage_component SageIcon, { icon: "caret-down" } %>
+        <% end %>
+      <% end %>
+      <% content_for :sage_dropdown_custom_panel_content do %>
+        <% creation_payment_dropdown_options[:payment_options].each do | option | %>
+          <%= sage_component SagePanelRow, {
+            grid_template: "et",
+            css_classes: "#{"creation-payment-selected" if option[:selected]}",
+          } do %>
+            <%= sage_component SageIcon, { icon: option[:icon], card_color: option[:icon_bg] } %>
+            <div class="<%= SageClassnames::TYPE::BODY %>">
+              <h2 class="<%= SageClassnames::TYPE::HEADING_6 %>"><%= option[:type] %></h2>
+              <p class="<%= SageClassnames::TYPE_COLORS::CHARCOAL_200 %>"><%= option[:desc] %></p>
+            </div>
+          <% end %>
+        <% end %>
+      <% end %>
+    <% end %>
+  <% end %>
+  <%= sage_component SageGridCol, { breakpoint: "md", size: "7" } do %>
+    RIGHT SIDE CONTENT
+  <% end %>
+<% end %>
