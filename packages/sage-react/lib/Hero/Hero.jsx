@@ -83,7 +83,7 @@ Hero.defaultProps = {
     alt: null,
     src: null
   },
-  panelSize: null,
+  panelSize: Hero.Sizes.LARGE,
   title: null,
   titleTag: 'h2',
 };
