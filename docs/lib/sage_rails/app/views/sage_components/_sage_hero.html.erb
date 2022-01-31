@@ -4,30 +4,34 @@
 %>
 
 <article class="sage-hero sage-hero--<%= size %> <%= component.generated_css_classes %>" data-js-hero <%= component.generated_html_attributes.html_safe %>>
-  <div class="sage-hero__header">
-    <% if content_for? :sage_hero_branding %>
-      <div class="sage-hero__branding">
-        <%= content_for :sage_hero_branding %>
-      </div>
-    <% end %>
-    <<%= html_tag %> class="sage-hero__title"><%= component.title %></<%= html_tag %>>
-  </div>
-  <div class="sage-hero__body">
-    <p>
-      <%= component.description %>
-    </p>
+  <div class="sage-hero__container">
+    <div class="sage-hero__header">
+      <% if content_for? :sage_hero_branding %>
+        <div class="sage-hero__branding">
+          <%= content_for :sage_hero_branding %>
+        </div>
+      <% end %>
+      <<%= html_tag %> class="sage-hero__title"><%= component.title %></<%= html_tag %>>
+    </div>
+    <div class="sage-hero__body">
+      <% if content_for? :sage_hero_footer_actions %>
+        <div class="sage-hero__description">
+          <%= component.description %>
+        </div>
+      <% end %>
 
-    <% if component.button %>
-      <%= component.button.html_safe %>
-    <% end %>
+      <% if component.button %>
+        <%= component.button.html_safe %>
+      <% end %>
 
-    <% if content_for? :sage_hero_footer_actions %>
-      <div class="sage-hero__footer-actions ">
-        <%= sage_component SageButtonGroup, { gap: :md } do %>
-          <%= content_for :sage_hero_footer_actions %>
-        <% end %>
-      </div>
-    <% end %>
+      <% if content_for? :sage_hero_footer_actions %>
+        <div class="sage-hero__footer-actions ">
+          <%= sage_component SageButtonGroup, { gap: :md } do %>
+            <%= content_for :sage_hero_footer_actions %>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
   </div>
   <a
     <% component.cta_attributes.each do |key, value| %>

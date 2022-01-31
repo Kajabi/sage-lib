@@ -27,8 +27,13 @@
     title_tag: "h3"
   } do %>
     <% content_for :sage_hero_branding do %>
-      <%= image_tag "sage_icon.png", size: "28", alt: "" %>
-      <span>Websites</span>
+      <%= sage_component SageCardRow, {
+        gap: :sm,
+        grid_template: "et"
+      } do %>
+        <%= image_tag "sage_icon.png", size: "28", alt: "" %>
+        <span class="<%= SageClassnames::TYPE::HEADING_5 %>  <%= SageClassnames::TYPE_COLORS::CHARCOAL_100 %>">Websites</span>
+      <% end %>
     <% end %>
     <% content_for :sage_hero_footer_actions do %>
       <%= sage_component SageButton, {
@@ -60,8 +65,13 @@
     title_tag: "h3"
   } do %>
     <% content_for :sage_hero_branding do %>
-      <%= image_tag "sage_icon.png", size: "28", alt: "" %>
-      <span>Websites</span>
+      <%= sage_component SageCardRow, {
+        gap: :sm,
+        grid_template: "et"
+      } do %>
+        <%= image_tag "sage_icon.png", size: "28", alt: "" %>
+        <span class="<%= SageClassnames::TYPE::HEADING_5 %>  <%= SageClassnames::TYPE_COLORS::CHARCOAL_100 %>">Websites</span>
+      <% end %>
     <% end %>
     <% content_for :sage_hero_footer_actions do %>
       <%= sage_component SageButton, {
