@@ -47,6 +47,55 @@
   } %>
 <% end %>
 
+<h3 class="t-sage-heading-6">Menu Button with Custom Panel Width</h3>
+<%= sage_component SageDropdown, {
+  panel_width: "512px",
+  items: [{
+    value: "Edit",
+    icon: "pen",
+    attributes: { "href": "#" },
+  },
+  {
+    value: "Disabled link w/ tooltip",
+    icon: "pen",
+    modifiers: ["disabled"],
+    attributes: {
+      "href": "https://kajabi.com",
+      "data-js-tooltip": "Tooltip",
+      "data-js-tooltip-position": "right",
+    }
+  },
+  {
+    value: "New",
+    icon: "add",
+    style: "primary",
+    attributes: { "href": "#" },
+   }, {
+    value: "Share Element",
+    icon: "url",
+    modifiers: ["border-before"],
+    attributes: { "href": "#" },
+   }, {
+    value: "Take A Dangerous Action",
+    icon: "remove-circle",
+    style: "danger",
+    attributes: { "href": "#" },
+  }, {
+    value: "Disabled w/ Tooltip",
+    icon: "users",
+    attributes: {
+      "data-js-tooltip": "Tooltip",
+      "data-js-tooltip-position": "right"
+      },
+    modifiers: ["disabled"]
+  }
+  ]
+} do %>
+  <%= sage_component SageButton, {
+    style: "primary",
+    value: "Add An Element"
+  } %>
+<% end %>
 <h3 class="t-sage-heading-6">Dropdown menu with Headings</h3>
 <%= sage_component SageDropdown, {
   contained: true,
