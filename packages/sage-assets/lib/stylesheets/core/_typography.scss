@@ -6,7 +6,6 @@
 
 
 // Font definitions
-$-body-font-stack: "Inter", -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "Noto Sans", sans-serif;
 $-body-margin-bottom: sage-spacing(xs);
 $-headings-margin-bottom: sage-spacing(sm);
 
@@ -16,20 +15,6 @@ $-headings-margin-bottom: sage-spacing(sm);
   .t-sage-#{$spec-name} {
     @extend %t-sage-#{$spec-name};
     color: inherit;
-  }
-}
-
-body:not([class*="sage-body--disable-font"]) {
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-size-adjust: 100%;
-  color: map-get($sage-text-colors, body);
-  font-family: $-body-font-stack;
-  font-size: sage-font-size();
-
-  @supports (font-variation-settings: normal) {
-    font-family: "Inter var", $-body-font-stack;
   }
 }
 
