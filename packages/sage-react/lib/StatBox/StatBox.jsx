@@ -8,6 +8,7 @@ import { Label } from '../Label';
 import { LABEL_COLORS, LEGEND_COLORS, TYPE } from './configs'; // component configurations as needed
 
 export const StatBox = ({
+  button,
   customLabel,
   change,
   data,
@@ -16,7 +17,6 @@ export const StatBox = ({
   image,
   legendDotColor,
   legendDotCustomColor,
-  link,
   popover,
   raised,
   timeframe,
@@ -98,18 +98,19 @@ export const StatBox = ({
         </p>
         {customLabel || (change && (renderLabelStatus()))}
       </div>
-      {link && (
+      {button && (
         <footer className="sage-stat-box__footer">
           <Button
+            className="sage-stat-box__button"
             color={Button.COLORS.PRIMARY}
-            disabled={link.disabled}
-            href={link.href}
+            disabled={button.disabled}
+            href={button.href}
             icon={SageTokens.ICONS.ARROW_RIGHT}
             iconPosition={Button.ICON_POSITIONS.RIGHT}
             subtle={true}
-            className="sage-stat-box__link"
+            {...button.attributes}
           >
-            {link.value}
+            {button.value}
           </Button>
         </footer>
       )}
@@ -122,6 +123,7 @@ StatBox.LEGEND_COLORS = LEGEND_COLORS;
 StatBox.TYPE = TYPE;
 
 StatBox.defaultProps = {
+  button: null,
   change: {
     type: StatBox.TYPE.DEFAULT,
     value: null,
@@ -132,13 +134,17 @@ StatBox.defaultProps = {
   image: null,
   legendDotColor: null,
   legendDotCustomColor: null,
-  link: null,
   popover: null,
   raised: false,
   timeframe: null,
 };
 
 StatBox.propTypes = {
+  button: PropTypes.shape({
+    attributes: PropTypes.oneOf(PropTypes.object),
+    disabled: PropTypes.bool,
+    value: PropTypes.string,
+  }),
   change: PropTypes.shape({
     type: PropTypes.oneOf(Object.values(StatBox.TYPE)),
     value: PropTypes.string,
@@ -157,11 +163,6 @@ StatBox.propTypes = {
   }),
   legendDotColor: PropTypes.oneOf(Object.values(StatBox.LEGEND_COLORS)),
   legendDotCustomColor: PropTypes.string,
-  link: PropTypes.shape({
-    disabled: PropTypes.bool,
-    href: PropTypes.string,
-    value: PropTypes.string,
-  }),
   popover: PropTypes.node,
   raised: PropTypes.bool,
   timeframe: PropTypes.string,

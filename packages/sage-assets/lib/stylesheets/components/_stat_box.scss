@@ -64,7 +64,7 @@ $-stat-box-image-max-width: rem(48px);
 }
 
 .sage-stat-box__header,
-.sage-stat-box__link,
+.sage-stat-box__button,
 .sage-stat-box__title {
   display: flex;
   align-items: center;
@@ -111,7 +111,7 @@ $-stat-box-image-max-width: rem(48px);
   color: sage-color(charcoal, 100);
 }
 
-.sage-stat-box__link {
+.sage-stat-box__button {
   @extend %t-sage-body-med;
   margin-top: sage-spacing(xs);
 }
