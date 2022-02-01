@@ -1,5 +1,10 @@
 class SageStatBox < SageComponent
   set_attribute_schema({
+    button: [:optional, {
+      disabled: [:optional, TrueClass],
+      value: String,
+      button_attributes: [:optional, NilClass, Hash],
+    }],
     custom_label: [:optional, NilClass, String],
     change: [:optional, {
       type: Set.new(["positive", "negative", "neutral"]),
@@ -18,11 +23,6 @@ class SageStatBox < SageComponent
     }],
     legend_dot_color: [:optional, SageSchemas::COLORS],
     legend_dot_custom_color: [:optional, String],
-    link: [:optional, {
-      disabled: [:optional, TrueClass],
-      href: String,
-      value: String
-    }],
     raised: [:optional, TrueClass],
     timeframe: [:optional, String],
     title: String,

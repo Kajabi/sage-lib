@@ -68,18 +68,16 @@ end
       <%= sage_component SageLabel, label_configs %>
     <% end %>
   </div>
-  <% if component.link.present? %>
+  <% if component.button.present? %>
     <footer class="sage-stat-box__footer">
       <%= sage_component SageButton, {
+        css_classes: "sage-stat-box__link",
         style: "primary",
         subtle: true,
-        disabled: component.link[:disabled],
-        value: component.link[:value],
+        disabled: component.button[:disabled],
+        value: component.button[:value],
         icon: { name: "arrow-right", style: "right" },
-        css_classes: "sage-stat-box__link",
-        attributes: {
-          href: component.link[:href]
-        }
+        attributes: component.button[:button_attributes]
       } %>
     </footer>
   <% end %>
