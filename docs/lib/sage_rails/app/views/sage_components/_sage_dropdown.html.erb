@@ -24,7 +24,15 @@
   >
     <%= component.content %>
   </div>
-  <div class="sage-dropdown__panel">
+  <div 
+    class="
+      sage-dropdown__panel
+      <%= "sage-dropdown__panel--custom-width" if component.panel_width %>
+    "
+    <% if component.panel_width %>
+      style="--custom-panel-width: <%= component.panel_width %>"
+    <% end %>
+  >
     <% if component.search %>
       <%= sage_component SageSearch, {
         placeholder: "Search",
