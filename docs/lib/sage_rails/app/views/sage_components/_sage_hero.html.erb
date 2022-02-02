@@ -37,10 +37,10 @@
   >
     <span class="sage-hero__artwork-image-container">
       <% image_options = {
-        alt: component.image_alt_text,
+        alt: component.image[:alt],
         class: "sage-hero__artwork-image"
-      }.merge((component.image_alt_text.blank? ? { "aria-hidden": true } : {})) %>
-      <%= image_tag component.image, image_options %>
+      }.merge((component.image[:alt].blank? ? { "aria-hidden": true } : {})) %>
+      <%= image_tag component.image[:src], image_options %>
     </span>
   </a>
 </article>

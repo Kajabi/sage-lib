@@ -5,7 +5,6 @@ import { Button } from '../Button';
 import { HERO_SIZES } from './configs';
 
 export const Hero = ({
-  altText,
   children,
   ctaAttributes,
   description,
@@ -73,7 +72,6 @@ export const Hero = ({
 Hero.Sizes = HERO_SIZES;
 
 Hero.defaultProps = {
-  altText: null,
   branding: null,
   ctaAttributes: null,
   children: null,
@@ -89,7 +87,6 @@ Hero.defaultProps = {
 };
 
 Hero.propTypes = {
-  altText: PropTypes.string,
   branding: PropTypes.node,
   ctaAttributes: PropTypes.node,
   children: PropTypes.node,

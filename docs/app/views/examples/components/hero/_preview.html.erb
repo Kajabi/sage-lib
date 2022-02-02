@@ -1,13 +1,15 @@
 <h2 class="t-sage-heading-6">Small</h2>
 <%= sage_component SageCardBlock, {} do %>
   <%= sage_component SageHero, {
-    image_alt_text: "Well done alt text",
     cta_attributes: {
       "data-js-modaltrigger": "cool-modal",
       href: "#",
     },
     description: "Get early access to new unreleased features and work along side our team by beta testing features before they go live.",
-    image: "card-placeholder-sm.png",
+    image: {
+      src: "card-placeholder-sm.png",
+      alt: "Well done alt text",
+    },
     hero_size: "small",
     title: "Be the first to try what Kajabi is building 1",
   } %>
@@ -16,51 +18,15 @@
 <h2 class="t-sage-heading-6">Large - with dismiss button</h2>
 <%= sage_component SageCardBlock, {} do %>
   <%= sage_component SageHero, {
-    image_alt_text: "",
     cta_attributes: {
       "data-js-modaltrigger": "cool-modal",
       href: "#",
     },
     description: "Get early access to new unreleased features and work along side our team by beta testing features before they go live.",
-    image: "card-placeholder-sm.png",
-    title: "Be the first to try what Kajabi is building 2",
-    title_tag: "h3"
-  } do %>
-    <% content_for :sage_hero_branding do %>
-      <%= sage_component SageCardRow, {
-        gap: :sm,
-        grid_template: "et"
-      } do %>
-        <%= image_tag "kajabi-logo.png", size: "28", alt: "" %>
-        <span class="<%= SageClassnames::TYPE::HEADING_5 %>  <%= SageClassnames::TYPE_COLORS::CHARCOAL_100 %>">Podcasts</span>
-      <% end %>
-    <% end %>
-    <% content_for :sage_hero_footer_actions do %>
-      <%= sage_component SageButton, {
-        subtle: true,
-        style: "secondary",
-        value: "Dismiss",
-        icon: {
-          name: "remove",
-          style: "left"
-        },
-        attributes: {
-          "data-js-hero--dismiss": ""
-        }
-      } %>
-    <% end %>
-  <% end %>
-<% end %>
-
-<%= sage_component SageCardBlock, {} do %>
-  <%= sage_component SageHero, {
-    image_alt_text: "",
-    cta_attributes: {
-      "data-js-modaltrigger": "cool-modal",
-      href: "#",
+    image: {
+      src: "card-placeholder-sm.png",
+      alt: "Well done alt text",
     },
-    description: "Get early access to new unreleased features and work along side our team by beta testing features before they go live.",
-    image: "card-placeholder-sm.png",
     title: "Be the first to try what Kajabi is building 2",
     title_tag: "h3"
   } do %>

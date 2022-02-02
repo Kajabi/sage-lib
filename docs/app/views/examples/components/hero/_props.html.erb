@@ -13,13 +13,13 @@
 <tr>
   <td><%= md('`image`') %></td>
   <td><%= md('Image for the Hero.') %></td>
-  <td><%= md('String') %></td>
-  <td><%= md('`nil`') %></td>
-</tr>
-<tr>
-  <td><%= md('`image_alt_text`') %></td>
-  <td><%= md('Sets the (`alt`) text for the Hero\'s artwork image.') %></td>
-  <td><%= md('String') %></td>
+  <td>
+      <%= md('```
+Hash<{
+  src: String,
+  alt: String
+}>
+    ') %>
   <td><%= md('`nil`') %></td>
 </tr>
 <tr>
@@ -32,7 +32,7 @@
   <td><%= md('`title`') %></td>
   <td><%= md('Sets the title for the component.') %></td>
   <td><%= md('String') %></td>
-  <td><%= md('`h2`') %></td>
+  <td><%= md('`nil`') %></td>
 </tr>
 <tr>
   <td><%= md('`title_tag`') %></td>
@@ -47,11 +47,11 @@
 <tr>
   <td><%= md('`sage_hero_branding`') %></td>
   <td><%= md('This area holds the branding elements of the hero component.') %></td>
-  <td colspan="2"><%= md('`SageBreadcrumbs`') %></td>
+  <td colspan="2"><%= md('`SageCardRow`') %></td>
 </tr>
 <tr>
   <td><%= md('`sage_hero_footer_actions`') %></td>
   <td><%= md('This area holds the action bottons at the bottom of the component.') %></td>
-  <td colspan="2"><%= md('`SageBreadcrumbs`') %></td>
+  <td colspan="2"><%= md('`SageButton`s') %></td>
 </tr>
 
