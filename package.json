@@ -75,5 +75,8 @@
     "watch:assets": "cd packages/sage-assets && yarn build:watch",
     "watch:react": "cd packages/sage-react && yarn build:watch",
     "watch:system": "cd packages/sage-system && yarn build:watch"
+  },
+  "dependencies": {
+    "@storybook/addon-a11y": "^6.4.18"
   }
 }
