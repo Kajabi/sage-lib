@@ -5,7 +5,6 @@ class SageStatBox < SageComponent
       value: String,
       button_attributes: [:optional, NilClass, Hash],
     }],
-    custom_label: [:optional, NilClass, String],
     change: [:optional, {
       type: Set.new(["positive", "negative", "neutral"]),
       value: String
@@ -28,4 +27,8 @@ class SageStatBox < SageComponent
     title: String,
     popover: [:optional, String]
   })
+
+  def sections
+    %w(stat_box_custom_label)
+  end
 end

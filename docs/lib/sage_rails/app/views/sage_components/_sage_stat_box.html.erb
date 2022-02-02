@@ -62,8 +62,10 @@ end
         <span class="sage-stat-box__timeframe"><%= component.timeframe %></span>
       <% end %>
     </p>
-    <% if component.custom_label.present? %>
-      <%= component.custom_label.html_safe %>
+    <% if content_for? :sage_stat_box_custom_label %>
+      <div class="sage-stat-box__custom-label">
+        <%= content_for :sage_stat_box_custom_label %>
+      </div>
     <% elsif component.change.present? %>
       <%= sage_component SageLabel, label_configs %>
     <% end %>
