@@ -116,6 +116,7 @@ $-hero-play-icon-background-color-hover: rgba(sage-color(white, 100), 1);
   @media (min-width: sage-breakpoint(xxl-min)) {
     .sage-hero--large & {
       width: rem(652px);
+      min-height: rem(352px);
     }
   }
 

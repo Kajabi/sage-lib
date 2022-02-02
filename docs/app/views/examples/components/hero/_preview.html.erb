@@ -5,14 +5,17 @@
       "data-js-modaltrigger": "cool-modal",
       href: "#",
     },
-    description: "Get early access to new unreleased features and work along side our team by beta testing features before they go live.",
     image: {
       src: "card-placeholder-sm.png",
       alt: "Well done alt text",
     },
     hero_size: "small",
     title: "Be the first to try what Kajabi is building 1",
-  } %>
+  } do %>
+    <% content_for :sage_hero_description do %>
+      <p>Get early access to new unreleased features and work along side our team by beta testing features before they go live.</p>
+    <% end %>
+  <% end %>
 <% end %>
 
 <h2 class="t-sage-heading-6">Large - with dismiss button</h2>
@@ -22,7 +25,6 @@
       "data-js-modaltrigger": "cool-modal",
       href: "#",
     },
-    description: "Get early access to new unreleased features and work along side our team by beta testing features before they go live.",
     image: {
       src: "card-placeholder-sm.png",
       alt: "Well done alt text",
@@ -39,6 +41,11 @@
         <span class="<%= SageClassnames::TYPE::HEADING_5 %>  <%= SageClassnames::TYPE_COLORS::CHARCOAL_100 %>">Websites</span>
       <% end %>
     <% end %>
+
+    <% content_for :sage_hero_description do %>
+      <p>Get early access to new unreleased features and work along side our team by beta testing features before they go live.</p>
+    <% end %>
+
     <% content_for :sage_hero_footer_actions do %>
       <%= sage_component SageButton, {
         style: "primary",

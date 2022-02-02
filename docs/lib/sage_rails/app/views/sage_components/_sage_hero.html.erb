@@ -14,9 +14,9 @@
       <<%= html_tag %> class="sage-hero__title"><%= component.title %></<%= html_tag %>>
     </div>
     <div class="sage-hero__body">
-      <% if component.description %>
+      <% if content_for? :sage_hero_description %>
         <div class="sage-hero__description">
-          <%= component.description %>
+          <%= content_for :sage_hero_description %>
         </div>
       <% end %>
 
