@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.69.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.68.0...@kajabi/sage-assets@0.69.0) (2022-02-02)
+
+
+### Features
+
+* **dropdown:** adds new prop for custom panel width in Dropdown component ([60838d1](https://github.com/Kajabi/sage-lib/commit/60838d1f61430187d6aad18349008f6b36b025c7))
+
+
+
+
+
 # [0.68.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.67.0...@kajabi/sage-assets@0.68.0) (2022-01-31)
 
 
