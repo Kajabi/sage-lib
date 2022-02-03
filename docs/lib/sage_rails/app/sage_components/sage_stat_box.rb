@@ -1,14 +1,5 @@
 class SageStatBox < SageComponent
   set_attribute_schema({
-    button: [:optional, {
-      disabled: [:optional, TrueClass],
-      value: String,
-      button_attributes: [:optional, NilClass, Hash],
-    }],
-    change: [:optional, {
-      type: Set.new(["positive", "negative", "neutral"]),
-      value: String
-    }],
     data: String,
     has_data: [:optional, TrueClass],
     icon: [:optional, {
@@ -25,10 +16,9 @@ class SageStatBox < SageComponent
     raised: [:optional, TrueClass],
     timeframe: [:optional, String],
     title: String,
-    popover: [:optional, String]
   })
 
   def sections
-    %w(stat_box_custom_label)
+    %w(stat_box_popover stat_box_custom_label stat_box_custom_actions)
   end
 end
