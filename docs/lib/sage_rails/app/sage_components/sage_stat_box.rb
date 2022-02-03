@@ -19,6 +19,6 @@ class SageStatBox < SageComponent
   })
 
   def sections
-    %w(stat_box_popover stat_box_custom_label stat_box_custom_actions)
+    %w(stat_box_popover stat_box_custom_label stat_box_actions)
   end
 end

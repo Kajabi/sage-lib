@@ -110,8 +110,3 @@ $-stat-box-image-max-width: rem(48px);
   margin-left: sage-spacing(xs);
   color: sage-color(charcoal, 100);
 }
-
-.sage-stat-box__button {
-  @extend %t-sage-body-med;
-  margin-top: sage-spacing(xs);
-}

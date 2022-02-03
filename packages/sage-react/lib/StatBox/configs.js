@@ -14,9 +14,3 @@ export const LEGEND_COLORS = {
   SAGE: 'sage',
   YELLOW: 'yellow'
 };
-
-export const TYPE = {
-  DEFAULT: 'neutral',
-  NEGATIVE: 'negative',
-  POSITIVE: 'positive',
-};

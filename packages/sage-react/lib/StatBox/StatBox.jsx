@@ -1,16 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { SageTokens } from '../configs';
 import { Icon } from '../Icon';
-import { Button } from '../Button';
-import { Label } from '../Label';
 import { LABEL_COLORS, LEGEND_COLORS, TYPE } from './configs'; // component configurations as needed
 
 export const StatBox = ({
-  button,
+  actions,
   customLabel,
-  change,
   data,
   hasData,
   icon,
@@ -37,28 +33,6 @@ export const StatBox = ({
       'sage-stat-box__title--legend-custom': legendDotCustomColor,
     }
   );
-  const renderLabelStatus = () => {
-    let icon = null;
-    let color;
-
-    switch (change.type) {
-      case StatBox.TYPE.POSITIVE:
-        icon = Icon.ICONS.CARET_UP;
-        color = StatBox.LABEL_COLORS.PUBLISHED;
-        break;
-      case StatBox.TYPE.NEGATIVE:
-        icon = Icon.ICONS.CARET_DOWN;
-        color = StatBox.LABEL_COLORS.DANGER;
-        break;
-      default:
-        color = StatBox.LABEL_COLORS.DRAFT;
-        break;
-    }
-
-    return (
-      <Label color={color} value={change.value} icon={icon} />
-    );
-  };
 
   return (
     <article
@@ -96,22 +70,11 @@ export const StatBox = ({
             <span className="sage-stat-box__timeframe">{timeframe}</span>
           )}
         </p>
-        {customLabel || (change && (renderLabelStatus()))}
+        {customLabel}
       </div>
-      {button && (
+      {actions && (
         <footer className="sage-stat-box__footer">
-          <Button
-            className="sage-stat-box__button"
-            color={Button.COLORS.PRIMARY}
-            disabled={button.disabled}
-            href={button.href}
-            icon={SageTokens.ICONS.ARROW_RIGHT}
-            iconPosition={Button.ICON_POSITIONS.RIGHT}
-            subtle={true}
-            {...button.attributes}
-          >
-            {button.value}
-          </Button>
+          {actions}
         </footer>
       )}
     </article>
@@ -120,14 +83,9 @@ export const StatBox = ({
 
 StatBox.LABEL_COLORS = LABEL_COLORS;
 StatBox.LEGEND_COLORS = LEGEND_COLORS;
-StatBox.TYPE = TYPE;
 
 StatBox.defaultProps = {
-  button: null,
-  change: {
-    type: StatBox.TYPE.DEFAULT,
-    value: null,
-  },
+  actions: null,
   customLabel: null,
   hasData: true,
   icon: null,
@@ -140,15 +98,7 @@ StatBox.defaultProps = {
 };
 
 StatBox.propTypes = {
-  button: PropTypes.shape({
-    attributes: PropTypes.oneOf(PropTypes.object),
-    disabled: PropTypes.bool,
-    value: PropTypes.string,
-  }),
-  change: PropTypes.shape({
-    type: PropTypes.oneOf(Object.values(StatBox.TYPE)),
-    value: PropTypes.string,
-  }),
+  actions: PropTypes.node,
   customLabel: PropTypes.node,
   data: PropTypes.string.isRequired,
   hasData: PropTypes.bool,
