@@ -28,7 +28,7 @@
         </span>
       </a>
     <% end %>
-    <% if component.help_title && component.help_link && component.help_html %>
+    <% if component.help_title.present? && component.help_link.present? && component.help_html.present? %>
       <%= sage_component SagePopover, {
         title: component.help_title,
         icon: "question-circle",
