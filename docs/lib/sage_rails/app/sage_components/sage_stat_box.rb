@@ -1,20 +1,20 @@
 class SageStatBox < SageComponent
   set_attribute_schema({
     data: String,
-    has_data: [:optional, TrueClass],
-    icon: [:optional, {
+    has_data: [:optional, NilClass, TrueClass],
+    icon: [:optional, NilClass, {
       card_color: [:optional, SageSchemas::STATUSES],
       color: [:optional, SageSchemas::COLOR_SLIDER],
       name: SageSchemas::ICON,
     }],
-    image: [:optional, {
-      alt: [:optional, String],
+    image: [:optional, NllClass, {
+      alt: [:optional, NilClass, String],
       src: String
     }],
-    legend_dot_color: [:optional, SageSchemas::COLORS],
-    legend_dot_custom_color: [:optional, String],
-    raised: [:optional, TrueClass],
-    timeframe: [:optional, String],
+    legend_dot_color: [:optional, NilClass, SageSchemas::COLORS],
+    legend_dot_custom_color: [:optional, NilClass, String],
+    raised: [:optional, NilClass, TrueClass],
+    timeframe: [:optional, NilClass, String],
     title: String,
   })
 
