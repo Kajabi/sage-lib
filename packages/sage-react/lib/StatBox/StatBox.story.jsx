@@ -1,5 +1,6 @@
 import React from 'react';
 import { selectArgs } from '../story-support/helpers';
+import { SageTokens } from '../configs';
 import { Icon } from '../Icon';
 import { StatBox } from './StatBox';
 import { Button } from '../Button';
@@ -20,10 +21,13 @@ export const Default = Template.bind({});
 Default.args = {
   actions: (
     <Button 
-      subtle={true} 
       color={Button.COLORS.PRIMARY}
+      href="#"
+      icon={SageTokens.ICONS.CARET_RIGHT}
+      iconPosition={Button.ICON_POSITIONS.RIGHT}
+      subtle={true}
     >
-      Actions
+      View More
     </Button>
   ),
   data: '4,010',

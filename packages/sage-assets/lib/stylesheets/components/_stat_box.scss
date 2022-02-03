@@ -110,3 +110,8 @@ $-stat-box-image-max-width: rem(48px);
   margin-left: sage-spacing(xs);
   color: sage-color(charcoal, 100);
 }
+
+.sage-stat-box__footer {
+  margin-top: sage-spacing(xs);
+  margin-left: sage-spacing(xs);
+}
