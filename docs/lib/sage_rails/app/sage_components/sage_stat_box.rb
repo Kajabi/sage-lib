@@ -7,7 +7,7 @@ class SageStatBox < SageComponent
       color: [:optional, SageSchemas::COLOR_SLIDER],
       name: SageSchemas::ICON,
     }],
-    image: [:optional, NllClass, {
+    image: [:optional, {
       alt: [:optional, NilClass, String],
       src: String
     }],
@@ -19,6 +19,6 @@ class SageStatBox < SageComponent
   })
 
   def sections
-    %w(stat_box_popover stat_box_custom_label stat_box_actions)
+    %w(stat_box_popover sage_stat_box_label stat_box_actions)
   end
 end

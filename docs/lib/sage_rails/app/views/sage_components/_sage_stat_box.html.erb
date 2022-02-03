@@ -45,9 +45,9 @@
         <span class="sage-stat-box__timeframe"><%= component.timeframe %></span>
       <% end %>
     </p>
-    <% if content_for? :sage_stat_box_custom_label %>
-      <div class="sage-stat-box__custom-label">
-        <%= content_for :sage_stat_box_custom_label %>
+    <% if content_for? :sage_stat_box_label %>
+      <div class="sage-stat-box__label">
+        <%= content_for :sage_stat_box_label %>
       </div>
     <% end %>
   </div>

@@ -20,7 +20,7 @@ const Template = (args) => <StatBox {...args} />;
 export const Default = Template.bind({});
 Default.args = {
   actions: (
-    <Button 
+    <Button
       color={Button.COLORS.PRIMARY}
       href="#"
       icon={SageTokens.ICONS.CARET_RIGHT}
