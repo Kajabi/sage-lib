@@ -49,7 +49,7 @@ export const Tabs = ({
 
   return (
     <div className={`sage-tabs-container ${className || ''}`}>
-      <div className={tabsClassNames} {...rest}>
+      <div className={tabsClassNames} role="tablist" {...rest}>
         {tabs.map(({
           disabled,
           id,
