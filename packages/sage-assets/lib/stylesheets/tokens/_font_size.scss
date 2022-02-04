@@ -26,15 +26,15 @@ $sage-font-sizes: (
 /// Responsive font sizes use CSS custom properties to apply a raw font size for a given breakpoint range.
 ///
 :root {
-  --sage-font-size-body-xs: #{map-get($sage-font-sizes, 2xs)};
+  --sage-font-size-body-xs: #{map-get($sage-font-sizes, xs)};
   --sage-font-size-body-sm: #{map-get($sage-font-sizes, sm)};
   --sage-font-size-body: #{map-get($sage-font-sizes, md)};
   --sage-font-size-h6: #{map-get($sage-font-sizes, md)};
-  --sage-font-size-h5: #{map-get($sage-font-sizes, md)};
-  --sage-font-size-h4: #{map-get($sage-font-sizes, lg)};
-  --sage-font-size-h3: #{map-get($sage-font-sizes, xl)};
-  --sage-font-size-h2: #{map-get($sage-font-sizes, 2xl)};
-  --sage-font-size-h1: #{map-get($sage-font-sizes, 3xl)};
+  --sage-font-size-h5: #{map-get($sage-font-sizes, lg)};
+  --sage-font-size-h4: #{map-get($sage-font-sizes, xl)};
+  --sage-font-size-h3: #{map-get($sage-font-sizes, 2xl)};
+  --sage-font-size-h2: #{map-get($sage-font-sizes, 3xl)};
+  --sage-font-size-h1: #{map-get($sage-font-sizes, 4xl)};
 }
 
 @media screen and (min-width: sage-breakpoint(lg-min)) {
