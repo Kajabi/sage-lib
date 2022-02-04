@@ -2,15 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { Icon } from '../Icon';
-import { LABEL_COLORS, LEGEND_COLORS } from './configs'; // component configurations as needed
+import { LEGEND_COLORS } from './configs'; // component configurations as needed
 
 export const StatBox = ({
   actions,
-  customLabel,
   data,
   hasData,
   icon,
   image,
+  label,
   legendDotColor,
   legendDotCustomColor,
   popover,
@@ -63,37 +63,36 @@ export const StatBox = ({
         </h2>
         {popover}
       </header>
-      <div className="sage-stat-box__body sage-grid-template-te">
+      <div className="sage-stat-box__body">
         <p className={`sage-stat-box__data ${!hasData ? 'sage-stat-box__data--no-data' : null}`}>
           {data}
           {timeframe && (
             <span className="sage-stat-box__timeframe">{timeframe}</span>
           )}
         </p>
-        {customLabel && (
-          <div className="sage-stat-box__label">
-            {customLabel}
-          </div>
-        )}
       </div>
       {actions && (
         <footer className="sage-stat-box__footer">
           {actions}
         </footer>
       )}
+      {label && (
+        <div className="sage-stat-box__label">
+          {label}
+        </div>
+      )}
     </article>
   );
 };
 
-StatBox.LABEL_COLORS = LABEL_COLORS;
 StatBox.LEGEND_COLORS = LEGEND_COLORS;
 
 StatBox.defaultProps = {
   actions: null,
-  customLabel: null,
   hasData: true,
   icon: null,
   image: null,
+  label: null,
   legendDotColor: null,
   legendDotCustomColor: null,
   popover: null,
@@ -103,7 +102,6 @@ StatBox.defaultProps = {
 
 StatBox.propTypes = {
   actions: PropTypes.node,
-  customLabel: PropTypes.node,
   data: PropTypes.string.isRequired,
   hasData: PropTypes.bool,
   icon: PropTypes.shape({
@@ -115,6 +113,7 @@ StatBox.propTypes = {
     alt: PropTypes.string,
     src: PropTypes.string
   }),
+  label: PropTypes.node,
   legendDotColor: PropTypes.oneOf(Object.values(StatBox.LEGEND_COLORS)),
   legendDotCustomColor: PropTypes.string,
   popover: PropTypes.node,

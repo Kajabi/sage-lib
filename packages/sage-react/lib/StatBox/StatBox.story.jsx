@@ -1,9 +1,11 @@
 import React from 'react';
 import { selectArgs } from '../story-support/helpers';
 import { SageTokens } from '../configs';
-import { Icon } from '../Icon';
-import { StatBox } from './StatBox';
 import { Button } from '../Button';
+import { Icon } from '../Icon';
+import { Label } from '../Label';
+import { Popover } from '../Popover';
+import { StatBox } from './StatBox';
 
 export default {
   title: 'Sage/StatBox',
@@ -12,76 +14,91 @@ export default {
     ...selectArgs({
       legendDotColor: StatBox.LEGEND_COLORS,
     }),
+  },
+  args: {
+    actions: (
+      <Button
+        color={Button.COLORS.PRIMARY}
+        href="#"
+        icon={SageTokens.ICONS.CARET_RIGHT}
+        iconPosition={Button.ICON_POSITIONS.RIGHT}
+        subtle={true}
+      >
+        View More
+      </Button> 
+    ),
+    data: '1337',
+    label: (
+      <Label
+        color={Label.COLORS.PUBLISHED}
+        value='1 new'
+      />
+    ),
+    legendDotColor: StatBox.LEGEND_COLORS.PRIMARY,
+    popover: (
+      <Popover
+        icon={SageTokens.ICONS.QUESTION_CIRCLE}
+        iconOnly={true}
+        title='Example Popover Title'
+      >
+        Popover content
+      </Popover>
+    ),
+    timeframe: 'in last 30 days',
+    title: 'In Progress',
   }
 };
 const Template = (args) => <StatBox {...args} />;
 
 // The default story; add more as needed by duplicating this line and adjusting as needed.
 export const Default = Template.bind({});
-Default.args = {
-  actions: (
-    <Button
-      color={Button.COLORS.PRIMARY}
-      href="#"
-      icon={SageTokens.ICONS.CARET_RIGHT}
-      iconPosition={Button.ICON_POSITIONS.RIGHT}
-      subtle={true}
-    >
-      View More
-    </Button>
-  ),
-  data: '4,010',
-  timeframe: 'in last 30 days',
-  title: 'In Progress'
-};
-
-export const DefaultWithSageColorLegendDot = Template.bind({});
-DefaultWithSageColorLegendDot.args = {
-  data: '4,010',
-  legendDotColor: StatBox.LEGEND_COLORS.PRIMARY,
-  timeframe: 'in last 30 days',
-  title: 'In Progress'
-};
 
 export const DefaultWithSageCustomColorLegendDot = Template.bind({});
 DefaultWithSageCustomColorLegendDot.args = {
-  data: '242',
   legendDotCustomColor: '#cf23a9',
-  timeframe: 'in last 30 days',
-  title: 'In Progress'
 };
 
 export const DefaultRaised = Template.bind({});
 DefaultRaised.args = {
-  data: '309',
   raised: true,
-  timeframe: 'in last 30 days',
-  title: 'In Progress'
 };
 
 export const SimpleWithImage = Template.bind({});
 SimpleWithImage.args = {
-  data: '1,000',
+  actions: null,
   image: {
     alt: 'Example',
     src: 'https://via.placeholder.com/150'
   },
+  label: null,
+  legendDotColor: null,
+  popover: null,
+  timeframe: null,
   title: 'Title'
 };
 
 export const SimpleWithIcon = Template.bind({});
 SimpleWithIcon.args = {
-  data: '1,000',
+  actions: null,
   icon: {
     cardColor: Icon.CARD_COLORS.PUBLISHED,
     name: Icon.ICONS.CHECK
   },
-  title: 'Title'
+  label: null,
+  legendDotColor: null,
+  popover: null,
+  title: 'Title',
+  timeframe: null,
 };
 
 export const NullView = Template.bind({});
 NullView.args = {
+  actions: null,
   data: 'No insights to show',
   hasData: false,
-  title: 'In Progress'
+  label: null,
+  legendDotColor: null,
+  popover: null,
+  timeframe: null,
+  title: 'Completed'
 };
