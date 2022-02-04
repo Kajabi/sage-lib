@@ -70,43 +70,10 @@
 }
 
 .sage-tabs__list-item {
-  margin-right: sage-spacing(sm);
   position: relative;
+  margin-right: sage-spacing(sm);
 
   .sage-tab--active {
     background-color: sage-color(white);
-  }
-
-  &:before,
-  &:after {
-    content: '';
-    width: sage-spacing(xs);
-    height: sage-spacing(xs);
-    position: absolute;
-    bottom: -1px;
-    border: 1px solid #fff;
-    opacity: 1;
-  }
-
-  &:before {
-    left: -(sage-spacing(xs));
-    border-bottom-right-radius: sage-border(radius-large);
-    border-width: 0 1px 1px 0;
-  }
-
-  &.sage-tab--active:before {
-    box-shadow: 2px 2px 0 #fff;
-    opacity: 1;
-  }
-
-  &:after {
-    right: -(sage-spacing(xs));
-    border-bottom-left-radius: sage-border(radius-large);
-    border-width: 0 0 1px 1px;
-  }
-
-  &.sage-tab--active:after {
-    box-shadow: -2px 2px 0 #FFF;
-    opacity: 1;
   }
 }

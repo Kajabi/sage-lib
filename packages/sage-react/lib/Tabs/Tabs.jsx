@@ -17,6 +17,7 @@ export const Tabs = ({
   tabStyle,
   tabsClassName,
   useSeparator,
+  withBackground,
   ...rest
 }) => {
   const [activeId, setActiveId] = useState(initialActiveId);
@@ -28,6 +29,7 @@ export const Tabs = ({
       'sage-tabs--align-items-center': tabStyle === TAB_STYLES.CHOICE && alignItemsCenter,
       'sage-tabs--choice': tabStyle === TAB_STYLES.CHOICE,
       [`sage-tabs--layout-${tabLayout}`]: tabLayout,
+      'sage-tabs--with-background': withBackground,
     },
   );
 
@@ -112,6 +114,7 @@ Tabs.defaultProps = {
   tabStyle: TAB_STYLES.TAB,
   tabsClassName: null,
   useSeparator: false,
+  withBackground: false,
 };
 
 Tabs.propTypes = {
@@ -126,4 +129,5 @@ Tabs.propTypes = {
   tabStyle: PropTypes.oneOf(Object.values(TAB_STYLES)),
   tabsClassName: PropTypes.string,
   useSeparator: PropTypes.bool,
+  withBackground: PropTypes.bool,
 };

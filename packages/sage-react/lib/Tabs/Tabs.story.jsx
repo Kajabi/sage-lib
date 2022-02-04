@@ -166,3 +166,33 @@ export const IconAlignment = () => {
     />
   );
 };
+
+export const WithBackground = () => {
+  return (
+    <Tabs
+      useSeparator={true}
+      withBackground={true}
+      tabs={[
+        {
+          id: 'tab-1',
+          label: 'Tab 1',
+          subtext: 'Subtext content...',
+          content: 'Content 1',
+          href: '#'
+        },
+        {
+          id: 'tab-2',
+          label: 'Tab 2',
+          subtext: 'Subtext content...',
+          content: 'Content 2',
+        },
+        {
+          id: 'tab-3',
+          label: 'Tab 3',
+          subtext: 'Subtext content...',
+          content: 'Content 3',
+        },
+      ]}
+    />
+  );
+};

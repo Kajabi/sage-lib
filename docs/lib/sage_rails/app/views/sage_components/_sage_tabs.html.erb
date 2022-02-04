@@ -14,10 +14,6 @@
   <% component.items.each do |item| %>
     <% if component.style.present? && component.style === "choice" %>
       <%= sage_component SageChoice, item %>
-    <% elsif component.with_background %>
-      <div class="sage-tabs__list-item">
-        <%= sage_component SageTab, item %>
-      </div>
     <% else %>
       <%= sage_component SageTab, item %>
     <% end %>
