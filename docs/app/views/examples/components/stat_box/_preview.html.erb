@@ -1,78 +1,106 @@
 
-<h3 class="t-sage-heading-6">Default with Data</h3>
+<h3 class="t-sage-heading-6">Default with All Items</h3>
 <%= sage_component SageStatBox, {
-  button: {
-    value: "View More",
-    button_attributes: {
-      href: "#"
-    }
-  },
-  change: {
-    type: "positive",
-    value: "30%",
-  },
   data: "1,342",
   has_data: true,
+  legend_dot_color: "primary",
   timeframe: "in last 30 days",
   title: "Completed",
-} %>
-
-<h3 class="t-sage-heading-6">Default with Legend Dot - Sage Color</h3>
-<%= sage_component SageStatBox, {
-  button: {
-    value: "View More",
-    button_attributes: {
-      href: "#"
-    }
-  },
-  change: {
-    type: "positive",
-    value: "30%",
-  },
-  data: "1,342",
-  has_data: true,
-  legend_dot_color: "purple",
-  timeframe: "in last 30 days",
-  title: "Completed",
-} %>
+} do %>
+  <% content_for :sage_stat_box_popover do %>
+    <%= sage_component SagePopover, {
+      icon: "question-circle",
+      title: "Example Popover",
+      trigger_value: "Example Popover",
+      trigger_icon_only: true
+    } do %>
+      <p>Custom Popover content.</p>
+    <% end %>
+  <% end %>
+  <% content_for :sage_stat_box_label do %>
+    <%= sage_component SageLabel, {
+      color: "published",
+      value: "1 new",
+    } %>
+  <% end %>
+  <% content_for :sage_stat_box_actions do %>
+    <%= sage_component SageButton, {
+      icon: { name: "caret-right", style: "right" },
+      style: "primary",
+      subtle: true,
+      value: "View More"
+    } %>
+  <% end %>
+<% end %>
 
 <h3 class="t-sage-heading-6">Default with Legend Dot - Custom Color</h3>
 <%= sage_component SageStatBox, {
-  button: {
-    value: "View More",
-    button_attributes: {
-      href: "#"
-    }
-  },
-  change: {
-    type: "positive",
-    value: "30%",
-  },
   data: "1,342",
   has_data: true,
-  legend_dot_custom_color: "#4fc9c5",
+  legend_dot_custom_color: "#ff5959",
   timeframe: "in last 30 days",
   title: "Completed",
-} %>
+} do %>
+  <% content_for :sage_stat_box_popover do %>
+    <%= sage_component SagePopover, {
+      icon: "question-circle",
+      title: "Example Popover",
+      trigger_value: "Example Popover",
+      trigger_icon_only: true
+    } do %>
+      <p>Custom Popover content.</p>
+    <% end %>
+  <% end %>
+  <% content_for :sage_stat_box_label do %>
+    <%= sage_component SageLabel, {
+      color: "published",
+      value: "1 new",
+    } %>
+  <% end %>
+  <% content_for :sage_stat_box_actions do %>
+    <%= sage_component SageButton, {
+      icon: { name: "caret-right", style: "right" },
+      style: "primary",
+      subtle: true,
+      value: "View More"
+    } %>
+  <% end %>
+<% end %>
 
-<h3 class="t-sage-heading-6">Default with Data - Raised</h3>
+<h3 class="t-sage-heading-6">Raised</h3>
 <%= sage_component SageStatBox, {
-  button: {
-    value: "View More",
-    button_attributes: {
-      href: "#"
-    }
-  },
-  change: {
-    type: "positive",
-    value: "30%",
-  },
   data: "1,342",
   has_data: true,
+  legend_dot_color: "primary",
   raised: true,
   timeframe: "in last 30 days",
   title: "Completed",
-} %>
+} do %>
+  <% content_for :sage_stat_box_popover do %>
+    <%= sage_component SagePopover, {
+      icon: "question-circle",
+      title: "Example Popover",
+      trigger_value: "Example Popover",
+      trigger_icon_only: true
+    } do %>
+      <p>Custom Popover content.</p>
+    <% end %>
+  <% end %>
+  <% content_for :sage_stat_box_label do %>
+    <%= sage_component SageLabel, {
+      color: "published",
+      value: "1 new",
+    } %>
+  <% end %>
+  <% content_for :sage_stat_box_actions do %>
+    <%= sage_component SageButton, {
+      icon: { name: "caret-right", style: "right" },
+      style: "primary",
+      subtle: true,
+      value: "View More"
+    } %>
+  <% end %>
+<% end %>
 
 <h3 class="t-sage-heading-6">Simple with Image</h3>
 <%= sage_component SageStatBox, {
