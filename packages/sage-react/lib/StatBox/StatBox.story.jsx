@@ -25,13 +25,13 @@ export default {
         subtle={true}
       >
         View More
-      </Button> 
+      </Button>
     ),
     data: '1337',
     label: (
       <Label
         color={Label.COLORS.PUBLISHED}
-        value='1 new'
+        value="1 new"
       />
     ),
     legendDotColor: StatBox.LEGEND_COLORS.PRIMARY,
@@ -39,7 +39,7 @@ export default {
       <Popover
         icon={SageTokens.ICONS.QUESTION_CIRCLE}
         iconOnly={true}
-        title='Example Popover Title'
+        title="Example Popover Title"
       >
         Popover content
       </Popover>
