@@ -70,7 +70,11 @@ export const StatBox = ({
             <span className="sage-stat-box__timeframe">{timeframe}</span>
           )}
         </p>
-        {customLabel}
+        {customLabel && (
+          <div className="sage-stat-box__label">
+            {customLabel}
+          </div>
+        )}
       </div>
       {actions && (
         <footer className="sage-stat-box__footer">

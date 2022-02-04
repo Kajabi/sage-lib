@@ -37,7 +37,7 @@
       <%= content_for :sage_stat_box_popover %>
     <% end %>
   </header>
-  <div class="sage-stat-box__body sage-grid-template-te">
+  <div class="sage-stat-box__body">
     <p class="sage-stat-box__data
     <%= "sage-stat-box__data--no-data" if !component.has_data %>">
       <%= component.data %>
@@ -45,15 +45,15 @@
         <span class="sage-stat-box__timeframe"><%= component.timeframe %></span>
       <% end %>
     </p>
-    <% if content_for? :sage_stat_box_label %>
-      <div class="sage-stat-box__label">
-        <%= content_for :sage_stat_box_label %>
-      </div>
-    <% end %>
   </div>
   <% if content_for? :sage_stat_box_actions %>
     <footer class="sage-stat-box__footer">
       <%= content_for :sage_stat_box_actions %>
     </footer>
+  <% end %>
+  <% if content_for? :sage_stat_box_label %>
+    <div class="sage-stat-box__label">
+      <%= content_for :sage_stat_box_label %>
+    </div>
   <% end %>
 </article>

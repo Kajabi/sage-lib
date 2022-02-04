@@ -9,6 +9,11 @@ $-stat-box-image-max-width: rem(48px);
 .sage-stat-box {
   // Styles here
   @include sage-card($grid: false);
+  display: grid;
+  grid-template-areas:
+    "header ."
+    "body label"
+    "footer .";
   padding: rem(18px) sage-spacing(sm);
   background-color: sage-color(white);
 
@@ -53,6 +58,12 @@ $-stat-box-image-max-width: rem(48px);
 
 .sage-stat-box__footer {
   grid-area: footer;
+}
+
+.sage-stat-box__label {
+  grid-area: label;
+  align-self: center;
+  justify-self: end;
 }
 
 .sage-stat-box__body,
