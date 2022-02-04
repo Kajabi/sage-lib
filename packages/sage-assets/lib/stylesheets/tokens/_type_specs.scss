@@ -38,49 +38,49 @@ $-t-body-xsmall-spec: (
 $sage-type-specs: (
   // Headings
   "heading-1": (
-    kerning: sage-letter-spacing(sm),
+    kerning: sage-letter-spacing(md),
     responsive: true,
     type-pairing: h1,
     weight: sage-font-weight(bold),
   ),
   "heading-2": (
-    kerning: sage-letter-spacing(sm),
+    kerning: sage-letter-spacing(md),
     responsive: true,
     type-pairing: h2,
     weight: sage-font-weight(bold),
   ),
   "heading-3": (
-    kerning: sage-letter-spacing(sm),
+    kerning: sage-letter-spacing(xs),
     responsive: true,
     type-pairing: h3,
     weight: sage-font-weight(bold),
   ),
   "heading-4": (
-    kerning: sage-letter-spacing(sm),
+    kerning: sage-letter-spacing(xs),
     responsive: true,
     type-pairing: h4,
     weight: sage-font-weight(regular),
   ),
   "heading-5": (
-    kerning: sage-letter-spacing(sm),
+    // kerning: sage-letter-spacing(sm),
     responsive: true,
     type-pairing: h5,
     weight: sage-font-weight(regular),
   ),
   "heading-6": (
-    kerning: sage-letter-spacing(sm),
+    // kerning: sage-letter-spacing(sm),
     responsive: true,
     type-pairing: h6,
     weight: sage-font-weight(regular),
   ),
   "nav": (
-    kerning: sage-letter-spacing(sm),
+    // kerning: sage-letter-spacing(sm),
     responsive: false,
     type-pairing: md,
     weight: sage-font-weight(medium),
   ),
   "nav-sub": (
-    kerning: sage-letter-spacing(sm),
+    // kerning: sage-letter-spacing(sm),
     responsive: false,
     type-pairing: sm,
     weight: sage-font-weight(medium),
