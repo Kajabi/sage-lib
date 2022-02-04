@@ -53,6 +53,24 @@ $-tab-color-disabled: map-get($sage-tab-colors, disabled);
 
   @include sage-tab-underline;
 
+  //sage-tab-underline overrides for the with_background variation
+
+  .sage-tabs--with-background & {
+    padding-top: sage-spacing(2xs);
+    padding-bottom: sage-spacing(sm);
+    border-top-left-radius: sage-border(radius-large);
+    border-top-right-radius: sage-border(radius-large);
+    padding-left: sage-spacing(sm);
+    padding-right: sage-spacing(sm);
+    background-clip: padding-box;
+
+    &.sage-tab--active:after {
+      left: sage-spacing(sm);
+      right: sage-spacing(sm);
+      bottom: sage-spacing(xs);
+    }
+  }
+
   .sage-tabs &:not(:last-child) {
     margin-right: sage-spacing(sm);
   }
@@ -72,5 +90,9 @@ $-tab-color-disabled: map-get($sage-tab-colors, disabled);
         @include sage-icon-base(right-small, xl);
       }
     }
+  }
+
+  .sage-tabs--with-background &.sage-tab--active {
+    background-color: sage-color(white);
   }
 }
