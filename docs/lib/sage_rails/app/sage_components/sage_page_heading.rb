@@ -1,9 +1,9 @@
 class SagePageHeading < SageComponent
   set_attribute_schema({
-    help_html: [:optional, String],
-    help_link: [:optional, Hash],
-    help_title: [:optional, String],
-    secondary_text: [:optional, String],
+    help_html: [:optional, NilClass, String],
+    help_link: [:optional, NilClass, Hash],
+    help_title: [:optional, NilClass, String],
+    secondary_text: [:optional, NilClass, String],
     title: [:optional, String],
   })
 

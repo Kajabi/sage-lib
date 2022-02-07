@@ -146,6 +146,7 @@ $-modal-fullscreen-top-spacing: rem(104px);
 
   .sage-modal--fullscreen & {
     position: fixed;
+    z-index: sage-z-index(default, 1);
     left: 0;
     right: 0;
     margin: 0;
