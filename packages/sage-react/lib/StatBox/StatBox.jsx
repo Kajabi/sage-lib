@@ -21,6 +21,7 @@ export const StatBox = ({
   const statBoxContainer = classnames(
     'sage-stat-box',
     {
+      'sage-stat-box--no-actions': !actions,
       'sage-stat-box--raised': raised,
       'sage-stat-box--with-img': image,
       'sage-stat-box--with-icon': icon,
