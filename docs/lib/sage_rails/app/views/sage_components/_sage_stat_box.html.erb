@@ -3,6 +3,7 @@
   <%= "sage-stat-box--raised" if component.raised %>
   <%= "sage-stat-box--with-img" if component.image %>
   <%= "sage-stat-box--with-icon" if component.icon %>
+  <%= "sage-stat-box--no-actions" if !content_for :sage_stat_box_actions %>
   <%= component.generated_css_classes %>"
   <%= component.generated_html_attributes.html_safe %>
 >

@@ -34,6 +34,12 @@ $-stat-box-image-max-width: rem(48px);
   }
 }
 
+.sage-stat-box--no-actions {
+  grid-template-areas:
+    "header label"
+    "body label"
+}
+
 .sage-stat-box__img {
   position: relative;
   grid-area: image;
