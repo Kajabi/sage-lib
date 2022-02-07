@@ -11,9 +11,9 @@ $-stat-box-image-max-width: rem(48px);
   @include sage-card($grid: false);
   display: grid;
   grid-template-areas:
-    "header ."
+    "header label"
     "body label"
-    "footer .";
+    "footer label";
   padding: rem(18px) sage-spacing(sm);
   background-color: sage-color(white);
 
@@ -32,12 +32,6 @@ $-stat-box-image-max-width: rem(48px);
       "image body body";
     grid-template-columns: $-stat-box-image-max-width 1fr;
   }
-}
-
-.sage-stat-box--no-actions {
-  grid-template-areas:
-    "header label"
-    "body label";
 }
 
 .sage-stat-box__img {
