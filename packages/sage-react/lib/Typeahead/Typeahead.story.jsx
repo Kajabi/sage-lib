@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import uuid from 'react-uuid';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, number } from '@storybook/addon-knobs';
 import { centerXY } from '../story-support/decorators';
 import { SageTokens } from '../configs';
 import { Button } from '../Button';
@@ -100,13 +99,12 @@ const items = [
 ];
 
 storiesOf('Sage/Typeahead', module)
-  .addDecorator(withKnobs)
   .addDecorator(centerXY)
   .add('Default', () => (
     <div style={{ width: 500 }}>
       <Typeahead
         items={items}
-        maxResults={number('Maximum Results', 5)}
+        maxResults={5}
       />
       <p style={{ marginTop: 50 }}>
         Search for&hellip;
