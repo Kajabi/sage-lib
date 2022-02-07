@@ -24,37 +24,6 @@ body:not([class*="sage-excluded"]),
   @supports (font-variation-settings: normal) {
     font-family: "Inter var", $-body-font-stack;
   }
-
-  address {
-    margin-bottom: 0;
-    font-style: normal;
-    line-height: inherit;
-  }
-
-  a {
-    &:hover,
-    &:focus {
-      color: inherit;
-      text-decoration: none;
-    }
-  }
-
-  b,
-  strong {
-    font-weight: sage-font-weight(semibold);
-  }
-
-  hr {
-    margin: sage-spacing() 0;
-    border: 0;
-    border-top: sage-border();
-  }
-
-  mark {
-    color: sage-color-combo(warning, default, foreground);
-    background-color: sage-color-combo(warning, default, background);
-    border-radius: sage-border(radius);
-  }
 }
 
 // Automate setting up classes that extend the specs
