@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs } from '@storybook/addon-knobs';
 import { centerXY } from '../story-support/decorators';
 import { IconList } from './IconList';
 import IconListNotes from './IconListNotes.md';
@@ -106,7 +105,6 @@ const RadiosWithState = () => {
   );
 };
 storiesOf('Sage/Icon List', module)
-  .addDecorator(withKnobs)
   .addDecorator(centerXY)
   .add('Default', () => (
     <div style={{ maxWidth: '480px' }}>

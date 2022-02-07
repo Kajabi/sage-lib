@@ -384,7 +384,6 @@ export const PanelFigure = ({ aspectRatio, backgroundColor, bleed, padded }) => 
   <Grid container={Grid.CONTAINER_SIZES.LG}>
     <p className={`${SageClassnames.TYPE.BODY_SMALL} ${SageClassnames.SPACERS.MD_BOTTOM}`}>
       <strong>Note:</strong> Normally there would be other content along with the figure.
-      Content was ommitted here in order to demonstrate the bleed options through Knobs.
       Observe the space that remains inside the panel outside the figure with each setting.
     </p>
     <Panel>
