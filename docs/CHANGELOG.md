@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.43.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.43.0...@kajabi/sage@4.43.1) (2022-02-07)
+
+
+### Bug Fixes
+
+* **dropdown:** adjust attributes to allow for nil ([ae09b15](https://github.com/Kajabi/sage-lib/commit/ae09b15bd09a028e18a383488ea58bd5a9e6de02))
+* **pageheading:** adds nil option to secondary_text ([f1ed6c9](https://github.com/Kajabi/sage-lib/commit/f1ed6c99eb123cb8647bb9841526c20431b9e38b))
+* **pageheading:** adjust attributes to allow nil ([5133eca](https://github.com/Kajabi/sage-lib/commit/5133eca94be8ad3200ed5dfc4c90387be8fe4fd4))
+* **pageheading:** adjust loose check for help items in pageHeading ([fcd1436](https://github.com/Kajabi/sage-lib/commit/fcd14361d8a731dbe98bd35a5811e737e588cb39))
+
+
+
+
+
 # [4.43.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.42.0...@kajabi/sage@4.43.0) (2022-02-02)
 
 

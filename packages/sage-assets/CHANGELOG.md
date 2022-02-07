@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.69.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.69.0...@kajabi/sage-assets@0.69.1) (2022-02-07)
+
+
+### Bug Fixes
+
+* **modal:** add position relative to fullscreen modal ([1e62657](https://github.com/Kajabi/sage-lib/commit/1e626570c7b741139c8ac86cfbfc00fd82562925))
+* **modal:** fullscreen header z-index ([1c14f3a](https://github.com/Kajabi/sage-lib/commit/1c14f3aa7fc1f3119becc87ea7c55aa23a15d37c))
+
+
+
+
+
 # [0.69.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.68.0...@kajabi/sage-assets@0.69.0) (2022-02-02)
 
 
