@@ -62,25 +62,21 @@ $sage-type-specs: (
     weight: sage-font-weight(regular),
   ),
   "heading-5": (
-    // kerning: sage-letter-spacing(sm),
     responsive: true,
     type-pairing: h5,
     weight: sage-font-weight(regular),
   ),
   "heading-6": (
-    // kerning: sage-letter-spacing(sm),
     responsive: true,
     type-pairing: h6,
     weight: sage-font-weight(regular),
   ),
   "nav": (
-    // kerning: sage-letter-spacing(sm),
     responsive: false,
     type-pairing: md,
     weight: sage-font-weight(medium),
   ),
   "nav-sub": (
-    // kerning: sage-letter-spacing(sm),
     responsive: false,
     type-pairing: sm,
     weight: sage-font-weight(medium),
