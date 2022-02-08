@@ -26,6 +26,13 @@
   }
 }
 
+.sage-tabs--with-background {
+  padding-top: sage-spacing(sm);
+  padding-left: sage-spacing(xs);
+  padding-right: sage-spacing(xs);
+  background-color: sage-color(grey, 200);
+}
+
 .sage-tabs--layout-stacked {
   @include sage-grid-card();
 }
@@ -59,5 +66,14 @@
 
   &.sage-tabs-pane--panel-spacing {
     @include sage-grid-panel;
+  }
+}
+
+.sage-tabs__list-item {
+  position: relative;
+  margin-right: sage-spacing(sm);
+
+  .sage-tab--active {
+    background-color: sage-color(white);
   }
 }
