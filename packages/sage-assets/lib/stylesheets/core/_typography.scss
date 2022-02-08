@@ -135,6 +135,7 @@ body:not(.sage-excluded),
   > a:not([class]),
   > a[class*="sage-link"] {
     color: sage-color(primary, 500);
+    text-decoration: underline;
   }
 
   > table:not(:last-child) {
