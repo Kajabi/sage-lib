@@ -6,7 +6,6 @@ class SageButton < SageComponent
     disabled: [:optional, NilClass, TrueClass],
     full_width: [:optional, NilClass, TrueClass],
     icon: [:optional, { name: String, style: Set.new(["left", "right", "only"]) }],
-    raised: [:optional, NilClass, TrueClass],
     small: [:optional, NilClass, TrueClass],
     spinner_on_submit: [:optional, NilClass, String],
     style: [:optional, NilClass, Set.new(["primary", "secondary", "danger"])],
