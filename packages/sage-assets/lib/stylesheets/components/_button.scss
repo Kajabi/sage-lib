@@ -400,12 +400,12 @@ $-btn-loading-min-height: rem(36px);
     &:not(.sage-btn--subtle):not(:disabled):not([aria-disabled="true"]) {
       box-shadow: $-btn-shadow-base;
 
-      &.sage-btn--no-shadow {
-        box-shadow: none;
-      }
-      &.sage-btn--raised {
-        box-shadow: $-btn-shadow-base;
-      }
+      // &.sage-btn--no-shadow {
+      //   box-shadow: none;
+      // }
+      // &.sage-btn--raised {
+      //   box-shadow: $-btn-shadow-base;
+      // }
 
       .sage-toolbar > &:hover,
       .sage-toolbar > .sage-dropdown .sage-dropdown__trigger &:hover,

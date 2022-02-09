@@ -20,7 +20,6 @@ export default {
         <Button
           className="sage-alert__primary-action"
           color="secondary"
-          raised={false}
         >
           Get unlimited pages
         </Button>
