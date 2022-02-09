@@ -27,10 +27,10 @@ export const Dropdown = ({
   label,
   onEscapeHook,
   panelModifier,
-  panelMaxWidth,
   panelSize,
   panelStateToken,
   panelType,
+  panelWidth,
   triggerButtonSubtle,
   triggerModifier,
 }) => {
@@ -149,11 +149,11 @@ export const Dropdown = ({
       </DropdownTrigger>
       {isActive && (
         <DropdownPanel
-          maxWidth={panelMaxWidth}
           modifier={panelModifier}
           onClickScreen={onClickScreen}
           onExit={onExit}
           coords={coords}
+          width={panelWidth}
         >
           {children}
         </DropdownPanel>
@@ -188,11 +188,11 @@ Dropdown.defaultProps = {
   isLabelVisible: true,
   isPinned: false,
   onEscapeHook: () => false,
-  panelMaxWidth: null,
   panelModifier: 'default',
   panelSize: DROPDOWN_PANEL_SIZES.DEFAULT,
   panelStateToken: null,
   panelType: null,
+  panelWidth: null,
   triggerButtonSubtle: false,
   triggerModifier: 'default',
   label: null
@@ -214,11 +214,11 @@ Dropdown.propTypes = {
   isPinned: PropTypes.bool,
   label: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   onEscapeHook: PropTypes.func,
-  panelMaxWidth: PropTypes.string,
   panelModifier: PropTypes.string,
   panelSize: PropTypes.oneOf(Object.values(Dropdown.PANEL_SIZES)),
   panelType: PropTypes.oneOf(Object.values(Dropdown.PANEL_TYPES)),
   panelStateToken: PropTypes.string,
+  panelWidth: PropTypes.string,
   triggerButtonSubtle: PropTypes.bool,
   triggerModifier: PropTypes.string,
 };

@@ -7,10 +7,10 @@ import classnames from 'classnames';
 export const DropdownPanel = ({
   children,
   coords,
-  maxWidth,
   modifier,
   onClickScreen,
   onExit,
+  width,
 }) => {
   const menuEl = useRef(null);
   const classNames = classnames(
@@ -35,7 +35,7 @@ export const DropdownPanel = ({
       onClick={handlePanelClick}
       role="dialog"
       style={{
-        maxWidth,
+        width,
         ...positioningCoords
       }}
     >
@@ -47,10 +47,10 @@ export const DropdownPanel = ({
 DropdownPanel.defaultProps = {
   coords: null,
   children: null,
-  maxWidth: null,
   modifier: null,
   onClickScreen: (evt) => evt,
   onExit: (evt) => evt,
+  width: null,
 };
 
 DropdownPanel.propTypes = {
@@ -66,8 +66,8 @@ DropdownPanel.propTypes = {
       PropTypes.string,
     ]),
   }),
-  maxWidth: PropTypes.string,
   modifier: PropTypes.string,
   onClickScreen: PropTypes.func,
   onExit: PropTypes.func,
+  width: PropTypes.string,
 };
