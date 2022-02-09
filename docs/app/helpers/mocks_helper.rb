@@ -12,7 +12,7 @@ module MocksHelper
 
   # Jira URLs
   JIRA_BASE_URL = "https://kajabi.atlassian.net/"
-  
+
   # Storybook live URL
   STORYBOOK_BASE_URL = "https://sage-lib-storybook.herokuapp.com"
 
@@ -81,6 +81,14 @@ module MocksHelper
         alias: "payments_index",
         jira_epic: "SAGE-172",
         name: "Payments Index",
+        no_rails_js: true,
+        status: DOING,
+        team: "Commerce",
+      },
+      {
+        alias: "customize_columns",
+        jira_epic: "SAGE-180",
+        name: "Table Settings Modal",
         no_rails_js: true,
         status: DOING,
         team: "Commerce",
