@@ -46,7 +46,6 @@ export const Profile = ({ avatarImage, email, initials, name }) => (
               href={href}
               icon={icon}
               iconOnly={true}
-              raised={false}
             >
               {label}
             </Button>
