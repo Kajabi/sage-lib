@@ -66,7 +66,7 @@ module SageSchemas
     modifiers: [:optional, [[Set.new(["disabled", "border-before", "border-after", nil])]]],
     selected: [:optional, TrueClass],
     style: [:optional, NilClass, Set.new(["primary", "danger", "muted"])],
-    value: String,
+    value: [:optional, {}, String],
   }
 
   PANEL_FIGURE = {

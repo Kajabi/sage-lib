@@ -110,6 +110,7 @@ Sage.dropdown = (function () {
     const eventIsOnDropdownItem = el.classList.contains(dropdownItemClass);
     if (eventIsOnDropdownItem && elTrigger) {
       const val = (el.value || el.textContent).trim();
+      console.log('selected value', val);
       updateTriggerLabel(val, elTrigger);
       updateStateClass(val, elDropdown);
     }

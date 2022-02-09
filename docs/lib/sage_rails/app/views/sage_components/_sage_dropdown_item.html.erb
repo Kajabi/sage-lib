@@ -1,0 +1,58 @@
+<li class="
+    sage-dropdown__item
+    <%= "sage-dropdown__item--heading" if component.is_heading %>
+    <% component.modifiers&.each do |item_modifier| %>
+      <%= "sage-dropdown__item--#{item_modifier}" if item_modifier %>
+    <% end %>
+    <%= component.generated_css_classes %>
+  "
+  role="none"
+  <%= "aria-selected=true" if component.selected %>
+>
+  <% if component.is_heading %>
+    <% if component.content %>
+      <%= component.content %>
+    <% else %>
+      <%= component.value.html_safe %>
+    <% end %>
+  <% elsif component.attributes.nil? || component.attributes&.keys&.include?(:href) || component.attributes&.keys&.include?("href") %>
+    <a
+      <% component.attributes.each do |key, value| %>
+        <%= key %>="<%= value %>"
+      <% end if component.attributes&.is_a?(Hash) %>
+      role="menuitem"
+      tabindex="0"
+      class="
+        sage-dropdown__item-control
+        <%= "sage-dropdown__item-control--#{component.style}" if component.style %>
+        <%= "sage-dropdown__item-control--icon-#{component.icon}" if component.icon %>
+      "
+    >
+      <% if component.content %>
+        <%= component.content %>
+      <% else %>
+        <%= component.value.html_safe %>
+      <% end %>
+    </a>
+  <% else %>
+    <button
+      <% component.attributes.each do |key, value| %>
+        <%= key %>="<%= value %>"
+      <% end if component.attributes&.is_a?(Hash) %>
+      role="menuitem"
+      tabindex="0"
+      type="button"
+      class="
+        sage-dropdown__item-control
+        <%= "sage-dropdown__item-control--#{component.style}" if component.style %>
+        <%= "sage-dropdown__item-control--icon-#{component.icon}" if component.icon %>
+      "
+    >
+      <% if component.content %>
+        <%= component.content %>
+      <% else %>
+        <%= component.value.html_safe %>
+      <% end %>
+    </button>
+  <% end %>
+</li>
