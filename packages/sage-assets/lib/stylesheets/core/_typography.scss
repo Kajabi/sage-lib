@@ -11,19 +11,18 @@ $-body-margin-bottom: sage-spacing(xs);
 $-headings-margin-bottom: sage-spacing(sm);
 
 
-body:not([class*="sage-excluded"]),
+body:not([class~="sage-excluded"]) {
+  @include sage-font-family();
+}
+
+body:not([class~="sage-excluded"]),
 .sage-scoped {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-size-adjust: 100%;
   color: map-get($sage-text-colors, body);
-  font-family: $-body-font-stack;
   font-size: sage-font-size();
-
-  @supports (font-variation-settings: normal) {
-    font-family: "Inter var", $-body-font-stack;
-  }
 }
 
 // Automate setting up classes that extend the specs
@@ -54,6 +53,10 @@ body:not([class*="sage-excluded"]),
   --sage-line-height-h3: #{rem(map-get($sage-line-heights, md))};
   --sage-line-height-h2: #{rem(map-get($sage-line-heights, lg))};
   --sage-line-height-h1: #{rem(map-get($sage-line-heights, lg))};
+
+  * {
+    @include sage-font-family();
+  }
 }
 
 @media screen and (min-width: sage-breakpoint(lg-min)) {
