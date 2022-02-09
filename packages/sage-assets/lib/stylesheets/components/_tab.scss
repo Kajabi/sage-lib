@@ -53,6 +53,25 @@ $-tab-color-disabled: map-get($sage-tab-colors, disabled);
 
   @include sage-tab-underline;
 
+  .sage-tabs--with-background & {
+    padding: sage-spacing(2xs) sage-spacing(sm) sage-spacing(sm);
+    border-top-left-radius: sage-border(radius-large);
+    border-top-right-radius: sage-border(radius-large);
+    background-clip: padding-box;
+
+    &::after {
+      left: sage-spacing(sm);
+      right: sage-spacing(sm);
+      bottom: sage-spacing(xs);
+      opacity: 0;
+    }
+
+    &:focus::after,
+    &.sage-tab--active::after {
+      opacity: 1;
+    }
+  }
+
   .sage-tabs &:not(:last-child) {
     margin-right: sage-spacing(sm);
   }
@@ -72,5 +91,9 @@ $-tab-color-disabled: map-get($sage-tab-colors, disabled);
         @include sage-icon-base(right-small, xl);
       }
     }
+  }
+
+  .sage-tabs--with-background &.sage-tab--active {
+    background-color: sage-color(white);
   }
 }

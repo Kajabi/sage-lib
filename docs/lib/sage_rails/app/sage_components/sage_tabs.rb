@@ -7,5 +7,6 @@ class SageTabs < SageComponent
     progressbar: [:optional, TrueClass],
     stacked: [:optional, TrueClass],
     style: [:optional, Set.new(["choice"])],
+    with_background: [:optional, TrueClass],
   })
 end
