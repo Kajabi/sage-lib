@@ -21,7 +21,6 @@ export default {
         />
         <Button
           color={Button.COLORS.SECONDARY}
-          raised={false}
           icon={SageTokens.ICONS.PEN}
           iconOnly={true}
         >
@@ -46,7 +45,6 @@ export default {
           <SelectDropdown items={sampleSelectItems} />
           <Button
             color={Button.COLORS.SECONDARY}
-            raised={false}
             icon={SageTokens.ICONS.PEN}
             iconOnly={true}
           >
@@ -54,7 +52,6 @@ export default {
           </Button>
           <Button
             color={Button.COLORS.SECONDARY}
-            raised={false}
             icon={SageTokens.ICONS.TRASH}
             iconOnly={true}
           >
