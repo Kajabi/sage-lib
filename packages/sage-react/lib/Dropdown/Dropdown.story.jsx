@@ -34,8 +34,8 @@ export default {
     isLabelVisible: true,
     isPinned: false,
     label: 'Switch label',
-    panelMaxWidth: null,
     panelSize: Dropdown.PANEL_SIZES.DEFAULT,
+    panelWidth: null,
     triggerButtonSubtle: false,
     children: (
       <Dropdown.ItemList items={sampleMenuItems} />

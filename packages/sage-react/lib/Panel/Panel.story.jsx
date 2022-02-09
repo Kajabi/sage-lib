@@ -52,7 +52,7 @@ export const Default = (args) => (
               label: 'Option 3',
             }
           ]}
-          panelMaxWidth="240px"
+          panelWidth="240px"
         />
       </Panel.Header>
       <Panel.Block sageType={true}>
