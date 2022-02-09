@@ -17,7 +17,7 @@ export const DropdownPanel = ({
     'sage-dropdown__panel',
     {
       [`sage-dropdown__panel--${modifier}`]: modifier,
-      [`sage-dropdown__panel--custom-width`]: width,
+      'sage-dropdown__panel--custom-width': width,
     }
   );
 
@@ -36,7 +36,7 @@ export const DropdownPanel = ({
       onClick={handlePanelClick}
       role="dialog"
       style={{
-        "--custom-panel-width": width,
+        '--custom-panel-width': width,
         ...positioningCoords
       }}
     >
