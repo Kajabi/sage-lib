@@ -200,6 +200,15 @@ mark {
   text-decoration: line-through;
 }
 
+.t-sage--truncate-min-width {
+  min-width: 0;
+}
+
+.t-sage--truncate-parent {
+  display: inline-flex;
+  width: 100%;
+}
+
 .t-sage--truncate {
   @include truncate;
 }

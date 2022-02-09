@@ -5,3 +5,45 @@
 Use this scratchpad to test out elements and components in context. Just be sure not to commit your changes. ❤️
 ") %>
 <% end %>
+
+<%= sage_component SagePanel, {} do %>
+  <%= sage_component SagePanelRow, { grid_template: "ete" } do %>
+    <i class="sage-icon-check-circle-xl t-sage--color-sage"></i>
+    <%= sage_component SagePanelBlock, {
+      css_classes: "t-sage--truncate-min-width"
+    } do %>
+      <p class="t-sage-body-semi t-sage--truncate-parent">
+        <span class="t-sage--truncate">LoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLorem</span>
+      </p>
+      <p class="t-sage-body-small t-sage--color-grey">consectetur adipiscing elit</p>
+    <% end %>
+    <%= sage_component SageButton, {
+      value: "Options",
+      style: "secondary",
+      subtle: true,
+      icon: {
+        name: "dot-menu-horizontal",
+        style: "only"
+      }
+    } %>
+  <% end %>
+<% end %>
+
+<%= sage_component SagePanel, {} do %>
+  <%= sage_component SagePanelRow, { grid_template: "ete" } do %>
+    <i class="sage-icon-check-circle-xl t-sage--color-sage"></i>
+    <%= sage_component SagePanelBlock, {} do %>
+      <p class="t-sage-body-semi"><span class="t-sage--truncate">LoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLorem</span></p>
+      <p class="t-sage-body-small t-sage--color-grey">consectetur adipiscing elit</p>
+    <% end %>
+    <%= sage_component SageButton, {
+      value: "Options",
+      style: "secondary",
+      subtle: true,
+      icon: {
+        name: "dot-menu-horizontal",
+        style: "only"
+      }
+    } %>
+  <% end %>
+<% end %>

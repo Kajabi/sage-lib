@@ -26,9 +26,11 @@ export const PageHeading = ({
         <Breadcrumbs items={breadcrumbs} className="sage-page-heading__back" />
       </div>
     )}
-    <h1 className="sage-page-heading__title">
-      {children}
-    </h1>
+    <div className="sage-page-heading__title-wrapper">
+      <h1 className="sage-page-heading__title">
+        {children}
+      </h1>
+    </div>
     {toolbarItems && (
       <div className="sage-page-heading__toolbar">
         {toolbarItems.map((tool) => <React.Fragment key={uuid()}>{tool}</React.Fragment>)}

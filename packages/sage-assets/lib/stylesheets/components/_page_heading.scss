@@ -59,10 +59,15 @@ $-page-heading-image-height-mobile: rem(120px);
   }
 }
 
+.sage-page-heading__title-wrapper {
+  grid-area: title;
+  min-width: 0;
+  margin-right: sage-spacing(sm);
+}
+
 .sage-page-heading__title {
   @extend %t-sage-heading-1;
-  grid-area: title;
-  margin-right: sage-spacing(sm);
+  @include truncate;
 }
 
 .sage-page-heading__intro {
