@@ -8,7 +8,7 @@ item_count_text = component.item_count_label.present? ? component.item_count_lab
 <div class="
   sage-panel-controls
   <% if component.show_pagination %>sage-panel-controls--show-pagination<% end %>
-  <%= component.generated_css_classes %>" 
+  <%= component.generated_css_classes %>"
   data-js-panel-controls="<%= component.target %>"
   <%= component.generated_html_attributes.html_safe %>
 >
@@ -34,7 +34,7 @@ item_count_text = component.item_count_label.present? ? component.item_count_lab
     <div class="sage-panel-controls__default-controls">
       <% if component.show_bulk_actions %>
         <div class="sage-panel-controls__bulk-actions">
-          <%= sage_component SageCheckbox, { 
+          <%= sage_component SageCheckbox, {
             id:"panel-controls-bulk-checkbox-#{component.target}",
             label_text: item_count_text,
             checked: false,
@@ -56,7 +56,6 @@ item_count_text = component.item_count_label.present? ? component.item_count_lab
               value: "",
               css_classes: "sage-dropdown__trigger-selected-value",
               icon: { style: "right", name: "caret-down" },
-              raised: false,
             } %>
             <label class="sage-dropdown__trigger-label">Actions</label>
           <% end %>
@@ -89,7 +88,6 @@ item_count_text = component.item_count_label.present? ? component.item_count_lab
                 value: "",
                 css_classes: "sage-dropdown__trigger-selected-value",
                 icon: { style: "right", name: "caret-down" },
-                raised: false,
               } %>
               <label class="sage-dropdown__trigger-label">Sort</label>
             <% end %>
@@ -109,14 +107,12 @@ item_count_text = component.item_count_label.present? ? component.item_count_lab
                 style: "secondary",
                 icon: { name: "list-details", style: "only" },
                 css_classes: "sage-panel-controls__expand-btn",
-                raised: false,
               } %>
               <%= sage_component SageButton, {
                 value: "Collapse",
                 style: "secondary",
                 icon: { name: "list-stack", style: "only" },
                 css_classes: "sage-panel-controls__collapse-btn",
-                raised: false,
               } %>
             </div>
           <% end %>
