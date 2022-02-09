@@ -54,8 +54,9 @@ body:not([class~="sage-excluded"]),
   --sage-line-height-h2: #{rem(map-get($sage-line-heights, lg))};
   --sage-line-height-h1: #{rem(map-get($sage-line-heights, lg))};
 
-  &,
-  & * {
+  @include sage-font-family();
+
+  * {
     @include sage-font-family();
   }
 }
