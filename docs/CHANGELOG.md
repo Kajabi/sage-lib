@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.44.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.43.2...@kajabi/sage@4.44.0) (2022-02-09)
+
+
+### Bug Fixes
+
+* **mocks:** replace SageCardBlock with SagePanelBlock ([27ecd74](https://github.com/Kajabi/sage-lib/commit/27ecd74756c70a5fa2b7d669b5e84715f6485019))
+
+
+### Features
+
+* **mocks:** added table settings modal mock ([cd5b832](https://github.com/Kajabi/sage-lib/commit/cd5b83281e1167928490b55a330e745039e2e1bd))
+
+
+
+
+
 ## [4.43.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.43.1...@kajabi/sage@4.43.2) (2022-02-09)
 
 
