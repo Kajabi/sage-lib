@@ -334,7 +334,7 @@
   color: sage-color(grey, 700);
   appearance: none;
   border: rem(1px) solid sage-color(grey, 300);
-  border-radius: sage-border(radius);
+  border-radius: rem(10px);
   background: transparent;
   transition: border 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 
