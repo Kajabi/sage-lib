@@ -11,7 +11,6 @@ export const DropdownTrigger = ({
   label,
   modifier,
   onClickTrigger,
-  raisedButton,
   subtleButton,
   width,
 }) => {
@@ -43,7 +42,6 @@ export const DropdownTrigger = ({
             isLabelVisible={isLabelVisible}
             label={label}
             onClick={onClickTrigger}
-            raised={raisedButton}
             subtle={subtleButton}
           />
         )}
@@ -58,7 +56,6 @@ DropdownTrigger.defaultProps = {
   isLabelVisible: true,
   modifier: null,
   label: null,
-  raisedButton: false,
   subtleButton: false,
   width: null,
 };
@@ -71,7 +68,6 @@ DropdownTrigger.propTypes = {
   label: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   modifier: PropTypes.string,
   onClickTrigger: PropTypes.func.isRequired,
-  raisedButton: PropTypes.bool,
   subtleButton: PropTypes.bool,
   width: PropTypes.string,
 };
