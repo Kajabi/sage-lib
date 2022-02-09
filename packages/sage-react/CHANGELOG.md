@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.78.4](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.78.3...@kajabi/sage-react@0.78.4) (2022-02-09)
+
+
+### Bug Fixes
+
+* **tabs:** add role to react wrapper ([ec6de78](https://github.com/Kajabi/sage-lib/commit/ec6de789dcf446f9ff04e45c25f8ab989203dd61))
+* **tabs:** finalize tabs ([77af202](https://github.com/Kajabi/sage-lib/commit/77af202e430d82603f7478227ffda023122d4a0d))
+* **tabs:** linter ([3c806c7](https://github.com/Kajabi/sage-lib/commit/3c806c7f264f5b2816bec5b31e2d045c0b0e740f))
+
+
+
+
+
 ## [0.78.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.78.2...@kajabi/sage-react@0.78.3) (2022-02-07)
 
 

@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.69.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.69.1...@kajabi/sage-assets@0.69.2) (2022-02-09)
+
+
+### Bug Fixes
+
+* **tabs:** add rails darker background variation ([da486de](https://github.com/Kajabi/sage-lib/commit/da486de4b57826f90c52f698d0b0169112e1551d))
+* **tabs:** finalize tabs ([77af202](https://github.com/Kajabi/sage-lib/commit/77af202e430d82603f7478227ffda023122d4a0d))
+
+
+
+
+
 ## [0.69.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.69.0...@kajabi/sage-assets@0.69.1) (2022-02-07)
 
 
