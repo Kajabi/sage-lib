@@ -58,7 +58,7 @@
   @include truncate();
 
   padding: rem(6px) sage-spacing(sm);
-  color: sage-color(charcoal, 400);
+  color: sage-color(grey, 800);
   background-color: transparent;
   border: $-copy-text-border;
   border-radius: sage-border(radius);
@@ -331,7 +331,7 @@
 @mixin sage-form-field() {
   width: 100%;
   padding: sage-spacing(sm) sage-spacing(sm);
-  color: sage-color(charcoal);
+  color: sage-color(grey, 700);
   appearance: none;
   border: rem(1px) solid sage-color(grey, 300);
   border-radius: sage-border(radius);
@@ -339,7 +339,7 @@
   transition: border 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 
   @include placeholder {
-    color: sage-color(charcoal, 100);
+    color: sage-color(grey, 500);
   }
 
   &:hover:not(:disabled) {
@@ -481,7 +481,7 @@
 
   margin-top: sage-spacing(xs);
   padding-left: sage-spacing(sm);
-  color: sage-color(charcoal, 100);
+  color: sage-color(grey, 500);
 
   .sage-form-field--error & {
     color: sage-color(red);
@@ -544,7 +544,7 @@
   position: relative;
   z-index: sage-z-index(default);
   width: 100%;
-  color: sage-color(charcoal, 200);
+  color: sage-color(grey, 600);
 }
 
 ///

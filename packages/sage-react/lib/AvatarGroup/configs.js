@@ -1,6 +1,6 @@
 export const AVATAR_COLORS = {
   DEFAULT: null,
-  CHARCOAL: 'charcoal',
+  GREY: 'grey',
   PURPLE: 'purple',
   SAGE: 'sage',
   YELLOW: 'yellow',
