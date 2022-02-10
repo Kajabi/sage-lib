@@ -262,30 +262,55 @@
         }
       },
       "purple": {
+        "50": {
+          "hex": { "value": "#eee4f6" },
+          "code": { "value": "purple-50" },
+          "classname": { "value": "t-sage--color-purple-50" }
+        },
         "100": {
           "hex": { "value": "#eee4f6" },
           "code": { "value": "purple-100" },
           "classname": { "value": "t-sage--color-purple-100" }
         },
         "200": {
-          "hex": { "value": "#d9c2ef" },
+          "hex": { "value": "#eee4f6" },
           "code": { "value": "purple-200" },
           "classname": { "value": "t-sage--color-purple-200" }
         },
         "300": {
-          "hex": { "value": "#8e5ad8" },
+          "hex": { "value": "#d9c2ef" },
           "code": { "value": "purple-300" },
           "classname": { "value": "t-sage--color-purple-300" }
         },
         "400": {
-          "hex": { "value": "#50348a" },
+          "hex": { "value": "#d9c2ef" },
           "code": { "value": "purple-400" },
           "classname": { "value": "t-sage--color-purple-400" }
         },
         "500": {
-          "hex": { "value": "#381c5e" },
+          "hex": { "value": "#8e5ad8" },
           "code": { "value": "purple-500" },
           "classname": { "value": "t-sage--color-purple-500" }
+        },
+        "600": {
+          "hex": { "value": "#8e5ad8" },
+          "code": { "value": "purple-600" },
+          "classname": { "value": "t-sage--color-purple-600" }
+        },
+        "700": {
+          "hex": { "value": "#50348a" },
+          "code": { "value": "purple-700" },
+          "classname": { "value": "t-sage--color-purple-700" }
+        },
+        "800": {
+          "hex": { "value": "#381c5e" },
+          "code": { "value": "purple-800" },
+          "classname": { "value": "t-sage--color-purple-800" }
+        },
+        "900": {
+          "hex": { "value": "#381c5e" },
+          "code": { "value": "purple-900" },
+          "classname": { "value": "t-sage--color-purple-900" }
         }
       },
       "grey": {
