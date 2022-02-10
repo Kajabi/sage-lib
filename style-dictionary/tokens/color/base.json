@@ -210,30 +210,55 @@
         }
       },
       "orange": {
+        "50": {
+          "hex": { "value": "#fef1e1" },
+          "code": { "value": "orange-50" },
+          "classname": { "value": "t-sage--color-orange-50" }
+        },
         "100": {
-          "hex": { "value": "#fbefe4" },
+          "hex": { "value": "#fef1e1" },
           "code": { "value": "orange-100" },
           "classname": { "value": "t-sage--color-orange-100" }
         },
         "200": {
-          "hex": { "value": "#f7bd8b" },
+          "hex": { "value": "#fef1e1" },
           "code": { "value": "orange-200" },
           "classname": { "value": "t-sage--color-orange-200" }
         },
         "300": {
-          "hex": { "value": "#f89035" },
+          "hex": { "value": "#ffb36b" },
           "code": { "value": "orange-300" },
           "classname": { "value": "t-sage--color-orange-300" }
         },
         "400": {
-          "hex": { "value": "#a2411a" },
+          "hex": { "value": "#ffb36b" },
           "code": { "value": "orange-400" },
           "classname": { "value": "t-sage--color-orange-400" }
         },
         "500": {
-          "hex": { "value": "#5a260c" },
+          "hex": { "value": "#fb7e09" },
           "code": { "value": "orange-500" },
           "classname": { "value": "t-sage--color-orange-500" }
+        },
+        "600": {
+          "hex": { "value": "#fb7e09" },
+          "code": { "value": "orange-600" },
+          "classname": { "value": "t-sage--color-orange-600" }
+        },
+        "700": {
+          "hex": { "value": "#b3501e" },
+          "code": { "value": "orange-700" },
+          "classname": { "value": "t-sage--color-orange-700" }
+        },
+        "800": {
+          "hex": { "value": "#5a260c" },
+          "code": { "value": "orange-800" },
+          "classname": { "value": "t-sage--color-orange-800" }
+        },
+        "900": {
+          "hex": { "value": "#5a260c" },
+          "code": { "value": "orange-900" },
+          "classname": { "value": "t-sage--color-orange-900" }
         }
       },
       "purple": {
