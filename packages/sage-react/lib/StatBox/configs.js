@@ -5,6 +5,7 @@ export const LABEL_COLORS = {
 };
 
 export const LEGEND_COLORS = {
+  CHARCOAL: 'grey',
   GREY: 'grey',
   ORANGE: 'orange',
   PRIMARY: 'primary',
