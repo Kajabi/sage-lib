@@ -164,60 +164,63 @@
         }
       },
       "grey": {
+        "50": {
+          "hex": { "value": "#f9fafa" },
+          "code": { "value": "grey-50" },
+          "classname": { "value": "t-sage--color-grey-50" }
+        },
         "100": {
-          "hex": { "value": "#f8fafb" },
+          "hex": { "value": "#f6f8f8" },
           "code": { "value": "grey-100" },
           "classname": { "value": "t-sage--color-grey-100" }
         },
         "200": {
-          "hex": { "value": "#f4f8fa" },
+          "hex": { "value": "#eceeef" },
           "code": { "value": "grey-200" },
           "classname": { "value": "t-sage--color-grey-200" }
         },
         "300": {
-          "hex": { "value": "#e0e7f1" },
+          "hex": { "value": "#d3d5d9" },
           "code": { "value": "grey-300" },
           "classname": { "value": "t-sage--color-grey-300" }
         },
         "400": {
-          "hex": { "value": "#bbcad8" },
+          "hex": { "value": "#b5bac0" },
           "code": { "value": "grey-400" },
           "classname": { "value": "t-sage--color-grey-400" }
         },
         "500": {
-          "hex": { "value": "#94a6b8" },
+          "hex": { "value": "#8d939a" },
           "code": { "value": "grey-500" },
           "classname": { "value": "t-sage--color-grey-500" }
-        }
-      },
-      "charcoal": {
-        "100": {
-          "hex": { "value": "#526275" },
-          "code": { "value": "charcoal-100" },
-          "classname": { "value": "t-sage--color-charcoal-100" }
         },
-        "200": {
-          "hex": { "value": "#405264" },
-          "code": { "value": "charcoal-200" },
-          "classname": { "value": "t-sage--color-charcoal-200" }
+        "600": {
+          "hex": { "value": "#60666c" },
+          "code": { "value": "grey-600" },
+          "classname": { "value": "t-sage--color-grey-600" }
         },
-        "300": {
-          "hex": { "value": "#304050" },
-          "code": { "value": "charcoal-300" },
-          "classname": { "value": "t-sage--color-charcoal-300" }
+        "700": {
+          "hex": { "value": "#43474b" },
+          "code": { "value": "grey-700" },
+          "classname": { "value": "t-sage--color-grey-700" }
         },
-        "400": {
-          "hex": { "value": "#263240" },
-          "code": { "value": "charcoal-400" },
-          "classname": { "value": "t-sage--color-charcoal-400" }
+        "800": {
+          "hex": { "value": "#202327" },
+          "code": { "value": "grey-800" },
+          "classname": { "value": "t-sage--color-grey-800" }
         },
-        "500": {
-          "hex": { "value": "#1c2530" },
-          "code": { "value": "charcoal-500" },
-          "classname": { "value": "t-sage--color-charcoal-500" }
+        "900": {
+          "hex": { "value": "#181b20" },
+          "code": { "value": "grey-900" },
+          "classname": { "value": "t-sage--color-grey-900" }
         }
       },
       "white": {
+        "50": {
+          "hex": { "value": "#fff" },
+          "code": { "value": "white-50" },
+          "classname": { "value": "t-sage--color-white-50" }
+        },
         "100": {
           "hex": { "value": "#fff" },
           "code": { "value": "white-100" },
@@ -242,9 +245,34 @@
           "hex": { "value": "#fff" },
           "code": { "value": "white-500" },
           "classname": { "value": "t-sage--color-white-500" }
+        },
+        "600": {
+          "hex": { "value": "#fff" },
+          "code": { "value": "white-600" },
+          "classname": { "value": "t-sage--color-white-600" }
+        },
+        "700": {
+          "hex": { "value": "#fff" },
+          "code": { "value": "white-700" },
+          "classname": { "value": "t-sage--color-white-700" }
+        },
+        "800": {
+          "hex": { "value": "#fff" },
+          "code": { "value": "white-800" },
+          "classname": { "value": "t-sage--color-white-800" }
+        },
+        "900": {
+          "hex": { "value": "#fff" },
+          "code": { "value": "white-900" },
+          "classname": { "value": "t-sage--color-white-900" }
         }
       },
       "black": {
+        "50": {
+          "hex": { "value": "#000" },
+          "code": { "value": "black-50" },
+          "classname": { "value": "t-sage--color-black-50" }
+        },
         "100": {
           "hex": { "value": "#000" },
           "code": { "value": "black-100" },
@@ -269,6 +297,26 @@
           "hex": { "value": "#000" },
           "code": { "value": "black-500" },
           "classname": { "value": "t-sage--color-black-500" }
+        },
+        "600": {
+          "hex": { "value": "#000" },
+          "code": { "value": "black-600" },
+          "classname": { "value": "t-sage--color-black-600" }
+        },
+        "700": {
+          "hex": { "value": "#000" },
+          "code": { "value": "black-700" },
+          "classname": { "value": "t-sage--color-black-700" }
+        },
+        "800": {
+          "hex": { "value": "#000" },
+          "code": { "value": "black-800" },
+          "classname": { "value": "t-sage--color-black-800" }
+        },
+        "900": {
+          "hex": { "value": "#000" },
+          "code": { "value": "black-900" },
+          "classname": { "value": "t-sage--color-black-900" }
         }
       }
     }
