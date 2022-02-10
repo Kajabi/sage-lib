@@ -31,6 +31,9 @@ export const Textarea = ({
 
   return (
     <div className={classNames}>
+      {label && (
+        <label htmlFor={id} className="sage-textarea__label">{label}</label>
+      )}
       <textarea
         className="sage-textarea__field"
         id={id}
@@ -39,9 +42,6 @@ export const Textarea = ({
         value={fieldValue || value}
         {...rest}
       />
-      {label && (
-        <label htmlFor={id} className="sage-textarea__label">{label}</label>
-      )}
       {message && (
         <div className="sage-textarea__message">{message}</div>
       )}
