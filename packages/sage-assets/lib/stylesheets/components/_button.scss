@@ -35,6 +35,25 @@ $-btn-base-styles: (
       background-color: sage-color(primary, 100),
     )
   ),
+  neutral: (
+    default: (
+      color: sage-color(white),
+      background-color: sage-color(charcoal, 400),
+      ring-color: sage-color(charcoal, 200),
+    ),
+    hover: (
+      color: sage-color(white),
+      background-color: sage-color(charcoal, 500),
+    ),
+    focus: (
+      color: sage-color(white),
+      background-color: sage-color(charcoal, 400),
+    ),
+    disabled: (
+      color: sage-color(white),
+      background-color: sage-color(charcoal, 200),
+    )
+  ),
   secondary: (
     default: (
       color: sage-color(grey, 800),
