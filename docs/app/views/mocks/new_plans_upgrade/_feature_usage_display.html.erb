@@ -4,7 +4,7 @@
     <h2 class="<%= "#{SageClassnames::TYPE::HEADING_6}" %>">
       <%= feature_usage_display_current_display(usage_data) %>
     </h2>
-    <span class="<%= "#{SageClassnames::TYPE::BODY_XSMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_100}" %>">
+    <span class="<%= "#{SageClassnames::TYPE::BODY_XSMALL} #{SageClassnames::TYPE_COLORS::GREY_500}" %>">
       Limit
       <strong class="<%= "#{SageClassnames::TYPE::BODY_XSMALL_MED}" %>">
         <%= feature_usage_display_limit_display(usage_data) %>
@@ -18,10 +18,10 @@
   <% if opened %>
     <div class="sage-card-grid">
       <%= sage_component SageCardBlock, { spacer: { bottom: :xs, top: :xs } } do %>
-        <p class="<%= "#{SageClassnames::TYPE::BODY_SMALL_MED} #{SageClassnames::TYPE_COLORS::CHARCOAL}" %>">
+        <p class="<%= "#{SageClassnames::TYPE::BODY_SMALL_MED} #{SageClassnames::TYPE_COLORS::GREY_700}" %>">
           You are about to reach the maximum number of landing pages available on your current plan.
         </p>
-        <p class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL}" %>">
+        <p class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::GREY_700}" %>">
           Upgrade your plan to unlock unlimited landing pages.
         </p>
 
@@ -37,10 +37,10 @@
         <% usage_data[:data].each_with_index do | d, i | %>
           <%= sage_component SageCardDivider, {} if i > 0 %>
           <%= sage_component SageCardRow, { grid_template: "te" } do %>
-            <h3 class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_500}" %>">
+            <h3 class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::GREY_900}" %>">
               <%= d[:label] %>
             </h3>
-            <span class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_100}" %>">
+            <span class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::GREY_500}" %>">
               <%= d[:value] %>
             </span>
           <% end %>
