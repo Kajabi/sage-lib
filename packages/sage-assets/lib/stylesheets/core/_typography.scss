@@ -11,11 +11,11 @@ $-body-margin-bottom: sage-spacing(xs);
 $-headings-margin-bottom: sage-spacing(sm);
 
 
-body:not([class~="sage-excluded"]) {
+body:not(.sage-excluded) {
   @include sage-font-family();
 }
 
-body:not([class~="sage-excluded"]),
+body:not(.sage-excluded),
 .sage-scoped {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
