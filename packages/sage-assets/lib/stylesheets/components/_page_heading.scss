@@ -68,7 +68,7 @@ $-page-heading-image-height-mobile: rem(120px);
 .sage-page-heading__intro {
   grid-area: intro;
   margin-top: sage-spacing(sm);
-  color: sage-color(charcoal, 200);
+  color: sage-color(grey, 600);
 }
 
 .sage-page-heading__image {
@@ -136,7 +136,7 @@ $-page-heading-image-height-mobile: rem(120px);
   justify-content: flex-end;
   align-items: center;
   margin-top: sage-spacing(sm);
-  color: sage-color(charcoal, 200);
+  color: sage-color(grey, 600);
   font-style: italic;
   @media (max-width: sage-breakpoint()) {
     justify-content: flex-start;

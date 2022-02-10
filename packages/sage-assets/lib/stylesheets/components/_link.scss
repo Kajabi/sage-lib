@@ -40,7 +40,7 @@
     outline: 0;
 
     &::before {
-      color: sage-color(charcoal);
+      color: sage-color(grey, 700);
     }
   }
 
@@ -69,17 +69,17 @@
   display: inline-block;
   position: relative;
   padding: 0 sage-spacing(2xs);
-  color: sage-color(charcoal, 200);
+  color: sage-color(grey, 600);
   text-decoration: underline;
   border-radius: sage-border(radius-small);
 
   &:hover {
-    color: sage-color(charcoal, 400);
+    color: sage-color(grey, 800);
     text-decoration: underline;
   }
 
   &:focus {
-    color: sage-color(charcoal, 400);
+    color: sage-color(grey, 800);
     text-decoration: none;
   }
 }

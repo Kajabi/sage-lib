@@ -7,13 +7,13 @@
 
 // Colors
 $-switch-color-default: sage-color(grey, 400);
-$-switch-color-default-text: sage-color(charcoal, 300);
+$-switch-color-default-text: sage-color(grey, 700);
 $-switch-color-checked: sage-color(primary);
 $-switch-color-checked-hover: sage-color(primary, 400);
 $-switch-color-disabled: sage-color(grey, 200);
 $-switch-color-disabled-text: sage-color(grey, 400);
 $-switch-color-disabled-checked: sage-color(primary, 200);
-$-switch-color-disabled-checked-text: sage-color(charcoal, 100);
+$-switch-color-disabled-checked-text: sage-color(grey, 500);
 
 // Switch
 $-switch-label-left-spacing: sage-spacing(xs);
@@ -109,7 +109,7 @@ $-switch-focus-outline-error-color: sage-color(red, 300);
     }
 
     .sage-switch--has-border & {
-      color: sage-color(charcoal, 400);
+      color: sage-color(grey, 800);
       font-weight: sage-font-weight(semibold);
     }
 
