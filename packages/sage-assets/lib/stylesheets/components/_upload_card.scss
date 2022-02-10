@@ -157,12 +157,12 @@ $-upload-card-background-hover: sage-color(grey, 100);
   @extend %t-sage-body-small;
 
   margin-top: sage-spacing(2xs);
-  color: sage-color(charcoal, 100);
+  color: sage-color(grey, 500);
 }
 
 .sage-upload-card__text {
   @extend %t-sage-heading-6;
 
   margin-bottom: sage-spacing(2xs);
-  color: sage-color(charcoal, 400);
+  color: sage-color(grey, 800);
 }

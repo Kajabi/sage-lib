@@ -10,11 +10,11 @@
             $<%= plan[:price] %><span style="font-weight: 500">/<%= plan[:duration] %></span>
           </h2>
 
-          <h3 class="<%= "#{SageClassnames::TYPE::BODY} #{SageClassnames::TYPE_COLORS::CHARCOAL} #{SageClassnames::SPACERS::SM_BOTTOM}" %>">
+          <h3 class="<%= "#{SageClassnames::TYPE::BODY} #{SageClassnames::TYPE_COLORS::GREY_700} #{SageClassnames::SPACERS::SM_BOTTOM}" %>">
             <%= plan[:billing] %>
           </h3>
 
-          <p class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_400} #{SageClassnames::SPACERS::MD_BOTTOM}" %>">
+          <p class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::GREY_800} #{SageClassnames::SPACERS::MD_BOTTOM}" %>">
             <%= plan[:description] %>
           </p>
 
@@ -39,7 +39,7 @@
                   icon: "check",
                   size: "sm"
                 } %>
-                <span class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_400}" %>"><%= feature %></span>
+                <span class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::GREY_800}" %>"><%= feature %></span>
               <% end %>
             <% end %>
           <% end %>

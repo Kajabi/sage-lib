@@ -37,16 +37,16 @@ $-btn-base-styles: (
   ),
   secondary: (
     default: (
-      color: sage-color(charcoal, 400),
+      color: sage-color(grey, 800),
       background-color: sage-color(white),
-      ring-color: sage-color(charcoal),
+      ring-color: sage-color(grey, 700),
     ),
     hover: (
-      color: sage-color(charcoal, 400),
+      color: sage-color(grey, 800),
       background-color: sage-color(grey, 100),
     ),
     focus: (
-      color: sage-color(charcoal, 400),
+      color: sage-color(grey, 800),
       background-color: sage-color(white),
     ),
     disabled: (
@@ -85,11 +85,11 @@ $-btn-subtle-styles: (
     disabled: sage-color(primary, 200),
   ),
   secondary: (
-    default: sage-color(charcoal, 200),
-    hover: sage-color(charcoal, 200),
+    default: sage-color(grey, 600),
+    hover: sage-color(grey, 600),
     hover-background: sage-color(grey, 200),
-    focus: sage-color(charcoal, 200),
-    focus-outline: sage-color(charcoal),
+    focus: sage-color(grey, 600),
+    focus-outline: sage-color(grey, 700),
     disabled: sage-color(grey, 500),
   ),
   danger: (
@@ -459,19 +459,19 @@ $-alert-colors: (
 // Secondary styles, no shadow variation
 .sage-btn--secondary {
   &.sage-btn--no-shadow {
-    color: sage-color(charcoal, 400);
+    color: sage-color(grey, 800);
     background-color: sage-color(white);
     border: 1px solid sage-color(grey);
 
     &:hover {
-      color: sage-color(charcoal);
+      color: sage-color(grey, 700);
       background-color: sage-color(white);
       border: 1px solid sage-color(grey, 500);
     }
 
     &:focus,
     &:active {
-      color: sage-color(charcoal);
+      color: sage-color(grey, 700);
       background-color: sage-color(white);
       border: 1px solid sage-color(grey);
     }
@@ -490,14 +490,14 @@ $-alert-colors: (
         border: 1px solid sage-color($color, 200);
 
         &:hover {
-          color: sage-color(charcoal, 500);
+          color: sage-color(grey, 900);
           border-color: sage-color($color, 300);
           background-color: transparent;
         }
 
         &:focus,
         &:active {
-          color: sage-color(charcoal, 400);
+          color: sage-color(grey, 800);
           border-color: sage-color($color, 200);
           background-color: transparent;
         }
@@ -604,7 +604,7 @@ $-alert-colors: (
 
 
   &.sage-alert__secondary-action {
-    color: sage-color(charcoal, 400);
+    color: sage-color(grey, 800);
     text-decoration: underline;
     border: 0;
 
@@ -621,7 +621,7 @@ $-alert-colors: (
 
           &:focus,
           &:active {
-            color: sage-color(charcoal, 400);
+            color: sage-color(grey, 800);
             border-color: sage-color($color, 200);
           }
 

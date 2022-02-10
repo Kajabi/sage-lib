@@ -91,7 +91,7 @@ $-popover-panel-offset: sage-spacing(sm);
   @extend %t-sage-body-small;
   @include sage-grid-stack();
 
-  color: sage-color(charcoal, 200);
+  color: sage-color(grey, 600);
 }
 
 .sage-popover__media {

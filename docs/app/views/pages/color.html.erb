@@ -29,7 +29,7 @@ with a 4.5:1 passing grade at the bare minimum.
 
 You will notice **pure black is not used at all as a text color**.
 Instead, we rely on 400 for our darkest text color value.
-Our default text color is `sage-color(charcoal, 400)`.
+Our default text color is `sage-color(grey, 800)`.
 To achieve more depth use 300 to 400 shades
 for text on top of lighter background colors using 100 to 200 for their fill.
 You can also use 100 to 200 as the text color
@@ -61,10 +61,6 @@ as well as for things like alternative buttons and links.
   <%= sage_component SageGridCol, { breakpoint: "md", size: "6" } do %> 
     <h3>Grey</h3>
     <%= render "color_values", color: "grey"%>
-  <% end %>
-  <%= sage_component SageGridCol, { breakpoint: "md", size: "6" } do %> 
-    <h3>Charcoal</h3>
-    <%= render "color_values", color: "charcoal"%>
   <% end %>
 <% end %>
 </div>

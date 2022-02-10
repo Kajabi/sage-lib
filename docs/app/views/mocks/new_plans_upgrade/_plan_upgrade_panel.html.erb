@@ -19,10 +19,10 @@
           <% b[:items].each do | item | %>
             <% total += item[:amount] %>
             <%= sage_component SageCardRow, { grid_template: "te", spacer: { top: :xs } } do %>
-              <p class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL}" %>">
+              <p class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::GREY_700}" %>">
                 <%= item[:label] %>
               </p>
-              <span class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL}" %>">
+              <span class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::GREY_700}" %>">
                 $<%= item[:amount] %>
               </span>
             <% end %>

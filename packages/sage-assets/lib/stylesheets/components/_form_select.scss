@@ -9,9 +9,9 @@ $-select-border-width: rem(1px);
 $-select-border-box-shadow-size: map-get($sage-field-configs, box-shadow-size);
 $-select-bottom-gap: sage-spacing();
 $-select-color-border: sage-color(grey, 300);
-$-select-color-border-hover: sage-color(charcoal, 300);
+$-select-color-border-hover: sage-color(grey, 700);
 $-select-color-border-selected: sage-color(grey, 400);
-$-select-color-default: sage-color(charcoal, 300);
+$-select-color-default: sage-color(grey, 700);
 $-select-color-error: sage-color(red);
 $-select-color-label-background: sage-color(white);
 $-select-color-success: sage-color(primary);
@@ -130,20 +130,20 @@ $-select-padding-label: sage-spacing(2xs);
   }
 
   &:disabled {
-    color: sage-color(charcoal, 100);
+    color: sage-color(grey, 500);
     background-color: sage-color(grey, 200);
 
     ~ .sage-select__label {
-      color: sage-color(charcoal, 100);
+      color: sage-color(grey, 500);
       background-color: sage-color(grey, 200);
     }
 
     ~ .sage-select__arrow::before {
-      color: sage-color(charcoal, 100);
+      color: sage-color(grey, 500);
     }
 
     @include placeholder {
-      color: sage-color(charcoal, 100);
+      color: sage-color(grey, 500);
     }
   }
 }
