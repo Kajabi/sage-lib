@@ -57,15 +57,15 @@ $-table-avatar-width: rem(32px);
   thead,
   tfoot {
     color: $-table-heading-font-color;
-    
+
     td,
     th {
       @extend #{$-table-heading-type-spec};
-      
+
       padding: $-table-padding;
       color: $-table-cell-focus;
     }
-    
+
     th {
       padding: $-table-padding-heading;
     }
