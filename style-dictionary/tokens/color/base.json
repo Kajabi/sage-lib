@@ -106,30 +106,55 @@
         }
       },
       "yellow": {
+        "50": {
+          "hex": { "value": "#fef8e1" },
+          "code": { "value": "yellow-50" },
+          "classname": { "value": "t-sage--color-yellow-50" }
+        },
         "100": {
-          "hex": { "value": "#f9f0cd" },
+          "hex": { "value": "#fef8e1" },
           "code": { "value": "yellow-100" },
           "classname": { "value": "t-sage--color-yellow-100" }
         },
         "200": {
-          "hex": { "value": "#fce79c" },
+          "hex": { "value": "#fef8e1" },
           "code": { "value": "yellow-200" },
           "classname": { "value": "t-sage--color-yellow-200" }
         },
         "300": {
-          "hex": { "value": "#f0c024" },
+          "hex": { "value": "#fad980" },
           "code": { "value": "yellow-300" },
           "classname": { "value": "t-sage--color-yellow-300" }
         },
         "400": {
-          "hex": { "value": "#8d5c2f" },
+          "hex": { "value": "#fad980" },
           "code": { "value": "yellow-400" },
           "classname": { "value": "t-sage--color-yellow-400" }
         },
         "500": {
-          "hex": { "value": "#5c381e" },
+          "hex": { "value": "#ffc505" },
           "code": { "value": "yellow-500" },
           "classname": { "value": "t-sage--color-yellow-500" }
+        },
+        "600": {
+          "hex": { "value": "#ffc505" },
+          "code": { "value": "yellow-600" },
+          "classname": { "value": "t-sage--color-yellow-600" }
+        },
+        "700": {
+          "hex": { "value": "#c56a02" },
+          "code": { "value": "yellow-700" },
+          "classname": { "value": "t-sage--color-yellow-700" }
+        },
+        "800": {
+          "hex": { "value": "#8c3b08" },
+          "code": { "value": "yellow-800" },
+          "classname": { "value": "t-sage--color-yellow-800" }
+        },
+        "900": {
+          "hex": { "value": "#8c3b08" },
+          "code": { "value": "yellow-900" },
+          "classname": { "value": "t-sage--color-yellow-900" }
         }
       },
       "red": {
