@@ -114,7 +114,7 @@ $-sortable-image-height: rem(48px);
 
 .sage-sortable__item-subtitle {
   @extend %t-sage-body-xsmall;
-  color: sage-color(charcoal, 100);
+  color: sage-color(grey, 500);
 }
 
 .sage-sortable__item-actions {

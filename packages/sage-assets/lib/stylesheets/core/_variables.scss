@@ -52,7 +52,7 @@ $sage-field-configs: (
 ///
 $sage-field-colors: (
   border: sage-color(grey, 300),
-  default: sage-color(charcoal),
+  default: sage-color(grey, 700),
   disabled: sage-color(grey, 400),
   disabled-background: sage-color(grey, 100),
   error: sage-color(red),
@@ -83,8 +83,8 @@ $sage-radio-size: rem(16px);
 /// Tab colors shared by components such as tabs and choices
 ///
 $sage-tab-colors: (
-  default: sage-color(charcoal, 100),
-  active: sage-color(charcoal, 500),
+  default: sage-color(grey, 500),
+  active: sage-color(grey, 900),
   disabled: sage-color(grey, 500),
 );
 
@@ -92,8 +92,8 @@ $sage-tab-colors: (
 /// Standard text colors
 ///
 $sage-text-colors: (
-  body: sage-color(charcoal, 400),
-  heading: sage-color(charcoal, 500),
+  body: sage-color(grey, 800),
+  heading: sage-color(grey, 900),
 );
 
 ///

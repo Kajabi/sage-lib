@@ -18,7 +18,7 @@ export default {
   args: {
     cardColor: null,
     circular: false,
-    color: Icon.COLORS.CHARCOAL,
+    color: Icon.COLORS.GREY,
     icon: Icon.ICONS.CHECK_CIRCLE,
     label: 'Click me',
     size: Icon.SIZES.MD

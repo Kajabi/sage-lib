@@ -93,7 +93,7 @@ export const Alert = ({
           type="button"
         >
           <Icon
-            color="charcoal-100"
+            color="grey-500"
             icon="remove"
             size="md"
           />
