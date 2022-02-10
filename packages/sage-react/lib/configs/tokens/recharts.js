@@ -4,7 +4,7 @@ const gridConfigs = {
   stroke: TOKENS_COLOR_PALETTE.GREY_200,
 };
 const tickConfigs = {
-  fill: TOKENS_COLOR_PALETTE.CHARCOAL_100,
+  fill: TOKENS_COLOR_PALETTE.GREY_500,
   fontSize: 12,
 };
 

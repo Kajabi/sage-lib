@@ -5,7 +5,7 @@ import { Button } from '../Button';
 
 const drawerChildren = (
   <>
-    <h3 className={`${SageClassnames.TYPE.HEADING_4} ${SageClassnames.TYPE_COLORS.CHARCOAL_500}`}>
+    <h3 className={`${SageClassnames.TYPE.HEADING_4} ${SageClassnames.TYPE_COLORS.GREY_900}`}>
       Drawer
     </h3>
     <p>👋  Any content can go here.</p>
