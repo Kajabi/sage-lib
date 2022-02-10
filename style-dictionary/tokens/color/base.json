@@ -158,30 +158,55 @@
         }
       },
       "red": {
+        "50": {
+          "hex": { "value": "#fff0f0" },
+          "code": { "value": "red-50" },
+          "classname": { "value": "t-sage--color-red-50" }
+        },
         "100": {
-          "hex": { "value": "#ffe0e0" },
+          "hex": { "value": "#fff0f0" },
           "code": { "value": "red-100" },
           "classname": { "value": "t-sage--color-red-100" }
         },
         "200": {
-          "hex": { "value": "#fdb0aa" },
+          "hex": { "value": "#fff0f0" },
           "code": { "value": "red-200" },
           "classname": { "value": "t-sage--color-red-200" }
         },
         "300": {
-          "hex": { "value": "#cf3c32" },
+          "hex": { "value": "#fdb0aa" },
           "code": { "value": "red-300" },
           "classname": { "value": "t-sage--color-red-300" }
         },
         "400": {
-          "hex": { "value": "#99221e" },
+          "hex": { "value": "#fdb0aa" },
           "code": { "value": "red-400" },
           "classname": { "value": "t-sage--color-red-400" }
         },
         "500": {
-          "hex": { "value": "#5e0d0d" },
+          "hex": { "value": "#cf3c32" },
           "code": { "value": "red-500" },
           "classname": { "value": "t-sage--color-red-500" }
+        },
+        "600": {
+          "hex": { "value": "#cf3c32" },
+          "code": { "value": "red-600" },
+          "classname": { "value": "t-sage--color-red-600" }
+        },
+        "700": {
+          "hex": { "value": "#99221e" },
+          "code": { "value": "red-700" },
+          "classname": { "value": "t-sage--color-red-700" }
+        },
+        "800": {
+          "hex": { "value": "#5e0d0d" },
+          "code": { "value": "red-800" },
+          "classname": { "value": "t-sage--color-red-800" }
+        },
+        "900": {
+          "hex": { "value": "#5e0d0d" },
+          "code": { "value": "red-900" },
+          "classname": { "value": "t-sage--color-red-900" }
         }
       },
       "orange": {
