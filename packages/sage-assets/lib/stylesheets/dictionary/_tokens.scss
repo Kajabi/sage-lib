@@ -2026,10 +2026,6 @@ $sd-sage-color-core-purple: #d9c2ef;
 ///
 $sd-sage-color-core-grey: #d3d5d9;
 ///
-/// color core color-core-charcoal
-///
-$sd-sage-color-core-charcoal: #43474b;
-///
 /// color core color-core-white
 ///
 $sd-sage-color-core-white: #fff;
@@ -2049,7 +2045,6 @@ $sd-sage-color-core: (
   orange: $sd-sage-color-core-orange,
   purple: $sd-sage-color-core-purple,
   grey: $sd-sage-color-core-grey,
-  charcoal: $sd-sage-color-core-charcoal,
   white: $sd-sage-color-core-white,
   black: $sd-sage-color-core-black,
 );
