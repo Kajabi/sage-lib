@@ -2,30 +2,55 @@
   "color": {
     "base": {
       "primary": {
+        "50": {
+          "hex": { "value": "#e6f4fe" },
+          "code": { "value": "primary-50" },
+          "classname": { "value": "t-sage--color-primary-50" }
+        },
         "100": {
           "hex": { "value": "#e6f4fe" },
           "code": { "value": "primary-100" },
           "classname": { "value": "t-sage--color-primary-100" }
         },
         "200": {
-          "hex": { "value": "#8ecafb" },
+          "hex": { "value": "#e6f4fe" },
           "code": { "value": "primary-200" },
           "classname": { "value": "t-sage--color-primary-200" }
         },
         "300": {
-          "hex": { "value": "#0072ef" },
+          "hex": { "value": "#8ecafb" },
           "code": { "value": "primary-300" },
           "classname": { "value": "t-sage--color-primary-300" }
         },
         "400": {
-          "hex": { "value": "#054fb8" },
+          "hex": { "value": "#8ecafb" },
           "code": { "value": "primary-400" },
           "classname": { "value": "t-sage--color-primary-400" }
         },
         "500": {
-          "hex": { "value": "#07265f" },
+          "hex": { "value": "#0072ef" },
           "code": { "value": "primary-500" },
           "classname": { "value": "t-sage--color-primary-500" }
+        },
+        "600": {
+          "hex": { "value": "#0072ef" },
+          "code": { "value": "primary-600" },
+          "classname": { "value": "t-sage--color-primary-600" }
+        },
+        "700": {
+          "hex": { "value": "#054fb8" },
+          "code": { "value": "primary-700" },
+          "classname": { "value": "t-sage--color-primary-700" }
+        },
+        "800": {
+          "hex": { "value": "#07265f" },
+          "code": { "value": "primary-800" },
+          "classname": { "value": "t-sage--color-primary-800" }
+        },
+        "900": {
+          "hex": { "value": "#07265f" },
+          "code": { "value": "primary-900" },
+          "classname": { "value": "t-sage--color-primary-900" }
         }
       },
       "sage": {
