@@ -18,7 +18,7 @@ $-search-icon: "::before";
     z-index: 2;
     margin-left: sage-spacing(xs);
     margin-right: -1 * sage-spacing();
-    color: sage-color(charcoal, 100);
+    color: sage-color(grey, 500);
     transition: map-get($sage-transitions, default);
     transition-property: color;
 
@@ -116,7 +116,7 @@ $-search-icon: "::before";
   @extend %t-sage-body;
 
   @include placeholder {
-    color: sage-color(charcoal, 100);
+    color: sage-color(grey, 500);
   }
 
   &:focus {

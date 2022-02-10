@@ -69,14 +69,14 @@ $-description-title-var: var(--sage-description-title-width, #{$-description-tit
   @extend %t-sage-body;
 
   grid-area: title;
-  color: sage-color(charcoal, 100);
+  color: sage-color(grey, 500);
 }
 
 .sage-description__data {
   @extend %t-sage-body-med;
 
   grid-area: data;
-  color: sage-color(charcoal, 400);
+  color: sage-color(grey, 800);
 }
 
 .sage-description__action {

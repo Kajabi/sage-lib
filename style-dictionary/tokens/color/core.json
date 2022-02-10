@@ -22,9 +22,6 @@
       "grey": {
         "value": "{color.base.grey.300.hex}"
       },
-      "charcoal": {
-        "value": "{color.base.charcoal.300.hex}"
-      },
       "white": {
         "value": "{color.base.white.300.hex}"
       },
