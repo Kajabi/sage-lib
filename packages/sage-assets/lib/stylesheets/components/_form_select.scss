@@ -169,6 +169,6 @@ $-select-padding-label: sage-spacing(2xs);
   }
 
   &.sage-select--value-selected .form-group:focus-within:not(:disabled) ~ .sage-select__label {
-    color: sage-color(primary);
+    color: sage-color(primary, 500);
   }
 }

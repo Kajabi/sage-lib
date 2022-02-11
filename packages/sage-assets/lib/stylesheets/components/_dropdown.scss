@@ -218,7 +218,7 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
 }
 
 .sage-dropdown__item-control--primary {
-  color: sage-color(primary);
+  color: sage-color(primary, 500);
 
   &:hover {
     color: sage-color(primary, 300);

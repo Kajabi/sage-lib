@@ -14,7 +14,7 @@ $sage-font-cdn-root: "https://sage.kajabi-cdn.com/fonts";
 ///
 $sage-active-underline-configs: (
   height: rem(3px),
-  color: sage-color(primary),
+  color: sage-color(primary, 500),
   radius: sage-border(radius),
 );
 
@@ -57,7 +57,7 @@ $sage-field-colors: (
   disabled-background: sage-color(grey, 100),
   error: sage-color(red),
   label-background: sage-color(white),
-  success: sage-color(primary),
+  success: sage-color(primary, 500),
 );
 
 // $sage-field
@@ -66,7 +66,7 @@ $sage-field-colors: (
 /// Radio button colors
 ///
 $sage-radio-colors: (
-  checked: sage-color(primary),
+  checked: sage-color(primary, 500),
   checked-disabled: sage-color(primary, 200),
   checked-hover: sage-color(primary, 400),
   checked-inner: sage-color(white),
@@ -101,7 +101,7 @@ $sage-text-colors: (
 ///
 $sage-toolbar-button-borders: (
   default: 0 0 0 1px sage-color(grey, 300),
-  focus: 0 0 0 2px sage-color(primary),
+  focus: 0 0 0 2px sage-color(primary, 500),
   hover: 0 0 0 1px sage-color(grey, 400),
   active-hover: 0 0 0 2px sage-color(primary, 400),
 );
