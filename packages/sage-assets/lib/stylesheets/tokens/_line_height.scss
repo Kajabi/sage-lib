@@ -24,28 +24,28 @@ $sage-line-heights: (
 ///   - `packages/sage-assets/lib/stylesheets/components/_icon.scss`
 ///   - `packages/sage-react/lib/Icon/configs.js`
 :root {
-  --sage-line-height-body-xs: #{rem(map-get($sage-line-heights, xs))};
-  --sage-line-height-body-sm: #{rem(map-get($sage-line-heights, sm))};
-  --sage-line-height-body: #{rem(map-get($sage-line-heights, md))};
-  --sage-line-height-h6: #{rem(map-get($sage-line-heights, md))};
-  --sage-line-height-h5: #{rem(map-get($sage-line-heights, md))};
-  --sage-line-height-h4: #{rem(map-get($sage-line-heights, md))};
-  --sage-line-height-h3: #{rem(map-get($sage-line-heights, md))};
-  --sage-line-height-h2: #{rem(map-get($sage-line-heights, lg))};
-  --sage-line-height-h1: #{rem(map-get($sage-line-heights, lg))};
+  --sage-line-height-body-xs: #{map-get($sage-line-heights, xs)};
+  --sage-line-height-body-sm: #{map-get($sage-line-heights, sm)};
+  --sage-line-height-body: #{map-get($sage-line-heights, md)};
+  --sage-line-height-h6: #{map-get($sage-line-heights, md)};
+  --sage-line-height-h5: #{map-get($sage-line-heights, md)};
+  --sage-line-height-h4: #{map-get($sage-line-heights, md)};
+  --sage-line-height-h3: #{map-get($sage-line-heights, md)};
+  --sage-line-height-h2: #{map-get($sage-line-heights, lg)};
+  --sage-line-height-h1: #{map-get($sage-line-heights, lg)};
 }
 
 @media screen and (min-width: sage-breakpoint(lg-min)) {
   :root {
     // --sage-line-height-body-xs: same
     // --sage-line-height-body-sm: same
-    --sage-line-height-body: #{rem(map-get($sage-line-heights, sm))};
-    --sage-line-height-h6: #{rem(map-get($sage-line-heights, sm))};
+    --sage-line-height-body: #{map-get($sage-line-heights, sm)};
+    --sage-line-height-h6: #{map-get($sage-line-heights, sm)};
     // --sage-line-height-h5: same
     // --sage-line-height-h4: same
-    --sage-line-height-h3: #{rem(map-get($sage-line-heights, lg))};
+    --sage-line-height-h3: #{map-get($sage-line-heights, lg)};
     // --sage-line-height-h2: same
-    --sage-line-height-h1: #{rem(map-get($sage-line-heights, xl))};
+    --sage-line-height-h1: #{map-get($sage-line-heights, xl)};
   }
 }
 
@@ -85,6 +85,6 @@ $sage-line-heights: (
   }
 
   @else {
-    @return rem(map-get($sage-line-heights, $key));
+    @return map-get($sage-line-heights, $key);
   }
 }
