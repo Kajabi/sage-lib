@@ -104,7 +104,7 @@ $-hero-play-icon-background-color-hover: rgba(sage-color(white, 100), 1);
   }
 
   &:focus {
-    border: 3px solid sage-color(primary);
+    border: 3px solid sage-color(primary, 500);
   }
 }
 

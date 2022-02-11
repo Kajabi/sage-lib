@@ -349,15 +349,15 @@
   &:focus:not(:disabled),
   &:active:not(:disabled) {
     outline: none;
-    border-color: sage-color(primary);
-    box-shadow: 0 0 0 rem(1px) sage-color(primary);
+    border-color: sage-color(primary, 500);
+    box-shadow: 0 0 0 rem(1px) sage-color(primary, 500);
 
     @include placeholder {
       opacity: 0;
     }
 
     ~ label {
-      color: sage-color(primary);
+      color: sage-color(primary, 500);
     }
   }
 
