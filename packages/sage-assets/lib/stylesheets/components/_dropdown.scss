@@ -395,6 +395,7 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
   @extend %t-sage-body;
 
   position: absolute;
+  z-index: sage-z-index(default, 1);
   transform: translateY(-50%);
   width: calc(100% - #{(2 * $-dropdown-trigger-padding-x) + $-dropdown-trigger-dropdown-offset});
   padding: 0 $-dropdown-trigger-padding-label;

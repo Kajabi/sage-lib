@@ -137,6 +137,7 @@
 ) {
   &:focus {
     outline: $focus-width solid $focus-shadow;
+    z-index: sage-z-index(default, 1);
   }
 }
 
