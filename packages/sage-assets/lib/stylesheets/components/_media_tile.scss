@@ -80,7 +80,7 @@ $-media-tile-breakpoints: (
     outline: 0;
 
     &::after {
-      border-color: sage-color(primary);
+      border-color: sage-color(primary, 500);
     }
   }
 }

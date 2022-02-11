@@ -8,25 +8,25 @@
 $-banner-height-ladera: map-get($sage-banner-heights, ladera);
 $-banner-colors: (
   default: (
-    background: sage-color(primary),
+    background: sage-color(primary, 500),
     text: sage-color(white),
     text-hover: sage-color(primary, 100),
     icon: "flag",
   ),
   secondary: (
-    background: sage-color(grey, 400),
+    background: sage-color(grey, 200),
     text: sage-color(grey, 900),
     text-hover: sage-color(grey, 700),
     icon: "info-circle",
   ),
   warning: (
-    background: sage-color(yellow, 300),
-    text: sage-color(yellow, 500),
-    text-hover: sage-color(yellow, 400),
+    background: sage-color(yellow, 500),
+    text: sage-color(grey, 900),
+    text-hover: sage-color(grey, 700),
     icon: "warning",
   ),
   danger: (
-    background: sage-color(red, 300),
+    background: sage-color(red, 500),
     text: sage-color(white),
     text-hover: sage-color(red, 100),
     icon: "danger",
