@@ -27,26 +27,12 @@ $-select-padding-label: sage-spacing(2xs);
 }
 
 .sage-select__label {
+  @extend %t-sage-body-med;
+
   z-index: sage-z-index(default, 2);
   margin-bottom: $-select-margin-label;
   padding: 0 $-select-padding-label;
 
-  // @include position(($-select-height / 2), unset, unset, ($-select-padding-x - $-select-padding-label));
-
-  .sage-select__field ~ & {
-    @extend %t-sage-body;
-  }
-
-  .sage-select__field ~ &,
-  .sage-select__field:focus:not(:disabled) ~ &,
-  .sage-select__field:active:not(:disabled) ~ & {
-    opacity: 1;
-  }
-
-  .sage-select--value-selected &,
-  .sage-dropdown--value-selected & {
-    background-color: $-select-color-label-background;
-  }
 }
 
 .sage-select__arrow::before {
