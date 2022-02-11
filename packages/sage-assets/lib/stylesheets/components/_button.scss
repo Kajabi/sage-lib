@@ -19,7 +19,7 @@ $-btn-base-styles: (
   primary: (
     default: (
       color: sage-color(white),
-      background-color: sage-color(primary),
+      background-color: sage-color(primary, 500),
       ring-color: sage-color(primary, 400),
     ),
     hover: (
@@ -28,7 +28,7 @@ $-btn-base-styles: (
     ),
     focus: (
       color: sage-color(white),
-      background-color: sage-color(primary),
+      background-color: sage-color(primary, 500),
     ),
     disabled: (
       color: sage-color(primary, 200),
@@ -77,10 +77,10 @@ $-btn-base-styles: (
 
 $-btn-subtle-styles: (
   primary: (
-    default: sage-color(primary),
-    hover: sage-color(primary),
+    default: sage-color(primary, 500),
+    hover: sage-color(primary, 500),
     hover-background: sage-color(primary, 100),
-    focus: sage-color(primary),
+    focus: sage-color(primary, 500),
     focus-outline: sage-color(primary, 400),
     disabled: sage-color(primary, 200),
   ),
@@ -299,7 +299,7 @@ $-btn-loading-min-height: rem(36px);
     }
 
     &:focus {
-      box-shadow: 0 0 0 rem(2px) sage-color(primary);
+      box-shadow: 0 0 0 rem(2px) sage-color(primary, 500);
     }
   }
 
