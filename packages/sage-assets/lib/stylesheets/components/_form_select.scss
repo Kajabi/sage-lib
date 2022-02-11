@@ -4,10 +4,7 @@
 /// @group sage
 ////
 
-$-select-border-radius: sage-border(radius);
-$-select-border-width: rem(1px);
 $-select-border-box-shadow-size: map-get($sage-field-configs, box-shadow-size);
-$-select-bottom-gap: sage-spacing();
 $-select-color-border: sage-color(grey, 300);
 $-select-color-border-hover: sage-color(grey, 700);
 $-select-color-border-selected: sage-color(grey, 400);
@@ -36,8 +33,8 @@ $-select-padding-label: sage-spacing(2xs);
 }
 
 .sage-select__arrow::before {
-  @include sage-icon-base(caret-down);
-  @include position(0, sage-spacing(sm), unset, unset);
+  @include sage-icon-base(down-small);
+  @include position(31%, sage-spacing(sm), unset, unset);
 
   position: absolute;
   align-items: center;
