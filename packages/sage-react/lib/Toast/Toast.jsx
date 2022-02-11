@@ -100,7 +100,7 @@ export const Toast = ({
 
         <button
           type="button"
-          className="sage-toast__button sage-toast__button--close"
+          className="sage-toast__button sage-toast__button--close sage-btn sage-btn--subtle sage-btn--secondary sage-btn--icon-only-remove"
           onClick={onClickDismiss}
         >
           <span className="visually-hidden">
