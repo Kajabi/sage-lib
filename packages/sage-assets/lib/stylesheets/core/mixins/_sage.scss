@@ -624,3 +624,14 @@
     }
   }
 }
+
+///
+/// Adds the default font family
+///
+@mixin sage-font-family() {
+  font-family: $-body-font-stack;
+
+  @supports (font-variation-settings: normal) {
+    font-family: "Inter var", $-body-font-stack;
+  }
+}
