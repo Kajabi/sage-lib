@@ -23,7 +23,7 @@ $-search-icon: "::before";
     transition-property: color;
 
     :focus-within > & {
-      color: sage-color(primary);
+      color: sage-color(primary, 500);
     }
   }
 
@@ -137,7 +137,7 @@ $-search-icon: "::before";
 
     ~ .sage-search__label {
       @include sage-form-field-floating-label();
-      color: sage-color(primary);
+      color: sage-color(primary, 500);
     }
   }
 
