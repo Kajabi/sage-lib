@@ -12,24 +12,28 @@ $-avatar-ring-colors: (
     main: sage-color(grey, 900),
     bg: sage-color(grey, 200)
   ),
+  grey: (
+    main: sage-color(grey, 900),
+    bg: sage-color(grey, 200)
+  ),
   purple: (
-    main: sage-color(purple),
+    main: sage-color(purple, 500),
     bg: sage-color(purple, 100)
   ),
   sage: (
-    main: sage-color(sage),
+    main: sage-color(sage, 500),
     bg: sage-color(sage, 100)
   ),
   yellow: (
-    main: sage-color(yellow),
+    main: sage-color(yellow, 500),
     bg: sage-color(yellow, 100)
   ),
   orange: (
-    main: sage-color(orange),
+    main: sage-color(orange, 500),
     bg: sage-color(orange, 100)
   ),
   red: (
-    main: sage-color(red),
+    main: sage-color(red, 500),
     bg: sage-color(red, 100)
   )
 );
@@ -163,8 +167,8 @@ $-avatar-group-item-sizes: (
   grid-area: full;
   width: 100%;
   text-align: center;
-  color: sage-color(primary);
-  fill: sage-color(primary);
+  color: sage-color(primary, 500);
+  fill: sage-color(primary, 500);
 
   @extend %t-sage-body-xsmall-bold;
 
