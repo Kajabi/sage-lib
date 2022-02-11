@@ -23,7 +23,7 @@ $-search-icon: "::before";
     transition-property: color;
 
     :focus-within > & {
-      color: sage-color(primary);
+      color: sage-color(primary, 500);
     }
   }
 
@@ -143,18 +143,9 @@ $-search-icon: "::before";
       opacity: 0;
     }
 
-    &:focus:not(:disabled),
-    &:active:not(:disabled) {
-      /* stylelint-disable max-nesting-depth */
-      ~ .sage-search__label {
-        @include sage-form-field-floating-label();
-        @include placeholder {
-          opacity: 1;
-        }
-
-        color: sage-color(primary);
-      }
-      /* stylelint-enable max-nesting-depth */
+    ~ .sage-search__label {
+      @include sage-form-field-floating-label();
+      color: sage-color(primary, 500);
     }
 
     /* stylelint-disable max-nesting-depth */
