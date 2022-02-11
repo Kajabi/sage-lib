@@ -7,6 +7,7 @@
   data-js-select="true"
   <%= component.generated_html_attributes.html_safe %>
 >
+  <label class="sage-select__label" for="<%= selectID %>"><%= component.name %></label>
   <select
     class="sage-select__field"
     name="<%= selectID %>"
@@ -17,6 +18,5 @@
       <option value="<%= option[:value] %>"><%= option[:text] %></option>
     <% end %>
   </select>
-  <label class="sage-select__label" for="<%= selectID %>"><%= component.name %></label>
   <div class="sage-select__message"><%= component.message %></div>
 </div>
