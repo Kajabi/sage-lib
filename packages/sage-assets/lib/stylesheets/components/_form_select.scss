@@ -16,8 +16,6 @@ $-select-filled-top-padding: rem(4.4px);
 $-select-height: rem(40px);
 $-select-padding-x: sage-spacing(sm);
 $-select-margin-label: rem(6px);
-$-select-padding-label: sage-spacing(2xs);
-
 
 .sage-select {
   @include sage-form-field-group;
@@ -28,8 +26,6 @@ $-select-padding-label: sage-spacing(2xs);
 
   z-index: sage-z-index(default, 2);
   margin-bottom: $-select-margin-label;
-  padding: 0 $-select-padding-label;
-
 }
 
 .sage-select__arrow::before {
