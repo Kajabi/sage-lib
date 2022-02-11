@@ -139,8 +139,7 @@ $-toast-bottom-spacing: sage-spacing(xs);
 .sage-toast__button {
   @extend %t-sage-body-med;
   @include sage-button-style-reset();
-  @include sage-focus-outline;
-  @include sage-focus-outline--update-color(sage-color(white));
+  @include sage-focus-ring(sage-color(white));
 
   display: inline-flex;
   align-items: center;
@@ -158,10 +157,11 @@ $-toast-bottom-spacing: sage-spacing(xs);
   &[aria-disabled="true"] {
     @include sage-button-style-disabled;
   }
-}
 
-.sage-toast__button--close::before {
-  @include sage-icon-base(remove);
+  &.sage-btn--subtle.sage-btn--secondary:not(:focus):hover {
+    background-color: inherit;
+    color: sage-color(grey, 100);
+  }
 }
 
 .sage-toast__button--underline {
