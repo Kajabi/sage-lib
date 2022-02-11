@@ -5,7 +5,7 @@
 ////
 
 .sage-card-highlight {
-  --color: #{sage-color(primary)};
+  --color: #{sage-color(primary, 500)};
 
   position: absolute;
   background-color: var(--color);

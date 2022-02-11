@@ -130,7 +130,7 @@ $-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
   &:active,
   &.sage-choice--active {
     &::#{$-choice-el-arrow} {
-      color: sage-color(primary);
+      color: sage-color(primary, 500);
     }
   }
 }
