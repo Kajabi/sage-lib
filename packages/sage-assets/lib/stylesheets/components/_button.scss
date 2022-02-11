@@ -188,31 +188,6 @@ $-btn-loading-min-height: rem(36px);
     }
   }
 
-  .sage-panel-controls__bulk-actions > &,
-  .sage-panel-controls__toolbar > &,
-  .sage-panel-controls__toolbar-btn-group > &,
-  .sage-panel-controls__pagination > &,
-  .sage-toolbar > &
-  .sage-toolbar__group > & {
-    position: relative;
-    z-index: sage-z-index(default);
-    box-shadow: map-get($sage-toolbar-button-borders, default);
-    border: 0;
-
-    @include sage-focus-outline--update-color(transparent);
-
-    &:hover {
-      z-index: sage-z-index(default, 1);
-      box-shadow: map-get($sage-toolbar-button-borders, hover);
-      background-color: sage-color(white);
-    }
-
-    &:focus {
-      z-index: sage-z-index(default, 2);
-      box-shadow: map-get($sage-toolbar-button-borders, focus);
-    }
-  }
-
   .sage-dropdown__item > & {
     width: 100%;
     padding-top: rem(9px);
@@ -424,7 +399,6 @@ $-btn-loading-min-height: rem(36px);
         }
       }
       @else {
-        // @include sage-focus-outline--update-color(map-get($-style-type-configs, ring-color));
         @include sage-focus-ring(map-get($-style-type-configs, ring-color));
 
         color: map-get($-style-type-configs, color);
@@ -438,15 +412,6 @@ $-btn-loading-min-height: rem(36px);
     }
 
     &:not(.sage-btn--subtle):not(:disabled):not([aria-disabled="true"]) {
-      // box-shadow: $-btn-shadow-base;
-
-      // &.sage-btn--no-shadow {
-      //   box-shadow: none;
-      // }
-      // &.sage-btn--raised {
-      //   box-shadow: $-btn-shadow-base;
-      // }
-
       .sage-toolbar > &:hover,
       .sage-toolbar > .sage-dropdown .sage-dropdown__trigger &:hover,
       .sage-toolbar__group > &:hover,
@@ -486,14 +451,14 @@ $-alert-colors: (
   &:hover {
     color: sage-color(grey, 700);
     background-color: sage-color(white);
-    border: 1px solid sage-color(grey, 500);
+    border-color: sage-color(grey, 500);
   }
 
   &:focus,
   &:active {
     color: sage-color(grey, 700);
     background-color: sage-color(white);
-    border: 1px solid sage-color(grey);
+    border-color: sage-color(grey);
   }
 
   &[aria-disabled="true"] {
@@ -535,6 +500,11 @@ $-alert-colors: (
   // padding: 0;
   box-shadow: none;
 
+  &[class*="icon-only"] {
+    padding: sage-spacing(2xs) sage-spacing(xs);
+    border-radius: sage-border(radius-round);
+  }
+
   // Generate button style variations
   @each $-style-name, $-styles in $-btn-subtle-styles {
     &.sage-btn--#{$-style-name} {
@@ -558,18 +528,13 @@ $-alert-colors: (
       }
 
       &[class*="icon-only"] {
-        padding: sage-spacing(2xs) sage-spacing(xs);
-        border-radius: sage-border(radius-round);
-
         .sage-label & {
-          @include sage-focus-outline($outline-offset-inline: -2px, $outline-offset-block: -2px);
-          @include sage-focus-outline--update-color(map-get($-styles, default));
+          @include sage-focus-ring(map-get($-styles, default));
 
           position: absolute; /* this keeps the button inside a label within the visual bounds of the label component */
-
-          &::after {
-            border-radius: 0 sage-border(radius-x-large) sage-border(radius-x-large) 0;
-          }
+          padding: 0;
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
         }
       }
     }
@@ -577,8 +542,6 @@ $-alert-colors: (
 
   .sage-assistant & {
     color: sage-color(grey, 100);
-
-    @include sage-focus-outline--update-color(sage-color(white));
 
     &:hover {
       color: sage-color(white);
