@@ -38,20 +38,20 @@ $-btn-base-styles: (
   neutral: (
     default: (
       color: sage-color(white),
-      background-color: sage-color(charcoal, 400),
-      ring-color: sage-color(charcoal, 200),
+      background-color: sage-color(grey, 400),
+      ring-color: sage-color(grey, 400),
     ),
     hover: (
       color: sage-color(white),
-      background-color: sage-color(charcoal, 500),
+      background-color: sage-color(grey, 500),
     ),
     focus: (
       color: sage-color(white),
-      background-color: sage-color(charcoal, 400),
+      background-color: sage-color(grey, 400),
     ),
     disabled: (
       color: sage-color(white),
-      background-color: sage-color(charcoal, 200),
+      background-color: sage-color(grey, 400),
     )
   ),
   secondary: (
@@ -140,11 +140,12 @@ $-btn-loading-min-height: rem(36px);
 .sage-btn {
   @extend %t-sage-body-med;
   @include sage-button-style-reset();
-  @include sage-focus-outline;
+  @include sage-focus-ring;
 
   $-padding-block: rem(6px);
 
   display: inline-flex;
+  position: relative;
   align-self: inherit;
   align-items: center;
   padding: $-padding-block sage-spacing(sm);
@@ -423,7 +424,8 @@ $-btn-loading-min-height: rem(36px);
         }
       }
       @else {
-        @include sage-focus-outline--update-color(map-get($-style-type-configs, ring-color));
+        // @include sage-focus-outline--update-color(map-get($-style-type-configs, ring-color));
+        @include sage-focus-ring(map-get($-style-type-configs, ring-color));
 
         color: map-get($-style-type-configs, color);
         background-color: map-get($-style-type-configs, background-color);
@@ -436,7 +438,7 @@ $-btn-loading-min-height: rem(36px);
     }
 
     &:not(.sage-btn--subtle):not(:disabled):not([aria-disabled="true"]) {
-      box-shadow: $-btn-shadow-base;
+      // box-shadow: $-btn-shadow-base;
 
       // &.sage-btn--no-shadow {
       //   box-shadow: none;
@@ -477,28 +479,26 @@ $-alert-colors: (
 
 // Secondary styles, no shadow variation
 .sage-btn--secondary {
-  &.sage-btn--no-shadow {
-    color: sage-color(grey, 800);
+  color: sage-color(grey, 800);
+  background-color: sage-color(white);
+  border: 1px solid sage-color(grey);
+
+  &:hover {
+    color: sage-color(grey, 700);
+    background-color: sage-color(white);
+    border: 1px solid sage-color(grey, 500);
+  }
+
+  &:focus,
+  &:active {
+    color: sage-color(grey, 700);
     background-color: sage-color(white);
     border: 1px solid sage-color(grey);
+  }
 
-    &:hover {
-      color: sage-color(grey, 700);
-      background-color: sage-color(white);
-      border: 1px solid sage-color(grey, 500);
-    }
-
-    &:focus,
-    &:active {
-      color: sage-color(grey, 700);
-      background-color: sage-color(white);
-      border: 1px solid sage-color(grey);
-    }
-
-    &[aria-disabled="true"] {
-      color: sage-color(grey, 500);
-      background-color: sage-color(white);
-    }
+  &[aria-disabled="true"] {
+    color: sage-color(grey, 500);
+    background-color: sage-color(white);
   }
 
   &.sage-alert__primary-action {
@@ -525,13 +525,15 @@ $-alert-colors: (
       }
     }
   }
+
+  &.sage-btn--subtle {
+    border: 0;
+  }
 }
 
 .sage-btn--subtle {
-  padding: 0;
+  // padding: 0;
   box-shadow: none;
-
-  @include sage-focus-outline($outline-offset-inline: 6px, $outline-offset-block: 0);
 
   // Generate button style variations
   @each $-style-name, $-styles in $-btn-subtle-styles {
@@ -540,32 +542,12 @@ $-alert-colors: (
       background-color: transparent;
 
       // TODO: refactor the subtle button hover state, after Sage 3.0 conversion
-      &::after {
-        border-color: transparent;
-      }
-
       &:not(:focus):hover {
         color: map-get($-styles, hover);
+        background-color: map-get($-styles, hover-background);
 
-        &::after {
-          z-index: 0;
-          background-color: map-get($-styles, hover-background);
-          opacity: 1;
-        }
-
-        &::before,
         span {
           z-index: 1;
-        }
-      }
-
-      &:focus,
-      &:active {
-        color: map-get($-styles, focus);
-        background-color: transparent;
-
-        &::after {
-          border-color: map-get($-styles, focus-outline);
         }
       }
 
@@ -576,22 +558,8 @@ $-alert-colors: (
       }
 
       &[class*="icon-only"] {
-        &::after {
-          width: $-btn-icon-only-hover-size;
-          height: $-btn-icon-only-hover-size;
-        }
-
-        &:hover::after {
-          border-color: transparent;
-          opacity: 1;
-        }
-
-        &:focus::after {
-          width: $-btn-icon-only-focus-size;
-          height: $-btn-icon-only-focus-size;
-          border-color: map-get($-styles, focus-outline);
-
-        }
+        padding: sage-spacing(2xs) sage-spacing(xs);
+        border-radius: sage-border(radius-round);
 
         .sage-label & {
           @include sage-focus-outline($outline-offset-inline: -2px, $outline-offset-block: -2px);
