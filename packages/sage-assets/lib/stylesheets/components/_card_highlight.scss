@@ -51,7 +51,7 @@
 
 @each $-color-name, $-color-sliders in $sage-colors {
   .sage-card-highlight--#{"" + $-color-name} {
-    --color: #{sage-color($-color-name, 400)};
+    --color: #{sage-color($-color-name, 500)};
   }
 }
 
