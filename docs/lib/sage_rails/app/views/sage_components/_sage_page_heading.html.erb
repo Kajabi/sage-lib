@@ -18,29 +18,29 @@
   <div class="sage-page-heading__title-wrapper">
     <h1 class="sage-page-heading__title">
       <%= component.title %>
-      <% if component.help_link.present? && component.help_html.blank? %>
-        <a href="<%= component.help_link[:href] %>"
-          class="sage-link--no-launch sage-link--help-icon-only"
-          target="_blank"
-          rel="noopener"
-        >
-          <span class="visually-hidden">
-            <%= component.help_link[:name] %>
-          </span>
-        </a>
-      <% end %>
-      <% if component.help_title.present? && component.help_link.present? && component.help_html.present? %>
-        <%= sage_component SagePopover, {
-          title: component.help_title,
-          icon: "question-circle",
-          trigger_value: "Open Menu",
-          trigger_icon_only: true,
-          link: component.help_link,
-        } do %>
-          <%= component.help_html.html_safe %>
-        <% end %>
-      <% end %>
     </h1>
+    <% if component.help_link.present? && component.help_html.blank? %>
+      <a href="<%= component.help_link[:href] %>"
+        class="sage-link--no-launch sage-link--help-icon-only"
+        target="_blank"
+        rel="noopener"
+      >
+        <span class="visually-hidden">
+          <%= component.help_link[:name] %>
+        </span>
+      </a>
+    <% end %>
+    <% if component.help_title.present? && component.help_link.present? && component.help_html.present? %>
+      <%= sage_component SagePopover, {
+        title: component.help_title,
+        icon: "question-circle",
+        trigger_value: "Open Menu",
+        trigger_icon_only: true,
+        link: component.help_link,
+      } do %>
+        <%= component.help_html.html_safe %>
+      <% end %>
+    <% end %>
   </div>
   <% if content_for? :sage_page_heading_image %>
     <div class="sage-page-heading__image">
