@@ -56,7 +56,7 @@ $-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
   }
 
   &:hover {
-    @include sage-focus-outline--update-color(sage-color(grey, 400));
+    @include sage-focus-outline--update-color(sage-color(grey, 700));
 
     color: $-choice-color-active;
   }
@@ -65,7 +65,7 @@ $-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
     outline: none;
 
     &::after {
-      border-color: sage-color(primary, 300);
+      border-color: sage-color(primary, 900);
     }
   }
 
@@ -74,11 +74,11 @@ $-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
     color: $-choice-color-active;
 
     &::after {
-      border-color: sage-color(primary, 300);
+      border-color: sage-color(primary, 900);
     }
 
     &:hover::after {
-      border-color: sage-color(primary, 400);
+      border-color: sage-color(primary, 700);
     }
   }
 
@@ -123,14 +123,14 @@ $-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
     @include sage-icon-base(caret-right, lg);
 
     margin: 0 0 0 sage-spacing(sm);
-    color: sage-color(grey, 500);
+    color: sage-color(grey, 800);
     transition: color map-get($sage-transitions, default);
   }
 
   &:active,
   &.sage-choice--active {
     &::#{$-choice-el-arrow} {
-      color: sage-color(primary, 500);
+      color: sage-color(primary, 900);
     }
   }
 }
@@ -215,10 +215,10 @@ $-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
 
 .sage-choice__link-text {
   font-style: normal;
-  color: sage-color(primary, 300);
+  color: sage-color(primary, 900);
 
   .sage-choice:hover & {
-    color: sage-color(primary, 400);
+    color: sage-color(primary, 700);
   }
 
   .sage-choice[aria-disabled="true"] &,
