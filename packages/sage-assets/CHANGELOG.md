@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.70.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.69.2...@kajabi/sage-assets@0.70.0) (2022-02-14)
+
+
+### Bug Fixes
+
+* ensure all rem() include `px` with value ([6210a24](https://github.com/Kajabi/sage-lib/commit/6210a240499f934e66c83604ab6fe116c992d928))
+* **typography:** adjusted .sage-scoped selector ([aadedd3](https://github.com/Kajabi/sage-lib/commit/aadedd3f7483533ffd7cc47f939d48b2b721f73d))
+* **typography:** adjusted sage-scoped selector ([e51a413](https://github.com/Kajabi/sage-lib/commit/e51a4131e100c73d56b40c7401e31bb3eab7e9d8))
+* **typography:** changed body selector ([03a81ba](https://github.com/Kajabi/sage-lib/commit/03a81ba789242c385929cdbe1498dcb2d6db22dc))
+* **typography:** selector fix ([2a76b37](https://github.com/Kajabi/sage-lib/commit/2a76b3721850654cea78c23bafd5d1b7e5e30038))
+
+
+### Features
+
+* add global rem conversion toggle variable ([60f2500](https://github.com/Kajabi/sage-lib/commit/60f25003fb0c0a8d78dada91f160034642d23867))
+* **styles:** added system-setup.scss file ([a277b83](https://github.com/Kajabi/sage-lib/commit/a277b83bcfebe084c52e368bebb8ad14e9bc6958))
+* **typography:** updated body selector to only apply font selectors if class is not set ([c84ff97](https://github.com/Kajabi/sage-lib/commit/c84ff973f82d5054e6a5e51b917c2c5a4a7e20b0))
+
+
+
+
+
 ## [0.69.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.69.1...@kajabi/sage-assets@0.69.2) (2022-02-09)
 
 
