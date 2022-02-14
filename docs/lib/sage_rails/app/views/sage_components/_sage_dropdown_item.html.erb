@@ -1,3 +1,9 @@
+<%
+tag = "button"
+if component.attributes.nil? || component.attributes&.keys&.include?(:href) || component.attributes&.keys&.include?("href")
+  tag = "a"
+end
+%>
 <li class="
     sage-dropdown__item
     <%= "sage-dropdown__item--heading" if component.is_heading %>
@@ -8,51 +14,34 @@
   "
   role="none"
   <%= "aria-selected=true" if component.selected %>
+  <%= component.generated_html_attributes.html_safe %>
 >
   <% if component.is_heading %>
-    <% if component.content %>
+    <% if component.content.present? %>
       <%= component.content %>
     <% else %>
       <%= component.value.html_safe %>
     <% end %>
-  <% elsif component.attributes.nil? || component.attributes&.keys&.include?(:href) || component.attributes&.keys&.include?("href") %>
-    <a
-      <% component.attributes.each do |key, value| %>
-        <%= key %>="<%= value %>"
-      <% end if component.attributes&.is_a?(Hash) %>
-      role="menuitem"
-      tabindex="0"
-      class="
-        sage-dropdown__item-control
-        <%= "sage-dropdown__item-control--#{component.style}" if component.style %>
-        <%= "sage-dropdown__item-control--icon-#{component.icon}" if component.icon %>
-      "
-    >
-      <% if component.content %>
-        <%= component.content %>
-      <% else %>
-        <%= component.value.html_safe %>
-      <% end %>
-    </a>
   <% else %>
-    <button
-      <% component.attributes.each do |key, value| %>
-        <%= key %>="<%= value %>"
-      <% end if component.attributes&.is_a?(Hash) %>
-      role="menuitem"
-      tabindex="0"
-      type="button"
+    <<%= tag %>
       class="
         sage-dropdown__item-control
+        <%= "sage-dropdown__item-control--custom" if component.content.present? %>
         <%= "sage-dropdown__item-control--#{component.style}" if component.style %>
         <%= "sage-dropdown__item-control--icon-#{component.icon}" if component.icon %>
       "
+      <%= 'type="button' if tag == "button" %>
+      role="menuitem"
+      tabindex="0"
+      <% component.attributes.each do |key, value| %>
+        <%= key %>="<%= value %>"
+      <% end if component.attributes&.is_a?(Hash) %>
     >
-      <% if component.content %>
+      <% if component.content.present? %>
         <%= component.content %>
       <% else %>
         <%= component.value.html_safe %>
       <% end %>
-    </button>
+    </<%= tag %>>
   <% end %>
 </li>
