@@ -7,9 +7,9 @@
 //
 // Colors
 //
-$-checkbox-color-default: sage-color(grey, 400);
-$-checkbox-color-checked: sage-color(primary, 500);
-$-checkbox-color-checked-hover: sage-color(primary, 400);
+$-checkbox-color-default: sage-color(grey, 700);
+$-checkbox-color-checked: sage-color(primary, 600);
+$-checkbox-color-checked-hover: sage-color(primary, 700);
 $-checkbox-color-disabled: sage-color(grey, 200);
 $-checkbox-color-disabled-checked: sage-color(primary, 200);
 
@@ -30,7 +30,7 @@ $-checkbox-marker-offset: $-checkbox-marker-border * 2;
 //
 $-checkbox-focus-outline-size: rem(3px);
 $-checkbox-focus-outline-width: 2;
-$-checkbox-focus-outline-color: sage-color(primary, 400);
+$-checkbox-focus-outline-color: sage-color(primary, 700);
 
 
 .sage-checkbox {
@@ -115,7 +115,7 @@ $-checkbox-focus-outline-color: sage-color(primary, 400);
 
   .sage-checkbox--error &,
   .sage-checkbox__input:invalid + & {
-    color: sage-color(red);
+    color: sage-color(red, 500);
   }
 
   .sage-panel-controls--show-pagination & {
@@ -134,7 +134,7 @@ $-checkbox-focus-outline-color: sage-color(primary, 400);
 
   .sage-checkbox--error &,
   .sage-checkbox__input:invalid + & {
-    color: sage-color(red);
+    color: sage-color(red, 500);
   }
 
   .sage-checkbox__input:disabled + & {
@@ -222,7 +222,7 @@ $-checkbox-focus-outline-color: sage-color(primary, 400);
   }
 
   &:hover:not(:checked):not(:disabled) {
-    border-color: sage-color(grey, 500);
+    border-color: sage-color(grey, 900);
     box-shadow: sage-shadow(sm);
   }
 
@@ -261,24 +261,24 @@ $-checkbox-focus-outline-color: sage-color(primary, 400);
   .sage-checkbox--error &,
   &:invalid {
     background: sage-color(red, 100);
-    border-color: sage-color(red);
+    border-color: sage-color(red, 500);
 
     &::after {
-      color: sage-color(red);
+      color: sage-color(red, 500);
     }
 
     &:hover {
-      color: sage-color(red);
+      color: sage-color(red, 500);
       background: sage-color(red, 100);
-      border-color: sage-color(red);
+      border-color: sage-color(red, 500);
     }
 
     &:hover:not(:checked):not(:disabled) {
-      border-color: sage-color(red);
+      border-color: sage-color(red, 500);
     }
 
     &::before {
-      border-color: sage-color(red);
+      border-color: sage-color(red, 500);
     }
   }
 
