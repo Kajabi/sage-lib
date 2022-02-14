@@ -70,6 +70,12 @@
 }
 
 ///
+/// Whether or not to use rem conversion across the system
+/// For use in cases where a theme has modified the root font-size to something other than the browser default.
+///
+$sage-use-rem-conversion: true !default;
+
+///
 /// Converts an integer to a rem value based on 16 as the base size.
 ///
 /// @param {length} $value Length value, typically a `px` or `pt` that is to be converted to `rem`
@@ -88,7 +94,11 @@
 /// @return {length} Provided value as a `rem`.
 ///
 @function rem($value) {
-  @return strip-unit($value) / 16 * 1rem;
+  @if ($sage-use-rem-conversion) {
+    @return strip-unit($value) / 16 * 1rem;
+  }
+
+  @return $value;
 }
 
 ///

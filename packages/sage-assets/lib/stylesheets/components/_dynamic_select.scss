@@ -1,16 +1,16 @@
-$-dynamic-select-default-height: rem(45);
-$-dynamic-select-default-padding: rem(4) sage-spacing(sm) 0;
+$-dynamic-select-default-height: rem(45px);
+$-dynamic-select-default-padding: rem(4px) sage-spacing(sm) 0;
 $-dynamic-select-border-color: sage-color(gray, 400);
 $-dynamic-select-placeholder-color: sage-color(gray, 400);
 $-dynamic-select-color-success: map-get($sage-field-colors, success);
 $-dynamic-select-border-box-shadow-size: map-get($sage-field-configs, box-shadow-size);
-$-dynamic-select-selected-height: rem(54);
-$-dynamic-select-selected-padding: rem(12) sage-spacing(sm) 0;
+$-dynamic-select-selected-height: rem(54px);
+$-dynamic-select-selected-padding: rem(12px) sage-spacing(sm) 0;
 $-dynamic-select-selected-tag-color: sage-color(primary, 400);
 $-dynamic-select-selected-tag-background-color: sage-color(primary, 100);
 $-dynamic-select-selected-tag-border-radius: sage-border(radius-x-large);
 $-dynamic-select-selected-tag-padding: 0 sage-spacing(xs);
-$-dynamic-select-selected-tag-height: rem(30);
+$-dynamic-select-selected-tag-height: rem(30px);
 $-dynamic-select-clear-font-weight: sage-font-weight(regular);
 $-dynamic-select-open-arrow: rotate(180deg) scaleX(-1);
 
@@ -25,7 +25,7 @@ $-dynamic-select-open-arrow: rotate(180deg) scaleX(-1);
 .sage-dynamic-select {
   position: relative;
   .select2-container--sage .sage-select__arrow::before {
-    top: rem(3);
+    top: rem(3px);
   }
 
   .select2-container--sage .select2-dropdown--below {
@@ -71,7 +71,7 @@ $-dynamic-select-open-arrow: rotate(180deg) scaleX(-1);
 // selected state //
 .sage-dynamic-select.sage-select--value-selected .select2-container--sage {
   .sage-select__arrow::before {
-    top: rem(6);
+    top: rem(6px);
   }
   .select2-selection--single.sage-select__field {
     height: $-dynamic-select-selected-height;

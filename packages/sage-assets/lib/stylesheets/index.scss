@@ -3,11 +3,11 @@
 ////
 
 
-// Reset
-@import "vendor/reboot";
-
 // Variables, functions, mixins, and tokens
 @import "consumables";
+
+// Reset
+@import "vendor/reboot";
 
 // Base Styles
 @import "core/fonts";
