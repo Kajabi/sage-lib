@@ -215,13 +215,13 @@ $-radio-focus-outline-color: currentColor;
   .sage-radio__label,
   .sage-radio__caption,
   .sage-radio__message {
-    color: sage-color(red);
+    color: sage-color(red, 500);
   }
   .sage-radio__input {
-    border-color: sage-color(red);
+    border-color: sage-color(red, 500);
     &:checked {
-      color: sage-color(red);
-      background-color: sage-color(red);
+      color: sage-color(red, 500);
+      background-color: sage-color(red, 500);
     }
     &::after {
       background-color: sage-color(white);
@@ -230,11 +230,11 @@ $-radio-focus-outline-color: currentColor;
       border-color: $-radio-color-focus-outline-error;
     }
     &:hover {
-      border-color: sage-color(red);
+      border-color: sage-color(red, 500);
     }
   }
   :hover:not(:checked):not(:disabled) {
-    border-color: sage-color(red);
+    border-color: sage-color(red, 500);
   }
 }
 
