@@ -31,7 +31,7 @@
 .sage-progress-bar__value {
   transform-origin: center left;
   height: 100%;
-  background-color: var(--progress-bar-value-color, sage-color(sage, 300));
+  background-color: var(--progress-bar-value-color, sage-color(sage, 500));
   border-radius: sage-border(radius-large);
   animation: 3s sage-progress-bar--slide ease;
 }
