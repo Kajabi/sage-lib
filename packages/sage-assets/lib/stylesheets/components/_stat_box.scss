@@ -94,7 +94,7 @@ $-stat-box-image-max-width: rem(48px);
 
 @each $-color-name, $-color-sliders in $sage-colors {
   .sage-stat-box__title--legend-#{"" + $-color-name} {
-    --legend-color: #{sage-color($-color-name)};
+    --legend-color: #{sage-color($-color-name, 500)};
   }
 }
 
