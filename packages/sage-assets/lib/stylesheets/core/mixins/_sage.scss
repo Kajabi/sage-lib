@@ -529,11 +529,11 @@
 }
 
 @mixin sage-form-toggle-label() {
-  @extend %t-sage-body;
+  @extend %t-sage-body-med;
 
   display: inline-block;
   flex: 1;
-  margin-left: sage-spacing(xs);
+  margin-left: rem(12px);
   vertical-align: top;
   cursor: pointer;
 }
