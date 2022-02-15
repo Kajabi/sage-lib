@@ -30,7 +30,7 @@ export const TOKENS_COLOR_SLIDERS = {
 };
 Object.keys(SageDictionary.COLOR).forEach((colorName) => {
   Object.keys(SageDictionary.COLOR[colorName]).forEach((index) => {
-    if (index === '300') {
+    if (index === '500') {
       TOKENS_COLOR_SLIDERS[`${colorName}`] = SageDictionary.COLOR[colorName][index].CODE;
     }
     TOKENS_COLOR_SLIDERS[`${colorName}_${index}`] = SageDictionary.COLOR[colorName][index].CODE;
