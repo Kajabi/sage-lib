@@ -5,7 +5,7 @@
 <%= sage_component SageCardList, {} do %>
   <% SageTokens::COLORS.each do | color | %>
     <%= sage_component SageCardListItem, { grid_template: "et" } do %>
-      <%= sage_component SageIcon, { icon: "pen", color: color } %>
+      <%= sage_component SageIcon, { icon: "pen", color: "#{color}-500" } %>
       <%= color %>
     <% end %>
   <% end %>
