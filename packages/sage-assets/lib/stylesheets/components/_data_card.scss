@@ -11,12 +11,12 @@ $-data-card-colors: (
     text-color: sage-color(grey, 800),
   ),
   danger: (
-    border-color: sage-color(red, 300),
-    text-color: sage-color(red, 300),
+    border-color: sage-color(red, 500),
+    text-color: sage-color(red, 500),
   ),
   muted: (
-    border-color: sage-color(grey, 400),
-    text-color: sage-color(grey, 400),
+    border-color: sage-color(grey, 700),
+    text-color: sage-color(grey, 700),
   ),
 );
 $-data-card-transition: 0.2s linear;
