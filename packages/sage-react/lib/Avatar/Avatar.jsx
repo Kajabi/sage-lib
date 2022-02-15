@@ -59,7 +59,7 @@ export const Avatar = ({
         <div className="sage-avatar__badge">
           <Icon
             icon={Icon.ICONS.CHECK_CIRCLE_FILLED}
-            color={Icon.COLORS.PRIMARY_300}
+            color={Icon.COLORS.PRIMARY_500}
             size={setBadgeSize()}
           />
         </div>
