@@ -197,13 +197,7 @@ $-radio-focus-outline-color: currentColor;
   }
 
   .sage-radio & {
-    @media (max-width: sage-breakpoint(md-max)) {
-      margin-top: rem(6px);
-    }
-
-    @media (min-width: sage-breakpoint(lg-min)) {
-      margin-top: sage-spacing(2xs);
-    }
+    margin-top: rem(2px);
   }
 
   .sage-sortable & {
