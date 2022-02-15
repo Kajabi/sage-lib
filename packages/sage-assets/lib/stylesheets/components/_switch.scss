@@ -9,10 +9,10 @@
 $-switch-color-default: sage-color(grey, 400);
 $-switch-color-default-text: sage-color(grey, 700);
 $-switch-color-checked: sage-color(primary, 500);
-$-switch-color-checked-hover: sage-color(primary, 400);
+$-switch-color-checked-hover: sage-color(primary, 700);
 $-switch-color-disabled: sage-color(grey, 200);
 $-switch-color-disabled-text: sage-color(grey, 400);
-$-switch-color-disabled-checked: sage-color(primary, 200);
+$-switch-color-disabled-checked: sage-color(primary, 300);
 $-switch-color-disabled-checked-text: sage-color(grey, 500);
 
 // Switch
@@ -27,8 +27,8 @@ $-switch-toggle-size: rem(16px);
 // Focus state
 $-switch-focus-outline-spacing: sage-spacing(2xs);
 $-switch-focus-outline-width: 3;
-$-switch-focus-outline-color: sage-color(primary, 400);
-$-switch-focus-outline-error-color: sage-color(red, 300);
+$-switch-focus-outline-color: sage-color(primary, 700);
+$-switch-focus-outline-error-color: sage-color(red, 500);
 
 
 .sage-switch {
