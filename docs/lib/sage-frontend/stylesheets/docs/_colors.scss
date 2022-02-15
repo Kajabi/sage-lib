@@ -78,10 +78,11 @@
   border-radius: sage-border(radius);
 }
 
-[class*="color-white-"] {
-  box-shadow: inset 0 0 rem(1px) sage-color(grey, 700);
-}
+// TODO - commented out to prevent issues with icons not rendering correctly
+// [class*="color-white-"] {
+//   box-shadow: inset 0 0 rem(1px) sage-color(grey, 700);
+// }
 
-[class*="color-black-"] {
-  color: sage-color(white);
-}
+// [class*="color-black-"] {
+//   color: sage-color(white);
+// }
