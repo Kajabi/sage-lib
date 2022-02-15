@@ -84,6 +84,14 @@ module SageSchemas
     value: [:optional, {}, String],
   }
 
+  DROPDOWN_TRIGGER_TYPE = [:optional, NilClass, Set.new(["select", "select-labeled"])]
+
+  DROPDOWN_TRIGGER = BUTTON.merge({
+    label: [:optional, NilClass, String],
+    type: DROPDOWN_TRIGGER_TYPE,
+    value: [:optional, NilClass, String],
+  })
+
   PANEL_FIGURE = {
     aspect_ratio: [:optional, NilClass, Integer, Float],
     background_color: [:optional, NilClass, String],
