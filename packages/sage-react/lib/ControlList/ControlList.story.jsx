@@ -105,7 +105,6 @@ const RadiosWithState = () => {
   );
 };
 storiesOf('Sage/Control List', module)
-  .addDecorator(withKnobs)
   .addDecorator(centerXY)
   .add('Default', () => (
     <div style={{ maxWidth: '480px' }}>
