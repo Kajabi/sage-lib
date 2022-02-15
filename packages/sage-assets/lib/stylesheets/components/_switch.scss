@@ -150,19 +150,19 @@ $-switch-focus-outline-error-color: sage-color(red, 300);
 
   .sage-switch--error &,
   &:invalid {
-    background-color: sage-color(red);
+    background-color: sage-color(red, 500);
     ~ .sage-switch__label,
     ~ .sage-switch__message {
-      color: sage-color(red);
+      color: sage-color(red, 500);
     }
     &:checked {
-      background-color: sage-color(red);
+      background-color: sage-color(red, 500);
     }
     &:checked:hover {
-      background-color: sage-color(red);
+      background-color: sage-color(red, 500);
     }
     &::before {
-      border-color: sage-color(red);
+      border-color: sage-color(red, 500);
     }
   }
 
