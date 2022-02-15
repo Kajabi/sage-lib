@@ -36,9 +36,9 @@ module SageTokens
       hash.each do |index, values|
         case color
         when :BLACK
-          # skip black values
+          sliders.push(values[:CODE])
         when :WHITE
-          # skip white values
+          sliders.push(values[:CODE])
         else
           sliders.push(values[:CODE])
         end
