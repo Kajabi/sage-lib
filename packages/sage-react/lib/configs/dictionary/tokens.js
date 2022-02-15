@@ -953,13 +953,13 @@ export const COLOR_COMBOS = {
 //
 // Static vars for COLOR CORE
 //
-export const COLOR_CORE_PRIMARY = '#8ecafb';
-export const COLOR_CORE_SAGE = '#86d5bc';
-export const COLOR_CORE_YELLOW = '#fad980';
-export const COLOR_CORE_RED = '#fdb0aa';
-export const COLOR_CORE_ORANGE = '#ffb36b';
-export const COLOR_CORE_PURPLE = '#d9c2ef';
-export const COLOR_CORE_GREY = '#d3d5d9';
+export const COLOR_CORE_PRIMARY = '#0072ef';
+export const COLOR_CORE_SAGE = '#23856d';
+export const COLOR_CORE_YELLOW = '#ffc505';
+export const COLOR_CORE_RED = '#cf3c32';
+export const COLOR_CORE_ORANGE = '#fb7e09';
+export const COLOR_CORE_PURPLE = '#8e5ad8';
+export const COLOR_CORE_GREY = '#8d939a';
 export const COLOR_CORE_WHITE = '#fff';
 export const COLOR_CORE_BLACK = '#000';
 
