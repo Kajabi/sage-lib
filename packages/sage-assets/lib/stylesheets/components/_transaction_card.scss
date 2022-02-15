@@ -55,11 +55,11 @@ $-transaction-card-price-max-width: rem(100px);
 }
 
 .sage-transaction-card__amount--sage {
-  color: sage-color(sage, 300);
+  color: sage-color(sage, 500);
 }
 
 .sage-transaction-card__amount--red {
-  color: sage-color(red, 300);
+  color: sage-color(red, 500);
 }
 
 .sage-transaction-card__label {
@@ -84,11 +84,11 @@ $-transaction-card-price-max-width: rem(100px);
 }
 
 .sage-transaction-card__state--red {
-  color: sage-color(red, 300);
+  color: sage-color(red, 500);
 }
 
 .sage-transaction-card__state--sage {
-  color: sage-color(sage, 300);
+  color: sage-color(sage, 500);
 }
 
 .sage-transaction-card__time {
