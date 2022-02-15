@@ -55,7 +55,7 @@ $sage-field-colors: (
   default: sage-color(grey, 700),
   disabled: sage-color(grey, 400),
   disabled-background: sage-color(grey, 100),
-  error: sage-color(red),
+  error: sage-color(red, 500),
   label-background: sage-color(white),
   success: sage-color(primary, 500),
 );
