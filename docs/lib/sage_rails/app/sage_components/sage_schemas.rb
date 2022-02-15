@@ -92,6 +92,23 @@ module SageSchemas
     value: [:optional, NilClass, String],
   })
 
+  DROPDOWN = {
+    align: [:optional, Set.new(["left", "center", "right"])],
+    contained: [:optional, NilClass, TrueClass],
+    customized: [:optional, NilClass, TrueClass],
+    custom_modifier: [:optional, NilClass, Set.new(["actions", "sort"])],
+    full_width_panel: [:optional, NilClass, TrueClass],
+    id: [:optional, NilClass, String],
+    items: [:optional, NilClass, [[SageSchemas::DROPDOWN_ITEM]]],
+    panel_size: [:optional, NilClass, Set.new(["small"])],
+    panel_type: [:optional, NilClass, Set.new(["custom", "dropdown", "choice", "checkbox", "status", "searchable"])],
+    panel_width: [:optional, NilClass, String],
+    search: [:optional, NilClass, TrueClass],
+    trigger: [:optional, NilClass, DROPDOWN_TRIGGER],
+    trigger_type: [:optional, NilClass, Set.new(["select", "select-labeled"])],
+    wrap_footer: [:optional, NilClass, TrueClass],
+  }
+
   PANEL_FIGURE = {
     aspect_ratio: [:optional, NilClass, Integer, Float],
     background_color: [:optional, NilClass, String],
