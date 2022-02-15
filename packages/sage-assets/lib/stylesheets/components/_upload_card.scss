@@ -13,8 +13,8 @@ $-upload-card-preview-max-width: rem(190px);
 $-upload-card-preview-max-width-mobile: rem(304px);
 $-upload-card-border-color-default: sage-color(grey, 300);
 $-upload-card-border-color-hover: sage-color(grey, 400);
-$-upload-card-border-color-error: sage-color(red, 300);
-$-upload-card-border-color-focus: sage-color(primary, 300);
+$-upload-card-border-color-error: sage-color(red, 500);
+$-upload-card-border-color-focus: sage-color(primary, 500);
 $-upload-card-background: sage-color(white);
 $-upload-card-background-hover: sage-color(grey, 100);
 
@@ -104,7 +104,7 @@ $-upload-card-background-hover: sage-color(grey, 100);
   > p {
     @extend %t-sage-body-small;
 
-    color: sage-color(red, 300);
+    color: sage-color(red, 500);
 
     &:not(:last-child) {
       margin-bottom: sage-spacing(2xs);
@@ -117,7 +117,7 @@ $-upload-card-background-hover: sage-color(grey, 100);
 
     &:focus,
     &:hover {
-      color: sage-color(red, 500);
+      color: sage-color(red, 900);
       text-decoration: underline;
       outline: 0;
     }
