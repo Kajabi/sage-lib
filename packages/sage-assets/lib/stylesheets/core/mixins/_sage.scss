@@ -404,11 +404,11 @@
   .sage-form-field--error &:focus:not(:disabled),
   .sage-form-field--error &:not(:placeholder-shown),
   .sage-form-field--error &:required:not(:placeholder-shown):not(:valid) {
-    border-color: sage-color(red);
-    box-shadow: 0 0 0 rem(1px) sage-color(red);
+    border-color: sage-color(red, 500);
+    box-shadow: 0 0 0 rem(1px) sage-color(red, 500);
 
     ~ label {
-      color: sage-color(red);
+      color: sage-color(red, 500);
     }
   }
 
@@ -484,7 +484,7 @@
   color: sage-color(grey, 500);
 
   .sage-form-field--error & {
-    color: sage-color(red);
+    color: sage-color(red, 500);
 
     &::before {
       @include sage-icon-base(danger, md);
