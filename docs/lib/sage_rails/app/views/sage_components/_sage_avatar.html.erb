@@ -11,7 +11,7 @@ avatar_size_as_integer = component.size.to_i;
 
 case avatar_size_as_integer
   when 32..47 then badge_icon_size = "sm"
-  when 48..63 then badge_icon_size = "md"
+  when 48..63 then badge_icon_size = nil # should be update to md once -md classes supported
   when 64..79 then badge_icon_size = "lg"
   when 80..95 then badge_icon_size = "xl"
   when 96..111 then badge_icon_size = "2xl"
@@ -38,7 +38,7 @@ end
       <%= sage_component SageIcon, {
         icon: "check-circle-filled",
         size: badge_icon_size,
-        color: "primary-500",
+        color: "primary-600",
       } %>
     </div>
   <% end %>

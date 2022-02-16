@@ -133,6 +133,7 @@ $-avatar-group-item-sizes: (
 .sage-avatar-wrapper {
   display: flex;
   margin-bottom: sage-spacing();
+  flex-wrap: wrap;
 }
 
 .sage-avatar--tile {
@@ -168,8 +169,8 @@ $-avatar-group-item-sizes: (
   grid-area: full;
   width: 100%;
   text-align: center;
-  color: sage-color(primary, 500);
-  fill: sage-color(primary, 500);
+  color: sage-color(primary, 700);
+  fill: sage-color(primary, 700);
 
   @extend %t-sage-body-xsmall-bold;
 
