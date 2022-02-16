@@ -87,7 +87,7 @@ export const PageHeadingWithIntro = Template.bind({});
 PageHeadingWithIntro.args = {
   intro: (
     <>
-      <p>Intro - Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo dolorum esse modi ut ipsa corporis.</p>
+      <p>Intro - Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
     </>
   )
 };
@@ -107,7 +107,7 @@ AllItems.args = {
   ),
   intro: (
     <>
-      <p>Intro - Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo dolorum esse modi ut ipsa corporis.</p>
+      <p>Intro - Lorem ipsum, dolor sit amet consectetur adipisicing elit</p>
     </>
   ),
   actionItems: [

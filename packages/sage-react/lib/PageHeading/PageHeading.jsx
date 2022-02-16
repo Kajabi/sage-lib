@@ -29,8 +29,8 @@ export const PageHeading = ({
       </div>
     )}
     {intro && (
-      <div class="sage-page-heading__intro">
-      {intro}
+      <div className="sage-page-heading__intro">
+        {intro}
       </div>
     )}
     <div className="sage-page-heading__title-wrapper">
