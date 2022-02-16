@@ -86,7 +86,7 @@ $-alert-colors: (
   display: inline-flex;
   @each $name, $color in $-alert-colors {
     .sage-alert--#{$name} & {
-      color: sage-color($color, 700);
+      color: sage-color($color, 600);
     }
   }
   .sage-alert--warning &,
