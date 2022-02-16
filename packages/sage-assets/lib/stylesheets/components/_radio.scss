@@ -19,7 +19,7 @@ $-radio-color-focus-outline-error: sage-color(red, 300);
 
 // Additional configurations
 $-radio-button-size: $sage-radio-size;
-$-radio-label-spacing: sage-spacing(xs);
+$-radio-label-spacing: rem(12px);
 $-radio-transition: 0.15s ease-in-out;
 $-radio-selected-indicator-size: rem(7px);
 
