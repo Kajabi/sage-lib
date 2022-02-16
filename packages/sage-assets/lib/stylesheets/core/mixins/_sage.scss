@@ -206,10 +206,10 @@
     @include sage-grid-card();
   }
 
+  min-width: 0; /* to prevew grid blowouts */
   padding: sage-spacing(card);
   border: sage-border();
   border-radius: sage-border(radius);
-  min-width: 0; /* to prevew grid blowouts */
 }
 
 ///
