@@ -205,9 +205,9 @@ $-avatar-group-item-sizes: (
 }
 
 .sage-avatar__graphic {
+  grid-area: full;
   height: 36.36%;
   width: 36.36%;
-  grid-area: full;
 }
 
 .sage-avatar-group {
