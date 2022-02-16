@@ -57,11 +57,11 @@ end
     <%= image_tag component.image[:src], alt: (component.image[:alt] || ""), class: "sage-avatar__image", id: image_id  %>
   <% end %>
 
-<% if component.initials %>
-  <% if lazy_load_initials %>
-    <svg class="sage-avatar__initials" viewBox="0 0 32 32">
-      <text x="16" y="20"><%= component.initials %></text>
-    </svg>
-  <% end %>
+  <% if component.initials %>
+    <% if lazy_load_initials %>
+      <svg class="sage-avatar__initials" viewBox="0 0 32 32">
+        <text x="16" y="20"><%= component.initials %></text>
+      </svg>
+    <% end %>
   <% end %>
 </div>
