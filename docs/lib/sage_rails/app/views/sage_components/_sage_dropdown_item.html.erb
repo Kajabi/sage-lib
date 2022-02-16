@@ -30,7 +30,7 @@ end
         <%= "sage-dropdown__item-control--#{component.style}" if component.style %>
         <%= "sage-dropdown__item-control--icon-#{component.icon}" if component.icon %>
       "
-      <%= 'type="button' if tag == "button" %>
+      <%= 'type="button"' if tag == "button" %>
       role="menuitem"
       tabindex="0"
       <% component.attributes.each do |key, value| %>

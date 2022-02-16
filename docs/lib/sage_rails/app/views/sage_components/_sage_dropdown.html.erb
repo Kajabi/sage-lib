@@ -20,7 +20,11 @@ trigger_configs = component.trigger.present? ? component.trigger : { type: trigg
 >
   <div aria-hidden="true" class="sage-dropdown__screen"></div>
   
-  <% if content_for? :sage_dropdown_trigger %>
+  <% if component.trigger.present? %>
+    <%= sage_component SageDropdownTrigger, trigger_configs do %>
+      <%= component.content %>
+    <% end %>
+  <% elsif content_for? :sage_dropdown_trigger %>
     <%= sage_component SageDropdownTrigger, trigger_configs do %>
       <%= content_for :sage_dropdown_trigger %>
     <% end %>

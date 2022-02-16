@@ -76,9 +76,8 @@ module SageSchemas
   DROPDOWN_ITEM = {
     attributes: [:optional, Hash],
     icon: [:optional, NilClass, String],
-    css_classes: [:optional, NilClass, String],
     is_heading: [:optional, TrueClass],
-    modifiers: [:optional, [[Set.new(["disabled", "border-before", "border-after", nil])]]],
+    modifiers: [:optional, NilClass, [[Set.new(["disabled", "border-before", "border-after"])]]],
     selected: [:optional, TrueClass],
     style: [:optional, NilClass, Set.new(["primary", "danger", "muted"])],
     value: [:optional, {}, String],
@@ -86,11 +85,11 @@ module SageSchemas
 
   DROPDOWN_TRIGGER_TYPE = [:optional, NilClass, Set.new(["select", "select-labeled"])]
 
-  DROPDOWN_TRIGGER = BUTTON.merge({
+  DROPDOWN_TRIGGER = {
     label: [:optional, NilClass, String],
     type: DROPDOWN_TRIGGER_TYPE,
     value: [:optional, NilClass, String],
-  })
+  }
 
   DROPDOWN = {
     align: [:optional, Set.new(["left", "center", "right"])],
@@ -101,8 +100,8 @@ module SageSchemas
     id: [:optional, NilClass, String],
     items: [:optional, NilClass, [[SageSchemas::DROPDOWN_ITEM]]],
     panel_size: [:optional, NilClass, Set.new(["small"])],
-    panel_type: [:optional, NilClass, Set.new(["custom", "dropdown", "choice", "checkbox", "status", "searchable"])],
     panel_width: [:optional, NilClass, String],
+    panel_type: [:optional, NilClass, Set.new(["custom", "dropdown", "choice", "checkbox", "status", "searchable"])],
     search: [:optional, NilClass, TrueClass],
     trigger: [:optional, NilClass, DROPDOWN_TRIGGER],
     trigger_type: [:optional, NilClass, Set.new(["select", "select-labeled"])],
