@@ -209,6 +209,7 @@
   padding: sage-spacing(card);
   border: sage-border();
   border-radius: sage-border(radius);
+  min-width: 0; /* to prevew grid blowouts */
 }
 
 ///
@@ -233,6 +234,7 @@
   display: grid;
   gap: sage-spacing(sm);
   grid-template-rows: min-content;
+  min-width: 0; /* to prevew grid blowouts */
 }
 
 ///
@@ -244,6 +246,7 @@
   grid-template-columns: 100%;
   grid-template-rows: min-content;
   justify-items: start;
+  min-width: 0; /* to prevew grid blowouts */
 }
 
 ///
@@ -254,6 +257,7 @@
   gap: sage-spacing(panel);
   grid-template-columns: 100%;
   grid-template-rows: min-content;
+  min-width: 0; /* to prevew grid blowouts */
 }
 
 ///
@@ -265,6 +269,7 @@
   justify-content: space-between;
   align-items: center;
   gap: sage-spacing(card);
+  min-width: 0; /* to prevew grid blowouts */
 
   @media (max-width: sage-breakpoint(sm-max)) {
     display: flex;
@@ -287,6 +292,7 @@
   justify-content: space-between;
   align-items: center;
   gap: sage-spacing();
+  min-width: 0; /* to prevew grid blowouts */
 
   @media (max-width: sage-breakpoint(sm-max)) {
     display: flex;

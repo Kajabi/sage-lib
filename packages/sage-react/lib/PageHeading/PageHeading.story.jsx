@@ -11,7 +11,6 @@ export default {
     children: (
       <>
         Page heading goes here
-        <HelpLink href="//example.com" target="_blank" rel="noopener" />
       </>
     ),
     breadcrumbs: [
@@ -20,6 +19,11 @@ export default {
         href: '#back'
       }
     ],
+    help: (
+      <>
+        <HelpLink href="//example.com" target="_blank" rel="noopener" />
+      </>
+    ),
     actionItems: null,
     secondaryText: 'Secondary text here',
     toolbarItems: null

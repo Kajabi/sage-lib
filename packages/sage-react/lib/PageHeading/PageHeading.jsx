@@ -9,6 +9,7 @@ export const PageHeading = ({
   children,
   breadcrumbs,
   actionItems,
+  help,
   toolbarItems,
   secondaryText,
   ...rest
@@ -30,6 +31,11 @@ export const PageHeading = ({
       <h1 className="sage-page-heading__title">
         {children}
       </h1>
+      {help && (
+        <>
+          {help}
+        </>
+      )}
     </div>
     {toolbarItems && (
       <div className="sage-page-heading__toolbar">
@@ -53,6 +59,7 @@ PageHeading.defaultProps = {
   className: '',
   actionItems: null,
   toolbarItems: null,
+  help: null,
   breadcrumbs: null,
   secondaryText: null,
 };
@@ -62,6 +69,7 @@ PageHeading.propTypes = {
   children: PropTypes.node.isRequired,
   actionItems: PropTypes.arrayOf(PropTypes.node),
   toolbarItems: PropTypes.arrayOf(PropTypes.node),
+  help: PropTypes.node,
   breadcrumbs: PropTypes.arrayOf(Breadcrumbs.itemPropTypes),
   secondaryText: PropTypes.string,
 };
