@@ -20,7 +20,7 @@ $-btn-base-styles: (
     default: (
       color: sage-color(white),
       background-color: sage-color(primary, 500),
-      ring-color: sage-color(primary, 700),
+      ring-color: sage-color(primary, 300),
     ),
     hover: (
       color: sage-color(white),
@@ -38,16 +38,16 @@ $-btn-base-styles: (
   neutral: (
     default: (
       color: sage-color(white),
-      background-color: sage-color(grey, 400),
-      ring-color: sage-color(grey, 400),
+      background-color: sage-color(grey, 800),
+      ring-color: sage-color(grey, 300),
     ),
     hover: (
       color: sage-color(white),
-      background-color: sage-color(grey, 500),
+      background-color: sage-color(grey, 900),
     ),
     focus: (
       color: sage-color(white),
-      background-color: sage-color(grey, 400),
+      background-color: sage-color(grey, 800),
     ),
     disabled: (
       color: sage-color(white),
@@ -58,7 +58,7 @@ $-btn-base-styles: (
     default: (
       color: sage-color(grey, 800),
       background-color: sage-color(white),
-      ring-color: sage-color(grey, 700),
+      ring-color: sage-color(primary, 300),
     ),
     hover: (
       color: sage-color(grey, 800),
