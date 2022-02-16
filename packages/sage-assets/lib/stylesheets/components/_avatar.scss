@@ -153,10 +153,11 @@ $-avatar-group-item-sizes: (
 .sage-avatar__badge {
   position: absolute;
   z-index: sage-z-index(default, 3);
-  bottom: 0;
-  right: 0;
+  bottom: rem(-4px);
+  right: rem(-4px);
   background-color: sage-color(white);
   border-radius: sage-border(radius-round);
+  border: rem(2px) solid sage-color(white);
 
   i {
     display: flex;
@@ -201,6 +202,12 @@ $-avatar-group-item-sizes: (
     max-width: $-avatar-tile-size;
     max-height: $-avatar-tile-size;
   }
+}
+
+.sage-avatar__graphic {
+  height: 36.36%;
+  width: 36.36%;
+  grid-area: full;
 }
 
 .sage-avatar-group {

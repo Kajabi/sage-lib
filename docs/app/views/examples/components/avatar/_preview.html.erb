@@ -1,20 +1,73 @@
-<h3>Sample Avatars</h3>
+<h3>Default Avatars</h3>
 <div class="sage-avatar-wrapper">
+  <%= sage_component SageAvatar, { color: nil, size: "24px" } %>
+  <%= sage_component SageAvatar, { color: nil, size: "32px" } %>
+  <%= sage_component SageAvatar, { color: nil, size: "40px" } %>
+  <%= sage_component SageAvatar, { color: nil, size: "56px" } %>
+  <%= sage_component SageAvatar, { color: nil, size: "72px" } %>
+  <%= sage_component SageAvatar, { color: nil, size: "88px" } %>
+</div>
 
-  <!-- Showing default -->
-  <%= sage_component SageAvatar, { color: nil, initials: "JC" } %>
+<h3>Initial Avatars</h3>
+<div class="sage-avatar-wrapper">
+  <%= sage_component SageAvatar, { color: nil, size: "24px", initials: "KA" } %>
+  <%= sage_component SageAvatar, { color: nil, size: "32px", initials: "JA" } %>
+  <%= sage_component SageAvatar, { color: nil, size: "40px", initials: "BI" } %>
+  <%= sage_component SageAvatar, { color: nil, size: "56px", initials: "RO" } %>
+  <%= sage_component SageAvatar, { color: nil, size: "72px", initials: "CK" } %>
+  <%= sage_component SageAvatar, { color: nil, size: "88px", initials: "SS" } %>
+</div>
 
-  <!-- Showing color variation -->
-  <%= sage_component SageAvatar, { color: "purple", initials: "PS" } %>
-
-  <!-- Showing one initial -->
-  <%= sage_component SageAvatar, { color: "sage", initials: "Q" } %>
-
-  <!-- Showing custom class -->
-  <%= sage_component SageAvatar, { color: "orange", initials: "KJ", css_classes: "my-custom-class" } %>
-
-  <!-- Showing profile image -->
+<h3>Image Avatars</h3>
+<div class="sage-avatar-wrapper">
   <%= sage_component SageAvatar, {
+    color: nil,
+    size: "24px",
+    image: {
+      alt: "Court's profile image",
+      src: "avatar/court.png",
+      id: "custom_id"
+    }
+  } %>
+  <%= sage_component SageAvatar, {
+    color: nil,
+    size: "32px",
+    image: {
+      alt: "Court's profile image",
+      src: "avatar/court.png",
+      id: "custom_id"
+    }
+  } %>
+  <%= sage_component SageAvatar, {
+    color: nil,
+    size: "40px",
+    image: {
+      alt: "Court's profile image",
+      src: "avatar/court.png",
+      id: "custom_id"
+    }
+  } %>
+  <%= sage_component SageAvatar, {
+    color: nil,
+    size: "56px",
+    image: {
+      alt: "Court's profile image",
+      src: "avatar/court.png",
+      id: "custom_id"
+    }
+  } %>
+  <%= sage_component SageAvatar, {
+    color: nil,
+    size: "72px",
+    image: {
+      alt: "Court's profile image",
+      src: "avatar/court.png",
+      id: "custom_id"
+    }
+  } %>
+  <%= sage_component SageAvatar, {
+    color: nil,
+    size: "88px",
     image: {
       alt: "Court's profile image",
       src: "avatar/court.png",
@@ -23,8 +76,42 @@
   } %>
 </div>
 
-<h3>Avatar centered + custom size</h3>
-<%= sage_component SageAvatar, { centered: true, initials: "JC", size: "128px" } %>
+<h3>Avatar Badges</h3>
+<div class="sage-avatar-wrapper">
+  <%= sage_component SageAvatar, { color: nil, size: "24px", badge: true } %>
+  <%= sage_component SageAvatar, { color: nil, size: "32px", badge: true } %>
+  <%= sage_component SageAvatar, { color: nil, size: "40px", initials: "BI", badge: true } %>
+  <%= sage_component SageAvatar, { color: nil, size: "56px", initials: "RO", badge: true } %>
+  <%= sage_component SageAvatar, {
+    badge: true,
+    color: nil,
+    size: "72px",
+    image: {
+      alt: "Court's profile image",
+      src: "avatar/court.png",
+      id: "custom_id"
+    }
+  } %>
+  <%= sage_component SageAvatar, {
+    badge: true,
+    color: nil,
+    size: "88px",
+    image: {
+      alt: "Court's profile image",
+      src: "avatar/court.png",
+      id: "custom_id"
+    }
+  } %>
+</div>
+
+<h3>Custom Colors</h3>
+<div class="sage-avatar-wrapper">
+  <%= sage_component SageAvatar, { color: nil, size: "24px", initials: "KA", color: "purple" } %>
+  <%= sage_component SageAvatar, { color: nil, size: "32px", initials: "JA", color: "sage" } %>
+  <%= sage_component SageAvatar, { color: nil, size: "40px", initials: "BI", color: "orange" } %>
+  <%= sage_component SageAvatar, { color: nil, size: "56px", initials: "RO", color: "yellow" } %>
+  <%= sage_component SageAvatar, { color: nil, size: "72px", initials: "CK", color: "red" } %>
+</div>
 
 <h3>Avatar Groups</h3>
 <div class="sage-avatar-wrapper">
@@ -56,34 +143,9 @@
   } %>
 </div>
 
-<!-- Showing default -->
-<h3>Avatar With Badge</h3>
-<div class="sage-avatar-wrapper">
-  <%= sage_component SageAvatar, {
-    badge: true,
-    size: "32px",
-    color: nil,
-    initials: "JC"
-  } %>
-  <%= sage_component SageAvatar, {
-    badge: true,
-    size: "64px",
-    color: nil,
-    initials: "JC"
-  } %>
-  <%= sage_component SageAvatar, {
-    badge: true,
-    size: "96px",
-    color: nil,
-    initials: "JC"
-  } %>
-  <%= sage_component SageAvatar, {
-    badge: true,
-    size: "128px",
-    color: nil,
-    initials: "JC"
-  } %>
-</div>
+
+<h3>Avatar centered + custom size</h3>
+<%= sage_component SageAvatar, { centered: true, initials: "JC", size: "128px" } %>
 
 <h3>Layering and lazy loading</h3>
 <%= md('
