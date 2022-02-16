@@ -25,7 +25,7 @@ $-radio-selected-indicator-size: rem(7px);
 
 // Focus state
 $-radio-focus-outline-size: rem(3px);
-$-radio-focus-outline-width: 2;
+$-radio-focus-outline-width: 4;
 $-radio-focus-outline-color: currentColor;
 
 
@@ -211,6 +211,11 @@ $-radio-focus-outline-color: currentColor;
   .sage-radio__message {
     color: sage-color(red, 500);
   }
+
+  &.sage-radio--has-border:not(.sage-radio--standalone) {
+    border-color: sage-color(red, 500);
+  }
+
   .sage-radio__input {
     border-color: sage-color(red, 500);
     &:checked {
@@ -227,6 +232,7 @@ $-radio-focus-outline-color: currentColor;
       border-color: sage-color(red, 500);
     }
   }
+
   :hover:not(:checked):not(:disabled) {
     border-color: sage-color(red, 500);
   }
