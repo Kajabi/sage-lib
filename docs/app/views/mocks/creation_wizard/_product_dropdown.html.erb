@@ -19,7 +19,7 @@
           <%= sage_component SageIcon, { icon: "product", card_color: "info" } %>
           <div class="<%= SageClassnames::TYPE::BODY %>">
             <h2 class="<%= SageClassnames::TYPE::HEADING_6 %>">Make a new product</h2>
-            <p class="<%= SageClassnames::TYPE_COLORS::GREY_200 %>">Set up a course, podcast, or community</p>
+            <p class="<%= SageClassnames::TYPE_COLORS::GREY_600 %>">Set up a course, podcast, or community</p>
           </div>
         <% end %>
         <% creation_prod_dropdown_options[:product_options].each do | option | %>
@@ -31,7 +31,7 @@
             <% end %>
             <div class="<%= SageClassnames::TYPE::BODY %>">
               <h2 class="<%= SageClassnames::TYPE::HEADING_6 %>"><%= option[:name] %></h2>
-              <p class="<%= SageClassnames::TYPE_COLORS::GREY_200 %>"><%= option[:type] %></p>
+              <p class="<%= SageClassnames::TYPE_COLORS::GREY_600 %>"><%= option[:type] %></p>
             </div>
           <% end %>
         <% end %>
