@@ -1,0 +1,35 @@
+<%= content_for :heading do %>
+<%= md(%(
+# Truncation
+<p class="docs-heading__lead">Truncation is a wrapper that shortens a string of text when there is overflow.</p>
+)) %>
+<% end %>
+
+<div class="<%= SageClassnames::TYPE_BLOCK %>">
+
+  <%= md(%(
+  We have helper classes to assist with truncation and the necessary pairings on parent elements:
+
+  - `.t-sage--truncate-min-width` -- This class must be added to a parent element of `.t-sage--truncate`. This element must also be either a child element whose parent contains `display: grid;` .
+  - `.t-sage--truncate-parent` -- This must be added to the parent element of `.t-sage--truncate`.
+  - `.t-sage--truncate` -- This class is can be added to the text intended to be truncated.
+  )) %>
+</div>
+
+<%= sage_component SageCard, {} do %>
+  <h2 class="t-sage-heading-3">Examples</h2>
+  <h3 class="t-sage-heading-3">Basic truncation</h3>
+  <%= sage_component SageAlert, {
+    color: "warning",
+    desc: "TODO: example of truncation.",
+    icon_name: "sage-icon-warning",
+    small: true
+  } %>
+  <h3 class="t-sage-heading-3">Truncation within CSS Grid</h3>
+  <%= sage_component SageAlert, {
+    color: "warning",
+    desc: "TODO: example of truncation when exists as a child of CSS grid content.",
+    icon_name: "sage-icon-warning",
+    small: true
+  } %>
+<% end %>
