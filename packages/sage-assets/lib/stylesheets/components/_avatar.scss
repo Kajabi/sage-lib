@@ -132,8 +132,8 @@ $-avatar-group-item-sizes: (
 // Documentation-specific styles
 .sage-avatar-wrapper {
   display: flex;
-  margin-bottom: sage-spacing();
   flex-wrap: wrap;
+  margin-bottom: sage-spacing();
 }
 
 .sage-avatar--tile {
