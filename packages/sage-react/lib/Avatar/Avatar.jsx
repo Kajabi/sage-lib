@@ -53,6 +53,14 @@ export const Avatar = ({
     return badgeIconSize;
   };
 
+  const setDefaultGraphic = () => {
+    if (!image.src && !initials){
+      return (
+        <svg class="sage-avatar__graphic" viewBox="0 0 28 28"><path fill-rule="evenodd" clip-rule="evenodd" d="M19.038 14.594a8.167 8.167 0 1 0-10.077 0C3.767 16.236 0 21.094 0 26.834a1.167 1.167 0 1 0 2.333 0c0-5.8 4.701-10.5 10.5-10.5h2.334c5.799 0 10.5 4.7 10.5 10.5a1.167 1.167 0 1 0 2.333 0c0-5.74-3.766-10.598-8.962-12.24ZM8.167 8.167a5.833 5.833 0 1 1 11.666 0 5.833 5.833 0 0 1-11.666 0Z" fill="#054FB8"/></svg>
+      );
+    }
+  }
+
   return (
     <div className={classNames} style={style} {...rest}>
       {badge && (
@@ -63,6 +71,9 @@ export const Avatar = ({
             size={setBadgeSize()}
           />
         </div>
+      )}
+      {(
+        setDefaultGraphic()
       )}
       {image.src && (
         <img alt={image.alt || ''} className="sage-avatar__image" src={image.src} id={image.id} />
