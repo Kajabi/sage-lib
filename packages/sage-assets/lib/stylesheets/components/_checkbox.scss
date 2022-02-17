@@ -13,7 +13,6 @@ $-checkbox-color-checked-hover: sage-color(primary, 700);
 $-checkbox-color-disabled: sage-color(grey, 200);
 $-checkbox-color-disabled-checked: sage-color(primary, 200);
 $-checkbox-color-error: sage-color(red, 500);
-$-checkbox-color-error-hover: sage-color(red, 700);
 
 $-checkbox-size: rem(20px);
 $-checkbox-label-spacing: rem(12px);
@@ -133,7 +132,7 @@ $-checkbox-focus-outline-color: sage-color(primary, 400);
   width: $-checkbox-size;
   margin: 0;
   color: $-checkbox-color-default;
-  border: 1px solid $-checkbox-color-default;
+  border: rem(1px) solid $-checkbox-color-default;
   border-radius: $-checkbox-border-radius-inner;
   outline: none;
   transition: $-checkbox-transition;
@@ -254,8 +253,7 @@ $-checkbox-focus-outline-color: sage-color(primary, 400);
     }
 
     &:hover {
-      border-color: $-checkbox-color-error-hover;
-      background-color: $-checkbox-color-error-hover;
+      border-color: $-checkbox-color-error;
     }
 
     &:hover:not(:checked):not(:disabled) {
