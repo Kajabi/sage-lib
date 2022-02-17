@@ -207,8 +207,8 @@ $-avatar-group-item-sizes: (
 
 .sage-avatar__graphic {
   grid-area: full;
-  height: 36.36%;
-  width: 36.36%;
+  height: 36.36%; // 32/88 - 32px (icon size) is 36.36% of 88px (full avatar size)
+  width: 36.36%; // 32/88 - 32px (icon size) is 36.36% of 88px (full avatar size)
 }
 
 .sage-avatar-group {
