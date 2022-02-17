@@ -7,13 +7,13 @@ export default {
   component: Avatar,
   args: {
     centered: true,
-    color: Avatar.COLORS.SAGE,
+    color: Avatar.COLORS.DEFAULT,
     image: {
       alt: null,
       src: null,
       id: null,
     },
-    initials: 'QJ',
+    initials: '',
     lazyLoadInitials: true,
     size: '48px',
   },
