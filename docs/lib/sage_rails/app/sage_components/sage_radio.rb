@@ -14,4 +14,8 @@ class SageRadio < SageComponent
     standalone: [:optional, TrueClass],
     value: String,
   })
+
+  def sections
+    %w(radio_custom_content)
+  end
 end

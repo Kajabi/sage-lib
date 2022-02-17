@@ -21,7 +21,11 @@
     value: "2b",
     label_text: "Option 2b",
     message: "Message text goes here.",
-  } %>
+  } do %>
+    <%= content_for :sage_radio_custom_content do %>
+      <p>Text for testing custom content.</p>
+    <% end %>
+  <% end %>
 
   <!-- Disabled -->
   <%= sage_component SageRadio, {
