@@ -65,6 +65,9 @@ export const MultipleRadios = (args) => {
           onChange={onChange}
           name="group-1"
           itemInList={true}
+          customContent={(
+            <h1>hi</h1>
+          )}
           {...configs}
         />
       ))}

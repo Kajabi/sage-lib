@@ -5,6 +5,7 @@
     class="
       sage-radio
       sage-radio--standalone
+      <%= "sage-radio--custom" if content_for :sage_radio_custom_content %>
       <%= component.has_error ? "sage-radio--error" : "" %>
       <%= component.generated_css_classes %>
     "
@@ -48,6 +49,11 @@
     <% end %>
     <% if component.caption.present? %>
       <div class="sage-radio__caption"><%= component.caption %></div>
+    <% end %>
+    <% if content_for? :sage_radio_custom_content %>
+      <div class="sage-radio__custom-content">
+        <%= content_for :sage_radio_custom_content %>
+      </div>
     <% end %>
   </div>
 <% end %>
