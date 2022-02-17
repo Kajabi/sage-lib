@@ -257,9 +257,9 @@ $-checkbox-focus-outline-color: sage-color(primary, 400);
     }
 
     &:hover:not(:checked):not(:disabled) {
+      color: $-checkbox-color-error;
       background: sage-color(white);
       border-color: $-checkbox-color-error;
-      color: $-checkbox-color-error;
     }
 
     &::before {
