@@ -6,4 +6,5 @@ export const DOT_COLORS = {
   YELLOW: 'yellow',
   ORANGE: 'orange',
   RED: 'red',
+  GREY: 'grey',
 };
