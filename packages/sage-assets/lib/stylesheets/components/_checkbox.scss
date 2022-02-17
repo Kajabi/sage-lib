@@ -12,10 +12,12 @@ $-checkbox-color-checked: sage-color(primary, 600);
 $-checkbox-color-checked-hover: sage-color(primary, 700);
 $-checkbox-color-disabled: sage-color(grey, 200);
 $-checkbox-color-disabled-checked: sage-color(primary, 200);
+$-checkbox-color-error: sage-color(red, 500);
+$-checkbox-color-error-hover: sage-color(red, 700);
 
 $-checkbox-size: rem(20px);
-$-checkbox-label-spacing: sage-spacing(xs);
-$-checkbox-border-radius-inner: sage-border(radius-small);
+$-checkbox-label-spacing: rem(12px);
+$-checkbox-border-radius-inner: rem(6px);
 $-checkbox-border-radius-outer: sage-border(radius);
 $-checkbox-transition: 0.15s ease-in-out;
 
@@ -29,17 +31,13 @@ $-checkbox-marker-offset: $-checkbox-marker-border * 2;
 // Focus state
 //
 $-checkbox-focus-outline-size: rem(3px);
-$-checkbox-focus-outline-width: 2;
-$-checkbox-focus-outline-color: sage-color(primary, 700);
+$-checkbox-focus-outline-width: 4;
+$-checkbox-focus-outline-color: sage-color(primary, 400);
 
 
 .sage-checkbox {
   &:not(.sage-checkbox--standalone) {
     @include sage-form-toggle;
-  }
-
-  &.sage-checkbox--custom {
-    display: block;
   }
 
   .sage-list & {
@@ -114,7 +112,7 @@ $-checkbox-focus-outline-color: sage-color(primary, 700);
 
   .sage-checkbox--error &,
   .sage-checkbox__input:invalid + & {
-    color: sage-color(red, 500);
+    color: $-checkbox-color-error;
   }
 
   .sage-panel-controls--show-pagination & {
@@ -124,21 +122,6 @@ $-checkbox-focus-outline-color: sage-color(primary, 700);
 
   .sage-panel-controls__bulk-actions--checked & {
     display: unset;
-  }
-}
-
-.sage-checkbox__message {
-  @include sage-form-toggle-message;
-  margin-left: #{$-checkbox-size + $-checkbox-label-spacing};
-
-  .sage-checkbox--error &,
-  .sage-checkbox__input:invalid + & {
-    color: sage-color(red, 500);
-  }
-
-  .sage-checkbox__input:disabled + & {
-    color: $-checkbox-color-default;
-    cursor: not-allowed;
   }
 }
 
@@ -221,7 +204,7 @@ $-checkbox-focus-outline-color: sage-color(primary, 700);
   }
 
   &:hover:not(:checked):not(:disabled) {
-    border-color: sage-color(grey, 900);
+    border-color: sage-color(grey, 500);
     box-shadow: sage-shadow(sm);
   }
 
@@ -259,40 +242,59 @@ $-checkbox-focus-outline-color: sage-color(primary, 700);
 
   .sage-checkbox--error &,
   &:invalid {
-    background: sage-color(red, 100);
-    border-color: sage-color(red, 500);
+    background: sage-color(white);
+    border-color: $-checkbox-color-error;
 
     &::after {
-      color: sage-color(red, 500);
+      color: sage-color(white);
+    }
+
+    &:checked {
+      background-color: $-checkbox-color-error;
     }
 
     &:hover {
-      color: sage-color(red, 500);
-      background: sage-color(red, 100);
-      border-color: sage-color(red, 500);
+      border-color: $-checkbox-color-error-hover;
+      background-color: $-checkbox-color-error-hover;
     }
 
     &:hover:not(:checked):not(:disabled) {
-      border-color: sage-color(red, 500);
+      background: sage-color(white);
+      border-color: $-checkbox-color-error;
+      color: $-checkbox-color-error;
     }
 
     &::before {
-      border-color: sage-color(red, 500);
+      border-color: sage-color(red, 400);
     }
   }
 
   .sage-checkbox & {
-    @media (max-width: sage-breakpoint(md-max)) {
-      margin-top: rem(6px);
-    }
-
-    @media (min-width: sage-breakpoint(lg-min)) {
-      margin-top: sage-spacing(2xs);
-    }
+    margin-top: rem(2px);
   }
 
   &.sage-checkbox, // spcificity that should apply only to `--standalone` variation
   .sage-panel-controls__bulk-actions-checkbox & {
     margin-top: 0;
   }
+}
+
+.sage-checkbox__message {
+  @include sage-form-toggle-message;
+  margin-left: #{$-checkbox-size + $-checkbox-label-spacing};
+  margin-top: rem(2px);
+
+  .sage-checkbox--error &,
+  .sage-checkbox__input:invalid + & {
+    color: sage-color(red, 500);
+  }
+
+  .sage-checkbox__input:disabled + & {
+    color: $-checkbox-color-default;
+    cursor: not-allowed;
+  }
+}
+
+.sage-checkbox__custom-content {
+  margin-left: #{$-checkbox-size + $-checkbox-label-spacing};
 }
