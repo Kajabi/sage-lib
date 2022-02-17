@@ -172,10 +172,10 @@ module ComponentsHelper
       {
         title: "dot",
         description: "Dots provide a subtle color cue to place beside text or other elements.", 
-        scss: "todo",
-        rails: "todo",
-        react: "todo",
-        a11y: "todo",
+        scss: "done",
+        rails: "done",
+        react: "done",
+        a11y: "done",
         react_component_slug: "sage-dot--default",
         figma_embed: nil, # TODO: We'll have a link for this in the new design system
       },
