@@ -1,0 +1,125 @@
+<h3>Frame Presets</h3>
+<%= md("
+Frames have a high level of customization.
+The following presets allow for some options to implement common patterns quickly.
+Note that presets that do not have border setting are shown here with a background color added
+in order to better demonstrate their size and padding.
+") %>
+
+<h4>Default</h4>
+<%= sage_component SageFrame, { background: "grey-200" } do %>
+  <p>Lorem ipsum dolor sit amet consectitor</p>
+  <%= sage_component SageButton, { style: "primary", value: "Learn more" } %>
+<% end %>
+
+<hr />
+
+<%= md("
+#### `block`
+
+The basic `block` preset stacks elements vertically with no padding or gap but fills the space available.
+Set a specific `width` value to control its width more specifically.
+") %>
+<%= sage_component SageFrame, { preset: "block", background: "grey-200" } do %>
+  <p>Lorem ipsum dolor sit amet consectitor</p>
+  <%= sage_component SageButton, { style: "primary", value: "Learn more" } %>
+<% end %>
+
+<hr />
+
+<%= md("
+#### `block-hug`
+
+Similar to `block`, the `block-hug` preset stacks elements vertically with no padding or gap.
+However, `block-hug` will only take up the space its contents require.
+") %>
+<%= sage_component SageFrame, { preset: "block-hug", background: "grey-200" } do %>
+  <p>Lorem ipsum dolor sit amet consectitor</p>
+  <%= sage_component SageButton, { style: "primary", value: "Learn more" } %>
+<% end %>
+
+<hr />
+
+<%= md("
+#### `card-sm`
+
+The `card-sm` generates a bordered frame with a small padding and gap setting and a minimal border radius.
+") %>
+<%= sage_component SageFrame, { preset: "card-sm" } do %>
+  <p>Lorem ipsum dolor sit amet consectitor</p>
+  <%= sage_component SageButton, { style: "primary", value: "Learn more" } %>
+<% end %>
+
+<hr />
+
+<%= md("
+#### `card` and `card-md`
+
+The `card` or `card-md` generates a bordered frame with standard card spacing, gap, and border radius.
+") %>
+<%= sage_component SageFrame, { preset: "card" } do %>
+  <p>Lorem ipsum dolor sit amet consectitor</p>
+  <%= sage_component SageButton, { style: "primary", value: "Learn more" } %>
+<% end %>
+
+<hr />
+
+<%= md("
+#### `card-lg`
+
+The `card-lg` generates a bordered frame with a generous padding and gap setting and a larger border radius.
+") %>
+<%= sage_component SageFrame, { preset: "card-lg" } do %>
+  <p>Lorem ipsum dolor sit amet consectitor</p>
+  <%= sage_component SageButton, { style: "primary", value: "Learn more" } %>
+<% end %>
+
+<hr />
+
+<%= md("
+#### `row`
+
+Perfect for laying out most side-by-side content, the `row` places elements horizontally with no border treatment or padding but a standard gap.
+") %>
+<%= sage_component SageFrame, { preset: "row", background: "grey-200" } do %>
+  <p>Lorem ipsum dolor sit amet consectitor</p>
+  <%= sage_component SageButton, { style: "primary", value: "Learn more" } %>
+<% end %>
+
+<hr />
+
+<%= md("
+#### `row-spread`
+
+Similar to `row`, the `row` places elements horizontally with no border treatment or padding but a standard gap.
+In additional, elements are set to spread out evenly within the space available.
+") %>
+<%= sage_component SageFrame, { preset: "row-spread", background: "grey-200" } do %>
+  <p>Lorem ipsum dolor sit amet consectitor</p>
+  <%= sage_component SageButton, { style: "primary", value: "Learn more" } %>
+<% end %>
+
+<hr />
+
+<%= md("
+#### `row-hug`
+
+Similar to `row`, the `row` places elements horizontally with no border treatment or padding but a standard gap.
+However, this preset will only occupy the space its contents require.
+") %>
+<%= sage_component SageFrame, { preset: "row-hug", background: "grey-200" } do %>
+  <p>Lorem ipsum dolor sit amet consectitor</p>
+  <%= sage_component SageButton, { style: "primary", value: "Learn more" } %>
+<% end %>
+
+<hr />
+
+<%= md("
+#### `stack`
+
+The `stack` preset places elements vertically with no border or padding but a small gap between elements.
+") %>
+<%= sage_component SageFrame, { preset: "stack", background: "grey-200" } do %>
+  <p>Lorem ipsum dolor sit amet consectitor</p>
+  <%= sage_component SageButton, { style: "primary", value: "Learn more" } %>
+<% end %>

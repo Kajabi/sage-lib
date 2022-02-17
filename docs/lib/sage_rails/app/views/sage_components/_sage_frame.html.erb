@@ -1,0 +1,43 @@
+<%
+# Set up tag
+tag = component.tag.present? ? component.tag : "div"
+
+# Set up width configs
+is_custom_width = false
+width = component.width.present? ? component.width : nil
+if (width && !SageTokens::FRAME_WIDTHS.include?(width))
+  is_custom_width = true
+end
+
+# Set up background configs
+is_custom_background = false
+background = component.background.present? ? component.background : nil
+if (background && !SageTokens::COLOR_SLIDERS.include?(background))
+  is_custom_background = true
+end
+
+%>
+<<%= tag %>
+  class="
+    sage-frame
+    <%= "sage-frame--preset-#{component.preset}" if component.preset %>
+    <%= "sage-frame--align-#{component.align}" if component.align %>
+    <%= "sage-frame--border-#{component.border}" if component.border %>
+    <%= "sage-frame--border-radius-#{component.border_radius}" if component.border_radius %>
+    <%= "sage-frame--direction-#{component.direction}" if component.direction %>
+    <%= "sage-frame--gap-#{component.gap}" if component.gap %>
+    <%= "sage-frame--padding-#{component.padding}" if component.padding %>
+    <%= "sage-frame--width-#{width}" if !is_custom_width && width %>
+    <%= "sage-frame--background-#{background}" if !is_custom_background && background %>
+    <%= component.generated_css_classes %>
+  "
+  <% if is_custom_width || is_custom_background %>
+    style="
+      <%= "--sage-frame-width: #{width};" if is_custom_width %>
+      <%= "--sage-frame-background: #{background};" if is_custom_background %>
+    "
+  <% end %>
+  <%= component.generated_html_attributes.html_safe %>
+>
+  <%= component.content %>
+</<%= tag %>>
