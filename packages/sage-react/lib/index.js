@@ -8,6 +8,7 @@ export { Carousel } from './Carousel';
 export { Chart } from './Chart';
 export { Choice } from './Choice';
 export { Description } from './Description';
+export { Dot } from './Dot';
 export { Drawer } from './Drawer';
 export {
   Dropdown,
