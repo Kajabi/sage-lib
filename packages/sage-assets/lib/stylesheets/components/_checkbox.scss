@@ -7,7 +7,7 @@
 //
 // Colors
 //
-$-checkbox-color-default: sage-color(grey, 500);
+$-checkbox-color-default: sage-color(grey, 400);
 $-checkbox-color-checked: sage-color(primary, 600);
 $-checkbox-color-checked-hover: sage-color(primary, 700);
 $-checkbox-color-disabled: sage-color(grey, 200);
@@ -18,7 +18,7 @@ $-checkbox-color-error-hover: sage-color(red, 700);
 $-checkbox-size: rem(20px);
 $-checkbox-label-spacing: rem(12px);
 $-checkbox-border-radius-inner: rem(6px);
-$-checkbox-border-radius-outer: sage-border(radius);
+$-checkbox-border-radius-outer: rem(10px);
 $-checkbox-transition: 0.15s ease-in-out;
 
 $-checkbox-marker-border: rem(2px);
@@ -297,4 +297,5 @@ $-checkbox-focus-outline-color: sage-color(primary, 400);
 
 .sage-checkbox__custom-content {
   margin-left: #{$-checkbox-size + $-checkbox-label-spacing};
+  margin-top: rem(2px);
 }
