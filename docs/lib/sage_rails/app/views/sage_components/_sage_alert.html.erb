@@ -3,6 +3,7 @@
     sage-alert<%= component.color ? "
     sage-alert--#{component.color}" : ""%>
     <%= "sage-alert--small" if component.small %>
+    <%= "sage-alert--small-dismissable" if component.small && component.dismissable %>
     <%= component.generated_css_classes %>
   "
   <%= component.generated_html_attributes.html_safe %>
@@ -22,7 +23,8 @@
     <% if component.desc %>
       <p class="sage-alert__desc"><%= component.desc %></p>
     <% end %>
-    <% if component.primary_action or component.secondary_actions or content_for? :sage_alert_actions %>
+  </div>
+  <% if component.primary_action or component.secondary_actions or content_for? :sage_alert_actions %>
       <div class="sage-alert__actions">
         <% if component.primary_action %>
           <%= sage_component SageButton, {
@@ -51,17 +53,18 @@
         <% end %>
       </div>
     <% end %>
-  </div>
   <% if component.dismissable %>
-    <%= sage_component SageButton, {
-      value: "Close",
-      icon: {
-        style: "only",
-        name: "remove"
-      },
-      subtle: true,
-      small: true,
-      css_classes: "sage-alert__close"
-    } %>
+    <div class="sage-alert__close">
+      <%= sage_component SageButton, {
+        value: "Close",
+        icon: {
+          style: "only",
+          name: "remove"
+        },
+        subtle: true,
+        small: true,
+        css_classes: "sage-alert__close-btn"
+      } %>
+    </div>
   <% end %>
 </div>
