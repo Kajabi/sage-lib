@@ -158,6 +158,6 @@ $-alert-colors: (
   }
 
   .sage-alert--small-dismissable & {
-    margin-right: sage-spacing();
+    margin-right: sage-spacing(2xs);
   }
 }
