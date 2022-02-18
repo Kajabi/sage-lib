@@ -5,28 +5,4 @@
 )) %>
 <% end %>
 
-<div class="<%= SageClassnames::TYPE_BLOCK %>">
-
-  <%= md(%(
-  We have helper classes to assist with truncation and the necessary pairings on parent elements:
-  - `.t-sage--truncate` -- This class is can be added to the text intended to be truncated.
-  )) %>
-</div>
-
-<%= sage_component SageCard, {} do %>
-  <h2 class="t-sage-heading-3">Examples</h2>
-  <h3 class="t-sage-heading-3">Basic truncation</h3>
-  <%= sage_component SageAlert, {
-    color: "warning",
-    desc: "TODO: example of truncation.",
-    icon_name: "sage-icon-warning",
-    small: true
-  } %>
-  <h3 class="t-sage-heading-3">Truncation within CSS Grid</h3>
-  <%= sage_component SageAlert, {
-    color: "warning",
-    desc: "TODO: example of truncation when exists as a child of CSS grid content.",
-    icon_name: "sage-icon-warning",
-    small: true
-  } %>
-<% end %>
+<p class="t-sage-body">Coming Soon</p>
