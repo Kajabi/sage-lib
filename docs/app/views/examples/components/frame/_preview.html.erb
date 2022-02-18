@@ -1,3 +1,10 @@
+<h3>Frame Setup</h3>
+<%= md("
+The SageFrame component is set up to mirror configurations found in the auto layout feature of Figma,
+which is commonly used to create compound layouts.
+Here is a summary of the properties and pairings this component makes available:
+") %>
+
 <h3>Frame Presets</h3>
 <%= md("
 Frames have a high level of customization.
@@ -122,4 +129,93 @@ The `stack` preset places elements vertically with no border or padding but a sm
 <%= sage_component SageFrame, { preset: "stack", background: "grey-200" } do %>
   <p>Lorem ipsum dolor sit amet consectitor</p>
   <%= sage_component SageButton, { style: "primary", value: "Learn more" } %>
+<% end %>
+
+<h3>Frames in Context</h3>
+<%= md("
+The true power of SageFrame comes with using it in combination to create compound layouts.
+Designed to mimic what developers find in Figma with Auto layout is employed,
+a wide range of patterns can be created.
+Here are a few samples of what is possible.
+") %>
+
+<h4>A custom block</h4>
+<%= sage_component SageFrame, {
+  preset: "card-lg",
+  background: "#fae2d4",
+  border: "none",
+} do %>
+  <%= sage_component SageFrame, { preset: "stack" } do %>
+    <h3>Learn more about products</h3>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Etiam faucibus massa vel sem ullamcorper tincidunt.
+      Vestibulum pulvinar placerat elit, et rutrum ipsum elementum ac.
+    </p>
+  <% end %>
+  <%= sage_component SageFrame, { preset: "row-spread" } do %>
+    <%= sage_component SageButton, {
+      value: "Do it!",
+      style: "primary",
+    } %>
+    <%= sage_component SageFrame, { preset: "row-hug" } do %>
+      <%= sage_component SageButton, {
+        value: "Cancel",
+        style: "secondary",
+        subtle: true,
+      } %>
+      <%= sage_component SageButton, {
+        value: "Options",
+        style: "secondary",
+        raised: false,
+      } %>
+    <% end %>
+  <% end %>
+<% end %>
+
+<h4>A "stat box"</h3>
+<%= sage_component SageFrame, { preset: "card", width: "357px" } do %>
+  <%= sage_component SageFrame, { preset: "row", align: "top-spread" } do %>
+    <%= sage_component SageFrame, { preset: "stack", width: "flex" } do %>
+      <%= sage_component SageFrame, { preset: "block" } do %>
+        <h3 class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_200}" %>">
+          All payments
+        </h3>
+        <%= sage_component SageFrame, {
+          direction: "horizontal",
+          align: "baseline-left",
+          gap: "xs",
+          tag: "p"
+        } do %>
+          <b class="<%= "#{SageClassnames::TYPE::HEADING_5}" %>">
+            40
+          </b>
+          <span class="<%= "#{SageClassnames::TYPE::BODY_XSMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_100}" %>">
+            successfull paymemtns
+          </span>
+        <% end %>
+      <% end %>
+      <%= sage_component SageButton, {
+        value: "View all",
+        icon: { style: "right", name: "arrow-right" },
+        style: "primary",
+        subtle: true,
+      } %>
+    <% end %>
+    <%= sage_component SageFrame, {
+      gap: "xs",
+      direction: "vertical",
+      align: "top-right",
+      width: "120px"
+    } do %>
+      <%= sage_component SageLabel, {
+        color: "published",
+        value: "33%",
+        icon: "up-small",
+      } %>
+      <div>
+        [chart]
+      </div>
+    <% end %>
+  <% end %>
 <% end %>
