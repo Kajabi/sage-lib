@@ -22,13 +22,13 @@ end
     sage-frame
     <%= "sage-frame--preset-#{component.preset}" if component.preset %>
     <%= "sage-frame--align-#{component.align}" if component.align %>
+    <%= "sage-frame--background-#{background}" if !is_custom_background && background %>
     <%= "sage-frame--border-#{component.border}" if component.border %>
     <%= "sage-frame--border-radius-#{component.border_radius}" if component.border_radius %>
     <%= "sage-frame--direction-#{component.direction}" if component.direction %>
     <%= "sage-frame--gap-#{component.gap}" if component.gap %>
     <%= "sage-frame--padding-#{component.padding}" if component.padding %>
     <%= "sage-frame--width-#{width}" if !is_custom_width && width %>
-    <%= "sage-frame--background-#{background}" if !is_custom_background && background %>
     <%= component.generated_css_classes %>
   "
   <% if is_custom_width || is_custom_background %>

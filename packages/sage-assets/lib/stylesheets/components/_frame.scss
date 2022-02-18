@@ -168,8 +168,8 @@ $-sage-frame-width: fill;
   justify-content: var(--sage-frame-align-horizontal, #{map-get(map-get($-sage-frame-alignments, $align), h)});
   flex-direction: var(--sage-frame-direction, #{map-get($-sage-frame-directions, $direction)});
   gap: var(--sage-frame-gap, #{map-get($-sage-frame-spacings, $gap)});
-  padding: var(--sage-frame-padding, #{map-get($-sage-frame-spacings, $padding)});
   width: var(--sage-frame-width, #{map-get($-sage-frame-widths, $width)});
+  padding: var(--sage-frame-padding, #{map-get($-sage-frame-spacings, $padding)});
   border: var(--sage-frame-border, #{map-get($-sage-frame-borders, $border)});
   border-radius: var(--sage-frame-border-radius, #{map-get($-sage-frame-border-radii, $border-radius)});
   background: var(--sage-frame-background, #{$background});
@@ -305,13 +305,15 @@ $-sage-frame-width: fill;
 @each $-key, $-val in $-sage-frame-alignments {
   .sage-frame--align-#{$-key},
   [data-sage-frame-align="#{$-key}"] {
-    --sage-frame-align-horizontal: #{map-get($-val, h)};
-    --sage-frame-align-vertical: #{map-get($-val, v)};
+    // NOTE: The mappings are inverted by default because "vertical" orientation is default
+    // and this makes for "top/bottom" apply to the horizontal axis and vice versa for "left/right"
+    --sage-frame-align-horizontal: #{map-get($-val, v)};
+    --sage-frame-align-vertical: #{map-get($-val, h)};
 
-    &.sage-frame--direction-vertical,
-    &[data-sage-frame-direction="vertical"] {
-      --sage-frame-align-horizontal: #{map-get($-val, v)};
-      --sage-frame-align-vertical: #{map-get($-val, h)};
+    &.sage-frame--direction-horizontal,
+    &[data-sage-frame-direction="horizontal"] {
+      --sage-frame-align-horizontal: #{map-get($-val, h)};
+      --sage-frame-align-vertical: #{map-get($-val, v)};
     }
   }
 }
