@@ -19,6 +19,9 @@
       "purple": {
         "value": "{color.base.purple.500.hex}"
       },
+      "charcoal": {
+        "value": "{color.base.grey.700.hex}"
+      },
       "grey": {
         "value": "{color.base.grey.500.hex}"
       },
