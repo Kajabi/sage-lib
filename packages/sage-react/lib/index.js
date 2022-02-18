@@ -23,6 +23,7 @@ export const {
   DataCard,
   EmptyState,
   ExpandableCard,
+  Frame,
   FormSection,
   Grid,
   HelpLink,
