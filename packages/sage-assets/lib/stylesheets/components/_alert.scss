@@ -58,8 +58,8 @@ $-alert-colors: (
   border-radius: sage-border(radius);
 
   .sage-alert__icon {
-    line-height: normal;
     margin-right: sage-spacing(xs);
+    line-height: normal;
   }
 
   .sage-alert__icon::before {
@@ -105,7 +105,7 @@ $-alert-colors: (
 }
 
 .sage-alert__close {
-  position:absolute;
+  position: absolute;
   top: sage-spacing(md);
   right: sage-spacing(md);
 
