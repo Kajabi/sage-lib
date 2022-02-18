@@ -96,7 +96,7 @@ Frame.propTypes = {
   align: PropTypes.oneOf(Object.values(FRAME_ALIGNMENTS)),
   background: PropTypes.oneOfType([
     PropTypes.string,
-    PropTypes.oneOf(SageTokens.COLOR_SLIDERS),
+    PropTypes.oneOf(Object.values(SageTokens.COLOR_SLIDERS)),
   ]),
   border: PropTypes.oneOf(Object.values(Frame.BORDERS)),
   borderRadius: PropTypes.oneOf(Object.values(Frame.BORDER_RADII)),
