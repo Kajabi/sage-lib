@@ -18,11 +18,8 @@ $-alert-colors: (
 
 .sage-alert {
   display: grid;
-  grid-auto-flow: row;
-  grid-template-rows: 1fr;
   gap: sage-spacing(sm);
   position: relative;
-  margin-bottom: sage-spacing(md);
   padding: sage-spacing();
   border-radius: sage-border(radius-large);
 
@@ -54,7 +51,6 @@ $-alert-colors: (
   grid-template-columns: auto 1fr;
   align-items: center;
   padding: sage-spacing(sm);
-  margin-bottom: 0;
   border-radius: sage-border(radius);
 
   .sage-alert__icon {
