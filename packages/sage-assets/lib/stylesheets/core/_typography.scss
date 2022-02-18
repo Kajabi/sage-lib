@@ -189,6 +189,10 @@ body:not(.sage-excluded),
   @include truncate;
 }
 
+.t-sage--truncate-min-width {
+  min-width: 0;
+}
+
 .t-sage--line-clamp {
   @include line-clamp(1);
 }
