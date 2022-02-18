@@ -132,6 +132,7 @@ $-avatar-group-item-sizes: (
 // Documentation-specific styles
 .sage-avatar-wrapper {
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: sage-spacing();
 }
 
@@ -153,10 +154,11 @@ $-avatar-group-item-sizes: (
 .sage-avatar__badge {
   position: absolute;
   z-index: sage-z-index(default, 3);
-  bottom: 0;
-  right: 0;
+  bottom: rem(-4px);
+  right: rem(-4px);
   background-color: sage-color(white);
   border-radius: sage-border(radius-round);
+  border: rem(2px) solid sage-color(white);
 
   i {
     display: flex;
@@ -167,8 +169,8 @@ $-avatar-group-item-sizes: (
   grid-area: full;
   width: 100%;
   text-align: center;
-  color: sage-color(primary, 500);
-  fill: sage-color(primary, 500);
+  color: sage-color(primary, 700);
+  fill: sage-color(primary, 700);
 
   @extend %t-sage-body-xsmall-bold;
 
@@ -201,6 +203,12 @@ $-avatar-group-item-sizes: (
     max-width: $-avatar-tile-size;
     max-height: $-avatar-tile-size;
   }
+}
+
+.sage-avatar__graphic {
+  grid-area: full;
+  height: 36.36%; // 32/88 - 32px (icon size) is 36.36% of 88px (full avatar size)
+  width: 36.36%; // 32/88 - 32px (icon size) is 36.36% of 88px (full avatar size)
 }
 
 .sage-avatar-group {
