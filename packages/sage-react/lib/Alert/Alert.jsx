@@ -79,25 +79,27 @@ export const Alert = ({
         {description && (
           <p className="sage-alert__desc">{description}</p>
         )}
-        {actions && (
-          <div className="sage-alert__actions">
-            {actions}
-          </div>
-        )}
       </div>
+      {actions && (
+        <div className="sage-alert__actions">
+          {actions}
+        </div>
+      )}
       {dismissable && (
-        <button
-          aria-label="Close Alert"
-          className="sage-alert__close"
-          onClick={onClickDismiss}
-          type="button"
-        >
-          <Icon
-            color="grey-500"
-            icon="remove"
-            size="md"
-          />
-        </button>
+        <div className="sage-alert__close">
+          <button
+            aria-label="Close Alert"
+            className="sage-alert__close-btn"
+            onClick={onClickDismiss}
+            type="button"
+          >
+            <Icon
+              color="grey-500"
+              icon="remove"
+              size="md"
+            />
+          </button>
+        </div>
       )}
     </div>
   ) : null;
