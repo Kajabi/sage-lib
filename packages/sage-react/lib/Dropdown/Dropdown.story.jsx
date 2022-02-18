@@ -4,6 +4,7 @@ import { SageTokens } from '../configs';
 import { Dropdown } from './Dropdown';
 import { OptionsDropdown } from './OptionsDropdown';
 import { defaultOptionsItems, sampleMenuItems } from './stories/story-helper';
+import { CustomItemsStory } from './stories/CustomItemsStory';
 import { CustomPanelStory } from './stories/CustomPanelStory';
 import { BulkActionsStory } from './stories/BulkActionsStory';
 import { MultiMenuStory } from './stories/MultiMenuStory';
@@ -125,6 +126,19 @@ export const MenuWithCustomPanel = () => (
   <CustomPanelStory />
 );
 MenuWithCustomPanel.decorators = [
+  (Story) => (
+    <>
+      <div style={{ minHeight: 400 }}>
+        <Story />
+      </div>
+    </>
+  )
+];
+
+export const MenuWithCustomOptions = () => (
+  <CustomItemsStory />
+);
+MenuWithCustomOptions.decorators = [
   (Story) => (
     <>
       <div style={{ minHeight: 400 }}>
