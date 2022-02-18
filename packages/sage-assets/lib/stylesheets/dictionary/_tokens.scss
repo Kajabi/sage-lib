@@ -742,6 +742,126 @@ $sd-sage-color-base-purple-900-code: "purple-900";
 ///
 $sd-sage-color-base-purple-900-classname: "t-sage--color-purple-900";
 ///
+/// color color-base-charcoal-50-hex
+///
+$sd-sage-color-base-charcoal-50-hex: #f9fafa;
+///
+/// color color-base-charcoal-50-code
+///
+$sd-sage-color-base-charcoal-50-code: "charcoal-50";
+///
+/// color color-base-charcoal-50-classname
+///
+$sd-sage-color-base-charcoal-50-classname: "t-sage--color-charcoal-50";
+///
+/// color color-base-charcoal-100-hex
+///
+$sd-sage-color-base-charcoal-100-hex: #8d939a;
+///
+/// color color-base-charcoal-100-code
+///
+$sd-sage-color-base-charcoal-100-code: "charcoal-100";
+///
+/// color color-base-charcoal-100-classname
+///
+$sd-sage-color-base-charcoal-100-classname: "t-sage--color-charcoal-100";
+///
+/// color color-base-charcoal-200-hex
+///
+$sd-sage-color-base-charcoal-200-hex: #60666c;
+///
+/// color color-base-charcoal-200-code
+///
+$sd-sage-color-base-charcoal-200-code: "charcoal-200";
+///
+/// color color-base-charcoal-200-classname
+///
+$sd-sage-color-base-charcoal-200-classname: "t-sage--color-charcoal-200";
+///
+/// color color-base-charcoal-300-hex
+///
+$sd-sage-color-base-charcoal-300-hex: #43474b;
+///
+/// color color-base-charcoal-300-code
+///
+$sd-sage-color-base-charcoal-300-code: "charcoal-300";
+///
+/// color color-base-charcoal-300-classname
+///
+$sd-sage-color-base-charcoal-300-classname: "t-sage--color-charcoal-300";
+///
+/// color color-base-charcoal-400-hex
+///
+$sd-sage-color-base-charcoal-400-hex: #202327;
+///
+/// color color-base-charcoal-400-code
+///
+$sd-sage-color-base-charcoal-400-code: "charcoal-400";
+///
+/// color color-base-charcoal-400-classname
+///
+$sd-sage-color-base-charcoal-400-classname: "t-sage--color-charcoal-400";
+///
+/// color color-base-charcoal-500-hex
+///
+$sd-sage-color-base-charcoal-500-hex: #181b20;
+///
+/// color color-base-charcoal-500-code
+///
+$sd-sage-color-base-charcoal-500-code: "charcoal-500";
+///
+/// color color-base-charcoal-500-classname
+///
+$sd-sage-color-base-charcoal-500-classname: "t-sage--color-charcoal-500";
+///
+/// color color-base-charcoal-600-hex
+///
+$sd-sage-color-base-charcoal-600-hex: #60666c;
+///
+/// color color-base-charcoal-600-code
+///
+$sd-sage-color-base-charcoal-600-code: "charcoal-600";
+///
+/// color color-base-charcoal-600-classname
+///
+$sd-sage-color-base-charcoal-600-classname: "t-sage--color-charcoal-600";
+///
+/// color color-base-charcoal-700-hex
+///
+$sd-sage-color-base-charcoal-700-hex: #43474b;
+///
+/// color color-base-charcoal-700-code
+///
+$sd-sage-color-base-charcoal-700-code: "charcoal-700";
+///
+/// color color-base-charcoal-700-classname
+///
+$sd-sage-color-base-charcoal-700-classname: "t-sage--color-charcoal-700";
+///
+/// color color-base-charcoal-800-hex
+///
+$sd-sage-color-base-charcoal-800-hex: #202327;
+///
+/// color color-base-charcoal-800-code
+///
+$sd-sage-color-base-charcoal-800-code: "charcoal-800";
+///
+/// color color-base-charcoal-800-classname
+///
+$sd-sage-color-base-charcoal-800-classname: "t-sage--color-charcoal-800";
+///
+/// color color-base-charcoal-900-hex
+///
+$sd-sage-color-base-charcoal-900-hex: #181b20;
+///
+/// color color-base-charcoal-900-code
+///
+$sd-sage-color-base-charcoal-900-code: "charcoal-900";
+///
+/// color color-base-charcoal-900-classname
+///
+$sd-sage-color-base-charcoal-900-classname: "t-sage--color-charcoal-900";
+///
 /// color color-base-grey-50-hex
 ///
 $sd-sage-color-base-grey-50-hex: #f9fafa;
@@ -1418,6 +1538,58 @@ $sd-sage-color: (
       classname: $sd-sage-color-base-purple-900-classname,
     ),
   ),
+  charcoal: (
+    50: (
+      hex: $sd-sage-color-base-charcoal-50-hex,
+      code: $sd-sage-color-base-charcoal-50-code,
+      classname: $sd-sage-color-base-charcoal-50-classname,
+    ),
+    100: (
+      hex: $sd-sage-color-base-charcoal-100-hex,
+      code: $sd-sage-color-base-charcoal-100-code,
+      classname: $sd-sage-color-base-charcoal-100-classname,
+    ),
+    200: (
+      hex: $sd-sage-color-base-charcoal-200-hex,
+      code: $sd-sage-color-base-charcoal-200-code,
+      classname: $sd-sage-color-base-charcoal-200-classname,
+    ),
+    300: (
+      hex: $sd-sage-color-base-charcoal-300-hex,
+      code: $sd-sage-color-base-charcoal-300-code,
+      classname: $sd-sage-color-base-charcoal-300-classname,
+    ),
+    400: (
+      hex: $sd-sage-color-base-charcoal-400-hex,
+      code: $sd-sage-color-base-charcoal-400-code,
+      classname: $sd-sage-color-base-charcoal-400-classname,
+    ),
+    500: (
+      hex: $sd-sage-color-base-charcoal-500-hex,
+      code: $sd-sage-color-base-charcoal-500-code,
+      classname: $sd-sage-color-base-charcoal-500-classname,
+    ),
+    600: (
+      hex: $sd-sage-color-base-charcoal-600-hex,
+      code: $sd-sage-color-base-charcoal-600-code,
+      classname: $sd-sage-color-base-charcoal-600-classname,
+    ),
+    700: (
+      hex: $sd-sage-color-base-charcoal-700-hex,
+      code: $sd-sage-color-base-charcoal-700-code,
+      classname: $sd-sage-color-base-charcoal-700-classname,
+    ),
+    800: (
+      hex: $sd-sage-color-base-charcoal-800-hex,
+      code: $sd-sage-color-base-charcoal-800-code,
+      classname: $sd-sage-color-base-charcoal-800-classname,
+    ),
+    900: (
+      hex: $sd-sage-color-base-charcoal-900-hex,
+      code: $sd-sage-color-base-charcoal-900-code,
+      classname: $sd-sage-color-base-charcoal-900-classname,
+    ),
+  ),
   grey: (
     50: (
       hex: $sd-sage-color-base-grey-50-hex,
@@ -2006,6 +2178,10 @@ $sd-sage-color-core-orange: #fb7e09;
 ///
 $sd-sage-color-core-purple: #8e5ad8;
 ///
+/// color core color-core-charcoal
+///
+$sd-sage-color-core-charcoal: #43474b;
+///
 /// color core color-core-grey
 ///
 $sd-sage-color-core-grey: #8d939a;
@@ -2028,6 +2204,7 @@ $sd-sage-color-core: (
   red: $sd-sage-color-core-red,
   orange: $sd-sage-color-core-orange,
   purple: $sd-sage-color-core-purple,
+  charcoal: $sd-sage-color-core-charcoal,
   grey: $sd-sage-color-core-grey,
   white: $sd-sage-color-core-white,
   black: $sd-sage-color-core-black,

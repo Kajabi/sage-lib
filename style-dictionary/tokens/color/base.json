@@ -313,6 +313,58 @@
           "classname": { "value": "t-sage--color-purple-900" }
         }
       },
+      "charcoal": {
+        "50": {
+          "hex": { "value": "#f9fafa" },
+          "code": { "value": "charcoal-50" },
+          "classname": { "value": "t-sage--color-charcoal-50" }
+        },
+        "100": {
+          "hex": { "value": "#8d939a" },
+          "code": { "value": "charcoal-100" },
+          "classname": { "value": "t-sage--color-charcoal-100" }
+        },
+        "200": {
+          "hex": { "value": "#60666c" },
+          "code": { "value": "charcoal-200" },
+          "classname": { "value": "t-sage--color-charcoal-200" }
+        },
+        "300": {
+          "hex": { "value": "#43474b" },
+          "code": { "value": "charcoal-300" },
+          "classname": { "value": "t-sage--color-charcoal-300" }
+        },
+        "400": {
+          "hex": { "value": "#202327" },
+          "code": { "value": "charcoal-400" },
+          "classname": { "value": "t-sage--color-charcoal-400" }
+        },
+        "500": {
+          "hex": { "value": "#181b20" },
+          "code": { "value": "charcoal-500" },
+          "classname": { "value": "t-sage--color-charcoal-500" }
+        },
+        "600": {
+          "hex": { "value": "#60666c" },
+          "code": { "value": "charcoal-600" },
+          "classname": { "value": "t-sage--color-charcoal-600" }
+        },
+        "700": {
+          "hex": { "value": "#43474b" },
+          "code": { "value": "charcoal-700" },
+          "classname": { "value": "t-sage--color-charcoal-700" }
+        },
+        "800": {
+          "hex": { "value": "#202327" },
+          "code": { "value": "charcoal-800" },
+          "classname": { "value": "t-sage--color-charcoal-800" }
+        },
+        "900": {
+          "hex": { "value": "#181b20" },
+          "code": { "value": "charcoal-900" },
+          "classname": { "value": "t-sage--color-charcoal-900" }
+        }
+      },
       "grey": {
         "50": {
           "hex": { "value": "#f9fafa" },
