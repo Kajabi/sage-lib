@@ -159,8 +159,8 @@ $-toast-bottom-spacing: sage-spacing(xs);
   }
 
   &.sage-btn--subtle.sage-btn--secondary:not(:focus):hover {
-    background-color: inherit;
     color: sage-color(grey, 100);
+    background-color: inherit;
   }
 }
 
