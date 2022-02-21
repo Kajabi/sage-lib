@@ -60,8 +60,6 @@ $-page-heading-image-height-mobile: rem(120px);
 }
 
 .sage-page-heading__title {
-  @include line-clamp(2);
-
   @extend %t-sage-heading-1;
   grid-area: title;
   margin-right: sage-spacing(sm);
