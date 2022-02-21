@@ -25,7 +25,30 @@ export default {
 };
 const Template = (args) => <Button {...args} />;
 
-export const Default = Template.bind({});
+export const Standard = Template.bind({});
+
+export const Subtle = Template.bind({});
+Subtle.args = {
+  subtle: true
+};
+
+export const HasIcon = Template.bind({});
+HasIcon.args = {
+  icon: SageTokens.ICONS.GEAR,
+};
+
+export const IconOnly = Template.bind({});
+IconOnly.args = {
+  color: Button.COLORS.NEUTRAL,
+  icon: SageTokens.ICONS.GEAR,
+  iconOnly: true,
+  subtle: true
+};
+
+export const Fullwidth = Template.bind({});
+Fullwidth.args = {
+  fullWidth: true
+};
 
 export const CustomContent = Template.bind({});
 CustomContent.args = {
