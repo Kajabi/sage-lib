@@ -111,6 +111,15 @@ $-btn-subtle-styles: (
     focus-outline: sage-color(grey, 700),
     disabled: sage-color(grey, 500),
   ),
+  // must be same as secondary
+  neutral: (
+    default: sage-color(grey, 600),
+    hover: sage-color(grey, 600),
+    hover-background: sage-color(grey, 200),
+    focus: sage-color(grey, 600),
+    focus-outline: sage-color(grey, 700),
+    disabled: sage-color(grey, 500),
+  ),
   danger: (
     default: sage-color(red, 600),
     hover: sage-color(red, 600),
