@@ -170,6 +170,16 @@ module ComponentsHelper
         figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F9Km09NjlZHYWsMP7EGT8tI%2FSage-3-for-Admin%3Fnode-id%3D4195%253A20283",
       },
       {
+        title: "dot",
+        description: "Dots provide a subtle color cue to place beside text or other elements.", 
+        scss: "done",
+        rails: "done",
+        react: "done",
+        a11y: "done",
+        react_component_slug: "sage-dot--default",
+        figma_embed: nil, # TODO: We'll have a link for this in the new design system
+      },
+      {
         title: "description",
         description: "A description is composed of title and data content and is structured as a definition list.",
         scss: "done",

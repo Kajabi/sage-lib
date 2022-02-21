@@ -1,0 +1,26 @@
+<%
+custom_color = false
+color = component.color.present? ? component.color : "sage"
+
+if (!SageTokens::COLOR_SLIDERS.include?(color))
+  custom_color = true
+end
+%>
+<span
+  class="
+    sage-dot
+    sage-dot--color-<%= custom_color ? "custom" : color %>
+    <%= component.generated_css_classes %>
+  "
+  <% if custom_color %>
+    style="--sage-dot-color: <%= color %>"
+  <% end %>
+  <%= component.generated_html_attributes.html_safe %>
+  <% if component.label %>
+    aria-label="<%= component.label %>"
+  <% else %>
+    aria-hidden="true"
+  <% end %>
+>
+  <%= component.content %>
+</span>

@@ -177,3 +177,12 @@
 .sage-card__title {
   @extend %t-sage-heading-6;
 }
+
+.sage-card__header,
+.sage-card__block,
+.sage-card__stack,
+.sage-card__list,
+.sage-card__row,
+.sage-card__figure {
+  min-width: 0;
+}

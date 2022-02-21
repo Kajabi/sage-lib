@@ -635,3 +635,25 @@
     font-family: "Inter var", $-body-font-stack;
   }
 }
+
+///
+/// Truncates the text
+///
+/// @param {number} $lines Number of lines of visible text before truncation
+///
+@mixin line-clamp($lines: null) {
+  overflow-wrap: break-word; /* to wrap long singular strings */
+
+  @if $lines != null {
+    display: -webkit-box; // stylelint-disable value-no-vendor-prefix
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical; // stylelint-disable property-no-vendor-prefix
+    overflow: hidden;
+  }
+  @else {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}

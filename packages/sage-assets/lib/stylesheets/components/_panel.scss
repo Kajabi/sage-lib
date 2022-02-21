@@ -206,3 +206,13 @@
   grid-template-rows: min-content;
   grid-gap: sage-spacing(stage);
 }
+
+.sage-panel,
+.sage-panel__block,
+.sage-panel__stack,
+.sage-panel__list,
+.sage-panel__row,
+.sage-panel__tiles,
+.sage-panel-grid {
+  min-width: 0;
+}

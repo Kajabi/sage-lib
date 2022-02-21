@@ -188,3 +188,17 @@ body:not(.sage-excluded),
 .t-sage--truncate {
   @include truncate;
 }
+
+.t-sage--truncate-min-width {
+  min-width: 0;
+}
+
+.t-sage--line-clamp {
+  @include line-clamp(1);
+}
+
+@for $i from 2 through 4 {
+  .t-sage--line-clamp-#{$i} {
+    ---webkit-line-clamp: #{$i};
+  }
+}
