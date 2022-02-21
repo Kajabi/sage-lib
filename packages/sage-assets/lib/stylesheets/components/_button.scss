@@ -12,6 +12,8 @@
 $-btn-transition: map-get($sage-transitions, default);
 $-btn-border-radius: sage-border(radius);
 $-btn-shadow-base: sage-shadow(sm);
+$-btn-icon-only-standard-size: rem(40px);
+$-btn-icon-only-subtle-size: rem(32px);
 $-btn-icon-only-hover-size: rem(26px);
 $-btn-icon-only-focus-size: rem(28px);
 
@@ -517,8 +519,10 @@ $-alert-colors: (
   box-shadow: none;
 
   &[class*="icon-only"] {
-    padding: sage-spacing(2xs) sage-spacing(xs);
+    padding: 0;
     border-radius: sage-border(radius-round);
+    width: $-btn-icon-only-subtle-size;
+    height: $-btn-icon-only-subtle-size
   }
 
   // Generate button style variations
@@ -549,6 +553,8 @@ $-alert-colors: (
 
           position: absolute; /* this keeps the button inside a label within the visual bounds of the label component */
           padding: 0;
+          width: $-btn-icon-only-standard-size;
+          height: $-btn-icon-only-standard-size;
           border-top-left-radius: 0;
           border-bottom-left-radius: 0;
         }
