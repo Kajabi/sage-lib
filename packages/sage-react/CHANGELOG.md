@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.79.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.78.5...@kajabi/sage-react@0.79.0) (2022-02-21)
+
+
+### Features
+
+* **dot:** add dot component ([180c0c9](https://github.com/Kajabi/sage-lib/commit/180c0c9dd95a01eb03828a13d5ae7f525b8ea92a))
+* **dot:** add grey in React ([a3f5d0f](https://github.com/Kajabi/sage-lib/commit/a3f5d0fd2c822a94a48b01806539e4ff687638f2))
+
+
+
+
+
 ## [0.78.5](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.78.4...@kajabi/sage-react@0.78.5) (2022-02-14)
 
 **Note:** Version bump only for package @kajabi/sage-react

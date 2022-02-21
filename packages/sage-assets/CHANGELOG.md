@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.71.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.70.0...@kajabi/sage-assets@0.71.0) (2022-02-21)
+
+
+### Bug Fixes
+
+* **page-heading:** remove truncation ([406e126](https://github.com/Kajabi/sage-lib/commit/406e126bb8ff28fbbc13723c3db583ef83d45e66))
+* **truncation:** add min-width to all possible wrappers ([c941c3b](https://github.com/Kajabi/sage-lib/commit/c941c3bf64b2c39acd7b8b4d37086be49dab7f4d))
+* **truncation:** add utility class ([dc27aaa](https://github.com/Kajabi/sage-lib/commit/dc27aaa47b55017c1454cb3ba8a6bbae16c3c5c8))
+* **truncation:** added docs page ([448ae3c](https://github.com/Kajabi/sage-lib/commit/448ae3c16a508a2a325dcd3552916a2fa00e247b))
+* **truncation:** added line-clamp mixin ([a706ce5](https://github.com/Kajabi/sage-lib/commit/a706ce5e1e44128513c471c991662c4e0c922392))
+
+
+### Features
+
+* **dot:** add dot component ([180c0c9](https://github.com/Kajabi/sage-lib/commit/180c0c9dd95a01eb03828a13d5ae7f525b8ea92a))
+
+
+
+
+
 # [0.70.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.69.2...@kajabi/sage-assets@0.70.0) (2022-02-14)
 
 

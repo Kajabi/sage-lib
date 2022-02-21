@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.45.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.44.1...@kajabi/sage@4.45.0) (2022-02-21)
+
+
+### Bug Fixes
+
+* **truncation:** add min-width to all possible wrappers ([c941c3b](https://github.com/Kajabi/sage-lib/commit/c941c3bf64b2c39acd7b8b4d37086be49dab7f4d))
+* **truncation:** added docs page ([448ae3c](https://github.com/Kajabi/sage-lib/commit/448ae3c16a508a2a325dcd3552916a2fa00e247b))
+* **truncation:** update docs ([38e3abc](https://github.com/Kajabi/sage-lib/commit/38e3abc564fda08147456df8873c06f7eae9bc43))
+
+
+### Features
+
+* **dot:** add dot component ([180c0c9](https://github.com/Kajabi/sage-lib/commit/180c0c9dd95a01eb03828a13d5ae7f525b8ea92a))
+* **dot:** update helper statuses ([6930c24](https://github.com/Kajabi/sage-lib/commit/6930c24a94bb4e01ed69965f014ffd0629de494c))
+
+
+
+
+
 ## [4.44.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.44.0...@kajabi/sage@4.44.1) (2022-02-14)
 
 **Note:** Version bump only for package @kajabi/sage
