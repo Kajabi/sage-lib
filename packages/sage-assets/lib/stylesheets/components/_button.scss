@@ -79,7 +79,7 @@ $-btn-base-styles: (
     default: (
       color: sage-color(white),
       background-color: sage-color(red, 500),
-      ring-color: sage-color(red, 700),
+      ring-color: sage-color(red, 400),
     ),
     hover: (
       color: sage-color(white),
@@ -133,7 +133,7 @@ $-btn-subtle-styles: (
     default: sage-color(red, 600),
     hover: sage-color(red, 600),
     hover-background: sage-color(red, 100),
-    focus: sage-color(red, 700),
+    focus: sage-color(red, 400),
     focus-outline: sage-color(red, 400),
     disabled: sage-color(red, 300),
   ),
