@@ -500,10 +500,10 @@ $-alert-colors: (
   box-shadow: none;
 
   &[class*="icon-only"] {
+    width: $-btn-icon-only-subtle-size;
+    height: $-btn-icon-only-subtle-size;
     padding: 0;
     border-radius: sage-border(radius-round);
-    width: $-btn-icon-only-subtle-size;
-    height: $-btn-icon-only-subtle-size
   }
 
   // Generate button style variations
@@ -533,9 +533,9 @@ $-alert-colors: (
           @include sage-focus-ring(map-get($-styles, default));
 
           position: absolute; /* this keeps the button inside a label within the visual bounds of the label component */
-          padding: 0;
           width: $-btn-icon-only-standard-size;
           height: $-btn-icon-only-standard-size;
+          padding: 0;
           border-top-left-radius: 0;
           border-bottom-left-radius: 0;
         }
