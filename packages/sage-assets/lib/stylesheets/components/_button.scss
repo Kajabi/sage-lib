@@ -496,7 +496,6 @@ $-alert-colors: (
 }
 
 .sage-btn--subtle {
-  // padding: 0;
   box-shadow: none;
 
   &[class*="icon-only"] {
@@ -512,7 +511,6 @@ $-alert-colors: (
       color: map-get($-styles, default);
       background-color: transparent;
 
-      // TODO: refactor the subtle button hover state, after Sage 3.0 conversion
       &:not(:focus):hover {
         color: map-get($-styles, hover);
         background-color: map-get($-styles, hover-background);
