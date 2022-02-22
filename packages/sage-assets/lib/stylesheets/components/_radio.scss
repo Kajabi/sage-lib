@@ -138,12 +138,6 @@ $-radio-focus-outline-color: currentColor;
       transform: translate3d(-50%, -50%, 0) scale(1);
       opacity: 1;
     }
-
-    &:hover {
-      color: $-radio-color-checked-hover;
-      background: $-radio-color-checked-hover;
-      border-color: $-radio-color-checked-hover;
-    }
   }
 
   &:hover {
