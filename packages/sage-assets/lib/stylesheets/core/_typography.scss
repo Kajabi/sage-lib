@@ -136,6 +136,10 @@ body:not(.sage-excluded),
   > a[class*="sage-link"] {
     color: sage-color(primary, 500);
     text-decoration: underline;
+
+    &:hover {
+      color: sage-color(primary, 700);
+    }
   }
 
   > table:not(:last-child) {
