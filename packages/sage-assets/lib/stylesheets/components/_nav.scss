@@ -5,30 +5,30 @@
 ////
 
 
-$-nav-color-text: sage-color(grey, 800);
-$-nav-color-focus: sage-color(primary, 500);
+$-nav-color-text: sage-color(grey, 900);
+$-nav-color-focus: sage-color(grey, 400);
 $-nav-color-background: sage-color(grey, 200);
-$-nav-color-background-hover: sage-color(grey, 100);
+$-nav-color-background-hover: sage-color(grey, 200);
 $-nav-icon-size: rem(20px);
 
 
 .sage-nav__icon {
   display: inline-flex;
   margin-right: rem(12px);
-  color: sage-color(grey, 600);
+  color: sage-color(grey, 900);
 
   .sage-nav__link--active & {
-    color: sage-color(primary, 500);
+    color: sage-color(grey, 900);
   }
 }
 
 .sage-nav__label {
-  @extend %t-sage-nav;
+  @extend %t-sage-body-med;
 
-  color: sage-color(grey, 600);
+  color: sage-color(grey, 900);
 
   .sage-nav__list--sub & {
-    @extend %t-sage-nav-sub;
+    @extend %t-sage-body-med;
   }
 
   .sage-nav__link--active & {
@@ -36,20 +36,21 @@ $-nav-icon-size: rem(20px);
   }
 
   .sage-nav__link--sub.sage-nav__link--active & {
-    color: sage-color(primary, 500);
+    color: sage-color(grey, 900);
   }
 }
 
 .sage-nav__link,
 .sage-nav__link--active {
-  @include sage-focus-outline($outline-offset-inline: 0, $outline-offset-block: -1, $outline-border-radius: sage-border(radius));
-  @include sage-focus-outline--update-color(sage-color(primary, 500));
+  @include sage-focus-outline($outline-width: 4px, $outline-offset-inline: 0, $outline-offset-block: -1, $outline-border-radius: sage-border(radius));
+  @include sage-focus-outline--update-color(sage-color(grey, 500));
 
   display: flex;
   align-items: center;
-  padding: rem(10px) rem(12px);
+  padding: sage-spacing(2xs) sage-spacing(sm);
+  margin-bottom: sage-spacing(2xs);
   color: $-nav-color-text;
-  border-radius: sage-border(radius-small);
+  border-radius: rem(10px);
   transition: map-get($sage-transitions, default);
   transition-property: background, box-shadow;
 
@@ -62,12 +63,11 @@ $-nav-icon-size: rem(20px);
 
 .sage-nav__link--active::after {
   transform: translate3d(-50%, -50%, 0) scale(1);
-  border-color: sage-color(primary, 500);
+  border-color: sage-color(grey, 400);
   opacity: 1;
 }
 
 .sage-nav__link--sub {
-  padding: sage-spacing(2xs) sage-spacing(xs);
 
   &.sage-nav__link--active {
     @include sage-focus-outline--update-color(transparent);
@@ -98,6 +98,7 @@ $-nav-icon-size: rem(20px);
       @include sage-focus-outline--update-color(transparent);
     }
   }
+
 }
 
 .sage-nav__list--sub-with-icon,
@@ -112,5 +113,7 @@ $-nav-icon-size: rem(20px);
 }
 
 .sage-nav__list--sub-with-icon {
-  margin-left: rem(44px);
+  margin-left: rem(24px);
+  padding-left: rem(24px);
+  border-left: rem(2px) solid sage-color(grey, 300);
 }
