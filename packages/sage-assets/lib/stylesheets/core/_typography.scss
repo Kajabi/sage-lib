@@ -199,6 +199,6 @@ body:not(.sage-excluded),
 
 @for $i from 2 through 4 {
   .t-sage--line-clamp-#{$i} {
-    ---webkit-line-clamp: #{$i};
+    -webkit-line-clamp: #{$i};
   }
 }
