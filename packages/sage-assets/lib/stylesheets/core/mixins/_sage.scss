@@ -529,17 +529,17 @@
 }
 
 @mixin sage-form-toggle-label() {
-  @extend %t-sage-body;
+  @extend %t-sage-body-med;
 
   display: inline-block;
   flex: 1;
-  margin-left: sage-spacing(xs);
+  margin-left: rem(12px);
   vertical-align: top;
   cursor: pointer;
 }
 
 @mixin sage-form-toggle-message() {
-  @extend %t-sage-body-xsmall;
+  @extend %t-sage-body-small;
 
   position: relative;
   z-index: sage-z-index(default);

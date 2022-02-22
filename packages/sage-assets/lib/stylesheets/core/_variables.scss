@@ -66,18 +66,20 @@ $sage-field-colors: (
 /// Radio button colors
 ///
 $sage-radio-colors: (
-  checked: sage-color(primary, 500),
-  checked-disabled: sage-color(primary, 200),
-  checked-hover: sage-color(primary, 400),
+  checked: sage-color(primary, 600),
+  checked-disabled: sage-color(primary, 100),
+  checked-hover: sage-color(primary, 700),
   checked-inner: sage-color(white),
   default: sage-color(grey, 400),
+  disabled: sage-color(grey, 50),
+  error: sage-color(red, 500),
   hover: sage-color(grey, 500),
 );
 
 ///
 /// Radio button size
 ///
-$sage-radio-size: rem(16px);
+$sage-radio-size: rem(20px);
 
 ///
 /// Tab colors shared by components such as tabs and choices

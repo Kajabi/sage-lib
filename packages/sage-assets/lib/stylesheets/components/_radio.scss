@@ -12,20 +12,21 @@ $-radio-color-checked-hover: map-get($sage-radio-colors, checked-hover);
 $-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
 $-radio-color-default: map-get($sage-radio-colors, default);
 $-radio-color-disabled: map-get($sage-radio-colors, disabled);
+$-radio-color-error: map-get($sage-radio-colors, error);
 $-radio-color-hover: map-get($sage-radio-colors, hover);
-$-radio-color-text-disabled: sage-color(grey, 500);
+$-radio-color-text-disabled: sage-color(grey, 400);
 $-radio-color-focus-outline: sage-color(primary, 400);
 $-radio-color-focus-outline-error: sage-color(red, 300);
 
 // Additional configurations
 $-radio-button-size: $sage-radio-size;
-$-radio-label-spacing: sage-spacing(xs);
+$-radio-label-spacing: rem(12px);
 $-radio-transition: 0.15s ease-in-out;
 $-radio-selected-indicator-size: rem(7px);
 
 // Focus state
 $-radio-focus-outline-size: rem(3px);
-$-radio-focus-outline-width: 2;
+$-radio-focus-outline-width: 4;
 $-radio-focus-outline-color: currentColor;
 
 
@@ -114,7 +115,7 @@ $-radio-focus-outline-color: currentColor;
     transform: translate3d(-50%, -50%, 0) scale(0.94);
     width: calc(100% + ((#{$-radio-focus-outline-width} * 1px) + (#{$-radio-focus-outline-size} * 2)));
     height: calc(100% + ((#{$-radio-focus-outline-width} * 1px) + (#{$-radio-focus-outline-size} * 2)));
-    border: calc(#{$-radio-focus-outline-width} * 1px) solid $-radio-color-default;
+    border: calc(#{$-radio-focus-outline-width} * 1px) solid $-radio-color-focus-outline;
     pointer-events: none;
     opacity: 0;
   }
@@ -124,24 +125,18 @@ $-radio-focus-outline-color: currentColor;
     height: $-radio-selected-indicator-size;
     width: $-radio-selected-indicator-size;
     background-color: $-radio-color-checked-inner;
-    transition: opacity $-radio-transition, transform 0.3s ease-in-out;
+    transition: opacity $-radio-transition, transform 0.2s ease-in-out;
   }
 
   &:checked {
     color: $-radio-color-checked;
-    background-color: $-radio-color-checked;
+    background: $-radio-color-checked;
     border-color: transparent;
     box-shadow: sage-shadow(sm);
 
     &::after {
       transform: translate3d(-50%, -50%, 0) scale(1);
       opacity: 1;
-    }
-
-    &:hover {
-      color: $-radio-color-checked-hover;
-      background: $-radio-color-checked-hover;
-      border-color: $-radio-color-checked-hover;
     }
   }
 
@@ -158,7 +153,6 @@ $-radio-focus-outline-color: currentColor;
 
     &::before {
       transform: translate3d(-50%, -50%, 0) scale(1);
-      border-color: $-radio-color-focus-outline;
       opacity: 1;
     }
 
@@ -197,13 +191,7 @@ $-radio-focus-outline-color: currentColor;
   }
 
   .sage-radio & {
-    @media (max-width: sage-breakpoint(md-max)) {
-      margin-top: rem(6px);
-    }
-
-    @media (min-width: sage-breakpoint(lg-min)) {
-      margin-top: sage-spacing(2xs);
-    }
+    margin-top: rem(2px);
   }
 
   .sage-sortable & {
@@ -215,31 +203,43 @@ $-radio-focus-outline-color: currentColor;
   .sage-radio__label,
   .sage-radio__caption,
   .sage-radio__message {
-    color: sage-color(red, 500);
+    color: $-radio-color-error;
   }
+
+  &.sage-radio--has-border:not(.sage-radio--standalone) {
+    border-color: $-radio-color-error;
+  }
+
   .sage-radio__input {
-    border-color: sage-color(red, 500);
+    border-color: $-radio-color-error;
     &:checked {
-      color: sage-color(red, 500);
-      background-color: sage-color(red, 500);
+      color: $-radio-color-error;
+      background-color: $-radio-color-error;
+    }
+    &::before {
+      border-color: $-radio-color-focus-outline-error;
     }
     &::after {
       background-color: sage-color(white);
     }
-    &:focus::before {
-      border-color: $-radio-color-focus-outline-error;
-    }
     &:hover {
-      border-color: sage-color(red, 500);
+      border-color: $-radio-color-error;
     }
   }
+
   :hover:not(:checked):not(:disabled) {
-    border-color: sage-color(red, 500);
+    border-color: $-radio-color-error;
   }
 }
 
 .sage-radio__message,
 .sage-radio__caption {
   @include sage-form-toggle-message;
+}
+
+.sage-radio__message,
+.sage-radio__caption,
+.sage-radio__custom-content {
   margin-left: #{$-radio-button-size + $-radio-label-spacing};
+  margin-top: rem(2px);
 }
