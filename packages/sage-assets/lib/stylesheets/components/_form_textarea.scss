@@ -27,6 +27,8 @@ $-textarea-color-default-background: sage-color(white);
 }
 
 .sage-textarea__label {
+  @include sage-form-field-label;
+
   margin-bottom: $-textarea-label-margin;
 }
 
@@ -36,25 +38,6 @@ $-textarea-color-default-background: sage-color(white);
   min-height: $-textarea-min-height;
   height: $-textarea-height;
   background: $-textarea-color-default-background;
-
-  &:focus:not(:disabled),
-  &:active:not(:disabled) {
-    ~ .sage-textarea__label {
-      @include sage-form-field-floating-label($textarea: true);
-    }
-  }
-
-  &:hover:not(:disabled) {
-    border-color: currentColor;
-  }
-
-  /* Separated so IE/Edge does not ignore focus styles. Note that Edge will not support these states */
-  &:valid:not(:placeholder-shown),
-  &:required:not(:placeholder-shown) {
-    ~ .sage-textarea__label {
-      @include sage-form-field-floating-label($textarea: true);
-    }
-  }
 }
 
 .sage-textarea__message {
