@@ -351,8 +351,8 @@
   @extend %t-sage-body-med;
 
   width: 100%;
-  padding: sage-spacing(xs) sage-spacing(sm);
-  color: sage-color(grey, 800);
+  padding: sage-spacing(sm) sage-spacing(sm);
+  color: sage-color(grey, 600);
   appearance: none;
   border: rem(1px) solid sage-color(grey, 400);
   border-radius: sage-border(radius-medium);
@@ -364,6 +364,8 @@
   }
 
   &:hover:not(:disabled) {
+    color: sage-color(grey, 900);
+
     @include placeholder {
       color: sage-color(grey, 900);
     }
@@ -372,15 +374,15 @@
   &:focus:not(:disabled),
   &:active:not(:disabled) {
     outline: none;
-    border-color: sage-color(primary, 600);
-    box-shadow: 0 0 0 rem(4px) sage-color(primary, 300);
+    // border-color: sage-color(primary, 500);
+    // box-shadow: 0 0 0 rem(1px) sage-color(primary, 500);
 
     @include placeholder {
       opacity: 0;
     }
 
     ~ label {
-      color: sage-color(primary, 500);
+      // color: sage-color(primary, 500);
     }
   }
 
@@ -427,11 +429,6 @@
   .sage-form-field--error &:not(:placeholder-shown),
   .sage-form-field--error &:required:not(:placeholder-shown):not(:valid) {
     border-color: sage-color(red, 500);
-
-    &:focus,
-    &:active {
-      box-shadow: 0 0 0 rem(4px) sage-color(red, 300);
-    }
 
     ~ label {
       color: sage-color(red, 500);
