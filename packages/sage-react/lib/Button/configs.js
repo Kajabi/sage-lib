@@ -1,5 +1,6 @@
 export const BUTTON_COLORS = {
   PRIMARY: 'primary',
+  NEUTRAL: 'neutral',
   SECONDARY: 'secondary',
   DANGER: 'danger',
 };

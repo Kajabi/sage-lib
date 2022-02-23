@@ -107,9 +107,10 @@
     .sage-btn--icon-only-#{$icon-name} {
       justify-content: center;
       text-align: center;
+      border-radius: sage-border(radius-round);
 
       &:not(.sage-btn--subtle) {
-        padding: rem(6px) rem(10px);
+        padding: sage-spacing(xs) rem(12px);
       }
 
       &::before {
@@ -126,17 +127,35 @@
 /// Sets a Sage-style custom focus outline to an interactive element.
 /// Should be paired with `sage-focus-outline--update-color`
 ///
+/// @param {length} $focus-width [4px] Thickness of the focus ring itself
+/// @param {length} $focus-shadow [#8ECAFB] Hex color to be used for the background-color
+/// @param {time} $focus-animation-speed [0.2s] How quickly the focus ring animates on activation
+///
+@mixin sage-focus-ring(
+  $focus-shadow: sage-color(primary, 400),
+  $focus-width: 4px
+) {
+  &:focus {
+    z-index: sage-z-index(default, 1);
+    outline: $focus-width solid $focus-shadow;
+  }
+}
+
+///
+/// Sets a Sage-style custom focus outline to an interactive element.
+/// Should be paired with `sage-focus-outline--update-color`
+///
 /// @param {length} $outline-width [2px] Thickness of the focus ring itself
 /// @param {length} $outline-offset-block [4px] How far the focus ring is offset from the object on the y axis (block)
 /// @param {length} $outline-offset-inline [4px] How far the focus ring is offset from the object on the x axis (inline)
 /// @param {time} $outline-animation-speed [0.2s] How quickly the focus ring animates on activation
 ///
 @mixin sage-focus-outline(
-  $outline-width: 2px,
-  $outline-offset-block: 2px,
-  $outline-offset-inline: 2px,
+  $outline-width: 4px,
+  $outline-offset-block: 0,
+  $outline-offset-inline: 0,
   $outline-animation-speed: 0.2s,
-  $outline-border-radius: sage-border(focus-outline)
+  $outline-border-radius: sage-border(radius-large)
 ) {
   position: relative;
 
