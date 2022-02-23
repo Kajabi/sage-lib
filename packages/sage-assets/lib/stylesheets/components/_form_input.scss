@@ -87,10 +87,6 @@ $-input-text-height: sage-font-size(body);
     }
   }
 
-  &:hover:not(:disabled) {
-    border-color: currentColor;
-  }
-
   &:valid:not(:placeholder-shown) {
     ~ .sage-input__label {
       @include sage-form-field-floating-label();
