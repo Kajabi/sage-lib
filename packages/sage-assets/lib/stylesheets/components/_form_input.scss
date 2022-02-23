@@ -114,6 +114,10 @@ $-input-text-height: sage-font-size(body);
 
     pointer-events: none;
   }
+
+  .sage-form-field--error & i {
+    color: sage-color(red, 500);
+  }
 }
 
 .sage-input__message {
