@@ -16,6 +16,7 @@
 
   &:hover {
     color: sage-color(primary, 700);
+    text-decoration: underline;
   }
 
   &:focus {
@@ -25,7 +26,7 @@
   @include sage-focus-outline(
     $outline-width: 4px,
     $outline-offset-inline: 4px,
-    $outline-border-radius: 10px,
+    $outline-border-radius: sage-border(radius-input),
   );
   @include sage-focus-outline--update-color(sage-color(primary, 300));
 }
