@@ -363,6 +363,12 @@
     color: sage-color(grey, 600);
   }
 
+  &:hover:not(:disabled) {
+    @include placeholder {
+      color: sage-color(grey, 900);
+    }
+  }
+
   &:focus:not(:disabled),
   &:active:not(:disabled) {
     outline: none;
