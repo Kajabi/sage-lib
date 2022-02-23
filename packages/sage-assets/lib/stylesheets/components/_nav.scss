@@ -46,8 +46,8 @@ $-nav-icon-size: rem(20px);
 .sage-nav__link--active {
   @include sage-focus-outline(
     $outline-width: 4px,
-    $outline-offset-inline: 0,
-    $outline-offset-block: -2,
+    $outline-offset-inline: -2,
+    $outline-offset-block: -4,
     $outline-border-radius: rem(10px),
   );
   @include sage-focus-outline--update-color(sage-color(grey, 500));
