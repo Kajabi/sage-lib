@@ -3,16 +3,4 @@
 /// for use in application contexts
 ////
 
-
-// Functions
-@import "core/functions/index";
-
-// Variable Tokens
-@import "dictionary/tokens";
-@import "tokens/index";
-
-// Mixins
-@import "core/mixins/index";
-
-// Global Variables
-@import "core/variables";
+@import "consumables/index";
