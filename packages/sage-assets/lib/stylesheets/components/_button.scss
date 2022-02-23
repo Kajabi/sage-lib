@@ -156,7 +156,7 @@ $-btn-loading-min-height: rem(36px);
 }
 
 .sage-btn {
-  @extend %t-sage-body-med;
+  @extend %t-sage-body-semi;
   @include sage-button-style-reset();
   @include sage-focus-ring;
 
