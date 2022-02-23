@@ -10,9 +10,9 @@
 module.exports = {
   sassTokens: {
     transformGroup: 'sage/scss/tokens',
-    buildPath: 'packages/sage-assets/lib/stylesheets/dictionary/',
+    buildPath: 'packages/sage-assets/lib/stylesheets/consumables/tokens/',
     files: [{
-      destination: '_tokens.scss',
+      destination: '_dictionary.scss',
       format: 'sage/scss/tokens',
       options: {
         outputReferences: false
