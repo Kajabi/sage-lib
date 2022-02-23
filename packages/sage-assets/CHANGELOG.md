@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.71.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.71.0...@kajabi/sage-assets@0.71.1) (2022-02-23)
+
+
+### Bug Fixes
+
+* **truncation:** syntax ([4c3ac4f](https://github.com/Kajabi/sage-lib/commit/4c3ac4f6fad8fe31ef8dce72f88c52ed97c979a4))
+
+
+
+
+
 # [0.71.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.70.0...@kajabi/sage-assets@0.71.0) (2022-02-21)
 
 
