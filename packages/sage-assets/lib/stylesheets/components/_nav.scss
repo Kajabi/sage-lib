@@ -21,13 +21,9 @@ $-nav-icon-size: rem(20px);
 }
 
 .sage-nav__label {
-  @extend %t-sage-body-med;
+  @extend %t-sage-body-semi;
 
   color: sage-color(grey, 900);
-
-  .sage-nav__list--sub & {
-    @extend %t-sage-body-med;
-  }
 
   .sage-nav__link--sub & {
     font-size: sage-font-size(body-sm);
