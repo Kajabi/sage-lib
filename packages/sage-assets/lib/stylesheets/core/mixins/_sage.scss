@@ -373,7 +373,7 @@
 
   &:focus:not(:disabled),
   &:active:not(:disabled) {
-    outline: none;
+    border-color: sage-color(primary, 600);
 
     @include placeholder {
       opacity: 0;
@@ -422,6 +422,8 @@
   .sage-form-field--error &:focus:not(:disabled),
   .sage-form-field--error &:not(:placeholder-shown),
   .sage-form-field--error &:required:not(:placeholder-shown):not(:valid) {
+    @include sage-focus-ring(sage-color(red, 400));
+
     border-color: sage-color(red, 500);
 
     ~ label {
@@ -478,6 +480,7 @@
   @else {
     transform: translateY(calc(-50% - (#{$input-text-height} + #{$input-padding}))); // we calculate the centered position minus the offset of the text height plus the spacing height
   }
+  z-index: sage-z-index(default, 1);
   transition: opacity 0.1s ease-in, transform 0.15s ease-in-out, color 0.15s ease-out;
   opacity: 1;
 }
