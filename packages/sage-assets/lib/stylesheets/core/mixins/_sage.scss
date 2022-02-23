@@ -374,15 +374,9 @@
   &:focus:not(:disabled),
   &:active:not(:disabled) {
     outline: none;
-    // border-color: sage-color(primary, 500);
-    // box-shadow: 0 0 0 rem(1px) sage-color(primary, 500);
 
     @include placeholder {
       opacity: 0;
-    }
-
-    ~ label {
-      // color: sage-color(primary, 500);
     }
   }
 
@@ -396,7 +390,7 @@
   }
 
   &:disabled {
-    color: sage-color(grey, 600);
+    color: sage-color(grey, 400);
     background-color: sage-color(grey, 50);
     cursor: not-allowed;
     resize: none;
@@ -431,7 +425,7 @@
     border-color: sage-color(red, 500);
 
     ~ label {
-      color: sage-color(red, 500);
+      color: sage-color(grey, 800);
     }
   }
 
@@ -494,8 +488,8 @@
 @mixin sage-form-field-message() {
   @extend %t-sage-body-med;
 
-  margin-top: rem(6px);
-  color: sage-color(grey, 600);
+  margin-top: sage-spacing(xs);
+  color: sage-color(grey, 500);
 
   .sage-form-field--error & {
     color: sage-color(red, 500);
