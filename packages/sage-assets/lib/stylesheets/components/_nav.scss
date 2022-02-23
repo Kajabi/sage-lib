@@ -31,6 +31,10 @@ $-nav-icon-size: rem(20px);
     @extend %t-sage-body-med;
   }
 
+  .sage-nav__link--sub & {
+    @extend %t-sage-body-sm;
+  }
+
   .sage-nav__link--active & {
     color: sage-color(grey, 900);
   }
