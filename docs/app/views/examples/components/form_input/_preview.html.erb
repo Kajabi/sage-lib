@@ -186,6 +186,21 @@
     has_placeholder: false
   } %>
 
+  <h3 class="t-sage-heading-6">With Static Icon with Error</h3>
+  <%= sage_component SageFormInput, {
+    icon: "info-circle",
+    id: "form__fname1",
+    input_type: "text",
+    label_text: "First name",
+    placeholder: "First name",
+    required: true,
+    disabled: false,
+    has_error: true,
+    name: "custom_input_name",
+    message_text: "This is a message",
+    has_placeholder: false
+  } %>
+
   <h3 class="t-sage-heading-6">With Popover</h3>
   <%= sage_component SageFormInput, {
     id: "form__fname1",
