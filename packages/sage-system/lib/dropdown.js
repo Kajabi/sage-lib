@@ -11,6 +11,7 @@ Sage.dropdown = (function () {
 
   // Selector for a menu item
   const dropdownItemClass = "sage-dropdown__item-control";
+  const dropdownItemControlCustomClass = "sage-dropdown__item-control--custom";
 
   // The class to toggle on the menu when the menu is disabled
   const dropdownDisabledItemClass = "sage-dropdown__item--disabled";
@@ -25,8 +26,7 @@ Sage.dropdown = (function () {
   const triggerRestPrefix = "--";
 
   // Several variations exist for triggers in selection mode; this is a grouped selector to grab any of them
-  const triggerSelectClasses =
-    ".sage-dropdown__trigger--select-labeled, .sage-dropdown__trigger--select";
+  const triggerSelectClasses = ".sage-dropdown__trigger--select-labeled, .sage-dropdown__trigger--select";
 
   // The element in which to show the selected value when dropdown is in selection mode
   const triggerSelectedValueClass = ".sage-dropdown__trigger-selected-value .sage-btn__truncate-text";
@@ -102,14 +102,23 @@ Sage.dropdown = (function () {
   }
 
   function togglePanel(evt) {
+    let val = null;
     const el = evt.target;
     const elDropdown = evt.currentTarget;
 
     // If the dropdown is in select mode, display the selected content
     const elTrigger = elDropdown.querySelector(triggerSelectClasses);
     const eventIsOnDropdownItem = el.classList.contains(dropdownItemClass);
-    if (eventIsOnDropdownItem && elTrigger) {
-      const val = (el.value || el.textContent).trim();
+    const closestDropdownItemControl = el.closest(dropdownItemControlClass);
+    const eventIsWithinCustomItemControl = closestDropdownItemControl && closestDropdownItemControl.classList.contains(dropdownItemControlCustomClass);
+
+    if (eventIsWithinCustomItemControl && elTrigger) {
+      val = closestDropdownItemControl.innerHTML;
+    } else if (eventIsOnDropdownItem && elTrigger) {
+      val = (el.value || el.textContent).trim();
+    }
+
+    if (val !== null) {
       updateTriggerLabel(val, elTrigger);
       updateStateClass(val, elDropdown);
     }

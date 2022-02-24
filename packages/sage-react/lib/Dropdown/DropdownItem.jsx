@@ -12,6 +12,7 @@ export const DropdownItem = ({
   borderAfter,
   borderBefore,
   color,
+  customComponent,
   disabled,
   hasCheckbox,
   href,
@@ -98,6 +99,8 @@ export const DropdownItem = ({
       return <>{label}</>;
     }
 
+    const CustomComponent = customComponent;
+
     if (hasCheckbox) {
       return (
         <label className={controlClassNames} htmlFor={fieldId}>
@@ -133,11 +136,12 @@ export const DropdownItem = ({
           tag={itemTag}
           {...rest}
         >
-          {isLabelVisible && (
-          <span className="sage-dropdown__item-label" title={label}>
-            {label}
-          </span>
+          {(!customComponent && isLabelVisible) && (
+            <span className="sage-dropdown__item-label" title={label}>
+              {label}
+            </span>
           )}
+          {customComponent && <CustomComponent {...payload} />}
         </Link>
       );
     }
@@ -151,11 +155,12 @@ export const DropdownItem = ({
         disabled={disabled}
         {...rest}
       >
-        {isLabelVisible && (
-        <span className="sage-dropdown__item-label" title={label}>
-          {label}
-        </span>
+        {(!customComponent && isLabelVisible) && (
+          <span className="sage-dropdown__item-label" title={label}>
+            {label}
+          </span>
         )}
+        {customComponent && <CustomComponent {...payload} />}
       </button>
     );
   };
@@ -189,6 +194,7 @@ DropdownItem.defaultProps = {
   borderAfter: false,
   borderBefore: false,
   color: null,
+  customComponent: null,
   disabled: false,
   groupId: 'dropdown',
   hasCheckbox: false,
@@ -210,6 +216,7 @@ DropdownItem.propTypes = {
   borderAfter: PropTypes.bool,
   borderBefore: PropTypes.bool,
   color: PropTypes.oneOf(Object.values(DROPDOWN_ITEM_COLORS)),
+  customComponent: PropTypes.elementType,
   disabled: PropTypes.bool,
   groupId: PropTypes.string,
   hasCheckbox: PropTypes.bool,
@@ -239,5 +246,4 @@ DropdownItem.propTypes = {
     size: PropTypes.oneOf(Object.values(Tooltip.SIZES)),
     theme: PropTypes.oneOf(Object.values(Tooltip.THEMES)),
   }),
-
 };

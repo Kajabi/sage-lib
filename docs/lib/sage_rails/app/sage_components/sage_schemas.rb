@@ -37,6 +37,21 @@ module SageSchemas
     size: [:optional, String],
   }
 
+  BUTTON = {
+    align: [:optional, NilClass, String],
+    attributes: [:optional, NilClass, Hash],
+    custom_content_class: [:optional, NilClass, String],
+    disabled: [:optional, NilClass, TrueClass],
+    full_width: [:optional, NilClass, TrueClass],
+    icon: [:optional, NilClass, { name: String, style: Set.new(["left", "right", "only"]) }],
+    raised: [:optional, NilClass, TrueClass],
+    small: [:optional, NilClass, TrueClass],
+    spinner_on_submit: [:optional, NilClass, String],
+    style: [:optional, NilClass, Set.new(["primary", "secondary", "danger"])],
+    subtle: [:optional, NilClass, TrueClass],
+    value: [:optional, String],
+  }
+
   CHOICE = {
     active: [:optional, NilClass, TrueClass],
     align_center: [:optional, TrueClass],
@@ -61,12 +76,36 @@ module SageSchemas
   DROPDOWN_ITEM = {
     attributes: [:optional, Hash],
     icon: [:optional, NilClass, String],
-    css_classes: [:optional, NilClass, String],
     is_heading: [:optional, TrueClass],
-    modifiers: [:optional, [[Set.new(["disabled", "border-before", "border-after", nil])]]],
+    modifiers: [:optional, NilClass, [[Set.new(["disabled", "border-before", "border-after", nil])]]],
     selected: [:optional, TrueClass],
     style: [:optional, NilClass, Set.new(["primary", "danger", "muted"])],
-    value: String,
+    value: [:optional, {}, String],
+  }
+
+  DROPDOWN_TRIGGER_TYPE = [:optional, NilClass, Set.new(["select", "select-labeled"])]
+
+  DROPDOWN_TRIGGER = {
+    label: [:optional, NilClass, String],
+    type: DROPDOWN_TRIGGER_TYPE,
+    value: [:optional, NilClass, String],
+  }
+
+  DROPDOWN = {
+    align: [:optional, Set.new(["left", "center", "right"])],
+    contained: [:optional, NilClass, TrueClass],
+    customized: [:optional, NilClass, TrueClass],
+    custom_modifier: [:optional, NilClass, Set.new(["actions", "sort"])],
+    full_width_panel: [:optional, NilClass, TrueClass],
+    id: [:optional, NilClass, String],
+    items: [:optional, NilClass, [[SageSchemas::DROPDOWN_ITEM]]],
+    panel_size: [:optional, NilClass, Set.new(["small"])],
+    panel_width: [:optional, NilClass, String],
+    panel_type: [:optional, NilClass, Set.new(["custom", "dropdown", "choice", "checkbox", "status", "searchable"])],
+    search: [:optional, NilClass, TrueClass],
+    trigger: [:optional, NilClass, DROPDOWN_TRIGGER],
+    trigger_type: [:optional, NilClass, Set.new(["select", "select-labeled"])],
+    wrap_footer: [:optional, NilClass, TrueClass],
   }
 
   PANEL_FIGURE = {

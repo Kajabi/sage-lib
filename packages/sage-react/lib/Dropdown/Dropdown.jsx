@@ -9,6 +9,7 @@ import { DropdownItemSearch } from './DropdownItemSearch';
 import { DropdownPanel } from './DropdownPanel';
 import { DropdownTrigger } from './DropdownTrigger';
 import { DROPDOWN_ITEM_COLORS, DROPDOWN_PANEL_SIZES, DROPDOWN_PANEL_TYPES, DROPDOWN_POSITIONS } from './configs';
+import { DropdownTriggerSelect } from './DropdownTriggerSelect';
 
 export const Dropdown = ({
   align,
@@ -167,6 +168,7 @@ Dropdown.ItemSearch = DropdownItemSearch;
 Dropdown.ItemList = DropdownItemList;
 Dropdown.Panel = DropdownPanel;
 Dropdown.Trigger = DropdownTrigger;
+Dropdown.TriggerSelect = DropdownTriggerSelect;
 
 Dropdown.ITEM_COLORS = DROPDOWN_ITEM_COLORS;
 Dropdown.PANEL_SIZES = DROPDOWN_PANEL_SIZES;

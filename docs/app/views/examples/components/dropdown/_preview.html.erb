@@ -1,151 +1,148 @@
-<h3 class="t-sage-heading-6">Menu Button</h3>
-<%= sage_component SageDropdown, {
-  items: [{
-    value: "Edit",
-    icon: "pen",
+<%
+menu_items = [
+  {
     attributes: { "href": "#" },
+    icon: "pen",
+    value: "Edit",
   },
   {
-    value: "Disabled link w/ tooltip",
-    icon: "pen",
-    modifiers: ["disabled"],
     attributes: {
       "href": "https://kajabi.com",
       "data-js-tooltip": "Tooltip",
       "data-js-tooltip-position": "right",
-    }
+    },
+    icon: "pen",
+    modifiers: ["disabled"],
+    value: "Disabled link w/ tooltip",
   },
   {
-    value: "New",
+    attributes: { "href": "#" },
     icon: "add",
     style: "primary",
+    value: "New",
+  },
+  {
     attributes: { "href": "#" },
-   }, {
-    value: "Share Element",
     icon: "url",
     modifiers: ["border-before"],
+    value: "Share Element",
+  },
+  {
     attributes: { "href": "#" },
-   }, {
-    value: "Take A Dangerous Action",
     icon: "remove-circle",
     style: "danger",
-    attributes: { "href": "#" },
-  }, {
-    value: "Disabled w/ Tooltip",
-    icon: "users",
+    value: "Take A Dangerous Action",
+  },
+  {
     attributes: {
       "data-js-tooltip": "Tooltip",
-      "data-js-tooltip-position": "right"
-      },
-    modifiers: ["disabled"]
+      "data-js-tooltip-position": "right",
+    },
+    icon: "users",
+    modifiers: ["disabled"],
+    value: "Disabled w/ Tooltip",
   }
-  ]
-} do %>
-  <%= sage_component SageButton, {
-    style: "primary",
-    value: "Add An Element"
-  } %>
+]
+
+custom_items = [
+  {
+    attributes: { "href": "#" },
+    value: {
+      description: "Customer is chared...",
+      graphic: { icon: "pen", card_color: "info" },
+      name: "One-time",
+    },
+  },
+  {
+    attributes: { "href": "#" },
+    value: {
+      description: "Bill customers on...",
+      graphic: { icon: "pen", card_color: "published" },
+      name: "Subscription",
+    },
+  }, {
+    attributes: { "href": "#" },
+    value: {
+      description: "Require several...",
+      graphic: { icon: "pen", card_color: "approaching" },
+      name: "Multi-pay",
+    },
+  },
+]
+%>
+
+<h3 class="t-sage-heading-6">Menu Dropdown</h3>
+<%= sage_component SageDropdown, { items: menu_items } do %>
+  <% content_for :sage_dropdown_trigger, flush: true do %>
+    <%= sage_component SageButton, {
+      style: "primary",
+      value: "Add An Element",
+    } %>
+  <% end %>
 <% end %>
 
 <h3 class="t-sage-heading-6">Menu Button with Custom Panel Width</h3>
-<%= sage_component SageDropdown, {
-  panel_width: "512px",
-  items: [{
-    value: "Edit",
-    icon: "pen",
-    attributes: { "href": "#" },
-  },
-  {
-    value: "Disabled link w/ tooltip",
-    icon: "pen",
-    modifiers: ["disabled"],
-    attributes: {
-      "href": "https://kajabi.com",
-      "data-js-tooltip": "Tooltip",
-      "data-js-tooltip-position": "right",
-    }
-  },
-  {
-    value: "New",
-    icon: "add",
-    style: "primary",
-    attributes: { "href": "#" },
-   }, {
-    value: "Share Element",
-    icon: "url",
-    modifiers: ["border-before"],
-    attributes: { "href": "#" },
-   }, {
-    value: "Take A Dangerous Action",
-    icon: "remove-circle",
-    style: "danger",
-    attributes: { "href": "#" },
-  }, {
-    value: "Disabled w/ Tooltip",
-    icon: "users",
-    attributes: {
-      "data-js-tooltip": "Tooltip",
-      "data-js-tooltip-position": "right"
-      },
-    modifiers: ["disabled"]
-  }
-  ]
-} do %>
-  <%= sage_component SageButton, {
-    style: "primary",
-    value: "Add An Element"
-  } %>
+<%= sage_component SageDropdown, { panel_width: "512px", items: menu_items } do %>
+  <% content_for :sage_dropdown_trigger, flush: true do %>
+    <%= sage_component SageButton, {
+      style: "primary",
+      value: "Add An Element"
+    } %>
+  <% end %>
 <% end %>
+
 <h3 class="t-sage-heading-6">Dropdown menu with Headings</h3>
 <%= sage_component SageDropdown, {
   contained: true,
-  items: [{
-    value: "Offers",
-    is_heading: true,
-  }, {
-    value: "Grant offer",
-  }, {
-    value: "Revoke offer",
-  }, {
-    value: "Emails",
-    is_heading: true,
-  }, {
-    value: "Subscribe to Email Sequence",
-  }, {
-    value: "Unsubscribe from Email Sequence",
-  }, {
-    value: "Events",
-    is_heading: true,
-  }, {
-    value: "Register to Event",
-  }, {
-    value: "Deregister from Event",
-  }, {
-    value: "Tags",
-    is_heading: true,
-  }, {
-    value: "Add tag",
-  }, {
-    value: "Remove tag",
-  }, {
-    value: "Export",
-    icon: "upload",
-    modifiers: ["border-before"]
-  }, {
-    value: "Unsubscribe",
-    icon: "remove-circle",
-  }, {
-    modifiers: ["border-before"],
-    icon: "trash",
-    style: "danger",
-    value: "Delete",
-  }]
+  items: [
+    {
+      is_heading: true,
+      value: "Offers",
+    },
+    { value: "Grant offer" },
+    { value: "Revoke offer" },
+    {
+      is_heading: true,
+      value: "Emails",
+    },
+    { value: "Subscribe to Email Sequence" },
+    { value: "Unsubscribe from Email Sequence" },
+    {
+      is_heading: true,
+      value: "Events",
+    },
+    { value: "Register to Event" },
+    { value: "Deregister from Event" },
+    {
+      is_heading: true,
+      value: "Tags",
+    },
+    { value: "Add tag" },
+    { value: "Remove tag" },
+    {
+      icon: "upload",
+      modifiers: ["border-before"],
+      value: "Export",
+    },
+    {
+      icon: "remove-circle",
+      value: "Unsubscribe",
+    },
+    {
+      icon: "trash",
+      modifiers: ["border-before"],
+      style: "danger",
+      value: "Delete",
+    }
+  ]
 } do %>
-  <%= sage_component SageButton, {
-    style: "secondary",
-    raised: false,
-    value: "Bulk Actions"
-  } %>
+  <% content_for :sage_dropdown_trigger, flush: true do %>
+    <%= sage_component SageButton, {
+      style: "secondary",
+      raised: false,
+      value: "Bulk Actions"
+    } %>
+  <% end %>
 <% end %>
 
 <h3 class="t-sage-heading-6">SageLabel Button, with SageLabel Values, and aligned right</h3>
@@ -155,115 +152,115 @@
     align: "right",
     panel_size: "small",
     panel_type: "status",
-    items: [{
-      value: sage_component(SageLabel, { color: "published", value: "Publish" }),
-      attributes: {},
-    }, {
-      value: sage_component(SageLabel, { color: "info", value: "Drip" }),
-      attributes: { "href": "#" },
-    }, {
-      value: sage_component(SageLabel, { color: "draft", value: "Draft" }),
-      attributes: { "href": "#" },
-    }, {
-      value: "Delete Category",
-      icon: "trash",
-      style: "danger",
-      attributes: {
-        "href": "#",
-        "data-test": "test method"
+    items: [
+      {
+        attributes: { "href": "#" },
+        value: sage_component(SageLabel, { color: "published", value: "Publish" }),
       },
-    }]
+      {
+        attributes: { "href": "#" },
+        value: sage_component(SageLabel, { color: "info", value: "Drip" }),
+      },
+      {
+        attributes: { "href": "#" },
+        value: sage_component(SageLabel, { color: "draft", value: "Draft" }),
+      },
+      {
+        attributes: {
+          "href": "#",
+          "data-test": "test method"
+        },
+        icon: "trash",
+        style: "danger",
+        value: "Delete Category",
+      }
+    ]
   } do %>
-    <%= sage_component SageLabel, {
-      color: "info",
-      interactive_type: :dropdown,
-      value: "Drip",
-      icon: "draft"
-    } %>
+    <% content_for :sage_dropdown_trigger, flush: true do %>
+      <%= sage_component SageLabel, {
+        color: "info",
+        icon: "draft",
+        interactive_type: :dropdown,
+        value: "Drip",
+      } %>
+    <% end %>
   <% end %>
 </div>
 
 <h3 class="t-sage-heading-6">Select</h3>
 <p>Note: This pattern is used with the SageReact implementation, please consult UXD before using this as SageRails.</p>
 <%= sage_component SageDropdown, {
-  search: true,
-  panel_type: "searchable",
-  trigger_type: "select",
-  items: [{
-    value: "-- None --"
-  }, {
-    selected: true,
-    value: "Option 1",
-   }, {
-    value: "Option 2",
-   }, {
-    value: "Option 3",
-  }, {
-    value: "Muted",
-    style: "muted"
-  }, {
-    value: "Disabled",
-    modifiers: ["disabled"]
-  },
-  {
-    value: "Disabled w/ tooltip",
-    modifiers: ["disabled"],
-    attributes: {
-      "data-js-tooltip": "Tooltip",
-      "data-js-tooltip-position": "left"
+  contained: true,
+  items: [
+    { value: "-- None --" },
+    {
+      selected: true,
+      value: "Option 1",
     },
-  }],
-  contained: true
-} do %>
-  <%= sage_component SageButton, {
-    style: "secondary",
-    raised: false,
+    { value: "Option 2" },
+    { value: "Option 3" },
+    {
+      style: "muted",
+      value: "Muted",
+    },
+    {
+      modifiers: ["disabled"],
+      value: "Disabled",
+    },
+    {
+      attributes: {
+        "data-js-tooltip": "Tooltip",
+        "data-js-tooltip-position": "left",
+      },
+      modifiers: ["disabled"],
+      value: "Disabled w/ tooltip",
+    }
+  ],
+  panel_type: "searchable",
+  search: true,
+  trigger: {
+    type: "select",
+    label: "Add an Element",
     value: "",
-    css_classes: "sage-dropdown__trigger-selected-value",
-    icon: { style: "right", name: "caret-down" }
-  } %>
-  <label class="sage-dropdown__trigger-label">Add an Element</label>
-<% end %>
+  }
+} %>
 
 <h3 class="t-sage-heading-6">Form Field</h3>
 <p>Note: This pattern is used with the SageReact implementation, please consult UXD before using this as SageRails.</p>
 <%= sage_component SageDropdown, {
-  search: true,
-  panel_type: "searchable",
-  trigger_type: "select-labeled",
   align: "right",
-  items: [{
-    value: "-- None --"
-  }, {
-    value: "Option 1",
-   }, {
-    value: "Option 2",
-   }, {
-    value: "Option 3",
-  }, {
-    value: "Muted",
-    style: "muted"
-  }],
-  contained: true
-} do %>
-  <%= sage_component SageButton, {
-    style: "secondary",
-    raised: false,
+  contained: true,
+  items: [
+    { value: "-- None --" },
+    { value: "Option 1" },
+    { value: "Option 2" },
+    { value: "Option 3" },
+    {
+      style: "muted",
+      value: "Muted",
+    }
+  ],
+  panel_type: "searchable",
+  search: true,
+  trigger: {
+    type: "select",
     value: "",
-    css_classes: "sage-dropdown__trigger-selected-value",
-    icon: { style: "right", name: "caret-down" }
-  } %>
-  <label class="sage-dropdown__trigger-label">Add an Element</label>
-<% end %>
+    label: "Add an Element",
+  }
+} %>
 
 <h3 class="t-sage-heading-6">Dropdown Field with full-width Custom Content and Footer</h3>
 <%= sage_component SageDropdown, {
-  panel_type: "searchable",
-  search: true,
-  trigger_type: "select",
   contained: true,
   full_width_panel: true,
-  wrap_footer: true
+  panel_type: "searchable",
+  search: true,
+  trigger: {
+    type: "select",
+    value: "",
+    label: "Select Product(s)",
+  },
+  wrap_footer: true,
 } do %>
   <% content_for :sage_dropdown_custom_panel_content do %>
     <ul class="sage-dropdown__menu sage-dropdown__menu--fixed-height">
@@ -277,7 +274,7 @@
               disabled: false,
               has_error: false,
               partial_selection: false,
-              standalone: true
+              standalone: true,
             } %>
             <span class="sage-dropdown__item-label">Product <%= i + 1 %></span>
           </label>
@@ -291,32 +288,25 @@
         value: "Clear selections",
         style: "secondary",
         raised: false,
-        small: true
+        small: true,
       } %>
       <%= sage_component SageButton, {
         value: "Add to Offer",
         style: "primary",
-        small: true
+        small: true,
       } %>
     <% end %>
   <% end %>
-  <%= sage_component SageButton, {
-    style: "secondary",
-    raised: false,
-    value: "",
-    css_classes: "sage-dropdown__trigger-selected-value",
-    icon: { style: "right", name: "caret-down" }
-  } %>
-  <label class="sage-dropdown__trigger-label">Select Product(s)</label>
 <% end %>
 
 <h3 class="t-sage-heading-6">Dropdown Menu Button with Custom Content</h3>
-<%= sage_component SageDropdown, {
-} do %>
-  <%= sage_component SageButton, {
-    style: "primary",
-    value: "Dropdown Trigger"
-  } %>
+<%= sage_component SageDropdown, {} do %>
+  <% content_for :sage_dropdown_trigger, flush: true do %>
+    <%= sage_component SageButton, {
+      style: "primary",
+      value: "Dropdown Trigger",
+    } %>
+  <% end %>
   <% content_for :sage_dropdown_custom_panel_content do %>
     <%= sage_component SagePanel, {} do %>
       <%= sage_component SagePanelStack, {} do %>
@@ -334,3 +324,63 @@
     <% end %>
   <% end %>
 <% end %>
+
+
+<h3>Dropdown with Custom Items<h3>
+
+<%= md("
+While we generally recommend using the built-in `items` construction that comes with `SageDropdown`,
+it is possible to compose custom item content using the `SageDropdownItem` component
+and a manual loop within the `sage_dropdown_items` content slot.
+See the two examples below where custom item contents are generated for more appealing dropdown items.
+", use_sage_type: true) %>
+
+<h4>As a Menu Dropdown</h4>
+
+<%= sage_component SageDropdown, {} do %>
+  <% content_for :sage_dropdown_trigger, flush: true do %>
+    <%= sage_component SageButton, {
+      style: "primary",
+      value: "Product",
+      icon: { name: "add", style: "left" },
+    } %>
+  <% end %>
+  <% content_for :sage_dropdown_items do %>
+    <% custom_items.each do | item | %>
+      <%= sage_component SageDropdownItem, {} do %>
+        <%= sage_component SageCardRow, { grid_template: "et" } do %>
+          <%= sage_component SageIcon, item[:value][:graphic] %>
+          <%= sage_component SageCardBlock, {} do %>
+            <h4><%= item[:value][:name] %></h4>
+            <p><%= item[:value][:description] %></p>
+          <% end %>
+        <% end %>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>
+
+<h4>As a Select Dropdown</h4>
+
+<%= sage_component SageDropdown, {
+  trigger: {
+    type: "select",
+    label: "Select a product",
+  },
+  contained: true,
+} do %>
+  <% content_for :sage_dropdown_items do %>
+    <% custom_items.each do | item | %>
+      <%= sage_component SageDropdownItem, {} do %>
+        <%= sage_component SageCardRow, { grid_template: "et" } do %>
+          <%= sage_component SageIcon, item[:value][:graphic] %>
+          <%= sage_component SageCardBlock, {} do %>
+            <h4><%= item[:value][:name] %></h4>
+            <p><%= item[:value][:description] %></p>
+          <% end %>
+        <% end %>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>
+
