@@ -59,19 +59,16 @@ $-input-text-height: sage-font-size(body);
 }
 
 .sage-input__label {
-  @include sage-form-field-label;
-
-  top: ($-input-height / 2);
-  left: $-input-label-offset;
-  transform: translateY(calc(#{$-input-text-height} * -1));
-  padding-left: sage-spacing(2xs);
-  padding-right: sage-spacing(2xs);
+  // @include sage-form-field-label;
 
   .sage-input--prefixed & {
     transform: translateY(calc(#{$-input-text-height} * -1)) translateX(30px);
     z-index: sage-z-index(default, 2);
     position: absolute;
   }
+}
+.sage-input__field-wrapper {
+  position: relative;
 }
 
 .sage-input__field {
