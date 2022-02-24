@@ -44,7 +44,7 @@ $-nav-icon-size: rem(20px);
     $outline-width: 4px,
     $outline-offset-inline: -2,
     $outline-offset-block: -4,
-    $outline-border-radius: rem(10px),
+    $outline-border-radius: sage-border(radius-input),
   );
   @include sage-focus-outline--update-color(sage-color(grey, 400));
 
@@ -53,7 +53,7 @@ $-nav-icon-size: rem(20px);
   padding: sage-spacing(xs) sage-spacing(sm);
   margin-bottom: sage-spacing(2xs);
   color: $-nav-color-text;
-  border-radius: rem(10px);
+  border-radius: sage-border(radius-input);
   transition: map-get($sage-transitions, default);
   transition-property: background, box-shadow;
 
