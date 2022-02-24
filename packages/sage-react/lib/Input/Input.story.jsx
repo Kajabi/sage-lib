@@ -13,7 +13,9 @@ export default {
     }),
   },
   args: {
+    disabled: false,
     label: 'First name',
+    readyOnly: false
   }
 };
 
@@ -42,6 +44,26 @@ export const Default = (args) => {
   );
 };
 
+
+
+const Template = (args) => <Input {...args} />;
+
+export const InputWithError = Template.bind({});
+InputWithError.args = {
+  hasError: true
+};
+
+export const InputDisabled = Template.bind({});
+InputDisabled.args = {
+  disabled: true
+};
+
+export const InputReadonly = Template.bind({});
+InputReadonly.args = {
+  readOnly: true,
+  value: "You can't change me"
+};
+
 export const InputWithStaticIcon = (args) => {
   const [value, updateValue] = useState('Test');
   const onChange = (e) => {
@@ -65,6 +87,13 @@ export const InputWithStaticIcon = (args) => {
       value={value}
     />
   );
+};
+
+export const InputErrorWithStaticIcon = Template.bind({});
+InputErrorWithStaticIcon.args = {
+  icon: SageTokens.ICONS.INFO_CIRCLE,
+  hasError: true,
+  value: "Test",
 };
 
 export const InputWithPopover = (args) => {
@@ -100,6 +129,7 @@ Default.args = {
 InputWithStaticIcon.args = {
   icon: SageTokens.ICONS.INFO_CIRCLE,
 };
+
 
 InputWithPopover.args = {
   popover: (

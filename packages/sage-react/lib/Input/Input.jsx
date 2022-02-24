@@ -6,15 +6,24 @@ import { SageTokens } from '../configs';
 
 export const Input = ({
   className,
+  disabled,
   hasError,
+  hasPlaceholder,
   icon,
   id,
   label,
+  max,
+  maxLength,
   message,
+  min,
+  minLength,
   onChange,
+  pattern,
   popover,
   prefix,
+  readOnly,
   standalone,
+  step,
   suffix,
   value,
   ...rest
@@ -75,9 +84,17 @@ export const Input = ({
     <div className={classNames}>
       <input
         className="sage-form-field sage-input__field"
+        disabled={disabled}
         id={id}
+        max={max}
+        maxLength={maxLength}
+        min={min}
+        minLength={minLength}
         onChange={handleChange}
+        pattern={pattern}
         placeholder={label}
+        readOnly={readOnly}
+        step={step}
         style={inputStyles}
         value={fieldValue || value}
         {...rest}
@@ -120,13 +137,21 @@ export const Input = ({
 
 Input.defaultProps = {
   className: null,
+  disabled: false,
   hasError: false,
+  hasPlaceholder: false,
   icon: null,
   label: null,
+  max: null,
+  maxLength: null,
   message: null,
+  min: null,
+  minLength: null,
   onChange: null,
+  pattern: null,
   popover: null,
   prefix: null,
+  readOnly: false,
   standalone: false,
   suffix: null,
   value: '',
@@ -134,15 +159,24 @@ Input.defaultProps = {
 
 Input.propTypes = {
   className: PropTypes.string,
+  disabled: PropTypes.bool,
   icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),
   id: PropTypes.string.isRequired,
   hasError: PropTypes.bool,
+  hasPlaceholder: PropTypes.bool,
   label: PropTypes.string,
+  max: PropTypes.string,
+  maxLength: PropTypes.string,
   message: PropTypes.string,
+  min: PropTypes.string,
+  minLength: PropTypes.string,
   onChange: PropTypes.func,
+  pattern: PropTypes.string,
   popover: PropTypes.node,
   prefix: PropTypes.string,
+  readOnly: PropTypes.bool,
   standalone: PropTypes.bool,
+  step: PropTypes.string,
   suffix: PropTypes.string,
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
