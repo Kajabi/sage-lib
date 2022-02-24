@@ -77,7 +77,7 @@ module SageSchemas
     attributes: [:optional, Hash],
     icon: [:optional, NilClass, String],
     is_heading: [:optional, TrueClass],
-    modifiers: [:optional, NilClass, [[Set.new(["disabled", "border-before", "border-after"])]]],
+    modifiers: [:optional, NilClass, [[Set.new(["disabled", "border-before", "border-after", nil])]]],
     selected: [:optional, TrueClass],
     style: [:optional, NilClass, Set.new(["primary", "danger", "muted"])],
     value: [:optional, {}, String],
