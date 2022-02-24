@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.18.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.17.0...@kajabi/sage-system@0.18.0) (2022-02-24)
+
+
+### Features
+
+* **dropdown:** patch event handling for custom dropdown ([6f8aeeb](https://github.com/Kajabi/sage-lib/commit/6f8aeebefaa7d4ad0fdf871ceaf2de86004a8225))
+
+
+
+
+
 # [0.17.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.16.1...@kajabi/sage-system@0.17.0) (2021-12-15)
 
 

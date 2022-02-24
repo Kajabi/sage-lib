@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.46.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.45.1...@kajabi/sage@4.46.0) (2022-02-24)
+
+
+### Features
+
+* **dropdown:** add trigger component in Rails ([917f623](https://github.com/Kajabi/sage-lib/commit/917f62332988f8a375ab098e470ac900e3026972))
+* **dropdown:** impelement trigger component in dropdown ([46e3d62](https://github.com/Kajabi/sage-lib/commit/46e3d621b1e8bba06927be3fb83f7f05b909c608))
+* **dropdown:** patch event handling for custom dropdown ([6f8aeeb](https://github.com/Kajabi/sage-lib/commit/6f8aeebefaa7d4ad0fdf871ceaf2de86004a8225))
+* **dropdown:** tighten documentation ([5129bff](https://github.com/Kajabi/sage-lib/commit/5129bff856d8c1d5c30c8267bf25e09d417b2084))
+
+
+
+
+
 ## [4.45.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.45.0...@kajabi/sage@4.45.1) (2022-02-23)
 
 **Note:** Version bump only for package @kajabi/sage

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.80.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.79.1...@kajabi/sage-react@0.80.0) (2022-02-24)
+
+
+### Features
+
+* **dropdown:** add custom item affordance and story in React ([e306734](https://github.com/Kajabi/sage-lib/commit/e306734ea77ab66e12427d725c3b6c1371f78536))
+
+
+
+
+
 ## [0.79.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.79.0...@kajabi/sage-react@0.79.1) (2022-02-23)
 
 **Note:** Version bump only for package @kajabi/sage-react
