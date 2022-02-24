@@ -59,7 +59,7 @@ $-input-text-height: sage-font-size(body);
 }
 
 .sage-input__label {
-  // @include sage-form-field-label;
+  @include sage-form-field-label;
 
   .sage-input--prefixed & {
     transform: translateY(calc(#{$-input-text-height} * -1)) translateX(30px);
