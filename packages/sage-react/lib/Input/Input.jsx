@@ -3,6 +3,10 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { Icon } from '../Icon';
 import { SageTokens } from '../configs';
+import {
+  INPUT_MODE,
+  INPUT_TYPE
+} from './configs';
 
 export const Input = ({
   className,
@@ -11,6 +15,8 @@ export const Input = ({
   hasPlaceholder,
   icon,
   id,
+  inputMode,
+  type,
   label,
   max,
   maxLength,
@@ -19,9 +25,11 @@ export const Input = ({
   minLength,
   onChange,
   pattern,
+  placeholder,
   popover,
   prefix,
-  readOnly,
+  readonly,
+  required,
   standalone,
   step,
   suffix,
@@ -37,6 +45,7 @@ export const Input = ({
     className,
     {
       'sage-form-field--error': hasError,
+      'sage-form-field--showplaceholder': hasPlaceholder,
       'sage-input--prefixed': prefix,
       'sage-input--suffixed': suffix,
       'sage-input--standalone': standalone,
@@ -86,14 +95,17 @@ export const Input = ({
         className="sage-form-field sage-input__field"
         disabled={disabled}
         id={id}
+        inputMode={inputMode}
+        type={type}
         max={max}
         maxLength={maxLength}
         min={min}
         minLength={minLength}
         onChange={handleChange}
         pattern={pattern}
-        placeholder={label}
-        readOnly={readOnly}
+        placeholder={placeholder}
+        readOnly={readonly}
+        required={required}
         step={step}
         style={inputStyles}
         value={fieldValue || value}
@@ -135,12 +147,17 @@ export const Input = ({
   );
 };
 
+Input.Mode = INPUT_MODE;
+Input.Type = INPUT_TYPE;
+
 Input.defaultProps = {
   className: null,
   disabled: false,
   hasError: false,
   hasPlaceholder: false,
   icon: null,
+  inputMode: null,
+  type: null,
   label: null,
   max: null,
   maxLength: null,
@@ -149,9 +166,11 @@ Input.defaultProps = {
   minLength: null,
   onChange: null,
   pattern: null,
+  placeholder: null,
   popover: null,
   prefix: null,
-  readOnly: false,
+  readonly: false,
+  required: false,
   standalone: false,
   suffix: null,
   value: '',
@@ -164,6 +183,8 @@ Input.propTypes = {
   id: PropTypes.string.isRequired,
   hasError: PropTypes.bool,
   hasPlaceholder: PropTypes.bool,
+  inputMode: PropTypes.oneOf(Object.values(Input.Mode)),
+  type: PropTypes.oneOf(Object.values(Input.Type)),
   label: PropTypes.string,
   max: PropTypes.string,
   maxLength: PropTypes.string,
@@ -172,9 +193,11 @@ Input.propTypes = {
   minLength: PropTypes.string,
   onChange: PropTypes.func,
   pattern: PropTypes.string,
+  placeholder: PropTypes.string,
   popover: PropTypes.node,
   prefix: PropTypes.string,
-  readOnly: PropTypes.bool,
+  readonly: PropTypes.bool,
+  required: PropTypes.bool,
   standalone: PropTypes.bool,
   step: PropTypes.string,
   suffix: PropTypes.string,
