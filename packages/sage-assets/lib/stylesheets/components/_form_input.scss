@@ -49,11 +49,13 @@ $-input-text-height: sage-font-size(body);
 }
 
 .sage-input__affix--prefix {
+  top: 0;
   left: sage-spacing(sm);
   padding-right: sage-spacing(2xs);
 }
 
 .sage-input__affix--suffix {
+  top: 0;
   right: sage-spacing(sm);
   padding-left: sage-spacing(2xs);
 }
@@ -61,11 +63,7 @@ $-input-text-height: sage-font-size(body);
 .sage-input__label {
   @include sage-form-field-label;
 
-  .sage-input--prefixed & {
-    transform: translateY(calc(#{$-input-text-height} * -1)) translateX(30px);
-    z-index: sage-z-index(default, 2);
-    position: absolute;
-  }
+  margin-bottom: sage-spacing(2xs);
 }
 .sage-input__field-wrapper {
   position: relative;
