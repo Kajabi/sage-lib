@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.46.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.46.0...@kajabi/sage@4.46.1) (2022-02-25)
+
+
+### Bug Fixes
+
+* **dropdown:** fix button type formatting ([b62a505](https://github.com/Kajabi/sage-lib/commit/b62a505a41f6720bcf0a515c8060a3851b86d9ea))
+
+
+
+
+
 # [4.46.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.45.1...@kajabi/sage@4.46.0) (2022-02-24)
 
 
