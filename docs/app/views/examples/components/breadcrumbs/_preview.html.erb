@@ -7,16 +7,17 @@
 <%= sage_component SageBreadcrumbs, {
   items: [
     {
-      text: 'Test 1',
-      url: 'http://example.com/1'
+      text: "Settings",
+      url: "https://kajabi.com"
     },
     {
-      text: 'Test 2',
-      url: 'http://example.com/2'
+      text: "Domain Settings",
+      url: "https://kajabi.com"
     },
     {
-      text: 'Test 3',
-      url: 'http://example.com/3'
+      text: "Domain Setup",
+      url: "https://kajabi.com",
+      disabled: true,
     }
   ]
 } %>
@@ -30,8 +31,8 @@
 <%= sage_component SageBreadcrumbs, {
   items: [
     {
-      text: 'Settings',
-      url: '#'
+      text: "Settings",
+      url: "#"
     }
   ]
 } %>
@@ -46,17 +47,17 @@
   is_progressbar: true,
   items: [
     {
-      text: 'Test 1',
-      url: 'http://example.com/1'
+      text: "Test 1",
+      url: "#"
     },
     {
-      text: 'Test 2',
-      url: 'http://example.com/2',
+      text: "Test 2",
+      url: "#",
       is_current: true
     },
     {
-      text: 'Test 3',
-      url: 'http://example.com/3'
+      text: "Test 3",
+      url: "#"
     }
   ]
 } %>
