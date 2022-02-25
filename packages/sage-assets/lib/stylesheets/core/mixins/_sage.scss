@@ -381,7 +381,6 @@
   }
 
   &:valid:not(:placeholder-shown) {
-    outline: none;
     background: transparent; // Prevent some browsers from coloring the background on 'valid'
 
     @include placeholder {
@@ -489,10 +488,10 @@
 /// Adds the basic default form field message font sizing and color treatment
 ///
 @mixin sage-form-field-message() {
-  @extend %t-sage-body-med;
+  @extend %t-sage-body-small-med;
 
   margin-top: sage-spacing(xs);
-  color: sage-color(grey, 500);
+  color: sage-color(grey, 600);
 
   .sage-form-field--error & {
     color: sage-color(red, 500);
