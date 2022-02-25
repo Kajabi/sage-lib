@@ -9,6 +9,7 @@ import {
 } from './configs';
 
 export const Input = ({
+  autocomplete,
   className,
   disabled,
   hasError,
@@ -23,6 +24,7 @@ export const Input = ({
   message,
   min,
   minLength,
+  name,
   onChange,
   pattern,
   placeholder,
@@ -92,6 +94,7 @@ export const Input = ({
   return (
     <div className={classNames}>
       <input
+        autocomplete={autocomplete}
         className="sage-form-field sage-input__field"
         disabled={disabled}
         id={id}
@@ -101,6 +104,7 @@ export const Input = ({
         maxLength={maxLength}
         min={min}
         minLength={minLength}
+        name={name}
         onChange={handleChange}
         pattern={pattern}
         placeholder={placeholder}
@@ -151,6 +155,7 @@ Input.Mode = INPUT_MODE;
 Input.Type = INPUT_TYPE;
 
 Input.defaultProps = {
+  autocomplete: null,
   className: null,
   disabled: false,
   hasError: false,
@@ -164,6 +169,7 @@ Input.defaultProps = {
   message: null,
   min: null,
   minLength: null,
+  name: null,
   onChange: null,
   pattern: null,
   placeholder: null,
@@ -177,6 +183,7 @@ Input.defaultProps = {
 };
 
 Input.propTypes = {
+  autocomplete: PropTypes.string,
   className: PropTypes.string,
   disabled: PropTypes.bool,
   icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),
@@ -191,6 +198,7 @@ Input.propTypes = {
   message: PropTypes.string,
   min: PropTypes.string,
   minLength: PropTypes.string,
+  name: PropTypes.string,
   onChange: PropTypes.func,
   pattern: PropTypes.string,
   placeholder: PropTypes.string,
