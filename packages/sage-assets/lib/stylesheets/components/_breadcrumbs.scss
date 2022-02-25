@@ -48,8 +48,8 @@ $-breadcrumb-interactive-outline: sage-color(grey, 400);
 .sage-breadcrumbs__link {
   display: inline-flex;
   align-items: center;
-  color: sage-color(grey, 700);
   padding: sage-spacing(3xs) sage-spacing(xs);
+  color: sage-color(grey, 700);
   font-size: sage-font-size(body-sm);
 
   &:hover,
@@ -89,8 +89,8 @@ $-breadcrumb-interactive-outline: sage-color(grey, 400);
     &:hover,
     &:focus,
     &:active {
-      background: $-breadcrumb-interactive-bg;
       color: $-breadcrumb-interactive-color;
+      background: $-breadcrumb-interactive-bg;
     }
 
     &[aria-disabled="true"],
