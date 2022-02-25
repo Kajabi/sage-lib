@@ -26,7 +26,7 @@
   @include sage-focus-outline(
     $outline-width: 4px,
     $outline-offset-inline: 4px,
-    $outline-border-radius: sage-border(radius-input),
+    $outline-border-radius: sage-border(radius-medium),
   );
   @include sage-focus-outline--update-color(sage-color(primary, 300));
 }
