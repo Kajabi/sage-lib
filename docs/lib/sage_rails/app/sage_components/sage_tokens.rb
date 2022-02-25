@@ -134,7 +134,7 @@ module SageTokens
     "automations",
     "ban",
     "bell",
-    "beta"
+    "beta",
     "blog",
     "bold",
     "broadcast",
