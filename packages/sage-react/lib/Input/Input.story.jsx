@@ -13,6 +13,7 @@ export default {
     }),
   },
   args: {
+    id: 'field-2',
     label: 'First name',
   }
 };
