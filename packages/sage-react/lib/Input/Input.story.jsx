@@ -46,8 +46,6 @@ export const Default = (args) => {
   );
 };
 
-
-
 const Template = (args) => <Input {...args} />;
 
 export const InputWithError = Template.bind({});
@@ -63,52 +61,52 @@ InputDisabled.args = {
 export const InputReadonly = Template.bind({});
 InputReadonly.args = {
   readonly: true,
-  value: "You can't change me"
+  value: 'You cannot change me'
 };
 
 export const InputEmail = Template.bind({});
 InputEmail.args = {
   type: Input.Type.EMAIL,
-  label: "Email address"
+  label: 'Email address'
 };
 
 export const InputPassword = Template.bind({});
 InputPassword.args = {
   type: Input.Type.PASSWORD,
-  label: "Create a password",
-  maxLength: "128",
-  minLength: "8",
+  label: 'Create a password',
+  maxLength: '128',
+  minLength: '8',
 };
 
 export const InputNumbers = Template.bind({});
 InputNumbers.args = {
   inputMode: Input.Mode.NUMBERIC,
   type: Input.Type.NUMBER,
-  label: "Enter quantity (max 48)",
-  max: "48",
-  maxLength: "2",
-  pattern: "[0-9]{2}",
-  required: true
+  label: 'Enter quantity (max 48)',
+  max: '48',
+  maxLength: '2',
+  pattern: '[0-9]{2}',
+  required: true,
 
 };
 
 export const InputNumbersIncremented = Template.bind({});
 InputNumbersIncremented.args = {
   type: Input.Type.NUMBER,
-  label: "Enter quantity (max 5%)",
-  max: "5",
-  maxLength: "2",
-  min: "0",
-  pattern: "[0-9]{2}",
+  label: 'Enter quantity (max 5%)',
+  max: '5',
+  maxLength: '2',
+  min: '0',
+  pattern: '[0-9]{2}',
   required: true,
-  step: "0.5"
+  step: '0.5',
 };
 
 export const InputCustomPlaceholderLabelVisible = Template.bind({});
 InputCustomPlaceholderLabelVisible.args = {
-  label: "Reply-to email",
-  placeholder: "Custom placeholder text",
-  hasPlaceholder: true
+  label: 'Reply-to email',
+  placeholder: 'Custom placeholder text',
+  hasPlaceholder: true,
 };
 
 export const InputWithStaticIcon = (args) => {

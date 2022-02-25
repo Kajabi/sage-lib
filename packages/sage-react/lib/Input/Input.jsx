@@ -94,7 +94,7 @@ export const Input = ({
   return (
     <div className={classNames}>
       <input
-        autocomplete={autocomplete}
+        autoComplete={autocomplete}
         className="sage-form-field sage-input__field"
         disabled={disabled}
         id={id}
@@ -178,6 +178,7 @@ Input.defaultProps = {
   readonly: false,
   required: false,
   standalone: false,
+  step: null,
   suffix: null,
   value: '',
 };
