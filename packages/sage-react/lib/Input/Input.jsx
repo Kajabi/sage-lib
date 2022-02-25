@@ -7,6 +7,7 @@ import { SageTokens } from '../configs';
 export const Input = ({
   className,
   hasError,
+  hideLabel,
   icon,
   id,
   label,
@@ -47,6 +48,13 @@ export const Input = ({
     }
   };
 
+  const labelClassnames = classnames(
+    'sage-input__label',
+    className,
+    {
+      'visually-hidden': hideLabel,
+    });
+
   useEffect(() => {
     const newInputStyles = {
       ...inputStyles,
@@ -83,7 +91,7 @@ export const Input = ({
         {...rest}
       />
       {label && (
-        <label htmlFor={id} className="sage-input__label">
+        <label htmlFor={id} className={labelClassnames}>
           {label}
         </label>
       )}
@@ -121,6 +129,7 @@ export const Input = ({
 Input.defaultProps = {
   className: null,
   hasError: false,
+  hideLabel: false,
   icon: null,
   label: null,
   message: null,
@@ -137,6 +146,7 @@ Input.propTypes = {
   icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),
   id: PropTypes.string.isRequired,
   hasError: PropTypes.bool,
+  hideLabel: PropTypes.bool,
   label: PropTypes.string,
   message: PropTypes.string,
   onChange: PropTypes.func,
