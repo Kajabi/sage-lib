@@ -40,6 +40,20 @@
     has_placeholder: false
   } %>
 
+  <h3 class="t-sage-heading-6">Text (prefilled) with hidden label</h3>
+  <%= sage_component SageFormInput, {
+    id: "form__country",
+    input_type: "text",
+    label_text: "Country",
+    placeholder: "Country",
+    value: "USA",
+    required: true,
+    disabled: false,
+    has_error: false,
+    has_placeholder: false,
+    hide_label: true
+  } %>
+
   <h3 class="t-sage-heading-6">Text (disabled)</h3>
   <%= sage_component SageFormInput, {
     id: "form__apt",

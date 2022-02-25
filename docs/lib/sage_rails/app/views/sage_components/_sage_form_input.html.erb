@@ -14,7 +14,7 @@
   <% end %>
   <%= component.generated_html_attributes.html_safe -%>
 >
-  <label for="<%= component.id %>" class="sage-input__label">
+  <label for="<%= component.id %>" class="sage-input__label <%= "visually-hidden" if component.hide_label %>">
     <%= component.label_text %>
   </label>
   <div class="sage-input__field-wrapper">
