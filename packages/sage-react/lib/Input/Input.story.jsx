@@ -15,6 +15,7 @@ export default {
     }),
   },
   args: {
+    id: 'input',
     disabled: false,
     label: 'First name',
     readonly: false

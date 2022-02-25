@@ -67,6 +67,13 @@ export const Input = ({
     }
   };
 
+  const setPlaceholder = () => {
+    if(placeholder) {
+      return;
+    }
+    return label;
+  };
+
   useEffect(() => {
     const newInputStyles = {
       ...inputStyles,
@@ -107,7 +114,7 @@ export const Input = ({
         name={name}
         onChange={handleChange}
         pattern={pattern}
-        placeholder={placeholder}
+        placeholder={setPlaceholder()}
         readOnly={readonly}
         required={required}
         step={step}
