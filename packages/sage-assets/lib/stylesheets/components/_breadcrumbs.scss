@@ -78,7 +78,7 @@ $-breadcrumb-outline-color: sage-color(grey, 400);
 
   .sage-breadcrumbs:not(.sage-breadcrumbs--progressbar) & {
     background: transparent;
-    border-radius: rem(6px); // verify w/ design (is this new)
+    border-radius: rem(6px);
     @include sage-focus-outline(
       $outline-width: 4px,
       $outline-offset-block: -1,
