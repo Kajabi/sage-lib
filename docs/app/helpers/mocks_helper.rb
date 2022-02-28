@@ -92,6 +92,14 @@ module MocksHelper
         no_rails_js: true,
         status: DOING,
         team: "Commerce",
+      },
+      {
+        alias: "get_started",
+        jira_epic: "SAGE-296",
+        name: "Get Started",
+        no_rails_js: true,
+        status: DOING,
+        team: "Growth",
       }
     ]
   end
