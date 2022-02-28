@@ -1,0 +1,64 @@
+<% tabs = get_started_dashboard_module_data %>
+<%= sage_component SageContainer, { size: "lg" } do %>
+  <%= sage_component SagePanel, {} do %>
+    <%= sage_component SagePanelStack, {} do %>
+      <h4 class="<%= SageClassnames::TYPE::HEADING_5 %>">
+        Let’s get started
+      </h4>
+      <p class="<%= "#{SageClassnames::TYPE::BODY} #{SageClassnames::TYPE_COLORS::CHARCOAL_100}" %>">
+        Building your business begins with these four simple steps
+      </p>
+    <% end %>
+
+    <%= sage_component SagePanelDivider, { bleed: true } %>
+
+    <div class="<%= SageClassnames::GRID_PANEL %>">
+      <%= sage_component SageTabs, {
+        id: "example-tabs3",
+        stacked: true,
+        items: tabs.map do | tab |
+          {
+            text: tab[:label],
+            target: tab[:id],
+            type: "icon",
+            icon: tab[:icon],
+          }
+        end,
+        style: "choice"
+      } %>
+
+      <hr class="sage-tabs-divider" />
+
+      <%# TODO: Need side-by-side tab variation %>
+      <% tabs.each do | tab | %>
+        <%= sage_component SageTabsPane, { id: tab[:id] } do %>
+          <div class="<%= SageClassnames::GRID_PANEL %>">
+            <%= tab[:graphic] %>
+            <%= sage_component SagePanelStack, {} do %>
+              <h5 class="<%= "#{SageClassnames::TYPE::HEADING_5}" %>">
+                <%= tab[:title] %>
+              </h5>
+              <p class="<%= "#{SageClassnames::TYPE::BODY} #{SageClassnames::TYPE_COLORS::CHARCOAL_100}" %>">
+                <%= tab[:description] %>
+              </p>
+            <% end %>
+            <%= sage_component SageButtonGroup, { gap: :sm } do %>
+              <%= sage_component SageButton, {
+                value: tab[:cta][:label],
+                style: "primary",
+                attributes: { href: tab[:cta][:url], }
+              } %>
+              <%= sage_component SageButton, {
+                value: "Learn more",
+                style: "primary",
+                subtle: true,
+                icon: { name: "launch", style: "right" },
+                attributes: { href: tab[:cta][:learn_more_url] },
+              } %>
+            <% end %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  <% end %>
+<% end %>
