@@ -68,8 +68,8 @@ export const Input = ({
   };
 
   const setPlaceholder = () => {
-    if(placeholder) {
-      return;
+    if (placeholder) {
+      return placeholder;
     }
     return label;
   };

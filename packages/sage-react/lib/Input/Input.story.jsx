@@ -139,7 +139,7 @@ export const InputErrorWithStaticIcon = Template.bind({});
 InputErrorWithStaticIcon.args = {
   icon: SageTokens.ICONS.INFO_CIRCLE,
   hasError: true,
-  value: "Test",
+  value: 'Test',
 };
 
 export const InputWithPopover = (args) => {
