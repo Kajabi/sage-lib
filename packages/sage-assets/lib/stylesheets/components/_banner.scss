@@ -113,6 +113,8 @@ $-banner-el-icon: "before";
 .sage-banner__close,
 .sage-banner__link {
   &.sage-btn--subtle {
+    @include sage-focus-outline--update-color(map-get(map-get($-banner-colors, default), text));
+
     &:hover {
       color: map-get(map-get($-banner-colors, default), text-hover);
     }
@@ -120,7 +122,7 @@ $-banner-el-icon: "before";
     @each $name, $configs in $-banner-colors {
       /* stylelint-disable max-nesting-depth */
       .sage-banner.sage-banner--#{$name} & {
-        @include sage-focus-ring(map-get($configs, text));
+        @include sage-focus-outline--update-color(map-get($configs, text));
 
         &:hover {
           color: map-get($configs, text-hover);
