@@ -8,7 +8,7 @@ $-select-border-box-shadow-size: map-get($sage-field-configs, box-shadow-size);
 $-select-color-border: sage-color(grey, 300);
 $-select-color-border-hover: sage-color(primary, 500);
 $-select-color-border-selected: sage-color(grey, 400);
-$-select-color-default: sage-color(grey, 700);
+$-select-color-default: sage-color(grey, 800);
 $-select-color-error: sage-color(red, 500);
 $-select-color-label-background: sage-color(white);
 $-select-color-success: sage-color(primary);
@@ -30,11 +30,12 @@ $-select-margin-label: rem(6px);
 
 .sage-select__arrow::before {
   @include sage-icon-base(down-small);
-  @include position(31%, sage-spacing(sm), unset, unset);
+  @include position(45%, sage-spacing(sm), unset, unset);
 
   position: absolute;
   align-items: center;
   height: $-select-height;
+  font-size: rem(24px);
   color: sage-color(grey, 500);
   transition: 0.2s color ease;
 }
@@ -61,17 +62,7 @@ $-select-margin-label: rem(6px);
     color: $-select-color-default;
   }
 
-  .sage-select--value-selected &:disabled {
-    ~ .sage-select__label {
-      background-image: linear-gradient(
-        to bottom,
-        sage-color(white) 0% 55%,
-        sage-color(grey, 200) 55% 100%,
-      );
-    }
-  }
-
-  .sage-select--error & {
+  .sage-form-field--error & {
     border-color: $-select-color-error;
     box-shadow: $-select-border-box-shadow-size $-select-color-error;
   }
@@ -79,7 +70,7 @@ $-select-margin-label: rem(6px);
   &:hover:not(:disabled) {
     border-color: $-select-color-border-hover;
 
-    .sage-select--error & {
+    .sage-form-field--error & {
       border-color: $-select-color-error;
     }
   }
@@ -89,33 +80,32 @@ $-select-margin-label: rem(6px);
     border-color: $-select-color-success;
     box-shadow: $-select-border-box-shadow-size $-select-color-success;
 
-    .sage-select--error & {
+    .sage-form-field--error & {
       border-color: $-select-color-error;
       box-shadow: $-select-border-box-shadow-size $-select-color-error;
     }
   }
 
   &:disabled {
-    color: sage-color(grey, 500);
-    background-color: sage-color(grey, 200);
-
-    ~ .sage-select__label {
-      color: sage-color(grey, 500);
-      background-color: sage-color(grey, 200);
-    }
+    color: sage-color(grey, 600);
+    background-color: sage-color(grey, 50);
 
     ~ .sage-select__arrow::before {
-      color: sage-color(grey, 500);
+      color: sage-color(grey, 600);
     }
 
     @include placeholder {
-      color: sage-color(grey, 500);
+      color: sage-color(grey, 600);
     }
   }
 }
 
 .sage-select__message {
   @include sage-form-field-message;
+
+  + .sage-select__arrow::before {
+    @include position(31%, sage-spacing(sm), unset, unset);
+  }
 }
 
 // Shim for handling Select Labels within Simpleform markup
