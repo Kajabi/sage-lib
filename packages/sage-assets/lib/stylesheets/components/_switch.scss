@@ -6,13 +6,13 @@
 
 
 // Colors
-$-switch-color-default: sage-color(grey, 400);
+$-switch-color-default: sage-color(grey, 300);
 $-switch-color-default-text: sage-color(grey, 700);
 $-switch-color-checked: sage-color(primary, 600);
 $-switch-color-checked-hover: sage-color(primary, 700);
 $-switch-color-disabled: sage-color(grey, 200);
-$-switch-color-disabled-text: sage-color(grey, 400);
-$-switch-color-disabled-checked: sage-color(primary, 300);
+$-switch-color-disabled-text: sage-color(grey, 700);
+$-switch-color-disabled-checked: sage-color(primary, 50);
 $-switch-color-disabled-checked-text: sage-color(grey, 500);
 
 // Switch
@@ -24,10 +24,6 @@ $-switch-width: rem(36px);
 // Toggle
 $-switch-toggle-size: rem(16px);
 
-// Focus state
-$-switch-focus-outline-spacing: sage-spacing(2xs);
-$-switch-focus-outline-width: 4;
-$-switch-focus-outline-color: sage-color(primary, 300);
 $-switch-focus-outline-error-color: sage-color(red, 300);
 
 
@@ -79,6 +75,7 @@ $-switch-focus-outline-error-color: sage-color(red, 300);
 
 .sage-switch__input {
   @include sage-form-toggle-input;
+  @include sage-focus-ring;
 
   z-index: sage-z-index(default, 1);
   transform: translateY(2px);
@@ -88,7 +85,6 @@ $-switch-focus-outline-error-color: sage-color(red, 300);
   background: $-switch-color-default;
   border: 0;
   border-radius: $-switch-border-radius;
-  outline: none !important; /* stylelint-disable-line declaration-no-important */
   transition: background 0.3s ease-out;
 
   .sage-switch--has-border & {
@@ -118,24 +114,12 @@ $-switch-focus-outline-error-color: sage-color(red, 300);
     }
   }
 
-  &::before,
   &::after {
     content: "";
     display: block;
     position: absolute;
     left: 50%;
     top: 50%;
-  }
-
-  &::before { // switch background
-    transform: translate3d(-50%, -50%, 0) scale(0.94);
-    width: calc(100% + (#{$-switch-focus-outline-spacing}));
-    height: calc(100% + (#{$-switch-focus-outline-spacing}));
-    border: ($-switch-focus-outline-width * 1px) solid $-switch-focus-outline-color;
-    border-radius: $-switch-border-radius;
-    transition: opacity 0.15s ease-out 0.05s, transform 0.2s ease-in-out;
-    pointer-events: none;
-    opacity: 0;
   }
 
   &::after {  // switch toggle
@@ -150,6 +134,8 @@ $-switch-focus-outline-error-color: sage-color(red, 300);
 
   .sage-switch--error &,
   &:invalid {
+    @include sage-focus-ring(sage-color(red, 300));
+
     background-color: sage-color(red, 500);
     ~ .sage-switch__label,
     ~ .sage-switch__message {
@@ -160,9 +146,6 @@ $-switch-focus-outline-error-color: sage-color(red, 300);
     }
     &:checked:hover {
       background-color: sage-color(red, 500);
-    }
-    &::before {
-      border-color: sage-color(red, 500);
     }
   }
 
@@ -205,14 +188,6 @@ $-switch-focus-outline-error-color: sage-color(red, 300);
     &:checked ~ .sage-switch__label,
     &:checked ~ .sage-switch__message {
       color: $-switch-color-disabled-checked-text;
-    }
-  }
-
-  &:focus:not(:disabled),
-  &:active:not(:disabled) {
-    &::before {
-      transform: translate3d(-50%, -50%, 0);
-      opacity: 1;
     }
   }
 }

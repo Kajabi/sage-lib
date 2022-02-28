@@ -540,7 +540,7 @@
 }
 
 @mixin sage-form-toggle-label() {
-  @extend %t-sage-body-semi;
+  @extend %t-sage-body-med;
 
   display: inline-block;
   flex: 1;
