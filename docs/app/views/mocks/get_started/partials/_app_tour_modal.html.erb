@@ -1,0 +1,63 @@
+
+    <%# TODO: Need to add ability to suppress background screen (make it transparent) %>
+<%= sage_component SageModalContent, { spacing: "card" } do %>
+  <%#
+    TODO: Need align setting on card row to let content go to the right
+    without needing this empty element
+  %>
+  <%= sage_component SageCardRow, {} do %>
+    <p>&nbsp;</p>
+    <%#
+      TODO: Need to build dismiss into Modal for easier implementation
+      esp in cases like this where there is a "non-traditional" header
+    %>
+    <%= sage_component SageButton, {
+      style: "secondary",
+      subtle: true,
+      value: "Close Modal",
+      icon: { name: "remove", style: "only" },
+      attributes: { "data-js-modal": true }
+    } %>
+  <% end %>
+
+  <%= sage_component SageCardStack, {} do %>
+    <h4 class="<%= SageClassnames::TYPE::HEADING_4 %>">
+      <%= props[:title] %>
+    </h4>
+    <% props[:description].each do | text | %>
+      <p class="<%= SageClassnames::TYPE::BODY %>">
+        <%= text %>
+      </p>
+    <% end %>
+    <% props[:instructions].each do | text | %>
+      <p class="<%= SageClassnames::TYPE::BODY_MED %>">
+        <i>
+          <%= text %>
+        </i>
+      </p>
+    <% end %>
+  <% end %>
+
+  <%= sage_component SageCardRow, {} do %>
+    <%= sage_component SageButton, {
+      style: "secondary",
+      raised: false,
+      value: "Back",
+      # TODO: Dev to add click action
+    } %>
+
+    <p class="<%= "#{SageClassnames::TYPE::BODY} #{SageClassnames::TYPE_COLORS::CHARCOAL_100}" %>">
+      1/4
+    </p>
+
+    <%= sage_component SageButton, {
+      style: "primary",
+      value: "Next",
+      # TODO: Dev to add click action
+    } %>
+  <% end %>
+<% end %>
+<%#
+  TODO: Need to consider how to provide indicator/pointer styles within Modal
+  so as to lay behind the content but on top of the page
+%>

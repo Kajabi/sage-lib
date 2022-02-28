@@ -1,0 +1,17 @@
+<%= sage_component SageButton, {
+  value: "Launch",
+  style: "primary",
+  attributes: {
+    "data-js-modaltrigger": "get-started-tour-demo"
+  }
+} %>
+
+<%= sage_component SageModal, { id: "get-started-tour-demo" } do %>
+  <%= render "mocks/get_started/partials/app_tour_modal", props: {
+    title: "💡 Title goes here",
+    description: ["General description of feature."],
+    instructions: ["Simple instructions for a task the user could complete to learn how it works."],
+    step_num: 1,
+    total_steps: 4,
+  } %>
+<% end %>
