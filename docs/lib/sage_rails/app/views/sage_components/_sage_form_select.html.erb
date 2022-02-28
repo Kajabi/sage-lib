@@ -23,5 +23,7 @@
       <option value="<%= option[:value] %>"><%= option[:text] %></option>
     <% end %>
   </select>
-  <div class="sage-select__message"><%= component.message %></div>
+  <% if component.message.present? %>
+    <div class="sage-select__message"><%= component.message %></div>
+  <% end %>
 </div>
