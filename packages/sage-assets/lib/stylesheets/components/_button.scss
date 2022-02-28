@@ -13,9 +13,9 @@ $-btn-transition: map-get($sage-transitions, default);
 $-btn-border-radius: sage-border(radius);
 $-btn-shadow-base: sage-shadow(sm);
 $-btn-icon-only-standard-size: rem(40px);
-$-btn-icon-only-subtle-size: rem(32px);
-$-btn-icon-only-hover-size: rem(26px);
-$-btn-icon-only-focus-size: rem(28px);
+$-btn-icon-only-subtle-size: rem(16px);
+$-btn-icon-only-hover-size: rem(24px);
+$-btn-icon-only-focus-size: rem(32px);
 
 $-btn-base-styles: (
   primary: (
@@ -100,7 +100,7 @@ $-btn-subtle-secondary-neutral-default: sage-color(grey, 600);
 $-btn-subtle-secondary-neutral-hover: sage-color(grey, 600);
 $-btn-subtle-secondary-neutral-hover-background: sage-color(grey, 200);
 $-btn-subtle-secondary-neutral-focus: sage-color(grey, 600);
-$-btn-subtle-secondary-neutral-focus-outline: sage-color(grey, 700);
+$-btn-subtle-secondary-neutral-focus-outline: sage-color(grey, 400);
 $-btn-subtle-secondary-neutral-disabled: sage-color(grey, 500);
 
 $-btn-subtle-styles: (
@@ -109,7 +109,7 @@ $-btn-subtle-styles: (
     hover: sage-color(primary, 600),
     hover-background: sage-color(primary, 200),
     focus: sage-color(primary, 600),
-    focus-outline: sage-color(primary, 700),
+    focus-outline: sage-color(primary, 300),
     disabled: sage-color(primary, 300),
   ),
   secondary: (
@@ -363,6 +363,10 @@ $-btn-loading-min-height: rem(36px);
     }
   }
 
+  &:not([class*="icon-only"]) {
+    line-height: rem(20px); /* used this value to align to the spec */
+  }
+
   // NOTE: Icon generation consolidated in `core/_icons.scss`
 }
 
@@ -511,13 +515,34 @@ $-alert-colors: (
 }
 
 .sage-btn--subtle {
+  @include sage-focus-outline;
+  @include sage-focus-outline($outline-offset-inline: 6px, $outline-offset-block: -1px);
+
+  padding: 0;
   box-shadow: none;
+  border-radius: sage-border(radius);
 
   &[class*="icon-only"] {
     width: $-btn-icon-only-subtle-size;
     height: $-btn-icon-only-subtle-size;
     padding: 0;
     border-radius: sage-border(radius-round);
+
+    &::after {
+      width: $-btn-icon-only-hover-size;
+      height: $-btn-icon-only-hover-size;
+      border-radius: sage-border(radius-round);
+    }
+
+    &:hover::after {
+      border-color: transparent;
+      opacity: 1;
+    }
+
+    &:focus::after {
+      width: $-btn-icon-only-focus-size;
+      height: $-btn-icon-only-focus-size;
+    }
   }
 
   // Generate button style variations
@@ -526,12 +551,33 @@ $-alert-colors: (
       color: map-get($-styles, default);
       background-color: transparent;
 
+      &::after {
+        border-color: transparent;
+      }
+
       &:not(:focus):hover {
         color: map-get($-styles, hover);
         background-color: map-get($-styles, hover-background);
 
+        &::after {
+          z-index: 0;
+          background-color: map-get($-styles, hover-background);
+          opacity: 1;
+        }
+
+        &::before,
         span {
           z-index: 1;
+        }
+      }
+
+      &:focus,
+      &:active {
+        color: map-get($-styles, focus);
+        background-color: transparent;
+
+        &::after {
+          border-color: map-get($-styles, focus-outline);
         }
       }
 
@@ -542,8 +588,13 @@ $-alert-colors: (
       }
 
       &[class*="icon-only"] {
+        &:focus::after {
+          border-color: map-get($-styles, focus-outline);
+        }
+
         .sage-label & {
-          @include sage-focus-ring(map-get($-styles, default));
+          @include sage-focus-outline($outline-offset-inline: -2px, $outline-offset-block: -2px);
+          @include sage-focus-outline--update-color(map-get($-styles, default));
 
           position: absolute; /* this keeps the button inside a label within the visual bounds of the label component */
           width: $-btn-icon-only-standard-size;
@@ -557,6 +608,8 @@ $-alert-colors: (
   }
 
   .sage-assistant & {
+    @include sage-focus-outline--update-color(sage-color(white));
+
     color: sage-color(grey, 100);
 
     &:hover {
