@@ -105,6 +105,7 @@ $-switch-focus-outline-error-color: sage-color(red, 300);
     }
 
     .sage-switch--has-border & {
+      margin-left: ($-switch-width + $-switch-label-left-spacing);
       color: sage-color(grey, 800);
       font-weight: sage-font-weight(semibold);
     }
