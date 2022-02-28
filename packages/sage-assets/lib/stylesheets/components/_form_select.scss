@@ -109,7 +109,7 @@ $-select-margin-label: rem(6px);
     @include position(31%, sage-spacing(sm), unset, unset);
   }
 
-  .sage-select--value-selected & + .sage-select__arrow::before{
+  .sage-select--value-selected & + .sage-select__arrow::before {
     @include sage-icon-base(up-small);
     @include position(41%, sage-spacing(sm), unset, unset);
     font-size: rem(24px);
