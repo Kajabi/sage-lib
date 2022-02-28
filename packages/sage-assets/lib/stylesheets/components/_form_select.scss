@@ -38,6 +38,8 @@ $-select-margin-label: rem(6px);
   font-size: rem(24px);
   color: sage-color(grey, 500);
   transition: 0.2s color ease;
+
+  
 }
 
 .sage-select__field {
@@ -105,6 +107,12 @@ $-select-margin-label: rem(6px);
 
   + .sage-select__arrow::before {
     @include position(31%, sage-spacing(sm), unset, unset);
+  }
+
+  .sage-select--value-selected & + .sage-select__arrow::before{
+    @include sage-icon-base(up-small);
+    @include position(41%, sage-spacing(sm), unset, unset);
+    font-size: rem(24px);
   }
 }
 
