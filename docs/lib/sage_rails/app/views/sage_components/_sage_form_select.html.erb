@@ -1,8 +1,8 @@
 <% 
   # Temporary variables here until refactor for 'name' is complete
   label = component.label || component.name;
-  selectID = component.id.downcase.dasherize if component.id;
-  selectName = label.downcase.dasherize;
+  select_id = component.id.downcase.dasherize if component.id;
+  select_name = label.downcase.dasherize;
 %>
 
 <div class="
@@ -12,11 +12,11 @@
   data-js-select="true"
   <%= component.generated_html_attributes.html_safe %>
 >
-  <label class="sage-select__label" for="<%= selectName %>"><%= label %></label>
+  <label class="sage-select__label" for="<%= select_name %>"><%= label %></label>
   <select
     class="sage-select__field"
-    name="<%= selectID %>"
-    id="<%= selectID %>"
+    name="<%= select_id %>"
+    id="<%= select_id %>"
     <%= "disabled" if component.disabled %>
   >
     <% component.select_options.each do |option| %>
