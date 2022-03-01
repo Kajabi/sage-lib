@@ -11,10 +11,6 @@
         text: "Sidebar module",
         target: "feature-2",
       },
-      {
-        text: "App tour modal",
-        target: "feature-3",
-      },
     ]
   } %>
   <%= sage_component SageTabsPane, { id: "feature-1" } do %>
@@ -22,8 +18,5 @@
   <% end %>
   <%= sage_component SageTabsPane, { id: "feature-2" } do %>
     <%= render "mocks/get_started/sidebar_module" %>
-  <% end %>
-  <%= sage_component SageTabsPane, { id: "feature-3" } do %>
-    <%= render "mocks/get_started/app_tour_module" %>
   <% end %>
 </div>
