@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.47.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.46.1...@kajabi/sage@4.47.0) (2022-03-01)
+
+
+### Features
+
+* **mocks:** add get started dashboard mock in Rails ([62a27b4](https://github.com/Kajabi/sage-lib/commit/62a27b49a67a95fc90b9fbf7190d1e40c0677e69))
+* **mocks:** add get started mock entry ([4131ddd](https://github.com/Kajabi/sage-lib/commit/4131ddd3d16cbf85e85152fa5098a4f2865fbc19))
+* **mocks:** add get started sidebar module in Rails ([3f4a595](https://github.com/Kajabi/sage-lib/commit/3f4a5953719eb773fd06ff12c1e566512a2ab8fd))
+* **mocks:** add stub for feature tour modal ([60a498c](https://github.com/Kajabi/sage-lib/commit/60a498c1b929107f964bf630625840f58d5e21f8))
+* **mocks:** remove unneeded app tour mock ([026d681](https://github.com/Kajabi/sage-lib/commit/026d681a010f0ecfd5c63a7bf6a9d16085c1ac53))
+
+
+
+
+
 ## [4.46.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.46.0...@kajabi/sage@4.46.1) (2022-02-25)
 
 

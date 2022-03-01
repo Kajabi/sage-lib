@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.81.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.80.0...@kajabi/sage-react@0.81.0) (2022-03-01)
+
+
+### Features
+
+* **mocks:** add get started modules in React ([d73f413](https://github.com/Kajabi/sage-lib/commit/d73f413ddeaed88740c99884b8de7eabe0103ad3))
+
+
+
+
+
 # [0.80.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.79.1...@kajabi/sage-react@0.80.0) (2022-02-24)
 
 
