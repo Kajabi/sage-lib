@@ -1,0 +1,34 @@
+<%= sage_component SageCard, {
+  # TODO: replace with SageFrame component when launched, which will allow for background customizations
+} do %>
+  <%= sage_component SageCardBlock, {} do %>
+    <%# TODO: determine need for box shadow on white? 
+      #{SageClassnames::TYPE_COLORS::WHITE}
+      https://kajabi.atlassian.net/browse/SAGE-307
+    %>
+    <p class="<%= SageClassnames::TYPE::BODY_XSMALL %>"> 
+      Get started
+    </p>
+
+    <%#
+      TODO: Need inverted button color option
+      https://kajabi.atlassian.net/browse/SAGE-308
+    %>
+    <%= sage_component SageButton, {
+      value: "Create product",
+      style: "secondary",
+      subtle: true,
+      icon: { name: "arrow-right", style: "right" }
+    } %>
+
+    <%#
+      TODO: Need bar variation for Indicator
+      https://kajabi.atlassian.net/browse/SAGE-309
+    %>
+    <%= sage_component SageIndicator, {
+      current_item: 0,
+      num_items: 4,
+      spacer: { top: "xs" }
+    } %>
+  <% end %>
+<% end %>
