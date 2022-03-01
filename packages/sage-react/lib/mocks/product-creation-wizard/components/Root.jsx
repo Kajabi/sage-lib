@@ -7,15 +7,19 @@ import {
   SageTokens,
 } from '../../..';
 import {
-  Main,
+  CoachingAppearance,
+  CoachingBooking,
+  CoachingDetails,
+  CoachingPricing,
   CourseAppearance,
   CourseDetails,
   CoursePricing,
+  Main,
 } from './panels';
 
 export const Root = () => {
   const initialModalTitle = "New Product";
-  const initialStep = 'course-3';
+  const initialStep = 'coaching-3';
   const [modalActive, setModalActive] = React.useState(true);
   const [progress, setProgress] = React.useState(0);
   const [modalTitle, setModalTitle] = React.useState(initialModalTitle);
@@ -49,9 +53,21 @@ export const Root = () => {
       break; 
       case 'course-2':
         stepComponent = <CourseAppearance onChangeStep={handleChangeStep} />;
-      break; 
+      break;
       case 'course-3':
         stepComponent = <CoursePricing onChangeStep={handleChangeStep} />;
+      break;
+      case 'coaching-1':
+        stepComponent = <CoachingDetails onChangeStep={handleChangeStep} />;
+      break;
+      case 'coaching-2':
+        stepComponent = <CoachingBooking onChangeStep={handleChangeStep} />;
+      break;
+      case 'coaching-3':
+        stepComponent = <CoachingAppearance onChangeStep={handleChangeStep} />;
+      break;
+      case 'coaching-4':
+        stepComponent = <CoachingPricing onChangeStep={handleChangeStep} />;
       break;
     }
 

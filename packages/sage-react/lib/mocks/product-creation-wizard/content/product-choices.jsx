@@ -30,38 +30,67 @@ export const productChoices = [
 
 export const productChoiceDetails = {
   coaching: {
-    title: 'Coaching',
+    title: 'Coaching program',
     body: `
-      TBD  
+      Share your knowledge to help others achieve their goals.
+      Book one-on-one sessions with clients, track their progress, and more.  
     `,
     leftFeatures: [
       {
+        icon: SageTokens.ICONS.SCREEN_SHARE_ON,
+        label: 'Live video conferencing'
+      },
+      {
+        icon: SageTokens.ICONS.CALENDAR_DATE,
+        label: 'Calendar integrations'
+      },
+      {
         icon: SageTokens.ICONS.VIDEO_ON,
-        label: 'TBD'
+        label: 'Video content'
+      },
+      {
+        icon: SageTokens.ICONS.MICROPHONE,
+        label: 'Audio content'
       },
     ],
     rightFeatures: [
       {
-        icon: SageTokens.ICONS.VIDEO_ON,
-        label: 'TBD'
+        icon: SageTokens.ICONS.DOWNLOAD,
+        label: 'Exclusive downloads'
+      },
+      {
+        icon: SageTokens.ICONS.FILE,
+        label: 'Shared notes'
       },
     ]
   },
   community: {
     title: 'Community',
     body: `
-      TBD  
+      Build an online space for your audience to share common interests and interact with each other.  
     `,
     leftFeatures: [
       {
-        icon: SageTokens.ICONS.VIDEO_ON,
-        label: 'TBD'
+        icon: SageTokens.ICONS.COMMENT,
+        label: 'Discussion topics'
+      },
+      {
+        icon: SageTokens.ICONS.URL,
+        label: 'Links and resources'
+      },
+      {
+        icon: SageTokens.ICONS.USERS,
+        label: 'Membership area'
+      },
+      {
+        icon: SageTokens.ICONS.BELL,
+        label: 'Member activity notifications'
       },
     ],
     rightFeatures: [
       {
-        icon: SageTokens.ICONS.VIDEO_ON,
-        label: 'TBD'
+        icon: SageTokens.ICONS.ROUND_DOLLAR,
+        label: 'Paid access'
       },
     ]
   },
@@ -103,18 +132,35 @@ export const productChoiceDetails = {
   podcast: {
     title: 'Podcast',
     body: `
-      TBD  
+      Create and publish episodes, distribute to all major listening apps,
+      and monetize your podcast — all from your dashboard.  
     `,
     leftFeatures: [
       {
-        icon: SageTokens.ICONS.VIDEO_ON,
-        label: 'TBD'
+        icon: SageTokens.ICONS.UPLOAD,
+        label: 'Import podcasts'
+      },
+      {
+        icon: SageTokens.ICONS.MICROPHONE,
+        label: 'Audio content'
+      },
+      {
+        icon: SageTokens.ICONS.WORLD,
+        label: 'Podcast distribution'
+      },
+      {
+        icon: SageTokens.ICONS.HOME,
+        label: 'Podcast homepage'
       },
     ],
     rightFeatures: [
       {
-        icon: SageTokens.ICONS.VIDEO_ON,
-        label: 'TBD'
+        icon: SageTokens.ICONS.CHART,
+        label: 'Analytics'
+      },
+      {
+        icon: SageTokens.ICONS.ROUND_DOLLAR,
+        label: 'Paid feeds'
       },
     ]
   },

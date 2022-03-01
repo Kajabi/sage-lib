@@ -7,7 +7,7 @@ import {
   SageTokens,
 } from '../../../../..';
  
-export const CourseAppearance = ({ onChangeStep }) => {
+export const CoachingAppearance = ({ onChangeStep }) => {
 
   return (
     <div className={SageClassnames.PANEL_GRID}>
@@ -23,7 +23,12 @@ export const CourseAppearance = ({ onChangeStep }) => {
       
       <ProductColorPickerCard
         title="Primary color"
-        subtext="Applies to the audio player and page buttons."
+        subtext="Applies to the buttons and icons."
+      />
+      
+      <ProductColorPickerCard
+        title="Secondary color"
+        subtext="Applies to the hero section background."
       />
       
       [image upload]
@@ -33,14 +38,14 @@ export const CourseAppearance = ({ onChangeStep }) => {
         <Button
           color={Button.COLORS.SECONDARY}
           raised={false}
-          onClick={() => onChangeStep('course-1')}
+          onClick={() => onChangeStep('coaching-2')}
         >
           Go back
         </Button>
         <Button
           color={Button.COLORS.PRIMARY}
           fullWidth={true}
-          onClick={() => onChangeStep('course-3')}
+          onClick={() => onChangeStep('coaching-4')}
         >
           Continue
         </Button>

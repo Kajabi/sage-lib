@@ -8,7 +8,7 @@ import { productChoices, productChoiceDetails } from '../../content';
 import { ProductChoice, ProductChoiceDetails } from '..';
  
 export const Main = ({ onClickStart }) => {
-  const [selectedProduct, setSelectedProduct] = React.useState('course');
+  const [selectedProduct, setSelectedProduct] = React.useState('coaching');
 
   const handleClickStart = () => {
     return onClickStart(productChoices.find(choice => choice.alias === selectedProduct));

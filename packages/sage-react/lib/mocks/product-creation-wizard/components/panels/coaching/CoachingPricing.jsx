@@ -1,5 +1,4 @@
 import React from 'react';
-import { PaidPricingOptions } from '../..';
 import {
   Button,
   Card,
@@ -7,16 +6,17 @@ import {
   SageTokens,
   Tabs,
 } from '../../../../..';
+import { PaidPricingOptions  } from '../../';
  
-export const CoursePricing = ({ onChangeStep }) => {
+export const CoachingPricing = ({ onChangeStep }) => {
   return (
     <div className={SageClassnames.PANEL_GRID}>
       <Card.Stack>
         <h5 className={`${SageClassnames.TYPE.HEADING_5}`}>
-          Price your course
+          Price your program
         </h5>
         <p className={`${SageClassnames.TYPE.BODY_SMALL} ${SageClassnames.TYPE_COLORS.CHARCOAL_100}`}>
-          Choose whether this course is paid or free.
+          Choose whether this coaching program is paid or free.
           If it's paid, set its price and payment preferences.
         </p>
       </Card.Stack>
@@ -46,21 +46,19 @@ export const CoursePricing = ({ onChangeStep }) => {
           }
         ]}
       />
-
-      {/* TODO: Add tabs, pricing dropdown, and other options */}
        
       <Button.Group gap={Button.Group.GAP_OPTIONS.MD}>
         <Button
           color={Button.COLORS.SECONDARY}
           raised={false}
-          onClick={() => onChangeStep('course-2')}
+          onClick={() => onChangeStep('coaching-3')}
         >
           Go back
         </Button>
         <Button
           color={Button.COLORS.PRIMARY}
           fullWidth={true}
-          onClick={() => onChangeStep('course-fin')}
+          onClick={() => onChangeStep('coaching-fin')}
         >
           Finish
         </Button>
