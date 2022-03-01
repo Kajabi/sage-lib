@@ -6,7 +6,7 @@
 
 
 // Colors
-$-tooltip-bg-color: sage-color(grey, 900);
+$-tooltip-bg-color: sage-color(grey, 800);
 $-tooltip-light-bg-color: $-tooltip-bg-color;
 $-tooltip-font-color: sage-color(white);
 $-tooltip-light-font-color: $-tooltip-font-color;
@@ -18,7 +18,7 @@ $-tooltip-arrow-active: $-tooltip-arrow-size solid $-tooltip-bg-color;
 
 // Styling
 $-tooltip-shadow: sage-shadow(lg);
-$-tooltip-padding: rem(6px) sage-spacing(xs);
+$-tooltip-padding: rem(12px);
 $-tooltip-small-padding: sage-spacing(2xs) sage-spacing(xs);
 $-tooltip-large-padding: sage-spacing(xs) sage-spacing(xs);
 $-tooltip-zindex: sage-z_index(modal, 10);
@@ -39,7 +39,7 @@ $-tooltip-large-maxwidth: rem(320px);
   background-color: $-tooltip-bg-color;
   box-shadow: $-tooltip-shadow;
 
-  @extend %t-sage-body-xsmall;
+  @extend %t-sage-body-small-med;
 
   &::after {
     content: "";
@@ -114,12 +114,12 @@ $-tooltip-large-maxwidth: rem(320px);
 }
 
 .sage-tooltip--small {
-  padding: $-tooltip-small-padding;
+  padding: $-tooltip-padding;
 
   @extend %t-sage-body-xsmall-semi;
 }
 
 .sage-tooltip--large {
   max-width: $-tooltip-large-maxwidth;
-  padding: $-tooltip-large-padding;
+  padding: $-tooltip-padding;
 }
