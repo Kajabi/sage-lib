@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   Card,
   SageClassnames,
@@ -6,10 +7,8 @@ import {
 } from '../../..';
 
 export const ProductColorPickerCard = ({
-  title,
   subtext,
-  color,
-  onChangeColor,
+  title,
 }) => (
   <Card>
     <Card.Row gridTemplate={SageTokens.GRID_TEMPLATES.TE}>
@@ -21,7 +20,20 @@ export const ProductColorPickerCard = ({
           {subtext}
         </p>
       </Card.Stack>
-      {/* TODO: Color picker goes here and sync changes with SVG graphic through `onChangeColor` */}
+      {/*
+        TODO: Dev to put color picker here and sync changes
+        with SVG graphic through `onChangeColor`
+      */}
     </Card.Row>
   </Card>
 );
+
+ProductColorPickerCard.defaultProps = {
+  subtext: '',
+  title: '',
+};
+
+ProductColorPickerCard.propTypes = {
+  subtext: PropTypes.string,
+  title: PropTypes.string,
+};

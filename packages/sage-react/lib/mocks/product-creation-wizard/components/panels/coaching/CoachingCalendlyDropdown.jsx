@@ -10,7 +10,11 @@ import {
   SageClassnames
 } from '../../../../..';
 
-const CoachingCalendlyDropdownCard = ({ label, subtext, color }) => (
+const CoachingCalendlyDropdownCard = ({
+  color,
+  label,
+  subtext,
+}) => (
   <Card.Row verticalAlign="start" gridTemplate={SageTokens.GRID_TEMPLATES.ET}>
     <Card.Block>
       <h4 className={`${SageClassnames.TYPE.BODY_MED} t-sage--truncate`}>
@@ -28,15 +32,15 @@ const CoachingCalendlyDropdownCard = ({ label, subtext, color }) => (
 );
 
 CoachingCalendlyDropdownCard.defaultProps = {
+  color: Icon.CARD_COLORS.DRAFT,
   label: 'Default label',
   subtext: 'Default subtext',
-  color: Icon.CARD_COLORS.DRAFT,
 };
 
 CoachingCalendlyDropdownCard.propTypes = {
+  color: Icon.propTypes.cardColor,
   label: PropTypes.string,
   subtext: PropTypes.string,
-  color: Icon.propTypes.cardColor,
 };
 
 export const CoachingCalendlyDropdown = ({
@@ -87,4 +91,19 @@ export const CoachingCalendlyDropdown = ({
       />
     </Dropdown>
   );
+};
+
+CoachingCalendlyDropdown.defaultProps = {
+  initialLabel: '',
+  items: [],
+  onSelectItem: (data) => null,
+};
+
+CoachingCalendlyDropdown.propTypes = {
+  initialLabel: PropTypes.string,
+  items: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string,
+    label: PropTypes.string,
+  })),
+  onSelectItem: PropTypes.func,
 };

@@ -1,22 +1,21 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
-  Alert,
+  // Alert,
   Button,
   Dot,
   Icon,
   Input,
-  Link,
   Panel,
   SageClassnames,
   Tabs,
 } from '../../../../..';
 import { CoachingCalendlyDropdown } from './CoachingCalendlyDropdown';
- 
+
 export const CoachingBooking = ({ onChangeStep }) => {
   // TODO: Add state/story management for input data to persist
   // TODO: Use field state to toggle disabled button
-  // TODO: Sync changes to fields with SVG graphic 
-  const [fieldsTouched, setFieldsTouched] = React.useState(true);
+  // TODO: Sync changes to fields with SVG graphic
 
   const tabChoiceSettings = {
     tabChoiceType: Tabs.Item.CHOICE_TYPES.ICON,
@@ -26,24 +25,26 @@ export const CoachingBooking = ({ onChangeStep }) => {
     <div className={SageClassnames.PANEL_GRID}>
       <Panel.Stack>
         <h5 className={`${SageClassnames.TYPE.HEADING_5}`}>
-          How should clients book your sessions? 
+          How should clients book your sessions?
         </h5>
         <p className={`${SageClassnames.TYPE.BODY_SMALL} ${SageClassnames.TYPE_COLORS.CHARCOAL_100}`}>
-          You control whether your sessions are scheduled with Kajabi Calendar, Calendly, or custom links.
+          You control whether your sessions are scheduled
+          with Kajabi Calendar, Calendly, or custom links.
         </p>
       </Panel.Stack>
 
-      {/* TODO: Dev to wire logic to check for connection to Calendly
-      <Alert
-        color={Alert.COLORS.INFO}
-        title="Connect Calendly to your Kajabi account"
-        description="Automatically add sessions to your calendar when you connect with Calendly."
-        actions={(
-          <Link href="#TODO-dev-url-or-action">
-            Connect with Calendly
-          </Link>
-        )}
-      />
+      {/*
+        TODO: Dev to wire logic to check for connection to Calendly
+        <Alert
+          color={Alert.COLORS.INFO}
+          title="Connect Calendly to your Kajabi account"
+          description="Automatically add sessions to your calendar when you connect with Calendly."
+          actions={(
+            <Link href="#TODO-dev-url-or-action">
+              Connect with Calendly
+            </Link>
+          )}
+        />
       */}
 
       <Tabs
@@ -77,11 +78,12 @@ export const CoachingBooking = ({ onChangeStep }) => {
                   initialLabel="Event type"
                 />
                 <p className={`${SageClassnames.TYPE.BODY_XSMALL} ${SageClassnames.TYPE_COLORS.CHARCOAL_100}`}>
-                  Clients will schedule through this event’s booking page. 
+                  Clients will schedule through this event’s booking page.
                 </p>
               </Panel.Stack>
             ),
-            // TODO: Add `children` to `Tabs` items processing so this can be passed down successfully
+            // TODO: Add `children` to `Tabs` items processing
+            // so this can be passed down successfully
             children: (
               <>
                 [calendly icon]
@@ -106,8 +108,10 @@ export const CoachingBooking = ({ onChangeStep }) => {
             ),
             children: (
               <>
-              <Icon name={Icon.ICONS.URL} />
-                <p className={SageClassnames.TYPE.BODY_SMALL_MED}>Calendly</p>
+                <Icon name={Icon.ICONS.URL} />
+                <p className={SageClassnames.TYPE.BODY_SMALL_MED}>
+                  Calendly
+                </p>
               </>
             ),
             ...tabChoiceSettings,
@@ -142,7 +146,6 @@ export const CoachingBooking = ({ onChangeStep }) => {
         ]}
         tabStyle={Tabs.STYLES.CHOICE}
       />
-      
       <Button.Group gap={Button.Group.GAP_OPTIONS.MD}>
         <Button
           color={Button.COLORS.SECONDARY}
@@ -153,7 +156,6 @@ export const CoachingBooking = ({ onChangeStep }) => {
         </Button>
         <Button
           color={Button.COLORS.PRIMARY}
-          disabled={!fieldsTouched}
           fullWidth={true}
           onClick={() => onChangeStep('coaching-3')}
         >
@@ -162,4 +164,12 @@ export const CoachingBooking = ({ onChangeStep }) => {
       </Button.Group>
     </div>
   );
+};
+
+CoachingBooking.defaultProps = {
+  onChangeStep: (step) => step,
+};
+
+CoachingBooking.propTypes = {
+  onChangeStep: PropTypes.func,
 };

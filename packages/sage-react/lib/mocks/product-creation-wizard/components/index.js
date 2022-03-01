@@ -1,4 +1,4 @@
-export { PaidPricingOptions  } from './PaidPricingOptions';
+export { PaidPricingOptions } from './PaidPricingOptions';
 export { PricingOptionsDropdown } from './PricingOptionsDropdown';
 export { ProductChoice } from './ProductChoice';
 export { ProductChoiceDetails } from './ProductChoiceDetails';

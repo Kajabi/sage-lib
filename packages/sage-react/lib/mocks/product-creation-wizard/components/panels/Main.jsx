@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   Button,
   Panel,
@@ -6,13 +7,13 @@ import {
 } from '../../../..';
 import { productChoices, productChoiceDetails } from '../../content';
 import { ProductChoice, ProductChoiceDetails } from '..';
- 
+
 export const Main = ({ onClickStart }) => {
   const [selectedProduct, setSelectedProduct] = React.useState('coaching');
 
-  const handleClickStart = () => {
-    return onClickStart(productChoices.find(choice => choice.alias === selectedProduct));
-  };
+  const handleClickStart = () => onClickStart(
+    productChoices.find((choice) => choice.alias === selectedProduct)
+  );
 
   return (
     <div className={SageClassnames.PANEL_GRID}>
@@ -42,4 +43,12 @@ export const Main = ({ onClickStart }) => {
       </Button.Group>
     </div>
   );
-}
+};
+
+Main.defaultProps = {
+  onClickStart: (step) => step,
+};
+
+Main.propTypes = {
+  onClickStart: PropTypes.func,
+};

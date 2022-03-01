@@ -1,5 +1,4 @@
-import React from 'react';
-import { Icon, SageTokens } from '@kajabi/sage-react';
+import { Icon, SageTokens } from '../../..';
 
 export const productChoices = [
   {

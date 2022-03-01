@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import {
   Button,
   Grid,
@@ -18,10 +17,9 @@ import {
 } from './panels';
 
 export const Root = () => {
-  const initialModalTitle = "New Product";
+  const initialModalTitle = 'New Product';
   const initialStep = 'coaching-3';
   const [modalActive, setModalActive] = React.useState(true);
-  const [progress, setProgress] = React.useState(0);
   const [modalTitle, setModalTitle] = React.useState(initialModalTitle);
   const [step, setStep] = React.useState(initialStep);
 
@@ -50,25 +48,28 @@ export const Root = () => {
     switch (step) {
       case 'course-1':
         stepComponent = <CourseDetails onChangeStep={handleChangeStep} />;
-      break; 
+        break;
       case 'course-2':
         stepComponent = <CourseAppearance onChangeStep={handleChangeStep} />;
-      break;
+        break;
       case 'course-3':
         stepComponent = <CoursePricing onChangeStep={handleChangeStep} />;
-      break;
+        break;
       case 'coaching-1':
         stepComponent = <CoachingDetails onChangeStep={handleChangeStep} />;
-      break;
+        break;
       case 'coaching-2':
         stepComponent = <CoachingBooking onChangeStep={handleChangeStep} />;
-      break;
+        break;
       case 'coaching-3':
         stepComponent = <CoachingAppearance onChangeStep={handleChangeStep} />;
-      break;
+        break;
       case 'coaching-4':
         stepComponent = <CoachingPricing onChangeStep={handleChangeStep} />;
-      break;
+        break;
+      default:
+        // stepComponent stays null
+        break;
     }
 
     return stepComponent;
@@ -95,11 +96,19 @@ export const Root = () => {
             </Button>
           )}
         >
-          {/* TODO: Progress bar needed in React */}
-          {/* TODO: Progress bar needs "full bleed" option that works to span modal header */}
+          {/*
+            TODO: Progress bar needed in React
+          */}
+          {/*
+            TODO: Progress bar needs "full bleed" option
+            that works to span modal header
+          */}
         </Modal.Header>
         <Modal.Body>
-          {/* TODO: Need to allow column panel to fill space with a footer at bottom and scroll in middle */}
+          {/*
+            TODO: Need to allow column panel to fill space
+            with a footer at bottom and scroll in middle
+          */}
           <Grid.Row>
             <Grid.Col size={4}>
               {renderStep()}
@@ -110,6 +119,7 @@ export const Root = () => {
               <img
                 src="//source.unsplash.com/random/832x575"
                 style={{ margin: '0 auto', display: 'block', maxWidth: '100%' }}
+                alt=""
               />
             </Grid.Col>
           </Grid.Row>

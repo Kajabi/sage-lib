@@ -56,14 +56,14 @@ export const PaidPricingOptions = () => {
               label="Interval"
               value="Monthly"
               options={[
-                "Weekly",
-                "Monthly",
-                "Annually"
+                'Weekly',
+                'Monthly',
+                'Annually',
               ]}
             />
           </Card.Row>
         );
-      break;
+        break;
       case 'multi':
         detailsFields = (
           <Input
@@ -72,24 +72,24 @@ export const PaidPricingOptions = () => {
             label="Number of monthly payments"
           />
         );
-      break;
+        break;
       case 'once':
       default:
         detailsFields = null;
-      break;
+        break;
     }
 
     return detailsFields;
   };
 
   const onSelectItem = (data) => {
-    let newSelectedPaymentType = items.find(item => item.id === data.id);
+    const newSelectedPaymentType = items.find((item) => item.id === data.id);
     if (!newSelectedPaymentType) {
       setSelectedPaymentType('once');
     } else {
       setSelectedPaymentType(newSelectedPaymentType.alias);
     }
-  }
+  };
 
   return (
     <div className={SageClassnames.PANEL_GRID}>
@@ -105,7 +105,7 @@ export const PaidPricingOptions = () => {
         prefix="$"
         type="number"
       />
-      
+
       {renderDetailsFields()}
 
       <div className={SageClassnames.CARD_GRID}>

@@ -8,7 +8,12 @@ import {
   SageTokens
 } from '../../..';
 
-const PricingOptionsDropdownCard = ({ label, subtext, icon, color }) => (
+const PricingOptionsDropdownCard = ({
+  color,
+  icon,
+  label,
+  subtext,
+}) => (
   <Card.Row gridTemplate={SageTokens.GRID_TEMPLATES.ET}>
     <Icon icon={icon} cardColor={color} />
     <Card.Block>
@@ -19,17 +24,17 @@ const PricingOptionsDropdownCard = ({ label, subtext, icon, color }) => (
 );
 
 PricingOptionsDropdownCard.defaultProps = {
+  color: Icon.CARD_COLORS.DRAFT,
+  icon: SageTokens.ICONS.QUESTION,
   label: 'Default label',
   subtext: 'Default subtext',
-  icon: SageTokens.ICONS.QUESTION,
-  color: Icon.CARD_COLORS.DRAFT,
 };
 
 PricingOptionsDropdownCard.propTypes = {
+  color: Icon.propTypes.cardColor,
+  icon: Icon.propTypes.icon,
   label: PropTypes.string,
   subtext: PropTypes.string,
-  icon: Icon.propTypes.icon,
-  color: Icon.propTypes.cardColor,
 };
 
 export const PricingOptionsDropdown = ({
@@ -65,7 +70,7 @@ export const PricingOptionsDropdown = ({
           selectedValue={selectedContent}
         />
       )}
-      label="Select a product..."
+      label="Select..."
       panelModifier="select"
       triggerModifier="select"
       exitPanelHandler={handleClickItem}
@@ -80,4 +85,19 @@ export const PricingOptionsDropdown = ({
       />
     </Dropdown>
   );
+};
+
+PricingOptionsDropdown.defaultProps = {
+  initialLabel: '',
+  items: [],
+  onSelectItem: (data) => null,
+};
+
+PricingOptionsDropdown.propTypes = {
+  initialLabel: PropTypes.string,
+  items: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string,
+    label: PropTypes.string,
+  })),
+  onSelectItem: PropTypes.func,
 };

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   Card,
   Property,
@@ -7,10 +8,10 @@ import {
 } from '../../..';
 
 export const ProductChoiceDetails = ({
-  title,
   body,
   leftFeatures,
   rightFeatures,
+  title,
 }) => (
   <>
     <Card.Stack>
@@ -44,3 +45,23 @@ export const ProductChoiceDetails = ({
     </Card.Stack>
   </>
 );
+
+ProductChoiceDetails.defaultProps = {
+  body: '',
+  leftFeatures: [],
+  rightFeatures: [],
+  title: '',
+};
+
+ProductChoiceDetails.propTypes = {
+  body: PropTypes.string,
+  leftFeatures: PropTypes.arrayOf(PropTypes.shape({
+    icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),
+    label: PropTypes.string,
+  })),
+  rightFeatures: PropTypes.arrayOf(PropTypes.shape({
+    icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),
+    label: PropTypes.string,
+  })),
+  title: PropTypes.string,
+};

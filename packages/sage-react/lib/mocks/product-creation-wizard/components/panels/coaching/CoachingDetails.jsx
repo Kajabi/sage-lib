@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   Button,
   Input,
@@ -6,13 +7,11 @@ import {
   Tabs,
   Textarea,
 } from '../../../../..';
- 
-export const CoachingDetails = ({ onChangeStep }) => {
-  // TODO: Add state/story management for input data to persist
-  // TODO: Use field state to toggle disabled button
-  // TODO: Sync changes to fields with SVG graphic 
-  const [fieldsTouched, setFieldsTouched] = React.useState(true);
 
+// TODO: Add state/story management for input data to persist
+// TODO: Use field state to toggle disabled button
+// TODO: Sync changes to fields with SVG graphic
+export const CoachingDetails = ({ onChangeStep }) => {
   const tabChoiceSettings = {
     tabChoiceType: Tabs.Item.CHOICE_TYPES.RADIO,
     tabChoiceIcon: null,
@@ -84,7 +83,6 @@ export const CoachingDetails = ({ onChangeStep }) => {
         tabLayout={Tabs.LAYOUTS.STACKED}
         tabStyle={Tabs.STYLES.CHOICE}
       />
-      
       <Button.Group gap={Button.Group.GAP_OPTIONS.MD}>
         <Button
           color={Button.COLORS.SECONDARY}
@@ -95,7 +93,6 @@ export const CoachingDetails = ({ onChangeStep }) => {
         </Button>
         <Button
           color={Button.COLORS.PRIMARY}
-          disabled={!fieldsTouched}
           fullWidth={true}
           onClick={() => onChangeStep('coaching-2')}
         >
@@ -104,4 +101,12 @@ export const CoachingDetails = ({ onChangeStep }) => {
       </Button.Group>
     </div>
   );
+};
+
+CoachingDetails.defaultProps = {
+  onChangeStep: (step) => step,
+};
+
+CoachingDetails.propTypes = {
+  onChangeStep: PropTypes.func,
 };
