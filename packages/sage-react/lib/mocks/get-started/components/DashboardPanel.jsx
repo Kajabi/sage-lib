@@ -23,6 +23,10 @@ export const DashboardPanel = () => (
       <Panel.Divider bleed={true} />
 
       <div className={SageClassnames.GRID_PANEL}>
+        {/*
+          TODO: Add side-by-side layout variation
+          https://kajabi.atlassian.net/browse/SAGE-314
+        */}
         <Tabs
           id="example-tabs3"
           stacked={true}

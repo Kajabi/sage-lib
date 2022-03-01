@@ -29,7 +29,10 @@
 
       <hr class="sage-tabs-divider" />
 
-      <%# TODO: Need side-by-side tab variation %>
+      <%#
+        TODO: Need side-by-side tab variation
+        https://kajabi.atlassian.net/browse/SAGE-314
+      %>
       <% tabs.each do | tab | %>
         <%= sage_component SageTabsPane, { id: tab[:id] } do %>
           <div class="<%= SageClassnames::GRID_PANEL %>">

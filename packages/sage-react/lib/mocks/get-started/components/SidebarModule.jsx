@@ -25,7 +25,10 @@ export const SidebarModule = ({
         Get started
       </p>
 
-      {/* TODO: Need inverted button color option */}
+      {/*
+        TODO: Need inverted button color option
+        https://kajabi.atlassian.net/browse/SAGE-308
+      */}
       <Button
         color={Button.COLORS.SECONDARY}
         subtle={true}
@@ -36,7 +39,10 @@ export const SidebarModule = ({
         {label}
       </Button>
 
-      {/* TODO: Need bar variation for Indicator */}
+      {/*
+        TODO: Need bar variation for Indicator
+        https://kajabi.atlassian.net/browse/SAGE-309
+      */}
       <Indicator
         className={SageClassnames.SPACERS.XS_TOP}
         currentItem={step}
