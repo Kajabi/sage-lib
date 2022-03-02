@@ -9,7 +9,7 @@ import { productChoices, productChoiceDetails } from '../../content';
 import { ProductChoice, ProductChoiceDetails } from '..';
 
 export const Main = ({ onClickStart }) => {
-  const [selectedProduct, setSelectedProduct] = React.useState('coaching');
+  const [selectedProduct, setSelectedProduct] = React.useState('course');
 
   const handleClickStart = () => onClickStart(
     productChoices.find((choice) => choice.alias === selectedProduct)
@@ -26,6 +26,7 @@ export const Main = ({ onClickStart }) => {
             active={selectedProduct === alias}
             icon={icon}
             iconColor={iconColor}
+            key={alias}
             onClick={() => setSelectedProduct(alias)}
             title={title}
           />

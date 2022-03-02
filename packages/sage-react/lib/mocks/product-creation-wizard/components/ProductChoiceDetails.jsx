@@ -33,12 +33,12 @@ export const ProductChoiceDetails = ({
       >
         <Card.Stack>
           {leftFeatures.map(({ icon, label }) => (
-            <Property icon={icon}>{label}</Property>
+            <Property key={icon} icon={icon}>{label}</Property>
           ))}
         </Card.Stack>
         <Card.Stack>
           {rightFeatures.map(({ icon, label }) => (
-            <Property icon={icon}>{label}</Property>
+            <Property key={icon} icon={icon}>{label}</Property>
           ))}
         </Card.Stack>
       </Card.Row>

@@ -18,7 +18,7 @@ import {
 
 export const Root = () => {
   const initialModalTitle = 'New Product';
-  const initialStep = 'coaching-3';
+  const initialStep = null;
   const [modalActive, setModalActive] = React.useState(true);
   const [modalTitle, setModalTitle] = React.useState(initialModalTitle);
   const [step, setStep] = React.useState(initialStep);
