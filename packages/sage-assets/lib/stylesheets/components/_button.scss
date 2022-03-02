@@ -142,7 +142,7 @@ $-btn-subtle-styles: (
 //
 // Custom variables
 //
-$-btn-interactive-label-icon-size: rem(24px);
+$-btn-interactive-badge-icon-size: rem(24px);
 $-btn-loading-min-height: rem(36px);
 
 
@@ -240,12 +240,12 @@ $-btn-loading-min-height: rem(36px);
     border-bottom-left-radius: 0;
   }
 
-  .sage-label & {
+  .sage-badge & {
     display: flex;
     justify-content: center;
     position: absolute;
     right: 0;
-    width: $-btn-interactive-label-icon-size;
+    width: $-btn-interactive-badge-icon-size;
     margin: auto 0;
     border-radius: 0 sage-border(radius-x-large) sage-border(radius-x-large) 0;
 
@@ -255,8 +255,8 @@ $-btn-loading-min-height: rem(36px);
     }
 
     &::after {
-      width: $-btn-interactive-label-icon-size;
-      height: $-btn-interactive-label-icon-size;
+      width: $-btn-interactive-badge-icon-size;
+      height: $-btn-interactive-badge-icon-size;
       border-radius: 0 sage-border(radius-x-large) sage-border(radius-x-large) 0;
     }
 
@@ -273,7 +273,7 @@ $-btn-loading-min-height: rem(36px);
     }
   }
 
-  .sage-label__value & {
+  .sage-badge & {
     width: rem(28px);
   }
 
@@ -592,15 +592,10 @@ $-alert-colors: (
       }
 
       &[class*="icon-only"] {
-        &:focus::after {
-          border-color: map-get($-styles, focus-outline);
-        }
+        .sage-badge & {
+          @include sage-focus-ring(map-get($-styles, default));
 
-        .sage-label & {
-          @include sage-focus-outline($outline-offset-inline: -2px, $outline-offset-block: -2px);
-          @include sage-focus-outline--update-color(map-get($-styles, default));
-
-          position: absolute; /* this keeps the button inside a label within the visual bounds of the label component */
+          position: absolute; /* this keeps the button inside a badge within the visual bounds of the badge component */
           width: $-btn-icon-only-standard-size;
           height: $-btn-icon-only-standard-size;
           padding: 0;

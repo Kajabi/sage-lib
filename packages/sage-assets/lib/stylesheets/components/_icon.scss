@@ -103,7 +103,7 @@ $-icon-beside-type: (
     color: var(--sage-label-custom-icon-color);
   }
 
-  .sage-label__decor-icon--#{$icon-name}::before {
+  .sage-badge__decor-icon--#{$icon-name}::before {
     @include sage-icon-base($icon-name, md);
     align-self: center;
   }

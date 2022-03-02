@@ -1,7 +1,38 @@
-<span class="sage-badge">
+<% badge_content_tag = component.interactive_type ? "button" : "span" %>
+
+<span
+  class="
+    sage-badge
+    <%= "sage-badge--#{component.color}" if component.color %>
+    <%= "sage-badge--#{component.style}" if component.style %>
+    <%= "sage-badge--interactive" if component.interactive_type %>
+    <%= "sage-badge--interactive-right-cta-affordance" if (component.interactive_type === :dropdown) || (component.interactive_type === :secondary_button) %>
+    <%= component.generated_css_classes %>
+  "
+  <% component.container_attributes.each do |key, value| %>
+    <%= "#{key}='#{value}'".html_safe %>
+  <% end if component.container_attributes&.is_a?(Hash) %>
+>
   <% if content_for? :sage_badge_dot %>
-      <%= content_for :sage_badge_dot %>
+    <%= content_for :sage_badge_dot %>
   <% end %>
-  <button></button>
-  <span class="sage-label__decor-icon sage-label__decor-icon--down-small"></span>
+  <<%= badge_content_tag %>
+    class="sage-badge__value"
+    <%= "type=button" if component.interactive_type %>
+    <%= component.generated_html_attributes.html_safe %>
+  />
+    <span class="sage-badge__value-text">
+      <%= component.value.html_safe %>
+    </span>
+  </<%= badge_content_tag %>>
+  <%= component.content %>
+  <% if component.interactive_type === :secondary_button %>
+    <%= component.secondary_button if component.secondary_button.is_a? String %>
+    <%= sage_component SagebadgeSecondaryButton, {} if component.secondary_button == true %>
+    <%= sage_component SagebadgeSecondaryButton, component.secondary_button if component.secondary_button.is_a? Hash %>
+  <% end %>
+  <% if component.interactive_type === :dropdown %>
+    <span class="sage-badge__decor-icon sage-badge__decor-icon--down-small"></span>
+  <% end %>
 </span>
+
