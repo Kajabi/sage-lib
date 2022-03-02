@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.49.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.48.1...@kajabi/sage@4.49.0) (2022-03-02)
+
+
+### Features
+
+* **mocks:** creation wizard mocks - restore work reverted ([c82e7a1](https://github.com/Kajabi/sage-lib/commit/c82e7a19cda1728fa8c1b6fe0f1d59514a8ae57f))
+* **mocks:** resolve missing comma ([6a905c5](https://github.com/Kajabi/sage-lib/commit/6a905c59c6f834b7f256b402c5ae62adb1d13a0b))
+
+
+
+
+
 ## [4.48.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.48.0...@kajabi/sage@4.48.1) (2022-03-02)
 
 **Note:** Version bump only for package @kajabi/sage
