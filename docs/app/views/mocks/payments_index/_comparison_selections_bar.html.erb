@@ -1,5 +1,5 @@
 <%= sage_component SagePanelRow, { gap: :sm, grid_template: "st", spacer: { top: :lg, bottom: :lg }} do %>
-  <!-- TODO: Need to allow custom layouts within dropdown items -->
+  <%# TODO: Need to allow custom layouts within dropdown items %>
   <%= sage_component SageDropdown, {
     contained: true,
     items: [
@@ -22,7 +22,7 @@
   <p class="<%= "#{SageClassnames::TYPE::BODY_XSMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_100}" %>">
     compared to
   </p>
-  
+
   <%= sage_component SageDropdown, {
     contained: true,
     items: [
