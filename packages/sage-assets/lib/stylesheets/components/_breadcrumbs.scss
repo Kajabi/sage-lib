@@ -4,7 +4,10 @@
 /// @group sage
 ////
 
-$-breadcrumb-disabled-color: sage-color(grey, 500);
+$-breadcrumb-current-color: sage-color(grey, 900);
+$-breadcrumb-interactive-color: sage-color(grey, 800);
+$-breadcrumb-interactive-bg: sage-color(grey, 100);
+$-breadcrumb-outline-color: sage-color(grey, 400);
 
 .sage-breadcrumbs {
   display: flex;
@@ -31,8 +34,8 @@ $-breadcrumb-disabled-color: sage-color(grey, 500);
   &:not(:last-child) {
     &::after {
       content: "/";
-      margin: 0 sage-spacing(sm);
-      color: sage-color(grey, 500);
+      margin: 0 rem(12px);
+      color: sage-color(grey, 600);
     }
 
     .sage-breadcrumbs--progressbar &::after {
@@ -45,17 +48,20 @@ $-breadcrumb-disabled-color: sage-color(grey, 500);
 .sage-breadcrumbs__link {
   display: inline-flex;
   align-items: center;
-  color: sage-color(grey, 500);
+  padding: sage-spacing(3xs) sage-spacing(xs);
+  color: sage-color(grey, 700);
+  font-size: sage-font-size(body-sm);
+  font-weight: sage-font-weight(semibold);
 
   &:hover,
   &:focus,
   &:active {
-    color: sage-color(grey, 800);
+    color: $-breadcrumb-interactive-color;
   }
 
   &[aria-disabled="true"],
   &:disabled {
-    color: $-breadcrumb-disabled-color;
+    color: $-breadcrumb-current-color;
     pointer-events: none;
     cursor: default;
   }
@@ -65,23 +71,43 @@ $-breadcrumb-disabled-color: sage-color(grey, 500);
     padding-bottom: sage-spacing(2xs);
 
     &:active {
-      color: sage-color(grey, 800);
+      color: $-breadcrumb-interactive-color;
     }
 
     @include sage-tab-underline(".sage-breadcrumbs__link--current");
   }
 
   .sage-breadcrumbs:not(.sage-breadcrumbs--progressbar) & {
-    @include sage-focus-outline($outline-offset-inline: 6px, $outline-offset-block: 0);
-    @include sage-focus-outline--update-color(sage-color(primary, 500));
+    background: transparent;
+    border-radius: rem(6px);
+    @include sage-focus-outline(
+      $outline-width: 4px,
+      $outline-offset-block: -1,
+      $outline-border-radius: sage-border(radius)
+    );
+    @include sage-focus-outline--update-color($-breadcrumb-outline-color);
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $-breadcrumb-interactive-color;
+      background: $-breadcrumb-interactive-bg;
+    }
+
+    &[aria-disabled="true"],
+    &:disabled {
+      background: none;
+      pointer-events: none;
+      cursor: default;
+    }
   }
 }
 
 .sage-breadcrumbs__link--current {
-  color: sage-color(grey, 600);
+  color: $-breadcrumb-current-color;
 
   .sage-breadcrumbs--progressbar & {
-    color: sage-color(grey, 800);
+    color: $-breadcrumb-interactive-color;
   }
 }
 
