@@ -92,8 +92,7 @@ $-pagination-focus-ring-color: sage-color(grey, 400);
   border-radius: $-pagination-radius;
 
   &:hover,
-  &:focus,
-  &:active {
+  &:focus {
     background-color: $-pagination-bg-color;
   }
 
