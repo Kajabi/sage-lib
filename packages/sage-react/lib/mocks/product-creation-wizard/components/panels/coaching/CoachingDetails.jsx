@@ -8,10 +8,12 @@ import {
   Textarea,
 } from '../../../../..';
 
-// TODO: Add state/story management for input data to persist
-// TODO: Use field state to toggle disabled button
-// TODO: Sync changes to fields with SVG graphic
 export const CoachingDetails = ({ onChangeStep }) => {
+  // TODO: Dev to add the following in final implementation:
+  // - Add state/story management for input data to persist
+  // - Use field state to toggle disabled button
+  // - Sync changes to fields with SVG graphic
+
   const tabChoiceSettings = {
     tabChoiceType: Tabs.Item.CHOICE_TYPES.RADIO,
     tabChoiceIcon: null,

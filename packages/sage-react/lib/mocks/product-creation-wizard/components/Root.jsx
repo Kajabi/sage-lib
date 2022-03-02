@@ -81,7 +81,10 @@ export const Root = () => {
         Add product
       </Button>
       <Modal active={modalActive} fullScreen={true}>
-        {/* TODO: Build dismiss into modal header} */}
+        {/*
+          TODO: Build dismiss into modal header
+          https://kajabi.atlassian.net/browse/SAGE-312
+        */}
         <Modal.Header
           title={modalTitle}
           aside={(
@@ -97,25 +100,22 @@ export const Root = () => {
           )}
         >
           {/*
-            TODO: Progress bar needed in React
-          */}
-          {/*
-            TODO: Progress bar needs "full bleed" option
-            that works to span modal header
+            TODO: Need to determine what/how the "progress bar" can be added here
+            https://kajabi.atlassian.net/browse/SAGE-328
           */}
         </Modal.Header>
         <Modal.Body>
           {/*
             TODO: Need to allow column panel to fill space
             with a footer at bottom and scroll in middle
+            https://kajabi.atlassian.net/browse/SAGE-329
           */}
           <Grid.Row>
             <Grid.Col size={4}>
               {renderStep()}
             </Grid.Col>
             <Grid.Col size={8}>
-              {/* TODO: Need actual graphic SVG here */}
-              {/* TODO: Need to consider graphic customization features */}
+              {/* TODO: Dev to add actual graphic SVG here  with live edit synced */}
               <img
                 src="//source.unsplash.com/random/832x575"
                 style={{ margin: '0 auto', display: 'block', maxWidth: '100%' }}

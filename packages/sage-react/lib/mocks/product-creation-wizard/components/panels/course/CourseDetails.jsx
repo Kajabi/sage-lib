@@ -7,9 +7,10 @@ import {
   Textarea,
 } from '../../../../..';
 
-// TODO: Add state/story management for input data to persist
-// TODO: Use field state to toggle disabled button
-// TODO: Sync changes to fields with SVG graphic
+// TODO: Dev to add the following in final implementation:
+// - Add state/story management for input data to persist
+// - Use field state to toggle disabled button
+// - Sync changes to fields with SVG graphic
 export const CourseDetails = ({ onChangeStep }) => (
   <div className={SageClassnames.GRID_PANEL}>
     <h5 className={`${SageClassnames.TYPE.HEADING_5} ${SageClassnames.SPACERS.MD_BOTTOM}`}>

@@ -13,9 +13,10 @@ import {
 import { CoachingCalendlyDropdown } from './CoachingCalendlyDropdown';
 
 export const CoachingBooking = ({ onChangeStep }) => {
-  // TODO: Add state/story management for input data to persist
-  // TODO: Use field state to toggle disabled button
-  // TODO: Sync changes to fields with SVG graphic
+  // TODO: Dev to add the following in final implementation:
+  // - Add state/story management for input data to persist
+  // - Use field state to toggle disabled button
+  // - Sync changes to fields with SVG graphic
 
   const tabChoiceSettings = {
     tabChoiceType: Tabs.Item.CHOICE_TYPES.ICON,
@@ -84,6 +85,7 @@ export const CoachingBooking = ({ onChangeStep }) => {
             ),
             // TODO: Add `children` to `Tabs` items processing
             // so this can be passed down successfully
+            // https://kajabi.atlassian.net/browse/SAGE-330
             children: (
               <>
                 [calendly icon]

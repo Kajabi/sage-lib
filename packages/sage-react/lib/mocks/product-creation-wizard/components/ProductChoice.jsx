@@ -17,7 +17,7 @@ export const ProductChoice = ({
 }) => (
   <Choice isActive={active} onClick={onClick}>
     <Card.Row gridTemplate={SageTokens.GRID_TEMPLATES.ET}>
-      {/* TODO: Switch out for graphic */}
+      {/* TODO: Dev to switch out Icon here for graphic from design comp */}
       <Icon
         icon={icon}
         cardColor={iconColor}

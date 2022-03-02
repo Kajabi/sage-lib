@@ -13,13 +13,19 @@ import { PricingOptionsDropdown } from './PricingOptionsDropdown';
 export const PaidPricingOptions = () => {
   const [selectedPaymentType, setSelectedPaymentType] = React.useState('once');
   const initialLabel = 'Select a product';
+
+  // TODO: Need updated icon set to include these three
+  // - `money`
+  // - `subscription`
+  // - `multi-pay`
+  // https://kajabi.atlassian.net/browse/SAGE-327
   const items = [
     {
       id: 1,
       label: 'One-time',
       alias: 'once',
       subtext: 'Customer pays once for access to the product.',
-      icon: SageTokens.ICONS.MONEY, // TODO: Need money icon
+      icon: SageTokens.ICONS.ROUND_DOLLAR, // TODO: Dev needs to correct icon once available
       color: Icon.CARD_COLORS.INFO,
     },
     {
@@ -27,7 +33,7 @@ export const PaidPricingOptions = () => {
       label: 'Subscription',
       alias: 'subscription',
       subtext: 'Customer pays once for access to the product.',
-      icon: SageTokens.ICONS.MONEY,
+      icon: SageTokens.ICONS.ROUND_DOLLAR, // TODO: Dev needs to correct icon once available
       color: Icon.CARD_COLORS.PUBLISHED,
     },
     {
@@ -35,7 +41,7 @@ export const PaidPricingOptions = () => {
       label: 'Multi-pay',
       alias: 'multi',
       subtext: 'Customer pays once for access to the product.',
-      icon: SageTokens.ICONS.MONEY,
+      icon: SageTokens.ICONS.ROUND_DOLLAR, // TODO: Dev needs to correct icon once available
       color: Icon.CARD_COLORS.LOCKED,
     },
   ];
@@ -98,16 +104,12 @@ export const PaidPricingOptions = () => {
         items={items}
         onSelectItem={onSelectItem}
       />
-
-      {/* TODO: Custom input styles need further consideration from Sage */}
       <Input
         id="course-price"
         prefix="$"
         type="number"
       />
-
       {renderDetailsFields()}
-
       <div className={SageClassnames.CARD_GRID}>
         <h6 className={SageClassnames.TYPE.HEADING_6}>
           Preferred payment methods

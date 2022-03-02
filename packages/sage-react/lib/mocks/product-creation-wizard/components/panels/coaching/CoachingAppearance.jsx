@@ -26,7 +26,7 @@ export const CoachingAppearance = ({ onChangeStep }) => (
       title="Secondary color"
       subtext="Applies to the hero section background."
     />
-    {/* TODO: add image uploader and sync changes with SVG graphic */}
+    {/* TODO: Dev to add image uploader and sync changes with SVG graphic */}
     [image upload]
     <Button.Group gap={Button.Group.GAP_OPTIONS.MD}>
       <Button

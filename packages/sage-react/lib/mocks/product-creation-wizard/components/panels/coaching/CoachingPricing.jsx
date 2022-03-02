@@ -27,7 +27,7 @@ export const CoachingPricing = ({ onChangeStep }) => (
       tabs={[
         {
           // TODO: Need alignCenter added to options on tabItems
-          alignCenter: true,
+          // https://kajabi.atlassian.net/browse/SAGE-331
           id: 'pricing-paid',
           tabChoiceIcon: SageTokens.ICONS.ROUND_DOLLAR,
           tabChoicIconAlignment: Tabs.Item.ICON_ALIGNMENTS.START,
@@ -36,7 +36,6 @@ export const CoachingPricing = ({ onChangeStep }) => (
           content: <PaidPricingOptions />
         },
         {
-          alignCenter: true,
           id: 'pricing-free',
           tabChoiceIcon: SageTokens.ICONS.BAN,
           tabChoicIconAlignment: Tabs.Item.ICON_ALIGNMENTS.START,
