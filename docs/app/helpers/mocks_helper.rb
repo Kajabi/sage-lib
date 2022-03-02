@@ -37,7 +37,6 @@ module MocksHelper
 
   def sage_mocks
     [
-      # DOING
       {
         alias: "product_creation_wizard",
         jira_epic: "SAGE-39",
@@ -57,9 +56,7 @@ module MocksHelper
         no_rails_js: true,
         status: DOING,
         team: "Growth",
-      }
-
-      # DONE
+      },
       {
         alias: "contact_profile",
         milestone_id: 21,
@@ -86,8 +83,6 @@ module MocksHelper
         status: DONE,
         team: "Commerce",
       },
-
-      # ARCHIVE
       {
         alias: "test",
         name: "Test",
