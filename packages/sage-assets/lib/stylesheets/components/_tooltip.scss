@@ -37,7 +37,7 @@ $-tooltip-large-maxwidth: rem(320px);
   background-color: $-tooltip-bg-color;
   box-shadow: $-tooltip-shadow;
 
-  @extend %t-sage-body-small-med;
+  @extend %t-sage-body-xsmall;
 
   &::after {
     content: "";
@@ -113,8 +113,6 @@ $-tooltip-large-maxwidth: rem(320px);
 
 .sage-tooltip--small {
   padding: $-tooltip-padding;
-
-  @extend %t-sage-body-xsmall-semi;
 }
 
 .sage-tooltip--large {
