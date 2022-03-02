@@ -364,7 +364,6 @@
   }
 
   &:hover:not(:disabled) {
-    color: sage-color(grey, 900);
 
     @include placeholder {
       color: sage-color(grey, 900);
