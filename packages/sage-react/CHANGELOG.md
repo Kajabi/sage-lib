@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.83.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.82.1...@kajabi/sage-react@0.83.0) (2022-03-02)
+
+
+### Features
+
+* **mocks:** move folder to react ([1bd6c63](https://github.com/Kajabi/sage-lib/commit/1bd6c63f5ee9609d602721a90e04e08d91e316aa))
+
+
+
+
+
 ## [0.82.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.82.0...@kajabi/sage-react@0.82.1) (2022-03-02)
 
 **Note:** Version bump only for package @kajabi/sage-react
