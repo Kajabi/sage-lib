@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.82.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.81.0...@kajabi/sage-react@0.82.0) (2022-03-02)
+
+
+### Features
+
+* **mocks:** add coaching flow to product creation mocks ([2782eec](https://github.com/Kajabi/sage-lib/commit/2782eec0a4d95bcbe16c636cda1d4dcedee3d91d))
+* **mocks:** add product creation wizard course mocks ([98dc2ea](https://github.com/Kajabi/sage-lib/commit/98dc2ea4242fa4219057be8018847751840b6e79))
+
+
+
+
+
 # [0.81.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.80.0...@kajabi/sage-react@0.81.0) (2022-03-01)
 
 

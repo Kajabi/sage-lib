@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.48.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.47.0...@kajabi/sage@4.48.0) (2022-03-02)
+
+
+### Features
+
+* **mocks:** add product creation wizard course mocks ([98dc2ea](https://github.com/Kajabi/sage-lib/commit/98dc2ea4242fa4219057be8018847751840b6e79))
+
+
+
+
+
 # [4.47.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.46.1...@kajabi/sage@4.47.0) (2022-03-01)
 
 
