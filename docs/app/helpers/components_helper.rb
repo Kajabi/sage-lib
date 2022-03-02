@@ -46,6 +46,16 @@ module ComponentsHelper
         figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F9Km09NjlZHYWsMP7EGT8tI%2F%255BWIP%255D-Sage-3-%25E2%2580%2594-Admin-Components%3Fnode-id%3D6989%253A21606",
       },
       {
+        title: "badge",
+        description: "",
+        scss: "todo",
+        docs: "todo",
+        rails: "todo",
+        react: "todo",
+        a11y: "todo",
+        figma_embed: "",
+      },
+      {
         title: "banner",
         description: "A banner that displays at the top of the page, used for systemwide notifications and events.",
         scss: "done",
@@ -172,7 +182,7 @@ module ComponentsHelper
       },
       {
         title: "dot",
-        description: "Dots provide a subtle color cue to place beside text or other elements.", 
+        description: "Dots provide a subtle color cue to place beside text or other elements.",
         scss: "done",
         rails: "done",
         react: "done",
