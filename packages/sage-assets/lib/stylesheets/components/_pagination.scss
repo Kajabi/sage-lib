@@ -107,10 +107,10 @@ $-pagination-focus-ring-color: sage-color(grey, 400);
   padding: $-pagination-padding-arrows;
 }
 .sage-pagination__item:first-of-type .sage-pagination__page::before {
-  @include sage-icon-base(arrow-left);
+  @include sage-icon-base(caret-left);
 }
 .sage-pagination__item:last-of-type .sage-pagination__page::before {
-  @include sage-icon-base(arrow-right);
+  @include sage-icon-base(caret-right);
 }
 
 .sage-pagination__page-text {
