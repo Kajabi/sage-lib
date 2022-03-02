@@ -37,61 +37,18 @@ module MocksHelper
 
   def sage_mocks
     [
+      # DOING
       {
-        alias: "test",
-        name: "Test",
-        status: ARCHIVED,
-        team: "UXD",
-      },
-      {
-        alias: "contact_profile",
-        milestone_id: 21,
-        name: "Contact Profile",
+        alias: "product_creation_wizard",
+        jira_epic: "SAGE-39",
+        name: "Product Creation Wizard",
         no_custom_styles: true,
         no_rails_js: true,
+        no_rails_partials: true,
+        no_rails_helper: true,
         status: DOING,
-        storybook_path: '/story/mocks-contact-profile--default',
-        team: "Manage",
-      },
-      {
-        alias: "upsell_downsell",
-        milestone_id: 25,
-        name: "Upsell Downsell",
-        no_rails_js: true,
-        status: DONE,
-        team: "Commerce",
-      },
-      {
-        alias: "new_plans_upgrade",
-        milestone_id: 23,
-        name: "New Plans and Upgrade",
-        no_rails_js: true,
-        status: DOING,
-        team: "Growth",
-      },
-      {
-        alias: "creation_wizard",
-        milestone_id: nil,
-        name: "Creation Wizard",
-        no_rails_js: true,
-        status: DOING,
-        team: "Build/Commerce",
-      },
-      {
-        alias: "payments_index",
-        jira_epic: "SAGE-172",
-        name: "Payments Index",
-        no_rails_js: true,
-        status: DOING,
-        team: "Commerce",
-      },
-      {
-        alias: "customize_columns",
-        jira_epic: "SAGE-180",
-        name: "Table Settings Modal",
-        no_rails_js: true,
-        status: DOING,
-        team: "Commerce",
+        storybook_path: '/story/mocks-product-creation-wizard--default',
+        team: "Build",
       },
       {
         alias: "get_started",
@@ -101,6 +58,66 @@ module MocksHelper
         status: DOING,
         team: "Growth",
       }
+
+      # DONE
+      {
+        alias: "contact_profile",
+        milestone_id: 21,
+        name: "Contact Profile",
+        no_custom_styles: true,
+        no_rails_js: true,
+        status: DONE,
+        storybook_path: '/story/mocks-contact-profile--default',
+        team: "Manage",
+      },
+      {
+        alias: "customize_columns",
+        jira_epic: "SAGE-180",
+        name: "Table Settings Modal",
+        no_rails_js: true,
+        status: DONE,
+        team: "Commerce",
+      },
+      {
+        alias: "payments_index",
+        jira_epic: "SAGE-172",
+        name: "Payments Index",
+        no_rails_js: true,
+        status: DONE,
+        team: "Commerce",
+      },
+
+      # ARCHIVE
+      {
+        alias: "test",
+        name: "Test",
+        status: ARCHIVED,
+        team: "UXD",
+      },
+      {
+        alias: "upsell_downsell",
+        milestone_id: 25,
+        name: "Upsell Downsell",
+        no_rails_js: true,
+        status: ARCHIVED,
+        team: "Commerce",
+      },
+      {
+        alias: "new_plans_upgrade",
+        milestone_id: 23,
+        name: "New Plans and Upgrade",
+        no_rails_js: true,
+        status: ARCHIVED,
+        team: "Growth",
+      },
+      {
+        alias: "creation_wizard",
+        milestone_id: nil,
+        name: "Creation Wizard",
+        no_rails_js: true,
+        status: ARCHIVED,
+        team: "Build/Commerce",
+      },
     ]
   end
 
