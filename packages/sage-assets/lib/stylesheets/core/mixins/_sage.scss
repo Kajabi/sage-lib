@@ -364,7 +364,6 @@
   }
 
   &:hover:not(:disabled) {
-    color: sage-color(grey, 900);
 
     @include placeholder {
       color: sage-color(grey, 900);
@@ -490,7 +489,7 @@
 @mixin sage-form-field-message() {
   @extend %t-sage-body-small-med;
 
-  margin-top: sage-spacing(xs);
+  margin-top: rem(6px);
   color: sage-color(grey, 600);
 
   .sage-form-field--error & {

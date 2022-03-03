@@ -28,6 +28,9 @@ export const Select = ({
 
   return (
     <div className={classNames}>
+      {label && (
+        <label htmlFor={id} className="sage-select__label">{label}</label>
+      )}
       <select
         className="sage-select__field"
         id={id}
@@ -55,9 +58,6 @@ export const Select = ({
           );
         })}
       </select>
-      {label && (
-        <label htmlFor={id} className="sage-select__label">{label}</label>
-      )}
       {message && (
         <div className="sage-select__message">{message}</div>
       )}
