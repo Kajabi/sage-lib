@@ -1,12 +1,13 @@
 <h2 class="t-sage-heading-6">Default</h2>
 <%= sage_component SageProgressBar, {
+  color: SageTokens::COLOR_PALETTE[:PRIMARY_500],
   percent: 70,
   label: "Cloning product"
 } %>
 
 <h2 class="t-sage-heading-6">Custom color</h2>
 <%= sage_component SageProgressBar, {
-  color: SageTokens::COLOR_PALETTE[:ORANGE_500],
+  color: "#4edbe6",
   percent: 47,
   label: "Reached limit"
 } %>
