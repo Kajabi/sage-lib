@@ -16,8 +16,8 @@
 
 
 .sage-progress-bar {
-  height: rem(6px);
-  border-radius: sage-border(radius-large);
+  height: sage-spacing(xs);
+  border-radius: sage-border(radius-small);
   background-color: sage-color(grey, 300);
 
   .sage-modal--fullscreen & {
@@ -32,7 +32,7 @@
   transform-origin: center left;
   height: 100%;
   background-color: var(--progress-bar-value-color, sage-color(sage, 500));
-  border-radius: sage-border(radius-large);
+  border-radius: sage-border(radius-small);
   animation: 3s sage-progress-bar--slide ease;
 }
 
