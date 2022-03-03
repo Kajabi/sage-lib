@@ -1,0 +1,46 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: sage-assets
+  description: The assets package for the Sage Design System
+  tags:
+    - assets
+    - fonts
+    - scss
+    - icons
+  links:
+    - url: https://sage-lib-sassdocs.herokuapp.com/
+      title: SassDocs Site
+      icon: dashboard
+  annotations:
+    github.com/project-slug: Kajabi/sage-lib
+    backstage.io/source-location: url:https://github.com/Kajabi/sage-lib/tree/develop/packages/sage-assets/
+spec:
+  type: library
+  lifecycle: production
+  owner: user-experience
+  system: sage
+  subcomponentOf: sage-lib
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: sage-sassdocs-site
+  description: The public-facing sassdocs site for Sage
+  tags:
+    - sassdocs
+    - scss
+    - sass
+  links:
+    - url: https://sage-lib-sassdocs.herokuapp.com/
+      title: SassDocs Site
+      icon: dashboard
+  annotations:
+    github.com/project-slug: Kajabi/sage-lib
+    backstage.io/source-location: url:https://github.com/Kajabi/sage-lib/tree/develop/packages/sage-assets/
+spec:
+  type: website
+  lifecycle: production
+  owner: user-experience
+  system: sage
+  subcomponentOf: sage-assets

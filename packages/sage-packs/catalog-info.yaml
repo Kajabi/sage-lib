@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: sage-packs
+  description: The Rails Asset packs with Sage integration.
+  tags:
+    - integration
+    - rails
+  annotations:
+    github.com/project-slug: Kajabi/sage-lib
+    backstage.io/source-location: url:https://github.com/Kajabi/sage-lib/tree/develop/packages/sage-packs/
+spec:
+  type: library
+  lifecycle: production
+  owner: user-experience
+  system: sage
+  subcomponentOf: sage-lib

@@ -1,0 +1,54 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: sage
+  description: The Sage Design System
+  tags:
+    - design
+    - ux
+spec:
+  owner: user-experience
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: sage-lib
+  description: The Sage Design System Library
+  tags:
+    - design
+    - ux
+    - javascript
+spec:
+  type: library
+  lifecycle: production
+  owner: user-experience
+  system: sage
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: sage-lib.framework
+  description: The Sage Design System Local Development Env & CI/CD
+  tags:
+    - javascript
+    - lerna
+    - monorepo
+  annotations:
+    github.com/project-slug: Kajabi/sage-lib
+spec:
+  type: tool
+  lifecycle: production
+  owner: user-experience
+  system: sage
+---
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: sage-lib.mono-repo
+spec:
+  targets:
+    - ./docs/catalog-info.yaml
+    - ./packages/sage-assets/catalog-info.yaml
+    - ./packages/sage-packs/catalog-info.yaml
+    - ./packages/sage-react/catalog-info.yaml
+    - ./packages/sage-system/catalog-info.yaml
