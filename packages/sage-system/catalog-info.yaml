@@ -6,7 +6,8 @@ metadata:
   tags:
     - javascript
   annotations:
-    circleci.com/project-slug: github/Kajabi/sage-lib
+    github.com/project-slug: Kajabi/sage-lib
+    backstage.io/source-location: url:https://github.com/Kajabi/sage-lib/tree/develop/packages/sage-react/
 spec:
   type: library
   lifecycle: production

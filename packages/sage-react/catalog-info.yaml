@@ -11,7 +11,8 @@ metadata:
       title: Storybook Site
       icon: dashboard
   annotations:
-    circleci.com/project-slug: github/Kajabi/sage-lib
+    github.com/project-slug: Kajabi/sage-lib
+    backstage.io/source-location: url:https://github.com/Kajabi/sage-lib/tree/develop/packages/sage-react/
 spec:
   type: library
   lifecycle: production
@@ -32,6 +33,9 @@ metadata:
     - url: https://sage-lib-storybook.herokuapp.com/
       title: Storybook Site
       icon: dashboard
+  annotations:
+    github.com/project-slug: Kajabi/sage-lib
+    backstage.io/source-location: url:https://github.com/Kajabi/sage-lib/tree/develop/packages/sage-react/
 spec:
   type: website
   lifecycle: production
