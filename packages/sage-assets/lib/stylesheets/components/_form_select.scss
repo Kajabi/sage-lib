@@ -16,6 +16,11 @@ $-select-filled-top-padding: rem(4.4px);
 $-select-height: rem(40px);
 $-select-padding-x: sage-spacing(sm);
 $-select-margin-label: rem(6px);
+$-select-arrow-font-size: rem(24px);
+$-select-arrow-position: calc(100% - #{$-select-height});
+$-select-arrow-position-inverse: calc(100% - #{$-select-arrow-font-size + $-select-margin-label});
+$-select-arrow-position-with-message: calc(100% - #{$-select-height + $-select-arrow-font-size});
+$-select-arrow-position-inverse-with-message: calc(100% - #{$-select-height + $-select-margin-label * 2});
 
 .sage-select {
   @include sage-form-field-group;
@@ -30,7 +35,7 @@ $-select-margin-label: rem(6px);
 
 .sage-select__arrow::before {
   @include sage-icon-base(down-small);
-  @include position(45%, sage-spacing(sm), unset, unset);
+  @include position($-select-arrow-position, sage-spacing(sm), unset, unset);
 
   position: absolute;
   align-items: center;
@@ -38,8 +43,6 @@ $-select-margin-label: rem(6px);
   font-size: rem(24px);
   color: sage-color(grey, 500);
   transition: 0.2s color ease;
-
-  
 }
 
 .sage-select__field {
@@ -62,6 +65,13 @@ $-select-margin-label: rem(6px);
 
   .sage-select--value-selected & {
     color: $-select-color-default;
+  }
+
+  .sage-select--value-selected &:not(:disabled) + .sage-select__arrow::before {
+    @include sage-icon-base(up-small);
+    @include position($-select-arrow-position-inverse, sage-spacing(sm), unset, unset);
+
+    font-size: $-select-arrow-font-size;
   }
 
   .sage-form-field--error & {
@@ -106,13 +116,14 @@ $-select-margin-label: rem(6px);
   @include sage-form-field-message;
 
   + .sage-select__arrow::before {
-    @include position(31%, sage-spacing(sm), unset, unset);
+    @include position($-select-arrow-position-with-message, sage-spacing(sm), unset, unset);
   }
 
   .sage-select--value-selected & + .sage-select__arrow::before {
     @include sage-icon-base(up-small);
-    @include position(41%, sage-spacing(sm), unset, unset);
-    font-size: rem(24px);
+    @include position($-select-arrow-position-inverse-with-message, sage-spacing(sm), unset, unset);
+
+    font-size: $-select-arrow-font-size;
   }
 }
 
