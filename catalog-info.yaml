@@ -34,11 +34,11 @@ metadata:
     - lerna
     - monorepo
   annotations:
-    circleci.com/project-slug: github/Kajabi/sage-lib
+    github.com/project-slug: Kajabi/sage-lib
 spec:
   type: tool
   lifecycle: production
-  owner: developer-experience
+  owner: user-experience
   system: sage
 ---
 apiVersion: backstage.io/v1alpha1
