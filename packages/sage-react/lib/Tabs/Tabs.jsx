@@ -55,12 +55,14 @@ export const Tabs = ({
           id,
           label,
           tabDetails,
+          tabChoiceCustomClass,
           tabChoiceIcon,
           tabChoiceIconAlignment,
           tabChoiceType,
           subtext
         }) => (
           <TabsItem
+            className={tabChoiceCustomClass}
             disabled={disabled}
             icon={tabChoiceIcon}
             isActive={id === activeId}
