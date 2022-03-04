@@ -5,6 +5,14 @@
   label: "Cloning product"
 } %>
 
+<h2 class="t-sage-heading-6">Default with Percentage</h2>
+<%= sage_component SageProgressBar, {
+  color: SageTokens::COLOR_PALETTE[:PRIMARY_500],
+  display_percent: true,
+  percent: 70,
+  label: "Cloning product"
+} %>
+
 <h2 class="t-sage-heading-6">Custom color</h2>
 <%= sage_component SageProgressBar, {
   color: "#4edbe6",
