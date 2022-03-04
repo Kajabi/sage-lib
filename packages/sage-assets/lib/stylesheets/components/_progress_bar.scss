@@ -4,6 +4,7 @@
 /// @group sage
 ////
 
+$-progress-bar-height: sage-spacing(xs);
 
 @keyframes sage-progress-bar--slide {
   from {
@@ -15,10 +16,17 @@
 }
 
 .sage-progress-bar {
-  height: sage-spacing(xs);
+  height: $-progress-bar-height;
+}
+
+.sage-progress-bar--has-percentage {
+  display: flex;
+  align-items: center;
 }
 
 .sage-progress-bar__background {
+  height: $-progress-bar-height;
+  width: 100%;
   border-radius: sage-border(radius-small);
   background-color: sage-color(grey, 200);
 }
@@ -34,4 +42,10 @@
 .sage-progress-bar__element {
   @include visually-hidden;
   height: 0;
+}
+
+.sage-progress-bar__percent {
+  @extend %t-sage-body-small-semi;
+
+  margin-left: rem(12px);
 }

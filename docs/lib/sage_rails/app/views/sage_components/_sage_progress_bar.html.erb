@@ -5,11 +5,14 @@ color = component.color || SageTokens::COLOR_PALETTE[:SAGE_500]
 %>
 
 <div
-  class="sage-progress-bar <%= component.generated_css_classes %>"
+  class="
+    sage-progress-bar <%= component.generated_css_classes %>
+    <%= "sage-progress-bar--has-percentage" if component.display_percent %>
+  "
   data-js-tooltip="<%= content %>"
   <%= component.generated_html_attributes.html_safe %>
 >
-  <div class="sage-progress-bar__background">
+	<div class="sage-progress-bar__background">
     <progress
       class="sage-progress-bar__element"
       aria-valuemax="100"
@@ -24,6 +27,6 @@ color = component.color || SageTokens::COLOR_PALETTE[:SAGE_500]
     <div class="sage-progress-bar__value" style="--progress-bar-value-color: <%= color %>; width: <%= component.percent %>%;"></div>
   </div>
   <% if component.display_percent %>
-    <span><%= component.percent %></span>
+    <span class="sage-progress-bar__percent"><%= component.percent %>%</span>
   <% end %>
 </div>
