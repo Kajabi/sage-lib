@@ -97,6 +97,8 @@ RichContent.args = {
   tabs: [
     {
       id: 'tab-1',
+      tabChoiceCustomClass: 'testing-this',
+      content: 'Content 1',
       tabDetails: (
         <>
           <h4>Tab 1 content.</h4>
@@ -106,6 +108,7 @@ RichContent.args = {
     },
     {
       id: 'tab-2',
+      content: 'Content 2',
       tabDetails: (
         <>
           <h4>Tab 2 content.</h4>
@@ -115,6 +118,7 @@ RichContent.args = {
     },
     {
       id: 'tab-3',
+      content: 'Content 3',
       tabDetails: (
         <>
           <h4>Tab 3 content.</h4>
@@ -128,6 +132,7 @@ RichContent.args = {
 
 export const IconAlignment = () => {
   const tabChoiceSettings = {
+    tabChoiceCustomClass: 'testing-this',
     tabChoiceType: Tabs.Item.CHOICE_TYPES.RADIO,
     tabChoiceIcon: null,
     tabChoiceIconAlignment: Tabs.Item.ICON_ALIGNMENTS.START,

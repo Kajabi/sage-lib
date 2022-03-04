@@ -143,6 +143,7 @@ export const LinkText = () => (
 export const CustomContent = () => (
   <div style={{ maxWidth: '360px', display: 'flex' }}>
     <Choice
+      customContentClassName="my-test-class"
       href="https://example.com"
     >
       <Avatar initials="BH" />

@@ -30,6 +30,7 @@ export const tabsItemsPropTypes = PropTypes.shape({
   disabled: PropTypes.bool,
   label: PropTypes.string.isRequired,
   subtext: PropTypes.string,
+  tabChoiceCustomClass: PropTypes.string,
   tabChoiceIcon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),
   tabChoicIconAlignment: PropTypes.oneOf(Object.values(CHOICE_ICON_ALIGNMENTS)),
   tabChoiceType: PropTypes.oneOf(Object.values(CHOICE_TYPES)),

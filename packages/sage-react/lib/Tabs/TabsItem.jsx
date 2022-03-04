@@ -83,7 +83,7 @@ export const TabsItem = ({
               {graphic}
             </span>
           )}
-          <span className={`sage-choice__content ${children && 'sage-choice__content--custom'}`}>
+          <span className={`sage-choice__content ${className} ${children && 'sage-choice__content--custom'}`}>
             {label && (
               <em className="sage-choice__text">
                 {label}
