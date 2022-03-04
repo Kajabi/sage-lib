@@ -16,6 +16,9 @@
 
 .sage-progress-bar {
   height: sage-spacing(xs);
+}
+
+.sage-progress-bar__background {
   border-radius: sage-border(radius-small);
   background-color: sage-color(grey, 200);
 }
