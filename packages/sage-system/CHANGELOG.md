@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.18.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.18.0...@kajabi/sage-system@0.18.1) (2022-03-07)
+
+
+### Bug Fixes
+
+* adding annotations ([a664f44](https://github.com/Kajabi/sage-lib/commit/a664f44b45d2a6579dc33d6c1cae58ef7e685a66))
+
+
+
+
+
 # [0.18.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.17.0...@kajabi/sage-system@0.18.0) (2022-02-24)
 
 
