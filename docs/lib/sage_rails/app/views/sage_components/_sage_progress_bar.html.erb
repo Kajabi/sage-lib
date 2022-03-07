@@ -11,6 +11,7 @@ color = component.color || SageTokens::COLOR_PALETTE[:SAGE_500]
   "
   <% if !component.disable_tooltip %>
     data-js-tooltip="<%= content %>"
+    data-js-tooltip-position="<%= component.tooltip_position %>"
   <% end %>
   <%= component.generated_html_attributes.html_safe %>
 >
