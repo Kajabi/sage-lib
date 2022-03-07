@@ -9,6 +9,7 @@ export const TabsItem = ({
   alignCenter,
   children,
   className,
+  customContentClassName,
   disabled,
   graphic,
   label,
@@ -83,7 +84,7 @@ export const TabsItem = ({
               {graphic}
             </span>
           )}
-          <span className={`sage-choice__content ${className} ${children && 'sage-choice__content--custom'}`}>
+          <span className={`sage-choice__content ${customContentClassName} ${children && 'sage-choice__content--custom'}`}>
             {label && (
               <em className="sage-choice__text">
                 {label}
@@ -115,6 +116,7 @@ TabsItem.defaultProps = {
   alignCenter: false,
   children: null,
   className: null,
+  customContentClassName: null,
   disabled: false,
   graphic: null,
   icon: null,
@@ -131,6 +133,7 @@ TabsItem.propTypes = {
   alignCenter: PropTypes.bool,
   children: PropTypes.node,
   className: PropTypes.string,
+  customContentClassName: PropTypes.string,
   disabled: PropTypes.bool,
   graphic: PropTypes.node,
   icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),

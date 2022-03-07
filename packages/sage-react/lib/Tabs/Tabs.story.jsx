@@ -97,8 +97,8 @@ RichContent.args = {
   tabs: [
     {
       id: 'tab-1',
-      tabChoiceCustomClass: 'testing-this',
       content: 'Content 1',
+      tabChoiceCustomClass: 'my-custom-tab-choice-class',
       tabDetails: (
         <>
           <h4>Tab 1 content.</h4>
@@ -109,6 +109,7 @@ RichContent.args = {
     {
       id: 'tab-2',
       content: 'Content 2',
+      tabChoiceCustomClass: 'my-custom-tab-choice-class',
       tabDetails: (
         <>
           <h4>Tab 2 content.</h4>
@@ -119,6 +120,7 @@ RichContent.args = {
     {
       id: 'tab-3',
       content: 'Content 3',
+      tabChoiceCustomClass: 'my-custom-tab-choice-class',
       tabDetails: (
         <>
           <h4>Tab 3 content.</h4>
