@@ -62,7 +62,6 @@ export const Tabs = ({
           subtext
         }) => (
           <TabsItem
-            className={tabChoiceCustomClass}
             disabled={disabled}
             icon={tabChoiceIcon}
             isActive={id === activeId}
@@ -72,6 +71,7 @@ export const Tabs = ({
             panelId={id}
             label={label}
             subtext={subtext}
+            customContentClassName={tabChoiceCustomClass}
             type={tabChoiceType}
             verticalAlignIcon={tabChoiceIconAlignment}
           >
