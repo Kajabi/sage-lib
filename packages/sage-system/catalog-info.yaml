@@ -1,0 +1,16 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: sage-system
+  description: System-level JavaScript for the Sage Design System
+  tags:
+    - javascript
+  annotations:
+    github.com/project-slug: Kajabi/sage-lib
+    backstage.io/source-location: url:https://github.com/Kajabi/sage-lib/tree/develop/packages/sage-react/
+spec:
+  type: library
+  lifecycle: production
+  owner: user-experience
+  system: sage
+  subcomponentOf: sage-lib
