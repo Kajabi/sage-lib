@@ -5,6 +5,14 @@
   label: "Cloning product"
 } %>
 
+<h2 class="t-sage-heading-6">Default with Disabled Tooltip</h2>
+<%= sage_component SageProgressBar, {
+  color: SageTokens::COLOR_PALETTE[:PRIMARY_500],
+  disable_tooltip: true,
+  percent: 70,
+  label: "Cloning product"
+} %>
+
 <h2 class="t-sage-heading-6">Default with Percentage</h2>
 <%= sage_component SageProgressBar, {
   color: SageTokens::COLOR_PALETTE[:PRIMARY_500],

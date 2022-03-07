@@ -9,7 +9,9 @@ color = component.color || SageTokens::COLOR_PALETTE[:SAGE_500]
     sage-progress-bar <%= component.generated_css_classes %>
     <%= "sage-progress-bar--has-percentage" if component.display_percent %>
   "
-  data-js-tooltip="<%= content %>"
+  <% if !component.disable_tooltip %>
+    data-js-tooltip="<%= content %>"
+  <% end %>
   <%= component.generated_html_attributes.html_safe %>
 >
 	<div class="sage-progress-bar__background">
