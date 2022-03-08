@@ -171,10 +171,17 @@ body:not(.sage-excluded),
 
 .t-sage--align-center {
   text-align: center;
+  justify-items: center;
+}
+
+.t-sage--align-left {
+  text-align: left;
+  justify-items: flex-start;
 }
 
 .t-sage--align-right {
   text-align: right;
+  justify-items: flex-end;
 }
 
 .t-sage--align-justify {

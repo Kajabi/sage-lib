@@ -1,0 +1,33 @@
+<%= content_for :heading do %>
+<%= md(%(
+# Alignment
+<p class="docs-heading__lead">Alignment utilities will assist with general alignment.</p>
+)) %>
+<% end %>
+
+<%= md("
+## Left alignment", use_sage_type: true) %>
+<%= sage_component SageAlert, {
+  color: "warning",
+  desc: "TODO: create left alignment demo",
+  icon_name: "sage-icon-warning",
+  small: true
+} %>
+<hr />
+<%= md("
+## Center alignment", use_sage_type: true) %>
+<%= sage_component SageAlert, {
+  color: "warning",
+  desc: "TODO: create center alignment demo",
+  icon_name: "sage-icon-warning",
+  small: true
+} %>
+<hr />
+<%= md("
+## Right alignment", use_sage_type: true) %>
+<%= sage_component SageAlert, {
+  color: "warning",
+  desc: "TODO: create right alignment demo",
+  icon_name: "sage-icon-warning",
+  small: true
+} %>
