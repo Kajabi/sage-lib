@@ -1,4 +1,10 @@
-<h3>Default</h3>
-<%= sage_component SageTag, {
-  
-} %>
+<%= sage_component SagePanelBlock, {} do %>
+	<h3 class="t-sage-heading-6">Default</h3>
+	<%= sage_component SageTag, {
+		value: "Label"
+	} %>
+
+	<%= sage_component SageTag, {
+		value: "Test"
+	} %>
+<% end %>
