@@ -4,7 +4,6 @@ import classnames from 'classnames';
 import { SageTokens } from '../configs';
 
 export const ProgressBar = ({
-  children,
   className,
   color,
   label,
@@ -16,6 +15,8 @@ export const ProgressBar = ({
     className,
   );
 
+  const displayText = label ? `${label}: ${percent}%&nbsp;progress` : '';
+
   return (
     <div className={classNames} {...rest}>
       <progress
@@ -25,11 +26,9 @@ export const ProgressBar = ({
         aria-valuemin="0"
         value={String(percent)}
         aria-valuenow={percent}
-        aria-valuetext={children}
+        aria-valuetext={displayText}
       >
-        {label && (
-          `${label}: ${percent}%&nbsp;progress`
-        )}
+        {displayText}
       </progress>
       <div className="sage-progress-bar__value" style={{ width: `${percent}%`, '--progress-bar-value-color': color }} />
     </div>
@@ -39,17 +38,15 @@ export const ProgressBar = ({
 ProgressBar.COLORS = SageTokens.COLOR_PALETTE;
 
 ProgressBar.defaultProps = {
+  className: null,
   color: ProgressBar.COLORS.PRIMARY_300,
   label: null,
   percent: null,
-  className: null,
-  children: null,
 };
 
 ProgressBar.propTypes = {
+  className: PropTypes.string,
   color: PropTypes.oneOf(Object.values(ProgressBar.COLORS)),
   label: PropTypes.string,
   percent: PropTypes.string,
-  className: PropTypes.string,
-  children: PropTypes.node,
 };
