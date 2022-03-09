@@ -16,12 +16,40 @@
 <hr />
 <%= md("
 ## Center alignment", use_sage_type: true) %>
-<%= sage_component SageAlert, {
-  color: "warning",
-  desc: "TODO: create center alignment demo",
-  icon_name: "sage-icon-warning",
-  small: true
-} %>
+<%= sage_component SageTabs, {
+    id: "example-tabs-rich",
+    css_classes: "u-rich-choice-card",
+    items: [
+      {
+        target: "item1",
+        custom_content_class: "t-sage--align-center",
+        content: %(
+          #{sage_component(SageAvatar, { initials: 'PS' })}
+          #{sage_component(SageCardBlock, { css_classes: "t-sage--align-center", content: %(
+            <h4>User A</h4>
+            <p>Custom content here...</p>
+          ).html_safe})}
+          <i class="sage-icon-check-circle-lg t-sage--color-primary u-rich-choice-card__option-checkmark" aria-label="Selected"></i>
+          <input type="hidden" id="item1" name="item1" value="User A" />
+        ).html_safe,
+      },
+      {
+        target: "item2",
+        custom_content_class: "t-sage--align-center",
+        content: %(
+          #{sage_component(SageAvatar, { initials: 'JW' })}
+          #{sage_component(SageCardBlock, { css_classes: "t-sage--align-center", content: %(
+            <h4>User B</h4>
+            <p>Custom content here...</p>
+          ).html_safe})}
+          <i class="sage-icon-check-circle-lg t-sage--color-primary u-rich-choice-card__option-checkmark" aria-label="Selected"></i>
+          <input type="hidden" id="item2" name="item2" value="User B" />
+        ).html_safe,
+      },
+    ],
+    style: "choice",
+  }
+%>
 <hr />
 <%= md("
 ## Right alignment", use_sage_type: true) %>

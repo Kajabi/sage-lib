@@ -305,10 +305,10 @@ document.addEventListener("sage.tabs.change", function(evt) {
       items: [
         {
           target: "item1",
-          custom_content_class: "my-custom-tab-choice-class",
+          custom_content_class: "my-custom-tab-choice-class t-sage--align-center",
           content: %(
             #{sage_component(SageAvatar, { initials: 'PS' })}
-            #{sage_component(SageCardBlock, { content: %(
+            #{sage_component(SageCardBlock, { css_classes: "t-sage--align-center", content: %(
               <h4>User A</h4>
               <p>Custom content here...</p>
             ).html_safe})}
@@ -318,10 +318,10 @@ document.addEventListener("sage.tabs.change", function(evt) {
         },
         {
           target: "item2",
-          custom_content_class: "my-custom-tab-choice-class",
+          custom_content_class: "my-custom-tab-choice-class t-sage--align-center",
           content: %(
             #{sage_component(SageAvatar, { initials: 'JW' })}
-            #{sage_component(SageCardBlock, { content: %(
+            #{sage_component(SageCardBlock, { css_classes: "t-sage--align-center", content: %(
               <h4>User B</h4>
               <p>Custom content here...</p>
             ).html_safe})}
