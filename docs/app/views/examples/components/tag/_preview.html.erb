@@ -2,9 +2,27 @@
 	<h3 class="t-sage-heading-6">Default</h3>
 	<%= sage_component SageTag, {
 		value: "Label"
-	} %>
+	} do %>
+		<%= content_for :sage_tag_action do %>
+			<%= sage_component SageButton, {
+				value: "Remove",
+				style: "secondary",
+				subtle: true,
+				icon: { name: "remove", style: "only" }
+			} %>
+		<% end %>
+	<% end %>
 
 	<%= sage_component SageTag, {
 		value: "Test"
-	} %>
+	} do %>
+		<%= content_for :sage_tag_action do %>
+			<%= sage_component SageButton, {
+				value: "Remove",
+				style: "secondary",
+				subtle: true,
+				icon: { name: "remove", style: "only" }
+			} %>
+		<% end %>
+	<% end %>
 <% end %>
