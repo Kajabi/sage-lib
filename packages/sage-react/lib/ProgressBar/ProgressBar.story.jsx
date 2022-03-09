@@ -6,8 +6,9 @@ export default {
   title: 'Sage/ProgressBar',
   component: ProgressBar,
   args: {
-    color: ProgressBar.COLORS.PRIMARY,
-    label: 'What this dot means',
+    color: ProgressBar.COLORS.PRIMARY_300,
+    label: 'Cloning product',
+    percent: '44',
   },
   argTypes: {
     ...selectArgs({
