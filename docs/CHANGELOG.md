@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.50.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.50.1...@kajabi/sage@4.50.2) (2022-03-09)
+
+
+### Bug Fixes
+
+* **icons:** add new names to sage_tokens.rb (rails) ([dcc4427](https://github.com/Kajabi/sage-lib/commit/dcc4427842ab02e5a635e4f7e183801e372abc96))
+
+
+
+
+
 ## [4.50.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.50.0...@kajabi/sage@4.50.1) (2022-03-07)
 
 

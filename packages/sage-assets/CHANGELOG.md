@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.72.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.72.0...@kajabi/sage-assets@0.72.1) (2022-03-09)
+
+
+### Bug Fixes
+
+* **icons:** add new unicodes to tokens stylesheet ([8b70289](https://github.com/Kajabi/sage-lib/commit/8b70289715d6fcde40e265a70286cd569f14f49f))
+* **icons:** update CDN version to match new directory ([a97e23b](https://github.com/Kajabi/sage-lib/commit/a97e23b2b6955b8121d79966f2c688e0f9694560))
+
+
+
+
+
 # [0.72.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.71.1...@kajabi/sage-assets@0.72.0) (2022-03-07)
 
 
