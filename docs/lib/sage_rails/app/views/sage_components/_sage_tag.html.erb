@@ -3,5 +3,10 @@
   tabindex="0"
   <%= component.generated_html_attributes.html_safe %>
 >
-  <%= component.value %>
+  <span class="sage-tag__value"><%= component.value %></span>
+  <% if content_for? :sage_tag_action %>
+    <span class="sage-tag__remove-btn">
+      <%= content_for :sage_tag_action %>   
+    </span>
+  <% end %>
 </span>
