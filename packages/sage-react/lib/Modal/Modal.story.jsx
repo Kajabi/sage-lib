@@ -70,6 +70,60 @@ DefaultBody.propTypes = {
   onExit: PropTypes.func.isRequired
 };
 
+const FullscreenBody = ({ onExit }) => (
+  <>
+    <Modal.Header
+      title="Example Sage Modal"
+      popover={{
+        title: 'Example popover title',
+        link: '#',
+        linkText: 'Learn more about modals',
+        content: 'Popover content'
+      }}
+      aside={(
+        <Button
+          color={Button.COLORS.SECONDARY}
+          iconOnly={true}
+          icon={SageTokens.ICONS.REMOVE}
+          onClick={onExit}
+          subtle={true}
+        >
+          Menu
+        </Button>
+      )}
+    />
+    <Modal.Body>
+      <p className={SageClassnames.TYPE.BODY}>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua.
+      </p>
+    </Modal.Body>
+    <Modal.Footer>
+      <Button
+        color={Button.COLORS.SECONDARY}
+        icon={SageTokens.ICONS.CHECK}
+        iconPosition={Button.ICON_POSITIONS.LEFT}
+        onClick={onExit}
+      >
+        Take An Action
+      </Button>
+      <Button
+        color={Button.COLORS.PRIMARY}
+        icon={SageTokens.ICONS.CHECK}
+        iconPosition={Button.ICON_POSITIONS.LEFT}
+        onClick={onExit}
+      >
+        Take An Action
+      </Button>
+    </Modal.Footer>
+  </>
+);
+
+FullscreenBody.propTypes = {
+  onExit: PropTypes.func.isRequired
+};
+
 export default {
   title: 'Sage/Modal',
   component: Modal,
@@ -138,6 +192,34 @@ export const Wired = (args) => {
         {...args}
       >
         <DefaultBody onExit={onExit} />
+      </Modal>
+    </>
+  );
+};
+
+export const Fullscreen = (args) => {
+  const [active, setActive] = useState(false);
+
+  const onExit = () => {
+    setActive(false);
+  };
+
+  return (
+    <>
+      <Button
+        color={Button.COLORS.PRIMARY}
+        onClick={() => setActive(true)}
+      >
+        Take An Action
+      </Button>
+      <Modal
+        active={active}
+        animation={{ direction: Modal.ANIMATION_DIRECTIONS.BOTTOM }}
+        fullScreen={true}
+        onExit={onExit}
+        {...args}
+      >
+        <FullscreenBody onExit={onExit} />
       </Modal>
     </>
   );

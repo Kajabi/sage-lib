@@ -59,6 +59,10 @@
         <%= content_for :sage_header_indicator %>
       <% end %>
     </div>
+
+    <% if content_for?(:sage_header_progress_bar) %>
+      <%= content_for :sage_header_progress_bar %>
+    <% end %>
   </header>
 <% else %>
   <% if content_for?(:sage_header_aside) %>
