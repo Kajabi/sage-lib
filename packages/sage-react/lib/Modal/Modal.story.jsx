@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { Button } from '../Button';
+import { ProgressBar } from '../ProgressBar';
 import { Icon } from '../Icon';
 import { SageTokens, SageClassnames } from '../configs';
 import { disableArgs } from '../story-support/helpers';
@@ -90,6 +91,13 @@ const FullscreenBody = ({ onExit }) => (
         >
           Menu
         </Button>
+      )}
+      headerProgressBar={(
+        <ProgressBar
+          color={ProgressBar.COLORS.PRIMARY_300}
+          label="Cloning product"
+          percent="44"
+        />
       )}
     />
     <Modal.Body>
