@@ -4,7 +4,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { ProgressBar } from './ProgressBar';
 
-describe('Sage ProgressCard', () => {
+describe('Sage ProgressBar', () => {
   let component,
     defaultProps;
 
