@@ -6,16 +6,28 @@
 <% end %>
 
 <%= md("
-## Left alignment", use_sage_type: true) %>
-<%= sage_component SageAlert, {
-  color: "warning",
-  desc: "TODO: create left alignment demo",
-  icon_name: "sage-icon-warning",
-  small: true
-} %>
+## Left alignment
+Most elements in the Sage Design System are left aligned by default. But when needed `.t-sage--align-left` left aligns text", use_sage_type: true) %>
+<%= sage_component SagePanel, {} do %>
+  <%= sage_component SagePanelStack, {} do %>
+    <%= sage_component SageCard, {} do %>
+      <%= sage_component SageCardRow, { grid_template: "et" } do %>
+        <i class="sage-icon-video-on"></i>
+        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+      <% end %>
+    <% end %>
+    <%= sage_component SageCard, {} do %>
+      <%= sage_component SageCardRow, { grid_template: "et" } do %>
+        <i class="sage-icon-video-on"></i>
+        <span class="t-sage--align-left">Morbi rhoncus mauris ut turpis gravida bibendum.</span>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>
 <hr />
 <%= md("
-## Center alignment", use_sage_type: true) %>
+## Center alignment
+`.t-sage--align-center` is used to center-align text.", use_sage_type: true) %>
 <%= sage_component SageTabs, {
     id: "example-tabs-rich",
     css_classes: "u-rich-choice-card",
@@ -52,10 +64,22 @@
 %>
 <hr />
 <%= md("
-## Right alignment", use_sage_type: true) %>
-<%= sage_component SageAlert, {
-  color: "warning",
-  desc: "TODO: create right alignment demo",
-  icon_name: "sage-icon-warning",
-  small: true
-} %>
+## Right alignment
+`.t-sage--align-right` is used to right-align text.", use_sage_type: true) %>
+
+<%= sage_component SagePanel, {} do %>
+  <%= sage_component SagePanelStack, {} do %>
+    <%= sage_component SageCard, {} do %>
+      <%= sage_component SageCardRow, { grid_template: "et" } do %>
+        <i class="sage-icon-video-on"></i>
+        <span class="t-sage--align-right">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+      <% end %>
+    <% end %>
+    <%= sage_component SageCard, {} do %>
+      <%= sage_component SageCardRow, { grid_template: "et" } do %>
+        <i class="sage-icon-video-on"></i>
+        <span class="t-sage--align-right">Morbi rhoncus mauris ut turpis gravida bibendum.</span>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>
