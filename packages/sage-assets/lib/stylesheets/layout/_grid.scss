@@ -92,9 +92,9 @@ $-grid-breakpoint-xl: sage-breakpoint(xl-min);
 }
 
 .sage-col {
-  max-width: 100%;
   flex-grow: 1;
   flex-basis: 0;
+  max-width: 100%;
   padding: 0 calc(#{$-grid-gap} / 2);
 }
 
