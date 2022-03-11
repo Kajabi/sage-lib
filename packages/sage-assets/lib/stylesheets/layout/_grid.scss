@@ -98,6 +98,13 @@ $-grid-breakpoint-xl: sage-breakpoint(xl-min);
   padding: 0 calc(#{$-grid-gap} / 2);
 }
 
+.sage-col {
+  max-width: 100%;
+  flex-grow: 1;
+  flex-basis: 0;
+  padding: 0 calc(#{$-grid-gap} / 2);
+}
+
 @for $i from 1 through $-grid-num-columns {
   .sage-col-#{$i},
   .sage-col--sm-#{$i},
