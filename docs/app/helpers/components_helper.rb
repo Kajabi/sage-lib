@@ -742,6 +742,7 @@ module ComponentsHelper
         rails: "todo",
         react: "todo",
         a11y: "todo",
+        react_component_slug: "sage-tag--default",
       },
       {
         title: "transaction_card",

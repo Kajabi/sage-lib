@@ -58,6 +58,7 @@ export {
 export { Sortable } from './Sortable';
 export { StatBox } from './StatBox';
 export { Table } from './Table';
+export { Tag } from './Tag';
 export { Textarea } from './Textarea';
 export { Toast } from './Toast';
 export {
