@@ -1,1 +1,17 @@
-
+<tr>
+  <td><%= md('`value`') %><%= sage_component SageLabel, { color: "published", value: "required" } %></td>
+  <td><%= md('Provides a label for the tag.') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td colspan="4"><strong>Content Slots</strong></td>
+</tr>
+<tr>
+  <td><%= md('`:sage_tag_action`') %></td>
+  <td><%= md('
+  Allows a custom slot for a Button or other element.
+  ') %></td>
+  <td></td>
+  <td></td>
+</tr>
