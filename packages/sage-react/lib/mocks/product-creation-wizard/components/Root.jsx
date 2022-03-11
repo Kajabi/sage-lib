@@ -111,10 +111,10 @@ export const Root = () => {
             https://kajabi.atlassian.net/browse/SAGE-329
           */}
           <Grid.Row>
-            <Grid.Col size={4}>
+            <Grid.Col size={4} small={12} medium={5} large={4}>
               {renderStep()}
             </Grid.Col>
-            <Grid.Col size={8}>
+            <Grid.Col size={8} small={0} medium={7} large={8}>
               {/* TODO: Dev to add actual graphic SVG here  with live edit synced */}
               <img
                 src="//source.unsplash.com/random/832x575"
