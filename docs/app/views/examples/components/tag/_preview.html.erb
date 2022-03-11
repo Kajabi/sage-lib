@@ -12,17 +12,4 @@
 			} %>
 		<% end %>
 	<% end %>
-
-	<%= sage_component SageTag, {
-		value: "Test"
-	} do %>
-		<%= content_for :sage_tag_action do %>
-			<%= sage_component SageButton, {
-				value: "Remove",
-				style: "secondary",
-				subtle: true,
-				icon: { name: "remove", style: "only" }
-			} %>
-		<% end %>
-	<% end %>
 <% end %>
