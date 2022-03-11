@@ -21,15 +21,21 @@
 }
 
 .sage-tag__remove-btn {
+  display: inline-flex;
   margin-left: rem(6px);
+
   .sage-btn--subtle {
     width: auto;
     height: auto;
 
-    &::after {
+    &::before {
       padding: 0;
     }
-  }
 
+    &:not(:focus):hover {
+      color: inherit;
+      background-color: inherit;
+    }
+  }
 }
 
