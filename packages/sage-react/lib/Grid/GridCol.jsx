@@ -17,6 +17,7 @@ export const GridCol = ({
   const classNames = classnames(
     className,
     {
+      'sage-col': !size,
       [`sage-col-${size}`]: size,
       [`sage-col--sm-${small}`]: small,
       [`sage-col--md-${medium}`]: medium,

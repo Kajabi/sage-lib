@@ -1,4 +1,5 @@
 <div class="
+  <%= "sage-col" if !component.size %>
   <%= "sage-col-#{component.size}" if component.size %>
   sage-col--<%= component.breakpoint %>-<%= component.size %> <%= component.generated_css_classes %>
   <%= "sage-col--sm-#{component.small}" if component.small%>
