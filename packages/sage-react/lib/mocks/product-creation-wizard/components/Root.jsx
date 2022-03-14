@@ -114,7 +114,7 @@ export const Root = () => {
             <Grid.Col size={4} small={12} medium={5} large={4}>
               {renderStep()}
             </Grid.Col>
-            <Grid.Col variableWidth='225px'>
+            <Grid.Col variableWidth="225px">
               {/* TODO: Dev to add actual graphic SVG here  with live edit synced */}
               <img
                 src="//source.unsplash.com/random/832x575"
