@@ -25,7 +25,7 @@ export default {
         Remove
       </Button>
     ),
-    label: 'Label'
+    value: 'Label'
   }
 };
 const Template = (args) => <Tag {...args} />;
