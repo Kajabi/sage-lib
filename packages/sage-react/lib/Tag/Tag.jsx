@@ -4,14 +4,13 @@ import classnames from 'classnames';
 
 export const Tag = ({
   action,
-  className, 
-  value 
+  className,
+  value
 }) => {
   const classNames = classnames('sage-tag', className);
 
   return (
     <span
-      tabIndex="0"
       className={classNames}
     >
       <span className="sage-tag__value">
@@ -29,7 +28,6 @@ export const Tag = ({
 Tag.defaultProps = {
   action: null,
   className: null,
-  value: 'Label'
 };
 
 Tag.propTypes = {
