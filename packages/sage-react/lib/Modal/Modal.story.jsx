@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { Button } from '../Button';
+import { ProgressBar } from '../ProgressBar';
 import { Icon } from '../Icon';
 import { SageTokens, SageClassnames } from '../configs';
 import { disableArgs } from '../story-support/helpers';
@@ -67,6 +68,67 @@ const DefaultBody = ({ onExit }) => (
 );
 
 DefaultBody.propTypes = {
+  onExit: PropTypes.func.isRequired
+};
+
+const FullscreenBody = ({ onExit }) => (
+  <>
+    <Modal.Header
+      title="Example Sage Modal"
+      popover={{
+        title: 'Example popover title',
+        link: '#',
+        linkText: 'Learn more about modals',
+        content: 'Popover content'
+      }}
+      aside={(
+        <Button
+          color={Button.COLORS.SECONDARY}
+          iconOnly={true}
+          icon={SageTokens.ICONS.REMOVE}
+          onClick={onExit}
+          subtle={true}
+        >
+          Menu
+        </Button>
+      )}
+      headerProgressBar={(
+        <ProgressBar
+          color={ProgressBar.COLORS.PRIMARY_300}
+          label="Cloning product"
+          percent="44"
+        />
+      )}
+    />
+    <Modal.Body>
+      <p className={SageClassnames.TYPE.BODY}>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua.
+      </p>
+    </Modal.Body>
+    <Modal.Footer>
+      <Button
+        color={Button.COLORS.SECONDARY}
+        icon={SageTokens.ICONS.CHECK}
+        iconPosition={Button.ICON_POSITIONS.LEFT}
+        onClick={onExit}
+      >
+        Take An Action
+      </Button>
+      <Button
+        color={Button.COLORS.PRIMARY}
+        icon={SageTokens.ICONS.CHECK}
+        iconPosition={Button.ICON_POSITIONS.LEFT}
+        onClick={onExit}
+      >
+        Take An Action
+      </Button>
+    </Modal.Footer>
+  </>
+);
+
+FullscreenBody.propTypes = {
   onExit: PropTypes.func.isRequired
 };
 
@@ -138,6 +200,34 @@ export const Wired = (args) => {
         {...args}
       >
         <DefaultBody onExit={onExit} />
+      </Modal>
+    </>
+  );
+};
+
+export const Fullscreen = (args) => {
+  const [active, setActive] = useState(false);
+
+  const onExit = () => {
+    setActive(false);
+  };
+
+  return (
+    <>
+      <Button
+        color={Button.COLORS.PRIMARY}
+        onClick={() => setActive(true)}
+      >
+        Take An Action
+      </Button>
+      <Modal
+        active={active}
+        animation={{ direction: Modal.ANIMATION_DIRECTIONS.BOTTOM }}
+        fullScreen={true}
+        onExit={onExit}
+        {...args}
+      >
+        <FullscreenBody onExit={onExit} />
       </Modal>
     </>
   );

@@ -19,6 +19,13 @@
   height: rem(6px);
   border-radius: sage-border(radius-large);
   background-color: sage-color(grey, 300);
+
+  .sage-modal--fullscreen & {
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    right: 0;
+  }
 }
 
 .sage-progress-bar__value {
