@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.50.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.50.2...@kajabi/sage@4.50.3) (2022-03-14)
+
+
+### Bug Fixes
+
+* **tabs:** add custom class to choice variation ([42b1eec](https://github.com/Kajabi/sage-lib/commit/42b1eecb7a65762fc5f3961b96599a01b4147503))
+* **tabs:** classname update ([064f332](https://github.com/Kajabi/sage-lib/commit/064f33246c18b06e59b0112c618037fd2ab89ff8))
+
+
+
+
+
 ## [4.50.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.50.1...@kajabi/sage@4.50.2) (2022-03-09)
 
 

@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.83.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.83.2...@kajabi/sage-react@0.83.3) (2022-03-14)
+
+
+### Bug Fixes
+
+* **grid:** update react props to resolve error ([698dc71](https://github.com/Kajabi/sage-lib/commit/698dc71812932d84b87d0cb6193e1f15ae89bb45))
+* **progress-bar:** add progress bar to react ([072d6cf](https://github.com/Kajabi/sage-lib/commit/072d6cf8a623dc0939a34bace19dcd97e4b67be7))
+* **progress-bar:** add spec ([586b509](https://github.com/Kajabi/sage-lib/commit/586b509a7ac05d1383110505ba74d37692a43d88))
+* **progress-bar:** typo ([7b08a76](https://github.com/Kajabi/sage-lib/commit/7b08a76230fb737654cb322628bceac52fb4fcd8))
+* **progress-bar:** updates to react progress bar ([add07d7](https://github.com/Kajabi/sage-lib/commit/add07d703ec030bbed7c1ca2d7f2ec04b04bd209))
+* **progress-bar:** updates to react side ([db4ea2a](https://github.com/Kajabi/sage-lib/commit/db4ea2ac961c02fc375777358b6531339f32a2c6))
+* **tabs:** add custom class to choice variation ([42b1eec](https://github.com/Kajabi/sage-lib/commit/42b1eecb7a65762fc5f3961b96599a01b4147503))
+* **tabs:** updates to custom class ([10cf870](https://github.com/Kajabi/sage-lib/commit/10cf870463376dea40ea6a6447f7be6b745cf8c7))
+
+
+
+
+
 ## [0.83.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.83.1...@kajabi/sage-react@0.83.2) (2022-03-09)
 
 
