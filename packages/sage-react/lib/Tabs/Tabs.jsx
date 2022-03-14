@@ -55,6 +55,7 @@ export const Tabs = ({
           id,
           label,
           tabDetails,
+          tabChoiceCustomClass,
           tabChoiceIcon,
           tabChoiceIconAlignment,
           tabChoiceType,
@@ -70,6 +71,7 @@ export const Tabs = ({
             panelId={id}
             label={label}
             subtext={subtext}
+            customContentClassName={tabChoiceCustomClass}
             type={tabChoiceType}
             verticalAlignIcon={tabChoiceIconAlignment}
           >

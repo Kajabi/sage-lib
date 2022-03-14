@@ -28,7 +28,7 @@ export const validNumberWithinGrid = (props, propName, componentName) => {
   return null;
 };
 
-export const validBreakpoint = PropTypes.oneOf([
+export const validBreakpoint = PropTypes.oneOfType([
   PropTypes.oneOf(Object.values(GRID_BREAKPOINT_TOGGLES)),
   validNumberWithinGrid,
 ]);
