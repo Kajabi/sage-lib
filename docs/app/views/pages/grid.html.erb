@@ -76,9 +76,46 @@
   <p>In the example below, each <code>.sage-col</code> example is named with the number of columns it represents. Generally, a single column (<code>.sage-col-1</code>) is too small for content, so <code>.sage-col-2</code> is the smallest width recommended for use.</p>
   <% 1.upto(9) do |num| %>
     <div class="sage-row">
-      <div class="sage-col--md-<%= num + 1%>"><div class="grid-item"><%= num + 1%><span class="visually-hidden"> columns wide</span></div></div>
-      <div class="sage-col--md-<%= 11 - num%>"><div class="grid-item"><%= 11 - num%><span class="visually-hidden"> columns wide</span></div></div>
+      <div class="sage-col-<%= num + 1%>"><div class="grid-item"><%= num + 1%><span class="visually-hidden"> columns wide</span></div></div>
+      <div class="sage-col-<%= 11 - num%>"><div class="grid-item"><%= 11 - num%><span class="visually-hidden"> columns wide</span></div></div>
     </div>
+  <% end %>
+
+  <h3 class="t-sage-heading-5" id="grid-spacing">Variable Width</h3>
+  <p>Doesn't set a width on the column. The width is determined by the width of the children.</p>
+
+  <%= sage_component SageGridRow, {} do %>
+    <%= sage_component(SageGridCol, {
+      variableWidth: true
+    }) do %>
+      <div class="grid-item">
+        Variable Width Container
+      </div>
+    <% end %>
+    <%= sage_component(SageGridCol, {}) do %>
+      <div class="grid-item">
+        Auto Width
+      </div>
+    <% end %>
+  <% end %>
+  <%= sage_component SageGridRow, {} do %>
+    <%= sage_component(SageGridCol, {}) do %>
+      <div class="grid-item">
+        Auto Width
+      </div>
+    <% end %>
+    <%= sage_component(SageGridCol, {
+      variableWidth: true
+    }) do %>
+      <div class="grid-item">
+        Variable Width Container
+      </div>
+    <% end %>
+    <%= sage_component(SageGridCol, {}) do %>
+      <div class="grid-item">
+        Auto Width
+      </div>
+    <% end %>
   <% end %>
 
   <h3 class="t-sage-heading-5" id="grid-spacing">Column spacing</h3>

@@ -5,5 +5,6 @@ class SageGridCol < SageComponent
     medium: [:optional, String, Integer],
     size: [:optional, String, Integer],
     small: [:optional, String, Integer],
+    variableWidth: [:optional, TrueClass]
   })
 end

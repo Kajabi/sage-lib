@@ -12,12 +12,14 @@ export const GridCol = ({
   sageType,
   size,
   small,
+  variableWidth,
   ...rest
 }) => {
   const classNames = classnames(
     className,
     {
-      'sage-col': !size,
+      'sage-col--auto': variableWidth,
+      'sage-col': !size && !variableWidth,
       [`sage-col-${size}`]: size,
       [`sage-col--sm-${small}`]: small,
       [`sage-col--md-${medium}`]: medium,
@@ -41,6 +43,7 @@ GridCol.defaultProps = {
   sageType: false,
   small: null,
   size: null,
+  variableWidth: null
 };
 
 GridCol.propTypes = {
@@ -50,5 +53,6 @@ GridCol.propTypes = {
   medium: validBreakpoint,
   large: validBreakpoint,
   sageType: PropTypes.bool,
-  size: validNumberWithinGrid
+  size: validNumberWithinGrid,
+  variableWidth: PropTypes.string
 };

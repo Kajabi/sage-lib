@@ -147,3 +147,28 @@ Containers.args = {
     </>
   )
 };
+
+export const VariableWidth = Template.bind({});
+VariableWidth.args = {
+  children: (
+    <>
+      <Grid.Row>
+        <Grid.Col>
+          <GridDemo>
+            Auto width
+          </GridDemo>
+        </Grid.Col>
+        <Grid.Col variableWidth={true}>
+          <GridDemo>
+            Variable Width Container
+          </GridDemo>
+        </Grid.Col>
+        <Grid.Col>
+          <GridDemo>
+            Auto width
+          </GridDemo>
+        </Grid.Col>
+      </Grid.Row>
+    </>
+  )
+};
