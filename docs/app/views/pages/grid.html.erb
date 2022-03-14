@@ -81,15 +81,15 @@
     </div>
   <% end %>
 
-  <h3 class="t-sage-heading-5" id="grid-spacing">Variable Width</h3>
+  <h3 class="t-sage-heading-5" id="grid-spacing">Fixed Width</h3>
   <p>Doesn't set a width on the column. The width is determined by the width of the children.</p>
 
   <%= sage_component SageGridRow, {} do %>
     <%= sage_component(SageGridCol, {
-      variableWidth: true
+      fixed_width: true
     }) do %>
       <div class="grid-item">
-        Variable Width Container
+        Fixed Width Container
       </div>
     <% end %>
     <%= sage_component(SageGridCol, {}) do %>
@@ -105,10 +105,10 @@
       </div>
     <% end %>
     <%= sage_component(SageGridCol, {
-      variableWidth: true
+      fixed_width: true
     }) do %>
       <div class="grid-item">
-        Variable Width Container
+        Fixed Width Container
       </div>
     <% end %>
     <%= sage_component(SageGridCol, {}) do %>

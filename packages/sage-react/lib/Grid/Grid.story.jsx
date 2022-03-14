@@ -148,8 +148,8 @@ Containers.args = {
   )
 };
 
-export const VariableWidth = Template.bind({});
-VariableWidth.args = {
+export const fixedWidth = Template.bind({});
+fixedWidth.args = {
   children: (
     <>
       <Grid.Row>
@@ -158,9 +158,9 @@ VariableWidth.args = {
             Auto width
           </GridDemo>
         </Grid.Col>
-        <Grid.Col variableWidth={true}>
+        <Grid.Col fixedWidth={true}>
           <GridDemo>
-            Variable Width Container
+            Fixed Width Container
           </GridDemo>
         </Grid.Col>
         <Grid.Col>
