@@ -1,10 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import { Button } from '../Button';
+import { SageTokens } from '../configs';
 
 export const Tag = ({
-  action,
   className,
+  dismissAttributes,
+  showDismiss,
   value
 }) => {
   const classNames = classnames('sage-tag', className);
@@ -16,9 +19,17 @@ export const Tag = ({
       <span className="sage-tag__value">
         {value}
       </span>
-      {action && (
+      {showDismiss && (
         <span className="sage-tag__action">
-          {action}
+          <Button 
+            style={Button.COLORS.SECONDARY}
+            subtle={true}
+            icon={SageTokens.ICONS.REMOVE}
+            iconOnly={true}
+            {...dismissAttributes}
+          >
+            {value}
+          </Button>
         </span>
       )}
     </span>
@@ -26,12 +37,14 @@ export const Tag = ({
 };
 
 Tag.defaultProps = {
-  action: null,
   className: null,
+  dismissAttributes: null,
+  showDismiss: false,
 };
 
 Tag.propTypes = {
-  action: PropTypes.node,
   className: PropTypes.string,
+  dismissAttributes: PropTypes.shape({}),
+  showDismiss: PropTypes.bool,
   value: PropTypes.string.isRequired,
 };
