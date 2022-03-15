@@ -4,9 +4,15 @@
   <%= component.generated_html_attributes.html_safe %>
 >
   <span class="sage-tag__value"><%= component.value %></span>
-  <% if content_for? :sage_tag_action %>
+  <% if component.show_dismiss %>
     <span class="sage-tag__action">
-      <%= content_for :sage_tag_action %>   
+      <%= sage_component SageButton, {
+        value: component.value,
+        style: "primary",
+        subtle: true,
+        icon: { name: "remove", style: "only" },
+        attributes: component.dismiss_attributes
+      } %>
     </span>
   <% end %>
 </span>
