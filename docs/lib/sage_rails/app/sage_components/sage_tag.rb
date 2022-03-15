@@ -1,9 +1,7 @@
 class SageTag < SageComponent
   set_attribute_schema({
-    value: String   
+    dismiss_attributes: [:optional, Hash],
+    show_dismiss: [:optional, TrueClass],
+    value: String,
   })
-  
-  def sections
-    %w(tag_action)
-  end
 end
