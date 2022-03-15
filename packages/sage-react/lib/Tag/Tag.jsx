@@ -21,7 +21,7 @@ export const Tag = ({
       </span>
       {showDismiss && (
         <span className="sage-tag__action">
-          <Button 
+          <Button
             style={Button.COLORS.SECONDARY}
             subtle={true}
             icon={SageTokens.ICONS.REMOVE}
