@@ -20,12 +20,13 @@ export const Tag = ({
         {value}
       </span>
       {showDismiss && (
-        <span className="sage-tag__action">
+        <span className="sage-tag__button">
           <Button
-            style={Button.COLORS.SECONDARY}
-            subtle={true}
+            color={Button.COLORS.PRIMARY}
             icon={SageTokens.ICONS.REMOVE}
             iconOnly={true}
+            subtle={true}
+            small={true}
             {...dismissAttributes}
           >
             {value}
