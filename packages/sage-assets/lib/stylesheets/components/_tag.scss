@@ -20,35 +20,32 @@ $-tag-button-color: sage-color(grey, 600);
   }
 }
 
-.sage-tag__button {
+.sage-tag__button.sage-btn--subtle {
   display: inline-flex;
+  width: auto;
+  height: auto;
   margin-left: sage-spacing(xs);
+  color: $-tag-button-color;
 
-  .sage-btn--subtle {
-    width: auto;
-    height: auto;
+  &::before {
+    padding: 0;
+  }
+
+  &:hover {
     color: $-tag-button-color;
+  }
 
-    &::before {
-      padding: 0;
-    }
+  &:focus {
+    color: $-tag-button-color;
+    border-color: sage-color(primary, 400);
+  }
 
-    &:hover {
-      color: $-tag-button-color;
-    }
+  &:not(:focus):hover {
+    color: inherit;
+    background-color: transparent;
+  }
 
-    &:focus {
-      color: $-tag-button-color;
-      border-color: sage-color(primary, 400);
-    }
-
-    &:not(:focus):hover {
-      color: inherit;
-      background-color: transparent;
-    }
-
-    &:not(:focus):hover::after {
-      background-color: transparent;
-    }
+  &:not(:focus):hover::after {
+    background-color: transparent;
   }
 }
