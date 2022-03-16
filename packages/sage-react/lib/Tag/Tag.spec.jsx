@@ -10,7 +10,7 @@ describe('Sage Tag', () => {
 
   beforeEach(() => {
     defaultProps = {
-      label: 'Label',
+      value: 'Label',
     };
 
     component = shallow(
