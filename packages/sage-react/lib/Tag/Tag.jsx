@@ -20,18 +20,17 @@ export const Tag = ({
         {value}
       </span>
       {showDismiss && (
-        <span className="sage-tag__button">
-          <Button
-            color={Button.COLORS.PRIMARY}
-            icon={SageTokens.ICONS.REMOVE}
-            iconOnly={true}
-            subtle={true}
-            small={true}
-            {...dismissAttributes}
-          >
-            {value}
-          </Button>
-        </span>
+        <Button
+          className="sage-tag__button"
+          color={Button.COLORS.PRIMARY}
+          icon={SageTokens.ICONS.REMOVE}
+          iconOnly={true}
+          subtle={true}
+          small={true}
+          {...dismissAttributes}
+        >
+          {value}
+        </Button>
       )}
     </span>
   );

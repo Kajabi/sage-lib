@@ -4,15 +4,14 @@
 >
   <span class="sage-tag__value"><%= component.value %></span>
   <% if component.show_dismiss %>
-    <span class="sage-tag__button">
-      <%= sage_component SageButton, {
-        value: component.value,
-        style: "primary",
-        subtle: true,
-        small: true,
-        icon: { name: "remove", style: "only" },
-        attributes: component.dismiss_attributes
-      } %>
-    </span>
+    <%= sage_component SageButton, {
+      css_classes: "sage-tag__button",
+      value: component.value,
+      style: "primary",
+      subtle: true,
+      small: true,
+      icon: { name: "remove", style: "only" },
+      attributes: component.dismiss_attributes
+    } %>
   <% end %>
 </span>
