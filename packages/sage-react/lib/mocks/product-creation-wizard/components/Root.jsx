@@ -5,6 +5,8 @@ import {
   Modal,
   SageTokens,
 } from '../../..';
+import { ProgressBar } from '../../../ProgressBar';
+import { GRID_BREAKPOINT_TOGGLES } from '../../../Grid/configs';
 import {
   CoachingAppearance,
   CoachingBooking,
@@ -98,12 +100,13 @@ export const Root = () => {
               Close
             </Button>
           )}
-        >
-          {/*
-            TODO: Need to determine what/how the "progress bar" can be added here
-            https://kajabi.atlassian.net/browse/SAGE-328
-          */}
-        </Modal.Header>
+          headerProgressBar={(
+            <ProgressBar
+              label="Cloning product"
+              percent="44"
+            />
+          )}
+        />
         <Modal.Body>
           {/*
             TODO: Need to allow column panel to fill space
@@ -111,10 +114,12 @@ export const Root = () => {
             https://kajabi.atlassian.net/browse/SAGE-329
           */}
           <Grid.Row>
-            <Grid.Col size={4} small={12} medium={5} large={4}>
-              {renderStep()}
+            <Grid.Col className="sage-col-sm-auto">
+              <div style={{ width: '540px' }}>
+                {renderStep()}
+              </div>
             </Grid.Col>
-            <Grid.Col fixedWidth={true}>
+            <Grid.Col small={GRID_BREAKPOINT_TOGGLES.HIDE}>
               {/* TODO: Dev to add actual graphic SVG here  with live edit synced */}
               <img
                 src="//source.unsplash.com/random/832x575"

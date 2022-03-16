@@ -54,5 +54,5 @@ GridCol.propTypes = {
   large: validBreakpoint,
   sageType: PropTypes.bool,
   size: validNumberWithinGrid,
-  fixedWidth: PropTypes.string
+  fixedWidth: PropTypes.bool
 };

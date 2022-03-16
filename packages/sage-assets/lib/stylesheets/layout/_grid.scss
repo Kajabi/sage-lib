@@ -100,9 +100,9 @@ $-grid-breakpoint-xl: sage-breakpoint(xl-min);
 }
 
 .sage-col {
-  max-width: 100%;
   flex-grow: 1;
   flex-basis: 0;
+  max-width: 100%;
   padding: 0 calc(#{$-grid-gap} / 2);
 }
 
@@ -146,6 +146,12 @@ $-grid-breakpoint-xl: sage-breakpoint(xl-min);
       width: percentage($i / $-grid-num-columns);
     }
   }
+
+  .sage-col-sm-auto {
+    flex: 0 0 auto;
+    width: auto;
+    max-width: none;
+  }
 }
 
 @media (max-width: $-grid-breakpoint-sm-max) {
@@ -166,6 +172,12 @@ $-grid-breakpoint-xl: sage-breakpoint(xl-min);
   .sage-col--sm-show {
     display: none;
   }
+
+  .sage-col-md-auto {
+    flex: 0 0 auto;
+    width: auto;
+    max-width: none;
+  }
 }
 
 @media (max-width: $-grid-breakpoint-md-max) {
@@ -185,6 +197,12 @@ $-grid-breakpoint-xl: sage-breakpoint(xl-min);
 
   .sage-col--md-show {
     display: none;
+  }
+
+  .sage-col--lg-auto {
+    flex: 0 0 auto;
+    width: auto;
+    max-width: none;
   }
 }
 
