@@ -11,6 +11,7 @@ import {
   Tabs,
 } from '../../../../..';
 import { CoachingCalendlyDropdown } from './CoachingCalendlyDropdown';
+// import calendyIcon from '/images/course-icon.svg';
 
 export const CoachingBooking = ({ onChangeStep }) => {
   // TODO: Dev to add the following in final implementation:
@@ -19,7 +20,9 @@ export const CoachingBooking = ({ onChangeStep }) => {
   // - Sync changes to fields with SVG graphic
 
   const tabChoiceSettings = {
-    tabChoiceType: Tabs.Item.CHOICE_TYPES.ICON,
+    tabChoiceIcon: null,
+    tabChoiceType: Tabs.Item.CHOICE_TYPES.TAB,
+    tabChoiceCustomClass: 'sage-choice__content--coaching',
   };
 
   return (
@@ -53,9 +56,12 @@ export const CoachingBooking = ({ onChangeStep }) => {
         tabs={[
           {
             id: 'tab-1',
-            label: 'Calendly',
-            tabChoiceIcon: null,
-            tabChoiceType: Tabs.Item.CHOICE_TYPES.GRAPHIC,
+            tabDetails: (
+              <>
+                {/* <img src={calendyIcon} alt="" /> */}
+                <p className={SageClassnames.TYPE.BODY_SMALL_MED}>Calendly</p>
+              </>
+            ),
             content: (
               <Panel.Stack>
                 <CoachingCalendlyDropdown
@@ -86,19 +92,18 @@ export const CoachingBooking = ({ onChangeStep }) => {
             // TODO: Add `children` to `Tabs` items processing
             // so this can be passed down successfully
             // https://kajabi.atlassian.net/browse/SAGE-330
-            children: (
-              <>
-                [calendly icon]
-                <p className={SageClassnames.TYPE.BODY_SMALL_MED}>Calendly</p>
-              </>
-            ),
             ...tabChoiceSettings,
           },
           {
             id: 'tab-2',
-            label: 'Custom link',
-            tabChoiceIcon: Icon.ICONS.URL,
-            tabChoiceType: Tabs.Item.CHOICE_TYPES.ICON,
+            tabDetails: (
+              <>
+                <Icon icon={Icon.ICONS.URL} />
+                <p className={SageClassnames.TYPE.BODY_SMALL_MED}>
+                  Calendly
+                </p>
+              </>
+            ),
             content: (
               <div className={SageClassnames.GRID_CARD}>
                 <Input
@@ -108,21 +113,16 @@ export const CoachingBooking = ({ onChangeStep }) => {
                 />
               </div>
             ),
-            children: (
-              <>
-                <Icon name={Icon.ICONS.URL} />
-                <p className={SageClassnames.TYPE.BODY_SMALL_MED}>
-                  Calendly
-                </p>
-              </>
-            ),
             ...tabChoiceSettings,
           },
           {
             id: 'tab-3',
-            label: 'Manual booking',
-            tabChoiceIcon: Icon.ICONS.CALENDAR_SIMPLE,
-            tabChoiceType: Tabs.Item.CHOICE_TYPES.ICON,
+            tabDetails: (
+              <>
+                <Icon icon={Icon.ICONS.CALENDAR_SIMPLE} />
+                <p className={SageClassnames.TYPE.BODY_SMALL_MED}>Manual booking</p>
+              </>
+            ),
             content: (
               <div className={SageClassnames.GRID_CARD}>
                 <Input
@@ -136,12 +136,6 @@ export const CoachingBooking = ({ onChangeStep }) => {
                   message="Set the duration of your booking."
                 />
               </div>
-            ),
-            children: (
-              <>
-                <Icon name={Icon.ICONS.CALENDAR_SIMPLE} />
-                <p className={SageClassnames.TYPE.BODY_SMALL_MED}>Calendly</p>
-              </>
             ),
             ...tabChoiceSettings,
           },

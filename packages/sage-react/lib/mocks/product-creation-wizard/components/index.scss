@@ -1,0 +1,47 @@
+
+.creation-wizard__modal {
+  .sage-choice__content .sage-card__row,
+  .sage-dropdown__item .sage-card__row {
+    @media (max-width: sage-breakpoint(sm-max)) {
+      flex-flow: row nowrap;
+    }
+  }
+
+  .sage-panel__tiles {
+    @media (max-width: sage-breakpoint(xs-max)) {
+      --sage-panel-tiles-columns: 2;
+    }
+  }
+
+  .sage-icon-background {
+    @media (max-width: sage-breakpoint(xs-max)) {
+      width: rem(32px);
+      height: rem(32px);
+    }
+  }
+
+  .sage-btn-group {
+    margin-top: sage-spacing();
+    flex-wrap: nowrap;
+  }
+
+  .sage-tabs--layout-default.sage-tabs--layout-default {
+    flex-flow: row nowrap;
+
+    .sage-choice:not(:last-child) {
+      margin-right: sage-spacing(sm);
+    }
+  }
+
+  .sage-choice__content--coaching {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+.sage-icon-background {
+  flex-shrink: 0;
+}
+

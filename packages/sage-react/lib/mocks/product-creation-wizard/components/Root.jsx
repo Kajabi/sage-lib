@@ -5,6 +5,8 @@ import {
   Modal,
   SageTokens,
 } from '../../..';
+import { ProgressBar } from '../../../ProgressBar';
+import { GRID_BREAKPOINT_TOGGLES } from '../../../Grid/configs';
 import {
   CoachingAppearance,
   CoachingBooking,
@@ -15,6 +17,7 @@ import {
   CoursePricing,
   Main,
 } from './panels';
+// import './index.scss';
 
 export const Root = () => {
   const initialModalTitle = 'New Product';
@@ -80,7 +83,7 @@ export const Root = () => {
       <Button color={Button.COLORS.PRIMARY} onClick={() => setModalActive(true)}>
         Add product
       </Button>
-      <Modal active={modalActive} fullScreen={true}>
+      <Modal active={modalActive} fullScreen={true} className="creation-wizard__modal">
         {/*
           TODO: Build dismiss into modal header
           https://kajabi.atlassian.net/browse/SAGE-312
@@ -98,6 +101,12 @@ export const Root = () => {
               Close
             </Button>
           )}
+          headerProgressBar={(
+            <ProgressBar
+              label="Cloning product"
+              percent="44"
+            />
+          )}
         >
           {/*
             TODO: Need to determine what/how the "progress bar" can be added here
@@ -114,7 +123,7 @@ export const Root = () => {
             <Grid.Col size={4} small={12} medium={5} large={4}>
               {renderStep()}
             </Grid.Col>
-            <Grid.Col size={8} small={0} medium={7} large={8}>
+            <Grid.Col size={8} small={GRID_BREAKPOINT_TOGGLES.HIDE} medium={7} large={8}>
               {/* TODO: Dev to add actual graphic SVG here  with live edit synced */}
               <img
                 src="//source.unsplash.com/random/832x575"
