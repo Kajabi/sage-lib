@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.50.4](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.50.3...@kajabi/sage@4.50.4) (2022-03-16)
+
+
+### Bug Fixes
+
+* **grid:** add generic class if size not present ([260bbad](https://github.com/Kajabi/sage-lib/commit/260bbad98efb94f4cbe3be639f98766975bac29b))
+* **grid:** in rails allow multiple breakpoints to be set per call ([65d0350](https://github.com/Kajabi/sage-lib/commit/65d0350d9d55e80b48088fb94c664ec9fea870ee))
+* **modal:** add progress bar to header in rails ([f62cc17](https://github.com/Kajabi/sage-lib/commit/f62cc1742ac37d82bf70b489e2d16d67960879ba))
+* **modal:** update docs ([5480d31](https://github.com/Kajabi/sage-lib/commit/5480d312a52baaaee92fe1853dd22304784614f5))
+* **progress-bar:** updates per review ([1638324](https://github.com/Kajabi/sage-lib/commit/1638324d31dab8a6b43e6fadcaaa5604f00452c7))
+
+
+
+
+
 ## [4.50.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.50.2...@kajabi/sage@4.50.3) (2022-03-14)
 
 

@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.72.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.72.1...@kajabi/sage-assets@0.72.2) (2022-03-16)
+
+
+### Bug Fixes
+
+* **grid:** add generic class if size not present ([260bbad](https://github.com/Kajabi/sage-lib/commit/260bbad98efb94f4cbe3be639f98766975bac29b))
+* **grid:** linter ([afcce4d](https://github.com/Kajabi/sage-lib/commit/afcce4d91602327b9e77542f491d77a76d117e85))
+* **modal:** add progress bar to header in rails ([f62cc17](https://github.com/Kajabi/sage-lib/commit/f62cc1742ac37d82bf70b489e2d16d67960879ba))
+
+
+
+
+
 ## [0.72.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.72.0...@kajabi/sage-assets@0.72.1) (2022-03-09)
 
 

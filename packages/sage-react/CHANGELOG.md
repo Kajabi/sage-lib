@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.83.4](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.83.3...@kajabi/sage-react@0.83.4) (2022-03-16)
+
+
+### Bug Fixes
+
+* **grid:** add generic class if size not present ([260bbad](https://github.com/Kajabi/sage-lib/commit/260bbad98efb94f4cbe3be639f98766975bac29b))
+* **grid:** linter ([afcce4d](https://github.com/Kajabi/sage-lib/commit/afcce4d91602327b9e77542f491d77a76d117e85))
+* **modal:** add progress bar to header in rails ([f62cc17](https://github.com/Kajabi/sage-lib/commit/f62cc1742ac37d82bf70b489e2d16d67960879ba))
+* **modal:** update docs ([5480d31](https://github.com/Kajabi/sage-lib/commit/5480d312a52baaaee92fe1853dd22304784614f5))
+* **progress-bar:** updates per review ([1638324](https://github.com/Kajabi/sage-lib/commit/1638324d31dab8a6b43e6fadcaaa5604f00452c7))
+
+
+
+
+
 ## [0.83.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.83.2...@kajabi/sage-react@0.83.3) (2022-03-14)
 
 
