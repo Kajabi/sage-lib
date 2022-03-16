@@ -738,10 +738,10 @@ module ComponentsHelper
       {
         title: "tag",
         description: "Tags show concise metadata in a compact format.", 
-        scss: "todo",
-        rails: "todo",
-        react: "todo",
-        a11y: "todo",
+        scss: "done",
+        rails: "done",
+        react: "done",
+        a11y: "done",
         react_component_slug: "sage-tag--default",
       },
       {
