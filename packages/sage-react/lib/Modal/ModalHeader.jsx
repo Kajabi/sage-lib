@@ -14,9 +14,10 @@ export const ModalHeader = ({
   children,
   className,
   customHeader,
-  popover,
+  headerProgressBar,
   icon,
   image,
+  popover,
   subheader,
   title,
   ...rest
@@ -70,6 +71,7 @@ export const ModalHeader = ({
         )}
         {children}
       </div>
+      {headerProgressBar && <>{headerProgressBar}</>}
     </header>
   );
 };
@@ -83,6 +85,7 @@ ModalHeader.defaultProps = {
   children: null,
   className: null,
   customHeader: null,
+  headerProgressBar: null,
   icon: null,
   image: null,
   popover: null,
@@ -96,6 +99,7 @@ ModalHeader.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
   customHeader: PropTypes.node,
+  headerProgressBar: PropTypes.node,
   icon: PropTypes.shape({
     color: PropTypes.oneOf(Object.values(Icon.COLORS)),
     name: PropTypes.oneOf(Object.values(Icon.ICONS)),

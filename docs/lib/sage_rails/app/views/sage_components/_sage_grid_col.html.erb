@@ -1,3 +1,10 @@
-<div class="sage-col--<%= component.breakpoint %>-<%= component.size %> <%= component.generated_css_classes %>" <%= component.generated_html_attributes.html_safe %>>
+<div class="
+  <%= "sage-col" if !component.size %>
+  <%= "sage-col-#{component.size}" if component.size %>
+  sage-col--<%= component.breakpoint %>-<%= component.size %> <%= component.generated_css_classes %>
+  <%= "sage-col--sm-#{component.small}" if component.small%>
+  <%= "sage-col--md-#{component.medium}" if component.medium%>
+  <%= "sage-col--lg-#{component.large}" if component.large%>
+" <%= component.generated_html_attributes.html_safe %>>
   <%= component.content %>
 </div>

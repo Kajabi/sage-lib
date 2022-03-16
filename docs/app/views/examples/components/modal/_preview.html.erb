@@ -343,6 +343,15 @@
         } %>
       <% end %>
 
+      <% content_for :sage_header_progress_bar do %>
+        <%= sage_component SageProgressBar, {
+          color: SageTokens::COLOR_PALETTE[:PRIMARY_300],
+          percent: 44,
+          label: "Reached limit"
+        } %>
+
+      <% end %>
+
       <% content_for :sage_header_actions do %>
         <%= sage_component SageButton, {
           value: "Save changes",

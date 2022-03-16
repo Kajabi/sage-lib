@@ -15,7 +15,7 @@ export const ProgressBar = ({
     className,
   );
 
-  const displayText = label ? `${label}: ${percent}%&nbsp;progress` : '';
+  const displayText = label ? `${label}: ${percent}% progress` : '';
 
   return (
     <div className={classNames} {...rest}>
