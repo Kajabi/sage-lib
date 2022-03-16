@@ -4,9 +4,9 @@
 /// @group sage
 ////
 
-.sage-tag {
-  @include sage-focus-ring();
+$-tag-button-color: sage-color(grey, 600);
 
+.sage-tag {
   @extend %t-sage-body-med;
 
   display: inline-flex;
@@ -20,22 +20,35 @@
   }
 }
 
-.sage-tag__action {
+.sage-tag__button {
   display: inline-flex;
-  margin-left: rem(6px);
+  margin-left: sage-spacing(xs);
 
   .sage-btn--subtle {
     width: auto;
     height: auto;
-    color: sage-color(grey, 800);
+    color: $-tag-button-color;
 
     &::before {
       padding: 0;
     }
 
+    &:hover {
+      color: $-tag-button-color;
+    }
+
+    &:focus {
+      color: $-tag-button-color;
+      border-color: sage-color(primary, 400);
+    }
+
     &:not(:focus):hover {
       color: inherit;
-      background-color: inherit;
+      background-color: transparent;
+    }
+
+    &:not(:focus):hover::after {
+      background-color: transparent;
     }
   }
 }
