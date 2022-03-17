@@ -11,7 +11,7 @@ import {
   Tabs,
 } from '../../../../..';
 import { CoachingCalendlyDropdown } from './CoachingCalendlyDropdown';
-// import calendyIcon from '/images/course-icon.svg';
+import calendyIcon from '../../calendly-icon.svg';
 
 export const CoachingBooking = ({ onChangeStep }) => {
   // TODO: Dev to add the following in final implementation:
@@ -58,7 +58,7 @@ export const CoachingBooking = ({ onChangeStep }) => {
             id: 'tab-1',
             tabDetails: (
               <>
-                {/* <img src={calendyIcon} alt="" /> */}
+                <img src={calendyIcon} alt="" />
                 <p className={SageClassnames.TYPE.BODY_SMALL_MED}>Calendly</p>
               </>
             ),

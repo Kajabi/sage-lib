@@ -165,8 +165,8 @@ $-alert-colors: (
   }
 
   .sage-btn-group {
-    margin-top: sage-spacing();
     flex-wrap: nowrap;
+    margin-top: sage-spacing();
   }
 
   .sage-tabs--layout-default.sage-tabs--layout-default {
@@ -174,6 +174,7 @@ $-alert-colors: (
 
     .sage-choice:not(:last-child) {
       margin-right: sage-spacing(sm);
+      margin-bottom: 0;
     }
   }
 
@@ -183,12 +184,12 @@ $-alert-colors: (
     justify-content: center;
     text-align: center;
   }
+
+  .sage-dropdown--contained {
+    width: 100%;
+  }
 }
 
 .sage-icon-background {
   flex-shrink: 0;
-}
-
-.t-sage--align-center {
-  text-align: center !important;
 }
