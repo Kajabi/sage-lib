@@ -1,0 +1,6 @@
+/* TODO: Need to build this into drawer to avoid need for local styles */
+/* TODO: Need to build this into drawer to avoid need for local styles */
+/* TODO: Should the modal allow a custom fixed width or a specific offset form the left side? */
+.sage-drawer--expanded .sage-modal__container {
+  max-width: calc(100vw - 230px);
+}
