@@ -59,7 +59,8 @@ $-empty-state-graphic-page-height: rem(384px);
   }
 }
 
-.sage-empty-state__actions {
+.sage-empty-state__actions,
+.sage-empty-state__custom-content {
   margin-top: sage-spacing();
 }
 
@@ -129,14 +130,8 @@ $-empty-state-graphic-page-height: rem(384px);
 }
 
 .sage-empty-state__text {
-  @extend %t-sage-body-small;
+  @extend %t-sage-body;
 
-  color: sage-color(grey, 600);
+  color: sage-color(grey, 700);
   word-wrap: break-word;
-
-  .sage-empty-state--page & {
-    @extend %t-sage-body;
-
-    color: sage-color(grey, 800);
-  }
 }
