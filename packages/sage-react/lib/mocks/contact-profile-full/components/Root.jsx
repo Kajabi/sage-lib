@@ -22,7 +22,7 @@ export const Root = ({ modalActive, onExitModal }) => {
     <Drawer
       // TODO: Need expanded option built into Drawer
       // https://kajabi.atlassian.net/browse/SAGE-361
-
+      //
       // TODO: need to make background blur/dismiss a configurable option in drawer
       // so that it can be toggled as the drawer expands when desired.
       // https://kajabi.atlassian.net/browse/SAGE-376
