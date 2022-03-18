@@ -3,7 +3,7 @@ import { Button } from '../..';
 import { Root } from './components';
 
 // TODO: These are only temporary styles that will not be needed once expanded drawer is available
-import './styles.css'; 
+import './styles.css';
 
 export default {
   title: 'Mocks/Contact Profile - Full view',

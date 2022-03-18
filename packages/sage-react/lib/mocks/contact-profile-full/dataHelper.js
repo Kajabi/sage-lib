@@ -54,7 +54,7 @@ export const infoData = {
 
 export const productsData = [
   {
-    image: null,
+    image: '//source.unsplash.com/random/77x48',
     title: 'Flower cutting',
     url: '#TODO-dev-product-url',
     progress: 50,
@@ -73,7 +73,7 @@ export const productsData = [
     ]
   },
   {
-    image: null,
+    image: '//source.unsplash.com/random/77x48',
     title: 'Timing of flower cutting',
     url: '#TODO-dev-product-url',
     progress: 40,
@@ -88,7 +88,7 @@ export const productsData = [
     ]
   },
   {
-    image: null,
+    image: '//source.unsplash.com/random/77x48',
     title: 'When to fertilize ',
     url: '#TODO-dev-product-url',
     progress: 67,

@@ -13,7 +13,6 @@ import {
   ProductsTab,
   TagsTab,
 } from './tabs';
-import { Panel } from '../../../Panel';
 
 export const Root = ({ modalActive, onExitModal }) => {
   const [expanded, setExpanded] = React.useState(true);

@@ -38,8 +38,13 @@ export const InfoTab = () => {
         break;
     }
 
-    return <Icon icon={icon} color={failed ? Icon.COLORS.RED : Icon.COLORS.CHARCOAL_500} />
-  }
+    return (
+      <Icon
+        icon={icon}
+        color={failed ? Icon.COLORS.RED : Icon.COLORS.CHARCOAL_500}
+      />
+    );
+  };
 
   return (
     <>

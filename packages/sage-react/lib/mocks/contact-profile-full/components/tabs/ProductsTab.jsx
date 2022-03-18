@@ -27,7 +27,7 @@ export const ProductsTab = () => (
       <>
         <Card.Row gridTemplate={SageTokens.GRID_TEMPLATES.ETE}>
           <Card.Figure>
-            <img src="//source.unsplash.com/random/77x48" alt="" />
+            <img src={image} alt="" />
           </Card.Figure>
           <h4
             className={`
