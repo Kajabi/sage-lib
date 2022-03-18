@@ -46,10 +46,6 @@ $-pagination-focus-ring-color: sage-color(grey, 400);
   list-style-type: none;
   border-radius: $-pagination-radius;
 
-  @media screen and (min-width: sage-breakpoint(lg-max)) {
-    gap: 0 sage-spacing(xs);
-  }
-
   .sage-panel-controls & {
     margin-left: auto;
   }
@@ -105,9 +101,13 @@ $-pagination-focus-ring-color: sage-color(grey, 400);
 }
 .sage-pagination__item:first-of-type .sage-pagination__page::before {
   @include sage-icon-base(caret-left);
+
+  color: sage-color(gray, 900);
 }
 .sage-pagination__item:last-of-type .sage-pagination__page::before {
   @include sage-icon-base(caret-right);
+
+  color: sage-color(gray, 900);
 }
 
 .sage-pagination__page-text {
