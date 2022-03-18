@@ -133,6 +133,10 @@ $-pagination-focus-ring-color: sage-color(grey, 400);
 .sage-pagination__gap {
   cursor: default;
   pointer-events: none;
+
+  [class*="sage-icon"] {
+    margin-top: sage-spacing(xs);
+  }
 }
 
 .sage-pagination__count {
