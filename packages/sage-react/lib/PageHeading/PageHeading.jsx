@@ -12,6 +12,7 @@ export const PageHeading = ({
   actionItems,
   toolbarItems,
   secondaryText,
+  introText,
   ...rest
 }) => (
   <div
@@ -28,6 +29,11 @@ export const PageHeading = ({
     {breadcrumbs && (
       <div className="sage-page-heading__crumbs">
         <Breadcrumbs items={breadcrumbs} className="sage-page-heading__back" />
+      </div>
+    )}
+    {introText && (
+      <div className="sage-page-heading__intro">
+        <p>{introText}</p>
       </div>
     )}
     <h1 className="sage-page-heading__title">
@@ -62,6 +68,7 @@ PageHeading.defaultProps = {
   actionItems: null,
   toolbarItems: null,
   breadcrumbs: null,
+  introText: null,
   secondaryText: null,
 };
 
@@ -75,5 +82,6 @@ PageHeading.propTypes = {
   actionItems: PropTypes.arrayOf(PropTypes.node),
   toolbarItems: PropTypes.arrayOf(PropTypes.node),
   breadcrumbs: PropTypes.arrayOf(Breadcrumbs.itemPropTypes),
+  introText: PropTypes.string,
   secondaryText: PropTypes.string,
 };
