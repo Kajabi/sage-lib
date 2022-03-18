@@ -9,6 +9,7 @@ import {
   SageTokens,
 } from '../../../..';
 // TODO: Need to export ProgressBar for react package
+// https://kajabi.atlassian.net/browse/SAGE-374
 import { ProgressBar } from '../../../../ProgressBar';
 import { productsData } from '../../dataHelper';
 

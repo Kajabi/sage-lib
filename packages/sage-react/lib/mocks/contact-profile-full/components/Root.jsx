@@ -21,8 +21,11 @@ export const Root = ({ modalActive, onExitModal }) => {
   return (
     <Drawer
       // TODO: Need expanded option built into Drawer
-      // TODO: need to make background blur/dismiss a configurable option
+      // https://kajabi.atlassian.net/browse/SAGE-361
+
+      // TODO: need to make background blur/dismiss a configurable option in drawer
       // so that it can be toggled as the drawer expands when desired.
+      // https://kajabi.atlassian.net/browse/SAGE-376
       className={expanded ? 'sage-drawer--expanded' : null}
       active={modalActive}
       onExit={onExitModal}
@@ -34,6 +37,7 @@ export const Root = ({ modalActive, onExitModal }) => {
               color={Button.COLORS.SECONDARY}
               icon={SageTokens.ICONS.ARROW_RIGHT}
               // TODO: Need correct expand/collapse icons
+              // https://kajabi.atlassian.net/browse/SAGE-375
               iconPosition={Button.ICON_POSITIONS.LEFT}
               onClick={() => setExpanded(false)}
               subtle={true}
@@ -45,6 +49,7 @@ export const Root = ({ modalActive, onExitModal }) => {
               color={Button.COLORS.SECONDARY}
               icon={SageTokens.ICONS.ARROW_LEFT}
               // TODO: Need correct expand/collapse icons
+              // https://kajabi.atlassian.net/browse/SAGE-375
               iconPosition={Button.ICON_POSITIONS.LEFT}
               onClick={() => setExpanded(true)}
               subtle={true}
@@ -92,6 +97,7 @@ export const Root = ({ modalActive, onExitModal }) => {
               ]}
               // TODO: Grid row in this context causes sideways scroll bar
               // without this local style override
+              // https://kajabi.atlassian.net/browse/SAGE-377
               style={{ justifyContent: 'center' }}
             />
           </Grid.Col>

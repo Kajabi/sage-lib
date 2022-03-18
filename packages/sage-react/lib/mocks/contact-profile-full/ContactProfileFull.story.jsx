@@ -3,6 +3,7 @@ import { Button } from '../..';
 import { Root } from './components';
 
 // TODO: These are only temporary styles that will not be needed once expanded drawer is available
+// See https://kajabi.atlassian.net/browse/SAGE-361
 import './styles.css';
 
 export default {

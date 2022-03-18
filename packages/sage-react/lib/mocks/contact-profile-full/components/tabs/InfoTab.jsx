@@ -34,6 +34,7 @@ export const InfoTab = () => {
       case 'purchase':
       default:
         // TODO: Need unlock icon
+        // https://kajabi.atlassian.net/browse/SAGE-375
         icon = SageTokens.ICONS.BAN;
         break;
     }
