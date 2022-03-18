@@ -40,7 +40,7 @@
     </p>
   <% end %>
   <% content_for :sage_empty_state_actions do %>
-    <%= sage_component SageButtonGroup, {} do %>
+    <%= sage_component SageButtonGroup, { gap: :md } do %>
       <%= sage_component SageButton, {
         attributes: { href: "#" },
         style: "primary",
@@ -49,6 +49,7 @@
       <%= sage_component SageButton, {
         attributes: { href: "#" },
         style: "secondary",
+        subtle: true,
         value: "Learn More",
       } %>
     <% end %>
