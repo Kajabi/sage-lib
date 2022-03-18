@@ -55,3 +55,33 @@
     <% end %>
   <% end %>
 <% end %>
+
+<h3>Page Scope and Graphic with Video</h3>
+<%= sage_component SageEmptyState, {
+  title: "Create your first Email Campaign",
+  graphic: image_tag("null-view-graphic.png", alt: ""),
+  scope: "page",
+} do %>
+  <% content_for :sage_empty_state_text do %>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Elit arcu volutpat cursus ultricies ac, ultricies.
+      Platea sed nibh molestie ut.
+    </p>
+  <% end %>
+  <% content_for :sage_empty_state_actions do %>
+    <%= sage_component SageButtonGroup, { gap: :md } do %>
+      <%= sage_component SageButton, {
+        attributes: { href: "#" },
+        style: "primary",
+        value: "Create Email Campaings",
+      } %>
+      <%= sage_component SageButton, {
+        attributes: { href: "#" },
+        style: "secondary",
+        subtle: true,
+        value: "Learn More",
+      } %>
+    <% end %>
+  <% end %>
+<% end %>
