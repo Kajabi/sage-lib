@@ -22,8 +22,8 @@ export default {
     secondaryText: 'Secondary text here',
     toolbarItems: null,
     image: {
-      src: "https://via.placeholder.com/132x74",
-      alt: "Page heading demo image"
+      src: 'https://via.placeholder.com/132x74',
+      alt: 'Page heading demo image'
     },
   }
 };
