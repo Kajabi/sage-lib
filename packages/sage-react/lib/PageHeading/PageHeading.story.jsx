@@ -20,7 +20,11 @@ export default {
     ],
     actionItems: null,
     secondaryText: 'Secondary text here',
-    toolbarItems: null
+    toolbarItems: null,
+    image: {
+      src: "https://via.placeholder.com/132x74",
+      alt: "Page heading demo image"
+    },
   }
 };
 const Template = (args) => <PageHeading {...args} />;
