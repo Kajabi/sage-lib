@@ -1,0 +1,13 @@
+/*
+  TODO: Need to build this into drawer to avoid need for local styles
+  https://kajabi.atlassian.net/browse/SAGE-361
+*/
+/* TODO: Design: Should the modal allow a custom fixed width or a specific offset form the left side? */
+/*
+  TODO: Determine built-in repsonsiveness versus custom, local responsive adjustments
+  relates to https://kajabi.atlassian.net/browse/SAGE-380 
+  and https://kajabi.atlassian.net/browse/SAGE-361
+*/
+.sage-drawer--expanded .sage-modal__container {
+  max-width: calc(100vw - 230px);
+}

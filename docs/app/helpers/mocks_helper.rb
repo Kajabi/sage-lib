@@ -50,6 +50,18 @@ module MocksHelper
         team: "Build",
       },
       {
+        alias: "contact_profile_full",
+        jira_epic: "SAGE-358",
+        name: "Contact Profile - Full View",
+        no_custom_styles: true,
+        no_rails_js: true,
+        no_rails_partials: true,
+        no_rails_helper: true,
+        status: DOING,
+        storybook_path: '/story/mocks-contact-profile-full-view--default',
+        team: "Manage",
+      },
+      {
         alias: "get_started",
         jira_epic: "SAGE-296",
         name: "Get Started",
