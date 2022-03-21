@@ -59,7 +59,8 @@ export const Tabs = ({
           tabChoiceIcon,
           tabChoiceIconAlignment,
           tabChoiceType,
-          subtext
+          subtext,
+          ...rest
         }) => (
           <TabsItem
             disabled={disabled}
@@ -74,6 +75,7 @@ export const Tabs = ({
             customContentClassName={tabChoiceCustomClass}
             type={tabChoiceType}
             verticalAlignIcon={tabChoiceIconAlignment}
+            {...rest}
           >
             {tabDetails}
           </TabsItem>

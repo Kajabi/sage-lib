@@ -7,17 +7,22 @@ import { Breadcrumbs } from '../Breadcrumbs';
 export const PageHeading = ({
   className,
   children,
+  image,
   breadcrumbs,
   actionItems,
   toolbarItems,
   secondaryText,
+  introText,
   ...rest
 }) => (
   <div
     className={classnames(
       'sage-page-heading',
       className,
-      { 'sage-page-heading--no-secondary-text': !secondaryText }
+      {
+        'sage-page-heading--no-secondary-text': !secondaryText,
+        'sage-page-heading--has-image': image.src,
+      }
     )}
     {...rest}
   >
@@ -26,9 +31,19 @@ export const PageHeading = ({
         <Breadcrumbs items={breadcrumbs} className="sage-page-heading__back" />
       </div>
     )}
+    {introText && (
+      <div className="sage-page-heading__intro">
+        <p>{introText}</p>
+      </div>
+    )}
     <h1 className="sage-page-heading__title">
       {children}
     </h1>
+    {image.src && (
+      <div className="sage-page-heading__image">
+        <img alt={image.alt || ''} src={image.src} />
+      </div>
+    )}
     {toolbarItems && (
       <div className="sage-page-heading__toolbar">
         {toolbarItems.map((tool) => <React.Fragment key={uuid()}>{tool}</React.Fragment>)}
@@ -49,17 +64,24 @@ export const PageHeading = ({
 
 PageHeading.defaultProps = {
   className: '',
+  image: {},
   actionItems: null,
   toolbarItems: null,
   breadcrumbs: null,
+  introText: null,
   secondaryText: null,
 };
 
 PageHeading.propTypes = {
   className: PropTypes.string,
+  image: PropTypes.shape({
+    alt: PropTypes.string,
+    src: PropTypes.string,
+  }),
   children: PropTypes.node.isRequired,
   actionItems: PropTypes.arrayOf(PropTypes.node),
   toolbarItems: PropTypes.arrayOf(PropTypes.node),
   breadcrumbs: PropTypes.arrayOf(Breadcrumbs.itemPropTypes),
+  introText: PropTypes.string,
   secondaryText: PropTypes.string,
 };
