@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.84.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.83.5...@kajabi/sage-react@0.84.0) (2022-03-21)
+
+
+### Features
+
+* **mocks:** add full contact profile drawer mocks pt 1 ([1f6a9d0](https://github.com/Kajabi/sage-lib/commit/1f6a9d0f3a97c8aa7846a029d1700abdc6e84495))
+
+
+
+
+
 ## [0.83.5](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.83.4...@kajabi/sage-react@0.83.5) (2022-03-21)
 
 
