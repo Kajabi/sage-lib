@@ -1,3 +1,3 @@
 module SageRails
-  VERSION = "4.50.4"
+  VERSION = "4.50.5"
 end
