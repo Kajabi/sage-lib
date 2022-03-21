@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { GridCol } from './GridCol';
 import { GridRow } from './GridRow';
-import { CONTAINER_SIZES } from './configs';
+import { CONTAINER_SIZES, GRID_BREAKPOINT_TOGGLES } from './configs';
 
 export const Grid = ({
   children,
@@ -51,6 +51,7 @@ export const Grid = ({
 Grid.Row = GridRow;
 Grid.Col = GridCol;
 Grid.CONTAINER_SIZES = CONTAINER_SIZES;
+Grid.GRID_BREAKPOINT_TOGGLES = GRID_BREAKPOINT_TOGGLES;
 
 Grid.defaultProps = {
   children: null,
