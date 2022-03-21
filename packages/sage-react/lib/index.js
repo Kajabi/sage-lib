@@ -46,6 +46,7 @@ export { Pagination } from './Pagination';
 export { Panel } from './Panel';
 export { PanelControls } from './PanelControls';
 export { Popover } from './Popover';
+export { ProgressBar } from './ProgressBar';
 export { Property } from './Property';
 export { SampleComponent } from './SampleComponent';
 export { Search } from './Search';
