@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.83.5](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.83.4...@kajabi/sage-react@0.83.5) (2022-03-21)
+
+
+### Bug Fixes
+
+* **page heading (react):** add image to react page heading ([8a176a9](https://github.com/Kajabi/sage-lib/commit/8a176a98c99ac94830e7e476515cacf49c6b6834))
+* **page heading (react):** adds intro text to react page heading ([b85eff2](https://github.com/Kajabi/sage-lib/commit/b85eff234b18995f90552b7aced56cd4c05729d6))
+* **tabs:** add ...rest param to allow tabs to be links ([ee1a6c7](https://github.com/Kajabi/sage-lib/commit/ee1a6c7482fc78aa746f1098fcdab713aa1aea60))
+
+
+
+
+
 ## [0.83.4](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.83.3...@kajabi/sage-react@0.83.4) (2022-03-16)
 
 
