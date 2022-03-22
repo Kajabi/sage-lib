@@ -145,6 +145,7 @@ $-search-icon: "::before";
 
     &:focus:not(:disabled),
     &:active:not(:disabled) {
+      /* stylelint-disable max-nesting-depth */
       ~ .sage-search__label {
         @include sage-form-field-floating-label();
         @include placeholder {
@@ -153,22 +154,27 @@ $-search-icon: "::before";
 
         color: sage-color(primary);
       }
+      /* stylelint-enable max-nesting-depth */
     }
 
+    /* stylelint-disable max-nesting-depth */
     &:disabled,
     &:disabled:placeholder-shown {
       @include placeholder {
         opacity: 1;
       }
     }
+    /* stylelint-enable max-nesting-depth */
   }
 
   .sage-search--has-text & {
     &:focus:not(:disabled),
     &:active:not(:disabled) {
+      /* stylelint-disable max-nesting-depth */
       ~ .sage-search__label {
         @include sage-form-field-floating-label();
       }
+      /* stylelint-enable max-nesting-depth */
     }
   }
 
