@@ -87,6 +87,7 @@ $-grid-breakpoint-xl: sage-breakpoint(xl-min);
 
 @mixin sage-col {
   flex: 0 0 100%;
+  width: 100%;
   max-width: 100%;
   padding: 0 calc(#{$-grid-gap} / 2);
 }
@@ -94,6 +95,7 @@ $-grid-breakpoint-xl: sage-breakpoint(xl-min);
 .sage-col {
   flex-grow: 1;
   flex-basis: 0;
+  width: 100%;
   max-width: 100%;
   padding: 0 calc(#{$-grid-gap} / 2);
 }
@@ -120,6 +122,7 @@ $-grid-breakpoint-xl: sage-breakpoint(xl-min);
 
   .sage-col-#{$i} {
     flex: 0 0 percentage($i / $-grid-num-columns);
+    width: percentage($i / $-grid-num-columns);
     max-width: percentage($i / $-grid-num-columns);
   }
 }
@@ -129,6 +132,7 @@ $-grid-breakpoint-xl: sage-breakpoint(xl-min);
     .sage-col--sm-#{$i} {
       flex: 0 1 auto;
       width: percentage($i / $-grid-num-columns);
+      max-width: percentage($i / $-grid-num-columns);
     }
   }
 }
@@ -144,6 +148,7 @@ $-grid-breakpoint-xl: sage-breakpoint(xl-min);
   @for $i from 1 through $-grid-num-columns {
     .sage-col--md-#{$i} {
       flex: 0 0 auto;
+      width: percentage($i / $-grid-num-columns);
       max-width: percentage($i / $-grid-num-columns);
     }
   }
@@ -165,6 +170,7 @@ $-grid-breakpoint-xl: sage-breakpoint(xl-min);
     .sage-col--lg-#{$i} {
       flex: 0 1 auto;
       width: percentage($i / $-grid-num-columns);
+      max-width: percentage($i / $-grid-num-columns);
     }
   }
 
