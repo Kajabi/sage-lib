@@ -106,6 +106,8 @@ $-search-icon: "::before";
 }
 
 .sage-search__input {
+  @include sage-form-field;
+
   position: relative;
   z-index: 1;
   flex: 1;
@@ -123,6 +125,12 @@ $-search-icon: "::before";
     outline: 0;
   }
 
+  &:focus:not(:disabled),
+  &:active:not(:disabled),
+  &:valid:not(:placeholder-shown) {
+    box-shadow: none;
+  }
+
   .sage-panel-controls__toolbar & {
     border-radius: sage-border(radius);
   }
@@ -135,15 +143,32 @@ $-search-icon: "::before";
       opacity: 0;
     }
 
-    ~ .sage-search__label {
-      @include sage-form-field-floating-label();
-      color: sage-color(primary);
+    &:focus:not(:disabled),
+    &:active:not(:disabled) {
+      ~ .sage-search__label {
+        @include sage-form-field-floating-label();
+        @include placeholder {
+          opacity: 1;
+        }
+
+        color: sage-color(primary);
+      }
+    }
+
+    &:disabled,
+    &:disabled:placeholder-shown {
+      @include placeholder {
+        opacity: 1;
+      }
     }
   }
 
   .sage-search--has-text & {
-    ~ .sage-search__label {
-      @include sage-form-field-floating-label();
+    &:focus:not(:disabled),
+    &:active:not(:disabled) {
+      ~ .sage-search__label {
+        @include sage-form-field-floating-label();
+      }
     }
   }
 
@@ -158,6 +183,9 @@ $-search-icon: "::before";
 
 .sage-search__reset-button {
   visibility: hidden;
+  position: absolute;
+  right: 0;
+  z-index: sage-z-index(default, 1);
 
   :not(.sage-search--contained) & {
     margin-right: sage-spacing(xs);

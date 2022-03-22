@@ -5,22 +5,51 @@
 Use this scratchpad to test out elements and components in context. Just be sure not to commit your changes. ❤️
 ") %>
 <% end %>
+<fieldset disabled>
+  <%= sage_component SageFormInput, {
+    id: "form__fname1",
+    input_type: "text",
+    label_text: "First name",
+    placeholder: "First name",
+    required: true,
+    disabled: false,
+    has_error: false,
+    name: "custom_input_name",
+    message_text: "This is a message",
+    has_placeholder: false
+  } %>
+</fieldset>
 
-<%= sage_component SagePanel, {} do %>
-  <%= sage_component SagePanelRow, { grid_template: "ete" } do %>
-    <i class="sage-icon-check-circle-xl t-sage--color-sage"></i>
-    <%= sage_component SagePanelBlock, {} do %>
-      <p class="t-sage-body-semi t-sage--line-clamp">LoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLorem</p>
-      <p class="t-sage-body-small t-sage--color-grey">consectetur adipiscing elit</p>
-    <% end %>
-    <%= sage_component SageButton, {
-      value: "Options",
-      style: "secondary",
-      subtle: true,
-      icon: {
-        name: "dot-menu-horizontal",
-        style: "only"
-      }
-    } %>
-  <% end %>
-<% end %>
+<fieldset disabled>
+ <%= sage_component SageFormTextarea, {
+    id: "txtarea-example",
+    name: "txtarea-custom-name",
+    placeholder: "Your message",
+    label_text: "Your message",
+    disabled: false,
+    has_error: false,
+  } %>
+</fieldset>
+
+<%= sage_component SageFormInput, {
+  id: "form__fname1",
+  input_type: "text",
+  label_text: "First name",
+  placeholder: "First name",
+  required: true,
+  disabled: true,
+  has_error: false,
+  name: "custom_input_name",
+  message_text: "This is a message",
+  has_placeholder: false
+} %>
+
+<fieldset disabled>
+  <%= sage_component SageSearch, {
+    id: "search-2",
+    placeholder: "Search Products",
+    value: nil,
+    contained: true,
+    label_text: "Search"
+  } %>
+</fieldset>
