@@ -14,6 +14,7 @@
     <%# Prevents the default Kajabi-Products Search.js from binding to this input %>
     data-kjb-disable-search
     type="search"
+    <%= "disabled" if component.disabled %>
     placeholder="<%= component.placeholder.present? ? component.placeholder : "Search" %>"
     value="<%= component.value %>"
   />

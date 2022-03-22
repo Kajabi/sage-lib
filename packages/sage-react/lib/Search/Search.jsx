@@ -7,6 +7,7 @@ import { SageTokens } from '../configs';
 export const Search = ({
   className,
   contained,
+  disabled,
   onClear,
   onChange,
   placeholder,
@@ -28,6 +29,7 @@ export const Search = ({
         className="sage-search__input"
         type="search"
         onChange={onChange}
+        disabled={disabled}
         placeholder={`${placeholder}…`}
         value={value}
         // Prevents the default Kajabi-Products Search.js from binding to this input
@@ -56,6 +58,7 @@ export const Search = ({
 Search.defaultProps = {
   className: null,
   contained: false,
+  disabled: false,
   onClear: null,
   placeholder: 'Search',
 };
@@ -63,6 +66,7 @@ Search.defaultProps = {
 Search.propTypes = {
   className: PropTypes.string,
   contained: PropTypes.bool,
+  disabled: PropTypes.bool,
   onChange: PropTypes.func.isRequired,
   onClear: PropTypes.func,
   placeholder: PropTypes.string,
