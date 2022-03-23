@@ -22,6 +22,10 @@ $-sage-dot-gap: sage-spacing(2xs);
     border-radius: sage-border(radius);
     background-color: var(--sage-dot-color, #{$-sage-dot-color});
   }
+
+  .sage-badge & {
+    margin-left: sage-spacing(xs);
+  }
 }
 
 @each $-color-name, $-color-sliders in $sage-colors {
