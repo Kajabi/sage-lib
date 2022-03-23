@@ -16,6 +16,7 @@ $-badge-inset-border: 0 0 0 1px inset;
   display: inline-flex;
   align-items: center;
   position: relative;
+  border-radius: $-badge-border-radius;
 
   &[class*="sage-badge--icon-only"] {
     background-color: transparent;
@@ -62,24 +63,25 @@ $-badge-inset-border: 0 0 0 1px inset;
 @each $-color-name, $-color-settings in $sage-color-combos {
   $-color-modifier: ".sage-badge--#{$-color-name}";
 
+  #{$-color-modifier} {
+    background-color: sage-color-combo($-color-name, default, background);
+
+
+    &:hover:not(:focus):not(:active):not(:disabled):not(.disabled) {
+      color: sage-color-combo($-color-name, default, foreground-accent);
+    }
+  }
+
   #{$-color-modifier} .sage-badge__value {
     color: sage-color-combo($-color-name, default, foreground);
     background-color: sage-color-combo($-color-name, default, background);
   }
 
-  #{$-color-modifier}.sage-badge--subtle .sage-badge__value {
-    color: sage-color-combo($-color-name, subtle, foreground);
-    background-color: sage-color(white);
-    // Box shadow instead of border so that size and inner spacing is not affected
-    box-shadow: $-badge-inset-border sage-color-combo($-color-name, subtle, background);
-  }
-
-  #{$-color-modifier}.sage-badge--bold .sage-badge__value {
-    color: sage-color-combo($-color-name, bold, foreground);
-    background-color: sage-color-combo($-color-name, bold, background);
-  }
-
   #{$-color-modifier}.sage-badge--interactive {
+    &:hover {
+      background-color: sage-color-combo($-color-name, default, background-accent);
+    }
+
     &.sage-badge--interactive-right-cta-affordance .sage-badge__value {
       padding-right: $-badge-interactive-icon-size-decor;
     }
@@ -88,12 +90,10 @@ $-badge-inset-border: 0 0 0 1px inset;
       @include sage-focus-outline();
       @include sage-focus-outline--update-color( sage-color-combo($-color-name, default, foreground) );
 
-      &:hover:not(:focus):not(:active):not(:disabled):not(.disabled) {
-        color: sage-color-combo($-color-name, default, foreground-accent);
-      }
+      position: static;
 
-      &::after {
-        border-radius: $-badge-border-radius;
+      &:hover {
+        background-color: sage-color-combo($-color-name, default, background-accent);
       }
     }
 
@@ -107,10 +107,6 @@ $-badge-inset-border: 0 0 0 1px inset;
       &:focus {
         @include sage-focus-outline--update-color( sage-color-combo($-color-name, default, foreground) );
       }
-    }
-
-    .sage-badge__value:hover {
-      background-color: sage-color-combo($-color-name, default, background-accent);
     }
 
     .sage-badge__decor-icon {

@@ -8,6 +8,6 @@ class SageBadge < SageComponent
   })
 
   def sections
-    %w(:badge_dot)
+    %w(badge_dot)
   end
 end
