@@ -73,7 +73,7 @@ $-pagination-focus-ring-color: sage-color(grey, 400);
 .sage-pagination__gap {
   @include sage-focus-ring($-pagination-focus-ring-color);
 
-  @extend %t-sage-body-small-med;
+  @extend %t-sage-body-semi;
   display: flex;
   align-items: center;
   justify-content: center;
