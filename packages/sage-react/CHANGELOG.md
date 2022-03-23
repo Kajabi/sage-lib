@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.84.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.84.0...@kajabi/sage-react@0.84.1) (2022-03-23)
+
+
+### Bug Fixes
+
+* **grid:** update to responsive toggle classes ([247e675](https://github.com/Kajabi/sage-lib/commit/247e675a91d3b4bb8049e939d8a9071e3618262a))
+* **progressbar:** export react component ([487a0e6](https://github.com/Kajabi/sage-lib/commit/487a0e6e616b9ad28de602331e3208539d4ed158))
+
+
+
+
+
 # [0.84.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.83.5...@kajabi/sage-react@0.84.0) (2022-03-21)
 
 

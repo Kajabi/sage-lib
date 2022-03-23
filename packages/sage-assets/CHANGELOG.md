@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.72.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.72.2...@kajabi/sage-assets@0.72.3) (2022-03-23)
+
+
+### Bug Fixes
+
+* **grid:** add width property along side max-width ([f69153b](https://github.com/Kajabi/sage-lib/commit/f69153bd54539562d842116620a3ca4e941628db))
+
+
+
+
+
 ## [0.72.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.72.1...@kajabi/sage-assets@0.72.2) (2022-03-16)
 
 

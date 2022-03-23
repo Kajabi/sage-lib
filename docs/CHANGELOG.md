@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.51.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.51.0...@kajabi/sage@4.51.1) (2022-03-23)
+
+**Note:** Version bump only for package @kajabi/sage
+
+
+
+
+
 # [4.51.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.50.5...@kajabi/sage@4.51.0) (2022-03-21)
 
 
