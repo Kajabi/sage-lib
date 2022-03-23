@@ -53,7 +53,17 @@ end
         <%= content_for :sage_empty_state_actions %>
       </div>
     <% end %>
-  </div>
 
-  <%= component.content if !content_for? :sage_empty_state_text and !content_for? :sage_empty_state_actions %>
+    <% if content_for? :sage_empty_state_video %>
+      <div class="sage-empty-state__video">
+        <%= content_for :sage_empty_state_video %>
+      </div>
+    <% end %>
+
+		<% if !content_for? :sage_empty_state_text and !content_for? :sage_empty_state_actions %>
+      <div class="sage-empty-state__custom-content">
+        <%= component.content %>
+      </div>
+    <% end %>
+  </div>
 </section>

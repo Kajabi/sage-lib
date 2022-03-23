@@ -16,6 +16,7 @@ export const EmptyState = ({
   text,
   title,
   titleTag,
+  video,
   ...rest
 }) => {
   const className = classnames(
@@ -62,8 +63,13 @@ export const EmptyState = ({
             {actions}
           </div>
         )}
+        {video && (
+          <div className="sage-empty-state__video">
+            {video}
+          </div>
+        )}
+        {children}
       </div>
-      {children}
     </section>
   );
 };
@@ -81,6 +87,7 @@ EmptyState.defaultProps = {
   text: null,
   title: null,
   titleTag: 'h2',
+  video: null,
 };
 
 EmptyState.propTypes = {
@@ -93,5 +100,6 @@ EmptyState.propTypes = {
   scope: PropTypes.oneOf(Object.values(EmptyState.SCOPES)),
   text: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   title: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
-  titleTag: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6'])
+  titleTag: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']),
+  video: PropTypes.node,
 };
