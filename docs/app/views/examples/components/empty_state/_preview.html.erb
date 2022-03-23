@@ -20,7 +20,7 @@
 
 <h3>With Graphic</h3>
 <%= sage_component SageEmptyState, {
-  graphic: image_tag("card-placeholder-sm.png", alt: ""),
+  graphic: image_tag("empty-state-sm.svg", alt: ""),
   title: "Title for state, with graphic instead of icon",
   text: "Text to appear below. Lorem ipsum dolor sit amet consectituor.",
 } do %>
@@ -30,7 +30,7 @@
 <h3>Page Scope and Graphic</h3>
 <%= sage_component SageEmptyState, {
   title: "Create your first Email Campaign",
-  graphic: image_tag("null-view-graphic.png", alt: ""),
+  graphic: image_tag("empty-state-lg.svg", alt: ""),
   scope: "page",
 } do %>
   <% content_for :sage_empty_state_text do %>
@@ -60,7 +60,7 @@
 <h3>Page Scope and Graphic with Video</h3>
 <%= sage_component SageEmptyState, {
   title: "Create your first Email Campaign",
-  graphic: image_tag("null-view-graphic.png", alt: ""),
+  graphic: image_tag("empty-state-lg.svg", alt: ""),
   scope: "page",
 } do %>
   <% content_for :sage_empty_state_text do %>
