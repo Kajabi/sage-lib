@@ -16,7 +16,6 @@ $-link-subtext-color-hover: sage-color(grey, 800);
   position: relative;
   max-width: 100%;
   min-width: 0; /* the is needed so that truncation work when the link doesn't have an explicit width set  */
-  color: $-link-color;
 
   &:hover {
     color: $-link-color-hover;
