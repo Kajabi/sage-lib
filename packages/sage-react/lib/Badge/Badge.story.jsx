@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { selectArgs } from '../story-support/helpers';
 import { Badge } from './Badge';
