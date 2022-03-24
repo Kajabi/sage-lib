@@ -20,7 +20,7 @@ export const DropdownTriggerSelect = ({
       setConfigs({
         icon,
         label: selectedValue,
-      })
+      });
     } else {
       setConfigs({
         icon: defaultIcon,

@@ -38,7 +38,6 @@ export const SelectDropdownDemo = () => {
     <>
       <SelectDropdown
         items={items}
-        label={'Select...'}
         onSearch={onSearch}
         onSelect={(data) => { /* eslint-disable-line no-unused-vars */
           // console.log('Selected item', data);
