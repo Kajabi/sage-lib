@@ -156,7 +156,8 @@ $-btn-loading-min-height: rem(36px);
   .sage-panel-controls__tabs-dropdown .sage-dropdown__trigger &,
   .sage-panel-controls__toolbar .sage-dropdown__trigger &,
   .sage-panel-controls__bulk-actions .sage-dropdown__trigger &,
-  .sage-toolbar .sage-dropdown__trigger & {
+  .sage-toolbar .sage-dropdown__trigger &,
+  .sage-toolbar__group .sage-dropdown__trigger & {
     @include sage-focus-outline--update-color(transparent);
 
     width: inherit;
@@ -304,7 +305,8 @@ $-btn-loading-min-height: rem(36px);
   }
 
   .sage-panel-controls__toolbar-btn-group > &,
-  .sage-toolbar__group > & {
+  .sage-toolbar__group > &,
+  .sage-toolbar__group > .sage-dropdown .sage-dropdown__trigger > & {
     border-radius: 0;
 
     &:first-child {
