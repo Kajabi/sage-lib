@@ -33,7 +33,6 @@ configs = [
       <%= sage_component SageBadge, {
         color: config[:color],
         value: config[:color].capitalize,
-        icon: config[:icon],
       }%>
     <% end %>
   <% end %>
@@ -46,7 +45,6 @@ configs = [
       <%= sage_component SageBadge, {
         color: config[:color],
         value: config[:color].capitalize,
-        icon: config[:icon],
       } do %>
         <% content_for :sage_badge_dot do %>
           <%= sage_component SageDot, { color: "primary" } %>
@@ -63,7 +61,6 @@ configs = [
       <%= sage_component SageBadge, {
         color: config[:color],
         value: config[:color].capitalize,
-        icon: config[:icon],
         interactive_type: :dropdown
       } do %>
         <% content_for :sage_badge_dot do %>
