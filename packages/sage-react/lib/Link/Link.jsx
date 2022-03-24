@@ -12,14 +12,17 @@ const tagPropTypes = PropTypes.oneOfType([
 export const Link = ({
   className,
   children,
+  suppressDefaultClass,
   tag,
   tooltip,
   truncate,
   ...rest
 }) => {
   const classNames = classnames(
-    'sage-link',
     className,
+    {
+      'sage-link': !suppressDefaultClass
+    }
   );
 
   const SelfTag = tag || 'a';
@@ -58,6 +61,7 @@ export const Link = ({
 Link.defaultProps = {
   className: null,
   children: null,
+  suppressDefaultClass: false,
   tag: null,
   tooltip: null,
   truncate: false,
@@ -70,6 +74,7 @@ Link.tagPropTypes = tagPropTypes;
 Link.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node,
+  suppressDefaultClass: PropTypes.bool,
   tag: tagPropTypes,
   tooltip: PropTypes.shape({
     position: PropTypes.oneOf(Object.values(Tooltip.POSITIONS)),
