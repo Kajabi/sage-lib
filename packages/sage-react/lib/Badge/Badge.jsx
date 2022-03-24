@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
 export const Badge = ({
-  className,
+  // className,
   children,
   ...rest
 }) => {
   const classNames = classnames(
     'sage-badge',
-    className
+    // className
   );
   return (
     <span className={classNames} {...rest}>

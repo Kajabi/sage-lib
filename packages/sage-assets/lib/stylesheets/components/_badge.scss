@@ -32,7 +32,9 @@ $-badge-inset-border: 0 0 0 1px inset;
   max-width: 100%;
   min-height: $-badge-interactive-icon-size;
   padding: $-badge-padding;
+  color: sage-color(grey, 900);
   white-space: nowrap;
+  background-color: transparent;
   border-radius: $-badge-border-radius;
   border: unset;
   outline: none;
@@ -72,10 +74,13 @@ $-badge-inset-border: 0 0 0 1px inset;
     }
   }
 
-  #{$-color-modifier} .sage-badge__value {
-    color: sage-color-combo($-color-name, default, foreground);
-    background-color: sage-color-combo($-color-name, default, background);
+  #{$-color-modifier} .sage-dot {
+    --sage-dot-color: #{sage-color-combo($-color-name, default, icon-background-accent)};
   }
+
+  // #{$-color-modifier} .sage-badge__value {
+  //   background-color: sage-color-combo($-color-name, default, background);
+  // }
 
   #{$-color-modifier}.sage-badge--interactive {
     &:hover {
@@ -88,24 +93,12 @@ $-badge-inset-border: 0 0 0 1px inset;
 
     .sage-badge__value {
       @include sage-focus-outline();
-      @include sage-focus-outline--update-color( sage-color-combo($-color-name, default, foreground) );
+      @include sage-focus-outline--update-color(sage-color(primary, 400));
 
       position: static;
 
-      &:hover {
-        background-color: sage-color-combo($-color-name, default, background-accent);
-      }
-    }
-
-    .sage-btn {
-      color: sage-color-combo($-color-name, default, foreground);
-
-      &:hover {
-        background-color: sage-color-combo($-color-name, default, background-accent);
-      }
-
-      &:focus {
-        @include sage-focus-outline--update-color( sage-color-combo($-color-name, default, foreground) );
+      &::after {
+        border-radius: $-badge-border-radius;
       }
     }
 
@@ -120,7 +113,7 @@ $-badge-inset-border: 0 0 0 1px inset;
       border-radius: 0 $-badge-border-radius $-badge-border-radius 0;
 
       &::before {
-        color: sage-color-combo($-color-name, default, foreground);
+        color: sage-color(grey, 700);
       }
 
       &::after {
@@ -130,7 +123,7 @@ $-badge-inset-border: 0 0 0 1px inset;
       }
 
       &:focus {
-        @include sage-focus-outline--update-color( sage-color-combo($-color-name, default, foreground-accent) );
+        // @include sage-focus-outline--update-color(sage-color(grey, 700));
       }
 
       &.sage-btn--tag::before {
