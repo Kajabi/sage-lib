@@ -4,194 +4,108 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import uuid from 'react-uuid';
 import { SageTokens } from '../configs';
-import { Label } from '../Label';
 import { Dropdown } from './Dropdown';
 import { DropdownTriggerSelect } from './DropdownTriggerSelect';
+import { LegacySelectDropdown } from './LegacySelectDropdown';
 import { DROPDOWN_PANEL_SIZES, DROPDOWN_POSITIONS } from './configs';
 
 export const SelectDropdown = ({
-  align,
-  allowDeselect,
-  allowMultiselect,
-  className,
-  closePanelOnExit,
-  contained,
-  customized,
-  defaultIcon,
-  disabled,
-  filterActions,
-  id,
-  initialSelectedValue,
-  items,
-  label,
-  localSelectedItems,
-  onChangeHook,
-  onDeselect,
-  onEscapeHook,
-  onSearch,
-  onSelect,
-  panelSize,
-  resetToken,
-  searchable,
-  searchPlaceholder,
-  selectionBecomesLabel,
-  showSelectionsAsLabels,
+  onChange,
+  setSelectedValueHook,
+  useLegacy,
+
+  onSelect, // shared
+  
+  align, // pass-through
+  className,  // pass-through
+  closePanelOnExit, // pass-through
+  contained, // pass-through
+  customized, // pass-through
+  onEscapeHook, // pass-through
+  panelSize, // pass-through
+  
+  disabled, // pass-through; trigger pass-through
+  
+  allowMultiselect, // item-list pass-through
+  filterActions, // item-list pass-through
+  id, // item-list pass-through
+  items, // item-list pass-through
+  onSearch, // item-list pass-through
+  searchable, // item-list pass-through
+  searchPlaceholder, // item-list pass-through
+
+  defaultIcon, // trigger pass-through
+  icon, // trigger pass-through
+  label, // trigger pass-through
+
+  ...rest
 }) => {
+  if (useLegacy) {
+    return (
+      <LegacySelectDropdown
+        contained={contained}
+        allowMultiselect={allowMultiselect}
+        align={align}
+        className={className}
+        closePanelOnExit={closePanelOnExit}
+        customized={customized}
+        defaultIcon={defaultIcon}
+        disabled={disabled}
+        filterActions={filterActions}
+        id={id}
+        items={items}
+        label={label}
+        onEscapeHook={onEscapeHook}
+        onSearch={onSearch}
+        onSelect={onSelect}
+        panelSize={panelSize}
+        searchable={searchable}
+        searchPlaceholder={searchPlaceholder}
+        {...rest}
+      />
+    );
+  }
+
+  const [selectedValue, setSelectedValue] = useState(null);
+
   const emptySelectedValue = (
     <>
       &nbsp;
     </>
   );
 
-  const setClassNames = (_hasSelectedValue) => classnames(
+  const classNames = classnames(
     className,
     {
-      'sage-dropdown--value-selected': _hasSelectedValue,
-      'sage-dropdown--contained': contained,
+      'sage-dropdown--value-selected': false, // TODO
     }
   );
 
-  const displaySelectedValue = () => {
-    if (!initialSelectedValue) {
-      return emptySelectedValue;
-    }
-
-    if (initialSelectedValue.label) {
-      return initialSelectedValue.label;
-    }
-
-    return initialSelectedValue;
+  const getSelectedValue = () => {
+    const selectedItems = items.filter((item) => item.isActive);
+    onChange(selectedItems);
+    setSelectedValue(setSelectedValueHook({ selectedItems, allowMultiselect }))
   };
 
-  const [configs, setConfigs] = useState({
-    classNames: setClassNames(!!initialSelectedValue),
-    hasSelectedValue: !!initialSelectedValue,
-    icon: defaultIcon,
-    selectedValue: displaySelectedValue(),
-  });
-
-  const deselectValue = () => {
-    setConfigs({
-      classNames: setClassNames(false),
-      hasSelectedValue: false,
-      icon: defaultIcon,
-      selectedValue: emptySelectedValue,
-    });
-
-    if (onDeselect) {
-      onDeselect();
-    }
-  };
-
-  const changeValue = (data) => {
-    let { selectedValue, icon, hasSelectedValue } = configs;
-
-    if (onChangeHook) {
-      data = onChangeHook(data);
-    }
-
-    if (selectionBecomesLabel && !allowMultiselect) {
-      // retrieve the selected value and icon if possible
-      switch (typeof data) {
-        case 'object':
-          selectedValue = data.label || null;
-          icon = data.icon || null;
-          break;
-        case 'string':
-          selectedValue = data;
-          break;
-        case 'number':
-          selectedValue = String(data);
-          break;
-        default:
-          break;
-      }
-
-      // Selecting same item as currently selected deselects it
-      if (allowDeselect && selectedValue === configs.selectedValue) {
-        deselectValue();
-        return;
-      }
-
-      // Ensure a safe value is put into the selectedvalue
-      if (!selectedValue) {
-        selectedValue = emptySelectedValue;
-        hasSelectedValue = false;
-      } else {
-        hasSelectedValue = true;
-      }
-
-      setConfigs({
-        classNames: setClassNames(selectedValue !== emptySelectedValue),
-        hasSelectedValue,
-        icon,
-        selectedValue,
-      });
-    }
-
+  const exitPanelHandler = (data) => {
     if (onSelect) {
       onSelect(data);
     }
   };
 
-  // When reset token changes, deselect current selection
   useEffect(() => {
-    if (resetToken) {
-      deselectValue();
-    }
-  }, [resetToken]);
+    console.log('items change handler', items, selectedValue);
+    getSelectedValue();
+  }, [items]);
 
   useEffect(() => {
-    if (selectionBecomesLabel && allowMultiselect) {
-      let lastSelectedLabel,
-        numSelected = 0;
+    console.log('observed change to selected value', selectedValue);
+  }, [selectedValue])
 
-      localSelectedItems.forEach((item) => {
-        if (item.isActive) {
-          numSelected += 1;
-          lastSelectedLabel = item.label;
-        }
-      });
-
-      let selectedValue,
-        hasSelectedValue;
-      if (numSelected > 1) {
-        selectedValue = `${numSelected} items`;
-        hasSelectedValue = true;
-      } else if (numSelected === 1) {
-        selectedValue = lastSelectedLabel;
-        hasSelectedValue = true;
-      } else {
-        selectedValue = initialSelectedValue || emptySelectedValue;
-        hasSelectedValue = initialSelectedValue !== null;
-      }
-
-      setConfigs({
-        classNames: setClassNames(hasSelectedValue),
-        icon: configs.icon,
-        selectedValue,
-        hasSelectedValue,
-      });
-    } else if (selectionBecomesLabel && !allowMultiselect) {
-      let { selectedValue, hasSelectedValue } = configs;
-      if (initialSelectedValue && !hasSelectedValue) {
-        hasSelectedValue = true;
-        selectedValue = initialSelectedValue;
-      }
-
-      setConfigs({
-        ...configs,
-        classNames: setClassNames(hasSelectedValue),
-        hasSelectedValue,
-        selectedValue,
-      });
-    }
-  }, [initialSelectedValue, items, selectionBecomesLabel, allowMultiselect]);
-
-  const renderDropdown = () => (
+  return (
     <Dropdown
       align={align}
-      className={configs.classNames}
+      className={classNames}
       closePanelOnExit={closePanelOnExit}
       contained={contained}
       customized={customized}
@@ -200,12 +114,12 @@ export const SelectDropdown = ({
           disabled={disabled}
           defaultIcon={defaultIcon}
           label={label}
-          icon={configs.icon}
-          selectedValue={configs.selectedValue}
+          icon={icon}
+          selectedValue={selectedValue}
         />
       )}
       disabled={disabled}
-      exitPanelHandler={changeValue}
+      exitPanelHandler={exitPanelHandler}
       label={emptySelectedValue}
       onEscapeHook={onEscapeHook}
       panelModifier="select"
@@ -217,39 +131,51 @@ export const SelectDropdown = ({
         filterActions={filterActions}
         groupId={id}
         items={items}
-        localSelectedItems={localSelectedItems}
         onSearch={onSearch}
-        searchable={searchable || allowMultiselect}
+        searchable={searchable}
         searchPlaceholder={searchPlaceholder}
       />
     </Dropdown>
   );
-
-  return allowMultiselect && showSelectionsAsLabels ? (
-    <div className="sage-dropdown-combo">
-      {renderDropdown()}
-      <Label.Group>
-        {items.map(({ id, isActive, label, payload }) => isActive && (
-          <Label
-            key={id}
-            interactiveType={Label.INTERACTIVE_TYPES.SECONDARY_BUTTON}
-            secondaryButton={(
-              <Label.SecondaryButton onClick={() => changeValue((payload || { id }))} />
-            )}
-            value={label}
-          />
-        ))}
-      </Label.Group>
-    </div>
-  ) : renderDropdown();
 };
 
 SelectDropdown.PANEL_SIZES = DROPDOWN_PANEL_SIZES;
 SelectDropdown.POSITIONS = DROPDOWN_POSITIONS;
 
+SelectDropdown.setSelectedItem = ({
+  conditionCallback = (item, selection) => item.payload.value === selection.value,
+  items,
+  multiSelect = false,
+  selection,
+}) => {
+  return items.map(item => {
+    if (conditionCallback(item, selection)) {
+      item.isActive = multiSelect && item.isActive ? false : true;
+    } else {
+      item.isActive = multiSelect ? item.isActive : false;
+    }
+
+    return item;
+  })
+};
+
+SelectDropdown.setSelectedValueHook = ({
+  selectedItems,
+  allowMultiselect,
+}) => {
+  if (selectedItems.length < 1) {
+    return null;
+  }
+
+  if (allowMultiselect) {
+    return `${selectedItems.length} selected`;
+  }
+
+  return selectedItems[0].label;
+};
+
 SelectDropdown.defaultProps = {
   align: DROPDOWN_POSITIONS.DEFAULT,
-  allowDeselect: false,
   allowMultiselect: false,
   className: null,
   closePanelOnExit: true,
@@ -258,27 +184,23 @@ SelectDropdown.defaultProps = {
   defaultIcon: null,
   disabled: false,
   filterActions: null,
+  icon: null,
   id: uuid(),
-  initialSelectedValue: null,
   items: [],
   label: 'Select...',
-  localSelectedItems: [],
-  onChangeHook: null,
-  onDeselect: null,
+  onChange: (selections) => selections,
   onEscapeHook: () => false,
-  onSelect: (evt) => evt,
   onSearch: (evt) => evt,
+  onSelect: (data) => data,
   panelSize: DROPDOWN_PANEL_SIZES.DEFAULT,
-  resetToken: null,
   searchable: false,
   searchPlaceholder: 'Find',
-  selectionBecomesLabel: true,
-  showSelectionsAsLabels: false,
+  setSelectedValueHook: SelectDropdown.setSelectedValueHook,
+  useLegacy: true,
 };
 
 SelectDropdown.propTypes = {
   align: PropTypes.oneOf(Object.values(DROPDOWN_POSITIONS)),
-  allowDeselect: PropTypes.bool,
   allowMultiselect: PropTypes.bool,
   className: PropTypes.string,
   closePanelOnExit: PropTypes.bool,
@@ -288,30 +210,20 @@ SelectDropdown.propTypes = {
   disabled: PropTypes.bool,
   filterActions: PropTypes.node,
   label: PropTypes.string,
+  icon: PropTypes.string,
   id: PropTypes.string,
-  initialSelectedValue: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.shape({
-      id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-      label: PropTypes.string,
-    })
-  ]),
   items: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
       label: PropTypes.string,
     })
   ),
-  localSelectedItems: PropTypes.arrayOf(PropTypes.shape({})),
-  onChangeHook: PropTypes.func,
-  onDeselect: PropTypes.func,
+  onChange: PropTypes.func,
   onEscapeHook: PropTypes.func,
   onSearch: PropTypes.func,
   onSelect: PropTypes.func,
   panelSize: PropTypes.oneOf(Object.values(DROPDOWN_PANEL_SIZES)),
-  resetToken: PropTypes.oneOfType([PropTypes.bool, PropTypes.number, PropTypes.string]),
   searchable: PropTypes.bool,
   searchPlaceholder: PropTypes.string,
-  selectionBecomesLabel: PropTypes.bool,
-  showSelectionsAsLabels: PropTypes.bool,
+  setSelectedValueHook: PropTypes.func,
 };

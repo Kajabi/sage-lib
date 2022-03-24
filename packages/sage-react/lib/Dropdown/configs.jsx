@@ -1,3 +1,5 @@
+import React from 'react';
+
 export const DROPDOWN_ITEM_COLORS = {
   DANGER: 'danger',
   MUTED: 'muted',
@@ -24,3 +26,9 @@ export const DROPDOWN_POSITIONS = {
   RIGHT: 'right',
   CENTER: 'center'
 };
+
+export const LEGACY_EMPTY_SELECTED_VALUE = (
+  <>
+    &nbsp;
+  </>
+);
