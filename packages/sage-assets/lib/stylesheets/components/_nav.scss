@@ -18,7 +18,7 @@ $-nav-icon-size: rem(20px);
   color: sage-color(charcoal, 200);
 
   .sage-nav__link--active & {
-    color: sage-color(primary);
+    color: inherit;
   }
 }
 
