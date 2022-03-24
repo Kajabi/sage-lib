@@ -16,9 +16,8 @@ $-table-max-width: none;
 // Text
 $-table-caption-font-size: "%t-sage-body-small";
 $-table-caption-alignment: center;
-$-table-cell-font-color: sage-color(grey, 600);
+$-table-cell-font-color: sage-color(grey, 800);
 $-table-cell-type-spec: "%t-sage-body";
-$-table-cell-font-color-strong: sage-color(grey, 800);
 $-table-cell-type-spec-strong: "%t-sage-body-med";
 $-table-heading-font-color: sage-color(grey, 900);
 $-table-heading-type-spec: "%t-sage-heading-6";
@@ -110,7 +109,7 @@ $-table-avatar-width: rem(32px);
     &.sage-table-cell--strong {
       @extend #{$-table-cell-type-spec-strong};
 
-      color: $-table-cell-font-color-strong;
+      color: $-table-cell-font-color;
     }
   }
 
@@ -352,7 +351,7 @@ $-table-avatar-width: rem(32px);
 }
 
 .sage-table-cell__link {
-  color: inherit;
+color: $-table-cell-font-color;
 
   &:focus,
   &:active {
