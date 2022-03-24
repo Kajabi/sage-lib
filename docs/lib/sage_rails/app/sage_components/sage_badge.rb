@@ -3,7 +3,6 @@ class SageBadge < SageComponent
     container_attributes: [:optional, Hash],
     color: [:optional, SageSchemas::STATUSES],
     interactive_type: [:optional, Set.new([:default, :dropdown])],
-    style: [:optional, Set.new(["subtle", "bold"])],
     value: String,
   })
 

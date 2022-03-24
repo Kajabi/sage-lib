@@ -51,7 +51,7 @@ $-badge-inset-border: 0 0 0 1px inset;
 
   display: block;
 
-  .sage-badge--interactive-right-cta-affordance[class*="sage-badge--icon-"] & {
+  .sage-badge--interactive[class*="sage-badge--icon-"] & {
     @media (max-width: sage-breakpoint(sm-max)) {
       @include visually-hidden();
     }
@@ -68,7 +68,6 @@ $-badge-inset-border: 0 0 0 1px inset;
   #{$-color-modifier} {
     background-color: sage-color-combo($-color-name, default, background);
 
-
     &:hover:not(:focus):not(:active):not(:disabled):not(.disabled) {
       color: sage-color-combo($-color-name, default, foreground-accent);
     }
@@ -78,17 +77,9 @@ $-badge-inset-border: 0 0 0 1px inset;
     --sage-dot-color: #{sage-color-combo($-color-name, default, icon-background-accent)};
   }
 
-  // #{$-color-modifier} .sage-badge__value {
-  //   background-color: sage-color-combo($-color-name, default, background);
-  // }
-
   #{$-color-modifier}.sage-badge--interactive {
     &:hover {
       background-color: sage-color-combo($-color-name, default, background-accent);
-    }
-
-    &.sage-badge--interactive-right-cta-affordance .sage-badge__value {
-      padding-right: $-badge-interactive-icon-size-decor;
     }
 
     .sage-badge__value {
@@ -96,6 +87,7 @@ $-badge-inset-border: 0 0 0 1px inset;
       @include sage-focus-outline--update-color(sage-color(primary, 400));
 
       position: static;
+      padding-right: $-badge-interactive-icon-size-decor;
 
       &::after {
         border-radius: $-badge-border-radius;
@@ -114,6 +106,12 @@ $-badge-inset-border: 0 0 0 1px inset;
 
       &::before {
         color: sage-color(grey, 700);
+
+        /* stylelint-disable max-nesting-depth */
+        @media (max-width: sage-breakpoint(sm-max)) {
+          width: sage-spacing(md);
+        }
+        /* stylelint-enable max-nesting-depth */
       }
 
       &::after {
@@ -122,18 +120,8 @@ $-badge-inset-border: 0 0 0 1px inset;
         border-radius: 0 $-badge-border-radius $-badge-border-radius 0;
       }
 
-      &:focus {
-        // @include sage-focus-outline--update-color(sage-color(grey, 700));
-      }
-
       &.sage-btn--tag::before {
         font-size: sage-font-size(md, false);
-      }
-    }
-
-    &.sage-badge--interactive-right-cta-affordance .sage-badge__decor-icon::before {
-      @media (max-width: sage-breakpoint(sm-max)) {
-        width: sage-spacing(md);
       }
     }
   }

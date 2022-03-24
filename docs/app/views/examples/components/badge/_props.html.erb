@@ -1,0 +1,41 @@
+<tr>
+  <td><%= md('`color`') %></td>
+  <td><%= md('
+    Sets the color for the badge.
+  ') %></td>
+  <td><%= md('`"danger"`, `"draft"`, `"info"`, `"locked"`, `"published"`, `"success"`, or `"warning"`') %></td>
+  <td><%= md('Required') %></td>
+</tr>
+<tr>
+  <td><%= md('`container_attributes`') %></td>
+  <td><%= md('Additional attributes to provide bindings or actions to the badge container.') %></td>
+  <td><%= md('Hash') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`interactive_type`') %></td>
+  <td><%= md('Enable to set the badge\'s element as a `<button>`.') %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`false`') %></td>
+</tr>
+<tr>
+  <td><%= md('`value`') %><%= sage_component SageLabel, { color: "published", value: "required" } %></td>
+  <td><%= md('The text to use as the badge\'s content') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('Required') %></td>
+</tr>
+<tr>
+  <td colspan="4"><%= md('**Badge Group**') %></td>
+</tr>
+<tr>
+  <td><%= md('`align`') %></td>
+  <td><%= md('Adjusts the alignment of the badges within.') %></td>
+  <td><%= md('[`"center"` | `"end"` | `"space-between"`]') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`gap`') %></td>
+  <td><%= md('Adjusts the size of the gap between badges. `xs` is the default gap size.') %></td>
+  <td><%= md('[`:sm` | `:md` | `:lg`]') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>

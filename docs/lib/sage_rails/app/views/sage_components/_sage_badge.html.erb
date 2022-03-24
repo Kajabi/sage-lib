@@ -4,9 +4,7 @@
   class="
     sage-badge
     <%= "sage-badge--#{component.color}" if component.color %>
-    <%= "sage-badge--#{component.style}" if component.style %>
     <%= "sage-badge--interactive" if component.interactive_type %>
-    <%= "sage-badge--interactive-right-cta-affordance" if (component.interactive_type === :dropdown) || (component.interactive_type === :secondary_button) %>
     <%= component.generated_css_classes %>
   "
   <% component.container_attributes.each do |key, value| %>
@@ -26,12 +24,7 @@
     </span>
   </<%= badge_content_tag %>>
   <%= component.content %>
-  <% if component.interactive_type === :secondary_button %>
-    <%= component.secondary_button if component.secondary_button.is_a? String %>
-    <%= sage_component SagebadgeSecondaryButton, {} if component.secondary_button == true %>
-    <%= sage_component SagebadgeSecondaryButton, component.secondary_button if component.secondary_button.is_a? Hash %>
-  <% end %>
-  <% if component.interactive_type === :dropdown %>
+  <% if component.interactive_type %>
     <span class="sage-badge__decor-icon sage-badge__decor-icon--down-small"></span>
   <% end %>
 </span>
