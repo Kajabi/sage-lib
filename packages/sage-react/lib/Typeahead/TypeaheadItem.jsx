@@ -16,6 +16,7 @@ export const TypeaheadItem = ({
   <li className="sage-typeahead__item">
     <Link
       className="sage-typeahead__item-trigger"
+      suppressDefaultClass={true}
       {...rest}
     >
       <i

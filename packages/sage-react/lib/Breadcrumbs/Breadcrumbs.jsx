@@ -36,6 +36,7 @@ export const Breadcrumbs = ({
         aria-current={isCurrent ? 'page' : false}
         aria-disabled={disabled}
         className={`sage-breadcrumbs__link ${isCurrent && 'sage-breadcrumbs__link--current'}`}
+        suppressDefaultClass={true}
         tag={linkTag}
         {...otherProps}
       >
