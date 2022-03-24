@@ -49,6 +49,7 @@ export const MediaTile = ({
                 <Link
                   {...tileLink}
                   className={`sage-media-tile__link ${tileLink.classname || ''}`}
+                  suppressDefaultClass={true}
                 >
                   {title}
                 </Link>
