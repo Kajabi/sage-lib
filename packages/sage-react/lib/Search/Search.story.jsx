@@ -32,3 +32,11 @@ Contained.args = {
   contained: true,
   placeholder: 'Search'
 };
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+  contained: true,
+  disabled: true,
+  placeholder: 'Search',
+  value: ''
+};
