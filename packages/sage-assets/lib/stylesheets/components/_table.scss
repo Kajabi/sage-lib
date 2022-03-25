@@ -58,16 +58,16 @@ $-table-avatar-width: rem(32px);
   tfoot {
     color: $-table-heading-font-color;
     
-    th {
-      padding: $-table-padding-heading;
-    }
-
     td,
     th {
       @extend #{$-table-heading-type-spec};
-
+      
       padding: $-table-padding;
       color: $-table-cell-focus;
+    }
+    
+    th {
+      padding: $-table-padding-heading;
     }
   }
 
