@@ -23,7 +23,7 @@ export const DropdownTrigger = ({
     'sage-dropdown__trigger',
     {
       [`sage-dropdown__trigger--${modifier}`]: modifier,
-      [`sage-dropdown__trigger--custom-width`]: width,
+      'sage-dropdown__trigger--custom-width': width,
     }
   );
 
