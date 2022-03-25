@@ -65,7 +65,7 @@ export const TableRow = ({
       };
     });
     setSelfCells(newCells);
-  }, []);
+  }, [cells, schema, typeRenderers]);
 
   const onChangeSelector = (value, checked) => {
     setSelfSelected(!checked);
