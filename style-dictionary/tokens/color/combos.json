@@ -13,10 +13,10 @@
             "value": "{color.base.grey.200.hex}"
           },
           "background-accent": {
-            "value": "{color.base.grey.400.hex}"
+            "value": "{color.base.grey.300.hex}"
           },
           "icon-background-accent": {
-            "value": "{color.base.grey.500.hex}"
+            "value": "{color.base.grey.600.hex}"
           }
         },
         "subtle": {
@@ -51,10 +51,10 @@
             "value": "{color.base.sage.100.hex}"
           },
           "background-accent": {
-            "value": "{color.base.sage.200.hex}"
+            "value": "{color.base.sage.400.hex}"
           },
           "icon-background-accent": {
-            "value": "{color.base.sage.500.hex}"
+            "value": "{color.base.sage.600.hex}"
           }
         },
         "subtle": {
@@ -89,10 +89,10 @@
             "value": "{color.base.primary.100.hex}"
           },
           "background-accent": {
-            "value": "{color.base.primary.300.hex}"
+            "value": "{color.base.primary.400.hex}"
           },
           "icon-background-accent": {
-            "value": "{color.custom.label-primary-icon-background-accent}"
+            "value": "{color.base.primary.600.hex}"
           }
         },
         "subtle": {
@@ -127,10 +127,10 @@
             "value": "{color.base.purple.100.hex}"
           },
           "background-accent": {
-            "value": "{color.base.purple.300.hex}"
+            "value": "{color.base.purple.400.hex}"
           },
           "icon-background-accent": {
-            "value": "{color.base.purple.500.hex}"
+            "value": "{color.base.purple.600.hex}"
           }
         },
         "subtle": {
@@ -162,13 +162,13 @@
             "value": "{color.base.yellow.900.hex}"
           },
           "background": {
-            "value": "{color.base.yellow.300.hex}"
+            "value": "{color.base.yellow.100.hex}"
           },
           "background-accent": {
-            "value": "{color.custom.label-warning-background-accent}"
+            "value": "{color.base.yellow.400.hex}"
           },
           "icon-background-accent": {
-            "value": "{color.base.yellow.500.hex}"
+            "value": "{color.base.yellow.700.hex}"
           }
         },
         "subtle": {
@@ -200,13 +200,13 @@
             "value": "{color.base.red.900.hex}"
           },
           "background": {
-            "value": "{color.base.red.300.hex}"
+            "value": "{color.base.red.100.hex}"
           },
           "background-accent": {
-            "value": "{color.custom.label-danger-background-accent}"
+            "value": "{color.base.red.400.hex}"
           },
           "icon-background-accent": {
-            "value": "{color.custom.label-danger-icon-background-accent}"
+            "value": "{color.base.red.600.hex}"
           }
         },
         "subtle": {

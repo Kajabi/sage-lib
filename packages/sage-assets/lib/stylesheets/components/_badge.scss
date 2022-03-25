@@ -5,9 +5,10 @@
 ////
 
 
+$-badge-min-height: rem(20px);
 $-badge-interactive-icon-size: rem(24px);
 $-badge-interactive-icon-size-decor: rem(28px);
-$-badge-padding: 0 sage-spacing(xs);
+$-badge-padding: 0 rem(10px) 0 sage-spacing(xs);
 $-badge-border-radius: sage-border(radius-x-large);
 $-badge-inset-border: 0 0 0 1px inset;
 
@@ -24,13 +25,13 @@ $-badge-inset-border: 0 0 0 1px inset;
 }
 
 .sage-badge__value {
-  @extend %t-sage-body-small-semi;
+  @extend %t-sage-body-xsmall;
 
   appearance: none;
   display: flex;
   align-items: center;
   max-width: 100%;
-  min-height: $-badge-interactive-icon-size;
+  min-height: $-badge-min-height;
   padding: $-badge-padding;
   color: sage-color(grey, 900);
   white-space: nowrap;
@@ -43,6 +44,10 @@ $-badge-inset-border: 0 0 0 1px inset;
   &:focus,
   &:active {
     outline: none;
+  }
+
+  .sage-dot ~ & {
+    padding-left: sage-spacing(2xs)
   }
 }
 
@@ -69,7 +74,7 @@ $-badge-inset-border: 0 0 0 1px inset;
     background-color: sage-color-combo($-color-name, default, background);
 
     &:hover:not(:focus):not(:active):not(:disabled):not(.disabled) {
-      color: sage-color-combo($-color-name, default, foreground-accent);
+      color: sage-color-combo($-color-name, default, background-accent);
     }
   }
 
@@ -87,7 +92,7 @@ $-badge-inset-border: 0 0 0 1px inset;
       @include sage-focus-outline--update-color(sage-color(primary, 400));
 
       position: static;
-      padding-right: $-badge-interactive-icon-size-decor;
+      padding-right: rem(24px);
 
       &::after {
         border-radius: $-badge-border-radius;
@@ -99,12 +104,14 @@ $-badge-inset-border: 0 0 0 1px inset;
       justify-content: center;
       position: absolute;
       right: 0;
-      width: $-badge-interactive-icon-size-decor;
-      min-height: $-badge-interactive-icon-size;
+      width: rem(22px);
+      min-height: rem(22px);
       margin: auto 0;
       border-radius: 0 $-badge-border-radius $-badge-border-radius 0;
 
       &::before {
+        @extend %t-sage-body-xsmall;
+
         color: sage-color(grey, 700);
 
         /* stylelint-disable max-nesting-depth */

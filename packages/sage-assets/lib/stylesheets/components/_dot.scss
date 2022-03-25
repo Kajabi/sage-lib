@@ -7,6 +7,7 @@
 $-sage-dot-size: rem(8px);
 $-sage-dot-color: sage-color(black);
 $-sage-dot-gap: sage-spacing(2xs);
+$-sage-dot-size--badge: rem(6px);
 
 .sage-dot {
   display: inline-flex;
@@ -19,12 +20,19 @@ $-sage-dot-gap: sage-spacing(2xs);
     display: block;
     width: var(--sage-dot-size, #{$-sage-dot-size});
     height: var(--sage-dot-size, #{$-sage-dot-size});
+    flex-shrink: 0;
     border-radius: sage-border(radius);
     background-color: var(--sage-dot-color, #{$-sage-dot-color});
+
+    .sage-badge & {
+      flex-shrink: 0;
+      width: $-sage-dot-size--badge;
+      height: $-sage-dot-size--badge;
+    }
   }
 
   .sage-badge & {
-    margin-left: sage-spacing(xs);
+    margin-left: rem(6px);
   }
 }
 
