@@ -6,7 +6,7 @@
 
 
 // Borders and sizing
-$-table-header-border: rem(1px) solid sage-color(grey, 300);
+$-table-header-border: rem(1px) solid sage-color(grey, 200);
 $-table-cell-padding-xs: sage-spacing(xs);
 $-table-cell-padding-card: sage-spacing();
 $-table-cell-padding-panel: sage-spacing();
@@ -16,11 +16,12 @@ $-table-max-width: none;
 // Text
 $-table-caption-font-size: "%t-sage-body-small";
 $-table-caption-alignment: center;
-$-table-cell-font-color: sage-color(grey, 800);
-$-table-cell-type-spec: "%t-sage-body";
-$-table-cell-type-spec-strong: "%t-sage-body-med";
+$-table-cell-font-color: sage-color(grey, 600);
+$-table-cell-font-color-strong: sage-color(grey, 800);
+$-table-cell-type-spec: "%t-sage-body-small-med";
+$-table-cell-type-spec-strong: "%t-sage-body-small-semi";
 $-table-heading-font-color: sage-color(grey, 900);
-$-table-heading-type-spec: "%t-sage-heading-6";
+$-table-heading-type-spec: "%t-sage-body-xsmall-semi";
 
 // Overflow gradient
 $-table-overflow-indicator-width: sage-spacing(sm);
@@ -61,6 +62,7 @@ $-table-avatar-width: rem(32px);
       @extend #{$-table-heading-type-spec};
 
       padding: $-table-padding;
+      color: $-table-cell-focus;
 
       &:first-child {
         padding-left: $-table-cell-padding-panel;
@@ -109,7 +111,7 @@ $-table-avatar-width: rem(32px);
     &.sage-table-cell--strong {
       @extend #{$-table-cell-type-spec-strong};
 
-      color: $-table-cell-font-color;
+      color: $-table-cell-font-color-strong;
     }
   }
 
@@ -178,7 +180,7 @@ $-table-avatar-width: rem(32px);
     &:hover,
     &:focus,
     &:active {
-      color: sage-color(grey, 700);
+      color: $-table-cell-focus;
     }
   }
 
