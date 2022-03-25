@@ -12,7 +12,7 @@ module ComponentsHelper
   def sage_components
     [
       # Sage Generated Components
-        
+
       {
         title: "alert",
         description: "Alerts are used to indicate user-driven notifications.",
@@ -48,11 +48,11 @@ module ComponentsHelper
       {
         title: "badge",
         description: "",
-        scss: "todo",
-        docs: "todo",
-        rails: "todo",
-        react: "todo",
-        a11y: "todo",
+        scss: "done",
+        docs: "done",
+        rails: "done",
+        react: "done",
+        a11y: "done",
         figma_embed: "",
       },
       {
@@ -747,7 +747,7 @@ module ComponentsHelper
       },
       {
         title: "tag",
-        description: "Tags show concise metadata in a compact format.", 
+        description: "Tags show concise metadata in a compact format.",
         scss: "done",
         rails: "done",
         react: "done",
