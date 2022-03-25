@@ -4,6 +4,10 @@
 /// @group sage
 ////
 
+$-link-color: sage-color(primary, 500);
+$-link-color-hover: sage-color(primary, 700);
+$-link-subtext-color: sage-color(grey, 600);
+$-link-subtext-color-hover: sage-color(grey, 800);
 
 .sage-link {
   @extend %t-sage-body-med;
@@ -12,15 +16,13 @@
   position: relative;
   max-width: 100%;
   min-width: 0; /* the is needed so that truncation work when the link doesn't have an explicit width set  */
-  text-decoration: underline;
 
   &:hover {
-    color: sage-color(primary, 700);
-    text-decoration: underline;
+    color: $-link-color-hover;
   }
 
   &:focus {
-    color: sage-color(primary, 300);
+    color: $-link-color;
   }
 
   @include sage-focus-outline(
@@ -77,7 +79,7 @@
 
 .sage-link--help-icon-only {
   @include sage-focus-outline($outline-offset-inline: 4px, $outline-offset-block: 2px);
-  @include sage-focus-outline--update-color(sage-color(primary, 500));
+  @include sage-focus-outline--update-color($-link-color);
 }
 
 .sage-link--subtext {
@@ -86,17 +88,16 @@
   display: inline-block;
   position: relative;
   padding: 0 sage-spacing(2xs);
-  color: sage-color(grey, 600);
-  text-decoration: underline;
+  color: $-link-subtext-color;
   border-radius: sage-border(radius-small);
 
   &:hover {
-    color: sage-color(grey, 800);
+    color: $-link-subtext-color-hover;
     text-decoration: underline;
   }
 
   &:focus {
-    color: sage-color(grey, 800);
+    color: $-link-subtext-color-hover;
     text-decoration: none;
   }
 }
