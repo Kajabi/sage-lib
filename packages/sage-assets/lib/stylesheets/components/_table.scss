@@ -10,7 +10,8 @@ $-table-header-border: rem(1px) solid sage-color(grey, 200);
 $-table-cell-padding-xs: sage-spacing(xs);
 $-table-cell-padding-card: sage-spacing();
 $-table-cell-padding-panel: sage-spacing();
-$-table-padding: rem(12px);
+$-table-padding: rem(22px) rem(12px);
+$-table-padding-heading: rem(14px) rem(12px);
 $-table-max-width: none;
 
 // Text
@@ -56,6 +57,10 @@ $-table-avatar-width: rem(32px);
   thead,
   tfoot {
     color: $-table-heading-font-color;
+    
+    th {
+      padding: $-table-padding-heading;
+    }
 
     td,
     th {
@@ -63,14 +68,6 @@ $-table-avatar-width: rem(32px);
 
       padding: $-table-padding;
       color: $-table-cell-focus;
-
-      &:first-child {
-        padding-left: $-table-cell-padding-panel;
-      }
-
-      &:last-child {
-        padding-right: $-table-cell-padding-panel;
-      }
     }
   }
 
@@ -98,15 +95,6 @@ $-table-avatar-width: rem(32px);
     // Cells should split the desired padding in half to make total desired space
     padding: $-table-padding;
     color: inherit;
-
-    // First and last cells in a row get the full outer spacing
-    &:first-child {
-      padding-left: $-table-cell-padding-panel;
-    }
-
-    &:last-child {
-      padding-right: $-table-cell-padding-panel;
-    }
 
     &.sage-table-cell--strong {
       @extend #{$-table-cell-type-spec-strong};
@@ -233,28 +221,6 @@ $-table-avatar-width: rem(32px);
   .sage-card & {
     margin-left: -1 * $-table-cell-padding-card;
     margin-right: -1 * $-table-cell-padding-card;
-
-    td:first-child {
-      padding-left: $-table-cell-padding-card;
-    }
-
-    td:last-child {
-      padding-right: $-table-cell-padding-card;
-    }
-
-    thead,
-    tfoot {
-      th,
-      td {
-        &:first-child {
-          padding-left: $-table-cell-padding-card;
-        }
-
-        &:last-child {
-          padding-right: $-table-cell-padding-card;
-        }
-      }
-    }
   }
 }
 
