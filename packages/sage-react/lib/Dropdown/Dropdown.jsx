@@ -34,6 +34,7 @@ export const Dropdown = ({
   panelType,
   triggerButtonSubtle,
   triggerModifier,
+  triggerWidth,
 }) => {
   const [isActive, setActive] = useState(false);
   const [coords, updateCoords] = useState(null);
@@ -145,6 +146,7 @@ export const Dropdown = ({
         modifier={triggerModifier}
         onClickTrigger={onClickTrigger}
         subtleButton={triggerButtonSubtle}
+        width={triggerWidth}
       >
         {customTrigger}
       </DropdownTrigger>
@@ -189,6 +191,7 @@ Dropdown.defaultProps = {
   icon: null,
   isLabelVisible: true,
   isPinned: false,
+  label: null,
   onEscapeHook: () => false,
   panelMaxWidth: null,
   panelModifier: 'default',
@@ -197,7 +200,7 @@ Dropdown.defaultProps = {
   panelType: null,
   triggerButtonSubtle: false,
   triggerModifier: 'default',
-  label: null
+  triggerWidth: null,
 };
 
 Dropdown.propTypes = {
@@ -223,4 +226,5 @@ Dropdown.propTypes = {
   panelStateToken: PropTypes.string,
   triggerButtonSubtle: PropTypes.bool,
   triggerModifier: PropTypes.string,
+  triggerWidth: PropTypes.string,
 };

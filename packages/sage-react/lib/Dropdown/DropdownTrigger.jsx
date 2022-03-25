@@ -13,6 +13,7 @@ export const DropdownTrigger = ({
   onClickTrigger,
   raisedButton,
   subtleButton,
+  width,
 }) => {
   const onClick = () => {
     onClickTrigger();
@@ -22,11 +23,17 @@ export const DropdownTrigger = ({
     'sage-dropdown__trigger',
     {
       [`sage-dropdown__trigger--${modifier}`]: modifier,
+      [`sage-dropdown__trigger--custom-width`]: width,
     }
   );
 
+  const styles = {};
+  if (width) {
+    styles['--sage-dropdown-trigger-width'] = width;
+  }
+
   return (
-    <div className={classNames}>
+    <div className={classNames} style={{ ...styles }}>
       {children
         ? React.cloneElement(children, { onClick })
         : (
@@ -53,6 +60,7 @@ DropdownTrigger.defaultProps = {
   label: null,
   raisedButton: false,
   subtleButton: false,
+  width: null,
 };
 
 DropdownTrigger.propTypes = {
@@ -65,4 +73,5 @@ DropdownTrigger.propTypes = {
   onClickTrigger: PropTypes.func.isRequired,
   raisedButton: PropTypes.bool,
   subtleButton: PropTypes.bool,
+  width: PropTypes.string,
 };
