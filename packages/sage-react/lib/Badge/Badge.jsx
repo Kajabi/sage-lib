@@ -64,6 +64,7 @@ Badge.COLORS = BADGE_COLORS;
 
 Badge.defaultProps = {
   className: null,
+  color: BADGE_COLORS.DRAFT,
   containerAttributes: null,
   dot: null,
   isInteractive: null,
