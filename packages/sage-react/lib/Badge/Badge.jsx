@@ -60,7 +60,6 @@ export const Badge = React.forwardRef(({
 });
 
 Badge.COLORS = BADGE_COLORS;
-// Badge.Group = BadgeGroup;
 
 Badge.defaultProps = {
   className: null,
