@@ -204,6 +204,10 @@ $-btn-loading-min-height: rem(36px);
     line-height: sage-line-height(body);
   }
 
+  .sage-dropdown__trigger--custom-width > & {
+    width: 100%;
+  }
+
   .sage-dropdown__trigger--select & {
     font-weight: sage-font-weight(regular);
   }

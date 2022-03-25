@@ -1,6 +1,5 @@
 <%
-trigger_type = component.trigger_type.present? ? component.trigger_type : nil
-trigger_configs = component.trigger.present? ? component.trigger : { type: trigger_type }
+trigger_configs = component.trigger.present? ? component.trigger : {}
 %>
 <div
   class="sage-dropdown
@@ -20,13 +19,9 @@ trigger_configs = component.trigger.present? ? component.trigger : { type: trigg
 >
   <div aria-hidden="true" class="sage-dropdown__screen"></div>
 
-  <% if component.trigger.present? %>
-    <%= sage_component SageDropdownTrigger, trigger_configs do %>
-      <%= component.content %>
-    <% end %>
-  <% elsif content_for? :sage_dropdown_trigger %>
-    <%= sage_component SageDropdownTrigger, trigger_configs do %>
-      <%= content_for :sage_dropdown_trigger %>
+  <% if component.trigger.present? || content_for?(:sage_dropdown_trigger) %>
+    <%= sage_component SageDropdownTrigger, component.trigger.present? ? component.trigger : {} do %>
+      <%= content_for :sage_dropdown_trigger if content_for? :sage_dropdown_trigger %>
     <% end %>
   <% end %>
 
@@ -35,7 +30,7 @@ trigger_configs = component.trigger.present? ? component.trigger : { type: trigg
   Then adjust so that `content` can instead be used for panel contents.
   %>
   <% if component.content.present? %>
-    <%= sage_component SageDropdownTrigger, trigger_configs do %>
+    <%= sage_component SageDropdownTrigger, {} do %>
       <%= component.content %>
     <% end %>
   <% end %>

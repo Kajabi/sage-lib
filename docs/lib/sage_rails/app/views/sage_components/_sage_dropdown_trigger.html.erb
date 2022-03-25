@@ -3,13 +3,15 @@
   class="
     sage-dropdown__trigger
     <%= "sage-dropdown__trigger--#{component.type}" if component.type.present? %>
+    <%= "sage-dropdown__trigger--custom-width" if component.width.present? %>
     <%= component.generated_css_classes %>
   "
+  <% if component.width.present? %>
+    style="--sage-dropdown-trigger-width: <%= component.width %>"
+  <% end %>
   <%= component.generated_html_attributes %>
 >
-  <% if component.content.present? %>
-    <%= component.content %>
-  <% elsif component.type.present? && component.type == "select" %>
+  <% if component.type.present? && component.type == "select" %>
     <%= sage_component SageButton, {
       style: "secondary",
       raised: false,
@@ -20,5 +22,7 @@
     <label class="sage-dropdown__trigger-label">
       <%= component.label %>
     </label>
+  <% elsif component.content.present? %>
+    <%= component.content %>
   <% end %>
 </div>
