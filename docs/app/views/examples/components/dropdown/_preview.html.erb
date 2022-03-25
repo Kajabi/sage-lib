@@ -1,4 +1,4 @@
-<%
+<%-
 menu_items = [
   {
     attributes: { "href": "#" },
@@ -60,7 +60,8 @@ custom_items = [
       graphic: { icon: "pen", card_color: "published" },
       name: "Subscription",
     },
-  }, {
+  },
+  {
     attributes: { "href": "#" },
     value: {
       description: "Require several...",
@@ -69,7 +70,7 @@ custom_items = [
     },
   },
 ]
-%>
+-%>
 
 <h3 class="t-sage-heading-6">Menu Dropdown</h3>
 <%= sage_component SageDropdown, { items: menu_items } do %>
@@ -194,40 +195,45 @@ custom_items = [
       selected: true,
       value: "Option 1",
     },
-  }],
+  ],
   contained: true
 } do %>
   <%= sage_component SageButton, {
     style: "secondary",
     value: "",
-  }
-} %>
+  } %>
+<% end %>
 
 <h3 class="t-sage-heading-6">Form Field</h3>
 <p>Note: This pattern is used with the SageReact implementation, please consult UXD before using this as SageRails.</p>
 <%= sage_component SageDropdown, {
   align: "right",
-  items: [{
+  items: [
+    {
     value: "-- None --"
-  }, {
-    value: "Option 1",
-   }, {
-    value: "Option 2",
-   }, {
-    value: "Option 3",
-  }, {
-    value: "Muted",
-    style: "muted"
-  }],
+    },
+    {
+      value: "Option 1",
+    },
+    {
+      value: "Option 2",
+    },
+    {
+      value: "Option 3",
+    },
+    {
+      value: "Muted",
+      style: "muted"
+    }
+  ],
   contained: true
 } do %>
   <%= sage_component SageButton, {
     style: "secondary",
     value: "",
     label: "Add an Element",
-  }
-} %>
-
+  } %>
+<% end %>
 <h3 class="t-sage-heading-6">Dropdown Field with full-width Custom Content and Footer</h3>
 <%= sage_component SageDropdown, {
   contained: true,
