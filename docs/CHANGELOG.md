@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.52.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.51.1...@kajabi/sage@4.52.0) (2022-03-28)
+
+
+### Bug Fixes
+
+* **search:** add disabled prop to search ([3f6da61](https://github.com/Kajabi/sage-lib/commit/3f6da61c78cc2bac976ffb36cc62c16994184d7d))
+* **search:** add disabled styles to search component ([65ed697](https://github.com/Kajabi/sage-lib/commit/65ed697dbae32380c80fa1b579db79d32e1fc951))
+
+
+### Features
+
+* **dropdown:** make dropdown trigger custom width (rails) ([1391d2d](https://github.com/Kajabi/sage-lib/commit/1391d2d3c80ae1667860114108f19641e1316a65))
+
+
+
+
+
 ## [4.51.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.51.0...@kajabi/sage@4.51.1) (2022-03-23)
 
 **Note:** Version bump only for package @kajabi/sage

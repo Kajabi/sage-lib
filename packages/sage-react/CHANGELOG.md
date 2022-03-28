@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.85.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.84.1...@kajabi/sage-react@0.85.0) (2022-03-28)
+
+
+### Bug Fixes
+
+* **search:** add disabled prop to search ([3f6da61](https://github.com/Kajabi/sage-lib/commit/3f6da61c78cc2bac976ffb36cc62c16994184d7d))
+
+
+### Features
+
+* **dropdown:** add custom trigger size in React dropdown ([208ba0c](https://github.com/Kajabi/sage-lib/commit/208ba0c9e23f31c6f0672317ce94641ea4875b8d))
+
+
+
+
+
 ## [0.84.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.84.0...@kajabi/sage-react@0.84.1) (2022-03-23)
 
 

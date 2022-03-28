@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.73.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.72.3...@kajabi/sage-assets@0.73.0) (2022-03-28)
+
+
+### Bug Fixes
+
+* **search:** add disabled styles to search component ([65ed697](https://github.com/Kajabi/sage-lib/commit/65ed697dbae32380c80fa1b579db79d32e1fc951))
+* **sidebar nav icon:** updates nav icon active state to parent link color ([e2c01fb](https://github.com/Kajabi/sage-lib/commit/e2c01fbcbfc42b863c1cda7373fe67a6a5ee5302))
+* **toolbar:** further patch dropdown in toolbar border issue ([de22c3a](https://github.com/Kajabi/sage-lib/commit/de22c3a27c28fee0409db3eb6569eed83b9a8546))
+
+
+### Features
+
+* **dropdown:** make dropdown trigger custom width (rails) ([1391d2d](https://github.com/Kajabi/sage-lib/commit/1391d2d3c80ae1667860114108f19641e1316a65))
+* **dropdown:** patch border style within toolbar__group ([d8aef8a](https://github.com/Kajabi/sage-lib/commit/d8aef8af953ffee890dc07c7054d00709cc3ffce))
+
+
+
+
+
 ## [0.72.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.72.2...@kajabi/sage-assets@0.72.3) (2022-03-23)
 
 
