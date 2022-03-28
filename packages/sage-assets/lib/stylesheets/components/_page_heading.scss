@@ -60,15 +60,15 @@ $-page-heading-image-height-mobile: rem(120px);
 }
 
 .sage-page-heading__title {
-  @extend %t-sage-heading-1;
+  @extend %t-sage-heading-2;
   grid-area: title;
   margin-right: sage-spacing(sm);
 }
 
 .sage-page-heading__intro {
   grid-area: intro;
-  margin-top: sage-spacing(sm);
-  color: sage-color(grey, 600);
+  margin-top: rem(12px);
+  color: sage-color(grey, 700);
 }
 
 .sage-page-heading__image {
@@ -88,10 +88,10 @@ $-page-heading-image-height-mobile: rem(120px);
   }
 
   @media (max-width: sage-breakpoint(sm-max)) {
-    margin-bottom: sage-spacing(sm);
+    margin-bottom: sage-spacing();
   }
   @media (min-width: sage-breakpoint(md-min)) {
-    margin-right: sage-spacing(sm);
+    margin-right: sage-spacing();
   }
 }
 
@@ -104,7 +104,7 @@ $-page-heading-image-height-mobile: rem(120px);
   display: flex;
   grid-area: toolbar;
   flex-wrap: wrap;
-  margin-top: sage-spacing(sm);
+  margin-top: sage-spacing();
 
   // NOTE: Icon generation consolidated in `core/_icons.scss`
 }
