@@ -11,6 +11,7 @@ export const HelpLink = ({
 }) => (
   <Link
     className={`${labelIsVisible ? 'sage-link sage-link--help' : 'sage-link sage-link--help-icon-only'} ${className || ''}`}
+    suppressDefaultClass={true}
     tag={linkTag}
     {...rest}
   >

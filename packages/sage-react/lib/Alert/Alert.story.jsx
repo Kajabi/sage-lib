@@ -23,7 +23,7 @@ export default {
         >
           Get unlimited pages
         </Button>
-        <Link href="//example.com">Check Usage</Link>
+        <Link suppressDefaultClass={true} href="//example.com">Check Usage</Link>
       </>
     ),
     color: Alert.COLORS.APPROACHING,
