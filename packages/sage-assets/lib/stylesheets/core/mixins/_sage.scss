@@ -226,10 +226,10 @@
   @if ($grid) {
     @include sage-grid-card();
   }
-
+  gap: sage-spacing();
   padding: sage-spacing(card);
   border: sage-border();
-  border-radius: sage-border(radius);
+  border-radius: sage-border(radius-large);
 }
 
 ///
