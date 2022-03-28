@@ -71,6 +71,33 @@
     <% end %>
 <% end %>
 
+<h3 class="t-sage-heading-6">Page Heading with Toolbar (Tabs)</h3>
+
+<%= sage_component SagePageHeading, {
+  title: "Page Title",
+  spacer: { bottom: :xl },
+} do %>
+    <% content_for :sage_page_heading_toolbar do %>
+      <%= sage_component SageTabs, {
+        items: [
+          {
+            text: "Active",
+            active: true
+          },
+          {
+            text: "Inactive",
+          },
+          {
+            text: "Inactive",
+          },
+          {
+            text: "Inactive",
+          },
+        ]
+      } %>
+    <% end %>
+<% end %>
+
 <h3 class="t-sage-heading-6">Page Heading w/ Toolbar + Secondary Text</h3>
 
 <%= sage_component SagePageHeading, {
