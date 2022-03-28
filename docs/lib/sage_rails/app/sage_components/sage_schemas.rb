@@ -89,6 +89,7 @@ module SageSchemas
     label: [:optional, NilClass, String],
     type: DROPDOWN_TRIGGER_TYPE,
     value: [:optional, NilClass, String],
+    width: [:optional, NilClass, String],
   }
 
   DROPDOWN = {
@@ -104,7 +105,7 @@ module SageSchemas
     panel_type: [:optional, NilClass, Set.new(["custom", "dropdown", "choice", "checkbox", "status", "searchable"])],
     search: [:optional, NilClass, TrueClass],
     trigger: [:optional, NilClass, DROPDOWN_TRIGGER],
-    trigger_type: [:optional, NilClass, Set.new(["select", "select-labeled"])],
+    trigger_type: DROPDOWN_TRIGGER_TYPE,
     wrap_footer: [:optional, NilClass, TrueClass],
   }
 

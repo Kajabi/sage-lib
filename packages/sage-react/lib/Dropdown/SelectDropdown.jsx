@@ -36,6 +36,7 @@ export const SelectDropdown = ({
   searchPlaceholder,
   selectionBecomesLabel,
   showSelectionsAsLabels,
+  triggerWidth,
 }) => {
   const emptySelectedValue = (
     <>
@@ -211,6 +212,7 @@ export const SelectDropdown = ({
       panelModifier="select"
       panelSize={panelSize}
       triggerModifier="select"
+      triggerWidth={triggerWidth}
     >
       <Dropdown.ItemList
         allowMultiselect={allowMultiselect}
@@ -274,6 +276,7 @@ SelectDropdown.defaultProps = {
   searchPlaceholder: 'Find',
   selectionBecomesLabel: true,
   showSelectionsAsLabels: false,
+  triggerWidth: null,
 };
 
 SelectDropdown.propTypes = {
@@ -314,4 +317,5 @@ SelectDropdown.propTypes = {
   searchPlaceholder: PropTypes.string,
   selectionBecomesLabel: PropTypes.bool,
   showSelectionsAsLabels: PropTypes.bool,
+  triggerWidth: PropTypes.string,
 };
