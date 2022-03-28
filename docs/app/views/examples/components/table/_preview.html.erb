@@ -303,7 +303,7 @@ It is safe to use, but should be tracked against future updates.
   <% end %>
 
   <% t.column :actions, label: "Actions", style: "width: 100px" do |c| %>
-    <%= sage_component SageButtonGroup, {} do %>
+    <%= sage_component SageButtonGroup, { gap: :xs } do %>
       <%= sage_component SageButton, {
         subtle: true,
         value: 'Edit',
