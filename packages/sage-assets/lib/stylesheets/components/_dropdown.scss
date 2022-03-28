@@ -371,6 +371,10 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
   }
 }
 
+.sage-dropdown__trigger--custom-width {
+  width: var(--sage-dropdown-trigger-width, auto);
+}
+
 .sage-dropdown__trigger--select,
 .sage-dropdown__trigger--select-labeled {
   :not(.sage-dropdown--customized) > & {

@@ -81,8 +81,12 @@ custom_items = [
   <% end %>
 <% end %>
 
-<h3 class="t-sage-heading-6">Menu Button with Custom Panel Width</h3>
-<%= sage_component SageDropdown, { panel_width: "512px", items: menu_items } do %>
+<h3 class="t-sage-heading-6">Menu Button with Custom Trigger width and Custom Panel Width</h3>
+<%= sage_component SageDropdown, {
+  panel_width: "512px",
+  items: menu_items,
+  trigger: { width: "240px" },
+} do %>
   <% content_for :sage_dropdown_trigger, flush: true do %>
     <%= sage_component SageButton, {
       style: "primary",

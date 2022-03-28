@@ -156,7 +156,8 @@ $-btn-loading-min-height: rem(36px);
   .sage-panel-controls__tabs-dropdown .sage-dropdown__trigger &,
   .sage-panel-controls__toolbar .sage-dropdown__trigger &,
   .sage-panel-controls__bulk-actions .sage-dropdown__trigger &,
-  .sage-toolbar .sage-dropdown__trigger & {
+  .sage-toolbar .sage-dropdown__trigger &,
+  .sage-toolbar__group .sage-dropdown__trigger & {
     @include sage-focus-outline--update-color(transparent);
 
     width: inherit;
@@ -201,6 +202,10 @@ $-btn-loading-min-height: rem(36px);
 
   .sage-dropdown__trigger > & {
     line-height: sage-line-height(body);
+  }
+
+  .sage-dropdown__trigger--custom-width > & {
+    width: 100%;
   }
 
   .sage-dropdown__trigger--select & {
@@ -316,6 +321,20 @@ $-btn-loading-min-height: rem(36px);
       border-top-right-radius: sage-border(radius);
       border-bottom-right-radius: sage-border(radius);
     }
+  }
+
+  .sage-toolbar__group > .sage-dropdown .sage-dropdown__trigger > & {
+    border-radius: 0;
+  }
+
+  .sage-toolbar__group > .sage-dropdown:first-child .sage-dropdown__trigger > & {
+    border-top-left-radius: sage-border(radius);
+    border-bottom-left-radius: sage-border(radius);
+  }
+
+  .sage-toolbar__group > .sage-dropdown:last-child .sage-dropdown__trigger > & {
+    border-top-right-radius: sage-border(radius);
+    border-bottom-right-radius: sage-border(radius);
   }
 
   .sage-panel-controls__toolbar-btn-group--expand-collapse > & {
