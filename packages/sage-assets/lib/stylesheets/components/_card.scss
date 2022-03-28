@@ -12,6 +12,16 @@
   width: 100%;
 }
 
+.sage-card--compact {
+  gap: sage-spacing(sm);
+  padding: sage-spacing(sm);
+
+  .sage-card__divider--full-bleed,
+  .sage-card__list {
+    margin: 0 -#{sage-spacing(sm)};
+  }
+}
+
 .sage-card-grid {
   @include sage-grid-card;
 }

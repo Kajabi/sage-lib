@@ -14,6 +14,7 @@ import { CardStack } from './CardStack';
 import { CardTitle } from './CardTitle';
 
 export const Card = ({
+  compact,
   children,
   className,
   clearPaddingBottom,
@@ -29,6 +30,7 @@ export const Card = ({
     className,
     {
       'sage-card--border-dashed': borderDashed,
+      'sage-card--compact': compact,
       'sage-card--clear-padding-bottom': clearPaddingBottom,
       'sage-card--clear-padding-left': clearPaddingLeft,
       'sage-card--clear-padding-right': clearPaddingRight,
@@ -57,6 +59,7 @@ Card.Stack = CardStack;
 Card.Title = CardTitle;
 
 Card.defaultProps = {
+  compact: false,
   children: null,
   className: null,
   clearPaddingBottom: false,
@@ -68,6 +71,7 @@ Card.defaultProps = {
 };
 
 Card.propTypes = {
+  compact: PropTypes.bool,
   children: PropTypes.node,
   className: PropTypes.string,
   clearPaddingBottom: PropTypes.bool,
