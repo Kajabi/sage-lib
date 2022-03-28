@@ -6,21 +6,23 @@
 
 
 // Borders and sizing
-$-table-header-border: rem(1px) solid sage-color(grey, 300);
+$-table-header-border: rem(1px) solid sage-color(grey, 200);
 $-table-cell-padding-xs: sage-spacing(xs);
 $-table-cell-padding-card: sage-spacing();
 $-table-cell-padding-panel: sage-spacing();
-$-table-padding: rem(12px);
+$-table-padding: rem(22px) rem(12px);
+$-table-padding-heading: rem(14px) rem(12px);
 $-table-max-width: none;
 
 // Text
 $-table-caption-font-size: "%t-sage-body-small";
 $-table-caption-alignment: center;
-$-table-cell-font-color: sage-color(grey, 800);
-$-table-cell-type-spec: "%t-sage-body";
-$-table-cell-type-spec-strong: "%t-sage-body-med";
+$-table-cell-font-color: sage-color(grey, 600);
+$-table-cell-font-color-strong: sage-color(grey, 800);
+$-table-cell-type-spec: "%t-sage-body-small-med";
+$-table-cell-type-spec-strong: "%t-sage-body-small-semi";
 $-table-heading-font-color: sage-color(grey, 900);
-$-table-heading-type-spec: "%t-sage-heading-6";
+$-table-heading-type-spec: "%t-sage-body-xsmall-semi";
 
 // Overflow gradient
 $-table-overflow-indicator-width: sage-spacing(sm);
@@ -55,20 +57,17 @@ $-table-avatar-width: rem(32px);
   thead,
   tfoot {
     color: $-table-heading-font-color;
-
+    
     td,
     th {
       @extend #{$-table-heading-type-spec};
-
+      
       padding: $-table-padding;
-
-      &:first-child {
-        padding-left: $-table-cell-padding-panel;
-      }
-
-      &:last-child {
-        padding-right: $-table-cell-padding-panel;
-      }
+      color: $-table-cell-focus;
+    }
+    
+    th {
+      padding: $-table-padding-heading;
     }
   }
 
@@ -97,19 +96,10 @@ $-table-avatar-width: rem(32px);
     padding: $-table-padding;
     color: inherit;
 
-    // First and last cells in a row get the full outer spacing
-    &:first-child {
-      padding-left: $-table-cell-padding-panel;
-    }
-
-    &:last-child {
-      padding-right: $-table-cell-padding-panel;
-    }
-
     &.sage-table-cell--strong {
       @extend #{$-table-cell-type-spec-strong};
 
-      color: $-table-cell-font-color;
+      color: $-table-cell-font-color-strong;
     }
   }
 
@@ -178,7 +168,7 @@ $-table-avatar-width: rem(32px);
     &:hover,
     &:focus,
     &:active {
-      color: sage-color(grey, 700);
+      color: $-table-cell-focus;
     }
   }
 
@@ -231,28 +221,6 @@ $-table-avatar-width: rem(32px);
   .sage-card & {
     margin-left: -1 * $-table-cell-padding-card;
     margin-right: -1 * $-table-cell-padding-card;
-
-    td:first-child {
-      padding-left: $-table-cell-padding-card;
-    }
-
-    td:last-child {
-      padding-right: $-table-cell-padding-card;
-    }
-
-    thead,
-    tfoot {
-      th,
-      td {
-        &:first-child {
-          padding-left: $-table-cell-padding-card;
-        }
-
-        &:last-child {
-          padding-right: $-table-cell-padding-card;
-        }
-      }
-    }
   }
 }
 

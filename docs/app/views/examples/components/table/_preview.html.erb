@@ -67,40 +67,61 @@ people_data = [
 
 sample_table = {
   headers: [
-    "Cras Porta",
-    "Dapibus Ridiculus",
-    "Purus",
-    "Mollis",
-    "Ridiculus"
+    "Title",
+    "Products",
+    "Price",
+    "Qty sold",
+    "Net revenue",
+    "Status"
   ],
   rows: [
     {
-      value_1: "Venenatis Condimentum",
-      value_2: "Ridiculus",
-      value_3: "Sem Elit",
-      value_4: "Nibh Aenean",
-      value_5: "Sem Elit"
+      value_1: "Quam non nunc eu imperdiet",
+      value_2: "2",
+      value_3: "$328.00",
+      value_4: "0",
+      value_5: "0",
+      value_6: %(
+        <span class="sage-label sage-label--draft">
+          <span class="sage-label__value">
+            <span class="sage-label__value-text">
+              Draft
+            </span>
+          </span>
+        </span>
+      )
     },
     {
-      value_1: "Nullam Porta",
-      value_2: "Adipiscing Ligula",
-      value_3: "Euismod Etiam",
-      value_4: "Malesuada",
-      value_5: "Etiam"
+      value_1: "Cursus purus sed at quisque",
+      value_2: "3",
+      value_3: "$490.00",
+      value_4: "453",
+      value_5: "$275.43",
+      value_6: %(
+        <span class="sage-label sage-label--published">
+          <span class="sage-label__value">
+            <span class="sage-label__value-text">
+              Published
+            </span>
+          </span>
+        </span>
+      )
     },
     {
-      value_1: "Ridiculus",
-      value_2: "Cras Malesuada",
-      value_3: "Commodo",
-      value_4: "Cursus Pharetra",
-      value_5: "Fringilla"
-    },
-    {
-      value_1: "Pharetra Mattis",
-      value_2: "Magna",
-      value_3: "Elit Inceptos",
-      value_4: "Cursus Pharetra",
-      value_5: "Dolor Fringilla"
+      value_1: "Sit quis a enim venenatis elit ac",
+      value_2: "4",
+      value_3: "$219.00",
+      value_4: "536",
+      value_5: "$739.65",
+      value_6: %(
+        <span class="sage-label sage-label--published">
+          <span class="sage-label__value">
+            <span class="sage-label__value-text">
+              Published
+            </span>
+          </span>
+        </span>
+      )
     }
   ]
 }
@@ -114,14 +135,6 @@ sample_table = {
   caption_side: "top",
 } %>
 
-<h3 class="t-sage-heading-6">Striped table</h3>
-<%= sage_component SageTable, {
-  headers: sample_table[:headers],
-  rows: sample_table[:rows],
-  caption: "Striped tables display a background color on odd-numbered rows",
-  striped: true
-} %>
-
 <h3 class="t-sage-heading-6">Table with highlighted rows and block cells</h3>
 <%= sage_component SageTable, {
   caption: %(
@@ -132,7 +145,6 @@ sample_table = {
     "Justo Inceptos"
   ],
   selectable: true,
-  striped: true,
   responsive: false,
   rows: [
     [
@@ -166,7 +178,7 @@ sample_table = {
   ]
 } %>
 
-<h3 class="t-sage-heading-6">Striped table with selectively truncated cells</h3>
+<h3 class="t-sage-heading-6">Table with selectively truncated cells</h3>
 <p>Individual cells should be assigned the <code>.sage-table-cell--truncate</code> class. Not suggested for use with long strings of <em>important</em> text: use the responsive (scrolling) table instead.</p>
 <%= sage_component SageTable, {
   headers: [
@@ -174,7 +186,6 @@ sample_table = {
     "Amet Cras",
     "Consectetur",
   ],
-  striped: true,
   rows: [
     [
       %(<span class="sage-table-cell__label sage-label sage-label--danger">Warning</span>),
@@ -200,7 +211,7 @@ sample_table = {
 } %>
 
 <h3 class="t-sage-heading-6">Hiding and showing cell content</h3>
-<p>Individual cells can make use of the <a href="<%= pages_design_path(:grid) %>">Sage Grid</a> classes for responsive display of content. Refer to the <a href="<%= pages_design_path(:icon) %>#grid-responsive-show-hide">Grid documentation</a> for more details.</p>
+<p>Individual cells can make use of the <a class="sage-link" href="<%= pages_design_path(:grid) %>">Sage Grid</a> classes for responsive display of content. Refer to the <a class="sage-link" href="<%= pages_design_path(:icon) %>#grid-responsive-show-hide">Grid documentation</a> for more details.</p>
 <p>Remember to apply the same classes equally to <strong>all related vertical columns</strong>, or the structure of the table will be misaligned.</p>
 <%= sage_component SageTable, {
   headers: [
@@ -239,7 +250,7 @@ and not completely aligned with SageTable yet.
 It is safe to use, but should be tracked against future updates.
 ") %>
 
-<%= sage_table_for people_data, striped: true, sortable: true, responsive: true, caption: "<p>Testing <b>stuff</b></p>".html_safe do |t| %>
+<%= sage_table_for people_data, sortable: true, responsive: true, caption: "<p>Testing <b>stuff</b></p>".html_safe do |t| %>
   <% t.column :initials, label: "", data_type: "checkbox" do |c| %>
     <%= sage_component SageCheckbox, {
       label_text: 'Select row',
@@ -292,7 +303,7 @@ It is safe to use, but should be tracked against future updates.
   <% end %>
 
   <% t.column :actions, label: "Actions", style: "width: 100px" do |c| %>
-    <%= sage_component SageButtonGroup, {} do %>
+    <%= sage_component SageButtonGroup, { gap: :xs } do %>
       <%= sage_component SageButton, {
         subtle: true,
         value: 'Edit',
