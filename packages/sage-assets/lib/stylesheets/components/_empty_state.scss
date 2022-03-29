@@ -106,6 +106,7 @@ $-empty-state-graphic-page-height: rem(336px);
 
 .sage-empty-state__title {
   @extend %t-sage-heading-4;
+
   color: sage-color(grey, 900);
   word-wrap: break-word;
 
