@@ -19,6 +19,7 @@ export default {
         label: 'Header override'
       }
     },
+    hasDataBeyondCurrentRows: false,
     rows: dataCollection,
     schema: {
       id: false,
@@ -29,6 +30,15 @@ export default {
       phone: {
         label: 'Phone'
       }
+    },
+    showSelectAll: true,
+    selectAllConfigs: {
+      id: 'select-all',
+      name: 'select-all',
+      label: 'Select all items',
+    },
+    onSelectRowHook: (data) => {
+      console.log(data);
     }
   }
 };

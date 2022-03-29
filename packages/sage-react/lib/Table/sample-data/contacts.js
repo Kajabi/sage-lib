@@ -9,32 +9,32 @@ export const dataArray = [
 export const dataCollection = [
   {
     id: 1,
-    first: 'Phil',
-    email: 'phil@example.com',
+    first: 'Maiya',
+    email: 'maiya@example.com',
     phone: '555-111-1100',
   },
   {
     id: 2,
-    first: 'Karen',
-    email: 'karen@example.com',
+    first: 'Rowan',
+    email: 'rowan@example.com',
     phone: '555-111-1101',
   },
   {
     id: 3,
-    first: 'Ethan',
-    email: 'ethan@example.com',
+    first: 'August',
+    email: 'August@example.com',
     phone: '555-111-1110',
   },
   {
     id: 4,
-    first: 'Abby',
-    email: 'abby@example.com',
+    first: 'Paige',
+    email: 'paige@example.com',
     phone: '555-111-1111',
   },
   {
     id: 5,
-    first: 'Airdramon',
-    email: 'bear@example.com',
+    first: 'Madelaine',
+    email: 'madelaine@example.com',
     phone: '555-111-1112',
   },
 ];
