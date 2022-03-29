@@ -10,7 +10,7 @@
 /// Sage allows for responsive typography, that uses these raw font sizes as the source of truth for its possible sizes.
 ///
 $sage-font-sizes: (
-  xs: rem(13px),
+  xs: rem(12px),
   sm: rem(14px),
   md: rem(16px),
   lg: rem(18px),
@@ -43,7 +43,7 @@ $sage-font-sizes: (
     // --sage-font-size-body-sm: same
     // --sage-font-size-body: same
     // --sage-font-size-h6: same
-    // --sage-font-size-h5: same 
+    // --sage-font-size-h5: same
     // --sage-font-size-h4: same
     // --sage-font-size-h3: same
     // --sage-font-size-h2: same

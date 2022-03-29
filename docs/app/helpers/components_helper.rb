@@ -12,7 +12,7 @@ module ComponentsHelper
   def sage_components
     [
       # Sage Generated Components
-        
+
       {
         title: "alert",
         description: "Alerts are used to indicate user-driven notifications.",
@@ -44,6 +44,16 @@ module ComponentsHelper
         a11y: "done",
         react_component_slug: "sage-avatar--default",
         figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F9Km09NjlZHYWsMP7EGT8tI%2F%255BWIP%255D-Sage-3-%25E2%2580%2594-Admin-Components%3Fnode-id%3D6989%253A21606",
+      },
+      {
+        title: "badge",
+        description: "",
+        scss: "done",
+        docs: "done",
+        rails: "done",
+        react: "done",
+        a11y: "done",
+        figma_embed: "",
       },
       {
         title: "banner",
@@ -172,7 +182,7 @@ module ComponentsHelper
       },
       {
         title: "dot",
-        description: "Dots provide a subtle color cue to place beside text or other elements.", 
+        description: "Dots provide a subtle color cue to place beside text or other elements.",
         scss: "done",
         rails: "done",
         react: "done",
@@ -737,7 +747,7 @@ module ComponentsHelper
       },
       {
         title: "tag",
-        description: "Tags show concise metadata in a compact format.", 
+        description: "Tags show concise metadata in a compact format.",
         scss: "done",
         rails: "done",
         react: "done",
