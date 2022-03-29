@@ -51,19 +51,19 @@
       padding: sage-spacing(sm) sage-spacing();
       font-size: sage-font-size(body);
       background: $hex;
-      
+
       @if ($name == white) {
         color: sage-color(grey, 900);
       }
-      
+
       @else if (lightness($hex) > 60) {
         color: sage-color($name, 500);
       }
-      
+
       @else {
         color: sage-color(white);
       }
-      
+
       &::after {
         content: "#{$hex}";
         padding-left: sage-spacing(xs);

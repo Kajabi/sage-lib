@@ -522,6 +522,10 @@ $-alert-colors: (
   box-shadow: none;
   border-radius: sage-border(radius);
 
+  &:focus {
+    box-shadow: none;
+  }
+
   &[class*="icon-only"] {
     width: $-btn-icon-only-subtle-size;
     height: $-btn-icon-only-subtle-size;
