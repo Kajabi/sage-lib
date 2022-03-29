@@ -1788,11 +1788,11 @@ $sd-sage-color-combos-draft-default-background: #eceeef;
 ///
 /// color combos color-combos-draft-default-background-accent
 ///
-$sd-sage-color-combos-draft-default-background-accent: #d3d5d9;
+$sd-sage-color-combos-draft-default-background-accent: #b5bac0;
 ///
 /// color combos color-combos-draft-default-icon-background-accent
 ///
-$sd-sage-color-combos-draft-default-icon-background-accent: #60666c;
+$sd-sage-color-combos-draft-default-icon-background-accent: #8d939a;
 ///
 /// color combos color-combos-draft-subtle-foreground
 ///
@@ -1828,7 +1828,7 @@ $sd-sage-color-combos-published-default-background: #ddf8f0;
 ///
 /// color combos color-combos-published-default-background-accent
 ///
-$sd-sage-color-combos-published-default-background-accent: #86d5bc;
+$sd-sage-color-combos-published-default-background-accent: #ddf8f0;
 ///
 /// color combos color-combos-published-default-icon-background-accent
 ///
@@ -1872,7 +1872,7 @@ $sd-sage-color-combos-info-default-background-accent: #8ecafb;
 ///
 /// color combos color-combos-info-default-icon-background-accent
 ///
-$sd-sage-color-combos-info-default-icon-background-accent: #0072ef;
+$sd-sage-color-combos-info-default-icon-background-accent: #3e92ee;
 ///
 /// color combos color-combos-info-subtle-foreground
 ///
@@ -1944,15 +1944,15 @@ $sd-sage-color-combos-warning-default-foreground-accent: #8c3b08;
 ///
 /// color combos color-combos-warning-default-background
 ///
-$sd-sage-color-combos-warning-default-background: #fef8e1;
+$sd-sage-color-combos-warning-default-background: #fad980;
 ///
 /// color combos color-combos-warning-default-background-accent
 ///
-$sd-sage-color-combos-warning-default-background-accent: #fad980;
+$sd-sage-color-combos-warning-default-background-accent: #f9df8b;
 ///
 /// color combos color-combos-warning-default-icon-background-accent
 ///
-$sd-sage-color-combos-warning-default-icon-background-accent: #c56a02;
+$sd-sage-color-combos-warning-default-icon-background-accent: #ffc505;
 ///
 /// color combos color-combos-warning-subtle-foreground
 ///
@@ -1988,11 +1988,11 @@ $sd-sage-color-combos-danger-default-background: #fdb0aa;
 ///
 /// color combos color-combos-danger-default-background-accent
 ///
-$sd-sage-color-combos-danger-default-background-accent: #fdb0aa;
+$sd-sage-color-combos-danger-default-background-accent: #f3988c;
 ///
 /// color combos color-combos-danger-default-icon-background-accent
 ///
-$sd-sage-color-combos-danger-default-icon-background-accent: #cf3c32;
+$sd-sage-color-combos-danger-default-icon-background-accent: #da665e;
 ///
 /// color combos color-combos-danger-subtle-foreground
 ///
@@ -3287,4 +3287,3 @@ $sd-sage-content-grid-template: (
   $value: map-get($value, $subkey);
   @return $value;
 }
-
