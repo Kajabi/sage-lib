@@ -18,14 +18,13 @@ $-sage-dot-size--badge: rem(6px);
   &::before {
     content: "";
     display: block;
+    flex-shrink: 0;
     width: var(--sage-dot-size, #{$-sage-dot-size});
     height: var(--sage-dot-size, #{$-sage-dot-size});
-    flex-shrink: 0;
     border-radius: sage-border(radius);
     background-color: var(--sage-dot-color, #{$-sage-dot-color});
 
     .sage-badge & {
-      flex-shrink: 0;
       width: $-sage-dot-size--badge;
       height: $-sage-dot-size--badge;
     }

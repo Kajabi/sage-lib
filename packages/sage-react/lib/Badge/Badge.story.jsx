@@ -10,7 +10,7 @@ export default {
   args: {
     color: BADGE_COLORS.DRAFT,
     isInteractive: false,
-    value: "Label"
+    value: 'Label'
   },
   argTypes: {
     ...selectArgs({
