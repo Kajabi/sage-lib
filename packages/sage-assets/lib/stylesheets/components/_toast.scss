@@ -71,7 +71,7 @@ $-toast-bottom-spacing: sage-spacing(xs);
   padding-bottom: sage-spacing(xs);
   padding: 0 sage-spacing(md);
   color: sage-color(white);
-  border-radius: sage-border(radius);
+  border-radius: sage-border(radius-medium);
   box-shadow: sage-shadow(lg);
   background-color: sage-color(grey, 800);
   animation: 0.5s ease;
@@ -94,7 +94,7 @@ $-toast-bottom-spacing: sage-spacing(xs);
   }
 
   &.sage-toast--style-danger {
-    background-color: sage-color(red, 700);
+    background-color: sage-color(red, 600);
   }
 
   &.sage-toast--dismissed {
