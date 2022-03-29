@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { SageTokens } from '../configs';
-import { Dot } from '../Dot';
 import {
   BADGE_COLORS,
 } from './configs';
@@ -29,9 +27,6 @@ export const Badge = React.forwardRef(({
     }
   );
 
-  console.log('color:', color);
-  console.log('BADGE_COLORS:', BADGE_COLORS);
-  console.log('Badge.COLORS:', Badge.COLORS);
   return (
     <span
       className={classNames}
@@ -81,4 +76,3 @@ Badge.propTypes = {
   isStatus: PropTypes.bool,
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
 };
-
