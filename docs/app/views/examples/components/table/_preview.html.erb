@@ -247,7 +247,7 @@ select_all_checkbox = sage_component(SageCheckbox, {
   attributes: {
     # NOTE: Wire up selection logic as needed using `onchange` event handlers
     # Toggle this element's `sage-checkbox--partial-selection` classname as needed.
-    onchange: "console.log('toggled select all');"
+    # onchange: "console.log('toggled select all');"
   }
 }).html_safe
 %>
@@ -260,7 +260,7 @@ select_all_checkbox = sage_component(SageCheckbox, {
       id: "table-row-#{c[:initials]}",
       attributes: {
         # NOTE: Wire up selection logic as needed using `onchange` event handlers
-        onchange: "console.log('toggled #{c[:name]}');"
+        # onchange: "console.log('toggled #{c[:name]}');"
       }
     } %>
   <% end %>

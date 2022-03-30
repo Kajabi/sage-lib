@@ -39,7 +39,8 @@ export default {
       label: 'Select all items',
     },
     onSelectRowHook: (data) => {
-      console.log(data);
+      // Work with returned data set as needed.
+      // console.log(data);
     }
   }
 };
