@@ -56,7 +56,6 @@ $-search-icon: "::before";
     &:focus-within {
       z-index: sage-z-index(default, 2);
       border-radius: sage-border(radius);
-      // box-shadow: map-get($sage-toolbar-button-borders, focus);
       border: 1px solid sage-color(primary, 600);
       box-shadow: 0 0 0 4px sage-color(primary, 300);
     }
@@ -123,12 +122,6 @@ $-search-icon: "::before";
 
   &:focus {
     outline: 0;
-  }
-
-  &:focus:not(:disabled),
-  &:active:not(:disabled),
-  &:valid:not(:placeholder-shown) {
-    // box-shadow: none;
   }
 
   .sage-panel-controls__toolbar & {
