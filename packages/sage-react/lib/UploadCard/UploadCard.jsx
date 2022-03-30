@@ -41,7 +41,7 @@ export const UploadCard = ({
               className="sage-upload-card__preview"
               color={IconCard.COLORS.DRAFT}
               icon={IconCard.ICONS.FILE}
-              size={IconCard.SIZES['4XL']}
+              size={IconCard.SIZES['XL']}
             />
             <div className="sage-upload-card__body">
               {acceptedFiles.map(({ name, size }, i) => {
@@ -55,8 +55,6 @@ export const UploadCard = ({
                     <p className="sage-upload-card__text">{name}</p>
                     <Button
                       color={Button.COLORS.PRIMARY}
-                      icon={SageTokens.ICONS.CARET_DOWN}
-                      iconPosition={Button.ICON_POSITIONS.RIGHT}
                       subtle={true}
                     >
                       Replace file
@@ -74,13 +72,11 @@ export const UploadCard = ({
             <Icon
               className="sage-upload-card__icon"
               icon={Icon.ICONS.FILE}
-              size={Icon.SIZES['4XL']}
+              size={Icon.SIZES['XL']}
               color={SageTokens.COLOR_SLIDERS.GREY_500}
             />
             <Button
-              icon={SageTokens.ICONS.CARET_DOWN}
               color={Button.COLORS.PRIMARY}
-              iconPosition={Button.ICON_POSITIONS.RIGHT}
               subtle={true}
             >
               {selectionLabel}
