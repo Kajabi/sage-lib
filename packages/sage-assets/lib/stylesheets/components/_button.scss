@@ -363,6 +363,14 @@ $-btn-loading-min-height: rem(36px);
     }
   }
 
+  .sage-upload-card & {
+    @include sage-focus-ring(transparent);
+
+    &.sage-btn--subtle:focus {
+      @include sage-focus-outline--update-color(transparent);
+    }
+  }
+
   &:not([class*="icon-only"]) {
     line-height: rem(20px); /* used this value to align to the spec */
   }
