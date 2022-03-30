@@ -32,7 +32,6 @@ $-alert-colors: (
 @each $name, $color in $-alert-colors {
   .sage-alert--#{$name} {
     background: sage-color($color, 100);
-    border: 1px solid sage-color($color, 400);
 
     a:not([class]) {
       color: sage-color(grey, 800);
@@ -41,6 +40,19 @@ $-alert-colors: (
 
     .sage-alert__icon::before {
       line-height: sage-line-height(h6);
+    }
+
+    .sage-btn--primary {
+      background-color: sage-color($color, 600);
+
+      &:hover {
+        background-color: sage-color($color, 700);
+      }
+
+      &:focus {
+        background-color: sage-color($color, 700);
+        box-shadow: 0 0 0 4px sage-color($color, 300);
+      }
     }
   }
 }
@@ -146,6 +158,10 @@ $-alert-colors: (
       @include sage-focus-outline($outline-offset-inline: 2px, $outline-offset-block: 2px);
       @include sage-focus-outline--update-color(sage-color($color, 400));
       font-weight: sage-font-weight(medium);
+    }
+
+    .sage-alert--#{name} & > .sage-btn--primary {
+      background-color: sage-color($color, 600);
     }
   }
 
