@@ -7,6 +7,7 @@ import { CAPTION_SIDE, cellPropTypes, dataPropTypes } from './configs';
 import { TableHeader } from './TableHeader';
 import { TableRow } from './TableRow';
 import { SELECTION_TYPES } from '../PanelControls/configs';
+import { Checkbox } from '../Toggle';
 
 //
 // Tables are built out from a provided set of rows.
@@ -17,10 +18,10 @@ import { SELECTION_TYPES } from '../PanelControls/configs';
 // See `cellPropTypes` for this structure.
 //
 // In order for a set of rows to be tailored to display in particular ways,
-// a `schema` can be provided that specifices the header, data type, html attributes,
+// a `schema` can be provided that specifies the header, data type, html attributes,
 // and custom style attributes for each cell of data in each row.
 // If cells are included in the data but omitted from the schema,
-// those cells will also be ommited from display.
+// those cells will also be omitted from display.
 //
 // `headers` can also be provided apart from a `schema` if
 // either you want to override schema settings specifically for one or more headings
@@ -35,6 +36,7 @@ export const Table = ({
   caption,
   captionSide,
   className,
+  hasDataBeyondCurrentRows,
   headers,
   isResponsive,
   isStriped,
@@ -44,11 +46,14 @@ export const Table = ({
   rows,
   schema,
   selectable,
+  selectAllConfigs,
   selectedRows,
+  showSelectAll,
   tableAttributes,
 }) => {
   const [selfSelectedRows, setSelfSelectedRows] = useState([]);
   const [selfHeaders, setSelfHeaders] = useState([]);
+  const [selfSelectionType, setSelfSelectionType] = useState(SELECTION_TYPES.NONE);
 
   const containerClassNames = classnames(
     'sage-table-wrapper',
@@ -146,6 +151,22 @@ export const Table = ({
     setSelfHeaders(newSelfHeaders);
   };
 
+  const getSelectionType = (selection) => {
+    if (selection === SELECTION_TYPES.ALL) {
+      return SELECTION_TYPES.ALL;
+    }
+
+    if (selection.length === 0) {
+      return SELECTION_TYPES.NONE;
+    }
+
+    if (hasDataBeyondCurrentRows) {
+      return SELECTION_TYPES.PARTIAL;
+    }
+
+    return selection.length === rows.length ? SELECTION_TYPES.ALL : SELECTION_TYPES.PARTIAL;
+  };
+
   //
   // Component state and event handlers
   //
@@ -158,26 +179,52 @@ export const Table = ({
   // Ensure selected rows change when adjusted from the outside
   useEffect(() => {
     setSelfSelectedRows(selectedRows);
+    setSelfSelectionType(getSelectionType(selectedRows));
   }, [selectedRows]);
 
   const removeFromList = (data, list) => list.filter((each) => each !== data);
 
   const addToList = (data, list) => [...list, data];
 
+  const onToggleSelection = () => {
+    let selectedRows,
+      selectionType;
+    if (selfSelectionType === SELECTION_TYPES.NONE) {
+      selectedRows = SELECTION_TYPES.ALL;
+      selectionType = SELECTION_TYPES.ALL;
+    } else {
+      selectedRows = [];
+      selectionType = SELECTION_TYPES.NONE;
+    }
+
+    setSelfSelectionType(selectionType);
+    setSelfSelectedRows(selectedRows);
+
+    if (onSelectRowHook) {
+      onSelectRowHook({
+        selectedRows,
+      });
+    }
+  };
+
   const onSelectRow = (data) => {
     let updatedArray;
     if (selfSelectedRows === SELECTION_TYPES.ALL) {
+      // If ALL selected currently, build an array of current row ids
       updatedArray = rows.map(({ id }) => id);
     } else {
+      // Otherwise, we should already have just ids in the selfSelectedRows list
       updatedArray = selfSelectedRows;
     }
 
+    // Now toggle the indicated item
     const rowsSelected = updatedArray.includes(data);
     updatedArray = rowsSelected
       ? removeFromList(data, updatedArray)
       : addToList(data, updatedArray);
 
     setSelfSelectedRows(updatedArray);
+    setSelfSelectionType(getSelectionType(updatedArray));
 
     if (onSelectRowHook) {
       onSelectRowHook({
@@ -241,7 +288,7 @@ export const Table = ({
   const renderTable = () => (
     <table className={tableClassNames} {...tableAttributes}>
       {caption && (
-        <caption className={`sage-table__caption--${captionSide}`}>
+        <caption className={`sage-table__caption--${captionSide || CAPTION_SIDE.BOTTOM}`}>
           {caption}
         </caption>
       )}
@@ -249,7 +296,17 @@ export const Table = ({
         <thead>
           <tr>
             {selectable && (
-              <TableHeader dataType="checkbox">{' '}</TableHeader>
+              <TableHeader dataType="checkbox">
+                {showSelectAll ? (
+                  <Checkbox
+                    standalone={true}
+                    partialSelection={selfSelectionType === SELECTION_TYPES.PARTIAL}
+                    checked={selfSelectionType !== SELECTION_TYPES.NONE}
+                    onChange={onToggleSelection}
+                    {...selectAllConfigs}
+                  />
+                ) : (' ')}
+              </TableHeader>
             )}
             {selfHeaders.map(renderTableHeader)}
           </tr>
@@ -279,6 +336,7 @@ Table.defaultProps = {
   caption: null,
   captionSide: null,
   className: null,
+  hasDataBeyondCurrentRows: false,
   headers: [],
   isResponsive: true,
   isStriped: false,
@@ -288,7 +346,9 @@ Table.defaultProps = {
   rows: [],
   schema: null,
   selectable: true,
+  selectAllConfigs: null,
   selectedRows: [],
+  showSelectAll: false,
   tableAttributes: null,
 };
 
@@ -296,6 +356,7 @@ Table.propTypes = {
   caption: PropTypes.string,
   captionSide: PropTypes.oneOf(Object.values(Table.CAPTION_SIDE)),
   className: PropTypes.string,
+  hasDataBeyondCurrentRows: PropTypes.bool,
   // Headers provide a simpler alternative to schema
   headers: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.oneOfType([
@@ -317,6 +378,12 @@ Table.propTypes = {
   // Schema provides a structure for applying settings to headers and cells
   schema: PropTypes.shape({}),
   selectable: PropTypes.bool,
+  selectAllConfigs: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    label: PropTypes.string.isRequired,
+    onChange: PropTypes.func,
+  }),
   selectedRows: PropTypes.oneOfType([
     PropTypes.oneOf([SELECTION_TYPES.ALL]),
     PropTypes.arrayOf(PropTypes.oneOfType([
@@ -325,5 +392,6 @@ Table.propTypes = {
       PropTypes.string,
     ])),
   ]),
+  showSelectAll: PropTypes.bool,
   tableAttributes: PropTypes.shape({}),
 };

@@ -4,6 +4,7 @@ import { Table } from './Table';
 import { dataCollection } from './sample-data/contacts';
 import { domains } from './sample-data/domains';
 import { selectArgs } from '../story-support/helpers';
+import { SageClassnames } from '../configs';
 
 export default {
   title: 'Sage/Table',
@@ -19,6 +20,7 @@ export default {
         label: 'Header override'
       }
     },
+    hasDataBeyondCurrentRows: false,
     rows: dataCollection,
     schema: {
       id: false,
@@ -29,7 +31,17 @@ export default {
       phone: {
         label: 'Phone'
       }
-    }
+    },
+    showSelectAll: true,
+    selectAllConfigs: {
+      id: 'select-all',
+      name: 'select-all',
+      label: 'Select all items',
+    },
+    // onSelectRowHook: (data) => {
+    //   // Work with returned data set as needed.
+    //   console.log(data);
+    // }
   }
 };
 const Template = (args) => <Table {...args} />;
@@ -41,6 +53,23 @@ Default.decorators = [
       <Panel>
         <Story />
       </Panel>
+      <div className={`${SageClassnames.TYPE_BLOCK} ${SageClassnames.SPACERS.LG_TOP}`}>
+        <p>NOTE: Wiring the select all checkbox requires the following:</p>
+        <ul>
+          <li>
+            Set <code>showSelectAll: true</code> and provide
+            <code>selectAllConfigs: &#123; id, name, label &#125;</code>.
+          </li>
+          <li>
+            If desired, used <code>onSelectRowHook</code> to provide
+            a callback to respond to selection events throughout the table.
+          </li>
+          <li>
+            If this table has paged data you should also
+            set <code>hasDataBeyondCurrentRows: true</code>.
+          </li>
+        </ul>
+      </div>
     </>
   )
 ];
