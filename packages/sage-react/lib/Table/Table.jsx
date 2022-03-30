@@ -155,7 +155,7 @@ export const Table = ({
     if (selection === SELECTION_TYPES.ALL) {
       return SELECTION_TYPES.ALL;
     }
-    
+
     if (selection.length === 0) {
       return SELECTION_TYPES.NONE;
     }
@@ -163,7 +163,7 @@ export const Table = ({
     if (hasDataBeyondCurrentRows) {
       return SELECTION_TYPES.PARTIAL;
     }
-    
+
     return selection.length === rows.length ? SELECTION_TYPES.ALL : SELECTION_TYPES.PARTIAL;
   };
 
@@ -187,7 +187,8 @@ export const Table = ({
   const addToList = (data, list) => [...list, data];
 
   const onToggleSelection = () => {
-    let selectedRows, selectionType;
+    let selectedRows,
+      selectionType;
     if (selfSelectionType === SELECTION_TYPES.NONE) {
       selectedRows = SELECTION_TYPES.ALL;
       selectionType = SELECTION_TYPES.ALL;
