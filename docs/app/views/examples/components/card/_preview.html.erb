@@ -21,6 +21,30 @@
   <% end %>
 <% end %>
 
+<h3 class="t-sage-heading-6">Basic Card - Compact</h3>
+<p>This variation has reduced padding and gap spacing for more compact layouts.</p>
+<%= sage_component SageCard, { compact: true } do %>
+  <%= sage_component SageCardHeader, { title: "Card heading" } do %>
+    <%= sage_component SageButton, {
+      value: "Learn more",
+      subtle: true,
+      style: "secondary",
+      icon: { name: "info-circle", style: "only" }
+    } %>
+  <% end %>
+  <%= sage_component SageCardBlock, { type_block: true } do %>
+    <p>
+      This is a copy block. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Nullam quis pretium massa. Maecenas posuere sapien in metus
+      fermentum posuere.
+    </p>
+  <% end %>
+  <%= sage_component SageCardFooter, {} do %>
+    <%= sage_component SageButton, { style: "secondary", value: "Cancel" } %>
+    <%= sage_component SageButton, { style: "primary", value: "Save" } %>
+  <% end %>
+<% end %>
+
 <%= sage_component SageCard, { border_dashed: true } do %>
   <%= sage_component SageCardBlock, { type_block: true } do %>
     <p>
