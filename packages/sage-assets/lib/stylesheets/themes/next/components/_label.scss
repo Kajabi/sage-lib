@@ -158,6 +158,24 @@ $-label-inset-border: 0 0 0 1px inset;
   gap: sage-spacing(xs);
 }
 
+.sage-label-group--has-line-clamping {
+  &:not(.sage-label-group--line-clamp-init-done) > * {
+    @include visually-hidden();
+  }
+}
+
+.sage-label-group__line-clamp-item {
+  &.sage-label-group__line-clamp-item--hidden {
+    @include visually-hidden();
+  }
+}
+
+.sage-label-group__overflow-action {
+  .sage-label-group--has-line-clamping & {
+    display: block;
+  }
+}
+
 @each $-key, $-value in $sage-spacings {
   .sage-label-group--gap-#{$-key} {
     gap: sage-spacing($-key);

@@ -6,21 +6,29 @@ Use this scratchpad to test out elements and components in context. Just be sure
 ") %>
 <% end %>
 
-<%= sage_component SagePanel, {} do %>
-  <%= sage_component SagePanelRow, { grid_template: "ete" } do %>
-    <i class="sage-icon-check-circle-xl t-sage--color-sage"></i>
-    <%= sage_component SagePanelBlock, {} do %>
-      <p class="t-sage-body-semi t-sage--line-clamp">LoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLoremLorem</p>
-      <p class="t-sage-body-small t-sage--color-grey">consectetur adipiscing elit</p>
+<div style="width: 400px">
+  <%= sage_component SageLabelGroup, {
+    line_clamp: "2",
+  } do %>
+    <% [
+      "eat",
+      "green eggs",
+      "and ham",
+      "lorem ipsum",
+      "dolor sit amet",
+      "consectitor",
+      "eat",
+      "green eggs",
+      "and ham",
+      "lorem ipsum",
+      "dolor sit amet",
+      "consectitor",
+    ].each do | label | %>
+      <%= sage_component SageLabel, { color: "draft", value: label } %>
     <% end %>
-    <%= sage_component SageButton, {
-      value: "Options",
-      style: "secondary",
-      subtle: true,
-      icon: {
-        name: "dot-menu-horizontal",
-        style: "only"
-      }
-    } %>
+
+    <% content_for :sage_label_group_overflow_action do %>
+      <%= sage_component SageButton, { value: "View all", style: "primary", subtle: true, } %>
+    <% end %>
   <% end %>
-<% end %>
+</div>

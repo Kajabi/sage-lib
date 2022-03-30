@@ -54,6 +54,7 @@ Sage.init = function(elementNamesToInitLegacy) {
   initDocumentPresenceListener('[data-js-carousel]',                             Sage.carousel.init,      false);
   initDocumentPresenceListener('[data-js-alert]', Sage.alert.init, false);
   initDocumentPresenceListener('[data-js-list-sortable]', Sage.sortableList.init, Sage.sortableList.unbind);
+  initDocumentPresenceListener('[data-js-sage-label-group-line-clamp]', Sage.labelGroupLineClamp.init, Sage.labelGroupLineClamp.unbind);
 
   // ==================================================
   // Event Listeners
