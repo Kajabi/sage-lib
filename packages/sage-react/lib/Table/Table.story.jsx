@@ -38,10 +38,10 @@ export default {
       name: 'select-all',
       label: 'Select all items',
     },
-    onSelectRowHook: (data) => {
-      // Work with returned data set as needed.
-      // console.log(data);
-    }
+    // onSelectRowHook: (data) => {
+    //   // Work with returned data set as needed.
+    //   console.log(data);
+    // }
   }
 };
 const Template = (args) => <Table {...args} />;
