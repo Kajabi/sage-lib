@@ -239,12 +239,29 @@ and not completely aligned with SageTable yet.
 It is safe to use, but should be tracked against future updates.
 ") %>
 
+<%
+select_all_checkbox = sage_component(SageCheckbox, {
+  standalone: true,
+  id: "table-row-select-all",
+  label_text: "Select/deselect all",
+  attributes: {
+    # NOTE: Wire up selection logic as needed using `onchange` event handlers
+    # Toggle this element's `sage-checkbox--partial-selection` classname as needed.
+    onchange: "console.log('toggled select all');"
+  }
+}).html_safe
+%>
+
 <%= sage_table_for people_data, striped: true, sortable: true, responsive: true, caption: "<p>Testing <b>stuff</b></p>".html_safe do |t| %>
-  <% t.column :initials, label: "", data_type: "checkbox" do |c| %>
+  <% t.column :initials, label: select_all_checkbox, data_type: "checkbox" do |c| %>
     <%= sage_component SageCheckbox, {
       label_text: 'Select row',
       standalone: true,
       id: "table-row-#{c[:initials]}",
+      attributes: {
+        # NOTE: Wire up selection logic as needed using `onchange` event handlers
+        onchange: "console.log('toggled #{c[:name]}');"
+      }
     } %>
   <% end %>
 
