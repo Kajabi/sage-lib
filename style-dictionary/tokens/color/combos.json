@@ -1,7 +1,7 @@
 {
   "color": {
     "combos": {
-      "draft": {
+      "draftz": {
         "default": {
           "foreground": {
             "value": "{color.base.charcoal.400.hex}"
@@ -226,6 +226,38 @@
           },
           "background": {
             "value": "{color.base.red.300.hex}"
+          }
+        }
+      },
+      "primary": {
+        "default": {
+          "foreground": {
+            "value": "{color.base.white.100.hex}"
+          },
+          "foreground-accent": {
+            "value": "{color.base.white.100.hex}"
+          },
+          "background": {
+            "value": "{color.base.primary.300.hex}"
+          }
+        },
+        "subtle": {
+          "foreground": {
+            "value": "{color.base.white.100.hex}"
+          },
+          "foreground-accent": {
+            "value": "{color.base.white.100.hex}"
+          },
+          "background": {
+            "value": "{color.base.primary.300.hex}"
+          }
+        },
+        "bold": {
+          "foreground": {
+            "value": "{color.base.white.100.hex}"
+          },
+          "background": {
+            "value": "{color.base.primary.300.hex}"
           }
         }
       }
