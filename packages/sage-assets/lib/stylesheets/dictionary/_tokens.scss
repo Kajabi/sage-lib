@@ -924,45 +924,45 @@ $sd-sage-color: (
 // Static vars for color combos
 //
 ///
-/// color combos color-combos-draftz-default-foreground
+/// color combos color-combos-draft-default-foreground
 ///
-$sd-sage-color-combos-draftz-default-foreground: #263240;
+$sd-sage-color-combos-draft-default-foreground: #263240;
 ///
-/// color combos color-combos-draftz-default-foreground-accent
+/// color combos color-combos-draft-default-foreground-accent
 ///
-$sd-sage-color-combos-draftz-default-foreground-accent: #1c2530;
+$sd-sage-color-combos-draft-default-foreground-accent: #1c2530;
 ///
-/// color combos color-combos-draftz-default-background
+/// color combos color-combos-draft-default-background
 ///
-$sd-sage-color-combos-draftz-default-background: #e0e7f1;
+$sd-sage-color-combos-draft-default-background: #e0e7f1;
 ///
-/// color combos color-combos-draftz-default-background-accent
+/// color combos color-combos-draft-default-background-accent
 ///
-$sd-sage-color-combos-draftz-default-background-accent: #bbcad8;
+$sd-sage-color-combos-draft-default-background-accent: #bbcad8;
 ///
-/// color combos color-combos-draftz-default-icon-background-accent
+/// color combos color-combos-draft-default-icon-background-accent
 ///
-$sd-sage-color-combos-draftz-default-icon-background-accent: #94a6b8;
+$sd-sage-color-combos-draft-default-icon-background-accent: #94a6b8;
 ///
-/// color combos color-combos-draftz-subtle-foreground
+/// color combos color-combos-draft-subtle-foreground
 ///
-$sd-sage-color-combos-draftz-subtle-foreground: #405264;
+$sd-sage-color-combos-draft-subtle-foreground: #405264;
 ///
-/// color combos color-combos-draftz-subtle-foreground-accent
+/// color combos color-combos-draft-subtle-foreground-accent
 ///
-$sd-sage-color-combos-draftz-subtle-foreground-accent: #526275;
+$sd-sage-color-combos-draft-subtle-foreground-accent: #526275;
 ///
-/// color combos color-combos-draftz-subtle-background
+/// color combos color-combos-draft-subtle-background
 ///
-$sd-sage-color-combos-draftz-subtle-background: #94a6b8;
+$sd-sage-color-combos-draft-subtle-background: #94a6b8;
 ///
-/// color combos color-combos-draftz-bold-foreground
+/// color combos color-combos-draft-bold-foreground
 ///
-$sd-sage-color-combos-draftz-bold-foreground: #f8fafb;
+$sd-sage-color-combos-draft-bold-foreground: #f8fafb;
 ///
-/// color combos color-combos-draftz-bold-background
+/// color combos color-combos-draft-bold-background
 ///
-$sd-sage-color-combos-draftz-bold-background: #263240;
+$sd-sage-color-combos-draft-bold-background: #263240;
 ///
 /// color combos color-combos-published-default-foreground
 ///
@@ -1200,22 +1200,22 @@ $sd-sage-color-combos-primary-bold-background: #0072ef;
 /// Map for color combos
 ///
 $sd-sage-color-combos: (
-  draftz: (
+  draft: (
     default: (
-      foreground: $sd-sage-color-combos-draftz-default-foreground,
-      foreground-accent: $sd-sage-color-combos-draftz-default-foreground-accent,
-      background: $sd-sage-color-combos-draftz-default-background,
-      background-accent: $sd-sage-color-combos-draftz-default-background-accent,
-      icon-background-accent: $sd-sage-color-combos-draftz-default-icon-background-accent,
+      foreground: $sd-sage-color-combos-draft-default-foreground,
+      foreground-accent: $sd-sage-color-combos-draft-default-foreground-accent,
+      background: $sd-sage-color-combos-draft-default-background,
+      background-accent: $sd-sage-color-combos-draft-default-background-accent,
+      icon-background-accent: $sd-sage-color-combos-draft-default-icon-background-accent,
     ),
     subtle: (
-      foreground: $sd-sage-color-combos-draftz-subtle-foreground,
-      foreground-accent: $sd-sage-color-combos-draftz-subtle-foreground-accent,
-      background: $sd-sage-color-combos-draftz-subtle-background,
+      foreground: $sd-sage-color-combos-draft-subtle-foreground,
+      foreground-accent: $sd-sage-color-combos-draft-subtle-foreground-accent,
+      background: $sd-sage-color-combos-draft-subtle-background,
     ),
     bold: (
-      foreground: $sd-sage-color-combos-draftz-bold-foreground,
-      background: $sd-sage-color-combos-draftz-bold-background,
+      foreground: $sd-sage-color-combos-draft-bold-foreground,
+      background: $sd-sage-color-combos-draft-bold-background,
     ),
   ),
   published: (
