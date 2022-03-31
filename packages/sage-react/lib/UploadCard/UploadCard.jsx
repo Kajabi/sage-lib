@@ -41,7 +41,7 @@ export const UploadCard = ({
               className="sage-upload-card__preview"
               color={IconCard.COLORS.DRAFT}
               icon={IconCard.ICONS.FILE}
-              size={IconCard.SIZES['XL']}
+              size={IconCard.SIZES.XL}
             />
             <div className="sage-upload-card__body">
               {acceptedFiles.map(({ name, size }, i) => {
@@ -72,7 +72,7 @@ export const UploadCard = ({
             <Icon
               className="sage-upload-card__icon"
               icon={Icon.ICONS.FILE}
-              size={Icon.SIZES['XL']}
+              size={Icon.SIZES.XL}
               color={SageTokens.COLOR_SLIDERS.GREY_500}
             />
             <Button
