@@ -71,7 +71,7 @@ $-toast-bottom-spacing: sage-spacing(xs);
   padding-bottom: sage-spacing(xs);
   padding: 0 sage-spacing(md);
   color: sage-color(white);
-  border-radius: sage-border(radius);
+  border-radius: sage-border(radius-medium);
   box-shadow: sage-shadow(lg);
   background-color: sage-color(grey, 800);
   animation: 0.5s ease;
@@ -94,7 +94,7 @@ $-toast-bottom-spacing: sage-spacing(xs);
   }
 
   &.sage-toast--style-danger {
-    background-color: sage-color(red, 700);
+    background-color: sage-color(red, 600);
   }
 
   &.sage-toast--dismissed {
@@ -133,13 +133,12 @@ $-toast-bottom-spacing: sage-spacing(xs);
   margin-right: auto;
   color: sage-color(white);
 
-  @extend %t-sage-body-med;
+  @extend %t-sage-body-semi;
 }
 
 .sage-toast__button {
   @extend %t-sage-body-med;
   @include sage-button-style-reset();
-  @include sage-focus-ring(sage-color(white));
 
   display: inline-flex;
   align-items: center;
@@ -161,6 +160,10 @@ $-toast-bottom-spacing: sage-spacing(xs);
   &.sage-btn--subtle.sage-btn--secondary:not(:focus):hover {
     color: sage-color(grey, 100);
     background-color: inherit;
+
+    &::after {
+      background-color: transparent;
+    }
   }
 }
 

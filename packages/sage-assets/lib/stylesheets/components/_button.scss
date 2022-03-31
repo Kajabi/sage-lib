@@ -591,6 +591,19 @@ $-alert-colors: (
         &::after {
           border-color: map-get($-styles, focus-outline);
         }
+
+        &.sage-toast__button {
+          color: sage-color(white);
+        }
+      }
+
+      &.sage-toast__button {
+        &:focus,
+        &:active {
+          &::after {
+            border-color: sage-color(white);
+          }
+        }
       }
 
       &:disabled,

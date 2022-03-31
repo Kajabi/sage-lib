@@ -7,7 +7,7 @@ export const EVENT_CLOSE = "sage.toast.close";
 export const EVENT_DISMISS = "sage.toast.dismiss";
 
 export const DEFAULT_CONFIG = {
-  icon: 'check',
+  icon: 'check-circle-filled',
   type: 'notice',
   timer: 4500,
 };
