@@ -10,6 +10,7 @@ export const PanelList = ({
   children,
   className,
   itemClassName,
+  itemGridGap,
   itemGridTemplate,
   items,
   blockSpacing,
@@ -33,6 +34,7 @@ export const PanelList = ({
         <PanelListItem
           key={uuid()}
           className={itemClassName}
+          gap={itemGridGap}
           gridTemplate={itemGridTemplate}
         >
           {item}
@@ -53,6 +55,7 @@ PanelList.defaultProps = {
   children: null,
   className: '',
   itemClassName: null,
+  itemGridGap: null,
   itemGridTemplate: null,
   items: [],
   blockSpacing: PANEL_LIST_BLOCK_SPACING.DEFAULT,
@@ -64,6 +67,7 @@ PanelList.propTypes = {
   className: PropTypes.string,
   items: PropTypes.arrayOf(PropTypes.node),
   itemClassName: PropTypes.string,
+  itemGridGap: PropTypes.oneOf(Object.values(SageTokens.GRID_GAP_OPTIONS)),
   itemGridTemplate: PropTypes.oneOf(Object.values(SageTokens.GRID_TEMPLATES)),
   blockSpacing: PropTypes.oneOf(Object.values(PANEL_LIST_BLOCK_SPACING)),
   wrapItems: PropTypes.bool,
