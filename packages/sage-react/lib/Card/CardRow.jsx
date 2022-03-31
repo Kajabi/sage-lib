@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { SageClassnames, SageTokens } from '../configs';
-import { CARD_ROW_ALIGNMENT_OPTIONS} from './configs';
+import { CARD_ROW_ALIGNMENT_OPTIONS } from './configs';
 
 export const CardRow = ({
   children,

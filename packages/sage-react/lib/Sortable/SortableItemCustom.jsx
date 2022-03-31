@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { SORTABLE_ROW_GAP_OPTIONS, SORTABLE_ITEM_TYPES } from './configs';
+import { SORTABLE_ITEM_TYPES } from './configs';
 
 import { CardRow } from '../Card/CardRow';
 import { SageTokens } from '..';
@@ -36,8 +36,8 @@ export const SortableItemCustom = ({
   );
 };
 
+SortableItemCustom.GAP_OPTIONS = SageTokens.GRID_GAP_OPTIONS;
 SortableItemCustom.TYPES = SORTABLE_ITEM_TYPES;
-// SortableItemCustom.GAP_OPTIONS = SORTABLE_ROW_GAP_OPTIONS;
 
 SortableItemCustom.defaultProps = {
   children: null,

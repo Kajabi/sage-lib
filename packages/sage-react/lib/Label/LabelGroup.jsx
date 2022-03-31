@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { LABEL_GROUP_ALIGN_OPTIONS, LABEL_GROUP_GAP_OPTIONS } from './configs';
+import { LABEL_GROUP_ALIGN_OPTIONS } from './configs';
 import { SageTokens } from '../configs';
 
 export const LabelGroup = ({
@@ -16,7 +16,7 @@ export const LabelGroup = ({
     className,
     {
       [`sage-label-group--align-${align}`]: align,
-      [`sage-label-group--gap-${gap}`]: gap
+      [`sage-grid-gap-${gap}`]: gap
     }
   );
 

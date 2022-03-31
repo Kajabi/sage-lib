@@ -5,7 +5,6 @@ import { Button } from '../Button';
 import { Grid } from '../Grid';
 import { Icon } from '../Icon';
 import { Card } from './Card';
-import { CardRow } from './CardRow';
 
 export default {
   title: 'Sage/Card',
