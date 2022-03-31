@@ -1,7 +1,7 @@
 {
   "color": {
     "combos": {
-      "draftz": {
+      "draft": {
         "default": {
           "foreground": {
             "value": "{color.base.charcoal.400.hex}"
