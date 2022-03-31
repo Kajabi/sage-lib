@@ -1,4 +1,4 @@
-<div 
+<div
   class="
     sage-upload-card
     <% if component.file_selected.present? %> sage-upload-card--selected<% end %>
@@ -15,31 +15,23 @@
         css_classes: "sage-upload-card__preview",
         icon: "image",
         label: "Upload graphic",
-        size: "3xl",
+        size: "2xl",
       } %>
       <div class="sage-upload-card__body">
         <p class="sage-upload-card__text"><%= component.accepted_files[0][:name] %></p>
         <%= sage_component SageButton, {
           style: "primary",
           subtle: true,
-          icon: {
-            style: "right",
-            name: "caret-down"
-          },
           value: component.selection_label
         } %>
         <p class="sage-upload-card__subtext"><%= component.selection_subtext %></p>
       </div>
     <% else %>
       <div class="sage-upload-card__body">
-        <i class="sage-upload-card__icon sage-icon-image-3xl" aria-label="Upload graphic"></i>
+        <i class="sage-upload-card__icon sage-icon-image-2xl" aria-label="Upload graphic"></i>
         <%= sage_component SageButton, {
           style: "primary",
           subtle: true,
-          icon: {
-            style: "right",
-            name: "caret-down"
-          },
           value: component.selection_label
         } %>
         <p class="sage-upload-card__subtext"><%= component.selection_subtext %></p>
