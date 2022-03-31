@@ -37,18 +37,18 @@ export const SortableItemCustom = ({
 };
 
 SortableItemCustom.TYPES = SORTABLE_ITEM_TYPES;
-SortableItemCustom.GAP_OPTIONS = SORTABLE_ROW_GAP_OPTIONS;
+// SortableItemCustom.GAP_OPTIONS = SORTABLE_ROW_GAP_OPTIONS;
 
 SortableItemCustom.defaultProps = {
   children: null,
-  gap: SORTABLE_ROW_GAP_OPTIONS.DEFAULT,
+  gap: SageTokens.GRID_GAP_OPTIONS.DEFAULT,
   gridTemplate: null,
   type: SORTABLE_ITEM_TYPES.DEFAULT,
 };
 
 SortableItemCustom.propTypes = {
   children: PropTypes.node,
-  gap: PropTypes.oneOf(Object.values(SortableItemCustom.GAP_OPTIONS)),
+  gap: PropTypes.oneOf(Object.values(SageTokens.GRID_GAP_OPTIONS)),
   gridTemplate: PropTypes.oneOf(Object.values(SageTokens.GRID_TEMPLATES)),
   type: PropTypes.oneOf(Object.values(SORTABLE_ITEM_TYPES)),
 };
