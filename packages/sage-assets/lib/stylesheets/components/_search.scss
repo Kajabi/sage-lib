@@ -8,6 +8,11 @@ $-search-icon: "::before";
 
 .sage-search {
   display: flex;
+  flex-direction: column;
+}
+
+.sage-search__field-wrapper {
+  display: flex;
   align-items: center;
   position: relative;
   background-color: sage-color(white);
@@ -18,29 +23,25 @@ $-search-icon: "::before";
     z-index: 2;
     margin-left: sage-spacing(xs);
     margin-right: -1 * sage-spacing();
-    color: sage-color(grey, 500);
+    color: sage-color(charcoal, 400);
     transition: map-get($sage-transitions, default);
     transition-property: color;
-
-    :focus-within > & {
-      color: sage-color(primary, 500);
-    }
   }
 
-  &:not(.sage-search--contained) {
+  .sage-search:not(.sage-search--contained) & {
     border-bottom: 1px solid sage-color(grey, 300);
 
     &:hover {
-      border-bottom: 1px solid sage-color(grey, 400);
+      background-color: sage-color(grey, 50);
     }
   }
 
   &:focus-within {
-    border-radius: sage-border(radius);
-    box-shadow: map-get($sage-toolbar-button-borders, focus);
+    border: 1px solid sage-color(primary, 600);
+    box-shadow: 0 0 0 4px sage-color(primary, 300);
   }
 
-  &.sage-search--contained {
+  .sage-search--contained & {
     position: relative;
     z-index: sage-z-index(default);
     border-radius: sage-border(radius);
@@ -58,7 +59,9 @@ $-search-icon: "::before";
 
     &:focus-within {
       z-index: sage-z-index(default, 2);
-      box-shadow: map-get($sage-toolbar-button-borders, focus);
+      border-radius: sage-border(radius);
+      border: 1px solid sage-color(primary, 600);
+      box-shadow: 0 0 0 4px sage-color(primary, 300);
     }
 
     .sage-panel-controls__toolbar &:first-child:not(:only-child),
@@ -98,11 +101,6 @@ $-search-icon: "::before";
 
 .sage-search__label {
   @include sage-form-field-label;
-
-  top: rem(18px);
-  left: rem(12px);
-  padding-left: sage-spacing(2xs);
-  padding-right: sage-spacing(2xs);
 }
 
 .sage-search__input {
@@ -113,25 +111,24 @@ $-search-icon: "::before";
   flex: 1;
   padding: rem(6px) sage-spacing(sm) rem(6px) sage-spacing(lg);
   border: 0;
+  border-radius: 0;
   background: transparent;
 
   @extend %t-sage-body;
 
   @include placeholder {
-    color: sage-color(grey, 500);
+    color: sage-color(grey, 600);
   }
 
   &:focus {
     outline: 0;
   }
 
-  &:focus:not(:disabled),
-  &:active:not(:disabled),
-  &:valid:not(:placeholder-shown) {
-    box-shadow: none;
+  .sage-panel-controls__toolbar & {
+    border-radius: sage-border(radius);
   }
 
-  .sage-panel-controls__toolbar & {
+  .sage-search--contained & {
     border-radius: sage-border(radius);
   }
 

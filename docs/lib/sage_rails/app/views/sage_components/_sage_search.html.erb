@@ -8,31 +8,35 @@
 
   <%= component.generated_html_attributes.html_safe %>
 >
-  <input
-    id="<%= component.id %>"
-    class="sage-search__input"
-    <%# Prevents the default Kajabi-Products Search.js from binding to this input %>
-    data-kjb-disable-search
-    type="search"
-    <%= "disabled" if component.disabled %>
-    placeholder="<%= component.placeholder.present? ? component.placeholder : "Search" %>"
-    value="<%= component.value %>"
-  />
+
   <label for="<%= component.id %>" class="sage-search__label">
     <%= component.label_text %>
   </label>
-  <%= sage_component SageButton, {
-    value: "Clear Search",
-    style: "secondary",
-    css_classes: "sage-search__reset-button",
-    subtle: true,
-    attributes: {
-      "data-js-search-clear": ""
-    },
-    icon: {
-      style: "only",
-      name: "remove"
-    }
-  } %>
+  <div class="sage-search__field-wrapper">
+    <input
+      id="<%= component.id %>"
+      class="sage-search__input"
+      <%# Prevents the default Kajabi-Products Search.js from binding to this input %>
+      data-kjb-disable-
+      search
+      type="search"
+      <%= "disabled" if component.disabled %>
+      placeholder="<%= component.placeholder.present? ? component.placeholder : "Search" %>"
+      value="<%= component.value %>"
+    />
+    <%= sage_component SageButton, {
+      value: "Clear Search",
+      style: "secondary",
+      css_classes: "sage-search__reset-button",
+      subtle: true,
+      attributes: {
+        "data-js-search-clear": ""
+      },
+      icon: {
+        style: "only",
+        name: "remove"
+      }
+    } %>
+  </div>
 
 </form>
