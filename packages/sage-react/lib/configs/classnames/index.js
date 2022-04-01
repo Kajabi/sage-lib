@@ -15,6 +15,9 @@ import {
 import {
   CLASSNAMES_LINK,
 } from './links';
+import {
+  CLASSNAMES_GAP,
+} from './gap';
 
 export const SageClassnames = {
   SPACERS: { ...CLASSNAMES_SPACERS },
@@ -25,6 +28,7 @@ export const SageClassnames = {
   TYPE_COLORS: { ...CLASSNAMES_TYPE_COLORS },
   TYPE_STRIKETHROUGH: CLASSNAME_STRIKETHROUGH,
   TRUNCATE_TEXT: CLASSNAME_TRUNCATE_TEXT,
+  GAP: { ...CLASSNAMES_GAP },
   GRID_TEMPLATES: { ...CLASSNAMES_GRID_TEMPLATES },
   LINK: { ...CLASSNAMES_LINK },
   CARD_GRID: 'sage-card-grid',
