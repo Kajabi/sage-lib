@@ -14,7 +14,7 @@ module SageClassnames
   module GRID_GAP_OPTIONS
     XS   = "sage-grid-gap-xs"
     SM   = "sage-grid-gap-sm"
-    MD   = "sage-grid-gap"
+    MD   = "sage-grid-gap-md"
     LG   = "sage-grid-gap-lg"
   end
 
