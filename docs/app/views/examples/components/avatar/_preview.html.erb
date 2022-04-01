@@ -99,7 +99,12 @@
 <div class="sage-avatar-wrapper">
   <%= sage_component SageAvatarGroup, {
     items: [
-      { color: nil },
+      { color: nil,
+      image: {
+        alt: "Demi Wilkinson",
+        src: "avatar/demi_wilkinson.png",
+        id: "custom_id"
+      }},
     ]
   } %>
   <%= sage_component SageAvatarGroup, {
@@ -110,7 +115,13 @@
   } %>
   <%= sage_component SageAvatarGroup, {
     items: [
-      { color: nil },
+      { color: nil,
+        image: {
+          alt: "Koray Okumus",
+          src: "avatar/koray_okumus.png",
+          id: "custom_id"
+        }
+      },
       { color: "purple", },
       { color: "sage", },
     ]
@@ -126,7 +137,15 @@
 </div>
 
 <h3>Avatar centered + custom size</h3>
-<%= sage_component SageAvatar, { centered: true, size: "128px" } %>
+<%= sage_component SageAvatar, { 
+  centered: true,
+  image: {
+    alt: "Joshua Wilson",
+    src: "avatar/joshua_wilson.png",
+    id: "custom_id"
+  },
+  size: "128px"
+} %>
 
 <h3>Layering and lazy loading</h3>
 <%= md('
