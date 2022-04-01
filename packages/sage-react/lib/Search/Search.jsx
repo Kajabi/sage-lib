@@ -25,32 +25,34 @@ export const Search = ({
 
   return (
     <div className={classNames}>
-      <input
-        className="sage-search__input"
-        type="search"
-        onChange={onChange}
-        disabled={disabled}
-        placeholder={`${placeholder}…`}
-        value={value}
-        // Prevents the default Kajabi-Products Search.js from binding to this input
-        data-kjb-disable-search
-        {...rest}
-      />
       <label className="sage-search__label">
         {placeholder}
       </label>
-      {onClear && (
-        <Button
-          className="sage-search__reset-button"
-          color={Button.COLORS.SECONDARY}
-          icon={SageTokens.ICONS.REMOVE}
-          iconOnly={true}
-          onClick={onClear}
-          subtle={true}
-        >
-          Clear Search Input
-        </Button>
-      )}
+      <div className="sage-search__field-wrapper">
+        <input
+          className="sage-search__input"
+          type="search"
+          onChange={onChange}
+          disabled={disabled}
+          placeholder={`${placeholder}…`}
+          value={value}
+          // Prevents the default Kajabi-Products Search.js from binding to this input
+          data-kjb-disable-search
+          {...rest}
+        />
+        {onClear && (
+          <Button
+            className="sage-search__reset-button"
+            color={Button.COLORS.SECONDARY}
+            icon={SageTokens.ICONS.REMOVE}
+            iconOnly={true}
+            onClick={onClear}
+            subtle={true}
+          >
+            Clear Search Input
+          </Button>
+        )}
+      </div>
     </div>
   );
 };
