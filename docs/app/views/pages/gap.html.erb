@@ -41,14 +41,14 @@
 Access to the `grid_template` property is the only prerequisite for `gap` values to affect component layouts.
 
 ```erb
-\<\%\= sage_component SageCardRow, { grid_template: "ete", gap: "lg"} \%\>
+\<\%\= sage_component SageCardRow, { grid_template: "ete", gap: "lg"} \%\> ... \<\%\ end \%\>
 ```
 
 ##### React
 In React, be sure to import `SageTokens`. This will provide access to the `{gap}` values in the component
 
 ```jsx
-<Card.Row gap={SageTokens.GRID_GAP_OPTIONS.LG} gridTemplate={SageTokens.GRID_TEMPLATES.ETE}>
+<Card.Row gap={SageTokens.GRID_GAP_OPTIONS.LG} gridTemplate={SageTokens.GRID_TEMPLATES.ETE}> ... </Card.Row>
 ```
 
 ##### Result
