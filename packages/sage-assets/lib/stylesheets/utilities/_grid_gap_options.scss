@@ -1,5 +1,5 @@
 ////
-/// Spacer utility
+/// Gap utility
 ///
 /// @group sage
 ////
@@ -7,10 +7,6 @@
 
 @each $-name, $-value in $sage-grid-gap-options {
   $suffix: "-#{$-name}";
-
-  @if $-name == md {
-    $suffix: "";
-  }
 
   .sage-grid-gap#{$suffix} {
     gap: $-value;
