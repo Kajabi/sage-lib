@@ -1163,6 +1163,38 @@ $sd-sage-color-combos-danger-bold-foreground: #ffe0e0;
 /// color combos color-combos-danger-bold-background
 ///
 $sd-sage-color-combos-danger-bold-background: #cf3c32;
+///
+/// color combos color-combos-primary-default-foreground
+///
+$sd-sage-color-combos-primary-default-foreground: #fff;
+///
+/// color combos color-combos-primary-default-foreground-accent
+///
+$sd-sage-color-combos-primary-default-foreground-accent: #fff;
+///
+/// color combos color-combos-primary-default-background
+///
+$sd-sage-color-combos-primary-default-background: #0072ef;
+///
+/// color combos color-combos-primary-subtle-foreground
+///
+$sd-sage-color-combos-primary-subtle-foreground: #fff;
+///
+/// color combos color-combos-primary-subtle-foreground-accent
+///
+$sd-sage-color-combos-primary-subtle-foreground-accent: #fff;
+///
+/// color combos color-combos-primary-subtle-background
+///
+$sd-sage-color-combos-primary-subtle-background: #0072ef;
+///
+/// color combos color-combos-primary-bold-foreground
+///
+$sd-sage-color-combos-primary-bold-foreground: #fff;
+///
+/// color combos color-combos-primary-bold-background
+///
+$sd-sage-color-combos-primary-bold-background: #0072ef;
 
 ///
 /// Map for color combos
@@ -1274,6 +1306,22 @@ $sd-sage-color-combos: (
     bold: (
       foreground: $sd-sage-color-combos-danger-bold-foreground,
       background: $sd-sage-color-combos-danger-bold-background,
+    ),
+  ),
+  primary: (
+    default: (
+      foreground: $sd-sage-color-combos-primary-default-foreground,
+      foreground-accent: $sd-sage-color-combos-primary-default-foreground-accent,
+      background: $sd-sage-color-combos-primary-default-background,
+    ),
+    subtle: (
+      foreground: $sd-sage-color-combos-primary-subtle-foreground,
+      foreground-accent: $sd-sage-color-combos-primary-subtle-foreground-accent,
+      background: $sd-sage-color-combos-primary-subtle-background,
+    ),
+    bold: (
+      foreground: $sd-sage-color-combos-primary-bold-foreground,
+      background: $sd-sage-color-combos-primary-bold-background,
     ),
   ),
 );
