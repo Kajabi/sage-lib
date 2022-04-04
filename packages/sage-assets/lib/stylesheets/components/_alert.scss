@@ -39,7 +39,7 @@ $-alert-colors: (
     }
 
     .sage-alert__icon::before {
-      line-height: sage-line-height(h6);
+      line-height: sage-line-height(sm);
     }
 
     .sage-btn--primary {
