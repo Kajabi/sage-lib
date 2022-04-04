@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.53.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.52.0...@kajabi/sage@4.53.0) (2022-04-04)
+
+
+### Features
+
+* **icon:** add kajabi color scheme to color combo for icon ([1ceb94b](https://github.com/Kajabi/sage-lib/commit/1ceb94bcf9f94f3e2c619d0797b3345efbee4867))
+* **icon:** fleshing out documentation ([00ba1ec](https://github.com/Kajabi/sage-lib/commit/00ba1eca3d78ae91f3823d2b6eb1d8b57767e71c))
+* **table:** add demo of checkbox in sage_table_for ([f160a2c](https://github.com/Kajabi/sage-lib/commit/f160a2c367db3c4da5e7cbcf2be2af49d8cd92fa))
+
+
+
+
+
 # [4.52.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.51.1...@kajabi/sage@4.52.0) (2022-03-28)
 
 
