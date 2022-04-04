@@ -17,6 +17,7 @@ export const Toggle = ({
   message,
   name,
   onChange,
+  partialSelection,
   required,
   standalone,
   togglePosition,
@@ -43,6 +44,7 @@ export const Toggle = ({
       [`${baseClass}--custom`]: customContent && type === Toggle.TYPES.CHECKBOX,
       [`${baseClass}--error`]: hasError,
       [`${baseClass}--toggle-${togglePosition}`]: togglePosition,
+      [`${baseClass}--partial-selection`]: partialSelection && type === Toggle.TYPES.CHECKBOX,
     }
   );
 
@@ -54,10 +56,19 @@ export const Toggle = ({
   );
 
   if (standalone) {
+    const standaloneClassnames = classnames(
+      baseClass,
+      `${baseClass}--standalone`,
+      className,
+      {
+        [`${baseClass}--partial-selection`]: partialSelection && type === Toggle.TYPES.CHECKBOX,
+      }
+    );
+
     return (
       <input
         checked={checked}
-        className={`${baseClass} ${baseClass}--standalone ${className || ''}`}
+        className={standaloneClassnames}
         disabled={disabled}
         id={id}
         name={name}
@@ -121,6 +132,7 @@ Toggle.defaultProps = {
   hideText: false,
   message: null,
   onChange: (v) => v,
+  partialSelection: false,
   itemInList: false,
   required: false,
   standalone: false,
@@ -138,11 +150,12 @@ Toggle.propTypes = {
   hasError: PropTypes.bool,
   hideText: PropTypes.bool,
   id: PropTypes.string.isRequired,
+  itemInList: PropTypes.bool,
   label: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   message: PropTypes.string,
   name: PropTypes.string.isRequired,
   onChange: PropTypes.func,
-  itemInList: PropTypes.bool,
+  partialSelection: PropTypes.bool,
   required: PropTypes.bool,
   standalone: PropTypes.bool,
   togglePosition: PropTypes.oneOf(Object.values(Toggle.POSITIONS)),

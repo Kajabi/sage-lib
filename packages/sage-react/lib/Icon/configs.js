@@ -19,6 +19,7 @@ export const ICON_CARD_COLORS = {
   LOCKED: 'locked',
   PUBLISHED: 'published',
   WARNING: 'warning',
+  PRIMARY: 'primary',
 };
 
 // NOTE: Keep these in sync with `packages/sage-assets/lib/stylesheets/tokens/_line_height.scss`

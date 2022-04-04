@@ -99,7 +99,8 @@ $-checkbox-focus-outline-color: sage-color(primary, 400);
 .sage-checkbox--standalone {
   display: inline-block;
 
-  .sage-table td > & {
+  .sage-table td > &,
+  .sage-table th > & {
     display: block;
   }
 }

@@ -47,14 +47,50 @@ and also be used with a vareity of layout techniques or components such as CSS f
 
 <h3>Background Colors</h3>
 <%= sage_component SageCardList, {} do %>
-  <% SageTokens::STATUSES.each do | color | %>
-    <%= sage_component SageCardListItem, { grid_template: "o" } do %>
-      <p><%= color %></p>
-      <%= sage_component SageIcon, { icon: "pen", card_color: color } %>
-      <%= sage_component SageIcon, { icon: "pen", card_color: color, circular: true, } %>
-    <% end %>
+  <%= sage_component SageCardListItem, { grid_template: "o" } do %>
+    <p><%= "danger" %></p>
+    <%= sage_component SageIcon, { icon: "danger", card_color: "danger" } %>
+    <%= sage_component SageIcon, { icon: "danger", card_color: "danger", circular: true } %>
+  <% end %>
+
+  <%= sage_component SageCardListItem, { grid_template: "o" } do %>
+    <p><%= "draft" %></p>
+    <%= sage_component SageIcon, { icon: "draft", card_color: "draft" } %>
+    <%= sage_component SageIcon, { icon: "draft", card_color: "draft", circular: true } %>
+  <% end %>
+
+  <%= sage_component SageCardListItem, { grid_template: "o" } do %>
+    <p><%= "info" %></p>
+    <%= sage_component SageIcon, { icon: "info-circle", card_color: "info" } %>
+    <%= sage_component SageIcon, { icon: "info-circle", card_color: "info", circular: true } %>
+  <% end %>
+
+  <%= sage_component SageCardListItem, { grid_template: "o" } do %>
+    <p><%= "locked" %></p>
+    <%= sage_component SageIcon, { icon: "lock", card_color: "locked" } %>
+    <%= sage_component SageIcon, { icon: "lock", card_color: "locked", circular: true } %>
+  <% end %>
+
+  <%= sage_component SageCardListItem, { grid_template: "o" } do %>
+    <p><%= "published" %></p>
+    <%= sage_component SageIcon, { icon: "window-paragraph", card_color: "published" } %>
+    <%= sage_component SageIcon, { icon: "window-paragraph", card_color: "published", circular: true } %>
+  <% end %>
+
+  <%= sage_component SageCardListItem, { grid_template: "o" } do %>
+    <p><%= "warning" %></p>
+    <%= sage_component SageIcon, { icon: "warning", card_color: "warning" } %>
+    <%= sage_component SageIcon, { icon: "warning", card_color: "warning", circular: true } %>
+  <% end %>
+
+  <%= sage_component SageCardListItem, { grid_template: "o" } do %>
+    <p><%= "kajabi" %></p>
+    <%= sage_component SageIcon, { icon: "kajabi", card_color: "primary" } %>
+    <%= sage_component SageIcon, { icon: "kajabi", card_color: "primary", circular: true } %>
   <% end %>
 <% end %>
+
+
 <h3>Background Sizes</h3>
 <%= sage_component SageCardList, {} do %>
   <% SageTokens::ICON_SIZES.each do | size | %>
