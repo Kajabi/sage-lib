@@ -34,7 +34,9 @@ export const NextBestAction = ({
       )}
       <div className="sage-next-best-action__text">
         {title && (
-          <h3 className="sage-next-best-action__title">{title}</h3>
+          <div className="sage-next-best-action__title">
+            {title}
+          </div>
         )}
         {description && (
           <div className="sage-next-best-action__description">
@@ -71,7 +73,7 @@ NextBestAction.defaultProps = {
     onRight: false,
   },
   onClickDismiss: null,
-  title: '',
+  title: null,
 };
 
 NextBestAction.propTypes = {
@@ -85,5 +87,5 @@ NextBestAction.propTypes = {
     onRight: PropTypes.bool,
   }),
   onClickDismiss: PropTypes.func,
-  title: PropTypes.string,
+  title: PropTypes.node,
 };

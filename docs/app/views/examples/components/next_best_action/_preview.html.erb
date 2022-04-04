@@ -8,8 +8,10 @@
   graphic: {
     element: image_tag("next_best_action_graphic.png", alt: ""),
   },
-  title: "Offer an additional buy with Upsell",
 } do %>
+  <%= content_for :sage_next_best_action_title do %>
+    <h3>Offer an additional buy with Upsell</h3>
+  <% end %>
   <%= content_for :sage_next_best_action_description do %>
     <p>Maximize your profit by adding an Upsell to your order flow. This section might wrap to two lines.</p>
     <p>Here is the second line. It has some text also.</p>
@@ -33,8 +35,10 @@
     element: image_tag("next_best_action_graphic.png", alt: ""),
     on_right: true,
   },
-  title: "Offer an additional buy with Upsell",
 } do %>
+	<%= content_for :sage_next_best_action_title do %>
+    <h3>Offer an additional buy with Upsell</h3>
+  <% end %>
   <%= content_for :sage_next_best_action_description do %>
     <p>Maximize your profit by adding an Upsell to your order flow. This section might wrap to two lines.</p>
     <p>Here is the second line. It has some text also.</p>

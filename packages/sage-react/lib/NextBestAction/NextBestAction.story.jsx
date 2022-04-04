@@ -30,7 +30,9 @@ export default {
     },
     // eslint-disable-next-line no-console
     onClickDismiss: () => { console.log('Add your own dismiss functionality here!'); },
-    title: 'Offer an additional buy with Upsell',
+    title: (
+      <h3>Offer an additional buy with Upsell</h3>
+    ),
   },
   argTypes: {
     ...selectArgs({

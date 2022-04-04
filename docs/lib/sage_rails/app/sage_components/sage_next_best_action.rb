@@ -7,10 +7,9 @@ class SageNextBestAction < SageComponent
       element: [:optional, String],
       on_right: [:optional, TrueClass],
     }],
-    title: [:optional, String],
   })
 
   def sections
-    %w(next_best_action_actions next_best_action_description)
+    %w(next_best_action_title next_best_action_actions next_best_action_description)
   end
 end
