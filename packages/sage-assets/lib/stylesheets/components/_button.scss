@@ -160,7 +160,7 @@ $-btn-loading-min-height: rem(36px);
   @include sage-button-style-reset();
   @include sage-focus-ring;
 
-  $-padding-block: rem(6px);
+  $-padding-block: rem(10px);
 
   display: inline-flex;
   position: relative;
