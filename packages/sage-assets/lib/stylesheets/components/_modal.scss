@@ -63,17 +63,13 @@ $-modal-fullscreen-top-spacing: rem(104px);
     background-image: none;
     pointer-events: none;
   }
-
 }
 
 .sage-modal__container {
-  display: grid;
   visibility: hidden;
-  grid-template-rows: auto 1fr auto;
   z-index: sage-z-index(modal);
   width: calc(100vw - #{sage-spacing(md)});
   max-width: sage-container(md);
-  max-height: 85vh;
   margin: 0;
   border-radius: sage-border(radius);
   background-color: sage-color(white);
@@ -81,13 +77,6 @@ $-modal-fullscreen-top-spacing: rem(104px);
   transition: opacity 0.1s ease-in 0.1s;
   pointer-events: none;
   opacity: 0;
-
-  // Used for modals with simpleform form element
-  > .simple_form {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    overflow: auto;
-  }
 
   .sage-drawer & {
     height: 100vh;
@@ -211,7 +200,6 @@ $-modal-fullscreen-top-spacing: rem(104px);
 }
 
 .sage-modal__content {
-  overflow: auto;
   margin: $-modal-padding-y $-modal-padding-x;
 
   .sage-modal--fullscreen & {
