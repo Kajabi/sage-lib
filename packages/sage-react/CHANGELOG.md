@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.86.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.85.0...@kajabi/sage-react@0.86.0) (2022-04-04)
+
+
+### Features
+
+* **icon:** add kajabi color scheme to color combo for icon ([1ceb94b](https://github.com/Kajabi/sage-lib/commit/1ceb94bcf9f94f3e2c619d0797b3345efbee4867))
+* **icon:** add primary color option to react ([3b81dfa](https://github.com/Kajabi/sage-lib/commit/3b81dfac216b7968c04559d66c84c2a1125817a8))
+* **icon:** fleshing out documentation ([00ba1ec](https://github.com/Kajabi/sage-lib/commit/00ba1eca3d78ae91f3823d2b6eb1d8b57767e71c))
+* **table:** add documentation in React ([da1f702](https://github.com/Kajabi/sage-lib/commit/da1f702436db45b17524e7b19444c7d512fb01e5))
+* **table:** add select all affordance (React) ([6f1d62e](https://github.com/Kajabi/sage-lib/commit/6f1d62e87e0bec41526ed080a1fcaa0862625b0e))
+* **toggle:** ensure toggle allows partialSelection in React (parrallel to Rails) ([0f476bc](https://github.com/Kajabi/sage-lib/commit/0f476bc9e5a08700ab2973dd0d041e27ffe2742d))
+
+
+
+
+
 # [0.85.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.84.1...@kajabi/sage-react@0.85.0) (2022-03-28)
 
 
