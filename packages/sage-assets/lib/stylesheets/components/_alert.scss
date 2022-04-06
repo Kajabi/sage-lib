@@ -139,6 +139,10 @@ $-alert-colors: (
       @include sage-focus-outline--update-color(sage-color($color, 800));
 
       color: sage-color(grey, 700);
+
+      &:hover::after {
+        border-color: sage-color($color, 800);
+      }
     }
   }
 
