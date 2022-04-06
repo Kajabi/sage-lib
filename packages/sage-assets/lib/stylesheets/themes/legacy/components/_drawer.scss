@@ -8,9 +8,17 @@
 // This file is used to isolate the Drawer specific styles.
 
 .sage-drawer {
+  --sage-drawer-size: #{rem(400px)};
   justify-content: flex-end;
   padding: 0;
+}
+
+.sage-drawer--no-screen {
   background: none;
+}
+
+.sage-drawer--expanded {
+  --sage-drawer-expanded-size: 100vw;
 }
 
 .sage-drawer__close {
