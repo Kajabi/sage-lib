@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.75.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.74.1...@kajabi/sage-assets@0.75.0) (2022-04-07)
+
+
+### Features
+
+* **icon:** icon update ([9a6170c](https://github.com/Kajabi/sage-lib/commit/9a6170c3c5263de04c45c89720284fadb5858b90))
+* **icon:** update cdn version and modify icon component example ([f0cde12](https://github.com/Kajabi/sage-lib/commit/f0cde12dec0e8329ba04c1aa4e7f710ab65938d8))
+
+
+
+
+
 ## [0.74.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.74.0...@kajabi/sage-assets@0.74.1) (2022-04-06)
 
 **Note:** Version bump only for package @kajabi/sage-assets
