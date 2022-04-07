@@ -91,7 +91,7 @@ export const DashboardPanel = () => {
                 </Button.Group>
               </Tabs.Pane>
             ))}
-            </Grid.Col>
+          </Grid.Col>
         </Grid>
       </Panel>
     </Grid>
