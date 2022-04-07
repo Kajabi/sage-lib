@@ -74,7 +74,7 @@ $-alert-colors: (
   grid-auto-flow: column;
   grid-template-columns: auto 1fr;
   align-items: center;
-  padding: sage-spacing(sm) sage-spacing(xs);
+  padding: sage-spacing(xs) sage-spacing(sm);
   border-radius: sage-border(radius);
 
   .sage-alert__icon {
