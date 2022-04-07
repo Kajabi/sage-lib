@@ -7,7 +7,6 @@ import {
   SageTokens,
   Tabs,
 } from '../../..';
-// import { DashboardTabPane } from './DashboardTabPane';
 import { getStartedTabs } from '../content';
 
 export const DashboardPanel = () => {
