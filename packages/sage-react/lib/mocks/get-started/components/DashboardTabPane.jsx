@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
+  Button,
   Panel,
   SageClassnames,
   SageTokens,
-  Button,
+  Tabs,
 } from '../../..';
 
 export const DashboardTabPane = ({
@@ -15,9 +16,14 @@ export const DashboardTabPane = ({
   },
   description,
   graphic,
+  id,
+  isActive,
   title,
 }) => (
-  <div className={SageClassnames.GRID_PANEL}>
+  <Tabs.Pane
+    id={id}
+    isActive={isActive}
+  >
     {graphic}
     <Panel.Stack>
       <h5 className={SageClassnames.TYPE.HEADING_5}>
@@ -44,7 +50,7 @@ export const DashboardTabPane = ({
         Learn more
       </Button>
     </Button.Group>
-  </div>
+  </Tabs.Pane>
 );
 
 DashboardTabPane.defaultProps = {
@@ -55,10 +61,13 @@ DashboardTabPane.defaultProps = {
   },
   description: '',
   graphic: null,
+  isActive: false,
   title: '',
 };
 
 DashboardTabPane.propTypes = {
+  id: PropTypes.string.isRequired,
+  isActive: PropTypes.bool,
   cta: PropTypes.shape({
     label: PropTypes.string,
     learnMoreUrl: PropTypes.string,

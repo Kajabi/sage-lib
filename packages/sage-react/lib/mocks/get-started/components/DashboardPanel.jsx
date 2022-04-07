@@ -1,61 +1,100 @@
 import React from 'react';
 import {
+  Button,
   Grid,
-  SageClassnames,
-  Tabs,
   Panel,
+  SageClassnames,
+  SageTokens,
+  Tabs,
 } from '../../..';
-import { DashboardTabPane } from './DashboardTabPane';
+// import { DashboardTabPane } from './DashboardTabPane';
 import { getStartedTabs } from '../content';
 
-export const DashboardPanel = () => (
-  <Grid container={Grid.CONTAINER_SIZES.LG}>
-    <Panel>
-      <Panel.Stack>
-        <h4 className={SageClassnames.TYPE.HEADING_5}>
-          Let&rsquo;s get started
-        </h4>
-        <p className={`${SageClassnames.TYPE.BODY} ${SageClassnames.TYPE_COLORS.CHARCOAL_100}`}>
-          Building your business begins with these four simple steps
-        </p>
-      </Panel.Stack>
+export const DashboardPanel = () => {
+  const [activeTab, setActiveTab] = React.useState(getStartedTabs[0].id);
 
-      <Panel.Divider bleed={true} />
+  return (
+    <Grid container={Grid.CONTAINER_SIZES.LG}>
+      <Panel>
+        <Panel.Stack>
+          <h4 className={SageClassnames.TYPE.HEADING_5}>
+            Let&rsquo;s get started
+          </h4>
+          <p className={`${SageClassnames.TYPE.BODY} ${SageClassnames.TYPE_COLORS.CHARCOAL_100}`}>
+            Building your business begins with these four simple steps
+          </p>
+        </Panel.Stack>
 
-      <div className={SageClassnames.GRID_PANEL}>
-        {/*
-          TODO: Add side-by-side layout variation
-          https://kajabi.atlassian.net/browse/SAGE-314
-        */}
-        <Tabs
-          id="example-tabs3"
-          stacked={true}
-          tabs={getStartedTabs.map(({
-            cta,
-            description,
-            graphic,
-            icon,
-            id,
-            label,
-            title,
-          }) => ({
-            id,
-            content: (
-              <DashboardTabPane
-                cta={cta}
-                description={description}
-                graphic={graphic}
-                title={title}
+        <Panel.Divider bleed={true} />
+
+        <Grid withRow={true}>
+          <Grid.Col size={4} className={SageClassnames.CARD_GRID}>
+            {getStartedTabs.map(({
+              icon,
+              id,
+              label,
+            }) => (
+              <Tabs.Item
+                key={`get-started-tab-${id}`}
+                icon={icon}
+                isActive={id === activeTab}
+                type={Tabs.Item.CHOICE_TYPES.ICON}
+                itemStyle={Tabs.Item.STYLES.CHOICE}
+                label={label}
+                panelId={id}
+                onClick={() => setActiveTab(id)}
               />
-            ),
-            label,
-            tabChoiceIcon: icon,
-            tabChoiceType: Tabs.Item.CHOICE_TYPES.ICON,
-          }))}
-          tabLayout={Tabs.LAYOUTS.STACKED}
-          tabStyle={Tabs.STYLES.CHOICE}
-        />
-      </div>
-    </Panel>
-  </Grid>
-);
+            ))}
+          </Grid.Col>
+          <Grid.Col size={8} className={SageClassnames.PANEL_GRID}>
+            {getStartedTabs.map(({
+              cta: {
+                label,
+                learnMoreUrl,
+                url,
+              },
+              description,
+              graphic,
+              id,
+              title,
+            }) => (
+              <Tabs.Pane
+                id={id}
+                isActive={id === activeTab}
+                key={`get-started-tab-pane-${id}`}
+                panelSpacing={true}
+              >
+                {graphic}
+                <Panel.Stack>
+                  <h5 className={SageClassnames.TYPE.HEADING_5}>
+                    {title}
+                  </h5>
+                  <p className={`${SageClassnames.TYPE.BODY} ${SageClassnames.TYPE_COLORS.CHARCOAL_100}`}>
+                    {description}
+                  </p>
+                </Panel.Stack>
+                <Button.Group gap={Button.Group.GAP_OPTIONS.SM}>
+                  <Button
+                    color={Button.COLORS.PRIMARY}
+                    href={url}
+                  >
+                    {label}
+                  </Button>
+                  <Button
+                    color={Button.COLORS.PRIMARY}
+                    subtle={true}
+                    icon={SageTokens.ICONS.LAUNCH}
+                    iconPosition={Button.ICON_POSITIONS.RIGHT}
+                    href={learnMoreUrl}
+                  >
+                    Learn more
+                  </Button>
+                </Button.Group>
+              </Tabs.Pane>
+            ))}
+            </Grid.Col>
+        </Grid>
+      </Panel>
+    </Grid>
+  );
+};
