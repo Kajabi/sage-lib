@@ -11,6 +11,13 @@ module SageClassnames
   GRID_CARD = "sage-card-grid"
   GRID_PANEL = "sage-panel-grid"
 
+  module GRID_GAP_OPTIONS
+    XS   = "sage-grid-gap-xs"
+    SM   = "sage-grid-gap-sm"
+    MD   = "sage-grid-gap-md"
+    LG   = "sage-grid-gap-lg"
+  end
+
   module GRID_TEMPLATES
     SageDictionary::SD_SAGE_CONTENT_GRID_TEMPLATE.map do |k, v|
       const_set("#{k}", v[:CLASSNAME])
@@ -59,7 +66,7 @@ module SageClassnames
 
   TRUNCATE_TEXT = "t-sage--truncate"
 
-  module TYPE 
+  module TYPE
     HEADING_1 = "t-sage-heading-1"
     HEADING_2 = "t-sage-heading-2"
     HEADING_3 = "t-sage-heading-3"

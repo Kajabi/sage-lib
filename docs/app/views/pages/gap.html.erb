@@ -1,0 +1,73 @@
+<%= content_for :heading do %>
+<%= md(%(
+# Gap
+<p class="docs-heading__lead">A set of prescribed gap values help maintain consistent spacing within component-level layouts.</p>
+)) %>
+<% end %>
+
+<div class="<%= SageClassnames::TYPE_BLOCK %>">
+  <p>The following gap tokens are used throughout Sage:</p>
+  <%= sage_component SageTable, {
+    striped: true,
+    headers: [
+      "Token",
+      "Value",
+    ],
+    rows: [
+      [
+        "xs",
+        "8px",
+      ],
+      [
+        "sm",
+        "16px",
+      ],
+      [
+        "md",
+        "24px",
+      ],
+      [
+        "lg",
+        "32px",
+      ]
+    ]
+  } %>
+
+  <%= md(%(
+  A `gap` attribute is available on all Sage Rails components that contain a `grid_template` to provide custom spacing.
+  Usage works like this:
+
+##### Rails
+Access to the `grid_template` property is the only prerequisite for `gap` values to affect component layouts.
+
+```erb
+\<\%\= sage_component SageCardRow, { grid_template: "ete", gap: "lg"} \%\> ... \<\%\ end \%\>
+```
+
+##### React
+In React, be sure to import `SageTokens`. This will provide access to the `{gap}` values in the component
+
+```jsx
+<Card.Row gap={SageTokens.GRID_GAP_OPTIONS.LG} gridTemplate={SageTokens.GRID_TEMPLATES.ETE}> ... </Card.Row>
+```
+
+##### Result
+  )) %>
+  <%= sage_component SageCard, {} do %>
+    <%= sage_component SageCardRow, { grid_template: "ete", gap: :lg } do %>
+      <i class="sage-icon-drop" aria-label="Product"></i>
+      <strong class="t-sage-body">
+        Row here -- $8.99/mo
+      </strong>
+      <%= sage_component SageButton, {
+        value: "Buy now",
+        style: "primary",
+        subtle: true,
+        icon: {
+          name: "cart",
+          style: "left"
+        }
+      } %>
+    <% end %>
+  <% end %>
+</div>

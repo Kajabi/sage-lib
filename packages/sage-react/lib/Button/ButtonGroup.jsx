@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { BUTTON_GROUP_ALIGN_OPTIONS, BUTTON_GROUP_GAP_OPTIONS } from './configs';
+import { BUTTON_GROUP_ALIGN_OPTIONS } from './configs';
+import { SageTokens } from '../configs';
 
 export const ButtonGroup = ({
   align,
@@ -20,7 +21,7 @@ export const ButtonGroup = ({
       'sage-btn-group--align-end': alignEnd,
       [`sage-btn-group--align-${align}`]: align,
       'sage-btn-group--border-top': borderTop,
-      [`sage-btn-group--gap-${gap}`]: gap,
+      [`sage-grid-gap-${gap}`]: gap,
       'sage-btn-group--wrap': wrap,
     }
   );
@@ -33,7 +34,7 @@ export const ButtonGroup = ({
 };
 
 ButtonGroup.ALIGN_OPTIONS = BUTTON_GROUP_ALIGN_OPTIONS;
-ButtonGroup.GAP_OPTIONS = BUTTON_GROUP_GAP_OPTIONS;
+ButtonGroup.GAP_OPTIONS = SageTokens.GRID_GAP_OPTIONS;
 
 ButtonGroup.defaultProps = {
   align: ButtonGroup.ALIGN_OPTIONS.NONE,
@@ -41,7 +42,7 @@ ButtonGroup.defaultProps = {
   borderTop: false,
   className: null,
   children: null,
-  gap: ButtonGroup.GAP_OPTIONS.XS,
+  gap: SageTokens.GRID_GAP_OPTIONS.XS,
   wrap: false,
 };
 
@@ -51,6 +52,6 @@ ButtonGroup.propTypes = {
   borderTop: PropTypes.bool,
   className: PropTypes.string,
   children: PropTypes.node,
-  gap: PropTypes.oneOf(Object.values(ButtonGroup.GAP_OPTIONS)),
+  gap: PropTypes.oneOf(Object.values(SageTokens.GRID_GAP_OPTIONS)),
   wrap: PropTypes.bool,
 };
