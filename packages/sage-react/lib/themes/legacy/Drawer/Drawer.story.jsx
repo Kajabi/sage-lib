@@ -101,13 +101,13 @@ export const WiredExample = () => {
         break;
       default:
         setDrawerContents((
-          <div style={{ maxWidth: '334px'}}>
+          <div style={{ maxWidth: '345px'}}>
             {drawerChildren}
           </div>
         ));
       break;
     }
-  }
+  };
 
   return (
     <>
