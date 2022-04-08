@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.88.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.87.0...@kajabi/sage-react@0.88.0) (2022-04-08)
+
+
+### Features
+
+* **mocks:** update get started mock with side tabs ([69a451c](https://github.com/Kajabi/sage-lib/commit/69a451c56af97666facf22bd0981aac3502894ed))
+
+
+
+
+
 # [0.87.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.86.1...@kajabi/sage-react@0.87.0) (2022-04-07)
 
 
