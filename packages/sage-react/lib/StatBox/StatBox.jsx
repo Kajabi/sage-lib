@@ -39,7 +39,6 @@ export const StatBox = ({
     }
   );
   const renderLabelStatus = () => {
-    let icon = null;
     let color;
 
     switch (change.type) {

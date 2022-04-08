@@ -1,5 +1,5 @@
 import React from 'react';
-import { Label } from '../../Label';
+import { Badge } from '../../Badge';
 import { Avatar } from '../../Avatar';
 
 // Data Renderers
