@@ -754,65 +754,65 @@ $sd-sage-color-base-charcoal-50-code: "charcoal-50";
 ///
 $sd-sage-color-base-charcoal-50-classname: "t-sage--color-charcoal-50";
 ///
-/// color color-base-grey-600-hex
+/// color color-base-charcoal-100-hex
 ///
 $sd-sage-color-base-charcoal-100-hex: #8d939a;
 ///
-/// color color-base-grey-600-code
+/// color color-base-charcoal-100-code
 ///
-$sd-sage-color-base-grey-600-code: "grey-600";
+$sd-sage-color-base-charcoal-100-code: "charcoal-100";
 ///
-/// color color-base-grey-600-classname
+/// color color-base-charcoal-100-classname
 ///
-$sd-sage-color-base-grey-600-classname: "t-sage--color-grey-600";
+$sd-sage-color-base-charcoal-100-classname: "t-sage--color-charcoal-100";
 ///
-/// color color-base-grey-700-hex
+/// color color-base-charcoal-200-hex
 ///
 $sd-sage-color-base-charcoal-200-hex: #60666c;
 ///
-/// color color-base-grey-700-code
+/// color color-base-charcoal-200-code
 ///
-$sd-sage-color-base-grey-700-code: "grey-700";
+$sd-sage-color-base-charcoal-200-code: "charcoal-200";
 ///
-/// color color-base-grey-700-classname
+/// color color-base-charcoal-200-classname
 ///
-$sd-sage-color-base-grey-700-classname: "t-sage--color-grey-700";
+$sd-sage-color-base-charcoal-200-classname: "t-sage--color-charcoal-200";
 ///
-/// color color-base-grey-800-hex
+/// color color-base-charcoal-300-hex
 ///
 $sd-sage-color-base-charcoal-300-hex: #43474b;
 ///
-/// color color-base-grey-800-code
+/// color color-base-charcoal-300-code
 ///
-$sd-sage-color-base-grey-800-code: "grey-800";
+$sd-sage-color-base-charcoal-300-code: "charcoal-300";
 ///
-/// color color-base-grey-800-classname
+/// color color-base-charcoal-300-classname
 ///
-$sd-sage-color-base-grey-800-classname: "t-sage--color-grey-800";
+$sd-sage-color-base-charcoal-300-classname: "t-sage--color-charcoal-300";
 ///
-/// color color-base-grey-900-hex
+/// color color-base-charcoal-400-hex
 ///
 $sd-sage-color-base-charcoal-400-hex: #202327;
 ///
-/// color color-base-grey-900-code
+/// color color-base-charcoal-400-code
 ///
-$sd-sage-color-base-grey-900-code: "grey-900";
+$sd-sage-color-base-charcoal-400-code: "charcoal-400";
 ///
-/// color color-base-grey-900-classname
+/// color color-base-charcoal-400-classname
 ///
-$sd-sage-color-base-grey-900-classname: "t-sage--color-grey-900";
+$sd-sage-color-base-charcoal-400-classname: "t-sage--color-charcoal-400";
 ///
-/// color color-base-white-50-hex
+/// color color-base-charcoal-500-hex
 ///
 $sd-sage-color-base-charcoal-500-hex: #181b20;
 ///
-/// color color-base-white-50-code
+/// color color-base-charcoal-500-code
 ///
-$sd-sage-color-base-white-50-code: "white-50";
+$sd-sage-color-base-charcoal-500-code: "charcoal-500";
 ///
-/// color color-base-white-50-classname
+/// color color-base-charcoal-500-classname
 ///
-$sd-sage-color-base-white-50-classname: "t-sage--color-white-50";
+$sd-sage-color-base-charcoal-500-classname: "t-sage--color-charcoal-500";
 ///
 /// color color-base-charcoal-600-hex
 ///
@@ -1549,20 +1549,25 @@ $sd-sage-color: (
       code: $sd-sage-color-base-charcoal-100-code,
       classname: $sd-sage-color-base-charcoal-100-classname,
     ),
-    700: (
-      hex: $sd-sage-color-base-grey-700-hex,
-      code: $sd-sage-color-base-grey-700-code,
-      classname: $sd-sage-color-base-grey-700-classname,
+    200: (
+      hex: $sd-sage-color-base-charcoal-200-hex,
+      code: $sd-sage-color-base-charcoal-200-code,
+      classname: $sd-sage-color-base-charcoal-200-classname,
     ),
-    800: (
-      hex: $sd-sage-color-base-grey-800-hex,
-      code: $sd-sage-color-base-grey-800-code,
-      classname: $sd-sage-color-base-grey-800-classname,
+    300: (
+      hex: $sd-sage-color-base-charcoal-300-hex,
+      code: $sd-sage-color-base-charcoal-300-code,
+      classname: $sd-sage-color-base-charcoal-300-classname,
     ),
-    900: (
-      hex: $sd-sage-color-base-grey-900-hex,
-      code: $sd-sage-color-base-grey-900-code,
-      classname: $sd-sage-color-base-grey-900-classname,
+    400: (
+      hex: $sd-sage-color-base-charcoal-400-hex,
+      code: $sd-sage-color-base-charcoal-400-code,
+      classname: $sd-sage-color-base-charcoal-400-classname,
+    ),
+    500: (
+      hex: $sd-sage-color-base-charcoal-500-hex,
+      code: $sd-sage-color-base-charcoal-500-code,
+      classname: $sd-sage-color-base-charcoal-500-classname,
     ),
     600: (
       hex: $sd-sage-color-base-charcoal-600-hex,
@@ -1823,7 +1828,7 @@ $sd-sage-color-combos-published-default-background: #ddf8f0;
 ///
 /// color combos color-combos-published-default-background-accent
 ///
-$sd-sage-color-combos-published-default-background-accent: #ddf8f0;
+$sd-sage-color-combos-published-default-background-accent: #86d5bc;
 ///
 /// color combos color-combos-published-default-icon-background-accent
 ///
@@ -1939,7 +1944,7 @@ $sd-sage-color-combos-warning-default-foreground-accent: #8c3b08;
 ///
 /// color combos color-combos-warning-default-background
 ///
-$sd-sage-color-combos-warning-default-background: #fad980;
+$sd-sage-color-combos-warning-default-background: #fef8e1;
 ///
 /// color combos color-combos-warning-default-background-accent
 ///
@@ -1979,7 +1984,7 @@ $sd-sage-color-combos-danger-default-foreground-accent: #5e0d0d;
 ///
 /// color combos color-combos-danger-default-background
 ///
-$sd-sage-color-combos-danger-default-background: #fdb0aa;
+$sd-sage-color-combos-danger-default-background: #fff0f0;
 ///
 /// color combos color-combos-danger-default-background-accent
 ///
@@ -2199,11 +2204,11 @@ $sd-sage-color-combos: (
 ///
 /// color core color-core-primary
 ///
-$sd-sage-color-core-primary: #8ecafb;
+$sd-sage-color-core-primary: #0072ef;
 ///
 /// color core color-core-sage
 ///
-$sd-sage-color-core-sage: #86d5bc;
+$sd-sage-color-core-sage: #23856d;
 ///
 /// color core color-core-yellow
 ///
@@ -2211,7 +2216,7 @@ $sd-sage-color-core-yellow: #ffc505;
 ///
 /// color core color-core-red
 ///
-$sd-sage-color-core-red: #fdb0aa;
+$sd-sage-color-core-red: #cf3c32;
 ///
 /// color core color-core-orange
 ///
@@ -2219,7 +2224,7 @@ $sd-sage-color-core-orange: #fb7e09;
 ///
 /// color core color-core-purple
 ///
-$sd-sage-color-core-purple: #d9c2ef;
+$sd-sage-color-core-purple: #8e5ad8;
 ///
 /// color core color-core-charcoal
 ///
@@ -3314,4 +3319,3 @@ $sd-sage-content-grid-template: (
   $value: map-get($value, $subkey);
   @return $value;
 }
-
