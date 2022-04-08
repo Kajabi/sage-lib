@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { Property } from '../Property';
 import { Link } from '../Link';
-import { Label } from '../Label';
+import { Badge } from '../Badge';
 import { AMOUNT_COLORS, LABEL_COLORS, STATE_COLORS } from './configs';
 import { SageTokens } from '../configs';
 import { Button } from '../Button';
@@ -38,7 +38,7 @@ export const TransactionCard = ({
   return (
     <article className="sage-transaction-card">
       <div className="sage-transaction-card__header">
-        <Label className="sage-transaction-card__label" value={labelText} color={labelColor} />
+        <Badge className="sage-transaction-card__label" value={labelText} color={labelColor} />
         <div className={stateClassNames}>
           {transactionState || 'Awesome'}
         </div>

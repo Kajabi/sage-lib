@@ -2,7 +2,7 @@ import React from 'react';
 import { SageTokens } from '../configs';
 import { selectArgs } from '../story-support/helpers';
 import { Button } from '../Button';
-import { Label } from '../Label';
+import { Badge } from '../Badge';
 import { MediaTile } from './MediaTile';
 
 export default {
@@ -62,7 +62,7 @@ export const KitchenSink = Template.bind({});
 KitchenSink.args = {
   title: 'Lorem Ipsum Dolor Sit',
   actionsCustom: (
-    <Label value="Published" color={Label.COLORS.PUBLISHED} />
+    <Badge value="Published" color={Badge.COLORS.PUBLISHED} />
   ),
   footer: (
     <Button

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Button } from '../Button';
 import { Grid } from '../Grid';
 import { Icon } from '../Icon';
-import { Label } from '../Label';
+import { Badge } from '../Badge';
 import { OptionsDropdown } from '../Dropdown';
 import { SageClassnames, SageTokens } from '../configs';
 import { Panel } from './Panel';
@@ -366,7 +366,7 @@ export const PanelRow = (args) => (
             Molestie libero vel
           </p>
         </Panel.Block>
-        <Label color={Label.COLORS.WARNING} value="In progress" />
+        <Badge color={Badge.COLORS.WARNING} value="In progress" />
         <Button
           icon={SageTokens.ICONS.PEN}
           subtle={true}

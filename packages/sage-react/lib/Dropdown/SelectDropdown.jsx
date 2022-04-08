@@ -232,6 +232,7 @@ export const SelectDropdown = ({
       {renderDropdown()}
       <Label.Group>
         {items.map(({ id, isActive, label, payload }) => isActive && (
+          // TODO this needs to be change to a tag
           <Label
             key={id}
             interactiveType={Label.INTERACTIVE_TYPES.SECONDARY_BUTTON}

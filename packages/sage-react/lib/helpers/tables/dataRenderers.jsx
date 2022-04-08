@@ -32,7 +32,7 @@ export const renderObjectAsAvatar = (data) => {
 export const renderObjectAsHTML = (data) => data;
 
 export const renderObjectAsLabel = ({ color, value }) => (
-  <Label color={color} value={value} />
+  <Badge color={color} value={value} />
 );
 
 export const renderStringAsIs = (data) => (typeof data === 'string' || typeof data === 'number'
