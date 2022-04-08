@@ -30,7 +30,7 @@
       <% end %>
       <% if component.label.present? %>
         <div class="sage-feature-toggle__label">
-          <%= sage_component SageLabel, {
+          <%= sage_component SageBadge, {
             color: component.label[:color],
             value: component.label[:value]
           } %>
