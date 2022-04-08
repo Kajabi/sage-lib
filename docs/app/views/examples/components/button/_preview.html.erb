@@ -42,7 +42,7 @@ demo_configs_subtle = [
 
 <% demo_configs_standard.each do | config | %>
   <%= sage_component SageCardBlock, {} do %>
-    <%= sage_component SageLabel, {
+    <%= sage_component SageBadge, {
       color: "draft",
       value: config[:heading],
     } %>
@@ -118,7 +118,7 @@ demo_configs_subtle = [
 <h3>Subtle Buttons</h3>
 <% demo_configs_subtle.each do | config | %>
   <%= sage_component SageCardBlock, {} do %>
-    <%= sage_component SageLabel, {
+    <%= sage_component SageBadge, {
       color: "draft",
       value: "Subtle #{config[:heading]}",
     } %>
@@ -189,7 +189,7 @@ demo_configs_subtle = [
 
 <h3>Button Groups</h3>
 <%= sage_component SageCardBlock, {} do %>
-  <%= sage_component SageLabel, {
+  <%= sage_component SageBadge, {
     color: "draft",
     value: "Button group: Align End",
   } %>
@@ -206,7 +206,7 @@ demo_configs_subtle = [
 <% end %>
 
 <%= sage_component SageCardBlock, {} do %>
-  <%= sage_component SageLabel, {
+  <%= sage_component SageBadge, {
     color: "draft",
     value: "Button group: Align Space-Between",
   } %>
@@ -223,7 +223,7 @@ demo_configs_subtle = [
 <% end %>
 
 <%= sage_component SageCardBlock, {} do %>
-  <%= sage_component SageLabel, {
+  <%= sage_component SageBadge, {
     color: "draft",
     value: "Button group: Align End with top border",
   } %>

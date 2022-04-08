@@ -158,7 +158,7 @@ NOTE: the examples below omit `media` but this can safely be used as well with t
     <img src="//source.unsplash.com/Ssj4uWXcvS4/600x400?1" alt="MEDIA Image of Product Abra" />
   <% end %>
   <%= content_for :sage_media_tile_actions_custom do %>
-    <%= sage_component SageLabel, { value: "CUSTOM Draft", color: "draft" } %>
+    <%= sage_component SageBadge, { value: "CUSTOM Draft", color: "draft" } %>
   <% end %>
   <%= content_for :sage_media_tile_body do %>
     <p>

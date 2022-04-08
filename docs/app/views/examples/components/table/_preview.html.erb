@@ -81,15 +81,10 @@ sample_table = {
       value_3: "$328.00",
       value_4: "0",
       value_5: "0",
-      value_6: %(
-        <span class="sage-label sage-label--draft">
-          <span class="sage-label__value">
-            <span class="sage-label__value-text">
-              Draft
-            </span>
-          </span>
-        </span>
-      )
+      value_6: sage_component(SageBadge, {
+        color: "draft",
+        value: "Draft",
+      })
     },
     {
       value_1: "Cursus purus sed at quisque",
@@ -97,15 +92,10 @@ sample_table = {
       value_3: "$490.00",
       value_4: "453",
       value_5: "$275.43",
-      value_6: %(
-        <span class="sage-label sage-label--published">
-          <span class="sage-label__value">
-            <span class="sage-label__value-text">
-              Published
-            </span>
-          </span>
-        </span>
-      )
+      value_6: sage_component(SageBadge, {
+        color: "published",
+        value: "Published",
+      })
     },
     {
       value_1: "Sit quis a enim venenatis elit ac",
@@ -113,15 +103,10 @@ sample_table = {
       value_3: "$219.00",
       value_4: "536",
       value_5: "$739.65",
-      value_6: %(
-        <span class="sage-label sage-label--published">
-          <span class="sage-label__value">
-            <span class="sage-label__value-text">
-              Published
-            </span>
-          </span>
-        </span>
-      )
+      value_6: sage_component(SageBadge, {
+        color: "published",
+        value: "Published",
+      })
     }
   ]
 }
@@ -153,6 +138,7 @@ sample_table = {
           <div class="sage-table-cell__heading">
             <p class="sage-table-cell__title">First item</p>
             <span class="sage-table-cell__label sage-label sage-label--success">Accepted</span>
+
           </div>
           <div class="sage-table-cell__body">
             Maecenas sed diam eget risus varius blandit sit amet non
@@ -292,7 +278,7 @@ It is safe to use, but should be tracked against future updates.
 
   <% t.column :labels, label: "Labels", style: "width: 150px", hide: { sm: true } do |c| %>
     <% c[:labels].each do |label| %>
-      <%= sage_component SageLabel, { 
+      <%= sage_component SageBadge, {
         value: label,
         color: "info",
       } %>
@@ -300,7 +286,7 @@ It is safe to use, but should be tracked against future updates.
   <% end %>
 
   <% t.column :status, label: "Status", style: "width: 100px", hide: { sm: true } do |c| %>
-    <%= sage_component SageLabel, { 
+    <%= sage_component SageBadge, {
       value: c[:status].titlecase,
       color: c[:status],
       } %>
