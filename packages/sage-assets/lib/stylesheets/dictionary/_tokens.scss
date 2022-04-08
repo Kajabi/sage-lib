@@ -2013,6 +2013,38 @@ $sd-sage-color-combos-danger-bold-foreground: #fff0f0;
 /// color combos color-combos-danger-bold-background
 ///
 $sd-sage-color-combos-danger-bold-background: #fdb0aa;
+///
+/// color combos color-combos-primary-default-foreground
+///
+$sd-sage-color-combos-primary-default-foreground: #fff;
+///
+/// color combos color-combos-primary-default-foreground-accent
+///
+$sd-sage-color-combos-primary-default-foreground-accent: #fff;
+///
+/// color combos color-combos-primary-default-background
+///
+$sd-sage-color-combos-primary-default-background: #8ecafb;
+///
+/// color combos color-combos-primary-subtle-foreground
+///
+$sd-sage-color-combos-primary-subtle-foreground: #fff;
+///
+/// color combos color-combos-primary-subtle-foreground-accent
+///
+$sd-sage-color-combos-primary-subtle-foreground-accent: #fff;
+///
+/// color combos color-combos-primary-subtle-background
+///
+$sd-sage-color-combos-primary-subtle-background: #8ecafb;
+///
+/// color combos color-combos-primary-bold-foreground
+///
+$sd-sage-color-combos-primary-bold-foreground: #fff;
+///
+/// color combos color-combos-primary-bold-background
+///
+$sd-sage-color-combos-primary-bold-background: #8ecafb;
 
 ///
 /// Map for color combos
@@ -3287,3 +3319,4 @@ $sd-sage-content-grid-template: (
   $value: map-get($value, $subkey);
   @return $value;
 }
+
