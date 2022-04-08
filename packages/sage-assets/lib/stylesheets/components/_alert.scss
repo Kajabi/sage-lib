@@ -30,9 +30,9 @@ $-alert-colors: (
   &:not(.sage-alert--small) {
     grid-template-columns: auto 1fr auto;
     grid-template-areas:
-    "icon content close"
-    "icon content ."
-    "icon actions actions";
+      "icon content close"
+      "icon content ."
+      "icon actions actions";
 
     .sage-alert__copy {
       grid-area: content;
