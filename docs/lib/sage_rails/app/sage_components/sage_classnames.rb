@@ -11,6 +11,15 @@ module SageClassnames
   GRID_CARD = "sage-card-grid"
   GRID_PANEL = "sage-panel-grid"
 
+  module ALIGNMENT
+    HALIGNSTART   = "sage-justify-start"
+    HALIGNCENTER  = "sage-justify-center"
+    HALIGNEND     = "sage-justify-end"
+    VALIGNSTART   = "sage-align-start"
+    VALIGNCENTER  = "sage-align-center"
+    VALIGNEND     = "sage-align-end"
+  end
+
   module GRID_GAP_OPTIONS
     XS   = "sage-grid-gap-xs"
     SM   = "sage-grid-gap-sm"

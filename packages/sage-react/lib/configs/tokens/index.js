@@ -7,6 +7,7 @@ import { TOKENS_SPACERS } from './spacers';
 import { TOKENS_Z_INDEXES } from './z-indexes';
 
 export const SageTokens = {
+  ALIGNMENT: TOKENS_ALIGNMENT,
   COLORS: TOKENS_COLORS,
   COLOR_PALETTE: TOKENS_COLOR_PALETTE,
   COLOR_SLIDERS: TOKENS_COLOR_SLIDERS,

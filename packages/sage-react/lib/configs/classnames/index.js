@@ -20,6 +20,7 @@ import {
 } from './gap';
 
 export const SageClassnames = {
+  ALIGNMENT: { ...CLASSNAMES_ALIGNMENT },
   SPACERS: { ...CLASSNAMES_SPACERS },
   TYPE: { ...CLASSNAMES_TYPE },
   TYPE_ALIGN_CENTER: CLASSNAME_TYPE_ALIGN_CENTER,

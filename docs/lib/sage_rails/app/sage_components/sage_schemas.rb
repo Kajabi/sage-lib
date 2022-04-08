@@ -6,6 +6,8 @@ module SageSchemas
 
   ICON_SIZE = Set.new(SageTokens::ICON_SIZES)
 
+  ALIGNMENT = Set.new(SageTokens::ALIGNMENT)
+
   COLORS = Set.new(SageTokens::COLORS)
 
   COLOR_SLIDER = Set.new(SageTokens::COLOR_SLIDERS)

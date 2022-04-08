@@ -56,6 +56,11 @@ module SageTokens
   # Constants
   #
 
+  ALIGNMENT = [
+    "halignstart", "haligncenter", "halignend",
+    "valignstart", "valigncenter", "valignend",
+  ]
+
   COLORS = SageTokens.color()
 
   COLOR_PALETTE = SageTokens.color_palette()
