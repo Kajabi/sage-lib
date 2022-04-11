@@ -78,7 +78,7 @@ $-modal-fullscreen-top-spacing: rem(104px);
   .sage-modal__container .sage-modal__content,
   .sage-modal__container > .simple_form {
     overflow: auto;
-    padding: 8px 2px;
+    padding: sage-spacing(xs) sage-spacing(3xs);
   }
 }
 
