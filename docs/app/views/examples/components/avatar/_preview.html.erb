@@ -8,16 +8,6 @@
   <%= sage_component SageAvatar, { size: "88px" } %>
 </div>
 
-<h3>Initial Avatars</h3>
-<div class="sage-avatar-wrapper">
-  <%= sage_component SageAvatar, { size: "24px", initials: "KA" } %>
-  <%= sage_component SageAvatar, { size: "32px", initials: "JA" } %>
-  <%= sage_component SageAvatar, { size: "40px", initials: "BI" } %>
-  <%= sage_component SageAvatar, { size: "56px", initials: "IS" } %>
-  <%= sage_component SageAvatar, { size: "72px", initials: "CO" } %>
-  <%= sage_component SageAvatar, { size: "88px", initials: "OL" } %>
-</div>
-
 <h3>Image Avatars</h3>
 <div class="sage-avatar-wrapper">
   <%= sage_component SageAvatar, {
@@ -74,8 +64,8 @@
 <div class="sage-avatar-wrapper">
   <%= sage_component SageAvatar, { size: "24px", badge: true } %>
   <%= sage_component SageAvatar, { size: "32px", badge: true } %>
-  <%= sage_component SageAvatar, { size: "40px", initials: "BI", badge: true } %>
-  <%= sage_component SageAvatar, { size: "56px", initials: "RO", badge: true } %>
+  <%= sage_component SageAvatar, { size: "40px", badge: true } %>
+  <%= sage_component SageAvatar, { size: "56px", badge: true } %>
   <%= sage_component SageAvatar, {
     badge: true,
     size: "72px",
@@ -98,45 +88,64 @@
 
 <h3>Custom Colors</h3>
 <div class="sage-avatar-wrapper">
-  <%= sage_component SageAvatar, { size: "24px", initials: "CO", color: "purple" } %>
-  <%= sage_component SageAvatar, { size: "32px", initials: "LO", color: "sage" } %>
-  <%= sage_component SageAvatar, { size: "40px", initials: "RS", color: "orange" } %>
-  <%= sage_component SageAvatar, { size: "56px", initials: "RF", color: "yellow" } %>
-  <%= sage_component SageAvatar, { size: "72px", initials: "UN", color: "red" } %>
+  <%= sage_component SageAvatar, { size: "24px",  color: "purple" } %>
+  <%= sage_component SageAvatar, { size: "32px",  color: "sage" } %>
+  <%= sage_component SageAvatar, { size: "40px",  color: "orange" } %>
+  <%= sage_component SageAvatar, { size: "56px",  color: "yellow" } %>
+  <%= sage_component SageAvatar, { size: "72px",  color: "red" } %>
 </div>
 
 <h3>Avatar Groups</h3>
 <div class="sage-avatar-wrapper">
   <%= sage_component SageAvatarGroup, {
     items: [
-      { initials: "JC" },
+      { color: nil,
+      image: {
+        alt: "Demi Wilkinson",
+        src: "avatar/demi_wilkinson.png",
+        id: "custom_id"
+      }},
     ]
   } %>
   <%= sage_component SageAvatarGroup, {
     items: [
       { color: nil },
-      { color: "purple", initials: "PS" },
+      { color: "purple", },
     ]
   } %>
   <%= sage_component SageAvatarGroup, {
     items: [
-      { initials: "JC" },
-      { color: "purple", initials: "PS" },
-      { color: "sage", initials: "Q" },
+      { color: nil,
+        image: {
+          alt: "Koray Okumus",
+          src: "avatar/koray_okumus.png",
+          id: "custom_id"
+        }
+      },
+      { color: "purple", },
+      { color: "sage", },
     ]
   } %>
   <%= sage_component SageAvatarGroup, {
     items: [
       { color: nil },
-      { color: "purple", initials: "PS" },
-      { color: "sage", initials: "Q" },
-      { color: "orange", initials: "KJ" },
+      { color: "purple", },
+      { color: "sage", },
+      { color: "orange", },
     ]
   } %>
 </div>
 
 <h3>Avatar centered + custom size</h3>
-<%= sage_component SageAvatar, { centered: true, initials: "JC", size: "128px" } %>
+<%= sage_component SageAvatar, { 
+  centered: true,
+  image: {
+    alt: "Joshua Wilson",
+    src: "avatar/joshua_wilson.png",
+    id: "custom_id"
+  },
+  size: "128px"
+} %>
 
 <h3>Layering and lazy loading</h3>
 <%= md('
@@ -149,15 +158,8 @@ In such cases a transparent PNG image can be provided as the default image so th
 the initials are seen rather than a generic "anonymous user" image.
 ') %>
 
-<p>Invalid Gravatar with blank fallback to initials:</p>
-<%= sage_component SageAvatar, {
-  initials: "PS",
-  image: { src: "https://s.gravatar.com/avatar/000?default=blank" }
-} %>
-
 <p>Valid Gravatar with lazy loading:</p>
 <%= sage_component SageAvatar, {
-  initials: "PS",
   image: { src: "https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?" }
 } %>
 

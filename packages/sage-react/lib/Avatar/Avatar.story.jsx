@@ -13,8 +13,6 @@ export default {
       src: null,
       id: null,
     },
-    initials: '',
-    lazyLoadInitials: true,
     size: '48px',
   },
   argTypes: {
