@@ -33,9 +33,9 @@ export const FRAME_BORDERS = {
 // Keep in sync with `packages/sage-assets/lib/stylesheets/components/_frame.scss`
 export const FRAME_BORDER_RADII = {
   NONE: 'none',
-  SMALL: 'sm',
-  MEDIUM: 'md',
-  LARGE: 'lg',
+  SM: 'sm',
+  MD: 'md',
+  LG: 'lg',
 };
 
 // Keep in sync with `packages/sage-assets/lib/stylesheets/components/_frame.scss`

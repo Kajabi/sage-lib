@@ -70,12 +70,12 @@ Here are a few samples of what is possible.
 
 <h4>A "stat box"</h3>
 <%= sage_component SageFrame, {
+  align: "start-spread",
   border: "regular",
   border_radius: "lg",
+  direction: "horizontal",
   padding: "sm",
   width: "360px",
-  align: "start-spread",
-  direction: "horizontal",
 } do %>
   <%= sage_component SageFrame, { gap: "xs" } do %>
     <%= sage_component SageFrame, { gap: "none" } do %>
@@ -83,8 +83,8 @@ Here are a few samples of what is possible.
         All payments
       </h3>
       <%= sage_component SageFrame, {
-        direction: "horizontal",
         align: "baseline-left",
+        direction: "horizontal",
         gap: "xs",
         tag: "p"
       } do %>
@@ -104,6 +104,7 @@ Here are a few samples of what is possible.
     } %>
   <% end %>
   <%= sage_component SageFrame, {
+    align: "top-right",
     gap: "xs",
     width: "120px"
   } do %>

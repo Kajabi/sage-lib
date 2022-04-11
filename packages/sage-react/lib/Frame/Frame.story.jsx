@@ -48,11 +48,11 @@ export const Default = Template.bind({});
 
 export const SampleBox = () => (
   <Frame
-    preset="card-lg"
     background="#fae2d4"
-    border="none"
+    borderRadius={Frame.BORDER_RADII.LARGE}
+    padding={Frame.PADDINGS.MD}
   >
-    <Frame preset="stack">
+    <Frame gap={Frame.GAPS.XS}>
       <h3>Learn more about products</h3>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -60,14 +60,22 @@ export const SampleBox = () => (
         Vestibulum pulvinar placerat elit, et rutrum ipsum elementum ac.
       </p>
     </Frame>
-    <Frame preset="row-spread">
+    <Frame
+      align={Frame.ALIGNMENTS.CENTER_SPREAD}
+      direction={Frame.DIRECTIONS.HORIZONTAL}
+      width={Frame.WIDTHS.FILL}
+    >
       <Button
         color={Button.COLORS.PRIMARY}
         raised={false}
       >
         Do it!
       </Button>
-      <Frame preset="row-hug">
+      <Frame
+        align={Frame.ALIGNMENTS.CENTER_RIGHT}
+        direction={Frame.DIRECTIONS.HORIZONTAL}
+        gap={Frame.GAPS.SM}
+      >
         <Button
           color={Button.COLORS.SECONDARY}
           subtle={true}
@@ -86,51 +94,55 @@ export const SampleBox = () => (
 );
 
 export const SampleStatBox = () => (
-  <Frame preset="card" width="357px">
-    <Frame preset="row" align="top-spread">
-      <Frame preset="stack" width="flex">
-        <Frame preset="block">
-          <h3 className={`${SageClassnames.TYPE.BODY_SMALL} ${SageClassnames.TYPE_COLORS.CHARCOAL_200}`}>
-            All payments
-          </h3>
-          <Frame
-            tag="p"
-            align="baseline-left"
-            direction="horizontal"
-            gap="xs"
-          >
-            <b className={SageClassnames.TYPE.HEADING_5}>
-              40
-            </b>
-            <span className={`${SageClassnames.TYPE.BODY_XSMALL} ${SageClassnames.TYPE_COLORS.CHARCOAL_100}`}>
-              successfull paymemtns
-            </span>
-          </Frame>
-        </Frame>
-        <Button
-          icon="arrow-right"
-          iconPosition="right"
-          color="primary"
-          subtle={true}
+  <Frame
+    align={Frame.ALIGNMENTS.START_SPREAD}
+    border={Frame.BORDERS.REGULAR}
+    borderRadius={Frame.BORDER_RADII.SM}
+    direction={Frame.DIRECTIONS.HORIZONTAL}
+    padding={Frame.PADDINGS.SM}
+    width="360px"
+  >
+    <Frame gap={Frame.GAPS.SM}>
+      <Frame gap={Frame.GAPS.NONE}>
+        <h3 className={`${SageClassnames.TYPE.BODY_SMALL} ${SageClassnames.TYPE_COLORS.CHARCOAL_200}`}>
+          All payments
+        </h3>
+        <Frame
+          align={Frame.ALIGNMENTS.BASELINE_LEFT}
+          direction={Frame.DIRECTIONS.HORIZONTAL}
+          gap={Frame.GAPS.XS}
+          tag="p"
         >
-          View all
-        </Button>
+          <b className={SageClassnames.TYPE.HEADING_5}>
+            40
+          </b>
+          <span className={`${SageClassnames.TYPE.BODY_XSMALL} ${SageClassnames.TYPE_COLORS.CHARCOAL_100}`}>
+            successful payments
+          </span>
+        </Frame>
       </Frame>
-      <Frame
-        align="top-right"
-        direction="vertical"
-        gap="xs"
-        width="120px"
+      <Button
+        icon={SageTokens.ICONS.ARROW_RIGHT}
+        iconPosition={Button.ICON_POSITIONS.RIGHT}
+        color={Button.COLORS.PRIMARY}
+        subtle={true}
       >
-        <Label
-          color="published"
-          value="33%"
-          icon="up-small"
-        />
-        <div>
-          [chart]
-        </div>
-      </Frame>
+        View all
+      </Button>
+    </Frame>
+    <Frame
+      align={Frame.ALIGNMENTS.TOP_RIGHT}
+      gap={Frame.GAPS.XS}
+      width="120px"
+    >
+      <Label
+        color={Label.COLORS.PUBLISHED}
+        value="33%"
+        icon={SageTokens.ICONS.UP_SMALL}
+      />
+      <div>
+        [chart]
+      </div>
     </Frame>
   </Frame>
 );
