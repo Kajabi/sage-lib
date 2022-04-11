@@ -96,10 +96,11 @@ Default.args = {
           ),
         ]}
         wrapItems={true}
+        itemGridGap={SageTokens.GRID_GAP_OPTIONS.SM}
         itemGridTemplate={SageTokens.GRID_TEMPLATES.ET}
       />
       <Card.Title>Row</Card.Title>
-      <Card.Row gridTemplate={SageTokens.GRID_TEMPLATES.ETE}>
+      <Card.Row gridTemplate={SageTokens.GRID_TEMPLATES.ETE} gap={SageTokens.GRID_GAP_OPTIONS.LG}>
         <Icon icon={SageTokens.ICONS.DROP} />
         <p>Drip slowly -- $8.99</p>
         <Button

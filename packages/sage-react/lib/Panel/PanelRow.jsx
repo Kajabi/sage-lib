@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { SageClassnames, SageTokens } from '../configs';
-import { PANEL_ROW_ALIGNMENT_OPTIONS, PANEL_ROW_GAP_OPTIONS } from './configs';
+import { PANEL_ROW_ALIGNMENT_OPTIONS } from './configs';
 
 export const PanelRow = ({
   children,
@@ -33,20 +33,20 @@ export const PanelRow = ({
 };
 
 PanelRow.VERTICAL_ALIGNMENTS = PANEL_ROW_ALIGNMENT_OPTIONS;
-PanelRow.GAP_OPTIONS = PANEL_ROW_GAP_OPTIONS;
+PanelRow.GAP_OPTIONS = SageTokens.GRID_GAP_OPTIONS;
 
 PanelRow.defaultProps = {
   children: null,
   className: '',
   gridTemplate: null,
   verticalAlign: PANEL_ROW_ALIGNMENT_OPTIONS.DEFAULT,
-  gap: PANEL_ROW_GAP_OPTIONS.DEFAULT
+  gap: SageTokens.GRID_GAP_OPTIONS.DEFAULT
 };
 
 PanelRow.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
+  gap: PropTypes.oneOf(Object.values(SageTokens.GRID_GAP_OPTIONS)),
   gridTemplate: PropTypes.oneOf(Object.values(SageTokens.GRID_TEMPLATES)),
   verticalAlign: PropTypes.oneOf(Object.values(PANEL_ROW_ALIGNMENT_OPTIONS)),
-  gap: PropTypes.oneOf(Object.values(PANEL_ROW_GAP_OPTIONS)),
 };

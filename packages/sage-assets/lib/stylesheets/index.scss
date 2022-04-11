@@ -23,10 +23,6 @@
 @import "layout/page";
 @import "layout/stage";
 
-// Utilities
-@import "utilities/hidden";
-@import "utilities/spacer";
-
 // Components
 @import "components/dot";
 @import "components/carousel";
@@ -100,6 +96,11 @@
 @import "components/transaction_card";
 @import "components/typeahead";
 @import "components/upload_card";
+
+// Utilities
+@import "utilities/grid_gap_options";
+@import "utilities/hidden";
+@import "utilities/spacer";
 
 // Vendor Modifications
 @import "vendor/tinymcev4";

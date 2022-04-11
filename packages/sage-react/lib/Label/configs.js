@@ -26,11 +26,3 @@ export const LABEL_GROUP_ALIGN_OPTIONS = {
   END: 'end',
   SPACEBETWEEN: 'space-between'
 };
-
-export const LABEL_GROUP_GAP_OPTIONS = {
-  NONE: null,
-  XS: 'xs',
-  SM: 'sm',
-  MD: 'md',
-  LG: 'lg',
-};
