@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.54.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.54.1...@kajabi/sage@4.54.2) (2022-04-11)
+
+
+### Bug Fixes
+
+* **gap:** add docs page ([cb9bd8b](https://github.com/Kajabi/sage-lib/commit/cb9bd8bba45479a1d8245ae54243f0aa23504954))
+* **gap:** added missed prop ([0beb072](https://github.com/Kajabi/sage-lib/commit/0beb0728978ae1402306305e73b1c6dfc967f350))
+* **gap:** create grid gap options token ([b9f4b64](https://github.com/Kajabi/sage-lib/commit/b9f4b645412d50d69d8ad4b19d6c1cc534426b3f))
+* **gap:** md consistancy ([9a83b26](https://github.com/Kajabi/sage-lib/commit/9a83b26b93d3a66aec4d5ca72e2d0a883b6d0da1))
+* **gap:** second pass for gap ([fe90013](https://github.com/Kajabi/sage-lib/commit/fe900135c061f83fbe4d5cda7f47b6d976ea5380))
+* **gap:** update copy ([a927aee](https://github.com/Kajabi/sage-lib/commit/a927aee6ebe00610355dab396a2b5b10437834d7))
+* **gap:** updated class ref ([615c058](https://github.com/Kajabi/sage-lib/commit/615c058b9c29fb54d134c0ac68d8511e4ca76688))
+* **gap:** updated md ref ([5ff2687](https://github.com/Kajabi/sage-lib/commit/5ff26877f1df878c5199a2f04d0348e5c534dec1))
+* **gap:** updates to rails side ([6133eb5](https://github.com/Kajabi/sage-lib/commit/6133eb5ff4564d287973a072b0b6af62405cda95))
+
+
+### Reverts
+
+* Revert "fix(gap): updated md ref" ([486b3ae](https://github.com/Kajabi/sage-lib/commit/486b3ae496d8a66aaa1cec6e3851a2609c9c29e8))
+
+
+
+
+
 ## [4.54.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.54.0...@kajabi/sage@4.54.1) (2022-04-08)
 
 **Note:** Version bump only for package @kajabi/sage

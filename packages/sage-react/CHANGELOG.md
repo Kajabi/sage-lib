@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.88.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.88.0...@kajabi/sage-react@0.88.1) (2022-04-11)
+
+
+### Bug Fixes
+
+* **gap:** added react classnames ([752e8a1](https://github.com/Kajabi/sage-lib/commit/752e8a110ad48b56902cc30f4ae79d1963d27c86))
+* **gap:** create grid gap options token ([b9f4b64](https://github.com/Kajabi/sage-lib/commit/b9f4b645412d50d69d8ad4b19d6c1cc534426b3f))
+* **gap:** linter ([b62f456](https://github.com/Kajabi/sage-lib/commit/b62f45617442d3d2ad6c923b5964cee9a9f339b2))
+* **gap:** md consistancy ([9a83b26](https://github.com/Kajabi/sage-lib/commit/9a83b26b93d3a66aec4d5ca72e2d0a883b6d0da1))
+* **gap:** removed comment ([d92fac0](https://github.com/Kajabi/sage-lib/commit/d92fac05cdbfe59f57cc7789bd40be5f3a6d4d30))
+* **gap:** updates to react side ([ab9efaa](https://github.com/Kajabi/sage-lib/commit/ab9efaa95a4a1f44f92377096f95037ed5dbcf50))
+* **grid:** removed gap_options vars from config files ([f2ff9a9](https://github.com/Kajabi/sage-lib/commit/f2ff9a9291f49491dab751430335e3ba7c0dd736))
+
+
+
+
+
 # [0.88.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.87.0...@kajabi/sage-react@0.88.0) (2022-04-08)
 
 

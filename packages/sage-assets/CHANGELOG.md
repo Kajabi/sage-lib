@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.75.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.75.0...@kajabi/sage-assets@0.75.1) (2022-04-11)
+
+
+### Bug Fixes
+
+* **gap:** create grid gap options token ([b9f4b64](https://github.com/Kajabi/sage-lib/commit/b9f4b645412d50d69d8ad4b19d6c1cc534426b3f))
+* **gap:** md consistancy ([9a83b26](https://github.com/Kajabi/sage-lib/commit/9a83b26b93d3a66aec4d5ca72e2d0a883b6d0da1))
+* **gap:** moved utilities below components in the main css import ([36fcb11](https://github.com/Kajabi/sage-lib/commit/36fcb11ab1e86fb33803137a33477270209ac13c))
+* **gap:** remove css component gap code ([1392d3e](https://github.com/Kajabi/sage-lib/commit/1392d3e65c9fb4486ea17749d07129199256e3d8))
+* **gap:** second pass for gap ([fe90013](https://github.com/Kajabi/sage-lib/commit/fe900135c061f83fbe4d5cda7f47b6d976ea5380))
+* **gap:** updated md ref ([5ff2687](https://github.com/Kajabi/sage-lib/commit/5ff26877f1df878c5199a2f04d0348e5c534dec1))
+* **gap:** updates to react side ([ab9efaa](https://github.com/Kajabi/sage-lib/commit/ab9efaa95a4a1f44f92377096f95037ed5dbcf50))
+
+
+### Reverts
+
+* Revert "fix(gap): updated md ref" ([486b3ae](https://github.com/Kajabi/sage-lib/commit/486b3ae496d8a66aaa1cec6e3851a2609c9c29e8))
+
+
+
+
+
 # [0.75.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.74.1...@kajabi/sage-assets@0.75.0) (2022-04-07)
 
 
