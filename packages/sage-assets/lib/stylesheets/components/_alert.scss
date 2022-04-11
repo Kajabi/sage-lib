@@ -21,7 +21,7 @@ $-alert-colors: (
   gap: sage-spacing(sm);
   position: relative;
   padding: sage-spacing(sm);
-  border-radius: sage-border(radius-large);
+  border-radius: sage-border(radius);
 
   .sage-panel > & {
     margin-bottom: 0;
