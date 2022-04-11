@@ -28,43 +28,35 @@ Here are a few samples of what is possible.
 
 <h4>A custom block</h4>
 <%= sage_component SageFrame, {
+  align: "center-spread",
   background: "#fae2d4",
   border_radius: "lg",
+  direction: "horizontal",
   padding: "md",
 } do %>
-  <%= sage_component SageFrame, { gap: "sm" } do %>
-    <h3>Learn more about products</h3>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Etiam faucibus massa vel sem ullamcorper tincidunt.
-      Vestibulum pulvinar placerat elit, et rutrum ipsum elementum ac.
-    </p>
-  <% end %>
-  <%= sage_component SageFrame, { 
-    direction: "horizontal",
-    align: "center-spread",
-    width: "fill",
-  } do %>
-    <%= sage_component SageButton, {
-      value: "Do it!",
-      style: "primary",
-    } %>
-    <%= sage_component SageFrame, {
-      direction: "horizontal",
-      align: "center-right",
-      gap: "sm",
-    } do %>
+  <%= sage_component SageFrame, {} do %>
+    <%= sage_component SageFrame, { gap: "xs" } do %>
+      <h3>Learn more about products</h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Etiam faucibus massa vel sem ullamcorper tincidunt.
+        Vestibulum pulvinar placerat elit, et rutrum ipsum elementum ac.
+      </p>
+    <% end %>
+    <%= sage_component SageButtonGroup, { gap: :sm } do %>
+      <%= sage_component SageButton, {
+        value: "Do it!",
+        style: "primary",
+      } %>
       <%= sage_component SageButton, {
         value: "Cancel",
         style: "secondary",
         subtle: true,
       } %>
-      <%= sage_component SageButton, {
-        value: "Options",
-        style: "secondary",
-        raised: false,
-      } %>
     <% end %>
+  <% end %>
+  <%= sage_component SageFrame, { width: "104px" } do %>
+    <%= image_tag "illustrations/puzzle-small.png", alt: "" %>
   <% end %>
 <% end %>
 

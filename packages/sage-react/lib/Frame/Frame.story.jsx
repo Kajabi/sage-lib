@@ -48,47 +48,38 @@ export const Default = Template.bind({});
 
 export const SampleBox = () => (
   <Frame
+    align={Frame.ALIGNMENTS.CENTER_SPREAD}
     background="#fae2d4"
-    borderRadius={Frame.BORDER_RADII.LARGE}
+    borderRadius={Frame.BORDER_RADII.LG}
+    direction={Frame.DIRECTIONS.HORIZONTAL}
     padding={Frame.PADDINGS.MD}
   >
-    <Frame gap={Frame.GAPS.XS}>
-      <h3>Learn more about products</h3>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Etiam faucibus massa vel sem ullamcorper tincidunt.
-        Vestibulum pulvinar placerat elit, et rutrum ipsum elementum ac.
-      </p>
-    </Frame>
-    <Frame
-      align={Frame.ALIGNMENTS.CENTER_SPREAD}
-      direction={Frame.DIRECTIONS.HORIZONTAL}
-      width={Frame.WIDTHS.FILL}
-    >
-      <Button
-        color={Button.COLORS.PRIMARY}
-        raised={false}
-      >
-        Do it!
-      </Button>
-      <Frame
-        align={Frame.ALIGNMENTS.CENTER_RIGHT}
-        direction={Frame.DIRECTIONS.HORIZONTAL}
-        gap={Frame.GAPS.SM}
-      >
+    <Frame>
+      <Frame gap={Frame.GAPS.XS}>
+        <h3>Learn more about products</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Etiam faucibus massa vel sem ullamcorper tincidunt.
+          Vestibulum pulvinar placerat elit, et rutrum ipsum elementum ac.
+        </p>
+      </Frame>
+      <Button.Group gap={Button.Group.GAP_OPTIONS.SM}>
+        <Button
+          color={Button.COLORS.PRIMARY}
+          raised={false}
+        >
+          Do it!
+        </Button>
         <Button
           color={Button.COLORS.SECONDARY}
           subtle={true}
         >
           Cancel
         </Button>
-        <Button
-          color={Button.COLORS.SECONDARY}
-          raised={false}
-        >
-          Options
-        </Button>
-      </Frame>
+      </Button.Group>
+    </Frame>
+    <Frame width="104px">
+      <img src="//source.unsplash.com/random/104x104" alt="" />
     </Frame>
   </Frame>
 );
