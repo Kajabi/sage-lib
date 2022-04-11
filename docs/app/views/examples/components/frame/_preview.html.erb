@@ -1,137 +1,24 @@
-<h3>Frame Setup</h3>
+<%# 
+
+Assets for this file can be found here:
+https://www.figma.com/file/WFBaFNTdHUwlTwHEfe1jtR/Frame-Documentation?node-id=0%3A1
+
+%>
+<h3>Figma Auto-layout</h3>
 <%= md("
 The SageFrame component is set up to mirror configurations found in the auto layout feature of Figma,
 which is commonly used to create compound layouts.
-Here is a summary of the properties and pairings this component makes available:
+
+When you select a group, component, or artboard layer in Figma, look in the sidebar on the right side
+of the interface under the Design tab for this panel (You will need Edit access to a Figma file in order to access the Design tab to see this panel):
+
+#{image_tag("figma-auto-layout-labeled.png")}
+
+These four sections correspond to properties with the same name on the SageFrame component (see the Properties tab for more details).
+You can therefore easily match a layout from a Figma design by using a SageFrame with the same settings.
 ") %>
 
-<h3>Frame Presets</h3>
-<%= md("
-Frames have a high level of customization.
-The following presets allow for some options to implement common patterns quickly.
-Note that presets that do not have border setting are shown here with a background color added
-in order to better demonstrate their size and padding.
-") %>
-
-<h4>Default</h4>
-<%= sage_component SageFrame, { background: "grey-200" } do %>
-  <p>Lorem ipsum dolor sit amet consectitor</p>
-  <%= sage_component SageButton, { style: "primary", value: "Learn more" } %>
-<% end %>
-
-<hr />
-
-<%= md("
-#### `block`
-
-The basic `block` preset stacks elements vertically with no padding or gap but fills the space available.
-Set a specific `width` value to control its width more specifically.
-") %>
-<%= sage_component SageFrame, { preset: "block", background: "grey-200" } do %>
-  <p>Lorem ipsum dolor sit amet consectitor</p>
-  <%= sage_component SageButton, { style: "primary", value: "Learn more" } %>
-<% end %>
-
-<hr />
-
-<%= md("
-#### `block-hug`
-
-Similar to `block`, the `block-hug` preset stacks elements vertically with no padding or gap.
-However, `block-hug` will only take up the space its contents require.
-") %>
-<%= sage_component SageFrame, { preset: "block-hug", background: "grey-200" } do %>
-  <p>Lorem ipsum dolor sit amet consectitor</p>
-  <%= sage_component SageButton, { style: "primary", value: "Learn more" } %>
-<% end %>
-
-<hr />
-
-<%= md("
-#### `card-sm`
-
-The `card-sm` generates a bordered frame with a small padding and gap setting and a minimal border radius.
-") %>
-<%= sage_component SageFrame, { preset: "card-sm" } do %>
-  <p>Lorem ipsum dolor sit amet consectitor</p>
-  <%= sage_component SageButton, { style: "primary", value: "Learn more" } %>
-<% end %>
-
-<hr />
-
-<%= md("
-#### `card` and `card-md`
-
-The `card` or `card-md` generates a bordered frame with standard card spacing, gap, and border radius.
-") %>
-<%= sage_component SageFrame, { preset: "card" } do %>
-  <p>Lorem ipsum dolor sit amet consectitor</p>
-  <%= sage_component SageButton, { style: "primary", value: "Learn more" } %>
-<% end %>
-
-<hr />
-
-<%= md("
-#### `card-lg`
-
-The `card-lg` generates a bordered frame with a generous padding and gap setting and a larger border radius.
-") %>
-<%= sage_component SageFrame, { preset: "card-lg" } do %>
-  <p>Lorem ipsum dolor sit amet consectitor</p>
-  <%= sage_component SageButton, { style: "primary", value: "Learn more" } %>
-<% end %>
-
-<hr />
-
-<%= md("
-#### `row`
-
-Perfect for laying out most side-by-side content, the `row` places elements horizontally with no border treatment or padding but a standard gap.
-") %>
-<%= sage_component SageFrame, { preset: "row", background: "grey-200" } do %>
-  <p>Lorem ipsum dolor sit amet consectitor</p>
-  <%= sage_component SageButton, { style: "primary", value: "Learn more" } %>
-<% end %>
-
-<hr />
-
-<%= md("
-#### `row-spread`
-
-Similar to `row`, the `row` places elements horizontally with no border treatment or padding but a standard gap.
-In additional, elements are set to spread out evenly within the space available.
-") %>
-<%= sage_component SageFrame, { preset: "row-spread", background: "grey-200" } do %>
-  <p>Lorem ipsum dolor sit amet consectitor</p>
-  <%= sage_component SageButton, { style: "primary", value: "Learn more" } %>
-<% end %>
-
-<hr />
-
-<%= md("
-#### `row-hug`
-
-Similar to `row`, the `row` places elements horizontally with no border treatment or padding but a standard gap.
-However, this preset will only occupy the space its contents require.
-") %>
-<%= sage_component SageFrame, { preset: "row-hug", background: "grey-200" } do %>
-  <p>Lorem ipsum dolor sit amet consectitor</p>
-  <%= sage_component SageButton, { style: "primary", value: "Learn more" } %>
-<% end %>
-
-<hr />
-
-<%= md("
-#### `stack`
-
-The `stack` preset places elements vertically with no border or padding but a small gap between elements.
-") %>
-<%= sage_component SageFrame, { preset: "stack", background: "grey-200" } do %>
-  <p>Lorem ipsum dolor sit amet consectitor</p>
-  <%= sage_component SageButton, { style: "primary", value: "Learn more" } %>
-<% end %>
-
-<h3>Frames in Context</h3>
+<h3>Example Uses</h3>
 <%= md("
 The true power of SageFrame comes with using it in combination to create compound layouts.
 Designed to mimic what developers find in Figma with Auto layout is employed,
@@ -141,11 +28,11 @@ Here are a few samples of what is possible.
 
 <h4>A custom block</h4>
 <%= sage_component SageFrame, {
-  preset: "card-lg",
   background: "#fae2d4",
-  border: "none",
+  border_radius: "lg",
+  padding: "md",
 } do %>
-  <%= sage_component SageFrame, { preset: "stack" } do %>
+  <%= sage_component SageFrame, { gap: "sm" } do %>
     <h3>Learn more about products</h3>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -153,12 +40,20 @@ Here are a few samples of what is possible.
       Vestibulum pulvinar placerat elit, et rutrum ipsum elementum ac.
     </p>
   <% end %>
-  <%= sage_component SageFrame, { preset: "row-spread" } do %>
+  <%= sage_component SageFrame, { 
+    direction: "horizontal",
+    align: "center-spread",
+    width: "fill",
+  } do %>
     <%= sage_component SageButton, {
       value: "Do it!",
       style: "primary",
     } %>
-    <%= sage_component SageFrame, { preset: "row-hug" } do %>
+    <%= sage_component SageFrame, {
+      direction: "horizontal",
+      align: "center-right",
+      gap: "sm",
+    } do %>
       <%= sage_component SageButton, {
         value: "Cancel",
         style: "secondary",
@@ -174,48 +69,51 @@ Here are a few samples of what is possible.
 <% end %>
 
 <h4>A "stat box"</h3>
-<%= sage_component SageFrame, { preset: "card", width: "357px" } do %>
-  <%= sage_component SageFrame, { preset: "row", align: "top-spread" } do %>
-    <%= sage_component SageFrame, { preset: "stack", width: "flex" } do %>
-      <%= sage_component SageFrame, { preset: "block" } do %>
-        <h3 class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_200}" %>">
-          All payments
-        </h3>
-        <%= sage_component SageFrame, {
-          direction: "horizontal",
-          align: "baseline-left",
-          gap: "xs",
-          tag: "p"
-        } do %>
-          <b class="<%= "#{SageClassnames::TYPE::HEADING_5}" %>">
-            40
-          </b>
-          <span class="<%= "#{SageClassnames::TYPE::BODY_XSMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_100}" %>">
-            successfull paymemtns
-          </span>
-        <% end %>
+<%= sage_component SageFrame, {
+  border: "regular",
+  border_radius: "lg",
+  padding: "sm",
+  width: "360px",
+  align: "start-spread",
+  direction: "horizontal",
+} do %>
+  <%= sage_component SageFrame, { gap: "xs" } do %>
+    <%= sage_component SageFrame, { gap: "none" } do %>
+      <h3 class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_200}" %>">
+        All payments
+      </h3>
+      <%= sage_component SageFrame, {
+        direction: "horizontal",
+        align: "baseline-left",
+        gap: "xs",
+        tag: "p"
+      } do %>
+        <b class="<%= "#{SageClassnames::TYPE::HEADING_5}" %>">
+          40
+        </b>
+        <span class="<%= "#{SageClassnames::TYPE::BODY_XSMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_100}" %>">
+          successfull paymemtns
+        </span>
       <% end %>
-      <%= sage_component SageButton, {
-        value: "View all",
-        icon: { style: "right", name: "arrow-right" },
-        style: "primary",
-        subtle: true,
-      } %>
     <% end %>
-    <%= sage_component SageFrame, {
-      gap: "xs",
-      direction: "vertical",
-      align: "top-right",
-      width: "120px"
-    } do %>
-      <%= sage_component SageLabel, {
-        color: "published",
-        value: "33%",
-        icon: "up-small",
-      } %>
-      <div>
-        [chart]
-      </div>
-    <% end %>
+    <%= sage_component SageButton, {
+      value: "View all",
+      icon: { style: "right", name: "arrow-right" },
+      style: "primary",
+      subtle: true,
+    } %>
+  <% end %>
+  <%= sage_component SageFrame, {
+    gap: "xs",
+    width: "120px"
+  } do %>
+    <%= sage_component SageLabel, {
+      color: "published",
+      value: "33%",
+      icon: "up-small",
+    } %>
+    <div>
+      [chart]
+    </div>
   <% end %>
 <% end %>

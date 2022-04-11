@@ -366,9 +366,9 @@ module SageTokens
     "bottom-left",
     "bottom-center",
     "bottom-right",
-    "top-spread",
+    "start-spread",
     "center-spread",
-    "bottom-spread",
+    "end-spread",
     "stretch-left",
     "stretch-right",
     "stretch-center",
@@ -385,9 +385,9 @@ module SageTokens
   # Keep in sync with `packages/sage-assets/lib/stylesheets/components/_frame.scss`
   FRAME_BORDER_RADII = [
     "none",
-    "small",
-    "medium",
-    "large"
+    "sm",
+    "md",
+    "lg"
   ]
 
   # Keep in sync with `packages/sage-assets/lib/stylesheets/components/_frame.scss`
@@ -405,19 +405,6 @@ module SageTokens
     "hug",
     "fill",
     "flex",
-  ]
-
-  FRAME_PRESETS = [
-    "block",
-    "block-hug",
-    "card-sm",
-    "card",
-    "card-md",
-    "card-lg",
-    "row",
-    "row-hug",
-    "row-spread",
-    "stack",
   ]
 
 end

@@ -9,7 +9,6 @@ import {
   FRAME_DIRECTIONS,
   FRAME_SPACINGS,
   FRAME_WIDTHS,
-  FRAME_PRESETS,
 } from './configs';
 
 export const Frame = ({
@@ -22,7 +21,6 @@ export const Frame = ({
   direction,
   gap,
   padding,
-  preset,
   tag,
   width,
   ...rest
@@ -31,7 +29,6 @@ export const Frame = ({
     'sage-frame',
     className,
     {
-      [`sage-frame--preset-${preset}`]: preset,
       [`sage-frame--align-${align}`]: align,
       [`sage-frame--background-${background}`]: background,
       [`sage-frame--border-${border}`]: border,
@@ -73,21 +70,19 @@ Frame.DIRECTIONS = FRAME_DIRECTIONS;
 Frame.GAPS = FRAME_SPACINGS;
 Frame.PADDINGS = FRAME_SPACINGS;
 Frame.WIDTHS = FRAME_WIDTHS;
-Frame.PRESETS = FRAME_PRESETS;
 
 Frame.defaultProps = {
+  align: FRAME_ALIGNMENTS.TOP_LEFT,
+  background: 'transparent',
+  border: FRAME_BORDERS.NONE,
+  borderRadius: FRAME_BORDER_RADII.NONE,
   children: null,
   className: '',
-  align: null,
-  background: null,
-  border: null,
-  borderRadius: null,
-  direction: null,
-  gap: null,
-  padding: null,
-  preset: null,
+  direction: FRAME_DIRECTIONS.VERTICAL,
+  gap: FRAME_SPACINGS.MD,
+  padding: FRAME_SPACINGS.NONE,
   tag: 'div',
-  width: null,
+  width: FRAME_WIDTHS.FLEX,
 };
 
 Frame.propTypes = {
@@ -103,7 +98,6 @@ Frame.propTypes = {
   direction: PropTypes.oneOf(Object.values(Frame.DIRECTIONS)),
   gap: PropTypes.oneOf(Object.values(Frame.GAPS)),
   padding: PropTypes.oneOf(Object.values(Frame.PADDINGS)),
-  preset: PropTypes.oneOf(Object.values(Frame.PRESETS)),
   tag: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.elementType,

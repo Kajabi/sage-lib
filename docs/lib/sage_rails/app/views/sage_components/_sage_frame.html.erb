@@ -1,17 +1,26 @@
 <%
-# Set up tag
+# Set up defaults
+# due to cascading values set on custom props,
+# we need to ensure defaults are provided for all values
+
+align = component.align.present? ? component.align : "top-left"
+background = component.background.present? ? component.background : "transparent"
+border = component.border.present? ? component.border : "none"
+border_radius = component.border_radius.present? ? component.border_radius : "none"
+direction = component.direction.present? ? component.direction : "vertical"
+gap = component.gap.present? ? component.gap : "md"
+padding = component.padding.present? ? component.padding : "none"
+width = component.width.present? ? component.width : "flex"
 tag = component.tag.present? ? component.tag : "div"
 
-# Set up width configs
+# Set up additional width configs
 is_custom_width = false
-width = component.width.present? ? component.width : nil
 if (width && !SageTokens::FRAME_WIDTHS.include?(width))
   is_custom_width = true
 end
 
-# Set up background configs
+# Set up additional background configs
 is_custom_background = false
-background = component.background.present? ? component.background : nil
 if (background && !SageTokens::COLOR_SLIDERS.include?(background))
   is_custom_background = true
 end
@@ -20,14 +29,13 @@ end
 <<%= tag %>
   class="
     sage-frame
-    <%= "sage-frame--preset-#{component.preset}" if component.preset %>
-    <%= "sage-frame--align-#{component.align}" if component.align %>
+    <%= "sage-frame--align-#{align}" %>
     <%= "sage-frame--background-#{background}" if !is_custom_background && background %>
-    <%= "sage-frame--border-#{component.border}" if component.border %>
-    <%= "sage-frame--border-radius-#{component.border_radius}" if component.border_radius %>
-    <%= "sage-frame--direction-#{component.direction}" if component.direction %>
-    <%= "sage-frame--gap-#{component.gap}" if component.gap %>
-    <%= "sage-frame--padding-#{component.padding}" if component.padding %>
+    <%= "sage-frame--border-#{border}" %>
+    <%= "sage-frame--border-radius-#{border_radius}" %>
+    <%= "sage-frame--direction-#{direction}" %>
+    <%= "sage-frame--gap-#{gap}" %>
+    <%= "sage-frame--padding-#{padding}" %>
     <%= "sage-frame--width-#{width}" if !is_custom_width && width %>
     <%= component.generated_css_classes %>
   "

@@ -59,7 +59,7 @@ $-sage-frame-alignments: (
     h: flex-end,
     v: baseline,
   ),
-  top-spread: (
+  start-spread: (
     h: space-between,
     v: flex-start,
   ),
@@ -67,7 +67,7 @@ $-sage-frame-alignments: (
     h: space-between,
     v: center,
   ),
-  bottom-spread: (
+  end-spread: (
     h: space-between,
     v: flex-end,
   ),
@@ -97,9 +97,9 @@ $-sage-frame-alignments: (
 // Generally aligned to border tokens plus a `none` option
 $-sage-frame-border-radii: (
   none: 0,
-  small: sage-border(radius-small),
-  medium: sage-border(radius),
-  large: sage-border(radius-large),
+  sm: sage-border(radius-small),
+  md: sage-border(radius),
+  lg: sage-border(radius-large),
 );
 
 // Border treatment options
@@ -215,92 +215,9 @@ $-sage-frame-width: fill;
   @include sage-frame();
 }
 
-// Presets configurations
-.sage-frame--preset-block,
-[data-sage-frame="block"] {
-  @include sage-frame-config($gap: none);
-}
-
-.sage-frame--preset-block-hug,
-[data-sage-frame="block-hug"] {
-  @include sage-frame-config(
-    $gap: none,
-    $width: hug,
-  );
-}
-
-.sage-frame--preset-card-sm,
-[data-sage-frame="card-sm"] {
-  @include sage-frame-config(
-    $background: sage-color(white),
-    $border: regular,
-    $border-radius: small,
-    $gap: xs,
-    $padding: xs,
-  );
-}
-
-.sage-frame--preset-card,
-[data-sage-frame="card"],
-.sage-frame--preset-card-md,
-[data-sage-frame="card-md"] {
-  @include sage-frame-config(
-    $background: sage-color(white),
-    $border: regular,
-    $border-radius: medium,
-    $gap: sm,
-    $padding: sm,
-  );
-}
-
-.sage-frame--preset-card-lg,
-[data-sage-frame="card-lg"] {
-  @include sage-frame-config(
-    $background: sage-color(white),
-    $border: regular,
-    $border-radius: large,
-    $gap: md,
-    $padding: md,
-  );
-}
-
-.sage-frame--preset-row,
-[data-sage-frame="row"] {
-  @include sage-frame-config(
-    $align: center-left,
-    $direction: horizontal,
-    $gap: md,
-  );
-}
-
-.sage-frame--preset-row-hug,
-[data-sage-frame="row-hug"] {
-  @include sage-frame-config(
-    $align: center-left,
-    $direction: horizontal,
-    $gap: md,
-    $width: hug,
-  );
-}
-
-.sage-frame--preset-row-spread,
-[data-sage-frame="row-spread"] {
-  @include sage-frame-config(
-    $align: center-spread,
-    $direction: horizontal,
-    $gap: md,
-  );
-}
-
-.sage-frame--preset-stack,
-[data-sage-frame="stack"] {
-  @include sage-frame-config(
-    $gap: xs,
-    $width: fill,
-  );
-}
-
-// A la carte configurations
+//
+// 5. A la carte configurations
+//
 
 @each $-key, $-val in $-sage-frame-alignments {
   .sage-frame--align-#{$-key},

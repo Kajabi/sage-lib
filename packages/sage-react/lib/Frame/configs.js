@@ -14,9 +14,9 @@ export const FRAME_ALIGNMENTS = {
   BOTTOM_LEFT: 'bottom-left',
   BOTTOM_CENTER: 'bottom-center',
   BOTTOM_RIGHT: 'bottom-right',
-  TOP_SPREAD: 'top-spread',
+  START_SPREAD: 'start-spread',
   CENTER_SPREAD: 'center-spread',
-  BOTTOM_SPREAD: 'bottom-spread',
+  END_SPREAD: 'end-spread',
   STRETCH_LEFT: 'stretch-left',
   STRETCH_CENTER: 'stretch-center',
   STRETCH_RIGHT: 'stretch-right',
@@ -33,9 +33,9 @@ export const FRAME_BORDERS = {
 // Keep in sync with `packages/sage-assets/lib/stylesheets/components/_frame.scss`
 export const FRAME_BORDER_RADII = {
   NONE: 'none',
-  SMALL: 'small',
-  MEDIUM: 'medium',
-  LARGE: 'large',
+  SMALL: 'sm',
+  MEDIUM: 'md',
+  LARGE: 'lg',
 };
 
 // Keep in sync with `packages/sage-assets/lib/stylesheets/components/_frame.scss`
@@ -54,18 +54,4 @@ export const FRAME_WIDTHS = {
   HUG: 'hug',
   FILL: 'fill',
   FLEX: 'flex',
-};
-
-// Keep in sync with `packages/sage-assets/lib/stylesheets/components/_frame.scss`
-export const FRAME_PRESETS = {
-  BLOCK: 'block',
-  BLOCK_HUG: 'block-hug',
-  CARD_SM: 'card-sm',
-  CARD: 'card',
-  CARD_MD: 'card-md',
-  CARD_LG: 'card-lg',
-  ROW: 'row',
-  ROW_HUG: 'row-hug',
-  ROW_SPREAD: 'row-spread',
-  STACK: 'stack',
 };
