@@ -65,6 +65,23 @@ $-modal-fullscreen-top-spacing: rem(104px);
   }
 }
 
+.sage-modal--scrollable {
+  overflow-y: initial;
+
+  .sage-modal__container,
+  .sage-modal__container > .simple_form {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    max-height: 85vh;
+  }
+
+  .sage-modal__container .sage-modal__content,
+  .sage-modal__container > .simple_form {
+    overflow: auto;
+    padding: 8px 2px;
+  }
+}
+
 .sage-modal__container {
   visibility: hidden;
   z-index: sage-z-index(modal);
