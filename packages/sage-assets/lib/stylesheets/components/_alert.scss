@@ -18,17 +18,37 @@ $-alert-colors: (
 
 .sage-alert {
   display: grid;
-  grid-auto-columns: auto;
-  grid-auto-flow: column;
-  grid-template-columns: auto 1fr;
   gap: sage-spacing(sm);
   position: relative;
-  margin-bottom: sage-spacing(md);
   padding: sage-spacing(sm);
   border-radius: sage-border(radius);
 
   .sage-panel > & {
     margin-bottom: 0;
+  }
+
+  &:not(.sage-alert--small) {
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas:
+      "icon content close"
+      "icon content ."
+      "icon actions actions";
+
+    .sage-alert__copy {
+      grid-area: content;
+    }
+
+    .sage-alert__icon {
+      grid-area: icon;
+    }
+
+    .sage-alert__close {
+      grid-area: close;
+    }
+
+    .sage-alert__actions {
+      grid-area: actions;
+    }
   }
 }
 
@@ -50,11 +70,15 @@ $-alert-colors: (
 
 .sage-alert--small {
   gap: sage-spacing(xs);
+  grid-auto-columns: auto;
+  grid-auto-flow: column;
+  grid-template-columns: auto 1fr;
   align-items: center;
   padding: sage-spacing(xs) sage-spacing(sm);
-  margin-bottom: 0;
+  border-radius: sage-border(radius);
 
   .sage-alert__icon {
+    margin-right: sage-spacing(xs);
     line-height: normal;
   }
 
@@ -101,6 +125,12 @@ $-alert-colors: (
 }
 
 .sage-alert__close {
+  .sage-alert--small & {
+    line-height: 1;
+  }
+}
+
+.sage-alert__close-btn {
   align-self: flex-start;
   height: rem(20px);
   width: rem(20px);
@@ -131,7 +161,6 @@ $-alert-colors: (
   flex-wrap: wrap;
   align-items: center;
   gap: sage-spacing(md);
-  margin-top: sage-spacing(xs); // note: total spacing is sm (16px) but grid stack adds 8px already
 
   @each $name, $color in $-alert-colors {
     .sage-alert--#{$name} & > a {
@@ -140,5 +169,8 @@ $-alert-colors: (
       font-weight: sage-font-weight(medium);
     }
   }
-}
 
+  .sage-alert--small-dismissable & {
+    margin-right: sage-spacing(2xs);
+  }
+}
