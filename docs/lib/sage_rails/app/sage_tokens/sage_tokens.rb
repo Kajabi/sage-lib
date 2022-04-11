@@ -379,7 +379,7 @@ module SageTokens
   # Keep in sync with `packages/sage-assets/lib/stylesheets/components/_frame.scss`
   FRAME_BORDERS = [
     "none",
-    "regular",
+    "default",
   ]
 
   # Keep in sync with `packages/sage-assets/lib/stylesheets/components/_frame.scss`

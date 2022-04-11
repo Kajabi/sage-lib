@@ -87,7 +87,7 @@ export const SampleBox = () => (
 export const SampleStatBox = () => (
   <Frame
     align={Frame.ALIGNMENTS.START_SPREAD}
-    border={Frame.BORDERS.REGULAR}
+    border={Frame.BORDERS.DEFAULT}
     borderRadius={Frame.BORDER_RADII.SM}
     direction={Frame.DIRECTIONS.HORIZONTAL}
     padding={Frame.PADDINGS.SM}

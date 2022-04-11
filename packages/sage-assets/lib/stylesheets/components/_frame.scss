@@ -106,7 +106,7 @@ $-sage-frame-border-radii: (
 // Generally aligned to border tokens plus a `none` option
 $-sage-frame-borders: (
   none: 0,
-  regular: sage-border(),
+  default: sage-border(),
 );
 
 // Directions that map to `flex-direction`

@@ -27,7 +27,7 @@ export const FRAME_ALIGNMENTS = {
 // Keep in sync with `packages/sage-assets/lib/stylesheets/components/_frame.scss`
 export const FRAME_BORDERS = {
   NONE: 'none',
-  REGULAR: 'regular',
+  DEFAULT: 'default',
 };
 
 // Keep in sync with `packages/sage-assets/lib/stylesheets/components/_frame.scss`
