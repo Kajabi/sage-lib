@@ -28,6 +28,7 @@ export const Default = (args) => {
       className={args.className}
       disabled={args.disabled}
       hasError={args.hasError}
+      hasPlaceholder={args.hasPlaceholder}
       icon={args.icon}
       id={args.id}
       label={args.label}
@@ -53,6 +54,7 @@ export const InputWithStaticIcon = (args) => {
       className={args.className}
       disabled={args.disabled}
       hasError={args.hasError}
+      hasPlaceholder={args.hasPlaceholder}
       icon={args.icon}
       id={args.id}
       label={args.label}
@@ -78,6 +80,7 @@ export const InputWithPopover = (args) => {
       className={args.className}
       disabled={args.disabled}
       hasError={args.hasError}
+      hasPlaceholder={args.hasPlaceholder}
       icon={args.icon}
       id={args.id}
       label={args.label}
