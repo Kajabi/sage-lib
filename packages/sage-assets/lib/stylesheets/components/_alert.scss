@@ -20,7 +20,7 @@ $-alert-colors: (
   display: grid;
   gap: sage-spacing(sm);
   position: relative;
-  padding: sage-spacing();
+  padding: sage-spacing(sm);
   border-radius: sage-border(radius-large);
 
   .sage-panel > & {
@@ -97,7 +97,7 @@ $-alert-colors: (
 }
 
 .sage-alert__title {
-  @extend %t-sage-heading-5;
+  @extend %t-sage-heading-6;
   color: sage-color(charcoal, 500);
 }
 
