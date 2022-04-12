@@ -1,0 +1,177 @@
+////
+/// Label
+///
+/// @group sage
+////
+
+
+$-label-interactive-icon-size: rem(24px);
+$-label-interactive-icon-size-decor: rem(28px);
+$-label-padding: 0 sage-spacing(xs);
+$-label-border-radius: sage-border(radius-x-large);
+$-label-inset-border: 0 0 0 1px inset;
+
+
+.sage-label {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+
+  &[class*="sage-label--icon-only"] {
+    background-color: transparent;
+  }
+}
+
+.sage-label__value {
+  @extend %t-sage-body-small-semi;
+
+  appearance: none;
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  min-height: $-label-interactive-icon-size;
+  padding: $-label-padding;
+  white-space: nowrap;
+  border-radius: $-label-border-radius;
+  border: unset;
+  outline: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
+
+.sage-label__value-text {
+  @include truncate;
+
+  display: block;
+
+  .sage-label--interactive-right-cta-affordance[class*="sage-label--icon-"] & {
+    @media (max-width: sage-breakpoint(sm-max)) {
+      @include visually-hidden();
+    }
+  }
+}
+
+.sage-label__decor-icon {
+  pointer-events: none;
+}
+
+@each $-color-name, $-color-settings in $sage-color-combos {
+  $-color-modifier: ".sage-label--#{$-color-name}";
+
+  #{$-color-modifier} .sage-label__value {
+    color: sage-color-combo($-color-name, default, foreground);
+    background-color: sage-color-combo($-color-name, default, background);
+  }
+
+  #{$-color-modifier}.sage-label--subtle .sage-label__value {
+    color: sage-color-combo($-color-name, subtle, foreground);
+    background-color: sage-color(white);
+    // Box shadow instead of border so that size and inner spacing is not affected
+    box-shadow: $-label-inset-border sage-color-combo($-color-name, subtle, background);
+  }
+
+  #{$-color-modifier}.sage-label--bold .sage-label__value {
+    color: sage-color-combo($-color-name, bold, foreground);
+    background-color: sage-color-combo($-color-name, bold, background);
+  }
+
+  #{$-color-modifier}.sage-label--interactive {
+    &.sage-label--interactive-right-cta-affordance .sage-label__value {
+      padding-right: $-label-interactive-icon-size-decor;
+    }
+
+    .sage-label__value {
+      @include sage-focus-outline();
+      @include sage-focus-outline--update-color( sage-color-combo($-color-name, default, foreground) );
+
+      &:hover:not(:focus):not(:active):not(:disabled):not(.disabled) {
+        color: sage-color-combo($-color-name, default, foreground-accent);
+      }
+
+      &::after {
+        border-radius: $-label-border-radius;
+      }
+    }
+
+    .sage-btn {
+      color: sage-color-combo($-color-name, default, foreground);
+
+      &:hover {
+        background-color: sage-color-combo($-color-name, default, background-accent);
+      }
+
+      &:focus {
+        @include sage-focus-outline--update-color( sage-color-combo($-color-name, default, foreground) );
+      }
+    }
+
+    .sage-label__value:hover {
+      background-color: sage-color-combo($-color-name, default, background-accent);
+    }
+
+    .sage-label__decor-icon {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      right: 0;
+      width: $-label-interactive-icon-size-decor;
+      min-height: $-label-interactive-icon-size;
+      margin: auto 0;
+      border-radius: 0 $-label-border-radius $-label-border-radius 0;
+
+      &::before {
+        color: sage-color-combo($-color-name, default, foreground);
+      }
+
+      &::after {
+        width: $-label-interactive-icon-size;
+        height: $-label-interactive-icon-size;
+        border-radius: 0 $-label-border-radius $-label-border-radius 0;
+      }
+
+      &:focus {
+        @include sage-focus-outline--update-color( sage-color-combo($-color-name, default, foreground-accent) );
+      }
+
+      &.sage-btn--tag::before {
+        font-size: sage-font-size(md, false);
+      }
+    }
+
+    &.sage-label--interactive-right-cta-affordance .sage-label__decor-icon::before {
+      @media (max-width: sage-breakpoint(sm-max)) {
+        width: sage-spacing(md);
+      }
+    }
+  }
+
+  // NOTE: Icon generation consolidated in `core/_icons.scss`
+}
+
+.sage-label-group {
+  display: flex;
+  flex-flow: row wrap;
+  gap: sage-spacing(xs);
+}
+
+@each $-key, $-value in $sage-spacings {
+  .sage-label-group--gap-#{$-key} {
+    gap: sage-spacing($-key);
+  }
+}
+
+.sage-label-group--align-center {
+  justify-content: center;
+}
+
+.sage-label-group--align-end {
+  justify-content: flex-end;
+}
+
+.sage-label-group--align-space-between {
+  justify-content: space-between;
+}

@@ -1,0 +1,127 @@
+////
+/// Empty State
+///
+/// @group sage
+////
+
+$-empty-state-graphic-feature-width: 100%;
+$-empty-state-graphic-feature-height: rem(142px);
+$-empty-state-graphic-page-width: 100%;
+$-empty-state-graphic-page-height: rem(336px);
+
+.sage-empty-state {
+  margin-left: auto;
+  margin-right: auto;
+
+  &:not(.sage-empty-state--page) {
+    @include sage-grid-panel();
+
+    max-width: sage-container(md);
+    text-align: center;
+    justify-items: center;
+  }
+
+  &:not(.sage-empty-state--compact):not(.sage-empty-state--page) {
+    padding: sage-spacing(2xl) sage-spacing();
+  }
+}
+
+.sage-empty-state--center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: sage-spacing();
+
+  @media screen and (min-width: sage-breakpoint(lg-max)) {
+    padding: 0;
+  }
+}
+
+.sage-empty-state--compact {
+  padding: sage-spacing(xs) sage-spacing();
+}
+
+.sage-empty-state--page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: sage-spacing(lg);
+  width: 100%;
+  padding: sage-spacing(lg);
+
+  @media screen and (max-width: sage-breakpoint(lg-max)) {
+    flex-direction: column;
+  }
+
+  @media screen and (min-width: sage-breakpoint(xl-min)) {
+    flex-direction: row;
+  }
+}
+
+.sage-empty-state__actions,
+.sage-empty-state__custom-content {
+  margin-top: sage-spacing();
+}
+
+.sage-empty-state__content {
+  .sage-empty-state--page & {
+    max-width: $-empty-state-graphic-page-width;
+
+    @media screen and (min-width: sage-breakpoint(xl-min)) {
+      order: 1;
+    }
+  }
+}
+
+.sage-empty-state__graphic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: $-empty-state-graphic-feature-width;
+  height: $-empty-state-graphic-feature-height;
+
+  > img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: sage-border(radius);
+  }
+
+  .sage-empty-state--page & {
+    max-width: $-empty-state-graphic-page-width;
+    height: $-empty-state-graphic-page-height;
+
+    @media screen and (min-width: sage-breakpoint(xl-min)) {
+      order: 2;
+    }
+  }
+}
+
+.sage-empty-state__icon {
+  display: inline-flex;
+  color: sage-color(grey, 500);
+}
+
+.sage-empty-state__title {
+  @extend %t-sage-heading-4;
+
+  color: sage-color(grey, 900);
+  word-wrap: break-word;
+
+  .sage-empty-state--page & {
+    @extend %t-sage-heading-1;
+  }
+
+  &:not(:only-child) {
+    margin-bottom: sage-spacing(sm);
+  }
+}
+
+.sage-empty-state__text {
+  @extend %t-sage-body;
+
+  color: sage-color(grey, 700);
+  word-wrap: break-word;
+}

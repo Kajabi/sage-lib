@@ -1,0 +1,218 @@
+////
+/// Panel
+///
+/// @group sage/components/panel
+////
+
+.sage-panel {
+  @include sage-panel;
+  @include sage-grid-panel;
+}
+
+.sage-panel-grid {
+  @include sage-grid-panel;
+}
+
+.sage-panel--clear-padding-top,
+.sage-panel--clear-padding-both {
+  padding-top: 0;
+}
+
+.sage-panel--clear-padding-bottom,
+.sage-panel--clear-padding-both {
+  padding-bottom: 0;
+}
+
+.sage-panel__divider {
+  position: relative;
+  width: 100%;
+  height: rem(16px);
+  margin: 0;
+  line-height: sage-font-size(body-xs);
+  text-align: center;
+  border: 0;
+  outline: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+    background: sage-color(grey, 300);
+  }
+
+  &::after {
+    content: attr(data-divider-label);
+    display: inline-block;
+    position: relative;
+    padding: 0 sage-spacing(sm);
+    color: sage-color(grey, 500);
+    font-size: sage-font-size(body-xs);
+    background-color: sage-color(white);
+  }
+}
+
+.sage-panel__divider--full-bleed {
+  width: calc(100% + #{sage-spacing(panel) * 2});
+  padding: 0;
+  margin: 0 -#{sage-spacing(panel)};
+}
+
+.sage-panel__footer {
+  @include sage-grid-panel-row();
+
+  &:not(.sage-panel__footer--align-spread) {
+    justify-content: flex-end;
+  }
+}
+
+.sage-panel__header,
+.sage-panel__subheader {
+  display: grid;
+}
+
+.sage-panel__header {
+  row-gap: sage-spacing(xs);
+}
+
+.sage-panel__header--custom,
+.sage-panel__subheader--custom {
+  justify-content: space-between;
+  align-items: start;
+  grid-template-columns: 1fr auto;
+  grid-auto-columns: auto;
+  column-gap: sage-spacing();
+}
+
+.sage-panel__subheader {
+  row-gap: sage-spacing(2xs);
+}
+
+.sage-panel__title {
+  @extend %t-sage-heading-5;
+  color: sage-color(grey, 900);
+
+  + .sage-panel__subtext {
+    margin-top: sage-spacing(xs);
+  }
+}
+
+.sage-panel__subtext {
+  grid-column: 1 / -1;
+  color: sage-color(grey, 500);
+
+  .sage-panel__header & {
+    @extend %t-sage-body;
+  }
+
+  .sage-panel__subheader & {
+    @extend %t-sage-body-small;
+  }
+}
+
+.sage-panel__subtitle {
+  @extend %t-sage-heading-6;
+}
+
+.sage-panel__list {
+  padding: 0;
+  margin: 0 -#{sage-spacing(panel)};
+  list-style: none;
+}
+
+.sage-panel__list-item {
+  margin-bottom: rem(-1px);
+  padding: sage-spacing(sm) sage-spacing();
+  border-top: sage-border(default);
+  border-bottom: sage-border(default);
+
+  @include sage-grid-card-row;
+
+  .sage-panel__list--block-space-xs & {
+    padding-top: sage-spacing(xs);
+    padding-bottom: sage-spacing(xs);
+  }
+
+  .sage-panel__list--block-space-md & {
+    padding-top: sage-spacing();
+    padding-bottom: sage-spacing();
+  }
+}
+
+.sage-panel__row {
+  @include sage-grid-panel-row();
+}
+
+@each $-key, $-value in $sage-spacings {
+  .sage-panel__row--gap-#{$-key},
+  .sage-panel__list-item--gap-#{$-key} {
+    gap: sage-spacing($-key);
+  }
+}
+
+.sage-panel__row--media {
+  grid-template-columns: 160px 1fr;
+}
+
+.sage-panel__row--vertical-align-start {
+  align-items: start;
+}
+
+.sage-panel__stack {
+  padding-left: 0;
+
+  @include sage-grid-stack();
+}
+
+.sage-panel__stack--spacing-form {
+  justify-items: stretch;
+  gap: sage-spacing(card);
+}
+
+.sage-panel__tile {
+  @include sage-grid-card();
+}
+
+.sage-panel__tiles {
+  --sage-panel-tiles-gap: #{sage-spacing()};
+
+  display: grid;
+  grid-gap: var(--sage-panel-tiles-gap);
+  grid-template-columns: repeat(var(--sage-panel-tiles-columns), calc((100% - (var(--sage-panel-tiles-gap) * (var(--sage-panel-tiles-columns) - 1))) / var(--sage-panel-tiles-columns)));
+  list-style: none;
+
+  @media (max-width: sage-breakpoint(xs-max)) {
+    --sage-panel-tiles-columns: 1;
+  }
+
+  @media (min-width: sage-breakpoint(sm-min)) and (max-width: sage-breakpoint(md-max)) {
+    --sage-panel-tiles-columns: 2;
+  }
+}
+
+@for $i from 2 through 4 {
+  @media (min-width: sage-breakpoint(lg-min)) {
+    .sage-panel__tiles--#{$i}-up {
+      --sage-panel-tiles-columns: #{$i};
+    }
+  }
+}
+
+.sage-panel-set {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: min-content;
+  grid-gap: sage-spacing(stage);
+}
+
+.sage-panel,
+.sage-panel__block,
+.sage-panel__stack,
+.sage-panel__list,
+.sage-panel__row,
+.sage-panel__tiles,
+.sage-panel-grid {
+  min-width: 0;
+}

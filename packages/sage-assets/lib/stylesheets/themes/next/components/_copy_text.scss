@@ -1,0 +1,87 @@
+////
+/// Copy Text (FUTURE: System Text)
+///
+/// @group sage
+////
+
+
+$-copy-text-border: 1px solid sage-color(grey, 300);
+$-copy-text-border-focus-color: sage-color(primary, 500);
+$-copy-text-color: sage-color(grey, 800);
+$-copy-text-color-hover: sage-color(grey, 900);
+
+
+.sage-copy-text {
+  @include sage-copy-text;
+
+  display: inline-block;
+  max-width: 100%;
+
+  .sage-copy-btn & {
+    transition-property: border;
+    transition: map-get($sage-transitions, input);
+  }
+
+  .sage-copy-btn:hover & {
+    color: $-copy-text-color-hover;
+    border-color: currentColor;
+  }
+
+  .sage-copy-btn--fill-container & {
+    width: 100%;
+  }
+}
+
+.sage-copy-text-card {
+  @include sage-grid-stack;
+  @include sage-copy-text;
+
+  width: 100%;
+  padding: sage-spacing(card);
+}
+
+.sage-copy-text-card--truncate-contents {
+  > * {
+    width: 100%;
+
+    @include truncate();
+  }
+}
+
+.sage-copy-btn {
+  @include sage-button-style-reset();
+  @include sage-focus-outline();
+  @include sage-focus-outline--update-color($-copy-text-border-focus-color);
+
+  display: inline-flex;
+  flex-flow: row-reverse;
+  align-items: center;
+  max-width: 100%;
+  padding-right: sage-spacing(2xs);
+  border-radius: sage-border(radius);
+
+  &::before {
+    @include sage-icon-base(copy);
+
+    margin-left: sage-spacing(sm);
+    color: $-copy-text-color;
+  }
+
+  &::after {
+    transform: translate3d(-50%, -50%, 0);
+  }
+
+  &:hover::before {
+    color: $-copy-text-color-hover;
+  }
+}
+
+.sage-copy-btn--fill-container {
+  width: 100%;
+  text-align: left;
+}
+
+.sage-copy-text--semibold,
+.sage-copy-text-card--semibold {
+  @extend %t-sage-body-semi;
+}

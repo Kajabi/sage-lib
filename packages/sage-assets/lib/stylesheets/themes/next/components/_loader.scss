@@ -1,0 +1,143 @@
+////
+/// Loader
+///
+/// @group sage
+////
+
+
+$-loader-bar-bg-color: sage-color(grey, 400);
+$-loader-bar-height: rem(6px);
+$-loader-bar-speed: 1.2s;
+$-loader-bar-speed-delay: 0.5s;
+$-loader-bar-width: rem(300px);
+$-loader-spinner-size: rem(48px);
+$-loader-spinner-speed: 2s;
+$-loader-spinner-path-speed: 1.5s;
+
+.sage-loader {
+  position: relative;
+
+  &:not(.visually-hidden) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  // visibility of the loader is toggled by setting data attribute "data-loading" to "true".
+  &[data-loading*="true"]::before {
+    opacity: 1;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    &[data-loading*="true"]::before {
+      opacity: 0 !important; /* stylelint-disable-line declaration-no-important */
+    }
+  }
+}
+
+.sage-loader--bar {
+  overflow: hidden;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: $-loader-bar-width;
+  height: $-loader-bar-height;
+  border-radius: sage-border(radius);
+  background-color: $-loader-bar-bg-color;
+
+  &::before,
+  &::after {
+    content: "";
+    z-index: sage-z-index(default, 2);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: $-loader-bar-height;
+    border-radius: sage-border(radius);
+  }
+
+  &::before {
+    background-color: sage-color(primary, 500);
+    animation: loader-bar $-loader-bar-speed linear infinite;
+  }
+
+  &::after {
+    background-color: sage-color(primary, 500);
+    animation: loader-bar $-loader-bar-speed $-loader-bar-speed-delay linear infinite;
+  }
+}
+
+.sage-loader__spinner {
+  width: sage-spacing(xl);
+  height: sage-spacing(xl);
+  animation: rotate $-loader-spinner-speed linear infinite;
+}
+
+.sage-loader__spinner-path {
+  stroke-dasharray: 150,200;
+  stroke-dashoffset: -10;
+  stroke-linecap: round;
+  stroke: sage-color(primary, 500);
+  animation: dash $-loader-spinner-path-speed ease-in-out infinite;
+}
+
+.sage-loader__success {
+  width: sage-spacing(xl);
+  height: sage-spacing(xl);
+}
+
+.sage-loader__success-path {
+  stroke-dasharray: 150,200;
+  stroke-linecap: round;
+  stroke: sage-color(sage, 500);
+}
+
+.sage-loader__success-check {
+  transform: translate(76%, 84%);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+  stroke: sage-color(sage, 500);
+}
+
+@keyframes loader-bar {
+  0% {
+    width: 0;
+  }
+  25% {
+    left: 15%;
+    width: 30%;
+  }
+  50% {
+    left: 40%;
+    width: 70%;
+  }
+  100% {
+    left: 100%;
+    width: 15%;
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1,200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89,200;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 89,200;
+    stroke-dashoffset: -124;
+  }
+}

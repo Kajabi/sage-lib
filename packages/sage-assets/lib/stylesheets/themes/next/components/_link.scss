@@ -1,0 +1,103 @@
+////
+/// Link modifiers
+///
+/// @group sage
+////
+
+$-link-color: sage-color(primary, 500);
+$-link-color-hover: sage-color(primary, 700);
+$-link-subtext-color: sage-color(grey, 600);
+$-link-subtext-color-hover: sage-color(grey, 800);
+
+.sage-link {
+  @extend %t-sage-body-med;
+
+  display: inline-flex;
+  position: relative;
+  max-width: 100%;
+  min-width: 0; /* the is needed so that truncation work when the link doesn't have an explicit width set  */
+
+  &:hover {
+    color: $-link-color-hover;
+  }
+
+  &:focus {
+    color: $-link-color;
+  }
+
+  @include sage-focus-outline(
+    $outline-width: 4px,
+    $outline-offset-inline: 4px,
+    $outline-border-radius: sage-border(radius-medium),
+  );
+  @include sage-focus-outline--update-color(sage-color(primary, 300));
+}
+
+.sage-link--launch .t-sage--truncate,
+.sage-type a[target="_blank"]:not(.sage-link--no-launch):not([class*="icon-right-launch"]) .t-sage--truncate {
+  &::after {
+    margin-left: sage-spacing(2xs);
+    margin-right: sage-spacing(2xs);
+    @include sage-icon-base(launch, sm);
+  }
+}
+
+.sage-link--help,
+.sage-link--help-icon-only {
+  position: relative;
+  text-decoration: none;
+
+  &::before {
+    @include sage-icon-base(question-circle, lg);
+
+    color: sage-color(grey, 500);
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    outline: 0;
+
+    &::before {
+      color: sage-color(grey, 700);
+    }
+  }
+
+  .sage-page-heading__title & {
+    margin-left: sage-spacing(xs);
+  }
+}
+
+.sage-link--help {
+  display: inline-flex;
+  align-items: center;
+
+  &::before {
+    margin-right: sage-spacing(xs);
+  }
+}
+
+.sage-link--help-icon-only {
+  @include sage-focus-outline($outline-offset-inline: 4px, $outline-offset-block: 2px);
+  @include sage-focus-outline--update-color($-link-color);
+}
+
+.sage-link--subtext {
+  @include sage-focus-outline--update-color(currentColor);
+
+  display: inline-block;
+  position: relative;
+  padding: 0 sage-spacing(2xs);
+  color: $-link-subtext-color;
+  border-radius: sage-border(radius-small);
+
+  &:hover {
+    color: $-link-subtext-color-hover;
+    text-decoration: underline;
+  }
+
+  &:focus {
+    color: $-link-subtext-color-hover;
+    text-decoration: none;
+  }
+}

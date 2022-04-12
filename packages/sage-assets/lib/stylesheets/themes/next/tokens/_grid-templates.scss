@@ -1,0 +1,34 @@
+////
+/// Sage grid
+///
+/// @group sage
+////
+
+///
+/// Stores a full map of grid configurationsfrom Style Dictionary.
+/// See `style-dictionary/tokens/content/grid-template.json`.
+/// Result is a map of codes.
+///
+/// @see parse-morse-code
+///
+$sage-grid-templates: ();
+@each $-ltr, $-map in $sd-sage-content-grid-template {
+  $-code: map-get($-map, code);
+  $sage-grid-templates: map-merge(
+    $sage-grid-templates,
+    (
+      #{$-ltr}: parse-morse-code($-code)
+    )
+  );
+}
+
+///
+/// Sage grid templates token utility
+///
+/// @param {string} $key [md] The token to retrieve
+///
+/// @return {map} The value retrieved.
+///
+@function sage-grid-template($key) {
+  @return map-get($sage-grid-templates, $key);
+}

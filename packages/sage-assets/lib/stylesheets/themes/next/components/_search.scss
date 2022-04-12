@@ -1,0 +1,191 @@
+////
+/// Search
+///
+/// @group sage
+////
+
+$-search-icon: "::before";
+
+.sage-search {
+  display: flex;
+  flex-direction: column;
+}
+
+.sage-search__field-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-color: sage-color(white);
+
+  &#{$-search-icon} {
+    @include sage-icon-base(search);
+
+    z-index: 2;
+    margin-left: sage-spacing(xs);
+    margin-right: -1 * sage-spacing();
+    color: sage-color(charcoal, 400);
+    transition: map-get($sage-transitions, default);
+    transition-property: color;
+  }
+
+  .sage-search:not(.sage-search--contained) & {
+    border-bottom: 1px solid sage-color(grey, 300);
+
+    &:hover {
+      background-color: sage-color(grey, 50);
+    }
+  }
+
+  &:focus-within {
+    border: 1px solid sage-color(primary, 600);
+    box-shadow: 0 0 0 4px sage-color(primary, 300);
+  }
+
+  .sage-search--contained & {
+    position: relative;
+    z-index: sage-z-index(default);
+    border-radius: sage-border(radius);
+    box-shadow: map-get($sage-toolbar-button-borders, default);
+    border: 0;
+
+    &::after {
+      display: none;
+    }
+
+    &:hover {
+      z-index: sage-z-index(default, 1);
+      box-shadow: map-get($sage-toolbar-button-borders, hover);
+    }
+
+    &:focus-within {
+      z-index: sage-z-index(default, 2);
+      border-radius: sage-border(radius);
+      border: 1px solid sage-color(primary, 600);
+      box-shadow: 0 0 0 4px sage-color(primary, 300);
+    }
+
+    .sage-panel-controls__toolbar &:first-child:not(:only-child),
+    .sage-toolbar__group &:first-child:not(:only-child) {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    .sage-panel-controls__toolbar &:last-child:not(:only-child),
+    .sage-toolbar__group &:last-child:not(:only-child) {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+
+  .sage-dropdown__panel & {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+
+    &:focus-within {
+      box-shadow: inset map-get($sage-toolbar-button-borders, focus);
+    }
+  }
+
+  .sage-panel-controls__toolbar & {
+    flex: 1;
+  }
+
+  .sage-panel-controls__toolbar > &:not(:last-child) {
+    margin-right: sage-spacing(panel);
+  }
+}
+
+.sage-search__clear-button-text {
+  @include visually-hidden();
+}
+
+.sage-search__label {
+  @include sage-form-field-label;
+}
+
+.sage-search__input {
+  @include sage-form-field;
+
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  padding: rem(6px) sage-spacing(sm) rem(6px) sage-spacing(lg);
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+
+  @extend %t-sage-body;
+
+  @include placeholder {
+    color: sage-color(grey, 600);
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  .sage-panel-controls__toolbar & {
+    border-radius: sage-border(radius);
+  }
+
+  .sage-search--contained & {
+    border-radius: sage-border(radius);
+  }
+
+  .sage-search--contained &:focus,
+  .sage-search--contained &:focus:not(:placeholder-shown),
+  .sage-search--contained &:active,
+  .sage-search--contained &:active:not(:placeholder-shown) {
+    @include placeholder {
+      opacity: 0;
+    }
+
+    ~ .sage-search__label {
+      @include sage-form-field-floating-label();
+      color: sage-color(primary, 500);
+    }
+
+    /* stylelint-disable max-nesting-depth */
+    &:disabled,
+    &:disabled:placeholder-shown {
+      @include placeholder {
+        opacity: 1;
+      }
+    }
+    /* stylelint-enable max-nesting-depth */
+  }
+
+  .sage-search--has-text & {
+    &:focus:not(:disabled),
+    &:active:not(:disabled) {
+      /* stylelint-disable max-nesting-depth */
+      ~ .sage-search__label {
+        @include sage-form-field-floating-label();
+      }
+      /* stylelint-enable max-nesting-depth */
+    }
+  }
+
+  // remove default webkit search field styling
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration {
+    -webkit-appearance: none; /* stylelint-disable-line property-no-vendor-prefix */
+  }
+}
+
+.sage-search__reset-button {
+  visibility: hidden;
+  position: absolute;
+  right: 0;
+  z-index: sage-z-index(default, 1);
+
+  :not(.sage-search--contained) & {
+    margin-right: sage-spacing(xs);
+  }
+
+  .sage-search--has-text & {
+    visibility: visible;
+  }
+}

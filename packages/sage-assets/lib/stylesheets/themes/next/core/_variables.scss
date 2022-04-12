@@ -1,0 +1,118 @@
+////
+/// Global variables
+///
+/// @group sage
+////
+
+///
+/// Base Font CDN path
+///
+$sage-font-cdn-root: "https://sage.kajabi-cdn.com/fonts";
+
+///
+/// Active underline configuration
+///
+$sage-active-underline-configs: (
+  height: rem(3px),
+  color: sage-color(primary, 500),
+  radius: sage-border(radius),
+);
+
+///
+/// Assistant height shared by layout components
+///
+$sage-assistant-height: rem(56px);
+
+///
+/// Banner heights for page offsets
+///
+$sage-banner-heights: (
+  default: rem(48px),
+  ladera: rem(60px),
+);
+
+///
+/// Field configurations
+///
+$sage-field-configs: (
+  // Border treatments
+  border-radius: sage-border(radius),
+  border-width: rem(1px),
+  box-shadow-size: 0 0 0 rem(1px),
+  // Sizing
+  height: rem(40px),
+  padding: sage-spacing(sm),
+  padding-label: sage-spacing(2xs),
+  // Outer spacing
+  bottom-gap: sage-spacing(),
+);
+
+///
+/// Field coloring
+///
+$sage-field-colors: (
+  border: sage-color(grey, 300),
+  default: sage-color(grey, 700),
+  disabled: sage-color(grey, 400),
+  disabled-background: sage-color(grey, 100),
+  error: sage-color(red, 500),
+  label-background: sage-color(white),
+  success: sage-color(primary, 500),
+);
+
+// $sage-field
+
+///
+/// Radio button colors
+///
+$sage-radio-colors: (
+  checked: sage-color(primary, 600),
+  checked-disabled: sage-color(primary, 100),
+  checked-hover: sage-color(primary, 700),
+  checked-inner: sage-color(white),
+  default: sage-color(grey, 400),
+  disabled: sage-color(grey, 50),
+  error: sage-color(red, 500),
+  hover: sage-color(grey, 500),
+);
+
+///
+/// Radio button size
+///
+$sage-radio-size: rem(20px);
+
+///
+/// Tab colors shared by components such as tabs and choices
+///
+$sage-tab-colors: (
+  default: sage-color(grey, 500),
+  active: sage-color(grey, 900),
+  disabled: sage-color(grey, 500),
+);
+
+///
+/// Standard text colors
+///
+$sage-text-colors: (
+  body: sage-color(grey, 800),
+  heading: sage-color(grey, 900),
+);
+
+///
+/// Toolbar border styles
+///
+$sage-toolbar-button-borders: (
+  default: 0 0 0 1px sage-color(grey, 300),
+  focus: 0 0 0 2px sage-color(primary, 500),
+  hover: 0 0 0 1px sage-color(grey, 400),
+  active-hover: 0 0 0 2px sage-color(primary, 400),
+);
+
+///
+/// Transitions
+///
+$sage-transitions: (
+  default: 0.1s ease-in-out,
+  input: 0.2s ease-in-out
+);
+// TODO: Audit use of transition values

@@ -1,0 +1,123 @@
+////
+/// Sortable
+///
+/// @group sage
+////
+
+
+$-sortable-image-width: rem(82px);
+$-sortable-image-height: rem(48px);
+
+
+.sage-sortable {
+  padding-left: 0;
+}
+
+.sage-sortable__item {
+  display: grid;
+  grid-template-columns: min-content minmax(0, min-content) auto auto;
+  gap: sage-spacing(card);
+  align-items: center;
+  padding: sage-spacing(xs) sage-spacing(panel);
+  background: sage-color(white);
+  cursor: grab;
+
+  &::before {
+    @include sage-icon-base(handle);
+    padding: 0;
+    color: sage-color(grey, 500);
+  }
+
+  &:focus,
+  &:hover {
+    background-color: sage-color(grey, 100);
+
+    &::before {
+      color: sage-color(primary, 500);
+    }
+  }
+
+  &.sage-sortable__item--card {
+    padding: sage-spacing(xs) sage-spacing(card);
+    border-bottom: sage-border();
+    border-left: sage-border();
+    border-right: sage-border();
+    transition: map-get($sage-transitions, default);
+    transition-property: border-color, box-shadow;
+
+    &:first-child {
+      border-top-left-radius: sage-border(radius);
+      border-top-right-radius: sage-border(radius);
+      border-top: sage-border();
+    }
+
+    &:last-child {
+      border-bottom-left-radius: sage-border(radius);
+      border-bottom-right-radius: sage-border(radius);
+    }
+  }
+
+  &.sage-sortable__item--custom {
+    display: flex;
+
+    @include target-safari {
+      /* stylelint-disable max-nesting-depth */
+      .sage-card__row {
+        margin-left: sage-spacing(sm);
+      }
+      /* stylelint-enable max-nesting-depth */
+    }
+  }
+
+  &.sage-sortable__item--active,
+  &:active {
+    cursor: grabbing;
+  }
+
+  &.sage-sortable__item--ghost {
+    background: sage-color(grey, 200);
+  }
+}
+
+.sage-sortable__item-image {
+  position: relative;
+  overflow: hidden;
+  height: $-sortable-image-height;
+  width: $-sortable-image-width;
+  background: sage-color(grey, 200);
+  border-radius: sage-border(radius);
+  border: sage-border();
+
+  img {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    width: 100%;
+  }
+}
+
+.sage-sortable__item-content {
+  z-index: sage-z-index();
+  overflow: hidden;
+  max-width: 100%;
+  margin-right: auto;
+}
+
+.sage-sortable__item-title {
+  @extend %t-sage-body-small;
+  @include truncate();
+
+  .sage-sortable__item--card & {
+    @extend %t-sage-body;
+  }
+}
+
+.sage-sortable__item-subtitle {
+  @extend %t-sage-body-xsmall;
+  color: sage-color(grey, 500);
+}
+
+.sage-sortable__item-actions {
+  grid-column-start: 4;
+  justify-self: end;
+}

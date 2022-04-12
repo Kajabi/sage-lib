@@ -1,0 +1,198 @@
+////
+/// Card
+///
+/// @group sage
+////
+
+
+.sage-card {
+  @include sage-card();
+
+  position: relative;
+  width: 100%;
+}
+
+.sage-card--compact {
+  gap: sage-spacing(sm);
+  padding: sage-spacing(sm);
+
+  .sage-card__divider--full-bleed,
+  .sage-card__list {
+    margin: 0 -#{sage-spacing(sm)};
+  }
+}
+
+.sage-card-grid {
+  @include sage-grid-card;
+}
+
+.sage-card--clear-padding-top,
+.sage-card--clear-padding-both {
+  padding-top: 0;
+}
+
+.sage-card--clear-padding-bottom,
+.sage-card--clear-padding-both {
+  padding-bottom: 0;
+}
+
+.sage-card--border-dashed {
+  border-color: sage-color(white);
+  @include sage-dashed-border(
+    $border-radius: sage-border(radius),
+    $color: sage-color(grey, 300),
+  );
+}
+
+.sage-card__footer {
+  @include sage-grid-card-row();
+
+  &:not(.sage-card__footer--align-spread) {
+    justify-content: end;
+    justify-content: flex-end;
+  }
+}
+
+.sage-card__divider {
+  position: relative;
+  height: rem(16px);
+  margin: 0;
+  line-height: sage-font-size(body-xs);
+  text-align: center;
+  border: 0;
+  outline: 0;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+    background: sage-color(grey, 300);
+  }
+  &::after {
+    content: attr(data-divider-label);
+    display: inline-block;
+    position: relative;
+    padding: 0 sage-spacing(sm);
+    color: sage-color(grey, 500);
+    font-size: sage-font-size(body-xs);
+    background-color: sage-color(white);
+  }
+}
+
+.sage-card__divider--full-bleed {
+  padding: 0;
+  margin: 0 -#{sage-spacing(card)};
+}
+
+.sage-card__figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 100%;
+  border-radius: sage-border(radius);
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.sage-card__figure--bleed-bottom {
+  width: calc(100% + #{2 * sage-spacing(sm)});
+  margin: 0 (-1 * sage-spacing(sm)) (-1 * sage-spacing(sm));
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.sage-card__figure--bleed-sides {
+  width: calc(100% + #{2 * sage-spacing(sm)});
+  margin: 0 (-1 * sage-spacing(sm));
+  border-radius: 0;
+}
+
+.sage-card__figure--bleed-top {
+  width: calc(100% + #{2 * sage-spacing(sm)});
+  margin: (-1 * sage-spacing(sm)) (-1 * sage-spacing(sm)) 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.sage-card__figure--wistia {
+  display: block;
+}
+
+.sage-card__header {
+  @include sage-grid-card-row();
+}
+
+.sage-card__list {
+  padding: 0;
+  margin: 0 -#{sage-spacing()};
+  list-style: none;
+}
+
+.sage-card__list-item {
+  @include sage-grid-card-row();
+
+  margin-bottom: rem(-1px);
+  padding: sage-spacing(xs) sage-spacing();
+  border-top: sage-border(default);
+  border-bottom: sage-border(default);
+
+  .sage-card__list--block-space-sm & {
+    padding-top: sage-spacing(sm);
+    padding-bottom: sage-spacing(sm);
+  }
+
+  .sage-card__list:first-child &:first-child {
+    border-top: transparent;
+  }
+
+  .sage-card__list:last-child &:last-child {
+    border-bottom: transparent;
+  }
+}
+
+.sage-card__row {
+  @include sage-grid-card-row();
+
+  .sage-sortable__item--custom & {
+    width: 100%;
+  }
+}
+
+@each $-key, $-value in $sage-spacings {
+  .sage-card__row--gap-#{$-key},
+  .sage-card__list-item--gap-#{$-key} {
+    gap: sage-spacing($-key);
+  }
+}
+
+.sage-card__row--vertical-align-start {
+  align-items: start;
+}
+
+.sage-card__stack {
+  padding: 0;
+  list-style: none;
+
+  @include sage-grid-stack();
+}
+
+.sage-card__title {
+  @extend %t-sage-heading-6;
+}
+
+.sage-card__header,
+.sage-card__block,
+.sage-card__stack,
+.sage-card__list,
+.sage-card__row,
+.sage-card__figure {
+  min-width: 0;
+}
