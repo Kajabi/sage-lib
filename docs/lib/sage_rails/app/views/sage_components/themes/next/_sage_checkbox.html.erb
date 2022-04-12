@@ -1,0 +1,58 @@
+<% if component.standalone %>
+  <input
+    id="<%= component.id %>"
+    type="checkbox"
+    class="
+      sage-checkbox
+      sage-checkbox--standalone
+      <%= "sage-checkbox--partial-selection" if component.partial_selection %>
+      <%= component.has_error ? "sage-checkbox--error" : "" %>
+      <%= component.generated_css_classes %>
+    "
+    <% component.attributes.each do |key, value| %>
+      <%= "#{key}=\"#{value}\"".html_safe %>
+    <% end if component.attributes&.is_a?(Hash) %>
+    <%= component.name ? "name=\"#{component.name}\"".html_safe : "" %>
+    <%= component.value ? "value=\"#{component.value}\"".html_safe : "" %>
+    <%= "checked" if component.checked %>
+    <%= "disabled" if component.disabled %>
+    <%= "required" if component.required %>
+    aria-label="<%= component.label_text %>"
+    <%= component.generated_html_attributes.html_safe %>
+  >
+<% else %>
+  <div class="
+      sage-checkbox
+      <%= "sage-checkbox--custom" if content_for :sage_checkbox_custom_content %>
+      <%= "sage-checkbox--partial-selection" if component.partial_selection %>
+      <%= component.has_error ? "sage-checkbox--error" : "" %>
+      <%= component.generated_css_classes %>
+    "
+    <%= component.generated_html_attributes.html_safe %>
+  >
+    <input
+      id="<%= component.id %>"
+      type="checkbox"
+      class="sage-checkbox__input"
+      <% component.attributes.each do |key, value| %>
+        <%= "#{key}=\"#{value}\"".html_safe %>
+      <% end if component.attributes&.is_a?(Hash) %>
+      <%= component.name ? "name=\"#{component.name}\"".html_safe : "" %>
+      <%= component.value ? "value=\"#{component.value}\"".html_safe : "" %>
+      <%= "checked" if component.checked %>
+      <%= "disabled" if component.disabled %>
+      <%= "required" if component.required %>
+    >
+    <label for="<%= component.id %>" class="sage-checkbox__label">
+      <%= component.label_text %>
+    </label>
+    <% if component.message.present? %>
+      <div class="sage-checkbox__message"><%= component.message %></div>
+    <% end %>
+    <% if content_for? :sage_checkbox_custom_content %>
+      <div class="sage-checkbox__custom-content">
+        <%= content_for :sage_checkbox_custom_content %>
+      </div>
+    <% end %>
+  </div>
+<% end %>

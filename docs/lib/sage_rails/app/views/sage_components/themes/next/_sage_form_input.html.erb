@@ -1,0 +1,52 @@
+<div
+  class="sage-input
+    <%= "sage-form-field--error" if component.has_error %>
+    <%= "sage-input--affixed" if component.prefix.present? or component.suffix.present? %>
+    <%= "sage-form-field--showplaceholder" if component.has_placeholder %>
+    <%= "sage-input--has-popover" if content_for? :sage_form_input_popover %>
+    <%= "sage-input--has-icon" if component.icon.present? %>
+    <%= component.generated_css_classes %>"
+  <% if component.prefix.present? %>
+    data-js-input-prefix="<%= component.prefix %>"
+  <% end %>
+  <% if component.suffix.present? %>
+    data-js-input-suffix="<%= component.suffix %>"
+  <% end %>
+  <%= component.generated_html_attributes.html_safe -%>
+>
+  <label for="<%= component.id %>" class="sage-input__label <%= "visually-hidden" if component.hide_label %>">
+    <%= component.label_text %>
+  </label>
+  <div class="sage-input__field-wrapper">
+    <input
+      type="<%= component.input_type %>"
+      id="<%= component.id %>"
+      class="sage-input__field"
+      name="<%= component.name.present? ? component.name : component.id %>"
+      placeholder="<%= component.placeholder -%>"
+      value="<%= component.value -%>"
+      <%= "required" if component.required %>
+      <%= "inputmode=#{component.input_mode}" if component.input_mode.present? -%>
+      <%= "autocomplete=#{component.autocomplete}" if component.autocomplete.present? -%>
+      <%= "pattern=#{component.pattern}" if component.pattern.present? -%>
+      <%= "min=#{component.min}" if component.min.present? -%>
+      <%= "max=#{component.max}" if component.max.present? -%>
+      <%= "minlength=#{component.minlength}" if component.minlength.present? -%>
+      <%= "maxlength=#{component.maxlength}" if component.maxlength.present? -%>
+      <%= "step=#{component.step}" if component.step.present? -%>
+      <%= "readonly" if component.readonly -%>
+      <%= "disabled" if component.disabled %>
+    >
+    <% if component.icon.present? %>
+      <div class="sage-input__icon">
+        <%= sage_component SageIcon, { icon: component.icon } %>
+      </div>
+    <% end %>
+    <% if content_for? :sage_form_input_popover %>
+      <%= content_for :sage_form_input_popover %>
+    <% end %>
+  </div>
+  <% if component.message_text.present? %>
+    <div class="sage-input__message"><%= component.message_text %></div>
+  <% end %>
+</div>

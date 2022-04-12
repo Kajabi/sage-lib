@@ -1,0 +1,46 @@
+<% if component.standalone %>
+  <input
+    type="<%= component.type %>"
+    id="<%= component.id %>"
+    class="
+      sage-switch
+      sage-switch--standalone
+      <%= component.has_error ? "sage-switch--error" : "" %>
+      <%= component.generated_css_classes %>
+    "
+    name="<%= component.name %>"
+    value="<%= component.value.present?  ? component.value : component.id %>"
+    <%= "checked" if component.checked %>
+    <%= "disabled" if component.disabled %>
+    <%= "required" if component.required %>
+    <%= component.generated_html_attributes.html_safe %>
+  />
+<% else %>
+<%
+tag = component.in_list ? 'li' : 'div'
+%>
+  <<%= tag %> class="
+      sage-switch
+      <%= component.has_border ? "sage-switch--has-border" : "" %>
+      <%= component.toggle_position ? "sage-switch--toggle-#{component.toggle_position}" : "" %>
+      <%= component.has_error ? "sage-switch--error" : "" %>
+      <%= component.generated_css_classes %>
+    "
+    <%= component.generated_html_attributes.html_safe %>
+  >
+    <input
+      type="<%= component.type %>"
+      id="<%= component.id %>"
+      class="sage-switch__input"
+      name="<%= component.name %>"
+      value="<%= component.value.present?  ? component.value : component.id %>"
+      <%= "checked" if component.checked %>
+      <%= "disabled" if component.disabled %>
+      <%= "required" if component.required %>
+    >
+    <label for="<%= component.id %>" class="sage-switch__label <%= "sage-switch__label--hide-text" if component.hide_text %>"><%= component.label_text %></label>
+    <% if component.message.present? %>
+      <div class="sage-switch__message"><%= component.message %></div>
+    <% end %>
+  </<%= tag %>>
+<% end %>

@@ -36,9 +36,9 @@ module SageTokens
       hash.each do |index, values|
         case color
         when :BLACK
-          # skip black values
+          sliders.push(values[:CODE])
         when :WHITE
-          # skip white values
+          sliders.push(values[:CODE])
         else
           sliders.push(values[:CODE])
         end
@@ -108,8 +108,6 @@ module SageTokens
       usage: "For widest possible panels and containing layout patterns.",
     }
   ]
-
-  GRID_GAP_OPTIONS = [:xs, :sm, :md, :lg, "xs", "sm", "md", "lg"]
 
   GRID_TEMPLATES = SageTokens.grid_templates()
 

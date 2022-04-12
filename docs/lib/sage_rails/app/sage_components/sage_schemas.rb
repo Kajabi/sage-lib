@@ -12,8 +12,6 @@ module SageSchemas
 
   CONTAINER_SIZE = [:optional, Set.new(SageTokens::CONTAINER_SIZES)]
 
-  GRID_GAP_OPTION = Set.new(SageTokens::GRID_GAP_OPTIONS)
-
   GRID_TEMPLATE = Set.new(SageTokens::GRID_TEMPLATES)
 
   HERO_SIZE = Set.new(SageTokens::HERO_SIZES)
@@ -46,12 +44,13 @@ module SageSchemas
     disabled: [:optional, NilClass, TrueClass],
     full_width: [:optional, NilClass, TrueClass],
     icon: [:optional, NilClass, { name: String, style: Set.new(["left", "right", "only"]) }],
-    raised: [:optional, NilClass, TrueClass],
-    small: [:optional, NilClass, TrueClass],
     spinner_on_submit: [:optional, NilClass, String],
     style: [:optional, NilClass, Set.new(["primary", "secondary", "danger"])],
     subtle: [:optional, NilClass, TrueClass],
     value: [:optional, String],
+    # Deprecations
+    raised: [:optional, NilClass, TrueClass], # --> nil
+    small: [:optional, NilClass, TrueClass], # --> nil
   }
 
   CHOICE = {
