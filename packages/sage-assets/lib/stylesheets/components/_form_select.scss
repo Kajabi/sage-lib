@@ -84,8 +84,8 @@ $-select-arrow-position-inverse-with-message: calc(100% - #{$-select-height + $-
   }
 
   &:hover:not(:disabled) {
-    border-color: $-select-color-border-hover;
     color: $-select-color-default;
+    border-color: $-select-color-border-hover;
 
     .sage-form-field--error & {
       border-color: $-select-color-error;
