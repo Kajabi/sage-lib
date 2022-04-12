@@ -11,6 +11,7 @@ export const TableRow = ({
   className,
   cells,
   disableSelect,
+  hideSelect,
   id,
   onSelect,
   schema,
@@ -77,16 +78,18 @@ export const TableRow = ({
     <tr className={classNames} data-table-row-id={id}>
       {selectable && (
         <td className="sage-table-cell sage-table-cell--checkbox">
-          <Checkbox
-            checked={selfSelected}
-            disabled={disableSelect}
-            id={`sage-table__row-selector-${id}`}
-            label="Select row"
-            name="sage-table-selections"
-            onChange={onChangeSelector}
-            standalone={true}
-            value={id.toString()}
-          />
+          {!hideSelect && (
+            <Checkbox
+              checked={selfSelected}
+              disabled={disableSelect}
+              id={`sage-table__row-selector-${id}`}
+              label="Select row"
+              name="sage-table-selections"
+              onChange={onChangeSelector}
+              standalone={true}
+              value={id.toString()}
+            />
+          )}
         </td>
       )}
       {selfCells.map((configs) => {
@@ -110,6 +113,7 @@ TableRow.defaultProps = {
   className: null,
   cells: [],
   disableSelect: false,
+  hideSelect: false,
   onSelect: (ev) => ev,
   selectable: false,
   selected: false,
@@ -120,6 +124,7 @@ TableRow.propTypes = {
   className: PropTypes.string,
   cells: PropTypes.arrayOf(PropTypes.shape(cellPropTypes)),
   disableSelect: PropTypes.bool,
+  hideSelect: PropTypes.bool,
   id: PropTypes.oneOfType([
     PropTypes.number,
     PropTypes.string,

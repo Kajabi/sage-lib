@@ -19,6 +19,7 @@ export const dataCollection = [
     email: 'rowan@example.com',
     phone: '555-111-1101',
     disableSelect: true,
+    hideSelect: true,
   },
   {
     id: 3,
