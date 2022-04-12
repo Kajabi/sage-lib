@@ -1,6 +1,7 @@
 <%= sage_component SageAssistant, { logo: { path: "sage.svg" }} do %>
   <%= render "application/nav" %>
   <% sage_component_section :assistant_actions do %>
+    <p class="<%= SageClassnames::TYPE_COLORS::WHITE %>"><%= SageComponent::SAGE_THEME %></p>
     <%= sage_component SageButton, {
       value: "Search",
       attributes: {
