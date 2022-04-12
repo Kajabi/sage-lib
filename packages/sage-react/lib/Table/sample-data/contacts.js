@@ -18,6 +18,7 @@ export const dataCollection = [
     first: 'Rowan',
     email: 'rowan@example.com',
     phone: '555-111-1101',
+    disableSelect: true,
   },
   {
     id: 3,

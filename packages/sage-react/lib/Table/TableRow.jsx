@@ -10,6 +10,7 @@ import { Checkbox } from '../Toggle';
 export const TableRow = ({
   className,
   cells,
+  disableSelect,
   id,
   onSelect,
   schema,
@@ -78,6 +79,7 @@ export const TableRow = ({
         <td className="sage-table-cell sage-table-cell--checkbox">
           <Checkbox
             checked={selfSelected}
+            disabled={disableSelect}
             id={`sage-table__row-selector-${id}`}
             label="Select row"
             name="sage-table-selections"
@@ -107,6 +109,7 @@ TableRow.parseRowData = parseRowData;
 TableRow.defaultProps = {
   className: null,
   cells: [],
+  disableSelect: false,
   onSelect: (ev) => ev,
   selectable: false,
   selected: false,
@@ -116,6 +119,7 @@ TableRow.defaultProps = {
 TableRow.propTypes = {
   className: PropTypes.string,
   cells: PropTypes.arrayOf(PropTypes.shape(cellPropTypes)),
+  disableSelect: PropTypes.bool,
   id: PropTypes.oneOfType([
     PropTypes.number,
     PropTypes.string,
