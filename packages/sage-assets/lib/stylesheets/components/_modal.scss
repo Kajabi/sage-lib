@@ -67,19 +67,6 @@ $-modal-fullscreen-top-spacing: rem(104px);
 
 .sage-modal--scrollable {
   overflow-y: initial;
-
-  .sage-modal__container,
-  .sage-modal__container > .simple_form {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    max-height: 85vh;
-  }
-
-  .sage-modal__container .sage-modal__content,
-  .sage-modal__container > .simple_form {
-    overflow: auto;
-    padding: sage-spacing(xs) sage-spacing(3xs);
-  }
 }
 
 .sage-modal__container {
@@ -153,6 +140,18 @@ $-modal-fullscreen-top-spacing: rem(104px);
     border-radius: 0;
     opacity: 1;
   }
+
+  .sage-modal--scrollable &,
+  .sage-modal--scrollable & > .simple_form {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    max-height: 85vh;
+  }
+  
+  .sage-modal--scrollable & > .simple_form {
+    @include overflow-scroll(y);
+    padding: sage-spacing(xs) sage-spacing(3xs);
+  }
 }
 
 .sage-modal__header {
@@ -221,6 +220,11 @@ $-modal-fullscreen-top-spacing: rem(104px);
 
   .sage-modal--fullscreen & {
     margin-top: $-modal-fullscreen-top-spacing;
+  }
+
+  .sage-modal--scrollable & {
+    @include overflow-scroll(y);
+    padding: sage-spacing(xs) sage-spacing(3xs);
   }
 
   .sage-drawer & {
