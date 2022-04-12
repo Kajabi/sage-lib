@@ -50,7 +50,9 @@ end
 
     <% if content_for? :sage_empty_state_actions %>
       <div class="sage-empty-state__actions">
-        <%= content_for :sage_empty_state_actions %>
+        <%= sage_component SageButtonGroup, { gap: :sm } do %>
+          <%= content_for :sage_empty_state_actions %>
+        <% end %>
       </div>
     <% end %>
 

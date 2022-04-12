@@ -8,6 +8,7 @@ class SageEmptyState < SageComponent
     text: [:optional, String],
     title: [:optional, String],
     title_tag: [:optional, Set.new(["h1", "h2", "h3", "h4", "h5", "h5", "h6"])],
+    video: [:optional, Hash],
   })
   def sections
     %w(empty_state_actions empty_state_text empty_state_video)
