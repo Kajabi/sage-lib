@@ -4,7 +4,8 @@ import classnames from 'classnames';
 import { SageTokens } from '../configs';
 import { Icon } from '../Icon';
 import { Button } from '../Button';
-import { Label } from '../Label';
+import { Badge } from '../Badge';
+import { Dot } from '../Dot';
 import { LABEL_COLORS, LEGEND_COLORS, TYPE } from './configs'; // component configurations as needed
 
 export const StatBox = ({
@@ -38,16 +39,13 @@ export const StatBox = ({
     }
   );
   const renderLabelStatus = () => {
-    let icon = null;
     let color;
 
     switch (change.type) {
       case StatBox.TYPE.POSITIVE:
-        icon = Icon.ICONS.CARET_UP;
         color = StatBox.LABEL_COLORS.PUBLISHED;
         break;
       case StatBox.TYPE.NEGATIVE:
-        icon = Icon.ICONS.CARET_DOWN;
         color = StatBox.LABEL_COLORS.DANGER;
         break;
       default:
@@ -56,7 +54,13 @@ export const StatBox = ({
     }
 
     return (
-      <Label color={color} value={change.value} icon={icon} />
+      <Badge
+        color={color}
+        value={change.value}
+        dot={
+          <Dot />
+        }
+      />
     );
   };
 
