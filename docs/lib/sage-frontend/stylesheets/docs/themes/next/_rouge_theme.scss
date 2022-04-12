@@ -1,0 +1,323 @@
+// background
+$-color-1: sage-color(grey, 200);
+// Whitespace
+$-color-24: sage-color(charcoal, 200);
+// Name entity
+$-color-20: sage-color(charcoal, 400);
+// Operators, numbers
+$-color-6: sage-color(charcoal, 300);
+// Heading and prompt
+$-color-9: sage-color(charcoal, 400);
+// Comments of various sorts
+$-color-3: sage-color(charcoal, 300);
+// Subheading
+$-color-12: sage-color(red, 500);
+// Constant
+$-color-18: sage-color(red, 500);
+// Keyword type
+$-color-14: sage-color(red, 500);
+// Strings
+$-color-15: sage-color(red, 500);
+// Name exception
+$-color-21: sage-color(red, 400);
+// Error underlines
+$-color-4: sage-color(red);
+// Generic deleted?
+$-color-8: sage-color(red, 400);
+// Escape string
+$-color-25: sage-color(orange, 400);
+// Regex/interpolation
+$-color-26: sage-color(orange, 400);
+// Preproc comment
+$-color-7: sage-color(charcoal, 300);
+// Highlight?
+$-color-2: sage-color(yellow, 100);
+// Name label
+$-color-22: sage-color(yellow, 500);
+// Keywords and built ins, tag names
+$-color-5: sage-color(sage, 500);
+// Generic inserted?
+$-color-10: sage-color(primary, 400);
+// Output
+$-color-11: sage-color(primary, 400);
+// Name attribute
+$-color-16: sage-color(sage, 400);
+// Tracebake
+$-color-13: sage-color(primary, 400);
+// Class, function, namespace
+$-color-17: sage-color(sage, 400);
+// Name decorator and word operator
+$-color-19: sage-color(purple, 400);
+// Variables
+$-color-23: sage-color(primary, 500);
+
+
+.highlight {
+  background: $-color-1;
+
+  .hll {
+    background-color: $-color-2;
+  }
+  
+  /* Comment */
+  .c {
+    color: $-color-3;
+    font-style: italic;
+  }
+  /* Error */
+  .err {
+    border: 1px solid $-color-4;
+  }
+  /* Keyword */
+  .k {
+    color: $-color-5;
+    font-weight: bold;
+  }
+  /* Operator */
+  .o {
+    color: $-color-6;
+  }
+  /* Comment.Multiline */
+  .cm {
+    color: $-color-3;
+    font-style: italic;
+  }
+  /* Comment.Preproc */
+  .cp {
+    color: $-color-7;
+  }
+  /* Comment.Single */
+  .c1 {
+    color: $-color-3;
+    font-style: italic;
+  }
+  /* Comment.Special */
+  .cs {
+    color: $-color-3;
+    font-style: italic;
+  }
+  /* Generic.Deleted */
+  .gd {
+    color: $-color-8;
+  }
+  /* Generic.Emph */
+  .ge {
+    font-style: italic;
+  }
+  /* Generic.Error */
+  .gr {
+    color: $-color-4;
+  }
+  /* Generic.Heading */
+  .gh {
+    color: $-color-9;
+    font-weight: bold;
+  }
+  /* Generic.Inserted */
+  .gi {
+    color: $-color-10;
+  }
+  /* Generic.Output */
+  .go {
+    color: $-color-11;
+  }
+  /* Generic.Prompt */
+  .gp {
+    color: $-color-9;
+    font-weight: bold;
+  }
+  /* Generic.Strong */
+  .gs {
+    font-weight: bold;
+  }
+  /* Generic.Subheading */
+  .gu {
+    color: $-color-12;
+    font-weight: bold;
+  }
+  /* Generic.Traceback */
+  .gt {
+    color: $-color-13;
+  }
+  /* Keyword.Constant */
+  .kc {
+    color: $-color-5;
+    font-weight: bold;
+  }
+  /* Keyword.Declaration */
+  .kd {
+    color: $-color-5;
+    font-weight: bold;
+  }
+  /* Keyword.Namespace */
+  .kn {
+    color: $-color-5;
+    font-weight: bold;
+  }
+  /* Keyword.Pseudo */
+  .kp {
+    color: $-color-5;
+  }
+  /* Keyword.Reserved */
+  .kr {
+    color: $-color-5;
+    font-weight: bold;
+  }
+  /* Keyword.Type */
+  .kt {
+    color: $-color-14;
+  }
+  /* Literal.Number */
+  .m {
+    color: $-color-6;
+  }
+  /* Literal.String */
+  .s {
+    color: $-color-15;
+  }
+  /* Name.Attribute */
+  .na {
+    color: $-color-16;
+  }
+  /* Name.Builtin */
+  .nb {
+    color: $-color-5;
+  }
+  /* Name.Class */
+  .nc {
+    color: $-color-17;
+    font-weight: bold;
+  }
+  /* Name.Constant */
+  .no {
+    color: $-color-18;
+  }
+  /* Name.Decorator */
+  .nd {
+    color: $-color-19;
+  }
+  /* Name.Entity */
+  .ni {
+    color: $-color-20;
+    font-weight: bold;
+  }
+  /* Name.Exception */
+  .ne {
+    color: $-color-21;
+    font-weight: bold;
+  }
+  /* Name.Function */
+  .nf {
+    color: $-color-17;
+  }
+  /* Name.Label */
+  .nl {
+    color: $-color-22;
+  }
+  /* Name.Namespace */
+  .nn {
+    color: $-color-17;
+    font-weight: bold;
+  }
+  /* Name.Tag */
+  .nt {
+    color: $-color-5;
+    font-weight: bold;
+  }
+  /* Name.Variable */
+  .nv {
+    color: $-color-23;
+  }
+  /* Operator.Word */
+  .ow {
+    color: $-color-19;
+    font-weight: bold;
+  }
+  /* Text.Whitespace */
+  .w {
+    color: $-color-24;
+  }
+  /* Literal.Number.Float */
+  .mf {
+    color: $-color-6;
+  }
+  /* Literal.Number.Hex */
+  .mh {
+    color: $-color-6;
+  }
+  /* Literal.Number.Integer */
+  .mi {
+    color: $-color-6;
+  }
+  /* Literal.Number.Oct */
+  .mo {
+    color: $-color-6;
+  }
+  /* Literal.String.Backtick */
+  .sb {
+    color: $-color-15;
+  }
+  /* Literal.String.Char */
+  .sc {
+    color: $-color-15;
+  }
+  /* Literal.String.Doc */
+  .sd {
+    color: $-color-15;
+    font-style: italic;
+  }
+  /* Literal.String.Double */
+  .s2 {
+    color: $-color-15;
+  }
+  /* Literal.String.Escape */
+  .se {
+    color: $-color-25;
+    font-weight: bold;
+  }
+  /* Literal.String.Heredoc */
+  .sh {
+    color: $-color-15;
+  }
+  /* Literal.String.Interpol */
+  .si {
+    color: $-color-26;
+    font-weight: bold;
+  }
+  /* Literal.String.Other */
+  .sx {
+    color: $-color-5;
+  }
+  /* Literal.String.Regex */
+  .sr {
+    color: $-color-26;
+  }
+  /* Literal.String.Single */
+  .s1 {
+    color: $-color-15;
+  }
+  /* Literal.String.Symbol */
+  .ss {
+    color: $-color-23;
+  }
+  /* Name.Builtin.Pseudo */
+  .bp {
+    color: $-color-5;
+  }
+  /* Name.Variable.Class */
+  .vc {
+    color: $-color-23;
+  }
+  /* Name.Variable.Global */
+  .vg {
+    color: $-color-23;
+  }
+  /* Name.Variable.Instance */
+  .vi {
+    color: $-color-23;
+  }
+  /* Literal.Number.Integer.Long */
+  .il {
+    color: $-color-6;
+  }
+}

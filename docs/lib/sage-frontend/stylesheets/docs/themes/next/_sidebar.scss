@@ -1,0 +1,25 @@
+/* ==================================================
+  ** _sidebar.scss
+
+  For Sage documentation use
+================================================== */
+
+.sage-sidebar {
+  .example__preview & {
+    z-index: sage-z-index();
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    height: auto;
+    box-shadow: none;
+    transition: none;
+    opacity: 1;
+  }
+}
+
+// Side Navigation Footer Top Border
+// Visual division between the scrolling content and the footer
+.sage-sidebar__footer {
+  box-shadow: inset 0 1px 0 sage-color(gray);
+}
