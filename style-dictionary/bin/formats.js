@@ -21,7 +21,7 @@ module.exports = {
         typeFormat: 'constant'
       }
     );
-    return templates.railsTokens({ categories });
+    return templates.railsTokens({ categories, theme: platform.files[0].options.sageTheme || 'Legacy' });
   },
   'sage/jsx/tokens': ({ dictionary, platform }) => {
     const categories = getCategoryCollection(

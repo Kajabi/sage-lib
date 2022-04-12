@@ -12,6 +12,8 @@ module SageSchemas
 
   CONTAINER_SIZE = [:optional, Set.new(SageTokens::CONTAINER_SIZES)]
 
+  GRID_GAP_OPTION = Set.new(SageTokens::GRID_GAP_OPTIONS)
+
   GRID_TEMPLATE = Set.new(SageTokens::GRID_TEMPLATES)
 
   HERO_SIZE = Set.new(SageTokens::HERO_SIZES)
