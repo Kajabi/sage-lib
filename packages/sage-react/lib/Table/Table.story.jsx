@@ -68,6 +68,14 @@ Default.decorators = [
             If this table has paged data you should also
             set <code>hasDataBeyondCurrentRows: true</code>.
           </li>
+          <li>
+            If you want to disable the checkbox on an individual row,
+            add <code>disableSelect: true</code> to that row's data.
+          </li>
+          <li>
+            If you want to hide the checkbox on an individual row,
+            add <code>hideSelect: true</code> to that row's data.
+          </li>
         </ul>
       </div>
     </>
