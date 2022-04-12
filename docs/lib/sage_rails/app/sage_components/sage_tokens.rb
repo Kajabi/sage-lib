@@ -109,6 +109,8 @@ module SageTokens
     }
   ]
 
+  GRID_GAP_OPTIONS = [:xs, :sm, :md, :lg, "xs", "sm", "md", "lg"]
+
   GRID_TEMPLATES = SageTokens.grid_templates()
 
   HERO_SIZES = ["small", "large"]
