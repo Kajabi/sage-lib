@@ -368,15 +368,15 @@
   border: rem(1px) solid sage-color(grey, 400);
   border-radius: sage-border(radius-medium);
   background: transparent;
-  transition: border 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color .2s ease-in-out;
+  transition: border 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
 
   @include placeholder {
     color: sage-color(grey, 600);
   }
 
   &:hover:not(:disabled) {
-    border-color: sage-color(grey, 500);
     color: sage-color(grey, 800);
+    border-color: sage-color(grey, 500);
 
     .sage-form-field--error & {
       border-color: sage-color(red, 600);
