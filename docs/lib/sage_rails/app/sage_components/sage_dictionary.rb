@@ -7,6 +7,9 @@
 #
 
 module SageDictionary
+  # SAGE_THEME_SWITCH
+  THEME = SageDictionaryNext
+  # THEME = SageDictionaryLegacy
 
   # ----------
   #

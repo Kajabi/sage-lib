@@ -6,13 +6,13 @@ module SageTokens
 
   # Extract color names from dictionary core map
   def SageTokens.color
-    SageDictionary::SD_SAGE_COLOR_CORE.map { | k, v | k.to_s.downcase }
+    SageDictionary::THEME::SD_SAGE_COLOR_CORE.map { | k, v | k.to_s.downcase }
   end
 
   # Extract color palette hex values from base color map
   def SageTokens.color_palette
     palette = {}
-    SageDictionary::SD_SAGE_COLOR.each do |color, hash|
+    SageDictionary::THEME::SD_SAGE_COLOR.each do |color, hash|
       hash.each do |index, values|
         case color
         when :BLACK
@@ -32,7 +32,7 @@ module SageTokens
   # Extract color palette hex values from base color map
   def SageTokens.color_sliders
     sliders = SageTokens.color()
-    SageDictionary::SD_SAGE_COLOR.each do |color, hash|
+    SageDictionary::THEME::SD_SAGE_COLOR.each do |color, hash|
       hash.each do |index, values|
         case color
         when :BLACK
@@ -49,7 +49,7 @@ module SageTokens
 
   # Extract grid template symbols
   def SageTokens.grid_templates
-    SageDictionary::SD_SAGE_CONTENT_GRID_TEMPLATE.map { |k,v| v[:SYMBOL] }
+    SageDictionary::THEME::SD_SAGE_CONTENT_GRID_TEMPLATE.map { |k,v| v[:SYMBOL] }
   end
 
   #
