@@ -34,6 +34,7 @@ $-textarea-color-default-background: sage-color(white);
 
 .sage-textarea__field {
   @include sage-form-field;
+  @include sage-focus-ring;
 
   min-height: $-textarea-min-height;
   height: $-textarea-height;
