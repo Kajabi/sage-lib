@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.76.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.76.0...@kajabi/sage-assets@0.76.1) (2022-04-13)
+
+
+### Bug Fixes
+
+* **alert:** add spacing back in to SageAlert to avoid breaking changes ([a40bc25](https://github.com/Kajabi/sage-lib/commit/a40bc256cba0ac7915732c3542ddb797e34fff7e))
+
+
+
+
+
 # [0.76.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.75.1...@kajabi/sage-assets@0.76.0) (2022-04-13)
 
 
