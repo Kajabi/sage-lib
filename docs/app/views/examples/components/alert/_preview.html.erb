@@ -1,10 +1,11 @@
 <h3>Dismissable Alert</h3>
 <!-- Info -->
 <%= sage_component SageAlert, {
+  spacer: { bottom: "2xs" },
   color: "info",
   title: "Our privacy policy has changed",
   title_addon: "(as of November 11, 2021)",
-  desc: "Make sure you know how these changes affect you.",
+  desc: "Make sure you know how these changes affect you. Make sure you know how these changes affect you.",
   icon_name: "sage-icon-flag",
   dismissable: true,
   primary_action: {
@@ -29,9 +30,10 @@
 
 <!-- Success -->
 <%= sage_component SageAlert, {
+  spacer: { bottom: "2xs" },
   color: "published",
   title: "Account settings updated",
-  desc: "Make sure you know how these changes affect you.",
+  desc: "Make sure you know how these changes affect you. Make sure you know how these changes affect you.",
   icon_name: "sage-icon-check-circle",
   dismissable: true,
   primary_action: {
@@ -58,9 +60,10 @@
 
 <!-- Warning -->
 <%= sage_component SageAlert, {
+  spacer: { bottom: "2xs" },
   color: "warning",
   title: "Exceeded product amount limit",
-  desc: "Make sure you know how these changes affect you.",
+  desc: "Make sure you know how these changes affect you. Make sure you know how these changes affect you.",
   icon_name: "sage-icon-warning",
   dismissable: true,
 } do %>
@@ -73,9 +76,10 @@
 
 <!-- Danger -->
 <%= sage_component SageAlert, {
+  spacer: { bottom: "2xs" },
   color: "danger",
   title: "App outage tonight at 12am",
-  desc: "Make sure you know how these changes affect you.",
+  desc: "Make sure you know how these changes affect you. Make sure you know how these changes affect you.",
   icon_name: "sage-icon-danger",
   dismissable: true,
   primary_action: {
@@ -84,11 +88,13 @@
 } %>
 
 <h3>Non-Dismissable Alert (no close button)</h3>
+
 <!-- Info -->
 <%= sage_component SageAlert, {
+  spacer: { bottom: "2xs" },
   color: "info",
   title: "Our privacy policy has changed",
-  desc: "Make sure you know how these changes affect you.",
+  desc: "Make sure you know how these changes affect you. Make sure you know how these changes affect you.",
   icon_name: "sage-icon-info-circle",
   primary_action: {
     value: "Primary"
@@ -102,9 +108,10 @@
 
 <!-- Success -->
 <%= sage_component SageAlert, {
+  spacer: { bottom: "2xs" },
   color: "published",
   title: "Account settings updated",
-  desc: "Make sure you know how these changes affect you.",
+  desc: "Make sure you know how these changes affect you. Make sure you know how these changes affect you.",
   icon_name: "sage-icon-check-circle",
   primary_action: {
     value: "Primary"
@@ -118,9 +125,10 @@
 
 <!-- Warning -->
 <%= sage_component SageAlert, {
+  spacer: { bottom: "2xs" },
   color: "warning",
   title: "Exceeded product amount limit",
-  desc: "Make sure you know how these changes affect you.",
+  desc: "Make sure you know how these changes affect you. Make sure you know how these changes affect you.",
   icon_name: "sage-icon-warning",
   primary_action: {
     value: "Primary"
@@ -134,9 +142,10 @@
 
 <!-- Danger -->
 <%= sage_component SageAlert, {
+  spacer: { bottom: "2xs" },
   color: "danger",
   title: "App outage tonight at 12am",
-  desc: "Make sure you know how these changes affect you.",
+  desc: "Make sure you know how these changes affect you. Make sure you know how these changes affect you.",
   icon_name: "sage-icon-danger",
   primary_action: {
     value: "Primary"
@@ -149,34 +158,49 @@
 <% end %>
 
 <h3>Small Alerts</h3>
+
 <!-- Info -->
 <%= sage_component SageAlert, {
+  spacer: { bottom: :md },
   color: "info",
   desc: "Make sure you know how these changes affect you.",
   icon_name: "sage-icon-flag",
-  small: true
-} %>
+  small: true,
+  dismissable: true,
+} do %>
+  <% content_for :sage_alert_actions do %>
+    <%= link_to "Action", "#" %>
+  <% end %>
+<% end %>
 
 <!-- Success -->
 <%= sage_component SageAlert, {
+  spacer: { bottom: :md },
   color: "published",
   desc: "Make sure you know how these changes affect you.",
   icon_name: "sage-icon-check-circle",
-  small: true
+  small: true,
+  dismissable: true,
 } %>
 
 <!-- Warning -->
 <%= sage_component SageAlert, {
+  spacer: { bottom: :md },
   color: "warning",
   desc: "Make sure you know how these changes affect you.",
   icon_name: "sage-icon-warning",
-  small: true
-} %>
+  small: true,
+} do %>
+  <% content_for :sage_alert_actions do %>
+    <%= link_to "Action", "#" %>
+  <% end %>
+<% end %>
 
 <!-- Danger -->
 <%= sage_component SageAlert, {
+  spacer: { bottom: :md },
   color: "danger",
   desc: "Make sure you know how these changes affect you.",
   icon_name: "sage-icon-danger",
-  small: true
+  small: true,
 } %>

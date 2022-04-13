@@ -7,6 +7,7 @@ import { SageTokens } from '../configs';
 export const Input = ({
   className,
   hasError,
+  hasPlaceholder,
   icon,
   id,
   label,
@@ -28,6 +29,7 @@ export const Input = ({
     className,
     {
       'sage-form-field--error': hasError,
+      'sage-form-field--showplaceholder': hasPlaceholder,
       'sage-input--prefixed': prefix,
       'sage-input--suffixed': suffix,
       'sage-input--standalone': standalone,
@@ -121,6 +123,7 @@ export const Input = ({
 Input.defaultProps = {
   className: null,
   hasError: false,
+  hasPlaceholder: false,
   icon: null,
   label: null,
   message: null,
@@ -137,6 +140,7 @@ Input.propTypes = {
   icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),
   id: PropTypes.string.isRequired,
   hasError: PropTypes.bool,
+  hasPlaceholder: PropTypes.bool,
   label: PropTypes.string,
   message: PropTypes.string,
   onChange: PropTypes.func,
