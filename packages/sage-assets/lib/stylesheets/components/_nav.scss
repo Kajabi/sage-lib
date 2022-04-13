@@ -47,7 +47,7 @@ $-nav-subitem-border-width: rem(2px);
     $outline-offset-block: -4,
     $outline-border-radius: sage-border(radius-medium),
   );
-  @include sage-focus-outline--update-color(sage-color(grey, 400));
+  @include sage-focus-outline--update-color(sage-color(primary, 300));
 
   display: flex;
   align-items: center;
@@ -58,16 +58,13 @@ $-nav-subitem-border-width: rem(2px);
   transition: map-get($sage-transitions, default);
   transition-property: background, box-shadow;
 
-  &:active,
-  &:hover,
-  &:focus {
+  &:hover {
     background-color: $-nav-color-background-hover;
   }
 }
 
 .sage-nav__link--active::after {
   transform: translate3d(-50%, -50%, 0) scale(1);
-  border-color: sage-color(grey, 400);
   opacity: 1;
 }
 
