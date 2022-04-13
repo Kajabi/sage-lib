@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.89.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.88.1...@kajabi/sage-react@0.89.0) (2022-04-13)
+
+
+### Bug Fixes
+
+* **input:** add hasPlaceholder prop to react input ([51bef77](https://github.com/Kajabi/sage-lib/commit/51bef77e621b02ff02feda2a5f75b9fa7ca212be))
+
+
+### Features
+
+* **alert:** update alert small variant ([33e7fd4](https://github.com/Kajabi/sage-lib/commit/33e7fd4fcc948e27617c556f8284c888988f9617))
+
+
+
+
+
 ## [0.88.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.88.0...@kajabi/sage-react@0.88.1) (2022-04-11)
 
 

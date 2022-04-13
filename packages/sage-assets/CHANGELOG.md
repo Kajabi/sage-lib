@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.76.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.75.1...@kajabi/sage-assets@0.76.0) (2022-04-13)
+
+
+### Features
+
+* **alert:** fix border radius ([5cd64ff](https://github.com/Kajabi/sage-lib/commit/5cd64ffb15f7c9e25888093e0c4445fa0617b208))
+* **alert:** fix linting error on spaces ([b7e5ade](https://github.com/Kajabi/sage-lib/commit/b7e5ade4cf8482dab6aa184df2ee61927903c888))
+* **alert:** fix padding ([dd5b42a](https://github.com/Kajabi/sage-lib/commit/dd5b42a87e72ecb555db0098f57be130fda383b8))
+* **alert:** update alert small variant ([33e7fd4](https://github.com/Kajabi/sage-lib/commit/33e7fd4fcc948e27617c556f8284c888988f9617))
+* **alert:** update to use grid template areas ([22c41ce](https://github.com/Kajabi/sage-lib/commit/22c41cef86da4e0c8bae13d56bcb47958759ce2d))
+* **alert:** updates per review ([dcc9825](https://github.com/Kajabi/sage-lib/commit/dcc98256b5d385ce5041bb2ace4b77ef8ef2aa42))
+
+
+
+
+
 ## [0.75.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.75.0...@kajabi/sage-assets@0.75.1) (2022-04-11)
 
 
