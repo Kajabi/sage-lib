@@ -1,0 +1,10 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Sage/Panel/Panel Tiles Notes" />
+
+`Panel.Tiles` can be used when a set of elements should be laid out in a repeating, tiling fashion within a Panel.
+
+- Tiles can be set to tile up with 2, 3, or 4 in a row using `tilesInRow`
+- Tile items can be provided through the `tiles` prop or a set of elements can be passed directly as `children`.
+- When `tiles` are provided you can also have them automatically wrapped as `Panel.Tile` elements by passing `wrapTiles={true}`. You do not need this if the items have their own wrapping elements, such as if they are Cards.
+- Finally, items can be provided a consistent `tileClassName` for additional organization or consistent styling.
