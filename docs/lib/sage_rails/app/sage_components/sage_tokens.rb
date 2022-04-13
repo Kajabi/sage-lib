@@ -6,6 +6,7 @@ module SageTokens
 
   # Extract color names from dictionary core map
   def SageTokens.color
+    # TODO: THEME how to get current theme's dictionary to apply here?
     SageDictionary::THEME::SD_SAGE_COLOR_CORE.map { | k, v | k.to_s.downcase }
   end
 

@@ -19,6 +19,7 @@ module SageClassnames
   end
 
   module GRID_TEMPLATES
+    # TODO: THEME how to get current theme's dictionary to apply here?
     SageDictionary::THEME::SD_SAGE_CONTENT_GRID_TEMPLATE.map do |k, v|
       const_set("#{k}", v[:CLASSNAME])
     end
