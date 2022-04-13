@@ -1,3 +1,55 @@
+<%
+demo_configs_links = [
+  {
+    heading: "Primary",
+    label: "Primary",
+    style: "primary",
+  },{
+    heading: "Secondary",
+    label: "Secondary",
+    style: "secondary",
+  },
+  {
+    heading: "Neutral",
+    label: "Neutral",
+    style: "neutral",
+  },
+  {
+    heading: "Danger",
+    label: "Danger",
+    style: "danger",
+  }
+]
+%>
+
+<h3 class="t-sage-heading-6">Default links</h3>
+<%= sage_component SagePanelStack, {} do %>
+  <% demo_configs_links.each do | config | %>
+    <%= sage_component SageLink, {
+      url: "#",
+      label: config[:heading],
+      external: false,
+      launch: false,
+      help_link: false,
+      show_label: true,
+      style: config[:style],
+    } %>
+  <% end %>
+<% end %>
+<h3 class="t-sage-heading-6">Plain links</h3>
+<%= sage_component SagePanelStack, {} do %>
+  <%= sage_component SageLink, {
+    url: "#",
+    label: "Plain",
+    external: false,
+    launch: false,
+    help_link: false,
+    remove_underline: true,
+    show_label: true,
+    style: "secondary"
+  } %>
+<% end %>
+
 <h3 class="t-sage-heading-6">Standard link</h3>
 <%= sage_component SagePanelStack, { css_classes: "sage-type" } do %>
   <%= sage_component SageLink, {
