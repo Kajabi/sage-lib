@@ -1,25 +1,5 @@
 <%
-demo_configs_standard = [
-  {
-    heading: "Primary",
-    label: "Primary",
-    style: "primary",
-  },
-  {
-    heading: "Neutral",
-    label: "Neutral",
-    style: "neutral",
-  },
-  {
-    heading: "Danger",
-    label: "Danger",
-    style: "danger",
-  }
-]
-%>
-
-<%
-demo_configs_subtle = [
+demo_configs = [
   {
     heading: "Primary",
     label: "Primary",
@@ -40,7 +20,7 @@ demo_configs_subtle = [
 
 <h3>Standard Buttons</h3>
 
-<% demo_configs_standard.each do | config | %>
+<% demo_configs.each do | config | %>
   <%= sage_component SageCardBlock, {} do %>
     <%= sage_component SageBadge, {
       color: "draft",
@@ -116,7 +96,7 @@ demo_configs_subtle = [
 <% end %>
 
 <h3>Subtle Buttons</h3>
-<% demo_configs_subtle.each do | config | %>
+<% demo_configs.each do | config | %>
   <%= sage_component SageCardBlock, {} do %>
     <%= sage_component SageBadge, {
       color: "draft",
