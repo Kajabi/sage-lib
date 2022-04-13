@@ -6,14 +6,14 @@
 
 $-nav-color-text: sage-color(grey, 900);
 $-nav-color-focus: sage-color(grey, 400);
-$-nav-color-background: sage-color(grey, 200);
+$-nav-color-background: sage-color(grey, 50);
 $-nav-color-background-hover: sage-color(grey, 200);
 $-nav-icon-size: rem(20px);
 $-nav-subitem-border-width: rem(2px);
 
 .sage-nav__icon {
   display: inline-flex;
-  margin-right: rem(14px);
+  margin-right: rem(10px);
   color: sage-color(grey, 900);
 
   .sage-nav__link--active & {
@@ -25,6 +25,8 @@ $-nav-subitem-border-width: rem(2px);
   @extend %t-sage-body-semi;
 
   color: sage-color(grey, 900);
+  position: relative;
+  z-index: sage-z-index(default, 1);
 
   .sage-nav__link--sub & {
     font-size: sage-font-size(body-sm);
@@ -51,10 +53,11 @@ $-nav-subitem-border-width: rem(2px);
 
   display: flex;
   align-items: center;
-  padding: sage-spacing(xs) sage-spacing(sm);
+  padding: sage-spacing(xs) rem(10px);
   margin-bottom: sage-spacing(2xs);
   text-decoration: none;
   color: $-nav-color-text;
+  background-color: $-nav-color-background;
   border-radius: sage-border(radius-medium);
   transition: map-get($sage-transitions, default);
   transition-property: background, box-shadow;
@@ -62,16 +65,30 @@ $-nav-subitem-border-width: rem(2px);
   &:hover {
     background-color: $-nav-color-background-hover;
   }
+
+  &:focus {
+    &::after {
+      border-color: sage-color(primary, 300);
+    }
+  }
+
+  &::after {
+    z-index: sage-z-index(default, 0);
+  }
 }
 
 .sage-nav__link--active::after {
   transform: translate3d(-50%, -50%, 0) scale(1);
   opacity: 1;
+  border-color: transparent;
+
+  &:focus {
+    border-color: sage-color(primary, 300);
+  }
 }
 
 .sage-nav__link--sub {
   &.sage-nav__link--active {
-    @include sage-focus-outline--update-color(transparent);
 
     background: $-nav-color-background;
   }
