@@ -48,13 +48,10 @@ demo_configs_links = [
     show_label: true,
     style: "secondary"
   } %>
-<% end %>
-
-<h3 class="t-sage-heading-6">Standard link</h3>
-<%= sage_component SagePanelStack, { css_classes: "sage-type" } do %>
   <%= sage_component SageLink, {
     url: "#",
-    label: "Standard link",
+    label: "Link with icon on right",
+    icon: { name: "star", style: "left" },
     external: false,
     launch: false,
     help_link: false,
@@ -62,9 +59,10 @@ demo_configs_links = [
   } %>
   <%= sage_component SageLink, {
     url: "#",
-    label: "Internal link with launch",
+    label: "Link with icon on right",
+    icon: { name: "star", style: "right" },
     external: false,
-    launch: true,
+    launch: false,
     help_link: false,
     show_label: true
   } %>
@@ -80,18 +78,6 @@ demo_configs_links = [
     },
   } %>
   <%= sage_component SageLink, {
-    url: "#",
-    external: false,
-    help_link: false,
-    show_label: true,
-  } do %>
-    <%= tag.span "Internal link with #{tag.strong "custom content"}".html_safe, class: "custom-content" %>
-  <% end %>
-<% end %>
-
-<h3 class="t-sage-heading-6">External links</h3>
-<%= sage_component SagePanelStack, { css_classes: "sage-type" } do %>
-  <%= sage_component SageLink, {
     url: "https://example.com",
     label: "External link",
     external: true,
@@ -100,31 +86,11 @@ demo_configs_links = [
     show_label: true
   } %>
   <%= sage_component SageLink, {
-    url: "https://example.com",
-    label: "External link (launch icon cancelled)",
-    external: true,
-    launch: false,
-    help_link: false,
-    show_label: true
-  } %>
-  <%= sage_component SageLink, {
-    url: "https://example.com",
-    label: "External link w/ tooltip",
-    external: true,
-    launch: false,
+    url: "#",
+    external: false,
     help_link: false,
     show_label: true,
-    html_attributes: {
-      "data-js-tooltip": "Tooltip",
-      "data-js-tooltip-position": "top"
-    },
-  } %>
+  } do %>
+    <%= tag.span "Internal link with #{tag.strong "custom content"}".html_safe, class: "custom-content" %>
+  <% end %>
 <% end %>
-
-<h3 class="t-sage-heading-6">Subtext links</h3>
-<%= sage_component SageLink, {
-  css_classes: "sage-link--subtext",
-  label: "Link for placement in subtext",
-  truncate: true,
-  url: "//example.com"
-} %>
