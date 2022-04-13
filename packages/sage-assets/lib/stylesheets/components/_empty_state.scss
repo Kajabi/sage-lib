@@ -22,6 +22,7 @@ $-empty-state-graphic-page-height: rem(336px);
   }
 
   &:not(.sage-empty-state--compact):not(.sage-empty-state--page) {
+    gap: sage-spacing();
     padding: sage-spacing(2xl) sage-spacing();
   }
 }
