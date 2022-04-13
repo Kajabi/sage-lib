@@ -224,7 +224,13 @@ $-modal-fullscreen-top-spacing: rem(104px);
 
   .sage-modal--scrollable & {
     @include overflow-scroll(y);
+
+    margin-top: 0;
     padding: sage-spacing(xs) sage-spacing(3xs);
+
+    > :first-child {
+      margin-top: sage-spacing(xs);
+    }
   }
 
   .sage-drawer & {
