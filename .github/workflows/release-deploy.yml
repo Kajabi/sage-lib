@@ -43,6 +43,9 @@ jobs:
       - name: Unsafe Perm set
         run: npm config set unsafe-perm true
 
+      - name: Add safe directory
+        run: git config --global --add safe.directory /__w/sage-lib/sage-lib
+
       - name: Clone Sage-Lib Repo
         uses: actions/checkout@v2
         with:
