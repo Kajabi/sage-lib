@@ -86,6 +86,10 @@
         padding: var(--icon-block-padding) 0;
       }
     }
+
+    .sage-link--icon-right-#{$icon-name}::before {
+      margin-left: sage-spacing(2xs);
+    }
   }
 
   // --- Left Icon Buttons
@@ -101,6 +105,10 @@
         margin-right: sage-spacing(xs);
         padding: var(--icon-block-padding) 0;
       }
+    }
+
+    .sage-link--icon-left-#{$icon-name}::before {
+      margin-right: sage-spacing(2xs);
     }
   }
 

@@ -50,7 +50,7 @@ demo_configs_links = [
   } %>
   <%= sage_component SageLink, {
     url: "#",
-    label: "Link with icon on right",
+    label: "Link with icon on left",
     icon: { name: "star", style: "left" },
     external: false,
     launch: false,
@@ -65,6 +65,16 @@ demo_configs_links = [
     launch: false,
     help_link: false,
     show_label: true
+  } %>
+  <%= sage_component SageLink, {
+    url: "#",
+    label: "Small link",
+    external: false,
+    launch: false,
+    help_link: false,
+    show_label: true,
+    small: true,
+    style: "primary"
   } %>
   <%= sage_component SageLink, {
     url: "#",

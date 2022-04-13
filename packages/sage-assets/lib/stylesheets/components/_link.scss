@@ -60,15 +60,19 @@ $-link-base-styles: (
   .sage-link--#{$-style-name} {
     @each $-style-type-name, $-style-type-configs in $-styles {
       @if ($-style-type-name == hover) {
+        /* stylelint-disable max-nesting-depth */
         &:hover {
           color: map-get($-style-type-configs, color);
         }
+        /* stylelint-enable max-nesting-depth */
       }
       @else if ($-style-type-name == focus) {
+        /* stylelint-disable max-nesting-depth */
         &:focus,
         &:active {
           color: map-get($-style-type-configs, color);
         }
+        /* stylelint-enable max-nesting-depth */
       }
       @else {
         color: map-get($-style-type-configs, color);
@@ -145,6 +149,10 @@ $-link-base-styles: (
 
 .sage-link--remove-underline {
   text-decoration: none;
+}
+
+.sage-link--small {
+  @extend %t-sage-body-small-med;
 }
 
 .sage-link--subtext {

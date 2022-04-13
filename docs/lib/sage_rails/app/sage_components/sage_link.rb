@@ -7,6 +7,7 @@ class SageLink < SageComponent
     launch: [:optional, TrueClass],
     remove_underline: [:optional, TrueClass],
     show_label: [:optional, TrueClass],
+    small: [:optional, TrueClass],
     style: [:optional, NilClass, Set.new(["primary", "neutral", "secondary", "danger"])],
     truncate: [:optional, TrueClass],
     url: [:optional, String],
