@@ -1,7 +1,15 @@
 <%= sage_component SageAssistant, { logo: { path: "sage.svg" }} do %>
   <%= render "application/nav" %>
   <% sage_component_section :assistant_actions do %>
-    <p class="<%= SageClassnames::TYPE_COLORS::WHITE %>"><%= SageComponent::SAGE_THEME %></p>
+    <%= sage_component SageSwitch, {
+      id: "sage-theme-toggle",
+      label_text: "Use Next theme",
+      name: "sage-theme-toggle",
+      value: "next",
+      checked: is_sage_theme_next?,
+      type: "checkbox",
+      css_classes: "sage-theme-switch",
+    } %>
     <%= sage_component SageButton, {
       value: "Search",
       attributes: {
@@ -16,3 +24,12 @@
     } %>
   <% end %>
 <% end %>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelector('#sage-theme-toggle').addEventListener("change", function () {
+    var theme = document.querySelector('#sage-theme-toggle').checked ? 'sage-theme-next' : 'sage-theme-legacy';
+    window.location.search = '?sage_theme=' + theme;
+    window.SAGE_THEME = theme;
+  });
+});
+</script>

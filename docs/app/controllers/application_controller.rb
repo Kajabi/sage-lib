@@ -4,4 +4,15 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   include MarkdownHelper
+
+  before_action :set_sage_theme
+
+  private
+
+  def set_sage_theme
+    session["SAGE_THEME"] ||= SageComponent::SAGE_THEME_LEGACY
+    if params[:sage_theme]
+      session["SAGE_THEME"] = params[:sage_theme]
+    end
+  end
 end

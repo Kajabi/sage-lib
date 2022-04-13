@@ -1,1 +1,5 @@
-<%= stylesheet_pack_tag "docs" %>
+<% if is_sage_theme_next? %>
+  <%= stylesheet_pack_tag "docs-next" %>
+<% else %>
+  <%= stylesheet_pack_tag "docs-legacy" %>
+<% end %>

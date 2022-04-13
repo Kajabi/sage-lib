@@ -42,4 +42,11 @@ module ApplicationHelper
     "#{Rails.application.config.storybook_root_url}#{slug}"
   end
 
+  def get_sage_theme
+    session["SAGE_THEME"] || SageComponent::SAGE_THEME_LEGACY
+  end
+
+  def is_sage_theme_next?
+    get_sage_theme == SageComponent::SAGE_THEME_NEXT
+  end
 end
