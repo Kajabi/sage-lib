@@ -60,7 +60,8 @@ $-empty-state-graphic-page-height: rem(336px);
 }
 
 .sage-empty-state__actions,
-.sage-empty-state__custom-content {
+.sage-empty-state__custom-content,
+.sage-empty-state__video {
   margin-top: sage-spacing();
 }
 
