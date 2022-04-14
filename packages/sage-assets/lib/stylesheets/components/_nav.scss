@@ -129,13 +129,6 @@ $-nav-subitem-border-width: rem(2px);
   }
 }
 
-.sage-nav__list--sub-with-icon,
-.sage-nav__list--sub {
-  > li:not(:last-child) {
-    // margin-bottom: sage-spacing(2xs);
-  }
-}
-
 .sage-nav__list--sub {
   margin-left: rem(12px);
 }
