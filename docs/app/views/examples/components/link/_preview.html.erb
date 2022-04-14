@@ -96,3 +96,22 @@ demo_configs_links = [
     <%= tag.span "Internal link with #{tag.strong "custom content"}".html_safe, class: "custom-content" %>
   <% end %>
 <% end %>
+
+<h3 class="t-sage-heading-6">Neutral Links</h3>
+<%= md("
+Neutral links live in items with non-white backgrounds, such as Banner and Toast.
+", use_sage_type: true) %>
+
+<%= sage_component SageBanner, {
+  banner_context: "sage-demo",
+  active: true,
+  dismissable: true,
+  text: "I have spoken.",
+  link: {
+    name: "Link here",
+    attributes: {
+      href: "#",
+      referer: "no-referer"
+    }
+  }
+} %>
