@@ -55,6 +55,7 @@ $-nav-subitem-border-width: rem(2px);
   margin-bottom: sage-spacing(2xs);
   color: $-nav-color-text;
   border-radius: sage-border(radius-medium);
+  text-decoration: none;
   transition: map-get($sage-transitions, default);
   transition-property: background, box-shadow;
 

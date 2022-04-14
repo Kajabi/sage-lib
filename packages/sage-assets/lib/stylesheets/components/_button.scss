@@ -343,6 +343,10 @@ $-btn-loading-min-height: rem(36px);
   // NOTE: Icon generation consolidated in `core/_icons.scss`
 }
 
+a.sage-btn {
+  text-decoration: none;
+}
+
 .sage-btn--is-loading {
   pointer-events: none;
 

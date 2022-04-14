@@ -84,6 +84,7 @@ $-pagination-focus-ring-color: sage-color(grey, 400);
   border: 0;
   background-color: sage-color(white);
   border-radius: $-pagination-radius;
+  text-decoration: none;
 
   &:hover,
   &:focus {
