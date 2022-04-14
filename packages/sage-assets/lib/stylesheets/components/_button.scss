@@ -21,7 +21,7 @@ $-btn-base-styles: (
   primary: (
     default: (
       color: sage-color(white),
-      background-color: sage-color(primary, 500),
+      background-color: sage-color(primary, 600),
       ring-color: sage-color(primary, 300),
     ),
     hover: (
@@ -33,27 +33,8 @@ $-btn-base-styles: (
       background-color: sage-color(primary, 600),
     ),
     disabled: (
-      color: sage-color(primary, 300),
+      color: sage-color(primary, 400),
       background-color: sage-color(primary, 100),
-    )
-  ),
-  neutral: (
-    default: (
-      color: sage-color(white),
-      background-color: sage-color(grey, 800),
-      ring-color: sage-color(grey, 300),
-    ),
-    hover: (
-      color: sage-color(white),
-      background-color: sage-color(grey, 900),
-    ),
-    focus: (
-      color: sage-color(white),
-      background-color: sage-color(grey, 800),
-    ),
-    disabled: (
-      color: sage-color(white),
-      background-color: sage-color(grey, 400),
     )
   ),
   secondary: (
@@ -64,22 +45,22 @@ $-btn-base-styles: (
     ),
     hover: (
       color: sage-color(grey, 800),
-      background-color: sage-color(grey, 100),
+      background-color: sage-color(grey, 50),
     ),
     focus: (
       color: sage-color(grey, 800),
       background-color: sage-color(white),
     ),
     disabled: (
-      color: sage-color(grey, 400),
-      background-color: sage-color(grey, 200),
+      color: sage-color(grey, 500),
+      background-color: sage-color(grey, 50),
     )
   ),
   danger: (
     default: (
       color: sage-color(white),
-      background-color: sage-color(red, 500),
-      ring-color: sage-color(red, 400),
+      background-color: sage-color(red, 600),
+      ring-color: sage-color(primary, 300),
     ),
     hover: (
       color: sage-color(white),
@@ -87,21 +68,14 @@ $-btn-base-styles: (
     ),
     focus: (
       color: sage-color(white),
-      background-color: sage-color(red, 500),
+      background-color: sage-color(red, 600),
     ),
     disabled: (
-      color: sage-color(red, 300),
+      color: sage-color(red, 400),
       background-color: sage-color(red, 100),
     )
   ),
 );
-
-$-btn-subtle-secondary-neutral-default: sage-color(grey, 600);
-$-btn-subtle-secondary-neutral-hover: sage-color(grey, 600);
-$-btn-subtle-secondary-neutral-hover-background: sage-color(grey, 200);
-$-btn-subtle-secondary-neutral-focus: sage-color(grey, 600);
-$-btn-subtle-secondary-neutral-focus-outline: sage-color(grey, 400);
-$-btn-subtle-secondary-neutral-disabled: sage-color(grey, 500);
 
 $-btn-subtle-styles: (
   primary: (
@@ -113,21 +87,12 @@ $-btn-subtle-styles: (
     disabled: sage-color(primary, 300),
   ),
   secondary: (
-    default: $-btn-subtle-secondary-neutral-default,
-    hover: $-btn-subtle-secondary-neutral-hover,
-    hover-background: $-btn-subtle-secondary-neutral-hover-background,
-    focus: $-btn-subtle-secondary-neutral-focus,
-    focus-outline: $-btn-subtle-secondary-neutral-focus-outline,
-    disabled: $-btn-subtle-secondary-neutral-disabled,
-  ),
-  // must be same as secondary
-  neutral: (
-    default: $-btn-subtle-secondary-neutral-default,
-    hover: $-btn-subtle-secondary-neutral-hover,
-    hover-background: $-btn-subtle-secondary-neutral-hover-background,
-    focus: $-btn-subtle-secondary-neutral-focus,
-    focus-outline: $-btn-subtle-secondary-neutral-focus-outline,
-    disabled: $-btn-subtle-secondary-neutral-disabled,
+    default: sage-color(grey, 800),
+    hover: sage-color(grey, 800),
+    hover-background: sage-color(grey, 100),
+    focus: sage-color(grey, 800),
+    focus-outline: sage-color(primary, 300),
+    disabled: sage-color(grey, 500),
   ),
   danger: (
     default: sage-color(red, 600),
