@@ -9,12 +9,15 @@ $-nav-color-focus: sage-color(grey, 400);
 $-nav-color-background: sage-color(grey, 50);
 $-nav-color-background-hover: sage-color(grey, 200);
 $-nav-icon-size: rem(20px);
+$-nav-icon-size-spacing: rem(10px);
 $-nav-subitem-border-width: rem(2px);
 
 .sage-nav__icon {
   display: inline-flex;
-  margin-right: rem(10px);
+  margin-right: $-nav-icon-size-spacing;
   color: sage-color(grey, 900);
+  position: relative;
+  z-index: sage-z-index(default, 1);
 
   .sage-nav__link--active & {
     color: sage-color(grey, 900);
@@ -82,14 +85,18 @@ $-nav-subitem-border-width: rem(2px);
   opacity: 1;
   border-color: transparent;
 
-  &:focus {
-    border-color: sage-color(primary, 300);
+    &:focus {
+      border-color: sage-color(primary, 300);
+    }
+  }
+
+  &.sage-nav__link--with-icon::after {
+    background-color: $-nav-color-background;
   }
 }
 
 .sage-nav__link--sub {
   &.sage-nav__link--active {
-
     background: $-nav-color-background;
   }
 }
@@ -111,6 +118,10 @@ $-nav-subitem-border-width: rem(2px);
   padding: 0;
   list-style: none;
 
+  .sage-nav__link + & {
+    margin-top: sage-spacing(xs);
+  }
+
   &:not(.sage-nav__list--sub) {
     .sage-nav__link--active {
       @include sage-focus-outline--update-color(transparent);
@@ -121,7 +132,7 @@ $-nav-subitem-border-width: rem(2px);
 .sage-nav__list--sub-with-icon,
 .sage-nav__list--sub {
   > li:not(:last-child) {
-    margin-bottom: sage-spacing(2xs);
+    // margin-bottom: sage-spacing(2xs);
   }
 }
 
@@ -130,7 +141,7 @@ $-nav-subitem-border-width: rem(2px);
 }
 
 .sage-nav__list--sub-with-icon {
-  margin-left: calc((#{sage-spacing(sm)} + (#{$-nav-icon-size} / 2)) - (#{$-nav-subitem-border-width} / 2));
-  padding-left: rem(22px);
+  margin-left: calc((#{sage-spacing(sm)} + (#{$-nav-icon-size} / 2)) - (#{$-nav-subitem-border-width} / 2) - (#{$-nav-icon-size-spacing} / 2));
+  padding-left: sage-spacing();
   border-left: $-nav-subitem-border-width solid sage-color(grey, 300);
 }
