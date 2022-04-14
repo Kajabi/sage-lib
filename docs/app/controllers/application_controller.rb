@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
   private
 
   def set_sage_theme
-    session["SAGE_THEME"] ||= $sage_thems[:legacy]
+    session["SAGE_THEME"] ||= $sage_themes[:legacy]
     if params[:sage_theme]
       session["SAGE_THEME"] = params[:sage_theme]
     end

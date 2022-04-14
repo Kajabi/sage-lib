@@ -1,0 +1,18 @@
+////
+/// Assembles all "consumable" (non-compiling) features
+/// for use in application contexts
+////
+
+
+// Functions
+@import "themes/legacy/core/functions/index";
+
+// Variable Tokens
+@import "themes/legacy/dictionary/tokens";
+@import "themes/legacy/tokens/index";
+
+// Mixins
+@import "themes/legacy/core/mixins/index";
+
+// Global Variables
+@import "themes/legacy/core/variables";
