@@ -1,4 +1,3 @@
-import { add } from 'lodash';
 import React from 'react';
 import { Link } from './Link';
 
@@ -26,16 +25,16 @@ export const LinkIconLeft = Template.bind({});
 LinkIconLeft.args = {
   children: 'Standard link',
   href: '#',
-  icon: "add",
-  iconPosition: "left",
+  icon: 'star',
+  iconPosition: 'left',
 };
 
 export const LinkIconRight = Template.bind({});
 LinkIconRight.args = {
   children: 'Standard link',
   href: '#',
-  icon: "add",
-  iconPosition: "right",
+  icon: 'star',
+  iconPosition: 'right',
 };
 
 export const Launch = Template.bind({});

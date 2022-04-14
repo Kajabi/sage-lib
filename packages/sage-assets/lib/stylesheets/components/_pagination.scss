@@ -80,11 +80,11 @@ $-pagination-focus-ring-color: sage-color(grey, 400);
   flex-flow: row wrap;
   width: $-pagination-size;
   height: $-pagination-size;
+  text-decoration: none;
   color: $-pagination-text-color;
   border: 0;
   background-color: sage-color(white);
   border-radius: $-pagination-radius;
-  text-decoration: none;
 
   &:hover,
   &:focus {

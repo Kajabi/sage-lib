@@ -343,9 +343,11 @@ $-btn-loading-min-height: rem(36px);
   // NOTE: Icon generation consolidated in `core/_icons.scss`
 }
 
+/* stylelint-disable selector-no-qualifying-type */
 a.sage-btn {
   text-decoration: none;
 }
+/* stylelint-enable selector-no-qualifying-type */
 
 .sage-btn--is-loading {
   pointer-events: none;
