@@ -14,10 +14,10 @@ $-nav-subitem-border-width: rem(2px);
 
 .sage-nav__icon {
   display: inline-flex;
-  margin-right: $-nav-icon-size-spacing;
-  color: sage-color(grey, 900);
   position: relative;
   z-index: sage-z-index(default, 1);
+  margin-right: $-nav-icon-size-spacing;
+  color: sage-color(grey, 900);
 
   .sage-nav__link--active & {
     color: sage-color(grey, 900);
@@ -27,9 +27,9 @@ $-nav-subitem-border-width: rem(2px);
 .sage-nav__label {
   @extend %t-sage-body-semi;
 
-  color: sage-color(grey, 900);
   position: relative;
   z-index: sage-z-index(default, 1);
+  color: sage-color(grey, 900);
 
   .sage-nav__link--sub & {
     font-size: sage-font-size(body-sm);
