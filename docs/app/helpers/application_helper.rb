@@ -43,10 +43,10 @@ module ApplicationHelper
   end
 
   def get_sage_theme
-    session["SAGE_THEME"] || SageComponent::SAGE_THEME_LEGACY
+    $sage_theme || $sage_themes[:legacy]
   end
 
   def is_sage_theme_next?
-    get_sage_theme == SageComponent::SAGE_THEME_NEXT
+    get_sage_theme == $sage_themes[:next]
   end
 end

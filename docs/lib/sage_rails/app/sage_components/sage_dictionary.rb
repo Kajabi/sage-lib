@@ -9,11 +9,8 @@
 module SageDictionary
 
   def SageDictionary.theme
-    SageComponent.is_sage_theme_next? ? SageDictionaryNext : SageDictionaryLegacy
+    $sage_theme == $sage_themes[:next] ? SageDictionaryNext : SageDictionaryLegacy
   end
   
-  # SAGE_THEME_SWITCH
-  THEME = SageDictionaryNext
-  # TODO: THEME how to load correct theme dictionary here?
-  # THEME = SageDictionary.theme
+  THEME = SageDictionary.theme
 end

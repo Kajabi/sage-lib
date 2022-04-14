@@ -4,9 +4,6 @@ class SageComponent
   attr_accessor :context
   attr_accessor :content
 
-  SAGE_THEME_LEGACY = "sage-theme-legacy"
-  SAGE_THEME_NEXT = "sage-theme-next"
-
   ATTRIBUTE_SCHEMA = {
     test_id: [:optional, NilClass, String],
     html_attributes: [:optional, Hash],
@@ -101,7 +98,7 @@ class SageComponent
 
   def template_path
     template_path_base = self.class.to_s.underscore
-    if context.is_sage_theme_next?
+    if $sage_theme == $sage_themes[:next]
       "themes/next/#{template_path_base}"
     else
       "themes/legacy/#{template_path_base}"
@@ -114,6 +111,6 @@ class SageComponent
   end
 
   def self.is_sage_theme_next?
-    @is_sage_theme_next ||= context.is_sage_theme_next?
+    @is_sage_theme_next = $sage_theme == $sage_themes[:next]
   end
 end

@@ -10,9 +10,11 @@ class ApplicationController < ActionController::Base
   private
 
   def set_sage_theme
-    session["SAGE_THEME"] ||= SageComponent::SAGE_THEME_LEGACY
+    session["SAGE_THEME"] ||= $sage_thems[:legacy]
     if params[:sage_theme]
       session["SAGE_THEME"] = params[:sage_theme]
     end
+
+    $sage_theme = session["SAGE_THEME"]
   end
 end
