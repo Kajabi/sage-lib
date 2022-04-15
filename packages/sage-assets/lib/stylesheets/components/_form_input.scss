@@ -76,25 +76,6 @@ $-input-text-height: sage-font-size(body);
   height: $-input-height;
   padding: sage-spacing(xs) sage-spacing(sm);
 
-  &:focus:not(:disabled),
-  &:active:not(:disabled) {
-    ~ .sage-input__label {
-      @include sage-form-field-floating-label();
-    }
-  }
-
-  &:valid:not(:placeholder-shown) {
-    ~ .sage-input__label {
-      @include sage-form-field-floating-label();
-    }
-  }
-
-  .sage-form-field--showplaceholder & {
-    ~ .sage-input__label {
-      @include sage-form-field-floating-label();
-    }
-  }
-
   .sage-input--has-icon & {
     padding-right: $-input-popover-size;
   }
