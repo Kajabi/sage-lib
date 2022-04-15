@@ -36,7 +36,7 @@ export const Drawer = ({
         onExpandChange(expanded ? DRAWER_END_EXPAND : DRAWER_END_COLLAPSE);
       }, 750);
     }
-  },[expanded]);
+  }, [expanded]);
 
   const classNames = classnames(
     'sage-drawer',
@@ -107,6 +107,7 @@ Drawer.defaultProps = {
   expanded: false,
   expandedSize: null,
   onExit: (val) => val,
+  onExpandChange: (expanded) => expanded,
   showClose: true,
   size: null,
   title: null,
@@ -122,6 +123,7 @@ Drawer.propTypes = {
   expandedSize: PropTypes.string,
   id: PropTypes.string.isRequired,
   onExit: PropTypes.func,
+  onExpandChange: PropTypes.func,
   showClose: PropTypes.bool,
   size: PropTypes.string,
   title: PropTypes.string,

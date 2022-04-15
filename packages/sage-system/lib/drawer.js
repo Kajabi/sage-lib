@@ -19,14 +19,12 @@ Sage.drawerExpandCollapse = (() => {
   const getTargetModal = (modalTarget) => document.querySelector(`[data-js-modal="${modalTarget}"`);
 
   // After a timer expires reveal elements within a given modal
-  const showContentAfterTimer = ($elModal, selector) => {
-    setTimeout(
-      () => $elModal.querySelectorAll(selector).forEach(
-        el => el.classList.remove(CLASSNAME_DRAWER_HIDDEN_CONTENT)
-      ),
-      DRAWER_ANIMATION_TIMEOUT
-    );
-  };
+  const showContentAfterTimer = ($elModal, selector) => setTimeout(
+    () => $elModal.querySelectorAll(selector).forEach(
+      el => el.classList.remove(CLASSNAME_DRAWER_HIDDEN_CONTENT)
+    ),
+    DRAWER_ANIMATION_TIMEOUT
+  );
 
   // Immediately hide elements with a given a given modal
   const hideContentImmediately = ($elModal, selector) => $elModal
