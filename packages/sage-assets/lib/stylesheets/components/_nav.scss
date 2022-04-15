@@ -98,9 +98,11 @@ $-nav-subitem-border-width: rem(2px);
     .sage-nav__link--active {
       @include sage-focus-outline--update-color(sage-color(primary, 300));
 
+      /* stylelint-disable max-nesting-depth */
       &::after {
         opacity: 0;
       }
+      /* stylelint-enable max-nesting-depth */
     }
   }
 }
