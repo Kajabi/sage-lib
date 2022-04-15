@@ -267,6 +267,8 @@ export const Table = ({
   const renderTableRow = (row) => {
     // Ensure there's a unique id for the row if one is not provided
     const rowId = row.id || uuid();
+    const disableSelect = row.disableSelect || false;
+    const hideSelect = row.hideSelect || false;
 
     // Transform the raw row data into a consistent structure
     const cells = TableRow.parseRowData(row, schema);
@@ -276,6 +278,8 @@ export const Table = ({
         key={rowId}
         id={rowId}
         cells={cells}
+        disableSelect={disableSelect}
+        hideSelect={hideSelect}
         schema={schema}
         selected={selfSelectedRows === SELECTION_TYPES.ALL || selfSelectedRows.includes(rowId)}
         selectable={selectable}
