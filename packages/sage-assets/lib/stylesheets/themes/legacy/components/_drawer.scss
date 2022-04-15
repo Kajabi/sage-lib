@@ -13,6 +13,11 @@
   padding: 0;
 }
 
+[data-js-drawer-expanded-content].sage-drawer__hidden-content,
+[data-js-drawer-collapsed-content].sage-drawer__hidden-content {
+  @include visually-hidden();
+}
+
 .sage-drawer--no-screen {
   background: none;
 }
