@@ -70,11 +70,11 @@ Default.decorators = [
           </li>
           <li>
             If you want to disable the checkbox on an individual row,
-            add <code>disableSelect: true</code> to that row's data.
+            add <code>disableSelect: true</code> to that row&rsquo;s data.
           </li>
           <li>
             If you want to hide the checkbox on an individual row,
-            add <code>hideSelect: true</code> to that row's data.
+            add <code>hideSelect: true</code> to that row&rsquo;s data.
           </li>
         </ul>
       </div>
