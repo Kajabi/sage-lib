@@ -5,7 +5,7 @@ class SageModal < SageComponent
     animate: [:optional, String, TrueClass, {
       direction: [:optional, String, Set.new(["bottom", "top", "left", "right"])]
     }],
-    disable_background_blur: [:optional, TrueClass],
+    disable_background_blur: [:optional, NilClass, TrueClass],
     disable_background_dismiss: [:optional, NilClass, TrueClass],
     disable_close: [:optional, TrueClass],
     fullscreen: [:optional, TrueClass],
