@@ -109,6 +109,18 @@ module SageSchemas
     wrap_footer: [:optional, NilClass, TrueClass],
   }
 
+  LIST_ITEM = {
+    id: [:optional, Integer, String],
+    more_actions: [:optional, NilClass, SageSchemas::DROPDOWN],
+    sortable: [:optional, NilClass, TrueClass],
+    sortable_update_url: [:optional, NilClass, String],
+  }
+
+  LIST = {
+    items: [:optional, [[SageSchemas::LIST_ITEM]]],
+    sortable_resource: [:optional, NilClass, String],
+  }
+
   PANEL_FIGURE = {
     aspect_ratio: [:optional, NilClass, Integer, Float],
     background_color: [:optional, NilClass, String],

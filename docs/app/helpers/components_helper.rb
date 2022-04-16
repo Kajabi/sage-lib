@@ -307,6 +307,17 @@ module ComponentsHelper
         figma_embed: "",
       },
       {
+        title: "list",
+        description: "Set up neatly-formatted lists of content in bordered rows with some additional optional decorations.",
+        scss: "done",
+        docs: "done",
+        rails: "done",
+        react: "done",
+        a11y: "done",
+        react_component_slug: "sage-list--default",
+        figma_embed: "",
+      },
+      {
         title: "lists",
         description: "Sage lists provide a few styling alternatives for unstyled and inline formatting.",
         scss: "done",
