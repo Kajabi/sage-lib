@@ -25,5 +25,6 @@ require('./popover')
 require('./search')
 require('./dynamicSelect')
 require('./carousel')
+require('./list')
 
 require('./init')
