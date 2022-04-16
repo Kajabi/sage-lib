@@ -10,12 +10,12 @@
 }
 
 .sage-list__item {
-  padding-top: sage-spacing(sm);
-  padding-bottom: sage-spacing(sm);
-  border-top: sage-border(default);
   display: flex;
   align-items: center;
   gap: sage-spacing(md);
+  padding-top: sage-spacing(sm);
+  padding-bottom: sage-spacing(sm);
+  border-top: sage-border(default);
 }
 
 .sage-list__item--sortable {
@@ -28,7 +28,7 @@
 }
 
 .sage-list__item--sortable-ghost {
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .sage-list__item-content {
@@ -44,6 +44,6 @@
   color: sage-color(grey, 500);
 
   .sage-list__item:hover & {
-    color: sage-color(grey, 900)
+    color: sage-color(grey, 900);
   }
 }
