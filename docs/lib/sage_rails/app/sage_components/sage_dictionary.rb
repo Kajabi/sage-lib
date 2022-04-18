@@ -9,7 +9,7 @@
 module SageDictionary
 
   def SageDictionary.theme
-    $sage_theme == $sage_themes[:next] ? SageDictionaryNext : SageDictionaryLegacy
+    SageRails.next_theme? ? SageDictionaryNext : SageDictionaryLegacy
   end
   
   THEME = SageDictionary.theme

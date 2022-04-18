@@ -1,6 +1,7 @@
 
 class SageComponent
   include ActiveModel::Model
+
   attr_accessor :context
   attr_accessor :content
 
@@ -11,10 +12,6 @@ class SageComponent
     css_classes: [:optional, NilClass, String],
     content: [:optional, String],
   }
-
-  def sage_theme
-    context.get_sage_theme
-  end
 
   def generated_css_classes
     @generated_css_classes ||= ""
@@ -98,7 +95,7 @@ class SageComponent
 
   def template_path
     template_path_base = self.class.to_s.underscore
-    if $sage_theme == $sage_themes[:next]
+    if SageRails.next_theme?
       "themes/next/#{template_path_base}"
     else
       "themes/legacy/#{template_path_base}"
@@ -108,9 +105,5 @@ class SageComponent
   def self.set_attribute_schema(attributes)
     attr_accessor(*attributes.keys)
     self.const_set("ATTRIBUTE_SCHEMA", self.superclass::ATTRIBUTE_SCHEMA.deep_merge(attributes))
-  end
-
-  def self.is_sage_theme_next?
-    @is_sage_theme_next = $sage_theme == $sage_themes[:next]
   end
 end

@@ -41,12 +41,4 @@ module ApplicationHelper
   def storybook_url(slug)
     "#{Rails.application.config.storybook_root_url}#{slug}"
   end
-
-  def get_sage_theme
-    $sage_theme || $sage_themes[:legacy]
-  end
-
-  def is_sage_theme_next?
-    get_sage_theme == $sage_themes[:next]
-  end
 end
