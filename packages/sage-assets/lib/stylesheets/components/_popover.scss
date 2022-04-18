@@ -6,7 +6,7 @@
 
 
 $-popover-overlay-z-index: sage-z-index(modal);
-$-popover-panel-padding: sage-spacing(sm);
+$-popover-panel-padding: sage-spacing();
 $-popover-panel-min-size: sage-container(sm);
 $-popover-panel-contentmin-size: $-popover-panel-min-size - $-popover-panel-padding;
 $-popover-panel-max-size: rem(350px);
@@ -45,8 +45,8 @@ $-popover-panel-offset: sage-spacing(sm);
   padding: $-popover-panel-padding;
   background-color: sage-color(white);
   background-clip: padding-box;
-  box-shadow: sage-shadow();
-  border-radius: sage-border(radius);
+  box-shadow: sage-shadow(lg);
+  border-radius: sage-border(radius-large);
 
   .sage-popover--is-expanded & {
     visibility: visible;
@@ -91,7 +91,7 @@ $-popover-panel-offset: sage-spacing(sm);
   @extend %t-sage-body-small;
   @include sage-grid-stack();
 
-  color: sage-color(grey, 600);
+  color: sage-color(grey, 700);
 }
 
 .sage-popover__media {
@@ -117,5 +117,7 @@ $-popover-panel-offset: sage-spacing(sm);
 }
 
 .sage-popover__title {
-  @extend %t-sage-heading-6;
+  @extend %t-sage-heading-5;
+
+  color: sage-color(grey, 900);
 }
