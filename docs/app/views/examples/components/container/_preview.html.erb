@@ -5,7 +5,7 @@
       <%= sage_component SageCardHeader, {
         title: md("#{c[:name]} (max `#{c[:max_size]}`)")
       } %>
-      <p><%= c[:usage] %></p>
+      <p>Usage: <code><%= c[:usage] %></code></p>
     <% end %>
   <% end %>
 <% end %>
