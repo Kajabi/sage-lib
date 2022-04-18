@@ -62,15 +62,9 @@ module SageTokens
 
   COLOR_SLIDERS = SageTokens.color_sliders()
 
-  CONTAINER_SIZES = ["xs", "sm", "md", "lg", "full"]
+  CONTAINER_SIZES = ["tiny", "xs", "sm", "md", "lg", "xl", "full"]
 
   CONTAINER_SPECS = [
-    {
-      alias: "xs",
-      max_size: "240px",
-      name: "Extra Small",
-      usage: "sage-container(xs)",
-    },
     {
       alias: "sm",
       max_size: "340px",
