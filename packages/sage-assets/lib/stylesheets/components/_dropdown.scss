@@ -7,7 +7,7 @@
 /* stylelint-disable selector-max-compound-selectors */
 
 $-dropdown-height: map-get($sage-field-configs, height);
-$-dropdown-width: rem(280px);
+$-dropdown-width: rem(240px);
 $-dropdown-width-small: rem(200px);
 $-dropdown-item-focus-line-spacing-x: sage-spacing(sm);
 
@@ -294,7 +294,7 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
   transform-origin: top center;
   min-width: $-dropdown-width;
   width: auto;
-  border-radius: sage-border(radius);
+  border-radius: sage-border(radius-medium);
   background-color: sage-color(white);
   box-shadow: sage-shadow(md);
   transition: map-get($sage-transitions, default);
