@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import { ReactSortable } from 'react-sortablejs';
@@ -24,7 +24,7 @@ export const List = ({
 
     return (
       <>
-        {items.map(({ id, ...rest}) => (
+        {items.map(({ id, ...rest }) => (
           <ListItem key={id} sortable={!!sortableConfigs} {...rest}>
             {itemRenderer && itemRenderer({ id, ...rest })}
           </ListItem>
@@ -57,7 +57,7 @@ List.defaultProps = {
   children: null,
   className: null,
   items: [],
-  renderItem: null,
+  itemRenderer: null,
   sortableConfigs: null,
 };
 

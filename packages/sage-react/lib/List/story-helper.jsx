@@ -3,23 +3,23 @@ import React from 'react';
 export const sampleMoreActions = (id) => ({
   options: [
     {
-      slug: "duplicate",
-      name: "Duplicate",
+      slug: 'duplicate',
+      name: 'Duplicate',
     },
     {
-      slug: "archive",
-      name: "Archive",
+      slug: 'archive',
+      name: 'Archive',
     },
     {
-      slug: "stats",
-      name: "View stats",
+      slug: 'stats',
+      name: 'View stats',
     },
     {
-      slug: "delete",
-      name: "Delete permanently",
-      style: "danger",
+      slug: 'delete',
+      name: 'Delete permanently',
+      style: 'danger',
     }
-  ].map(action => (
+  ].map((action) => (
     {
       href: `#action/${action.slug}/${id}`,
       color: action.style || null,

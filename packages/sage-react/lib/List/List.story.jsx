@@ -1,11 +1,9 @@
 import React from 'react';
-import { selectArgs } from '../story-support/helpers';
 import { List } from './List';
 import {
   sampleItems,
   sampleItemRenderer,
 } from './story-helper';
-
 
 export default {
   title: 'Sage/List',
