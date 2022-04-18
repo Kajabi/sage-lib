@@ -10,6 +10,7 @@ import { MODAL_ANIMATION_PRESETS, MODAL_ANIMATION_DIRECTIONS } from './configs';
 
 export const Modal = ({
   active,
+  allowScroll,
   animation,
   children,
   className,
@@ -27,6 +28,7 @@ export const Modal = ({
     className,
     {
       'sage-modal--active': active,
+      'sage-modal--scrollable': allowScroll,
       'sage-modal--large': large,
       'sage-modal--fullscreen': fullScreen,
       'sage-modal--no-blur': disableBackgroundBlur,
@@ -93,6 +95,7 @@ Modal.ANIMATION_DIRECTIONS = MODAL_ANIMATION_DIRECTIONS;
 
 Modal.defaultProps = {
   active: false,
+  allowScroll: false,
   animation: null,
   children: null,
   containerClassName: null,
@@ -107,6 +110,7 @@ Modal.defaultProps = {
 
 Modal.propTypes = {
   active: PropTypes.bool,
+  allowScroll: PropTypes.bool,
   animation: PropTypes.oneOfType([
     PropTypes.bool,
     PropTypes.shape({

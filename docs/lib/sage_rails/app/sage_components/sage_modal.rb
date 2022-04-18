@@ -1,6 +1,7 @@
 class SageModal < SageComponent
   set_attribute_schema({
     active: [:optional, NilClass, TrueClass],
+    allow_scroll: [:optional, NilClass, TrueClass],
     animate: [:optional, String, TrueClass, {
       direction: [:optional, String, Set.new(["bottom", "top", "left", "right"])]
     }],
