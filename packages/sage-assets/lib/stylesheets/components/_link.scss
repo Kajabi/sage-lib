@@ -96,6 +96,14 @@ $-link-base-styles: (
     $outline-border-radius: sage-border(radius-medium),
   );
   @include sage-focus-outline--update-color(sage-color(primary, 300));
+
+  &:hover {
+    color: sage-color(primary, 700);
+  }
+
+  &:focus {
+    color: sage-color(primary, 600);
+  }
 }
 
 .sage-link--launch .t-sage--truncate,
