@@ -368,7 +368,8 @@
   border: rem(1px) solid sage-color(grey, 400);
   border-radius: sage-border(radius-medium);
   background: transparent;
-  transition: border 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition: map-get($sage-transitions, input);
+  transition-property: border, box-shadow, color;
 
   @include placeholder {
     color: sage-color(grey, 600);
