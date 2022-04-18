@@ -9,6 +9,7 @@ $-hero-artwork-size: rem(56px);
 $-hero-icon-size: rem(24px);
 $-hero-max-height: rem(352px);
 $-hero-min-height: rem(300px);
+$-hero-margin-y: rem(36px);
 $-hero-mobile-aspect-ratio: calc(100% * 9 / 16);
 $-hero-play-icon-background-color: rgba(sage-color(white, 100), 0.8);
 $-hero-play-icon-background-color-hover: rgba(sage-color(white, 100), 1);
@@ -71,13 +72,13 @@ $-hero-play-icon-background-color-hover: rgba(sage-color(white, 100), 1);
   }
 
   @media (min-width: sage-breakpoint(md-min)) {
-    margin-top: rem(36px);
+    margin-top: $-hero-margin-y;
   }
 }
 
 .sage-hero__body {
   grid-area: content;
-  margin-bottom: rem(36px);
+  margin-bottom: $-hero-margin-y;
   color: sage-color(grey, 700);
 
   @media (max-width: sage-breakpoint(sm-max)) {
