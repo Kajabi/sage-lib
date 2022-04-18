@@ -37,8 +37,8 @@ $-search-icon: "::before";
   }
 
   &:focus-within {
-    border: 1px solid sage-color(primary, 600);
-    box-shadow: 0 0 0 4px sage-color(primary, 300);
+    border: 1px solid sage-color(primary, 300);
+    box-shadow: map-get($sage-toolbar-button-borders, focus);
   }
 
   .sage-search--contained & {
