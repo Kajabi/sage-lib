@@ -54,6 +54,7 @@ $-nav-subitem-border-width: rem(2px);
   align-items: center;
   padding: rem(10px) rem(12px);
   margin-bottom: sage-spacing(2xs);
+  text-decoration: none;
   color: $-nav-color-text;
   border-radius: sage-border(radius-medium);
   transition: map-get($sage-transitions, default);
