@@ -74,26 +74,7 @@ $-input-text-height: sage-font-size(body);
   @include sage-focus-ring;
 
   height: $-input-height;
-  padding: $-input-padding-offset sage-spacing(sm);
-
-  &:focus:not(:disabled),
-  &:active:not(:disabled) {
-    ~ .sage-input__label {
-      @include sage-form-field-floating-label();
-    }
-  }
-
-  &:valid:not(:placeholder-shown) {
-    ~ .sage-input__label {
-      @include sage-form-field-floating-label();
-    }
-  }
-
-  .sage-form-field--showplaceholder & {
-    ~ .sage-input__label {
-      @include sage-form-field-floating-label();
-    }
-  }
+  padding: sage-spacing(xs) sage-spacing(sm);
 
   .sage-input--has-icon & {
     padding-right: $-input-popover-size;
