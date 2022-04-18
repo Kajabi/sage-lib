@@ -56,31 +56,6 @@ $-link-base-styles: (
   )
 );
 
-@each $-style-name, $-styles in $-link-base-styles {
-  .sage-link--#{$-style-name} {
-    @each $-style-type-name, $-style-type-configs in $-styles {
-      @if ($-style-type-name == hover) {
-        /* stylelint-disable max-nesting-depth */
-        &:hover {
-          color: map-get($-style-type-configs, color);
-        }
-        /* stylelint-enable max-nesting-depth */
-      }
-      @else if ($-style-type-name == focus) {
-        /* stylelint-disable max-nesting-depth */
-        &:focus,
-        &:active {
-          color: map-get($-style-type-configs, color);
-        }
-        /* stylelint-enable max-nesting-depth */
-      }
-      @else {
-        color: map-get($-style-type-configs, color);
-      }
-    }
-  }
-}
-
 .sage-link {
   @extend %t-sage-body-med;
 
@@ -103,6 +78,31 @@ $-link-base-styles: (
 
   &:focus {
     color: sage-color(primary, 600);
+  }
+}
+
+@each $-style-name, $-styles in $-link-base-styles {
+  .sage-link--#{$-style-name} {
+    @each $-style-type-name, $-style-type-configs in $-styles {
+      @if ($-style-type-name == hover) {
+        /* stylelint-disable max-nesting-depth */
+        &:hover {
+          color: map-get($-style-type-configs, color);
+        }
+        /* stylelint-enable max-nesting-depth */
+      }
+      @else if ($-style-type-name == focus) {
+        /* stylelint-disable max-nesting-depth */
+        &:focus,
+        &:active {
+          color: map-get($-style-type-configs, color);
+        }
+        /* stylelint-enable max-nesting-depth */
+      }
+      @else {
+        color: map-get($-style-type-configs, color);
+      }
+    }
   }
 }
 
