@@ -320,6 +320,7 @@ $-table-avatar-width: rem(32px);
 
 .sage-table-cell__link {
   color: $-table-cell-font-color;
+  text-decoration: none;
 
   &:focus,
   &:active {

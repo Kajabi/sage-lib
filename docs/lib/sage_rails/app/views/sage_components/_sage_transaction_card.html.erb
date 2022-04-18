@@ -16,6 +16,7 @@
         <% if component.name_href.present? %>
           <%= sage_component SageLink, {
             label: component.name,
+            remove_underline: true,
             truncate: true,
             url: component.name_href,
             css_classes: "sage-transaction-card__name-link",

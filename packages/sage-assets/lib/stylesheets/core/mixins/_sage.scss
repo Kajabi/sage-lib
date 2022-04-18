@@ -74,7 +74,8 @@
 @mixin sage-button-icon-generator($icon-name, $icon-code, $direction) {
   // --- Right Icon Buttons
   @if $direction == right {
-    .sage-btn--icon-right-#{$icon-name} {
+    .sage-btn--icon-right-#{$icon-name},
+    .sage-link--icon-right-#{$icon-name} {
       flex-direction: row-reverse;
 
       &::before {
@@ -85,11 +86,16 @@
         padding: var(--icon-block-padding) 0;
       }
     }
+
+    .sage-link--icon-right-#{$icon-name}::before {
+      margin-left: sage-spacing(2xs);
+    }
   }
 
   // --- Left Icon Buttons
   @else if $direction == left {
-    .sage-btn--icon-left-#{$icon-name} {
+    .sage-btn--icon-left-#{$icon-name},
+    .sage-link--icon-left-#{$icon-name} {
       flex-direction: row;
 
       &::before {
@@ -99,6 +105,10 @@
         margin-right: sage-spacing(xs);
         padding: var(--icon-block-padding) 0;
       }
+    }
+
+    .sage-link--icon-left-#{$icon-name}::before {
+      margin-right: sage-spacing(2xs);
     }
   }
 

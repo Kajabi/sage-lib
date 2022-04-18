@@ -60,6 +60,7 @@ $-media-tile-breakpoints: (
 
 .sage-media-tile__link {
   color: inherit;
+  text-decoration: none;
 
   &::after {
     @include position-full();
@@ -94,15 +95,15 @@ $-media-tile-breakpoints: (
 
   justify-content: center;
   gap: sage-spacing(stage);
-  
+
   @media (max-width: map-get($-media-tile-breakpoints, 1-col-max)) {
     grid-template-columns: repeat(1, 1fr);
   }
-  
+
   @media (min-width: map-get($-media-tile-breakpoints, 2-col-min)) and (max-width: map-get($-media-tile-breakpoints, 2-col-max)) {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   @media (min-width: map-get($-media-tile-breakpoints, 3-col-min)) {
     grid-template-columns: repeat(3, 1fr);
   }

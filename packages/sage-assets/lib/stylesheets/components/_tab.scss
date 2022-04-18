@@ -23,6 +23,7 @@ $-tab-color-disabled: map-get($sage-tab-colors, disabled);
   padding: 0 0 sage-spacing(xs);
   white-space: nowrap;
   color: $-tab-color-default;
+  text-decoration: none;
   transition: color map-get($sage-transitions, default), background-color map-get($sage-transitions, default), box-shadow map-get($sage-transitions, default);
 
   @extend %t-sage-body-med;
