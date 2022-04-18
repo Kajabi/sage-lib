@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.90.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.89.1...@kajabi/sage-react@0.90.0) (2022-04-18)
+
+
+### Features
+
+* **modal:** adds prop to allow for modal content scrolling ([eab391d](https://github.com/Kajabi/sage-lib/commit/eab391db22f73a704a94891e66f1ec13cc67dfbf))
+* **table:** add ability to hide checkbox on individual rows ([12287e2](https://github.com/Kajabi/sage-lib/commit/12287e2ded6a96435a16652010824ba59b6b1a99))
+* **table:** add ability to indicate an individual row with disabled checkbox ([c20755d](https://github.com/Kajabi/sage-lib/commit/c20755d4be032cfe5565cffbc50e8636119d7793))
+
+
+
+
+
 ## [0.89.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.89.0...@kajabi/sage-react@0.89.1) (2022-04-13)
 
 **Note:** Version bump only for package @kajabi/sage-react

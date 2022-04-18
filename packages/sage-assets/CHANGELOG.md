@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.77.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.76.1...@kajabi/sage-assets@0.77.0) (2022-04-18)
+
+
+### Features
+
+* **modal:** adds prop to allow for modal content scrolling ([eab391d](https://github.com/Kajabi/sage-lib/commit/eab391db22f73a704a94891e66f1ec13cc67dfbf))
+
+
+
+
+
 ## [0.76.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.76.0...@kajabi/sage-assets@0.76.1) (2022-04-13)
 
 
