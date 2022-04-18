@@ -4,6 +4,7 @@ class SageHero < SageComponent
     borderless: [:optional, TrueClass],
     button: [:optional, String],
     cta_attributes: [:optional, Hash],
+    custom_background_color: [:optional, String],
     description: [:optional, String],
     image: [:optional, String],
     size: [:optional, SageSchemas::HERO_SIZE],

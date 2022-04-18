@@ -13,7 +13,7 @@
   } %>
 <% end %>
 
-<h2 class="t-sage-heading-6">Small - Borderless</h2>
+<h2 class="t-sage-heading-6">Small - Borderless with Custom Background</h2>
 <%= sage_component SageCardBlock, {} do %>
 	<%= sage_component SageHero, {
 		alt_text: "Well done alt text",
@@ -22,6 +22,7 @@
 			"data-js-modaltrigger": "cool-modal",
 			href: "#",
 		},
+    custom_background_color: "#E6F4FE",
 		description: "Get early access to new unreleased features and work along side our team by beta testing features before they go live.",
 		image: "card-placeholder-hero.jpeg",
 		size: "small",
