@@ -21,8 +21,8 @@ $-hero-play-icon-background-color-hover: rgba(sage-color(white, 100), 1);
   overflow: hidden;
   min-height: $-hero-min-height;
   background-color: sage-color(white);
+  border: sage-border();
   border-radius: sage-border(radius-large);
-  box-shadow: sage-shadow(sm);
 
   @media (max-width: sage-breakpoint(sm-max)) {
     grid-template-areas:
@@ -40,6 +40,10 @@ $-hero-play-icon-background-color-hover: rgba(sage-color(white, 100), 1);
       "content artwork";
     padding-left: sage-spacing(md);
   }
+}
+
+.sage-hero--borderless {
+  border: 0;
 }
 
 .sage-hero--small {
