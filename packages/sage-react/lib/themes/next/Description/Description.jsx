@@ -46,21 +46,22 @@ export const Description = ({
         {data && (
           <dd className="sage-description__data">
             {data}
+
+            {action && (
+              <div className="sage-description__action">
+                <Button
+                  color={Button.COLORS.PRIMARY}
+                  subtle={true}
+                  icon={SageTokens.ICONS.CARET_RIGHT}
+                  iconPosition={!iconOnly && Button.ICON_POSITIONS.RIGHT}
+                  iconOnly={iconOnly}
+                  {...action.attributes}
+                >
+                  {action.value || 'View more'}
+                </Button>
+              </div>
+            )}
           </dd>
-        )}
-        {action && (
-          <div className="sage-description__action">
-            <Button
-              color={Button.COLORS.PRIMARY}
-              subtle={true}
-              icon={SageTokens.ICONS.CARET_RIGHT}
-              iconPosition={!iconOnly && Button.ICON_POSITIONS.RIGHT}
-              iconOnly={iconOnly}
-              {...action.attributes}
-            >
-              {action.value || 'View more'}
-            </Button>
-          </div>
         )}
       </>
     );
