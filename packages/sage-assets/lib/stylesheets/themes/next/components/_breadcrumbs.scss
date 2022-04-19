@@ -4,9 +4,8 @@
 /// @group sage
 ////
 
-$-breadcrumb-current-color: sage-color(grey, 900);
+$-breadcrumb-current-color: sage-color(grey, 800);
 $-breadcrumb-interactive-color: sage-color(grey, 800);
-$-breadcrumb-interactive-bg: sage-color(grey, 100);
 $-breadcrumb-outline-color: sage-color(grey, 400);
 
 .sage-breadcrumbs {
@@ -34,7 +33,6 @@ $-breadcrumb-outline-color: sage-color(grey, 400);
   &:not(:last-child) {
     &::after {
       content: "/";
-      margin: 0 rem(12px);
       color: sage-color(grey, 600);
     }
 
@@ -52,6 +50,7 @@ $-breadcrumb-outline-color: sage-color(grey, 400);
   color: sage-color(grey, 700);
   font-size: sage-font-size(body-sm);
   font-weight: sage-font-weight(semibold);
+  text-decoration: none;
 
   &:hover,
   &:focus,
@@ -91,7 +90,6 @@ $-breadcrumb-outline-color: sage-color(grey, 400);
     &:focus,
     &:active {
       color: $-breadcrumb-interactive-color;
-      background: $-breadcrumb-interactive-bg;
     }
 
     &[aria-disabled="true"],

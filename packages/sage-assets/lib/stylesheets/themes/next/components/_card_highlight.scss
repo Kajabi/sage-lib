@@ -4,6 +4,9 @@
 /// @group sage
 ////
 
+$-card-highlight-border-radius: sage-border(radius-large);
+$-card-highlight-size: rem(12px);
+
 .sage-card-highlight {
   --color: #{sage-color(primary, 900)};
 
@@ -15,38 +18,38 @@
 .sage-card-highlight--left {
   top: 0;
   bottom: 0;
-  width: rem(4px);
+  width: $-card-highlight-size;
 }
 
 .sage-card-highlight--right {
   right: 0;
-  border-top-right-radius: sage-border(radius);
-  border-bottom-right-radius: sage-border(radius);
+  border-top-right-radius: $-card-highlight-border-radius;
+  border-bottom-right-radius: $-card-highlight-border-radius;
 }
 
 .sage-card-highlight--left {
   left: 0;
-  border-top-left-radius: sage-border(radius);
-  border-bottom-left-radius: sage-border(radius);
+  border-top-left-radius: $-card-highlight-border-radius;
+  border-bottom-left-radius: $-card-highlight-border-radius;
 }
 
 .sage-card-highlight--top,
 .sage-card-highlight--bottom {
   right: 0;
   left: 0;
-  height: rem(4px);
+  height: $-card-highlight-size;
 }
 
 .sage-card-highlight--top {
   top: 0;
-  border-top-left-radius: sage-border(radius);
-  border-top-right-radius: sage-border(radius);
+  border-top-left-radius: $-card-highlight-border-radius;
+  border-top-right-radius: $-card-highlight-border-radius;
 }
 
 .sage-card-highlight--bottom {
   bottom: 0;
-  border-bottom-left-radius: sage-border(radius);
-  border-bottom-right-radius: sage-border(radius);
+  border-bottom-left-radius: $-card-highlight-border-radius;
+  border-bottom-right-radius: $-card-highlight-border-radius;
 }
 
 @each $-color-name, $-color-sliders in $sage-colors {

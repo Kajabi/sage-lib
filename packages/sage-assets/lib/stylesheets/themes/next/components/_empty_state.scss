@@ -22,6 +22,7 @@ $-empty-state-graphic-page-height: rem(336px);
   }
 
   &:not(.sage-empty-state--compact):not(.sage-empty-state--page) {
+    gap: sage-spacing();
     padding: sage-spacing(2xl) sage-spacing();
   }
 }
@@ -46,7 +47,7 @@ $-empty-state-graphic-page-height: rem(336px);
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: sage-spacing(lg);
+  gap: sage-spacing();
   width: 100%;
   padding: sage-spacing(lg);
 
@@ -60,7 +61,8 @@ $-empty-state-graphic-page-height: rem(336px);
 }
 
 .sage-empty-state__actions,
-.sage-empty-state__custom-content {
+.sage-empty-state__custom-content,
+.sage-empty-state__video {
   margin-top: sage-spacing();
 }
 

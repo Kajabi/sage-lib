@@ -38,6 +38,7 @@ $-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
   flex-grow: 1;
   flex-basis: 0;
   padding: sage-spacing(sm);
+  text-decoration: none;
   color: $-choice-color-default;
   border: sage-border();
   border-radius: sage-border(radius);
