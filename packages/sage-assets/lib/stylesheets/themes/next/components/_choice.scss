@@ -64,7 +64,7 @@ $-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
   }
 
   &:focus {
-    border-color: sage-color(primary, 300);
+    border-color: sage-color(primary, 200);
     outline: none;
   }
 
@@ -235,5 +235,5 @@ $-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
   @extend %t-sage-body-xsmall;
 
   margin-top: sage-spacing(2xs);
-  color: sage-color(charcoal, 200);
+  color: sage-color(grey, 500);
 }

@@ -52,6 +52,7 @@ $-link-base-styles: (
     ),
     focus: (
       color: sage-color(red, 300),
+      focus-outline: sage-color(red, 200),
     ),
   )
 );
@@ -70,7 +71,6 @@ $-link-base-styles: (
     $outline-offset-inline: 4px,
     $outline-border-radius: sage-border(radius-medium),
   );
-  @include sage-focus-outline--update-color(sage-color(primary, 200));
 
   &:hover {
     color: sage-color(primary, 400);
@@ -78,6 +78,8 @@ $-link-base-styles: (
 
   &:focus {
     color: sage-color(primary, 300);
+    
+    @include sage-focus-outline--update-color(sage-color(primary, 200));
   }
 }
 
@@ -96,6 +98,8 @@ $-link-base-styles: (
         &:focus,
         &:active {
           color: map-get($-style-type-configs, color);
+
+          @include sage-focus-outline--update-color(map-get($-style-type-configs, focus-outline));
         }
         /* stylelint-enable max-nesting-depth */
       }
