@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { SageClassnames } from '../configs';
+import { SageClassnames, SageTokens } from '../configs';
 import { Tooltip } from '../Tooltip';
+import { LINK_COLORS, LINK_ICON_POSITIONS } from './configs';
 
 const tagPropTypes = PropTypes.oneOfType([
   PropTypes.string,
@@ -12,6 +13,11 @@ const tagPropTypes = PropTypes.oneOfType([
 export const Link = ({
   className,
   children,
+  icon,
+  iconPosition,
+  removeUnderline,
+  small,
+  style,
   suppressDefaultClass,
   tag,
   tooltip,
@@ -21,7 +27,11 @@ export const Link = ({
   const classNames = classnames(
     className,
     {
-      'sage-link': !suppressDefaultClass
+      'sage-link': !suppressDefaultClass,
+      [`sage-link--${style}`]: style,
+      'sage-link--small': small,
+      'sage-link--remove-underline': removeUnderline,
+      [`sage-link--icon-${iconPosition}-${icon}`]: icon && iconPosition,
     }
   );
 
@@ -58,22 +68,34 @@ export const Link = ({
   );
 };
 
+Link.CLASSNAMES = { ...SageClassnames.LINK };
+Link.COLORS = LINK_COLORS;
+Link.ICON_POSITIONS = LINK_ICON_POSITIONS;
+
 Link.defaultProps = {
   className: null,
   children: null,
+  icon: null,
+  iconPosition: null,
+  removeUnderline: false,
+  small: false,
+  style: Link.COLORS.PRIMARY,
   suppressDefaultClass: false,
   tag: null,
   tooltip: null,
   truncate: false,
 };
 
-Link.CLASSNAMES = { ...SageClassnames.LINK };
-
 Link.tagPropTypes = tagPropTypes;
 
 Link.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node,
+  icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),
+  iconPosition: PropTypes.oneOf(Object.values(Link.ICON_POSITIONS)),
+  removeUnderline: PropTypes.bool,
+  small: PropTypes.bool,
+  style: PropTypes.oneOf(Object.values(Link.COLORS)),
   suppressDefaultClass: PropTypes.bool,
   tag: tagPropTypes,
   tooltip: PropTypes.shape({

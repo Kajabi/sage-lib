@@ -1,6 +1,7 @@
 import React from 'react';
 import { selectArgs } from '../story-support/helpers';
 import { Description } from './Description';
+import { Badge } from '../Badge';
 import { Label } from '../Label';
 
 export default {
@@ -45,18 +46,18 @@ MultipleItems.args = {
       title: 'Item with HTML content',
       data: (
         <Label.Group>
-          <Label value="Lorem" color="draft" />
-          <Label value="Ipsum" color="draft" />
-          <Label value="Dolor" color="draft" />
-          <Label value="Sit" color="draft" />
-          <Label value="Amet" color="draft" />
-          <Label value="consectetur" color="draft" />
-          <Label value="adipiscing" color="draft" />
-          <Label value="elit" color="draft" />
-          <Label value="Duis" color="draft" />
-          <Label value="dignissim" color="draft" />
-          <Label value="fringilla" color="draft" />
-          <Label value="eros" color="draft" />
+          <Badge value="Lorem" color="draft" />
+          <Badge value="Ipsum" color="draft" />
+          <Badge value="Dolor" color="draft" />
+          <Badge value="Sit" color="draft" />
+          <Badge value="Amet" color="draft" />
+          <Badge value="consectetur" color="draft" />
+          <Badge value="adipiscing" color="draft" />
+          <Badge value="elit" color="draft" />
+          <Badge value="Duis" color="draft" />
+          <Badge value="dignissim" color="draft" />
+          <Badge value="fringilla" color="draft" />
+          <Badge value="eros" color="draft" />
         </Label.Group>
       ),
     }
@@ -128,18 +129,18 @@ StackedLayout.args = {
       title: 'Item with HTML content',
       data: (
         <Label.Group>
-          <Label value="Lorem" color="draft" />
-          <Label value="Ipsum" color="draft" />
-          <Label value="Dolor" color="draft" />
-          <Label value="Sit" color="draft" />
-          <Label value="Amet" color="draft" />
-          <Label value="consectetur" color="draft" />
-          <Label value="adipiscing" color="draft" />
-          <Label value="elit" color="draft" />
-          <Label value="Duis" color="draft" />
-          <Label value="dignissim" color="draft" />
-          <Label value="fringilla" color="draft" />
-          <Label value="eros" color="draft" />
+          <Badge value="Lorem" color="draft" />
+          <Badge value="Ipsum" color="draft" />
+          <Badge value="Dolor" color="draft" />
+          <Badge value="Sit" color="draft" />
+          <Badge value="Amet" color="draft" />
+          <Badge value="consectetur" color="draft" />
+          <Badge value="adipiscing" color="draft" />
+          <Badge value="elit" color="draft" />
+          <Badge value="Duis" color="draft" />
+          <Badge value="dignissim" color="draft" />
+          <Badge value="fringilla" color="draft" />
+          <Badge value="eros" color="draft" />
         </Label.Group>
       ),
     }

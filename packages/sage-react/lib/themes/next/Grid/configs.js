@@ -1,12 +1,11 @@
 import PropTypes from 'prop-types';
 
 export const CONTAINER_SIZES = {
-  TINY: 'tiny',
   XS: 'xs',
   SM: 'sm',
   MD: 'md',
   LG: 'lg',
-  XL: 'xl',
+  XL: 'full', // TODO: Deprecated in NEXT
   FULL: 'full',
 };
 

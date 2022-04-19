@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { SageTokens } from '../configs';
+import { Button } from '../Button';
 import { Icon } from '../Icon';
 import { EMPTY_STATE_SCOPES } from './configs';
 
@@ -60,7 +61,9 @@ export const EmptyState = ({
         )}
         {actions && (
           <div className="sage-empty-state__actions">
-            {actions}
+            <Button.Group gap={Button.Group.GAP_OPTIONS.SM}>
+              {actions}
+            </Button.Group>
           </div>
         )}
         {video && (

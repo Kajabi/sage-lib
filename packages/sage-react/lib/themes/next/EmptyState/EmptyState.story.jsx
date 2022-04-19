@@ -46,6 +46,9 @@ PageScope.args = {
   titleTag: 'h1',
   children: null,
   actions: (
-    <Button>Add Email Campaign</Button>
+    <>
+      <Button>Add Email Campaign</Button>
+      <Button subtle={true} color={Button.COLORS.SECONDARY}>Link</Button>
+    </>
   )
 };
