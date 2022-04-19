@@ -4,10 +4,9 @@
 /// @group sage
 ////
 
-$-description-action-size: rem(16px);
-$-description-action-var: var(--sage-description-action-width, #{$-description-action-size});
-$-description-title-size: calc(50% - #{$-description-action-var});
-$-description-title-var: var(--sage-description-title-width, #{$-description-title-size});
+$-description-size: 1fr;
+$-description-action-var: var(--sage-description-action-width, #{$-description-size});
+$-description-title-var: var(--sage-description-title-width, #{$-description-size});
 $-description-spacing: sage-spacing(sm);
 
 .sage-description {
@@ -23,8 +22,7 @@ $-description-spacing: sage-spacing(sm);
 
 .sage-description__term-group {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  // grid-template-columns: #{$-description-title-var} 1fr #{$-description-action-var};
+  grid-template-columns: #{$-description-title-var} #{$-description-action-var};
   grid-template-areas: "title data";
   gap: $-description-spacing;
   width: 100%;
@@ -54,8 +52,8 @@ $-description-spacing: sage-spacing(sm);
 
   .sage-description--stacked & {
     grid-template-areas:
-      "title title"
-      "data  data";
+      "title"
+      "data";
   }
 }
 
@@ -72,14 +70,14 @@ $-description-spacing: sage-spacing(sm);
   @extend %t-sage-body;
 
   grid-area: title;
-  color: sage-color(grey, 500);
+  color: sage-color(charcoal, 200);
 }
 
 .sage-description__data {
   @extend %t-sage-body-med;
 
   grid-area: data;
-  color: sage-color(grey, 800);
+  color: sage-color(charcoal, 400);
 }
 
 .sage-description__action {
