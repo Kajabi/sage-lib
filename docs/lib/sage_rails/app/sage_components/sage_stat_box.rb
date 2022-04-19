@@ -22,7 +22,7 @@ class SageStatBox < SageComponent
       href: String,
       value: String
     }],
-    raised: [:optional, TrueClass], # deprecated in NEXT
+    raised: [:optional, TrueClass],
     timeframe: [:optional, String],
     title: String,
     popover: [:optional, String]

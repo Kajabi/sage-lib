@@ -10,6 +10,6 @@ class SageEmptyState < SageComponent
     title_tag: [:optional, Set.new(["h1", "h2", "h3", "h4", "h5", "h5", "h6"])],
   })
   def sections
-    %w(empty_state_actions empty_state_text empty_state_video)
+    %w(sage_empty_state_actions sage_empty_state_text)
   end
 end
