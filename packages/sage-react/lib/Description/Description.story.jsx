@@ -66,7 +66,6 @@ MultipleItems.args = {
 
 export const MultipleItemsWithActionButton = Template.bind({});
 MultipleItemsWithActionButton.args = {
-  actionWidth: '108px',
   items: [
     {
       title: 'No action',
@@ -115,10 +114,10 @@ StackedLayout.args = {
       title: 'Short item',
       data: 'John Doe',
     },
-    null,
     {
       title: 'Wrapping item',
       data: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dignissim fringilla eros, at faucibus mauris aliquam at.',
+      action: { value: 'More' },
     },
     {
       title: 'Item with hidden title',
@@ -143,6 +142,7 @@ StackedLayout.args = {
           <Badge value="eros" color="draft" />
         </Label.Group>
       ),
+      action: { value: 'More tags' },
     }
   ]
 };
