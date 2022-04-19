@@ -68,14 +68,15 @@ dont_content = render partial: "#{partial_path_root}/#{theme_folder}/#{@title}/r
       <%= render "examples/shared/preview",
         type: "component",
         title: @title,
-        theme_folder: theme_folder,
+        theme_folder: theme_folder
       %>
     <% end %>
 
     <%= sage_component SageTabsPane, { id: "code" } do %>
       <%= render "examples/shared/code",
         type: "component",
-        title: @title %>
+        title: @title,
+        theme_folder: theme_folder %>
     <% end %>
 
     <%= sage_component SageTabsPane, { id: "props" } do %>
