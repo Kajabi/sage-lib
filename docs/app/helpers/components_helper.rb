@@ -12,6 +12,7 @@ module ComponentsHelper
   def sage_components
     [
       # Sage Generated Components
+
       {
         title: "alert",
         description: "Alerts are used to indicate user-driven notifications.",
@@ -43,6 +44,16 @@ module ComponentsHelper
         a11y: "done",
         react_component_slug: "sage-avatar--default",
         figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F9Km09NjlZHYWsMP7EGT8tI%2F%255BWIP%255D-Sage-3-%25E2%2580%2594-Admin-Components%3Fnode-id%3D6989%253A21606",
+      },
+      {
+        title: "badge",
+        description: "",
+        scss: "done",
+        docs: "done",
+        rails: "done",
+        react: "done",
+        a11y: "done",
+        figma_embed: "",
       },
       {
         title: "banner",
@@ -171,7 +182,7 @@ module ComponentsHelper
       },
       {
         title: "dot",
-        description: "Dots provide a subtle color cue to place beside text or other elements.", 
+        description: "Dots provide a subtle color cue to place beside text or other elements.",
         scss: "done",
         rails: "done",
         react: "done",
@@ -543,11 +554,11 @@ module ComponentsHelper
       },
       {
         title: "empty_state",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        scss: "todo",
+        description: "The Empty State is displayed for main application features that have never been interacted with before. The Empty State is also used for smaller features in the app that primarily focus on data entry and have no data to show.",
+        scss: "done",
         docs: "done",
-        rails: "todo",
-        react: "todo",
+        rails: "done",
+        react: "done",
         a11y: "done",
         react_component_slug: "sage-emptystate--default",
         figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F9Km09NjlZHYWsMP7EGT8tI%2F%255BWIP%255D-Sage-3-%25E2%2580%2594-Admin-Components%3Fnode-id%3D9%253A156",
@@ -733,6 +744,15 @@ module ComponentsHelper
         a11y: "done",
         react_component_slug: "sage-tabs--default",
         figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F9Km09NjlZHYWsMP7EGT8tI%2F%255BWIP%255D-Sage-3-%25E2%2580%2594-Admin-Components%3Fnode-id%3D6999%253A22291",
+      },
+      {
+        title: "tag",
+        description: "Tags show concise metadata in a compact format.",
+        scss: "done",
+        rails: "done",
+        react: "done",
+        a11y: "done",
+        react_component_slug: "sage-tag--default",
       },
       {
         title: "transaction_card",
