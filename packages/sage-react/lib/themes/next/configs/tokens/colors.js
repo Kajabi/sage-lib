@@ -8,7 +8,7 @@ Object.keys(SageDictionary.COLOR_CORE).forEach((colorName) => {
   TOKENS_COLORS[colorName] = colorName.toLowerCase();
 });
 
-// TOKENS_COLOR_PALETTE.GREY_400 --> `#b5bac0`
+// TOKENS_COLOR_PALETTE.GREY_500 --> `#b5bac0`
 export const TOKENS_COLOR_PALETTE = {};
 Object.keys(SageDictionary.COLOR).forEach((colorName) => {
   Object.keys(SageDictionary.COLOR[colorName]).forEach((index) => {
@@ -24,7 +24,7 @@ Object.keys(SageDictionary.COLOR).forEach((colorName) => {
   });
 });
 
-// TOKENS_COLOR_SLIDERS.GREY_400 --> `'grey-400'`
+// TOKENS_COLOR_SLIDERS.GREY_500 --> `'grey-500'`
 export const TOKENS_COLOR_SLIDERS = {
   INHERIT: 'inherit',
 };

@@ -73,7 +73,7 @@ export const UploadCard = ({
               className="sage-upload-card__icon"
               icon={Icon.ICONS.FILE}
               size={Icon.SIZES.XL}
-              color={SageTokens.COLOR_SLIDERS.GREY_500}
+              color={SageTokens.COLOR_SLIDERS.CHARCOAL_100}
             />
             <Button
               color={Button.COLORS.PRIMARY}

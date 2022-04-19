@@ -6,7 +6,7 @@ export default {
   title: 'Sage/ProgressBar',
   component: ProgressBar,
   args: {
-    color: ProgressBar.COLORS.PRIMARY_300,
+    color: ProgressBar.COLORS.PRIMARY_200,
     label: 'Cloning product',
     percent: '44',
   },

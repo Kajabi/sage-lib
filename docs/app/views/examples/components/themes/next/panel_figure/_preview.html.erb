@@ -66,14 +66,14 @@ but note that Wistia objects need a little additional styling that can be enable
     <%= sage_component SagePanelFigure, { bleed: "top", padded: true } do %>
       <%= image_tag("card-placeholder-lg.png", alt: "") %>
     <% end %>
-    <p>Padded figure with default background color (Grey 100).</p>
+    <p>Padded figure with default background color (Grey 200).</p>
   <% end %>
 
   <%= sage_component SagePanel, {} do %>
     <%= sage_component SagePanelFigure, {
       bleed: "top",
       padded: true,
-      background_color: SageTokens::COLOR_PALETTE[:GREY_500],
+      background_color: SageTokens::COLOR_PALETTE[:CHARCOAL_100],
     } do %>
       <%= image_tag("card-placeholder-lg.png", alt: "") %>
     <% end %>

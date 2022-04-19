@@ -165,54 +165,54 @@
       },
       "charcoal": {
         "100": {
-          "hex": { "value": "#e6f4fe" },
+          "hex": { "value": "#8D939A" },
           "code": { "value": "charcoal-100" },
           "classname": { "value": "t-sage--color-charcoal-100" }
         },
         "200": {
-          "hex": { "value": "#8ecafb" },
+          "hex": { "value": "#60666C" },
           "code": { "value": "charcoal-200" },
           "classname": { "value": "t-sage--color-charcoal-200" }
         },
         "300": {
-          "hex": { "value": "#0072ef" },
+          "hex": { "value": "#43474B" },
           "code": { "value": "charcoal-300" },
           "classname": { "value": "t-sage--color-charcoal-300" }
         },
         "400": {
-          "hex": { "value": "#054fb8" },
+          "hex": { "value": "#202327" },
           "code": { "value": "charcoal-400" },
           "classname": { "value": "t-sage--color-charcoal-400" }
         },
         "500": {
-          "hex": { "value": "#07265f" },
+          "hex": { "value": "#181b20" },
           "code": { "value": "charcoal-500" },
           "classname": { "value": "t-sage--color-charcoal-500" }
         }
       },
       "grey": {
         "100": {
-          "hex": { "value": "#f9fafa" },
+          "hex": { "value": "#F9FAFA" },
           "code": { "value": "grey-100" },
           "classname": { "value": "t-sage--color-grey-100" }
         },
         "200": {
-          "hex": { "value": "#f6f8f8" },
+          "hex": { "value": "#F6F8F8" },
           "code": { "value": "grey-200" },
           "classname": { "value": "t-sage--color-grey-200" }
         },
         "300": {
-          "hex": { "value": "#eceeef" },
+          "hex": { "value": "#ECEEEF" },
           "code": { "value": "grey-300" },
           "classname": { "value": "t-sage--color-grey-300" }
         },
         "400": {
-          "hex": { "value": "#d3d5d9" },
+          "hex": { "value": "#D3D5D9" },
           "code": { "value": "grey-400" },
           "classname": { "value": "t-sage--color-grey-400" }
         },
         "500": {
-          "hex": { "value": "#b5bac0" },
+          "hex": { "value": "#B5BAC0" },
           "code": { "value": "grey-500" },
           "classname": { "value": "t-sage--color-grey-500" }
         }

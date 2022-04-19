@@ -31,7 +31,7 @@ $-media-tile-breakpoints: (
 }
 
 .sage-media-tile__body {
-  color: sage-color(grey, 600);
+  color: sage-color(charcoal, 200);
 
   > p {
     @extend %t-sage-body;
@@ -39,7 +39,7 @@ $-media-tile-breakpoints: (
 }
 
 .sage-media-tile__caption {
-  color: sage-color(grey, 500);
+  color: sage-color(charcoal, 100);
 
   > p {
     @extend %t-sage-body-small;
@@ -81,7 +81,7 @@ $-media-tile-breakpoints: (
     outline: 0;
 
     &::after {
-      border-color: sage-color(primary, 500);
+      border-color: sage-color(primary, 300);
     }
   }
 }

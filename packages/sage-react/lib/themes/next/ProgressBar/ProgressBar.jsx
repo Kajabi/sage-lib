@@ -39,7 +39,7 @@ ProgressBar.COLORS = SageTokens.COLOR_PALETTE;
 
 ProgressBar.defaultProps = {
   className: null,
-  color: ProgressBar.COLORS.PRIMARY_300,
+  color: ProgressBar.COLORS.PRIMARY_200,
   label: null,
   percent: null,
 };

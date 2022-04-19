@@ -14,9 +14,9 @@ $-radio-color-default: map-get($sage-radio-colors, default);
 $-radio-color-disabled: map-get($sage-radio-colors, disabled);
 $-radio-color-error: map-get($sage-radio-colors, error);
 $-radio-color-hover: map-get($sage-radio-colors, hover);
-$-radio-color-text-disabled: sage-color(grey, 400);
-$-radio-color-focus-outline: sage-color(primary, 400);
-$-radio-color-focus-outline-error: sage-color(red, 300);
+$-radio-color-text-disabled: sage-color(grey, 500);
+$-radio-color-focus-outline: sage-color(primary, 200);
+$-radio-color-focus-outline-error: sage-color(red, 200);
 
 // Additional configurations
 $-radio-button-size: $sage-radio-size;
@@ -66,7 +66,7 @@ $-radio-focus-outline-color: currentColor;
 
   .sage-radio--has-border & {
     margin-left: sage-spacing(lg);
-    color: sage-color(grey, 800);
+    color: sage-color(charcoal, 400);
     font-weight: sage-font-weight(semibold);
 
     &::after {

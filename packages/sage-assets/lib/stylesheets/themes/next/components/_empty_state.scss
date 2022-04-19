@@ -103,13 +103,13 @@ $-empty-state-graphic-page-height: rem(336px);
 
 .sage-empty-state__icon {
   display: inline-flex;
-  color: sage-color(grey, 500);
+  color: sage-color(charcoal, 100);
 }
 
 .sage-empty-state__title {
   @extend %t-sage-heading-4;
 
-  color: sage-color(grey, 900);
+  color: sage-color(charcoal, 500);
   word-wrap: break-word;
 
   .sage-empty-state--page & {
@@ -124,6 +124,6 @@ $-empty-state-graphic-page-height: rem(336px);
 .sage-empty-state__text {
   @extend %t-sage-body;
 
-  color: sage-color(grey, 700);
+  color: sage-color(charcoal, 300);
   word-wrap: break-word;
 }

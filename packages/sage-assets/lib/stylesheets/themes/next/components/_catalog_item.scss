@@ -37,7 +37,7 @@ $-catalogue-item-image-height-mobile: rem(120px);
   }
 
   &.sage-catalog-item--loading {
-    background-color: sage-color(grey, 100);
+    background-color: sage-color(grey, 200);
     cursor: wait;
   }
 
@@ -87,7 +87,7 @@ $-catalogue-item-image-height-mobile: rem(120px);
   grid-area: img;
   overflow: hidden;
   min-height: $-catalogue-item-image-height-min;
-  background: sage-color(grey, 200);
+  background: sage-color(grey, 300);
   border-radius: sage-border(radius);
   border: sage-border();
 

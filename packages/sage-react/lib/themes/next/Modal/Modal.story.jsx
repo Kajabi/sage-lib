@@ -10,7 +10,7 @@ import { Modal } from './Modal';
 const DefaultBody = ({ onExit }) => (
   <>
     <Modal.Header
-      icon={{ color: Icon.COLORS.RED_300, name: Icon.ICONS.DANGER }}
+      icon={{ color: Icon.COLORS.RED_200, name: Icon.ICONS.DANGER }}
       title="Example Sage Modal"
       popover={{
         title: 'Example popover title',
@@ -94,7 +94,7 @@ const FullscreenBody = ({ onExit }) => (
       )}
       headerProgressBar={(
         <ProgressBar
-          color={ProgressBar.COLORS.PRIMARY_300}
+          color={ProgressBar.COLORS.PRIMARY_200}
           label="Cloning product"
           percent="44"
         />

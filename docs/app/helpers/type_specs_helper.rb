@@ -232,59 +232,59 @@ module TypeSpecsHelper
     if SageRails.next_theme?
       [
         {
-          color: %(<span class="t-sage-body-semi t-sage--color-primary-500">Primary</span>),
-          type_class: md("`t-sage--color-primary-500`"),
+          color: %(<span class="t-sage-body-semi t-sage--color-primary-300">Primary</span>),
+          type_class: md("`t-sage--color-primary-300`"),
           constants: md(%(
-            Rails: `SageClassnames::TYPE_COLORS::PRIMARY_500`<br/>
-            React: `SageClassnames.TYPE_COLORS.PRIMARY_500`
+            Rails: `SageClassnames::TYPE_COLORS::PRIMARY_300`<br/>
+            React: `SageClassnames.TYPE_COLORS.PRIMARY_300`
           )),
         },
         {
-          color: %(<span class="t-sage-body-semi t-sage--color-grey-500">Grey</span>),
-          type_class: md("`t-sage--color-grey-500`"),
+          color: %(<span class="t-sage-body-semi t-sage--color-charcoal-100">Grey</span>),
+          type_class: md("`t-sage--color-charcoal-100`"),
           constants: md(%(
-            Rails: `SageClassnames::TYPE_COLORS::GREY_500`<br/>
-            React: `SageClassnames.TYPE_COLORS.GREY_500`
+            Rails: `SageClassnames::TYPE_COLORS::CHARCOAL_100`<br/>
+            React: `SageClassnames.TYPE_COLORS.CHARCOAL_100`
           )),
         },
         {
-          color: %(<span class="t-sage-body-semi t-sage--color-red-500">Red</span>),
-          type_class: md("`t-sage--color-red-500`"),
+          color: %(<span class="t-sage-body-semi t-sage--color-red-300">Red</span>),
+          type_class: md("`t-sage--color-red-300`"),
           constants: md(%(
-            Rails: `SageClassnames::TYPE_COLORS::RED_500`<br/>
-            React: `SageClassnames.TYPE_COLORS.RED_500`
+            Rails: `SageClassnames::TYPE_COLORS::RED_300`<br/>
+            React: `SageClassnames.TYPE_COLORS.RED_300`
           )),
         },
         {
-          color: %(<span class="t-sage-body-semi t-sage--color-orange-500">Orange</span>),
-          type_class: md("`t-sage--color-orange-500`"),
+          color: %(<span class="t-sage-body-semi t-sage--color-orange-300">Orange</span>),
+          type_class: md("`t-sage--color-orange-300`"),
           constants: md(%(
-            Rails: `SageClassnames::TYPE_COLORS::ORANGE_500`<br/>
-            React: `SageClassnames.TYPE_COLORS.ORANGE_500`
+            Rails: `SageClassnames::TYPE_COLORS::ORANGE_300`<br/>
+            React: `SageClassnames.TYPE_COLORS.ORANGE_300`
           )),
         },
         {
-          color: %(<span class="t-sage-body-semi t-sage--color-yellow-500">Yellow</span>),
-          type_class: md("`t-sage--color-yellow-500`"),
+          color: %(<span class="t-sage-body-semi t-sage--color-yellow-300">Yellow</span>),
+          type_class: md("`t-sage--color-yellow-300`"),
           constants: md(%(
-            Rails: `SageClassnames::TYPE_COLORS::YELLOW_500`<br/>
-            React: `SageClassnames.TYPE_COLORS.YELLOW_500`
+            Rails: `SageClassnames::TYPE_COLORS::YELLOW_300`<br/>
+            React: `SageClassnames.TYPE_COLORS.YELLOW_300`
           )),
         },
         {
-          color: %(<span class="t-sage-body-semi t-sage--color-sage-500">Sage</span>),
-          type_class: md("`t-sage--color-sage-500`"),
+          color: %(<span class="t-sage-body-semi t-sage--color-sage-300">Sage</span>),
+          type_class: md("`t-sage--color-sage-300`"),
           constants: md(%(
-            Rails: `SageClassnames::TYPE_COLORS::SAGE_500`<br/>
-            React: `SageClassnames.TYPE_COLORS.SAGE_500`
+            Rails: `SageClassnames::TYPE_COLORS::SAGE_300`<br/>
+            React: `SageClassnames.TYPE_COLORS.SAGE_300`
           )),
         },
         {
-          color: %(<span class="t-sage-body-semi t-sage--color-purple-500">Purple</span>),
-          type_class: md("`t-sage--color-purple-500`"),
+          color: %(<span class="t-sage-body-semi t-sage--color-purple-300">Purple</span>),
+          type_class: md("`t-sage--color-purple-300`"),
           constants: md(%(
-            Rails: `SageClassnames::TYPE_COLORS::PURPLE_500`<br/>
-            React: `SageClassnames.TYPE_COLORS.PURPLE_500`
+            Rails: `SageClassnames::TYPE_COLORS::PURPLE_300`<br/>
+            React: `SageClassnames.TYPE_COLORS.PURPLE_300`
           )),
         }
       ]

@@ -79,7 +79,7 @@ $-hero-play-icon-background-color-hover: rgba(sage-color(white, 100), 1);
 .sage-hero__body {
   grid-area: content;
   margin-bottom: $-hero-margin-y;
-  color: sage-color(grey, 700);
+  color: sage-color(charcoal, 300);
 
   @media (max-width: sage-breakpoint(sm-max)) {
     padding: 0 sage-spacing(md);
@@ -114,7 +114,7 @@ $-hero-play-icon-background-color-hover: rgba(sage-color(white, 100), 1);
   }
 
   &:focus {
-    border: 3px solid sage-color(primary, 500);
+    border: 3px solid sage-color(primary, 300);
   }
 }
 
@@ -145,7 +145,7 @@ $-hero-play-icon-background-color-hover: rgba(sage-color(white, 100), 1);
     align-items: center;
     width: $-hero-icon-size;
     font-size: $-hero-icon-size;
-    color: sage-color(primary, 300);
+    color: sage-color(primary, 200);
   }
 
   &::after {

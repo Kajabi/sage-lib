@@ -87,7 +87,7 @@ $-tab-color-disabled: map-get($sage-tab-colors, disabled);
         position: absolute;
         z-index: 2;
         right: rem(-32px);
-        color: sage-color(grey, 500);
+        color: sage-color(charcoal, 100);
 
         @include sage-icon-base(right-small, xl);
       }
