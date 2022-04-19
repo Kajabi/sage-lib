@@ -21,6 +21,7 @@ $-loader-spinner-path-speed: 1.5s;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-flow: column;
   }
 
   // visibility of the loader is toggled by setting data attribute "data-loading" to "true".
@@ -101,6 +102,10 @@ $-loader-spinner-path-speed: 1.5s;
   stroke-linejoin: round;
   stroke-miterlimit: 10;
   stroke: sage-color(sage, 500);
+}
+
+.sage-loader__text {
+  margin-top: sage-spacing(sm);
 }
 
 @keyframes loader-bar {
