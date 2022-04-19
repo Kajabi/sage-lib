@@ -8,6 +8,7 @@ $-description-action-size: rem(16px);
 $-description-action-var: var(--sage-description-action-width, #{$-description-action-size});
 $-description-title-size: calc(50% - #{$-description-action-var});
 $-description-title-var: var(--sage-description-title-width, #{$-description-title-size});
+$-description-spacing: sage-spacing(sm);
 
 .sage-description {
   display: flex;
@@ -17,14 +18,15 @@ $-description-title-var: var(--sage-description-title-width, #{$-description-tit
 }
 
 .sage-description--no-dividers {
-  gap: sage-spacing(sm);
+  gap: $-description-spacing;
 }
 
 .sage-description__term-group {
   display: grid;
-  grid-template-columns: #{$-description-title-var} 1fr #{$-description-action-var};
-  grid-template-areas: "title data action";
-  gap: sage-spacing(sm);
+  grid-template-columns: 1fr 1fr;
+  // grid-template-columns: #{$-description-title-var} 1fr #{$-description-action-var};
+  grid-template-areas: "title data";
+  gap: $-description-spacing;
   width: 100%;
 
   &:not(:last-child) {
@@ -39,29 +41,30 @@ $-description-title-var: var(--sage-description-title-width, #{$-description-tit
 
   .sage-description--stacked & {
     grid-template-areas:
-      "title title action"
-      "data  data  action";
+      "title"
+      "data";
     align-items: center;
-    row-gap: sage-spacing(2xs);
+    grid-template-columns: 1fr;
+    row-gap: $-description-spacing;
   }
 }
 
 .sage-description__term-group--no-action {
-  grid-template-areas: "title data data";
+  grid-template-areas: "title data";
 
   .sage-description--stacked & {
     grid-template-areas:
-      "title title title"
-      "data  data  data";
+      "title title"
+      "data  data";
   }
 }
 
 .sage-description__term-group--hide-title {
-  grid-template-areas: "data data action";
+  grid-template-areas: "data data";
 
   &.sage-description__term-group--no-action,
   .sage-description--stacked & {
-    grid-template-areas: "data data data";
+    grid-template-areas: "data data";
   }
 }
 
@@ -80,5 +83,6 @@ $-description-title-var: var(--sage-description-title-width, #{$-description-tit
 }
 
 .sage-description__action {
-  grid-area: action;
+  display: block;
+  margin-top: $-description-spacing;
 }

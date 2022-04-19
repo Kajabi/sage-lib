@@ -59,6 +59,10 @@
     {
       title: "Wrapping item",
       data: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dignissim fringilla eros, at faucibus mauris aliquam at.",
+      action: {
+        value: "Details",
+        attributes: { href: "#" }
+      }
     },
     {
       title: "Item with hidden title",
@@ -96,7 +100,7 @@
   use_sage_type: true
 ) %>
 <%= sage_component SageDescription, {
-  action_width: "108px",
+  action_width: "50%",
   items: [
     {
       title: "No action",
