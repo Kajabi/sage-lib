@@ -3,7 +3,7 @@
 # Search items to see if any items are active or not.
 subitems_active = false
 component.items.each do | item |
-  if (item[:active] == true) or current_page?(item[:link]) 
+  if (item[:active] == true) or current_page?(item[:link])
     subitems_active = true
   end
 end if component.items.present?
@@ -14,11 +14,13 @@ active_class = (subitems_active or component.active or (component.no_active.blan
 # Determine nav type class
 component_class = component.type ? "sage-nav__link--#{component.type}" : ""
 
+nav_link_icon_class = component.icon ? "sage-nav__link--with-icon" : ""
+
 # Ensure attributes are a Hash
 attributes = component.attributes.present? ? component.attributes : {}
 
 %>
-<%= link_to component.link, method: component.method, class: "sage-nav__link #{active_class} #{component_class}", **attributes do %>
+<%= link_to component.link, method: component.method, class: "sage-nav__link #{active_class} #{component_class} #{nav_link_icon_class}", **attributes do %>
   <% if component.icon %>
     <i class="sage-icon-<%= component.icon %>-lg sage-nav__icon"></i>
   <% end %>
