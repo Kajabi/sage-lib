@@ -1,0 +1,99 @@
+<tr>
+  <td><%= md('`change`') %></td>
+  <td><%= md('Sets the `type` and `value` properties for the label.') %></td>
+  <td><%= md('```
+  {
+    type: "positive, negative, neutral",
+    value: String
+  }
+  ```') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`custom_label`') %></td>
+  <td><%= md('Custom label or content.') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`data`') %><%= sage_component SageBadge, { color: "published", value: "required" } %></td>
+  <td><%= md('Numeric data displayed.') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`has_data`') %></td>
+  <td><%= md('Boolean that determines styling for `data`.') %></td>
+  <td><%= md('Bool') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`icon`') %></td>
+  <td><%= md('Shows icon to the left of data.') %></td>
+  <td><%= md('```
+  {
+    card_color: Sage system statuses (optional)
+    color: Sage system colors (optional)
+    name: String
+  }
+  ```') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`image`') %></td>
+  <td><%= md('Shows image to the left of data.') %></td>
+  <td><%= md('```
+  {
+    alt: String (optional)
+    value: String
+  }
+  ```') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`legend_dot_color`') %></td>
+  <td><%= md('Show Legend dot with preset Sage system colors.') %></td>
+  <td><%= md('Sage system colors') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`legend_dot_custom_color`') %></td>
+  <td><%= md('Show Legend dot with any custom color.') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`link`') %></td>
+  <td><%= md('Sets the `href` and `value` properties for a given link.') %></td>
+  <td><%= md('```
+  {
+    href: String,
+    value: String
+  }
+  ```') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`raised`') %></td>
+  <td><%= md('Sets "raised panel" styling.') %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`popover`') %></td>
+  <td><%= md('Slot for popover or custom content.') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`timeframe`') %></td>
+  <td><%= md('Timeframe for data.') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`title`') %><%= sage_component SageBadge, { color: "published", value: "required" } %></td>
+  <td><%= md('Text displayed as the title.') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>

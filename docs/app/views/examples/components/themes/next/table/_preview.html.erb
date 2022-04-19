@@ -1,0 +1,319 @@
+<%
+people_data = [
+  {
+    initials: 'AF',
+    name: 'Albert Flores',
+    email: 'albertflores@example.com',
+    price: '$420.00 USD',
+    amount: '1',
+    labels: ["green", "house"],
+    status: 'published'
+  },
+  {
+    initials: 'EP',
+    name: 'Eleanor Pena',
+    email: 'e_pena@example.com',
+    price: '$420.00 USD',
+    amount: '1',
+    labels: ["red"],
+    status: 'draft'
+  },
+  {
+    initials: 'LJ',
+    name: 'Lily Jones',
+    email: 'lilyjones@example.com',
+    price: '$420.00 USD',
+    amount: '1',
+    labels: ["house"],
+    status: 'warning'
+  },
+  {
+    initials: 'KM',
+    name: 'Kathryn Murphy',
+    email: 'katmurphy@example.com',
+    price: '$420.00 USD',
+    amount: '1',
+    labels: ["red", "house"],
+    status: 'locked'
+  },
+  {
+    initials: 'DR',
+    name: 'Darelene Robertson',
+    email: 'd_robertson@example.com',
+    price: '$420.00 USD',
+    amount: '1',
+    labels: [],
+    status: 'danger'
+  },
+  {
+    initials: 'RE',
+    name: 'Ralph Edwards',
+    email: 'ralphedwards@example.com',
+    price: '$420.00 USD',
+    amount: '1',
+    labels: [],
+    status: 'draft'
+  },
+  {
+    initials: 'JW',
+    name: 'Jenny Wilson',
+    email: 'jennywilson@example.com',
+    price: '$420.00 USD',
+    amount: '1',
+    labels: [],
+    status: 'published'
+  }
+]
+
+sample_table = {
+  headers: [
+    "Title",
+    "Products",
+    "Price",
+    "Qty sold",
+    "Net revenue",
+    "Status"
+  ],
+  rows: [
+    {
+      value_1: "Quam non nunc eu imperdiet",
+      value_2: "2",
+      value_3: "$328.00",
+      value_4: "0",
+      value_5: "0",
+      value_6: sage_component(SageBadge, {
+        color: "draft",
+        value: "Draft",
+      })
+    },
+    {
+      value_1: "Cursus purus sed at quisque",
+      value_2: "3",
+      value_3: "$490.00",
+      value_4: "453",
+      value_5: "$275.43",
+      value_6: sage_component(SageBadge, {
+        color: "published",
+        value: "Published",
+      })
+    },
+    {
+      value_1: "Sit quis a enim venenatis elit ac",
+      value_2: "4",
+      value_3: "$219.00",
+      value_4: "536",
+      value_5: "$739.65",
+      value_6: sage_component(SageBadge, {
+        color: "published",
+        value: "Published",
+      })
+    }
+  ]
+}
+%>
+
+<h3 class="t-sage-heading-6">Responsive table</h3>
+<%= sage_component SageTable, {
+  headers: sample_table[:headers],
+  rows: sample_table[:rows],
+  caption: "Responsive tables require the use of two parent containers",
+  caption_side: "top",
+} %>
+
+<h3 class="t-sage-heading-6">Table with highlighted rows and block cells</h3>
+<%= sage_component SageTable, {
+  caption: %(
+    Block cells can be used with anchor tags to link the entire cell, or <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> elements for content
+  ),
+  headers: [
+    "Mattis",
+    "Justo Inceptos"
+  ],
+  selectable: true,
+  responsive: false,
+  rows: [
+    [
+      %(
+        <a href="#" class="sage-table-cell__block sage-table-cell__link">
+          <div class="sage-table-cell__heading">
+            <p class="sage-table-cell__title">First item</p>
+            <span class="sage-table-cell__label sage-label sage-label--success">Accepted</span>
+
+          </div>
+          <div class="sage-table-cell__body">
+            Maecenas sed diam eget risus varius blandit sit amet non
+          </div>
+        </a>
+      ),
+      %(<a href="#" class="sage-table-cell__link">Porta Ipsum</a>)
+    ],
+    [
+      %(
+        <a href="#" class="sage-table-cell__block sage-table-cell__link">
+          <div class="sage-table-cell__heading">
+            <p class="sage-table-cell__title">Second item</p>
+            <span class="sage-table-cell__label sage-label sage-label--warning">On hold</span>
+          </div>
+          <div class="sage-table-cell__body">
+            Pellentesque ornare sem lacinia quam venenatis vestibulum
+          </div>
+        </a>
+      ),
+      %(<a href="#" class="sage-table-cell__link">Dapibus Vulputate</a>)
+    ]
+  ]
+} %>
+
+<h3 class="t-sage-heading-6">Table with selectively truncated cells</h3>
+<p>Individual cells should be assigned the <code>.sage-table-cell--truncate</code> class. Not suggested for use with long strings of <em>important</em> text: use the responsive (scrolling) table instead.</p>
+<%= sage_component SageTable, {
+  headers: [
+    "Malesuada",
+    "Amet Cras",
+    "Consectetur",
+  ],
+  rows: [
+    [
+      %(<span class="sage-table-cell__label sage-label sage-label--danger">Warning</span>),
+      "$20,323.30 USD",
+      {
+        value: "Sed posuere consectetur",
+        html_attributes: {
+          class: "sage-table-cell--truncate"
+        }
+      }
+    ],
+    [
+      %(<span class="sage-table-cell__label sage-label sage-label--draft">Draft</span>),
+      "$1,101,444.31 USD",
+      {
+        value: "Curabitur blandit tempus",
+        html_attributes: {
+          class: "sage-table-cell--truncate"
+        }
+      }
+    ]
+  ]
+} %>
+
+<h3 class="t-sage-heading-6">Hiding and showing cell content</h3>
+<p>Individual cells can make use of the <a class="sage-link" href="<%= pages_design_path(:grid) %>">Sage Grid</a> classes for responsive display of content. Refer to the <a class="sage-link" href="<%= pages_design_path(:icon) %>#grid-responsive-show-hide">Grid documentation</a> for more details.</p>
+<p>Remember to apply the same classes equally to <strong>all related vertical columns</strong>, or the structure of the table will be misaligned.</p>
+<%= sage_component SageTable, {
+  headers: [
+    "Malesuada",
+    "Amet Cras",
+    { html_attributes: { class: "sage-col--sm-hide" }, value: %(Hidden &lt; <code>sm</code> breakpoint) },
+    { html_attributes: { class: "sage-col--lg-hide" }, value: %(Hidden &lt; <code>lg</code> breakpoint) },
+  ],
+  selectable: true,
+  rows: [
+    [
+      "Donec sed odio dui",
+      %(<span class="sage-table-cell__label sage-label sage-label--draft">Draft</span>),
+      { html_attributes: { class: "sage-col--sm-hide" }, value: "Lorem Tristique" },
+      { html_attributes: { class: "sage-col--lg-hide" }, value: "Cras justo odio, dapibus ac facilisis" },
+    ],
+    [
+      "Nulla non metus",
+      %(<span class="sage-table-cell__label sage-label sage-label--success">Complete</span>),
+      { html_attributes: { class: "sage-col--sm-hide" }, value: "Euismod Dapibus" },
+      { html_attributes: { class: "sage-col--lg-hide" }, value: "Curabitur blandit tempus" },
+    ]
+  ]
+} %>
+
+<h3>Using `sage_table_for`</h3>
+<%= md("
+As an alterative to directly calling the SageTable component,
+a helper variation is available that allows for formatting table columns
+in a more compositional fashion. This involves calling `sage_table_for` with a collection,
+and then using `t.column ... do |c|` blocks to provide templates for each column of data.
+See the \"Properties\" tab for documentation of the available parameters.
+
+**NOTE:** This is an MVP implementation based on a helper written earlier for `kajabi-products`
+and not completely aligned with SageTable yet.
+It is safe to use, but should be tracked against future updates.
+") %>
+
+<%= sage_table_for people_data, sortable: true, responsive: true, caption: "<p>Testing <b>stuff</b></p>".html_safe do |t| %>
+  <% t.column :initials, label: "", data_type: "checkbox" do |c| %>
+    <%= sage_component SageCheckbox, {
+      label_text: 'Select row',
+      standalone: true,
+      id: "table-row-#{c[:initials]}",
+      attributes: {
+        # NOTE: Wire up selection logic as needed using `onchange` event handlers
+        # onchange: "console.log('toggled #{c[:name]}');"
+      }
+    } %>
+  <% end %>
+
+  <% t.column :initials, label: "", data_type: "avatar" do |c| %>
+    <%= sage_component SageAvatar, {
+      initials: c[:initials],
+      color: SageTokens::COLORS[rand(7)],
+    } %>
+  <% end %>
+
+  <% t.column :name, label: "Name", strong: true, truncate: true do |c| %>
+    <span data-js-tooltip="<%= c[:name] %>">
+      <%= c[:name] %>
+    </span>
+  <% end %>
+
+  <% t.column :email, label: "Email", truncate: true do |c| %>
+    <span data-js-tooltip="<%= c[:email] %>">
+      <%= c[:email] %>
+    </span>
+  <% end %>
+
+  <% t.column :price, label: "Price", style: "width: 140px", hide: { md: true } do |c| %>
+    <%= c[:price] %>
+  <% end %>
+
+  <% t.column :amount, label: "Amount", style: "width: 100px", hide: { md: true } do |c| %>
+    <%= c[:amount] %>
+  <% end %>
+
+  <% t.column :labels, label: "Labels", style: "width: 150px", hide: { sm: true } do |c| %>
+    <% c[:labels].each do |label| %>
+      <%= sage_component SageBadge, {
+        value: label,
+        color: "info",
+      } %>
+    <% end %>
+  <% end %>
+
+  <% t.column :status, label: "Status", style: "width: 100px", hide: { sm: true } do |c| %>
+    <%= sage_component SageBadge, {
+      value: c[:status].titlecase,
+      color: c[:status],
+      } %>
+  <% end %>
+
+  <% t.column :actions, label: "Actions", style: "width: 100px" do |c| %>
+    <%= sage_component SageButtonGroup, { gap: :xs } do %>
+      <%= sage_component SageButton, {
+        subtle: true,
+        value: 'Edit',
+        icon: { name: 'pen', style: 'only' },
+        style: 'primary',
+        attributes: {
+          href: "?edit=#edit",
+          "data-js-tooltip": "Edit",
+        }
+      } %>
+      <%= sage_component SageButton, {
+        subtle: true,
+        value: 'Delete',
+        icon: { name: 'trash', style: 'only' },
+        style: 'danger',
+        attributes: {
+          href: "?remove=#delete",
+          "data-js-tooltip": "Delete",
+        }
+      } %>
+    <% end %>
+  <% end %>
+<% end %>

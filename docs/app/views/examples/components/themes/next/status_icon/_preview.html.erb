@@ -1,0 +1,21 @@
+<%= sage_component SagePanelBlock, {} do %>
+  <%= sage_component SageStatusIcon, {
+    icon: "preview-on",
+    value: "Preview is active"
+  } %>
+
+  <%= sage_component SageStatusIcon, {
+    icon: "lock",
+    value: "This has been locked"
+  } %>
+
+  <%= sage_component SageStatusIcon, {
+    icon: "warning",
+    value: "Danger danger!"
+  } %>
+
+  <%= sage_component SageStatusIcon, {
+    icon: "info-circle",
+    value: "Good information here :)"
+  } %>
+<% end %>

@@ -1,0 +1,111 @@
+<h3>Basic Usage</h3>
+<%= sage_component SageIcon, { icon: "pen", label: "Edit" } %>
+
+<h3>Colors</h3>
+<%= sage_component SageCardList, {} do %>
+  <% SageTokens::COLORS.each do | color | %>
+    <%= sage_component SageCardListItem, { grid_template: "et" } do %>
+      <%= sage_component SageIcon, { icon: "pen", color: "#{color}-500" } %>
+      <%= color %>
+    <% end %>
+  <% end %>
+<% end %>
+
+<h3>Sizes</h3>
+<%= sage_component SageCardList, {} do %>
+  <% SageTokens::ICON_SIZES.each do | size | %>
+    <%= sage_component SageCardListItem, { grid_template: "et" } do %>
+      <%= sage_component SageIcon, { icon: "pen", size: (size == "md" ? nil : size) } %>
+      <%= size == "md" ? "Default (#{size})" : size %>
+    <% end %>
+  <% end %>
+<% end %>
+
+<h3>Alignment next to Type</h3>
+<%= md("
+Since a common use is to place an icon inline next to text in a variety of forms, we provide the opportunity to indicate that an icon is beside content a particular type spec.
+The effect is that the icon's `height` and `line-height` are updated to match the spec responsively.
+This can be used in combination with the different icon sizes.
+and also be used with a vareity of layout techniques or components such as CSS flexbox (used below) or grid templates within `SageCardRow` or `SagePanelRow`.
+") %>
+<div style="display: flex;">
+  <%= sage_component SageIcon, { icon: "check-circle", adjacent_type: "h2", spacer: { right: "xs" } } %>
+  <h2 class="<%= SageClassnames::TYPE::HEADING_2 %>">Heading 2 Lorem ipsum dolor sit</h2>
+</div>
+<div style="display: flex;">
+  <%= sage_component SageIcon, { icon: "check-circle", adjacent_type: "h4", spacer: { right: "xs" } } %>
+  <h4 class="<%= SageClassnames::TYPE::HEADING_4 %>">Heading 4 Lorem ipsum dolor sit</h4>
+</div>
+<div style="display: flex;">
+  <%= sage_component SageIcon, { icon: "check-circle", adjacent_type: "body", spacer: { right: "xs" } } %>
+  <p class="<%= SageClassnames::TYPE::BODY %>">Body Lorem ipsum dolor sit</p>
+</div>
+<div style="display: flex;">
+  <%= sage_component SageIcon, { icon: "check-circle", adjacent_type: "body-sm", spacer: { right: "xs" } } %>
+  <p class="<%= SageClassnames::TYPE::BODY_SMALL %>">Body Small Lorem ipsum dolor sit</p>
+</div>
+
+<h3>Background Colors</h3>
+<%= sage_component SageCardList, {} do %>
+  <%= sage_component SageCardListItem, { grid_template: "o" } do %>
+    <p><%= "danger" %></p>
+    <%= sage_component SageIcon, { icon: "danger", card_color: "danger" } %>
+    <%= sage_component SageIcon, { icon: "danger", card_color: "danger", circular: true } %>
+  <% end %>
+
+  <%= sage_component SageCardListItem, { grid_template: "o" } do %>
+    <p><%= "draft" %></p>
+    <%= sage_component SageIcon, { icon: "draft", card_color: "draft" } %>
+    <%= sage_component SageIcon, { icon: "draft", card_color: "draft", circular: true } %>
+  <% end %>
+
+  <%= sage_component SageCardListItem, { grid_template: "o" } do %>
+    <p><%= "info" %></p>
+    <%= sage_component SageIcon, { icon: "info-circle", card_color: "info" } %>
+    <%= sage_component SageIcon, { icon: "info-circle", card_color: "info", circular: true } %>
+  <% end %>
+
+  <%= sage_component SageCardListItem, { grid_template: "o" } do %>
+    <p><%= "locked" %></p>
+    <%= sage_component SageIcon, { icon: "lock", card_color: "locked" } %>
+    <%= sage_component SageIcon, { icon: "lock", card_color: "locked", circular: true } %>
+  <% end %>
+
+  <%= sage_component SageCardListItem, { grid_template: "o" } do %>
+    <p><%= "published" %></p>
+    <%= sage_component SageIcon, { icon: "window-paragraph", card_color: "published" } %>
+    <%= sage_component SageIcon, { icon: "window-paragraph", card_color: "published", circular: true } %>
+  <% end %>
+
+  <%= sage_component SageCardListItem, { grid_template: "o" } do %>
+    <p><%= "warning" %></p>
+    <%= sage_component SageIcon, { icon: "warning", card_color: "warning" } %>
+    <%= sage_component SageIcon, { icon: "warning", card_color: "warning", circular: true } %>
+  <% end %>
+
+  <%= sage_component SageCardListItem, { grid_template: "o" } do %>
+    <p><%= "kajabi" %></p>
+    <%= sage_component SageIcon, { icon: "kajabi-filled", card_color: "primary" } %>
+    <%= sage_component SageIcon, { icon: "kajabi-filled", card_color: "primary", circular: true } %>
+  <% end %>
+<% end %>
+
+
+<h3>Background Sizes</h3>
+<%= sage_component SageCardList, {} do %>
+  <% SageTokens::ICON_SIZES.each do | size | %>
+    <%= sage_component SageCardListItem, { grid_template: "o" } do %>
+      <p><%= size == "md" ? "Default (#{size})" : size %></p>
+      <%= sage_component SageIcon, { icon: "pen", size: (size == "md" ? nil : size), card_color: "draft" } %>
+      <%= sage_component SageIcon, { icon: "pen", size: (size == "md" ? nil : size), card_color: "draft", circular: true, } %>
+    <% end %>
+  <% end %>
+<% end %>
+
+<h3>Custom Background Sizes</h3>
+<%= sage_component SageCardList, {} do %>
+  <%= sage_component SageCardListItem, { grid_template: "o" } do %>
+    <%= sage_component SageIcon, { icon: "pen", size: "2xl", background_width: "128px", background_height: "64px", card_color: "draft" } %>
+    <%= sage_component SageIcon, { icon: "pen", size: "xl", background_height: "64px", card_color: "draft", circular: true, } %>
+  <% end %>
+<% end %>

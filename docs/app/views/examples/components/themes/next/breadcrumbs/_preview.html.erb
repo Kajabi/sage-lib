@@ -1,0 +1,63 @@
+<%= sage_component SageCardBlock, {} do %>
+  <%= sage_component SageBadge, {
+    color: "draft",
+    value: "Default"
+  } %>
+<% end %>
+<%= sage_component SageBreadcrumbs, {
+  items: [
+    {
+      text: "Settings",
+      url: "https://kajabi.com"
+    },
+    {
+      text: "Domain Settings",
+      url: "https://kajabi.com"
+    },
+    {
+      text: "Domain Setup",
+      url: "https://kajabi.com",
+      disabled: true,
+    }
+  ]
+} %>
+
+<%= sage_component SageCardBlock, {} do %>
+  <%= sage_component SageBadge, {
+    color: "draft",
+    value: "Back Link Variation"
+  } %>
+<% end %>
+<%= sage_component SageBreadcrumbs, {
+  items: [
+    {
+      text: "Settings",
+      url: "#"
+    }
+  ]
+} %>
+
+<%= sage_component SageCardBlock, {} do %>
+  <%= sage_component SageBadge, {
+    color: "draft",
+    value: "Progress Bar Variation"
+  } %>
+<% end %>
+<%= sage_component SageBreadcrumbs, {
+  is_progressbar: true,
+  items: [
+    {
+      text: "Step 1 of 3",
+      url: "#"
+    },
+    {
+      text: "Step 2 of 3",
+      url: "#",
+      is_current: true
+    },
+    {
+      text: "Step 3 of 3",
+      url: "#"
+    }
+  ]
+} %>

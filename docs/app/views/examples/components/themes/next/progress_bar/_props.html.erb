@@ -1,0 +1,36 @@
+<tr>
+  <td><%= md('`color`') %></td>
+  <td><%= md('Optional hex or `SageTokens::COLOR_PALETTE` value for the progress bar color.') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`disable_tooltip`') %></td>
+  <td><%= md('Option to disable the default tooltip.') %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`display_percent`') %></td>
+  <td><%= md('If true, displays the percentage to the right of the progress bar.') %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`label`') %><%= sage_component SageBadge, { color: "published", value: "required" } %></td>
+  <td><%= md('Sets `aria-valuetext` and content text for `<progress>` element.') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`percent`') %><%= sage_component SageBadge, { color: "published", value: "required" } %></td>
+  <td><%= md('Sets `value`, `aria-valuenow` and inline `width` style of progress bar.') %></td>
+  <td><%= md('Integer') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`tooltip_position`') %></td>
+  <td><%= md('Sets the tooltip position to either above or below the progress bar.') %></td>
+  <td><%= md('String: ["top", "bottom"]') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>

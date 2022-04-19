@@ -1,0 +1,31 @@
+<tr>
+  <td><%= md('`has_back_icon`') %></td>
+  <td><%= md('Whether or not to show the back icon before the first item.') %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`false`') %></td>
+</tr>
+<tr>
+  <td><%= md('`is_progressbar`') %></td>
+  <td><%= md('Whether or not to show the breadcrumbs in a progress like fashion.') %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`false`') %></td>
+</tr>
+<tr>
+  <td><%= md('`items`') %><%= sage_component SageBadge, { color: "published", value: "required" } %></td>
+  <td>
+    <%= md('
+      The set of items to display.
+      Array of items following schema.
+    ') %>
+  </td>
+  <td>
+  <%= md('```
+    Array<{
+      url: String,
+      text: String,
+      is_current: String
+    }>
+    ') %>
+  </td>
+  <td><%= md('`nil`') %></td>
+</tr>
