@@ -19,249 +19,126 @@
 //
 // Static vars for COLOR BASE
 //
-export const COLOR_BASE_PRIMARY_50_HEX = '#e6f4fe';
-export const COLOR_BASE_PRIMARY_50_CODE = 'primary-50';
-export const COLOR_BASE_PRIMARY_50_CLASSNAME = 't-sage--color-primary-50';
 export const COLOR_BASE_PRIMARY_100_HEX = '#e6f4fe';
 export const COLOR_BASE_PRIMARY_100_CODE = 'primary-100';
 export const COLOR_BASE_PRIMARY_100_CLASSNAME = 't-sage--color-primary-100';
-export const COLOR_BASE_PRIMARY_200_HEX = '#e6f4fe';
+export const COLOR_BASE_PRIMARY_200_HEX = '#8ecafb';
 export const COLOR_BASE_PRIMARY_200_CODE = 'primary-200';
 export const COLOR_BASE_PRIMARY_200_CLASSNAME = 't-sage--color-primary-200';
-export const COLOR_BASE_PRIMARY_300_HEX = '#8ecafb';
+export const COLOR_BASE_PRIMARY_300_HEX = '#0072ef';
 export const COLOR_BASE_PRIMARY_300_CODE = 'primary-300';
 export const COLOR_BASE_PRIMARY_300_CLASSNAME = 't-sage--color-primary-300';
-export const COLOR_BASE_PRIMARY_400_HEX = '#8ecafb';
+export const COLOR_BASE_PRIMARY_400_HEX = '#054fb8';
 export const COLOR_BASE_PRIMARY_400_CODE = 'primary-400';
 export const COLOR_BASE_PRIMARY_400_CLASSNAME = 't-sage--color-primary-400';
-export const COLOR_BASE_PRIMARY_500_HEX = '#0072ef';
+export const COLOR_BASE_PRIMARY_500_HEX = '#07265f';
 export const COLOR_BASE_PRIMARY_500_CODE = 'primary-500';
 export const COLOR_BASE_PRIMARY_500_CLASSNAME = 't-sage--color-primary-500';
-export const COLOR_BASE_PRIMARY_600_HEX = '#0072ef';
-export const COLOR_BASE_PRIMARY_600_CODE = 'primary-600';
-export const COLOR_BASE_PRIMARY_600_CLASSNAME = 't-sage--color-primary-600';
-export const COLOR_BASE_PRIMARY_700_HEX = '#054fb8';
-export const COLOR_BASE_PRIMARY_700_CODE = 'primary-700';
-export const COLOR_BASE_PRIMARY_700_CLASSNAME = 't-sage--color-primary-700';
-export const COLOR_BASE_PRIMARY_800_HEX = '#07265f';
-export const COLOR_BASE_PRIMARY_800_CODE = 'primary-800';
-export const COLOR_BASE_PRIMARY_800_CLASSNAME = 't-sage--color-primary-800';
-export const COLOR_BASE_PRIMARY_900_HEX = '#07265f';
-export const COLOR_BASE_PRIMARY_900_CODE = 'primary-900';
-export const COLOR_BASE_PRIMARY_900_CLASSNAME = 't-sage--color-primary-900';
-export const COLOR_BASE_SAGE_50_HEX = '#ddf8f0';
-export const COLOR_BASE_SAGE_50_CODE = 'sage-50';
-export const COLOR_BASE_SAGE_50_CLASSNAME = 't-sage--color-sage-50';
 export const COLOR_BASE_SAGE_100_HEX = '#ddf8f0';
 export const COLOR_BASE_SAGE_100_CODE = 'sage-100';
 export const COLOR_BASE_SAGE_100_CLASSNAME = 't-sage--color-sage-100';
-export const COLOR_BASE_SAGE_200_HEX = '#ddf8f0';
+export const COLOR_BASE_SAGE_200_HEX = '#86d5bc';
 export const COLOR_BASE_SAGE_200_CODE = 'sage-200';
 export const COLOR_BASE_SAGE_200_CLASSNAME = 't-sage--color-sage-200';
-export const COLOR_BASE_SAGE_300_HEX = '#86d5bc';
+export const COLOR_BASE_SAGE_300_HEX = '#23856d';
 export const COLOR_BASE_SAGE_300_CODE = 'sage-300';
 export const COLOR_BASE_SAGE_300_CLASSNAME = 't-sage--color-sage-300';
-export const COLOR_BASE_SAGE_400_HEX = '#86d5bc';
+export const COLOR_BASE_SAGE_400_HEX = '#225d53';
 export const COLOR_BASE_SAGE_400_CODE = 'sage-400';
 export const COLOR_BASE_SAGE_400_CLASSNAME = 't-sage--color-sage-400';
-export const COLOR_BASE_SAGE_500_HEX = '#23856d';
+export const COLOR_BASE_SAGE_500_HEX = '#183e3b';
 export const COLOR_BASE_SAGE_500_CODE = 'sage-500';
 export const COLOR_BASE_SAGE_500_CLASSNAME = 't-sage--color-sage-500';
-export const COLOR_BASE_SAGE_600_HEX = '#23856d';
-export const COLOR_BASE_SAGE_600_CODE = 'sage-600';
-export const COLOR_BASE_SAGE_600_CLASSNAME = 't-sage--color-sage-600';
-export const COLOR_BASE_SAGE_700_HEX = '#225d53';
-export const COLOR_BASE_SAGE_700_CODE = 'sage-700';
-export const COLOR_BASE_SAGE_700_CLASSNAME = 't-sage--color-sage-700';
-export const COLOR_BASE_SAGE_800_HEX = '#183e3b';
-export const COLOR_BASE_SAGE_800_CODE = 'sage-800';
-export const COLOR_BASE_SAGE_800_CLASSNAME = 't-sage--color-sage-800';
-export const COLOR_BASE_SAGE_900_HEX = '#183e3b';
-export const COLOR_BASE_SAGE_900_CODE = 'sage-900';
-export const COLOR_BASE_SAGE_900_CLASSNAME = 't-sage--color-sage-900';
-export const COLOR_BASE_YELLOW_50_HEX = '#fef8e1';
-export const COLOR_BASE_YELLOW_50_CODE = 'yellow-50';
-export const COLOR_BASE_YELLOW_50_CLASSNAME = 't-sage--color-yellow-50';
 export const COLOR_BASE_YELLOW_100_HEX = '#fef8e1';
 export const COLOR_BASE_YELLOW_100_CODE = 'yellow-100';
 export const COLOR_BASE_YELLOW_100_CLASSNAME = 't-sage--color-yellow-100';
-export const COLOR_BASE_YELLOW_200_HEX = '#fef8e1';
+export const COLOR_BASE_YELLOW_200_HEX = '#fad980';
 export const COLOR_BASE_YELLOW_200_CODE = 'yellow-200';
 export const COLOR_BASE_YELLOW_200_CLASSNAME = 't-sage--color-yellow-200';
-export const COLOR_BASE_YELLOW_300_HEX = '#fad980';
+export const COLOR_BASE_YELLOW_300_HEX = '#ffc505';
 export const COLOR_BASE_YELLOW_300_CODE = 'yellow-300';
 export const COLOR_BASE_YELLOW_300_CLASSNAME = 't-sage--color-yellow-300';
-export const COLOR_BASE_YELLOW_400_HEX = '#fad980';
+export const COLOR_BASE_YELLOW_400_HEX = '#c56a02';
 export const COLOR_BASE_YELLOW_400_CODE = 'yellow-400';
 export const COLOR_BASE_YELLOW_400_CLASSNAME = 't-sage--color-yellow-400';
-export const COLOR_BASE_YELLOW_500_HEX = '#ffc505';
+export const COLOR_BASE_YELLOW_500_HEX = '#8c3b08';
 export const COLOR_BASE_YELLOW_500_CODE = 'yellow-500';
 export const COLOR_BASE_YELLOW_500_CLASSNAME = 't-sage--color-yellow-500';
-export const COLOR_BASE_YELLOW_600_HEX = '#ffc505';
-export const COLOR_BASE_YELLOW_600_CODE = 'yellow-600';
-export const COLOR_BASE_YELLOW_600_CLASSNAME = 't-sage--color-yellow-600';
-export const COLOR_BASE_YELLOW_700_HEX = '#c56a02';
-export const COLOR_BASE_YELLOW_700_CODE = 'yellow-700';
-export const COLOR_BASE_YELLOW_700_CLASSNAME = 't-sage--color-yellow-700';
-export const COLOR_BASE_YELLOW_800_HEX = '#8c3b08';
-export const COLOR_BASE_YELLOW_800_CODE = 'yellow-800';
-export const COLOR_BASE_YELLOW_800_CLASSNAME = 't-sage--color-yellow-800';
-export const COLOR_BASE_YELLOW_900_HEX = '#8c3b08';
-export const COLOR_BASE_YELLOW_900_CODE = 'yellow-900';
-export const COLOR_BASE_YELLOW_900_CLASSNAME = 't-sage--color-yellow-900';
-export const COLOR_BASE_RED_50_HEX = '#fff0f0';
-export const COLOR_BASE_RED_50_CODE = 'red-50';
-export const COLOR_BASE_RED_50_CLASSNAME = 't-sage--color-red-50';
 export const COLOR_BASE_RED_100_HEX = '#fff0f0';
 export const COLOR_BASE_RED_100_CODE = 'red-100';
 export const COLOR_BASE_RED_100_CLASSNAME = 't-sage--color-red-100';
-export const COLOR_BASE_RED_200_HEX = '#fff0f0';
+export const COLOR_BASE_RED_200_HEX = '#fdb0aa';
 export const COLOR_BASE_RED_200_CODE = 'red-200';
 export const COLOR_BASE_RED_200_CLASSNAME = 't-sage--color-red-200';
-export const COLOR_BASE_RED_300_HEX = '#fdb0aa';
+export const COLOR_BASE_RED_300_HEX = '#cf3c32';
 export const COLOR_BASE_RED_300_CODE = 'red-300';
 export const COLOR_BASE_RED_300_CLASSNAME = 't-sage--color-red-300';
-export const COLOR_BASE_RED_400_HEX = '#fdb0aa';
+export const COLOR_BASE_RED_400_HEX = '#99221e';
 export const COLOR_BASE_RED_400_CODE = 'red-400';
 export const COLOR_BASE_RED_400_CLASSNAME = 't-sage--color-red-400';
-export const COLOR_BASE_RED_500_HEX = '#cf3c32';
+export const COLOR_BASE_RED_500_HEX = '#5e0d0d';
 export const COLOR_BASE_RED_500_CODE = 'red-500';
 export const COLOR_BASE_RED_500_CLASSNAME = 't-sage--color-red-500';
-export const COLOR_BASE_RED_600_HEX = '#cf3c32';
-export const COLOR_BASE_RED_600_CODE = 'red-600';
-export const COLOR_BASE_RED_600_CLASSNAME = 't-sage--color-red-600';
-export const COLOR_BASE_RED_700_HEX = '#99221e';
-export const COLOR_BASE_RED_700_CODE = 'red-700';
-export const COLOR_BASE_RED_700_CLASSNAME = 't-sage--color-red-700';
-export const COLOR_BASE_RED_800_HEX = '#5e0d0d';
-export const COLOR_BASE_RED_800_CODE = 'red-800';
-export const COLOR_BASE_RED_800_CLASSNAME = 't-sage--color-red-800';
-export const COLOR_BASE_RED_900_HEX = '#5e0d0d';
-export const COLOR_BASE_RED_900_CODE = 'red-900';
-export const COLOR_BASE_RED_900_CLASSNAME = 't-sage--color-red-900';
-export const COLOR_BASE_ORANGE_50_HEX = '#fef1e1';
-export const COLOR_BASE_ORANGE_50_CODE = 'orange-50';
-export const COLOR_BASE_ORANGE_50_CLASSNAME = 't-sage--color-orange-50';
 export const COLOR_BASE_ORANGE_100_HEX = '#fef1e1';
 export const COLOR_BASE_ORANGE_100_CODE = 'orange-100';
 export const COLOR_BASE_ORANGE_100_CLASSNAME = 't-sage--color-orange-100';
-export const COLOR_BASE_ORANGE_200_HEX = '#fef1e1';
+export const COLOR_BASE_ORANGE_200_HEX = '#ffb36b';
 export const COLOR_BASE_ORANGE_200_CODE = 'orange-200';
 export const COLOR_BASE_ORANGE_200_CLASSNAME = 't-sage--color-orange-200';
-export const COLOR_BASE_ORANGE_300_HEX = '#ffb36b';
+export const COLOR_BASE_ORANGE_300_HEX = '#fb7e09';
 export const COLOR_BASE_ORANGE_300_CODE = 'orange-300';
 export const COLOR_BASE_ORANGE_300_CLASSNAME = 't-sage--color-orange-300';
-export const COLOR_BASE_ORANGE_400_HEX = '#ffb36b';
+export const COLOR_BASE_ORANGE_400_HEX = '#b3501e';
 export const COLOR_BASE_ORANGE_400_CODE = 'orange-400';
 export const COLOR_BASE_ORANGE_400_CLASSNAME = 't-sage--color-orange-400';
-export const COLOR_BASE_ORANGE_500_HEX = '#fb7e09';
+export const COLOR_BASE_ORANGE_500_HEX = '#5a260c';
 export const COLOR_BASE_ORANGE_500_CODE = 'orange-500';
 export const COLOR_BASE_ORANGE_500_CLASSNAME = 't-sage--color-orange-500';
-export const COLOR_BASE_ORANGE_600_HEX = '#fb7e09';
-export const COLOR_BASE_ORANGE_600_CODE = 'orange-600';
-export const COLOR_BASE_ORANGE_600_CLASSNAME = 't-sage--color-orange-600';
-export const COLOR_BASE_ORANGE_700_HEX = '#b3501e';
-export const COLOR_BASE_ORANGE_700_CODE = 'orange-700';
-export const COLOR_BASE_ORANGE_700_CLASSNAME = 't-sage--color-orange-700';
-export const COLOR_BASE_ORANGE_800_HEX = '#5a260c';
-export const COLOR_BASE_ORANGE_800_CODE = 'orange-800';
-export const COLOR_BASE_ORANGE_800_CLASSNAME = 't-sage--color-orange-800';
-export const COLOR_BASE_ORANGE_900_HEX = '#5a260c';
-export const COLOR_BASE_ORANGE_900_CODE = 'orange-900';
-export const COLOR_BASE_ORANGE_900_CLASSNAME = 't-sage--color-orange-900';
-export const COLOR_BASE_PURPLE_50_HEX = '#eee4f6';
-export const COLOR_BASE_PURPLE_50_CODE = 'purple-50';
-export const COLOR_BASE_PURPLE_50_CLASSNAME = 't-sage--color-purple-50';
 export const COLOR_BASE_PURPLE_100_HEX = '#eee4f6';
 export const COLOR_BASE_PURPLE_100_CODE = 'purple-100';
 export const COLOR_BASE_PURPLE_100_CLASSNAME = 't-sage--color-purple-100';
-export const COLOR_BASE_PURPLE_200_HEX = '#eee4f6';
+export const COLOR_BASE_PURPLE_200_HEX = '#d9c2ef';
 export const COLOR_BASE_PURPLE_200_CODE = 'purple-200';
 export const COLOR_BASE_PURPLE_200_CLASSNAME = 't-sage--color-purple-200';
-export const COLOR_BASE_PURPLE_300_HEX = '#d9c2ef';
+export const COLOR_BASE_PURPLE_300_HEX = '#8e5ad8';
 export const COLOR_BASE_PURPLE_300_CODE = 'purple-300';
 export const COLOR_BASE_PURPLE_300_CLASSNAME = 't-sage--color-purple-300';
-export const COLOR_BASE_PURPLE_400_HEX = '#d9c2ef';
+export const COLOR_BASE_PURPLE_400_HEX = '#50348a';
 export const COLOR_BASE_PURPLE_400_CODE = 'purple-400';
 export const COLOR_BASE_PURPLE_400_CLASSNAME = 't-sage--color-purple-400';
-export const COLOR_BASE_PURPLE_500_HEX = '#8e5ad8';
+export const COLOR_BASE_PURPLE_500_HEX = '#381c5e';
 export const COLOR_BASE_PURPLE_500_CODE = 'purple-500';
 export const COLOR_BASE_PURPLE_500_CLASSNAME = 't-sage--color-purple-500';
-export const COLOR_BASE_PURPLE_600_HEX = '#8e5ad8';
-export const COLOR_BASE_PURPLE_600_CODE = 'purple-600';
-export const COLOR_BASE_PURPLE_600_CLASSNAME = 't-sage--color-purple-600';
-export const COLOR_BASE_PURPLE_700_HEX = '#50348a';
-export const COLOR_BASE_PURPLE_700_CODE = 'purple-700';
-export const COLOR_BASE_PURPLE_700_CLASSNAME = 't-sage--color-purple-700';
-export const COLOR_BASE_PURPLE_800_HEX = '#381c5e';
-export const COLOR_BASE_PURPLE_800_CODE = 'purple-800';
-export const COLOR_BASE_PURPLE_800_CLASSNAME = 't-sage--color-purple-800';
-export const COLOR_BASE_PURPLE_900_HEX = '#381c5e';
-export const COLOR_BASE_PURPLE_900_CODE = 'purple-900';
-export const COLOR_BASE_PURPLE_900_CLASSNAME = 't-sage--color-purple-900';
-export const COLOR_BASE_CHARCOAL_50_HEX = '#f9fafa';
-export const COLOR_BASE_CHARCOAL_50_CODE = 'charcoal-50';
-export const COLOR_BASE_CHARCOAL_50_CLASSNAME = 't-sage--color-charcoal-50';
-export const COLOR_BASE_CHARCOAL_100_HEX = '#8d939a';
+export const COLOR_BASE_CHARCOAL_100_HEX = '#e6f4fe';
 export const COLOR_BASE_CHARCOAL_100_CODE = 'charcoal-100';
 export const COLOR_BASE_CHARCOAL_100_CLASSNAME = 't-sage--color-charcoal-100';
-export const COLOR_BASE_CHARCOAL_200_HEX = '#60666c';
+export const COLOR_BASE_CHARCOAL_200_HEX = '#8ecafb';
 export const COLOR_BASE_CHARCOAL_200_CODE = 'charcoal-200';
 export const COLOR_BASE_CHARCOAL_200_CLASSNAME = 't-sage--color-charcoal-200';
-export const COLOR_BASE_CHARCOAL_300_HEX = '#43474b';
+export const COLOR_BASE_CHARCOAL_300_HEX = '#0072ef';
 export const COLOR_BASE_CHARCOAL_300_CODE = 'charcoal-300';
 export const COLOR_BASE_CHARCOAL_300_CLASSNAME = 't-sage--color-charcoal-300';
-export const COLOR_BASE_CHARCOAL_400_HEX = '#202327';
+export const COLOR_BASE_CHARCOAL_400_HEX = '#054fb8';
 export const COLOR_BASE_CHARCOAL_400_CODE = 'charcoal-400';
 export const COLOR_BASE_CHARCOAL_400_CLASSNAME = 't-sage--color-charcoal-400';
-export const COLOR_BASE_CHARCOAL_500_HEX = '#181b20';
+export const COLOR_BASE_CHARCOAL_500_HEX = '#07265f';
 export const COLOR_BASE_CHARCOAL_500_CODE = 'charcoal-500';
 export const COLOR_BASE_CHARCOAL_500_CLASSNAME = 't-sage--color-charcoal-500';
-export const COLOR_BASE_CHARCOAL_600_HEX = '#60666c';
-export const COLOR_BASE_CHARCOAL_600_CODE = 'charcoal-600';
-export const COLOR_BASE_CHARCOAL_600_CLASSNAME = 't-sage--color-charcoal-600';
-export const COLOR_BASE_CHARCOAL_700_HEX = '#43474b';
-export const COLOR_BASE_CHARCOAL_700_CODE = 'charcoal-700';
-export const COLOR_BASE_CHARCOAL_700_CLASSNAME = 't-sage--color-charcoal-700';
-export const COLOR_BASE_CHARCOAL_800_HEX = '#202327';
-export const COLOR_BASE_CHARCOAL_800_CODE = 'charcoal-800';
-export const COLOR_BASE_CHARCOAL_800_CLASSNAME = 't-sage--color-charcoal-800';
-export const COLOR_BASE_CHARCOAL_900_HEX = '#181b20';
-export const COLOR_BASE_CHARCOAL_900_CODE = 'charcoal-900';
-export const COLOR_BASE_CHARCOAL_900_CLASSNAME = 't-sage--color-charcoal-900';
-export const COLOR_BASE_GREY_50_HEX = '#f9fafa';
-export const COLOR_BASE_GREY_50_CODE = 'grey-50';
-export const COLOR_BASE_GREY_50_CLASSNAME = 't-sage--color-grey-50';
-export const COLOR_BASE_GREY_100_HEX = '#f6f8f8';
+export const COLOR_BASE_GREY_100_HEX = '#f9fafa';
 export const COLOR_BASE_GREY_100_CODE = 'grey-100';
 export const COLOR_BASE_GREY_100_CLASSNAME = 't-sage--color-grey-100';
-export const COLOR_BASE_GREY_200_HEX = '#eceeef';
+export const COLOR_BASE_GREY_200_HEX = '#f6f8f8';
 export const COLOR_BASE_GREY_200_CODE = 'grey-200';
 export const COLOR_BASE_GREY_200_CLASSNAME = 't-sage--color-grey-200';
-export const COLOR_BASE_GREY_300_HEX = '#d3d5d9';
+export const COLOR_BASE_GREY_300_HEX = '#eceeef';
 export const COLOR_BASE_GREY_300_CODE = 'grey-300';
 export const COLOR_BASE_GREY_300_CLASSNAME = 't-sage--color-grey-300';
-export const COLOR_BASE_GREY_400_HEX = '#b5bac0';
+export const COLOR_BASE_GREY_400_HEX = '#d3d5d9';
 export const COLOR_BASE_GREY_400_CODE = 'grey-400';
 export const COLOR_BASE_GREY_400_CLASSNAME = 't-sage--color-grey-400';
-export const COLOR_BASE_GREY_500_HEX = '#8d939a';
+export const COLOR_BASE_GREY_500_HEX = '#b5bac0';
 export const COLOR_BASE_GREY_500_CODE = 'grey-500';
 export const COLOR_BASE_GREY_500_CLASSNAME = 't-sage--color-grey-500';
-export const COLOR_BASE_GREY_600_HEX = '#60666c';
-export const COLOR_BASE_GREY_600_CODE = 'grey-600';
-export const COLOR_BASE_GREY_600_CLASSNAME = 't-sage--color-grey-600';
-export const COLOR_BASE_GREY_700_HEX = '#43474b';
-export const COLOR_BASE_GREY_700_CODE = 'grey-700';
-export const COLOR_BASE_GREY_700_CLASSNAME = 't-sage--color-grey-700';
-export const COLOR_BASE_GREY_800_HEX = '#202327';
-export const COLOR_BASE_GREY_800_CODE = 'grey-800';
-export const COLOR_BASE_GREY_800_CLASSNAME = 't-sage--color-grey-800';
-export const COLOR_BASE_GREY_900_HEX = '#181b20';
-export const COLOR_BASE_GREY_900_CODE = 'grey-900';
-export const COLOR_BASE_GREY_900_CLASSNAME = 't-sage--color-grey-900';
-export const COLOR_BASE_WHITE_50_HEX = '#fff';
-export const COLOR_BASE_WHITE_50_CODE = 'white-50';
-export const COLOR_BASE_WHITE_50_CLASSNAME = 't-sage--color-white-50';
 export const COLOR_BASE_WHITE_100_HEX = '#fff';
 export const COLOR_BASE_WHITE_100_CODE = 'white-100';
 export const COLOR_BASE_WHITE_100_CLASSNAME = 't-sage--color-white-100';
@@ -277,21 +154,6 @@ export const COLOR_BASE_WHITE_400_CLASSNAME = 't-sage--color-white-400';
 export const COLOR_BASE_WHITE_500_HEX = '#fff';
 export const COLOR_BASE_WHITE_500_CODE = 'white-500';
 export const COLOR_BASE_WHITE_500_CLASSNAME = 't-sage--color-white-500';
-export const COLOR_BASE_WHITE_600_HEX = '#fff';
-export const COLOR_BASE_WHITE_600_CODE = 'white-600';
-export const COLOR_BASE_WHITE_600_CLASSNAME = 't-sage--color-white-600';
-export const COLOR_BASE_WHITE_700_HEX = '#fff';
-export const COLOR_BASE_WHITE_700_CODE = 'white-700';
-export const COLOR_BASE_WHITE_700_CLASSNAME = 't-sage--color-white-700';
-export const COLOR_BASE_WHITE_800_HEX = '#fff';
-export const COLOR_BASE_WHITE_800_CODE = 'white-800';
-export const COLOR_BASE_WHITE_800_CLASSNAME = 't-sage--color-white-800';
-export const COLOR_BASE_WHITE_900_HEX = '#fff';
-export const COLOR_BASE_WHITE_900_CODE = 'white-900';
-export const COLOR_BASE_WHITE_900_CLASSNAME = 't-sage--color-white-900';
-export const COLOR_BASE_BLACK_50_HEX = '#000';
-export const COLOR_BASE_BLACK_50_CODE = 'black-50';
-export const COLOR_BASE_BLACK_50_CLASSNAME = 't-sage--color-black-50';
 export const COLOR_BASE_BLACK_100_HEX = '#000';
 export const COLOR_BASE_BLACK_100_CODE = 'black-100';
 export const COLOR_BASE_BLACK_100_CLASSNAME = 't-sage--color-black-100';
@@ -307,29 +169,12 @@ export const COLOR_BASE_BLACK_400_CLASSNAME = 't-sage--color-black-400';
 export const COLOR_BASE_BLACK_500_HEX = '#000';
 export const COLOR_BASE_BLACK_500_CODE = 'black-500';
 export const COLOR_BASE_BLACK_500_CLASSNAME = 't-sage--color-black-500';
-export const COLOR_BASE_BLACK_600_HEX = '#000';
-export const COLOR_BASE_BLACK_600_CODE = 'black-600';
-export const COLOR_BASE_BLACK_600_CLASSNAME = 't-sage--color-black-600';
-export const COLOR_BASE_BLACK_700_HEX = '#000';
-export const COLOR_BASE_BLACK_700_CODE = 'black-700';
-export const COLOR_BASE_BLACK_700_CLASSNAME = 't-sage--color-black-700';
-export const COLOR_BASE_BLACK_800_HEX = '#000';
-export const COLOR_BASE_BLACK_800_CODE = 'black-800';
-export const COLOR_BASE_BLACK_800_CLASSNAME = 't-sage--color-black-800';
-export const COLOR_BASE_BLACK_900_HEX = '#000';
-export const COLOR_BASE_BLACK_900_CODE = 'black-900';
-export const COLOR_BASE_BLACK_900_CLASSNAME = 't-sage--color-black-900';
 
 //
 // Map for COLOR BASE
 //
 export const COLOR = {
   PRIMARY: {
-    50: {
-      HEX: COLOR_BASE_PRIMARY_50_HEX,
-      CODE: COLOR_BASE_PRIMARY_50_CODE,
-      CLASSNAME: COLOR_BASE_PRIMARY_50_CLASSNAME,
-    },
     100: {
       HEX: COLOR_BASE_PRIMARY_100_HEX,
       CODE: COLOR_BASE_PRIMARY_100_CODE,
@@ -355,33 +200,8 @@ export const COLOR = {
       CODE: COLOR_BASE_PRIMARY_500_CODE,
       CLASSNAME: COLOR_BASE_PRIMARY_500_CLASSNAME,
     },
-    600: {
-      HEX: COLOR_BASE_PRIMARY_600_HEX,
-      CODE: COLOR_BASE_PRIMARY_600_CODE,
-      CLASSNAME: COLOR_BASE_PRIMARY_600_CLASSNAME,
-    },
-    700: {
-      HEX: COLOR_BASE_PRIMARY_700_HEX,
-      CODE: COLOR_BASE_PRIMARY_700_CODE,
-      CLASSNAME: COLOR_BASE_PRIMARY_700_CLASSNAME,
-    },
-    800: {
-      HEX: COLOR_BASE_PRIMARY_800_HEX,
-      CODE: COLOR_BASE_PRIMARY_800_CODE,
-      CLASSNAME: COLOR_BASE_PRIMARY_800_CLASSNAME,
-    },
-    900: {
-      HEX: COLOR_BASE_PRIMARY_900_HEX,
-      CODE: COLOR_BASE_PRIMARY_900_CODE,
-      CLASSNAME: COLOR_BASE_PRIMARY_900_CLASSNAME,
-    },
   },
   SAGE: {
-    50: {
-      HEX: COLOR_BASE_SAGE_50_HEX,
-      CODE: COLOR_BASE_SAGE_50_CODE,
-      CLASSNAME: COLOR_BASE_SAGE_50_CLASSNAME,
-    },
     100: {
       HEX: COLOR_BASE_SAGE_100_HEX,
       CODE: COLOR_BASE_SAGE_100_CODE,
@@ -407,33 +227,8 @@ export const COLOR = {
       CODE: COLOR_BASE_SAGE_500_CODE,
       CLASSNAME: COLOR_BASE_SAGE_500_CLASSNAME,
     },
-    600: {
-      HEX: COLOR_BASE_SAGE_600_HEX,
-      CODE: COLOR_BASE_SAGE_600_CODE,
-      CLASSNAME: COLOR_BASE_SAGE_600_CLASSNAME,
-    },
-    700: {
-      HEX: COLOR_BASE_SAGE_700_HEX,
-      CODE: COLOR_BASE_SAGE_700_CODE,
-      CLASSNAME: COLOR_BASE_SAGE_700_CLASSNAME,
-    },
-    800: {
-      HEX: COLOR_BASE_SAGE_800_HEX,
-      CODE: COLOR_BASE_SAGE_800_CODE,
-      CLASSNAME: COLOR_BASE_SAGE_800_CLASSNAME,
-    },
-    900: {
-      HEX: COLOR_BASE_SAGE_900_HEX,
-      CODE: COLOR_BASE_SAGE_900_CODE,
-      CLASSNAME: COLOR_BASE_SAGE_900_CLASSNAME,
-    },
   },
   YELLOW: {
-    50: {
-      HEX: COLOR_BASE_YELLOW_50_HEX,
-      CODE: COLOR_BASE_YELLOW_50_CODE,
-      CLASSNAME: COLOR_BASE_YELLOW_50_CLASSNAME,
-    },
     100: {
       HEX: COLOR_BASE_YELLOW_100_HEX,
       CODE: COLOR_BASE_YELLOW_100_CODE,
@@ -459,33 +254,8 @@ export const COLOR = {
       CODE: COLOR_BASE_YELLOW_500_CODE,
       CLASSNAME: COLOR_BASE_YELLOW_500_CLASSNAME,
     },
-    600: {
-      HEX: COLOR_BASE_YELLOW_600_HEX,
-      CODE: COLOR_BASE_YELLOW_600_CODE,
-      CLASSNAME: COLOR_BASE_YELLOW_600_CLASSNAME,
-    },
-    700: {
-      HEX: COLOR_BASE_YELLOW_700_HEX,
-      CODE: COLOR_BASE_YELLOW_700_CODE,
-      CLASSNAME: COLOR_BASE_YELLOW_700_CLASSNAME,
-    },
-    800: {
-      HEX: COLOR_BASE_YELLOW_800_HEX,
-      CODE: COLOR_BASE_YELLOW_800_CODE,
-      CLASSNAME: COLOR_BASE_YELLOW_800_CLASSNAME,
-    },
-    900: {
-      HEX: COLOR_BASE_YELLOW_900_HEX,
-      CODE: COLOR_BASE_YELLOW_900_CODE,
-      CLASSNAME: COLOR_BASE_YELLOW_900_CLASSNAME,
-    },
   },
   RED: {
-    50: {
-      HEX: COLOR_BASE_RED_50_HEX,
-      CODE: COLOR_BASE_RED_50_CODE,
-      CLASSNAME: COLOR_BASE_RED_50_CLASSNAME,
-    },
     100: {
       HEX: COLOR_BASE_RED_100_HEX,
       CODE: COLOR_BASE_RED_100_CODE,
@@ -511,33 +281,8 @@ export const COLOR = {
       CODE: COLOR_BASE_RED_500_CODE,
       CLASSNAME: COLOR_BASE_RED_500_CLASSNAME,
     },
-    600: {
-      HEX: COLOR_BASE_RED_600_HEX,
-      CODE: COLOR_BASE_RED_600_CODE,
-      CLASSNAME: COLOR_BASE_RED_600_CLASSNAME,
-    },
-    700: {
-      HEX: COLOR_BASE_RED_700_HEX,
-      CODE: COLOR_BASE_RED_700_CODE,
-      CLASSNAME: COLOR_BASE_RED_700_CLASSNAME,
-    },
-    800: {
-      HEX: COLOR_BASE_RED_800_HEX,
-      CODE: COLOR_BASE_RED_800_CODE,
-      CLASSNAME: COLOR_BASE_RED_800_CLASSNAME,
-    },
-    900: {
-      HEX: COLOR_BASE_RED_900_HEX,
-      CODE: COLOR_BASE_RED_900_CODE,
-      CLASSNAME: COLOR_BASE_RED_900_CLASSNAME,
-    },
   },
   ORANGE: {
-    50: {
-      HEX: COLOR_BASE_ORANGE_50_HEX,
-      CODE: COLOR_BASE_ORANGE_50_CODE,
-      CLASSNAME: COLOR_BASE_ORANGE_50_CLASSNAME,
-    },
     100: {
       HEX: COLOR_BASE_ORANGE_100_HEX,
       CODE: COLOR_BASE_ORANGE_100_CODE,
@@ -563,33 +308,8 @@ export const COLOR = {
       CODE: COLOR_BASE_ORANGE_500_CODE,
       CLASSNAME: COLOR_BASE_ORANGE_500_CLASSNAME,
     },
-    600: {
-      HEX: COLOR_BASE_ORANGE_600_HEX,
-      CODE: COLOR_BASE_ORANGE_600_CODE,
-      CLASSNAME: COLOR_BASE_ORANGE_600_CLASSNAME,
-    },
-    700: {
-      HEX: COLOR_BASE_ORANGE_700_HEX,
-      CODE: COLOR_BASE_ORANGE_700_CODE,
-      CLASSNAME: COLOR_BASE_ORANGE_700_CLASSNAME,
-    },
-    800: {
-      HEX: COLOR_BASE_ORANGE_800_HEX,
-      CODE: COLOR_BASE_ORANGE_800_CODE,
-      CLASSNAME: COLOR_BASE_ORANGE_800_CLASSNAME,
-    },
-    900: {
-      HEX: COLOR_BASE_ORANGE_900_HEX,
-      CODE: COLOR_BASE_ORANGE_900_CODE,
-      CLASSNAME: COLOR_BASE_ORANGE_900_CLASSNAME,
-    },
   },
   PURPLE: {
-    50: {
-      HEX: COLOR_BASE_PURPLE_50_HEX,
-      CODE: COLOR_BASE_PURPLE_50_CODE,
-      CLASSNAME: COLOR_BASE_PURPLE_50_CLASSNAME,
-    },
     100: {
       HEX: COLOR_BASE_PURPLE_100_HEX,
       CODE: COLOR_BASE_PURPLE_100_CODE,
@@ -615,33 +335,8 @@ export const COLOR = {
       CODE: COLOR_BASE_PURPLE_500_CODE,
       CLASSNAME: COLOR_BASE_PURPLE_500_CLASSNAME,
     },
-    600: {
-      HEX: COLOR_BASE_PURPLE_600_HEX,
-      CODE: COLOR_BASE_PURPLE_600_CODE,
-      CLASSNAME: COLOR_BASE_PURPLE_600_CLASSNAME,
-    },
-    700: {
-      HEX: COLOR_BASE_PURPLE_700_HEX,
-      CODE: COLOR_BASE_PURPLE_700_CODE,
-      CLASSNAME: COLOR_BASE_PURPLE_700_CLASSNAME,
-    },
-    800: {
-      HEX: COLOR_BASE_PURPLE_800_HEX,
-      CODE: COLOR_BASE_PURPLE_800_CODE,
-      CLASSNAME: COLOR_BASE_PURPLE_800_CLASSNAME,
-    },
-    900: {
-      HEX: COLOR_BASE_PURPLE_900_HEX,
-      CODE: COLOR_BASE_PURPLE_900_CODE,
-      CLASSNAME: COLOR_BASE_PURPLE_900_CLASSNAME,
-    },
   },
   CHARCOAL: {
-    50: {
-      HEX: COLOR_BASE_CHARCOAL_50_HEX,
-      CODE: COLOR_BASE_CHARCOAL_50_CODE,
-      CLASSNAME: COLOR_BASE_CHARCOAL_50_CLASSNAME,
-    },
     100: {
       HEX: COLOR_BASE_CHARCOAL_100_HEX,
       CODE: COLOR_BASE_CHARCOAL_100_CODE,
@@ -667,33 +362,8 @@ export const COLOR = {
       CODE: COLOR_BASE_CHARCOAL_500_CODE,
       CLASSNAME: COLOR_BASE_CHARCOAL_500_CLASSNAME,
     },
-    600: {
-      HEX: COLOR_BASE_CHARCOAL_600_HEX,
-      CODE: COLOR_BASE_CHARCOAL_600_CODE,
-      CLASSNAME: COLOR_BASE_CHARCOAL_600_CLASSNAME,
-    },
-    700: {
-      HEX: COLOR_BASE_CHARCOAL_700_HEX,
-      CODE: COLOR_BASE_CHARCOAL_700_CODE,
-      CLASSNAME: COLOR_BASE_CHARCOAL_700_CLASSNAME,
-    },
-    800: {
-      HEX: COLOR_BASE_CHARCOAL_800_HEX,
-      CODE: COLOR_BASE_CHARCOAL_800_CODE,
-      CLASSNAME: COLOR_BASE_CHARCOAL_800_CLASSNAME,
-    },
-    900: {
-      HEX: COLOR_BASE_CHARCOAL_900_HEX,
-      CODE: COLOR_BASE_CHARCOAL_900_CODE,
-      CLASSNAME: COLOR_BASE_CHARCOAL_900_CLASSNAME,
-    },
   },
   GREY: {
-    50: {
-      HEX: COLOR_BASE_GREY_50_HEX,
-      CODE: COLOR_BASE_GREY_50_CODE,
-      CLASSNAME: COLOR_BASE_GREY_50_CLASSNAME,
-    },
     100: {
       HEX: COLOR_BASE_GREY_100_HEX,
       CODE: COLOR_BASE_GREY_100_CODE,
@@ -719,33 +389,8 @@ export const COLOR = {
       CODE: COLOR_BASE_GREY_500_CODE,
       CLASSNAME: COLOR_BASE_GREY_500_CLASSNAME,
     },
-    600: {
-      HEX: COLOR_BASE_GREY_600_HEX,
-      CODE: COLOR_BASE_GREY_600_CODE,
-      CLASSNAME: COLOR_BASE_GREY_600_CLASSNAME,
-    },
-    700: {
-      HEX: COLOR_BASE_GREY_700_HEX,
-      CODE: COLOR_BASE_GREY_700_CODE,
-      CLASSNAME: COLOR_BASE_GREY_700_CLASSNAME,
-    },
-    800: {
-      HEX: COLOR_BASE_GREY_800_HEX,
-      CODE: COLOR_BASE_GREY_800_CODE,
-      CLASSNAME: COLOR_BASE_GREY_800_CLASSNAME,
-    },
-    900: {
-      HEX: COLOR_BASE_GREY_900_HEX,
-      CODE: COLOR_BASE_GREY_900_CODE,
-      CLASSNAME: COLOR_BASE_GREY_900_CLASSNAME,
-    },
   },
   WHITE: {
-    50: {
-      HEX: COLOR_BASE_WHITE_50_HEX,
-      CODE: COLOR_BASE_WHITE_50_CODE,
-      CLASSNAME: COLOR_BASE_WHITE_50_CLASSNAME,
-    },
     100: {
       HEX: COLOR_BASE_WHITE_100_HEX,
       CODE: COLOR_BASE_WHITE_100_CODE,
@@ -771,33 +416,8 @@ export const COLOR = {
       CODE: COLOR_BASE_WHITE_500_CODE,
       CLASSNAME: COLOR_BASE_WHITE_500_CLASSNAME,
     },
-    600: {
-      HEX: COLOR_BASE_WHITE_600_HEX,
-      CODE: COLOR_BASE_WHITE_600_CODE,
-      CLASSNAME: COLOR_BASE_WHITE_600_CLASSNAME,
-    },
-    700: {
-      HEX: COLOR_BASE_WHITE_700_HEX,
-      CODE: COLOR_BASE_WHITE_700_CODE,
-      CLASSNAME: COLOR_BASE_WHITE_700_CLASSNAME,
-    },
-    800: {
-      HEX: COLOR_BASE_WHITE_800_HEX,
-      CODE: COLOR_BASE_WHITE_800_CODE,
-      CLASSNAME: COLOR_BASE_WHITE_800_CLASSNAME,
-    },
-    900: {
-      HEX: COLOR_BASE_WHITE_900_HEX,
-      CODE: COLOR_BASE_WHITE_900_CODE,
-      CLASSNAME: COLOR_BASE_WHITE_900_CLASSNAME,
-    },
   },
   BLACK: {
-    50: {
-      HEX: COLOR_BASE_BLACK_50_HEX,
-      CODE: COLOR_BASE_BLACK_50_CODE,
-      CLASSNAME: COLOR_BASE_BLACK_50_CLASSNAME,
-    },
     100: {
       HEX: COLOR_BASE_BLACK_100_HEX,
       CODE: COLOR_BASE_BLACK_100_CODE,
@@ -823,26 +443,6 @@ export const COLOR = {
       CODE: COLOR_BASE_BLACK_500_CODE,
       CLASSNAME: COLOR_BASE_BLACK_500_CLASSNAME,
     },
-    600: {
-      HEX: COLOR_BASE_BLACK_600_HEX,
-      CODE: COLOR_BASE_BLACK_600_CODE,
-      CLASSNAME: COLOR_BASE_BLACK_600_CLASSNAME,
-    },
-    700: {
-      HEX: COLOR_BASE_BLACK_700_HEX,
-      CODE: COLOR_BASE_BLACK_700_CODE,
-      CLASSNAME: COLOR_BASE_BLACK_700_CLASSNAME,
-    },
-    800: {
-      HEX: COLOR_BASE_BLACK_800_HEX,
-      CODE: COLOR_BASE_BLACK_800_CODE,
-      CLASSNAME: COLOR_BASE_BLACK_800_CLASSNAME,
-    },
-    900: {
-      HEX: COLOR_BASE_BLACK_900_HEX,
-      CODE: COLOR_BASE_BLACK_900_CODE,
-      CLASSNAME: COLOR_BASE_BLACK_900_CLASSNAME,
-    },
   },
 };
 
@@ -853,16 +453,16 @@ export const COLOR = {
 //
 // Static vars for COLOR COMBOS
 //
-export const COLOR_COMBOS_DRAFT_DEFAULT_FOREGROUND = '#202327';
-export const COLOR_COMBOS_DRAFT_DEFAULT_FOREGROUND_ACCENT = '#181b20';
+export const COLOR_COMBOS_DRAFT_DEFAULT_FOREGROUND = '#054fb8';
+export const COLOR_COMBOS_DRAFT_DEFAULT_FOREGROUND_ACCENT = '#07265f';
 export const COLOR_COMBOS_DRAFT_DEFAULT_BACKGROUND = '#eceeef';
 export const COLOR_COMBOS_DRAFT_DEFAULT_BACKGROUND_ACCENT = '#d3d5d9';
-export const COLOR_COMBOS_DRAFT_DEFAULT_ICON_BACKGROUND_ACCENT = '#60666c';
-export const COLOR_COMBOS_DRAFT_SUBTLE_FOREGROUND = '#60666c';
-export const COLOR_COMBOS_DRAFT_SUBTLE_FOREGROUND_ACCENT = '#8d939a';
-export const COLOR_COMBOS_DRAFT_SUBTLE_BACKGROUND = '#8d939a';
+export const COLOR_COMBOS_DRAFT_DEFAULT_ICON_BACKGROUND_ACCENT = '#8ecafb';
+export const COLOR_COMBOS_DRAFT_SUBTLE_FOREGROUND = '#8ecafb';
+export const COLOR_COMBOS_DRAFT_SUBTLE_FOREGROUND_ACCENT = '#e6f4fe';
+export const COLOR_COMBOS_DRAFT_SUBTLE_BACKGROUND = '#e6f4fe';
 export const COLOR_COMBOS_DRAFT_BOLD_FOREGROUND = '#f6f8f8';
-export const COLOR_COMBOS_DRAFT_BOLD_BACKGROUND = '#202327';
+export const COLOR_COMBOS_DRAFT_BOLD_BACKGROUND = '#054fb8';
 export const COLOR_COMBOS_PUBLISHED_DEFAULT_FOREGROUND = '#225d53';
 export const COLOR_COMBOS_PUBLISHED_DEFAULT_FOREGROUND_ACCENT = '#183e3b';
 export const COLOR_COMBOS_PUBLISHED_DEFAULT_BACKGROUND = '#ddf8f0';
@@ -1065,8 +665,8 @@ export const COLOR_CORE_YELLOW = '#ffc505';
 export const COLOR_CORE_RED = '#cf3c32';
 export const COLOR_CORE_ORANGE = '#fb7e09';
 export const COLOR_CORE_PURPLE = '#8e5ad8';
-export const COLOR_CORE_CHARCOAL = '#43474b';
-export const COLOR_CORE_GREY = '#8d939a';
+export const COLOR_CORE_CHARCOAL = '#0072ef';
+export const COLOR_CORE_GREY = '#e6f4fe';
 export const COLOR_CORE_WHITE = '#fff';
 export const COLOR_CORE_BLACK = '#000';
 
