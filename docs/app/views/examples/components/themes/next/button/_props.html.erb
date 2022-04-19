@@ -1,0 +1,124 @@
+<tr>
+  <td><%= md('`align`') %></td>
+  <td><%= md('Aligns a button to the "right" rather than its default position.') %></td>
+  <td><%= md('[`"space-between"` | `"end"`]') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`attributes`') %></td>
+  <td><%= md('For setting additional attributes not defined above. Accepts a Ruby hash of valid key-value properties, such as data-attributes') %></td>
+  <td><%= md('Hash') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`custom_content_class`') %></td>
+  <td>
+    <%= md('
+      Passes a custom CSS class for when custom HTML content is provided as content in the component.
+      We recommend this be used primarily for controlling the layout of the custom content and to avoid any color modifications that would overrides system styles for buttons.
+    ') %>
+  </td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`disabled`') %></td>
+  <td>
+    <%= md('
+      Toggles whether or not the button is disabled.
+      On `button` this implements the "disabled" HTML attribute
+      but on hyperlinks it enables the `aria-disabled="true"`.
+    ') %>
+  </td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`false`') %></td>
+</tr>
+<tr>
+  <td><%= md('`spinner_on_submit`') %></td>
+  <td><%= md('When the button is in a loading state, this text will be set as the `aria-label`.') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`full_width`') %></td>
+  <td><%= md('Forces a button to 100% the width of its container.') %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`false`') %></td>
+</tr>
+<tr>
+  <td><%= md('`icon`') %></td>
+  <td><%= md('Allows for configurations for an icon and its placement to be provided.') %>
+  </td>
+  <td>
+    <%= md('```
+icon: {
+  name: String,
+  style: ["left" | "right" | "only"],
+}
+```')
+    %>
+  </td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`raised`') %></td>
+  <td><%= md('Toggles "raised" shadows effect on standard buttons.') %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`false`') %></td>
+</tr>
+<tr>
+  <td><%= md('`small`') %></td>
+  <td><%= md('Toggles whether buttons in the "subtle" format can be display in a regular (default) and small size using this property.') %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`false`') %></td>
+</tr>
+<tr>
+  <td><%= md('`style`') %></td>
+  <td><%= md('Buttons have three different "styles" that affect color appearance to create a "primary", "secondary", and "danger" variation.') %></td>
+  <td><%= md('[`"primary"` | `"secondary"` | `"danger"`]') %></td>
+  <td><%= md('`primary`') %></td>
+</tr>
+<tr>
+  <td><%= md('`subtle`') %></td>
+  <td><%= md('Whether or not to render the button in the "subtle" format.') %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`false`') %></td>
+</tr>
+<tr>
+  <td><%= md('`value`') %></td>
+  <td>
+    <%= md('
+      The value to show on the button.
+      If the "only" style is set for "icon", this label is visually hidden.
+    ') %>
+  </td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td colspan="4"><%= md('**Button Group**') %></td>
+</tr>
+<tr>
+  <td><%= md('`align`') %></td>
+  <td><%= md('Adjusts the alignment of the buttons within.') %></td>
+  <td><%= md('[`"center"` | `"end"` | `"space-between"`]') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`borderTop`') %></td>
+  <td><%= md('Adds a `border-top` to the component.') %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`false`') %></td>
+</tr>
+<tr>
+  <td><%= md('`gap`') %></td>
+  <td><%= md('Adjusts the size of the gap between buttons.') %></td>
+  <td><%= md('[`:xs` | `:sm` | `:md` | `:lg`]') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`wrap`') %></td>
+  <td><%= md('**Applies at breakpoints > `sm-min` only**. This overrides the default behavior of limiting button groups to a single horizontal row, allowing buttons to wrap to fit within containers.') %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`false`') %></td>
+</tr>

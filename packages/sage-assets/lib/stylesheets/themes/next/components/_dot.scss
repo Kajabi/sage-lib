@@ -1,0 +1,42 @@
+////
+/// Dot
+///
+/// @group sage
+////
+
+$-sage-dot-size: rem(6px);
+$-sage-dot-color: sage-color(black);
+$-sage-dot-gap: sage-spacing(2xs);
+$-sage-dot-size--badge: rem(6px);
+
+.sage-dot {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sage-dot-gap, #{$-sage-dot-gap});
+  vertical-align: middle;
+
+  &::before {
+    content: "";
+    display: block;
+    flex-shrink: 0;
+    width: var(--sage-dot-size, #{$-sage-dot-size});
+    height: var(--sage-dot-size, #{$-sage-dot-size});
+    border-radius: sage-border(radius);
+    background-color: var(--sage-dot-color, #{$-sage-dot-color});
+
+    .sage-badge & {
+      width: $-sage-dot-size--badge;
+      height: $-sage-dot-size--badge;
+    }
+  }
+
+  .sage-badge & {
+    margin-left: rem(6px);
+  }
+}
+
+@each $-color-name, $-color-sliders in $sage-colors {
+  .sage-dot--color-#{"" + $-color-name} {
+    --sage-dot-color: #{sage-color($-color-name)};
+  }
+}

@@ -1,0 +1,683 @@
+////
+/// Sage mixins
+///
+/// @group sage
+////
+
+
+///
+/// Adds bottom margin or undoes bottom margin on `.no-margin-bottom` or `:last-child` elements of parent selector
+///
+/// @param {length} $block-spacing Amount of spacing to apply
+///
+@mixin sage-block-spacing($block-spacing) {
+  margin-bottom: $block-spacing;
+
+  &.no-margin-bottom,
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+///
+/// Resets base button styles
+///
+@mixin sage-button-style-reset {
+  padding: 0;
+  appearance: none;
+  font-family: inherit;
+  color: inherit;
+  box-shadow: none;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+///
+/// Button disabled mixin that sets up disabled styles for buttons
+///
+@mixin sage-button-style-disabled {
+  box-shadow: none;
+  transition: none;
+  cursor: not-allowed;
+  pointer-events: none;
+
+  &:hover:not(:focus):not(:active):not(:disabled):not([aria-disabled="true"]),
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
+
+///
+/// Sets up styles for sage "copy" (system) text.
+///
+@mixin sage-copy-text() {
+  @extend %t-sage-body;
+
+  @include truncate();
+
+  padding: rem(6px) sage-spacing(sm);
+  color: sage-color(grey, 800);
+  background-color: transparent;
+  border: $-copy-text-border;
+  border-radius: sage-border(radius);
+}
+
+///
+/// Generates icon variations for buttons
+///
+/// @param {string} $icon-name Name of the icon from the system icon library
+/// @param {string} $icon-code They code form of the icon
+/// @param {string(left|right|only)} $direction An inline direction indicator
+///
+@mixin sage-button-icon-generator($icon-name, $icon-code, $direction) {
+  // --- Right Icon Buttons
+  @if $direction == right {
+    .sage-btn--icon-right-#{$icon-name},
+    .sage-link--icon-right-#{$icon-name} {
+      flex-direction: row-reverse;
+
+      &::before {
+        @include sage-icon-base($icon-name, md);
+
+        align-self: center;
+        margin-left: sage-spacing(xs);
+        padding: var(--icon-block-padding) 0;
+      }
+    }
+
+    .sage-link--icon-right-#{$icon-name}::before {
+      margin-left: sage-spacing(2xs);
+    }
+  }
+
+  // --- Left Icon Buttons
+  @else if $direction == left {
+    .sage-btn--icon-left-#{$icon-name},
+    .sage-link--icon-left-#{$icon-name} {
+      flex-direction: row;
+
+      &::before {
+        @include sage-icon-base($icon-name);
+
+        align-self: center;
+        margin-right: sage-spacing(xs);
+        padding: var(--icon-block-padding) 0;
+      }
+    }
+
+    .sage-link--icon-left-#{$icon-name}::before {
+      margin-right: sage-spacing(2xs);
+    }
+  }
+
+  // --- Standalone Icon Buttons
+  @else if $direction == only {
+    .sage-btn--icon-only-#{$icon-name} {
+      justify-content: center;
+      text-align: center;
+      border-radius: sage-border(radius-round);
+
+      &:not(.sage-btn--subtle) {
+        padding: sage-spacing(xs) rem(12px);
+      }
+
+      &::before {
+        @include sage-icon-base($icon-name);
+
+        align-self: center;
+        padding: var(--icon-block-padding) 0;
+      }
+    }
+  }
+}
+
+///
+/// Sets a Sage-style custom focus outline to an interactive element.
+/// Should be paired with `sage-focus-outline--update-color`
+///
+/// @param {length} $focus-width [4px] Thickness of the focus ring itself
+/// @param {length} $focus-shadow [#8ECAFB] Hex color to be used for the background-color
+/// @param {time} $focus-animation-speed [0.2s] How quickly the focus ring animates on activation
+///
+@mixin sage-focus-ring(
+  $focus-shadow: sage-color(primary, 400),
+  $focus-width: 4px
+) {
+  &:focus {
+    z-index: sage-z-index(default, 1);
+    outline: none;
+    box-shadow: 0 0 0 $focus-width $focus-shadow;
+  }
+}
+
+///
+/// Sets a Sage-style custom focus outline to an interactive element.
+/// Should be paired with `sage-focus-outline--update-color`
+///
+/// @param {length} $outline-width [2px] Thickness of the focus ring itself
+/// @param {length} $outline-offset-block [4px] How far the focus ring is offset from the object on the y axis (block)
+/// @param {length} $outline-offset-inline [4px] How far the focus ring is offset from the object on the x axis (inline)
+/// @param {time} $outline-animation-speed [0.2s] How quickly the focus ring animates on activation
+///
+@mixin sage-focus-outline(
+  $outline-width: 4px,
+  $outline-offset-block: 0,
+  $outline-offset-inline: 0,
+  $outline-animation-speed: 0.2s,
+  $outline-border-radius: sage-border(radius-medium)
+) {
+  position: relative;
+
+  &:focus,
+  &:focus-within {
+    outline: none;
+  }
+
+  &::after {
+    $-offset-block: $outline-width * 2 + $outline-offset-block * 2;
+    $-offset-inline: $outline-width * 2 + $outline-offset-inline * 2;
+
+    content: "";
+    z-index: sage-z-index(default, 1);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0) scale(0.94);
+    width: calc(100% + #{$-offset-inline});
+    height: calc(100% + #{$-offset-block});
+    border: $outline-width solid transparent;
+    border-radius: $outline-border-radius;
+    transition:
+      opacity ($outline-animation-speed * 0.75) ease-out ($outline-animation-speed * 0.25),
+      transform $outline-animation-speed ease-in-out;
+    pointer-events: none;
+    opacity: 0;
+    will-change: transform;
+  }
+
+  &:focus:not(:disabled):not([aria-disabled="true"]),
+  &:active:not(:disabled):not([aria-disabled="true"]) {
+    &::after {
+      transform: translate3d(-50%, -50%, 0) scale(1);
+      opacity: 1;
+    }
+  }
+}
+
+///
+/// Sets the background-color focus outline to an interactive element's parent.
+///
+/// @param {color} $focus-within-background-color Hex color to be used for the background-color
+///
+@mixin sage-focus-outline--focus-within($focus-within-background-color: sage-color(primary, 100)) {
+  &:focus-within:not(:disabled):not([aria-disabled="true"]) {
+    background-color: $focus-within-background-color;
+  }
+}
+
+///
+/// Sets the color custom focus outline to an interactive element.
+/// Can be used both for the initial setting and for a modified setting for a particular state.
+///
+/// @param {color} $color Hex color to be used for the stroke color
+///
+@mixin sage-focus-outline--update-color($outline-color) {
+  &::after {
+    border-color: $outline-color;
+  }
+}
+
+///
+/// Adds the basic default card setup including grid, spacing, and border treatment
+///
+@mixin sage-card($grid: true) {
+  @if ($grid) {
+    @include sage-grid-card();
+  }
+  gap: sage-spacing();
+  padding: sage-spacing(card);
+  border: sage-border();
+  border-radius: sage-border(radius-large);
+}
+
+///
+/// Adds the appearance of a dashed border on an element using a url-encoded SVG shape as a background image.
+///
+/// @param {number} $thickness [1] unitless number for thickness of the stroke
+/// @param {color} $color [sage-color(grey, 400)] hex color to be used for the stroke color
+/// @param {number} $dash [4.5] unitless number for the size of a dash
+/// @param {number} $gap [4.5] unitless number for the size of a gap between dashes
+/// @param {number} $offset [4.5] unitless number for the initial offset for the starting point of the dash; typically matches a dash size
+/// @param {number} $border-radius [4] unitless number for the border radius of the shape
+///
+@mixin sage-dashed-border($thickness: 1, $color: sage-color(grey, 400), $dash: 4.5, $gap: 4.5, $offset: 4.5, $border-radius: 4) {
+  $stripped-color-value: str-replace("#{$color}", "#", "%23");
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='#{$border-radius}' ry='#{$border-radius}' stroke='#{$stripped-color-value}' stroke-width='#{$thickness * 2}' stroke-dasharray='#{$dash}%2c#{$gap + $thickness * 4}' stroke-dashoffset='#{$offset}' stroke-linecap='square'/%3e%3c/svg%3e");
+}
+
+///
+/// Sets up a grid stack that uses card-scoped spacing (16px)
+///
+@mixin sage-grid-card() {
+  display: grid;
+  gap: sage-spacing(sm);
+  grid-template-rows: min-content;
+}
+
+///
+/// Sets up a generic content stack that uses standard stack spacing (8px)
+///
+@mixin sage-grid-stack() {
+  display: grid;
+  gap: sage-spacing(xs);
+  grid-template-columns: 100%;
+  grid-template-rows: min-content;
+  justify-items: start;
+}
+
+///
+/// Sets up a grid stack that uses panel-scoped spacing (24px)
+///
+@mixin sage-grid-panel() {
+  display: grid;
+  gap: sage-spacing(panel);
+  grid-template-columns: 100%;
+  grid-template-rows: min-content;
+}
+
+///
+/// Standard grid setup for a single row layout in the card spacing scope (16px).
+/// Typically used in combination with a grid template.
+/// Adjusts to a wrapping flex layout below the `min` breakpoint.
+///
+@mixin sage-grid-card-row() {
+  justify-content: space-between;
+  align-items: center;
+  gap: sage-spacing(card);
+
+  @media (max-width: sage-breakpoint(sm-max)) {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  @media (min-width: sage-breakpoint(md-min)) {
+    display: grid;
+    grid-auto-columns: auto;
+    grid-auto-flow: column;
+  }
+}
+
+///
+/// Standard grid setup for a single row layout in the panel spacing scope (24px).
+/// Typically used in combination with a grid template.
+/// Adjusts to a wrapping flex layout below the `min` breakpoint.
+///
+@mixin sage-grid-panel-row() {
+  justify-content: space-between;
+  align-items: center;
+  gap: sage-spacing();
+
+  @media (max-width: sage-breakpoint(sm-max)) {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  @media (min-width: sage-breakpoint(md-min)) {
+    display: grid;
+    grid-auto-columns: auto;
+    grid-auto-flow: column;
+  }
+}
+
+///
+/// Adds the basic default form spacing, and border treatment
+///
+@mixin sage-form-field-group() {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+
+  &:not(:last-child) {
+    margin-bottom: sage-spacing();
+  }
+
+  .sage-panel-grid > &,
+  .sage-panel__row > &,
+  .sage-panel__stack > &,
+  .sage-panel__block > &,
+  .sage-card-grid > &,
+  .sage-card__row > &,
+  .sage-card__stack > &,
+  .sage-card__block > & {
+    margin-bottom: 0;
+  }
+}
+
+///
+/// Adds the basic default form spacing, and border treatment
+///
+@mixin sage-form-field() {
+  @extend %t-sage-body-med;
+
+  width: 100%;
+  padding: sage-spacing(sm);
+  color: sage-color(grey, 600);
+  appearance: none;
+  border: rem(1px) solid sage-color(grey, 400);
+  border-radius: sage-border(radius-medium);
+  background: transparent;
+  transition: map-get($sage-transitions, input);
+  transition-property: border, box-shadow, color;
+
+  @include placeholder {
+    color: sage-color(grey, 600);
+  }
+
+  &:hover:not(:disabled) {
+    color: sage-color(grey, 800);
+    border-color: sage-color(grey, 500);
+
+    .sage-form-field--error & {
+      border-color: sage-color(red, 600);
+    }
+  }
+
+  &:focus:not(:disabled),
+  &:active:not(:disabled) {
+    border-color: sage-color(primary, 300);
+
+    @include placeholder {
+      opacity: 0;
+    }
+  }
+
+  &:valid:not(:placeholder-shown) {
+    background: transparent; // Prevent some browsers from coloring the background on 'valid'
+
+    @include placeholder {
+      opacity: 0;
+    }
+  }
+
+  &:disabled {
+    color: sage-color(grey, 400);
+    background-color: sage-color(grey, 50);
+    cursor: not-allowed;
+    resize: none;
+
+    @include placeholder {
+      color: sage-color(grey, 600);
+    }
+
+    .sage-form-field--showplaceholder & ~ label {
+      opacity: 0.5;
+    }
+  }
+
+  ~ label {
+    @extend %t-sage-body-semi;
+
+    position: absolute;
+    padding-left: rem(4px);
+    padding-right: rem(4px);
+    color: inherit;
+    white-space: nowrap;
+    background-color: sage-color(white);
+    pointer-events: none;
+    opacity: 0;
+  }
+
+  // TODO: add support for Simpleform classes
+  .sage-form-field--error &,
+  .sage-form-field--error &:focus:not(:disabled),
+  .sage-form-field--error &:not(:placeholder-shown),
+  .sage-form-field--error &:required:not(:placeholder-shown):not(:valid) {
+    @include sage-focus-ring(sage-color(red, 400));
+
+    border-color: sage-color(red, 600);
+
+    ~ label {
+      color: sage-color(grey, 800);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    &,
+    ~ label {
+      transition: none !important; /* stylelint-disable-line declaration-no-important */
+    }
+  }
+}
+
+///
+/// Adds layout styles for form input icon container. This is used for a
+/// static icon and popover icon placement.
+///
+@mixin sage-form-field-icon() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: rem(40px);
+  width: rem(40px);
+}
+
+///
+/// Adds the basic default form label spacing, and border treatment
+///
+@mixin sage-form-field-label() {
+  @extend %t-sage-body-semi;
+
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+///
+/// Adds the basic default styling for floating input labels
+///
+@mixin sage-form-field-floating-label(
+  $textarea: false,
+  $input-text-height: sage-spacing(sm),
+  $input-padding: sage-spacing(2xs),
+  $textarea-label-padding: rem(3px),
+  $textarea-padding: sage-spacing(sm)
+) {
+  @if ($textarea == true) {
+    transform: translateY($textarea-label-padding - $textarea-padding);
+  }
+  @else {
+    transform: translateY(calc(-50% - (#{$input-text-height} + #{$input-padding}))); // we calculate the centered position minus the offset of the text height plus the spacing height
+  }
+  z-index: sage-z-index(default, 1);
+  transition: opacity 0.1s ease-in, transform 0.15s ease-in-out, color 0.15s ease-out;
+  opacity: 1;
+}
+
+///
+/// Adds the basic default form field message font sizing and color treatment
+///
+@mixin sage-form-field-message() {
+  @extend %t-sage-body-small-med;
+
+  margin-top: rem(6px);
+  color: sage-color(grey, 600);
+
+  .sage-form-field--error & {
+    color: sage-color(red, 500);
+
+    &::before {
+      @include sage-icon-base(danger, md);
+
+      position: relative;
+      top: rem(1px);
+      padding-right: sage-spacing(xs);
+    }
+  }
+}
+
+///
+/// Mixins for common styles between the form toggles Radio, Checkbox, and Switch
+///
+@mixin sage-form-toggle() {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  margin-bottom: sage-spacing(card);
+}
+
+@mixin sage-form-toggle-parents() {
+  .sage-panel-grid > &,
+  .sage-panel__row > &,
+  .sage-panel__stack > &,
+  .sage-panel__block > &,
+  .sage-card-grid > &,
+  .sage-card__row > &,
+  .sage-card__stack > &,
+  .sage-card__block > & {
+    margin-bottom: 0;
+    @content;
+  }
+}
+
+@mixin sage-form-toggle-input() {
+  appearance: none;
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  cursor: pointer;
+}
+
+@mixin sage-form-toggle-label() {
+  @extend %t-sage-body-med;
+
+  display: inline-block;
+  flex: 1;
+  margin-left: rem(8px);
+  vertical-align: top;
+  cursor: pointer;
+}
+
+@mixin sage-form-toggle-message() {
+  @extend %t-sage-body-small;
+
+  position: relative;
+  z-index: sage-z-index(default);
+  width: 100%;
+  color: sage-color(grey, 600);
+}
+
+///
+/// Sets up an element to implement the sage icon font and basic settings related
+/// to displaying the icon. Usually implemented on a pseudo-element.
+///
+/// If an `$icon` is passed in this mixin also displays the icon as content for the element.
+///
+/// @param {string | null} $icon [null] The alias from the icon library for the icon to use
+/// @param {string} $icon [md] The code for the desired spacing size from the `sage-icon-sizes` token
+///
+@mixin sage-icon-base($icon: null, $icon-size: md) {
+  $size: map-get($sage-icon-sizes, $icon-size);
+
+  display: inline-flex;
+  box-sizing: content-box;
+  width: $size;
+  height: $size;
+  text-transform: none;
+  font-family: "Sage";
+  font-size: $size;
+  font-style: normal;
+  font-weight: normal;
+  line-height: $size;
+  speak: never;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @if ($icon) {
+    content: sage-icon($icon);
+  }
+}
+
+///
+/// Adds the basic default panel setup including grid, spacing, and border treatment
+///
+@mixin sage-panel() {
+  padding: sage-spacing(panel);
+  background-color: sage-color(white);
+  border: sage-border();
+  border-radius: sage-border(radius-large);
+}
+
+///
+/// Adds an tab-styled underline that animates in and out when active class is toggled
+///
+/// @param {string} $active-class [".sage-tab--active"] class for an active state on the elememnt
+///
+@mixin sage-tab-underline($active-class: ".sage-tab--active") {
+  $item-underline: "after";
+
+  &::#{$item-underline} {
+    $spacing-off: 50%;
+
+    content: "";
+    position: absolute;
+    right: $spacing-off;
+    bottom: 0;
+    left: $spacing-off;
+    height: map-get($sage-active-underline-configs, height);
+    background: map-get($sage-active-underline-configs, color);
+    border-radius: map-get($sage-active-underline-configs, radius);
+    transition: right map-get($sage-transitions, default), left map-get($sage-transitions, default);
+  }
+
+  &:focus::#{$item-underline} {
+    left: 0;
+    right: 0;
+  }
+
+  &:active,
+  &#{$active-class} {
+    &::#{$item-underline} {
+      left: 0;
+      right: 0;
+    }
+  }
+}
+
+///
+/// Adds the default font family
+///
+@mixin sage-font-family() {
+  font-family: $-body-font-stack;
+
+  @supports (font-variation-settings: normal) {
+    font-family: "Inter var", $-body-font-stack;
+  }
+}
+
+///
+/// Truncates the text
+///
+/// @param {number} $lines Number of lines of visible text before truncation
+///
+@mixin line-clamp($lines: null) {
+  overflow-wrap: break-word; /* to wrap long singular strings */
+
+  @if $lines != null {
+    display: -webkit-box; // stylelint-disable value-no-vendor-prefix
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical; // stylelint-disable property-no-vendor-prefix
+    overflow: hidden;
+  }
+  @else {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}

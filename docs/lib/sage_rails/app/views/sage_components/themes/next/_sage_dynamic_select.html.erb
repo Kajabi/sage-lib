@@ -1,0 +1,44 @@
+
+<div class="
+  sage-dynamic-select
+  <%= "sage-select--error" if component.has_error %>
+  <%= component.generated_css_classes %>">
+  <% unless component.theme.present? && component.theme != 'sage' %>
+    <label class="sage-select__label" for="<%= component.id %>"><%= component.label || component.id %></label>
+  <% end %>
+  <select
+      class="sage-dynamic-select__data"
+      <%= component.generated_html_attributes.html_safe %>
+      name="<%= component.name %>"
+      id="<%= component.id %>"
+      tabindex="-1"
+      aria-hidden="true"
+      data-js-dynamic-select="true"
+      data-url=<%= component.url %>
+      data-placeholder="<%= component.placeholder || component.label || component.id %>"
+      <% if component.default_value.present? %>
+        data-default-value="<%= component.default_value %>"
+      <% end %>
+      <% if component.default_value.present? %>
+        data-default-text="<%= component.default_text %>"
+      <% end %>
+      <% if component.paginate.present? %>
+        data-paginate="<%= component.paginate %>"
+        data-paginate-size="<%= component.paginate_size || 25 %>"
+      <% end %>
+      <% if component.search.present? %>
+        data-search="<%= component.search %>"
+      <% end %>
+      <% if component.clear.present? %>
+        data-clear="<%= component.clear %>"
+      <% end %>
+      <% if component.theme.present? %>
+        data-theme="<%= component.theme %>"
+      <% else %>
+        data-theme="sage" %>
+      <% end %>
+      <%= 'required' if component.required.present? %>
+      >
+  </select>
+  <div class="sage-select__message"><%= component.message %></div>
+</div>

@@ -1,0 +1,117 @@
+<%
+demo_configs_links = [
+  {
+    heading: "Primary",
+    label: "Primary",
+    style: "primary",
+  },{
+    heading: "Secondary",
+    label: "Secondary",
+    style: "secondary",
+  },
+  {
+    heading: "Danger",
+    label: "Danger",
+    style: "danger",
+  }
+]
+%>
+
+<h3 class="t-sage-heading-6">Links</h3>
+<%= sage_component SagePanelStack, {} do %>
+  <% demo_configs_links.each do | config | %>
+    <%= sage_component SageLink, {
+      url: "#",
+      label: config[:heading],
+      external: false,
+      launch: false,
+      help_link: false,
+      show_label: true,
+      style: config[:style],
+    } %>
+  <% end %>
+  <%= sage_component SageLink, {
+    url: "#",
+    label: "Plain",
+    external: false,
+    launch: false,
+    help_link: false,
+    remove_underline: true,
+    show_label: true,
+    style: "secondary"
+  } %>
+  <%= sage_component SageLink, {
+    url: "#",
+    label: "Link with icon on left",
+    icon: { name: "star", style: "left" },
+    external: false,
+    launch: false,
+    help_link: false,
+    show_label: true
+  } %>
+  <%= sage_component SageLink, {
+    url: "#",
+    label: "Link with icon on right",
+    icon: { name: "star", style: "right" },
+    external: false,
+    launch: false,
+    help_link: false,
+    show_label: true
+  } %>
+  <%= sage_component SageLink, {
+    url: "#",
+    label: "Small link",
+    external: false,
+    launch: false,
+    help_link: false,
+    show_label: true,
+    small: true,
+    style: "primary"
+  } %>
+  <%= sage_component SageLink, {
+    url: "#",
+    label: "Internal link with tooltip",
+    external: false,
+    help_link: false,
+    show_label: true,
+    html_attributes: {
+      "data-js-tooltip": "Tooltip",
+      "data-js-tooltip-position": "right",
+    },
+  } %>
+  <%= sage_component SageLink, {
+    url: "https://example.com",
+    label: "External link",
+    external: true,
+    launch: true,
+    help_link: false,
+    show_label: true
+  } %>
+  <%= sage_component SageLink, {
+    url: "#",
+    external: false,
+    help_link: false,
+    show_label: true,
+  } do %>
+    <%= tag.span "Internal link with #{tag.strong "custom content"}".html_safe, class: "custom-content" %>
+  <% end %>
+<% end %>
+
+<h3 class="t-sage-heading-6">Neutral Links</h3>
+<%= md("
+Neutral links live in items with non-white backgrounds, such as Banner and Toast.
+", use_sage_type: true) %>
+
+<%= sage_component SageBanner, {
+  banner_context: "sage-demo",
+  active: true,
+  dismissable: true,
+  text: "I have spoken.",
+  link: {
+    name: "Link here",
+    attributes: {
+      href: "#",
+      referer: "no-referer"
+    }
+  }
+} %>

@@ -1,0 +1,51 @@
+////
+/// tag
+///
+/// @group sage
+////
+
+$-tag-button-color: sage-color(grey, 600);
+
+.sage-tag {
+  @extend %t-sage-body-med;
+
+  display: inline-flex;
+  align-items: center;
+  padding: sage-spacing(3xs) sage-spacing(xs);
+  background-color: sage-color(grey, 200);
+  border-radius: sage-border(radius-x-large);
+
+  &:hover {
+    background-color: sage-color(grey, 300);
+  }
+}
+
+.sage-tag__button.sage-btn--subtle {
+  display: inline-flex;
+  width: auto;
+  height: auto;
+  margin-left: sage-spacing(xs);
+  color: $-tag-button-color;
+
+  &::before {
+    padding: 0;
+  }
+
+  &:hover {
+    color: $-tag-button-color;
+  }
+
+  &:focus {
+    color: $-tag-button-color;
+    border-color: sage-color(primary, 400);
+  }
+
+  &:not(:focus):hover {
+    color: inherit;
+    background-color: transparent;
+  }
+
+  &:not(:focus):hover::after {
+    background-color: transparent;
+  }
+}

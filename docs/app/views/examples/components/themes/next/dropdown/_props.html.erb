@@ -1,0 +1,230 @@
+  <tr>
+    <td><%= md('`align`') %></td>
+    <td><%= md('Specifies which side of the button the dropdown will be aligned to. By default, this is `nil`, positioning the dropdown to the left edge of the button. When used inside of an Upload Card, the default behavior will instead be set to "center".') %></td>
+    <td><%= md('String: [ nil | "left" | "right" | "center" ]') %></td>
+    <td><%= md('`nil` (left)') %></td>
+  </tr>
+  <tr>
+    <td><%= md('`contained`') %></td>
+    <td><%= md('This uses the `--contained` modifier to add additional styling to the component.') %></td>
+    <td><%= md('Boolean') %></td>
+    <td><%= md('`nil`') %></td>
+  </tr>
+  <tr>
+    <td><%= md('`customized`') %></td>
+    <td><%= md('This uses the `--customized` modifier to add additional styling to the component.') %></td>
+    <td><%= md('Boolean') %></td>
+    <td><%= md('`nil`') %></td>
+  </tr>
+  <tr>
+    <td><%= md('`custom_modifier`') %></td>
+    <td><%= md('When set, updates styles associated with the component.') %></td>
+    <td><%= md('`"actions"`, `"sort"`') %></td>
+    <td><%= md('`nil`') %></td>
+  </tr>
+  <tr>
+    <td><%= md('`full_width_panel`') %></td>
+    <td><%= md('Extends the dropdown panel to span the full width of the input. This setting will be overridden if `align` is also specified.') %></td>
+    <td><%= md('Boolean') %></td>
+    <td><%= md('`nil`') %></td>
+  </tr>
+  <tr>
+    <td><%= md('`id`') %></td>
+    <td><%= md('Unique identifier for this component.') %></td>
+    <td><%= md('String') %></td>
+    <td><%= md('`nil`') %></td>
+  </tr>
+  <tr>
+    <td><%= md('`items`') %></td>
+    <td><%= md('
+      An array of items to be the dropdown items.
+    ') %></td>
+    <td><%= md('See `SageDropdownItem` schema below.') %></td>
+    <td><%= md('`nil`') %></td>
+  </tr>
+  <tr>
+    <td><%= md('`panel_size`') %></td>
+    <td><%= md('This component uses the `--small` modifier to change the default
+      minimum width of the dropdown menu.') %></td>
+    <td><%= md('`"small"`') %></td>
+    <td><%= md('`nil`') %></td>
+  </tr>
+  <tr>
+    <td><%= md('`panel_width`') %></td>
+    <td><%= md('Sets a custom width for the dropdown panel.') %></td>
+    <td><%= md('`"small"`') %></td>
+    <td><%= md('`nil`') %></td>
+  </tr>
+  <tr>
+    <td><%= md('`search`') %></td>
+    <td><%= md('When true, adds a search component to the dropdown.') %></td>
+    <td><%= md('Boolean') %></td>
+    <td><%= md('`nil`') %></td>
+  </tr>
+  <tr>
+    <td><%= md('`trigger`') %></td>
+    <td><%= md('When set, this passes down to an instance of `SageDropdownTrigger`.
+    It is most useful when using one of the present `type`s such as `"select"`.') %></td>
+    <td><%= md('See `SageDropdownTrigger` schema below.') %></td>
+    <td><%= md('`nil`') %></td>
+  </tr>
+  <tr>
+    <td><%= md('`trigger_type`') %></td>
+    <td><%= md('DEPRECATED.
+    This provides just the `type` for the SageDropdownTrigger.
+    Use the `sage_dropdown_trigger` slot or the `trigger` property instead.') %></td>
+    <td><%= md('`"select"`, `"select-labeled"`') %></td>
+    <td><%= md('`nil`') %></td>
+  </tr>
+  <tr>
+    <td><%= md('`wrap_footer`') %></td>
+    <td><%= md('Indicates whether or not to wrap a provided `sage_dropdown_custom_panel_footer`
+    with a container for fixing it to the bottom of the dropdown panel.') %></td>
+    <td><%= md('`"select"`, `"select-labeled"`') %></td>
+    <td><%= md('`nil`') %></td>
+  </tr>
+</tbody>
+
+<thead>
+  <tr>
+    <td colspan="2"><%= md('**Sections**') %></td>
+    <td colspan="2"><%= md('**Expected contents**') %></td>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td><%= md('`sage_dropdown_trigger`') %></td>
+    <td><%= md('This area holds content that should be displayed as the trigger for the dropdown..') %></td>
+    <td colspan="2"><%= md('Typically `SageButton` or `SageBadge`') %></td>
+  </tr>
+  <tr>
+    <td><%= md('`sage_dropdown_items`') %></td>
+    <td><%= md('This area holds allows you to provide customized sets of items, typically by looping through a set of items and displaying `SageDropdownItem` with desired formatting for each.') %></td>
+    <td colspan="2"><%= md('Loop displaying `SageDropdownItem`s') %></td>
+  </tr>
+  <tr>
+    <td><%= md('`sage_dropdown_custom_panel_content`') %></td>
+    <td><%= md('This area holds custom panel content and replaces the default content layout. The cta buttons for this resides within `sage_dropdown_custom_panel_footer`.') %></td>
+    <td colspan="2"><%= md('`ul.sage-dropdown__menu.sage-dropdown__menu--fixed-height`') %></td>
+  </tr>
+  <tr>
+    <td><%= md('`sage_dropdown_custom_panel_footer`') %></td>
+    <td><%= md('This area holds the dropdown menu for this component. The items that are referenced  reside within `sage_dropdown_custom_panel_content`.') %></td>
+    <td colspan="2"><%= md('`SageButtonGroup`') %></td>
+  </tr>
+</tbody>
+
+<thead>
+  <tr>
+    <th>Custom attribute</th>
+    <th>Description</th>
+    <th colspan="2"><%= md('**`Usage`**') %></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td><%= md('`data-sage-dropdown-exit`') %></td>
+    <td><%= md('This custom attribute can be used within custom dropdown panels to allow elements to close the dropdown panel with clicked.') %></td>
+    <td><%= md('See example "Dropdown Menu Button with Custom Content"') %></td>
+  </tr>
+</tbody>
+
+<thead>
+  <tr>
+    <th colspan="4">
+      <hr/>
+      <%= md('Subcomponent: `SageDropdownItem`') %>
+    </th>
+  </tr>
+  <tr>
+    <th>Property</th>
+    <th>Description</th>
+    <th>Type</th>
+    <th>Default</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td><%= md('`attributes`') %></td>
+    <td><%= md('Provides additional HTML attributes to the dropdown item control.') %></td>
+    <td><%= md('`Hash`') %></td>
+    <td><%= md('`nil`') %></td>
+  </tr>
+  <tr>
+    <td><%= md('`icon`') %></td>
+    <td><%= md('Specifies an icon to show before the dropdown item.') %></td>
+    <td><%= md('String (see Icons)') %></td>
+    <td><%= md('`nil`') %></td>
+  </tr>
+  <tr>
+    <td><%= md('`is_heading`') %></td>
+    <td><%= md('Sets whether or not this item should render as a heading.') %></td>
+    <td><%= md('`Boolean`') %></td>
+    <td><%= md('`false`') %></td>
+  </tr>
+  <tr>
+    <td><%= md('`modifiers`') %></td>
+    <td><%= md('') %></td>
+    <td><%= md("`[\"#{SageSchemas::DROPDOWN_ITEM[:modifiers][2][0][0].to_a.join('" | "')}\"]`") %></td>
+    <td><%= md('``') %></td>
+  </tr>
+  <tr>
+    <td><%= md('`selected`') %></td>
+    <td><%= md('') %></td>
+    <td><%= md('``') %></td>
+    <td><%= md('``') %></td>
+  </tr>
+  <tr>
+    <td><%= md('`style`') %></td>
+    <td><%= md('') %></td>
+    <td><%= md("`[\"#{SageSchemas::DROPDOWN_ITEM[:style][2].to_a.join('" | "')}\"]`") %></td>
+    <td><%= md('``') %></td>
+  </tr>
+  <tr>
+    <td><%= md('`value`') %></td>
+    <td><%= md('') %></td>
+    <td><%= md('`String`') %></td>
+    <td><%= md('`nil`') %></td>
+  </tr>
+</tbody>
+
+<thead>
+  <tr>
+    <th colspan="4">
+      <hr/>
+      <%= md('Subcomponent: `SageDropdownTrigger`') %>
+    </th>
+  </tr>
+  <tr>
+    <th>Property</th>
+    <th>Description</th>
+    <th>Type</th>
+    <th>Default</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td><%= md('`type`') %></td>
+    <td><%= md('Enables one of the preset trigger types. Currently only `select` is supported.') %></td>
+    <td><%= md('`"select"`, `DEPRECATED: "select-labeled"`') %></td>
+    <td><%= md('`nil`') %></td>
+  </tr>
+  <tr>
+    <td><%= md('`label`') %></td>
+    <td><%= md('Sets the tet content for the label of the trigger.') %></td>
+    <td><%= md('String') %></td>
+    <td><%= md('`nil`') %></td>
+  </tr>
+  <tr>
+    <td><%= md('`value`') %></td>
+    <td><%= md('Sets the value for button behind the trigger label for accessibility uses.') %></td>
+    <td><%= md('String') %></td>
+    <td><%= md('`""`') %></td>
+  </tr>
+  <tr>
+    <td><%= md('`width`') %></td>
+    <td><%= md('Sets a custom width for the trigger.') %></td>
+    <td><%= md('String') %></td>
+    <td><%= md('`nil`') %></td>
+  </tr>
+</tbody>

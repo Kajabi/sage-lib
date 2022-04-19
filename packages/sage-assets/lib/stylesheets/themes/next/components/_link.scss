@@ -1,0 +1,184 @@
+////
+/// Link modifiers
+///
+/// @group sage
+////
+
+$-link-color: sage-color(primary, 500);
+$-link-color-hover: sage-color(primary, 700);
+$-link-subtext-color: sage-color(grey, 600);
+$-link-subtext-color-hover: sage-color(grey, 800);
+
+$-link-base-styles: (
+  primary:(
+    default: (
+      color: sage-color(primary, 600),
+    ),
+    hover: (
+      color: sage-color(primary, 700),
+    ),
+    focus: (
+      color: sage-color(primary, 600),
+    ),
+  ),
+  secondary:(
+    default: (
+      color: sage-color(grey, 800),
+    ),
+    hover: (
+      color: sage-color(black),
+    ),
+    focus: (
+      color: sage-color(grey, 800),
+    ),
+  ),
+  neutral:(
+    default: (
+      color: sage-color(white),
+    ),
+    hover: (
+      color: sage-color(grey, 50),
+    ),
+    focus: (
+      color: sage-color(white),
+    ),
+  ),
+  danger:(
+    default: (
+      color: sage-color(red, 600),
+    ),
+    hover: (
+      color: sage-color(red, 700),
+    ),
+    focus: (
+      color: sage-color(red, 600),
+    ),
+  )
+);
+
+.sage-link {
+  @extend %t-sage-body-med;
+
+  display: inline-flex;
+  position: relative;
+  max-width: 100%;
+  min-width: 0; /* the is needed so that truncation work when the link doesn't have an explicit width set  */
+  text-decoration: underline;
+
+  @include sage-focus-outline(
+    $outline-width: 4px,
+    $outline-offset-inline: 4px,
+    $outline-border-radius: sage-border(radius-medium),
+  );
+  @include sage-focus-outline--update-color(sage-color(primary, 300));
+
+  &:hover {
+    color: sage-color(primary, 700);
+  }
+
+  &:focus {
+    color: sage-color(primary, 600);
+  }
+}
+
+@each $-style-name, $-styles in $-link-base-styles {
+  .sage-link--#{$-style-name} {
+    @each $-style-type-name, $-style-type-configs in $-styles {
+      @if ($-style-type-name == hover) {
+        /* stylelint-disable max-nesting-depth */
+        &:hover {
+          color: map-get($-style-type-configs, color);
+        }
+        /* stylelint-enable max-nesting-depth */
+      }
+      @else if ($-style-type-name == focus) {
+        /* stylelint-disable max-nesting-depth */
+        &:focus,
+        &:active {
+          color: map-get($-style-type-configs, color);
+        }
+        /* stylelint-enable max-nesting-depth */
+      }
+      @else {
+        color: map-get($-style-type-configs, color);
+      }
+    }
+  }
+}
+
+.sage-link--launch .t-sage--truncate,
+.sage-type a[target="_blank"]:not(.sage-link--no-launch):not([class*="icon-right-launch"]) .t-sage--truncate {
+  &::after {
+    margin-left: sage-spacing(2xs);
+    margin-right: sage-spacing(2xs);
+    @include sage-icon-base(launch, sm);
+  }
+}
+
+.sage-link--help,
+.sage-link--help-icon-only {
+  position: relative;
+  text-decoration: none;
+
+  &::before {
+    @include sage-icon-base(question-circle, lg);
+
+    color: sage-color(grey, 500);
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    outline: 0;
+
+    &::before {
+      color: sage-color(grey, 700);
+    }
+  }
+
+  .sage-page-heading__title & {
+    margin-left: sage-spacing(xs);
+  }
+}
+
+.sage-link--help {
+  display: inline-flex;
+  align-items: center;
+
+  &::before {
+    margin-right: sage-spacing(xs);
+  }
+}
+
+.sage-link--help-icon-only {
+  @include sage-focus-outline($outline-offset-inline: 4px, $outline-offset-block: 2px);
+  @include sage-focus-outline--update-color($-link-color);
+}
+
+.sage-link--remove-underline {
+  text-decoration: none;
+}
+
+.sage-link--small {
+  @extend %t-sage-body-small-med;
+}
+
+.sage-link--subtext {
+  @include sage-focus-outline--update-color(currentColor);
+
+  display: inline-block;
+  position: relative;
+  padding: 0 sage-spacing(2xs);
+  color: $-link-subtext-color;
+  border-radius: sage-border(radius-small);
+
+  &:hover {
+    color: $-link-subtext-color-hover;
+    text-decoration: underline;
+  }
+
+  &:focus {
+    color: $-link-subtext-color-hover;
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,31 @@
+<%
+  # Temporary variables here until refactor for 'name' is complete; see https://kajabi.atlassian.net/browse/SAGE-214
+  label = component.label || component.name;
+  select_id = component.id.downcase.dasherize if component.id;
+  select_name = label.downcase.dasherize;
+%>
+
+<div class="
+  sage-select
+  <%= "sage-form-field--error" if component.has_error %>
+  <%= component.generated_css_classes %>"
+  data-js-select="true"
+  <%= component.generated_html_attributes.html_safe %>
+>
+  <label class="sage-select__label" for="<%= select_name %>"><%= label %></label>
+  <div class="sage-select__field-wrapper">
+    <select
+      class="sage-select__field"
+      name="<%= select_id %>"
+      id="<%= select_id %>"
+      <%= "disabled" if component.disabled %>
+    >
+      <% component.select_options.each do |option| %>
+        <option value="<%= option[:value] %>"><%= option[:text] %></option>
+      <% end %>
+    </select>
+  </div>
+  <% if component.message.present? %>
+    <div class="sage-select__message"><%= component.message %></div>
+  <% end %>
+</div>

@@ -1,0 +1,208 @@
+////
+/// Icon
+///
+/// @group sage
+////
+
+$-icon-font-cdn-version: "4";
+$-icon-font-path: "#{$sage-font-cdn-root}/sage/v#{$-icon-font-cdn-version}" !default;
+$-icon-font-version: 4;
+
+// NOTE: These should be kept in sync with line-height pairings from `packages/sage-assets/lib/stylesheets/tokens/_line_height.scss`
+$-icon-beside-type: (
+  "h1",
+  "h2",
+  "h3",
+  "h4",
+  "h5",
+  "h6",
+  "body",
+  "body-sm",
+  "body-xs",
+);
+
+// NOTE: These should be kept in sync with line-height pairings from `packages/sage-assets/lib/stylesheets/tokens/_line_height.scss`
+$-icon-beside-type: (
+  "h1",
+  "h2",
+  "h3",
+  "h4",
+  "h5",
+  "h6",
+  "body",
+  "body-sm",
+  "body-xs",
+);
+
+// Icon font setup
+@font-face {
+  font-family: "Sage";
+  src: url("#{$-icon-font-path}/Sage.woff?v=#{$-icon-font-version}");
+  src: url("#{$-icon-font-path}/Sage.woff?v=#{$-icon-font-version}") format("woff"),
+    url("#{$-icon-font-path}/Sage.ttf?v=#{$-icon-font-version}") format("truetype"),
+    url("#{$-icon-font-path}/Sage.svg?v=#{$-icon-font-version}") format("svg"),
+    url("#{$-icon-font-path}/Sage.eot?v=#{$-icon-font-version}") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+// Build icons as `sage-icon-icon-name` based on the map in `tokens/_icon`
+@each $icon-name, $icon-code in $sage-icons {
+  @each $size-name, $size in $sage-icon-sizes {
+    $suffix: "-#{$size-name}";
+
+    @if $size-name == md {
+      $suffix: "";
+    }
+
+    .sage-icon-#{$icon-name}#{$suffix} {
+      width: $size;
+      height: $size;
+
+      &::before {
+        @include sage-icon-base($icon-name, $size-name);
+      }
+    }
+  }
+
+  // Other icons generated here
+  @include sage-button-icon-generator($icon-name, $icon-code, only);
+  @include sage-button-icon-generator($icon-name, $icon-code, left);
+  @include sage-button-icon-generator($icon-name, $icon-code, right);
+
+  .sage-tab--icon-#{$icon-name}::before {
+    @include sage-icon-base($icon-name);
+    margin-right: sage-spacing(xs);
+  }
+
+  .sage-choice--icon-#{$icon-name}::before {
+    @include sage-icon-base($icon-name);
+  }
+
+  .sage-dropdown__item-control--icon-#{$icon-name}::before {
+    @include sage-icon-base($icon-name);
+    margin: 0 sage-spacing(xs) 0 0;
+  }
+
+  .sage-input__icon .sage-icon-#{$icon-name} {
+    color: sage-color(grey, 600);
+    line-height: sage-line-height(body-xs);
+  }
+
+  .sage-label--icon-#{$icon-name} .sage-label__value::before {
+    @include sage-icon-base($icon-name, md);
+    align-self: center;
+    position: relative;
+    margin: 0 sage-spacing(xs) 0 0;
+  }
+
+  .sage-label--icon--custom-color .sage-label__value::before {
+    --sage-label-custom-icon-color: inherit;
+
+    color: var(--sage-label-custom-icon-color);
+  }
+
+  .sage-badge__decor-icon--#{$icon-name}::before,
+  .sage-label__decor-icon--#{$icon-name}::before {
+    @include sage-icon-base($icon-name, md);
+    align-self: center;
+  }
+
+  .sage-page-heading__toolbar-icon-#{$icon-name} {
+    white-space: nowrap;
+
+    &::before {
+      margin-right: sage-spacing(xs);
+
+      @include sage-icon-base($icon-name);
+    }
+  }
+
+  .sage-status-icon--#{$icon-name} {
+    &::before {
+      @include sage-icon-base($icon-name);
+    }
+  }
+}
+
+//
+// Sets up height and line-height adjustments to better align next to
+// various responsive type specs
+//
+@each $type-spec in $-icon-beside-type {
+  .sage-icon--adjacent-type-#{$type-spec} {
+    height: sage-line-height($type-spec);
+
+    &::before {
+      height: sage-line-height($type-spec);
+      line-height: sage-line-height($type-spec);
+    }
+  }
+}
+
+@keyframes sage-icon-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.sage-icon-background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  width: sage-spacing(xl);
+  height: sage-spacing(xl);
+  background-color: var(--background-color, inherit);
+
+  [class*="sage-icon-"] {
+    display: flex;
+    color: var(--color, currentColor);
+  }
+
+  &:not(.sage-icon-background--circular) {
+    border-radius: sage-border(radius);
+  }
+
+  @media screen and (max-width: sage-breakpoint(md-max)) {
+    max-width: sage-spacing(xl);
+  }
+}
+
+.sage-icon-background--circular {
+  border-radius: sage-border(radius-round);
+}
+
+@each $size-name, $size in $sage-icon-background-sizes {
+  $suffix: "-#{$size-name}";
+
+  .sage-icon-background-#{$suffix} {
+    width: $size;
+    height: $size;
+    @media screen and (max-width: sage-breakpoint(md-max)) {
+      max-width: $size;
+    }
+  }
+}
+
+.sage-icon-background--custom-size {
+  --sage-icon-background-height: sage-spacing(xl);
+  --sage-icon-background-width: sage-spacing(xl);
+
+  width: var(--sage-icon-background-width);
+  height: var(--sage-icon-background-height);
+}
+
+@each $-color, $-values in $sage-color-combos {
+  $-subtle-values: map-get($-values, subtle);
+  $-bold-values: map-get($-values, bold);
+
+  .sage-icon-background--#{$-color} {
+    --color: #{sage-color-combo($-color, default, foreground)};
+    --background-color: #{sage-color-combo($-color, default, background)};
+  }
+}

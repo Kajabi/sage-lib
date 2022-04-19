@@ -1,0 +1,78 @@
+/* ==================================================
+  ** _home.scss
+
+  For Sage documentation use
+================================================== */
+.docs-home {
+  background: sage-color(gray, 200);
+}
+
+.docs-hero {
+  padding: sage-spacing() sage-spacing() rem(100px);
+  color: sage-color(white);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-color: sage-color(primary, 500);
+
+  @media (max-width: sage-breakpoint(md-min)) {
+    padding-bottom: sage-spacing(xl);
+  }
+
+  .sage-btn--subtle.sage-btn--secondary {
+    color: currentColor;
+
+    &:focus::after {
+      border-color: currentColor;
+    }
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}
+
+.docs-hero__title {
+  margin-bottom: sage-spacing(sm);
+  margin-top: sage-spacing();
+  font-size: 4rem;
+  line-height: 4rem;
+}
+
+.docs-hero__img {
+  max-width: 100%;
+  padding-left: rem(100px);
+
+  @media (max-width: sage-breakpoint(md-min)) {
+    display: none;
+  }
+}
+
+.docs-section {
+  padding: sage-spacing(2xl) sage-spacing();
+
+  .sage-panel {
+    height: 100%;
+  }
+
+  @media (max-width: sage-breakpoint(md-min)) {
+    padding: sage-spacing();
+  }
+}
+
+.docs-section__title {
+  margin-bottom: sage-spacing(2xl);
+
+  @media (max-width: sage-breakpoint(md-min)) {
+    margin-bottom: sage-spacing();
+  }
+}
+
+.docs-section__icon {
+  margin-bottom: sage-spacing();
+}
+
+.docs-section__platform-icon {
+  margin-bottom: sage-spacing();
+  font-size: rem(48px);
+}

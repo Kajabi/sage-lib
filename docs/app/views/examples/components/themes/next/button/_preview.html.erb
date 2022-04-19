@@ -1,0 +1,282 @@
+<%
+demo_configs = [
+  {
+    heading: "Primary",
+    label: "Primary",
+    style: "primary",
+  },
+  {
+    heading: "Secondary",
+    label: "Secondary",
+    style: "secondary",
+  },
+  {
+    heading: "Danger",
+    label: "Danger",
+    style: "danger",
+  }
+]
+%>
+
+<h3>Standard Buttons</h3>
+
+<% demo_configs.each do | config | %>
+  <%= sage_component SageCardBlock, {} do %>
+    <%= sage_component SageBadge, {
+      color: "draft",
+      value: config[:heading],
+    } %>
+  <% end %>
+
+  <% [false, true].each do | disabled | %>
+    <%= sage_component SageButtonGroup, { gap: :sm, spacer: { bottom: :sm }} do %>
+      <%= sage_component SageButton, {
+        value: "Button",
+        style: config[:style],
+        disabled: disabled,
+      } %>
+
+      <%= sage_component SageButton, {
+        value: "Submit",
+        style: config[:style],
+        disabled: disabled,
+        attributes: {
+          type: "submit"
+        }
+      } %>
+
+      <%= sage_component SageButton, {
+        value: "Link",
+        style: config[:style],
+        attributes: {
+          href: "#element-button"
+        },
+        disabled: disabled
+      } %>
+
+      <%= sage_component SageButton, {
+        value: "Left icon",
+        style: config[:style],
+        icon: {
+          style: "left",
+          name: "menu"
+        },
+        disabled: disabled
+      } %>
+
+      <%= sage_component SageButton, {
+        value: "Right icon",
+        style: config[:style],
+        icon: {
+          style: "right",
+          name: "menu"
+        },
+        disabled: disabled
+      } %>
+
+      <%= sage_component SageButton, {
+        value: "Icon only",
+        style: config[:style],
+        icon: {
+          style: "only",
+          name: "menu"
+        },
+        disabled: disabled
+      } %>
+
+      <%= sage_component SageButton, {
+        style: config[:style],
+        disabled: disabled,
+        custom_content_class: 'demo-custom-class',
+      } do %>
+        <strong>Custom</strong> <em>content</em>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>
+
+<h3>Subtle Buttons</h3>
+<% demo_configs.each do | config | %>
+  <%= sage_component SageCardBlock, {} do %>
+    <%= sage_component SageBadge, {
+      color: "draft",
+      value: "Subtle #{config[:heading]}",
+    } %>
+  <% end %>
+
+  <% [false, true].each do | disabled | %>
+    <%= sage_component SageButtonGroup, { gap: :sm, spacer: { bottom: :sm }} do %>
+      <%= sage_component SageButton, {
+        value: "Button",
+        style: config[:style],
+        subtle: true,
+        disabled: disabled
+      } %>
+
+      <%= sage_component SageButton, {
+        value: "Link",
+        style: config[:style],
+        attributes: {
+          href: "#element-button"
+        },
+        subtle: true,
+        disabled: disabled
+      } %>
+
+      <%= sage_component SageButton, {
+        value: "Left icon",
+        style: config[:style],
+        icon: {
+          style: "left",
+          name: "gear"
+        },
+        subtle: true,
+        disabled: disabled
+      } %>
+
+      <%= sage_component SageButton, {
+        value: "Right icon",
+        style: config[:style],
+        icon: {
+          style: "right",
+          name: "gear"
+        },
+        subtle: true,
+        disabled: disabled
+      } %>
+
+      <%= sage_component SageButton, {
+        value: "Icon only",
+        style: config[:style],
+        icon: {
+          style: "only",
+          name: "gear"
+        },
+        subtle: true,
+        disabled: disabled
+      } %>
+
+      <%= sage_component SageButton, {
+        style: config[:style],
+        subtle: true,
+        disabled: disabled
+      } do %>
+        <strong>Custom</strong> <em>content</em>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>
+
+<h3>Button Groups</h3>
+<%= sage_component SageCardBlock, {} do %>
+  <%= sage_component SageBadge, {
+    color: "draft",
+    value: "Button group: Align End",
+  } %>
+<% end %>
+<%= sage_component SageButtonGroup, { gap: :md, align: "end" } do %>
+  <%= sage_component SageButton, {
+    value: "Cancel",
+    style: "secondary",
+  } %>
+  <%= sage_component SageButton, {
+    value: "Save",
+    style: "primary",
+  } %>
+<% end %>
+
+<%= sage_component SageCardBlock, {} do %>
+  <%= sage_component SageBadge, {
+    color: "draft",
+    value: "Button group: Align Space-Between",
+  } %>
+<% end %>
+<%= sage_component SageButtonGroup, { gap: :md, align: "space-between" } do %>
+  <%= sage_component SageButton, {
+    value: "Cancel",
+    style: "secondary",
+  } %>
+  <%= sage_component SageButton, {
+    value: "Save",
+    style: "primary",
+  } %>
+<% end %>
+
+<%= sage_component SageCardBlock, {} do %>
+  <%= sage_component SageBadge, {
+    color: "draft",
+    value: "Button group: Align End with top border",
+  } %>
+<% end %>
+
+<%= sage_component SageButtonGroup, { gap: :md, align: "end", borderTop: true } do %>
+  <%= sage_component SageButton, {
+    value: "Cancel",
+    style: "secondary",
+  } %>
+  <%= sage_component SageButton, {
+    value: "Save",
+    style: "primary",
+  } %>
+<% end %>
+
+<h3>Button Group Wrap</h3>
+<%= md("
+  When enabled, button groups are no longer restricted to a single row, allowing contents to wrap to multiple lines via `flex-wrap: wrap`. **Note: all button groups regardless of this attribute will wrap at breakpoints below `sm-min` to prevent horizontal scrolling on small screen devices.**
+  Click the button below to toggle button group wrapping throughout the page, and resize your browser to view the resulting change.
+", use_sage_type: true) %>
+<div>
+  <%= sage_component SageButton, {
+    value: "Toggle button group wrap",
+    style: "primary",
+    icon: {
+      style: "right",
+      name: "menu-bordered"
+    },
+    attributes: {
+      id: "button-group-wrap-example"
+    }
+  } %>
+</div>
+
+<h3>Loading State</h3>
+<%= md("
+  Displays a loading indicator in the button, such as when a button is used to submit a form. Including the `spinner_on_submit` property will activate the loading state, and place the corresponding text as the `aria-label`.
+", use_sage_type: true) %>
+<div>
+  <%= sage_component SageButton, {
+    value: "Select to activate loading state",
+    spinner_on_submit: "my aria label",
+    attributes: {
+      href: "#",
+      rel: "noopener",
+      title: "Open Sassdocs site"
+    },
+    style: "primary",
+  } %>
+</div>
+
+<h3>Small Button</h3>
+<%= md("
+  Sets a subtle button to be smaller in `font-size` and `line-height`. Enable the `small` treatment by adding the attribute: `small: true`.
+", use_sage_type: true) %>
+<div>
+  <%= sage_component SageButton, {
+    value: "Small button here",
+    style: "primary",
+    subtle: true,
+    small: true
+  } %>
+</div>
+
+<h3>Full Width</h3>
+<%= md("
+  Displays a button that takes up 100% of the width of its container. Enable the `full_width` treatment by adding the attribute: `full_width: true`.
+", use_sage_type: true) %>
+<div>
+  <%= sage_component SageButton, {
+    value: "Full width button example",
+    style: "primary",
+    full_width: true
+  } %>
+</div>

@@ -1,0 +1,54 @@
+<%
+css_classes = ["sage-link"]
+html_attributes = component.html_attributes || {}
+label = component.content
+
+if component.label
+  label = if component.truncate
+    content_tag(:span, component.label, class: "t-sage--truncate")
+  else
+    component.label
+  end
+end
+
+if component.remove_underline
+  css_classes.append("sage-link--remove-underline")
+end
+
+if component.small
+  css_classes.append("sage-link--small")
+end
+
+if component.style
+  css_classes.append("sage-link--" + component.style)
+end
+
+if component.icon
+  css_classes.append("sage-link--icon-" + component.icon[:style] + "-" + component.icon[:name])
+end
+
+if component.help_link && component.show_label
+  css_classes.append("sage-link--help")
+elsif component.help_link && !component.show_label
+  css_classes.append("sage-link--help-icon-only")
+  label = content_tag(:span, label, class: "visually-hidden")
+elsif !component.external && !component.launch
+elsif !component.external && component.launch
+  label = content_tag(:span, component.label, class: "t-sage--truncate")
+  css_classes.append("sage-link--launch")
+elsif component.external && component.launch
+  label = content_tag(:span, component.label, class: "t-sage--truncate")
+  html_attributes[:rel] = "noopener"
+  html_attributes[:target] = "_blank"
+elsif component.external && !component.launch
+  css_classes.append("sage-link--no-launch")
+  html_attributes[:rel] = "noopener"
+  html_attributes[:target] = "_blank"
+end
+
+html_attributes[:class] = css_classes
+  .push(component.generated_css_classes)
+  .join(" ")
+  .squish
+%>
+<%= link_to label, component.url, html_attributes %>

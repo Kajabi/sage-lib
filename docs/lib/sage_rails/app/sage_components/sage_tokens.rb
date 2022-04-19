@@ -6,13 +6,14 @@ module SageTokens
 
   # Extract color names from dictionary core map
   def SageTokens.color
-    SageDictionary::SD_SAGE_COLOR_CORE.map { | k, v | k.to_s.downcase }
+    # TODO: THEME how to get current theme's dictionary to apply here?
+    SageDictionary::THEME::SD_SAGE_COLOR_CORE.map { | k, v | k.to_s.downcase }
   end
 
   # Extract color palette hex values from base color map
   def SageTokens.color_palette
     palette = {}
-    SageDictionary::SD_SAGE_COLOR.each do |color, hash|
+    SageDictionary::THEME::SD_SAGE_COLOR.each do |color, hash|
       hash.each do |index, values|
         case color
         when :BLACK
@@ -32,13 +33,13 @@ module SageTokens
   # Extract color palette hex values from base color map
   def SageTokens.color_sliders
     sliders = SageTokens.color()
-    SageDictionary::SD_SAGE_COLOR.each do |color, hash|
+    SageDictionary::THEME::SD_SAGE_COLOR.each do |color, hash|
       hash.each do |index, values|
         case color
         when :BLACK
-          # skip black values
+          sliders.push(values[:CODE])
         when :WHITE
-          # skip white values
+          sliders.push(values[:CODE])
         else
           sliders.push(values[:CODE])
         end
@@ -49,7 +50,7 @@ module SageTokens
 
   # Extract grid template symbols
   def SageTokens.grid_templates
-    SageDictionary::SD_SAGE_CONTENT_GRID_TEMPLATE.map { |k,v| v[:SYMBOL] }
+    SageDictionary::THEME::SD_SAGE_CONTENT_GRID_TEMPLATE.map { |k,v| v[:SYMBOL] }
   end
 
   #
@@ -66,46 +67,28 @@ module SageTokens
 
   CONTAINER_SPECS = [
     {
-      alias: "tiny",
-      max_size: "200px",
-      name: "Tiny",
-      usage: "For smaller dropdowns.",
-    },
-    {
-      alias: "xs",
-      max_size: "240px",
-      name: "Extra Small",
-      usage: "For standard dropdowns and smaller modal panels.",
-    },
-    {
       alias: "sm",
-      max_size: "352px",
+      max_size: "340px",
       name: "Small",
-      usage: "For one third of a trifold layout, the smaller portion of a side fold layout, standard modal panels, and narrow single-column layouts.",
+      usage: "sage-container(sm)",
     },
     {
       alias: "md",
-      max_size: "544px",
+      max_size: "520px",
       name: "Medium",
-      usage: "For one half of a bifold layout, medium-sized single column layouts, and larger modal panels.",
+      usage: "sage-container(md)",
     },
     {
       alias: "lg",
-      max_size: "736px",
+      max_size: "700px",
       name: "Large",
-      usage: "For the larger part of a side fold layout, larger single-column layouts, and largest for modal panels.",
-    },
-    {
-      alias: "xl",
-      max_size: "1120px",
-      name: "Large",
-      usage: "For single-column layouts that span full portion of stage yet stay at a maximum of 1120px wide.",
+      usage: "sage-container(lg)",
     },
     {
       alias: "full",
-      max_size: "1440px",
+      max_size: "1064px",
       name: "Full",
-      usage: "For widest possible panels and containing layout patterns.",
+      usage: "sage-container(full)",
     }
   ]
 

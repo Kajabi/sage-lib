@@ -1,0 +1,87 @@
+////
+/// Panel
+///
+/// @group sage/components/panel-figure
+////
+$-panel-figure-padding: sage-spacing(lg);
+$-panel-figure-default-background-color: sage-color(grey, 100);
+
+:root {
+  --sage-figure-aspect-ratio: 1.78; // 16 / 9
+  --sage-figure-background-color: #{$-panel-figure-default-background-color};
+}
+
+.sage-panel__figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 100%;
+  border-radius: sage-border(radius);
+  background-color: var(--sage-figure-background-color, #{$-panel-figure-default-background-color});
+
+  img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+.sage-panel__figure--aspect-ratio {
+  position: relative;
+  height: 0;
+  padding-top: calc(100% / var(--sage-figure-aspect-ratio));
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+  }
+}
+
+.sage-panel__figure--padded {
+  align-items: flex-end;
+
+  img {
+    width: calc(100% - #{$-panel-figure-padding * 2});
+    height: calc(100% - #{$-panel-figure-padding});
+  }
+
+  &.sage-panel__figure--aspect-ratio {
+    img {
+      top: calc(50% + #{$-panel-figure-padding / 2});
+    }
+  }
+}
+
+.sage-panel__figure--bleed-bottom {
+  width: calc(100% + #{2 * $-panel-figure-padding});
+  margin: 0 (-1 * sage-spacing(lg)) (-1 * sage-spacing(lg));
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+}
+
+.sage-panel__figure--bleed-sides {
+  width: calc(100% + #{2 * $-panel-figure-padding});
+  margin: 0 (-1 * sage-spacing(lg));
+  border-radius: 0;
+}
+
+.sage-panel__figure--bleed-top {
+  width: calc(100% + #{2 * $-panel-figure-padding});
+  margin: (-1 * sage-spacing(lg)) (-1 * sage-spacing(lg)) 0;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.sage-panel__figure--wistia {
+  display: block;
+}

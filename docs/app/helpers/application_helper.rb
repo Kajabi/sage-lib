@@ -41,5 +41,4 @@ module ApplicationHelper
   def storybook_url(slug)
     "#{Rails.application.config.storybook_root_url}#{slug}"
   end
-
 end

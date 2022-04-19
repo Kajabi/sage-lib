@@ -1,0 +1,70 @@
+////
+/// Sage font sizes
+///
+/// @group sage
+////
+
+///
+/// Sage raw font sizes token (non-responsive)
+///
+/// Sage allows for responsive typography, that uses these raw font sizes as the source of truth for its possible sizes.
+///
+$sage-font-sizes: (
+  xs: rem(12px),
+  sm: rem(14px),
+  md: rem(16px),
+  lg: rem(18px),
+  xl: rem(24px),
+  2xl: rem(28px),
+  3xl: rem(32px),
+  4xl: rem(40px)
+);
+
+///
+/// Sage responsive font sizes custom props
+///
+/// Responsive font sizes use CSS custom properties to apply a raw font size for a given breakpoint range.
+///
+:root {
+  --sage-font-size-body-xs: #{map-get($sage-font-sizes, xs)};
+  --sage-font-size-body-sm: #{map-get($sage-font-sizes, sm)};
+  --sage-font-size-body: #{map-get($sage-font-sizes, md)};
+  --sage-font-size-h6: #{map-get($sage-font-sizes, md)};
+  --sage-font-size-h5: #{map-get($sage-font-sizes, lg)};
+  --sage-font-size-h4: #{map-get($sage-font-sizes, xl)};
+  --sage-font-size-h3: #{map-get($sage-font-sizes, 2xl)};
+  --sage-font-size-h2: #{map-get($sage-font-sizes, 3xl)};
+  --sage-font-size-h1: #{map-get($sage-font-sizes, 4xl)};
+}
+
+@media screen and (min-width: sage-breakpoint(lg-min)) {
+  :root {
+    // --sage-font-size-body-xs is same
+    // --sage-font-size-body-sm: same
+    // --sage-font-size-body: same
+    // --sage-font-size-h6: same
+    // --sage-font-size-h5: same
+    // --sage-font-size-h4: same
+    // --sage-font-size-h3: same
+    // --sage-font-size-h2: same
+    // --sage-font-size-h1: same
+  }
+}
+
+///
+/// Sage font size token utility (responsive)
+///
+/// @param {string} $key [body] The token to retrieve
+/// @param {bool} $responsive [true] Whether or not retrieve a responsive css custom property or a flat value
+///
+/// @return {length}} The value retrieved
+///
+@function sage-font-size($key: body, $responsive: true) {
+  @if ($responsive) {
+    @return var(--sage-font-size-#{$key});
+  }
+
+  @else {
+    @return map-get($sage-font-sizes, $key);
+  }
+}

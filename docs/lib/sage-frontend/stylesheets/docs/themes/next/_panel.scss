@@ -1,0 +1,7 @@
+.docs-panel {
+  @include sage-panel;
+  
+  @media screen and (min-width: sage-breakpoint(lg-min)) {
+    padding: 5rem;
+  }
+}

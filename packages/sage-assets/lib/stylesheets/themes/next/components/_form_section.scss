@@ -1,0 +1,53 @@
+////
+/// Form Section
+///
+/// @group sage
+////
+
+
+.sage-form-section {
+  margin-bottom: sage-spacing();
+}
+
+// TODO: refactor extends following final design of form section
+.sage-form-section__info {
+
+  @media (max-width: sage-breakpoint(md-max)) {
+    margin-bottom: sage-spacing(md);
+  }
+}
+
+.sage-form-section__title {
+  margin-top: rem(12px);
+  margin-bottom: sage-spacing(md);
+}
+
+.sage-form-section__subtitle {
+  @extend %t-sage-body;
+  
+  display: flex;
+  flex-direction: column;
+  gap: sage-spacing(sm);
+  color: sage-color(grey, 600);
+}
+
+.sage-form-section__subtitle--legacy {
+  display: block;
+  gap: unset;
+}
+
+.sage-form-section__content {
+  position: relative;
+
+  // Form Section Panels commonly wrap a <form> tag generated within rails.
+  // In the event that a form tag is not present, ensure the children behave identically.
+  &,
+  > form {
+    display: flex;
+    flex-direction: column;
+
+    > :last-child {
+      margin-bottom: 0;
+    }
+  }
+}

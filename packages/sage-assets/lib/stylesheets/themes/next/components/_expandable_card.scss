@@ -1,0 +1,64 @@
+////
+/// Expandable Card
+///
+/// @group sage
+////
+
+
+$-expandable-card-bg-color: sage-color(white);
+$-expandable-card-border-color: sage-color(grey, 300);
+$-expandable-card-border-radius: sage-border(radius);
+$-expandable-card-padding: sage-spacing(sm);
+$-expandable-card-padding-xs: sage-spacing(xs);
+
+
+.sage-expandable-card__body,
+.sage-expandable-card__body-bordered {
+  visibility: hidden;
+  overflow: hidden;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  
+  .sage-expandable-card--expanded & {
+    visibility: visible;
+    overflow: initial;
+    height: auto;
+    margin-top: sage-spacing(xs);
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+.sage-expandable-card__body-bordered {
+  padding-left: $-expandable-card-padding;
+  padding-right: $-expandable-card-padding;
+
+  .sage-expandable-card--expanded & {
+    padding-top: $-expandable-card-padding;
+    padding-bottom: $-expandable-card-padding;
+    border-radius: $-expandable-card-border-radius;
+    border: 1px solid $-expandable-card-border-color;
+    background: $-expandable-card-bg-color;
+  }
+}
+
+.sage-expandable-card__trigger {
+  display: inline-flex;
+
+  &::before {
+    justify-content: center;
+    margin-right: rem(4px);
+    font-size: rem(8px);
+    transition: transform 0.2s linear;
+  }
+}
+
+.sage-expandable-card--expanded {
+  .sage-expandable-card__trigger::before {
+    transform: rotateZ(90deg);
+  }
+}
+// NOTE: Styles for align_arrow_right prop added in `_button`
