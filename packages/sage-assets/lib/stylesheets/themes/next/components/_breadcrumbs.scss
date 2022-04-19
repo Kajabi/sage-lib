@@ -4,9 +4,9 @@
 /// @group sage
 ////
 
-$-breadcrumb-current-color: sage-color(grey, 800);
-$-breadcrumb-interactive-color: sage-color(grey, 800);
-$-breadcrumb-outline-color: sage-color(grey, 400);
+$-breadcrumb-current-color: sage-color(charcoal, 400);
+$-breadcrumb-interactive-color: sage-color(charcoal, 400);
+$-breadcrumb-outline-color: sage-color(grey, 500);
 
 .sage-breadcrumbs {
   display: flex;
@@ -33,7 +33,7 @@ $-breadcrumb-outline-color: sage-color(grey, 400);
   &:not(:last-child) {
     &::after {
       content: "/";
-      color: sage-color(grey, 600);
+      color: sage-color(charcoal, 200);
     }
 
     .sage-breadcrumbs--progressbar &::after {
@@ -47,7 +47,7 @@ $-breadcrumb-outline-color: sage-color(grey, 400);
   display: inline-flex;
   align-items: center;
   padding: sage-spacing(3xs) sage-spacing(xs);
-  color: sage-color(grey, 700);
+  color: sage-color(charcoal, 300);
   font-size: sage-font-size(body-sm);
   font-weight: sage-font-weight(semibold);
   text-decoration: none;

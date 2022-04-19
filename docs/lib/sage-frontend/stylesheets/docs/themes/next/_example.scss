@@ -5,16 +5,16 @@
 ================================================== */
 
 $-example-link-color: inherit;
-$-example-link-color-hover: sage-color(grey, 500);
+$-example-link-color-hover: sage-color(charcoal, 100);
 
 $-example-code-preview-height: 13rem;
 $-example-code-preview-button-color: sage-color(white);
-$-example-code-preview-button-color-hover: sage-color(sage, 200);
+$-example-code-preview-button-color-hover: sage-color(sage, 100);
 $-example-code-preview-button-blur: blur(2px);
-$-example-code-preview-button-bg: rgba(sage-color(primary, 500), 0.75);
+$-example-code-preview-button-bg: rgba(sage-color(primary, 300), 0.75);
 
 .example__title {
-  color: sage-color(grey, 900);
+  color: sage-color(charcoal, 500);
   text-transform: capitalize;
 }
 
@@ -40,7 +40,7 @@ $-example-code-preview-button-bg: rgba(sage-color(primary, 500), 0.75);
   &:hover,
   &:focus,
   &:active {
-    color: sage-color(grey, 900);
+    color: sage-color(charcoal, 500);
     text-decoration: none;
   }
 }
@@ -50,7 +50,7 @@ $-example-code-preview-button-bg: rgba(sage-color(primary, 500), 0.75);
   min-width: rem(100px);
   margin: sage-spacing() 0;
   padding: sage-spacing(xs) sage-spacing();
-  color: sage-color(grey, 900);
+  color: sage-color(charcoal, 500);
   text-align: center;
   background: sage-color(white);
   box-shadow: sage-shadow();
@@ -117,7 +117,7 @@ $-example-code-preview-button-bg: rgba(sage-color(primary, 500), 0.75);
 
   @supports (backdrop-filter: blur(2px)) {
     backdrop-filter: $-example-code-preview-button-blur;
-    background-color: rgba(sage-color(primary, 500), 0.15);
+    background-color: rgba(sage-color(primary, 300), 0.15);
 
     .example__code--expanded & {
       backdrop-filter: none;

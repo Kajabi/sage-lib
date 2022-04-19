@@ -4,7 +4,7 @@
 /// @group sage
 ////
 
-$-tag-button-color: sage-color(grey, 600);
+$-tag-button-color: sage-color(charcoal, 200);
 
 .sage-tag {
   @extend %t-sage-body-med;
@@ -12,11 +12,11 @@ $-tag-button-color: sage-color(grey, 600);
   display: inline-flex;
   align-items: center;
   padding: sage-spacing(3xs) sage-spacing(xs);
-  background-color: sage-color(grey, 200);
+  background-color: sage-color(grey, 300);
   border-radius: sage-border(radius-x-large);
 
   &:hover {
-    background-color: sage-color(grey, 300);
+    background-color: sage-color(grey, 400);
   }
 }
 
@@ -37,7 +37,7 @@ $-tag-button-color: sage-color(grey, 600);
 
   &:focus {
     color: $-tag-button-color;
-    border-color: sage-color(primary, 400);
+    border-color: sage-color(primary, 200);
   }
 
   &:not(:focus):hover {

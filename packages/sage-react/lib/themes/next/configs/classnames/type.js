@@ -24,7 +24,7 @@ export const CLASSNAMES_TYPE = {
 };
 
 // Generates Sage Color classes from the color sliders token set such as
-// CLASSNAMES_TYPE_COLORS.RED_400 ---> `t-sage--color-red-400`
+// CLASSNAMES_TYPE_COLORS.RED_200 ---> `t-sage--color-red-200`
 export const CLASSNAMES_TYPE_COLORS = {};
 Object.keys(SageDictionary.COLOR).forEach((colorName) => {
   Object.keys(SageDictionary.COLOR[colorName]).forEach((index) => {

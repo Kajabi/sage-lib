@@ -25,15 +25,15 @@ $-sortable-image-height: rem(48px);
   &::before {
     @include sage-icon-base(handle);
     padding: 0;
-    color: sage-color(grey, 500);
+    color: sage-color(charcoal, 100);
   }
 
   &:focus,
   &:hover {
-    background-color: sage-color(grey, 100);
+    background-color: sage-color(grey, 200);
 
     &::before {
-      color: sage-color(primary, 500);
+      color: sage-color(primary, 300);
     }
   }
 
@@ -75,7 +75,7 @@ $-sortable-image-height: rem(48px);
   }
 
   &.sage-sortable__item--ghost {
-    background: sage-color(grey, 200);
+    background: sage-color(grey, 300);
   }
 }
 
@@ -84,7 +84,7 @@ $-sortable-image-height: rem(48px);
   overflow: hidden;
   height: $-sortable-image-height;
   width: $-sortable-image-width;
-  background: sage-color(grey, 200);
+  background: sage-color(grey, 300);
   border-radius: sage-border(radius);
   border: sage-border();
 
@@ -114,7 +114,7 @@ $-sortable-image-height: rem(48px);
 
 .sage-sortable__item-subtitle {
   @extend %t-sage-body-xsmall;
-  color: sage-color(grey, 500);
+  color: sage-color(charcoal, 100);
 }
 
 .sage-sortable__item-actions {

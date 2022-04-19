@@ -7,12 +7,12 @@
 //
 // Colors
 //
-$-checkbox-color-default: sage-color(grey, 400);
-$-checkbox-color-checked: sage-color(primary, 600);
-$-checkbox-color-checked-hover: sage-color(primary, 700);
-$-checkbox-color-disabled: sage-color(grey, 200);
-$-checkbox-color-disabled-checked: sage-color(primary, 200);
-$-checkbox-color-error: sage-color(red, 500);
+$-checkbox-color-default: sage-color(grey, 500);
+$-checkbox-color-checked: sage-color(primary, 300);
+$-checkbox-color-checked-hover: sage-color(primary, 400);
+$-checkbox-color-disabled: sage-color(grey, 300);
+$-checkbox-color-disabled-checked: sage-color(primary, 100);
+$-checkbox-color-error: sage-color(red, 300);
 
 $-checkbox-size: rem(20px);
 $-checkbox-label-spacing: rem(12px);
@@ -31,7 +31,7 @@ $-checkbox-marker-offset: $-checkbox-marker-border * 2;
 //
 $-checkbox-focus-outline-size: rem(3px);
 $-checkbox-focus-outline-width: 4;
-$-checkbox-focus-outline-color: sage-color(primary, 400);
+$-checkbox-focus-outline-color: sage-color(primary, 200);
 
 
 .sage-checkbox {
@@ -77,7 +77,7 @@ $-checkbox-focus-outline-color: sage-color(primary, 400);
     &:hover {
       z-index: sage-z-index(default, 1);
       box-shadow: map-get($sage-toolbar-button-borders, hover);
-      background-color: sage-color(grey, 100);
+      background-color: sage-color(grey, 200);
     }
 
     &:focus-within {
@@ -204,7 +204,7 @@ $-checkbox-focus-outline-color: sage-color(primary, 400);
   }
 
   &:hover:not(:checked):not(:disabled) {
-    border-color: sage-color(grey, 500);
+    border-color: sage-color(charcoal, 100);
     box-shadow: sage-shadow(sm);
   }
 
@@ -264,7 +264,7 @@ $-checkbox-focus-outline-color: sage-color(primary, 400);
     }
 
     &::before {
-      border-color: sage-color(red, 400);
+      border-color: sage-color(red, 200);
     }
   }
 
@@ -285,7 +285,7 @@ $-checkbox-focus-outline-color: sage-color(primary, 400);
 
   .sage-checkbox--error &,
   .sage-checkbox__input:invalid + & {
-    color: sage-color(red, 500);
+    color: sage-color(red, 300);
   }
 
   .sage-checkbox__input:disabled + & {

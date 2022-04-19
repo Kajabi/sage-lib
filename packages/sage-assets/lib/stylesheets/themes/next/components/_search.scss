@@ -29,15 +29,15 @@ $-search-icon: "::before";
   }
 
   .sage-search:not(.sage-search--contained) & {
-    border-bottom: 1px solid sage-color(grey, 300);
+    border-bottom: 1px solid sage-color(grey, 400);
 
     &:hover {
-      background-color: sage-color(grey, 50);
+      background-color: sage-color(grey, 100);
     }
   }
 
   &:focus-within {
-    border: 1px solid sage-color(primary, 300);
+    border: 1px solid sage-color(primary, 200);
     box-shadow: map-get($sage-toolbar-button-borders, focus);
   }
 
@@ -60,8 +60,8 @@ $-search-icon: "::before";
     &:focus-within {
       z-index: sage-z-index(default, 2);
       border-radius: sage-border(radius);
-      border: 1px solid sage-color(primary, 600);
-      box-shadow: 0 0 0 4px sage-color(primary, 300);
+      border: 1px solid sage-color(primary, 300);
+      box-shadow: 0 0 0 4px sage-color(primary, 200);
     }
 
     .sage-panel-controls__toolbar &:first-child:not(:only-child),
@@ -117,7 +117,7 @@ $-search-icon: "::before";
   @extend %t-sage-body;
 
   @include placeholder {
-    color: sage-color(grey, 600);
+    color: sage-color(charcoal, 200);
   }
 
   &:focus {
@@ -142,7 +142,7 @@ $-search-icon: "::before";
 
     ~ .sage-search__label {
       @include sage-form-field-floating-label();
-      color: sage-color(primary, 500);
+      color: sage-color(primary, 300);
     }
 
     /* stylelint-disable max-nesting-depth */

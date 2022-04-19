@@ -4,32 +4,32 @@
 /// @group sage
 ////
 
-$-link-color: sage-color(primary, 500);
-$-link-color-hover: sage-color(primary, 700);
-$-link-subtext-color: sage-color(grey, 600);
-$-link-subtext-color-hover: sage-color(grey, 800);
+$-link-color: sage-color(primary, 300);
+$-link-color-hover: sage-color(primary, 400);
+$-link-subtext-color: sage-color(charcoal, 200);
+$-link-subtext-color-hover: sage-color(charcoal, 400);
 
 $-link-base-styles: (
   primary:(
     default: (
-      color: sage-color(primary, 600),
+      color: sage-color(primary, 300),
     ),
     hover: (
-      color: sage-color(primary, 700),
+      color: sage-color(primary, 400),
     ),
     focus: (
-      color: sage-color(primary, 600),
+      color: sage-color(primary, 300),
     ),
   ),
   secondary:(
     default: (
-      color: sage-color(grey, 800),
+      color: sage-color(charcoal, 400),
     ),
     hover: (
       color: sage-color(black),
     ),
     focus: (
-      color: sage-color(grey, 800),
+      color: sage-color(charcoal, 400),
     ),
   ),
   neutral:(
@@ -37,7 +37,7 @@ $-link-base-styles: (
       color: sage-color(white),
     ),
     hover: (
-      color: sage-color(grey, 50),
+      color: sage-color(grey, 100),
     ),
     focus: (
       color: sage-color(white),
@@ -45,13 +45,13 @@ $-link-base-styles: (
   ),
   danger:(
     default: (
-      color: sage-color(red, 600),
+      color: sage-color(red, 300),
     ),
     hover: (
-      color: sage-color(red, 700),
+      color: sage-color(red, 400),
     ),
     focus: (
-      color: sage-color(red, 600),
+      color: sage-color(red, 300),
     ),
   )
 );
@@ -70,14 +70,14 @@ $-link-base-styles: (
     $outline-offset-inline: 4px,
     $outline-border-radius: sage-border(radius-medium),
   );
-  @include sage-focus-outline--update-color(sage-color(primary, 300));
+  @include sage-focus-outline--update-color(sage-color(primary, 200));
 
   &:hover {
-    color: sage-color(primary, 700);
+    color: sage-color(primary, 400);
   }
 
   &:focus {
-    color: sage-color(primary, 600);
+    color: sage-color(primary, 300);
   }
 }
 
@@ -123,7 +123,7 @@ $-link-base-styles: (
   &::before {
     @include sage-icon-base(question-circle, lg);
 
-    color: sage-color(grey, 500);
+    color: sage-color(charcoal, 100);
   }
 
   &:hover,
@@ -132,7 +132,7 @@ $-link-base-styles: (
     outline: 0;
 
     &::before {
-      color: sage-color(grey, 700);
+      color: sage-color(charcoal, 300);
     }
   }
 

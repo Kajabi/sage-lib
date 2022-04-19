@@ -1,10 +1,10 @@
 import { TOKENS_COLOR_PALETTE } from './colors';
 
 const gridConfigs = {
-  stroke: TOKENS_COLOR_PALETTE.GREY_200,
+  stroke: TOKENS_COLOR_PALETTE.GREY_300,
 };
 const tickConfigs = {
-  fill: TOKENS_COLOR_PALETTE.GREY_500,
+  fill: TOKENS_COLOR_PALETTE.CHARCOAL_100,
   fontSize: 12,
 };
 
@@ -14,7 +14,7 @@ export const TOKENS_RECHARTS = {
     barCategoryGap: 16,
   },
   CartesianGrid: {
-    stroke: TOKENS_COLOR_PALETTE.GREY_300,
+    stroke: TOKENS_COLOR_PALETTE.GREY_400,
     vertical: false,
   },
   Tooltip: {

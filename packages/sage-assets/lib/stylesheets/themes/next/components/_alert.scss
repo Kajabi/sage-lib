@@ -34,7 +34,7 @@ $-alert-colors: (
     border: 1px solid sage-color($color, 400);
 
     a:not([class]) {
-      color: sage-color(grey, 800);
+      color: sage-color(charcoal, 400);
       text-decoration: underline;
     }
 
@@ -74,7 +74,7 @@ $-alert-colors: (
 
 .sage-alert__title {
   @extend %t-sage-heading-5;
-  color: sage-color(grey, 900);
+  color: sage-color(charcoal, 500);
 }
 
 .sage-alert__title--add-on {
@@ -85,18 +85,18 @@ $-alert-colors: (
   display: inline-flex;
   @each $name, $color in $-alert-colors {
     .sage-alert--#{$name} & {
-      color: sage-color($color, 600);
+      color: sage-color($color, 300);
     }
   }
   .sage-alert--warning &,
   .sage-alert--approaching & {
-    color: sage-color(yellow, 800);
+    color: sage-color(yellow, 500);
   }
   .sage-alert--reached & {
-    color: sage-color(orange, 800);
+    color: sage-color(orange, 500);
   }
   .sage-alert--exceeded & {
-    color: sage-color(red, 800);
+    color: sage-color(red, 500);
   }
 }
 
@@ -123,9 +123,9 @@ $-alert-colors: (
   @each $name, $color in $-alert-colors {
     .sage-alert--#{$name} & {
       @include sage-focus-outline($outline-offset-inline: 3px, $outline-offset-block: 3px);
-      @include sage-focus-outline--update-color(sage-color($color, 800));
+      @include sage-focus-outline--update-color(sage-color($color, 500));
 
-      color: sage-color(grey, 700);
+      color: sage-color(charcoal, 300);
     }
   }
 

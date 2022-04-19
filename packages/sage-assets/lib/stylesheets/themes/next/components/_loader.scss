@@ -5,7 +5,7 @@
 ////
 
 
-$-loader-bar-bg-color: sage-color(grey, 400);
+$-loader-bar-bg-color: sage-color(grey, 500);
 $-loader-bar-height: rem(6px);
 $-loader-bar-speed: 1.2s;
 $-loader-bar-speed-delay: 0.5s;
@@ -60,12 +60,12 @@ $-loader-spinner-path-speed: 1.5s;
   }
 
   &::before {
-    background-color: sage-color(primary, 500);
+    background-color: sage-color(primary, 300);
     animation: loader-bar $-loader-bar-speed linear infinite;
   }
 
   &::after {
-    background-color: sage-color(primary, 500);
+    background-color: sage-color(primary, 300);
     animation: loader-bar $-loader-bar-speed $-loader-bar-speed-delay linear infinite;
   }
 }
@@ -80,7 +80,7 @@ $-loader-spinner-path-speed: 1.5s;
   stroke-dasharray: 150,200;
   stroke-dashoffset: -10;
   stroke-linecap: round;
-  stroke: sage-color(primary, 500);
+  stroke: sage-color(primary, 300);
   animation: dash $-loader-spinner-path-speed ease-in-out infinite;
 }
 
@@ -92,7 +92,7 @@ $-loader-spinner-path-speed: 1.5s;
 .sage-loader__success-path {
   stroke-dasharray: 150,200;
   stroke-linecap: round;
-  stroke: sage-color(sage, 500);
+  stroke: sage-color(sage, 300);
 }
 
 .sage-loader__success-check {
@@ -100,7 +100,7 @@ $-loader-spinner-path-speed: 1.5s;
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-miterlimit: 10;
-  stroke: sage-color(sage, 500);
+  stroke: sage-color(sage, 300);
 }
 
 @keyframes loader-bar {

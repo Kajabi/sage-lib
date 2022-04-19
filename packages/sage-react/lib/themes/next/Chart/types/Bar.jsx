@@ -72,7 +72,7 @@ Bar.defaultProps = {
   aspect: 1.8,
   bars: [{
     dataKey: 'value',
-    fill: SageTokens.COLOR_PALETTE.SAGE_200,
+    fill: SageTokens.COLOR_PALETTE.SAGE_100,
     name: 'Value'
   }],
   showLegend: false,

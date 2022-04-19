@@ -8,7 +8,7 @@ $-card-highlight-border-radius: sage-border(radius-large);
 $-card-highlight-size: rem(12px);
 
 .sage-card-highlight {
-  --color: #{sage-color(primary, 900)};
+  --color: #{sage-color(primary, 500)};
 
   position: absolute;
   background-color: var(--color);
@@ -54,7 +54,7 @@ $-card-highlight-size: rem(12px);
 
 @each $-color-name, $-color-sliders in $sage-colors {
   .sage-card-highlight--#{"" + $-color-name} {
-    --color: #{sage-color($-color-name, 500)};
+    --color: #{sage-color($-color-name, 300)};
   }
 }
 

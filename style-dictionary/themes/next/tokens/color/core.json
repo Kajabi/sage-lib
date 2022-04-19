@@ -2,28 +2,28 @@
   "color": {
     "core": {
       "primary": {
-        "value": "{color.base.primary.500.hex}"
+        "value": "{color.base.primary.300.hex}"
       },
       "sage": {
-        "value": "{color.base.sage.500.hex}"
+        "value": "{color.base.sage.300.hex}"
       },
       "yellow": {
-        "value": "{color.base.yellow.500.hex}"
+        "value": "{color.base.yellow.300.hex}"
       },
       "red": {
-        "value": "{color.base.red.500.hex}"
+        "value": "{color.base.red.300.hex}"
       },
       "orange": {
-        "value": "{color.base.orange.500.hex}"
+        "value": "{color.base.orange.300.hex}"
       },
       "purple": {
-        "value": "{color.base.purple.500.hex}"
+        "value": "{color.base.purple.300.hex}"
       },
       "charcoal": {
-        "value": "{color.base.grey.700.hex}"
+        "value": "{color.base.charcoal.300.hex}"
       },
       "grey": {
-        "value": "{color.base.grey.500.hex}"
+        "value": "{color.base.charcoal.100.hex}"
       },
       "white": {
         "value": "{color.base.white.500.hex}"

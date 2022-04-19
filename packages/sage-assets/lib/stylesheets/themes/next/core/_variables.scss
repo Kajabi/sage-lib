@@ -14,7 +14,7 @@ $sage-font-cdn-root: "https://sage.kajabi-cdn.com/fonts";
 ///
 $sage-active-underline-configs: (
   height: rem(3px),
-  color: sage-color(primary, 500),
+  color: sage-color(primary, 300),
   radius: sage-border(radius),
 );
 
@@ -51,13 +51,13 @@ $sage-field-configs: (
 /// Field coloring
 ///
 $sage-field-colors: (
-  border: sage-color(grey, 300),
-  default: sage-color(grey, 700),
-  disabled: sage-color(grey, 400),
-  disabled-background: sage-color(grey, 100),
-  error: sage-color(red, 500),
+  border: sage-color(grey, 400),
+  default: sage-color(charcoal, 300),
+  disabled: sage-color(grey, 500),
+  disabled-background: sage-color(grey, 200),
+  error: sage-color(red, 300),
   label-background: sage-color(white),
-  success: sage-color(primary, 500),
+  success: sage-color(primary, 300),
 );
 
 // $sage-field
@@ -66,14 +66,14 @@ $sage-field-colors: (
 /// Radio button colors
 ///
 $sage-radio-colors: (
-  checked: sage-color(primary, 600),
+  checked: sage-color(primary, 300),
   checked-disabled: sage-color(primary, 100),
-  checked-hover: sage-color(primary, 700),
+  checked-hover: sage-color(primary, 400),
   checked-inner: sage-color(white),
-  default: sage-color(grey, 400),
-  disabled: sage-color(grey, 50),
-  error: sage-color(red, 500),
-  hover: sage-color(grey, 500),
+  default: sage-color(grey, 500),
+  disabled: sage-color(grey, 100),
+  error: sage-color(red, 300),
+  hover: sage-color(charcoal, 100),
 );
 
 ///
@@ -85,27 +85,27 @@ $sage-radio-size: rem(20px);
 /// Tab colors shared by components such as tabs and choices
 ///
 $sage-tab-colors: (
-  default: sage-color(grey, 500),
-  active: sage-color(grey, 900),
-  disabled: sage-color(grey, 500),
+  default: sage-color(charcoal, 100),
+  active: sage-color(charcoal, 500),
+  disabled: sage-color(charcoal, 100),
 );
 
 ///
 /// Standard text colors
 ///
 $sage-text-colors: (
-  body: sage-color(grey, 800),
-  heading: sage-color(grey, 900),
+  body: sage-color(charcoal, 400),
+  heading: sage-color(charcoal, 500),
 );
 
 ///
 /// Toolbar border styles
 ///
 $sage-toolbar-button-borders: (
-  default: 0 0 0 1px sage-color(grey, 300),
-  focus: 0 0 0 4px sage-color(primary, 300),
-  hover: 0 0 0 1px sage-color(grey, 400),
-  active-hover: 0 0 0 4px sage-color(primary, 300),
+  default: 0 0 0 1px sage-color(grey, 400),
+  focus: 0 0 0 4px sage-color(primary, 200),
+  hover: 0 0 0 1px sage-color(grey, 500),
+  active-hover: 0 0 0 4px sage-color(primary, 200),
 );
 
 ///

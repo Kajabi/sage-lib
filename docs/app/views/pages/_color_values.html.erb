@@ -33,6 +33,74 @@
       </div>
     </div>
   </div>
+  <div class="colors__block color-<%= color %>-200">
+    <div class="colors__tokens">
+      <div class="colors__classname-token <%= "#{SageClassnames::SPACERS::SM_BOTTOM}" %>">
+        <h3>Classname Token</h3>
+        <div>
+          <%= sage_component SageCopyButton, {
+            borderless: true,
+            value: "SageClassnames::TYPE_COLORS::#{color.upcase}_200"
+          } %>
+        </div>
+        <div>
+          <%= sage_component SageCopyButton, {
+            borderless: true,
+            value: "SageClassnames.TYPE_COLORS.#{color.upcase}_200"
+          } %>
+        </div>
+      </div>
+      <div class="colors__hex-token"> 
+        <h3>Hex Token</h3>
+        <div>
+          <%= sage_component SageCopyButton, {
+            borderless: true,
+            value: "SageTokens::COLOR_PALETTE::#{color.upcase}_200"
+          } %>
+        </div>
+        <div>
+          <%= sage_component SageCopyButton, {
+            borderless: true,
+            value: "SageTokens.COLOR_PALETTE.#{color.upcase}_200"
+          } %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="colors__block color-<%= color %>-300">
+    <div class="colors__tokens">
+      <div class="colors__classname-token <%= "#{SageClassnames::SPACERS::SM_BOTTOM}" %>">
+        <h3>Classname Token</h3>
+        <div>
+          <%= sage_component SageCopyButton, {
+            borderless: true,
+            value: "SageClassnames::TYPE_COLORS::#{color.upcase}_300"
+          } %>
+        </div>
+        <div>
+          <%= sage_component SageCopyButton, {
+            borderless: true,
+            value: "SageClassnames.TYPE_COLORS.#{color.upcase}_300"
+          } %>
+        </div>
+      </div>
+      <div class="colors__hex-token"> 
+        <h3>Hex Token</h3>
+        <div>
+          <%= sage_component SageCopyButton, {
+            borderless: true,
+            value: "SageTokens::COLOR_PALETTE::#{color.upcase}_300"
+          } %>
+        </div>
+        <div>
+          <%= sage_component SageCopyButton, {
+            borderless: true,
+            value: "SageTokens.COLOR_PALETTE.#{color.upcase}_300"
+          } %>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="colors__block color-<%= color %>-400">
     <div class="colors__tokens">
       <div class="colors__classname-token <%= "#{SageClassnames::SPACERS::SM_BOTTOM}" %>">
@@ -67,20 +135,20 @@
       </div>
     </div>
   </div>
-  <div class="colors__block color-<%= color %>-600">
+  <div class="colors__block color-<%= color %>-500">
     <div class="colors__tokens">
       <div class="colors__classname-token <%= "#{SageClassnames::SPACERS::SM_BOTTOM}" %>">
         <h3>Classname Token</h3>
         <div>
           <%= sage_component SageCopyButton, {
             borderless: true,
-            value: "SageClassnames::TYPE_COLORS::#{color.upcase}_600"
+            value: "SageClassnames::TYPE_COLORS::#{color.upcase}_500"
           } %>
         </div>
         <div>
           <%= sage_component SageCopyButton, {
             borderless: true,
-            value: "SageClassnames.TYPE_COLORS.#{color.upcase}_600"
+            value: "SageClassnames.TYPE_COLORS.#{color.upcase}_500"
           } %>
         </div>
       </div>
@@ -89,81 +157,13 @@
         <div>
           <%= sage_component SageCopyButton, {
             borderless: true,
-            value: "SageTokens::COLOR_PALETTE::#{color.upcase}_600"
+            value: "SageTokens::COLOR_PALETTE::#{color.upcase}_500"
           } %>
         </div>
         <div>
           <%= sage_component SageCopyButton, {
             borderless: true,
-            value: "SageTokens.COLOR_PALETTE.#{color.upcase}_600"
-          } %>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="colors__block color-<%= color %>-700">
-    <div class="colors__tokens">
-      <div class="colors__classname-token <%= "#{SageClassnames::SPACERS::SM_BOTTOM}" %>">
-        <h3>Classname Token</h3>
-        <div>
-          <%= sage_component SageCopyButton, {
-            borderless: true,
-            value: "SageClassnames::TYPE_COLORS::#{color.upcase}_700"
-          } %>
-        </div>
-        <div>
-          <%= sage_component SageCopyButton, {
-            borderless: true,
-            value: "SageClassnames.TYPE_COLORS.#{color.upcase}_700"
-          } %>
-        </div>
-      </div>
-      <div class="colors__hex-token"> 
-        <h3>Hex Token</h3>
-        <div>
-          <%= sage_component SageCopyButton, {
-            borderless: true,
-            value: "SageTokens::COLOR_PALETTE::#{color.upcase}_700"
-          } %>
-        </div>
-        <div>
-          <%= sage_component SageCopyButton, {
-            borderless: true,
-            value: "SageTokens.COLOR_PALETTE.#{color.upcase}_700"
-          } %>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="colors__block color-<%= color %>-800">
-    <div class="colors__tokens">
-      <div class="colors__classname-token <%= "#{SageClassnames::SPACERS::SM_BOTTOM}" %>">
-        <h3>Classname Token</h3>
-        <div>
-          <%= sage_component SageCopyButton, {
-            borderless: true,
-            value: "SageClassnames::TYPE_COLORS::#{color.upcase}_800"
-          } %>
-        </div>
-        <div>
-          <%= sage_component SageCopyButton, {
-            borderless: true,
-            value: "SageClassnames.TYPE_COLORS.#{color.upcase}_800"
-          } %>
-        </div>
-      </div>
-      <div class="colors__hex-token"> 
-        <h3>Hex Token</h3>
-        <div>
-          <%= sage_component SageCopyButton, {
-            borderless: true,
-            value: "SageTokens::COLOR_PALETTE::#{color.upcase}_800"
-          } %>
-        </div>
-        <div>
-          <%= sage_component SageCopyButton, {
-            borderless: true,
-            value: "SageTokens.COLOR_PALETTE.#{color.upcase}_800"
+            value: "SageTokens.COLOR_PALETTE.#{color.upcase}_500"
           } %>
         </div>
       </div>

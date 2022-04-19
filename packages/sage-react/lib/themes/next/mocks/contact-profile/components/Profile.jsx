@@ -27,7 +27,7 @@ export const Profile = ({ avatarImage, email, initials, name }) => (
         size="68px"
         className={SageClassnames.SPACERS.SM_BOTTOM}
       />
-      <h3 className={`${SageClassnames.TYPE.HEADING_4} ${SageClassnames.TYPE_COLORS.GREY_900}`}>
+      <h3 className={`${SageClassnames.TYPE.HEADING_4} ${SageClassnames.TYPE_COLORS.CHARCOAL_500}`}>
         {name}
       </h3>
       <CopyButton borderless={true}>
