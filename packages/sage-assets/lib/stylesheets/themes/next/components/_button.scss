@@ -466,22 +466,22 @@ $-alert-colors: (
 
     @each $name, $color in $-alert-colors {
       .sage-alert--#{$name} & {
-        border: 1px solid sage-color($color, 400);
+        @include sage-focus-ring;
+
+        background-color: sage-color($color, 300);
+        color: sage-color(white);
+        border-color: transparent;
 
         &:hover {
-          color: sage-color(charcoal, 500);
-          border-color: sage-color($color, 300);
-          background-color: transparent;
+          background-color: sage-color($color, 400);
         }
 
         &:focus,
         &:active {
-          color: sage-color(charcoal, 400);
-          border-color: sage-color($color, 200);
-          background-color: transparent;
+          background-color: sage-color($color, 300);
         }
 
-        @include sage-focus-outline--update-color(sage-color($color, 400));
+        @include sage-focus-outline--update-color(transparent);
       }
     }
   }

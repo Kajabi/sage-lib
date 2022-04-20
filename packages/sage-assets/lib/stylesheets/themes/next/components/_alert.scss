@@ -31,7 +31,6 @@ $-alert-colors: (
 @each $name, $color in $-alert-colors {
   .sage-alert--#{$name} {
     background: sage-color($color, 100);
-    border: 1px solid sage-color($color, 400);
 
     a:not([class]) {
       color: sage-color(charcoal, 400);
