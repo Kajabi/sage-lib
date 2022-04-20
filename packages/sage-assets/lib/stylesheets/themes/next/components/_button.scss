@@ -468,8 +468,8 @@ $-alert-colors: (
       .sage-alert--#{$name} & {
         @include sage-focus-ring;
 
-        background-color: sage-color($color, 300);
         color: sage-color(white);
+        background-color: sage-color($color, 300);
         border-color: transparent;
 
         &:hover {
