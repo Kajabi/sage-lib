@@ -1,0 +1,10 @@
+////
+/// Visually hidden utility
+///
+/// @group utilties
+////
+
+
+.visually-hidden {
+  @include visually-hidden();
+}

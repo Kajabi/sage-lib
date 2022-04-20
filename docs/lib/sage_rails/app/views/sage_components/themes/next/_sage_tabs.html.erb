@@ -1,0 +1,22 @@
+<nav
+  <%= "data-js-tabs=#{component.id}" if !component.navigational && component.id.present? %>
+  class="sage-tabs
+    <%= component.stacked.present? ? "sage-tabs--layout-stacked" : "sage-tabs--layout-default" %>
+    <%= "sage-tabs--with-background" if component.with_background %>
+    <%= "sage-tabs--progressbar" if component.progressbar.present? && component.progressbar == true %>
+    <%= "sage-tabs--align-items-center" if component.align_items_center.present? && component.align_items_center == true %>
+    <%= "sage-tabs--choice" if component.style.present? && component.style === "choice" %>
+    <%= component.generated_css_classes %>
+  "
+  role="tablist"
+  <%= component.generated_html_attributes.html_safe %>
+>
+  <% component.items.each do |item| %>
+    <% if component.style.present? && component.style === "choice" %>
+      <%= sage_component SageChoice, item %>
+    <% else %>
+      <%= sage_component SageTab, item %>
+    <% end %>
+  <% end  if component.items.present? %>
+  <%= component.content if component.content.present? %>
+</nav>

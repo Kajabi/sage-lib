@@ -1,0 +1,13 @@
+The Grid component is a wrapper that allows us to compose layouts that conform to our design system's grid system.
+
+## Containers
+
+As is documented on the [Sage Design System's Containers Page](https://sage-design-system.kajabi.com/pages/style/container) the system includes a series of containers that restrict their contents to one of several different widths. These are each set up with appropriate padding when constrained and to be centered in the window when the viewport is wider.
+
+Set the desired container size on the outer `Grid` with the `container` prop. Note that the default is to exclude this container, allowing the contents to fill whatever space the Grid is placed within. But if a value is passed to the `container` prop the `sage-container` container is added around the contents and thus constrains the elements within.
+
+## Rows and Columns
+
+The `Grid.Row` and `Grid.Col` compositional elements can be added inside the `Grid` (with or without a `container`) in order to create complex layouts. As is documented on the [Sage Design System's Grid Page](https://sage-design-system.kajabi.com/pages/style/grid) the system allows a spece to be divided into 12 columns with a standard gutter between each. These columns can be merged to created the desired cells using the `size` property on `Grid.Col`. The number passed to `size` represents the number of columns the cell should span. So a value of `4` (4 out of 12) would create a cell that is one third of the row's width, minus its gutters.
+
+In order to simplify composition when you need just one row inside a `Grid` you can pass `withRow={true}` on the `Grid` itself. This will automatically add a single row inside the container, or in lieue of a container if no container is desired. This avoids needing to also manually add `Grid.Row` in such instances and `Grid.Col` can be placed directly there instead.

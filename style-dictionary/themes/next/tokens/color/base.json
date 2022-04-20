@@ -1,0 +1,276 @@
+{
+  "color": {
+    "base": {
+      "primary": {
+        "100": {
+          "hex": { "value": "#e6f4fe" },
+          "code": { "value": "primary-100" },
+          "classname": { "value": "t-sage--color-primary-100" }
+        },
+        "200": {
+          "hex": { "value": "#8ecafb" },
+          "code": { "value": "primary-200" },
+          "classname": { "value": "t-sage--color-primary-200" }
+        },
+        "300": {
+          "hex": { "value": "#0072ef" },
+          "code": { "value": "primary-300" },
+          "classname": { "value": "t-sage--color-primary-300" }
+        },
+        "400": {
+          "hex": { "value": "#054fb8" },
+          "code": { "value": "primary-400" },
+          "classname": { "value": "t-sage--color-primary-400" }
+        },
+        "500": {
+          "hex": { "value": "#07265f" },
+          "code": { "value": "primary-500" },
+          "classname": { "value": "t-sage--color-primary-500" }
+        }
+      },
+      "sage": {
+        "100": {
+          "hex": { "value": "#ddf8f0" },
+          "code": { "value": "sage-100" },
+          "classname": { "value": "t-sage--color-sage-100" }
+        },
+        "200": {
+          "hex": { "value": "#86d5bc" },
+          "code": { "value": "sage-200" },
+          "classname": { "value": "t-sage--color-sage-200" }
+        },
+        "300": {
+          "hex": { "value": "#23856d" },
+          "code": { "value": "sage-300" },
+          "classname": { "value": "t-sage--color-sage-300" }
+        },
+        "400": {
+          "hex": { "value": "#225d53" },
+          "code": { "value": "sage-400" },
+          "classname": { "value": "t-sage--color-sage-400" }
+        },
+        "500": {
+          "hex": { "value": "#183e3b" },
+          "code": { "value": "sage-500" },
+          "classname": { "value": "t-sage--color-sage-500" }
+        }
+      },
+      "yellow": {
+        "100": {
+          "hex": { "value": "#fef8e1" },
+          "code": { "value": "yellow-100" },
+          "classname": { "value": "t-sage--color-yellow-100" }
+        },
+        "200": {
+          "hex": { "value": "#fad980" },
+          "code": { "value": "yellow-200" },
+          "classname": { "value": "t-sage--color-yellow-200" }
+        },
+        "300": {
+          "hex": { "value": "#ffc505" },
+          "code": { "value": "yellow-300" },
+          "classname": { "value": "t-sage--color-yellow-300" }
+        },
+        "400": {
+          "hex": { "value": "#c56a02" },
+          "code": { "value": "yellow-400" },
+          "classname": { "value": "t-sage--color-yellow-400" }
+        },
+        "500": {
+          "hex": { "value": "#8c3b08" },
+          "code": { "value": "yellow-500" },
+          "classname": { "value": "t-sage--color-yellow-500" }
+        }
+      },
+      "red": {
+        "100": {
+          "hex": { "value": "#fff0f0" },
+          "code": { "value": "red-100" },
+          "classname": { "value": "t-sage--color-red-100" }
+        },
+        "200": {
+          "hex": { "value": "#fdb0aa" },
+          "code": { "value": "red-200" },
+          "classname": { "value": "t-sage--color-red-200" }
+        },
+        "300": {
+          "hex": { "value": "#cf3c32" },
+          "code": { "value": "red-300" },
+          "classname": { "value": "t-sage--color-red-300" }
+        },
+        "400": {
+          "hex": { "value": "#99221e" },
+          "code": { "value": "red-400" },
+          "classname": { "value": "t-sage--color-red-400" }
+        },
+        "500": {
+          "hex": { "value": "#5e0d0d" },
+          "code": { "value": "red-500" },
+          "classname": { "value": "t-sage--color-red-500" }
+        }
+      },
+      "orange": {
+        "100": {
+          "hex": { "value": "#fef1e1" },
+          "code": { "value": "orange-100" },
+          "classname": { "value": "t-sage--color-orange-100" }
+        },
+        "200": {
+          "hex": { "value": "#ffb36b" },
+          "code": { "value": "orange-200" },
+          "classname": { "value": "t-sage--color-orange-200" }
+        },
+        "300": {
+          "hex": { "value": "#fb7e09" },
+          "code": { "value": "orange-300" },
+          "classname": { "value": "t-sage--color-orange-300" }
+        },
+        "400": {
+          "hex": { "value": "#b3501e" },
+          "code": { "value": "orange-400" },
+          "classname": { "value": "t-sage--color-orange-400" }
+        },
+        "500": {
+          "hex": { "value": "#5a260c" },
+          "code": { "value": "orange-500" },
+          "classname": { "value": "t-sage--color-orange-500" }
+        }
+      },
+      "purple": {
+        "100": {
+          "hex": { "value": "#eee4f6" },
+          "code": { "value": "purple-100" },
+          "classname": { "value": "t-sage--color-purple-100" }
+        },
+        "200": {
+          "hex": { "value": "#d9c2ef" },
+          "code": { "value": "purple-200" },
+          "classname": { "value": "t-sage--color-purple-200" }
+        },
+        "300": {
+          "hex": { "value": "#8e5ad8" },
+          "code": { "value": "purple-300" },
+          "classname": { "value": "t-sage--color-purple-300" }
+        },
+        "400": {
+          "hex": { "value": "#50348a" },
+          "code": { "value": "purple-400" },
+          "classname": { "value": "t-sage--color-purple-400" }
+        },
+        "500": {
+          "hex": { "value": "#381c5e" },
+          "code": { "value": "purple-500" },
+          "classname": { "value": "t-sage--color-purple-500" }
+        }
+      },
+      "charcoal": {
+        "100": {
+          "hex": { "value": "#8d939a" },
+          "code": { "value": "charcoal-100" },
+          "classname": { "value": "t-sage--color-charcoal-100" }
+        },
+        "200": {
+          "hex": { "value": "#60666c" },
+          "code": { "value": "charcoal-200" },
+          "classname": { "value": "t-sage--color-charcoal-200" }
+        },
+        "300": {
+          "hex": { "value": "#43474b" },
+          "code": { "value": "charcoal-300" },
+          "classname": { "value": "t-sage--color-charcoal-300" }
+        },
+        "400": {
+          "hex": { "value": "#202327" },
+          "code": { "value": "charcoal-400" },
+          "classname": { "value": "t-sage--color-charcoal-400" }
+        },
+        "500": {
+          "hex": { "value": "#181b20" },
+          "code": { "value": "charcoal-500" },
+          "classname": { "value": "t-sage--color-charcoal-500" }
+        }
+      },
+      "grey": {
+        "100": {
+          "hex": { "value": "#f9fafa" },
+          "code": { "value": "grey-100" },
+          "classname": { "value": "t-sage--color-grey-100" }
+        },
+        "200": {
+          "hex": { "value": "#f6f8f8" },
+          "code": { "value": "grey-200" },
+          "classname": { "value": "t-sage--color-grey-200" }
+        },
+        "300": {
+          "hex": { "value": "#eceeef" },
+          "code": { "value": "grey-300" },
+          "classname": { "value": "t-sage--color-grey-300" }
+        },
+        "400": {
+          "hex": { "value": "#d3d5d9" },
+          "code": { "value": "grey-400" },
+          "classname": { "value": "t-sage--color-grey-400" }
+        },
+        "500": {
+          "hex": { "value": "#b5bac0" },
+          "code": { "value": "grey-500" },
+          "classname": { "value": "t-sage--color-grey-500" }
+        }
+      },
+      "white": {
+        "100": {
+          "hex": { "value": "#fff" },
+          "code": { "value": "white-100" },
+          "classname": { "value": "t-sage--color-white-100" }
+        },
+        "200": {
+          "hex": { "value": "#fff" },
+          "code": { "value": "white-200" },
+          "classname": { "value": "t-sage--color-white-200" }
+        },
+        "300": {
+          "hex": { "value": "#fff" },
+          "code": { "value": "white-300" },
+          "classname": { "value": "t-sage--color-white-300" }
+        },
+        "400": {
+          "hex": { "value": "#fff" },
+          "code": { "value": "white-400" },
+          "classname": { "value": "t-sage--color-white-400" }
+        },
+        "500": {
+          "hex": { "value": "#fff" },
+          "code": { "value": "white-500" },
+          "classname": { "value": "t-sage--color-white-500" }
+        }
+      },
+      "black": {
+        "100": {
+          "hex": { "value": "#000" },
+          "code": { "value": "black-100" },
+          "classname": { "value": "t-sage--color-black-100" }
+        },
+        "200": {
+          "hex": { "value": "#000" },
+          "code": { "value": "black-200" },
+          "classname": { "value": "t-sage--color-black-200" }
+        },
+        "300": {
+          "hex": { "value": "#000" },
+          "code": { "value": "black-300" },
+          "classname": { "value": "t-sage--color-black-300" }
+        },
+        "400": {
+          "hex": { "value": "#000" },
+          "code": { "value": "black-400" },
+          "classname": { "value": "t-sage--color-black-400" }
+        },
+        "500": {
+          "hex": { "value": "#000" },
+          "code": { "value": "black-500" },
+          "classname": { "value": "t-sage--color-black-500" }
+        }
+      }
+    }
+  }
+}

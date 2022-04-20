@@ -1,0 +1,12 @@
+<p
+  class="sage-chart-summary <%= "sage-chart-summary--centered" if component.centered %> <%= component.generated_css_classes %>"
+  <%= component.generated_html_attributes.html_safe %>
+>
+  <% if component.label.present? %>
+    <span class="sage-chart-summary__label"><%= component.label %></span>
+  <% end %>
+  <em class="sage-chart-summary__value"><%= component.value %></em>
+  <% if component.caption.present? %>
+    <span class="sage-chart-summary__caption"><%= component.caption %></span>
+  <% end %>
+</p>

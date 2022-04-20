@@ -1,0 +1,67 @@
+<tr>
+  <td><%= md('`custom_content_class`') %></td>
+  <td>
+    <%= md('
+      A class to add to the panel\'s content contianer for custom styling.
+      When present, `sage-popover__content--custom` is also added,
+      and default styling on the content panel is disabled.
+    ') %>
+  </td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`icon`') %></td>
+  <td><%= md('Which icon to display in the panel trigger button.') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`link`') %></td>
+  <td><%= md('If provided, this turns on the actions area with a link that points to the provided URL.') %></td>
+  <td>
+<%= md('```
+{
+  href: String,
+  name: String,
+}
+```') %>
+  </td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`popover_position`') %></td>
+  <td><%= md('Where to position the popover panel in relation to the trigger button.') %></td>
+  <td><%= md("`\"#{SageTokens::POPOVER_POSITIONS.join("\"`, `\"")}\"`") %></td>
+  <td><%= md('`"right"`') %></td>
+</tr>
+<tr>
+  <td><%= md('`title`') %></td>
+  <td><%= md('The heading to show at the top of the popover.') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`trigger_icon_only`') %></td>
+  <td><%= md('Whether or not the trigger button should only show an icon and not a label') %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`true`') %></td>
+</tr>
+<tr>
+  <td><%= md('`trigger_value`') %></td>
+  <td><%= md('The text label to show on the trigger') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td colspan="4"><strong>Content Slots</strong></td>
+</tr>
+<tr>
+  <td><%= md('`:sage_popover_media`') %></td>
+  <td><%= md('
+  Slot into which graphics or other media can be placed.
+  Additional styling may be needed in such customized contexts.
+  ') %></td>
+  <td></td>
+  <td></td>
+</tr>

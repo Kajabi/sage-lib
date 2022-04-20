@@ -1,0 +1,198 @@
+////
+/// Switch
+///
+/// @group sage
+////
+
+
+// Colors
+$-switch-color-default: sage-color(grey, 400);
+$-switch-color-default-text: sage-color(charcoal, 300);
+$-switch-color-checked: sage-color(primary, 300);
+$-switch-color-checked-hover: sage-color(primary, 400);
+$-switch-color-disabled: sage-color(grey, 300);
+$-switch-color-disabled-text: sage-color(charcoal, 300);
+$-switch-color-disabled-checked: sage-color(primary, 100);
+$-switch-color-disabled-checked-text: sage-color(charcoal, 100);
+
+// Switch
+$-switch-label-left-spacing: sage-spacing(xs);
+$-switch-border-radius: rem(16px);
+$-switch-height: rem(20px);
+$-switch-width: rem(36px);
+
+// Toggle
+$-switch-toggle-size: rem(16px);
+
+$-switch-focus-outline-error-color: sage-color(red, 200);
+
+
+.sage-switch {
+  @include sage-form-toggle;
+  position: relative;
+  color: $-switch-color-default-text;
+
+  & + & {
+    margin-top: -(sage-spacing(card) / 2);
+  }
+
+  &.sage-switch--has-border {
+    align-items: center;
+    padding: sage-spacing(card);
+    border: sage-border();
+    border-radius: sage-border(radius);
+  }
+
+  &.sage-switch--toggle-right {
+    flex-direction: row-reverse;
+  }
+
+  .sage-list & {
+    margin-top: 0;
+    margin-bottom: sage-spacing(card) / 2;
+  }
+
+  @include sage-form-toggle-parents {
+    + .sage-switch {
+      margin-top: 0;
+    }
+  }
+
+  .sage-feature-toggle & {
+    margin-bottom: 0;
+  }
+}
+
+.sage-switch__message {
+  @include sage-form-toggle-message;
+  margin-left: ($-switch-width + $-switch-label-left-spacing);
+
+  .sage-switch--toggle-right & {
+    margin-left: 0;
+    padding-left: 0;
+  }
+}
+
+.sage-switch__input {
+  @include sage-form-toggle-input;
+  @include sage-focus-ring;
+
+  z-index: sage-z-index(default, 1);
+  transform: translateY(2px);
+  height: $-switch-height;
+  width: $-switch-width;
+  color: $-switch-color-default;
+  background: $-switch-color-default;
+  border: 0;
+  border-radius: $-switch-border-radius;
+  transition: background 0.3s ease-out;
+
+  .sage-switch--has-border & {
+    position: absolute;
+  }
+
+  + .sage-switch__label {
+    @include sage-form-toggle-label;
+
+    &::after {
+      content: "" ;
+      z-index: sage-z-index(default, 1);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .sage-switch--has-border & {
+      margin-left: ($-switch-width + $-switch-label-left-spacing);
+      color: sage-color(charcoal, 400);
+      font-weight: sage-font-weight(semibold);
+    }
+
+    .sage-switch--toggle-right & {
+      margin-left: 0;
+    }
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+  }
+
+  &::after {  // switch toggle
+    transform: translate3d(-100%, -50%, 0);
+    height: $-switch-toggle-size;
+    width: $-switch-toggle-size;
+    background: sage-color(white);
+    border-radius: sage-border(radius-round);
+    box-shadow: sage-shadow(sm);
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .sage-switch--error &,
+  &:invalid {
+    @include sage-focus-ring(sage-color(red, 200));
+
+    background-color: sage-color(red, 300);
+    ~ .sage-switch__label,
+    ~ .sage-switch__message {
+      color: sage-color(red, 300);
+    }
+    &:checked {
+      background-color: sage-color(red, 300);
+    }
+    &:checked:hover {
+      background-color: sage-color(red, 300);
+    }
+  }
+
+  // checked
+  &:checked {
+    color: $-switch-color-checked;
+    background: $-switch-color-checked;
+
+    &::after {
+      transform: translate3d(0, -50%, 0);
+    }
+
+    &:hover {
+      color: $-switch-color-checked-hover;
+      background: $-switch-color-checked-hover;
+      border-color: $-switch-color-checked-hover;
+    }
+  }
+
+  // disabled
+  &:disabled {
+    background: $-switch-color-disabled;
+    cursor: not-allowed;
+
+    &::after {
+      box-shadow: none;
+    }
+
+    ~ .sage-switch__label,
+    ~ .sage-switch__message {
+      color: $-switch-color-disabled-text;
+      cursor: inherit;
+    }
+
+    // disabled & checked
+    &:checked {
+      background: $-switch-color-disabled-checked;
+    }
+
+    &:checked ~ .sage-switch__label,
+    &:checked ~ .sage-switch__message {
+      color: $-switch-color-disabled-checked-text;
+    }
+  }
+}
+
+.sage-switch__label--hide-text {
+  @include visually-hidden();
+}

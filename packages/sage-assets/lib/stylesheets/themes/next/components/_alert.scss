@@ -1,0 +1,154 @@
+////
+/// Alert
+///
+/// @group sage
+////
+
+// Note: duplicated in _button.scss; update there when _alert.scss changes
+$-alert-colors: (
+  info: primary,
+  published: sage,
+  success: sage,
+  warning: yellow,
+  danger: red,
+  exceeded: red,
+  reached: orange,
+  approaching: yellow,
+);
+
+.sage-alert {
+  display: grid;
+  gap: sage-spacing(sm);
+  position: relative;
+  padding: sage-spacing();
+  border-radius: sage-border(radius-large);
+
+  .sage-panel > & {
+    margin-bottom: 0;
+  }
+}
+
+@each $name, $color in $-alert-colors {
+  .sage-alert--#{$name} {
+    background: sage-color($color, 100);
+    border: 1px solid sage-color($color, 400);
+
+    a:not([class]) {
+      color: sage-color(charcoal, 400);
+      text-decoration: underline;
+    }
+
+    .sage-alert__icon::before {
+      line-height: sage-line-height(h6);
+    }
+  }
+}
+
+.sage-alert--small {
+  gap: sage-spacing(xs);
+  grid-auto-columns: auto;
+  grid-auto-flow: column;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  padding: sage-spacing(sm);
+  border-radius: sage-border(radius);
+
+  .sage-alert__icon {
+    margin-right: sage-spacing(xs);
+    line-height: normal;
+  }
+
+  .sage-alert__icon::before {
+    line-height: sage-spacing(sm);
+  }
+
+  .sage-alert__desc {
+    @include truncate();
+    max-width: 100%;
+  }
+}
+
+.sage-alert__copy {
+  @include sage-grid-stack();
+}
+
+.sage-alert__title {
+  @extend %t-sage-heading-5;
+  color: sage-color(charcoal, 500);
+}
+
+.sage-alert__title--add-on {
+  @extend %t-sage-body-small;
+}
+
+.sage-alert__icon {
+  display: inline-flex;
+  @each $name, $color in $-alert-colors {
+    .sage-alert--#{$name} & {
+      color: sage-color($color, 300);
+    }
+  }
+  .sage-alert--warning &,
+  .sage-alert--approaching & {
+    color: sage-color(yellow, 500);
+  }
+  .sage-alert--reached & {
+    color: sage-color(orange, 500);
+  }
+  .sage-alert--exceeded & {
+    color: sage-color(red, 500);
+  }
+}
+
+.sage-alert__close {
+  position: absolute;
+  top: sage-spacing(md);
+  right: sage-spacing(md);
+
+  .sage-alert--small & {
+    position: relative;
+    top: auto;
+    right: auto;
+    line-height: 1;
+  }
+}
+
+.sage-alert__close-btn.sage-btn {
+  align-self: flex-start;
+  margin-left: auto;
+  font-size: sage-font-size(xl, false);
+  line-height: 1;
+  appearance: none;
+
+  @each $name, $color in $-alert-colors {
+    .sage-alert--#{$name} & {
+      @include sage-focus-outline($outline-offset-inline: 3px, $outline-offset-block: 3px);
+      @include sage-focus-outline--update-color(sage-color($color, 500));
+
+      color: sage-color(charcoal, 300);
+    }
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.sage-alert__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: sage-spacing(md);
+
+  @each $name, $color in $-alert-colors {
+    .sage-alert--#{$name} & > a {
+      @include sage-focus-outline($outline-offset-inline: 2px, $outline-offset-block: 2px);
+      @include sage-focus-outline--update-color(sage-color($color, 400));
+      font-weight: sage-font-weight(medium);
+    }
+  }
+
+  .sage-alert--small-dismissable & {
+    margin-right: sage-spacing(2xs);
+  }
+}

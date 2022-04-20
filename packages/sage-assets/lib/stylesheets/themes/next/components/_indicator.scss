@@ -1,0 +1,39 @@
+////
+/// Indicator
+///
+/// @group sage
+////
+
+
+$-indicator-size: rem(6px);
+
+.sage-indicator-list {
+  display: flex;
+  align-items: center;
+  padding-left: 0;
+}
+
+.sage-indicator {
+  overflow: hidden;
+  width: $-indicator-size;
+  height: $-indicator-size;
+  border-radius: sage-border(radius-round);
+
+  &:not(.sage-indicator--current) {
+    background-color: sage-color(grey, 400);
+  }
+
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+}
+
+.sage-indicator-text {
+  .sage-modal & {
+    margin-top: sage-spacing(2xs);
+  }
+}
+
+.sage-indicator--current {
+  background-color: sage-color(primary, 300);
+}

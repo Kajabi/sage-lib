@@ -1,0 +1,102 @@
+////
+/// Form Input (Singleline)
+///
+/// @group sage
+////
+
+
+$-input-border-width: rem(1px);
+$-input-height: rem(40px);
+$-input-label-offset: rem(12px);
+$-input-padding-offset: sage-spacing(sm) - $-input-border-width;
+$-input-popover-size: rem(40px);
+$-input-text-height: sage-font-size(body);
+
+.sage-input {
+  @include sage-form-field-group;
+
+  .sage-input-group & {
+    height: auto;
+    margin-bottom: 0;
+  }
+}
+
+.sage-form-field--error {
+  .sage-upload-card & {
+    margin-top: sage-spacing(sm);
+  }
+}
+
+.sage-input__affix {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  z-index: sage-z-index(default, 1);
+  height: $-input-height;
+
+  .sage-input--suffixed &,
+  .sage-input--prefixed & {
+    position: absolute;
+  }
+
+  &:hover {
+    cursor: default;
+  }
+}
+
+.sage-input__affix-value {
+  color: sage-color(charcoal, 100);
+}
+
+.sage-input__affix--prefix {
+  top: 0;
+  left: sage-spacing(sm);
+  padding-right: sage-spacing(2xs);
+}
+
+.sage-input__affix--suffix {
+  top: 0;
+  right: sage-spacing(sm);
+  padding-left: sage-spacing(2xs);
+}
+
+.sage-input__label {
+  @include sage-form-field-label;
+
+  margin-bottom: sage-spacing(2xs);
+}
+.sage-input__field-wrapper {
+  position: relative;
+}
+
+.sage-input__field {
+  @include sage-form-field;
+  @include sage-focus-ring;
+
+  height: $-input-height;
+  padding: sage-spacing(xs) sage-spacing(sm);
+
+  .sage-input--has-icon & {
+    padding-right: $-input-popover-size;
+  }
+
+  .sage-input--has-popover & {
+    padding-right: $-input-popover-size;
+  }
+}
+
+.sage-input__icon {
+  .sage-input--has-icon & {
+    @include sage-form-field-icon;
+
+    pointer-events: none;
+  }
+
+  .sage-form-field--error & i {
+    color: sage-color(red, 300);
+  }
+}
+
+.sage-input__message {
+  @include sage-form-field-message;
+}

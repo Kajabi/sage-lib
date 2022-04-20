@@ -1,0 +1,36 @@
+{
+  "color": {
+    "core": {
+      "primary": {
+        "value": "{color.base.primary.300.hex}"
+      },
+      "sage": {
+        "value": "{color.base.sage.300.hex}"
+      },
+      "yellow": {
+        "value": "{color.base.yellow.300.hex}"
+      },
+      "red": {
+        "value": "{color.base.red.300.hex}"
+      },
+      "orange": {
+        "value": "{color.base.orange.300.hex}"
+      },
+      "purple": {
+        "value": "{color.base.purple.300.hex}"
+      },
+      "charcoal": {
+        "value": "{color.base.charcoal.300.hex}"
+      },
+      "grey": {
+        "value": "{color.base.charcoal.100.hex}"
+      },
+      "white": {
+        "value": "{color.base.white.500.hex}"
+      },
+      "black": {
+        "value": "{color.base.black.500.hex}"
+      }
+    }
+  }
+}

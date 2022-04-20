@@ -1,0 +1,186 @@
+////
+/// Upload Card
+///
+/// @group sage
+////
+
+
+$-upload-card-border-radius: sage-border(radius-large);
+$-upload-card-border-width: 2;
+$-upload-card-selected-width: rem(200px);
+$-upload-card-preview-width: rem(32px);
+$-upload-card-preview-max-width: rem(190px);
+$-upload-card-preview-max-width-mobile: rem(304px);
+$-upload-card-border-color-default: sage-color(grey, 400);
+$-upload-card-border-color-hover: sage-color(primary, 300);
+$-upload-card-border-color-error: sage-color(red, 300);
+$-upload-card-border-color-error-hover: sage-color(red, 300);
+$-upload-card-border-color-focus: sage-color(primary, 300);
+$-upload-card-border-color-focus-ring: 0 0 0 4px sage-color(primary, 200);
+$-upload-card-border-color-error-focus-ring: 0 0 0 4px sage-color(red, 200);
+$-upload-card-background: sage-color(white);
+$-upload-card-background-hover: sage-color(grey, 200);
+
+.sage-upload-card {
+  &:focus {
+    outline: none;
+  }
+}
+
+.sage-upload-card__body {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  flex: 1;
+
+  :not(.sage-upload-card--selected) & {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sage-upload-card--selected & {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .sage-upload-card--selected & {
+    flex-basis: $-upload-card-selected-width;
+  }
+}
+
+.sage-upload-card__dropzone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: sage-spacing(xs);
+  padding: sage-spacing(md);
+  background-color: $-upload-card-background;
+  border-radius: $-upload-card-border-radius;
+
+  .sage-upload-card:not(.sage-upload-card--selected) & {
+    flex-flow: column;
+
+    @include sage-dashed-border(
+      $color: $-upload-card-border-color-default,
+      $border-radius: $-upload-card-border-radius,
+    );
+
+    &:hover {
+      @include sage-dashed-border(
+        $color: $-upload-card-border-color-hover,
+        $border-radius: $-upload-card-border-radius,
+      );
+    }
+
+    &:focus,
+    &:focus-within {
+      box-shadow: $-upload-card-border-color-focus-ring;
+
+      @include sage-dashed-border(
+        $color: $-upload-card-border-color-focus,
+        $border-radius: $-upload-card-border-radius,
+      );
+    }
+  }
+
+  .sage-upload-card--selected & {
+    flex-flow: row wrap;
+    gap: sage-spacing();
+    border: 1px solid $-upload-card-border-color-default;
+  }
+
+  .sage-upload-card.sage-upload-card--error & {
+    @include sage-dashed-border(
+      $color: $-upload-card-border-color-error,
+      $border-radius: $-upload-card-border-radius,
+    );
+  }
+
+  .sage-upload-card.sage-upload-card--error:not(.sage-upload-card--selected) & {
+    &:hover {
+      @include sage-dashed-border(
+        $color: $-upload-card-border-color-error-hover,
+        $border-radius: $-upload-card-border-radius,
+      );
+    }
+
+    &:focus,
+    &:focus-within {
+      box-shadow: $-upload-card-border-color-error-focus-ring;
+
+      @include sage-dashed-border(
+        $color: $-upload-card-border-color-error-hover,
+        $border-radius: $-upload-card-border-radius,
+      );
+    }
+  }
+}
+
+.sage-upload-card__errors {
+  margin-top: sage-spacing(sm);
+
+  > p {
+    @extend %t-sage-body-med;
+
+    color: $-upload-card-border-color-error;
+
+    &:not(:last-child) {
+      margin-bottom: sage-spacing(2xs);
+    }
+  }
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+
+    &:focus,
+    &:hover {
+      color: $-upload-card-border-color-error-hover;
+      text-decoration: underline;
+      outline: 0;
+    }
+  }
+}
+
+.sage-upload-card__icon {
+  display: inline-flex;
+  color: sage-color(charcoal, 100);
+
+  .sage-upload-card:not(.sage-uploaded-card--selected) & {
+    margin-bottom: sage-spacing(2xs);
+  }
+}
+
+.sage-upload-card__input {
+  @include visually-hidden;
+}
+
+.sage-upload-card__preview {
+  width: $-upload-card-preview-width;
+  max-width: $-upload-card-preview-max-width;
+  margin-right: 0;
+  text-align: center;
+  border-radius: sage-border(radius-sm);
+
+  .sage-upload-card--selected & {
+    width: 100%;
+  }
+
+  @media (max-width: 609px) {
+    max-width: $-upload-card-preview-max-width-mobile;
+  }
+}
+
+.sage-upload-card__subtext {
+  @extend %t-sage-body-small;
+
+  margin-top: sage-spacing(2xs);
+  color: sage-color(charcoal, 200);
+}
+
+.sage-upload-card__text {
+  @extend %t-sage-heading-6;
+
+  margin-bottom: sage-spacing(2xs);
+  color: sage-color(charcoal, 400);
+}

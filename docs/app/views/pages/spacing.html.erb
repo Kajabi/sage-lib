@@ -9,50 +9,18 @@
   <p>The following spacing tokens are used throughout Sage:</p>
   <%= sage_component SageTable, {
     striped: true,
-    headers: [
-      "Token",
-      "Value",
-    ],
-    rows: [
-      [
-        "2xs",
-        "4px",
-      ],
-      [
-        "xs",
-        "8px",
-      ],
-      [
-        "sm",
-        "16px",
-      ],
-      [
-        "md",
-        "24px",
-      ],
-      [
-        "lg",
-        "32px",
-      ],
-      [
-        "xl",
-        "48px",
-      ],
-      [
-        "2xl",
-        "64px",
-      ]
-    ]
+    headers: ["Token", "Value"],
+    rows: sage_spacers,
   } %>
 
   <%= md(%(
   We use several different "tiers" of spacings as follows:
 
-  - Application-level: `32px` -- this is the outermost tier where foundational page elements such as the page heading and any organizing panels are contained.
-  - Panel-level: `24px` -- this is next layer in where groups of elements are presented with a slight smaller internal spacing.
+  - Application-level: `#{sage_spacers_application[:application]}` -- this is the outermost tier where foundational page elements such as the page heading and any organizing panels are contained.
+  - Panel-level: `#{sage_spacers_application[:panel]}` -- this is next layer in where groups of elements are presented with a slight smaller internal spacing.
     This may be distinct panels or groups of content similar to such panels.
-  - Card-level: `16px` -- card components or smaller groups of content recieve this smaller spacing.
-  - Stack-level: `8px` -- stacks of content that are visually groups such as blocks of paragraphs or list items get this smallest spacing.
+  - Card-level: `#{sage_spacers_application[:card]}` -- card components or smaller groups of content receive this smaller spacing.
+  - Stack-level: `#{sage_spacers_application[:stack]}` -- stacks of content that are visually groups such as blocks of paragraphs or list items get this smallest spacing.
   )) %>
 
   <%= md(%(
@@ -66,13 +34,13 @@
   <%= sage_component SageButton, { style: "primary", value: "Sample", spacer: { top: "xs", bottom: "lg" }} %>
   <%= md(%(
     Finally, beyond component attributes, the `SageClassnames` module makes these same spacer classes available anywhere.
-    
+
     In Rails:
 
 ```erb
 <b class="\<\%\= SageClassnames::SPACERS::LG_TOP \%\>">I have extra space above!</b>
 ```
-  
+
   In React:
 
 ```jsx

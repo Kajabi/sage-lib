@@ -1,0 +1,39 @@
+<% label_content_tag = component.interactive_type ? "button" : "span" %>
+
+<span
+  class="
+    sage-label
+    <%= "sage-label--#{component.color}" if component.color %>
+    <%= "sage-label--#{component.style}" if component.style %>
+    <%= "sage-label--interactive" if component.interactive_type %>
+    <%= "sage-label--interactive-right-cta-affordance" if (component.interactive_type === :dropdown) || (component.interactive_type === :secondary_button) %>
+    <%= "sage-label--icon-#{component.icon}" if component.icon %>
+    <%= "sage-label--icon--custom-color" if component.icon && component.custom_icon_color %>
+    <%= component.generated_css_classes %>
+  "
+  <% if component.icon && component.custom_icon_color %>
+    style="--sage-label-custom-icon-color: <%= component.custom_icon_color %>"
+  <% end %>
+  <% component.container_attributes.each do |key, value| %>
+    <%= "#{key}='#{value}'".html_safe %>
+  <% end if component.container_attributes&.is_a?(Hash) %>
+>
+  <<%= label_content_tag %>
+    class="sage-label__value"
+    <%= "type=button" if component.interactive_type %>
+    <%= component.generated_html_attributes.html_safe %>
+  />
+    <span class="sage-label__value-text">
+      <%= component.value.html_safe %>
+    </span>
+  </<%= label_content_tag %>>
+  <%= component.content %>
+  <% if component.interactive_type === :secondary_button %>
+    <%= component.secondary_button if component.secondary_button.is_a? String %>
+    <%= sage_component SageLabelSecondaryButton, {} if component.secondary_button == true %>
+    <%= sage_component SageLabelSecondaryButton, component.secondary_button if component.secondary_button.is_a? Hash %>
+  <% end %>
+  <% if component.interactive_type === :dropdown %>
+    <span class="sage-label__decor-icon sage-label__decor-icon--down-small"></span>
+  <% end %>
+</span>

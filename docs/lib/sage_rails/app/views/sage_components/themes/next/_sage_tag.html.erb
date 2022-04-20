@@ -1,0 +1,17 @@
+<span
+  class="sage-tag <%= component.generated_css_classes %>"
+  <%= component.generated_html_attributes.html_safe %>
+>
+  <span class="sage-tag__value"><%= component.value %></span>
+  <% if component.show_dismiss %>
+    <%= sage_component SageButton, {
+      css_classes: "sage-tag__button",
+      value: component.value,
+      style: "primary",
+      subtle: true,
+      small: true,
+      icon: { name: "remove", style: "only" },
+      attributes: component.dismiss_attributes
+    } %>
+  <% end %>
+</span>

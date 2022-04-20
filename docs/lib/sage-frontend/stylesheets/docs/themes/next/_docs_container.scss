@@ -1,0 +1,22 @@
+/* ==================================================
+  ** _docs_container.scss
+
+  For Sage documentation use
+================================================== */
+
+.docs-container {
+  margin-top: sage-spacing();
+  margin-bottom: sage-spacing();
+
+  @include sage-panel;
+}
+
+.sage-panel--docs-span-right {
+  @media (min-width: sage-breakpoint()) {
+    width: calc(100vw - 240px - 64px);
+  }
+
+  @media (max-width: sage-breakpoint(sm-max)) {
+    width: 100%;
+  }
+}

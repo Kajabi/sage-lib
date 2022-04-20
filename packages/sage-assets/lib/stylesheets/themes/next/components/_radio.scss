@@ -1,0 +1,245 @@
+////
+/// Radio
+///
+/// @group sage
+////
+
+
+// Colors
+$-radio-color-checked: map-get($sage-radio-colors, checked);
+$-radio-color-checked-disabled: map-get($sage-radio-colors, checked-disabled);
+$-radio-color-checked-hover: map-get($sage-radio-colors, checked-hover);
+$-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
+$-radio-color-default: map-get($sage-radio-colors, default);
+$-radio-color-disabled: map-get($sage-radio-colors, disabled);
+$-radio-color-error: map-get($sage-radio-colors, error);
+$-radio-color-hover: map-get($sage-radio-colors, hover);
+$-radio-color-text-disabled: sage-color(grey, 500);
+$-radio-color-focus-outline: sage-color(primary, 200);
+$-radio-color-focus-outline-error: sage-color(red, 200);
+
+// Additional configurations
+$-radio-button-size: $sage-radio-size;
+$-radio-label-spacing: rem(12px);
+$-radio-transition: 0.15s ease-in-out;
+$-radio-selected-indicator-size: rem(7px);
+
+// Focus state
+$-radio-focus-outline-size: rem(3px);
+$-radio-focus-outline-width: 4;
+$-radio-focus-outline-color: currentColor;
+
+
+.sage-radio {
+  position: relative;
+
+  &:not(.sage-radio--standalone) {
+    @include sage-form-toggle;
+  }
+
+  .sage-list & {
+    margin-bottom: sage-spacing(card) / 2;
+  }
+
+  @include sage-form-toggle-parents;
+}
+
+.sage-radio--standalone {
+  display: inline-block;
+}
+
+.sage-radio--has-border:not(.sage-radio--standalone) {
+  align-items: center;
+  padding: sage-spacing(card);
+  border: sage-border();
+  border-radius: sage-border(radius);
+}
+
+.sage-radio__caption {
+  .sage-radio--has-border & {
+    margin-left: sage-spacing(lg);
+  }
+}
+
+.sage-radio__label {
+  @include sage-form-toggle-label;
+
+  .sage-radio--has-border & {
+    margin-left: sage-spacing(lg);
+    color: sage-color(charcoal, 400);
+    font-weight: sage-font-weight(semibold);
+
+    &::after {
+      content: "" ;
+      z-index: sage-z-index(default, 1);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.sage-radio--standalone,
+.sage-radio__input {
+  @include sage-form-toggle-input;
+
+  z-index: sage-z-index(default, 1);
+  height: $-radio-button-size;
+  width: $-radio-button-size;
+  margin: 0;
+  color: $-radio-color-default;
+  outline: none;
+  background-color: sage-color(white);
+  border: rem(1px) solid $-radio-color-default;
+  border-radius: sage-border(radius-round);
+  transition: background 0.2s ease-in-out, box-shadow $-radio-transition, border $-radio-transition;
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    color: inherit;
+    border-radius: inherit;
+    transition: opacity 0.2s ease-in-out, transform $-radio-transition;
+    opacity: 0;
+  }
+
+  // focus outline
+  &::before {
+    transform: translate3d(-50%, -50%, 0) scale(0.94);
+    width: calc(100% + ((#{$-radio-focus-outline-width} * 1px) + (#{$-radio-focus-outline-size} * 2)));
+    height: calc(100% + ((#{$-radio-focus-outline-width} * 1px) + (#{$-radio-focus-outline-size} * 2)));
+    border: calc(#{$-radio-focus-outline-width} * 1px) solid $-radio-color-focus-outline;
+    pointer-events: none;
+    opacity: 0;
+  }
+
+  &::after {
+    transform: translate3d(-50%, -50%, 0) scale(0);
+    height: $-radio-selected-indicator-size;
+    width: $-radio-selected-indicator-size;
+    background-color: $-radio-color-checked-inner;
+    transition: opacity $-radio-transition, transform 0.2s ease-in-out;
+  }
+
+  &:checked {
+    color: $-radio-color-checked;
+    background: $-radio-color-checked;
+    border-color: transparent;
+    box-shadow: sage-shadow(sm);
+
+    &::after {
+      transform: translate3d(-50%, -50%, 0) scale(1);
+      opacity: 1;
+    }
+  }
+
+  &:hover {
+    &:not(:checked):not(:disabled) {
+      border-color: $-radio-color-hover;
+      box-shadow: sage-shadow(sm);
+    }
+  }
+
+  &:focus:not(:disabled),
+  &:active:not(:disabled) {
+    outline: none;
+
+    &::before {
+      transform: translate3d(-50%, -50%, 0) scale(1);
+      opacity: 1;
+    }
+
+    &::after {
+      transform: translate3d(-50%, -50%, 0) scale(1);
+      opacity: 1;
+    }
+  }
+
+  &:disabled {
+    background: $-radio-color-disabled;
+    cursor: not-allowed;
+
+    // disabled & checked
+    &:checked {
+      background: $-radio-color-checked-disabled;
+      box-shadow: none;
+    }
+
+    + .sage-radio__label,
+    + .sage-radio__message {
+      color: $-radio-color-text-disabled;
+      cursor: not-allowed;
+    }
+
+    &:not(:checked)::after {
+      background: $-radio-color-disabled;
+    }
+  }
+
+  &:not(.sage-radio--standalone) {
+    .sage-radio--has-border & {
+      position: absolute;
+      margin-top: 0;
+    }
+  }
+
+  .sage-radio & {
+    margin-top: rem(2px);
+  }
+
+  .sage-sortable & {
+    margin-top: 0;
+  }
+}
+
+.sage-radio--error {
+  .sage-radio__label,
+  .sage-radio__caption,
+  .sage-radio__message {
+    color: $-radio-color-error;
+  }
+
+  &.sage-radio--has-border:not(.sage-radio--standalone) {
+    border-color: $-radio-color-error;
+  }
+
+  .sage-radio__input {
+    border-color: $-radio-color-error;
+    &:checked {
+      color: $-radio-color-error;
+      background-color: $-radio-color-error;
+    }
+    &::before {
+      border-color: $-radio-color-focus-outline-error;
+    }
+    &::after {
+      background-color: sage-color(white);
+    }
+    &:hover {
+      border-color: $-radio-color-error;
+    }
+  }
+
+  :hover:not(:checked):not(:disabled) {
+    border-color: $-radio-color-error;
+  }
+}
+
+.sage-radio__message,
+.sage-radio__caption {
+  @include sage-form-toggle-message;
+}
+
+.sage-radio__message,
+.sage-radio__caption,
+.sage-radio__custom-content {
+  margin-left: #{$-radio-button-size + $-radio-label-spacing};
+  margin-top: rem(2px);
+}

@@ -1,0 +1,5 @@
+Figues in Panels sit inside the panel's padding by default, but the `bleed` prop can be set to allow a figure to bleed into this padding as follows:
+
+- `top` is meant for a figure as the very first child of a Panel and will bleed into the top and sides of the panel.
+- `sides` is meant for a figure in the middle of a panel and will bleed just to the edges.
+- `bottom` opposite of `top`, this is meant for a figure as the very last child of a panel and will bleed into the sides and bottom of the panel.

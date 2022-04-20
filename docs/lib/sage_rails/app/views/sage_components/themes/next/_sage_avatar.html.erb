@@ -1,0 +1,67 @@
+<%
+lazy_load_initials = true
+
+if component.lazy_load_initials == false
+  lazy_load_initials = false
+end
+
+# Sets badge icon size based on Avatar size
+badge_icon_size = 'xs';
+avatar_size_as_integer = component.size.to_i;
+
+case avatar_size_as_integer
+  when 32..47 then badge_icon_size = "sm"
+  when 48..63 then badge_icon_size = nil # should be update to md once -md classes supported
+  when 64..79 then badge_icon_size = "lg"
+  when 80..95 then badge_icon_size = "xl"
+  when 96..111 then badge_icon_size = "2xl"
+  when 112..127 then badge_icon_size = "3xl"
+  when 128..140 then badge_icon_size = "4xl"
+end
+
+%>
+
+<div
+  class="
+    sage-avatar
+    <%= "sage-avatar--#{component.color}" if component.color %>
+    <%= "sage-avatar--centered" if component.centered %>
+    <%= component.generated_css_classes %>
+  "
+  <%= component.generated_html_attributes.html_safe %>
+  <% if component.size %>
+    style="width: <%= component.size %>; height: <%= component.size %>;"
+  <% end %>
+>
+  <% if component.badge %>
+    <div class="sage-avatar__badge">
+      <%= sage_component SageIcon, {
+        icon: "check-circle-filled",
+        size: badge_icon_size,
+        color: "primary-300",
+      } %>
+    </div>
+  <% end %>
+
+  <% if !component.initials && !component.image %>
+    <svg class="sage-avatar__graphic" viewBox="0 0 28 28"><path fill-rule="evenodd" clip-rule="evenodd" d="M19.038 14.594a8.167 8.167 0 1 0-10.077 0C3.767 16.236 0 21.094 0 26.834a1.167 1.167 0 1 0 2.333 0c0-5.8 4.701-10.5 10.5-10.5h2.334c5.799 0 10.5 4.7 10.5 10.5a1.167 1.167 0 1 0 2.333 0c0-5.74-3.766-10.598-8.962-12.24ZM8.167 8.167a5.833 5.833 0 1 1 11.666 0 5.833 5.833 0 0 1-11.666 0Z" fill="#054FB8"/></svg>
+  <% end %>
+
+  <% if component.image %>
+    <%
+      image_id = nil
+      if component.image[:id]
+        image_id = component.image[:id]
+      end
+    %>
+    <%= image_tag component.image[:src], alt: (component.image[:alt] || ""), class: "sage-avatar__image", id: image_id  %>
+  <% end %>
+
+  <% if component.initials %>
+    <% if lazy_load_initials %>
+      <svg class="sage-avatar__initials" viewBox="0 0 32 32">
+        <text x="16" y="20"><%= component.initials %></text>
+      </svg>
+    <% end %>
+  <% end %>
+</div>

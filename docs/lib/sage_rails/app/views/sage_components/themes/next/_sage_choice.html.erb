@@ -1,0 +1,82 @@
+<%
+css_active_class = "sage-choice--active"
+is_label = component.radio_configs.present?
+is_link = component.attributes&.has_key?(:href)
+is_button = !is_link and !is_label
+html_tag = component.content.present? ? "div" : "button"
+if is_link
+  html_tag = "a"
+elsif is_label
+  html_tag = "label"
+end
+%>
+
+<<%= html_tag %>
+  <%= "type=button" if is_button and !component.content.present? %>
+  <% component.attributes.each do |key, value| %>
+    <%= "#{key}='#{value}'".html_safe %>
+  <% end if component.attributes&.is_a?(Hash) %>
+  <% if component.disabled %>
+    <%= is_button && html_tag != "div" ? "disabled" : "aria-disabled=true" %>
+  <% end %>
+  <% if html_tag === "div" %>
+    tabindex="0"
+  <% end %>
+  class="
+    sage-choice
+    <%= css_active_class if component.active %>
+    <%= component.generated_css_classes %>
+    <% if component.type.present? %>
+      <% if component.type == "icon" && component.icon.present? %>
+        <%= "sage-choice--icon-#{component.icon}" %>
+      <% else %>
+        <%= "sage-choice--#{component.type}" %>
+      <% end %>
+    <% end %>
+    <%= "sage-choice--align-center" if component.align_center.present? && component.align_center == true %>
+    <%= "sage-choice--vertical-align-icon-#{component.vertical_align_icon}" if component.vertical_align_icon %>
+  "
+  data-js-tabs-target="<%= component.target %>"
+  data-sage-active-class="<%= css_active_class %>"
+  role="tab"
+  aria-controls="<%= component.target %>"
+  <% if component.radio_configs.present? %>
+    for="<%= component.radio_configs[:id] %>"
+  <% end %>
+  <%= component.generated_html_attributes.html_safe %>
+>
+   <% if component.radio_configs.present? %>
+    <div class="sage-choice__radio visually-hidden">
+      <input
+        type="radio"
+        name="<%= component.radio_configs[:name] %>"
+        id="<%= component.radio_configs[:id] %>"
+        value="<%= component.radio_configs[:value] %>"
+        <%= "checked=checked" if component.active %>
+      />
+    </div>
+  <% end %>
+  <% if component.graphic.present? %>
+    <div class="sage-choice__graphic">
+      <%= component.graphic.html_safe %>
+    </div>
+  <% end %>
+  <div class="
+    sage-choice__content
+    <%= "sage-choice__content--custom" if component.content.present? %>
+    <%= component.custom_content_class if component.custom_content_class.present? %>
+  ">
+    <% if component.text.present? %>
+      <em class="sage-choice__text"><%= component.text.html_safe %></em>
+    <% end %>
+    <% if component.subtext.present? %>
+      <span class="sage-choice__subtext" aria-hidden="true"><%= component.subtext.html_safe %></span>
+    <% end %>
+    <%= component.content if component.content.present? %>
+  </div>
+  <% if component.link_text.present? %>
+    <div class="sage-choice__link-text">
+      <%= component.link_text.html_safe %>
+    </div>
+  <% end %>
+</<%= html_tag %>>

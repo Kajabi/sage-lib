@@ -1,0 +1,24 @@
+<%
+id = "sage-sidebar-menu"
+if component.id.present?
+  id = component.id
+end
+%>
+<div class="
+    sage-sidebar 
+    <%= component.size ? "sage-sidebar--#{component.size}" : "" %>
+    <%= component.generated_css_classes %>
+  " 
+  id="<%= id %>" 
+  data-js-sidebar="<%= id %>" 
+  <%= component.generated_html_attributes.html_safe %>
+>
+  <div class="sage-sidebar__body">
+    <%= component.content %>
+  </div>
+  <% if content_for? :sage_sidebar_footer %>
+    <div class="sage-sidebar__footer">
+      <%= yield :sage_sidebar_footer %>
+    </div>
+  <% end %>
+</div>

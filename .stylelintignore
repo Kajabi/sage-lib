@@ -1,1 +1,2 @@
-packages/sage-assets/lib/stylesheets/vendor/_tiny_slider.scss
+packages/sage-assets/lib/stylesheets/themes/legacy/vendor/_tiny_slider.scss
+packages/sage-assets/lib/stylesheets/themes/next/vendor/_tiny_slider.scss

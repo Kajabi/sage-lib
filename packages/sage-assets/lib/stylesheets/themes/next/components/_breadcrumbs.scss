@@ -1,0 +1,117 @@
+////
+/// Breadcrumbs
+///
+/// @group sage
+////
+
+$-breadcrumb-current-color: sage-color(charcoal, 400);
+$-breadcrumb-interactive-color: sage-color(charcoal, 400);
+$-breadcrumb-outline-color: sage-color(grey, 500);
+
+.sage-breadcrumbs {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+
+  @extend %t-sage-body-med;
+}
+
+.sage-breadcrumbs__icon {
+  display: inline-flex;
+  align-items: center;
+
+  .sage-breadcrumbs__link & {
+    margin-right: sage-spacing(xs);
+  }
+}
+
+.sage-breadcrumbs__item {
+  display: inline-flex;
+  align-items: center;
+  list-style: none;
+
+  &:not(:last-child) {
+    &::after {
+      content: "/";
+      color: sage-color(charcoal, 200);
+    }
+
+    .sage-breadcrumbs--progressbar &::after {
+      margin: 0 sage-spacing(xs) sage-spacing(2xs);
+      @include sage-icon-base(right-small, xl);
+    }
+  }
+}
+
+.sage-breadcrumbs__link {
+  display: inline-flex;
+  align-items: center;
+  padding: sage-spacing(3xs) sage-spacing(xs);
+  color: sage-color(charcoal, 300);
+  font-size: sage-font-size(body-sm);
+  font-weight: sage-font-weight(semibold);
+  text-decoration: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $-breadcrumb-interactive-color;
+  }
+
+  &[aria-disabled="true"],
+  &:disabled {
+    color: $-breadcrumb-current-color;
+    pointer-events: none;
+    cursor: default;
+  }
+
+  .sage-breadcrumbs--progressbar & {
+    position: relative;
+    padding-bottom: sage-spacing(2xs);
+
+    &:active {
+      color: $-breadcrumb-interactive-color;
+    }
+
+    @include sage-tab-underline(".sage-breadcrumbs__link--current");
+  }
+
+  .sage-breadcrumbs:not(.sage-breadcrumbs--progressbar) & {
+    background: transparent;
+    border-radius: rem(6px);
+    @include sage-focus-outline(
+      $outline-width: 4px,
+      $outline-offset-block: -1,
+      $outline-border-radius: sage-border(radius)
+    );
+    @include sage-focus-outline--update-color($-breadcrumb-outline-color);
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $-breadcrumb-interactive-color;
+    }
+
+    &[aria-disabled="true"],
+    &:disabled {
+      background: none;
+      pointer-events: none;
+      cursor: default;
+    }
+  }
+}
+
+.sage-breadcrumbs__link--current {
+  color: $-breadcrumb-current-color;
+
+  .sage-breadcrumbs--progressbar & {
+    color: $-breadcrumb-interactive-color;
+  }
+}
+
+.sage-breadcrumbs__list {
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+  padding: 0;
+}

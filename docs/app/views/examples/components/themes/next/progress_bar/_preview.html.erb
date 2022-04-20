@@ -1,0 +1,37 @@
+<h2 class="t-sage-heading-6">Default</h2>
+<%= sage_component SageProgressBar, {
+  color: SageTokens::COLOR_PALETTE[:PRIMARY_300],
+  percent: 70,
+  label: "Cloning product"
+} %>
+
+<h2 class="t-sage-heading-6">Default with Percentage</h2>
+<%= sage_component SageProgressBar, {
+  color: SageTokens::COLOR_PALETTE[:SAGE_300],
+  display_percent: true,
+  percent: 70,
+  label: "Cloning product"
+} %>
+
+<h2 class="t-sage-heading-6">Default with Disabled Tooltip</h2>
+<%= sage_component SageProgressBar, {
+  color: SageTokens::COLOR_PALETTE[:ORANGE_300],
+  disable_tooltip: true,
+  percent: 17,
+  label: "Cloning product"
+} %>
+
+<h2 class="t-sage-heading-6">Tooltip Position - Bottom</h2>
+<%= sage_component SageProgressBar, {
+  color: SageTokens::COLOR_PALETTE[:YELLOW_300],
+  percent: 32,
+  label: "Cloning product",
+  tooltip_position: "bottom",
+} %>
+
+<h2 class="t-sage-heading-6">Custom color</h2>
+<%= sage_component SageProgressBar, {
+  color: "#4edbe6",
+  percent: 86,
+  label: "Reached limit"
+} %>

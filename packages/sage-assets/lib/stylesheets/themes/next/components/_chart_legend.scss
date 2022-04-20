@@ -1,0 +1,35 @@
+////
+/// Chart Legend
+///
+/// @group sage
+////
+
+.sage-chart-legend {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.sage-chart-legend__item {
+  @extend %t-sage-body-small;
+
+  display: flex;
+  align-items: center;
+  list-style: none;
+  color: sage-color(charcoal, 200);
+
+  &::before {
+    content: "";
+    display: block;
+    width: rem(8px);
+    height: rem(8px);
+    margin-right: sage-spacing(xs);
+    border-radius: sage-border(radius);
+    background-color: var(--item-color);
+  }
+
+  &:not(:last-child) {
+    margin-right: sage-spacing();
+  }
+}

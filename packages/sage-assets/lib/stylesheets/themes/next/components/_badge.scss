@@ -1,0 +1,161 @@
+////
+/// Badge
+///
+/// @group sage
+////
+
+
+$-badge-min-height: rem(20px);
+$-badge-interactive-icon-size: rem(24px);
+$-badge-interactive-icon-size-decor: rem(28px);
+$-badge-padding: 0 rem(10px) 0 sage-spacing(xs);
+$-badge-border-radius: sage-border(radius-x-large);
+$-badge-inset-border: 0 0 0 1px inset;
+
+
+.sage-badge {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  border-radius: $-badge-border-radius;
+
+  &[class*="sage-badge--icon-only"] {
+    background-color: transparent;
+  }
+}
+
+.sage-badge__value {
+  @extend %t-sage-body-xsmall;
+
+  appearance: none;
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  min-height: $-badge-min-height;
+  padding: $-badge-padding;
+  color: sage-color(charcoal, 500);
+  white-space: nowrap;
+  background-color: transparent;
+  border-radius: $-badge-border-radius;
+  border: unset;
+  outline: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    outline: none;
+  }
+
+  .sage-dot ~ & {
+    padding-left: sage-spacing(2xs);
+  }
+}
+
+.sage-badge__value-text {
+  @include truncate;
+
+  display: block;
+
+  .sage-badge--interactive[class*="sage-badge--icon-"] & {
+    @media (max-width: sage-breakpoint(sm-max)) {
+      @include visually-hidden();
+    }
+  }
+}
+
+.sage-badge__decor-icon {
+  pointer-events: none;
+}
+
+@each $-color-name, $-color-settings in $sage-color-combos {
+  $-color-modifier: ".sage-badge--#{$-color-name}";
+
+  #{$-color-modifier} {
+    background-color: sage-color-combo($-color-name, default, background);
+
+    &:hover:not(:focus):not(:active):not(:disabled):not(.disabled) {
+      color: sage-color-combo($-color-name, default, background-accent);
+    }
+  }
+
+  #{$-color-modifier} .sage-dot {
+    --sage-dot-color: #{sage-color-combo($-color-name, default, icon-background-accent)};
+  }
+
+  #{$-color-modifier}.sage-badge--interactive {
+    &:hover {
+      background-color: sage-color-combo($-color-name, default, background-accent);
+    }
+
+    .sage-badge__value {
+      @include sage-focus-outline();
+      @include sage-focus-outline--update-color(sage-color(primary, 200));
+
+      position: static;
+      padding-right: rem(24px);
+
+      &::after {
+        border-radius: $-badge-border-radius;
+      }
+    }
+
+    .sage-badge__decor-icon {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      right: 0;
+      width: rem(22px);
+      min-height: rem(22px);
+      margin: auto 0;
+      border-radius: 0 $-badge-border-radius $-badge-border-radius 0;
+
+      &::before {
+        @extend %t-sage-body-xsmall;
+
+        color: sage-color(charcoal, 300);
+
+        /* stylelint-disable max-nesting-depth */
+        @media (max-width: sage-breakpoint(sm-max)) {
+          width: sage-spacing(md);
+        }
+        /* stylelint-enable max-nesting-depth */
+      }
+
+      &::after {
+        width: $-badge-interactive-icon-size;
+        height: $-badge-interactive-icon-size;
+        border-radius: 0 $-badge-border-radius $-badge-border-radius 0;
+      }
+
+      &.sage-btn--tag::before {
+        font-size: sage-font-size(md, false);
+      }
+    }
+  }
+
+  // NOTE: Icon generation consolidated in `core/_icons.scss`
+}
+
+.sage-badge-group {
+  display: flex;
+  flex-flow: row wrap;
+  gap: sage-spacing(xs);
+}
+
+@each $-key, $-value in $sage-spacings {
+  .sage-badge-group--gap-#{$-key} {
+    gap: sage-spacing($-key);
+  }
+}
+
+.sage-badge-group--align-center {
+  justify-content: center;
+}
+
+.sage-badge-group--align-end {
+  justify-content: flex-end;
+}
+
+.sage-badge-group--align-space-between {
+  justify-content: space-between;
+}

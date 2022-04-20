@@ -1,0 +1,163 @@
+////
+/// Hero
+///
+/// @group sage
+////
+
+
+$-hero-artwork-size: rem(56px);
+$-hero-icon-size: rem(24px);
+$-hero-max-height: rem(352px);
+$-hero-min-height: rem(300px);
+$-hero-margin-y: rem(36px);
+$-hero-mobile-aspect-ratio: calc(100% * 9 / 16);
+$-hero-play-icon-background-color: rgba(sage-color(white, 100), 0.8);
+$-hero-play-icon-background-color-hover: rgba(sage-color(white, 100), 1);
+
+
+.sage-hero {
+  display: grid;
+  grid-column-gap: sage-spacing(md);
+  grid-row-gap: sage-spacing(sm);
+  overflow: hidden;
+  min-height: $-hero-min-height;
+  background-color: sage-color(white);
+  border: sage-border();
+  border-radius: sage-border(radius-large);
+
+  @media (max-width: sage-breakpoint(sm-max)) {
+    grid-template-areas:
+      "artwork"
+      "title"
+      "content";
+    grid-template-rows: min-content;
+  }
+
+  @media (min-width: sage-breakpoint(md-min)) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content;
+    grid-template-areas:
+      "title artwork"
+      "content artwork";
+    padding-left: sage-spacing(md);
+  }
+}
+
+.sage-hero--borderless {
+  border: 0;
+}
+
+.sage-hero--custom-background-color {
+  background-color: var(--custom-background-color);
+}
+
+.sage-hero--small {
+  max-width: map-get($sage-containers, "lg");
+}
+
+.sage-hero--large {
+  max-width: map-get($sage-containers, "xl");
+
+  @media (min-width: sage-breakpoint(xxl-min)) {
+    min-height: $-hero-max-height;
+  }
+}
+
+.sage-hero__title {
+  @extend %t-sage-heading-4;
+  grid-area: title;
+
+  @media (max-width: sage-breakpoint(sm-max)) {
+    padding: 0 sage-spacing(md);
+  }
+
+  @media (min-width: sage-breakpoint(md-min)) {
+    margin-top: $-hero-margin-y;
+  }
+}
+
+.sage-hero__body {
+  grid-area: content;
+  margin-bottom: $-hero-margin-y;
+  color: sage-color(charcoal, 300);
+
+  @media (max-width: sage-breakpoint(sm-max)) {
+    padding: 0 sage-spacing(md);
+  }
+}
+
+.sage-hero__artwork {
+  grid-area: artwork;
+  position: relative;
+  overflow: hidden;
+  outline: none;
+
+  @media (min-width: sage-breakpoint(lg-max)) {
+    .sage-hero--small & {
+      width: rem(400px);
+    }
+  }
+
+  @media (min-width: sage-breakpoint(xxl-min)) {
+    .sage-hero--large & {
+      width: rem(652px);
+    }
+  }
+
+  @media (max-width: sage-breakpoint(sm-max)) {
+    height: 0;
+    padding-top: $-hero-mobile-aspect-ratio;
+  }
+
+  &:hover::after {
+    background-color: $-hero-play-icon-background-color-hover;
+  }
+
+  &:focus {
+    border: 3px solid sage-color(primary, 300);
+  }
+}
+
+.sage-hero__artwork-image {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+
+  @media (min-width: sage-breakpoint(md-min)) {
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.sage-hero__artwork-image-container {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  &::before {
+    @include sage-icon-base(play);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: sage-z-index(default, 1);
+    align-items: center;
+    width: $-hero-icon-size;
+    font-size: $-hero-icon-size;
+    color: sage-color(primary, 200);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: $-hero-artwork-size;
+    height: $-hero-artwork-size;
+    border-radius: 50%;
+    background-color: $-hero-play-icon-background-color;
+    transition: background-color 0.2s ease;
+  }
+}

@@ -1,0 +1,52 @@
+<tr>
+  <td><%= md('`card_color`') %></td>
+  <td><%= md('Applies color to card. Options include `draft`, `info`, `success`, `warning`, `danger`') %></td>
+  <td><%= md('`"draft"`, `"info"`, `"success"`, `"warning"`, `"danger"`') %></td>
+  <td><%= md('`"draft"`') %></td>
+</tr>
+<tr>
+  <td><%= md('`dismissable`') %></td>
+  <td><%= md('Allows for a close icon that can dismiss the component.') %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`true`') %></td>
+</tr>
+<tr>
+  <td><%= md('`dismiss_attributes`') %></td>
+  <td><%= md('Allows for arbitrary functionality when the Close button is clicked.') %></td>
+  <td><%= md('Function') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`graphic`') %></td>
+  <td><%= md('Allows for graphic markup and placement.') %></td>
+  <td>
+    <%= md('```
+graphic: {
+  element: String,
+  on_right: Boolean,
+}
+```')
+    %>
+  </td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`title`') %></td>
+  <td><%= md('Sets the title text to be displayed.') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td colspan="2"><%= md('**Sections**') %></td>
+  <td colspan="2"><%= md('**`Element`**') %></td>
+</tr>
+<tr>
+  <td><%= md('`sage_next_best_action_description`') %></td>
+  <td><%= md('Allows for descriptive HTML content.') %></td>
+   <td colspan="2"><%= md('Restricted to text elements.') %></td>
+</tr>
+<tr>
+  <td><%= md('`sage_next_best_action_actions`') %></td>
+  <td><%= md('Provides the HTML content for the button component, rendered underneath the title and description.') %></td>
+  <td colspan="2"><%= md('Restricted to Button `sage_component`.') %></td>
+</tr>
