@@ -81,6 +81,7 @@ $-media-tile-breakpoints: (
     outline: 0;
 
     &::after {
+      border-width: sage-spacing(2xs);
       border-color: sage-color(primary, 300);
     }
   }
