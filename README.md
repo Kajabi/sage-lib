@@ -88,7 +88,7 @@ Run the Setup script:
 $ yarn setup
 ```
 
-If this is your first time using Sage you will be prompted to provide a GitHub Personal Access token. This token will be placed in your global `~/.npmrc` file, if it exists, or an `~/.npmrc` file will be created for you. If the Sage installer identifies a GitHub Access token in your `~/.npmrc` you will not be prompted.  You can find more information on obtaining a token [here](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token).
+If this is your first time using Sage you will be prompted to provide a GitHub Personal Access token. This token will be placed in your global `~/.npmrc` file, if it exists, or an `~/.npmrc` file will be created for you. If the Sage installer identifies a GitHub Access token in your `~/.npmrc` you will not be prompted. You can find more information on obtaining a token [here](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token).
 
 Start the suite:
 ```bash
