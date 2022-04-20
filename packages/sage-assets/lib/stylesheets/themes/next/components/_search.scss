@@ -24,7 +24,7 @@ $-search-input-height: rem(40px);
     z-index: 2;
     margin-left: sage-spacing(xs);
     margin-right: -1 * sage-spacing();
-    color: sage-color(charcoal, 400);
+    color: sage-color(grey, 600);
     transition: map-get($sage-transitions, default);
     transition-property: color;
   }
@@ -34,6 +34,7 @@ $-search-input-height: rem(40px);
 
     &:hover {
       background-color: sage-color(grey, 100);
+      border-bottom-color: sage-color(charcoal, 100);
     }
   }
 
