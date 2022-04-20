@@ -54,7 +54,7 @@ end
           <%= item[:data] %>
 
           <% if item[:action] %>
-            <span class="sage-description__action">
+            <dd class="sage-description__action">
               <%= sage_component SageButton, {
                 value: item[:action][:value] || "View more",
                 style: "primary",
@@ -66,7 +66,7 @@ end
                 test_id: item[:action][:test_id],
                 attributes: item[:action][:attributes],
               } %>
-            </span>
+            </dd>
           <% end %>
         </dd>
       <% end %>
