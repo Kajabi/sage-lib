@@ -540,10 +540,18 @@ $-alert-colors: (
         color: map-get($-styles, hover);
         background-color: map-get($-styles, hover-background);
 
+        .sage-alert & {
+          background-color: transparent;
+        }
+
         &::after {
           z-index: 0;
           background-color: map-get($-styles, hover-background);
           opacity: 1;
+  
+          .sage-alert & {
+            background-color: transparent;
+          }
         }
 
         &::before,
