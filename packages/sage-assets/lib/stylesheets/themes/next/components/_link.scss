@@ -67,9 +67,7 @@ $-link-base-styles: (
   text-decoration: underline;
 
   @include sage-focus-outline(
-    $outline-width: 4px,
     $outline-offset-inline: 4px,
-    $outline-border-radius: sage-border(radius-medium),
   );
 
   &:hover {
