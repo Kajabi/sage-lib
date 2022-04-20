@@ -1,0 +1,50 @@
+
+////
+/// List
+///
+/// @group sage
+////
+
+.sage-list {
+  margin: 0;
+  padding: 0;
+}
+
+.sage-list__item {
+  display: flex;
+  align-items: center;
+  gap: sage-spacing(md);
+  padding-top: sage-spacing(sm);
+  padding-bottom: sage-spacing(sm);
+  border-top: sage-border(default);
+}
+
+.sage-list__item--sortable {
+  cursor: grab;
+
+  &.sage-list__item--sortable-active:active,
+  &:active {
+    cursor: grabbing;
+  }
+}
+
+.sage-list__item--sortable-ghost {
+  opacity: 0.5;
+}
+
+.sage-list__item-content {
+  flex: 1;
+}
+
+.sage-list__item-more-actions,
+.sage-list__item-sortable-handle {
+  width: auto;
+}
+
+.sage-list__item-sortable-handle {
+  color: sage-color(charcoal, 100);
+
+  .sage-list__item:hover & {
+    color: sage-color(charcoal, 500);
+  }
+}

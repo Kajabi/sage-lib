@@ -53,6 +53,7 @@ Sage.init = function(elementNamesToInitLegacy) {
   initDocumentPresenceListener('[data-js-input-suffix], [data-js-input-prefix]', Sage.inputaffixes.init,  Sage.inputaffixes.unbind);
   initDocumentPresenceListener('[data-js-carousel]',                             Sage.carousel.init,      false);
   initDocumentPresenceListener('[data-js-alert]', Sage.alert.init, false);
+  initDocumentPresenceListener('[data-js-list-sortable]', Sage.sortableList.init, Sage.sortableList.unbind);
 
   // ==================================================
   // Event Listeners
