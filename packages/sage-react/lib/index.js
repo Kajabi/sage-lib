@@ -5,6 +5,7 @@ export const {
   Alert,
   Avatar,
   AvatarGroup,
+  Breadcrumbs,
   Button,
   Card,
   Carousel,
