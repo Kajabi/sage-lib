@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.91.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.91.0...@kajabi/sage-react@0.91.1) (2022-04-20)
+
+
+### Bug Fixes
+
+* add breadcrumbs to React export ([1aa4819](https://github.com/Kajabi/sage-lib/commit/1aa48190623cde4fa750203d66310f69b0b570e0))
+
+
+
+
+
 # [0.91.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.90.0...@kajabi/sage-react@0.91.0) (2022-04-20)
 
 

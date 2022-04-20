@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.79.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.78.0...@kajabi/sage-assets@0.79.0) (2022-04-20)
+
+
+### Bug Fixes
+
+* **focus:** update color values to match color revert ([c289964](https://github.com/Kajabi/sage-lib/commit/c289964dcf2b587f4b288bdf3578f5283430cbb5))
+
+
+### Features
+
+* **breadcrumb:** focus update ([d354892](https://github.com/Kajabi/sage-lib/commit/d354892eca2518f6b479d8c4b0990758ecb498c0))
+
+
+
+
+
 # [0.78.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.77.0...@kajabi/sage-assets@0.78.0) (2022-04-20)
 
 
