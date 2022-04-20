@@ -232,18 +232,16 @@ demo_configs = [
   } %>
 <% end %>
 <%= sage_component SageButtonGroup, { gap: :sm, align: "space-between" } do %>
-  <%= sage_component SageButtonGroup, {} do %>
-    <%= sage_component SageLink, {
-      url: "#",
-      label: "Link",
-      external: false,
-      launch: false,
-      help_link: false,
-      remove_underline: false,
-      show_label: true,
-      style: "secondary"
-    } %>
-  <% end %>
+  <%= sage_component SageLink, {
+    url: "#",
+    label: "Link",
+    external: false,
+    launch: false,
+    help_link: false,
+    remove_underline: false,
+    show_label: true,
+    style: "secondary"
+  } %>
   <%= sage_component SageButtonGroup, { gap: :sm } do %>
     <%= sage_component SageButton, {
       value: "Button",
