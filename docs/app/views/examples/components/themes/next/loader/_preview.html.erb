@@ -1,17 +1,29 @@
+<h2 class="<%= SageClassnames::TYPE::HEADING_6 %>">Without text</h2>
 <div class="sage-row">
-  <div class="sage-col--md-4 example__block--lg">
-    <%= sage_component SageLoader, {
-      type: "bar"
-    } %>
-  </div>
-  <div class="sage-col--md-4 example__block--lg">
+  <div class="sage-col--md-6 example__block--lg">
     <%= sage_component SageLoader, {
       type: "spinner"
     } %>
   </div>
-  <div class="sage-col--md-4 example__block--lg">
+  <div class="sage-col--md-6 example__block--lg">
     <%= sage_component SageLoader, {
       type: "success"
+    } %>
+  </div>
+</div>
+<hr>
+<h2 class="<%= SageClassnames::TYPE::HEADING_6 %>">With text</h2>
+<div class="sage-row">
+  <div class="sage-col--md-6 example__block--lg">
+    <%= sage_component SageLoader, {
+      type: "spinner",
+      text: true
+    } %>
+  </div>
+  <div class="sage-col--md-6 example__block--lg">
+    <%= sage_component SageLoader, {
+      type: "success",
+      text: true
     } %>
   </div>
 </div>
