@@ -120,10 +120,6 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
 
     @include sage-focus-outline--update-color(sage-color(primary, 200));
   }
-
-  & + &:not(.sage-dropdown__item--heading) {
-    margin-top: sage-spacing(xs);
-  }
 }
 
 .sage-dropdown__item--border-before {
@@ -165,6 +161,7 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
   width: 100%;
   padding: rem(9px) sage-spacing(sm);
   text-align: left;
+  text-decoration: none;
   border-radius: sage-border(radius);
   user-select: none;
 
