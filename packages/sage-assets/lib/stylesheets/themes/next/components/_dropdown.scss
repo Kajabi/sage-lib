@@ -161,9 +161,9 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
   width: 100%;
   padding: rem(9px) sage-spacing(sm);
   text-align: left;
+  text-decoration: none;
   border-radius: sage-border(radius);
   user-select: none;
-  text-decoration: none;
 
   .sage-dropdown--checkbox &,
   .sage-dropdown--choice &,
