@@ -48,7 +48,7 @@ export const Description = ({
             {data}
 
             {action && (
-              <div className="sage-description__action">
+              <dd className="sage-description__action">
                 <Button
                   color={Button.COLORS.PRIMARY}
                   subtle={true}
@@ -59,7 +59,7 @@ export const Description = ({
                 >
                   {action.value || 'View more'}
                 </Button>
-              </div>
+              </dd>
             )}
           </dd>
         )}
