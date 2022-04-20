@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.78.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.77.0...@kajabi/sage-assets@0.78.0) (2022-04-20)
+
+
+### Bug Fixes
+
+* **description:** foundation rails and react style update ([ffabc23](https://github.com/Kajabi/sage-lib/commit/ffabc23c6625ff2397826c64127e251657e80a79))
+
+
+### Features
+
+* patch switching after testing in `kp` ([3cc697d](https://github.com/Kajabi/sage-lib/commit/3cc697dde52821443dbe1eea15bc4864d36e2dbf))
+* update asset builds ([b3e7ac2](https://github.com/Kajabi/sage-lib/commit/b3e7ac2ebd4b1bf06037236a5c698a58df428289))
+* **docs:** gets theme switching working in Rails interface ([018de3c](https://github.com/Kajabi/sage-lib/commit/018de3c71acaa6530af7f72569cce8565a246057))
+* update next tokens ([176b996](https://github.com/Kajabi/sage-lib/commit/176b996d7ef919651a1aed4f32401593e20386e3))
+* update style dictionary with themes ([917773d](https://github.com/Kajabi/sage-lib/commit/917773dd1b703fd9f445c580170f6629105721a1))
+* **style:** reorganize style assets as themes ([16ce6a6](https://github.com/Kajabi/sage-lib/commit/16ce6a640ce376e6eae701514a6f7b97e5a39d9e))
+
+
+
+
+
 # [0.77.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.76.1...@kajabi/sage-assets@0.77.0) (2022-04-18)
 
 

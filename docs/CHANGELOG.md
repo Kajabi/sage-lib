@@ -3,6 +3,34 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.57.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.56.0...@kajabi/sage@4.57.0) (2022-04-20)
+
+
+### Bug Fixes
+
+* **description:** foundation rails and react style update ([ffabc23](https://github.com/Kajabi/sage-lib/commit/ffabc23c6625ff2397826c64127e251657e80a79))
+* **description:** updates per review ([8113722](https://github.com/Kajabi/sage-lib/commit/811372259d0e48423b281ac0c2e6e695413c5da9))
+
+
+### Features
+
+* add sage theme to dictionary in app ([928b6ae](https://github.com/Kajabi/sage-lib/commit/928b6aefcb34b50cd09671467c8dfc5d135a44fa))
+* display current theme in header ([6856d26](https://github.com/Kajabi/sage-lib/commit/6856d266000d6173afdf16f3c5fb9a84387e3d64))
+* patch switching after testing in `kp` ([3cc697d](https://github.com/Kajabi/sage-lib/commit/3cc697dde52821443dbe1eea15bc4864d36e2dbf))
+* repair grid gap token ([7b50e07](https://github.com/Kajabi/sage-lib/commit/7b50e07ece51ca8d418e4ffd02bf972185383adb))
+* tidy for next steps with dictionary loading ([64ca53b](https://github.com/Kajabi/sage-lib/commit/64ca53be2abf7932a5fcb0e75efa848887a065b9))
+* tidy up theme switching in Rails ([0051548](https://github.com/Kajabi/sage-lib/commit/0051548f4a79c64f22603fbb6990d716bd8e5a27))
+* update next tokens ([176b996](https://github.com/Kajabi/sage-lib/commit/176b996d7ef919651a1aed4f32401593e20386e3))
+* update style dictionary with themes ([917773d](https://github.com/Kajabi/sage-lib/commit/917773dd1b703fd9f445c580170f6629105721a1))
+* use SageRails for setting and checking theme ([bf83183](https://github.com/Kajabi/sage-lib/commit/bf83183599b2abc271655e6f73de0c160492c972))
+* **docs:** add themed setup to docs styles ([fb83b29](https://github.com/Kajabi/sage-lib/commit/fb83b290d91d76e4d82264887b32652ddfa57c8c))
+* **docs:** gets theme switching working in Rails interface ([018de3c](https://github.com/Kajabi/sage-lib/commit/018de3c71acaa6530af7f72569cce8565a246057))
+* **docs:** reorganize rails components to use themes for views ([1c26679](https://github.com/Kajabi/sage-lib/commit/1c266792e23c73a64994f4ac82f4be669076ee0a))
+
+
+
+
+
 # [4.56.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.55.1...@kajabi/sage@4.56.0) (2022-04-18)
 
 

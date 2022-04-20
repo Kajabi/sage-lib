@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.91.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.90.0...@kajabi/sage-react@0.91.0) (2022-04-20)
+
+
+### Bug Fixes
+
+* **description:** foundation rails and react style update ([ffabc23](https://github.com/Kajabi/sage-lib/commit/ffabc23c6625ff2397826c64127e251657e80a79))
+* **description:** updates to react side ([9bebe75](https://github.com/Kajabi/sage-lib/commit/9bebe7570e339fda7a2b0468fc6877b73ea4de9c))
+
+
+### Features
+
+* move react components to theme folders (wip) ([1491065](https://github.com/Kajabi/sage-lib/commit/14910653a6f2458f8babb2e32b6576c497a0901b))
+* patch switching after testing in `kp` ([3cc697d](https://github.com/Kajabi/sage-lib/commit/3cc697dde52821443dbe1eea15bc4864d36e2dbf))
+* tidy up theme switching in Rails ([0051548](https://github.com/Kajabi/sage-lib/commit/0051548f4a79c64f22603fbb6990d716bd8e5a27))
+* update next tokens ([176b996](https://github.com/Kajabi/sage-lib/commit/176b996d7ef919651a1aed4f32401593e20386e3))
+* update react and storybook builds ([07c0dd4](https://github.com/Kajabi/sage-lib/commit/07c0dd4b07d3fe04cabc1b4127c2bcef35e79860))
+* update style dictionary with themes ([917773d](https://github.com/Kajabi/sage-lib/commit/917773dd1b703fd9f445c580170f6629105721a1))
+
+
+
+
+
 # [0.90.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.89.1...@kajabi/sage-react@0.90.0) (2022-04-18)
 
 
