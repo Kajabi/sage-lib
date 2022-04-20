@@ -1,4 +1,7 @@
-<div
+<% 
+tag = component.tag.present? ? component.tag : "ul"
+%>
+<<%= tag %>
   class="sage-list <%= component.generated_css_classes %>"
   <%= "data-js-list-sortable=#{component.sortable_resource}" if component.sortable_resource.present? %>
   <%= component.generated_html_attributes.html_safe %>
@@ -10,4 +13,4 @@
   <% end %>
 
   <%= component.content %>
-</div>
+</<%= tag %>>

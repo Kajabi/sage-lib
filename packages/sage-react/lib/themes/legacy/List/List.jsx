@@ -11,6 +11,7 @@ export const List = ({
   items,
   itemRenderer,
   sortableConfigs,
+  tag,
 }) => {
   const classNames = classnames(
     'sage-list',
@@ -33,6 +34,8 @@ export const List = ({
     );
   };
 
+  const Tag = tag;
+
   return sortableConfigs ? (
     <ReactSortable
       chosenClass="sage-list__item--sortable-active"
@@ -40,14 +43,15 @@ export const List = ({
       dragClass="sage-list__item--sortable-drag"
       ghostClass="sage-list__item--sortable-ghost"
       list={items}
+      tag={tag}
       {...sortableConfigs}
     >
       {renderItems()}
     </ReactSortable>
   ) : (
-    <ul className={classNames}>
+    <Tag className={classNames}>
       {renderItems()}
-    </ul>
+    </Tag>
   );
 };
 
@@ -59,6 +63,7 @@ List.defaultProps = {
   items: [],
   itemRenderer: null,
   sortableConfigs: null,
+  tag: 'ul',
 };
 
 List.propTypes = {
@@ -86,4 +91,5 @@ List.propTypes = {
     ]),
     // NOTE: See https://github.com/SortableJS/react-sortablejs for full list of additional options
   }),
+  tag: PropTypes.oneOf(['ul', 'ol']),
 };
