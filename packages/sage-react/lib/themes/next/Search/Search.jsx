@@ -8,6 +8,9 @@ export const Search = ({
   className,
   contained,
   disabled,
+  hideLabel,
+  id,
+  label,
   onClear,
   onChange,
   placeholder,
@@ -23,17 +26,27 @@ export const Search = ({
     }
   );
 
+  const labelClassnames = classnames(
+    'sage-search__label',
+    className,
+    {
+      'visually-hidden': hideLabel,
+    });
+
   return (
     <div className={classNames}>
-      <label className="sage-search__label">
-        {placeholder}
-      </label>
+      {label && (
+        <label htmlFor={id} className={labelClassnames}>
+          {label}
+        </label>
+      )}
       <div className="sage-search__field-wrapper">
         <input
           className="sage-search__input"
           type="search"
           onChange={onChange}
           disabled={disabled}
+          id={id}
           placeholder={`${placeholder}…`}
           value={value}
           // Prevents the default Kajabi-Products Search.js from binding to this input
@@ -61,6 +74,7 @@ Search.defaultProps = {
   className: null,
   contained: false,
   disabled: false,
+  hideLabel: false,
   onClear: null,
   placeholder: 'Search',
 };
@@ -69,6 +83,9 @@ Search.propTypes = {
   className: PropTypes.string,
   contained: PropTypes.bool,
   disabled: PropTypes.bool,
+  hideLabel: PropTypes.bool,
+  id: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
   onClear: PropTypes.func,
   placeholder: PropTypes.string,

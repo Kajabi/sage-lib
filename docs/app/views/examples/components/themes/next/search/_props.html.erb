@@ -1,30 +1,36 @@
 <tr>
   <td><%= md('`contained`') %></td>
-  <td><%= md('Is in the context of a "search toolbar" area.') %></td>
+  <td><%= md('Set to `true` when in the context of a "search toolbar" area.') %></td>
   <td><%= md('Boolean') %></td>
-  <td><%= md('`nil`') %></td>
+  <td><%= md('`false`') %></td>
 </tr>
 <tr>
-  <td><%= md('`id`') %></td>
-  <td><%= md('Unique identifier for the search. Should match the `for` attribute on the corresponding label.') %></td>
+  <td><%= md('`hide_label`') %></td>
+  <td><%= md('When set to `true`, hides the Search input\'s label') %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`false`') %></td>
+</tr>
+<tr>
+  <td><%= md('`id`') %><%= sage_component SageBadge, { color: "published", value: "required" } %></td>
+  <td><%= md('A unique identifier for this component, used to associate with the label.') %></td>
   <td><%= md('String') %></td>
   <td><%= md('`nil`') %></td>
 </tr>
 <tr>
-  <td><%= md('`label_text`') %></td>
-  <td><%= md('The value of the search label.') %></td>
+  <td><%= md('`label_text`') %><%= sage_component SageBadge, { color: "published", value: "required" } %></td>
+  <td><%= md('Text to display as a label/caption above the search field.') %></td>
   <td><%= md('String') %></td>
   <td><%= md('`nil`') %></td>
 </tr>
 <tr>
   <td><%= md('`placeholder`') %></td>
-  <td><%= md('Search null-state text.') %></td>
+  <td><%= md('Text displayed within the search field when empty.') %></td>
   <td><%= md('String') %></td>
   <td><%= md('`nil`') %></td>
 </tr>
 <tr>
   <td><%= md('`value`') %></td>
-  <td><%= md('The value of the search input.') %></td>
+  <td><%= md('Allows setting a predefined value of the search input.') %></td>
   <td><%= md('String') %></td>
   <td><%= md('`nil`') %></td>
 </tr>

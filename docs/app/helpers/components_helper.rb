@@ -414,7 +414,7 @@ module ComponentsHelper
       },
       {
         title: "search",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        description: "A self-contained search form that can be used in isolation and inside of menus.",
         scss: "doing",
         docs: "doing",
         rails: "todo",
