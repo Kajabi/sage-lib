@@ -1,11 +1,14 @@
+import { isNextTheme } from './utils';
+
 Sage.select = (function() {
 
   // ==================================================
   // Variables
   // ==================================================
   var elSelectClass = '.sage-select',
-      classActive   = 'sage-select--value-selected',
-      htmlArrow     = '<i class="sage-select__arrow" aria-hidden="true"></i>';
+      elSelectWrapperClass = '.sage-select__field-wrapper',
+      classActive = 'sage-select--value-selected',
+      htmlArrow = '<i class="sage-select__arrow" aria-hidden="true"></i>';
 
   // ==================================================
   // Functions
@@ -38,7 +41,13 @@ Sage.select = (function() {
   function init(el) {
     var elSelect = el.querySelector('select');
 
-    el.insertAdjacentHTML('beforeEnd', htmlArrow);
+    if (isNextTheme()) {
+      var elWrapper = el.querySelector(elSelectWrapperClass);
+      elWrapper.insertAdjacentHTML('beforeEnd', htmlArrow);
+    } else {
+      el.insertAdjacentHTML('beforeEnd', htmlArrow);
+    }
+
     disableSelectPromptOptions(elSelect);
     updateValueSelectedState(elSelect.value, el);
 
