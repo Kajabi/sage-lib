@@ -53,7 +53,7 @@ sample_products = [
 ]
 %>
 
-<h3 class="t-sage-heading-6">Default configuration</h3>
+<h3 class="<%= SageClassnames::TYPE::HEADING_6 %>">Default configuration</h3>
 <%= md("
 SageList is implemented most simply by passing the desired contents for the items through the `SageList` `items` property.
 This assumes that the contents of the list are already formatted as desired.
@@ -74,7 +74,7 @@ This assumes that the contents of the list are already formatted as desired.
   }
 } %>
 
-<h3 class="t-sage-heading-6">Compositional approach</h3>
+<h3 class="<%= SageClassnames::TYPE::HEADING_6 %>">Compositional approach</h3>
 <%= md("
 If you need more native content formatting you can instead opt to render items using a nested loop and the SageListItem component.
 ", use_sage_type: true) %>
