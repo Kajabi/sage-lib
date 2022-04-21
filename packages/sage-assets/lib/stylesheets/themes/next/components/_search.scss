@@ -101,6 +101,8 @@ $-search-icon: "::before";
 
 .sage-search__label {
   @include sage-form-field-label;
+
+  margin-bottom: sage-spacing(2xs);
 }
 
 .sage-search__input {
