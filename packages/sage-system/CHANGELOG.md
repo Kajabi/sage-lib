@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.19.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.18.1...@kajabi/sage-system@0.19.0) (2022-04-21)
+
+
+### Features
+
+* **input:** patch input affixes for both themes ([fada3b3](https://github.com/Kajabi/sage-lib/commit/fada3b37ceb7bb91df3726c99439498ac3761626))
+* **sage-system:** add theme check utility ([24cd327](https://github.com/Kajabi/sage-lib/commit/24cd3276ca2db52be1eaa54d654da9f2e3bd9539))
+* **select:** patch select JS for both themes ([85b0da2](https://github.com/Kajabi/sage-lib/commit/85b0da2e925b6f50582cf7992f798a33948ec9ad))
+* **toast:** ensure Toast JS is compatible with both themes ([81ffd03](https://github.com/Kajabi/sage-lib/commit/81ffd037ac9bf28f1dad50a0ee86c0ddd9f31697))
+
+
+
+
+
 ## [0.18.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.18.0...@kajabi/sage-system@0.18.1) (2022-03-07)
 
 
