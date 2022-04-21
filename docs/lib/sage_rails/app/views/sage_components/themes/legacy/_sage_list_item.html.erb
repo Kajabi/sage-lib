@@ -7,7 +7,7 @@ if component.more_actions || component.more_actions == {}
   more_actions_configs = more_actions_configs.merge!(component.more_actions)
 end
 %>
-<div
+<li
   class="
     sage-list__item
     <%= "sage-list__item--sortable" if component.sortable %>
@@ -41,4 +41,4 @@ end
       <% end %>
     </div>
   <% end %>
-</div>
+</li>
