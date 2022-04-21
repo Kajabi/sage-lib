@@ -55,15 +55,17 @@ $-tab-color-disabled: map-get($sage-tab-colors, disabled);
   @include sage-tab-underline;
 
   .sage-tabs--with-background & {
-    padding: sage-spacing(2xs) sage-spacing(sm) sage-spacing(sm);
+    padding: sage-spacing(xs) sage-spacing(sm) sage-spacing(md);
     border-top-left-radius: sage-border(radius-large);
     border-top-right-radius: sage-border(radius-large);
     background-clip: padding-box;
+    
+    @extend %t-sage-body-xsmall-med;
 
     &::after {
       left: sage-spacing(sm);
       right: sage-spacing(sm);
-      bottom: sage-spacing(xs);
+      bottom: sage-spacing(sm);
       opacity: 0;
     }
 
@@ -74,7 +76,7 @@ $-tab-color-disabled: map-get($sage-tab-colors, disabled);
   }
 
   .sage-tabs &:not(:last-child) {
-    margin-right: sage-spacing(sm);
+    margin-right: sage-spacing(md);
   }
 
   .sage-tabs--progressbar & {
