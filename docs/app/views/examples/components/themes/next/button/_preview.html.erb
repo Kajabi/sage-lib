@@ -174,13 +174,13 @@ demo_configs = [
     value: "Button group: Align End",
   } %>
 <% end %>
-<%= sage_component SageButtonGroup, { gap: :md, align: "end" } do %>
+<%= sage_component SageButtonGroup, { gap: :sm, align: "end" } do %>
   <%= sage_component SageButton, {
-    value: "Cancel",
+    value: "Button",
     style: "secondary",
   } %>
   <%= sage_component SageButton, {
-    value: "Save",
+    value: "Button",
     style: "primary",
   } %>
 <% end %>
@@ -191,15 +191,67 @@ demo_configs = [
     value: "Button group: Align Space-Between",
   } %>
 <% end %>
-<%= sage_component SageButtonGroup, { gap: :md, align: "space-between" } do %>
+<%= sage_component SageButtonGroup, { gap: :sm, align: "space-between" } do %>
   <%= sage_component SageButton, {
-    value: "Cancel",
+    value: "Button",
     style: "secondary",
   } %>
   <%= sage_component SageButton, {
-    value: "Save",
+    value: "Button",
     style: "primary",
   } %>
+<% end %>
+
+<%= sage_component SageCardBlock, {} do %>
+  <%= sage_component SageBadge, {
+    color: "draft",
+    value: "Button group: Button + Link",
+  } %>
+<% end %>
+<%= sage_component SageButtonGroup, { gap: :sm } do %>
+  <%= sage_component SageButton, {
+    value: "Button",
+    style: "primary",
+  } %>
+  <%= sage_component SageLink, {
+    url: "#",
+    label: "Link",
+    external: false,
+    launch: false,
+    help_link: false,
+    remove_underline: false,
+    show_label: true,
+    style: "secondary"
+  } %>
+<% end %>
+
+<%= sage_component SageCardBlock, {} do %>
+  <%= sage_component SageBadge, {
+    color: "draft",
+    value: "Button group: Link + Buttons - Align Space-Between",
+  } %>
+<% end %>
+<%= sage_component SageButtonGroup, { gap: :sm, align: "space-between" } do %>
+  <%= sage_component SageLink, {
+    url: "#",
+    label: "Link",
+    external: false,
+    launch: false,
+    help_link: false,
+    remove_underline: false,
+    show_label: true,
+    style: "secondary"
+  } %>
+  <%= sage_component SageButtonGroup, { gap: :sm } do %>
+    <%= sage_component SageButton, {
+      value: "Button",
+      style: "secondary",
+    } %>
+    <%= sage_component SageButton, {
+      value: "Button",
+      style: "primary",
+    } %>
+  <% end %>
 <% end %>
 
 <%= sage_component SageCardBlock, {} do %>
@@ -209,13 +261,13 @@ demo_configs = [
   } %>
 <% end %>
 
-<%= sage_component SageButtonGroup, { gap: :md, align: "end", borderTop: true } do %>
+<%= sage_component SageButtonGroup, { gap: :sm, align: "end", borderTop: true } do %>
   <%= sage_component SageButton, {
-    value: "Cancel",
+    value: "Button",
     style: "secondary",
   } %>
   <%= sage_component SageButton, {
-    value: "Save",
+    value: "Button",
     style: "primary",
   } %>
 <% end %>
