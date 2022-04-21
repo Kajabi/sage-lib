@@ -24,7 +24,7 @@ $-search-input-height: rem(40px);
     z-index: 2;
     margin-left: sage-spacing(xs);
     margin-right: -1 * sage-spacing();
-    color: sage-color(grey, 600);
+    color: sage-color(charcoal, 200);
     transition: map-get($sage-transitions, default);
     transition-property: color;
   }

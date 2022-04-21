@@ -93,7 +93,7 @@ $-hero-play-icon-background-color-hover: rgba(sage-color(white, 100), 1);
   outline: none;
 
   &:focus {
-    border: rem(4px) solid sage-color(primary, 300);
+    border: rem(4px) solid sage-color(primary, 200);
     border-top-right-radius: sage-spacing(sm);
     border-bottom-right-radius: sage-spacing(sm);
   }
