@@ -86,7 +86,7 @@ Search.propTypes = {
   disabled: PropTypes.bool,
   hideLabel: PropTypes.bool,
   id: PropTypes.string.isRequired,
-  label: PropTypes.string,
+  label: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
   onClear: PropTypes.func,
   placeholder: PropTypes.string,
