@@ -1,5 +1,6 @@
 import {
   objectToHtmlAttributes,
+  isNextTheme,
 } from '../utils/index';
 
 import {
@@ -26,7 +27,10 @@ export const toastTemplate = ({id, type, icon, text, link, testId = null}) => (`
     </output>
     ${linkTemplate(link)}
     <button
-      class="sage-toast__button sage-toast__button--close"
+      class="
+        sage-toast__button sage-toast__button--close
+        ${isNextTheme() && 'sage-btn sage-btn--subtle sage-btn--secondary sage-btn--icon-only-remove'}
+      "
       type="button"
       ${DATA_ATTR_CLOSE_BUTTON}
     >
