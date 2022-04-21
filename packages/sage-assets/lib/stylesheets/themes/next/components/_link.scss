@@ -66,9 +66,7 @@ $-link-base-styles: (
   min-width: 0; /* the is needed so that truncation work when the link doesn't have an explicit width set  */
   text-decoration: underline;
 
-  @include sage-focus-outline(
-    $outline-offset-inline: 4px,
-  );
+  @include sage-focus-outline($outline-offset-inline: 4px);
 
   &:hover {
     color: sage-color(primary, 400);
