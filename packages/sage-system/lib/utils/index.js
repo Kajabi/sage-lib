@@ -13,3 +13,7 @@ export function objectToHtmlAttributes(object) {
     return `${key}="${value}"`;
   }).join(' ');
 };
+
+export const isNextTheme = () => {
+  return window.SAGE_THEME === 'sage_theme_next';
+};
