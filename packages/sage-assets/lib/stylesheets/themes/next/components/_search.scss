@@ -129,8 +129,8 @@ $-search-input-height: rem(40px);
 
   .sage-panel-controls__toolbar &,
   .sage-search--contained & {
+    height: $-search-input-height;
     border-radius: inherit;
-    height: $-search-input-height
   }
 
   .sage-search--contained &:focus,
