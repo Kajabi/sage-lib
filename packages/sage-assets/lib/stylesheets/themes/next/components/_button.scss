@@ -329,10 +329,8 @@ $-btn-loading-min-height: rem(36px);
   }
 
   .sage-upload-card & {
-    @include sage-focus-ring(transparent);
-
     &.sage-btn--subtle:focus {
-      @include sage-focus-outline--update-color(transparent);
+      @include sage-focus-outline--update-color(sage-color(primary, 300));
     }
   }
 
