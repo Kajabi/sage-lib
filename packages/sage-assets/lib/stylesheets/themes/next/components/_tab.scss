@@ -20,7 +20,7 @@ $-tab-color-disabled: map-get($sage-tab-colors, disabled);
   align-items: center;
   overflow: hidden;
   margin: 0;
-  padding: 0 0 sage-spacing(xs);
+  padding: 0 0 sage-spacing(sm);
   white-space: nowrap;
   color: $-tab-color-default;
   text-decoration: none;
