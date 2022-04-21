@@ -1,15 +1,15 @@
 import Sortable from 'sortablejs/modular/sortable.core.esm.js';
 
-Sage.sortable = (function() {
+Sage.sortableList = (function() {
   // ==================================================
   // Variables
   // ==================================================
 
-  const SELECTOR_CONTAINER = 'data-js-sortable';
-  const SELECTOR_ITEM_UPDATE_URL = 'data-js-sortable-update-url';
+  const SELECTOR_CONTAINER = 'data-js-list-sortable';
+  const SELECTOR_ITEM_UPDATE_URL = 'data-js-list-sortable-update-url';
   const SETTINGS = {
-    ghostClass: 'sage-sortable__item--ghost',
-    chosenClass: 'sage-sortable__item--active'
+    ghostClass: 'sage-list__item--sortable-ghost',
+    chosenClass: 'sage-list__item--sortable-active',
   };
 
 

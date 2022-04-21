@@ -34,6 +34,7 @@ export { Indicator } from './Indicator';
 export { Input } from './Input';
 export { Label } from './Label';
 export { Link } from './Link';
+export { List } from './List';
 export { Loader } from './Loader';
 export {
   MediaTile,

@@ -67,6 +67,10 @@ module SageClassnames
 
   TRUNCATE_TEXT = "t-sage--truncate"
 
+  REVEAL_CONTAINER = "sage-reveal-container"
+  REVEAL_ON_HOVER = "sage-reveal-on-hover"
+  REVEAL_ON_CONTAINER_HOVER = "sage-reveal-on-container-hover"
+
   module TYPE
     HEADING_1 = "t-sage-heading-1"
     HEADING_2 = "t-sage-heading-2"

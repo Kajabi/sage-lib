@@ -1,0 +1,44 @@
+<%
+has_more_actions = false
+more_actions_configs = { align: "right", items: [] }
+
+if component.more_actions.present?
+  has_more_actions = true
+  more_actions_configs = more_actions_configs.merge!(component.more_actions)
+end
+%>
+<li
+  class="
+    sage-list__item
+    <%= "sage-list__item--sortable" if component.sortable %>
+    <%= component.generated_css_classes %>
+  "
+  <%= "data-js-list-sortable-update-url=#{component.sortable_update_url}" if component.sortable_update_url.present? %>
+  <%= "id=#{component.id}" if component.id %>
+  <%= component.generated_html_attributes.html_safe %>
+>
+  <% if component.sortable %>
+    <div class="sage-list__item-sortable-handle">
+      <%= sage_component SageIcon, { icon: "handle" } %>
+    </div>
+  <% end %>
+
+  <div class="sage-list__item-content">
+    <%= component.content %>
+  </div>
+
+  <% if has_more_actions %>
+    <div class="sage-list__item-more-actions">
+      <%= sage_component SageDropdown, more_actions_configs do %>
+        <%= content_for :sage_dropdown_trigger, flush: true do %>
+          <%= sage_component SageButton, {
+            value: "More actions",
+            icon: { name: "dot-menu-horizontal", style: "only" },
+            subtle: true,
+        style: "secondary",
+          } %>
+        <% end %>
+      <% end %>
+    </div>
+  <% end %>
+</li>
