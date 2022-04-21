@@ -37,17 +37,20 @@ Sage.inputaffixes = (() => {
       } else {
         elRoot.appendChild(elLabel);
       }
+
       elRoot.classList.add(prefixRootClass);
       elInput.style.paddingLeft = `${elLabel.offsetWidth + inputPaddingOffset}px`;
     }
 
     if (elRoot.dataset.jsInputSuffix) {
       const elLabel = makeLabel(elRoot.dataset.jsInputSuffix, 'suffix');
+
       if (isNextTheme()) {
         elWrapper.appendChild(elLabel);
       } else {
         elRoot.appendChild(elLabel);
       }
+
       elRoot.classList.add(suffixRootClass);
       elInput.style.paddingRight = `${elLabel.offsetWidth + inputPaddingOffset}px`;
     }
