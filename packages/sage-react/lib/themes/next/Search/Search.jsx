@@ -75,7 +75,6 @@ Search.defaultProps = {
   contained: false,
   disabled: false,
   hideLabel: false,
-  label: null,
   onClear: null,
   placeholder: 'Search',
 };

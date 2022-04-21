@@ -5,6 +5,7 @@
 ////
 
 $-search-icon: "::before";
+$-search-input-height: rem(40px);
 
 .sage-search {
   display: flex;
@@ -44,7 +45,7 @@ $-search-icon: "::before";
   .sage-search--contained & {
     position: relative;
     z-index: sage-z-index(default);
-    border-radius: sage-border(radius);
+    border-radius: sage-border(radius-medium);
     box-shadow: map-get($sage-toolbar-button-borders, default);
     border: 0;
 
@@ -126,12 +127,10 @@ $-search-icon: "::before";
     outline: 0;
   }
 
-  .sage-panel-controls__toolbar & {
-    border-radius: sage-border(radius);
-  }
-
+  .sage-panel-controls__toolbar &,
   .sage-search--contained & {
-    border-radius: sage-border(radius);
+    border-radius: inherit;
+    height: $-search-input-height
   }
 
   .sage-search--contained &:focus,
