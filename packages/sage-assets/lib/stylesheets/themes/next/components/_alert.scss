@@ -184,7 +184,7 @@ $-alert-colors: (
 
       color: sage-color(charcoal, 300);
       /* stylelint-disable max-nesting-depth */
-      &:hover::after {
+      &:focus::after {
         border-color: sage-color($color, 500);
       }
       /* stylelint-enable max-nesting-depth */
