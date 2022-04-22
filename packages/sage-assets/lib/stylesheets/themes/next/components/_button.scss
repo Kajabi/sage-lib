@@ -154,9 +154,7 @@ $-btn-loading-min-height: rem(36px);
   .sage-dropdown--contained .sage-dropdown__trigger &,
   .sage-panel-controls__tabs-dropdown .sage-dropdown__trigger &,
   .sage-panel-controls__toolbar .sage-dropdown__trigger &,
-  .sage-panel-controls__bulk-actions .sage-dropdown__trigger &,
-  .sage-toolbar .sage-dropdown__trigger &,
-  .sage-toolbar__group .sage-dropdown__trigger & {
+  .sage-panel-controls__bulk-actions .sage-dropdown__trigger & {
     @include sage-focus-outline--update-color(transparent);
 
     width: inherit;
@@ -165,6 +163,14 @@ $-btn-loading-min-height: rem(36px);
     &:hover {
       background-color: sage-color(white);
     }
+  }
+
+  .sage-toolbar .sage-dropdown__trigger &,
+  .sage-toolbar__group .sage-dropdown__trigger & {
+    @include sage-focus-outline--update-color(transparent);
+
+    width: inherit;
+    border-radius: inherit;
   }
 
   .sage-dropdown__item > & {
@@ -297,6 +303,13 @@ $-btn-loading-min-height: rem(36px);
     }
   }
 
+  .sage-toolbar > .sage-dropdown .sage-dropdown__trigger > &,
+  .sage-toolbar__group > .sage-dropdown .sage-dropdown__trigger > & {
+    min-height: calc(#{rem(40px)} + #{rem(2px)}); /* toolbar default height + border offset */
+    padding-top: sage-spacing(xs); /* match standard button height */
+    padding-bottom: sage-spacing(xs); /* match standard button height */
+  }
+
   .sage-toolbar__group > .sage-dropdown .sage-dropdown__trigger > & {
     border-radius: 0;
   }
@@ -309,6 +322,15 @@ $-btn-loading-min-height: rem(36px);
   .sage-toolbar__group > .sage-dropdown:last-child .sage-dropdown__trigger > & {
     border-top-right-radius: sage-border(radius);
     border-bottom-right-radius: sage-border(radius);
+  }
+
+  .sage-toolbar__group > .sage-dropdown + &,
+  .sage-toolbar__group > & + & {
+    margin-left: rem(-1px); /* offset border overlap of multiple buttons */
+  }
+
+  .sage-toolbar__group > &:hover {
+    z-index: sage-z-index(default, 1); /* raise button to display full border */
   }
 
   .sage-panel-controls__toolbar-btn-group--expand-collapse > & {
@@ -326,6 +348,11 @@ $-btn-loading-min-height: rem(36px);
     &:not(:last-child) {
       margin-right: sage-spacing(card);
     }
+  }
+
+  .sage-panel-controls__toolbar &,
+  .sage-toolbar & {
+    border-color: sage-color(grey, 500);
   }
 
   .sage-upload-card & {
@@ -609,7 +636,6 @@ $-alert-colors: (
       color: sage-color(white);
     }
   }
-
 
   &.sage-alert__secondary-action {
     color: sage-color(charcoal, 400);
