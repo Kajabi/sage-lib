@@ -47,15 +47,27 @@ $-alert-colors: (
     }
   }
 
-  .sage-alert__primary-action--#{$name}.sage-btn {
+  .sage-alert__primary-action--#{$name}.sage-btn--primary {
     @if $name == default {
       background-color: sage-color(charcoal, 400);
+
+      &:hover {
+        background-color: sage-color(charcoal, 500);
+      }
     }
     @else if $name == warning or $name == approaching {
       background-color: sage-color(yellow, 400);
+
+      &:hover {
+        background-color: sage-color(yellow, 500);
+      }
     }
     @else {
       background-color: sage-color($color, 300);
+
+      &:hover {
+        background-color: sage-color($color, 400);
+      }
     }
   }
 }
