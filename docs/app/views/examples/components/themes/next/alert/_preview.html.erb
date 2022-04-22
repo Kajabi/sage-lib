@@ -14,17 +14,17 @@
   },
   secondary_actions: [
     {
-      value: "Button",
-      test_id: "secondary_action",
+      value: "Link",
+      url: "#",
     },
     {
-      value: "Another button",
-      test_id: "secondary_action_two",
+      value: "Another link",
+      url: "#"
     },
   ],
 } do %>
   <% content_for :sage_alert_actions do %>
-    <%= link_to "Check usage", "#" %>
+    <%= link_to "Check usage", "#", class: "sage-link sage-link--secondary" %>
   <% end %>
 <% end %>
 <!-- Info -->
@@ -42,17 +42,17 @@
   },
   secondary_actions: [
     {
-      value: "Button",
-      test_id: "secondary_action",
+      value: "Link",
+      url: "#"
     },
     {
-      value: "Another button",
-      test_id: "secondary_action_two",
+      value: "Another link",
+      url: "#"
     },
   ],
 } do %>
   <% content_for :sage_alert_actions do %>
-    <%= link_to "Check usage", "#" %>
+    <%= link_to "Check usage", "#", class: "sage-link sage-link--secondary" %>
   <% end %>
 <% end %>
 
@@ -73,16 +73,13 @@
   secondary_actions: [
     {
       value: "Secondary - Link",
-      test_id: "secondary_action_three",
-      attributes: {
-        href: "#element-button"
-      },
+      url: "#element-button"
     },
   ],
 } do %>
   <% content_for :sage_alert_actions do %>
-    <%= link_to "Action Link", "#" %>
-    <%= link_to "Action Link", "#" %>
+    <%= link_to "Action Link", "#", class: "sage-link sage-link--secondary"%>
+    <%= link_to "Action Link", "#", class: "sage-link sage-link--secondary" %>
   <% end %>
 <% end %>
 
@@ -96,9 +93,9 @@
   dismissable: true,
 } do %>
   <% content_for :sage_alert_actions do %>
-    <%= link_to "Action Link", "#" %>
-    <%= link_to "Action Link", "#" %>
-    <%= link_to "Action Link", "#" %>
+    <%= link_to "Action Link", "#", class: "sage-link sage-link--secondary" %>
+    <%= link_to "Action Link", "#", class: "sage-link sage-link--secondary" %>
+    <%= link_to "Action Link", "#", class: "sage-link sage-link--secondary" %>
   <% end %>
 <% end %>
 
@@ -129,8 +126,8 @@
   },
 } do %>
   <% content_for :sage_alert_actions do %>
-    <%= link_to "Action Link", "#" %>
-    <%= link_to "Action Link", "#" %>
+    <%= link_to "Action Link", "#", class: "sage-link sage-link--secondary" %>
+    <%= link_to "Action Link", "#", class: "sage-link sage-link--secondary" %>
   <% end %>
 <% end %>
 
@@ -146,8 +143,8 @@
   },
 } do %>
   <% content_for :sage_alert_actions do %>
-    <%= link_to "Action Link", "#" %>
-    <%= link_to "Action Link", "#" %>
+    <%= link_to "Action Link", "#", class: "sage-link sage-link--secondary" %>
+    <%= link_to "Action Link", "#", class: "sage-link sage-link--secondary" %>
   <% end %>
 <% end %>
 
@@ -163,8 +160,8 @@
   },
 } do %>
   <% content_for :sage_alert_actions do %>
-    <%= link_to "Action Link", "#" %>
-    <%= link_to "Action Link", "#" %>
+    <%= link_to "Action Link", "#", class: "sage-link sage-link--secondary" %>
+    <%= link_to "Action Link", "#", class: "sage-link sage-link--secondary" %>
   <% end %>
 <% end %>
 
@@ -180,8 +177,8 @@
   },
 } do %>
   <% content_for :sage_alert_actions do %>
-    <%= link_to "Action Link", "#" %>
-    <%= link_to "Action Link", "#" %>
+    <%= link_to "Action Link", "#", class: "sage-link sage-link--secondary" %>
+    <%= link_to "Action Link", "#", class: "sage-link sage-link--secondary" %>
   <% end %>
 <% end %>
 
@@ -197,8 +194,8 @@
   },
 } do %>
   <% content_for :sage_alert_actions do %>
-    <%= link_to "Action Link", "#" %>
-    <%= link_to "Action Link", "#" %>
+    <%= link_to "Action Link", "#", class: "sage-link sage-link--secondary" %>
+    <%= link_to "Action Link", "#", class: "sage-link sage-link--secondary" %>
   <% end %>
 <% end %>
 
@@ -214,7 +211,7 @@
   dismissable: true,
 } do %>
   <% content_for :sage_alert_actions do %>
-    <%= link_to "Action", "#" %>
+    <%= link_to "Action", "#", class: "sage-link sage-link--secondary" %>
   <% end %>
 <% end %>
 
@@ -228,7 +225,7 @@
   dismissable: true,
 } do %>
   <% content_for :sage_alert_actions do %>
-    <%= link_to "Action", "#" %>
+    <%= link_to "Action", "#", class: "sage-link sage-link--secondary" %>
   <% end %>
 <% end %>
 
@@ -251,7 +248,7 @@
   small: true,
 } do %>
   <% content_for :sage_alert_actions do %>
-    <%= link_to "Action", "#" %>
+    <%= link_to "Action", "#", class: "sage-link sage-link--secondary" %>
   <% end %>
 <% end %>
 

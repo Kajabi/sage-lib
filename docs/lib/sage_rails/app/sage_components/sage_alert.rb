@@ -11,8 +11,7 @@ class SageAlert < SageComponent
     }],
     secondary_actions: [:optional, [[{
       value: String,
-      test_id: [:optional, NilClass, String],
-      attributes: [:optional, NilClass, Hash]
+      url: [:optional, String],
     }]]],
     small: [:optional, TrueClass],
     title: [:optional, String],

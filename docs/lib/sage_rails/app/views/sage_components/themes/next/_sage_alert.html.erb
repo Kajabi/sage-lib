@@ -37,13 +37,11 @@
         <% end %>
         <% if component.secondary_actions %>
           <% component.secondary_actions.each do | secondary_action | %>
-            <%= sage_component SageButton, {
-              value: secondary_action[:value],
-              test_id: secondary_action[:test_id],
+            <%= sage_component SageLink, {
+              label: secondary_action[:value],
+              show_label: true,
               style: "secondary",
-              subtle: true,
-              css_classes: "sage-alert__secondary-action",
-              attributes: secondary_action[:attributes]
+              url: secondary_action[:url]
             } %>
           <% end %>
         <% end %>

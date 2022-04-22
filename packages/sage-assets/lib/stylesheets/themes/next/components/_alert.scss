@@ -134,7 +134,7 @@ $-alert-colors: (
   @each $name, $color in $-alert-colors {
     .sage-alert--#{$name} & {
       @include sage-focus-outline($outline-offset-inline: 3px, $outline-offset-block: 3px);
-      @include sage-focus-outline--update-color(sage-color($color, 300));
+      @include sage-focus-outline--update-color(sage-color($color, 400));
 
       color: sage-color(charcoal, 300);
       /* stylelint-disable max-nesting-depth */
@@ -154,15 +154,7 @@ $-alert-colors: (
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: sage-spacing(md);
-
-  @each $name, $color in $-alert-colors {
-    .sage-alert--#{$name} & > a {
-      @include sage-focus-outline($outline-offset-inline: 2px, $outline-offset-block: 2px);
-      @include sage-focus-outline--update-color(sage-color($color, 400));
-      font-weight: sage-font-weight(medium);
-    }
-  }
+  gap: sage-spacing(sm);
 
   .sage-alert--small-dismissable & {
     margin-right: sage-spacing(2xs);
