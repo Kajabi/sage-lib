@@ -466,22 +466,22 @@ $-alert-colors: (
 
     @each $name, $color in $-alert-colors {
       .sage-alert--#{$name} & {
-        border: 1px solid sage-color($color, 400);
+        @include sage-focus-ring;
+
+        color: sage-color(white);
+        background-color: sage-color($color, 300);
+        border-color: transparent;
 
         &:hover {
-          color: sage-color(charcoal, 500);
-          border-color: sage-color($color, 300);
-          background-color: transparent;
+          background-color: sage-color($color, 400);
         }
 
         &:focus,
         &:active {
-          color: sage-color(charcoal, 400);
-          border-color: sage-color($color, 200);
-          background-color: transparent;
+          background-color: sage-color($color, 300);
         }
 
-        @include sage-focus-outline--update-color(sage-color($color, 400));
+        @include sage-focus-outline--update-color(transparent);
       }
     }
   }
@@ -540,10 +540,18 @@ $-alert-colors: (
         color: map-get($-styles, hover);
         background-color: map-get($-styles, hover-background);
 
+        .sage-alert & {
+          background-color: transparent;
+        }
+
         &::after {
           z-index: 0;
           background-color: map-get($-styles, hover-background);
           opacity: 1;
+  
+          .sage-alert & {
+            background-color: transparent;
+          }
         }
 
         &::before,

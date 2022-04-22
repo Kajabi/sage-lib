@@ -6,6 +6,7 @@
 
 // Note: duplicated in _button.scss; update there when _alert.scss changes
 $-alert-colors: (
+  default: grey,
   info: primary,
   published: sage,
   success: sage,
@@ -30,9 +31,13 @@ $-alert-colors: (
 
 @each $name, $color in $-alert-colors {
   .sage-alert--#{$name} {
-    background: sage-color($color, 100);
-    border: 1px solid sage-color($color, 400);
-
+    @if $name == default {
+      background-color: sage-color(grey, 300);
+    }
+    @else {
+      background-color: sage-color($color, 100);
+    }
+    
     a:not([class]) {
       color: sage-color(charcoal, 400);
       text-decoration: underline;
@@ -40,6 +45,51 @@ $-alert-colors: (
 
     .sage-alert__icon::before {
       line-height: sage-line-height(h6);
+    }
+
+    .sage-alert--default & {
+      background-color: sage-color(grey, 300);
+    }
+  }
+
+  .sage-alert__primary-action--#{$name}.sage-btn--primary {
+    @if $name == default {
+      background-color: sage-color(charcoal, 400);
+
+      &:focus,
+      &:active {
+        background-color: sage-color(charcoal, 400);
+      }
+
+      &:hover {
+        background-color: sage-color(charcoal, 500);
+      }
+
+    }
+    @else if $name == warning or $name == approaching {
+      background-color: sage-color(yellow, 400);
+
+      &:focus,
+      &:active {
+        background-color: sage-color(yellow, 400);
+      }
+
+      &:hover {
+        background-color: sage-color(yellow, 500);
+      }
+
+    }
+    @else {
+      background-color: sage-color($color, 300);
+
+      &:focus,
+      &:active {
+        background-color: sage-color($color, 300);
+      }
+
+      &:hover {
+        background-color: sage-color($color, 400);
+      }
     }
   }
 }
@@ -88,13 +138,20 @@ $-alert-colors: (
       color: sage-color($color, 300);
     }
   }
+
+  .sage-alert--default & {
+    color: sage-color(charcoal, 200);
+  }
+
   .sage-alert--warning &,
   .sage-alert--approaching & {
     color: sage-color(yellow, 500);
   }
+
   .sage-alert--reached & {
     color: sage-color(orange, 500);
   }
+
   .sage-alert--exceeded & {
     color: sage-color(red, 500);
   }
@@ -123,9 +180,14 @@ $-alert-colors: (
   @each $name, $color in $-alert-colors {
     .sage-alert--#{$name} & {
       @include sage-focus-outline($outline-offset-inline: 3px, $outline-offset-block: 3px);
-      @include sage-focus-outline--update-color(sage-color($color, 500));
+      @include sage-focus-outline--update-color(sage-color($color, 400));
 
       color: sage-color(charcoal, 300);
+      /* stylelint-disable max-nesting-depth */
+      &:focus::after {
+        border-color: sage-color($color, 500);
+      }
+      /* stylelint-enable max-nesting-depth */
     }
   }
 
@@ -138,15 +200,7 @@ $-alert-colors: (
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: sage-spacing(md);
-
-  @each $name, $color in $-alert-colors {
-    .sage-alert--#{$name} & > a {
-      @include sage-focus-outline($outline-offset-inline: 2px, $outline-offset-block: 2px);
-      @include sage-focus-outline--update-color(sage-color($color, 400));
-      font-weight: sage-font-weight(medium);
-    }
-  }
+  gap: sage-spacing(sm);
 
   .sage-alert--small-dismissable & {
     margin-right: sage-spacing(2xs);

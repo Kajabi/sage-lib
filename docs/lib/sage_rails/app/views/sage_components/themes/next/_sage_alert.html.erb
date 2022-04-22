@@ -30,20 +30,18 @@
           <%= sage_component SageButton, {
             value: component.primary_action[:value],
             test_id: component.primary_action[:test_id],
-            style: "secondary",
-            css_classes: "sage-alert__primary-action",
+            style: "primary",
+            css_classes: "sage-alert__primary-action sage-alert__primary-action--#{component.color}",
             attributes: component.primary_action[:attributes]
           } %>
         <% end %>
         <% if component.secondary_actions %>
           <% component.secondary_actions.each do | secondary_action | %>
-            <%= sage_component SageButton, {
-              value: secondary_action[:value],
-              test_id: secondary_action[:test_id],
+            <%= sage_component SageLink, {
+              label: secondary_action[:value],
+              show_label: true,
               style: "secondary",
-              subtle: true,
-              css_classes: "sage-alert__secondary-action",
-              attributes: secondary_action[:attributes]
+              url: secondary_action[:url]
             } %>
           <% end %>
         <% end %>
