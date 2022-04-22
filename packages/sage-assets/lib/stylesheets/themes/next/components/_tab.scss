@@ -20,7 +20,7 @@ $-tab-color-disabled: map-get($sage-tab-colors, disabled);
   align-items: center;
   overflow: hidden;
   margin: 0;
-  padding: 0 0 sage-spacing(xs);
+  padding: 0 0 sage-spacing(sm);
   white-space: nowrap;
   color: $-tab-color-default;
   text-decoration: none;
@@ -33,7 +33,14 @@ $-tab-color-disabled: map-get($sage-tab-colors, disabled);
   }
 
   &:focus {
-    outline: 0;
+    z-index: sage-z-index(default, 1);
+    outline: none;
+    box-shadow: 0 0 0 4px sage-color(primary, 200);
+    border-radius: sage-border(radius-small);
+
+    &::after {
+      display: none;
+    }
   }
 
   &:active,
@@ -55,16 +62,22 @@ $-tab-color-disabled: map-get($sage-tab-colors, disabled);
   @include sage-tab-underline;
 
   .sage-tabs--with-background & {
-    padding: sage-spacing(2xs) sage-spacing(sm) sage-spacing(sm);
+    padding: sage-spacing(xs) sage-spacing(sm) sage-spacing(md);
     border-top-left-radius: sage-border(radius-large);
     border-top-right-radius: sage-border(radius-large);
     background-clip: padding-box;
+    
+    @extend %t-sage-body-xsmall-med;
 
     &::after {
       left: sage-spacing(sm);
       right: sage-spacing(sm);
-      bottom: sage-spacing(xs);
+      bottom: sage-spacing(sm);
       opacity: 0;
+    }
+
+    &:focus {
+      border-radius: sage-border(radius-small);
     }
 
     &:focus::after,
@@ -74,7 +87,7 @@ $-tab-color-disabled: map-get($sage-tab-colors, disabled);
   }
 
   .sage-tabs &:not(:last-child) {
-    margin-right: sage-spacing(sm);
+    margin-right: sage-spacing(md);
   }
 
   .sage-tabs--progressbar & {
@@ -96,5 +109,11 @@ $-tab-color-disabled: map-get($sage-tab-colors, disabled);
 
   .sage-tabs--with-background &.sage-tab--active {
     background-color: sage-color(white);
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+
+    &:focus {
+      border-radius: sage-border(radius-small);
+    }
   }
 }

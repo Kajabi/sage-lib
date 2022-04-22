@@ -13,9 +13,8 @@ $sage-font-cdn-root: "https://sage.kajabi-cdn.com/fonts";
 /// Active underline configuration
 ///
 $sage-active-underline-configs: (
-  height: rem(3px),
+  height: rem(4px),
   color: sage-color(primary, 300),
-  radius: sage-border(radius),
 );
 
 ///
@@ -85,8 +84,8 @@ $sage-radio-size: rem(20px);
 /// Tab colors shared by components such as tabs and choices
 ///
 $sage-tab-colors: (
-  default: sage-color(charcoal, 100),
-  active: sage-color(charcoal, 500),
+  default: sage-color(charcoal, 300),
+  active: sage-color(charcoal, 400),
   disabled: sage-color(charcoal, 100),
 );
 
