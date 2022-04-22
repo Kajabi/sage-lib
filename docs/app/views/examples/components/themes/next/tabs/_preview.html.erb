@@ -1,23 +1,35 @@
-<h3 class="t-sage-heading-6">Regular tabs</h3>
+<h3 class="t-sage-heading-6">Page level tabs</h3>
 <div class="sage-tabs-container">
   <%= sage_component SageTabs, {
       navigational: true,
       items: [
         {
-          text: "Sub Page 1",
+          text: "Outline",
           attributes: {
             href: "//example.com/basic-test1",
           },
           active: true
         },
         {
-          text: "Sub Page 2",
+          text: "Customize",
           attributes: {
             href: "//example.com/basic-test2"
           },
         },
         {
-          text: "Sub Page 3",
+          text: "Offers",
+          attributes: {
+            href: "//example.com/basic-test3"
+          },
+        },
+        {
+          text: "Members (300)",
+          attributes: {
+            href: "//example.com/basic-test3"
+          },
+        },
+        {
+          text: "Settings",
           attributes: {
             href: "//example.com/basic-test3"
           },
@@ -26,42 +38,35 @@
     }
   %>
 
-<h3 class="t-sage-heading-6">Regular tabs w/ icons</h3>
+<h3 class="t-sage-heading-6">With icons</h3>
 <div class="sage-tabs-container">
   <%= sage_component SageTabs, {
       navigational: true,
       items: [
         {
-          text: "Sub Page 1",
+          text: "Manage Comments",
           attributes: {
             href: "//example.com/basic-test1",
           },
           active: true,
-          icon: "pen"
+          icon: "comment"
         },
         {
-          text: "Sub Page 2",
+          text: "Sorting",
           attributes: {
             href: "//example.com/basic-test2"
           },
-          icon: "calendar-date"
-        },
-        {
-          text: "Sub Page 3",
-          attributes: {
-            href: "//example.com/basic-test3"
-          },
-          icon: "users"
+          icon: "filters"
         },
       ]
     }
   %>
 
 
-<h3 class="t-sage-heading-6">Regular tabs w/and background</h3>
+<h3 class="t-sage-heading-6">With background</h3>
 <div class="sage-tabs-container">
   <%= sage_component SageTabs, {
-      navigational: true,
+      id: "nav-tabs-example",
       with_background: true,
       items: [
         {
@@ -110,251 +115,3 @@
       ]
     }
   %>
-
-<h3 class="t-sage-heading-6">Progress styled tabs</h3>
-<div class="sage-tabs-container">
-  <%= sage_component SageTabs, {
-      id: "example-tabs2",
-      items: [
-        {
-          text: "Sub Page 1",
-          target: "pb-test1",
-          active: true
-        },
-        {
-          text: "Sub Page 2",
-          target: "pb-test2"
-        },
-        {
-          text: "Sub Page 3",
-          target: "pb-test3"
-        },
-      ],
-      progressbar: true
-    }
-  %>
-
-  <%= sage_component SageTabsPane, { id: "pb-test1", card: true } do %>
-    <p>Sub page 1 content</p>
-  <% end %>
-
-  <%= sage_component SageTabsPane, { id: "pb-test2", card: true } do %>
-    <p>Sub page 2 content</p>
-  <% end %>
-
-  <%= sage_component SageTabsPane, { id: "pb-test3", card: true } do %>
-    <p>Sub page 3 content</p>
-  <% end %>
-</div>
-
-<h3 class="t-sage-heading-6">Choice tabs - radios in default layout</h3>
-<div class="sage-tabs-container">
-  <%= sage_component SageTabs, {
-      id: "example-tabs3",
-      items: [
-        {
-          text: "Sub Page 1",
-          target: "choice-test1",
-          active: true,
-          type: "radio",
-          radio_configs: {
-            id: "page-1",
-            name: "pages",
-            value: "page-1",
-          }
-        },
-        {
-          text: "Sub Page 2",
-          target: "choice-test2",
-          type: "radio",
-          radio_configs: {
-            id: "page-2",
-            name: "pages",
-            value: "page-2",
-          }
-        },
-        {
-          text: "Sub Page 3",
-          target: "choice-test3",
-          type: "radio",
-          radio_configs: {
-            id: "page-3",
-            name: "pages",
-            value: "page-3",
-          }
-        },
-      ],
-      style: "choice"
-    }
-  %>
-
-  <%= sage_component SageTabsPane, { id: "choice-test1", card: true } do %>
-    <p>Sub page 1 content</p>
-  <% end %>
-
-  <%= sage_component SageTabsPane, { id: "choice-test2", card: true } do %>
-    <p>Sub page 2 content</p>
-  <% end %>
-
-  <%= sage_component SageTabsPane, { id: "choice-test3", card: true } do %>
-    <p>Sub page 3 content</p>
-  <% end %>
-</div>
-
-<h3 class="t-sage-heading-6">Choice tabs - arrows as links in stacked layout</h3>
-<div class="sage-tabs-container">
-  <%= sage_component SageTabs, {
-      id: "example-tabs4",
-      items: [
-        {
-          text: "Sub Page 1",
-          attributes: {
-            href: "//example.com/#stacked-test1",
-          },
-          active: true,
-          type: "arrow"
-        },
-        {
-          text: "Sub Page 2",
-          attributes: {
-            href: "//example.com/#stacked-test2",
-          },
-          type: "arrow"
-        },
-        {
-          text: "Sub Page 3",
-          attributes: {
-            href: "//example.com/#stacked-test3",
-          },
-          type: "arrow"
-        },
-      ],
-      style: "choice",
-      stacked: true
-    }
-  %>
-  <hr class="sage-tabs-divider" />
-  <%= sage_component SageTabsPane, { id: "stacked-test1", card: true } do %>
-    <p>Sub page 1 content</p>
-  <% end %>
-
-  <%= sage_component SageTabsPane, { id: "stacked-test2", card: true } do %>
-    <p>Sub page 2 content</p>
-  <% end %>
-
-  <%= sage_component SageTabsPane, { id: "stacked-test3", card: true } do %>
-    <p>Sub page 3 content</p>
-  <% end %>
-</div>
-
-<h3 class="t-sage-heading-6">Choice tabs with icons and centered</h3>
-<div class="sage-tabs-container">
-  <%= sage_component SageTabs, {
-      id: "example-tabs45",
-      items: [
-        {
-          text: "Sub Page 1",
-          target: "icon-tabs-test1",
-          active: true,
-          type: "icon",
-          icon: "preview-off",
-        },
-        {
-          text: "Sub Page 2",
-          target: "icon-tabs-test2",
-          type: "icon",
-          icon: "video-on"
-        },
-        {
-          text: "Sub Page 3",
-          target: "icon-tabs-test3",
-          type: "icon",
-          icon: "list-bullet"
-        },
-      ],
-      style: "choice",
-      align_items_center: true
-    }
-  %>
-  <hr class="sage-tabs-divider" />
-  <%= sage_component SageTabsPane, { id: "icon-tabs-test1", card: true } do %>
-    <p>Sub page 1 content</p>
-  <% end %>
-
-  <%= sage_component SageTabsPane, { id: "icon-tabs-test2", card: true } do %>
-    <p>Sub page 2 content</p>
-  <% end %>
-
-  <%= sage_component SageTabsPane, { id: "icon-tabs-test3", card: true } do %>
-    <p>Sub page 3 content</p>
-  <% end %>
-</div>
-
-<h4>Tab Pane Style and Spacing</h4>
-
-<p>Since tabs may be employed in a variety of settings, the following modifiers may be added on panes to set their appearance and internal spacing accordingly: <code>card</code>, <code>card_spacing</code>, and <code>panel_spacing</code>. See the Properties table below for more details</p>
-
-
-<h3>Tabs/Choice with Rich/Custom Content</h3>
-<%= md("
-Choice tabs can be set up with a rich/custom content block by passing any desired markup through the `content` property or yield block.
-
-The example below demonstrates how local styles and JavaScript can be paired with the Tabs component and rich content for a much more tailored component.
-") %>
-<style>
-.u-rich-choice-card__option-checkmark {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  display: none;
-}
-.sage-choice--active .u-rich-choice-card__option-checkmark {
-  display: block;
-}
-</style>
-<script>
-document.addEventListener("sage.tabs.change", function(evt) {
-  // Check that event occurred on special tabs
-  if (evt.detail && evt.detail.tabsId === 'example-tabs-rich') {
-    var elTargetId = evt.detail.paneId;
-    var elTarget = document.getElementById(elTargetId);
-    console.log('Selected', elTargetId, elTarget.value);
-  }
-});
-</script>
-<div class="sage-tabs-container">
-  <%= sage_component SageTabs, {
-      id: "example-tabs-rich",
-      css_classes: "u-rich-choice-card",
-      items: [
-        {
-          target: "item1",
-          custom_content_class: "my-custom-tab-choice-class",
-          content: %(
-            #{sage_component(SageAvatar, { initials: 'PS' })}
-            #{sage_component(SageCardBlock, { content: %(
-              <h4>User A</h4>
-              <p>Custom content here...</p>
-            ).html_safe})}
-            <i class="sage-icon-check-circle-lg t-sage--color-primary u-rich-choice-card__option-checkmark" aria-label="Selected"></i>
-            <input type="hidden" id="item1" name="item1" value="User A" />
-          ).html_safe,
-        },
-        {
-          target: "item2",
-          custom_content_class: "my-custom-tab-choice-class",
-          content: %(
-            #{sage_component(SageAvatar, { initials: 'JW' })}
-            #{sage_component(SageCardBlock, { content: %(
-              <h4>User B</h4>
-              <p>Custom content here...</p>
-            ).html_safe})}
-            <i class="sage-icon-check-circle-lg t-sage--color-primary u-rich-choice-card__option-checkmark" aria-label="Selected"></i>
-            <input type="hidden" id="item2" name="item2" value="User B" />
-          ).html_safe,
-        },
-      ],
-      style: "choice",
-    }
-  %>
-</div>
