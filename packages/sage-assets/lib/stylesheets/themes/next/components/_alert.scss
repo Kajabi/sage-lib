@@ -31,8 +31,13 @@ $-alert-colors: (
 
 @each $name, $color in $-alert-colors {
   .sage-alert--#{$name} {
-    background: sage-color($color, 100);
-
+    @if $name == default {
+      background-color: sage-color(grey, 300);
+    }
+    @else {
+      background-color: sage-color($color, 100);
+    }
+    
     a:not([class]) {
       color: sage-color(charcoal, 400);
       text-decoration: underline;
@@ -51,19 +56,36 @@ $-alert-colors: (
     @if $name == default {
       background-color: sage-color(charcoal, 400);
 
+      &:focus,
+      &:active {
+        background-color: sage-color(charcoal, 400);
+      }
+
       &:hover {
         background-color: sage-color(charcoal, 500);
       }
+
     }
     @else if $name == warning or $name == approaching {
       background-color: sage-color(yellow, 400);
 
+      &:focus,
+      &:active {
+        background-color: sage-color(yellow, 400);
+      }
+
       &:hover {
         background-color: sage-color(yellow, 500);
       }
+
     }
     @else {
       background-color: sage-color($color, 300);
+
+      &:focus,
+      &:active {
+        background-color: sage-color($color, 300);
+      }
 
       &:hover {
         background-color: sage-color($color, 400);
