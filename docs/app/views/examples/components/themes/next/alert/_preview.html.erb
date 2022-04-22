@@ -91,6 +91,12 @@
   desc: "Make sure you know how these changes affect you. Make sure you know how these changes affect you.",
   icon_name: "sage-icon-warning-filled",
   dismissable: true,
+  primary_action: {
+    value: "Primary - Link",
+    attributes: {
+      href: "#element-button"
+    },
+  }, 
 } do %>
   <% content_for :sage_alert_actions do %>
     <%= link_to "Action Link", "#", class: "sage-link sage-link--secondary" %>
