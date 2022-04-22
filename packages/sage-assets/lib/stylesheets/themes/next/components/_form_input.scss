@@ -15,9 +15,24 @@ $-input-text-height: sage-font-size(body);
 .sage-input {
   @include sage-form-field-group;
 
-  .sage-input-group & {
+  .sage-input-group &,
+  .sage-toolbar & {
     height: auto;
     margin-bottom: 0;
+  }
+
+  .sage-toolbar__group & {
+    &:first-child .sage-input__field {
+      border-radius: sage-border(radius-medium);
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    &:last-child .sage-input__field {
+      border-radius: sage-border(radius-medium);
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
   }
 }
 
@@ -82,6 +97,18 @@ $-input-text-height: sage-font-size(body);
 
   .sage-input--has-popover & {
     padding-right: $-input-popover-size;
+  }
+
+  .sage-toolbar__group & {
+    position: relative;
+    height: inherit;
+    border-radius: 0;
+
+    &:hover,
+    &:focus,
+    &:active {
+      z-index: sage-z-index(default, 1);
+    }
   }
 }
 
