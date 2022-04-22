@@ -24,6 +24,7 @@ $-tab-color-disabled: map-get($sage-tab-colors, disabled);
   white-space: nowrap;
   color: $-tab-color-default;
   text-decoration: none;
+  border-radius: sage-border(radius-small);
   transition: color map-get($sage-transitions, default), background-color map-get($sage-transitions, default), box-shadow map-get($sage-transitions, default);
 
   @extend %t-sage-body-med;
@@ -33,7 +34,13 @@ $-tab-color-disabled: map-get($sage-tab-colors, disabled);
   }
 
   &:focus {
-    outline: 0;
+    z-index: sage-z-index(default, 1);
+    outline: none;
+    box-shadow: 0 0 0 4px sage-color(primary, 200);
+
+    &::after {
+      display: none;
+    }
   }
 
   &:active,
@@ -98,5 +105,7 @@ $-tab-color-disabled: map-get($sage-tab-colors, disabled);
 
   .sage-tabs--with-background &.sage-tab--active {
     background-color: sage-color(white);
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
   }
 }
