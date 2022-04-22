@@ -16,6 +16,7 @@ $-btn-icon-only-standard-size: rem(40px);
 $-btn-icon-only-subtle-size: rem(16px);
 $-btn-icon-only-hover-size: rem(24px);
 $-btn-icon-only-focus-size: rem(32px);
+$-btn-toolbar-group-height: rem(40px);
 
 $-btn-base-styles: (
   primary: (
@@ -291,21 +292,15 @@ $-btn-loading-min-height: rem(36px);
   .sage-panel-controls__toolbar-btn-group > &,
   .sage-toolbar__group > & {
     border-radius: 0;
+  }
 
-    &:first-child {
-      border-top-left-radius: sage-border(radius);
-      border-bottom-left-radius: sage-border(radius);
-    }
-
-    &:last-child {
-      border-top-right-radius: sage-border(radius);
-      border-bottom-right-radius: sage-border(radius);
-    }
+  .sage-panel-controls__toolbar-btn-group > &:not(.sage-btn--secondary),
+  .sage-toolbar__group > &:not(.sage-btn--secondary) {
+    min-height: calc(#{$-btn-toolbar-group-height} + #{rem(2px)}); /* expand to toolbar group height + border offset */
   }
 
   .sage-toolbar > .sage-dropdown .sage-dropdown__trigger > &,
   .sage-toolbar__group > .sage-dropdown .sage-dropdown__trigger > & {
-    min-height: calc(#{rem(40px)} + #{rem(2px)}); /* toolbar default height + border offset */
     padding-top: sage-spacing(xs); /* match standard button height */
     padding-bottom: sage-spacing(xs); /* match standard button height */
   }
@@ -314,11 +309,15 @@ $-btn-loading-min-height: rem(36px);
     border-radius: 0;
   }
 
+  .sage-panel-controls__toolbar-btn-group > &:first-child,
+  .sage-toolbar__group > &:first-child,
   .sage-toolbar__group > .sage-dropdown:first-child .sage-dropdown__trigger > & {
     border-top-left-radius: sage-border(radius);
     border-bottom-left-radius: sage-border(radius);
   }
 
+  .sage-panel-controls__toolbar-btn-group > &:last-child,
+  .sage-toolbar__group > &:last-child,
   .sage-toolbar__group > .sage-dropdown:last-child .sage-dropdown__trigger > & {
     border-top-right-radius: sage-border(radius);
     border-bottom-right-radius: sage-border(radius);

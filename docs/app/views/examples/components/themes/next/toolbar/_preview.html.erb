@@ -149,7 +149,7 @@
     } %>
     <%= sage_component SageButton, {
       value: "Sign up",
-      style: "secondary",
+      style: "primary",
     } %>
   <% end %>
 <% end %>
@@ -160,7 +160,7 @@
     <%= sage_component SageDropdown, { items: dropdown_items } do %>
       <% content_for :sage_dropdown_trigger, flush: true do %>
         <%= sage_component SageButton, {
-          style: "primary",
+          style: "secondary",
           value: "Dropdown",
           icon: {
             name: "gear",
