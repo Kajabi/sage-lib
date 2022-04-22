@@ -45,7 +45,7 @@
   Each of these can also be placed inside a nested `SageToolbarGroup` to merge items with borders.
 ", use_sage_type: true) %>
 
-<h3 class="t-sage-heading-6">Basic toolbar</h3>
+<h3 class="<%= SageClassnames::TYPE::HEADING_6 %>">Basic toolbar</h3>
 
 <%= sage_component SageToolbar, {} do %>
   <%= sage_component SageSearch, {
@@ -89,7 +89,7 @@
   <p>Plain text</p>
 <% end %>
 
-<h3 class="t-sage-heading-6"><%= md("Button toolbar in a `SageToolbarGroup`") %></h3>
+<h3 class="<%= SageClassnames::TYPE::HEADING_6 %>"><%= md("Button toolbar in a `SageToolbarGroup`") %></h3>
 <%= sage_component SageToolbar, {} do %>
   <%= sage_component SageToolbarGroup, {} do %>
     <%= sage_component SageButton, {
@@ -107,7 +107,7 @@
   <% end %>
 <% end %>
 
-<h3 class="t-sage-heading-6"><%= md("Search field with dropdown in a `SageToolbarGroup`") %></h3>
+<h3 class="<%= SageClassnames::TYPE::HEADING_6 %>"><%= md("Search field with dropdown in a `SageToolbarGroup`") %></h3>
 <%= sage_component SageToolbar, {} do %>
   <%= sage_component SageToolbarGroup, {} do %>
     <%= sage_component SageDropdown, { items: dropdown_items } do %>
@@ -133,7 +133,7 @@
   <% end %>
 <% end %>
 
-<h3 class="t-sage-heading-6"><%= md("Mixed content toolbar in a `SageToolbarGroup`") %></h3>
+<h3 class="<%= SageClassnames::TYPE::HEADING_6 %>"><%= md("Mixed content toolbar in a `SageToolbarGroup`") %></h3>
 <%= sage_component SageToolbar, {} do %>
   <%= sage_component SageToolbarGroup, {} do %>
     <%= sage_component SageFormInput, {
@@ -152,10 +152,6 @@
       style: "primary",
     } %>
   <% end %>
-<% end %>
-
-<h3 class="t-sage-heading-6"><%= md("Mixed content toolbar in a `SageToolbarGroup`") %></h3>
-<%= sage_component SageToolbar, {} do %>
   <%= sage_component SageToolbarGroup, {} do %>
     <%= sage_component SageDropdown, { items: dropdown_items } do %>
       <% content_for :sage_dropdown_trigger, flush: true do %>
