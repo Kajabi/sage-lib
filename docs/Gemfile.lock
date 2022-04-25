@@ -1,7 +1,7 @@
 PATH
   remote: lib/sage_rails
   specs:
-    sage_rails (4.57.2)
+    sage_rails (4.58.0)
       classy_hash
       rails
 
