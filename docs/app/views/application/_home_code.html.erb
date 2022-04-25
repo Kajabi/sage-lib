@@ -51,7 +51,7 @@
             <%= sage_component SageButton, {
               value: "Storybook",
               attributes: {
-                href: Rails.application.config.storybook_root_url,
+                href: storybook_url(nil),
                 title: "Storybook"
               },
               subtle: true,
