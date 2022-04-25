@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.58.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.57.2...@kajabi/sage@4.58.0) (2022-04-25)
+
+
+### Bug Fixes
+
+* **buttongroup:** spacing adjustments and preview updates ([851a6d8](https://github.com/Kajabi/sage-lib/commit/851a6d82551bd82e4943b151a6c495216b886b63))
+
+
+### Features
+
+* **alert:** update alerts to new designs ([40d9d5a](https://github.com/Kajabi/sage-lib/commit/40d9d5a8fd9f8cacce92a7f73328924516af2b7b))
+* **list:** add new list component ([1c24c5f](https://github.com/Kajabi/sage-lib/commit/1c24c5fa7b64b42ed08cdda6ef850ad32fa1f3ee))
+* **list:** add tag switcher ([21ed339](https://github.com/Kajabi/sage-lib/commit/21ed339fb87b84a34ff1db421d043a45bb870300))
+* **list:** touch up markup and preview ([00e6253](https://github.com/Kajabi/sage-lib/commit/00e6253bb6aa7202b33d6ea80ae6f3b732f6775f))
+* **loader:** add eol ([7d8143e](https://github.com/Kajabi/sage-lib/commit/7d8143e0384392b755e8b9e460430b279dec3379))
+* **loader:** react loader updates ([7a98632](https://github.com/Kajabi/sage-lib/commit/7a9863259c83a0c3c8508b5ea113f59fef2123fd))
+* **loader:** update loader for Next ([c377dd3](https://github.com/Kajabi/sage-lib/commit/c377dd34bdae5a31ac93504d4bc93060719f1898))
+* **search:** add ability to hide label ([7b0b533](https://github.com/Kajabi/sage-lib/commit/7b0b5331eb7f3f95871752c122b44efa7e0bfe49))
+* **tabs:** align tab with bkgd to designs ([7a1af01](https://github.com/Kajabi/sage-lib/commit/7a1af019ea2ce5278d10678deea6de67adbe8a53))
+* **tabs:** clean up tabs docs a bit ([9f62994](https://github.com/Kajabi/sage-lib/commit/9f6299414af73f9c3d07bf4ebf24688da696a9ce))
+* **toolbar:** add button toolbar example, update border variables ([79da037](https://github.com/Kajabi/sage-lib/commit/79da037dd477688df75dd4df81f7ad6c0ff4d62e))
+* **toolbar:** style adjustments for mixed content, updated preview examples ([66eb158](https://github.com/Kajabi/sage-lib/commit/66eb1582e7b6af00a8c3edca409c29cf9c7541cb))
+
+
+
+
+
 ## [4.57.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.57.1...@kajabi/sage@4.57.2) (2022-04-21)
 
 **Note:** Version bump only for package @kajabi/sage

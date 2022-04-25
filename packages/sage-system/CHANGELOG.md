@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.20.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.19.0...@kajabi/sage-system@0.20.0) (2022-04-25)
+
+
+### Features
+
+* **list:** add new list component ([1c24c5f](https://github.com/Kajabi/sage-lib/commit/1c24c5fa7b64b42ed08cdda6ef850ad32fa1f3ee))
+
+
+
+
+
 # [0.19.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.18.1...@kajabi/sage-system@0.19.0) (2022-04-21)
 
 

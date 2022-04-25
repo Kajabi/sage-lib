@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.92.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.91.1...@kajabi/sage-react@0.92.0) (2022-04-25)
+
+
+### Features
+
+* **alert:** update alerts to new designs ([40d9d5a](https://github.com/Kajabi/sage-lib/commit/40d9d5a8fd9f8cacce92a7f73328924516af2b7b))
+* **list:** add new list component ([1c24c5f](https://github.com/Kajabi/sage-lib/commit/1c24c5fa7b64b42ed08cdda6ef850ad32fa1f3ee))
+* **list:** add tag switcher ([21ed339](https://github.com/Kajabi/sage-lib/commit/21ed339fb87b84a34ff1db421d043a45bb870300))
+* **loader:** react loader updates ([7a98632](https://github.com/Kajabi/sage-lib/commit/7a9863259c83a0c3c8508b5ea113f59fef2123fd))
+* **search:** match figma height, fix for required label prop ([a4fbe92](https://github.com/Kajabi/sage-lib/commit/a4fbe92d986186c3f3b464acbecd18e4d4a3719d))
+* **search:** update react component ([e7d3ac0](https://github.com/Kajabi/sage-lib/commit/e7d3ac092355f936ccab02143d140440589caadd))
+
+
+
+
+
 ## [0.91.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.91.0...@kajabi/sage-react@0.91.1) (2022-04-20)
 
 

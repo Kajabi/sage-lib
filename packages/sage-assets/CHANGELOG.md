@@ -3,6 +3,42 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.80.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.79.0...@kajabi/sage-assets@0.80.0) (2022-04-25)
+
+
+### Bug Fixes
+
+* **alert:** disable linting on nested css ([c6a6bb9](https://github.com/Kajabi/sage-lib/commit/c6a6bb9a2de61bc49be28ae40d961d42266381e3))
+* **alert:** updates to colors and border ([2673e14](https://github.com/Kajabi/sage-lib/commit/2673e147e1b64fd6103467d3d2e2ec44b16e6a5c))
+* **design:** fix linting error on order of css properties ([3436ac0](https://github.com/Kajabi/sage-lib/commit/3436ac08c89ef4c55d77dc8c381b0604a85d2c06))
+* **design:** remove margin between menu items in dropdown ([48cf54c](https://github.com/Kajabi/sage-lib/commit/48cf54ceabc3bcca913dbd55fc1f5ed131bef759))
+* **design:** update table headers to corrected size and weight ([b23e661](https://github.com/Kajabi/sage-lib/commit/b23e6611a2a5c150b2f9be04fc13537d63667d8d))
+* **design requests:** one-off design requests for Foundations ([72fcbaa](https://github.com/Kajabi/sage-lib/commit/72fcbaa7130b44f7fa4a4ef3670a4c444e0b59c0))
+* **focus:** update color values to match color revert ([cd05396](https://github.com/Kajabi/sage-lib/commit/cd053960ba59da2c6d6c8e96caa13b5ba9c9a13c))
+* **lint:** reorder css properties to resolve linting error ([9a55693](https://github.com/Kajabi/sage-lib/commit/9a5569321528aedee679627c71761bdd89d71c1b))
+
+
+### Features
+
+* **alert:** update alerts to new designs ([40d9d5a](https://github.com/Kajabi/sage-lib/commit/40d9d5a8fd9f8cacce92a7f73328924516af2b7b))
+* **breadcrumb:** focus update ([3f21bb5](https://github.com/Kajabi/sage-lib/commit/3f21bb5266f19a15428755eb60b9d2a2a7644a12))
+* **list:** add new list component ([1c24c5f](https://github.com/Kajabi/sage-lib/commit/1c24c5fa7b64b42ed08cdda6ef850ad32fa1f3ee))
+* **list:** add tag switcher ([21ed339](https://github.com/Kajabi/sage-lib/commit/21ed339fb87b84a34ff1db421d043a45bb870300))
+* **loader:** update loader for Next ([c377dd3](https://github.com/Kajabi/sage-lib/commit/c377dd34bdae5a31ac93504d4bc93060719f1898))
+* **search:** match figma height, fix for required label prop ([a4fbe92](https://github.com/Kajabi/sage-lib/commit/a4fbe92d986186c3f3b464acbecd18e4d4a3719d))
+* **search:** modify label margin to match input style ([d1f8845](https://github.com/Kajabi/sage-lib/commit/d1f88456d5c07e12f82ebdc607d876a2f62ae24b))
+* **tab:** polish focus states ([c07e2cc](https://github.com/Kajabi/sage-lib/commit/c07e2cc1e0c6a62f70967e2415fef72cf53e676d))
+* **tab:** polish focus styles ([5f3b8b0](https://github.com/Kajabi/sage-lib/commit/5f3b8b0f1be50dc83d8b01d54d025b741d0f0e1e))
+* **tab:** styles for hover and focus ([331cc1a](https://github.com/Kajabi/sage-lib/commit/331cc1aea207b994ec1c6c14726bfefe3efb1778))
+* **tab:** update tab and tabs to align with Next designs ([8819c5c](https://github.com/Kajabi/sage-lib/commit/8819c5c2fcc38d2624c413426b7cafc8e4e09811))
+* **tabs:** align tab with bkgd to designs ([7a1af01](https://github.com/Kajabi/sage-lib/commit/7a1af019ea2ce5278d10678deea6de67adbe8a53))
+* **toolbar:** add button toolbar example, update border variables ([79da037](https://github.com/Kajabi/sage-lib/commit/79da037dd477688df75dd4df81f7ad6c0ff4d62e))
+* **toolbar:** style adjustments for mixed content, updated preview examples ([66eb158](https://github.com/Kajabi/sage-lib/commit/66eb1582e7b6af00a8c3edca409c29cf9c7541cb))
+
+
+
+
+
 # [0.79.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.78.0...@kajabi/sage-assets@0.79.0) (2022-04-20)
 
 
