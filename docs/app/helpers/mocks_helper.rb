@@ -70,6 +70,14 @@ module MocksHelper
         team: "Growth",
       },
       {
+        alias: "payments_index_phase_2",
+        jira_epic: "SAGE-471",
+        name: "Payments Index Phase 2",
+        no_rails_js: true,
+        status: DOING,
+        team: "Commerce",
+      },
+      {
         alias: "contact_profile",
         milestone_id: 21,
         name: "Contact Profile",

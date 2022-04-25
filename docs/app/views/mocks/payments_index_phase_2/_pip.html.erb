@@ -1,0 +1,254 @@
+<%
+def info_tooltip(tooltip_content)
+  sage_component(SageIcon, {
+    adjacent_type: "h4",
+    color: "charcoal-100",
+    icon: "info-circle",
+    label: "More information",
+    html_attributes: {
+      "data-js-tooltip": tooltip_content, 
+      "data-js-tooltip-position": "top",
+    }
+  })
+end
+%>
+
+<%= sage_component SagePageHeading, { title: "Payments", spacer: { bottom: "lg" }} %>
+
+<%= sage_component SageGridRow, {} do %>
+  <%= sage_component SageGridCol, { large: "8", medium: "12" } do %>
+    <%= sage_component SagePanelRow, { spacer: { bottom: "sm" }} do %>
+      <h3 class="<%= "#{SageClassnames::TYPE::HEADING_4} #{SageClassnames::TYPE_COLORS::CHARCOAL_400}" %>">
+        Sales activity
+      </h3>
+      <%= sage_component SageDropdown, {
+        customized: true,
+        items: [
+          {
+            selected: true,
+            value: "Month over month",
+            attributes: { href: "#TODO-dev-set-range-month-url" },
+          },
+          {
+            value: "Week over week",
+            attributes: { href: "#TODO-dev-set-range-week-url" },
+          },
+          {
+            value: "Day over day",
+            attributes: { href: "#TODO-dev-set-range-day-url" },
+          },
+          {
+            value: "Year over year",
+            attributes: { href: "#TODO-dev-set-range-year-url" },
+          },
+        ],
+        trigger: { type: "select", width: "190px" },
+      } %>
+    <% end %>
+
+    <%# TODO: add `stretch` alignment option to panel row %>
+    <%= sage_component SagePanelRow, { grid_template: "te", vertical_align: "start" } do %>
+      <%= sage_component SagePanel, {} do %>
+        <%= sage_component SagePanelRow, {} do %>
+          <h4 class="<%= "#{SageClassnames::TYPE::HEADING_6} #{SageClassnames::TYPE_COLORS::CHARCOAL_400}" %>">
+            Transactions
+          </h4>
+          <%= info_tooltip("TODO: DEV all transactions tooltip") %>
+        <% end %>
+
+        <%= sage_component SagePanelRow, { grid_template: "o" } do %>
+          <%= render "mocks/payments_index_phase_2/transaction_stat",
+            value: "638",
+            change: { value: "3%", color: "published", icon: "up-small" },
+            subtext: "Payments"
+          %>
+          <%= render "mocks/payments_index_phase_2/transaction_stat",
+            value: "6",
+            change: { value: "12%", color: "danger", icon: "up-small", },
+            subtext: "Failed Payments"
+          %>
+          <%= render "mocks/payments_index_phase_2/transaction_stat",
+            value: "0",
+            change: nil,
+            subtext: "Refunds"
+          %>
+        <% end %>
+
+        <%#
+          TODO: Need direction on charts for this context
+          DEV: Note that there are hex values available
+          for Sage colors in Rails under the `SageTokens::COLOR_PALETTE` hash.
+          Call the desired color value as you see the background-color
+          set up below.
+          This may be helpful for pairing further with a charting library
+          such as D3
+        %>
+        <div style="
+          height: 200px;
+          background-color: <%= SageTokens::COLOR_PALETTE[:GREY_200] %>;
+          border-radius: 8px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        ">
+          [Chart goes here]
+        </div>
+
+        <div>
+          <%= sage_component SageButton, {
+            attributes: { href: "#TODO-DEV-all-transactions-url" },
+            icon: { name: "arrow-right", style: "right" },
+            subtle: true,
+            style: "primary",
+            value: "All transactions",
+          } %>
+        </div>
+      <% end %>
+
+      <div class="<%= SageClassnames::GRID_PANEL %>" style="width: 33%; min-width: 245px">
+        <%= sage_component SagePanel, {} do %>
+          <%= sage_component SagePanelRow, {} do %>
+            <h4 class="<%= "#{SageClassnames::TYPE::HEADING_6} #{SageClassnames::TYPE_COLORS::CHARCOAL_400}" %>">
+              Subscriptions
+            </h4>
+            <%= info_tooltip("Members who pay for offers monthly up to 12 months.") %>
+          <% end %>
+
+          <%= render "mocks/payments_index_phase_2/transaction_stat",
+            value: "144",
+            change: { value: "27%", color: "published", icon: "up-small" },
+            subtext: "Active subscribers"
+          %>
+
+          <div>
+            <%= sage_component SageButton, {
+              attributes: { href: "#TODO-DEV-all-subscriptions-url" },
+              icon: { name: "arrow-right", style: "right" },
+              subtle: true,
+              style: "primary",
+              value: "All Subscriptions",
+            } %>
+        </div>
+        <% end %>
+
+        <%= sage_component SagePanel, {} do %>
+          <%= sage_component SagePanelRow, {} do %>
+            <h4 class="<%= "#{SageClassnames::TYPE::HEADING_6} #{SageClassnames::TYPE_COLORS::CHARCOAL_400}" %>">
+              Multi-payments
+            </h4>
+            <%= info_tooltip("TODO: DEV multi-payments tooltip") %>
+          <% end %>
+
+          <%= render "mocks/payments_index_phase_2/transaction_stat",
+            value: "73",
+            change: { value: "2%", color: "published", icon: "up-small" },
+            subtext: "Active multi-payments"
+          %>
+
+          <div>
+            <%= sage_component SageButton, {
+              attributes: { href: "#TODO-DEV-all-multi-payments-url" },
+              icon: { name: "arrow-right", style: "right" },
+              subtle: true,
+              style: "primary",
+              value: "All multi-payments",
+            } %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+
+    <%= sage_component SagePanel, { spacer: { top: "md" }} do %>
+      <h4 class="<%= "#{SageClassnames::TYPE::HEADING_6} #{SageClassnames::TYPE_COLORS::CHARCOAL_400}" %>">
+        Recent transactions
+      </h4>
+
+      <%# TODO: Need to add ability to hide headers %>
+      <%= sage_table_for payments_index_p2_recent_transactions, responsive: true, skip_headers: true do |t| %>
+        <% t.column :price, label: "", data_type: "string", align: "right", style: "width: 160px" do |c| %>
+          <span class="<%= "#{SageClassnames::TYPE::BODY_SMALL_SEMI} #{SageClassnames::TYPE_COLORS::CHARCOAL_400}" %>">
+            <%= c[:price] %>
+          </span>
+          <span class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::GREY_500}" %>">
+            <%= c[:currency] %>
+          </span>
+        <% end %>
+        <% t.column :name, label: "", data_type: "string", truncate: true do |c| %>
+          <span class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_200}" %>">
+            <%= c[:name] %>
+          </span>
+        <% end %>
+        <% t.column :when, label: "", data_type: "string", align: "right", style: "width: 140px" do |c| %>
+          <span class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_200}" %>">
+            <%= c[:when] %>
+          </span>
+        <% end %>
+      <% end %>
+
+      <div>
+        <%= sage_component SageButton, {
+          attributes: { href: "#TODO-DEV-all-transactions-url" },
+          icon: { name: "arrow-right", style: "right" },
+          subtle: true,
+          style: "primary",
+          value: "All transactions",
+        } %>
+      </div>
+    <% end %>
+  <% end %>
+
+  <%= sage_component SageGridCol, { large: "4", medium: "12" } do %>
+    <%= sage_component SagePanel, { html_attributes: { style: "background-color: #{SageTokens::COLOR_PALETTE[:PRIMARY_100]};" }} do %>
+      <%= sage_component SagePanelRow, { grid_template: "te" } do %>
+        <%= sage_component SageCardBlock, {} do %>
+          <%= sage_component SageCardBlock, { spacer: { bottom: "sm" }} do %>
+            <h3 class="<%= "#{SageClassnames::TYPE::HEADING_5} #{SageClassnames::TYPE_COLORS::CHARCOAL_400}" %>">
+              More on the way!
+            </h3>
+            <p class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_200}" %>">
+              Important features you've been asking for here soon!
+            </p>
+          <% end %>
+          <%= sage_component SageButton, {
+            value: "Learn more",
+            attributes: { href: "#TODO-dev-more-coming-url" },
+            style: "secondary",
+          } %>
+        <% end %>
+        <%= sage_component SagePanelFigure, { background_color: "transparent" } do %>
+          <svg width="122" height="119" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path opacity=".7" d="M1.579 90.534c7.639 26.953 59.6 29.769 89.979 26.931 32.154-3.015 34.419-33.18 26.78-60.133-7.639-26.953-40.859-42.09-72.103-33.377C14.991 32.668-6.082 63.559 1.58 90.534Z" fill="#E4DDCE" fill-opacity=".5"/>
+            <path d="M45.28 88.653c0 8.212 5.612 17.393 24.702 17.393 19.09 0 44.381-9.147 44.381-17.393 0-8.21-15.452-14.863-34.542-14.863-19.09 0-34.541 6.652-34.541 14.863Z" fill="#000" stroke="#000" stroke-width=".5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M64.058 57.507c12.819 0 34.541-8.73 34.541-8.73v42.37c0 8.212-15.452 14.864-34.541 14.864-19.09 0-34.542-6.652-34.542-14.863V48.776c-.035 0 21.342 8.731 34.542 8.731Z" fill="#C8BFAD" stroke="#000" stroke-width=".5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="m33.292 54.735 2.46 5.613 4.227-4.92" fill="#000"/>
+            <path d="m33.292 54.735 2.46 5.613 4.227-4.92" stroke="#000" stroke-width=".5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="m61.46 63.64 14.793 6.79 6.444-9.112" fill="#000"/>
+            <path d="m61.46 63.64 14.793 6.79 6.444-9.112" stroke="#000" stroke-width=".5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M64.058 63.64c19.076 0 34.541-6.655 34.541-14.864 0-8.208-15.465-14.863-34.541-14.863-19.077 0-34.542 6.655-34.542 14.863 0 8.209 15.465 14.863 34.542 14.863Z" fill="#E4DDCE" stroke="#000" stroke-width=".5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M97.318 44.792c-1.49-2.321-4.296-4.434-8.038-6.167l-14.69 7.518L62.256 63.64c.59 0 1.178.035 1.767.035 6.721 0 12.958-.831 18.258-2.252l15.037-16.63Z" fill="#000" stroke="#000" stroke-width=".5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M75.248 62.877a61.312 61.312 0 0 0 6.756-1.351" stroke="#A39884" stroke-width=".5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M41.538 63.293c.623 2.46 1.524 5.093 1.108 7.657-.069.312.45.485.485.138.45-2.702-.45-5.37-1.108-7.933-.07-.347-.555-.208-.485.138Z" fill="#000"/>
+            <path d="M45.626 72.127c-5.751-1.108-10.394 2.98-10.394 9.078 0 6.132 4.643 11.987 10.394 13.096 5.75 1.108 10.393-2.98 10.393-9.078 0-6.132-4.642-11.987-10.393-13.096Zm-.59 3.604c-.519-.104-.935-.624-.935-1.178 0-.555.416-.936.936-.832.52.104.935.624.935 1.178 0 .59-.416.936-.935.832Z" fill="#000" stroke="#000" stroke-width=".5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M43.097 68.524c-6.306-1.213-11.433 3.257-11.433 10.013s5.127 13.2 11.433 14.412c6.305 1.213 11.433-3.256 11.433-10.012.034-6.722-5.093-13.166-11.433-14.413Zm-.624 4.019c-.554-.104-1.04-.693-1.04-1.317 0-.623.451-1.004 1.04-.9.554.104 1.04.693 1.04 1.316 0 .59-.486 1.005-1.04.901Z" fill="#EE7561" stroke="#000" stroke-width=".5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M42.75 68.87c-6.305-1.212-11.433 3.257-11.433 10.013s5.128 13.2 11.433 14.413c6.306 1.212 11.433-3.257 11.433-10.013.035-6.72-5.093-13.165-11.433-14.412Zm-.623 4.02c-.555-.104-1.04-.693-1.04-1.317 0-.623.45-1.005 1.04-.9.554.103 1.04.692 1.04 1.316 0 .589-.486 1.005-1.04.9Z" fill="#EE7561" stroke="#000" stroke-width=".5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M47.22 81.967c-.45-.555-1.005-.901-1.628-1.04-.624-.104-1.144.035-1.594.416-.45.381-.693 1.04-.693 1.87 0 .902.208 1.63.589 2.218.416.59.97.97 1.698 1.109.693.138 1.282-.035 1.697-.485.416-.45.624-1.109.624-1.975 0-.831-.243-1.56-.693-2.113Zm-.797 3.152c-.173.243-.45.347-.797.278-.346-.07-.589-.243-.796-.59-.208-.346-.278-.796-.278-1.35 0-.52.104-.901.278-1.144.173-.208.45-.277.796-.208.347.07.59.243.797.52.208.312.277.727.277 1.247 0 .554-.104.97-.277 1.247ZM46.077 76.562a.263.263 0 0 0-.07-.139l-.658-.554c-.07-.07-.173-.07-.208 0l-6.305 9.424c-.035.034-.035.069-.035.138 0 .035.035.104.07.139l.657.52c.035.034.07.034.07.034.069 0 .104 0 .138-.07l6.271-9.423c.07.035.07 0 .07-.069ZM41.157 80.754c.416-.45.624-1.109.624-1.975 0-.866-.243-1.559-.693-2.148-.45-.554-1.005-.9-1.629-1.039-.623-.104-1.143.035-1.594.416-.45.38-.692 1.04-.692 1.87 0 .901.207 1.629.589 2.218.415.589.97.97 1.697 1.109.728.138 1.282 0 1.698-.45Zm-2.46-1.282c-.208-.346-.277-.796-.277-1.35 0-.52.104-.902.277-1.144.173-.208.45-.277.797-.208.346.07.589.243.797.52.208.311.277.727.277 1.247 0 .554-.104.97-.277 1.247-.173.243-.45.347-.797.277a1.154 1.154 0 0 1-.797-.589Z" fill="#fff" stroke="#000" stroke-width=".5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M44.101 57.992c-1.074.589-1.905 1.49-2.356 2.598-.554 1.352-.45 2.876-.45 4.296 0 1.56-.104 3.188.07 4.712.069.763.519 2.46 1.593 2.218.312-.07.173-.59-.139-.486-.485.105-.797-.97-.866-1.247-.104-.554-.104-1.143-.138-1.697-.035-1.317-.035-2.668-.035-3.985 0-1.212-.07-2.529.45-3.672a4.46 4.46 0 0 1 2.148-2.287c.278-.138.035-.589-.277-.45Z" fill="#000"/>
+            <path d="m70.918 66.03-39.53-9.355v-8.834l43.306-2.53-3.776 20.719Z" fill="#F7CC97" stroke="#000" stroke-width=".5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M96.694 38.486 70.918 66.03v-8.8l25.776-27.613v8.87Z" fill="#F5BD61" stroke="#000" stroke-width=".5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M96.694 29.617 70.918 57.23l-39.53-9.389 25.775-27.613 39.531 9.39Z" fill="#F5BD61" stroke="#000" stroke-width=".5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="m70.918 56.502-39.53-9.354v-8.834l43.306-2.495-3.776 20.683Z" fill="#F5BD61" stroke="#000" stroke-width=".5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M96.694 28.96 70.918 56.502v-8.8l25.776-27.578v8.834Z" fill="#E0A044" stroke="#000" stroke-width=".5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M96.694 20.125 70.918 47.703l-39.53-9.39 25.775-27.577 39.531 9.389Z" fill="#E0A044" stroke="#000" stroke-width=".5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="m70.918 46.802-39.53-9.355v-8.869l43.306-2.494-3.776 20.718Z" fill="#4AA9FF" stroke="#000" stroke-width=".5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M96.694 19.258 70.918 46.802v-8.835L96.694 10.39v8.87Z" fill="#0072EF" stroke="#000" stroke-width=".5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M96.694 10.389 70.918 37.967l-39.53-9.39L57.162 1l39.531 9.389Z" fill="#4AA9FF" stroke="#000" stroke-width=".5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="m74.278 34.156 6.514-6.756-39.912-9.7-6.514 6.963 39.912 9.493Z" fill="#fff" stroke="#000" stroke-width=".5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M74.278 34.156v28.721l6.514-7.31V27.4l-6.514 6.756Z" fill="#E5E8E2" stroke="#000" stroke-width=".5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M82.142 22.826 57.682 11.29l-5.578-7.795 24.46 11.537 5.578 7.795Z" fill="#000" stroke="#000" stroke-width=".5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M71.818 28.266 47.324 16.729l4.78-13.235 24.46 11.537-4.746 13.235Z" fill="#fff" stroke="#000" stroke-width=".5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        <% end %>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>

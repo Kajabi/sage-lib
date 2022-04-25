@@ -80,7 +80,7 @@ module SageTableHelper
   end
 
   class SageTableFor
-    attr_reader :caption, :columns, :condensed, :template, :id, :class_name, :collection, :row_proc, :sortable, :responsive, :striped, :reset_above, :reset_below
+    attr_reader :caption, :columns, :condensed, :template, :id, :class_name, :collection, :row_proc, :sortable, :responsive, :skip_headers, :striped, :reset_above, :reset_below
     delegate :content_tag, :tag, to: :template
 
     def initialize(template, collection, opts={})
@@ -92,6 +92,7 @@ module SageTableHelper
       @reset_above = opts[:reset_above]
       @reset_below = opts[:reset_below]
       @responsive = opts[:responsive]
+      @skip_headers = opts[:skip_headers]
       @sortable = opts[:sortable]
       @striped = opts[:striped]
       @id = opts[:id]
@@ -149,9 +150,13 @@ module SageTableHelper
     end
 
     def head
-      content_tag "thead" do
-        content_tag "tr" do
-          columns.map { |c| column_header(c) }.join.html_safe
+      if skip_headers
+        ""
+      else
+        content_tag "thead" do
+          content_tag "tr" do
+            columns.map { |c| column_header(c) }.join.html_safe
+          end
         end
       end
     end
