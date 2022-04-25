@@ -151,5 +151,5 @@ module Mocks::PaymentsIndexHelper
         when: "Mar 14, 2022",
       },
     ]
-end
+  end
 end
