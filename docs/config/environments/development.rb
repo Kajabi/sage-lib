@@ -52,4 +52,10 @@ Rails.application.configure do
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+
+  # Storybook deploy url to differentiate in different environments
+  config.storybook_root_url = "http://localhost:4100/?path=/docs/"
+
+  # Sassdocs deploy url to differentiate in different environments
+  config.sassdocs_root_url = "http://localhost:4200/"
 end
