@@ -1,0 +1,14 @@
+////
+/// Gap utility
+///
+/// @group sage
+////
+
+
+@each $-name, $-value in $sage-grid-gap-options {
+  $suffix: "-#{$-name}";
+
+  .sage-grid-gap#{$suffix} {
+    gap: $-value;
+  }
+}

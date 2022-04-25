@@ -31,17 +31,18 @@ $-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
 
 .sage-choice {
   @include sage-button-style-reset();
+  @include sage-focus-ring;
 
   display: inline-flex;
   position: relative;
   align-items: center;
   flex-grow: 1;
   flex-basis: 0;
-  padding: sage-spacing(sm);
+  padding: sage-spacing();
   text-decoration: none;
   color: $-choice-color-default;
   border: sage-border();
-  border-radius: sage-border(radius);
+  border-radius: sage-border(radius-large);
   transition: map-get($sage-transitions, default);
   transition-property: color, background-color, border-color, box-shadow;
 
@@ -50,24 +51,21 @@ $-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
   &::after {
     content: "";
     position: absolute;
-    border: 2px solid transparent;
-    border-radius: sage-border(radius);
+    border: 1px solid transparent;
+    border-radius: sage-border(radius-large);
 
     @include position(-1px, -1px, -1px, -1px);
   }
 
   &:hover {
-    @include sage-focus-outline--update-color(sage-color(charcoal, 300));
+    @include sage-focus-outline--update-color(sage-color(grey, 500));
 
     color: $-choice-color-active;
   }
 
   &:focus {
+    border-color: sage-color(primary, 200);
     outline: none;
-
-    &::after {
-      border-color: sage-color(primary, 500);
-    }
   }
 
   &:active,
@@ -75,7 +73,7 @@ $-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
     color: $-choice-color-active;
 
     &::after {
-      border-color: sage-color(primary, 500);
+      border-color: sage-color(primary, 300);
     }
 
     &:hover::after {
@@ -237,5 +235,5 @@ $-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
   @extend %t-sage-body-xsmall;
 
   margin-top: sage-spacing(2xs);
-  color: sage-color(charcoal, 100);
+  color: sage-color(charcoal, 200);
 }

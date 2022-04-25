@@ -61,7 +61,7 @@
   color: sage-color(charcoal, 400);
   background-color: transparent;
   border: $-copy-text-border;
-  border-radius: sage-border(radius);
+  border-radius: sage-border(radius-medium);
 }
 
 ///
@@ -630,7 +630,7 @@
     bottom: 0;
     left: $spacing-off;
     height: map-get($sage-active-underline-configs, height);
-    background: map-get($sage-active-underline-configs, color);
+    background-color: map-get($sage-active-underline-configs, color);
     border-radius: map-get($sage-active-underline-configs, radius);
     transition: right map-get($sage-transitions, default), left map-get($sage-transitions, default);
   }

@@ -92,6 +92,16 @@ $-hero-play-icon-background-color-hover: rgba(sage-color(white, 100), 1);
   overflow: hidden;
   outline: none;
 
+  &:focus {
+    border: rem(4px) solid sage-color(primary, 200);
+    border-top-right-radius: sage-spacing(sm);
+    border-bottom-right-radius: sage-spacing(sm);
+  }
+
+  &:hover::after {
+    background-color: $-hero-play-icon-background-color-hover;
+  }
+
   @media (min-width: sage-breakpoint(lg-max)) {
     .sage-hero--small & {
       width: rem(400px);
@@ -107,14 +117,12 @@ $-hero-play-icon-background-color-hover: rgba(sage-color(white, 100), 1);
   @media (max-width: sage-breakpoint(sm-max)) {
     height: 0;
     padding-top: $-hero-mobile-aspect-ratio;
-  }
 
-  &:hover::after {
-    background-color: $-hero-play-icon-background-color-hover;
-  }
-
-  &:focus {
-    border: 3px solid sage-color(primary, 300);
+    &:focus {
+      border-top-right-radius: sage-spacing(sm);
+      border-top-left-radius: sage-spacing(sm);
+      border-bottom-right-radius: 0;
+    }
   }
 }
 

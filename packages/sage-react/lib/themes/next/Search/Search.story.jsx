@@ -10,11 +10,13 @@ const Template = (args) => <Search {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
+  label: 'Find',
+  id: 'search_default',
   placeholder: 'Find',
   value: ''
 };
 
-export const Contained = (args) => {
+export const ContainedWithLabelHidden = (args) => {
   const [value, setValue] = useState('');
 
   return (
@@ -28,15 +30,21 @@ export const Contained = (args) => {
     </>
   );
 };
-Contained.args = {
+ContainedWithLabelHidden.args = {
   contained: true,
-  placeholder: 'Search'
+  hideLabel: true,
+  label: 'Search',
+  id: 'search_contained',
+  placeholder: 'Search',
+  value: ''
 };
 
 export const Disabled = Template.bind({});
 Disabled.args = {
   contained: true,
   disabled: true,
+  label: 'Search',
+  id: 'search_disabled',
   placeholder: 'Search',
   value: ''
 };

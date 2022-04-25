@@ -36,28 +36,6 @@ export default {
           items={sampleSelectItems}
         />
         <p>Plain text</p>
-        <Toolbar.Group>
-          <Search
-            placeholder="Find"
-            value=""
-            contained={true}
-          />
-          <SelectDropdown items={sampleSelectItems} />
-          <Button
-            color={Button.COLORS.SECONDARY}
-            icon={SageTokens.ICONS.PEN}
-            iconOnly={true}
-          >
-            Edit
-          </Button>
-          <Button
-            color={Button.COLORS.SECONDARY}
-            icon={SageTokens.ICONS.TRASH}
-            iconOnly={true}
-          >
-            Remove
-          </Button>
-        </Toolbar.Group>
       </>
     )
   }
@@ -65,3 +43,48 @@ export default {
 const Template = (args) => <Toolbar {...args} />;
 
 export const Default = Template.bind({});
+
+export const ToolbarGroupWithSearch = Template.bind({});
+ToolbarGroupWithSearch.args = {
+  children: (
+    <Toolbar.Group>
+      <Search
+        placeholder="Find"
+        value=""
+        contained={true}
+      />
+      <SelectDropdown items={sampleSelectItems} />
+      <Button
+        color={Button.COLORS.SECONDARY}
+        icon={SageTokens.ICONS.PEN}
+        iconOnly={true}
+      >
+        Edit
+      </Button>
+      <Button
+        color={Button.COLORS.SECONDARY}
+        icon={SageTokens.ICONS.TRASH}
+        iconOnly={true}
+      >
+        Remove
+      </Button>
+    </Toolbar.Group>
+  )
+};
+
+export const ToolbarGroupWithButtons = Template.bind({});
+ToolbarGroupWithButtons.args = {
+  children: (
+    <Toolbar.Group>
+      <Button color={Button.COLORS.SECONDARY}>
+        Button One
+      </Button>
+      <Button color={Button.COLORS.SECONDARY}>
+        Button Two
+      </Button>
+      <Button color={Button.COLORS.SECONDARY}>
+        Button Three
+      </Button>
+    </Toolbar.Group>
+  )
+};

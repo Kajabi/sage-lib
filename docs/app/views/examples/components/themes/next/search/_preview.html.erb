@@ -14,3 +14,13 @@
   contained: true,
   label_text: "Search"
 } %>
+
+<h3 class="t-sage-heading-6">Hidden label (label is visually hidden, but still accessible to screenreaders)</h3>
+<%= sage_component SageSearch, {
+  id: "search-3",
+  placeholder: "Search Coupons",
+  value: nil,
+  contained: true,
+  hide_label: true,
+  label_text: "Search"
+} %>

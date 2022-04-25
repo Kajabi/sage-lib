@@ -10,6 +10,7 @@ describe('Sage Search', () => {
 
   beforeEach(() => {
     defaultProps = {
+      id: 'search-form-1',
       onChange: (data) => data,
       value: '',
     };

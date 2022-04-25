@@ -35,7 +35,7 @@ export default {
   },
 };
 
-export const Accessible = () => <Alert>Accessible button</Alert>;
-
 const Template = (args) => <Alert {...args} />;
 export const Default = Template.bind({});
+
+export const Accessible = () => <Alert>Accessible button</Alert>;

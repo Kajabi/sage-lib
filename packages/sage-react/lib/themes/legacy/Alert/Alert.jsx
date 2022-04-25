@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import { Button } from '../Button';
 import { Icon } from '../Icon';
 import { ALERT_COLORS } from './configs';
 import { SageTokens } from '../configs';
@@ -87,18 +88,16 @@ export const Alert = ({
       )}
       {dismissable && (
         <div className="sage-alert__close">
-          <button
-            aria-label="Close Alert"
+          <Button
             className="sage-alert__close-btn"
+            icon={SageTokens.ICONS.REMOVE}
+            iconOnly={true}
+            small={true}
+            subtle={true}
+            value="Close"
             onClick={onClickDismiss}
-            type="button"
-          >
-            <Icon
-              color="grey-500"
-              icon="remove"
-              size="md"
-            />
-          </button>
+            aria-label="Close Alert"
+          />
         </div>
       )}
     </div>

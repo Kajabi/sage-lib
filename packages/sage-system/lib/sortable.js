@@ -19,7 +19,7 @@ Sage.sortable = (function() {
 
   function init(el) {
     let resourceName = el.getAttribute(SELECTOR_CONTAINER);
-    if (!resourceName) return console.error(`Sage Sortable requires a resource name \n\n EXAMPLE: \n [${SELECTOR_CONTAINER}="resourceName}"]`);
+    if (!resourceName) return console.error(`Sage Sortable requires a resource name \n\n EXAMPLE: \n [${SELECTOR_CONTAINER}="resourceName"]`);
 
     Sortable.create(el, {
       ...SETTINGS,

@@ -318,6 +318,17 @@ module ComponentsHelper
         figma_embed: "",
       },
       {
+        title: "list",
+        description: "Set up neatly-formatted lists of content in bordered rows with some additional optional decorations.",
+        scss: "done",
+        docs: "done",
+        rails: "done",
+        react: "done",
+        a11y: "done",
+        react_component_slug: "sage-list--default",
+        figma_embed: "",
+      },
+      {
         title: "lists",
         description: "Sage lists provide a few styling alternatives for unstyled and inline formatting.",
         scss: "done",
@@ -336,7 +347,7 @@ module ComponentsHelper
         react: "yes",
         a11y: "done",
         react_component_slug: "sage-loader--default",
-        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F9Km09NjlZHYWsMP7EGT8tI%2F%255BWIP%255D-Sage-3-%25E2%2580%2594-Admin-Components%3Fnode-id%3D6999%253A23090",
+        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FsMbtLUHSt2vfKgKjyQ3052%2FSage%3Fnode-id%3D2738%253A23248",
       },
       {
         title: "media_tile",
@@ -414,7 +425,7 @@ module ComponentsHelper
       },
       {
         title: "search",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        description: "A self-contained search form that can be used in isolation and inside of menus.",
         scss: "doing",
         docs: "doing",
         rails: "todo",

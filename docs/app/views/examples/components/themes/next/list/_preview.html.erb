@@ -1,0 +1,117 @@
+<%
+def dropdown_items(id)
+  sample_product_actions = [
+    {
+      slug: "duplicate",
+      name: "Duplicate",
+    },
+    {
+      slug: "archive",
+      name: "Archive",
+    },
+    {
+      slug: "stats",
+      name: "View stats",
+    },
+    {
+      slug: "delete",
+      name: "Delete permanently",
+      style: "danger",
+    }
+  ].map do | action |
+    {
+      attributes: {
+        href: "#action/#{action[:slug]}/#{id}",
+      },
+      style: action[:style] || nil,
+      value: action[:name],
+    }
+  end
+end
+
+sample_products = [
+  {
+    id: 1,
+    name: 'Product lorem',
+  },
+  {
+    id: 2,
+    name: 'Product ipsum',
+  },
+  {
+    id: 3,
+    name: 'Product dolor sit',
+  },
+  {
+    id: 4,
+    name: 'Product amet',
+  },
+  {
+    id: 5,
+    name: 'Product vel aliquam',
+  }
+]
+%>
+
+<h3 class="<%= SageClassnames::TYPE::HEADING_6 %>">Default configuration</h3>
+<%= md("
+SageList is implemented most simply by passing the desired contents for the items through the `SageList` `items` property.
+This assumes that the contents of the list are already formatted as desired.
+", use_sage_type: true) %>
+
+<%= sage_component SageList, {
+  sortable_resource: "sample_products",
+  items: sample_products.map { | item | {
+      content: %(
+        <h4>Item #{item[:name]}</h4>
+        <p>Item #{item[:id]} specs</p>
+      ).html_safe,
+      id: item[:id],
+      more_actions: { items: dropdown_items(item[:id]) },
+      sortable: true,
+      sortable_update_url: "#sortable-update-url?item=#{item[:id]}",
+    }
+  }
+} %>
+
+<h3 class="<%= SageClassnames::TYPE::HEADING_6 %>">Compositional approach</h3>
+<%= md("
+If you need more native content formatting you can instead opt to render items using a nested loop and the SageListItem component.
+", use_sage_type: true) %>
+
+<%= sage_component SageList, { sortable_resource: "sample_products_2" } do %>
+  <% sample_products.each do | item | %>
+    <%= sage_component SageListItem, {
+      id: item[:id],
+      more_actions: { items: dropdown_items(item[:id]) },
+      sortable: true,
+      sortable_update_url: "#sortable-update-url?item={item[:id]}",
+      css_classes: SageClassnames::REVEAL_CONTAINER,
+    } do %>
+      <%= sage_component SageCardRow, { grid_template: "ete" } do %>
+        <img src="//source.unsplash.com/random/240x160?v=<%= item[:id] %>" width="100" alt="" />
+        <%= sage_component SageCardBlock, {} do %>
+          <h4><%= item[:name] %></h4>
+          <p>Item <%= item[:id] %> specs</p>
+        <% end %>
+        <%= sage_component SageButtonGroup, {
+          gap: :md,
+          css_classes: SageClassnames::REVEAL_ON_CONTAINER_HOVER
+        } do %>
+          <%= sage_component SageButton, {
+            value: "Preview",
+            style: "secondary",
+            subtle: true,
+            icon: { name: "preview-on", style: "only" }
+          } %>
+          <%= sage_component SageButton, {
+            value: "Edit",
+            style: "secondary",
+            subtle: true,
+            icon: { name: "pen", style: "only" }
+          } %>
+        <% end %>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>

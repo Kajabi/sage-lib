@@ -16,6 +16,7 @@ $-btn-icon-only-standard-size: rem(40px);
 $-btn-icon-only-subtle-size: rem(16px);
 $-btn-icon-only-hover-size: rem(24px);
 $-btn-icon-only-focus-size: rem(32px);
+$-btn-toolbar-group-height: rem(40px);
 
 $-btn-base-styles: (
   primary: (
@@ -60,7 +61,7 @@ $-btn-base-styles: (
     default: (
       color: sage-color(white),
       background-color: sage-color(red, 300),
-      ring-color: sage-color(primary, 200),
+      ring-color: sage-color(red, 200),
     ),
     hover: (
       color: sage-color(white),
@@ -98,7 +99,7 @@ $-btn-subtle-styles: (
     default: sage-color(red, 300),
     hover: sage-color(red, 300),
     hover-background: sage-color(red, 100),
-    focus: sage-color(red, 200),
+    focus: sage-color(red, 300),
     focus-outline: sage-color(red, 200),
     disabled: sage-color(red, 200),
   ),
@@ -154,9 +155,7 @@ $-btn-loading-min-height: rem(36px);
   .sage-dropdown--contained .sage-dropdown__trigger &,
   .sage-panel-controls__tabs-dropdown .sage-dropdown__trigger &,
   .sage-panel-controls__toolbar .sage-dropdown__trigger &,
-  .sage-panel-controls__bulk-actions .sage-dropdown__trigger &,
-  .sage-toolbar .sage-dropdown__trigger &,
-  .sage-toolbar__group .sage-dropdown__trigger & {
+  .sage-panel-controls__bulk-actions .sage-dropdown__trigger & {
     @include sage-focus-outline--update-color(transparent);
 
     width: inherit;
@@ -165,6 +164,14 @@ $-btn-loading-min-height: rem(36px);
     &:hover {
       background-color: sage-color(white);
     }
+  }
+
+  .sage-toolbar .sage-dropdown__trigger &,
+  .sage-toolbar__group .sage-dropdown__trigger & {
+    @include sage-focus-outline--update-color(transparent);
+
+    width: inherit;
+    border-radius: inherit;
   }
 
   .sage-dropdown__item > & {
@@ -285,30 +292,44 @@ $-btn-loading-min-height: rem(36px);
   .sage-panel-controls__toolbar-btn-group > &,
   .sage-toolbar__group > & {
     border-radius: 0;
+  }
 
-    &:first-child {
-      border-top-left-radius: sage-border(radius);
-      border-bottom-left-radius: sage-border(radius);
-    }
+  .sage-panel-controls__toolbar-btn-group > &:not(.sage-btn--secondary),
+  .sage-toolbar__group > &:not(.sage-btn--secondary) {
+    min-height: calc(#{$-btn-toolbar-group-height} + #{rem(2px)}); /* expand to toolbar group height + border offset */
+  }
 
-    &:last-child {
-      border-top-right-radius: sage-border(radius);
-      border-bottom-right-radius: sage-border(radius);
-    }
+  .sage-toolbar > .sage-dropdown .sage-dropdown__trigger > &,
+  .sage-toolbar__group > .sage-dropdown .sage-dropdown__trigger > & {
+    padding-top: sage-spacing(xs); /* match standard button height */
+    padding-bottom: sage-spacing(xs); /* match standard button height */
   }
 
   .sage-toolbar__group > .sage-dropdown .sage-dropdown__trigger > & {
     border-radius: 0;
   }
 
+  .sage-panel-controls__toolbar-btn-group > &:first-child,
+  .sage-toolbar__group > &:first-child,
   .sage-toolbar__group > .sage-dropdown:first-child .sage-dropdown__trigger > & {
     border-top-left-radius: sage-border(radius);
     border-bottom-left-radius: sage-border(radius);
   }
 
+  .sage-panel-controls__toolbar-btn-group > &:last-child,
+  .sage-toolbar__group > &:last-child,
   .sage-toolbar__group > .sage-dropdown:last-child .sage-dropdown__trigger > & {
     border-top-right-radius: sage-border(radius);
     border-bottom-right-radius: sage-border(radius);
+  }
+
+  .sage-toolbar__group > .sage-dropdown + &,
+  .sage-toolbar__group > & + & {
+    margin-left: rem(-1px); /* offset border overlap of multiple buttons */
+  }
+
+  .sage-toolbar__group > &:hover {
+    z-index: sage-z-index(default, 1); /* raise button to display full border */
   }
 
   .sage-panel-controls__toolbar-btn-group--expand-collapse > & {
@@ -328,11 +349,14 @@ $-btn-loading-min-height: rem(36px);
     }
   }
 
-  .sage-upload-card & {
-    @include sage-focus-ring(transparent);
+  .sage-panel-controls__toolbar &,
+  .sage-toolbar & {
+    border-color: sage-color(grey, 500);
+  }
 
+  .sage-upload-card & {
     &.sage-btn--subtle:focus {
-      @include sage-focus-outline--update-color(transparent);
+      @include sage-focus-outline--update-color(sage-color(primary, 300));
     }
   }
 
@@ -468,22 +492,22 @@ $-alert-colors: (
 
     @each $name, $color in $-alert-colors {
       .sage-alert--#{$name} & {
-        border: 1px solid sage-color($color, 400);
+        @include sage-focus-ring;
+
+        color: sage-color(white);
+        background-color: sage-color($color, 300);
+        border-color: transparent;
 
         &:hover {
-          color: sage-color(charcoal, 500);
-          border-color: sage-color($color, 300);
-          background-color: transparent;
+          background-color: sage-color($color, 400);
         }
 
         &:focus,
         &:active {
-          color: sage-color(charcoal, 400);
-          border-color: sage-color($color, 200);
-          background-color: transparent;
+          background-color: sage-color($color, 300);
         }
 
-        @include sage-focus-outline--update-color(sage-color($color, 400));
+        @include sage-focus-outline--update-color(transparent);
       }
     }
   }
@@ -542,10 +566,18 @@ $-alert-colors: (
         color: map-get($-styles, hover);
         background-color: map-get($-styles, hover-background);
 
+        .sage-alert & {
+          background-color: transparent;
+        }
+
         &::after {
           z-index: 0;
           background-color: map-get($-styles, hover-background);
           opacity: 1;
+  
+          .sage-alert & {
+            background-color: transparent;
+          }
         }
 
         &::before,
@@ -611,7 +643,6 @@ $-alert-colors: (
       color: sage-color(white);
     }
   }
-
 
   &.sage-alert__secondary-action {
     color: sage-color(charcoal, 400);

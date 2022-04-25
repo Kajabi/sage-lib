@@ -47,7 +47,7 @@ $-banner-el-icon: "before";
   z-index: sage-z-index(negative);
   transform: translateY(-100px);
   width: 100%;
-  padding: rem(10px) sage-spacing(lg);
+  padding: sage-spacing(sm) sage-spacing(md);
   color: map-get(map-get($-banner-colors, default), text);
   background: map-get(map-get($-banner-colors, default), background);
   transition: 0.3s ease-in-out;
@@ -108,6 +108,10 @@ $-banner-el-icon: "before";
   &:hover {
     text-decoration: underline;
   }
+}
+
+.sage-banner__close {
+  margin-left: sage-spacing(sm);
 }
 
 .sage-banner__close,

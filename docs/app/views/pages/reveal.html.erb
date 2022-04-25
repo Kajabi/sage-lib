@@ -1,0 +1,29 @@
+<%= content_for :heading do %>
+<%= md(%(
+# Reveal
+)) %>
+<% end %>
+
+<%= md(%(
+The following utility classes are available to dynamically hide and then reveal content based on some kind of interaction.
+In each case the hidden element retains its place in the layout but its visibility toggles.
+
+#### Reveal on Hover
+
+The following can be used to hide an item but reveal it on `hover`.
+
+```
+<p class="#{SageClassnames::REVEAL_ON_HOVER}">I'm hidden until you hover over me.</p>
+```
+
+#### Reveal on Container Hover
+
+The following can be used to hide an item but reveal it when a container around the item is hovered.
+
+```
+<div class="#{SageClassnames::REVEAL_CONTAINER}">
+  <p>I'm in this container but always visible.</p>
+  <p class="#{SageClassnames::REVEAL_ON_CONTAINER_HOVER}">I'm hidden until you hover over my container.</p>
+</div>
+```
+), use_sage_type: true) %>
