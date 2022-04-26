@@ -1,6 +1,5 @@
 module Mocks::PaymentsIndexHelper
   def payments_index_cards(with_data: false, payments_adopted: false)
-
     if (with_data)
       all_payments = {
         value: 144,
@@ -87,5 +86,70 @@ module Mocks::PaymentsIndexHelper
     end
 
     payment_cards
+  end
+
+  def payments_index_p2_recent_transactions
+    [
+      {
+        price: "$49.95",
+        currency: "USD",
+        name: "How To Build Your Personal Resilience",
+        when: "17 min ago",
+      },
+      {
+        price: "$8.95",
+        currency: "USD",
+        name: "What Is Leadership",
+        when: "44 min ago",
+      },
+      {
+        price: "$16.95",
+        currency: "USD",
+        name: "Planning for a Crisis",
+        when: "2 hours ago",
+      },
+      {
+        price: "$4.95",
+        currency: "USD",
+        name: "Vulnerable Leadership: The Power of Opening Up",
+        when: "5 hours ago",
+      },
+      {
+        price: "$99.95",
+        currency: "USD",
+        name: "Team Management Skills",
+        when: "17 hours ago",
+      },
+      {
+        price: "$2,349.95",
+        currency: "USD",
+        name: "How Good Is Your Problem Solving?",
+        when: "12 hours ago",
+      },
+      {
+        price: "$10.95",
+        currency: "USD",
+        name: "Analysing Potential Problems",
+        when: "Yesterday",
+      },
+      {
+        price: "$2.95",
+        currency: "USD",
+        name: "The Core Skills Needed to Manage Your Team",
+        when: "Yesterday",
+      },
+      {
+        price: "$5.95",
+        currency: "USD",
+        name: "Vulnerable Leadership: The Power of Opening Up",
+        when: "Mar 14, 2022",
+      },
+      {
+        price: "$47.95",
+        currency: "USD",
+        name: "What Is Leadership",
+        when: "Mar 14, 2022",
+      },
+    ]
   end
 end
