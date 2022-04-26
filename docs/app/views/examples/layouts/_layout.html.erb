@@ -1,0 +1,50 @@
+
+<div class="sage-panel-set">
+  <div class="sage-tabs-container">
+    <%= sage_component SagePanelRow, { grid_template: "te" } do %>
+      <%= sage_component SageTabs, {
+        id: "code-example-tabs",
+        items: [
+          {
+            text: "Introduction",
+            target: "intro",
+            active: true
+          },
+          {
+            text: "Examples",
+            target: "examples"
+          },
+        ]
+      } %>
+      <%= sage_component SageButton, {
+        value: "#{image_tag("logo-react.svg", height: "20px")} React Layout",
+        attributes: {
+          href: storybook_url(layout_data[:react_layout_slug]),
+          target: "_blank",
+          rel: "noopener",
+          title: "Open Storybook React site"
+        },
+        subtle: true,
+        style: "secondary",
+      } if defined?(layout_data[:react_layout_slug]) and layout_data[:react_layout_slug] %>
+    <% end %>
+
+    <%= sage_component SageTabsPane, { id: "intro", panel_spacing: true } do %>
+      <%= render "examples/shared/intro",
+        layout_data: layout_data,
+        content: intro || "",
+        core_class: core_class || nil,
+        initial_prop_values: initial_prop_values || nil
+      %>
+
+      <%= render "examples/shared/props_improved",
+        layout_data: layout_data,
+        props: props || nil
+      %>
+    <% end %>
+
+    <%= sage_component SageTabsPane, { id: "examples" } do %>
+      <%= render "examples/shared/examples", layout_data: layout_data, examples: examples || [] %>
+    <% end %>
+  </div>
+</div>

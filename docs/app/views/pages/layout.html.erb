@@ -1,0 +1,3 @@
+<% layout_data = get_sage_layout_by_title(@title) %>
+<%= render "examples/shared/heading", info_content: layout_data %>
+<%= render "examples/layouts/#{@title}/main", layout_data: layout_data %>
