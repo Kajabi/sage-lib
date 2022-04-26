@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.59.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.58.0...@kajabi/sage@4.59.0) (2022-04-26)
+
+
+### Features
+
+* **mocks:** add mocks for payment index page phase 2 ([51cccf0](https://github.com/Kajabi/sage-lib/commit/51cccf01f53def64a615042a204e990b807afe93))
+
+
+
+
+
 # [4.58.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.57.2...@kajabi/sage@4.58.0) (2022-04-25)
 
 
