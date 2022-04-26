@@ -1,0 +1,24 @@
+<div class="<%= SageClassnames::GRID_PANEL %>">
+  <% examples.each do | example | %>
+    <div class="<%= SageClassnames::GRID_CARD %>">
+      <h3 class="<%= SageClassnames::TYPE::HEADING_4 %>"><%= example[:title] %></h3>
+      <%= render "examples/shared/example_rendered",
+        folder_root: "layouts/#{layout_data[:title]}",
+        description: example[:description] || nil,
+        partial: example[:partial] || nil
+      %>
+      <% if example[:items].present? %>
+        <%  example[:items].each do | subexample | %>
+          <div class="<%= SageClassnames::GRID_CARD %>">
+            <h4 class="<%= SageClassnames::TYPE::HEADING_6 %>"><%= subexample[:title] %></h4>
+            <%= render "examples/shared/example_rendered",
+              folder_root: "layouts/#{layout_data[:title]}",
+              description: subexample[:description] || nil,
+              partial: subexample[:partial] || nil
+            %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  <% end %>
+</div>

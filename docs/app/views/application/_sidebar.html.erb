@@ -94,6 +94,23 @@
       ]
     } %>
   <% end %>
+  <% if current_page_layouts? %>
+    <%
+      layout_list = []
+      sage_layouts_sorted.each do |layout|
+        layout_list << {
+          text: layout[:title].titleize,
+          link: pages_layout_path(layout[:title]),
+          active: current_page?(pages_layout_path(layout[:title])),
+        }
+      end
+    %>
+    <%= sage_component SageNav, {
+      items: [
+        { link: pages_layout_path(sorted_sage_components[0][:title]), text: "LAYOUTS", items: layout_list }
+      ]
+    } %>
+  <% end %>
   <% if current_page_components? %>
     <%
       component_list = []

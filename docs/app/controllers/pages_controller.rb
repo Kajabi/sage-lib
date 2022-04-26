@@ -73,6 +73,13 @@ class PagesController < ApplicationController
     render(layout: 'full_page')
   end
 
+  def layouts
+  end
+
+  def layout
+    @title = params[:title]
+  end
+
   # Generator Pages
   def status
     render(layout: 'full_page')
