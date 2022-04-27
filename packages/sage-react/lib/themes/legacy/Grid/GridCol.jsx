@@ -14,10 +14,11 @@ export const GridCol = ({
   small,
   ...rest
 }) => {
+  const hasInfix = size || small || medium || large;
   const classNames = classnames(
     className,
     {
-      'sage-col': !size,
+      'sage-col': !hasInfix,
       [`sage-col-${size}`]: size,
       [`sage-col--sm-${small}`]: small,
       [`sage-col--md-${medium}`]: medium,
