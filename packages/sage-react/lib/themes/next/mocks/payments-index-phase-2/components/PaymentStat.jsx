@@ -35,19 +35,21 @@ export const PaymentStat = ({
         </Card.Row>
       )}
       <Card.Row
-        gridTemplate={SageTokens.GRID_TEMPLATES.ET}
+        gridTemplate={SageTokens.GRID_TEMPLATES.TE}
         gap={SageTokens.GRID_GAP_OPTIONS.XS}
       >
-        <p className={`${SageClassnames.TYPE.HEADING_2} ${SageClassnames.TYPE_COLORS.CHARCOAL_500}`}>
-          {value}
+        <p>
+          <span className={`${SageClassnames.TYPE.HEADING_2} ${SageClassnames.TYPE_COLORS.CHARCOAL_500}`}>
+            {value}
+          </span>
+          {subtext && (
+            <span className={`${SageClassnames.TYPE.BODY_XSMALL} ${SageClassnames.TYPE_COLORS.CHARCOAL_100} ${SageClassnames.SPACERS.XS_LEFT}`}>
+              {subtext}
+            </span>
+          )}
         </p>
         {change && <Label {...change} />}
       </Card.Row>
-      {subtext && (
-        <p className={`${SageClassnames.TYPE.BODY_XSMALL} ${SageClassnames.TYPE_COLORS.CHARCOAL_100}`}>
-          {subtext}
-        </p>
-      )}
     </Panel.Block>
   </Panel>
 );

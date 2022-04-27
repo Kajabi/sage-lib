@@ -1,8 +1,8 @@
 import React from 'react';
 import {
-  Panel,
-  Table,
+  Button,
   SageClassnames,
+  Table,
 } from '../../..';
 import { sampleTransactions } from '../data-helper';
 
@@ -31,7 +31,7 @@ export const RecentTransactionsTable = () => {
   const [rows] = React.useState(sampleTransactions);
 
   return (
-    <Panel>
+    <div className={SageClassnames.CARD_GRID}>
       <h3 className={SageClassnames.TYPE.HEADING_5}>
         Recent transactions
       </h3>
@@ -41,6 +41,15 @@ export const RecentTransactionsTable = () => {
         schema={schema}
         rows={rows}
       />
-    </Panel>
+      <div>
+        <Button
+          href="#TODO-dev-all-transactions-url"
+          subtle={true}
+          color={Button.COLORS.PRIMARY}
+        >
+          All transactions
+        </Button>
+      </div>
+    </div>
   );
 };

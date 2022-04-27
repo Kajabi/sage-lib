@@ -1,8 +1,9 @@
 import React from 'react';
 import {
+  Button,
   Panel,
-  Table,
   SageClassnames,
+  Table,
 } from '../../..';
 import { sampleTransactions } from '../data-helper';
 
@@ -41,6 +42,15 @@ export const RecentTransactionsTable = () => {
         schema={schema}
         rows={rows}
       />
+      <div>
+        <Button
+          href="#TODO-dev-all-transactions-url"
+          subtle={true}
+          color={Button.COLORS.PRIMARY}
+        >
+          All transactions
+        </Button>
+      </div>
     </Panel>
   );
 };

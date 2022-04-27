@@ -1,9 +1,9 @@
 import React from 'react';
 import {
   Panel,
-  SelectDropdown,
   SageClassnames,
   SageTokens,
+  SelectDropdown,
 } from '../../..';
 import {
   chartOptions,

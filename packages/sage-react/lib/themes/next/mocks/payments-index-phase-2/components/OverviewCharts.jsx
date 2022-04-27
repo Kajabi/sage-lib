@@ -1,13 +1,13 @@
 import React from 'react';
 import {
   Panel,
-  SelectDropdown,
   SageClassnames,
   SageTokens,
+  SelectDropdown,
 } from '../../..';
 import {
-  chartOptions,
   chartDateRangeOptions,
+  chartOptions,
 } from '../data-helper';
 
 export const OverviewCharts = () => {
@@ -19,7 +19,7 @@ export const OverviewCharts = () => {
   };
 
   return (
-    <Panel>
+    <div className={SageClassnames.CARD_GRID}>
       <Panel.Row
         gridTemplate={SageTokens.GRID_TEMPLATES.TI}
         verticalAlign={Panel.Row.VERTICAL_ALIGNMENTS.START}
@@ -53,6 +53,6 @@ export const OverviewCharts = () => {
       </Panel.Row>
       {/* TODO: Need to sync with existing charting options */}
       [Chart goes here {/* TODO: This can pair with activeChart.dataSet when wired */}]
-    </Panel>
+    </div>
   );
 };
