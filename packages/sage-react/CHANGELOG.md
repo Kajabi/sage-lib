@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.93.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.92.0...@kajabi/sage-react@0.93.0) (2022-04-27)
+
+
+### Features
+
+* **mocks:** add pip phase 2 in legeacy storybook ([b5397ca](https://github.com/Kajabi/sage-lib/commit/b5397cafb67e99e52c38efe69bc4531ddfaa7ab4))
+* **mocks:** add pip phase 2 in next storybook ([57c9d9f](https://github.com/Kajabi/sage-lib/commit/57c9d9f118cf1619cf92dce7d1b0b7320482acbc))
+* **mocks:** revise to latest designs and in React ([1d93eab](https://github.com/Kajabi/sage-lib/commit/1d93eab6f37ca569c0821951988414a18e249148))
+
+
+
+
+
 # [0.92.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.91.1...@kajabi/sage-react@0.92.0) (2022-04-25)
 
 

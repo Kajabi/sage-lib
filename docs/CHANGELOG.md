@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.60.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.59.1...@kajabi/sage@4.60.0) (2022-04-27)
+
+
+### Features
+
+* **mocks:** revise to latest designs and in React ([1d93eab](https://github.com/Kajabi/sage-lib/commit/1d93eab6f37ca569c0821951988414a18e249148))
+
+
+
+
+
 ## [4.59.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.59.0...@kajabi/sage@4.59.1) (2022-04-27)
 
 **Note:** Version bump only for package @kajabi/sage
