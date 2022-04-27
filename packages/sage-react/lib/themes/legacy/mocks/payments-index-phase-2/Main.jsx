@@ -39,7 +39,10 @@ export const Main = () => (
         {paymentStats.map((stat) => <PaymentStat key={stat.title} {...stat} />)}
       </Panel.Row>
       <Grid withRow>
-        <Grid.Col medium="8" className={`${SageClassnames.CARD_GRID} ${SageClassnames.SPACERS.MD_BOTTOM}`}>
+        <Grid.Col
+          medium="8"
+          className={`${SageClassnames.CARD_GRID} ${SageClassnames.SPACERS.MD_BOTTOM}`}
+        >
           <OverviewCharts />
           <RecentTransactionsTable />
         </Grid.Col>
