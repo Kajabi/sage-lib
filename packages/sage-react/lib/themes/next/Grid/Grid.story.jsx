@@ -147,3 +147,62 @@ Containers.args = {
     </>
   )
 };
+
+export const EqualColumns = Template.bind({});
+EqualColumns.args = {
+  children: (
+    <>
+       <Grid.Row spacerBelow="sm">
+        <Grid.Col aria-label="Single column">
+          <GridDemo>
+            Equal Width Column
+          </GridDemo>
+        </Grid.Col>
+        <Grid.Col aria-label="Single column">
+          <GridDemo>
+            Equal Width Column
+          </GridDemo>
+        </Grid.Col>
+        <Grid.Col aria-label="Single column">
+          <GridDemo>
+            Equal Width Column
+          </GridDemo>
+        </Grid.Col>
+      </Grid.Row>
+      <Grid.Row spacerBelow="sm">
+        <Grid.Col aria-label="Single column">
+          <GridDemo>
+            Equal Width Column
+          </GridDemo>
+        </Grid.Col>
+        <Grid.Col aria-label="Single column">
+          <GridDemo>
+            Equal Width Column
+          </GridDemo>
+        </Grid.Col>
+      </Grid.Row>
+      <Grid.Row spacerBelow="sm">
+        <Grid.Col aria-label="Single column">
+          <GridDemo>
+            Equal Width Column
+          </GridDemo>
+        </Grid.Col>
+        <Grid.Col aria-label="Single column">
+          <GridDemo>
+            Equal Width Column
+          </GridDemo>
+        </Grid.Col>
+        <Grid.Col aria-label="Single column">
+          <GridDemo>
+            Equal Width Column
+          </GridDemo>
+        </Grid.Col>
+        <Grid.Col aria-label="Single column">
+          <GridDemo>
+            Equal Width Column
+          </GridDemo>
+        </Grid.Col>
+      </Grid.Row>
+    </>
+  )
+};
