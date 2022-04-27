@@ -463,6 +463,16 @@ module ComponentsHelper
         react_component_slug: "sage-uploadcard--default",
         figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FsMbtLUHSt2vfKgKjyQ3052%2FSage%3Fnode-id%3D2868%253A22244",
       },
+      {
+        title: "assistant",
+        description: "Deprecated - Page header with optional side menu toggle button.",
+        scss: "done",
+        docs: "done",
+        rails: "doing",
+        react: "todo",
+        a11y: "todo",
+        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F9Km09NjlZHYWsMP7EGT8tI%2F%255BWIP%255D-Sage-3-%25E2%2580%2594-Admin-Components%3Fnode-id%3D6989%253A21590",
+      },
     ]
   end
 
