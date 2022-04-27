@@ -1,6 +1,5 @@
 <% has_infix = component.breakpoint || component.size || component.small || component.medium || component.large %>
 
-
 <div class="
   <%= "sage-col" if !has_infix -%>
   <%= "sage-col-#{component.size}" if component.size -%>

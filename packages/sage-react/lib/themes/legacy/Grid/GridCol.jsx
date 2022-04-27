@@ -15,6 +15,7 @@ export const GridCol = ({
   ...rest
 }) => {
   const hasInfix = size || small || medium || large;
+
   const classNames = classnames(
     className,
     {
