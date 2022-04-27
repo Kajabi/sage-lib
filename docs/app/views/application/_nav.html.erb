@@ -37,10 +37,10 @@
       },
     } %>
     <%= sage_component SageButton, {
-      value: "Patterns",
+      value: "Layout Tools",
       attributes: {
-        href: pages_patterns_path(:panels_cards),
-        title: "Common Patterns"
+        href: pages_layout_path(sage_layouts_sorted.first[:title]),
+        title: "Layout Tools"
       },
       subtle: true,
       icon: {

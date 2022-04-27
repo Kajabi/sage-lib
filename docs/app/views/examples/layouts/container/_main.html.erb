@@ -1,0 +1,61 @@
+<%= render "examples/layouts/layout",
+  layout_data: layout_data,
+  core_class: SageContainer,
+  intro: "
+    Container is a basic wrapper you can use to confine groups of content into spaces
+    according to the Design system container tokens.
+  ",
+  initial_prop_values: { content: render("examples/shared/slot_placeholder", name: "content", description: "Your content goes here") },
+  examples: [
+    {
+      type: "group",
+      title: "Container Sizes",
+      description: "
+        The primary property on the `SageContainer` is the `size` property,
+        which configures the maximum width of the container.
+      ",
+      items: [
+        {
+          title: "Size: `tiny`",
+          partial: "size-tiny",
+        },
+        {
+          title: "Size: `xs`",
+          partial: "size-xs",
+        },
+        {
+          title: "Size: `sm`",
+          partial: "size-sm",
+        },
+        {
+          title: "Size: `md`",
+          partial: "size-md",
+        },
+        {
+          title: "Size: `lg`",
+          partial: "size-lg",
+        },
+        {
+          title: "Size: `xl`",
+          partial: "size-xl",
+        },
+        {
+          title: "Size: `full`",
+          partial: "size-full",
+        }
+      ]
+    },
+  ],
+  props: [
+    {
+      name: "size",
+      type: "`#{SageTokens::CONTAINER_SIZES.inspect()}`",
+      default: "`\"full\"`",
+      description: "
+        Specify the size of the container.
+        This is used as a maximum width according to the system container sizes
+        but will flex to fill the space available on smaller screens.
+      ",
+    }
+  ]
+%>

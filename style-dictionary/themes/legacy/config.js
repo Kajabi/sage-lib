@@ -23,7 +23,7 @@ module.exports = {
     },
     railsTokens: {
       transformGroup: 'sage/rails/tokens',
-      buildPath: 'docs/lib/sage_rails/app/sage_components/',
+      buildPath: 'docs/lib/sage_rails/app/sage_tokens/',
       files: [{
         destination: 'sage_dictionary_legacy.rb',
         format: 'sage/rails/tokens',

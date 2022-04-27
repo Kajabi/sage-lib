@@ -1,0 +1,12 @@
+<div class="docs-slot-placeholder">
+  <% if name.present? %>
+    <p class="docs-slot-placeholder__name">
+      Slot name: <%= name %>
+    </p>
+  <% end %>
+  <% if description.present? %>
+    <div class="docs-slot-placeholder__description">
+      <%= md(description, use_sage_type: true) %>
+    </div>
+  <% end %>
+</div>

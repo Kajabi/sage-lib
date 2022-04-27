@@ -30,6 +30,10 @@ module ApplicationHelper
     current_page?(pages_helpers_path(:spacing)) || (params[:title] && current_page?(pages_helpers_path(params[:title])))
   end
 
+  def current_page_layouts?
+    current_page?(pages_layout_path) || (params[:title] && current_page?(pages_layout_path(params[:title])))
+  end
+
   def current_page_components?
     current_page?(pages_components_path) || (params[:title] && current_page?(pages_component_path(params[:title])))
   end
