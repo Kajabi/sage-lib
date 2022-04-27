@@ -1,0 +1,49 @@
+<%= sage_component SageFrame, {
+  align: "start-spread",
+  border: "default",
+  border_radius: "lg",
+  direction: "horizontal",
+  padding: "sm",
+  width: "360px",
+} do %>
+  <%= sage_component SageFrame, { gap: "xs" } do %>
+    <%= sage_component SageFrame, { gap: "none" } do %>
+      <h3 class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_200}" %>">
+        All payments
+      </h3>
+      <%= sage_component SageFrame, {
+        align: "baseline-left",
+        direction: "horizontal",
+        gap: "xs",
+        tag: "p"
+      } do %>
+        <b class="<%= "#{SageClassnames::TYPE::HEADING_5}" %>">
+          40
+        </b>
+        <span class="<%= "#{SageClassnames::TYPE::BODY_XSMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_100}" %>">
+          successful payments
+        </span>
+      <% end %>
+    <% end %>
+    <%= sage_component SageButton, {
+      value: "View all",
+      icon: { style: "right", name: "arrow-right" },
+      style: "primary",
+      subtle: true,
+    } %>
+  <% end %>
+  <%= sage_component SageFrame, {
+    align: "top-right",
+    gap: "xs",
+    width: "120px"
+  } do %>
+    <%= sage_component SageLabel, {
+      color: "published",
+      value: "33%",
+      icon: "up-small",
+    } %>
+    <div>
+      [chart]
+    </div>
+  <% end %>
+<% end %>

@@ -1,1 +1,182 @@
 <p>Coming soon!</p>
+<%# 
+
+Assets for this file can be found here:
+https://www.figma.com/file/WFBaFNTdHUwlTwHEfe1jtR/Frame-Documentation?node-id=0%3A1
+
+%>
+<%= render "examples/layouts/layout",
+  layout_data: layout_data,
+  core_class: SageFrame,
+  intro: "
+    The SageFrame component is set up to mirror configurations found in the auto layout feature of Figma,
+    which is commonly used to create compound layouts.
+
+    When you select a group, component, or artboard layer in Figma, look in the sidebar on the right side
+    of the interface under the Design tab for this panel (You will need Edit access to a Figma file in order to access the Design tab to see this panel):
+
+    #{image_tag("figma-auto-layout-labeled.png")}
+
+    These four sections correspond to properties with the same name on the SageFrame component (see the Properties tab for more details).
+    You can therefore easily match a layout from a Figma design by using a SageFrame with the same settings.
+  ",
+  initial_prop_values: {
+    content: render("examples/shared/slot_placeholder",
+      name: "content",
+      description: "Your content goes here"
+    )
+  },
+  examples: [
+    {
+      title: "A custom block",
+      partial: "custom_block",
+    },
+    {
+      title: 'A "stat box"',
+      partial: "stat_box",
+    },
+  ],
+  props: [
+    {
+      name: "align",
+      description: "
+        Configures how the items within the Frame align based on the direction of flow.
+
+        Corresponds to Figma auto layout setting:
+
+        #{image_tag("figma-auto-layout-alignment.png")}
+      ",
+      type: "
+        | Setting | Value |
+        |---|---|
+        | #{image_tag("figma-auto-layout-align-top-left.png")} or #{image_tag("figma-auto-layout-align-top-left-vertical.png")} | `top-left` |
+        | #{image_tag("figma-auto-layout-align-top-center.png")} or #{image_tag("figma-auto-layout-align-top-center-vertical.png")} | `top-center` |
+        | #{image_tag("figma-auto-layout-align-top-right.png")} or #{image_tag("figma-auto-layout-align-top-right-vertical.png")} | `top-right` |
+        | #{image_tag("figma-auto-layout-align-center-left.png")} or #{image_tag("figma-auto-layout-align-center-left-vertical.png")} | `center-left` |
+        | #{image_tag("figma-auto-layout-align-center.png")} or #{image_tag("figma-auto-layout-align-center-vertical.png")} | `center` |
+        | #{image_tag("figma-auto-layout-align-center-right.png")} or #{image_tag("figma-auto-layout-align-center-right-vertical.png")} | `center-right` |
+        | #{image_tag("figma-auto-layout-align-bottom-left.png")} or #{image_tag("figma-auto-layout-align-bottom-left-vertical.png")} | `bottom-left` or `baseline-left`* |
+        | #{image_tag("figma-auto-layout-align-bottom-center.png")} or #{image_tag("figma-auto-layout-align-bottom-center-vertical.png")} | `bottom-center` or `baseline-center`* |
+        | #{image_tag("figma-auto-layout-align-bottom-right.png")} or #{image_tag("figma-auto-layout-align-bottom-right-vertical.png")} | `bottom-right` or `baseline-right`*  |
+        | #{image_tag("figma-auto-layout-align-start-spread.png")} or #{image_tag("figma-auto-layout-align-start-spread-vertical.png")} | `start-spread` |
+        | #{image_tag("figma-auto-layout-align-center-spread.png")} or #{image_tag("figma-auto-layout-align-center-spread-vertical.png")} | `center-spread` |
+        | #{image_tag("figma-auto-layout-align-end-spread.png")} or #{image_tag("figma-auto-layout-align-end-spread-vertical.png")} | `end-spread` or `baseline-spread`*  |
+
+        \* Sometimes when setting two type elements with `bottom` or `end` alignment, they still appear not aligned.
+        In such cases you can try `baseline` and often achieve a better result.
+      ",
+      default: '`top-left`',
+    },
+    {
+      name: "`background`",
+      description: 'Provide a background color for the Frame if desired.',
+      type: 'String, (valid CSS background setting such as a hex value)',
+      default: '`nil`',
+    },
+    {
+      name: "`border`",
+      description: 'Provide a border setting from one of the available border types.',
+      type: "`#{SageTokens::FRAME_BORDERS.inspect()}`",
+      default: '`nil`',
+    },
+    {
+      name: "`border_radius`",
+      description: "Provide a border radius from one of the available border radius types.
+
+    Corresponds to Figma setting:
+
+    #{image_tag("figma-border-radius.png")}
+      ", use_sage_type: true,
+      type: "
+    | Setting | Value |
+    |---|---|
+    | `0px` | `none` |
+    | `4px` | `sm` |
+    | `6px` | `md` |
+    | `8px` | `lg` |
+      ",
+      default: '`nil`',
+    },
+    {
+      name: "`direction`",
+      description: "Set which direction the Frame contents should flow.
+
+    Corresponds to Figma auto layout setting:
+
+    #{image_tag("figma-auto-layout-direction.png")}
+      ", use_sage_type: true,
+      type: "
+    | Setting | Value |
+    |---|---|
+    | #{image_tag("figma-auto-layout-direction-vertical.png")} | `vertical` |
+    | #{image_tag("figma-auto-layout-direction-horizontal.png")} | `horizontal` |
+      ",
+      default: '',
+    },
+    {
+      name: "`gap`",
+      description: "
+        Set up an even gap between all items in the Frame.
+
+        Corresponds to Figma auto layout setting:
+
+        #{image_tag("figma-auto-layout-gap.png")}
+      ",
+      type: "
+        | Setting | Value |
+        |---|---|
+        | `0px` | `none` |
+        | `4px` | `2xs` |
+        | `8px` | `xs` |
+        | `16px` | `sm` |
+        | `24px` | `md` |
+        | `32px` | `lg` |
+        | `48px` | `xl` |
+        | `64px` | `2xl` |
+      ",
+      default: '`sm`',
+    },
+    {
+      name: "`padding`",
+      description: "
+        Add spacing between the Frame edge and its contents.
+
+        Corresponds to Figma auto layout setting:
+
+        #{image_tag("figma-auto-layout-padding.png")} 
+      ",
+      type: "
+        | Setting | Value |
+        |---|---|
+        | `0px` | `none` |
+        | `4px` | `2xs` |
+        | `8px` | `xs` |
+        | `16px` | `sm` |
+        | `24px` | `md` |
+        | `32px` | `lg` |
+        | `48px` | `xl` |
+        | `64px` | `2xl` |
+      ",
+      default: '`nil`',
+    },
+    {
+      name: "`tag`",
+      description: "Provide the HTML tag you want the Frame to output.",
+      type: 'String (HTML tags)',
+      default: '`div`',
+    },
+    {
+      name: "`width`",
+      description: 'Provide a width setting either from a preset or as a CSS length value.',
+      type: "
+        | Value | Description |
+        |---|---|
+        | `<string>` | Provide a custom width setting. |
+        | `hug` | Frame hugs its contents and adjusts to their widths. |
+        | `flex` | Frame flexes in available space. |
+        | `fill` | Fills 100% of the space available. |
+      ",
+      default: '`nil`',
+    },
+  ]
+%>

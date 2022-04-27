@@ -24,6 +24,7 @@ export { DataCard } from './DataCard';
 export { EmptyState } from './EmptyState';
 export { ExpandableCard } from './ExpandableCard';
 export { FormSection } from './FormSection';
+export { Frame } from './Frame';
 export { Grid } from './Grid';
 export { HelpLink } from './HelpLink';
 export { Hint } from './Hint';
