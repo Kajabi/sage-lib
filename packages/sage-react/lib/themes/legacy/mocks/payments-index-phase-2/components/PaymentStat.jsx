@@ -8,7 +8,7 @@ import {
   SageClassnames,
   Tooltip,
 } from '../../..';
-import {  } from '../../../Icon';
+import { SageTokens } from '../../../configs';
 
 export const PaymentStat = ({
   change,
@@ -19,23 +19,35 @@ export const PaymentStat = ({
 }) => (
   <Panel>
     <Panel.Block>
-      <Card.Row gridTemplate="te" className={`${SageClassnames.SPACERS.SM_BOTTOM}`}>
-        <h4 className={`${SageClassnames.TYPE.HEADING_5}`}>
-          {title}
-        </h4>
-        <Tooltip content={tooltip}>
-          <Icon icon={Icon.ICONS.INFO_CIRCLE} />
-        </Tooltip>
-      </Card.Row>
-      <Card.Row gridTemplate="et" gap="xs">
-        <p class={`${SageClassnames.TYPE.HEADING_2} ${SageClassnames.TYPE_COLORS.CHARCOAL_500}`}>
+      {title && (
+        <Card.Row
+          gridTemplate={SageTokens.GRID_TEMPLATES.TE}
+          className={`${SageClassnames.SPACERS.SM_BOTTOM}`}
+        >
+          <h4 className={`${SageClassnames.TYPE.HEADING_5}`}>
+            {title}
+          </h4>
+          {tooltip && (
+            <Tooltip content={tooltip}>
+              <Icon icon={Icon.ICONS.INFO_CIRCLE} />
+            </Tooltip>
+          )}
+        </Card.Row>
+      )}
+      <Card.Row
+        gridTemplate={SageTokens.GRID_TEMPLATES.ET}
+        gap={SageTokens.GRID_GAP_OPTIONS.XS}
+      >
+        <p className={`${SageClassnames.TYPE.HEADING_2} ${SageClassnames.TYPE_COLORS.CHARCOAL_500}`}>
           {value}
         </p>
         {change && <Label {...change} />}
       </Card.Row>
-      <p class={`${SageClassnames.TYPE.BODY_XSMALL} ${SageClassnames.TYPE_COLORS.CHARCOAL_100}`}>
-        {subtext}
-      </p>
+      {subtext && (
+        <p className={`${SageClassnames.TYPE.BODY_XSMALL} ${SageClassnames.TYPE_COLORS.CHARCOAL_100}`}>
+          {subtext}
+        </p>
+      )}
     </Panel.Block>
   </Panel>
 );
@@ -43,6 +55,7 @@ export const PaymentStat = ({
 PaymentStat.defaultProps = {
   change: null,
   subtext: null,
+  title: null,
   tooltip: null,
   value: 0,
 };
@@ -52,7 +65,7 @@ PaymentStat.propTypes = {
   subtext: PropTypes.string,
   title: PropTypes.string,
   tooltip: PropTypes.string,
-  value: PropTypes.oneOf([
+  value: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.number,
   ]),

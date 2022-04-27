@@ -15,14 +15,11 @@ export const PriceCell = ({ price, currency }) => (
 );
 
 PriceCell.defaultProps = {
-  price: 0,
+  price: '$0.00',
   currency: 'USD',
 };
 
 PriceCell.propTypes = {
-  price: PropTypes.oneOf([
-    PropTypes.string,
-    PropTypes.number,
-  ]),
+  price: PropTypes.string,
   currency: PropTypes.string,
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Main } from './components';
+import { Main } from './Main';
 
 export default {
   title: 'Mocks/Payments Index, Phase 2',
