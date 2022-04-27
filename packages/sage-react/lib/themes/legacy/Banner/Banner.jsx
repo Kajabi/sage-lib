@@ -3,30 +3,43 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
 export const Banner = ({
+  active,
+  bannerContext,
   children,
   className,
-  color,
-  label,
+  dismissable,
+  id,
+  link,
+  text,
+  type,
   ...rest
 }) => {
   const classNames = classnames(
     'sage-banner',
     className,
     {
+      [`sage-banner--${type}`]: type,
+      [`sage-banner--active`]: active,
+    }
+  );
 
+  const wrapperClassNames = classnames(
+    'sage-banner-wrapper',
+    {
+      [`sage-banner-wrapper--context-${bannerContext}`]: bannerContext,
     }
   );
 
   return (
-    // <span className={classNames} style={style} {...attrs} {...rest}>
-    //   {children}
-    // </span>
+    <div className={classNames} {...rest}>
+      {children}
+    </div>
   );
 };
 
 Banner.defaultProps = {
   active: null,
-  bannerContext,
+  bannerContext: null,
   children: null,
   className: null,
   dismissable: null,
