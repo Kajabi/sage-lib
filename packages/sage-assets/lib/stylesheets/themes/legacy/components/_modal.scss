@@ -116,10 +116,10 @@ $-modal-fullscreen-top-spacing: rem(104px);
 
   [data-sage-animate].sage-drawer & {
     transition:
-    opacity 0.1s ease-in,
-    width 0.5s ease-in-out,
-    max-width 0.5s ease-in-out,
-    transform 0.15s ease-out;
+      opacity 0.1s ease-in,
+      width 0.5s ease-in-out,
+      max-width 0.5s ease-in-out,
+      transform 0.15s ease-out;
   }
 
   [data-sage-animate-direction="top"] & {
