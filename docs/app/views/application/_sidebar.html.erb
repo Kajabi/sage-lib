@@ -37,29 +37,6 @@
       ]
     } %>
   <% end %>
-  <% if current_page_patterns? %>
-    <%= sage_component SageNav, {
-      items: [
-        { link: pages_patterns_path(:panels_cards), text: "PATTERNS", items: [
-          {
-            text: "Organization",
-            link: pages_patterns_path(:panels_cards),
-            active: current_page?(pages_patterns_path(:panels_cards)),
-          },
-          {
-            text: "12 Col Grid",
-            link: pages_patterns_path(:grid),
-            active: current_page?(pages_patterns_path(:grid)),
-          },
-          {
-            text: "Grid Templates",
-            link: pages_patterns_path(:grid_templates),
-            active: current_page?(pages_patterns_path(:grid_templates)),
-          }
-        ] }
-      ]
-    } %>
-  <% end %>
   <% if current_page_interactions? %>
     <%= sage_component SageNav, {
       items: [
@@ -81,11 +58,13 @@
             text: "Spacing",
             link: pages_helpers_path(:spacing),
             active: current_page?(pages_helpers_path(:spacing)),
-          }, {
+          },
+          {
             text: "Truncation",
             link: pages_helpers_path(:truncation),
             active: current_page?(pages_patterns_path(:truncation)),
-          }, {
+          },
+          {
             text: "Reveal",
             link: pages_helpers_path(:reveal),
             active: current_page?(pages_patterns_path(:reveal)),
@@ -94,7 +73,7 @@
       ]
     } %>
   <% end %>
-  <% if current_page_layouts? %>
+  <% if current_page_layouts? || current_page_patterns? %>
     <%
       layout_list = []
       sage_layouts_sorted.each do |layout|
@@ -104,10 +83,22 @@
           active: current_page?(pages_layout_path(layout[:title])),
         }
       end
+
+      layout_list << {
+        text: "12 Col Grid",
+        link: pages_patterns_path(:grid),
+        active: current_page?(pages_patterns_path(:grid)),
+      }
+
+      layout_list << {
+        text: "Grid Templates",
+        link: pages_patterns_path(:grid_templates),
+        active: current_page?(pages_patterns_path(:grid_templates)),
+      }
     %>
     <%= sage_component SageNav, {
       items: [
-        { link: pages_layout_path(sorted_sage_components[0][:title]), text: "LAYOUTS", items: layout_list }
+        { link: pages_layout_path(sorted_sage_components[0][:title]), text: "LAYOUT TOOLS", items: layout_list },
       ]
     } %>
   <% end %>
