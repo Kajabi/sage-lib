@@ -73,6 +73,7 @@ module MocksHelper
         alias: "payments_index_phase_2",
         jira_epic: "SAGE-471",
         name: "Payments Index Phase 2",
+        no_custom_styles: true,
         no_rails_helper: true,
         no_rails_js: true,
         no_rails_partials: true,
