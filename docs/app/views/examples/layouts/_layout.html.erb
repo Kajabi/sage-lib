@@ -16,17 +16,6 @@
           },
         ]
       } %>
-      <%= sage_component SageButton, {
-        value: "#{image_tag("logo-react.svg", height: "20px")} React Layout",
-        attributes: {
-          href: storybook_url(layout_data[:react_layout_slug]),
-          target: "_blank",
-          rel: "noopener",
-          title: "Open Storybook React site"
-        },
-        subtle: true,
-        style: "secondary",
-      } if defined?(layout_data[:react_layout_slug]) and layout_data[:react_layout_slug] %>
     <% end %>
 
     <%= sage_component SageTabsPane, { id: "intro", panel_spacing: true } do %>
