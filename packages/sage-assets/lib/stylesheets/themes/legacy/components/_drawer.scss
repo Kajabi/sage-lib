@@ -9,6 +9,8 @@
 
 .sage-drawer {
   --sage-drawer-size: #{rem(300px)};
+  --sage-drawer-mobile-size: calc(100vw - #{rem(40px)});
+
   justify-content: flex-end;
   padding: 0;
 }

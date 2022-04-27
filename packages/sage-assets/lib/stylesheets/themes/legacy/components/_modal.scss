@@ -84,8 +84,15 @@ $-modal-fullscreen-top-spacing: rem(104px);
 
   .sage-drawer & {
     height: 100vh;
-    max-width: var(--sage-drawer-size);
     border-radius: 0;
+
+    @media (max-width: sage-breakpoint(sm-max)) {
+      max-width: var(--sage-drawer-size);
+    }
+    
+    @media (max-width: sage-breakpoint(md-min)) {
+      max-width: var(--sage-drawer-mobile-size);
+    }
   }
 
   .sage-drawer--expanded & {
