@@ -1,3 +1,40 @@
+
+<tr>
+  <td><%= md('`active`') %></td>
+  <td><%= md('Whether or not the Drawer should load active by default.') %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`false`') %></td>
+</tr>
+<tr>
+  <td><%= md('`disable_background_dismiss`') %></td>
+  <td><%= md('Whether or not the background behind the Drawer should function as a "dismiss" area that, when clicked, closes the Drawer.') %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`true`') %></td>
+</tr>
+<tr>
+  <td><%= md('`expanded`') %></td>
+  <td><%= md('Whether or not the Drawer should start as larger/expanded') %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`false`') %></td>
+</tr>
+<tr>
+  <td><%= md('`expanded_size`') %></td>
+  <td><%= md('Sets the size of the Drawer when it is in larger/expanded mode.') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil` (CSS default is `300px`)') %></td>
+</tr>
+<tr>
+  <td><%= md('`id`') %></td>
+  <td><%= md('Unique identifier for the Drawer that is used to trigger actions on the Drawer, similar to Modal.') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
+  <td><%= md('`size`') %></td>
+  <td><%= md('Sets the size of teh Drawer when it is in smaller/collapsed mode (default after first activated).') %></td>
+  <td><%= md('String') %></td>
+  <td><%= md('`nil` (CSS default is `100vw`') %></td>
+</tr>
 <tr>
   <td><%= md('`show_close`') %></td>
   <td><%= md('Toggles whether or not to show the default Close button including built-in dismiss functionality.') %></td>
@@ -23,11 +60,36 @@
   </td>
 </tr>
 <tr>
-  <td colspan="2"><%= md('**Sections**') %></td>
-  <td colspan="2"><%= md('**`Element`**') %></td>
+  <td><%= md('**Sections**') %></td>
+  <td colspan="3"><%= md('**`Element`**') %></td>
 </tr>
 <tr>
   <td><%= md('`sage_drawer_header`') %></td>
-  <td><%= md('Provide custom content for the header instead of a simple title.') %></td>
-  <td><%= md('HTML') %></td>
+  <td colspan="3"><%= md('Provide custom content for the header instead of a simple title.') %></td>
 </tr>
+<tr>
+  <td><%= md('**Custom HTML Attributes**') %></td>
+  <td colspan="2"><%= md('**Description**') %></td>
+  <td><%= md('**Value**') %></td>
+</tr>
+<tr>
+  <td><%= md('`data-js-drawer-expand`') %></td>
+  <td colspan="2"><%= md('Place on an interactive element, which, when clicked, should trigger expanding a particular drawer to its larger/expanded size.') %></td>
+  <td><%= md('`string` matching the `id` for a corresponding `SageDrawer`') %></td>
+</tr>
+<tr>
+  <td><%= md('`data-js-drawer-collapse`') %></td>
+  <td colspan="2"><%= md('Place on an interactive element, which, when clicked, should trigger collapsing a particular drawer to its smaller/collapsed size.') %></td>
+  <td><%= md('`string` matching the `id` for a corresponding `SageDrawer`') %></td>
+</tr>
+<tr>
+  <td><%= md('`data-js-drawer-expanded-content`') %></td>
+  <td colspan="2"><%= md('Place on an element or group of elements you want to be visible _only_ when the drawer is in its larger/expanded size.') %></td>
+  <td><%= md('`string` matching the `id` for a corresponding `SageDrawer`') %></td>
+</tr>
+<tr>
+  <td><%= md('`data-js-drawer-collapsed-content`') %></td>
+  <td colspan="2"><%= md('Place on an element or group of elements you want to be visible _only_ when the drawer is in its smaller/collapsed size.') %></td>
+  <td><%= md('`true | ""`') %></td>
+</tr>
+
