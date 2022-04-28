@@ -1,7 +1,7 @@
 <% if defined?(props) %>
   <div class="<%= SageClassnames::GRID_CARD %>">
     <h3>Properties</h3>
-    <%= sage_table_for props, responsive: true, sortable: true do | t | %>
+    <%= sage_table_for props, responsive: true, sortable: true, striped: true do | t | %>
       <% t.column :name, label: "Name" do | c | %>
         <%= md("`#{c[:name]}`") %>
       <% end %> 
