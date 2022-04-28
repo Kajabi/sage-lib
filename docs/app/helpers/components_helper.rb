@@ -255,14 +255,6 @@ module ComponentsHelper
         figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F9Km09NjlZHYWsMP7EGT8tI%2F%255BWIP%255D-Sage-3-%25E2%2580%2594-Admin-Components%3Fnode-id%3D3435%253A9",
       },
       {
-        title: "frame",
-        description: "A versatile container tool paired with Figma auto-layout settings to make assembling layouts simpler.", 
-        scss: "todo",
-        rails: "todo",
-        react: "todo",
-        a11y: "todo",
-      },
-      {
         title: "hint",
         description: "A hint is used to display non-critical informative text.",
         scss: "done",
