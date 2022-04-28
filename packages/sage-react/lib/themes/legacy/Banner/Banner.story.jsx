@@ -7,6 +7,7 @@ export default {
   component: Banner,
   args: {
     active: true,
+    bannerContext: "This is text",
     text: "This is text"
   },
 };

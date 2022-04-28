@@ -1,31 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import { BannerContent } from './BannerContent';
 
 export const BannerWrapper = ({
-  active,
   bannerContext,
-  children,
-  className,
-  dismissable,
-  id,
-  link,
-  text,
-  type,
   ...rest
 }) => {
   const classNames = classnames(
     'sage-banner-wrapper',
-    className,
     {
-      [`sage-banner--${type}`]: type,
-      [`sage-banner--active`]: active,
+      [`sage-banner-wrapper--context-${bannerContext}`]: bannerContext,
     }
   );
 
   return (
-    <div className={classNames} {...rest}>
-      <Banner />
+    <div className={classNames}>
+      <BannerContent {...rest} />
     </div>
   );
 };

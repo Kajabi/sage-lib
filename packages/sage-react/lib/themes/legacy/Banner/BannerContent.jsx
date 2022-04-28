@@ -2,9 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-export const Banner = ({
+export const BannerContent = ({
   active,
-  bannerContext,
   children,
   className,
   dismissable,
@@ -23,23 +22,14 @@ export const Banner = ({
     }
   );
 
-  const wrapperClassNames = classnames(
-    'sage-banner-wrapper',
-    {
-      [`sage-banner-wrapper--context-${bannerContext}`]: bannerContext,
-    }
-  );
-
   return (
-    <div className={`bannerContext && ${wrapperClassNames}`}>
-      <div className={classNames} {...rest}>
-        {children}
-      </div>
+    <div className={classNames} {...rest}>
+      {children}
     </div>
   );
 };
 
-Banner.defaultProps = {
+BannerContent.defaultProps = {
   active: null,
   bannerContext: null,
   children: null,
@@ -51,7 +41,7 @@ Banner.defaultProps = {
   type: null
 };
 
-Banner.propTypes = {
+BannerContent.propTypes = {
   active: PropTypes.bool,
   bannerContext: PropTypes.string,
   children: PropTypes.node,

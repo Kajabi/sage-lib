@@ -1,36 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
-import BannerContent from './BannerContent';
-import BannerWrapper from './BannerWrapper'
+import { BannerContent } from './BannerContent';
+import { BannerWrapper } from './BannerWrapper';
 
 export const Banner = (props) => {
-  const {
-    active,
-    bannerContext,
-    className,
-    type,
-  } = props;
-  const classNames = classnames(
-    'sage-banner',
-    className,
-    {
-      [`sage-banner--${type}`]: type,
-      [`sage-banner--active`]: active,
-    }
-  );
-
-  const wrapperClassNames = classnames(
-    'sage-banner-wrapper',
-    {
-      [`sage-banner-wrapper--context-${bannerContext}`]: props.bannerContext,
-    }
-  );
-
+  const { bannerContext } = props;
+  console.log("bannercontext: ", bannerContext);
   return (
-    <>
-      (bannerContext ? <BannerWrapper {...props} /> : <BannerContent {...props} />)
-    </>
+    (bannerContext != "")
+      ? <BannerWrapper {...props} />
+      : <BannerContent {...props} />
   );
 };
 
