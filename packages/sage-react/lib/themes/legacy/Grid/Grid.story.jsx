@@ -152,7 +152,7 @@ export const EqualColumns = Template.bind({});
 EqualColumns.args = {
   children: (
     <>
-       <Grid.Row spacerBelow="sm">
+      <Grid.Row spacerBelow="sm">
         <Grid.Col aria-label="Single column">
           <GridDemo>
             Equal Width Column
