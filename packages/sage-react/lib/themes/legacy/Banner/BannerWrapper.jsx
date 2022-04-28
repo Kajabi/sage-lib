@@ -1,18 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import BannerContent from './BannerContent';
-import BannerWrapper from './BannerWrapper'
 
-export const Banner = (props) => {
-  const {
-    active,
-    bannerContext,
-    className,
-    type,
-  } = props;
+export const BannerWrapper = ({
+  active,
+  bannerContext,
+  children,
+  className,
+  dismissable,
+  id,
+  link,
+  text,
+  type,
+  ...rest
+}) => {
   const classNames = classnames(
-    'sage-banner',
+    'sage-banner-wrapper',
     className,
     {
       [`sage-banner--${type}`]: type,
@@ -20,21 +23,14 @@ export const Banner = (props) => {
     }
   );
 
-  const wrapperClassNames = classnames(
-    'sage-banner-wrapper',
-    {
-      [`sage-banner-wrapper--context-${bannerContext}`]: props.bannerContext,
-    }
-  );
-
   return (
-    <>
-      (bannerContext ? <BannerWrapper {...props} /> : <BannerContent {...props} />)
-    </>
+    <div className={classNames} {...rest}>
+      <Banner />
+    </div>
   );
 };
 
-Banner.defaultProps = {
+BannerWrapper.defaultProps = {
   active: null,
   bannerContext: null,
   children: null,
@@ -46,7 +42,7 @@ Banner.defaultProps = {
   type: null
 };
 
-Banner.propTypes = {
+BannerWrapper.propTypes = {
   active: PropTypes.bool,
   bannerContext: PropTypes.string,
   children: PropTypes.node,
