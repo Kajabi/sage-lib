@@ -54,6 +54,9 @@ Sage.init = function(elementNamesToInitLegacy) {
   initDocumentPresenceListener('[data-js-carousel]',                             Sage.carousel.init,      false);
   initDocumentPresenceListener('[data-js-alert]', Sage.alert.init, false);
   initDocumentPresenceListener('[data-js-list-sortable]', Sage.sortableList.init, Sage.sortableList.unbind);
+  initDocumentPresenceListener('[data-js-drawer-expand]', Sage.drawerExpandCollapse.initExpand, Sage.drawerExpandCollapse.unbindExpand);
+  initDocumentPresenceListener('[data-js-drawer-collapse]', Sage.drawerExpandCollapse.initCollapse, Sage.drawerExpandCollapse.unbindCollapse);
+  initDocumentPresenceListener('[data-js-drawer-expanded-content]', Sage.drawerExpandCollapse.initExpandCollapse, false);
 
   // ==================================================
   // Event Listeners
