@@ -3,15 +3,18 @@ import PropTypes from 'prop-types';
 import { BannerContent } from './BannerContent';
 import { BannerWrapper } from './BannerWrapper';
 
+import { BANNER_TYPES } from './configs';
+
 export const Banner = (props) => {
   const { bannerContext } = props;
-  console.log("bannercontext: ", bannerContext);
   return (
-    (bannerContext != "")
+    (bannerContext !== '')
       ? <BannerWrapper {...props} />
       : <BannerContent {...props} />
   );
 };
+
+Banner.TYPES = BANNER_TYPES;
 
 Banner.defaultProps = {
   active: null,
@@ -32,8 +35,7 @@ Banner.propTypes = {
   className: PropTypes.string,
   dismissable: PropTypes.bool,
   id: PropTypes.string,
-  label: PropTypes.string,
-  // link: ,
+  link: PropTypes.string,
   text: PropTypes.string,
-  type: PropTypes.string,
+  type: PropTypes.oneOf(Object.values(BannerContent.TYPES)),
 };

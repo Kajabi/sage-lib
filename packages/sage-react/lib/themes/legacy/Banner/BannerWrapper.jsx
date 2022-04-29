@@ -40,8 +40,7 @@ BannerWrapper.propTypes = {
   className: PropTypes.string,
   dismissable: PropTypes.bool,
   id: PropTypes.string,
-  label: PropTypes.string,
-  // link: ,
+  link: PropTypes.string,
   text: PropTypes.string,
   type: PropTypes.string,
 };

@@ -635,6 +635,27 @@ $-alert-colors: (
       }
     }
   }
+
+  // react only styles as primary classes are added by default
+  &.sage-banner__link.sage-btn--primary,
+  &.sage-banner__close.sage-btn--primary {
+    color: sage-color(white);
+
+    &:focus,
+    &:active {
+      color: sage-color(white);
+
+      &::after {
+        border-color: sage-color(white);
+      }
+    }
+
+    &:not(:focus):hover,
+    &:not(:focus):hover::after {
+      background-color: transparent;
+      color: sage-color(white);
+    }
+  }
 }
 
 .sage-btn--small {

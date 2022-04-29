@@ -1,9 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import { SageTokens } from '../configs';
+import { Button } from '../Button';
+
+import { BANNER_TYPES } from './configs';
 
 export const BannerContent = ({
   active,
+  bannerContext,
   children,
   className,
   dismissable,
@@ -18,16 +23,44 @@ export const BannerContent = ({
     className,
     {
       [`sage-banner--${type}`]: type,
-      [`sage-banner--active`]: active,
+      'sage-banner--active': active,
     }
   );
 
   return (
-    <div className={classNames} {...rest}>
+    <div
+      className={classNames} {...rest}
+      id={id}
+    >
+      {text && (
+        <p className="sage-banner__text">{text}</p>
+      )}
+
+      {link && (
+        <Button
+          children="Hey there"
+          className="sage-banner__link"
+          subtle={true}
+          href="#"
+        />
+      )}
+
       {children}
+
+      {dismissable && (
+        <Button
+          children="Dismiss"
+          className="sage-banner__close"
+          icon={SageTokens.ICONS.REMOVE}
+          iconOnly={true}
+          subtle={true}
+        />
+      )}
     </div>
   );
 };
+
+BannerContent.TYPES = BANNER_TYPES;
 
 BannerContent.defaultProps = {
   active: null,
@@ -48,8 +81,7 @@ BannerContent.propTypes = {
   className: PropTypes.string,
   dismissable: PropTypes.bool,
   id: PropTypes.string,
-  label: PropTypes.string,
-  // link: ,
+  link: PropTypes.string,
   text: PropTypes.string,
-  type: PropTypes.string,
+  type: PropTypes.oneOf(Object.values(BannerContent.TYPES)),
 };
