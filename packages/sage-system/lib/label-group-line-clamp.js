@@ -1,12 +1,11 @@
 import { debounce } from './utils';
 
-Sage.labelGroupLineClamp = (function () {
+Sage.labelGroupLineClamp = (() => {
   // ==================================================
   // Variables
   // ==================================================
 
   const DATA_ATTR_KEY = 'jsSageLabelGroupLineClamp';
-  const DATA_ATTR_SELECTOR = 'data-js-sage-label-group-line-clamp';
   const CLASSNAME_LINE_CLAMP_INIT_DONE = 'sage-label-group--line-clamp-init-done';
   const CLASSNAME_LINE_CLAMP_ITEM = 'sage-label-group__line-clamp-item';
   const CLASSNAME_LINE_CLAMP_ITEM_HIDDEN = 'sage-label-group__line-clamp-item--hidden';
@@ -20,7 +19,7 @@ Sage.labelGroupLineClamp = (function () {
   // Functions
   // ==================================================
 
-  const showItemsWithinClampedLines = () => {
+  const clampLines = () => {
     // Get root's current left offset
     const { left: elRootLeft } = elRoot.getBoundingClientRect();
 
@@ -39,7 +38,6 @@ Sage.labelGroupLineClamp = (function () {
       // then we've bumped to a new line.
       if (!lineMaxReached && child.getBoundingClientRect().left === elRootLeft) {
         lines += 1;
-        console.log('lines', lines);
       }
       
       // If this item caused line clamp to go too far, then hide it
@@ -65,6 +63,16 @@ Sage.labelGroupLineClamp = (function () {
     }
   };
 
+  const debounceClampLines = (e) => {
+    // Ensure all items are hidden
+    document.querySelectorAll(CLASSNAME_LINE_CLAMP_ITEM).forEach(
+      child => child.classList.add(CLASSNAME_LINE_CLAMP_ITEM_HIDDEN)
+    );
+
+    // Reapply line clamp
+    clampLines();
+  };
+
   const setupLineClamp = () => {
     // Initially the component will hide children 
     // when the line clamp variable is present.
@@ -85,32 +93,30 @@ Sage.labelGroupLineClamp = (function () {
 
     // Now we need to dynamically show/hide until we reach maximum line size
     // at this initial screen size
-    showItemsWithinClampedLines();
+    clampLines();
 
     // Also add a debounced resize listener to reprocess as well.
-    window.addEventListener("resize",debounce(function(e){
-      // Ensure all items are hidden
-      document.querySelectorAll(CLASSNAME_LINE_CLAMP_ITEM).forEach(
-        child => child.classList.add(CLASSNAME_LINE_CLAMP_ITEM_HIDDEN)
-      );
-      showItemsWithinClampedLines();
-    }));
+    window.addEventListener('resize', debounce(debounceClampLines));
   };
+
+  // ==================================================
+  // Init and unbind
+  // ==================================================
 
   const init = (el) => {
     elRoot = el;
     clamp = Number(el.dataset[DATA_ATTR_KEY]);
-    // console.log('found label group line clamp', clamp, el.children);
 
     setupLineClamp();
   };
 
   const unbind = (el) => {
-    // el.removeEventListener("click", renderDisabledButtonSpinner);
+    // Remove debounced resize listener to reprocess as well.
+    window.removeEventListener('resize', debounce(debounceClampLines));
   };
 
   return {
-    init: init,
-    unbind: unbind
+    init,
+    unbind,
   };
 })();
