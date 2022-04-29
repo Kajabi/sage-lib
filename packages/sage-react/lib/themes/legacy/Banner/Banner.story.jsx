@@ -15,7 +15,7 @@ export default {
     bannerContext: 'sage-demo',
     dismissable: true,
     link: '#',
-    text: "Alert description text",
+    text: 'Alert description text',
     type: Banner.TYPES.DEFAULT
   },
 };

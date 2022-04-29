@@ -29,7 +29,8 @@ export const BannerContent = ({
 
   return (
     <div
-      className={classNames} {...rest}
+      className={classNames}
+      {...rest}
       id={id}
     >
       {text && (
@@ -38,23 +39,25 @@ export const BannerContent = ({
 
       {link && (
         <Button
-          children="Hey there"
           className="sage-banner__link"
           subtle={true}
           href="#"
-        />
+        >
+          banner link
+        </Button>
       )}
 
       {children}
 
       {dismissable && (
         <Button
-          children="Dismiss"
           className="sage-banner__close"
           icon={SageTokens.ICONS.REMOVE}
           iconOnly={true}
           subtle={true}
-        />
+        >
+          Dismiss
+        </Button>
       )}
     </div>
   );
