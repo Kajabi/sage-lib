@@ -17,3 +17,11 @@ export function objectToHtmlAttributes(object) {
 export const isNextTheme = () => {
   return window.SAGE_THEME === 'sage_theme_next';
 };
+
+export const debounce = (func) => {
+  var timer;
+  return (event) => {
+    if (timer) clearTimeout(timer);
+    timer = setTimeout(func, 100, event);
+  };
+};

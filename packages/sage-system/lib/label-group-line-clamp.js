@@ -1,3 +1,5 @@
+import { debounce } from './utils';
+
 Sage.labelGroupLineClamp = (function () {
   // ==================================================
   // Variables
@@ -19,34 +21,34 @@ Sage.labelGroupLineClamp = (function () {
   // ==================================================
 
   const showItemsWithinClampedLines = () => {
-    // Must first ensure we have an overflow actions element to measure against
-    if (!elOverflowActions) {
-      return null;
-    }
-
+    // Get root's current left offset
     const { left: elRootLeft } = elRoot.getBoundingClientRect();
 
-    // Turn each item on one at a time until and test the left offset against
+    // Turn each item on one at a time and test the left offset against
     let currentChildIndex = 0,
-      lines = 0;
+      lines = 0,
+      lineMaxReached = false;
 
-    while (currentChildIndex < elRoot.children.length) {
-      const child = elRoot.children[currentChildIndex];
+    const clampItems = elRoot.querySelectorAll(`.${CLASSNAME_LINE_CLAMP_ITEM}`)
+
+    while (currentChildIndex < clampItems.length) {
+      const child = clampItems[currentChildIndex];
       child.classList.remove(CLASSNAME_LINE_CLAMP_ITEM_HIDDEN);
       
       // If this child's left offset matches the root's left
       // then we've bumped to a new line.
-      if (child.getBoundingClientRect().left === elRootLeft) {
+      if (!lineMaxReached && child.getBoundingClientRect().left === elRootLeft) {
         lines += 1;
+        console.log('lines', lines);
       }
       
       // If this item caused line clamp to go too far, then hide it
       // and exit this loop
       if (lines > clamp) {
         child.classList.add(CLASSNAME_LINE_CLAMP_ITEM_HIDDEN);
-        break;
+        lineMaxReached = true;
       }
-      
+
       currentChildIndex += 1;
     }
 
@@ -84,6 +86,15 @@ Sage.labelGroupLineClamp = (function () {
     // Now we need to dynamically show/hide until we reach maximum line size
     // at this initial screen size
     showItemsWithinClampedLines();
+
+    // Also add a debounced resize listener to reprocess as well.
+    window.addEventListener("resize",debounce(function(e){
+      // Ensure all items are hidden
+      document.querySelectorAll(CLASSNAME_LINE_CLAMP_ITEM).forEach(
+        child => child.classList.add(CLASSNAME_LINE_CLAMP_ITEM_HIDDEN)
+      );
+      showItemsWithinClampedLines();
+    }));
   };
 
   const init = (el) => {
