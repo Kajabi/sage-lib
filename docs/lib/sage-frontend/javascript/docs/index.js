@@ -9,6 +9,8 @@ require('./scroll-to-active-nav-item')
 
 require('./mocks')
 
+import SageDocsTabs from './tabs';
+
 // Conditional routing
 // NOTE: modules must be imported above to be initialized below
 if (document.querySelector('.sage-docs') !== null) {
@@ -27,6 +29,11 @@ if (document.querySelector('.sage-docs') !== null) {
 
   if (document.querySelector('.example__code') !== null && document.querySelector('.example__expand-btn') !== null) {
     Sage.docs.example.init();
+  }
+
+  if (document.querySelector('[data-js-tabs=code-example-tabs]')) {
+    let tabs = new SageDocsTabs(document.querySelector('[data-js-tabs=code-example-tabs]'))
+    tabs.init();
   }
 
   window.addEventListener("load", Sage.docs.scrollToActiveNavItem.init);
