@@ -54,13 +54,13 @@ Sage.tabs = (function() {
     let selectedTarget
 
     if (target) {
-      switch(evt.keyCode) {
+      switch (evt.keyCode) {
         case 37: // Left arrow key
           selectedTarget = evt.target.previousElementSibling || evt.target.parentElement.lastElementChild
-        break
+          break
         case 39: // Right arrow key
           selectedTarget = evt.target.nextElementSibling || evt.target.parentElement.firstElementChild
-        break
+          break
       }
     }
 
@@ -74,7 +74,7 @@ Sage.tabs = (function() {
 
     let elTabsParent = document.querySelector(`[${SELECTOR_TABS}="${tabsId}"]`);
     let elTab = elTabsParent.querySelector(`[${SELECTOR_TAB_ITEM}="${paneId}"]`);
-    let tabsArray = Sage.util.nodelistToArray( elTabsParent.querySelectorAll(`[${SELECTOR_TAB_ITEM}]`) );
+    let tabsArray = Sage.util.nodelistToArray(elTabsParent.querySelectorAll(`[${SELECTOR_TAB_ITEM}]`));
 
     tabsArray.forEach((el) => {
       el.classList.remove(el.getAttribute(ACTIVE_CLASS_ATTRIBUTE));
@@ -90,12 +90,12 @@ Sage.tabs = (function() {
     }
 
     let elPane = document.querySelector(`[${SELECTOR_TAB_PANE}="${paneId}"]`);
-    // Ensure there is a matching pane 
+    // Ensure there is a matching pane
     if (!elPane) {
       return;
     }
 
-    let panesArray = Sage.util.nodelistToArray( elPane.parentElement.querySelectorAll(`[${SELECTOR_TAB_PANE}]`) );
+    let panesArray = Sage.util.nodelistToArray(elPane.parentElement.querySelectorAll(`[${SELECTOR_TAB_PANE}]`));
 
     panesArray.forEach((el) => el.classList.remove(CLASS_TAB_PANE_ACTIVE));
     elPane.classList.add(CLASS_TAB_PANE_ACTIVE);
@@ -104,7 +104,18 @@ Sage.tabs = (function() {
   function dispatchChange(tabsId, paneId, evType) {
     let eventDetail = { tabsId, paneId };
     evType = evType || EVENT_SELECT;
-    document.dispatchEvent(new CustomEvent(evType, { detail: eventDetail }));
+
+    let tabComponent = document.querySelector(`[${SELECTOR_TABS}="${tabsId}"]`);
+
+    dispatchChangeEvent(tabComponent, evType, eventDetail)
+  }
+
+  function dispatchChangeEvent(el, evType, eventDetail) {
+    evType = evType || EVENT_SELECT
+    const customEvent = new CustomEvent(evType, { detail: eventDetail })
+    document.dispatchEvent(customEvent);
+
+    el.dispatchEvent(customEvent)
   }
 
   return {
@@ -112,5 +123,4 @@ Sage.tabs = (function() {
     unbind: unbind,
     eventHandlerChange: eventHandlerChange
   }
-
 })();
