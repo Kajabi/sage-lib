@@ -639,21 +639,21 @@ $-alert-colors: (
   // react only styles as primary classes are added by default
   &.sage-banner__link.sage-btn--primary,
   &.sage-banner__close.sage-btn--primary {
-    color: sage-color(white);
+    color: inherit;
 
     &:focus,
     &:active {
-      color: sage-color(white);
+      color: inherit;
 
       &::after {
-        border-color: sage-color(white);
+        border-color: inherit;
       }
     }
 
     &:not(:focus):hover,
     &:not(:focus):hover::after {
       background-color: transparent;
-      color: sage-color(white);
+      // color: sage-color(white);
     }
   }
 }
