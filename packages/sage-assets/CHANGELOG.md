@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.81.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.80.0...@kajabi/sage-assets@0.81.0) (2022-05-02)
+
+
+### Features
+
+* **container:** adjust container sizes larger for xl and full ([e082680](https://github.com/Kajabi/sage-lib/commit/e082680c16b6be32e3157f7991facab671d553cd))
+* **drawer:** add ability to expand and contract drawer ([ceb5597](https://github.com/Kajabi/sage-lib/commit/ceb55976ed45bb606e6f2a24f0d80c9eac0aaa8c))
+* **drawer:** add mobile size variable ([270dd0d](https://github.com/Kajabi/sage-lib/commit/270dd0d80b74665d6f3aecf5e6ed0de695965a1f))
+* **drawer:** add rails expand/contract setup ([54cd3e0](https://github.com/Kajabi/sage-lib/commit/54cd3e01c5fa2cae931bb0f79bc18d38f09bb937))
+* **drawer:** sync up legacy and next styles and changes ([e25f281](https://github.com/Kajabi/sage-lib/commit/e25f2810b11b52f611b38fbd63e992ba0e529707))
+* **drawer:** update documentation and tidy ([47a3524](https://github.com/Kajabi/sage-lib/commit/47a35241310f79745b300a8a67ecdcf578120424))
+
+
+
+
+
 # [0.80.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.79.0...@kajabi/sage-assets@0.80.0) (2022-04-25)
 
 

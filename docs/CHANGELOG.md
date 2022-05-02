@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.61.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.60.0...@kajabi/sage@4.61.0) (2022-05-02)
+
+
+### Features
+
+* **docs:** add layouts section and partials ([ee36ccc](https://github.com/Kajabi/sage-lib/commit/ee36ccc47280c4e570d5f00342d1563198afb033))
+* **docs:** add slot placeholder partial ([e0757e6](https://github.com/Kajabi/sage-lib/commit/e0757e61608c6aebd87a5432198012135a25c854))
+* **docs:** move grid features under layout tools and remove organization ([c629187](https://github.com/Kajabi/sage-lib/commit/c629187d7feb340b1c2af5c041a160690f1b0b96))
+* **drawer:** add rails expand/contract setup ([54cd3e0](https://github.com/Kajabi/sage-lib/commit/54cd3e01c5fa2cae931bb0f79bc18d38f09bb937))
+* **drawer:** fix default value in props ([1feb371](https://github.com/Kajabi/sage-lib/commit/1feb3718f26211d4ca97d175ccf8b7c0caba2adb))
+* **drawer:** sync up legacy and next styles and changes ([e25f281](https://github.com/Kajabi/sage-lib/commit/e25f2810b11b52f611b38fbd63e992ba0e529707))
+* **drawer:** update documentation and tidy ([47a3524](https://github.com/Kajabi/sage-lib/commit/47a35241310f79745b300a8a67ecdcf578120424))
+* **layout:** add container and stubs of other layout tools ([adf0b1a](https://github.com/Kajabi/sage-lib/commit/adf0b1ab4b0944cfa041810d88395b824ac8dedf))
+* **layout:** add layout helper and view for first tool ([3535f86](https://github.com/Kajabi/sage-lib/commit/3535f86b64b1e12ca0a0fe87f5ff5ccae804ed62))
+* **layout:** add new layout tools as PoC ([63b0041](https://github.com/Kajabi/sage-lib/commit/63b004185c631400b71236755c3884d0bc7f17db))
+* move sage rails tokens to a distinct folder ([f3f6a45](https://github.com/Kajabi/sage-lib/commit/f3f6a45214842bd075db141f3883669d6a2e3292))
+
+
+
+
+
 # [4.60.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.59.1...@kajabi/sage@4.60.0) (2022-04-27)
 
 

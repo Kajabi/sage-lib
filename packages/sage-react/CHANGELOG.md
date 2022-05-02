@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.94.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.93.0...@kajabi/sage-react@0.94.0) (2022-05-02)
+
+
+### Features
+
+* **drawer:** add ability to expand and contract drawer ([ceb5597](https://github.com/Kajabi/sage-lib/commit/ceb55976ed45bb606e6f2a24f0d80c9eac0aaa8c))
+* **drawer:** ensure react configs are in correct directory ([1491d58](https://github.com/Kajabi/sage-lib/commit/1491d58d1b511d3c7fe10e10b5be01b574b25def))
+* **drawer:** sync up legacy and next styles and changes ([e25f281](https://github.com/Kajabi/sage-lib/commit/e25f2810b11b52f611b38fbd63e992ba0e529707))
+* **drawer:** update documentation and tidy ([47a3524](https://github.com/Kajabi/sage-lib/commit/47a35241310f79745b300a8a67ecdcf578120424))
+
+
+
+
+
 # [0.93.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.92.0...@kajabi/sage-react@0.93.0) (2022-04-27)
 
 

@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.21.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.20.0...@kajabi/sage-system@0.21.0) (2022-05-02)
+
+
+### Features
+
+* **drawer:** add rails expand/contract setup ([54cd3e0](https://github.com/Kajabi/sage-lib/commit/54cd3e01c5fa2cae931bb0f79bc18d38f09bb937))
+* **drawer:** update documentation and tidy ([47a3524](https://github.com/Kajabi/sage-lib/commit/47a35241310f79745b300a8a67ecdcf578120424))
+
+
+
+
+
 # [0.20.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.19.0...@kajabi/sage-system@0.20.0) (2022-04-25)
 
 
