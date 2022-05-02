@@ -1,17 +1,17 @@
-<%= sage_component SageFrame, {
+<%= sage_layout SageFrame, {
   align: "start-spread",
   border: "default",
-  border_radius: "lg",
+  border_radius: "md",
   direction: "horizontal",
   padding: "sm",
   width: "360px",
 } do %>
-  <%= sage_component SageFrame, { gap: "xs" } do %>
-    <%= sage_component SageFrame, { gap: "none" } do %>
+  <%= sage_layout SageFrame, { gap: "xs" } do %>
+    <%= sage_layout SageFrame, { gap: "none" } do %>
       <h3 class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_200}" %>">
         All payments
       </h3>
-      <%= sage_component SageFrame, {
+      <%= sage_layout SageFrame, {
         align: "baseline-left",
         direction: "horizontal",
         gap: "xs",
@@ -32,7 +32,7 @@
       subtle: true,
     } %>
   <% end %>
-  <%= sage_component SageFrame, {
+  <%= sage_layout SageFrame, {
     align: "top-right",
     gap: "xs",
     width: "120px"
