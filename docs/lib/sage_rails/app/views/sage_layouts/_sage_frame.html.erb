@@ -41,8 +41,9 @@ end
   "
   <% if is_custom_width || is_custom_background %>
     style="
-      <%= "--sage-frame-width: #{width};" if is_custom_width %>
-      <%= "--sage-frame-background: #{background};" if is_custom_background %>
+      <%= "--sage-frame-width: #{width}; " if is_custom_width %>
+      <%= "--sage-frame-background: #{background}; " if is_custom_background %>
+      <%= "flex: #{component.width_ratio}; " if component.width_ratio %>
     "
   <% end %>
   <%= component.generated_html_attributes.html_safe %>

@@ -23,6 +23,7 @@ export const Frame = ({
   padding,
   tag,
   width,
+  widthRatio,
   ...rest
 }) => {
   const classNames = classnames(
@@ -50,6 +51,10 @@ export const Frame = ({
 
   if (!Object.values(SageTokens.COLOR_SLIDERS).includes(background)) {
     styles['--sage-frame-background'] = background;
+  }
+
+  if (widthRatio) {
+    styles['flex'] = widthRatio;
   }
 
   return (
@@ -83,6 +88,7 @@ Frame.defaultProps = {
   padding: FRAME_SPACINGS.NONE,
   tag: 'div',
   width: FRAME_WIDTHS.FLEX,
+  widthRatio: null,
 };
 
 Frame.propTypes = {
@@ -106,4 +112,5 @@ Frame.propTypes = {
     PropTypes.string,
     PropTypes.oneOf(Object.values(Frame.WIDTHS)),
   ]),
+  widthRatio: PropTypes.string,
 };
