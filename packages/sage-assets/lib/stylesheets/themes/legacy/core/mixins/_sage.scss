@@ -230,9 +230,9 @@
 /// Adds automatic sizing to the grid columns. The sibling columns automatically resize accordingly if they don't have defined breakpoint widths
 ///
 @mixin sage-auto-col() {
+  flex: 0 0 auto;
   width: auto;
   max-width: none;
-  flex: 0 0 auto;
 }
 
 ///
