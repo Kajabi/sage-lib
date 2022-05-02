@@ -1,0 +1,13 @@
+<% if defined?(core_class) %>
+  <div class="<%= SageClassnames::GRID_CARD %>">
+    <h3>Prototype</h3>
+    <%= sage_layout SageContainer, (initial_prop_values || {}) %>
+  </div>
+<% end %>
+
+<% if defined?(content) %>
+  <div class="<%= SageClassnames::GRID_CARD %>">
+    <h3>Description</h3>
+    <%= md(content, use_sage_type: true) %>
+  </div>
+<% end %>

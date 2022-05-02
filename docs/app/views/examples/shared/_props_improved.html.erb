@@ -1,0 +1,19 @@
+<% if defined?(props) %>
+  <div class="<%= SageClassnames::GRID_CARD %>">
+    <h3>Properties</h3>
+    <%= sage_table_for props, responsive: true, sortable: true do | t | %>
+      <% t.column :name, label: "Name" do | c | %>
+        <%= md("`#{c[:name]}`") %>
+      <% end %> 
+      <% t.column :description, label: "Description" do | c | %>
+        <%= md(c[:description], use_sage_type: true) %>
+      <% end %> 
+      <% t.column :type, label: "Type" do | c | %>
+        <%= md(c[:type]) %>
+      <% end %> 
+      <% t.column :default, label: "Default" do | c | %>
+        <%= md(c[:default]) %>
+      <% end %> 
+    <% end %>
+  </div>
+<% end %>

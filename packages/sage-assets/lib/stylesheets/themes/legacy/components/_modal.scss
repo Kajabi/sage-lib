@@ -84,8 +84,19 @@ $-modal-fullscreen-top-spacing: rem(104px);
 
   .sage-drawer & {
     height: 100vh;
-    max-width: rem(400px);
     border-radius: 0;
+
+    @media (max-width: sage-breakpoint(sm-max)) {
+      max-width: var(--sage-drawer-size);
+    }
+    
+    @media (max-width: sage-breakpoint(md-min)) {
+      max-width: var(--sage-drawer-mobile-size);
+    }
+  }
+
+  .sage-drawer--expanded & {
+    max-width: var(--sage-drawer-expanded-size);
   }
 
   @media (min-width: sage-breakpoint(lg-min)) {
@@ -108,6 +119,14 @@ $-modal-fullscreen-top-spacing: rem(104px);
     transform: translateY(-#{sage-spacing(md)});
     transition: opacity 0.1s ease-in, transform 0.15s ease-out;
     transition-delay: 0.1s, 0.15s;
+  }
+
+  [data-sage-animate].sage-drawer & {
+    transition:
+      opacity 0.1s ease-in,
+      width 0.5s ease-in-out,
+      max-width 0.5s ease-in-out,
+      transform 0.15s ease-out;
   }
 
   [data-sage-animate-direction="top"] & {
