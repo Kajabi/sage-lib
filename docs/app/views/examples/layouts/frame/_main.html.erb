@@ -160,8 +160,8 @@ In such cases you can try `baseline` and often achieve a better result.
 |---|---|
 | `0px` | `none` |
 | `4px` | `sm` |
-| `6px` | `md` |
-| `8px` | `lg` |
+| `#{SageRails.next_theme? ? "8px" : "6px"}` | `md` |
+| `#{SageRails.next_theme? ? "16px" : "8px"}` | `lg` |
       ",
       default: "`nil`",
     },
