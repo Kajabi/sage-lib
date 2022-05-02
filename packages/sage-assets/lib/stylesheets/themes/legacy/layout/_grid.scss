@@ -100,6 +100,10 @@ $-grid-breakpoint-xl: sage-breakpoint(xl-min);
   padding: 0 calc(#{$-grid-gap} / 2);
 }
 
+.sage-col-auto {
+  @include sage-auto-col;
+}
+
 @for $i from 1 through $-grid-num-columns {
   .sage-col-#{$i},
   .sage-col--sm-#{$i},
@@ -135,6 +139,10 @@ $-grid-breakpoint-xl: sage-breakpoint(xl-min);
       max-width: percentage($i / $-grid-num-columns);
     }
   }
+
+  .sage-col--sm-auto {
+    @include sage-auto-col;
+  }
 }
 
 @media (max-width: $-grid-breakpoint-sm-max) {
@@ -155,6 +163,10 @@ $-grid-breakpoint-xl: sage-breakpoint(xl-min);
 
   .sage-col--sm-show {
     display: none;
+  }
+
+  .sage-col--md-auto {
+    @include sage-auto-col;
   }
 }
 
@@ -177,6 +189,10 @@ $-grid-breakpoint-xl: sage-breakpoint(xl-min);
   .sage-col--md-show {
     display: none;
   }
+
+  .sage-col--lg-auto {
+    @include sage-auto-col;
+  }
 }
 
 @media (max-width: $-grid-breakpoint-lg-max) {
@@ -188,5 +204,9 @@ $-grid-breakpoint-xl: sage-breakpoint(xl-min);
 @media (min-width: $-grid-breakpoint-xl) {
   .sage-col--lg-show {
     display: none;
+  }
+
+  .sage-col--xl-auto {
+    @include sage-auto-col;
   }
 }
