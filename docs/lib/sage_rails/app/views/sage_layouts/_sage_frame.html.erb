@@ -1,0 +1,52 @@
+<%
+# Set up defaults
+# due to cascading values set on custom props,
+# we need to ensure defaults are provided for all values
+
+align = component.align.present? ? component.align : "top-left"
+background = component.background.present? ? component.background : "transparent"
+border = component.border.present? ? component.border : "none"
+border_radius = component.border_radius.present? ? component.border_radius : "none"
+direction = component.direction.present? ? component.direction : "vertical"
+gap = component.gap.present? ? component.gap : "md"
+padding = component.padding.present? ? component.padding : "none"
+width = component.width.present? ? component.width : "flex"
+tag = component.tag.present? ? component.tag : "div"
+
+# Set up additional width configs
+is_custom_width = false
+if (width && !SageTokens::FRAME_WIDTHS.include?(width))
+  is_custom_width = true
+end
+
+# Set up additional background configs
+is_custom_background = false
+if (background && !SageTokens::COLOR_SLIDERS.include?(background))
+  is_custom_background = true
+end
+
+%>
+<<%= tag %>
+  class="
+    sage-frame
+    <%= "sage-frame--align-#{align}" %>
+    <%= "sage-frame--background-#{background}" if !is_custom_background && background %>
+    <%= "sage-frame--border-#{border}" %>
+    <%= "sage-frame--border-radius-#{border_radius}" %>
+    <%= "sage-frame--direction-#{direction}" %>
+    <%= "sage-frame--gap-#{gap}" %>
+    <%= "sage-frame--padding-#{padding}" %>
+    <%= "sage-frame--width-#{width}" if !is_custom_width && width %>
+    <%= component.generated_css_classes %>
+  "
+  <% if is_custom_width || is_custom_background %>
+    style="
+      <%= "--sage-frame-width: #{width}; " if is_custom_width %>
+      <%= "--sage-frame-background: #{background}; " if is_custom_background %>
+      <%= "flex: #{component.width_ratio}; " if component.width_ratio %>
+    "
+  <% end %>
+  <%= component.generated_html_attributes.html_safe %>
+>
+  <%= component.content %>
+</<%= tag %>>

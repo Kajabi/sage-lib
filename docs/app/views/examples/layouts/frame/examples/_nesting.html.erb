@@ -1,0 +1,28 @@
+<%= sage_layout SageFrame, {
+  border: "default",
+  border_radius: "md",
+  padding: "md",
+  direction: "horizontal",
+  align: "center-left"
+} do %>
+  <%= sage_layout SageFrame, { width: "160px" } do %>
+    <%= image_tag("card-placeholder-sm.png", alt: "", style: "max-width: 100%") %>
+  <% end %>
+  <%= sage_layout SageFrame, { width: "flex", gap: "xs" } do %>
+    <%= sage_layout SageFrame, { gap: "none" } do %>
+      <h4 class="<%= SageClassnames::TYPE::HEADING_3 %>">
+        Lorem ipsum dolor sit
+      </h4>
+      <p class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_200}" %>">
+        Consectetur adipiscing elit
+      </p>
+    <% end %>
+    <p class="<%= SageClassnames::TYPE::BODY %>">
+      Aliquam rhoncus ipsum massa, a tempor arcu elementum sed.
+      Nullam tortor odio, ullamcorper vel elementum in, luctus et tortor.
+      Nullam tellus orci, euismod ultricies odio ut, volutpat fermentum diam.
+      Proin rhoncus sit amet felis nec iaculis.
+      Fusce aliquet augue eget semper ultrices.
+    </p>
+  <% end %>
+<% end %>

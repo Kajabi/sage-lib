@@ -1,1 +1,250 @@
-<p>Coming soon!</p>
+<%# 
+
+Assets for this file can be found here:
+https://www.figma.com/file/WFBaFNTdHUwlTwHEfe1jtR/Frame-Documentation?node-id=0%3A1
+
+%>
+<%= render "examples/layouts/layout",
+  layout_data: layout_data,
+  core_class: SageFrame,
+  intro: "
+    The SageFrame component is set up to mirror configurations found in the auto layout feature of Figma,
+    which is commonly used to create compound layouts.
+
+    When you select a group, component, or artboard layer in Figma, look in the sidebar on the right side
+    of the interface under the Design tab for this panel (You will need Edit access to a Figma file in order to access the Design tab to see this panel):
+
+    #{image_tag("figma-auto-layout-labeled.png")}
+
+    These four sections correspond to properties with the same name on the SageFrame component (see the Properties below).
+    You can therefore easily match a layout from a Figma design by using a SageFrame with the same settings.
+  ",
+  initial_prop_values: {
+    content: render("examples/shared/slot_placeholder",
+      name: "content",
+      description: "Your content goes here"
+    )
+  },
+  examples: [
+    {
+      title: "Simple Stack",
+      description: "
+        `SageFrame` has a default `vertical` direction, which means that child items will stack one on top of another.
+        It also has a default `gap` of `sm` (`16px`). In the example below we modify this to a smaller `xs` (`8px`) value,
+        which is commonly used in design for simple stacked content.
+      ",
+      partial: "simple_stack",
+    },
+    {
+      title: "Simple Row",
+      description: "
+        By setting `direction: \"horizontal\"` you can change `SageFrame` to lay out its children in a \"row\".
+      ",
+      partial: "simple_row",
+    },
+    {
+      title: "Bordered Box",
+      description: "
+        Another common design element is a bordered box.
+        While contents may vary greatly, you can use any combination of `border`, `border_radius`, and `padding`
+        to achieve common configurations.
+        Here is one of the most common:
+      ",
+      partial: "bordered_box",
+    },
+    {
+      title: "Nesting Frames",
+      description: "
+        More complex (read: fun!) layouts can be achieved by nesting Frames.
+        In such cases it can also be helpful to make use of the `width` property
+        in order to control the dimensions of the nested items.
+        
+        In the example below, the outermost Frame adds border treatment, padding, and a horizontal direction to form a row.
+        Within this are two Frames:
+        one is set with a fixed width and contains a graphic placeholder;
+        the other contains text content with a `xs` gap.
+        Nested within this content Frame is another frame to contain the \"header\" items and a `gap: \"none\"`
+        that visually groups the heading and subtext better apart from the larger paragraph that follows.
+      ",
+      partial: "nesting",
+    },
+    {
+      title: "Flexible Width Ratios",
+      description: "
+        Sometimes a width that is proportionate to a given space is preferred over a fixed pixel width.
+        In such cases the `width_ratio` property can be used to provide such a ratio.
+        This property maps directly to the [CSS `flex` property](https://developer.mozilla.org/en-US/docs/Web/CSS/flex).
+        Generally speaking, provide an integer that represents that item's ratio to other items.
+        For example, as shown below, a typical 2/3 + 1/3 column set up can be set up
+        with the wider column set to `width_ratio: 2` and the narrower one set to `width_ratio: 1`.
+        Similarly, if you want three items that flex with the same width, set all three to `width_ratio: 1`.
+      ",
+      partial: "ratios",
+    },
+    {
+      title: "Equally-sized Flexing Items",
+      description: "
+        Similar to the prior example, if you want several items that flex with the same width,
+        set all to the same value such as `width_ratio: 1`.
+      ",
+      partial: "ratios_equal",
+    },
+    {
+      title: "A custom block",
+      description: "
+        Additional customized appearance can be achieved with careful use of background color.
+      ",
+      partial: "custom_block",
+    },
+    {
+      title: 'A "stat box"',
+      partial: "stat_box",
+      description: "
+        A wide variety of intricate micro-layouts are possible with Frame.
+      ",
+    },
+  ],
+  props: [
+    {
+      name: "align",
+      description: "
+        Configures how the items within the Frame align based on the direction of flow.
+
+        Corresponds to Figma auto layout setting:
+
+        #{image_tag("figma-auto-layout-alignment.png")}
+      ",
+      type: "
+| Setting | Value |
+|---|---|
+| #{image_tag("figma-auto-layout-align-top-left.png")} or #{image_tag("figma-auto-layout-align-top-left-vertical.png")} | `top-left` |
+| #{image_tag("figma-auto-layout-align-top-center.png")} or #{image_tag("figma-auto-layout-align-top-center-vertical.png")} | `top-center` |
+| #{image_tag("figma-auto-layout-align-top-right.png")} or #{image_tag("figma-auto-layout-align-top-right-vertical.png")} | `top-right` |
+| #{image_tag("figma-auto-layout-align-center-left.png")} or #{image_tag("figma-auto-layout-align-center-left-vertical.png")} | `center-left` |
+| #{image_tag("figma-auto-layout-align-center.png")} or #{image_tag("figma-auto-layout-align-center-vertical.png")} | `center` |
+| #{image_tag("figma-auto-layout-align-center-right.png")} or #{image_tag("figma-auto-layout-align-center-right-vertical.png")} | `center-right` |
+| #{image_tag("figma-auto-layout-align-bottom-left.png")} or #{image_tag("figma-auto-layout-align-bottom-left-vertical.png")} | `bottom-left` or `baseline-left`* |
+| #{image_tag("figma-auto-layout-align-bottom-center.png")} or #{image_tag("figma-auto-layout-align-bottom-center-vertical.png")} | `bottom-center` or `baseline-center`* |
+| #{image_tag("figma-auto-layout-align-bottom-right.png")} or #{image_tag("figma-auto-layout-align-bottom-right-vertical.png")} | `bottom-right` or `baseline-right`*  |
+| #{image_tag("figma-auto-layout-align-start-spread.png")} or #{image_tag("figma-auto-layout-align-start-spread-vertical.png")} | `start-spread` |
+| #{image_tag("figma-auto-layout-align-center-spread.png")} or #{image_tag("figma-auto-layout-align-center-spread-vertical.png")} | `center-spread` |
+| #{image_tag("figma-auto-layout-align-end-spread.png")} or #{image_tag("figma-auto-layout-align-end-spread-vertical.png")} | `end-spread` or `baseline-spread`*  |
+
+\* Sometimes when setting two type elements with `bottom` or `end` alignment, they still appear not aligned.
+In such cases you can try `baseline` and often achieve a better result.
+      ",
+      default: "`top-left`",
+    },
+    {
+      name: "`background`",
+      description: "Provide a background color for the Frame if desired.",
+      type: "String, (valid CSS background setting such as a hex value)",
+      default: "`nil`",
+    },
+    {
+      name: "`border`",
+      description: "Provide a border setting from one of the available border types.",
+      type: "`#{SageTokens::FRAME_BORDERS.inspect()}`",
+      default: "`nil`",
+    },
+    {
+      name: "`border_radius`",
+      description: "Provide a border radius from one of the available border radius types.
+
+    Corresponds to Figma setting:
+
+    #{image_tag("figma-border-radius.png")}
+      ", use_sage_type: true,
+      type: "
+| Setting | Value |
+|---|---|
+| `0px` | `none` |
+| `4px` | `sm` |
+| `#{SageRails.next_theme? ? "8px" : "6px"}` | `md` |
+| `#{SageRails.next_theme? ? "16px" : "8px"}` | `lg` |
+      ",
+      default: "`nil`",
+    },
+    {
+      name: "`direction`",
+      description: "Set which direction the Frame contents should flow.
+
+    Corresponds to Figma auto layout setting:
+
+    #{image_tag("figma-auto-layout-direction.png")}
+      ", use_sage_type: true,
+      type: "
+| Setting | Value |
+|---|---|
+| #{image_tag("figma-auto-layout-direction-vertical.png")} | `vertical` |
+| #{image_tag("figma-auto-layout-direction-horizontal.png")} | `horizontal` |
+      ",
+      default: "`vertical`",
+    },
+    {
+      name: "`gap`",
+      description: "
+        Set up an even gap between all items in the Frame.
+
+        Corresponds to Figma auto layout setting:
+
+        #{image_tag("figma-auto-layout-gap.png")}
+      ",
+      type: "
+| Setting | Value |
+|---|---|
+| `0px` | `none` |
+| `4px` | `2xs` |
+| `8px` | `xs` |
+| `16px` | `sm` |
+| `24px` | `md` |
+| `32px` | `lg` |
+| `48px` | `xl` |
+| `64px` | `2xl` |
+      ",
+      default: "`sm`",
+    },
+    {
+      name: "`padding`",
+      description: "
+        Add spacing between the Frame edge and its contents.
+
+        Corresponds to Figma auto layout setting:
+
+        #{image_tag("figma-auto-layout-padding.png")} 
+      ",
+      type: "
+| Setting | Value |
+|---|---|
+| `0px` | `none` |
+| `4px` | `2xs` |
+| `8px` | `xs` |
+| `16px` | `sm` |
+| `24px` | `md` |
+| `32px` | `lg` |
+| `48px` | `xl` |
+| `64px` | `2xl` |
+      ",
+      default: "`nil`",
+    },
+    {
+      name: "`tag`",
+      description: "Provide the HTML tag you want the Frame to output.",
+      type: "String (HTML tags)",
+      default: "`div`",
+    },
+    {
+      name: "`width`",
+      description: "Provide a width setting either from a preset or as a CSS length value.",
+      type: "
+| Value | Description |
+|---|---|
+| `<string>` | Provide a custom width setting. |
+| `hug` | Frame hugs its contents and adjusts to their widths. |
+| `flex` | Frame flexes in available space. |
+| `fill` | Fills 100% of the space available. |
+      ",
+      default: "`nil`",
+    },
+  ]
+%>

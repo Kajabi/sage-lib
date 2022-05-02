@@ -352,4 +352,59 @@ module SageTokens
     NUCLEAR: 9000,
   }
 
+  # Keep in sync with `packages/sage-assets/lib/stylesheets/components/_frame.scss`
+  FRAME_ALIGNMENTS = [
+    "top-left",
+    "top-center",
+    "top-right",
+    "center-left",
+    "center",
+    "center-right",
+    "baseline-left",
+    "baseline-center",
+    "baseline-right",
+    "bottom-left",
+    "bottom-center",
+    "bottom-right",
+    "start-spread",
+    "center-spread",
+    "end-spread",
+    "stretch-left",
+    "stretch-right",
+    "stretch-center",
+    "stretch-spread",
+    "spread-stretch",
+  ]
+
+  # Keep in sync with `packages/sage-assets/lib/stylesheets/components/_frame.scss`
+  FRAME_BORDERS = [
+    "none",
+    "default",
+  ]
+
+  # Keep in sync with `packages/sage-assets/lib/stylesheets/components/_frame.scss`
+  FRAME_BORDER_RADII = [
+    "none",
+    "sm",
+    "md",
+    "lg"
+  ]
+
+  # Keep in sync with `packages/sage-assets/lib/stylesheets/components/_frame.scss`
+  FRAME_DIRECTIONS = [
+    "vertical",
+    "horizontal",
+  ]
+
+  # Keep in sync with `packages/sage-assets/lib/stylesheets/components/_frame.scss`
+  FRAME_SPACINGS = SPACER_SIZES.push(*[
+    "none"
+  ])
+
+  FRAME_WIDTHS = [
+    "hug",
+    "fill",
+    "flex",
+  ]
+
 end
