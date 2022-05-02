@@ -32,7 +32,16 @@ Sage.tabs = (function() {
     }
 
     if (elInitialActiveItem) {
-      dispatchChange(el.getAttribute(SELECTOR_TABS), elInitialActiveItem.getAttribute(SELECTOR_TAB_ITEM), EVENT_INITIAL_SELECT);
+      const { location: { search: queryString } } = window;
+      const params = new URLSearchParams(queryString);
+
+      if (params.has('tab')) {
+        const activeTab = params.get('tab');
+        dispatchChange(el.getAttribute(SELECTOR_TABS), activeTab, EVENT_INITIAL_SELECT);
+      }
+      else {
+        dispatchChange(el.getAttribute(SELECTOR_TABS), elInitialActiveItem.getAttribute(SELECTOR_TAB_ITEM), EVENT_INITIAL_SELECT);
+      }
     }
   }
 
