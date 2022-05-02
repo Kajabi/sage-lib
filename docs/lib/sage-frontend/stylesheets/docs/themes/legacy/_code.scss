@@ -12,9 +12,9 @@
   color: sage-color(sage, 200);
   font-size: sage-font-size(body-sm);
   font-weight: sage-font-weight(normal);
+  white-space: pre-wrap;
   background-color: $docs-code-editor-background;
   border-radius: sage-border(radius);
-  white-space: pre-wrap;
 
   &.prettyprinted {
     padding: sage-spacing();

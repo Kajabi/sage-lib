@@ -54,7 +54,7 @@ export const Frame = ({
   }
 
   if (widthRatio) {
-    styles['flex'] = widthRatio;
+    styles.flex = widthRatio;
   }
 
   return (
