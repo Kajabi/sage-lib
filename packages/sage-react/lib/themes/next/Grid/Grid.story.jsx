@@ -206,3 +206,40 @@ EqualColumns.args = {
     </>
   )
 };
+
+export const AutoWidth = Template.bind({});
+AutoWidth.args = {
+  children: (
+    <>
+      <Grid.Row spacerBelow="sm">
+        <Grid.Col aria-label="Single column" className="sage-col-auto">
+          <GridDemo>
+            Auto width
+          </GridDemo>
+        </Grid.Col>
+        <Grid.Col aria-label="Single column">
+          <GridDemo>
+            Equal Width Column
+          </GridDemo>
+        </Grid.Col>
+      </Grid.Row>
+      <Grid.Row spacerBelow="sm">
+        <Grid.Col aria-label="Single column">
+          <GridDemo>
+            Equal Width Column
+          </GridDemo>
+        </Grid.Col>
+        <Grid.Col aria-label="Single column" className="sage-col--md-auto">
+          <GridDemo>
+            Auto width
+          </GridDemo>
+        </Grid.Col>
+        <Grid.Col aria-label="Single column">
+          <GridDemo>
+            Equal Width Column
+          </GridDemo>
+        </Grid.Col>
+      </Grid.Row>
+    </>
+  )
+};
