@@ -49,7 +49,8 @@ dont_content = render partial: "#{partial_path_root}/#{theme_folder}/#{@title}/r
     <%= sage_component SagePanelRow, { grid_template: "te" } do %>
       <%= sage_component SageTabs, {
         id: "code-example-tabs",
-        items: tabs
+        items: tabs,
+        permalink: true,
       } %>
       <%= sage_component SageButton, {
         value: "#{image_tag("logo-react.svg", height: "20px")} React Component",
