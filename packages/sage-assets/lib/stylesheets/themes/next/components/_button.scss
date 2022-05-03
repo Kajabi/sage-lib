@@ -208,6 +208,7 @@ $-btn-loading-min-height: rem(36px);
   }
 
   .sage-input-group & {
+    padding: sage-spacing(xs) sage-spacing(sm);
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }
@@ -273,7 +274,7 @@ $-btn-loading-min-height: rem(36px);
 
   .sage-input-group & {
     position: absolute;
-    top: rem(2px);
+    bottom: rem(1px);
     right: rem(1px);
     background-color: sage-color(white);
     box-shadow: rem(-1px) 0 0 0 sage-color(grey, 400);
@@ -282,6 +283,7 @@ $-btn-loading-min-height: rem(36px);
 
     &::before {
       margin-right: 0;
+      padding: sage-spacing(3xs) 0;
     }
 
     &:focus {
