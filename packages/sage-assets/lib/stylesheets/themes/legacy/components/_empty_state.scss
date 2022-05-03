@@ -8,11 +8,12 @@ $-empty-state-graphic-feature-width: rem(220px);
 $-empty-state-graphic-feature-height: rem(124px);
 $-empty-state-graphic-page-width: rem(512px);
 $-empty-state-graphic-page-height: rem(384px);
+$-empty-state-page-max-width: rem(1064);
 
 .sage-empty-state {
   margin-left: auto;
   margin-right: auto;
-  
+
   &:not(.sage-empty-state--page) {
     @include sage-grid-panel();
 
@@ -56,6 +57,7 @@ $-empty-state-graphic-page-height: rem(384px);
 
   @media screen and (min-width: sage-breakpoint(xl-min)) {
     flex-direction: row;
+    max-width: $-empty-state-page-max-width;
   }
 }
 
@@ -66,7 +68,7 @@ $-empty-state-graphic-page-height: rem(384px);
 .sage-empty-state__content {
   .sage-empty-state--page & {
     max-width: $-empty-state-graphic-page-width;
-    
+
     @media screen and (max-width: sage-breakpoint(lg-max)) {
       width: 100%;
     }
@@ -96,7 +98,7 @@ $-empty-state-graphic-page-height: rem(384px);
   .sage-empty-state--page & {
     max-width: $-empty-state-graphic-page-width;
     height: $-empty-state-graphic-page-height;
-    
+
     @media screen and (max-width: sage-breakpoint(lg-max)) {
       width: 100%;
     }
@@ -115,10 +117,10 @@ $-empty-state-graphic-page-height: rem(384px);
 
 .sage-empty-state__title {
   @extend %t-sage-heading-4;
-  
+
   color: sage-color(charcoal, 500);
   word-wrap: break-word;
-  
+
   .sage-empty-state--page & {
     @extend %t-sage-heading-1;
   }
