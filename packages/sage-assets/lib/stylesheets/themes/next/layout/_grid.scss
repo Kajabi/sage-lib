@@ -100,6 +100,10 @@ $-grid-breakpoint-xl: sage-breakpoint(xl-min);
   padding: 0 calc(#{$-grid-gap} / 2);
 }
 
+.sage-col-auto {
+  @include sage-auto-col;
+}
+
 @for $i from 1 through $-grid-num-columns {
   .sage-col-#{$i},
   .sage-col--sm-#{$i},
