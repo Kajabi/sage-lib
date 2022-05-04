@@ -5,13 +5,23 @@ import { BannerWrapper } from './BannerWrapper';
 
 import { BANNER_TYPES } from './configs';
 
-export const Banner = (props) => {
-  const { bannerContext } = props;
+export const Banner = ({
+  bannerContext,
+  ...rest
+}) => {
   return (
-    (bannerContext !== '')
-      ? <BannerWrapper {...props} />
-      : <BannerContent {...props} />
+    (bannerContext !== null)
+      ? <BannerWrapper bannerContext={bannerContext} {...rest} />
+      : <BannerContent bannerContext={bannerContext} {...rest} />
   );
 };
 
 Banner.TYPES = BANNER_TYPES;
+
+Banner.defaultProps = {
+  bannerContext: null
+};
+
+Banner.propTypes = {
+  bannerContext: PropTypes.string
+};
