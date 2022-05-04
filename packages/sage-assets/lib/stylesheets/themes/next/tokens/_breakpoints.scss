@@ -9,14 +9,16 @@
 /// Sage breakpoints token
 ///
 $sage-breakpoints: (
-  xs-max: 544px,
-  sm-min: 545px,
-  sm-max: 767px,
-  md-min: 768px,
-  md-max: 991px,
-  lg-min: 992px,
-  lg-max: 1199px,
-  xl-min: 1200px,
+  xxs-max: 699px,
+  xs-min: 700px,
+  xs-max: 799px,
+  sm-min: 800px,
+  sm-max: 989px,
+  md-min: 990px,
+  md-max: 1119px,
+  lg-min: 1120px,
+  lg-max: 1279px,
+  xl-max: 1280px,
   xxl-min: 1440px,
 );
 
