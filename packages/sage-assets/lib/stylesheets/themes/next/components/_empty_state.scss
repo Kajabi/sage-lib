@@ -8,6 +8,7 @@ $-empty-state-graphic-feature-width: 100%;
 $-empty-state-graphic-feature-height: rem(142px);
 $-empty-state-graphic-page-width: 100%;
 $-empty-state-graphic-page-height: rem(336px);
+$-empty-state-page-max-width: rem(1064px);
 
 .sage-empty-state {
   margin-left: auto;
@@ -57,6 +58,7 @@ $-empty-state-graphic-page-height: rem(336px);
 
   @media screen and (min-width: sage-breakpoint(xl-min)) {
     flex-direction: row;
+    max-width: $-empty-state-page-max-width;
   }
 }
 

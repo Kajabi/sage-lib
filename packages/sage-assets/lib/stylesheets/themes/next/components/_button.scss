@@ -626,6 +626,12 @@ $-alert-colors: (
           border-top-left-radius: 0;
           border-bottom-left-radius: 0;
         }
+        
+        // Remove class when Sage Label is fully deprecated in Products
+        .sage-label & {
+          position: absolute;
+          right: sage-spacing(xs);
+        }
       }
     }
   }

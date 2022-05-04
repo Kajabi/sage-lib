@@ -195,9 +195,6 @@
       <div class="grid-item">3</div>
     <% end %>
     <%= sage_component SageGridCol, {
-      small: "12",
-      medium: "6",
-      large: "3",
     } do %>
       <div class="grid-item">4</div>
     <% end %>
@@ -210,6 +207,43 @@
     small: true
   } %>
 
+  <h4 class="t-sage-heading-6">Auto Width</h4>
+  <%= sage_component SageGridRow, {
+    html_attributes: {
+      "aria-hidden": true
+    }
+  } do %>
+    <%= sage_component SageGridCol, {
+      small: "12",
+      medium: "6",
+      large: "3",
+    } do %>
+      <div class="grid-item">1</div>
+    <% end %>
+    <%= sage_component SageGridCol, {
+      css_classes: "sage-col-auto"
+    } do %>
+      <div class="grid-item">auto</div>
+    <% end %>
+    <%= sage_component SageGridCol, {
+      small: "12",
+      medium: "6",
+      large: "3",
+    } do %>
+      <div class="grid-item">3</div>
+    <% end %>
+    <%= sage_component SageGridCol, {
+    } do %>
+      <div class="grid-item">4</div>
+    <% end %>
+  <% end %>
+
+  <%= sage_component SageAlert, {
+    color: "warning",
+    desc: "TODO - add code example for Multiple breakpoints.",
+    icon_name: "sage-icon-warning",
+    small: true
+  } %>
 
   <h3 class="t-sage-heading-5" id="grid-responsive-show-hide">Hiding and showing content</h3>
   <p>In cases where content will be hidden or shown at specific screen sizes, classes using breakpoint keywords are available. These classes use sizing from <code>sage-breakpoint()</code> to affect where content is displayed.</p>

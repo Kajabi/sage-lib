@@ -4,6 +4,7 @@ class SageTabs < SageComponent
     id: [:optional, String],
     items: [:optional, [[SageSchemas::CHOICE]], [[SageSchemas::TAB]]],
     navigational: [:optional, TrueClass],
+    permalink: [:optional, TrueClass], # For Docs site use only.
     progressbar: [:optional, TrueClass],
     stacked: [:optional, TrueClass],
     style: [:optional, Set.new(["choice"])],
