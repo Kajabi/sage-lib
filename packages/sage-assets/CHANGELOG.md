@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.82.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.81.0...@kajabi/sage-assets@0.82.0) (2022-05-04)
+
+
+### Bug Fixes
+
+* **empty-state:** added max-width to empty state ([6652e4b](https://github.com/Kajabi/sage-lib/commit/6652e4b4f7c1ba988ac91820a3d52b31e3dc343d))
+* **grid:** added auto sizing classes ([11de1a8](https://github.com/Kajabi/sage-lib/commit/11de1a8fa21758ebc7a592f37eecc79ff4b601b5))
+* **grid:** apply updates to all files ([3bd53e6](https://github.com/Kajabi/sage-lib/commit/3bd53e6ca99b30a4b0c667c0d500ee5216befbd5))
+* **panel controls:** styling adjustments to correct search radius and width ([81927d4](https://github.com/Kajabi/sage-lib/commit/81927d4168f168d9ee25c1e10cd665b477b7e6f3))
+
+
+### Features
+
+* **frame:** add rails frame (wip) ([e61ab5c](https://github.com/Kajabi/sage-lib/commit/e61ab5c7e944ee22f6cc234b48bc584c227a4e0c))
+* **frame:** add under layout tools and in both systems ([14402a8](https://github.com/Kajabi/sage-lib/commit/14402a8d85f8f9a495b8c470b9fef81d645f9422))
+* **frame:** change border to default for standard border ([e264f14](https://github.com/Kajabi/sage-lib/commit/e264f14a3f6903e58b67330b2ef1e2b96c7beabc))
+* **frame:** tighten and document ([6ee1a8e](https://github.com/Kajabi/sage-lib/commit/6ee1a8ecea845243e76cb8d2c7c3af6cfd865dcc))
+
+
+
+
+
 # [0.81.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.80.0...@kajabi/sage-assets@0.81.0) (2022-05-02)
 
 

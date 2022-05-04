@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.21.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.21.0...@kajabi/sage-system@0.21.1) (2022-05-04)
+
+
+### Bug Fixes
+
+* **tabs:** weren't loading correct tab when using permalink ([caad2ef](https://github.com/Kajabi/sage-lib/commit/caad2ef411b2c1311e9d4a1367698056dd94bc9e))
+
+
+
+
+
 # [0.21.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.20.0...@kajabi/sage-system@0.21.0) (2022-05-02)
 
 

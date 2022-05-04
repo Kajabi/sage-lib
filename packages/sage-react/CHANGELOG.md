@@ -3,6 +3,34 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.95.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.94.0...@kajabi/sage-react@0.95.0) (2022-05-04)
+
+
+### Bug Fixes
+
+* **grid:** added auto sizing classes ([11de1a8](https://github.com/Kajabi/sage-lib/commit/11de1a8fa21758ebc7a592f37eecc79ff4b601b5))
+* **grid:** added generic column class when no size props are present ([7ff51dc](https://github.com/Kajabi/sage-lib/commit/7ff51dcf3b858b0f0e05b6aa86b07f9142ddb622))
+* **grid:** apply to next files ([fb9a1ea](https://github.com/Kajabi/sage-lib/commit/fb9a1ea26d83ce590b43b834d5a19f56e7a90ef0))
+* **grid:** apply updates to all files ([3bd53e6](https://github.com/Kajabi/sage-lib/commit/3bd53e6ca99b30a4b0c667c0d500ee5216befbd5))
+* **grid:** linter ([56a4f26](https://github.com/Kajabi/sage-lib/commit/56a4f266b38a20e6ac582ad0dffbb5eca4757cdd))
+* **grid:** updates per julian review ([fb88ed6](https://github.com/Kajabi/sage-lib/commit/fb88ed6a5a42e7f1bee94cdc697620b457507499))
+
+
+### Features
+
+* **frame:** add more examples to documentation ([b34ed99](https://github.com/Kajabi/sage-lib/commit/b34ed994bf43fa9d65e9b3d8cb678ca241af1217))
+* **frame:** add React component ([d1f4872](https://github.com/Kajabi/sage-lib/commit/d1f48726f202d489073ba6949b63ecb3a40bb746))
+* **frame:** add under layout tools and in both systems ([14402a8](https://github.com/Kajabi/sage-lib/commit/14402a8d85f8f9a495b8c470b9fef81d645f9422))
+* **frame:** add width_ratio property ([785d138](https://github.com/Kajabi/sage-lib/commit/785d1384516ead186df1dc0ef9ba56914d022b86))
+* **frame:** change border to default for standard border ([e264f14](https://github.com/Kajabi/sage-lib/commit/e264f14a3f6903e58b67330b2ef1e2b96c7beabc))
+* **frame:** further cleanup ([ac1d1f1](https://github.com/Kajabi/sage-lib/commit/ac1d1f1ec3869cfc8b31af3736154f7230a24b6f))
+* **frame:** tighten and document ([6ee1a8e](https://github.com/Kajabi/sage-lib/commit/6ee1a8ecea845243e76cb8d2c7c3af6cfd865dcc))
+* **frame:** update example with better design ([74e0345](https://github.com/Kajabi/sage-lib/commit/74e0345cca0226d27ec9de3331f8e04904156c6c))
+
+
+
+
+
 # [0.94.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.93.0...@kajabi/sage-react@0.94.0) (2022-05-02)
 
 
