@@ -12,7 +12,6 @@ export default {
   },
   args: {
     active: true,
-    bannerContext: 'sage-demo',
     dismissable: true,
     link: '#',
     text: 'Alert description text',
@@ -22,3 +21,8 @@ export default {
 
 const Template = (args) => <Banner {...args} />;
 export const Default = Template.bind({});
+
+export const InlineBanner = Template.bind({});
+InlineBanner.args = {
+  bannerContext: 'sage-demo'
+};

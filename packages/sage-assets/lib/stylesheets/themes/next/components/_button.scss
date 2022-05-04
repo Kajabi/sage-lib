@@ -682,25 +682,24 @@ $-alert-colors: (
       }
     }
   }
-}
-
-// react only styles as primary classes are added by default
-&.sage-banner__link.sage-btn--primary,
-&.sage-banner__close.sage-btn--primary {
-  color: inherit;
-
-  &:focus,
-  &:active {
+  // react only styles as primary classes are added by default
+  &.sage-banner__link.sage-btn--primary,
+  &.sage-banner__close.sage-btn--primary {
     color: inherit;
 
-    &::after {
-      border-color: inherit;
-    }
-  }
+    &:focus,
+    &:active {
+      color: inherit;
 
-  &:not(:focus):hover,
-  &:not(:focus):hover::after {
-    background-color: transparent;
+      &::after {
+        border-color: inherit;
+      }
+    }
+
+    &:not(:focus):hover,
+    &:not(:focus):hover::after {
+      background-color: transparent;
+    }
   }
 }
 
