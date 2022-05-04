@@ -1,0 +1,47 @@
+<%= sage_component SagePanel, {} do %>
+  <h3 class="<%= "#{SageClassnames::TYPE::HEADING_5}" %>">
+    Estimated future payouts
+  </h3>
+  <%= sage_layout SageFrame, { gap: "none" } do %>
+    <%= sage_layout SageFrame, {
+      align: "start-spread",
+      direction: "horizontal",
+      gap: "xs",
+      width: "fill"
+    } do %>
+      <p class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_100}" %>">
+        Est. for Jan 16 - Jan 22
+      </p>
+      <p>
+        <span class="<%= "#{SageClassnames::TYPE::HEADING_6} #{SageClassnames::TYPE_COLORS::CHARCOAL_400}" %>">
+          $2,888.71
+        </span>
+        <span class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_100}" %>">
+          USD*
+        </span>
+      </p>
+    <% end %>
+    <%= sage_component SagePanelDivider, {} %>
+    <%= sage_layout SageFrame, {
+      align: "start-spread",
+      direction: "horizontal",
+      gap: "xs",
+      width: "fill"
+    } do %>
+      <p class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_100}" %>">
+        Lifetime payouts
+      </p>
+      <p>
+        <span class="<%= "#{SageClassnames::TYPE::HEADING_6} #{SageClassnames::TYPE_COLORS::CHARCOAL_400}" %>">
+          $3,263,830.94
+        </span>
+        <span class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_100}" %>">
+          USD
+        </span>
+      </p>
+    <% end %>
+  <% end %>
+  <p class="<%= "#{SageClassnames::TYPE::BODY_XSMALL} #{SageClassnames::TYPE_COLORS::GREY_500}" %>">
+    ** Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+  </p>
+<% end %>

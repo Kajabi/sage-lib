@@ -1,0 +1,21 @@
+<%= sage_component SagePanel, { gap: "sm" } do %>
+  <%= sage_component SageFrame, { gap: "none" } do %>
+    <h3 class="<%= "#{SageClassnames::TYPE::HEADING_5}" %>">
+      Recent activity
+    </h3>
+    <p class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_400}" %>">
+      These are funds that are currently on their way to your bank or have been paid.
+    </p>
+  <% end %>
+  <%= sage_component SageList, {} do %>
+    <% payouts_recent_activity.each do | item | %>
+      <%= render "mocks/kp_onboarding_payouts/payouts/payout_activity_item", data: item %>
+    <% end %>
+  <% end %>
+  <%= sage_component SageButton, {
+    attributes: { href: "#TODO-dev-all-activity-url" },
+    style: "primary",
+    subtle: true,
+    value: "View all",
+  } %>
+<% end %>

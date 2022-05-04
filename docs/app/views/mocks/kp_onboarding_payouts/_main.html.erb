@@ -3,13 +3,13 @@
     id: "example-tabs1",
     items: [
       {
-        text: "Payouts: Empty State",
         target: "feature-1",
-        active: true
+        text: "Payouts: Empty State",
       },
       {
-        text: "Sidebar module",
+        active: true,
         target: "feature-2",
+        text: "Payouts: Index w no data",
       },
     ]
   } %>
@@ -17,7 +17,7 @@
     <%= render "mocks/kp_onboarding_payouts/payouts/empty_state" %>
   <% end %>
   <%= sage_component SageTabsPane, { id: "feature-2" } do %>
-    <%= render "mocks/get_started/sidebar_module" %>
+    <%= render "mocks/kp_onboarding_payouts/payouts/index" %>
   <% end %>
 </div>
-
+ 

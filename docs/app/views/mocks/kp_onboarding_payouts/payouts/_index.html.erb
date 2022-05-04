@@ -1,0 +1,9 @@
+<%= sage_component SageGridRow, {} do %>
+  <%= sage_component SageGridCol, { medium: "8" } do %>
+    <%= render "mocks/kp_onboarding_payouts/payouts/recent_activity" %>
+  <% end %>
+  <%= sage_component SageGridCol, { medium: "4", css_classes: SageClassnames::GRID_PANEL } do %>
+    <%= render "mocks/kp_onboarding_payouts/payouts/balance" %>
+    <%= render "mocks/kp_onboarding_payouts/payouts/future_payouts" %>
+  <% end %>
+<% end %>

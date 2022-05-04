@@ -1,0 +1,43 @@
+<%= sage_component SagePanel, {} do %>
+  <%= sage_layout SageFrame, { direction: "horizontal", align: "center-spread" } do %>
+    <h3 class="<%= "#{SageClassnames::TYPE::HEADING_5}" %>">
+      Balance
+    </h3>
+    <%= sage_component SageDropdown, {
+      align: "right",
+      items: [
+        { 
+          attributes: { href: "#TODO-dev-balance-option-add-to-balance-url" },
+          value: "Add to balance",
+        },
+        {
+          attributes: { href: "#TODO-dev-balance-option-edit-bank-account-url" },
+          value: "Edit bank account",
+        },
+      ]
+    } do %>
+      <% content_for :sage_dropdown_trigger do %>
+        <%= sage_component SageButton, {
+          icon: { name: "dot-menu-horizontal", style: "only" },
+          subtle: true,
+          style: "secondary",
+          value: "Options",
+        } %>
+      <% end %>
+    <% end %>
+  <% end %>
+  <p class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_200}" %>">
+    Your payouts are scheduled to <%= link_to "automatically send weekly", "#TODO-dev-modify-payout-timing-url" %>.
+  </p>
+  <%= sage_layout SageFrame, { gap: "xs" } do %>
+    <p>
+      <span class="<%= "#{SageClassnames::TYPE::HEADING_2} #{SageClassnames::TYPE_COLORS::CHARCOAL_500}" %>">
+        $352.14
+      </span>
+      <span class="<%= "#{SageClassnames::TYPE::BODY} #{SageClassnames::TYPE_COLORS::CHARCOAL_200}" %>">
+        USD
+      </span>
+    </p>
+    <%= sage_component SageProperty, { icon: "calendar-schedule", value: "Expected Apr 11" } %>
+  <% end %>
+<% end %>
