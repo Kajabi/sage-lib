@@ -653,7 +653,6 @@ $-alert-colors: (
     &:not(:focus):hover,
     &:not(:focus):hover::after {
       background-color: transparent;
-      // color: sage-color(white);
     }
   }
 }
