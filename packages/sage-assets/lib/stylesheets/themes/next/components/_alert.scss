@@ -23,6 +23,7 @@ $-alert-colors: (
   position: relative;
   padding: sage-spacing();
   border-radius: sage-border(radius-large);
+  margin-bottom: sage-spacing();
 
   .sage-panel > & {
     margin-bottom: 0;
@@ -37,7 +38,7 @@ $-alert-colors: (
     @else {
       background-color: sage-color($color, 100);
     }
-    
+
     a:not([class]) {
       color: sage-color(charcoal, 400);
       text-decoration: underline;
