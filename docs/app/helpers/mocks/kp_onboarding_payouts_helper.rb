@@ -88,4 +88,17 @@ module Mocks::KpOnboardingPayoutsHelper
       "#{SageClassnames::TYPE::BODY_MED} #{SageClassnames::TYPE_COLORS::CHARCOAL_500}"
     end
   end
+
+  def payouts_balance_settings_options
+    [
+      { 
+        attributes: { href: "#TODO-dev-balance-option-add-to-balance-url" },
+        value: "Add to balance",
+      },
+      {
+        attributes: { "data-js-modaltrigger": "modal-payouts-edit-bank-acct" },
+        value: "Edit bank account",
+      },
+    ]
+  end
 end

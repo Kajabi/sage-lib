@@ -1,43 +1,63 @@
 <%= sage_component SagePanel, {} do %>
-  <%= sage_layout SageFrame, { direction: "horizontal", align: "center-spread" } do %>
-    <h3 class="<%= "#{SageClassnames::TYPE::HEADING_5}" %>">
-      Balance
-    </h3>
-    <%= sage_component SageDropdown, {
-      align: "right",
-      items: [
-        { 
-          attributes: { href: "#TODO-dev-balance-option-add-to-balance-url" },
-          value: "Add to balance",
-        },
-        {
-          attributes: { href: "#TODO-dev-balance-option-edit-bank-account-url" },
-          value: "Edit bank account",
-        },
-      ]
+  <%= sage_layout SageFrame, { gap: "xs" } do %>
+    <%= sage_layout SageFrame, {
+      align: "center-spread",
+      direction: "horizontal",
+      width: "fill",
     } do %>
-      <% content_for :sage_dropdown_trigger do %>
-        <%= sage_component SageButton, {
-          icon: { name: "dot-menu-horizontal", style: "only" },
-          subtle: true,
-          style: "secondary",
-          value: "Options",
-        } %>
+      <h3 class="<%= "#{SageClassnames::TYPE::HEADING_5}" %>">
+        Balance
+      </h3>
+      <%= sage_component SageDropdown, {
+        align: "right",
+        items: payouts_balance_settings_options,
+      } do %>
+        <% content_for :sage_dropdown_trigger do %>
+          <%= sage_component SageButton, {
+            icon: { name: "dot-menu-horizontal", style: "only" },
+            subtle: true,
+            style: "secondary",
+            value: "Options",
+          } %>
+        <% end %>
       <% end %>
     <% end %>
+    <p class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_200}" %>">
+      Your payouts are scheduled to
+      <%= sage_component SageLink, {
+        label: "automatically send weekly",
+        url: "#TODO-dev-modify-payout-timing-url",
+      } %>
+    </p>
   <% end %>
-  <p class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_200}" %>">
-    Your payouts are scheduled to <%= link_to "automatically send weekly", "#TODO-dev-modify-payout-timing-url" %>.
-  </p>
+
+  <%# TODO: Dev to wire this to negative balance check logic %>
+  <%# sage_component SageAlert, {
+    color: "warning",
+    desc: "Your balance is negative. Some functionality may not be available.",
+    icon_name: "sage-icon-warning",
+    secondary_actions: [
+      {
+        value: "More info",
+        attributes: { href: "#TODO-dev-negative-balance-learn-more-url" },
+      }
+    ]
+  } %>
+
   <%= sage_layout SageFrame, { gap: "xs" } do %>
     <p>
       <span class="<%= "#{SageClassnames::TYPE::HEADING_2} #{SageClassnames::TYPE_COLORS::CHARCOAL_500}" %>">
-        $352.14
+        <%= amount %>
       </span>
       <span class="<%= "#{SageClassnames::TYPE::BODY} #{SageClassnames::TYPE_COLORS::CHARCOAL_200}" %>">
-        USD
+        <%= currency %>
       </span>
     </p>
-    <%= sage_component SageProperty, { icon: "calendar-schedule", value: "Expected Apr 11" } %>
+    <%= sage_component SageProperty, {
+      icon: "calendar-schedule",
+      value: "Expected #{expected_date}"
+    } %>
   <% end %>
 <% end %>
+
+<%= render "mocks/kp_onboarding_payouts/payouts/modal_edit_bank_acct" %>

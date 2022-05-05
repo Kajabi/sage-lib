@@ -2,6 +2,33 @@
   <h3 class="<%= "#{SageClassnames::TYPE::HEADING_5}" %>">
     Estimated future payouts
   </h3>
+
+  <%# TODO: Dev to wire this to setup logic %>
+  <%# TODO: Alert with no actions has extra space at the end. %>
+  <%# sage_component SageAlert, {
+    desc: "Your estimated payouts will appear after few cycles.",
+    color: "info",
+    icon_name: "sage-icon-warning",
+  } %>
+
+  <%# TODO: Dev to wire this to setup logic %>
+  <%# sage_layout SageFrame, {
+    background: SageTokens::COLOR_PALETTE[:GREY_200],
+    direction: "horizontal",
+    gap: "none",
+    border_radius: "md",
+    padding: "sm",
+  } do %>
+    <!-- TODO: Dev remove comment tags when wiring with logic.
+      <h4 class="<%= "#{SageClassnames::TYPE::HEADING_6}" %>">
+        Not seeing any estimated payouts?
+      </h4>
+      <p class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_100}" %>">
+        Your estimated payouts will appear here after a few cycles (needs copy pass).
+      </p>
+    -->
+  <%# end %>
+
   <%= sage_layout SageFrame, { gap: "none" } do %>
     <%= sage_layout SageFrame, {
       align: "start-spread",
@@ -10,38 +37,42 @@
       width: "fill"
     } do %>
       <p class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_100}" %>">
-        Est. for Jan 16 - Jan 22
+        Est. for <%= next_payout[:estimated_date] %>
       </p>
       <p>
         <span class="<%= "#{SageClassnames::TYPE::HEADING_6} #{SageClassnames::TYPE_COLORS::CHARCOAL_400}" %>">
-          $2,888.71
+          <%= next_payout[:amount] %>
         </span>
         <span class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_100}" %>">
-          USD*
+          <%= next_payout[:currency] %>*
         </span>
       </p>
     <% end %>
+
     <%= sage_component SagePanelDivider, {} %>
+
     <%= sage_layout SageFrame, {
       align: "start-spread",
       direction: "horizontal",
       gap: "xs",
-      width: "fill"
+      width: "fill",
     } do %>
       <p class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_100}" %>">
         Lifetime payouts
       </p>
       <p>
         <span class="<%= "#{SageClassnames::TYPE::HEADING_6} #{SageClassnames::TYPE_COLORS::CHARCOAL_400}" %>">
-          $3,263,830.94
+          <%= lifetime_payouts[:amount] %>
         </span>
         <span class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_100}" %>">
-          USD
+          <%= lifetime_payouts[:currency] %>
         </span>
       </p>
     <% end %>
   <% end %>
+
   <p class="<%= "#{SageClassnames::TYPE::BODY_XSMALL} #{SageClassnames::TYPE_COLORS::GREY_500}" %>">
-    ** Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+    <%# TODO: Dev replace placeholder footnote here %>
+    * Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
   </p>
 <% end %>

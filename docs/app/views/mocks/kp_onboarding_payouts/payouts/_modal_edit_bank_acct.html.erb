@@ -1,0 +1,80 @@
+<%# TODO: Dev this should be sent to the application's modal container with content_for... %>
+<%= sage_component SageModal, { id: "modal-payouts-edit-bank-acct" } do %>
+  <%= sage_component SageModalContent, {} do %>
+    <%= sage_layout SageFrame, { gap: "md" } do %>
+      <%= sage_layout SageFrame, {
+        direction: "horizontal",
+        align: "center-spread",
+        width: "fill",
+      } do %>
+        <h3 class="<%= "#{SageClassnames::TYPE::HEADING_5}" %>">
+          Edit bank account
+        </h3>
+        <%= sage_component SageButton, {
+          attributes: {
+            "data-js-modal": true,
+          },
+          icon: { name: "remove", style: "only" },
+          style: "secondary",
+          subtle: true,
+          value: "Close",
+        } %>
+      <% end %>
+      <p class="<%= "#{SageClassnames::TYPE::BODY}" %>">
+        Link a checking account to receive your payments. You can add or change your bank account at any time.
+      </p>
+      <%= sage_layout SageFrame, {
+        align: "stretch-spread",
+        gap: "sm",
+        width: "fill"
+      } do %>
+        <%# TODO: Need to remove bottom margin on inputs within Frame %>
+        <%= sage_component SageFormInput, {
+          label_text: "Routing number",
+          id: "payout-edit-bank-acct-routing-number",
+          name: "payout-edit-bank-acct-routing-number",
+        } %>
+        <%= sage_component SageFormInput, {
+          label_text: "Account number",
+          id: "payout-edit-bank-acct-acct-number",
+          name: "payout-edit-bank-acct-acct-number",
+        } %>
+      <% end %>
+      <%= sage_layout SageFrame, {
+        background: SageTokens::COLOR_PALETTE[:GREY_200],
+        direction: "horizontal",
+        border_radius: "md",
+      } do %>
+        <%= sage_layout SageFrame, {
+          gap: "none",
+          padding: "sm",
+          width: "flex",
+        } do %>
+          <h4 class="<%= "#{SageClassnames::TYPE::HEADING_6}" %>">
+            Need help?
+          </h4>
+          <p class="<%= "#{SageClassnames::TYPE::BODY_XSMALL}" %>">
+            Find your account and routing numbers at the bottom of your personal checks.
+          </p>
+        <% end %>
+        <%# TODO: Dev need to export this SVG in `kp` and add to assets for cleaner export %>
+        <%= render "mocks/kp_onboarding_payouts/payouts/illustration_check_details" %>
+      <% end %>
+      <%= sage_layout SageFrame, { width: "fill", direction: "horizontal", align: "center-right" } do %>
+        <%= sage_component SageButton, {
+          attributes: { "data-js-modal": true },
+          style: "secondary",
+          raised: false,
+          value: "Cancel",
+        } %>
+        <%= sage_component SageButton, {
+          # TODO: Dev need to map to desired action
+          attributes: { "data-js-modal": true },
+          style: "primary",
+          value: "Update",
+          # disabled: true,
+        } %>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>
