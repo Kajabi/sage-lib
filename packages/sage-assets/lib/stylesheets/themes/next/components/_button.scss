@@ -574,7 +574,7 @@ $-alert-colors: (
           z-index: 0;
           background-color: map-get($-styles, hover-background);
           opacity: 1;
-  
+
           .sage-alert & {
             background-color: transparent;
           }
@@ -680,6 +680,25 @@ $-alert-colors: (
 
         @include sage-focus-outline--update-color(sage-color($color, 400));
       }
+    }
+  }
+  // react only styles as primary classes are added by default
+  &.sage-banner__link.sage-btn--primary,
+  &.sage-banner__close.sage-btn--primary {
+    color: inherit;
+
+    &:focus,
+    &:active {
+      color: inherit;
+
+      &::after {
+        border-color: inherit;
+      }
+    }
+
+    &:not(:focus):hover,
+    &:not(:focus):hover::after {
+      background-color: transparent;
     }
   }
 }
