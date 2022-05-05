@@ -1,0 +1,68 @@
+<%= sage_component SagePanel, {} do %>
+  <%= sage_layout SageFrame, { gap: "xs" } do %>
+    <%= sage_layout SageFrame, {
+      align: "center-spread",
+      direction: "horizontal",
+      width: "fill",
+    } do %>
+      <h3 class="<%= "#{SageClassnames::TYPE::HEADING_5}" %>">
+        Balance
+      </h3>
+      <%= sage_component SageDropdown, {
+        align: "right",
+        items: payouts_balance_settings_options,
+      } do %>
+        <% content_for :sage_dropdown_trigger do %>
+          <%= sage_component SageButton, {
+            icon: { name: "dot-menu-horizontal", style: "only" },
+            subtle: true,
+            style: "secondary",
+            value: "Options",
+          } %>
+        <% end %>
+      <% end %>
+    <% end %>
+    <p class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_200}" %>">
+      Your payouts are scheduled to
+      <%= sage_component SageLink, {
+        label: "automatically send weekly",
+        url: "#",
+        html_attributes: {
+          "data-js-modaltrigger": "modal-payout-schedule",
+        },
+      } %>
+    </p>
+  <% end %>
+
+  <%# TODO: Dev to wire this to negative balance check logic %>
+  <%# sage_component SageAlert, {
+    color: "warning",
+    desc: "Your balance is negative. Some functionality may not be available.",
+    icon_name: "sage-icon-warning",
+    secondary_actions: [
+      {
+        value: "More info",
+        attributes: { href: "#TODO-dev-negative-balance-learn-more-url" },
+      }
+    ]
+  } %>
+
+  <%= sage_layout SageFrame, { gap: "xs" } do %>
+    <p>
+      <span class="<%= "#{SageClassnames::TYPE::HEADING_2} #{SageClassnames::TYPE_COLORS::CHARCOAL_500}" %>">
+        <%= amount %>
+      </span>
+      <span class="<%= "#{SageClassnames::TYPE::BODY} #{SageClassnames::TYPE_COLORS::CHARCOAL_200}" %>">
+        <%= currency %>
+      </span>
+    </p>
+    <%= sage_component SageProperty, {
+      icon: "calendar-schedule",
+      value: "Expected #{expected_date}"
+    } %>
+  <% end %>
+<% end %>
+
+<%= render "mocks/kp_onboarding_payouts/payouts/modal_edit_bank_acct" %>
+<%= render "mocks/kp_onboarding_payouts/payouts/modal_payout_schedule" %>
+<%= render "mocks/kp_onboarding_payouts/payouts/modal_add_funds", current_balance: { amount: amount, currency: currency }  %>

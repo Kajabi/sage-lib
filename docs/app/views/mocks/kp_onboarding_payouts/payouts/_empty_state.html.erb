@@ -1,0 +1,40 @@
+<%= sage_component SageEmptyState, {
+  scope: "page",
+  title: "All your funds in one spot!",
+  graphic: render("mocks/kp_onboarding_payouts/payouts/illustration_empty_state"),
+} do %>
+  <% content_for :sage_empty_state_text do %>
+    <p>
+      Manage all funds you&rsquo;ve collected from your sales in one convenient spot.
+      Change payment schedules and add to your balance.
+    </p>
+  <% end %>
+
+  <% content_for :sage_empty_state_actions do %>
+    <%= sage_component SageButtonGroup, { gap: "sm" } do %>
+      <%= sage_component SageButton, {
+        attributes: {
+          # TODO: Dev needs to wire in the bank setup process here before going to this confirm modal.
+          "data-js-modaltrigger": "modal-payouts-bank-config-confirm"
+        },
+        style: "primary",
+        value: "Link bank account",
+      } %>
+      <%= sage_component SageButton, {
+        attributes: { href: "#TODO-dev-learn-more" },
+        style: "secondary",
+        value: "Learn More",
+      } %>
+    <% end %>
+  <% end %>
+
+  <%#
+    TODO: Need this content slot in legacy theme
+    https://kajabi.atlassian.net/browse/SAGE-539  
+  %>
+  <% content_for :sage_empty_state_video do %>
+    <%= render "mocks/kp_onboarding_payouts/payouts/empty_state_video" %>
+  <% end %>
+<% end %>
+
+<%= render "mocks/kp_onboarding_payouts/payouts/modal_bank_linked" %>

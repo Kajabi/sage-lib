@@ -70,6 +70,15 @@ module MocksHelper
         team: "Growth",
       },
       {
+        alias: "kp_onboarding_payouts",
+        jira_epic: "SAGE-515",
+        name: "Kajabi Payments Onboarding and Payouts",
+        no_custom_styles: true,
+        no_rails_js: true,
+        status: DOING,
+        team: "Commerce",
+      },
+      {
         alias: "payments_index_phase_2",
         jira_epic: "SAGE-471",
         name: "Payments Index Phase 2",
