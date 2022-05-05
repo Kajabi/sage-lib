@@ -8,13 +8,11 @@ import { BANNER_TYPES } from './configs';
 export const Banner = ({
   bannerContext,
   ...rest
-}) => {
-  return (
-    (bannerContext !== null)
-      ? <BannerWrapper bannerContext={bannerContext} {...rest} />
-      : <BannerContent bannerContext={bannerContext} {...rest} />
-  );
-};
+}) => (
+  (bannerContext !== null)
+    ? <BannerWrapper bannerContext={bannerContext} {...rest} />
+    : <BannerContent bannerContext={bannerContext} {...rest} />
+);
 
 Banner.TYPES = BANNER_TYPES;
 

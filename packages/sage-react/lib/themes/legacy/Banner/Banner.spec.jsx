@@ -1,7 +1,7 @@
 require('../test/testHelper');
 
 import React from 'react';
-import { mount, shallow } from 'enzyme';
+import { mount } from 'enzyme';
 import { Banner } from './Banner';
 
 describe('Sage Banner', () => {
