@@ -24,8 +24,14 @@
       direction: "horizontal",
       gap: "xs",
     } do %>
-      <%# TODO: Form fields margins within Frame need attention %>
-      <%# TODO: Form selects dropdown arrows overlap with long content? %>
+      <%#
+        TODO: Form fields margins within Frame need attention
+        https://kajabi.atlassian.net/browse/SAGE-542
+      %>
+      <%#
+        TODO: Form selects dropdown arrows overlap with long content?
+        https://kajabi.atlassian.net/browse/SAGE-543
+      %>
       <%= sage_component SageRadio, {
         id: "payout-schedule-auto",
         name: "payout-schedule",
@@ -83,7 +89,7 @@
 
     <%= sage_component SageProperty, {
       value: "Transferring to your Wells Fargo Bank, N.A. account",
-      icon: "ban", # TODO: Need "temple" icon
+      icon: "ban", # TODO: Need "temple" icon -- https://kajabi.atlassian.net/browse/SAGE-544
     } %>
 
     <% content_for :sage_footer do %>

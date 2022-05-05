@@ -4,8 +4,11 @@
   </h3>
 
   <%# TODO: Dev to wire this to setup logic %>
-  <%# TODO: Alert with no actions has extra space at the end. %>
-  <%# sage_component SageAlert, {
+  <%#
+    TODO: Alert with no actions has extra space at the end.
+    https://kajabi.atlassian.net/browse/SAGE-541  
+  %>
+  <%= sage_component SageAlert, {
     desc: "Your estimated payouts will appear after few cycles.",
     color: "info",
     icon_name: "sage-icon-warning",

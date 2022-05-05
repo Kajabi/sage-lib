@@ -25,7 +25,10 @@
       gap: "sm",
       width: "fill"
     } do %>
-      <%# TODO: Need to remove bottom margin on inputs within Frame %>
+      <%#
+        TODO: Need to remove bottom margin on inputs within Frame
+        https://kajabi.atlassian.net/browse/SAGE-542
+      %>
       <%= sage_component SageFormInput, {
         label_text: "Routing number",
         id: "payout-edit-bank-acct-routing-number",

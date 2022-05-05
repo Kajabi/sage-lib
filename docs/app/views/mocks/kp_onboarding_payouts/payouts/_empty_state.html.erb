@@ -26,7 +26,10 @@
     } %>
   <% end %>
 
-  <%# TODO: Need this content slot in legacy theme %>
+  <%#
+    TODO: Need this content slot in legacy theme
+    https://kajabi.atlassian.net/browse/SAGE-539  
+  %>
   <% content_for :sage_empty_state_video do %>
     <%= render "mocks/kp_onboarding_payouts/payouts/empty_state_video" %>
   <% end %>
