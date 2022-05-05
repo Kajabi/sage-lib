@@ -172,17 +172,6 @@
     <%= link_to "Action", "#" %>
   <% end %>
 <% end %>
-<%= sage_component SageAlert, {
-  spacer: { bottom: :md },
-  color: "info",
-  desc: "Make sure you know how these changes affect you.",
-  small: true,
-  dismissable: true,
-} do %>
-  <% content_for :sage_alert_actions do %>
-    <%= link_to "Action", "#" %>
-  <% end %>
-<% end %>
 
 <!-- Success -->
 <%= sage_component SageAlert, {
