@@ -243,3 +243,33 @@ AutoWidth.args = {
     </>
   )
 };
+
+export const MultipleBreakpoints = Template.bind({});
+MultipleBreakpoints.args = {
+  children: (
+    <>
+      <Grid.Row spacerBelow="sm">
+        <Grid.Col aria-label="Single column" small={12} medium={6} large={3} xlarge={3}>
+          <GridDemo>
+            Equal Width Column
+          </GridDemo>
+        </Grid.Col>
+        <Grid.Col aria-label="Single column" small={12} medium={6} large={3} xlarge={3}>
+          <GridDemo>
+            Equal Width Column
+          </GridDemo>
+        </Grid.Col>
+        <Grid.Col aria-label="Single column" small={12} medium={6} large={3} xlarge={3}>
+          <GridDemo>
+            Equal Width Column
+          </GridDemo>
+        </Grid.Col>
+        <Grid.Col aria-label="Single column" small={12} medium={6} large={3} xlarge={3}>
+          <GridDemo>
+            Equal Width Column
+          </GridDemo>
+        </Grid.Col>
+      </Grid.Row>
+    </>
+  )
+};
