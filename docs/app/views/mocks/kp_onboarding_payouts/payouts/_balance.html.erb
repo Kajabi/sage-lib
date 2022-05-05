@@ -26,7 +26,10 @@
       Your payouts are scheduled to
       <%= sage_component SageLink, {
         label: "automatically send weekly",
-        url: "#TODO-dev-modify-payout-timing-url",
+        url: "#",
+        html_attributes: {
+          "data-js-modaltrigger": "modal-payout-schedule",
+        },
       } %>
     </p>
   <% end %>
@@ -61,3 +64,5 @@
 <% end %>
 
 <%= render "mocks/kp_onboarding_payouts/payouts/modal_edit_bank_acct" %>
+<%= render "mocks/kp_onboarding_payouts/payouts/modal_payout_schedule" %>
+<%= render "mocks/kp_onboarding_payouts/payouts/modal_add_funds", current_balance: { amount: amount, currency: currency }  %>

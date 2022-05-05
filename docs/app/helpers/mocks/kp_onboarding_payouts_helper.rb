@@ -92,7 +92,7 @@ module Mocks::KpOnboardingPayoutsHelper
   def payouts_balance_settings_options
     [
       { 
-        attributes: { href: "#TODO-dev-balance-option-add-to-balance-url" },
+        attributes: { "data-js-modaltrigger": "modal-payouts-add-funds" },
         value: "Add to balance",
       },
       {
@@ -100,5 +100,28 @@ module Mocks::KpOnboardingPayoutsHelper
         value: "Edit bank account",
       },
     ]
+  end
+
+  def payouts_week_day_options
+    [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
+    ].map do | day |
+      {
+        text: day,
+        value: day.downcase,
+      }
+    end
+  end
+
+  def payouts_month_day_options
+    (1..31).to_a.map do | value |
+      { text: value.to_s, value: value.to_s }
+    end
   end
 end
