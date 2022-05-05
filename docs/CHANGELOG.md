@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.63.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.62.0...@kajabi/sage@4.63.0) (2022-05-05)
+
+
+### Features
+
+* **mocks:** add payouts mocks and empty state ([6fd0cf6](https://github.com/Kajabi/sage-lib/commit/6fd0cf627489ff0d88e9fcb914d4807afe19065d))
+* **mocks:** adjust spacing in empty state actions ([60b4be6](https://github.com/Kajabi/sage-lib/commit/60b4be6b799473de49a091c97d3c7c29add31461))
+* **mocks:** progress on payout index and partials ([cadfcdd](https://github.com/Kajabi/sage-lib/commit/cadfcdd78455118ea47a670c1488258b5dda31d1))
+* **mocks:** progress on payouts index, empty state and modals ([01cc143](https://github.com/Kajabi/sage-lib/commit/01cc143dd4a3b9434aa3fb0db68d8bbc0e63e2d5))
+* **mocks:** wrap up modals work for index ([a5ba41e](https://github.com/Kajabi/sage-lib/commit/a5ba41ed6dd5ee64db10fcb6130158866222809d))
+
+
+
+
+
 # [4.62.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.61.0...@kajabi/sage@4.62.0) (2022-05-04)
 
 
