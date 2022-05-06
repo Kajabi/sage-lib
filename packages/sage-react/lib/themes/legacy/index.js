@@ -28,6 +28,7 @@ export { FormSection } from './FormSection';
 export { Frame } from './Frame';
 export { Grid } from './Grid';
 export { HelpLink } from './HelpLink';
+export { Hero } from './Hero';
 export { Hint } from './Hint';
 export { Icon } from './Icon';
 export { IconCard } from './IconCard';
