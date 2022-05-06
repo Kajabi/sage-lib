@@ -86,7 +86,7 @@ PageHeading.propTypes = {
   breadcrumbs: PropTypes.arrayOf(Breadcrumbs.itemPropTypes),
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
-  help: PropTypes.arrayOf(PropTypes.node),
+  help: PropTypes.node,
   image: PropTypes.shape({
     alt: PropTypes.string,
     src: PropTypes.string,
