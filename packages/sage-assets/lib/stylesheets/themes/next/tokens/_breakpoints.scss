@@ -9,15 +9,27 @@
 /// Sage breakpoints token
 ///
 $sage-breakpoints: (
-  xs-max: 699px,
-  sm-min: 700px,
-  sm-max: 989px,
-  md-min: 990px,
+  xs-max: 544px,
+  sm-min: 545px,
+  sm-max: 767px,
+  md-min: 768px,
+  md-max: 991px,
+  lg-min: 992px,
+  lg-max: 1199px,
+  xl-min: 1200px,
+  xxl-min: 1440px,
+);
+
+$sage-next-breakpoints: (
+  xs-max: 767px,
+  sm-min: 768px,
+  sm-max: 991px,
+  md-min: 992px,
   md-max: 1119px,
   lg-min: 1120px,
   lg-max: 1279px,
-  xl-max: 1280px,
-  xxl-min: 1440px,
+  xl-min: 1280px,
+  xl-max: 1439px,
 );
 
 ///
