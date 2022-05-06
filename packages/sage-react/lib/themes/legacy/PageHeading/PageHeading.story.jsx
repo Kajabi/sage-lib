@@ -53,6 +53,11 @@ PageHeadingWithHelpLink.args = {
   )
 };
 
+export const PageHeadingWithIntro = Template.bind({});
+PageHeadingWithIntro.args = {
+  introText: 'Intro - Lorem ipsum, dolor sit amet consectetur adipisicing elit.'
+};
+
 export const PageHeadingWithThumbnail = Template.bind({});
 PageHeadingWithThumbnail.args = {
   image: {
@@ -92,6 +97,7 @@ PageHeadingWithToolbarAndSecondaryText.args = {
 export const AllItems = Template.bind({});
 AllItems.args = {
   secondaryText: 'Secondary text here',
+  introText: 'Intro - Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
   breadcrumbs: [
     {
       label: 'Back somewhere',
