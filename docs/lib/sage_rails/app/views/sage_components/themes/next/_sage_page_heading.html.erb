@@ -15,8 +15,10 @@
       <%= content_for :sage_page_heading_intro %>
     </div>
   <% end %>
-  <h1 class="sage-page-heading__title">
-    <%= component.title %>
+  <div class="sage-page-heading__title-wrapper">
+    <h1 class="sage-page-heading__title">
+      <%= component.title %>
+    </h1>
     <% if component.help_link.present? && component.help_html.blank? %>
       <a href="<%= component.help_link[:href] %>"
         class="sage-link--no-launch sage-link--help-icon-only"
@@ -39,7 +41,7 @@
         <%= component.help_html.html_safe %>
       <% end %>
     <% end %>
-  </h1>
+  </div>
   <% if content_for? :sage_page_heading_image %>
     <div class="sage-page-heading__image">
       <%= content_for :sage_page_heading_image %>
