@@ -5,14 +5,15 @@ import classnames from 'classnames';
 import { Breadcrumbs } from '../Breadcrumbs';
 
 export const PageHeading = ({
+  actionItems,
+  breadcrumbs,
   className,
   children,
+  help,
   image,
-  breadcrumbs,
-  actionItems,
+  introText,
   toolbarItems,
   secondaryText,
-  introText,
   ...rest
 }) => (
   <div
@@ -36,9 +37,16 @@ export const PageHeading = ({
         <p>{introText}</p>
       </div>
     )}
-    <h1 className="sage-page-heading__title">
-      {children}
-    </h1>
+    <div className="sage-page-heading__title-wrapper">
+      <h1 className="sage-page-heading__title">
+        {children}
+      </h1>
+      {help && (
+        <>
+          {help}
+        </>
+      )}
+    </div>
     {image.src && (
       <div className="sage-page-heading__image">
         <img alt={image.alt || ''} src={image.src} />
@@ -63,25 +71,27 @@ export const PageHeading = ({
 );
 
 PageHeading.defaultProps = {
-  className: '',
-  image: {},
   actionItems: null,
-  toolbarItems: null,
   breadcrumbs: null,
+  className: '',
+  help: null,
+  image: {},
   introText: null,
+  toolbarItems: null,
   secondaryText: null,
 };
 
 PageHeading.propTypes = {
+  actionItems: PropTypes.arrayOf(PropTypes.node),
+  breadcrumbs: PropTypes.arrayOf(Breadcrumbs.itemPropTypes),
+  children: PropTypes.node.isRequired,
   className: PropTypes.string,
+  help: PropTypes.arrayOf(PropTypes.node),
   image: PropTypes.shape({
     alt: PropTypes.string,
     src: PropTypes.string,
   }),
-  children: PropTypes.node.isRequired,
-  actionItems: PropTypes.arrayOf(PropTypes.node),
-  toolbarItems: PropTypes.arrayOf(PropTypes.node),
-  breadcrumbs: PropTypes.arrayOf(Breadcrumbs.itemPropTypes),
   introText: PropTypes.string,
   secondaryText: PropTypes.string,
+  toolbarItems: PropTypes.arrayOf(PropTypes.node),
 };
