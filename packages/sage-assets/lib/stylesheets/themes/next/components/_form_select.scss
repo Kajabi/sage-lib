@@ -30,7 +30,6 @@ $-select-arrow-position-inverse-with-message: calc(100% - #{$-select-height + $-
 .sage-select__label {
   @extend %t-sage-body-semi;
 
-  z-index: sage-z-index(default, 2);
   margin-bottom: $-select-margin-label;
 }
 
