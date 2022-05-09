@@ -8,7 +8,8 @@ $-icon-font-cdn-version: "4";
 $-icon-font-path: "#{$sage-font-cdn-root}/sage/v#{$-icon-font-cdn-version}" !default;
 $-icon-font-version: 4;
 
-// NOTE: These should be kept in sync with line-height pairings from `packages/sage-assets/lib/stylesheets/tokens/_line_height.scss`
+// NOTE: These should be kept in sync with line-height pairings.
+// See `core/_typography.scss`
 $-icon-beside-type: (
   "h1",
   "h2",
@@ -21,7 +22,8 @@ $-icon-beside-type: (
   "body-xs",
 );
 
-// NOTE: These should be kept in sync with line-height pairings from `packages/sage-assets/lib/stylesheets/tokens/_line_height.scss`
+// NOTE: These should be kept in sync with line-height pairings.
+// See `core/_typography.scss`
 $-icon-beside-type: (
   "h1",
   "h2",

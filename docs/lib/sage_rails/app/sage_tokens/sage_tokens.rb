@@ -332,7 +332,8 @@ module SageTokens
     "body-xsmall", "body-xsmall-med", "body-xsmall-semi", "body-xsmall-bold",
   ]
 
-  # Aliasses for responsive pairings of size and leading. Keep in sync with `sage-font-size` token as an example.
+  # Aliases for responsive pairings of size and leading.
+  # Keep in sync with `line-height` custom props set in `sage-assets/.../core/_typography.scss`
   RESPONSIVE_TYPE_SPECS = [
     "h1", "h2", "h3", "h4", "h5", "h6",
     "body", "body-sm", "body-xs",
