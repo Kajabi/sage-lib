@@ -59,7 +59,7 @@ export const Hero = ({
         </div>
       </div>
       {/* TODO - hook up ctaAttributes */}
-      <a href="#" className="sage-hero__artwork">
+      <a href="https://example.com" className="sage-hero__artwork">
         <span className="sage-hero__artwork-image-container">
           <img className="sage-hero__artwork-image" src={image.src} alt={image.alt} />
         </span>

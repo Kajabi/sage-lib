@@ -48,7 +48,10 @@ export const HeroWithBranding = Template.bind({});
 HeroWithBranding.args = {
   branding: (
     <>
-      <Card.Row gridTemplate={SageTokens.GRID_TEMPLATES.TE} className={SageClassnames.SPACERS.MD_TOP}>
+      <Card.Row
+        gridTemplate={SageTokens.GRID_TEMPLATES.TE}
+        className={SageClassnames.SPACERS.MD_TOP}
+      >
         <img className="sage-hero__branding-image" src="//source.unsplash.com/random/28X28" alt="" width="28px" height="28px" />
         <span className={`${SageClassnames.TYPE.HEADING_5}  ${SageClassnames.TYPE_COLORS.CHARCOAL_100}`}>Websites</span>
       </Card.Row>
