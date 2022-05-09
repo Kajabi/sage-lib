@@ -7,6 +7,7 @@
 
 ///
 /// Sage raw line height/leading token (non-responsive)
+/// See core/_typography.scss for where these are primarily implemented.
 ///
 $sage-line-heights: (
   xs: sage-baseline(4), // 16
@@ -18,39 +19,6 @@ $sage-line-heights: (
   3xl: sage-baseline(12), // 48
   4xl: sage-baseline(15), // 60
 );
-
-///
-/// Sage responsive line height/leading custom props
-///
-/// NOTE: Changes to these configurations should also be synced up in the following know places:
-///   - `docs/lib/sage_rails/app/sage_components/sage_tokens.rb`
-///   - `packages/sage-assets/lib/stylesheets/components/_icon.scss`
-///   - `packages/sage-react/lib/Icon/configs.js`
-:root {
-  --sage-line-height-body-xs: #{map-get($sage-line-heights, xs)};
-  --sage-line-height-body-sm: #{map-get($sage-line-heights, sm)};
-  --sage-line-height-body: #{map-get($sage-line-heights, md)};
-  --sage-line-height-h6: #{map-get($sage-line-heights, md)};
-  --sage-line-height-h5: #{map-get($sage-line-heights, lg)};
-  --sage-line-height-h4: #{map-get($sage-line-heights, xl)};
-  --sage-line-height-h3: #{map-get($sage-line-heights, 2xl)};
-  --sage-line-height-h2: #{map-get($sage-line-heights, 3xl)};
-  --sage-line-height-h1: #{map-get($sage-line-heights, 4xl)};
-}
-
-@media screen and (min-width: sage-breakpoint(lg-min)) {
-  :root {
-    // --sage-line-height-body-xs: same
-    // --sage-line-height-body-sm: same
-    // --sage-line-height-body: same
-    // --sage-line-height-h6: same
-    // --sage-line-height-h5: same
-    // --sage-line-height-h4: same
-    // --sage-line-height-h3: same
-    // --sage-line-height-h2: same
-    // --sage-line-height-h1: same
-  }
-}
 
 ///
 /// Sage line height token utility
