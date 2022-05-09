@@ -123,12 +123,6 @@ $-grid-breakpoint-xl: sage-breakpoint(xl-min);
       padding: 0 (sage-spacing(card) / 2);
     }
   }
-
-  .sage-col-#{$i} {
-    flex: 0 0 percentage($i / $-grid-num-columns);
-    width: percentage($i / $-grid-num-columns);
-    max-width: percentage($i / $-grid-num-columns);
-  }
 }
 
 @media (min-width: $-grid-breakpoint-sm) {
@@ -150,6 +144,12 @@ $-grid-breakpoint-xl: sage-breakpoint(xl-min);
 
 @media (min-width: $-grid-breakpoint-md) {
   @for $i from 1 through $-grid-num-columns {
+    .sage-col-#{$i} {
+      flex: 0 0 percentage($i / $-grid-num-columns);
+      width: percentage($i / $-grid-num-columns);
+      max-width: percentage($i / $-grid-num-columns);
+    }
+
     .sage-col--md-#{$i} {
       flex: 0 0 auto;
       width: percentage($i / $-grid-num-columns);
