@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.82.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.82.0...@kajabi/sage-assets@0.82.1) (2022-05-09)
+
+
+### Bug Fixes
+
+* **banner:** added react files ([0283bf8](https://github.com/Kajabi/sage-lib/commit/0283bf823e8b19ebcc782fc57541bc6259f5414e))
+* **banner:** adding props to react component ([987817b](https://github.com/Kajabi/sage-lib/commit/987817bf0b4157702f2cb4508cd34bbcf0838faf))
+* **banner:** updates per julian review ([ac5c994](https://github.com/Kajabi/sage-lib/commit/ac5c99437b51ce007b0cc82c1b70cb99268e8754))
+* **banner:** updates to react styles ([90faab9](https://github.com/Kajabi/sage-lib/commit/90faab96aadcdfdd531526bfafb6b3776dfa1e40))
+* **select:** added to legacy ([743606a](https://github.com/Kajabi/sage-lib/commit/743606aa23ed5b2e72825f8aa8610c0f814cec79))
+* **select:** update label z-index in sage next ([fe556c6](https://github.com/Kajabi/sage-lib/commit/fe556c6ad6d2c02e28598bebdfcc80c1a67c95bf))
+
+
+
+
+
 # [0.82.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.81.0...@kajabi/sage-assets@0.82.0) (2022-05-04)
 
 

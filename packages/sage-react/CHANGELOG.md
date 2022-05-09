@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.95.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.95.0...@kajabi/sage-react@0.95.1) (2022-05-09)
+
+
+### Bug Fixes
+
+* **banner:** add react variant ([dec9c3f](https://github.com/Kajabi/sage-lib/commit/dec9c3fa03a446c8e3b7b066c4da1b59ee41118f))
+* **banner:** added react files ([0283bf8](https://github.com/Kajabi/sage-lib/commit/0283bf823e8b19ebcc782fc57541bc6259f5414e))
+* **banner:** added rest of props ([640973b](https://github.com/Kajabi/sage-lib/commit/640973b83cdd47722a37c71f61e0066a0a2d2d14))
+* **banner:** added spec ([4548100](https://github.com/Kajabi/sage-lib/commit/4548100724d578aaf267ec82513184af6f22cfc3))
+* **banner:** adding props to react component ([987817b](https://github.com/Kajabi/sage-lib/commit/987817bf0b4157702f2cb4508cd34bbcf0838faf))
+* **banner:** adding react banner wrapper for conditional class ([65da532](https://github.com/Kajabi/sage-lib/commit/65da532c734a46a0672e0fbc8f0974217acf54ce))
+* **banner:** fixed structure for the banner components react ([702f79d](https://github.com/Kajabi/sage-lib/commit/702f79dbdb759d008b22a2f476f00fc1787df846))
+* **banner:** linter ([14df8a8](https://github.com/Kajabi/sage-lib/commit/14df8a832e797090ba2b0b5ef1159b4c617df51a))
+* **banner:** linter ([b7658e8](https://github.com/Kajabi/sage-lib/commit/b7658e81adf1023c0afb4f9cf9403e9cd99452e4))
+* **banner:** pairing with julian to resolve spec ([71b01d3](https://github.com/Kajabi/sage-lib/commit/71b01d35d495f39e090d7d912a655dd8e8a4491a))
+* **banner:** update per phil review ([03c01ec](https://github.com/Kajabi/sage-lib/commit/03c01ecb93acd85eb940d9ba93d4e3dce1b16c13))
+* **banner:** updates per julian review ([ac5c994](https://github.com/Kajabi/sage-lib/commit/ac5c99437b51ce007b0cc82c1b70cb99268e8754))
+
+
+
+
+
 # [0.95.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.94.0...@kajabi/sage-react@0.95.0) (2022-05-04)
 
 

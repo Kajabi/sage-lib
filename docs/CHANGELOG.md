@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.63.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.63.0...@kajabi/sage@4.63.1) (2022-05-09)
+
+
+### Bug Fixes
+
+* **banner:** add react variant ([dec9c3f](https://github.com/Kajabi/sage-lib/commit/dec9c3fa03a446c8e3b7b066c4da1b59ee41118f))
+* **banner:** added react files ([0283bf8](https://github.com/Kajabi/sage-lib/commit/0283bf823e8b19ebcc782fc57541bc6259f5414e))
+
+
+
+
+
 # [4.63.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.62.0...@kajabi/sage@4.63.0) (2022-05-05)
 
 
