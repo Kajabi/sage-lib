@@ -1,5 +1,3 @@
-import { isNextTheme } from './utils';
-
 Sage.inputaffixes = (() => {
 
   // ==================================================
@@ -11,7 +9,6 @@ Sage.inputaffixes = (() => {
   const suffixRootClass = "sage-input--suffixed";
   const fieldClass = "sage-input__field";
   const valueClass = "sage-input__affix-value";
-  const wrapperClass = "sage-input__field-wrapper";
   const valueElement = "span";
   const inputPaddingOffset = 16;
 
@@ -23,7 +20,6 @@ Sage.inputaffixes = (() => {
   // Adds affix content to an element
   const addAffixes = (el) => {
     const elRoot = el;
-    const elWrapper = el.querySelector(`.${wrapperClass}`);
     const elInput = el.querySelector(`.${fieldClass}`);
 
     // Toggle off the affixed class
@@ -31,26 +27,14 @@ Sage.inputaffixes = (() => {
 
     if (elRoot.dataset.jsInputPrefix) {
       const elLabel = makeLabel(elRoot.dataset.jsInputPrefix, 'prefix');
-
-      if (isNextTheme()) {
-        elWrapper.appendChild(elLabel);
-      } else {
-        elRoot.appendChild(elLabel);
-      }
-
+      elRoot.appendChild(elLabel);
       elRoot.classList.add(prefixRootClass);
       elInput.style.paddingLeft = `${elLabel.offsetWidth + inputPaddingOffset}px`;
     }
 
     if (elRoot.dataset.jsInputSuffix) {
       const elLabel = makeLabel(elRoot.dataset.jsInputSuffix, 'suffix');
-
-      if (isNextTheme()) {
-        elWrapper.appendChild(elLabel);
-      } else {
-        elRoot.appendChild(elLabel);
-      }
-
+      elRoot.appendChild(elLabel);
       elRoot.classList.add(suffixRootClass);
       elInput.style.paddingRight = `${elLabel.offsetWidth + inputPaddingOffset}px`;
     }
