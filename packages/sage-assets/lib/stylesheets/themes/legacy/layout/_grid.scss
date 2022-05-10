@@ -108,7 +108,8 @@ $-grid-breakpoint-xl: sage-breakpoint(xl-min);
   .sage-col-#{$i},
   .sage-col--sm-#{$i},
   .sage-col--md-#{$i},
-  .sage-col--lg-#{$i} {
+  .sage-col--lg-#{$i},
+  .sage-col--xl-#{$i} {
     @include sage-col();
 
     .sage-row--stage > & {
