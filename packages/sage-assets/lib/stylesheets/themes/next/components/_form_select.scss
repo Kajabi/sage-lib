@@ -53,7 +53,6 @@ $-select-arrow-position-inverse-with-message: calc(100% - #{$-select-height + $-
   @include sage-form-field();
   @include sage-focus-ring;
 
-  z-index: sage-z-index(default, 1);
   position: relative;
   height: $-select-height;
   padding: 0 $-select-padding-x 0;
