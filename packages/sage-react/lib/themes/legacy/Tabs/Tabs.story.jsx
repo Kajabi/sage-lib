@@ -17,7 +17,11 @@ export default {
   args: {
     tabStyle: Tabs.STYLES.TAB,
     tabLayout: Tabs.LAYOUTS.DEFAULT
-  }
+  },
+  subcomponents: {
+    'Tabs.Item': Tabs.Item,
+    'Tabs.Pane': Tabs.Pane,
+  },
 };
 
 export const Default = (args) => {
