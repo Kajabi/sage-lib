@@ -12,19 +12,17 @@
   data-js-select="true"
   <%= component.generated_html_attributes.html_safe %>
 >
+  <select
+    class="sage-select__field"
+    name="<%= select_id %>"
+    id="<%= select_id %>"
+    <%= "disabled" if component.disabled %>
+  >
+    <% component.select_options.each do |option| %>
+      <option value="<%= option[:value] %>"><%= option[:text] %></option>
+    <% end %>
+  </select>
   <label class="sage-select__label" for="<%= select_name %>"><%= label %></label>
-  <div class="sage-select__field-wrapper">
-    <select
-      class="sage-select__field"
-      name="<%= select_id %>"
-      id="<%= select_id %>"
-      <%= "disabled" if component.disabled %>
-    >
-      <% component.select_options.each do |option| %>
-        <option value="<%= option[:value] %>"><%= option[:text] %></option>
-      <% end %>
-    </select>
-  </div>
   <% if component.message.present? %>
     <div class="sage-select__message"><%= component.message %></div>
   <% end %>

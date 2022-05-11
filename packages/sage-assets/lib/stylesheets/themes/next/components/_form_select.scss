@@ -25,19 +25,32 @@ $-select-arrow-position-inverse-with-message: calc(100% - #{$-select-height + $-
 
 .sage-select {
   @include sage-form-field-group;
+
+  display: grid;
+  grid-template-areas:
+    "label label"
+    "field field"
+    "message message";
+  grid-template-columns: 1fr minmax(32px, min-content);
 }
 
 .sage-select__label {
   @extend %t-sage-body-semi;
 
+  grid-area: label;
   margin-bottom: $-select-margin-label;
+}
+
+.sage-select__arrow {
+  grid-column: -1 / -2;
+  grid-row: 2 / 3;
+  display: flex;
+  align-items: center;
 }
 
 .sage-select__arrow::before {
   @include sage-icon-base(down-small);
-  @include position($-select-arrow-position, sage-spacing(sm), unset, unset);
 
-  position: absolute;
   align-items: center;
   height: $-select-height;
   font-size: $-select-arrow-font-size;
@@ -45,14 +58,12 @@ $-select-arrow-position-inverse-with-message: calc(100% - #{$-select-height + $-
   transition: 0.2s color ease;
 }
 
-.sage-select__field-wrapper {
-  position: relative;
-}
-
 .sage-select__field {
   @include sage-form-field();
   @include sage-focus-ring;
 
+  grid-area: field;
+  z-index: sage-z-index(default, 1);
   position: relative;
   height: $-select-height;
   padding: 0 $-select-padding-x 0;
@@ -120,6 +131,8 @@ $-select-arrow-position-inverse-with-message: calc(100% - #{$-select-height + $-
 
 .sage-select__message {
   @include sage-form-field-message;
+
+  grid-area: message;
 
   .sage-select--value-selected & + .sage-select__arrow::before {
     @include sage-icon-base(up-small);
