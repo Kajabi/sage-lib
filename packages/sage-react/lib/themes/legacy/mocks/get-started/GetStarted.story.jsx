@@ -1,9 +1,5 @@
 import React from 'react';
 import {
-  SageBreakpointProvider,
-  SageTokens,
-} from '../..';
-import {
   DashboardPanel,
   SidebarModule,
 } from './components';
@@ -14,16 +10,12 @@ export default {
   args: {}
 };
 
-const Template = () => (
-  <SageBreakpointProvider queries={SageTokens.BREAKPOINT_QUERIES}>
-    <DashboardPanel />
-  </SageBreakpointProvider>
-);
+const Template = () => <DashboardPanel />;
 
 export const DashboardModule = Template.bind({});
 export const Sidebar = () => (
   <SidebarModule
-    step={1}
+    step={0}
     cta={{
       label: 'Create a product',
       href: '#TODO-dev-product-url',
