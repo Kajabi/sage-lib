@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.82.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.82.1...@kajabi/sage-assets@0.82.2) (2022-05-11)
+
+
+### Bug Fixes
+
+* **creationwizard:** in Safari, z-index affected the layering of Select dropdown ([49911c7](https://github.com/Kajabi/sage-lib/commit/49911c776f9eee0457984b52c0797fdff9cd18a4))
+
+
+
+
+
 ## [0.82.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.82.0...@kajabi/sage-assets@0.82.1) (2022-05-09)
 
 
