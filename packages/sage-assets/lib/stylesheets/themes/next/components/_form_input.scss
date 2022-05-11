@@ -11,9 +11,6 @@ $-input-label-offset: rem(12px);
 $-input-padding-offset: sage-spacing(sm) - $-input-border-width;
 $-input-popover-size: rem(40px);
 $-input-text-height: sage-font-size(body);
-$-input-start-grid-column: 1 / 2;
-$-input-end-grid-column: -1 / -2;
-$-input-field-row: 2 / 3;
 
 .sage-input {
   @include sage-form-field-group;
@@ -23,7 +20,7 @@ $-input-field-row: 2 / 3;
     "label label label"
     "input input input"
     "message message message";
-  grid-template-rows: min-content max-content min-content;
+  grid-template-columns: min-content 1fr min-content;
 
   .sage-input-group &,
   .sage-toolbar & {
