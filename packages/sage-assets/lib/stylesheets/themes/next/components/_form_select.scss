@@ -31,7 +31,7 @@ $-select-arrow-position-inverse-with-message: calc(100% - #{$-select-height + $-
     "label label"
     "field field"
     "message message";
-  grid-template-columns: 1fr minmax(32px, min-content);
+  grid-template-columns: 1fr minmax(sage-spacing(lg), min-content);
 }
 
 .sage-select__label {
@@ -42,10 +42,10 @@ $-select-arrow-position-inverse-with-message: calc(100% - #{$-select-height + $-
 }
 
 .sage-select__arrow {
-  grid-column: -1 / -2;
-  grid-row: 2 / 3;
   display: flex;
   align-items: center;
+  grid-column: -1 / -2;
+  grid-row: 2 / 3;
 }
 
 .sage-select__arrow::before {
