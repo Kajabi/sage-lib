@@ -43,8 +43,8 @@ export const SidebarModule = ({
     */}
     <ProgressBar
       color={SageTokens.COLOR_PALETTE.WHITE}
-      percent={step / 4 * 100}
-      style={{ width: '100%'}}
+      percent={step / (4 * 100)}
+      style={{ width: '100%' }}
     />
   </Frame>
 );

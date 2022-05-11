@@ -15,7 +15,7 @@ export default {
 };
 
 const Template = () => (
-  <SageBreakpointProvider  queries={SageTokens.BREAKPOINT_QUERIES}>
+  <SageBreakpointProvider queries={SageTokens.BREAKPOINT_QUERIES}>
     <DashboardPanel />
   </SageBreakpointProvider>
 );

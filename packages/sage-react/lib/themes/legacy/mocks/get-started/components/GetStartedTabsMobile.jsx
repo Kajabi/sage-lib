@@ -59,6 +59,7 @@ GetStartedExpandable.defaultProps = {
 
 GetStartedExpandable.propTypes = {
   children: PropTypes.node,
+  id: PropTypes.string.isRequired,
   label: PropTypes.node,
   startsOpen: PropTypes.bool,
 };
