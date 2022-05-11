@@ -30,7 +30,7 @@ export const Link = ({
     'sage-link--small': small,
     'sage-link--remove-underline': removeUnderline,
     [`sage-link--icon-${iconPosition}-${icon}`]: icon && iconPosition,
-  }
+  };
   const classNames = classnames(
     className,
     !suppressDefaultClass && linkClasses
