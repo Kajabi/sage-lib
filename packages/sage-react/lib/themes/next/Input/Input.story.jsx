@@ -82,7 +82,7 @@ export const InputWithPopover = (args) => {
       icon={args.icon}
       id={args.id}
       label={args.label}
-      message={null}
+      message={args.message}
       onChange={onChange}
       popover={args.popover}
       prefix={null}
@@ -96,6 +96,7 @@ export const InputWithPopover = (args) => {
 
 Default.args = {
   id: 'field-1',
+  message: 'this is a test message',
 };
 
 InputWithStaticIcon.args = {
@@ -103,6 +104,8 @@ InputWithStaticIcon.args = {
 };
 
 InputWithPopover.args = {
+  id: 'field-1',
+  message: 'this is a test message',
   popover: (
     <Popover
       icon={SageTokens.ICONS.INFO_CIRCLE}
