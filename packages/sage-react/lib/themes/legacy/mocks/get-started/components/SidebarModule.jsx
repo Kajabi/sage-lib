@@ -7,8 +7,6 @@ import {
   SageClassnames,
   SageTokens,
 } from '../../..';
-import { Icon } from '../../../Icon';
-import { ProgressBar } from '../../../ProgressBar';
 
 export const SidebarModule = ({
   step,

@@ -9,7 +9,6 @@ export default {
   argTypes: {},
   args: {}
 };
-
 const Template = () => <DashboardPanel />;
 
 export const DashboardModule = Template.bind({});
