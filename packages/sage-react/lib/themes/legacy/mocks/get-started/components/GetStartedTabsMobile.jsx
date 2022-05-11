@@ -13,10 +13,17 @@ export const GetStartedExpandable = ({
   id,
   label,
   startsOpen,
+  ...rest
 }) => {
   const [open, setOpen] = useState(startsOpen);
   return (
-    <Frame id={id}>
+    <Frame
+      border={Frame.BORDERS.DEFAULT}
+      borderRadius={Frame.BORDER_RADII.MD}
+      id={id}
+      padding={Frame.PADDINGS.SM}
+      width={Frame.WIDTHS.FILL}
+    >
       <Frame
         align={Frame.ALIGNMENTS.CENTER_SPREAD}
         direction={Frame.DIRECTIONS.HORIZONTAL}
@@ -25,15 +32,17 @@ export const GetStartedExpandable = ({
         role="button"
         aria-controls={`${id}-panel`}
         aria-expanded={open}
+        width={Frame.WIDTHS.FILL}
       >
         {label}
-        <Icon icon={Icon.ICONS.ARROW_DOWN} />
+        <Icon icon={open ? Icon.ICONS.CARET_UP : Icon.ICONS.CARET_DOWN} />
       </Frame>
       {open && (
         <Frame
           id={`${id}-panel`}
           role="region"
           aria-labelledby={`${id}-control`}
+          {...rest}
         >
           {children}
         </Frame>
@@ -62,6 +71,7 @@ export const GetStartedTabsMobile = ({ tabsContent }) => (
         learnMoreUrl,
         url,
       },
+      completed = false,
       description,
       graphic,
       icon,
@@ -70,23 +80,51 @@ export const GetStartedTabsMobile = ({ tabsContent }) => (
       title,
     }) => (
       <GetStartedExpandable
-        key={id}
+        align={Frame.ALIGNMENTS.CENTER_CENTER}
+        gap={Frame.GAPS.SM}
         id={id}
-        label={<>{icon} {buttonLabel}</>}
+        key={id}
+        label={(
+          <Frame
+            direction={Frame.DIRECTIONS.HORIZONTAL}
+            gap={Frame.GAPS.XS}
+            align={Frame.ALIGNMENTS.TOP_LEFT}
+            width={Frame.WIDTHS.FLEX}
+          >
+            <Icon
+              adjacentType={Icon.ADJACENT_TYPES.BODY}
+              color={completed ? Icon.COLORS.SAGE_300 : Icon.COLORS.INHERIT}
+              icon={completed ? Icon.ICONS.CHECK_CIRCLE_FILLED : icon}
+            />
+            <p className={SageClassnames.TYPE.BODY_MED} style={{ flex: 1, cursor: 'pointer' }}>
+              {buttonLabel}
+            </p>
+          </Frame>
+        )}
+        width={Frame.WIDTHS.FILL}
       >
         {graphic}
-        <Frame>
-          <h5 className={SageClassnames.TYPE.HEADING_5}>
+        <Frame
+          align={Frame.ALIGNMENTS.TOP_CENTER}
+          className={`${SageClassnames.TYPE_ALIGN_CENTER}`}
+          gap={Frame.GAPS.NONE}
+        >
+          <h5 className={`${SageClassnames.TYPE.HEADING_5}`}>
             {title}
           </h5>
-          <p className={`${SageClassnames.TYPE.BODY} ${SageClassnames.TYPE_COLORS.CHARCOAL_100}`}>
+          <p className={`${SageClassnames.TYPE.BODY_XSMALL} ${SageClassnames.TYPE_COLORS.CHARCOAL_100}`}>
             {description}
           </p>
         </Frame>
-        <Frame gap={Frame.GAPS.SM}>
+        <Frame
+          align={Frame.ALIGNMENTS.TOP_CENTER}
+          gap={Frame.GAPS.SM}
+          width={Frame.WIDTHS.FILL}
+        >
           <Button
             color={Button.COLORS.PRIMARY}
             href={url}
+            fullWidth
           >
             {label}
           </Button>
