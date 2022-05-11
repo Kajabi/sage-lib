@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
-  Button,
-  Card,
-  Indicator,
+  Link,
+  Frame,
   SageClassnames,
   SageTokens,
 } from '../../..';
+import { Icon } from '../../../Icon';
+import { ProgressBar } from '../../../ProgressBar';
 
 export const SidebarModule = ({
   step,
@@ -15,41 +16,37 @@ export const SidebarModule = ({
     href,
   }
 }) => (
-  <Card>
+  <Frame
+    gap={Frame.GAPS.SM}
+    borderRadius={Frame.BORDER_RADII.SM}
+    padding={Frame.PADDINGS.SM}
+    background={SageTokens.COLOR_PALETTE.PRIMARY_300}
+    tag={Link}
+    href={href}
+  >
+    <p className={`${SageClassnames.TYPE.BODY_XSMALL} ${SageClassnames.TYPE_COLORS.WHITE}`}>
+      Get started
+    </p>
+    <Frame
+      className={`${SageClassnames.TYPE.BODY} ${SageClassnames.TYPE_COLORS.WHITE}`}
+      tag="p"
+      direction={Frame.DIRECTIONS.HORIZONTAL}
+      gap={Frame.GAPS.XS}
+    >
+      {label}
+      <Icon icon={Icon.ICONS.ARROW_RIGHT} />
+    </Frame>
+
     {/*
-      TODO: replace with SageFrame component when launched,
-      which will allow for background customizations
+      TODO: Need bar background to allow darker color
+      https://kajabi.atlassian.net/browse/SAGE-573
     */}
-    <Card.Block>
-      <p className={SageClassnames.TYPE.BODY_XSMALL}>
-        Get started
-      </p>
-
-      {/*
-        TODO: Need inverted button color option
-        https://kajabi.atlassian.net/browse/SAGE-308
-      */}
-      <Button
-        color={Button.COLORS.SECONDARY}
-        subtle={true}
-        icon={SageTokens.ICONS.ARROW_RIGHT}
-        iconPosition={Button.ICON_POSITIONS.RIGHT}
-        href={href}
-      >
-        {label}
-      </Button>
-
-      {/*
-        TODO: Need bar variation for Indicator
-        https://kajabi.atlassian.net/browse/SAGE-309
-      */}
-      <Indicator
-        className={SageClassnames.SPACERS.XS_TOP}
-        currentItem={step}
-        numItems={4}
-      />
-    </Card.Block>
-  </Card>
+    <ProgressBar
+      color={SageTokens.COLOR_PALETTE.WHITE}
+      percent={step / 4 * 100}
+      style={{ width: '100%'}}
+    />
+  </Frame>
 );
 
 SidebarModule.defaultProps = {

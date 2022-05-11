@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {
   Button,
-  Grid,
-  Panel,
+  Frame,
+  Icon,
   SageClassnames,
   SageTokens,
   Tabs,
@@ -13,26 +13,39 @@ export const GetStartedTabs = ({ tabsContent }) => {
   const [activeTab, setActiveTab] = React.useState(tabsContent[0].id);
 
   return (
-    <Grid withRow={true}>
-      <Grid.Col size={4} className={SageClassnames.CARD_GRID}>
+    <Frame direction={Frame.DIRECTIONS.HORIZONTAL} gap={Frame.GAPS.LG}>
+      <Frame width="240px" gap={Frame.GAPS.SM}>
         {tabsContent.map(({
+          completed = false,
           icon,
           id,
           label,
         }) => (
           <Tabs.Item
             key={`get-started-tab-${id}`}
-            icon={icon}
             isActive={id === activeTab}
-            type={Tabs.Item.CHOICE_TYPES.ICON}
             itemStyle={Tabs.Item.STYLES.CHOICE}
-            label={label}
             panelId={id}
             onClick={() => setActiveTab(id)}
-          />
+            style={{ width: '100%' }}
+          >
+            <Frame
+              direction={Frame.DIRECTIONS.HORIZONTAL}
+              gap={Frame.GAPS.XS}
+              align={Frame.ALIGNMENTS.TOP_LEFT}
+              width={Frame.WIDTHS.FILL}
+            >
+              <Icon
+                adjacentType={Icon.ADJACENT_TYPES.BODY}
+                color={completed ? Icon.COLORS.SAGE_300 : Icon.COLORS.INHERIT}
+                icon={completed ? Icon.ICONS.CHECK_CIRCLE_FILLED : icon}
+              />
+              <p className={SageClassnames.TYPE.BODY_MED} style={{ flex: 1 }}>{label}</p>
+            </Frame>
+          </Tabs.Item>
         ))}
-      </Grid.Col>
-      <Grid.Col size={8} className={SageClassnames.PANEL_GRID}>
+      </Frame>
+      <Frame width={Frame.WIDTHS.FLEX}>
         {tabsContent.map(({
           cta: {
             label,
@@ -51,14 +64,14 @@ export const GetStartedTabs = ({ tabsContent }) => {
             panelSpacing={true}
           >
             {graphic}
-            <Panel.Stack>
+            <Frame gap={Frame.GAPS.XS}>
               <h5 className={SageClassnames.TYPE.HEADING_5}>
                 {title}
               </h5>
               <p className={`${SageClassnames.TYPE.BODY} ${SageClassnames.TYPE_COLORS.CHARCOAL_100}`}>
                 {description}
               </p>
-            </Panel.Stack>
+            </Frame>
             <Button.Group gap={Button.Group.GAP_OPTIONS.SM}>
               <Button
                 color={Button.COLORS.PRIMARY}
@@ -78,8 +91,8 @@ export const GetStartedTabs = ({ tabsContent }) => {
             </Button.Group>
           </Tabs.Pane>
         ))}
-      </Grid.Col>
-    </Grid>
+      </Frame>
+    </Frame>
   );
 };
 
