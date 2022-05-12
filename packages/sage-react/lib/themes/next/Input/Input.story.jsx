@@ -43,6 +43,29 @@ export const Default = (args) => {
   );
 };
 
+const Template = (args) => <Input {...args} />;
+export const InputWithError = Template.bind({});
+InputWithError.args = {
+  hasError: true
+};
+
+export const InputDisabled = Template.bind({});
+InputDisabled.args = {
+  disabled: true
+};
+
+export const InputReadonly = Template.bind({});
+InputReadonly.args = {
+  readonly: true,
+  value: 'You cannot change me'
+};
+
+export const InputEmail = Template.bind({});
+InputEmail.args = {
+  type: Input.Type.EMAIL,
+  label: 'Email address'
+};
+
 export const InputWithStaticIcon = (args) => {
   const [value, updateValue] = useState('Test');
   const onChange = (e) => {

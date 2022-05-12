@@ -3,20 +3,39 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { Icon } from '../Icon';
 import { SageTokens } from '../configs';
+import {
+  INPUT_MODE,
+  INPUT_TYPE
+} from './configs';
 
 export const Input = ({
+  autocomplete,
   className,
+  disabled,
   hasError,
+  hasPlaceholder,
   hideLabel,
   icon,
   id,
+  inputMode,
   label,
+  max,
+  maxLength,
   message,
+  min,
+  minLength,
+  name,
   onChange,
+  pattern,
+  placeholder,
   popover,
   prefix,
+  readonly,
+  required,
   standalone,
+  step,
   suffix,
+  type,
   value,
   ...rest
 }) => {
@@ -125,34 +144,66 @@ export const Input = ({
     </div>
   );
 };
+Input.Mode = INPUT_MODE;
+Input.Type = INPUT_TYPE;
 
 Input.defaultProps = {
+  autocomplete: null,
   className: null,
+  disabled: false,
   hasError: false,
+  hasPlaceholder: false,
   hideLabel: false,
   icon: null,
+  inputMode: null,
   label: null,
+  max: null,
+  maxLength: null,
   message: null,
+  min: null,
+  minLength: null,
+  name: null,
   onChange: null,
+  pattern: null,
+  placeholder: null,
   popover: null,
   prefix: null,
+  readonly: false,
+  required: false,
   standalone: false,
+  step: null,
   suffix: null,
+  type: null,
   value: '',
 };
 
 Input.propTypes = {
+  autocomplete: PropTypes.string,
   className: PropTypes.string,
+  disabled: PropTypes.bool,
   icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),
   id: PropTypes.string.isRequired,
   hasError: PropTypes.bool,
+  hasPlaceholder: PropTypes.bool,
   hideLabel: PropTypes.bool,
+  inputMode: PropTypes.oneOf(Object.values(Input.Mode)),
   label: PropTypes.string,
+  max: PropTypes.string,
+  maxLength: PropTypes.string,
+  min: PropTypes.string,
+  minLength: PropTypes.string,
   message: PropTypes.string,
+  name: PropTypes.string,
   onChange: PropTypes.func,
+  pattern: PropTypes.string,
+  placeholder: PropTypes.string,
   popover: PropTypes.node,
   prefix: PropTypes.string,
+  readonly: PropTypes.bool,
+  required: PropTypes.bool,
   standalone: PropTypes.bool,
+  step: PropTypes.string,
   suffix: PropTypes.string,
+  type: PropTypes.oneOf(Object.values(Input.Type)),
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
