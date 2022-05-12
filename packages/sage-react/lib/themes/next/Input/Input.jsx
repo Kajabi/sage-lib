@@ -74,6 +74,13 @@ export const Input = ({
       'visually-hidden': hideLabel,
     });
 
+  const setPlaceholder = () => {
+    if (placeholder) {
+      return placeholder;
+    }
+    return label;
+  };
+
   useEffect(() => {
     const newInputStyles = {
       ...inputStyles,
@@ -101,11 +108,24 @@ export const Input = ({
   return (
     <div className={classNames}>
       <input
+        autoComplete={autocomplete}
         className="sage-form-field sage-input__field"
+        disabled={disabled}
         id={id}
+        inputMode={inputMode}
+        max={max}
+        maxLength={maxLength}
+        min={min}
+        minLength={minLength}
+        name={name}
         onChange={handleChange}
-        placeholder={label}
+        pattern={pattern}
+        placeholder={setPlaceholder()}
+        readOnly={readonly}
+        required={required}
+        step={step}
         style={inputStyles}
+        type={type}
         value={fieldValue || value}
         {...rest}
       />
