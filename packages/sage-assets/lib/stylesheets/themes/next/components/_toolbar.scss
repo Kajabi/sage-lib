@@ -5,6 +5,10 @@
 ///
 /// NOTE: This is an early exploration effort to break away from Panel Controls for creating "toolbar" setups. *?
 
+// Fixes issue with input alignment
+:root {
+  --icon-block-padding: #{rem(4px)};
+}
 
 .sage-toolbar {
   display: flex;
@@ -24,6 +28,10 @@
   display: flex;
   align-items: center;
   flex: 1;
+
+  .sage-btn:last-child {
+    align-self: flex-end;
+  }
 
   &:not(:last-child) {
     margin-right: sage-spacing(panel);
