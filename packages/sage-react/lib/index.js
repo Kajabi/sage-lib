@@ -28,6 +28,7 @@ export const {
   FormSection,
   Grid,
   HelpLink,
+  Hero,
   Hint,
   Icon,
   IconCard,
