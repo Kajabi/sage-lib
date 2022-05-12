@@ -10,6 +10,8 @@ export default {
   args: {
     label: 'Checkbox',
     type: Toggle.TYPES.CHECKBOX,
+    id: 'checkbox-1',
+    name: 'checkbox-1',
   },
   argTypes: {
     ...selectArgs({
@@ -22,6 +24,32 @@ const Template = (args) => <Checkbox {...args} />;
 
 export const Default = Template.bind({});
 
+export const Disabled = Template.bind({});
+Disabled.args = {
+  label: 'Remember Me',
+  disabled: true
+};
+
+export const DefaultWithMessage = Template.bind({});
+DefaultWithMessage.args = {
+  label: 'Remember Me',
+  message: 'Save my login details for next time'
+};
+
+export const Checked = Template.bind({});
+Checked.args = {
+  checked: true,
+  label: 'Remember Me',
+  message: 'Save my login details for next time'
+};
+
+export const Error = Template.bind({});
+Error.args = {
+  hasError: true,
+  label: 'Remember Me',
+  message: 'Save my login details for next time'
+};
+
 export const DefaultWithCustomContent = Template.bind({});
 DefaultWithCustomContent.args = {
   customContent: (
@@ -29,7 +57,7 @@ DefaultWithCustomContent.args = {
   )
 };
 
-export const MultipleExample = (args) => {
+export const MultipleCheckboxes = (args) => {
   const items = [
     {
       label: 'Option 1',
