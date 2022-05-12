@@ -24,15 +24,16 @@ export const Link = ({
   truncate,
   ...rest
 }) => {
+  const linkClasses = {
+    'sage-link': true,
+    [`sage-link--${style}`]: style,
+    'sage-link--small': small,
+    'sage-link--remove-underline': removeUnderline,
+    [`sage-link--icon-${iconPosition}-${icon}`]: icon && iconPosition,
+  };
   const classNames = classnames(
     className,
-    {
-      'sage-link': !suppressDefaultClass,
-      [`sage-link--${style}`]: style,
-      'sage-link--small': small,
-      'sage-link--remove-underline': removeUnderline,
-      [`sage-link--icon-${iconPosition}-${icon}`]: icon && iconPosition,
-    }
+    !suppressDefaultClass && linkClasses
   );
 
   const SelfTag = tag || 'a';
