@@ -1,0 +1,20 @@
+<%= sage_layout SageFrame, {
+  background: SageTokens::COLOR_PALETTE[:GREY_200],
+  direction: "horizontal",
+  border_radius: "md",
+} do %>
+  <%= sage_layout SageFrame, {
+    gap: "none",
+    padding: "sm",
+    width: "flex",
+  } do %>
+    <h4 class="<%= "#{SageClassnames::TYPE::HEADING_6}" %>">
+      Need help?
+    </h4>
+    <p class="<%= "#{SageClassnames::TYPE::BODY_XSMALL}" %>">
+      Find your account and routing numbers at the bottom of your personal checks.
+    </p>
+  <% end %>
+  <%# TODO: Dev need to export this SVG in `kp` and add to assets for cleaner export %>
+  <%= render "mocks/kp_onboarding_payouts/shared/illustration_check_details" %>
+<% end %>

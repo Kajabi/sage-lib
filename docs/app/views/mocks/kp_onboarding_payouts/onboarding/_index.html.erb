@@ -1,0 +1,118 @@
+<%= sage_layout SageFrame, {
+  gap: "none",
+  align: "center",
+} do %>
+  <%= sage_layout SageFrame, {
+    background: SageTokens::COLOR_PALETTE[:PRIMARY_300],
+    padding: "xs",
+    width: "fill",
+  } %>
+  <%= sage_layout SageFrame, { padding: "lg", width: "fill" } do %>
+    <%= render "mocks/kp_onboarding_payouts/shared/logo_kajabi" %>
+  <% end %>
+  
+  <%= render "mocks/kp_onboarding_payouts/onboarding/step",
+    title: "Welcome to Kajabi Payments!",
+    step: 1,
+    graphic: "illustration_dark_roast",
+    copy: %(
+      <p class="#{SageClassnames::TYPE::BODY}">
+        You&rsquo;re nearly ready to accept and manage customer payments, receive payouts, and more - right in Kajabi.
+        Spend less time juggling admin, and more time sharing what you love with your audience.
+      </p>
+    ),
+    form: sage_component(SageCheckbox, {
+      id: "kp-onboarding-terms-acknowledgement",
+      name: "kp-onboarding-terms-acknowledgement",
+      label_text: "I have read and agree to the #{link_to("terms and conditions", "#TODO-dev-terms-url")}.".html_safe,
+    }),
+    actions: sage_component(SageButton, {
+      value: "Not now",
+      subtle: true,
+      style: "secondary",
+      attributes: { href: "#TODO-dev-not-now-url" },
+    }) << sage_component(SageButton, {
+      value: "Save and continue",
+      style: "primary",
+      disabled: true, # TODO: Dev to bind this to checkbox selected
+      attributes: { href: "#TODO-dev-continue-1-url" },
+    })
+  %>
+  
+  <%= render "mocks/kp_onboarding_payouts/onboarding/step",
+    title: "Add your bank account",
+    step: 2,
+    graphic: "illustration_laptop",
+    copy: %(
+      <p>
+        Link your bank account to start getting paid. (You can update it at any time.)
+      </p>
+    ),
+    form: sage_component(SageFormInput, {
+      label_text: "Routing number",
+      id: "payout-edit-bank-acct-routing-number",
+      name: "payout-edit-bank-acct-routing-number",
+    }) << sage_component(SageFormInput, {
+      label_text: "Account number",
+      id: "payout-edit-bank-acct-acct-number",
+      name: "payout-edit-bank-acct-acct-number",
+    }) << render("mocks/kp_onboarding_payouts/shared/check_explanation"),
+    actions: sage_component(SageButton, {
+      value: "I'll do this later",
+      subtle: true,
+      style: "secondary",
+      attributes: { href: "#TODO-dev-later-url" },
+    }) << sage_component(SageButton, {
+      value: "Save and continue",
+      style: "primary",
+      disabled: true, # TODO: Dev to bind this to fields completed
+      attributes: { href: "#TODO-dev-continue-2-url" },
+    })
+  %>
+  
+  <%= render "mocks/kp_onboarding_payouts/onboarding/step",
+    title: "Update your offer settings",
+    step: 3,
+    graphic: "illustration_planter",
+    copy: %(
+      <p>
+        Do you want to switch your offer settings to accept credit/debit cards through Kajabi Payments instead of Stripe? 
+      </p>
+      <p>
+        Doing so will result in:
+      </p>
+      <ul>
+        <li>
+          <strong>No changes</strong> to your checkout pages
+        </li>
+        <li>
+          <strong>No changes</strong> to offers accepting PayPal
+        </li>
+        <li>
+          All currently active subscriptions and multiple payments will continue to go through Stripe
+          (new payments will go through Kajabi Payments)
+        </li>
+      </ul>
+      <p>
+        Note: You can manually switch any offer&rsquo;s payment processor back to Stripe
+      </p>
+    ),
+    form: sage_component(SageCheckbox, {
+      id: "kp-onboarding-offer-conversion-acknowledgement",
+      name: "kp-onboarding-offer-conversion-acknowledgement",
+      label_text: "Yes, convert my offers to Kajabi Payments",
+    }),
+    actions: sage_component(SageButton, {
+      value: "Go back",
+      subtle: true,
+      style: "secondary",
+      attributes: { href: "#TODO-dev-go-back-url" },
+    }) << sage_component(SageButton, {
+      value: "Finish",
+      style: "primary",
+      disabled: true, # TODO: Dev to bind this to checkbox selected
+      attributes: { href: "#TODO-dev-done-url" },
+    })
+  %>
+
+<% end %>
