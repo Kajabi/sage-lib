@@ -15,6 +15,13 @@ $-input-text-height: sage-font-size(body);
 .sage-input {
   @include sage-form-field-group;
 
+  display: grid;
+  grid-template-areas:
+    "label label label"
+    "input input input"
+    "message message message";
+  grid-template-columns: min-content 1fr min-content;
+
   .sage-input-group &,
   .sage-toolbar & {
     height: auto;
@@ -33,6 +40,11 @@ $-input-text-height: sage-font-size(body);
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
     }
+  }
+
+  .sage-popover {
+    grid-row: 2 / 3;
+    grid-column: -1 / -2;
   }
 }
 
@@ -64,12 +76,16 @@ $-input-text-height: sage-font-size(body);
 }
 
 .sage-input__affix--prefix {
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
   top: 0;
   left: sage-spacing(sm);
   padding-right: sage-spacing(2xs);
 }
 
 .sage-input__affix--suffix {
+  grid-row: 2 / 3;
+  grid-column: -1 / -2;
   top: 0;
   right: sage-spacing(sm);
   padding-left: sage-spacing(2xs);
@@ -78,6 +94,7 @@ $-input-text-height: sage-font-size(body);
 .sage-input__label {
   @include sage-form-field-label;
 
+  grid-area: label;
   margin-bottom: sage-spacing(2xs);
 }
 .sage-input__field-wrapper {
@@ -88,6 +105,7 @@ $-input-text-height: sage-font-size(body);
   @include sage-form-field;
   @include sage-focus-ring;
 
+  grid-area: input;
   height: $-input-height;
   padding: sage-spacing(xs) sage-spacing(sm);
 
@@ -113,6 +131,9 @@ $-input-text-height: sage-font-size(body);
 }
 
 .sage-input__icon {
+  grid-row: 2 / 3;
+  grid-column: -1 / -2;
+
   .sage-input--has-icon & {
     @include sage-form-field-icon;
 
@@ -126,4 +147,6 @@ $-input-text-height: sage-font-size(body);
 
 .sage-input__message {
   @include sage-form-field-message;
+
+  grid-area: message;
 }

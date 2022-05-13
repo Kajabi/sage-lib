@@ -28,39 +28,37 @@ export const Select = ({
 
   return (
     <div className={classNames}>
+      <select
+        className="sage-select__field"
+        id={id}
+        onChange={onChange}
+        placeholder={label}
+        value={value}
+        disabled={disabled}
+        {...rest}
+      >
+        {(label && includeLabelInOptions) && <option label={label} />}
+
+        {options.map((option, i) => {
+          let optionLabel,
+            optionValue;
+          if (typeof option === 'string') {
+            optionLabel = option;
+            optionValue = option;
+          } else {
+            optionLabel = option.label;
+            optionValue = option.value;
+          }
+
+          return (
+            <option key={i.toString()} value={optionValue}>{optionLabel}</option>
+          );
+        })}
+      </select>
+      <i className="sage-select__arrow" aria-hidden="true" />
       {label && (
         <label htmlFor={id} className="sage-select__label">{label}</label>
       )}
-      <div className="sage-select__field-wrapper">
-        <select
-          className="sage-select__field"
-          id={id}
-          onChange={onChange}
-          placeholder={label}
-          value={value}
-          disabled={disabled}
-          {...rest}
-        >
-          {(label && includeLabelInOptions) && <option label={label} />}
-
-          {options.map((option, i) => {
-            let optionLabel,
-              optionValue;
-            if (typeof option === 'string') {
-              optionLabel = option;
-              optionValue = option;
-            } else {
-              optionLabel = option.label;
-              optionValue = option.value;
-            }
-
-            return (
-              <option key={i.toString()} value={optionValue}>{optionLabel}</option>
-            );
-          })}
-        </select>
-        <i className="sage-select__arrow" aria-hidden="true" />
-      </div>
       {message && (
         <div className="sage-select__message">{message}</div>
       )}

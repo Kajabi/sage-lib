@@ -12,9 +12,10 @@ export const GridCol = ({
   sageType,
   size,
   small,
+  xlarge,
   ...rest
 }) => {
-  const hasInfix = size || small || medium || large;
+  const hasInfix = size || small || medium || large || xlarge;
 
   const classNames = classnames(
     className,
@@ -24,6 +25,7 @@ export const GridCol = ({
       [`sage-col--sm-${small}`]: small,
       [`sage-col--md-${medium}`]: medium,
       [`sage-col--lg-${large}`]: large,
+      [`sage-col--xl-${xlarge}`]: xlarge,
       [`${SageClassnames.TYPE_BLOCK}`]: sageType
     }
   );
@@ -43,6 +45,7 @@ GridCol.defaultProps = {
   sageType: false,
   small: null,
   size: null,
+  xlarge: null,
 };
 
 GridCol.propTypes = {
@@ -52,5 +55,6 @@ GridCol.propTypes = {
   medium: validBreakpoint,
   large: validBreakpoint,
   sageType: PropTypes.bool,
-  size: validNumberWithinGrid
+  size: validNumberWithinGrid,
+  xlarge: validBreakpoint,
 };

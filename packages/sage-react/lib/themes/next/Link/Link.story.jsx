@@ -1,9 +1,18 @@
 import React from 'react';
+import { SageTokens } from '../configs';
+import { selectArgs } from '../story-support/helpers';
 import { Link } from './Link';
 
 export default {
   title: 'Sage/Link',
   component: Link,
+  argTypes: {
+    ...selectArgs({
+      icon: SageTokens.ICONS,
+      iconPosition: Link.ICON_POSITIONS,
+      style: Link.COLORS
+    })
+  }
 };
 
 const Template = (args) => <Link {...args} />;

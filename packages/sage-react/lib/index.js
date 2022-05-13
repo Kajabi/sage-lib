@@ -28,6 +28,7 @@ export const {
   FormSection,
   Grid,
   HelpLink,
+  Hero,
   Hint,
   Icon,
   IconCard,
@@ -72,6 +73,8 @@ export const {
   UploadCard,
   SageClassnames,
   SageTokens,
+  useSageBreakpoint,
+  SageBreakpointProvider,
 } = window.SAGE_THEME === 'sage_theme_next'
   ? SageNext
   : SageLegacy;

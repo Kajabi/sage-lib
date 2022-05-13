@@ -154,7 +154,7 @@ a:hover {
   color: #0056b3;
 }
 
-a:not([href]):not([tabindex]) {
+a:not([href]):not([tabindex]):not([to]) {
   color: inherit;
 }
 
