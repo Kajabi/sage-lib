@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.64.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.63.3...@kajabi/sage@4.64.0) (2022-05-13)
+
+
+### Features
+
+* **mocks:** add kp onboarding views to mocks ([a198e6d](https://github.com/Kajabi/sage-lib/commit/a198e6dd3fc7aef6b58b413f0e624b6036030a31))
+
+
+
+
+
 ## [4.63.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.63.2...@kajabi/sage@4.63.3) (2022-05-11)
 
 **Note:** Version bump only for package @kajabi/sage
