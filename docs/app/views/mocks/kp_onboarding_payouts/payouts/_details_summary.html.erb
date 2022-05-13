@@ -36,7 +36,9 @@
         <%= c[:gross] %>
       <% end %>
       <% t.column :fee, align: "right" do | c | %>
-        <%= c[:fees] %>
+        <span data-js-tooltip="Standard fee: (2.9% + $0.30); Subscription fee: (0.5%)">
+          <%= c[:fees] %>
+        </span>
       <% end %>
       <% t.column :total, align: "right" do | c | %>
         <%= c[:total] %>

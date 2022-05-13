@@ -17,7 +17,9 @@
       <%= c[:amount] %>
     <% end %>
     <% t.column :fee, align: "right" do |c| %>
-      <%= c[:fee] %>
+      <span data-js-tooltip="Standard fee: (2.9% + $0.30)">
+        <%= c[:fee] %>
+      </span>
     <% end %>
     <% t.column :net, align: "right" do |c| %>
       <span class="<%= payouts_table_get_amount_ui_style(c[:type]) %>">
