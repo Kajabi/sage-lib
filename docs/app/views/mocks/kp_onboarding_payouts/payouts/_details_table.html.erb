@@ -6,6 +6,22 @@
   padding: "md",
   width: "fill",
 } do %>
+  <%= sage_layout SageFrame, {
+    direction: "horizontal",
+    align: "center-spread"
+  } do %>
+    <h4 class="<%= SageClassnames::TYPE::HEADING_5 %>">
+      Details
+    </h4>
+    <%= sage_component SageButton, {
+      value: "Export",
+      style: "secondary",
+      raised: false,
+      attributes: {
+        "data-js-modaltrigger": "modal-export-payout-records",
+      }
+    } %>
+  <% end %>
   <%= sage_table_for payout_data, responsive: true do |t| %>
     <% t.column :date do |c| %>
       <%= c[:date] %>
@@ -48,3 +64,5 @@
     <% end %>
   <% end %>
 <% end %>
+
+<%= render "mocks/kp_onboarding_payouts/payouts/modal_export_payout_records" %>
