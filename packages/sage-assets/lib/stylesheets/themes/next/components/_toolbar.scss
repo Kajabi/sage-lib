@@ -5,12 +5,10 @@
 ///
 /// NOTE: This is an early exploration effort to break away from Panel Controls for creating "toolbar" setups. *?
 
-// Fixes issue with input alignment
-:root {
-  --icon-block-padding: #{rem(4px)};
-}
-
 .sage-toolbar {
+  // Fixes issue with input alignment
+  --icon-block-padding: #{rem(4px)};
+
   display: flex;
   flex-flow: row wrap;
   column-gap: sage-spacing(md);

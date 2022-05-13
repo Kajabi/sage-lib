@@ -4,12 +4,10 @@
 /// @group sage
 ////
 
-// Fixes issue with input alignment
-:root {
-  --icon-block-padding: #{rem(4px)};
-}
-
 .sage-panel-controls {
+  // Fixes issue with input alignment
+  --icon-block-padding: #{rem(4px)};
+
   display: grid;
   gap: sage-spacing(panel);
   grid-template-rows: min-content;
