@@ -117,6 +117,10 @@ $-search-icon: "::before";
   @include sage-form-field-label;
 
   margin-bottom: sage-spacing(2xs);
+
+  .sage-panel-controls__toolbar & {
+    margin-bottom: 0;
+  }
 }
 
 .sage-search__input {
@@ -146,6 +150,11 @@ $-search-icon: "::before";
     padding-top: sage-spacing(xs);
     padding-bottom: sage-spacing(xs);
     border-radius: inherit;
+  }
+
+  .sage-panel-controls__toolbar & {
+    padding-top: rem(10px);
+    padding-bottom: rem(10px);
   }
 
   .sage-search--contained &:focus,

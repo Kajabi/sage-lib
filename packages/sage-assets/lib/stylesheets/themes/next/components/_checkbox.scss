@@ -53,7 +53,7 @@ $-checkbox-focus-outline-color: sage-color(primary, 200);
     align-items: center;
     position: relative;
     z-index: sage-z-index(default);
-    padding: rem(6px) sage-spacing(xs);
+    padding: rem(10px) sage-spacing(sm);
     border: 0;
 
     .sage-panel-controls & {
