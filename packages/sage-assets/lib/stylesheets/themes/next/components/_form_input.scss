@@ -26,6 +26,7 @@ $-input-text-height: sage-font-size(body);
   .sage-toolbar & {
     height: auto;
     margin-bottom: 0;
+    width: 100%;
   }
 
   .sage-toolbar__group & {
@@ -45,6 +46,13 @@ $-input-text-height: sage-font-size(body);
   .sage-popover {
     grid-row: 2 / 3;
     grid-column: -1 / -2;
+  }
+
+  .sage-input__action {
+    grid-row: 2 / 3;
+    grid-column: -1 / -2;
+    display: flex;
+    align-items: center;
   }
 }
 
