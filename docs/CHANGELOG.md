@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.64.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.64.0...@kajabi/sage@4.64.1) (2022-05-13)
+
+
+### Bug Fixes
+
+* **form elements:** updates to textarea and select ([ad298e4](https://github.com/Kajabi/sage-lib/commit/ad298e48f8b077f77f386bc663096683d518b317))
+* **form-element:** resolve floating label issue ([c358ee2](https://github.com/Kajabi/sage-lib/commit/c358ee26078ef509ec32a9433f81f861e12cf5e4))
+* **grid:** add xl breakpoint ([75a0383](https://github.com/Kajabi/sage-lib/commit/75a0383e522b53829ecc76b131c910c55d15b25c))
+* **grid:** updated typo ([2dde418](https://github.com/Kajabi/sage-lib/commit/2dde418cec682302b11827882cac7a560754c5ea))
+* **page-heading:** updated h1 structure ([c6b5943](https://github.com/Kajabi/sage-lib/commit/c6b5943e18f5362ba197e3c4a12e7ea503a11987))
+* **style:** ensure consumables don't export CSS ([ff37f88](https://github.com/Kajabi/sage-lib/commit/ff37f884985bde0f6b0cdcb0fe3bf92d08a56f3c))
+
+
+
+
+
 # [4.64.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.63.3...@kajabi/sage@4.64.0) (2022-05-13)
 
 

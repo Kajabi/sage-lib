@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.21.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.21.1...@kajabi/sage-system@0.21.2) (2022-05-13)
+
+
+### Bug Fixes
+
+* **form elements:** updates to textarea and select ([ad298e4](https://github.com/Kajabi/sage-lib/commit/ad298e48f8b077f77f386bc663096683d518b317))
+* **form-element:** resolve floating label issue ([c358ee2](https://github.com/Kajabi/sage-lib/commit/c358ee26078ef509ec32a9433f81f861e12cf5e4))
+
+
+
+
+
 ## [0.21.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.21.0...@kajabi/sage-system@0.21.1) (2022-05-04)
 
 

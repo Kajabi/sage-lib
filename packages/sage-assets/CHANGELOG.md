@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.82.4](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.82.3...@kajabi/sage-assets@0.82.4) (2022-05-13)
+
+
+### Bug Fixes
+
+* **alert:** added margin-bottom ([bbdb5f4](https://github.com/Kajabi/sage-lib/commit/bbdb5f45c64e99732ea84738233759bb52a8b573))
+* **dropdown:** adjust divider spacing ([fa9f892](https://github.com/Kajabi/sage-lib/commit/fa9f8923772b5f487c41bfcfeae95e3757acbc5b))
+* **form elements:** updates to textarea and select ([ad298e4](https://github.com/Kajabi/sage-lib/commit/ad298e48f8b077f77f386bc663096683d518b317))
+* **form-element:** resolve floating label issue ([c358ee2](https://github.com/Kajabi/sage-lib/commit/c358ee26078ef509ec32a9433f81f861e12cf5e4))
+* **form-elements:** move label position in react ([cb56b36](https://github.com/Kajabi/sage-lib/commit/cb56b364c6dcebedcbe420e339d6dafc87c5ee2f))
+* **form-elements:** removed z-index ([903ced8](https://github.com/Kajabi/sage-lib/commit/903ced8abea6548e9a48aea1c0584a9111e3f668))
+* **form-elements:** updates to styles ([235b8c8](https://github.com/Kajabi/sage-lib/commit/235b8c88c0121ca467aec36b63ed2d81074d6479))
+* **grid:** add xl breakpoint ([75a0383](https://github.com/Kajabi/sage-lib/commit/75a0383e522b53829ecc76b131c910c55d15b25c))
+* **grid:** updates to legacy grid using size props ([55b2ec7](https://github.com/Kajabi/sage-lib/commit/55b2ec772bd1a7d4d6fd833591b57ef3278b5788))
+* **page-heading:** update react examples and added help ([6854a3c](https://github.com/Kajabi/sage-lib/commit/6854a3c2482585bd5da9a14fbe7f556830d4f27c))
+* **style:** ensure consumables don't export CSS ([ff37f88](https://github.com/Kajabi/sage-lib/commit/ff37f884985bde0f6b0cdcb0fe3bf92d08a56f3c))
+
+
+
+
+
 ## [0.82.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.82.2...@kajabi/sage-assets@0.82.3) (2022-05-11)
 
 

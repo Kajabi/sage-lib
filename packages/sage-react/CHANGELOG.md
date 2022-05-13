@@ -3,6 +3,37 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.96.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.95.3...@kajabi/sage-react@0.96.0) (2022-05-13)
+
+
+### Bug Fixes
+
+* **checkbox:** update storybook demos ([5be420e](https://github.com/Kajabi/sage-lib/commit/5be420e1b1181c02f60fd8fb0a339e09b5ffec57))
+* **checkbox:** updated legacy file ([48ab849](https://github.com/Kajabi/sage-lib/commit/48ab8497ba0e834d6243be3df0356fb3fedcbcec))
+* **form-elements:** move label position in react ([cb56b36](https://github.com/Kajabi/sage-lib/commit/cb56b364c6dcebedcbe420e339d6dafc87c5ee2f))
+* **grid:** add xl breakpoint ([75a0383](https://github.com/Kajabi/sage-lib/commit/75a0383e522b53829ecc76b131c910c55d15b25c))
+* **hero:** add react version ([4939d16](https://github.com/Kajabi/sage-lib/commit/4939d1697b4a56be72c50e8cadd8b583db65a14d))
+* **hero:** added next files ([58f9904](https://github.com/Kajabi/sage-lib/commit/58f99046c0e391cd8df082df9375432bf008fcf4))
+* **hero:** added specs ([96cf2ee](https://github.com/Kajabi/sage-lib/commit/96cf2ee4e99489e9c5def10ef2102ca9d8ecc53b))
+* **hero:** updates per kevin review ([20f1be8](https://github.com/Kajabi/sage-lib/commit/20f1be818ced4a4970a657f742e5d1440d47be66))
+* **link, button:** fixes link classes showing in Button for React ([0651099](https://github.com/Kajabi/sage-lib/commit/06510992e90ae27882f11cce23c9a517540a2cf1))
+* **page-heading:** added intro text demo ([d0c63f7](https://github.com/Kajabi/sage-lib/commit/d0c63f7b20a18c7c0c8889c7ff497c8933a0ead0))
+* **page-heading:** update react examples and added help ([6854a3c](https://github.com/Kajabi/sage-lib/commit/6854a3c2482585bd5da9a14fbe7f556830d4f27c))
+
+
+### Features
+
+* **breakpoint-provider:** add breakpiont-provider to legacy ([0694598](https://github.com/Kajabi/sage-lib/commit/0694598bc2648964896ee87f71f8d555dc672028))
+* **breakpoint-provider:** add to next and add sync notes ([b2a3414](https://github.com/Kajabi/sage-lib/commit/b2a34147ad5f7e631d500127c2f53a0457b8cbb8))
+* **mocks:** add breakpoint demo to get started mocks ([e9a8f4a](https://github.com/Kajabi/sage-lib/commit/e9a8f4a8478eef32a81c6a77a8fc7543757cc29d))
+* **mocks:** sync up other get started styles ([122d1c8](https://github.com/Kajabi/sage-lib/commit/122d1c865fafaf67ff23e3d59da947aca2ba0b55))
+* **mocks:** update mobile get started module ([e3f370d](https://github.com/Kajabi/sage-lib/commit/e3f370d3d855701de22dc6194dc2107a34ebc2db))
+* **tabs:** add tabs subitems to storybook docs ([f52a559](https://github.com/Kajabi/sage-lib/commit/f52a5598d7fd0502849a3aee4a209d881ea0a500))
+
+
+
+
+
 ## [0.95.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.95.2...@kajabi/sage-react@0.95.3) (2022-05-11)
 
 **Note:** Version bump only for package @kajabi/sage-react
