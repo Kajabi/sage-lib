@@ -77,6 +77,11 @@ module Mocks::KpOnboardingPayoutsHelper
         value: "Transferring",
         color: "draft"
       }
+    when "topup"
+      {
+        value: "Top-up",
+        color: "draft"
+      }
     end
   end
 
@@ -89,12 +94,23 @@ module Mocks::KpOnboardingPayoutsHelper
     end
   end
 
-  def payouts_table_get_amount_ui_style(type)
+  def payout_details_table_get_amount_ui_style(type)
     case type
     when "refund"
       "#{SageClassnames::TYPE_COLORS::GREY_500}"
     else
       ""
+    end
+  end
+
+  def payouts_table_get_amount_ui_style(type)
+    case type
+    when "topup"
+      "#{SageClassnames::TYPE_COLORS::CHARCOAL_100}"
+    when "withdraw"
+      "#{SageClassnames::TYPE_COLORS::CHARCOAL_100}"
+    else
+      "#{SageClassnames::TYPE::BODY_MED}"
     end
   end
 
@@ -200,6 +216,46 @@ module Mocks::KpOnboardingPayoutsHelper
         fee: "-$6.68",
         net: "$120.48",
       },
+    ]
+  end
+
+  def payouts_sample_bank_acct
+    {
+      ending_digits: "••••2324",
+      name: "Wells Fargo Bank, N.A.",
+    }
+  end
+
+  def payouts_all_data
+    [
+      {
+        amount: "$2,888.71",
+        currency: "USD",
+        status: "transferring",
+        date: "Yesterday at 3:30 pm",
+        account: payouts_sample_bank_acct,
+      },
+      {
+        amount: "$654.82",
+        currency: "USD",
+        status: "paid",
+        date: "Jan 18 at 2:29 pm",
+        account: payouts_sample_bank_acct,
+      },
+      {
+        amount: "($130.37)",
+        currency: "USD",
+        status: "withdraw",
+        date: "Jan 17 at 3:29 pm",
+        account: payouts_sample_bank_acct,
+      },
+      {
+        amount: "+$200.00",
+        currency: "USD",
+        status: "topup",
+        date: "Jan 14 at 2:29 pm",
+        account: payouts_sample_bank_acct,
+      }
     ]
   end
 end

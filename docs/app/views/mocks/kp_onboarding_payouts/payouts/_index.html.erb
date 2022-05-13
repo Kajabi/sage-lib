@@ -1,29 +1,98 @@
-<%= sage_component SageGridRow, {} do %>
-  <%= sage_component SageGridCol, { medium: "8" } do %>
-    <%= render "mocks/kp_onboarding_payouts/payouts/recent_activity",
-      activity_data: payouts_recent_activity,
-      overall_status: "These are funds that are currently on their way to your bank or have been paid."
-      # overall_status: "Your payouts will appear here once you schedule payouts to your external account."
-    %>
-  <% end %>
-  <%= sage_component SageGridCol, { medium: "4", css_classes: SageClassnames::GRID_PANEL } do %>
-    <div class="<%= SageClassnames::GRID_PANEL %>">
-      <%= render "mocks/kp_onboarding_payouts/payouts/balance",
-        amount: "$352.14",
-        currency: "USD",
-        expected_date: "Apr 11"
-      %>
-      <%= render "mocks/kp_onboarding_payouts/payouts/future_payouts",
-        next_payout: {
-          amount: "$830.50",
-          currency: "USD",
-          estimated_date: "Jan 16 – Jan 22",
+<%= sage_component SagePageHeading, { title: "Payouts", spacer: { bottom: :lg } } do %>
+  <% content_for :sage_page_heading_toolbar do %>
+    <%= sage_component SageTabs, {
+      id: "payouts-index-tabs",
+      items: [
+        {
+          target: "payouts-tabs-overview",
+          text: "Overview",
         },
-        lifetime_payouts: {
-          amount: "$3,263,830.94",
-          currency: "USD",
-        }
+        {
+          active: true,
+          target: "payouts-tabs-all-payouts",
+          text: "All payouts",
+        },
+      ]
+    } %>
+  <% end %>
+<% end %>
+
+<%= sage_component SageTabsPane, { id: "payouts-tabs-overview" } do %>
+  <%= sage_component SageGridRow, {} do %>
+    <%= sage_component SageGridCol, { medium: "8" } do %>
+      <%= render "mocks/kp_onboarding_payouts/payouts/recent_activity",
+        activity_data: payouts_recent_activity,
+        overall_status: "These are funds that are currently on their way to your bank or have been paid."
+        # overall_status: "Your payouts will appear here once you schedule payouts to your external account."
       %>
-    </div>
+    <% end %>
+    <%= sage_component SageGridCol, { medium: "4", css_classes: SageClassnames::GRID_PANEL } do %>
+      <div class="<%= SageClassnames::GRID_PANEL %>">
+        <%= render "mocks/kp_onboarding_payouts/payouts/balance",
+          amount: "$352.14",
+          currency: "USD",
+          expected_date: "Apr 11"
+        %>
+        <%= render "mocks/kp_onboarding_payouts/payouts/future_payouts",
+          next_payout: {
+            amount: "$830.50",
+            currency: "USD",
+            estimated_date: "Jan 16 – Jan 22",
+          },
+          lifetime_payouts: {
+            amount: "$3,263,830.94",
+            currency: "USD",
+          }
+        %>
+      </div>
+    <% end %>
+  <% end %>
+<% end %>
+
+<%= sage_component SageTabsPane, { id: "payouts-tabs-all-payouts" } do %>
+  <%= sage_layout SageFrame, {
+    border: "default",
+    border_radius: "md",
+    padding: "md",
+    align: "start-spread",
+    background: SageTokens::COLOR_PALETTE[:WHITE],
+  } do %>
+
+    <%= sage_component SagePagination, {
+      items: Kaminari.paginate_array(Array.new(50, 1)).page(1).per(10), # TODO: Dev to replace this with table collection
+      collection_name: "Payout",
+      window: 2,
+      page_count_prefix: "Displaying",
+      # hide_counter: true,
+      hide_pages: true,
+    } %>
+    <%= sage_table_for payouts_all_data, responsive: true do |t| %>
+      <% t.column :amount do |c| %>
+        <p class="<%= SageClassnames::TYPE_ALIGN_RIGHT %>">
+          <span class="<%= payouts_table_get_amount_ui_style(c[:status]) %>">
+            <%= c[:amount] %>
+          </span>
+          <span class="<%= "#{SageClassnames::TYPE::BODY_XSMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_100}" %>">
+            <%= c[:currency] %>
+          </span>
+        </p>
+      <% end %>
+      <% t.column :status, label: "" do |c| %>
+        <%= sage_component SageLabel, payouts_get_activity_status_ui_configs(c[:status]) %>
+      <% end %>
+      <% t.column :bank do |c| %>
+        <%= c[:account][:name] %>
+        <%= c[:account][:ending_digits] %>
+      <% end %>
+      <% t.column :date, align: "right" do |c| %>
+        <%= c[:date] %>
+      <% end %>
+    <% end %>
+    <%= sage_component SagePagination, {
+      items: Kaminari.paginate_array(Array.new(50, 1)).page(1).per(10), # TODO: Dev to replace this with table collection
+      collection_name: "Payout",
+      window: 2,
+      page_count_prefix: "Displaying",
+    } %>
   <% end %>
 <% end %>

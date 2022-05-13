@@ -38,7 +38,7 @@
       </span>
     <% end %>
     <% t.column :net, align: "right" do |c| %>
-      <span class="<%= payouts_table_get_amount_ui_style(c[:type]) %>">
+      <span class="<%= payout_details_table_get_amount_ui_style(c[:type]) %>">
         <%= c[:net] %>
       </span>
     <% end %>
