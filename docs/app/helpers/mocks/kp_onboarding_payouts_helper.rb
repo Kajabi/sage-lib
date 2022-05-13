@@ -124,4 +124,40 @@ module Mocks::KpOnboardingPayoutsHelper
       { text: value.to_s, value: value.to_s }
     end
   end
+
+  def payout_detail_summary
+    {
+      date: "Jan 19, 2022",
+      amount: "$2,888.71",
+      currency: "USD",
+      status: "transferring",
+      account: {
+        ending_digits: "37",
+        currency: "USD",
+      },
+      data: [
+        {
+          label: "Sales",
+          quantity: "273",
+          gross: "$3,390.68",
+          fees: "-$139.51",
+          total: "$3.251.17",
+        },
+        {
+          label: "Refunds",
+          quantity: "3",
+          gross: "-$362.46",
+          fees: "N/A",
+          total: "-$362.46",
+        },
+        {
+          label: "Adjustments",
+          quantity: "0",
+          gross: "$0.00",
+          fees: "$0.00",
+          total: "$0.00",
+        },
+      ]
+    }
+  end
 end
