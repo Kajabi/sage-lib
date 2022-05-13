@@ -297,10 +297,10 @@ $-btn-loading-min-height: rem(36px);
 
   .sage-panel-controls__toolbar-btn-group > &:not(.sage-btn--secondary),
   .sage-toolbar__group > &:not(.sage-btn--secondary) {
-    min-height: calc(#{$-btn-toolbar-group-height} + #{rem(2px)}); /* expand to toolbar group height + border offset */
     position: absolute;
     right: 0;
     bottom: 0;
+    min-height: calc(#{$-btn-toolbar-group-height} + #{rem(2px)}); /* expand to toolbar group height + border offset */
   }
 
   .sage-toolbar > .sage-dropdown .sage-dropdown__trigger > &,
