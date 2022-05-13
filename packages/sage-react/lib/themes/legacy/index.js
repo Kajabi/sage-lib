@@ -81,3 +81,7 @@ export {
   SageClassnames,
   SageTokens,
 } from './configs';
+export {
+  useSageBreakpoint,
+  SageBreakpointProvider,
+} from './common/providers';

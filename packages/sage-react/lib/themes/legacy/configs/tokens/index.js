@@ -5,8 +5,11 @@ import { TOKENS_ICONS } from './icons';
 import { TOKENS_RECHARTS } from './recharts';
 import { TOKENS_SPACERS } from './spacers';
 import { TOKENS_Z_INDEXES } from './z-indexes';
+import { SAGE_BREAKPOINT_QUERIES, SAGE_BREAKPOINT_VALUES } from './breakpoints';
 
 export const SageTokens = {
+  BREAKPOINTS: SAGE_BREAKPOINT_VALUES,
+  BREAKPOINT_QUERIES: SAGE_BREAKPOINT_QUERIES,
   COLORS: TOKENS_COLORS,
   COLOR_PALETTE: TOKENS_COLOR_PALETTE,
   COLOR_SLIDERS: TOKENS_COLOR_SLIDERS,
