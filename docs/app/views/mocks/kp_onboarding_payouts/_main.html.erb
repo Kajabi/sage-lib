@@ -3,13 +3,21 @@
     id: "example-tabs1",
     items: [
       {
-        active: true,
         target: "feature-1",
         text: "Payouts: Empty State",
       },
       {
         target: "feature-2",
         text: "Payouts: Index",
+      },
+      {
+        target: "feature-3",
+        text: "KP Onboarding",
+      },
+      {
+        active: true,
+        target: "feature-4",
+        text: "KP Settings",
       },
     ]
   } %>
@@ -18,6 +26,12 @@
   <% end %>
   <%= sage_component SageTabsPane, { id: "feature-2" } do %>
     <%= render "mocks/kp_onboarding_payouts/payouts/index" %>
+  <% end %>
+  <%= sage_component SageTabsPane, { id: "feature-3" } do %>
+    <%= render "mocks/kp_onboarding_payouts/onboarding/index" %>
+  <% end %>
+  <%= sage_component SageTabsPane, { id: "feature-4" } do %>
+    <%= render "mocks/kp_onboarding_payouts/settings/index" %>
   <% end %>
 </div>
  

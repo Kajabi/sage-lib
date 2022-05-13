@@ -1,0 +1,43 @@
+<%= sage_layout SageFrame, {
+  padding: "lg",
+  direction: "horizontal",
+  width: "fill", # TODO: Need more width controls on Frame such as for setting max-width and min-width https://kajabi.atlassian.net/browse/SAGE-580
+  align: "top-center",
+} do %>
+  <%= sage_layout SageFrame, { width: "flex", gap: "lg" } do %>
+    <%= sage_layout SageFrame, { gap: "xs" } do %>
+      <h1 class="<%= "#{SageClassnames::TYPE::HEADING_3}" %>">
+        <%= title %>
+      </h1>
+
+      <p class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_200}" %>">
+        Step <%= step %> of 3
+      </p>
+    <% end %>
+
+    <%= sage_layout SageFrame, { css_classes: "sage-type", gap: "xs" } do %>
+      <%= copy.html_safe %>
+    <% end if defined? copy %>
+
+    <%= sage_layout SageFrame, {
+      align: "stretch-spread",
+      gap: "sm",
+      width: "fill"
+    } do %>
+      <%= form.html_safe %>
+    <% end if defined? form %>    
+
+    <%= sage_layout SageFrame, {
+      direction: "horizontal",
+      align: "center-right",
+      width: "fill",
+    } do %>
+      <%= actions.html_safe %>
+    <% end if defined?(actions) %>
+  <% end %>
+  <%= sage_layout SageFrame, { width: "33%" } do %>
+    <%= sage_component SagePanelFigure, {} do %>
+      <%= image_tag "illustrations/#{graphic}" %>
+    <% end %>
+  <% end %>
+<% end %>
