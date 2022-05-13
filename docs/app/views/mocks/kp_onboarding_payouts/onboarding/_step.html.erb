@@ -36,6 +36,8 @@
     <% end if defined?(actions) %>
   <% end %>
   <%= sage_layout SageFrame, { width: "33%" } do %>
-    <%= render "mocks/kp_onboarding_payouts/shared/#{graphic}" %>
+    <%= sage_component SagePanelFigure, {} do %>
+      <%= image_tag "illustrations/#{graphic}" %>
+    <% end %>
   <% end %>
 <% end %>

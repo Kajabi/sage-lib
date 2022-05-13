@@ -8,13 +8,13 @@
     width: "fill",
   } %>
   <%= sage_layout SageFrame, { padding: "lg", width: "fill" } do %>
-    <%= render "mocks/kp_onboarding_payouts/shared/logo_kajabi" %>
+    <%= image_tag "kajabi", width: "138px" %>
   <% end %>
   
   <%= render "mocks/kp_onboarding_payouts/onboarding/step",
     title: "Welcome to Kajabi Payments!",
     step: 1,
-    graphic: "illustration_dark_roast",
+    graphic: "dark_roast",
     copy: %(
       <p class="#{SageClassnames::TYPE::BODY}">
         You&rsquo;re nearly ready to accept and manage customer payments, receive payouts, and more - right in Kajabi.
@@ -42,7 +42,7 @@
   <%= render "mocks/kp_onboarding_payouts/onboarding/step",
     title: "Add your bank account",
     step: 2,
-    graphic: "illustration_laptop",
+    graphic: "laptop",
     copy: %(
       <p>
         Link your bank account to start getting paid. (You can update it at any time.)
@@ -73,7 +73,7 @@
   <%= render "mocks/kp_onboarding_payouts/onboarding/step",
     title: "Update your offer settings",
     step: 3,
-    graphic: "illustration_planter",
+    graphic: "planter",
     copy: %(
       <p>
         Do you want to switch your offer settings to accept credit/debit cards through Kajabi Payments instead of Stripe? 
