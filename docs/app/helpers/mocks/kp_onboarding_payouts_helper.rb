@@ -89,6 +89,15 @@ module Mocks::KpOnboardingPayoutsHelper
     end
   end
 
+  def payouts_table_get_amount_ui_style(type)
+    case type
+    when "refund"
+      "#{SageClassnames::TYPE_COLORS::GREY_500}"
+    else
+      ""
+    end
+  end
+
   def payouts_balance_settings_options
     [
       { 
@@ -159,5 +168,38 @@ module Mocks::KpOnboardingPayoutsHelper
         },
       ]
     }
+  end
+
+  def payout_detail_line_items
+    [
+      {
+        date: "Jan 20, 2022 07:52",
+        type: "charge",
+        amount: "$127.50",
+        fee: "-$6.68",
+        net: "$120.82",
+      },
+      {
+        date: "Jan 21, 2022 09:14",
+        type: "subscription",
+        amount: "$127.50",
+        fee: "-$7.02",
+        net: "$120.48",
+      },
+      {
+        date: "Jan 22, 2022 13:05",
+        type: "refund",
+        amount: "$127.50",
+        fee: "-$6.68",
+        net: "-$120.82",
+      },
+      {
+        date: "Jan 23, 2022 12:36",
+        type: "charge",
+        amount: "$127.50",
+        fee: "-$6.68",
+        net: "$120.48",
+      },
+    ]
   end
 end

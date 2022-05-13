@@ -1,8 +1,48 @@
 <%= sage_component SageFrame, {
+  align: "start-spread", 
+  background: SageTokens::COLOR_PALETTE[:WHITE],
   border: "default",
   border_radius: "md",
   padding: "md",
-  background: SageTokens::COLOR_PALETTE[:WHITE],
+  width: "fill",
 } do %>
-<p>Testing</p>
+  <%= sage_table_for payout_data, responsive: true do |t| %>
+    <% t.column :date do |c| %>
+      <%= c[:date] %>
+    <% end %>
+    <% t.column :type do |c| %>
+      <%= c[:type].capitalize %>
+    <% end %>
+    <% t.column :amount, align: "right" do |c| %>
+      <%= c[:amount] %>
+    <% end %>
+    <% t.column :fee, align: "right" do |c| %>
+      <%= c[:fee] %>
+    <% end %>
+    <% t.column :net, align: "right" do |c| %>
+      <span class="<%= payouts_table_get_amount_ui_style(c[:type]) %>">
+        <%= c[:net] %>
+      </span>
+    <% end %>
+    <% t.column :options, align: "right", label: "" do |c| %>
+      <%= sage_component SageDropdown, {
+        align: "right",
+        items: [
+          {
+            value: "View details",
+            attributes: { href: "#TODO-dev-action-url" },
+          }
+        ],
+      } do %>
+        <% content_for :sage_dropdown_trigger, flush: true do %>
+          <%= sage_component SageButton, {
+            value: "Options",
+            style: "secondary",
+            subtle: true,
+            icon: { name: "dot-menu-horizontal", style: "only" },
+          } %>
+        <% end %>
+      <% end %>
+    <% end %>
+  <% end %>
 <% end %>
