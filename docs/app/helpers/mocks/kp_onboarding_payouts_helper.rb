@@ -258,4 +258,38 @@ module Mocks::KpOnboardingPayoutsHelper
       }
     ]
   end
+
+  def payouts_filter_status_options
+    # TODO: Dev to wire selected state to true status
+    [
+      {
+        selected: false,
+        name: "paid",
+      },
+      {
+        selected: false,
+        name: "scheduled",
+      },
+      {
+        selected: false,
+        name: "canceled",
+      },
+      {
+        selected: false,
+        name: "transferring",
+      },
+      {
+        selected: false,
+        name: "failed",
+      },
+      {
+        selected: false,
+        name: "withdraw",
+      },
+      {
+        selected: false,
+        name: "top-up",
+      }
+    ]
+  end
 end
