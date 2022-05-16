@@ -46,7 +46,7 @@
             align: "center-spread",
             padding: "sm",
           } do %>
-            <p class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_100}" %>">
+            <p class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_200}" %>">
               STATUS
             </p>
             <%= sage_layout SageFrame, { gap: "none" } do %>
@@ -61,7 +61,7 @@
               <% end %>
             <% end %>
 
-            <p class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_100}" %>">
+            <p class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_200}" %>">
               IN THE LAST
             </p>
             <%= sage_component SageFormSelect, {
@@ -121,7 +121,7 @@
         <span class="<%= payouts_table_get_amount_ui_style(c[:status]) %>">
           <%= c[:amount] %>
         </span>
-        <span class="<%= "#{SageClassnames::TYPE::BODY_XSMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_100}" %>">
+        <span class="<%= "#{SageClassnames::TYPE::BODY_XSMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_200}" %>">
           <%= c[:currency] %>
         </span>
       </p>
