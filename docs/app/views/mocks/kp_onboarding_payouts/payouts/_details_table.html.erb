@@ -14,12 +14,14 @@
       Details
     </h4>
     <%= sage_component SageButton, {
-      value: "Export",
-      style: "secondary",
-      raised: false,
       attributes: {
-        "data-js-modaltrigger": "modal-export-payout-records",
-      }
+        # TODO: Dev to map this to system download flow
+        "href": "#TODO-dev-download-flow-url",
+      },
+      icon: { name: "download", style: "only" },
+      raised: false,
+      style: "secondary",
+      value: "Export",
     } %>
   <% end %>
   <%= sage_table_for payout_data, responsive: true do |t| %>
@@ -65,4 +67,3 @@
   <% end %>
 <% end %>
 
-<%= render "mocks/kp_onboarding_payouts/payouts/modal_export_payout_records" %>

@@ -116,21 +116,39 @@
       <% end %>
     <% end %>
   <% end %>
-  <%= sage_table_for payouts_all_data, responsive: true do |t| %>
-    <% t.column :amount do |c| %>
-      <p class="<%= SageClassnames::TYPE_ALIGN_RIGHT %>">
-        <span class="<%= payouts_table_get_amount_ui_style(c[:status]) %>">
-          <%= c[:amount] %>
-        </span>
-        <span class="<%= "#{SageClassnames::TYPE::BODY_XSMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_200}" %>">
-          <%= c[:currency] %>
-        </span>
-      </p>
+  <%= sage_table_for payouts_all_data, responsive: true, sortable: true do |t| %>
+    <%#
+      TODO: Need to add affordance for whole row to be clickable
+      https://kajabi.atlassian.net/browse/SAGE-619
+    %>
+    <% t.column :amount, width: "100px" do |c| %>
+      <%= sage_component SageLink, {
+        remove_underline: true,
+        style: "secondary",
+        html_attributes: {
+          style: "width: 100%",
+        },
+        css_classes: SageClassnames::TYPE_ALIGN_RIGHT,
+      } do %>
+        <%= sage_layout SageFrame, {
+          direction: "horizontal",
+          gap: "2xs",
+          align: "baseline-right",
+          width: "fill",
+        } do %>
+          <span class="<%= payouts_table_get_amount_ui_style(c[:status]) %>">
+            <%= c[:amount] %>
+          </span>
+          <span class="<%= "#{SageClassnames::TYPE::BODY_XSMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_200}" %>">
+            <%= c[:currency] %>
+          </span>
+        <% end %>
+      <% end %>
     <% end %>
     <% t.column :status, label: "" do |c| %>
       <%= sage_component SageLabel, payouts_get_activity_status_ui_configs(c[:status]) %>
     <% end %>
-    <% t.column :bank do |c| %>
+    <% t.column :bank, label: "" do |c| %>
       <%= c[:account][:name] %>
       <%= c[:account][:ending_digits] %>
     <% end %>

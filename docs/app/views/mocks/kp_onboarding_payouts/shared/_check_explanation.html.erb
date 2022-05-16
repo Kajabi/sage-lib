@@ -2,6 +2,7 @@
   background: SageTokens::COLOR_PALETTE[:GREY_200],
   direction: "horizontal",
   border_radius: "md",
+  align: "start-spread",
 } do %>
   <%= sage_layout SageFrame, {
     gap: "none",
@@ -15,5 +16,7 @@
       Find your account and routing numbers at the bottom of your personal checks.
     </p>
   <% end %>
-  <%= image_tag "mocks/check_details" %>
+  <%= sage_layout SageFrame, { gap: "none", width: "340px" } do %>
+    <%= image_tag "mocks/check_details" %>
+  <% end %>
 <% end %>

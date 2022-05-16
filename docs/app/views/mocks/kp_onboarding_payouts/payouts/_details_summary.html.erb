@@ -25,6 +25,10 @@
     } %>
   <% end %>
   <%= sage_layout SageFrame, { width: "flex", align: "start-spread", gap: "sm" } do %>
+    <%#
+      TODO: Need option to use borders below rows in table for cases like this one
+      https://kajabi.atlassian.net/browse/SAGE-617
+    %>
     <%= sage_table_for payout[:data], responsive: true do | t | %>
       <% t.column :label, label: "" do | c | %>
         <%= c[:label] %>
@@ -44,6 +48,10 @@
         <%= c[:total] %>
       <% end %>
     <% end %>
+    <%#
+      TODO: Need to consider a `tfoot` option for situations like this
+      https://kajabi.atlassian.net/browse/SAGE-618
+    %>
     <%= sage_layout SageFrame, {
       direction: "horizontal",
       align: "center-spread",
