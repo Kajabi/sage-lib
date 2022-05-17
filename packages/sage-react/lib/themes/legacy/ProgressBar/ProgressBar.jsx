@@ -4,6 +4,7 @@ import classnames from 'classnames';
 import { SageTokens } from '../configs';
 
 export const ProgressBar = ({
+  backgroundColor,
   className,
   color,
   label,
@@ -15,10 +16,19 @@ export const ProgressBar = ({
     className,
   );
 
+  let styles = {};
+  if (backgroundColor) {
+    styles['--sage-progress-bar-background-color'] = backgroundColor;
+  }
+
+  if (rest.style) {
+    styles = Object.assign(styles, rest.stlye);
+  }
+
   const displayText = label ? `${label}: ${percent}% progress` : '';
 
   return (
-    <div className={classNames} {...rest}>
+    <div className={classNames} style={styles} {...rest}>
       <progress
         className="sage-progress-bar__element"
         aria-valuemax="100"
@@ -38,6 +48,7 @@ export const ProgressBar = ({
 ProgressBar.COLORS = SageTokens.COLOR_PALETTE;
 
 ProgressBar.defaultProps = {
+  backgroundColor: null,
   className: null,
   color: ProgressBar.COLORS.PRIMARY_300,
   label: null,
@@ -45,6 +56,7 @@ ProgressBar.defaultProps = {
 };
 
 ProgressBar.propTypes = {
+  backgroundColor: PropTypes.string,
   className: PropTypes.string,
   color: PropTypes.oneOf(Object.values(ProgressBar.COLORS)),
   label: PropTypes.string,
