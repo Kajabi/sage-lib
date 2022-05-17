@@ -1,0 +1,69 @@
+<%= sage_component SageFrame, {
+  border: "default",
+  border_radius: "md",
+  padding: "md",
+  direction: "horizontal",
+  background: SageTokens::COLOR_PALETTE[:WHITE],
+  width: "fill",
+} do %>
+  <%= sage_layout SageFrame, { gap: "sm", width: "33%" } do %>
+    <h2 class="<%= "#{SageClassnames::TYPE::HEADING_4} #{SageClassnames::TYPE_COLORS::CHARCOAL_500}" %>">
+      <%= payout[:date] %>
+    </h2>
+    <%= sage_layout SageFrame, { tag: "p", direction: "horizontal", gap: "xs", align: "center-left" } do %>
+      <span class="<%= "#{SageClassnames::TYPE::HEADING_4} #{SageClassnames::TYPE_COLORS::CHARCOAL_500}" %>">
+        <%= payout[:amount] %>
+      </span>
+      <span class="<%= "#{SageClassnames::TYPE::BODY} #{SageClassnames::TYPE_COLORS::CHARCOAL_200}" %>">
+        <%= payout[:currency] %>
+      </span>
+      <%= sage_component SageLabel, payouts_get_activity_status_ui_configs(payout[:status]) %>
+    <% end %>
+    <%= sage_component SageProperty, {
+      value: "••••• #{payout[:account][:ending_digits]} (#{payout[:account][:currency]})",
+      icon: "ban", # TODO: Need `temple` icon here https://kajabi.atlassian.net/browse/SAGE-544
+    } %>
+  <% end %>
+  <%= sage_layout SageFrame, { width: "flex", align: "start-spread", gap: "sm" } do %>
+    <%#
+      TODO: Need option to use borders below rows in table for cases like this one
+      https://kajabi.atlassian.net/browse/SAGE-617
+    %>
+    <%= sage_table_for payout[:data], responsive: true do | t | %>
+      <% t.column :label, label: "" do | c | %>
+        <%= c[:label] %>
+      <% end %>
+      <% t.column :quantity, align: "right" do | c | %>
+        <%= c[:quantity] %>
+      <% end %>
+      <% t.column :gross, align: "right" do | c | %>
+        <%= c[:gross] %>
+      <% end %>
+      <% t.column :fee, align: "right" do | c | %>
+        <span data-js-tooltip="Standard fee: (2.9% + $0.30); Subscription fee: (0.5%)">
+          <%= c[:fees] %>
+        </span>
+      <% end %>
+      <% t.column :total, align: "right" do | c | %>
+        <%= c[:total] %>
+      <% end %>
+    <% end %>
+    <%#
+      TODO: Need to consider a `tfoot` option for situations like this
+      https://kajabi.atlassian.net/browse/SAGE-618
+    %>
+    <%= sage_layout SageFrame, {
+      direction: "horizontal",
+      align: "center-spread",
+      tag: "p",
+      width: "fill",
+    } do %>
+      <strong class="<%= SageClassnames::SPACERS::MD_LEFT %>">
+        Payout
+      </strong>
+      <strong class="<%= SageClassnames::SPACERS::MD_RIGHT %>">
+        <%= payout[:amount] %>
+      </strong>
+    <% end %>
+  <% end %>
+<% end %>

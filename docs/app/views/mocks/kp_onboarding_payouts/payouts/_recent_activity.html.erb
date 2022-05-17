@@ -37,11 +37,13 @@
         <%= render "mocks/kp_onboarding_payouts/payouts/payout_activity_item", data: item %>
       <% end %>
     <% end %>
-    <%= sage_component SageButton, {
-      attributes: { href: "#TODO-dev-all-activity-url" },
-      style: "primary",
-      subtle: true,
-      value: "View all",
-    } %>
+    <div>
+      <%= sage_component SageButton, {
+        attributes: { href: "#TODO-dev-all-activity-url" },
+        style: "primary",
+        subtle: true,
+        value: "View all",
+      } %>
+    </div>
   <% end %>
 <% end %>
