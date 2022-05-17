@@ -95,5 +95,5 @@ ProgressBar.propTypes = {
   displayPercent: PropTypes.bool,
   label: PropTypes.string,
   percent: PropTypes.string,
-  tooltipPosition: PropTypes.oneOf(Object.values()),
+  tooltipPosition: PropTypes.oneOf(Object.values(ProgressBar.TOOLTIP_POSITIONS)),
 };
