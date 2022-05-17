@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.65.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.64.1...@kajabi/sage@4.65.0) (2022-05-17)
+
+
+### Features
+
+* **mocks:** add all payouts table (wip) ([0021d85](https://github.com/Kajabi/sage-lib/commit/0021d852f7c220cd06b5cd6b4c5fd58e7830be12))
+* **mocks:** add details table for payout details ([0676f4e](https://github.com/Kajabi/sage-lib/commit/0676f4ee5db1e72a33e129e1b8247f9c1e9751af))
+* **mocks:** add payout record export button and modal ([5408317](https://github.com/Kajabi/sage-lib/commit/540831720f3317d17c3a68a8009764c1af03b972))
+* **mocks:** add tooltips ([f32b643](https://github.com/Kajabi/sage-lib/commit/f32b643cecba4c287cb4af35628c92326fe3a40c))
+* **mocks:** clean up index setup ([6399340](https://github.com/Kajabi/sage-lib/commit/6399340a18dd6adc9a2d1d4438f416eb8c357023))
+* **mocks:** misc cleanup ([3fe1499](https://github.com/Kajabi/sage-lib/commit/3fe149933b9866a0137399027068e8f3ec3c0327))
+* **mocks:** tighten up after design feedback ([f7f658d](https://github.com/Kajabi/sage-lib/commit/f7f658d5d26d2075ed9d1d38ae7383f919d55392))
+* **mocks:** wip on payout detail page ([1bcb758](https://github.com/Kajabi/sage-lib/commit/1bcb75853eb1bafde86dea8befaf5f9f9f7fee8b))
+
+
+
+
+
 ## [4.64.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.64.0...@kajabi/sage@4.64.1) (2022-05-13)
 
 
