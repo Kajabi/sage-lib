@@ -7,6 +7,7 @@ color = component.color || SageTokens::COLOR_PALETTE[:SAGE_300]
 <div
   class="sage-progress-bar <%= component.generated_css_classes %>"
   data-js-tooltip="<%= content %>"
+  style="<%= "--sage-progress-bar-background-color: #{component.background_color}" if component.background_color %>"
   <%= component.generated_html_attributes.html_safe %>
 >
   <progress

@@ -14,11 +14,10 @@
   }
 }
 
-
 .sage-progress-bar {
   height: rem(6px);
   border-radius: sage-border(radius-large);
-  background-color: sage-color(grey, 300);
+  background-color: var(--sage-progress-bar-background-color, sage-color(grey, 300));
 
   .sage-modal--fullscreen & {
     position: absolute;
