@@ -13,13 +13,18 @@ export const GetStartedTabs = ({ tabsContent }) => {
   const [activeTab, setActiveTab] = React.useState(tabsContent[0].id);
 
   return (
-    <Frame direction={Frame.DIRECTIONS.HORIZONTAL} gap={Frame.GAPS.LG}>
+    <Frame
+      direction={Frame.DIRECTIONS.HORIZONTAL}
+      gap={Frame.GAPS.XL}
+      align={Frame.ALIGNMENTS.CENTER_SPREAD}
+    >
       <Frame width="240px" gap={Frame.GAPS.SM}>
         {tabsContent.map(({
           completed = false,
           icon,
           id,
           label,
+          subtext,
         }) => (
           <Tabs.Item
             // TODO: Improve on the existing tagname logic within to allow increased accessibility. https://kajabi.atlassian.net/browse/SAGE-623
@@ -28,7 +33,7 @@ export const GetStartedTabs = ({ tabsContent }) => {
             itemStyle={Tabs.Item.STYLES.CHOICE}
             panelId={id}
             onClick={() => setActiveTab(id)}
-            style={{ width: '100%' }}
+            style={{ width: '100%', padding: '16px' }}
           >
             <Frame
               direction={Frame.DIRECTIONS.HORIZONTAL}
@@ -41,7 +46,14 @@ export const GetStartedTabs = ({ tabsContent }) => {
                 color={completed ? Icon.COLORS.SAGE_300 : Icon.COLORS.INHERIT}
                 icon={completed ? Icon.ICONS.CHECK_CIRCLE_FILLED : icon}
               />
-              <p className={SageClassnames.TYPE.BODY_MED} style={{ flex: 1 }}>{label}</p>
+              <Frame gap={Frame.GAPS.NONE}>
+                <p className={SageClassnames.TYPE.HEADING_6}>
+                  {label}
+                </p>
+                <p className={`${SageClassnames.TYPE.BODY_SMALL} ${SageClassnames.TYPE_COLORS.CHARCOAL_100}`}>
+                  {subtext}
+                </p>
+              </Frame>
             </Frame>
           </Tabs.Item>
         ))}

@@ -1,9 +1,11 @@
 import React from 'react';
+import { SageTokens } from '../..';
 
 export const getStartedTabs = [
   {
     id: 'get-started-choice-product',
-    label: 'Create a product',
+    label: 'Explore products',
+    subtext: 'Create a product',
     graphic: (
       <svg width="96" height="96" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="48" cy="48" r="48" fill="#8ECAFB" />
@@ -80,11 +82,12 @@ export const getStartedTabs = [
       url: '#TODO-dev-url-product',
       learnMoreUrl: '#TODO-dev-url-learn-product',
     },
-    icon: 'circle-1',
+    icon: SageTokens.ICONS.PRODUCT,
   },
   {
     id: 'get-started-choice-payment',
-    label: 'Set up payments',
+    label: 'Connect payments',
+    subtext: 'Set up Strip or Paypal',
     graphic: (
       <svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="48" cy="48" r="48" fill="#8ECAFB" />
@@ -101,11 +104,12 @@ export const getStartedTabs = [
       url: '#TODO-dev-url-payments',
       learnMoreUrl: '#TODO-dev-url-learn-payments',
     },
-    icon: 'circle-2',
+    icon: SageTokens.ICONS.ROUND_DOLLAR,
   },
   {
     id: 'get-started-choice-offer',
-    label: 'Create an offer',
+    label: 'Price and bundle',
+    subtext: 'Put a price on your products',
     graphic: (
       <svg width="96" height="96" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="48" cy="48" r="48" fill="#8ECAFB" />
@@ -123,11 +127,12 @@ export const getStartedTabs = [
       url: '#TODO-dev-url-offer',
       learnMoreUrl: '#TODO-dev-url-learn-offer',
     },
-    icon: 'circle-3',
+    icon: SageTokens.ICONS.TAG,
   },
   {
     id: 'get-started-choice-checkout',
-    label: 'Customize your checkout',
+    label: 'Brand your experience',
+    subtext: 'Customize your checkout',
     graphic: (
       <svg width="96" height="96" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="48" cy="48" r="48" fill="#8ECAFB" />
@@ -146,6 +151,6 @@ export const getStartedTabs = [
       url: '#TODO-dev-url-checkout',
       learnMoreUrl: '#TODO-dev-url-learn-checkout',
     },
-    icon: 'circle-4',
+    icon: SageTokens.ICONS.PEN,
   },
 ];

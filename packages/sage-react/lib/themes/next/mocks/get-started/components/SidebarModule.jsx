@@ -17,7 +17,7 @@ export const SidebarModule = ({
   }
 }) => (
   <Frame
-    gap={Frame.GAPS.SM}
+    gap={Frame.GAPS.XS}
     borderRadius={Frame.BORDER_RADII.SM}
     padding={Frame.PADDINGS.SM}
     background={SageTokens.COLOR_SLIDERS.PRIMARY_300}
