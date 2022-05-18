@@ -12,7 +12,8 @@ export default {
   },
   argTypes: {
     ...selectArgs({
-      color: ProgressBar.COLORS
+      color: ProgressBar.COLORS,
+      tooltipPosition: ProgressBar.TOOLTIP_POSITIONS,
     })
   }
 };
