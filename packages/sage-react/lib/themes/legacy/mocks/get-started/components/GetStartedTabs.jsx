@@ -22,6 +22,7 @@ export const GetStartedTabs = ({ tabsContent }) => {
           label,
         }) => (
           <Tabs.Item
+            // TODO: Improve on the existing tagname logic within to allow increased accessibility. https://kajabi.atlassian.net/browse/SAGE-623
             key={`get-started-tab-${id}`}
             isActive={id === activeTab}
             itemStyle={Tabs.Item.STYLES.CHOICE}

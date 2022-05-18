@@ -29,7 +29,7 @@ export const GetStartedExpandable = ({
         direction={Frame.DIRECTIONS.HORIZONTAL}
         id={`${id}-control`}
         onClick={() => setOpen(!open)}
-        role="button"
+        tag="button"
         aria-controls={`${id}-panel`}
         aria-expanded={open}
         width={Frame.WIDTHS.FILL}
@@ -91,15 +91,16 @@ export const GetStartedTabsMobile = ({ tabsContent }) => (
             gap={Frame.GAPS.XS}
             align={Frame.ALIGNMENTS.TOP_LEFT}
             width={Frame.WIDTHS.FLEX}
+            tag="span"
           >
             <Icon
               adjacentType={Icon.ADJACENT_TYPES.BODY}
               color={completed ? Icon.COLORS.SAGE_300 : Icon.COLORS.INHERIT}
               icon={completed ? Icon.ICONS.CHECK_CIRCLE_FILLED : icon}
             />
-            <p className={SageClassnames.TYPE.BODY_MED} style={{ flex: 1, cursor: 'pointer' }}>
+            <span className={SageClassnames.TYPE.BODY_MED} style={{ flex: 1, cursor: 'pointer' }}>
               {buttonLabel}
-            </p>
+            </span>
           </Frame>
         )}
         width={Frame.WIDTHS.FILL}
