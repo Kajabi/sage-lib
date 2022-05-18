@@ -20,7 +20,7 @@ export const SidebarModule = ({
     gap={Frame.GAPS.SM}
     borderRadius={Frame.BORDER_RADII.SM}
     padding={Frame.PADDINGS.SM}
-    background={SageTokens.COLOR_PALETTE.PRIMARY_300}
+    background={SageTokens.COLOR_SLIDERS.PRIMARY_300}
     tag={Link}
     href={href}
   >
@@ -43,7 +43,7 @@ export const SidebarModule = ({
     */}
     <ProgressBar
       color={SageTokens.COLOR_PALETTE.WHITE}
-      percent={step / (4 * 100)}
+      percent={(step / 4) * 100}
       style={{ width: '100%' }}
     />
   </Frame>
