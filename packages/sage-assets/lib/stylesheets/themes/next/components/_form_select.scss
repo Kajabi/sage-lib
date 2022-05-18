@@ -35,7 +35,7 @@ $-select-arrow-position-inverse-with-message: calc(100% - #{$-select-height + $-
 }
 
 .sage-select__label {
-  @extend %t-sage-body-semi;
+  @include sage-form-field-label;
 
   grid-area: label;
   margin-bottom: $-select-margin-label;
@@ -141,17 +141,9 @@ $-select-arrow-position-inverse-with-message: calc(100% - #{$-select-height + $-
 // Shim for handling Select Labels within Simpleform markup
 .sage-select {
   .form-group ~ .sage-select__label {
-    @extend %t-sage-body;
+    @extend %t-sage-body-semi;
 
     opacity: 1;
-  }
-
-  &.sage-select--value-selected .form-group ~ .sage-select__label {
-    @extend %t-sage-body-xsmall-semi;
-
-    transform: translateY(calc(#{-$-select-height} + 50%));
-    background-color: $-select-color-label-background;
-    transition: transform 0.15s ease-in-out, color 0.15s ease-out;
   }
 
   &.sage-select--value-selected .form-group:focus-within:not(:disabled) ~ .sage-select__label {
