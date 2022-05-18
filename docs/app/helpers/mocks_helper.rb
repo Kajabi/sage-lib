@@ -66,7 +66,10 @@ module MocksHelper
         jira_epic: "SAGE-296",
         name: "Get Started",
         no_rails_js: true,
+        no_rails_partials: true,
+        no_rails_helper: true,
         status: DOING,
+        storybook_path: '/story/mocks-get-started--dashboard-module',
         team: "Growth",
       },
       {
