@@ -12,12 +12,8 @@ $-upload-card-preview-width: rem(32px);
 $-upload-card-preview-max-width: rem(190px);
 $-upload-card-preview-max-width-mobile: rem(304px);
 $-upload-card-border-color-default: sage-color(grey, 400);
-$-upload-card-border-color-hover: sage-color(primary, 300);
 $-upload-card-border-color-error: sage-color(red, 300);
 $-upload-card-border-color-error-hover: sage-color(red, 300);
-$-upload-card-border-color-focus: sage-color(primary, 300);
-$-upload-card-border-color-focus-ring: 0 0 0 4px sage-color(primary, 200);
-$-upload-card-border-color-error-focus-ring: 0 0 0 4px sage-color(red, 200);
 $-upload-card-background: sage-color(white);
 $-upload-card-background-hover: sage-color(grey, 200);
 
@@ -75,7 +71,7 @@ $-upload-card-background-hover: sage-color(grey, 200);
     &:hover,
     &:focus,
     &:focus-within {
-      border-color: $-upload-card-border-color-error-hover;
+      border-color: $-upload-card-border-color-error;
     }
   }
 }
