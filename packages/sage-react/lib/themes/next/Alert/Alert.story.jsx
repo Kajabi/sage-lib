@@ -35,7 +35,14 @@ DismissableAlert.args = {
       >
         Get unlimited pages
       </Button>
-      <Link suppressDefaultClass={true} href="//example.com">Check Usage</Link>
+      <Link
+        href="//example.com"
+        removeUnderline={true}
+        style={Link.COLORS.SECONDARY}
+        suppressDefaultClass={true}
+      >
+        Check Usage
+      </Link>
     </>
   ),
 };
@@ -52,7 +59,14 @@ NonDismissableAlert.args = {
       >
         Get unlimited pages
       </Button>
-      <Link suppressDefaultClass={true} href="//example.com">Check Usage</Link>
+      <Link
+        href="//example.com"
+        removeUnderline={true}
+        style={Link.COLORS.SECONDARY}
+        suppressDefaultClass={true}
+      >
+        Check Usage
+      </Link>
     </>
   ),
 };
@@ -63,7 +77,14 @@ SmallAlert.args = {
   dismissable: true,
   actions: (
     <>
-      <Link suppressDefaultClass={true} href="//example.com">Check Usage</Link>
+      <Link
+        href="//example.com"
+        removeUnderline={true}
+        style={Link.COLORS.SECONDARY}
+        suppressDefaultClass={true}
+      >
+        Check Usage
+      </Link>
     </>
   ),
   small: true,
