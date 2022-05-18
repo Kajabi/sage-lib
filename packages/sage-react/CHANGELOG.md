@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.97.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.96.0...@kajabi/sage-react@0.97.0) (2022-05-18)
+
+
+### Features
+
+* **mocks:** sync up with latest version of main panel ([f349979](https://github.com/Kajabi/sage-lib/commit/f3499792e3ef2f3c67a707d28284bc9649339755))
+* **mocks:** update get start mocks with breakpoints and frame ([d405834](https://github.com/Kajabi/sage-lib/commit/d405834e23065a8d5fbd1cf03b3c7707c80a87d8))
+
+
+
+
+
 # [0.96.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.95.3...@kajabi/sage-react@0.96.0) (2022-05-13)
 
 

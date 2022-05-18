@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.66.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.65.0...@kajabi/sage@4.66.0) (2022-05-18)
+
+
+### Features
+
+* **mocks:** update mock configs ([169130f](https://github.com/Kajabi/sage-lib/commit/169130fa73353dcfebddd9e3e1e80a74ed4a6da8))
+
+
+
+
+
 # [4.65.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.64.1...@kajabi/sage@4.65.0) (2022-05-17)
 
 
