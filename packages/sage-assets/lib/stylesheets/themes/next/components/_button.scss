@@ -274,8 +274,10 @@ $-btn-loading-min-height: rem(36px);
 
   .sage-input-group & {
     position: absolute;
-    top: rem(2px);
+    z-index: sage-z-index(default, 1);
     right: rem(1px);
+    bottom: rem(1px);
+    height: rem(38px);
     background-color: sage-color(white);
     box-shadow: rem(-1px) 0 0 0 sage-color(grey, 400);
 
@@ -297,6 +299,9 @@ $-btn-loading-min-height: rem(36px);
 
   .sage-panel-controls__toolbar-btn-group > &:not(.sage-btn--secondary),
   .sage-toolbar__group > &:not(.sage-btn--secondary) {
+    position: absolute;
+    right: 0;
+    bottom: 0;
     min-height: calc(#{$-btn-toolbar-group-height} + #{rem(2px)}); /* expand to toolbar group height + border offset */
   }
 
@@ -627,7 +632,7 @@ $-alert-colors: (
           border-top-left-radius: 0;
           border-bottom-left-radius: 0;
         }
-        
+
         // Remove class when Sage Label is fully deprecated in Products
         .sage-label & {
           position: absolute;

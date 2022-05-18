@@ -26,6 +26,7 @@
   display: flex;
   align-items: center;
   flex: 1;
+  position: relative;
 
   .sage-btn:last-child {
     align-self: flex-end;
