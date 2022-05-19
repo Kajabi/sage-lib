@@ -47,10 +47,10 @@ module SageSchemas
     full_width: [:optional, NilClass, TrueClass],
     icon: [:optional, NilClass, { name: String, style: Set.new(["left", "right", "only"]) }],
     spinner_on_submit: [:optional, NilClass, String],
-    style: [:optional, NilClass, Set.new(["primary", "secondary", "danger"])],
-    subtle: [:optional, NilClass, TrueClass],
+    style: [:optional, NilClass, Set.new(["accent", "primary", "secondary", "danger"])],
     value: [:optional, String],
     # TODO: Deprecations in Next
+    subtle: [:optional, NilClass, TrueClass],
     raised: [:optional, NilClass, TrueClass],
     small: [:optional, NilClass, TrueClass],
   }

@@ -19,7 +19,7 @@ $-btn-icon-only-focus-size: rem(32px);
 $-btn-toolbar-group-height: rem(40px);
 
 $-btn-base-styles: (
-  primary: (
+  accent: (
     default: (
       color: sage-color(white),
       background-color: sage-color(primary, 300),
@@ -36,6 +36,25 @@ $-btn-base-styles: (
     disabled: (
       color: sage-color(primary, 200),
       background-color: sage-color(primary, 100),
+    )
+  ),
+  primary: (
+    default: (
+      color: sage-color(white),
+      background-color: sage-color(charcoal, 400),
+      ring-color: sage-color(primary, 200),
+    ),
+    hover: (
+      color: sage-color(white),
+      background-color: sage-color(charcoal, 500),
+    ),
+    focus: (
+      color: sage-color(white),
+      background-color: sage-color(charcoal, 400),
+    ),
+    disabled: (
+      color: sage-color(charcoal, 100),
+      background-color: sage-color(grey, 300),
     )
   ),
   secondary: (
@@ -79,13 +98,21 @@ $-btn-base-styles: (
 );
 
 $-btn-subtle-styles: (
-  primary: (
+  accent: (
     default: sage-color(primary, 300),
     hover: sage-color(primary, 300),
     hover-background: sage-color(primary, 100),
     focus: sage-color(primary, 300),
     focus-outline: sage-color(primary, 200),
     disabled: sage-color(primary, 200),
+  ),
+  primary: (
+    default: sage-color(charcoal, 400),
+    hover: sage-color(charcoal, 400),
+    hover-background: sage-color(grey, 200),
+    focus: sage-color(charcoal, 400),
+    focus-outline: sage-color(primary, 200),
+    disabled: sage-color(charcoal, 100),
   ),
   secondary: (
     default: sage-color(charcoal, 400),
@@ -473,10 +500,9 @@ $-alert-colors: (
 .sage-btn--secondary {
   color: sage-color(charcoal, 400);
   background-color: sage-color(white);
-  border: 1px solid sage-color(grey);
+  border: 1px solid sage-color(grey, 500);
 
   &:hover {
-    color: sage-color(charcoal, 300);
     background-color: sage-color(white);
     border-color: sage-color(charcoal, 100);
   }

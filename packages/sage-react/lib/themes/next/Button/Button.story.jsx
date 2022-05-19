@@ -27,6 +27,11 @@ const Template = (args) => <Button {...args} />;
 
 export const Standard = Template.bind({});
 
+export const Accent = Template.bind({});
+Accent.args = {
+  color: Button.COLORS.ACCENT,
+};
+
 export const Subtle = Template.bind({});
 Subtle.args = {
   subtle: true
