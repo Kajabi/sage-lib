@@ -11,11 +11,7 @@ $-upload-card-selected-width: rem(200px);
 $-upload-card-preview-width: rem(32px);
 $-upload-card-preview-max-width: rem(190px);
 $-upload-card-preview-max-width-mobile: rem(304px);
-$-upload-card-border-color-default: sage-color(grey, 400);
-$-upload-card-border-color-error: sage-color(red, 300);
-$-upload-card-border-color-error-hover: sage-color(red, 300);
 $-upload-card-background: sage-color(white);
-$-upload-card-background-hover: sage-color(grey, 200);
 
 .sage-upload-card {
   &:focus {
@@ -52,7 +48,7 @@ $-upload-card-background-hover: sage-color(grey, 200);
   padding: sage-spacing(md);
   background-color: $-upload-card-background;
   border-radius: $-upload-card-border-radius;
-  border: 1px solid $-upload-card-border-color-default;
+  border: sage-border(default);
 
   .sage-upload-card:not(.sage-upload-card--selected) & {
     flex-flow: column;
@@ -64,14 +60,14 @@ $-upload-card-background-hover: sage-color(grey, 200);
   }
 
   .sage-upload-card.sage-upload-card--error & {
-    border-color: $-upload-card-border-color-error;
+    border: sage-border(error);
   }
 
   .sage-upload-card.sage-upload-card--error:not(.sage-upload-card--selected) & {
     &:hover,
     &:focus,
     &:focus-within {
-      border-color: $-upload-card-border-color-error;
+      border: sage-border(error);
     }
   }
 }
@@ -82,7 +78,7 @@ $-upload-card-background-hover: sage-color(grey, 200);
   > p {
     @extend %t-sage-body-med;
 
-    color: $-upload-card-border-color-error;
+    color: sage-color(red, 300);
 
     &:not(:last-child) {
       margin-bottom: sage-spacing(2xs);
@@ -95,7 +91,7 @@ $-upload-card-background-hover: sage-color(grey, 200);
 
     &:focus,
     &:hover {
-      color: $-upload-card-border-color-error-hover;
+      color: sage-color(red, 300);
       text-decoration: underline;
       outline: 0;
     }
