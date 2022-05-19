@@ -60,14 +60,14 @@ $-upload-card-background: sage-color(white);
   }
 
   .sage-upload-card.sage-upload-card--error & {
-    border: sage-border(error);
+    border-color: sage-color(red, 300);
   }
 
   .sage-upload-card.sage-upload-card--error:not(.sage-upload-card--selected) & {
     &:hover,
     &:focus,
     &:focus-within {
-      border: sage-border(error);
+      border-color: sage-color(red, 300);
     }
   }
 }
