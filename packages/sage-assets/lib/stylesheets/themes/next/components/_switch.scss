@@ -7,13 +7,16 @@
 
 // Colors
 $-switch-color-default: sage-color(grey, 400);
+$-switch-color-default-hover: sage-color(grey, 500);
 $-switch-color-default-text: sage-color(charcoal, 300);
-$-switch-color-checked: sage-color(primary, 300);
-$-switch-color-checked-hover: sage-color(primary, 400);
+$-switch-color-checked: sage-color(charcoal, 400);
+$-switch-color-checked-hover: sage-color(charcoal, 500);
 $-switch-color-disabled: sage-color(grey, 300);
 $-switch-color-disabled-text: sage-color(charcoal, 300);
-$-switch-color-disabled-checked: sage-color(primary, 100);
+$-switch-color-disabled-checked: sage-color(grey, 300);
 $-switch-color-disabled-checked-text: sage-color(charcoal, 100);
+$-switch-color-error: sage-color(red, 300);
+$-switch-focus-outline-error-color: sage-color(red, 200);
 
 // Switch
 $-switch-label-left-spacing: sage-spacing(xs);
@@ -23,8 +26,6 @@ $-switch-width: rem(36px);
 
 // Toggle
 $-switch-toggle-size: rem(16px);
-
-$-switch-focus-outline-error-color: sage-color(red, 200);
 
 
 .sage-switch {
@@ -115,6 +116,10 @@ $-switch-focus-outline-error-color: sage-color(red, 200);
     }
   }
 
+  &:hover:not(:checked):not(:disabled) {
+    background-color: $-switch-color-default-hover;
+  }
+
   &::after {
     content: "";
     display: block;
@@ -135,18 +140,21 @@ $-switch-focus-outline-error-color: sage-color(red, 200);
 
   .sage-switch--error &,
   &:invalid {
-    @include sage-focus-ring(sage-color(red, 200));
+    @include sage-focus-ring($-switch-focus-outline-error-color);
 
-    background-color: sage-color(red, 300);
+    background-color: $-switch-color-error;
     ~ .sage-switch__label,
     ~ .sage-switch__message {
-      color: sage-color(red, 300);
+      color: $-switch-color-error;
+    }
+    &:hover:not(:checked):not(:disabled) {
+      background-color: $-switch-color-error;
     }
     &:checked {
-      background-color: sage-color(red, 300);
+      background-color: $-switch-color-error;
     }
     &:checked:hover {
-      background-color: sage-color(red, 300);
+      background-color: $-switch-color-error;
     }
   }
 
@@ -177,13 +185,17 @@ $-switch-focus-outline-error-color: sage-color(red, 200);
 
     ~ .sage-switch__label,
     ~ .sage-switch__message {
-      color: $-switch-color-disabled-text;
+      color: $-switch-color-disabled-checked-text;
       cursor: inherit;
     }
 
     // disabled & checked
     &:checked {
       background: $-switch-color-disabled-checked;
+    }
+
+    &:checked::after {
+      background-color: $-switch-color-default-hover;
     }
 
     &:checked ~ .sage-switch__label,
