@@ -189,7 +189,6 @@ $-checkbox-focus-outline-color: sage-color(primary, 200);
     color: $-checkbox-color-checked;
     background: $-checkbox-color-checked;
     border-color: $-checkbox-color-checked;
-    box-shadow: sage-shadow(sm);
 
     &::after {
       opacity: 1;
@@ -216,7 +215,6 @@ $-checkbox-focus-outline-color: sage-color(primary, 200);
     border-color: $-checkbox-focus-outline-color;
 
     &::before {
-      transform: translate3d(-50%, -50%, 0) scale(1);
       opacity: 1;
     }
   }
