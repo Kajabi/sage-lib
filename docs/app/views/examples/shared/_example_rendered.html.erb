@@ -4,8 +4,9 @@
 <% if partial.present? %>
   <%= render "examples/#{folder_root}/examples/#{partial}" %>
   <%= sage_component SageCard, { spacer: { bottom: :md } } do %>
-    <div id="example-rails-code-<%= partial %>" class="sage-code-snippet" tabindex="-1">
-      <pre class="prettyprint"><code><%= File.read(File.join(Rails.root, "app/views/examples/#{folder_root}/examples/_#{partial}.html.erb")) %></code></pre>
-    </div>
+    <%= render "examples/shared/code_renderer",
+      partial: "examples/#{folder_root}/examples/_#{partial}",
+      id: partial
+    %>
   <% end %>
 <% end %>

@@ -1,0 +1,7 @@
+<div
+  class="sage-code-snippet <%= defined?(nowrap) && nowrap ? "sage-code-snippet--no-wrap" : "gooobers" %>"
+  <%= "id='example-rails-code-#{id}'" if defined?(id) %>
+  tabindex="-1"
+>
+  <pre class="prettyprint"><code><%= File.read(File.join(Rails.root, "app/views/#{partial}.html.erb")) %></code></pre>
+</div>

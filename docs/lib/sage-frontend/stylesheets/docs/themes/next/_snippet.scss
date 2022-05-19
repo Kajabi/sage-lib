@@ -6,8 +6,9 @@
 
 .sage-code-snippet {
   position: relative;
+  width: 100%;
 
-  &::after {
+  &:not(.sage-code-snippet--no-wrap)::after {
     content: "";
     display: block;
     position: absolute;
