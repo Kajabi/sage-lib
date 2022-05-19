@@ -65,14 +65,14 @@ $sage-field-colors: (
 /// Radio button colors
 ///
 $sage-radio-colors: (
-  checked: sage-color(primary, 300),
-  checked-disabled: sage-color(primary, 100),
-  checked-hover: sage-color(primary, 400),
+  checked: sage-color(charcoal, 400),
+  checked-disabled: sage-color(grey, 300),
+  checked-hover: sage-color(charcoal, 500),
   checked-inner: sage-color(white),
-  default: sage-color(grey, 500),
-  disabled: sage-color(grey, 100),
+  default: sage-color(grey, 400),
+  disabled: sage-color(grey, 200),
   error: sage-color(red, 300),
-  hover: sage-color(charcoal, 100),
+  hover: sage-color(grey, 500),
 );
 
 ///
