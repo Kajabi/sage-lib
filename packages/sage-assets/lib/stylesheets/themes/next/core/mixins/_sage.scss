@@ -375,7 +375,7 @@
   padding: sage-spacing(sm);
   color: sage-color(charcoal, 200);
   appearance: none;
-  border: rem(1px) solid sage-color(grey, 500);
+  border: sage-border(interactive);
   border-radius: sage-border(radius-medium);
   background: transparent;
   transition: map-get($sage-transitions, input);
@@ -387,16 +387,16 @@
 
   &:hover:not(:disabled) {
     color: sage-color(charcoal, 400);
-    border-color: sage-color(charcoal, 100);
+    border: sage-border(interactive-hover);
 
     .sage-form-field--error & {
-      border-color: sage-color(red, 300);
+      border: sage-border(error);
     }
   }
 
   &:focus:not(:disabled),
   &:active:not(:disabled) {
-    border-color: sage-color(primary, 200);
+    border-color: transparent;
 
     @include placeholder {
       opacity: 0;
@@ -442,10 +442,14 @@
   .sage-form-field--error &:required:not(:placeholder-shown):not(:valid) {
     @include sage-focus-ring(sage-color(red, 200));
 
-    border-color: sage-color(red, 300);
+    border: sage-border(error);
 
     ~ label {
       color: sage-color(charcoal, 400);
+    }
+
+    &:focus {
+      border-color: transparent;
     }
   }
 

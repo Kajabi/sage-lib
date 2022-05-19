@@ -31,6 +31,18 @@ $sage-banner-heights: (
 );
 
 ///
+/// Sage border styles
+///
+$sage-border-styles: (
+  default: 0 0 0 1px sage-color(grey, 400),
+  hover: 0 0 0 1px sage-color(grey, 500),
+  focus: 0 0 0 4px sage-color(primary, 200),
+  active-hover: 0 0 0 4px sage-color(charcoal, 400),
+  error: 0 0 0 1px sage-color(red, 400),
+  error-focus: 0 0 0 4px sage-color(red, 300),
+);
+
+///
 /// Field configurations
 ///
 $sage-field-configs: (
