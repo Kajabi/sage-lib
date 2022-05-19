@@ -10,6 +10,8 @@ export default {
   argTypes: {
     ...selectArgs({
       icon: SageTokens.ICONS,
+      inputMode: Input.Mode,
+      inputType: Input.Type
     }),
   },
   args: {
@@ -62,7 +64,7 @@ InputReadonly.args = {
 
 export const InputEmail = Template.bind({});
 InputEmail.args = {
-  type: Input.Type.EMAIL,
+  inputType: Input.Type.EMAIL,
   label: 'Email address'
 };
 

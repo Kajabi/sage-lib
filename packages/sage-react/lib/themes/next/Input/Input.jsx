@@ -18,6 +18,7 @@ export const Input = ({
   icon,
   id,
   inputMode,
+  inputType,
   label,
   max,
   maxLength,
@@ -35,7 +36,6 @@ export const Input = ({
   standalone,
   step,
   suffix,
-  type,
   value,
   ...rest
 }) => {
@@ -113,6 +113,7 @@ export const Input = ({
         disabled={disabled}
         id={id}
         inputMode={inputMode}
+        inputType={inputType}
         max={max}
         maxLength={maxLength}
         min={min}
@@ -125,7 +126,6 @@ export const Input = ({
         required={required}
         step={step}
         style={inputStyles}
-        type={type}
         value={fieldValue || value}
         {...rest}
       />
@@ -176,6 +176,7 @@ Input.defaultProps = {
   hideLabel: false,
   icon: null,
   inputMode: null,
+  inputType: null,
   label: null,
   max: null,
   maxLength: null,
@@ -193,7 +194,6 @@ Input.defaultProps = {
   standalone: false,
   step: null,
   suffix: null,
-  type: null,
   value: '',
 };
 
@@ -207,6 +207,7 @@ Input.propTypes = {
   hasPlaceholder: PropTypes.bool,
   hideLabel: PropTypes.bool,
   inputMode: PropTypes.oneOf(Object.values(Input.Mode)),
+  inputType: PropTypes.oneOf(Object.values(Input.Type)),
   label: PropTypes.string,
   max: PropTypes.string,
   maxLength: PropTypes.string,
@@ -224,6 +225,5 @@ Input.propTypes = {
   standalone: PropTypes.bool,
   step: PropTypes.string,
   suffix: PropTypes.string,
-  type: PropTypes.oneOf(Object.values(Input.Type)),
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
