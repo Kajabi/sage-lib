@@ -1,0 +1,86 @@
+<%
+classnames_collection = []
+sage_classnames_map.keys.map do | key |
+  item = sage_classnames_map[key]
+  classnames_collection.push({
+    category: key,
+    value: item,
+    description: case key
+      when :color
+        md("Colors from the [Sage color palette](#{pages_foundation_path(:color)}) that apply to text of an element")
+      when :grid
+        md("Enables the standard grid settings for Panel or Card contexts.")
+      when :gap
+        md("Applies a [Sage spacer value](#{pages_helpers_path(:spacing)}) to an element's CSS `gap` (`grid-gap`) property. Note that either `flex` or CSS Grid must also be employed in order for this to be observable.")
+      when :grid_template
+        md("Enables a [grid template](#{pages_patterns_path(:grid_templates)}) on an element")
+      when :reveal
+        md("Classes used with the [Reveal utility](#{pages_helpers_path(:reveal)})")
+      when :spacers
+        md("Adds a [Sage spacer value](#{pages_helpers_path(:spacing)}) as margin on the element depending on the settings used. Set several as desired by passing an array to this option.")
+      when :strikethrough
+        md("Adds a strike through text within the element.")
+      when :text_align
+        md("Sets the alignment for text within an element.")
+      when :truncate
+        md("Sets an element to truncate overflowing text within the element. See [Truncation](#{pages_helpers_path(:truncation)}) for more details.")
+      when :type_block
+        md("Make a container enforce Sage type specs within it based on default mapping to plain HTML tags.")
+      when :type
+        md("Apply a [Sage type spec](#{pages_foundation_path(:typography)}) to an element.")
+      else
+        "TBD"
+    end
+  })
+end
+%>
+<%= content_for :heading do %>
+<%= md(%(
+# Classnames
+
+<p class="docs-heading__lead">
+  Tools for accessing and applying Sage HTML classnames
+</p>
+)) %>
+<% end %>
+<%= sage_layout SageFrame, { gap: "lg", width: "fill" } do %>
+  <%= md("
+### Classnames Helper
+
+We expose a helper `sage_classnames` that accepts a hash of classname categories and values (see below)
+and outputs a single string with the corresponding classnames.
+
+- This can be used inside any HTML element's `class` attribute and on a Sage component's `css_classes` property.
+- If multiple values are useful (such as with `spacer`), pass an array with the desired options.
+", use_sage_type: true) %>
+  <%= render "examples/shared/code_renderer",
+    nowrap: true,
+    partial: "examples/helpers/classnames/_on_tag",
+    id: "classnames-helper"
+  %>
+  <%= render "examples/shared/code_renderer",
+    nowrap: true,
+    partial: "examples/helpers/classnames/_on_property",
+    id: "classnames-helper"
+  %>
+  <%= md("
+#### Configuration options
+
+The follow values can be used as options within the `sage_classnames()` helper:
+", use_sage_type: true) %>
+  <%= sage_table_for classnames_collection, responsive: true do | t | %>
+    <% t.column :key do | c | %>
+      <%= md("`#{c[:category]}`") %>
+    <% end %>
+    <% t.column :description do | c | %>
+      <%= c[:description] %>
+    <% end %>
+    <% t.column :options do | c | %>
+      <% if c[:value].is_a?(String) %>
+        <%= md('`true` to enable.') %>
+      <% else %>
+        <%= md("`#{c[:value].keys.join("`, `")}`") %>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>

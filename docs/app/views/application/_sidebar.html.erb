@@ -55,6 +55,11 @@
       items: [
         { link: pages_helpers_path(:spacing), text: "HELPERS", items: [
           {
+            text: "Classnames",
+            link: pages_helpers_path(:classnames),
+            active: current_page?(pages_helpers_path(:classnames)),
+          },
+          {
             text: "Spacing",
             link: pages_helpers_path(:spacing),
             active: current_page?(pages_helpers_path(:spacing)),
