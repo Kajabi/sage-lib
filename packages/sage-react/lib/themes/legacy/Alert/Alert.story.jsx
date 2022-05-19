@@ -15,27 +15,80 @@ export default {
     }),
   },
   args: {
-    actions: (
-      <>
-        <Button
-          className="sage-alert__primary-action"
-          color="secondary"
-          raised={false}
-        >
-          Get unlimited pages
-        </Button>
-        <Link href="//example.com">Check Usage</Link>
-      </>
-    ),
-    color: Alert.COLORS.APPROACHING,
     title: "You've used 80% of available pages",
     titleAddon: '(# of # pages)',
-    description: 'Upgrade your plan to access unlimited landing pages.',
-    dismissable: true,
   },
 };
 
 const Template = (args) => <Alert {...args} />;
 export const Default = Template.bind({});
+
+export const DismissableAlert = Template.bind({});
+DismissableAlert.args = {
+  description: 'Body duis rhoncus neque, sed nulla sed quis fames. Eu eu ut at odio ultrices orci varius habitant. Tempor vulputate in nisl massa eget id.',
+  color: Alert.COLORS.DEFAULT,
+  dismissable: true,
+  actions: (
+    <>
+      <Button
+        className="sage-alert__primary-action"
+        color="secondary"
+      >
+        Get unlimited pages
+      </Button>
+      <Link
+        href="//example.com"
+        removeUnderline={true}
+        style={Link.COLORS.SECONDARY}
+        suppressDefaultClass={true}
+      >
+        Check Usage
+      </Link>
+    </>
+  ),
+};
+
+export const NonDismissableAlert = Template.bind({});
+NonDismissableAlert.args = {
+  color: Alert.COLORS.APPROACHING,
+  description: 'Body duis rhoncus neque, sed nulla sed quis fames. Eu eu ut at odio ultrices orci varius habitant. Tempor vulputate in nisl massa eget id.',
+  actions: (
+    <>
+      <Button
+        className="sage-alert__primary-action"
+        color="secondary"
+      >
+        Get unlimited pages
+      </Button>
+      <Link
+        href="//example.com"
+        removeUnderline={true}
+        style={Link.COLORS.SECONDARY}
+        suppressDefaultClass={true}
+      >
+        Check Usage
+      </Link>
+    </>
+  ),
+};
+
+export const SmallAlert = Template.bind({});
+SmallAlert.args = {
+  color: Alert.COLORS.SUCCESS,
+  dismissable: true,
+  actions: (
+    <>
+      <Link
+        href="//example.com"
+        removeUnderline={true}
+        style={Link.COLORS.SECONDARY}
+        suppressDefaultClass={true}
+      >
+        Check Usage
+      </Link>
+    </>
+  ),
+  small: true,
+};
 
 export const Accessible = () => <Alert>Accessible button</Alert>;
