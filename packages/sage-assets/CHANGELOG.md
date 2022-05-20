@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.83.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.82.4...@kajabi/sage-assets@0.83.0) (2022-05-20)
+
+
+### Bug Fixes
+
+* **font:** remove inter var font form stack on Next theme ([3b985c7](https://github.com/Kajabi/sage-lib/commit/3b985c75d719b339fe7944e78bcc0ceb439d7277))
+* **input-group:** add z-index to inner buttons ([ff9ea7e](https://github.com/Kajabi/sage-lib/commit/ff9ea7ee8b600af40fc614300a3c8188ee47163e))
+* **input-group:** updated white-space ([8e150bd](https://github.com/Kajabi/sage-lib/commit/8e150bd7f7179b946dc250ea0de045b9fec7cd25))
+* **input-group:** updating alignment ([e34b173](https://github.com/Kajabi/sage-lib/commit/e34b17325cbdbdf6b8f55670eb5c7f525e28b357))
+* **select:** next - updates to select label styles and position ([136dad9](https://github.com/Kajabi/sage-lib/commit/136dad9441825c7ef309ef4e0256d2de85cdebba))
+* **tabs:** fixes issue with link classes coming through, updates styles to math Figma ([12c1560](https://github.com/Kajabi/sage-lib/commit/12c15602b1b9bb1c620efedc05b2f0d35764d3be))
+* **upload-card:** cleanup ([b3b0178](https://github.com/Kajabi/sage-lib/commit/b3b0178c23dd3abb0b0ce866f92652035c9d8750))
+* **upload-card:** remove drop area style ([f9ab518](https://github.com/Kajabi/sage-lib/commit/f9ab5182dc65cc7977996a1bec154e0c749b3588))
+* **upload-card:** remove drop area style ([438bda0](https://github.com/Kajabi/sage-lib/commit/438bda0808d169be5544d28fe680d8d92547edd9))
+* **upload-card:** update border color ([bbc6d27](https://github.com/Kajabi/sage-lib/commit/bbc6d27564f8fe8d048eac97549c1515b338832f))
+
+
+### Features
+
+* **button:** adds accent button style and changes primary colors ([8be55b2](https://github.com/Kajabi/sage-lib/commit/8be55b22416d852eb861a3b953a186329b4a2584))
+* **frame:** ensure elements nested withing get no default spacing ([140564a](https://github.com/Kajabi/sage-lib/commit/140564a2a63b281df501800bfd9731c533d218b1))
+* **progressbar:** add custom background and update Next React to match Rails ([31df2dd](https://github.com/Kajabi/sage-lib/commit/31df2dde7dc17978a3392c20fbde2c990892edbb))
+
+
+
+
+
 ## [0.82.4](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.82.3...@kajabi/sage-assets@0.82.4) (2022-05-13)
 
 

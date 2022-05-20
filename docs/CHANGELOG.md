@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.67.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.66.0...@kajabi/sage@4.67.0) (2022-05-20)
+
+
+### Features
+
+* **button:** adds accent button style and changes primary colors ([8be55b2](https://github.com/Kajabi/sage-lib/commit/8be55b22416d852eb861a3b953a186329b4a2584))
+* **progressbar:** add custom background and update Next React to match Rails ([31df2dd](https://github.com/Kajabi/sage-lib/commit/31df2dde7dc17978a3392c20fbde2c990892edbb))
+
+
+
+
+
 # [4.66.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.65.0...@kajabi/sage@4.66.0) (2022-05-18)
 
 

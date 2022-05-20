@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.98.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.97.0...@kajabi/sage-react@0.98.0) (2022-05-20)
+
+
+### Bug Fixes
+
+* **alert:** update demos in storybook ([fd9a507](https://github.com/Kajabi/sage-lib/commit/fd9a50714641d8184c518980cd13ef67e6390e08))
+* **alert:** updated legacy file ([18655f6](https://github.com/Kajabi/sage-lib/commit/18655f689ae47fac59e91bb984ebc16505109167))
+* **alert:** updates to demos ([360a12d](https://github.com/Kajabi/sage-lib/commit/360a12dac5971bf553b352e25e31496fa0cd5e03))
+* **input:** add missing props and demos ([8be6f65](https://github.com/Kajabi/sage-lib/commit/8be6f65a611d8b01e8f93ac9dc2011dcfbdad501))
+* **input:** added missing props in element ([2f62a44](https://github.com/Kajabi/sage-lib/commit/2f62a4450aae7b258a7791737fb9c536a20bfafe))
+* **input:** update type to inputType ([8a7e323](https://github.com/Kajabi/sage-lib/commit/8a7e323d49cd1cf9d99b1289ffe61199afac98ae))
+* **tabs:** fixes issue with link classes coming through, updates styles to math Figma ([12c1560](https://github.com/Kajabi/sage-lib/commit/12c15602b1b9bb1c620efedc05b2f0d35764d3be))
+
+
+### Features
+
+* **button:** adds accent variation to React ([a4d4055](https://github.com/Kajabi/sage-lib/commit/a4d40555210abf70eda953abdbe75ea41c8dcb0f))
+* **progressbar:** add custom background and update Next React to match Rails ([31df2dd](https://github.com/Kajabi/sage-lib/commit/31df2dde7dc17978a3392c20fbde2c990892edbb))
+
+
+
+
+
 # [0.97.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.96.0...@kajabi/sage-react@0.97.0) (2022-05-18)
 
 
