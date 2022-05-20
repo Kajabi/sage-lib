@@ -15,7 +15,10 @@ color = component.color || SageTokens::COLOR_PALETTE[:SAGE_300]
   <% end %>
   <%= component.generated_html_attributes.html_safe %>
 >
-	<div class="sage-progress-bar__background">
+	<div
+    class="sage-progress-bar__background"
+    style="<%= "--sage-progress-bar-background-color: #{component.background_color}" if component.background_color %>"
+  >
     <progress
       class="sage-progress-bar__element"
       aria-valuemax="100"

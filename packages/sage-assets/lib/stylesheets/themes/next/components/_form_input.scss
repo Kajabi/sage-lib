@@ -20,11 +20,12 @@ $-input-text-height: sage-font-size(body);
     "label label label"
     "input input input"
     "message message message";
-  grid-template-columns: min-content 1fr min-content;
+  grid-template-columns: minmax(0, 1fr) 1fr min-content;
 
   .sage-input-group &,
   .sage-toolbar & {
     height: auto;
+    width: 100%;
     margin-bottom: 0;
   }
 
@@ -46,6 +47,13 @@ $-input-text-height: sage-font-size(body);
     grid-row: 2 / 3;
     grid-column: -1 / -2;
   }
+
+  .sage-input__action {
+    display: flex;
+    align-items: center;
+    grid-row: 2 / 3;
+    grid-column: -1 / -2;
+  }
 }
 
 .sage-form-field--error {
@@ -64,6 +72,7 @@ $-input-text-height: sage-font-size(body);
   .sage-input--suffixed &,
   .sage-input--prefixed & {
     position: absolute;
+    white-space: nowrap;
   }
 
   &:hover {

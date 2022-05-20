@@ -8,10 +8,12 @@
 // Colors
 //
 $-checkbox-color-default: sage-color(grey, 500);
-$-checkbox-color-checked: sage-color(primary, 300);
-$-checkbox-color-checked-hover: sage-color(primary, 400);
-$-checkbox-color-disabled: sage-color(grey, 300);
-$-checkbox-color-disabled-checked: sage-color(primary, 100);
+$-checkbox-color-default-border: sage-color(grey, 400);
+$-checkbox-color-checked: sage-color(charcoal, 400);
+$-checkbox-color-checked-hover: sage-color(charcoal, 500);
+$-checkbox-color-disabled: sage-color(grey, 200);
+$-checkbox-color-disabled-border: sage-color(grey, 300);
+$-checkbox-color-disabled-checked: sage-color(charcoal, 100);
 $-checkbox-color-error: sage-color(red, 300);
 
 $-checkbox-size: rem(20px);
@@ -53,7 +55,7 @@ $-checkbox-focus-outline-color: sage-color(primary, 200);
     align-items: center;
     position: relative;
     z-index: sage-z-index(default);
-    padding: rem(6px) sage-spacing(xs);
+    padding: rem(10px) sage-spacing(sm);
     border: 0;
 
     .sage-panel-controls & {
@@ -133,7 +135,7 @@ $-checkbox-focus-outline-color: sage-color(primary, 200);
   width: $-checkbox-size;
   margin: 0;
   color: $-checkbox-color-default;
-  border: rem(1px) solid $-checkbox-color-default;
+  border: rem(1px) solid $-checkbox-color-default-border;
   border-radius: $-checkbox-border-radius-inner;
   outline: none;
   transition: $-checkbox-transition;
@@ -172,6 +174,7 @@ $-checkbox-focus-outline-color: sage-color(primary, 200);
     $-checkbox-scale: 14 / 16;
     transform: translate3d(-50%, -50%, 0) scale3d(#{$-checkbox-scale}, #{$-checkbox-scale}, #{$-checkbox-scale});
     color: sage-color(white);
+    font-weight: sage-font-weight(bold);
     opacity: 0;
   }
 
@@ -204,8 +207,7 @@ $-checkbox-focus-outline-color: sage-color(primary, 200);
   }
 
   &:hover:not(:checked):not(:disabled) {
-    border-color: sage-color(charcoal, 100);
-    box-shadow: sage-shadow(sm);
+    border-color: $-checkbox-color-default;
   }
 
   &:focus:not(:disabled),
@@ -221,6 +223,7 @@ $-checkbox-focus-outline-color: sage-color(primary, 200);
 
   &:disabled {
     background: $-checkbox-color-disabled;
+    border-color: $-checkbox-color-disabled-border;
     cursor: not-allowed;
     opacity: 0.5;
 
@@ -230,10 +233,14 @@ $-checkbox-focus-outline-color: sage-color(primary, 200);
 
     // disabled & checked
     &:checked {
-      background: $-checkbox-color-disabled-checked;
-      border-color: $-checkbox-color-disabled-checked;
+      background: $-checkbox-color-disabled-border;
+      border-color: $-checkbox-color-disabled-border;
       box-shadow: none;
       opacity: 1;
+    }
+
+    &:checked::after {
+      color: $-checkbox-color-disabled-checked;
     }
 
     &:checked::before {

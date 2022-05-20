@@ -143,7 +143,7 @@ $-radio-focus-outline-color: currentColor;
   &:hover {
     &:not(:checked):not(:disabled) {
       border-color: $-radio-color-hover;
-      box-shadow: sage-shadow(sm);
+      background-color: sage-color(grey, 100);
     }
   }
 
@@ -164,12 +164,17 @@ $-radio-focus-outline-color: currentColor;
 
   &:disabled {
     background: $-radio-color-disabled;
+    border-color: $-radio-color-checked-disabled;
     cursor: not-allowed;
 
     // disabled & checked
     &:checked {
       background: $-radio-color-checked-disabled;
       box-shadow: none;
+    }
+
+    &:checked::after {
+      background-color: $-radio-color-hover;
     }
 
     + .sage-radio__label,

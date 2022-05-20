@@ -10,6 +10,8 @@ export default {
   argTypes: {
     ...selectArgs({
       icon: SageTokens.ICONS,
+      inputMode: Input.Mode,
+      inputType: Input.Type
     }),
   },
   args: {
@@ -41,6 +43,29 @@ export const Default = (args) => {
       value={value}
     />
   );
+};
+
+const Template = (args) => <Input {...args} />;
+export const InputWithError = Template.bind({});
+InputWithError.args = {
+  hasError: true
+};
+
+export const InputDisabled = Template.bind({});
+InputDisabled.args = {
+  disabled: true
+};
+
+export const InputReadonly = Template.bind({});
+InputReadonly.args = {
+  readonly: true,
+  value: 'You cannot change me'
+};
+
+export const InputEmail = Template.bind({});
+InputEmail.args = {
+  inputType: Input.Type.EMAIL,
+  label: 'Email address'
 };
 
 export const InputWithStaticIcon = (args) => {

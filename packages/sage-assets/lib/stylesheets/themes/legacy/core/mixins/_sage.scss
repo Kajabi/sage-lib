@@ -321,6 +321,7 @@
     margin-bottom: sage-spacing();
   }
 
+  .sage-frame > &,
   .sage-panel-grid > &,
   .sage-panel__row > &,
   .sage-panel__stack > &,
@@ -515,6 +516,7 @@
 }
 
 @mixin sage-form-toggle-parents() {
+  .sage-frame > &,
   .sage-panel-grid > &,
   .sage-panel__row > &,
   .sage-panel__stack > &,

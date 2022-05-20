@@ -62,6 +62,7 @@ export const TabsItem = ({
     attrs = {
       ...attrs,
       'aria-disabled': disabled,
+      suppressDefaultClass: true
     };
   } else {
     attrs = {

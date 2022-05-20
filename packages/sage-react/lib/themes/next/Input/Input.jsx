@@ -3,19 +3,38 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { Icon } from '../Icon';
 import { SageTokens } from '../configs';
+import {
+  INPUT_MODE,
+  INPUT_TYPE
+} from './configs';
 
 export const Input = ({
+  autocomplete,
   className,
+  disabled,
   hasError,
+  hasPlaceholder,
   hideLabel,
   icon,
   id,
+  inputMode,
+  inputType,
   label,
+  max,
+  maxLength,
   message,
+  min,
+  minLength,
+  name,
   onChange,
+  pattern,
+  placeholder,
   popover,
   prefix,
+  readonly,
+  required,
   standalone,
+  step,
   suffix,
   value,
   ...rest
@@ -55,6 +74,13 @@ export const Input = ({
       'visually-hidden': hideLabel,
     });
 
+  const setPlaceholder = () => {
+    if (placeholder) {
+      return placeholder;
+    }
+    return label;
+  };
+
   useEffect(() => {
     const newInputStyles = {
       ...inputStyles,
@@ -82,10 +108,23 @@ export const Input = ({
   return (
     <div className={classNames}>
       <input
+        autoComplete={autocomplete}
         className="sage-form-field sage-input__field"
+        disabled={disabled}
         id={id}
+        inputMode={inputMode}
+        inputType={inputType}
+        max={max}
+        maxLength={maxLength}
+        min={min}
+        minLength={minLength}
+        name={name}
         onChange={handleChange}
-        placeholder={label}
+        pattern={pattern}
+        placeholder={setPlaceholder()}
+        readOnly={readonly}
+        required={required}
+        step={step}
         style={inputStyles}
         value={fieldValue || value}
         {...rest}
@@ -125,34 +164,66 @@ export const Input = ({
     </div>
   );
 };
+Input.Mode = INPUT_MODE;
+Input.Type = INPUT_TYPE;
 
 Input.defaultProps = {
+  autocomplete: null,
   className: null,
+  disabled: false,
   hasError: false,
+  hasPlaceholder: false,
   hideLabel: false,
   icon: null,
+  inputMode: null,
+  inputType: null,
   label: null,
+  max: null,
+  maxLength: null,
   message: null,
+  min: null,
+  minLength: null,
+  name: null,
   onChange: null,
+  pattern: null,
+  placeholder: null,
   popover: null,
   prefix: null,
+  readonly: false,
+  required: false,
   standalone: false,
+  step: null,
   suffix: null,
   value: '',
 };
 
 Input.propTypes = {
+  autocomplete: PropTypes.string,
   className: PropTypes.string,
+  disabled: PropTypes.bool,
   icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),
   id: PropTypes.string.isRequired,
   hasError: PropTypes.bool,
+  hasPlaceholder: PropTypes.bool,
   hideLabel: PropTypes.bool,
+  inputMode: PropTypes.oneOf(Object.values(Input.Mode)),
+  inputType: PropTypes.oneOf(Object.values(Input.Type)),
   label: PropTypes.string,
+  max: PropTypes.string,
+  maxLength: PropTypes.string,
+  min: PropTypes.string,
+  minLength: PropTypes.string,
   message: PropTypes.string,
+  name: PropTypes.string,
   onChange: PropTypes.func,
+  pattern: PropTypes.string,
+  placeholder: PropTypes.string,
   popover: PropTypes.node,
   prefix: PropTypes.string,
+  readonly: PropTypes.bool,
+  required: PropTypes.bool,
   standalone: PropTypes.bool,
+  step: PropTypes.string,
   suffix: PropTypes.string,
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };

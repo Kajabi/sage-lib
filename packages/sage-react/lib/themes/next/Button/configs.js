@@ -1,4 +1,5 @@
 export const BUTTON_COLORS = {
+  ACCENT: 'accent',
   PRIMARY: 'primary',
   SECONDARY: 'secondary',
   DANGER: 'danger',

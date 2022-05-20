@@ -26,7 +26,7 @@ $-tab-color-disabled: map-get($sage-tab-colors, disabled);
   text-decoration: none;
   transition: color map-get($sage-transitions, default), background-color map-get($sage-transitions, default), box-shadow map-get($sage-transitions, default);
 
-  @extend %t-sage-body-med;
+  @extend %t-sage-body-semi;
 
   &:hover {
     color: $-tab-color-active;
