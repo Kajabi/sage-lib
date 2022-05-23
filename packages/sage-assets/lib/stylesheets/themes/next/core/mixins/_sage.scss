@@ -120,14 +120,14 @@
       border-radius: sage-border(radius-round);
 
       &:not(.sage-btn--subtle) {
-        padding: sage-spacing(xs) rem(12px);
+        padding: rem(12px);
       }
 
       &::before {
         @include sage-icon-base($icon-name);
 
         align-self: center;
-        padding: var(--icon-block-padding) 0;
+        padding: 0;
       }
     }
   }
