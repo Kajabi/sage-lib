@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.83.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.83.0...@kajabi/sage-assets@0.83.1) (2022-05-24)
+
+
+### Bug Fixes
+
+* **search:** resolve search width within panel controls toolbar ([d28b616](https://github.com/Kajabi/sage-lib/commit/d28b616fb150676733fc11e060aaab5f6c9c594b))
+
+
+
+
+
 # [0.83.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.82.4...@kajabi/sage-assets@0.83.0) (2022-05-20)
 
 
