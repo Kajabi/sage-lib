@@ -42,6 +42,7 @@ export const Icon = ({
     attributes['aria-hidden'] = true;
   } else {
     attributes['aria-label'] = label;
+    attributes.role = 'img';
   }
 
   const renderIcon = () => (
