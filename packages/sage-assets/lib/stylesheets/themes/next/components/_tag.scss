@@ -5,13 +5,15 @@
 ////
 
 $-tag-button-color: sage-color(charcoal, 200);
+$-tag-button-icon-size: rem(18px);
+$-tag-button-icon-mobile-size: rem(24px);
 
 .sage-tag {
-  @extend %t-sage-body-med;
+  @extend %t-sage-body-small;
 
   display: inline-flex;
   align-items: center;
-  padding: sage-spacing(3xs) sage-spacing(xs);
+  padding: sage-spacing(3xs) sage-spacing(2xs) sage-spacing(3xs) sage-spacing(xs);
   background-color: sage-color(grey, 300);
   border-radius: sage-border(radius-x-large);
 
@@ -24,11 +26,19 @@ $-tag-button-color: sage-color(charcoal, 200);
   display: inline-flex;
   width: auto;
   height: auto;
-  margin-left: sage-spacing(xs);
+  margin-left: rem(6px);
   color: $-tag-button-color;
 
   &::before {
     padding: 0;
+    position: relative;
+    left: rem(1px);
+    font-size: .8rem;
+  }
+
+  &.sage-btn--subtle[class*=icon-only]::after {
+    width: $-tag-button-icon-size;
+    height: $-tag-button-icon-size;
   }
 
   &:hover {
@@ -38,6 +48,11 @@ $-tag-button-color: sage-color(charcoal, 200);
   &:focus {
     color: $-tag-button-color;
     border-color: sage-color(primary, 200);
+  }
+
+  &.sage-btn--subtle[class*=icon-only]:focus::after {
+    width: $-tag-button-icon-mobile-size;
+    height: $-tag-button-icon-mobile-size;
   }
 
   &:not(:focus):hover {
