@@ -32,6 +32,7 @@ $-select-arrow-position-inverse-with-message: calc(100% - #{$-select-height + $-
     "field field"
     "message message";
   grid-template-columns: 1fr minmax(sage-spacing(lg), min-content);
+  grid-template-rows: min-content min-content min-content; /* needed to resolve Safari 14 layout issue */
 }
 
 .sage-select__label {

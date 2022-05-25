@@ -31,6 +31,7 @@ $-textarea-color-default-background: sage-color(white);
     "field"
     "message";
   grid-template-columns: 1fr;
+  grid-template-rows: min-content min-content min-content; /* needed to resolve Safari 14 layout issue */
 }
 
 .sage-textarea__label {
