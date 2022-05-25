@@ -9,7 +9,7 @@ $-tag-button-icon-size: rem(18px);
 $-tag-button-icon-mobile-size: rem(24px);
 
 .sage-tag {
-  @extend %t-sage-body-small;
+  @extend %t-sage-body-small-med;
 
   display: inline-flex;
   align-items: center;
