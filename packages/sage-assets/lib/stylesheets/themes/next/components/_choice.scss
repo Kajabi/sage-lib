@@ -68,16 +68,12 @@ $-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
     outline: none;
   }
 
-  &:active,
   &.sage-choice--active {
     color: $-choice-color-active;
 
     &::after {
-      border-color: sage-color(primary, 300);
-    }
-
-    &:hover::after {
-      border-color: sage-color(primary, 400);
+      border-color: sage-color(charcoal, 400);
+      border-width: rem(4px);
     }
   }
 
