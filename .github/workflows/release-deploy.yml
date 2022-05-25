@@ -10,7 +10,7 @@ jobs:
     name: Release and Deploy
     runs-on: ubuntu-latest
     container:
-      image: kajabiprodeng/ruby:2.5.9-alpine3.13
+      image: ruby:2.5.9-alpine3.13
 
     steps:
       - name: Install dependencies
