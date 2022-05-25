@@ -25,7 +25,7 @@ $-badge-inset-border: 0 0 0 1px inset;
 }
 
 .sage-badge__value {
-  @extend %t-sage-body-xsmall;
+  @extend %t-sage-body-small;
 
   appearance: none;
   display: flex;
@@ -112,6 +112,8 @@ $-badge-inset-border: 0 0 0 1px inset;
       &::before {
         @extend %t-sage-body-xsmall;
 
+        position: relative;
+        top: rem(1px);
         color: sage-color(charcoal, 300);
 
         /* stylelint-disable max-nesting-depth */
