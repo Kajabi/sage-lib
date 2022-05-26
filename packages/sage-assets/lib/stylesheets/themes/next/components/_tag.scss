@@ -33,7 +33,7 @@ $-tag-button-icon-mobile-size: rem(24px);
     position: relative;
     left: rem(1px);
     padding: 0;
-    font-size: 0.8rem;
+    font-size: rem(13px);
   }
 
   &.sage-btn--subtle[class*=icon-only]::after {
@@ -63,4 +63,8 @@ $-tag-button-icon-mobile-size: rem(24px);
   &:not(:focus):hover::after {
     background-color: transparent;
   }
+}
+
+.sage-tag__value {
+  color: sage-color(charcoal, 500);
 }
