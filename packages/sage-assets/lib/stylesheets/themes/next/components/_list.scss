@@ -18,6 +18,12 @@
   padding-bottom: sage-spacing(sm);
   list-style: none;
   border-top: sage-border(default);
+
+  &:first-child {
+    .sage-list--hide-first-border & {
+      border-top: 0
+    }
+  }
 }
 
 .sage-list__item--sortable {
