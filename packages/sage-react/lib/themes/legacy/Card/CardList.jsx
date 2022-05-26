@@ -9,6 +9,7 @@ import { CARD_LIST_BLOCK_SPACING } from './configs';
 export const CardList = ({
   children,
   className,
+  hideFirstBorder,
   itemClassName,
   itemGridGap,
   itemGridTemplate,
@@ -22,6 +23,7 @@ export const CardList = ({
     className,
     {
       [`sage-card__list--block-space-${blockSpacing}`]: blockSpacing,
+      [`sage-card__list--hide-first-border`]: hideFirstBorder,
     }
   );
 
@@ -54,6 +56,7 @@ CardList.SPACING = CARD_LIST_BLOCK_SPACING;
 CardList.defaultProps = {
   children: null,
   className: '',
+  hideFirstBorder: false,
   itemClassName: null,
   itemGridGap: null,
   itemGridTemplate: null,
@@ -65,6 +68,7 @@ CardList.defaultProps = {
 CardList.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
+  hideFirstBorder: PropTypes.bool,
   items: PropTypes.arrayOf(PropTypes.node),
   itemClassName: PropTypes.string,
   itemGridGap: PropTypes.oneOf(Object.values(SageTokens.GRID_GAP_OPTIONS)),

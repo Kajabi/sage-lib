@@ -156,6 +156,12 @@
   .sage-card__list:last-child &:last-child {
     border-bottom: transparent;
   }
+
+  &:first-child {
+    .sage-card__list--hide-first-border & {
+      border-top: 0
+    }
+  }
 }
 
 .sage-card__row {
