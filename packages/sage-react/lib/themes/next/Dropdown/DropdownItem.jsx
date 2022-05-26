@@ -134,6 +134,7 @@ export const DropdownItem = ({
           onClick={handleClick}
           disabled={disabled}
           tag={itemTag}
+          suppressDefaultClass={true}
           {...rest}
         >
           {(!customComponent && isLabelVisible) && (
