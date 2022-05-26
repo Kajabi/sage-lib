@@ -41,9 +41,12 @@
     "implicit-arrow-linebreak": ["off"],
     "import/first": ["off"],
     "import/no-cycle": ["off"],
-    "import/no-extraneous-dependencies": ["error", {
-      "devDependencies": true
-    }],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true
+      }
+    ],
     "import/no-named-as-default": ["off"],
     "import/prefer-default-export": ["off"],
     "no-param-reassign": ["off"],
