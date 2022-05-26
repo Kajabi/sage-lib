@@ -15,29 +15,17 @@ $-nav-subitem-border-width: rem(2px);
 .sage-nav__icon {
   display: inline-flex;
   margin-right: $-nav-icon-spacing;
-  color: sage-color(charcoal, 500);
-
-  .sage-nav__link--active & {
-    color: sage-color(charcoal, 500);
-  }
 }
 
 .sage-nav__label {
-  @extend %t-sage-heading-6;
-
-  color: sage-color(charcoal, 500);
-
-  .sage-nav__link--sub & {
-    font-size: sage-font-size(body-sm);
-  }
-
-  .sage-nav__link--active & {
-    color: sage-color(charcoal, 500);
-  }
-
+  .sage-nav__link--active &,
   .sage-nav__link--sub.sage-nav__link--active & {
-    color: sage-color(charcoal, 500);
+    color: $-nav-color-text;
   }
+}
+
+.sage-nav__link {
+  @extend %t-sage-heading-6;
 }
 
 .sage-nav__link,
@@ -71,6 +59,8 @@ $-nav-subitem-border-width: rem(2px);
 }
 
 .sage-nav__link--sub {
+  @extend %t-sage-body-small-semi;
+
   &.sage-nav__link--active {
     @include sage-focus-outline--update-color(sage-color(primary, 200));
 
@@ -98,21 +88,17 @@ $-nav-subitem-border-width: rem(2px);
   &:not(.sage-nav__list--sub) {
     .sage-nav__link--active {
       @include sage-focus-outline--update-color(sage-color(primary, 200));
+    }
 
-      /* stylelint-disable max-nesting-depth */
-      &::after {
-        opacity: 0;
-      }
-      /* stylelint-enable max-nesting-depth */
+    .sage-nav__link--active::after {
+      opacity: 0;
     }
   }
 }
 
 .sage-nav__link--with-icon {
-  &.sage-nav__link {
-    &::after {
-      opacity: 0;
-    }
+  &.sage-nav__link::after {
+    opacity: 0;
   }
 }
 
