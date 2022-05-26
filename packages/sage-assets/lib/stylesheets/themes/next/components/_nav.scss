@@ -23,7 +23,7 @@ $-nav-subitem-border-width: rem(2px);
 }
 
 .sage-nav__label {
-  @extend %t-sage-body-semi;
+  @extend %t-sage-heading-6;
 
   color: sage-color(charcoal, 500);
 
