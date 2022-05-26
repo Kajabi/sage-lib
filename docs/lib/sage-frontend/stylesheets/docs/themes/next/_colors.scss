@@ -48,7 +48,7 @@
       font-size: sage-font-size(body);
       background: $hex;
 
-      @if ($name == white) {
+      @if (($name == white) or ($name == grey)) {
         color: sage-color(charcoal, 500);
       }
 
