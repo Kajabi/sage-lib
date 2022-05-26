@@ -23,7 +23,7 @@ export const CardList = ({
     className,
     {
       [`sage-card__list--block-space-${blockSpacing}`]: blockSpacing,
-      [`sage-card__list--hide-first-border`]: hideFirstBorder,
+      'sage-card__list--hide-first-border': hideFirstBorder,
     }
   );
 

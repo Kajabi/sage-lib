@@ -23,7 +23,7 @@ export const PanelList = ({
     className,
     {
       [`sage-panel__list--block-space-${blockSpacing}`]: blockSpacing,
-      [`sage-panel__list--hide-first-border`]: hideFirstBorder,
+      'sage-panel__list--hide-first-border': hideFirstBorder,
     }
   );
 
