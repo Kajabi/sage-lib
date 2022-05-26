@@ -121,7 +121,7 @@ export const COLOR_BASE_CHARCOAL_300_CLASSNAME = 't-sage--color-charcoal-300';
 export const COLOR_BASE_CHARCOAL_400_HEX = '#202327';
 export const COLOR_BASE_CHARCOAL_400_CODE = 'charcoal-400';
 export const COLOR_BASE_CHARCOAL_400_CLASSNAME = 't-sage--color-charcoal-400';
-export const COLOR_BASE_CHARCOAL_500_HEX = '#181b20';
+export const COLOR_BASE_CHARCOAL_500_HEX = '#040506';
 export const COLOR_BASE_CHARCOAL_500_CODE = 'charcoal-500';
 export const COLOR_BASE_CHARCOAL_500_CLASSNAME = 't-sage--color-charcoal-500';
 export const COLOR_BASE_GREY_100_HEX = '#f9fafa';
@@ -454,7 +454,7 @@ export const COLOR = {
 // Static vars for COLOR COMBOS
 //
 export const COLOR_COMBOS_DRAFT_DEFAULT_FOREGROUND = '#202327';
-export const COLOR_COMBOS_DRAFT_DEFAULT_FOREGROUND_ACCENT = '#181b20';
+export const COLOR_COMBOS_DRAFT_DEFAULT_FOREGROUND_ACCENT = '#040506';
 export const COLOR_COMBOS_DRAFT_DEFAULT_BACKGROUND = '#eceeef';
 export const COLOR_COMBOS_DRAFT_DEFAULT_BACKGROUND_ACCENT = '#d3d5d9';
 export const COLOR_COMBOS_DRAFT_DEFAULT_ICON_BACKGROUND_ACCENT = '#60666c';
