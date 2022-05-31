@@ -185,7 +185,7 @@
           "classname": { "value": "t-sage--color-charcoal-400" }
         },
         "500": {
-          "hex": { "value": "#181b20" },
+          "hex": { "value": "#040506" },
           "code": { "value": "charcoal-500" },
           "classname": { "value": "t-sage--color-charcoal-500" }
         }
