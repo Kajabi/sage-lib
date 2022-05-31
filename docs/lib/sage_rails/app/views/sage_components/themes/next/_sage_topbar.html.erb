@@ -2,7 +2,14 @@
   class="sage-topbar <%= component.generated_css_classes %>"
   <%= component.generated_html_attributes.html_safe %>
 >
-  
+  <div class="sage-topbar__left-mobile">
+    <%= content_for :sage_topbar_content_left_mobile %>
+  </div>
+  <div class="sage-topbar__left">
+    <%= content_for :sage_topbar_content_left %>
+  </div>
 
-  <%= @content %>
+  <div class="sage-topbar_right">
+    <%= content_for :sage_topbar_content_right %>
+  </div>
 </div>
