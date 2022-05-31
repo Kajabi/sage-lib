@@ -5,12 +5,13 @@
 ////
 
 
-$-modal-padding-x: rem(36px);
-$-modal-padding-y: rem(36px);
+$-modal-padding-x: sage-spacer(md);
+$-modal-padding-y: sage-spacer(md);
 $-modal-margin-lg: 6vh;
 $-modal-margin-xl: 8vh;
 $-modal-header-image-size: rem(28px);
 $-modal-fullscreen-top-spacing: rem(104px);
+$-modal-inner-size: sage-container(md);
 
 
 .sage-modal {
@@ -69,7 +70,7 @@ $-modal-fullscreen-top-spacing: rem(104px);
   visibility: hidden;
   z-index: sage-z-index(modal);
   width: calc(100vw - #{sage-spacing(md)});
-  max-width: sage-container(md);
+  max-width: $-modal-inner-size + (2 * $-modal-padding-x);
   margin: 0;
   border-radius: sage-border(radius-large);
   background-color: sage-color(white);
