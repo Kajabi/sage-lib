@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.83.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.83.1...@kajabi/sage-assets@0.83.2) (2022-05-31)
+
+
+### Bug Fixes
+
+* **badge:** update font size and icon positioning ([31ae28f](https://github.com/Kajabi/sage-lib/commit/31ae28f126e861859de17b85776528492f4eda08))
+* **choice:** update selected state color ([b8d3841](https://github.com/Kajabi/sage-lib/commit/b8d3841d600a8e5c0a7fe4380a78b9532200a80b))
+* **color:** update charcoal 500 value ([b14985b](https://github.com/Kajabi/sage-lib/commit/b14985bddca6da4842298a64a5d8ba80d09ed48b))
+* **color tokens:** update charcoal 500 token in style dictionary ([10c70fd](https://github.com/Kajabi/sage-lib/commit/10c70fd3e81dcf3e1cad0a988a48f0bc01c0af2f))
+* **form-elements:** updated grid to resolve issue in safari 14 ([2b1670d](https://github.com/Kajabi/sage-lib/commit/2b1670db900a249514100339ad2ea3e7882fd7e4))
+* **tag:** linter ([a66e8fd](https://github.com/Kajabi/sage-lib/commit/a66e8fd091191af6cb991146793552d0f0d98b6f))
+* **tag:** update font-size and icon to align to spec ([9dcec09](https://github.com/Kajabi/sage-lib/commit/9dcec099193988cdb5dcf2697dc046c02a70b6dc))
+* **tag:** update type spec ([e30cf7b](https://github.com/Kajabi/sage-lib/commit/e30cf7b5ac1d14228d4a41f46fd35945dd54846b))
+* **tag:** updates per kevin review ([ebb6015](https://github.com/Kajabi/sage-lib/commit/ebb60150667f76b0f3729f72aaefa7e0e563664c))
+
+
+
+
+
 ## [0.83.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.83.0...@kajabi/sage-assets@0.83.1) (2022-05-24)
 
 

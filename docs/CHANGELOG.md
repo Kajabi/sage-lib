@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.67.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.67.1...@kajabi/sage@4.67.2) (2022-05-31)
+
+
+### Bug Fixes
+
+* **badge:** update badge react link ([fd9c3c1](https://github.com/Kajabi/sage-lib/commit/fd9c3c1b6798faf4b59ef16019c991257c9fce2c))
+* **choice:** docs update ([4ed9212](https://github.com/Kajabi/sage-lib/commit/4ed9212b22d13b1c76de0cca8706df4343e5e3d1))
+* **color tokens:** update charcoal 500 token in style dictionary ([10c70fd](https://github.com/Kajabi/sage-lib/commit/10c70fd3e81dcf3e1cad0a988a48f0bc01c0af2f))
+
+
+
+
+
 ## [4.67.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.67.0...@kajabi/sage@4.67.1) (2022-05-24)
 
 **Note:** Version bump only for package @kajabi/sage

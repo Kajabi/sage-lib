@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.98.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.98.1...@kajabi/sage-react@0.98.2) (2022-05-31)
+
+
+### Bug Fixes
+
+* **color tokens:** update charcoal 500 token in style dictionary ([10c70fd](https://github.com/Kajabi/sage-lib/commit/10c70fd3e81dcf3e1cad0a988a48f0bc01c0af2f))
+* **dropdownitem:** add suppressDefaultClass={true} to remove added link classes when href is set ([90640fc](https://github.com/Kajabi/sage-lib/commit/90640fcd75ee06653a1d85c99dd2afd5dcae7fa9))
+
+
+
+
+
 ## [0.98.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.98.0...@kajabi/sage-react@0.98.1) (2022-05-24)
 
 **Note:** Version bump only for package @kajabi/sage-react
