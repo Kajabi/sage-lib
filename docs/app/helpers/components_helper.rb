@@ -53,6 +53,7 @@ module ComponentsHelper
         rails: "done",
         react: "done",
         a11y: "done",
+        react_component_slug: "sage-badge--default",
         figma_embed: "",
       },
       {

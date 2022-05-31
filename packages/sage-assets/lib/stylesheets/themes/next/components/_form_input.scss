@@ -21,6 +21,7 @@ $-input-text-height: sage-font-size(body);
     "input input input"
     "message message message";
   grid-template-columns: minmax(0, 1fr) 1fr min-content;
+  grid-template-rows: min-content min-content min-content; /* needed to resolve Safari 14 layout issue */
 
   .sage-input-group &,
   .sage-toolbar & {

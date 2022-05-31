@@ -1,43 +1,59 @@
 require('../test/testHelper');
 
 import React from 'react';
-import { shallow } from 'enzyme';
+import { render, screen } from '@testing-library/react';
 import { Icon } from './Icon';
 
-describe('Rendering the Sage Icon Component', () => {
-  let component,
-    defaultProps;
-
-  beforeEach(() => {
-    defaultProps = {
-      icon: Icon.ICONS.MICROPHONE
+describe('Sage Icon', () => {
+  it('sets the icon class appropriately', () => {
+    const props = {
+      icon: Icon.ICONS.ARCHIVE
     };
 
-    component = shallow(
-      <Icon {...defaultProps} />
-    );
+    render(<Icon {...props} />);
+    screen.findByText('sage-icon-archive');
   });
 
-  describe('construction', () => {
-    it('renders the component', () => {
-      expect(component).toHaveLength(1);
-    });
+  it('is aria-hidden when label is NOT present', () => {
+    const props = {
+      icon: Icon.ICONS.ARCHIVE,
+    };
 
-    it('has an icon class', () => {
-      expect(component.get(0).props).toHaveProperty('className');
-      expect(component.get(0).props.className).toContain(`sage-icon-${defaultProps.icon}`);
-    });
-
-    it('no label results in aria-hidden', () => {
-      expect(component.get(0).props).toHaveProperty('aria-hidden', true);
-    });
+    render(<Icon {...props} />);
+    expect(screen.queryByRole('img')).toBeFalsy();
   });
 
-  describe('variations', () => {
-    it('label results in aria-label', () => {
-      const label = 'New label';
-      component.setProps({ label });
-      expect(component.get(0).props).toHaveProperty('aria-label', label);
-    });
+  it('renders wrapper when cardColor present', () => {
+    const props = {
+      cardColor: Icon.CARD_COLORS.INFO,
+      icon: Icon.ICONS.INFO_CIRCLE,
+    };
+
+    render(<Icon {...props} />);
+    screen.findByText('sage-icon-background');
+  });
+
+  it('has aria-label when label prop passed', () => {
+    const props = {
+      icon: Icon.ICONS.INFO_CIRCLE,
+      label: 'information',
+    };
+
+    render(<Icon {...props} />);
+    expect(screen.getByLabelText('information'));
+  });
+
+  it('sets style icon background height and width to be equal when circular true', () => {
+    const props = {
+      backgroundHeight: '15px',
+      cardColor: Icon.CARD_COLORS.INFO,
+      circular: true,
+      icon: Icon.ICONS.INFO_CIRCLE,
+    };
+
+    render(<Icon {...props} />);
+
+    expect(screen.findByText(`--sage-icon-background-height:${props.backgroundHeight}`));
+    expect(screen.findByText(`--sage-icon-background-width:${props.backgroundHeight}`));
   });
 });
