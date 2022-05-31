@@ -17,7 +17,63 @@ $sage-breakpoints: (
   lg-min: 992px,
   lg-max: 1199px,
   xl-min: 1200px,
+  xl-max: 1439px,
   xxl-min: 1440px,
+);
+
+///
+/// Sage breakpoint ranges
+///
+/// These breakpoint ranges define options that allow precisely targeting
+/// breakpoint areas as follows:
+///
+/// - To affect starting at a breakpoint and higher (no upper bound), provide just the target breakpoint:
+///   `sage-breakpoint-range(md)` targets a minimum of `md-min` and higher.
+/// - To affect up to a breakpoint's start, provide the target breakpoint with the `before-` prefix:
+///   `sage-breakpoint-range(before-md)` targets up to a maximum of `sm-max`.
+/// - To affect only a given breakpoint's range, provide the target breakpoint with `-only` suffix:
+///   `sage-breakpoint-range(md-only)` targets `md-min` through `md-max`.
+/// - To affect a range from a break point up to (not including) another breakpoint provide `[start]-to-[end]`:
+///   `sage-breakpoint-range(md-to-xl)` targets `md-min` through `lg-max`.
+///   - Note that one range up to the next range should favor using `-only` instead:
+///     `sage-breakpoint-range(md-to-lg)` is the same as `sage-breakpoint-range(md-only)`
+///   - Also, the `xs` token as a start is unnecessary: use `before-` instead:
+///     `sage-breakpoint-range(xs-to-lg)` is the same as `sage-breakpoint-range(before-lg)`
+///
+$sage-breakpoint-ranges: (
+  all: ( min: false, max: false ), // useful for loops for an all-inclusive/default output
+  xs: ( min: false, max: false ), // redundant
+  xs-only: ( min: false, max: xs-max ),
+  xs-to-sm: ( min: false, max: xs-max ), // redundant: use `before-sm`
+  xs-to-md: ( min: false, max: sm-max ), // redundant: use `before-md`
+  xs-to-lg: ( min: false, max: md-max ), // redundant: use `before-lg`
+  xs-to-xl: ( min: false, max: lg-max ), // redundant: use `before-xl`
+  xs-to-xxl: ( min: false, max: xl-max ), // redundant: use `before-xxl`
+  before-sm: ( min: false, max: xs-max ),
+  sm: ( min: sm-min, max: false ),
+  sm-only: ( min: sm-min, max: sm-max ),
+  sm-to-md: ( min: sm-min, max: sm-max ), // redundant: use `sm-only`
+  sm-to-lg: ( min: sm-min, max: md-max ),
+  sm-to-xl: ( min: sm-min, max: lg-max ),
+  sm-to-xxl: ( min: sm-min, max: xl-max ),
+  before-md: ( min: false, max: sm-max ),
+  md: ( min: md-min, max: false ),
+  md-only: ( min: md-min, max: md-max ),
+  md-to-lg: ( min: md-min, max: md-max ), // redundant: use `md-only`
+  md-to-xl: ( min: md-min, max: lg-max ),
+  md-to-xxl: ( min: md-min, max: xl-max ),
+  before-lg: ( min: false, max: md-max ),
+  lg: ( min: lg-min, max: false ),
+  lg-only: ( min: lg-min, max: lg-max ),
+  lg-to-xl: ( min: lg-min, max: lg-max ), // redundant: use `lg-only`
+  lg-to-xxl: ( min: lg-min, max: xl-max ),
+  before-xl: ( min: false, max: lg-max ),
+  xl: ( min: xl-min, max: false ),
+  xl-only: ( min: xl-min, max: xl-max ),
+  xl-to-xxl: ( min: xl-min, max: xl-max ), // redundant: use `xl-only`
+  before-xxl: ( min: false, max: xl-max ),
+  xxl: ( min: xxl-min, max: false ),
+  xxl-only: ( min: xxl-min, max: false ),
 );
 
 ///
@@ -28,4 +84,79 @@ $sage-breakpoints: (
 @function sage-breakpoint($key: sm-max) {
   $value: map-get($sage-breakpoints, $key);
   @return $value;
+}
+
+///
+/// Sage breakpoint ranges utility
+///
+/// @param {string} $key [sm-max] The token to retrieve
+///
+@function sage-breakpoint-range($key: sm-max) {
+  $value: map-get($sage-breakpoint-ranges, $key);
+  @return $value;
+}
+
+///
+/// Sage breakpoint mixin
+///
+/// @param {string} $range [false] The desired ranged token
+/// @param {string} $min [false] A manual minimum range token
+/// @param {string} $max [false] A manual maximum range token
+///
+@mixin sage-breakpoint($range: false, $min: false, $max: false) {
+  // First get breakpoint values assuming token keys are passed
+  // for min and/or max.
+  @debug "--- Sage breakpoint mixin: #{$range}, #{$min}, #{$max}";
+
+  // Retrieve range value
+  @if ($range) {
+    @debug "--- --- Looking for provided range: #{$range}";
+    $range: sage-breakpoint-range($range);
+  }
+
+  @debug "--- --- Matching range found; getting min and max";
+
+  // If range value is found, fetch the min and max it contains
+  @if ($range) {
+    @debug "--- --- Matching range found; getting min and max";
+    $min: map-get($range, min);
+    $max: map-get($range, max);
+  }
+
+  // Given a min either manually or through range above, retrieve its value
+  @if ($min) {
+    $min: sage-breakpoint($min);
+  }
+
+  // Given a max either manually or through range above, retrieve its value
+  @if ($max) {
+    $max: sage-breakpoint($max);
+  }
+
+  @debug "--- --- Ready to build breakpoints with min: #{$min} and max: #{$max}";
+
+  // Now generate the appropriate breakpoint frame
+  // including no frame if no valid breakpoints
+  // are found or provided
+  @if ($min and $max) {
+    @media (min-width: $min) and (max-width: $max) {
+      @content;
+    }
+  }
+
+  @else if ($min) {
+    @media (min-width: $min) {
+      @content;
+    }
+  }
+
+  @else if ($max) {
+    @media (max-width: $max) {
+      @content;
+    }
+  }
+
+  @else {
+    @content;
+  }
 }
