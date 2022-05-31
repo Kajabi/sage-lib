@@ -90,15 +90,6 @@ body:not(.sage-excluded),
   text-size-adjust: 100%;
   color: map-get($sage-text-colors, body);
   font-size: sage-font-size();
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    color: sage-color(charcoal, 500);
-  }
 }
 
 // Automate setting up classes that extend the specs
