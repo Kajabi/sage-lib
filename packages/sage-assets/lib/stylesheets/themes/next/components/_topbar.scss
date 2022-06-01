@@ -10,14 +10,25 @@
   position: fixed;
   z-index: sage-z-index(nav);
   top: 0;
-  left: 0;
-  width: 100%;
+  left: sage-sidebar();
+  height: rem(88px);
+  width: calc(100% - #{sage-sidebar()});
   padding: sage-spacing(md) sage-spacing(xl);
   background-color: sage-color(white);
   border-bottom: sage-border();
 }
 
+.sage-topbar__right {
+  display: flex;
+  align-items: center;
+}
+
 @media (max-width: sage-breakpoint(md-max)) {
+  .sage-topbar {
+    left: 0;
+    width: 100%;
+  }
+
   .sage-topbar__left-desktop {
     display: none;
   }
