@@ -128,6 +128,7 @@ $-btn-loading-min-height: rem(36px);
   display: inline-flex;
   align-self: inherit;
   align-items: center;
+  justify-self: flex-start;
   padding: $-padding-block sage-spacing(sm);
   text-align: left; // Prevents text alignment issue when inner text is truncated
   border: 0;
@@ -670,6 +671,7 @@ $-alert-colors: (
 .sage-btn--full-width {
   align-self: stretch;
   justify-content: center;
+  justify-self: stretch;
   width: 100%;
 }
 
