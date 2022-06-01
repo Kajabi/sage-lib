@@ -36,7 +36,8 @@ $-catalogue-item-image-height-mobile: rem(120px);
     border-bottom: 0;
   }
 
-  .sage-card__list--hide-first-border & {
+  .sage-card__list--hide-first-border &,
+  .sage-panel__list--hide-first-border & {
     &:first-child {
       border-top: 0;
     }
