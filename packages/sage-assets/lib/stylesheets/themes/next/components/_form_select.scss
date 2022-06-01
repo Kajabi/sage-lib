@@ -82,8 +82,6 @@ $-select-arrow-position-inverse-with-message: calc(100% - #{$-select-height + $-
   }
 
   .sage-select--value-selected &:not(:disabled) + .sage-select__arrow::before {
-    @include sage-icon-base(up-small);
-
     height: $-select-height;
   }
 
