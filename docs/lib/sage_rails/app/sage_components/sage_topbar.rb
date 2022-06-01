@@ -5,4 +5,5 @@ class SageTopbar < SageComponent
 
   def sections
     %w(topbar_content_left topbar_content_left_mobile topbar_content_right)
+  end
 end

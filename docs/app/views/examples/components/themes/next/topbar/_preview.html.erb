@@ -1,4 +1,12 @@
 <h3>Default</h3>
-<%= sage_component SageTopbar, {
-  
-} %>
+<%= sage_component SageTopbar, {} do %>
+	<% content_for :sage_topbar_content_left do %>
+		<h1>Left Desktop</h1>
+	<% end %>
+	<% content_for :sage_topbar_content_left_mobile do %>
+		<h1>Left Mobile</h1>
+	<% end %>
+	<% content_for :sage_topbar_content_right do %>
+		<h1>Right</h1>
+	<% end %>
+<% end %>

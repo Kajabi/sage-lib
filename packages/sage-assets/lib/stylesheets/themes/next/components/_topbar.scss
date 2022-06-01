@@ -5,5 +5,26 @@
 ////
 
 .sage-topbar {
-  // Styles here
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  z-index: sage-z-index(nav);
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: sage-spacing(md) sage-spacing(xl);
+  background-color: sage-color(white);
+  border-bottom: sage-border();
+}
+
+@media (max-width: sage-breakpoint(md-max)) {
+  .sage-topbar__left-desktop {
+    display: none;
+  }
+}
+
+@media (min-width: sage-breakpoint(lg-min)) {
+  .sage-topbar__left-mobile {
+    display: none;
+  }
 }
