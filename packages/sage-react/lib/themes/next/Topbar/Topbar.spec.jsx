@@ -31,6 +31,7 @@ describe('Sage Topbar', () => {
     const props = {
       contentLeftMobile: (
         <Button
+          color={Button.COLORS.PRIMARY}
           iconOnly={true}
         >
           Test Button
@@ -40,7 +41,7 @@ describe('Sage Topbar', () => {
 
     render(<Topbar {...props} />);
 
-    expect(document.querySelector('.sage-button')).not.toBeNull();
+    expect(document.querySelector('.sage-btn')).not.toBeNull();
   });
 
   it('renders content on the right side when property is present', () => {
