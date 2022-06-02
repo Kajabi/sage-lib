@@ -125,6 +125,7 @@ module SageSchemas
     min_width: [:optional, NilClass, String, Set.new(SageTokens::FRAME_WIDTHS)],
     width: [:optional, NilClass, String, Set.new(SageTokens::FRAME_WIDTHS)],
     width_ratio: [:optional, NilClass, String],
+    wrap: [:optional, NilClass, Set.new(SageTokens::FRAME_WRAPS)]
   }
 
   LIST_ITEM = {

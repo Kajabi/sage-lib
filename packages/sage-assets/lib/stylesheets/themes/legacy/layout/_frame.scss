@@ -133,6 +133,13 @@ $-sage-frame-widths: (
   initial: initial,
 );
 
+// Width presets to map to `width` (custom settings are also allowed)
+// named to resemble the auto layout settings in Figma
+$-sage-frame-wraps: (
+  wrap: wrap,
+  none: nowrap,
+);
+
 
 //
 // 2. Variables for default settings
@@ -147,6 +154,7 @@ $-sage-frame-padding: none;
 $-sage-frame-width: fill;
 $-sage-frame-min-width: initial;
 $-sage-frame-max-width: initial;
+$-sage-frame-wrap: none;
 
 
 //
@@ -221,6 +229,12 @@ $-sage-frame-max-width: initial;
 @each $-key, $-val in $-sage-frame-directions {
   .sage-frame--direction-#{$-key} {
     flex-direction: #{$-val};
+  }
+}
+
+@each $-key, $-val in $-sage-frame-wraps {
+  .sage-frame--wrap-#{$-key} {
+    flex-wrap: #{$-val};
   }
 }
 

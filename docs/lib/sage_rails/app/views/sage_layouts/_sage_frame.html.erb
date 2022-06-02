@@ -62,6 +62,7 @@ end
     <%= "sage-frame--width-#{width}" if width %>
     <%= "sage-frame--max-width-#{max_width}" if !is_custom_max_width && max_width %>
     <%= "sage-frame--min-width-#{min_width}" if !is_custom_min_width && min_width %>
+    <%= "sage-frame--wrap-#{component.wrap}" if component.wrap.present?%>
     <%= component.generated_css_classes %>
   "
   <% if has_custom_styles %>
