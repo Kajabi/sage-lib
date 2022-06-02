@@ -13,7 +13,7 @@ tag = component.tag.present? ? component.tag : "div"
 # Set up additional style configs
 #
 
-has_custom_styles = false
+has_custom_styles = component.styles.present? ? true : false
 
 is_custom_width = false
 if (width && !SageTokens::FRAME_WIDTHS.include?(width))
@@ -71,6 +71,7 @@ end
       <%= "--sage-frame-min-width: #{component.min_width}; " if is_custom_min_width %>
       <%= "--sage-frame-background: #{component.background}; " if is_custom_background %>
       <%= "flex: #{component.width_ratio}; " if component.width_ratio %>
+      <%= component.generated_styles.html_safe %>
     "
   <% end %>
   <%= component.generated_html_attributes.html_safe %>
