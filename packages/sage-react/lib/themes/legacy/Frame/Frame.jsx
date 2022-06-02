@@ -106,17 +106,17 @@ Frame.WIDTHS = FRAME_WIDTHS;
 Frame.WRAPS = FRAME_WRAPS;
 
 Frame.defaultProps = {
-  align: FRAME_ALIGNMENTS.TOP_LEFT,
-  background: 'transparent',
-  border: FRAME_BORDERS.NONE,
-  borderRadius: FRAME_BORDER_RADII.NONE,
+  align: null,
+  background: null,
+  border: null,
+  borderRadius: null,
   children: null,
   className: '',
   direction: FRAME_DIRECTIONS.VERTICAL,
   gap: FRAME_SPACINGS.MD,
   maxWidth: null,
   minWidth: null,
-  padding: FRAME_SPACINGS.NONE,
+  padding: null,
   tag: 'div',
   width: null,
   widthRatio: null,
