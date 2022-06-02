@@ -8,7 +8,7 @@ import { Icon } from '../Icon';
 import { Topbar } from './Topbar';
 
 const showHideTopbar = () => {
-  document.querySelector('.sage-topbar').classList.toggle('sage-topbar--hide')
+  document.querySelector('.sage-topbar').classList.toggle('sage-topbar--hide');
 };
 
 export default {
