@@ -7,6 +7,7 @@
 .sage-topbar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   position: fixed;
   z-index: sage-z-index(nav);
   top: 0;
@@ -21,6 +22,7 @@
 .sage-topbar__right {
   display: flex;
   align-items: center;
+  gap: sage-spacing();
 }
 
 @media (max-width: sage-breakpoint(md-max)) {

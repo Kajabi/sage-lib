@@ -1,5 +1,10 @@
 import React from 'react';
+import { SageTokens } from '../configs';
 import { selectArgs } from '../story-support/helpers';
+import { Avatar } from '../Avatar';
+import { Breadcrumbs } from '../Breadcrumbs';
+import { Button } from '../Button';
+import { Icon } from '../Icon';
 import { Topbar } from './Topbar';
 
 export default {
@@ -11,13 +16,41 @@ export default {
   },
   args: {
     contentLeftDesktop: (
-      <h1>LeftDesktop</h1>
+      <Breadcrumbs
+        items={[
+          {
+            label: 'Page Title',
+            href: 'http://example.com/1'
+          },
+          {
+            label: 'Page Title',
+            href: 'http://example.com/2'
+          },
+          {
+            label: 'Page Title',
+            href: 'http://example.com/3'
+          }
+        ]}
+      />
     ),
     contentLeftMobile: (
-      <h1>LeftMobile</h1>
+      <Button
+        color={Button.COLORS.SECONDARY}
+        iconOnly={true}
+        icon={SageTokens.ICONS.MENU}
+      >
+        Menu
+      </Button>
     ),
     contentRight: (
-      <h1>Right</h1>
+      <>
+        <Icon
+          icon={Icon.ICONS.SEARCH}
+        />
+        <Avatar
+          size="40px"
+        />
+      </>
     )
   }
 };
