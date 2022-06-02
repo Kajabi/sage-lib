@@ -9,6 +9,7 @@ import {
   FRAME_DIRECTIONS,
   FRAME_SPACINGS,
   FRAME_WIDTHS,
+  FRAME_WRAPS,
 } from './configs';
 
 export const Frame = ({
@@ -20,36 +21,63 @@ export const Frame = ({
   borderRadius,
   direction,
   gap,
+  maxWidth,
+  minWidth,
   padding,
   tag,
   width,
   widthRatio,
+  wrap,
   ...rest
 }) => {
+  const Tag = tag;
+  const hasCustomBackground = background
+    && !Object.values(SageTokens.COLOR_SLIDERS).includes(background);
+  const hasCustomWidth = width
+    && !Object.values(FRAME_WIDTHS).includes(background);
+  const hasCustomMaxWidth = maxWidth
+    && !Object.values(FRAME_WIDTHS).includes(maxWidth);
+  const hasCustomMinWidth = minWidth
+    && !Object.values(FRAME_WIDTHS).includes(minWidth);
+
   const classNames = classnames(
     'sage-frame',
     className,
     {
       [`sage-frame--align-${align}`]: align,
-      [`sage-frame--background-${background}`]: background,
+      'sage-frame--background-custom': hasCustomBackground,
+      [`sage-frame--background-${background}`]: background && !hasCustomBackground,
       [`sage-frame--border-${border}`]: border,
       [`sage-frame--border-radius-${borderRadius}`]: borderRadius,
       [`sage-frame--direction-${direction}`]: direction,
       [`sage-frame--gap-${gap}`]: gap,
       [`sage-frame--padding-${padding}`]: padding,
-      [`sage-frame--width-${width}`]: width,
+      'sage-frame--width-custom': hasCustomWidth,
+      [`sage-frame--width-${width}`]: width && !hasCustomWidth,
+      'sage-frame--max-width-custom': hasCustomMaxWidth,
+      [`sage-frame--max-width-${maxWidth}`]: maxWidth && !hasCustomMaxWidth,
+      'sage-frame--min-width-custom': hasCustomMinWidth,
+      [`sage-frame--min-width-${minWidth}`]: minWidth && !hasCustomMinWidth,
+      [`sage-frame--wrap-${wrap}`]: wrap,
     }
   );
 
-  const Tag = tag;
+  const { style } = rest;
+  const styles = style || {};
 
-  const styles = {};
-
-  if (!Object.values(FRAME_WIDTHS).includes(width)) {
+  if (width && !Object.values(FRAME_WIDTHS).includes(width)) {
     styles['--sage-frame-width'] = width;
   }
 
-  if (!Object.values(SageTokens.COLOR_SLIDERS).includes(background)) {
+  if (hasCustomMaxWidth) {
+    styles['--sage-frame-max-width'] = maxWidth;
+  }
+
+  if (hasCustomMinWidth) {
+    styles['--sage-frame-min-width'] = minWidth;
+  }
+
+  if (hasCustomBackground) {
     styles['--sage-frame-background'] = background;
   }
 
@@ -60,8 +88,8 @@ export const Frame = ({
   return (
     <Tag
       className={classNames}
-      style={styles}
       {...rest}
+      style={styles}
     >
       {children}
     </Tag>
@@ -75,6 +103,7 @@ Frame.DIRECTIONS = FRAME_DIRECTIONS;
 Frame.GAPS = FRAME_SPACINGS;
 Frame.PADDINGS = FRAME_SPACINGS;
 Frame.WIDTHS = FRAME_WIDTHS;
+Frame.WRAPS = FRAME_WRAPS;
 
 Frame.defaultProps = {
   align: FRAME_ALIGNMENTS.TOP_LEFT,
@@ -85,10 +114,13 @@ Frame.defaultProps = {
   className: '',
   direction: FRAME_DIRECTIONS.VERTICAL,
   gap: FRAME_SPACINGS.MD,
+  maxWidth: null,
+  minWidth: null,
   padding: FRAME_SPACINGS.NONE,
   tag: 'div',
-  width: FRAME_WIDTHS.FLEX,
+  width: null,
   widthRatio: null,
+  wrap: null,
 };
 
 Frame.propTypes = {
@@ -103,6 +135,14 @@ Frame.propTypes = {
   borderRadius: PropTypes.oneOf(Object.values(Frame.BORDER_RADII)),
   direction: PropTypes.oneOf(Object.values(Frame.DIRECTIONS)),
   gap: PropTypes.oneOf(Object.values(Frame.GAPS)),
+  maxWidth: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.oneOf(Object.values(Frame.WIDTHS)),
+  ]),
+  minWidth: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.oneOf(Object.values(Frame.WIDTHS)),
+  ]),
   padding: PropTypes.oneOf(Object.values(Frame.PADDINGS)),
   tag: PropTypes.oneOfType([
     PropTypes.string,
@@ -113,4 +153,5 @@ Frame.propTypes = {
     PropTypes.oneOf(Object.values(Frame.WIDTHS)),
   ]),
   widthRatio: PropTypes.string,
+  wrap: PropTypes.oneOf(Object.values(Frame.WRAPS)),
 };
