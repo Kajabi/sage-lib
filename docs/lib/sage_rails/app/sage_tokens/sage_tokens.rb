@@ -406,6 +406,7 @@ module SageTokens
     "hug",
     "fill",
     "flex",
+    "initial",
   ]
 
 end

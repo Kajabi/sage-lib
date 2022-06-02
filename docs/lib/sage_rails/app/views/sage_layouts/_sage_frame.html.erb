@@ -5,6 +5,8 @@
 
 background = component.background.present? ? component.background : nil
 width = component.width.present? ? component.width : nil
+max_width = component.max_width.present? ? component.max_width : nil
+min_width = component.min_width.present? ? component.min_width : nil
 tag = component.tag.present? ? component.tag : "div"
 
 #
@@ -18,6 +20,20 @@ if (width && !SageTokens::FRAME_WIDTHS.include?(width))
   is_custom_width = true
   has_custom_styles = true
   width = "custom"
+end
+
+is_custom_max_width = false
+if (max_width && !SageTokens::FRAME_WIDTHS.include?(max_width))
+  is_custom_max_width = true
+  has_custom_styles = true
+  max_width = "custom"
+end
+
+is_custom_min_width = false
+if (min_width && !SageTokens::FRAME_WIDTHS.include?(min_width))
+  is_custom_min_width = true
+  has_custom_styles = true
+  min_width = "custom"
 end
 
 # Set up additional background configs
@@ -44,11 +60,15 @@ end
     <%= "sage-frame--gap-#{component.gap}" if component.gap.present? %>
     <%= "sage-frame--padding-#{component.padding}" if component.padding.present?%>
     <%= "sage-frame--width-#{width}" if width %>
+    <%= "sage-frame--max-width-#{max_width}" if !is_custom_max_width && max_width %>
+    <%= "sage-frame--min-width-#{min_width}" if !is_custom_min_width && min_width %>
     <%= component.generated_css_classes %>
   "
   <% if has_custom_styles %>
     style="
       <%= "--sage-frame-width: #{component.width}; " if is_custom_width %>
+      <%= "--sage-frame-max-width: #{component.max_width}; " if is_custom_max_width %>
+      <%= "--sage-frame-min-width: #{component.min_width}; " if is_custom_min_width %>
       <%= "--sage-frame-background: #{component.background}; " if is_custom_background %>
       <%= "flex: #{component.width_ratio}; " if component.width_ratio %>
     "

@@ -130,6 +130,7 @@ $-sage-frame-widths: (
   flex: auto, // will also add `flex: 1` when applied
   hug: max-content,
   custom: auto,
+  initial: initial,
 );
 
 
@@ -144,6 +145,8 @@ $-sage-frame-direction: vertical;
 $-sage-frame-gap: md;
 $-sage-frame-padding: none;
 $-sage-frame-width: fill;
+$-sage-frame-min-width: initial;
+$-sage-frame-max-width: initial;
 
 
 //
