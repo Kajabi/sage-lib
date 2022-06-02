@@ -7,6 +7,10 @@ import { Button } from '../Button';
 import { Icon } from '../Icon';
 import { Topbar } from './Topbar';
 
+const showHideTopbar = () => {
+  document.querySelector('.sage-topbar').classList.toggle('sage-topbar--hide')
+};
+
 export default {
   title: 'Sage/Topbar',
   component: Topbar,
@@ -15,6 +19,7 @@ export default {
     }),
   },
   args: {
+    className: 'sage-topbar--hide',
     contentLeftDesktop: (
       <Breadcrumbs
         items={[
@@ -57,3 +62,23 @@ export default {
 const Template = (args) => <Topbar {...args} />;
 
 export const Default = Template.bind({});
+
+Default.decorators = [
+  (Story) => (
+    <>
+      <style>
+        {`.sage-topbar--hide {
+          visibility: hidden;
+        }`}
+      </style>
+      <Button
+        color={Button.COLORS.PRIMARY}
+        onClick={showHideTopbar}
+        data-hide-topbar="hide"
+      >
+        Show Topbar
+      </Button>
+      <Story />
+    </>
+  )
+];

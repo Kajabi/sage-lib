@@ -1,5 +1,18 @@
-<h3>Default</h3>
-<%= sage_component SageTopbar, {} do %>
+<style>
+.sage-topbar--hide {
+	visibility: hidden;
+}
+</style>
+
+<h3>Topbar with Breadcrumbs, Avatar, and Search</h3>
+<%= sage_component SageButton, {
+	style: "primary",
+	value: 'Show Topbar',
+	attributes: {
+		"data-hide-topbar": "hide",
+	}
+} %>
+<%= sage_component SageTopbar, { css_classes: 'sage-topbar--hide' } do %>
 	<% content_for :sage_topbar_content_left do %>
 		<%= sage_component SageBreadcrumbs, {
 			items: [
@@ -29,3 +42,9 @@
 		<%= sage_component SageAvatar, { size: '40px' } %>
 	<% end %>
 <% end %>
+
+<script>
+document.querySelector('[data-hide-topbar="hide"]').addEventListener('click', () => {
+	document.querySelector('.sage-topbar').classList.toggle('sage-topbar--hide');
+});
+</script>
