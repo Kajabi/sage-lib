@@ -177,14 +177,14 @@ module SageTokens
     "drop",
     "duplicate",
     "email-activity",
-    "enlarge",
+    "enlarge", # Same as "select" ?
     "enlarge-vertical",
     "expand",
     "favorite",
     "feedback",
     "file",
     "file-money",
-    "filters",
+    "filters", # Different on Next
     "flag",
     "folder",
     "folder-group",
@@ -195,7 +195,7 @@ module SageTokens
     "gear",
     "gear-filled",
     "grant-offer",
-    "graph",
+    "graph", # Not in Next... same as "chart"
     "handle",
     "handle-2",
     "handle-2-vertical",
@@ -218,9 +218,9 @@ module SageTokens
     "launch",
     "left-small",
     "list-bullet",
-    "list-details",
+    "list-details", # Different on Next
     "list-numbers",
-    "list-stack",
+    "list-stack", # Different on Next
     "location",
     "lock",
     "lock-alt",
@@ -233,7 +233,7 @@ module SageTokens
     "megaphone-filled",
     "menu",
     "menu-alt",
-    "menu-bordered",
+    "menu-bordered", # "menu-2" in Next
     "merge",
     "microphone",
     "microphone-off",
@@ -273,7 +273,7 @@ module SageTokens
     "round-dollar",
     "screen-share-off",
     "screen-share-on",
-    "search",
+    "search", # Detached stem in Next
     "search-small",
     "select",
     "send-message",
@@ -310,13 +310,14 @@ module SageTokens
     "user-star",
     "user-star-filled",
     "users",
-    "users-alt",
+    "users-alt", # "users-wm" in Next
     "video-off",
     "video-on",
     "warning",
     "warning-filled",
     "window-paragraph",
     "world",
+    # Need: dollar-sign
   ]
 
   ICON_SIZES = ["xs", "sm", "md", "lg", "xl", "2xl", "3xl", "4xl"]
