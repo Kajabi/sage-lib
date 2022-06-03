@@ -57,6 +57,29 @@ describe('Sage Alert', () => {
     expect(screen.getByRole('button'));
   });
 
+  it('renders icon a custom icon when provided', () => {
+    const defaultProps = {
+      color: Alert.COLORS.DEFAULT,
+      icon: 'pen',
+    };
+    setup(defaultProps);
+
+    const icon = document.querySelector('.sage-alert__icon');
+    expect(icon).toHaveClass('sage-icon-pen');
+  });
+
+  it('renders actions when provided', () => {
+    const defaultProps = {
+      color: Alert.COLORS.DEFAULT,
+      actions: (<p>Testing actions</p>),
+    };
+    setup(defaultProps);
+
+    const actions = document.querySelector('.sage-alert__actions');
+    expect(actions).toBeTruthy();
+    expect(actions).toHaveTextContent('Testing actions');
+  });
+
   it('dismisses the modal when closed', async () => {
     const props = {
       color: Alert.COLORS.DANGER,
@@ -69,5 +92,23 @@ describe('Sage Alert', () => {
     await user.click(screen.getByRole('button', { value: 'Close' }));
 
     expect(screen.queryByRole('button')).toBeFalsy();
+  });
+
+  it('allows for a callback the alert when closed', async () => {
+    let callbackClicked = false;
+    const props = {
+      color: Alert.COLORS.DANGER,
+      dismissable: true,
+      onDismiss: () => {
+        callbackClicked = true;
+      },
+    };
+
+    const user = userEvent.setup();
+    render(<Alert {...props} />);
+
+    await user.click(screen.getByRole('button', { value: 'Close' }));
+
+    expect(callbackClicked).toBeTruthy();
   });
 });
