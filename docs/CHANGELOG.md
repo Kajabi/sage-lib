@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.67.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.67.2...@kajabi/sage@4.67.3) (2022-06-03)
+
+
+### Bug Fixes
+
+* **sagecard:** adds prop for border ([a1f54ef](https://github.com/Kajabi/sage-lib/commit/a1f54ef128c78473c86f9fefa826e0378e6b8246))
+* **sagelist:** adds prop for border ([90930ee](https://github.com/Kajabi/sage-lib/commit/90930eef7f65919a0d17ecfa8b3450cd1ab7d0f9))
+* **sagelist & catalog_item:** adds prop for border and styling adjustments ([28b4666](https://github.com/Kajabi/sage-lib/commit/28b46664ffb9f896f079857efdc688db9cea41ed))
+* **sagepanel:** adds prop for border ([68c847a](https://github.com/Kajabi/sage-lib/commit/68c847adff9cd8a338f6702ac2de5fcbda208991))
+* **select:** remove inverted icon functionality ([17b10c2](https://github.com/Kajabi/sage-lib/commit/17b10c2c41cfcec7ac660674d6e0fe1aafb8d4b1))
+
+
+
+
+
 ## [4.67.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.67.1...@kajabi/sage@4.67.2) (2022-05-31)
 
 

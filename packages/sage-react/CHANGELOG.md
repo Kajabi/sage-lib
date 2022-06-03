@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.98.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.98.2...@kajabi/sage-react@0.98.3) (2022-06-03)
+
+
+### Bug Fixes
+
+* **sagecard:** adds prop for border ([a1f54ef](https://github.com/Kajabi/sage-lib/commit/a1f54ef128c78473c86f9fefa826e0378e6b8246))
+* **sagelist:** adds prop for border ([90930ee](https://github.com/Kajabi/sage-lib/commit/90930eef7f65919a0d17ecfa8b3450cd1ab7d0f9))
+* **sagepanel:** adds prop for border ([68c847a](https://github.com/Kajabi/sage-lib/commit/68c847adff9cd8a338f6702ac2de5fcbda208991))
+
+
+
+
+
 ## [0.98.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.98.1...@kajabi/sage-react@0.98.2) (2022-05-31)
 
 

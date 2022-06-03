@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.84.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.83.2...@kajabi/sage-assets@0.84.0) (2022-06-03)
+
+
+### Bug Fixes
+
+* **button:** resolve button stretching when element is a grid item ([0709e15](https://github.com/Kajabi/sage-lib/commit/0709e1552462941d3c07dca2a8ecf225558205b3))
+* **catalog item:** adds missed styling ([6eec8eb](https://github.com/Kajabi/sage-lib/commit/6eec8eb4ea8d8cae24a0e68be08b60e2b9ade051))
+* **link:** update font-weight to semibold ([49eea65](https://github.com/Kajabi/sage-lib/commit/49eea655f9465fd1f76a317ee2091ab9004d22dd))
+* **nav:** apply h6 style to links ([c20438b](https://github.com/Kajabi/sage-lib/commit/c20438b85f07e8e5c57e0d81e9c3aa4ff6ad0222))
+* **nav item:** refactor nav link styles and match spec ([2a51881](https://github.com/Kajabi/sage-lib/commit/2a518813801e4cf58206a3facb24c9e79b6f53c9))
+* **sagecard:** adds prop for border ([a1f54ef](https://github.com/Kajabi/sage-lib/commit/a1f54ef128c78473c86f9fefa826e0378e6b8246))
+* **sagelist:** adds prop for border ([90930ee](https://github.com/Kajabi/sage-lib/commit/90930eef7f65919a0d17ecfa8b3450cd1ab7d0f9))
+* **sagelist & catalog_item:** adds prop for border and styling adjustments ([28b4666](https://github.com/Kajabi/sage-lib/commit/28b46664ffb9f896f079857efdc688db9cea41ed))
+* **sagepanel:** adds prop for border ([68c847a](https://github.com/Kajabi/sage-lib/commit/68c847adff9cd8a338f6702ac2de5fcbda208991))
+* **select:** remove inverted icon functionality ([17b10c2](https://github.com/Kajabi/sage-lib/commit/17b10c2c41cfcec7ac660674d6e0fe1aafb8d4b1))
+
+
+### Features
+
+* **modal:** update inner size on Next theme ([2cbf9bf](https://github.com/Kajabi/sage-lib/commit/2cbf9bfdd54eaafe61bdc5db9ad37d41cdc07986))
+
+
+
+
+
 ## [0.83.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.83.1...@kajabi/sage-assets@0.83.2) (2022-05-31)
 
 

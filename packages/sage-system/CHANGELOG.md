@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.21.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.21.2...@kajabi/sage-system@0.21.3) (2022-06-03)
+
+
+### Bug Fixes
+
+* **select:** remove inverted icon functionality ([17b10c2](https://github.com/Kajabi/sage-lib/commit/17b10c2c41cfcec7ac660674d6e0fe1aafb8d4b1))
+
+
+
+
+
 ## [0.21.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.21.1...@kajabi/sage-system@0.21.2) (2022-05-13)
 
 
