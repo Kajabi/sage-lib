@@ -204,3 +204,18 @@
   icon_name: "sage-icon-danger",
   small: true,
 } %>
+
+<%= md("
+### Events
+
+Alerts emits a custom event, `sage.alert.dismiss` when the dismiss button is clicked.
+You can listen for this event as it bubbles and respond as you see fit.
+", use_sage_type: true) %>
+
+<script>
+(function() {
+  window.addEventListener("sage.alert.dismiss", function (evt) {
+    console.log("local dismiss click", evt);
+  });
+})();
+</script>
