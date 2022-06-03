@@ -57,7 +57,7 @@ describe('Sage Alert', () => {
     expect(screen.getByRole('button'));
   });
 
-  it('renders icon a custom icon when provided', () => {
+  it('renders a custom icon when provided', () => {
     const defaultProps = {
       color: Alert.COLORS.DEFAULT,
       icon: 'pen',
@@ -80,7 +80,7 @@ describe('Sage Alert', () => {
     expect(actions).toHaveTextContent('Testing actions');
   });
 
-  it('dismisses the modal when closed', async () => {
+  it('dismisses the modal when dismissed', async () => {
     const props = {
       color: Alert.COLORS.DANGER,
       dismissable: true,
@@ -94,7 +94,7 @@ describe('Sage Alert', () => {
     expect(screen.queryByRole('button')).toBeFalsy();
   });
 
-  it('allows for a callback the alert when closed', async () => {
+  it('allows for a callback when the alert is dismissed', async () => {
     let callbackClicked = false;
     const props = {
       color: Alert.COLORS.DANGER,
