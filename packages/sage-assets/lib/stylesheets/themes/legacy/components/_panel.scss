@@ -139,6 +139,12 @@
     padding-top: sage-spacing();
     padding-bottom: sage-spacing();
   }
+
+  &:first-child {
+    .sage-panel__list--hide-first-border & {
+      border-top: 0;
+    }
+  }
 }
 
 .sage-panel__row {

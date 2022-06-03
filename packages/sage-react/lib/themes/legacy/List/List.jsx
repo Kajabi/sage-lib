@@ -8,6 +8,7 @@ import { OptionsDropdown } from '../Dropdown';
 export const List = ({
   children,
   className,
+  hideFirstBorder,
   items,
   itemRenderer,
   sortableConfigs,
@@ -16,6 +17,9 @@ export const List = ({
   const classNames = classnames(
     'sage-list',
     className,
+    {
+      'sage-list--hide-first-border': hideFirstBorder,
+    }
   );
 
   const renderItems = () => {
@@ -60,6 +64,7 @@ List.Item = ListItem;
 List.defaultProps = {
   children: null,
   className: null,
+  hideFirstBorder: false,
   items: [],
   itemRenderer: null,
   sortableConfigs: null,
@@ -69,6 +74,7 @@ List.defaultProps = {
 List.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
+  hideFirstBorder: PropTypes.bool,
   items: PropTypes.arrayOf(
     PropTypes.shape({
       children: PropTypes.node,

@@ -4,8 +4,7 @@ Sage.select = (function() {
   // Variables
   // ==================================================
   var elSelectClass = '.sage-select',
-      classActive = 'sage-select--value-selected',
-      htmlArrow = '<i class="sage-select__arrow" aria-hidden="true"></i>';
+      classActive = 'sage-select--value-selected';
 
   // ==================================================
   // Functions
@@ -38,7 +37,6 @@ Sage.select = (function() {
   function init(el) {
     var elSelect = el.querySelector('select');
 
-    el.insertAdjacentHTML('beforeEnd', htmlArrow);
     disableSelectPromptOptions(elSelect);
     updateValueSelectedState(elSelect.value, el);
     bindEvents(elSelect, el);

@@ -9,6 +9,7 @@ import { PANEL_LIST_BLOCK_SPACING } from './configs';
 export const PanelList = ({
   children,
   className,
+  hideFirstBorder,
   itemClassName,
   itemGridTemplate,
   items,
@@ -21,6 +22,7 @@ export const PanelList = ({
     className,
     {
       [`sage-panel__list--block-space-${blockSpacing}`]: blockSpacing,
+      'sage-panel__list--hide-first-border': hideFirstBorder,
     }
   );
 
@@ -52,6 +54,7 @@ PanelList.SPACING = PANEL_LIST_BLOCK_SPACING;
 PanelList.defaultProps = {
   children: null,
   className: '',
+  hideFirstBorder: false,
   itemClassName: null,
   itemGridTemplate: null,
   items: [],
@@ -62,6 +65,7 @@ PanelList.defaultProps = {
 PanelList.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
+  hideFirstBorder: PropTypes.bool,
   items: PropTypes.arrayOf(PropTypes.node),
   itemClassName: PropTypes.string,
   itemGridTemplate: PropTypes.oneOf(Object.values(SageTokens.GRID_TEMPLATES)),

@@ -136,6 +136,7 @@ module SageSchemas
     items: [:optional, [[SageSchemas::LIST_ITEM]]],
     sortable_resource: [:optional, NilClass, String],
     tag: [:optional, NilClass, Set.new(["ul", "ol"])],
+    hide_first_border: [:optional, TrueClass, String],
   }
 
   PANEL_FIGURE = {
