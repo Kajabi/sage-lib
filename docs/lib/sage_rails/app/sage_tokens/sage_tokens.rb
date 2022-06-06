@@ -402,10 +402,18 @@ module SageTokens
     "none"
   ])
 
+  # Keep in sync with `packages/sage-assets/lib/stylesheets/components/_frame.scss`
   FRAME_WIDTHS = [
     "hug",
     "fill",
     "flex",
+    "initial",
+  ]
+
+  # Keep in sync with `packages/sage-assets/lib/stylesheets/components/_frame.scss`
+  FRAME_WRAPS = [
+    "none",
+    "wrap",
   ]
 
 end

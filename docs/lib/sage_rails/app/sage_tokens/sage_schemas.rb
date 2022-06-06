@@ -121,8 +121,11 @@ module SageSchemas
     gap: [:optional, NilClass, Set.new(SageTokens::FRAME_SPACINGS)],
     padding: [:optional, NilClass, Set.new(SageTokens::FRAME_SPACINGS)],
     tag: [:optional, NilClass, String],
+    max_width: [:optional, NilClass, String, Set.new(SageTokens::FRAME_WIDTHS)],
+    min_width: [:optional, NilClass, String, Set.new(SageTokens::FRAME_WIDTHS)],
     width: [:optional, NilClass, String, Set.new(SageTokens::FRAME_WIDTHS)],
     width_ratio: [:optional, NilClass, String],
+    wrap: [:optional, NilClass, Set.new(SageTokens::FRAME_WRAPS)]
   }
 
   LIST_ITEM = {

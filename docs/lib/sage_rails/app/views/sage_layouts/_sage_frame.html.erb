@@ -1,49 +1,78 @@
 <%
-# Set up defaults
-# due to cascading values set on custom props,
-# we need to ensure defaults are provided for all values
+#
+# Set up defaults for options that allow open-ended values
+#
 
-align = component.align.present? ? component.align : "top-left"
-background = component.background.present? ? component.background : "transparent"
-border = component.border.present? ? component.border : "none"
-border_radius = component.border_radius.present? ? component.border_radius : "none"
-direction = component.direction.present? ? component.direction : "vertical"
-gap = component.gap.present? ? component.gap : "md"
-padding = component.padding.present? ? component.padding : "none"
-width = component.width.present? ? component.width : "flex"
+background = component.background.present? ? component.background : nil
+width = component.width.present? ? component.width : nil
+max_width = component.max_width.present? ? component.max_width : nil
+min_width = component.min_width.present? ? component.min_width : nil
 tag = component.tag.present? ? component.tag : "div"
 
-# Set up additional width configs
+#
+# Set up additional style configs
+#
+
+has_custom_styles = component.styles.present? ? true : false
+
 is_custom_width = false
 if (width && !SageTokens::FRAME_WIDTHS.include?(width))
   is_custom_width = true
+  has_custom_styles = true
+  width = "custom"
+end
+
+is_custom_max_width = false
+if (max_width && !SageTokens::FRAME_WIDTHS.include?(max_width))
+  is_custom_max_width = true
+  has_custom_styles = true
+  max_width = "custom"
+end
+
+is_custom_min_width = false
+if (min_width && !SageTokens::FRAME_WIDTHS.include?(min_width))
+  is_custom_min_width = true
+  has_custom_styles = true
+  min_width = "custom"
 end
 
 # Set up additional background configs
 is_custom_background = false
 if (background && !SageTokens::COLOR_SLIDERS.include?(background))
   is_custom_background = true
+  has_custom_styles = true
+  background = "custom"
+end
+
+if (component.width_ratio.present?)
+  has_custom_styles = true
 end
 
 %>
 <<%= tag %>
   class="
     sage-frame
-    <%= "sage-frame--align-#{align}" %>
-    <%= "sage-frame--background-#{background}" if !is_custom_background && background %>
-    <%= "sage-frame--border-#{border}" %>
-    <%= "sage-frame--border-radius-#{border_radius}" %>
-    <%= "sage-frame--direction-#{direction}" %>
-    <%= "sage-frame--gap-#{gap}" %>
-    <%= "sage-frame--padding-#{padding}" %>
-    <%= "sage-frame--width-#{width}" if !is_custom_width && width %>
+    <%= "sage-frame--align-#{component.align}" if component.align.present? %>
+    <%= "sage-frame--background-#{background}" if background %>
+    <%= "sage-frame--border-#{component.border}" if component.border.present? %>
+    <%= "sage-frame--border-radius-#{component.border_radius}" if component.border_radius.present? %>
+    <%= "sage-frame--direction-#{component.direction}" if component.direction.present? %>
+    <%= "sage-frame--gap-#{component.gap}" if component.gap.present? %>
+    <%= "sage-frame--padding-#{component.padding}" if component.padding.present?%>
+    <%= "sage-frame--width-#{width}" if width %>
+    <%= "sage-frame--max-width-#{max_width}" if !is_custom_max_width && max_width %>
+    <%= "sage-frame--min-width-#{min_width}" if !is_custom_min_width && min_width %>
+    <%= "sage-frame--wrap-#{component.wrap}" if component.wrap.present?%>
     <%= component.generated_css_classes %>
   "
-  <% if is_custom_width || is_custom_background %>
+  <% if has_custom_styles %>
     style="
-      <%= "--sage-frame-width: #{width}; " if is_custom_width %>
-      <%= "--sage-frame-background: #{background}; " if is_custom_background %>
+      <%= "--sage-frame-width: #{component.width}; " if is_custom_width %>
+      <%= "--sage-frame-max-width: #{component.max_width}; " if is_custom_max_width %>
+      <%= "--sage-frame-min-width: #{component.min_width}; " if is_custom_min_width %>
+      <%= "--sage-frame-background: #{component.background}; " if is_custom_background %>
       <%= "flex: #{component.width_ratio}; " if component.width_ratio %>
+      <%= component.generated_styles.html_safe %>
     "
   <% end %>
   <%= component.generated_html_attributes.html_safe %>

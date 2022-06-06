@@ -54,4 +54,11 @@ export const FRAME_WIDTHS = {
   HUG: 'hug',
   FILL: 'fill',
   FLEX: 'flex',
+  INITIAL: 'initial',
+};
+
+// Keep in sync with `packages/sage-assets/lib/stylesheets/components/_frame.scss`
+export const FRAME_WRAPS = {
+  NONE: 'nowrap',
+  WRAP: 'wrap',
 };

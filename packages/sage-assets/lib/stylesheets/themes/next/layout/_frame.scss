@@ -123,12 +123,21 @@ $-sage-frame-spacings: map-merge($sage-spacings, (
 ));
 
 // Width presets to map to `width` (custom settings are also allowed)
-// named to resemble the auto layout settings in Figma
+// named to resemble the auto layout settings in Figma.
+// Used for width, min-width, and max-width settings.
 $-sage-frame-widths: (
   fill: 100%,
-  flex: auto,
+  flex: auto, // will also add `flex: 1` when applied
   hug: max-content,
   custom: auto,
+  initial: initial,
+);
+
+// Width presets to map to `width` (custom settings are also allowed)
+// named to resemble the auto layout settings in Figma
+$-sage-frame-wraps: (
+  wrap: wrap,
+  none: nowrap,
 );
 
 
@@ -143,149 +152,135 @@ $-sage-frame-direction: vertical;
 $-sage-frame-gap: md;
 $-sage-frame-padding: none;
 $-sage-frame-width: fill;
+$-sage-frame-min-width: initial;
+$-sage-frame-max-width: initial;
+$-sage-frame-wrap: none;
 
 
 //
-// 3. Mixins for easy use
-//
-
-///
-/// Setup an element with the sage frame configuration variables
-///
-@mixin sage-frame(
-  $align: $-sage-frame-alignment,
-  $background: $-sage-frame-background,
-  $border: $-sage-frame-border,
-  $border-radius: $-sage-frame-border-radius,
-  $direction: $-sage-frame-direction,
-  $gap: $-sage-frame-gap,
-  $padding: $-sage-frame-padding,
-  $width: $-sage-frame-width,
-) {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: var(--sage-frame-align-vertical, #{map-get(map-get($-sage-frame-alignments, $align), v)});
-  justify-content: var(--sage-frame-align-horizontal, #{map-get(map-get($-sage-frame-alignments, $align), h)});
-  flex-direction: var(--sage-frame-direction, #{map-get($-sage-frame-directions, $direction)});
-  gap: var(--sage-frame-gap, #{map-get($-sage-frame-spacings, $gap)});
-  width: var(--sage-frame-width, #{map-get($-sage-frame-widths, $width)});
-  padding: var(--sage-frame-padding, #{map-get($-sage-frame-spacings, $padding)});
-  border: var(--sage-frame-border, #{map-get($-sage-frame-borders, $border)});
-  border-radius: var(--sage-frame-border-radius, #{map-get($-sage-frame-border-radii, $border-radius)});
-  background: var(--sage-frame-background, #{$background});
-}
-
-///
-/// Configure a setup for a particular frame. Must also have implemented `sage-frame()` for initial setup.
-///
-@mixin sage-frame-config(
-  $align: $-sage-frame-alignment,
-  $background: $-sage-frame-background,
-  $border: $-sage-frame-border,
-  $border-radius: $-sage-frame-border-radius,
-  $direction: $-sage-frame-direction,
-  $gap: $-sage-frame-gap,
-  $padding: $-sage-frame-padding,
-  $width: $-sage-frame-width,
-) {
-  @if ($direction == vertical) {
-    --sage-frame-align-horizontal: #{map-get(map-get($-sage-frame-alignments, $align), v)};
-    --sage-frame-align-vertical: #{map-get(map-get($-sage-frame-alignments, $align), h)};
-  }
-  @else {
-    --sage-frame-align-horizontal: #{map-get(map-get($-sage-frame-alignments, $align), h)};
-    --sage-frame-align-vertical: #{map-get(map-get($-sage-frame-alignments, $align), v)};
-  }
-  --sage-frame-background: #{$background};
-  --sage-frame-border: #{map-get($-sage-frame-borders, $border)};
-  --sage-frame-border-radius: #{map-get($-sage-frame-border-radii, $border-radius)};
-  --sage-frame-direction: #{map-get($-sage-frame-directions, $direction)};
-  --sage-frame-gap: #{map-get($-sage-frame-spacings, $gap)};
-  --sage-frame-padding: #{map-get($-sage-frame-spacings, $padding)};
-  --sage-frame-width: #{map-get($-sage-frame-widths, $width)};
-}
-
-//
-// 4. Set up element and data attributes for implementing Frame
+// 3. Set up element and data attributes for implementing Frame
 //
 
 // Root element
-.sage-frame,
-[data-sage-frame] {
-  @include sage-frame();
+.sage-frame {
+  display: flex;
+
+  // Add default settings
+  &:not([class*="sage-frame--align-"]) {
+    align-items: map-get(map-get($-sage-frame-alignments, $-sage-frame-alignment), v);
+    justify-content: map-get(map-get($-sage-frame-alignments, $-sage-frame-alignment), h);
+  }
+
+  &:not([class*="sage-frame--direction-"]) {
+    flex-direction: map-get($-sage-frame-directions, $-sage-frame-direction);
+  }
+
+  &:not([class*="sage-frame--gap-"]) {
+    gap: map-get($-sage-frame-spacings, $-sage-frame-gap);
+  }
+
+  &:not([class*="sage-frame--width-"]) {
+    width: map-get($-sage-frame-widths, $-sage-frame-width);
+  }
 }
 
 //
-// 5. A la carte configurations
+// 4. A la carte configurations
 //
 
 @each $-key, $-val in $-sage-frame-alignments {
-  .sage-frame--align-#{$-key},
-  [data-sage-frame-align="#{$-key}"] {
+  .sage-frame--align-#{$-key} {
     // NOTE: The mappings are inverted by default because "vertical" orientation is default
     // and this makes for "top/bottom" apply to the horizontal axis and vice versa for "left/right"
-    --sage-frame-align-horizontal: #{map-get($-val, v)};
-    --sage-frame-align-vertical: #{map-get($-val, h)};
+    justify-content: #{map-get($-val, v)};
+    align-items: #{map-get($-val, h)};
 
-    &.sage-frame--direction-horizontal,
-    &[data-sage-frame-direction="horizontal"] {
-      --sage-frame-align-horizontal: #{map-get($-val, h)};
-      --sage-frame-align-vertical: #{map-get($-val, v)};
+    &.sage-frame--direction-horizontal {
+      justify-content: #{map-get($-val, h)};
+      align-items: #{map-get($-val, v)};
     }
   }
 }
 
+.sage-frame--background-custom {
+  background: var(--sage-frame-background, transparent);
+}
+
 @each $-color, $-sliders in $sage-colors {
   @each $-number, $-configs in $-sliders {
-    .sage-frame--background-#{"" + $-color}-#{$-number},
-    [data-sage-frame-background="#{'' + $-color}-#{$-number}"] {
-      --sage-frame-background: #{sage-color($-color, $-number)};
+    .sage-frame--background-#{"" + $-color}-#{$-number} {
+      background: #{sage-color($-color, $-number)};
     }
   }
 }
 
 @each $-key, $-val in $-sage-frame-borders {
-  .sage-frame--border-#{$-key},
-  [data-sage-frame-border="#{$-key}"] {
-    --sage-frame-border: #{$-val};
+  .sage-frame--border-#{$-key} {
+    border: #{$-val};
   }
 }
 
 @each $-key, $-val in $-sage-frame-border-radii {
-  .sage-frame--border-radius-#{$-key},
-  [data-sage-frame-border-radius="#{$-key}"] {
-    --sage-frame-border-radius: #{$-val};
+  .sage-frame--border-radius-#{$-key} {
+    border-radius: #{$-val};
   }
 }
 
 @each $-key, $-val in $-sage-frame-directions {
-  .sage-frame--direction-#{$-key},
-  [data-sage-frame-direction="#{$-key}"] {
-    --sage-frame-direction: #{$-val};
+  .sage-frame--direction-#{$-key} {
+    flex-direction: #{$-val};
+  }
+}
+
+@each $-key, $-val in $-sage-frame-wraps {
+  .sage-frame--wrap-#{$-key} {
+    flex-wrap: #{$-val};
   }
 }
 
 @each $-key, $-val in $-sage-frame-spacings {
-  .sage-frame--gap-#{$-key},
-  [data-sage-frame-gap="#{$-key}"] {
-    --sage-frame-gap: #{$-val};
+  .sage-frame--gap-#{$-key} {
+    gap: #{$-val};
   }
   
-  .sage-frame--padding-#{$-key},
-  [data-sage-frame-padding="#{$-key}"] {
-    --sage-frame-padding: #{$_val};
+  .sage-frame--padding-#{$-key} {
+    padding: #{$_val};
   }
 }
 
 @each $-key, $-val in $-sage-frame-widths {
-  @if ($-key != "custom") {
-    .sage-frame--width-#{$-key},
-    [data-sage-frame-width="#{$-key}"] {
-      --sage-frame-width: #{$-val};
-
+  .sage-frame--width-#{$-key} {
+    @if ($-key == "custom") {
+      width: var(--sage-frame-width, auto);
+    }
+    @else {
       @if ($-key == "flex") {
         flex: 1;
       }
+
+      width: #{$-val};
+    }
+  }
+}
+
+@each $-key, $-val in $-sage-frame-widths {
+  .sage-frame--max-width-#{$-key} {
+    @if ($-key != "custom") {
+      max-width: #{$-val};
+    }
+    @else {
+      max-width: var(--sage-frame-max-width, auto);
+    }
+  }
+}
+
+@each $-key, $-val in $-sage-frame-widths {
+  .sage-frame--min-width-#{$-key} {
+    @if ($-key != "custom") {
+      min-width: #{$-val};
+    }
+    @else {
+      min-width: var(--sage-frame-min-width, auto);
     }
   }
 }
