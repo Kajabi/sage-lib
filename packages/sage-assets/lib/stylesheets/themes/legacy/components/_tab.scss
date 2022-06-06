@@ -72,16 +72,10 @@ $-tab-color-disabled: map-get($sage-tab-colors, disabled);
     }
   }
 
-  .sage-tabs &:not(:last-child) {
-    margin-right: sage-spacing(sm);
-  }
-
   .sage-tabs--progressbar & {
     overflow: visible;
 
     &:not(:last-child) {
-      margin-right: rem(40px);
-
       &::before {
         position: absolute;
         z-index: 2;

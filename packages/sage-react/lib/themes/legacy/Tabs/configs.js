@@ -13,6 +13,13 @@ export const CHOICE_ICON_ALIGNMENTS = {
   START: 'start',
 };
 
+export const TAB_JUSTIFY_OPTIONS = {
+  DEFAULT: null,
+  CENTER: 'center',
+  END: 'end',
+  SPACE_BETWEEN: 'space-between',
+};
+
 export const TAB_LAYOUTS = {
   DEFAULT: 'default',
   STACKED: 'stacked',
