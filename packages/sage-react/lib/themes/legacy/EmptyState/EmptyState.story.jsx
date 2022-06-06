@@ -14,10 +14,10 @@ export default {
     })
   },
   args: {
-    children: (
-      <>
-        <Button>Lorem ipsum</Button>
-      </>
+    actions: (
+      <Button.Group gap={Button.Group.GAP_OPTIONS.SM}>
+        <Button>Add Email Campaign</Button>
+      </Button.Group>
     ),
     compact: false,
     icon: SageTokens.ICONS.GEAR,
@@ -45,7 +45,4 @@ PageScope.args = {
   title: 'Create your first Email Campaign',
   titleTag: 'h1',
   children: null,
-  actions: (
-    <Button>Add Email Campaign</Button>
-  )
 };
