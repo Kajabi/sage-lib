@@ -15,6 +15,7 @@ export default {
     }),
   },
   args: {
+    color: Alert.COLORS.DEFAULT,
     title: "You've used 80% of available pages",
     titleAddon: '(# of # pages)',
   },
@@ -28,6 +29,7 @@ DismissableAlert.args = {
   description: 'Body duis rhoncus neque, sed nulla sed quis fames. Eu eu ut at odio ultrices orci varius habitant. Tempor vulputate in nisl massa eget id.',
   color: Alert.COLORS.DEFAULT,
   dismissable: true,
+  onClickDismiss: () => console.log('clicked to dismiss'), // eslint-disable-line
   actions: (
     <>
       <Button
@@ -91,4 +93,4 @@ SmallAlert.args = {
   small: true,
 };
 
-export const Accessible = () => <Alert>Accessible button</Alert>;
+export const Accessible = () => <Alert color={Alert.COLORS.DEFAULT}>Accessible button</Alert>;

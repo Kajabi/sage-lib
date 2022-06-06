@@ -1,34 +1,38 @@
-Sage.alert = (function () {
+Sage.alert = (() => {
   // ==================================================
   // Variables
   // ==================================================
 
-  const SELECTOR_ALERT = ".sage-alert";
-  const SELECTOR_ALERT_CLOSE = ".sage-alert__close";
-
-  var alertCloseBtns = document.querySelectorAll(SELECTOR_ALERT_CLOSE);
+  const CLASSNAME_ALERT = "sage-alert";
+  const CLASSNAME_ALERT_CLOSE = "sage-alert__close";
+  const EVENT_DISMISS_CLICK = "sage.alert.dismiss";
 
   // ==================================================
   // Functions
   // ==================================================
 
-  alertCloseBtns.forEach(function (btn) {
-    addCloseHandler(btn);
-  });
+  const init = (el) => {
+    if (!el) return;
 
-  function init(el) {
-    if (el) addCloseHandler(el);
-  }
+    el.addEventListener("click", handleClicks);
+  };
 
-  function addCloseHandler(el) {
-    var alert = el.closest(SELECTOR_ALERT);
-    var closeBtn = alert.querySelector(SELECTOR_ALERT_CLOSE);
-    closeBtn.addEventListener("click", function () {
+  const unbind = (el) => {
+    el.removeEventListener("click", handleClicks);
+  };
+
+  const handleClicks = (event) => {
+    const { target } = event;
+    
+    if (target.closest(`.${CLASSNAME_ALERT_CLOSE}`)) {
+      const alert = target.closest(`.${CLASSNAME_ALERT}`);
       alert.style.display = "none";
-    });
-  }
+      alert.dispatchEvent(new CustomEvent(EVENT_DISMISS_CLICK, { bubbles: true, detail: { alert, event }}));
+    }
+  };
 
   return {
-    init: init,
+    init,
+    unbind,
   };
 })();
