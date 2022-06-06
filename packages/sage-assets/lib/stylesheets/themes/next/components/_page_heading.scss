@@ -112,6 +112,7 @@ $-page-heading-image-height-mobile: rem(120px);
   display: flex;
   grid-area: toolbar;
   flex-wrap: wrap;
+  gap: sage-spacing();
   margin-top: sage-spacing();
 
   // NOTE: Icon generation consolidated in `core/_icons.scss`
@@ -124,6 +125,7 @@ $-page-heading-image-height-mobile: rem(120px);
 .sage-page-heading__actions-inner {
   display: flex;
   align-items: center;
+  gap: sage-spacing();
 
   @media (max-width: sage-breakpoint(sm-max)) {
     flex-wrap: wrap;
