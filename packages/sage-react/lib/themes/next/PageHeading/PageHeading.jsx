@@ -59,7 +59,9 @@ export const PageHeading = ({
     )}
     {actionItems && (
       <div className="sage-page-heading__actions">
-        {actionItems.map((action) => <React.Fragment key={uuid()}>{action}</React.Fragment>)}
+        <div className="sage-page-heading__actions-inner">
+          {actionItems.map((action) => <React.Fragment key={uuid()}>{action}</React.Fragment>)}
+        </div>
       </div>
     )}
     {secondaryText && (
