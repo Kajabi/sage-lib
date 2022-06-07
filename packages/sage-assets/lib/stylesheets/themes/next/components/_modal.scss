@@ -64,6 +64,11 @@ $-modal-inner-size: sage-container(md);
     background-image: none;
     pointer-events: none;
   }
+
+  .sage-row {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .sage-modal__container {
