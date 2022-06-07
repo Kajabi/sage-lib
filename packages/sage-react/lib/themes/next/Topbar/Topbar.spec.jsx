@@ -5,7 +5,9 @@ import { render } from '@testing-library/react';
 import { Avatar } from '../Avatar';
 import { Button } from '../Button';
 import { Breadcrumbs } from '../Breadcrumbs';
+import { Icon } from '../Icon';
 import { Topbar } from './Topbar';
+import { SageTokens } from '../configs';
 
 describe('Sage Topbar', () => {
   it('renders content on left side when property is present on desktop', () => {
@@ -14,8 +16,16 @@ describe('Sage Topbar', () => {
         <Breadcrumbs
           items={[
             {
-              href: '#',
-              label: 'Back'
+              label: 'Page Title',
+              href: 'http://example.com/1'
+            },
+            {
+              label: 'Page Title',
+              href: 'http://example.com/2'
+            },
+            {
+              label: 'Page Title',
+              href: 'http://example.com/3'
             }
           ]}
         />
@@ -33,8 +43,9 @@ describe('Sage Topbar', () => {
         <Button
           color={Button.COLORS.PRIMARY}
           iconOnly={true}
+          icon={SageTokens.ICONS.MENU}
         >
-          Test Button
+          Menu
         </Button>
       ),
     };
@@ -47,14 +58,20 @@ describe('Sage Topbar', () => {
   it('renders content on the right side when property is present', () => {
     const props = {
       contentRight: (
-        <Avatar
-          size="48px"
-        />
+        <>
+          <Icon
+            icon={Icon.ICONS.SEARCH}
+          />
+          <Avatar
+            size="48px"
+          />
+        </>
       ),
     };
 
     render(<Topbar {...props} />);
 
     expect(document.querySelector('.sage-avatar')).not.toBeNull();
+    expect(document.querySelector('.sage-icon')).not.toBeNull();
   });
 });

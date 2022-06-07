@@ -19,7 +19,7 @@ export default {
     }),
   },
   args: {
-    className: 'sage-topbar--hide',
+    className: 'sage-topbar--hide', // For Storybook purposes only
     contentLeftDesktop: (
       <Breadcrumbs
         items={[
