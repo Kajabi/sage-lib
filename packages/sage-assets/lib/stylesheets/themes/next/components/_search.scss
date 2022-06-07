@@ -155,6 +155,7 @@ $-search-icon: "::before";
   .sage-panel-controls__toolbar & {
     padding-top: rem(10px);
     padding-bottom: rem(10px);
+    height: inherit;
   }
 
   .sage-search--contained &:focus,
