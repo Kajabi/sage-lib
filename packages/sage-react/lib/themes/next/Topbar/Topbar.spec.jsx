@@ -72,6 +72,6 @@ describe('Sage Topbar', () => {
     render(<Topbar {...props} />);
 
     expect(document.querySelector('.sage-avatar')).not.toBeNull();
-    expect(document.querySelector('.sage-icon')).not.toBeNull();
+    expect(document.querySelector('.sage-icon-search')).not.toBeNull();
   });
 });
