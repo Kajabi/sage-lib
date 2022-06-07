@@ -19,6 +19,7 @@ $-select-filled-top-padding: rem(4.4px);
 $-select-height: rem(40px);
 $-select-padding-x: sage-spacing(sm);
 $-select-padding-label: sage-spacing(2xs);
+$-select-arrow-icon-width: map-get($sage-icon-sizes, md);
 
 
 .sage-select {
@@ -69,7 +70,7 @@ $-select-padding-label: sage-spacing(2xs);
 
   position: relative;
   height: $-select-height;
-  padding: 0 $-select-padding-x 0;
+  padding: 0 ($-select-padding-x + $-select-arrow-icon-width + rem(4px)) 0 $-select-padding-x;
   color: transparent;
   outline: none;
   transition: border map-get($sage-transitions, default);

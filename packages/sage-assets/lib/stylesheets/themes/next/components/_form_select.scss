@@ -18,6 +18,7 @@ $-select-height: rem(40px);
 $-select-padding-x: sage-spacing(sm);
 $-select-margin-label: rem(6px);
 $-select-arrow-font-size: rem(16px);
+$-select-arrow-icon-width: map-get($sage-icon-sizes, md);
 $-select-arrow-position: calc(100% - #{$-select-height});
 $-select-arrow-position-inverse: calc(100% - #{$-select-arrow-font-size + $-select-margin-label});
 $-select-arrow-position-with-message: calc(100% - #{$-select-height + $-select-arrow-font-size});
@@ -66,7 +67,7 @@ $-select-arrow-position-inverse-with-message: calc(100% - #{$-select-height + $-
   grid-area: field;
   position: relative;
   height: $-select-height;
-  padding: 0 $-select-padding-x 0;
+  padding: 0 ($-select-padding-x + $-select-arrow-icon-width + rem(4px)) 0 $-select-padding-x;
   outline: none;
   transition: border map-get($sage-transitions, default);
   cursor: pointer;
