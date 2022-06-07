@@ -698,6 +698,12 @@ $-alert-colors: (
   @media screen and (min-width: sage-breakpoint(sm-min)) {
     flex-wrap: nowrap;
   }
+
+  .sage-empty-state & {
+    @media screen and (max-width: sage-breakpoint(lg-max)) {
+      justify-content: center;
+    }
+  }
 }
 
 .sage-btn-group--wrap {

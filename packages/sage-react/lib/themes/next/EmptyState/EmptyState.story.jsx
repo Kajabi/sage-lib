@@ -14,9 +14,11 @@ export default {
     })
   },
   args: {
-    children: (
+    actions: (
       <>
-        <Button>Lorem ipsum</Button>
+        <Button.Group gap={Button.Group.GAP_OPTIONS.SM}>
+          <Button>Lorem ipsum</Button>
+        </Button.Group>
       </>
     ),
     compact: false,

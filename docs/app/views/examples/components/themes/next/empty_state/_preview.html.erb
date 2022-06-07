@@ -41,17 +41,19 @@
     </p>
   <% end %>
   <% content_for :sage_empty_state_actions do %>
-    <%= sage_component SageButton, {
-      attributes: { href: "#" },
-      style: "primary",
-      value: "Create Email Campaigns",
-    } %>
-    <%= sage_component SageButton, {
-      attributes: { href: "#" },
-      style: "secondary",
-      subtle: true,
-      value: "Learn More",
-    } %>
+    <%= sage_component SageButtonGroup, { gap: :sm } do %>
+      <%= sage_component SageButton, {
+        attributes: { href: "#" },
+        style: "primary",
+        value: "Create Email Campaigns",
+      } %>
+      <%= sage_component SageButton, {
+        attributes: { href: "#" },
+        style: "secondary",
+        subtle: true,
+        value: "Learn More",
+      } %>
+    <% end %>
   <% end %>
 <% end %>
 
