@@ -60,6 +60,8 @@ export const Tabs = ({
           tabChoiceIconAlignment,
           tabChoiceType,
           subtext,
+          panelSpacing,
+          cardSpacing,
           ...rest
         }) => (
           <TabsItem
