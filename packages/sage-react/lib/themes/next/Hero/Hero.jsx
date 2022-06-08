@@ -25,6 +25,12 @@ export const Hero = ({
 
   const TitleTag = titleTag || 'h2';
 
+  const renderArtwork = (
+    <span className="sage-hero__artwork-image-container">
+      <img className="sage-hero__artwork-image" src={image.src} alt={image.alt || ''} />
+    </span>
+  );
+
   return (
     <article
       className={className}
@@ -58,12 +64,15 @@ export const Hero = ({
           )}
         </div>
       </div>
-      {/* TODO - hook up ctaAttributes */}
-      <a href="https://example.com" className="sage-hero__artwork">
-        <span className="sage-hero__artwork-image-container">
-          <img className="sage-hero__artwork-image" src={image.src} alt={image.alt || ''} />
-        </span>
-      </a>
+      {ctaAttributes ? (
+        <a className="sage-hero__artwork sage-hero__artwork--cta" {...ctaAttributes}>
+          {renderArtwork}
+        </a>
+      ) : (
+        <div className="sage-hero__artwork">
+          {renderArtwork}
+        </div>
+      )}
       {children}
     </article>
   );
