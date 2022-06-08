@@ -282,18 +282,6 @@ $-btn-loading-min-height: rem(36px);
     margin-top: sage-spacing(md);
   }
 
-  .sage-page-heading__actions & {
-    &:not(:last-child) {
-      margin-right: sage-spacing();
-    }
-  }
-
-  .sage-page-heading__toolbar & {
-    &:not(:last-child) {
-      margin-right: sage-spacing();
-    }
-  }
-
   .sage-sortable__item-actions & {
     &:not(:last-child) {
       margin-right: sage-spacing(sm);
