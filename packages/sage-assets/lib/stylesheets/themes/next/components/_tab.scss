@@ -88,7 +88,7 @@ $-tab-color-disabled: map-get($sage-tab-colors, disabled);
 
   .sage-tabs--progressbar & {
     overflow: visible;
-    gap: sage-spacing(sm);
+    gap: sage-grid-gap-options(sm);
 
     &:not(:last-child) {
       &::before {
