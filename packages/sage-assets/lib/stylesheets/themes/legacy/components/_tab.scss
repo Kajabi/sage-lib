@@ -74,12 +74,11 @@ $-tab-color-disabled: map-get($sage-tab-colors, disabled);
 
   .sage-tabs--progressbar & {
     overflow: visible;
+    gap: sage-spacing(sm);
 
     &:not(:last-child) {
       &::before {
-        position: absolute;
-        z-index: 2;
-        right: rem(-32px);
+        order: 2;
         color: sage-color(charcoal, 100);
 
         @include sage-icon-base(right-small, xl);
