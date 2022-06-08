@@ -105,3 +105,9 @@
     @include sage-icon-base(fullscreen, md);
   }
 }
+
+.sage-input {
+  .mce-tinymce {
+    grid-area: input;
+  }
+}
