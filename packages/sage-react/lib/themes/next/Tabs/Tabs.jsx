@@ -1,14 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import { SageTokens } from '../configs';
 import { TabsItem } from './TabsItem';
 import { TabsPane } from './TabsPane';
-import { TAB_STYLES, TAB_LAYOUTS, tabsItemsPropTypes } from './configs';
+import {
+  TAB_STYLES,
+  TAB_LAYOUTS,
+  TAB_JUSTIFY_OPTIONS,
+  tabsItemsPropTypes,
+} from './configs';
 
 export const Tabs = ({
   alignItemsCenter,
   className,
+  gap,
   initialActiveId,
+  justify,
   onClickTab,
   onChangeTabsHook,
   panesClassName,
@@ -29,7 +37,9 @@ export const Tabs = ({
       'sage-tabs--align-items-center': tabStyle === TAB_STYLES.CHOICE && alignItemsCenter,
       'sage-tabs--choice': tabStyle === TAB_STYLES.CHOICE,
       [`sage-tabs--layout-${tabLayout}`]: tabLayout,
+      [`sage-tabs--justify-${justify}`]: justify,
       'sage-tabs--with-background': withBackground,
+      [`sage-grid-gap-${gap}`]: gap,
     },
   );
 
@@ -106,13 +116,16 @@ export const Tabs = ({
 Tabs.Item = TabsItem;
 Tabs.Pane = TabsPane;
 Tabs.itemsPropTypes = tabsItemsPropTypes;
+Tabs.JUSTIFY_OPTIONS = TAB_JUSTIFY_OPTIONS;
 Tabs.LAYOUTS = TAB_LAYOUTS;
 Tabs.STYLES = TAB_STYLES;
 
 Tabs.defaultProps = {
   alignItemsCenter: false,
   className: '',
+  gap: SageTokens.GRID_GAP_OPTIONS.SM,
   initialActiveId: null,
+  justify: Tabs.JUSTIFY_OPTIONS.DEFAULT,
   onChangeTabsHook: null,
   onClickTab: null,
   panesClassName: null,
@@ -126,7 +139,9 @@ Tabs.defaultProps = {
 Tabs.propTypes = {
   alignItemsCenter: PropTypes.bool,
   className: PropTypes.string,
+  gap: PropTypes.oneOf(Object.values(SageTokens.GRID_GAP_OPTIONS.SM)),
   initialActiveId: PropTypes.string,
+  justify: PropTypes.oneOf(Object.values(Tabs.JUSTIFY_OPTIONS)),
   onChangeTabsHook: PropTypes.func,
   onClickTab: PropTypes.func,
   panesClassName: PropTypes.string,

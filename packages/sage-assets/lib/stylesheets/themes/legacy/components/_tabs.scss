@@ -26,6 +26,18 @@
   }
 }
 
+.sage-tabs--justify-center {
+  justify-content: center;
+}
+
+.sage-tabs--justify-end {
+  justify-content: flex-end;
+}
+
+.sage-tabs--justify-space-between {
+  justify-content: space-between;
+}
+
 .sage-tabs--with-background {
   padding-top: sage-spacing(sm);
   padding-left: sage-spacing(xs);
@@ -71,7 +83,6 @@
 
 .sage-tabs__list-item {
   position: relative;
-  margin-right: sage-spacing(sm);
 
   .sage-tab--active {
     background-color: sage-color(white);
