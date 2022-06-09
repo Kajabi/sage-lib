@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.67.4](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.67.3...@kajabi/sage@4.67.4) (2022-06-09)
+
+
+### Bug Fixes
+
+* **empty-state:** button alignment ([be0010f](https://github.com/Kajabi/sage-lib/commit/be0010f484c7a1f839f5c53f540ab6de8f354204))
+
+
+
+
+
 ## [4.67.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.67.2...@kajabi/sage@4.67.3) (2022-06-03)
 
 

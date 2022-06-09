@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.98.4](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.98.3...@kajabi/sage-react@0.98.4) (2022-06-09)
+
+
+### Bug Fixes
+
+* **empty-state:** update to react ([9300c62](https://github.com/Kajabi/sage-lib/commit/9300c6286519cdb147090ca78e38e92034055eea))
+* **empty-state:** updates to storybook demo ([6f1e08d](https://github.com/Kajabi/sage-lib/commit/6f1e08d5ab03373a4d94c9781fe2fcbdcc16892f))
+
+
+
+
+
 ## [0.98.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.98.2...@kajabi/sage-react@0.98.3) (2022-06-03)
 
 

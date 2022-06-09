@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.84.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.84.0...@kajabi/sage-assets@0.84.1) (2022-06-09)
+
+
+### Bug Fixes
+
+* **empty-state:** button alignment ([be0010f](https://github.com/Kajabi/sage-lib/commit/be0010f484c7a1f839f5c53f540ab6de8f354204))
+* **panel-controls:** linter ([3da18da](https://github.com/Kajabi/sage-lib/commit/3da18da3ad79d10bc7ec11b523fd981a8547dc02))
+* **panel-controls:** resolve height issue in kajabi-products ([d89d189](https://github.com/Kajabi/sage-lib/commit/d89d1893a7d1d60aa0d0ec84c51c587263b3fc9a))
+* **tinymce:** add grid-area property ([1ca352a](https://github.com/Kajabi/sage-lib/commit/1ca352aaf75e12e412d1f14fe576f6e0f9049d14))
+
+
+
+
+
 # [0.84.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.83.2...@kajabi/sage-assets@0.84.0) (2022-06-03)
 
 
