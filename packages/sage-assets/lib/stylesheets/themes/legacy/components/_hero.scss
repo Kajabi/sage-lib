@@ -98,11 +98,9 @@ $-hero-play-icon-background-color-hover: rgba(sage-color(white, 100), 1);
     height: 0;
     padding-top: $-hero-mobile-aspect-ratio;
   }
+}
 
-  &:hover::after {
-    background-color: $-hero-play-icon-background-color-hover;
-  }
-
+.sage-hero__artwork--cta {
   &:focus {
     border: 3px solid sage-color(primary);
   }
@@ -125,29 +123,35 @@ $-hero-play-icon-background-color-hover: rgba(sage-color(white, 100), 1);
   width: 100%;
   height: 100%;
 
-  &::before {
-    @include sage-icon-base(play);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: sage-z-index(default, 1);
-    align-items: center;
-    width: $-hero-icon-size;
-    font-size: $-hero-icon-size;
-    color: sage-color(primary, 300);
-  }
+  .sage-hero__artwork--cta & {
+    &::before {
+      @include sage-icon-base(play);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: sage-z-index(default, 1);
+      align-items: center;
+      width: $-hero-icon-size;
+      font-size: $-hero-icon-size;
+      color: sage-color(primary, 300);
+    }
 
-  &::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: $-hero-artwork-size;
-    height: $-hero-artwork-size;
-    border-radius: 50%;
-    background-color: $-hero-play-icon-background-color;
-    transition: background-color 0.2s ease;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: $-hero-artwork-size;
+      height: $-hero-artwork-size;
+      border-radius: 50%;
+      background-color: $-hero-play-icon-background-color;
+      transition: background-color 0.2s ease;
+    }
+
+    &:hover::after {
+      background-color: $-hero-play-icon-background-color-hover;
+    }
   }
 }

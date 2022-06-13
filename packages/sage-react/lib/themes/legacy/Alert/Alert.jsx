@@ -13,9 +13,10 @@ export const Alert = ({
   description,
   dismissable,
   icon,
+  onDismiss,
+  small,
   title,
   titleAddon,
-  small,
   ...rest
 }) => {
   const [selfDismissed, setSelfDismissed] = useState(false);
@@ -29,8 +30,9 @@ export const Alert = ({
     }
   );
 
-  const onClickDismiss = () => {
+  const handleDismiss = () => {
     setSelfDismissed(true);
+    if (onDismiss) onDismiss();
   };
 
   const renderIcon = () => {
@@ -95,7 +97,7 @@ export const Alert = ({
             small={true}
             subtle={true}
             value="Close"
-            onClick={onClickDismiss}
+            onClick={handleDismiss}
             aria-label="Close Alert"
           />
         </div>
@@ -112,9 +114,10 @@ Alert.defaultProps = {
   description: null,
   dismissable: false,
   icon: null,
+  onDismiss: null,
+  small: false,
   title: null,
   titleAddon: null,
-  small: false,
 };
 
 Alert.propTypes = {
@@ -124,7 +127,8 @@ Alert.propTypes = {
   description: PropTypes.string,
   dismissable: PropTypes.bool,
   icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),
+  onDismiss: PropTypes.func,
+  small: PropTypes.bool,
   title: PropTypes.string,
   titleAddon: PropTypes.string,
-  small: PropTypes.bool,
 };

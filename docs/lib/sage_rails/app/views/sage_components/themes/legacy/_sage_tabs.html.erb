@@ -1,3 +1,6 @@
+<%
+gap = component.gap.present? ? component.gap : :sm
+%>
 <nav
   <%= "data-js-tabs=#{component.id}" if !component.navigational && component.id.present? %>
   <%= "data-js-tabs-permalink=#{component.permalink}" if component.permalink.present? -%>
@@ -7,6 +10,8 @@
     <%= "sage-tabs--progressbar" if component.progressbar.present? && component.progressbar == true %>
     <%= "sage-tabs--align-items-center" if component.align_items_center.present? && component.align_items_center == true %>
     <%= "sage-tabs--choice" if component.style.present? && component.style === "choice" %>
+    <%= "sage-tabs--justify-#{component.justify}" if component.justify.present? %>
+    <%= "sage-grid-gap-#{gap}" if gap %>
     <%= component.generated_css_classes %>
   "
   role="tablist"

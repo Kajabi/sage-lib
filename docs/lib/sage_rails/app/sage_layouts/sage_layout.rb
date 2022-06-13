@@ -11,6 +11,7 @@ class SageLayout
     spacer: [:optional, SageSchemas::SPACER],
     css_classes: [:optional, NilClass, String],
     content: [:optional, String],
+    styles: [:optional, Hash],
   }
 
   def generated_css_classes
@@ -19,6 +20,10 @@ class SageLayout
 
   def generated_html_attributes
     @generated_html_attributes ||= ""
+  end
+
+  def generated_styles
+    @generated_styles ||= ""
   end
 
   def css_classes
@@ -67,6 +72,17 @@ class SageLayout
     @html_attributes = html_attributes_hash
     html_attributes_hash.each do |key, value|
       generated_html_attributes << " #{key}=\"#{value.to_s}\""
+    end
+  end
+
+  def styles
+    @styles ||= {}
+  end
+
+  def styles=(styles_hash)
+    @styles = styles_hash
+    styles_hash.each do |key, value|
+      generated_styles << " #{key}: #{value.to_s}; "
     end
   end
 

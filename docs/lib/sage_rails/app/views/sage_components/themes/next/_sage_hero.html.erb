@@ -1,6 +1,17 @@
 <%
   html_tag = component.title_tag ? component.title_tag : "h2"
   size = component.size || "large"
+
+  image_options = {
+    alt: component.alt_text,
+    class: "sage-hero__artwork-image"
+  }.merge((component.alt_text.blank? ? { "aria-hidden": true } : {}))
+
+  artwork = %(
+    <span class="sage-hero__artwork-image-container">
+      #{image_tag(component.image, image_options)}
+    </span>
+  ).html_safe
 %>
 
 <article
@@ -27,18 +38,18 @@
       <%= component.button.html_safe %>
     <% end %>
   </div>
-  <a
-    <% component.cta_attributes.each do |key, value| %>
-      <%= "#{key}='#{value}'".html_safe %>
-    <% end if component.cta_attributes&.is_a?(Hash) %>
-    class="sage-hero__artwork"
-  >
-    <span class="sage-hero__artwork-image-container">
-      <% image_options = {
-        alt: component.alt_text,
-        class: "sage-hero__artwork-image"
-      }.merge((component.alt_text.blank? ? { "aria-hidden": true } : {})) %>
-      <%= image_tag component.image, image_options %>
-    </span>
-  </a>
+  <% if component.cta_attributes.present? %>
+    <a
+      <% component.cta_attributes.each do |key, value| %>
+        <%= "#{key}='#{value}'".html_safe %>
+      <% end if component.cta_attributes&.is_a?(Hash) %>
+      class="sage-hero__artwork sage-hero__artwork--cta"
+    >
+      <%= artwork %>
+    </a>
+  <% else %>
+    <div class="sage-hero__artwork">
+      <%= artwork %>
+    </div>
+  <% end %>
 </article>

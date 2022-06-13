@@ -6,6 +6,7 @@
     <%= "sage-alert--small-dismissable" if component.small && component.dismissable %>
     <%= component.generated_css_classes %>
   "
+  data-js-alert="true"
   <%= component.generated_html_attributes.html_safe %>
 >
   <% if component.icon_name %>
@@ -25,31 +26,31 @@
     <% end %>
   </div>
   <% if component.primary_action or component.secondary_actions or content_for? :sage_alert_actions %>
-      <div class="sage-alert__actions">
-        <% if component.primary_action %>
-          <%= sage_component SageButton, {
-            value: component.primary_action[:value],
-            test_id: component.primary_action[:test_id],
-            style: "primary",
-            css_classes: "sage-alert__primary-action sage-alert__primary-action--#{component.color}",
-            attributes: component.primary_action[:attributes]
+    <div class="sage-alert__actions">
+      <% if component.primary_action %>
+        <%= sage_component SageButton, {
+          value: component.primary_action[:value],
+          test_id: component.primary_action[:test_id],
+          style: "primary",
+          css_classes: "sage-alert__primary-action sage-alert__primary-action--#{component.color}",
+          attributes: component.primary_action[:attributes]
+        } %>
+      <% end %>
+      <% if component.secondary_actions %>
+        <% component.secondary_actions.each do | secondary_action | %>
+          <%= sage_component SageLink, {
+            label: secondary_action[:value],
+            show_label: true,
+            style: "secondary",
+            url: secondary_action[:url]
           } %>
         <% end %>
-        <% if component.secondary_actions %>
-          <% component.secondary_actions.each do | secondary_action | %>
-            <%= sage_component SageLink, {
-              label: secondary_action[:value],
-              show_label: true,
-              style: "secondary",
-              url: secondary_action[:url]
-            } %>
-          <% end %>
-        <% end %>
-        <% if content_for? :sage_alert_actions %>
-          <%= content_for :sage_alert_actions %>
-        <% end %>
-      </div>
-    <% end %>
+      <% end %>
+      <% if content_for? :sage_alert_actions %>
+        <%= content_for :sage_alert_actions %>
+      <% end %>
+    </div>
+  <% end %>
   <% if component.dismissable %>
     <div class="sage-alert__close">
       <%= sage_component SageButton, {
