@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.22.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.21.3...@kajabi/sage-system@0.22.0) (2022-06-13)
+
+
+### Features
+
+* **alert:** add custom event dispatch on Rails alert dismiss click ([9cb9abd](https://github.com/Kajabi/sage-lib/commit/9cb9abde03c949156f6fac4cc001925efb9cb964))
+
+
+
+
+
 ## [0.21.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.21.2...@kajabi/sage-system@0.21.3) (2022-06-03)
 
 

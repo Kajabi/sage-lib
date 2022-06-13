@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.85.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.84.1...@kajabi/sage-assets@0.85.0) (2022-06-13)
+
+
+### Features
+
+* **frame:** add frame wrap options ([cdcefbb](https://github.com/Kajabi/sage-lib/commit/cdcefbb88c63e1b9de2bdf43c0e53d240b0a129d))
+* **frame:** add min-width and max-width options in Rails ([21efa05](https://github.com/Kajabi/sage-lib/commit/21efa0521323b6493479e17fdd3dec7ed32a4a3a))
+* **frame:** sync up Next ([c34c0b8](https://github.com/Kajabi/sage-lib/commit/c34c0b86e0bad5f17c192f348cd9b83d108acecd))
+* **frame:** tidy up setup ([2de8b01](https://github.com/Kajabi/sage-lib/commit/2de8b01a3057854efdcd48e50db3d8ead054e06a))
+* **hero:** make cta attributes optionally generate interactive button ([ae20fd7](https://github.com/Kajabi/sage-lib/commit/ae20fd755a6a3c849da4a83e7bf583865aa48f6b))
+* **page-heading:** implement gap to separate items in toolbar and actions ([85b7a89](https://github.com/Kajabi/sage-lib/commit/85b7a8954037310b6fb171d0108137f412f9da34))
+* **select:** ensure arrow does not overlap text ([bfe660f](https://github.com/Kajabi/sage-lib/commit/bfe660f76a6ea5709ad017e89a247624db1a56f8))
+* **tab:** ensure progressbar tab displays correctly with gap settings ([de9163c](https://github.com/Kajabi/sage-lib/commit/de9163c0cf7f9c5a87e8c547fb1af8612c042a5f))
+* **tab:** use grid-gap token for gap in tab ([099c2c1](https://github.com/Kajabi/sage-lib/commit/099c2c12791e6f8de76435aa2ff6672ec5e9f78e))
+* **tabs:** add gap and justify options to tabs ([19f5f58](https://github.com/Kajabi/sage-lib/commit/19f5f589cacc09d8af1462a2ab3109df16f77b46))
+
+
+
+
+
 ## [0.84.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.84.0...@kajabi/sage-assets@0.84.1) (2022-06-09)
 
 

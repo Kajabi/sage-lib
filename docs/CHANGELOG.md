@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.68.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.67.4...@kajabi/sage@4.68.0) (2022-06-13)
+
+
+### Features
+
+* **alert:** add custom event dispatch on Rails alert dismiss click ([9cb9abd](https://github.com/Kajabi/sage-lib/commit/9cb9abde03c949156f6fac4cc001925efb9cb964))
+* **frame:** add frame wrap options ([cdcefbb](https://github.com/Kajabi/sage-lib/commit/cdcefbb88c63e1b9de2bdf43c0e53d240b0a129d))
+* **frame:** add min-width and max-width options in Rails ([21efa05](https://github.com/Kajabi/sage-lib/commit/21efa0521323b6493479e17fdd3dec7ed32a4a3a))
+* **frame:** tidy up setup ([2de8b01](https://github.com/Kajabi/sage-lib/commit/2de8b01a3057854efdcd48e50db3d8ead054e06a))
+* **hero:** make cta attributes optionally generate interactive button ([ae20fd7](https://github.com/Kajabi/sage-lib/commit/ae20fd755a6a3c849da4a83e7bf583865aa48f6b))
+* **layout:** add ability to layer in custom styles in layout tools and apply in context in frame ([4503ecb](https://github.com/Kajabi/sage-lib/commit/4503ecb0f64c02a9a469b72349e399d6126900d9))
+* **tabs:** add gap and justify options to tabs ([19f5f58](https://github.com/Kajabi/sage-lib/commit/19f5f589cacc09d8af1462a2ab3109df16f77b46))
+
+
+
+
+
 ## [4.67.4](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.67.3...@kajabi/sage@4.67.4) (2022-06-09)
 
 

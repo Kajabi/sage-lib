@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.99.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.98.4...@kajabi/sage-react@0.99.0) (2022-06-13)
+
+
+### Bug Fixes
+
+* **page-heading:** add `actions-inner` wrapper in React version ([c925371](https://github.com/Kajabi/sage-lib/commit/c925371f545211bf1d47eaf458d71179e2a2c29a))
+* **tabs:** name spacing props to exclude them from ...rest in Items map ([68cac9b](https://github.com/Kajabi/sage-lib/commit/68cac9b2bbece3830cc6e5b38f0bc2cd8c83efbf))
+
+
+### Features
+
+* **alert:** add React callback prop for dismiss click ([ddfbeca](https://github.com/Kajabi/sage-lib/commit/ddfbecaf2508f15c65819d3d966c3e748a246b05))
+* **frame:** clearn unnecessary defaults in react versions ([c69171c](https://github.com/Kajabi/sage-lib/commit/c69171ca59e43b98764c8dbe12c6f47b108b6a5e))
+* **frame:** sync react versions ([9e4797a](https://github.com/Kajabi/sage-lib/commit/9e4797a7b191c1045fd950a01700ed78a19c8679))
+* **hero:** make cta attributes optionally generate interactive button ([ae20fd7](https://github.com/Kajabi/sage-lib/commit/ae20fd755a6a3c849da4a83e7bf583865aa48f6b))
+* **tabs:** add gap and justify options to tabs ([19f5f58](https://github.com/Kajabi/sage-lib/commit/19f5f589cacc09d8af1462a2ab3109df16f77b46))
+
+
+
+
+
 ## [0.98.4](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.98.3...@kajabi/sage-react@0.98.4) (2022-06-09)
 
 
