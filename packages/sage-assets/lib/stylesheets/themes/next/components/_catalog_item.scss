@@ -67,18 +67,18 @@ $-catalogue-item-image-height-mobile: rem(120px);
     }
   }
 
-  // @supports not (-webkit-appearance:none) {
-    &.sage-catalog-item--icon {
+  @include supports-has() {
+    &:has(.sage-catalog-item__icon) {
       grid-template-columns: min-content 1fr min-content;
       grid-template-rows: auto auto auto;
       grid-template-areas:
         "icon title aside"
         "icon content aside";
     }
-  // }
+  }
 
-  @supports (-webkit-appearance:none) {
-    &:has(.sage-catalog-item__icon) {
+  @include supports-has($value: false) {
+    &.sage-catalog-item--icon {
       grid-template-columns: min-content 1fr min-content;
       grid-template-rows: auto auto auto;
       grid-template-areas:

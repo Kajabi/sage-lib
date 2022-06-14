@@ -43,7 +43,7 @@
 
 ///
 /// Generates cross-browser icon rotations
-/// 
+///
 /// @param {number} $degrees Degrees value
 /// @param {number} $rotation Rotation value
 ///
@@ -54,7 +54,7 @@
 
 ///
 /// Generates cross-browser icon flip in either axis
-/// 
+///
 /// @param {number} $horiz Whether or not to flip on the horizontal axis
 /// @param {number} $vert Whether or not to flip on the vertical axis
 /// @param {number} $rotation Rotation value
@@ -184,6 +184,22 @@
 @mixin target-safari-13-and-below {
   @supports (-webkit-marquee-repetition:infinite) and (object-fit:fill) {
     @supports (-webkit-appearance:none) {
+      @content;
+    }
+  }
+}
+
+@mixin supports-has($value: true) {
+  @if $value {
+    /* tests for browsers that support the :has pseudo selector */
+    @supports selector(a) {
+      @content;
+    }
+  }
+
+  @else {
+    // tests for browsers that do not support the :has pseudo selector
+    @supports (contain: paint) {
       @content;
     }
   }
