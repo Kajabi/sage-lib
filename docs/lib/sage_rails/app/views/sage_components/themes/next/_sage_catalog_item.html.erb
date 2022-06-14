@@ -2,6 +2,7 @@
 <% link_tag = is_loading ? "div" : "a" %>
 <li class="
   sage-catalog-item
+  <%# UXD TODO - remove .sage-catalog-item--loading, .sage-catalog-item--img, .sage-catalog-item--icon when we move forward with :has integration %>
   <%= "sage-catalog-item--loading" if is_loading %>
   <%= "sage-catalog-item--img" if component.image.present? %>
   <%= "sage-catalog-item--icon" if component.icon.present? %>

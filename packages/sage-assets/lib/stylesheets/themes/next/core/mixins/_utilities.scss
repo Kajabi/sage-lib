@@ -191,7 +191,7 @@
 
 @mixin supports-has($value: true) {
   @if $value {
-    /* tests for browsers that support the :has pseudo selector */
+    /* tests for browsers that support the :has pseudo selector. */
     @supports selector(a) {
       @content;
     }
