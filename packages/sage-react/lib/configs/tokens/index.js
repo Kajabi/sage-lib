@@ -1,11 +1,19 @@
-import { TOKENS_COLORS, TOKENS_COLOR_PALETTE, TOKENS_COLOR_SLIDERS } from './colors';
+import {
+  TOKENS_COLORS,
+  TOKENS_COLOR_PALETTE,
+  TOKENS_COLOR_SLIDERS,
+} from './colors';
 import { TOKENS_GRID_GAP_OPTIONS } from './grid_gap_options';
 import { TOKENS_GRID_TEMPLATES } from './grid-templates';
 import { TOKENS_ICONS } from './icons';
 import { TOKENS_RECHARTS } from './recharts';
 import { TOKENS_SPACERS } from './spacers';
 import { TOKENS_Z_INDEXES } from './z-indexes';
-import { SAGE_BREAKPOINT_QUERIES, SAGE_BREAKPOINT_VALUES } from './breakpoints';
+import {
+  SAGE_BREAKPOINT_QUERIES,
+  SAGE_BREAKPOINT_VALUES,
+} from './breakpoints';
+import { SAGE_RESPONSIVE_RANGES } from './responsive';
 
 export const SageTokens = {
   BREAKPOINTS: SAGE_BREAKPOINT_VALUES,
@@ -17,6 +25,7 @@ export const SageTokens = {
   GRID_TEMPLATES: TOKENS_GRID_TEMPLATES,
   ICONS: TOKENS_ICONS,
   RECHARTS: TOKENS_RECHARTS,
+  RESPONSIVE_RANGES: SAGE_RESPONSIVE_RANGES,
   SPACERS: TOKENS_SPACERS,
   Z_INDEXES: TOKENS_Z_INDEXES,
 };

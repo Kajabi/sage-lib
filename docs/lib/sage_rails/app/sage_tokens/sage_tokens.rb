@@ -435,4 +435,41 @@ module SageTokens
     "wrap",
   ]
 
+  # Keep in sync with `packages/sage-assets/lib/stylesheets/tokens/_breakpoints.scss`
+  RESPONSIVE_RANGES = [
+    "default",
+    "xs",
+    "xs_only",
+    "xs_to_sm",
+    "xs_to_md",
+    "xs_to_lg",
+    "xs_to_xl",
+    "xs_to_xxl",
+    "before_sm",
+    "sm",
+    "sm_only",
+    "sm_to_md",
+    "sm_to_lg",
+    "sm_to_xl",
+    "sm_to_xxl",
+    "before_md",
+    "md",
+    "md_only",
+    "md_to_lg",
+    "md_to_xl",
+    "md_to_xxl",
+    "before_lg",
+    "lg",
+    "lg_only",
+    "lg_to_xl",
+    "lg_to_xxl",
+    "before_xl",
+    "xl",
+    "xl_only",
+    "xl_to_xxl",
+    "before_xxl",
+    "xxl",
+    "xxl_only",
+  ]
+
 end
