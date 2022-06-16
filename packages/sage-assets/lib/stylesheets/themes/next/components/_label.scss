@@ -10,6 +10,14 @@ $-label-interactive-icon-size-decor: rem(28px);
 $-label-padding: 0 sage-spacing(xs);
 $-label-border-radius: sage-border(radius-x-large);
 $-label-inset-border: 0 0 0 1px inset;
+$-label-statuses: (
+  danger,
+  draft,
+  info,
+  locked,
+  published,
+  warning,
+);
 
 
 .sage-label {
@@ -59,7 +67,7 @@ $-label-inset-border: 0 0 0 1px inset;
   pointer-events: none;
 }
 
-@each $-color-name, $-color-settings in $sage-color-combos {
+@each $-color-name in $-label-statuses {
   $-color-modifier: ".sage-label--#{$-color-name}";
 
   #{$-color-modifier} .sage-label__value {
