@@ -41,7 +41,7 @@ $sage-breakpoints: (
 ///     `sage-breakpoint-range(xs-to-lg)` is the same as `sage-breakpoint-range(before-lg)`
 ///
 $sage-breakpoint-ranges: (
-  all: ( min: false, max: false ), // useful for loops for an all-inclusive/default output
+  default: ( min: false, max: false ), // useful for loops for an all-inclusive/default output
   xs: ( min: false, max: false ), // redundant
   xs-only: ( min: false, max: xs-max ),
   xs-to-sm: ( min: false, max: xs-max ), // redundant: use `before-sm`
