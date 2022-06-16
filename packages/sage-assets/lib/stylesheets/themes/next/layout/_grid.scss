@@ -29,6 +29,19 @@ $-grid-breakpoint-xl: sage-breakpoint(xl-min);
 
 .sage-row {
   @include sage-row();
+
+  .sage-modal & {
+    margin-left: 0;
+    margin-right: 0;
+  
+    >:first-child {
+      padding-left: 0;
+    }
+
+    >:last-child {
+      padding-right: 0;
+    }
+  }
 }
 
 .sage-row--stage {
