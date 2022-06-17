@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.69.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.68.0...@kajabi/sage@4.69.0) (2022-06-17)
+
+
+### Bug Fixes
+
+* **icon:** adds sage-icon class to component ([d918bdf](https://github.com/Kajabi/sage-lib/commit/d918bdf68a6c1211ef96ef7ead6f3997590b4e88))
+
+
+### Features
+
+* **topbar:** generates new component in Rails ([ca625ec](https://github.com/Kajabi/sage-lib/commit/ca625ecaae2e9969abcfde97137a42cc9b87e370))
+
+
+
+
+
 # [4.68.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.67.4...@kajabi/sage@4.68.0) (2022-06-13)
 
 

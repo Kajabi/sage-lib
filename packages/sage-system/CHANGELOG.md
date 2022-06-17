@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.22.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.22.0...@kajabi/sage-system@0.22.1) (2022-06-17)
+
+
+### Bug Fixes
+
+* **modal:** add class to body to remove background scrolling ([8d1456a](https://github.com/Kajabi/sage-lib/commit/8d1456a92c80fead8b25a543aa40853897611fa6))
+* **modal:** remove scrolling background when open ([5ce33ee](https://github.com/Kajabi/sage-lib/commit/5ce33ee36e49d8a21ed5586d45ed7a5ea5678e90))
+
+
+
+
+
 # [0.22.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.21.3...@kajabi/sage-system@0.22.0) (2022-06-13)
 
 

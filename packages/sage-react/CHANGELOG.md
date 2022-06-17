@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.100.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.99.0...@kajabi/sage-react@0.100.0) (2022-06-17)
+
+
+### Bug Fixes
+
+* **icon:** adds sage-icon class to component ([d918bdf](https://github.com/Kajabi/sage-lib/commit/d918bdf68a6c1211ef96ef7ead6f3997590b4e88))
+* **modal:** remove scrolling background when open ([5ce33ee](https://github.com/Kajabi/sage-lib/commit/5ce33ee36e49d8a21ed5586d45ed7a5ea5678e90))
+
+
+### Features
+
+* **topbar:** adds JS test ([660cc34](https://github.com/Kajabi/sage-lib/commit/660cc34182e003a4a5e12e316e64581f4cbfc80d))
+* **topbar:** adds React component ([7df41f6](https://github.com/Kajabi/sage-lib/commit/7df41f6fe2e88a0f158538b473a35d902803f67b))
+
+
+
+
+
 # [0.99.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.98.4...@kajabi/sage-react@0.99.0) (2022-06-13)
 
 

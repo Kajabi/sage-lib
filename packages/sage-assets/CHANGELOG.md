@@ -3,6 +3,32 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.86.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.85.0...@kajabi/sage-assets@0.86.0) (2022-06-17)
+
+
+### Bug Fixes
+
+* **border:** typo ([8a3c7d6](https://github.com/Kajabi/sage-lib/commit/8a3c7d63633a92db7b780eabdcb7ad037ce107b3))
+* **border:** update default border color grey 400 - grey 300 ([dc17938](https://github.com/Kajabi/sage-lib/commit/dc179387a792bf7833fe35ec7bcdd72a49a85c05))
+* **heading-element:** update color value ([ea7e864](https://github.com/Kajabi/sage-lib/commit/ea7e8642c03c436f4199b1f2a1bbeaa2f99d3e8c))
+* **heading-element:** updates per phil review ([76af607](https://github.com/Kajabi/sage-lib/commit/76af6075e6a92157cb9dd146ddede85167bb85ec))
+* **modal:** add class to body to remove background scrolling ([8d1456a](https://github.com/Kajabi/sage-lib/commit/8d1456a92c80fead8b25a543aa40853897611fa6))
+* **modal:** remove scrolling background when open ([5ce33ee](https://github.com/Kajabi/sage-lib/commit/5ce33ee36e49d8a21ed5586d45ed7a5ea5678e90))
+
+
+### Features
+
+* **topbar:** generates new component in Rails ([ca625ec](https://github.com/Kajabi/sage-lib/commit/ca625ecaae2e9969abcfde97137a42cc9b87e370))
+
+
+### Reverts
+
+* Revert "fix(heading-element): updates per phil review" ([43fc4d8](https://github.com/Kajabi/sage-lib/commit/43fc4d88075af8f9cf587a9a070116ab382e604b))
+
+
+
+
+
 # [0.85.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.84.1...@kajabi/sage-assets@0.85.0) (2022-06-13)
 
 
