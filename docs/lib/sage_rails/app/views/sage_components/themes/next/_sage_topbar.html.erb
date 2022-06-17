@@ -1,0 +1,17 @@
+<div
+  class="sage-topbar <%= component.generated_css_classes %>"
+  <%= component.generated_html_attributes.html_safe %>
+>
+  <div class="sage-topbar__left">
+    <div class="sage-topbar__left-mobile">
+      <%= content_for :sage_topbar_content_left_mobile %>
+    </div>
+    <div class="sage-topbar__left-desktop">
+      <%= content_for :sage_topbar_content_left %>
+    </div>
+  </div>
+
+  <div class="sage-topbar__right">
+    <%= content_for :sage_topbar_content_right %>
+  </div>
+</div>

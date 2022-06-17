@@ -22,3 +22,7 @@ $-banner-height-offset: map-get($sage-banner-heights, default);
   height: 60px;
   margin-bottom: sage-spacing();
 }
+
+.sage-page--has-open-modal {
+  overflow-y: hidden;
+}

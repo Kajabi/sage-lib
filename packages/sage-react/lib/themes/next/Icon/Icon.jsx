@@ -19,6 +19,7 @@ export const Icon = ({
 }) => {
   const classNames = classnames(
     className,
+    'sage-icon',
     {
       [`sage-icon-${icon}`]: icon && (!size || size === ICON_SIZES.MD),
       [`sage-icon-${icon}-${size}`]: icon && size,
