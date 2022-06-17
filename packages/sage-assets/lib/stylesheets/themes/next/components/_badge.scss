@@ -11,7 +11,14 @@ $-badge-interactive-icon-size-decor: rem(28px);
 $-badge-padding: 0 rem(10px) 0 sage-spacing(xs);
 $-badge-border-radius: sage-border(radius-x-large);
 $-badge-inset-border: 0 0 0 1px inset;
-
+$-badge-statuses: (
+  danger,
+  draft,
+  info,
+  locked,
+  published,
+  warning,
+);
 
 .sage-badge {
   display: inline-flex;
@@ -67,7 +74,7 @@ $-badge-inset-border: 0 0 0 1px inset;
   pointer-events: none;
 }
 
-@each $-color-name, $-color-settings in $sage-color-combos {
+@each $-color-name in $-badge-statuses {
   $-color-modifier: ".sage-badge--#{$-color-name}";
 
   #{$-color-modifier} {
