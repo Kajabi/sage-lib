@@ -375,7 +375,8 @@
   padding: sage-spacing(sm);
   color: sage-color(charcoal, 200);
   appearance: none;
-  border: sage-border(interactive);
+  box-shadow: map-get($sage-border-styles, default);
+  border: 0;
   border-radius: sage-border(radius-medium);
   background: transparent;
   transition: map-get($sage-transitions, input);
@@ -387,17 +388,15 @@
 
   &:hover:not(:disabled) {
     color: sage-color(charcoal, 400);
-    border: sage-border(interactive-hover);
+    box-shadow: map-get($sage-border-styles, hover);
 
     .sage-form-field--error & {
-      border: sage-border(error);
+      box-shadow: map-get($sage-border-styles, error);
     }
   }
 
   &:focus:not(:disabled),
   &:active:not(:disabled) {
-    border-color: transparent; /* further discovery */
-
     @include placeholder {
       opacity: 0;
     }
@@ -414,6 +413,7 @@
   &:disabled {
     color: sage-color(grey, 500);
     background-color: sage-color(grey, 100);
+    box-shadow: map-get($sage-border-styles, disabled);
     cursor: not-allowed;
     resize: none;
 
@@ -442,10 +442,14 @@
   .sage-form-field--error &:required:not(:placeholder-shown):not(:valid) {
     @include sage-focus-ring(sage-color(red, 200));
 
-    border: sage-border(error);
+    box-shadow: map-get($sage-border-styles, error);
 
     ~ label {
       color: sage-color(charcoal, 400);
+    }
+
+    &:hover:not(:disabled) {
+      box-shadow: map-get($sage-border-styles, error);
     }
   }
 
