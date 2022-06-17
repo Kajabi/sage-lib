@@ -96,7 +96,7 @@ $-select-arrow-icon-width: map-get($sage-icon-sizes, md);
     }
   }
 
-  .sage-select--error & {
+  .sage-form-field--error & {
     border-color: $-select-color-error;
     box-shadow: $-select-border-box-shadow-size $-select-color-error;
   }
@@ -104,7 +104,7 @@ $-select-arrow-icon-width: map-get($sage-icon-sizes, md);
   &:hover:not(:disabled) {
     border-color: $-select-color-border-selected;
 
-    .sage-select--error & {
+    .sage-form-field--error & {
       border-color: $-select-color-error;
     }
   }
@@ -114,7 +114,7 @@ $-select-arrow-icon-width: map-get($sage-icon-sizes, md);
     border-color: $-select-color-success;
     box-shadow: $-select-border-box-shadow-size $-select-color-success;
 
-    .sage-select--error & {
+    .sage-form-field--error & {
       border-color: $-select-color-error;
       box-shadow: $-select-border-box-shadow-size $-select-color-error;
     }
@@ -123,7 +123,7 @@ $-select-arrow-icon-width: map-get($sage-icon-sizes, md);
   &:hover:not(:disabled) {
     border-color: $-select-color-default;
 
-    .sage-select--error {
+    .sage-form-field--error {
       border-color: currentColor;
     }
   }
