@@ -71,10 +71,10 @@ jobs:
         run: yarn lint
 
       - name: Yarn Test
-        run: yarn test
+        run: npx lerna test
 
       - name: Yarn Build
-        run: yarn build
+        run: npx lerna build
 
       # Lerna Bootstrap and Publish package
       - name: Lerna Bootstrap

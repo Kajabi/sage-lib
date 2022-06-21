@@ -5,27 +5,19 @@ on:
 jobs:
   lint_test_build:
     name: Lint, Test, Build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Clone Sage-Lib Repo
-        uses: actions/checkout@v2
+    uses: nrwl/ci/.github/workflows/nx-cloud-main.yml@v0.5
+    with:
+      node-version: "14.19.3"
+      yarn-version: "1.22.5"
+      parallel-commands: |
+        npx nx-cloud record -- npx nx workspace-lint
+      parallel-commands-on-agents: |
+        npx lerna run lint
+        npx lerna run test
+        npx lerna run build
 
-      - name: Set Node Version
-        uses: actions/setup-node@v2
-        with:
-          node-version: "14"
-
-      - name: Install Yarn
-        run: npm install -g yarn
-
-      - name: Yarn Install
-        run: yarn install
-
-      - name: Yarn Lint
-        run: yarn lint
-
-      - name: Yarn Test
-        run: yarn test
-
-      - name: Yarn Build
-        run: yarn build
+  agents:
+    name: Nx Cloud - Agents
+    uses: nrwl/ci/.github/workflows/nx-cloud-agents.yml@v0.5
+    with:
+      number-of-agents: 3
