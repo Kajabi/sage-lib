@@ -3,6 +3,7 @@
     "packages/*",
     "docs"
   ],
+  "useNx": true,
   "version": "independent",
   "npmClient": "yarn",
   "useWorkspaces": true,
@@ -11,7 +12,10 @@
       "conventionalCommits": true,
       "message": "chore(release): publish [skip ci]",
       "registry": "https://npm.pkg.github.com",
-      "allowBranch": ["main", "develop"]
+      "allowBranch": [
+        "main",
+        "develop"
+      ]
     }
   }
 }
