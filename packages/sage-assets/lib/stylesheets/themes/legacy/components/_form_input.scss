@@ -91,7 +91,8 @@ $-input-text-height: sage-font-size(body);
     border-color: currentColor;
   }
 
-  &:valid:not(:placeholder-shown) {
+  &:valid:not(:placeholder-shown),
+  &:disabled:not(:placeholder-shown) {
     ~ .sage-input__label {
       @include sage-form-field-floating-label();
     }
