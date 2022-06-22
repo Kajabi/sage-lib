@@ -121,14 +121,21 @@ module SageTokens
     "ban",
     "bank",
     "bell",
-    "beta",
     "blog",
     "bold",
     "broadcast",
     "calendar-date",
     "calendar-schedule",
     "calendar-simple",
+    "card-amex",
+    "card-android-card",
+    "card-apple-card",
+    "card-credit-card",
+    "card-discover",
+    "card-paypal",
+    "card-stripe",
     "card-update",
+    "card-visa",
     "caret-down",
     "caret-left",
     "caret-right",
@@ -169,6 +176,7 @@ module SageTokens
     "delete-circle",
     "delete-key",
     "delete-x",
+    "dollar",
     "dot-menu-horizontal",
     "down-small",
     "download",
@@ -177,31 +185,30 @@ module SageTokens
     "drop",
     "duplicate",
     "email-activity",
-    "enlarge", # Same as "select" ?
+    "enlarge",
     "enlarge-vertical",
     "expand",
     "favorite",
     "feedback",
     "file",
     "file-money",
-    "filters", # Different on Next
+    "filter",
     "flag",
     "folder",
     "folder-group",
     "form",
     "form-field",
     "fullscreen",
-    "funnel",
     "gear",
     "gear-filled",
     "grant-offer",
-    "graph", # Not in Next... same as "chart"
     "handle",
     "handle-2",
     "handle-2-vertical",
     "hashtag",
     "heading-large",
     "heading-small",
+    "headset",
     "help",
     "help-filled",
     "home",
@@ -233,7 +240,7 @@ module SageTokens
     "megaphone-filled",
     "menu",
     "menu-alt",
-    "menu-bordered", # "menu-2" in Next
+    "menu-bordered",
     "merge",
     "microphone",
     "microphone-off",
@@ -273,9 +280,8 @@ module SageTokens
     "round-dollar",
     "screen-share-off",
     "screen-share-on",
-    "search", # Detached stem in Next
+    "search",
     "search-small",
-    "select",
     "send-message",
     "sequences",
     "skipped",
@@ -287,7 +293,6 @@ module SageTokens
     "strikethrough",
     "subscript",
     "subscriptions",
-    "success",
     "super-admin",
     "superscript",
     "sync",
@@ -310,14 +315,21 @@ module SageTokens
     "user-star",
     "user-star-filled",
     "users",
-    "users-alt", # "users-wm" in Next
+    "users-alt",
     "video-off",
     "video-on",
     "warning",
     "warning-filled",
     "window-paragraph",
     "world",
-    # Need: dollar-sign
+
+    # Deprecations
+    "beta", # DEPRECATE --> "lab"
+    "filters", # DEPRECATE --> "filter"?
+    "funnel", # Remove as unused?
+    "graph", # Remove in lieue of Chart?
+    "select", # DEPRECATE --> "enlarge"
+    "success", # DEPRECATE --> "headset"
   ]
 
   ICON_SIZES = ["xs", "sm", "md", "lg", "xl", "2xl", "3xl", "4xl"]
