@@ -21,7 +21,6 @@ export const Select = ({
     className,
     {
       'sage-form-field--error': hasError,
-      'sage-select--error': hasError,
       'sage-select--value-selected': value,
     }
   );
