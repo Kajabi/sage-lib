@@ -11,6 +11,7 @@ export const TableRow = ({
   className,
   cells,
   id,
+  hasBorders,
   onSelect,
   schema,
   selectable,
@@ -25,6 +26,15 @@ export const TableRow = ({
     className,
     {
       'sage-table__row--selectable': selectable,
+    }
+  );
+
+  const selectableClassNames = classnames(
+    'sage-table-cell',
+    'sage-table-cell--checkbox',
+    className,
+    {
+      'sage-table-cell--borders': hasBorders
     }
   );
 
@@ -53,6 +63,7 @@ export const TableRow = ({
         'sage-table-cell',
         className,
         {
+          'sage-table-cell--borders': hasBorders,
           [`sage-table-cell--${dataType}`]: dataType,
         }
       );
@@ -75,7 +86,7 @@ export const TableRow = ({
   return (
     <tr className={classNames} data-table-row-id={id}>
       {selectable && (
-        <td className="sage-table-cell sage-table-cell--checkbox">
+        <td className={selectableClassNames}>
           <Checkbox
             checked={selfSelected}
             id={`sage-table__row-selector-${id}`}
@@ -107,6 +118,7 @@ TableRow.parseRowData = parseRowData;
 TableRow.defaultProps = {
   className: null,
   cells: [],
+  hasBorders: false,
   onSelect: (ev) => ev,
   selectable: false,
   selected: false,
@@ -116,6 +128,7 @@ TableRow.defaultProps = {
 TableRow.propTypes = {
   className: PropTypes.string,
   cells: PropTypes.arrayOf(PropTypes.shape(cellPropTypes)),
+  hasBorders: PropTypes.bool,
   id: PropTypes.oneOfType([
     PropTypes.number,
     PropTypes.string,
