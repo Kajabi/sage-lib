@@ -33,14 +33,6 @@ $-grid-breakpoint-xl: sage-breakpoint(xl-min);
   .sage-modal & {
     margin-left: 0;
     margin-right: 0;
-  
-    // >:first-child {
-    //   padding-left: 0;
-    // }
-
-    // >:last-child {
-    //   padding-right: 0;
-    // }
   }
 }
 
@@ -135,13 +127,6 @@ $-grid-breakpoint-xl: sage-breakpoint(xl-min);
 
     .sage-row--card > & {
       padding: 0 (sage-spacing(card) / 2);
-    }
-
-    .sage-modal &:first-child {
-      padding-left: 0;
-    }
-    .sage-modal &:last-child {
-      padding-right: 0;
     }
   }
 }
