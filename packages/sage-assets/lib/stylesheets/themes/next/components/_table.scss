@@ -118,6 +118,8 @@ $-table-avatar-width: rem(32px);
   caption-side: top;
 }
 
+
+
 // Decreased vertical padding
 .sage-table--condensed {
   thead,
@@ -335,6 +337,14 @@ $-table-avatar-width: rem(32px);
 
   .sage-table-cell--truncate & {
     display: inline;
+  }
+}
+
+.sage-table-cell--borders {
+  border-bottom: sage-border();
+
+  tr:last-child & {
+    border-bottom: 0;
   }
 }
 
