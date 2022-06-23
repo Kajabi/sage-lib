@@ -15,7 +15,7 @@
               href: pages_component_path(sorted_sage_components.first[:title]),
               title: "Get Started"
             },
-            style: "primary",
+            style: SageRails.next_theme? ? "accent" : "primary",
           } %>
           <%= sage_component SageButton, {
             value: "View GitHub Repo",
