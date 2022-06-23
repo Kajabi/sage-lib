@@ -36,6 +36,7 @@ export const Table = ({
   caption,
   captionSide,
   className,
+  hasBorders,
   hasDataBeyondCurrentRows,
   headers,
   isResponsive,
@@ -273,6 +274,7 @@ export const Table = ({
 
     return (
       <TableRow
+        hasBorders={hasBorders}
         key={rowId}
         id={rowId}
         cells={cells}
@@ -336,6 +338,7 @@ Table.defaultProps = {
   caption: null,
   captionSide: null,
   className: null,
+  hasBorders: false,
   hasDataBeyondCurrentRows: false,
   headers: [],
   isResponsive: true,
@@ -356,6 +359,7 @@ Table.propTypes = {
   caption: PropTypes.string,
   captionSide: PropTypes.oneOf(Object.values(Table.CAPTION_SIDE)),
   className: PropTypes.string,
+  hasBorders: PropTypes.bool,
   hasDataBeyondCurrentRows: PropTypes.bool,
   // Headers provide a simpler alternative to schema
   headers: PropTypes.oneOfType([
