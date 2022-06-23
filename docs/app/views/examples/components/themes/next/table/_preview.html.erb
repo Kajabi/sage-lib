@@ -114,6 +114,7 @@ sample_table = {
 
 <h3 class="t-sage-heading-6">Responsive table</h3>
 <%= sage_component SageTable, {
+  has_borders: true,
   headers: sample_table[:headers],
   rows: sample_table[:rows],
   caption: "Responsive tables require the use of two parent containers",

@@ -80,7 +80,7 @@ module SageTableHelper
   end
 
   class SageTableFor
-    attr_reader :caption, :columns, :condensed, :template, :id, :class_name, :collection, :row_proc, :sortable, :responsive, :skip_headers, :striped, :reset_above, :reset_below
+    attr_reader :caption, :columns, :condensed, :template, :id, :class_name, :collection, :has_borders, :row_proc, :sortable, :responsive, :skip_headers, :striped, :reset_above, :reset_below
     delegate :content_tag, :tag, to: :template
 
     def initialize(template, collection, opts={})
@@ -89,6 +89,7 @@ module SageTableHelper
       @class_name = opts[:class_name]
       @condensed = opts[:condensed]
       @collection = collection
+      @has_borders = opts[:has_borders]
       @reset_above = opts[:reset_above]
       @reset_below = opts[:reset_below]
       @responsive = opts[:responsive]
@@ -185,6 +186,7 @@ module SageTableHelper
         columns.map do |c|
           col_class = "sage-table-cell"
           col_class << " sage-table-cell--align-#{c.align}" if c.align
+          col_class << " sage-table-cell--borders" if has_borders
           col_class << " #{c.class_name}" if c.class_name
           col_class << " sage-table-cell--#{c.data_type}" if c.data_type
           col_class << c.hide_classes if c.hide

@@ -53,7 +53,7 @@ is_responsive = component.responsive.present? ? component.responsive : true
           <tr class="<%= "sage-table__row--selectable" if component.selectable %>">
             <% if row.is_a? Array %>
               <% row.each do | cell | %>
-                <td
+                <td class="<%= "sage-table-cell--borders" if component.has_borders %>"
                   <% cell[:html_attributes].each do | key, value | %>
                     <%= "#{key}=#{value}" %>
                   <% end if cell&.is_a?(Hash) && cell[:html_attributes].present? %>
@@ -63,7 +63,7 @@ is_responsive = component.responsive.present? ? component.responsive : true
               <% end %>
             <% elsif row.is_a? Object or row.is_a? Hash %>
               <% row.each do | key, value | %>
-                <td
+                <td class="<%= "sage-table-cell--borders" if component.has_borders %>"
                   data-cell-key="<%= key %>"
                   <% value[:html_attributes].each do | k, v | %>
                     <%= "#{k}=#{v}" %>
