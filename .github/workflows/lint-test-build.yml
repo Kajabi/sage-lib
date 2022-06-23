@@ -21,3 +21,5 @@ jobs:
     uses: nrwl/ci/.github/workflows/nx-cloud-agents.yml@v0.5
     with:
       number-of-agents: 3
+      node-version: "14.19.3"
+      yarn-version: "1.22.5"
