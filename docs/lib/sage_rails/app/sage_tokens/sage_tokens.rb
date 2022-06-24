@@ -128,10 +128,11 @@ module SageTokens
     "calendar-schedule",
     "calendar-simple",
     "card-amex",
-    "card-android-card",
-    "card-apple-card",
-    "card-credit-card",
+    "card-android",
+    "card-apple",
     "card-discover",
+    "card-generic",
+    "card-mastercard",
     "card-paypal",
     "card-stripe",
     "card-update",
@@ -223,11 +224,11 @@ module SageTokens
     "kajabi-filled",
     "lab",
     "launch",
+    "layout-grid",
+    "layout-list",
     "left-small",
     "list-bullet",
-    "list-details", # Different on Next
     "list-numbers",
-    "list-stack", # Different on Next
     "location",
     "lock",
     "lock-alt",
@@ -278,6 +279,7 @@ module SageTokens
     "restore",
     "right-small",
     "round-dollar",
+    "rows", # new
     "screen-share-off",
     "screen-share-on",
     "search",
@@ -326,8 +328,9 @@ module SageTokens
     # Deprecations
     "beta", # DEPRECATE --> "lab"
     "filters", # DEPRECATE --> "filter"?
-    "funnel", # Remove as unused?
-    "graph", # Remove in lieue of Chart?
+    "graph", # DEPRECATE --> "chart"
+    "list-details", # DEPRECATE --> "layout-list"
+    "list-stack", # DEPRECATE --> "rows"
     "select", # DEPRECATE --> "enlarge"
     "success", # DEPRECATE --> "headset"
   ]
