@@ -11,7 +11,7 @@ Sage.modal = (function() {
   const SELECTOR_MODAL_REMOVE_CONTENTS_ON_CLOSE = "data-js-modal-remove-content-on-close";
   const SELECTOR_MODAL_CLOSE = "data-js-modal-close";
   const SELECTOR_MODALTRIGGER = "data-js-modaltrigger";
-  const SELECTOR_PAGE_HAS_OPEN_MODAL = "sage-page--has-open-modal";
+  const SELECTOR_PAGE_HAS_OPEN_MODAL = "sage-page__has-open-modal";
   const SELECTOR_FOCUSABLE_ELEMENTS = "a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled]), input[type='text']:not([disabled]), input[type='radio']:not([disabled]), input[type='checkbox']:not([disabled]), select:not([disabled])";
   const MODAL_ACTIVE_CLASS = "sage-modal--active";
   const EVENT_CLOSEALL = "sage.modal.closeAll";
