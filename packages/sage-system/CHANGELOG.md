@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.22.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.22.1...@kajabi/sage-system@0.22.2) (2022-06-24)
+
+
+### Reverts
+
+* Revert "fix(modal): remove scrolling background when open" ([521c214](https://github.com/Kajabi/sage-lib/commit/521c214ccd44e804547575ee263cc7fb87863ea1))
+
+
+
+
+
 ## [0.22.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@0.22.0...@kajabi/sage-system@0.22.1) (2022-06-17)
 
 
