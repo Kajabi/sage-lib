@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.101.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.100.1...@kajabi/sage-react@0.101.0) (2022-06-27)
+
+
+### Bug Fixes
+
+* **frame:** fix boolean check for hasCustomWidth ([d249e64](https://github.com/Kajabi/sage-lib/commit/d249e64ba3e917a9b483ed87077150f806b428f3))
+* **frame:** fix boolean for hasCustomWidth in Frame (next) ([2b87f70](https://github.com/Kajabi/sage-lib/commit/2b87f7030f38b1910c06998b9a3fea8c72401755))
+
+
+### Features
+
+* **table:** adds borders prop to React component ([c618840](https://github.com/Kajabi/sage-lib/commit/c618840f86380e97c919a1386f6e1496bf40e3c2))
+
+
+
+
+
 ## [0.100.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.100.0...@kajabi/sage-react@0.100.1) (2022-06-24)
 
 

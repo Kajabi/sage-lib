@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.87.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.86.1...@kajabi/sage-assets@0.87.0) (2022-06-27)
+
+
+### Bug Fixes
+
+* limit badge and label color combos to avoid errors ([1f0916d](https://github.com/Kajabi/sage-lib/commit/1f0916d12a99800c377cfa8ba525250b8b143f28))
+
+
+### Features
+
+* **table:** adds border prop to Rails table ([92b6170](https://github.com/Kajabi/sage-lib/commit/92b61705a723529191fa57a4108f681a200fa9e2))
+
+
+
+
+
 ## [0.86.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.86.0...@kajabi/sage-assets@0.86.1) (2022-06-24)
 
 

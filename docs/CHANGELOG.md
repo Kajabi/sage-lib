@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.70.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.69.1...@kajabi/sage@4.70.0) (2022-06-27)
+
+
+### Bug Fixes
+
+* change get started button back to accent in next ([1c10689](https://github.com/Kajabi/sage-lib/commit/1c10689255a963bcf56c672385882a9177063f5a))
+
+
+### Features
+
+* **table:** adds border prop to Rails table ([92b6170](https://github.com/Kajabi/sage-lib/commit/92b61705a723529191fa57a4108f681a200fa9e2))
+
+
+
+
+
 ## [4.69.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.69.0...@kajabi/sage@4.69.1) (2022-06-24)
 
 **Note:** Version bump only for package @kajabi/sage
