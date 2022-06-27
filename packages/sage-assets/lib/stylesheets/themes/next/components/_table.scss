@@ -338,6 +338,14 @@ $-table-avatar-width: rem(32px);
   }
 }
 
+.sage-table-cell--borders {
+  border-bottom: sage-border();
+
+  tr:last-child & {
+    border-bottom: 0;
+  }
+}
+
 .sage-table-cell__label {
   .sage-table-cell__block &,
   .sage-table-cell__link & {
