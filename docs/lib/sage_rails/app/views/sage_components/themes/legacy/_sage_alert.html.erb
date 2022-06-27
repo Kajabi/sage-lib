@@ -2,6 +2,7 @@
   class="
     sage-alert<%= component.color ? "
     sage-alert--#{component.color}" : ""%>
+    <%= "sage-alert--has-actions" if component.primary_action or component.secondary_actions or content_for? :sage_alert_actions %>
     <%= "sage-alert--small" if component.small %>
     <%= "sage-alert--small-dismissable" if component.small && component.dismissable %>
     <%= component.generated_css_classes %>

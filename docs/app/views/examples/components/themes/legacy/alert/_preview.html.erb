@@ -8,25 +8,7 @@
   desc: "Make sure you know how these changes affect you. Make sure you know how these changes affect you.",
   icon_name: "sage-icon-flag",
   dismissable: true,
-  primary_action: {
-    value: "Primary",
-    test_id: "primary_action",
-  },
-  secondary_actions: [
-    {
-      value: "Button",
-      test_id: "secondary_action",
-    },
-    {
-      value: "Another button",
-      test_id: "secondary_action_two",
-    },
-  ],
-} do %>
-  <% content_for :sage_alert_actions do %>
-    <%= link_to "Check usage", "#" %>
-  <% end %>
-<% end %>
+} %>
 
 <!-- Success -->
 <%= sage_component SageAlert, {
