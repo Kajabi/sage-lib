@@ -34,7 +34,7 @@ export const Frame = ({
   const hasCustomBackground = background
     && !Object.values(SageTokens.COLOR_SLIDERS).includes(background);
   const hasCustomWidth = width
-    && !Object.values(FRAME_WIDTHS).includes(background);
+    && !Object.values(FRAME_WIDTHS).includes(width);
   const hasCustomMaxWidth = maxWidth
     && !Object.values(FRAME_WIDTHS).includes(maxWidth);
   const hasCustomMinWidth = minWidth
