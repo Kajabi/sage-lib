@@ -2,6 +2,7 @@ export { Alert } from './Alert';
 export { Avatar } from './Avatar';
 export { AvatarGroup } from './AvatarGroup';
 export { Banner } from './Banner';
+export { Badge } from './Badge';
 export { Breadcrumbs } from './Breadcrumbs';
 export { Button } from './Button';
 export { Card } from './Card';

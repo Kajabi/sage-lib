@@ -6,6 +6,7 @@ export const {
   Avatar,
   AvatarGroup,
   Banner,
+  Badge,
   Breadcrumbs,
   Button,
   Card,

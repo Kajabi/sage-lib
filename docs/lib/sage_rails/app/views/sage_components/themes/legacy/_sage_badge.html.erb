@@ -1,0 +1,11 @@
+<%= sage_component SageLabel, {
+  container_attributes: component.container_attributes,
+  color: component.color,
+  interactive_type: component.interactive_type,
+  value: content_for?(:sage_badge_dot) ? sage_layout(SageFrame, {
+    content: content_for(:sage_badge_dot).html_safe << component.value.html_safe,
+    align: "center-left",
+    gap: "2xs",
+    direction: "horizontal",
+  }): component.value.html_safe,
+} %>
