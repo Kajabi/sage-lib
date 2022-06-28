@@ -29,6 +29,10 @@ $-grid-breakpoint-xl: sage-breakpoint(xl-min);
 
 .sage-row {
   @include sage-row();
+
+  .sage-modal__content & {
+    padding: 0 (sage-spacing(card) / 2);
+  }
 }
 
 .sage-row--stage {
@@ -122,6 +126,14 @@ $-grid-breakpoint-xl: sage-breakpoint(xl-min);
 
     .sage-row--card > & {
       padding: 0 (sage-spacing(card) / 2);
+    }
+
+    .sage-modal &:first-child {
+      padding-left: 0;
+    }
+
+    .sage-modal &:last-child {
+      padding-right: 0;
     }
   }
 }
