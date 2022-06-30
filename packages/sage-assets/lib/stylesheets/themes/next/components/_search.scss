@@ -214,4 +214,12 @@ $-search-icon: "::before";
   .sage-search--has-text & {
     visibility: visible;
   }
+
+  .sage-search & {
+    .sage-toolbar__group & {
+      &:last-child {
+        align-self: center;
+      }
+    }
+  }
 }
