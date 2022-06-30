@@ -215,7 +215,7 @@ $-search-icon: "::before";
     visibility: visible;
   }
   /* stylelint-disable max-nesting-depth */
-  .sage-search {
+  .sage-search & {
     .sage-toolbar__group & {
       &:last-child {
         align-self: center;
