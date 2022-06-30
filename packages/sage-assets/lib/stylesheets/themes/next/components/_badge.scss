@@ -32,7 +32,7 @@ $-badge-statuses: (
 }
 
 .sage-badge__value {
-  @extend %t-sage-body-small;
+  @extend %t-sage-body-small-med;
 
   appearance: none;
   display: flex;
