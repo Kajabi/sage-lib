@@ -32,6 +32,14 @@
       content: "#{$token}";
     }
   }
+  &-border-interactive::after {
+    content: "#{sage-border-interactive()}";
+  }
+  @each $name, $token in $sage-borders-interactive {
+    &-border-interactive-#{$name}::after {
+      content: "#{$token}";
+    }
+  }
   &-breakpoint::after {
     content: "#{sage-breakpoint()}";
   }
