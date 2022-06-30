@@ -194,10 +194,6 @@ $-switch-toggle-size: rem(16px);
       background: $-switch-color-disabled-checked;
     }
 
-    &:checked::after {
-      background-color: $-switch-color-default-hover;
-    }
-
     &:checked ~ .sage-switch__label,
     &:checked ~ .sage-switch__message {
       color: $-switch-color-disabled-checked-text;

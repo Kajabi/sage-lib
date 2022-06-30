@@ -189,7 +189,6 @@ $-checkbox-focus-outline-color: sage-color(primary, 200);
     color: $-checkbox-color-checked;
     background: $-checkbox-color-checked;
     border-color: $-checkbox-color-checked;
-    box-shadow: sage-shadow(sm);
 
     &::after {
       opacity: 1;
@@ -208,6 +207,7 @@ $-checkbox-focus-outline-color: sage-color(primary, 200);
 
   &:hover:not(:checked):not(:disabled) {
     border-color: $-checkbox-color-default;
+    background-color: sage-color(grey, 100);
   }
 
   &:focus:not(:disabled),
