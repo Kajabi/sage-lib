@@ -214,12 +214,13 @@ $-search-icon: "::before";
   .sage-search--has-text & {
     visibility: visible;
   }
-
-  .sage-search & {
+  /* stylelint-disable max-nesting-depth */
+  .sage-search {
     .sage-toolbar__group & {
       &:last-child {
         align-self: center;
       }
     }
   }
+  /* stylelint-enable max-nesting-depth */
 }
