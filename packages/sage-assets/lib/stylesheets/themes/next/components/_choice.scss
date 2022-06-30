@@ -157,13 +157,13 @@ $-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
   }
 
   &:hover::#{$-choice-el-radio} {
-    box-shadow: sage-shadow(sm);
+    border-color: sage-color(grey, 500);
+    background-color: sage-color(grey, 100);
   }
 
   &:active,
   &.sage-choice--active {
     &::#{$-choice-el-radio} {
-      box-shadow: sage-shadow(sm);
       border-width: 5px;
       border-color: $-choice-radio-color-checked;
     }

@@ -132,7 +132,6 @@ $-radio-focus-outline-color: currentColor;
     color: $-radio-color-checked;
     background: $-radio-color-checked;
     border-color: transparent;
-    box-shadow: sage-shadow(sm);
 
     &::after {
       transform: translate3d(-50%, -50%, 0) scale(1);
@@ -173,8 +172,8 @@ $-radio-focus-outline-color: currentColor;
       box-shadow: none;
     }
 
-    &:checked::after {
-      background-color: $-radio-color-hover;
+    &:checked::before {
+      background-color: $-radio-color-text-disabled;
     }
 
     + .sage-radio__label,
