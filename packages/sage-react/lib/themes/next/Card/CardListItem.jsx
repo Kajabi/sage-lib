@@ -16,7 +16,7 @@ export const CardListItem = ({
     className,
     {
       [`${SageClassnames.lookupGridTemplate(gridTemplate)}`]: gridTemplate,
-      [`sage-card__list-item--gap-${gap}`]: gap
+      [`sage-grid-gap-${gap}`]: gap
     }
   );
 
