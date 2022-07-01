@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.71.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.70.0...@kajabi/sage@4.71.0) (2022-07-01)
+
+
+### Bug Fixes
+
+* **border:** add border interactive to tokens ([fe43bcf](https://github.com/Kajabi/sage-lib/commit/fe43bcfa6235ce778926e7df8b042ee005166457))
+
+
+### Features
+
+* **icon:** udpate fonts to v7 ([392f645](https://github.com/Kajabi/sage-lib/commit/392f6454ad72ad8bb177201dfdfa9183e58768ec))
+* **icon:** update icon set from latest ([e1a3f02](https://github.com/Kajabi/sage-lib/commit/e1a3f02c1e9b1268ce3170804868abf0180ce17f))
+* **icon:** update icon set with latest from design ([980e700](https://github.com/Kajabi/sage-lib/commit/980e700a85caa711b5f61e591a3887161d66aed0))
+
+
+
+
+
 # [4.70.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.69.1...@kajabi/sage@4.70.0) (2022-06-27)
 
 

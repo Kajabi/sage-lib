@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.88.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.87.0...@kajabi/sage-assets@0.88.0) (2022-07-01)
+
+
+### Bug Fixes
+
+* **border:** add border interactive to tokens ([fe43bcf](https://github.com/Kajabi/sage-lib/commit/fe43bcfa6235ce778926e7df8b042ee005166457))
+* **border:** add tokens and updated vars ([243c7d8](https://github.com/Kajabi/sage-lib/commit/243c7d8cd7aa12939579dfff9b77ca21af1fd4f6))
+* **border:** update border state values in form field mixin ([16f22c3](https://github.com/Kajabi/sage-lib/commit/16f22c336a3ca452ecaf4357091934bd7bca5b32))
+* **borders:** align interactive borders to the spec ([d33408e](https://github.com/Kajabi/sage-lib/commit/d33408eba3c5034d15a016d8866025d13eac32d9))
+* **modal:** removes margin from sage row to fix horizontal scroll on desktop ([9934431](https://github.com/Kajabi/sage-lib/commit/99344310aada8f8cf2fc3d6c98d69e0890585d76))
+* **search:** adjusts alignment of search clear btn when search is contained in toolbar ([ced0604](https://github.com/Kajabi/sage-lib/commit/ced06044a9820c120e1a75e91c6facb921939f16))
+
+
+### Features
+
+* **icon:** udpate fonts to v7 ([392f645](https://github.com/Kajabi/sage-lib/commit/392f6454ad72ad8bb177201dfdfa9183e58768ec))
+* **icon:** update icon set from latest ([e1a3f02](https://github.com/Kajabi/sage-lib/commit/e1a3f02c1e9b1268ce3170804868abf0180ce17f))
+* **icon:** update icon set with latest from design ([980e700](https://github.com/Kajabi/sage-lib/commit/980e700a85caa711b5f61e591a3887161d66aed0))
+
+
+
+
+
 # [0.87.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.86.1...@kajabi/sage-assets@0.87.0) (2022-06-27)
 
 
