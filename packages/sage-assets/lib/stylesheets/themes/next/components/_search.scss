@@ -214,4 +214,8 @@ $-search-icon: "::before";
   .sage-search--has-text & {
     visibility: visible;
   }
+
+  .sage-toolbar__group .sage-search &:last-child {
+    align-self: center;
+  }
 }

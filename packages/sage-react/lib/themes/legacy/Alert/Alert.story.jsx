@@ -15,7 +15,7 @@ export default {
     }),
   },
   args: {
-    color: Alert.COLORS.DEFAULT,
+    color: Alert.COLORS.INFO,
     title: "You've used 80% of available pages",
     titleAddon: '(# of # pages)',
   },
@@ -27,7 +27,7 @@ export const Default = Template.bind({});
 export const DismissableAlert = Template.bind({});
 DismissableAlert.args = {
   description: 'Body duis rhoncus neque, sed nulla sed quis fames. Eu eu ut at odio ultrices orci varius habitant. Tempor vulputate in nisl massa eget id.',
-  color: Alert.COLORS.DEFAULT,
+  color: Alert.COLORS.INFO,
   dismissable: true,
   onClickDismiss: () => console.log('clicked to dismiss'), // eslint-disable-line
   actions: (
@@ -41,7 +41,6 @@ DismissableAlert.args = {
       <Link
         href="//example.com"
         removeUnderline={true}
-        style={Link.COLORS.SECONDARY}
         suppressDefaultClass={true}
       >
         Check Usage
@@ -65,7 +64,6 @@ NonDismissableAlert.args = {
       <Link
         href="//example.com"
         removeUnderline={true}
-        style={Link.COLORS.SECONDARY}
         suppressDefaultClass={true}
       >
         Check Usage
@@ -83,7 +81,6 @@ SmallAlert.args = {
       <Link
         href="//example.com"
         removeUnderline={true}
-        style={Link.COLORS.SECONDARY}
         suppressDefaultClass={true}
       >
         Check Usage
@@ -93,4 +90,4 @@ SmallAlert.args = {
   small: true,
 };
 
-export const Accessible = () => <Alert color={Alert.COLORS.DEFAULT}>Accessible button</Alert>;
+export const Accessible = () => <Alert color={Alert.COLORS.INFO}>Accessible button</Alert>;

@@ -25,6 +25,7 @@ export const Alert = ({
     'sage-alert',
     className,
     {
+      'sage-alert--has-actions': actions,
       [`sage-alert--${color}`]: color,
       'sage-alert--small': small,
     }
