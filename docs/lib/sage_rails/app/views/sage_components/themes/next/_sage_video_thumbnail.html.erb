@@ -1,0 +1,32 @@
+<%# Update based on below structure %>
+<div class="
+    sage-btn-group
+    <%= "sage-btn-group--align-#{component.align}" if component.align.present? %>
+    <%= "sage-btn-group--border-top" if component.borderTop %>
+    <%= "sage-btn-group--wrap" if component.wrap %>
+    <%= "sage-grid-gap-#{component.gap}" if component.gap.present? %>
+    <%= component.generated_css_classes %>
+  "
+  <%= component.generated_html_attributes.html_safe %>
+>
+  <%= component.content %>
+</div>
+
+
+<%# Desired HTML %>
+<div
+  className={styles.Thumbnail}
+  style={{backgroundImage: `url(${thumbnailUrl})`}}
+>
+  <button
+    type="button"
+    className={styles.PlayButton}
+    aria-label={buttonLabel}
+    onClick={onClick}
+    onMouseEnter={onBeforeStartPlaying}
+    onFocus={onBeforeStartPlaying}
+    onTouchStart={onBeforeStartPlaying}
+  >
+    <img className={styles.PlayIcon} src={PlayIcon} alt="" />
+  </button>
+</div>

@@ -838,7 +838,7 @@ module ComponentsHelper
       },
       {
         title: "topbar",
-        description: "The Topbar sits above all page content and contains breadcrumbs and the user menu.", 
+        description: "The Topbar sits above all page content and contains breadcrumbs and the user menu.",
         scss: "done",
         rails: "done",
         react: "done",
@@ -881,6 +881,18 @@ module ComponentsHelper
         a11y: "done",
         react_component_slug: "sage-uploadcard--default",
         figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F9Km09NjlZHYWsMP7EGT8tI%2F%255BWIP%255D-Sage-3-%25E2%2580%2594-Admin-Components%3Fnode-id%3D6999%253A21864",
+      },
+      {
+        title: "video_thumbnail",
+        description: "TODO",
+        scss: "todo",
+        docs: "todo",
+        rails: "todo",
+        react: "todo",
+        responsive: "todo",
+        a11y: "todo",
+        react_component_slug: "",
+        figma_embed: "",
       },
     ]
   end

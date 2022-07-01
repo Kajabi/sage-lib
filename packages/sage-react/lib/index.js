@@ -71,6 +71,7 @@ export const {
   Type,
   Typeahead,
   UploadCard,
+  VideoThumbnail,
   SageClassnames,
   SageTokens,
   useSageBreakpoint,
