@@ -30,7 +30,12 @@ const DefaultBody = ({ onExit }) => (
         </Button>
       )}
     />
-    <Modal.Body>
+    <Modal.Body gap={Modal.Body.GAP_OPTIONS.LG}>
+      <p className={SageClassnames.TYPE.BODY}>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua.
+      </p>
       <p className={SageClassnames.TYPE.BODY}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
         sed do eiusmod tempor incididunt ut labore et dolore

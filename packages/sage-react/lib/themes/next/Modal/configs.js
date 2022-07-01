@@ -1,3 +1,11 @@
+export const MODAL_CONTENT_GAP_OPTIONS = {
+  DEFAULT: null,
+  XS: 'xs',
+  SM: 'sm',
+  MD: 'md',
+  LG: 'lg',
+};
+
 export const MODAL_CONTENT_SPACINGS = {
   CARD: 'card',
   DEFAULT: null,
