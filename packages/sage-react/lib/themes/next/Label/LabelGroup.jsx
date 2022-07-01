@@ -15,7 +15,7 @@ export const LabelGroup = ({
     className,
     {
       [`sage-label-group--align-${align}`]: align,
-      [`sage-label-group--gap-${gap}`]: gap
+      [`sage-grid-gap-${gap}`]: gap
     }
   );
 
