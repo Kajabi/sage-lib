@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.88.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.88.0...@kajabi/sage-assets@0.88.1) (2022-07-05)
+
+
+### Bug Fixes
+
+* **progress-bar:** removed border radius from bar ([0c44346](https://github.com/Kajabi/sage-lib/commit/0c44346463c248d99f91daef5687d0da51ea5af3))
+* **progress-bar:** update the next side of the progress bar within a modal header ([eba54d0](https://github.com/Kajabi/sage-lib/commit/eba54d06c4e136d91bc39cfe91e88926330c3e5f))
+
+
+
+
+
 # [0.88.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.87.0...@kajabi/sage-assets@0.88.0) (2022-07-01)
 
 
