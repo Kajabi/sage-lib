@@ -21,6 +21,7 @@ $-catalogue-item-image-height-mobile: rem(120px);
     "content aside";
   padding: sage-spacing() sage-spacing();
   margin-bottom: rem(-1px);
+  position: relative;
   border-top: sage-border(default);
   border-bottom: sage-border(default);
 
@@ -34,6 +35,18 @@ $-catalogue-item-image-height-mobile: rem(120px);
 
   &:last-child {
     border-bottom: 0;
+  }
+
+  &:hover,
+  &:focus-within {
+    background-color: sage-color(grey, 100);
+  }
+
+  /* This rules allows all nested interactive elements
+  to sit above the primary action's hitbox */
+  a:not(.sage-catalog-item--primary-action),
+  button:not(.sage-catalog-item--primary-action) {
+    z-index: sage-z-index(default, 2);
   }
 
   .sage-card__list--hide-first-border &,
