@@ -78,7 +78,8 @@ $-link-base-styles: (
     @include sage-focus-outline--update-color(sage-color(primary, 200));
   }
 
-  .sage-catalog-item__title & {
+  .sage-catalog-item__title &,
+  &.sage-table-cell__link--primary {
     position: static;
 
     &::before {

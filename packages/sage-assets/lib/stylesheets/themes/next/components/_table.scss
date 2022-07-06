@@ -89,6 +89,19 @@ $-table-avatar-width: rem(32px);
     color: $-table-cell-font-color;
   }
 
+  tr {
+    position: relative;
+
+    &:hover {
+      background-color: sage-color(grey, 100);
+    }
+
+    a:not(.sage-table-cell__link--primary),
+    button:not(.sage-table-cell__link--primary) {
+      z-index: sage-z-index(default, 2);
+    }
+  }
+
   td {
     @extend #{$-table-cell-type-spec};
 
@@ -350,5 +363,12 @@ $-table-avatar-width: rem(32px);
   .sage-table-cell__block &,
   .sage-table-cell__link & {
     margin-left: 0.5em;
+  }
+}
+.sage-table-cell__link--primary {
+  color: sage-color(charcoal, 300);
+
+  &:hover {
+    text-decoration: underline;
   }
 }

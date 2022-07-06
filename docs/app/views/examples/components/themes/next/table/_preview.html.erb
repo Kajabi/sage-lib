@@ -224,6 +224,111 @@ sample_table = {
   ]
 } %>
 
+<h3 class="t-sage-heading-6">Clickable row table example</h3>
+<p></p>
+<%= sage_component SageTable, {
+  headers: [
+    "Malesuada",
+    "Amet Cras",
+    "Malesuada",
+    "Amet Cras",
+  ],
+   rows: [
+    [
+      %(
+        #{link_to("User", "#", class: "sage-link sage-link--remove-underline sage-table-cell__link--primary")}
+      ),
+      "$20,323.30 USD",
+      {
+        value: "Sed posuere consectetur",
+        html_attributes: {
+          class: "sage-table-cell--truncate"
+        }
+      },
+      %(
+        #{sage_component(SageBadge, {
+          value: "published",
+          color: "published",
+        })}
+      ),
+      %(
+        <div class="sage-btn-group sage-btn-group--gap-xs">
+          #{
+            sage_component(SageButton, {
+              subtle: true,
+              value: 'Edit',
+              icon: { name: 'pen', style: 'only' },
+              style: 'primary',
+              attributes: {
+                href: "?edit=#edit",
+                "data-js-tooltip": "Edit",
+              }
+            })
+          }
+          #{
+            sage_component(SageButton, {
+              subtle: true,
+              value: 'Delete',
+              icon: { name: 'trash', style: 'only' },
+              style: 'danger',
+              attributes: {
+                href: "?remove=#delete",
+                "data-js-tooltip": "Delete",
+              }
+            })
+          }
+        </div>
+      )
+    ],
+    [
+      %(
+        #{link_to("Title", "#", class: "sage-link sage-link--remove-underline sage-table-cell__link--primary")}
+      ),
+      "$1,101,444.31 USD",
+      {
+        value: "Curabitur blandit tempus",
+        html_attributes: {
+          class: "sage-table-cell--truncate"
+        }
+      },
+      %(
+        #{sage_component(SageBadge, {
+          value: "published",
+          color: "published",
+        })}
+      ),
+      %(
+        <div class="sage-btn-group sage-btn-group--gap-xs">
+          #{
+            sage_component(SageButton, {
+              subtle: true,
+              value: 'Edit',
+              icon: { name: 'pen', style: 'only' },
+              style: 'primary',
+              attributes: {
+                href: "?edit=#edit",
+                "data-js-tooltip": "Edit",
+              }
+            })
+          }
+          #{
+            sage_component(SageButton, {
+              subtle: true,
+              value: 'Delete',
+              icon: { name: 'trash', style: 'only' },
+              style: 'danger',
+              attributes: {
+                href: "?remove=#delete",
+                "data-js-tooltip": "Delete",
+              }
+            })
+          }
+        </div>
+      )
+    ]
+  ]
+} %>
+
 <h3>Using `sage_table_for`</h3>
 <%= md("
 As an alterative to directly calling the SageTable component,
