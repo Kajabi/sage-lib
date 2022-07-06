@@ -50,6 +50,7 @@
   "devDependencies": {
     "@babel/core": "^7.11.6",
     "@babel/plugin-proposal-object-rest-spread": "^7.11.0",
+    "@babel/plugin-syntax-class-properties": "^7.12.13",
     "@babel/plugin-transform-runtime": "^7.18.0",
     "@babel/preset-env": "^7.11.5",
     "@babel/preset-react": "^7.10.4",
@@ -92,7 +93,7 @@
     "html-react-parser": "^0.14.2",
     "pluralize": "^8.0.0",
     "prop-types": "^15.7.2",
-    "react-sortablejs": "^6.0.0",
+    "react-sortablejs": "^6.1.4",
     "react-uuid": "^1.0.2",
     "recharts": "^2.0.9",
     "sortablejs": "^1.12.0",
