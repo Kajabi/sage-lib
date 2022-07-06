@@ -15,6 +15,14 @@ const Template = (args) => <Textarea {...args} />;
 
 export const Default = Template.bind({});
 
+export const TextareaDisabled = Template.bind({});
+
+TextareaDisabled.args = {
+  id: 'field-2',
+  label: 'Textarea Disabled',
+  disabled: true
+};
+
 export const TextareaWithState = (args) => {
   const [value, updateValue] = useState('Test value');
   const onChange = (e) => {
@@ -31,5 +39,5 @@ export const TextareaWithState = (args) => {
 };
 TextareaWithState.args = {
   id: 'field-2',
-  label: 'Textarea label'
+  label: 'Textarea with State'
 };
