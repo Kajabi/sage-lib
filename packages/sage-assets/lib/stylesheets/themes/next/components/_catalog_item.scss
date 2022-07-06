@@ -19,9 +19,9 @@ $-catalogue-item-image-height-mobile: rem(120px);
   grid-template-areas:
     "title aside"
     "content aside";
+  position: relative;
   padding: sage-spacing() sage-spacing();
   margin-bottom: rem(-1px);
-  position: relative;
   border-top: sage-border(default);
   border-bottom: sage-border(default);
 
