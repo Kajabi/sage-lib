@@ -1,5 +1,6 @@
 class SageModalContent < SageComponent
   set_attribute_schema({
+    gap: [:optional, NilClass, SageSchemas::GRID_GAP_OPTION],
     header_icon: [:optional, {
       color: [:optional, SageSchemas::COLOR_SLIDER],
       name: SageSchemas::ICON,
