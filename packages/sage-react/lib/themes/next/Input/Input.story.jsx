@@ -48,24 +48,28 @@ export const Default = (args) => {
 const Template = (args) => <Input {...args} />;
 export const InputWithError = Template.bind({});
 InputWithError.args = {
-  hasError: true
+  hasError: true,
+  id: 'field-3'
 };
 
 export const InputDisabled = Template.bind({});
 InputDisabled.args = {
-  disabled: true
+  disabled: true,
+  id: 'field-4'
 };
 
 export const InputReadonly = Template.bind({});
 InputReadonly.args = {
   readonly: true,
-  value: 'You cannot change me'
+  value: 'You cannot change me',
+  id: 'field-5'
 };
 
 export const InputEmail = Template.bind({});
 InputEmail.args = {
   inputType: Input.Type.EMAIL,
-  label: 'Email address'
+  label: 'Email address',
+  id: 'field-6'
 };
 
 export const InputWithStaticIcon = (args) => {
@@ -129,7 +133,7 @@ InputWithStaticIcon.args = {
 };
 
 InputWithPopover.args = {
-  id: 'field-1',
+  id: 'field-7',
   message: 'this is a test message',
   popover: (
     <Popover

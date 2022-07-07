@@ -432,7 +432,6 @@
     color: inherit;
     white-space: nowrap;
     background-color: sage-color(white);
-    pointer-events: none;
   }
 
   // TODO: add support for Simpleform classes
@@ -487,7 +486,6 @@
   @extend %t-sage-body-semi;
 
   white-space: nowrap;
-  pointer-events: none;
 }
 
 ///
