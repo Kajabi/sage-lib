@@ -43,7 +43,9 @@ export const Textarea = ({
         <label htmlFor={id} className="sage-textarea__label">{label}</label>
       )}
       {message && (
-        <div className="sage-textarea__message">{message}</div>
+        <div className="sage-textarea__info">
+          <div className="sage-textarea__message">{message}</div>
+        </div>
       )}
     </div>
   );

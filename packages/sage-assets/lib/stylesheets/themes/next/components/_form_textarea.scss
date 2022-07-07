@@ -51,8 +51,10 @@ $-textarea-color-default-background: sage-color(white);
   background: $-textarea-color-default-background;
 }
 
+.sage-textarea__info {
+  grid-area: message;
+}
+
 .sage-textarea__message {
   @include sage-form-field-message;
-
-  grid-area: message;
 }

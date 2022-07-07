@@ -47,8 +47,10 @@
       <%= content_for :sage_form_input_popover %>
     <% end %>
   <% if component.message_text.present? %>
-    <div class="sage-input__message">
-      <%= component.message_text %>
+    <div class="sage-input__info">
+      <div class="sage-input__message">
+        <%= component.message_text %>
+      </div>
     </div>
   <% end %>
 </div>
