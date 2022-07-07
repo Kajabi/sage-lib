@@ -138,7 +138,7 @@ $-btn-subtle-styles: (
 $-btn-interactive-badge-icon-size: rem(24px);
 $-btn-loading-min-height: rem(36px);
 
-
+// stylelint-disable max-nesting-depth
 .sage-btn {
   @extend %t-sage-body-semi;
   @include sage-button-style-reset();
