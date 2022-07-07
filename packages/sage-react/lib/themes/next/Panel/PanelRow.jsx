@@ -18,7 +18,7 @@ export const PanelRow = ({
     {
       [`${SageClassnames.lookupGridTemplate(gridTemplate)}`]: gridTemplate,
       [`sage-panel__row--vertical-align-${verticalAlign}`]: verticalAlign,
-      [`sage-panel__row--gap-${gap}`]: gap,
+      [`sage-grid-gap-${gap}`]: gap,
     }
   );
 

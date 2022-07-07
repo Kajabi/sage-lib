@@ -20,7 +20,7 @@ export const ButtonGroup = ({
       'sage-btn-group--align-end': alignEnd,
       [`sage-btn-group--align-${align}`]: align,
       'sage-btn-group--border-top': borderTop,
-      [`sage-btn-group--gap-${gap}`]: gap,
+      [`sage-grid-gap-${gap}`]: gap,
       'sage-btn-group--wrap': wrap,
     }
   );
