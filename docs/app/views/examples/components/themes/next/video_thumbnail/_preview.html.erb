@@ -1,0 +1,9 @@
+<h3>Default Video Thumbnails</h3>
+<%= sage_component SagePanel, {} do %>
+  <%= sage_component SagePanelFigure, {} do %>
+    <%= sage_component SageVideoThumbnail, {
+      imageUrl: "/assets/card-placeholder-hero-24ea70f1ef1e9da27f8f2901667eb03ac7aaab5b82e870c8808835e432ddd3ce.jpg"
+    } %>
+  <% end %>
+  <p>By default, Panel figures are rendered using the image's native aspect ratio and scale accordingly.</p>
+<% end %>

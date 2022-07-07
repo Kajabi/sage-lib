@@ -4,6 +4,7 @@ import classnames from 'classnames';
 
 export const VideoThumbnail = ({
   className,
+  imageUrl,
   ...rest
 }) => {
   const classNames = classnames(
@@ -13,17 +14,35 @@ export const VideoThumbnail = ({
     }
   );
 
+  // const renderThumbnailImage = () => {
+  //   const imagePath = {};
+  //   if (imageUrl) {
+  //     imagePath[]
+  //   }
+  // };
+
   return (
-    <div className={classNames} {...rest}>
-      <button>hey</button>
+    <div
+      className={classNames}
+      style={{ backgroundImage: `url(${imageUrl})` }}
+      {...rest}
+    >
+      <button
+        className="sage-video-thumbnail__play-button"
+        type="button"
+      >
+        <span>Play media</span>
+      </button>
     </div>
   );
 };
 
 VideoThumbnail.defaultProps = {
   className: null,
+  imageUrl: null,
 };
 
 VideoThumbnail.propTypes = {
   className: PropTypes.string,
+  imageUrl: PropTypes.string,
 };

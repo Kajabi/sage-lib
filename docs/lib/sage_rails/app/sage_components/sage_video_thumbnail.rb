@@ -1,5 +1,5 @@
 class SageVideoThumbnail < SageComponent
   set_attribute_schema({
-    image: [:optional, String],
+    imageUrl: [:optional, String],
   })
 end
