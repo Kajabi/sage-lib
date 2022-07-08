@@ -3,14 +3,15 @@
     sage-video-thumbnail
     <%= component.generated_css_classes %>
   "
-  style="background-image: url(<%= component.imageUrl %>);"
+  style="background-image: url(<%= component.imageurl %>);"
   <%= component.generated_html_attributes.html_safe %>
 >
-  <%# add button props %>
-  <button
+  <a
+    <% component.cta_attributes.each do |key, value| %>
+        <%= "#{key}='#{value}'".html_safe %>
+      <% end if component.cta_attributes&.is_a?(Hash) %>
     class="sage-video-thumbnail__play-button"
-    type="button"
   >
     <span>Play media</span>
-  </button>
+  </a>
 </div>
