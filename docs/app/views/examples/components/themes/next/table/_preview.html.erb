@@ -233,7 +233,8 @@ sample_table = {
     "Malesuada",
     "Amet Cras",
   ],
-   rows: [
+  selectable: true,
+  rows: [
     [
       %(
         #{link_to("User", "#", class: "sage-link sage-link--remove-underline sage-table-cell__link--primary")}
@@ -252,7 +253,7 @@ sample_table = {
         })}
       ),
       %(
-        <div class="sage-btn-group sage-btn-group--gap-xs">
+        <div class="sage-btn-group sage-grid-gap-xs">
           #{
             sage_component(SageButton, {
               subtle: true,
@@ -298,7 +299,7 @@ sample_table = {
         })}
       ),
       %(
-        <div class="sage-btn-group sage-btn-group--gap-xs">
+        <div class="sage-btn-group sage-grid-gap-xs">
           #{
             sage_component(SageButton, {
               subtle: true,

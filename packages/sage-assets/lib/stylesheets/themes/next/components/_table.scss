@@ -33,7 +33,7 @@ $-table-overflow-indicator-gradient: linear-gradient(90deg, $-table-overflow-ind
 
 // Other
 $-table-row-color-stripe: sage-color(grey, 200);
-$-table-row-color-hover: sage-color(primary, 100);
+$-table-row-color-hover: sage-color(grey, 100);
 $-table-cell-focus: sage-color(charcoal, 300);
 $-table-cell-truncate-width: 6.5em;
 $-table-sort-indicator-width: rem(5px);
@@ -87,19 +87,6 @@ $-table-avatar-width: rem(32px);
 
   tbody {
     color: $-table-cell-font-color;
-  }
-
-  tr {
-    position: relative;
-
-    &:hover {
-      background-color: sage-color(grey, 100);
-    }
-
-    a:not(.sage-table-cell__link--primary),
-    button:not(.sage-table-cell__link--primary) {
-      z-index: sage-z-index(default, 2);
-    }
   }
 
   td {
@@ -206,6 +193,7 @@ $-table-avatar-width: rem(32px);
 .sage-table--selectable {
   .sage-table__row--selectable,
   .sage-table__row--selectable:nth-child(odd) {
+    position: relative;
     transition: map-get($sage-transitions, default);
     transition-property: background;
 
@@ -217,6 +205,11 @@ $-table-avatar-width: rem(32px);
 
     &:focus-within {
       background-color: $-table-row-color-hover;
+    }
+
+    a:not(.sage-table-cell__link--primary),
+    button:not(.sage-table-cell__link--primary) {
+      z-index: sage-z-index(default, 2);
     }
   }
 }
