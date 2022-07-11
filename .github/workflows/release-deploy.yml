@@ -67,6 +67,13 @@ jobs:
       - name: Yarn Install
         run: yarn install
 
+      - name: Archive Yarn.lock files
+        uses: actions/upload-artifact@v3
+        with:
+          name: yarn.lock
+          path: yarn.lock
+          retention-days: 14
+
       - name: Yarn Lint
         run: yarn lint
 
