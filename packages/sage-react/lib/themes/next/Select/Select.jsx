@@ -59,7 +59,9 @@ export const Select = ({
         <label htmlFor={id} className="sage-select__label">{label}</label>
       )}
       {message && (
-        <div className="sage-select__message">{message}</div>
+        <div className="sage-select__info">
+          <div className="sage-select__message">{message}</div>
+        </div>
       )}
     </div>
   );
