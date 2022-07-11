@@ -11,16 +11,7 @@ export const VideoThumbnail = ({
   const classNames = classnames(
     'sage-video-thumbnail',
     className,
-    {
-    }
   );
-
-  // const renderThumbnailImage = () => {
-  //   const imagePath = {};
-  //   if (imageurl) {
-  //     imagePath[]
-  //   }
-  // };
 
   return (
     <div

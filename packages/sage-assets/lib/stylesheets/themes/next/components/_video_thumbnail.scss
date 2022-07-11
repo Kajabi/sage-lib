@@ -27,8 +27,11 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: sage-z-index(default, 1);
-    font-size: rem(24px);
-    color: sage-color(primary, 300);
+    width: rem(24px);
+    height: rem(32px);
+    font-size: rem(32px);
+    line-height: 1;
+    color: sage-color(white, 100);
   }
 
   &::after {
@@ -37,15 +40,15 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: rem(56px);
-    height: rem(56px);
+    width: rem(80px);
+    height: rem(80px);
     border-radius: 50%;
-    background-color: rgba(sage-color(white, 100), 0.8);
+    background-color: rgba(sage-color(black, 100), 0.8);
     transition: background-color 0.2s ease;
   }
 
   &:hover::after {
-    background-color: rgba(sage-color(white, 100), 1);;
+    background-color: rgba(sage-color(black, 100), 1);;
   }
 
   &:focus {
