@@ -44,9 +44,8 @@ SelectWithState.args = {
   placeholder: 'Choose...'
 };
 
-export const DisabledSelectFieldWithOptionPreselected = (args) => {
-  return <Select {...args} />;
-};
+export const DisabledSelectFieldWithOptionPreselected = (args) => <Select {...args} />;
+
 DisabledSelectFieldWithOptionPreselected.args = {
   id: 'field-3',
   label: 'Choose wisely…',
