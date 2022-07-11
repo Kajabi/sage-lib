@@ -45,9 +45,7 @@ SelectWithState.args = {
 };
 
 export const DisabledSelectFieldWithOptionPreselected = (args) => {
-  return (
-    <Select {...args} />
-  );
+  return <Select {...args} />;
 };
 DisabledSelectFieldWithOptionPreselected.args = {
   id: 'field-3',
