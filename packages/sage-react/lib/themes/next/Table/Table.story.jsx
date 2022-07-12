@@ -80,7 +80,7 @@ TableWithRichContent.args = {
   schema: {
     domain: {
       label: 'Domain',
-      dataType: Table.DATA_TYPES.STRING,
+      dataType: Table.DATA_TYPES.HTML,
     },
     status: {
       label: 'Status',

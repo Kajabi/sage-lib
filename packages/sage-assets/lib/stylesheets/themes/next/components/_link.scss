@@ -70,6 +70,7 @@ $-link-base-styles: (
 
   &:hover {
     color: sage-color(primary, 400);
+    cursor: pointer;
   }
 
   &:focus {
