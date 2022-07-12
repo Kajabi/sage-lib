@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.102.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.102.2...@kajabi/sage-react@0.102.3) (2022-07-12)
+
+
+### Bug Fixes
+
+* **form-elements:** add info wrapper to stack the error and hint ([a146751](https://github.com/Kajabi/sage-lib/commit/a14675118b167b05e30a5d527754092611ee061e))
+* **gap:** update to have token level grid-gap class ([f538de2](https://github.com/Kajabi/sage-lib/commit/f538de2c11106f8af751b1e9c1921ca156bb5d70))
+* **modal:** add gap property ([b6986c6](https://github.com/Kajabi/sage-lib/commit/b6986c64cfc4702a841caa56538d9a5985b40559))
+
+
+
+
+
 ## [0.102.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.102.1...@kajabi/sage-react@0.102.2) (2022-07-11)
 
 **Note:** Version bump only for package @kajabi/sage-react
