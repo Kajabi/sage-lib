@@ -14,21 +14,36 @@
 
 <%# Video player modal %>
 <%= sage_component SageModal, { id: "cool-modal" } do %>
-  <header class="sage-modal__header">
-    <h1 class="t-sage-heading-4">Example Sage Modal</h1>
-    <aside class="sage-modal__header-aside">
-      <button class="sage-btn sage-btn--secondary sage-btn--subtle sage-btn--icon-only-dot-menu-horizontal">
-        <span class="visually-hidden">Menu</span>
-      </button>
-    </aside>
-  </header>
-  <div class="sage-modal__content">
-    <p class="t-sage-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-  </div>
-  <footer class="sage-modal__footer">
-    <aside class="sage-modal__footer-aside">
-      <button class="sage-btn sage-btn--subtle sage-btn--secondary" data-js-modal-close>Close Modal</button>
-    </aside>
-    <button class="sage-btn sage-btn--primary sage-btn--icon-left-check">Take An Action</button>
-  </footer>
+  <%= sage_component SageModalContent, {
+      header_image: "card-placeholder-sm.png",
+      title: "Example Modal"
+    } do %>
+      <% content_for :sage_header_aside do %>
+        <%= sage_component SageButton, {
+          style: "secondary",
+          subtle: true,
+          value: "Close Modal",
+          icon: { name: "remove", style: "only" },
+          attributes: { "data-js-modal": true }
+        } %>
+      <% end %>
+
+      <p class='#{SageClassnames::TYPE::BODY}'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+      <% content_for :sage_footer do %>
+        <% content_for :sage_footer_aside do %>
+          <%= sage_component SageButton, {
+            style: "secondary",
+            subtle: true,
+            value: "Close Modal",
+            attributes: { "data-js-modal": true }
+          } %>
+        <% end %>
+        <%= sage_component SageButton, {
+          style: "primary",
+          icon: { name: "check", style: "left" },
+          value: "Take An Action",
+        } %>
+      <% end %>
+    <% end %>
 <% end %>
