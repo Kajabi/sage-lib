@@ -16,7 +16,7 @@ export const PanelListItem = ({
     className,
     {
       [`${SageClassnames.lookupGridTemplate(gridTemplate)}`]: gridTemplate,
-      [`sage-panel__list-item--gap-${gap}`]: gap
+      [`sage-grid-gap-${gap}`]: gap
     }
   );
 

@@ -166,12 +166,6 @@ $-label-statuses: (
   gap: sage-spacing(xs);
 }
 
-@each $-key, $-value in $sage-spacings {
-  .sage-label-group--gap-#{$-key} {
-    gap: sage-spacing($-key);
-  }
-}
-
 .sage-label-group--align-center {
   justify-content: center;
 }

@@ -158,7 +158,9 @@ export const Input = ({
         </div>
       )}
       {message && (
-        <div className="sage-input__message">{message}</div>
+        <div className="sage-input__info">
+          <div className="sage-input__message">{message}</div>
+        </div>
       )}
       {popover}
     </div>

@@ -138,16 +138,7 @@ $-btn-subtle-styles: (
 $-btn-interactive-badge-icon-size: rem(24px);
 $-btn-loading-min-height: rem(36px);
 
-
 // stylelint-disable max-nesting-depth
-:root {
-  --icon-block-padding: #{rem(6px)};
-
-  @media screen and (min-width: sage-breakpoint(lg-min)) {
-    --icon-block-padding: #{rem(4px)};
-  }
-}
-
 .sage-btn {
   @extend %t-sage-body-semi;
   @include sage-button-style-reset();
@@ -768,12 +759,6 @@ $-alert-colors: (
     @media screen and (max-width: sage-breakpoint(lg-max)) {
       justify-content: center;
     }
-  }
-}
-
-@each $-key, $-value in $sage-spacings {
-  .sage-btn-group--gap-#{$-key} {
-    gap: sage-spacing($-key);
   }
 }
 

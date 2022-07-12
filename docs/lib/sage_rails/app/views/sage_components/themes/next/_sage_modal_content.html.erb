@@ -77,6 +77,7 @@
 <div
   class="
     sage-modal__content
+    <%= "sage-grid-gap-#{component.gap}" if component.gap %>
     <%= "sage-modal__content--spacing-#{component.spacing}" if component.spacing.present? %>
     <%= component.generated_css_classes %>"
   <%= component.generated_html_attributes.html_safe %>

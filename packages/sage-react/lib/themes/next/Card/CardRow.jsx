@@ -18,7 +18,7 @@ export const CardRow = ({
     {
       [`${SageClassnames.lookupGridTemplate(gridTemplate)}`]: gridTemplate,
       [`sage-card__row--vertical-align-${verticalAlign}`]: verticalAlign,
-      [`sage-card__row--gap-${gap}`]: gap,
+      [`sage-grid-gap-${gap}`]: gap,
     }
   );
 
