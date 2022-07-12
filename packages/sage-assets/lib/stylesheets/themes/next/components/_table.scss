@@ -89,8 +89,28 @@ $-table-avatar-width: rem(32px);
     color: $-table-cell-font-color;
   }
 
+  thead {
+    tr {
+      background-color: transparent;
+
+      &:hover,
+      &:focus,
+      &:active,
+      &:focus-within {
+        background-color: transparent;
+      }
+    }
+  }
+
   tr {
     position: relative;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &:focus-within {
+      background-color: $-table-row-color-hover;
+    }
   }
 
   td {
