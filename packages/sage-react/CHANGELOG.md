@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.103.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.102.3...@kajabi/sage-react@0.103.0) (2022-07-12)
+
+
+### Features
+
+* **form select:** enable disabled option in React components, fix value prop for controlled element ([e1fdf87](https://github.com/Kajabi/sage-lib/commit/e1fdf8700de05817420a97aa1297420340e553e9))
+* **modal:** adds content scroll to Next React ([0f0be51](https://github.com/Kajabi/sage-lib/commit/0f0be51ae26355abdef0f162b7c5752793d4b2a5))
+
+
+
+
+
 ## [0.102.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.102.2...@kajabi/sage-react@0.102.3) (2022-07-12)
 
 

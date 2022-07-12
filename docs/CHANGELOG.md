@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.72.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.71.3...@kajabi/sage@4.72.0) (2022-07-12)
+
+
+### Features
+
+* **form select:** provide ability to pass through selected and disabled option attributes ([6e96b55](https://github.com/Kajabi/sage-lib/commit/6e96b55bd3871722cfad14f54d62040eb319ff24))
+* **form select:** remove message container on legacy component when empty ([1ecdf74](https://github.com/Kajabi/sage-lib/commit/1ecdf741ef0d6571798b1bc23fca3612844b8389))
+* **modal:** adds content scrolling to Next ([d6c5b12](https://github.com/Kajabi/sage-lib/commit/d6c5b124679a8fe23f2341a226f4dacc861ec0ae))
+
+
+
+
+
 ## [4.71.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.71.2...@kajabi/sage@4.71.3) (2022-07-12)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.89.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.88.2...@kajabi/sage-assets@0.89.0) (2022-07-12)
+
+
+### Features
+
+* **modal:** adds content scrolling to Next ([d6c5b12](https://github.com/Kajabi/sage-lib/commit/d6c5b124679a8fe23f2341a226f4dacc861ec0ae))
+
+
+
+
+
 ## [0.88.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.88.1...@kajabi/sage-assets@0.88.2) (2022-07-12)
 
 
