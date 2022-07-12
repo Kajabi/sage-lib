@@ -112,16 +112,9 @@
     },
     {
       title: "Default action",
-      data: "Default actions show just an arrow icon.",
+      data: md("Default actions show an arrow icon next to the `value` text."),
       action: {
-        attributes: { href: "#" }
-      }
-    },
-    {
-      title: "Default action showing label",
-      data: md("Set `icon_only: false` to show the default label."),
-      action: {
-        icon_only: false,
+        value: "View more",
         attributes: { href: "#" }
       }
     },
@@ -130,15 +123,6 @@
       data: "Actions can be set to use a label. In such cases an custom action width may also be needed.",
       action: {
         value: "Details",
-        attributes: { href: "#" }
-      }
-    },
-    {
-      title: "Custom labeled action visually hidden",
-      data: md("Custom labels can also be made visually hidden with `value` set but `icon_only: true`"),
-      action: {
-        value: "Details",
-        icon_only: true,
         attributes: { href: "#" }
       }
     },

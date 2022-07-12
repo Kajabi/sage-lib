@@ -48,7 +48,7 @@ export const Description = ({
             {data}
 
             {action && (
-              <dd className="sage-description__action">
+              <span className="sage-description__action">
                 <Button
                   color={Button.COLORS.PRIMARY}
                   subtle={true}
@@ -59,7 +59,7 @@ export const Description = ({
                 >
                   {action.value || 'View more'}
                 </Button>
-              </dd>
+              </span>
             )}
           </dd>
         )}
@@ -119,14 +119,14 @@ export const Description = ({
   };
 
   return (
-    <div
+    <dl
       className={classNames}
       style={getCustomProps()}
       {...rest}
     >
       {renderItems()}
       {children}
-    </div>
+    </dl>
   );
 };
 
@@ -149,7 +149,6 @@ Description.propTypes = {
   items: PropTypes.arrayOf(PropTypes.shape({
     action: PropTypes.shape({
       attributes: PropTypes.objectOf(PropTypes.object),
-      iconOnly: PropTypes.bool,
       value: PropTypes.string,
     }),
     data: PropTypes.node,

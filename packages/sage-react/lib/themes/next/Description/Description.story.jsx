@@ -75,14 +75,7 @@ MultipleItemsWithActionButton.args = {
       title: 'Default action',
       data: 'Default actions show just an arrow icon.',
       action: {
-        attributes: { href: '#' }
-      }
-    },
-    {
-      title: 'Default action showing label',
-      data: 'Set `icon_only: false` to show the default label.',
-      action: {
-        iconOnly: false,
+        value: 'View more',
         attributes: { href: '#' }
       }
     },
@@ -91,15 +84,6 @@ MultipleItemsWithActionButton.args = {
       data: 'Actions can be set to use a label. In such cases an custom action width may also be needed.',
       action: {
         value: 'Details',
-        attributes: { href: '#' }
-      }
-    },
-    {
-      title: 'Custom labeled action visually hidden',
-      data: 'Custom labels can also be made visually hidden with `value` set but `icon_only: true`',
-      action: {
-        value: 'Details',
-        iconOnly: true,
         attributes: { href: '#' }
       }
     },
