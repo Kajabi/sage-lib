@@ -8,8 +8,8 @@ export const Select = ({
   disabled,
   hasError,
   id,
-  label,
   includeLabelInOptions,
+  label,
   message,
   onChange,
   options,
@@ -40,6 +40,7 @@ export const Select = ({
 
         {options.map((option, i) => {
           let optionLabel,
+            optionDisabled,
             optionValue;
           if (typeof option === 'string') {
             optionLabel = option;
@@ -47,10 +48,17 @@ export const Select = ({
           } else {
             optionLabel = option.label;
             optionValue = option.value;
+            optionDisabled = option.disabled;
           }
 
           return (
-            <option key={i.toString()} value={optionValue}>{optionLabel}</option>
+            <option
+              key={i.toString()}
+              value={optionValue}
+              disabled={optionDisabled}
+            >
+              {optionLabel}
+            </option>
           );
         })}
       </select>
@@ -79,14 +87,14 @@ Select.defaultProps = {
   message: null,
   onChange: (evt) => evt,
   options: [],
-  value: null,
+  value: '',
 };
 
 Select.propTypes = {
   className: PropTypes.string,
-  id: PropTypes.string.isRequired,
   disabled: PropTypes.bool,
   hasError: PropTypes.bool,
+  id: PropTypes.string.isRequired,
   includeLabelInOptions: PropTypes.bool,
   label: PropTypes.string,
   message: PropTypes.string,
