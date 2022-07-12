@@ -1,7 +1,7 @@
+<h3 class="<%= SageClassnames::TYPE::HEADING_6 %>">Default</h3>
 <%= sage_component SageFormSelect, {
   name: "Characters",
   id: "characters",
-  has_error: false,
   select_options: [
     {
       text: "-- Please Select a Character --",
@@ -35,6 +35,7 @@
   message: "This is a message"
 } %>
 
+<h3 class="<%= SageClassnames::TYPE::HEADING_6 %>">Error state with message and disabled option</h3>
 <%= sage_component SageFormSelect, {
   name: "Pets",
   has_error: true,
@@ -46,6 +47,7 @@
     {
       text: "(None Specified)",
       value: "",
+      selected: true
     },
     {
       text: "Dog",
@@ -66,6 +68,7 @@
     {
       text: "Spider",
       value: "spider",
+      disabled: true
     },
     {
       text: "Goldfish",
@@ -75,6 +78,7 @@
   message: "This is a message"
 } %>
 
+<h3 class="<%= SageClassnames::TYPE::HEADING_6 %>">Disabled (with pre-selected option)</h3>
 <%= sage_component SageFormSelect, {
   name: "Sports",
   disabled: true,
@@ -93,7 +97,8 @@
     },
     {
       text: "Baseball",
-      value: "baseball"
+      value: "baseball",
+      selected: true
     },
     {
       text: "Blitzball",

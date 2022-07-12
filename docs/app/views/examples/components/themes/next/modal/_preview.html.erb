@@ -1,5 +1,7 @@
 <%
   sample_body_text = "<p class='#{SageClassnames::TYPE::BODY}'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>".html_safe
+
+  long_sample_text = "<p class=' #{SageClassnames::TYPE::BODY}'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse urna leo, condimentum nec pellentesque finibus, ultricies pulvinar ante. Donec eu interdum ligula. Pellentesque aliquam ullamcorper orci, nec tempor libero tristique in. Aliquam vitae felis at leo condimentum placerat eget id libero. In dictum tortor ac accumsan aliquam. Donec sit amet tortor porttitor, tincidunt nisl at, egestas lacus. Integer metus augue, aliquet accumsan vulputate eget, tristique id erat. Donec a venenatis nibh, ac molestie risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus in orci vitae ex tempor ultrices in a leo. Sed purus magna, vulputate aliquet ligula eget, consectetur sagittis nunc.</p>".html_safe
 %>
 <%= sage_component SagePanelBlock, {} do %>
   <%= sage_component SageButtonGroup, { wrap: true, gap: :sm, spacer: { bottom: :sm }} do %>
@@ -9,6 +11,14 @@
       value: "Modal",
       attributes: {
         "data-js-modaltrigger": "cool-modal",
+      }
+    } %>
+    <%= sage_component SageButton, {
+      style: "primary",
+      icon: { name: "launch", style: "right" },
+      value: "Modal with Content Scrolling",
+      attributes: {
+        "data-js-modaltrigger": "cool-modal-scrolling",
       }
     } %>
     <%= sage_component SageButton, {
@@ -95,6 +105,65 @@
       <%= sample_body_text %>
 
       <%= sample_body_text %>
+
+      <% content_for :sage_footer do %>
+        <% content_for :sage_footer_aside do %>
+          <%= sage_component SageButton, {
+            style: "secondary",
+            subtle: true,
+            value: "Close Modal",
+            attributes: { "data-js-modal": true }
+          } %>
+        <% end %>
+        <%= sage_component SageButton, {
+          style: "secondary",
+          icon: { name: "check", style: "left" },
+          value: "Take An Action",
+        } %>
+        <%= sage_component SageButton, {
+          style: "primary",
+          icon: { name: "check", style: "left" },
+          value: "Take An Action",
+        } %>
+      <% end %>
+    <% end %>
+  <% end %>
+
+  <%# Standard Modal with Scrolling %>
+  <%= sage_component SageModal, { allow_scroll: true, id: "cool-modal-scrolling" } do %>
+    <%= sage_component SageModalContent, {
+      title: "Example Modal",
+      subheader: "Example Subheader",
+      help_content: "<p>Popover content</p>",
+      help_title: "Example Popover Title",
+      help_link: {
+        href: "#",
+        name: "Learn more about modals"
+      }
+    } do %>
+      <% content_for :sage_header_aside do %>
+        <%= sage_component SageButton, {
+          style: "secondary",
+          subtle: true,
+          value: "Close Modal",
+          icon: { name: "remove", style: "only" },
+          attributes: { "data-js-modal": true }
+        } %>
+      <% end %>
+
+      <% content_for :sage_header_indicator do %>
+        <%= sage_component SageIndicator, {
+          current_item: 2,
+          label: "Page",
+          num_items: 5,
+          show_text: true
+        } %>
+      <% end %>
+
+      <%= long_sample_text %>
+      <%= long_sample_text %>
+      <%= long_sample_text %>
+      <%= long_sample_text %>
 
       <% content_for :sage_footer do %>
         <% content_for :sage_footer_aside do %>

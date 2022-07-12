@@ -1,7 +1,13 @@
 <tr>
+  <td><%= md('`disabled`') %></td>
+  <td><%= md('Enabling this property adds the `disabled` attribute to the component. <br>⚠️ `disabled` inputs are not submitted in forms.') %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`false`') %></td>
+</tr>
+<tr>
   <td><%= md('`has_error`') %></td>
   <td><%= md('Enabling this property adds the `.sage-form-field--error` class to the component.') %></td>
-  <td><%= md('String') %></td>
+  <td><%= md('Boolean') %></td>
   <td><%= md('`nil`') %></td>
 </tr>
 <tr>
@@ -19,6 +25,13 @@
 <tr>
   <td><%= md('`select_options`') %></td>
   <td><%= md('An array of items that will serve as the `<select>`\'s `<option>`s') %></td>
-  <td><%= md('Array') %></td>
+  <td><%= md('```
+Array<{
+  text: String,
+  value: String (optional),
+  disabled: Boolean (false),
+  selected: Boolean (false)
+}>
+  ```') %></td>
   <td><%= md('`nil`') %></td>
 </tr>

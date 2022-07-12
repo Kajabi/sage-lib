@@ -10,6 +10,8 @@ class SageFormSelect < SageComponent
     select_options: [:optional, [[{
       text: String,
       value: [:optional, NilClass, String],
+      disabled: [:optional, TrueClass],
+      selected: [:optional, TrueClass],
     }]]],
   })
 end
