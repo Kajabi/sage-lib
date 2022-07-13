@@ -1,6 +1,6 @@
-const format = require('../../bin/formats');
-const transform = require('../../bin/transforms');
-const transformGroup = require('../../bin/transform-groups');
+const format = require('./bin/formats');
+const transform = require('./bin/transforms');
+const transformGroup = require('./bin/transform-groups');
 // const platforms = require('../../bin/platforms');
 
 //
@@ -11,13 +11,12 @@ module.exports = {
   platforms: {
     sassTokens: {
       transformGroup: 'sage/scss/tokens',
-      buildPath: 'packages/sage-assets/lib/stylesheets/themes/next/dictionary/',
+      buildPath: 'packages/sage-assets/lib/stylesheets/dictionary/',
       files: [{
         destination: '_tokens.scss',
         format: 'sage/scss/tokens',
         options: {
           outputReferences: false,
-          sageTheme: 'Next',
         }
       }]
     },
@@ -25,28 +24,26 @@ module.exports = {
       transformGroup: 'sage/rails/tokens',
       buildPath: 'docs/lib/sage_rails/app/sage_tokens/',
       files: [{
-        destination: 'sage_dictionary_next.rb',
+        destination: 'sage_dictionary.rb',
         format: 'sage/rails/tokens',
         options: {
           outputReferences: false,
-          sageTheme: 'Next',
         }
       }],
     },
     reactTokens: {
       transformGroup: 'sage/jsx/tokens',
-      buildPath: 'packages/sage-react/lib/themes/next/configs/dictionary/',
+      buildPath: 'packages/sage-react/lib/configs/dictionary/',
       files: [{
         destination: 'tokens.js',
         format: 'sage/jsx/tokens',
         options: {
           outputReferences: false,
-          sageTheme: 'Next',
         }
       }]
     },
   },
-  source: [`style-dictionary/themes/next/tokens/**/*.json`],
+  source: [`style-dictionary/tokens/**/*.json`],
   transform,
   transformGroup,
 };
