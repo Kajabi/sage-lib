@@ -4,8 +4,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = {
   mode: "production",
   entry: {
-    "main": ["./lib/stylesheets/themes/legacy/index.scss"],
-    "main-legacy": ["./lib/stylesheets/themes/legacy/index.scss"],
+    "main": ["./lib/stylesheets/index.scss"],
     "main-next": ["./lib/stylesheets/themes/next/index.scss"],
   },
   output: {
