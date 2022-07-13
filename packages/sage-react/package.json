@@ -39,7 +39,6 @@
     "heroku-prebuild": "npm install react@16.13.1 react-dom@16.13.1 react-router-dom@5.1.0 --no-package-lock",
     "lint": "yarn run eslint \"lib/**/*.{js,jsx}\"",
     "storybook": "yarn npm-run-all -p storybook:*",
-    "storybook:legacy": "start-storybook -p 4100 --ci -c .storybook-legacy",
     "storybook:next": "start-storybook -p 4110 --ci -c .storybook-next",
     "preversion": "yarn install && yarn run build",
     "test": "jest --runInBand",

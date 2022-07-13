@@ -1,4 +1,3 @@
-import * as SageLegacy from './themes/legacy';
 import * as SageNext from './themes/next';
 
 export const {
@@ -75,6 +74,4 @@ export const {
   SageTokens,
   useSageBreakpoint,
   SageBreakpointProvider,
-} = window.SAGE_THEME === 'sage_theme_next'
-  ? SageNext
-  : SageLegacy;
+} = SageNext;

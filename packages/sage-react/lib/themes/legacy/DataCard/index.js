@@ -1,1 +1,0 @@
-export { DataCard } from './DataCard';
