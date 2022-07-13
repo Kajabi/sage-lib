@@ -37,7 +37,7 @@
 
 <h3 class="<%= SageClassnames::TYPE::HEADING_6 %>">Error state with message and disabled option</h3>
 <%= sage_component SageFormSelect, {
-  name: "Pets (with disabled option)",
+  name: "Pets",
   has_error: true,
   select_options: [
     {
@@ -52,7 +52,6 @@
     {
       text: "Dog",
       value: "dog",
-      disabled: true,
     },
     {
       text: "Cat",

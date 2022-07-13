@@ -10,11 +10,7 @@ export default {
     id: 'field-1',
     includeLabelInOptions: false,
     options: [
-      {
-        label: 'Option 1',
-        value: 'option-1',
-        disabled: true,
-      },
+      'Option 1',
       'Option 2',
       'Option 3',
       'Option 4',
