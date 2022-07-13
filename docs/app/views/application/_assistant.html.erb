@@ -1,15 +1,6 @@
 <%= sage_component SageAssistant, { logo: { path: "sage.svg" }} do %>
   <%= render "application/nav" %>
   <% sage_component_section :assistant_actions do %>
-    <%= sage_component SageSwitch, {
-      id: "sage-theme-toggle",
-      label_text: "Use Next theme",
-      name: "sage-theme-toggle",
-      value: "next",
-      checked: true,
-      type: "checkbox",
-      css_classes: "sage-theme-switch",
-    } %>
     <%= sage_component SageButton, {
       value: "Search",
       attributes: {
