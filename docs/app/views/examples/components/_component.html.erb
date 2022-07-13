@@ -1,6 +1,6 @@
 <%
 partial_path_root = "examples/components/themes/"
-theme_folder = SageRails.next_theme? ? "next" : "legacy"
+theme_folder = "next"
 
 info_content = sage_components.select { |component| component[:title] == @title }[0]
 props_content = render partial: "#{partial_path_root}/#{theme_folder}/#{@title}/props"
