@@ -80,7 +80,7 @@ $-link-base-styles: (
   }
 
   .sage-catalog-item__title &,
-  &.sage-table-cell__link--primary {
+  &.sage-link--table-cell-primary {
     position: static;
 
     &::before {

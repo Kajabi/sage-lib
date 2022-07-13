@@ -127,8 +127,8 @@ $-table-avatar-width: rem(32px);
     }
   }
 
-  a:not(.sage-table-cell__link--primary),
-  button:not(.sage-table-cell__link--primary) {
+  a:not(.sage-link--table-cell-primary),
+  button:not(.sage-link--table-cell-primary) {
     z-index: sage-z-index(default, 2);
   }
 
@@ -381,7 +381,7 @@ $-table-avatar-width: rem(32px);
     margin-left: 0.5em;
   }
 }
-.sage-table-cell__link--primary {
+.sage-link--table-cell-primary {
   color: sage-color(charcoal, 300);
 
   &:active,

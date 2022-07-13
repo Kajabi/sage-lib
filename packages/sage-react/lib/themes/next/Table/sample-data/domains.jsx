@@ -8,7 +8,7 @@ export const domains = [
   {
     domain: (
       <Link
-        className="sage-table-cell__link--primary"
+        className="sage-link--table-cell-primary"
         removeUnderline={true}
         href="https://www.daydreamsurfshop.mykajabi.com"
       >
@@ -36,7 +36,7 @@ export const domains = [
   {
     domain: (
       <Link
-        className="sage-table-cell__link--primary"
+        className="sage-link--table-cell-primary"
         removeUnderline={true}
         href="https://courses.daydreamsurfshop.com"
       >
