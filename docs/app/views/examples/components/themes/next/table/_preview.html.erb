@@ -236,9 +236,14 @@ sample_table = {
   selectable: true,
   rows: [
     [
-      %(
-        #{link_to("User", "#", class: "sage-link sage-link--remove-underline sage-table-cell__link--primary")}
-      ),
+      sage_component(SageLink, {
+        label: "User",
+        remove_underline: true,
+        show_label: true,
+        url: "#",
+        style: "secondary",
+        css_classes: "sage-table-cell__link--primary"
+      }),
       "$20,323.30 USD",
       {
         value: "Sed posuere consectetur",
@@ -246,45 +251,44 @@ sample_table = {
           class: "sage-table-cell--truncate"
         }
       },
-      %(
-        #{sage_component(SageBadge, {
+      sage_component(SageBadge, {
           value: "published",
           color: "published",
-        })}
-      ),
-      %(
-        <div class="sage-btn-group sage-grid-gap-xs">
-          #{
-            sage_component(SageButton, {
-              subtle: true,
-              value: 'Edit',
-              icon: { name: 'pen', style: 'only' },
-              style: 'primary',
-              attributes: {
-                href: "?edit=#edit",
-                "data-js-tooltip": "Edit",
-              }
-            })
-          }
-          #{
-            sage_component(SageButton, {
-              subtle: true,
-              value: 'Delete',
-              icon: { name: 'trash', style: 'only' },
-              style: 'danger',
-              attributes: {
-                href: "?remove=#delete",
-                "data-js-tooltip": "Delete",
-              }
-            })
-          }
-        </div>
-      )
+      }),
+      sage_component(SageButtonGroup, {
+        content: (
+          sage_component(SageButton, {
+            subtle: true,
+            value: 'Edit',
+            icon: { name: 'pen', style: 'only' },
+            style: 'primary',
+            attributes: {
+              href: "?edit=#edit",
+              "data-js-tooltip": "Edit",
+            }
+          }) << sage_component(SageButton, {
+            subtle: true,
+            value: 'Delete',
+            icon: { name: 'trash', style: 'only' },
+            style: 'danger',
+            attributes: {
+              href: "?remove=#delete",
+              "data-js-tooltip": "Delete",
+            }
+          })
+        ),
+        gap: "xs"
+      })
     ],
     [
-      %(
-        #{link_to("Title", "#", class: "sage-link sage-link--remove-underline sage-table-cell__link--primary")}
-      ),
+      sage_component(SageLink, {
+        label: "Title",
+        remove_underline: true,
+        show_label: true,
+        url: "#",
+        style: "secondary",
+        css_classes: "sage-table-cell__link--primary"
+      }),
       "$1,101,444.31 USD",
       {
         value: "Curabitur blandit tempus",
@@ -292,40 +296,34 @@ sample_table = {
           class: "sage-table-cell--truncate"
         }
       },
-      %(
-        #{sage_component(SageBadge, {
+      sage_component(SageBadge, {
           value: "published",
           color: "published",
-        })}
-      ),
-      %(
-        <div class="sage-btn-group sage-grid-gap-xs">
-          #{
-            sage_component(SageButton, {
-              subtle: true,
-              value: 'Edit',
-              icon: { name: 'pen', style: 'only' },
-              style: 'primary',
-              attributes: {
-                href: "?edit=#edit",
-                "data-js-tooltip": "Edit",
-              }
-            })
-          }
-          #{
-            sage_component(SageButton, {
-              subtle: true,
-              value: 'Delete',
-              icon: { name: 'trash', style: 'only' },
-              style: 'danger',
-              attributes: {
-                href: "?remove=#delete",
-                "data-js-tooltip": "Delete",
-              }
-            })
-          }
-        </div>
-      )
+      }),
+      sage_component(SageButtonGroup, {
+        content: (
+          sage_component(SageButton, {
+            subtle: true,
+            value: 'Edit',
+            icon: { name: 'pen', style: 'only' },
+            style: 'primary',
+            attributes: {
+              href: "?edit=#edit",
+              "data-js-tooltip": "Edit",
+            }
+          }) << sage_component(SageButton, {
+            subtle: true,
+            value: 'Delete',
+            icon: { name: 'trash', style: 'only' },
+            style: 'danger',
+            attributes: {
+              href: "?remove=#delete",
+              "data-js-tooltip": "Delete",
+            }
+          })
+        ),
+        gap: "xs"
+      })
     ]
   ]
 } %>
