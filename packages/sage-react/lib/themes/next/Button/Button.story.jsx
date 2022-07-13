@@ -50,6 +50,11 @@ IconOnly.args = {
   subtle: true
 };
 
+export const loading = Template.bind({});
+loading.args = {
+  spinnerOnSubmit: 'my aria label'
+};
+
 export const Fullwidth = Template.bind({});
 Fullwidth.args = {
   fullWidth: true

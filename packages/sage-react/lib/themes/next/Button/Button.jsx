@@ -21,6 +21,7 @@ export const Button = React.forwardRef(({
   linkTag,
   small,
   subtle,
+  spinnerOnSubmit,
   ...rest
 }, ref) => {
   const { to, href } = rest;
@@ -41,6 +42,10 @@ export const Button = React.forwardRef(({
       disabled: isLink && disabled,
     }
   );
+
+  const attrs = {
+    'data-js-sage-spinner-on-submit': spinnerOnSubmit,
+  };
 
   const renderContent = () => {
     if (iconOnly) {
@@ -79,6 +84,7 @@ export const Button = React.forwardRef(({
       disabled={!isLink && disabled}
       tag={isLink ? linkTag : null}
       suppressDefaultClass={isLink}
+      {...attrs}
       {...rest}
     >
       {renderContent()}
@@ -107,6 +113,7 @@ Button.defaultProps = {
   small: false,
   subtle: false,
   type: 'button',
+  spinnerOnSubmit: null,
 };
 
 Button.propTypes = {
@@ -126,4 +133,5 @@ Button.propTypes = {
   small: PropTypes.bool,
   subtle: PropTypes.bool,
   type: PropTypes.string,
+  spinnerOnSubmit: PropTypes.string,
 };
