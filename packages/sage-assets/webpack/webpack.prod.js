@@ -5,7 +5,6 @@ module.exports = {
   mode: "production",
   entry: {
     "main": ["./lib/stylesheets/index.scss"],
-    "main-next": ["./lib/stylesheets/themes/next/index.scss"],
   },
   output: {
     path: path.resolve(__dirname, "../", "dist"),
