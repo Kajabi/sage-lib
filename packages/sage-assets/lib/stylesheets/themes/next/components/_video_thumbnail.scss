@@ -48,7 +48,7 @@
   }
 
   &:hover::after {
-    background-color: rgba(sage-color(black, 100), 1);;
+    background-color: sage-color(black, 100);
   }
 
   &:focus {
