@@ -6,4 +6,4 @@ import "@kajabi/sage-system";
 
 // --- Sage Docs Assets ----------
 require.context("../images/docs", true);
-import "../stylesheets/docs/index-next.scss";
+import "../stylesheets/docs/index.scss";

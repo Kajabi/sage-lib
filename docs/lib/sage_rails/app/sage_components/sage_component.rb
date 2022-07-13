@@ -94,12 +94,7 @@ class SageComponent
   end
 
   def template_path
-    template_path_base = self.class.to_s.underscore
-    if SageRails.next_theme?
-      "themes/next/#{template_path_base}"
-    else
-      "themes/legacy/#{template_path_base}"
-    end
+    self.class.to_s.underscore
   end
 
   def self.set_attribute_schema(attributes)

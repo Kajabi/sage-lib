@@ -1,8 +1,8 @@
 // System
 
 // @import "~@kajabi/sage-assets/dist/main";
-@import "~@kajabi/sage-assets/lib/stylesheets/themes/next/index";
-@import "~@kajabi/sage-assets/lib/stylesheets/themes/next/consumables";
+@import "~@kajabi/sage-assets/lib/stylesheets/index";
+@import "~@kajabi/sage-assets/lib/stylesheets/consumables";
 
 // Documentation Variables
 @import "variables";
@@ -33,3 +33,5 @@
 @import "docs_container";
 @import "rouge_theme";
 @import "slot_placeholder";
+
+@import "mocks";
