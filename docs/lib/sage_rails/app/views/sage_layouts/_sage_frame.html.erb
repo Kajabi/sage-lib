@@ -1,80 +1,173 @@
 <%
-#
-# Set up defaults for options that allow open-ended values
-#
-
-background = component.background.present? ? component.background : nil
-width = component.width.present? ? component.width : nil
-max_width = component.max_width.present? ? component.max_width : nil
-min_width = component.min_width.present? ? component.min_width : nil
+# Ensure a default for the tag
 tag = component.tag.present? ? component.tag : "div"
 
 #
-# Set up additional style configs
+# Set up responsive style settings
 #
 
+backgrounds = nil
+custom_backgrounds = {}
+custom_max_widths = {}
+custom_min_widths = {}
+custom_widths = {}
 has_custom_styles = component.styles.present? ? true : false
-
-is_custom_width = false
-if (width && !SageTokens::FRAME_WIDTHS.include?(width))
-  is_custom_width = true
-  has_custom_styles = true
-  width = "custom"
-end
-
-is_custom_max_width = false
-if (max_width && !SageTokens::FRAME_WIDTHS.include?(max_width))
-  is_custom_max_width = true
-  has_custom_styles = true
-  max_width = "custom"
-end
-
-is_custom_min_width = false
-if (min_width && !SageTokens::FRAME_WIDTHS.include?(min_width))
-  is_custom_min_width = true
-  has_custom_styles = true
-  min_width = "custom"
-end
-
-# Set up additional background configs
 is_custom_background = false
-if (background && !SageTokens::COLOR_SLIDERS.include?(background))
-  is_custom_background = true
-  has_custom_styles = true
-  background = "custom"
+is_custom_max_width = false
+is_custom_min_width = false
+is_custom_width = false
+max_widths = nil
+min_widths = nil
+widths = nil
+
+if (component.background.present?)
+  # Ensure backgrounds is a hash first
+  backgrounds = component.background.is_a?(Hash) ? component.background : { default: component.background }
+
+  # For each custom background, move it to a separate hash
+  backgrounds.keys.each do | key |
+    if !SageTokens::COLOR_SLIDERS.include?(backgrounds[key])
+      has_custom_styles = true
+      is_custom_background = true
+      custom_backgrounds[key] = backgrounds[key]
+      backgrounds[key] = "custom"
+    end
+  end
+end
+
+if (component.max_width.present?)
+  # Ensure max widths is a hash first
+  max_widths = component.max_width.is_a?(Hash) ? component.max_width : { default: component.max_width }
+
+  # For each custom max width, move it to a separate hash
+  max_widths.keys.each do | key |
+    if !SageTokens::FRAME_WIDTHS.include?(max_widths[key])
+      has_custom_styles = true
+      is_max_custom_width = true
+      custom_max_widths[key] = max_widths[key]
+      max_widths[key] = "custom"
+    end
+  end
+end
+
+if (component.min_width.present?)
+  # Ensure min widths is a hash first
+  min_widths = component.min_width.is_a?(Hash) ? component.min_width : { default: component.min_width }
+
+  # For each custom min width, move it to a separate hash
+  min_widths.keys.each do | key |
+    if !SageTokens::FRAME_WIDTHS.include?(min_widths[key])
+      has_custom_styles = true
+      is_min_custom_width = true
+      custom_min_widths[key] = min_widths[key]
+      min_widths[key] = "custom"
+    end
+  end
+end
+
+if (component.width.present?)
+  # Ensure widths is a hash first
+  widths = component.width.is_a?(Hash) ? component.width : { default: component.width }
+
+  # For each custom width, move it to a separate hash
+  widths.keys.each do | key |
+    if !SageTokens::FRAME_WIDTHS.include?(widths[key])
+      has_custom_styles = true
+      is_custom_width = true
+      custom_widths[key] = widths[key]
+      widths[key] = "custom"
+    end
+  end
 end
 
 if (component.width_ratio.present?)
   has_custom_styles = true
 end
-
 %>
 <<%= tag %>
-  class="
-    sage-frame
-    <%= "sage-frame--align-#{component.align}" if component.align.present? %>
-    <%= "sage-frame--background-#{background}" if background %>
-    <%= "sage-frame--border-#{component.border}" if component.border.present? %>
-    <%= "sage-frame--border-radius-#{component.border_radius}" if component.border_radius.present? %>
-    <%= "sage-frame--direction-#{component.direction}" if component.direction.present? %>
-    <%= "sage-frame--gap-#{component.gap}" if component.gap.present? %>
-    <%= "sage-frame--padding-#{component.padding}" if component.padding.present?%>
-    <%= "sage-frame--width-#{width}" if width %>
-    <%= "sage-frame--max-width-#{max_width}" if !is_custom_max_width && max_width %>
-    <%= "sage-frame--min-width-#{min_width}" if !is_custom_min_width && min_width %>
-    <%= "sage-frame--wrap-#{component.wrap}" if component.wrap.present?%>
-    <%= component.generated_css_classes %>
-  "
+  class="<%= [
+    "sage-frame",
+    sage_component_responsive_settings(
+      value: component.align,
+      template: "sage-frame--%{breakpoint}align-%{value}"
+    ),
+    sage_component_responsive_settings(
+      value: component.background,
+      template: "sage-frame--%{breakpoint}background-%{value}"
+    ),
+    sage_component_responsive_settings(
+      value: component.border,
+      template: "sage-frame--%{breakpoint}border-%{value}"
+    ),
+    sage_component_responsive_settings(
+      value: component.border_radius,
+      template: "sage-frame--%{breakpoint}border-radius-%{value}"
+    ),
+    sage_component_responsive_settings(
+      value: component.direction,
+      template: "sage-frame--%{breakpoint}direction-%{value}"
+    ),
+    sage_component_responsive_settings(
+      value: component.gap,
+      template: "sage-frame--%{breakpoint}gap-%{value}"
+    ),
+    sage_component_responsive_settings(
+      value: component.padding,
+      template: "sage-frame--%{breakpoint}padding-%{value}"
+    ),
+    sage_component_responsive_settings(
+      value: widths,
+      template: "sage-frame--%{breakpoint}width-%{value}",
+    ),
+    sage_component_responsive_settings(
+      value: max_widths,
+      template: "sage-frame--%{breakpoint}max-width-%{value}"
+    ),
+    sage_component_responsive_settings(
+      value: min_widths,
+      template: "sage-frame--%{breakpoint}min-width-%{value}"
+    ),
+    sage_component_responsive_settings(
+      value: component.wrap,
+      template: "sage-frame--%{breakpoint}wrap-%{value}"
+    ),
+    sage_component_responsive_settings(
+      value: component.width_ratio,
+      template: "sage-frame--%{breakpoint}width-ratio"
+    ),
+    component.generated_css_classes,
+  ].join(" ").gsub(/\s+/, " ").strip! %>"
+
   <% if has_custom_styles %>
-    style="
-      <%= "--sage-frame-width: #{component.width}; " if is_custom_width %>
-      <%= "--sage-frame-max-width: #{component.max_width}; " if is_custom_max_width %>
-      <%= "--sage-frame-min-width: #{component.min_width}; " if is_custom_min_width %>
-      <%= "--sage-frame-background: #{component.background}; " if is_custom_background %>
-      <%= "flex: #{component.width_ratio}; " if component.width_ratio %>
-      <%= component.generated_styles.html_safe %>
-    "
+    style="<%= [
+      sage_component_responsive_settings(
+        value: custom_widths,
+        value_condition: is_custom_width,
+        template: "--sage-frame-%{breakpoint}width: %{value};"
+      ),
+      sage_component_responsive_settings(
+        value: custom_max_widths,
+        value_condition: is_custom_max_width,
+        template: "--sage-frame-%{breakpoint}max-width: %{value};"
+      ),
+      sage_component_responsive_settings(
+        value: custom_min_widths,
+        value_condition: is_custom_min_width,
+        template: "--sage-frame-%{breakpoint}min-width: %{value};"
+      ),
+      sage_component_responsive_settings(
+        value: custom_backgrounds,
+        value_condition: is_custom_background,
+        template: "--sage-frame-%{breakpoint}background-custom: %{value};"
+      ),
+      sage_component_responsive_settings(
+        value: component.width_ratio,
+        template: "--sage-frame-%{breakpoint}width-ratio: %{value};"
+      ),
+      component.generated_styles.html_safe,
+    ].join(" ").gsub(/\s+/, " ").strip! %>"
   <% end %>
+
   <%= component.generated_html_attributes.html_safe %>
 >
   <%= component.content %>

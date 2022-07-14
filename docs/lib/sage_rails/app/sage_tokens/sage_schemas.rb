@@ -1,4 +1,13 @@
 module SageSchemas
+  # Build a schema with a default base_schema and also apply that schema to 
+  def SageSchemas.responsive_schema(base_schema)
+    range_schema = {}
+    SageTokens::RESPONSIVE_RANGES.each do | range |
+      range_schema[range] = base_schema
+    end
+
+    base_schema.push(range_schema)
+  end
 
   # Miscellaneous
 
@@ -113,19 +122,19 @@ module SageSchemas
   }
 
   FRAME = {
-    align: [:optional, NilClass, Set.new(SageTokens::FRAME_ALIGNMENTS)],
-    background: [:optional, NilClass, Set.new(SageTokens::COLOR_SLIDERS), String],
-    border: [:optional, NilClass, Set.new(SageTokens::FRAME_BORDERS)],
-    border_radius: [:optional, NilClass, Set.new(SageTokens::FRAME_BORDER_RADII)],
-    direction: [:optional, NilClass, Set.new(SageTokens::FRAME_DIRECTIONS)],
-    gap: [:optional, NilClass, Set.new(SageTokens::FRAME_SPACINGS)],
-    padding: [:optional, NilClass, Set.new(SageTokens::FRAME_SPACINGS)],
+    align: SageSchemas.responsive_schema([:optional, NilClass, Set.new(SageTokens::FRAME_ALIGNMENTS)]),
+    background: SageSchemas.responsive_schema([:optional, NilClass, Set.new(SageTokens::COLOR_SLIDERS), String]),
+    border: SageSchemas.responsive_schema([:optional, NilClass, Set.new(SageTokens::FRAME_BORDERS)]),
+    border_radius: SageSchemas.responsive_schema([:optional, NilClass, Set.new(SageTokens::FRAME_BORDER_RADII)]),
+    direction: SageSchemas.responsive_schema([:optional, NilClass, Set.new(SageTokens::FRAME_DIRECTIONS)]),
+    gap: SageSchemas.responsive_schema([:optional, NilClass, Set.new(SageTokens::FRAME_SPACINGS)]),
+    padding: SageSchemas.responsive_schema([:optional, NilClass, Set.new(SageTokens::FRAME_SPACINGS)]),
     tag: [:optional, NilClass, String],
-    max_width: [:optional, NilClass, String, Set.new(SageTokens::FRAME_WIDTHS)],
-    min_width: [:optional, NilClass, String, Set.new(SageTokens::FRAME_WIDTHS)],
-    width: [:optional, NilClass, String, Set.new(SageTokens::FRAME_WIDTHS)],
-    width_ratio: [:optional, NilClass, String],
-    wrap: [:optional, NilClass, Set.new(SageTokens::FRAME_WRAPS)]
+    max_width: SageSchemas.responsive_schema([:optional, NilClass, String, Set.new(SageTokens::FRAME_WIDTHS)]),
+    min_width: SageSchemas.responsive_schema([:optional, NilClass, String, Set.new(SageTokens::FRAME_WIDTHS)]),
+    width: SageSchemas.responsive_schema([:optional, NilClass, String, Set.new(SageTokens::FRAME_WIDTHS)]),
+    width_ratio: SageSchemas.responsive_schema([:optional, NilClass, String]),
+    wrap: SageSchemas.responsive_schema([:optional, NilClass, Set.new(SageTokens::FRAME_WRAPS)]),
   }
 
   LIST_ITEM = {

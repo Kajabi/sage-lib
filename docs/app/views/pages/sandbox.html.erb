@@ -5,3 +5,121 @@
 Use this scratchpad to test out elements and components in context. Just be sure not to commit your changes. ❤️
 ") %>
 <% end %>
+
+
+<%= sage_layout SageFrame, {
+  border: {
+    default: "none",
+    lg: "default",
+  },
+  border_radius: {
+    default: "none",
+    lg: "lg",
+  },
+  padding: "md",
+  direction: {
+    default: "vertical",
+    lg: "horizontal",
+  },
+  align: {
+    default: "center",
+    lg: "center-left",
+  },
+  background: {
+    default: "red-100",
+    sm_only: "orange-100",
+    md_to_lg: "yellow-100",
+    xl: "sage-100",
+  },
+} do %>
+  <%= sage_layout SageFrame, {
+    width: {
+      default: "fill",
+      lg_to_xl: "160px",
+      xl: "220px",
+    }
+  } do %>
+    <%= image_tag("card-placeholder-sm.png", alt: "", style: "max-width: 100%") %>
+  <% end %>
+  <%= sage_layout SageFrame, { width: "flex", gap: "xs" } do %>
+    <%= sage_layout SageFrame, { gap: "none" } do %>
+      <h4 class="<%= SageClassnames::TYPE::HEADING_3 %>">
+        Lorem ipsum dolor sit
+      </h4>
+      <p class="<%= "#{SageClassnames::TYPE::BODY_SMALL} #{SageClassnames::TYPE_COLORS::CHARCOAL_200}" %>">
+        Consectetur adipiscing elit
+      </p>
+    <% end %>
+    <p class="<%= SageClassnames::TYPE::BODY %>">
+      Aliquam rhoncus ipsum massa, a tempor arcu elementum sed.
+      Nullam tortor odio, ullamcorper vel elementum in, luctus et tortor.
+      Nullam tellus orci, euismod ultricies odio ut, volutpat fermentum diam.
+      Proin rhoncus sit amet felis nec iaculis.
+      Fusce aliquet augue eget semper ultrices.
+    </p>
+  <% end %>
+<% end %>
+
+<%= sage_layout SageFrame, {
+  direction: {
+    before_md: "vertical",
+    md: "horizontal",
+  },
+} do %>
+  <%= sage_layout SageFrame, {
+    border: "default",
+    border_radius: "md",
+    padding: "md",
+    width: {
+      before_md: "fill",
+      md: "flex",
+    },
+    width_ratio: {
+      md: "1",
+    },
+  } do %>
+    <p>1 Lorem ipsum dolor sit</p>
+  <% end %>
+  <%= sage_layout SageFrame, {
+    border: "default",
+    border_radius: "md",
+    padding: "md",
+    width: {
+      before_md: "fill",
+    },
+    width_ratio: {
+      md_to_lg: "1",
+      lg: "2",
+    },
+  } do %>
+    <p>2 Lorem ipsum dolor sit</p>
+  <% end %>
+  <%= sage_layout SageFrame, {
+    border: "default",
+    border_radius: "md",
+    padding: "md",
+    width: {
+      before_md: "fill",
+    },
+    width_ratio: {
+      md: "1",
+    },
+  } do %>
+    <p>1 Lorem ipsum dolor sit</p>
+  <% end %>
+  <%= sage_layout SageFrame, {
+    border: "default",
+    border_radius: "md",
+    padding: "md",
+    width: {
+      before_md: "fill",
+      md: "auto",
+    },
+    width_ratio: {
+      md_to_lg: "1",
+      lg: "2",
+    },
+  } do %>
+    <p>2 Lorem ipsum dolor sit</p>
+  <% end %>
+<% end %>

@@ -34,4 +34,20 @@
 @import "rouge_theme";
 @import "slot_placeholder";
 
-@import "mocks";
+// Sandbox 
+
+.testing {
+  background-color: sage-color(red, 100);
+
+  @include sage-breakpoint(sm-only) {
+    background-color: sage-color(orange, 100);
+  }
+
+  @include sage-breakpoint(md-to-lg) {
+    background-color: sage-color(yellow, 100);
+  }
+
+  @include sage-breakpoint(lg) {
+    background-color: sage-color(sage, 100);
+  }
+}

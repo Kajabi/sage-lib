@@ -246,3 +246,127 @@ export const StatBox = () => (
     </Frame>
   </Frame>
 );
+
+export const ResponsiveDemos = () => (
+  <>
+    <Frame
+      border={{
+        default: 'none',
+        lg: 'default',
+      }}
+      borderRadius={{
+        default: 'none',
+        lg: 'lg',
+      }}
+      padding="md"
+      direction={{
+        default: 'vertical',
+        lg: 'horizontal',
+      }}
+      align={{
+        default: 'center',
+        lg: 'center-left',
+      }}
+      background={{
+        default: 'red-100',
+        sm_only: 'orange-100',
+        md_to_lg: 'yellow-100',
+        lg: 'sage-100',
+      }}
+    >
+      <Frame
+        width={{
+          default: 'fill',
+          lg_to_xl: '160px',
+          xl: '220px',
+        }}
+      >
+        <img
+          src="//source.unsplash.com/random/600x400"
+          alt=""
+          style={{ maxWidth: '100%' }}
+        />
+      </Frame>
+      <Frame width="flex" gap="xs">
+        <Frame gap="none">
+          <h4 className={SageClassnames.TYPE.HEADING_3}>
+            Lorem ipsum dolor sit
+          </h4>
+          <p className={[SageClassnames.TYPE.BODY_SMALL, SageClassnames.TYPE_COLORS.CHARCOAL_200].join(' ')}>
+            Consectetur adipiscing elit
+          </p>
+        </Frame>
+        <p className={SageClassnames.TYPE.BODY}>
+          Aliquam rhoncus ipsum massa, a tempor arcu elementum sed.
+          Nullam tortor odio, ullamcorper vel elementum in, luctus et tortor.
+          Nullam tellus orci, euismod ultricies odio ut, volutpat fermentum diam.
+          Proin rhoncus sit amet felis nec iaculis.
+          Fusce aliquet augue eget semper ultrices.
+        </p>
+      </Frame>
+    </Frame>
+    <Frame
+      direction={{
+        before_md: 'vertical',
+        md: 'horizontal',
+      }}
+    >
+      <Frame
+        border="default"
+        borderRadius="md"
+        padding="md"
+        width={{
+          before_md: 'fill',
+          md: 'flex',
+        }}
+        widthRatio={{
+          md: '1',
+        }}
+      >
+        <p>1 Lorem ipsum dolor sit</p>
+      </Frame>
+      <Frame
+        border="default"
+        borderRadius="md"
+        padding="md"
+        width={{
+          before_md: 'fill',
+        }}
+        widthRatio={{
+          md_to_lg: '1',
+          lg: '2',
+        }}
+      >
+        <p>2 Lorem ipsum dolor sit</p>
+      </Frame>
+      <Frame
+        border="default"
+        borderRadius="md"
+        padding="md"
+        width={{
+          before_md: 'fill',
+        }}
+        widthRatio={{
+          md: '1',
+        }}
+      >
+        <p>1 Lorem ipsum dolor sit</p>
+      </Frame>
+      <Frame
+        border="default"
+        borderRadius="md"
+        padding="md"
+        width={{
+          before_md: 'fill',
+          md: 'auto',
+        }}
+        widthRatio={{
+          md_to_lg: '1',
+          lg: '2',
+        }}
+      >
+        <p>2 Lorem ipsum dolor sit</p>
+      </Frame>
+    </Frame>
+  </>
+);
