@@ -7,7 +7,7 @@
       <div class="example__code">
         <button class="example__expand-btn" aria-expanded="false" aria-controls="example-rails-code-<%= title %>">Expand this code snippet</button>
         <div id="example-rails-code-<%= title %>" class="sage-code-snippet" tabindex="-1">
-          <pre class="prettyprint"><code><%= File.read(File.join(Rails.root, "app/views/examples/", type.pluralize, "themes", theme_folder, title, "_preview.html.erb")) %></code></pre>
+          <pre class="prettyprint"><code><%= File.read(File.join(Rails.root, "app/views/examples/", type.pluralize, title, "_preview.html.erb")) %></code></pre>
         </div>
       </div>
     <% end %>
