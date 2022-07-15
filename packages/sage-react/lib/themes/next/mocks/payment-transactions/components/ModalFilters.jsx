@@ -2,31 +2,168 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import {
   Button,
+  Card,
   Frame,
+  Icon,
   Modal,
   Panel,
+  SageClassnames,
   SageTokens,
 } from '../../..';
-import { filterFields } from '../data-helper';
+import {
+  currencies,
+  otherFilters,
+  paymentCards,
+  paymentTypes,
+  renderToggleGroup,
+  statuses,
+  timeframes,
+} from '../data-helper';
 
 export const ModalFilters = ({ active, onExit }) => {
   const [filterCount] = useState(null);
-  const [activeCards, setActiveCards] = useState(['visa', 'mastercard', 'amex', 'discover']);
+  const [activeCards, setActiveCards] = useState([]);
+  const [activeCurrencies, setActiveCurrencies] = useState([]);
+  const [activeOthers, setActiveOthers] = useState([]);
+  const [activePaymentTypes, setActivePaymentTypes] = useState([]);
+  const [activeStatuses, setActiveStatuses] = useState([]);
+  const [activeTimeframe, setActiveTimeframe] = useState([]);
 
-  const onChangeActiveCards = (card) => {
-    console.log(card);
-    const cardToken = card.toLowerCase();
-    console.log('clicked choice', cardToken);
-    if (activeCards.indexOf(cardToken) > -1) {
-      const newCards = activeCards.filter((c) => c !== cardToken);
-      console.log('remove card', cardToken, newCards);
-      setActiveCards(newCards);
+  const toggleMultipleValues = (value, arr, setArr) => {
+    if (arr.includes(value)) {
+      setArr(arr.filter((o) => o !== value));
     } else {
-      const newCards = activeCards.push(cardToken);
-      console.log('new card', cardToken, newCards);
-      setActiveCards(newCards);
+      setArr([...arr, value]);
     }
   };
+
+  const onChangeActiveCards = (payload) => toggleMultipleValues(
+    payload,
+    activeCards,
+    setActiveCards
+  );
+
+  const onChangeActiveCurrencies = (payload) => toggleMultipleValues(
+    payload,
+    activeCurrencies,
+    setActiveCurrencies,
+  );
+
+  const onChangeActiveOthers = (payload) => toggleMultipleValues(
+    payload,
+    activeOthers,
+    setActiveOthers,
+  );
+
+  const onChangeActivePaymentTypes = (payload) => toggleMultipleValues(
+    payload,
+    activePaymentTypes,
+    setActivePaymentTypes
+  );
+
+  const onChangeActiveStatuses = (payload) => toggleMultipleValues(
+    payload,
+    activeStatuses,
+    setActiveStatuses,
+  );
+
+  const onChangeActiveTimeframe = (payload) => setActiveTimeframe(payload);
+
+  const filterFields = [
+    {
+      title: 'Payment types',
+      fields: renderToggleGroup({
+        name: 'filter-by-payment-types',
+        items: paymentTypes.map(({ id, label }) => ({
+          checked: activePaymentTypes.includes(id),
+          id: `payment-types-${id}`,
+          label,
+          onChange: onChangeActivePaymentTypes,
+          value: id,
+        })),
+      }),
+    },
+    {
+      title: 'Status',
+      fields: renderToggleGroup({
+        name: 'filter-by-status',
+        items: statuses.map(({ id, label }) => ({
+          checked: activeStatuses.includes(id),
+          id: `status-${id}`,
+          label,
+          onChange: onChangeActiveStatuses,
+          value: id,
+        })),
+      }),
+    },
+    {
+      title: 'In the last...',
+      fields: renderToggleGroup({
+        name: 'filter-by-timeframe',
+        items: timeframes.map(({ id, label }) => ({
+          checked: activeTimeframe === id,
+          id: `timeframe-${id}`,
+          label,
+          onChange: onChangeActiveTimeframe,
+          value: id,
+        })),
+        type: 'radio',
+        useTwoColumns: false,
+      }),
+    },
+    {
+      title: 'Payment method',
+      fields: (
+        <Frame
+          direction={Frame.DIRECTIONS.HORIZONTAL}
+          gap={Frame.GAPS.SM}
+          align={Frame.ALIGNMENTS.CENTER_SPREAD}
+        >
+          {paymentCards.map(({ label, icon }) => (
+            <Frame key={label} widthRatio="1" align={Frame.ALIGNMENTS.SPREAD_STRETCH}>
+              <Card onClick={() => onChangeActiveCards(label)}>
+                <Icon
+                  icon={icon}
+                  color={activeCards.includes(label)
+                    ? Icon.COLORS.CHARCOAL_500
+                    : Icon.COLORS.CHARCOAL_100}
+                />
+                <span className={SageClassnames.TYPE.BODY_MED}>
+                  {label}
+                </span>
+              </Card>
+            </Frame>
+          ))}
+        </Frame>
+      ),
+    },
+    {
+      title: 'Currency type',
+      fields: renderToggleGroup({
+        name: 'filter-by-timeframe',
+        items: currencies.map(({ name, symbol }) => ({
+          checked: activeCurrencies.includes(name),
+          id: `currencies-${name.toLowerCase()}`,
+          label: `${symbol} ${name}`,
+          onChange: onChangeActiveCurrencies,
+          value: name,
+        })),
+      }),
+    },
+    {
+      title: 'Other filters',
+      fields: renderToggleGroup({
+        name: 'filter-by-timeframe',
+        items: otherFilters.map(({ id, label }) => ({
+          checked: activeOthers.includes(id),
+          id: `other-filters-${id}`,
+          label,
+          onChange: onChangeActiveOthers,
+          value: id,
+        })),
+      }),
+    },
+  ];
 
   return (
     <Modal onExit={onExit} active={active}>
@@ -45,7 +182,7 @@ export const ModalFilters = ({ active, onExit }) => {
         )}
       />
       <Modal.Body gap={Modal.Body.GAP_OPTIONS.LG}>
-        {filterFields({ activeCards, onChangeActiveCards, }).map(({ title, fields }) => (
+        {filterFields.map(({ title, fields }) => (
           <Frame key={title}>
             <h4>{title}</h4>
             {fields}

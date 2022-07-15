@@ -8,7 +8,7 @@ import {
   SageClassnames,
   SageTokens,
 } from '../../..';
-import { paymentTypes, currencies } from '../data-helper';
+import { paymentCards, currencies } from '../data-helper';
 
 export const PriceField = ({
   cardType,
@@ -22,7 +22,7 @@ export const PriceField = ({
     coupon,
     currencyData;
 
-  const paymentType = paymentTypes.filter(({ label }) => label.toLowerCase() === cardType);
+  const paymentType = paymentCards.filter(({ label }) => label.toLowerCase() === cardType);
   if (paymentType[0]) {
     cardIcon = paymentType[0].icon;
   } else {

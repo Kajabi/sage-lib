@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-  Choice,
   Checkbox,
   Frame,
   Icon,
@@ -8,26 +7,35 @@ import {
   Table,
 } from '../..';
 
-export const paymentTypes = [
+export const columns = [
   {
-    label: 'Visa',
-    icon: Icon.ICONS.CARD_VISA,
+    id: 'transactions-column-price',
+    name: 'Price',
+    excludable: false,
   },
   {
-    label: 'Mastercard',
-    icon: Icon.ICONS.CARD_MASTERCARD,
+    id: 'transactions-column-type',
+    name: 'Transaction type',
   },
   {
-    label: 'AMEX',
-    icon: Icon.ICONS.CARD_AMEX,
+    id: 'transactions-column-name',
+    name: 'Name',
   },
   {
-    label: 'Discover',
-    icon: Icon.ICONS.CARD_DISCOVER,
+    id: 'transactions-column-email',
+    name: 'Email address',
+    excludable: false,
+  },
+  {
+    id: 'transactions-column-offer-name',
+    name: 'Offer name',
+  },
+  {
+    id: 'transactions-column-date',
+    name: 'Date',
   },
 ];
 
-// TODO: Fill these in correctly
 export const currencies = [
   {
     name: 'USD',
@@ -55,42 +63,44 @@ export const currencies = [
   },
 ];
 
-const sortableItemConfigs = {
-  sortable: true,
-};
+export const otherFilters = [
+  {
+    id: 'used',
+    label: 'Coupon used',
+  }
+];
 
-export const columns = [
+export const paymentCards = [
   {
-    id: 'transactions-column-price',
-    name: 'Price',
-    excludable: false,
-    ...sortableItemConfigs
+    label: 'Visa',
+    icon: Icon.ICONS.CARD_VISA,
   },
   {
-    id: 'transactions-column-type',
-    name: 'Transaction type',
-    ...sortableItemConfigs
+    label: 'Mastercard',
+    icon: Icon.ICONS.CARD_MASTERCARD,
   },
   {
-    id: 'transactions-column-name',
-    name: 'Name',
-    ...sortableItemConfigs
+    label: 'AMEX',
+    icon: Icon.ICONS.CARD_AMEX,
   },
   {
-    id: 'transactions-column-email',
-    name: 'Email address',
-    excludable: false,
-    ...sortableItemConfigs
+    label: 'Discover',
+    icon: Icon.ICONS.CARD_DISCOVER,
+  },
+];
+
+export const paymentTypes = [
+  {
+    id: 'single',
+    label: 'One-time payment',
   },
   {
-    id: 'transactions-column-offer-name',
-    name: 'Offer name',
-    ...sortableItemConfigs
+    id: 'subscription',
+    label: 'Subscription',
   },
   {
-    id: 'transactions-column-date',
-    name: 'Date',
-    ...sortableItemConfigs
+    id: 'multi',
+    label: 'Multi-payment',
   },
 ];
 
@@ -137,182 +147,43 @@ export const renderToggleGroup = ({
   );
 };
 
-export const filterFields = ({ activeCards, onChangeActiveCards }) => [
+export const statuses = [
   {
-    title: 'Payment types',
-    fields: renderToggleGroup({
-      name: 'filter-by-payment-types',
-      items: [
-        {
-          id: 'payment-types-single',
-          label: 'One-time payment',
-          value: 'single',
-          checked: false,
-        },
-        {
-          id: 'payment-types-subscription',
-          label: 'Subscription',
-          value: 'subscription',
-          checked: false,
-        },
-        {
-          id: 'payment-types-multi',
-          label: 'Multi-payment',
-          value: 'multi',
-          checked: false,
-        },
-      ],
-    }),
+    id: 'success',
+    label: 'Successful',
   },
   {
-    title: 'Status',
-    fields: renderToggleGroup({
-      name: 'filter-by-status',
-      items: [
-        {
-          id: 'status-success',
-          label: 'Successful',
-          value: 'Success',
-          checked: false,
-        },
-        {
-          id: 'status-refund',
-          label: 'Refunded',
-          value: 'refund',
-          checked: false,
-        },
-        {
-          id: 'status-fail',
-          label: 'Failed',
-          value: 'fail',
-          checked: false,
-        },
-      ],
-    }),
+    id: 'refund',
+    label: 'Refunded',
   },
   {
-    title: 'In the last...',
-    fields: renderToggleGroup({
-      name: 'filter-by-timeframe',
-      items: [
-        {
-          id: 'timeframe-1-month',
-          label: '30 days',
-          value: 'month',
-          checked: false,
-        },
-        {
-          id: 'timeframe-3-month',
-          label: '3 months',
-          value: '3-month',
-          checked: false,
-        },
-        {
-          id: 'timeframe-6-month',
-          label: '6 months',
-          value: '6-month',
-          checked: false,
-        },
-        {
-          id: 'timeframe-1-year',
-          label: '1 year',
-          value: 'year',
-          checked: false,
-        },
-        {
-          id: 'timeframe-custom',
-          label: 'Custom range',
-          value: 'custom',
-          checked: false,
-        },
-      ],
-      type: 'radio',
-      useTwoColumns: false,
-    }),
-  },
-  {
-    title: 'Payment method',
-    fields: (
-      <Frame
-        direction={Frame.DIRECTIONS.HORIZONTAL}
-        gap={Frame.GAPS.SM}
-        align={Frame.ALIGNMENTS.CENTER_SPREAD}
-      >
-        {paymentTypes.map(({ label, icon }) => (
-          <Frame key={label} widthRatio="1" align={Frame.ALIGNMENTS.SPREAD_STRETCH}>
-            <Choice
-              isActive={activeCards.indexOf(label.toLowerCase()) > -1}
-              radioConfigs={{
-                id: `transaction-filters-card-${label.toLowerCase()}`,
-                name: 'transaction-filters-card',
-                value: label,
-                type: 'checkbox',
-                onChange: () => null,
-              }}
-              onClick={() => onChangeActiveCards(label)}
-            >
-              <Icon icon={icon} />
-              {label}
-            </Choice>
-          </Frame>
-        ))}
-      </Frame>
-    ),
-  },
-  {
-    title: 'Currency type',
-    fields: renderToggleGroup({
-      name: 'filter-by-timeframe',
-      items: currencies.map(({ name, symbol }) => ({
-        id: `currencies-${name.toLowerCase()}`,
-        label: `${symbol} ${name}`,
-        value: name,
-        checked: false,
-      })),
-    }),
-  },
-  {
-    title: 'Other filters',
-    fields: renderToggleGroup({
-      name: 'filter-by-timeframe',
-      items: [
-        {
-          id: 'other-coupon-used',
-          label: 'Coupon used',
-          value: 'coupon-used',
-          checked: false,
-        },
-      ],
-    }),
+    id: 'fail',
+    label: 'Failed',
   },
 ];
 
-export const transactionsTableSchema = {
-  price: {
-    label: 'Price',
-    dataType: Table.DATA_TYPES.HTML,
+export const timeframes = [
+  {
+    id: 'month',
+    label: '30 days',
   },
-  type: {
-    label: 'Type',
+  {
+    id: '3-month',
+    label: '3 months',
   },
-  name: {
-    label: 'Name',
+  {
+    id: '6-month',
+    label: '6 months',
   },
-  email: {
-    label: 'Email',
+  {
+    id: 'year',
+    label: '1 year',
   },
-  offerName: {
-    label: 'Offer name',
-  },
-  date: {
-    label: 'Date',
-    dataType: Table.DATA_TYPES.DATE,
-  },
-  options: {
-    label: '',
-    dataType: Table.DATA_TYPES.HTML,
+  {
+    id: 'custom',
+    label: 'Custom range',
   }
-};
+];
 
 export const transactionsTableData = [
   {
@@ -358,3 +229,30 @@ export const transactionsTableData = [
     date: 'Last month',
   }
 ];
+
+export const transactionsTableSchema = {
+  price: {
+    label: 'Price',
+    dataType: Table.DATA_TYPES.HTML,
+  },
+  type: {
+    label: 'Type',
+  },
+  name: {
+    label: 'Name',
+  },
+  email: {
+    label: 'Email',
+  },
+  offerName: {
+    label: 'Offer name',
+  },
+  date: {
+    label: 'Date',
+    dataType: Table.DATA_TYPES.DATE,
+  },
+  options: {
+    label: '',
+    dataType: Table.DATA_TYPES.HTML,
+  }
+};
