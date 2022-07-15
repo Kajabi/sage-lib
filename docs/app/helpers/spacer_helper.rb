@@ -14,15 +14,10 @@ module SpacerHelper
   end
 
   def sage_spacers_application
-    SageRails.next_theme? ? {
+   {
       application: '48px',
       panel: '32px',
       card: '24px',
-      stack: '8px',
-    } : {
-      application: '32px',
-      panel: '24px',
-      card: '16px',
       stack: '8px',
     }
   end
