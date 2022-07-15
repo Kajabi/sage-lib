@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.2.26...@kajabi/sage-packs@1.0.0) (2022-07-15)
+
+
+### chore
+
+* removed author ([e572872](https://github.com/Kajabi/sage-lib/commit/e572872f55f8f796ed03d666079d5e796854c2d2))
+
+
+### BREAKING CHANGES
+
+* Removes legacy theme from packages.
+
+chore: remove author
+* Removes the legacy theme from sage-system
+
+
+
+
+
 ## [0.2.26](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.2.25...@kajabi/sage-packs@0.2.26) (2022-07-15)
 
 **Note:** Version bump only for package @kajabi/sage-packs

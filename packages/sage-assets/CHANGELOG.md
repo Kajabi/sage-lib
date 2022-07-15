@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.89.1...@kajabi/sage-assets@1.0.0) (2022-07-15)
+
+
+### chore
+
+* removed author ([e572872](https://github.com/Kajabi/sage-lib/commit/e572872f55f8f796ed03d666079d5e796854c2d2))
+
+
+### BREAKING CHANGES
+
+* Removes legacy theme from packages.
+
+chore: remove author
+* Removes the legacy theme from sage-system
+
+
+
+
+
 ## [0.89.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.89.0...@kajabi/sage-assets@0.89.1) (2022-07-15)
 
 **Note:** Version bump only for package @kajabi/sage-assets
