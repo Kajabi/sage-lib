@@ -5,16 +5,4 @@ class ApplicationController < ActionController::Base
 
   include MarkdownHelper
 
-  before_action :set_sage_theme
-
-  private
-
-  def set_sage_theme
-    session["SAGE_THEME"] ||= SageRails::SAGE_THEMES[:LEGACY]
-    if params[:sage_theme]
-      session["SAGE_THEME"] = params[:sage_theme]
-    end
-
-    SageRails.sage_theme = session["SAGE_THEME"]
-  end
 end

@@ -1,11 +1,10 @@
 <%
-partial_path_root = "examples/components/themes/"
-theme_folder = SageRails.next_theme? ? "next" : "legacy"
+partial_path_root = "examples/components"
 
 info_content = sage_components.select { |component| component[:title] == @title }[0]
-props_content = render partial: "#{partial_path_root}/#{theme_folder}/#{@title}/props"
-do_content = render partial: "#{partial_path_root}/#{theme_folder}/#{@title}/rules_do"
-dont_content = render partial: "#{partial_path_root}/#{theme_folder}/#{@title}/rules_dont"
+props_content = render partial: "#{partial_path_root}/#{@title}/props"
+do_content = render partial: "#{partial_path_root}/#{@title}/rules_do"
+dont_content = render partial: "#{partial_path_root}/#{@title}/rules_dont"
 %>
 
 <%= render "examples/shared/heading",
@@ -68,16 +67,15 @@ dont_content = render partial: "#{partial_path_root}/#{theme_folder}/#{@title}/r
     <%= sage_component SageTabsPane, { id: "preview" } do %>
       <%= render "examples/shared/preview",
         type: "component",
-        title: @title,
-        theme_folder: theme_folder
+        title: @title
       %>
     <% end %>
 
     <%= sage_component SageTabsPane, { id: "code" } do %>
       <%= render "examples/shared/code",
         type: "component",
-        title: @title,
-        theme_folder: theme_folder %>
+        title: @title
+      %>
     <% end %>
 
     <%= sage_component SageTabsPane, { id: "props" } do %>

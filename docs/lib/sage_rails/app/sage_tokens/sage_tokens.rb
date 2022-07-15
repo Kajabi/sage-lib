@@ -6,14 +6,13 @@ module SageTokens
 
   # Extract color names from dictionary core map
   def SageTokens.color
-    # TODO: THEME how to get current theme's dictionary to apply here?
-    SageDictionary::THEME::SD_SAGE_COLOR_CORE.map { | k, v | k.to_s.downcase }
+    SageDictionary::SD_SAGE_COLOR_CORE.map { | k, v | k.to_s.downcase }
   end
 
   # Extract color palette hex values from base color map
   def SageTokens.color_palette
     palette = {}
-    SageDictionary::THEME::SD_SAGE_COLOR.each do |color, hash|
+    SageDictionary::SD_SAGE_COLOR.each do |color, hash|
       hash.each do |index, values|
         case color
         when :BLACK
@@ -33,7 +32,7 @@ module SageTokens
   # Extract color palette hex values from base color map
   def SageTokens.color_sliders
     sliders = SageTokens.color()
-    SageDictionary::THEME::SD_SAGE_COLOR.each do |color, hash|
+    SageDictionary::SD_SAGE_COLOR.each do |color, hash|
       hash.each do |index, values|
         case color
         when :BLACK
@@ -50,7 +49,7 @@ module SageTokens
 
   # Extract grid template symbols
   def SageTokens.grid_templates
-    SageDictionary::THEME::SD_SAGE_CONTENT_GRID_TEMPLATE.map { |k,v| v[:SYMBOL] }
+    SageDictionary::SD_SAGE_CONTENT_GRID_TEMPLATE.map { |k,v| v[:SYMBOL] }
   end
 
   #
