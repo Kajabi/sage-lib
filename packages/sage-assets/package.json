@@ -34,7 +34,6 @@
     "start": "yarn server",
     "start:local": "npm-run-all -p server build:watch"
   },
-  "author": "Shane Smith <shane@kajabi.com>",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.11.6",

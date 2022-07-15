@@ -6,7 +6,6 @@
     "sage",
     "packs"
   ],
-  "author": "Shane Smith <shane@kajabi.com>",
   "homepage": "https://github.com/Kajabi/sage-lib#readme",
   "license": "MIT",
   "main": "lib/packs/react.js",
