@@ -11,10 +11,21 @@ import { filterFields } from '../data-helper';
 
 export const ModalFilters = ({ active, onExit }) => {
   const [filterCount] = useState(null);
-  const [activeCards] = useState(['visa', 'mastercard', 'amex', 'discover']);
+  const [activeCards, setActiveCards] = useState(['visa', 'mastercard', 'amex', 'discover']);
 
-  const onChangeActiveCards = (event) => {
-    console.log('clicked choice', event);
+  const onChangeActiveCards = (card) => {
+    console.log(card);
+    const cardToken = card.toLowerCase();
+    console.log('clicked choice', cardToken);
+    if (activeCards.indexOf(cardToken) > -1) {
+      const newCards = activeCards.filter((c) => c !== cardToken);
+      console.log('remove card', cardToken, newCards);
+      setActiveCards(newCards);
+    } else {
+      const newCards = activeCards.push(cardToken);
+      console.log('new card', cardToken, newCards);
+      setActiveCards(newCards);
+    }
   };
 
   return (

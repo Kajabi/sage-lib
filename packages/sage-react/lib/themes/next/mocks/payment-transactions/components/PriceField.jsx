@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import {
   Badge,
   Icon,
+  Link,
   Frame,
   SageClassnames,
   SageTokens,
@@ -35,7 +36,7 @@ export const PriceField = ({
     [currencyData] = currencies; // NOTE: Gets USD by default
   }
 
-  const { 
+  const {
     name: currencyCode,
     symbol: currencySymbol,
   } = currencyData;
@@ -88,7 +89,6 @@ export const PriceField = ({
       direction={Frame.DIRECTIONS.HORIZONTAL}
       gap={Frame.GAPS.XS}
       width={Frame.WIDTHS.FILL}
-      maxWidth="250px"
     >
       <Icon
         icon={cardIcon}
@@ -96,21 +96,25 @@ export const PriceField = ({
         color={SageTokens.COLOR_SLIDERS.CHARCOAL_500}
       />
       <Frame
+        align={Frame.ALIGNMENTS.CENTER_RIGHT}
         direction={Frame.DIRECTIONS.HORIZONTAL}
         gap={Frame.GAPS['2XS']}
         tag="span"
         width={Frame.WIDTHS.FLEX}
       >
-        <span
-          className={[
-            SageClassnames.TYPE_ALIGN_RIGHT,
-            SageClassnames.TYPE_COLORS.CHARCOAL_400
-          ].join(' ')}
-          style={{ flex: 1 }}
+        <Link
+          // TODO: The following class can be used
+          //   in order to enact the correct hover effect on the row
+          //   once this PR is merged: https://github.com/Kajabi/sage-lib/pull/1499
+          // className={SageClassnames.LINK.TABLE_CELL_PRIMARY}
+          href="#TODO-dev-url-transaction-details"
+          removeUnderline={true}
+          // TODO: DSS: This property collides with `style` for providing CSS
+          style={Link.COLORS.SECONDARY}
         >
           {currencySymbol}
           {price}
-        </span>
+        </Link>
         <span className={SageClassnames.TYPE_COLORS.CHARCOAL_100}>
           {currencyCode}
         </span>

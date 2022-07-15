@@ -20,7 +20,7 @@ import {
 
 export const Main = () => {
   const [showCustomizeColumnsModal, setShowCustomizeColumnsModal] = useState(false);
-  const [showFiltersModal, setShowFiltersModal] = useState(false);
+  const [showFiltersModal, setShowFiltersModal] = useState(true);
   const [searchValue, setSearchValue] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
   const [pageSize] = useState(25);

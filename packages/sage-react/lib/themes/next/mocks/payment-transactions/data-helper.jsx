@@ -241,14 +241,15 @@ export const filterFields = ({ activeCards, onChangeActiveCards }) => [
         {paymentTypes.map(({ label, icon }) => (
           <Frame key={label} widthRatio="1" align={Frame.ALIGNMENTS.SPREAD_STRETCH}>
             <Choice
-              isActive={activeCards.includes(label.toLowerCase())}
+              isActive={activeCards.indexOf(label.toLowerCase()) > -1}
               radioConfigs={{
                 id: `transaction-filters-card-${label.toLowerCase()}`,
                 name: 'transaction-filters-card',
-                onChange: onChangeActiveCards,
                 value: label,
-                type: 'checkbox'
+                type: 'checkbox',
+                onChange: () => null,
               }}
+              onClick={() => onChangeActiveCards(label)}
             >
               <Icon icon={icon} />
               {label}
@@ -354,6 +355,6 @@ export const transactionsTableData = [
     name: 'Tom Scott',
     email: 'tomscott@gmail.com',
     offerName: 'How Good is Your Pro...',
-    date: 'Yesterday',
+    date: 'Last month',
   }
 ];
