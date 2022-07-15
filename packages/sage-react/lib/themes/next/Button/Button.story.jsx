@@ -52,7 +52,8 @@ IconOnly.args = {
 
 export const loading = Template.bind({});
 loading.args = {
-  spinnerOnSubmit: 'my aria label'
+  // spinnerOnSubmit: 'my aria label'
+  'aria-label': 'test'
 };
 
 export const Fullwidth = Template.bind({});

@@ -4,7 +4,11 @@ import classnames from 'classnames';
 import { Link } from '../Link';
 import { SageTokens } from '../configs';
 import { ButtonGroup } from './ButtonGroup';
-import { BUTTON_COLORS, BUTTON_ICON_POSITIONS } from './configs';
+import {
+  BUTTON_COLORS,
+  BUTTON_ICON_POSITIONS,
+  BUTTON_DEFAULT_LOADING_TEXT,
+} from './configs';
 
 export const Button = React.forwardRef(({
   alignEnd,
@@ -19,9 +23,10 @@ export const Button = React.forwardRef(({
   iconOnly,
   iconPosition,
   linkTag,
+  loading,
+  onClick,
   small,
   subtle,
-  spinnerOnSubmit,
   ...rest
 }, ref) => {
   const { to, href } = rest;
@@ -37,6 +42,7 @@ export const Button = React.forwardRef(({
       [`${blockName}--full-width`]: fullWidth,
       [`${blockName}--small`]: small,
       [`${blockName}--subtle`]: subtle,
+      [`${blockName}--is-loading`]: loading,
       [`${blockName}--icon-${iconPosition}-${icon}`]: icon && !iconOnly,
       [`${blockName}--icon-only-${icon}`]: icon && iconOnly,
       disabled: isLink && disabled,
@@ -44,8 +50,28 @@ export const Button = React.forwardRef(({
   );
 
   const attrs = {
-    'data-js-sage-spinner-on-submit': spinnerOnSubmit,
+    // 'data-js-sage-spinner-on-submit': spinnerOnSubmit,
   };
+
+  if (loading) {
+    attrs['aria-busy'] = true;
+    // Todo look into loading text and make sure text is in a const
+    attrs['aria-label'] = rest['aria-label'] || BUTTON_DEFAULT_LOADING_TEXT;
+    attrs['aria-live'] = 'polite';
+  }
+
+  // TODO - need to revisit how to cancel/remove spinner
+  // let spinner = null;
+
+  // const handleClick = (event) => {
+  //   if (spinnerOnSubmit) {
+  //     spinner = "spinning";
+  //   }
+
+  //   if (onClick) {
+  //     onClick(event);
+  //   }
+  // };
 
   const renderContent = () => {
     if (iconOnly) {
@@ -84,6 +110,7 @@ export const Button = React.forwardRef(({
       disabled={!isLink && disabled}
       tag={isLink ? linkTag : null}
       suppressDefaultClass={isLink}
+      // onClick={handleClick}
       {...attrs}
       {...rest}
     >
@@ -109,11 +136,11 @@ Button.defaultProps = {
   iconOnly: false,
   iconPosition: Button.ICON_POSITIONS.LEFT,
   linkTag: null,
+  loading: false,
   onClick: null,
   small: false,
   subtle: false,
   type: 'button',
-  spinnerOnSubmit: null,
 };
 
 Button.propTypes = {
@@ -129,9 +156,9 @@ Button.propTypes = {
   iconOnly: PropTypes.bool,
   iconPosition: PropTypes.oneOf(Object.values(Button.ICON_POSITIONS)),
   linkTag: Link.tagPropTypes,
+  loading: PropTypes.bool,
   onClick: PropTypes.func,
   small: PropTypes.bool,
   subtle: PropTypes.bool,
   type: PropTypes.string,
-  spinnerOnSubmit: PropTypes.string,
 };

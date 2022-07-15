@@ -401,10 +401,6 @@ a.sage-btn {
     left: 0;
     margin: auto;
   }
-
-  .sage-btn__truncate-text {
-    opacity: 0;
-  }
 }
 
 // Generate button style variations
@@ -742,6 +738,10 @@ $-alert-colors: (
 
   .sage-expandable-card--align-arrow-right & {
     order: -1;
+  }
+
+  .sage-btn--is-loading & {
+    opacity: 0;
   }
 }
 
