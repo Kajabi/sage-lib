@@ -4,6 +4,7 @@ import classnames from 'classnames';
 
 export const Textarea = ({
   className,
+  disabled,
   hasError,
   id,
   label,
@@ -33,6 +34,7 @@ export const Textarea = ({
     <div className={classNames}>
       <textarea
         className="sage-textarea__field"
+        disabled={disabled}
         id={id}
         onChange={handleChange}
         placeholder={label}
@@ -55,6 +57,7 @@ Textarea.TEST = 'TEST';
 
 Textarea.defaultProps = {
   className: null,
+  disabled: false,
   hasError: false,
   label: null,
   message: null,
@@ -64,6 +67,7 @@ Textarea.defaultProps = {
 
 Textarea.propTypes = {
   className: PropTypes.string,
+  disabled: PropTypes.bool,
   id: PropTypes.string.isRequired,
   hasError: PropTypes.bool,
   label: PropTypes.string,
