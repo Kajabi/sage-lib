@@ -613,6 +613,8 @@ $-alert-colors: (
       }
 
       &.sage-toast__button {
+        color: sage-color(white);
+
         &:focus,
         &:active {
           &::after {
