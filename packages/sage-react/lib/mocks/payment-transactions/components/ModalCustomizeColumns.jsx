@@ -26,9 +26,12 @@ export const ModalCustomizeColumns = ({ active, onExit }) => {
   return (
     <Modal onExit={onExit} active={active}>
       {/*
-        TODO: DSS: Width shown in mocks is smaller than possible with modal rn.
+        TODO: DSS: Add container sizes as Modal size options.
+          Width shown in mocks is smaller than possible with modal rn.
           Per discussion with Design, need to add ability set modal size
           in sync with system container sizes.
+          https://kajabi.atlassian.net/browse/SAGE-753
+          DESIGN: Spec needed?
       */}
       <Modal.Header
         title="Custom columns"
@@ -51,6 +54,7 @@ export const ModalCustomizeColumns = ({ active, onExit }) => {
       <Modal.Body gap={Modal.Body.GAP_OPTIONS.LG}>
         {/*
           TODO: DSS: List is outputting some scheme errors that should be cleaned up.
+          https://kajabi.atlassian.net/browse/SAGE-749
         */}
         <List
           sortableConfigs={{ setList: setColumns }}
@@ -77,7 +81,8 @@ export const ModalCustomizeColumns = ({ active, onExit }) => {
         <Modal.FooterAside>
           {/*
             TODO: DSS: Need to ensure link/button style and tags all work as expected.
-            Here, we probably want the Link styling but need to render a `button`.
+              Here, we probably want the Link styling but need to render a `button`.
+              DESIGN spec needed?
           */}
           <Button
             color={Button.COLORS.SECONDARY}

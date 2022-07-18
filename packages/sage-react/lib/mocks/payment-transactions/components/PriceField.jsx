@@ -56,7 +56,8 @@ export const PriceField = ({
       color={Icon.COLORS.WHITE}
       icon={Icon.ICONS.BAN}
       label="Did not use a coupon"
-      // TODO: DSS: Consider adding a `null` icon that can be used for placeholders like here
+      // TODO: DSS: Add `null` icon that can be used for placeholders like here
+      //   https://kajabi.atlassian.net/browse/SAGE-754
       size={Icon.SIZES.MD}
     />
   );
@@ -87,8 +88,11 @@ export const PriceField = ({
           // className={SageClassnames.LINK.TABLE_CELL_PRIMARY}
           href="#TODO-dev-url-transaction-details"
           removeUnderline={true}
-          // TODO: DSS: This property collides with `style` for providing CSS
           style={Link.COLORS.SECONDARY}
+          // TODO: DSS: Need to avoid using `style` as a prop name so we don't block inline styling.
+          //   Here this would have been useful to properly format
+          //   the size of this element in context.
+          //   https://kajabi.atlassian.net/browse/SAGE-750
         >
           {currencySymbol}
           {price}

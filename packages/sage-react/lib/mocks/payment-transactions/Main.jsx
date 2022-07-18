@@ -35,24 +35,13 @@ export const Main = () => {
   return (
     <Grid container={Grid.CONTAINER_SIZES.FULL}>
       <PageHeading
+        // TODO: DSS: `actionItems` should not be an array but just nodes as children.
+        //   https://kajabi.atlassian.net/browse/SAGE-752
         actionItems={[
           <OptionsDropdown
-            options={transactionPageOptions({ transactionPageOptions })}
+            options={transactionPageOptions({ setShowCustomizeColumnsModal })}
             triggerButtonSubtle={false}
-          />,
-          /*
-            TODO: DSS: Search border radius is not as shown in design
-            TODO: DSS: Search value change is behaving odd...
-              confirm unique to Storybook and not a bigger issue
-          */
-          <Search
-            hideLabel={true}
-            id="search_default"
-            label="Find"
-            onChange={({ target: { value } }) => setSearchValue(value)}
-            placeholder="Search transactions..."
-            style={{ width: '340px' }}
-            value={searchValue}
+            align={OptionsDropdown.POSITIONS.RIGHT}
           />
         ]}
         className={SageClassnames.SPACERS.LG_BOTTOM}
@@ -66,31 +55,55 @@ export const Main = () => {
       >
         <p className={[SageClassnames.TYPE.BODY, SageClassnames.TYPE_COLORS.CHARCOAL_400].join(' ')}>
           Displaying{' '}
-          <b>{currentPage * pageSize} &ndash; {((currentPage + 1) * pageSize) - 1}</b>{' '}
+          <b>{(currentPage - 1) * pageSize + 1} &ndash; {currentPage * pageSize}</b>{' '}
           of{' '}
           <b>{totalItems}</b>{' '}
           transactions in the last{' '}
           <b>{timeframe}</b>
         </p>
-        {/*
-          TODO: DSS: Look more at the number badge shown in the mock above this button
-            https://www.figma.com/file/8wkkXKHaOigsAl5Ye9vaKh/Transactions-page?node-id=1268%3A1704
-        */}
-        <Button
-          icon={SageTokens.ICONS.FILTER}
-          color={Button.COLORS.SECONDARY}
-          onClick={() => setShowFiltersModal(true)}
+
+        <Frame
+          direction={Frame.DIRECTIONS.HORIZONTAL}
+          align={Frame.ALIGNMENTS.CENTER_SPREAD}
+          width={Frame.WIDTHS.HUG}
         >
-          Filters
-        </Button>
+          <Search
+            contained={true}
+            hideLabel={true}
+            id="transaction-search"
+            label="Find"
+            onChange={(event) => setSearchValue(event.target.value)}
+            placeholder="Search transactions..."
+            style={{ width: '340px' }}
+            value={searchValue}
+          />
+          {/*
+            TODO: DSS: Need design specs to add the "number" badge as shown here
+              https://www.figma.com/file/8wkkXKHaOigsAl5Ye9vaKh/Transactions-page?node-id=1268%3A1704
+              https://kajabi.atlassian.net/browse/SAGE-755
+              DESIGN spec needed
+          */}
+          <Button
+            icon={SageTokens.ICONS.FILTER}
+            color={Button.COLORS.SECONDARY}
+            onClick={() => setShowFiltersModal(true)}
+          >
+            Filters
+          </Button>
+        </Frame>
       </Frame>
       {/*
-        TODO: DSS: Are table styles all up to date with what design requests?
+        TODO: DSS: Sync to latest table styles
+          https://kajabi.atlassian.net/browse/SAGE-756
+          DESIGN specs needed
+        TODO: DSS: Need responsive pattern enacted
+          https://kajabi.atlassian.net/browse/SAGE-757
+          DESIGN specs needed
         TODO: DSS: Need to ensure table sorting hooks are set up.
-        TODO: DSS: Need responsive pattern enacted.
-        TODO: DSS: Need to make options cell only visible on hover.
+          https://kajabi.atlassian.net/browse/SAGE-758
       */}
       <Table
+        className={SageClassnames.SPACERS.MD_BOTTOM}
         isResponsive={false}
         schema={transactionsTableSchema}
         selectable={false}
@@ -127,6 +140,7 @@ export const Main = () => {
         /*
           TODO: DSS: Adjust how pagination is calculated here;
             odd to have to set pageSize to null...
+            https://kajabi.atlassian.net/browse/SAGE-751
         */
         pageCount={null}
       />
