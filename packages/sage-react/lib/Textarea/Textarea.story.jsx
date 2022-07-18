@@ -8,18 +8,15 @@ export default {
     hasError: false,
     label: 'Your message',
     message: null,
+    id: 'field-1',
   },
 };
 
 const Template = (args) => <Textarea {...args} />;
 export const Default = Template.bind({});
-Default.args = {
-  id: 'field-1',
-};
 
 export const TextareaDisabled = Template.bind({});
 TextareaDisabled.args = {
-  id: 'field-2',
   label: 'Textarea Disabled',
   disabled: true,
 };
@@ -39,6 +36,5 @@ export const TextareaWithState = (args) => {
   );
 };
 TextareaWithState.args = {
-  id: 'field-3',
   label: 'Textarea with State',
 };
