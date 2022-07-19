@@ -121,9 +121,16 @@ export const ModalFilters = ({ active, onExit }) => {
         >
           {paymentCards.map(({ label, icon }) => (
             <Frame key={label} widthRatio="1" align={Frame.ALIGNMENTS.SPREAD_STRETCH}>
+              {/*
+                TODO: DSS: Need to add interactive feature to Card
+                  Temporary styling used here in the meantime
+                  https://kajabi.atlassian.net/browse/SAGE-761
+              */}
               <Card onClick={() => onChangeActiveCards(label)}>
                 <Icon
                   icon={icon}
+                  // TODO: Dev: Reduce this to just CHARCOAL_500
+                  //   after the above ticket is completed.
                   color={activeCards.includes(label)
                     ? Icon.COLORS.CHARCOAL_500
                     : Icon.COLORS.CHARCOAL_100}
