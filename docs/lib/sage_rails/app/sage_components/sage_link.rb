@@ -10,6 +10,6 @@ class SageLink < SageComponent
     small: [:optional, TrueClass],
     style: [:optional, NilClass, Set.new(["primary", "neutral", "secondary", "danger"])],
     truncate: [:optional, TrueClass],
-    url: [:optional, String],
+    url: [:optional, NilClass, String],
   })
 end
