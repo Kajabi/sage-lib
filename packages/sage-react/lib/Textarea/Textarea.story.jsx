@@ -13,6 +13,7 @@ export default {
 };
 
 const Template = (args) => <Textarea {...args} />;
+
 export const Default = Template.bind({});
 
 export const TextareaDisabled = Template.bind({});
@@ -36,5 +37,6 @@ export const TextareaWithState = (args) => {
   );
 };
 TextareaWithState.args = {
-  label: 'Textarea with State',
+  id: 'field-2',
+  label: 'Textarea label'
 };
