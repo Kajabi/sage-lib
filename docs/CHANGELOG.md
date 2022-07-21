@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.1.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.0.0...@kajabi/sage@5.1.0) (2022-07-21)
+
+
+### Features
+
+* **link:** allow nil for url prop ([aea7a0a](https://github.com/Kajabi/sage-lib/commit/aea7a0a487a31b0d9d934a1764c0581ae8886b9e))
+
+
+
+
+
 # [5.0.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.72.1...@kajabi/sage@5.0.0) (2022-07-15)
 
 **Note:** Version bump only for package @kajabi/sage
