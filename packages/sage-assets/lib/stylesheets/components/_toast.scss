@@ -133,7 +133,7 @@ $-toast-bottom-spacing: sage-spacing(xs);
   margin-right: auto;
   color: sage-color(white);
 
-  @extend %t-sage-body-semi;
+  @extend %t-sage-body-small-semi;
 }
 
 .sage-toast__button {
@@ -144,7 +144,7 @@ $-toast-bottom-spacing: sage-spacing(xs);
   align-items: center;
   margin-left: sage-spacing(sm);
   white-space: nowrap;
-  color: sage-color(grey, 200);
+  color: sage-color(white);
   border-radius: sage-border(radius-large);
 
   &:hover,
