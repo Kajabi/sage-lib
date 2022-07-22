@@ -169,5 +169,6 @@ $-data-card-padding: sage-spacing(xs);
   grid-auto-flow: column;
   grid-auto-columns: auto;
   overflow-x: auto;
+  justify-content: start;
   width: 100%;
 }
