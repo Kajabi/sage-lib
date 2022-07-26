@@ -1,11 +1,20 @@
 import React from 'react';
 import { Button } from '../../Button';
 import { Label } from '../../Label';
+import { Link } from '../../Link';
 import { SageTokens } from '../../configs';
 
 export const domains = [
   {
-    domain: 'www.daydreamsurfshop.mykajabi.com',
+    domain: (
+      <Link
+        className="sage-link--table-cell-primary"
+        removeUnderline={true}
+        href="https://www.daydreamsurfshop.mykajabi.com"
+      >
+        www.daydreamsurfshop.mykajabi.com
+      </Link>
+    ),
     status: {
       value: {
         value: 'Kajabi Default',
@@ -25,7 +34,15 @@ export const domains = [
     ),
   },
   {
-    domain: 'courses.daydreamsurfshop.com',
+    domain: (
+      <Link
+        className="sage-link--table-cell-primary"
+        removeUnderline={true}
+        href="https://courses.daydreamsurfshop.com"
+      >
+        courses.daydreamsurfshop.com
+      </Link>
+    ),
     status: {
       value: {
         value: 'Connected',
