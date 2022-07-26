@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import isEmpty from 'lodash/isEmpty';
 import { selectItemPropTypes, selectStructuredItemPropTypes } from './configs';
 
 export const Select = ({
@@ -13,6 +14,7 @@ export const Select = ({
   message,
   onChange,
   options,
+  optGroups,
   value,
   ...rest
 }) => {
@@ -23,6 +25,32 @@ export const Select = ({
       'sage-form-field--error': hasError,
       'sage-select--value-selected': value,
     }
+  );
+
+  const buildOptions = (opts) => (
+    opts.map((option, i) => {
+      let optionLabel,
+        optionDisabled,
+        optionValue;
+      if (typeof option === 'string') {
+        optionLabel = option;
+        optionValue = option;
+      } else {
+        optionLabel = option.label;
+        optionValue = option.value;
+        optionDisabled = option.disabled;
+      }
+
+      return (
+        <option
+          key={i.toString()}
+          value={optionValue}
+          disabled={optionDisabled}
+        >
+          {optionLabel}
+        </option>
+      );
+    })
   );
 
   return (
@@ -38,29 +66,17 @@ export const Select = ({
       >
         {(label && includeLabelInOptions) && <option label={label} />}
 
-        {options.map((option, i) => {
-          let optionLabel,
-            optionDisabled,
-            optionValue;
-          if (typeof option === 'string') {
-            optionLabel = option;
-            optionValue = option;
-          } else {
-            optionLabel = option.label;
-            optionValue = option.value;
-            optionDisabled = option.disabled;
-          }
+        if (!isEmpty(optGroups)) {
+          optGroups.map((group) => (
+            <optgroup label={group.label} disabled={group.disabled}>
+              {buildOptions(group.options)}
+            </optgroup>
+          ))
+        }
 
-          return (
-            <option
-              key={i.toString()}
-              value={optionValue}
-              disabled={optionDisabled}
-            >
-              {optionLabel}
-            </option>
-          );
-        })}
+        if (!isEmpty(options)) {
+          buildOptions(options)
+        }
       </select>
       <i className="sage-select__arrow" aria-hidden="true" />
       {label && (
@@ -87,6 +103,7 @@ Select.defaultProps = {
   message: null,
   onChange: (evt) => evt,
   options: [],
+  optGroups: [],
   value: '',
 };
 
@@ -99,6 +116,12 @@ Select.propTypes = {
   label: PropTypes.string,
   message: PropTypes.string,
   onChange: PropTypes.func,
+  optGroups: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string,
+      options: PropTypes.arrayOf(selectItemPropTypes),
+    }),
+  ),
   options: PropTypes.arrayOf(selectItemPropTypes),
   value: PropTypes.string,
 };

@@ -23,6 +23,17 @@
   <td><%= md('`nil`') %></td>
 </tr>
 <tr>
+  <td><%= md('`select_optgroups`') %></td>
+  <td><%= md('An array of items that will serve as the `<select>`\'s `<optgroup>`s. <br>`<optgroup>`s should contain `select_options`. <br>Should both `select_optgroups` and `select_options` be passed, `select_optgroups` will appear first.') %></td>
+  <td><%= md('```
+Array<{
+  label: String,
+  disabled: Boolean (false),
+}>
+  ```') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
   <td><%= md('`select_options`') %></td>
   <td><%= md('An array of items that will serve as the `<select>`\'s `<option>`s') %></td>
   <td><%= md('```

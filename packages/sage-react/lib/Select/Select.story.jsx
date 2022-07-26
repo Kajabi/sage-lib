@@ -14,7 +14,7 @@ export default {
       'Option 2',
       'Option 3',
       'Option 4',
-    ]
+    ],
   },
 };
 
@@ -85,4 +85,34 @@ SelectWithOptionDisabled.args = {
     'Fifth option',
   ],
   placeholder: 'Select from the following:'
+};
+
+export const SelectWithOptgroups = (args) => <Select {...args} />;
+
+SelectWithOptgroups.args = {
+  id: 'field-3',
+  label: 'Choose wisely…',
+  optGroups: [
+    {
+      label: 'group name',
+      options: [
+        'option 1',
+        'option 2',
+      ],
+    },
+    {
+      label: 'group 2',
+      options: [
+        'option 1',
+        'group 2 option',
+      ],
+    },
+  ],
+  options: [
+    'Option 1',
+    'Option 2',
+    'Option 3',
+    'Option 4',
+  ],
+  placeholder: 'Choose wisely…'
 };

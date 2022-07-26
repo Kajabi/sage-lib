@@ -13,5 +13,9 @@ class SageFormSelect < SageComponent
       disabled: [:optional, TrueClass],
       selected: [:optional, TrueClass],
     }]]],
+    select_optgroups: [:optional, [[{
+      label: String,
+      disabled: [:optional, TrueClass],
+    }]]],
   })
 end
