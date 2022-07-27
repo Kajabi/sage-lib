@@ -35,17 +35,29 @@ export const Default = (args) => {
       id={args.id}
       label={args.label}
       message={null}
+      mode={args.inputMode}
       onChange={onChange}
       prefix={args.prefix}
       required={false}
       standalone={args.standalone}
       suffix={args.suffix}
+      type={args.inputType}
       value={value}
     />
   );
 };
 
-const Template = (args) => <Input {...args} />;
+const Template = (args) => {
+  const [value, updateValue] = useState(args.value);
+  const onChange = (e) => {
+    updateValue(e.target.value);
+  };
+
+  return (
+    <Input {...args} onChange={onChange} value={value} />
+  );
+};
+
 export const InputWithError = Template.bind({});
 InputWithError.args = {
   hasError: true,
@@ -69,7 +81,8 @@ export const InputEmail = Template.bind({});
 InputEmail.args = {
   inputType: Input.Type.EMAIL,
   label: 'Email address',
-  id: 'field-6'
+  id: 'field-6',
+  value: 'invalid. replace with email address'
 };
 
 export const InputWithStaticIcon = (args) => {
