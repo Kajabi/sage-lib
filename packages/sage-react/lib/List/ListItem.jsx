@@ -49,7 +49,7 @@ ListItem.defaultProps = {
 ListItem.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
-  id: PropTypes.oneOf([PropTypes.string, PropTypes.number]),
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   moreActions: { ...OptionsDropdown.propTypes },
   sortable: PropTypes.bool,
 };
