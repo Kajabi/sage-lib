@@ -1,0 +1,17 @@
+<%# Desired HTML %>
+<div class="
+    sage-video-thumbnail
+    <%= component.generated_css_classes %>
+  "
+  style="background-image: url(<%= component.image_url %>);"
+  <%= component.generated_html_attributes.html_safe %>
+>
+  <a
+    <% component.cta_attributes.each do |key, value| %>
+        <%= "#{key}='#{value}'".html_safe %>
+      <% end if component.cta_attributes&.is_a?(Hash) %>
+    class="sage-video-thumbnail__play-button"
+  >
+    <span>Play media</span>
+  </a>
+</div>

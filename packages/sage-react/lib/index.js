@@ -77,6 +77,7 @@ export { TransactionCard } from './TransactionCard';
 export { Type } from './Type';
 export { Typeahead } from './Typeahead';
 export { UploadCard } from './UploadCard';
+export { VideoThumbnail } from './VideoThumbnail';
 export {
   SageClassnames,
   SageTokens,
