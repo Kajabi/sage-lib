@@ -41,7 +41,6 @@ export const ProductsTab = () => (
           </h4>
           <Button
             color={Button.COLORS.SECONDARY}
-            raised={false}
             href={url}
           >
             View progress
