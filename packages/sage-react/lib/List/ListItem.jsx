@@ -50,6 +50,6 @@ ListItem.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
   id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  moreActions: { ...OptionsDropdown.propTypes },
+  moreActions: PropTypes.shape({ ...OptionsDropdown.propTypes }),
   sortable: PropTypes.bool,
 };
