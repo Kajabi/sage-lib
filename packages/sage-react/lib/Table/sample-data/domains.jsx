@@ -2,13 +2,13 @@ import React from 'react';
 import { Button } from '../../Button';
 import { Label } from '../../Label';
 import { Link } from '../../Link';
-import { SageTokens } from '../../configs';
+import { SageClassnames, SageTokens } from '../../configs';
 
 export const domains = [
   {
     domain: (
       <Link
-        className="sage-link--table-cell-primary"
+        className={`${SageClassnames.LINK.TABLE_CELL_PRIMARY}`}
         removeUnderline={true}
         href="https://www.daydreamsurfshop.mykajabi.com"
       >
@@ -36,7 +36,7 @@ export const domains = [
   {
     domain: (
       <Link
-        className="sage-link--table-cell-primary"
+        className={`${SageClassnames.LINK.TABLE_CELL_PRIMARY}`}
         removeUnderline={true}
         href="https://courses.daydreamsurfshop.com"
       >
