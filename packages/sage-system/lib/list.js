@@ -8,9 +8,11 @@ Sage.sortableList = (function() {
   const SELECTOR_CONTAINER = 'data-js-list-sortable';
   const SELECTOR_ITEM_UPDATE_URL = 'data-js-list-sortable-update-url';
   const SETTINGS = {
+    dragClass: 'sage-list__item--sortable-drag',
     ghostClass: 'sage-list__item--sortable-ghost',
     chosenClass: 'sage-list__item--sortable-active',
   };
+  const DRAGGING_CLASSNAME = 'sage-list--sortable-dragging';
 
 
   // ==================================================
@@ -23,7 +25,11 @@ Sage.sortableList = (function() {
 
     Sortable.create(el, {
       ...SETTINGS,
+      onStart: function(evt) {
+        evt.srcElement.classList.add(DRAGGING_CLASSNAME);
+      },
       onEnd: function (evt) {
+        evt.srcElement.classList.remove(DRAGGING_CLASSNAME);
         let updateUrl = evt.item.getAttribute(SELECTOR_ITEM_UPDATE_URL)
 
         // Check if the sorted Item:

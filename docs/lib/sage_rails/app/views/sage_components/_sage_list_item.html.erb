@@ -19,7 +19,12 @@ end
 >
   <% if component.sortable %>
     <div class="sage-list__item-sortable-handle">
-      <%= sage_component SageIcon, { icon: "handle" } %>
+      <%= sage_component SageButton, {
+        subtle: true,
+        style: "secondary",
+        icon: { name: "handle-2-vertical", style: "only" },
+        value: "Drag to sort",
+      } %>
     </div>
   <% end %>
 
