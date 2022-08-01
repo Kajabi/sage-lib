@@ -279,6 +279,10 @@ $-btn-loading-min-height: rem(36px);
     }
   }
 
+  .sage-list__item-sortable-handle & {
+    cursor: grab;
+  }
+
   .sage-input-group & {
     position: absolute;
     z-index: sage-z-index(default, 1);
