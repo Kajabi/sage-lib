@@ -71,6 +71,8 @@ export const Button = React.forwardRef(({
     );
   };
 
+  if (isLink) { rest.suppressDefaultClass = true; }
+
   return (
     <TagName
       ref={ref}
@@ -78,7 +80,6 @@ export const Button = React.forwardRef(({
       aria-disabled={isLink && disabled}
       disabled={!isLink && disabled}
       tag={isLink ? linkTag : null}
-      suppressDefaultClass={isLink}
       {...rest}
     >
       {renderContent()}
