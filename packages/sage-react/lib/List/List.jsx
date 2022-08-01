@@ -8,7 +8,6 @@ import { OptionsDropdown } from '../Dropdown';
 export const List = ({
   children,
   className,
-  hideFirstBorder,
   items,
   itemRenderer,
   sortableConfigs,
@@ -17,10 +16,9 @@ export const List = ({
   const classNames = classnames(
     'sage-list',
     className,
-    {
-      'sage-list--hide-first-border': hideFirstBorder,
-    }
   );
+
+  const draggingClassname = 'sage-list--sortable-dragging';
 
   const renderItems = () => {
     if (children) {
@@ -40,6 +38,22 @@ export const List = ({
 
   const Tag = tag;
 
+  const localSortableConfigs = {
+    ...sortableConfigs,
+    onEnd: (evt) => {
+      evt.srcElement.classList.remove(draggingClassname);
+      if (sortableConfigs.onEnd) {
+        sortableConfigs.onEnd(evt);
+      }
+    },
+    onStart: (evt) => {
+      evt.srcElement.classList.add(draggingClassname);
+      if (sortableConfigs.onStart) {
+        sortableConfigs.onStart(evt);
+      }
+    },
+  };
+
   return sortableConfigs ? (
     <ReactSortable
       chosenClass="sage-list__item--sortable-active"
@@ -48,7 +62,7 @@ export const List = ({
       ghostClass="sage-list__item--sortable-ghost"
       list={items}
       tag={tag}
-      {...sortableConfigs}
+      {...localSortableConfigs}
     >
       {renderItems()}
     </ReactSortable>
@@ -90,6 +104,7 @@ List.propTypes = {
   itemRenderer: PropTypes.func,
   sortableConfigs: PropTypes.shape({
     onEnd: PropTypes.func,
+    onStart: PropTypes.func,
     setList: PropTypes.func, // Same as useState[1]
     tag: PropTypes.oneOfType([
       PropTypes.string,

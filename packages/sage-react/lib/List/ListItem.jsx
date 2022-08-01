@@ -3,6 +3,7 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import { Icon } from '../Icon';
 import { Dropdown, OptionsDropdown } from '../Dropdown';
+import { Button } from '../Button';
 
 export const ListItem = ({
   children,
@@ -23,7 +24,14 @@ export const ListItem = ({
     <li className={classNames} id={id}>
       {sortable && (
         <div className="sage-list__item-sortable-handle">
-          <Icon icon={Icon.ICONS.HANDLE} label="Drag to sort" />
+          <Button
+            color={Button.COLORS.SECONDARY}
+            icon={Icon.ICONS.HANDLE_2_VERTICAL}
+            iconOnly={true}
+            subtle={true}
+          >
+            Drag to sort
+          </Button>
         </div>
       )}
       <div className="sage-list__item-content">
