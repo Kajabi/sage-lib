@@ -51,7 +51,6 @@ module SageSchemas
     value: [:optional, String],
     # TODO: Deprecations in Next
     subtle: [:optional, NilClass, TrueClass],
-    raised: [:optional, NilClass, TrueClass],
     small: [:optional, NilClass, TrueClass],
   }
 

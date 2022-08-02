@@ -138,6 +138,10 @@ $-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
     align-self: start;
     margin-top: var(--icon-top-offset);
   }
+
+  @media (max-width: sage-breakpoint(xs-max)) {
+    display: block;
+  }
 }
 
 .sage-choice--radio {

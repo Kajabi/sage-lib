@@ -38,6 +38,18 @@ module MocksHelper
   def sage_mocks
     [
       {
+        alias: "transaction_update",
+        jira_epic: "SAGE-730",
+        name: "Transactions Page Update",
+        no_custom_styles: true,
+        no_rails_js: true,
+        no_rails_partials: true,
+        no_rails_helper: true,
+        status: DOING,
+        storybook_path: '/docs/mocks-payments-transactions--index',
+        team: "Commerce",
+      },
+      {
         alias: "product_creation_wizard",
         jira_epic: "SAGE-39",
         name: "Product Creation Wizard",

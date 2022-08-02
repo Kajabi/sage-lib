@@ -23,14 +23,12 @@ export default {
         <Button
           className=""
           color="primary"
-          raised={false}
         >
           Get started
         </Button>
         <Button
           className=""
           color="primary"
-          raised={false}
           subtle={true}
         >
           Learn more

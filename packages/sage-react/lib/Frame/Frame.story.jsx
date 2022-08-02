@@ -175,7 +175,6 @@ export const CustomBlock = () => (
       <Button.Group gap={Button.Group.GAP_OPTIONS.SM}>
         <Button
           color={Button.COLORS.PRIMARY}
-          raised={false}
         >
           Do it!
         </Button>

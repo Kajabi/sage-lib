@@ -33,11 +33,6 @@
   }
 }
 
-.sage-btn--subtle.sage-btn--secondary,
-.sage-btn--subtle.sage-btn--secondary::before {
-  color: inherit;
-}
-
 // build individual color blocks
 @each $name, $color in $sage-colors {
   @each $value, $map in $color {
