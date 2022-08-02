@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.0.0...@kajabi/sage-assets@1.0.1) (2022-08-02)
+
+
+### Bug Fixes
+
+* **card/panel divider:** updates divider colors ([512fd50](https://github.com/Kajabi/sage-lib/commit/512fd5094f6f9f7a54dd7c1d50f12b91c59a8a38))
+* **data-card:** add alignment to data card to prevent spread ([9321d50](https://github.com/Kajabi/sage-lib/commit/9321d50a2d8b59d9a7560835a5070b2f9c30f5db))
+* **dropdown focus states:** update mixin values to align dropdown focus state ([194b5c3](https://github.com/Kajabi/sage-lib/commit/194b5c390b9bdbe20c179922651604d4a1a1e443))
+
+
+
+
+
 # [1.0.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.89.1...@kajabi/sage-assets@1.0.0) (2022-07-15)
 
 

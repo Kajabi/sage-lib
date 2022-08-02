@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.1.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.1.0...@kajabi/sage@5.1.1) (2022-08-02)
+
+
+### Bug Fixes
+
+* **sage-rails:** remove raised variant ([05e75cc](https://github.com/Kajabi/sage-lib/commit/05e75cca36e07bc48a42fca25cbf7d9a11f08fce))
+
+
+
+
+
 # [5.1.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.0.0...@kajabi/sage@5.1.0) (2022-07-21)
 
 

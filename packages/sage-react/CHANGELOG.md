@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.0.0...@kajabi/sage-react@1.1.0) (2022-08-02)
+
+
+### Bug Fixes
+
+* **disabled states:** audit, fix, and add stories for disabled states ([84a30fc](https://github.com/Kajabi/sage-lib/commit/84a30fc73a356d3edf06e9ffff375feac75fe5f4))
+* **sage-react:** fix storybook template to use onChange event ([5efca0e](https://github.com/Kajabi/sage-lib/commit/5efca0efe661e8ffb3186dae95ddaccf2f7c2e85))
+* **sage-react:** input was using an invalid prop 'inputType' ([7c3ffc6](https://github.com/Kajabi/sage-lib/commit/7c3ffc6894e1cb2c49a68771f2214c4054bb2bb5))
+* **sage-react:** removes raised prop that is no longer being used ([552d732](https://github.com/Kajabi/sage-lib/commit/552d732679d77e333ce3f4123c67c7c2b5df40e6))
+* **sage-react:button:** change the logic for suppressDefaultClass ([cec47f8](https://github.com/Kajabi/sage-lib/commit/cec47f8b53d789af458715cdcb58846c053383cf))
+* **select examples:** rollback examples added in this PR as previous PR added examples ([8db6067](https://github.com/Kajabi/sage-lib/commit/8db606709330dff3d2df16904aaaa9ddf010d743))
+* **textarea story:** add disabled toggle ([893ad03](https://github.com/Kajabi/sage-lib/commit/893ad03c8d783db616f96376a74e0bce2315be8c))
+* **textarea story:** add one id to the default args instead ([2e7493a](https://github.com/Kajabi/sage-lib/commit/2e7493ab5377f32107d2eda278a45dbb31f2d763))
+* **textarea story:** pass in id's for all text area stories ([12df694](https://github.com/Kajabi/sage-lib/commit/12df6942460a10b5b7300c07c4852bbb7ba7c8ab))
+
+
+### Features
+
+* **mocks:** add Transactions page mocks ([3993606](https://github.com/Kajabi/sage-lib/commit/39936065eee944a8ca4e94f8f6cd4276dc628b76))
+
+
+
+
+
 # [1.0.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@0.103.1...@kajabi/sage-react@1.0.0) (2022-07-15)
 
 
