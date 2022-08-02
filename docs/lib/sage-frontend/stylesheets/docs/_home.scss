@@ -20,7 +20,7 @@
   }
 
   .sage-btn--subtle.sage-btn--secondary {
-    color: currentColor;
+    color: inherit;
 
     &:focus::after {
       border-color: currentColor;
@@ -36,8 +36,8 @@
   margin-bottom: sage-spacing(sm);
   margin-top: sage-spacing();
   font-size: 4rem;
-  line-height: 4rem;
-  color: sage-color(white);
+  line-height: 1;
+  color: inherit;
 }
 
 .docs-hero__img {

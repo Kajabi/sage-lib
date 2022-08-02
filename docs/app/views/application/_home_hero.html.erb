@@ -4,10 +4,10 @@
       <%= render "application/nav" %>
     </header>
     <%= sage_component SageGridRow, {} do %>
-      <%= sage_component SageGridCol, { breakpoint: "md", size: "4" } do %>
+      <%= sage_component SageGridCol, { breakpoint: "md", size: "7" } do %>
         <%= image_tag "sage_icon.png", size: "70", alt: "" %>
           <h1 class="docs-hero__title">Building with Sage</h1>
-          <p>Our system is our source of truth, providing everything you need to build the best experiences for all Kajabi entrepreneurs.</p>
+          <p class="t-sage-body">Our system is our source of truth, providing everything you need to build the best experiences for all Kajabi entrepreneurs.</p>
         <%= sage_component SageButtonGroup, { gap: :sm, spacer: { top: :lg } } do %>
           <%= sage_component SageButton, {
             value: "Get Started",
@@ -33,9 +33,6 @@
             style: "secondary",
           } %>
         <% end %>
-      <% end %>
-      <%= sage_component SageGridCol, { breakpoint: "md", size: "8" } do %>
-        <%= image_tag "sage_ui.png", class: "docs-hero__img", loading: "lazy", alt: "An example of a Sage component and its HTML markup" %>
       <% end %>
     <% end %>
   <% end %>
