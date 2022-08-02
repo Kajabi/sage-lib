@@ -88,7 +88,6 @@ export const CoachingDetails = ({ onChangeStep }) => {
       <Button.Group gap={Button.Group.GAP_OPTIONS.MD}>
         <Button
           color={Button.COLORS.SECONDARY}
-          raised={false}
           onClick={() => onChangeStep(null)}
         >
           Go back
