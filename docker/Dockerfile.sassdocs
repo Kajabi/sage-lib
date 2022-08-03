@@ -34,7 +34,7 @@ WORKDIR /app
 ENV HOME="/app"
 
 # COPY Gemfile Gemfile.lock ./
-COPY packages/sage-assets/package.json
+COPY packages/sage-assets/package.json /app
 
 COPY --chown=${NONROOT_UID}:${NONROOT_GID} . .
 
