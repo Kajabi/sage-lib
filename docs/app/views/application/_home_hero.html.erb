@@ -1,5 +1,6 @@
-<div class="docs-hero" style="background-image: url(<%= image_url "hero.jpg" %>);">
-  <%= sage_component SageContainer, { size: "xl", css_classes: "sage-type" } do %>
+<div class="docs-hero">
+  <%= image_tag "hero-background.svg", class: "docs-hero__background", alt: "", loading: "lazy" %>
+  <%= sage_component SageContainer, { size: "xl", css_classes: "docs-hero__content sage-type" } do %>
     <header class="sage-header">
       <%= render "application/nav" %>
     </header>

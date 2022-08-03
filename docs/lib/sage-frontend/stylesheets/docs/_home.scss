@@ -8,12 +8,10 @@
 }
 
 .docs-hero {
+  position: relative;
   padding: sage-spacing() sage-spacing() rem(100px);
   color: sage-color(white);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  background-color: sage-color(primary, 300);
+  background-color: sage-color(primary, 500);
 
   @media (max-width: sage-breakpoint(md-min)) {
     padding-bottom: sage-spacing(xl);
@@ -32,21 +30,25 @@
   }
 }
 
+.docs-hero__background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.docs-hero__content {
+  position: relative;
+}
+
 .docs-hero__title {
   margin-bottom: sage-spacing(sm);
   margin-top: sage-spacing();
   font-size: 4rem;
   line-height: 1;
   color: inherit;
-}
-
-.docs-hero__img {
-  max-width: 100%;
-  padding-left: rem(100px);
-
-  @media (max-width: sage-breakpoint(md-min)) {
-    display: none;
-  }
 }
 
 .docs-section {
