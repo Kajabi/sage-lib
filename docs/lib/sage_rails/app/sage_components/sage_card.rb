@@ -4,6 +4,6 @@ class SageCard < SageComponent
     compact: [:optional, TrueClass,],
     clear_bottom_padding: [:optional, TrueClass],
     clear_top_padding: [:optional, TrueClass],
-    interactive: [:optiona, TrueClass]
+    interactive: [:optional, TrueClass]
   })
 end
