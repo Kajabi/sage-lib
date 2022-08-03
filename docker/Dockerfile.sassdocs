@@ -42,4 +42,4 @@ RUN yarn install --check-files
 
 EXPOSE 3000
 
-CMD ["yarn start"]
+CMD ["yarn", "start"]
