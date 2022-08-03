@@ -45,12 +45,12 @@ COPY Gemfile Gemfile.lock ./
 
 RUN if [[ "$RAILS_ENV" == "production" ]]; then  bundle config set --local without 'development test'; fi
 
-RUN echo "-----> Using .npmrc from config var NPMRC"
-RUN echo "$NPMRC" > ./.npmrc
-
 COPY --chown=${NONROOT_UID}:${NONROOT_GID} . .
 
 RUN bundle install
+
+RUN echo "-----> Using .npmrc from config var NPMRC"
+RUN echo "$NPMRC" > ./.npmrc
 
 RUN yarn install --check-files
 RUN bundle exec rails assets:precompile SECRET_KEY_BASE=foobarbaz
