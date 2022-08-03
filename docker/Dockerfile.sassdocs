@@ -30,16 +30,16 @@ RUN apk add \
   && adduser -u $NONROOT_UID -S nonroot -G nonroot -h /workspace
 
 RUN mkdir -p /app && chown nonroot:nonroot /app
+
 WORKDIR /app
 ENV HOME="/app"
 
-# COPY Gemfile Gemfile.lock ./
 COPY packages/sage-assets/package.json /app
 
 COPY --chown=${NONROOT_UID}:${NONROOT_GID} . .
 
 RUN yarn install --check-files
 
-EXPOSE 3000
+EXPOSE 4200
 
-CMD ["yarn", "start"]
+CMD ["yarn", "sassdocs"]
