@@ -5,7 +5,7 @@
       <%= render "application/nav" %>
     </header>
     <%= sage_component SageGridRow, {} do %>
-      <%= sage_component SageGridCol, { breakpoint: "md", size: "7" } do %>
+      <%= sage_component SageGridCol, { medium: "8", large: "7" } do %>
         <%= image_tag "sage_icon.png", size: "70", alt: "" %>
           <h1 class="docs-hero__title">Building with Sage</h1>
           <p class="t-sage-body">Our system is our source of truth, providing everything you need to build the best experiences for all Kajabi entrepreneurs.</p>
