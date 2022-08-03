@@ -34,7 +34,7 @@ RUN mkdir -p /app && chown nonroot:nonroot /app
 WORKDIR /app
 ENV HOME="/app"
 
-COPY packages/sage-assets/package.json /app
+COPY package.json /app
 
 COPY --chown=${NONROOT_UID}:${NONROOT_GID} . .
 
@@ -42,4 +42,4 @@ RUN yarn install --check-files
 
 EXPOSE 4200
 
-CMD ["yarn", "sassdocs"]
+CMD ["yarn", "start"]
