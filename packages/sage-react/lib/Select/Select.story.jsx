@@ -32,6 +32,7 @@ export const SelectWithState = (args) => {
     />
   );
 };
+
 SelectWithState.args = {
   id: 'field-2',
   label: 'Cool stuff',
@@ -71,6 +72,7 @@ export const SelectWithOptionDisabled = (args) => {
     />
   );
 };
+
 SelectWithOptionDisabled.args = {
   id: 'field-4',
   label: 'Select from the following:',
