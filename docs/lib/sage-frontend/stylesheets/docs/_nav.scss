@@ -23,3 +23,18 @@
     margin-bottom: rem(100px);
   }
 }
+
+// displays "skip to content" link when focused
+.skip-link:focus,
+.skip-link:focus-within {
+  .visually-hidden {
+    position: relative;
+    overflow: initial;
+    clip: initial;
+    clip-path: initial;
+    height: initial;
+    width: initial;
+    margin: initial;
+    white-space: initial;
+  }
+}
