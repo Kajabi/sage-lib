@@ -29,7 +29,6 @@ export const Select = ({
     let optionLabel,
       optionValue,
       optionDisabled;
-      // optionSelected;
     if (typeof option === 'string') {
       optionLabel = option;
       optionValue = option;
@@ -37,7 +36,6 @@ export const Select = ({
       optionLabel = option.label;
       optionValue = option.value;
       optionDisabled = option.disabled;
-      // optionSelected = option.selected;
     }
 
     return (
