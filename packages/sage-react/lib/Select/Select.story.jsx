@@ -102,6 +102,7 @@ export const SelectWithOptgroups = (args) => {
 SelectWithOptgroups.args = {
   id: 'field-3',
   label: 'Choose a sport...',
+  value: 'nascar',
   options: [
     'Bowling',
     {
