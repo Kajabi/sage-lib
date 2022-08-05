@@ -50,19 +50,17 @@ export const Select = ({
   };
 
   const buildOptgroup = (optgroup, i) => {
-    if (optgroup.group_label && optgroup.group_label.length > 0) {
-      const optgroupLabel = optgroup.group_label;
-      const optgroupDisabled = optgroup.disabled;
-      return (
-        <optgroup
-          label={optgroupLabel}
-          disabled={optgroupDisabled}
-          key={optgroupLabel + i.toString()}
-        >
-          {optgroup.group_options.map((option, i) => (buildOption(option, i)))}
-        </optgroup>
-      );
-    }
+    const optgroupLabel = optgroup.group_label;
+    const optgroupDisabled = optgroup.disabled;
+    return (
+      <optgroup
+        label={optgroupLabel}
+        disabled={optgroupDisabled}
+        key={optgroupLabel + i.toString()}
+      >
+        {optgroup.group_options.map((option, i) => (buildOption(option, i)))}
+      </optgroup>
+    );
   };
 
   const buildOptions = (option, i) => {
