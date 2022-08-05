@@ -84,3 +84,20 @@
   width: 100%;
   aspect-ratio: 4 / 3;
 }
+
+@supports (backdrop-filter: blur(3px)) {
+  .docs-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(70px);
+    z-index: sage-z-index(default, 1);
+  }
+
+  .docs-hero__content {
+    z-index: sage-z-index(default, 2);
+  }
+}
