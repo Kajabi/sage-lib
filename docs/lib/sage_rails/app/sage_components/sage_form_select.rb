@@ -8,10 +8,5 @@ class SageFormSelect < SageComponent
     multiple: [:optional, TrueClass],
     name: [:optional, String],
     select_options: [:optional, [[SageSchemas::FORM_SELECT_OPTION, SageSchemas::FORM_SELECT_OPTGROUP]]],
-    select_optgroups: [:optional, [[{
-      label: String,
-      disabled: [:optional, TrueClass],
-      
-    }]]],
   })
 end
