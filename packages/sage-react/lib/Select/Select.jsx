@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import isEmpty from 'lodash/isEmpty';
 import { selectItemPropTypes, selectStructuredItemPropTypes } from './configs';
 
 export const Select = ({
@@ -14,7 +13,6 @@ export const Select = ({
   message,
   onChange,
   options,
-  optGroups,
   value,
   ...rest
 }) => {
@@ -27,31 +25,54 @@ export const Select = ({
     }
   );
 
-  const buildOptions = (opts) => (
-    opts.map((option, i) => {
-      let optionLabel,
-        optionDisabled,
-        optionValue;
-      if (typeof option === 'string') {
-        optionLabel = option;
-        optionValue = option;
-      } else {
-        optionLabel = option.label;
-        optionValue = option.value;
-        optionDisabled = option.disabled;
-      }
+  const buildOption = (option, i) => {
+    let optionLabel,
+      optionValue,
+      optionDisabled;
+      // optionSelected;
+    if (typeof option === 'string') {
+      optionLabel = option;
+      optionValue = option;
+    } else {
+      optionLabel = option.label;
+      optionValue = option.value;
+      optionDisabled = option.disabled;
+      // optionSelected = option.selected;
+    }
 
+    return (
+      <option
+        key={optionValue + i.toString()}
+        value={optionValue}
+        disabled={optionDisabled}
+      >
+        {optionLabel}
+      </option>
+    );
+  };
+
+  const buildOptgroup = (optgroup, i) => {
+    if (optgroup.group_label && optgroup.group_label.length > 0) {
+      const optgroupLabel = optgroup.group_label;
+      const optgroupDisabled = optgroup.disabled;
       return (
-        <option
-          key={i.toString()}
-          value={optionValue}
-          disabled={optionDisabled}
+        <optgroup
+          label={optgroupLabel}
+          disabled={optgroupDisabled}
+          key={optgroupLabel + i.toString()}
         >
-          {optionLabel}
-        </option>
+          {optgroup.group_options.map((option, i) => (buildOption(option, i)))}
+        </optgroup>
       );
-    })
-  );
+    }
+  };
+
+  const buildOptions = (option, i) => {
+    if (option.group_label && option.group_label.length > 0) {
+      return buildOptgroup(option, i);
+    }
+    return buildOption(option, i);
+  };
 
   return (
     <div className={classNames}>
@@ -66,17 +87,11 @@ export const Select = ({
       >
         {(label && includeLabelInOptions) && <option label={label} />}
 
-        if (!isEmpty(optGroups)) {
-          optGroups.map((group) => (
-            <optgroup label={group.label} disabled={group.disabled}>
-              {buildOptions(group.options)}
-            </optgroup>
+        {(options
+          && options.map((option, i) => (
+            buildOptions(option, i)
           ))
-        }
-
-        if (!isEmpty(options)) {
-          buildOptions(options)
-        }
+        )}
       </select>
       <i className="sage-select__arrow" aria-hidden="true" />
       {label && (
@@ -102,8 +117,6 @@ Select.defaultProps = {
   label: null,
   message: null,
   onChange: (evt) => evt,
-  options: [],
-  optGroups: [],
   value: '',
 };
 
@@ -116,12 +129,6 @@ Select.propTypes = {
   label: PropTypes.string,
   message: PropTypes.string,
   onChange: PropTypes.func,
-  optGroups: PropTypes.arrayOf(
-    PropTypes.shape({
-      name: PropTypes.string,
-      options: PropTypes.arrayOf(selectItemPropTypes),
-    }),
-  ),
-  options: PropTypes.arrayOf(selectItemPropTypes),
+  options: PropTypes.arrayOf(selectItemPropTypes).isRequired,
   value: PropTypes.string,
 };

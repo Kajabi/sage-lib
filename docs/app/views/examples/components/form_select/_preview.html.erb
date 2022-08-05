@@ -110,10 +110,10 @@
 <h3 class="<%= SageClassnames::TYPE::HEADING_6 %>">Optgroup use</h3>
 <%= sage_component SageFormSelect, {
   name: "Sports!",
-  select_optgroups: [
+  select_options: [
     {
-      label: "Hand Sports",
-      select_options: [
+      group_label: "Hand Sports",
+      group_options: [
         {
           text: "Football",
           value: "football",
@@ -125,13 +125,13 @@
       ],
     },
     {
-      label: "Foot Sports",
-      select_options: [
+      group_label: "Foot Sports",
+      group_options: [
         {
           text: "Soccer",
           value: "soccer",
           selected: true,
-        }
+        },
       ],
     },
   ]

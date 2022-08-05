@@ -23,7 +23,7 @@ const Template = (args) => <Select {...args} />;
 export const Default = Template.bind({});
 
 export const SelectWithState = (args) => {
-  const [value, updateValue] = useState('');
+  const [value, updateValue] = useState(args.value);
   return (
     <Select
       {...args}
@@ -35,6 +35,7 @@ export const SelectWithState = (args) => {
 SelectWithState.args = {
   id: 'field-2',
   label: 'Cool stuff',
+  value: 'Option 2',
   options: [
     'Option 1',
     'Option 2',
@@ -61,7 +62,7 @@ DisabledSelectFieldWithOptionPreselected.args = {
 };
 
 export const SelectWithOptionDisabled = (args) => {
-  const [value, updateValue] = useState('');
+  const [value, updateValue] = useState(args.value);
   return (
     <Select
       {...args}
@@ -87,32 +88,42 @@ SelectWithOptionDisabled.args = {
   placeholder: 'Select from the following:'
 };
 
-export const SelectWithOptgroups = (args) => <Select {...args} />;
+export const SelectWithOptgroups = (args) => {
+  const [value, updateValue] = useState(args.value);
+  return (
+    <Select
+      {...args}
+      value={value}
+      onChange={(evt) => updateValue(evt.target.value)}
+    />
+  );
+};
 
 SelectWithOptgroups.args = {
   id: 'field-3',
-  label: 'Choose wisely…',
-  optGroups: [
-    {
-      label: 'group name',
-      options: [
-        'option 1',
-        'option 2',
-      ],
-    },
-    {
-      label: 'group 2',
-      options: [
-        'option 1',
-        'group 2 option',
-      ],
-    },
-  ],
+  label: 'Choose a sport...',
   options: [
-    'Option 1',
-    'Option 2',
-    'Option 3',
-    'Option 4',
+    'Bowling',
+    {
+      group_label: 'Hand Sports',
+      group_options: [
+        {
+          value: 'football',
+          label: 'Football',
+        },
+        'Basketball',
+      ],
+    },
+    {
+      value: 'nascar',
+      label: 'Nascar',
+    },
+    {
+      group_label: 'Foot Sports',
+      group_options: [
+        'Soccer',
+      ],
+    },
   ],
   placeholder: 'Choose wisely…'
 };

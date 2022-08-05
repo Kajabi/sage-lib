@@ -18,34 +18,32 @@
     id="<%= select_id %>"
     <%= "disabled" if component.disabled %>
   >
-    <% if component.select_optgroups.present? %>
-      <% component.select_optgroups.each do |optgroup| %>
-        <optgroup 
-          label="<%= optgroup[:label]%>"
-          <%= optgroup[:disabled] ? " disabled" : nil -%>
-          >
-          <% optgroup[:select_options].each do |option| %>
-            <option
-              value="<%= option[:value] %>"
-              <%= option[:selected] && !option[:disabled] ? " selected=true" : nil -%>
-              <%= option[:disabled] ? " disabled" : nil -%>
-            >
-              <%= option[:text] %>
-            </option>
-          <% end %>
-        </optgroup>
-      <% end %>
-    <% end %>
-
     <% if component.select_options.present? %>
       <% component.select_options.each do |option| %>
-        <option
-          value="<%= option[:value] %>"
-          <%= option[:selected] && !option[:disabled] ? " selected=true" : nil -%>
-          <%= option[:disabled] ? " disabled" : nil -%>
-        >
-          <%= option[:text] %>
-        </option>
+        <% if option[:group_label] %>
+          <optgroup
+            label="<%= option[:group_label]%>"
+            <%= option[:disabled] ? " disabled" : nil -%>
+          >
+            <% option[:group_options].each do |option| %>
+              <option
+                value="<%= option[:value] %>"
+                <%= option[:selected] && !option[:disabled] ? " selected=true" : nil -%>
+                <%= option[:disabled] ? " disabled" : nil -%>
+              >
+                <%= option[:text] %>
+              </option>
+            <% end %>
+          </optgroup>
+        <% else %>
+          <option
+            value="<%= option[:value] %>"
+            <%= option[:selected] && !option[:disabled] ? " selected=true" : nil -%>
+            <%= option[:disabled] ? " disabled" : nil -%>
+          >
+            <%= option[:text] %>
+          </option>
+        <% end %>
       <% end %>
     <% end %>
   </select>
