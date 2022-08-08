@@ -226,18 +226,14 @@ sample_table = {
 
 <h3>Using `sage_table_for`</h3>
 <%= md("
-As an alterative to directly calling the SageTable component,
-a helper variation is available that allows for formatting table columns
-in a more compositional fashion. This involves calling `sage_table_for` with a collection,
-and then using `t.column ... do |c|` blocks to provide templates for each column of data.
-See the \"Properties\" tab for documentation of the available parameters.
+As an alternative to directly calling the SageTable component, a helper variation is available that allows for formatting table columns in a more compositional fashion.
 
-**NOTE:** This is an MVP implementation based on a helper written earlier for `kajabi-products`
-and not completely aligned with SageTable yet.
-It is safe to use, but should be tracked against future updates.
+This involves calling `sage_table_for` with a collection, and then using `t.column ... do |c|` blocks to provide templates for each column of data. See the \"Properties\" tab for documentation of the available parameters.
+
+**NOTE:** This is an MVP implementation based on a helper written earlier for `kajabi-products` and may not be fully aligned with SageTable. It is safe to use, but should be tracked against future updates.
 ") %>
 
-<%= sage_table_for people_data, sortable: true, responsive: true, caption: "<p>Testing <b>stuff</b></p>".html_safe do |t| %>
+<%= sage_table_for people_data, selectable: true, sortable: true, responsive: true, caption: "<p>Caption <b>positioned below</b></p>".html_safe, caption_side: "top" do |t| %>
   <% t.column :initials, label: "", data_type: "checkbox" do |c| %>
     <%= sage_component SageCheckbox, {
       label_text: 'Select row',
