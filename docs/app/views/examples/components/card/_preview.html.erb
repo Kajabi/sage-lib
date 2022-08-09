@@ -47,22 +47,12 @@
 
 <%= sage_component SageCard, { interactive: true } do %>
   <%= sage_component SageCardBlock, { type_block: true } do %>
-  <div>
     <%= sage_component SageLink, {
       label: "Sage Card",
       show_label: true,
       style: "primary",
       url: "https://bing.com"
     } %>
-    </div>
-    <div>
-    <%= sage_component SageLink, {
-      label: "Sage Card",
-      show_label: true,
-      style: "secondary",
-      url: "https://google.com"
-    } %>
-    </div>
     <p>
       An interactive card
     </p>
