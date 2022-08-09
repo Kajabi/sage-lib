@@ -46,6 +46,17 @@
 
 .sage-card--interactive {
   border: 0;
+
+  a:not(.sage-link--primary),
+  button:not(.sage-link--primary) {
+    z-index: sage-z-index(default, 2);
+    position: relative;
+
+    &::before,
+    &:hover::before {
+      box-shadow: none;
+    }
+  }
 }
 
 .sage-card__footer {
