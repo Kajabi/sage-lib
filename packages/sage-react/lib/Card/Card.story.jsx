@@ -4,6 +4,7 @@ import { SageTokens } from '../configs';
 import { Button } from '../Button';
 import { Grid } from '../Grid';
 import { Icon } from '../Icon';
+import { Link } from '../Link';
 import { Card } from './Card';
 
 export default {
@@ -123,6 +124,14 @@ Default.args = {
     </>
   ),
 };
+
+export const InteractiveCard = () => (
+  <Card interactive={true}>
+    <Link href="//example.com">
+      Sage Card Link
+    </Link>
+  </Card>
+);
 
 export const CardHighlight = (args) => (
   <Grid container={Grid.CONTAINER_SIZES.XS}>
