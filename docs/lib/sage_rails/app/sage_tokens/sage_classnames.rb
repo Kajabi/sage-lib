@@ -27,6 +27,7 @@ module SageClassnames
   module LINK
     LAUNCH = "sage-link--launch"
     SUBTEXT = "sage-link--subtext"
+    TABLE_CELL_PRIMARY = "sage-link--table-cell-primary"
   end
 
   module SPACERS
