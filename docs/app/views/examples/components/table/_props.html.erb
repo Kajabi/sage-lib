@@ -7,7 +7,7 @@
 <tr>
   <td><%= md('`caption_side`') %></td>
   <td><%= md('Sets the caption position for the component.') %></td>
-  <td><%= md('`"bottom"`, `"top"`') %></td>
+  <td><%= md('String: [`bottom` | `top`]') %></td>
   <td><%= md('`nil`') %></td>
 </tr>
 <tr>
@@ -18,7 +18,7 @@
 </tr>
 <tr>
   <td><%= md('`has_borders`') %></td>
-  <td><%= md('When set to true, adds borders for cleaner readability.') %></td>
+  <td><%= md('When set to `true`, adds borders for cleaner readability.') %></td>
   <td><%= md('Boolean') %></td>
   <td><%= md('`nil`') %></td>
 </tr>
@@ -42,7 +42,9 @@
 </tr>
 <tr>
   <td><%= md('`responsive`') %></td>
-  <td><%= md('Allows the table to scroll horizontally without breaking its parent container. Requires the use of two containing elements: the parent with class `.sage-table-wrapper`, and a child with class `.sage-table-wrapper__overflow`.') %></td>
+  <td><%= md('Allows the table to scroll horizontally without breaking its parent container.
+
+  Requires the use of two containing elements: the parent with class `.sage-table-wrapper`, and a child with class `.sage-table-wrapper__overflow`.') %></td>
   <td><%= md('Boolean') %></td>
   <td><%= md('`nil`') %></td>
 </tr>
@@ -55,7 +57,7 @@
 <tr>
   <td><%= md('`selectable`') %></td>
   <td><%= md('Adds a background color when a user hovers over rows.') %></td>
-  <td><%= md('String:') %></td>
+  <td><%= md('Boolean') %></td>
   <td><%= md('`nil`') %></td>
 </tr>
 <tr>
@@ -64,24 +66,29 @@
   </td>
 </tr>
 <tr>
-  <td><%= md('`collection`') %></td>
+  <td><%= md('`collection`') %><%= sage_component SageBadge, { color: "published", value: "required" } %></td>
   <td><%= md('A collection from which the table data will be formatted.') %></td>
   <td><%= md('Array of Objects') %></td>
-  <td><%= md('Required') %></td>
+  <td><%= md('`nil`') %></td>
 </tr>
 <tr>
   <td><%= md('`options`') %></td>
   <td><%= md('
-  A set of options that match the following options from SageTable above:
+  Allows a **limited** subset of the properties listed above for Table:
 
+  - `caption`
+  - `caption_side`
   - `condensed`
+  - `has_borders`
   - `reset_above`
   - `reset_below`
   - `responsive`
 
-  Also available, unique to `sage_table_for`:
+  The following properties are **unique to `sage_table_for`**:
 
-  - `sortable` -- enables sorting links and direction indicators on sorted columns.
+  - `sortable` (Boolean): enables sorting links and direction indicators on sorted columns
+
+  - `skip_headers` (Boolean): table column headings are not rendered
 ') %></td>
   <td><%= md('See properties above') %></td>
   <td><%= md('Varies') %></td>
@@ -92,13 +99,15 @@
   </td>
 </tr>
 <tr>
-  <td><%= md('`attribute`') %></td>
+  <td><%= md('`attribute`') %><%= sage_component SageBadge, { color: "published", value: "required" } %></td>
   <td><%= md('
-  An alias/identifier for the column/attribute. While this does not have to align to a property from the collection itself,
-  if `sortable` is on, those that do align with collection property will result in a sortable link being rendered.
+  An alias/identifier for the column/attribute.
+
+  While this does not have to align to a property from the collection itself,
+  if `sortable` is enabled, those that do align with the collection property will result in a sortable link being rendered.
 ') %></td>
   <td><%= md('Symbol') %></td>
-  <td><%= md('Required') %></td>
+  <td><%= md('`nil`') %></td>
 </tr>
 <tr>
   <td><%= md('`options`') %></td>
@@ -106,14 +115,14 @@
   A set of options for the columns including:
 
   - `align <"right" | "center" | nil>` -- Alignment direction for cells (body and header)
-  - `class_name <string>` -- CSS class name to render on body cells (not on header cell).
+  - `class_name (String)` -- CSS class name to render on body cells (not on header cell).
   - `data_type <"checkbox" | "avatar">` -- Special cell data types to apply some preset styling for special cases.
-  - `header_class <string>` -- CSS class name to render on header cells.
-  - `hide <{ sm: boolean, md: boolean, lg: boolean}>` -- Set only the desired breakpoint to `true` to hide a given columnn at and below that breakpoint.
-  - `label <string>` -- Content for the header of the column.
-  - `strong <boolean>` -- Renders cell with strong style: weight of 600 and darker color.
-  - `style <string>` -- style attributes to render on cells.
-  - `truncate <boolean>` -- Whether or not to truncate the cell if its content does not fit (rather than wrap).
+  - `header_class (String)` -- CSS class name to render on header cells.
+  - `hide <{ sm: (Boolean), md: (Boolean), lg: (Boolean)}>` -- Set only the desired breakpoint to `true` to hide a given columnn at and below that breakpoint.
+  - `label (String)` -- Content for the header of the column.
+  - `strong (Boolean)` -- Renders cell with strong style: weight of 600 and darker color.
+  - `style (String)` -- style attributes to render on cells.
+  - `truncate (Boolean)` -- Whether or not to truncate the cell if its content does not fit (rather than wrap).
 ') %></td>
   <td><%= md('Hash') %></td>
   <td><%= md('`nil`') %></td>
