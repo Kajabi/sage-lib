@@ -6,20 +6,32 @@ import { BannerWrapper } from './BannerWrapper';
 import { BANNER_TYPES } from './configs';
 
 export const Banner = ({
+  active,
   bannerContext,
   ...rest
 }) => (
   (bannerContext !== null)
-    ? <BannerWrapper bannerContext={bannerContext} {...rest} />
-    : <BannerContent bannerContext={bannerContext} {...rest} />
+    ? <BannerWrapper bannerContext={bannerContext} active={active} {...rest} />
+    : <BannerContent bannerContext={bannerContext} active={active} {...rest} />
 );
 
 Banner.TYPES = BANNER_TYPES;
 
+// Defining all default props and prop types explicitly to populate story table
 Banner.defaultProps = {
-  bannerContext: null
+  active: false,
+  bannerContext: null,
+  dismissable: true,
+  link: null,
+  text: null,
+  type: Banner.TYPES.DEFAULT,
 };
 
 Banner.propTypes = {
-  bannerContext: PropTypes.string
+  active: PropTypes.bool,
+  bannerContext: PropTypes.string,
+  dismissable: PropTypes.bool,
+  link: PropTypes.string,
+  text: PropTypes.string,
+  type: PropTypes.oneOf(Object.values(BANNER_TYPES)),
 };

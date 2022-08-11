@@ -66,7 +66,7 @@ export const BannerContent = ({
 BannerContent.TYPES = BANNER_TYPES;
 
 BannerContent.defaultProps = {
-  active: null,
+  active: false,
   bannerContext: null,
   children: null,
   className: null,
