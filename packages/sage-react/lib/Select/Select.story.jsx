@@ -108,8 +108,8 @@ SelectWithOptgroups.args = {
   options: [
     'Bowling',
     {
-      group_label: 'Hand Sports',
-      group_options: [
+      groupLabel: 'Hand Sports',
+      groupOptions: [
         {
           value: 'football',
           label: 'Football',
@@ -122,8 +122,8 @@ SelectWithOptgroups.args = {
       label: 'Nascar',
     },
     {
-      group_label: 'Foot Sports',
-      group_options: [
+      groupLabel: 'Foot Sports',
+      groupOptions: [
         'Soccer',
       ],
     },

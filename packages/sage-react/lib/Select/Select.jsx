@@ -49,26 +49,15 @@ export const Select = ({
     );
   };
 
-  const buildOptgroup = (optgroup, i) => {
-    const optgroupLabel = optgroup.group_label;
-    const optgroupDisabled = optgroup.disabled;
-    return (
-      <optgroup
-        label={optgroupLabel}
-        disabled={optgroupDisabled}
-        key={optgroupLabel + i.toString()}
-      >
-        {optgroup.group_options.map((option, i) => (buildOption(option, i)))}
-      </optgroup>
-    );
-  };
-
-  const buildOptions = (option, i) => {
-    if (option.group_label && option.group_label.length > 0) {
-      return buildOptgroup(option, i);
-    }
-    return buildOption(option, i);
-  };
+  const buildOptgroup = ({ disabled, groupLabel, groupOptions }, i) => (
+    <optgroup
+      label={groupLabel}
+      disabled={disabled}
+      key={groupLabel + i.toString()}
+    >
+      {groupOptions && groupOptions.map(buildOption)}
+    </optgroup>
+  );
 
   return (
     <div className={classNames}>
@@ -82,12 +71,10 @@ export const Select = ({
         {...rest}
       >
         {(label && includeLabelInOptions) && <option label={label} />}
-
-        {(options
-          && options.map((option, i) => (
-            buildOptions(option, i)
-          ))
-        )}
+        {options && options.map((option, i) => (option.groupLabel
+          ? buildOptgroup(option, i)
+          : buildOption(option, i)
+        ))}
       </select>
       <i className="sage-select__arrow" aria-hidden="true" />
       {label && (
@@ -113,6 +100,7 @@ Select.defaultProps = {
   label: null,
   message: null,
   onChange: (evt) => evt,
+  options: [],
   value: '',
 };
 
@@ -125,6 +113,15 @@ Select.propTypes = {
   label: PropTypes.string,
   message: PropTypes.string,
   onChange: PropTypes.func,
-  options: PropTypes.arrayOf(selectItemPropTypes).isRequired,
+  options: PropTypes.arrayOf(
+    PropTypes.oneOfType([
+      selectItemPropTypes,
+      PropTypes.shape({
+        disabled: PropTypes.bool,
+        groupLabel: PropTypes.string,
+        groupOptions: PropTypes.arrayOf(selectItemPropTypes),
+      }),
+    ]),
+  ),
   value: PropTypes.string,
 };
