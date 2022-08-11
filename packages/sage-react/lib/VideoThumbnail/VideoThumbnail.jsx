@@ -16,7 +16,6 @@ export const VideoThumbnail = ({
   return (
     <div
       className={classNames}
-      style={{ backgroundImage: `url(${imageurl})` }}
       {...rest}
     >
       <button
@@ -24,6 +23,7 @@ export const VideoThumbnail = ({
         type="button"
         onClick={onClick}
       >
+        <img className="sage-video-thumbnail__image" src={imageurl} alt="" />
         <span>Play media</span>
       </button>
     </div>

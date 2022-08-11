@@ -3,7 +3,6 @@
     sage-video-thumbnail
     <%= component.generated_css_classes %>
   "
-  style="background-image: url(<%= component.image_url %>);"
   <%= component.generated_html_attributes.html_safe %>
 >
   <a
@@ -12,6 +11,7 @@
       <% end if component.cta_attributes&.is_a?(Hash) %>
     class="sage-video-thumbnail__play-button"
   >
+    <img class="sage-video-thumbnail__image" src="<%= component.image_url %>" alt="" />
     <span>Play media</span>
   </a>
 </div>

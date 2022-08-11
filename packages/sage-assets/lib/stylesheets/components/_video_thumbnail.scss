@@ -1,16 +1,25 @@
+////
+/// Video Thumbnail
+///
+/// @group sage
+////
+
+
+$-video-thumbnail-play-button-width: rem(24px);
+$-video-thumbnail-play-button-height: rem(32px);
+$-video-thumbnail-play-button-font-size: rem(32px);
+$-video-thumbnail-play-button-background-size: rem(80px);
+$-video-thumbnail-play-button-color: sage-color(white, 100);
+$-video-thumbnail-play-button-background-color: sage-color(black, 100);
+
 .sage-video-thumbnail {
   display: block;
   position: relative;
   width: 100%;
   height: 100%;
-  aspect-ratio: 16 / 9;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-
-  &:focus-within {
-    @include sage-focus-ring;
-  }
 }
 
 .sage-video-thumbnail__play-button {
@@ -27,11 +36,11 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: sage-z-index(default, 1);
-    width: rem(24px);
-    height: rem(32px);
-    font-size: rem(32px);
+    width: $-video-thumbnail-play-button-width;
+    height: $-video-thumbnail-play-button-height;
+    font-size: $-video-thumbnail-play-button-font-size;
     line-height: 1;
-    color: sage-color(white, 100);
+    color: $-video-thumbnail-play-button-color;
   }
 
   &::after {
@@ -40,22 +49,28 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: rem(80px);
-    height: rem(80px);
+    width: $-video-thumbnail-play-button-background-size;
+    height: $-video-thumbnail-play-button-background-size;
     border-radius: 50%;
-    background-color: rgba(sage-color(black, 100), 0.8);
+    background-color: rgba($-video-thumbnail-play-button-background-color, 0.8);
     transition: background-color 0.2s ease;
   }
 
   &:hover::after {
-    background-color: sage-color(black, 100);
+    background-color: $-video-thumbnail-play-button-background-color;
   }
 
   &:focus {
+    @include sage-focus-ring;
+
     outline: none;
   }
 
   span {
     @include visually-hidden();
   }
+}
+
+.sage-video-thumbnail__image {
+  aspect-ratio: 16 / 9;
 }
