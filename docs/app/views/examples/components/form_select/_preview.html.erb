@@ -107,4 +107,42 @@
   ]
 } %>
 
+<h3 class="<%= SageClassnames::TYPE::HEADING_6 %>">Optgroup use</h3>
+<%= sage_component SageFormSelect, {
+  name: "Sports!",
+  select_options: [
+    {
+      text: "Bowling",
+      value: "bowling",
+    },
+    {
+      group_label: "Hand Sports",
+      group_options: [
+        {
+          text: "Football",
+          value: "football",
+        },
+        {
+          text: "Basketball",
+          value: "basketball",
+        },
+      ],
+    },
+    {
+      text: "Nascar",
+      value: "nascar",
+      selected: true,
+    },
+    {
+      group_label: "Foot Sports",
+      group_options: [
+        {
+          text: "Soccer",
+          value: "soccer",
+        },
+      ],
+    },
+  ]
+} %>
+
 <p><strong>Note:</strong> For a fully styled dropdown selector, see the Dropdown component.</p>

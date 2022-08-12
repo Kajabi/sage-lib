@@ -14,7 +14,7 @@ export default {
       'Option 2',
       'Option 3',
       'Option 4',
-    ]
+    ],
   },
 };
 
@@ -23,7 +23,7 @@ const Template = (args) => <Select {...args} />;
 export const Default = Template.bind({});
 
 export const SelectWithState = (args) => {
-  const [value, updateValue] = useState('');
+  const [value, updateValue] = useState(args.value);
   return (
     <Select
       {...args}
@@ -32,9 +32,11 @@ export const SelectWithState = (args) => {
     />
   );
 };
+
 SelectWithState.args = {
   id: 'field-2',
   label: 'Cool stuff',
+  value: 'Option 2',
   options: [
     'Option 1',
     'Option 2',
@@ -61,7 +63,7 @@ DisabledSelectFieldWithOptionPreselected.args = {
 };
 
 export const SelectWithOptionDisabled = (args) => {
-  const [value, updateValue] = useState('');
+  const [value, updateValue] = useState(args.value);
   return (
     <Select
       {...args}
@@ -70,6 +72,7 @@ export const SelectWithOptionDisabled = (args) => {
     />
   );
 };
+
 SelectWithOptionDisabled.args = {
   id: 'field-4',
   label: 'Select from the following:',
@@ -85,4 +88,45 @@ SelectWithOptionDisabled.args = {
     'Fifth option',
   ],
   placeholder: 'Select from the following:'
+};
+
+export const SelectWithOptgroups = (args) => {
+  const [value, updateValue] = useState(args.value);
+  return (
+    <Select
+      {...args}
+      value={value}
+      onChange={(evt) => updateValue(evt.target.value)}
+    />
+  );
+};
+
+SelectWithOptgroups.args = {
+  id: 'field-3',
+  label: 'Choose a sport...',
+  value: 'nascar',
+  options: [
+    'Bowling',
+    {
+      groupLabel: 'Hand Sports',
+      groupOptions: [
+        {
+          value: 'football',
+          label: 'Football',
+        },
+        'Basketball',
+      ],
+    },
+    {
+      value: 'nascar',
+      label: 'Nascar',
+    },
+    {
+      groupLabel: 'Foot Sports',
+      groupOptions: [
+        'Soccer',
+      ],
+    },
+  ],
+  placeholder: 'Choose wisely…'
 };

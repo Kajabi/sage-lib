@@ -127,6 +127,19 @@ module SageSchemas
     wrap: [:optional, NilClass, Set.new(SageTokens::FRAME_WRAPS)]
   }
 
+  FORM_SELECT_OPTION = {
+    text: String,
+    value: [:optional, NilClass, String],
+    disabled: [:optional, TrueClass],
+    selected: [:optional, TrueClass],
+  }
+
+  FORM_SELECT_OPTGROUP = {
+    group_label: String,
+    disabled: [:optional, TrueClass],
+    group_options: [[FORM_SELECT_OPTION]],
+  }
+
   LIST_ITEM = {
     id: [:optional, Integer, String],
     more_actions: [:optional, NilClass, SageSchemas::DROPDOWN],

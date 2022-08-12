@@ -24,13 +24,22 @@
 </tr>
 <tr>
   <td><%= md('`select_options`') %></td>
-  <td><%= md('An array of items that will serve as the `<select>`\'s `<option>`s') %></td>
+  <td><%= md('An array of items that will serve as the `<select>`\'s `<option>`s and `<optgroup>`s.') %></td>
   <td><%= md('```
 Array<{
   text: String,
   value: String (optional),
   disabled: Boolean (false),
-  selected: Boolean (false)
+  selected: Boolean (false),
+  group_label: String,
+  group_options: Array<{
+    text: String,
+    value: String (optional),
+    disabled: Boolean (false),
+    selected: Boolean (false),
+    group_label: String (optional),
+    group_options: Array (optional),
+  }>,
 }>
   ```') %></td>
   <td><%= md('`nil`') %></td>
