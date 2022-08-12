@@ -71,7 +71,10 @@ This assumes that the contents of the list are already formatted as desired.
       sortable: true,
       sortable_update_url: "#sortable-update-url?item=#{item[:id]}",
     }
-  }
+  },
+  sortable_configs: {
+    handle: false,
+  },
 } %>
 
 <h3 class="<%= SageClassnames::TYPE::HEADING_6 %>">Compositional approach</h3>
@@ -79,7 +82,12 @@ This assumes that the contents of the list are already formatted as desired.
 If you need more native content formatting you can instead opt to render items using a nested loop and the SageListItem component.
 ", use_sage_type: true) %>
 
-<%= sage_component SageList, { sortable_resource: "sample_products_2" } do %>
+<%= sage_component SageList, {
+  sortable_resource: "sample_products_2",
+  # sortable_configs: {
+  #   handle: '.green',
+  # },
+} do %>
   <% sample_products.each do | item | %>
     <%= sage_component SageListItem, {
       id: item[:id],
@@ -89,7 +97,7 @@ If you need more native content formatting you can instead opt to render items u
       css_classes: SageClassnames::REVEAL_CONTAINER,
     } do %>
       <%= sage_component SageCardRow, { grid_template: "ete" } do %>
-        <img src="//source.unsplash.com/random/240x160?v=<%= item[:id] %>" width="100" alt="" />
+        <img src="//source.unsplash.com/random/240x160?v=<%= item[:id] %>" width="100" alt="" class="green" />
         <%= sage_component SageCardBlock, {} do %>
           <h4><%= item[:name] %></h4>
           <p>Item <%= item[:id] %> specs</p>

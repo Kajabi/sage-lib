@@ -26,6 +26,7 @@ export const ListItem = ({
         <div className="sage-list__item-sortable-handle">
           <Button
             color={Button.COLORS.SECONDARY}
+            className="sage-list__item-sortable-handle-control"
             icon={Icon.ICONS.HANDLE_2_VERTICAL}
             iconOnly={true}
             subtle={true}

@@ -1,3 +1,5 @@
+// NOTE: Uses SortableJS
+// https://github.com/SortableJS/Sortable
 import Sortable from 'sortablejs/modular/sortable.core.esm.js';
 
 Sage.sortableList = (function() {
@@ -5,14 +7,17 @@ Sage.sortableList = (function() {
   // Variables
   // ==================================================
 
+  const DRAGGING_CLASSNAME = 'sage-list--sortable-dragging';
+  const HANDLE_CLASSNAME = 'sage-list__item-sortable-handle';
+  const SELECTOR_CONFIGS = 'data-js-list-sortable-configs';
   const SELECTOR_CONTAINER = 'data-js-list-sortable';
   const SELECTOR_ITEM_UPDATE_URL = 'data-js-list-sortable-update-url';
-  const SETTINGS = {
+  const DEFAULT_CONFIGS = {
     dragClass: 'sage-list__item--sortable-drag',
     ghostClass: 'sage-list__item--sortable-ghost',
     chosenClass: 'sage-list__item--sortable-active',
+    handle: `.${HANDLE_CLASSNAME}`,
   };
-  const DRAGGING_CLASSNAME = 'sage-list--sortable-dragging';
 
 
   // ==================================================
@@ -23,13 +28,26 @@ Sage.sortableList = (function() {
     let resourceName = el.getAttribute(SELECTOR_CONTAINER);
     if (!resourceName) return console.error(`Sage Sortable requires a resource name \n\n EXAMPLE: \n [${SELECTOR_CONTAINER}="resourceName"]`);
 
+    let sortableConfigs = JSON.parse(el.getAttribute(SELECTOR_CONFIGS));
+    if (sortableConfigs) {
+      sortableConfigs = {
+        ...DEFAULT_CONFIGS,
+        ...sortableConfigs,
+      };
+    } else {
+      sortableConfigs = { ...DEFAULT_CONFIGS };
+    }
+
+    console.log('final configs', resourceName, sortableConfigs);
+
     Sortable.create(el, {
-      ...SETTINGS,
+      ...sortableConfigs,
       onStart: function(evt) {
         evt.srcElement.classList.add(DRAGGING_CLASSNAME);
       },
       onEnd: function (evt) {
         evt.srcElement.classList.remove(DRAGGING_CLASSNAME);
+
         let updateUrl = evt.item.getAttribute(SELECTOR_ITEM_UPDATE_URL)
 
         // Check if the sorted Item:
@@ -41,7 +59,7 @@ Sage.sortableList = (function() {
         params.append('_method', 'PUT');
         params.append(`${resourceName}[sort_position]`, evt.newIndex);
 
-        Sage.util.ajaxRequestWithJsInjection('POST', updateUrl, params)
+        Sage.util.ajaxRequestWithJsInjection('POST', updateUrl, params);
       }
     });
   }

@@ -25,9 +25,15 @@
   }
 }
 
-.sage-list__item--sortable {
+.sage-list__item--all-draggable {
   cursor: grab;
+
+  &.sage-list--dragging:active {
+    cursor: grabbing;
+  }
 }
+
+// .sage-list__item--sortable {}
 
 .sage-list__item--sortable-active {
   background-color: sage-color(white);
@@ -49,13 +55,40 @@
   .sage-list__item--sortable-ghost & {
     opacity: 0;
   }
+
+  .sage-list__item--all-draggable & * {
+    user-select: none;
+  }
 }
 
-.sage-list__item-more-actions,
+.sage-list__item-more-actions {
+  width: auto;
+
+  .sage-list__item--sortable-ghost & {
+    opacity: 0;
+  }
+}
+
 .sage-list__item-sortable-handle {
   width: auto;
 
   .sage-list__item--sortable-ghost & {
     opacity: 0;
   }
+
+  .sage-list__item--all-draggable & {
+    pointer-events: none;
+  }
+
+  &:hover {
+    cursor: grab;
+  }
+
+  .sage-list--dragging &:active {
+    cursor: grabbing;
+  }
+}
+
+.sage-list__item-sortable-handle-control {
+  user-select: none;
 }

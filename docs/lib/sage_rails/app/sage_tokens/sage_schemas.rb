@@ -149,6 +149,7 @@ module SageSchemas
 
   LIST = {
     items: [:optional, [[SageSchemas::LIST_ITEM]]],
+    sortable_configs: [:optional, NilClass, Hash],
     sortable_resource: [:optional, NilClass, String],
     tag: [:optional, NilClass, Set.new(["ul", "ol"])],
     hide_first_border: [:optional, TrueClass, String],
