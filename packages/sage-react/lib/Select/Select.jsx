@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { selectItemPropTypes, selectStructuredItemPropTypes } from './configs';
 
 export const Select = ({
   className,
@@ -37,7 +36,6 @@ export const Select = ({
       optionValue = option.value;
       optionDisabled = option.disabled;
     }
-
     return (
       <option
         key={optionValue + i.toString()}
@@ -89,9 +87,6 @@ export const Select = ({
   );
 };
 
-Select.itemPropTypes = selectItemPropTypes;
-Select.structuredItemPropTypes = selectStructuredItemPropTypes;
-
 Select.defaultProps = {
   className: null,
   disabled: false,
@@ -115,11 +110,27 @@ Select.propTypes = {
   onChange: PropTypes.func,
   options: PropTypes.arrayOf(
     PropTypes.oneOfType([
-      selectItemPropTypes,
+      PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.shape({
+          label: PropTypes.string,
+          value: PropTypes.string,
+          disabled: PropTypes.bool,
+        }),
+      ]),
       PropTypes.shape({
         disabled: PropTypes.bool,
         groupLabel: PropTypes.string,
-        groupOptions: PropTypes.arrayOf(selectItemPropTypes),
+        groupOptions: PropTypes.arrayOf(
+          PropTypes.oneOfType([
+            PropTypes.string,
+            PropTypes.shape({
+              label: PropTypes.string,
+              value: PropTypes.string,
+              disabled: PropTypes.bool,
+            }),
+          ]),
+        ),
       }),
     ]),
   ),

@@ -32,7 +32,14 @@ Array<{
   disabled: Boolean (false),
   selected: Boolean (false),
   group_label: String,
-  group_options: Array,
+  group_options: Array<{
+    text: String,
+    value: String (optional),
+    disabled: Boolean (false),
+    selected: Boolean (false),
+    group_label: String (optional),
+    group_options: Array (optional),
+  }>,
 }>
   ```') %></td>
   <td><%= md('`nil`') %></td>
