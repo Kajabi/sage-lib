@@ -81,8 +81,8 @@ List.propTypes = {
       chosen: PropTypes.bool, // From react-sortablejs
       className: PropTypes.string,
       filtered: PropTypes.bool, // From react-sortablejs
-      id: PropTypes.oneOf([PropTypes.string, PropTypes.number]),
-      moreActions: { ...OptionsDropdown.propTypes },
+      id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+      moreActions: PropTypes.shape({ ...OptionsDropdown.propTypes }),
       sortable: PropTypes.bool,
       selected: PropTypes.bool, // From react-sortablejs
     })
