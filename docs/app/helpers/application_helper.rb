@@ -43,9 +43,6 @@ module ApplicationHelper
   end
 
   def storybook_url(slug)
-    uri = URI(Rails.application.config.storybook_root_url)
-    uri.port = 4110 if SageRails.next_theme? && Rails.env != 'production'
-
-    "#{uri}#{slug}"
+    "#{Rails.application.config.storybook_root_url}#{slug}"
   end
 end

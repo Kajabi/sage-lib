@@ -3,6 +3,121 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.0.0...@kajabi/sage-assets@1.0.1) (2022-08-02)
+
+
+### Bug Fixes
+
+* **card/panel divider:** updates divider colors ([512fd50](https://github.com/Kajabi/sage-lib/commit/512fd5094f6f9f7a54dd7c1d50f12b91c59a8a38))
+* **data-card:** add alignment to data card to prevent spread ([9321d50](https://github.com/Kajabi/sage-lib/commit/9321d50a2d8b59d9a7560835a5070b2f9c30f5db))
+* **dropdown focus states:** update mixin values to align dropdown focus state ([194b5c3](https://github.com/Kajabi/sage-lib/commit/194b5c390b9bdbe20c179922651604d4a1a1e443))
+
+
+
+
+
+# [1.0.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.89.1...@kajabi/sage-assets@1.0.0) (2022-07-15)
+
+
+### chore
+
+* removed author ([e572872](https://github.com/Kajabi/sage-lib/commit/e572872f55f8f796ed03d666079d5e796854c2d2))
+
+
+### BREAKING CHANGES
+
+* Removes legacy theme from packages.
+
+chore: remove author
+* Removes the legacy theme from sage-system
+
+
+
+
+
+## [0.89.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.89.0...@kajabi/sage-assets@0.89.1) (2022-07-15)
+
+**Note:** Version bump only for package @kajabi/sage-assets
+
+
+
+
+
+# [0.89.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.88.2...@kajabi/sage-assets@0.89.0) (2022-07-12)
+
+
+### Features
+
+* **modal:** adds content scrolling to Next ([d6c5b12](https://github.com/Kajabi/sage-lib/commit/d6c5b124679a8fe23f2341a226f4dacc861ec0ae))
+
+
+
+
+
+## [0.88.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.88.1...@kajabi/sage-assets@0.88.2) (2022-07-12)
+
+
+### Bug Fixes
+
+* **form inputs:** adjust label styling to allow pointer events ([3344323](https://github.com/Kajabi/sage-lib/commit/334432331e69d83ea7a297429c7f01da82338708))
+* **form-elements:** add info wrapper to stack the error and hint ([a146751](https://github.com/Kajabi/sage-lib/commit/a14675118b167b05e30a5d527754092611ee061e))
+* **gap:** update to have token level grid-gap class ([f538de2](https://github.com/Kajabi/sage-lib/commit/f538de2c11106f8af751b1e9c1921ca156bb5d70))
+
+
+
+
+
+## [0.88.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.88.0...@kajabi/sage-assets@0.88.1) (2022-07-05)
+
+
+### Bug Fixes
+
+* **progress-bar:** removed border radius from bar ([0c44346](https://github.com/Kajabi/sage-lib/commit/0c44346463c248d99f91daef5687d0da51ea5af3))
+* **progress-bar:** update the next side of the progress bar within a modal header ([eba54d0](https://github.com/Kajabi/sage-lib/commit/eba54d06c4e136d91bc39cfe91e88926330c3e5f))
+
+
+
+
+
+# [0.88.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.87.0...@kajabi/sage-assets@0.88.0) (2022-07-01)
+
+
+### Bug Fixes
+
+* **border:** add border interactive to tokens ([fe43bcf](https://github.com/Kajabi/sage-lib/commit/fe43bcfa6235ce778926e7df8b042ee005166457))
+* **border:** add tokens and updated vars ([243c7d8](https://github.com/Kajabi/sage-lib/commit/243c7d8cd7aa12939579dfff9b77ca21af1fd4f6))
+* **border:** update border state values in form field mixin ([16f22c3](https://github.com/Kajabi/sage-lib/commit/16f22c336a3ca452ecaf4357091934bd7bca5b32))
+* **borders:** align interactive borders to the spec ([d33408e](https://github.com/Kajabi/sage-lib/commit/d33408eba3c5034d15a016d8866025d13eac32d9))
+* **modal:** removes margin from sage row to fix horizontal scroll on desktop ([9934431](https://github.com/Kajabi/sage-lib/commit/99344310aada8f8cf2fc3d6c98d69e0890585d76))
+* **search:** adjusts alignment of search clear btn when search is contained in toolbar ([ced0604](https://github.com/Kajabi/sage-lib/commit/ced06044a9820c120e1a75e91c6facb921939f16))
+
+
+### Features
+
+* **icon:** udpate fonts to v7 ([392f645](https://github.com/Kajabi/sage-lib/commit/392f6454ad72ad8bb177201dfdfa9183e58768ec))
+* **icon:** update icon set from latest ([e1a3f02](https://github.com/Kajabi/sage-lib/commit/e1a3f02c1e9b1268ce3170804868abf0180ce17f))
+* **icon:** update icon set with latest from design ([980e700](https://github.com/Kajabi/sage-lib/commit/980e700a85caa711b5f61e591a3887161d66aed0))
+
+
+
+
+
+# [0.87.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.86.1...@kajabi/sage-assets@0.87.0) (2022-06-27)
+
+
+### Bug Fixes
+
+* limit badge and label color combos to avoid errors ([1f0916d](https://github.com/Kajabi/sage-lib/commit/1f0916d12a99800c377cfa8ba525250b8b143f28))
+
+
+### Features
+
+* **table:** adds border prop to Rails table ([92b6170](https://github.com/Kajabi/sage-lib/commit/92b61705a723529191fa57a4108f681a200fa9e2))
+
+
+
+
+
 ## [0.86.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@0.86.0...@kajabi/sage-assets@0.86.1) (2022-06-24)
 
 

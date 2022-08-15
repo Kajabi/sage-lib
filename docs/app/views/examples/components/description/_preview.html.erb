@@ -1,0 +1,154 @@
+<h3>Single Item</h3>
+<%= sage_component SageDescription, {
+  items: [
+    {
+      title: "Name",
+      data: "John Doe",
+    }
+  ]
+} %>
+
+<h3>Multiple Items</h3>
+<%= sage_component SageDescription, {
+  items: [
+    {
+      title: "Short item",
+      data: "John Doe",
+    },
+    nil,
+    {
+      title: "Wrapping item",
+      data: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dignissim fringilla eros, at faucibus mauris aliquam at.",
+    },
+    {
+      title: "Item with hidden title",
+      hide_title: true,
+      data: "This item's title is hidden. Suspendisse potenti. Pellentesque rhoncus nisi ut ultricies facilisis. Praesent facilisis pretium posuere. Sed odio risus, dignissim et augue sed, dapibus suscipit nisl. Donec sed auctor lorem. Curabitur ac fermentum est. Donec eget ultrices nisl, non rutrum sapien. Maecenas tempus aliquet mollis. Etiam efficitur sit amet ligula nec tincidunt. Nulla faucibus nunc ac odio facilisis, sollicitudin consequat augue euismod.",
+    },
+    {
+      title: "Item with HTML content",
+      data: sage_component(SageLabelGroup, {
+        content: %(
+          #{sage_component(SageBadge, { value: "Lorem", color: "draft" })}
+          #{sage_component(SageBadge, { value: "Ipsum", color: "draft" })}
+          #{sage_component(SageBadge, { value: "Dolor", color: "draft" })}
+          #{sage_component(SageBadge, { value: "Sit", color: "draft" })}
+          #{sage_component(SageBadge, { value: "Amet", color: "draft" })}
+          #{sage_component(SageBadge, { value: "consectetur", color: "draft" })}
+          #{sage_component(SageBadge, { value: "adipiscing", color: "draft" })}
+          #{sage_component(SageBadge, { value: "elit", color: "draft" })}
+          #{sage_component(SageBadge, { value: "Duis", color: "draft" })}
+          #{sage_component(SageBadge, { value: "dignissim", color: "draft" })}
+          #{sage_component(SageBadge, { value: "fringilla", color: "draft" })}
+          #{sage_component(SageBadge, { value: "eros", color: "draft" })}
+        ).html_safe,
+      }),
+    }
+  ],
+} %>
+
+<h3>Stacked layout</h3>
+<p>As an alternate for some contexts the stacked layout places the title above the data.</p>
+<%= sage_component SageDescription, {
+  layout: "stacked",
+  items: [
+    {
+      title: "Short item",
+      data: "John Doe",
+    },
+    {
+      title: "Wrapping item",
+      data: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dignissim fringilla eros, at faucibus mauris aliquam at.",
+      action: {
+        value: "Details",
+        attributes: { href: "#" }
+      }
+    },
+    {
+      title: "Item with hidden title",
+      hide_title: true,
+      data: "This item's title is hidden. Suspendisse potenti. Pellentesque rhoncus nisi ut ultricies facilisis. Praesent facilisis pretium posuere. Sed odio risus, dignissim et augue sed, dapibus suscipit nisl. Donec sed auctor lorem. Curabitur ac fermentum est. Donec eget ultrices nisl, non rutrum sapien. Maecenas tempus aliquet mollis. Etiam efficitur sit amet ligula nec tincidunt. Nulla faucibus nunc ac odio facilisis, sollicitudin consequat augue euismod.",
+    },
+    {
+      title: "Item with HTML content",
+      data: sage_component(SageLabelGroup, {
+        content: %(
+          #{sage_component(SageBadge, { value: "Lorem", color: "draft" })}
+          #{sage_component(SageBadge, { value: "Ipsum", color: "draft" })}
+          #{sage_component(SageBadge, { value: "Dolor", color: "draft" })}
+          #{sage_component(SageBadge, { value: "Sit", color: "draft" })}
+          #{sage_component(SageBadge, { value: "Amet", color: "draft" })}
+          #{sage_component(SageBadge, { value: "consectetur", color: "draft" })}
+          #{sage_component(SageBadge, { value: "adipiscing", color: "draft" })}
+          #{sage_component(SageBadge, { value: "elit", color: "draft" })}
+          #{sage_component(SageBadge, { value: "Duis", color: "draft" })}
+          #{sage_component(SageBadge, { value: "dignissim", color: "draft" })}
+          #{sage_component(SageBadge, { value: "fringilla", color: "draft" })}
+          #{sage_component(SageBadge, { value: "eros", color: "draft" })}
+        ).html_safe,
+      }),
+      action: {
+        value: "View all tags",
+        attributes: { href: "#" }
+      }
+    }
+  ],
+} %>
+
+<h3>Action Buttons</h3>
+<%= md(
+  "Items may also contain an action button.
+  Add the `action` property on any item and set at least the `attributes` property,
+  containing either an `href` or other HTML event action such as `onclick`.
+  If a label is desired for the button, provide the `value` and `show_label`.",
+  use_sage_type: true
+) %>
+<%= sage_component SageDescription, {
+  action_width: "50%",
+  items: [
+    {
+      title: "No action",
+      data: "Action buttons are not required in every row.",
+    },
+    {
+      title: "Default action",
+      data: md("Default actions show an arrow icon next to the `value` text."),
+      action: {
+        attributes: { href: "#" }
+      }
+    },
+    {
+      title: "Custom labeled action",
+      data: "Actions can be set to use a label. In such cases an custom action width may also be needed.",
+      action: {
+        value: "Details",
+        attributes: { href: "#" }
+      }
+    },
+  ]
+} %>
+
+<h3>Custom Widths for Title and Action</h3>
+<%= md(
+  "For a variety for reasons there may be cases where a particular width
+  is needed for the title column or the action column.
+  Simply set the `title_width` and/or `action_width` to the desired size,
+  including a valid CSS unit such as `px` or `%`.",
+  use_sage_type: true
+) %>
+<%= sage_component SageDescription, {
+  action_width: "88px",
+  title_width: "128px",
+  items: [
+    {
+      title: "Very Long Title",
+      data: "John Doe",
+      action: { value: "More" }
+    },
+    {
+      title: "Name",
+      data: "John Doe",
+      action: { value: "Preview" }
+    },
+  ]
+} %>

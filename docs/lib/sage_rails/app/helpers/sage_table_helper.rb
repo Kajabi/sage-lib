@@ -80,12 +80,13 @@ module SageTableHelper
   end
 
   class SageTableFor
-    attr_reader :caption, :columns, :condensed, :template, :id, :class_name, :collection, :has_borders, :row_proc, :sortable, :responsive, :skip_headers, :striped, :reset_above, :reset_below
+    attr_reader :caption, :caption_side, :columns, :condensed, :template, :id, :class_name, :collection, :has_borders, :row_proc, :sortable, :responsive, :skip_headers, :striped, :reset_above, :reset_below
     delegate :content_tag, :tag, to: :template
 
     def initialize(template, collection, opts={})
       @template = template
       @caption = opts[:caption]
+      @caption_side = opts[:caption_side]
       @class_name = opts[:class_name]
       @condensed = opts[:condensed]
       @collection = collection
@@ -114,7 +115,7 @@ module SageTableHelper
       wrapper_classes << " sage-table-wrapper--reset-above" if reset_above
       wrapper_classes << " sage-table-wrapper--reset-below" if reset_below
       wrapper_classes << " sage-table-wrapper--scroll" if responsive
-      
+
       content_tag "div", class: wrapper_classes do
         if responsive
           content_tag "div", class: "sage-table-wrapper__overflow" do
@@ -142,7 +143,9 @@ module SageTableHelper
 
     def caption
       if @caption
-        content_tag "caption" do
+        caption_class = "sage-table__caption"
+        caption_class << " sage-table__caption--#{caption_side}" if caption_side
+        content_tag "caption", class: caption_class do
           @caption
         end
       else

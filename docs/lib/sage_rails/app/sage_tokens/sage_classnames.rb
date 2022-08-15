@@ -19,8 +19,7 @@ module SageClassnames
   end
 
   module GRID_TEMPLATES
-    # TODO: THEME how to get current theme's dictionary to apply here?
-    SageDictionary::THEME::SD_SAGE_CONTENT_GRID_TEMPLATE.map do |k, v|
+    SageDictionary::SD_SAGE_CONTENT_GRID_TEMPLATE.map do |k, v|
       const_set("#{k}", v[:CLASSNAME])
     end
   end
@@ -28,6 +27,7 @@ module SageClassnames
   module LINK
     LAUNCH = "sage-link--launch"
     SUBTEXT = "sage-link--subtext"
+    TABLE_CELL_PRIMARY = "sage-link--table-cell-primary"
   end
 
   module SPACERS
@@ -97,7 +97,7 @@ module SageClassnames
   TYPE_BLOCK = "sage-type"
 
   module TYPE_COLORS
-    SageDictionary::THEME::SD_SAGE_COLOR.each do |color, hash|
+    SageDictionary::SD_SAGE_COLOR.each do |color, hash|
       hash.each do |index, values|
         if index.to_s == "300"
           const_set(color, values[:CLASSNAME])

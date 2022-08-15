@@ -1,12 +1,11 @@
 {
   "name": "@kajabi/sage-system",
-  "version": "0.22.2",
+  "version": "1.0.0",
   "description": "Sage System",
   "keywords": [
     "sage",
     "system"
   ],
-  "author": "Shane Smith <shane@kajabi.com>",
   "homepage": "https://github.com/Kajabi/sage-lib#readme",
   "license": "MIT",
   "main": "lib/index.js",

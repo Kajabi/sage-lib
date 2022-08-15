@@ -1,11 +1,10 @@
 <%
-partial_path_root = "examples/components/themes/"
-theme_folder = SageRails.next_theme? ? "next" : "legacy"
+partial_path_root = "examples/components"
 
 info_content = sage_components.select { |component| component[:title] == @title }[0]
-props_content = render partial: "#{partial_path_root}/#{theme_folder}/#{@title}/props"
-do_content = render partial: "#{partial_path_root}/#{theme_folder}/#{@title}/rules_do"
-dont_content = render partial: "#{partial_path_root}/#{theme_folder}/#{@title}/rules_dont"
+props_content = render partial: "#{partial_path_root}/#{@title}/props"
+do_content = render partial: "#{partial_path_root}/#{@title}/rules_do"
+dont_content = render partial: "#{partial_path_root}/#{@title}/rules_dont"
 %>
 
 <%= render "examples/shared/heading",
@@ -39,7 +38,7 @@ dont_content = render partial: "#{partial_path_root}/#{theme_folder}/#{@title}/r
 
   if info_content[:figma_embed].present?
     tabs << {
-      text: "#{image_tag("logo-figma.svg", style: "margin-right: 4px", height: "18px")} Figma Designs",
+      text: "#{image_tag("logo-figma.svg", style: "margin-right: 4px", height: "18px", alt: "")} Figma Designs",
       target: "figma_embed"
     }
   end
@@ -53,12 +52,11 @@ dont_content = render partial: "#{partial_path_root}/#{theme_folder}/#{@title}/r
         permalink: true,
       } %>
       <%= sage_component SageButton, {
-        value: "#{image_tag("logo-react.svg", height: "20px")} React Component",
+        value: "#{image_tag("logo-react.svg", height: "20px", alt: "")} React Component",
         attributes: {
           href: storybook_url(info_content[:react_component_slug]),
           target: "_blank",
           rel: "noopener",
-          title: "Open Storybook React components site"
         },
         subtle: true,
         style: "secondary",
@@ -68,16 +66,15 @@ dont_content = render partial: "#{partial_path_root}/#{theme_folder}/#{@title}/r
     <%= sage_component SageTabsPane, { id: "preview" } do %>
       <%= render "examples/shared/preview",
         type: "component",
-        title: @title,
-        theme_folder: theme_folder
+        title: @title
       %>
     <% end %>
 
     <%= sage_component SageTabsPane, { id: "code" } do %>
       <%= render "examples/shared/code",
         type: "component",
-        title: @title,
-        theme_folder: theme_folder %>
+        title: @title
+      %>
     <% end %>
 
     <%= sage_component SageTabsPane, { id: "props" } do %>

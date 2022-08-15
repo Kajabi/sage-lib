@@ -1,0 +1,15 @@
+/* ==================================================
+  ** _footer.scss
+
+  For Sage documentation use
+================================================== */
+
+.docs-footer {
+  padding: sage-spacing(2xl) sage-spacing();
+  background: sage-color(gray, 200);
+
+  .sage-stage & {
+    padding: sage-spacing(2xl) 0;
+    background: none;
+  }
+}

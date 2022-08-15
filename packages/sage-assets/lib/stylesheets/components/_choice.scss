@@ -1,0 +1,235 @@
+////
+/// Choice
+///
+/// @group sage
+////
+
+
+$-choice-el-radio: "before";
+$-choice-el-icon: "before";
+$-choice-el-arrow: "before";
+
+$-choice-color-default: map-get($sage-tab-colors, default);
+$-choice-color-active: map-get($sage-tab-colors, active);
+$-choice-color-disabled: map-get($sage-tab-colors, disabled);
+$-choice-radio-size: $sage-radio-size;
+$-choice-radio-color-checked: map-get($sage-radio-colors, checked);
+$-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
+
+:root {
+  --icon-top-offset: #{rem(6px)};
+}
+
+@media (max-width: sage-breakpoint(md-min)) {
+  :root {
+    --icon-top-offset: #{rem(5px)};
+  }
+}
+
+
+// stylelint-disable max-nesting-depth
+
+.sage-choice {
+  @include sage-button-style-reset();
+  @include sage-focus-ring;
+
+  display: inline-flex;
+  position: relative;
+  align-items: center;
+  flex-grow: 1;
+  flex-basis: 0;
+  padding: sage-spacing();
+  text-decoration: none;
+  color: $-choice-color-default;
+  border: sage-border();
+  border-radius: sage-border(radius-large);
+  transition: map-get($sage-transitions, default);
+  transition-property: color, background-color, border-color, box-shadow;
+
+  @extend %t-sage-body-med;
+
+  &::after {
+    content: "";
+    position: absolute;
+    border: 1px solid transparent;
+    border-radius: sage-border(radius-large);
+
+    @include position(-1px, -1px, -1px, -1px);
+  }
+
+  &:hover {
+    @include sage-focus-outline--update-color(sage-color(grey, 500));
+
+    color: $-choice-color-active;
+  }
+
+  &:focus {
+    border-color: sage-color(primary, 200);
+    outline: none;
+  }
+
+  &.sage-choice--active {
+    color: $-choice-color-active;
+
+    &::after {
+      border-color: sage-color(charcoal, 400);
+      border-width: rem(4px);
+    }
+  }
+
+  &[aria-disabled="true"],
+  &:disabled {
+    background-color: sage-color(grey, 200);
+    cursor: default;
+    pointer-events: none;
+
+    &::before {
+      background-color: sage-color(grey, 300);
+    }
+
+    &:hover::before {
+      box-shadow: none;
+    }
+  }
+
+  .sage-tabs--layout-default &:not(:last-child) {
+    @media (max-width: sage-breakpoint(sm-max)) {
+      margin-bottom: sage-spacing(sm);
+    }
+  }
+
+  .sage-tabs--align-items-center & {
+    justify-content: center;
+  }
+}
+
+.sage-choice--align-center {
+  justify-content: center;
+}
+
+.sage-choice--arrow {
+  flex-flow: row-reverse;
+
+  &::#{$-choice-el-arrow} {
+    @include sage-icon-base(caret-right, lg);
+
+    margin: 0 0 0 sage-spacing(sm);
+    color: sage-color(charcoal, 400);
+    transition: color map-get($sage-transitions, default);
+  }
+
+  &:active,
+  &.sage-choice--active {
+    &::#{$-choice-el-arrow} {
+      color: sage-color(primary, 500);
+    }
+  }
+}
+
+[class*="sage-choice--icon-"] {
+  &::#{$-choice-el-icon} {
+    /* See icon generator */
+    margin: 0 sage-spacing(xs) 0 0;
+    color: currentColor;
+    transition: color map-get($sage-transitions, default);
+  }
+
+  &.sage-choice--vertical-align-icon-start::#{$-choice-el-icon} {
+    align-self: start;
+    margin-top: var(--icon-top-offset);
+  }
+
+  @media (max-width: sage-breakpoint(xs-max)) {
+    display: block;
+  }
+}
+
+.sage-choice--radio {
+  &::#{$-choice-el-radio} {
+    content: "";
+    display: inline-block;
+    box-sizing: border-box;
+    height: $-choice-radio-size;
+    min-width: $-choice-radio-size;
+    width: $-choice-radio-size;
+    margin: 0 sage-spacing(xs) 0 0;
+    background-color: $-choice-radio-color-checked-inner;
+    border-radius: sage-border(radius-round);
+    border: sage-border();
+    transition: map-get($sage-transitions, default);
+    transition-property: border, box-shadow;
+  }
+
+  &:hover::#{$-choice-el-radio} {
+    border-color: sage-color(grey, 500);
+    background-color: sage-color(grey, 100);
+  }
+
+  &:active,
+  &.sage-choice--active {
+    &::#{$-choice-el-radio} {
+      border-width: 5px;
+      border-color: $-choice-radio-color-checked;
+    }
+  }
+
+  &.sage-choice--vertical-align-icon-start::#{$-choice-el-radio} {
+    align-self: start;
+    margin-top: var(--icon-top-offset);
+  }
+}
+
+.sage-choice__content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  text-align: start;
+  pointer-events: none;
+
+  .sage-tabs--align-items-center &,
+  .sage-choice--align-center & {
+    flex: unset;
+  }
+}
+
+.sage-choice__content--custom {
+  @include sage-grid-card;
+}
+
+.sage-choice__graphic {
+  overflow: hidden;
+  width: rem(48px);
+  height: rem(48px);
+  margin-right: sage-spacing(sm);
+  border-radius: sage-border(radius-small);
+
+  > img {
+    max-width: 100%;
+  }
+}
+
+.sage-choice__link-text {
+  font-style: normal;
+  color: sage-color(primary, 500);
+
+  .sage-choice:hover & {
+    color: sage-color(primary, 400);
+  }
+
+  .sage-choice[aria-disabled="true"] &,
+  .sage-choice:disabled & {
+    color: sage-color(grey, 500);
+  }
+}
+
+.sage-choice__text {
+  font-style: normal;
+  color: sage-color(charcoal, 400);
+}
+
+.sage-choice__subtext {
+  @extend %t-sage-body-xsmall;
+
+  margin-top: sage-spacing(2xs);
+  color: sage-color(charcoal, 200);
+}

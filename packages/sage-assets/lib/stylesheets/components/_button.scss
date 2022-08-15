@@ -1,0 +1,788 @@
+////
+/// Button
+///
+/// @group sage
+////
+
+/* stylelint-disable selector-max-compound-selectors */
+
+//
+// Base style variables
+//
+$-btn-transition: map-get($sage-transitions, default);
+$-btn-border-radius: sage-border(radius);
+$-btn-shadow-base: sage-shadow(sm);
+$-btn-icon-only-standard-size: rem(40px);
+$-btn-icon-only-subtle-size: rem(16px);
+$-btn-icon-only-hover-size: rem(24px);
+$-btn-icon-only-focus-size: rem(32px);
+$-btn-toolbar-group-height: rem(40px);
+
+$-btn-base-styles: (
+  accent: (
+    default: (
+      color: sage-color(white),
+      background-color: sage-color(primary, 300),
+      ring-color: sage-color(primary, 200),
+    ),
+    hover: (
+      color: sage-color(white),
+      background-color: sage-color(primary, 400),
+    ),
+    focus: (
+      color: sage-color(white),
+      background-color: sage-color(primary, 300),
+    ),
+    disabled: (
+      color: sage-color(primary, 200),
+      background-color: sage-color(primary, 100),
+    )
+  ),
+  primary: (
+    default: (
+      color: sage-color(white),
+      background-color: sage-color(charcoal, 400),
+      ring-color: sage-color(primary, 200),
+    ),
+    hover: (
+      color: sage-color(white),
+      background-color: sage-color(charcoal, 500),
+    ),
+    focus: (
+      color: sage-color(white),
+      background-color: sage-color(charcoal, 400),
+    ),
+    disabled: (
+      color: sage-color(charcoal, 100),
+      background-color: sage-color(grey, 300),
+    )
+  ),
+  secondary: (
+    default: (
+      color: sage-color(charcoal, 400),
+      background-color: sage-color(white),
+      ring-color: sage-color(primary, 200),
+    ),
+    hover: (
+      color: sage-color(charcoal, 400),
+      background-color: sage-color(grey, 100),
+    ),
+    focus: (
+      color: sage-color(charcoal, 400),
+      background-color: sage-color(white),
+    ),
+    disabled: (
+      color: sage-color(charcoal, 100),
+      background-color: sage-color(grey, 100),
+    )
+  ),
+  danger: (
+    default: (
+      color: sage-color(white),
+      background-color: sage-color(red, 300),
+      ring-color: sage-color(red, 200),
+    ),
+    hover: (
+      color: sage-color(white),
+      background-color: sage-color(red, 400),
+    ),
+    focus: (
+      color: sage-color(white),
+      background-color: sage-color(red, 300),
+    ),
+    disabled: (
+      color: sage-color(red, 200),
+      background-color: sage-color(red, 100),
+    )
+  ),
+);
+
+$-btn-subtle-styles: (
+  accent: (
+    default: sage-color(primary, 300),
+    hover: sage-color(primary, 300),
+    hover-background: sage-color(primary, 100),
+    focus: sage-color(primary, 300),
+    focus-outline: sage-color(primary, 200),
+    disabled: sage-color(primary, 200),
+  ),
+  primary: (
+    default: sage-color(charcoal, 400),
+    hover: sage-color(charcoal, 400),
+    hover-background: sage-color(grey, 200),
+    focus: sage-color(charcoal, 400),
+    focus-outline: sage-color(primary, 200),
+    disabled: sage-color(charcoal, 100),
+  ),
+  secondary: (
+    default: sage-color(charcoal, 400),
+    hover: sage-color(charcoal, 400),
+    hover-background: sage-color(grey, 200),
+    focus: sage-color(charcoal, 400),
+    focus-outline: sage-color(primary, 200),
+    disabled: sage-color(charcoal, 100),
+  ),
+  danger: (
+    default: sage-color(red, 300),
+    hover: sage-color(red, 300),
+    hover-background: sage-color(red, 100),
+    focus: sage-color(red, 300),
+    focus-outline: sage-color(red, 200),
+    disabled: sage-color(red, 200),
+  ),
+);
+
+//
+// Custom variables
+//
+$-btn-interactive-badge-icon-size: rem(24px);
+$-btn-loading-min-height: rem(36px);
+
+// stylelint-disable max-nesting-depth
+.sage-btn {
+  @extend %t-sage-body-semi;
+  @include sage-button-style-reset();
+  @include sage-focus-ring;
+
+  $-padding-block: rem(10px);
+
+  display: inline-flex;
+  position: relative;
+  align-self: inherit;
+  align-items: center;
+  justify-self: flex-start;
+  padding: $-padding-block sage-spacing(sm);
+  text-align: left; // Prevents text alignment issue when inner text is truncated
+  border: 0;
+  border-radius: $-btn-border-radius;
+  transition: $-btn-transition;
+  transition-property: border, background-color, box-shadow;
+
+  &:disabled,
+  &[aria-disabled="true"] {
+    @include sage-button-style-disabled;
+  }
+
+  &:focus:not(:disabled):not([aria-disabled="true"]),
+  &:active:not(:disabled):not([aria-disabled="true"]) {
+    .sage-dropdown__item > & {
+      @include sage-focus-outline--update-color(transparent);
+    }
+  }
+
+  // Contextual modifications
+  .sage-dropdown--contained .sage-dropdown__trigger &,
+  .sage-panel-controls__tabs-dropdown .sage-dropdown__trigger &,
+  .sage-panel-controls__toolbar .sage-dropdown__trigger &,
+  .sage-panel-controls__bulk-actions .sage-dropdown__trigger & {
+    @include sage-focus-outline--update-color(transparent);
+
+    width: inherit;
+    border-radius: inherit;
+    border-color: sage-color(grey, 400);
+
+    &:hover {
+      background-color: sage-color(white);
+    }
+  }
+
+  .sage-toolbar .sage-dropdown__trigger &,
+  .sage-toolbar__group .sage-dropdown__trigger & {
+    @include sage-focus-outline--update-color(transparent);
+
+    width: inherit;
+    border-radius: inherit;
+  }
+
+  .sage-dropdown__item > & {
+    width: 100%;
+    padding-top: rem(9px);
+    padding-bottom: rem(9px);
+    border-radius: 0;
+  }
+
+  .sage-dropdown__trigger > & {
+    line-height: sage-line-height(body);
+  }
+
+  .sage-dropdown__trigger--custom-width > & {
+    width: 100%;
+  }
+
+  .sage-dropdown__trigger--select & {
+    font-weight: sage-font-weight(regular);
+  }
+
+  .sage-expandable-card--align-arrow-right & {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    &::before {
+      margin-right: 0;
+    }
+
+    &::after {
+      transform: translate3D(-50%, -50%, 0);
+    }
+  }
+
+  .sage-input-group & {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .sage-badge & {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    width: $-btn-interactive-badge-icon-size;
+    margin: auto 0;
+    border-radius: 0 sage-border(radius-x-large) sage-border(radius-x-large) 0;
+
+    &::before {
+      transform: translateY(1px); /* needed as sage-font-size(sm) equates to 13px, not 14px. This 1px is accounting for that 1px */
+      font-size: sage-font-size(sm);
+    }
+
+    &::after {
+      width: $-btn-interactive-badge-icon-size;
+      height: $-btn-interactive-badge-icon-size;
+      border-radius: 0 sage-border(radius-x-large) sage-border(radius-x-large) 0;
+    }
+
+    &:first-child:not(:last-child) {
+      margin-right: sage-spacing(xs);
+    }
+
+    + & {
+      margin-left: 0;
+    }
+
+    &.sage-btn--tag::before {
+      font-size: sage-font-size(md, false);
+    }
+  }
+
+  .sage-badge & {
+    width: rem(28px);
+  }
+
+  .sage-hero__body & {
+    margin-top: sage-spacing(md);
+  }
+
+  .sage-sortable__item-actions & {
+    &:not(:last-child) {
+      margin-right: sage-spacing(sm);
+    }
+  }
+
+  .sage-input-group & {
+    position: absolute;
+    z-index: sage-z-index(default, 1);
+    right: rem(1px);
+    bottom: rem(1px);
+    height: rem(38px);
+    background-color: sage-color(white);
+    box-shadow: rem(-1px) 0 0 0 sage-color(grey, 400);
+
+    @include sage-focus-outline--update-color(transparent);
+
+    &::before {
+      margin-right: 0;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 rem(2px) sage-color(primary, 300);
+    }
+  }
+
+  .sage-panel-controls__toolbar-btn-group > &,
+  .sage-toolbar__group > & {
+    border-radius: 0;
+  }
+
+  .sage-panel-controls__toolbar-btn-group > &:not(.sage-btn--secondary),
+  .sage-toolbar__group > &:not(.sage-btn--secondary) {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-height: calc(#{$-btn-toolbar-group-height} + #{rem(2px)}); /* expand to toolbar group height + border offset */
+  }
+
+  .sage-toolbar > .sage-dropdown .sage-dropdown__trigger > &,
+  .sage-toolbar__group > .sage-dropdown .sage-dropdown__trigger > & {
+    padding-top: sage-spacing(xs); /* match standard button height */
+    padding-bottom: sage-spacing(xs); /* match standard button height */
+  }
+
+  .sage-toolbar__group > .sage-dropdown .sage-dropdown__trigger > & {
+    border-radius: 0;
+  }
+
+  .sage-panel-controls__toolbar-btn-group > &:first-child,
+  .sage-toolbar__group > &:first-child,
+  .sage-toolbar__group > .sage-dropdown:first-child .sage-dropdown__trigger > & {
+    border-top-left-radius: sage-border(radius);
+    border-bottom-left-radius: sage-border(radius);
+  }
+
+  .sage-panel-controls__toolbar-btn-group > &:last-child,
+  .sage-toolbar__group > &:last-child,
+  .sage-toolbar__group > .sage-dropdown:last-child .sage-dropdown__trigger > & {
+    border-top-right-radius: sage-border(radius);
+    border-bottom-right-radius: sage-border(radius);
+  }
+
+  .sage-toolbar__group > .sage-dropdown + &,
+  .sage-toolbar__group > & + & {
+    margin-left: rem(-1px); /* offset border overlap of multiple buttons */
+  }
+
+  .sage-toolbar__group > &:hover {
+    z-index: sage-z-index(default, 1); /* raise button to display full border */
+  }
+
+  .sage-panel-controls__toolbar-btn-group--expand-collapse > & {
+    border-radius: sage-border(radius);
+  }
+
+  .sage-panel-controls__toolbar > &,
+  .sage-toolbar > &,
+  .sage-panel-controls__pagination > & {
+    border-radius: sage-border(radius);
+  }
+
+  .sage-panel-controls__toolbar > &,
+  .sage-panel-controls__pagination > & {
+    &:not(:last-child) {
+      margin-right: sage-spacing(card);
+    }
+  }
+
+  .sage-panel-controls__toolbar &,
+  .sage-toolbar & {
+    border-color: sage-color(grey, 500);
+  }
+
+  .sage-upload-card & {
+    &.sage-btn--subtle:focus {
+      @include sage-focus-outline--update-color(sage-color(primary, 300));
+    }
+  }
+
+  &:not([class*="icon-only"]) {
+    line-height: rem(20px); /* used this value to align to the spec */
+  }
+
+  // NOTE: Icon generation consolidated in `core/_icons.scss`
+}
+
+/* stylelint-disable selector-no-qualifying-type */
+a.sage-btn {
+  text-decoration: none;
+}
+/* stylelint-enable selector-no-qualifying-type */
+
+.sage-btn--is-loading {
+  pointer-events: none;
+
+  &[class*="sage-btn--icon"]::before {
+    content: "";
+  }
+
+  svg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+}
+
+// Generate button style variations
+@each $-style-name, $-styles in $-btn-base-styles {
+  .sage-btn--#{$-style-name} {
+    @each $-style-type-name, $-style-type-configs in $-styles {
+      @if ($-style-type-name == hover) {
+        &:hover {
+          color: map-get($-style-type-configs, color);
+          background-color: map-get($-style-type-configs, background-color);
+        }
+      }
+      @else if ($-style-type-name == focus) {
+        &:focus,
+        &:active {
+          color: map-get($-style-type-configs, color);
+          background-color: map-get($-style-type-configs, background-color);
+        }
+      }
+      @else if ($-style-type-name == disabled) {
+        &:disabled,
+        &[aria-disabled="true"] {
+          color: map-get($-style-type-configs, color);
+          background-color: map-get($-style-type-configs, background-color);
+          box-shadow: none;
+        }
+      }
+      @else {
+        @include sage-focus-ring(map-get($-style-type-configs, ring-color));
+
+        color: map-get($-style-type-configs, color);
+        background-color: map-get($-style-type-configs, background-color);
+
+        .sage-toolbar > &,
+        .sage-toolbar__group > & {
+          @include sage-focus-outline--update-color(transparent);
+        }
+      }
+    }
+
+    &:not(.sage-btn--subtle):not(:disabled):not([aria-disabled="true"]) {
+      .sage-toolbar > &:hover,
+      .sage-toolbar > .sage-dropdown .sage-dropdown__trigger &:hover,
+      .sage-toolbar__group > &:hover,
+      .sage-toolbar__group > .sage-dropdown .sage-dropdown__trigger &:hover {
+        box-shadow: map-get($sage-toolbar-button-borders, hover);
+      }
+
+      .sage-toolbar > &:focus,
+      .sage-toolbar > .sage-dropdown .sage-dropdown__trigger &:focus,
+      .sage-toolbar__group > &:focus,
+      .sage-toolbar__group > .sage-dropdown .sage-dropdown__trigger &:focus {
+        z-index: sage-z-index(default, 2);
+        box-shadow: map-get($sage-toolbar-button-borders, focus);
+      }
+    }
+  }
+}
+
+// Note: duplicated from _alert.scss; update here when _alert.scss changes
+$-alert-colors: (
+  info: primary,
+  published: sage,
+  success: sage,
+  warning: yellow,
+  danger: red,
+  exceeded: red,
+  reached: orange,
+  approaching: yellow,
+);
+
+// Secondary styles, no shadow variation
+.sage-btn--secondary {
+  color: sage-color(charcoal, 400);
+  background-color: sage-color(white);
+  border: 1px solid sage-color(grey, 500);
+
+  &:hover {
+    background-color: sage-color(white);
+    border-color: sage-color(charcoal, 100);
+  }
+
+  &:focus,
+  &:active {
+    color: sage-color(charcoal, 300);
+    background-color: sage-color(white);
+    border-color: sage-color(grey);
+  }
+
+  &[aria-disabled="true"] {
+    color: sage-color(charcoal, 100);
+    background-color: sage-color(white);
+  }
+
+  &.sage-alert__primary-action {
+    background-color: transparent;
+
+    @each $name, $color in $-alert-colors {
+      .sage-alert--#{$name} & {
+        @include sage-focus-ring;
+
+        color: sage-color(white);
+        background-color: sage-color($color, 300);
+        border-color: transparent;
+
+        &:hover {
+          background-color: sage-color($color, 400);
+        }
+
+        &:focus,
+        &:active {
+          background-color: sage-color($color, 300);
+        }
+
+        @include sage-focus-outline--update-color(transparent);
+      }
+    }
+  }
+
+  &.sage-btn--subtle {
+    border: 0;
+  }
+}
+
+.sage-btn--subtle {
+  @include sage-focus-outline;
+  @include sage-focus-outline($outline-offset-inline: 6px, $outline-offset-block: -1px);
+
+  padding: 0;
+  box-shadow: none;
+  border-radius: sage-border(radius);
+
+  &:focus {
+    box-shadow: none;
+  }
+
+  &[class*="icon-only"] {
+    width: $-btn-icon-only-subtle-size;
+    height: $-btn-icon-only-subtle-size;
+    padding: 0;
+    border-radius: sage-border(radius-round);
+
+    &::after {
+      width: $-btn-icon-only-hover-size;
+      height: $-btn-icon-only-hover-size;
+      border-radius: sage-border(radius-round);
+    }
+
+    &:hover::after {
+      border-color: transparent;
+      opacity: 1;
+    }
+
+    &:focus::after {
+      width: $-btn-icon-only-focus-size;
+      height: $-btn-icon-only-focus-size;
+    }
+  }
+
+  // Generate button style variations
+  @each $-style-name, $-styles in $-btn-subtle-styles {
+    &.sage-btn--#{$-style-name} {
+      color: map-get($-styles, default);
+      background-color: transparent;
+
+      &::after {
+        border-color: transparent;
+      }
+
+      &:not(:focus):hover {
+        color: map-get($-styles, hover);
+        background-color: map-get($-styles, hover-background);
+
+        .sage-alert & {
+          background-color: transparent;
+        }
+
+        &::after {
+          z-index: 0;
+          background-color: map-get($-styles, hover-background);
+          opacity: 1;
+
+          .sage-alert & {
+            background-color: transparent;
+          }
+        }
+
+        &::before,
+        span {
+          z-index: 1;
+        }
+      }
+
+      &:focus,
+      &:active {
+        color: map-get($-styles, focus);
+        background-color: transparent;
+
+        &::after {
+          border-color: map-get($-styles, focus-outline);
+        }
+
+        &.sage-toast__button {
+          color: sage-color(white);
+        }
+      }
+
+      &.sage-toast__button {
+        color: sage-color(white);
+
+        &:focus,
+        &:active {
+          &::after {
+            border-color: sage-color(white);
+          }
+        }
+      }
+
+      &:disabled,
+      &[aria-disabled="true"] {
+        color: map-get($-styles, disabled);
+        background-color: transparent;
+      }
+
+      &[class*="icon-only"] {
+        .sage-badge & {
+          @include sage-focus-ring(map-get($-styles, default));
+
+          position: absolute; /* this keeps the button inside a badge within the visual bounds of the badge component */
+          width: $-btn-icon-only-standard-size;
+          height: $-btn-icon-only-standard-size;
+          padding: 0;
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+        }
+
+        // Remove class when Sage Label is fully deprecated in Products
+        .sage-label & {
+          position: absolute;
+          right: sage-spacing(xs);
+        }
+      }
+    }
+  }
+
+  .sage-assistant & {
+    @include sage-focus-outline--update-color(sage-color(white));
+
+    color: sage-color(grey, 200);
+
+    &:hover {
+      color: sage-color(white);
+    }
+
+    &:focus {
+      color: sage-color(white);
+    }
+  }
+
+  &.sage-alert__secondary-action {
+    color: sage-color(charcoal, 400);
+    text-decoration: underline;
+    border: 0;
+
+    @each $name, $color in $-alert-colors {
+      .sage-alert--#{$name} & {
+        &.sage-btn {
+          border-color: transparent;
+
+          &:hover::after {
+            background: transparent;
+            border-color: transparent;
+            opacity: 0;
+          }
+
+          &:focus,
+          &:active {
+            color: sage-color(charcoal, 400);
+            border-color: sage-color($color, 200);
+          }
+
+          &:focus::after,
+          &:active::after {
+            border-color: sage-color($color, 400);
+          }
+        }
+
+        @include sage-focus-outline--update-color(sage-color($color, 400));
+      }
+    }
+  }
+  // react only styles as primary classes are added by default
+  &.sage-banner__link.sage-btn--primary,
+  &.sage-banner__close.sage-btn--primary {
+    color: inherit;
+
+    &:focus,
+    &:active {
+      color: inherit;
+
+      &::after {
+        border-color: inherit;
+      }
+    }
+
+    &:not(:focus):hover,
+    &:not(:focus):hover::after {
+      background-color: transparent;
+    }
+  }
+}
+
+.sage-btn--small {
+  @extend %t-sage-body-small-med;
+}
+
+.sage-btn--align-end {
+  align-self: flex-end;
+  float: right;
+}
+
+.sage-btn--full-width {
+  align-self: stretch;
+  justify-content: center;
+  justify-self: stretch;
+  width: 100%;
+}
+
+.sage-btn__truncate-text {
+  @include truncate;
+  pointer-events: none;
+
+  .sage-dropdown__trigger & {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .sage-expandable-card--align-arrow-right & {
+    order: -1;
+  }
+
+  .sage-btn--is-loading & {
+    opacity: 0;
+  }
+}
+
+// Button groups allow for several buttons together to be spaced appropriately
+.sage-btn-group {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @media screen and (min-width: sage-breakpoint(sm-min)) {
+    flex-wrap: nowrap;
+  }
+
+  .sage-empty-state--page & {
+    @media screen and (max-width: sage-breakpoint(lg-max)) {
+      justify-content: center;
+    }
+  }
+}
+
+.sage-btn-group--wrap {
+  @media screen and (min-width: sage-breakpoint(sm-min)) {
+    flex-wrap: wrap;
+  }
+}
+
+.sage-btn-group--align-center {
+  justify-content: center;
+}
+
+.sage-btn-group--align-end {
+  justify-content: flex-end;
+}
+
+.sage-btn-group--align-space-between {
+  justify-content: space-between;
+}
+
+.sage-btn-group--border-top {
+  padding-top: sage-spacing(lg);
+  border-top: 1px solid sage-color(grey, 400);
+}

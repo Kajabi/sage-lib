@@ -1,12 +1,8 @@
-<%= javascript_include_tag "//cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js", cache: true %>
-<% if SageRails.next_theme? %>
-  <%= javascript_pack_tag "docs-next" %>
-<% else %>
-  <%= javascript_pack_tag "docs-legacy" %>
-<% end %>
+<% prettify_code = prettify_code || false %>
+<%= javascript_pack_tag "docs" %>
+<%= javascript_include_tag "https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js" if prettify_code %>
 
-
-<script type="text/javascript">
+<script>
   window.addEventListener("DOMContentLoaded", function(){
     Sage.init([
       'table',

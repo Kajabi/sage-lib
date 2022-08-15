@@ -1,13 +1,14 @@
-<div class="docs-hero" style="background-image: url(<%= image_url "hero.jpg" %>);">
-  <%= sage_component SageContainer, { size: "xl", css_classes: "sage-type" } do %>
+<div class="docs-hero">
+  <%= image_tag "hero-background.svg", class: "docs-hero__background", alt: "" %>
+  <%= sage_component SageContainer, { size: "xl", css_classes: "docs-hero__content sage-type" } do %>
     <header class="sage-header">
       <%= render "application/nav" %>
     </header>
     <%= sage_component SageGridRow, {} do %>
-      <%= sage_component SageGridCol, { breakpoint: "md", size: "4" } do %>
+      <%= sage_component SageGridCol, { medium: "8", large: "7" } do %>
         <%= image_tag "sage_icon.png", size: "70", alt: "" %>
           <h1 class="docs-hero__title">Building with Sage</h1>
-          <p>Our system is our source of truth, providing everything you need to build the best experiences for all Kajabi entrepreneurs.</p>
+          <p class="t-sage-body">Our system is our source of truth, providing everything you need to build the best experiences for all Kajabi entrepreneurs.</p>
         <%= sage_component SageButtonGroup, { gap: :sm, spacer: { top: :lg } } do %>
           <%= sage_component SageButton, {
             value: "Get Started",
@@ -15,7 +16,7 @@
               href: pages_component_path(sorted_sage_components.first[:title]),
               title: "Get Started"
             },
-            style: SageRails.next_theme? ? "accent" : "primary",
+            style: "accent",
           } %>
           <%= sage_component SageButton, {
             value: "View GitHub Repo",
@@ -33,9 +34,6 @@
             style: "secondary",
           } %>
         <% end %>
-      <% end %>
-      <%= sage_component SageGridCol, { breakpoint: "md", size: "8" } do %>
-        <%= image_tag "sage_ui.png", class: "docs-hero__img", loading: "lazy", alt: "An example of a Sage component and its HTML markup" %>
       <% end %>
     <% end %>
   <% end %>

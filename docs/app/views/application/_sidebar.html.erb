@@ -97,9 +97,11 @@
       }
     %>
     <%= sage_component SageNav, {
-      items: [
-        { link: pages_layout_path(sorted_sage_components[0][:title]), text: "LAYOUT TOOLS", items: layout_list },
-      ]
+      items: [{
+        link: pages_layout_path(sage_layouts_sorted[0][:title]),
+        text: "LAYOUT TOOLS",
+        items: layout_list
+      }]
     } %>
   <% end %>
   <% if current_page_components? %>

@@ -51,7 +51,6 @@ module SageSchemas
     value: [:optional, String],
     # TODO: Deprecations in Next
     subtle: [:optional, NilClass, TrueClass],
-    raised: [:optional, NilClass, TrueClass],
     small: [:optional, NilClass, TrueClass],
   }
 
@@ -126,6 +125,19 @@ module SageSchemas
     width: [:optional, NilClass, String, Set.new(SageTokens::FRAME_WIDTHS)],
     width_ratio: [:optional, NilClass, String],
     wrap: [:optional, NilClass, Set.new(SageTokens::FRAME_WRAPS)]
+  }
+
+  FORM_SELECT_OPTION = {
+    text: String,
+    value: [:optional, NilClass, String],
+    disabled: [:optional, TrueClass],
+    selected: [:optional, TrueClass],
+  }
+
+  FORM_SELECT_OPTGROUP = {
+    group_label: String,
+    disabled: [:optional, TrueClass],
+    group_options: [[FORM_SELECT_OPTION]],
   }
 
   LIST_ITEM = {

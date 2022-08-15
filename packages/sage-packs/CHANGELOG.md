@@ -3,6 +3,89 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@1.0.0...@kajabi/sage-packs@1.0.1) (2022-08-02)
+
+**Note:** Version bump only for package @kajabi/sage-packs
+
+
+
+
+
+# [1.0.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.2.26...@kajabi/sage-packs@1.0.0) (2022-07-15)
+
+
+### chore
+
+* removed author ([e572872](https://github.com/Kajabi/sage-lib/commit/e572872f55f8f796ed03d666079d5e796854c2d2))
+
+
+### BREAKING CHANGES
+
+* Removes legacy theme from packages.
+
+chore: remove author
+* Removes the legacy theme from sage-system
+
+
+
+
+
+## [0.2.26](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.2.25...@kajabi/sage-packs@0.2.26) (2022-07-15)
+
+**Note:** Version bump only for package @kajabi/sage-packs
+
+
+
+
+
+## [0.2.25](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.2.24...@kajabi/sage-packs@0.2.25) (2022-07-12)
+
+**Note:** Version bump only for package @kajabi/sage-packs
+
+
+
+
+
+## [0.2.24](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.2.23...@kajabi/sage-packs@0.2.24) (2022-07-12)
+
+**Note:** Version bump only for package @kajabi/sage-packs
+
+
+
+
+
+## [0.2.23](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.2.22...@kajabi/sage-packs@0.2.23) (2022-07-11)
+
+**Note:** Version bump only for package @kajabi/sage-packs
+
+
+
+
+
+## [0.2.22](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.2.21...@kajabi/sage-packs@0.2.22) (2022-07-05)
+
+**Note:** Version bump only for package @kajabi/sage-packs
+
+
+
+
+
+## [0.2.21](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.2.20...@kajabi/sage-packs@0.2.21) (2022-07-01)
+
+**Note:** Version bump only for package @kajabi/sage-packs
+
+
+
+
+
+## [0.2.20](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.2.19...@kajabi/sage-packs@0.2.20) (2022-06-27)
+
+**Note:** Version bump only for package @kajabi/sage-packs
+
+
+
+
+
 ## [0.2.19](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@0.2.18...@kajabi/sage-packs@0.2.19) (2022-06-24)
 
 **Note:** Version bump only for package @kajabi/sage-packs

@@ -1,15 +1,6 @@
 <%= sage_component SageAssistant, { logo: { path: "sage.svg" }} do %>
   <%= render "application/nav" %>
   <% sage_component_section :assistant_actions do %>
-    <%= sage_component SageSwitch, {
-      id: "sage-theme-toggle",
-      label_text: "Use Next theme",
-      name: "sage-theme-toggle",
-      value: "next",
-      checked: SageRails.next_theme?,
-      type: "checkbox",
-      css_classes: "sage-theme-switch",
-    } %>
     <%= sage_component SageButton, {
       value: "Search",
       attributes: {
@@ -24,15 +15,3 @@
     } %>
   <% end %>
 <% end %>
-<script>
-window.SAGE_THEME = '<%= SageRails.sage_theme %>';
-document.addEventListener("DOMContentLoaded", function () {
-  document.querySelector('#sage-theme-toggle').addEventListener("change", function () {
-    var theme = document.querySelector('#sage-theme-toggle').checked
-      ? '<%= SageRails::SAGE_THEMES[:NEXT] %>'
-      : '<%= SageRails::SAGE_THEMES[:LEGACY] %>';
-    window.location.search = '?sage_theme=' + theme;
-    window.SAGE_THEME = theme;
-  });
-});
-</script>

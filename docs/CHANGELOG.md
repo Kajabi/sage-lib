@@ -3,6 +3,120 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.1.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.1.0...@kajabi/sage@5.1.1) (2022-08-02)
+
+
+### Bug Fixes
+
+* **sage-rails:** remove raised variant ([05e75cc](https://github.com/Kajabi/sage-lib/commit/05e75cca36e07bc48a42fca25cbf7d9a11f08fce))
+
+
+
+
+
+# [5.1.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.0.0...@kajabi/sage@5.1.0) (2022-07-21)
+
+
+### Features
+
+* **link:** allow nil for url prop ([aea7a0a](https://github.com/Kajabi/sage-lib/commit/aea7a0a487a31b0d9d934a1764c0581ae8886b9e))
+
+
+
+
+
+# [5.0.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.72.1...@kajabi/sage@5.0.0) (2022-07-15)
+
+**Note:** Version bump only for package @kajabi/sage
+
+
+
+
+
+## [4.72.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.72.0...@kajabi/sage@4.72.1) (2022-07-15)
+
+**Note:** Version bump only for package @kajabi/sage
+
+
+
+
+
+# [4.72.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.71.3...@kajabi/sage@4.72.0) (2022-07-12)
+
+
+### Features
+
+* **form select:** provide ability to pass through selected and disabled option attributes ([6e96b55](https://github.com/Kajabi/sage-lib/commit/6e96b55bd3871722cfad14f54d62040eb319ff24))
+* **form select:** remove message container on legacy component when empty ([1ecdf74](https://github.com/Kajabi/sage-lib/commit/1ecdf741ef0d6571798b1bc23fca3612844b8389))
+* **modal:** adds content scrolling to Next ([d6c5b12](https://github.com/Kajabi/sage-lib/commit/d6c5b124679a8fe23f2341a226f4dacc861ec0ae))
+
+
+
+
+
+## [4.71.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.71.2...@kajabi/sage@4.71.3) (2022-07-12)
+
+
+### Bug Fixes
+
+* **form-elements:** add info wrapper to stack the error and hint ([a146751](https://github.com/Kajabi/sage-lib/commit/a14675118b167b05e30a5d527754092611ee061e))
+* **gap:** update to have token level grid-gap class ([f538de2](https://github.com/Kajabi/sage-lib/commit/f538de2c11106f8af751b1e9c1921ca156bb5d70))
+* **modal:** add gap property ([b6986c6](https://github.com/Kajabi/sage-lib/commit/b6986c64cfc4702a841caa56538d9a5985b40559))
+
+
+
+
+
+## [4.71.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.71.1...@kajabi/sage@4.71.2) (2022-07-11)
+
+**Note:** Version bump only for package @kajabi/sage
+
+
+
+
+
+## [4.71.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.71.0...@kajabi/sage@4.71.1) (2022-07-05)
+
+**Note:** Version bump only for package @kajabi/sage
+
+
+
+
+
+# [4.71.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.70.0...@kajabi/sage@4.71.0) (2022-07-01)
+
+
+### Bug Fixes
+
+* **border:** add border interactive to tokens ([fe43bcf](https://github.com/Kajabi/sage-lib/commit/fe43bcfa6235ce778926e7df8b042ee005166457))
+
+
+### Features
+
+* **icon:** udpate fonts to v7 ([392f645](https://github.com/Kajabi/sage-lib/commit/392f6454ad72ad8bb177201dfdfa9183e58768ec))
+* **icon:** update icon set from latest ([e1a3f02](https://github.com/Kajabi/sage-lib/commit/e1a3f02c1e9b1268ce3170804868abf0180ce17f))
+* **icon:** update icon set with latest from design ([980e700](https://github.com/Kajabi/sage-lib/commit/980e700a85caa711b5f61e591a3887161d66aed0))
+
+
+
+
+
+# [4.70.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.69.1...@kajabi/sage@4.70.0) (2022-06-27)
+
+
+### Bug Fixes
+
+* change get started button back to accent in next ([1c10689](https://github.com/Kajabi/sage-lib/commit/1c10689255a963bcf56c672385882a9177063f5a))
+
+
+### Features
+
+* **table:** adds border prop to Rails table ([92b6170](https://github.com/Kajabi/sage-lib/commit/92b61705a723529191fa57a4108f681a200fa9e2))
+
+
+
+
+
 ## [4.69.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@4.69.0...@kajabi/sage@4.69.1) (2022-06-24)
 
 **Note:** Version bump only for package @kajabi/sage
