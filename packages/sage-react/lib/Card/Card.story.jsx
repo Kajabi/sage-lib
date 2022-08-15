@@ -127,7 +127,7 @@ Default.args = {
 
 export const InteractiveCard = () => (
   <Card interactive={true}>
-    <Link href="//example.com">
+    <Link className="sage-card__link--primary" href="//example.com">
       Sage Card Link
     </Link>
   </Card>

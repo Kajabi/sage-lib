@@ -47,8 +47,18 @@
 .sage-card--interactive {
   border: 0;
 
-  a:not(.sage-link--primary),
-  button:not(.sage-link--primary) {
+  .sage-link.sage-card__link--primary {
+    // Remove when Link component is updated with new styles
+    color: sage-color(charcoal, 400);
+    text-decoration: none;
+
+    &:hover {
+      color: sage-color(charcoal, 500);
+    }
+  }
+
+  a:not(.sage-card__link--primary),
+  button:not(.sage-card__link--primary) {
     z-index: sage-z-index(default, 2);
     position: relative;
 
