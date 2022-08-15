@@ -3,6 +3,36 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.2.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.1.1...@kajabi/sage@5.2.0) (2022-08-15)
+
+
+### Bug Fixes
+
+* **copy button:** allows borderless variant to pass through css_classes attribute ([4750eac](https://github.com/Kajabi/sage-lib/commit/4750eac74c59a96d7a9da481949bf2c00139f5dd))
+* **description:** remove icononly variation and update docs ([4a2ce9e](https://github.com/Kajabi/sage-lib/commit/4a2ce9e31e906fdd5d7206cbd2f26c6e838ad664))
+* **lists:** sage-619 make list and table rows clickable ([cd226e0](https://github.com/Kajabi/sage-lib/commit/cd226e00e280fec821f51bbe3e28acc54f278a2d))
+* **rails select props:** update array information ([0ae2a5b](https://github.com/Kajabi/sage-lib/commit/0ae2a5b919664cbcd70ed840260d163dba4bc503))
+* **select components:** add optgroup support to select component ([69c9eac](https://github.com/Kajabi/sage-lib/commit/69c9eac69a4334040cf0f4263c34f71904ea56bf))
+* **select optgroup:** update expected structure and associated logic ([f79e278](https://github.com/Kajabi/sage-lib/commit/f79e2784e4a80989b5d0e0420859a26c69d6a348))
+* **select rails:** clean up un-needed code ([5bd76dc](https://github.com/Kajabi/sage-lib/commit/5bd76dc4ca2e69b655607c77d322958fbeac1697))
+* **select react:** fixes from review with Julian ([f39fd04](https://github.com/Kajabi/sage-lib/commit/f39fd047ef868efa3cdfe1760c8a2ceddc7bcc29))
+* **table:** adds caption position option with sage_table_for helper ([45ef0e6](https://github.com/Kajabi/sage-lib/commit/45ef0e6fd0500e9e3ca96329bae99c48112eb8bf))
+
+
+### Features
+
+* **skip link:** toggles visibility of 'skip to content' link when focused ([6c9828c](https://github.com/Kajabi/sage-lib/commit/6c9828cd7f97bd560dc1042321f9ce2e628ef45d))
+
+
+### Performance Improvements
+
+* **docs:** updates from review feedback ([78e1a9f](https://github.com/Kajabi/sage-lib/commit/78e1a9f842915094a060b2737f497e6487e58baf))
+* **quick links:** remove quick links css from docs ([3491349](https://github.com/Kajabi/sage-lib/commit/349134916fe67f2222bb69f62044819566231a77))
+
+
+
+
+
 ## [5.1.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.1.0...@kajabi/sage@5.1.1) (2022-08-02)
 
 

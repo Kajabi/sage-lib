@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.0.1...@kajabi/sage-assets@1.0.2) (2022-08-15)
+
+
+### Bug Fixes
+
+* **dropdown:** adjust styling of dropdown select to better align with form select ([92601ed](https://github.com/Kajabi/sage-lib/commit/92601edb2c29b688df4fc929f009b57de5ab7937))
+* **lists:** sage-619 make list and table rows clickable ([cd226e0](https://github.com/Kajabi/sage-lib/commit/cd226e00e280fec821f51bbe3e28acc54f278a2d))
+
+
+
+
+
 ## [1.0.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.0.0...@kajabi/sage-assets@1.0.1) (2022-08-02)
 
 
