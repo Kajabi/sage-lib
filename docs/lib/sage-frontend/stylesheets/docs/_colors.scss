@@ -33,6 +33,15 @@
   }
 }
 
+.colors__tokens-heading,
+.colors__copy-btn,
+.colors__copy-btn::before {
+  .colors__classname-token &,
+  .colors__hex-token & {
+    color: inherit;
+  }
+}
+
 // build individual color blocks
 @each $name, $color in $sage-colors {
   @each $value, $map in $color {
@@ -47,12 +56,16 @@
         color: sage-color(charcoal, 500);
       }
 
-      @else if (lightness($hex) > 60) {
-        color: sage-color($name, 500);
+      @else if (($name == black) or ($name == charcoal)) {
+        color: sage-color(white);
+      }
+
+      @else if (lightness($hex) < 65) {
+        color: sage-color($name, 100);
       }
 
       @else {
-        color: sage-color(white);
+        color: sage-color($name, 400);
       }
 
       &::after {

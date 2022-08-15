@@ -25,12 +25,12 @@ module LayoutsHelper
       },
       {
         title: "tile",
-        description: "For setting sets of patterned content in even rows and columns.",
+        description: "For setting groups of patterned content in even rows and columns.",
         status: "todo",
       },
       {
         title: "sidecar",
-        description: "For setting main content beside tangentialy content.",
+        description: "For setting main content adjacent to secondary content.",
         status: "todo",
       },
     ]

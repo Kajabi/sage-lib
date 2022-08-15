@@ -5,7 +5,6 @@ class SageDescription < SageComponent
     items: [:optional, [[NilClass, {
       action: [:optional, NilClass, {
         attributes: [:optional, NilClass, Hash],
-        icon_only: [:optional, NilClass, TrueClass],
         test_id: [:optional, NilClass, String],
         value: [:optional, NilClass, String],
       }],

@@ -26,9 +26,9 @@ end
     </button>
   <% end %>
   <% if logo[:method] == "pack" %>
-    <%= image_pack_tag(logo[:path], class: "sage-assistant__branding")%>
+    <%= image_pack_tag logo[:path], class: "sage-assistant__branding", alt: "" %>
   <% else %>
-    <%= image_tag logo[:path], class: "sage-assistant__branding" %>
+    <%= image_tag logo[:path], class: "sage-assistant__branding", alt: "" %>
   <% end %>
   <div class="sage-assistant__body"><%= component.content %></div>
   <div class="sage-assistant__actions">

@@ -224,20 +224,121 @@ sample_table = {
   ]
 } %>
 
+<h3 class="t-sage-heading-6">Clickable row table example</h3>
+<p></p>
+<%= sage_component SageTable, {
+  headers: [
+    "Malesuada",
+    "Amet Cras",
+    "Malesuada",
+    "Amet Cras",
+  ],
+  selectable: true,
+  rows: [
+    [
+      sage_component(SageLink, {
+        label: "User",
+        remove_underline: true,
+        show_label: true,
+        url: "#",
+        style: "secondary",
+        css_classes: SageClassnames::LINK::TABLE_CELL_PRIMARY
+      }),
+      "$20,323.30 USD",
+      {
+        value: "Sed posuere consectetur",
+        html_attributes: {
+          class: "sage-table-cell--truncate"
+        }
+      },
+      sage_component(SageBadge, {
+          value: "published",
+          color: "published",
+      }),
+      sage_component(SageButtonGroup, {
+        content: (
+          sage_component(SageButton, {
+            subtle: true,
+            value: 'Edit',
+            icon: { name: 'pen', style: 'only' },
+            style: 'primary',
+            attributes: {
+              href: "?edit=#edit",
+              "data-js-tooltip": "Edit",
+            }
+          }) << sage_component(SageButton, {
+            subtle: true,
+            value: 'Delete',
+            icon: { name: 'trash', style: 'only' },
+            style: 'danger',
+            attributes: {
+              href: "?remove=#delete",
+              "data-js-tooltip": "Delete",
+            }
+          })
+        ),
+        gap: "xs"
+      })
+    ],
+    [
+      sage_component(SageLink, {
+        label: "Title",
+        remove_underline: true,
+        show_label: true,
+        url: "#",
+        style: "secondary",
+        css_classes: SageClassnames::LINK::TABLE_CELL_PRIMARY
+      }),
+      "$1,101,444.31 USD",
+      {
+        value: "Curabitur blandit tempus",
+        html_attributes: {
+          class: "sage-table-cell--truncate"
+        }
+      },
+      sage_component(SageBadge, {
+          value: "published",
+          color: "published",
+      }),
+      sage_component(SageButtonGroup, {
+        content: (
+          sage_component(SageButton, {
+            subtle: true,
+            value: 'Edit',
+            icon: { name: 'pen', style: 'only' },
+            style: 'primary',
+            attributes: {
+              href: "?edit=#edit",
+              "data-js-tooltip": "Edit",
+            }
+          }) << sage_component(SageButton, {
+            subtle: true,
+            value: 'Delete',
+            icon: { name: 'trash', style: 'only' },
+            style: 'danger',
+            attributes: {
+              href: "?remove=#delete",
+              "data-js-tooltip": "Delete",
+            }
+          })
+        ),
+        gap: "xs"
+      })
+    ]
+  ]
+} %>
+
+
 <h3>Using `sage_table_for`</h3>
 <%= md("
-As an alterative to directly calling the SageTable component,
-a helper variation is available that allows for formatting table columns
-in a more compositional fashion. This involves calling `sage_table_for` with a collection,
-and then using `t.column ... do |c|` blocks to provide templates for each column of data.
-See the \"Properties\" tab for documentation of the available parameters.
+As an alternative to directly calling the SageTable component, a helper variation is available that allows for formatting table columns in a more compositional fashion.
 
-**NOTE:** This is an MVP implementation based on a helper written earlier for `kajabi-products`
-and not completely aligned with SageTable yet.
-It is safe to use, but should be tracked against future updates.
+This involves calling `sage_table_for` with a collection, and then using `t.column ... do |c|` blocks to provide templates for each column of data. See the \"Properties\" tab for documentation of the available parameters.
+
+**NOTE:** This is an MVP implementation based on a helper written earlier for `kajabi-products` and may not be fully aligned with SageTable. It is safe to use, but should be tracked against future updates.
 ") %>
 
-<%= sage_table_for people_data, sortable: true, responsive: true, caption: "<p>Testing <b>stuff</b></p>".html_safe do |t| %>
+<%= sage_table_for people_data, selectable: true, sortable: true, responsive: true, caption: "Caption positioned above using `caption_side`".html_safe, caption_side: "top" do |t| %>
   <% t.column :initials, label: "", data_type: "checkbox" do |c| %>
     <%= sage_component SageCheckbox, {
       label_text: 'Select row',

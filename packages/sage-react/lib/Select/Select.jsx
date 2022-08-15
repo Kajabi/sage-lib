@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { selectItemPropTypes, selectStructuredItemPropTypes } from './configs';
 
 export const Select = ({
   className,
@@ -25,6 +24,39 @@ export const Select = ({
     }
   );
 
+  const buildOption = (option, i) => {
+    let optionLabel,
+      optionValue,
+      optionDisabled;
+    if (typeof option === 'string') {
+      optionLabel = option;
+      optionValue = option;
+    } else {
+      optionLabel = option.label;
+      optionValue = option.value;
+      optionDisabled = option.disabled;
+    }
+    return (
+      <option
+        key={optionValue + i.toString()}
+        value={optionValue}
+        disabled={optionDisabled}
+      >
+        {optionLabel}
+      </option>
+    );
+  };
+
+  const buildOptgroup = ({ disabled, groupLabel, groupOptions }, i) => (
+    <optgroup
+      label={groupLabel}
+      disabled={disabled}
+      key={groupLabel + i.toString()}
+    >
+      {groupOptions && groupOptions.map(buildOption)}
+    </optgroup>
+  );
+
   return (
     <div className={classNames}>
       <select
@@ -37,30 +69,10 @@ export const Select = ({
         {...rest}
       >
         {(label && includeLabelInOptions) && <option label={label} />}
-
-        {options.map((option, i) => {
-          let optionLabel,
-            optionDisabled,
-            optionValue;
-          if (typeof option === 'string') {
-            optionLabel = option;
-            optionValue = option;
-          } else {
-            optionLabel = option.label;
-            optionValue = option.value;
-            optionDisabled = option.disabled;
-          }
-
-          return (
-            <option
-              key={i.toString()}
-              value={optionValue}
-              disabled={optionDisabled}
-            >
-              {optionLabel}
-            </option>
-          );
-        })}
+        {options && options.map((option, i) => (option.groupLabel
+          ? buildOptgroup(option, i)
+          : buildOption(option, i)
+        ))}
       </select>
       <i className="sage-select__arrow" aria-hidden="true" />
       {label && (
@@ -74,9 +86,6 @@ export const Select = ({
     </div>
   );
 };
-
-Select.itemPropTypes = selectItemPropTypes;
-Select.structuredItemPropTypes = selectStructuredItemPropTypes;
 
 Select.defaultProps = {
   className: null,
@@ -99,6 +108,31 @@ Select.propTypes = {
   label: PropTypes.string,
   message: PropTypes.string,
   onChange: PropTypes.func,
-  options: PropTypes.arrayOf(selectItemPropTypes),
+  options: PropTypes.arrayOf(
+    PropTypes.oneOfType([
+      PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.shape({
+          label: PropTypes.string,
+          value: PropTypes.string,
+          disabled: PropTypes.bool,
+        }),
+      ]),
+      PropTypes.shape({
+        disabled: PropTypes.bool,
+        groupLabel: PropTypes.string,
+        groupOptions: PropTypes.arrayOf(
+          PropTypes.oneOfType([
+            PropTypes.string,
+            PropTypes.shape({
+              label: PropTypes.string,
+              value: PropTypes.string,
+              disabled: PropTypes.bool,
+            }),
+          ]),
+        ),
+      }),
+    ]),
+  ),
   value: PropTypes.string,
 };

@@ -2,19 +2,20 @@
   <h1>Component Search</h1>
 <% end %>
 <%= form_tag(pages_search_path, method: :get) do %>
-  <%= sage_component SageCardRow, { grid_template: "te" } do %>
-    <%= sage_component SageFormInput, {
-      id: "search",
-      input_type: "",
-      label_text: "",
-      placeholder: "Search Sage Components",
-      value: params[:search] || "",
-    } %>
-    <%= sage_component SageButton, {
-      value: "Search",
-      style: "primary",
-      attributes: { type: "submit" }
-    } %>
+  <%= sage_component SageToolbar, {} do %>
+    <%= sage_component SageToolbarGroup, {} do %>
+      <%= sage_component SageFormInput, {
+        id: "search",
+        label_text: "Search for a component",
+        placeholder: "Search Sage Components",
+        value: params[:search] || "",
+      } %>
+      <%= sage_component SageButton, {
+        value: "Search",
+        style: "primary",
+        attributes: { type: "submit" }
+      } %>
+    <% end %>
   <% end %>
 <% end %>
 <% if @search.present? %>
