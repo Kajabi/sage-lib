@@ -7,7 +7,7 @@
 )) %>
 <% end %>
 
-<%= sage_table_for SageTokens::CONTAINER_SPECS, striped: true, responsive: true do |t| %>
+<%= sage_table_for SageTokens::CONTAINER_SPECS, responsive: true do |t| %>
   <% t.column :container, label: "Container" do |c| %>
     <%= c[:name] %>
     <code><%= c[:alias] %></code>
