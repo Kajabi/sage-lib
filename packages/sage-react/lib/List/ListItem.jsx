@@ -24,15 +24,7 @@ export const ListItem = ({
     <li className={classNames} id={id}>
       {sortable && (
         <div className="sage-list__item-sortable-handle">
-          <Button
-            color={Button.COLORS.SECONDARY}
-            className="sage-list__item-sortable-handle-control"
-            icon={Icon.ICONS.HANDLE_2_VERTICAL}
-            iconOnly={true}
-            subtle={true}
-          >
-            Drag to sort
-          </Button>
+          <Icon icon={Icon.ICONS.HANDLE_2_VERTICAL} label="Drag to sort" />
         </div>
       )}
       <div className="sage-list__item-content">
