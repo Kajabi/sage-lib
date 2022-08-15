@@ -40,7 +40,6 @@ export const Table = ({
   hasDataBeyondCurrentRows,
   headers,
   isResponsive,
-  isStriped,
   onSelectRowHook,
   resetAbove,
   resetBelow,
@@ -69,7 +68,6 @@ export const Table = ({
     'sage-table',
     {
       'sage-table--selectable': selectable,
-      'sage-table--striped': isStriped,
     }
   );
 
@@ -342,7 +340,6 @@ Table.defaultProps = {
   hasDataBeyondCurrentRows: false,
   headers: [],
   isResponsive: true,
-  isStriped: false,
   onSelectRowHook: null,
   resetAbove: false,
   resetBelow: false,
@@ -370,7 +367,6 @@ Table.propTypes = {
     PropTypes.shape({}),
   ]),
   isResponsive: PropTypes.bool,
-  isStriped: PropTypes.bool,
   onSelectRowHook: PropTypes.func,
   resetAbove: PropTypes.bool,
   resetBelow: PropTypes.bool,
