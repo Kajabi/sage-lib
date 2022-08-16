@@ -4,7 +4,15 @@ import classnames from 'classnames';
 import { BannerContent } from './BannerContent';
 
 export const BannerWrapper = ({
+  active,
   bannerContext,
+  children,
+  className,
+  dismissable,
+  id,
+  link,
+  text,
+  type,
   ...rest
 }) => {
   const classNames = classnames(
@@ -16,13 +24,25 @@ export const BannerWrapper = ({
 
   return (
     <div className={classNames}>
-      <BannerContent {...rest} />
+      <BannerContent
+        active={active}
+        bannerContext={bannerContext}
+        className={className}
+        dismissable={dismissable}
+        id={id}
+        link={link}
+        text={text}
+        type={type}
+        {...rest}
+      >
+        {children}
+      </BannerContent>
     </div>
   );
 };
 
 BannerWrapper.defaultProps = {
-  active: null,
+  active: false,
   bannerContext: null,
   children: null,
   className: null,
