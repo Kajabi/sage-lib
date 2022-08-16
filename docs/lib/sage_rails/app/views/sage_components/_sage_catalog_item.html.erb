@@ -36,9 +36,9 @@
   <% end %>
   <% if component.image.present? %>
     <%# Uses tabindex="-1" because there are two links to the same location in this component (component.title also links to the href) %>
-    <div class="sage-catalog-item__img">
+    <<%= link_tag %> class="sage-catalog-item__img" href="<%= component.href %>" tabindex="-1" title="Go to: <%= component.title %>">
       <%= image_tag component.image, alt: "Cover image for: #{component.title}" %>
-    </div>
+    </<%= link_tag %>>
   <% end %>
   <% if component.icon.present? %>
     <div class="sage-catalog-item__icon">
