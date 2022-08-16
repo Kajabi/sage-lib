@@ -8,7 +8,6 @@ Sage.sortableList = (function() {
   // ==================================================
 
   const DRAGGING_CLASSNAME = 'sage-list--sortable-dragging';
-  const HANDLE_CLASSNAME = 'sage-list__item-sortable-handle';
   const SELECTOR_CONFIGS = 'data-js-list-sortable-configs';
   const SELECTOR_CONTAINER = 'data-js-list-sortable';
   const SELECTOR_ITEM_UPDATE_URL = 'data-js-list-sortable-update-url';
@@ -16,7 +15,8 @@ Sage.sortableList = (function() {
     dragClass: 'sage-list__item--sortable-drag',
     ghostClass: 'sage-list__item--sortable-ghost',
     chosenClass: 'sage-list__item--sortable-active',
-    handle: `.${HANDLE_CLASSNAME}`,
+    handle: '.sage-list__item-sortable-handle',
+    forceFallback: true, // NOTE: This is added because Safari 13+ has a draggable api bug https://github.com/SortableJS/Sortable/issues/1571
   };
 
 

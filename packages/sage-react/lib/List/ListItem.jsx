@@ -3,7 +3,6 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import { Icon } from '../Icon';
 import { Dropdown, OptionsDropdown } from '../Dropdown';
-import { Button } from '../Button';
 
 export const ListItem = ({
   children,

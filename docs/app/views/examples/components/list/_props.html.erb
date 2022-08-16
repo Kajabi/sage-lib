@@ -10,6 +10,16 @@
   <td><%= md('`[]`') %></td>
 </tr>
 <tr>
+  <td><%= md('`sortable_configs`') %></td>
+  <td><%= md('
+    Provide additional configurations according to those available for [SortableJS](https://github.com/SortableJS/Sortable#options).
+    At this time, we only support properties that allow simple data types as values (string, boolean, number).
+    In particular, use `handle: false` in order to make each item fully draggable (rather than just by the drag handle).
+  ') %></td>
+  <td><%= md('Hash') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
   <td><%= md('`sortable_resource`') %></td>
   <td><%= md('Provide the resource name for a sortable list. Required only when `sortable` is activated for any child items') %></td>
   <td><%= md('String') %></td>

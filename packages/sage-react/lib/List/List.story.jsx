@@ -32,3 +32,14 @@ export const SortableList = () => {
     />
   );
 };
+
+export const FullyDraggableSortableList = () => {
+  const [items, setItems] = React.useState(sampleItems);
+  return (
+    <List
+      items={items}
+      itemRenderer={sampleItemRenderer}
+      sortableConfigs={{ setList: setItems, handle: false }}
+    />
+  );
+};
