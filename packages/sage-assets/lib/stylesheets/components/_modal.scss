@@ -10,7 +10,7 @@ $-modal-padding-y: sage-spacing(md);
 $-modal-margin-lg: 6vh;
 $-modal-margin-xl: 8vh;
 $-modal-header-image-size: rem(28px);
-$-modal-fullscreen-max-width: rem(1440px);
+$-modal-fullscreen-max-width: sage-container(full);
 $-modal-fullscreen-top-spacing: rem(104px);
 $-modal-inner-size: sage-container(md);
 
