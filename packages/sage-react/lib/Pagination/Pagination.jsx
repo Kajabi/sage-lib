@@ -212,7 +212,7 @@ Pagination.defaultProps = {
   labels: null,
   maxPageButtons: 4,
   onClickPage: null,
-  pageCount: 1,
+  pageCount: null,
   pageCountPrefix: null,
   pageCountSuffix: null,
   pageSize: null,
