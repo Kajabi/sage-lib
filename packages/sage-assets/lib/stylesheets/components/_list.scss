@@ -18,13 +18,9 @@
   list-style: none;
   border-radius: sage-border(radius-medium);
 
-  // .sage-list:not(.sage-list--sortable-dragging) &:hover {
-  //   &:not(.sage-list__item--sortable-active):not(.sage-list__item--sortable-drag) {
   &:hover {
     background-color: sage-color(grey, 200);
   }
-  //   }
-  // }
 
   .sage-list--all-draggable & {
     cursor: grab;
