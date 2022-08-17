@@ -38,7 +38,9 @@
 .sage-list__item--sortable-drag {
   background-color: sage-color(white);
   box-shadow: sage-shadow(lg);
-  opacity: 1 !important;
+  // NOTE: !important is added and lint-ignored here so that it can override
+  // inline opacity that the SortableJS utility we're using adds during sorting.
+  opacity: 1 !important; /* stylelint-disable-line declaration-no-important */
 }
 
 .sage-list__item--sortable-ghost {
