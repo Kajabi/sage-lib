@@ -55,7 +55,7 @@ sample_products = [
 
 <h3 class="<%= SageClassnames::TYPE::HEADING_6 %>">Default configuration</h3>
 <%= md("
-SageList is implemented most simply by passing the desired contents for the items through the `SageList` `items` property.
+`SageList` is implemented most simply by passing the desired contents for the items through the `SageList` `items` property.
 This assumes that the contents of the list are already formatted as desired or you're outputting simple content values.
 ", use_sage_type: true) %>
 
@@ -70,7 +70,7 @@ This assumes that the contents of the list are already formatted as desired or y
 
 <h3 class="<%= SageClassnames::TYPE::HEADING_6 %>">Sortable configuration</h3>
 <%= md("
-Sortable lists can be created with SageList by adding a `sortable_resource` to the `SageList`
+Sortable lists can be created with `SageList` by adding a `sortable_resource` to the `SageList`
 and setting `sortable: true` on the items.
 You can also pass a `sortable_update_url` for sorting callbacks
 and additional configurations through `sortable_configs`. See the Props list for more details.
@@ -131,7 +131,7 @@ Note that this example also implements the [Reveal utility class](#{pages_helper
       css_classes: SageClassnames::REVEAL_CONTAINER,
     } do %>
       <%= sage_component SageCardRow, { grid_template: "ete" } do %>
-        <img src="//source.unsplash.com/random/240x160?v=<%= item[:id] %>" width="64" alt="" class="green" />
+        <img src="//source.unsplash.com/random/240x160?v=<%= item[:id] %>" width="64" alt="" />
         <%= sage_component SageCardBlock, {} do %>
           <h4><%= item[:name] %></h4>
           <p>Item <%= item[:id] %> specs</p>

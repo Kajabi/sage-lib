@@ -14,23 +14,22 @@
   display: flex;
   align-items: center;
   gap: sage-spacing(sm);
-  padding: sage-spacing(xs) rem(12px); // TODO: is there a token for the 12px value?
+  padding: sage-spacing(xs) rem(12px);
   list-style: none;
-  border-radius: rem(10px); // TODO: is there a token for this?
+  border-radius: sage-border(radius-medium);
 
-  .sage-list:not(.sage-list--sortable-dragging) &:hover {
-    &:not(.sage-list__item--sortable-active):not(.sage-list__item--sortable-drag) {
-      background-color: sage-color(grey, 200);
-    }
+  // .sage-list:not(.sage-list--sortable-dragging) &:hover {
+  //   &:not(.sage-list__item--sortable-active):not(.sage-list__item--sortable-drag) {
+  &:hover {
+    background-color: sage-color(grey, 200);
   }
+  //   }
+  // }
 
   .sage-list--all-draggable & {
     cursor: grab;
   }
 }
-
-
-// .sage-list__item--sortable {}
 
 .sage-list__item--sortable-active {
   background-color: sage-color(white);
@@ -43,7 +42,7 @@
 .sage-list__item--sortable-drag {
   background-color: sage-color(white);
   box-shadow: sage-shadow(lg);
-  opacity: 1;
+  opacity: 1 !important;
 }
 
 .sage-list__item--sortable-ghost {
@@ -69,15 +68,15 @@
 .sage-list__item-sortable-handle {
   width: auto;
 
-  .sage-list__item--sortable-ghost & {
-    opacity: 0;
-  }
-
   &:hover {
     cursor: grab;
   }
 
   .sage-list__item--sortable-active & {
     cursor: grabbing;
+  }
+
+  .sage-list__item--sortable-ghost & {
+    opacity: 0;
   }
 }
