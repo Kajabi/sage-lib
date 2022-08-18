@@ -62,7 +62,7 @@ This assumes that the contents of the list are already formatted as desired or y
 <%= sage_component SageList, {
   items: sample_products.map { | item | {
       content: "Item #{item[:name]}",
-      id: item[:id],
+      id: "example-default-item-#{item[:id]}",
       more_actions: { items: dropdown_items(item[:id]) },
     }
   },
@@ -80,7 +80,7 @@ and additional configurations through `sortable_configs`. See the Props list for
   sortable_resource: "sample_products",
   items: sample_products.map { | item | {
       content: "Item #{item[:name]}",
-      id: item[:id],
+      id: "example-sortable-item-#{item[:id]}",
       more_actions: { items: dropdown_items(item[:id]) },
       sortable: true,
       sortable_update_url: "#sortable-update-url?item=#{item[:id]}",
@@ -99,7 +99,7 @@ If you would like the whole row to be draggable, use the `sortable_configs` to s
   sortable_resource: "sample_products",
   items: sample_products.map { | item | {
       content: "Item #{item[:name]}",
-      id: item[:id],
+      id: "example-fully-draggable-item-#{item[:id]}",
       more_actions: { items: dropdown_items(item[:id]) },
       sortable: true,
       sortable_update_url: "#sortable-update-url?item=#{item[:id]}",
@@ -124,14 +124,14 @@ Note that this example also implements the [Reveal utility class](#{pages_helper
 } do %>
   <% sample_products.each do | item | %>
     <%= sage_component SageListItem, {
-      id: item[:id],
+      id: "example-default-item-#{item[:id]}",
       more_actions: { items: dropdown_items(item[:id]) },
       sortable: true,
       sortable_update_url: "#sortable-update-url?item={item[:id]}",
       css_classes: SageClassnames::REVEAL_CONTAINER,
     } do %>
       <%= sage_component SageCardRow, { grid_template: "ete" } do %>
-        <img src="//source.unsplash.com/random/240x160?v=<%= item[:id] %>" width="64" alt="" />
+        <img src="https://source.unsplash.com/random/240x160?v=<%= item[:id] %>" width="64" alt="" />
         <%= sage_component SageCardBlock, {} do %>
           <h4><%= item[:name] %></h4>
           <p>Item <%= item[:id] %> specs</p>

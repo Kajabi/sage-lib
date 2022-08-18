@@ -38,8 +38,6 @@ Sage.sortableList = (function() {
       sortableConfigs = { ...DEFAULT_CONFIGS };
     }
 
-    console.log('final configs', resourceName, sortableConfigs);
-
     Sortable.create(el, {
       ...sortableConfigs,
       onStart: function(evt) {
