@@ -37,8 +37,11 @@ export const Modal = ({
   );
 
   useEffect(() => {
-    document.body.className = 'sage-page--has-open-modal';
-    return () => { document.body.className = ''; };
+    if (active) {
+      document.body.classList.add('sage-page--has-open-modal');
+    }
+
+    return () => { document.body.classList.remove('sage-page--has-open-modal'); };
   });
 
   let animationAttributes = {};
