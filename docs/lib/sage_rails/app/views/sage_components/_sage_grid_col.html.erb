@@ -1,14 +1,7 @@
-<% has_infix = component.breakpoint || component.size || component.small || component.medium || component.large %>
-
 <div class="
-  <%= "sage-col" if !has_infix -%>
-  <%= "sage-col-#{component.size}" if component.size -%>
-  <%= "sage-col--#{component.breakpoint}-#{component.size}" if component.breakpoint && component.size -%>
-  <%= "sage-col--sm-#{component.small}" if component.small%>
-  <%= "sage-col--md-#{component.medium}" if component.medium%>
-  <%= "sage-col--lg-#{component.large}" if component.large%>
-  <%= "sage-col--xl-#{component.xlarge}" if component.xlarge%>
-  <%= component.generated_css_classes %>
-" <%= component.generated_html_attributes.html_safe %>>
+  <%= grid_column_classes(component) %>
+  <%= component.generated_css_classes %>"
+  <%= component.generated_html_attributes.html_safe %>
+>
   <%= component.content %>
 </div>
