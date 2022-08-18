@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import uuid from 'react-uuid';
 import classnames from 'classnames';
 import { Breadcrumbs } from '../Breadcrumbs';
 
