@@ -240,7 +240,7 @@ $-modal-inner-size: sage-container(md);
 
   .sage-modal--fullscreen & {
     max-width: $-modal-fullscreen-max-width;
-    margin: $-modal-fullscreen-top-spacing auto 0 auto;
+    margin: $-modal-fullscreen-top-spacing auto sage-spacing() auto;
   }
 
   .sage-modal--scrollable & {
