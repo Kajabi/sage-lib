@@ -37,13 +37,13 @@ export const Main = () => {
       <PageHeading
         // TODO: DSS: `actionItems` should not be an array but just nodes as children.
         //   https://kajabi.atlassian.net/browse/SAGE-752
-        actionItems={[
+        actions={(
           <OptionsDropdown
             options={transactionPageOptions({ setShowCustomizeColumnsModal })}
             triggerButtonSubtle={false}
             align={OptionsDropdown.POSITIONS.RIGHT}
           />
-        ]}
+        )}
         className={SageClassnames.SPACERS.LG_BOTTOM}
       >
         Transactions
