@@ -12,6 +12,24 @@
   width: 100%;
 }
 
+.sage-card--border-dashed {
+  border-color: sage-color(white);
+  @include sage-dashed-border(
+    $border-radius: sage-border(radius),
+    $color: sage-color(grey, 400),
+  );
+}
+
+.sage-card--clear-padding-top,
+.sage-card--clear-padding-both {
+  padding-top: 0;
+}
+
+.sage-card--clear-padding-bottom,
+.sage-card--clear-padding-both {
+  padding-bottom: 0;
+}
+
 .sage-card--compact {
   gap: sage-spacing(sm);
   padding: sage-spacing(sm);
@@ -26,22 +44,29 @@
   @include sage-grid-card;
 }
 
-.sage-card--clear-padding-top,
-.sage-card--clear-padding-both {
-  padding-top: 0;
-}
+.sage-card--interactive {
+  border: 0;
 
-.sage-card--clear-padding-bottom,
-.sage-card--clear-padding-both {
-  padding-bottom: 0;
-}
+  .sage-link.sage-card__link--primary {
+    // Remove when Link component is updated with new styles
+    color: sage-color(charcoal, 400);
+    text-decoration: none;
 
-.sage-card--border-dashed {
-  border-color: sage-color(white);
-  @include sage-dashed-border(
-    $border-radius: sage-border(radius),
-    $color: sage-color(grey, 400),
-  );
+    &:hover {
+      color: sage-color(charcoal, 500);
+    }
+  }
+
+  a:not(.sage-card__link--primary),
+  button:not(.sage-card__link--primary) {
+    z-index: sage-z-index(default, 2);
+    position: relative;
+
+    &::before,
+    &:hover::before {
+      box-shadow: none;
+    }
+  }
 }
 
 .sage-card__footer {
