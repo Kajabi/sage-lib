@@ -54,13 +54,13 @@ export const PageHeading = ({
     )}
     {toolbarItems && (
       <div className="sage-page-heading__toolbar">
-        {toolbarItems.map((tool) => <React.Fragment key={uuid()}>{tool}</React.Fragment>)}
+        {toolbarItems}
       </div>
     )}
     {actionItems && (
       <div className="sage-page-heading__actions">
         <div className="sage-page-heading__actions-inner">
-          {actionItems.map((action) => <React.Fragment key={uuid()}>{action}</React.Fragment>)}
+          {actionItems}
         </div>
       </div>
     )}
@@ -84,7 +84,7 @@ PageHeading.defaultProps = {
 };
 
 PageHeading.propTypes = {
-  actionItems: PropTypes.arrayOf(PropTypes.node),
+  actionItems: PropTypes.node,
   breadcrumbs: PropTypes.arrayOf(Breadcrumbs.itemPropTypes),
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
@@ -95,5 +95,5 @@ PageHeading.propTypes = {
   }),
   introText: PropTypes.string,
   secondaryText: PropTypes.string,
-  toolbarItems: PropTypes.arrayOf(PropTypes.node),
+  toolbarItems: PropTypes.node,
 };

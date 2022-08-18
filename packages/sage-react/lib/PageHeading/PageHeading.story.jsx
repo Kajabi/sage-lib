@@ -13,23 +13,25 @@ export default {
         Page heading goes here
       </>
     ),
-    actionItems: [
-      <Button
-        color={Button.COLORS.SECONDARY}
-        icon={SageTokens.ICONS.PREVIEW_ON}
-        subtle={true}
-      >
-        Preview
-      </Button>,
-      <Button
-        color={Button.COLORS.PRIMARY}
-        icon={SageTokens.ICONS.CART}
-      >
-        Create
-      </Button>
-    ],
+    actionItems: (
+      <>
+        <Button
+          color={Button.COLORS.SECONDARY}
+          icon={SageTokens.ICONS.PREVIEW_ON}
+          subtle={true}
+        >
+          Preview
+        </Button>
+        <Button
+          color={Button.COLORS.PRIMARY}
+          icon={SageTokens.ICONS.CART}
+        >
+          Create
+        </Button>
+      </>
+    ),
     toolbarItems: null,
-  }
+  },
 };
 const Template = (args) => <PageHeading {...args} />;
 
@@ -69,29 +71,31 @@ PageHeadingWithThumbnail.args = {
 export const PageHeadingWithToolbarAndSecondaryText = Template.bind({});
 PageHeadingWithToolbarAndSecondaryText.args = {
   secondaryText: 'Secondary text here',
-  toolbarItems: [
-    <Button
-      color={Button.COLORS.SECONDARY}
-      icon={SageTokens.ICONS.CART}
-      subtle={true}
-    >
-      Preview
-    </Button>,
-    <Button
-      color={Button.COLORS.SECONDARY}
-      icon={SageTokens.ICONS.GEAR}
-      subtle={true}
-    >
-      Report
-    </Button>,
-    <Button
-      color={Button.COLORS.SECONDARY}
-      icon={SageTokens.ICONS.GEAR}
-      subtle={true}
-    >
-      Settings
-    </Button>
-  ],
+  toolbarItems: (
+    <>
+      <Button
+        color={Button.COLORS.SECONDARY}
+        icon={SageTokens.ICONS.CART}
+        subtle={true}
+      >
+        Preview
+      </Button>
+      <Button
+        color={Button.COLORS.SECONDARY}
+        icon={SageTokens.ICONS.GEAR}
+        subtle={true}
+      >
+        Report
+      </Button>
+      <Button
+        color={Button.COLORS.SECONDARY}
+        icon={SageTokens.ICONS.GEAR}
+        subtle={true}
+      >
+        Settings
+      </Button>
+    </>
+  ),
 };
 
 export const AllItems = Template.bind({});
