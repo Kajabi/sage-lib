@@ -1,7 +1,3 @@
-<div class="
-  <%= grid_column_classes(component) %>
-  <%= component.generated_css_classes %>"
-  <%= component.generated_html_attributes.html_safe %>
->
+<div class="<%= grid_column_classes(component) %>" <%= component.generated_html_attributes.html_safe %>>
   <%= component.content %>
 </div>
