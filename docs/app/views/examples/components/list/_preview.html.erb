@@ -70,19 +70,18 @@ This assumes that the contents of the list are already formatted as desired or y
 
 <h3 class="<%= SageClassnames::TYPE::HEADING_6 %>">Sortable configuration</h3>
 <%= md("
-Sortable lists can be created with `SageList` by adding a `sortable_resource` to the `SageList`
-and setting `sortable: true` on the items.
-You can also pass a `sortable_update_url` for sorting callbacks
-and additional configurations through `sortable_configs`. See the Props list for more details.
+Sortable lists can be created with `SageList` by adding `sortable: true` and a `sortable_resource`.
+You can also pass a `sortable_update_url` for sorting callbacks to items
+that will be called after the user finishes sorting an item.
 ", use_sage_type: true) %>
 
 <%= sage_component SageList, {
+  sortable: true,
   sortable_resource: "sample_products",
   items: sample_products.map { | item | {
       content: "Item #{item[:name]}",
       id: "example-sortable-item-#{item[:id]}",
       more_actions: { items: dropdown_items(item[:id]) },
-      sortable: true,
       sortable_update_url: "#sortable-update-url?item=#{item[:id]}",
     }
   },
@@ -90,24 +89,20 @@ and additional configurations through `sortable_configs`. See the Props list for
 
 <h3 class="<%= SageClassnames::TYPE::HEADING_6 %>">Fully draggable row</h3>
 <%= md("
-Sortable lists are implemented by default such that an item is only draggable
-by clicking and dragging on the drag handle at the start of its row.
-If you would like the whole row to be draggable, use the `sortable_configs` to set `handle: false`.
+By default only the drag handle is active for dragging/sorting a row.
+However, `draggable_anywhere` can be set to `true` in order to allow the whole row to be draggable instead.
 ", use_sage_type: true) %>
 
 <%= sage_component SageList, {
-  sortable_resource: "sample_products",
+  sortable: true,
+  sortable_resource: "sample_products_2",
   items: sample_products.map { | item | {
-      content: "Item #{item[:name]}",
-      id: "example-fully-draggable-item-#{item[:id]}",
-      more_actions: { items: dropdown_items(item[:id]) },
-      sortable: true,
-      sortable_update_url: "#sortable-update-url?item=#{item[:id]}",
-    }
-  },
-  sortable_configs: {
-    handle: false,
-  }
+    content: "Item #{item[:name]}",
+    id: "example-fully-draggable-item-#{item[:id]}",
+    more_actions: { items: dropdown_items(item[:id]) },
+    sortable_update_url: "#sortable-update-url?item=#{item[:id]}",
+  }},
+  drag_handle_type: "row",
 } %>
 
 <h3 class="<%= SageClassnames::TYPE::HEADING_6 %>">Compositional approach</h3>
@@ -117,16 +112,14 @@ Note that this example also implements the [Reveal utility class](#{pages_helper
 ", use_sage_type: true) %>
 
 <%= sage_component SageList, {
-  sortable_resource: "sample_products_2",
-  sortable_configs: {
-    handle: false,
-  } ,
+  sortable: true,
+  sortable_resource: "sample_products_3",
+  drag_handle_type: "row",
 } do %>
   <% sample_products.each do | item | %>
     <%= sage_component SageListItem, {
       id: "example-default-item-#{item[:id]}",
       more_actions: { items: dropdown_items(item[:id]) },
-      sortable: true,
       sortable_update_url: "#sortable-update-url?item={item[:id]}",
       css_classes: SageClassnames::REVEAL_CONTAINER,
     } do %>

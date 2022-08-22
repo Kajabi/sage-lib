@@ -8,38 +8,25 @@ Sage.sortableList = (function() {
   // ==================================================
 
   const DRAGGING_CLASSNAME = 'sage-list--sortable-dragging';
-  const SELECTOR_CONFIGS = 'data-js-list-sortable-configs';
   const SELECTOR_CONTAINER = 'data-js-list-sortable';
+  const SELECTOR_DRAGGABLE_BY_ROW = 'sage-list--draggable-by-row';
   const SELECTOR_ITEM_UPDATE_URL = 'data-js-list-sortable-update-url';
-  const DEFAULT_CONFIGS = {
-    dragClass: 'sage-list__item--sortable-drag',
-    ghostClass: 'sage-list__item--sortable-ghost',
-    chosenClass: 'sage-list__item--sortable-active',
-    handle: '.sage-list__item-sortable-handle',
-    forceFallback: true, // NOTE: This is added because Safari 13+ has a draggable api bug https://github.com/SortableJS/Sortable/issues/1571
-  };
 
 
   // ==================================================
   // Functions
   // ==================================================
 
-  function init(el) {
+  const init = (el) => {
     let resourceName = el.getAttribute(SELECTOR_CONTAINER);
     if (!resourceName) return console.error(`Sage Sortable requires a resource name \n\n EXAMPLE: \n [${SELECTOR_CONTAINER}="resourceName"]`);
 
-    let sortableConfigs = JSON.parse(el.getAttribute(SELECTOR_CONFIGS));
-    if (sortableConfigs) {
-      sortableConfigs = {
-        ...DEFAULT_CONFIGS,
-        ...sortableConfigs,
-      };
-    } else {
-      sortableConfigs = { ...DEFAULT_CONFIGS };
-    }
-
     Sortable.create(el, {
-      ...sortableConfigs,
+      chosenClass: 'sage-list__item--sortable-active',
+      dragClass: 'sage-list__item--sortable-drag',
+      forceFallback: true, // NOTE: This is added because Safari 13+ has a draggable api bug https://github.com/SortableJS/Sortable/issues/1571
+      ghostClass: 'sage-list__item--sortable-ghost',
+      handle: el.classList.contains(SELECTOR_DRAGGABLE_BY_ROW) ? false : '.sage-list__item-sortable-handle',
       onStart: function(evt) {
         evt.srcElement.classList.add(DRAGGING_CLASSNAME);
       },
@@ -58,18 +45,17 @@ Sage.sortableList = (function() {
         params.append(`${resourceName}[sort_position]`, evt.newIndex);
 
         Sage.util.ajaxRequestWithJsInjection('POST', updateUrl, params);
-      }
+      },
     });
-  }
+  };
 
-  function unbind(el) {
+  const unbind = (el) => {
     let sortableInstance = Sortable.get(el);
     sortableInstance.destroy();
-  }
+  };
 
   return {
-    init: init,
-    unbind: unbind
-  }
-
+    init,
+    unbind,
+  };
 })();

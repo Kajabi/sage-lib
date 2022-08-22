@@ -22,7 +22,7 @@
     background-color: sage-color(grey, 200);
   }
 
-  .sage-list--all-draggable & {
+  .sage-list--draggable-by-row & {
     cursor: grab;
   }
 }
@@ -30,7 +30,7 @@
 .sage-list__item--sortable-active {
   background-color: sage-color(white);
 
-  .sage-list--all-draggable & {
+  .sage-list--draggable-by-row & {
     cursor: grabbing;
   }
 }
@@ -64,7 +64,12 @@
 }
 
 .sage-list__item-sortable-handle {
-  width: auto;
+  display: none;
+
+  .sage-list--sortable & {
+    width: auto;
+    display: initial;
+  }
 
   &:hover {
     cursor: grab;

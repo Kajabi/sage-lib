@@ -1,14 +1,15 @@
 <%
 tag = component.tag.present? ? component.tag : "ul"
+drag_handle_type = component.tag.present? ? component.tag : "default"
 %>
 <<%= tag %>
   class="
     sage-list
     <%= component.generated_css_classes %>
-    <%= "sage-list--all-draggable" if component.sortable_configs && component.sortable_configs[:handle] == false %>
+    <%= "sage-list--sortable" if component.sortable %>
+    <%= "sage-list--draggable-by-row" if component.drag_handle_type == "row" %>
   "
   <%= "data-js-list-sortable=#{component.sortable_resource}" if component.sortable_resource.present? %>
-  <%= "data-js-list-sortable-configs=#{component.sortable_configs.to_json}" if component.sortable_configs.present? %>
   <%= component.generated_html_attributes.html_safe %>
 >
   <% if component.items.present? %>

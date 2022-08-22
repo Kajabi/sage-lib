@@ -143,13 +143,13 @@ module SageSchemas
   LIST_ITEM = {
     id: [:optional, Integer, String],
     more_actions: [:optional, NilClass, SageSchemas::DROPDOWN],
-    sortable: [:optional, NilClass, TrueClass],
     sortable_update_url: [:optional, NilClass, String],
   }
 
   LIST = {
+    drag_handle_type: [:optional, NilClass, Set.new(["default", "row"])],
     items: [:optional, [[SageSchemas::LIST_ITEM]]],
-    sortable_configs: [:optional, NilClass, Hash],
+    sortable: [:optional, NilClass, TrueClass],
     sortable_resource: [:optional, NilClass, String],
     tag: [:optional, NilClass, Set.new(["ul", "ol"])],
   }

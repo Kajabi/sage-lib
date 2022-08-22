@@ -1,4 +1,5 @@
 import React from 'react';
+import { selectArgs } from '../story-support/helpers';
 import { List } from './List';
 import {
   sampleItems,
@@ -8,7 +9,11 @@ import {
 export default {
   title: 'Sage/List',
   component: List,
-  argTypes: {},
+  argTypes: {
+    ...selectArgs({
+      dragHandleType: List.DRAG_HANDLE_TYPES,
+    }),
+  },
   args: {
     items: [],
   },
@@ -28,7 +33,8 @@ export const SortableList = () => {
     <List
       items={items}
       itemRenderer={sampleItemRenderer}
-      sortableConfigs={{ setList: setItems }}
+      setList={setItems}
+      sortable={true}
     />
   );
 };
@@ -37,9 +43,11 @@ export const FullyDraggableSortableList = () => {
   const [items, setItems] = React.useState(sampleItems);
   return (
     <List
+      dragHandleType={List.DRAG_HANDLE_TYPES.ROW}
       items={items}
       itemRenderer={sampleItemRenderer}
-      sortableConfigs={{ setList: setItems, handle: false }}
+      setList={setItems}
+      sortable={true}
     />
   );
 };
