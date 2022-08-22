@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { ModalBody } from './ModalBody';
@@ -35,6 +35,14 @@ export const Modal = ({
       'sage-modal--no-background-dismiss': disableBackgroundDismiss,
     }
   );
+
+  useEffect(() => {
+    if (active) {
+      document.body.classList.add('sage-page--has-open-modal');
+    }
+
+    return () => { document.body.classList.remove('sage-page--has-open-modal'); };
+  });
 
   let animationAttributes = {};
 
