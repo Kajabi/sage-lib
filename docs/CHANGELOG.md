@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.3.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.2.1...@kajabi/sage@5.3.0) (2022-08-22)
+
+
+### Features
+
+* **card:** adds interactive prop ([898f259](https://github.com/Kajabi/sage-lib/commit/898f25971c922641114f980d6ae8568859464723))
+* **card:** adds interactive prop to React component ([266d339](https://github.com/Kajabi/sage-lib/commit/266d339859e83e1a9a017d6fe2a248713e5e01c5))
+
+
+
+
+
 ## [5.2.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.2.0...@kajabi/sage@5.2.1) (2022-08-16)
 
 **Note:** Version bump only for package @kajabi/sage
