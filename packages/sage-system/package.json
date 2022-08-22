@@ -54,5 +54,8 @@
     "babel-loader": "^8.1.0",
     "sortablejs": "^1.12.0",
     "tiny-slider": "^2.9.4"
+  },
+  "overrides": {
+    "path-parse": "^1.0.7"
   }
 }
