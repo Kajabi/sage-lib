@@ -61,7 +61,7 @@ export const MultipleRadios = (args) => {
         <Radio
           {...args}
           id={`check-${i}`}
-          key={i.toString()}
+          key={`check-${i.toString()}`}
           onChange={onChange}
           name="group-1"
           itemInList={true}
