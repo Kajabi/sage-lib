@@ -45,6 +45,21 @@
   <% end %>
 <% end %>
 
+<%= sage_component SageCard, { interactive: true } do %>
+  <%= sage_component SageCardBlock, { type_block: true } do %>
+    <%= sage_component SageLink, {
+      css_classes: "sage-card__link--primary",
+      label: "Sage Card",
+      show_label: true,
+      style: "primary",
+      url: "#"
+    } %>
+    <p>
+      An interactive card
+    </p>
+  <% end %>
+<% end %>
+
 <%= sage_component SageCard, { border_dashed: true } do %>
   <%= sage_component SageCardBlock, { type_block: true } do %>
     <p>

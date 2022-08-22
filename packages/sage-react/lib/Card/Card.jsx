@@ -21,6 +21,7 @@ export const Card = ({
   clearPaddingLeft,
   clearPaddingRight,
   clearPaddingTop,
+  interactive,
   loading,
   borderDashed,
   ...rest
@@ -35,6 +36,7 @@ export const Card = ({
       'sage-card--clear-padding-left': clearPaddingLeft,
       'sage-card--clear-padding-right': clearPaddingRight,
       'sage-card--clear-padding-top': clearPaddingTop,
+      'sage-card--interactive': interactive
     }
   );
 
@@ -66,6 +68,7 @@ Card.defaultProps = {
   clearPaddingLeft: false,
   clearPaddingRight: false,
   clearPaddingTop: false,
+  interactive: false,
   loading: false,
   borderDashed: false,
 };
@@ -78,6 +81,7 @@ Card.propTypes = {
   clearPaddingLeft: PropTypes.bool,
   clearPaddingRight: PropTypes.bool,
   clearPaddingTop: PropTypes.bool,
+  interactive: PropTypes.bool,
   loading: PropTypes.bool,
   borderDashed: PropTypes.bool,
 };

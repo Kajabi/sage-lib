@@ -70,12 +70,59 @@ $-link-base-styles: (
 
   &:hover {
     color: sage-color(primary, 400);
+    cursor: pointer;
   }
 
   &:focus {
     color: sage-color(primary, 300);
 
     @include sage-focus-outline--update-color(sage-color(primary, 200));
+  }
+
+  .sage-card--interactive & {
+    position: static;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: sage-z-index(default, 1);
+      box-shadow: sage-border-interactive();
+      border-radius: sage-border(radius-medium);
+    }
+
+    &:hover::before {
+      box-shadow: sage-border-interactive(hover);
+    }
+
+    &:focus::before {
+      box-shadow: sage-border-interactive(focus);
+    }
+
+    &:active::before {
+      box-shadow: sage-border-interactive(selected);
+    }
+
+    &:invalid::before {
+      box-shadow: sage-border-interactive(error);
+    }
+
+    &:focus:invalid::before {
+      box-shadow: sage-border-interactive(error-focus);
+    }
+
+    &:focus::after {
+      border: 0;
+    }
+
+    &::after {
+      width: 100%;
+      height: 100%;
+      border-radius: inherit;
+    }
   }
 }
 
