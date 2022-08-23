@@ -1,8 +1,6 @@
 <%
 tag = component.sortable ? "ol" : "ul"
-if component.tag.present?
-  tag = component.tag
-end
+tag = component.tag || tag
 drag_handle_type = component.drag_handle_type.present? ? component.drag_handle_type : "default"
 %>
 <<%= tag %>
