@@ -151,6 +151,7 @@ export const TOKENS_ICONS = {
   MOVE_RIGHT: 'move-right',
   MULTI_PAY: 'multi-pay',
   NEWSLETTER: 'newsletter',
+  NULL: 'null',
   ONE_OFF_SESSION: 'one-off-session',
   ONE_TIME: 'one-time',
   PACKAGE: 'package',

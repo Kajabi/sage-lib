@@ -36,7 +36,10 @@
 </tr>
 <tr>
   <td><%= md('`icon`') %><%= sage_component SageBadge, { color: "published", value: "required" } %></td>
-  <td><%= md('Which icon to display. See Sage Icons under "Design."') %></td>
+  <td><%= md('
+    Which icon to display. See Sage Icons under "Figma Design."
+    Note: `null` is also available to place an empty space icon
+  ') %></td>
   <td><%= md('`String` for desired icon.') %></td>
   <td><%= md('--') %></td>
 </tr>

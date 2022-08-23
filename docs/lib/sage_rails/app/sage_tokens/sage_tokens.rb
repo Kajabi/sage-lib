@@ -250,6 +250,7 @@ module SageTokens
     "move-right",
     "multi-pay",
     "newsletter",
+    "null",
     "one-off-session",
     "one-time",
     "package",
