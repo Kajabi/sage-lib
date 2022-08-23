@@ -44,7 +44,10 @@ export const List = ({
     );
   };
 
-  const Tag = tag;
+  let Tag = sortable ? 'ol' : 'ul';
+  if (tag) {
+    Tag = tag;
+  }
 
   return sortable ? (
     <ReactSortable
@@ -91,13 +94,13 @@ List.defaultProps = {
   children: null,
   className: null,
   items: [],
-  itemRenderer: null,
+  itemRenderer: () => null,
   dragHandleType: List.DRAG_HANDLE_TYPES.DEFAULT,
-  onEnd: null,
-  onStart: null,
-  setList: null,
+  onEnd: () => null,
+  onStart: () => null,
+  setList: () => [],
   sortable: false,
-  tag: 'ul',
+  tag: null,
 };
 
 List.propTypes = {

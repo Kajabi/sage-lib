@@ -88,10 +88,10 @@ that will be called after the user finishes sorting an item.
 } %>
 
 <h3 class="<%= SageClassnames::TYPE::HEADING_6 %>">Fully draggable row</h3>
-<%= md("
+<%= md('
 By default only the drag handle is active for dragging/sorting a row.
-However, `draggable_anywhere` can be set to `true` in order to allow the whole row to be draggable instead.
-", use_sage_type: true) %>
+However, `drag_handle_type` can be set to `"row"` in order to allow the whole row to be draggable instead.
+', use_sage_type: true) %>
 
 <%= sage_component SageList, {
   sortable: true,
