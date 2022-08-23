@@ -173,6 +173,13 @@ $-modal-inner-size: sage-container(md);
     @include overflow-scroll(y);
     padding: sage-spacing(xs) sage-spacing(3xs);
   }
+
+  @each $-key, $-value in $sage-containers {
+    .sage-modal--size-#{$-key} & {
+      width: sage-container($-key);
+      max-width: none;
+    }
+  }
 }
 
 .sage-modal__header {
