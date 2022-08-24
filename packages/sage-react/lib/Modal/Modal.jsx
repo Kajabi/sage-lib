@@ -6,7 +6,7 @@ import { ModalFooter } from './ModalFooter';
 import { ModalFooterAside } from './ModalFooterAside';
 import { ModalHeader } from './ModalHeader';
 import { ModalHeaderAside } from './ModalHeaderAside';
-import { MODAL_ANIMATION_PRESETS, MODAL_ANIMATION_DIRECTIONS } from './configs';
+import { MODAL_ANIMATION_PRESETS, MODAL_ANIMATION_DIRECTIONS, MODAL_CONTAINER_SIZES } from './configs';
 
 export const Modal = ({
   active,
@@ -21,6 +21,7 @@ export const Modal = ({
   id,
   large,
   onExit,
+  size,
   ...rest
 }) => {
   const classNames = classnames(
@@ -33,6 +34,7 @@ export const Modal = ({
       'sage-modal--fullscreen': fullScreen,
       'sage-modal--no-blur': disableBackgroundBlur,
       'sage-modal--no-background-dismiss': disableBackgroundDismiss,
+      [`sage-modal--size-${size}`]: size,
     }
   );
 
@@ -100,6 +102,7 @@ Modal.Header = ModalHeader;
 Modal.HeaderAside = ModalHeaderAside;
 Modal.ANIMATION_PRESETS = MODAL_ANIMATION_PRESETS;
 Modal.ANIMATION_DIRECTIONS = MODAL_ANIMATION_DIRECTIONS;
+Modal.SIZES = MODAL_CONTAINER_SIZES;
 
 Modal.defaultProps = {
   active: false,
@@ -114,6 +117,7 @@ Modal.defaultProps = {
   disableBackgroundBlur: false,
   disableBackgroundDismiss: false,
   onExit: (val) => val,
+  size: null,
 };
 
 Modal.propTypes = {
@@ -134,4 +138,5 @@ Modal.propTypes = {
   id: PropTypes.string,
   large: PropTypes.bool,
   onExit: PropTypes.func,
+  size: PropTypes.oneOf(Object.values(Modal.SIZES))
 };
