@@ -13,23 +13,25 @@ export default {
         Page heading goes here
       </>
     ),
-    actionItems: [
-      <Button
-        color={Button.COLORS.SECONDARY}
-        icon={SageTokens.ICONS.PREVIEW_ON}
-        subtle={true}
-      >
-        Preview
-      </Button>,
-      <Button
-        color={Button.COLORS.PRIMARY}
-        icon={SageTokens.ICONS.CART}
-      >
-        Create
-      </Button>
-    ],
-    toolbarItems: null,
-  }
+    actions: (
+      <>
+        <Button
+          color={Button.COLORS.SECONDARY}
+          icon={SageTokens.ICONS.PREVIEW_ON}
+          subtle={true}
+        >
+          Preview
+        </Button>
+        <Button
+          color={Button.COLORS.PRIMARY}
+          icon={SageTokens.ICONS.CART}
+        >
+          Create
+        </Button>
+      </>
+    ),
+    toolbar: null,
+  },
 };
 const Template = (args) => <PageHeading {...args} />;
 
@@ -69,29 +71,31 @@ PageHeadingWithThumbnail.args = {
 export const PageHeadingWithToolbarAndSecondaryText = Template.bind({});
 PageHeadingWithToolbarAndSecondaryText.args = {
   secondaryText: 'Secondary text here',
-  toolbarItems: [
-    <Button
-      color={Button.COLORS.SECONDARY}
-      icon={SageTokens.ICONS.CART}
-      subtle={true}
-    >
-      Preview
-    </Button>,
-    <Button
-      color={Button.COLORS.SECONDARY}
-      icon={SageTokens.ICONS.GEAR}
-      subtle={true}
-    >
-      Report
-    </Button>,
-    <Button
-      color={Button.COLORS.SECONDARY}
-      icon={SageTokens.ICONS.GEAR}
-      subtle={true}
-    >
-      Settings
-    </Button>
-  ],
+  toolbar: (
+    <>
+      <Button
+        color={Button.COLORS.SECONDARY}
+        icon={SageTokens.ICONS.CART}
+        subtle={true}
+      >
+        Preview
+      </Button>
+      <Button
+        color={Button.COLORS.SECONDARY}
+        icon={SageTokens.ICONS.GEAR}
+        subtle={true}
+      >
+        Report
+      </Button>
+      <Button
+        color={Button.COLORS.SECONDARY}
+        icon={SageTokens.ICONS.GEAR}
+        subtle={true}
+      >
+        Settings
+      </Button>
+    </>
+  ),
 };
 
 export const AllItems = Template.bind({});
@@ -109,46 +113,50 @@ AllItems.args = {
       <HelpLink href="//example.com" target="_blank" rel="noopener" />
     </>
   ),
-  actionItems: [
-    <Button
-      color={Button.COLORS.SECONDARY}
-      icon={SageTokens.ICONS.PREVIEW_ON}
-      subtle={true}
-    >
-      Preview
-    </Button>,
-    <Button
-      color={Button.COLORS.PRIMARY}
-      icon={SageTokens.ICONS.CART}
-    >
-      Create
-    </Button>
-  ],
+  actions: (
+    <>
+      <Button
+        color={Button.COLORS.SECONDARY}
+        icon={SageTokens.ICONS.PREVIEW_ON}
+        subtle={true}
+      >
+        Preview
+      </Button>
+      <Button
+        color={Button.COLORS.PRIMARY}
+        icon={SageTokens.ICONS.CART}
+      >
+        Create
+      </Button>
+    </>
+  ),
   image: {
     src: 'https://via.placeholder.com/132x74',
     alt: 'Page heading demo image',
   },
-  toolbarItems: [
-    <Button
-      color={Button.COLORS.SECONDARY}
-      icon={SageTokens.ICONS.CART}
-      subtle={true}
-    >
-      Preview
-    </Button>,
-    <Button
-      color={Button.COLORS.SECONDARY}
-      icon={SageTokens.ICONS.GEAR}
-      subtle={true}
-    >
-      Report
-    </Button>,
-    <Button
-      color={Button.COLORS.SECONDARY}
-      icon={SageTokens.ICONS.GEAR}
-      subtle={true}
-    >
-      Settings
-    </Button>
-  ],
+  toolbar: (
+    <>
+      <Button
+        color={Button.COLORS.SECONDARY}
+        icon={SageTokens.ICONS.CART}
+        subtle={true}
+      >
+        Preview
+      </Button>
+      <Button
+        color={Button.COLORS.SECONDARY}
+        icon={SageTokens.ICONS.GEAR}
+        subtle={true}
+      >
+        Report
+      </Button>
+      <Button
+        color={Button.COLORS.SECONDARY}
+        icon={SageTokens.ICONS.GEAR}
+        subtle={true}
+      >
+        Settings
+      </Button>
+    </>
+  ),
 };
