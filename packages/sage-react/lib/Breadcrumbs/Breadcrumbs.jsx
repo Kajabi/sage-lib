@@ -47,11 +47,10 @@ export const Breadcrumbs = ({
       </Link>
     );
 
-    const breadCrumbItemKey = `breadcrumbItem-${i.toString()}`;
     return items.length === 1 ? (
-      <p key={breadCrumbItemKey} className="sage-breadcrumbs__item">{content}</p>
+      <p key={i.toString()} className="sage-breadcrumbs__item">{content}</p>
     ) : (
-      <li key={breadCrumbItemKey} className="sage-breadcrumbs__item">{content}</li>
+      <li key={i.toString()} className="sage-breadcrumbs__item">{content}</li>
     );
   });
 

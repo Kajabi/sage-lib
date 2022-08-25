@@ -148,7 +148,7 @@ Description.propTypes = {
   className: PropTypes.string,
   items: PropTypes.arrayOf(PropTypes.shape({
     action: PropTypes.shape({
-      attributes: PropTypes.objectOf(PropTypes.object()),
+      attributes: PropTypes.objectOf(PropTypes.object),
       iconOnly: PropTypes.bool,
       value: PropTypes.string,
     }),

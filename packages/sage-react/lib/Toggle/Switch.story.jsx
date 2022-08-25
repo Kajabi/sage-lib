@@ -86,7 +86,7 @@ export const MultiplesExample = (args) => {
         <Switch
           id={`switch-${i}`}
           itemInList={true}
-          key={`switch-${i.toString()}`}
+          key={i.toString()}
           name="group-1"
           onChange={onChange}
           type={args.type}

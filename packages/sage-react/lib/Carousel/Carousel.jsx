@@ -84,7 +84,7 @@ export const Carousel = ({
           disabled={arrowPrevDisabled}
           icon="caret-left"
           id="prev"
-          onClickCallback={() => handlePrevArrowClick}
+          onClickCallback={handlePrevArrowClick}
         />
         <div className="sage-carousel__sizer">
           <div className="sage-carousel__carousel">
@@ -95,7 +95,7 @@ export const Carousel = ({
           disabled={arrowNextDisabled}
           icon="caret-right"
           id="next"
-          onClickCallback={() => handleNextArrowClick}
+          onClickCallback={handleNextArrowClick}
         />
       </div>
       {!looping && (
