@@ -29,17 +29,17 @@ export const Pagination = ({
   pageSize,
   pageURLFn,
 }) => {
-  // Get a safe page count if possible:
+  // Get a safe page count:
   let localPageCount;
   switch (true) {
-    // We favor `pageCount` if it is not null.
-    case pageCount:
+    // We favor `pageCount` if it is a positive value.
+    case pageCount > 0:
       localPageCount = pageCount;
       break;
 
-    // Or, if both `itemsTotalCount` and `pageSize` are not null
+    // Or, if both `itemsTotalCount` and `pageSize` are positive values
     // we can calculate the page count.
-    case itemsTotalCount && pageSize:
+    case itemsTotalCount > 0 && pageSize > 0:
       localPageCount = Math.ceil(itemsTotalCount / pageSize);
       break;
 
