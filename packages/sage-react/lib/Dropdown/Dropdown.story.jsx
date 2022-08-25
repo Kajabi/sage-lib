@@ -3,6 +3,7 @@ import { selectArgs } from '../story-support/helpers';
 import { SageTokens } from '../configs';
 import { Dropdown } from './Dropdown';
 import { OptionsDropdown } from './OptionsDropdown';
+import { ToolbarDropdown } from './ToolbarDropdown';
 import { defaultOptionsItems, sampleMenuItems } from './stories/story-helper';
 import { CustomItemsStory } from './stories/CustomItemsStory';
 import { CustomPanelStory } from './stories/CustomPanelStory';
@@ -67,6 +68,22 @@ Default.decorators = [
   )
 ];
 
+export const MenuWithArrow = Template.bind({});
+MenuWithArrow.args = {
+  icon: SageTokens.ICONS.GEAR,
+  disabled: false,
+  disclosure: true,
+  isLabelVisible: true,
+  label: 'Feature',
+};
+MenuWithArrow.decorators = [
+  (Story) => (
+    <div style={{ minHeight: 450 }}>
+      <Story />
+    </div>
+  )
+];
+
 export const OptionMenu = (args) => (
   <OptionsDropdown options={defaultOptionsItems} isPinned={args.isPinned} />
 );
@@ -74,6 +91,22 @@ OptionMenu.args = {
   isPinned: false
 };
 OptionMenu.decorators = [
+  (Story) => (
+    <>
+      <div style={{ minHeight: 300 }}>
+        <Story />
+      </div>
+    </>
+  )
+];
+
+export const ToolbarMenu = (args) => (
+  <ToolbarDropdown options={defaultOptionsItems} isPinned={args.isPinned} />
+);
+ToolbarMenu.args = {
+  isPinned: false
+};
+ToolbarMenu.decorators = [
   (Story) => (
     <>
       <div style={{ minHeight: 300 }}>

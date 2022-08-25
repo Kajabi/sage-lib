@@ -296,6 +296,23 @@ demo_configs = [
   } %>
 </div>
 
+<h3>Disclosure Button</h3>
+<%= md("
+  ...
+", use_sage_type: true) %>
+<div>
+  <%= sage_component SageButton, {
+    value: "Select to activate loading state",
+    disclosure: true,
+    attributes: {
+      href: "#",
+      rel: "noopener",
+      title: "Open Sassdocs site"
+    },
+    style: "secondary",
+  } %>
+</div>
+
 <h3>Loading State</h3>
 <%= md("
   Displays a loading indicator in the button, such as when a button is used to submit a form. Including the `spinner_on_submit` property will activate the loading state, and place the corresponding text as the `aria-label`.

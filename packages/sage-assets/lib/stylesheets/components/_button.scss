@@ -377,6 +377,17 @@ $-btn-loading-min-height: rem(36px);
     line-height: rem(20px); /* used this value to align to the spec */
   }
 
+  &.sage-btn--disclosure {
+    padding-right: calc(1rem + #{rem(26px)});
+
+    &::after {
+      @include sage-icon-base(caret-down, md);
+
+      position: absolute;
+      right: 1rem;
+    }
+  }
+
   // NOTE: Icon generation consolidated in `core/_icons.scss`
 }
 

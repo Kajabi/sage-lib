@@ -6,6 +6,7 @@ import { DropdownTriggerDefault } from './DropdownTriggerDefault';
 export const DropdownTrigger = ({
   children,
   disabled,
+  disclosure,
   icon,
   isLabelVisible,
   label,
@@ -38,6 +39,7 @@ export const DropdownTrigger = ({
         : (
           <DropdownTriggerDefault
             disabled={disabled}
+            disclosure={disclosure}
             icon={icon}
             isLabelVisible={isLabelVisible}
             label={label}
@@ -52,6 +54,7 @@ export const DropdownTrigger = ({
 DropdownTrigger.defaultProps = {
   children: null,
   disabled: false,
+  disclosure: false,
   icon: null,
   isLabelVisible: true,
   modifier: null,
@@ -63,6 +66,7 @@ DropdownTrigger.defaultProps = {
 DropdownTrigger.propTypes = {
   children: PropTypes.node,
   disabled: PropTypes.bool,
+  disclosure: PropTypes.bool,
   icon: PropTypes.string,
   isLabelVisible: PropTypes.bool,
   label: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),

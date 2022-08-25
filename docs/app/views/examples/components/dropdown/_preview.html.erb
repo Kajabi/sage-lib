@@ -81,6 +81,17 @@ custom_items = [
   <% end %>
 <% end %>
 
+<h3 class="t-sage-heading-6">Menu Dropdown with Arrow</h3>
+<%= sage_component SageDropdown, { items: menu_items } do %>
+  <% content_for :sage_dropdown_trigger, flush: true do %>
+    <%= sage_component SageButton, {
+      disclosure: true,
+      style: "primary",
+      value: "Add An Element",
+    } %>
+  <% end %>
+<% end %>
+
 <h3 class="t-sage-heading-6">Menu Button with Custom Trigger width and Custom Panel Width</h3>
 <%= sage_component SageDropdown, {
   panel_width: "512px",
@@ -346,7 +357,7 @@ See the two examples below where custom item contents are generated for more app
     <%= sage_component SageButton, {
       style: "primary",
       value: "Product",
-      icon: { name: "add", style: "left" },
+      icon: { name: "dot-menu-horizontal", style: "only" },
     } %>
   <% end %>
   <% content_for :sage_dropdown_items do %>
