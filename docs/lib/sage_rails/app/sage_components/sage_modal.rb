@@ -12,6 +12,7 @@ class SageModal < SageComponent
     id: [:optional, NilClass, String],
     large: [:optional, TrueClass],
     remove_content_on_close: [:optional, TrueClass],
-    remote_url: [:optional, String]
+    remote_url: [:optional, String],
+    size: [:optional, Set.new(SageTokens::CONTAINER_SIZES)]
   })
 end
