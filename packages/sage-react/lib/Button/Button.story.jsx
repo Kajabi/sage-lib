@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { selectArgs } from '../story-support/helpers';
 import { SageTokens } from '../configs';
 import { Avatar } from '../Avatar';
@@ -50,10 +50,32 @@ IconOnly.args = {
   subtle: true
 };
 
-export const loading = Template.bind({});
-loading.args = {
-  // spinnerOnSubmit: 'my aria label'
-  'aria-label': 'test'
+// export const loading = Template.bind({});
+// loading.args = {
+//   // spinnerOnSubmit: 'my aria label'
+//   'aria-label': 'test'
+// };
+
+export const Loading = (args) => {
+  const [loading, setLoading] = useState(false);
+
+  console.log('loading story is here.');
+
+  const handleClick = (evt) => {
+    console.log('clicked loading story button');
+    setLoading(true);
+  };
+
+  return (
+    <Button
+      {...args}
+      loading={loading}
+      onClick={handleClick}
+      aria-label={loading ? 'My label loading...' : 'My label'}
+    >
+      Do I win or do you?
+    </Button>
+  );
 };
 
 export const Fullwidth = Template.bind({});

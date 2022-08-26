@@ -24,4 +24,4 @@ export const BUTTON_GROUP_ALIGN_OPTIONS = {
   SPACEBETWEEN: 'space-between'
 };
 
-export const BUTTON_DEFAULT_LOADING_TEXT = 'LOADING TEXT';
+export const BUTTON_DEFAULT_LOADING_TEXT = 'Loading...';

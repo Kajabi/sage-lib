@@ -55,7 +55,6 @@ export const Button = React.forwardRef(({
 
   if (loading) {
     attrs['aria-busy'] = true;
-    // Todo look into loading text and make sure text is in a const
     attrs['aria-label'] = rest['aria-label'] || BUTTON_DEFAULT_LOADING_TEXT;
     attrs['aria-live'] = 'polite';
   }
@@ -73,12 +72,35 @@ export const Button = React.forwardRef(({
   //   }
   // };
 
+  const renderLoader = () => loading  && (
+    <span>
+      <svg
+        className="sage-loader__spinner sage-loader__spinner--loading-button"
+        viewBox="25 25 50 50"
+        aria-hidden="true"
+      >
+        <circle
+          className="sage-loader__spinner-path sage-loader__spinner-path--loading-button"
+          cx="50"
+          cy="50"
+          r="20"
+          fill="none"
+          stroke="0072EF"
+          strokeWidth="4"
+        />
+      </svg>
+    </span>
+  );
+
   const renderContent = () => {
     if (iconOnly) {
       return (
-        <span className="visually-hidden">
-          {children}
-        </span>
+        <>
+          <span className="visually-hidden">
+            {children}
+          </span>
+          {renderLoader()}
+        </>
       );
     }
 
@@ -96,9 +118,12 @@ export const Button = React.forwardRef(({
     }
 
     return (
-      <span className="sage-btn__truncate-text">
-        {children}
-      </span>
+      <>
+        <span className="sage-btn__truncate-text">
+          {children}
+        </span>
+        {renderLoader()}
+      </>
     );
   };
 
@@ -112,7 +137,7 @@ export const Button = React.forwardRef(({
       disabled={!isLink && disabled}
       tag={isLink ? linkTag : null}
       suppressDefaultClass={isLink}
-      // onClick={handleClick}
+      onClick={onClick}
       {...attrs}
       {...rest}
     >
