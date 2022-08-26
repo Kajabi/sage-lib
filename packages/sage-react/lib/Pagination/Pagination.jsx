@@ -29,14 +29,24 @@ export const Pagination = ({
   pageSize,
   pageURLFn,
 }) => {
-  const canCalculatePageRange = itemsTotalCount > 0 && pageSize > 0;
+  // Get a safe page count:
+  let localPageCount;
+  switch (true) {
+    // We favor `pageCount` if it is a positive value.
+    case pageCount > 0:
+      localPageCount = pageCount;
+      break;
 
-  // Get a safe page count if possible
-  let localPageCount = pageCount;
-  if (!localPageCount && canCalculatePageRange) {
-    localPageCount = Math.ceil(itemsTotalCount / pageSize);
-  } else if (!localPageCount) {
-    localPageCount = 1;
+    // Or, if both `itemsTotalCount` and `pageSize` are positive values
+    // we can calculate the page count.
+    case itemsTotalCount > 0 && pageSize > 0:
+      localPageCount = Math.ceil(itemsTotalCount / pageSize);
+      break;
+
+    // But if all else fails we set page count to `1` .
+    default:
+      localPageCount = 1;
+      break;
   }
 
   // Determine markup properties
@@ -212,7 +222,7 @@ Pagination.defaultProps = {
   labels: null,
   maxPageButtons: 4,
   onClickPage: null,
-  pageCount: 1,
+  pageCount: null,
   pageCountPrefix: null,
   pageCountSuffix: null,
   pageSize: null,

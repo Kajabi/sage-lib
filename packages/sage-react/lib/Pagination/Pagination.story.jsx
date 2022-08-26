@@ -7,14 +7,18 @@ export default {
   argTypes: {},
   args: {
     itemsNoun: 'Cactus',
-    itemsTotalCount: 505,
     currentPage: 1,
     // onClickPage: (num) => console.log('clicked', num),
-    pageCount: 15,
-    pageSize: 50,
+    pageCount: 12,
     pageURLFn: (page) => `//example.com/${page}`,
   }
 };
 const Template = (args) => <Pagination {...args} />;
 
-export const Default = Template.bind({});
+export const FromPageCount = Template.bind({});
+
+export const FromCalculatedPages = Template.bind({});
+FromCalculatedPages.args = {
+  pageSize: 50,
+  itemsTotalCount: 505,
+};
