@@ -30,9 +30,37 @@ export const Loader = ({
 
   return (
     <div className={classNames} data-loading={loading} {...ariaAttrs} {...rest}>
+      {(type === LOADER_TYPES.SPINNER_IN_BUTTON) && (
+        <svg
+          className="sage-loader__spinner sage-loader__spinner--loading-button"
+          viewBox="25 25 50 50"
+          aria-hidden="true"
+        >
+          <circle
+            className="sage-loader__spinner-path sage-loader__spinner-path--loading-button"
+            cx="50"
+            cy="50"
+            r="20"
+            fill="none"
+            stroke="0072EF"
+            strokeWidth="4"
+          />
+        </svg>
+      )}
       {(type === LOADER_TYPES.SPINNER) && (
-        <svg className="sage-loader__spinner" viewBox="25 25 50 50">
-          <circle className="sage-loader__spinner-path" cx="50" cy="50" r="20" fill="none" stroke="0072EF" strokeWidth="2" />
+        <svg
+          className="sage-loader__spinner"
+          viewBox="25 25 50 50"
+        >
+          <circle
+            className="sage-loader__spinner-path"
+            cx="50"
+            cy="50"
+            r="20"
+            fill="none"
+            stroke="0072EF"
+            strokeWidth="2"
+          />
         </svg>
       )}
       {(type === LOADER_TYPES.SUCCESS) && (

@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { Link } from '../Link';
+import { Loader } from '../Loader';
 import { SageTokens } from '../configs';
 import { ButtonGroup } from './ButtonGroup';
 import {
@@ -72,24 +73,12 @@ export const Button = React.forwardRef(({
   //   }
   // };
 
-  const renderLoader = () => loading  && (
-    <span>
-      <svg
-        className="sage-loader__spinner sage-loader__spinner--loading-button"
-        viewBox="25 25 50 50"
-        aria-hidden="true"
-      >
-        <circle
-          className="sage-loader__spinner-path sage-loader__spinner-path--loading-button"
-          cx="50"
-          cy="50"
-          r="20"
-          fill="none"
-          stroke="0072EF"
-          strokeWidth="4"
-        />
-      </svg>
-    </span>
+  const renderLoader = () => (
+    <Loader
+      loading={loading}
+      type={Loader.TYPES.SPINNER_IN_BUTTON}
+      label={null}
+    />
   );
 
   const renderContent = () => {

@@ -392,15 +392,6 @@ a.sage-btn {
   &[class*="sage-btn--icon"]::before {
     content: "";
   }
-
-  svg {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-  }
 }
 
 // Generate button style variations
