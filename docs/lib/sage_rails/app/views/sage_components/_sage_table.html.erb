@@ -20,6 +20,7 @@ end
       <%= "sage-table--selectable" if component.selectable %>
       <%= "sage-table--condensed" if component.condensed %>
     "
+    data-js-table
     <%= component.generated_html_attributes.html_safe %>
   >
     <% if component.caption.present? %>

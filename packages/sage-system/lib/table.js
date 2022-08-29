@@ -1,4 +1,10 @@
 Sage.table = (function() {
+  // ==================================================
+  // Variables
+  // ==================================================
+
+  // const SELECTOR_TABLE = "[data-js-table]";
+  const SELECTOR_TABLE = ".sage-table";
 
   // ==================================================
   // Functions
@@ -24,6 +30,32 @@ Sage.table = (function() {
     });
   }
 
+  function ResponsiveCellHeaders(elem) {
+    var THarray = [];
+    var table = document.querySelector(SELECTOR_TABLE);
+    var ths = table.getElementsByTagName("th");
+    for (var i = 0; i < ths.length; i++) {
+      var headingText = ths[i].innerHTML;
+      THarray.push(headingText);
+    }
+    var styleElm = document.createElement("style"),
+      styleSheet;
+    document.head.appendChild(styleElm);
+    styleSheet = styleElm.sheet;
+    for (var i = 0; i < THarray.length; i++) {
+      styleSheet.insertRule(
+        "" +
+          elem +
+          " td:nth-child(" +
+          (i + 1) +
+          ')::before {content:"' +
+          THarray[i] +
+          ': ";}',
+        styleSheet.cssRules.length
+      );
+    }
+  }
+
 
   // reset classes on elements
   function removeActiveStyle(arr, className) {
@@ -36,6 +68,9 @@ Sage.table = (function() {
   function init() {
     if (document.querySelector('.sage-table--sortable') !== null) {
       sortEvents();
+    }
+    if (document.querySelector('.sage-table--sortable') !== null) {
+      // ResponsiveCellHeaders(SELECTOR_TABLE);
     }
   }
 

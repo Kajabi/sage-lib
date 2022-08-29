@@ -18,10 +18,10 @@ $-table-caption-font-size: "%t-sage-body-small";
 $-table-caption-alignment: center;
 $-table-cell-font-color: sage-color(charcoal, 200);
 $-table-cell-font-color-strong: sage-color(charcoal, 400);
-$-table-cell-type-spec: "%t-sage-body-small-med";
-$-table-cell-type-spec-strong: "%t-sage-body-small-semi";
+$-table-cell-type-spec: "%t-sage-body-small";
+$-table-cell-type-spec-strong: "%t-sage-body-small-med";
 $-table-heading-font-color: sage-color(charcoal, 500);
-$-table-heading-type-spec: "%t-sage-body-small-semi";
+$-table-heading-type-spec: "%t-sage-body-small-med";
 
 // Overflow gradient
 $-table-overflow-indicator-width: sage-spacing(sm);
@@ -311,7 +311,9 @@ $-table-avatar-width: rem(32px);
 }
 
 .sage-table-cell__link {
-  color: $-table-cell-font-color;
+  @extend #{$-table-cell-type-spec-strong};
+
+  color: $-table-cell-font-color-strong;
   text-decoration: none;
 
   &:focus,
@@ -342,5 +344,102 @@ $-table-avatar-width: rem(32px);
   .sage-table-cell__block &,
   .sage-table-cell__link & {
     margin-left: 0.5em;
+  }
+}
+
+@media screen and (max-width: sage-breakpoint(sm-max)) {
+  .sage-table {
+    thead {
+      tr,
+      &::after {
+        display: none;
+      }
+    }
+
+    tbody tr {
+      position: relative;
+
+      td:last-of-type {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+      }
+    }
+
+    td {
+      padding: rem(6px) 0;
+    }
+  }
+
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr,
+  caption {
+    display: block;
+  }
+
+  tr {
+    padding: rem(16px) rem(18px);
+    border: sage-border(default);
+    border-radius: sage-border(radius);
+
+    & + & {
+      margin-top: sage-spacing(sm);
+    }
+  }
+
+  td {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 1em 0.5em;
+    justify-content: space-between;
+  }
+
+  td:nth-of-type(4)::before,
+  td:nth-of-type(5)::before {
+    text-align: left;
+  }
+
+  // TODO UXD - QUINTON - find scalable solution
+  td:nth-child(1)::before {
+    content: "Name: ";
+    display: none;
+  }
+
+  td:nth-child(2)::before {
+    content: "Email: ";
+  }
+
+  td:nth-child(3)::before {
+    content: "Labels: ";
+  }
+
+  td:nth-child(4)::before {
+    content: "Status: ";
+  }
+
+  td:nth-child(5)::before {
+    content: "Status: ";
+  }
+
+  td:nth-child(6)::before {
+    content: "Status: ";
+  }
+
+  td:nth-child(7)::before {
+    content: "Status: ";
+  }
+
+  td:last-child::before {
+    display: none;
+  }
+}
+
+@media screen and (min-width: sage-breakpoint(md-min)) {
+  .sage-table td::before {
+    display: none;
   }
 }
