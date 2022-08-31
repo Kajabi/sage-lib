@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@1.0.1...@kajabi/sage-system@1.1.0) (2022-08-31)
+
+
+### Bug Fixes
+
+* **security:** add override for path parse ([c9c5902](https://github.com/Kajabi/sage-lib/commit/c9c5902362d781f6d71968905146317f25b9acdb))
+* **security:** addresses vulnerability identified by snyk ([a245e9e](https://github.com/Kajabi/sage-lib/commit/a245e9ee4967ad4783fccffd6ef657e626248a2d))
+
+
+### Features
+
+* **list:** add fallback and improved documentation ([6b6f0ff](https://github.com/Kajabi/sage-lib/commit/6b6f0ff5cbe7ba8348c60fb7227dd138b93ef8ce))
+* **list:** adjust handle affordance for clarity ([f2f43db](https://github.com/Kajabi/sage-lib/commit/f2f43dbf01a26dfd3aa8e353b48a547443df0067))
+* **list:** update list interaction (rails) ([7e3d76f](https://github.com/Kajabi/sage-lib/commit/7e3d76f1c662dcaf1f88f3fc6d9157dcf899477f))
+* **list:** wip adding advanced drag features ([e9c76d7](https://github.com/Kajabi/sage-lib/commit/e9c76d7be3081d923aaf695f7f29eedda4e7bf67))
+
+
+
+
+
 ## [1.0.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@1.0.0...@kajabi/sage-system@1.0.1) (2022-08-22)
 
 
