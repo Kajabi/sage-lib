@@ -3,6 +3,32 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.2.0...@kajabi/sage-react@1.3.0) (2022-08-31)
+
+
+### Bug Fixes
+
+* **error:** error occurring locally with PropTypes.object() ([771fa7a](https://github.com/Kajabi/sage-lib/commit/771fa7a4526255e32d06ba49b4f1c1e9b7d61d9e))
+* **icon:** add null empty icon ([f1fcdb2](https://github.com/Kajabi/sage-lib/commit/f1fcdb258ffcc2188e6b188518c10ddef3201904))
+* **lint:** linting errors due to upgrade of dependencies ([1e1e551](https://github.com/Kajabi/sage-lib/commit/1e1e5517b7a893c94b1fb955bb25ab5b8e5c0808))
+* **page-heading:** adjust proptypes for more conventional React node usage ([f221a8b](https://github.com/Kajabi/sage-lib/commit/f221a8b0998aea7c5d49f8aae5616f230124e208))
+* **page-heading:** update the name of props along with proptypes and convention ([9bf795c](https://github.com/Kajabi/sage-lib/commit/9bf795cc579383abd027d600a945ddbd7abc9c93))
+* **pagination:** adjust default value for pageCount and add documentation ([ed0770a](https://github.com/Kajabi/sage-lib/commit/ed0770a3d31c7bff8fff7534fad7ae92273d03b2))
+
+
+### Features
+
+* **list:** add fallback and improved documentation ([6b6f0ff](https://github.com/Kajabi/sage-lib/commit/6b6f0ff5cbe7ba8348c60fb7227dd138b93ef8ce))
+* **list:** adjust handle affordance for clarity ([f2f43db](https://github.com/Kajabi/sage-lib/commit/f2f43dbf01a26dfd3aa8e353b48a547443df0067))
+* **list:** remove `hide_first_border` property that is no longer needed ([9cc8253](https://github.com/Kajabi/sage-lib/commit/9cc82533a2e9e6c61dd9261c1749cb97bf2d54fc))
+* **list:** update list interaction (react) ([b15e6b3](https://github.com/Kajabi/sage-lib/commit/b15e6b3347c2a4cc412f407745ad6cb5eb3acdca))
+* **list:** wip adding advanced drag features ([e9c76d7](https://github.com/Kajabi/sage-lib/commit/e9c76d7be3081d923aaf695f7f29eedda4e7bf67))
+* **modal:** adds size prop to React component ([b33e01d](https://github.com/Kajabi/sage-lib/commit/b33e01d41d47d541c96f6b5dbbd8855b451946ae))
+
+
+
+
+
 # [1.2.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.1.2...@kajabi/sage-react@1.2.0) (2022-08-22)
 
 
