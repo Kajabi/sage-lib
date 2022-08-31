@@ -59,3 +59,10 @@ CustomBackgroundSizeCircular.args = {
   backgroundHeight: '48px',
   size: Icon.SIZES.LG
 };
+export const NullIcon = Template.bind({});
+NullIcon.args = {
+  cardColor: 'draft',
+  circular: true,
+  backgroundHeight: '48px',
+  icon: Icon.ICONS.NULL,
+};

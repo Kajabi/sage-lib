@@ -1,18 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import uuid from 'react-uuid';
 import classnames from 'classnames';
 import { Breadcrumbs } from '../Breadcrumbs';
 
 export const PageHeading = ({
-  actionItems,
+  actions,
   breadcrumbs,
   className,
   children,
   help,
   image,
   introText,
-  toolbarItems,
+  toolbar,
   secondaryText,
   ...rest
 }) => (
@@ -52,15 +51,15 @@ export const PageHeading = ({
         <img alt={image.alt || ''} src={image.src} />
       </div>
     )}
-    {toolbarItems && (
+    {toolbar && (
       <div className="sage-page-heading__toolbar">
-        {toolbarItems.map((tool) => <React.Fragment key={uuid()}>{tool}</React.Fragment>)}
+        {toolbar}
       </div>
     )}
-    {actionItems && (
+    {actions && (
       <div className="sage-page-heading__actions">
         <div className="sage-page-heading__actions-inner">
-          {actionItems.map((action) => <React.Fragment key={uuid()}>{action}</React.Fragment>)}
+          {actions}
         </div>
       </div>
     )}
@@ -73,18 +72,18 @@ export const PageHeading = ({
 );
 
 PageHeading.defaultProps = {
-  actionItems: null,
+  actions: null,
   breadcrumbs: null,
   className: '',
   help: null,
   image: {},
   introText: null,
-  toolbarItems: null,
+  toolbar: null,
   secondaryText: null,
 };
 
 PageHeading.propTypes = {
-  actionItems: PropTypes.arrayOf(PropTypes.node),
+  actions: PropTypes.node,
   breadcrumbs: PropTypes.arrayOf(Breadcrumbs.itemPropTypes),
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
@@ -95,5 +94,5 @@ PageHeading.propTypes = {
   }),
   introText: PropTypes.string,
   secondaryText: PropTypes.string,
-  toolbarItems: PropTypes.arrayOf(PropTypes.node),
+  toolbar: PropTypes.node,
 };

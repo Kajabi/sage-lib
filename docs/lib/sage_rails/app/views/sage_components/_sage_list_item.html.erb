@@ -10,18 +10,15 @@ end
 <li
   class="
     sage-list__item
-    <%= "sage-list__item--sortable" if component.sortable %>
     <%= component.generated_css_classes %>
   "
   <%= "data-js-list-sortable-update-url=#{component.sortable_update_url}" if component.sortable_update_url.present? %>
   <%= "id=#{component.id}" if component.id %>
   <%= component.generated_html_attributes.html_safe %>
 >
-  <% if component.sortable %>
-    <div class="sage-list__item-sortable-handle">
-      <%= sage_component SageIcon, { icon: "handle" } %>
-    </div>
-  <% end %>
+  <div class="sage-list__item-sortable-handle">
+    <%= sage_component SageIcon, { icon: "handle-2-vertical" } %>
+  </div>
 
   <div class="sage-list__item-content">
     <%= component.content %>

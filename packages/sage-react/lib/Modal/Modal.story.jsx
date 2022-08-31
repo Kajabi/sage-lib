@@ -237,3 +237,31 @@ export const Fullscreen = (args) => {
     </>
   );
 };
+
+export const ModalWithCustomSize = (args) => {
+  const [active, setActive] = useState(false);
+
+  const onExit = () => {
+    setActive(false);
+  };
+
+  return (
+    <>
+      <Button
+        color={Button.COLORS.PRIMARY}
+        onClick={() => setActive(true)}
+      >
+        Take An Action
+      </Button>
+      <Modal
+        active={active}
+        animation={{ direction: Modal.ANIMATION_DIRECTIONS.BOTTOM }}
+        onExit={onExit}
+        size={Modal.SIZES.FULL}
+        {...args}
+      >
+        <DefaultBody onExit={onExit} />
+      </Modal>
+    </>
+  );
+};
