@@ -29,4 +29,8 @@ class SagePagination < SageComponent
       "<strong>#{first}</strong> - <strong>#{last}</strong> of <strong>#{collection.total_count}</strong> #{entry_name}"
     end.html_safe
   end
+
+  def pagination_text(text)
+    %(<span class="sage-pagination__page-text">#{text}</span>).html_safe
+  end
 end

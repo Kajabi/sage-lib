@@ -1,70 +1,57 @@
-<%- if component.items.total_pages > 1 -%>
-  <nav
-    class="
-      sage-pagination
-      <% if component.hide_counter %>sage-pagination--no-counter<% end %>
-      <%= "sage-pagination--align-#{component.align}" if component.align.present? %>
-      <%= component.generated_css_classes %>
-    "
-    role="pagination"
-    aria-label="Pagination Navigation"
-    <%= component.generated_html_attributes.html_safe %>
-  >
-    <% if !component.hide_counter %>
-      <span class="sage-pagination__count">
-        <% if component.page_count_prefix %><span class="sage-pagination__count-prefix"><%= component.page_count_prefix %></span><% end %>
-        <%= component.page_count component.items %>
-        <% if component.page_count_suffix %><span class="sage-pagination__count-suffix"><%= component.page_count_suffix %></span><% end %>
-      </span>
-    <% end %>
+<nav
+  class="
+    sage-pagination
+    <% if component.hide_counter %>sage-pagination--no-counter<% end %>
+    <%= "sage-pagination--align-#{component.align}" if component.align.present? %>
+    <%= component.generated_css_classes %>
+  "
+  role="pagination"
+  aria-label="Pagination Navigation"
+  <%= component.generated_html_attributes.html_safe %>
+>
+  <% if !component.hide_counter %>
+    <span class="sage-pagination__count <%= "sage-pagination__count--solo" if component.items.total_pages == 1 %>">
+      <% if component.page_count_prefix %><span class="sage-pagination__count-prefix"><%= component.page_count_prefix %></span><% end %>
+      <%= component.page_count component.items %>
+      <% if component.page_count_suffix %><span class="sage-pagination__count-suffix"><%= component.page_count_suffix %></span><% end %>
+    </span>
+  <% end %>
 
-    <ul class="sage-pagination__pages">
-      <% prev_text = %(<span class="sage-pagination__page-text">Back</span>).html_safe %>
-      <% next_text = %(<span class="sage-pagination__page-text">Next</span>).html_safe %>
-      <% if component.items.first_page? %>
+  <ul class="sage-pagination__pages">
+    <% if component.items.first_page? %>
       <li class="sage-pagination__item">
         <a href="#" class="sage-pagination__page sage-pagination__page--disabled">
-          <%= prev_text %>
+          <%= component.pagination_text("Back") %>
         </a>
       </li>
-      <% else %>
-        <li class="sage-pagination__item">
-          <%= link_to_previous_page component.items, prev_text, class: "sage-pagination__page", params: component.additional_params %>
-        </li>
-      <% end -%>
+    <% else %>
+      <li class="sage-pagination__item">
+        <%= link_to_previous_page component.items, component.pagination_text("Back"), class: "sage-pagination__page", params: component.additional_params %>
+      </li>
+    <% end -%>
 
-      <% if !component.hide_pages %>
+    <% unless component.hide_pages %>
+      <%- if component.items.total_pages > 1 -%>
         <%= paginate component.items, outer_window: component.window, theme: "sage_theme" %>
+      <% elsif component.items.total_pages == 1 %>
+        <li class="sage-pagination__item">
+          <span class="sage-pagination__page sage-pagination__page--current" aria-current="true">
+            <%= component.pagination_text("1") %>
+          </span>
+        </li>
       <% end %>
+    <% end %>
 
-      <% if component.items.last_page? %>
+    <% if component.items.last_page? %>
       <li class="sage-pagination__item">
         <a href="#" class="sage-pagination__page sage-pagination__page--disabled">
-          <%= next_text %>
+          <%= component.pagination_text("Next") %>
         </a>
       </li>
-      <% else %>
+    <% else %>
       <li class="sage-pagination__item">
-        <%= link_to_next_page component.items, next_text, class: "sage-pagination__page", params: component.additional_params %>
+        <%= link_to_next_page component.items, component.pagination_text("Next"), class: "sage-pagination__page", params: component.additional_params %>
       </li>
-      <% end -%>
-    </ul>
-  </nav>
-<% else -%>
-  <div
-    class="
-      sage-pagination
-      <%= component.generated_css_classes %>
-    "
-    <%= component.generated_html_attributes.html_safe %>
-  >
-    <% unless component.hide_counter %>
-      <span class="sage-pagination__count sage-pagination__count--solo">
-        <%= component.page_count component.items %>
-        <% if component.page_count_suffix %>
-          <span class="sage-pagination__count-suffix"><%= component.page_count_suffix %></span>
-        <% end %>
-      </span>
-    <% end %>
-  </div>
-<% end -%>
+    <% end -%>
+  </ul>
+</nav>
