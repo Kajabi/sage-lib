@@ -7,10 +7,11 @@
 
 $-pagination-size: rem(40px);
 $-pagination-padding-arrows: rem(10px) rem(12px);
-$-pagination-radius: sage-border(radius-medium);
+$-pagination-radius: sage-border(radius-round);
 $-pagination-text-color: sage-color(charcoal, 400);
-$-pagination-bg-color: sage-color(grey, 300);
-$-pagination-bg-color-dark: sage-color(grey, 400);
+$-pagination-text-color-disabled: sage-color(charcoal, 100);
+$-pagination-bg-color-current: sage-color(grey, 200);
+$-pagination-bg-color-hover: sage-color(grey, 300);
 $-pagination-focus-ring-color: sage-color(primary, 200);
 
 
@@ -88,11 +89,7 @@ $-pagination-focus-ring-color: sage-color(primary, 200);
 
   &:hover,
   &:focus {
-    background-color: $-pagination-bg-color;
-  }
-
-  &:active:hover {
-    background-color: $-pagination-bg-color-dark;
+    background-color: $-pagination-bg-color-hover;
   }
 }
 
@@ -100,15 +97,17 @@ $-pagination-focus-ring-color: sage-color(primary, 200);
 .sage-pagination__item:last-of-type .sage-pagination__page {
   padding: $-pagination-padding-arrows;
 }
+
 .sage-pagination__item:first-of-type .sage-pagination__page::before {
   @include sage-icon-base(caret-left);
 
-  color: sage-color(charcoal, 500);
+  color: currentColor;
 }
+
 .sage-pagination__item:last-of-type .sage-pagination__page::before {
   @include sage-icon-base(caret-right);
 
-  color: sage-color(charcoal, 500);
+  color: currentColor;
 }
 
 .sage-pagination__page-text {
@@ -119,15 +118,11 @@ $-pagination-focus-ring-color: sage-color(primary, 200);
 }
 
 .sage-pagination__page--current {
-  background-color: $-pagination-bg-color;
-
-  &:hover {
-    background-color: $-pagination-bg-color-dark;
-  }
+  background-color: $-pagination-bg-color-current;
 }
 
 .sage-pagination__page--disabled {
-  color: $-pagination-text-color;
+  color: $-pagination-text-color-disabled;
   pointer-events: none;
 }
 
