@@ -69,6 +69,12 @@ export const Loading = (args) => {
   );
 };
 
+Loading.argTypes = {
+  loading: {
+    control: false
+  }
+};
+
 export const Fullwidth = Template.bind({});
 Fullwidth.args = {
   fullWidth: true
