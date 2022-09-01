@@ -50,19 +50,10 @@ IconOnly.args = {
   subtle: true
 };
 
-// export const loading = Template.bind({});
-// loading.args = {
-//   // spinnerOnSubmit: 'my aria label'
-//   'aria-label': 'test'
-// };
-
 export const Loading = (args) => {
   const [loading, setLoading] = useState(false);
 
-  console.log('loading story is here.');
-
-  const handleClick = (evt) => {
-    console.log('clicked loading story button');
+  const handleClick = () => {
     setLoading(true);
   };
 
@@ -73,7 +64,7 @@ export const Loading = (args) => {
       onClick={handleClick}
       aria-label={loading ? 'My label loading...' : 'My label'}
     >
-      Do I win or do you?
+      Loading Button
     </Button>
   );
 };

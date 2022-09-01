@@ -50,28 +50,11 @@ export const Button = React.forwardRef(({
     }
   );
 
-  const attrs = {
-    // 'data-js-sage-spinner-on-submit': spinnerOnSubmit,
-  };
-
   if (loading) {
-    attrs['aria-busy'] = true;
-    attrs['aria-label'] = rest['aria-label'] || BUTTON_DEFAULT_LOADING_TEXT;
-    attrs['aria-live'] = 'polite';
+    rest['aria-busy'] = true;
+    rest['aria-label'] = rest['aria-label'] || BUTTON_DEFAULT_LOADING_TEXT;
+    rest['aria-live'] = 'polite';
   }
-
-  // TODO - need to revisit how to cancel/remove spinner
-  // let spinner = null;
-
-  // const handleClick = (event) => {
-  //   if (spinnerOnSubmit) {
-  //     spinner = "spinning";
-  //   }
-
-  //   if (onClick) {
-  //     onClick(event);
-  //   }
-  // };
 
   const renderLoader = () => (
     <Loader
@@ -127,7 +110,6 @@ export const Button = React.forwardRef(({
       tag={isLink ? linkTag : null}
       suppressDefaultClass={isLink}
       onClick={onClick}
-      {...attrs}
       {...rest}
     >
       {renderContent()}
