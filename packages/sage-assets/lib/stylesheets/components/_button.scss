@@ -386,6 +386,17 @@ $-btn-loading-min-height: rem(36px);
       position: absolute;
       right: 1rem;
     }
+
+    &[class*="icon-only"]::after {
+      @include sage-icon-base(caret-down, xs);
+
+      right: rem(26px);
+      font-weight: sage-font-weight(bold);
+    }
+
+    &[class*="icon-only"].sage-btn--small::after {
+      right: rem(12px);
+    }
   }
 
   // NOTE: Icon generation consolidated in `core/_icons.scss`

@@ -331,6 +331,42 @@ demo_configs = [
   } %>
 </div>
 
+<h4>Disclosure Button contains an Icon Only variant</h4>
+<%= md("
+  The disclosure button allows for an icon affordance.
+", use_sage_type: true) %>
+<div>
+  <%= sage_component SageButton, {
+    value: "Add item",
+    disclosure: true,
+    icon: { name: "add", style: "only" },
+    attributes: {
+      href: "#",
+      rel: "noopener",
+      title: "Open Sassdocs site"
+    },
+    style: "secondary",
+  } %>
+</div>
+<h4>Disclosure Button contains an Icon Only variant(small)</h4>
+<%= md("
+  The disclosure button allows for an icon affordance.
+", use_sage_type: true) %>
+<div>
+  <%= sage_component SageButton, {
+    value: "Add item",
+    disclosure: true,
+    small: true,
+    icon: { name: "add", style: "only" },
+    attributes: {
+      href: "#",
+      rel: "noopener",
+      title: "Open Sassdocs site"
+    },
+    style: "secondary",
+  } %>
+</div>
+
 <h3>Loading State</h3>
 <%= md("
   Displays a loading indicator in the button, such as when a button is used to submit a form. Including the `spinner_on_submit` property will activate the loading state, and place the corresponding text as the `aria-label`.
