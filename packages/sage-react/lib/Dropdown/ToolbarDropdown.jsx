@@ -47,7 +47,7 @@ ToolbarDropdown.defaultProps = {
   panelMaxWidth: null,
   panelSize: DROPDOWN_PANEL_SIZES.DEFAULT,
   options: null,
-  triggerButtonSubtle: true,
+  triggerButtonSubtle: false,
 };
 
 ToolbarDropdown.propTypes = {

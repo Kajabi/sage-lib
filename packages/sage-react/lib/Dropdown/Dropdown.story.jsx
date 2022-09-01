@@ -100,13 +100,13 @@ OptionMenu.decorators = [
   )
 ];
 
-export const ToolbarMenu = (args) => (
+export const IconOnlyMenuWithArrow = (args) => (
   <ToolbarDropdown options={defaultOptionsItems} isPinned={args.isPinned} />
 );
-ToolbarMenu.args = {
+IconOnlyMenuWithArrow.args = {
   isPinned: false
 };
-ToolbarMenu.decorators = [
+IconOnlyMenuWithArrow.decorators = [
   (Story) => (
     <>
       <div style={{ minHeight: 300 }}>
