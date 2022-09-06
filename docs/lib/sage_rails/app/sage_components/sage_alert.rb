@@ -1,23 +1,23 @@
 class SageAlert < SageComponent
   set_attribute_schema({
-    color: [:optional, SageSchemas::STATUSES],
-    desc: [:optional, String],
-    dismissable: [:optional, TrueClass],
-    icon_name: [:optional, String],
-    primary_action: [:optional, {
+    color: [:optional, NilClass, SageSchemas::STATUSES],
+    desc: [:optional, NilClass, String],
+    dismissable: [:optional, NilClass, TrueClass],
+    icon_name: [:optional, NilClass, String],
+    primary_action: [:optional, NilClass, {
       value: String,
       test_id: [:optional, NilClass, String],
       attributes: [:optional, NilClass, Hash]
     }],
-    secondary_actions: [:optional, [[{
+    secondary_actions: [:optional, NilClass, [[{
       value: String,
-      url: [:optional, String],
+      url: [:optional, NilClass, String],
       test_id: [:optional, NilClass, String],
       attributes: [:optional, NilClass, Hash],
     }]]],
-    small: [:optional, TrueClass],
-    title: [:optional, String],
-    title_addon: [:optional, String],
+    small: [:optional, NilClass, TrueClass],
+    title: [:optional, NilClass, String],
+    title_addon: [:optional, NilClass, String],
   })
 
   def sections
