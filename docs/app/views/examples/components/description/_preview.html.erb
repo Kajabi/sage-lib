@@ -152,3 +152,71 @@
     },
   ]
 } %>
+
+<h3>No Dividers</h3>
+<%= md(
+  "In some situations it is desired to remove the borders between items.
+  In such cases set `no_dividers: true`.
+  
+  NOTE: The example below shows a sample two-column layout where no dividers might be implemented.",
+  use_sage_type: true
+) %>
+<%= sage_component SageGridRow, {} do %>
+  <%= sage_component SageGridCol, { small: 12, medium: 6 } do %>
+    <%= sage_component SageDescription, {
+      no_dividers: true,
+      layout: "stacked",
+      items: [
+        {
+          title: "Name",
+          data: "Savannah Nguyen",
+        },
+        {
+          title: "Email",
+          data: "sara.cruz@example.com",
+        },
+        {
+          title: "Address",
+          data: %(
+            2715 Ash Dr. San Jose<br />
+            South Dakota, 83475
+          ).html_safe,
+        },
+      ]
+    } %>
+  <% end %>
+  <%= sage_component SageGridCol, { small: 12, medium: 6 } do %>
+    <%= sage_component SageDescription, {
+      no_dividers: true,
+      layout: "stacked",
+      items: [
+        {
+          title: "Offers",
+          data: %(
+            #{sage_component(SageLink, { label: "HTML & CSS Basics", style: "secondary", html_attributes: { href: "#" }})}<br />
+            #{sage_component(SageLink, { label: "Back to School Offer", style: "secondary", html_attributes: { href: "#" }})}<br />
+            #{sage_component(SageLink, { label: "CodeCamp Free Community", style: "secondary", html_attributes: { href: "#" }})}<br />
+          ).html_safe,
+          action: { value: "View all", attributes: { href: "#" } }
+        },
+        {
+          title: "Tags",
+          data: sage_component(SageLabelGroup, {
+            content: %(
+              #{sage_component(SageTag, { value: "Lorem", show_dismiss: true })}
+              #{sage_component(SageTag, { value: "Lorem", show_dismiss: true })}
+              #{sage_component(SageTag, { value: "Lorem", show_dismiss: true })}
+              #{sage_component(SageTag, { value: "Lorem", show_dismiss: true })}
+              #{sage_component(SageTag, { value: "Lorem", show_dismiss: true })}
+              #{sage_component(SageTag, { value: "Lorem", show_dismiss: true })}
+              #{sage_component(SageTag, { value: "Lorem", show_dismiss: true })}
+              #{sage_component(SageTag, { value: "Lorem", show_dismiss: true })}
+              #{sage_component(SageTag, { value: "Lorem", show_dismiss: true })}
+            ).html_safe,
+          }),
+          action: { value: "View all", attributes: { href: "#" } }
+        },
+      ],
+    } %>
+  <% end %>
+<% end %>
