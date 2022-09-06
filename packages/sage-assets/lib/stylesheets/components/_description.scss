@@ -8,7 +8,7 @@ $-description-size: 1fr;
 $-description-action-var: var(--sage-description-action-width, #{$-description-size});
 $-description-title-var: var(--sage-description-title-width, #{$-description-size});
 $-description-spacing: sage-spacing(sm);
-$-description-no-divider-spacing: rem(48px);
+$-description-no-divider-spacing: sage-spacing(xl);
 
 .sage-description {
   display: flex;
