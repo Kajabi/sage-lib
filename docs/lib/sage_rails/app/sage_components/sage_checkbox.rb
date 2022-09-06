@@ -1,17 +1,17 @@
 class SageCheckbox < SageComponent
   set_attribute_schema({
-    attributes: [:optional, Hash],
-    checked: [:optional, TrueClass],
-    disabled: [:optional, TrueClass],
-    has_error:  [:optional, TrueClass],
-    id: [:optional, String],
-    label_text: [:optional, String],
-    message: [:optional, String],
-    name: [:optional, String],
-    partial_selection: [:optional, TrueClass],
-    required: [:optional, TrueClass],
-    standalone:  [:optional, TrueClass],
-    value: [:optional, String],
+    attributes: [:optional, NilClass, Hash],
+    checked: [:optional, NilClass, TrueClass],
+    disabled: [:optional, NilClass, TrueClass],
+    has_error:  [:optional, NilClass, TrueClass],
+    id: [:optional, NilClass, String],
+    label_text: [:optional, NilClass, String],
+    message: [:optional, NilClass, String],
+    name: [:optional, NilClass, String],
+    partial_selection: [:optional, NilClass, TrueClass],
+    required: [:optional, NilClass, TrueClass],
+    standalone:  [:optional, NilClass, TrueClass],
+    value: [:optional, NilClass, String],
   })
 
   def sections

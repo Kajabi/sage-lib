@@ -7,10 +7,10 @@ class SageComponent
 
   ATTRIBUTE_SCHEMA = {
     test_id: [:optional, NilClass, String],
-    html_attributes: [:optional, Hash],
-    spacer: [:optional, SageSchemas::SPACER],
+    html_attributes: [:optional, NilClass, Hash],
+    spacer: [:optional, NilClass, SageSchemas::SPACER],
     css_classes: [:optional, NilClass, String],
-    content: [:optional, String],
+    content: [:optional, NilClass, String],
   }
 
   def generated_css_classes

@@ -4,7 +4,7 @@ class SagePageHeading < SageComponent
     help_link: [:optional, NilClass, Hash],
     help_title: [:optional, NilClass, String],
     secondary_text: [:optional, NilClass, String],
-    title: [:optional, String],
+    title: [:optional, NilClass, String],
   })
 
   def sections

@@ -1,7 +1,7 @@
 class SagePanelRow < SageComponent
   set_attribute_schema({
-    grid_template: [:optional, SageSchemas::GRID_TEMPLATE],
+    grid_template: [:optional, NilClass, SageSchemas::GRID_TEMPLATE],
     gap: [:optional, NilClass, SageSchemas::GRID_GAP_OPTION],
-    vertical_align: [:optional, Set.new(["start"])],
+    vertical_align: [:optional, NilClass, Set.new(["start"])],
   })
 end

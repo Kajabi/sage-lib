@@ -1,6 +1,6 @@
 class SageCardBlock < SageComponent
   set_attribute_schema({
-    color: [:optional, String],
-    type_block: [:optional, TrueClass],
+    color: [:optional, NilClass, String],
+    type_block: [:optional, NilClass, TrueClass],
   })
 end

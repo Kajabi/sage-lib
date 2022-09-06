@@ -1,7 +1,7 @@
 class SageLoader < SageComponent
   set_attribute_schema({
-    fill: [:optional, TrueClass],
+    fill: [:optional, NilClass, TrueClass],
     type: Set.new(["bar", "spinner", "success"]),
-    text: [:optional, TrueClass],
+    text: [:optional, NilClass, TrueClass],
   })
 end

@@ -1,16 +1,16 @@
 class SageModalContent < SageComponent
   set_attribute_schema({
     gap: [:optional, NilClass, SageSchemas::GRID_GAP_OPTION],
-    header_icon: [:optional, {
-      color: [:optional, SageSchemas::COLOR_SLIDER],
+    header_icon: [:optional, NilClass, {
+      color: [:optional, NilClass, SageSchemas::COLOR_SLIDER],
       name: SageSchemas::ICON,
     }],
-    header_image: [:optional, String],
-    help_content: [:optional, String],
-    help_link: [:optional, Hash],
-    help_title: [:optional, String],
+    header_image: [:optional, NilClass, String],
+    help_content: [:optional, NilClass, String],
+    help_link: [:optional, NilClass, Hash],
+    help_title: [:optional, NilClass, String],
     spacing: [:optional, NilClass, Set.new(["panel", "card"])],
-    subheader: [:optional, String],
+    subheader: [:optional, NilClass, String],
     title: [:optional, NilClass, String],
   })
 
