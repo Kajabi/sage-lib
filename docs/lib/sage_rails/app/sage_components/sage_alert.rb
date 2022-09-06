@@ -9,7 +9,7 @@ class SageAlert < SageComponent
       test_id: [:optional, NilClass, String],
       attributes: [:optional, NilClass, Hash]
     }],
-    secondary_actions: [:optional, NilClass, [[{
+    secondary_actions: [:optional, [[NilClass, {
       value: String,
       url: [:optional, NilClass, String],
       test_id: [:optional, NilClass, String],
