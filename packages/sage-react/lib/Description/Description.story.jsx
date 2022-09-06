@@ -2,6 +2,9 @@ import React from 'react';
 import { selectArgs } from '../story-support/helpers';
 import { Description } from './Description';
 import { Badge } from '../Badge';
+import { Tag } from '../Tag';
+import { Grid } from '../Grid';
+import { Link } from '../Link';
 import { Label } from '../Label';
 
 export default {
@@ -164,3 +167,86 @@ CustomTitleAndActionWidths.args = {
     },
   ]
 };
+
+export const NoDividers = () => (
+  <Grid.Row>
+    <Grid.Col small={12} medium={6}>
+      <Description
+        noDividers={true}
+        layout="stacked"
+        items={[
+          {
+            title: 'Name',
+            data: 'Savannah Nguyen',
+          },
+          {
+            title: 'Email',
+            data: 'sara.cruz@example.com',
+          },
+          {
+            title: 'Address',
+            data: (
+              <>
+                2715 Ash Dr. San Jose<br />
+                South Dakota, 83475
+              </>
+            ),
+          },
+        ]}
+      />
+    </Grid.Col>
+    <Grid.Col small={12} medium={6}>
+      <Description
+        noDividers={true}
+        layout="stacked"
+        items={[
+          {
+            title: 'Offers',
+            data: (
+              <>
+                <Link
+                  style={Link.COLORS.SECONDARY}
+                  href="#url"
+                >
+                  HTML &amp; CSS Basics
+                </Link>
+                <br />
+                <Link
+                  style={Link.COLORS.SECONDARY}
+                  href="#url"
+                >
+                  Back to School Offer
+                </Link>
+                <br />
+                <Link
+                  style={Link.COLORS.SECONDARY}
+                  href="#url"
+                >
+                  CodeCamp Free Community
+                </Link>
+              </>
+            ),
+            action: { value: 'View all', attributes: { href: '#' } }
+          },
+          {
+            title: 'Tags',
+            data: (
+              <Label.Group>
+                <Tag value="Lorem" showDismiss={true} />
+                <Tag value="Lorem" showDismiss={true} />
+                <Tag value="Lorem" showDismiss={true} />
+                <Tag value="Lorem" showDismiss={true} />
+                <Tag value="Lorem" showDismiss={true} />
+                <Tag value="Lorem" showDismiss={true} />
+                <Tag value="Lorem" showDismiss={true} />
+                <Tag value="Lorem" showDismiss={true} />
+                <Tag value="Lorem" showDismiss={true} />
+              </Label.Group>
+            ),
+            action: { value: 'View all', attributes: { href: '#' } }
+          },
+        ]}
+      />
+    </Grid.Col>
+  </Grid.Row>
+);
