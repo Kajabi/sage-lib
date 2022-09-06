@@ -324,15 +324,6 @@ module SageTokens
     "warning-filled",
     "window-paragraph",
     "world",
-
-    # Deprecations
-    "beta", # DEPRECATE --> "lab"
-    "filters", # DEPRECATE --> "filter"?
-    "graph", # DEPRECATE --> "chart"
-    "list-details", # DEPRECATE --> "layout-list"
-    "list-stack", # DEPRECATE --> "rows"
-    "select", # DEPRECATE --> "enlarge"
-    "success", # DEPRECATE --> "headset"
   ]
 
   ICON_SIZES = ["xs", "sm", "md", "lg", "xl", "2xl", "3xl", "4xl"]
