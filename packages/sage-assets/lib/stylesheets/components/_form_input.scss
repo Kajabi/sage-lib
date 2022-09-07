@@ -105,7 +105,7 @@ $-input-text-height: sage-font-size(body);
   @include sage-form-field-label;
 
   grid-area: label;
-  margin-bottom: sage-spacing(2xs);
+  margin-bottom: sage-spacing(xs);
 }
 .sage-input__field-wrapper {
   position: relative;

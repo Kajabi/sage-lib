@@ -372,7 +372,7 @@
 
   width: 100%;
   padding: sage-spacing(sm);
-  color: sage-color(charcoal, 200);
+  color: sage-color(charcoal, 400);
   appearance: none;
   box-shadow: sage-border-interactive(default);
   border: 0;
@@ -483,7 +483,6 @@
 ///
 @mixin sage-form-field-label() {
   @extend %t-sage-body-semi;
-
   white-space: nowrap;
 }
 
@@ -514,7 +513,7 @@
 @mixin sage-form-field-message() {
   @extend %t-sage-body-small-med;
 
-  margin-top: rem(6px);
+  margin-top: sage-spacing(xs);
   color: sage-color(charcoal, 200);
 
   .sage-form-field--error & {
