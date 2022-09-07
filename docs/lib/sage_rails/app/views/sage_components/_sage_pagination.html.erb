@@ -32,7 +32,7 @@
 
     <% unless component.hide_pages %>
       <%- if component.items.total_pages > 1 -%>
-        <%= paginate component.items, outer_window: component.window, theme: "sage_theme" %>
+        <%= paginate component.items, outer_window: component.window || 1, theme: "sage_theme" %>
       <% elsif component.items.total_pages == 1 %>
         <li class="sage-pagination__item">
           <span class="sage-pagination__page sage-pagination__page--current" aria-current="true">
