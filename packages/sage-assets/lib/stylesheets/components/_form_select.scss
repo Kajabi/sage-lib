@@ -8,7 +8,7 @@ $-select-border-box-shadow-size: map-get($sage-field-configs, box-shadow-size);
 $-select-color-border: sage-color(grey, 500);
 $-select-color-border-hover: sage-color(charcoal, 100);
 $-select-color-border-selected: sage-color(primary, 200);
-$-select-color-default: sage-color(charcoal, 400);
+$-select-color-default: sage-color(charcoal, 200);
 $-select-color-default-hover: sage-color(charcoal, 400);
 $-select-color-error: sage-color(red, 300);
 $-select-color-label-background: sage-color(white);
@@ -79,7 +79,7 @@ $-select-arrow-position-inverse-with-message: calc(100% - #{$-select-height + $-
   }
 
   .sage-select--value-selected & {
-    color: $-select-color-default;
+    color: sage-color(charcoal, 400);
   }
 
   .sage-select--value-selected &:not(:disabled) + .sage-select__arrow::before {
