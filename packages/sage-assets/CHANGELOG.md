@@ -3,17 +3,6 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [1.0.4](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.0.3...@kajabi/sage-assets@1.0.4) (2022-08-22)
-
-
-### Bug Fixes
-
-* **modal:** updates to classname ([058b3ef](https://github.com/Kajabi/sage-lib/commit/058b3efadd4898cdb4704ca4ea8c3453f4a3cbb0))
-
-
-
-
-
 ## [1.0.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.0.2...@kajabi/sage-assets@1.0.3) (2022-08-16)
 
 **Note:** Version bump only for package @kajabi/sage-assets

@@ -3,25 +3,6 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-# [1.2.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.1.2...@kajabi/sage-react@1.2.0) (2022-08-22)
-
-
-### Bug Fixes
-
-* **banner story:** add more info to banner story ([01ea4df](https://github.com/Kajabi/sage-lib/commit/01ea4dfa4d340bf843c411c4fec5b0554e7e610e))
-* **modal:** remove scrolling in react when modal is open ([247ef27](https://github.com/Kajabi/sage-lib/commit/247ef273e3369d4fa9f05c7ed49f934a0ae1aaf4))
-* **modal:** update classname to classlist ([d1be6eb](https://github.com/Kajabi/sage-lib/commit/d1be6eb47bd4af9abeca52bdc9cc49d67352f6c2))
-* **modal:** updates to classname ([058b3ef](https://github.com/Kajabi/sage-lib/commit/058b3efadd4898cdb4704ca4ea8c3453f4a3cbb0))
-
-
-### Features
-
-* **card:** adds interactive prop to React component ([266d339](https://github.com/Kajabi/sage-lib/commit/266d339859e83e1a9a017d6fe2a248713e5e01c5))
-
-
-
-
-
 ## [1.1.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.1.1...@kajabi/sage-react@1.1.2) (2022-08-16)
 
 **Note:** Version bump only for package @kajabi/sage-react
