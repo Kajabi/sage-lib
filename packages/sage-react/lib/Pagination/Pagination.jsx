@@ -125,7 +125,7 @@ export const Pagination = ({
   };
 
   const renderPageItems = () => {
-    if (localPageCount <= 1 || hidePageButtons) {
+    if (localPageCount < 1 || hidePageButtons) {
       return null;
     }
 
@@ -197,7 +197,10 @@ export const Pagination = ({
     <Tagname className={classNames}>
       {renderPageCount()}
       <ul className="sage-pagination__pages">
-        <PaginationItem disabled={currentPage === 1} {...handleInteractionProps(currentPage - 1)}>
+        <PaginationItem
+          disabled={currentPage === 1}
+          {...handleInteractionProps(currentPage - 1)}
+        >
           {labels && labels.previous ? labels.previous : PAGINATION_LABEL_PREVIOUS}
         </PaginationItem>
         {renderPageItems()}
