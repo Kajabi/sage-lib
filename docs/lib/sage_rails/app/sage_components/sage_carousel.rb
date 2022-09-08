@@ -1,6 +1,6 @@
 class SageCarousel < SageComponent
   set_attribute_schema({
-    options: [:optional, {}],
+    options: [:optional, NilClass, {}],
   })
 
   def sections

@@ -1,14 +1,14 @@
 class SageHero < SageComponent
   set_attribute_schema({
-    alt_text: [:optional, String],
-    borderless: [:optional, TrueClass],
-    button: [:optional, String],
-    cta_attributes: [:optional, Hash],
+    alt_text: [:optional, NilClass, String],
+    borderless: [:optional, NilClass, TrueClass],
+    button: [:optional, NilClass, String],
+    cta_attributes: [:optional, NilClass, Hash],
     custom_background_color: [:optional, String],
-    description: [:optional, String],
-    image: [:optional, String],
-    size: [:optional, SageSchemas::HERO_SIZE],
-    title: [:optional, String],
-    title_tag: [:optional, String],
+    description: [:optional, NilClass, String],
+    image: [:optional, NilClass, String],
+    size: [:optional, NilClass, SageSchemas::HERO_SIZE],
+    title: [:optional, NilClass, String],
+    title_tag: [:optional, NilClass, String],
   })
 end

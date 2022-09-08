@@ -1,10 +1,10 @@
 class SageGridCol < SageComponent
   set_attribute_schema({
-    breakpoint: [:optional, Symbol, String],
-    large: [:optional, String, Integer],
-    medium: [:optional, String, Integer],
-    size: [:optional, String, Integer],
-    small: [:optional, String, Integer],
-    xlarge: [:optional, String, Integer],
+    breakpoint: [:optional, NilClass, Symbol, String],
+    large: [:optional, NilClass, String, Integer],
+    medium: [:optional, NilClass, String, Integer],
+    size: [:optional, NilClass, String, Integer],
+    small: [:optional, NilClass, String, Integer],
+    xlarge: [:optional, NilClass, String, Integer],
   })
 end

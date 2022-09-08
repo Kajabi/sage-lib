@@ -1,17 +1,17 @@
 class SageRadio < SageComponent
   set_attribute_schema({
-    attributes: [:optional, Hash],
-    caption: [:optional, String],
-    checked: [:optional, TrueClass],
-    disabled: [:optional, TrueClass],
-    has_border: [:optional, TrueClass],
-    has_error: [:optional, TrueClass],
+    attributes: [:optional, NilClass, Hash],
+    caption: [:optional, NilClass, String],
+    checked: [:optional, NilClass, TrueClass],
+    disabled: [:optional, NilClass, TrueClass],
+    has_border: [:optional, NilClass, TrueClass],
+    has_error: [:optional, NilClass, TrueClass],
     id: String,
     label_text: String,
-    message: [:optional, String],
+    message: [:optional, NilClass, String],
     name: String,
-    required: [:optional, TrueClass],
-    standalone: [:optional, TrueClass],
+    required: [:optional, NilClass, TrueClass],
+    standalone: [:optional, NilClass, TrueClass],
     value: String,
   })
 

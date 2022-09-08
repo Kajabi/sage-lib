@@ -1,22 +1,22 @@
 class SagePanelControls < SageComponent
   set_attribute_schema({
-    bulk_action_items: [:optional, [[{
-      attributes: [:optional, Hash],
+    bulk_action_items: [:optional, [[NilClass, {
+      attributes: [:optional, NilClass, Hash],
       value: String,
     }]]],
-    item_count_label: [:optional, String],
+    item_count_label: [:optional, NilClass, String],
     items: [:optional, -> (v) { SageSchemas.can_paginate?(v) }],
-    show_bulk_actions: [:optional, TrueClass],
-    show_checkboxes: [:optional, TrueClass],
-    show_expand_collapse: [:optional, TrueClass],
-    show_pagination: [:optional, TrueClass],
-    show_sort: [:optional, TrueClass],
-    sort_items: [:optional, [[{
-      attributes: [:optional, Hash],
+    show_bulk_actions: [:optional, NilClass, TrueClass],
+    show_checkboxes: [:optional, NilClass, TrueClass],
+    show_expand_collapse: [:optional, NilClass, TrueClass],
+    show_pagination: [:optional, NilClass, TrueClass],
+    show_sort: [:optional, NilClass, TrueClass],
+    sort_items: [:optional, [[NilClass, {
+      attributes: [:optional, NilClass, Hash],
       value: String,
     }]]],
-    start_expanded: [:optional, TrueClass],
-    target: [:optional, String],
+    start_expanded: [:optional, NilClass, TrueClass],
+    target: [:optional, NilClass, String],
   })
 
   def sections
