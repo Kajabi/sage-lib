@@ -14,6 +14,7 @@ Sage.modal = (function() {
   const SELECTOR_PAGE_HAS_OPEN_MODAL = "sage-page--has-open-modal";
   const SELECTOR_FOCUSABLE_ELEMENTS = "a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled]), input[type='text']:not([disabled]), input[type='radio']:not([disabled]), input[type='checkbox']:not([disabled]), select:not([disabled])";
   const MODAL_ACTIVE_CLASS = "sage-modal--active";
+  const NO_BACKGROUND_CLASS = "sage-modal--no-background-dismiss";
   const EVENT_CLOSEALL = "sage.modal.closeAll";
   const EVENT_ACTIVE = "sage.modal.active";
   const EVENT_OPENING = "sage.modal.opening";
@@ -37,7 +38,7 @@ Sage.modal = (function() {
       // and perform cleanup actions like removing the modal's content.
 
       // Modal Container has been clicked
-      if (el.hasAttribute(SELECTOR_MODAL)) {
+      if (el.hasAttribute(SELECTOR_MODAL) && !el.classList.contains(NO_BACKGROUND_CLASS)) {
         dispatchCloseAll();
 
       // Modal Close Button has been clicked

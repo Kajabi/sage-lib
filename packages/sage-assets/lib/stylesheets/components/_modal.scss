@@ -51,7 +51,7 @@ $-modal-inner-size: sage-container(md);
     padding: 0;
   }
 
-  &.sage-modal--no-blur {
+  &.sage-modal--no-background-blur {
     backdrop-filter: none;
     background-image: linear-gradient(
       rgba(sage-color(charcoal, 300), 0.5) 0%,
@@ -59,11 +59,10 @@ $-modal-inner-size: sage-container(md);
     );
   }
 
-  &.sage-modal--no-background-dismiss {
+  &.sage-modal--no-background {
     background-color: transparent;
     backdrop-filter: none;
     background-image: none;
-    pointer-events: none;
   }
 }
 
