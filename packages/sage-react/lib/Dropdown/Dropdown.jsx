@@ -21,6 +21,7 @@ export const Dropdown = ({
   customized,
   customTrigger,
   disabled,
+  disclosure,
   exitPanelHandler,
   icon,
   isLabelVisible,
@@ -140,6 +141,7 @@ export const Dropdown = ({
       )}
       <DropdownTrigger
         disabled={disabled}
+        disclosure={disclosure}
         icon={icon}
         isLabelVisible={isLabelVisible}
         label={label}
@@ -188,6 +190,7 @@ Dropdown.defaultProps = {
   customized: false,
   exitPanelHandler: null,
   disabled: false,
+  disclosure: false,
   icon: null,
   isLabelVisible: true,
   isPinned: false,
@@ -213,6 +216,7 @@ Dropdown.propTypes = {
   customized: PropTypes.bool,
   customTrigger: PropTypes.node,
   disabled: PropTypes.bool,
+  disclosure: PropTypes.bool,
   exitPanelHandler: PropTypes.func,
   icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),
   isLabelVisible: PropTypes.bool,

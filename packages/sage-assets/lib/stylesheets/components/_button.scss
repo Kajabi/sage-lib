@@ -17,6 +17,7 @@ $-btn-icon-only-subtle-size: rem(16px);
 $-btn-icon-only-hover-size: rem(24px);
 $-btn-icon-only-focus-size: rem(32px);
 $-btn-toolbar-group-height: rem(40px);
+$-btn-disclosure-left-padding: rem(26px);
 
 $-btn-base-styles: (
   accent: (
@@ -375,6 +376,28 @@ $-btn-loading-min-height: rem(36px);
 
   &:not([class*="icon-only"]) {
     line-height: rem(20px); /* used this value to align to the spec */
+  }
+
+  &.sage-btn--disclosure {
+    padding-right: calc(1rem + #{$-btn-disclosure-left-padding});
+
+    &::after {
+      @include sage-icon-base(caret-down, md);
+
+      position: absolute;
+      right: 1rem;
+    }
+
+    &[class*="icon-only"]::after {
+      @include sage-icon-base(caret-down, xs);
+
+      right: $-btn-disclosure-left-padding;
+      font-weight: sage-font-weight(bold);
+    }
+
+    &[class*="icon-only"].sage-btn--small::after {
+      right: rem(12px);
+    }
   }
 
   // NOTE: Icon generation consolidated in `core/_icons.scss`

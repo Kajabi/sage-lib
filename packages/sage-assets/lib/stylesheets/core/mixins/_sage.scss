@@ -122,6 +122,21 @@
         padding: rem(12px);
       }
 
+      &:not(.sage-btn--subtle).sage-btn--disclosure {
+        padding: rem(12px) rem(30px) rem(12px) rem(22px);
+        border-radius: sage-border(radius-medium);
+
+        /* stylelint-disable max-nesting-depth */
+        &::before {
+          margin-right: rem(20px);
+        }
+
+        &.sage-btn--small {
+          padding: rem(12px) sage-spacing(sm) rem(12px) rem(12px);
+        }
+        /* stylelint-enable max-nesting-depth */
+      }
+
       &::before {
         @include sage-icon-base($icon-name);
 
