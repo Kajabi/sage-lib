@@ -3,29 +3,6 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-# [5.4.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.3.0...@kajabi/sage@5.4.0) (2022-08-31)
-
-
-### Bug Fixes
-
-* **grid:** modify grid helper output, removing duplicate classes ([e9200bb](https://github.com/Kajabi/sage-lib/commit/e9200bbc7bcd7c3f55bea77e42958991f79fe4a0))
-* **icon:** add null empty icon ([f1fcdb2](https://github.com/Kajabi/sage-lib/commit/f1fcdb258ffcc2188e6b188518c10ddef3201904))
-
-
-### Features
-
-* **list:** add fallback and improved documentation ([6b6f0ff](https://github.com/Kajabi/sage-lib/commit/6b6f0ff5cbe7ba8348c60fb7227dd138b93ef8ce))
-* **list:** adjust handle affordance for clarity ([f2f43db](https://github.com/Kajabi/sage-lib/commit/f2f43dbf01a26dfd3aa8e353b48a547443df0067))
-* **list:** remove `hide_first_border` property that is no longer needed ([9cc8253](https://github.com/Kajabi/sage-lib/commit/9cc82533a2e9e6c61dd9261c1749cb97bf2d54fc))
-* **list:** update list interaction (rails) ([7e3d76f](https://github.com/Kajabi/sage-lib/commit/7e3d76f1c662dcaf1f88f3fc6d9157dcf899477f))
-* **list:** wip adding advanced drag features ([e9c76d7](https://github.com/Kajabi/sage-lib/commit/e9c76d7be3081d923aaf695f7f29eedda4e7bf67))
-* **lsit:** cleanup ([27237c5](https://github.com/Kajabi/sage-lib/commit/27237c5deb3a226eb12403d680cf589f0508a5a9))
-* **modal:** adds prop for size based on container options ([5640db4](https://github.com/Kajabi/sage-lib/commit/5640db4bdc91c746208495d75984c6ccd8764360))
-
-
-
-
-
 # [5.3.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.2.1...@kajabi/sage@5.3.0) (2022-08-22)
 
 
