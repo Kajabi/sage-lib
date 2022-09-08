@@ -186,10 +186,6 @@ Default.decorators = [
 export const Wired = (args) => {
   const [active, setActive] = useState(false);
 
-  const onExit = () => {
-    setActive(false);
-  };
-
   return (
     <>
       <Button
@@ -199,12 +195,12 @@ export const Wired = (args) => {
         Take An Action
       </Button>
       <Modal
+        {...args}
         active={active}
         animation={{ direction: Modal.ANIMATION_DIRECTIONS.BOTTOM }}
-        onExit={onExit}
-        {...args}
+        onExit={() => setActive(false)}
       >
-        <DefaultBody onExit={onExit} />
+        <DefaultBody onExit={() => setActive(false)} />
       </Modal>
     </>
   );

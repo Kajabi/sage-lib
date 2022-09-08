@@ -77,6 +77,30 @@
         "data-js-modaltrigger": "cool-modal-fullscreen-header-actions",
       }
     } %>
+    <%= sage_component SageButton, {
+      style: "primary",
+      icon: { name: "launch", style: "right" },
+      value: "Modal with disabled background",
+      attributes: {
+        "data-js-modaltrigger": "cool-modal-no-background",
+      }
+    } %>
+    <%= sage_component SageButton, {
+      style: "primary",
+      icon: { name: "launch", style: "right" },
+      value: "Modal with disabled background dismiss",
+      attributes: {
+        "data-js-modaltrigger": "cool-modal-no-background-dismiss",
+      }
+    } %>
+    <%= sage_component SageButton, {
+      style: "primary",
+      icon: { name: "launch", style: "right" },
+      value: "Modal with disabled background and background dismiss",
+      attributes: {
+        "data-js-modaltrigger": "cool-modal-no-background-no-dismiss",
+      }
+    } %>
   <% end %>
 
   <%# Standard Modal %>
@@ -478,6 +502,91 @@
       <% end %>
 
       <%= sample_body_text %>
+    <% end %>
+  <% end %>
+
+  <%= sage_component SageModal, {
+    id: "cool-modal-no-background",
+    disable_background: true,
+  } do %>
+    <%= sage_component SageModalContent, { title: "Modal - No background" } do %>
+      <% content_for :sage_header_aside do %>
+        <%= sage_component SageButton, {
+          style: "secondary",
+          subtle: true,
+          value: "Close Modal",
+          icon: { name: "remove", style: "only" },
+          attributes: { "data-js-modal": true },
+        } %>
+      <% end %>
+
+      <p>This modal has no background screen</p>
+      <%= sample_body_text %>
+
+      <% content_for :sage_footer do %>
+        <%= sage_component SageButton, {
+          style: "primary",
+          icon: { name: "check", style: "left" },
+          value: "Got it!",
+        } %>
+      <% end %>
+    <% end %>
+  <% end %>
+  
+  <%= sage_component SageModal, {
+    id: "cool-modal-no-background-dismiss",
+    disable_background_dismiss: true,
+  } do %>
+    <%= sage_component SageModalContent, { title: "Modal - No background dismiss" } do %>
+      <% content_for :sage_header_aside do %>
+        <%= sage_component SageButton, {
+          style: "secondary",
+          subtle: true,
+          value: "Close Modal",
+          icon: { name: "remove", style: "only" },
+          attributes: { "data-js-modal": true }
+        } %>
+      <% end %>
+
+      <p>This modal has no background dismiss action</p>
+      <%= sample_body_text %>
+
+      <% content_for :sage_footer do %>
+        <%= sage_component SageButton, {
+          style: "primary",
+          icon: { name: "check", style: "left" },
+          value: "Got it!",
+        } %>
+      <% end %>
+    <% end %>
+  <% end %>
+
+  <%= sage_component SageModal, {
+    id: "cool-modal-no-background-no-dismiss",
+    disable_background: true,
+    disable_background_dismiss: true,
+  } do %>
+    <%= sage_component SageModalContent, { title: "Modal - No background and no dismiss" } do %>
+      <% content_for :sage_header_aside do %>
+        <%= sage_component SageButton, {
+          style: "secondary",
+          subtle: true,
+          value: "Close Modal",
+          icon: { name: "remove", style: "only" },
+          attributes: { "data-js-modal": true }
+        } %>
+      <% end %>
+
+      <p>This modal has no background screen and no background dismiss action</p>
+      <%= sample_body_text %>
+
+      <% content_for :sage_footer do %>
+        <%= sage_component SageButton, {
+          style: "primary",
+          icon: { name: "check", style: "left" },
+          value: "Got it!",
+        } %>
+      <% end %>
     <% end %>
   <% end %>
 
