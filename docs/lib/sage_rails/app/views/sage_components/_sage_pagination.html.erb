@@ -9,7 +9,7 @@
   aria-label="Pagination Navigation"
   <%= component.generated_html_attributes.html_safe %>
 >
-  <% if !component.hide_counter %>
+  <% unless component.hide_counter %>
     <span class="sage-pagination__count <%= "sage-pagination__count--solo" if component.items.total_pages == 1 %>">
       <% if component.page_count_prefix %><span class="sage-pagination__count-prefix"><%= component.page_count_prefix %></span><% end %>
       <%= component.page_count component.items %>
