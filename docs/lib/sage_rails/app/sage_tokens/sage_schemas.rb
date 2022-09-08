@@ -10,7 +10,7 @@ module SageSchemas
 
   COLOR_SLIDER = Set.new(SageTokens::COLOR_SLIDERS)
 
-  CONTAINER_SIZE = [:optional, Set.new(SageTokens::CONTAINER_SIZES)]
+  CONTAINER_SIZE = [:optional, NilClass, Set.new(SageTokens::CONTAINER_SIZES)]
 
   GRID_GAP_OPTION = Set.new(SageTokens::GRID_GAP_OPTIONS)
 
@@ -21,22 +21,22 @@ module SageSchemas
   STATUSES = Set.new(SageTokens::STATUSES)
 
   SPACER = {
-    top: [:optional, Set.new(SageTokens::SPACER_SIZES)],
-    right: [:optional, Set.new(SageTokens::SPACER_SIZES)],
-    bottom: [:optional, Set.new(SageTokens::SPACER_SIZES)],
-    left: [:optional, Set.new(SageTokens::SPACER_SIZES)],
+    top: [:optional, NilClass, Set.new(SageTokens::SPACER_SIZES)],
+    right: [:optional, NilClass, Set.new(SageTokens::SPACER_SIZES)],
+    bottom: [:optional, NilClass, Set.new(SageTokens::SPACER_SIZES)],
+    left: [:optional, NilClass, Set.new(SageTokens::SPACER_SIZES)],
   }
 
   # Components
 
   AVATAR = {
-    badge: [:optional, TrueClass],
-    centered: [:optional, TrueClass],
+    badge: [:optional, NilClass, TrueClass],
+    centered: [:optional, NilClass, TrueClass],
     color: [:optional, NilClass, SageSchemas::COLORS],
-    image: [:optional, {alt: [:optional, String], src: String, id: [:optional, String]}],
-    initials: [:optional, String],
+    image: [:optional, NilClass, { alt: [:optional, NilClass, String], src: String, id: [:optional, NilClass, String] }],
+    initials: [:optional, NilClass, String],
     lazy_load_initials: [:optional, NilClass, TrueClass],
-    size: [:optional, String],
+    size: [:optional, NilClass, String],
   }
 
   BUTTON = {
@@ -44,11 +44,13 @@ module SageSchemas
     attributes: [:optional, NilClass, Hash],
     custom_content_class: [:optional, NilClass, String],
     disabled: [:optional, NilClass, TrueClass],
+    disclosure: [:optional, NilClass, TrueClass],
     full_width: [:optional, NilClass, TrueClass],
     icon: [:optional, NilClass, { name: String, style: Set.new(["left", "right", "only"]) }],
+    icon_only: [:optional, NilClass, TrueClass],
     spinner_on_submit: [:optional, NilClass, String],
     style: [:optional, NilClass, Set.new(["accent", "primary", "secondary", "danger"])],
-    value: [:optional, String],
+    value: [:optional, NilClass, String],
     # TODO: Deprecations in Next
     subtle: [:optional, NilClass, TrueClass],
     small: [:optional, NilClass, TrueClass],
@@ -56,7 +58,7 @@ module SageSchemas
 
   CHOICE = {
     active: [:optional, NilClass, TrueClass],
-    align_center: [:optional, TrueClass],
+    align_center: [:optional, NilClass, TrueClass],
     attributes: [:optional, NilClass, Hash],
     custom_content_class: [:optional, NilClass, String],
     disabled: [:optional, NilClass, TrueClass],
@@ -76,13 +78,13 @@ module SageSchemas
   }
 
   DROPDOWN_ITEM = {
-    attributes: [:optional, Hash],
+    attributes: [:optional, NilClass, Hash],
     icon: [:optional, NilClass, String],
-    is_heading: [:optional, TrueClass],
+    is_heading: [:optional, NilClass, TrueClass],
     modifiers: [:optional, NilClass, [[Set.new(["disabled", "border-before", "border-after", nil])]]],
-    selected: [:optional, TrueClass],
+    selected: [:optional, NilClass, TrueClass],
     style: [:optional, NilClass, Set.new(["primary", "danger", "muted"])],
-    value: [:optional, {}, String],
+    value: [:optional, NilClass, {}, String],
   }
 
   DROPDOWN_TRIGGER_TYPE = [:optional, NilClass, Set.new(["select", "select-labeled"])]
@@ -95,7 +97,7 @@ module SageSchemas
   }
 
   DROPDOWN = {
-    align: [:optional, Set.new(["left", "center", "right"])],
+    align: [:optional, NilClass, Set.new(["left", "center", "right"])],
     contained: [:optional, NilClass, TrueClass],
     customized: [:optional, NilClass, TrueClass],
     custom_modifier: [:optional, NilClass, Set.new(["actions", "sort"])],
@@ -130,40 +132,40 @@ module SageSchemas
   FORM_SELECT_OPTION = {
     text: String,
     value: [:optional, NilClass, String],
-    disabled: [:optional, TrueClass],
-    selected: [:optional, TrueClass],
+    disabled: [:optional, NilClass, TrueClass],
+    selected: [:optional, NilClass, TrueClass],
   }
 
   FORM_SELECT_OPTGROUP = {
     group_label: String,
-    disabled: [:optional, TrueClass],
+    disabled: [:optional, NilClass, TrueClass],
     group_options: [[FORM_SELECT_OPTION]],
   }
 
   LIST_ITEM = {
-    id: [:optional, Integer, String],
+    id: [:optional, NilClass, Integer, String],
     more_actions: [:optional, NilClass, SageSchemas::DROPDOWN],
-    sortable: [:optional, NilClass, TrueClass],
     sortable_update_url: [:optional, NilClass, String],
   }
 
   LIST = {
-    items: [:optional, [[SageSchemas::LIST_ITEM]]],
+    drag_handle_type: [:optional, NilClass, Set.new(["default", "row"])],
+    items: [:optional, NilClass, [[SageSchemas::LIST_ITEM]]],
+    sortable: [:optional, NilClass, TrueClass],
     sortable_resource: [:optional, NilClass, String],
     tag: [:optional, NilClass, Set.new(["ul", "ol"])],
-    hide_first_border: [:optional, TrueClass, String],
   }
 
   PANEL_FIGURE = {
     aspect_ratio: [:optional, NilClass, Integer, Float],
     background_color: [:optional, NilClass, String],
-    bleed: [:optional, Set.new(["top", "bottom", "sides"])],
-    is_wistia: [:optional, TrueClass],
+    bleed: [:optional, NilClass, Set.new(["top", "bottom", "sides"])],
+    is_wistia: [:optional, NilClass, TrueClass],
     padded: [:optional, NilClass, TrueClass],
   }
 
   MEDIA_TILE = {
-    actions_dropdown_items: [:optional, [[SageSchemas::DROPDOWN_ITEM]]],
+    actions_dropdown_items: [:optional, NilClass, [[SageSchemas::DROPDOWN_ITEM]]],
     actions_custom: [:optional, NilClass, String],
     body: [:optional, NilClass, String],
     caption: [:optional, NilClass, String],

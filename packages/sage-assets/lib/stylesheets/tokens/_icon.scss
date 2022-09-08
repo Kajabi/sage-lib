@@ -191,6 +191,7 @@ $sage-icons: (
   move-right: unicode(e99a),
   multi-pay: unicode(e99b),
   newsletter: unicode(e99c),
+  "null": "",
   one-off-session: unicode(e99d),
   one-time: unicode(e99e),
   package: unicode(e99f),
@@ -264,16 +265,6 @@ $sage-icons: (
   warning-filled: unicode(e9e2),
   window-paragraph: unicode(e9e3),
   world: unicode(e9e4),
-
-  // Duplications/deprecations
-  3-dot-menu: unicode(e952), // TODO: deprecate in favor of `dot-menu-horizontal`
-  beta: unicode(e97e), // TODO: deprecate in favor of `lab`
-  filters: unicode(e961), // TODO: deprecate in favor of `filter`
-  graph: unicode(e92f), // TODO: deprecate in favor of `chart`
-  list-details: unicode(e981), // TODO: deprecate in favor of `layout-list`
-  list-stack: unicode(e986), // TODO: deprecate in favor of `rows`
-  select: unicode(e95a), // TODO: deprecate in favor of `enlarge`
-  success: unicode(e971), // TODO: deprecate in favor of `headset`
 );
 
 ///

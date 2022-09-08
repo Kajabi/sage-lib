@@ -1,13 +1,13 @@
 class SageNextBestAction < SageComponent
   set_attribute_schema({
-    card_color: [:optional, SageSchemas::STATUSES],
-    dismissable: [:optional, TrueClass],
+    card_color: [:optional, NilClass, SageSchemas::STATUSES],
+    dismissable: [:optional, NilClass, TrueClass],
     dismiss_attributes: [:optional, NilClass, Hash],
-    graphic: [:optional, {
-      element: [:optional, String],
-      on_right: [:optional, TrueClass],
+    graphic: [:optional, NilClass, {
+      element: [:optional, NilClass, String],
+      on_right: [:optional, NilClass, TrueClass],
     }],
-    title: [:optional, String],
+    title: [:optional, NilClass, String],
   })
 
   def sections

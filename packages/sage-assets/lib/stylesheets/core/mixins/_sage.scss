@@ -122,6 +122,21 @@
         padding: rem(12px);
       }
 
+      &:not(.sage-btn--subtle).sage-btn--disclosure {
+        padding: rem(12px) rem(30px) rem(12px) rem(22px);
+        border-radius: sage-border(radius-medium);
+
+        /* stylelint-disable max-nesting-depth */
+        &::before {
+          margin-right: rem(20px);
+        }
+
+        &.sage-btn--small {
+          padding: rem(12px) sage-spacing(sm) rem(12px) rem(12px);
+        }
+        /* stylelint-enable max-nesting-depth */
+      }
+
       &::before {
         @include sage-icon-base($icon-name);
 
@@ -372,7 +387,7 @@
 
   width: 100%;
   padding: sage-spacing(sm);
-  color: sage-color(charcoal, 200);
+  color: sage-color(charcoal, 400);
   appearance: none;
   box-shadow: sage-border-interactive(default);
   border: 0;
@@ -483,7 +498,6 @@
 ///
 @mixin sage-form-field-label() {
   @extend %t-sage-body-semi;
-
   white-space: nowrap;
 }
 
@@ -514,7 +528,7 @@
 @mixin sage-form-field-message() {
   @extend %t-sage-body-small-med;
 
-  margin-top: rem(6px);
+  margin-top: sage-spacing(xs);
   color: sage-color(charcoal, 200);
 
   .sage-form-field--error & {

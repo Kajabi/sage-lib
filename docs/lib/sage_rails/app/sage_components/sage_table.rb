@@ -1,15 +1,14 @@
 class SageTable < SageComponent
   set_attribute_schema({
-    caption: [:optional, String],
-    caption_side: [:optional, Set.new(["bottom", "top"])],
-    condensed: [:optional, TrueClass],
-    has_borders: [:optional, TrueClass],
-    headers: [:optional, Array],
-    reset_above: [:optional, TrueClass],
-    reset_below: [:optional, TrueClass],
-    responsive: [:optional, TrueClass],
-    rows: [:optional, Array],
-    selectable: [:optional, TrueClass],
-    striped: [:optional, TrueClass],
+    caption: [:optional, NilClass, String],
+    caption_side: [:optional, NilClass, Set.new(["bottom", "top"])],
+    condensed: [:optional, NilClass, TrueClass],
+    has_borders: [:optional, NilClass, TrueClass],
+    headers: [:optional, NilClass, Array],
+    reset_above: [:optional, NilClass, TrueClass],
+    reset_below: [:optional, NilClass, TrueClass],
+    responsive: [:optional, NilClass, TrueClass],
+    rows: [:optional, NilClass, Array],
+    selectable: [:optional, NilClass, TrueClass],
   })
 end

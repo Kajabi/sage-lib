@@ -8,8 +8,9 @@
 .sage-list {
   padding-left: 0;
   list-style: none;
-
-  &:not(.sage-list--inline-compact):not(.sage-list--inline-fit-compact) {
+  
+  // TODO: These styles interfered with the new List component and should be deprecated.
+  &:not(.sage-list--inline-compact):not(.sage-list--inline-fit-compact):not(.sage-list__item) {
     margin-right: -1 * sage-spacing(sm);
     margin-left: -1 * sage-spacing(sm);
 

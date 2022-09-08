@@ -99,7 +99,7 @@ export const MultipleCheckboxes = (args) => {
           {...args}
           id={`check-${i}`}
           itemInList={true}
-          key={i.toString()}
+          key={`check-${i.toString()}`}
           onChange={onChange}
           name="group-1"
           {...configs}

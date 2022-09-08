@@ -55,41 +55,76 @@ sample_products = [
 
 <h3 class="<%= SageClassnames::TYPE::HEADING_6 %>">Default configuration</h3>
 <%= md("
-SageList is implemented most simply by passing the desired contents for the items through the `SageList` `items` property.
-This assumes that the contents of the list are already formatted as desired.
+`SageList` is implemented most simply by passing the desired contents for the items through the `SageList` `items` property.
+This assumes that the contents of the list are already formatted as desired or you're outputting simple content values.
 ", use_sage_type: true) %>
 
 <%= sage_component SageList, {
+  items: sample_products.map { | item | {
+      content: "Item #{item[:name]}",
+      id: "example-default-item-#{item[:id]}",
+      more_actions: { items: dropdown_items(item[:id]) },
+    }
+  },
+} %>
+
+<h3 class="<%= SageClassnames::TYPE::HEADING_6 %>">Sortable configuration</h3>
+<%= md("
+Sortable lists can be created with `SageList` by adding `sortable: true` and a `sortable_resource`.
+You can also pass a `sortable_update_url` for sorting callbacks to items
+that will be called after the user finishes sorting an item.
+", use_sage_type: true) %>
+
+<%= sage_component SageList, {
+  sortable: true,
   sortable_resource: "sample_products",
   items: sample_products.map { | item | {
-      content: %(
-        <h4>Item #{item[:name]}</h4>
-        <p>Item #{item[:id]} specs</p>
-      ).html_safe,
-      id: item[:id],
+      content: "Item #{item[:name]}",
+      id: "example-sortable-item-#{item[:id]}",
       more_actions: { items: dropdown_items(item[:id]) },
-      sortable: true,
       sortable_update_url: "#sortable-update-url?item=#{item[:id]}",
     }
-  }
+  },
+} %>
+
+<h3 class="<%= SageClassnames::TYPE::HEADING_6 %>">Fully draggable row</h3>
+<%= md('
+By default only the drag handle is active for dragging/sorting a row.
+However, `drag_handle_type` can be set to `"row"` in order to allow the whole row to be draggable instead.
+', use_sage_type: true) %>
+
+<%= sage_component SageList, {
+  sortable: true,
+  sortable_resource: "sample_products_2",
+  items: sample_products.map { | item | {
+    content: "Item #{item[:name]}",
+    id: "example-fully-draggable-item-#{item[:id]}",
+    more_actions: { items: dropdown_items(item[:id]) },
+    sortable_update_url: "#sortable-update-url?item=#{item[:id]}",
+  }},
+  drag_handle_type: "row",
 } %>
 
 <h3 class="<%= SageClassnames::TYPE::HEADING_6 %>">Compositional approach</h3>
 <%= md("
-If you need more native content formatting you can instead opt to render items using a nested loop and the SageListItem component.
+If you need more native content formatting you can instead opt to render items using a nested loop and the `SageListItem` component.
+Note that this example also implements the [Reveal utility class](#{pages_helpers_path(:reveal)}).
 ", use_sage_type: true) %>
 
-<%= sage_component SageList, { sortable_resource: "sample_products_2" } do %>
+<%= sage_component SageList, {
+  sortable: true,
+  sortable_resource: "sample_products_3",
+  drag_handle_type: "row",
+} do %>
   <% sample_products.each do | item | %>
     <%= sage_component SageListItem, {
-      id: item[:id],
+      id: "example-default-item-#{item[:id]}",
       more_actions: { items: dropdown_items(item[:id]) },
-      sortable: true,
       sortable_update_url: "#sortable-update-url?item={item[:id]}",
       css_classes: SageClassnames::REVEAL_CONTAINER,
     } do %>
       <%= sage_component SageCardRow, { grid_template: "ete" } do %>
-        <img src="//source.unsplash.com/random/240x160?v=<%= item[:id] %>" width="100" alt="" />
+        <img src="https://source.unsplash.com/random/240x160?v=<%= item[:id] %>" width="64" alt="" />
         <%= sage_component SageCardBlock, {} do %>
           <h4><%= item[:name] %></h4>
           <p>Item <%= item[:id] %> specs</p>

@@ -151,6 +151,7 @@ export const TOKENS_ICONS = {
   MOVE_RIGHT: 'move-right',
   MULTI_PAY: 'multi-pay',
   NEWSLETTER: 'newsletter',
+  NULL: 'null',
   ONE_OFF_SESSION: 'one-off-session',
   ONE_TIME: 'one-time',
   PACKAGE: 'package',
@@ -224,13 +225,4 @@ export const TOKENS_ICONS = {
   WARNING_FILLED: 'warning-filled',
   WINDOW_PARAGRAPH: 'window-paragraph',
   WORLD: 'world',
-
-  // Deprecations
-  BETA: 'beta',
-  FILTERS: 'filters',
-  GRAPH: 'graph',
-  LIST_DETAILS: 'list-details',
-  LIST_STACK: 'list-stack',
-  SELECT: 'select',
-  SUCCESS: 'success',
 };

@@ -4,7 +4,6 @@
 /// @group sage
 ////
 
-
 // Borders and sizing
 $-table-header-border: rem(1px) solid sage-color(grey, 300);
 $-table-cell-padding-xs: sage-spacing(xs);
@@ -29,10 +28,14 @@ $-table-overflow-indicator-width: sage-spacing(sm);
 $-table-overflow-indicator-color-start: rgba(255, 255, 255, 0);
 $-table-overflow-indicator-color-end: sage-color(white);
 $-table-overflow-indicator-opacity: 0.95;
-$-table-overflow-indicator-gradient: linear-gradient(90deg, $-table-overflow-indicator-color-start 0%, rgba($-table-overflow-indicator-color-end, $-table-overflow-indicator-opacity) 100%);
+$-table-overflow-indicator-gradient: linear-gradient(
+  90deg,
+  $-table-overflow-indicator-color-start 0%,
+  rgba($-table-overflow-indicator-color-end, $-table-overflow-indicator-opacity)
+  100%
+);
 
 // Other
-$-table-row-color-stripe: sage-color(grey, 200);
 $-table-row-color-hover: sage-color(grey, 100);
 $-table-cell-focus: sage-color(charcoal, 300);
 $-table-cell-truncate-width: 6.5em;
@@ -40,7 +43,6 @@ $-table-sort-indicator-width: rem(5px);
 $-table-sort-indicator-direction: rem(7px);
 $-table-checkbox-width: rem(20px);
 $-table-avatar-width: rem(32px);
-
 
 // stylelint-disable selector-max-compound-selectors, max-nesting-depth, selector-no-qualifying-type
 
@@ -89,30 +91,6 @@ $-table-avatar-width: rem(32px);
     color: $-table-cell-font-color;
   }
 
-  thead {
-    tr {
-      background-color: transparent;
-
-      &:hover,
-      &:focus,
-      &:active,
-      &:focus-within {
-        background-color: transparent;
-      }
-    }
-  }
-
-  tr {
-    position: relative;
-
-    &:hover,
-    &:focus,
-    &:active,
-    &:focus-within {
-      background-color: $-table-row-color-hover;
-    }
-  }
-
   td {
     @extend #{$-table-cell-type-spec};
 
@@ -125,11 +103,6 @@ $-table-avatar-width: rem(32px);
 
       color: $-table-cell-font-color-strong;
     }
-  }
-
-  a:not(.sage-link--table-cell-primary),
-  button:not(.sage-link--table-cell-primary) {
-    z-index: sage-z-index(default, 2);
   }
 
   .sage-table-wrapper__overflow & {
@@ -156,15 +129,6 @@ $-table-avatar-width: rem(32px);
     th {
       padding-top: $-table-cell-padding-xs;
       padding-bottom: $-table-cell-padding-xs;
-    }
-  }
-}
-
-// Alternating rows of striped colors
-.sage-table--striped {
-  tbody {
-    tr:nth-child(odd) {
-      background-color: $-table-row-color-stripe;
     }
   }
 }
@@ -258,7 +222,7 @@ $-table-avatar-width: rem(32px);
   .sage-panel & {
     @include overflow-scroll();
     overflow-y: visible;
-    max-width: calc(100% + #{ 2 * sage-spacing(md)});
+    max-width: calc(100% + #{2 * sage-spacing(md)});
   }
 }
 
@@ -379,19 +343,5 @@ $-table-avatar-width: rem(32px);
   .sage-table-cell__block &,
   .sage-table-cell__link & {
     margin-left: 0.5em;
-  }
-}
-
-.sage-link--table-cell-primary {
-  color: sage-color(charcoal, 300);
-
-  &:active,
-  &:hover {
-    text-decoration: underline;
-  }
-
-  &:active,
-  &:focus {
-    color: sage-color(charcoal, 500);
   }
 }

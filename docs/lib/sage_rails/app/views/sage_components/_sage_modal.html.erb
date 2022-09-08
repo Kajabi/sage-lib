@@ -6,6 +6,7 @@
     <%= "sage-modal--no-blur" if component.disable_background_blur -%>
     <%= "sage-modal--no-background-dismiss" if component.disable_background_dismiss -%>
     <%= "sage-modal--scrollable" if component.allow_scroll %>
+    <%= "sage-modal--size-#{component.size}" if component.size %>
     <%= component.generated_css_classes %>
   "
   <%= "data-sage-animate" if component.animate.present? %>

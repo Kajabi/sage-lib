@@ -21,7 +21,6 @@ $-sidebar-top-offset: $sage-assistant-height;
   height: calc(100% - #{$-sidebar-top-offset});
   width: sage-sidebar(xl);
   background: $-sidebar-color-background;
-  border-right: sage-border();
   box-shadow: sage-shadow();
   overscroll-behavior-y: contain;
   transition: transform 0.2s ease-out, opacity 0.15s ease-in-out;

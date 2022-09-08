@@ -384,7 +384,8 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
 }
 
 .sage-btn--icon-right-caret-down::before {
-  .sage-dropdown__trigger--select & {
+  .sage-dropdown__trigger--select &,
+  .sage-dropdown__trigger & {
     color: sage-color(charcoal, 100);
   }
 }

@@ -10,16 +10,19 @@
   <td><%= md('`[]`') %></td>
 </tr>
 <tr>
+  <td><%= md('`drag_handle_type`') %></td>
+  <td><%= md('
+    By default only the drag handle is active for dragging/sorting a row.
+    However, `drag_handle_type` can be set to `"row"` in order to allow the whole row to be draggable instead.
+  ') %></td>
+  <td><%= md('`"default"` | `"row"` ') %></td>
+  <td><%= md('`"default"`') %></td>
+</tr>
+<tr>
   <td><%= md('`sortable_resource`') %></td>
   <td><%= md('Provide the resource name for a sortable list. Required only when `sortable` is activated for any child items') %></td>
   <td><%= md('String') %></td>
   <td><%= md('`nil`') %></td>
-</tr>
-<tr>
-  <td><%= md('`hide_first_border`') %></td>
-  <td><%= md('Removes top border from first list item within a SageList') %></td>
-  <td><%= md('Boolean') %></td>
-  <td><%= md('`false`') %></td>
 </tr>
 <tr>
   <td colspan="4">

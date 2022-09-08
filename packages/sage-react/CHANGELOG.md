@@ -3,6 +3,36 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.1.1...@kajabi/sage-react@1.1.2) (2022-08-16)
+
+**Note:** Version bump only for package @kajabi/sage-react
+
+
+
+
+
+## [1.1.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.1.0...@kajabi/sage-react@1.1.1) (2022-08-15)
+
+
+### Bug Fixes
+
+* **description:** remove icononly variation and update docs ([4a2ce9e](https://github.com/Kajabi/sage-lib/commit/4a2ce9e31e906fdd5d7206cbd2f26c6e838ad664))
+* **listitem:** address console errors related to proptype ([2f7b71b](https://github.com/Kajabi/sage-lib/commit/2f7b71b2f547a789713c84f15e50baa62830098b))
+* **lists:** sage-619 make list and table rows clickable ([cd226e0](https://github.com/Kajabi/sage-lib/commit/cd226e00e280fec821f51bbe3e28acc54f278a2d))
+* **select components:** add optgroup support to select component ([69c9eac](https://github.com/Kajabi/sage-lib/commit/69c9eac69a4334040cf0f4263c34f71904ea56bf))
+* **select optgroup:** update expected structure and associated logic ([f79e278](https://github.com/Kajabi/sage-lib/commit/f79e2784e4a80989b5d0e0420859a26c69d6a348))
+* **select react:** add selected value to story for parity with rails ([f21c762](https://github.com/Kajabi/sage-lib/commit/f21c7622c55d66addc7a1236ac450a602bea3bdf))
+* **select react:** fixes from review with Julian ([f39fd04](https://github.com/Kajabi/sage-lib/commit/f39fd047ef868efa3cdfe1760c8a2ceddc7bcc29))
+* **select react:** remove un-needed code ([9509964](https://github.com/Kajabi/sage-lib/commit/9509964b040c08b384dd9daae38110c097011fce))
+* **select react:** update code after review ([cb9c117](https://github.com/Kajabi/sage-lib/commit/cb9c117ea99fe4763df7ff4cfcb6178fcade3797))
+* **select react:** update logic to remove un-needed if statement ([69bf575](https://github.com/Kajabi/sage-lib/commit/69bf57516a954b05b54b97015d87cfb0c077286f))
+* **select story:** add newline at end of file ([89258a9](https://github.com/Kajabi/sage-lib/commit/89258a9d02e496270941500c64ef262ba6c94ae5))
+* **table:** updates per phil review ([68b2f6c](https://github.com/Kajabi/sage-lib/commit/68b2f6c112397f007605c35718e895d3506c10c4))
+
+
+
+
+
 # [1.1.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.0.0...@kajabi/sage-react@1.1.0) (2022-08-02)
 
 

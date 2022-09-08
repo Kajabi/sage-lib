@@ -23,19 +23,22 @@ export const PaginationItem = ({ children, current, disabled, onClick, url, }) =
     attrs.role = 'button';
   }
 
+  const Tag = current ? 'span' : 'a';
+
   return (
     <li className="sage-pagination__item">
-      <a
+      <Tag
         aria-disabled={disabled}
         className={classNames}
         href={url || '#'}
         onClick={handleClick}
+        aria-current={current}
         {...attrs}
       >
         <span className="sage-pagination__page-text">
           {children}
         </span>
-      </a>
+      </Tag>
     </li>
   );
 };

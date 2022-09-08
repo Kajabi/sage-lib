@@ -10,6 +10,7 @@ $-modal-padding-y: sage-spacing(md);
 $-modal-margin-lg: 6vh;
 $-modal-margin-xl: 8vh;
 $-modal-header-image-size: rem(28px);
+$-modal-fullscreen-max-width: sage-container(full);
 $-modal-fullscreen-top-spacing: rem(104px);
 $-modal-inner-size: sage-container(md);
 
@@ -172,6 +173,13 @@ $-modal-inner-size: sage-container(md);
     @include overflow-scroll(y);
     padding: sage-spacing(xs) sage-spacing(3xs);
   }
+
+  @each $-key, $-value in $sage-containers {
+    .sage-modal--size-#{$-key} & {
+      width: sage-container($-key);
+      max-width: none;
+    }
+  }
 }
 
 .sage-modal__header {
@@ -188,7 +196,6 @@ $-modal-inner-size: sage-container(md);
     margin: 0;
     padding: sage-spacing(sm) $-modal-padding-x;
     background-color: sage-color(white);
-    box-shadow: sage-shadow(sm);
   }
 }
 
@@ -239,7 +246,8 @@ $-modal-inner-size: sage-container(md);
   margin: $-modal-padding-y $-modal-padding-x;
 
   .sage-modal--fullscreen & {
-    margin-top: $-modal-fullscreen-top-spacing;
+    max-width: $-modal-fullscreen-max-width;
+    margin: $-modal-fullscreen-top-spacing auto sage-spacing() auto;
   }
 
   .sage-modal--scrollable & {

@@ -75,6 +75,20 @@ Loading.argTypes = {
   }
 };
 
+export const Disclosure = Template.bind({});
+Disclosure.args = {
+  disclosure: true,
+  color: Button.COLORS.SECONDARY
+};
+
+export const DisclosureIconOnly = Template.bind({});
+DisclosureIconOnly.args = {
+  disclosure: true,
+  icon: SageTokens.ICONS.REMOVE,
+  iconOnly: true,
+  color: Button.COLORS.SECONDARY
+};
+
 export const Fullwidth = Template.bind({});
 Fullwidth.args = {
   fullWidth: true
