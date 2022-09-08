@@ -56,23 +56,12 @@ export const Button = React.forwardRef(({
     rest['aria-live'] = 'polite';
   }
 
-  const renderLoader = () => (
-    <Loader
-      loading={loading}
-      type={Loader.TYPES.SPINNER_IN_BUTTON}
-      label={null}
-    />
-  );
-
   const renderContent = () => {
     if (iconOnly) {
       return (
-        <>
-          <span className="visually-hidden">
-            {children}
-          </span>
-          {renderLoader()}
-        </>
+        <span className="visually-hidden">
+          {children}
+        </span>
       );
     }
 
@@ -90,12 +79,9 @@ export const Button = React.forwardRef(({
     }
 
     return (
-      <>
-        <span className="sage-btn__truncate-text">
-          {children}
-        </span>
-        {renderLoader()}
-      </>
+      <span className="sage-btn__truncate-text">
+        {children}
+      </span>
     );
   };
 
@@ -113,6 +99,14 @@ export const Button = React.forwardRef(({
       {...rest}
     >
       {renderContent()}
+      {!hasCustomContent && (
+        <Loader
+          loading={loading}
+          type={Loader.TYPES.SPINNER_IN_BUTTON}
+          label={null}
+        />
+      )}
+
     </TagName>
   );
 });
