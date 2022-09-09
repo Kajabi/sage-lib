@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.1.0...@kajabi/sage-assets@1.2.0) (2022-09-09)
+
+
+### Bug Fixes
+
+* **button:** add disclosure button and apply to dropdown ([9ed590e](https://github.com/Kajabi/sage-lib/commit/9ed590e39b29fa17cbd45cb48c9b0f14c32cf589))
+* **button:** update disclosure button styling ([806c30c](https://github.com/Kajabi/sage-lib/commit/806c30c55d6ea0c53040cb28ac17fcf6b6d0ac5e))
+* **button:** update vars for button spacing ([9bd1143](https://github.com/Kajabi/sage-lib/commit/9bd1143f28e5428247c07e9b38a98e9d0d281362))
+* **table:** removed z-index as it clashes with panel controls ([53d11f5](https://github.com/Kajabi/sage-lib/commit/53d11f58dbda45427b9ea436f80b08dccc9f28e5))
+
+
+### Features
+
+* **icon:** remove additional deprecated icon ([444c0aa](https://github.com/Kajabi/sage-lib/commit/444c0aa50dd646c5a293cc09cdaa18e4626f2d6e))
+* **icon:** remove deprecated icons ([42a5ab2](https://github.com/Kajabi/sage-lib/commit/42a5ab26f41941d6073e62781f1fb6b1dd6c5f61))
+* **pagination:** update styles to latest spec ([e288b6d](https://github.com/Kajabi/sage-lib/commit/e288b6d55f07d8bce201b179787ca0e8882cfa19))
+
+
+### Reverts
+
+* Revert "chore(release): publish [skip ci]" ([9a4b1bb](https://github.com/Kajabi/sage-lib/commit/9a4b1bbd7bb3ac10b6fba62d56d9eed6dac73318))
+* Revert "chore(release): publish [skip ci]" ([b193b85](https://github.com/Kajabi/sage-lib/commit/b193b85cfddf1a502ff168bd6b2c46e2669f9903))
+
+
+
+
+
 # [1.1.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.0.4...@kajabi/sage-assets@1.1.0) (2022-08-31)
 
 

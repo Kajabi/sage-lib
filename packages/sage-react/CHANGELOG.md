@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.3.0...@kajabi/sage-react@1.4.0) (2022-09-09)
+
+
+### Bug Fixes
+
+* **button:** add disclosure button and apply to dropdown ([9ed590e](https://github.com/Kajabi/sage-lib/commit/9ed590e39b29fa17cbd45cb48c9b0f14c32cf589))
+* **button:** update disclosure button styling ([806c30c](https://github.com/Kajabi/sage-lib/commit/806c30c55d6ea0c53040cb28ac17fcf6b6d0ac5e))
+
+
+### Features
+
+* **icon:** remove deprecated icons ([42a5ab2](https://github.com/Kajabi/sage-lib/commit/42a5ab26f41941d6073e62781f1fb6b1dd6c5f61))
+* **pagination:** update how a single page is handled ([c4b8cef](https://github.com/Kajabi/sage-lib/commit/c4b8cef7e34d86a314d6f3415158208a16cb7220))
+
+
+
+
+
 # [1.3.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.2.0...@kajabi/sage-react@1.3.0) (2022-08-31)
 
 

@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.5.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.4.0...@kajabi/sage@5.5.0) (2022-09-09)
+
+
+### Bug Fixes
+
+* **alert:** adjust sage alert nilClass ([4bc05df](https://github.com/Kajabi/sage-lib/commit/4bc05df0d6f3ff63ff38d0a897d74e04589aae69))
+* **alert:** fix typo ([3db65a2](https://github.com/Kajabi/sage-lib/commit/3db65a2689e6cbf27459667fa6cc353390fa74c4))
+* **button:** add disclosure button and apply to dropdown ([9ed590e](https://github.com/Kajabi/sage-lib/commit/9ed590e39b29fa17cbd45cb48c9b0f14c32cf589))
+* **button:** update disclosure button styling ([806c30c](https://github.com/Kajabi/sage-lib/commit/806c30c55d6ea0c53040cb28ac17fcf6b6d0ac5e))
+* **card list:** bring back string removed by mistake from prop - hat-tip [@goodwinchris](https://github.com/goodwinchris) ([3f66e24](https://github.com/Kajabi/sage-lib/commit/3f66e24cd9a1dc4e7f129bdaf9993152a518ce18))
+* **icon:** update the select icon to enlarge ([0169fae](https://github.com/Kajabi/sage-lib/commit/0169fae51bc251493afc4c202f30f20d5bcafe1e))
+* **rails components:** add NilClass to optional props ([9a025e3](https://github.com/Kajabi/sage-lib/commit/9a025e315191eafc431c032b994c1906c82f520c))
+
+
+### Features
+
+* **icon:** remove deprecated icons ([42a5ab2](https://github.com/Kajabi/sage-lib/commit/42a5ab26f41941d6073e62781f1fb6b1dd6c5f61))
+* **pagination:** documentation regarding default value for `window` ([6fd59df](https://github.com/Kajabi/sage-lib/commit/6fd59df0e5d107491e91ab6458e520043e27ee5d))
+* **pagination:** in Rails, provide a fallback value for `window` so its truly optional ([2637c99](https://github.com/Kajabi/sage-lib/commit/2637c99ffea88aa02849265f0c3a01f7c634e6c3))
+* **pagination:** update how a single page is handled ([c4b8cef](https://github.com/Kajabi/sage-lib/commit/c4b8cef7e34d86a314d6f3415158208a16cb7220))
+
+
+
+
+
 # [5.4.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.3.0...@kajabi/sage@5.4.0) (2022-08-31)
 
 
