@@ -21,7 +21,6 @@ export default {
         </Button.Group>
       </>
     ),
-    compact: false,
     icon: SageTokens.ICONS.GEAR,
     text: 'Text Here',
     title: 'Title Here'
