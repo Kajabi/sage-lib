@@ -333,10 +333,12 @@ $-table-avatar-width: rem(32px);
 }
 
 .sage-table-cell--borders {
-  border-bottom: sage-border();
-
   tr:last-child & {
     border-bottom: 0;
+  }
+
+  @media screen and (min-width: sage-breakpoint(md-min)) {
+    border-bottom: sage-border();
   }
 }
 
@@ -358,7 +360,9 @@ $-table-avatar-width: rem(32px);
 
     tbody tr {
       position: relative;
+    }
 
+    &.sage-table--has-menu-options {
       td:last-of-type {
         position: absolute;
         top: 1rem;

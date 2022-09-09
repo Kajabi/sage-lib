@@ -116,6 +116,82 @@ sample_table = {
   caption: %(
     Block cells can be used with anchor tags to link the entire cell, or <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> elements for content
   ),
+  has_leading_input: true,
+  has_menu_options: true,
+  headers: [
+    "Name",
+    "Email",
+    "Revenue",
+    "Status"
+  ],
+  rows: [
+    [
+      %(
+        #{link_to "Frank Dux", "#", class: "sage-table-cell__link"}
+      ),
+      "fd@email.com",
+      "$275.43",
+      %(
+        #{sage_component(SageButton, {
+          value: "Icon only",
+          small: true,
+          style: "secondary",
+          subtle: true,
+          icon: {
+            style: "only",
+            name: "dot-menu-horizontal"
+          },
+          small: true
+        })})
+    ],
+    [
+      %(
+        #{link_to "Stinkmeaner", "#", class: "sage-table-cell__link"}
+      ),
+      "st@email.com",
+      "$775.43",
+      %(
+        #{sage_component(SageButton, {
+          value: "Icon only",
+          small: true,
+          style: "secondary",
+          subtle: true,
+          icon: {
+            style: "only",
+            name: "dot-menu-horizontal"
+          },
+          small: true
+        })})
+    ],
+    [
+      %(
+        #{link_to "Huey Freeman", "#", class: "sage-table-cell__link"}
+      ),
+      "hf@email.com",
+      "$1275.43",
+      %(
+        #{sage_component(SageButton, {
+          value: "Icon only",
+          small: true,
+          style: "secondary",
+          subtle: true,
+          icon: {
+            style: "only",
+            name: "dot-menu-horizontal"
+          },
+          small: true
+        })})
+    ],
+  ]
+} %>
+
+<h3 class="t-sage-heading-6">Table with checkbox selection</h3>
+<%= sage_component SageTable, {
+  caption: %(
+    Block cells can be used with anchor tags to link the entire cell, or <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> elements for content
+  ),
+  has_leading_input: true,
+  has_menu_options: true,
   headers: [
     "Name",
     "Email",

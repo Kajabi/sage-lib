@@ -19,6 +19,8 @@ end
       sage-table
       <%= "sage-table--selectable" if component.selectable %>
       <%= "sage-table--condensed" if component.condensed %>
+      <%= "sage-table--has-leading-input" if component.has_leading_input %>
+      <%= "sage-table--has-menu-options" if component.has_menu_options %>
     "
     data-js-table
     <%= component.generated_html_attributes.html_safe %>
