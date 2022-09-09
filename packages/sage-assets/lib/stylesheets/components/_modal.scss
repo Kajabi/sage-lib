@@ -64,6 +64,10 @@ $-modal-inner-size: sage-container(md);
     backdrop-filter: none;
     background-image: none;
   }
+
+  &.sage-modal--no-background.sage-modal--no-background-dismiss {
+    pointer-events: none;
+  }
 }
 
 .sage-modal--scrollable {

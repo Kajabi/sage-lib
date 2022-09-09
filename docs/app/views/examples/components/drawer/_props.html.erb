@@ -6,8 +6,27 @@
   <td><%= md('`false`') %></td>
 </tr>
 <tr>
+  <td><%= md('`disable_background`') %></td>
+  <td><%= md("Although Drawer disables the darkened background screen that a Modal typically shows,
+  this can be reactivated using `disable_background: false` when desired.
+  See [Modal](#{pages_component_path(:modal)}) for more.") %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`true`') %></td>
+</tr>
+<tr>
+  <td><%= md('`disable_background_blur`') %></td>
+  <td><%= md("While Drawer does not show a background screen by default,
+  if this background is turned on with `disable_background: false`,
+  the default blur effect that this screen employs by default can be disabled with `disabled_background_blur: true`.
+  See [Modal](#{pages_component_path(:modal)}) for more.") %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`false`') %></td>
+</tr>
+<tr>
   <td><%= md('`disable_background_dismiss`') %></td>
-  <td><%= md('Whether or not the background behind the Drawer should function as a "dismiss" area that, when clicked, closes the Drawer.') %></td>
+  <td><%= md("Although Drawer disables the affordance of being able to click outside a Modal to dismiss it,
+  this can be reactivated using `disable_background_dismiss: false` when desired.
+  See [Modal](#{pages_component_path(:modal)}) for more.") %></td>
   <td><%= md('Boolean') %></td>
   <td><%= md('`true`') %></td>
 </tr>

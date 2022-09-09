@@ -120,9 +120,13 @@ export const WiredExample = () => {
       <Drawer
         active={drawerActive}
         expanded={drawerExpanded}
-        onExit={() => setDrawerActive(false)}
+        onExit={() => {
+          setDrawerExpanded(false);
+          setDrawerActive(false);
+        }}
         onExpandChange={respondToDrawerExpandChange}
         customHeader={drawerCustomHeader}
+        disableBackground={!drawerExpanded}
         disableBackgroundDismiss={!drawerExpanded}
       >
         {drawerContents}

@@ -16,6 +16,8 @@ export const Drawer = ({
   children,
   className,
   customHeader,
+  disableBackground,
+  disableBackgroundBlur,
   disableBackgroundDismiss,
   expanded,
   expandedSize,
@@ -61,6 +63,8 @@ export const Drawer = ({
       active={active}
       animation={{ direction: Modal.ANIMATION_DIRECTIONS.LEFT }}
       className={classNames}
+      disableBackground={disableBackground}
+      disableBackgroundBlur={disableBackgroundBlur}
       disableBackgroundDismiss={disableBackgroundDismiss}
       id={id}
       onExit={onExit}
@@ -103,6 +107,8 @@ Drawer.defaultProps = {
   children: null,
   className: null,
   customHeader: null,
+  disableBackground: true,
+  disableBackgroundBlur: false,
   disableBackgroundDismiss: true,
   expanded: false,
   expandedSize: null,
@@ -118,6 +124,8 @@ Drawer.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
   customHeader: PropTypes.node,
+  disableBackground: PropTypes.bool,
+  disableBackgroundBlur: PropTypes.bool,
   disableBackgroundDismiss: PropTypes.bool,
   expanded: PropTypes.bool,
   expandedSize: PropTypes.string,

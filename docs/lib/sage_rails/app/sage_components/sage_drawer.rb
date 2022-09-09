@@ -1,6 +1,8 @@
 class SageDrawer < SageComponent
   set_attribute_schema({
     active: [:optional, NilClass, TrueClass],
+    disable_background: [:optional, NilClass, TrueClass],
+    disable_background_blur: [:optional, NilClass, TrueClass],
     disable_background_dismiss: [:optional, NilClass, TrueClass],
     expanded: [:optional, NilClass, TrueClass],
     expanded_size: [:optional, NilClass, String],
