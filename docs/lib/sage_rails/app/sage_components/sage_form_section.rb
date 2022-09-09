@@ -1,8 +1,8 @@
 class SageFormSection < SageComponent
   set_attribute_schema({
-    id: [:optional, String],
+    id: [:optional, NilClass, String],
     subtitle: [:optional, NilClass, String],
-    title_tag: [:optional, String],
+    title_tag: [:optional, NilClass, String],
     title: [:optional, NilClass, String],
   })
 

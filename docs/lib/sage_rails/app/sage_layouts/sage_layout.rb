@@ -7,11 +7,11 @@ class SageLayout
 
   ATTRIBUTE_SCHEMA = {
     test_id: [:optional, NilClass, String],
-    html_attributes: [:optional, Hash],
-    spacer: [:optional, SageSchemas::SPACER],
+    html_attributes: [:optional, NilClass, Hash],
+    spacer: [:optional, NilClass, SageSchemas::SPACER],
     css_classes: [:optional, NilClass, String],
-    content: [:optional, String],
-    styles: [:optional, Hash],
+    content: [:optional, NilClass, String],
+    styles: [:optional, NilClass, Hash],
   }
 
   def generated_css_classes

@@ -1,7 +1,7 @@
 class SagePanelSubheader < SageComponent
   set_attribute_schema({
-    subtext: [:optional, String],
-    title: [:optional, String],
+    subtext: [:optional, NilClass, String],
+    title: [:optional, NilClass, String],
   })
 
   def sections

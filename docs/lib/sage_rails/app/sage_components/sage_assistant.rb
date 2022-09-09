@@ -1,11 +1,11 @@
 class SageAssistant < SageComponent
   set_attribute_schema({
-    logo: [:optional, {
+    logo: [:optional, NilClass, {
       path: String,
       method: [:optional, NilClass, Set.new(["pack"])],
     }],
-    menu_button: [:optional, TrueClass],
-    menu_button_controls: [:optional, String],
+    menu_button: [:optional, NilClass, TrueClass],
+    menu_button_controls: [:optional, NilClass, String],
   })
 
   def sections

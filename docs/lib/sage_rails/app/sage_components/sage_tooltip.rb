@@ -1,8 +1,8 @@
 class SageTooltip < SageComponent
   set_attribute_schema({
-    position: [:optional, Set.new(["top", "right", "bottom", "left"])],
-    size: [:optional, Set.new(["small", "large"])],
-    text: [:optional, String],
-    theme: [:optional, Set.new(["light"])],
+    position: [:optional, NilClass, Set.new(["top", "right", "bottom", "left"])],
+    size: [:optional, NilClass, Set.new(["small", "large"])],
+    text: [:optional, NilClass, String],
+    theme: [:optional, NilClass, Set.new(["light"])],
   })
 end

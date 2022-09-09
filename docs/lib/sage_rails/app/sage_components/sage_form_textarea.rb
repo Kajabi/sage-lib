@@ -1,12 +1,12 @@
 class SageFormTextarea < SageComponent
   set_attribute_schema({
-    content: [:optional, String],
-    disabled: [:optional, TrueClass],
-    has_error: [:optional, TrueClass],
+    content: [:optional, NilClass, String],
+    disabled: [:optional, NilClass, TrueClass],
+    has_error: [:optional, NilClass, TrueClass],
     id: String,
-    label_text: [:optional, String],
-    message_text: [:optional, String],
-    name: [:optional, String],
-    placeholder: [:optional, String],
+    label_text: [:optional, NilClass, String],
+    message_text: [:optional, NilClass, String],
+    name: [:optional, NilClass, String],
+    placeholder: [:optional, NilClass, String],
   })
 end

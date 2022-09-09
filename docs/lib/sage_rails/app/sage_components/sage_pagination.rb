@@ -1,14 +1,14 @@
 class SagePagination < SageComponent
   set_attribute_schema({
-    align: [:optional, Set.new(["center"])],
+    align: [:optional, NilClass, Set.new(["center"])],
     items: -> (v) { SageSchemas.can_paginate?(v) },
-    window: [:optional, Integer],
-    hide_pages: [:optional, TrueClass],
-    hide_counter: [:optional, TrueClass],
-    additional_params: [:optional, Hash],
-    collection_name: [:optional, String],
-    page_count_prefix: [:optional, String],
-    page_count_suffix: [:optional, String],
+    window: [:optional, NilClass, Integer],
+    hide_pages: [:optional, NilClass, TrueClass],
+    hide_counter: [:optional, NilClass, TrueClass],
+    additional_params: [:optional, NilClass, Hash],
+    collection_name: [:optional, NilClass, String],
+    page_count_prefix: [:optional, NilClass, String],
+    page_count_suffix: [:optional, NilClass, String],
   })
 
   def initialize(attributes = {})
@@ -28,5 +28,9 @@ class SagePagination < SageComponent
       last = collection.last_page? ? collection.total_count : collection.offset_value + collection.limit_value
       "<strong>#{first}</strong> - <strong>#{last}</strong> of <strong>#{collection.total_count}</strong> #{entry_name}"
     end.html_safe
+  end
+
+  def pagination_text(text)
+    %(<span class="sage-pagination__page-text">#{text}</span>).html_safe
   end
 end

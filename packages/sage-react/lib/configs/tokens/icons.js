@@ -225,13 +225,4 @@ export const TOKENS_ICONS = {
   WARNING_FILLED: 'warning-filled',
   WINDOW_PARAGRAPH: 'window-paragraph',
   WORLD: 'world',
-
-  // Deprecations
-  BETA: 'beta',
-  FILTERS: 'filters',
-  GRAPH: 'graph',
-  LIST_DETAILS: 'list-details',
-  LIST_STACK: 'list-stack',
-  SELECT: 'select',
-  SUCCESS: 'success',
 };

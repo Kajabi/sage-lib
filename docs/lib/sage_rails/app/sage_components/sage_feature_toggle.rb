@@ -1,21 +1,21 @@
 class SageFeatureToggle < SageComponent
   set_attribute_schema({
-    alt_text: [:optional, String],
-    description: [:optional, String],
-    icon: [:optional, SageIconCard::ATTRIBUTE_SCHEMA],
-    image: [:optional, String],
-    links: [:optional, [[{
+    alt_text: [:optional, NilClass, String],
+    description: [:optional, NilClass, String],
+    icon: [:optional, NilClass, SageIconCard::ATTRIBUTE_SCHEMA],
+    image: [:optional, NilClass, String],
+    links: [:optional, [[NilClass, {
       icon: [:optional, NilClass, String],
-      location: [:optional, String],
-      target: [:optional, String],
-      text: [:optional, String],
+      location: [:optional, NilClass, String],
+      target: [:optional, NilClass, String],
+      text: [:optional, NilClass, String],
     }]]],
     label: [:optional, {
-      color: [:optional, SageSchemas::STATUSES],
-      value: [:optional, String],
+      color: [:optional, NilClass, SageSchemas::STATUSES],
+      value: [:optional, NilClass, String],
     }],
-    title: [:optional, String],
-    title_tag: [:optional, String],
+    title: [:optional, NilClass, String],
+    title_tag: [:optional, NilClass, String],
   })
 
   def sections

@@ -296,6 +296,77 @@ demo_configs = [
   } %>
 </div>
 
+<h3>Disclosure Button</h3>
+<%= md("
+  The disclosure button is used mainly with menus and dropdown components, accompanied with a down caret icon.
+", use_sage_type: true) %>
+<div>
+  <%= sage_component SageButton, {
+    value: "Month",
+    disclosure: true,
+    attributes: {
+      href: "#",
+      rel: "noopener",
+      title: "Open Sassdocs site"
+    },
+    style: "secondary",
+  } %>
+</div>
+
+<h4>Disclosure Button with Icon</h4>
+<%= md("
+  The disclosure button allows for an icon affordance.
+", use_sage_type: true) %>
+<div>
+  <%= sage_component SageButton, {
+    value: "Add item",
+    disclosure: true,
+    icon: { name: "add", style: "left" },
+    attributes: {
+      href: "#",
+      rel: "noopener",
+      title: "Open Sassdocs site"
+    },
+    style: "secondary",
+  } %>
+</div>
+
+<h4>Disclosure Button - Icon Only</h4>
+<%= md("
+  The disclosure button allows for an icon affordance.
+", use_sage_type: true) %>
+<div>
+  <%= sage_component SageButton, {
+    value: "Add item",
+    disclosure: true,
+    icon: { name: "add", style: "only" },
+    attributes: {
+      href: "#",
+      rel: "noopener",
+      title: "Open Sassdocs site"
+    },
+    style: "secondary",
+  } %>
+</div>
+<h4>Disclosure Button - Icon Only small</h4>
+<%= md("
+  The disclosure button allows for an icon affordance to exist with hidden text.
+", use_sage_type: true) %>
+<div>
+  <%= sage_component SageButton, {
+    value: "Add item",
+    disclosure: true,
+    small: true,
+    icon: { name: "add", style: "only" },
+    attributes: {
+      href: "#",
+      rel: "noopener",
+      title: "Open Sassdocs site"
+    },
+    style: "secondary",
+  } %>
+</div>
+
 <h3>Loading State</h3>
 <%= md("
   Displays a loading indicator in the button, such as when a button is used to submit a form. Including the `spinner_on_submit` property will activate the loading state, and place the corresponding text as the `aria-label`.

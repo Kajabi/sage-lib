@@ -5,6 +5,7 @@ import { SageTokens } from '../configs';
 
 export const DropdownTriggerDefault = ({
   disabled,
+  disclosure,
   icon,
   isLabelVisible,
   label,
@@ -14,6 +15,7 @@ export const DropdownTriggerDefault = ({
   <Button
     color={Button.COLORS.SECONDARY}
     disabled={disabled}
+    disclosure={disclosure}
     icon={icon}
     iconOnly={!isLabelVisible}
     onClick={onClick}
@@ -26,6 +28,7 @@ export const DropdownTriggerDefault = ({
 
 DropdownTriggerDefault.defaultProps = {
   disabled: false,
+  disclosure: false,
   isLabelVisible: true,
   icon: null,
   subtle: false,
@@ -33,6 +36,7 @@ DropdownTriggerDefault.defaultProps = {
 
 DropdownTriggerDefault.propTypes = {
   disabled: PropTypes.bool,
+  disclosure: PropTypes.bool,
   onClick: PropTypes.func.isRequired,
   label: PropTypes.string.isRequired,
   icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),

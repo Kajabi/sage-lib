@@ -6,8 +6,8 @@ class SageDrawer < SageComponent
     expanded_size: [:optional, NilClass, String],
     id: [:optional, NilClass, String],
     size: [:optional, NilClass, String],
-    show_close: [:optional, TrueClass],
-    title: [:optional, String],
+    show_close: [:optional, NilClass, TrueClass],
+    title: [:optional, NilClass, String],
   })
   def sections
     %w(drawer_header)

@@ -1,8 +1,8 @@
 class SageBadge < SageComponent
   set_attribute_schema({
-    container_attributes: [:optional, Hash],
-    color: [:optional, SageSchemas::STATUSES],
-    interactive_type: [:optional, Set.new([:default, :dropdown])],
+    container_attributes: [:optional, NilClass, Hash],
+    color: [:optional, NilClass, SageSchemas::STATUSES],
+    interactive_type: [:optional, NilClass, Set.new([:default, :dropdown])],
     value: String,
   })
 

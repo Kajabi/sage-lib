@@ -1,6 +1,6 @@
 class SageCardFigure < SageComponent
   set_attribute_schema({
-    bleed: [:optional, TrueClass],
-    is_wistia: [:optional, TrueClass],
+    bleed: [:optional, NilClass, TrueClass],
+    is_wistia: [:optional, NilClass, TrueClass],
   })
 end
