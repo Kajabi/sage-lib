@@ -1,70 +1,6 @@
 <%
 sample_body_text = "<p class='#{SageClassnames::TYPE::BODY}'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>".html_safe
 long_sample_text = "<p class=' #{SageClassnames::TYPE::BODY}'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse urna leo, condimentum nec pellentesque finibus, ultricies pulvinar ante. Donec eu interdum ligula. Pellentesque aliquam ullamcorper orci, nec tempor libero tristique in. Aliquam vitae felis at leo condimentum placerat eget id libero. In dictum tortor ac accumsan aliquam. Donec sit amet tortor porttitor, tincidunt nisl at, egestas lacus. Integer metus augue, aliquet accumsan vulputate eget, tristique id erat. Donec a venenatis nibh, ac molestie risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus in orci vitae ex tempor ultrices in a leo. Sed purus magna, vulputate aliquet ligula eget, consectetur sagittis nunc.</p>".html_safe
-
-modal_examples = [
-  {
-    text: "Modal with scrolling body",
-    modal_id: "cool-modal-scrolling",
-  },
-  {
-    text: "Modal with Header Image",
-    modal_id: "cool-modal-header-image",
-  },
-  {
-    text: "Modal with Header Icon",
-    modal_id: "cool-modal-header-icon",
-  },
-  {
-    text: "Large Modal (removed)",
-    modal_id: "cool-modal-large",
-  },
-  {
-    text: "Modal with Size Option",
-    modal_id: "cool-modal-size-option",
-  },
-  {
-    text: "Spaced Modal",
-    modal_id: "cool-modal-spaced",
-  },
-  {
-    text: "Fullscreen Modal",
-    modal_id: "cool-modal-fullscreen",
-  },
-  {
-    text: "Fullscreen Modal with Header Actions",
-    modal_id: "cool-modal-fullscreen-header-actions",
-  },
-  {
-    text: "Modal with disabled background",
-    modal_id: "cool-modal-no-background",
-  },
-  {
-    text: "Modal with disabled background dismiss",
-    modal_id: "cool-modal-no-background-dismiss",
-  },
-  {
-    text: "Modal with disabled background and background dismiss",
-    modal_id: "cool-modal-no-background-no-dismiss",
-  },
-  {
-    text: "Default animation",
-    modal_id: "cool-modal-animate-default",
-  },
-  {
-    text: "Animated to top",
-    modal_id: "cool-modal-animate-top",
-  },
-  {
-    text: "Animated to left (blur off)",
-    modal_id: "cool-modal-animate-left",
-  },
-  {
-    text: "Animated to right (blur off)",
-    modal_id: "cool-modal-animate-right",
-  },
-]
-
 %>
 
 <%
@@ -154,9 +90,69 @@ In order to configure a fully connected Modal:
 #
 # Modal variants
 #
+# NOTE: This list generates a table of example modal triggers.
+# The modals themselves are further down in this document
+# with comments at the top that correspond to the `text` in this table.
 %>
 <h4 class=<%= SageClassnames::TYPE::HEADING_4 %>>Modal variants</h4>
-<%= sage_table_for modal_examples do | t | %>
+<%= sage_table_for [
+  {
+    text: "Modal with scrolling body",
+    modal_id: "cool-modal-scrolling",
+  },
+  {
+    text: "Modal with Header Image",
+    modal_id: "cool-modal-header-image",
+  },
+  {
+    text: "Modal with Header Icon",
+    modal_id: "cool-modal-header-icon",
+  },
+  {
+    text: "Modal with Size Option",
+    modal_id: "cool-modal-size-option",
+  },
+  {
+    text: "Spaced Modal",
+    modal_id: "cool-modal-spaced",
+  },
+  {
+    text: "Fullscreen Modal",
+    modal_id: "cool-modal-fullscreen",
+  },
+  {
+    text: "Fullscreen Modal with Header Actions",
+    modal_id: "cool-modal-fullscreen-header-actions",
+  },
+  {
+    text: "Modal with disabled background",
+    modal_id: "cool-modal-no-background",
+  },
+  {
+    text: "Modal with disabled background dismiss",
+    modal_id: "cool-modal-no-background-dismiss",
+  },
+  {
+    text: "Modal with disabled background and background dismiss",
+    modal_id: "cool-modal-no-background-no-dismiss",
+  },
+  {
+    text: "Animated Modal: default",
+    modal_id: "cool-modal-animate-default",
+  },
+  {
+    text: "Animated Modal: to top",
+    modal_id: "cool-modal-animate-top",
+  },
+  {
+    text: "Animated Modal: to left (blur off)",
+    modal_id: "cool-modal-animate-left",
+  },
+  {
+    text: "Animated Modal: to right (blur off)",
+    modal_id: "cool-modal-animate-right",
+  },
+] do | t | %>
   <% t.column :text, label: "Variant" do |c| %>
     <%= c[:text]  %>
   <% end %>
@@ -172,7 +168,7 @@ In order to configure a fully connected Modal:
   <% end %>
 <% end %>
 
-<%# Standard Modal with Scrolling %>
+<%# Modal with scrolling body %>
 <%= sage_component SageModal, { allow_scroll: true, id: "cool-modal-scrolling" } do %>
   <%= sage_component SageModalContent, {
     title: "Example Modal",
@@ -231,7 +227,7 @@ In order to configure a fully connected Modal:
   <% end %>
 <% end %>
 
-<%# Standard Modal with Header Image %>
+<%# Modal with Header Image %>
 <%= sage_component SageModal, { id: "cool-modal-header-image" } do %>
   <%= sage_component SageModalContent, {
     header_image: "card-placeholder-sm.png",
@@ -267,7 +263,7 @@ In order to configure a fully connected Modal:
   <% end %>
 <% end %>
 
-<%# Standard Modal with Header Icon %>
+<%# Modal with Header Icon %>
 <%= sage_component SageModal, { id: "cool-modal-header-icon" } do %>
   <%= sage_component SageModalContent, {
     header_icon: {
@@ -306,48 +302,11 @@ In order to configure a fully connected Modal:
   <% end %>
 <% end %>
 
-<%# Standard Modal with Size Option %>
+<%# Modal with Size Option %>
 <%= sage_component SageModal, { id: "cool-modal-size-option", size: "full" } do %>
   <%= sage_component SageModalContent, {
     title: "Example Modal"
   } do %>
-    <% content_for :sage_header_aside do %>
-      <%= sage_component SageButton, {
-        style: "secondary",
-        subtle: true,
-        value: "Close Modal",
-        icon: { name: "remove", style: "only" },
-        attributes: { "data-js-modal": true }
-      } %>
-    <% end %>
-
-    <%= sample_body_text %>
-
-    <% content_for :sage_footer do %>
-      <% content_for :sage_footer_aside do %>
-        <%= sage_component SageButton, {
-          style: "secondary",
-          subtle: true,
-          value: "Close Modal",
-          attributes: { "data-js-modal": true }
-        } %>
-      <% end %>
-      <%= sage_component SageButton, {
-        style: "primary",
-        icon: { name: "check", style: "left" },
-        value: "Take An Action",
-      } %>
-    <% end %>
-  <% end %>
-<% end %>
-
-<%# Large Modal %>
-<%= sage_component SageModal, {
-  id: "cool-modal-large",
-  large: true,
-  remove_content_on_close: true
-} do %>
-  <%= sage_component SageModalContent, { title: "Example Large Modal" } do %>
     <% content_for :sage_header_aside do %>
       <%= sage_component SageButton, {
         style: "secondary",
@@ -517,7 +476,7 @@ In order to configure a fully connected Modal:
   <% end %>
 <% end %>
 
-<%# Standard modal with background disabled %>
+<%# Modal with disabled background %>
 <%= sage_component SageModal, {
   id: "cool-modal-no-background",
   disable_background: true,
@@ -546,7 +505,7 @@ In order to configure a fully connected Modal:
   <% end %>
 <% end %>
 
-<%# Standard modal with background dismiss disabled %>
+<%# Modal with disabled background dismiss %>
 <%= sage_component SageModal, {
   id: "cool-modal-no-background-dismiss",
   disable_background_dismiss: true,
@@ -575,7 +534,7 @@ In order to configure a fully connected Modal:
   <% end %>
 <% end %>
 
-<%# Standard modal with background and background dismiss disabled %>
+<%# Modal with disabled background and background dismiss %>
 <%= sage_component SageModal, {
   id: "cool-modal-no-background-no-dismiss",
   disable_background: true,
@@ -605,7 +564,7 @@ In order to configure a fully connected Modal:
   <% end %>
 <% end %>
 
-<%# Animated Modals: default %>
+<%# Animated Modal: default %>
 <%= sage_component SageModal, { id: "cool-modal-animate-default", animate: true, css_classes: "custom-class-name-here" } do %>
   <%= sage_component SageModalContent, { title: "Example Modal" } do %>
     <% content_for :sage_header_aside do %>
@@ -638,7 +597,7 @@ In order to configure a fully connected Modal:
   <% end %>
 <% end %>
 
-<%# Animated Modals: to top %>
+<%# Animated Modal: to top %>
 <%= sage_component SageModal, { id: "cool-modal-animate-top", animate: { direction: "top" } } do %>
   <%= sage_component SageModalContent, { title: "Example Modal" } do %>
     <% content_for :sage_header_aside do %>
@@ -671,7 +630,7 @@ In order to configure a fully connected Modal:
   <% end %>
 <% end %>
 
-<%# Animated Modals: to left %>
+<%# Animated Modal: to left (blur off) %>
 <%= sage_component SageModal, { id: "cool-modal-animate-left", disable_background_blur: true, animate: { direction: "left" } } do %>
   <%= sage_component SageModalContent, { title: "Example Modal" } do %>
     <% content_for :sage_header_aside do %>
@@ -704,7 +663,7 @@ In order to configure a fully connected Modal:
   <% end %>
 <% end %>
 
-<%# Animated Modals: to right %>
+<%# Animated Modal: to right (blur off) %>
 <%= sage_component SageModal, { id: "cool-modal-animate-right", disable_background_blur: true, animate: { direction: "right" } } do %>
   <%= sage_component SageModalContent, { title: "Example Modal" } do %>
     <% content_for :sage_header_aside do %>
