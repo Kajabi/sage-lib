@@ -34,6 +34,7 @@ export const Tabs = ({
     tabsClassName,
     {
       'sage-tabs--progressbar': tabStyle === TAB_STYLES.PROGRESSBAR,
+      'sage-tabs--filter': tabStyle === TAB_STYLES.FILTER,
       'sage-tabs--align-items-center': tabStyle === TAB_STYLES.CHOICE && alignItemsCenter,
       'sage-tabs--choice': tabStyle === TAB_STYLES.CHOICE,
       [`sage-tabs--layout-${tabLayout}`]: tabLayout,
@@ -78,7 +79,7 @@ export const Tabs = ({
             disabled={disabled}
             icon={tabChoiceIcon}
             isActive={id === activeId}
-            itemStyle={tabStyle === 'progressbar' ? 'tab' : tabStyle}
+            itemStyle={tabStyle === 'progressbar' || 'filter' ? 'tab' : tabStyle}
             key={id.toString()}
             onClick={handleClickTab}
             panelId={id}

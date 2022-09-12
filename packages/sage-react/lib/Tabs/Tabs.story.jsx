@@ -200,3 +200,26 @@ Background.args = {
   useSeparator: true,
   withBackground: true,
 };
+
+export const Filter = Template.bind({});
+Filter.args = {
+  tabs: [
+    {
+      id: 'filter-1',
+      label: 'Current',
+      href: '#'
+    },
+    {
+      id: 'filter-2',
+      label: 'Past',
+      href: '#'
+    },
+    {
+      id: 'filter-3',
+      label: 'All',
+      href: '#'
+    },
+  ],
+  initialActiveId: 'filter-2',
+  tabStyle: Tabs.STYLES.FILTER
+};
