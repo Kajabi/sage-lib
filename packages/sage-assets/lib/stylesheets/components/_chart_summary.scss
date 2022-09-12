@@ -26,14 +26,14 @@
 
 .sage-chart-summary__caption {
   @extend %t-sage-body-xsmall-med;
-  @include clamp(1);
+  @include line-clamp(1);
 
   color: sage-color(charcoal, 100);
 }
 
 .sage-chart-summary__label {
   @extend %t-sage-body-small-med;
-  @include clamp(2);
+  @include line-clamp(2);
 
   color: sage-color(charcoal, 200);
 }
