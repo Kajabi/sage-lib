@@ -79,7 +79,7 @@ export const Tabs = ({
             disabled={disabled}
             icon={tabChoiceIcon}
             isActive={id === activeId}
-            itemStyle={tabStyle === 'progressbar' || 'filter' ? 'tab' : tabStyle}
+            itemStyle={tabStyle === 'progressbar' ? 'tab' : tabStyle === 'filter' ? 'tab' : 'tab'}
             key={id.toString()}
             onClick={handleClickTab}
             panelId={id}
