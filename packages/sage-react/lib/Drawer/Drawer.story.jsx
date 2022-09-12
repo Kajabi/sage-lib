@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { Drawer } from './Drawer';
 import { SageClassnames, SageTokens } from '../configs';
 import { Button } from '../Button';
@@ -65,27 +65,7 @@ export const WiredExample = () => {
     </Button>
   );
 
-  const drawerExpandedChildren = (
-    <>
-      <h3 className={`${SageClassnames.TYPE.HEADING_4} ${SageClassnames.TYPE_COLORS.CHARCOAL_500}`}>
-        Drawer
-      </h3>
-      <p>👋  Any content can go here.</p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Esse quam assumenda a ut, architecto rerum vel quisquam,
-        repellendus nemo quo saepe at voluptatem eveniet earum
-        laudantium nostrum quibusdam?
-        Repellendus, repudiandae.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Eum in deleniti doloribus sequi ipsam unde pariatur perspiciatis
-        ex molestias temporibus accusantium fuga debitis,
-        voluptates hic eos ab perferendis ad quo.
-      </p>
-    </>
-  );
-
-  const respondToDrawerExpandChange = (status) => {
+  const respondToDrawerExpandChange = useCallback((status) => {
     switch (status) {
       case Drawer.END_EXPAND:
         setDrawerContents((
@@ -94,7 +74,21 @@ export const WiredExample = () => {
               {drawerChildren}
             </Grid.Col>
             <Grid.Col size={8}>
-              {drawerExpandedChildren}
+              <h3 className={`${SageClassnames.TYPE.HEADING_4} ${SageClassnames.TYPE_COLORS.CHARCOAL_500}`}>
+                Drawer
+              </h3>
+              <p>👋  Any content can go here.</p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Esse quam assumenda a ut, architecto rerum vel quisquam,
+                repellendus nemo quo saepe at voluptatem eveniet earum
+                laudantium nostrum quibusdam?
+                Repellendus, repudiandae.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Eum in deleniti doloribus sequi ipsam unde pariatur perspiciatis
+                ex molestias temporibus accusantium fuga debitis,
+                voluptates hic eos ab perferendis ad quo.
+              </p>
             </Grid.Col>
           </Grid>
         ));
@@ -107,7 +101,7 @@ export const WiredExample = () => {
         ));
         break;
     }
-  };
+  }, [setDrawerContents]);
 
   return (
     <>
@@ -124,6 +118,7 @@ export const WiredExample = () => {
           setDrawerExpanded(false);
           setDrawerActive(false);
         }}
+        id="1234jkhkqd"
         onExpandChange={respondToDrawerExpandChange}
         customHeader={drawerCustomHeader}
         disableBackground={!drawerExpanded}

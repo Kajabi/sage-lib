@@ -38,7 +38,7 @@ export const Drawer = ({
         onExpandChange(expanded ? DRAWER_END_EXPAND : DRAWER_END_COLLAPSE);
       }, 750);
     }
-  }, [expanded]);
+  }, [expanded, onExpandChange]);
 
   const classNames = classnames(
     'sage-drawer',
