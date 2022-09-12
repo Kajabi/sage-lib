@@ -115,3 +115,34 @@
       ]
     }
   %>
+
+
+
+<h3 class="t-sage-heading-6">Filter style</h3>
+<div class="sage-tabs-container">
+  <%= sage_component SageTabs, {
+      id: "filter-tabs-example",
+      style: "filter",
+      items: [
+        {
+          text: "Current",
+          attributes: {
+            href: "//example.com/basic-test1",
+          },
+        },
+        {
+          text: "Past",
+          attributes: {
+            href: "//example.com/basic-test2"
+          },
+          active: true
+        },
+        {
+          text: "All",
+          attributes: {
+            href: "//example.com/basic-test3"
+          },
+        },
+      ]
+    }
+  %>
