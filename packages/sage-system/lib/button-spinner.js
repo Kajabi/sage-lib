@@ -24,6 +24,8 @@ Sage.buttonSpinner = (function () {
     currentTarget.setAttribute(ATTRIBUTE_ARIA_LIVE, 'polite');
 
     let element = document.createElement('span');
+    element.classList.add('sage-loader');
+    element.classList.add('sage-loader--spinner');
     element.innerHTML = BUTTON_LOADING_SPINNER;
 
     currentTarget.appendChild(element)

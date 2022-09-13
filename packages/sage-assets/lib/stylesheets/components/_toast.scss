@@ -116,16 +116,6 @@ $-toast-bottom-spacing: sage-spacing(xs);
   position: relative;
 }
 
-.sage-loader__spinner--loading-button {
-  width: sage-spacing(sm);
-  height: sage-spacing(sm);
-  margin-right: sage-spacing(xs);
-}
-
-.sage-loader__spinner-path--loading-button {
-  stroke: currentColor;
-}
-
 .sage-toast__value {
   @include truncate();
 
