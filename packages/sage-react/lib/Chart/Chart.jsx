@@ -18,7 +18,11 @@ export const Chart = ({
   const renderChart = () => {
     if (!data) {
       return (
-        <EmptyState compact={true} icon={SageTokens.ICONS.CHART} text={noDataText} />
+        <EmptyState
+          scope={EmptyState.SCOPES.COMPACT}
+          icon={SageTokens.ICONS.CHART}
+          text={noDataText}
+        />
       );
     }
 
