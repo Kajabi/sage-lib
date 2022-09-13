@@ -58,6 +58,13 @@ export const Tabs = ({
     }
   };
 
+  const setTabStyle = (tabStyle) => {
+    if (tabStyle === TAB_STYLES.FILTER || tabStyle === TAB_STYLES.PROGRESSBAR) {
+      return 'tab';
+    }
+    return tabStyle;
+  };
+
   return (
     <div className={`sage-tabs-container ${className || ''}`}>
       <div className={tabsClassNames} role="tablist" {...rest}>
@@ -79,7 +86,7 @@ export const Tabs = ({
             disabled={disabled}
             icon={tabChoiceIcon}
             isActive={id === activeId}
-            itemStyle={tabStyle === 'progressbar' ? 'tab' : tabStyle === 'filter' ? 'tab' : tabStyle}
+            itemStyle={setTabStyle(tabStyle)}
             key={id.toString()}
             onClick={handleClickTab}
             panelId={id}
@@ -130,8 +137,8 @@ Tabs.defaultProps = {
   onChangeTabsHook: null,
   onClickTab: null,
   panesClassName: null,
-  tabLayout: TAB_LAYOUTS.DEFAULT,
-  tabStyle: TAB_STYLES.TAB,
+  tabLayout: Tabs.LAYOUTS.DEFAULT,
+  tabStyle: Tabs.STYLES.TAB,
   tabsClassName: null,
   useSeparator: false,
   withBackground: false,
@@ -140,15 +147,15 @@ Tabs.defaultProps = {
 Tabs.propTypes = {
   alignItemsCenter: PropTypes.bool,
   className: PropTypes.string,
-  gap: PropTypes.oneOf(Object.values(SageTokens.GRID_GAP_OPTIONS.SM)),
+  gap: PropTypes.oneOf(Object.values(SageTokens.GRID_GAP_OPTIONS)),
   initialActiveId: PropTypes.string,
   justify: PropTypes.oneOf(Object.values(Tabs.JUSTIFY_OPTIONS)),
   onChangeTabsHook: PropTypes.func,
   onClickTab: PropTypes.func,
   panesClassName: PropTypes.string,
-  tabLayout: PropTypes.oneOf(Object.values(TAB_LAYOUTS)),
+  tabLayout: PropTypes.oneOf(Object.values(Tabs.LAYOUTS)),
   tabs: PropTypes.arrayOf(tabsItemsPropTypes).isRequired,
-  tabStyle: PropTypes.oneOf(Object.values(TAB_STYLES)),
+  tabStyle: PropTypes.oneOf(Object.values(Tabs.STYLES)),
   tabsClassName: PropTypes.string,
   useSeparator: PropTypes.bool,
   withBackground: PropTypes.bool,

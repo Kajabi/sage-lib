@@ -11,7 +11,9 @@ export default {
   argTypes: {
     ...selectArgs({
       tabLayout: Tabs.LAYOUTS,
-      tabStyle: Tabs.STYLES
+      tabStyle: Tabs.STYLES,
+      justify: Tabs.JUSTIFY_OPTIONS,
+      gap: SageTokens.GRID_GAP_OPTIONS,
     }),
   },
   args: {
