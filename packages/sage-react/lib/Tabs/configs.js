@@ -27,6 +27,7 @@ export const TAB_LAYOUTS = {
 
 export const TAB_STYLES = {
   CHOICE: 'choice',
+  FILTER: 'filter',
   PROGRESSBAR: 'progressbar',
   TAB: 'tab',
 };
