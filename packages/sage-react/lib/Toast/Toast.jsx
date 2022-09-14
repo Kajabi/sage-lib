@@ -11,6 +11,7 @@ export const Toast = ({
   description,
   icon,
   isActive,
+  isDismissable,
   onDismiss,
   timeout,
   link,
@@ -37,12 +38,12 @@ export const Toast = ({
 
   // Auto dismiss when applicable
   useEffect(() => {
-    if (timeout && isActive) {
+    if (timeout && isActive && isDismissable) {
       setTimeout(() => {
         dismiss(true);
       }, timeout);
     }
-  }, [timeout, isActive]);
+  }, [timeout, isActive, isDismissable]);
 
   // Toggle dismissed when isActive changes
   useEffect(() => {
@@ -119,6 +120,7 @@ Toast.defaultProps = {
   description: null,
   icon: null,
   isActive: false,
+  isDismissable: true,
   onDismiss: (evt) => evt,
   timeout: 4500,
   link: null,
@@ -131,6 +133,7 @@ Toast.propTypes = {
   description: PropTypes.string,
   icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),
   isActive: PropTypes.bool,
+  isDismissable: PropTypes.bool,
   onDismiss: PropTypes.func,
   timeout: PropTypes.oneOfType([
     PropTypes.number,
