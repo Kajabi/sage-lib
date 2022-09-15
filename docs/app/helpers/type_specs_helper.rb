@@ -13,8 +13,8 @@ module TypeSpecsHelper
         )),
         weight: "700",
         kerning: "-0.6px",
-        desktop: "40px / 60px",
-        mobile: "40px / 60px",
+        desktop: "40px / 48px",
+        mobile: "40px / 48px",
       },
       {
         style: md(%(
@@ -25,8 +25,8 @@ module TypeSpecsHelper
         )),
         weight: "700",
         kerning: "-0.5px",
-        desktop: "32px / 48px",
-        mobile: "32px / 48px",
+        desktop: "32px / 40px",
+        mobile: "32px / 40px",
       },
       {
         style: md(%(
@@ -37,8 +37,8 @@ module TypeSpecsHelper
         )),
         weight: "700",
         kerning: "-0.15px",
-        desktop: "28px / 40px",
-        mobile: "28px / 40px",
+        desktop: "28px / 32px",
+        mobile: "28px / 32px",
       },
       {
         style: md(%(
@@ -73,8 +73,8 @@ module TypeSpecsHelper
         )),
         weight: "600",
         kerning: "0px",
-        desktop: "16px / 24px",
-        mobile: "16px / 24px",
+        desktop: "16px / 28px",
+        mobile: "16px / 28px",
       },
       {
         style: md(%(
