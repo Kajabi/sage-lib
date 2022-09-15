@@ -58,34 +58,13 @@ export const Button = React.forwardRef(({
     rest['aria-live'] = 'polite';
   }
 
-  const renderContent = () => {
-    if (iconOnly) {
-      return (
-        <span className="visually-hidden">
-          {children}
-        </span>
-      );
-    }
-
-    if (hasCustomContent) {
-      return (
-        <span
-          className={classnames(
-            'sage-btn__custom-content',
-            customContentClassName,
-          )}
-        >
-          {children}
-        </span>
-      );
-    }
-
-    return (
-      <span className="sage-btn__truncate-text">
-        {children}
-      </span>
-    );
-  };
+  let generatedClassNames = 'sage-btn__truncate-text';
+  if (iconOnly) {
+    generatedClassNames = 'visually-hidden';
+  }
+  if (hasCustomContent) {
+    generatedClassNames = classnames('sage-btn__custom-content', customContentClassName);
+  }
 
   if (isLink) { rest.suppressDefaultClass = true; }
 
@@ -100,7 +79,9 @@ export const Button = React.forwardRef(({
       onClick={onClick}
       {...rest}
     >
-      {renderContent()}
+      <span className={generatedClassNames}>
+        {children}
+      </span>
       {!hasCustomContent && (
         <Loader
           loading={loading}
