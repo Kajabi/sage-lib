@@ -33,26 +33,29 @@ Sage.table = (function() {
   // TODO: Q: do this for each table
   function ResponsiveCellHeaders(elem) {
     var THarray = [];
-    var table = document.querySelector(SELECTOR_TABLE);
-    var ths = table.getElementsByTagName("th");
-    for (var i = 0; i < ths.length; i++) {
-      var headingText = ths[i].innerHTML.trim();
-      THarray.push(headingText);
-    }
-    var styleElm = document.createElement("style"),
-      styleSheet;
-    document.head.appendChild(styleElm);
-    styleSheet = styleElm.sheet;
-    for (var i = 0; i < THarray.length; i++) {
-      styleSheet.insertRule(
-        "" +
-          elem +
-          " td:nth-child(" +
-          (i + 1) +
-          ')::before { content:"' + THarray[i] + ': ";}',
-        styleSheet.cssRules.length
-      );
-    }
+    var tables = document.querySelectorAll(SELECTOR_TABLE);
+    tables.forEach(table => {
+      // var table = document.querySelector(SELECTOR_TABLE);
+      var ths = table.getElementsByTagName("th");
+      for (var i = 0; i < ths.length; i++) {
+        var headingText = ths[i].innerHTML.trim();
+        THarray.push(headingText);
+      }
+      var styleElm = document.createElement("style"),
+        styleSheet;
+      document.head.appendChild(styleElm);
+      styleSheet = styleElm.sheet;
+      for (var i = 0; i < THarray.length; i++) {
+        styleSheet.insertRule(
+          "" +
+            elem +
+            " td:nth-child(" +
+            (i + 1) +
+            ')::before { content:"' + THarray[i] + ': ";}',
+          styleSheet.cssRules.length
+        );
+      }
+    })
   }
 
   // https://adrianroselli.com/2018/02/tables-css-display-properties-and-aria.html
