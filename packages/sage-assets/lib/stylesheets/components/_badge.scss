@@ -9,6 +9,7 @@ $-badge-min-height: rem(20px);
 $-badge-interactive-icon-size: rem(24px);
 $-badge-interactive-icon-size-decor: rem(28px);
 $-badge-padding: 0 rem(10px) 0 sage-spacing(xs);
+$-badge-padding-lg: sage-spacing(2xs) rem(12px);
 $-badge-border-radius: sage-border(radius-x-large);
 $-badge-inset-border: 0 0 0 1px inset;
 $-badge-statuses: (
@@ -56,6 +57,11 @@ $-badge-statuses: (
   .sage-dot ~ & {
     padding-left: sage-spacing(2xs);
   }
+
+  .sage-badge--large & {
+    @extend %t-sage-body-med;
+    padding: $-badge-padding-lg;
+  }
 }
 
 .sage-badge__value-text {
@@ -95,7 +101,7 @@ $-badge-statuses: (
     }
 
     .sage-badge__value {
-      @include sage-focus-outline();
+      @include sage-focus-outline($outline-offset-block: -1, $outline-offset-inline: -1);
       @include sage-focus-outline--update-color(sage-color(primary, 200));
 
       position: static;
@@ -104,6 +110,14 @@ $-badge-statuses: (
       &::after {
         border-radius: $-badge-border-radius;
       }
+    }
+
+    &.sage-badge--large .sage-badge__value {
+      padding-right: rem(30px);
+    }
+
+    &.sage-badge--large .sage-badge__decor-icon {
+      right: rem(4px);
     }
 
     .sage-badge__decor-icon {
