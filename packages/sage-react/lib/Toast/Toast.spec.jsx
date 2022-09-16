@@ -6,6 +6,7 @@ import userEvent from '@testing-library/user-event';
 import { Toast } from './Toast';
 
 import { TOAST_TYPES } from './configs';
+import { SageTokens } from '../configs';
 
 describe('Sage Toast', () => {
   it('displays the Toast when isActive', () => {
@@ -28,24 +29,48 @@ describe('Sage Toast', () => {
     expect(wrapper).toHaveClass('sage-toast--style-danger');
   });
 
-  // it('displays the non dismissable toast', () => {
-  //   const props = {
-  //     isActive: true,
-  //     isDismissable: true,
-  //     timeout: 10000,
-  //     title: 'non dismissable toast title'
-  //   };
+  it('displays the loading toast', () => {
+    const props = {
+      isActive: true,
+      type: TOAST_TYPES.LOADING
+    };
+    render(<Toast {...props} />);
+    const wrapper = document.querySelector('.sage-toast');
+    expect(wrapper).toHaveClass('sage-toast--style-loading');
+  });
 
-  //   render(<Toast {...props} />);
-  //   let wrapper = document.querySelector('.sage-toast');
-  //   expect(wrapper).not.toBeNull();
+  it('displays a custom icon', () => {
+    const props = {
+      isActive: true,
+      icon: SageTokens.ICONS.FLAG
+    };
+    render(<Toast {...props} />);
+    const wrapper = document.querySelector('.sage-toast');
+    expect(wrapper).not.toBeNull();
 
-  //   waitForElementToBeRemoved(
-  //     screen.queryByText(props.title)
-  //   ).then(() =>
-  //     expect(wrapper).toBeNull()
-  //   );
-  // });
+    const icon = document.querySelector('.sage-toast__icon');
+    expect(icon).not.toBeNull();
+  });
+
+  it('displays the non dismissable toast', async () => {
+    const props = {
+      isActive: true,
+      isDismissable: false,
+      title: 'non dismissable toast title'
+    };
+
+    render(<Toast {...props} />);
+    let wrapper = document.querySelector('.sage-toast');
+    expect(wrapper).not.toBeNull();
+
+    // revisit this test if a failure occurs as this may be flakey
+    await waitForElementToBeRemoved(
+      screen.queryByText(props.title)
+    ).catch(() => {
+      wrapper = document.querySelector('.sage-toast');
+      return expect(wrapper).not.toBeNull();
+    });
+  });
 
   it('displays a toast win an internal link', () => {
     const props = {
@@ -84,6 +109,8 @@ describe('Sage Toast', () => {
     let callbackFired = false;
     const props = {
       isActive: true,
+      timeout: 3000,
+      isDismissable: true,
       onDismiss: () => {
         callbackFired = true;
       },
@@ -91,13 +118,14 @@ describe('Sage Toast', () => {
     };
 
     render(<Toast {...props} />);
-    let wrapper = document.querySelector('.sage-toast');
+    setTimeout(4000);
+    const wrapper = document.querySelector('.sage-toast');
     expect(wrapper).not.toBeNull();
 
     waitForElementToBeRemoved(
       screen.queryByText(props.title)
     ).then(() =>
-      expect(callbackFired).toBeT()
+      expect(callbackFired).toBeTruthy()
     );
   });
 });
