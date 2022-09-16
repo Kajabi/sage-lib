@@ -30,12 +30,13 @@ Sage.table = (function() {
     });
   }
 
+  // TODO: Q: do this for each table
   function ResponsiveCellHeaders(elem) {
     var THarray = [];
     var table = document.querySelector(SELECTOR_TABLE);
     var ths = table.getElementsByTagName("th");
     for (var i = 0; i < ths.length; i++) {
-      var headingText = ths[i].innerHTML;
+      var headingText = ths[i].innerHTML.trim();
       THarray.push(headingText);
     }
     var styleElm = document.createElement("style"),
@@ -48,9 +49,7 @@ Sage.table = (function() {
           elem +
           " td:nth-child(" +
           (i + 1) +
-          ')::before {content:"' +
-          THarray[i] +
-          ': ";}',
+          ')::before { content:"' + THarray[i] + ': ";}',
         styleSheet.cssRules.length
       );
     }
