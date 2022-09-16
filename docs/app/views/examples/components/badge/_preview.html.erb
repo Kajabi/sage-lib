@@ -70,3 +70,43 @@ configs = [
     <% end %>
   <% end %>
 <% end %>
+
+<%= sage_component SagePanelBlock, {} do %>
+  <h3 class="t-sage-heading-6">Large Badge</h3>
+  <%= sage_component SageLabelGroup, {} do %>
+    <%= sage_component SageBadge, {
+      color: "draft",
+      value: "Draft",
+      large: true,
+    } %>
+    <%= sage_component SageBadge, {
+      color: "published",
+      value: "Published",
+      large: true,
+    } do %>
+      <% content_for :sage_badge_dot do %>
+        <%= sage_component SageDot, {} %>
+      <% end %>
+    <% end %>
+    <%= sage_component SageBadge, {
+      color: "info",
+      value: "Info",
+      large: true,
+      interactive_type: :dropdown
+    } do %>
+      <% content_for :sage_badge_dot do %>
+        <%= sage_component SageDot, {} %>
+      <% end %>
+    <% end %>
+    <%= sage_component SageBadge, {
+      color: "warning",
+      value: "Warning",
+      large: true,
+      interactive_type: :dropdown
+    } do %>
+      <% content_for :sage_badge_dot do %>
+        <%= sage_component SageDot, {} %>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>

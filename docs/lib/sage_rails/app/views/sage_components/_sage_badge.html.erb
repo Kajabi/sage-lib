@@ -5,6 +5,7 @@
     sage-badge
     <%= "sage-badge--#{component.color}" if component.color %>
     <%= "sage-badge--interactive" if component.interactive_type %>
+    <%= "sage-badge--large" if component.large %>
     <%= component.generated_css_classes %>
   "
   <% component.container_attributes.each do |key, value| %>
