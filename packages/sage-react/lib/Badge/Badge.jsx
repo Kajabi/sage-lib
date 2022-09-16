@@ -10,9 +10,10 @@ export const Badge = React.forwardRef(({
   color,
   containerAttributes,
   dot,
-  isInteractive,
   isDropdown,
+  isInteractive,
   isStatus,
+  large,
   value,
   ...rest
 }, ref) => {
@@ -24,6 +25,7 @@ export const Badge = React.forwardRef(({
     {
       [`sage-badge--${color}`]: color,
       'sage-badge--interactive': isInteractive,
+      'sage-badge--large': large,
     }
   );
 
@@ -64,6 +66,7 @@ Badge.defaultProps = {
   isInteractive: null,
   isDropdown: false,
   isStatus: false,
+  large: false,
 };
 
 Badge.propTypes = {
@@ -74,5 +77,6 @@ Badge.propTypes = {
   isInteractive: PropTypes.bool,
   isDropdown: PropTypes.bool,
   isStatus: PropTypes.bool,
+  large: PropTypes.bool,
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
 };

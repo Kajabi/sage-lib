@@ -37,3 +37,12 @@ InteractiveBadge.args = {
     <Dot />
   )
 };
+
+export const LargeBadge = Template.bind({});
+LargeBadge.args = {
+  color: BADGE_COLORS.DANGER,
+  large: true,
+  dot: (
+    <Dot />
+  )
+};
