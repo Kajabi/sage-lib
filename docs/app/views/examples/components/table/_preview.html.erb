@@ -116,7 +116,6 @@ sample_table = {
   caption: %(
     Block cells can be used with anchor tags to link the entire cell, or <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> elements for content
   ),
-  has_leading_input: true,
   has_menu_options: true,
   headers: [
     "Name",
@@ -193,6 +192,7 @@ sample_table = {
   has_leading_input: true,
   has_menu_options: true,
   headers: [
+    "",
     "Name",
     "Email",
     "Revenue",
@@ -200,6 +200,16 @@ sample_table = {
   ],
   rows: [
     [
+      %(
+        #{sage_component(SageCheckbox, {
+          id:"c1",
+          label_text: "Checkbox",
+          checked: false,
+          disabled: false,
+          has_error: false,
+          partial_selection: true,
+          standalone: true
+        })}),
       %(
         #{link_to "Frank Dux", "#", class: "sage-table-cell__link"}
       ),
@@ -220,6 +230,16 @@ sample_table = {
     ],
     [
       %(
+        #{sage_component(SageCheckbox, {
+          id:"c1",
+          label_text: "Checkbox",
+          checked: false,
+          disabled: false,
+          has_error: false,
+          partial_selection: true,
+          standalone: true
+        })}),
+      %(
         #{link_to "Stinkmeaner", "#", class: "sage-table-cell__link"}
       ),
       "st@email.com",
@@ -238,6 +258,16 @@ sample_table = {
         })})
     ],
     [
+      %(
+        #{sage_component(SageCheckbox, {
+          id:"c1",
+          label_text: "Checkbox",
+          checked: false,
+          disabled: false,
+          has_error: false,
+          partial_selection: true,
+          standalone: true
+        })}),
       %(
         #{link_to "Huey Freeman", "#", class: "sage-table-cell__link"}
       ),
@@ -258,7 +288,6 @@ sample_table = {
     ],
   ]
 } %>
-
 
 <h3 class="t-sage-heading-6">Responsive table with borders</h3>
 <%= sage_component SageTable, {

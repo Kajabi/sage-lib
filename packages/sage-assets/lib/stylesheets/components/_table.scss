@@ -65,7 +65,7 @@ $-table-avatar-width: rem(32px);
       @extend #{$-table-heading-type-spec};
 
       padding: $-table-padding;
-      color: $-table-cell-focus;
+      color: $-table-cell-font-color;
     }
 
     th {
@@ -408,42 +408,98 @@ $-table-avatar-width: rem(32px);
   }
 
   // TODO UXD - QUINTON - find scalable solution
+  td::before {
+    color: sage-color(charcoal, 200);
+  }
   td:nth-child(1)::before {
-    content: "Name: ";
+    content: "Name ";
     display: none;
   }
 
   td:nth-child(2)::before {
-    content: "Email: ";
+    content: "Email ";
   }
 
   td:nth-child(3)::before {
-    content: "Labels: ";
+    content: "Labels ";
   }
 
   td:nth-child(4)::before {
-    content: "Status: ";
+    content: "Status ";
   }
 
   td:nth-child(5)::before {
-    content: "Status: ";
+    content: "Status ";
   }
 
   td:nth-child(6)::before {
-    content: "Status: ";
+    content: "Status ";
   }
 
   td:nth-child(7)::before {
-    content: "Status: ";
+    content: "Status ";
   }
 
-  td:last-child::before {
+  .sage-table--has-menu-options td:last-child::before {
     display: none;
+  }
+
+  .sage-table--has-leading-input {
+    td:nth-child(2) {
+      margin-left: sage-spacing(sm);
+    }
+
+    td:nth-child(-n+2) {
+      display: inline-flex;
+    }
+
+    td:nth-child(n+3) {
+      margin-left: rem(40px);
+    }
+
+    td:nth-child(2)::before {
+      content: "Name ";
+      display: none;
+    }
+
+    td:nth-child(3)::before {
+      content: "Email ";
+    }
+
+    td:nth-child(4)::before {
+      content: "Labels ";
+    }
+
+    td:nth-child(5)::before {
+      content: "Status ";
+    }
+
+    td:nth-child(6)::before {
+      content: "Status ";
+    }
+
+    td:nth-child(7)::before {
+      content: "Status ";
+    }
+
+    td:nth-child(8)::before {
+      content: "Status ";
+    }
+
+    td:last-child::before {
+      display: none;
+    }
   }
 }
 
 @media screen and (min-width: sage-breakpoint(md-min)) {
   .sage-table td::before {
     display: none;
+  }
+
+  .sage-table--has-leading-input {
+    tbody td:first-child {
+      width: rem(44px);
+    }
   }
 }
