@@ -199,10 +199,10 @@ export const Wired = (args) => {
         Take An Action
       </Button>
       <Modal
+        {...args}
         active={active}
         animation={{ direction: Modal.ANIMATION_DIRECTIONS.BOTTOM }}
         onExit={onExit}
-        {...args}
       >
         <DefaultBody onExit={onExit} />
       </Modal>

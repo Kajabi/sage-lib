@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { ModalBody } from './ModalBody';
@@ -24,6 +24,7 @@ export const Modal = ({
   size,
   ...rest
 }) => {
+  const [mouseDownSrc, setMouseDownSrc] = useState(null);
   const classNames = classnames(
     'sage-modal',
     className,
@@ -56,10 +57,14 @@ export const Modal = ({
     }
   }
 
-  const handleBackgroundClick = (evt) => {
-    if (evt.target === evt.currentTarget) {
+  const handleMouseDown = (evt) => setMouseDownSrc(evt.target);
+
+  const handleMouseUp = (evt) => {
+    if (evt.target === evt.currentTarget && evt.target === mouseDownSrc) {
       onExit(true);
     }
+
+    setMouseDownSrc(null);
   };
 
   const handleBackgroundKeypress = () => {
@@ -70,7 +75,8 @@ export const Modal = ({
   const attrs = {};
 
   if (!disableBackgroundDismiss) {
-    attrs.onClick = handleBackgroundClick;
+    attrs.onMouseDown = handleMouseDown;
+    attrs.onMouseUp = handleMouseUp;
     attrs.onKeyPress = handleBackgroundKeypress;
     attrs.role = 'button';
     attrs.tabIndex = '0';
