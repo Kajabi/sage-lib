@@ -89,16 +89,6 @@ configs = [
       <% end %>
     <% end %>
     <%= sage_component SageBadge, {
-      color: "info",
-      value: "Info",
-      large: true,
-      interactive_type: :dropdown
-    } do %>
-      <% content_for :sage_badge_dot do %>
-        <%= sage_component SageDot, {} %>
-      <% end %>
-    <% end %>
-    <%= sage_component SageBadge, {
       color: "warning",
       value: "Warning",
       large: true,
