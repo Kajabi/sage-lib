@@ -20,7 +20,7 @@ $-radio-color-focus-outline-error: sage-color(red, 200);
 
 // Additional configurations
 $-radio-button-size: $sage-radio-size;
-$-radio-label-spacing: rem(12px);
+$-radio-gap-spacing: rem(12px);
 $-radio-transition: 0.15s ease-in-out;
 $-radio-selected-indicator-size: rem(7px);
 
@@ -31,10 +31,26 @@ $-radio-focus-outline-color: currentColor;
 
 
 .sage-radio {
+  display: grid;
+  grid-template-areas:
+    "radio label"
+    "radio message";
+  align-items: center;
   position: relative;
+  column-gap: $-radio-gap-spacing;
+  
+  &.sage-radio--custom {
+    grid-template-areas:
+      "radio label"
+      "radio message"
+      "radio custom";
+  }
 
-  &:not(.sage-radio--standalone) {
-    @include sage-form-toggle;
+  &.sage-radio--custom.sage-radio--has-border {
+    grid-template-areas:
+      "radio label custom"
+      "radio message custom"
+      "radio message custom";
   }
 
   .sage-list & {
@@ -56,13 +72,23 @@ $-radio-focus-outline-color: currentColor;
 }
 
 .sage-radio__caption {
+  grid-area: message;
+
   .sage-radio--has-border & {
     margin-left: sage-spacing(lg);
   }
 }
 
+.sage-radio__custom-content {
+  grid-area: custom;
+  justify-self: end;
+}
+
 .sage-radio__label {
   @include sage-form-toggle-label;
+
+  grid-area: label;
+  margin-left: 0;
 
   .sage-radio--has-border & {
     margin-left: sage-spacing(lg);
@@ -85,6 +111,7 @@ $-radio-focus-outline-color: currentColor;
 .sage-radio__input {
   @include sage-form-toggle-input;
 
+  grid-area: radio;
   z-index: sage-z-index(default, 1);
   height: $-radio-button-size;
   width: $-radio-button-size;
@@ -239,11 +266,4 @@ $-radio-focus-outline-color: currentColor;
 .sage-radio__message,
 .sage-radio__caption {
   @include sage-form-toggle-message;
-}
-
-.sage-radio__message,
-.sage-radio__caption,
-.sage-radio__custom-content {
-  margin-left: #{$-radio-button-size + $-radio-label-spacing};
-  margin-top: rem(2px);
 }
