@@ -29,6 +29,7 @@ $-radio-focus-outline-size: rem(3px);
 $-radio-focus-outline-width: 4;
 $-radio-focus-outline-color: currentColor;
 
+// stylelint-disable max-nesting-depth
 
 .sage-radio {
   display: grid;
