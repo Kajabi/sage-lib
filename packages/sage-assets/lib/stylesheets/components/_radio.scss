@@ -38,26 +38,27 @@ $-radio-focus-outline-color: currentColor;
   align-items: center;
   position: relative;
   column-gap: $-radio-gap-spacing;
+  grid-template-columns: min-content 1fr;
   
-  &.sage-radio--custom {
-    grid-template-areas:
-      "radio label"
-      "radio message"
-      "radio custom";
-  }
-
-  &.sage-radio--custom.sage-radio--has-border {
-    grid-template-areas:
-      "radio label custom"
-      "radio message custom"
-      "radio message custom";
-  }
-
   .sage-list & {
     margin-bottom: sage-spacing(card) / 2;
   }
 
   @include sage-form-toggle-parents;
+}
+
+.sage-radio--custom {
+  grid-template-areas:
+    "radio label"
+    "radio message"
+    "radio custom";
+  
+  &.sage-radio--has-border {
+    grid-template-areas:
+      "radio label custom"
+      "radio message custom"
+      "radio message custom";
+  }
 }
 
 .sage-radio--standalone {
@@ -66,6 +67,7 @@ $-radio-focus-outline-color: currentColor;
 
 .sage-radio--has-border:not(.sage-radio--standalone) {
   align-items: center;
+  column-gap: sage-spacing();
   padding: sage-spacing(card);
   border: sage-border();
   border-radius: sage-border(radius);
@@ -73,10 +75,6 @@ $-radio-focus-outline-color: currentColor;
 
 .sage-radio__caption {
   grid-area: message;
-
-  .sage-radio--has-border & {
-    margin-left: sage-spacing(lg);
-  }
 }
 
 .sage-radio__custom-content {
@@ -91,7 +89,6 @@ $-radio-focus-outline-color: currentColor;
   margin-left: 0;
 
   .sage-radio--has-border & {
-    margin-left: sage-spacing(lg);
     color: sage-color(charcoal, 400);
     font-weight: sage-font-weight(semibold);
 
@@ -216,7 +213,6 @@ $-radio-focus-outline-color: currentColor;
 
   &:not(.sage-radio--standalone) {
     .sage-radio--has-border & {
-      position: absolute;
       margin-top: 0;
     }
   }
