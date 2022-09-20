@@ -68,7 +68,10 @@
   required: true,
 } do %>
   <%= content_for :sage_radio_custom_content do %>
-    <div>Custom content</div>
+    <%= sage_component SageBadge, {
+      value: "Published",
+      color: "published",
+    }%>
   <% end %>
 <% end %>
 

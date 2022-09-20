@@ -69,8 +69,14 @@ $-radio-focus-outline-color: currentColor;
   align-items: center;
   column-gap: sage-spacing();
   padding: sage-spacing(card);
-  border: sage-border();
+  box-shadow: sage-border-interactive();
   border-radius: sage-border(radius);
+
+  &:hover {
+    box-shadow: sage-border-interactive(hover);
+  }
+
+
 }
 
 .sage-radio__caption {
@@ -214,6 +220,11 @@ $-radio-focus-outline-color: currentColor;
   &:not(.sage-radio--standalone) {
     .sage-radio--has-border & {
       margin-top: 0;
+
+      &:checked + .sage-radio__label::after {
+        box-shadow: sage-border-interactive(selected);
+        border-radius: sage-border(radius);
+      }
     }
   }
 
@@ -234,7 +245,7 @@ $-radio-focus-outline-color: currentColor;
   }
 
   &.sage-radio--has-border:not(.sage-radio--standalone) {
-    border-color: $-radio-color-error;
+    box-shadow: sage-border-interactive(error);
   }
 
   .sage-radio__input {
