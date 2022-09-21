@@ -10,7 +10,6 @@ export const EmptyState = ({
   actions,
   centerVertical,
   children,
-  compact,
   graphic,
   icon,
   scope,
@@ -24,7 +23,6 @@ export const EmptyState = ({
     'sage-empty-state',
     {
       'sage-empty-state--center': centerVertical,
-      'sage-empty-state--compact': compact && scope !== EMPTY_STATE_SCOPES.COMPACT,
       [`sage-empty-state--${scope}`]: scope,
     },
   );
@@ -83,7 +81,6 @@ EmptyState.defaultProps = {
   actions: null,
   centerVertical: false,
   children: null,
-  compact: false,
   graphic: null,
   icon: null,
   scope: EmptyState.SCOPES.DEFAULT,
@@ -97,7 +94,6 @@ EmptyState.propTypes = {
   actions: PropTypes.node,
   centerVertical: PropTypes.bool,
   children: PropTypes.node,
-  compact: PropTypes.bool,
   graphic: PropTypes.node,
   icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),
   scope: PropTypes.oneOf(Object.values(EmptyState.SCOPES)),

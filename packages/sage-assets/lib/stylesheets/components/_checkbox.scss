@@ -16,10 +16,10 @@ $-checkbox-color-disabled-border: sage-color(grey, 300);
 $-checkbox-color-disabled-checked: sage-color(charcoal, 100);
 $-checkbox-color-error: sage-color(red, 300);
 
-$-checkbox-size: rem(20px);
+$-checkbox-size: rem(16px);
 $-checkbox-label-spacing: rem(12px);
-$-checkbox-border-radius-inner: rem(6px);
-$-checkbox-border-radius-outer: rem(10px);
+$-checkbox-border-radius-inner: rem(4px);
+$-checkbox-border-radius-outer: rem(8px);
 $-checkbox-transition: 0.15s ease-in-out;
 
 $-checkbox-marker-border: rem(2px);
@@ -169,7 +169,7 @@ $-checkbox-focus-outline-color: sage-color(primary, 200);
 
   // Checkmark
   &::after {
-    @include sage-icon-base(check);
+    @include sage-icon-base(check, sm);
 
     $-checkbox-scale: 14 / 16;
     transform: translate3d(-50%, -50%, 0) scale3d(#{$-checkbox-scale}, #{$-checkbox-scale}, #{$-checkbox-scale});
@@ -282,7 +282,7 @@ $-checkbox-focus-outline-color: sage-color(primary, 200);
   }
 
   .sage-checkbox & {
-    margin-top: rem(2px);
+    margin-top: rem(4px);
   }
 
   &.sage-checkbox, // spcificity that should apply only to `--standalone` variation

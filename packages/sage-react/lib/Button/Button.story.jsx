@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { selectArgs } from '../story-support/helpers';
 import { SageTokens } from '../configs';
 import { Avatar } from '../Avatar';
@@ -48,6 +48,31 @@ IconOnly.args = {
   icon: SageTokens.ICONS.GEAR,
   iconOnly: true,
   subtle: true
+};
+
+export const Loading = (args) => {
+  const [loading, setLoading] = useState(false);
+
+  const handleClick = () => {
+    setLoading(true);
+  };
+
+  return (
+    <Button
+      {...args}
+      loading={loading}
+      onClick={handleClick}
+      aria-label={loading ? 'My label loading...' : 'My label'}
+    >
+      Loading Button
+    </Button>
+  );
+};
+
+Loading.argTypes = {
+  loading: {
+    control: false
+  }
 };
 
 export const Disclosure = Template.bind({});

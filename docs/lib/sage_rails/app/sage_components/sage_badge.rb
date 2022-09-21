@@ -4,6 +4,7 @@ class SageBadge < SageComponent
     color: [:optional, NilClass, SageSchemas::STATUSES],
     interactive_type: [:optional, NilClass, Set.new([:default, :dropdown])],
     value: String,
+    large: [:optional, NilClass, TrueClass],
   })
 
   def sections

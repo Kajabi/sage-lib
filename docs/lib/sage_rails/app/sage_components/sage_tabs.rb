@@ -9,7 +9,7 @@ class SageTabs < SageComponent
     permalink: [:optional, NilClass, TrueClass], # For Docs site use only.
     progressbar: [:optional, NilClass, TrueClass],
     stacked: [:optional, NilClass, TrueClass],
-    style: [:optional, NilClass, Set.new(["choice"])],
+    style: [:optional, NilClass, Set.new(["choice", "filter"])],
     with_background: [:optional, NilClass, TrueClass],
   })
 end

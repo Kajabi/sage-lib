@@ -911,14 +911,6 @@ module ComponentsHelper
         react: "stop",
         a11y: "no"
       },
-      {
-        title: "null_view",
-        description: "DEPRECATED: See Empty State.",
-        scss: "stop",
-        rails: "stop",
-        react: "stop",
-        a11y: "stop",
-      },
     ]
   end
 

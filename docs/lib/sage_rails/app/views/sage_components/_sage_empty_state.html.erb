@@ -1,8 +1,5 @@
 <%
 variant = component.scope.present? ? component.scope : false
-if component.compact && !component.scope.present?
-  variant = "compact"
-end
 title_tag = variant == "feature" ? "h1" : "h2"
 if component.title_tag.present?
   title_tag = component.title_tag

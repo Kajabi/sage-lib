@@ -29,6 +29,15 @@ $-loader-spinner-path-speed: 1.5s;
     opacity: 1;
   }
 
+  .sage-btn--is-loading & {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+
   @media (prefers-reduced-motion: reduce) {
     &[data-loading*="true"]::before {
       opacity: 0 !important; /* stylelint-disable-line declaration-no-important */
@@ -77,12 +86,22 @@ $-loader-spinner-path-speed: 1.5s;
   animation: rotate $-loader-spinner-speed linear infinite;
 }
 
+.sage-loader__spinner--loading-button {
+  width: sage-spacing(sm);
+  height: sage-spacing(sm);
+  margin-right: sage-spacing(xs);
+}
+
 .sage-loader__spinner-path {
   stroke-dasharray: 150,200;
   stroke-dashoffset: -10;
   stroke-linecap: round;
   stroke: sage-color(primary, 300);
   animation: dash $-loader-spinner-path-speed ease-in-out infinite;
+}
+
+.sage-loader__spinner-path--loading-button {
+  stroke: currentColor;
 }
 
 .sage-loader__success {
