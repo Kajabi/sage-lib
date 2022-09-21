@@ -59,6 +59,7 @@ $-radio-focus-outline-color: currentColor;
       "radio label custom"
       "radio message custom"
       "radio message custom";
+    grid-template-columns: min-content 1fr auto;
   }
 }
 
