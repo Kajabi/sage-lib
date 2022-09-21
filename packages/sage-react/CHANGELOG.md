@@ -3,6 +3,36 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.5.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.4.0...@kajabi/sage-react@1.5.0) (2022-09-21)
+
+
+### Bug Fixes
+
+* **badge:** add large variant to react component ([81b0b7a](https://github.com/Kajabi/sage-lib/commit/81b0b7afb01f20e032dd8bc1a92a3d75d87b1eb9))
+* **button:** clean up dynamic logic for button content ([8540eef](https://github.com/Kajabi/sage-lib/commit/8540eefe1f05da93370da3dd6de4669c010806b3))
+* **button:** clean up loader logic ([3739b71](https://github.com/Kajabi/sage-lib/commit/3739b71f2d10486ee457441bfe59372963f31d12))
+* **button story:** turn off loading control in loading story canvas ([c5a5f69](https://github.com/Kajabi/sage-lib/commit/c5a5f69a34adc90186f2f8c14e0a4a72c917d350))
+* **button/story:** cleanup code and prepare for review ([3f7328b](https://github.com/Kajabi/sage-lib/commit/3f7328bdc2b8aecf9d89008eac6e48ff0df2ae54))
+* **gap:** update to have token level grid-gap class ([2ae254a](https://github.com/Kajabi/sage-lib/commit/2ae254abc2d97327b4e64cdf329dd43495bfd90a))
+* **loading buttons:** start logic for loading spinner on buttons in react ([f2e9b12](https://github.com/Kajabi/sage-lib/commit/f2e9b125fdc58ab97a2b6ba3aefa4c70c78ee0d9))
+* **merge develop:** merge develop in ([03e79bb](https://github.com/Kajabi/sage-lib/commit/03e79bb728f03f2a93d805e535cacaf1213aa25a))
+* **modal:** add gap property ([0d4e568](https://github.com/Kajabi/sage-lib/commit/0d4e5682678362d4c6577be2c014574ad5be04e6))
+* **react button loading state:** wip ([816afa5](https://github.com/Kajabi/sage-lib/commit/816afa5d6099c4ab7127f25b9017a5862ff463ae))
+* **tabs:** add react filter tab variant ([30fdef4](https://github.com/Kajabi/sage-lib/commit/30fdef4fb640c70a3997dd4c6c77a2d536e05828))
+* **tabs:** convert ternary to function and fix broken story controls ([cfe94f6](https://github.com/Kajabi/sage-lib/commit/cfe94f6fbdd03e55bba93f9d14e5c59df213ef9e))
+
+
+### Features
+
+* **button:** stub in loading spinner in React ([a6c479a](https://github.com/Kajabi/sage-lib/commit/a6c479ae9c026e51cd45541a8da068e86eba94d5))
+* **empty-state:** remove deprecated `compact` property ([a87cf89](https://github.com/Kajabi/sage-lib/commit/a87cf892a541f8517c77ff2614d0195f2f42bbe2))
+* **icon:** update icon font entries ([5aa61a1](https://github.com/Kajabi/sage-lib/commit/5aa61a123f25e7638840e37f11fefd674002e67b))
+* **loader:** repurpose loader to be usable in the button ([6fb356d](https://github.com/Kajabi/sage-lib/commit/6fb356dea940f41277aa9eddf56168ed995aadbf))
+
+
+
+
+
 # [1.4.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.3.0...@kajabi/sage-react@1.4.0) (2022-09-09)
 
 

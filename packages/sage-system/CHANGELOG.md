@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@1.1.0...@kajabi/sage-system@1.2.0) (2022-09-21)
+
+
+### Bug Fixes
+
+* **merge develop:** merge develop in ([03e79bb](https://github.com/Kajabi/sage-lib/commit/03e79bb728f03f2a93d805e535cacaf1213aa25a))
+
+
+### Features
+
+* **loader:** repurpose loader to be usable in the button ([6fb356d](https://github.com/Kajabi/sage-lib/commit/6fb356dea940f41277aa9eddf56168ed995aadbf))
+
+
+
+
+
 # [1.1.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@1.0.1...@kajabi/sage-system@1.1.0) (2022-08-31)
 
 

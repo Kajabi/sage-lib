@@ -3,6 +3,32 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.2.0...@kajabi/sage-assets@1.3.0) (2022-09-21)
+
+
+### Bug Fixes
+
+* **checkbox:** update sizing from 20 to 16 px ([6fd9c4b](https://github.com/Kajabi/sage-lib/commit/6fd9c4b70d659fc4385d1467daaec000a1aac65e))
+* **form inputs:** adjust label styling to allow pointer events ([28ed4c8](https://github.com/Kajabi/sage-lib/commit/28ed4c84cce85b9acaae951cc47c142217a073d1))
+* **gap:** update to have token level grid-gap class ([2ae254a](https://github.com/Kajabi/sage-lib/commit/2ae254abc2d97327b4e64cdf329dd43495bfd90a))
+* **merge develop:** merge develop in ([03e79bb](https://github.com/Kajabi/sage-lib/commit/03e79bb728f03f2a93d805e535cacaf1213aa25a))
+* **next folder:** remove next folder carried over from merge of develop ([24882b6](https://github.com/Kajabi/sage-lib/commit/24882b6d2ef116577f92c57cc13e0e7d9cbfb9d4))
+* **radio:** update sizing from 20 to 16 px ([26919da](https://github.com/Kajabi/sage-lib/commit/26919da130c2f43bde838dd332fc503cb9eebc4e))
+* **react button loading state:** wip ([816afa5](https://github.com/Kajabi/sage-lib/commit/816afa5d6099c4ab7127f25b9017a5862ff463ae))
+* **tabs:** add filter tab styling ([ca6ce6f](https://github.com/Kajabi/sage-lib/commit/ca6ce6f1d4767624ef602b5bc34a9009d15f5973))
+
+
+### Features
+
+* **icon:** update CDN version ([4b5ab37](https://github.com/Kajabi/sage-lib/commit/4b5ab37556e5bc248976c44b455ea284a8ff47a7))
+* **icon:** update icon font entries ([5aa61a1](https://github.com/Kajabi/sage-lib/commit/5aa61a123f25e7638840e37f11fefd674002e67b))
+* **loader:** repurpose loader to be usable in the button ([6fb356d](https://github.com/Kajabi/sage-lib/commit/6fb356dea940f41277aa9eddf56168ed995aadbf))
+* **null-view:** remove null view rails component and styles ([3ece6fa](https://github.com/Kajabi/sage-lib/commit/3ece6fac4358c08550a25a6f91cd0ad4e189c448))
+
+
+
+
+
 # [1.2.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.1.0...@kajabi/sage-assets@1.2.0) (2022-09-09)
 
 

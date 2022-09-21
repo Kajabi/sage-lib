@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.6.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.5.0...@kajabi/sage@5.6.0) (2022-09-21)
+
+
+### Bug Fixes
+
+* **badge:** add large variant to rails comonent ([1bd4a3f](https://github.com/Kajabi/sage-lib/commit/1bd4a3f3a381de7c538fcfd3a004e13cadb9ecf9))
+* **tabs:** add rails filter tab variant ([5d7d765](https://github.com/Kajabi/sage-lib/commit/5d7d76504aa60bec8a4a099e1fee35e52e6fb1d2))
+
+
+### Features
+
+* **empty-state:** remove deprecated `compact` property ([a87cf89](https://github.com/Kajabi/sage-lib/commit/a87cf892a541f8517c77ff2614d0195f2f42bbe2))
+* **icon:** update icon font entries ([5aa61a1](https://github.com/Kajabi/sage-lib/commit/5aa61a123f25e7638840e37f11fefd674002e67b))
+* **null-view:** remove null view rails component and styles ([3ece6fa](https://github.com/Kajabi/sage-lib/commit/3ece6fac4358c08550a25a6f91cd0ad4e189c448))
+
+
+
+
+
 # [5.5.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.4.0...@kajabi/sage@5.5.0) (2022-09-09)
 
 
