@@ -38,6 +38,8 @@ export const Table = ({
   className,
   hasBorders,
   hasDataBeyondCurrentRows,
+  hasLeadingInput,
+  hasMenuOptions,
   headers,
   isResponsive,
   onSelectRowHook,
@@ -68,6 +70,8 @@ export const Table = ({
     'sage-table',
     {
       'sage-table--selectable': selectable,
+      'sage-table--has-leading-input': hasLeadingInput,
+      'sage-table--has-menu-options': hasMenuOptions,
     }
   );
 
@@ -338,6 +342,8 @@ Table.defaultProps = {
   className: null,
   hasBorders: false,
   hasDataBeyondCurrentRows: false,
+  hasLeadingInput: false,
+  hasMenuOptions: false,
   headers: [],
   isResponsive: true,
   onSelectRowHook: null,
@@ -358,6 +364,8 @@ Table.propTypes = {
   className: PropTypes.string,
   hasBorders: PropTypes.bool,
   hasDataBeyondCurrentRows: PropTypes.bool,
+  hasLeadingInput: PropTypes.bool,
+  hasMenuOptions: PropTypes.bool,
   // Headers provide a simpler alternative to schema
   headers: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.oneOfType([
