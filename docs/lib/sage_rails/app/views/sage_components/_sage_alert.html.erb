@@ -1,16 +1,56 @@
+<%
+
+#
+# Proposed deprecations and further improvements for a separate PR:
+# - replace status-based colors with sage colors?
+# - rename `icon_name` to `icon` and use just the icon name without `sage-icon-` prefix
+# - rename `desc` to `description`
+#
+
+color = component.color || "default"
+icon = component.icon_name || "sage-icon-info-circle-filled"
+icon["sage-icon-"] = "" # removes the `sage-icon-` prefix from provided icon
+icon_color = "charcoal-200"
+case color
+  when "info"
+    icon_color = "primary-300"
+  when "update"
+    icon_color = "primary-300"
+  when "published"
+    icon_color = "sage-300"
+  when "success"
+    icon_color = "primary-300"
+  when "warning"
+    icon_color = "yellow-400"
+  when "approaching"
+    icon_color = "yellow-400"
+  when "reached"
+    icon_color = "orange-400"
+  when "exceeded"
+    icon_color = "red-300"
+  when "danger"
+    icon_color = "red-300"
+  else
+    icon_color = "charcoal-200"
+end
+%>
 <div
   class="
-    sage-alert<%= component.color ? "
-    sage-alert--#{component.color}" : ""%>
+    sage-alert
+    <%= "sage-alert--#{color}" %>
     <%= "sage-alert--small" if component.small %>
-    <%= "sage-alert--small-dismissable" if component.small && component.dismissable %>
+    <%= "sage-alert--dismissable" if component.dismissable %>
     <%= component.generated_css_classes %>
   "
   data-js-alert="true"
   <%= component.generated_html_attributes.html_safe %>
 >
   <% if component.icon_name %>
-    <i class="sage-alert__icon <%= component.icon_name %>" aria-hidden="true"></i>
+    <%= sage_component SageIcon, {
+      css_classes: "sage-alert__icon",
+      icon: icon,
+      color: icon_color,
+    } %>
   <% end %>
   <div class="sage-alert__copy">
     <% if component.title %>
@@ -60,7 +100,7 @@
           name: "remove"
         },
         subtle: true,
-        small: true,
+        style: "primary",
         css_classes: "sage-alert__close-btn"
       } %>
     </div>
