@@ -20,7 +20,7 @@ $-radio-color-focus-outline-error: sage-color(red, 200);
 
 // Additional configurations
 $-radio-button-size: $sage-radio-size;
-$-radio-label-spacing: rem(12px);
+$-radio-gap-spacing: rem(12px);
 $-radio-transition: 0.15s ease-in-out;
 $-radio-selected-indicator-size: rem(7px);
 
@@ -29,19 +29,37 @@ $-radio-focus-outline-size: rem(3px);
 $-radio-focus-outline-width: 4;
 $-radio-focus-outline-color: currentColor;
 
+// stylelint-disable max-nesting-depth
 
 .sage-radio {
+  display: grid;
+  grid-template-areas:
+    "radio label"
+    "radio message";
+  align-items: center;
   position: relative;
-
-  &:not(.sage-radio--standalone) {
-    @include sage-form-toggle;
-  }
-
+  column-gap: $-radio-gap-spacing;
+  grid-template-columns: min-content 1fr;
+  
   .sage-list & {
     margin-bottom: sage-spacing(card) / 2;
   }
 
   @include sage-form-toggle-parents;
+}
+
+.sage-radio--custom {
+  grid-template-areas:
+    "radio label"
+    "radio message"
+    "radio custom";
+  
+  &.sage-radio--has-border {
+    grid-template-areas:
+      "radio label custom"
+      "radio message custom";
+    grid-template-columns: min-content 1fr auto;
+  }
 }
 
 .sage-radio--standalone {
@@ -50,22 +68,34 @@ $-radio-focus-outline-color: currentColor;
 
 .sage-radio--has-border:not(.sage-radio--standalone) {
   align-items: center;
+  column-gap: sage-spacing();
   padding: sage-spacing(card);
-  border: sage-border();
+  box-shadow: sage-border-interactive();
   border-radius: sage-border(radius);
+
+  &:hover {
+    box-shadow: sage-border-interactive(hover);
+  }
+
+
 }
 
 .sage-radio__caption {
-  .sage-radio--has-border & {
-    margin-left: sage-spacing(lg);
-  }
+  grid-area: message;
+}
+
+.sage-radio__custom-content {
+  grid-area: custom;
+  justify-self: end;
 }
 
 .sage-radio__label {
   @include sage-form-toggle-label;
 
+  grid-area: label;
+  margin-left: 0;
+
   .sage-radio--has-border & {
-    margin-left: sage-spacing(lg);
     color: sage-color(charcoal, 400);
     font-weight: sage-font-weight(semibold);
 
@@ -85,6 +115,7 @@ $-radio-focus-outline-color: currentColor;
 .sage-radio__input {
   @include sage-form-toggle-input;
 
+  grid-area: radio;
   z-index: sage-z-index(default, 1);
   height: $-radio-button-size;
   width: $-radio-button-size;
@@ -189,8 +220,12 @@ $-radio-focus-outline-color: currentColor;
 
   &:not(.sage-radio--standalone) {
     .sage-radio--has-border & {
-      position: absolute;
       margin-top: 0;
+
+      &:checked + .sage-radio__label::after {
+        box-shadow: sage-border-interactive(selected);
+        border-radius: sage-border(radius);
+      }
     }
   }
 
@@ -211,7 +246,7 @@ $-radio-focus-outline-color: currentColor;
   }
 
   &.sage-radio--has-border:not(.sage-radio--standalone) {
-    border-color: $-radio-color-error;
+    box-shadow: sage-border-interactive(error);
   }
 
   .sage-radio__input {
@@ -239,11 +274,4 @@ $-radio-focus-outline-color: currentColor;
 .sage-radio__message,
 .sage-radio__caption {
   @include sage-form-toggle-message;
-}
-
-.sage-radio__message,
-.sage-radio__caption,
-.sage-radio__custom-content {
-  margin-left: #{$-radio-button-size + $-radio-label-spacing};
-  margin-top: rem(2px);
 }

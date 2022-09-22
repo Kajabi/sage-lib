@@ -66,7 +66,14 @@
   has_border: true,
   label_text: "Bordered Option",
   required: true,
-} %>
+} do %>
+  <%= content_for :sage_radio_custom_content do %>
+    <%= sage_component SageBadge, {
+      value: "Published",
+      color: "published",
+    }%>
+  <% end %>
+<% end %>
 
 <%= sage_component SageRadio, {
   caption: "caption text",
