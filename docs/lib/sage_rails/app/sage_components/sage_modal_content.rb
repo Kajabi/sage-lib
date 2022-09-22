@@ -15,6 +15,6 @@ class SageModalContent < SageComponent
   })
 
   def sections
-    %w(header_actions modal_custom_header header_aside header_indicator header_progress_bar footer footer_aside)
+    %w(header_actions modal_custom_header header_aside header_indicator header_progress_bar footer footer_aside modal_body)
   end
 end

@@ -12,6 +12,10 @@ $-modal-margin-xl: 8vh;
 $-modal-header-image-size: rem(28px);
 $-modal-fullscreen-max-width: sage-container(full);
 $-modal-fullscreen-top-spacing: rem(104px);
+$-modal-fixed-fullscreen-top-spacing: 8rem;
+$-modal-fixed-fullscreen-column-top-spacing: rem(60px);
+$-modal-fixed-fullscreen-column-height: rem(62px);
+$-modal-fixed-fullscreen-column-scroll-height: rem(140px);
 $-modal-inner-size: sage-container(md);
 
 
@@ -91,7 +95,7 @@ $-modal-inner-size: sage-container(md);
     @media (max-width: sage-breakpoint(sm-max)) {
       max-width: var(--sage-drawer-size);
     }
-    
+
     @media (max-width: sage-breakpoint(md-min)) {
       max-width: var(--sage-drawer-mobile-size);
     }
@@ -150,6 +154,12 @@ $-modal-inner-size: sage-container(md);
 
   .sage-modal--large & {
     max-width: rem(900px); // TODO: Investigate this size necessity
+  }
+
+  .sage-modal--fixed & {
+    display: flex;
+    flex-direction: column;
+    position: relative;
   }
 
   .sage-modal--fullscreen & {
@@ -261,6 +271,18 @@ $-modal-inner-size: sage-container(md);
     }
   }
 
+  .sage-modal--fixed & {
+    overflow: hidden;
+    height: calc(100vh - #{sage-spacing()});
+    width: 100%;
+    margin-top: $-modal-fixed-fullscreen-column-height;
+    margin-bottom: 0;
+
+    .sage-row {
+      overflow: scroll;
+    }
+  }
+
   .sage-drawer & {
     overflow-y: auto;
     align-content: start;
@@ -308,6 +330,33 @@ $-modal-inner-size: sage-container(md);
 
 .sage-modal__footer-aside {
   margin-right: auto;
+}
+
+.sage-modal__fixed-column {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: calc(100vh - #{$-modal-fixed-fullscreen-column-height});
+}
+
+.sage-modal__fixed-column-scroll {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow: scroll;
+  height: calc(100vh - #{$-modal-fixed-fullscreen-column-scroll-height});
+  padding-bottom: sage-spacing();
+  padding-top: sage-spacing();
+
+  &.sage-modal__fixed-column-scroll--no-footer {
+    height: calc(100vh - #{$-modal-fixed-fullscreen-column-height});
+  }
+}
+
+.sage-modal__fixed-column-actions {
+  margin-top: auto;
+  padding-bottom: sage-spacing();
+  padding-top: sage-spacing();
 }
 
 @media (prefers-reduced-motion) {

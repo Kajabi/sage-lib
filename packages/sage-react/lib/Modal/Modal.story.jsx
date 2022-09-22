@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { Button } from '../Button';
+import { Grid } from '../Grid';
 import { ProgressBar } from '../ProgressBar';
 import { Icon } from '../Icon';
 import { SageTokens, SageClassnames } from '../configs';
 import { disableArgs } from '../story-support/helpers';
 import { Modal } from './Modal';
+import { ButtonGroup } from '../Button/ButtonGroup';
 
 const DefaultBody = ({ onExit }) => (
   <>
@@ -261,6 +263,171 @@ export const ModalWithCustomSize = (args) => {
         {...args}
       >
         <DefaultBody onExit={onExit} />
+      </Modal>
+    </>
+  );
+};
+
+const FullscreenFixedBody = ({ onExit }) => (
+  <>
+    <Modal.Header
+      title="Fullscreen Fixed Modal"
+      aside={(
+        <Button
+          color={Button.COLORS.SECONDARY}
+          iconOnly={true}
+          icon={SageTokens.ICONS.REMOVE}
+          onClick={onExit}
+          subtle={true}
+        >
+          Menu
+        </Button>
+      )}
+    />
+    <Modal.Body>
+      <Grid.Row>
+        <Grid.Col size={5} large={5} className="sage-modal__fixed-column">
+          <div className="sage-modal__fixed-column-scroll">
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+          </div>
+          <ButtonGroup gap={ButtonGroup.GAP_OPTIONS.MD} className="sage-modal__fixed-column-actions">
+            <Button
+              color={Button.COLORS.SECONDARY}
+              raised={false}
+              onClick={onExit}
+            >
+              Go back
+            </Button>
+            <Button
+              color={Button.COLORS.PRIMARY}
+              raised={false}
+            >
+              Save and continue
+            </Button>
+          </ButtonGroup>
+        </Grid.Col>
+        <Grid.Col size={7} large={7}>
+          <div className="sage-modal__fixed-column-scroll sage-modal__fixed-column-scroll--no-footer">
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+            <p>scroll me</p>
+          </div>
+        </Grid.Col>
+      </Grid.Row>
+    </Modal.Body>
+  </>
+);
+
+FullscreenFixedBody.propTypes = {
+  onExit: PropTypes.func.isRequired
+};
+
+export const CreationFramework = (args) => {
+  const [selfActive, setSelfActive] = useState(args.active);
+
+  const handleExit = () => {
+    setSelfActive(false);
+  };
+
+  useEffect(() => {
+    setSelfActive(args.active);
+  }, [args.active]);
+
+  return (
+    <>
+      <Button
+        color={Button.COLORS.PRIMARY}
+        onClick={() => setSelfActive(true)}
+      >
+        Take An Action
+      </Button>
+      <Modal
+        active={selfActive}
+        animation={{ direction: Modal.ANIMATION_DIRECTIONS.BOTTOM }}
+        fixed={true}
+        fullScreen={true}
+        onExit={() => setSelfActive(false)}
+        {...args}
+      >
+        <FullscreenFixedBody onExit={handleExit} />
       </Modal>
     </>
   );

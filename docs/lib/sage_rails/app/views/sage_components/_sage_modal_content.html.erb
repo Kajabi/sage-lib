@@ -83,6 +83,9 @@
   <%= component.generated_html_attributes.html_safe %>
 >
   <%= component.content %>
+  <% if content_for?(:sage_modal_body) %>
+    <%= content_for :sage_modal_body %>
+  <% end %>
 </div>
 
 <% if content_for?(:sage_footer) %>
