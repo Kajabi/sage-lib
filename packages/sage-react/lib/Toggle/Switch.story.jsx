@@ -16,8 +16,8 @@ export default {
   args: {
     checked: false,
     disabled: false,
-    hasError: false,
     hasBorder: false,
+    hasError: false,
     hideText: false,
     label: 'Switch label',
     message: 'Subtext appears',
