@@ -4,6 +4,8 @@ import { Button } from '../Button';
 import { Grid } from '../Grid';
 import { ProgressBar } from '../ProgressBar';
 import { Icon } from '../Icon';
+// import { Switch } from '../Switch';
+// import { Toggle } from '../Toggle';
 import { SageTokens, SageClassnames } from '../configs';
 import { disableArgs } from '../story-support/helpers';
 import { Modal } from './Modal';
@@ -272,16 +274,47 @@ const FullscreenFixedBody = ({ onExit }) => (
   <>
     <Modal.Header
       title="Fullscreen Fixed Modal"
+      customHeader={(
+        <>
+          <Button
+            color={Button.COLORS.SECONDARY}
+            iconOnly={true}
+            icon={SageTokens.ICONS.ARROW_LEFT}
+            subtle={true}
+          >
+            Go back
+          </Button>
+          <h1 className={SageClassnames.TYPE.HEADING_4}>Fullscreen Fixed Modal</h1>
+        </>
+      )}
       aside={(
-        <Button
-          color={Button.COLORS.SECONDARY}
-          iconOnly={true}
-          icon={SageTokens.ICONS.REMOVE}
-          onClick={onExit}
-          subtle={true}
-        >
-          Menu
-        </Button>
+        <>
+          <ButtonGroup gap={ButtonGroup.GAP_OPTIONS.MD} className="sage-modal__fixed-column-actions">
+
+            <Button
+              color={Button.COLORS.SECONDARY}
+              raised={false}
+              onClick={onExit}
+            >
+              Skip for now
+            </Button>
+            <Button
+              color={Button.COLORS.PRIMARY}
+              raised={false}
+            >
+              Next
+            </Button>
+            <Button
+              color={Button.COLORS.SECONDARY}
+              iconOnly={true}
+              icon={SageTokens.ICONS.REMOVE}
+              onClick={onExit}
+              subtle={true}
+            >
+              Menu
+            </Button>
+          </ButtonGroup>
+        </>
       )}
     />
     <Modal.Body>
@@ -330,21 +363,6 @@ const FullscreenFixedBody = ({ onExit }) => (
             <p>scroll me</p>
             <p>scroll me</p>
           </div>
-          <ButtonGroup gap={ButtonGroup.GAP_OPTIONS.MD} className="sage-modal__fixed-column-actions">
-            <Button
-              color={Button.COLORS.SECONDARY}
-              raised={false}
-              onClick={onExit}
-            >
-              Go back
-            </Button>
-            <Button
-              color={Button.COLORS.PRIMARY}
-              raised={false}
-            >
-              Save and continue
-            </Button>
-          </ButtonGroup>
         </Grid.Col>
         <Grid.Col size={7} large={7}>
           <div className="sage-modal__fixed-column-scroll sage-modal__fixed-column-scroll--no-footer">
