@@ -23,7 +23,7 @@ class SageAlert < SageComponent
       value: String,
       url: [:optional, NilClass, String],
       test_id: [:optional, NilClass, String],
-      attributes: [:optional, NilClass, Hash],
+      html_attributes: [:optional, NilClass, Hash],
     }]]],
     small: [:optional, NilClass, TrueClass],
     title: [:optional, NilClass, String],
