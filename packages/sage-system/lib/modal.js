@@ -20,6 +20,7 @@ Sage.modal = (function() {
   const EVENT_OPEN = "sage.modal.open";
   let selectorLastFocused;
   let containerInitialContent;
+  let mouseDownSrc;
 
   // ==================================================
   // Functions
@@ -29,21 +30,29 @@ Sage.modal = (function() {
     // If a modal has 'data-js-modal-disable-close' return early and don't init any handlers
     if (el.hasAttribute(SELECTOR_MODAL_DISABLE_CLOSE)) return;
 
-    el.addEventListener("click", function(evt) {
-      let el = evt.target;
+    // In order to prevent accidentally closing modals
+    // after dragging within the modal to the outside
+    // we store the target of a mousedown
+    el.addEventListener("mousedown", (evt) => mouseDownSrc = evt.target);
 
+    el.addEventListener("mouseup", (evt) => {
+      let el = evt.target;
+      
       // A JS Event is dispatched to call closeModal,
       // this allows Products to hook into that call
       // and perform cleanup actions like removing the modal's content.
-
-      // Modal Container has been clicked
-      if (el.hasAttribute(SELECTOR_MODAL)) {
+      
+      // Modal Container has been clicked and its not a drag event from within the modal
+      if (el.hasAttribute(SELECTOR_MODAL) && el === mouseDownSrc) {
         dispatchCloseAll();
-
-      // Modal Close Button has been clicked
+        
+        // Modal Close Button has been clicked
       } else if (el.hasAttribute(SELECTOR_MODAL_CLOSE) || evt.target.parentElement.hasAttribute(SELECTOR_MODAL_CLOSE)) {
         dispatchCloseAll();
       }
+
+      // Clear out the mouseDownSrc
+      mouseDownSrc = null;
     });
   }
 
