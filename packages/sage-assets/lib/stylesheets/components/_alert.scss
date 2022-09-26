@@ -4,6 +4,10 @@
 /// @group sage
 ////
 
+/*
+  NOTE: These colors map to additional aspects in Alert views.
+  Changes here should be synced with `Alert.jsx`, `_sage_alert.html.erb`, and `sage_alert.rb`
+*/
 $-alert-background-colors: (
   default: sage-color(grey, 300),
   info: sage-color(primary, 100),
@@ -57,6 +61,7 @@ $-alert-background-colors: (
   grid-template-columns: auto 1fr auto;
   grid-template-areas:
     "icon copy actions";
+  align-items: center;
 
   &.sage-alert--dismissable {
     grid-template-columns: auto 1fr auto auto;
@@ -80,19 +85,19 @@ $-alert-background-colors: (
 
 .sage-alert__icon {
   grid-area: icon;
-  padding-top: sage-spacing(2xs);
+  transform: translateY(4px);
 
   .sage-alert--small & {
-    padding-top: rem(1px);
+    transform: translateY(-2px);
   }
 }
 
 .sage-alert__close {
   grid-area: close;
-  padding-top: sage-spacing(2xs);
+  transform: translateY(4px);
 
   .sage-alert--small & {
-    padding-top: rem(1px);
+    transform: translateY(2px);
   }
 }
 

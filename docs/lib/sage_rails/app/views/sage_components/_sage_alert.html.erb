@@ -1,12 +1,4 @@
 <%
-
-#
-# Proposed deprecations and further improvements for a separate PR:
-# - replace status-based colors with sage colors?
-# - rename `icon_name` to `icon` and use just the icon name without `sage-icon-` prefix
-# - rename `desc` to `description`
-#
-
 color = component.color || "default"
 icon = component.icon_name || "sage-icon-info-circle-filled"
 icon["sage-icon-"] = "" # removes the `sage-icon-` prefix from provided icon
@@ -14,24 +6,31 @@ icon_color = "charcoal-200"
 case color
   when "info"
     icon_color = "primary-300"
-  when "update"
-    icon_color = "primary-300"
+    icon = "info-circle-filled"
   when "published"
     icon_color = "sage-300"
+    icon = "check-circle-filled"
   when "success"
-    icon_color = "primary-300"
+    icon_color = "sage-300"
+    icon = "check-circle-filled"
   when "warning"
     icon_color = "yellow-400"
+    icon = "warning-filled"
   when "approaching"
     icon_color = "yellow-400"
+    icon = "warning-filled"
   when "reached"
     icon_color = "orange-400"
+    icon = "warning-filled"
   when "exceeded"
     icon_color = "red-300"
+    icon = "danger-filled"
   when "danger"
     icon_color = "red-300"
+    icon = "danger-filled"
   else
     icon_color = "charcoal-200"
+    icon = "info-circle-filled"
 end
 %>
 <div
@@ -45,13 +44,11 @@ end
   data-js-alert="true"
   <%= component.generated_html_attributes.html_safe %>
 >
-  <% if component.icon_name %>
-    <%= sage_component SageIcon, {
-      css_classes: "sage-alert__icon",
-      icon: icon,
-      color: icon_color,
-    } %>
-  <% end %>
+  <%= sage_component SageIcon, {
+    css_classes: "sage-alert__icon",
+    icon: icon,
+    color: icon_color,
+  } %>
   <div class="sage-alert__copy">
     <% if component.title %>
       <h3 class="sage-alert__title">
@@ -72,7 +69,6 @@ end
           value: component.primary_action[:value],
           test_id: component.primary_action[:test_id],
           style: "primary",
-          css_classes: "sage-alert__primary-action sage-alert__primary-action--#{component.color}",
           attributes: component.primary_action[:attributes]
         } %>
       <% end %>
@@ -82,7 +78,9 @@ end
             label: secondary_action[:value],
             show_label: true,
             style: "secondary",
-            url: secondary_action[:url]
+            remove_underline: true,
+            url: secondary_action[:url],
+            html_attributes: secondary_action[:html_attributes] || {},
           } %>
         <% end %>
       <% end %>
