@@ -474,18 +474,6 @@ a.sage-btn {
   }
 }
 
-// Note: duplicated from _alert.scss; update here when _alert.scss changes
-$-alert-colors: (
-  info: primary,
-  published: sage,
-  success: sage,
-  warning: yellow,
-  danger: red,
-  exceeded: red,
-  reached: orange,
-  approaching: yellow,
-);
-
 // Secondary styles, no shadow variation
 .sage-btn--secondary {
   color: sage-color(charcoal, 400);
@@ -507,31 +495,6 @@ $-alert-colors: (
   &[aria-disabled="true"] {
     color: sage-color(charcoal, 100);
     background-color: sage-color(white);
-  }
-
-  &.sage-alert__primary-action {
-    background-color: transparent;
-
-    @each $name, $color in $-alert-colors {
-      .sage-alert--#{$name} & {
-        @include sage-focus-ring;
-
-        color: sage-color(white);
-        background-color: sage-color($color, 300);
-        border-color: transparent;
-
-        &:hover {
-          background-color: sage-color($color, 400);
-        }
-
-        &:focus,
-        &:active {
-          background-color: sage-color($color, 300);
-        }
-
-        @include sage-focus-outline--update-color(transparent);
-      }
-    }
   }
 
   &.sage-btn--subtle {
@@ -588,18 +551,10 @@ $-alert-colors: (
         color: map-get($-styles, hover);
         background-color: map-get($-styles, hover-background);
 
-        .sage-alert & {
-          background-color: transparent;
-        }
-
         &::after {
           z-index: 0;
           background-color: map-get($-styles, hover-background);
           opacity: 1;
-
-          .sage-alert & {
-            background-color: transparent;
-          }
         }
 
         &::before,
@@ -674,38 +629,6 @@ $-alert-colors: (
     }
   }
 
-  &.sage-alert__secondary-action {
-    color: sage-color(charcoal, 400);
-    text-decoration: underline;
-    border: 0;
-
-    @each $name, $color in $-alert-colors {
-      .sage-alert--#{$name} & {
-        &.sage-btn {
-          border-color: transparent;
-
-          &:hover::after {
-            background: transparent;
-            border-color: transparent;
-            opacity: 0;
-          }
-
-          &:focus,
-          &:active {
-            color: sage-color(charcoal, 400);
-            border-color: sage-color($color, 200);
-          }
-
-          &:focus::after,
-          &:active::after {
-            border-color: sage-color($color, 400);
-          }
-        }
-
-        @include sage-focus-outline--update-color(sage-color($color, 400));
-      }
-    }
-  }
   // react only styles as primary classes are added by default
   &.sage-banner__link.sage-btn--primary,
   &.sage-banner__close.sage-btn--primary {
