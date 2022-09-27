@@ -56,17 +56,15 @@ $-alert-background-colors: (
 }
 
 .sage-alert--small {
+  grid-template-columns: auto 1fr auto;
+  grid-template-areas: "icon copy actions";
+  align-items: center;
   padding: sage-spacing(sm);
   border-radius: sage-border(radius-medium);
-  grid-template-columns: auto 1fr auto;
-  grid-template-areas:
-    "icon copy actions";
-  align-items: center;
 
   &.sage-alert--dismissable {
     grid-template-columns: auto 1fr auto auto;
-    grid-template-areas:
-      "icon copy actions close";
+    grid-template-areas: "icon copy actions close";
   }
 }
 
@@ -102,11 +100,11 @@ $-alert-background-colors: (
 }
 
 .sage-alert__actions {
-  grid-area: actions;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: sage-spacing(sm);
+  grid-area: actions;
 }
 
 .sage-alert__desc {
