@@ -23,6 +23,7 @@
 <% else %>
   <div class="
       sage-radio
+      <%= "sage-radio--custom" if content_for :sage_radio_custom_content %>
       <%= component.has_border ? "sage-radio--has-border" : "" %>
       <%= component.has_error ? "sage-radio--error" : "" %>
     "
