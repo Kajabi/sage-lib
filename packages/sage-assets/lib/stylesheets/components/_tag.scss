@@ -4,6 +4,7 @@
 /// @group sage
 ////
 
+$-tag-image-size: sage-spacing();
 $-tag-button-color: sage-color(charcoal, 200);
 $-tag-button-icon-size: rem(18px);
 $-tag-button-icon-mobile-size: rem(24px);
@@ -20,6 +21,13 @@ $-tag-button-icon-mobile-size: rem(24px);
   &:hover {
     background-color: sage-color(grey, 400);
   }
+}
+
+.sage-tag__image {
+  width: $-tag-image-size;
+  height: $-tag-image-size;
+  margin-right: sage-spacing(xs);
+  border-radius: sage-border(radius-round);
 }
 
 .sage-tag__button.sage-btn--subtle {
