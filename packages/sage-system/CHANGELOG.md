@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@1.2.0...@kajabi/sage-system@1.2.1) (2022-09-27)
+
+
+### Bug Fixes
+
+* **modal:** ensure drag from within modal does not accidentally dismiss it ([aec3c40](https://github.com/Kajabi/sage-lib/commit/aec3c4016196654513cdd8738264cab4ab9a2b04))
+
+
+
+
+
 # [1.2.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@1.1.0...@kajabi/sage-system@1.2.0) (2022-09-21)
 
 
