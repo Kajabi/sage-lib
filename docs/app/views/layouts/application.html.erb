@@ -3,6 +3,9 @@
   <head>
     <%= render "application/meta" %>
     <%= render "application/styles" %>
+    <%= unless Rails.env.development? %>
+      <%= render "application/ga_tracking" %>
+    <% end %>
   </head>
   <%= sage_component(SageBody, { css_classes: "sage-docs" }) do %>
     <%= render "application/content_skip_link",
