@@ -6,7 +6,8 @@
 
 /*
   NOTE: These colors map to additional aspects in Alert views.
-  Changes here should be synced with `Alert.jsx`, `_sage_alert.html.erb`, and `sage_alert.rb`
+  Changes here should be synced with:
+  `sage_tokens.rb`, `sage_alert.rb`, `_sage_alert.html.erb`, and `Alert.jsx`
 */
 $-alert-background-colors: (
   default: sage-color(grey, 300),
