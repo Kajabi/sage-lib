@@ -30,7 +30,7 @@ $-tag-button-icon-mobile-size: rem(24px);
 .sage-tag__image {
   width: $-tag-image-size;
   height: $-tag-image-size;
-  margin-right: sage-spacing(xs);
+  margin: sage-spacing(2xs) sage-spacing(xs) sage-spacing(2xs) sage-spacing(2xs);
   border-radius: sage-border(radius-round);
 }
 
