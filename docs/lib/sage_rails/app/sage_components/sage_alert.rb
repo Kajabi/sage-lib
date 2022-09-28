@@ -1,19 +1,9 @@
 class SageAlert < SageComponent
   set_attribute_schema({
-    color: [:optional, NilClass, Set.new([
-      "default",
-      "info",
-      "published",
-      "success",
-      "warning",
-      "approaching",
-      "reached",
-      "exceeded",
-      "danger",
-    ])],
+    color: [:optional, NilClass, SageSchemas::STATUSES],
     desc: [:optional, NilClass, String],
     dismissable: [:optional, NilClass, TrueClass],
-    icon_name: [:optional, NilClass, String, Set.new(SageTokens::ICONS)],
+    icon_name: [:optional, NilClass, String],
     primary_action: [:optional, NilClass, {
       value: String,
       test_id: [:optional, NilClass, String],
@@ -23,7 +13,7 @@ class SageAlert < SageComponent
       value: String,
       url: [:optional, NilClass, String],
       test_id: [:optional, NilClass, String],
-      html_attributes: [:optional, NilClass, Hash],
+      attributes: [:optional, NilClass, Hash],
     }]]],
     small: [:optional, NilClass, TrueClass],
     title: [:optional, NilClass, String],

@@ -1,42 +1,7 @@
-<%
-color = component.color || "default"
-icon = component.icon_name || "sage-icon-info-circle-filled"
-icon["sage-icon-"] = "" # removes the `sage-icon-` prefix from provided icon
-icon_color = "charcoal-200"
-case color
-  when "info"
-    icon_color = "primary-300"
-    icon = "info-circle-filled"
-  when "published"
-    icon_color = "sage-300"
-    icon = "check-circle-filled"
-  when "success"
-    icon_color = "sage-300"
-    icon = "check-circle-filled"
-  when "warning"
-    icon_color = "yellow-400"
-    icon = "warning-filled"
-  when "approaching"
-    icon_color = "yellow-400"
-    icon = "warning-filled"
-  when "reached"
-    icon_color = "orange-400"
-    icon = "warning-filled"
-  when "exceeded"
-    icon_color = "red-300"
-    icon = "danger-filled"
-  when "danger"
-    icon_color = "red-300"
-    icon = "danger-filled"
-  else
-    icon_color = "charcoal-200"
-    icon = "info-circle-filled"
-end
-%>
 <div
   class="
     sage-alert
-    <%= "sage-alert--#{color}" %>
+    <%= "sage-alert--#{component.color}" if component.color %>
     <%= "sage-alert--small" if component.small %>
     <%= "sage-alert--dismissable" if component.dismissable %>
     <%= component.generated_css_classes %>
@@ -44,11 +9,9 @@ end
   data-js-alert="true"
   <%= component.generated_html_attributes.html_safe %>
 >
-  <%= sage_component SageIcon, {
-    css_classes: "sage-alert__icon",
-    icon: icon,
-    color: icon_color,
-  } %>
+  <% if component.icon_name %>
+    <i class="sage-alert__icon <%= component.icon_name %>" aria-hidden="true"></i>
+  <% end %>
   <div class="sage-alert__copy">
     <% if component.title %>
       <h3 class="sage-alert__title">
@@ -80,7 +43,6 @@ end
             style: "secondary",
             remove_underline: true,
             url: secondary_action[:url],
-            html_attributes: secondary_action[:html_attributes] || {},
           } %>
         <% end %>
       <% end %>

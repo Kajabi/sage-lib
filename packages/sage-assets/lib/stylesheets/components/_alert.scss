@@ -10,6 +10,7 @@
 */
 $-alert-background-colors: (
   default: sage-color(grey, 300),
+  draft: sage-color(grey, 300),
   info: sage-color(primary, 100),
   published: sage-color(sage, 100),
   success: sage-color(sage, 100),
@@ -18,6 +19,19 @@ $-alert-background-colors: (
   reached: sage-color(orange, 100),
   exceeded: sage-color(red, 100),
   danger: sage-color(red, 100),
+);
+
+$-alert-icon-colors: (
+  default: sage-color(charcoal, 200),
+  draft: sage-color(charcoal, 200),
+  info: sage-color(primary, 300),
+  published: sage-color(sage, 300),
+  success: sage-color(sage, 300),
+  warning: sage-color(yellow, 400),
+  approaching: sage-color(yellow, 400),
+  reached: sage-color(orange, 400),
+  exceeded: sage-color(red, 300),
+  danger: sage-color(red, 300),
 );
 
 .sage-alert {
@@ -84,6 +98,12 @@ $-alert-background-colors: (
 .sage-alert__icon {
   grid-area: icon;
   transform: translateY(4px);
+
+  @each $name, $value in $-alert-icon-colors {
+    .sage-alert--#{$name} & {
+      color: $value;
+    }
+  }
 
   .sage-alert--small & {
     transform: translateY(-2px);
