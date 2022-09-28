@@ -7,6 +7,7 @@ import { SageTokens } from '../configs';
 export const Tag = ({
   className,
   dismissAttributes,
+  image,
   showDismiss,
   value
 }) => {
@@ -16,6 +17,7 @@ export const Tag = ({
     <span
       className={classNames}
     >
+      <img src={image} alt="" role="presentation" />
       <span className="sage-tag__value">
         {value}
       </span>
@@ -39,12 +41,14 @@ export const Tag = ({
 Tag.defaultProps = {
   className: null,
   dismissAttributes: null,
+  image: null,
   showDismiss: false,
 };
 
 Tag.propTypes = {
   className: PropTypes.string,
   dismissAttributes: PropTypes.shape({}),
+  image: PropTypes.string,
   showDismiss: PropTypes.bool,
   value: PropTypes.string.isRequired,
 };
