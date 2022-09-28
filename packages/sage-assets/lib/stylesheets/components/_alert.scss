@@ -208,3 +208,57 @@ $-alert-colors: (
     margin-right: sage-spacing(2xs);
   }
 }
+
+$-creation-wizard-sidebar-width: 520px;
+$-creation-wizard-preview-width: 919px;
+$-creation-wizard-preview-visible-breakpoint: 1359px;
+
+.creation-wizard__modal {
+  // Z-indexes PCW modal before the standard modal default
+  // to ensure additional Sage modals stack above.
+  z-index: sage-z-index("modal", -5) !important; // scss-lint:disable ImportantRule
+}
+
+.sage-row.creation-wizard__container {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.sage-progress-bar__value {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  transition: width 300ms ease;
+}
+
+.creation-wizard__sidebar {
+  flex-grow: 0;
+  padding: 0 sage-spacing(xl);
+  overflow-y: auto;
+  flex-basis: $-creation-wizard-sidebar-width;
+
+  @media (max-width: sage-breakpoint(xs-max)) {
+    padding: 0 sage-spacing();
+  }
+}
+
+.creation-wizard__preview {
+  padding: 0 sage-spacing(xl) 0 0;
+}
+
+@media (max-width: $-creation-wizard-preview-visible-breakpoint) {
+  .sage-row.creation-wizard__container {
+    max-width: $-creation-wizard-sidebar-width;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .creation-wizard__preview {
+    display: none;
+  }
+}
+
+.u-sage-modal--fixed {
+  position: fixed;
+}
+
