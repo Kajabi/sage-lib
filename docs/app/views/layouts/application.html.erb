@@ -3,7 +3,7 @@
   <head>
     <%= render "application/meta" %>
     <%= render "application/styles" %>
-    <%= unless Rails.env.development? %>
+    <% unless Rails.env.development? %>
       <%= render "application/ga_tracking" %>
     <% end %>
   </head>
