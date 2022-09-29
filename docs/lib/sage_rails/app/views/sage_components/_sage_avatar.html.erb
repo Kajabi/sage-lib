@@ -26,6 +26,7 @@ end
     sage-avatar
     <%= "sage-avatar--#{component.color}" if component.color %>
     <%= "sage-avatar--centered" if component.centered %>
+    <%= "sage-avatar--custom-badge" if component.badge_icon || component.badge_color %>
     <%= component.generated_css_classes %>
   "
   <%= component.generated_html_attributes.html_safe %>

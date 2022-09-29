@@ -163,6 +163,10 @@ $-avatar-group-item-sizes: (
   i {
     display: flex;
   }
+
+  .sage-avatar--custom-badge & {
+    border: 0;
+  }
 }
 
 .sage-avatar__initials {
