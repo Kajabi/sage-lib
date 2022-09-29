@@ -23,7 +23,9 @@ export const Tag = ({
     <span
       className={classNames}
     >
-      <img className="sage-tag__image" src={image} alt="" role="presentation" />
+      {image && (
+        <img className="sage-tag__image" src={image} alt="" role="presentation" />
+      )}
       <span className="sage-tag__value">
         {value}
       </span>
