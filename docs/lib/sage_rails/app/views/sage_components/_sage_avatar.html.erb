@@ -36,9 +36,9 @@ end
   <% if component.badge %>
     <div class="sage-avatar__badge">
       <%= sage_component SageIcon, {
-        icon: "check-circle-filled",
+        icon: component.badge_icon ? component.badge_icon : "check-circle-filled",
         size: badge_icon_size,
-        color: "primary-300",
+        color: component.badge_color ? component.badge_color : "primary-300",
       } %>
     </div>
   <% end %>
