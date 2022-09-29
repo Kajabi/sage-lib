@@ -11,7 +11,13 @@ export const Tag = ({
   showDismiss,
   value
 }) => {
-  const classNames = classnames('sage-tag', className);
+  const classNames = classnames(
+    'sage-tag',
+    className,
+    {
+      'sage-tag--has-image': image,
+    }
+  );
 
   return (
     <span
