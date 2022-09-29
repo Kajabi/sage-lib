@@ -129,7 +129,7 @@ $-alert-icon-colors: (
 }
 
 .sage-alert__desc {
-  .sage-alert--small {
+  .sage-alert--small & {
     @include truncate();
     max-width: 100%;
   }
