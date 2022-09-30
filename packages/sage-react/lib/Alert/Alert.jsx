@@ -112,7 +112,7 @@ Alert.propTypes = {
   actions: PropTypes.node,
   className: PropTypes.string,
   color: PropTypes.oneOf(Object.values(ALERT_COLORS)).isRequired,
-  description: PropTypes.node,
+  description: PropTypes.string,
   dismissable: PropTypes.bool,
   icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),
   onDismiss: PropTypes.func,
