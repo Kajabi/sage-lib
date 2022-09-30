@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { Button } from '../Button';
 import { Icon } from '../Icon';
-import { ALERT_COLORS } from './configs';
+import { ALERT_COLORS, ALERT_PRIMARY_ACTION_CLASSNAME } from './configs';
 import { SageTokens } from '../configs';
 
 export const Alert = ({
@@ -94,6 +94,7 @@ export const Alert = ({
 };
 
 Alert.COLORS = ALERT_COLORS;
+Alert.PRIMARY_ACTION_CLASSNAME = ALERT_PRIMARY_ACTION_CLASSNAME;
 
 Alert.defaultProps = {
   actions: null,
@@ -111,7 +112,7 @@ Alert.propTypes = {
   actions: PropTypes.node,
   className: PropTypes.string,
   color: PropTypes.oneOf(Object.values(ALERT_COLORS)).isRequired,
-  description: PropTypes.string,
+  description: PropTypes.node,
   dismissable: PropTypes.bool,
   icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),
   onDismiss: PropTypes.func,

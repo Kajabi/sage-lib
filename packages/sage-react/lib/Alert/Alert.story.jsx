@@ -25,23 +25,28 @@ const Template = (args) => <Alert {...args} />;
 
 export const DismissableAlert = Template.bind({});
 DismissableAlert.args = {
-  description: 'Body duis rhoncus neque, sed nulla sed quis fames. Eu eu ut at odio ultrices orci varius habitant. Tempor vulputate in nisl massa eget id.',
+  description: (
+    <>
+      Body duis rhoncus neque, sed nulla sed quis fames.
+      Eu eu ut at odio ultrices orci varius habitant.
+      Tempor vulputate in nisl massa eget id.
+      {' '}<a href="#href" className="testing custom class">Learn more...</a>
+    </>
+  ),
   color: Alert.COLORS.DEFAULT,
   dismissable: true,
   onClickDismiss: () => console.log('clicked to dismiss'), // eslint-disable-line
   actions: (
     <>
       <Button
-        className="sage-alert__primary-action"
-        color="secondary"
+        className={Alert.PRIMARY_ACTION_CLASSNAME}
+        color={Button.COLORS.PRIMARY}
       >
-        Get unlimited pages
+        Primary button
       </Button>
       <Link
         href="//example.com"
-        removeUnderline={true}
-        style={Link.COLORS.SECONDARY}
-        suppressDefaultClass={true}
+        suppressDefaultClass
       >
         Check Usage
       </Link>
@@ -56,16 +61,14 @@ NonDismissableAlert.args = {
   actions: (
     <>
       <Button
-        className="sage-alert__primary-action"
-        color="secondary"
+        className={Alert.PRIMARY_ACTION_CLASSNAME}
+        color={Button.COLORS.PRIMARY}
       >
         Get unlimited pages
       </Button>
       <Link
         href="//example.com"
-        removeUnderline={true}
-        style={Link.COLORS.SECONDARY}
-        suppressDefaultClass={true}
+        suppressDefaultClass
       >
         Check Usage
       </Link>
@@ -77,13 +80,13 @@ export const SmallAlert = Template.bind({});
 SmallAlert.args = {
   color: Alert.COLORS.SUCCESS,
   dismissable: true,
+  title: null,
+  description: 'Body duis rhoncus neque, sed nulla sed quis fames et tu odio.',
   actions: (
     <>
       <Link
         href="//example.com"
-        removeUnderline={true}
-        style={Link.COLORS.SECONDARY}
-        suppressDefaultClass={true}
+        suppressDefaultClass
       >
         Check Usage
       </Link>
