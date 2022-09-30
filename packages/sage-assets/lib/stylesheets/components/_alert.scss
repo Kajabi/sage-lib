@@ -51,9 +51,23 @@ $-alert-icon-colors: (
     margin-bottom: 0;
   }
 
-  a:not([class]) {
+  // Mimics sage-link "inline link" styling
+  a:not([class*="sage-link"]) {
+    @include sage-focus-outline($outline-offset-inline: 4px);
+
     color: sage-color(charcoal, 400);
     text-decoration: underline;
+
+    &:hover {
+      color: sage-color(charcoal, 500);
+      text-decoration: none;
+    }
+
+    &:focus {
+      @include sage-focus-outline--update-color(sage-color(primary, 200));
+
+      color: sage-color(charcoal, 400);
+    }
   }
 
   &.sage-alert--dismissable {
@@ -124,8 +138,32 @@ $-alert-icon-colors: (
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: sage-spacing(sm);
+  gap: sage-spacing();
   grid-area: actions;
+
+  // Mimics sage-link "plain link" styling
+  a:not([class*="sage-link"]) {
+    @extend %t-sage-body-med;
+    @include sage-focus-outline($outline-offset-inline: 4px);
+
+    color: sage-color(charcoal, 400);
+    text-decoration: none;
+
+    &:hover {
+      color: sage-color(charcoal, 500);
+      text-decoration: underline;
+    }
+
+    &:focus {
+      @include sage-focus-outline--update-color(sage-color(primary, 200));
+
+      color: sage-color(charcoal, 400);
+    }
+  }
+
+  .sage-alert--small & {
+    gap: sage-spacing(sm);
+  }
 }
 
 .sage-alert__desc {
