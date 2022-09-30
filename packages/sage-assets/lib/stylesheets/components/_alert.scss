@@ -51,25 +51,6 @@ $-alert-icon-colors: (
     margin-bottom: 0;
   }
 
-  // Mimics sage-link "inline link" styling
-  a:not([class*="sage-link"]) {
-    @include sage-focus-outline($outline-offset-inline: 4px);
-
-    color: sage-color(charcoal, 400);
-    text-decoration: underline;
-
-    &:hover {
-      color: sage-color(charcoal, 500);
-      text-decoration: none;
-    }
-
-    &:focus {
-      @include sage-focus-outline--update-color(sage-color(primary, 200));
-
-      color: sage-color(charcoal, 400);
-    }
-  }
-
   &.sage-alert--dismissable {
     grid-template-columns: auto 1fr auto;
     grid-template-areas:
@@ -142,7 +123,9 @@ $-alert-icon-colors: (
   grid-area: actions;
 
   // Mimics sage-link "plain link" styling
-  a:not([class*="sage-link"]) {
+  // Excludes elements styled by Sage
+  // such as SageLink and SageButton
+  a:not([class*="sage-"]) {
     @extend %t-sage-body-med;
     @include sage-focus-outline($outline-offset-inline: 4px);
 
@@ -156,8 +139,6 @@ $-alert-icon-colors: (
 
     &:focus {
       @include sage-focus-outline--update-color(sage-color(primary, 200));
-
-      color: sage-color(charcoal, 400);
     }
   }
 
@@ -167,6 +148,27 @@ $-alert-icon-colors: (
 }
 
 .sage-alert__desc {
+  @extend %t-sage-body;
+
+  // Mimics sage-link "inline link" styling
+  // Excludes elements styled by Sage
+  // such as SageLink and SageButton
+  a:not([class*="sage-"]) {
+    @include sage-focus-outline($outline-offset-inline: 4px);
+
+    color: sage-color(charcoal, 400);
+    text-decoration: underline;
+
+    &:hover {
+      color: sage-color(charcoal, 500);
+      text-decoration: none;
+    }
+
+    &:focus {
+      @include sage-focus-outline--update-color(sage-color(primary, 200));
+    }
+  }
+
   .sage-alert--small & {
     @include truncate();
     max-width: 100%;
