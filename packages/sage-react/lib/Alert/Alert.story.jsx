@@ -25,14 +25,7 @@ const Template = (args) => <Alert {...args} />;
 
 export const DismissableAlert = Template.bind({});
 DismissableAlert.args = {
-  description: (
-    <>
-      Body duis rhoncus neque, sed nulla sed quis fames.
-      Eu eu ut at odio ultrices orci varius habitant.
-      Tempor vulputate in nisl massa eget id.
-      {' '}<a href="#href" className="testing custom class">Learn more...</a>
-    </>
-  ),
+  description: 'Body duis rhoncus neque, sed nulla sed quis fames. Eu eu ut at odio ultrices orci varius habitant. Tempor vulputate in nisl massa eget id.',
   color: Alert.COLORS.DEFAULT,
   dismissable: true,
   onClickDismiss: () => console.log('clicked to dismiss'), // eslint-disable-line
@@ -42,7 +35,7 @@ DismissableAlert.args = {
         className={Alert.PRIMARY_ACTION_CLASSNAME}
         color={Button.COLORS.PRIMARY}
       >
-        Primary button
+        Get unlimited pages
       </Button>
       <Link
         href="//example.com"
