@@ -1,7 +1,12 @@
 <span
-  class="sage-tag <%= component.generated_css_classes %>"
+  class="
+    sage-tag
+    <%= "sage-tag--has-image" if component.image %>
+    <%= component.generated_css_classes %>
+  "
   <%= component.generated_html_attributes.html_safe %>
 >
+  <%= image_tag component.image, alt: "", class: "sage-tag__image", "role": "presentation" if component.image %>
   <span class="sage-tag__value"><%= component.value %></span>
   <% if component.show_dismiss %>
     <%= sage_component SageButton, {

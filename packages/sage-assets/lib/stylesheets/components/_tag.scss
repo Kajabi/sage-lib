@@ -4,12 +4,13 @@
 /// @group sage
 ////
 
-$-tag-button-color: sage-color(charcoal, 200);
+$-tag-image-size: rem(24px);
+$-tag-button-color: sage-color(charcoal, 500);
 $-tag-button-icon-size: rem(18px);
 $-tag-button-icon-mobile-size: rem(24px);
 
 .sage-tag {
-  @extend %t-sage-body-small-med;
+  @extend %t-sage-body-small-semi;
 
   display: inline-flex;
   align-items: center;
@@ -20,6 +21,17 @@ $-tag-button-icon-mobile-size: rem(24px);
   &:hover {
     background-color: sage-color(grey, 400);
   }
+}
+
+.sage-tag--has-image {
+  padding-left: sage-spacing(2xs);
+}
+
+.sage-tag__image {
+  width: $-tag-image-size;
+  height: $-tag-image-size;
+  margin: sage-spacing(2xs) sage-spacing(xs) sage-spacing(2xs) sage-spacing(2xs);
+  border-radius: sage-border(radius-round);
 }
 
 .sage-tag__button.sage-btn--subtle {

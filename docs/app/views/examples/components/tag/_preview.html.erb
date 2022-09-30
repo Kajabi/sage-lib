@@ -1,8 +1,18 @@
 <%= md("**Note:** The Tag component is meant to be interactive. If you are looking for a non-interactive Tag-like component, consider the #{link_to("Badge", pages_component_path("badge"))} component.") %>
-<%= sage_component SagePanelBlock, {} do %>
+<%= sage_component SagePanelStack, {} do %>
 	<h3 class="t-sage-heading-6">Default</h3>
 	<%= sage_component SageTag, {
 		value: "Label",
+		show_dismiss: true,
+		dismiss_attributes: {
+			"data-js-copy-button": "Label"
+		}
+	} %>
+
+	<h3 class="t-sage-heading-6">Image Variant</h3>
+	<%= sage_component SageTag, {
+		value: "Label",
+		image: "avatar/koray_okumus.png",
 		show_dismiss: true,
 		dismiss_attributes: {
 			"data-js-copy-button": "Label"
