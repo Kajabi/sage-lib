@@ -54,7 +54,7 @@ Default.decorators = [
           width: '100%'
         }}
       >
-        <Story />
+        {Story()}
       </div>
     </>
   )
