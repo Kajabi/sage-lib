@@ -27,7 +27,7 @@ Default.decorators = [
   (Story) => (
     <>
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <Story />
+        {Story()}
       </div>
     </>
   )
