@@ -4,7 +4,7 @@ import { Select } from './Select';
 export default {
   title: 'Sage/Select',
   component: Select,
-  decorators: [(Story) => <div style={{ width: 300, marginLeft: 'auto', marginRight: 'auto' }}><Story /></div>],
+  decorators: [(Story) => <div style={{ width: 300, marginLeft: 'auto', marginRight: 'auto' }}>{Story()}</div>],
   args: {
     label: 'Select',
     id: 'field-1',
