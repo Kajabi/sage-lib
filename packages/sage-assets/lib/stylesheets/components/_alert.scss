@@ -4,11 +4,10 @@
 /// @group sage
 ////
 
-/*
-  NOTE: These colors map to additional aspects in Alert views.
-  Changes here should be synced with:
-  `sage_alert.rb`, `_sage_alert.html.erb`, and `Alert.jsx`
-*/
+//
+// NOTE: These colors maps have corresponding settings in the following:
+// `_button.scss`, `sage_alert.rb`, `_sage_alert.html.erb`, and `Alert.jsx`
+//
 $-alert-background-colors: (
   default: sage-color(grey, 300),
   draft: sage-color(grey, 300),

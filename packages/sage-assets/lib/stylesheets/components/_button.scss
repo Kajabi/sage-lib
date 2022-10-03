@@ -133,6 +133,8 @@ $-btn-subtle-styles: (
   ),
 );
 
+// NOTE: the following colors should be kept in sync
+// with the colors in `_alert.scss`
 $-alert-close-btn-background-colors: (
   default: sage-color(grey, 400),
   draft: sage-color(grey, 400),
