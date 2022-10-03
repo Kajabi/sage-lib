@@ -10,6 +10,9 @@ export default {
   args: {
     label: 'Radio',
     type: Toggle.TYPES.RADIO,
+    id: 'radio-1',
+    name: 'radio-1',
+    hasBorder: false,
   },
   argTypes: {
     ...selectArgs({
