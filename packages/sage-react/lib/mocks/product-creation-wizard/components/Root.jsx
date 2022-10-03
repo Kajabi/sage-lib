@@ -5,6 +5,7 @@ import {
   Modal,
   SageTokens,
 } from '../../..';
+import { ButtonGroup } from '../../../Button/ButtonGroup';
 import {
   CoachingAppearance,
   CoachingBooking,
@@ -88,15 +89,32 @@ export const Root = () => {
         <Modal.Header
           title={modalTitle}
           aside={(
-            <Button
-              color={Button.COLORS.SECONDARY}
-              icon={SageTokens.ICONS.REMOVE}
-              iconOnly={true}
-              subtle={true}
-              onClick={() => setModalActive(false)}
-            >
-              Close
-            </Button>
+            <>
+              <ButtonGroup gap={ButtonGroup.GAP_OPTIONS.MD}>
+                <Button
+                  color={Button.COLORS.SECONDARY}
+                  raised={false}
+                  onClick={() => setModalActive(false)}
+                >
+                  Skip for now
+                </Button>
+                <Button
+                  color={Button.COLORS.PRIMARY}
+                  raised={false}
+                >
+                  Next
+                </Button>
+                <Button
+                  color={Button.COLORS.SECONDARY}
+                  icon={SageTokens.ICONS.REMOVE}
+                  iconOnly={true}
+                  subtle={true}
+                  onClick={() => setModalActive(false)}
+                >
+                  Close
+                </Button>
+              </ButtonGroup>
+            </>
           )}
         >
           {/*
@@ -112,18 +130,23 @@ export const Root = () => {
           */}
           <Grid.Row className="creation-wizard__container">
             {/* <Grid.Col size={4} small={12} medium={5} large={4}> */}
-            <Grid.Col className="creation-wizard__sidebar">
-              {renderStep()}
+            <Grid.Col className="creation-wizard__sidebar u-sage-modal__fixed-column">
+              <div className="u-sage-modal__fixed-column-scroll">
+                <p>hey there</p>
+                {renderStep()}
+              </div>
             </Grid.Col>
             {/* <Grid.Col size={8} small={Grid.GRID_BREAKPOINT_TOGGLES.HIDE}
             medium={7} large={8}> */}
-            <Grid.Col className="creation-wizard__preview">
-              {/* TODO: Dev to add actual graphic SVG here  with live edit synced */}
-              <img
-                src="//source.unsplash.com/random/832x575"
-                style={{ margin: '0 auto', display: 'block', maxWidth: '100%' }}
-                alt=""
-              />
+            <Grid.Col className="creation-wizard__preview u-sage-modal__fixed-column">
+              <div className="u-sage-modal__fixed-column-scroll">
+                {/* TODO: Dev to add actual graphic SVG here  with live edit synced */}
+                <img
+                  src="//source.unsplash.com/random/832x575"
+                  style={{ margin: '0 auto', display: 'block', maxWidth: '100%' }}
+                  alt=""
+                />
+              </div>
             </Grid.Col>
           </Grid.Row>
         </Modal.Body>
