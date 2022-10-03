@@ -1,5 +1,6 @@
 <%
-is_responsive = component.responsive.present? ? component.responsive : true
+# NOTE: Default to `true` unless `component.responsive` is set to `false`
+is_responsive = component.responsive != false
 %>
 <div class="
   sage-table-wrapper
