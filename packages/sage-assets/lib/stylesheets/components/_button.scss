@@ -630,7 +630,7 @@ a.sage-btn {
     }
   }
 
-  @each $name, $value in $-alert-close-btn-background-colors{
+  @each $name, $value in $-alert-close-btn-background-colors {
     .sage-alert--#{$name} &.sage-alert__close-btn {
       &:not(:focus):hover {
         background-color: $value;
