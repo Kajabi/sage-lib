@@ -133,6 +133,19 @@ $-btn-subtle-styles: (
   ),
 );
 
+$-alert-close-btn-background-colors: (
+  default: sage-color(grey, 400),
+  draft: sage-color(grey, 400),
+  info: sage-color(primary, 200),
+  published: sage-color(sage, 200),
+  success: sage-color(sage, 200),
+  warning: sage-color(yellow, 200),
+  approaching: sage-color(yellow, 200),
+  reached: sage-color(orange, 200),
+  exceeded: sage-color(red, 200),
+  danger: sage-color(red, 200),
+);
+
 //
 // Custom variables
 //
@@ -611,6 +624,24 @@ a.sage-btn {
           position: absolute;
           right: sage-spacing(xs);
         }
+      }
+    }
+  }
+
+  @each $name, $value in $-alert-close-btn-background-colors{
+    .sage-alert--#{$name} &.sage-alert__close-btn {
+      &:not(:focus):hover {
+        background-color: $value;
+
+        &::after {
+          background-color: $value;
+        }
+      }
+  
+      &:focus,
+      &:active {
+        border-color: transparent;
+        background-color: transparent;
       }
     }
   }
