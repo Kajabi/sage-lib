@@ -26,7 +26,7 @@ Default.decorators = [
     <>
       <Grid container={Grid.CONTAINER_SIZES.MD}>
         <Card>
-          <Story />
+          {Story()}
         </Card>
       </Grid>
     </>
