@@ -15,7 +15,15 @@ import { PanelControls } from './PanelControls';
 export default {
   title: 'Sage/PanelControls',
   component: PanelControls,
-  decorators: [(Story) => <div style={{ padding: 50, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><Story /></div>],
+  // displays description on Docs tab
+  parameters: {
+    docs: {
+      description: {
+        component: 'Panel controls provides a unified interface for controlling lists inside of a panel.'
+      },
+    },
+  },
+  decorators: [(Story) => <div style={{ padding: 50, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>{Story()}</div>],
   args: {
     children: (
       <p>
