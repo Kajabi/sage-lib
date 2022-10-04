@@ -8,6 +8,14 @@ import { DataCard } from './DataCard';
 export default {
   title: 'Sage/DataCard',
   component: DataCard,
+  // displays description on Docs tab
+  parameters: {
+    docs: {
+      description: {
+        component: '' // TODO: Add component description.
+      },
+    },
+  },
   subcomponents: {
     'DataCard.Header': DataCard.Header,
     'DataCard.Body': DataCard.Body,

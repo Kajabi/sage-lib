@@ -7,6 +7,14 @@ import { Label } from '../Label';
 export default {
   title: 'Sage/Description',
   component: Description,
+  // displays description on Docs tab
+  parameters: {
+    docs: {
+      description: {
+        component: 'A description is composed of title and data content and is structured as a definition list.'
+      },
+    },
+  },
   args: {
     actionWidth: null,
     items: [

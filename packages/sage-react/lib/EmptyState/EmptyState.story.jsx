@@ -7,6 +7,14 @@ import { EmptyState } from './EmptyState';
 export default {
   title: 'Sage/EmptyState',
   component: EmptyState,
+  // displays description on Docs tab
+  parameters: {
+    docs: {
+      description: {
+        component: 'The Empty State is displayed for main application features that have never been interacted with before. The Empty State is also used for smaller features in the app that primarily focus on data entry and have no data to show.'
+      },
+    },
+  },
   argTypes: {
     ...selectArgs({
       icon: SageTokens.ICONS,

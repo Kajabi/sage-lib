@@ -14,6 +14,14 @@ import { SelectDropdownDemo } from './stories/SelectDropdownDemo';
 export default {
   title: 'Sage/Dropdown',
   component: Dropdown,
+  // displays description on Docs tab
+  parameters: {
+    docs: {
+      description: {
+        component: 'Sage dropdown.'
+      },
+    },
+  },
   decorators: [(Story) => <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}><Story /></div>],
   subcomponents: {
     'Dropdown.ItemList': Dropdown.ItemList

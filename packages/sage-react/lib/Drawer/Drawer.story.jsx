@@ -27,6 +27,14 @@ const drawerChildren = (
 export default {
   title: 'Sage/Drawer',
   component: Drawer,
+  // displays description on Docs tab
+  parameters: {
+    docs: {
+      description: {
+        component: 'A drawer is a component that animates in, over content, to provide more information. A drawer is composed of a header and a content area.'
+      },
+    },
+  },
   args: {
     active: true,
     children: drawerChildren,
