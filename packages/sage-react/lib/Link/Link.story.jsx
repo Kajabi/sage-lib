@@ -6,6 +6,14 @@ import { Link } from './Link';
 export default {
   title: 'Sage/Link',
   component: Link,
+  // displays description on Docs tab
+  parameters: {
+    docs: {
+      description: {
+        component: 'While links have default styling in the app, some links deserve a little more ❤️.'
+      },
+    },
+  },
   argTypes: {
     ...selectArgs({
       icon: SageTokens.ICONS,

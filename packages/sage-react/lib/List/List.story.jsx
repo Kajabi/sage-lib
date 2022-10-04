@@ -9,6 +9,14 @@ import {
 export default {
   title: 'Sage/List',
   component: List,
+  // displays description on Docs tab
+  parameters: {
+    docs: {
+      description: {
+        component: 'Set up neatly-formatted lists of content in bordered rows with some additional optional decorations.'
+      },
+    },
+  },
   argTypes: {
     ...selectArgs({
       dragHandleType: List.DRAG_HANDLE_TYPES,
