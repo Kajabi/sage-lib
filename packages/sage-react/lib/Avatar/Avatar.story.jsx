@@ -5,7 +5,7 @@ import { Avatar } from './Avatar';
 export default {
   title: 'Sage/Avatar',
   component: Avatar,
-   // displays description on Docs tab
+  // displays description on Docs tab
   parameters: {
     docs: {
       description: {
