@@ -4,6 +4,14 @@ import { Textarea } from './Textarea';
 export default {
   title: 'Sage/Textarea',
   component: Textarea,
+  // displays description on Docs tab
+  parameters: {
+    docs: {
+      description: {
+        component: 'Basic textarea input field with \'floating\' label.'
+      },
+    },
+  },
   args: {
     hasError: false,
     label: 'Your message',

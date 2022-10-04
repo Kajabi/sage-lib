@@ -6,6 +6,15 @@ import { Toggle } from './Toggle';
 export default {
   title: 'Sage/Switch',
   component: Switch,
+  // displays description on Docs tab
+  parameters: {
+    docs: {
+      description: {
+        component: 'Checkbox or radio component styled to appear as a toggle.'
+      },
+    },
+  },
+  decorators: [(Story) => <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>{Story()}</div>],
   argTypes: {
     ...selectArgs({
       togglePosition: Toggle.POSITIONS,

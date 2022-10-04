@@ -6,6 +6,14 @@ import { Toggle } from './Toggle';
 export default {
   title: 'Sage/Radio',
   component: Radio,
+  // displays description on Docs tab
+  parameters: {
+    docs: {
+      description: {
+        component: 'Radio components provide users a way to select only one option from a list of two or more options.'
+      },
+    },
+  },
   decorators: [(Story) => <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}><Story /></div>],
   args: {
     label: 'Radio',

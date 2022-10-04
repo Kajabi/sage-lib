@@ -10,6 +10,14 @@ import { Toolbar } from './Toolbar';
 export default {
   title: 'Sage/Toolbar',
   component: Toolbar,
+  // displays description on Docs tab
+  parameters: {
+    docs: {
+      description: {
+        component: 'Toolbars apply special formatting to supported elements for use as list controls and other similar places.'
+      },
+    },
+  },
   argTypes: {},
   args: {
     children: (

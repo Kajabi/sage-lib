@@ -9,6 +9,14 @@ import { SageClassnames } from '../configs';
 export default {
   title: 'Sage/Table',
   component: Table,
+  // displays description on Docs tab
+  parameters: {
+    docs: {
+      description: {
+        component: 'Basic table component.'
+      },
+    },
+  },
   argTypes: {
     ...selectArgs({
       captionSide: Table.CAPTION_SIDE

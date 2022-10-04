@@ -14,6 +14,14 @@ const showHideTopbar = () => {
 export default {
   title: 'Sage/Topbar',
   component: Topbar,
+  // displays description on Docs tab
+  parameters: {
+    docs: {
+      description: {
+        component: 'The Topbar sits above all page content and contains breadcrumbs and the user menu.'
+      },
+    },
+  },
   argTypes: {
     ...selectArgs({
     }),
