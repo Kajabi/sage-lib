@@ -6,7 +6,6 @@ import { Toggle } from './Toggle';
 export default {
   title: 'Sage/Switch',
   component: Switch,
-  decorators: [(Story) => <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}><Story /></div>],
   argTypes: {
     ...selectArgs({
       togglePosition: Toggle.POSITIONS,
@@ -14,35 +13,30 @@ export default {
     }),
   },
   args: {
-    checked: false,
-    disabled: false,
-    hasBorder: false,
-    hasError: false,
-    hideText: false,
     label: 'Switch label',
     message: 'Subtext appears',
     name: 'switch-demo',
-    required: false,
-    togglePosition: Toggle.POSITIONS.DEFAULT,
     type: Toggle.TYPES.CHECKBOX,
-    value: 'Demo'
+    value: 'switch-value'
   }
 };
 
 const Template = (args) => {
   const [checked, setChecked] = useState(false);
-  const selfArgs = {
-    ...args,
-    checked,
-    onChange: () => setChecked(!checked),
-  };
+
   useEffect(() => {
     setChecked(args.checked);
   }, [args.checked]);
+
   return (
-    <Switch {...selfArgs} />
+    <Switch
+      {...args}
+      checked={checked}
+      onChange={(value, isChecked) => setChecked(!isChecked)}
+    />
   );
 };
+
 export const Default = Template.bind({});
 Default.args = {
   id: 'switch-demo',
