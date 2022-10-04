@@ -6,6 +6,14 @@ import { Type } from './Type';
 export default {
   title: 'Sage/Type',
   component: Type,
+  // displays description on Docs tab
+  parameters: {
+    docs: {
+      description: {
+        component: 'Sage provides a constrained, purposeful set of typographic styles.'
+      },
+    },
+  },
   args: {
     children: (
       <>
