@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.3.1...@kajabi/sage-assets@1.4.0) (2022-10-04)
+
+
+### Bug Fixes
+
+* **radio:** fixes logic for custom content in radio and adds example for boredered radio ([eb1782e](https://github.com/Kajabi/sage-lib/commit/eb1782e514824925885501ec8bea9383235388e8))
+* **tag:** updates and fixes missing classname ([a56efa7](https://github.com/Kajabi/sage-lib/commit/a56efa71699714048f3ac88ca17ef3775f560d6e))
+
+
+### Features
+
+* **tag:** adds new image variant ([c30c74b](https://github.com/Kajabi/sage-lib/commit/c30c74b83454dccc6a53a766435a8a10629452a9))
+
+
+
+
+
 ## [1.3.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.3.0...@kajabi/sage-assets@1.3.1) (2022-09-27)
 
 **Note:** Version bump only for package @kajabi/sage-assets

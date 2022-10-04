@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.5.1...@kajabi/sage-react@1.5.2) (2022-10-04)
+
+
+### Bug Fixes
+
+* **formsection:** update to use Story() function ([a1b3aab](https://github.com/Kajabi/sage-lib/commit/a1b3aab25a0e7b4ea0ba093948d03f1d79a4aa56))
+* **iconcard:** update to use Story() function ([ace09d9](https://github.com/Kajabi/sage-lib/commit/ace09d95300c80129f31d9410b8a7085cadfaa0a))
+* **loader:** update to use Story() function ([89c55a6](https://github.com/Kajabi/sage-lib/commit/89c55a6c574d13886984c0ae65142496d3c43df7))
+* **popover:** adjust height of story preview ([32afef8](https://github.com/Kajabi/sage-lib/commit/32afef8c6e9812678a4859b4d5550346580e501b))
+* **popover:** update to use Story() function ([a45577d](https://github.com/Kajabi/sage-lib/commit/a45577dc2a52f6515678bb7909195280d67a5437))
+* **radio:** fixes logic for custom content in radio and adds example for boredered radio ([eb1782e](https://github.com/Kajabi/sage-lib/commit/eb1782e514824925885501ec8bea9383235388e8))
+* **select:** update to use Story() function ([807454b](https://github.com/Kajabi/sage-lib/commit/807454b3208c6f7fdd057a953f764838ad488490))
+* **table:** update to use Story() function ([77000be](https://github.com/Kajabi/sage-lib/commit/77000be20c531147e985de86c533d01c7c06eb87))
+* **tag:** adds image class to tag ([7dfac8a](https://github.com/Kajabi/sage-lib/commit/7dfac8a520aa2957311b4459fed1b63e5b5f692c))
+* **tag:** fixes logic for image variant ([10991f1](https://github.com/Kajabi/sage-lib/commit/10991f1db969125ae96123a6a2dd3182e9d9e7a5))
+* **tag:** updates and fixes missing classname ([a56efa7](https://github.com/Kajabi/sage-lib/commit/a56efa71699714048f3ac88ca17ef3775f560d6e))
+* **tooltip:** update to use Story() function ([ee9cddf](https://github.com/Kajabi/sage-lib/commit/ee9cddf9e4760b3b3376ae87a7e44744144db441))
+* **topbar:** update to use Story() function ([281e55d](https://github.com/Kajabi/sage-lib/commit/281e55dd542af20148caed1d36bf61b223d49d54))
+* **type:** update to use Story() function ([f6c7add](https://github.com/Kajabi/sage-lib/commit/f6c7add4a92d9176df84b2c31129b3f5fa0cbf48))
+* **uploadcard:** update to use Story() function ([bbaf211](https://github.com/Kajabi/sage-lib/commit/bbaf21151a15f068f2e3f099064c5cf884764fa0))
+
+
+
+
+
 ## [1.5.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.5.0...@kajabi/sage-react@1.5.1) (2022-09-27)
 
 
