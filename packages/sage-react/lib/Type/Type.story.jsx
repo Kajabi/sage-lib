@@ -67,7 +67,7 @@ Default.decorators = [
   (Story) => (
     <>
       <Grid container={Grid.CONTAINER_SIZES.SM}>
-        <Story />
+        {Story()}
       </Grid>
     </>
   )
