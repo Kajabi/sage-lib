@@ -7,6 +7,14 @@ import { Button } from './Button';
 export default {
   title: 'Sage/Button',
   component: Button,
+  // displays description on Docs tab
+  parameters: {
+    docs: {
+      description: {
+        component: 'Standard button styling with multiple display options.',
+      },
+    },
+  },
   argTypes: {
     ...selectArgs({
       color: Button.COLORS,
@@ -119,7 +127,7 @@ CustomContent.decorators = [
             padding: 8px 0;
           }`}
         </style>
-        <Story />
+        {Story()}
       </div>
     </>
   )

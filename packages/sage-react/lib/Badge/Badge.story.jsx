@@ -7,6 +7,14 @@ import { BADGE_COLORS } from './configs';
 export default {
   title: 'Sage/Badge',
   component: Badge,
+  // displays description on Docs tab
+  parameters: {
+    docs: {
+      description: {
+        component: '', // TODO: Add component description.
+      },
+    },
+  },
   args: {
     color: BADGE_COLORS.DRAFT,
     isInteractive: false,

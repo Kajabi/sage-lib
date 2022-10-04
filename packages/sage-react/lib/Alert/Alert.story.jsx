@@ -8,6 +8,14 @@ import { Alert } from './Alert';
 export default {
   title: 'Sage/Alert',
   component: Alert,
+  // displays description on Docs tab
+  parameters: {
+    docs: {
+      description: {
+        component: 'Alerts are used to indicate user-driven notifications.',
+      },
+    },
+  },
   argTypes: {
     ...selectArgs({
       color: Alert.COLORS,
