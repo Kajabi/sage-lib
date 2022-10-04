@@ -7,6 +7,14 @@ import { Card } from '../Card';
 export default {
   title: 'Sage/Grid',
   component: Grid,
+  // displays description on Docs tab
+  parameters: {
+    docs: {
+      description: {
+        component: '' // TODO: Add component description
+      },
+    },
+  },
   subcomponents: {
     'Grid.Row': Grid.Row,
     'Grid.Col': Grid.Col

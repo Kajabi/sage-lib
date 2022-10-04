@@ -6,6 +6,14 @@ import { Hint } from './Hint';
 export default {
   title: 'Sage/Hint',
   component: Hint,
+  // displays description on Docs tab
+  parameters: {
+    docs: {
+      description: {
+        component: 'A hint is used to display non-critical informative text.'
+      },
+    },
+  },
   argTypes: {
     ...selectArgs({
       icon: SageTokens.ICONS,
