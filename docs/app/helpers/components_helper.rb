@@ -663,7 +663,7 @@ module ComponentsHelper
       },
       {
         title: "property",
-        description: "TO BE NAMED – Displays a metadata item for a resource.",
+        description: "Displays a metadata item for a resource.",
         scss: "done",
         docs: "todo",
         rails: "done",

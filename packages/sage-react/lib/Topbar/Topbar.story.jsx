@@ -78,7 +78,7 @@ Default.decorators = [
       >
         Show Topbar
       </Button>
-      <Story />
+      {Story()}
     </>
   )
 ];

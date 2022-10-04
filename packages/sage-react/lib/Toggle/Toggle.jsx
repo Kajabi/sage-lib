@@ -41,7 +41,7 @@ export const Toggle = ({
     className,
     {
       [`${baseClass}--has-border`]: hasBorder,
-      [`${baseClass}--custom`]: customContent && type === Toggle.TYPES.CHECKBOX,
+      [`${baseClass}--custom`]: type === Toggle.TYPES.CHECKBOX || Toggle.TYPES.RADIO ? customContent : null,
       [`${baseClass}--error`]: hasError,
       [`${baseClass}--toggle-${togglePosition}`]: togglePosition,
       [`${baseClass}--partial-selection`]: partialSelection && type === Toggle.TYPES.CHECKBOX,
@@ -84,7 +84,7 @@ export const Toggle = ({
   const Tag = itemInList ? 'li' : 'div';
 
   const renderCustomContent = () => {
-    if (customContent && type === Toggle.TYPES.CHECKBOX) {
+    if (type === Toggle.TYPES.CHECKBOX || Toggle.TYPES.RADIO) {
       return (
         <div className={`${baseClass}__custom-content`}>
           {customContent}

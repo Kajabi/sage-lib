@@ -51,7 +51,7 @@ Default.decorators = [
   (Story) => (
     <>
       <Panel>
-        <Story />
+        {Story()}
       </Panel>
       <div className={`${SageClassnames.TYPE_BLOCK} ${SageClassnames.SPACERS.LG_TOP}`}>
         <p>NOTE: Wiring the select all checkbox requires the following:</p>
@@ -97,7 +97,7 @@ TableWithRichContent.decorators = [
   (Story) => (
     <>
       <Panel>
-        <Story />
+        {Story()}
       </Panel>
     </>
   )

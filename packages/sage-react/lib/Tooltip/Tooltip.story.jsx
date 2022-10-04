@@ -6,7 +6,7 @@ import { Tooltip } from './Tooltip';
 export default {
   title: 'Sage/Tooltip',
   component: Tooltip,
-  decorators: [(Story) => <div style={{ padding: 100, display: 'flex', alignItems: 'center', justifyContent: 'center' }}><Story /></div>],
+  decorators: [(Story) => <div style={{ padding: 100, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>{Story()}</div>],
   argTypes: {
     ...selectArgs({
       position: Tooltip.POSITIONS,
