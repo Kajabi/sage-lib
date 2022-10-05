@@ -26,12 +26,14 @@ export const Default = Template.bind({});
 
 export const Disabled = Template.bind({});
 Disabled.args = {
+  id: 'checkbox-disabled',
   label: 'Remember Me',
   disabled: true
 };
 
 export const DefaultWithMessage = Template.bind({});
 DefaultWithMessage.args = {
+  id: 'checkbox-w-message',
   label: 'Remember Me',
   message: 'Save my login details for next time'
 };
@@ -39,13 +41,24 @@ DefaultWithMessage.args = {
 export const Checked = Template.bind({});
 Checked.args = {
   checked: true,
+  id: 'checkbox-checked',
   label: 'Remember Me',
   message: 'Save my login details for next time'
+};
+
+export const PartialSelection = Template.bind({});
+Checked.args = {
+  checked: true,
+  id: 'checkbox-partial',
+  label: 'Remember Me',
+  message: 'Save my login details for next time',
+  partialSelection: true,
 };
 
 export const Error = Template.bind({});
 Error.args = {
   hasError: true,
+  id: 'checkbox-error',
   label: 'Remember Me',
   message: 'Save my login details for next time'
 };
