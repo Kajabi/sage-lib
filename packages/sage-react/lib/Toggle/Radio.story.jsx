@@ -27,11 +27,13 @@ export const BorderedRadio = (args) => {
   const items = [
     {
       label: 'Option 1',
+      id: 'bordered-option-1',
       value: 'option-1',
       checked: false,
     },
     {
       label: 'Option 2',
+      id: 'bordered-option-2',
       value: 'option-2',
       checked: false,
     }
@@ -74,18 +76,22 @@ export const MultipleRadios = (args) => {
   const items = [
     {
       label: 'Option 1',
+      id: 'multiple-option-1',
       value: 'option-1',
       checked: false,
     }, {
       label: 'Option 2',
+      id: 'multiple-option-2',
       value: 'option-2',
       checked: false,
     }, {
       label: 'Option 3',
+      id: 'multiple-option-3',
       value: 'option-3',
       checked: false,
     }, {
       label: 'Option 4',
+      id: 'multiple-option-4',
       value: 'option-4',
       checked: false,
     }
