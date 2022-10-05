@@ -47,7 +47,7 @@ Checked.args = {
 };
 
 export const PartialSelection = Template.bind({});
-Checked.args = {
+PartialSelection.args = {
   checked: true,
   id: 'checkbox-partial',
   label: 'Remember Me',
