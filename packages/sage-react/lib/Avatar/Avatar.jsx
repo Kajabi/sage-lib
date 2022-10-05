@@ -1,11 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import { SageTokens } from '../configs';
 import { Icon } from '../Icon';
 import { AVATAR_COLORS } from './configs';
 
 export const Avatar = ({
   badge,
+  badgeColor,
+  badgeIcon,
   className,
   centered,
   color,
@@ -19,6 +22,7 @@ export const Avatar = ({
     className,
     {
       'sage-avatar--centered': centered,
+      'sage-avatar--custom-badge': badgeColor || badgeIcon,
       [`sage-avatar--${color}`]: color,
     }
   );
@@ -57,8 +61,8 @@ export const Avatar = ({
       {badge && (
         <div className="sage-avatar__badge">
           <Icon
-            icon={Icon.ICONS.CHECK_CIRCLE_FILLED}
-            color={Icon.COLORS.PRIMARY_300}
+            icon={badgeIcon || Icon.ICONS.CHECK_CIRCLE_FILLED}
+            color={badgeColor || Icon.COLORS.PRIMARY_300}
             size={setBadgeSize()}
           />
         </div>
@@ -77,6 +81,8 @@ Avatar.COLORS = AVATAR_COLORS;
 
 Avatar.defaultProps = {
   badge: false,
+  badgeColor: null,
+  badgeIcon: null,
   centered: false,
   className: '',
   color: AVATAR_COLORS.DEFAULT,
@@ -87,6 +93,8 @@ Avatar.defaultProps = {
 
 Avatar.propTypes = {
   badge: PropTypes.bool,
+  badgeColor: PropTypes.oneOf(Object.values(SageTokens.COLOR_SLIDERS)),
+  badgeIcon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),
   centered: PropTypes.bool,
   className: PropTypes.string,
   color: PropTypes.oneOf(Object.values(AVATAR_COLORS)),
