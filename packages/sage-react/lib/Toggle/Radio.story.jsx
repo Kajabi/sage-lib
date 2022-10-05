@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import { selectArgs } from '../story-support/helpers';
 import { Radio } from './Radio';
-import { Toggle } from './Toggle';
 
 export default {
   title: 'Sage/Radio',
@@ -14,19 +12,11 @@ export default {
       },
     },
   },
-  decorators: [(Story) => <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}><Story /></div>],
   args: {
     label: 'Radio',
-    type: Toggle.TYPES.RADIO,
     id: 'radio-1',
     name: 'radio-1',
-    hasBorder: false,
   },
-  argTypes: {
-    ...selectArgs({
-      type: Toggle.TYPES
-    })
-  }
 };
 
 const Template = (args) => <Radio {...args} />;
