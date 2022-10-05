@@ -20,6 +20,7 @@ export const Switch = ({
   togglePosition,
   type,
   value,
+  ...rest
 }) => (
   <Toggle
     checked={checked}
@@ -40,6 +41,7 @@ export const Switch = ({
     toggleStyle={Toggle.STYLES.SWITCH}
     type={type}
     value={value}
+    {...rest}
   />
 );
 
