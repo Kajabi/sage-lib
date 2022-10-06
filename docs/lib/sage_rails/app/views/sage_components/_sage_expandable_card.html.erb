@@ -1,14 +1,13 @@
-<div 
-  class="sage-expandable-card 
+<div
+  class="sage-expandable-card
     <%= component.generated_css_classes %>
     <% if component.expanded.present? %>sage-expandable-card--expanded<% end %>
     <% if component.align_arrow_right %>sage-expandable-card--align-arrow-right<% end %>"
     <%= component.generated_html_attributes.html_safe %>
 >
   <%= sage_component SageButton, {
-    style: "primary",
+    style: "secondary",
     value: component.trigger_label,
-    subtle: true,
     icon: { name: "caret-right", style: "left" },
     css_classes: "sage-expandable-card__trigger",
     attributes: {
@@ -21,6 +20,7 @@
       <%= "sage-type" if component.sage_type %>
     "
     data-js-accordion="body"
+    role="region"
   >
     <%= component.content %>
   </div>
