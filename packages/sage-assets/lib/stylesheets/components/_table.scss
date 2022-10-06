@@ -142,6 +142,9 @@ $-table-avatar-width: rem(32px);
     transition: map-get($sage-transitions, default);
     transition-property: color;
     cursor: pointer;
+    background: none;
+    border: 0;
+    padding: 0;
 
     &::after {
       content: "";

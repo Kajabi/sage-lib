@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Panel } from '../Panel';
 import { Table } from './Table';
 import { dataCollection } from './sample-data/contacts';
@@ -110,3 +110,69 @@ TableWithRichContent.decorators = [
     </>
   )
 ];
+
+export const TableWithSortableHeaders = () => {
+  const [sorts, setSorts] = useState([
+    {
+      field: 'first',
+      direction: 'asc',
+      active: true,
+    },
+    {
+      field: 'phone',
+      direction: null,
+      active: false,
+    },
+  ]);
+
+  const getSortByField = (sortedField) => {
+    const selectedField = sorts.filter(({ field }) => field === sortedField);
+    if (selectedField.length !== 1) return null;
+    return selectedField[0];
+  };
+
+  const sortBy = (clickedField) => setSorts(sorts.map(({ field, direction, active }) => {
+    if (field === clickedField) {
+      active = true;
+      direction = direction === 'asc' ? 'desc' : 'asc';
+    } else {
+      active = false;
+      direction = null;
+    }
+
+    return { field, direction, active };
+  }));
+
+  return (
+    <Table
+      schema={{
+        id: false,
+        first: {
+          label: (
+            <Table.SortableHeading
+              active={getSortByField('first').active}
+              direction={getSortByField('first').direction}
+              onClick={() => sortBy('first')}
+            >
+              First name
+            </Table.SortableHeading>
+          ),
+        },
+        email: false,
+        phone: {
+          label: (
+            <Table.SortableHeading
+              active={getSortByField('phone').active}
+              direction={getSortByField('phone').direction}
+              onClick={() => sortBy('phone')}
+            >
+              Phone
+            </Table.SortableHeading>
+          )
+        }
+      }}
+      rows={dataCollection}
+      sortable
+    />
+  );
+};
