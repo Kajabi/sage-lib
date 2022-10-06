@@ -1,0 +1,168 @@
+<h3>Accordion</h3>
+<%= sage_component SageAccordion, {} do %>
+  <%= sage_component SageExpandableCard, {
+    align_arrow_right: true,
+    expanded: true,
+    trigger_label: "Expand",
+  } do %>
+    <%= sage_component SageCheckbox, {
+      id:"c1",
+      label_text: "Grant offers",
+      checked: false,
+      disabled: false,
+      has_error: false
+    } %>
+    <%= sage_component SageCheckbox, {
+      id:"c2",
+      label_text: "Add tags",
+      checked: false,
+      disabled: false,
+      has_error: false
+    } %>
+    <%= sage_component SageCheckbox, {
+      id:"c3",
+      label_text: "Subscribe to emails",
+      checked: false,
+      disabled: false,
+      has_error: false
+    } %>
+  <% end %>
+  <%= sage_component SageExpandableCard, {
+    align_arrow_right: true,
+    trigger_label: "Expand",
+  } do %>
+    <%= sage_component SageCheckbox, {
+      id:"c1",
+      label_text: "Grant offers",
+      checked: false,
+      disabled: false,
+      has_error: false
+    } %>
+    <%= sage_component SageCheckbox, {
+      id:"c2",
+      label_text: "Add tags",
+      checked: false,
+      disabled: false,
+      has_error: false
+    } %>
+    <%= sage_component SageCheckbox, {
+      id:"c3",
+      label_text: "Subscribe to emails",
+      checked: false,
+      disabled: false,
+      has_error: false
+    } %>
+  <% end %>
+  <%= sage_component SageExpandableCard, {
+    align_arrow_right: true,
+    trigger_label: "Expand",
+  } do %>
+    <%= sage_component SageCheckbox, {
+      id:"c1",
+      label_text: "Grant offers",
+      checked: false,
+      disabled: false,
+      has_error: false
+    } %>
+    <%= sage_component SageCheckbox, {
+      id:"c2",
+      label_text: "Add tags",
+      checked: false,
+      disabled: false,
+      has_error: false
+    } %>
+    <%= sage_component SageCheckbox, {
+      id:"c3",
+      label_text: "Subscribe to emails",
+      checked: false,
+      disabled: false,
+      has_error: false
+    } %>
+  <% end %>
+<% end %>
+
+
+<h3>Accordion - one panel open at a time</h3>
+<%= sage_component SageAccordion, {
+  only_one_panel_expanded: true,
+} do %>
+  <%= sage_component SageExpandableCard, {
+    align_arrow_right: true,
+    expanded: true,
+    trigger_label: "Expand",
+  } do %>
+    <%= sage_component SageCheckbox, {
+      id:"c1",
+      label_text: "Grant offers",
+      checked: false,
+      disabled: false,
+      has_error: false
+    } %>
+    <%= sage_component SageCheckbox, {
+      id:"c2",
+      label_text: "Add tags",
+      checked: false,
+      disabled: false,
+      has_error: false
+    } %>
+    <%= sage_component SageCheckbox, {
+      id:"c3",
+      label_text: "Subscribe to emails",
+      checked: false,
+      disabled: false,
+      has_error: false
+    } %>
+  <% end %>
+  <%= sage_component SageExpandableCard, {
+    align_arrow_right: true,
+    trigger_label: "Expand",
+  } do %>
+    <%= sage_component SageCheckbox, {
+      id:"c1",
+      label_text: "Grant offers",
+      checked: false,
+      disabled: false,
+      has_error: false
+    } %>
+    <%= sage_component SageCheckbox, {
+      id:"c2",
+      label_text: "Add tags",
+      checked: false,
+      disabled: false,
+      has_error: false
+    } %>
+    <%= sage_component SageCheckbox, {
+      id:"c3",
+      label_text: "Subscribe to emails",
+      checked: false,
+      disabled: false,
+      has_error: false
+    } %>
+  <% end %>
+  <%= sage_component SageExpandableCard, {
+    align_arrow_right: true,
+    trigger_label: "Expand",
+  } do %>
+    <%= sage_component SageCheckbox, {
+      id:"c1",
+      label_text: "Grant offers",
+      checked: false,
+      disabled: false,
+      has_error: false
+    } %>
+    <%= sage_component SageCheckbox, {
+      id:"c2",
+      label_text: "Add tags",
+      checked: false,
+      disabled: false,
+      has_error: false
+    } %>
+    <%= sage_component SageCheckbox, {
+      id:"c3",
+      label_text: "Subscribe to emails",
+      checked: false,
+      disabled: false,
+      has_error: false
+    } %>
+  <% end %>
+<% end %>

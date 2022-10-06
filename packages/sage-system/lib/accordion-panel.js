@@ -10,6 +10,12 @@ Sage.accordion = (function () {
   const JS_ACCORDION_ID_BODY_PREFIX = 'accordion-body';
   const JS_ACCORDION_ID_HEADER_PREFIX = 'accordion-header';
 
+  const SELECTOR_ACCORDION = '.sage-accordion';
+  const SELECTOR_ACCORDION_EXPANDABLE_CARD = '.sage-expandable-card';
+  const SELECTOR_ACCORDION_HEADER = '[data-js-accordion="header"]';
+  const CLASS_ACCORDION_ONE_PANEL_EXPANDED = 'sage-accordion--one-panel-expanded';
+  const ATTRIBUTE_ARIA_SELECTED = 'aria-selected';
+
   const relevantKeys = {
     enter: 13,
     space: 32,
@@ -31,10 +37,25 @@ Sage.accordion = (function () {
       return false;
     }
 
+    // if accordion has prop for only one open at a times, reset
+    if (el.closest(SELECTOR_ACCORDION).classList.contains(CLASS_ACCORDION_ONE_PANEL_EXPANDED)) {
+      resetAccordion(el);
+    }
+
     // Toggle target
     const toggle = el.getAttribute('aria-expanded') === 'true';
     el.setAttribute('aria-expanded', !toggle);
     el.parentNode.classList.toggle('sage-expandable-card--expanded');
+  }
+
+  function resetAccordion(el){
+    let accordion = el.closest(SELECTOR_ACCORDION);
+    let accordionItems = accordion.querySelectorAll(SELECTOR_ACCORDION_EXPANDABLE_CARD);
+
+    accordionItems.forEach((el) => {
+      el.querySelector(SELECTOR_ACCORDION_HEADER).setAttribute('aria-expanded', false);
+      el.classList.remove('sage-expandable-card--expanded');
+    });
   }
 
   function init(el) {
