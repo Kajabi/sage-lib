@@ -2,7 +2,6 @@ import React from 'react';
 import { selectArgs } from '../story-support/helpers';
 import { SageTokens } from '../configs';
 import { Avatar } from './Avatar';
-import { Icon } from '../Icon';
 
 export default {
   title: 'Sage/Avatar',
@@ -35,7 +34,7 @@ WithBadge.args = { badge: true, size: '64px' };
 export const CustomBadge = Template.bind({});
 CustomBadge.args = {
   badge: true,
-  badgeColor: Icon.COLORS.YELLOW_300,
-  badgeIcon: Icon.ICONS.ARCHIVE,
+  badgeColor: SageTokens.COLOR_SLIDERS.YELLOW_400,
+  badgeIcon: SageTokens.ICONS.DANGER_FILLED,
   size: '64px',
 };
