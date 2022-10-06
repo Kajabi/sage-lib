@@ -6,6 +6,14 @@ import { LabelGroup } from './LabelGroup';
 export default {
   title: 'Sage/Label Group',
   component: LabelGroup,
+  // displays description on Docs tab
+  parameters: {
+    docs: {
+      description: {
+        component: 'Labels show concise metadata or indicate status in a compact format.'
+      },
+    },
+  },
   argTypes: {
     ...selectArgs({
       align: LabelGroup.ALIGN_OPTIONS,

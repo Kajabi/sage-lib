@@ -7,6 +7,14 @@ import { Tabs } from './Tabs';
 export default {
   title: 'Sage/Tabs',
   component: Tabs,
+  // displays description on Docs tab
+  parameters: {
+    docs: {
+      description: {
+        component: 'Tabs organize related content across screens, data sets, and can be used for navigation to related destinations.'
+      },
+    },
+  },
   decorators: [(Story) => <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}><Story /></div>],
   argTypes: {
     ...selectArgs({

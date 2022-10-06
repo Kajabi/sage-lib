@@ -8,6 +8,14 @@ import { MediaTile } from './MediaTile';
 export default {
   title: 'Sage/Media Tile',
   component: MediaTile,
+  // displays description on Docs tab
+  parameters: {
+    docs: {
+      description: {
+        component: 'Easily display a tile or set of tiles that showcase products, templates, or other media-based content.'
+      },
+    },
+  },
   argTypes: {
     ...selectArgs({}),
   },

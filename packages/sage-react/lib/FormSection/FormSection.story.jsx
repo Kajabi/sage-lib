@@ -6,6 +6,14 @@ import { FormSection } from './FormSection';
 export default {
   title: 'Sage/FormSection',
   component: FormSection,
+  // displays description on Docs tab
+  parameters: {
+    docs: {
+      description: {
+        component: 'A form section genera11y consists of a text section to provide users with instruction, guidance, or related information along with a secondary panel that may contain form inputs and/or related general content.'
+      },
+    },
+  },
   args: {
     children: (
       <>

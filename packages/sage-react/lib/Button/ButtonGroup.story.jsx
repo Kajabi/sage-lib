@@ -6,6 +6,14 @@ import { ButtonGroup } from './ButtonGroup';
 export default {
   title: 'Sage/Button Group',
   component: ButtonGroup,
+  // displays description on Docs tab
+  parameters: {
+    docs: {
+      description: {
+        component: '', // TODO: Add component description.
+      },
+    },
+  },
   argTypes: {
     ...selectArgs({
       align: ButtonGroup.ALIGN_OPTIONS,

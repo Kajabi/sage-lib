@@ -5,6 +5,14 @@ import { ProgressBar } from './ProgressBar';
 export default {
   title: 'Sage/ProgressBar',
   component: ProgressBar,
+  // displays description on Docs tab
+  parameters: {
+    docs: {
+      description: {
+        component: 'Displays progress with a value.'
+      },
+    },
+  },
   args: {
     color: ProgressBar.COLORS.PRIMARY_300,
     label: 'Cloning product',

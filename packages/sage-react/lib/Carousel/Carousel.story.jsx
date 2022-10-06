@@ -30,6 +30,14 @@ const carouselSlides = [...Array(6)].map((e, i) => (
 export default {
   title: 'Sage/Carousel',
   component: Carousel,
+  // displays description on Docs tab
+  parameters: {
+    docs: {
+      description: {
+        component: 'A wrapper for [Tiny Slider](http://ganlanyuan.github.io/tiny-slider/) for slideshow/carousel layouts.',
+      },
+    },
+  },
   args: {
     children: (
       <>

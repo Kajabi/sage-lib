@@ -6,6 +6,14 @@ import { Icon } from './Icon';
 export default {
   title: 'Sage/Icon',
   component: Icon,
+  // displays description on Docs tab
+  parameters: {
+    docs: {
+      description: {
+        component: 'The Icon component displays a standalone icon with customizable options.'
+      },
+    },
+  },
   argTypes: {
     ...selectArgs({
       adjacentType: Icon.ADJACENT_TYPES,
@@ -32,7 +40,7 @@ AdjacentType.decorators = [
   (Story) => (
     <>
       <div style={{ display: 'flex' }}>
-        <Story />
+        {Story()}
         <p className={`${SageClassnames.TYPE.HEADING_2} ${SageClassnames.SPACERS.XS_LEFT}`}>
           I am a Heading 2 type spec
         </p>

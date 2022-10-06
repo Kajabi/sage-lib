@@ -6,6 +6,14 @@ import { StatBox } from './StatBox';
 export default {
   title: 'Sage/StatBox',
   component: StatBox,
+  // displays description on Docs tab
+  parameters: {
+    docs: {
+      description: {
+        component: 'Stat Boxes, for use in the CRM Dashboard, display important statistics for users to make informed decisions about their business.'
+      },
+    },
+  },
   argTypes: {
     ...selectArgs({
       legendDotColor: StatBox.LEGEND_COLORS,

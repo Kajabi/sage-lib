@@ -5,6 +5,14 @@ import { Avatar } from './Avatar';
 export default {
   title: 'Sage/Avatar',
   component: Avatar,
+  // displays description on Docs tab
+  parameters: {
+    docs: {
+      description: {
+        component: 'The Avatar component shows a user\'s profile image in a circular frame and allows for a few helpful modifications for different uses.'
+      },
+    },
+  },
   args: {
     centered: true,
     color: Avatar.COLORS.DEFAULT,

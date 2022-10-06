@@ -8,6 +8,14 @@ import { SageClassnames, SageTokens } from '../configs';
 export default {
   title: 'Sage/Hero',
   component: Hero,
+  // displays description on Docs tab
+  parameters: {
+    docs: {
+      description: {
+        component: '' // TODO: Add component description
+      },
+    },
+  },
   argTypes: {
     ...selectArgs({
       heroSize: Hero.Sizes,

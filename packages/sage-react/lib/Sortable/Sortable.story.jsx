@@ -11,6 +11,14 @@ import { SortableItemCustom } from './SortableItemCustom';
 export default {
   title: 'Sage/Sortable',
   component: Sortable,
+  // displays description on Docs tab
+  parameters: {
+    docs: {
+      description: {
+        component: 'Sage sortable list.'
+      },
+    },
+  },
   subcomponents: {
     'Sortable.Item': Sortable.Item,
     'Sortable.ItemCustom': SortableItemCustom

@@ -6,6 +6,14 @@ import { Toggle } from './Toggle';
 export default {
   title: 'Sage/Checkbox',
   component: Checkbox,
+  // displays description on Docs tab
+  parameters: {
+    docs: {
+      description: {
+        component: 'Checkboxes provide users with selectable options like toggling a single setting or selecting multiple options from a list.'
+      },
+    },
+  },
   decorators: [(Story) => <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}><Story /></div>],
   args: {
     label: 'Checkbox',

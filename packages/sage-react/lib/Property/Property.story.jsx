@@ -6,6 +6,14 @@ import { Property } from './Property';
 export default {
   title: 'Sage/Property',
   component: Property,
+  // displays description on Docs tab
+  parameters: {
+    docs: {
+      description: {
+        component: 'Displays a metadata item for a resource.'
+      },
+    },
+  },
   args: {
     icon: SageTokens.ICONS.USERS,
     children: 'Property'

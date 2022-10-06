@@ -5,7 +5,15 @@ import { CopyTextCard } from './CopyTextCard';
 export default {
   title: 'Sage/CopyText',
   component: CopyText,
-  decorators: [(Story) => <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}><Story /></div>],
+  // displays description on Docs tab
+  parameters: {
+    docs: {
+      description: {
+        component: 'A small set of components to use in places where "copy" text is provided.'
+      },
+    },
+  },
+  decorators: [(Story) => <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>{Story()}</div>],
   args: {
     children: (
       <>
@@ -36,7 +44,7 @@ CopyTextCardBlock.decorators = [
   (Story) => (
     <>
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <Story />
+        {Story()}
       </div>
     </>
   )

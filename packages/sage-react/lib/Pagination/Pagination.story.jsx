@@ -4,6 +4,14 @@ import { Pagination } from './Pagination';
 export default {
   title: 'Sage/Pagination',
   component: Pagination,
+  // displays description on Docs tab
+  parameters: {
+    docs: {
+      description: {
+        component: 'Pagination is used for splitting up results into several pages and provides controls for navigating to the next or previous page.'
+      },
+    },
+  },
   argTypes: {},
   args: {
     itemsNoun: 'Cactus',

@@ -6,6 +6,14 @@ import { Button } from '../Button';
 export default {
   title: 'Sage/Banner',
   component: Banner,
+  // displays description on Docs tab
+  parameters: {
+    docs: {
+      description: {
+        component: 'A banner that displays at the top of the page, used for systemwide notifications and events.',
+      },
+    },
+  },
   argTypes: {
     ...selectArgs({
       type: Banner.TYPES

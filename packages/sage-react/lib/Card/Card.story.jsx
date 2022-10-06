@@ -10,6 +10,14 @@ import { Card } from './Card';
 export default {
   title: 'Sage/Card',
   component: Card,
+  // displays description on Docs tab
+  parameters: {
+    docs: {
+      description: {
+        component: 'A versatile smaller container for grouping content within panels.',
+      },
+    },
+  },
   subcomponents: {
     'Card.Title': Card.Title,
     'Card.Block': Card.Block,

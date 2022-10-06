@@ -7,6 +7,14 @@ import { Popover } from '../Popover';
 export default {
   title: 'Sage/Input',
   component: Input,
+  // displays description on Docs tab
+  parameters: {
+    docs: {
+      description: {
+        component: 'Basic text input form fields with \'floating\' labels.'
+      },
+    },
+  },
   argTypes: {
     ...selectArgs({
       icon: SageTokens.ICONS,

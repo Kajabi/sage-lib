@@ -6,6 +6,14 @@ import { Popover } from './Popover';
 export default {
   title: 'Sage/Popover',
   component: Popover,
+  // displays description on Docs tab
+  parameters: {
+    docs: {
+      description: {
+        component: 'Popovers open upon click to show information regarding the section. It has a header/subject, minimal information, and a link to learn more.'
+      },
+    },
+  },
   argTypes: {
     ...selectArgs({
       icon: SageTokens.ICONS,

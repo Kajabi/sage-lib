@@ -5,6 +5,14 @@ import { TransactionCard } from './TransactionCard';
 export default {
   title: 'Sage/TransactionCard',
   component: TransactionCard,
+  // displays description on Docs tab
+  parameters: {
+    docs: {
+      description: {
+        component: 'The Transaction Card displays customer transaction details in a compact view.'
+      },
+    },
+  },
   argTypes: {
     ...selectArgs({
       amountColor: TransactionCard.AMOUNT_COLORS,

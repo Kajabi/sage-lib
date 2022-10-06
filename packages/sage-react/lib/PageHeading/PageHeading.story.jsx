@@ -7,6 +7,14 @@ import { PageHeading } from './PageHeading';
 export default {
   title: 'Sage/PageHeading',
   component: PageHeading,
+  // displays description on Docs tab
+  parameters: {
+    docs: {
+      description: {
+        component: 'Page headings are used at the top of pages and contain the title of the page along with optional breadcrumbs, help link, action buttons, toolbar, and intro text.'
+      },
+    },
+  },
   args: {
     children: (
       <>
