@@ -140,6 +140,8 @@ export const TableWithSortableHeaders = () => {
       direction = null;
     }
 
+    // NOTE: We would now reload the data set in some fashion.
+
     return { field, direction, active };
   }));
 
