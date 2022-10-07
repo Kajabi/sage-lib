@@ -422,6 +422,31 @@ $-btn-loading-min-height: rem(36px);
     &[class*="icon-only"].sage-btn--small::after {
       right: rem(12px);
     }
+
+    &.sage-btn--rich-text-disclosure {
+      padding: rem(10px) rem(32px) rem(10px) rem(8px);
+      border-radius: 6px;
+      border-width: 0;
+
+      &::after {
+        right: 7px;
+        font-size: 12px;
+      }
+
+      &:hover {
+        background-color: sage-color(grey, 300);
+      }
+
+      &.sage-btn--selected,
+      &:active {
+        color: sage-color(white);
+        background-color: sage-color(charcoal, 400);
+
+        &::after {
+          color: sage-color(white);
+        }
+      }
+    }
   }
 
   // NOTE: Icon generation consolidated in `core/_icons.scss`
