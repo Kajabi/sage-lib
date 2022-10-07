@@ -9,7 +9,7 @@ export default {
   args: {
     children: (
       <>
-        <ExpandableCard expanded={true} triggerLabel="Expand">
+        <ExpandableCard alignArrowRight={true} expanded={true} triggerLabel="Expand">
           <Checkbox
             checked={false}
             disabled={false}
@@ -35,7 +35,7 @@ export default {
             name="checkbox3-demo"
           />
         </ExpandableCard>
-        <ExpandableCard triggerLabel="Expand">
+        <ExpandableCard alignArrowRight={true} triggerLabel="Expand">
           <Checkbox
             checked={false}
             disabled={false}
@@ -61,7 +61,7 @@ export default {
             name="checkbox3-demo"
           />
         </ExpandableCard>
-        <ExpandableCard triggerLabel="Expand">
+        <ExpandableCard alignArrowRight={true} triggerLabel="Expand">
           <Checkbox
             checked={false}
             disabled={false}

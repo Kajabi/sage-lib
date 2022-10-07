@@ -1,3 +1,4 @@
+export { Accordion } from './Accordion';
 export { Alert } from './Alert';
 export { Avatar } from './Avatar';
 export { AvatarGroup } from './AvatarGroup';
