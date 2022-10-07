@@ -106,14 +106,27 @@ custom_items = [
   <% end %>
 <% end %>
 
-<h3 class="t-sage-heading-6">Rich Text Editor Dropdown with Arrow</h3>
+<h3 class="t-sage-heading-6">Rich Text Editor Dropdown with Text and Arrow</h3>
 <%= sage_component SageDropdown, { items: menu_items } do %>
   <% content_for :sage_dropdown_trigger, flush: true do %>
     <%= sage_component SageButton, {
       disclosure: true,
-      icon: { name: "add", style: "only" },
+      style: "secondary",
+      value: "Text",
+      css_classes: "sage-btn--rich-text-disclosure",
+    } %>
+  <% end %>
+<% end %>
+
+<h3 class="t-sage-heading-6">Rich Text Editor Dropdown with Icon and Arrow</h3>
+<%= sage_component SageDropdown, { items: menu_items } do %>
+  <% content_for :sage_dropdown_trigger, flush: true do %>
+    <%= sage_component SageButton, {
+      disclosure: true,
+      icon: { name: "align-left", style: "only" },
       style: "secondary",
       value: "Add An Element",
+      css_classes: "sage-btn--rich-text-disclosure",
     } %>
   <% end %>
 <% end %>
