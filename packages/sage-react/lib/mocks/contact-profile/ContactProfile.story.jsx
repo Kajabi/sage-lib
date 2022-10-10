@@ -6,11 +6,13 @@ import { Drawer } from '../../Drawer';
 import { SageTokens } from '../../configs';
 import { Profile, Data } from './components';
 
-export default {
-  title: 'Mocks/Contact Profile',
-  argTypes: {},
-  args: {}
-};
+// export is commented out in order to remove mocks from sidebar
+// export default {
+//   title: 'Mocks/Contact Profile',
+//   argTypes: {},
+//   args: {}
+// };
+
 const Template = () => {
   const [drawerActive, setDrawerActive] = React.useState(false);
 

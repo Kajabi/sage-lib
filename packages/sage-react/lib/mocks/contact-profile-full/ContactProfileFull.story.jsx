@@ -6,11 +6,13 @@ import { Root } from './components';
 // See https://kajabi.atlassian.net/browse/SAGE-361
 import './styles.css';
 
-export default {
-  title: 'Mocks/Contact Profile - Full view',
-  argTypes: {},
-  args: {}
-};
+// export is commented out in order to remove mocks from sidebar
+// export default {
+//   title: 'Mocks/Contact Profile - Full view',
+//   argTypes: {},
+//   args: {}
+// };
+
 const Template = () => {
   const [modalActive, setModalActive] = React.useState(true);
   return (

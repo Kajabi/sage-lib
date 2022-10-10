@@ -8,11 +8,12 @@ import {
   SidebarModule,
 } from './components';
 
-export default {
-  title: 'Mocks/Get Started',
-  argTypes: {},
-  args: {}
-};
+// export is commented out in order to remove mocks from sidebar
+// export default {
+//   title: 'Mocks/Get Started',
+//   argTypes: {},
+//   args: {}
+// };
 
 const Template = () => (
   <SageBreakpointProvider queries={SageTokens.BREAKPOINT_QUERIES}>
