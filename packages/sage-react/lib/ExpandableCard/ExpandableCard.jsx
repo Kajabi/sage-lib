@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import uuid from 'react-uuid';
@@ -11,10 +11,16 @@ export const ExpandableCard = ({
   expanded,
   children,
   className,
+  onClick,
   sageType,
   triggerLabel,
+  ...rest
 }) => {
   const [selfActive, setSelfActive] = useState(expanded);
+
+  const updateExpanded = useCallback(() => {
+    setSelfActive(!selfActive);
+  }, [selfActive]);
 
   const handleBodyToggle = () => {
     if (selfActive) {
@@ -23,8 +29,12 @@ export const ExpandableCard = ({
   };
 
   const handleTriggerClick = () => {
-    setSelfActive(true);
-    handleBodyToggle();
+    updateExpanded();
+    if (onClick) {
+      onClick(rest.name);
+    }
+    // setSelfActive(true);
+    // handleBodyToggle();
   };
 
   const id = uuid();
