@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import uuid from 'react-uuid';
@@ -11,38 +11,31 @@ export const ExpandableCard = ({
   expanded,
   children,
   className,
+  name,
   onClick,
   sageType,
   triggerLabel,
   ...rest
 }) => {
-  const [selfActive, setSelfActive] = useState(expanded);
+  const [isExpanded, setIsExpanded] = useState(expanded);
 
-  const updateExpanded = useCallback(() => {
-    setSelfActive(!selfActive);
-  }, [selfActive]);
+  useEffect(() => {
+    setIsExpanded(isExpanded);
+  }, [isExpanded]);
 
-  const handleBodyToggle = () => {
-    if (selfActive) {
-      setSelfActive(false);
-    }
-  };
-
-  const handleTriggerClick = () => {
-    updateExpanded();
+  const handleChange = useCallback((event) => {
+    setIsExpanded(!isExpanded);
     if (onClick) {
-      onClick(rest.name);
+      onClick(event, !isExpanded);
     }
-    // setSelfActive(true);
-    // handleBodyToggle();
-  };
+  }, [isExpanded, setIsExpanded, onClick]);
 
   const id = uuid();
 
   const containerClassnames = classnames({
     'sage-expandable-card--align-arrow-right': alignArrowRight,
-    'sage-expandable-card': !selfActive,
-    'sage-expandable-card--expanded': selfActive
+    'sage-expandable-card': !isExpanded,
+    'sage-expandable-card--expanded': isExpanded
   });
 
   const bodyClassnames = classnames({
@@ -51,16 +44,17 @@ export const ExpandableCard = ({
     [`${SageClassnames.TYPE_BLOCK}`]: sageType,
   });
 
+
   return (
     <div className={`${containerClassnames} ${className || ''}`}>
       <Button
         aria-controls={id}
-        aria-expanded={selfActive}
+        aria-expanded={isExpanded}
         className="sage-expandable-card__trigger"
         color="secondary"
         fullWidth={true}
         icon={SageTokens.ICONS.CARET_RIGHT}
-        onClick={handleTriggerClick}
+        onClick={handleChange}
         subtle={true}
       >
         {triggerLabel}
@@ -78,6 +72,7 @@ ExpandableCard.defaultProps = {
   expanded: false,
   children: null,
   className: null,
+  name: null,
   sageType: false,
   triggerLabel: null,
 };
@@ -88,6 +83,7 @@ ExpandableCard.propTypes = {
   expanded: PropTypes.bool,
   className: PropTypes.string,
   children: PropTypes.node,
+  name: PropTypes.string,
   sageType: PropTypes.bool,
   triggerLabel: PropTypes.string,
 };
