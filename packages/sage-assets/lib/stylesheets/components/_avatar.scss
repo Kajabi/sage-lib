@@ -160,6 +160,10 @@ $-avatar-group-item-sizes: (
   border-radius: sage-border(radius-round);
   border: rem(2px) solid sage-color(white);
 
+  &.sage-avatar__badge--custom-bg {
+    background-color: var(--badge-custom-bg-color);
+  }
+
   i {
     display: flex;
   }

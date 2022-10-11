@@ -31,7 +31,8 @@ module SageSchemas
 
   AVATAR = {
     badge: [:optional, NilClass, TrueClass],
-    badge_color: [:optional, NilClass, SageSchemas::COLOR_SLIDER],
+    badge_foregroundColor: [:optional, NilClass, Set.new(SageSchemas::COLOR_SLIDER)],
+    badge_backgroundColor: [:optional, NilClass, Set.new(SageTokens::COLORS), String],
     badge_icon: [:optional, NilClass, SageSchemas::ICON],
     centered: [:optional, NilClass, TrueClass],
     color: [:optional, NilClass, SageSchemas::COLORS],
