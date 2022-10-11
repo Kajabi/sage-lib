@@ -12,7 +12,6 @@ export default {
       },
     },
   },
-  decorators: [(Story) => <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}><Story /></div>],
   args: {
     label: 'Checkbox',
     id: 'checkbox-1',
