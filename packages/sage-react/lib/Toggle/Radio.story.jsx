@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import { selectArgs } from '../story-support/helpers';
 import { Radio } from './Radio';
-import { Toggle } from './Toggle';
 
 export default {
   title: 'Sage/Radio',
@@ -14,19 +12,11 @@ export default {
       },
     },
   },
-  decorators: [(Story) => <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}><Story /></div>],
   args: {
     label: 'Radio',
-    type: Toggle.TYPES.RADIO,
     id: 'radio-1',
     name: 'radio-1',
-    hasBorder: false,
   },
-  argTypes: {
-    ...selectArgs({
-      type: Toggle.TYPES
-    })
-  }
 };
 
 const Template = (args) => <Radio {...args} />;
@@ -37,11 +27,13 @@ export const BorderedRadio = (args) => {
   const items = [
     {
       label: 'Option 1',
+      id: 'bordered-option-1',
       value: 'option-1',
       checked: false,
     },
     {
       label: 'Option 2',
+      id: 'bordered-option-2',
       value: 'option-2',
       checked: false,
     }
@@ -84,18 +76,22 @@ export const MultipleRadios = (args) => {
   const items = [
     {
       label: 'Option 1',
+      id: 'multiple-option-1',
       value: 'option-1',
       checked: false,
     }, {
       label: 'Option 2',
+      id: 'multiple-option-2',
       value: 'option-2',
       checked: false,
     }, {
       label: 'Option 3',
+      id: 'multiple-option-3',
       value: 'option-3',
       checked: false,
     }, {
       label: 'Option 4',
+      id: 'multiple-option-4',
       value: 'option-4',
       checked: false,
     }
