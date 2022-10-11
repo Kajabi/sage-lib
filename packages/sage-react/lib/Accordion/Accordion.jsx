@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useCallback, useState } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { ExpandableCard } from '../ExpandableCard';
+import { tabsItemsPropTypes } from '../Tabs/configs';
 
 export const Accordion = ({
   className,
   children,
   id,
+  // onExpand,
   onlyOnePanelExpanded,
   ...rest
 }) => {
@@ -18,20 +20,18 @@ export const Accordion = ({
     }
   );
 
-  const onChildClick = (args) => {
-    // i now have the name and index
-    // identify which child was expanded based on args
-    // args = name + index
-    // idx for example will be ExpandableCard-1
-    // iterate and be sure the others setexpanded is set to false
-  };
+  // const [activePanel, setActivePanel] = useState('ExpandableCard-0');
+
+  // const handleChange = useCallback((event) => {
+  //   setActivePanel(activePanel);
+  //   if (onExpand) {
+  //     onExpand(event, activePanel);
+  //   }
+  // }, [activePanel, setActivePanel, onExpand]);
 
   return (
     <div className={classNames} {...rest}>
-      {children.props.children.map((child, idx) => {
-        console.log ('Type: ', child.type, ' Props: ', child.props);
-        return <child.type name={`${child.type.name}-${idx}`} {...child.props} onClick={onChildClick} />;
-      })}
+      {children}
     </div>
   );
 };
