@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import { selectArgs } from '../story-support/helpers';
 import { Checkbox } from './Checkbox';
-import { Toggle } from './Toggle';
 
 export default {
   title: 'Sage/Checkbox',
@@ -14,18 +12,11 @@ export default {
       },
     },
   },
-  decorators: [(Story) => <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}><Story /></div>],
   args: {
     label: 'Checkbox',
-    type: Toggle.TYPES.CHECKBOX,
     id: 'checkbox-1',
     name: 'checkbox-1',
   },
-  argTypes: {
-    ...selectArgs({
-      type: Toggle.TYPES
-    })
-  }
 };
 
 const Template = (args) => <Checkbox {...args} />;
@@ -34,12 +25,14 @@ export const Default = Template.bind({});
 
 export const Disabled = Template.bind({});
 Disabled.args = {
+  id: 'checkbox-disabled',
   label: 'Remember Me',
   disabled: true
 };
 
 export const DefaultWithMessage = Template.bind({});
 DefaultWithMessage.args = {
+  id: 'checkbox-w-message',
   label: 'Remember Me',
   message: 'Save my login details for next time'
 };
@@ -47,13 +40,24 @@ DefaultWithMessage.args = {
 export const Checked = Template.bind({});
 Checked.args = {
   checked: true,
+  id: 'checkbox-checked',
   label: 'Remember Me',
   message: 'Save my login details for next time'
+};
+
+export const PartialSelection = Template.bind({});
+PartialSelection.args = {
+  checked: true,
+  id: 'checkbox-partial',
+  label: 'Remember Me',
+  message: 'Save my login details for next time',
+  partialSelection: true,
 };
 
 export const Error = Template.bind({});
 Error.args = {
   hasError: true,
+  id: 'checkbox-error',
   label: 'Remember Me',
   message: 'Save my login details for next time'
 };
@@ -69,18 +73,22 @@ export const MultipleCheckboxes = (args) => {
   const items = [
     {
       label: 'Option 1',
+      id: 'multiple-option-1',
       value: 'option-1',
       checked: false,
     }, {
       label: 'Option 2',
+      id: 'multiple-option-2',
       value: 'option-2',
       checked: false,
     }, {
       label: 'Option 3',
+      id: 'multiple-option-3',
       value: 'option-3',
       checked: false,
     }, {
       label: 'Option 4',
+      id: 'multiple-option-4',
       value: 'option-4',
       checked: false,
     }
