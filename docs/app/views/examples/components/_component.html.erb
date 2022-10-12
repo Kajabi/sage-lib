@@ -38,7 +38,7 @@ dont_content = render partial: "#{partial_path_root}/#{@title}/rules_dont"
 
   if info_content[:figma_embed].present?
     tabs << {
-      text: "#{image_tag("logo-figma.svg", style: "margin-right: 4px", height: "18px", alt: "")} Figma Designs",
+      text: "#{image_tag("logo-figma.svg", style: "margin-right: 8px", size: "11x16", alt: "")} Design Specs",
       target: "figma_embed"
     }
   end
@@ -52,7 +52,7 @@ dont_content = render partial: "#{partial_path_root}/#{@title}/rules_dont"
         permalink: true,
       } %>
       <%= sage_component SageButton, {
-        value: "#{image_tag("logo-react.svg", height: "20px", alt: "")} React Component",
+        value: "#{image_tag("logo-react.svg", size: "18x18", alt: "")} React Component",
         attributes: {
           href: storybook_url(info_content[:react_component_slug]),
           target: "_blank",
