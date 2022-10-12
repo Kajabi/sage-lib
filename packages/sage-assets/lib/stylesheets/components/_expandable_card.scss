@@ -13,7 +13,6 @@ $-expandable-card-padding-xs: sage-spacing(xs);
 
 .sage-expandable-card {
   .sage-accordion & {
-    // padding: sage-spacing(card);
     border-radius: sage-border(radius-large);
     border: 1px solid $-expandable-card-border-color;
 
@@ -69,10 +68,10 @@ $-expandable-card-padding-xs: sage-spacing(xs);
 
   &::before {
     justify-content: center;
+    transform: rotateZ(-90deg);
     margin-right: rem(4px);
     font-size: rem(8px);
     transition: transform 0.2s linear;
-    transform: rotateZ(-90deg);
   }
 
   .sage-accordion & {
