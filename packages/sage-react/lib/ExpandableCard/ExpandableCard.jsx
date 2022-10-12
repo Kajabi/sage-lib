@@ -20,15 +20,15 @@ export const ExpandableCard = ({
   const [isExpanded, setIsExpanded] = useState(expanded);
 
   useEffect(() => {
-    setIsExpanded(isExpanded);
-  }, [isExpanded]);
+    setIsExpanded(expanded);
+  }, [expanded]);
 
-  const handleChange = useCallback((event) => {
+  const handleChange = (event) => {
     setIsExpanded(!isExpanded);
     if (onClick) {
       onClick(event, !isExpanded);
     }
-  }, [isExpanded, setIsExpanded, onClick]);
+  };
 
   const id = uuid();
 
