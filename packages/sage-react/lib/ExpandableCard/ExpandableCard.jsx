@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import uuid from 'react-uuid';
@@ -44,9 +44,8 @@ export const ExpandableCard = ({
     [`${SageClassnames.TYPE_BLOCK}`]: sageType,
   });
 
-
   return (
-    <div className={`${containerClassnames} ${className || ''}`}>
+    <div className={`${containerClassnames} ${className || ''}`} {...rest}>
       <Button
         aria-controls={id}
         aria-expanded={isExpanded}
@@ -73,6 +72,7 @@ ExpandableCard.defaultProps = {
   children: null,
   className: null,
   name: null,
+  onClick: null,
   sageType: false,
   triggerLabel: null,
 };
@@ -84,6 +84,7 @@ ExpandableCard.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node,
   name: PropTypes.string,
+  onClick: PropTypes.func,
   sageType: PropTypes.bool,
   triggerLabel: PropTypes.string,
 };

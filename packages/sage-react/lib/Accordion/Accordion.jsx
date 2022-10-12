@@ -1,14 +1,11 @@
-import React, { useCallback, useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { ExpandableCard } from '../ExpandableCard';
-import { tabsItemsPropTypes } from '../Tabs/configs';
 
 export const Accordion = ({
   className,
   children,
   id,
-  // onExpand,
   onlyOnePanelExpanded,
   ...rest
 }) => {
@@ -19,15 +16,6 @@ export const Accordion = ({
       'sage-accordion--one-panel-expanded': onlyOnePanelExpanded,
     }
   );
-
-  // const [activePanel, setActivePanel] = useState('ExpandableCard-0');
-
-  // const handleChange = useCallback((event) => {
-  //   setActivePanel(activePanel);
-  //   if (onExpand) {
-  //     onExpand(event, activePanel);
-  //   }
-  // }, [activePanel, setActivePanel, onExpand]);
 
   return (
     <div className={classNames} {...rest}>

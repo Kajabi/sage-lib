@@ -99,7 +99,7 @@ const MultipleTemplate = () => {
   );
 };
 
-const DefaultTemplate = (args) => (
+const DefaultTemplate = () => (
   <Accordion>
     <ExpandableCard name="panel-1" alignArrowRight={true} triggerLabel="Expand">
       <Checkbox
