@@ -7,7 +7,8 @@ import { AVATAR_COLORS } from './configs';
 
 export const Avatar = ({
   badge,
-  badgeColor,
+  badgeBackgroundColor,
+  badgeForegroundColor,
   badgeIcon,
   className,
   centered,
@@ -22,8 +23,16 @@ export const Avatar = ({
     className,
     {
       'sage-avatar--centered': centered,
-      'sage-avatar--custom-badge': badgeColor || badgeIcon,
+      'sage-avatar--custom-badge': badgeBackgroundColor || badgeIcon || badgeForegroundColor,
       [`sage-avatar--${color}`]: color,
+    }
+  );
+
+  const badgeClassnames = classnames(
+    'sage-avatar__badge',
+    className,
+    {
+      'sage-avatar__badge--custom-bg': badgeBackgroundColor
     }
   );
 
@@ -59,10 +68,15 @@ export const Avatar = ({
   return (
     <div className={classNames} style={style} {...rest}>
       {badge && (
-        <div className="sage-avatar__badge">
+        <div
+          className={badgeClassnames}
+          style={(badgeBackgroundColor && badgeBackgroundColor !== '') && ({
+            '--badge-custom-bg-color': badgeBackgroundColor
+          })}
+        >
           <Icon
             icon={badgeIcon || Icon.ICONS.CHECK_CIRCLE_FILLED}
-            color={badgeColor || Icon.COLORS.PRIMARY_300}
+            color={badgeForegroundColor || Icon.COLORS.PRIMARY_300}
             size={setBadgeSize()}
           />
         </div>
@@ -81,7 +95,8 @@ Avatar.COLORS = AVATAR_COLORS;
 
 Avatar.defaultProps = {
   badge: false,
-  badgeColor: null,
+  badgeBackgroundColor: null,
+  badgeForegroundColor: null,
   badgeIcon: null,
   centered: false,
   className: '',
@@ -93,7 +108,8 @@ Avatar.defaultProps = {
 
 Avatar.propTypes = {
   badge: PropTypes.bool,
-  badgeColor: PropTypes.oneOf(Object.values(SageTokens.COLOR_SLIDERS)),
+  badgeBackgroundColor: PropTypes.string,
+  badgeForegroundColor: PropTypes.oneOf(Object.values(SageTokens.COLOR_SLIDERS)),
   badgeIcon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),
   centered: PropTypes.bool,
   className: PropTypes.string,

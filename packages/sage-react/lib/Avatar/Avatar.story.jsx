@@ -18,7 +18,7 @@ export default {
   },
   argTypes: {
     ...selectArgs({
-      badgeColor: SageTokens.COLOR_SLIDERS,
+      badgeForegroundColor: SageTokens.COLOR_SLIDERS,
       badgeIcon: SageTokens.ICONS,
       color: Avatar.COLORS,
     })
@@ -34,7 +34,8 @@ WithBadge.args = { badge: true, size: '64px' };
 export const CustomBadge = Template.bind({});
 CustomBadge.args = {
   badge: true,
-  badgeColor: SageTokens.COLOR_SLIDERS.YELLOW_400,
+  badgeBackgroundColor: '#333',
+  badgeForegroundColor: 'red-200',
   badgeIcon: SageTokens.ICONS.DANGER_FILLED,
   size: '64px',
 };
