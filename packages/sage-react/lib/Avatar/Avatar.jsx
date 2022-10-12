@@ -70,8 +70,8 @@ export const Avatar = ({
       {badge && (
         <div
           className={badgeClassnames}
-          style={(badgeBackgroundColor && badgeBackgroundColor !== '') && ({
-            '--badge-custom-bg-color': badgeBackgroundColor
+          style={({
+            '--badge-custom-bg-color': badgeBackgroundColor || ''
           })}
         >
           <Icon
