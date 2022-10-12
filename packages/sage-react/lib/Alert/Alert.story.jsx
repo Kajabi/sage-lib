@@ -40,16 +40,14 @@ DismissableAlert.args = {
   actions: (
     <>
       <Button
-        className="sage-alert__primary-action"
-        color="secondary"
+        className={Alert.PRIMARY_ACTION_CLASSNAME}
+        color={Button.COLORS.PRIMARY}
       >
         Get unlimited pages
       </Button>
       <Link
         href="//example.com"
-        removeUnderline={true}
-        style={Link.COLORS.SECONDARY}
-        suppressDefaultClass={true}
+        suppressDefaultClass
       >
         Check Usage
       </Link>
@@ -64,16 +62,14 @@ NonDismissableAlert.args = {
   actions: (
     <>
       <Button
-        className="sage-alert__primary-action"
-        color="secondary"
+        className={Alert.PRIMARY_ACTION_CLASSNAME}
+        color={Button.COLORS.PRIMARY}
       >
         Get unlimited pages
       </Button>
       <Link
         href="//example.com"
-        removeUnderline={true}
-        style={Link.COLORS.SECONDARY}
-        suppressDefaultClass={true}
+        suppressDefaultClass
       >
         Check Usage
       </Link>
@@ -85,13 +81,13 @@ export const SmallAlert = Template.bind({});
 SmallAlert.args = {
   color: Alert.COLORS.SUCCESS,
   dismissable: true,
+  title: null,
+  description: 'Body duis rhoncus neque, sed nulla sed quis fames et tu odio.',
   actions: (
     <>
       <Link
         href="//example.com"
-        removeUnderline={true}
-        style={Link.COLORS.SECONDARY}
-        suppressDefaultClass={true}
+        suppressDefaultClass
       >
         Check Usage
       </Link>

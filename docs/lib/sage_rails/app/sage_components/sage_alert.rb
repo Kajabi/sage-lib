@@ -1,6 +1,6 @@
 class SageAlert < SageComponent
   set_attribute_schema({
-    color: [:optional, NilClass, SageSchemas::STATUSES],
+    color: [:optional, NilClass, Set.new(["default", "danger", "draft", "info", "locked", "success", "published", "warning", "reached", "exceeded", "approaching"])],
     desc: [:optional, NilClass, String],
     dismissable: [:optional, NilClass, TrueClass],
     icon_name: [:optional, NilClass, String],
