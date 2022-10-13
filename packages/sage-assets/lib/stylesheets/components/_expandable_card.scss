@@ -68,10 +68,10 @@ $-expandable-card-padding-xs: sage-spacing(xs);
 
   &::before {
     justify-content: center;
-    transform: rotateZ(-90deg);
+    transform: rotateZ(90deg);
     margin-right: rem(4px);
     font-size: rem(8px);
-    transition: transform 0.2s linear;
+    transition: transform 0.125s linear;
   }
 
   .sage-accordion & {
@@ -83,7 +83,7 @@ $-expandable-card-padding-xs: sage-spacing(xs);
 
 .sage-expandable-card--expanded {
   .sage-expandable-card__trigger::before {
-    transform: rotateZ(90deg);
+    transform: rotateZ(-90deg);
   }
 }
 // NOTE: Styles for align_arrow_right prop added in `_button`

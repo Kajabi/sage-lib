@@ -32,11 +32,14 @@ export const ExpandableCard = ({
 
   const id = uuid();
 
-  const containerClassnames = classnames({
-    'sage-expandable-card--align-arrow-right': alignArrowRight,
-    'sage-expandable-card': !isExpanded,
-    'sage-expandable-card--expanded': isExpanded
-  });
+  const containerClassnames = classnames(
+    'sage-expandable-card',
+    {
+      'sage-expandable-card--align-arrow-right': alignArrowRight,
+      'sage-expandable-card': !isExpanded,
+      'sage-expandable-card--expanded': isExpanded
+    }
+  );
 
   const bodyClassnames = classnames({
     'sage-expandable-card__body-bordered': bodyBordered,
@@ -54,7 +57,6 @@ export const ExpandableCard = ({
         fullWidth={true}
         icon={SageTokens.ICONS.CARET_RIGHT}
         onClick={handleChange}
-        subtle={true}
       >
         {triggerLabel}
       </Button>
