@@ -57,6 +57,7 @@ export const ExpandableCard = ({
         fullWidth={true}
         icon={SageTokens.ICONS.CARET_RIGHT}
         onClick={handleChange}
+        subtle={true}
       >
         {triggerLabel}
       </Button>

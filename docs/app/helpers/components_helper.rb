@@ -15,13 +15,13 @@ module ComponentsHelper
       {
         title: "accordion",
         description: ".",
-        scss: "todoo",
+        scss: "done",
         docs: "todo",
         rails: "done",
-        react: "todo",
+        react: "done",
         responsive: "done",
-        a11y: "todo",
-        react_component_slug: "",
+        a11y: "done",
+        react_component_slug: "sage-accordion--single-panel",
         figma_embed: "",
       },
       {
