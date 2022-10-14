@@ -38,8 +38,11 @@ Sage.accordion = (function () {
     }
 
     // if accordion has prop for only one open at a times, reset
-    if (el.closest(SELECTOR_ACCORDION).classList.contains(CLASS_ACCORDION_ONE_PANEL_EXPANDED)) {
-      resetAccordion(el);
+    const accordion = el.closest(SELECTOR_ACCORDION);
+    if (accordion) {
+      if (accordion.classList.contains(CLASS_ACCORDION_ONE_PANEL_EXPANDED)) {
+        resetAccordion(el);
+      }
     }
 
     // Toggle target
