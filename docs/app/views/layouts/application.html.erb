@@ -8,6 +8,9 @@
     <%= render "application/styles" %>
   </head>
   <%= sage_component(SageBody, { css_classes: "sage-docs" }) do %>
+    <% unless Rails.env.development? %>
+      <%= render "application/gtm_tracking_body" %>
+    <% end %>
     <%= render "application/content_skip_link",
       link_id: "main-content"
     -%>
