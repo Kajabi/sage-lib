@@ -26,6 +26,7 @@ end
     sage-avatar
     <%= "sage-avatar--#{component.color}" if component.color %>
     <%= "sage-avatar--centered" if component.centered %>
+    <%= "sage-avatar--custom-badge" if component.badge_backgroundColor || component.badge_foregroundColor || component.badge_icon %>
     <%= component.generated_css_classes %>
   "
   <%= component.generated_html_attributes.html_safe %>
@@ -34,11 +35,18 @@ end
   <% end %>
 >
   <% if component.badge %>
-    <div class="sage-avatar__badge">
+    <div class="
+      sage-avatar__badge
+      <%= "sage-avatar__badge--custom-bg" if component.badge_backgroundColor %>
+      "
+      <% if component.badge_backgroundColor.present? %>
+        style="--badge-custom-bg-color: <%= component.badge_backgroundColor %>"
+      <% end %>
+    >
       <%= sage_component SageIcon, {
-        icon: "check-circle-filled",
+        icon: component.badge_icon ? component.badge_icon : "check-circle-filled",
         size: badge_icon_size,
-        color: "primary-300",
+        color: component.badge_foregroundColor ? component.badge_foregroundColor : "primary-300",
       } %>
     </div>
   <% end %>

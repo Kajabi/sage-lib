@@ -86,6 +86,34 @@
   } %>
 </div>
 
+<h3>Avatar Badges with Custom Color and Icon</h3>
+<div class="sage-avatar-wrapper">
+  <%= sage_component SageAvatar, {
+    badge: true,
+    badge_foregroundColor: "yellow",
+    badge_backgroundColor: "#4232a8",
+    badge_icon: "play-circle",
+    size: "80px",
+    image: {
+      alt: "Court's profile image",
+      src: "avatar/court.png",
+      id: "custom_id"
+    }
+  } %>
+  <%= sage_component SageAvatar, {
+    badge: true,
+    badge_foregroundColor: "red-300",
+    badge_backgroundColor: "#fff",
+    badge_icon: "danger",
+    size: "80px",
+    image: {
+      alt: "Court's profile image",
+      src: "avatar/court.png",
+      id: "custom_id"
+    }
+  } %>
+</div>
+
 <h3>Custom Colors</h3>
 <div class="sage-avatar-wrapper">
   <%= sage_component SageAvatar, { size: "24px",  color: "purple" } %>
