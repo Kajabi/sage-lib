@@ -4,10 +4,13 @@
     <%= render "application/meta" %>
     <%= render "application/styles" %>
     <% unless Rails.env.development? %>
-      <%= render "application/ga_tracking" %>
+      <%= render "application/gtm_tracking" %>
     <% end %>
   </head>
   <body class="sage-docs docs-home">
+    <% unless Rails.env.development? %>
+      <%= render "application/gtm_tracking_body" %>
+    <% end %>
     <%= render "application/content_skip_link",
       link_id: "main-content"
     -%>
