@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <% unless Rails.env.development? %>
+      <%= render "application/gtm_tracking" %>
+    <% end %>
     <%= render "application/meta" %>
     <%= render "application/styles" %>
-    <% unless Rails.env.development? %>
-      <%= render "application/ga_tracking" %>
-    <% end %>
   </head>
   <%= sage_component(SageBody, { css_classes: "sage-docs" }) do %>
+    <% unless Rails.env.development? %>
+      <%= render "application/gtm_tracking_body" %>
+    <% end %>
     <%= render "application/content_skip_link", link_id: "main-content" -%>
     <%= sage_component(SageHeader, {}) do %>
       <%= render "application/assistant" %>
