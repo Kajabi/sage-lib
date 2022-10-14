@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <%= render "application/meta" %>
-    <%= render "application/styles" %>
     <% unless Rails.env.development? %>
       <%= render "application/gtm_tracking" %>
     <% end %>
+    <%= render "application/meta" %>
+    <%= render "application/styles" %>
   </head>
   <%= sage_component(SageBody, { css_classes: "sage-docs" }) do %>
     <% unless Rails.env.development? %>
