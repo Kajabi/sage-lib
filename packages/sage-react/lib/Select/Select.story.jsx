@@ -4,6 +4,14 @@ import { Select } from './Select';
 export default {
   title: 'Sage/Select',
   component: Select,
+  // displays description on Docs tab
+  parameters: {
+    docs: {
+      description: {
+        component: 'The form select presents a selectable menu of options. The options within the menu are represented by `<option>` elements.'
+      },
+    },
+  },
   decorators: [(Story) => <div style={{ width: 300, marginLeft: 'auto', marginRight: 'auto' }}>{Story()}</div>],
   args: {
     label: 'Select',

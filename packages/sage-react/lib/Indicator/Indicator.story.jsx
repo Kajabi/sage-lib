@@ -4,6 +4,14 @@ import { Indicator } from './Indicator';
 export default {
   title: 'Sage/Indicator',
   component: Indicator,
+  // displays description on Docs tab
+  parameters: {
+    docs: {
+      description: {
+        component: 'A simple dot-styled position indicator bar. This is currently not intended to be used as navigation but only a visual indicator.'
+      },
+    },
+  },
   args: {
     currentItem: 3,
     label: 'Page',

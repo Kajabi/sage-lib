@@ -8,6 +8,14 @@ import { Choice } from './Choice';
 export default {
   title: 'Sage/Choice',
   component: Choice,
+  // displays description on Docs tab
+  parameters: {
+    docs: {
+      description: {
+        component: 'A radio button tab for making a choice. To be used inside a tabs component.'
+      },
+    },
+  },
   argTypes: {
     ...selectArgs({
       icon: SageTokens.ICONS,

@@ -1,8 +1,8 @@
 <tr>
   <td><%= md('`color`') %></td>
-  <td><%= md('Applies color to alert. Options include `info`, `success`, `warning`, `danger`, `approaching`, `exceeded`, `reached` ') %></td>
-  <td><%= md('`"info"`, `"success"`, `"warning"`, `"danger"`, `"approaching"`, `"exceeded"`, `"reached"`') %></td>
-  <td><%= md('`nil`') %></td>
+  <td><%= md('Applies a color theme and a corresponding default icon.') %></td>
+  <td><%= md('`"default"`, `"info"`, `"success"`, `"warning"`, `"danger"`, `"approaching"`, `"exceeded"`, `"reached"`') %></td>
+  <td><%= md('`"default"`') %></td>
 </tr>
 <tr>
   <td><%= md('`desc`') %></td>
@@ -24,7 +24,7 @@
 </tr>
 <tr>
   <td><%= md('`primary_action`') %></td>
-  <td><%= md('Creates a custom primary action button for the Alert.') %></td>
+  <td><%= md('Creates a primary action for the alert. See SageButton.') %></td>
   <td>
     <%= md('```
 primary_action: {
@@ -40,7 +40,7 @@ primary_action: {
 </tr>
 <tr>
   <td><%= md('`secondary_actions`') %></td>
-  <td><%= md('An array of optional secondary actions.') %></td>
+  <td><%= md('An array of optional secondary actions. See SageLink.') %></td>
   <td>
     <%= md('```
 Array<{

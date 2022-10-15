@@ -7,6 +7,14 @@ import { Frame } from './Frame';
 export default {
   title: 'Sage/Frame',
   component: Frame,
+  // displays description on Docs tab
+  parameters: {
+    docs: {
+      description: {
+        component: 'For building compound micro-layouts.'
+      },
+    },
+  },
   args: {
     align: null,
     background: null,

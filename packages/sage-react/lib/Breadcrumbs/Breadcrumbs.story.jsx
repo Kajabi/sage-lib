@@ -6,6 +6,14 @@ import { Breadcrumbs } from './Breadcrumbs';
 export default {
   title: 'Sage/Breadcrumbs',
   component: Breadcrumbs,
+  // displays description on Docs tab
+  parameters: {
+    docs: {
+      description: {
+        component: 'Breadcrumbs provide a sense of where we are in the site structure with hyperlinks to previous areas in that structure. Our component also provides a specific "Back link" variation.',
+      },
+    },
+  },
   argTypes: {
     ...selectArgs({
       icon: SageTokens.ICONS,

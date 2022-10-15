@@ -1,287 +1,135 @@
 <%
   sage_link = sage_component(SageLink, {
-   url: "#",
+    url: "#",
     label: "Link",
     launch: false,
     help_link: false,
     show_label: true,
-    style: "secondary"
+    style: "secondary",
+    remove_underline: true,
   })
-%>
-<h3>Dismissable Alert</h3>
-<!-- Default -->
-<%= sage_component SageAlert, {
-  spacer: { bottom: "2xs" },
-  color: "default",
-  title: "Our privacy policy has changed",
-  title_addon: "(as of November 11, 2021)",
-  desc: "Make sure you know how these changes affect you. Make sure you know how these changes affect you.",
-  icon_name: "sage-icon-info-circle-filled",
-  dismissable: true,
-  primary_action: {
-    value: "Primary",
-    test_id: "primary_action",
-  },
-  secondary_actions: [
-    {
-      value: "Link",
-      url: "#",
-    },
-    {
-      value: "Another link",
-      url: "#"
-    },
-  ],
-} do %>
-  <% content_for :sage_alert_actions do %>
-    <%= sage_link %>
-  <% end %>
-<% end %>
-<!-- Info -->
-<%= sage_component SageAlert, {
-  spacer: { bottom: "2xs" },
-  color: "info",
-  title: "Our privacy policy has changed",
-  title_addon: "(as of November 11, 2021)",
-  desc: "Make sure you know how these changes affect you. Make sure you know how these changes affect you.",
-  icon_name: "sage-icon-info-circle-filled",
-  dismissable: true,
-  primary_action: {
-    value: "Primary",
-    test_id: "primary_action",
-  },
-  secondary_actions: [
-    {
-      value: "Link",
-      url: "#"
-    },
-    {
-      value: "Another link",
-      url: "#"
-    },
-  ],
-} do %>
-  <% content_for :sage_alert_actions do %>
-    <%= sage_link %>
-  <% end %>
-<% end %>
-
-<!-- Success -->
-<%= sage_component SageAlert, {
-  spacer: { bottom: "2xs" },
-  color: "published",
-  title: "Account settings updated",
-  desc: "Make sure you know how these changes affect you. Make sure you know how these changes affect you.",
-  icon_name: "sage-icon-check-circle-filled",
-  dismissable: true,
-  primary_action: {
-    value: "Primary - Link",
+  demo_description =  "Make sure you know how these changes affect you."
+  demo_primary_action = {
+    value: "Primary action",
     attributes: {
-      href: "#element-button"
+      href: "#href-for-primary-action"
     },
-  },
-  secondary_actions: [
-    {
-      value: "Secondary - Link",
-      url: "#element-button"
-    },
-  ],
-} do %>
-  <% content_for :sage_alert_actions do %>
-    <%= sage_link %>
-    <%= sage_link %>
-  <% end %>
-<% end %>
-
-<!-- Warning -->
-<%= sage_component SageAlert, {
-  spacer: { bottom: "2xs" },
-  color: "warning",
-  title: "Exceeded product amount limit",
-  desc: "Make sure you know how these changes affect you. Make sure you know how these changes affect you.",
-  icon_name: "sage-icon-warning-filled",
-  dismissable: true,
-  primary_action: {
-    value: "Primary - Link",
-    attributes: {
-      href: "#element-button"
-    },
-  }, 
-} do %>
-  <% content_for :sage_alert_actions do %>
-    <%= sage_link %>
-    <%= sage_link %>
-  <% end %>
-<% end %>
-
-<!-- Danger -->
-<%= sage_component SageAlert, {
-  spacer: { bottom: "2xs" },
-  color: "danger",
-  title: "App outage tonight at 12am",
-  desc: "Make sure you know how these changes affect you. Make sure you know how these changes affect you.",
-  icon_name: "sage-icon-danger-filled",
-  dismissable: true,
-  primary_action: {
-    value: "Primary"
   }
-} %>
+%>
 
-<h3>Non-Dismissable Alert (no close button)</h3>
+<%= md("
+### Alert colors
 
-<!-- Default -->
+Alerts can be implemented in a few different colors.
+These also determine the icon that will appear by default.
+", use_sage_type: true) %>
 <%= sage_component SageAlert, {
-  spacer: { bottom: "2xs" },
   color: "default",
-  title: "Our privacy policy has changed",
-  desc: "Make sure you know how these changes affect you. Make sure you know how these changes affect you.",
+  title: "A default alert",
+  desc: demo_description,
   icon_name: "sage-icon-info-circle-filled",
-  primary_action: {
-    value: "Primary"
-  },
-} do %>
-  <% content_for :sage_alert_actions do %>
-    <%= sage_link %>
-    <%= sage_link %>
-  <% end %>
-<% end %>
-
-<!-- Info -->
-<%= sage_component SageAlert, {
-  spacer: { bottom: "2xs" },
-  color: "info",
-  title: "Our privacy policy has changed",
-  desc: "Make sure you know how these changes affect you. Make sure you know how these changes affect you.",
-  icon_name: "sage-icon-info-circle-filled",
-  primary_action: {
-    value: "Primary"
-  },
-} do %>
-  <% content_for :sage_alert_actions do %>
-    <%= sage_link %>
-    <%= sage_link %>
-  <% end %>
-<% end %>
-
-<!-- Success -->
-<%= sage_component SageAlert, {
-  spacer: { bottom: "2xs" },
-  color: "published",
-  title: "Account settings updated",
-  desc: "Make sure you know how these changes affect you. Make sure you know how these changes affect you.",
-  icon_name: "sage-icon-check-circle-filled",
-  primary_action: {
-    value: "Primary"
-  },
-} do %>
-  <% content_for :sage_alert_actions do %>
-    <%= sage_link %>
-    <%= sage_link %>
-  <% end %>
-<% end %>
-
-<!-- Warning -->
-<%= sage_component SageAlert, {
-  spacer: { bottom: "2xs" },
-  color: "warning",
-  title: "Exceeded product amount limit",
-  desc: "Make sure you know how these changes affect you. Make sure you know how these changes affect you.",
-  icon_name: "sage-icon-warning-filled",
-  primary_action: {
-    value: "Primary"
-  },
-} do %>
-  <% content_for :sage_alert_actions do %>
-    <%= sage_link %>
-    <%= sage_link %>
-  <% end %>
-<% end %>
-
-<!-- Danger -->
-<%= sage_component SageAlert, {
-  spacer: { bottom: "2xs" },
-  color: "danger",
-  title: "App outage tonight at 12am",
-  desc: "Make sure you know how these changes affect you. Make sure you know how these changes affect you.",
-  icon_name: "sage-icon-danger-filled",
-  primary_action: {
-    value: "Primary"
-  },
-} do %>
-  <% content_for :sage_alert_actions do %>
-    <%= sage_link %>
-    <%= sage_link %>
-  <% end %>
-<% end %>
-
-<h3>Small Alerts</h3>
-
-<!-- Default -->
-<%= sage_component SageAlert, {
-  spacer: { bottom: :md },
-  color: "default",
-  desc: "Make sure you know how these changes affect you.",
-  icon_name: "sage-icon-info-circle-filled",
-  small: true,
-  dismissable: true,
-} do %>
-  <% content_for :sage_alert_actions do %>
-    <%= sage_link %>
-  <% end %>
-<% end %>
-
-<!-- Info -->
-<%= sage_component SageAlert, {
-  spacer: { bottom: :md },
-  color: "info",
-  desc: "Make sure you know how these changes affect you.",
-  icon_name: "sage-icon-info-circle-filled",
-  small: true,
-  dismissable: true,
-} do %>
-  <% content_for :sage_alert_actions do %>
-    <%= sage_link %>
-  <% end %>
-<% end %>
-
-<!-- Success -->
-<%= sage_component SageAlert, {
-  spacer: { bottom: :md },
-  color: "published",
-  desc: "Make sure you know how these changes affect you.",
-  icon_name: "sage-icon-check-circle-filled",
-  small: true,
-  dismissable: true,
+  primary_action: demo_primary_action,
 } %>
-
-<!-- Warning -->
 <%= sage_component SageAlert, {
-  spacer: { bottom: :md },
+  color: "info",
+  title: "An informative alert",
+  desc: demo_description,
+  icon_name: "sage-icon-info-circle-filled",
+  primary_action: demo_primary_action,
+} %>
+<%= sage_component SageAlert, {
+  color: "success",
+  title: "An informative alert",
+  desc: demo_description,
+  icon_name: "sage-icon-check-circle-filled",
+  primary_action: demo_primary_action,
+} %>
+<%= sage_component SageAlert, {
   color: "warning",
-  desc: "Make sure you know how these changes affect you.",
-  icon_name: "sage-icon-warning-filled",
-  small: true,
-} do %>
-  <% content_for :sage_alert_actions do %>
-    <%= sage_link %>
-  <% end %>
-<% end %>
-
-<!-- Danger -->
-<%= sage_component SageAlert, {
-  spacer: { bottom: :md },
-  color: "danger",
-  desc: "Make sure you know how these changes affect you.",
+  title: "Uh, oh! Here's a warning alert",
+  desc: demo_description,
   icon_name: "sage-icon-danger-filled",
-  small: true,
+  primary_action: demo_primary_action,
+} %>
+<%= sage_component SageAlert, {
+  color: "danger",
+  title: "Look out! This alert means there's an error",
+  desc: demo_description,
+  icon_name: "sage-icon-warning-filled",
+  primary_action: demo_primary_action,
 } %>
 
 <%= md("
-### Events
+### Alert actions
+
+Alerts can include buttons and links for users to take further action.
+These include a single primary action button and one or more additional secondary actions.
+
+- The primary action implements a single hash that allows `value` and `attributes` similar to SageButton.
+- The secondary actions implements an array of hashes that each allow a `value` and a `url`.
+", use_sage_type: true) %>
+<%= sage_component SageAlert, {
+  color: "published",
+  title: "Alert with all actions",
+  desc: demo_description,
+  icon_name: "sage-icon-check-circle-filled",
+  primary_action: demo_primary_action,
+  secondary_actions: [
+    {
+      value: "Link 1",
+      url: "#href-for-link-1"
+    },
+    {
+      value: "Link 2",
+      url: "#href-for-link-1"
+    },
+  ],
+} %>
+
+
+<%= md("
+### Dismissable Alerts
+
+Alerts can be implemented in a few different colors.
+These also determine the icon that will appear by default.
 
 Alerts emit a custom event, `sage.alert.dismiss` when the dismiss button is clicked.
 You can listen for this event as it bubbles and respond as you see fit.
 ", use_sage_type: true) %>
+<%= sage_component SageAlert, {
+  color: "info",
+  title: "This nifty alert can be dismissed",
+  desc: demo_description,
+  dismissable: true,
+  icon_name: "sage-icon-info-circle-filled",
+  primary_action: demo_primary_action,
+} %>
+
+<%= md("
+### Small Alerts
+
+The `small` variant of Alert can be used for smaller spaces or a more minimal presence.
+They support all other properties with the exception of `primary_action`; only `secondary_actions` are allowed.
+", use_sage_type: true) %>
+
+<%= sage_component SageAlert, {
+  color: "default",
+  desc: demo_description,
+  small: true,
+  dismissable: true,
+  icon_name: "sage-icon-info-circle-filled",
+  secondary_actions: [
+    {
+      value: "Link 1",
+      url: "#href-for-link-1"
+    },
+    {
+      value: "Link 2",
+      url: "#href-for-link-1"
+    },
+  ],
+} %>
+
 
 <script>
 (function() {

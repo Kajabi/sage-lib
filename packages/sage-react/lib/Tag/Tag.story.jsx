@@ -5,6 +5,14 @@ import { Tag } from './Tag';
 export default {
   title: 'Sage/Tag',
   component: Tag,
+  // displays description on Docs tab
+  parameters: {
+    docs: {
+      description: {
+        component: 'Tags show concise metadata in a compact format.'
+      },
+    },
+  },
   argTypes: {
     ...selectArgs({
     }),

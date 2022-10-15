@@ -5,6 +5,14 @@ export const parameters = {
   options: {
     storySort: {
       method: 'alphabetical'
-    }
+    },
+  },
+  controls: {
+    expanded: true
+  },
+  docs: {
+    source: {
+      state: 'open',
+    },
   },
 }

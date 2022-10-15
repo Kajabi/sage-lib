@@ -140,6 +140,14 @@ FullscreenBody.propTypes = {
 export default {
   title: 'Sage/Modal',
   component: Modal,
+  // displays description on Docs tab
+  parameters: {
+    docs: {
+      description: {
+        component: 'Sage modal.'
+      },
+    },
+  },
   subcomponents: {
     'Modal.Header': Modal.Header,
     'Modal.HeaderAside': Modal.HeaderAside,
@@ -178,7 +186,7 @@ Default.decorators = [
   (Story) => (
     <>
       <p>Note: Use the Controls to toggle the modal&lsquo;s Active property to see it.</p>
-      <Story />
+      {Story()}
     </>
   )
 ];

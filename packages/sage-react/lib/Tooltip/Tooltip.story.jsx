@@ -6,6 +6,14 @@ import { Tooltip } from './Tooltip';
 export default {
   title: 'Sage/Tooltip',
   component: Tooltip,
+  // displays description on Docs tab
+  parameters: {
+    docs: {
+      description: {
+        component: 'Tooltips display helpful text when users hover over an element.'
+      },
+    },
+  },
   decorators: [(Story) => <div style={{ padding: 100, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>{Story()}</div>],
   argTypes: {
     ...selectArgs({

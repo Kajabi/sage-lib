@@ -4,23 +4,43 @@
 /// @group sage
 ////
 
-// Note: duplicated in _button.scss; update there when _alert.scss changes
-$-alert-colors: (
-  default: grey,
-  info: primary,
-  published: sage,
-  success: sage,
-  warning: yellow,
-  danger: red,
-  exceeded: red,
-  reached: orange,
-  approaching: yellow,
+//
+// NOTE: These colors maps have corresponding settings in the following:
+// `_button.scss`, `sage_alert.rb`, `_sage_alert.html.erb`, and `Alert.jsx`
+//
+$-alert-background-colors: (
+  default: sage-color(grey, 300),
+  draft: sage-color(grey, 300),
+  info: sage-color(primary, 100),
+  published: sage-color(sage, 100),
+  success: sage-color(sage, 100),
+  warning: sage-color(yellow, 100),
+  approaching: sage-color(yellow, 100),
+  reached: sage-color(orange, 100),
+  exceeded: sage-color(red, 100),
+  danger: sage-color(red, 100),
+);
+
+$-alert-icon-colors: (
+  default: sage-color(charcoal, 200),
+  draft: sage-color(charcoal, 200),
+  info: sage-color(primary, 300),
+  published: sage-color(sage, 300),
+  success: sage-color(sage, 300),
+  warning: sage-color(yellow, 400),
+  approaching: sage-color(yellow, 400),
+  reached: sage-color(orange, 400),
+  exceeded: sage-color(red, 300),
+  danger: sage-color(red, 300),
 );
 
 .sage-alert {
   display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas:
+    "icon copy"
+    ".    actions";
   gap: sage-spacing(sm);
-  position: relative;
   padding: sage-spacing();
   margin-bottom: sage-spacing();
   border-radius: sage-border(radius-large);
@@ -29,94 +49,31 @@ $-alert-colors: (
   .sage-panel > & {
     margin-bottom: 0;
   }
+
+  &.sage-alert--dismissable {
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas:
+      "icon copy    close"
+      ".    actions .";
+  }
 }
 
-@each $name, $color in $-alert-colors {
+@each $name, $value in $-alert-background-colors {
   .sage-alert--#{$name} {
-    @if $name == default {
-      background-color: sage-color(grey, 300);
-    }
-    @else {
-      background-color: sage-color($color, 100);
-    }
-
-    a:not([class]) {
-      color: sage-color(charcoal, 400);
-      text-decoration: underline;
-    }
-
-    .sage-alert__icon::before {
-      line-height: sage-line-height(h6);
-    }
-
-    .sage-alert--default & {
-      background-color: sage-color(grey, 300);
-    }
-  }
-
-  .sage-alert__primary-action--#{$name}.sage-btn--primary {
-    @if $name == default {
-      background-color: sage-color(charcoal, 400);
-
-      &:focus,
-      &:active {
-        background-color: sage-color(charcoal, 400);
-      }
-
-      &:hover {
-        background-color: sage-color(charcoal, 500);
-      }
-
-    }
-    @else if $name == warning or $name == approaching {
-      background-color: sage-color(yellow, 400);
-
-      &:focus,
-      &:active {
-        background-color: sage-color(yellow, 400);
-      }
-
-      &:hover {
-        background-color: sage-color(yellow, 500);
-      }
-
-    }
-    @else {
-      background-color: sage-color($color, 300);
-
-      &:focus,
-      &:active {
-        background-color: sage-color($color, 300);
-      }
-
-      &:hover {
-        background-color: sage-color($color, 400);
-      }
-    }
+    background-color: $value;
   }
 }
 
 .sage-alert--small {
-  gap: sage-spacing(xs);
-  grid-auto-columns: auto;
-  grid-auto-flow: column;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: auto 1fr auto;
+  grid-template-areas: "icon copy actions";
   align-items: center;
   padding: sage-spacing(sm);
-  border-radius: sage-border(radius);
+  border-radius: sage-border(radius-medium);
 
-  .sage-alert__icon {
-    margin-right: sage-spacing(xs);
-    line-height: normal;
-  }
-
-  .sage-alert__icon::before {
-    line-height: sage-spacing(sm);
-  }
-
-  .sage-alert__desc {
-    @include truncate();
-    max-width: 100%;
+  &.sage-alert--dismissable {
+    grid-template-columns: auto 1fr auto auto;
+    grid-template-areas: "icon copy actions close";
   }
 }
 
@@ -134,67 +91,26 @@ $-alert-colors: (
 }
 
 .sage-alert__icon {
-  display: inline-flex;
-  @each $name, $color in $-alert-colors {
+  grid-area: icon;
+  transform: translateY(4px);
+
+  @each $name, $value in $-alert-icon-colors {
     .sage-alert--#{$name} & {
-      color: sage-color($color, 300);
+      color: $value;
     }
   }
 
-  .sage-alert--default & {
-    color: sage-color(charcoal, 200);
-  }
-
-  .sage-alert--warning &,
-  .sage-alert--approaching & {
-    color: sage-color(yellow, 500);
-  }
-
-  .sage-alert--reached & {
-    color: sage-color(orange, 500);
-  }
-
-  .sage-alert--exceeded & {
-    color: sage-color(red, 500);
+  .sage-alert--small & {
+    transform: translateY(-2px);
   }
 }
 
 .sage-alert__close {
-  position: absolute;
-  top: sage-spacing(md);
-  right: sage-spacing(md);
+  grid-area: close;
+  transform: translateY(4px);
 
   .sage-alert--small & {
-    position: relative;
-    top: auto;
-    right: auto;
-    line-height: 1;
-  }
-}
-
-.sage-alert__close-btn.sage-btn {
-  align-self: flex-start;
-  margin-left: auto;
-  font-size: sage-font-size(xl, false);
-  line-height: 1;
-  appearance: none;
-
-  @each $name, $color in $-alert-colors {
-    .sage-alert--#{$name} & {
-      @include sage-focus-outline($outline-offset-inline: 3px, $outline-offset-block: 3px);
-      @include sage-focus-outline--update-color(sage-color($color, 400));
-
-      color: sage-color(charcoal, 300);
-      /* stylelint-disable max-nesting-depth */
-      &:focus::after {
-        border-color: sage-color($color, 500);
-      }
-      /* stylelint-enable max-nesting-depth */
-    }
-  }
-
-  &:hover {
-    opacity: 0.7;
+    transform: translateY(2px);
   }
 }
 
@@ -202,9 +118,58 @@ $-alert-colors: (
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: sage-spacing(sm);
+  gap: sage-spacing();
+  grid-area: actions;
 
-  .sage-alert--small-dismissable & {
-    margin-right: sage-spacing(2xs);
+  // Mimics sage-link "plain link" styling
+  // Excludes elements styled by Sage
+  // such as SageLink and SageButton
+  a:not([class*="sage-"]) {
+    @extend %t-sage-body-med;
+    @include sage-focus-outline($outline-offset-inline: 4px);
+
+    color: sage-color(charcoal, 400);
+    text-decoration: none;
+
+    &:hover {
+      color: sage-color(charcoal, 500);
+      text-decoration: underline;
+    }
+
+    &:focus {
+      @include sage-focus-outline--update-color(sage-color(primary, 200));
+    }
+  }
+
+  .sage-alert--small & {
+    gap: sage-spacing(sm);
+  }
+}
+
+.sage-alert__desc {
+  @extend %t-sage-body;
+
+  // Mimics sage-link "inline link" styling
+  // Excludes elements styled by Sage
+  // such as SageLink and SageButton
+  a:not([class*="sage-"]) {
+    @include sage-focus-outline($outline-offset-inline: 4px);
+
+    color: sage-color(charcoal, 400);
+    text-decoration: underline;
+
+    &:hover {
+      color: sage-color(charcoal, 500);
+      text-decoration: none;
+    }
+
+    &:focus {
+      @include sage-focus-outline--update-color(sage-color(primary, 200));
+    }
+  }
+
+  .sage-alert--small & {
+    @include truncate();
+    max-width: 100%;
   }
 }

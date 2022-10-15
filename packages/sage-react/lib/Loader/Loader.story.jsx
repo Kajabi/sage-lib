@@ -7,6 +7,14 @@ import { Loader } from './Loader';
 export default {
   title: 'Sage/Loader',
   component: Loader,
+  // displays description on Docs tab
+  parameters: {
+    docs: {
+      description: {
+        component: 'Stylized loading animations for use with components.'
+      },
+    },
+  },
   argTypes: {
     ...selectArgs({
       type: Loader.TYPES

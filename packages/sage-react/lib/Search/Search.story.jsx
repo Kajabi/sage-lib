@@ -4,6 +4,14 @@ import { Search } from './Search';
 export default {
   title: 'Sage/Search',
   component: Search,
+  // displays description on Docs tab
+  parameters: {
+    docs: {
+      description: {
+        component: 'A self-contained search form that can be used in isolation and inside of menus.'
+      },
+    },
+  },
 };
 
 const Template = (args) => <Search {...args} />;

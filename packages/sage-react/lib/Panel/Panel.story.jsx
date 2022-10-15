@@ -11,6 +11,14 @@ import { Panel } from './Panel';
 export default {
   title: 'Sage/Panel',
   component: Panel,
+  // displays description on Docs tab
+  parameters: {
+    docs: {
+      description: {
+        component: 'Panels are used as multi-purpose containers for a variety of content.'
+      },
+    },
+  },
   subcomponents: {
     'Panel.Header': Panel.Header,
     'Panel.Block': Panel.Block,

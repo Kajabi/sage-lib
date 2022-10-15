@@ -7,6 +7,14 @@ import { Chart } from './Chart';
 export default {
   title: 'Sage/Chart',
   component: Chart,
+  // displays description on Docs tab
+  parameters: {
+    docs: {
+      description: {
+        component: '', // TODO: Add component description.
+      },
+    },
+  },
   args: {
     type: Chart.TYPES.BAR,
     framework: Recharts,

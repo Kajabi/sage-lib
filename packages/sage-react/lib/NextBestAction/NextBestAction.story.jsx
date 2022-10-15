@@ -6,6 +6,14 @@ import { Button } from '../Button';
 export default {
   title: 'Sage/Next Best Action',
   component: NextBestAction,
+  // displays description on Docs tab
+  parameters: {
+    docs: {
+      description: {
+        component: 'A specialized component that showcases a Call to Action we\'d like the customer to take.'
+      },
+    },
+  },
   args: {
     actions: (
       <Button

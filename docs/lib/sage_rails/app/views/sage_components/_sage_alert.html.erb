@@ -1,9 +1,9 @@
 <div
   class="
-    sage-alert<%= component.color ? "
-    sage-alert--#{component.color}" : ""%>
+    sage-alert
+    <%= "sage-alert--#{component.color}" if component.color %>
+    <%= "sage-alert--dismissable" if component.dismissable %>
     <%= "sage-alert--small" if component.small %>
-    <%= "sage-alert--small-dismissable" if component.small && component.dismissable %>
     <%= component.generated_css_classes %>
   "
   data-js-alert="true"
@@ -32,7 +32,7 @@
           value: component.primary_action[:value],
           test_id: component.primary_action[:test_id],
           style: "primary",
-          css_classes: "sage-alert__primary-action sage-alert__primary-action--#{component.color}",
+          css_classes: "sage-alert__primary-action",
           attributes: component.primary_action[:attributes]
         } %>
       <% end %>
@@ -42,7 +42,8 @@
             label: secondary_action[:value],
             show_label: true,
             style: "secondary",
-            url: secondary_action[:url]
+            remove_underline: true,
+            url: secondary_action[:url],
           } %>
         <% end %>
       <% end %>
@@ -60,7 +61,7 @@
           name: "remove"
         },
         subtle: true,
-        small: true,
+        style: "primary",
         css_classes: "sage-alert__close-btn"
       } %>
     </div>

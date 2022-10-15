@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { Button } from '../Button';
 import { Icon } from '../Icon';
-import { ALERT_COLORS } from './configs';
+import { ALERT_COLORS, ALERT_PRIMARY_ACTION_CLASSNAME } from './configs';
 import { SageTokens } from '../configs';
 
 export const Alert = ({
@@ -26,6 +26,7 @@ export const Alert = ({
     className,
     {
       [`sage-alert--${color}`]: color,
+      'sage-alert--dismissable': dismissable,
       'sage-alert--small': small,
     }
   );
@@ -35,43 +36,29 @@ export const Alert = ({
     if (onDismiss) onDismiss();
   };
 
-  const renderIcon = () => {
-    let icon;
+  const getDefaultIcon = () => {
     switch (color) {
-      case ALERT_COLORS.INFO:
-        icon = SageTokens.ICONS.INFO_CIRCLE;
-        break;
       case ALERT_COLORS.WARNING:
-        icon = SageTokens.ICONS.WARNING;
-        break;
+        return SageTokens.ICONS.WARNING_FILLED;
       case ALERT_COLORS.APPROACHING:
-        icon = SageTokens.ICONS.WARNING;
-        break;
+        return SageTokens.ICONS.WARNING_FILLED;
       case ALERT_COLORS.DANGER:
-        icon = SageTokens.ICONS.DANGER;
-        break;
+        return SageTokens.ICONS.DANGER_FILLED;
       case ALERT_COLORS.EXCEEDED:
-        icon = SageTokens.ICONS.DANGER;
-        break;
+        return SageTokens.ICONS.DANGER_FILLED;
       case ALERT_COLORS.REACHED:
-        icon = SageTokens.ICONS.FLAG;
-        break;
+        return SageTokens.ICONS.FLAG;
       case ALERT_COLORS.SUCCESS:
+        return SageTokens.ICONS.CHECK_CIRCLE_FILLED;
+      case ALERT_COLORS.INFO:
       default:
-        icon = SageTokens.ICONS.CHECK_CIRCLE;
-        break;
+        return SageTokens.ICONS.INFO_CIRCLE_FILLED;
     }
-
-    return (
-      <Icon icon={icon} className="sage-alert__icon" />
-    );
   };
 
   return !selfDismissed ? (
     <div className={classNames} {...rest}>
-      {icon
-        ? <Icon icon={icon} className="sage-alert__icon" />
-        : renderIcon()}
+      <Icon icon={icon || getDefaultIcon()} className="sage-alert__icon" />
       <div className="sage-alert__copy">
         {title && (
           <h3 className="sage-alert__title">
@@ -92,9 +79,9 @@ export const Alert = ({
         <div className="sage-alert__close">
           <Button
             className="sage-alert__close-btn"
+            color={Button.COLORS.PRIMARY}
             icon={SageTokens.ICONS.REMOVE}
             iconOnly={true}
-            small={true}
             subtle={true}
             value="Close"
             onClick={handleDismiss}
@@ -107,6 +94,7 @@ export const Alert = ({
 };
 
 Alert.COLORS = ALERT_COLORS;
+Alert.PRIMARY_ACTION_CLASSNAME = ALERT_PRIMARY_ACTION_CLASSNAME;
 
 Alert.defaultProps = {
   actions: null,

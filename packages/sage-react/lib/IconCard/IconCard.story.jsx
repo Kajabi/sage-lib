@@ -6,6 +6,14 @@ import { IconCard } from './IconCard';
 export default {
   title: 'Sage/IconCard',
   component: IconCard,
+  // displays description on Docs tab
+  parameters: {
+    docs: {
+      description: {
+        component: 'A simple component that allows an icon to be rendered on a field with a unified color scheme applied.'
+      },
+    },
+  },
   argTypes: {
     ...selectArgs({
       color: IconCard.COLORS,

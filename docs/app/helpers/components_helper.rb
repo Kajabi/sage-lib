@@ -22,7 +22,7 @@ module ComponentsHelper
         responsive: "todo",
         a11y: "todo",
         react_component_slug: "sage-alert--dismissable-alert",
-        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F9Km09NjlZHYWsMP7EGT8tI%2F%255BWIP%255D-Sage-3-%25E2%2580%2594-Admin-Components%3Fnode-id%3D6989%253A21570",
+        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FsMbtLUHSt2vfKgKjyQ3052%2F%25F0%259F%25A7%25A9-Sage-components%3Fnode-id%3D351%253A5688",
       },
       {
         title: "assistant",
@@ -33,7 +33,7 @@ module ComponentsHelper
         react: "todo",
         responsive: "todo",
         a11y: "todo",
-        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F9Km09NjlZHYWsMP7EGT8tI%2F%255BWIP%255D-Sage-3-%25E2%2580%2594-Admin-Components%3Fnode-id%3D6989%253A21590",
+        figma_embed: "",
       },
       {
         title: "avatar",
@@ -45,7 +45,7 @@ module ComponentsHelper
         responsive: "todo",
         a11y: "done",
         react_component_slug: "sage-avatar--default",
-        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F9Km09NjlZHYWsMP7EGT8tI%2F%255BWIP%255D-Sage-3-%25E2%2580%2594-Admin-Components%3Fnode-id%3D6989%253A21606",
+        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FsMbtLUHSt2vfKgKjyQ3052%2F%25F0%259F%25A7%25A9-Sage-components%3Fnode-id%3D351%253A5689",
       },
       {
         title: "badge",
@@ -57,7 +57,7 @@ module ComponentsHelper
         responsive: "todo",
         a11y: "done",
         react_component_slug: "sage-badge--default",
-        figma_embed: "",
+        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FsMbtLUHSt2vfKgKjyQ3052%2F%25F0%259F%25A7%25A9-Sage-components%3Fnode-id%3D488%253A43472",
       },
       {
         title: "banner",
@@ -68,7 +68,7 @@ module ComponentsHelper
         react: "done",
         responsive: "todo",
         a11y: "done",
-        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F9Km09NjlZHYWsMP7EGT8tI%2F%255BWIP%255D-Sage-3-%25E2%2580%2594-Admin-Components%3Fnode-id%3D6999%253A21606",
+        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FsMbtLUHSt2vfKgKjyQ3052%2F%25F0%259F%25A7%25A9-Sage-components%3Fnode-id%3D351%253A5691",
       },
       {
         title: "billboard",
@@ -91,7 +91,7 @@ module ComponentsHelper
         responsive: "todo",
         a11y: "done",
         react_component_slug: "sage-breadcrumbs--single-item",
-        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F9Km09NjlZHYWsMP7EGT8tI%2F%255BWIP%255D-Sage-3-%25E2%2580%2594-Admin-Components%3Fnode-id%3D6999%253A21623",
+        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FsMbtLUHSt2vfKgKjyQ3052%2F%25F0%259F%25A7%25A9-Sage-components%3Fnode-id%3D351%253A5692",
       },
       {
         title: "button",
@@ -103,7 +103,7 @@ module ComponentsHelper
         responsive: "todo",
         a11y: "done",
         react_component_slug: "sage-button--default",
-        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F9Km09NjlZHYWsMP7EGT8tI%2F%255BWIP%255D-Sage-3-%25E2%2580%2594-Admin-Components%3Fnode-id%3D6999%253A21637",
+        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FsMbtLUHSt2vfKgKjyQ3052%2F%25F0%259F%25A7%25A9-Sage-components%3Fnode-id%3D3%253A15",
       },
       {
         title: "card",
@@ -149,7 +149,7 @@ module ComponentsHelper
         react: "todo",
         responsive: "todo",
         a11y: "done",
-        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F9Km09NjlZHYWsMP7EGT8tI%2F%255BWIP%255D-Sage-3-%25E2%2580%2594-Admin-Components%3Fnode-id%3D6999%253A21711",
+        figma_embed: "",
       },
       {
         title: "chart_legend",
@@ -183,7 +183,7 @@ module ComponentsHelper
         responsive: "todo",
         a11y: "done",
         react_component_slug: "sage-checkbox--default",
-        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F9Km09NjlZHYWsMP7EGT8tI%2F%255BWIP%255D-Sage-3-%25E2%2580%2594-Admin-Components%3Fnode-id%3D6999%253A21776",
+        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FsMbtLUHSt2vfKgKjyQ3052%2F%25F0%259F%25A7%25A9-Sage-components%3Fnode-id%3D488%253A43466",
       },
       {
         title: "choice",
@@ -195,7 +195,7 @@ module ComponentsHelper
         responsive: "todo",
         a11y: "todo",
         react_component_slug: "sage-choice--default",
-        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F9Km09NjlZHYWsMP7EGT8tI%2F%255BWIP%255D-Sage-3-%25E2%2580%2594-Admin-Components%3Fnode-id%3D6999%253A21795",
+        figma_embed: "",
       },
       {
         title: "container",
@@ -206,7 +206,7 @@ module ComponentsHelper
         responsive: "todo",
         a11y: "done",
         react_component_slug: "sage-grid--default",
-        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F9Km09NjlZHYWsMP7EGT8tI%2F%255BWIP%255D-Sage-3-%25E2%2580%2594-Admin-Components%3Fnode-id%3D3435%253A19",
+        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FsMbtLUHSt2vfKgKjyQ3052%2F%25F0%259F%25A7%25A9-Sage-components%3Fnode-id%3D3%253A9",
       },
       {
         title: "copy_text",
@@ -217,7 +217,7 @@ module ComponentsHelper
         responsive: "todo",
         a11y: "done",
         react_component_slug: "sage-copytext--default",
-        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F9Km09NjlZHYWsMP7EGT8tI%2FSage-3-for-Admin%3Fnode-id%3D4195%253A20283",
+        figma_embed: "",
       },
       {
         title: "data_card",
@@ -241,7 +241,7 @@ module ComponentsHelper
         responsive: "todo",
         a11y: "doing",
         react_component_slug: "sage-description--default",
-        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F9Km09NjlZHYWsMP7EGT8tI%2FSage-3-for-Admin%3Fnode-id%3D19727%253A25817",
+        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FsMbtLUHSt2vfKgKjyQ3052%2F%25F0%259F%25A7%25A9-Sage-components%3Fnode-id%3D2643%253A23062",
       },
       {
         title: "dot",
@@ -252,7 +252,7 @@ module ComponentsHelper
         responsive: "todo",
         a11y: "done",
         react_component_slug: "sage-dot--default",
-        figma_embed: nil, # TODO: We'll have a link for this in the new design system
+        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FsMbtLUHSt2vfKgKjyQ3052%2F%25F0%259F%25A7%25A9-Sage-components%3Fnode-id%3D2697%253A22773",
       },
       {
         title: "drawer",
@@ -263,7 +263,7 @@ module ComponentsHelper
         responsive: "todo",
         a11y: "todo",
         react_component_slug: "sage-drawer--default",
-        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F9Km09NjlZHYWsMP7EGT8tI%2FSage-3-for-Admin%3Fnode-id%3D14488%253A23019",
+        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FsMbtLUHSt2vfKgKjyQ3052%2F%25F0%259F%25A7%25A9-Sage-components%3Fnode-id%3D13259%253A24539",
       },
       {
         title: "dropdown",
@@ -275,7 +275,7 @@ module ComponentsHelper
         responsive: "todo",
         a11y: "todo",
         react_component_slug: "sage-dropdown--default",
-        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F9Km09NjlZHYWsMP7EGT8tI%2F%255BWIP%255D-Sage-3-%25E2%2580%2594-Admin-Components%3Fnode-id%3D3435%253A17",
+        figma_embed: "",
       },
       {
         title: "dynamic_select",
@@ -298,7 +298,7 @@ module ComponentsHelper
         responsive: "todo",
         a11y: "done",
         react_component_slug: "sage-emptystate--default",
-        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F9Km09NjlZHYWsMP7EGT8tI%2F%255BWIP%255D-Sage-3-%25E2%2580%2594-Admin-Components%3Fnode-id%3D9%253A156",
+        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FsMbtLUHSt2vfKgKjyQ3052%2F%25F0%259F%25A7%25A9-Sage-components%3Fnode-id%3D2470%253A23629",
       },
       {
         title: "expandable_card",
@@ -310,7 +310,7 @@ module ComponentsHelper
         responsive: "todo",
         a11y: "done",
         react_component_slug: "sage-expandablecard--default",
-        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F9Km09NjlZHYWsMP7EGT8tI%2F%255BWIP%255D-Sage-3-%25E2%2580%2594-Admin-Components%3Fnode-id%3D6999%253A23010",
+        figma_embed: "",
       },
       {
         title: "feature_toggle",
@@ -321,7 +321,7 @@ module ComponentsHelper
         react: "todo",
         responsive: "todo",
         a11y: "todo",
-        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F9Km09NjlZHYWsMP7EGT8tI%2F%255BWIP%255D-Sage-3-%25E2%2580%2594-Admin-Components%3Fnode-id%3D6340%253A20675",
+        figma_embed: "",
       },
       {
         title: "form_input",
@@ -333,7 +333,7 @@ module ComponentsHelper
         responsive: "todo",
         a11y: "done",
         react_component_slug: "sage-input--default",
-        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F9Km09NjlZHYWsMP7EGT8tI%2F%255BWIP%255D-Sage-3-%25E2%2580%2594-Admin-Components%3Fnode-id%3D6999%253A21822",
+        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FsMbtLUHSt2vfKgKjyQ3052%2F%25F0%259F%25A7%25A9-Sage-components%3Fnode-id%3D430%253A3529",
       },
       {
         title: "form_section",
@@ -357,7 +357,7 @@ module ComponentsHelper
         responsive: "todo",
         a11y: "done",
         react_component_slug: "sage-select--default",
-        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F9Km09NjlZHYWsMP7EGT8tI%2F%255BWIP%255D-Sage-3-%25E2%2580%2594-Admin-Components%3Fnode-id%3D6999%253A21850",
+        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FsMbtLUHSt2vfKgKjyQ3052%2F%25F0%259F%25A7%25A9-Sage-components%3Fnode-id%3D3459%253A23122",
       },
       {
         title: "form_textarea",
@@ -369,7 +369,7 @@ module ComponentsHelper
         responsive: "todo",
         a11y: "done",
         react_component_slug: "sage-textarea--default",
-        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F9Km09NjlZHYWsMP7EGT8tI%2F%255BWIP%255D-Sage-3-%25E2%2580%2594-Admin-Components%3Fnode-id%3D3435%253A9",
+        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FsMbtLUHSt2vfKgKjyQ3052%2F%25F0%259F%25A7%25A9-Sage-components%3Fnode-id%3D3509%253A22970",
       },
       {
         title: "hero",
@@ -380,7 +380,7 @@ module ComponentsHelper
         react: "todo",
         responsive: "todo",
         a11y: "done",
-        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F9Km09NjlZHYWsMP7EGT8tI%2F%255BWIP%255D-Sage-3-%25E2%2580%2594-Admin-Components%3Fnode-id%3D6999%253A22262",
+        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FsMbtLUHSt2vfKgKjyQ3052%2F%25F0%259F%25A7%25A9-Sage-components%3Fnode-id%3D3686%253A21923",
       },
       {
         title: "hint",
@@ -391,7 +391,7 @@ module ComponentsHelper
         responsive: "todo",
         a11y: "done",
         react_component_slug: "sage-hint--default",
-        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F9Km09NjlZHYWsMP7EGT8tI%2F%255BWIP%255D-Sage-3-%25E2%2580%2594-Admin-Components%3Fnode-id%3D6999%253A23073",
+        figma_embed: "",
       },
       {
         title: "icon",
@@ -402,7 +402,7 @@ module ComponentsHelper
         responsive: "todo",
         a11y: "done",
         react_component_slug: "sage-icon--default",
-        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F9Km09NjlZHYWsMP7EGT8tI%2F%255BWIP%255D-Sage-3-%25E2%2580%2594-Admin-Components%3Fnode-id%3D3554%253A247",
+        figma_embed: "",
       },
       {
         title: "icon_card",
@@ -414,7 +414,7 @@ module ComponentsHelper
         responsive: "todo",
         a11y: "done",
         react_component_slug: "sage-iconcard--default",
-        figma_embed: "",
+        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FsMbtLUHSt2vfKgKjyQ3052%2F%25F0%259F%25A7%25A9-Sage-components%3Fnode-id%3D3%253A7",
       },
       {
         title: "icon_list",
@@ -460,7 +460,7 @@ module ComponentsHelper
         responsive: "todo",
         a11y: "doing",
         react_component_slug: "sage-label--default",
-        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F9Km09NjlZHYWsMP7EGT8tI%2F%255BWIP%255D-Sage-3-%25E2%2580%2594-Admin-Components%3Fnode-id%3D6999%253A23863",
+        figma_embed: "",
       },
       {
         title: "link",
@@ -472,7 +472,7 @@ module ComponentsHelper
         responsive: "todo",
         a11y: "done",
         react_component_slug: "sage-link--primary",
-        figma_embed: "",
+        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FsMbtLUHSt2vfKgKjyQ3052%2F%25F0%259F%25A7%25A9-Sage-components%3Fnode-id%3D4137%253A21653",
       },
       {
         title: "list",
@@ -484,7 +484,7 @@ module ComponentsHelper
         responsive: "todo",
         a11y: "done",
         react_component_slug: "sage-list--default",
-        figma_embed: "",
+        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FsMbtLUHSt2vfKgKjyQ3052%2F%25F0%259F%25A7%25A9-Sage-components%3Fnode-id%3D12501%253A23675",
       },
       {
         title: "lists",
@@ -507,7 +507,7 @@ module ComponentsHelper
         responsive: "todo",
         a11y: "done",
         react_component_slug: "sage-loader--default",
-        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FsMbtLUHSt2vfKgKjyQ3052%2FSage%3Fnode-id%3D2738%253A23248",
+        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FsMbtLUHSt2vfKgKjyQ3052%2F%25F0%259F%25A7%25A9-Sage-components%3Fnode-id%3D2738%253A23248",
       },
       {
         title: "media_tile",
@@ -519,7 +519,7 @@ module ComponentsHelper
         responsive: "todo",
         a11y: "done",
         react_component_slug: "sage-media-tile--default",
-        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F9Km09NjlZHYWsMP7EGT8tI%2F%255BWIP%255D-Sage-3-%25E2%2580%2594-Admin-Components%3Fnode-id%3D6999%253A21709",
+        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FsMbtLUHSt2vfKgKjyQ3052%2F%25F0%259F%25A7%25A9-Sage-components%3Fnode-id%3D3452%253A25507",
       },
       {
         title: "meter",
@@ -542,7 +542,7 @@ module ComponentsHelper
         a11y: "todo",
         responsive: "todo",
         react_component_slug: "sage-modal--wired",
-        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F9Km09NjlZHYWsMP7EGT8tI%2F%255BWIP%255D-Sage-3-%25E2%2580%2594-Admin-Components%3Fnode-id%3D6999%253A23107",
+        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FsMbtLUHSt2vfKgKjyQ3052%2F%25F0%259F%25A7%25A9-Sage-components%3Fnode-id%3D2537%253A20081",
       },
       {
         title: "nav",
@@ -553,7 +553,7 @@ module ComponentsHelper
         react: "no",
         responsive: "todo",
         a11y: "done",
-        figma_embed: "",
+        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FsMbtLUHSt2vfKgKjyQ3052%2F%25F0%259F%25A7%25A9-Sage-components%3Fnode-id%3D393%253A7088",
       },
       {
         title: "nav_link",
@@ -564,7 +564,7 @@ module ComponentsHelper
         react: "no",
         responsive: "todo",
         a11y: "done",
-        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F9Km09NjlZHYWsMP7EGT8tI%2F%255BWIP%255D-Sage-3-%25E2%2580%2594-Admin-Components%3Fnode-id%3D3371%253A9903",
+        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FsMbtLUHSt2vfKgKjyQ3052%2F%25F0%259F%25A7%25A9-Sage-components%3Fnode-id%3D393%253A7088",
       },
       {
         title: "next_best_action",
@@ -588,7 +588,7 @@ module ComponentsHelper
         responsive: "todo",
         a11y: "doing",
         react_component_slug: "sage-pageheading--default",
-        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F9Km09NjlZHYWsMP7EGT8tI%2F%255BWIP%255D-Sage-3-%25E2%2580%2594-Admin-Components%3Fnode-id%3D6999%253A22232",
+        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FsMbtLUHSt2vfKgKjyQ3052%2F%25F0%259F%25A7%25A9-Sage-components%3Fnode-id%3D2537%253A20765",
       },
       {
         title: "pagination",
@@ -600,7 +600,7 @@ module ComponentsHelper
         responsive: "todo",
         a11y: "todo",
         react_component_slug: "sage-pagination--default",
-        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F9Km09NjlZHYWsMP7EGT8tI%2F%255BWIP%255D-Sage-3-%25E2%2580%2594-Admin-Components%3Fnode-id%3D6999%253A22277",
+        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FsMbtLUHSt2vfKgKjyQ3052%2F%25F0%259F%25A7%25A9-Sage-components%3Fnode-id%3D737%253A22322",
       },
       {
         title: "panel",
@@ -612,7 +612,7 @@ module ComponentsHelper
         responsive: "todo",
         a11y: "done",
         react_component_slug: "sage-panel--default",
-        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F9Km09NjlZHYWsMP7EGT8tI%2F%255BWIP%255D-Sage-3-%25E2%2580%2594-Admin-Components%3Fnode-id%3D3435%253A3",
+        figma_embed: "",
       },
       {
         title: "panel_controls",
@@ -624,7 +624,7 @@ module ComponentsHelper
         responsive: "todo",
         a11y: "doing",
         react_component_slug: "sage-panelcontrols--default",
-        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F9Km09NjlZHYWsMP7EGT8tI%2F%255BWIP%255D-Sage-3-%25E2%2580%2594-Admin-Components%3Fnode-id%3D6999%253A22247",
+        figma_embed: "",
       },
       {
         title: "panel_figure",
@@ -648,7 +648,7 @@ module ComponentsHelper
         responsive: "todo",
         a11y: "done",
         react_component_slug: "sage-popover--default",
-        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F9Km09NjlZHYWsMP7EGT8tI%2F%255BWIP%255D-Sage-3-%25E2%2580%2594-Admin-Components%3Fnode-id%3D6999%253A23138",
+        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FsMbtLUHSt2vfKgKjyQ3052%2F%25F0%259F%25A7%25A9-Sage-components%3Fnode-id%3D3686%253A23677",
       },
       {
         title: "progress_bar",
@@ -659,7 +659,7 @@ module ComponentsHelper
         react: "todo",
         responsive: "todo",
         a11y: "done",
-        figma_embed: "",
+        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FsMbtLUHSt2vfKgKjyQ3052%2F%25F0%259F%25A7%25A9-Sage-components%3Fnode-id%3D737%253A22323",
       },
       {
         title: "property",
@@ -671,7 +671,7 @@ module ComponentsHelper
         responsive: "todo",
         a11y: "done",
         react_component_slug: "sage-property--primary",
-        figma_embed: "",
+        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FsMbtLUHSt2vfKgKjyQ3052%2F%25F0%259F%25A7%25A9-Sage-components%3Fnode-id%3D4581%253A21313",
       },
       {
         title: "radio",
@@ -683,7 +683,7 @@ module ComponentsHelper
         responsive: "todo",
         a11y: "done",
         react_component_slug: "sage-radio--default",
-        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F9Km09NjlZHYWsMP7EGT8tI%2F%255BWIP%255D-Sage-3-%25E2%2580%2594-Admin-Components%3Fnode-id%3D6999%253A23906",
+        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FsMbtLUHSt2vfKgKjyQ3052%2F%25F0%259F%25A7%25A9-Sage-components%3Fnode-id%3D488%253A43467",
       },
       {
         title: "search",
@@ -695,7 +695,7 @@ module ComponentsHelper
         responsive: "todo",
         a11y: "done",
         react_component_slug: "sage-search--default",
-        figma_embed: "",
+        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FsMbtLUHSt2vfKgKjyQ3052%2F%25F0%259F%25A7%25A9-Sage-components%3Fnode-id%3D3516%253A22970",
       },
       {
         title: "sidebar",
@@ -706,7 +706,7 @@ module ComponentsHelper
         react: "no",
         responsive: "todo",
         a11y: "done",
-        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F9Km09NjlZHYWsMP7EGT8tI%2F%255BWIP%255D-Sage-3-%25E2%2580%2594-Admin-Components%3Fnode-id%3D6999%253A22305",
+        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FsMbtLUHSt2vfKgKjyQ3052%2F%25F0%259F%25A7%25A9-Sage-components%3Fnode-id%3D393%253A7088",
       },
       {
         title: "sortable",
@@ -729,7 +729,7 @@ module ComponentsHelper
         responsive: "todo",
         a11y: "todo",
         react_component_slug: "sage-statbox--default",
-        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F9Km09NjlZHYWsMP7EGT8tI%2F%255BWIP%255D-Sage-3-%25E2%2580%2594-Admin-Components%3Fnode-id%3D6999%253A21997",
+        figma_embed: "",
       },
       {
         title: "status_icon",
@@ -752,7 +752,7 @@ module ComponentsHelper
         responsive: "todo",
         a11y: "done",
         react_component_slug: "sage-switch--default",
-        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F9Km09NjlZHYWsMP7EGT8tI%2F%255BWIP%255D-Sage-3-%25E2%2580%2594-Admin-Components%3Fnode-id%3D7288%253A20303",
+        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FsMbtLUHSt2vfKgKjyQ3052%2F%25F0%259F%25A7%25A9-Sage-components%3Fnode-id%3D488%253A43468",
       },
       {
         title: "tab",
@@ -764,7 +764,7 @@ module ComponentsHelper
         responsive: "todo",
         a11y: "todo",
         react_component_slug: "sage-tabs--default",
-        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F9Km09NjlZHYWsMP7EGT8tI%2F%255BWIP%255D-Sage-3-%25E2%2580%2594-Admin-Components%3Fnode-id%3D6999%253A22291",
+        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FsMbtLUHSt2vfKgKjyQ3052%2F%25F0%259F%25A7%25A9-Sage-components%3Fnode-id%3D488%253A43471",
       },
       {
         title: "table",
@@ -776,7 +776,7 @@ module ComponentsHelper
         responsive: "todo",
         a11y: "done",
         react_component_slug: "sage-table--default",
-        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F9Km09NjlZHYWsMP7EGT8tI%2F%255BWIP%255D-Sage-3-%25E2%2580%2594-Admin-Components%3Fnode-id%3D3435%253A7",
+        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FsMbtLUHSt2vfKgKjyQ3052%2F%25F0%259F%25A7%25A9-Sage-components%3Fnode-id%3D2708%253A24009",
       },
       {
         title: "tabs",
@@ -788,7 +788,7 @@ module ComponentsHelper
         responsive: "todo",
         a11y: "done",
         react_component_slug: "sage-tabs--default",
-        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F9Km09NjlZHYWsMP7EGT8tI%2F%255BWIP%255D-Sage-3-%25E2%2580%2594-Admin-Components%3Fnode-id%3D6999%253A22291",
+        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FsMbtLUHSt2vfKgKjyQ3052%2F%25F0%259F%25A7%25A9-Sage-components%3Fnode-id%3D488%253A43471",
       },
       {
         title: "tag",
@@ -799,6 +799,7 @@ module ComponentsHelper
         responsive: "todo",
         a11y: "done",
         react_component_slug: "sage-tag--default",
+        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FsMbtLUHSt2vfKgKjyQ3052%2F%25F0%259F%25A7%25A9-Sage-components%3Fnode-id%3D835%253A21982",
       },
       {
         title: "toast",
@@ -810,7 +811,7 @@ module ComponentsHelper
         responsive: "todo",
         a11y: "done",
         react_component_slug: "sage-toast--default",
-        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F9Km09NjlZHYWsMP7EGT8tI%2F%255BWIP%255D-Sage-3-%25E2%2580%2594-Admin-Components%3Fnode-id%3D3435%253A11",
+        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FsMbtLUHSt2vfKgKjyQ3052%2F%25F0%259F%25A7%25A9-Sage-components%3Fnode-id%3D2755%253A23113",
       },
       {
         title: "toolbar",
@@ -822,7 +823,7 @@ module ComponentsHelper
         responsive: "todo",
         a11y: "todo",
         react_component_slug: "sage-toolbar--default",
-        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F9Km09NjlZHYWsMP7EGT8tI%2F%255BWIP%255D-Sage-3-%25E2%2580%2594-Admin-Components%3Fnode-id%3D6999%3A22248",
+        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FsMbtLUHSt2vfKgKjyQ3052%2F%25F0%259F%25A7%25A9-Sage-components%3Fnode-id%3D6958%253A23736",
       },
       {
         title: "tooltip",
@@ -834,7 +835,7 @@ module ComponentsHelper
         responsive: "todo",
         a11y: "todo",
         react_component_slug: "sage-tooltip--default",
-        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F9Km09NjlZHYWsMP7EGT8tI%2F%255BWIP%255D-Sage-3-%25E2%2580%2594-Admin-Components%3Fnode-id%3D6999%253A23154",
+        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FsMbtLUHSt2vfKgKjyQ3052%2F%25F0%259F%25A7%25A9-Sage-components%3Fnode-id%3D737%253A22321",
       },
       {
         title: "topbar",
@@ -845,7 +846,7 @@ module ComponentsHelper
         responsive: "done",
         a11y: "todo",
         react_component_slug: "sage-topbar--default",
-        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FsMbtLUHSt2vfKgKjyQ3052%2FSage-components%3Fnode-id%3D5026%253A22583",
+        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FsMbtLUHSt2vfKgKjyQ3052%2F%25F0%259F%25A7%25A9-Sage-components%3Fnode-id%3D3653%253A23550",
       },
       {
         title: "transaction_card",
@@ -880,7 +881,7 @@ module ComponentsHelper
         responsive: "todo",
         a11y: "done",
         react_component_slug: "sage-uploadcard--default",
-        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F9Km09NjlZHYWsMP7EGT8tI%2F%255BWIP%255D-Sage-3-%25E2%2580%2594-Admin-Components%3Fnode-id%3D6999%253A21864",
+        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FsMbtLUHSt2vfKgKjyQ3052%2F%25F0%259F%25A7%25A9-Sage-components%3Fnode-id%3D2868%253A22244",
       },
     ]
   end

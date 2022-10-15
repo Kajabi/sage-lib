@@ -5,6 +5,14 @@ import { ExpandableCard } from './ExpandableCard';
 export default {
   title: 'Sage/ExpandableCard',
   component: ExpandableCard,
+  // displays description on Docs tab
+  parameters: {
+    docs: {
+      description: {
+        component: 'Card that can be expanded and collapsed in order to display additional content.'
+      },
+    },
+  },
   args: {
     bodyBordered: false,
     expanded: false,

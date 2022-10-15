@@ -8,3 +8,5 @@ export const ALERT_COLORS = {
   REACHED: 'reached',
   EXCEEDED: 'exceeded',
 };
+
+export const ALERT_PRIMARY_ACTION_CLASSNAME = 'sage-alert__primary-action';
