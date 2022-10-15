@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.5.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.4.0...@kajabi/sage-assets@1.5.0) (2022-10-15)
+
+
+### Bug Fixes
+
+* **avatar:** updates logic for styling purposes ([f1cf205](https://github.com/Kajabi/sage-lib/commit/f1cf205680f250279ac9373845c022a663c22ac1))
+
+
+### Features
+
+* **alert:** ensure plain HTML links are styled correctly ([513c28b](https://github.com/Kajabi/sage-lib/commit/513c28b81d7fcc53a24fc2d3bcc22d23bb877b97))
+* **alert:** implement icon and improved secondary links ([6c9eb65](https://github.com/Kajabi/sage-lib/commit/6c9eb65ec44e9c26ebfd4e76c60b9099d83f9b9a))
+* **alert:** patch style for description in small variant ([b42d44d](https://github.com/Kajabi/sage-lib/commit/b42d44d7d6d5c5928c82ebd37cbe7f76d984a4cb))
+* **alert:** return more to initial state ([fac1ff5](https://github.com/Kajabi/sage-lib/commit/fac1ff5cfd19c63e0c8e864aaa59fd10149dfe7b))
+* **alert:** sync to latest designs (wip) ([9ec8119](https://github.com/Kajabi/sage-lib/commit/9ec81194028cf598df27bbb46796035d4bda7d0b))
+* **alert:** update React alert ([8c9a33e](https://github.com/Kajabi/sage-lib/commit/8c9a33e6b89d23fd1bcf6c029dd65fe1bd704d66))
+* **avatar:** adds new props for background and foreground icon colors ([51ec37a](https://github.com/Kajabi/sage-lib/commit/51ec37acff88a45ae56c4de304eac59e48ac61bf))
+* **button:** add custom styles for alert close button ([49c410c](https://github.com/Kajabi/sage-lib/commit/49c410cb402640d172b9852e1a1a56901c0407d2))
+* **button:** clean up unneeded alert styles from button ([eb3fc0f](https://github.com/Kajabi/sage-lib/commit/eb3fc0f3cb47cdfdc8ee28b3de4cc92810eec024))
+
+
+
+
+
 # [1.4.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.3.1...@kajabi/sage-assets@1.4.0) (2022-10-04)
 
 

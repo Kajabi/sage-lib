@@ -3,6 +3,35 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.6.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.5.2...@kajabi/sage-react@1.6.0) (2022-10-15)
+
+
+### Bug Fixes
+
+* **avatar:** updates badge style conditional to prevent storybook issue ([4fae3bd](https://github.com/Kajabi/sage-lib/commit/4fae3bd15f302cff20211c33823eb0c8ba3b49d9))
+* **checkbox:** ensure better code output and avoid duplicate ids ([d18f06e](https://github.com/Kajabi/sage-lib/commit/d18f06e64b062148df686557ef9b48eb08397a4c))
+* **checkbox:** fix error with partial selection story ([fe8fa71](https://github.com/Kajabi/sage-lib/commit/fe8fa71297aa4edba73305f7b8d973f72c17e5a8))
+* **checkbox:** update storybook documentation ([86eb09d](https://github.com/Kajabi/sage-lib/commit/86eb09d21d803bfd517fa50bd1a2a2dc6f6f2d2d))
+* **radio:** add ids to stories ([50b14e8](https://github.com/Kajabi/sage-lib/commit/50b14e8cc6e585bfc992429eff5732b58a9c8d90))
+* **radio:** add storybook documentation ([6598082](https://github.com/Kajabi/sage-lib/commit/659808282a5e91898f01de88f7952f1a7856c84b))
+* **radio, checkbox, switch:** update switch props to match story args ([c775f00](https://github.com/Kajabi/sage-lib/commit/c775f008c1dd3c561206334bd39bbb3df25e9340))
+* **sage-react:hero:** add 'Hero' component to the list of exports ([1dc7461](https://github.com/Kajabi/sage-lib/commit/1dc74619fdbb75feae25093af5b026ef45215c7f))
+
+
+### Features
+
+* **alert:** adjust specs to latest settings ([452a31b](https://github.com/Kajabi/sage-lib/commit/452a31bd5baadb478824caacf267e36f8fd4a26a))
+* **alert:** tidy up stories and related aspects ([483729c](https://github.com/Kajabi/sage-lib/commit/483729c13e2e31ab0a437577015e0df7fc173142))
+* **alert:** update React alert ([8c9a33e](https://github.com/Kajabi/sage-lib/commit/8c9a33e6b89d23fd1bcf6c029dd65fe1bd704d66))
+* **avatar:** adds custom badge icon and color props to component in React ([21de9a4](https://github.com/Kajabi/sage-lib/commit/21de9a4604b4ef9e1d2b729687e46f2bc480596e))
+* **avatar:** adds new badge props to React component ([894dd26](https://github.com/Kajabi/sage-lib/commit/894dd2661600fd0fb40f94e9d23f12ce2baf1120))
+* **switch:** add `...rest` for additional props ([c6c0be3](https://github.com/Kajabi/sage-lib/commit/c6c0be3a6ce9da7b51cd10a8e46fd2d278c7547e))
+* **switch:** ensure all Toggle props are passed ([e801a8c](https://github.com/Kajabi/sage-lib/commit/e801a8c117622d6f2bacaaca20c27aa0dfafc0a3))
+
+
+
+
+
 ## [1.5.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.5.1...@kajabi/sage-react@1.5.2) (2022-10-04)
 
 

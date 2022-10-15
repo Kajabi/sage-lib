@@ -3,6 +3,36 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.8.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.7.0...@kajabi/sage@5.8.0) (2022-10-15)
+
+
+### Bug Fixes
+
+* **avatar:** updates logic for styling purposes ([f1cf205](https://github.com/Kajabi/sage-lib/commit/f1cf205680f250279ac9373845c022a663c22ac1))
+* **table:** ensure `responsive: false` turns off responsive features on SageTable ([574f248](https://github.com/Kajabi/sage-lib/commit/574f24834bc4b47d17ada16d327e46bda0daf3ba))
+
+
+### Features
+
+* **alert:** implement icon and improved secondary links ([6c9eb65](https://github.com/Kajabi/sage-lib/commit/6c9eb65ec44e9c26ebfd4e76c60b9099d83f9b9a))
+* **alert:** return more to initial state ([fac1ff5](https://github.com/Kajabi/sage-lib/commit/fac1ff5cfd19c63e0c8e864aaa59fd10149dfe7b))
+* **alert:** sync to latest designs (wip) ([9ec8119](https://github.com/Kajabi/sage-lib/commit/9ec81194028cf598df27bbb46796035d4bda7d0b))
+* **alert:** update React alert ([8c9a33e](https://github.com/Kajabi/sage-lib/commit/8c9a33e6b89d23fd1bcf6c029dd65fe1bd704d66))
+* **alett:** add success as a color option ([3348291](https://github.com/Kajabi/sage-lib/commit/3348291542a987473c4ac14aa9a70c4c1d5303e1))
+* **avatar:** adds new badge props to React component ([894dd26](https://github.com/Kajabi/sage-lib/commit/894dd2661600fd0fb40f94e9d23f12ce2baf1120))
+* **avatar:** adds new props for background and foreground icon colors ([51ec37a](https://github.com/Kajabi/sage-lib/commit/51ec37acff88a45ae56c4de304eac59e48ac61bf))
+* **avatar:** adds props for custom icons and color ([8915b93](https://github.com/Kajabi/sage-lib/commit/8915b93b557268cddc044d9d12242d5bc27c89c0))
+* **docs:** add icons back into alert documentation ([f49bba7](https://github.com/Kajabi/sage-lib/commit/f49bba730594c55b29d34efd676b68744dc7ab37))
+* **docs:** fix transposed icons ([54fd8c1](https://github.com/Kajabi/sage-lib/commit/54fd8c1aeabd7f01892224def55af2637dc24196))
+* **docs:** remove alert docs changes for a separate ticket ([c1e2921](https://github.com/Kajabi/sage-lib/commit/c1e29211ac5632cd6b2939a1020f0aaa3a1319d8))
+* **docs:** simplify alert documentation ([f8fc27d](https://github.com/Kajabi/sage-lib/commit/f8fc27dab9ecd2fa1c8601e739830c07d78074cf))
+* **docs:** update documentation ([93fbe3a](https://github.com/Kajabi/sage-lib/commit/93fbe3a3f73b34cf64f9b352d35786f77ca84074))
+* **table:** improve readability of `is_responsive` ([cf861ea](https://github.com/Kajabi/sage-lib/commit/cf861ea557b446f0ed4a2c330355b909c5e6e296))
+
+
+
+
+
 # [5.7.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.6.1...@kajabi/sage@5.7.0) (2022-10-04)
 
 
