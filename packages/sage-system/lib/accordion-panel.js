@@ -39,25 +39,28 @@ Sage.accordion = (function () {
 
     // if accordion has prop for only one open at a times, reset
     const accordion = el.closest(SELECTOR_ACCORDION);
-    if (accordion) {
+    if (accordion != null) {
       if (accordion.classList.contains(CLASS_ACCORDION_ONE_PANEL_EXPANDED)) {
         resetAccordion(el);
       }
-    }
 
-    // Toggle target
-    const toggle = el.getAttribute('aria-expanded') === 'true';
-    el.setAttribute('aria-expanded', !toggle);
-    el.parentNode.classList.toggle('sage-expandable-card--expanded');
+      // Toggle target
+      const toggle = el.getAttribute('aria-expanded') === 'true';
+      el.setAttribute('aria-expanded', !toggle);
+      el.parentNode.classList.toggle('sage-expandable-card--expanded');
+    }
   }
 
+  // In a single panel accordion, this closes all panels that are not the current target
   function resetAccordion(el){
     let accordion = el.closest(SELECTOR_ACCORDION);
     let accordionItems = accordion.querySelectorAll(SELECTOR_ACCORDION_EXPANDABLE_CARD);
 
-    accordionItems.forEach((el) => {
-      el.querySelector(SELECTOR_ACCORDION_HEADER).setAttribute('aria-expanded', false);
-      el.classList.remove('sage-expandable-card--expanded');
+    accordionItems.forEach((item) => {
+      if (item !== el.parentElement) {
+        item.querySelector(SELECTOR_ACCORDION_HEADER).setAttribute('aria-expanded', false);
+        item.classList.remove('sage-expandable-card--expanded');
+      }
     });
   }
 
