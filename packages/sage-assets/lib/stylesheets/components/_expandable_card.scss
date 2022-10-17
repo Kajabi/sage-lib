@@ -34,6 +34,7 @@ $-expandable-card-padding-xs: sage-spacing(xs);
     visibility: visible;
     overflow: initial;
     height: auto;
+    margin-top: sage-spacing(xs);
   }
 
   .sage-accordion & {
@@ -83,6 +84,7 @@ $-expandable-card-padding-xs: sage-spacing(xs);
     &.sage-btn--subtle.sage-btn--secondary:not(:focus):hover::after {
       width: 100%;
       height: 100%;
+      border-radius: rem(14px);
     }
   }
 }
