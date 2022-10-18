@@ -5,7 +5,7 @@ import { Dropdown } from './Dropdown';
 import { DropdownItemList } from './DropdownItemList';
 import { DROPDOWN_PANEL_SIZES, DROPDOWN_POSITIONS } from './configs';
 
-export const ToolbarDropdown = ({
+export const RichTextEditorDropdown = ({
   align,
   className,
   exitPanelHandler,
@@ -14,17 +14,18 @@ export const ToolbarDropdown = ({
   panelMaxWidth,
   panelSize,
   options,
-  triggerButtonSubtle,
   triggerClassnames,
+  triggerButtonSubtle,
 }) => (
   <Dropdown
     align={align}
     className={className}
     disclosure={true}
     exitPanelHandler={exitPanelHandler}
-    isLabelVisible={true}
+    icon={SageTokens.ICONS.ALIGN_LEFT}
+    isLabelVisible={false}
     isPinned={isPinned}
-    label="Text"
+    label="Add an element"
     onEscapeHook={onEscapeHook}
     panelMaxWidth={panelMaxWidth}
     panelSize={panelSize}
@@ -36,10 +37,10 @@ export const ToolbarDropdown = ({
   </Dropdown>
 );
 
-ToolbarDropdown.PANEL_SIZES = DROPDOWN_PANEL_SIZES;
-ToolbarDropdown.POSITIONS = DROPDOWN_POSITIONS;
+RichTextEditorDropdown.PANEL_SIZES = DROPDOWN_PANEL_SIZES;
+RichTextEditorDropdown.POSITIONS = DROPDOWN_POSITIONS;
 
-ToolbarDropdown.defaultProps = {
+RichTextEditorDropdown.defaultProps = {
   align: DROPDOWN_POSITIONS.DEFAULT,
   className: null,
   exitPanelHandler: (evt) => evt,
@@ -48,11 +49,11 @@ ToolbarDropdown.defaultProps = {
   panelMaxWidth: null,
   panelSize: DROPDOWN_PANEL_SIZES.DEFAULT,
   options: null,
-  triggerButtonSubtle: false,
   triggerClassnames: '',
+  triggerButtonSubtle: true,
 };
 
-ToolbarDropdown.propTypes = {
+RichTextEditorDropdown.propTypes = {
   align: PropTypes.oneOf(Object.values(DROPDOWN_POSITIONS)),
   className: PropTypes.string,
   exitPanelHandler: PropTypes.func,
