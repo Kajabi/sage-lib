@@ -13,6 +13,7 @@ export const DropdownTrigger = ({
   modifier,
   onClickTrigger,
   subtleButton,
+  triggerClassnames,
   width,
 }) => {
   const onClick = () => {
@@ -38,6 +39,7 @@ export const DropdownTrigger = ({
         ? React.cloneElement(children, { onClick })
         : (
           <DropdownTriggerDefault
+            className={triggerClassnames}
             disabled={disabled}
             disclosure={disclosure}
             icon={icon}
@@ -60,6 +62,7 @@ DropdownTrigger.defaultProps = {
   modifier: null,
   label: null,
   subtleButton: false,
+  triggerClassnames: '',
   width: null,
 };
 
@@ -73,5 +76,6 @@ DropdownTrigger.propTypes = {
   modifier: PropTypes.string,
   onClickTrigger: PropTypes.func.isRequired,
   subtleButton: PropTypes.bool,
+  triggerClassnames: PropTypes.string,
   width: PropTypes.string,
 };
