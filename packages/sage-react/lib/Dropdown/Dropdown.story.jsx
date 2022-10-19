@@ -151,7 +151,6 @@ OptionMenu.decorators = [
   )
 ];
 
-
 export const DropdownMenuWithHeadings = () => (
   <BulkActionsStory />
 );

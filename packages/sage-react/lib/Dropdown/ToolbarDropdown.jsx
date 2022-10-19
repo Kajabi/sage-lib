@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { SageTokens } from '../configs';
 import { Dropdown } from './Dropdown';
 import { DropdownItemList } from './DropdownItemList';
 import { DROPDOWN_PANEL_SIZES, DROPDOWN_POSITIONS } from './configs';
