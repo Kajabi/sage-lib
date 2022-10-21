@@ -98,8 +98,10 @@ ToolbarGroupWithButtons.args = {
   )
 };
 
-export const PriorityPlusNavToolbar = (args) => {
-  const menuItems = [
+const PriorityPlusNavTemplate = (args) => (<PriorityPlusNav {...args} />);
+export const PriorityPlusNavStory = PriorityPlusNavTemplate.bind({});
+PriorityPlusNavStory.args = {
+  menuItems: [
     { uri: '/', label: 'Home', isActive: true },
     { uri: '/away', label: 'Away' },
     { uri: '/here', label: 'Here' },
@@ -108,6 +110,5 @@ export const PriorityPlusNavToolbar = (args) => {
     { uri: '/bing', label: 'Bing' },
     { uri: '/bong', label: 'Bong' },
     { uri: '/boo', label: 'Boo' },
-  ];
-    <PriorityPlusNav menuItems={args.menuItems} />;
+  ],
 };

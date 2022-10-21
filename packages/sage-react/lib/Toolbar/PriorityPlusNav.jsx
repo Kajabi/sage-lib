@@ -24,12 +24,11 @@ defaultRenderMenuItem.propTypes = {
 
 export const PriorityPlusNav = ({
   className,
-  renderMenuItem,
   menuText,
   moreText,
   menuItems,
 }) => {
-  const [items, setItems] = useState(menuItems);
+  const [items, setItems] = useState([]);
   const [itemRefs, setItemRefs] = useState([]);
   const [activeItems, setActiveItems] = useState([]);
   const [inactiveItems, setInactiveItems] = useState([]);
@@ -119,32 +118,30 @@ export const PriorityPlusNav = ({
     }
   };
 
+  const renderMenuItem = defaultRenderMenuItem;
+
+  const mappedMenuItems = menuItems.map((item, index) =>
+    renderMenuItem({
+      itemDetails: item,
+      captureRef: (li) => {
+        itemRefs[index] = li;
+      },
+      clickHandler: handleMenuItemClick,
+      activeClass: `${baseClassName}__item--active`,
+    })
+  );
+
   useEffect(() => {
     // componentWillMount
-    const renderMenuItem = defaultRenderMenuItem;
-
-    const itemRefs = [];
-
-    const mappedMenuItems = menuItems.map((item, index) =>
-      renderMenuItem({
-        itemDetails: item,
-        captureRef: (li) => {
-          itemRefs[index] = li;
-        },
-        clickHandler: handleMenuItemClick,
-        activeClass: `${baseClassName}__item--active`,
-      })
-    );
     setItems(mappedMenuItems);
     setItemRefs(itemRefs);
-
     updateMenuItems(mappedMenuItems);
 
     // componentWillUnmount
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-  }, [handleMenuItemClick, menuItems]);
+  }, [itemRefs, mappedMenuItems, menuItems, updateMenuItems]);
 
   useEffect(() => {
     if (!activeMenu) {
@@ -234,7 +231,6 @@ export const PriorityPlusNav = ({
 
 PriorityPlusNav.defaultProps = {
   className: '',
-  renderMenuItem: null,
   menuText: '',
   moreText: '',
   menuItems: null,
@@ -242,7 +238,6 @@ PriorityPlusNav.defaultProps = {
 
 PriorityPlusNav.propTypes = {
   className: PropTypes.string,
-  renderMenuItem: PropTypes.func,
   menuText: PropTypes.string,
   moreText: PropTypes.string,
   menuItems: PropTypes.arrayOf(PropTypes.shape()),
