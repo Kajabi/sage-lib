@@ -6,6 +6,7 @@ import { SelectDropdown } from '../Dropdown';
 import { Search } from '../Search';
 import { Checkbox } from '../Toggle';
 import { Toolbar } from './Toolbar';
+import { PriorityPlusNav } from './PriorityPlusNav';
 
 export default {
   title: 'Sage/Toolbar',
@@ -95,4 +96,18 @@ ToolbarGroupWithButtons.args = {
       </Button>
     </Toolbar.Group>
   )
+};
+
+export const PriorityPlusNavToolbar = (args) => {
+  const menuItems = [
+    { uri: '/', label: 'Home', isActive: true },
+    { uri: '/away', label: 'Away' },
+    { uri: '/here', label: 'Here' },
+    { uri: '/there', label: 'There' },
+    { uri: '/what', label: 'Everywhere' },
+    { uri: '/bing', label: 'Bing' },
+    { uri: '/bong', label: 'Bong' },
+    { uri: '/boo', label: 'Boo' },
+  ];
+    <PriorityPlusNav menuItems={args.menuItems} />;
 };
