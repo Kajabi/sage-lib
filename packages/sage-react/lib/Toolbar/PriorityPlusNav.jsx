@@ -51,6 +51,7 @@ export const PriorityPlusNav = ({
     if (activeMenu) {
       // Combine the shown and hidden menu items to get accurate widths
       const activeMenuChildren = [].concat(...activeMenu.children);
+      // eslint-disable-next-line max-len
       internalItemRefs = activeMenuChildren.slice(0, activeMenuChildren.length - 1).concat([].concat(...hiddenMenu.children));
     } else {
       // if the active menu hasn't yet rendered, go ahead with the item references
@@ -65,7 +66,8 @@ export const PriorityPlusNav = ({
     let totalWidth = 0;
     const parentStyle = window.getComputedStyle(parentNode);
     // Remove padding from parent width calculation
-    const parentWidth = parentNode.clientWidth - parseInt(parentStyle.paddingLeft) - parseInt(parentStyle.paddingRight);
+    // eslint-disable-next-line max-len
+    const parentWidth = parentNode.clientWidth - parseInt(parentStyle.paddingLeft, 10) - parseInt(parentStyle.paddingRight, 10);
 
     const overflowedIndex = items.findIndex((item, index) => {
       totalWidth = totalWidth
@@ -80,6 +82,7 @@ export const PriorityPlusNav = ({
     // If some elements are wrapped, make sure there's room for the overflow button
     if (active.length < items.length) {
       // get the active menu item refs
+      // eslint-disable-next-line max-len
       const activeRefs = internalItemRefs.slice(0, overflowedIndex === -1 ? items.length : overflowedIndex);
 
       // calculate the total active width
@@ -118,6 +121,10 @@ export const PriorityPlusNav = ({
     }
   };
 
+  const handleResize = () => {
+    updateMenuItems(items);
+  };
+
   const renderMenuItem = defaultRenderMenuItem;
 
   const mappedMenuItems = menuItems.map((item, index) =>
@@ -151,7 +158,7 @@ export const PriorityPlusNav = ({
     const items = activeMenu.children;
 
     if (items.length > 1) {
-      itemMargin = parseInt(window.getComputedStyle(items[1]).marginLeft);
+      itemMargin = parseInt(window.getComputedStyle(items[1]).marginLeft, 10);
     }
 
     updateMenuItems(items);
@@ -161,10 +168,6 @@ export const PriorityPlusNav = ({
 
   const toggleExtendedMenu = () => {
     toggleOverflowActive(!overflowActive);
-  };
-
-  const handleResize = () => {
-    updateMenuItems(items);
   };
 
   const handleOverflowMenuClick = (event) => {
