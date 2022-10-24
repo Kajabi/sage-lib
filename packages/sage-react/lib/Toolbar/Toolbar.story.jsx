@@ -6,7 +6,7 @@ import { SelectDropdown } from '../Dropdown';
 import { Search } from '../Search';
 import { Checkbox } from '../Toggle';
 import { Toolbar } from './Toolbar';
-import { PriorityPlusNav } from './PriorityPlusNav';
+import { ReactiveNavigation } from './ReactiveNavigation';
 
 export default {
   title: 'Sage/Toolbar',
@@ -98,17 +98,17 @@ ToolbarGroupWithButtons.args = {
   )
 };
 
-const PriorityPlusNavTemplate = (args) => (<PriorityPlusNav {...args} />);
-export const PriorityPlusNavStory = PriorityPlusNavTemplate.bind({});
-PriorityPlusNavStory.args = {
-  menuItems: [
-    { uri: '/', label: 'Home', isActive: true },
-    { uri: '/away', label: 'Away' },
-    { uri: '/here', label: 'Here' },
-    { uri: '/there', label: 'There' },
-    { uri: '/what', label: 'Everywhere' },
-    { uri: '/bing', label: 'Bing' },
-    { uri: '/bong', label: 'Bong' },
-    { uri: '/boo', label: 'Boo' },
+const ReactiveNavigationTemplate = (args) => (<ReactiveNavigation {...args} />);
+export const ReactiveNavigationStory = ReactiveNavigationTemplate.bind({});
+ReactiveNavigationStory.args = {
+  navigationItems: [
+    { link: '/', title: 'Home' },
+    { link: '/away', title: 'Away' },
+    { link: '/here', title: 'Here' },
+    { link: '/there', title: 'There' },
+    { link: '/what', title: 'Everywhere' },
+    { link: '/bing', title: 'Bing' },
+    { link: '/bong', title: 'Bong' },
+    { link: '/boo', title: 'Boo' },
   ],
 };
