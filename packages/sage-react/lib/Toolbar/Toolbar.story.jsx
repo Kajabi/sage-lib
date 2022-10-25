@@ -98,17 +98,41 @@ ToolbarGroupWithButtons.args = {
   )
 };
 
-const ReactiveNavigationTemplate = (args) => (<ReactiveNavigation {...args} />);
+const ReactiveNavigationTemplate = (args) => (
+  <ReactiveNavigation {...args}>
+    <Button
+      disclosure={true}
+      icon={SageTokens.ICONS.ALIGN_LEFT}
+      iconOnly={true}
+      color={Button.COLORS.SECONDARY}
+      value="Text align"
+    />
+    <Button
+      icon={SageTokens.ICONS.REMOVE}
+      iconOnly={true}
+      color={Button.COLORS.SECONDARY}
+    />
+    <Button
+      icon={SageTokens.ICONS.BOLD}
+      iconOnly={true}
+      color={Button.COLORS.SECONDARY}
+    />
+    <Button
+      icon={SageTokens.ICONS.ITALIC}
+      iconOnly={true}
+      color={Button.COLORS.SECONDARY}
+    />
+    <Button
+      icon={SageTokens.ICONS.UNDERLINE}
+      iconOnly={true}
+      color={Button.COLORS.SECONDARY}
+    />
+    <Button
+      icon={SageTokens.ICONS.STRIKETHROUGH}
+      iconOnly={true}
+      color={Button.COLORS.SECONDARY}
+    />
+  </ReactiveNavigation>
+);
+
 export const ReactiveNavigationStory = ReactiveNavigationTemplate.bind({});
-ReactiveNavigationStory.args = {
-  navigationItems: [
-    { link: '/', title: 'Home' },
-    { link: '/away', title: 'Away' },
-    { link: '/here', title: 'Here' },
-    { link: '/there', title: 'There' },
-    { link: '/what', title: 'Everywhere' },
-    { link: '/bing', title: 'Bing' },
-    { link: '/bong', title: 'Bong' },
-    { link: '/boo', title: 'Boo' },
-  ],
-};

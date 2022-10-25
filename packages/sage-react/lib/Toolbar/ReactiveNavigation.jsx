@@ -2,16 +2,19 @@ import React, { useLayoutEffect, useRef, useState } from 'react';
 import { PropTypes } from 'prop-types';
 import _ from 'lodash';
 
-export const ReactiveNavigation = ({ name, navigationItems }) => {
+import { SageTokens } from '../configs';
+import { Button } from '../Button';
+
+export const ReactiveNavigation = ({ children, navigationItems }) => {
   const navigationRef = useRef(null);
   const moreMenuRef = useRef(null);
   const moreNavRef = useRef(null);
   const navigationOuterRef = useRef(null);
 
-  const [priorityItems, setPriorityItems] = useState(navigationItems);
+  const [priorityItems, setPriorityItems] = useState(children);
   const [moreItems, updateMoreItems] = useState([]);
 
-  const fullNavArray = navigationItems;
+  const fullNavArray = children;
   let widthsArray;
 
   const howManyItemsInMenuArray = (array, outerWidth, initialWidth, minimumNumberInNav) => {
@@ -65,7 +68,7 @@ export const ReactiveNavigation = ({ name, navigationItems }) => {
           {
             priorityItems.map((item, i) => (
               <li key={`navItem-${i}`} className="navigation-item">
-                <a className="navigation-link" href={item.link}>{item.title}</a>
+                {item}
               </li>
             ))
           }
@@ -74,12 +77,19 @@ export const ReactiveNavigation = ({ name, navigationItems }) => {
           moreItems.length > 0 && (
           <ul ref={moreMenuRef} className="navigation-list-absolute">
             <li className="navigation-item more-item">
-              <button className="navigation-link" href="#">More {'>'}</button>
+              <Button
+                className="navigation-link"
+                color={Button.COLORS.SECONDARY}
+                disclosure={true}
+                icon={SageTokens.ICONS.ADD}
+                iconOnly={true}
+                value="More"
+              />
               <ul ref={moreNavRef} className="more-navigation">
                 {
                 moreItems.map((item, i) => (
                   <li key={`moreNavItem-${i}`} className="navigation-item">
-                    <a className="navigation-link" href={item.link}>{item.title}</a>
+                    {item}
                   </li>
                 ))
               }
