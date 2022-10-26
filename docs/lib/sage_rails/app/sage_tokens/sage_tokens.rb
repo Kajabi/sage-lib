@@ -199,6 +199,7 @@ module SageTokens
     "form",
     "form-field",
     "fullscreen",
+    "funnel",
     "gear",
     "gear-filled",
     "grant-offer",
