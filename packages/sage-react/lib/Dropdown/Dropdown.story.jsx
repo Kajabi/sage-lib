@@ -113,7 +113,7 @@ export const RichTextEditor = (args) => (
   <ToolbarDropdown
     options={defaultOptionsItems}
     isPinned={args.isPinned}
-    triggerClassnames="sage-btn--rich-text-disclosure"
+    triggerClassnames="sage-btn--rich-text"
     triggerButtonSubtle={false}
   />
 );
@@ -132,7 +132,7 @@ RichTextEditor.decorators = [
 
 export const RichTextEditorIconOnly = (args) => (
   <RichTextEditorDropdown
-    triggerClassnames="sage-btn--rich-text-disclosure"
+    triggerClassnames="sage-btn--rich-text"
     triggerButtonSubtle={false}
     options={defaultOptionsItems}
     isPinned={args.isPinned}
