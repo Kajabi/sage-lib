@@ -100,6 +100,7 @@ export const TOKENS_ICONS = {
   FORM: 'form',
   FORM_FIELD: 'form-field',
   FULLSCREEN: 'fullscreen',
+  FUNNEL: 'funnel',
   GEAR: 'gear',
   GEAR_FILLED: 'gear-filled',
   GRANT_OFFER: 'grant-offer',
