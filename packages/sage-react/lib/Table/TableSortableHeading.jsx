@@ -1,6 +1,8 @@
 import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import { Icon } from '../Icon';
+import { SageTokens } from '../configs';
 
 export const TableSortableHeading = ({
   active,
@@ -19,6 +21,7 @@ export const TableSortableHeading = ({
   return (
     <button className={classNames} type="button" onClick={onClick}>
       {children}
+      <Icon icon={active ? SageTokens.ICONS.DOWN_SMALL : SageTokens.ICONS.NULL} className="sage-table__sort-icon" />
     </button>
   );
 };

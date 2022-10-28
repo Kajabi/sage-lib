@@ -136,52 +136,33 @@ $-table-avatar-width: rem(32px);
 // Sortable rows
 .sage-table--sortable {
   .sage-table__sort-link {
+    @include sage-focus-outline($outline-offset-inline: 3px);
     display: flex;
     align-items: center;
     padding: 0;
-    color: inherit;
+    color: sage-color(charcoal, 200);
     background: none;
     border: 0;
+    border-radius: sage-border(radius);
+    font-weight: sage-font-weight(semibold);
     transition: map-get($sage-transitions, default);
     transition-property: color;
     cursor: pointer;
 
-    &::after {
-      content: "";
-      display: block;
-      flex: 0 1 $-table-sort-indicator-width;
-      transform-origin: center center;
-      height: 0;
-      width: 0;
-      margin-left: sage-spacing(2xs);
-      border-left: $-table-sort-indicator-width solid transparent;
-      border-right: $-table-sort-indicator-width solid transparent;
-      transition: 0.15s ease-out;
-      transition-property: opacity, transform;
-      opacity: 0;
-    }
-
-    &:hover,
-    &:focus,
+    &:focus-visible,
     &:active {
-      color: $-table-cell-focus;
+      @include sage-focus-outline--update-color(sage-color(primary, 200));
     }
   }
 
   .sage-table__sort-link--selected {
-    color: sage-color(charcoal, 100);
-    text-decoration: underline;
-
-    &::after {
-      border-top: $-table-sort-indicator-direction solid currentColor;
-      opacity: 1;
-    }
+    color: sage-color(charcoal, 300);
   }
+}
 
-  .sage-table__sort-link--ascending {
-    &::after {
-      transform: scaleY(-1);
-    }
+.sage-table__sort-icon {
+  .sage-table--sortable .sage-table__sort-link--ascending & {
+    transform: rotate(180deg);
   }
 }
 
