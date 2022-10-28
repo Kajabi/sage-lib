@@ -5,7 +5,12 @@ import _ from 'lodash';
 import { SageTokens } from '../configs';
 import { Button } from '../Button';
 
-export const ReactiveNavigation = ({ children, navigationItems }) => {
+export const ReactiveNavigation = ({
+  children,
+  maximumNumberInNav,
+  minimumNumberInNav,
+
+}) => {
   const navigationRef = useRef(null);
   const moreMenuRef = useRef(null);
   const moreNavRef = useRef(null);
@@ -17,12 +22,18 @@ export const ReactiveNavigation = ({ children, navigationItems }) => {
   const fullNavArray = children;
   let widthsArray;
 
-  const howManyItemsInMenuArray = (array, outerWidth, initialWidth, minimumNumberInNav) => {
+  const howManyItemsInMenuArray = (array, outerWidth, initialWidth) => {
     let total = (initialWidth * 1.75);
     for (let i = 0; i < array.length; i++) {
       if (total + array[i] > outerWidth) {
-        console.log(i);
-        return i < minimumNumberInNav ? minimumNumberInNav : i;
+        // console.log(i);
+        if (i < minimumNumberInNav) {
+          // console.log('Returning minimum: ', minimumNumberInNav);
+          return minimumNumberInNav;
+        }
+
+        // console.log('Returnining I: ', i);
+        return i;
       }
       total += array[i];
     }
@@ -35,7 +46,16 @@ export const ReactiveNavigation = ({ children, navigationItems }) => {
       outerWidth = navigationOuterRef.current.getBoundingClientRect().width;
       moreMenu = moreMenuRef.current ? moreMenuRef.current.getBoundingClientRect().width : 0;
 
-      const arrayAmount = howManyItemsInMenuArray(widthsArray, outerWidth, moreMenu, 1);
+      const itemsInMenu = howManyItemsInMenuArray(widthsArray, outerWidth, moreMenu);
+      let arrayAmount;
+      // console.log('Items in Menu: ', itemsInMenu);
+
+      // Not defined or greater than max allowed
+      if (!itemsInMenu || itemsInMenu > maximumNumberInNav) {
+        arrayAmount = maximumNumberInNav; // show only max allowed
+      } else {
+        arrayAmount = itemsInMenu;
+      }
       const navItemsCopy = fullNavArray;
       const priorityItems = navItemsCopy.slice(0, arrayAmount);
 
@@ -50,7 +70,9 @@ export const ReactiveNavigation = ({ children, navigationItems }) => {
 
   useLayoutEffect(() => {
     // Get width of all items in navigation menu
-    widthsArray = Array.from(navigationRef.current.children).map((item) => item.getBoundingClientRect().width);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    widthsArray = Array.from(navigationRef.current.children)
+      .map((item) => item.getBoundingClientRect().width);
 
     // Add resize listener but throttle for smoother experience
     window.addEventListener('resize', _.throttle(updateNavigation), 5000);
@@ -67,6 +89,7 @@ export const ReactiveNavigation = ({ children, navigationItems }) => {
         <ul ref={navigationRef} className="navigation-list">
           {
             priorityItems.map((item, i) => (
+              // eslint-disable-next-line react/no-array-index-key
               <li key={`navItem-${i}`} className="navigation-item">
                 {item}
               </li>
@@ -88,6 +111,7 @@ export const ReactiveNavigation = ({ children, navigationItems }) => {
               <ul ref={moreNavRef} className="more-navigation">
                 {
                 moreItems.map((item, i) => (
+                  // eslint-disable-next-line react/no-array-index-key
                   <li key={`moreNavItem-${i}`} className="navigation-item">
                     {item}
                   </li>
@@ -104,74 +128,12 @@ export const ReactiveNavigation = ({ children, navigationItems }) => {
 };
 
 ReactiveNavigation.defaultProps = {
-  navigationItems: [
-    {
-      title: 'News',
-      link: '/news'
-    },
-    {
-      title: 'Gigs',
-      link: '/gigs'
-    },
-    {
-      title: 'Festivals',
-      link: '/festivals'
-    },
-    {
-      title: 'Club Nights',
-      link: '/club-nights'
-    },
-    {
-      title: 'Brands',
-      link: '/brands'
-    },
-    {
-      title: 'Genres',
-      link: '/genres'
-    },
-    {
-      title: 'Venues',
-      link: '/venues'
-    },
-    {
-      title: 'Artists',
-      link: '/artists'
-    },
-    {
-      title: 'News',
-      link: '/news'
-    },
-    {
-      title: 'Gigs',
-      link: '/gigs'
-    },
-    {
-      title: 'Festivals',
-      link: '/festivals'
-    },
-    {
-      title: 'Club Nights',
-      link: '/club-nights'
-    },
-    {
-      title: 'Brands',
-      link: '/brands'
-    },
-    {
-      title: 'Genres',
-      link: '/genres'
-    },
-    {
-      title: 'Venues',
-      link: '/venues'
-    },
-    {
-      title: 'Artists',
-      link: '/artists'
-    }
-  ]
+  maximumNumberInNav: 3,
+  minimumNumberInNav: 1,
 };
+
 ReactiveNavigation.propTypes = {
-  name: PropTypes.string,
-  navigationItems: PropTypes.array
+  children: PropTypes.node.isRequired,
+  maximumNumberInNav: PropTypes.number,
+  minimumNumberInNav: PropTypes.number,
 };

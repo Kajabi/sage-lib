@@ -132,7 +132,21 @@ const ReactiveNavigationTemplate = (args) => (
       iconOnly={true}
       color={Button.COLORS.SECONDARY}
     />
+    <Button
+      icon={SageTokens.ICONS.UNDO}
+      iconOnly={true}
+      color={Button.COLORS.SECONDARY}
+    />
+    <Button
+      icon={SageTokens.ICONS.REDO}
+      iconOnly={true}
+      color={Button.COLORS.SECONDARY}
+    />
   </ReactiveNavigation>
 );
 
 export const ReactiveNavigationStory = ReactiveNavigationTemplate.bind({});
+ReactiveNavigationStory.args = {
+  minimumNumberInNav: 2,
+  maximumNumberInNav: 8
+};
