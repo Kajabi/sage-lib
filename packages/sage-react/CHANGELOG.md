@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.6.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.6.0...@kajabi/sage-react@1.6.1) (2022-10-28)
+
+
+### Bug Fixes
+
+* **ci:** add storybook google analytics to package.json ([3f49668](https://github.com/Kajabi/sage-lib/commit/3f49668f4a648d1b87bb9ae18aa16d938a4b1fad))
+
+
+
+
+
 # [1.6.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.5.2...@kajabi/sage-react@1.6.0) (2022-10-15)
 
 
