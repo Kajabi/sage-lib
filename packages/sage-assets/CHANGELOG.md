@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.6.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.5.0...@kajabi/sage-assets@1.6.0) (2022-10-31)
+
+
+### Bug Fixes
+
+* **accordion:** add rails version ([a7131c6](https://github.com/Kajabi/sage-lib/commit/a7131c626856ec1eae234833a91891f160988f93))
+* **accordion:** cleanup comments ([3be2444](https://github.com/Kajabi/sage-lib/commit/3be244464bd3c266a0b1e483a108acb3e6ae4a42))
+* **expandable-card:** updates per review ([082e973](https://github.com/Kajabi/sage-lib/commit/082e973d62e20847ea82d09f0a230c2dd4329268))
+* **expandablecard:** add tests ([5d4459b](https://github.com/Kajabi/sage-lib/commit/5d4459bac972427c99e275aafd4408bc1231ec5d))
+* **expandablecard:** updates per review ([eb179a5](https://github.com/Kajabi/sage-lib/commit/eb179a51c146fcfe1046b8cabe8eafef457c5a0b))
+
+
+### Features
+
+* **icon:** increment font version, ([1a6cd40](https://github.com/Kajabi/sage-lib/commit/1a6cd4004ed86959cecef61e76b7a0c59de95bf1))
+* **icon:** update character maps ([335912f](https://github.com/Kajabi/sage-lib/commit/335912f54a0cf5c5546e95e3e654b83f6dedb0ad))
+
+
+
+
+
 # [1.5.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.4.0...@kajabi/sage-assets@1.5.0) (2022-10-15)
 
 

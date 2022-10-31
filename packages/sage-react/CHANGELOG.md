@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.7.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.6.1...@kajabi/sage-react@1.7.0) (2022-10-31)
+
+
+### Bug Fixes
+
+* **accordion:** add rails version ([a7131c6](https://github.com/Kajabi/sage-lib/commit/a7131c626856ec1eae234833a91891f160988f93))
+* **accordion:** cleanup comments ([3be2444](https://github.com/Kajabi/sage-lib/commit/3be244464bd3c266a0b1e483a108acb3e6ae4a42))
+* **accordion:** finalizing logic ([4106b2b](https://github.com/Kajabi/sage-lib/commit/4106b2bf8af967191b8d11c2a20dffc2d45c4296))
+* **accordion:** make progress on react logic ([6e036ee](https://github.com/Kajabi/sage-lib/commit/6e036eec976d94d8b6f5a1be051dd23ccb898ad8))
+* **accordion:** save point adding accordion logic ([1b0146a](https://github.com/Kajabi/sage-lib/commit/1b0146a2bce514c3b0f0e45f64c3afd00af9f3d5))
+* **accordion:** start on react ([4f7705f](https://github.com/Kajabi/sage-lib/commit/4f7705f9627dc49009bd4747b42690550dd7381e))
+* **expandablecard:** add tests ([5d4459b](https://github.com/Kajabi/sage-lib/commit/5d4459bac972427c99e275aafd4408bc1231ec5d))
+* **expandablecard:** updates per review ([eb179a5](https://github.com/Kajabi/sage-lib/commit/eb179a51c146fcfe1046b8cabe8eafef457c5a0b))
+
+
+### Features
+
+* **icon:** update character maps ([335912f](https://github.com/Kajabi/sage-lib/commit/335912f54a0cf5c5546e95e3e654b83f6dedb0ad))
+
+
+
+
+
 ## [1.6.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.6.0...@kajabi/sage-react@1.6.1) (2022-10-28)
 
 

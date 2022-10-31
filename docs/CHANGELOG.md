@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.9.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.8.1...@kajabi/sage@5.9.0) (2022-10-31)
+
+
+### Bug Fixes
+
+* **accordion:** add rails version ([a7131c6](https://github.com/Kajabi/sage-lib/commit/a7131c626856ec1eae234833a91891f160988f93))
+* **expandablecard:** updates per review ([eb179a5](https://github.com/Kajabi/sage-lib/commit/eb179a51c146fcfe1046b8cabe8eafef457c5a0b))
+
+
+### Features
+
+* **icon:** increment font version, ([1a6cd40](https://github.com/Kajabi/sage-lib/commit/1a6cd4004ed86959cecef61e76b7a0c59de95bf1))
+* **icon:** update character maps ([335912f](https://github.com/Kajabi/sage-lib/commit/335912f54a0cf5c5546e95e3e654b83f6dedb0ad))
+
+
+
+
+
 ## [5.8.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.8.0...@kajabi/sage@5.8.1) (2022-10-28)
 
 **Note:** Version bump only for package @kajabi/sage
