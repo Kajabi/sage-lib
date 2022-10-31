@@ -1,0 +1,10 @@
+<div
+  class="
+    sage-accordion
+    <%= "sage-accordion--one-panel-expanded" if component.only_one_panel_expanded %>
+    <%= component.generated_css_classes %>
+  "
+  <%= component.generated_html_attributes.html_safe %>
+>
+  <%= component.content %>
+</div>

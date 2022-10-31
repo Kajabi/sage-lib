@@ -13,6 +13,18 @@ module ComponentsHelper
     [
       # Sage Generated Components
       {
+        title: "accordion",
+        description: ".",
+        scss: "done",
+        docs: "todo",
+        rails: "done",
+        react: "done",
+        responsive: "done",
+        a11y: "done",
+        react_component_slug: "sage-accordion--single-panel",
+        figma_embed: "",
+      },
+      {
         title: "alert",
         description: "Alerts are used to indicate user-driven notifications.",
         scss: "done",
