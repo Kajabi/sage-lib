@@ -431,7 +431,8 @@ $-btn-loading-min-height: rem(36px);
 
     &::after {
       right: 7px;
-      font-size: 12px;
+      font-size: 11px;
+      font-weight: sage-font-weight(bold);
     }
 
     &:hover {
