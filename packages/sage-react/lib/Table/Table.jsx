@@ -142,6 +142,7 @@ export const Table = ({
           className,
           dataType,
           field,
+          sortable,
           style,
           value: label,
         };
@@ -245,6 +246,7 @@ export const Table = ({
     className,
     dataType,
     field,
+    sortable,
     style,
     value,
   }) => {
@@ -259,6 +261,7 @@ export const Table = ({
         attributes={attributes}
         className={className}
         dataType={dataType}
+        sortable={sortable}
         style={style}
         value={value}
       />

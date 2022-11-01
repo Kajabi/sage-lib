@@ -10,16 +10,32 @@ export const TableHeader = ({
   children,
   className,
   dataType,
+  sortable,
   style,
   value,
 }) => {
   const classNames = classnames(
     'sage-table__header',
+    sortable ? 'sage-table__header--sortable' : null,
     className,
     {
       [`sage-table__header--${dataType}`]: dataType,
     }
   );
+
+  attributes = {};
+
+  // eslint-disable-next-line no-prototype-builtins
+  if (value && value.hasOwnProperty('props')) {
+    const { active: sortActive, direction: sortDirection } = value.props;
+
+    if (sortable && sortActive && sortDirection) {
+      attributes['aria-sort'] = sortDirection;
+    } else if (sortable) {
+      attributes['aria-sort'] = null;
+    }
+  }
+
   return (
     <th className={classNames} style={style} {...attributes}>
       {value}
@@ -35,6 +51,7 @@ TableHeader.defaultProps = {
   children: null,
   className: null,
   dataType: null,
+  sortable: false,
   style: null,
   value: null,
 };
@@ -42,4 +59,5 @@ TableHeader.defaultProps = {
 TableHeader.propTypes = {
   ...cellPropTypes,
   children: PropTypes.node,
+  sortable: PropTypes.bool,
 };

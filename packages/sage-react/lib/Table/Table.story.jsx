@@ -174,7 +174,7 @@ export const TableWithSortableHeaders = () => {
         }
       }}
       rows={dataCollection}
-      sortable
+      sortable={true}
     />
   );
 };
