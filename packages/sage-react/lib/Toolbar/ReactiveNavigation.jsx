@@ -1,139 +1,120 @@
-import React, { useLayoutEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { PropTypes } from 'prop-types';
-import _ from 'lodash';
+import debounce from 'lodash/debounce';
 
-import { SageTokens } from '../configs';
-import { Button } from '../Button';
+import { RichTextEditorDropdown } from '../Dropdown/RichEditorDropdown';
 
 export const ReactiveNavigation = ({
   children,
-  maximumNumberInNav,
-  minimumNumberInNav,
-
+  name,
 }) => {
+  const MORE_DROPDOWN_WIDTH = 60;
+
   const navigationRef = useRef(null);
   const moreMenuRef = useRef(null);
-  const moreNavRef = useRef(null);
   const navigationOuterRef = useRef(null);
 
   const [priorityItems, setPriorityItems] = useState(children);
-  const [moreItems, updateMoreItems] = useState([]);
+  const [moreItems, setMoreItems] = useState([]);
 
   const fullNavArray = children;
   let widthsArray;
 
-  const howManyItemsInMenuArray = (array, outerWidth, initialWidth) => {
-    let total = (initialWidth * 1.75);
-    for (let i = 0; i < array.length; i++) {
-      if (total + array[i] > outerWidth) {
-        // console.log(i);
-        if (i < minimumNumberInNav) {
-          // console.log('Returning minimum: ', minimumNumberInNav);
-          return minimumNumberInNav;
-        }
+  const calculateWidth = () => {
+    const availableWidth = navigationOuterRef.current.getBoundingClientRect().width
+      - MORE_DROPDOWN_WIDTH;
+    let navWidth = 0,
+      moreItemCount = 0,
+      sliceIdx = 0;
 
-        // console.log('Returnining I: ', i);
-        return i;
+    widthsArray.every((width, idx) => {
+      navWidth += width;
+      if (navWidth > availableWidth) {
+        moreItemCount = widthsArray.length - idx;
+        sliceIdx = idx;
+        return false;
       }
-      total += array[i];
+      sliceIdx = widthsArray.length;
+      return true;
+    });
+
+    setPriorityItems(fullNavArray.slice(0, sliceIdx));
+    if (moreItemCount > 0) {
+      setMoreItems(
+        fullNavArray
+          .slice(sliceIdx)
+          .map((item, idx) => (
+            { id: idx, label: item }
+          ))
+      );
+    } else {
+      setMoreItems([]);
     }
+
+    /* Used for debugging purposes */
+    // const info = {
+    //   'Avail Width': availableWidth,
+    //   'Nav Width': navWidth,
+    //   'More Item Count': moreItemCount,
+    // };
+    // console.table(info);
+    // console.log('More Items: ', fullNavArray.slice(sliceIdx));
   };
 
-  const updateNavigation = () => {
-    let outerWidth,
-      moreMenu;
-    setTimeout(() => {
-      outerWidth = navigationOuterRef.current.getBoundingClientRect().width;
-      moreMenu = moreMenuRef.current ? moreMenuRef.current.getBoundingClientRect().width : 0;
-
-      const itemsInMenu = howManyItemsInMenuArray(widthsArray, outerWidth, moreMenu);
-      let arrayAmount;
-      // console.log('Items in Menu: ', itemsInMenu);
-
-      // Not defined or greater than max allowed
-      if (!itemsInMenu || itemsInMenu > maximumNumberInNav) {
-        arrayAmount = maximumNumberInNav; // show only max allowed
-      } else {
-        arrayAmount = itemsInMenu;
-      }
-      const navItemsCopy = fullNavArray;
-      const priorityItems = navItemsCopy.slice(0, arrayAmount);
-
-      setPriorityItems(priorityItems);
-      if (priorityItems.length !== navItemsCopy.length) {
-        updateMoreItems(navItemsCopy.slice(arrayAmount, navItemsCopy.length));
-      } else {
-        updateMoreItems([]);
-      }
-    }, 300);
-  };
-
-  useLayoutEffect(() => {
+  useEffect(() => {
     // Get width of all items in navigation menu
     // eslint-disable-next-line react-hooks/exhaustive-deps
     widthsArray = Array.from(navigationRef.current.children)
       .map((item) => item.getBoundingClientRect().width);
 
     // Add resize listener but throttle for smoother experience
-    window.addEventListener('resize', _.throttle(updateNavigation), 5000);
-    updateNavigation();
+    window.addEventListener('resize', debounce(() => { calculateWidth(); }, 500));
+    calculateWidth();
 
     return () => {
-      window.removeEventListener('resize', updateNavigation);
+      window.removeEventListener('resize', calculateWidth);
     };
   }, []);
 
+  const renderToolbarItem = (item, idx) => (
+    <span style={{ padding: '0 4px' }} key={`${name}-${idx}`}>
+      { item }
+    </span>
+  );
+
+  const renderToolbarItems = (items) => (
+    items.map((item, idx) => (
+      renderToolbarItem(item, idx)
+    ))
+  );
+
+  // console.log('Name: ', name, 'Priority Items: ', priorityItems, ' More Items: ', moreItems);
   return (
-    <div>
-      <nav ref={navigationOuterRef} className="navigation" role="navigation">
-        <ul ref={navigationRef} className="navigation-list">
-          {
-            priorityItems.map((item, i) => (
-              // eslint-disable-next-line react/no-array-index-key
-              <li key={`navItem-${i}`} className="navigation-item">
-                {item}
-              </li>
-            ))
-          }
-        </ul>
+    <div ref={navigationOuterRef} className="editor-toolbar-section">
+      <span ref={navigationRef} key={`editor-toolbar-${name}`}>
+        {
+          priorityItems.length > 1
+            ? renderToolbarItems(priorityItems)
+            : renderToolbarItem(priorityItems)
+        }
         {
           moreItems.length > 0 && (
-          <ul ref={moreMenuRef} className="navigation-list-absolute">
-            <li className="navigation-item more-item">
-              <Button
-                className="navigation-link"
-                color={Button.COLORS.SECONDARY}
-                disclosure={true}
-                icon={SageTokens.ICONS.ADD}
-                iconOnly={true}
-                value="More"
+            <span style={{ padding: '0 4px' }} ref={moreMenuRef}>
+              <RichTextEditorDropdown
+                triggerClassnames="sage-btn--rich-text"
+                triggerButtonSubtle={false}
+                options={moreItems}
+                isPinned={true}
               />
-              <ul ref={moreNavRef} className="more-navigation">
-                {
-                moreItems.map((item, i) => (
-                  // eslint-disable-next-line react/no-array-index-key
-                  <li key={`moreNavItem-${i}`} className="navigation-item">
-                    {item}
-                  </li>
-                ))
-              }
-              </ul>
-            </li>
-          </ul>
+            </span>
           )
         }
-      </nav>
+      </span>
     </div>
   );
 };
 
-ReactiveNavigation.defaultProps = {
-  maximumNumberInNav: 3,
-  minimumNumberInNav: 1,
-};
-
 ReactiveNavigation.propTypes = {
   children: PropTypes.node.isRequired,
-  maximumNumberInNav: PropTypes.number,
-  minimumNumberInNav: PropTypes.number,
+  name: PropTypes.string.isRequired,
 };
