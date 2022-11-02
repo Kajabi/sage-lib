@@ -14,7 +14,7 @@ export const TableSortableHeading = ({
     'sage-table__sort-link',
     {
       'sage-table__sort-link--selected': active,
-      'sage-table__sort-link--ascending': direction === 'asc',
+      'sage-table__sort-link--ascending': direction === 'ascending',
     }
   );
 
@@ -36,6 +36,6 @@ TableSortableHeading.defaultProps = {
 TableSortableHeading.propTypes = {
   active: PropTypes.bool,
   children: PropTypes.node,
-  direction: PropTypes.oneOf(['asc', 'desc', null]),
+  direction: PropTypes.oneOf(['ascending', 'descending', null]),
   onClick: PropTypes.func,
 };

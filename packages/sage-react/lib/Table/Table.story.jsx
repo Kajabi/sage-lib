@@ -115,7 +115,7 @@ export const TableWithSortableHeaders = () => {
   const [sorts, setSorts] = useState([
     {
       field: 'first',
-      direction: 'desc',
+      direction: 'descending',
       active: true,
     },
     {
@@ -134,7 +134,7 @@ export const TableWithSortableHeaders = () => {
   const sortBy = (clickedField) => setSorts(sorts.map(({ field, direction, active }) => {
     if (field === clickedField) {
       active = true;
-      direction = direction === 'desc' ? 'asc' : 'desc';
+      direction = direction === 'descending' ? 'ascending' : 'descending';
     } else {
       active = false;
       direction = null;
