@@ -21,6 +21,8 @@ $-table-cell-font-color-strong: sage-color(charcoal, 400);
 $-table-cell-type-spec: "%t-sage-body-small-med";
 $-table-cell-type-spec-strong: "%t-sage-body-small-semi";
 $-table-heading-font-color: sage-color(charcoal, 500);
+$-table-heading-font-hover-color: sage-color(charcoal, 300);
+$-table-heading-font-active-color: sage-color(charcoal, 400);
 $-table-heading-type-spec: "%t-sage-body-small-semi";
 
 // Overflow gradient
@@ -151,19 +153,19 @@ $-table-avatar-width: rem(32px);
 
     &:hover,
     &:focus {
-      color: sage-color(charcoal, 300);
+      color: $-table-heading-font-hover-color;
     }
 
     &:focus-visible,
     &:active {
       @include sage-focus-outline--update-color(sage-color(primary, 200));
-      color: sage-color(charcoal, 400);
+      color: $-table-heading-font-active-color;
     }
   }
 
   .sage-table__sort-link--selected,
   .sage-table__sort-link--selected:hover {
-    color: sage-color(charcoal, 400);
+    color: $-table-heading-font-active-color;
   }
 }
 
