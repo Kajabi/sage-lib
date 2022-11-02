@@ -146,35 +146,40 @@ export const TableWithSortableHeaders = () => {
   }));
 
   return (
-    <Table
-      schema={{
-        id: false,
-        first: {
-          label: (
-            <Table.SortableHeading
-              active={getSortByField('first').active}
-              direction={getSortByField('first').direction}
-              onClick={() => sortBy('first')}
-            >
-              First name
-            </Table.SortableHeading>
-          ),
-        },
-        email: false,
-        phone: {
-          label: (
-            <Table.SortableHeading
-              active={getSortByField('phone').active}
-              direction={getSortByField('phone').direction}
-              onClick={() => sortBy('phone')}
-            >
-              Phone
-            </Table.SortableHeading>
-          )
-        }
-      }}
-      rows={dataCollection}
-      sortable={true}
-    />
+    <>
+      <Panel>
+        <Table
+          schema={{
+            id: false,
+            first: {
+              label: (
+                <Table.SortableHeading
+                  active={getSortByField('first').active}
+                  direction={getSortByField('first').direction}
+                  onClick={() => sortBy('first')}
+                >
+                  First name
+                </Table.SortableHeading>
+              ),
+            },
+            email: false,
+            phone: {
+              label: (
+                <Table.SortableHeading
+                  active={getSortByField('phone').active}
+                  direction={getSortByField('phone').direction}
+                  onClick={() => sortBy('phone')}
+                >
+                  Phone
+                </Table.SortableHeading>
+              )
+            }
+          }}
+          rows={dataCollection}
+          selectable={false}
+          sortable={true}
+        />
+      </Panel>
+    </>
   );
 };
