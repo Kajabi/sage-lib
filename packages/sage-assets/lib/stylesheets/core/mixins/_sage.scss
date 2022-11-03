@@ -134,6 +134,16 @@
         &.sage-btn--small {
           padding: rem(12px) sage-spacing(sm) rem(12px) rem(12px);
         }
+
+        &.sage-btn--rich-text {
+          padding: rem(10px) rem(12px) rem(10px) rem(8px);
+          border-radius: 6px;
+
+          &::after {
+            right: 15px;
+            font-size: 11px;
+          }
+        }
         /* stylelint-enable max-nesting-depth */
       }
 
