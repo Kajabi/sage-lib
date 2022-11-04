@@ -129,7 +129,7 @@ Default.args = {
           </GridDemo>
         </Grid.Col>
       </Grid.Row>
-      <Grid.Row>
+      <Grid.Row spacerBelow="sm">
         <Grid.Col size="10">
           <GridDemo>
             10 col
@@ -138,6 +138,63 @@ Default.args = {
         <Grid.Col size="2">
           <GridDemo>
             2 col
+          </GridDemo>
+        </Grid.Col>
+      </Grid.Row>
+      <Grid.Row spacerBelow="sm" horizontalAlignment="start">
+        <Grid.Col size="2">
+          <GridDemo>
+            start
+          </GridDemo>
+        </Grid.Col>
+      </Grid.Row>
+      <Grid.Row spacerBelow="sm" horizontalAlignment="center">
+        <Grid.Col size="2">
+          <GridDemo>
+            center
+          </GridDemo>
+        </Grid.Col>
+      </Grid.Row>
+      <Grid.Row spacerBelow="sm" horizontalAlignment="end">
+        <Grid.Col size="2">
+          <GridDemo>
+            end
+          </GridDemo>
+        </Grid.Col>
+      </Grid.Row>
+      <Grid.Row spacerBelow="sm" horizontalAlignment="space-between">
+        <Grid.Col size="2">
+          <GridDemo>
+            Space Between
+          </GridDemo>
+        </Grid.Col>
+        <Grid.Col size="2">
+          <GridDemo>
+            Space Between
+          </GridDemo>
+        </Grid.Col>
+      </Grid.Row>
+      <Grid.Row spacerBelow="sm" horizontalAlignment="space-around">
+        <Grid.Col size="2">
+          <GridDemo>
+            Space Around
+          </GridDemo>
+        </Grid.Col>
+        <Grid.Col size="2">
+          <GridDemo>
+            Space Around
+          </GridDemo>
+        </Grid.Col>
+      </Grid.Row>
+      <Grid.Row spacerBelow="sm" horizontalAlignment="space-evenly">
+        <Grid.Col size="2">
+          <GridDemo>
+            Space Evenly
+          </GridDemo>
+        </Grid.Col>
+        <Grid.Col size="2">
+          <GridDemo>
+            Space Evenly
           </GridDemo>
         </Grid.Col>
       </Grid.Row>
@@ -275,6 +332,26 @@ MultipleBreakpoints.args = {
         <Grid.Col aria-label="Single column" small={12} medium={6} large={3} xlarge={3}>
           <GridDemo>
             Equal Width Column
+          </GridDemo>
+        </Grid.Col>
+      </Grid.Row>
+    </>
+  )
+};
+
+export const HorizontalAlignment = Template.bind({});
+HorizontalAlignment.args = {
+  children: (
+    <>
+      <Grid.Row spacerBelow="sm" horizontalAlignment="end">
+        <Grid.Col aria-label="Single column" small={3}>
+          <GridDemo>
+            End
+          </GridDemo>
+        </Grid.Col>
+        <Grid.Col aria-label="Single column" small={3}>
+          <GridDemo>
+            -
           </GridDemo>
         </Grid.Col>
       </Grid.Row>

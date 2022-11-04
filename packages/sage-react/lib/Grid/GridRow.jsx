@@ -6,6 +6,7 @@ import { SageTokens } from '../configs';
 export const GridRow = ({
   children,
   className,
+  horizontalAlignment,
   spacerAbove,
   spacerBelow,
   ...rest
@@ -14,6 +15,7 @@ export const GridRow = ({
     'sage-row',
     className,
     {
+      [`sage-row--align-${horizontalAlignment}`]: horizontalAlignment,
       'sage-spacer-top': spacerBelow === SageTokens.SPACERS.MD,
       [`sage-spacer-top-${spacerAbove}`]: spacerAbove && spacerAbove !== SageTokens.SPACERS.MD,
       'sage-spacer-bottom': spacerBelow === SageTokens.SPACERS.MD,
@@ -31,6 +33,7 @@ export const GridRow = ({
 GridRow.defaultProps = {
   className: null,
   children: null,
+  horizontalAlignment: null,
   spacerAbove: null,
   spacerBelow: null,
 };
@@ -38,6 +41,7 @@ GridRow.defaultProps = {
 GridRow.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node,
+  horizontalAlignment: PropTypes.string,
   spacerAbove: PropTypes.oneOf(Object.values(SageTokens.SPACERS)),
   spacerBelow: PropTypes.oneOf(Object.values(SageTokens.SPACERS)),
 };
