@@ -77,7 +77,7 @@ export const ReactiveNavigation = ({
   }, []);
 
   const renderToolbarItem = (item, idx) => (
-    <span style={{ padding: '0 4px' }} key={`${name}-${idx}`}>
+    <span key={`${name}-${idx}`}>
       { item }
     </span>
   );
@@ -91,7 +91,7 @@ export const ReactiveNavigation = ({
   // console.log('Name: ', name, 'Priority Items: ', priorityItems, ' More Items: ', moreItems);
   return (
     <div ref={navigationOuterRef} className="editor-toolbar-section">
-      <span ref={navigationRef} key={`editor-toolbar-${name}`}>
+      <ul ref={navigationRef} key={`editor-toolbar-${name}`} className="editor-toolbar-section__list">
         {
           priorityItems.length > 1
             ? renderToolbarItems(priorityItems)
@@ -99,17 +99,17 @@ export const ReactiveNavigation = ({
         }
         {
           moreItems.length > 0 && (
-            <span style={{ padding: '0 4px' }} ref={moreMenuRef}>
+            <li className="editor-toolbar-section__list-item" ref={moreMenuRef}>
               <RichTextEditorDropdown
                 triggerClassnames="sage-btn--rich-text"
                 triggerButtonSubtle={false}
                 options={moreItems}
                 isPinned={true}
               />
-            </span>
+            </li>
           )
         }
-      </span>
+      </ul>
     </div>
   );
 };

@@ -5,9 +5,9 @@
 
 .editor-toolbar-container {
   position: relative;
+  width: 100%;
   background-color: #efefef;
   border: 1px dotted green;
-  width: 100%;
 }
 
 .editor-toolbar-sections-container {
@@ -16,11 +16,18 @@
 }
 
 .editor-toolbar-section {
+  flex: 2 1 auto;
   align-items: center;
   min-width: 100px;
   margin-left: 0;
-  padding: 0 12px;
-  border: 1px solid blue;
-  flex: 2 1 auto;
+  // border: 1px solid blue;
 }
 
+.editor-toolbar-section__list {
+  padding-left: 0;
+  list-style: none;
+}
+
+.editor-toolbar-section__list-item {
+  display: inline-flex;
+}

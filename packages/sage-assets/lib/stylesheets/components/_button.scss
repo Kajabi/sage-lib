@@ -424,7 +424,10 @@ $-btn-loading-min-height: rem(36px);
     }
   }
 
-  &.sage-btn--rich-text {
+  &.sage-btn--rich-text,
+  .editor-toolbar-section & {
+    margin-left: rem(2px);
+    margin-right: rem(2px);
     padding: rem(8px) rem(32px) rem(8px) rem(8px);
     border-radius: 6px;
     border-width: 0;
@@ -449,7 +452,7 @@ $-btn-loading-min-height: rem(36px);
     }
 
     &:not(.sage-btn--subtle):not(.sage-btn--disclosure) {
-      padding: rem(7px);
+      padding: rem(8px);
     }
   }
 
