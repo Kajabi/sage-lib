@@ -14,6 +14,14 @@ export const GRID_BREAKPOINT_TOGGLES = {
   HIDE: 'hide',
 };
 
+export const HORIZONTAL_ALIGNMENT_TYPES = {
+  Start: 'start',
+  Center: 'center',
+  End: 'end',
+  SpaceBetween: 'space-between',
+  SpaceAround: 'space-around',
+  SpaceEvenly: 'space-evenly',
+}
 export const validNumberWithinGrid = (props, propName, componentName) => {
   componentName = componentName || 'ANONYMOUS';
 

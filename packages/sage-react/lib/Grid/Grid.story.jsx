@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { selectArgs } from '../story-support/helpers';
 import { Grid } from './Grid';
 import { Card } from '../Card';
+import { HORIZONTAL_ALIGNMENT_TYPES } from './configs';
 
 export default {
   title: 'Sage/Grid',
@@ -141,28 +142,28 @@ Default.args = {
           </GridDemo>
         </Grid.Col>
       </Grid.Row>
-      <Grid.Row spacerBelow="sm" horizontalAlignment="start">
+      <Grid.Row spacerBelow="sm" horizontalAlignment={HORIZONTAL_ALIGNMENT_TYPES.Start}>
         <Grid.Col size="2">
           <GridDemo>
             start
           </GridDemo>
         </Grid.Col>
       </Grid.Row>
-      <Grid.Row spacerBelow="sm" horizontalAlignment="center">
+      <Grid.Row spacerBelow="sm" horizontalAlignment={HORIZONTAL_ALIGNMENT_TYPES.Center}>
         <Grid.Col size="2">
           <GridDemo>
             center
           </GridDemo>
         </Grid.Col>
       </Grid.Row>
-      <Grid.Row spacerBelow="sm" horizontalAlignment="end">
+      <Grid.Row spacerBelow="sm" horizontalAlignment={HORIZONTAL_ALIGNMENT_TYPES.End}>
         <Grid.Col size="2">
           <GridDemo>
             end
           </GridDemo>
         </Grid.Col>
       </Grid.Row>
-      <Grid.Row spacerBelow="sm" horizontalAlignment="space-between">
+      <Grid.Row spacerBelow="sm" horizontalAlignment={HORIZONTAL_ALIGNMENT_TYPES.SpaceBetween}>
         <Grid.Col size="2">
           <GridDemo>
             Space Between
@@ -174,7 +175,7 @@ Default.args = {
           </GridDemo>
         </Grid.Col>
       </Grid.Row>
-      <Grid.Row spacerBelow="sm" horizontalAlignment="space-around">
+      <Grid.Row spacerBelow="sm" horizontalAlignment={HORIZONTAL_ALIGNMENT_TYPES.SpaceAround}>
         <Grid.Col size="2">
           <GridDemo>
             Space Around
@@ -186,7 +187,7 @@ Default.args = {
           </GridDemo>
         </Grid.Col>
       </Grid.Row>
-      <Grid.Row spacerBelow="sm" horizontalAlignment="space-evenly">
+      <Grid.Row spacerBelow="sm" horizontalAlignment={HORIZONTAL_ALIGNMENT_TYPES.SpaceEvenly}>
         <Grid.Col size="2">
           <GridDemo>
             Space Evenly

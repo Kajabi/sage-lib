@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { SageTokens } from '../configs';
+import { HORIZONTAL_ALIGNMENT_TYPES } from './configs';
 
 export const GridRow = ({
   children,
@@ -41,7 +42,7 @@ GridRow.defaultProps = {
 GridRow.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node,
-  horizontalAlignment: PropTypes.string,
+  horizontalAlignment: PropTypes.oneOf(Object.values(HORIZONTAL_ALIGNMENT_TYPES)),
   spacerAbove: PropTypes.oneOf(Object.values(SageTokens.SPACERS)),
   spacerBelow: PropTypes.oneOf(Object.values(SageTokens.SPACERS)),
 };
