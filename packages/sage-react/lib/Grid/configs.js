@@ -21,7 +21,8 @@ export const HORIZONTAL_ALIGNMENT_TYPES = {
   SpaceBetween: 'space-between',
   SpaceAround: 'space-around',
   SpaceEvenly: 'space-evenly',
-}
+};
+
 export const validNumberWithinGrid = (props, propName, componentName) => {
   componentName = componentName || 'ANONYMOUS';
 
