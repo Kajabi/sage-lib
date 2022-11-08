@@ -1,0 +1,69 @@
+
+import { Canvas, Meta, Story, ArgsTable } from '@storybook/addon-docs';
+
+import { selectArgs } from '../story-support/helpers';
+import { SageTokens } from '../configs';
+
+import { HORIZONTAL_ALIGNMENT_TYPES } from './configs';
+
+import { GridRow } from './GridRow';
+import { Grid } from './Grid';
+import { Card } from '../Card';
+
+import PropTypes from 'prop-types';
+
+<Meta
+  title="Sage/Grid/GridRow"
+  component={GridRow}
+  argTypes={{
+    horizontalAlignment: {
+      description: 'Sets the horizontal alignment for the grid row',
+      options: Object.values(HORIZONTAL_ALIGNMENT_TYPES),
+      table: {
+        defaultValue: {
+          summary: 'start'
+        }
+      }
+    },
+    ...selectArgs({
+      spacerAbove: SageTokens.SPACERS,
+      spacerBelow: SageTokens.SPACERS
+    })
+  }}
+/>
+
+export const columns = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+export const Template = (args) => (
+  <Grid>
+    <GridRow {...args} />
+  </Grid>
+);
+
+
+# GridRow
+sample mdx for GridRow component, which is a subcomponent of [Grid](?path=/docs/sage-grid--default)
+
+<Canvas>
+    <Story name="Default"
+      args = {{
+        horizontalAlignment: HORIZONTAL_ALIGNMENT_TYPES.Start,
+         children: (
+          <>
+            {columns.map((col) => (
+              <Grid.Col size="1" key={col.toString()} aria-label="Single column">
+                <Card style={{ textAlign: 'center' }}>
+                  1 col
+                </Card>
+              </Grid.Col>
+            ))}
+          </>
+        ),
+      }}
+    >
+      {Template.bind({})}
+    </Story>
+</Canvas>
+
+# Properties
+<ArgsTable of={GridRow} />
