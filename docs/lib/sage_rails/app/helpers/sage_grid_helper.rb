@@ -22,8 +22,8 @@ module SageGridHelper
   def grid_row_classes(row)
     row_classes = ""
     
-    if row.horizontalAlignment.present?
-      row_classes << "sage-row--align-#{row.horizontalAlignment} "
+    if row.horizontal_alignment.present?
+      row_classes << "sage-row--align-#{row.horizontal_alignment} "
     end
     
     row_classes << row.generated_css_classes

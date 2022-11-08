@@ -1,5 +1,5 @@
 class SageGridRow < SageComponent
   set_attribute_schema({
-    horizontalAlignment: [:optional, String],
+    horizontal_alignment: [:optional, String],
   })
 end

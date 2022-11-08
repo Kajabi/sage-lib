@@ -32,10 +32,11 @@ import PropTypes from 'prop-types';
   }}
 />
 
-export const columns = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+export const columns = [1, 2, 3, 4]
 
 export const Template = (args) => (
-  <Grid>
+  // UXD Question: Is there a better way to show the outline of the parent element in a story?
+  <Grid style={{ border: '1px solid grey' }}>
     <GridRow {...args} />
   </Grid>
 );

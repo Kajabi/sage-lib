@@ -169,7 +169,7 @@
 
 <h4 class="t-sage-heading-6">Multiple breakpoints</h4>
 <%= sage_component SageGridRow, {
-    horizontalAlignment: "space-between",
+    horizontal_alignment: "space-between",
     html_attributes: {
       "aria-hidden": true
     }
@@ -386,7 +386,7 @@
     html_attributes: {
       "aria-hidden": true
     },
-    horizontalAlignment: "space-around"
+    horizontal_alignment: "space-around"
   } do %>
     <%= sage_component SageGridCol, {
       small: "3",
@@ -407,7 +407,7 @@
     html_attributes: {
       "aria-hidden": true
     },
-    horizontalAlignment: "end"
+    horizontal_alignment: "end"
   } do %>
     <%= sage_component SageGridCol, {
       small: "3",
@@ -426,7 +426,7 @@
   <% end %>
 
   <pre class="prettyprint"><code>&lt;%= sage_component SageGridRow, {
-  horizontalAlignment: &quot;space-around&quot;
+  horizontal_alignment: &quot;space-around&quot;
 } do %&gt;
   ...
 &lt;% end %&gt;</code></pre>
