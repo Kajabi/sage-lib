@@ -137,6 +137,6 @@ Select.propTypes = {
       }),
     ]),
   ),
-  required: Proptypes.bool,
+  required: PropTypes.bool,
   value: PropTypes.string,
 };
