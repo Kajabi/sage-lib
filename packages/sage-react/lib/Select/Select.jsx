@@ -12,6 +12,7 @@ export const Select = ({
   message,
   onChange,
   options,
+  required,
   value,
   ...rest
 }) => {
@@ -66,6 +67,7 @@ export const Select = ({
         placeholder={label}
         value={value}
         disabled={disabled}
+        required={required}
         {...rest}
       >
         {(label && includeLabelInOptions) && <option label={label} />}
@@ -96,6 +98,7 @@ Select.defaultProps = {
   message: null,
   onChange: (evt) => evt,
   options: [],
+  required: false,
   value: '',
 };
 
@@ -134,5 +137,6 @@ Select.propTypes = {
       }),
     ]),
   ),
+  required: Proptypes.bool,
   value: PropTypes.string,
 };
