@@ -238,9 +238,7 @@ module SageTableHelper
   def sage_table_caption_classes(table)
     table_caption_classlist = "sage-table__caption"
 
-    if table.caption_side
-      table_caption_classlist << " sage-table__caption--#{table.caption_side}"
-    end
+    table_caption_classlist << " sage-table__caption--#{table.caption_side}" if table.caption_side
 
     return table_caption_classlist
   end
@@ -256,10 +254,10 @@ module SageTableHelper
   end
 
   def sage_table_cell_classes(table)
-    table_cell_classlist = ""
+    table_cell_classlist = "sage-table-cell"
 
     if table.has_borders
-      table_cell_classlist << "sage-table-cell--borders"
+      table_cell_classlist << " sage-table-cell--borders"
     end
 
     return table_cell_classlist
