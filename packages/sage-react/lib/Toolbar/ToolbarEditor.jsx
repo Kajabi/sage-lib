@@ -90,7 +90,7 @@ export const ToolbarEditor = ({
 
   // console.log('Name: ', name, 'Priority Items: ', priorityItems, ' More Items: ', moreItems);
   return (
-    <div ref={navigationOuterRef} className="toolbar-editor__section">
+    <div ref={navigationOuterRef} className="toolbar-editor__section" aria-label={name}>
       <span ref={navigationRef} key={`toolbar-editor-${name}`} className="toolbar-editor__section-list">
         {
           priorityItems.length > 1

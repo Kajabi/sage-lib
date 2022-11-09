@@ -97,7 +97,7 @@ export const Default = BaseTemplate.bind({});
 const PoCTemplate = () => (
   <div className="toolbar-editor">
     <div className="toolbar-editor__container">
-      <div className="toolbar-editor__sections-container">
+      <div className="toolbar-editor__sections-container" role="toolbar" aria-label="aria-label">
         <ToolbarEditor name="section-1">
           <Button
             icon={SageTokens.ICONS.ALIGN_LEFT}
