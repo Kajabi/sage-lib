@@ -35,15 +35,13 @@ import PropTypes from 'prop-types';
 export const columns = [1, 2, 3, 4]
 
 export const Template = (args) => (
-  // UXD Question: Is there a better way to show the outline of the parent element in a story?
-  <Grid style={{ border: '1px solid grey' }}>
+  <Grid>
     <GridRow {...args} />
   </Grid>
 );
 
 
 # GridRow
-sample mdx for GridRow component, which is a subcomponent of [Grid](?path=/docs/sage-grid--default)
 
 <Canvas>
     <Story name="Default"
