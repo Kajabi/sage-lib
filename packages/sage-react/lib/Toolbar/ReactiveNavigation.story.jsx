@@ -96,9 +96,9 @@ const BaseTemplate = (args) => (
 export const Default = BaseTemplate.bind({});
 const PoCTemplate = () => (
   <div className="editor-toolbar">
-    <div className="editor-toolbar-container">
+    <div className="editor-toolbar__container">
       <div style={{ display: 'block', width: '100%', position: 'absolute' }} />
-      <div className="editor-toolbar-sections-container">
+      <div className="editor-toolbar__sections-container">
         <ReactiveNavigation name="section-1">
           <Button
             icon={SageTokens.ICONS.ALIGN_LEFT}

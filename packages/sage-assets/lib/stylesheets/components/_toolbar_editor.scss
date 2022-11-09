@@ -3,31 +3,32 @@
   align-items: center;
 }
 
-.editor-toolbar-container {
+.editor-toolbar__container {
   position: relative;
   width: 100%;
-  background-color: #efefef;
-  border: 1px dotted green;
 }
 
-.editor-toolbar-sections-container {
+.editor-toolbar__sections-container {
   display: flex;
   justify-content: flex-start;
 }
 
-.editor-toolbar-section {
+.editor-toolbar__section {
   flex: 2 1 auto;
   align-items: center;
   min-width: 100px;
   margin-left: 0;
-  // border: 1px solid blue;
+
+  & + & {
+    border-left: 1px solid sage-color(grey, 400);
+  }
 }
 
-.editor-toolbar-section__list {
+.editor-toolbar__section-list {
   padding-left: 0;
   list-style: none;
 }
 
-.editor-toolbar-section__list-item {
+.editor-toolbar__section-list-item {
   display: inline-flex;
 }
