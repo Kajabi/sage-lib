@@ -215,6 +215,56 @@ module SageTableHelper
     table.contents
   end
 
+  def sage_table_classes(table)
+    table_classlist = "sage-table"
+
+    table_classlist << " sage-table--selectable" if table.selectable
+    table_classlist << " sage-table--condensed" if table.condensed
+    table_classlist << " sage-table--has-leading-input" if table.has_leading_input
+    table_classlist << " sage-table--has-menu-options" if table.has_menu_options
+
+    return table_classlist
+  end
+
+  def sage_table_wrapper_classes(table, is_responsive)
+    table_wrapper_classlist = "sage-table-wrapper"
+    table_wrapper_classlist << " sage-table-wrapper--reset-above" if table.reset_above
+    table_wrapper_classlist << " sage-table-wrapper--reset-below" if table.reset_below
+    table_wrapper_classlist << " sage-table-wrapper--scroll" if is_responsive
+
+    return table_wrapper_classlist
+  end
+
+  def sage_table_caption_classes(table)
+    table_caption_classlist = "sage-table__caption"
+
+    if table.caption_side
+      table_caption_classlist << " sage-table__caption--#{table.caption_side}"
+    end
+
+    return table_caption_classlist
+  end
+
+  def sage_table_row_classes(table)
+    table_row_classlist = ""
+
+    if table.selectable
+      table_row_classlist << "sage-table__row--selectable"
+    end
+
+    return table_row_classlist
+  end
+
+  def sage_table_cell_classes(table)
+    table_cell_classlist = ""
+
+    if table.has_borders
+      table_cell_classlist << "sage-table-cell--borders"
+    end
+
+    return table_cell_classlist
+  end
+
   def sage_table_sortable_header_link(label, attribute)
     current = attribute.to_s == sort_column
     asc = sort_direction == "asc"
