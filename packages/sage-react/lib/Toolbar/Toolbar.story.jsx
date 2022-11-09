@@ -6,7 +6,7 @@ import { SelectDropdown } from '../Dropdown';
 import { Search } from '../Search';
 import { Checkbox } from '../Toggle';
 import { Toolbar } from './Toolbar';
-import { ReactiveNavigation } from './ToolbarEditor';
+import { ToolbarEditor } from './ToolbarEditor';
 
 export default {
   title: 'Sage/Toolbar',
@@ -98,8 +98,8 @@ ToolbarGroupWithButtons.args = {
   )
 };
 
-const ReactiveNavigationTemplate = (args) => (
-  <ReactiveNavigation {...args}>
+const ToolbarEditorTemplate = (args) => (
+  <ToolbarEditor {...args}>
     <Button
       disclosure={true}
       icon={SageTokens.ICONS.ALIGN_LEFT}
@@ -142,11 +142,11 @@ const ReactiveNavigationTemplate = (args) => (
       iconOnly={true}
       color={Button.COLORS.SECONDARY}
     />
-  </ReactiveNavigation>
+  </ToolbarEditor>
 );
 
-export const ReactiveNavigationStory = ReactiveNavigationTemplate.bind({});
-ReactiveNavigationStory.args = {
+export const ToolbarEditorStory = ToolbarEditorTemplate.bind({});
+ToolbarEditorStory.args = {
   minimumNumberInNav: 2,
   maximumNumberInNav: 8
 };
