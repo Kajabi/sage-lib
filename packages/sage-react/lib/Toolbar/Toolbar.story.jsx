@@ -6,7 +6,7 @@ import { SelectDropdown } from '../Dropdown';
 import { Search } from '../Search';
 import { Checkbox } from '../Toggle';
 import { Toolbar } from './Toolbar';
-import { ReactiveNavigation } from './ReactiveNavigation';
+import { ReactiveNavigation } from './ToolbarEditor';
 
 export default {
   title: 'Sage/Toolbar',

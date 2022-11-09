@@ -1,17 +1,17 @@
 import React from 'react';
-import { ReactiveNavigation } from './ReactiveNavigation';
+import { ToolbarEditor } from './ToolbarEditor';
 
 import { SageTokens } from '../configs';
 import { Button } from '../Button';
 
 export default {
-  title: 'Sage/ReactiveNavigation',
-  component: ReactiveNavigation,
+  title: 'Sage/ToolbarEditor',
+  component: ToolbarEditor,
   // displays description on Docs tab
   parameters: {
     docs: {
       description: {
-        component: 'Reactive Navigation is used for places like toolbar'
+        component: 'Toolbar Editor is used for places like toolbar'
       },
     },
   },
@@ -20,8 +20,8 @@ export default {
 };
 
 const BaseTemplate = (args) => (
-  <div style={{ display: 'flex', width: '100%', height: '32px', background: 'lightGrey' }} id="toolbar">
-    <ReactiveNavigation {...args}>
+  <div style={{ display: 'flex', width: '100%' }} id="toolbar">
+    <ToolbarEditor {...args}>
       <Button
         disclosure={true}
         icon={SageTokens.ICONS.ALIGN_LEFT}
@@ -64,8 +64,8 @@ const BaseTemplate = (args) => (
         iconOnly={true}
         color={Button.COLORS.SECONDARY}
       />
-    </ReactiveNavigation>
-    <ReactiveNavigation>
+    </ToolbarEditor>
+    <ToolbarEditor>
       <Button
         disclosure={true}
         icon={SageTokens.ICONS.BOLD}
@@ -88,18 +88,17 @@ const BaseTemplate = (args) => (
         iconOnly={true}
         color={Button.COLORS.SECONDARY}
       />
-    </ReactiveNavigation>
+    </ToolbarEditor>
   </div>
 
 );
 
 export const Default = BaseTemplate.bind({});
 const PoCTemplate = () => (
-  <div className="editor-toolbar">
-    <div className="editor-toolbar__container">
-      <div style={{ display: 'block', width: '100%', position: 'absolute' }} />
-      <div className="editor-toolbar__sections-container">
-        <ReactiveNavigation name="section-1">
+  <div className="toolbar-editor">
+    <div className="toolbar-editor__container">
+      <div className="toolbar-editor__sections-container">
+        <ToolbarEditor name="section-1">
           <Button
             icon={SageTokens.ICONS.ALIGN_LEFT}
             disclosure={true}
@@ -142,8 +141,8 @@ const PoCTemplate = () => (
             iconOnly={true}
             color={Button.COLORS.SECONDARY}
           />
-        </ReactiveNavigation>
-        <ReactiveNavigation name="section-2">
+        </ToolbarEditor>
+        <ToolbarEditor name="section-2">
           <Button
             icon={SageTokens.ICONS.ALIGN_LEFT}
             disclosure={true}
@@ -186,7 +185,7 @@ const PoCTemplate = () => (
             iconOnly={true}
             color={Button.COLORS.SECONDARY}
           />
-        </ReactiveNavigation>
+        </ToolbarEditor>
       </div>
     </div>
   </div>

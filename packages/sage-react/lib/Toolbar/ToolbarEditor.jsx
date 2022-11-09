@@ -4,7 +4,7 @@ import debounce from 'lodash/debounce';
 
 import { RichTextEditorDropdown } from '../Dropdown/RichEditorDropdown';
 
-export const ReactiveNavigation = ({
+export const ToolbarEditor = ({
   children,
   name,
 }) => {
@@ -90,8 +90,8 @@ export const ReactiveNavigation = ({
 
   // console.log('Name: ', name, 'Priority Items: ', priorityItems, ' More Items: ', moreItems);
   return (
-    <div ref={navigationOuterRef} className="editor-toolbar__section">
-      <span ref={navigationRef} key={`editor-toolbar-${name}`} className="editor-toolbar__section-list">
+    <div ref={navigationOuterRef} className="toolbar-editor__section">
+      <span ref={navigationRef} key={`toolbar-editor-${name}`} className="toolbar-editor__section-list">
         {
           priorityItems.length > 1
             ? renderToolbarItems(priorityItems)
@@ -99,7 +99,7 @@ export const ReactiveNavigation = ({
         }
         {
           moreItems.length > 0 && (
-            <span className="editor-toolbar__section-list-item" ref={moreMenuRef}>
+            <span className="toolbar-editor__section-list-item" ref={moreMenuRef}>
               <RichTextEditorDropdown
                 align="right"
                 triggerClassnames="sage-btn--rich-text"
@@ -115,7 +115,7 @@ export const ReactiveNavigation = ({
   );
 };
 
-ReactiveNavigation.propTypes = {
+ToolbarEditor.propTypes = {
   children: PropTypes.node.isRequired,
   name: PropTypes.string.isRequired,
 };

@@ -425,7 +425,7 @@ $-btn-loading-min-height: rem(36px);
   }
 
   &.sage-btn--rich-text,
-  .editor-toolbar__section & {
+  .toolbar-editor__section & {
     margin-left: sage-spacing(3xs);
     margin-right: sage-spacing(3xs);
     padding: sage-spacing(xs) sage-spacing(lg) sage-spacing(xs) sage-spacing(xs);

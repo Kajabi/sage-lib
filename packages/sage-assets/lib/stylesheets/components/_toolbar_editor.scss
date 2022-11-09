@@ -1,19 +1,19 @@
-.editor-toolbar {
+.toolbar-editor {
   display: flex;
   align-items: center;
 }
 
-.editor-toolbar__container {
+.toolbar-editor__container {
   position: relative;
   width: 100%;
 }
 
-.editor-toolbar__sections-container {
+.toolbar-editor__sections-container {
   display: flex;
   justify-content: flex-start;
 }
 
-.editor-toolbar__section {
+.toolbar-editor__section {
   flex: 2 1 auto;
   align-items: center;
   min-width: rem(100px);
@@ -24,11 +24,11 @@
   }
 }
 
-.editor-toolbar__section-list {
+.toolbar-editor__section-list {
   padding-left: 0;
   list-style: none;
 }
 
-.editor-toolbar__section-list-item {
+.toolbar-editor__section-list-item {
   display: inline-flex;
 }
