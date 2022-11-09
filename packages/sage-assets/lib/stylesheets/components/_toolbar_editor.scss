@@ -16,7 +16,7 @@
 .editor-toolbar__section {
   flex: 2 1 auto;
   align-items: center;
-  min-width: 100px;
+  min-width: rem(100px);
   margin-left: 0;
 
   & + & {

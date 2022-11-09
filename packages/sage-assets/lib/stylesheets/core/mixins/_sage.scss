@@ -137,9 +137,9 @@
 
         &.sage-btn--rich-text,
         .editor-toolbar__section & {
-          margin-left: rem(2px);
-          margin-right: rem(2px);
-          padding: rem(8px) rem(12px) rem(8px) rem(8px);
+          margin-left: sage-spacing(3xs);
+          margin-right: sage-spacing(3xs);
+          padding: sage-spacing(xs) rem(12px) sage-spacing(xs) sage-spacing(xs);
           border-radius: 6px;
 
           &::after {
