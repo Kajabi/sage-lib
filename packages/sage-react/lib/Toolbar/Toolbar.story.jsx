@@ -146,7 +146,3 @@ const ToolbarEditorTemplate = (args) => (
 );
 
 export const ToolbarEditorStory = ToolbarEditorTemplate.bind({});
-ToolbarEditorStory.args = {
-  minimumNumberInNav: 2,
-  maximumNumberInNav: 8
-};

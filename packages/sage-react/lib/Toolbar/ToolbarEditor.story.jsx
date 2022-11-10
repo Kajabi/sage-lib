@@ -190,4 +190,4 @@ const PoCTemplate = () => (
     </div>
   </div>
 );
-export const ProofOfConcenpt = PoCTemplate.bind({});
+export const ProofOfConcept = PoCTemplate.bind({});
