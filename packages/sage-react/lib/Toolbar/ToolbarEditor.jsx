@@ -5,9 +5,11 @@ import debounce from 'lodash/debounce';
 import { RichTextEditorDropdown } from '../Dropdown/RichEditorDropdown';
 
 export const ToolbarEditor = ({
-  children,
   name,
+  ...rest
 }) => {
+  const { children } = rest;
+
   const MORE_DROPDOWN_WIDTH = 60;
 
   const navigationRef = useRef(null);
@@ -116,6 +118,8 @@ export const ToolbarEditor = ({
 };
 
 ToolbarEditor.propTypes = {
-  children: PropTypes.node.isRequired,
+  /**
+   * Name of the toolbar
+  */
   name: PropTypes.string.isRequired,
 };

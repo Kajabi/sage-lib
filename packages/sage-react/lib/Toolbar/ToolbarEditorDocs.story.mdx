@@ -1,0 +1,40 @@
+import { Canvas, Meta, Story, ArgsTable } from '@storybook/addon-docs';
+
+import * as Stories from './ToolbarEditor.story.jsx';
+import { ToolbarEditor } from './ToolbarEditor';
+
+<Meta
+  title="Sage/ToolbarEditor"
+  component={ToolbarEditor}
+/>
+
+
+# Toolbar Editor MDX
+<Canvas>
+  <Story story={Stories.Default} />
+</Canvas>
+
+# Replacing DocsPage with custom `MDX` content
+
+This file is a documentation-only `MDX`file to customize Storybook's [DocsPage](https://storybook.js.org/docs/react/writing-docs/docs-page#replacing-docspage).
+
+It can be further expanded with your own code snippets and include specific information related to your stories.
+
+
+## Button
+
+Button is the primary component. It has four possible states.
+
+- [Primary](#primary)
+- [Secondary](#secondary)
+- [Large](#large)
+- [Small](#small)
+
+## With the story title defined
+
+If you included the title in the story's default export, use this approach.
+
+# Properties
+The available properties for `ToolbarEditor`.
+
+<ArgsTable of={ToolbarEditor} />
