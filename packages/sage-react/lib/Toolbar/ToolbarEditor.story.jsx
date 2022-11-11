@@ -28,6 +28,7 @@ const BaseTemplate = (args) => (
         icon={SageTokens.ICONS.ITALIC}
         iconOnly={true}
         color={Button.COLORS.SECONDARY}
+        selected={true}
       />
       <Button
         icon={SageTokens.ICONS.UNDERLINE}
