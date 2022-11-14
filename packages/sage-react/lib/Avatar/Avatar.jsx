@@ -30,7 +30,6 @@ export const Avatar = ({
 
   const badgeClassnames = classnames(
     'sage-avatar__badge',
-    className,
     {
       'sage-avatar__badge--custom-bg': badgeBackgroundColor
     }
