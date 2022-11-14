@@ -8,31 +8,24 @@ import { ToolbarEditor } from './ToolbarEditor';
   component={ToolbarEditor}
 />
 
-
 # Toolbar Editor MDX
 <Canvas>
   <Story story={Stories.Default} />
 </Canvas>
 
-# Replacing DocsPage with custom `MDX` content
+Toolbar Editor is used for places like toolbar
 
-This file is a documentation-only `MDX`file to customize Storybook's [DocsPage](https://storybook.js.org/docs/react/writing-docs/docs-page#replacing-docspage).
+## Button types
+- [Rich Text Editor Words And Arrow](http://localhost:4100/?path=/story/sage-button--rich-text-editor-words-and-arrow)
+- [Rich Text Editor Icon And Arrow](http://localhost:4100/?path=/story/sage-button--rich-text-editor-icon-and-arrow)
 
-It can be further expanded with your own code snippets and include specific information related to your stories.
+### Selected buttons
+Add the `selected` attribute to your `<SageButton />`s to receive the selected treatment.
 
+## Dropdown types
 
-## Button
-
-Button is the primary component. It has four possible states.
-
-- [Primary](#primary)
-- [Secondary](#secondary)
-- [Large](#large)
-- [Small](#small)
-
-## With the story title defined
-
-If you included the title in the story's default export, use this approach.
+- [Rich Text Editor](http://localhost:4100/?path=/story/sage-dropdown--rich-text-editor)
+- [Rich Text Editor icon only](http://localhost:4100/?path=/story/sage-dropdown--rich-text-editor-icon-only)
 
 # Properties
 The available properties for `ToolbarEditor`.

@@ -23,6 +23,7 @@ const BaseTemplate = (args) => (
         icon={SageTokens.ICONS.BOLD}
         iconOnly={true}
         color={Button.COLORS.SECONDARY}
+        selected={true}
       />
       <Button
         icon={SageTokens.ICONS.ITALIC}
@@ -83,6 +84,7 @@ const BaseTemplate = (args) => (
         icon={SageTokens.ICONS.STRIKETHROUGH}
         iconOnly={true}
         color={Button.COLORS.SECONDARY}
+        selected={true}
       />
       <Button
         icon={SageTokens.ICONS.UNDO}
