@@ -1,6 +1,8 @@
 import { Canvas, Meta, Story, ArgsTable } from '@storybook/addon-docs';
 
 import * as Stories from './ToolbarEditor.story.jsx';
+import * as ButtonStories from '../Button/Button.story.jsx';
+import * as DropdownStories from '../Dropdown/Dropdown.story.jsx';
 import { ToolbarEditor } from './ToolbarEditor';
 
 <Meta
@@ -19,16 +21,20 @@ You'll need to wrap your `<ToolbarEditor />`s inside of a `<Toolbar gap={Toolbar
 
 
 ## Button types
-- [Rich Text Editor Words And Arrow](http://localhost:4100/?path=/story/sage-button--rich-text-editor-words-and-arrow)
-- [Rich Text Editor Icon And Arrow](http://localhost:4100/?path=/story/sage-button--rich-text-editor-icon-and-arrow)
+#### Rich Text Editor Button
+
+#### Rich Text Editor Dropdown Button
+<Canvas>
+  <Story story={ButtonStories.RichTextEditorWordsAndArrow} />
+</Canvas>
+
+#### Rich Text Editor Dropdown Button with Icon
+<Canvas>
+  <Story story={ButtonStories.RichTextEditorIconAndArrow} />
+</Canvas>
 
 ### Selected buttons
 Add the `selected` attribute to your `<SageButton />`s to receive the selected treatment.
-
-## Dropdown types
-
-- [Rich Text Editor](http://localhost:4100/?path=/story/sage-dropdown--rich-text-editor)
-- [Rich Text Editor icon only](http://localhost:4100/?path=/story/sage-dropdown--rich-text-editor-icon-only)
 
 # Properties
 The available properties for `ToolbarEditor`.
