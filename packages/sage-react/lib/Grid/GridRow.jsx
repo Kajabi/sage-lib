@@ -11,7 +11,7 @@ export const GridRow = ({
   spacerBelow,
   ...rest
 }) => {
-  const {children} = rest;
+  const { children } = rest;
   const classNames = classnames(
     'sage-row',
     className,
