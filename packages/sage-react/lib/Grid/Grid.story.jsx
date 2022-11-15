@@ -339,23 +339,3 @@ MultipleBreakpoints.args = {
     </>
   )
 };
-
-export const HorizontalAlignment = Template.bind({});
-HorizontalAlignment.args = {
-  children: (
-    <>
-      <Grid.Row spacerBelow="sm" horizontalAlignment="end">
-        <Grid.Col aria-label="Single column" small={3}>
-          <GridDemo>
-            End
-          </GridDemo>
-        </Grid.Col>
-        <Grid.Col aria-label="Single column" small={3}>
-          <GridDemo>
-            -
-          </GridDemo>
-        </Grid.Col>
-      </Grid.Row>
-    </>
-  )
-};
