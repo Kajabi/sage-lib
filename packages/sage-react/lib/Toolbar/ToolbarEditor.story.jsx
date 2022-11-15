@@ -1,12 +1,12 @@
 import React from 'react';
-import { Toolbar } from './Toolbar';
 import { ToolbarEditor } from './ToolbarEditor';
 
 import { SageTokens } from '../configs';
 import { Button } from '../Button';
+import { ButtonGroup } from '../Button/ButtonGroup';
 
 const BaseTemplate = (args) => (
-  <Toolbar gap={Toolbar.GAP_OPTIONS.XS}>
+  <ButtonGroup gap={ButtonGroup.GAP_OPTIONS.XS}>
     <ToolbarEditor {...args}>
       <Button
         disclosure={true}
@@ -98,7 +98,7 @@ const BaseTemplate = (args) => (
         color={Button.COLORS.SECONDARY}
       />
     </ToolbarEditor>
-  </Toolbar>
+  </ButtonGroup>
 );
 
 export const Default = BaseTemplate.bind({});
