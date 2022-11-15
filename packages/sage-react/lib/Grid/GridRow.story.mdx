@@ -17,13 +17,7 @@ import PropTypes from 'prop-types';
   component={GridRow}
   argTypes={{
     horizontalAlignment: {
-      description: 'Sets the horizontal alignment for the grid row',
       options: Object.values(HORIZONTAL_ALIGNMENT_TYPES),
-      table: {
-        defaultValue: {
-          summary: 'start'
-        }
-      }
     },
     ...selectArgs({
       spacerAbove: SageTokens.SPACERS,
@@ -40,8 +34,26 @@ export const Template = (args) => (
   </Grid>
 );
 
+export const AlignmentTypes = ({types}) => {
+  const values = Object.values(types);
+  return values.map((type, i) => (
+    <>
+      <code>{ type.trim() }</code>
+      {i < values.length - 1 ? ", " : ""}
+    </>
+  ))
+};
 
 # GridRow
+
+## Properties
+<ArgsTable of={GridRow} />
+
+### Horizontal Alignment
+
+The horizontal alignment default for each <code>.sage-row</code> aligns columns to the start (left) of the <code>.sage-row</code> container. Alignments will only be visible if the total amount of space taken up by columns is less than the total amount of space.
+
+Supported Types: <AlignmentTypes types={HORIZONTAL_ALIGNMENT_TYPES}/>
 
 <Canvas>
     <Story name="Default"
@@ -63,6 +75,3 @@ export const Template = (args) => (
       {Template.bind({})}
     </Story>
 </Canvas>
-
-# Properties
-<ArgsTable of={GridRow} />
