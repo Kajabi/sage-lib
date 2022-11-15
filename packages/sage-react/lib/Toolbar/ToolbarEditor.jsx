@@ -52,15 +52,6 @@ export const ToolbarEditor = ({
     } else {
       setMoreItems([]);
     }
-
-    /* Used for debugging purposes */
-    // const info = {
-    //   'Avail Width': availableWidth,
-    //   'Nav Width': navWidth,
-    //   'More Item Count': moreItemCount,
-    // };
-    // console.table(info);
-    // console.log('More Items: ', fullNavArray.slice(sliceIdx));
   };
 
   useEffect(() => {
@@ -90,7 +81,6 @@ export const ToolbarEditor = ({
     ))
   );
 
-  // console.log('Name: ', name, 'Priority Items: ', priorityItems, ' More Items: ', moreItems);
   return (
     <div ref={navigationOuterRef} className="toolbar-editor__section" aria-label={name}>
       <span ref={navigationRef} key={`toolbar-editor-${name}`} className="toolbar-editor__section-list">
