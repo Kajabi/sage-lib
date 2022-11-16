@@ -90,6 +90,7 @@
     "html-react-parser": "^0.14.2",
     "pluralize": "^8.0.0",
     "prop-types": "^15.7.2",
+    "react-docgen": "^5.4.3",
     "react-sortablejs": "6.0.0",
     "react-uuid": "^1.0.2",
     "recharts": "^2.0.9",

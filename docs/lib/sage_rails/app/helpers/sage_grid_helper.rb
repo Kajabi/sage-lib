@@ -19,6 +19,16 @@ module SageGridHelper
     column_classes << col.generated_css_classes
   end
 
+  def grid_row_classes(row)
+    row_classes = ""
+    
+    if row.horizontal_alignment.present?
+      row_classes << "sage-row--align-#{row.horizontal_alignment} "
+    end
+    
+    row_classes << row.generated_css_classes
+  end
+
   private
 
   def grid_col_legacy(col)
