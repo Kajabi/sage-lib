@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { PropTypes } from 'prop-types';
 import debounce from 'lodash/debounce';
 
-import { RichTextEditorDropdown } from '../Dropdown/RichEditorDropdown';
+import { ToolbarEditorDropdown } from '../Dropdown/ToolbarEditorDropdown';
 
 export const ToolbarEditor = ({
   name,
@@ -92,7 +92,7 @@ export const ToolbarEditor = ({
         {
           moreItems.length > 0 && (
             <span className="toolbar-editor__section-list-item" ref={moreMenuRef}>
-              <RichTextEditorDropdown
+              <ToolbarEditorDropdown
                 align="right"
                 triggerClassnames="sage-btn--rich-text"
                 triggerButtonSubtle={false}
