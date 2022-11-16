@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@1.2.1...@kajabi/sage-system@1.2.2) (2022-10-31)
+
+
+### Bug Fixes
+
+* **accordion:** add rails version ([a7131c6](https://github.com/Kajabi/sage-lib/commit/a7131c626856ec1eae234833a91891f160988f93))
+* **expandable-card:** update per kevin review ([365ad0c](https://github.com/Kajabi/sage-lib/commit/365ad0ce53cf3d8bd9367ca94d52892894e5d6a8))
+* **expandable-card:** updates per review ([082e973](https://github.com/Kajabi/sage-lib/commit/082e973d62e20847ea82d09f0a230c2dd4329268))
+* **expandablecard:** update rails reset ([99cf2e3](https://github.com/Kajabi/sage-lib/commit/99cf2e358a6f100388b7ae082b8ece74e9194818))
+
+
+
+
+
 ## [1.2.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@1.2.0...@kajabi/sage-system@1.2.1) (2022-09-27)
 
 

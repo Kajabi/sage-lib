@@ -194,6 +194,7 @@ export const TOKENS_ICONS = {
   SEARCH_SMALL: 'search-small',
   SEND_MESSAGE: 'send-message',
   SEQUENCES: 'sequences',
+  SHARE: 'share',
   SKIPPED: 'skipped',
   SLASH_DIVIDER: 'slash-divider',
   SPEAKER: 'speaker',

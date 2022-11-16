@@ -331,14 +331,14 @@ demo_configs = [
   } %>
 </div>
 
-<h4>Disclosure Button - Icon Only</h4>
+<h4>Rich Text Editor Button</h4>
 <%= md("
   The disclosure button allows for an icon affordance.
 ", use_sage_type: true) %>
 <div>
   <%= sage_component SageButton, {
+    css_classes: "sage-btn--rich-text",
     value: "Add item",
-    disclosure: true,
     icon: { name: "add", style: "only" },
     attributes: {
       href: "#",
@@ -348,12 +348,13 @@ demo_configs = [
     style: "secondary",
   } %>
 </div>
-<h4>Disclosure Button - Icon Only small</h4>
+<h4>Rich Text Editor Disclosure Button</h4>
 <%= md("
   The disclosure button allows for an icon affordance to exist with hidden text.
 ", use_sage_type: true) %>
 <div>
   <%= sage_component SageButton, {
+    css_classes: "sage-btn--rich-text",
     value: "Add item",
     disclosure: true,
     small: true,
