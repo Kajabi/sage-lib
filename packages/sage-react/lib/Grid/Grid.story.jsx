@@ -142,28 +142,28 @@ Default.args = {
           </GridDemo>
         </Grid.Col>
       </Grid.Row>
-      <Grid.Row spacerBelow="sm" horizontalAlignment={HORIZONTAL_ALIGNMENT_TYPES.Start}>
+      <Grid.Row spacerBelow="sm" horizontalAlignment={HORIZONTAL_ALIGNMENT_TYPES.START}>
         <Grid.Col size="2">
           <GridDemo>
             start
           </GridDemo>
         </Grid.Col>
       </Grid.Row>
-      <Grid.Row spacerBelow="sm" horizontalAlignment={HORIZONTAL_ALIGNMENT_TYPES.Center}>
+      <Grid.Row spacerBelow="sm" horizontalAlignment={HORIZONTAL_ALIGNMENT_TYPES.CENTER}>
         <Grid.Col size="2">
           <GridDemo>
             center
           </GridDemo>
         </Grid.Col>
       </Grid.Row>
-      <Grid.Row spacerBelow="sm" horizontalAlignment={HORIZONTAL_ALIGNMENT_TYPES.End}>
+      <Grid.Row spacerBelow="sm" horizontalAlignment={HORIZONTAL_ALIGNMENT_TYPES.END}>
         <Grid.Col size="2">
           <GridDemo>
             end
           </GridDemo>
         </Grid.Col>
       </Grid.Row>
-      <Grid.Row spacerBelow="sm" horizontalAlignment={HORIZONTAL_ALIGNMENT_TYPES.SpaceBetween}>
+      <Grid.Row spacerBelow="sm" horizontalAlignment={HORIZONTAL_ALIGNMENT_TYPES.SPACEBETWEEN}>
         <Grid.Col size="2">
           <GridDemo>
             Space Between
@@ -175,7 +175,7 @@ Default.args = {
           </GridDemo>
         </Grid.Col>
       </Grid.Row>
-      <Grid.Row spacerBelow="sm" horizontalAlignment={HORIZONTAL_ALIGNMENT_TYPES.SpaceAround}>
+      <Grid.Row spacerBelow="sm" horizontalAlignment={HORIZONTAL_ALIGNMENT_TYPES.SPACEAROUND}>
         <Grid.Col size="2">
           <GridDemo>
             Space Around
@@ -187,7 +187,7 @@ Default.args = {
           </GridDemo>
         </Grid.Col>
       </Grid.Row>
-      <Grid.Row spacerBelow="sm" horizontalAlignment={HORIZONTAL_ALIGNMENT_TYPES.SpaceEvenly}>
+      <Grid.Row spacerBelow="sm" horizontalAlignment={HORIZONTAL_ALIGNMENT_TYPES.SPACEEVENLY}>
         <Grid.Col size="2">
           <GridDemo>
             Space Evenly

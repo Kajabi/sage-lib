@@ -15,12 +15,12 @@ export const GRID_BREAKPOINT_TOGGLES = {
 };
 
 export const HORIZONTAL_ALIGNMENT_TYPES = {
-  Start: 'start',
-  Center: 'center',
-  End: 'end',
-  SpaceBetween: 'space-between',
-  SpaceAround: 'space-around',
-  SpaceEvenly: 'space-evenly',
+  START: 'start',
+  CENTER: 'center',
+  END: 'end',
+  SPACEBETWEEN: 'space-between',
+  SPACEAROUND: 'space-around',
+  SPACEEVENLY: 'space-evenly',
 };
 
 export const validNumberWithinGrid = (props, propName, componentName) => {
