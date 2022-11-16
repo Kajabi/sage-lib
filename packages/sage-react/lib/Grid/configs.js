@@ -18,9 +18,9 @@ export const HORIZONTAL_ALIGNMENT_TYPES = {
   START: 'start',
   CENTER: 'center',
   END: 'end',
-  SPACEBETWEEN: 'space-between',
-  SPACEAROUND: 'space-around',
-  SPACEEVENLY: 'space-evenly',
+  SPACE_BETWEEN: 'space-between',
+  SPACE_AROUND: 'space-around',
+  SPACE_EVENLY: 'space-evenly',
 };
 
 export const validNumberWithinGrid = (props, propName, componentName) => {
