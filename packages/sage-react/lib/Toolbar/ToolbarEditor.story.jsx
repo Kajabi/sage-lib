@@ -3,10 +3,9 @@ import { ToolbarEditor } from './ToolbarEditor';
 
 import { SageTokens } from '../configs';
 import { Button } from '../Button';
-import { ButtonGroup } from '../Button/ButtonGroup';
 
 const BaseTemplate = (args) => (
-  <ButtonGroup gap={ButtonGroup.GAP_OPTIONS.XS} id="toolbar">
+  <div style={{ display: 'flex', width: '100%' }} id="toolbar">
     <ToolbarEditor {...args}>
       <Button
         disclosure={true}
@@ -128,7 +127,7 @@ const BaseTemplate = (args) => (
         Redo
       </Button>
     </ToolbarEditor>
-  </ButtonGroup>
+  </div>
 );
 
 export const Default = BaseTemplate.bind({});
