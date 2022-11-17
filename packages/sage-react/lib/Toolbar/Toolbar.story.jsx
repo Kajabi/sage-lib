@@ -1,4 +1,5 @@
 import React from 'react';
+import { selectArgs } from '../story-support/helpers';
 import { SageTokens } from '../configs';
 import { Button } from '../Button';
 import { sampleSelectItems } from '../Dropdown/stories/story-helper';
@@ -6,6 +7,7 @@ import { SelectDropdown } from '../Dropdown';
 import { Search } from '../Search';
 import { Checkbox } from '../Toggle';
 import { Toolbar } from './Toolbar';
+import { ToolbarEditor } from './ToolbarEditor';
 
 export default {
   title: 'Sage/Toolbar',
@@ -18,7 +20,11 @@ export default {
       },
     },
   },
-  argTypes: {},
+  argTypes: {
+    ...selectArgs({
+      gap: Toolbar.GAP_OPTIONS,
+    }),
+  },
   args: {
     children: (
       <>
@@ -96,3 +102,98 @@ ToolbarGroupWithButtons.args = {
     </Toolbar.Group>
   )
 };
+
+const ToolbarEditorTemplate = (args) => (
+  <Toolbar gap={Toolbar.GAP_OPTIONS.XS}>
+    <ToolbarEditor {...args}>
+      <Button
+        disclosure={true}
+        icon={SageTokens.ICONS.ALIGN_LEFT}
+        iconOnly={true}
+        color={Button.COLORS.SECONDARY}
+        value="Text align"
+      />
+      <Button
+        icon={SageTokens.ICONS.REMOVE}
+        iconOnly={true}
+        color={Button.COLORS.SECONDARY}
+      />
+      <Button
+        icon={SageTokens.ICONS.BOLD}
+        iconOnly={true}
+        color={Button.COLORS.SECONDARY}
+      />
+      <Button
+        icon={SageTokens.ICONS.ITALIC}
+        iconOnly={true}
+        color={Button.COLORS.SECONDARY}
+      />
+      <Button
+        icon={SageTokens.ICONS.UNDERLINE}
+        iconOnly={true}
+        color={Button.COLORS.SECONDARY}
+      />
+      <Button
+        icon={SageTokens.ICONS.STRIKETHROUGH}
+        iconOnly={true}
+        color={Button.COLORS.SECONDARY}
+      />
+      <Button
+        icon={SageTokens.ICONS.UNDO}
+        iconOnly={true}
+        color={Button.COLORS.SECONDARY}
+      />
+      <Button
+        icon={SageTokens.ICONS.REDO}
+        iconOnly={true}
+        color={Button.COLORS.SECONDARY}
+      />
+    </ToolbarEditor>
+    <ToolbarEditor {...args}>
+      <Button
+        disclosure={true}
+        icon={SageTokens.ICONS.ALIGN_LEFT}
+        iconOnly={true}
+        color={Button.COLORS.SECONDARY}
+        value="Text align"
+      />
+      <Button
+        icon={SageTokens.ICONS.REMOVE}
+        iconOnly={true}
+        color={Button.COLORS.SECONDARY}
+      />
+      <Button
+        icon={SageTokens.ICONS.BOLD}
+        iconOnly={true}
+        color={Button.COLORS.SECONDARY}
+      />
+      <Button
+        icon={SageTokens.ICONS.ITALIC}
+        iconOnly={true}
+        color={Button.COLORS.SECONDARY}
+      />
+      <Button
+        icon={SageTokens.ICONS.UNDERLINE}
+        iconOnly={true}
+        color={Button.COLORS.SECONDARY}
+      />
+      <Button
+        icon={SageTokens.ICONS.STRIKETHROUGH}
+        iconOnly={true}
+        color={Button.COLORS.SECONDARY}
+      />
+      <Button
+        icon={SageTokens.ICONS.UNDO}
+        iconOnly={true}
+        color={Button.COLORS.SECONDARY}
+      />
+      <Button
+        icon={SageTokens.ICONS.REDO}
+        iconOnly={true}
+        color={Button.COLORS.SECONDARY}
+      />
+    </ToolbarEditor>
+  </Toolbar>
+);
+
+export const ToolbarEditorStory = ToolbarEditorTemplate.bind({});

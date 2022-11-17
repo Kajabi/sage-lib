@@ -3,7 +3,7 @@ import { selectArgs } from '../story-support/helpers';
 import { SageTokens } from '../configs';
 import { Dropdown } from './Dropdown';
 import { OptionsDropdown } from './OptionsDropdown';
-import { RichTextEditorDropdown } from './RichEditorDropdown';
+import { ToolbarEditorDropdown } from './ToolbarEditorDropdown';
 import { ToolbarDropdown } from './ToolbarDropdown';
 import { defaultOptionsItems, sampleMenuItems } from './stories/story-helper';
 import { CustomItemsStory } from './stories/CustomItemsStory';
@@ -131,7 +131,7 @@ RichTextEditor.decorators = [
 ];
 
 export const RichTextEditorIconOnly = (args) => (
-  <RichTextEditorDropdown
+  <ToolbarEditorDropdown
     triggerClassnames="sage-btn--rich-text"
     triggerButtonSubtle={false}
     options={defaultOptionsItems}

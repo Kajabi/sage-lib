@@ -89,6 +89,15 @@ Disclosure.args = {
   color: Button.COLORS.SECONDARY
 };
 
+export const RichTextEditor = Template.bind({});
+RichTextEditor.args = {
+  children: 'Text',
+  className: 'sage-btn--rich-text',
+  color: Button.COLORS.SECONDARY,
+  icon: SageTokens.ICONS.STRIKETHROUGH,
+  iconOnly: true,
+};
+
 export const RichTextEditorWordsAndArrow = Template.bind({});
 RichTextEditorWordsAndArrow.args = {
   children: 'Text',
@@ -100,8 +109,9 @@ RichTextEditorWordsAndArrow.args = {
 export const RichTextEditorIconAndArrow = Template.bind({});
 RichTextEditorIconAndArrow.args = {
   className: 'sage-btn--rich-text',
+  children: 'Text',
   disclosure: true,
-  icon: SageTokens.ICONS.REMOVE,
+  icon: SageTokens.ICONS.ALIGN_LEFT,
   iconOnly: true,
   color: Button.COLORS.SECONDARY
 };

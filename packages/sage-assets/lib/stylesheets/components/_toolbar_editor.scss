@@ -1,0 +1,34 @@
+.toolbar-editor {
+  display: flex;
+  align-items: center;
+}
+
+.toolbar-editor__container {
+  position: relative;
+  width: 100%;
+}
+
+.toolbar-editor__sections-container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.toolbar-editor__section {
+  flex: 2 1 auto;
+  align-items: center;
+  min-width: rem(100px);
+  margin-left: 0;
+
+  & + & {
+    border-left: sage-border(interactive);
+  }
+}
+
+.toolbar-editor__section-list {
+  padding-left: 0;
+  list-style: none;
+}
+
+.toolbar-editor__section-list-item {
+  display: inline-flex;
+}
