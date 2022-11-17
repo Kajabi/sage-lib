@@ -4,7 +4,7 @@ import { Canvas, Meta, Story, ArgsTable } from '@storybook/addon-docs';
 import { selectArgs } from '../story-support/helpers';
 import { SageTokens } from '../configs';
 
-import { HORIZONTAL_ALIGNMENT_TYPES } from './configs';
+import { ROW_HORIZONTAL_ALIGNMENT_TYPES, ROW_VERTICAL_ALIGNMENT_TYPES } from './configs';
 
 import { GridRow } from './GridRow';
 import { Grid } from './Grid';
@@ -17,7 +17,10 @@ import PropTypes from 'prop-types';
   component={GridRow}
   argTypes={{
     horizontalAlignment: {
-      options: Object.values(HORIZONTAL_ALIGNMENT_TYPES),
+      options: Object.values(ROW_HORIZONTAL_ALIGNMENT_TYPES),
+    },
+    verticalAlignment: {
+      options: Object.values(ROW_VERTICAL_ALIGNMENT_TYPES),
     },
     ...selectArgs({
       spacerAbove: SageTokens.SPACERS,
@@ -51,20 +54,29 @@ export const AlignmentTypes = ({ types }) => {
 
 ### Horizontal Alignment
 
-The horizontal alignment default for each <code>.sage-row</code> aligns columns to the start (left) of the <code>.sage-row</code> container. Alignments will only be visible if the total amount of space taken up by columns is less than the total amount of space.
+The horizontal alignment default for each <code>.sage-row</code> aligns columns to the start (left) of the <code>.sage-row</code> container. Alignments will only be visible if the total amount of width taken up by columns is less than the total amount of space.
 
-Supported Types: <AlignmentTypes types={HORIZONTAL_ALIGNMENT_TYPES}/>
+Supported Types: <AlignmentTypes types={ROW_HORIZONTAL_ALIGNMENT_TYPES}/>
+
+### Vertical Alignment
+
+The vertical alignment default for each <code>.sage-row</code> aligns columns to the start (top) of the <code>.sage-row</code> container. Alignments will only be visible if the total amount of height taken up by columns is less than the total amount of space.
+
+Supported Types: <AlignmentTypes types={ROW_VERTICAL_ALIGNMENT_TYPES}/>
+
+## Canvas Example
 
 <Canvas>
     <Story name="Default"
       args = {{
-        horizontalAlignment: HORIZONTAL_ALIGNMENT_TYPES.START,
+        horizontalAlignment: ROW_HORIZONTAL_ALIGNMENT_TYPES.CENTER,
+        verticalAlignment: ROW_VERTICAL_ALIGNMENT_TYPES.CENTER,
          children: (
           <>
-            {columns.map((col) => (
-              <Grid.Col size="2" key={col.toString()} aria-label="Double column">
-                <Card style={{ textAlign: 'center' }}>
-                  1 col
+            {columns.map((col, i) => (
+              <Grid.Col size="2" key={col.toString()} aria-label="Single column">
+                <Card style={{ textAlign: 'center', height: '100%' }}>
+                  {i === 0 ? `Tall column with mulitple lines` : "Short col"}
                 </Card>
               </Grid.Col>
             ))}
