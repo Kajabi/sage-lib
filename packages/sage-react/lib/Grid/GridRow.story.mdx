@@ -74,7 +74,7 @@ Supported Types: <AlignmentTypes types={ROW_VERTICAL_ALIGNMENT_TYPES}/>
          children: (
           <>
             {columns.map((col, i) => (
-              <Grid.Col size="2" key={col.toString()} aria-label="Single column">
+              <Grid.Col size="2" key={col.toString()} aria-label="Double column">
                 <Card style={{ textAlign: 'center', height: '100%' }}>
                   {i === 0 ? `Tall column with mulitple lines` : "Short col"}
                 </Card>
