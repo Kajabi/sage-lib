@@ -25,6 +25,10 @@ module SageGridHelper
     if row.horizontal_alignment.present?
       row_classes << "sage-row--align-#{row.horizontal_alignment} "
     end
+
+    if row.vertical_alignment.present?
+      row_classes << "sage-row--valign-#{row.vertical_alignment} "
+    end
     
     row_classes << row.generated_css_classes
   end

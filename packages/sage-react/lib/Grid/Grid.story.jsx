@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { selectArgs } from '../story-support/helpers';
 import { Grid } from './Grid';
 import { Card } from '../Card';
-import { HORIZONTAL_ALIGNMENT_TYPES } from './configs';
+import { ROW_HORIZONTAL_ALIGNMENT_TYPES, ROW_VERTICAL_ALIGNMENT_TYPES } from './configs';
 
 export default {
   title: 'Sage/Grid',
@@ -32,7 +32,7 @@ export default {
 };
 
 const GridDemo = ({ children }) => (
-  <Card style={{ textAlign: 'center' }}>
+  <Card style={{ textAlign: 'center', height: '100%' }}>
     {children}
   </Card>
 );
@@ -142,28 +142,28 @@ Default.args = {
           </GridDemo>
         </Grid.Col>
       </Grid.Row>
-      <Grid.Row spacerBelow="sm" horizontalAlignment={HORIZONTAL_ALIGNMENT_TYPES.START}>
+      <Grid.Row spacerBelow="sm" horizontalAlignment={ROW_HORIZONTAL_ALIGNMENT_TYPES.START}>
         <Grid.Col size="2">
           <GridDemo>
             start
           </GridDemo>
         </Grid.Col>
       </Grid.Row>
-      <Grid.Row spacerBelow="sm" horizontalAlignment={HORIZONTAL_ALIGNMENT_TYPES.CENTER}>
+      <Grid.Row spacerBelow="sm" horizontalAlignment={ROW_HORIZONTAL_ALIGNMENT_TYPES.CENTER}>
         <Grid.Col size="2">
           <GridDemo>
             center
           </GridDemo>
         </Grid.Col>
       </Grid.Row>
-      <Grid.Row spacerBelow="sm" horizontalAlignment={HORIZONTAL_ALIGNMENT_TYPES.END}>
+      <Grid.Row spacerBelow="sm" horizontalAlignment={ROW_HORIZONTAL_ALIGNMENT_TYPES.END}>
         <Grid.Col size="2">
           <GridDemo>
             end
           </GridDemo>
         </Grid.Col>
       </Grid.Row>
-      <Grid.Row spacerBelow="sm" horizontalAlignment={HORIZONTAL_ALIGNMENT_TYPES.SPACE_BETWEEN}>
+      <Grid.Row spacerBelow="sm" horizontalAlignment={ROW_HORIZONTAL_ALIGNMENT_TYPES.SPACE_BETWEEN}>
         <Grid.Col size="2">
           <GridDemo>
             Space Between
@@ -175,7 +175,7 @@ Default.args = {
           </GridDemo>
         </Grid.Col>
       </Grid.Row>
-      <Grid.Row spacerBelow="sm" horizontalAlignment={HORIZONTAL_ALIGNMENT_TYPES.SPACE_AROUND}>
+      <Grid.Row spacerBelow="sm" horizontalAlignment={ROW_HORIZONTAL_ALIGNMENT_TYPES.SPACE_AROUND}>
         <Grid.Col size="2">
           <GridDemo>
             Space Around
@@ -187,7 +187,7 @@ Default.args = {
           </GridDemo>
         </Grid.Col>
       </Grid.Row>
-      <Grid.Row spacerBelow="sm" horizontalAlignment={HORIZONTAL_ALIGNMENT_TYPES.SPACE_EVENLY}>
+      <Grid.Row spacerBelow="sm" horizontalAlignment={ROW_HORIZONTAL_ALIGNMENT_TYPES.SPACE_EVENLY}>
         <Grid.Col size="2">
           <GridDemo>
             Space Evenly
@@ -196,6 +196,66 @@ Default.args = {
         <Grid.Col size="2">
           <GridDemo>
             Space Evenly
+          </GridDemo>
+        </Grid.Col>
+      </Grid.Row>
+      <Grid.Row spacerBelow="sm" verticalAlignment={ROW_VERTICAL_ALIGNMENT_TYPES.START}>
+        <Grid.Col size="2" style={{ height: '8em' }}>
+          <GridDemo>
+            Start
+          </GridDemo>
+        </Grid.Col>
+        <Grid.Col size="2">
+          <GridDemo>
+            Start
+          </GridDemo>
+        </Grid.Col>
+      </Grid.Row>
+      <Grid.Row spacerBelow="sm" verticalAlignment={ROW_VERTICAL_ALIGNMENT_TYPES.CENTER}>
+        <Grid.Col size="2" style={{ height: '8em' }}>
+          <GridDemo>
+            Center
+          </GridDemo>
+        </Grid.Col>
+        <Grid.Col size="2">
+          <GridDemo>
+            Center
+          </GridDemo>
+        </Grid.Col>
+      </Grid.Row>
+      <Grid.Row spacerBelow="sm" verticalAlignment={ROW_VERTICAL_ALIGNMENT_TYPES.END}>
+        <Grid.Col size="2" style={{ height: '8em' }}>
+          <GridDemo>
+            End
+          </GridDemo>
+        </Grid.Col>
+        <Grid.Col size="2">
+          <GridDemo>
+            End
+          </GridDemo>
+        </Grid.Col>
+      </Grid.Row>
+      <Grid.Row spacerBelow="sm" verticalAlignment={ROW_VERTICAL_ALIGNMENT_TYPES.BASELINE}>
+        <Grid.Col size="2" style={{ height: '8em' }}>
+          <GridDemo>
+            Baseline
+          </GridDemo>
+        </Grid.Col>
+        <Grid.Col size="2">
+          <GridDemo>
+            Baseline
+          </GridDemo>
+        </Grid.Col>
+      </Grid.Row>
+      <Grid.Row spacerBelow="sm" verticalAlignment={ROW_VERTICAL_ALIGNMENT_TYPES.STRETCH}>
+        <Grid.Col size="2" style={{ height: '8em' }}>
+          <GridDemo>
+            Stretch
+          </GridDemo>
+        </Grid.Col>
+        <Grid.Col size="2">
+          <GridDemo>
+            Stretch
           </GridDemo>
         </Grid.Col>
       </Grid.Row>

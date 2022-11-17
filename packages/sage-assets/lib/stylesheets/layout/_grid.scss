@@ -83,13 +83,21 @@ $-grid-breakpoint-xl: sage-breakpoint(xl-min);
 }
 
 // vertical alignment
+.sage-row--valign-start {
+  align-items: flex-start;
+}
 .sage-row--valign-center {
   align-items: center;
 }
-.sage-row--valign-bottom {
+.sage-row--valign-end {
   align-items: flex-end;
 }
-
+.sage-row--valign-baseline {
+  align-items: baseline;
+}
+.sage-row--valign-stretch {
+  align-items: stretch;
+}
 
 ///
 /// Columns
