@@ -424,6 +424,37 @@ $-btn-loading-min-height: rem(36px);
     }
   }
 
+  &.sage-btn--rich-text,
+  .toolbar-editor__section & {
+    margin-inline: rem(3px);
+    padding: sage-spacing(xs) sage-spacing(lg) sage-spacing(xs) sage-spacing(xs);
+    border-radius: 6px;
+    border-width: 0;
+
+    &::after {
+      right: 7px;
+      font-size: 11px;
+      font-weight: sage-font-weight(bold);
+    }
+
+    &:hover {
+      background-color: sage-color(grey, 300);
+    }
+
+    &.sage-btn--selected {
+      color: sage-color(white);
+      background-color: sage-color(charcoal, 400);
+
+      &::after {
+        color: sage-color(white);
+      }
+    }
+
+    &:not(.sage-btn--subtle):not(.sage-btn--disclosure) {
+      padding: sage-spacing(xs);
+    }
+  }
+
   // NOTE: Icon generation consolidated in `core/_icons.scss`
 }
 
@@ -648,7 +679,7 @@ a.sage-btn {
           background-color: $value;
         }
       }
-  
+
       &:focus,
       &:active {
         border-color: transparent;

@@ -4,6 +4,7 @@ import { Button } from '../Button';
 import { SageTokens } from '../configs';
 
 export const DropdownTriggerDefault = ({
+  className,
   disabled,
   disclosure,
   icon,
@@ -13,6 +14,7 @@ export const DropdownTriggerDefault = ({
   subtle,
 }) => (
   <Button
+    className={className}
     color={Button.COLORS.SECONDARY}
     disabled={disabled}
     disclosure={disclosure}
@@ -27,6 +29,7 @@ export const DropdownTriggerDefault = ({
 );
 
 DropdownTriggerDefault.defaultProps = {
+  className: '',
   disabled: false,
   disclosure: false,
   isLabelVisible: true,
@@ -35,6 +38,7 @@ DropdownTriggerDefault.defaultProps = {
 };
 
 DropdownTriggerDefault.propTypes = {
+  className: PropTypes.string,
   disabled: PropTypes.bool,
   disclosure: PropTypes.bool,
   onClick: PropTypes.func.isRequired,

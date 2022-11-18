@@ -3,6 +3,7 @@ import { selectArgs } from '../story-support/helpers';
 import { SageTokens } from '../configs';
 import { Dropdown } from './Dropdown';
 import { OptionsDropdown } from './OptionsDropdown';
+import { ToolbarEditorDropdown } from './ToolbarEditorDropdown';
 import { ToolbarDropdown } from './ToolbarDropdown';
 import { defaultOptionsItems, sampleMenuItems } from './stories/story-helper';
 import { CustomItemsStory } from './stories/CustomItemsStory';
@@ -108,13 +109,39 @@ OptionMenu.decorators = [
   )
 ];
 
-export const IconOnlyMenuWithArrow = (args) => (
-  <ToolbarDropdown options={defaultOptionsItems} isPinned={args.isPinned} />
+export const RichTextEditor = (args) => (
+  <ToolbarDropdown
+    options={defaultOptionsItems}
+    isPinned={args.isPinned}
+    triggerClassnames="sage-btn--rich-text"
+    triggerButtonSubtle={false}
+  />
 );
-IconOnlyMenuWithArrow.args = {
+RichTextEditor.args = {
   isPinned: false
 };
-IconOnlyMenuWithArrow.decorators = [
+RichTextEditor.decorators = [
+  (Story) => (
+    <>
+      <div style={{ minHeight: 300 }}>
+        <Story />
+      </div>
+    </>
+  )
+];
+
+export const RichTextEditorIconOnly = (args) => (
+  <ToolbarEditorDropdown
+    triggerClassnames="sage-btn--rich-text"
+    triggerButtonSubtle={false}
+    options={defaultOptionsItems}
+    isPinned={args.isPinned}
+  />
+);
+RichTextEditorIconOnly.args = {
+  isPinned: false
+};
+OptionMenu.decorators = [
   (Story) => (
     <>
       <div style={{ minHeight: 300 }}>

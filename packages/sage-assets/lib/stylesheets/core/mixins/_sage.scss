@@ -134,6 +134,19 @@
         &.sage-btn--small {
           padding: rem(12px) sage-spacing(sm) rem(12px) rem(12px);
         }
+
+        &.sage-btn--rich-text,
+        .toolbar-editor__section & {
+          margin-left: sage-spacing(3xs);
+          margin-right: sage-spacing(3xs);
+          padding: sage-spacing(xs) rem(12px) sage-spacing(xs) sage-spacing(xs);
+          border-radius: 6px;
+
+          &::after {
+            right: 15px;
+            font-size: 11px;
+          }
+        }
         /* stylelint-enable max-nesting-depth */
       }
 

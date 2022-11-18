@@ -63,6 +63,9 @@ $-grid-breakpoint-xl: sage-breakpoint(xl-min);
 }
 
 // horizontal alignment
+.sage-row--align-start {
+  justify-content: flex-start;
+}
 .sage-row--align-center {
   justify-content: center;
 }
@@ -74,6 +77,9 @@ $-grid-breakpoint-xl: sage-breakpoint(xl-min);
 }
 .sage-row--align-space-around {
   justify-content: space-around;
+}
+.sage-row--align-space-evenly {
+  justify-content: space-evenly;
 }
 
 // vertical alignment

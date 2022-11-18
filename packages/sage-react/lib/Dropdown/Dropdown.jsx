@@ -34,6 +34,7 @@ export const Dropdown = ({
   panelStateToken,
   panelType,
   triggerButtonSubtle,
+  triggerClassnames,
   triggerModifier,
   triggerWidth,
 }) => {
@@ -148,6 +149,7 @@ export const Dropdown = ({
         modifier={triggerModifier}
         onClickTrigger={onClickTrigger}
         subtleButton={triggerButtonSubtle}
+        triggerClassnames={triggerClassnames}
         width={triggerWidth}
       >
         {customTrigger}
@@ -202,6 +204,7 @@ Dropdown.defaultProps = {
   panelStateToken: null,
   panelType: null,
   triggerButtonSubtle: false,
+  triggerClassnames: '',
   triggerModifier: 'default',
   triggerWidth: null,
 };
@@ -229,6 +232,7 @@ Dropdown.propTypes = {
   panelType: PropTypes.oneOf(Object.values(Dropdown.PANEL_TYPES)),
   panelStateToken: PropTypes.string,
   triggerButtonSubtle: PropTypes.bool,
+  triggerClassnames: PropTypes.string,
   triggerModifier: PropTypes.string,
   triggerWidth: PropTypes.string,
 };

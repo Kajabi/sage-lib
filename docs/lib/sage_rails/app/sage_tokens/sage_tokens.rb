@@ -293,6 +293,7 @@ module SageTokens
     "search-small",
     "send-message",
     "sequences",
+    "share",
     "skipped",
     "slash-divider",
     "speaker",

@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { SageTokens } from '../configs';
 import { Dropdown } from './Dropdown';
 import { DropdownItemList } from './DropdownItemList';
 import { DROPDOWN_PANEL_SIZES, DROPDOWN_POSITIONS } from './configs';
 
-export const ToolbarDropdown = ({
+export const ToolbarEditorDropdown = ({
   align,
   className,
   exitPanelHandler,
@@ -13,17 +14,18 @@ export const ToolbarDropdown = ({
   panelMaxWidth,
   panelSize,
   options,
-  triggerButtonSubtle,
   triggerClassnames,
+  triggerButtonSubtle,
 }) => (
   <Dropdown
     align={align}
     className={className}
     disclosure={true}
     exitPanelHandler={exitPanelHandler}
-    isLabelVisible={true}
+    icon={SageTokens.ICONS.ADD}
+    isLabelVisible={false}
     isPinned={isPinned}
-    label="Text"
+    label="More options"
     onEscapeHook={onEscapeHook}
     panelMaxWidth={panelMaxWidth}
     panelSize={panelSize}
@@ -35,10 +37,10 @@ export const ToolbarDropdown = ({
   </Dropdown>
 );
 
-ToolbarDropdown.PANEL_SIZES = DROPDOWN_PANEL_SIZES;
-ToolbarDropdown.POSITIONS = DROPDOWN_POSITIONS;
+ToolbarEditorDropdown.PANEL_SIZES = DROPDOWN_PANEL_SIZES;
+ToolbarEditorDropdown.POSITIONS = DROPDOWN_POSITIONS;
 
-ToolbarDropdown.defaultProps = {
+ToolbarEditorDropdown.defaultProps = {
   align: DROPDOWN_POSITIONS.DEFAULT,
   className: null,
   exitPanelHandler: (evt) => evt,
@@ -47,11 +49,11 @@ ToolbarDropdown.defaultProps = {
   panelMaxWidth: null,
   panelSize: DROPDOWN_PANEL_SIZES.DEFAULT,
   options: null,
-  triggerButtonSubtle: false,
   triggerClassnames: '',
+  triggerButtonSubtle: true,
 };
 
-ToolbarDropdown.propTypes = {
+ToolbarEditorDropdown.propTypes = {
   align: PropTypes.oneOf(Object.values(DROPDOWN_POSITIONS)),
   className: PropTypes.string,
   exitPanelHandler: PropTypes.func,

@@ -1,0 +1,77 @@
+
+import { Canvas, Meta, Story, ArgsTable } from '@storybook/addon-docs';
+
+import { selectArgs } from '../story-support/helpers';
+import { SageTokens } from '../configs';
+
+import { HORIZONTAL_ALIGNMENT_TYPES } from './configs';
+
+import { GridRow } from './GridRow';
+import { Grid } from './Grid';
+import { Card } from '../Card';
+
+import PropTypes from 'prop-types';
+
+<Meta
+  title="Sage/Grid/GridRow"
+  component={GridRow}
+  argTypes={{
+    horizontalAlignment: {
+      options: Object.values(HORIZONTAL_ALIGNMENT_TYPES),
+    },
+    ...selectArgs({
+      spacerAbove: SageTokens.SPACERS,
+      spacerBelow: SageTokens.SPACERS
+    })
+  }}
+/>
+
+export const columns = [1, 2, 3, 4]
+
+export const Template = (args) => (
+  <Grid>
+    <GridRow {...args} />
+  </Grid>
+);
+
+export const AlignmentTypes = ({ types }) => {
+  const values = Object.values(types);
+  return values.map((type, i) => (
+    <>
+      <code>{ type.trim() }</code>
+      {i < values.length - 1 ? ", " : ""}
+    </>
+  ))
+};
+
+# GridRow
+
+## Properties
+<ArgsTable of={GridRow} />
+
+### Horizontal Alignment
+
+The horizontal alignment default for each <code>.sage-row</code> aligns columns to the start (left) of the <code>.sage-row</code> container. Alignments will only be visible if the total amount of space taken up by columns is less than the total amount of space.
+
+Supported Types: <AlignmentTypes types={HORIZONTAL_ALIGNMENT_TYPES}/>
+
+<Canvas>
+    <Story name="Default"
+      args = {{
+        horizontalAlignment: HORIZONTAL_ALIGNMENT_TYPES.START,
+         children: (
+          <>
+            {columns.map((col) => (
+              <Grid.Col size="2" key={col.toString()} aria-label="Double column">
+                <Card style={{ textAlign: 'center' }}>
+                  1 col
+                </Card>
+              </Grid.Col>
+            ))}
+          </>
+        ),
+      }}
+    >
+      {Template.bind({})}
+    </Story>
+</Canvas>

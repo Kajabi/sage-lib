@@ -1,0 +1,44 @@
+import { Canvas, Meta, Story, ArgsTable } from '@storybook/addon-docs';
+
+import * as Stories from './ToolbarEditor.story.jsx';
+import * as ButtonStories from '../Button/Button.story.jsx';
+import { ToolbarEditor } from './ToolbarEditor';
+
+<Meta
+  title="Sage/ToolbarEditor"
+  component={ToolbarEditor}
+/>
+
+# Toolbar Editor MDX
+<Canvas>
+  <Story story={Stories.Default} />
+</Canvas>
+
+Toolbar Editor is a container for grouping a set of controls, such as `<Button />`s and `<Dropdown />`s.
+
+You'll need to wrap your `<ToolbarEditor />`s inside of a `flexbox` container to receive the desired visual treatment.
+
+
+## Button types
+#### Rich Text Editor Button
+The default toolbar editor button has an icon only treatment. To see the code for the buttons, go to the [Button documentation](?path=/docs/sage-button--rich-text-editor)
+
+<Story id="sage-button--rich-text-editor" />
+
+#### Rich Text Editor Dropdown Button with Icon
+This variant of the toolbar edit button is a icon-only dropdown button. To see the code for the buttons, go to the [Button documentation](?path=/docs/sage-button--rich-text-editor)
+
+<Story id="sage-button--rich-text-editor-icon-and-arrow" />
+
+#### Rich Text Editor Dropdown Button
+There are cases when text is shown instead of the icon. To see the code for the buttons, go to the [Button documentation](?path=/docs/sage-dropdown--rich-text-editor-icon-only)
+
+<Story id="sage-button--rich-text-editor-words-and-arrow" />
+
+## Selected buttons
+Add the `selected` attribute to your `<SageButton />`s to receive the selected treatment.
+
+# Properties
+The available properties for `ToolbarEditor`.
+
+<ArgsTable of={ToolbarEditor} />
