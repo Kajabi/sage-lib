@@ -3,6 +3,55 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.8.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.7.0...@kajabi/sage-react@1.8.0) (2022-11-18)
+
+
+### Bug Fixes
+
+* **avatar:** removes unintended option for custom css class on badge ([02bf2aa](https://github.com/Kajabi/sage-lib/commit/02bf2aa48b9be94fad81c89d2b7631357987fb55))
+* **button:** add selected property ([3e9042d](https://github.com/Kajabi/sage-lib/commit/3e9042d326899b4546081b1a41b476759e9a928c))
+* **drodown:** rich text editor disclosure button update ([6dd416b](https://github.com/Kajabi/sage-lib/commit/6dd416b06386cbd092f84871a94ac6d28e4d5972))
+* **dropdown:** add rich text editor react styles ([a9821d7](https://github.com/Kajabi/sage-lib/commit/a9821d7af19d3f6b47f0222e4b97f69292dd3c31))
+* **dropdown:** linter ([cc4faf5](https://github.com/Kajabi/sage-lib/commit/cc4faf56ad93f2a729b1e1069c87b01786f87abc))
+* **dropdown:** update classnames ([1509adc](https://github.com/Kajabi/sage-lib/commit/1509adc78516f5a1929617a5b617e0244f42de9f))
+* **grid:** add horizontal alignment logic to grid rows ([b42dcce](https://github.com/Kajabi/sage-lib/commit/b42dccee9604ac7fb2854e41a6b2a68a831bc647))
+* **grid:** add to notes about how to use horizontal alignment ([127b6ff](https://github.com/Kajabi/sage-lib/commit/127b6ff4029192978c14249a8ccabe021b790519))
+* **grid:** cleanup rails code and make changes to new grid row story ([fdd66a9](https://github.com/Kajabi/sage-lib/commit/fdd66a9a1bddbd5b0d881d4f12d8c791e08aac9f))
+* **grid row:** remove inline css and generated gridrow text string from story ([1fafcbe](https://github.com/Kajabi/sage-lib/commit/1fafcbe0c41f625086e2a84df01389670370e740))
+* **icons:** added share icon ([56af73e](https://github.com/Kajabi/sage-lib/commit/56af73e9ad4c0fc07e65a338c5f720c392487d95))
+* **priority-plus:** add priority nav react pattern ([75924c6](https://github.com/Kajabi/sage-lib/commit/75924c6609fd29104980457b82d8dcbfe72182b9))
+* **priority-plus-nav:** linter ([e0d0ef2](https://github.com/Kajabi/sage-lib/commit/e0d0ef2938e828d4da35452a73934dfe1a30c54b))
+* **priority-plus-nav:** working through react errors ([e8c6650](https://github.com/Kajabi/sage-lib/commit/e8c66502683221d18e53fee94ce345fcf0f9d948))
+* **reactive-navigation:** pairing with Julian ([b3fc4ab](https://github.com/Kajabi/sage-lib/commit/b3fc4abe38aa72173e82d0d05eb85de691ff4607))
+* **reactive-navigation:** refactor per julian ([fe543cf](https://github.com/Kajabi/sage-lib/commit/fe543cf765fd06b9c58dd1a3ca422eff5f33e7a4))
+* **reactive-navigation:** update children props and demo ([139953a](https://github.com/Kajabi/sage-lib/commit/139953aa105b4b59151aea65c7b952aa4c97d111))
+* **reactive-navigation:** update styles for list items ([d7b2de0](https://github.com/Kajabi/sage-lib/commit/d7b2de0a57228739025167e4336d29f0f004c964))
+* **toolbar:** add gap options ([2b52073](https://github.com/Kajabi/sage-lib/commit/2b52073d8ee3f84130b429fc51a89406940ed19c))
+* **toolbar-editor:** add role and aria-label ([bc91b07](https://github.com/Kajabi/sage-lib/commit/bc91b07a9bdd8a7a251c30d18d258c02eb3719bf))
+* **toolbar-editor:** fixed renaming issue ([eeea24d](https://github.com/Kajabi/sage-lib/commit/eeea24ddf6db078af4a47b7effe92e0d4b86605b))
+* **toolbar-editor:** remove unnecessary prop and update demo name ([4ea7cca](https://github.com/Kajabi/sage-lib/commit/4ea7ccab9d84abb61cc45eb06a46512387e135ff))
+* **toolbar-editor:** rename component files ([1c07d00](https://github.com/Kajabi/sage-lib/commit/1c07d007cacdd6383e7853a8f6654d1fe4b880ee))
+* **toolbar-editor:** resolve lerna error ([91a6f3a](https://github.com/Kajabi/sage-lib/commit/91a6f3a659b10d0430b72a5b822a6f2cc369d7ac))
+* **toolbar-editor:** set Show options to true ([45e2df8](https://github.com/Kajabi/sage-lib/commit/45e2df82a453347f78f5a6e09c9aa1912b4b505f))
+* **toolbar-editor:** update docs ([6e04ed7](https://github.com/Kajabi/sage-lib/commit/6e04ed7e27409e17e7814964e23020139ef7f27c))
+* **toolbar-editor:** update docs ([7930893](https://github.com/Kajabi/sage-lib/commit/7930893733c8b26f00e9c13e0eb02da147364db0))
+* **toolbar-editor:** updates for classname ([ac8435d](https://github.com/Kajabi/sage-lib/commit/ac8435dd928fd6fdf549c1d47d987750ebc20509))
+* **toolbar-editor:** updates per review ([76063c4](https://github.com/Kajabi/sage-lib/commit/76063c4fb01f6e56a63a90203d9f73e83fc1a837))
+* **toolbar-editor:** updates to mdx ([ac9994d](https://github.com/Kajabi/sage-lib/commit/ac9994d74945a52a7b97d727bce898b4d01e8e64))
+* **toolbar-editor:** updates to story ([f5a2887](https://github.com/Kajabi/sage-lib/commit/f5a2887ddb395b6ed2c1da5a1facb970b4181a5b))
+* **toolbar-editor:** updates to styles and naming ([3e6930e](https://github.com/Kajabi/sage-lib/commit/3e6930e3a73c50acc3da83385afd4dc8543fc873))
+
+
+### Features
+
+* adding required prop to sage-react select component ([4293194](https://github.com/Kajabi/sage-lib/commit/42931944ab1dbaa6eb85dc884bda6f0b1bfb8a2b))
+* adding required prop to sage-react select component ([cf34b25](https://github.com/Kajabi/sage-lib/commit/cf34b258a72748b6a4d018d9e93a4479262e2736))
+* editor toolbar ([0b53203](https://github.com/Kajabi/sage-lib/commit/0b53203a742ce676535cc08423e879ada70c70b1))
+
+
+
+
+
 # [1.7.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.6.1...@kajabi/sage-react@1.7.0) (2022-10-31)
 
 

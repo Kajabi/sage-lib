@@ -3,6 +3,36 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.7.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.6.0...@kajabi/sage-assets@1.7.0) (2022-11-18)
+
+
+### Bug Fixes
+
+* **button:** removed :active styles ([3f0cea5](https://github.com/Kajabi/sage-lib/commit/3f0cea5a438340c29520b9a136fff70cebf3c466))
+* **button:** rich text dropdown icon size ([e289792](https://github.com/Kajabi/sage-lib/commit/e289792802971e917a92e74525027b62c6c8a16f))
+* **drodown:** rich text editor disclosure button update ([6dd416b](https://github.com/Kajabi/sage-lib/commit/6dd416b06386cbd092f84871a94ac6d28e4d5972))
+* **dropdown:** update classnames ([1509adc](https://github.com/Kajabi/sage-lib/commit/1509adc78516f5a1929617a5b617e0244f42de9f))
+* **grid:** add horizontal alignment logic to grid rows ([b42dcce](https://github.com/Kajabi/sage-lib/commit/b42dccee9604ac7fb2854e41a6b2a68a831bc647))
+* **icons:** added share icon ([56af73e](https://github.com/Kajabi/sage-lib/commit/56af73e9ad4c0fc07e65a338c5f720c392487d95))
+* **reactive-navigation:** pairing with Julian ([b3fc4ab](https://github.com/Kajabi/sage-lib/commit/b3fc4abe38aa72173e82d0d05eb85de691ff4607))
+* **reactive-navigation:** update styles for list items ([d7b2de0](https://github.com/Kajabi/sage-lib/commit/d7b2de0a57228739025167e4336d29f0f004c964))
+* **toolbar:** add gap options ([2b52073](https://github.com/Kajabi/sage-lib/commit/2b52073d8ee3f84130b429fc51a89406940ed19c))
+* **toolbar-editor:** rename component files ([1c07d00](https://github.com/Kajabi/sage-lib/commit/1c07d007cacdd6383e7853a8f6654d1fe4b880ee))
+* **toolbar-editor:** updated button spacing per review ([da8fb58](https://github.com/Kajabi/sage-lib/commit/da8fb58bb4a02eb84b69d5b904d5ee946b0e8798))
+* **toolbar-editor:** updates per review ([11f47dc](https://github.com/Kajabi/sage-lib/commit/11f47dcef141c60abeb75fb96578c7b98dc5a38b))
+* **toolbar-editor:** updates per review ([76063c4](https://github.com/Kajabi/sage-lib/commit/76063c4fb01f6e56a63a90203d9f73e83fc1a837))
+* **toolbar-editor:** updates to styles and naming ([3e6930e](https://github.com/Kajabi/sage-lib/commit/3e6930e3a73c50acc3da83385afd4dc8543fc873))
+* **toolbar-editor:** updates to vars and css cleanup ([6c5701e](https://github.com/Kajabi/sage-lib/commit/6c5701ee6447b21d259351c9657dc30f2fa120a3))
+
+
+### Features
+
+* editor toolbar ([0b53203](https://github.com/Kajabi/sage-lib/commit/0b53203a742ce676535cc08423e879ada70c70b1))
+
+
+
+
+
 # [1.6.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.5.0...@kajabi/sage-assets@1.6.0) (2022-10-31)
 
 

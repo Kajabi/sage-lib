@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.9.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.9.0...@kajabi/sage@5.9.1) (2022-11-18)
+
+
+### Bug Fixes
+
+* **drodown:** rich text editor disclosure button update ([6dd416b](https://github.com/Kajabi/sage-lib/commit/6dd416b06386cbd092f84871a94ac6d28e4d5972))
+* **dropdown:** linter ([cc4faf5](https://github.com/Kajabi/sage-lib/commit/cc4faf56ad93f2a729b1e1069c87b01786f87abc))
+* **dropdown:** update classnames ([1509adc](https://github.com/Kajabi/sage-lib/commit/1509adc78516f5a1929617a5b617e0244f42de9f))
+* **grid:** add horizontal alignment logic to grid rows ([b42dcce](https://github.com/Kajabi/sage-lib/commit/b42dccee9604ac7fb2854e41a6b2a68a831bc647))
+* **grid:** cleanup rails code and make changes to new grid row story ([fdd66a9](https://github.com/Kajabi/sage-lib/commit/fdd66a9a1bddbd5b0d881d4f12d8c791e08aac9f))
+* **grid:** updates to docs per review ([f1676db](https://github.com/Kajabi/sage-lib/commit/f1676dbeac9dc82bf1b813201f60cf562d123dde))
+* **icons:** added share icon ([56af73e](https://github.com/Kajabi/sage-lib/commit/56af73e9ad4c0fc07e65a338c5f720c392487d95))
+* **toolbar:** add gap options ([2b52073](https://github.com/Kajabi/sage-lib/commit/2b52073d8ee3f84130b429fc51a89406940ed19c))
+
+
+
+
+
 # [5.9.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.8.1...@kajabi/sage@5.9.0) (2022-10-31)
 
 
