@@ -4,8 +4,6 @@ import { Canvas, Meta, Story, ArgsTable } from '@storybook/addon-docs';
 import { selectArgs } from '../story-support/helpers';
 import { SageTokens } from '../configs';
 
-import { ROW_HORIZONTAL_ALIGNMENT_TYPES, ROW_VERTICAL_ALIGNMENT_TYPES } from './configs';
-
 import { GridRow } from './GridRow';
 import { Grid } from './Grid';
 import { Card } from '../Card';
@@ -17,10 +15,10 @@ import PropTypes from 'prop-types';
   component={GridRow}
   argTypes={{
     horizontalAlignment: {
-      options: Object.values(ROW_HORIZONTAL_ALIGNMENT_TYPES),
+      options: Object.values(GridRow.HORIZONTAL_ALIGNMENT_TYPES),
     },
     verticalAlignment: {
-      options: Object.values(ROW_VERTICAL_ALIGNMENT_TYPES),
+      options: Object.values(GridRow.VERTICAL_ALIGNMENT_TYPES),
     },
     ...selectArgs({
       spacerAbove: SageTokens.SPACERS,
@@ -56,21 +54,21 @@ export const AlignmentTypes = ({ types }) => {
 
 The horizontal alignment default for each <code>.sage-row</code> aligns columns to the start (left) of the <code>.sage-row</code> container. Alignments will only be visible if the total amount of width taken up by columns is less than the total amount of space.
 
-Supported Types: <AlignmentTypes types={ROW_HORIZONTAL_ALIGNMENT_TYPES}/>
+Supported Types: <AlignmentTypes types={GridRow.HORIZONTAL_ALIGNMENT_TYPES}/>
 
 ### Vertical Alignment
 
 The vertical alignment default for each <code>.sage-row</code> aligns columns to the start (top) of the <code>.sage-row</code> container. Alignments will only be visible if the total amount of height taken up by columns is less than the total amount of space.
 
-Supported Types: <AlignmentTypes types={ROW_VERTICAL_ALIGNMENT_TYPES}/>
+Supported Types: <AlignmentTypes types={GridRow.VERTICAL_ALIGNMENT_TYPES}/>
 
-## Canvas Example
+## Example
 
 <Canvas>
     <Story name="Default"
       args = {{
-        horizontalAlignment: ROW_HORIZONTAL_ALIGNMENT_TYPES.CENTER,
-        verticalAlignment: ROW_VERTICAL_ALIGNMENT_TYPES.CENTER,
+        horizontalAlignment: GridRow.HORIZONTAL_ALIGNMENT_TYPES.CENTER,
+        verticalAlignment: GridRow.VERTICAL_ALIGNMENT_TYPES.CENTER,
          children: (
           <>
             {columns.map((col, i) => (

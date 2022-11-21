@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { selectArgs } from '../story-support/helpers';
 import { Grid } from './Grid';
 import { Card } from '../Card';
-import { ROW_HORIZONTAL_ALIGNMENT_TYPES, ROW_VERTICAL_ALIGNMENT_TYPES } from './configs';
 
 export default {
   title: 'Sage/Grid',
@@ -139,123 +138,6 @@ Default.args = {
         <Grid.Col size="2">
           <GridDemo>
             2 col
-          </GridDemo>
-        </Grid.Col>
-      </Grid.Row>
-      <Grid.Row spacerBelow="sm" horizontalAlignment={ROW_HORIZONTAL_ALIGNMENT_TYPES.START}>
-        <Grid.Col size="2">
-          <GridDemo>
-            start
-          </GridDemo>
-        </Grid.Col>
-      </Grid.Row>
-      <Grid.Row spacerBelow="sm" horizontalAlignment={ROW_HORIZONTAL_ALIGNMENT_TYPES.CENTER}>
-        <Grid.Col size="2">
-          <GridDemo>
-            center
-          </GridDemo>
-        </Grid.Col>
-      </Grid.Row>
-      <Grid.Row spacerBelow="sm" horizontalAlignment={ROW_HORIZONTAL_ALIGNMENT_TYPES.END}>
-        <Grid.Col size="2">
-          <GridDemo>
-            end
-          </GridDemo>
-        </Grid.Col>
-      </Grid.Row>
-      <Grid.Row spacerBelow="sm" horizontalAlignment={ROW_HORIZONTAL_ALIGNMENT_TYPES.SPACE_BETWEEN}>
-        <Grid.Col size="2">
-          <GridDemo>
-            Space Between
-          </GridDemo>
-        </Grid.Col>
-        <Grid.Col size="2">
-          <GridDemo>
-            Space Between
-          </GridDemo>
-        </Grid.Col>
-      </Grid.Row>
-      <Grid.Row spacerBelow="sm" horizontalAlignment={ROW_HORIZONTAL_ALIGNMENT_TYPES.SPACE_AROUND}>
-        <Grid.Col size="2">
-          <GridDemo>
-            Space Around
-          </GridDemo>
-        </Grid.Col>
-        <Grid.Col size="2">
-          <GridDemo>
-            Space Around
-          </GridDemo>
-        </Grid.Col>
-      </Grid.Row>
-      <Grid.Row spacerBelow="sm" horizontalAlignment={ROW_HORIZONTAL_ALIGNMENT_TYPES.SPACE_EVENLY}>
-        <Grid.Col size="2">
-          <GridDemo>
-            Space Evenly
-          </GridDemo>
-        </Grid.Col>
-        <Grid.Col size="2">
-          <GridDemo>
-            Space Evenly
-          </GridDemo>
-        </Grid.Col>
-      </Grid.Row>
-      <Grid.Row spacerBelow="sm" verticalAlignment={ROW_VERTICAL_ALIGNMENT_TYPES.START}>
-        <Grid.Col size="2" style={{ height: '8em' }}>
-          <GridDemo>
-            Start
-          </GridDemo>
-        </Grid.Col>
-        <Grid.Col size="2">
-          <GridDemo>
-            Start
-          </GridDemo>
-        </Grid.Col>
-      </Grid.Row>
-      <Grid.Row spacerBelow="sm" verticalAlignment={ROW_VERTICAL_ALIGNMENT_TYPES.CENTER}>
-        <Grid.Col size="2" style={{ height: '8em' }}>
-          <GridDemo>
-            Center
-          </GridDemo>
-        </Grid.Col>
-        <Grid.Col size="2">
-          <GridDemo>
-            Center
-          </GridDemo>
-        </Grid.Col>
-      </Grid.Row>
-      <Grid.Row spacerBelow="sm" verticalAlignment={ROW_VERTICAL_ALIGNMENT_TYPES.END}>
-        <Grid.Col size="2" style={{ height: '8em' }}>
-          <GridDemo>
-            End
-          </GridDemo>
-        </Grid.Col>
-        <Grid.Col size="2">
-          <GridDemo>
-            End
-          </GridDemo>
-        </Grid.Col>
-      </Grid.Row>
-      <Grid.Row spacerBelow="sm" verticalAlignment={ROW_VERTICAL_ALIGNMENT_TYPES.BASELINE}>
-        <Grid.Col size="2" style={{ height: '8em' }}>
-          <GridDemo>
-            Baseline
-          </GridDemo>
-        </Grid.Col>
-        <Grid.Col size="2">
-          <GridDemo>
-            Baseline
-          </GridDemo>
-        </Grid.Col>
-      </Grid.Row>
-      <Grid.Row spacerBelow="sm" verticalAlignment={ROW_VERTICAL_ALIGNMENT_TYPES.STRETCH}>
-        <Grid.Col size="2" style={{ height: '8em' }}>
-          <GridDemo>
-            Stretch
-          </GridDemo>
-        </Grid.Col>
-        <Grid.Col size="2">
-          <GridDemo>
-            Stretch
           </GridDemo>
         </Grid.Col>
       </Grid.Row>

@@ -14,7 +14,7 @@ export const GRID_BREAKPOINT_TOGGLES = {
   HIDE: 'hide',
 };
 
-export const ROW_HORIZONTAL_ALIGNMENT_TYPES = {
+export const HORIZONTAL_ALIGNMENT_TYPES = {
   START: 'start',
   CENTER: 'center',
   END: 'end',
@@ -23,7 +23,7 @@ export const ROW_HORIZONTAL_ALIGNMENT_TYPES = {
   SPACE_EVENLY: 'space-evenly',
 };
 
-export const ROW_VERTICAL_ALIGNMENT_TYPES = {
+export const VERTICAL_ALIGNMENT_TYPES = {
   START: 'start',
   CENTER: 'center',
   END: 'end',
