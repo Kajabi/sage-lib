@@ -7,7 +7,7 @@ ARG BUNDLER_VERSION="2.3.14"
 ARG NODE_VERSION="14.20.0"
 ARG YARN_VERSION="1.22.18"
 ARG ARCH="x64"
-ARG NPMRC="CHANGEME"
+ARG GITHUB_TOKEN
 
 RUN apk add \
   bash \
@@ -49,8 +49,8 @@ COPY --chown=${NONROOT_UID}:${NONROOT_GID} . .
 
 RUN bundle install
 
-RUN echo "-----> Using .npmrc from config var NPMRC"
-RUN echo "$NPMRC" > ./.npmrc
+RUN echo "-----> Using .npmrc from config "
+RUN npm config set '//npm.pkg.github.com/:_authToken' '${GITHUB_TOKEN}'
 
 RUN yarn install --check-files
 RUN bundle exec rails assets:precompile SECRET_KEY_BASE=foobarbaz

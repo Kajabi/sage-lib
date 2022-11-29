@@ -34,3 +34,17 @@ The following generators will create the desired aspect in the main Documentatio
 #### React and System JS
 
 Often components here will need either system JavaScript or a similar React component. See the README within `packages/sage-system` and `packages/sage-react` as needed.
+
+#### Development
+
+In order to build the docker image you must specify a GITHUB_TOKEN as a build arg.
+
+    ```
+    docker buildx build --build-arg RAILS_ENV=production --build-arg GITHUB_TOKEN  -t sage-docs:foo --load .
+    ```
+
+Running the image (TBD):
+
+    ```
+    docker run --rm -it sage-docs:foo bash
+    ```
