@@ -6,7 +6,7 @@ jobs:
     name: Deploy
     runs-on: ubuntu-latest
     container:
-      image: ruby:2.5.9-alpine3.13
+      image: ruby:2.6.10-alpine3.15
 
     steps:
       - name: Install dependencies
@@ -15,8 +15,8 @@ jobs:
         run: |
           apk add --update --no-cache $BUILD_PACKAGES
 
-      - name: Install Bundler 2.3.14
-        run: gem install bundler:2.3.14
+      - name: Install Bundler 2.3.22
+        run: gem install bundler:2.3.22
 
       - name: Install node and yarn
         env:
