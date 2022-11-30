@@ -74,6 +74,7 @@ export const MultiMenuStoryTemplate = (args) => {
 
   return (
     <SelectDropdown
+      {...args}
       allowMultiselect={true}
       showSelectionsAsLabels={true}
       closePanelOnExit={false}

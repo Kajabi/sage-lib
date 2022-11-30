@@ -73,6 +73,7 @@ export const CustomItemsStoryTemplate = (args) => {
 
   return (
     <Dropdown
+      {...args}
       contained={true}
       customTrigger={(
         <Dropdown.TriggerSelect

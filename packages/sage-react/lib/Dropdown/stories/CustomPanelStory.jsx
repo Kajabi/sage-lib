@@ -33,6 +33,7 @@ export const CustomPanelStoryTemplate = (args) => {
 
   return (
     <Dropdown
+      {...args}
       align="right"
       icon={SageTokens.ICONS.USERS}
       isLabelVisible={true}

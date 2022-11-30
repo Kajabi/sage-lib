@@ -37,6 +37,7 @@ export const SelectDropdownDemoTemplate = (args) => {
   return (
     <>
       <SelectDropdown
+        {...args}
         items={items}
         onSearch={onSearch}
         onSelect={(data) => { /* eslint-disable-line no-unused-vars */
