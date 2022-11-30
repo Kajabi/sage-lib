@@ -75,7 +75,7 @@ const items = [
   }
 ];
 
-export const BulkActionsStory = () => (
+export const BulkActionsStoryTemplate = (args) => (
   <Dropdown label="Bulk Actions" contained={true}>
     <Dropdown.ItemList items={items} />
   </Dropdown>

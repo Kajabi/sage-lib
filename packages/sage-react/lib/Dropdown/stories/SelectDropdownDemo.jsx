@@ -4,7 +4,7 @@ import { Dropdown } from '../Dropdown';
 import { SelectDropdown } from '../SelectDropdown';
 import { sampleSelectItems } from './story-helper';
 
-export const SelectDropdownDemo = () => {
+export const SelectDropdownDemoTemplate = (args) => {
   const [resetToken, setResetToken] = useState(0);
   const [newItem, setNewItem] = useState('');
   const [items, setItems] = useState(sampleSelectItems);

@@ -6,11 +6,11 @@ import { OptionsDropdown } from './OptionsDropdown';
 import { ToolbarEditorDropdown } from './ToolbarEditorDropdown';
 import { ToolbarDropdown } from './ToolbarDropdown';
 import { defaultOptionsItems, sampleMenuItems } from './stories/story-helper';
-import { CustomItemsStory } from './stories/CustomItemsStory';
-import { CustomPanelStory } from './stories/CustomPanelStory';
-import { BulkActionsStory } from './stories/BulkActionsStory';
-import { MultiMenuStory } from './stories/MultiMenuStory';
-import { SelectDropdownDemo } from './stories/SelectDropdownDemo';
+import { CustomItemsStoryTemplate } from './stories/CustomItemsStory';
+import { CustomPanelStoryTemplate } from './stories/CustomPanelStory';
+import { BulkActionsStoryTemplate } from './stories/BulkActionsStory';
+import { MultiMenuStoryTemplate } from './stories/MultiMenuStory';
+import { SelectDropdownDemoTemplate } from './stories/SelectDropdownDemo';
 
 export default {
   title: 'Sage/Dropdown',
@@ -151,9 +151,7 @@ OptionMenu.decorators = [
   )
 ];
 
-export const DropdownMenuWithHeadings = () => (
-  <BulkActionsStory />
-);
+export const DropdownMenuWithHeadings = BulkActionsStoryTemplate.bind({});
 DropdownMenuWithHeadings.decorators = [
   (Story) => (
     <>
@@ -164,9 +162,7 @@ DropdownMenuWithHeadings.decorators = [
   )
 ];
 
-export const Select = () => (
-  <SelectDropdownDemo />
-);
+export const Select = SelectDropdownDemoTemplate.bind({});
 Select.decorators = [
   (Story) => (
     <>
@@ -177,9 +173,7 @@ Select.decorators = [
   )
 ];
 
-export const Multiselect = () => (
-  <MultiMenuStory />
-);
+export const Multiselect = MultiMenuStoryTemplate.bind({});
 Multiselect.decorators = [
   (Story) => (
     <>
@@ -190,9 +184,7 @@ Multiselect.decorators = [
   )
 ];
 
-export const MenuWithCustomPanel = () => (
-  <CustomPanelStory />
-);
+export const MenuWithCustomPanel = CustomPanelStoryTemplate.bind({});
 MenuWithCustomPanel.decorators = [
   (Story) => (
     <>
@@ -203,9 +195,7 @@ MenuWithCustomPanel.decorators = [
   )
 ];
 
-export const MenuWithCustomOptions = () => (
-  <CustomItemsStory />
-);
+export const MenuWithCustomOptions = CustomItemsStoryTemplate.bind({});
 MenuWithCustomOptions.decorators = [
   (Story) => (
     <>
