@@ -23,7 +23,7 @@ export default {
       },
     },
   },
-  decorators: [(Story) => <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}><Story /></div>],
+  decorators: [(Story) => <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>{ Story() }</div>],
   subcomponents: {
     'Dropdown.ItemList': Dropdown.ItemList
   },
@@ -72,7 +72,7 @@ Default.args = {
 Default.decorators = [
   (Story) => (
     <div style={{ minHeight: 450 }}>
-      <Story />
+      { Story() }
     </div>
   )
 ];
@@ -88,7 +88,7 @@ MenuWithArrow.args = {
 MenuWithArrow.decorators = [
   (Story) => (
     <div style={{ minHeight: 450 }}>
-      <Story />
+      { Story() }
     </div>
   )
 ];
@@ -103,7 +103,7 @@ OptionMenu.decorators = [
   (Story) => (
     <>
       <div style={{ minHeight: 300 }}>
-        <Story />
+        { Story() }
       </div>
     </>
   )
@@ -124,7 +124,7 @@ RichTextEditor.decorators = [
   (Story) => (
     <>
       <div style={{ minHeight: 300 }}>
-        <Story />
+        { Story() }
       </div>
     </>
   )
@@ -145,7 +145,7 @@ OptionMenu.decorators = [
   (Story) => (
     <>
       <div style={{ minHeight: 300 }}>
-        <Story />
+        { Story() }
       </div>
     </>
   )
@@ -158,7 +158,7 @@ DropdownMenuWithHeadings.decorators = [
   (Story) => (
     <>
       <div style={{ minHeight: 450 }}>
-        <Story />
+        { Story() }
       </div>
     </>
   )
@@ -171,7 +171,7 @@ Select.decorators = [
   (Story) => (
     <>
       <div style={{ minHeight: 400 }}>
-        <Story />
+        { Story() }
       </div>
     </>
   )
@@ -184,7 +184,7 @@ Multiselect.decorators = [
   (Story) => (
     <>
       <div style={{ minHeight: 400 }}>
-        <Story />
+        { Story() }
       </div>
     </>
   )
@@ -197,7 +197,7 @@ MenuWithCustomPanel.decorators = [
   (Story) => (
     <>
       <div style={{ minHeight: 400 }}>
-        <Story />
+        { Story() }
       </div>
     </>
   )
@@ -210,7 +210,7 @@ MenuWithCustomOptions.decorators = [
   (Story) => (
     <>
       <div style={{ minHeight: 400 }}>
-        <Story />
+        { Story() }
       </div>
     </>
   )
