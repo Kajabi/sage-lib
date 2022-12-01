@@ -124,7 +124,7 @@ export const RichTextEditorIconOnly = (args) => (
 RichTextEditorIconOnly.args = {
   isPinned: false
 };
-OptionMenu.decorators = [
+RichTextEditorIconOnly.decorators = [
   (Story) => (
     <>
       <div style={{ minHeight: 300 }}>
