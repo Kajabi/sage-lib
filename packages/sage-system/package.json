@@ -16,6 +16,11 @@
     "lib/*",
     "dist/*"
   ],
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0",
+    "yarn": ">=1.0.0"
+  },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
