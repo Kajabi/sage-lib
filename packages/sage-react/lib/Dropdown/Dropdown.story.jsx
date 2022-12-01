@@ -94,7 +94,7 @@ MenuWithArrow.decorators = [
 ];
 
 export const OptionMenu = (args) => (
-  <OptionsDropdown options={defaultOptionsItems} isPinned={args.isPinned} />
+  <OptionsDropdown options={defaultOptionsItems} isPinned={args.isPinned} {...args} />
 );
 OptionMenu.args = {
   isPinned: false
