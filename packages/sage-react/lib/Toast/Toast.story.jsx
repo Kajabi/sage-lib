@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { selectArgs } from '../story-support/helpers';
 import { SageTokens } from '../configs';
 import { Toast } from './Toast';
+import { Button } from '../Button';
 
 export default {
   title: 'Sage/Toast',
@@ -15,11 +16,27 @@ export default {
   },
 };
 
-const Template = (args) => <Toast {...args} />;
+const Template = (args) => {
+  const [isActive, setActive] = useState(false);
+  const invokeToast = () => {
+    setActive(!isActive);
+  };
+
+  const handleDismiss = () => {
+    setActive(false);
+  };
+
+  return (
+    <>
+      <Button onClick={invokeToast}>{`Toggle "${args.title}" Toast`}</Button>
+      <Toast {...args} isActive={isActive} onDismiss={handleDismiss} />
+    </>
+  );
+};
+
 export const Default = Template.bind({});
 Default.args = {
   icon: SageTokens.ICONS.INFO_CIRCLE,
-  isActive: true,
   title: 'Hello',
   description: 'How are you?',
   timeout: 3500,
@@ -29,7 +46,6 @@ Default.args = {
 export const WithLink = Template.bind({});
 WithLink.args = {
   icon: SageTokens.ICONS.INFO_CIRCLE,
-  isActive: true,
   title: 'Congratulations on your success',
   link: { href: 'http://kajabi.com', text: 'Go to next step' },
   type: Toast.TYPES.LOADING,
