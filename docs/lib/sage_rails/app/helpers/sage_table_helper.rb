@@ -222,6 +222,7 @@ module SageTableHelper
     table_classlist << " sage-table--condensed" if table.condensed
     table_classlist << " sage-table--has-leading-input" if table.has_leading_input
     table_classlist << " sage-table--has-menu-options" if table.has_menu_options
+    table_classlist << " sage-table--stack" if table.responsive_stack
 
     return table_classlist
   end

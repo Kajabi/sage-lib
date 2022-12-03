@@ -10,6 +10,7 @@ class SageTable < SageComponent
     reset_above: [:optional, NilClass, TrueClass],
     reset_below: [:optional, NilClass, TrueClass],
     responsive: [:optional, NilClass, TrueClass],
+    responsive_stack: [:optional, NilClass, TrueClass],
     rows: [:optional, NilClass, Array],
     selectable: [:optional, NilClass, TrueClass],
   })

@@ -3,8 +3,7 @@ Sage.table = (function() {
   // Variables
   // ==================================================
 
-  // const SELECTOR_TABLE = "[data-js-table]";
-  const SELECTOR_TABLE = ".sage-table";
+  const RESPONSIVE_TABLE = ".sage-table--stack";
   const MOBILE_TABLE_MAX_WIDTH = "767"; // SM_MAX
 
   // ==================================================
@@ -31,31 +30,55 @@ Sage.table = (function() {
     });
   }
 
-  // TODO: Q: do this for each table
+  // create alternative table headings for responsive "stacked" tables
   function ResponsiveCellHeaders(elem) {
-    var THarray = [];
-    var tables = document.querySelectorAll(SELECTOR_TABLE);
+    const tables = document.querySelectorAll(RESPONSIVE_TABLE);
+
+    const cellHeaderTemplate = (textLabel) => {
+      const cellHeader = document.createElement('span');
+
+      cellHeader.classList.add('sage-table-cell__heading--responsive');
+      cellHeader.innerText = textLabel.trim(); // trim whitespace just in case
+
+      // content must be hidden from screen readers since it duplicates table headers
+      cellHeader.setAttribute('aria-hidden', true);
+
+      return cellHeader;
+    };
+
     tables.forEach(table => {
-      // var table = document.querySelector(SELECTOR_TABLE);
-      var ths = table.getElementsByTagName("th");
-      for (var i = 0; i < ths.length; i++) {
-        var headingText = ths[i].innerHTML.trim();
-        THarray.push(headingText);
-      }
-      var styleElm = document.createElement("style"),
-        styleSheet;
-      document.head.appendChild(styleElm);
-      styleSheet = styleElm.sheet;
-      for (var i = 0; i < THarray.length; i++) {
-        styleSheet.insertRule(
-          "" +
-            elem +
-            " td:nth-child(" +
-            (i + 1) +
-            ')::before { content:"' + THarray[i] + ': ";}',
-          styleSheet.cssRules.length
-        );
-      }
+      const headers = table.querySelectorAll('thead th');
+      const rows = table.querySelectorAll('tbody tr');
+      const tableHeadings = [];
+
+      // populate an array with each table's headers
+      headers.forEach(header => {
+        const label = header.textContent.trim();
+        tableHeadings.push(label);
+      })
+
+      rows.forEach(row => {
+        if (!row.hasChildNodes()) return; // skip empty rows
+
+        const cells = Array.from(row.children);
+
+        // add header text to each cell
+        const updatedCells = cells.map((cell, i) => {
+          if (!tableHeadings[i].length) return; // skip empty headers
+
+          const newHeader = cellHeaderTemplate(tableHeadings[i]);
+          cell.prepend(newHeader);
+        });
+
+        // look for cells with positioned content
+        cells.forEach((cell) => {
+          const checkboxes = cell.querySelectorAll(".sage-checkbox");
+
+          if (checkboxes.length) {
+            cell.classList.add('sage-table-cell--checkbox');
+          }
+        })
+      })
     })
   }
 
@@ -68,7 +91,7 @@ Sage.table = (function() {
 
     group.forEach(el => {
       el.setAttribute('role', args.role);
-    })
+    });
   }
 
   function addTableAria() {
@@ -96,9 +119,9 @@ Sage.table = (function() {
     if (document.querySelector('.sage-table--sortable') !== null) {
       sortEvents();
     }
-    if (document.querySelector(SELECTOR_TABLE) !== null && window.innerWidth <= MOBILE_TABLE_MAX_WIDTH) {
+    if (document.querySelector(RESPONSIVE_TABLE) !== null && window.innerWidth <= MOBILE_TABLE_MAX_WIDTH) {
       addTableAria();
-      ResponsiveCellHeaders(SELECTOR_TABLE);
+      ResponsiveCellHeaders(RESPONSIVE_TABLE);
     }
   }
 

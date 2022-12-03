@@ -273,6 +273,10 @@ $-table-avatar-width: rem(32px);
   max-width: $-table-cell-truncate-width;
 }
 
+.sage-table-cell__heading--responsive {
+  display: none;
+}
+
 .sage-table-cell--checkbox {
   width: $-table-checkbox-width;
 }
@@ -350,16 +354,21 @@ $-table-avatar-width: rem(32px);
 }
 
 @media screen and (max-width: sage-breakpoint(sm-max)) {
-  .sage-table {
+  .sage-table--stack {
     thead {
       tr,
       &::after {
-        display: none;
+        @include visually-hidden;
       }
     }
 
     tbody tr {
       position: relative;
+    }
+
+    .sage-table-cell__heading--responsive {
+      display: inline-block;
+      align-items: center;
     }
 
     &.sage-table--has-menu-options {
@@ -373,121 +382,88 @@ $-table-avatar-width: rem(32px);
     td {
       padding: rem(6px) 0;
     }
-  }
 
-  table,
-  thead,
-  tbody,
-  th,
-  td,
-  tr,
-  caption {
-    display: block;
-  }
-
-  tr {
-    padding: rem(16px) rem(18px);
-    border: sage-border(default);
-    border-radius: sage-border(radius);
-
-    & + & {
-      margin-top: sage-spacing(sm);
-    }
-  }
-
-  td {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 1em 0.5em;
-    justify-content: space-between;
-  }
-
-  td:nth-of-type(4)::before,
-  td:nth-of-type(5)::before {
-    text-align: left;
-  }
-
-  // TODO UXD - QUINTON - find scalable solution
-  td::before {
-    color: sage-color(charcoal, 200);
-  }
-  td:nth-child(1)::before {
-    content: "Name ";
-    display: none;
-  }
-
-  td:nth-child(2)::before {
-    content: "Email ";
-  }
-
-  td:nth-child(3)::before {
-    content: "Labels ";
-  }
-
-  td:nth-child(4)::before {
-    content: "Status ";
-  }
-
-  td:nth-child(5)::before {
-    content: "Status ";
-  }
-
-  td:nth-child(6)::before {
-    content: "Status ";
-  }
-
-  td:nth-child(7)::before {
-    content: "Status ";
-  }
-
-  .sage-table--has-menu-options td:last-child::before {
-    display: none;
-  }
-
-  .sage-table--has-leading-input {
-    td:nth-child(2) {
-      margin-left: sage-spacing(sm);
+    // table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr,
+    caption {
+      display: block;
     }
 
-    td:nth-child(-n+2) {
-      display: inline-flex;
+    tr {
+      padding: rem(16px) rem(18px);
+      border: sage-border(default);
+      border-radius: sage-border(radius);
+
+      & + & {
+        margin-top: sage-spacing(sm);
+      }
     }
 
-    td:nth-child(n+3) {
-      margin-left: rem(40px);
+    td {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-gap: 1em 0.5em;
+      justify-content: space-between;
     }
 
-    td:nth-child(2)::before {
-      content: "Name ";
+    // td:nth-of-type(4)::before,
+    // td:nth-of-type(5)::before {
+    //   text-align: left;
+    // }
+
+    .sage-table--has-menu-options td:last-child::before {
       display: none;
     }
 
-    td:nth-child(3)::before {
-      content: "Email ";
-    }
+    .sage-table--has-leading-input {
+      td:nth-child(2) {
+        margin-left: sage-spacing(sm);
+      }
 
-    td:nth-child(4)::before {
-      content: "Labels ";
-    }
+      td:nth-child(-n+2) {
+        display: inline-flex;
+      }
 
-    td:nth-child(5)::before {
-      content: "Status ";
-    }
+      td:nth-child(n+3) {
+        margin-left: rem(40px);
+      }
 
-    td:nth-child(6)::before {
-      content: "Status ";
-    }
+      td:nth-child(2)::before {
+        content: "Name ";
+        display: none;
+      }
 
-    td:nth-child(7)::before {
-      content: "Status ";
-    }
+      td:nth-child(3)::before {
+        content: "Email ";
+      }
 
-    td:nth-child(8)::before {
-      content: "Status ";
-    }
+      td:nth-child(4)::before {
+        content: "Labels ";
+      }
 
-    td:last-child::before {
-      display: none;
+      td:nth-child(5)::before {
+        content: "Status ";
+      }
+
+      td:nth-child(6)::before {
+        content: "Status ";
+      }
+
+      td:nth-child(7)::before {
+        content: "Status ";
+      }
+
+      td:nth-child(8)::before {
+        content: "Status ";
+      }
+
+      td:last-child::before {
+        display: none;
+      }
     }
   }
 }
