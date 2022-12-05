@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@1.2.2...@kajabi/sage-system@1.2.3) (2022-12-05)
+
+
+### Bug Fixes
+
+* removing engines ([0e82031](https://github.com/Kajabi/sage-lib/commit/0e820315bf4f1e7cc474d585ecfa429f173a1802))
+* sage-packs ([0190fed](https://github.com/Kajabi/sage-lib/commit/0190fedfa59b078f9ee8e08fc77ca1476306ad85))
+
+
+
+
+
 ## [1.2.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@1.2.1...@kajabi/sage-system@1.2.2) (2022-10-31)
 
 

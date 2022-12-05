@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.7.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.7.0...@kajabi/sage-assets@1.7.1) (2022-12-05)
+
+
+### Bug Fixes
+
+* adding back engines ([5453277](https://github.com/Kajabi/sage-lib/commit/545327731488846503b51430277c0492b7c98caf))
+* adding info ([10320b1](https://github.com/Kajabi/sage-lib/commit/10320b1e38892650669ab94e1ba08b0a6b496bdf))
+* moving dockerfiles ([7783301](https://github.com/Kajabi/sage-lib/commit/77833018fc4c78254bade039bac894e999729b8b))
+* removing engines ([0e82031](https://github.com/Kajabi/sage-lib/commit/0e820315bf4f1e7cc474d585ecfa429f173a1802))
+* update dockerfile ([4972071](https://github.com/Kajabi/sage-lib/commit/49720718e4f67d55e38424e2614b6a299fcc6c9e))
+* updating version numbers ([9a622c6](https://github.com/Kajabi/sage-lib/commit/9a622c65a4e446c909d0f0c321054401455eb5fa))
+* **grid row:** add vertical alignment props ([b4b77dc](https://github.com/Kajabi/sage-lib/commit/b4b77dc3c2f8d72066bf7e4f4750e58b3436b6f5))
+* **popover:** add caret to popover ([fef81f3](https://github.com/Kajabi/sage-lib/commit/fef81f3556a83f9e187217d80786314083f60a92))
+
+
+
+
+
 # [1.7.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.6.0...@kajabi/sage-assets@1.7.0) (2022-11-18)
 
 

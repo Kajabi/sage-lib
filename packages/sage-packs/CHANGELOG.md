@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.14](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@1.0.13...@kajabi/sage-packs@1.0.14) (2022-12-05)
+
+
+### Bug Fixes
+
+* adding back engines ([5453277](https://github.com/Kajabi/sage-lib/commit/545327731488846503b51430277c0492b7c98caf))
+* removing engines ([0e82031](https://github.com/Kajabi/sage-lib/commit/0e820315bf4f1e7cc474d585ecfa429f173a1802))
+* updating version numbers ([9a622c6](https://github.com/Kajabi/sage-lib/commit/9a622c65a4e446c909d0f0c321054401455eb5fa))
+
+
+
+
+
 ## [1.0.13](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@1.0.12...@kajabi/sage-packs@1.0.13) (2022-11-18)
 
 **Note:** Version bump only for package @kajabi/sage-packs

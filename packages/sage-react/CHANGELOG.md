@@ -3,6 +3,38 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.9.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.8.0...@kajabi/sage-react@1.9.0) (2022-12-05)
+
+
+### Bug Fixes
+
+* **storybook:** fix Tabs story ([d0660a5](https://github.com/Kajabi/sage-lib/commit/d0660a5141d8feefb2cffabce5de7ac8d7c2ba88))
+* **toast:** fix loading svg ([c913448](https://github.com/Kajabi/sage-lib/commit/c9134485770a829070d97e6a0fea683ed10d93ae))
+* adding back engines ([5453277](https://github.com/Kajabi/sage-lib/commit/545327731488846503b51430277c0492b7c98caf))
+* moving dockerfiles ([7783301](https://github.com/Kajabi/sage-lib/commit/77833018fc4c78254bade039bac894e999729b8b))
+* removing engines ([0e82031](https://github.com/Kajabi/sage-lib/commit/0e820315bf4f1e7cc474d585ecfa429f173a1802))
+* updating version numbers ([9a622c6](https://github.com/Kajabi/sage-lib/commit/9a622c65a4e446c909d0f0c321054401455eb5fa))
+* **storybook:** add the Toast story back ([bf0b3ec](https://github.com/Kajabi/sage-lib/commit/bf0b3ec10d7abf10e605b0247973912466675d23))
+* **storybook:** fix dropdown story to show code when using decorators ([ba5e292](https://github.com/Kajabi/sage-lib/commit/ba5e292a7bdd95bcfb0ca656466847eaf5cb2cda))
+
+
+### Features
+
+* setting up Dockerfile and Readme for sage-react ([4268e8c](https://github.com/Kajabi/sage-lib/commit/4268e8c3af692d9719bf3d4fc39d4ed6f1b7a12b))
+
+
+
+## 5.9.1 (2022-11-29)
+
+
+### Bug Fixes
+
+* **grid row:** add vertical alignment props ([b4b77dc](https://github.com/Kajabi/sage-lib/commit/b4b77dc3c2f8d72066bf7e4f4750e58b3436b6f5))
+
+
+
+
+
 # [1.8.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.7.0...@kajabi/sage-react@1.8.0) (2022-11-18)
 
 
