@@ -6,7 +6,7 @@ import { ModalFooter } from './ModalFooter';
 import { ModalFooterAside } from './ModalFooterAside';
 import { ModalHeader } from './ModalHeader';
 import { ModalHeaderAside } from './ModalHeaderAside';
-import { MODAL_ANIMATION_PRESETS, MODAL_ANIMATION_DIRECTIONS, MODAL_CONTAINER_SIZES } from './configs';
+import { MODAL_ANIMATION_PRESETS, MODAL_ANIMATION_DIRECTIONS, MODAL_SIZES } from './configs';
 
 export const Modal = ({
   active,
@@ -108,7 +108,7 @@ Modal.Header = ModalHeader;
 Modal.HeaderAside = ModalHeaderAside;
 Modal.ANIMATION_PRESETS = MODAL_ANIMATION_PRESETS;
 Modal.ANIMATION_DIRECTIONS = MODAL_ANIMATION_DIRECTIONS;
-Modal.SIZES = MODAL_CONTAINER_SIZES;
+Modal.SIZES = MODAL_SIZES;
 
 Modal.defaultProps = {
   active: false,

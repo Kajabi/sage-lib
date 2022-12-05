@@ -4,7 +4,7 @@ import { Button } from '../Button';
 import { ProgressBar } from '../ProgressBar';
 import { Icon } from '../Icon';
 import { SageTokens, SageClassnames } from '../configs';
-import { disableArgs } from '../story-support/helpers';
+import { disableArgs, selectArgs } from '../story-support/helpers';
 import { Modal } from './Modal';
 
 const DefaultBody = ({ onExit }) => (
@@ -160,6 +160,9 @@ export default {
   },
   argTypes: {
     ...disableArgs(['children', 'onExit']),
+    ...selectArgs({
+      size: Modal.SIZES,
+    })
   },
 };
 
@@ -265,7 +268,7 @@ export const ModalWithCustomSize = (args) => {
         active={active}
         animation={{ direction: Modal.ANIMATION_DIRECTIONS.BOTTOM }}
         onExit={onExit}
-        size={Modal.SIZES.FULL}
+        size={Modal.SIZES.LG}
         {...args}
       >
         <DefaultBody onExit={onExit} />
