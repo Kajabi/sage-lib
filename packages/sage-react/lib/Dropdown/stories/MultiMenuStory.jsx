@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { SelectDropdown } from '../SelectDropdown';
 
-export const MultiMenuStory = () => {
+export const MultiMenuStoryTemplate = (args) => {
   const defaultItems = [
     {
       id: 1,
@@ -74,6 +74,7 @@ export const MultiMenuStory = () => {
 
   return (
     <SelectDropdown
+      {...args}
       allowMultiselect={true}
       showSelectionsAsLabels={true}
       closePanelOnExit={false}

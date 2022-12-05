@@ -34,3 +34,28 @@ The following generators will create the desired aspect in the main Documentatio
 #### React and System JS
 
 Often components here will need either system JavaScript or a similar React component. See the README within `packages/sage-system` and `packages/sage-react` as needed.
+
+#### Development
+
+##### Production Image
+
+In order to build the docker image you must specify a GITHUB_TOKEN as a build arg.
+
+    ```
+    docker buildx build --build-arg RAILS_ENV=production --build-arg GITHUB_TOKEN  -t sage-docs --load .
+    ```
+
+Running the image:
+
+    ```
+    docker run --rm -it -p 3000:3000 -e RAILS_ENV=production -e SECRET_KEY_BASE=foobarbaz -t sage-docs
+    ```
+
+The image requires SSL in production mode. You can use ngrok.io to setup SSL
+
+    ```
+    ngrok http 3000
+    ```
+
+You can then access the image running locally via your ngrok domain for verification. Fonts may not work if your domain
+is not allowed.

@@ -6,11 +6,11 @@ import { OptionsDropdown } from './OptionsDropdown';
 import { ToolbarEditorDropdown } from './ToolbarEditorDropdown';
 import { ToolbarDropdown } from './ToolbarDropdown';
 import { defaultOptionsItems, sampleMenuItems } from './stories/story-helper';
-import { CustomItemsStory } from './stories/CustomItemsStory';
-import { CustomPanelStory } from './stories/CustomPanelStory';
-import { BulkActionsStory } from './stories/BulkActionsStory';
-import { MultiMenuStory } from './stories/MultiMenuStory';
-import { SelectDropdownDemo } from './stories/SelectDropdownDemo';
+import { CustomItemsStoryTemplate } from './stories/CustomItemsStory';
+import { CustomPanelStoryTemplate } from './stories/CustomPanelStory';
+import { BulkActionsStoryTemplate } from './stories/BulkActionsStory';
+import { MultiMenuStoryTemplate } from './stories/MultiMenuStory';
+import { SelectDropdownDemoTemplate } from './stories/SelectDropdownDemo';
 
 export default {
   title: 'Sage/Dropdown',
@@ -23,7 +23,7 @@ export default {
       },
     },
   },
-  decorators: [(Story) => <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}><Story /></div>],
+  decorators: [(Story) => <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>{ Story() }</div>],
   subcomponents: {
     'Dropdown.ItemList': Dropdown.ItemList
   },
@@ -72,7 +72,7 @@ Default.args = {
 Default.decorators = [
   (Story) => (
     <div style={{ minHeight: 450 }}>
-      <Story />
+      { Story() }
     </div>
   )
 ];
@@ -88,7 +88,7 @@ MenuWithArrow.args = {
 MenuWithArrow.decorators = [
   (Story) => (
     <div style={{ minHeight: 450 }}>
-      <Story />
+      { Story() }
     </div>
   )
 ];
@@ -103,7 +103,7 @@ OptionMenu.decorators = [
   (Story) => (
     <>
       <div style={{ minHeight: 300 }}>
-        <Story />
+        { Story() }
       </div>
     </>
   )
@@ -124,7 +124,7 @@ RichTextEditor.decorators = [
   (Story) => (
     <>
       <div style={{ minHeight: 300 }}>
-        <Story />
+        { Story() }
       </div>
     </>
   )
@@ -145,72 +145,62 @@ OptionMenu.decorators = [
   (Story) => (
     <>
       <div style={{ minHeight: 300 }}>
-        <Story />
+        { Story() }
       </div>
     </>
   )
 ];
 
-export const DropdownMenuWithHeadings = () => (
-  <BulkActionsStory />
-);
+export const DropdownMenuWithHeadings = BulkActionsStoryTemplate.bind({});
 DropdownMenuWithHeadings.decorators = [
   (Story) => (
     <>
       <div style={{ minHeight: 450 }}>
-        <Story />
+        { Story() }
       </div>
     </>
   )
 ];
 
-export const Select = () => (
-  <SelectDropdownDemo />
-);
+export const Select = SelectDropdownDemoTemplate.bind({});
 Select.decorators = [
   (Story) => (
     <>
       <div style={{ minHeight: 400 }}>
-        <Story />
+        { Story() }
       </div>
     </>
   )
 ];
 
-export const Multiselect = () => (
-  <MultiMenuStory />
-);
+export const Multiselect = MultiMenuStoryTemplate.bind({});
 Multiselect.decorators = [
   (Story) => (
     <>
       <div style={{ minHeight: 400 }}>
-        <Story />
+        { Story() }
       </div>
     </>
   )
 ];
 
-export const MenuWithCustomPanel = () => (
-  <CustomPanelStory />
-);
+export const MenuWithCustomPanel = CustomPanelStoryTemplate.bind({});
 MenuWithCustomPanel.decorators = [
   (Story) => (
     <>
       <div style={{ minHeight: 400 }}>
-        <Story />
+        { Story() }
       </div>
     </>
   )
 ];
 
-export const MenuWithCustomOptions = () => (
-  <CustomItemsStory />
-);
+export const MenuWithCustomOptions = CustomItemsStoryTemplate.bind({});
 MenuWithCustomOptions.decorators = [
   (Story) => (
     <>
       <div style={{ minHeight: 400 }}>
-        <Story />
+        { Story() }
       </div>
     </>
   )

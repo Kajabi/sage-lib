@@ -29,7 +29,7 @@ ProductCard.propTypes = {
   color: Icon.propTypes.cardColor,
 };
 
-export const CustomItemsStory = () => {
+export const CustomItemsStoryTemplate = (args) => {
   const initialLabel = 'Select a product';
   const items = [
     {
@@ -73,6 +73,7 @@ export const CustomItemsStory = () => {
 
   return (
     <Dropdown
+      {...args}
       contained={true}
       customTrigger={(
         <Dropdown.TriggerSelect

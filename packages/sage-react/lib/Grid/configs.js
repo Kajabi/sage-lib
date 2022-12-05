@@ -23,6 +23,14 @@ export const HORIZONTAL_ALIGNMENT_TYPES = {
   SPACE_EVENLY: 'space-evenly',
 };
 
+export const VERTICAL_ALIGNMENT_TYPES = {
+  START: 'start',
+  CENTER: 'center',
+  END: 'end',
+  BASELINE: 'baseline',
+  STRETCH: 'stretch',
+};
+
 export const validNumberWithinGrid = (props, propName, componentName) => {
   componentName = componentName || 'ANONYMOUS';
 
