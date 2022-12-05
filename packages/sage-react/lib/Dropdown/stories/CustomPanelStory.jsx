@@ -24,7 +24,7 @@ CustomPanelBody.propTypes = {
   onExit: PropTypes.func,
 };
 
-export const CustomPanelStoryTemplate = (args) => {
+export const CustomPanelStory = () => {
   const [dropdownToken, setDropdownToken] = useState(uuid());
 
   const onClickSubmit = () => {
@@ -33,20 +33,19 @@ export const CustomPanelStoryTemplate = (args) => {
 
   return (
     <Dropdown
-      {...args}
       align="right"
       icon={SageTokens.ICONS.USERS}
       isLabelVisible={true}
       label="Login"
       panelStateToken={dropdownToken}
     >
-      <Card.Stack style={{ padding: '24px' }}>
+      <CustomPanelBody>
         <Input id={uuid()} type="text" label="Username" />
         <Input id={uuid()} type="password" label="Password" />
         <Button onClick={onClickSubmit} color={Button.COLORS.PRIMARY} alignEnd={true}>
           Log in
         </Button>
-      </Card.Stack>
+      </CustomPanelBody>
     </Dropdown>
   );
 };

@@ -6,7 +6,7 @@ The following can be of assistance when you need to add a new component to the p
 
 - Copy the `SampleComponent` folder within `bin` into `lib` for a starter file set. Replace `SampleComponent` with your actual component's name in any files and file names. These include:
   - `SampleComponent.jsx` the main component file.
-  - `SampleComponent.story.jsx` a Storybook story file to exhibit uses of the component.
+  - `SampleComponent.story.jsx` a Storybook story file to exhibit uses of the component. 
   - `configs.js` optional definition file for tokens and other utilities for this component.
   - `index.js` root export for this component to be referenced consistently elsewhere.
 - Add an entry for this new component in `packages/sage-react/lib/index.js` in keeping with the other entries.
@@ -63,19 +63,3 @@ Runs a `browsersync` server on http://localhost:4110/ with live reload to displa
 ### `test:dev`
 
 Runs `test:coverage:watch` and `test:coverage:server` in parallel for an integrated testing Jest experience. If on first load you see `Cannot GET /` simply make a change to a `.spec.jsx` file, watch for console test output to finish and then refresh the browser. Live reload should continue thereafter.
-
-## Production Image
-
-In order to build the docker image you must specify a GITHUB_TOKEN as a build arg.
-
-    ```
-    docker buildx build --build-arg GITHUB_TOKEN=<REDACTED> -t sage-storybook --load .
-    ```
-
-Running the image:
-
-    ```
-    docker run --rm -it -p 4100:4100 -e GITHUB_TOKEN=<REDACTED> -t sage-storybook
-    ```
-
-Fonts may not work if your domain is not allowed.

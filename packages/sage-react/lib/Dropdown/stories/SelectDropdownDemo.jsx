@@ -4,7 +4,7 @@ import { Dropdown } from '../Dropdown';
 import { SelectDropdown } from '../SelectDropdown';
 import { sampleSelectItems } from './story-helper';
 
-export const SelectDropdownDemoTemplate = (args) => {
+export const SelectDropdownDemo = () => {
   const [resetToken, setResetToken] = useState(0);
   const [newItem, setNewItem] = useState('');
   const [items, setItems] = useState(sampleSelectItems);
@@ -37,7 +37,6 @@ export const SelectDropdownDemoTemplate = (args) => {
   return (
     <>
       <SelectDropdown
-        {...args}
         items={items}
         onSearch={onSearch}
         onSelect={(data) => { /* eslint-disable-line no-unused-vars */

@@ -63,7 +63,7 @@ export const Toast = ({
     if (type === Toast.TYPES.LOADING) {
       return (
         <svg className="sage-loader__spinner sage-loader__spinner--loading-button" aria-hidden="true" viewBox="25 25 50 50">
-          <circle className="sage-loader__spinner sage-loader__spinner-path sage-loader__spinner-path--loading-button" cx="50" cy="50" r="20" fill="none" stroke="0072EF" strokeWidth="4" />
+          <circle className="sage-loader__spinner sage-loader__spinner-path--loading-button" cx="50" cy="50" r="20" fill="none" stroke="0072EF" strokeWidth="4" />
         </svg>
       );
     }

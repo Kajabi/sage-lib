@@ -169,6 +169,7 @@
 
 <h4 class="t-sage-heading-6">Multiple breakpoints</h4>
 <%= sage_component SageGridRow, {
+    horizontal_alignment: "space-between",
     html_attributes: {
       "aria-hidden": true
     }
@@ -347,8 +348,38 @@
 
 <div class="sage-type">
   <h2 id="grid-alignment">Alignment</h2>
+  <h3 class="t-sage-heading-5" id="grid-alignment-vertical">Vertical alignment</h3>
+  <p>The default vertical alignment for each <code>.sage-row</code> aligns its columns to the top of the <code>.sage-row</code> container. This can be changed by adding one of the following <code>sage-row--valign</code> classes:</p>
+
+  <div class="sage-table-wrapper">
+    <div class="sage-table-wrapper__overflow">
+      <table class="sage-table">
+        <thead>
+          <tr>
+            <th>Property</th>
+            <th>Vertical alignment</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Default (<code>.sage-row</code>)</td>
+            <td>Top</td>
+          </tr>
+          <tr>
+            <td><code>.sage-row--valign-center</code></td>
+            <td>Middle (center)</td>
+          </tr>
+          <tr>
+            <td><code>.sage-row--valign-bottom</code></td>
+            <td>Bottom</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
   <h3 class="t-sage-heading-5" id="grid-alignment-horizontal">Horizontal Alignment</h3>
-  <p>The horizontal alignment default for each <code>.sage-row</code> aligns columns to the start (left) of the <code>.sage-row</code> container. Alignments will only be visible if the total amount of width taken up by columns is less than the total amount of space.</p>
+  <p>The horizontal alignment default for each <code>.sage-row</code> aligns columns to the start (left) of the <code>.sage-row</code> container. Alignments will only be visible if the total amount of space taken up by columns is less than the total amount of space.</p>
   <p>Supported values: <code>start</code>, <code>center</code>, <code>end</code>, <code>space-between</code>, <code>space-around</code>, <code>space-evenly</code>.</p>
   <br>
   <%= sage_component SageGridRow, {
@@ -396,61 +427,6 @@
 
   <pre class="prettyprint"><code>&lt;%= sage_component SageGridRow, {
   horizontal_alignment: &quot;space-around&quot;
-} do %&gt;
-  ...
-&lt;% end %&gt;</code></pre>
-
-
-
-<h3 class="t-sage-heading-5" id="grid-alignment-vertical">Vertical Alignment</h3>
-  <p>The vertical alignment default for each <code>.sage-row</code> aligns columns to the start (top) of the <code>.sage-row</code> container. Alignments will only be visible if the total amount of height taken up by columns is less than the total amount of space.</p>
-  <p>Supported values: <code>start</code>, <code>center</code>, <code>end</code>, <code>baseline</code>, <code>stretch</code>.</p>
-  <br>
-  <%= sage_component SageGridRow, {
-    html_attributes: {
-      "aria-hidden": true
-    },
-    vertical_alignment: "center"
-  } do %>
-    <%= sage_component SageGridCol, {
-      small: "2",
-      medium: "2",
-      large: "2",
-    } do %>
-      <div class="grid-item">Tall column with multiple lines</div>
-    <% end %>
-    <%= sage_component SageGridCol, {
-      small: "2",
-      medium: "2",
-      large: "2",
-    } do %>
-      <div class="grid-item">Center</div>
-    <% end %>
-  <% end %>
-  <%= sage_component SageGridRow, {
-    html_attributes: {
-      "aria-hidden": true
-    },
-    vertical_alignment: "end"
-  } do %>
-    <%= sage_component SageGridCol, {
-      small: "2",
-      medium: "2",
-      large: "2",
-    } do %>
-      <div class="grid-item">End</div>
-    <% end %>
-    <%= sage_component SageGridCol, {
-      small: "2",
-      medium: "2",
-      large: "2",
-    } do %>
-      <div class="grid-item">Tall column with multiple lines</div>
-    <% end %>
-  <% end %>
-
-  <pre class="prettyprint"><code>&lt;%= sage_component SageGridRow, {
-  vertical_alignment: &quot;center&quot;
 } do %&gt;
   ...
 &lt;% end %&gt;</code></pre>

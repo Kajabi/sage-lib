@@ -2,12 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { SageTokens } from '../configs';
-import { HORIZONTAL_ALIGNMENT_TYPES, VERTICAL_ALIGNMENT_TYPES } from './configs';
+import { HORIZONTAL_ALIGNMENT_TYPES } from './configs';
 
 export const GridRow = ({
   className,
   horizontalAlignment,
-  verticalAlignment,
   spacerAbove,
   spacerBelow,
   ...rest
@@ -18,7 +17,6 @@ export const GridRow = ({
     className,
     {
       [`sage-row--align-${horizontalAlignment}`]: horizontalAlignment,
-      [`sage-row--valign-${verticalAlignment}`]: verticalAlignment,
       'sage-spacer-top': spacerBelow === SageTokens.SPACERS.MD,
       [`sage-spacer-top-${spacerAbove}`]: spacerAbove && spacerAbove !== SageTokens.SPACERS.MD,
       'sage-spacer-bottom': spacerBelow === SageTokens.SPACERS.MD,
@@ -33,13 +31,9 @@ export const GridRow = ({
   );
 };
 
-GridRow.HORIZONTAL_ALIGNMENT_TYPES = HORIZONTAL_ALIGNMENT_TYPES;
-GridRow.VERTICAL_ALIGNMENT_TYPES = VERTICAL_ALIGNMENT_TYPES;
-
 GridRow.defaultProps = {
   className: null,
   horizontalAlignment: null,
-  verticalAlignment: null,
   spacerAbove: null,
   spacerBelow: null,
 };
@@ -52,11 +46,7 @@ GridRow.propTypes = {
   /**
    * Sets the horizontal alignment for the grid row
    */
-  horizontalAlignment: PropTypes.oneOf(Object.values(GridRow.HORIZONTAL_ALIGNMENT_TYPES)),
-  /**
-   * Sets the vertical alignment for the grid row
-   */
-  verticalAlignment: PropTypes.oneOf(Object.values(GridRow.VERTICAL_ALIGNMENT_TYPES)),
+  horizontalAlignment: PropTypes.oneOf(Object.values(HORIZONTAL_ALIGNMENT_TYPES)),
   /**
    * Adds preset spacer to top of grid row
    */

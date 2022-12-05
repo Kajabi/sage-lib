@@ -17,6 +17,11 @@
     "lib/*",
     "dist/*"
   ],
+  "engines": {
+    "node": "14.x",
+    "npm": "6.x",
+    "yarn": "1.x"
+  },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
@@ -26,11 +31,6 @@
   },
   "bugs": {
     "url": "https://github.com/Kajabi/sage-lib/issues"
-  },
-  "engines": {
-    "node": ">=14.0.0",
-    "npm": ">=6.0.0",
-    "yarn": ">=1.0.0"
   },
   "scripts": {
     "build": "build-storybook -o build && webpack --config webpack/webpack.prod.js",

@@ -1,15 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { selectArgs } from '../story-support/helpers';
+import { Button } from '../Button';
 import { SageTokens } from '../configs';
 import { Tabs } from './Tabs';
 
 export default {
   title: 'Sage/Tabs',
   component: Tabs,
-  subcomponents: {
-    'Tabs.Item': Tabs.Item,
-    'Tabs.Pane': Tabs.Pane
-  },
   // displays description on Docs tab
   parameters: {
     docs: {
@@ -18,7 +15,7 @@ export default {
       },
     },
   },
-  decorators: [(Story) => <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}> { Story() }</div>],
+  decorators: [(Story) => <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}><Story /></div>],
   argTypes: {
     ...selectArgs({
       tabLayout: Tabs.LAYOUTS,
@@ -33,55 +30,77 @@ export default {
   }
 };
 
+export const Default = (args) => {
+  const [initialActiveId, setDefaultActiveId] = useState(null);
+  const buttonConfigs = {
+    icon: SageTokens.ICONS.CARET_RIGHT,
+    color: 'primary',
+    iconPosition: 'right'
+  };
+
+  const tabChoiceSettings = {
+    tabChoiceType: Tabs.Item.CHOICE_TYPES.RADIO,
+    tabChoiceIcon: null,
+  };
+
+  return (
+    <Tabs
+      {...args}
+      initialActiveId={initialActiveId}
+      useSeparator={true}
+      tabs={[
+        {
+          id: 'tab-1',
+          label: 'Tab 1',
+          subtext: 'Subtext content...',
+          content: (
+            <>
+              <p>Tab 1 content. Lorem ipsum dolor sit amut consectitor.</p>
+              <Button onClick={() => setDefaultActiveId('tab-2')} {...buttonConfigs}>
+                Next
+              </Button>
+            </>
+          ),
+          panelSpacing: true,
+          ...tabChoiceSettings,
+        },
+        {
+          id: 'tab-2',
+          label: 'Tab 2',
+          subtext: 'Subtext content...',
+          content: (
+            <>
+              <p>Tab 2 content. Lorem ipsum dolor sit amut consectitor.</p>
+              <Button onClick={() => setDefaultActiveId('tab-3')} {...buttonConfigs}>
+                Next
+              </Button>
+            </>
+          ),
+          panelSpacing: true,
+          ...tabChoiceSettings,
+        },
+        {
+          id: 'tab-3',
+          disabled: true,
+          label: 'Tab 3',
+          subtext: 'Subtext content...',
+          content: (
+            <>
+              <p>Tab 3 content. Lorem ipsum dolor sit amut consectitor.</p>
+              <Button onClick={() => setDefaultActiveId('tab-1')} {...buttonConfigs}>
+                Start over
+              </Button>
+            </>
+          ),
+          panelSpacing: true,
+          ...tabChoiceSettings,
+        },
+      ]}
+    />
+  );
+};
+
 const Template = (args) => <Tabs {...args} />;
-
-const tabChoiceSettings = {
-  tabChoiceType: Tabs.Item.CHOICE_TYPES.RADIO,
-  tabChoiceIcon: null,
-};
-
-export const Default = Template.bind({});
-Default.args = {
-  tabs: [
-    {
-      id: 'tab-1',
-      label: 'Tab 1',
-      subtext: 'Subtext content...',
-      content: (
-        <>
-          <p>Tab 1 content. Lorem ipsum dolor sit amut consectitor.</p>
-        </>
-      ),
-      panelSpacing: true,
-      ...tabChoiceSettings,
-    },
-    {
-      id: 'tab-2',
-      label: 'Tab 2',
-      subtext: 'Subtext content...',
-      content: (
-        <>
-          <p>Tab 2 content. Lorem ipsum dolor sit amut consectitor.</p>
-        </>
-      ),
-      panelSpacing: true,
-      ...tabChoiceSettings,
-    },
-    {
-      id: 'tab-3',
-      disabled: true,
-      label: 'Tab 3',
-      subtext: 'Subtext content...',
-      content: (
-        <>
-          <p>Tab 3 content. Lorem ipsum dolor sit amut consectitor.</p>
-        </>
-      ),
-      panelSpacing: true,
-      ...tabChoiceSettings,
-    },
-  ]
-};
 
 export const RichContent = Template.bind({});
 RichContent.args = {
