@@ -8,9 +8,9 @@
     "test": "test"
   },
   "engines": {
-    "node": ">=14.0.0",
-    "npm": ">=6.0.0",
-    "yarn": ">=1.0.0"
+    "node": "14.x",
+    "npm": "6.x",
+    "yarn": "1.x"
   },
   "scripts": {
     "lint": "yarn run stylelint \"./lib/sage-frontend/stylesheets/**/*.{css,scss,sass}\" --max-warnings 0",
