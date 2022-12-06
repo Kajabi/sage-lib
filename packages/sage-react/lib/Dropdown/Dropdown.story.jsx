@@ -2,7 +2,6 @@ import React from 'react';
 import { selectArgs } from '../story-support/helpers';
 import { SageTokens } from '../configs';
 import { Dropdown } from './Dropdown';
-import { OptionsDropdown } from './OptionsDropdown';
 import { ToolbarEditorDropdown } from './ToolbarEditorDropdown';
 import { ToolbarDropdown } from './ToolbarDropdown';
 import { defaultOptionsItems, sampleMenuItems } from './stories/story-helper';
@@ -93,22 +92,6 @@ MenuWithArrow.decorators = [
   )
 ];
 
-export const OptionMenu = (args) => (
-  <OptionsDropdown options={defaultOptionsItems} isPinned={args.isPinned} />
-);
-OptionMenu.args = {
-  isPinned: false
-};
-OptionMenu.decorators = [
-  (Story) => (
-    <>
-      <div style={{ minHeight: 300 }}>
-        { Story() }
-      </div>
-    </>
-  )
-];
-
 export const RichTextEditor = (args) => (
   <ToolbarDropdown
     options={defaultOptionsItems}
@@ -141,7 +124,7 @@ export const RichTextEditorIconOnly = (args) => (
 RichTextEditorIconOnly.args = {
   isPinned: false
 };
-OptionMenu.decorators = [
+RichTextEditorIconOnly.decorators = [
   (Story) => (
     <>
       <div style={{ minHeight: 300 }}>
