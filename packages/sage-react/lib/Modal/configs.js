@@ -25,7 +25,7 @@ export const MODAL_ANIMATION_PRESETS = {
 };
 
 export const MODAL_SIZES = {
-  MOBILE: 'mobile',
+  XS: 'xs',
   SM: 'sm',
   MD: 'md',
   LG: 'lg',

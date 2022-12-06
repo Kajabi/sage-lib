@@ -11,7 +11,7 @@ const DefaultBody = ({ onExit }) => (
   <>
     <Modal.Header
       icon={{ color: Icon.COLORS.RED_200, name: Icon.ICONS.DANGER }}
-      title="Example Sage Modal"
+      title="Modal header"
       popover={{
         title: 'Example popover title',
         link: '#',
@@ -49,24 +49,20 @@ const DefaultBody = ({ onExit }) => (
           onClick={onExit}
           subtle={true}
         >
-          Close Modal
+          Link
         </Button>
       </Modal.FooterAside>
       <Button
         color={Button.COLORS.SECONDARY}
-        icon={SageTokens.ICONS.CHECK}
-        iconPosition={Button.ICON_POSITIONS.LEFT}
         onClick={onExit}
       >
-        Take An Action
+        Cancel
       </Button>
       <Button
         color={Button.COLORS.PRIMARY}
-        icon={SageTokens.ICONS.CHECK}
-        iconPosition={Button.ICON_POSITIONS.LEFT}
         onClick={onExit}
       >
-        Take An Action
+        Confirm
       </Button>
     </Modal.Footer>
   </>
@@ -79,7 +75,7 @@ DefaultBody.propTypes = {
 const FullscreenBody = ({ onExit }) => (
   <>
     <Modal.Header
-      title="Example Sage Modal"
+      title="Modal header"
       popover={{
         title: 'Example popover title',
         link: '#',
@@ -115,19 +111,15 @@ const FullscreenBody = ({ onExit }) => (
     <Modal.Footer>
       <Button
         color={Button.COLORS.SECONDARY}
-        icon={SageTokens.ICONS.CHECK}
-        iconPosition={Button.ICON_POSITIONS.LEFT}
         onClick={onExit}
       >
-        Take An Action
+        Cancel
       </Button>
       <Button
         color={Button.COLORS.PRIMARY}
-        icon={SageTokens.ICONS.CHECK}
-        iconPosition={Button.ICON_POSITIONS.LEFT}
         onClick={onExit}
       >
-        Take An Action
+        Confirm
       </Button>
     </Modal.Footer>
   </>
