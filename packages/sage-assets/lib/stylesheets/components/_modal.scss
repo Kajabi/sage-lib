@@ -14,13 +14,6 @@ $-modal-fullscreen-max-width: sage-container(full);
 $-modal-fullscreen-top-spacing: rem(104px);
 $-modal-inner-size: sage-container(md);
 
-$-modal-sizes: (
-  mobile: rem(343px),
-  sm: rem(520px),
-  md: rem(700px),
-  lg: rem(900px)
-);
-
 
 .sage-modal {
   visibility: hidden;
@@ -181,7 +174,7 @@ $-modal-sizes: (
     padding: sage-spacing(xs) sage-spacing(3xs);
   }
 
-  @each $-key, $-value in $-modal-sizes {
+  @each $-key, $-value in $sage-modal-sizes {
     .sage-modal--size-#{$-key} & {
       width: $-value;
       max-width: none;

@@ -1,0 +1,28 @@
+////
+/// Sage modal sizes
+///
+/// @group sage
+////
+
+
+///
+/// Sage modal sizes token
+///
+$sage-modal-sizes: (
+  xs: rem(343px),
+  sm: rem(520px),
+  md: rem(700px),
+  lg: rem(900px)
+);
+
+///
+/// Sage modal sizes token utility
+///
+/// @param {string} $key [md] The token to retrieve
+///
+/// @return {length} The value retrieved
+///
+@function sage-modal-size($key: md) {
+  $value: map-get($sage-modal-sizes, $key);
+  @return $value;
+}
