@@ -110,6 +110,51 @@ sample_table = {
     }
   ]
 }
+
+table_dropdown_menu_items = [
+  {
+    attributes: { "href": "#" },
+    icon: "pen",
+    value: "Edit",
+  },
+  {
+    attributes: {
+      "href": "https://kajabi.com",
+      "data-js-tooltip": "Tooltip",
+      "data-js-tooltip-position": "right",
+    },
+    icon: "pen",
+    modifiers: ["disabled"],
+    value: "Disabled link w/ tooltip",
+  },
+  {
+    attributes: { "href": "#" },
+    icon: "add",
+    style: "primary",
+    value: "New",
+  },
+  {
+    attributes: { "href": "#" },
+    icon: "url",
+    modifiers: ["border-before"],
+    value: "Share Element",
+  },
+  {
+    attributes: { "href": "#" },
+    icon: "remove-circle",
+    style: "danger",
+    value: "Take A Dangerous Action",
+  },
+  {
+    attributes: {
+      "data-js-tooltip": "Tooltip",
+      "data-js-tooltip-position": "right",
+    },
+    icon: "users",
+    modifiers: ["disabled"],
+    value: "Disabled w/ Tooltip",
+  }
+]
 %>
 
 <%= sage_component SageTable, {
@@ -435,7 +480,12 @@ This involves calling `sage_table_for` with a collection, and then using `t.colu
 **NOTE:** This is an MVP implementation based on a helper written earlier for `kajabi-products` and may not be fully aligned with SageTable. It is safe to use, but should be tracked against future updates.
 ") %>
 
-<%= sage_table_for people_data, selectable: true, sortable: true, responsive: true, caption: "Caption positioned above using `caption_side`".html_safe, caption_side: "top" do |t| %>
+<%= sage_table_for people_data,
+    selectable: true,
+    sortable: true,
+    responsive: true,
+    responsive_stack: true,
+    caption: "Caption positioned above using `caption_side`".html_safe, caption_side: "top" do |t| %>
   <% t.column :initials, label: "", data_type: "checkbox" do |c| %>
     <%= sage_component SageCheckbox, {
       label_text: 'Select row',
@@ -467,15 +517,15 @@ This involves calling `sage_table_for` with a collection, and then using `t.colu
     </span>
   <% end %>
 
-  <% t.column :price, label: "Price", style: "width: 140px", hide: { md: true } do |c| %>
+  <% t.column :price, label: "Price", hide: { md: true } do |c| %>
     <%= c[:price] %>
   <% end %>
 
-  <% t.column :amount, label: "Amount", style: "width: 100px", hide: { md: true } do |c| %>
+  <% t.column :amount, label: "Amount", hide: { md: true } do |c| %>
     <%= c[:amount] %>
   <% end %>
 
-  <% t.column :labels, label: "Labels", style: "width: 150px", hide: { sm: true } do |c| %>
+  <% t.column :labels, label: "Labels", hide: { sm: true } do |c| %>
     <% c[:labels].each do |label| %>
       <%= sage_component SageBadge, {
         value: label,
@@ -484,14 +534,14 @@ This involves calling `sage_table_for` with a collection, and then using `t.colu
     <% end %>
   <% end %>
 
-  <% t.column :status, label: "Status", style: "width: 100px", hide: { sm: true } do |c| %>
+  <% t.column :status, label: "Status", hide: { sm: true } do |c| %>
     <%= sage_component SageBadge, {
       value: c[:status].titlecase,
       color: c[:status],
       } %>
   <% end %>
 
-  <% t.column :actions, label: "Actions", style: "width: 100px" do |c| %>
+  <% t.column :actions, label: "Actions" do |c| %>
     <%= sage_component SageButtonGroup, { gap: :xs } do %>
       <%= sage_component SageButton, {
         subtle: true,

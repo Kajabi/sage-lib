@@ -80,7 +80,7 @@ module SageTableHelper
   end
 
   class SageTableFor
-    attr_reader :caption, :caption_side, :columns, :condensed, :template, :id, :class_name, :collection, :has_borders, :row_proc, :sortable, :responsive, :skip_headers, :reset_above, :reset_below
+    attr_reader :caption, :caption_side, :columns, :condensed, :template, :id, :class_name, :collection, :has_borders, :row_proc, :sortable, :responsive, :responsive_stack, :skip_headers, :reset_above, :reset_below
     delegate :content_tag, :tag, to: :template
 
     def initialize(template, collection, opts={})
@@ -94,6 +94,7 @@ module SageTableHelper
       @reset_above = opts[:reset_above]
       @reset_below = opts[:reset_below]
       @responsive = opts[:responsive]
+      @responsive_stack = opts[:responsive_stack]
       @skip_headers = opts[:skip_headers]
       @sortable = opts[:sortable]
       @id = opts[:id]
@@ -132,6 +133,7 @@ module SageTableHelper
       table_classes = "sage-table"
       table_classes << " sage-table--condensed" if condensed
       table_classes << " sage-table--sortable" if sortable
+      table_classes << " sage-table--stack" if responsive_stack
       table_classes << " #{class_name}" if class_name
 
       content_tag "table", id: id, class: table_classes do

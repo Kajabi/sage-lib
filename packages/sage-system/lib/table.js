@@ -70,19 +70,25 @@ Sage.table = (function() {
           cell.prepend(newHeader);
         });
 
-        // look for cells with positioned content
+        // find cells with special cases (positioned content, multiple children)
         cells.forEach((cell) => {
           const checkboxes = cell.querySelectorAll(".sage-checkbox");
+          const badges = cell.querySelectorAll(".sage-badge");
+          const containers = cell.querySelectorAll("div");
 
           if (checkboxes.length) {
             cell.classList.add('sage-table-cell--checkbox');
+          }
+
+          if (badges.length || containers.length) {
+            cell.classList.add('sage-table-cell--group');
           }
         })
       })
     })
   }
 
-  function applyAriaRoles(args) {
+  function setAriaRole(args) {
     // expects an object of the form { items: "<selector(s)>", role: "<role to represent>" }
     // based on:
     // https://adrianroselli.com/2018/02/tables-css-display-properties-and-aria.html
@@ -104,7 +110,7 @@ Sage.table = (function() {
       { items: 'th[scope=row]', role: 'rowheader' },
     ];
 
-    tableItems.map((item) => applyAriaRoles(item));
+    tableItems.map((item) => setAriaRole(item));
   }
 
   // reset classes on elements
