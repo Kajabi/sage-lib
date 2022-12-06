@@ -24,11 +24,9 @@ export const MODAL_ANIMATION_PRESETS = {
   'data-sage-animate-direction': MODAL_ANIMATION_DIRECTIONS.TOP
 };
 
-export const MODAL_CONTAINER_SIZES = {
+export const MODAL_SIZES = {
   XS: 'xs',
   SM: 'sm',
   MD: 'md',
   LG: 'lg',
-  XL: 'xl',
-  FULL: 'full',
 };
