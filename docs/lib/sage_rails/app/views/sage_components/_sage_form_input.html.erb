@@ -4,6 +4,8 @@
     <%= "sage-input--affixed" if component.prefix.present? or component.suffix.present? %>
     <%= "sage-form-field--showplaceholder" if component.has_placeholder %>
     <%= "sage-input--has-popover" if content_for? :sage_form_input_popover %>
+    <%= "sage-input__select-combo" if content_for? :sage_form_input_select_combo %>
+    <%=  component.select_combo_anchor_left ? "sage-input__select-combo--anchor-left" : "sage-input__select-combo--anchor-right" %>
     <%= "sage-input--has-icon" if component.icon.present? %>
     <%= component.generated_css_classes %>"
   <% if component.prefix.present? %>
@@ -45,7 +47,10 @@
   <% end %>
   <% if content_for? :sage_form_input_popover %>
       <%= content_for :sage_form_input_popover %>
-    <% end %>
+  <% end %>
+  <% if content_for? :sage_form_input_select_combo %>
+    <%= content_for :sage_form_input_select_combo %>
+  <% end %>
   <% if component.message_text.present? %>
     <div class="sage-input__info">
       <div class="sage-input__message">

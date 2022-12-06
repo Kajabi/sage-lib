@@ -21,12 +21,13 @@ class SageFormInput < SageComponent
     prefix: [:optional, NilClass, String],
     readonly: [:optional, NilClass, TrueClass],
     required: [:optional, NilClass, TrueClass],
+    select_combo_anchor_left: [:optional, NilClass, TrueClass],
     step: [:optional, NilClass, String],
     suffix: [:optional, NilClass, String],
     value: [:optional, NilClass, String]
   })
 
   def sections
-    %w(form_input_popover)
+    %w(form_input_popover form_input_select_combo)
   end
 end

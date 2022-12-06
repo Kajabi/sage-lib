@@ -34,6 +34,20 @@ $-select-arrow-position-inverse-with-message: calc(100% - #{$-select-height + $-
     "message message";
   grid-template-columns: 1fr minmax(sage-spacing(lg), min-content);
   grid-template-rows: min-content min-content min-content; /* needed to resolve Safari 14 layout issue */
+
+  .sage-input__select-combo & {
+    position: absolute;
+    bottom: 0;
+    border: 0;
+    z-index: sage-z-index(default, 1);
+  }
+
+  .sage-input__select-combo--anchor-right & {
+    right: 0;
+  }
+  .sage-input__select-combo--anchor-left & {
+    right: auto;
+  }
 }
 
 .sage-select__label {
@@ -41,6 +55,10 @@ $-select-arrow-position-inverse-with-message: calc(100% - #{$-select-height + $-
 
   grid-area: label;
   margin-bottom: $-select-margin-label;
+
+  .sage-input__select-combo & {
+    @include visually-hidden();
+  }
 }
 
 .sage-select__arrow {
@@ -61,6 +79,12 @@ $-select-arrow-position-inverse-with-message: calc(100% - #{$-select-height + $-
   font-size: $-select-arrow-font-size;
   color: sage-color(charcoal, 100);
   transition: 0.2s color ease;
+
+  .sage-input__select-combo & {
+    @include sage-icon-base(caret-down, sm);
+    color: sage-color(charcoal, 300);
+  }
+
 }
 
 .sage-select__field {
@@ -105,6 +129,11 @@ $-select-arrow-position-inverse-with-message: calc(100% - #{$-select-height + $-
     .sage-select--value-selected & {
       color: $-select-color-default-hover;
     }
+
+    .sage-input__select-combo--anchor-right &,
+    .sage-input__select-combo--anchor-left & {
+      box-shadow: 0 0 0 rem(4px) sage-color(primary, 200);
+    }
   }
 
   &:focus,
@@ -114,6 +143,10 @@ $-select-arrow-position-inverse-with-message: calc(100% - #{$-select-height + $-
     .sage-form-field--error & {
       border-color: $-select-color-error;
       box-shadow: $-select-border-box-shadow-size $-select-color-error;
+    }
+    .sage-input__select-combo--anchor-right &,
+    .sage-input__select-combo--anchor-left & {
+      box-shadow: 0 0 0 rem(4px) sage-color(primary, 200);
     }
   }
 
@@ -129,6 +162,27 @@ $-select-arrow-position-inverse-with-message: calc(100% - #{$-select-height + $-
     @include placeholder {
       color: sage-color(charcoal, 200);
     }
+  }
+
+  .sage-input__select-combo--anchor-right &,
+  .sage-input__select-combo--anchor-left & {
+    @include truncate;
+    max-width: rem(100px);
+    background: sage-color(white);
+  }
+
+  .sage-input__select-combo--anchor-right & {
+    border-bottom-left-radius: 0;
+    border-left: 0;
+    border-top-left-radius: 0;
+    box-shadow: 0 0 0 rem(1px) transparent;
+  }
+
+  .sage-input__select-combo--anchor-left & {
+    border-bottom-right-radius: 0;
+    border-right: 0;
+    border-top-right-radius: 0;
+    box-shadow: 0 rem(1px) 0 0 transparent;
   }
 }
 

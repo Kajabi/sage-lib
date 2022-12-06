@@ -243,4 +243,73 @@
     <% end %>
   <% end %>
 
+  <h3 class="t-sage-heading-6">Combo w/ Select</h3>
+
+  <%= sage_component SageFormInput, {
+    id: "combo-input",
+    input_type: "text",
+    label_text: "Period of time",
+  } do %>
+    <% content_for :sage_form_input_select_combo do %>
+      <%= sage_component SageFormSelect, {
+      name: "combo",
+      select_options: [
+        {
+          text: "Days",
+          value: "days",
+          selected: true,
+        },
+        {
+          text: "Weeks",
+          value: "weeks",
+        },
+        {
+          text: "Years",
+          value: "years",
+        },
+        {
+          text: "Some very long option name",
+          value: "long_option",
+        },
+      ],
+    } %>
+    <% end %>
+  <% end %>
+
+  <%= sage_component SageFormInput, {
+    id: "combo-input2",
+    input_type: "text",
+    label_text: "Currency and amount",
+    select_combo_anchor_left: true,
+  } do %>
+    <% content_for :sage_form_input_select_combo do %>
+      <%= sage_component SageFormSelect, {
+      name: "combo2",
+      select_options: [
+        {
+          text: "AUD",
+          value: "aud",
+        },
+        {
+          text: "GBP",
+          value: "gbp",
+        },
+        {
+          text: "EUR",
+          value: "eur",
+        },
+        {
+          text: "JPY",
+          value: "jpy",
+        },
+        {
+          text: "USD",
+          value: "usd",
+          selected: true,
+        },
+      ],
+    } %>
+    <% end %>
+  <% end %>
+
 </fieldset>

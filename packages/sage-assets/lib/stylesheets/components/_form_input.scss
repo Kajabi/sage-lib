@@ -138,6 +138,17 @@ $-input-text-height: sage-font-size(body);
       z-index: sage-z-index(default, 1);
     }
   }
+
+  .sage-input__select-combo--anchor-left & {
+    padding-left: rem(100px);
+  }
+  .sage-input__select-combo--anchor-right & {
+    padding-right: rem(100px);
+  }
+}
+
+.sage-input__select-combo {
+  position: relative;
 }
 
 .sage-input__icon {
