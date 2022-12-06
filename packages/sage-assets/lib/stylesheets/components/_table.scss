@@ -423,53 +423,6 @@ $-table-avatar-width: rem(32px);
     .sage-table--has-menu-options td:last-child::before {
       display: none;
     }
-
-    .sage-table--has-leading-input {
-      td:nth-child(2) {
-        margin-left: sage-spacing(sm);
-      }
-
-      td:nth-child(-n+2) {
-        display: inline-flex;
-      }
-
-      td:nth-child(n+3) {
-        margin-left: rem(40px);
-      }
-
-      td:nth-child(2)::before {
-        content: "Name ";
-        display: none;
-      }
-
-      td:nth-child(3)::before {
-        content: "Email ";
-      }
-
-      td:nth-child(4)::before {
-        content: "Labels ";
-      }
-
-      td:nth-child(5)::before {
-        content: "Status ";
-      }
-
-      td:nth-child(6)::before {
-        content: "Status ";
-      }
-
-      td:nth-child(7)::before {
-        content: "Status ";
-      }
-
-      td:nth-child(8)::before {
-        content: "Status ";
-      }
-
-      td:last-child::before {
-        display: none;
-      }
-    }
   }
 }
 
