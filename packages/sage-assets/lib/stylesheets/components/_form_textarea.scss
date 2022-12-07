@@ -20,7 +20,6 @@ $-textarea-min-height: rem(90px);
 
 // Colors
 $-textarea-color-default: sage-color(charcoal, 300);
-$-textarea-color-default-background: sage-color(white);
 
 .sage-textarea {
   @include sage-form-field-group;
@@ -48,7 +47,6 @@ $-textarea-color-default-background: sage-color(white);
   grid-area: field;
   min-height: $-textarea-min-height;
   height: $-textarea-height;
-  background: $-textarea-color-default-background;
 }
 
 .sage-textarea__info {
