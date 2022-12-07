@@ -5,6 +5,8 @@
     <%= "sage-form-field--showplaceholder" if component.has_placeholder %>
     <%= "sage-input--has-popover" if content_for? :sage_form_input_popover %>
     <%= "sage-input__select-combo" if content_for? :sage_form_input_select_combo %>
+    <%= "sage-input--has-left-element" if content_for? :sage_form_input_left_element %>
+    <%= "sage-input--has-right-element" if content_for? :sage_form_input_right_element %>
     <%=  component.select_combo_anchor_left ? "sage-input__select-combo--anchor-left" : "sage-input__select-combo--anchor-right" %>
     <%= "sage-input--has-icon" if component.icon.present? %>
     <%= component.generated_css_classes %>"
@@ -50,6 +52,16 @@
   <% end %>
   <% if content_for? :sage_form_input_select_combo %>
     <%= content_for :sage_form_input_select_combo %>
+  <% end %>
+  <% if content_for? :sage_form_input_left_element %>
+    <div class="sage-input__left-element">
+      <%= content_for :sage_form_input_left_element %>
+    </div>
+  <% end %>
+  <% if content_for? :sage_form_input_right_element %>
+    <div class="sage-input__right-element">
+      <%= content_for :sage_form_input_right_element %>
+    </div>
   <% end %>
   <% if component.message_text.present? %>
     <div class="sage-input__info">

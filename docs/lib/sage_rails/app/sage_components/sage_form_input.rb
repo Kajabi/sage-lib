@@ -28,6 +28,6 @@ class SageFormInput < SageComponent
   })
 
   def sections
-    %w(form_input_popover form_input_select_combo)
+    %w(form_input_popover form_input_select_combo sage_form_input_left_element sage_form_input_right_element)
   end
 end

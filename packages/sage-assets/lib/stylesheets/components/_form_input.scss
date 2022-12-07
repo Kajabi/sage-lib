@@ -85,7 +85,8 @@ $-input-text-height: sage-font-size(body);
   color: sage-color(charcoal, 100);
 }
 
-.sage-input__affix--prefix {
+.sage-input__affix--prefix,
+.sage-input__left-element {
   grid-row: 2 / 3;
   grid-column: 1 / 2;
   top: 0;
@@ -93,12 +94,20 @@ $-input-text-height: sage-font-size(body);
   padding-right: sage-spacing(2xs);
 }
 
-.sage-input__affix--suffix {
+.sage-input__affix--suffix,
+.sage-input__right-element {
   grid-row: 2 / 3;
   grid-column: -1 / -2;
   top: 0;
   right: sage-spacing(sm);
   padding-left: sage-spacing(2xs);
+}
+
+.sage-input__left-element,
+.sage-input__right-element {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
 }
 
 .sage-input__label {
@@ -139,10 +148,12 @@ $-input-text-height: sage-font-size(body);
     }
   }
 
-  .sage-input__select-combo--anchor-left & {
+  .sage-input__select-combo--anchor-left,
+  .sage-input--has-left-element & {
     padding-left: rem(100px);
   }
-  .sage-input__select-combo--anchor-right & {
+  .sage-input__select-combo--anchor-right,
+  .sage-input--has-right-element & {
     padding-right: rem(100px);
   }
 }

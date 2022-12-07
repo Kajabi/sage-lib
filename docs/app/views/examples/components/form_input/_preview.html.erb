@@ -249,6 +249,7 @@
     id: "combo-input",
     input_type: "text",
     label_text: "Period of time",
+    message_text: "This is a message",
   } do %>
     <% content_for :sage_form_input_select_combo do %>
       <%= sage_component SageFormSelect, {
@@ -280,6 +281,7 @@
     id: "combo-input2",
     input_type: "text",
     label_text: "Currency and amount",
+    message_text: "This is a message",
     select_combo_anchor_left: true,
   } do %>
     <% content_for :sage_form_input_select_combo do %>
@@ -312,4 +314,82 @@
     <% end %>
   <% end %>
 
+  <% sage_component SageFormInput, {
+    id: "combo-input2",
+    input_type: "text",
+    label_text: "Template",
+    message_text: "This is a message",
+    select_combo_anchor_left: true,
+  } do %>
+    <%= content_for :sage_form_input_left_element do %>
+      left item
+    <% end %>
+    <%= content_for :sage_form_input_right_element do %>
+      right item
+    <% end %>
+  <% end %>
+
+  <%= sage_component SageFormInput, {
+    id: "combo-input3",
+    input_type: "text",
+    label_text: "Template Second",
+    message_text: "This is a message",
+  } do %>
+    <% content_for :sage_form_input_left_element do %>
+      <%= sage_component SageFormSelect, {
+      name: "date",
+      select_options: [
+        {
+          text: "AUD",
+          value: "aud",
+        },
+        {
+          text: "GBP",
+          value: "gbp",
+        },
+        {
+          text: "EUR",
+          value: "eur",
+        },
+        {
+          text: "JPY",
+          value: "jpy",
+        },
+        {
+          text: "USD",
+          value: "usd",
+          selected: true,
+        },
+      ],
+    } %>
+    <% end %>
+    <% content_for :sage_form_input_right_element do %>
+      <%= sage_component SageFormSelect, {
+      name: "country",
+      select_options: [
+        {
+          text: "AUD",
+          value: "aud",
+        },
+        {
+          text: "GBP",
+          value: "gbp",
+        },
+        {
+          text: "EUR",
+          value: "eur",
+        },
+        {
+          text: "JPY",
+          value: "jpy",
+        },
+        {
+          text: "USD",
+          value: "usd",
+          selected: true,
+        },
+      ],
+    } %>
+    <% end %>
+  <% end %>
 </fieldset>
