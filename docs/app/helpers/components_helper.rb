@@ -348,6 +348,18 @@ module ComponentsHelper
         figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FsMbtLUHSt2vfKgKjyQ3052%2F%25F0%259F%25A7%25A9-Sage-components%3Fnode-id%3D430%253A3529",
       },
       {
+        title: "form_input_v2",
+        description: "Basic text input form fields with 'floating' labels",
+        scss: "todo",
+        docs: "todo",
+        rails: "todo",
+        react: "no",
+        responsive: "todo",
+        a11y: "todo",
+        react_component_slug: "sage-input--default",
+        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FsMbtLUHSt2vfKgKjyQ3052%2F%25F0%259F%25A7%25A9-Sage-components%3Fnode-id%3D430%253A3529",
+      },
+      {
         title: "form_section",
         description: "A form section genera11y consists of a text section to provide users with instruction, guidance, or related information along with a secondary panel that may contain form inputs and/or related general content.",
         scss: "done",

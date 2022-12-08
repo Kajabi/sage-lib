@@ -36,6 +36,7 @@ export { IconCard } from './IconCard';
 export { IconList } from './IconList';
 export { Indicator } from './Indicator';
 export { Input } from './Input';
+export { InputV2 } from './InputV2';
 export { Label } from './Label';
 export { Link } from './Link';
 export { List } from './List';
