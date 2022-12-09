@@ -230,11 +230,12 @@ table_dropdown_menu_items = [
   ]
 } %>
 
-<h3 class="t-sage-heading-6">Table with checkbox selection</h3>
+<h3 class="t-sage-heading-6">Responsive "stacked" table with checkbox selection</h3>
 <%= sage_component SageTable, {
   caption: %(
-    People example
+    Set `responsive_stack` to enable the mobile "stacked" layout
   ),
+  caption_side: "bottom",
   has_leading_input: true,
   has_menu_options: true,
   headers: [
@@ -252,7 +253,7 @@ table_dropdown_menu_items = [
       %(
         #{sage_component(SageCheckbox, {
           id:"c331",
-          label_text: "Checkbox",
+          label_text: "Select row",
           checked: false,
           disabled: false,
           has_error: false,
@@ -288,7 +289,7 @@ table_dropdown_menu_items = [
       %(
         #{sage_component(SageCheckbox, {
           id:"c332",
-          label_text: "Checkbox",
+          label_text: "Select row",
           checked: false,
           disabled: false,
           has_error: false,
@@ -324,7 +325,7 @@ table_dropdown_menu_items = [
       %(
         #{sage_component(SageCheckbox, {
           id:"c333",
-          label_text: "Checkbox",
+          label_text: "Select row",
           checked: false,
           disabled: false,
           has_error: false,

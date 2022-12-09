@@ -389,16 +389,13 @@ $-table-avatar-width: rem(32px);
     }
 
     // table,
-    thead,
     tbody,
-    th,
-    td,
-    tr,
-    caption {
+    tbody td,
+    tbody tr {
       display: block;
     }
 
-    tr {
+    tbody tr {
       padding: #{$-table-stack-row-padding-block} #{$-table-stack-row-padding-inline};
       border: sage-border(default);
       border-radius: sage-border(radius);
@@ -408,7 +405,7 @@ $-table-avatar-width: rem(32px);
       }
     }
 
-    td {
+    tbody td {
       display: grid;
       grid-template-columns: 1fr repeat(#{$-table-stack-cell-max-children}, auto);
     }

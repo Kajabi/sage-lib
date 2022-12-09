@@ -26,7 +26,8 @@
       <thead>
         <tr>
           <% component.headers.each do | header | %>
-            <th
+            <% table_header_element = header.to_s.strip.empty? ? "td" : "th" %>
+            <<%= table_header_element %>
               class="
                 sage-table__header
                 <%= "sage-table__header--#{header[:data_type]}" if header&.is_a?(Hash) && header[:data_type].present? %>
@@ -36,7 +37,7 @@
               <% end if header&.is_a?(Hash) && header[:html_attributes].present? %>
             >
               <%= header&.is_a?(Hash) ? header[:value].html_safe : header.html_safe %>
-            </th>
+            </<%= table_header_element %>>
           <% end %>
         </tr>
       </thead>

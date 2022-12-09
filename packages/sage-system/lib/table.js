@@ -47,7 +47,7 @@ Sage.table = (function() {
     };
 
     tables.forEach(table => {
-      const headers = table.querySelectorAll('thead th');
+      const headers = table.querySelectorAll('.sage-table__header');
       const rows = table.querySelectorAll('tbody tr');
       const tableHeadings = [];
 
@@ -102,12 +102,9 @@ Sage.table = (function() {
 
   function addTableAria() {
     const tableItems = [
-      { items: 'table', role: 'table' },
-      { items: 'thead, tbody, tfoot', role: 'rowgroup' },
-      { items: 'tr', role: 'row' },
-      { items: 'td', role: 'cell' },
-      { items: 'th', role: 'columnheader' },
-      { items: 'th[scope=row]', role: 'rowheader' },
+      { items: 'tbody', role: 'rowgroup' },
+      { items: 'tbody tr', role: 'row' },
+      { items: 'tbody td', role: 'cell' },
     ];
 
     tableItems.map((item) => setAriaRole(item));
