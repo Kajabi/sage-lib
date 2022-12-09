@@ -360,15 +360,35 @@ $-table-avatar-width: rem(32px);
 
 @media screen and (max-width: sage-breakpoint(sm-max)) {
   .sage-table--stack {
-    thead {
-      tr,
-      &::after {
-        @include visually-hidden;
-      }
+    thead tr {
+      @include visually-hidden;
+    }
+
+    thead::after {
+      display: none;
+    }
+
+    tbody,
+    tbody td,
+    tbody tr {
+      display: block;
     }
 
     tbody tr {
+      padding: #{$-table-stack-row-padding-block} #{$-table-stack-row-padding-inline};
       position: relative;
+      border: sage-border(default);
+      border-radius: sage-border(radius);
+
+      & + & {
+        margin-top: #{$-table-stack-row-padding-block};
+      }
+    }
+
+    tbody td {
+      display: grid;
+      grid-template-columns: 1fr repeat(#{$-table-stack-cell-max-children}, auto);
+      padding: rem(6px) 0;
     }
 
     .sage-table-cell__heading--responsive {
@@ -382,32 +402,6 @@ $-table-avatar-width: rem(32px);
         top: #{$-table-stack-row-padding-block};
         right: #{$-table-stack-row-padding-inline};
       }
-    }
-
-    td {
-      padding: rem(6px) 0;
-    }
-
-    // table,
-    tbody,
-    tbody td,
-    tbody tr {
-      display: block;
-    }
-
-    tbody tr {
-      padding: #{$-table-stack-row-padding-block} #{$-table-stack-row-padding-inline};
-      border: sage-border(default);
-      border-radius: sage-border(radius);
-
-      & + & {
-        margin-top: #{$-table-stack-row-padding-block};
-      }
-    }
-
-    tbody td {
-      display: grid;
-      grid-template-columns: 1fr repeat(#{$-table-stack-cell-max-children}, auto);
     }
 
     // table cell overrides

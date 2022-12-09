@@ -154,7 +154,8 @@ module SageTableHelper
     end
 
     def head
-      if skip_headers
+      # responsive_stack enforces use of headers
+      if skip_headers && !responsive_stack
         ""
       else
         content_tag "thead" do

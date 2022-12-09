@@ -49,6 +49,12 @@
   <td><%= md('`nil`') %></td>
 </tr>
 <tr>
+  <td><%= md('`responsive_stack`') %></td>
+  <td><%= md('Rearranges table content on small screen devices. Requires the use of table headers`.') %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`nil`') %></td>
+</tr>
+<tr>
   <td><%= md('`rows`') %></td>
   <td><%= md('Array of items to populate the table. These items are key/value pairs.') %></td>
   <td><%= md('Array') %></td>
@@ -83,12 +89,13 @@
   - `reset_above`
   - `reset_below`
   - `responsive`
+  - `responsive_stack`
 
   The following properties are **unique to `sage_table_for`**:
 
   - `sortable` (Boolean): enables sorting links and direction indicators on sorted columns
 
-  - `skip_headers` (Boolean): table column headings are not rendered
+  - `skip_headers` (Boolean): table column headings are not rendered. This cannot be used when `responsive_stack` is enabled
 ') %></td>
   <td><%= md('See properties above') %></td>
   <td><%= md('Varies') %></td>
