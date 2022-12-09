@@ -29,8 +29,6 @@ export const ToolbarEditor = ({
       moreItemCount = 0,
       sliceIdx = 0;
 
-    console.log('array: ', fullNavArray);
-
     if (fullNavArray.length > 1) {
       widthsArray.every((width, idx) => {
         navWidth += width;
@@ -46,8 +44,6 @@ export const ToolbarEditor = ({
     } else {
       setPriorityItems(fullNavArray);
     }
-
-    console.log('array: ', fullNavArray);
 
     if (moreItemCount > 0) {
       setMoreItems(
