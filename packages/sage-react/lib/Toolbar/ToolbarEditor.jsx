@@ -19,7 +19,7 @@ export const ToolbarEditor = ({
   const [priorityItems, setPriorityItems] = useState(children);
   const [moreItems, setMoreItems] = useState([]);
 
-  const fullNavArray = children;
+  const fullNavArray = [children].flat(Infinity);
   let widthsArray;
 
   const calculateWidth = () => {
@@ -29,18 +29,26 @@ export const ToolbarEditor = ({
       moreItemCount = 0,
       sliceIdx = 0;
 
-    widthsArray.every((width, idx) => {
-      navWidth += width;
-      if (navWidth > availableWidth) {
-        moreItemCount = widthsArray.length - idx;
-        sliceIdx = idx;
-        return false;
-      }
-      sliceIdx = widthsArray.length;
-      return true;
-    });
+    console.log('array: ', fullNavArray);
 
-    setPriorityItems(fullNavArray.slice(0, sliceIdx));
+    if (fullNavArray.length > 1) {
+      widthsArray.every((width, idx) => {
+        navWidth += width;
+        if (navWidth > availableWidth) {
+          moreItemCount = widthsArray.length - idx;
+          sliceIdx = idx;
+          return false;
+        }
+        sliceIdx = widthsArray.length;
+        return true;
+      });
+      setPriorityItems(fullNavArray.slice(0, sliceIdx));
+    } else {
+      setPriorityItems(fullNavArray);
+    }
+
+    console.log('array: ', fullNavArray);
+
     if (moreItemCount > 0) {
       setMoreItems(
         fullNavArray
