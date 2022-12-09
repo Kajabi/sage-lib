@@ -92,27 +92,6 @@ MenuWithArrow.decorators = [
   )
 ];
 
-export const RichTextEditor = (args) => (
-  <ToolbarDropdown
-    options={defaultOptionsItems}
-    isPinned={args.isPinned}
-    triggerClassnames="sage-btn--rich-text"
-    triggerButtonSubtle={false}
-  />
-);
-RichTextEditor.args = {
-  isPinned: false
-};
-RichTextEditor.decorators = [
-  (Story) => (
-    <>
-      <div style={{ minHeight: 300 }}>
-        { Story() }
-      </div>
-    </>
-  )
-];
-
 export const RichTextEditorIconOnly = (args) => (
   <ToolbarEditorDropdown
     triggerClassnames="sage-btn--rich-text"
