@@ -49,7 +49,10 @@ Sage.table = (function() {
     tables.forEach(table => {
       const headers = table.querySelectorAll('.sage-table__header');
       const rows = table.querySelectorAll('tbody tr');
+      const tableWrapper = table.parentElement;
       const tableHeadings = [];
+
+      tableWrapper.classList.add("sage-table-wrapper__overflow--stack");
 
       // populate an array with each table's headers
       headers.forEach(header => {
@@ -102,6 +105,7 @@ Sage.table = (function() {
 
   function addTableAria() {
     const tableItems = [
+      { items: 'thead th', role: 'columnheader' },
       { items: 'tbody', role: 'rowgroup' },
       { items: 'tbody tr', role: 'row' },
       { items: 'tbody td', role: 'cell' },
