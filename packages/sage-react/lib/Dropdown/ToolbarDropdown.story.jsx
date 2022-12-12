@@ -1,12 +1,13 @@
 import React from 'react';
 import { selectArgs } from '../story-support/helpers';
 import { Dropdown } from './Dropdown';
-import { OptionsDropdown } from './OptionsDropdown';
+import { ToolbarDropdown } from './ToolbarDropdown';
+import { ToolbarEditorDropdown } from './ToolbarEditorDropdown';
 import { defaultOptionsItems, sampleMenuItems } from './stories/story-helper';
 
 export default {
-  title: 'Sage/Dropdown/OptionsDropdown',
-  component: OptionsDropdown,
+  title: 'Sage/Dropdown/ToolbarDropdown',
+  component: ToolbarDropdown,
   // displays description on Docs tab
   parameters: {
     docs: {
@@ -42,12 +43,54 @@ export default {
 };
 
 const Template = (args) => (
-  <OptionsDropdown options={defaultOptionsItems} {...args}>
+  <ToolbarDropdown options={defaultOptionsItems} {...args}>
     <Dropdown.ItemList items={sampleMenuItems} />
-  </OptionsDropdown>
+  </ToolbarDropdown>
 );
 
 export const Default = Template.bind({});
 Default.args = {
   isPinned: false
 };
+
+export const RichTextEditor = (args) => (
+  <ToolbarDropdown
+    options={defaultOptionsItems}
+    isPinned={args.isPinned}
+    triggerClassnames="sage-btn--rich-text"
+    triggerButtonSubtle={false}
+  />
+);
+RichTextEditor.args = {
+  isPinned: false
+};
+RichTextEditor.decorators = [
+  (Story) => (
+    <>
+      <div style={{ minHeight: 300 }}>
+        { Story() }
+      </div>
+    </>
+  )
+];
+
+export const RichTextEditorIconOnly = (args) => (
+  <ToolbarEditorDropdown
+    triggerClassnames="sage-btn--rich-text"
+    triggerButtonSubtle={false}
+    options={defaultOptionsItems}
+    isPinned={args.isPinned}
+  />
+);
+RichTextEditorIconOnly.args = {
+  isPinned: false
+};
+RichTextEditorIconOnly.decorators = [
+  (Story) => (
+    <>
+      <div style={{ minHeight: 300 }}>
+        { Story() }
+      </div>
+    </>
+  )
+];

@@ -2,9 +2,7 @@ import React from 'react';
 import { selectArgs } from '../story-support/helpers';
 import { SageTokens } from '../configs';
 import { Dropdown } from './Dropdown';
-import { ToolbarEditorDropdown } from './ToolbarEditorDropdown';
-import { ToolbarDropdown } from './ToolbarDropdown';
-import { defaultOptionsItems, sampleMenuItems } from './stories/story-helper';
+import { sampleMenuItems } from './stories/story-helper';
 import { CustomItemsStoryTemplate } from './stories/CustomItemsStory';
 import { CustomPanelStoryTemplate } from './stories/CustomPanelStory';
 import { BulkActionsStoryTemplate } from './stories/BulkActionsStory';
@@ -47,9 +45,7 @@ export default {
     panelMaxWidth: null,
     panelSize: Dropdown.PANEL_SIZES.DEFAULT,
     triggerButtonSubtle: false,
-    children: (
-      <Dropdown.ItemList items={sampleMenuItems} />
-    ),
+
     exitPanelHandler: (data) => {
       if (data.handler) {
         data.handler();
@@ -58,7 +54,11 @@ export default {
   }
 };
 
-const Template = (args) => <Dropdown {...args} />;
+const Template = (args) => (
+  <Dropdown {...args}>
+    <Dropdown.ItemList items={sampleMenuItems} />
+  </Dropdown>
+);
 
 export const Default = Template.bind({});
 
@@ -89,48 +89,6 @@ MenuWithArrow.decorators = [
     <div style={{ minHeight: 450 }}>
       { Story() }
     </div>
-  )
-];
-
-export const RichTextEditor = (args) => (
-  <ToolbarDropdown
-    options={defaultOptionsItems}
-    isPinned={args.isPinned}
-    triggerClassnames="sage-btn--rich-text"
-    triggerButtonSubtle={false}
-  />
-);
-RichTextEditor.args = {
-  isPinned: false
-};
-RichTextEditor.decorators = [
-  (Story) => (
-    <>
-      <div style={{ minHeight: 300 }}>
-        { Story() }
-      </div>
-    </>
-  )
-];
-
-export const RichTextEditorIconOnly = (args) => (
-  <ToolbarEditorDropdown
-    triggerClassnames="sage-btn--rich-text"
-    triggerButtonSubtle={false}
-    options={defaultOptionsItems}
-    isPinned={args.isPinned}
-  />
-);
-RichTextEditorIconOnly.args = {
-  isPinned: false
-};
-RichTextEditorIconOnly.decorators = [
-  (Story) => (
-    <>
-      <div style={{ minHeight: 300 }}>
-        { Story() }
-      </div>
-    </>
   )
 ];
 
