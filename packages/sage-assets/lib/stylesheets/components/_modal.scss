@@ -174,9 +174,9 @@ $-modal-inner-size: sage-container(md);
     padding: sage-spacing(xs) sage-spacing(3xs);
   }
 
-  @each $-key, $-value in $sage-containers {
+  @each $-key, $-value in $sage-modal-sizes {
     .sage-modal--size-#{$-key} & {
-      width: sage-container($-key);
+      width: $-value;
       max-width: none;
     }
   }
