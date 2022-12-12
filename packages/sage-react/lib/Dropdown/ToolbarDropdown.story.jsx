@@ -2,6 +2,7 @@ import React from 'react';
 import { selectArgs } from '../story-support/helpers';
 import { Dropdown } from './Dropdown';
 import { ToolbarDropdown } from './ToolbarDropdown';
+import { ToolbarEditorDropdown } from './ToolbarEditorDropdown';
 import { defaultOptionsItems, sampleMenuItems } from './stories/story-helper';
 
 export default {
@@ -63,6 +64,27 @@ RichTextEditor.args = {
   isPinned: false
 };
 RichTextEditor.decorators = [
+  (Story) => (
+    <>
+      <div style={{ minHeight: 300 }}>
+        { Story() }
+      </div>
+    </>
+  )
+];
+
+export const RichTextEditorIconOnly = (args) => (
+  <ToolbarEditorDropdown
+    triggerClassnames="sage-btn--rich-text"
+    triggerButtonSubtle={false}
+    options={defaultOptionsItems}
+    isPinned={args.isPinned}
+  />
+);
+RichTextEditorIconOnly.args = {
+  isPinned: false
+};
+RichTextEditorIconOnly.decorators = [
   (Story) => (
     <>
       <div style={{ minHeight: 300 }}>
