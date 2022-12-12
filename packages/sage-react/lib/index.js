@@ -73,7 +73,10 @@ export {
   Switch,
   Toggle,
 } from './Toggle';
-export { Toolbar } from './Toolbar';
+export {
+  Toolbar,
+  ToolbarEditor
+} from './Toolbar';
 export { Tooltip } from './Tooltip';
 export { TransactionCard } from './TransactionCard';
 export { Type } from './Type';
