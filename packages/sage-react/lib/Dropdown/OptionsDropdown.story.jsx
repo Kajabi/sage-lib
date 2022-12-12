@@ -33,9 +33,6 @@ export default {
     panelMaxWidth: null,
     panelSize: Dropdown.PANEL_SIZES.DEFAULT,
     triggerButtonSubtle: false,
-    children: (
-      <Dropdown.ItemList items={sampleMenuItems} />
-    ),
     exitPanelHandler: (data) => {
       if (data.handler) {
         data.handler();
@@ -44,7 +41,11 @@ export default {
   }
 };
 
-const Template = (args) => <OptionsDropdown options={defaultOptionsItems} {...args} />;
+const Template = (args) => (
+  <OptionsDropdown options={defaultOptionsItems} {...args}>
+    <Dropdown.ItemList items={sampleMenuItems} />
+  </OptionsDropdown>
+);
 
 export const Default = Template.bind({});
 Default.args = {
