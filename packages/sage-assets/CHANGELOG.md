@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.8.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.7.2...@kajabi/sage-assets@1.8.0) (2022-12-13)
+
+
+### Bug Fixes
+
+* **inputs:** update input background to white ([e4b6379](https://github.com/Kajabi/sage-lib/commit/e4b637907d6f7c3925beddd07dbadfabb399c149))
+* **labels:**  remove white background from input labels ([64a65ad](https://github.com/Kajabi/sage-lib/commit/64a65adfcfb5a01bee7d13e49bd4ac97cf9dcca5))
+* **search:** add white background to input ([08aa35a](https://github.com/Kajabi/sage-lib/commit/08aa35ad18e5d33a6f57f9fb419272780f18c40b))
+* **select:** adjust pointer-events on form select arrow ([ef46b41](https://github.com/Kajabi/sage-lib/commit/ef46b41bf17584f384e18a61725eac5b3d862073))
+
+
+### Features
+
+* **modal:** updates size options for modal in Rails ([d5f7577](https://github.com/Kajabi/sage-lib/commit/d5f7577fc48406e483ed2f14844bdda233d09688))
+
+
+
+
+
 ## [1.7.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.7.1...@kajabi/sage-assets@1.7.2) (2022-12-05)
 
 **Note:** Version bump only for package @kajabi/sage-assets

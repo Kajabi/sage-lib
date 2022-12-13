@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.11.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.10.1...@kajabi/sage@5.11.0) (2022-12-13)
+
+
+### Bug Fixes
+
+* **hero:** replace .jpeg image w/ .jpg. hat-tip [@ju](https://github.com/ju)-Skinner! ([fd7591b](https://github.com/Kajabi/sage-lib/commit/fd7591b8b1c80a110cd8c733e8c3f2d1187e3ee8))
+* **hero:** update image file extension in preview ([cc67b79](https://github.com/Kajabi/sage-lib/commit/cc67b79d802f1696ccea374ab3c3869e35e19c70))
+* docs/Gemfile to reduce vulnerabilities ([130acec](https://github.com/Kajabi/sage-lib/commit/130acec7c83dc115c8eed9493265a7d9206e8bca))
+
+
+### Features
+
+* **modal:** updates size options for modal in Rails ([d5f7577](https://github.com/Kajabi/sage-lib/commit/d5f7577fc48406e483ed2f14844bdda233d09688))
+
+
+
+
+
 ## [5.10.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.10.0...@kajabi/sage@5.10.1) (2022-12-05)
 
 **Note:** Version bump only for package @kajabi/sage

@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.10.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.9.1...@kajabi/sage-react@1.10.0) (2022-12-13)
+
+
+### Bug Fixes
+
+* **rich-text-editor:** removed console logs ([90b5659](https://github.com/Kajabi/sage-lib/commit/90b5659ac1b41f13cc6cfbe85f90fca7808572f6))
+* **rich-text-editor:** resolve export and fix nav logic ([e023723](https://github.com/Kajabi/sage-lib/commit/e023723e796b6aa1988a1a4496ec4e56208a5f61))
+* **toolbar dropdown:** create toolbardropdown story and move rich text editor example ([c0eb8c4](https://github.com/Kajabi/sage-lib/commit/c0eb8c42a6139c782adff8adfd545dc43fb45c49))
+
+
+### Features
+
+* **modal:** updates modal sizes in React ([2e183c5](https://github.com/Kajabi/sage-lib/commit/2e183c53849bddc4ee1f13aea76ad4805ca2528c))
+
+
+
+## 5.10.1 (2022-12-06)
+
+
+### Bug Fixes
+
+* **dropdown:** options menu story ([c4fe767](https://github.com/Kajabi/sage-lib/commit/c4fe767461a2f3c06634da08051039edb548b616))
+
+
+
+
+
 ## [1.9.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.9.0...@kajabi/sage-react@1.9.1) (2022-12-05)
 
 **Note:** Version bump only for package @kajabi/sage-react
