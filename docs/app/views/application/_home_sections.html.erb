@@ -87,13 +87,13 @@
                 "bottom": "md"
               }
             } %>
-            <h3 class="t-sage-heading-3">Patterns</h3>
-            <p class="t-sage-body">Patterns that allow us to position our content in various formats and locations without needing to change the content.</p>
+            <h3 class="t-sage-heading-3">Layout Tools</h3>
+            <p class="t-sage-body">Layouts allow for positioning our content in various formats and locations without needing to change the content.</p>
             <%= sage_component SageButton, {
-              value: "Layout Patterns",
+              value: "Browse Layout Tools",
               attributes: {
-                href: pages_patterns_path(:panels_cards),
-                title: "Layout Patterns"
+                href: pages_layout_path(sage_layouts_sorted.first[:title]),
+                title: "Browse Layout Tools"
               },
               subtle: true,
               icon: {
