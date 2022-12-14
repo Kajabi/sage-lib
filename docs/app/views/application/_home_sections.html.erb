@@ -88,7 +88,7 @@
               }
             } %>
             <h3 class="t-sage-heading-3">Layout Tools</h3>
-            <p class="t-sage-body">Layouts allow for positioning our content in various formats and locations without needing to change the content.</p>
+            <p class="t-sage-body">Layouts allow for positioning content in various formats and locations without needing to change the content.</p>
             <%= sage_component SageButton, {
               value: "Browse Layout Tools",
               attributes: {
@@ -118,19 +118,7 @@
             } %>
             <h3 class="t-sage-heading-3">Interactions</h3>
             <p class="t-sage-body">A guided list of common interactive experiences that the system supports to answer key presentational JS needs.</p>
-            <%= sage_component SageButton, {
-              value: "Coming Soon...",
-              attributes: {
-                href: "#",
-                title: "Coming Soon..."
-              },
-              subtle: true,
-              icon: {
-                style: "right",
-                name: "arrow-right"
-              },
-              style: "primary",
-            } %>
+            <p class="<%= SageClassnames::TYPE::BODY_SEMI %>">Coming soon...</p>
           <% end %>
         <% end %>
       <% end %>
