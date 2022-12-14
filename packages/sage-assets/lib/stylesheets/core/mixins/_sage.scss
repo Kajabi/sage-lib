@@ -129,6 +129,10 @@
         /* stylelint-disable max-nesting-depth */
         &::before {
           margin-right: rem(20px);
+
+          @media (max-width: sage-breakpoint(sm-max)) {
+            margin-right: sage-spacing(sm);
+          }
         }
 
         &.sage-btn--small {
@@ -136,11 +140,16 @@
         }
 
         &.sage-btn--rich-text,
+        .toolbar-editor &,
         .toolbar-editor__section & {
           margin-left: sage-spacing(3xs);
           margin-right: sage-spacing(3xs);
           padding: sage-spacing(xs) rem(12px) sage-spacing(xs) sage-spacing(xs);
           border-radius: 6px;
+
+          @media (max-width: sage-breakpoint(sm-max)) {
+            padding: rem(6px) rem(10px) rem(6px) rem(6px);
+          }
 
           &::after {
             right: 15px;

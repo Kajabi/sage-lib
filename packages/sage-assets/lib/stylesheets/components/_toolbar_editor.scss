@@ -1,6 +1,14 @@
 .toolbar-editor {
   display: flex;
   align-items: center;
+
+  & > * {
+    padding-inline: sage-spacing(3xs);
+
+    & + * {
+      border-left: sage-border(interactive);
+    }
+  }
 }
 
 .toolbar-editor__container {
@@ -16,7 +24,7 @@
 .toolbar-editor__section {
   flex: 2 1 auto;
   align-items: center;
-  min-width: rem(100px);
+  min-width: rem(50px);
   margin-left: 0;
 
   & + & {
@@ -31,4 +39,8 @@
 
 .toolbar-editor__section-list-item {
   display: inline-flex;
+}
+
+.rich-text__format-button {
+  font-size: sage-font-size(sm);
 }
