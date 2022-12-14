@@ -407,7 +407,7 @@ module ComponentsHelper
       },
       {
         title: "icon",
-        description: "The Icon component displays a standalone icon with customizable options. Our library of icons is available under the #{link_to("Foundation's Icons page", pages_design_path(:icon))}.".html_safe,
+        description: "The Icon component displays a standalone icon with customizable options. Our library of icons is available under the #{link_to("Foundation's Icons page", pages_foundation_path(:icon))}.".html_safe,
         scss: "todo",
         rails: "todo",
         react: "todo",
