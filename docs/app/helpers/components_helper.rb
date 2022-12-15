@@ -14,7 +14,7 @@ module ComponentsHelper
       # Sage Generated Components
       {
         title: "accordion",
-        description: ".",
+        description: "The accordion component is used to show and hide sections of related content on a page.",
         scss: "done",
         docs: "todo",
         rails: "done",
