@@ -14,9 +14,6 @@ module ApplicationHelper
     current_page?(pages_experiences_path(:onboarding)) || (params[:title] && current_page?(pages_experiences_path(params[:title])))
   end
 
-  def current_page_design?
-    current_page?(pages_design_path(:color)) || (params[:title] && current_page?(pages_design_path(params[:title])))
-  end
 
   def current_page_patterns?
     current_page?(pages_patterns_path(:panels_cards)) || (params[:title] && current_page?(pages_patterns_path(params[:title])))
