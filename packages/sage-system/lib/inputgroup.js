@@ -4,11 +4,13 @@ Sage.inputgroup = (function() {
   // Functions
   // ==================================================
   const inputPaddingOffset = 16;
+  const inputGroupBtns = Sage.util.nodelistToArray(document.querySelectorAll(".sage-input-group__button"));
+  const inputBoxShadowWidth = 1;
 
   function togglePasswordDisplay(evt) {
     const parentEle = evt.target.parentElement,
-       field = parentEle.querySelector(".sage-input__field"),
-       activeClassName = "sage-input-group--visible";
+          field = parentEle.querySelector(".sage-input__field"),
+          activeClassName = "sage-input-group--visible";
 
     if (field.type === "password") {
       field.type = "text";
@@ -22,8 +24,6 @@ Sage.inputgroup = (function() {
 
 
   function addButtonPadding() {
-    const inputGroupBtns = Sage.util.nodelistToArray(document.querySelectorAll(".sage-input-group__button"));
-
     inputGroupBtns.forEach(function(btn) {
       const parentGroup = btn.closest(".sage-input-group");
       const field = parentGroup.querySelector(".sage-input__field");
@@ -31,6 +31,14 @@ Sage.inputgroup = (function() {
     });
   }
 
+  function positionGroupButton() {
+    inputGroupBtns.forEach(function(btn) {
+      const parentGroup = btn.closest(".sage-input-group");
+      const label = parentGroup.querySelector(".sage-input__label");
+      const labelStyles = window.getComputedStyle(label);
+      btn.style.top = `${label.offsetHeight + parseInt(labelStyles.marginBottom) + inputBoxShadowWidth }px`;
+    });
+  }
 
   function bindPWEvents() {
     const pwShowBtn = Sage.util.nodelistToArray(document.querySelectorAll("[data-js-mask='password']"));
@@ -43,17 +51,18 @@ Sage.inputgroup = (function() {
     });
   }
 
-
-  function init() {
+  window.addEventListener("load", function(){
     if (document.querySelector(".sage-input-group__button").length !== null) {
       addButtonPadding();
+      positionGroupButton();
     }
+  });
 
+  function init() {
     if (document.querySelector(".sage-input-group__toggle").length !== null) {
       bindPWEvents();
     }
   }
-
 
   return {
     init: init
