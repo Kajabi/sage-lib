@@ -84,9 +84,3 @@ $-input-group-pw-field-button-color-text-hover: sage-color(black);
     background-color: sage-color(grey, 200);
   }
 }
-
-.sage-input-group .sage-form-field--error {
-  + .sage-btn {
-    bottom: rem(29px);
-  }
-}
