@@ -34,11 +34,11 @@ Sage.inputgroup = (function() {
 
   function positionButtonOnError() {
     if (document.querySelector(".sage-form-field--error").length !== null) {
-      const inputGroupWithErrors = Sage.util.nodelistToArray(
+      const inputGroupsWithErrors = Sage.util.nodelistToArray(
         document.querySelectorAll(".sage-form-field--error")
       );
 
-      inputGroupWithErrors.forEach(function (group) {
+      inputGroupsWithErrors.forEach(function (group) {
         const parentGroup = group.closest(".sage-input-group");
         const label = parentGroup.querySelector(".sage-input__label");
         const btn = parentGroup.querySelector(".sage-input-group__button");
