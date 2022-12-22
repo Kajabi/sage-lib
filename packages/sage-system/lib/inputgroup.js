@@ -4,7 +4,6 @@ Sage.inputgroup = (function() {
   // Functions
   // ==================================================
   const inputPaddingOffset = 16;
-  const inputGroupBtns = Sage.util.nodelistToArray(document.querySelectorAll(".sage-input-group__button"));
   const inputBoxShadowWidth = 1;
 
   function togglePasswordDisplay(evt) {
@@ -24,6 +23,8 @@ Sage.inputgroup = (function() {
 
 
   function addButtonPadding() {
+    const inputGroupBtns = Sage.util.nodelistToArray(document.querySelectorAll(".sage-input-group__button"));
+
     inputGroupBtns.forEach(function(btn) {
       const parentGroup = btn.closest(".sage-input-group");
       const field = parentGroup.querySelector(".sage-input__field");
@@ -31,13 +32,20 @@ Sage.inputgroup = (function() {
     });
   }
 
-  function positionGroupButton() {
-    inputGroupBtns.forEach(function(btn) {
-      const parentGroup = btn.closest(".sage-input-group");
-      const label = parentGroup.querySelector(".sage-input__label");
-      const labelStyles = window.getComputedStyle(label);
-      btn.style.top = `${label.offsetHeight + parseInt(labelStyles.marginBottom) + inputBoxShadowWidth }px`;
-    });
+  function positionButtonOnError() {
+    if (document.querySelector(".sage-form-field--error").length !== null) {
+      const inputGroupWithErrors = Sage.util.nodelistToArray(
+        document.querySelectorAll(".sage-form-field--error")
+      );
+
+      inputGroupWithErrors.forEach(function (group) {
+        const parentGroup = group.closest(".sage-input-group");
+        const label = parentGroup.querySelector(".sage-input__label");
+        const btn = parentGroup.querySelector(".sage-input-group__button");
+        const labelStyles = window.getComputedStyle(label);
+        btn.style.top = `${label.offsetHeight + parseInt(labelStyles.marginBottom) + inputBoxShadowWidth}px`;
+      });
+    }
   }
 
   function bindPWEvents() {
@@ -51,14 +59,15 @@ Sage.inputgroup = (function() {
     });
   }
 
-  window.addEventListener("load", function(){
-    if (document.querySelector(".sage-input-group__button").length !== null) {
-      addButtonPadding();
-      positionGroupButton();
-    }
-  });
-
   function init() {
+
+    if (document.querySelector(".sage-input-group__button").length !== null) {
+      window.addEventListener("load", function(){
+        addButtonPadding();
+        positionButtonOnError();
+      });
+    };
+
     if (document.querySelector(".sage-input-group__toggle").length !== null) {
       bindPWEvents();
     }
