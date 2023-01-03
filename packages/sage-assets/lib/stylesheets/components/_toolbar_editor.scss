@@ -2,14 +2,15 @@
   display: flex;
   align-items: center;
 
-  & > * {
+  > * {
     padding-inline: sage-spacing(3xs);
 
-    & + * {
+    + * {
       border-left: sage-border(interactive);
     }
   }
 
+  /* stylelint-disable selector-max-compound-selectors */
   .toolbar-editor__button-group > .sage-btn:not(.sage-btn--disclosure),
   .toolbar-editor__section-list > span > .sage-btn:not(.sage-btn--disclosure) {
     &::before {
@@ -20,8 +21,7 @@
       @include visually-hidden;
     }
   }
-
-
+  /* stylelint-enable selector-max-compound-selectors */
 }
 
 .toolbar-editor__container {
@@ -36,16 +36,12 @@
 
 .toolbar-editor__section {
   flex: 2 1 auto;
+  flex-grow: 0; /* there is currently an issue with extra space between sections, this will reduce space but will not allow the group to grow on upward resize */
   align-items: center;
   margin-left: 0;
-  flex-grow: 0; /* there is currently an issue with extra space between sections, this will reduce space but will not allow the group to grow on upward resize */
 
   & + & {
     border-left: sage-border(interactive);
-  }
-
-  &:last-child {
-    flex-grow: 1;
   }
 }
 
@@ -75,9 +71,9 @@
     }
   }
 
-  &:before {
+  &::before {
     @media screen and (max-width: 767px) {
-      margin-right: 0
+      margin-right: 0;
     }
     @media screen and (min-width: 768px) {
       // @include visually-hidden();
@@ -85,5 +81,3 @@
     }
   }
 }
-
-

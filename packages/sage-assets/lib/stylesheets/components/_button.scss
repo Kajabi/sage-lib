@@ -435,7 +435,7 @@ $-btn-loading-min-height: rem(36px);
       padding: rem(6px) rem(30px) rem(6px) rem(6px);
     }
 
-    &:before {
+    &::before {
       font-size: sage-font-size(body-xs);
     }
 
