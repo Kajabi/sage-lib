@@ -11,9 +11,48 @@ const di = [
   { icon: SageTokens.ICONS.EMAIL_ACTIVITY, color: Button.COLORS.SECONDARY, label: "Email"},
 ]
 
+const textFormatItems = [
+  {
+    id: 1,
+    icon: SageTokens.ICONS.UNDERLINE,
+    color: Button.COLORS.SECONDARY,
+    label: 'Underline',
+  },
+  {
+    id: 2,
+    icon: SageTokens.ICONS.MARGIN_LEFT,
+    color: Button.COLORS.SECONDARY,
+    label: 'Left indent',
+  },
+  {
+    id: 3,
+    icon: SageTokens.ICONS.MARGIN_RIGHT,
+    color: Button.COLORS.SECONDARY,
+    label: 'Right indent',
+  },
+  {
+    id: 4,
+    icon: SageTokens.ICONS.STRIKETHROUGH,
+    color: Button.COLORS.SECONDARY,
+    label: 'Strikethrough',
+  },
+  {
+    id: 5,
+    icon: SageTokens.ICONS.SUBSCRIPT,
+    color: Button.COLORS.SECONDARY,
+    label: 'Subscript',
+  },
+  {
+    id: 6,
+    icon: SageTokens.ICONS.SUPERSCRIPT,
+    color: Button.COLORS.SECONDARY,
+    label: 'Superscript',
+  }
+]
+
 const BaseTemplate = (args) => (
   <div className="toolbar-editor" style={{ display: 'flex', width: '100%' }} id="toolbar">
-    <ToolbarEditor {...args}>
+    <div>
       <Button
         disclosure={true}
         icon={SageTokens.ICONS.ALIGN_LEFT}
@@ -22,11 +61,21 @@ const BaseTemplate = (args) => (
       >
         Text align
       </Button>
+    </div>
+    <div className="toolbar-editor__button-group">
       <Button
-        icon={SageTokens.ICONS.REMOVE}
+        icon={SageTokens.ICONS.BOLD}
+        iconOnly={true}
+        color={Button.COLORS.SECONDARY}
+        selected={true}
+      >
+        Bold
+      </Button>
+      <Button
+        icon={SageTokens.ICONS.ITALIC}
         color={Button.COLORS.SECONDARY}
       >
-        Remove
+        Italic
       </Button>
       <Dropdown
         icon={SageTokens.ICONS.DOT_MENU_HORIZONTAL}
@@ -36,7 +85,7 @@ const BaseTemplate = (args) => (
         triggerClassnames="sage-btn--rich-text"
       >
         <ul className="sage-dropdown__menu">
-          {di.map((item) => (
+          {textFormatItems.map((item) => (
             <li className="sage-dropdown__item">
               <Button
                 icon={item.icon}
@@ -48,97 +97,87 @@ const BaseTemplate = (args) => (
           ))}
         </ul>
       </Dropdown>
-
+    </div>
+    <div>
+      <Dropdown
+        icon={SageTokens.ICONS.COLOR}
+        isLabelVisible={false}
+        disclosure={true}
+        label="Color"
+        panelSize={Dropdown.PANEL_SIZES.SMALL}
+        triggerClassnames="sage-btn--rich-text"
+      />
+    </div>
+    <ToolbarEditor>
       <Button
-        icon={SageTokens.ICONS.ITALIC}
-        iconOnly={true}
+        icon={SageTokens.ICONS.LIST_BULLET}
         color={Button.COLORS.SECONDARY}
-        selected={true}
       >
-        Italic
+        Bulleted List
       </Button>
       <Button
-        icon={SageTokens.ICONS.UNDERLINE}
+        icon={SageTokens.ICONS.LIST_NUMBERS}
         color={Button.COLORS.SECONDARY}
       >
-        Underline
-      </Button>
-      <Button
-        icon={SageTokens.ICONS.STRIKETHROUGH}
-        color={Button.COLORS.SECONDARY}
-      >
-        Strikethrough
-      </Button>
-      <Button
-        icon={SageTokens.ICONS.UNDO}
-        color={Button.COLORS.SECONDARY}
-      >
-        Undo
-      </Button>
-      <Button
-        icon={SageTokens.ICONS.REDO}
-        color={Button.COLORS.SECONDARY}
-      >
-        Redo
+        Numbered List
       </Button>
     </ToolbarEditor>
     <ToolbarEditor>
       <Button
-        icon={SageTokens.ICONS.ARROW_CORNER}
+        icon={SageTokens.ICONS.ALIGN_LEFT}
         color={Button.COLORS.SECONDARY}
       >
-        Bold
+        Left align
+      </Button>
+      <Button
+        icon={SageTokens.ICONS.ALIGN_RIGHT}
+        color={Button.COLORS.SECONDARY}
+      >
+        Right align
+      </Button>
+      <Button
+        icon={SageTokens.ICONS.ALIGN_CENTER}
+        color={Button.COLORS.SECONDARY}
+      >
+        Center Align
+      </Button>
+      <Button
+        icon={SageTokens.ICONS.ALIGN_JUSTIFY}
+        color={Button.COLORS.SECONDARY}
+      >
+        Justify
       </Button>
     </ToolbarEditor>
     <ToolbarEditor>
       <Button
-        icon={SageTokens.ICONS.DANGER}
+        icon={SageTokens.ICONS.IMAGE}
         color={Button.COLORS.SECONDARY}
       >
-        Danger
+        Files & images
       </Button>
       <Button
-        icon={SageTokens.ICONS.REMOVE}
+        icon={SageTokens.ICONS.URL}
         color={Button.COLORS.SECONDARY}
       >
-        Remove
+        Link
       </Button>
       <Button
-        icon={SageTokens.ICONS.BOLD}
+        icon={SageTokens.ICONS.CODE}
         color={Button.COLORS.SECONDARY}
       >
-        Bold
+        Code
       </Button>
       <Button
-        icon={SageTokens.ICONS.ITALIC}
+        icon={SageTokens.ICONS.HORIZONTAL_LINE}
         color={Button.COLORS.SECONDARY}
       >
-        Italic
+        Divider
       </Button>
       <Button
-        icon={SageTokens.ICONS.UNDERLINE}
+        icon={SageTokens.ICONS.QUOTE}
         color={Button.COLORS.SECONDARY}
       >
-        Underline
-      </Button>
-      <Button
-        icon={SageTokens.ICONS.STRIKETHROUGH}
-        color={Button.COLORS.SECONDARY}
-        selected={true}
-      >
-        Strikethrough
-      </Button>
-      <Button
-        icon={SageTokens.ICONS.UNDO}
-        color={Button.COLORS.SECONDARY}
-      >
-        Undo
-      </Button>
-      <Button
-        icon={SageTokens.ICONS.REDO}
-        color={Button.COLORS.SECONDARY}
-      >
-        Redo
+        Blockquote
       </Button>
     </ToolbarEditor>
   </div>
