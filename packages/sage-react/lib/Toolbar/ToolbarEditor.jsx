@@ -49,9 +49,7 @@ export const ToolbarEditor = ({
       setMoreItems(
         fullNavArray
           .slice(sliceIdx)
-          .map((item, idx) => (
-            { id: idx, label: item }
-          ))
+          .map((item, idx) => ({ id: idx, label: item }))
       );
     } else {
       setMoreItems([]);
@@ -85,6 +83,24 @@ export const ToolbarEditor = ({
     ))
   );
 
+  // const test = () => {
+  //   if (priorityItems.length > 1) {
+  //     renderToolbarItems(priorityItems)
+  //   } else {
+  //     // console.log(priorityItems[0].props.icon)
+  //     console.log(priorityItems);
+  //     renderToolbarItem(priorityItems)
+  //   }
+  // };
+  const getIcon = () => {
+    if (priorityItems.length == 0) {
+      console.log("priorityItems is empty: ", fullNavArray);
+      return moreItems[0].label.props.icon
+    } else {
+      return 'add'
+    }
+  };
+
   return (
     <div ref={navigationOuterRef} className="toolbar-editor__section" aria-label={name}>
       <span ref={navigationRef} key={`toolbar-editor-${name}`} className="toolbar-editor__section-list">
@@ -98,6 +114,7 @@ export const ToolbarEditor = ({
             <span className="toolbar-editor__section-list-item" ref={moreMenuRef}>
               <ToolbarEditorDropdown
                 align="right"
+                icon={getIcon()}
                 triggerClassnames="sage-btn--rich-text"
                 triggerButtonSubtle={false}
                 options={moreItems}

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { SageTokens } from '../configs';
+import { Button } from '../Button';
 import { Dropdown } from './Dropdown';
 import { DropdownItemList } from './DropdownItemList';
 import { DROPDOWN_PANEL_SIZES, DROPDOWN_POSITIONS } from './configs';
@@ -9,6 +10,7 @@ export const ToolbarEditorDropdown = ({
   align,
   className,
   exitPanelHandler,
+  icon,
   isPinned,
   onEscapeHook,
   panelMaxWidth,
@@ -22,7 +24,7 @@ export const ToolbarEditorDropdown = ({
     className={className}
     disclosure={true}
     exitPanelHandler={exitPanelHandler}
-    icon={SageTokens.ICONS.ADD}
+    icon={icon}
     isLabelVisible={false}
     isPinned={isPinned}
     label="More options"
@@ -33,7 +35,23 @@ export const ToolbarEditorDropdown = ({
     triggerButtonSubtle={triggerButtonSubtle}
     triggerClassnames={triggerClassnames}
   >
-    <Dropdown.ItemList items={options} />
+    <ul className="sage-dropdown__menu">
+      {options.map((item) => (
+        <li className="sage-dropdown__item">
+          {/* <Button
+            className="sage-dropdown__item-control1"
+            icon={item.icon}
+            color={item.color}
+          >
+            {item.label}
+          </Button> */}
+          {/* <span className="sage-dropdown__item-control">
+            {item.label}
+          </span> */}
+          {item.label}
+        </li>
+      ))}
+    </ul>
   </Dropdown>
 );
 
@@ -44,6 +62,7 @@ ToolbarEditorDropdown.defaultProps = {
   align: DROPDOWN_POSITIONS.DEFAULT,
   className: null,
   exitPanelHandler: (evt) => evt,
+  icon: SageTokens.ICONS.ADD,
   isPinned: true,
   onEscapeHook: () => false,
   panelMaxWidth: null,
@@ -57,6 +76,7 @@ ToolbarEditorDropdown.propTypes = {
   align: PropTypes.oneOf(Object.values(DROPDOWN_POSITIONS)),
   className: PropTypes.string,
   exitPanelHandler: PropTypes.func,
+  icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),
   isPinned: PropTypes.bool,
   onEscapeHook: PropTypes.func,
   panelMaxWidth: PropTypes.string,

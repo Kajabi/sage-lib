@@ -9,6 +9,19 @@
       border-left: sage-border(interactive);
     }
   }
+
+  .toolbar-editor__button-group > .sage-btn:not(.sage-btn--disclosure),
+  .toolbar-editor__section-list > span > .sage-btn:not(.sage-btn--disclosure) {
+    &::before {
+      margin-inline: 0;
+    }
+
+    .sage-btn__truncate-text {
+      @include visually-hidden;
+    }
+  }
+
+
 }
 
 .toolbar-editor__container {
@@ -24,8 +37,8 @@
 .toolbar-editor__section {
   flex: 2 1 auto;
   align-items: center;
-  min-width: rem(50px);
   margin-left: 0;
+  flex-grow: 0; /* there is currently an issue with extra space between sections, this will reduce space but will not allow the group to grow on upward resize */
 
   & + & {
     border-left: sage-border(interactive);
@@ -39,6 +52,11 @@
 
 .toolbar-editor__section-list-item {
   display: inline-flex;
+}
+
+.toolbar-editor__button-group {
+  display: flex;
+  align-items: center;
 }
 
 .rich-text__format-button {
