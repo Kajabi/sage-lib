@@ -43,6 +43,10 @@
   & + & {
     border-left: sage-border(interactive);
   }
+
+  &:last-child {
+    flex-grow: 1;
+  }
 }
 
 .toolbar-editor__section-list {
@@ -61,4 +65,25 @@
 
 .rich-text__format-button {
   font-size: sage-font-size(sm);
+  font-size: 14px;
+  font-weight: 500;
+
+  .sage-btn__truncate-text {
+    @media screen and (max-width: 767px) {
+      // @include visually-hidden();
+      display: none;
+    }
+  }
+
+  &:before {
+    @media screen and (max-width: 767px) {
+      margin-right: 0
+    }
+    @media screen and (min-width: 768px) {
+      // @include visually-hidden();
+      display: none;
+    }
+  }
 }
+
+

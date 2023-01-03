@@ -53,14 +53,13 @@ const textFormatItems = [
 const BaseTemplate = (args) => (
   <div className="toolbar-editor" style={{ display: 'flex', width: '100%' }} id="toolbar">
     <div>
-      <Button
-        disclosure={true}
+      <Dropdown
         icon={SageTokens.ICONS.ALIGN_LEFT}
-        iconOnly={true}
-        color={Button.COLORS.SECONDARY}
-      >
-        Text align
-      </Button>
+        disclosure={true}
+        label="Formats"
+        panelSize={Dropdown.PANEL_SIZES.SMALL}
+        triggerClassnames="sage-btn--rich-text rich-text__format-button"
+      />
     </div>
     <div className="toolbar-editor__button-group">
       <Button
