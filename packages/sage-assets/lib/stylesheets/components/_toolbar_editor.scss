@@ -15,6 +15,7 @@
   .toolbar-editor__section-list > span > .sage-btn:not(.sage-btn--disclosure) {
     &::before {
       margin-inline: 0;
+      justify-content: center;
     }
 
     .sage-btn__truncate-text {
