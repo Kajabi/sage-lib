@@ -64,7 +64,6 @@
 
   .sage-btn__truncate-text {
     @media screen and (max-width: 767px) {
-      // @include visually-hidden();
       display: none;
     }
   }
@@ -74,7 +73,6 @@
       margin-right: 0;
     }
     @media screen and (min-width: 768px) {
-      // @include visually-hidden();
       display: none;
     }
   }
