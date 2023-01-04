@@ -5,12 +5,6 @@ import { SageTokens } from '../configs';
 import { Button } from '../Button';
 import { Dropdown } from '../Dropdown';
 
-const di = [
-  { icon: SageTokens.ICONS.REMOVE, color: Button.COLORS.SECONDARY, label: "Remove"},
-  { icon: SageTokens.ICONS.DANGER, color: Button.COLORS.SECONDARY, label: "Danger"},
-  { icon: SageTokens.ICONS.EMAIL_ACTIVITY, color: Button.COLORS.SECONDARY, label: "Email"},
-]
-
 const textFormatItems = [
   {
     id: 1,
@@ -48,11 +42,11 @@ const textFormatItems = [
     color: Button.COLORS.SECONDARY,
     label: 'Superscript',
   }
-]
+];
 
-const BaseTemplate = (args) => (
+const BaseTemplate = () => (
   <div className="toolbar-editor" style={{ display: 'flex', width: '100%' }} id="toolbar">
-    <div>
+    <ToolbarEditor isFixed={true}>
       <Dropdown
         icon={SageTokens.ICONS.ALIGN_LEFT}
         disclosure={true}
@@ -60,8 +54,8 @@ const BaseTemplate = (args) => (
         panelSize={Dropdown.PANEL_SIZES.SMALL}
         triggerClassnames="sage-btn--rich-text rich-text__format-button"
       />
-    </div>
-    <div className="toolbar-editor__button-group">
+    </ToolbarEditor>
+    <ToolbarEditor isFixed={true}>
       <Button
         icon={SageTokens.ICONS.BOLD}
         iconOnly={true}
@@ -96,8 +90,8 @@ const BaseTemplate = (args) => (
           ))}
         </ul>
       </Dropdown>
-    </div>
-    <div>
+    </ToolbarEditor>
+    <ToolbarEditor isFixed={true}>
       <Dropdown
         icon={SageTokens.ICONS.COLOR}
         isLabelVisible={false}
@@ -106,7 +100,7 @@ const BaseTemplate = (args) => (
         panelSize={Dropdown.PANEL_SIZES.SMALL}
         triggerClassnames="sage-btn--rich-text"
       />
-    </div>
+    </ToolbarEditor>
     <ToolbarEditor>
       <Button
         icon={SageTokens.ICONS.LIST_BULLET}

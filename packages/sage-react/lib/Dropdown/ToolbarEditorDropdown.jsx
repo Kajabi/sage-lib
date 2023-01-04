@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { SageTokens } from '../configs';
-import { Button } from '../Button';
 import { Dropdown } from './Dropdown';
 import { DropdownItemList } from './DropdownItemList';
 import { DROPDOWN_PANEL_SIZES, DROPDOWN_POSITIONS } from './configs';
@@ -38,16 +37,6 @@ export const ToolbarEditorDropdown = ({
     <ul className="sage-dropdown__menu">
       {options.map((item) => (
         <li className="sage-dropdown__item">
-          {/* <Button
-            className="sage-dropdown__item-control1"
-            icon={item.icon}
-            color={item.color}
-          >
-            {item.label}
-          </Button> */}
-          {/* <span className="sage-dropdown__item-control">
-            {item.label}
-          </span> */}
           {item.label}
         </li>
       ))}

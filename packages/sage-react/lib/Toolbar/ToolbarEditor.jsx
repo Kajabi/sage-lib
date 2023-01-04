@@ -1,11 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { PropTypes } from 'prop-types';
+import classnames from 'classnames';
 import debounce from 'lodash/debounce';
 
 import { ToolbarEditorDropdown } from '../Dropdown/ToolbarEditorDropdown';
 
 export const ToolbarEditor = ({
   name,
+  isFixed,
   ...rest
 }) => {
   const { children } = rest;
@@ -22,7 +24,16 @@ export const ToolbarEditor = ({
   const fullNavArray = [children].flat(Infinity);
   let widthsArray;
 
+  const sectionClassNames = classnames(
+    'toolbar-editor__section',
+    {
+      'toolbar-editor__section--is-fixed': isFixed
+    }
+  );
+
   const calculateWidth = () => {
+    if (isFixed) { return; } // Do not collapse or expand if expected to be fixed
+
     const availableWidth = navigationOuterRef.current.getBoundingClientRect().width
       - MORE_DROPDOWN_WIDTH;
     let navWidth = 0,
@@ -82,27 +93,16 @@ export const ToolbarEditor = ({
       renderToolbarItem(item, idx)
     ))
   );
-
-  // const test = () => {
-  //   if (priorityItems.length > 1) {
-  //     renderToolbarItems(priorityItems)
-  //   } else {
-  //     // console.log(priorityItems[0].props.icon)
-  //     console.log(priorityItems);
-  //     renderToolbarItem(priorityItems)
-  //   }
-  // };
   const getIcon = () => {
-    if (priorityItems.length == 0) {
-      console.log("priorityItems is empty: ", fullNavArray);
-      return moreItems[0].label.props.icon
-    } else {
-      return 'add'
+    if (priorityItems.length === 0) {
+      return moreItems[0].label.props.icon;
     }
+
+    return 'add';
   };
 
   return (
-    <div ref={navigationOuterRef} className="toolbar-editor__section" aria-label={name}>
+    <div ref={navigationOuterRef} className={sectionClassNames} aria-label={name}>
       <span ref={navigationRef} key={`toolbar-editor-${name}`} className="toolbar-editor__section-list">
         {
           priorityItems.length > 1
@@ -128,7 +128,15 @@ export const ToolbarEditor = ({
   );
 };
 
+ToolbarEditor.defaultProps = {
+  isFixed: false
+};
+
 ToolbarEditor.propTypes = {
+  /**
+   * Determines whether the toolbar section is flexible or fixed
+  */
+  isFixed: PropTypes.bool,
   /**
    * Name of the toolbar
   */
