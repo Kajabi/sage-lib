@@ -62,7 +62,7 @@ $-grid-breakpoint-xl: sage-breakpoint(xl-min);
   }
 }
 
-// horizontal alignment
+// row horizontal alignment
 .sage-row--align-start {
   justify-content: flex-start;
 }
@@ -82,7 +82,7 @@ $-grid-breakpoint-xl: sage-breakpoint(xl-min);
   justify-content: space-evenly;
 }
 
-// vertical alignment
+// row vertical alignment
 .sage-row--valign-start {
   align-items: flex-start;
 }
@@ -220,4 +220,21 @@ $-grid-breakpoint-xl: sage-breakpoint(xl-min);
   .sage-col--lg-show {
     display: none;
   }
+}
+
+// column vertical alignment
+.sage-col--valign-start {
+  align-self: flex-start;
+}
+.sage-col--valign-center {
+  align-self: center;
+}
+.sage-col--valign-end {
+  align-self: flex-end;
+}
+.sage-col--valign-baseline {
+  align-self: baseline;
+}
+.sage-col--valign-stretch {
+  align-self: stretch;
 }

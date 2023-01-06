@@ -6,5 +6,6 @@ class SageGridCol < SageComponent
     size: [:optional, NilClass, String, Integer],
     small: [:optional, NilClass, String, Integer],
     xlarge: [:optional, NilClass, String, Integer],
+    vertical_alignment: [:optional, String],
   })
 end

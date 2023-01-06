@@ -1,0 +1,79 @@
+
+import { Canvas, Meta, Story, ArgsTable } from '@storybook/addon-docs';
+
+import { selectArgs } from '../story-support/helpers';
+import { SageTokens } from '../configs';
+
+import { GridRow } from './GridRow';
+import { GridCol } from './GridCol';
+import { Grid } from './Grid';
+import { Card } from '../Card';
+
+import PropTypes from 'prop-types';
+
+<Meta
+  title="Sage/Grid/GridCol"
+  component={GridCol}
+  argTypes={{
+    verticalAlignment: {
+      options: Object.values(GridCol.VERTICAL_ALIGNMENT_TYPES),
+    },
+  }}
+/>
+
+export const columns = [1, 2, 3, 4]
+
+export const Template = (args) => (
+  <Grid>
+    <GridRow>
+      <GridCol size="2" aria-label="Double column">
+        <Card style={{ textAlign: 'center' }}>
+          Tall column with multiple lines
+        </Card>
+      </GridCol>
+      <GridCol size="2" aria-label="Single column" {...args}>
+        <Card style={{ textAlign: 'center' }}>
+          Vertical Align col
+        </Card>
+      </GridCol>
+      <GridCol size="2" aria-label="Single column">
+        <Card style={{ textAlign: 'center' }}>
+          Short col
+        </Card>
+      </GridCol>
+    </GridRow>
+  </Grid>
+);
+
+export const AlignmentTypes = ({ types }) => {
+  const values = Object.values(types);
+  return values.map((type, i) => (
+    <>
+      <code>{ type.trim() }</code>
+      {i < values.length - 1 ? ", " : ""}
+    </>
+  ))
+};
+
+# GridCol
+
+## Properties
+<ArgsTable of={GridCol} />
+
+### Vertical Alignment
+
+The vertical alignment default for each <code>.sage-col</code> aligns to stretch the full height of each respective <code>.sage-row</code> container. Alignments will only be visible if the total amount of height taken up by columns is less than the total amount of space.
+
+Supported Types: <AlignmentTypes types={GridCol.VERTICAL_ALIGNMENT_TYPES}/>
+
+## Example
+
+<Canvas>
+    <Story name="Default"
+      args = {{
+        verticalAlignment: GridCol.VERTICAL_ALIGNMENT_TYPES.CENTER,
+      }}
+    >
+      {Template.bind({})}
+    </Story>
+</Canvas>

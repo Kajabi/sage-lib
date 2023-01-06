@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { SageClassnames } from '../configs';
-import { validNumberWithinGrid, validBreakpoint } from './configs';
+import { validNumberWithinGrid, validBreakpoint, VERTICAL_ALIGNMENT_TYPES } from './configs';
 
 export const GridCol = ({
   children,
@@ -13,6 +13,7 @@ export const GridCol = ({
   size,
   small,
   xlarge,
+  verticalAlignment,
   ...rest
 }) => {
   const hasInfix = size || small || medium || large || xlarge;
@@ -26,6 +27,7 @@ export const GridCol = ({
       [`sage-col--md-${medium}`]: medium,
       [`sage-col--lg-${large}`]: large,
       [`sage-col--xl-${xlarge}`]: xlarge,
+      [`sage-col--valign-${verticalAlignment}`]: verticalAlignment,
       [`${SageClassnames.TYPE_BLOCK}`]: sageType
     }
   );
@@ -37,6 +39,8 @@ export const GridCol = ({
   );
 };
 
+GridCol.VERTICAL_ALIGNMENT_TYPES = VERTICAL_ALIGNMENT_TYPES;
+
 GridCol.defaultProps = {
   className: null,
   children: null,
@@ -46,6 +50,7 @@ GridCol.defaultProps = {
   small: null,
   size: null,
   xlarge: null,
+  verticalAlignment: null,
 };
 
 GridCol.propTypes = {
@@ -57,4 +62,8 @@ GridCol.propTypes = {
   sageType: PropTypes.bool,
   size: validNumberWithinGrid,
   xlarge: validBreakpoint,
+  /**
+   * Sets the vertical alignment for the grid col
+   */
+  verticalAlignment: PropTypes.oneOf(Object.values(GridCol.VERTICAL_ALIGNMENT_TYPES)),
 };
