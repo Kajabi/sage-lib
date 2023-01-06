@@ -129,7 +129,8 @@ export const ToolbarEditor = ({
 };
 
 ToolbarEditor.defaultProps = {
-  isFixed: false
+  isFixed: false,
+  name: null,
 };
 
 ToolbarEditor.propTypes = {
@@ -140,5 +141,5 @@ ToolbarEditor.propTypes = {
   /**
    * Name of the toolbar
   */
-  name: PropTypes.string.isRequired,
+  name: PropTypes.string,
 };

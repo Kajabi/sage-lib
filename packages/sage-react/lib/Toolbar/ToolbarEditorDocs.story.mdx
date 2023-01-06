@@ -1,8 +1,11 @@
 import { Canvas, Meta, Story, ArgsTable } from '@storybook/addon-docs';
 
+import sectionsImage from './assets/ToolbarEditorSections.png';
 import * as Stories from './ToolbarEditor.story.jsx';
 import * as ButtonStories from '../Button/Button.story.jsx';
 import { ToolbarEditor } from './ToolbarEditor';
+
+export const ImageComponent = () => <img src='ToolbarEditorSections.png' alt="" />;
 
 <Meta
   title="Sage/ToolbarEditor"
@@ -38,6 +41,58 @@ There are cases when text is shown instead of the icon. To see the code for the 
 
 ## Selected buttons
 Add the `selected` attribute to your `<SageButton />`s to receive the selected treatment.
+
+## Responsive behavior
+<!-- TODO: add Loom -->
+
+One of the responsive features of the `<ToolbarEditor />` is to utilize the Priority Plus navigation pattern,
+which hides items within a dropdown when space is no longer available. The `<ToolbarEditor />` dropdown will contain a `add` icon
+unless only the dropdown is present. In that case the icon if the first item will be displayed.
+
+#### `isFixed`
+The `isFixed` property toggles the presence and behavior of the `<ToolbarEditor />` dropdown. Set to `false` by default, this property is meant to remove the responsive behavior. When disabled, the dropdown is no longer available
+and the section's width is fixed only to the size of the inner elements.
+
+## Structure
+To achieve our responsive pattern, `<ToolbarEditor />` requires:
+- No item in a flexible `<ToolbarEditor />` can contain a dropdown. This will cause a dropdown to reside in the `<ToolbarEditor />` dropdown when adequate space is not available.
+- No item can be nested multiple levels. All items must be direct children of the group.
+
+Below is the desired structure for a flexible `<ToolbarEditor />`:
+```
+<ToolbarEditor>
+  <Button>...</Button>
+  <Button>...</Button>
+</ToolbarEditor>
+```
+
+#### ToolbarEditor groups
+
+<img src='ToolbarEditorSections.png' alt="" />
+
+These groups contain a specific order and responsive restrictions detailed below:
+1. Text formating group
+    - `isFixed={true}`
+    - Single item
+    - Item contains a custom class, `.rich-text__format-button`, to handle responsive behavior of text and icon replacement
+2. Font formatting group
+    - `isFixed={true}`
+    - 3 items, with the last being a dropdown with 6 items
+3. Color picker group
+    - `isFixed={true}`
+    - Single item
+4. List options group - Flexible
+    - Flexible
+    - 2 items
+    - Only room for one icon, but the down chevron indicate more button commands available
+5. Alignment options group
+    - Flexible
+    - 4 items
+    - standard `<ToolbarEditor />` that will expand and collapse based on available width. Plus sign icon indicates that there are items, unless there is only room for one. See description in the List options group above
+6. Remaining options group
+    - Flexible
+    - This space is meant for the rest of your items
+    - standard `<ToolbarEditor />` that will expand and collapse based on available width. Plus sign icon indicates that there are items, unless there is only room for one. See description in the List options group above
 
 # Properties
 The available properties for `ToolbarEditor`.
