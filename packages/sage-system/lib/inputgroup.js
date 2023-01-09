@@ -33,6 +33,7 @@ Sage.inputgroup = (function() {
   }
 
   function positionButtonOnError() {
+
     if (document.querySelector(".sage-form-field--error").length !== null) {
       const inputGroupsWithErrors = Sage.util.nodelistToArray(
         document.querySelectorAll(".sage-form-field--error")
@@ -43,7 +44,7 @@ Sage.inputgroup = (function() {
         const label = parentGroup.querySelector(".sage-input__label");
         const btn = parentGroup.querySelector(".sage-input-group__button");
         const labelStyles = window.getComputedStyle(label);
-        btn.style.top = `${label.offsetHeight + parseInt(labelStyles.marginBottom) + inputBoxShadowWidth}px`;
+        btn.style.top = `${parseInt(labelStyles.lineHeight) + parseInt(labelStyles.marginBottom) + inputBoxShadowWidth}px`;
       });
     }
   }
