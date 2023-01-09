@@ -60,6 +60,38 @@
     } %>
   <% end %>
 
+
+  <%= sage_component SageInputGroup, {
+    group_id: "input-group-save-example2",
+    disabled: false,
+    has_button: true,
+    group_buttons: [{
+      icon: "",
+      text: "Save",
+      tooltip: true,
+      tooltip_position: "top",
+      tooltip_size: "",
+      tooltip_text: "Save",
+    }],
+    input_type: "text",
+    spacer: { top: :md }
+  } do %>
+    <%= sage_component SageFormInput, {
+      id: "input-group-save-field2",
+      max: "100",
+      min: "0",
+      input_type: "number",
+      input_mode: "numeric",
+      label_text: "Percentage",
+      placeholder: "Percentage",
+      required: false,
+      disabled: false,
+      has_error: true,
+      message_text: "this is an error message",
+      has_placeholder: false
+    } %>
+  <% end %>
+
   <h3 class="t-sage-heading-6">Input group with password reveal toggle and helper</h3>
 
   <%= sage_component SageInputGroup, {
