@@ -48,10 +48,10 @@ export const Template = (args) => (
 export const AlignmentTypes = ({ types }) => {
   const values = Object.values(types);
   return values.map((type, i) => (
-    <>
+    <span key={type}>
       <code>{ type.trim() }</code>
       {i < values.length - 1 ? ", " : ""}
-    </>
+    </span>
   ))
 };
 
