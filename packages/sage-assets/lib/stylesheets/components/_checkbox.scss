@@ -172,7 +172,7 @@ $-checkbox-focus-outline-color: sage-color(primary, 200);
     @include sage-icon-base(check, sm);
 
     $-checkbox-scale: 14 / 16;
-    transform: translate3d(-50%, -50%, 0) scale3d(#{$-checkbox-scale}, #{$-checkbox-scale}, #{$-checkbox-scale});
+    transform: translate3d(calc(-50% - 0.5px), calc(-50% - 0.5px), 0) scale3d(#{$-checkbox-scale}, #{$-checkbox-scale}, #{$-checkbox-scale});
     color: sage-color(white);
     font-weight: sage-font-weight(bold);
     opacity: 0;
