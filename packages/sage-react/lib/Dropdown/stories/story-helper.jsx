@@ -164,7 +164,7 @@ export const sampleSelectItems = [
   },
 ];
 
-const textFormatItems = [
+export const textFormatItems = [
   {
     id: 1,
     icon: SageTokens.ICONS.UNDERLINE,

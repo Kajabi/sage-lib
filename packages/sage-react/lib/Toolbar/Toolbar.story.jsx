@@ -146,7 +146,7 @@ const textFormatItems = [
   }
 ];
 
-const ToolbarEditorTemplate = (args) => (
+const ToolbarEditorTemplate = () => (
   <div className="toolbar-editor" style={{ display: 'flex', width: '100%' }} id="toolbar">
     <ToolbarEditor isFixed={true}>
       <Dropdown
