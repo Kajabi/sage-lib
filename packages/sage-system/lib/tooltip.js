@@ -50,7 +50,7 @@ Sage.tooltip = (function() {
 
   // Removes tooltip from DOM
   function removeTooltip(evt) {
-    if (!evt.target.hasAttribute(DATA_ATTR) || !document.querySelector(SELECTOR)) return;
+    if (!evt.target.hasAttribute(DATA_ATTR) || !document.querySelector(SELECTOR) || evt.target.dataset.jsTooltip === "")  return;
 
     window.requestAnimationFrame(function() {
       document.body.removeChild(document.querySelector(`.${TOOLTIP_CLASS}`));
