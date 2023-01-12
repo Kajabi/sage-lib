@@ -1,4 +1,5 @@
 import { SageTokens } from '../../configs';
+import { Button } from '../../Button';
 
 export const defaultOptionsItems = [
   {
@@ -161,4 +162,43 @@ export const sampleSelectItems = [
       suppressExit: true,
     }
   },
+];
+
+const textFormatItems = [
+  {
+    id: 1,
+    icon: SageTokens.ICONS.UNDERLINE,
+    color: Button.COLORS.SECONDARY,
+    label: 'Underline',
+  },
+  {
+    id: 2,
+    icon: SageTokens.ICONS.MARGIN_LEFT,
+    color: Button.COLORS.SECONDARY,
+    label: 'Left indent',
+  },
+  {
+    id: 3,
+    icon: SageTokens.ICONS.MARGIN_RIGHT,
+    color: Button.COLORS.SECONDARY,
+    label: 'Right indent',
+  },
+  {
+    id: 4,
+    icon: SageTokens.ICONS.STRIKETHROUGH,
+    color: Button.COLORS.SECONDARY,
+    label: 'Strikethrough',
+  },
+  {
+    id: 5,
+    icon: SageTokens.ICONS.SUBSCRIPT,
+    color: Button.COLORS.SECONDARY,
+    label: 'Subscript',
+  },
+  {
+    id: 6,
+    icon: SageTokens.ICONS.SUPERSCRIPT,
+    color: Button.COLORS.SECONDARY,
+    label: 'Superscript',
+  }
 ];

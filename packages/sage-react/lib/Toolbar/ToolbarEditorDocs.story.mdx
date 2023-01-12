@@ -1,6 +1,5 @@
 import { Canvas, Meta, Story, ArgsTable } from '@storybook/addon-docs';
 
-import sectionsImage from './assets/ToolbarEditorSections.png';
 import * as Stories from './ToolbarEditor.story.jsx';
 import * as ButtonStories from '../Button/Button.story.jsx';
 import { ToolbarEditor } from './ToolbarEditor';
@@ -8,7 +7,7 @@ import { ToolbarEditor } from './ToolbarEditor';
 export const ImageComponent = () => <img src='ToolbarEditorSections.png' alt="" />;
 
 <Meta
-  title="Sage/ToolbarEditor"
+  title="Sage/ToolbarEditor/Patterns"
   component={ToolbarEditor}
 />
 
@@ -50,8 +49,15 @@ which hides items within a dropdown when space is no longer available. The `<Too
 unless only the dropdown is present. In that case the icon if the first item will be displayed.
 
 #### `isFixed`
-The `isFixed` property toggles the presence and behavior of the `<ToolbarEditor />` dropdown. Set to `false` by default, this property is meant to remove the responsive behavior. When disabled, the dropdown is no longer available
-and the section's width is fixed only to the size of the inner elements.
+The `isFixed` property toggles the responsive behavior and `add` `icon` dropdown for the `<ToolbarEditor> />`.
+
+When `true`
+- the sections expand and contract based available space of the parent container.
+- Items cannot fit the container width will be added the `add` `icon` dropdown's items
+
+When `false`
+- the sections will **NOT** expand or contract and will be fixed to the width of the inner elements.
+- The `add` `icon` dropdown functionality is removed. You are still able to manually add a dropdown, but it has no relationship to the wrapping `<ToolbarEditor />`
 
 ## Structure
 To achieve our responsive pattern, `<ToolbarEditor />` requires:
@@ -66,7 +72,7 @@ Below is the desired structure for a flexible `<ToolbarEditor />`:
 </ToolbarEditor>
 ```
 
-#### ToolbarEditor groups
+#### Implementation guidelines
 
 <img src='ToolbarEditorSections.png' alt="" />
 
