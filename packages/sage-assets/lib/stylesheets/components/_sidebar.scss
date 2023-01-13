@@ -61,7 +61,7 @@ $-sidebar-top-offset: $sage-assistant-height;
   content: "";
   display: block;
   position: absolute;
-  top: sage-spacing(sm) / -1;
+  top: calc(-1 * #{sage-spacing(sm)});
   left: 0;
   right: 0;
   height: sage-spacing(sm);
