@@ -10,5 +10,6 @@ module.exports = {
     '@storybook/addon-controls',
     '@storybook/addon-storysource',
     '@storybook/addon-google-analytics',
-  ]
+  ],
+  'staticDirs': ['../public'],
 }

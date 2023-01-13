@@ -3,7 +3,10 @@ import { selectArgs } from '../story-support/helpers';
 import { SageTokens } from '../configs';
 import { Button } from '../Button';
 import { sampleSelectItems } from '../Dropdown/stories/story-helper';
-import { SelectDropdown } from '../Dropdown';
+import {
+  Dropdown,
+  SelectDropdown
+} from '../Dropdown';
 import { Search } from '../Search';
 import { Checkbox } from '../Toggle';
 import { Toolbar } from './Toolbar';
@@ -54,6 +57,7 @@ export default {
     )
   }
 };
+
 const Template = (args) => <Toolbar {...args} />;
 
 export const Default = Template.bind({});
@@ -103,97 +107,175 @@ ToolbarGroupWithButtons.args = {
   )
 };
 
-const ToolbarEditorTemplate = (args) => (
-  <Toolbar gap={Toolbar.GAP_OPTIONS.XS}>
-    <ToolbarEditor {...args}>
-      <Button
-        disclosure={true}
+const textFormatItems = [
+  {
+    id: 1,
+    icon: SageTokens.ICONS.UNDERLINE,
+    color: Button.COLORS.SECONDARY,
+    label: 'Underline',
+  },
+  {
+    id: 2,
+    icon: SageTokens.ICONS.MARGIN_LEFT,
+    color: Button.COLORS.SECONDARY,
+    label: 'Left indent',
+  },
+  {
+    id: 3,
+    icon: SageTokens.ICONS.MARGIN_RIGHT,
+    color: Button.COLORS.SECONDARY,
+    label: 'Right indent',
+  },
+  {
+    id: 4,
+    icon: SageTokens.ICONS.STRIKETHROUGH,
+    color: Button.COLORS.SECONDARY,
+    label: 'Strikethrough',
+  },
+  {
+    id: 5,
+    icon: SageTokens.ICONS.SUBSCRIPT,
+    color: Button.COLORS.SECONDARY,
+    label: 'Subscript',
+  },
+  {
+    id: 6,
+    icon: SageTokens.ICONS.SUPERSCRIPT,
+    color: Button.COLORS.SECONDARY,
+    label: 'Superscript',
+  }
+];
+
+const ToolbarEditorTemplate = () => (
+  <div className="toolbar-editor" style={{ display: 'flex', width: '100%' }} id="toolbar">
+    <ToolbarEditor isFixed={true}>
+      <Dropdown
         icon={SageTokens.ICONS.ALIGN_LEFT}
-        iconOnly={true}
-        color={Button.COLORS.SECONDARY}
-        value="Text align"
+        disclosure={true}
+        label="Formats"
+        panelSize={Dropdown.PANEL_SIZES.SMALL}
+        triggerClassnames="sage-btn--rich-text rich-text__format-button"
       />
-      <Button
-        icon={SageTokens.ICONS.REMOVE}
-        iconOnly={true}
-        color={Button.COLORS.SECONDARY}
-      />
+    </ToolbarEditor>
+    <ToolbarEditor isFixed={true}>
       <Button
         icon={SageTokens.ICONS.BOLD}
         iconOnly={true}
         color={Button.COLORS.SECONDARY}
-      />
+        selected={true}
+      >
+        Bold
+      </Button>
       <Button
         icon={SageTokens.ICONS.ITALIC}
-        iconOnly={true}
         color={Button.COLORS.SECONDARY}
-      />
-      <Button
-        icon={SageTokens.ICONS.UNDERLINE}
-        iconOnly={true}
-        color={Button.COLORS.SECONDARY}
-      />
-      <Button
-        icon={SageTokens.ICONS.STRIKETHROUGH}
-        iconOnly={true}
-        color={Button.COLORS.SECONDARY}
-      />
-      <Button
-        icon={SageTokens.ICONS.UNDO}
-        iconOnly={true}
-        color={Button.COLORS.SECONDARY}
-      />
-      <Button
-        icon={SageTokens.ICONS.REDO}
-        iconOnly={true}
-        color={Button.COLORS.SECONDARY}
-      />
+      >
+        Italic
+      </Button>
+      <Dropdown
+        icon={SageTokens.ICONS.DOT_MENU_HORIZONTAL}
+        isLabelVisible={false}
+        label="More options"
+        panelSize={Dropdown.PANEL_SIZES.SMALL}
+        triggerClassnames="sage-btn--rich-text"
+      >
+        <ul className="sage-dropdown__menu">
+          {textFormatItems.map((item) => (
+            <li className="sage-dropdown__item">
+              <Button
+                icon={item.icon}
+                color={item.color}
+              >
+                {item.label}
+              </Button>
+            </li>
+          ))}
+        </ul>
+      </Dropdown>
     </ToolbarEditor>
-    <ToolbarEditor {...args}>
-      <Button
+    <ToolbarEditor isFixed={true}>
+      <Dropdown
+        icon={SageTokens.ICONS.COLOR}
+        isLabelVisible={false}
         disclosure={true}
-        icon={SageTokens.ICONS.ALIGN_LEFT}
-        iconOnly={true}
-        color={Button.COLORS.SECONDARY}
-        value="Text align"
-      />
-      <Button
-        icon={SageTokens.ICONS.REMOVE}
-        iconOnly={true}
-        color={Button.COLORS.SECONDARY}
-      />
-      <Button
-        icon={SageTokens.ICONS.BOLD}
-        iconOnly={true}
-        color={Button.COLORS.SECONDARY}
-      />
-      <Button
-        icon={SageTokens.ICONS.ITALIC}
-        iconOnly={true}
-        color={Button.COLORS.SECONDARY}
-      />
-      <Button
-        icon={SageTokens.ICONS.UNDERLINE}
-        iconOnly={true}
-        color={Button.COLORS.SECONDARY}
-      />
-      <Button
-        icon={SageTokens.ICONS.STRIKETHROUGH}
-        iconOnly={true}
-        color={Button.COLORS.SECONDARY}
-      />
-      <Button
-        icon={SageTokens.ICONS.UNDO}
-        iconOnly={true}
-        color={Button.COLORS.SECONDARY}
-      />
-      <Button
-        icon={SageTokens.ICONS.REDO}
-        iconOnly={true}
-        color={Button.COLORS.SECONDARY}
+        label="Color"
+        panelSize={Dropdown.PANEL_SIZES.SMALL}
+        triggerClassnames="sage-btn--rich-text"
       />
     </ToolbarEditor>
-  </Toolbar>
+    <ToolbarEditor>
+      <Button
+        icon={SageTokens.ICONS.LIST_BULLET}
+        color={Button.COLORS.SECONDARY}
+      >
+        Bulleted List
+      </Button>
+      <Button
+        icon={SageTokens.ICONS.LIST_NUMBERS}
+        color={Button.COLORS.SECONDARY}
+      >
+        Numbered List
+      </Button>
+    </ToolbarEditor>
+    <ToolbarEditor>
+      <Button
+        icon={SageTokens.ICONS.ALIGN_LEFT}
+        color={Button.COLORS.SECONDARY}
+      >
+        Left align
+      </Button>
+      <Button
+        icon={SageTokens.ICONS.ALIGN_RIGHT}
+        color={Button.COLORS.SECONDARY}
+      >
+        Right align
+      </Button>
+      <Button
+        icon={SageTokens.ICONS.ALIGN_CENTER}
+        color={Button.COLORS.SECONDARY}
+      >
+        Center Align
+      </Button>
+      <Button
+        icon={SageTokens.ICONS.ALIGN_JUSTIFY}
+        color={Button.COLORS.SECONDARY}
+      >
+        Justify
+      </Button>
+    </ToolbarEditor>
+    <ToolbarEditor>
+      <Button
+        icon={SageTokens.ICONS.IMAGE}
+        color={Button.COLORS.SECONDARY}
+      >
+        Files & images
+      </Button>
+      <Button
+        icon={SageTokens.ICONS.URL}
+        color={Button.COLORS.SECONDARY}
+      >
+        Link
+      </Button>
+      <Button
+        icon={SageTokens.ICONS.CODE}
+        color={Button.COLORS.SECONDARY}
+      >
+        Code
+      </Button>
+      <Button
+        icon={SageTokens.ICONS.HORIZONTAL_LINE}
+        color={Button.COLORS.SECONDARY}
+      >
+        Divider
+      </Button>
+      <Button
+        icon={SageTokens.ICONS.QUOTE}
+        color={Button.COLORS.SECONDARY}
+      >
+        Blockquote
+      </Button>
+    </ToolbarEditor>
+  </div>
 );
 
 export const ToolbarEditorStory = ToolbarEditorTemplate.bind({});
