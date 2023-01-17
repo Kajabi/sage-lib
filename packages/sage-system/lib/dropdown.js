@@ -167,8 +167,63 @@ Sage.dropdown = (function () {
     }
   }
 
+  function getHeight(el) {
+    const styles = window.getComputedStyle(el);
+    const height = el.offsetHeight;
+    const borderTopWidth = parseFloat(styles.borderTopWidth);
+    const borderBottomWidth = parseFloat(styles.borderBottomWidth);
+    const paddingTop = parseFloat(styles.paddingTop);
+    const paddingBottom = parseFloat(styles.paddingBottom);
+
+    return height - borderBottomWidth - borderTopWidth - paddingTop - paddingBottom;
+  }
+
+  function positionElement(el) {
+    let direction = null;
+
+    // Elements
+    const panel = el.lastElementChild
+    const win = panel.ownerDocument.defaultView;
+    const button = document.activeElement;
+    const docEl = window.document.documentElement;
+
+    panel.style.top = ''; // resets the style
+
+    // Dimensions
+    const buttonDimensions = button.getBoundingClientRect();
+    const panelDimensions = panel.getBoundingClientRect();
+
+    const panelNewLoc = {
+      top: buttonDimensions.height + panelDimensions.height
+    }
+
+    const viewport = {
+      top: docEl.scrollTop,
+      bottom: window.pageYOffset + docEl.clientHeight,
+    }
+
+    const offset = {
+      top: panelDimensions.top + win.pageYOffset,
+      left: panelDimensions.left + win.pageXOffset,
+      bottom: (panelDimensions.top + win.pageYOffset)
+    };
+
+    const enoughSpaceAbove = viewport.top < ( offset.top + getHeight(panel));
+    const enoughSpaceBelow = viewport.bottom > (offset.bottom + getHeight(panel));
+
+    if (!enoughSpaceBelow && enoughSpaceAbove) {
+      direction = 'above';
+    } else if (!enoughSpaceAbove && enoughSpaceBelow) {
+      direction = 'below';
+    }
+
+    if ( direction == 'above') {
+      panel.style.top = `-${panelNewLoc.top}px`;
+    }
+  }
   function open(el) {
     el.setAttribute("aria-expanded", "true");
+    positionElement(el);
     let focusableEls = el.querySelectorAll(SELECTOR_FOCUSABLE_ELEMENTS);
     SELECTOR_LAST_FOCUSED = document.activeElement;
     el.addEventListener("keydown", focusTrap.bind(focusableEls));
