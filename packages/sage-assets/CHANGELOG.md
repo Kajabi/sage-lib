@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.8.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.8.0...@kajabi/sage-assets@1.8.1) (2023-01-17)
+
+
+### Bug Fixes
+
+* **checkbox:** fix subpixel rendering issue by moving check half a pixel ([60cb0ae](https://github.com/Kajabi/sage-lib/commit/60cb0ae722458cae69a8f37b73b9c37a3c774ef5))
+* **grid:** add vertical alignment to individual sage-col elements ([d16a4d0](https://github.com/Kajabi/sage-lib/commit/d16a4d0c21e46e7123bdba107482fc27b3fbb8e3))
+* **icons:** add sage tokens style and js ([eebc026](https://github.com/Kajabi/sage-lib/commit/eebc02649bccf257973a7f636ff0a9be0b65ed45))
+* **icons:** update cdn version variable ([cf668c5](https://github.com/Kajabi/sage-lib/commit/cf668c5f3a374aa493082289841eb4e4ff81b0a3))
+* **toolbar-editor:** final updates to toolbar editor ([70f9310](https://github.com/Kajabi/sage-lib/commit/70f93109601501d6b97ead2bcaf4a2fb92295699))
+
+
+
+
+
 # [1.8.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.7.2...@kajabi/sage-assets@1.8.0) (2022-12-13)
 
 

@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.10.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.10.0...@kajabi/sage-react@1.10.1) (2023-01-17)
+
+
+### Bug Fixes
+
+* **docs:** supply keys to ouput AlignmentTypes and simply code examples ([5f46466](https://github.com/Kajabi/sage-lib/commit/5f46466a72b841e138aedf81a2bfe95b5119a892))
+* **grid:** add vertical alignment to individual sage-col elements ([d16a4d0](https://github.com/Kajabi/sage-lib/commit/d16a4d0c21e46e7123bdba107482fc27b3fbb8e3))
+* **icons:** add sage tokens style and js ([eebc026](https://github.com/Kajabi/sage-lib/commit/eebc02649bccf257973a7f636ff0a9be0b65ed45))
+* **toolbar-editor:** final updates to toolbar editor ([70f9310](https://github.com/Kajabi/sage-lib/commit/70f93109601501d6b97ead2bcaf4a2fb92295699))
+
+
+
+
+
 # [1.10.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.9.1...@kajabi/sage-react@1.10.0) (2022-12-13)
 
 

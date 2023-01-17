@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.5](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@1.2.4...@kajabi/sage-system@1.2.5) (2023-01-17)
+
+
+### Bug Fixes
+
+* **dropdown:** calculate the position of the dropdown panel ([36384ec](https://github.com/Kajabi/sage-lib/commit/36384ec907d6030db8f307191007fa9c05639368))
+* **inputgroup:** adjust height calculation ([6a9b44e](https://github.com/Kajabi/sage-lib/commit/6a9b44e0e9c77fb03ccfc314c3eab5182ae1ac9b))
+* **inputgroup:** js refactor for button position and input padding ([2566f93](https://github.com/Kajabi/sage-lib/commit/2566f9398e23e34d601868269ebe9d1f4b30a03d))
+* **inputgroup:** naming typo ([0d284ab](https://github.com/Kajabi/sage-lib/commit/0d284ab992e9416d444dabaff242787912b2fe86))
+* **inputgroup:** refactor js to only position button when error ([9dce0c6](https://github.com/Kajabi/sage-lib/commit/9dce0c6a035f4a54521ad145cdeeb43e9866665d))
+* **tooltip:** adds check for empty attribute to removeTooltip() ([53d152e](https://github.com/Kajabi/sage-lib/commit/53d152e0b068d01c6ac2107b4dc6348dcf28dc59))
+* **tooltip:** adjust check for missing or empty data-attribute. hat-tip [@monkeypox8](https://github.com/monkeypox8) ([195f6a4](https://github.com/Kajabi/sage-lib/commit/195f6a45e2aaf5e856b66b9017b2b7eeda41172a))
+
+
+
+
+
 ## [1.2.4](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@1.2.3...@kajabi/sage-system@1.2.4) (2022-12-05)
 
 **Note:** Version bump only for package @kajabi/sage-system

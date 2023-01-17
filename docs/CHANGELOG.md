@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.11.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.11.0...@kajabi/sage@5.11.1) (2023-01-17)
+
+
+### Bug Fixes
+
+* **docs:** supply keys to ouput AlignmentTypes and simply code examples ([5f46466](https://github.com/Kajabi/sage-lib/commit/5f46466a72b841e138aedf81a2bfe95b5119a892))
+* **grid:** add vertical alignment to individual sage-col elements ([d16a4d0](https://github.com/Kajabi/sage-lib/commit/d16a4d0c21e46e7123bdba107482fc27b3fbb8e3))
+* **icons:** added certificates and creator studio to features list ([7a01543](https://github.com/Kajabi/sage-lib/commit/7a01543bb33c7d6ccdacb55a8851755007b667fe))
+* **icons:** update sage tokens w/ new icons ([83e11f6](https://github.com/Kajabi/sage-lib/commit/83e11f63f70fec8b47bb57ea9e9bf094f727b25d))
+* **toolbar-editor:** final updates to toolbar editor ([70f9310](https://github.com/Kajabi/sage-lib/commit/70f93109601501d6b97ead2bcaf4a2fb92295699))
+
+
+
+
+
 # [5.11.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.10.1...@kajabi/sage@5.11.0) (2022-12-13)
 
 
