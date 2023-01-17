@@ -425,11 +425,19 @@ $-btn-loading-min-height: rem(36px);
   }
 
   &.sage-btn--rich-text,
-  .toolbar-editor__section & {
-    margin-inline: rem(3px);
+  .toolbar-editor__section &,
+  .toolbar-editor & {
     padding: sage-spacing(xs) sage-spacing(lg) sage-spacing(xs) sage-spacing(xs);
     border-radius: 6px;
     border-width: 0;
+
+    @media (max-width: sage-breakpoint(sm-max)) {
+      padding: rem(6px) rem(30px) rem(6px) rem(6px);
+    }
+
+    &::before {
+      font-size: sage-font-size(body-xs);
+    }
 
     &::after {
       right: 7px;
@@ -452,6 +460,10 @@ $-btn-loading-min-height: rem(36px);
 
     &:not(.sage-btn--subtle):not(.sage-btn--disclosure) {
       padding: sage-spacing(xs);
+
+      @media (max-width: sage-breakpoint(sm-max)) {
+        padding: rem(6px);
+      }
     }
   }
 

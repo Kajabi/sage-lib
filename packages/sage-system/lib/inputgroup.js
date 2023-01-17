@@ -4,11 +4,12 @@ Sage.inputgroup = (function() {
   // Functions
   // ==================================================
   const inputPaddingOffset = 16;
+  const inputBoxShadowWidth = 1;
 
   function togglePasswordDisplay(evt) {
     const parentEle = evt.target.parentElement,
-       field = parentEle.querySelector(".sage-input__field"),
-       activeClassName = "sage-input-group--visible";
+          field = parentEle.querySelector(".sage-input__field"),
+          activeClassName = "sage-input-group--visible";
 
     if (field.type === "password") {
       field.type = "text";
@@ -31,6 +32,22 @@ Sage.inputgroup = (function() {
     });
   }
 
+  function positionButtonOnError() {
+
+    if (document.querySelector(".sage-form-field--error").length !== null) {
+      const inputGroupsWithErrors = Sage.util.nodelistToArray(
+        document.querySelectorAll(".sage-form-field--error")
+      );
+
+      inputGroupsWithErrors.forEach(function (group) {
+        const parentGroup = group.closest(".sage-input-group");
+        const label = parentGroup.querySelector(".sage-input__label");
+        const btn = parentGroup.querySelector(".sage-input-group__button");
+        const labelStyles = window.getComputedStyle(label);
+        btn.style.top = `${parseInt(labelStyles.lineHeight) + parseInt(labelStyles.marginBottom) + inputBoxShadowWidth}px`;
+      });
+    }
+  }
 
   function bindPWEvents() {
     const pwShowBtn = Sage.util.nodelistToArray(document.querySelectorAll("[data-js-mask='password']"));
@@ -43,17 +60,19 @@ Sage.inputgroup = (function() {
     });
   }
 
-
   function init() {
+
     if (document.querySelector(".sage-input-group__button").length !== null) {
-      addButtonPadding();
-    }
+      window.addEventListener("load", function(){
+        addButtonPadding();
+        positionButtonOnError();
+      });
+    };
 
     if (document.querySelector(".sage-input-group__toggle").length !== null) {
       bindPWEvents();
     }
   }
-
 
   return {
     init: init

@@ -85,6 +85,12 @@
         link: pages_patterns_path(:grid_templates),
         active: current_page?(pages_patterns_path(:grid_templates)),
       }
+
+      layout_list << {
+        text: "Panels & Cards",
+        link: pages_patterns_path(:panels_cards),
+        active: current_page?(pages_patterns_path(:panels_cards)),
+      }
     %>
     <%= sage_component SageNav, {
       items: [{

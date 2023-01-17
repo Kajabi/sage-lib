@@ -16,6 +16,10 @@ module SageGridHelper
       column_classes << "sage-col "
     end
 
+    if col.vertical_alignment.present?
+      column_classes << "sage-col--valign-#{col.vertical_alignment} "
+    end
+    
     column_classes << col.generated_css_classes
   end
 
