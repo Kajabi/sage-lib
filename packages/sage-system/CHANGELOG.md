@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.6](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@1.2.5...@kajabi/sage-system@1.2.6) (2023-01-18)
+
+
+### Bug Fixes
+
+* **inputgroup:** adjust conditional check to prevent js error ([e61d02e](https://github.com/Kajabi/sage-lib/commit/e61d02eee39d2dcb8d5f677e326e614fd9cd8cec))
+
+
+
+
+
 ## [1.2.5](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@1.2.4...@kajabi/sage-system@1.2.5) (2023-01-17)
 
 
