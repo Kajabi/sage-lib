@@ -62,14 +62,14 @@ Sage.inputgroup = (function() {
 
   function init() {
 
-    if (document.querySelector(".sage-input-group__button").length !== null) {
+    if (document.querySelector(".sage-input-group__button") !== null) {
       window.addEventListener("load", function(){
         addButtonPadding();
         positionButtonOnError();
       });
     };
 
-    if (document.querySelector(".sage-input-group__toggle").length !== null) {
+    if (document.querySelector(".sage-input-group__toggle") !== null) {
       bindPWEvents();
     }
   }
