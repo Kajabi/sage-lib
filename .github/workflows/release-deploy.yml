@@ -10,7 +10,7 @@ jobs:
     name: Release and Deploy
     runs-on: ubuntu-latest
     container:
-      image: ruby:2.6.10-alpine3.15
+      image: ruby:2.7.6-alpine3.16
 
     steps:
       - name: Install dependencies
