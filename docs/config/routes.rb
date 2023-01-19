@@ -15,8 +15,6 @@ Rails.application.routes.draw do
   get 'pages/layout/:title', to: 'pages#layout', as: 'pages_layout'
   get 'pages/components'
   get 'pages/component/:title', to: 'pages#component', as: 'pages_component'
-  get 'pages/mocks'
-  get 'pages/mock/:alias', to: 'pages#mock', as: 'pages_mock'
   get 'pages/utilities'
   get 'pages/status'
   get 'pages/search'
