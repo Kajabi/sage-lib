@@ -34,7 +34,7 @@ Sage.inputgroup = (function() {
 
   function positionButtonOnError() {
 
-    if (document.querySelector(".sage-form-field--error").length !== null) {
+    if (document.querySelector(".sage-form-field--error") !== null) {
       const inputGroupsWithErrors = Sage.util.nodelistToArray(
         document.querySelectorAll(".sage-form-field--error")
       );
