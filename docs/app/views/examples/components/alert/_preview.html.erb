@@ -1,13 +1,4 @@
 <%
-  sage_link = sage_component(SageLink, {
-    url: "#",
-    label: "Link",
-    launch: false,
-    help_link: false,
-    show_label: true,
-    style: "secondary",
-    remove_underline: true,
-  })
   demo_description =  "Make sure you know how these changes affect you."
   demo_primary_action = {
     value: "Primary action",
@@ -28,36 +19,66 @@ These also determine the icon that will appear by default.
   title: "A default alert",
   desc: demo_description,
   icon_name: "sage-icon-info-circle-filled",
-  primary_action: demo_primary_action,
-} %>
+} do %>
+  <% content_for :sage_alert_actions do %>
+    <%= sage_component SageButton, {
+      style: "primary",
+      value: "Primary action",
+    } %>
+  <% end %>
+<% end %>
 <%= sage_component SageAlert, {
   color: "info",
   title: "An informative alert",
   desc: demo_description,
   icon_name: "sage-icon-info-circle-filled",
-  primary_action: demo_primary_action,
-} %>
+} do %>
+  <% content_for :sage_alert_actions do %>
+    <%= sage_component SageButton, {
+      style: "primary",
+      value: "Primary action",
+    } %>
+  <% end %>
+<% end %>
 <%= sage_component SageAlert, {
   color: "success",
   title: "An informative alert",
   desc: demo_description,
   icon_name: "sage-icon-check-circle-filled",
-  primary_action: demo_primary_action,
-} %>
+} do %>
+  <% content_for :sage_alert_actions do %>
+    <%= sage_component SageButton, {
+      style: "primary",
+      value: "Primary action",
+    } %>
+  <% end %>
+<% end %>
 <%= sage_component SageAlert, {
   color: "warning",
   title: "Uh, oh! Here's a warning alert",
   desc: demo_description,
   icon_name: "sage-icon-danger-filled",
-  primary_action: demo_primary_action,
-} %>
+} do %>
+  <% content_for :sage_alert_actions do %>
+    <%= sage_component SageButton, {
+      style: "primary",
+      value: "Primary action",
+    } %>
+  <% end %>
+<% end %>
 <%= sage_component SageAlert, {
   color: "danger",
   title: "Look out! This alert means there's an error",
   desc: demo_description,
   icon_name: "sage-icon-warning-filled",
-  primary_action: demo_primary_action,
-} %>
+} do %>
+  <% content_for :sage_alert_actions do %>
+    <%= sage_component SageButton, {
+      style: "primary",
+      value: "Primary action",
+    } %>
+  <% end %>
+<% end %>
 
 <%= md("
 ### Alert actions
@@ -65,26 +86,38 @@ These also determine the icon that will appear by default.
 Alerts can include buttons and links for users to take further action.
 These include a single primary action button and one or more additional secondary actions.
 
-- The primary action implements a single hash that allows `value` and `attributes` similar to SageButton.
-- The secondary actions implements an array of hashes that each allow a `value` and a `url`.
 ", use_sage_type: true) %>
 <%= sage_component SageAlert, {
   color: "published",
   title: "Alert with all actions",
   desc: demo_description,
   icon_name: "sage-icon-check-circle-filled",
-  primary_action: demo_primary_action,
-  secondary_actions: [
-    {
-      value: "Link 1",
-      url: "#href-for-link-1"
-    },
-    {
-      value: "Link 2",
-      url: "#href-for-link-1"
-    },
-  ],
-} %>
+} do %>
+  <% content_for :sage_alert_actions do %>
+    <%= sage_component SageButton, {
+      style: "primary",
+      value: "Primary action",
+    } %>
+    <%= sage_component SageLink, {
+      url: "#href-for-link-1",
+      label: "Link 1",
+      launch: false,
+      help_link: false,
+      show_label: true,
+      style: "secondary",
+      remove_underline: true,
+    } %>
+    <%= sage_component SageLink, {
+      url: "#href-for-link-1",
+      label: "Link 2",
+      launch: false,
+      help_link: false,
+      show_label: true,
+      style: "secondary",
+      remove_underline: true,
+    } %>
+  <% end %>
+<% end %>
 
 
 <%= md("
@@ -102,14 +135,20 @@ You can listen for this event as it bubbles and respond as you see fit.
   desc: demo_description,
   dismissable: true,
   icon_name: "sage-icon-info-circle-filled",
-  primary_action: demo_primary_action,
-} %>
+} do %>
+  <% content_for :sage_alert_actions do %>
+    <%= sage_component SageButton, {
+      style: "primary",
+      value: "Primary action",
+    } %>
+  <% end %>
+<% end %>
 
 <%= md("
 ### Small Alerts
 
 The `small` variant of Alert can be used for smaller spaces or a more minimal presence.
-They support all other properties with the exception of `primary_action`; only `secondary_actions` are allowed.
+They support all other properties with the exception of buttons in the `sage_alerts_actions` slot; only links are allowed.
 ", use_sage_type: true) %>
 
 <%= sage_component SageAlert, {
@@ -118,17 +157,28 @@ They support all other properties with the exception of `primary_action`; only `
   small: true,
   dismissable: true,
   icon_name: "sage-icon-info-circle-filled",
-  secondary_actions: [
-    {
-      value: "Link 1",
-      url: "#href-for-link-1"
-    },
-    {
-      value: "Link 2",
-      url: "#href-for-link-1"
-    },
-  ],
-} %>
+} do %>
+  <% content_for :sage_alert_actions do %>
+    <%= sage_component SageLink, {
+      url: "#href-for-link-1",
+      label: "Link 1",
+      launch: false,
+      help_link: false,
+      show_label: true,
+      style: "secondary",
+      remove_underline: true,
+    } %>
+    <%= sage_component SageLink, {
+      url: "#href-for-link-1",
+      label: "Link 2",
+      launch: false,
+      help_link: false,
+      show_label: true,
+      style: "secondary",
+      remove_underline: true,
+    } %>
+  <% end %>
+<% end %>
 
 
 <script>
