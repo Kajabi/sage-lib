@@ -33,11 +33,6 @@ export default {
   }
 };
 
-const tabChoiceSettings = {
-  tabChoiceType: Tabs.Item.CHOICE_TYPES.RADIO,
-  tabChoiceIcon: null,
-};
-
 export const Default = () => (
   <Tabs
     tabs={[
