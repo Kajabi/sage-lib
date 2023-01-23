@@ -174,19 +174,16 @@ export const Background = () => (
       {
         id: 'tab-1',
         label: 'Tab 1',
-        subtext: 'Subtext content...',
         content: 'Tab 1 Pane Content',
       },
       {
         id: 'tab-2',
         label: 'Tab 2',
-        subtext: 'Subtext content...',
         content: 'Tab 2 Pane Content',
       },
       {
         id: 'tab-3',
         label: 'Tab 3',
-        subtext: 'Subtext content...',
         content: 'Tab 3 Pane Content',
       },
     ]}
