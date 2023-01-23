@@ -84,7 +84,7 @@ export const Default = () => (
         ...tabChoiceSettings,
       },
     ]}
-    initialActiveId='tab-1'
+    initialActiveId="tab-1"
   />
 );
 
@@ -125,7 +125,7 @@ export const RichContent = () => (
         ),
       },
     ]}
-    initialActiveId='tab-1'
+    initialActiveId="tab-1"
     tabStyle={Tabs.STYLES.CHOICE}
     useSeparator={true}
   />
@@ -167,7 +167,7 @@ export const IconAlignment = () => {
           ...tabChoiceSettings,
         },
       ]}
-      initialActiveId='tab-1'
+      initialActiveId="tab-1"
       tabStyle={Tabs.STYLES.CHOICE}
       useSeparator={true}
     />
@@ -196,7 +196,7 @@ export const Background = () => (
         content: 'Tab 3 Pane Content',
       },
     ]}
-    initialActiveId='tab-1'
+    initialActiveId="tab-1"
     useSeparator={true}
     withBackground={true}
   />
@@ -221,7 +221,7 @@ export const Filter = () => (
         href: '#',
       },
     ]}
-    initialActiveId='filter-1'
+    initialActiveId="filter-1"
     tabStyle={Tabs.STYLES.FILTER}
   />
 );
