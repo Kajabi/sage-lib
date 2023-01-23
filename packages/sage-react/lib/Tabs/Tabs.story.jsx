@@ -44,7 +44,6 @@ export const Default = () => (
       {
         id: 'tab-1',
         label: 'Tab 1',
-        subtext: 'Subtext content...',
         content: (
           <>
             <h4>Tab 1 Pane Content</h4>
@@ -53,12 +52,10 @@ export const Default = () => (
         ),
         card: true,
         cardSpacing: true,
-        ...tabChoiceSettings,
       },
       {
         id: 'tab-2',
         label: 'Tab 2',
-        subtext: 'Subtext content...',
         content: (
           <>
             <h4>Tab 2 Pane Content</h4>
@@ -67,21 +64,18 @@ export const Default = () => (
         ),
         card: true,
         cardSpacing: true,
-        ...tabChoiceSettings,
       },
       {
         id: 'tab-3',
         label: 'Tab 3',
-        subtext: 'Subtext content...',
         content: (
           <>
-            <h4>Tab 1 Pane Content</h4>
+            <h4>Tab 3 Pane Content</h4>
             <p>A tabbed interface allows users to switch between multiple sections.</p>
           </>
         ),
         card: true,
         cardSpacing: true,
-        ...tabChoiceSettings,
       },
     ]}
     initialActiveId="tab-1"
