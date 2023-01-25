@@ -13,65 +13,179 @@ $-input-popover-size: rem(40px);
 $-input-text-height: sage-font-size(body);
 
 .sage-input-v2 {
+  @include sage-form-field-group;
 
+  display: flex;
+  flex-direction: column;
+
+  .sage-input-v2-group &,
+  .sage-toolbar & {
+    height: auto;
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .sage-toolbar__group & {
+    &:first-child .sage-input-v2__field {
+      border-radius: sage-border(radius-medium);
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    &:last-child .sage-input-v2__field {
+      border-radius: sage-border(radius-medium);
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+
+  .sage-popover {
+    grid-row: 2 / 3;
+    grid-column: -1 / -2;
+  }
+
+  .sage-input-v2__action {
+    display: flex;
+    align-items: center;
+    grid-row: 2 / 3;
+    grid-column: -1 / -2;
+  }
+}
+
+.sage-input-v2__field-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.sage-form-field--error {
+  .sage-upload-card & {
+    margin-top: sage-spacing(sm);
+  }
+}
+
+.sage-input-v2__affix {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  z-index: sage-z-index(default, 1);
+  height: $-input-height;
+
+  .sage-input-v2--suffixed &,
+  .sage-input-v2--prefixed & {
+    position: absolute;
+    white-space: nowrap;
+  }
+
+  &:hover {
+    cursor: default;
+  }
+}
+
+.sage-input-v2__affix-value {
+  color: sage-color(charcoal, 100);
+}
+
+.sage-input-v2__affix--prefix,
+.sage-input-v2__left-element {
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
+  top: 0;
+  left: sage-spacing(sm);
+  padding-right: sage-spacing(2xs);
+}
+
+.sage-input-v2__affix--suffix,
+.sage-input-v2__right-element {
+  grid-row: 2 / 3;
+  grid-column: -1 / -2;
+  top: 0;
+  right: sage-spacing(sm);
+  padding-left: sage-spacing(2xs);
+}
+
+.sage-input-v2__left-element,
+.sage-input-v2__right-element {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
 }
 
 .sage-input-v2__label {
   @include sage-form-field-label;
 
   margin-bottom: sage-spacing(xs);
+  order: -1;
 }
 
 .sage-input-v2__field-wrapper {
+  @include sage-form-field;
+  @include sage-focus-ring;
+
   display: flex;
   align-items: center;
-  box-shadow: sage-border-interactive(default);
-  border-radius: sage-border(radius-medium);
+  padding: 0;
 
-  &:hover:not(:disabled) {
-    box-shadow: sage-border-interactive(hover);
-  }
-
-  .sage-form-field--error & {
-    box-shadow: sage-border-interactive(error);
-  }
-
-  &:focus-within {
-    box-shadow: 0 0 0 4px #8ecafb;
-  }
 }
 
 .sage-input-v2__field {
-  @include sage-form-field;
+  // @include sage-form-field;
+  // @include sage-focus-ring;
 
   height: $-input-height;
   padding: sage-spacing(xs) sage-spacing(sm);
-  box-shadow: none;
+  border: 0;
+  flex-grow: 1;
 
-  &:hover:not(:disabled) {
-    box-shadow: none;
+  .sage-input-v2--has-icon & {
+    padding-right: $-input-popover-size;
   }
 
-  .sage-form-field--error & {
-    box-shadow: none;
+  .sage-input-v2--has-popover & {
+    padding-right: $-input-popover-size;
   }
 
-  &:focus-visible {
-    outline: none;
+  .sage-toolbar__group & {
+    position: relative;
+    height: inherit;
+    border-radius: 0;
+
+    &:hover,
+    &:focus,
+    &:active {
+      z-index: sage-z-index(default, 1);
+    }
   }
 
-  &:focus,
-  &:active {
-    box-shadow: none;
+  .sage-input-v2__select-combo--anchor-left,
+  .sage-input-v2--has-left-element & {
+    padding-left: rem(100px);
+  }
+  .sage-input-v2__select-combo--anchor-right,
+  .sage-input-v2--has-right-element & {
+    padding-right: rem(100px);
   }
 }
 
-.sage-input-v2__prefix {
-  white-space: nowrap;
+.sage-input-v2__select-combo {
+  position: relative;
 }
 
-.sage-input-v2__suffix {
-  white-space: nowrap;
+.sage-input-v2__icon {
+  grid-row: 2 / 3;
+  grid-column: -1 / -2;
+
+  .sage-input-v2--has-icon & {
+    @include sage-form-field-icon;
+
+    pointer-events: none;
+  }
+
+  .sage-form-field--error & i {
+    color: sage-color(red, 300);
+  }
+}
+
+.sage-input-v2__info {
 }
 
 .sage-input-v2__message {
