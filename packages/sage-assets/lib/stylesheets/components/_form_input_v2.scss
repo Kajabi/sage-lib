@@ -113,8 +113,8 @@ $-input-text-height: sage-font-size(body);
 .sage-input-v2__label {
   @include sage-form-field-label;
 
-  margin-bottom: sage-spacing(xs);
   order: -1;
+  margin-bottom: sage-spacing(xs);
 }
 
 .sage-input-v2__field-wrapper {
