@@ -8,7 +8,7 @@
 
 ## 📚 Documentation
 
-* To use Sage in your application, see our [Documentation Site](https://sage-design-system.kajabi.com/pages/index)
+* To use Sage in your application, see our [Documentation Site](https://sage.kajabi.com/pages/index)
 * To view the documentation for contributing to Sage, see our [internal Wiki](https://github.com/Kajabi/sage-lib/wiki)
 
 ## 🗒️ Create an Issue
@@ -22,7 +22,7 @@ Do you have an issue, bug, or suggestion you would like to add to the Design Sys
 This repository utilizes the
 [Conventional Commits Standard](https://www.conventionalcommits.org/en/v1.0.0/). Utilizing this standard allows us to automatically version our software during the Continuous Integration process and generate `CHANGELOG.md` files for each package.
 
-### Unsure how to format your commit message? 
+### Unsure how to format your commit message?
 
 Use `yarn commit` to launch a wizard to walk you through with [Commitizen](https://github.com/commitizen/cz-cli)
 
@@ -36,8 +36,8 @@ There are five total packages in the monorepo:
 |--|--|--|---|--|
 | **@kajabi/sage** | Gem with Rails components and a documentaiton site of the same | `./docs` | [README](./docs/README.md) | [CHANGELOG](./docs/CHANGELOG.md) |
 | **@kajabi/sage-assets** | Styles and a Sassdoc site of the same | `./packages/sage-assets` | [README](./packages/sage-assets/README.md) | [CHANGELOG](./packages/sage-assets/CHANGELOG.md) |
-| **@kajabi/sage-packs** | Packs `sage-assets`, `sage-system`, and `sage-react` for use in Rails applications. | `./packages/sage-packs` | [README](./packages/sage-packs/README.md) | [CHANGELOG](./packages/sage-packs/CHANGELOG.md) | 
-| **@kajabi/sage-react** | React component library and Storybook for documentation | `./packages/sage-react` | [README](./packages/sage-react/README.md) | [CHANGELOG](./packages/sage-react/CHANGELOG.md) | 
+| **@kajabi/sage-packs** | Packs `sage-assets`, `sage-system`, and `sage-react` for use in Rails applications. | `./packages/sage-packs` | [README](./packages/sage-packs/README.md) | [CHANGELOG](./packages/sage-packs/CHANGELOG.md) |
+| **@kajabi/sage-react** | React component library and Storybook for documentation | `./packages/sage-react` | [README](./packages/sage-react/README.md) | [CHANGELOG](./packages/sage-react/CHANGELOG.md) |
 | **@kajabi/sage-system** | JS scripts for use with the Rails components | `./packages/sage-system` | [README](./packages/sage-system/README.md) | [CHANGELOG](./packages/sage-system/CHANGELOG.md) |
 
 Outside of these packages is a dictionary of tokens built using [Style Dictionary](https://amzn.github.io/style-dictionary/). This provides a central location for storing constant values and component configurations that is distributed to each respective package. [Learn more](DICTIONARY.md)

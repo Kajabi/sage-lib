@@ -17,7 +17,7 @@ const carouselSlides = [...Array(6)].map((e, i) => (
       <p>Lorem ipsum dolor sit amet.</p>
     )}
     graphic={{
-      element: (<img src="https://sage-design-system.kajabi.com/assets/next_best_action_graphic-7ee408e5df4afae92cdc499aae59083f5d3ff9aef3c2e8b6e2ea761784deca79.png" alt="" />)
+      element: (<img src="https://sage.kajabi.com/assets/next_best_action_graphic-7ee408e5df4afae92cdc499aae59083f5d3ff9aef3c2e8b6e2ea761784deca79.png" alt="" />)
     }}
     // Since there is nothing unique about these slides, using
     // the index as the key is fine.

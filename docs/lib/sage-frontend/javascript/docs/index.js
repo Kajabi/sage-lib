@@ -7,8 +7,6 @@ require('./button-group')
 require('./example')
 require('./scroll-to-active-nav-item')
 
-require('./mocks')
-
 import SageDocsTabs from './tabs';
 
 // Conditional routing
