@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.10.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.10.1...@kajabi/sage-react@1.10.2) (2023-01-26)
+
+
+### Bug Fixes
+
+* **icons:** hello linter my old friend ([84b6b09](https://github.com/Kajabi/sage-lib/commit/84b6b09a3bdb37c97fb10a8491029a3a84766977))
+* **icons:** update icons.js to include new icons ([f9a786f](https://github.com/Kajabi/sage-lib/commit/f9a786f6baf0da8f7b06282ac111c2a1fc486fc9))
+* **tabs:** hello linter my old friend ([31eb021](https://github.com/Kajabi/sage-lib/commit/31eb02105afe3c8fffe7a9f74929b7993c6b6ec6))
+
+
+
+
+
 ## [1.10.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.10.0...@kajabi/sage-react@1.10.1) (2023-01-17)
 
 

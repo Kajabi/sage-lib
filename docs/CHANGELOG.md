@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.11.4](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.11.3...@kajabi/sage@5.11.4) (2023-01-26)
+
+
+### Bug Fixes
+
+* **icons:** update sage_tokens to include new icons ([7d740b9](https://github.com/Kajabi/sage-lib/commit/7d740b99991e2022ebf6800b24a8abe797384aae))
+
+
+
+
+
 ## [5.11.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.11.2...@kajabi/sage@5.11.3) (2023-01-19)
 
 **Note:** Version bump only for package @kajabi/sage

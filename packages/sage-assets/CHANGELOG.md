@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.8.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.8.1...@kajabi/sage-assets@1.8.2) (2023-01-26)
+
+
+### Bug Fixes
+
+* **icons:** update _icon.scss to include new icons ([47ce425](https://github.com/Kajabi/sage-lib/commit/47ce425150219882a0c3853b231c049315bc95d9))
+* **icons:** update cdm version variable ([cf1516e](https://github.com/Kajabi/sage-lib/commit/cf1516e249ad097d3fe329c1be31fed1b4a103bb))
+
+
+
+
+
 ## [1.8.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.8.0...@kajabi/sage-assets@1.8.1) (2023-01-17)
 
 
