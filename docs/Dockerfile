@@ -35,7 +35,7 @@ ENV BUNDLE_PATH="/app/vendor/gems"
 ENV BUNDLE_APP_CONFIG="/app/.bundle"
 
 
-RUN gem update --system
+#RUN gem update --system
 RUN gem install bundler:$BUNDLER_VERSION
 
 COPY Gemfile Gemfile.lock ./
