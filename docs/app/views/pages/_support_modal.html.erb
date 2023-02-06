@@ -1,0 +1,45 @@
+<% content_for :sage_docs_modals do %>
+  <%= sage_component SageDrawer, {
+      id: "support-request",
+      show_close: true,
+      size: "33vw",
+      expanded_size: "100vw",
+      disable_background_dismiss: false,
+    } do %>
+    <% content_for :sage_drawer_header do %>
+      <h1>Help & Feedback</h1>
+    <% end %>
+
+    <%= form_tag(pages_search_path, method: :get) do %>
+      <%= sage_component SageInputGroup, {
+        group_id: "panel-component-search",
+        has_button: true,
+        group_buttons: [{
+          icon: "sage-btn--icon-left-search",
+          text: "Search",
+          text_hidden: true,
+          tooltip: false,
+        }],
+        input_type: "search",
+      } do %>
+        <%= sage_component SageFormInput, {
+          id: "search",
+          input_type: "search",
+          label_text: "Search Sage",
+          placeholder: "Search components",
+          value: params[:search] || "",
+        } %>
+      <% end %>
+    <% end %>
+    <div class="docs-panel">
+      <h2>How can we help?</h2>
+      <p>Questions? Head to our <a href="https://slack.com/app_redirect?channel=C01A424HY8Y" target="_blank">#sage-support Slack Channel</a> and join the conversation.</p>
+    </div>
+    <div class="docs-panel">
+      <h2>Share your feedback</h2>
+      <p>We care about improving your experience. Please select an emoji from the choices below to share your feedback.</p>
+      <br>
+      <div id="emojicom-widget-inline"></div>
+    </div>
+  <% end %>
+<% end %>

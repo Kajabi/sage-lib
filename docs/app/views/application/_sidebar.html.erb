@@ -123,11 +123,17 @@
       aria_label: "Secondary",
       items: [
         {
-          text: "Get Support",
-          link: pages_support_path,
-          active: current_page?(pages_support_path),
+          text: "Help & Feedback",
+          link: "#support-request",
+          icon: "help-filled",
+          attributes: {
+            "data-js-modaltrigger": "support-request",
+            "data-js-event": "support-request-sidebar"
+          }
         }
       ]
     } %>
   <% end %>
 <% end %>
+
+<%= render "pages/support_modal" %>
