@@ -26,19 +26,17 @@
     <% end %>
 <% end %>
 <% if @search.present? %>
-  <%= @search %>
   <%= sage_component SageCard, { spacer: { top: :xl }} do %>
     <% sorted_sage_components.each do |component| %>
       <% if component[:title].include? @search or component[:description].include? @search %>
         <%= sage_component SageChoice, {
-            attributes: {
-              href: pages_component_path(component[:title])
-            },
-            subtext: component[:description],
-            text: component[:title].titleize,
-            type: "arrow",
-          }
-        %>
+          attributes: {
+            href: pages_component_path(component[:title])
+          },
+          subtext: component[:description],
+          text: component[:title].titleize,
+          type: "arrow",
+        } %>
       <% end %>
     <% end %>
   <% end %>
