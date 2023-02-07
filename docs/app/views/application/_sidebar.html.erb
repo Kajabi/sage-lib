@@ -119,19 +119,16 @@
   <% end %>
 
   <%= content_for :sage_sidebar_footer do %>
-    <%= sage_component SageNav, {
-      aria_label: "Secondary",
-      items: [
-        {
-          text: "Help & Feedback",
-          link: "#support-request",
-          icon: "help-filled",
-          attributes: {
-            "data-js-modaltrigger": "support-request",
-            "data-js-event": "support-request-sidebar"
-          }
-        }
-      ]
+    <%= sage_component SageButton, {
+      value: "Help & Feedback",
+      icon: {
+        style: "left",
+        name: "help-filled",
+      },
+      attributes: {
+        "data-js-modaltrigger": "support-request",
+        "data-js-event": "support-request-sidebar"
+      }
     } %>
   <% end %>
 <% end %>
