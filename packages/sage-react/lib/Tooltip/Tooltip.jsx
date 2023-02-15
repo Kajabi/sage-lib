@@ -30,7 +30,6 @@ export const Tooltip = ({
   }
 
   const tooltipElementProps = {
-    parentDomRect,
     content,
     parentDomRect,
     position,
