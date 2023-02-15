@@ -40,7 +40,6 @@ export const Tooltip = ({
 
   return (
     <>
-      ssss
       {Children.map(children, (child) => cloneElement(child, {
         onMouseEnter: handleActivate,
         onFocus: handleActivate,
