@@ -11,7 +11,6 @@ import {
 export const Tooltip = ({
   children,
   content,
-  parentDomRect,
   position,
   size,
   theme,
