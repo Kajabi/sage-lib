@@ -47,7 +47,13 @@ export const Tooltip = ({
         ...rest,
       }))}
       {active && ReactDOM.createPortal(
-        <TooltipElement {...tooltipElementProps} />,
+        <TooltipElement
+          content={content}
+          parentDomRect={parentDomRect}
+          position={position}
+          size={size}
+          theme={theme}
+        />,
         document.body
       )}
     </>
