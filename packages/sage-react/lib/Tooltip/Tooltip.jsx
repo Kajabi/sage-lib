@@ -31,6 +31,7 @@ export const Tooltip = ({
         onFocus: handleActivate,
         onMouseLeave: handleDeactivate,
         onBlur: handleDeactivate,
+        ...rest,
       }))}
       {active && ReactDOM.createPortal(
         <TooltipElement parentDomRect={parentDomRect} {...rest} />,
