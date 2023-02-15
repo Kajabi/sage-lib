@@ -10,6 +10,11 @@ import {
 
 export const Tooltip = ({
   children,
+  content,
+  parentDomRect,
+  position,
+  size,
+  theme,
   ...rest
 }) => {
   const [active, setActive] = useState(false);
@@ -24,8 +29,18 @@ export const Tooltip = ({
     setActive(false);
   }
 
+  const tooltipElementProps = {
+    parentDomRect,
+    content,
+    parentDomRect,
+    position,
+    size,
+    theme,
+  };
+
   return (
     <>
+      ssss
       {Children.map(children, (child) => cloneElement(child, {
         onMouseEnter: handleActivate,
         onFocus: handleActivate,
@@ -34,7 +49,7 @@ export const Tooltip = ({
         ...rest,
       }))}
       {active && ReactDOM.createPortal(
-        <TooltipElement parentDomRect={parentDomRect} {...rest} />,
+        <TooltipElement {...tooltipElementProps} />,
         document.body
       )}
     </>
