@@ -29,14 +29,6 @@ export const Tooltip = ({
     setActive(false);
   }
 
-  const tooltipElementProps = {
-    content,
-    parentDomRect,
-    position,
-    size,
-    theme,
-  };
-
   return (
     <>
       {Children.map(children, (child) => cloneElement(child, {
