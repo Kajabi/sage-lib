@@ -338,9 +338,9 @@ $-btn-loading-min-height: rem(36px);
   }
 
   .sage-toolbar > .sage-dropdown .sage-dropdown__trigger > &,
-  .sage-toolbar__group > .sage-dropdown .sage-dropdown__trigger > & {
-    padding-top: sage-spacing(xs); /* match standard button height */
-    padding-bottom: sage-spacing(xs); /* match standard button height */
+  .sage-toolbar__group > .sage-dropdown .sage-dropdown__trigger > &:not([class*="sage-btn--icon-only-"]) {
+    padding-top: rem(10px); /* match standard button height */
+    padding-bottom: rem(10px); /* match standard button height */
   }
 
   .sage-toolbar__group > .sage-dropdown .sage-dropdown__trigger > & {
