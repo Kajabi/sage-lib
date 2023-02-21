@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.10.4](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.10.3...@kajabi/sage-react@1.10.4) (2023-02-21)
+
+
+### Bug Fixes
+
+* add banner to exports file ([#1690](https://github.com/Kajabi/sage-lib/issues/1690)) ([c46426d](https://github.com/Kajabi/sage-lib/commit/c46426da3ab7bb4634b7a14f53db008e0a60e543))
+
+
+
+
+
 ## [1.10.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.10.2...@kajabi/sage-react@1.10.3) (2023-02-06)
 
 **Note:** Version bump only for package @kajabi/sage-react
