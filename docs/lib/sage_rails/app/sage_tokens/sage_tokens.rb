@@ -310,6 +310,7 @@ module SageTokens
     "stack",
     "star",
     "stop",
+    "stopwatch",
     "strikethrough",
     "subscript",
     "subscriptions",
