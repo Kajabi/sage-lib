@@ -211,6 +211,7 @@ export const TOKENS_ICONS = {
   STACK: 'stack',
   STAR: 'star',
   STOP: 'stop',
+  STOPWATCH: 'stopwatch',
   STRIKETHROUGH: 'strikethrough',
   SUBSCRIPT: 'subscript',
   SUBSCRIPTIONS: 'subscriptions',
