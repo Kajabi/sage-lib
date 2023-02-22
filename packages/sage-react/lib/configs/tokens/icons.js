@@ -4,6 +4,8 @@ export const TOKENS_ICONS = {
   ADD_CIRCLE: 'add-circle',
   ADD_IMAGE: 'add-image',
   ADD_SMALL: 'add-small',
+  AI_WRITER: 'ai-writer',
+  AI_WRITER_FILLED: 'ai-writer-filled',
   ALIGN_CENTER: 'align-center',
   ALIGN_JUSTIFY: 'align-justify',
   ALIGN_LEFT: 'align-left',
