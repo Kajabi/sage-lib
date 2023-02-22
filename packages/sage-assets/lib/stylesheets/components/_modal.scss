@@ -91,7 +91,7 @@ $-modal-inner-size: sage-container(md);
     @media (max-width: sage-breakpoint(sm-max)) {
       max-width: var(--sage-drawer-size);
     }
-    
+
     @media (max-width: sage-breakpoint(md-min)) {
       max-width: var(--sage-drawer-mobile-size);
     }
@@ -265,8 +265,8 @@ $-modal-inner-size: sage-container(md);
     overflow-y: auto;
     align-content: start;
     height: calc(100% - var(--sage-drawer-header-height, 24px) - #{3 * sage-spacing(md)}); // a customizable height value for the header area minus top and bottom padding and one gap between header and content (sage-spacing(md))
-    padding: 0 (sage-spacing(card) / 2);
-    margin: 0 (sage-spacing(card) / 2);
+    padding: 0 calc(#{sage-spacing(card)} / 2);
+    margin: 0 calc(#{sage-spacing(card)} / 2);
   }
 
   > :last-child {

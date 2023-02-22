@@ -42,7 +42,7 @@ $-checkbox-focus-outline-color: sage-color(primary, 200);
   }
 
   .sage-list & {
-    margin-bottom: sage-spacing(card) / 2;
+    margin-bottom: calc(#{sage-spacing(card)} / 2);
   }
 
   @include sage-form-toggle-parents;
@@ -171,7 +171,7 @@ $-checkbox-focus-outline-color: sage-color(primary, 200);
   &::after {
     @include sage-icon-base(check, sm);
 
-    $-checkbox-scale: 14 / 16;
+    $-checkbox-scale: calc(14 / 16);
     transform: translate3d(calc(-50% - 0.5px), calc(-50% - 0.5px), 0) scale3d(#{$-checkbox-scale}, #{$-checkbox-scale}, #{$-checkbox-scale});
     color: sage-color(white);
     font-weight: sage-font-weight(bold);

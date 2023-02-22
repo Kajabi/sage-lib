@@ -5,6 +5,9 @@
 ////
 
 
+// Import dart-sass math functions
+@use "sass:math";
+
 ///
 /// Parse a Morse code into a prescriptive object pattern that is used to create CSS for the code value.
 ///
@@ -74,9 +77,13 @@
 /// For use in cases where a theme has modified the root font-size to something other than the browser default.
 ///
 $sage-use-rem-conversion: true !default;
+$sage-rem-base-font-size: 16 !default;
 
 ///
-/// Converts an integer to a rem value based on 16 as the base size.
+/// Converts an integer to a rem value
+///
+/// We first convert the input to a unitless number, then divide by the base font size (default of 16) to obtain
+/// the equivalent ratio of rems. The resulting calculation is multiplied by `1rem` to "attach" the unit.
 ///
 /// @param {length} $value Length value, typically a `px` or `pt` that is to be converted to `rem`
 ///
@@ -95,7 +102,7 @@ $sage-use-rem-conversion: true !default;
 ///
 @function rem($value) {
   @if ($sage-use-rem-conversion) {
-    @return strip-unit($value) / 16 * 1rem;
+    @return math.div(strip-unit($value), $sage-rem-base-font-size) * 1rem;
   }
 
   @return $value;
@@ -103,6 +110,7 @@ $sage-use-rem-conversion: true !default;
 
 ///
 /// Strips non-numeric content from values
+/// See https://css-tricks.com/snippets/sass/strip-unit-function/
 ///
 /// @param {length} $number Length from which to strip a unit
 ///
@@ -110,7 +118,7 @@ $sage-use-rem-conversion: true !default;
 ///
 @function strip-unit($number) {
   @if type-of($number) == "number" and not unitless($number) {
-    @return $number / ($number * 0 + 1);
+    @return math.div($number, ($number * 0 + 1));
   }
 
   @return $number;
@@ -119,7 +127,7 @@ $sage-use-rem-conversion: true !default;
 ///
 /// Replace `$search` with `$replace` in `$string`
 ///
-/// @author Hugo Giraudel
+/// @author Kitty Giraudel
 ///
 /// @param {string} $string - Initial string
 /// @param {string} $search - Substring to replace

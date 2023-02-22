@@ -34,7 +34,7 @@ $-switch-toggle-size: rem(16px);
   color: $-switch-color-default-text;
 
   & + & {
-    margin-top: -(sage-spacing(card) / 2);
+    margin-top: calc(#{sage-spacing(card)} / -2);
   }
 
   &.sage-switch--has-border {
@@ -50,7 +50,7 @@ $-switch-toggle-size: rem(16px);
 
   .sage-list & {
     margin-top: 0;
-    margin-bottom: sage-spacing(card) / 2;
+    margin-bottom: calc(#{sage-spacing(card)} / 2);
   }
 
   @include sage-form-toggle-parents {

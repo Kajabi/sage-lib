@@ -53,7 +53,7 @@ $-panel-figure-default-background-color: sage-color(grey, 200);
 
   &.sage-panel__figure--aspect-ratio {
     img {
-      top: calc(50% + #{$-panel-figure-padding / 2});
+      top: calc(50% + (#{$-panel-figure-padding} / 2));
     }
   }
 }

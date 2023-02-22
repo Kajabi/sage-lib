@@ -40,9 +40,9 @@ $-radio-focus-outline-color: currentColor;
   position: relative;
   column-gap: $-radio-gap-spacing;
   grid-template-columns: min-content 1fr;
-  
+
   .sage-list & {
-    margin-bottom: sage-spacing(card) / 2;
+    margin-bottom: calc(#{sage-spacing(card)} / 2);
   }
 
   @include sage-form-toggle-parents;
@@ -53,7 +53,7 @@ $-radio-focus-outline-color: currentColor;
     "radio label"
     "radio message"
     "radio custom";
-  
+
   &.sage-radio--has-border {
     grid-template-areas:
       "radio label custom"
