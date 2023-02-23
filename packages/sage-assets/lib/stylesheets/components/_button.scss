@@ -353,18 +353,26 @@ $-btn-loading-min-height: rem(36px);
     border-radius: 0;
   }
 
-  .sage-panel-controls__toolbar-btn-group > &:first-child,
-  .sage-toolbar__group > &:first-child,
-  .sage-toolbar__group > .sage-dropdown:first-child .sage-dropdown__trigger > & {
+  .sage-panel-controls__toolbar-btn-group > &:first-child {
     border-top-left-radius: sage-border(radius);
     border-bottom-left-radius: sage-border(radius);
   }
 
-  .sage-panel-controls__toolbar-btn-group > &:last-child,
-  .sage-toolbar__group > &:last-child,
-  .sage-toolbar__group > .sage-dropdown:last-child .sage-dropdown__trigger > & {
+  .sage-panel-controls__toolbar-btn-group > &:last-child {
     border-top-right-radius: sage-border(radius);
     border-bottom-right-radius: sage-border(radius);
+  }
+
+  .sage-toolbar__group > &:first-child,
+  .sage-toolbar__group > .sage-dropdown:first-child .sage-dropdown__trigger > & {
+    border-top-left-radius: sage-border(radius-medium);
+    border-bottom-left-radius: sage-border(radius-medium);
+  }
+
+  .sage-toolbar__group > &:last-child,
+  .sage-toolbar__group > .sage-dropdown:last-child .sage-dropdown__trigger > & {
+    border-top-right-radius: sage-border(radius-medium);
+    border-bottom-right-radius: sage-border(radius-medium);
   }
 
   .sage-toolbar__group > .sage-dropdown + &,
