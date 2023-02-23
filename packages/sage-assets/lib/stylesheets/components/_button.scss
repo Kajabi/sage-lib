@@ -329,11 +329,17 @@ $-btn-loading-min-height: rem(36px);
     border-radius: 0;
   }
 
-  .sage-panel-controls__toolbar-btn-group > &:not(.sage-btn--secondary),
-  .sage-toolbar__group > &:not(.sage-btn--secondary) {
+  .sage-panel-controls__toolbar-btn-group > &:not(.sage-btn--secondary) {
     position: absolute;
     right: 0;
     bottom: 0;
+    min-height: calc(#{$-btn-toolbar-group-height} + #{rem(2px)}); /* expand to toolbar group height + border offset */
+  }
+
+  .sage-toolbar__group > &:not(.sage-btn--secondary) {
+    position: absolute;
+    right: rem(-1px);
+    bottom: rem(-1px);
     min-height: calc(#{$-btn-toolbar-group-height} + #{rem(2px)}); /* expand to toolbar group height + border offset */
   }
 
