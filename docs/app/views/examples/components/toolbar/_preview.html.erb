@@ -137,10 +137,10 @@
 <%= sage_component SageToolbar, {} do %>
   <%= sage_component SageToolbarGroup, {} do %>
     <%= sage_component SageFormInput, {
-      id: "custom-input-field",
+      id: "custom-input-field-email",
       hide_label: true,
       input_type: "email",
-      label_text: "Yes",
+      label_text: "Email address",
       placeholder: "Email address",
       required: true,
       disabled: false,
@@ -148,7 +148,7 @@
       name: "custom_input_field",
     } %>
     <%= sage_component SageButton, {
-      value: "Sign up",
+      value: "Sign Up",
       style: "primary",
     } %>
   <% end %>

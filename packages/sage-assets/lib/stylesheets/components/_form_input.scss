@@ -33,8 +33,6 @@ $-input-text-height: sage-font-size(body);
   .sage-toolbar__group & {
     &:first-child .sage-input__field {
       border-radius: sage-border(radius-medium);
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
     }
 
     &:last-child .sage-input__field {
@@ -106,6 +104,11 @@ $-input-text-height: sage-font-size(body);
 
   grid-area: label;
   margin-bottom: sage-spacing(xs);
+
+  // input labels within toolbar groups are visually hidden to maintain alignment
+  .sage-toolbar__group & {
+    @include visually-hidden();
+  }
 }
 .sage-input__field-wrapper {
   position: relative;
@@ -135,7 +138,7 @@ $-input-text-height: sage-font-size(body);
     &:hover,
     &:focus,
     &:active {
-      z-index: sage-z-index(default, 1);
+      z-index: unset;
     }
   }
 }
