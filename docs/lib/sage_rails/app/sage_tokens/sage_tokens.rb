@@ -103,6 +103,8 @@ module SageTokens
     "add-circle",
     "add-image",
     "add-small",
+    "ai-writer",
+    "ai-writer-filled",
     "align-center",
     "align-justify",
     "align-left",
