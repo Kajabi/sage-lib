@@ -10,6 +10,10 @@ import {
 
 export const Tooltip = ({
   children,
+  content,
+  position,
+  size,
+  theme,
   ...rest
 }) => {
   const [active, setActive] = useState(false);
@@ -31,9 +35,16 @@ export const Tooltip = ({
         onFocus: handleActivate,
         onMouseLeave: handleDeactivate,
         onBlur: handleDeactivate,
+        ...rest,
       }))}
       {active && ReactDOM.createPortal(
-        <TooltipElement parentDomRect={parentDomRect} {...rest} />,
+        <TooltipElement
+          content={content}
+          parentDomRect={parentDomRect}
+          position={position}
+          size={size}
+          theme={theme}
+        />,
         document.body
       )}
     </>
@@ -46,8 +57,15 @@ Tooltip.SIZES = TOOLTIP_SIZES;
 Tooltip.THEMES = TOOLTIP_THEMES;
 
 Tooltip.defaultProps = {
+  position: TOOLTIP_POSITIONS.DEFAULT,
+  size: TOOLTIP_SIZES.DEFAULT,
+  theme: TOOLTIP_THEMES.DEFAULT,
 };
 
 Tooltip.propTypes = {
   children: PropTypes.node.isRequired,
+  content: PropTypes.oneOfType([PropTypes.node, PropTypes.string]).isRequired,
+  position: PropTypes.oneOf(Object.values(TOOLTIP_POSITIONS)),
+  size: PropTypes.oneOf(Object.values(TOOLTIP_SIZES)),
+  theme: PropTypes.oneOf(Object.values(TOOLTIP_THEMES)),
 };
