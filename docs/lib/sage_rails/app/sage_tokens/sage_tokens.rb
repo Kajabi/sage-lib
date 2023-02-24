@@ -133,6 +133,7 @@ module SageTokens
     "card-apple",
     "card-discover",
     "card-generic",
+    "card-gpay",
     "card-mastercard",
     "card-paypal",
     "card-stripe",
