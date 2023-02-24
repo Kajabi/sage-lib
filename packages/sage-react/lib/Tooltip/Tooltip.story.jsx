@@ -25,7 +25,7 @@ export default {
   args: {
     children: (
       <Button>
-        I inherit Mouse &amp; Focus events 👋
+        I inherit Mouse, Focus, and other events 👋
       </Button>
     ),
     content: 'Hi, I provide more context for this element!',
