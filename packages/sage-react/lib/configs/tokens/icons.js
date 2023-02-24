@@ -34,6 +34,7 @@ export const TOKENS_ICONS = {
   CARD_APPLE: 'card-apple',
   CARD_DISCOVER: 'card-discover',
   CARD_GENERIC: 'card-generic',
+  CARD_GPAY: 'card-gpay',
   CARD_MASTERCARD: 'card-mastercard',
   CARD_PAYPAL: 'card-paypal',
   CARD_STRIPE: 'card-stripe',
