@@ -90,6 +90,7 @@ $-search-icon: "::before";
   .sage-toolbar &,
   .sage-toolbar__group & {
     &:hover {
+      // apply double width border to visually match button hover
       box-shadow: map-get($sage-toolbar-button-borders, hover-large);
     }
   }
