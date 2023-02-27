@@ -90,8 +90,7 @@ $-search-icon: "::before";
   .sage-toolbar &,
   .sage-toolbar__group & {
     &:hover {
-      // 1px addition to map-get($sage-toolbar-button-borders, hover);
-      box-shadow: 0 0 0 2px sage-color(charcoal, 100);
+      box-shadow: map-get($sage-toolbar-button-borders, hover-large);
     }
   }
 
