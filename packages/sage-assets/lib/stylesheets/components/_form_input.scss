@@ -31,8 +31,10 @@ $-input-text-height: sage-font-size(body);
   }
 
   .sage-toolbar__group & {
-    &:first-child .sage-input__field {
+    &:first-child:not(:only-child) .sage-input__field {
       border-radius: sage-border(radius-medium);
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
     }
 
     &:last-child .sage-input__field {
@@ -134,11 +136,15 @@ $-input-text-height: sage-font-size(body);
     position: relative;
     height: inherit;
     border-radius: 0;
+    box-shadow: map-get($sage-toolbar-button-borders, default);
 
-    &:hover,
+    &:hover {
+      box-shadow: map-get($sage-toolbar-button-borders, hover-large);
+    }
+
     &:focus,
     &:active {
-      z-index: unset;
+      box-shadow: map-get($sage-toolbar-button-borders, focus);
     }
   }
 }
