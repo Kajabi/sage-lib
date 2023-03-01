@@ -2,7 +2,7 @@
   <%= sage_component SageDrawer, {
       id: "support-request",
       show_close: true,
-      size: "33vw",
+      size: "30vw",
       expanded_size: "100vw",
       disable_background_dismiss: false,
     } do %>
@@ -11,33 +11,39 @@
     <% end %>
 
     <%= form_tag(pages_search_path, method: :get) do %>
-      <%= sage_component SageInputGroup, {
-        has_button: true,
-        group_buttons: [{
-          icon: "sage-btn--icon-left-search",
-          text: "Search",
-          text_hidden: true,
-          tooltip: false,
-        }],
-        input_type: "search",
-      } do %>
-        <%= sage_component SageFormInput, {
-          id: "search",
-          input_type: "search",
-          label_text: "Search Sage",
-          placeholder: "Search components",
-          value: params[:search] || "",
-        } %>
+      <%= sage_component SageToolbar, {} do %>
+        <%= sage_component SageToolbarGroup, {} do %>
+          <%= sage_component SageFormInput, {
+            id: "search",
+            input_type: "search",
+            label_text: "Search Sage",
+            placeholder: "Search Sage components",
+            value: params[:search] || "",
+          } %>
+          <%= sage_component SageButton, {
+            value: "Sign up",
+            style: "primary",
+          } %>
+        <% end %>
       <% end %>
     <% end %>
-    <div class="docs-panel">
-      <h2>How can we help?</h2>
-      <p>Questions? Suggestions? Head to our <a href="https://slack.com/app_redirect?channel=C01A424HY8Y" target="_blank">#sage-support Slack Channel</a> and join the conversation.</p>
-    </div>
-    <div class="docs-panel">
-      <h2>Share your feedback</h2>
-      <p>We care about improving your experience! Share your feedback below.</p>
-      <br>
-    </div>
+    <%= sage_component SagePanel, {} do %>
+      <%= sage_component SagePanelHeader, {
+        title: "How can we help?",
+        title_tag: "h2"
+      } %>
+      <%= sage_component SagePanelBlock, { type_block: true } do %>
+        <p>Questions? Head to our <a href="https://slack.com/app_redirect?channel=C01A424HY8Y" target="_blank">#sage-support Slack Channel</a> and join the conversation.</p>
+      <% end %>
+    <% end %>
+    <%= sage_component SagePanel, {} do %>
+      <%= sage_component SagePanelHeader, {
+        title: "Share your feedback",
+        title_tag: "h2",
+      } %>
+      <%= sage_component SagePanelBlock, { type_block: true } do %>
+        <p>Spot a bug or have a suggestion? We care about improving your experience! <a href="https://forms.gle/Y4TGCimUGectGFHq9?utm_source=feedback_form&utm_medium=rails_docs" target="_blank">Share your feedback with us</a>.</p>
+      <% end %>
+    <% end %>
   <% end %>
 <% end %>
