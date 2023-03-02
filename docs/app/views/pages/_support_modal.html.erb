@@ -11,7 +11,7 @@
     <% end %>
 
     <%= form_tag(pages_search_path, method: :get) do %>
-      <%= sage_component SageToolbar, {} do %>
+      <%= sage_component SageToolbar, { spacer: { top: :xs } } do %>
         <%= sage_component SageToolbarGroup, {} do %>
           <%= sage_component SageFormInput, {
             id: "search",
