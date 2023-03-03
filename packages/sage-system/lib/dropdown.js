@@ -182,9 +182,9 @@ Sage.dropdown = (function () {
     let direction = null;
 
     // Elements
+    const button = el;
     const panel = el.lastElementChild
     const win = panel.ownerDocument.defaultView;
-    const button = document.activeElement;
     const docEl = window.document.documentElement;
 
     panel.style.top = ''; // resets the style
