@@ -80,8 +80,7 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
 
   .sage-panel-controls__bulk-actions--checked & {
     &:last-child {
-      // hide duplicate border
-      margin-left: -1px;
+      margin-left: rem(-1px); /* offset border overlap of multiple buttons */
     }
   }
 

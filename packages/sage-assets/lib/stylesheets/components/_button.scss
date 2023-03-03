@@ -347,8 +347,7 @@ $-btn-loading-min-height: rem(36px);
   }
 
   .sage-panel-controls__toolbar-btn-group &:not(:only-child) {
-    // hide duplicate borders
-    margin-left: -1px;
+    margin-left: rem(-1px); /* offset border overlap of multiple buttons */
   }
 
   .sage-panel-controls__toolbar-btn-group > &:first-child {
