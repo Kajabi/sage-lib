@@ -76,6 +76,13 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
       border-top-right-radius: sage-border(radius);
       border-bottom-right-radius: sage-border(radius);
     }
+   }
+
+  .sage-panel-controls__bulk-actions--checked & {
+    &:last-child {
+      // hide duplicate border
+      margin-left: -1px;
+    }
   }
 
   &.sage-dropdown--contained,
@@ -377,10 +384,6 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
 
 .sage-dropdown__trigger--custom-width {
   width: var(--sage-dropdown-trigger-width, auto);
-}
-
-.sage-dropdown__trigger--select {
-  border-radius: sage-border(radius-medium);
 }
 
 .sage-btn--icon-right-caret-down::before {

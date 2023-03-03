@@ -159,6 +159,9 @@ $-search-icon: "::before";
     border-radius: inherit;
   }
 
+
+  .sage-panel-controls__toolbar &,
+  .sage-toolbar__group &,
   .sage-toolbar &,
   .sage-toolbar__group & {
     box-shadow: map-get($sage-toolbar-button-borders, default);
