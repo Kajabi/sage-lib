@@ -208,8 +208,9 @@ Sage.dropdown = (function () {
       bottom: (panelDimensions.top + win.pageYOffset)
     };
 
-    const enoughSpaceAbove = viewport.top < ( offset.top + getHeight(panel));
-    const enoughSpaceBelow = viewport.bottom > (offset.bottom + getHeight(panel));
+    const panelHeight = getHeight(panel);
+    const enoughSpaceAbove = viewport.top < ( offset.top + panelHeight);
+    const enoughSpaceBelow = viewport.bottom > (offset.bottom + panelHeight);
 
     if (!enoughSpaceBelow && enoughSpaceAbove) {
       direction = 'above';
@@ -218,7 +219,7 @@ Sage.dropdown = (function () {
     }
 
     if ( direction == 'above') {
-      panel.style.top = `-${panelNewLoc.top}px`;
+      panel.style.top = `-${panelNewLoc.top - 30}px`;
     }
   }
   function open(el) {
