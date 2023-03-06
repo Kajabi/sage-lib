@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.8](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@1.2.7...@kajabi/sage-system@1.2.8) (2023-03-06)
+
+
+### Bug Fixes
+
+* **sage-dropdown:** safari calculation was wrong ([686c0b7](https://github.com/Kajabi/sage-lib/commit/686c0b7bb3482363bffea5d73360fa6149467834))
+
+
+
+
+
 ## [1.2.7](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@1.2.6...@kajabi/sage-system@1.2.7) (2023-01-19)
 
 

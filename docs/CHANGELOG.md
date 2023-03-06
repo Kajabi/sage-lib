@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.11.8](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.11.7...@kajabi/sage@5.11.8) (2023-03-06)
+
+
+### Bug Fixes
+
+* **icons:** update sage_tokens to add new icon ([4b37e29](https://github.com/Kajabi/sage-lib/commit/4b37e292bdc58569860e28a090c75fa55edefecf))
+* **icons:** update sage_tokens to add new icon ([f19cdc1](https://github.com/Kajabi/sage-lib/commit/f19cdc13fb5034b1fc4d2a393ae423e4070706bf))
+* **icons:** update sage_tokens to add new icons ([e9513c5](https://github.com/Kajabi/sage-lib/commit/e9513c529a022cc14877f62cbf5483253f187996))
+* **textarea:** fix typo so content prop renders properly ([755077d](https://github.com/Kajabi/sage-lib/commit/755077d920e452306125093211c32a665ffc8ec5))
+* **toolbar:** input grouping modifications ([f8b4933](https://github.com/Kajabi/sage-lib/commit/f8b4933faf149ee4177282c212e1479b441eeb82))
+
+
+
+
+
 ## [5.11.7](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.11.6...@kajabi/sage@5.11.7) (2023-02-24)
 
 **Note:** Version bump only for package @kajabi/sage

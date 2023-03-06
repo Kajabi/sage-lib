@@ -3,6 +3,34 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.8.5](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.8.4...@kajabi/sage-assets@1.8.5) (2023-03-06)
+
+
+### Bug Fixes
+
+* **button:** align to Figma specs ([b3df9df](https://github.com/Kajabi/sage-lib/commit/b3df9dfd5fda3bd7be1451ccaab55e2afac46634))
+* **grid:** patch sass division with calc ([64f007f](https://github.com/Kajabi/sage-lib/commit/64f007f40e00444a5eeb2d19066e37302ee3b5c3))
+* **icons:** update _icon.scss to include new icon ([a58579f](https://github.com/Kajabi/sage-lib/commit/a58579f50c6516aa71b1c8d36008c3e4dfe1327a))
+* **icons:** update _icon.scss to include new icon ([7cd0ce3](https://github.com/Kajabi/sage-lib/commit/7cd0ce38f4feb69cbb5d90a53566875c72f2c1eb))
+* **icons:** update _icon.scss to include new icon ([5753cb3](https://github.com/Kajabi/sage-lib/commit/5753cb3f2d73c30b8f38af54c0f59b42e39fca98))
+* **icons:** update cdn version var to 14 ([c87a6c9](https://github.com/Kajabi/sage-lib/commit/c87a6c981fc095652415b4bcc0d21f31c6326e7b))
+* **icons:** update cdn version var to 15 ([d4fd896](https://github.com/Kajabi/sage-lib/commit/d4fd896c1f8cd6426ae60727289e92f113d187f5))
+* **icons:** update cdn version var to 16 ([225f281](https://github.com/Kajabi/sage-lib/commit/225f281fcf051f11716186a0b40a43ccb1980a96))
+* **modal:** patch sass division with calc ([06aef7d](https://github.com/Kajabi/sage-lib/commit/06aef7dba11c963bd112b10d51610e0c067ab105))
+* **panel figure:** patch sass division with calc ([7f0d197](https://github.com/Kajabi/sage-lib/commit/7f0d1970b4c66f28d65ddc860d7d2d34c7e3d8bf))
+* **switch:** patch sass division with calc ([6f713b2](https://github.com/Kajabi/sage-lib/commit/6f713b2c1218d7cf7fa65d592e7aef2f60f0daf8))
+* **toolbar:** adjust dropdown specificity & size ([c25940d](https://github.com/Kajabi/sage-lib/commit/c25940df9d96f777456b28c8bde67f531ec945da))
+* **toolbar:** correct toolbar input grouping ([d16b967](https://github.com/Kajabi/sage-lib/commit/d16b9671b3a7507d62c9c3013e87c4d06da985c9))
+* **toolbar:** input grouping modifications ([f8b4933](https://github.com/Kajabi/sage-lib/commit/f8b4933faf149ee4177282c212e1479b441eeb82))
+* **toolbar:** match search form outline to button styles ([f6de4d6](https://github.com/Kajabi/sage-lib/commit/f6de4d68bf6d4ae77e5da778ec0349facb2fe9ba))
+* **toolbar:** match toolbar border-radius ([37897eb](https://github.com/Kajabi/sage-lib/commit/37897ebd3db6e3a01e8ae2cf7b19c758ec4d62a1))
+* **toolbar:** modified values for toolbar group buttons ([ff12c3b](https://github.com/Kajabi/sage-lib/commit/ff12c3b9aee0150c8b20af4c6d1045cdf2138c01))
+* **utilities:** author name correction ([f15bb09](https://github.com/Kajabi/sage-lib/commit/f15bb09884edc86e5aabb9e243cba94ae3b395ca))
+
+
+
+
+
 ## [1.8.4](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.8.3...@kajabi/sage-assets@1.8.4) (2023-02-24)
 
 **Note:** Version bump only for package @kajabi/sage-assets
