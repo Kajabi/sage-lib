@@ -10,6 +10,9 @@
 // Base style variables
 //
 $-btn-transition: map-get($sage-transitions, default);
+$-btn-base-padding-block: sage-spacing(xs); // vertical (y) axis
+$-btn-base-padding-inline: sage-spacing(sm); // horizontal (x) axis
+$-btn-base-line-height: var(--sage-line-height-body, #{rem(24px)});
 $-btn-border-radius: sage-border(radius);
 $-btn-shadow-base: sage-shadow(sm);
 $-btn-icon-only-standard-size: rem(40px);
@@ -160,14 +163,12 @@ $-btn-loading-min-height: rem(36px);
   @include sage-button-style-reset();
   @include sage-focus-ring;
 
-  $-padding-block: rem(10px);
-
   display: inline-flex;
   position: relative;
   align-self: inherit;
   align-items: center;
   justify-self: flex-start;
-  padding: $-padding-block sage-spacing(sm);
+  padding: $-btn-base-padding-block $-btn-base-padding-inline;
   text-align: left; // Prevents text alignment issue when inner text is truncated
   border: 0;
   border-radius: $-btn-border-radius;
@@ -325,40 +326,47 @@ $-btn-loading-min-height: rem(36px);
   }
 
   .sage-panel-controls__toolbar-btn-group > &,
-  .sage-toolbar__group > & {
+  .sage-toolbar__group > &,
+  .sage-toolbar__group > .sage-dropdown .sage-dropdown__trigger > & {
     border-radius: 0;
   }
 
-  .sage-panel-controls__toolbar-btn-group > &:not(.sage-btn--secondary),
-  .sage-toolbar__group > &:not(.sage-btn--secondary) {
+  .sage-panel-controls__toolbar-btn-group > &:not(.sage-btn--secondary) {
     position: absolute;
     right: 0;
     bottom: 0;
     min-height: calc(#{$-btn-toolbar-group-height} + #{rem(2px)}); /* expand to toolbar group height + border offset */
   }
 
-  .sage-toolbar > .sage-dropdown .sage-dropdown__trigger > &,
-  .sage-toolbar__group > .sage-dropdown .sage-dropdown__trigger > & {
-    padding-top: sage-spacing(xs); /* match standard button height */
-    padding-bottom: sage-spacing(xs); /* match standard button height */
+  .sage-toolbar__group > .sage-input ~ &.sage-btn--primary,
+  .sage-toolbar__group > .sage-search ~ &.sage-btn--primary {
+    box-shadow: 0 0 0 1px sage-color(charcoal, 400);
   }
 
-  .sage-toolbar__group > .sage-dropdown .sage-dropdown__trigger > & {
-    border-radius: 0;
+  .sage-toolbar__group .sage-dropdown__trigger > & {
+    border-color: sage-color(grey, 500);
   }
 
-  .sage-panel-controls__toolbar-btn-group > &:first-child,
-  .sage-toolbar__group > &:first-child,
-  .sage-toolbar__group > .sage-dropdown:first-child .sage-dropdown__trigger > & {
+  .sage-panel-controls__toolbar-btn-group > &:first-child {
     border-top-left-radius: sage-border(radius);
     border-bottom-left-radius: sage-border(radius);
   }
 
-  .sage-panel-controls__toolbar-btn-group > &:last-child,
-  .sage-toolbar__group > &:last-child,
-  .sage-toolbar__group > .sage-dropdown:last-child .sage-dropdown__trigger > & {
+  .sage-panel-controls__toolbar-btn-group > &:last-child {
     border-top-right-radius: sage-border(radius);
     border-bottom-right-radius: sage-border(radius);
+  }
+
+  .sage-toolbar__group > &:first-child,
+  .sage-toolbar__group > .sage-dropdown:first-child .sage-dropdown__trigger > & {
+    border-top-left-radius: sage-border(radius-medium);
+    border-bottom-left-radius: sage-border(radius-medium);
+  }
+
+  .sage-toolbar__group > &:last-child,
+  .sage-toolbar__group > .sage-dropdown:last-child .sage-dropdown__trigger > & {
+    border-top-right-radius: sage-border(radius-medium);
+    border-bottom-right-radius: sage-border(radius-medium);
   }
 
   .sage-toolbar__group > .sage-dropdown + &,
@@ -399,7 +407,7 @@ $-btn-loading-min-height: rem(36px);
   }
 
   &:not([class*="icon-only"]) {
-    line-height: rem(20px); /* used this value to align to the spec */
+    line-height: $-btn-base-line-height;
   }
 
   &.sage-btn--disclosure {
@@ -427,12 +435,14 @@ $-btn-loading-min-height: rem(36px);
   &.sage-btn--rich-text,
   .toolbar-editor__section &,
   .toolbar-editor & {
-    padding: sage-spacing(xs) sage-spacing(lg) sage-spacing(xs) sage-spacing(xs);
+    $-btn-rte-padding: rem(6px);
+
+    padding: $-btn-base-padding-block sage-spacing(lg) $-btn-base-padding-block sage-spacing(xs);
     border-radius: 6px;
     border-width: 0;
 
     @media (max-width: sage-breakpoint(sm-max)) {
-      padding: rem(6px) rem(30px) rem(6px) rem(6px);
+      padding: $-btn-rte-padding rem(30px) $-btn-rte-padding $-btn-rte-padding;
     }
 
     &::before {
@@ -462,7 +472,7 @@ $-btn-loading-min-height: rem(36px);
       padding: sage-spacing(xs);
 
       @media (max-width: sage-breakpoint(sm-max)) {
-        padding: rem(6px);
+        padding: $-btn-rte-padding;
       }
     }
   }
@@ -538,6 +548,19 @@ a.sage-btn {
         box-shadow: map-get($sage-toolbar-button-borders, focus);
       }
     }
+  }
+}
+
+// Primary style overrides
+.sage-btn--primary {
+  // apply toolbar button state styling
+  .sage-toolbar__group > .sage-input ~ &:not(.sage-btn--subtle):not(:disabled):not([aria-disabled="true"]):hover,
+  .sage-toolbar__group > .sage-search ~ &:not(.sage-btn--subtle):not(:disabled):not([aria-disabled="true"]):hover {
+    box-shadow: map-get($sage-toolbar-button-borders, hover-large);
+  }
+  .sage-toolbar__group > .sage-input ~ &:not(.sage-btn--subtle):not(:disabled):not([aria-disabled="true"]):focus,
+  .sage-toolbar__group > .sage-search ~ &:not(.sage-btn--subtle):not(:disabled):not([aria-disabled="true"]):focus {
+    box-shadow: map-get($sage-toolbar-button-borders, focus);
   }
 }
 

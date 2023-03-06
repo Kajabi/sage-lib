@@ -87,6 +87,14 @@ $-search-icon: "::before";
     border-bottom-right-radius: 0;
   }
 
+  .sage-toolbar &,
+  .sage-toolbar__group & {
+    &:hover {
+      // apply double width border to visually match button hover
+      box-shadow: map-get($sage-toolbar-button-borders, hover-large);
+    }
+  }
+
   .sage-toolbar__group .sage-search--contained:first-child & {
     border-radius: sage-border(radius-medium);
     border-top-right-radius: 0;
@@ -155,6 +163,20 @@ $-search-icon: "::before";
     height: inherit;
     padding-top: rem(10px);
     padding-bottom: rem(10px);
+  }
+
+  .sage-toolbar &,
+  .sage-toolbar__group & {
+    box-shadow: map-get($sage-toolbar-button-borders, default);
+
+    &:hover {
+      box-shadow: map-get($sage-toolbar-button-borders, hover);
+    }
+
+    &:focus,
+    &:active {
+      box-shadow: map-get($sage-toolbar-button-borders, active-hover);
+    }
   }
 
   .sage-search--contained &:focus,
