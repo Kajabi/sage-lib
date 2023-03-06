@@ -194,7 +194,7 @@ Sage.dropdown = (function () {
     const panelDimensions = panel.getBoundingClientRect();
 
     const panelNewLoc = {
-      top: buttonDimensions.height + panelDimensions.height
+      top: ( buttonDimensions.height / 2 ) + panelDimensions.height
     }
 
     const viewport = {
@@ -219,7 +219,7 @@ Sage.dropdown = (function () {
     }
 
     if ( direction == 'above') {
-      panel.style.top = `-${panelNewLoc.top - 30}px`;
+      panel.style.top = `-${panelNewLoc.top}px`;
     }
   }
   function open(el) {
