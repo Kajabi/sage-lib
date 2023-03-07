@@ -8,7 +8,6 @@ $-link-color: sage-color(primary, 300);
 $-link-color-hover: sage-color(primary, 400);
 $-link-subtext-color: sage-color(charcoal, 200);
 $-link-subtext-color-hover: sage-color(charcoal, 400);
-$-link-help-icon-only-size: rem(20px);
 
 $-link-base-styles: (
   primary:(
@@ -199,14 +198,15 @@ $-link-base-styles: (
 }
 
 .sage-link--help-icon-only {
+  display: inline-flex;
+  align-items: center;
+  margin-left: sage-spacing(2xs);
   @include sage-focus-outline(
     $outline-offset-inline: 4px,
     $outline-offset-block: 4px,
     $outline-border-radius: sage-border(radius-round),
   );
   @include sage-focus-outline--update-color(sage-color(primary, 200));
-  width: $-link-help-icon-only-size;
-  height: $-link-help-icon-only-size;
 }
 
 .sage-link--remove-underline {
