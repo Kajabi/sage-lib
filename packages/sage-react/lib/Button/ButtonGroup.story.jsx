@@ -2,6 +2,7 @@ import React from 'react';
 import { selectArgs } from '../story-support/helpers';
 import { Button } from './Button';
 import { ButtonGroup } from './ButtonGroup';
+import { Link } from '../Link'
 
 export default {
   title: 'Sage/Button Group',
@@ -34,3 +35,17 @@ export default {
 const Template = (args) => <ButtonGroup {...args} />;
 
 export const Default = Template.bind({});
+
+export const withLink = () => {
+  return (
+    <>
+      <ButtonGroup align="space-between">
+        <Link href="#" removeUnderline style="secondary">Link</Link>
+        <ButtonGroup gap="md">
+          <Button color={Button.COLORS.PRIMARY}>Foo</Button>
+          <Button color={Button.COLORS.SECONDARY}>Bar</Button>
+        </ButtonGroup>
+      </ButtonGroup>
+    </>
+  );
+};
