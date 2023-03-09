@@ -167,6 +167,10 @@ Sage.dropdown = (function () {
     }
   }
 
+
+  // NOTE: getHeight and positionElement must be kept in alignment
+  // with packages/sage-react/lib/Dropdown/Dropdown.jsx since we don't
+  // currently have unified location for Rails and React
   function getHeight(el) {
     const styles = window.getComputedStyle(el);
     const height = el.offsetHeight;

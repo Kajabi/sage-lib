@@ -39,11 +39,7 @@ export const Dropdown = ({
   triggerWidth,
 }) => {
   const [isActive, setActive] = useState(false);
-  const [coords, updateCoords] = useState(null);
   const wrapperRef = useRef(null);
-
-  const topBoxOffset = 2;
-  const inlineBoxOffset = -6;
 
   const onClickTrigger = () => {
     if (!isActive && clickTriggerHandler) {
@@ -55,41 +51,90 @@ export const Dropdown = ({
     }
   };
 
-  const setPanelCoords = () => {
-    const rect = wrapperRef.current.getBoundingClientRect();
+  const onUpdate = useCallback(debounce(() => setPanelCoords(), 20), []); // eslint-disable-line
 
-    updateCoords({
-      top: rect.bottom + topBoxOffset,
-      left: align !== 'right'
-        ? rect.left + inlineBoxOffset
-        : 'intitial',
-      right: align === 'right'
-        ? window.innerWidth - rect.right + inlineBoxOffset
-        : 'intitial',
-    });
+  // NOTE: getHeight and positionElement must be kept in alignment
+  // with packages/sage-system/lib/dropdown.js since we don't
+  // currently have unified location for Rails and React
+
+  const getHeight = (el) => {
+    const styles = window.getComputedStyle(el);
+    const height = el.offsetHeight;
+    const borderTopWidth = parseFloat(styles.borderTopWidth);
+    const borderBottomWidth = parseFloat(styles.borderBottomWidth);
+    const paddingTop = parseFloat(styles.paddingTop);
+    const paddingBottom = parseFloat(styles.paddingBottom);
+
+    return height - borderBottomWidth - borderTopWidth - paddingTop - paddingBottom;
   };
 
-  const onUpdate = useCallback(debounce(() => setPanelCoords(), 20), []); // eslint-disable-line
+  const positionElement = (el) => {
+    let direction = null;
+
+    // Elements
+    const button = el;
+    const panel = el.lastElementChild
+    const win = panel.ownerDocument.defaultView;
+    const docEl = window.document.documentElement;
+
+    panel.style.top = ''; // resets the style
+
+    // Dimensions
+    const buttonDimensions = button.getBoundingClientRect();
+    const panelDimensions = panel.getBoundingClientRect();
+
+    const panelNewLoc = {
+      top: (buttonDimensions.height / 2 ) + panelDimensions.height
+    };
+
+    const viewport = {
+      top: docEl.scrollTop,
+      bottom: window.pageYOffset + docEl.clientHeight,
+    };
+
+    const offset = {
+      top: panelDimensions.top + win.pageYOffset,
+      left: panelDimensions.left + win.pageXOffset,
+      bottom: (panelDimensions.top + win.pageYOffset)
+    };
+
+    const panelHeight = getHeight(panel);
+    const enoughSpaceAbove = viewport.top < ( offset.top + panelHeight);
+    const enoughSpaceBelow = viewport.bottom > (offset.bottom + panelHeight);
+
+    if (!enoughSpaceBelow && enoughSpaceAbove) {
+      direction = 'above';
+    } else if (!enoughSpaceAbove && enoughSpaceBelow) {
+      direction = 'below';
+    }
+
+    if (direction === 'above') {
+      panel.style.top = `-${panelNewLoc.top}px`;
+    }
+  };
+
+  const setPanelCoords = useCallback(() => {
+    const rect = wrapperRef.current;
+
+    positionElement(rect);
+  });
 
   useEffect(() => {
     if (!wrapperRef) {
       return false;
     }
 
-    if (isActive && isPinned) {
+    if (isActive) {
       setPanelCoords();
       window.addEventListener('scroll', onUpdate);
       window.addEventListener('resize', onUpdate);
-    } else {
-      window.removeEventListener('scroll', onUpdate);
-      window.removeEventListener('resize', onUpdate);
     }
 
     return () => {
       window.removeEventListener('scroll', onUpdate);
       window.removeEventListener('resize', onUpdate);
     };
-  }, [wrapperRef, isActive, isPinned, onUpdate]);
+  }, [wrapperRef, isActive, onUpdate, setPanelCoords]);
 
   useEffect(() => {
     if (panelStateToken) {
@@ -160,7 +205,6 @@ export const Dropdown = ({
           modifier={panelModifier}
           onClickScreen={onClickScreen}
           onExit={onExit}
-          coords={coords}
         >
           {children}
         </DropdownPanel>
