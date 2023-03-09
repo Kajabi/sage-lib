@@ -1,16 +1,93 @@
 <!-- Default -->
-<%= sage_component SagePanelStack, {} do %>
+<%= sage_component SagePanelStack, { spacing: "form" } do %>
+
+  <h3 class="t-sage-heading-6">Default:</h3>
+
   <%= sage_component SageCheckbox, {
     id:"c1",
-    label_text: "Checkbox",
-    checked: false,
-    disabled: false,
-    has_error: false,
+    label_text: "Label text",
+  } %>
+
+  <%= sage_component SageCheckbox, {
+    id:"c2",
+    label_text: "Partial",
     partial_selection: true
   } %>
 
   <%= sage_component SageCheckbox, {
-    id:"c1b",
+    id:"c3",
+    label_text: "Checked",
+    checked: true,
+  } %>
+
+  <%= sage_component SageCheckbox, {
+    id:"c4",
+    label_text: "Checkbox w/ Message",
+    message: 'This is where a "hint" message would appear.',
+  } %>
+
+  <h3 class="t-sage-heading-6">Disabled:</h3>
+
+  <%= sage_component SageCheckbox, {
+    id:"c5",
+    label_text: "Label text",
+    disabled: true,
+  } %>
+
+  <%= sage_component SageCheckbox, {
+    id:"c6",
+    label_text: "Partial",
+    partial_selection: true,
+    disabled: true,
+  } %>
+
+  <%= sage_component SageCheckbox, {
+    id:"c7",
+    label_text: "Checked",
+    checked: true,
+    disabled: true,
+  } %>
+
+  <%= sage_component SageCheckbox, {
+    id:"c8",
+    label_text: "Checkbox w/ Message",
+    message: 'This is where a "hint" message would appear.',
+    disabled: true,
+  } %>
+
+  <h3 class="t-sage-heading-6">Error:</h3>
+
+  <%= sage_component SageCheckbox, {
+    id:"c9",
+    label_text: "Label text",
+    has_error: true,
+  } %>
+
+  <%= sage_component SageCheckbox, {
+    id:"c10",
+    label_text: "Partial",
+    partial_selection: true,
+    has_error: true,
+  } %>
+
+  <%= sage_component SageCheckbox, {
+    id:"c11",
+    label_text: "Checked",
+    checked: true,
+    has_error: true,
+  } %>
+
+  <%= sage_component SageCheckbox, {
+    id:"c12",
+    label_text: "Checkbox w/ Message",
+    message: 'This is where a "hint" message would appear.',
+    has_error: true,
+  } %>
+
+  <h3 class="t-sage-heading-6">Custom content:</h3>
+
+  <%= sage_component SageCheckbox, {
+    id:"c13",
     label_text: "Checkbox",
     checked: false,
     disabled: false,
@@ -21,58 +98,4 @@
       <p>Paragraph for testing custom content.</p>
     <% end %>
   <% end %>
-
-  <%= sage_component SageCheckbox, {
-    id:"c1c",
-    label_text: "Checkbox",
-    checked: false,
-    disabled: false,
-    has_error: false,
-    partial_selection: true
-  } %>
-
-  <!-- Checked -->
-  <%= sage_component SageCheckbox, {
-    id: "c2",
-    label_text: "Checked",
-    checked: true,
-    disabled: false,
-    has_error: false
-  } %>
-
-  <!-- Disabled -->
-  <%= sage_component SageCheckbox, {
-    id: "c3",
-    label_text: "Disabled",
-    checked: false,
-    disabled: true,
-    has_error: false
-  } %>
-
-  <!-- Checked and disabled -->
-  <%= sage_component SageCheckbox, {
-    id: "c4",
-    label_text: "Checked and disabled",
-    checked: true,
-    disabled: true,
-    has_error: false
-  } %>
-
-  <!-- Error -->
-  <%= sage_component SageCheckbox, {
-    id: "c5",
-    label_text: "Error",
-    checked: false,
-    disabled: false,
-    has_error: true
-  } %>
-
-  <!-- Checked & Error -->
-  <%= sage_component SageCheckbox, {
-    id: "c6",
-    label_text: "Checked & Error",
-    checked: true,
-    disabled: false,
-    has_error: true
-  } %>
 <% end %>
