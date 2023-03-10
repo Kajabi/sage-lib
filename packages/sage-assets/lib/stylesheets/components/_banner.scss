@@ -117,6 +117,11 @@ $-banner-el-icon: "before";
 .sage-banner__close,
 .sage-banner__link {
   &.sage-btn--subtle {
+
+    &:not(.sage-banner__close) {
+      text-decoration: underline;
+    }
+
     @include sage-focus-outline--update-color(map-get(map-get($-banner-colors, default), text));
 
     &:hover {
