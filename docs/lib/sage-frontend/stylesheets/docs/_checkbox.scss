@@ -1,0 +1,19 @@
+/* ==================================================
+  ** _checkbox.scss
+
+  For Sage documentation use
+================================================== */
+
+.sage-checkbox {
+  &.sage-panel-controls__bulk-actions-checkbox {
+    .docs-panel & {
+      cursor: pointer;
+    }
+  }
+}
+
+.sage-checkbox__label {
+  .docs-panel .sage-panel-controls__bulk-actions--checked & {
+    pointer-events: none;
+  }
+}

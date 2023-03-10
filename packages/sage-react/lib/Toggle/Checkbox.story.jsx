@@ -27,7 +27,8 @@ export const Disabled = Template.bind({});
 Disabled.args = {
   id: 'checkbox-disabled',
   label: 'Remember Me',
-  disabled: true
+  disabled: true,
+  message: 'Save my login details for next time'
 };
 
 export const DefaultWithMessage = Template.bind({});

@@ -78,6 +78,12 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
     }
   }
 
+  .sage-panel-controls__bulk-actions--checked & {
+    &:last-child {
+      margin-left: rem(-1px); /* offset border overlap of multiple buttons */
+    }
+  }
+
   &.sage-dropdown--contained,
   .sage-panel-controls__tabs-dropdown > &,
   .sage-panel-controls__toolbar > &,
@@ -377,10 +383,6 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
 
 .sage-dropdown__trigger--custom-width {
   width: var(--sage-dropdown-trigger-width, auto);
-}
-
-.sage-dropdown__trigger--select {
-  border-radius: sage-border(radius-medium);
 }
 
 .sage-btn--icon-right-caret-down::before {

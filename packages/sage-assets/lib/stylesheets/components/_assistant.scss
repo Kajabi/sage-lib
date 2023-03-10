@@ -25,6 +25,7 @@ $-assistant-search-placeholder-transition: color 0.15s ease-in-out, opacity 0.15
 
 .sage-assistant__branding {
   height: $-assistant-branding-height;
+  width: auto;
 
   @media (max-width: sage-breakpoint(sm-max)) {
     @include visually-hidden;
