@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.11.9](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.11.8...@kajabi/sage@5.11.9) (2023-03-10)
+
+
+### Bug Fixes
+
+* **button group:** removed underline from links contained in previews ([8be0632](https://github.com/Kajabi/sage-lib/commit/8be0632ecdb72995ea0c4bbbaf4272902f3e47ce))
+
+
+
+
+
 ## [5.11.8](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.11.7...@kajabi/sage@5.11.8) (2023-03-06)
 
 

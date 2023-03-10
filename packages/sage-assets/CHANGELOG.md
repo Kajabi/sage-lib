@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.8.6](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.8.5...@kajabi/sage-assets@1.8.6) (2023-03-10)
+
+
+### Bug Fixes
+
+* **assistant:** add width to branding ([8b36888](https://github.com/Kajabi/sage-lib/commit/8b36888c425c4c0d8f1a3d566624a01d1e50fa41))
+* **banner:** add underline to link ([ad2e383](https://github.com/Kajabi/sage-lib/commit/ad2e383817c873ccb7702cd67a3c4ea0fcfdd4fb))
+* **checkbox:** margin value update for labels ([e79b747](https://github.com/Kajabi/sage-lib/commit/e79b74716ac1c2eed2ec2a6126e722e1b9565ba9))
+* **checkbox:** update message color when disabled ([b0504fb](https://github.com/Kajabi/sage-lib/commit/b0504fbf3f0dce7dd6475283333b1a5a0422b85a))
+* **help link:** refactor styling to remove set sizing ([307403a](https://github.com/Kajabi/sage-lib/commit/307403a91eb04f82889ee4c872730dcbbb9119c6))
+* **link:** update focus outline for help icon link ([3988a5a](https://github.com/Kajabi/sage-lib/commit/3988a5a7f650753f6f3f7c34f0627e47635a984d))
+* **panel controls:** padding adjustments ([205dded](https://github.com/Kajabi/sage-lib/commit/205dded81aba78caef79cc431ecfd88aa8597768))
+* **panel controls:** style adjustments ([5882ade](https://github.com/Kajabi/sage-lib/commit/5882ade8c890b5b3af93606fdef07f80d182b154))
+
+
+
+
+
 ## [1.8.5](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.8.4...@kajabi/sage-assets@1.8.5) (2023-03-06)
 
 

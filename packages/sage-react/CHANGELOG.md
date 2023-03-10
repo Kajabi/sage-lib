@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.10.7](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.10.6...@kajabi/sage-react@1.10.7) (2023-03-10)
+
+
+### Bug Fixes
+
+* **button group:**  hello linter my old friend ([5dc091f](https://github.com/Kajabi/sage-lib/commit/5dc091f6b017314b00c974bf3e77430b19ff8043))
+* **button group:** added example with link to ButtonGroup story ([cea44a3](https://github.com/Kajabi/sage-lib/commit/cea44a36ac2ed5780cc887476e885775f8cfd6d2))
+* **checkbox:** add message to disabled example ([73ec0d0](https://github.com/Kajabi/sage-lib/commit/73ec0d0d41635be503e7632120d1cc8913d7ba94))
+
+
+
+
+
 ## [1.10.6](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.10.5...@kajabi/sage-react@1.10.6) (2023-03-06)
 
 **Note:** Version bump only for package @kajabi/sage-react
