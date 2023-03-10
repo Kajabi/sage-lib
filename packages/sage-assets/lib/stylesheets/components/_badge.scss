@@ -8,7 +8,7 @@
 $-badge-min-height: rem(20px);
 $-badge-interactive-icon-size: rem(24px);
 $-badge-interactive-icon-size-decor: rem(28px);
-$-badge-padding: 0 rem(10px) 0 sage-spacing(xs);
+$-badge-padding: sage-spacing(3xs) rem(10px) sage-spacing(3xs) sage-spacing(xs);
 $-badge-padding-lg: sage-spacing(2xs) rem(12px);
 $-badge-border-radius: sage-border(radius-x-large);
 $-badge-inset-border: 0 0 0 1px inset;
