@@ -91,7 +91,7 @@ export const Dropdown = ({
 
     // Elements
     const button = el;
-    const panel = el.lastElementChild
+    const panel = el.lastElementChild;
     const win = panel.ownerDocument.defaultView;
     const docEl = window.document.documentElement;
 
@@ -102,7 +102,7 @@ export const Dropdown = ({
     const panelDimensions = panel.getBoundingClientRect();
 
     const panelNewLoc = {
-      top: (buttonDimensions.height / 2 ) + panelDimensions.height
+      top: (buttonDimensions.height / 2) + panelDimensions.height
     };
 
     const viewport = {
@@ -117,7 +117,7 @@ export const Dropdown = ({
     };
 
     const panelHeight = getHeight(panel);
-    const enoughSpaceAbove = viewport.top < ( offset.top + panelHeight);
+    const enoughSpaceAbove = viewport.top < (offset.top + panelHeight);
     const enoughSpaceBelow = viewport.bottom > (offset.bottom + panelHeight);
 
     if (!enoughSpaceBelow && enoughSpaceAbove) {
