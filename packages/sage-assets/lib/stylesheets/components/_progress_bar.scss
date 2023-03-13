@@ -46,11 +46,14 @@ $-progress-bar-height: sage-spacing(xs);
   height: 100%;
   background-color: var(--progress-bar-value-color, sage-color(sage, 300));
   border-radius: sage-border(radius-small);
-  animation: 3s sage-progress-bar--slide ease;
 
   .sage-modal__header & {
     border-radius: 0;
   }
+}
+
+.sage-progress-bar__animate {
+  animation: 3s sage-progress-bar--slide ease;
 }
 
 .sage-progress-bar__element {

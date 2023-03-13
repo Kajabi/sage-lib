@@ -6,6 +6,7 @@ import { SageTokens } from '../configs';
 import { PROGRESSBAR_TOOLTIP_POSITIONS } from './configs';
 
 export const ProgressBar = ({
+  animate,
   backgroundColor,
   className,
   color,
@@ -45,7 +46,7 @@ export const ProgressBar = ({
           {displayText}
         </progress>
         <div
-          className="sage-progress-bar__value"
+          className={`sage-progress-bar__value ${animate && 'sage-progress-bar__animate'}`}
           style={{
             width: `${percent}%`,
             '--progress-bar-value-color': color,
@@ -77,6 +78,7 @@ ProgressBar.COLORS = SageTokens.COLOR_PALETTE;
 ProgressBar.TOOLTIP_POSITIONS = PROGRESSBAR_TOOLTIP_POSITIONS;
 
 ProgressBar.defaultProps = {
+  animate: true,
   backgroundColor: null,
   className: null,
   color: ProgressBar.COLORS.PRIMARY_300,
@@ -88,6 +90,7 @@ ProgressBar.defaultProps = {
 };
 
 ProgressBar.propTypes = {
+  animate: PropTypes.bool,
   backgroundColor: PropTypes.string,
   className: PropTypes.string,
   color: PropTypes.oneOf(Object.values(ProgressBar.COLORS)),
