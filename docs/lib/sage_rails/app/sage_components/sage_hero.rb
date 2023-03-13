@@ -14,6 +14,6 @@ class SageHero < SageComponent
   })
 
   def sections
-    %w(hero_actions)
+    %w(hero_footer_actions)
   end
 end

@@ -39,8 +39,8 @@
       <%= component.button.html_safe %>
     <% end %>
 
-    <% if content_for? :sage_hero_actions %>
-      <%= content_for :sage_hero_actions %>
+    <% if content_for? :sage_hero_footer_actions %>
+      <%= content_for :sage_hero_footer_actions %>
     <% end %>
   </div>
   <% if component.cta_attributes.present? %>
