@@ -39,7 +39,11 @@ export const Dropdown = ({
   triggerWidth,
 }) => {
   const [isActive, setActive] = useState(false);
+  const [coords, updateCoords] = useState(null);
   const wrapperRef = useRef(null);
+
+  const topBoxOffset = 2;
+  const inlineBoxOffset = -6;
 
   const onClickTrigger = () => {
     if (!isActive && clickTriggerHandler) {
@@ -49,6 +53,20 @@ export const Dropdown = ({
     if (!disabled) {
       setActive(!isActive);
     }
+  };
+
+  const setPanelCoords = () => {
+    const rect = wrapperRef.current.getBoundingClientRect();
+
+    updateCoords({
+      top: rect.bottom + topBoxOffset,
+      left: align !== 'right'
+        ? rect.left + inlineBoxOffset
+        : 'intitial',
+      right: align === 'right'
+        ? window.innerWidth - rect.right + inlineBoxOffset
+        : 'intitial',
+    });
   };
 
   const onUpdate = useCallback(debounce(() => setPanelCoords(), 20), []); // eslint-disable-line
@@ -73,7 +91,7 @@ export const Dropdown = ({
 
     // Elements
     const button = el;
-    const panel = el.lastElementChild;
+    const panel = el.lastElementChild
     const win = panel.ownerDocument.defaultView;
     const docEl = window.document.documentElement;
 
@@ -84,7 +102,7 @@ export const Dropdown = ({
     const panelDimensions = panel.getBoundingClientRect();
 
     const panelNewLoc = {
-      top: (buttonDimensions.height / 2) + panelDimensions.height
+      top: (buttonDimensions.height / 2 ) + panelDimensions.height
     };
 
     const viewport = {
@@ -99,7 +117,7 @@ export const Dropdown = ({
     };
 
     const panelHeight = getHeight(panel);
-    const enoughSpaceAbove = viewport.top < (offset.top + panelHeight);
+    const enoughSpaceAbove = viewport.top < ( offset.top + panelHeight);
     const enoughSpaceBelow = viewport.bottom > (offset.bottom + panelHeight);
 
     if (!enoughSpaceBelow && enoughSpaceAbove) {
@@ -113,28 +131,26 @@ export const Dropdown = ({
     }
   };
 
-  const setPanelCoords = useCallback(() => {
-    const rect = wrapperRef.current;
-
-    positionElement(rect);
-  });
-
   useEffect(() => {
     if (!wrapperRef) {
       return false;
     }
 
-    if (isActive) {
+    if (isActive && isPinned) {
       setPanelCoords();
       window.addEventListener('scroll', onUpdate);
       window.addEventListener('resize', onUpdate);
+    } else {
+      positionElement(wrapperRef.current);
+      window.removeEventListener('scroll', onUpdate);
+      window.removeEventListener('resize', onUpdate);
     }
 
     return () => {
       window.removeEventListener('scroll', onUpdate);
       window.removeEventListener('resize', onUpdate);
     };
-  }, [wrapperRef, isActive, onUpdate, setPanelCoords]);
+  }, [wrapperRef, isActive, isPinned, onUpdate, positionElement]);
 
   useEffect(() => {
     if (panelStateToken) {
@@ -205,6 +221,7 @@ export const Dropdown = ({
           modifier={panelModifier}
           onClickScreen={onClickScreen}
           onExit={onExit}
+          coords={coords}
         >
           {children}
         </DropdownPanel>
