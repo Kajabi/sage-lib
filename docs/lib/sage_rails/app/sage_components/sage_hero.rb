@@ -4,6 +4,7 @@ class SageHero < SageComponent
     borderless: [:optional, NilClass, TrueClass],
     button: [:optional, NilClass, String],
     cta_attributes: [:optional, NilClass, Hash],
+    contained: [:optional, NilClass, TrueClass],
     custom_background_color: [:optional, String],
     description: [:optional, NilClass, String],
     image: [:optional, NilClass, String],
@@ -11,4 +12,8 @@ class SageHero < SageComponent
     title: [:optional, NilClass, String],
     title_tag: [:optional, NilClass, String],
   })
+
+  def sections
+    %w(hero_actions)
+  end
 end
