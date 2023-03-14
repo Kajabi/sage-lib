@@ -1,4 +1,5 @@
 <%
+animate = component.animate.nil? ? true : component.animate
 content = component.label ? "#{component.label}: " : ""
 content << "#{component.percent}%&nbsp;progress"
 color = component.color || SageTokens::COLOR_PALETTE[:SAGE_300]
@@ -30,7 +31,7 @@ color = component.color || SageTokens::COLOR_PALETTE[:SAGE_300]
     >
       <%= content %>
     </progress>
-    <div class="sage-progress-bar__value" style="--progress-bar-value-color: <%= color %>; width: <%= component.percent %>%;"></div>
+    <div class="sage-progress-bar__value <%= "sage-progress-bar__animate" if animate %>" style="--progress-bar-value-color: <%= color %>; width: <%= component.percent %>%;"></div>
   </div>
   <% if component.display_percent %>
     <span class="sage-progress-bar__percent"><%= component.percent %>%</span>
