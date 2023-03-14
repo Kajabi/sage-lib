@@ -2,8 +2,6 @@ import React from 'react';
 import { selectArgs } from '../story-support/helpers';
 import { Hero } from './Hero';
 import { Button } from '../Button';
-import { Card } from '../Card';
-import { SageClassnames, SageTokens } from '../configs';
 
 export default {
   title: 'Sage/Hero',
@@ -49,4 +47,3 @@ export default {
 const Template = (args) => <Hero {...args} />;
 
 export const Default = Template.bind({});
-

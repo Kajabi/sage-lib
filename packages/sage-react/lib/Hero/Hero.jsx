@@ -21,7 +21,7 @@ export const Hero = ({
     'sage-hero',
     {
       [`sage-hero--${heroSize}`]: heroSize,
-      [`sage-hero--contained`]: contained,
+      'sage-hero--contained': contained,
     },
   );
 
@@ -39,10 +39,10 @@ export const Hero = ({
       {...rest}
     >
       {title && (
-          <TitleTag className="sage-hero__title">
-            {title}
-          </TitleTag>
-        )}
+        <TitleTag className="sage-hero__title">
+          {title}
+        </TitleTag>
+      )}
       <div className="sage-hero__body">
         {description && (
           <div className={`${SageClassnames.SPACERS.MD_BOTTOM} sage-hero__description`}>
