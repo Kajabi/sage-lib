@@ -9,7 +9,6 @@ export const Hero = ({
   children,
   ctaAttributes,
   description,
-  branding,
   contained,
   footerActions,
   image,
@@ -75,7 +74,6 @@ export const Hero = ({
 Hero.Sizes = HERO_SIZES;
 
 Hero.defaultProps = {
-  branding: null,
   ctaAttributes: null,
   children: null,
   contained: null,
@@ -91,7 +89,6 @@ Hero.defaultProps = {
 };
 
 Hero.propTypes = {
-  branding: PropTypes.node,
   ctaAttributes: PropTypes.node,
   children: PropTypes.node,
   contained: PropTypes.bool,
