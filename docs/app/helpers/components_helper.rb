@@ -386,7 +386,7 @@ module ComponentsHelper
       },
       {
         title: "hero",
-        description: "Pending",
+        description: "A Hero can be used to call call attention to new features or content. The hero is flexible in size and can contain text, illustrations, full bleed images, and a full bleed video thumbnail.",
         scss: "done",
         docs: "todo",
         rails: "done",

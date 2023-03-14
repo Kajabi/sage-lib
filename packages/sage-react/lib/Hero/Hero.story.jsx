@@ -10,7 +10,7 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: '' // TODO: Add component description
+        component: 'A Hero can be used to call call attention to new features or content. The hero is flexible in size and can contain text, illustrations, full bleed images, and a full bleed video thumbnail.'
       },
     },
   },
