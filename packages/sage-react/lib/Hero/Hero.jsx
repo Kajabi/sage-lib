@@ -2,13 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { Button } from '../Button';
-import { HERO_SIZES } from './configs';
+import { HERO_SIZES, } from './configs';
+import { SageClassnames } from '../configs';
 
 export const Hero = ({
   children,
   ctaAttributes,
   description,
   branding,
+  contained,
   footerActions,
   image,
   heroSize,
@@ -20,6 +22,7 @@ export const Hero = ({
     'sage-hero',
     {
       [`sage-hero--${heroSize}`]: heroSize,
+      [`sage-hero--contained`]: contained,
     },
   );
 
@@ -36,33 +39,24 @@ export const Hero = ({
       className={className}
       {...rest}
     >
-      <div className="sage-hero__container">
-        <div className="sage-hero__header">
-          {branding && (
-            <div className="sage-hero__branding">
-              {branding}
-            </div>
-          )}
-          {title && (
-            <TitleTag className="sage-hero__title">
-              {title}
-            </TitleTag>
-          )}
-        </div>
-        <div className="sage-hero__body">
-          {description && (
-            <div className="sage-hero__description">
-              {description}
-            </div>
-          )}
-          {footerActions && (
-            <div className="sage-hero__footer-actions">
-              <Button.Group gap="sm">
-                {footerActions}
-              </Button.Group>
-            </div>
-          )}
-        </div>
+      {title && (
+          <TitleTag className="sage-hero__title">
+            {title}
+          </TitleTag>
+        )}
+      <div className="sage-hero__body">
+        {description && (
+          <div className={`${SageClassnames.SPACERS.MD_BOTTOM} sage-hero__description`}>
+            {description}
+          </div>
+        )}
+        {footerActions && (
+          <div className="sage-hero__footer-actions">
+            <Button.Group gap="sm">
+              {footerActions}
+            </Button.Group>
+          </div>
+        )}
       </div>
       {ctaAttributes ? (
         <a className="sage-hero__artwork sage-hero__artwork--cta" {...ctaAttributes}>
@@ -84,6 +78,7 @@ Hero.defaultProps = {
   branding: null,
   ctaAttributes: null,
   children: null,
+  contained: null,
   description: null,
   footerActions: null,
   image: {
@@ -99,6 +94,7 @@ Hero.propTypes = {
   branding: PropTypes.node,
   ctaAttributes: PropTypes.node,
   children: PropTypes.node,
+  contained: PropTypes.bool,
   description: PropTypes.string,
   footerActions: PropTypes.node,
   image: PropTypes.shape({
