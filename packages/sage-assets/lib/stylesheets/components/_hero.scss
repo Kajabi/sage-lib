@@ -132,7 +132,7 @@ $-hero-play-icon-background-color: sage-color(white);
   .sage-hero--contained & {
     object-fit: unset;
     height: auto;
-    max-height: $-hero-contained-max-height;
+    max-height: rem(235px);
   }
 }
 
