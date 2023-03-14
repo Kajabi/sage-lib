@@ -1,4 +1,5 @@
 <h2 class="t-sage-heading-6">Small</h2>
+
 <%= sage_component SageHero, {
   alt_text: "Well done alt text",
   description: "Get early access to new unreleased features and work before they go live.",
@@ -15,6 +16,7 @@
 <% end %>
 
 <h2 class="t-sage-heading-6">Small Contained</h2>
+
 <%= sage_component SageHero, {
   alt_text: "Well done alt text",
   description: "Get early access to new unreleased features and work before they go live.",
@@ -32,6 +34,7 @@
 <% end %>
 
 <h2 class="t-sage-heading-6">Small w/ CTA</h2>
+
 <%= sage_component SageHero, {
   alt_text: "Well done alt text",
   cta_attributes: {
@@ -52,6 +55,7 @@
 <% end %>
 
 <h2 class="t-sage-heading-6">Small Contained w/ CTA</h2>
+
 <%= sage_component SageHero, {
   alt_text: "Well done alt text",
   cta_attributes: {
@@ -73,6 +77,7 @@
 <% end %>
 
 <h2 class="t-sage-heading-6">Small - Borderless with Custom Background</h2>
+
 <%= sage_component SageHero, {
   alt_text: "Well done alt text",
   borderless: true,
@@ -94,12 +99,8 @@
   <% end %>
 <% end %>
 
-
-
-
-
-
 <h2 class="t-sage-heading-6">Large</h2>
+
 <%= sage_component SageHero, {
   alt_text: "",
   description: "Get early access to new unreleased features and work before they go live.",
@@ -126,8 +127,8 @@
   <% end %>
 <% end %>
 
-
 <h2 class="t-sage-heading-6">Large Contained</h2>
+
 <%= sage_component SageHero, {
   alt_text: "",
   description: "Get early access to new unreleased features and work before they go live.",
@@ -155,9 +156,8 @@
   <% end %>
 <% end %>
 
-
-
 <h2 class="t-sage-heading-6">Large w/ CTA</h2>
+
 <%= sage_component SageHero, {
   alt_text: "",
   cta_attributes: {
@@ -170,7 +170,7 @@
   title_tag: "h3",
   size: "large"
 } do %>
-  <% content_for :sage_hero_footer_actionss do %>
+  <% content_for :sage_hero_footer_actions do %>
     <%= sage_component SageButtonGroup, { gap: :sm } do %>
         <%= sage_component SageButton, {
           value: "Primary",
@@ -189,6 +189,7 @@
 <% end %>
 
 <h2 class="t-sage-heading-6">Large Contained w/ CTA</h2>
+
 <%= sage_component SageHero, {
   alt_text: "",
   cta_attributes: {
@@ -220,21 +221,17 @@
   <% end %>
 <% end %>
 
+<h2 class="t-sage-heading-6">Large Contained - Borderless with Custom Background</h2>
 
-
-<h2 class="t-sage-heading-6">Large - Borderless with Custom Background</h2>
 <%= sage_component SageHero, {
   alt_text: "Well done alt text",
   borderless: true,
-  cta_attributes: {
-    "data-js-modaltrigger": "cool-modal",
-    href: "#",
-  },
   custom_background_color: "#E6F4FE",
   description: "Get early access to new unreleased features and work before they go live.",
-  image: "card-placeholder-hero.jpg",
+  image: "hero-contained-placeholder.png",
   size: "large",
   title: "Be the first to try what Kajabi is building before anyone else",
+  contained: true,
 } do %>
   <% content_for :sage_hero_footer_actions do %>
     <%= sage_component SageButtonGroup, { gap: :sm } do %>
@@ -253,9 +250,6 @@
     <% end %>
   <% end %>
 <% end %>
-
-
-
 
 <%# Video player modal %>
 <%= sage_component SageModal, { id: "cool-modal" } do %>
