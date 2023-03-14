@@ -4,16 +4,13 @@
 /// @group sage
 ////
 
-
 $-hero-artwork-size: rem(56px);
 $-hero-icon-size: rem(24px);
-$-hero-max-height: rem(280px);
-$-hero-contained-max-height: rem(339px);
+$-hero-max-height: rem(300px);
+$-hero-contained-max-height: rem(340px);
 $-hero-margin-y: rem(36px);
 $-hero-mobile-aspect-ratio: calc(100% * 9 / 16);
-$-hero-play-icon-background-color: rgba(sage-color(white, 100), 0.8);
-$-hero-play-icon-background-color-hover: rgba(sage-color(white, 100), 1);
-
+$-hero-play-icon-background-color: sage-color(white);
 
 .sage-hero {
   display: grid;
@@ -32,6 +29,7 @@ $-hero-play-icon-background-color-hover: rgba(sage-color(white, 100), 1);
     grid-template-areas:
       "title artwork"
       "content artwork";
+    max-height: $-hero-max-height;
     padding-left: sage-spacing(md);
   }
 }
@@ -57,6 +55,7 @@ $-hero-play-icon-background-color-hover: rgba(sage-color(white, 100), 1);
 }
 
 .sage-hero--large.sage-hero--contained {
+
   max-height: $-hero-contained-max-height;
 }
 
@@ -111,6 +110,7 @@ $-hero-play-icon-background-color-hover: rgba(sage-color(white, 100), 1);
     height: auto;
     margin: rem(36px);
     padding-top: 0;
+    border-radius: sage-spacing(sm);
   }
 }
 
@@ -123,24 +123,16 @@ $-hero-play-icon-background-color-hover: rgba(sage-color(white, 100), 1);
 }
 
 .sage-hero__artwork-image {
-  object-fit: unset;
   position: relative;
-  top: auto;
-  transform: none;
-  height: 100%;
   width: 100%;
-
-  @media (min-width: sage-breakpoint(md-max)) {
-    height: 100%;
-    object-fit: cover;
-  }
+  height: 100%;
+  max-height: $-hero-max-height;
+  object-fit: cover;
 
   .sage-hero--contained & {
-    position: relative;
-    transform: none;
     object-fit: unset;
-    top: auto;
     height: auto;
+    max-height: $-hero-contained-max-height;
   }
 }
 
@@ -160,7 +152,7 @@ $-hero-play-icon-background-color-hover: rgba(sage-color(white, 100), 1);
       align-items: center;
       width: $-hero-icon-size;
       font-size: $-hero-icon-size;
-      color: sage-color(primary, 200);
+      color: sage-color(charcoal, 500);
     }
 
     &::after {
@@ -173,11 +165,7 @@ $-hero-play-icon-background-color-hover: rgba(sage-color(white, 100), 1);
       height: $-hero-artwork-size;
       border-radius: 50%;
       background-color: $-hero-play-icon-background-color;
-      transition: background-color 0.2s ease;
-    }
-
-    &:hover::after {
-      background-color: $-hero-play-icon-background-color-hover;
+      box-shadow: sage-shadow(lg);
     }
   }
 }
