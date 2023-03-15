@@ -4,7 +4,6 @@
 /// @group sage
 ////
 
-
 $-loader-bar-bg-color: sage-color(grey, 500);
 $-loader-bar-height: rem(6px);
 $-loader-bar-speed: 1.2s;
@@ -15,13 +14,12 @@ $-loader-spinner-speed: 2s;
 $-loader-spinner-path-speed: 1.5s;
 
 .sage-loader {
-  position: relative;
-
   &:not(.visually-hidden) {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-flow: column;
+    position: relative;
   }
 
   // visibility of the loader is toggled by setting data attribute "data-loading" to "true".
@@ -76,7 +74,8 @@ $-loader-spinner-path-speed: 1.5s;
 
   &::after {
     background-color: sage-color(primary, 300);
-    animation: loader-bar $-loader-bar-speed $-loader-bar-speed-delay linear infinite;
+    animation: loader-bar $-loader-bar-speed $-loader-bar-speed-delay linear
+      infinite;
   }
 }
 
@@ -93,7 +92,7 @@ $-loader-spinner-path-speed: 1.5s;
 }
 
 .sage-loader__spinner-path {
-  stroke-dasharray: 150,200;
+  stroke-dasharray: 150, 200;
   stroke-dashoffset: -10;
   stroke-linecap: round;
   stroke: sage-color(primary, 300);
@@ -110,7 +109,7 @@ $-loader-spinner-path-speed: 1.5s;
 }
 
 .sage-loader__success-path {
-  stroke-dasharray: 150,200;
+  stroke-dasharray: 150, 200;
   stroke-linecap: round;
   stroke: sage-color(sage, 300);
 }
@@ -153,15 +152,15 @@ $-loader-spinner-path-speed: 1.5s;
 
 @keyframes dash {
   0% {
-    stroke-dasharray: 1,200;
+    stroke-dasharray: 1, 200;
     stroke-dashoffset: 0;
   }
   50% {
-    stroke-dasharray: 89,200;
+    stroke-dasharray: 89, 200;
     stroke-dashoffset: -35;
   }
   100% {
-    stroke-dasharray: 89,200;
+    stroke-dasharray: 89, 200;
     stroke-dashoffset: -124;
   }
 }
