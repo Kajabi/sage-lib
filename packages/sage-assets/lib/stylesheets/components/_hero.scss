@@ -112,7 +112,7 @@ $-hero-play-icon-background-color: sage-color(white);
   }
 
   .sage-hero--contained & {
-    object-fit: contain;
+    object-fit: scale-down;
   }
 }
 

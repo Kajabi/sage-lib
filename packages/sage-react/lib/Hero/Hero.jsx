@@ -6,8 +6,10 @@ import { HERO_SIZES } from './configs';
 import { SageClassnames } from '../configs';
 
 export const Hero = ({
+  borderless,
   children,
   ctaAttributes,
+  customBackgroundColor,
   description,
   contained,
   footerActions,
@@ -21,7 +23,9 @@ export const Hero = ({
     'sage-hero',
     {
       [`sage-hero--${heroSize}`]: heroSize,
+      'sage-hero--borderless': borderless,
       'sage-hero--contained': contained,
+      'sage-hero--custom-background-color': customBackgroundColor,
     },
   );
 
@@ -36,6 +40,7 @@ export const Hero = ({
   return (
     <article
       className={className}
+      style={{ '--custom-background-color': customBackgroundColor || '' }}
       {...rest}
     >
       {title && (
@@ -74,9 +79,11 @@ export const Hero = ({
 Hero.Sizes = HERO_SIZES;
 
 Hero.defaultProps = {
+  borderless: null,
   ctaAttributes: null,
   children: null,
   contained: null,
+  customeBackgroundColor: null,
   description: null,
   footerActions: null,
   image: {
@@ -89,9 +96,11 @@ Hero.defaultProps = {
 };
 
 Hero.propTypes = {
+  borderless: PropTypes.bool,
   ctaAttributes: PropTypes.node,
   children: PropTypes.node,
   contained: PropTypes.bool,
+  customBackgroundColor: PropTypes.string,
   description: PropTypes.string,
   footerActions: PropTypes.node,
   image: PropTypes.shape({
