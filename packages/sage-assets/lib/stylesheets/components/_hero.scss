@@ -7,6 +7,7 @@
 $-hero-artwork-size: rem(56px);
 $-hero-icon-size: rem(24px);
 $-hero-margin-y: rem(36px);
+$-hero-mobile-aspect-ratio: calc(100% * 9 / 16);
 $-hero-play-icon-background-color: sage-color(white);
 
 .sage-hero {
@@ -74,30 +75,19 @@ $-hero-play-icon-background-color: sage-color(white);
   overflow: hidden;
   outline: none;
   border-top-right-radius: sage-spacing(sm);
-  border-top-left-radius: sage-spacing(sm);
+  border-bottom-right-radius: sage-spacing(sm);
 
-  @media (min-width: sage-breakpoint(lg-max)) {
-    .sage-hero-small {
-      width: rem(400px);
-    }
-
-    .sage-hero--small &,
-    .sage-hero--large & {
-      border-top-right-radius: sage-spacing(sm);
-      border-bottom-right-radius: sage-spacing(sm);
-      border-top-left-radius: 0;
-    }
-
-    .sage-hero--contained.sage-hero--small & {
-      width: rem(328px);
-    }
+  @media (max-width: sage-breakpoint(lg-max)) {
+    height: 0;
+    padding-top: $-hero-mobile-aspect-ratio;
+    border-top-left-radius: sage-spacing(sm);
+    border-bottom-right-radius: 0;
   }
 
   .sage-hero--contained & {
     overflow: unset;
     height: auto;
     margin: $-hero-margin-y;
-    padding-top: 0;
     border-radius: sage-spacing(sm);
   }
 }
@@ -111,14 +101,18 @@ $-hero-play-icon-background-color: sage-color(white);
 }
 
 .sage-hero__artwork-image {
-  position: relative;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+
+  @media (min-width: sage-breakpoint(md-min)) {
+    height: 100%;
+    object-fit: cover;
+  }
 
   .sage-hero--contained & {
-    object-fit: initial;
-    height: auto;
+    object-fit: contain;
   }
 }
 
