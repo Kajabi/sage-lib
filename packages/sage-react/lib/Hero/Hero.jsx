@@ -83,7 +83,7 @@ Hero.defaultProps = {
   ctaAttributes: null,
   children: null,
   contained: null,
-  customeBackgroundColor: null,
+  customBackgroundColor: null,
   description: null,
   footerActions: null,
   image: {
