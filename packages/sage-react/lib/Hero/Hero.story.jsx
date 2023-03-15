@@ -24,7 +24,7 @@ export default {
   args: {
     description: 'Get early access to new unreleased features and work along side our team by beta testing features before they go live.',
     image: {
-      src: '//source.unsplash.com/random/800X400'
+      src: '//source.unsplash.com/random'
     },
     footerActions: (
       <>
