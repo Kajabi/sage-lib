@@ -6,10 +6,7 @@
 
 $-hero-artwork-size: rem(56px);
 $-hero-icon-size: rem(24px);
-$-hero-max-height: rem(300px);
-$-hero-contained-max-height: rem(340px);
 $-hero-margin-y: rem(36px);
-$-hero-mobile-aspect-ratio: calc(100% * 9 / 16);
 $-hero-play-icon-background-color: sage-color(white);
 
 .sage-hero {
@@ -29,7 +26,6 @@ $-hero-play-icon-background-color: sage-color(white);
     grid-template-areas:
       "title artwork"
       "content artwork";
-    max-height: $-hero-max-height;
     padding-left: sage-spacing(md);
   }
 }
@@ -48,15 +44,6 @@ $-hero-play-icon-background-color: sage-color(white);
 
 .sage-hero--large {
   max-width: map-get($sage-containers, "xl");
-
-  @media (min-width: sage-breakpoint(xxl-min)) {
-    max-height: $-hero-max-height;
-  }
-}
-
-.sage-hero--large.sage-hero--contained {
-
-  max-height: $-hero-contained-max-height;
 }
 
 .sage-hero__title {
@@ -107,8 +94,9 @@ $-hero-play-icon-background-color: sage-color(white);
   }
 
   .sage-hero--contained & {
+    overflow: unset;
     height: auto;
-    margin: rem(36px);
+    margin: $-hero-margin-y;
     padding-top: 0;
     border-radius: sage-spacing(sm);
   }
@@ -126,13 +114,11 @@ $-hero-play-icon-background-color: sage-color(white);
   position: relative;
   width: 100%;
   height: 100%;
-  max-height: $-hero-max-height;
   object-fit: cover;
 
   .sage-hero--contained & {
-    object-fit: unset;
+    object-fit: initial;
     height: auto;
-    max-height: rem(235px);
   }
 }
 
