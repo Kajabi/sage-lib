@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { Button } from '../Button';
-import { HERO_SIZES, } from './configs';
+import { HERO_SIZES } from './configs';
 import { SageClassnames } from '../configs';
 
 export const Hero = ({
