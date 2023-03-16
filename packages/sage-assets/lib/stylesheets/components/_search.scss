@@ -140,6 +140,7 @@ $-search-icon: "::before";
   padding: rem(6px) sage-spacing(sm) rem(6px) sage-spacing(lg);
   border: 0;
   border-radius: 0;
+  box-shadow: none;
 
   @extend %t-sage-body;
 
@@ -151,6 +152,18 @@ $-search-icon: "::before";
     outline: 0;
   }
 
+  &:hover:not(:disabled) {
+    background-color: sage-color(grey, 100);
+    border-bottom-color: sage-color(charcoal, 100);
+    box-shadow: none;
+  }
+
+  .sage-search--contained & {
+    &:hover:not(:disabled) {
+      background-color: sage-color(white);
+    }
+  }
+
   .sage-panel-controls__toolbar &,
   .sage-toolbar__group &,
   .sage-search--contained & {
@@ -158,7 +171,6 @@ $-search-icon: "::before";
     padding-bottom: sage-spacing(xs);
     border-radius: inherit;
   }
-
 
   .sage-panel-controls__toolbar &,
   .sage-toolbar__group &,
