@@ -41,9 +41,11 @@ export const BannerContent = ({
         <Button
           className="sage-banner__link"
           subtle={true}
-          href="#"
+          href={link.href}
+          rel={link.rel}
+          target={link.target}
         >
-          banner link
+          {link.name}
         </Button>
       )}
 
