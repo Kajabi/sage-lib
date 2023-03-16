@@ -86,7 +86,12 @@ BannerContent.propTypes = {
   className: PropTypes.string,
   dismissable: PropTypes.bool,
   id: PropTypes.string,
-  link: PropTypes.string,
+  link: PropTypes.shape({
+    href: PropTypes.string,
+    name: PropTypes.string,
+    rel: PropTypes.string,
+    target: PropTypes.string
+  }),
   text: PropTypes.string,
   type: PropTypes.oneOf(Object.values(BannerContent.TYPES)),
 };
