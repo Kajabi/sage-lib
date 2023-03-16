@@ -18,7 +18,7 @@ $-search-icon: "::before";
   background-color: sage-color(white);
 
   &#{$-search-icon} {
-    @include sage-icon-base(search);
+    @include sage-icon-base(search-small);
 
     z-index: sage-z-index(default, 2);
     margin-left: sage-spacing(xs);
@@ -34,6 +34,10 @@ $-search-icon: "::before";
     &:hover {
       background-color: sage-color(grey, 100);
       border-bottom-color: sage-color(charcoal, 100);
+    }
+
+    &:focus-within {
+      border-color: sage-color(grey, 100);
     }
   }
 
@@ -156,6 +160,10 @@ $-search-icon: "::before";
     background-color: sage-color(grey, 100);
     border-bottom-color: sage-color(charcoal, 100);
     box-shadow: none;
+  }
+
+  &:hover:not(:disabled):focus {
+    border: 0;
   }
 
   .sage-search--contained & {
