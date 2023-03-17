@@ -41,9 +41,11 @@ export const BannerContent = ({
         <Button
           className="sage-banner__link"
           subtle={true}
-          href="#"
+          href={link.href || '#'}
+          rel={link.rel}
+          target={link.target}
         >
-          banner link
+          {link.name}
         </Button>
       )}
 
@@ -84,7 +86,12 @@ BannerContent.propTypes = {
   className: PropTypes.string,
   dismissable: PropTypes.bool,
   id: PropTypes.string,
-  link: PropTypes.string,
+  link: PropTypes.shape({
+    href: PropTypes.string,
+    name: PropTypes.string,
+    rel: PropTypes.string,
+    target: PropTypes.string
+  }),
   text: PropTypes.string,
   type: PropTypes.oneOf(Object.values(BannerContent.TYPES)),
 };
