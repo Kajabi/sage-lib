@@ -19,6 +19,26 @@ describe('Sage BannerContent', () => {
     expect(banner).toHaveTextContent('Banner Text');
   });
 
+  it('renders without a Link when no link prop is passed', () => {
+    render(<BannerContent />);
+
+    const bannerLink = document.querySelector('.sage-banner__link');
+    expect(bannerLink).toBeFalsy();
+  });
+
+  it('renders a Link when only one sub-prop is passed', () => {
+    const props = {
+      link: {
+        name: 'Banner Link',
+      },
+    };
+
+    render(<BannerContent {...props} />);
+
+    const bannerLink = document.querySelector('.sage-banner__link');
+    expect(bannerLink).toBeTruthy();
+  });
+
   it('renders a Link with all sub-props present', () => {
     const props = {
       link: {
