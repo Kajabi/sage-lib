@@ -22,7 +22,7 @@ describe('Sage BannerContent', () => {
   it('renders without a Link when no link prop is passed', () => {
     render(<BannerContent />);
 
-    const bannerLink = document.querySelector('.sage-banner__link');
+    const bannerLink = document.querySelector('a.sage-banner__link');
     expect(bannerLink).toBeFalsy();
   });
 
@@ -30,12 +30,13 @@ describe('Sage BannerContent', () => {
     const props = {
       link: {
         name: 'Banner Link',
+        href: '#'
       },
     };
 
     render(<BannerContent {...props} />);
 
-    const bannerLink = document.querySelector('.sage-banner__link');
+    const bannerLink = document.querySelector('a.sage-banner__link');
     expect(bannerLink).toBeTruthy();
   });
 
@@ -51,7 +52,7 @@ describe('Sage BannerContent', () => {
 
     render(<BannerContent {...props} />);
 
-    const bannerLink = document.querySelector('.sage-banner__link');
+    const bannerLink = document.querySelector('a.sage-banner__link');
     expect(bannerLink).toBeTruthy();
     expect(bannerLink).toHaveTextContent('Banner Link');
     expect(bannerLink).toHaveAttribute('href', '#');
@@ -70,7 +71,7 @@ describe('Sage BannerContent', () => {
 
     render(<BannerContent {...props} />);
 
-    const bannerLink = document.querySelector('.sage-banner__link');
+    const bannerLink = document.querySelector('a.sage-banner__link');
     expect(bannerLink).toBeTruthy();
     expect(bannerLink).toHaveTextContent('Banner Link');
     expect(bannerLink).toHaveAttribute('href', '#');
@@ -85,7 +86,7 @@ describe('Sage BannerContent', () => {
 
     render(<BannerContent {...props} />);
 
-    const dismissButton = document.querySelector('.sage-banner__close');
+    const dismissButton = document.querySelector('button.sage-banner__close');
     expect(dismissButton).toBeTruthy();
     expect(dismissButton).toHaveTextContent('Dismiss');
   });
