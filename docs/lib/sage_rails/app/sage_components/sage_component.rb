@@ -33,7 +33,8 @@ class SageComponent
   def render
     context.render(
       partial: "sage_components/#{template_path}",
-      locals: { component: self }
+      locals: { component: self },
+      formats: :html
     ).tap { cleanup_section_vars }
   end
 

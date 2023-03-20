@@ -22,7 +22,11 @@ export default {
   args: {
     active: true,
     dismissable: true,
-    link: '#',
+    link: {
+      name: 'test',
+      href: '#',
+      rel: 'no-opener'
+    },
     text: 'Alert description text',
     type: Banner.TYPES.DEFAULT,
   },

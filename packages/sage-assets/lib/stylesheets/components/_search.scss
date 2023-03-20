@@ -18,11 +18,11 @@ $-search-icon: "::before";
   background-color: sage-color(white);
 
   &#{$-search-icon} {
-    @include sage-icon-base(search);
+    @include sage-icon-base(search-small);
 
     z-index: sage-z-index(default, 2);
-    margin-left: sage-spacing(xs);
-    margin-right: -1 * sage-spacing();
+    margin-left: sage-spacing(sm);
+    margin-right: -1 * sage-spacing(lg);
     color: sage-color(charcoal, 200);
     transition: map-get($sage-transitions, default);
     transition-property: color;
@@ -34,6 +34,10 @@ $-search-icon: "::before";
     &:hover {
       background-color: sage-color(grey, 100);
       border-bottom-color: sage-color(charcoal, 100);
+    }
+
+    &:focus-within {
+      border-color: sage-color(grey, 100);
     }
   }
 
@@ -137,9 +141,10 @@ $-search-icon: "::before";
   position: relative;
   z-index: 1;
   flex: 1;
-  padding: rem(6px) sage-spacing(sm) rem(6px) sage-spacing(lg);
+  padding: rem(6px) sage-spacing(sm) rem(6px) rem(40px);
   border: 0;
   border-radius: 0;
+  box-shadow: none;
 
   @extend %t-sage-body;
 
@@ -151,6 +156,22 @@ $-search-icon: "::before";
     outline: 0;
   }
 
+  &:hover:not(:disabled) {
+    background-color: sage-color(grey, 100);
+    border-bottom-color: sage-color(charcoal, 100);
+    box-shadow: none;
+  }
+
+  &:hover:not(:disabled):focus {
+    border: 0;
+  }
+
+  .sage-search--contained & {
+    &:hover:not(:disabled) {
+      background-color: sage-color(white);
+    }
+  }
+
   .sage-panel-controls__toolbar &,
   .sage-toolbar__group &,
   .sage-search--contained & {
@@ -158,7 +179,6 @@ $-search-icon: "::before";
     padding-bottom: sage-spacing(xs);
     border-radius: inherit;
   }
-
 
   .sage-panel-controls__toolbar &,
   .sage-toolbar__group &,
