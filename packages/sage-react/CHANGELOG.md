@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.11.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.10.7...@kajabi/sage-react@1.11.0) (2023-03-20)
+
+
+### Bug Fixes
+
+* **banner tests:** update tests to actually test banner and add tests for new link structure ([6c75c0b](https://github.com/Kajabi/sage-lib/commit/6c75c0b81f353637bb2abce6787aa9024d734f46))
+* **react banner link:** change link prop to accept shape with multiple link params ([a81a839](https://github.com/Kajabi/sage-lib/commit/a81a8399d85259c7fd68622d417cc4fb8954071f))
+* **tests:** add a few more tests for all expected rendering of link ([643fe0a](https://github.com/Kajabi/sage-lib/commit/643fe0ad739eaf95fb84ebbdfc6ebc74ac2fd6ba))
+* **tests:** make tests more explicit to check for  element ([2121519](https://github.com/Kajabi/sage-lib/commit/21215194fb48e7225e88ba7d557b1f1946d61d4d))
+
+
+### Features
+
+* **progress bar:** add `animate` property to ProgressBar to turn animation on/off ([e867063](https://github.com/Kajabi/sage-lib/commit/e8670632dc758293c8bb9e177638dea047d0f9e6))
+
+
+
+
+
 ## [1.10.7](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.10.6...@kajabi/sage-react@1.10.7) (2023-03-10)
 
 

@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.9.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.8.6...@kajabi/sage-assets@1.9.0) (2023-03-20)
+
+
+### Bug Fixes
+
+* **accordion:** set  on .sage-loader only when shown ([5da66fc](https://github.com/Kajabi/sage-lib/commit/5da66fcbb5fed233198b7675a129b3942e2a538f))
+* **badge:**  adjsuted padding to match design spec ([c257a1e](https://github.com/Kajabi/sage-lib/commit/c257a1e19f25ecf6c96c1b3766a136d988a92f13))
+* **search:** adjust icon and border styling ([950c97a](https://github.com/Kajabi/sage-lib/commit/950c97aa0413de8256b8a319765a9b623276d6b8))
+* **search:** adjust icon and padding for alignment - hat-tip [@goodwinchris](https://github.com/goodwinchris) ([adf903b](https://github.com/Kajabi/sage-lib/commit/adf903b7e954056ab65d403ff47a60e49e3bd78f))
+* **search:** typo ([cc8bb71](https://github.com/Kajabi/sage-lib/commit/cc8bb714175a1c0a5077d07a0e99adc3f2940fa6))
+* **search:** undo typo ([c493609](https://github.com/Kajabi/sage-lib/commit/c493609582c0b83ebc40733fd61d5ce02d67a7d8))
+* **search:** updates styling for default search input ([85645f8](https://github.com/Kajabi/sage-lib/commit/85645f8069e8b8d4791180e6174c94cdc6183d5d))
+
+
+### Features
+
+* **progress bar:** add `animate` property to ProgressBar to turn animation on/off ([e867063](https://github.com/Kajabi/sage-lib/commit/e8670632dc758293c8bb9e177638dea047d0f9e6))
+
+
+
+
+
 ## [1.8.6](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.8.5...@kajabi/sage-assets@1.8.6) (2023-03-10)
 
 

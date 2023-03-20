@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.12.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.11.9...@kajabi/sage@5.12.0) (2023-03-20)
+
+
+### Bug Fixes
+
+* **sage component:** explicit force html format when rendering Sage components ([52557b5](https://github.com/Kajabi/sage-lib/commit/52557b516a13b60d5f56c4b2342fb03c321e05c0))
+
+
+### Features
+
+* **progress bar:** add `animate` property to ProgressBar to turn animation on/off ([e867063](https://github.com/Kajabi/sage-lib/commit/e8670632dc758293c8bb9e177638dea047d0f9e6))
+
+
+
+
+
 ## [5.11.9](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.11.8...@kajabi/sage@5.11.9) (2023-03-10)
 
 
