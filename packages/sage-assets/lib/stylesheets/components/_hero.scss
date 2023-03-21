@@ -6,7 +6,7 @@
 
 $-hero-artwork-size: rem(56px);
 $-hero-icon-size: rem(24px);
-$-hero-margin-y: rem(36px);
+$-hero-margin-y: rem(24px);
 $-hero-mobile-aspect-ratio: calc(100% * 9 / 16);
 $-hero-play-icon-background-color: sage-color(white);
 
@@ -48,7 +48,7 @@ $-hero-play-icon-background-color: sage-color(white);
 }
 
 .sage-hero__title {
-  @extend %t-sage-heading-4;
+  @extend %t-sage-heading-3;
   grid-area: title;
   padding: 0 sage-spacing(md);
 
@@ -62,6 +62,7 @@ $-hero-play-icon-background-color: sage-color(white);
   grid-area: content;
   padding: 0 sage-spacing(md);
   margin-bottom: $-hero-margin-y;
+  font-weight: sage-font-weight(medium);
   color: sage-color(charcoal, 300);
 
   @media (min-width: sage-breakpoint(lg-max)) {

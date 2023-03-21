@@ -56,7 +56,7 @@ export const Hero = ({
         )}
         {footerActions && (
           <div className="sage-hero__footer-actions">
-            <Button.Group gap="sm">
+            <Button.Group gap="md">
               {footerActions}
             </Button.Group>
           </div>
