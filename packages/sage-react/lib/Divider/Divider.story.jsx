@@ -14,9 +14,6 @@ export default {
       },
     },
   },
-  args: {
-    vertical: false,
-  },
   argTypes: {
     ...selectArgs({
       offset: SageTokens.SPACERS
@@ -25,4 +22,48 @@ export default {
 };
 
 const Template = (args) => <Divider {...args} />;
+
 export const Default = Template.bind({});
+
+export const vertical = Template.bind({});
+vertical.args = {
+  vertical: true,
+};
+vertical.decorators = [
+  (Story) => (
+    <>
+      <div style={{ height: 250 }}>
+        {Story()}
+      </div>
+    </>
+  )
+];
+
+export const horizontalOffset = Template.bind({});
+horizontalOffset.args = {
+  offset: SageTokens.SPACERS.LG,
+};
+horizontalOffset.decorators = [
+  (Story) => (
+    <>
+      <div style={{ height: 150 }}>
+        {Story()}
+      </div>
+    </>
+  )
+];
+
+export const verticalOffset = Template.bind({});
+verticalOffset.args = {
+  vertical: true,
+  offset: SageTokens.SPACERS.LG,
+};
+verticalOffset.decorators = [
+  (Story) => (
+    <>
+      <div style={{ height: 150 }}>
+        {Story()}
+      </div>
+    </>
+  )
+];
