@@ -1,20 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { SageTokens } from '../configs';
 import classnames from 'classnames';
-
+import { SageTokens } from '../configs';
 
 export const Divider = ({
-  className,
   color,
   vertical,
   offset,
-
   ...rest
 }) => {
   const classNames = classnames(
     'sage-divider',
-    className,
     {
       'sage-divider--vertical': vertical,
       [`sage-divider-offset--${offset}`]: offset,
