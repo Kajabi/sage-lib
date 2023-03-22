@@ -10,7 +10,7 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: ''
+        component: 'Use the divider to separate sections of content. You can also use them to override auto-layout padding.'
       },
     },
   },
