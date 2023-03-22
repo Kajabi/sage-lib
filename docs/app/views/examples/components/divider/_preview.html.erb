@@ -1,0 +1,125 @@
+<h3>Horizontal</h3>
+
+<%= sage_component SageCard, {} do %>
+  <%= sage_component SageDivider, {} %>
+<% end %>
+
+<h3>Vertical</h3>
+
+<%= sage_component SageCard, {} do %>
+  <div style="height: 200px;" class="sage-col--sm-hide">
+    <%= sage_component SageDivider, {
+      vertical: true,
+    } %>
+  </div>
+  <div class="sage-col--sm-show">
+    <%= sage_component SageHint, {
+      content: 'Vertical dividers are not displayed on small screens',
+      icon: "info-circle",
+    } %>
+  </div>
+<% end %>
+
+<div class="<%= SageClassnames::TYPE::BODY %>">
+  <h3>Offset</h3>
+  <p>Both horizontal and vertical dividers can be offset to create a full width/height bleed appearance.</p>
+</div>
+
+<%= sage_component SageCard, {
+  html_attributes: {
+    style: "height: 150px",
+  }
+} do %>
+  <%= sage_component SageDivider, {
+    offset: "md",
+  } %>
+<% end %>
+<%= sage_component SageCard, {} do %>
+  <div style="height: 200px;" class="sage-col--sm-hide">
+    <%= sage_component SageDivider, {
+      vertical: true,
+      offset: "md",
+    } %>
+  </div>
+  <div class="sage-col--sm-show">
+    <%= sage_component SageHint, {
+      content: 'Vertical dividers are not displayed on small screens',
+      icon: "info-circle",
+    } %>
+  </div>
+<% end %>
+
+<h3>Colors</h3>
+
+<%= sage_component SageDivider, {
+  color: "#000"
+} %>
+<%= sage_component SageDivider, {
+  color: SageTokens::COLOR_PALETTE[:SAGE_300],
+} %>
+<%= sage_component SageDivider, {
+  color: SageTokens::COLOR_PALETTE[:YELLOW_300],
+} %>
+<%= sage_component SageDivider, {
+  color: SageTokens::COLOR_PALETTE[:RED_300],
+} %>
+
+<h3>Layout Examples</h3>
+
+<%= sage_component SageCard, {} do %>
+  <%= sage_component SageCardHeader, { title: "Divider w/o offset" } %>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  <%= sage_component SageDivider, {} %>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  <%= sage_component SageDivider, {} %>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+<% end %>
+
+<%= sage_component SageCard, {} do %>
+  <%= sage_component SageCardHeader, { title: "Divider w/ offset" } %>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  <%= sage_component SageDivider, { offset: "md" } %>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  <%= sage_component SageDivider, { offset: "md" } %>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+<% end %>
+
+<%= sage_component SageCard, {} do %>
+  <%= sage_component SageCardRow, { grid_template: "iti" } do %>
+    <%= sage_component SageAvatar, { size: "88px" } %>
+    <%= sage_component SageDivider, {
+      vertical: true,
+    } %>
+    <div>
+      <h4>Vertical divider w/o offset</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  <% end %>
+  <div class="sage-col--sm-show">
+    <%= sage_component SageHint, {
+      content: 'Vertical dividers are not displayed on small screens',
+      icon: "info-circle",
+    } %>
+  </div>
+<% end %>
+
+<%= sage_component SageCard, {} do %>
+  <%= sage_component SageCardRow, { grid_template: "iti" } do %>
+    <%= sage_component SageAvatar, { size: "88px" } %>
+    <%= sage_component SageDivider, {
+      vertical: true,
+      offset: "md",
+    } %>
+    <div>
+      <h4>Vertical divider w/ offset</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  <% end %>
+  <div class="sage-col--sm-show">
+    <%= sage_component SageHint, {
+      content: 'Vertical dividers are not displayed on small screens',
+      icon: "info-circle",
+    } %>
+  </div>
+<% end %>
+
