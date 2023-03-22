@@ -1,6 +1,6 @@
 <%
   html_tag = component.title_tag ? component.title_tag : "h2"
-  size = component.size || "large"
+  size = component.size
 
   image_options = {
     alt: component.alt_text,
@@ -19,6 +19,7 @@
     sage-hero
     sage-hero--<%= size %>
     <%= "sage-hero--borderless" if component.borderless %>
+    <%= "sage-hero--contained" if component.contained %>
     <%= "sage-hero--custom-background-color" if component.custom_background_color %>
     <%= component.generated_css_classes %>
   "
@@ -30,12 +31,16 @@
 >
   <<%= html_tag %> class="sage-hero__title"><%= component.title %></<%= html_tag %>>
   <div class="sage-hero__body">
-    <p>
+    <p class="<%= "#{SageClassnames::SPACERS::MD_BOTTOM}" %>">
       <%= component.description %>
     </p>
 
     <% if component.button %>
       <%= component.button.html_safe %>
+    <% end %>
+
+    <% if content_for? :sage_hero_footer_actions %>
+      <%= content_for :sage_hero_footer_actions %>
     <% end %>
   </div>
   <% if component.cta_attributes.present? %>
