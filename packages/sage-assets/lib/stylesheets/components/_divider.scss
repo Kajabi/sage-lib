@@ -6,14 +6,14 @@
 
 .sage-divider {
   display: flex;
-  height: 1px;
+  height: rem(1px);
   width: 100%;
   margin: 0;
   background: var(--sage-divider-background-color, sage-color(grey, 300));
   border: 0;
 
   &--vertical {
-    width: 1px;
+    width: rem(1px);
     height: 100%;
   }
 }

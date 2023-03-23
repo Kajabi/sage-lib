@@ -262,7 +262,7 @@ module ComponentsHelper
         scss: "done",
         docs: "done",
         rails: "done",
-        react: "todo",
+        react: "done",
         responsive: "done",
         a11y: "doing",
         react_component_slug: "sage-divider--default",
