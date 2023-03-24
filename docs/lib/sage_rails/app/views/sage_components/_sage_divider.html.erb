@@ -1,0 +1,12 @@
+<hr
+  class="
+  sage-divider
+  <%= "sage-divider--vertical" if component.vertical %>
+  <%= "sage-divider-offset--#{component.offset}" if component.offset %>
+  <%= component.generated_css_classes %>
+  "
+  <% if component.color.present? %>
+    style="--sage-divider-background-color: <%= component.color %>"
+  <% end %>
+  <%= component.generated_html_attributes.html_safe %>
+/>

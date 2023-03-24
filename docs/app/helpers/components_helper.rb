@@ -257,6 +257,18 @@ module ComponentsHelper
         figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FsMbtLUHSt2vfKgKjyQ3052%2F%25F0%259F%25A7%25A9-Sage-components%3Fnode-id%3D2643%253A23062",
       },
       {
+        title: "divider",
+        description: "Use the divider to separate sections of content. You can also use them to override auto-layout padding.",
+        scss: "done",
+        docs: "done",
+        rails: "done",
+        react: "done",
+        responsive: "done",
+        a11y: "doing",
+        react_component_slug: "sage-divider--default",
+        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FsMbtLUHSt2vfKgKjyQ3052%2F%25F0%259F%25A7%25A9-Sage-components%3Fnode-id%3D4553%253A21314%26t%3DKQqqiKDenhS3MD4k-1",
+      },
+      {
         title: "dot",
         description: "Dots provide a subtle color cue to place beside text or other elements.",
         scss: "done",

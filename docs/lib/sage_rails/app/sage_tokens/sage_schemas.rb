@@ -12,6 +12,8 @@ module SageSchemas
 
   CONTAINER_SIZE = [:optional, NilClass, Set.new(SageTokens::CONTAINER_SIZES)]
 
+  DIVIDER_OFFSET = Set.new(SageTokens::SPACER_SIZES)
+
   GRID_GAP_OPTION = Set.new(SageTokens::GRID_GAP_OPTIONS)
 
   GRID_TEMPLATE = Set.new(SageTokens::GRID_TEMPLATES)
