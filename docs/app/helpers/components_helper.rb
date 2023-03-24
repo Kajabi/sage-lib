@@ -463,6 +463,7 @@ module ComponentsHelper
         react: "todo",
         responsive: "done",
         a11y: "done",
+        react_component_slug: "sage-indicator--default",
         figma_embed: "",
       },
       {
