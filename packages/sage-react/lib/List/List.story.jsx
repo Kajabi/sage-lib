@@ -67,10 +67,10 @@ export const FullyDraggableSortableList = () => {
   );
 };
 
-export const otherActionItems = () => {
+export const otherActionItems = () => (
   <List>
     {[...Array(5)].map((x, i) => (
-      <ListItem key={x} id={i}>
+      <ListItem key={x} id={`list-item-${i}`}>
         <Card.Row gridTemplate={SageTokens.GRID_TEMPLATES.ETE}>
           <img
             src="https://source.unsplash.com/random/240x160"
@@ -105,5 +105,5 @@ export const otherActionItems = () => {
         </Card.Row>
       </ListItem>
     ))}
-  </List>;
-};
+  </List>
+);
