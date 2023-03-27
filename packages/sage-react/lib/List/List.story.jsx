@@ -68,44 +68,42 @@ export const FullyDraggableSortableList = () => {
 };
 
 export const otherActionItems = () => {
-  return (
-    <List>
-      {[...Array(5)].map(() => (
-        <ListItem>
-          <Card.Row gridTemplate={SageTokens.GRID_TEMPLATES.ETE}>
-            <img
-              src="https://source.unsplash.com/random/240x160"
-              width="120"
-              height="64"
-              alt=""
-            />
-            <Card.Stack>
-              <Link
-                className={`${SageClassnames.TYPE.HEADING_4}`}
-                href="#"
-                removeUnderline
-                style="secondary"
-              >
-                Plain link
-              </Link>
-              <Property.Group>
-                <Property icon="users-alt">Property</Property>
-                <Property icon="users-alt">Property</Property>
-                <Property icon="users-alt">Property</Property>
-              </Property.Group>
-            </Card.Stack>
-            <Button.Group align="end" gap="md">
-              <Badge isInteractive={false} value="Label" color="published" />
-              <Button icon="preview-on" iconOnly onClick={() => {}} subtle>
-                Preview
-              </Button>
-              <Button icon="pen" iconOnly onClick={() => {}} subtle>
-                Edit
-              </Button>
-            </Button.Group>
-          </Card.Row>
-        </ListItem>
-      ))}
-    </List>
-  );
+  <List>
+    {[...Array(5)].map((x, i) => (
+      <ListItem key={x} id={i}>
+        <Card.Row gridTemplate={SageTokens.GRID_TEMPLATES.ETE}>
+          <img
+            src="https://source.unsplash.com/random/240x160"
+            width="120"
+            height="64"
+            alt=""
+          />
+          <Card.Stack>
+            <Link
+              className={`${SageClassnames.TYPE.HEADING_4}`}
+              href="/"
+              removeUnderline
+              style={`${Link.COLORS.SECONDARY}`}
+            >
+              Plain link
+            </Link>
+            <Property.Group>
+              <Property icon="users-alt">Property</Property>
+              <Property icon="users-alt">Property</Property>
+              <Property icon="users-alt">Property</Property>
+            </Property.Group>
+          </Card.Stack>
+          <Button.Group align="end" gap="md">
+            <Badge isInteractive={false} value="Label" color="published" />
+            <Button icon="preview-on" iconOnly onClick={() => {}} subtle>
+              Preview
+            </Button>
+            <Button icon="pen" iconOnly onClick={() => {}} subtle>
+              Edit
+            </Button>
+          </Button.Group>
+        </Card.Row>
+      </ListItem>
+    ))}
+  </List>;
 };
