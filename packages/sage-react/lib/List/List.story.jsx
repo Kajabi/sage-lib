@@ -70,7 +70,11 @@ export const FullyDraggableSortableList = () => {
 export const otherActionItems = () => (
   <List>
     {[...Array(5)].map((x, i) => (
-      <ListItem key={x} id={`list-item-${i}`}>
+      <ListItem
+        // eslint-disable-next-line react/no-array-index-key
+        key={i}
+        id={`list-item-${i}`}
+      >
         <Card.Row gridTemplate={SageTokens.GRID_TEMPLATES.ETE}>
           <img
             src="https://source.unsplash.com/random/240x160"
