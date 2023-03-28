@@ -3,12 +3,15 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { Button } from '../Button';
 import { HERO_SIZES } from './configs';
+import { SageClassnames } from '../configs';
 
 export const Hero = ({
+  borderless,
   children,
   ctaAttributes,
+  customBackgroundColor,
   description,
-  branding,
+  contained,
   footerActions,
   image,
   heroSize,
@@ -20,6 +23,9 @@ export const Hero = ({
     'sage-hero',
     {
       [`sage-hero--${heroSize}`]: heroSize,
+      'sage-hero--borderless': borderless,
+      'sage-hero--contained': contained,
+      'sage-hero--custom-background-color': customBackgroundColor,
     },
   );
 
@@ -34,35 +40,27 @@ export const Hero = ({
   return (
     <article
       className={className}
+      style={{ '--custom-background-color': customBackgroundColor || '' }}
       {...rest}
     >
-      <div className="sage-hero__container">
-        <div className="sage-hero__header">
-          {branding && (
-            <div className="sage-hero__branding">
-              {branding}
-            </div>
-          )}
-          {title && (
-            <TitleTag className="sage-hero__title">
-              {title}
-            </TitleTag>
-          )}
-        </div>
-        <div className="sage-hero__body">
-          {description && (
-            <div className="sage-hero__description">
-              {description}
-            </div>
-          )}
-          {footerActions && (
-            <div className="sage-hero__footer-actions">
-              <Button.Group gap="sm">
-                {footerActions}
-              </Button.Group>
-            </div>
-          )}
-        </div>
+      {title && (
+        <TitleTag className="sage-hero__title">
+          {title}
+        </TitleTag>
+      )}
+      <div className="sage-hero__body">
+        {description && (
+          <div className={`${SageClassnames.SPACERS.MD_BOTTOM} sage-hero__description`}>
+            {description}
+          </div>
+        )}
+        {footerActions && (
+          <div className="sage-hero__footer-actions">
+            <Button.Group gap="md">
+              {footerActions}
+            </Button.Group>
+          </div>
+        )}
       </div>
       {ctaAttributes ? (
         <a className="sage-hero__artwork sage-hero__artwork--cta" {...ctaAttributes}>
@@ -81,9 +79,11 @@ export const Hero = ({
 Hero.Sizes = HERO_SIZES;
 
 Hero.defaultProps = {
-  branding: null,
+  borderless: null,
   ctaAttributes: null,
   children: null,
+  contained: null,
+  customBackgroundColor: null,
   description: null,
   footerActions: null,
   image: {
@@ -96,9 +96,11 @@ Hero.defaultProps = {
 };
 
 Hero.propTypes = {
-  branding: PropTypes.node,
+  borderless: PropTypes.bool,
   ctaAttributes: PropTypes.node,
   children: PropTypes.node,
+  contained: PropTypes.bool,
+  customBackgroundColor: PropTypes.string,
   description: PropTypes.string,
   footerActions: PropTypes.node,
   image: PropTypes.shape({
