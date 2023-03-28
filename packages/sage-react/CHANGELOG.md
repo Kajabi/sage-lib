@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.11.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.11.0...@kajabi/sage-react@1.11.1) (2023-03-28)
+
+
+### Bug Fixes
+
+* **divider:** add initial react setup and story ([c7228c8](https://github.com/Kajabi/sage-lib/commit/c7228c8c6f15dd36cf22cb1945afcc45dec9c30a))
+* **divider:** hello double quotes linter :( ([a95cad6](https://github.com/Kajabi/sage-lib/commit/a95cad68bd67c463c7fe058a3d83d644012b5e35))
+* **divider:** hello linter my old friend ([b6e1fd1](https://github.com/Kajabi/sage-lib/commit/b6e1fd1614fb0db8c702144a117b685afd87e062))
+* **hero:** add stories and sync up prop documentation ([8eaa3f2](https://github.com/Kajabi/sage-lib/commit/8eaa3f2b22573392eb8cafe90fad52cba3d73ea2))
+* **hero:** correct img path to reduce requests ([be7bae2](https://github.com/Kajabi/sage-lib/commit/be7bae24d8d2d4cfa1c26f20ee01ea0ad7db8b35))
+* **hero:** fine tuning based on review - hat-tip [@anechol](https://github.com/anechol) ([f9cd8c7](https://github.com/Kajabi/sage-lib/commit/f9cd8c7395ed5bd31c44d784a41756c46ad4effb))
+* **hero:** hello linter my old friend ([b399758](https://github.com/Kajabi/sage-lib/commit/b39975832dea101bb5b4f36184c15454cdd307ed))
+* **hero:** remove branding prop and updates hero story ([b835fb9](https://github.com/Kajabi/sage-lib/commit/b835fb950faa3fbe55c86c3548255b307de287a3))
+* **hero:** remove extra comma from import ([c975c10](https://github.com/Kajabi/sage-lib/commit/c975c10164e4c7c607c07014d1004011648235a3))
+* **hero:** removed branding prop/code and added new contained prop ([fa4da78](https://github.com/Kajabi/sage-lib/commit/fa4da786bc656e5136f816ec7418bb82ea6eef2b))
+* **hero:** typo and single quote lint fix ([30999fa](https://github.com/Kajabi/sage-lib/commit/30999fac85621afee05194447779ccbfeb0146ea))
+* **react-dropdown:** max depth reached due to improper dependency added ([e6ba3c7](https://github.com/Kajabi/sage-lib/commit/e6ba3c72610ed29157137db2d625e329420d8324))
+
+
+
+
+
 # [1.11.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.10.7...@kajabi/sage-react@1.11.0) (2023-03-20)
 
 

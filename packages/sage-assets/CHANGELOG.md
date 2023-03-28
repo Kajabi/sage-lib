@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.9.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.9.0...@kajabi/sage-assets@1.9.1) (2023-03-28)
+
+
+### Bug Fixes
+
+* **divider:** add divider styles ([1340707](https://github.com/Kajabi/sage-lib/commit/1340707daf425a2a4571bb0825e5aa1e7416a4a8))
+* **divider:** convert px value to use rem function ([d049118](https://github.com/Kajabi/sage-lib/commit/d0491182e6117252759062400125379982449b01))
+* **hero:** add stories and sync up prop documentation ([8eaa3f2](https://github.com/Kajabi/sage-lib/commit/8eaa3f2b22573392eb8cafe90fad52cba3d73ea2))
+* **hero:** css adjustments  + formatting clean up ([ae3e7f6](https://github.com/Kajabi/sage-lib/commit/ae3e7f6b2673cbed483b6f80c4099dc073a7eb0d))
+* **hero:** css adjustments for max image size ([413185a](https://github.com/Kajabi/sage-lib/commit/413185a008e55cdd0e64813be03e7d2f4b988eb4))
+* **hero:** fine tuning based on review - hat-tip [@anechol](https://github.com/anechol) ([f9cd8c7](https://github.com/Kajabi/sage-lib/commit/f9cd8c7395ed5bd31c44d784a41756c46ad4effb))
+* **hero:** initial styling adjustments ([7f6dd56](https://github.com/Kajabi/sage-lib/commit/7f6dd56e5a2e36426c02178d5d794155dfb10684))
+* **hero:** styling updates based on feedback ([91c366e](https://github.com/Kajabi/sage-lib/commit/91c366ecad42fbb6b1a296f66e3124437a05cb35))
+* **hero:** styling updates based on feedback ([15014d1](https://github.com/Kajabi/sage-lib/commit/15014d1fea1f5ff9431a5a0c828bd1edb7cd71b4))
+* **indicator:** update current color to match design spec ([7b09ef0](https://github.com/Kajabi/sage-lib/commit/7b09ef0ba2aabdfc9dff7ddb8bf12ce219abee42))
+
+
+
+
+
 # [1.9.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.8.6...@kajabi/sage-assets@1.9.0) (2023-03-20)
 
 

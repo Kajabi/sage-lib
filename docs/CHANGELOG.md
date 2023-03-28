@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.12.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.12.0...@kajabi/sage@5.12.1) (2023-03-28)
+
+
+### Bug Fixes
+
+* **divider:** add divider markup ([3cd34c0](https://github.com/Kajabi/sage-lib/commit/3cd34c049b7a66af24ac973a55d2a104150dd5ac))
+* **divider:** add divider props and new schema ([d589382](https://github.com/Kajabi/sage-lib/commit/d5893822ee3ff3b2f9a132e3a4533386a02b5abc))
+* **divider:** add divider to components_helper ([af1290a](https://github.com/Kajabi/sage-lib/commit/af1290a13542fc129c3eb84c0544568fa2645b64))
+* **divider:** convert px value to use rem function ([d049118](https://github.com/Kajabi/sage-lib/commit/d0491182e6117252759062400125379982449b01))
+* **hero:** add contained class and actions section ([f306045](https://github.com/Kajabi/sage-lib/commit/f3060458b100268c3e661489c3866459fb2df968))
+* **hero:** add contained prop and actions section ([fb0cc3c](https://github.com/Kajabi/sage-lib/commit/fb0cc3c2f755d5e2eb0ac26af1080a273799454c))
+* **hero:** add stories and sync up prop documentation ([8eaa3f2](https://github.com/Kajabi/sage-lib/commit/8eaa3f2b22573392eb8cafe90fad52cba3d73ea2))
+* **hero:** adjust button gap ([e5f04ba](https://github.com/Kajabi/sage-lib/commit/e5f04ba106a54cb55eb09983dc81a4fa01471749))
+* **hero:** adjust description spacing ([3e269f6](https://github.com/Kajabi/sage-lib/commit/3e269f6e8f473f6911b53ca2d8972743d8c06fad))
+* **hero:** rename actions to match react naming ([9d594a1](https://github.com/Kajabi/sage-lib/commit/9d594a1625e1ce7ec9d93e6c81417633dd65ba94))
+
+
+
+
+
 # [5.12.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.11.9...@kajabi/sage@5.12.0) (2023-03-20)
 
 
