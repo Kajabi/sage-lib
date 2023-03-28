@@ -159,7 +159,6 @@ Note that this example also implements the [Reveal utility class](#{pages_helper
   <% sample_products.each do | item | %>
     <%= sage_component SageListItem, {
       more_actions: { items: dropdown_items(item[:id]) },
-      css_classes: SageClassnames::REVEAL_CONTAINER,
     } do %>
       <%= sage_component SageCardRow, { grid_template: "ete" } do %>
         <img src="https://source.unsplash.com/random/240x160?v=<%= item[:id] %>" width="120" height="64" alt=""  />
