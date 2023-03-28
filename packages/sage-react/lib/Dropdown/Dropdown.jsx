@@ -150,7 +150,7 @@ export const Dropdown = ({
       window.removeEventListener('scroll', onUpdate);
       window.removeEventListener('resize', onUpdate);
     };
-  }, [wrapperRef, isActive, isPinned, onUpdate, positionElement]);
+  }, [wrapperRef, isActive, isPinned, onUpdate]);
 
   useEffect(() => {
     if (panelStateToken) {
