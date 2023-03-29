@@ -1,10 +1,11 @@
 import React from 'react';
 import { selectArgs } from '../story-support/helpers';
 import { SageTokens, SageClassnames } from '../configs';
-import { Button } from '../Button';
 import { Badge } from '../Badge';
-import { Link } from '../Link';
+import { Button } from '../Button';
 import { Card } from '../Card';
+import { Link } from '../Link';
+import { OptionsDropdown } from '../Dropdown';
 import { Property } from '../Property';
 import { List } from './List';
 import { ListItem } from './ListItem';
@@ -105,6 +106,25 @@ export const otherActionItems = () => (
             <Button icon="pen" iconOnly onClick={() => {}} subtle>
               Edit
             </Button>
+            <OptionsDropdown
+              align="right"
+              options={[
+                {
+                  id: 1,
+                  label: "Option 1",
+                },
+                {
+                  id: 2,
+                  label: "Option 2",
+                },
+                {
+                  id: 3,
+                  label: "Option 3",
+                },
+              ]}
+              triggerButtonSubtle={true}
+            >
+            </OptionsDropdown>
           </Button.Group>
         </Card.Row>
       </ListItem>
