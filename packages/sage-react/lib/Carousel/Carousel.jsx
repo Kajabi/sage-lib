@@ -17,21 +17,21 @@ export const Carousel = ({
   const [arrowPrevDisabled, setArrowPrevDisabled] = useState(false);
   const [arrowNextDisabled, setArrowNextDisabled] = useState(false);
 
-  function handlePrevArrowClick() {
+  const handlePrevArrowClick = () => {
     if (!looping) {
       if (slidesIndex !== 0) setSlidesIndex(slidesIndex - 1);
     } else {
       mySlider.goTo('prev');
     }
-  }
+  };
 
-  function handleNextArrowClick() {
+  const handleNextArrowClick = () => {
     if (!looping) {
       if (slidesIndex !== slidesLength - 1) setSlidesIndex(slidesIndex + 1);
     } else {
       mySlider.goTo('next');
     }
-  }
+  };
 
   useEffect(() => {
     const childrenArray = children.props.children;
@@ -84,7 +84,7 @@ export const Carousel = ({
           disabled={arrowPrevDisabled}
           icon="caret-left"
           id="prev"
-          onClickCallback={() => handlePrevArrowClick}
+          onClickCallback={handlePrevArrowClick}
         />
         <div className="sage-carousel__sizer">
           <div className="sage-carousel__carousel">
@@ -95,7 +95,7 @@ export const Carousel = ({
           disabled={arrowNextDisabled}
           icon="caret-right"
           id="next"
-          onClickCallback={() => handleNextArrowClick}
+          onClickCallback={handleNextArrowClick}
         />
       </div>
       {!looping && (
