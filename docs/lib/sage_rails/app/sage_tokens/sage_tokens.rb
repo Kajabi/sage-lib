@@ -300,6 +300,7 @@ module SageTokens
     "right-small",
     "round-dollar",
     "rows", # new
+    "scissor",
     "screen-share-off",
     "screen-share-on",
     "search",

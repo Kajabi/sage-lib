@@ -201,6 +201,7 @@ export const TOKENS_ICONS = {
   RIGHT_SMALL: 'right-small',
   ROUND_DOLLAR: 'round-dollar',
   ROWS: 'rows',
+  SCISSOR: 'scissor',
   SCREEN_SHARE_OFF: 'screen-share-off',
   SCREEN_SHARE_ON: 'screen-share-on',
   SEARCH: 'search',
