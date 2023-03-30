@@ -150,3 +150,55 @@ Note that this example also implements the [Reveal utility class](#{pages_helper
     <% end %>
   <% end %>
 <% end %>
+
+<h3 class="<%= SageClassnames::TYPE::HEADING_6 %>">Other Action Items</h3>
+
+<%= sage_component SageList, {
+  sortable: false,
+} do %>
+  <% sample_products.each do | item | %>
+    <%= sage_component SageListItem, {
+      more_actions: { items: dropdown_items(item[:id]) },
+    } do %>
+      <%= sage_component SageCardRow, { grid_template: "ete" } do %>
+        <img src="https://source.unsplash.com/random/240x160?v=<%= item[:id] %>" width="120" height="64" alt=""  />
+        <%= sage_component SageCardBlock, {} do %>
+          <%= sage_component SageLink, {
+            spacer: { bottom: "2xs" },
+            css_classes: SageClassnames::TYPE::HEADING_4,
+            url: "#",
+            label: item[:name],
+            remove_underline: true,
+            show_label: true,
+            style: "secondary"
+          } %>
+          <%= sage_component SagePropertyGroup, {} do %>
+            <%= sage_component SageProperty, { icon: "calendar-date", value: "April 20th, 2020" } %>
+            <%= sage_component SageProperty, { icon: "users", value: "14 Users" } %>
+            <%= sage_component SageProperty, { icon: "clock", value: "1 hr" } %>
+          <% end %>
+        <% end %>
+        <%= sage_component SageButtonGroup, {
+          gap: :md,
+        } do %>
+          <%= sage_component SageBadge, {
+            color: "published",
+            value: "Community",
+          }%>
+          <%= sage_component SageButton, {
+            value: "Preview",
+            style: "secondary",
+            subtle: true,
+            icon: { name: "preview-on", style: "only" }
+          } %>
+          <%= sage_component SageButton, {
+            value: "Edit",
+            style: "secondary",
+            subtle: true,
+            icon: { name: "pen", style: "only" }
+          } %>
+        <% end %>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>
