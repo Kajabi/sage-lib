@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.11.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.11.1...@kajabi/sage-react@1.11.2) (2023-04-03)
+
+
+### Bug Fixes
+
+* **carousel:** add parentheses to handleNext... functions ([a81141a](https://github.com/Kajabi/sage-lib/commit/a81141a94f8df5752b421bf7a691b6463945db28))
+* **icons:** add new icon to icons.js ([ca1e19b](https://github.com/Kajabi/sage-lib/commit/ca1e19b06a676dc1656ce6776d6460a91b9bae4a))
+
+
+
+
+
 ## [1.11.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.11.0...@kajabi/sage-react@1.11.1) (2023-03-28)
 
 
