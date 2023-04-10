@@ -6,15 +6,17 @@
   <% end %>
   <%= sage_component SageButtonGroup, { gap: :md, align: "space-between" } do %>
     <%= sage_component SageButtonGroup, { gap: :md } do %>
-      <%= sage_component SagePopover, {
-        custom_content_class: "feedback-popover-panel",
-        icon: "feedback",
-        trigger_icon_only: false,
-        trigger_value: "Was this page helpful?",
-        popover_position: "top",
-      } do %>
-        <div id="emojicom-widget-inline"></div>
-      <% end %>
+      <%= sage_component SageButton, {
+        value: "Was this page helpful?",
+        icon: {
+          style: "left",
+          name: "feedback",
+        },
+        attributes: {
+          "data-js-modaltrigger": "support-request",
+          "data-js-event": "support-request-sidebar"
+        }
+      } %>
       <%= sage_component SageLink, {
         label: "SassDocs",
         url: Rails.application.config.sassdocs_root_url,
