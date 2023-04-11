@@ -8,10 +8,20 @@ import { Panel } from './Panel';
 
 <Panel className="docs-panel">
   <Panel.Header title="How can we help?" />
-  <p>Questions? Suggestions? Head to our <a href="https://slack.com/app_redirect?channel=C01A424HY8Y" target="_blank">#sage-support Slack Channel</a> and join the conversation.</p>
+  <Panel.Block sageType={true}>
+    <p>
+      Questions? Head to our <a href="https://slack.com/app_redirect?channel=C01A424HY8Y" target="_blank">#sage-support Slack Channel</a> and join the conversation.
+    </p>
+  </Panel.Block>
 
   <Panel.Divider />
 
   <Panel.Header title="Share your Feedback" />
-  <p>Spot a bug or have a suggestion? We care about improving your experience! <a href="https://forms.gle/Y4TGCimUGectGFHq9?utm_source=feedback_form&utm_medium=storybook" target="_blank">Let us know how we can improve</a>.</p>
+  <Panel.Block sageType={true}>
+    <p>
+      Spotted a bug or have an idea or suggestion?
+      <a href="https://forms.gle/Y4TGCimUGectGFHq9?utm_source=feedback_form&utm_medium=storybook" target="_blank">Let us know with this form.</a>
+      We care about improving your experience!
+    </p>
+  </Panel.Block>
 </Panel>
