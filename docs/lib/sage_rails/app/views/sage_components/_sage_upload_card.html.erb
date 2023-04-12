@@ -1,10 +1,10 @@
+<% upload_card_classes = ['sage-upload-card']
+  upload_card_classes << 'sage-upload-card--selected' if component.file_selected.present?
+  upload_card_classes << 'sage-upload-card--error' if component.has_error.present?
+  upload_card_classes << component.generated_css_classes
+%>
 <div
-  class="
-    sage-upload-card
-    <% if component.file_selected.present? %> sage-upload-card--selected<% end %>
-    <% if component.has_error.present? %> sage-upload-card--error<% end %>
-    <%= component.generated_css_classes %>
-  "
+  class="<%= upload_card_classes.join(" ") %>"
   <%= component.generated_html_attributes.html_safe %>
 >
   <div class="sage-upload-card__dropzone">
@@ -20,8 +20,7 @@
       <div class="sage-upload-card__body">
         <p class="sage-upload-card__text"><%= component.accepted_files[0][:name] %></p>
         <%= sage_component SageButton, {
-          style: "primary",
-          subtle: true,
+          style: "secondary",
           value: component.selection_label
         } %>
         <p class="sage-upload-card__subtext"><%= component.selection_subtext %></p>
@@ -30,8 +29,7 @@
       <div class="sage-upload-card__body">
         <i class="sage-upload-card__icon sage-icon-image-2xl" aria-label="Upload graphic"></i>
         <%= sage_component SageButton, {
-          style: "primary",
-          subtle: true,
+          style: "secondary",
           value: component.selection_label
         } %>
         <p class="sage-upload-card__subtext"><%= component.selection_subtext %></p>
