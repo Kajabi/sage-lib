@@ -176,6 +176,7 @@ export const TOKENS_ICONS = {
   ONE_TIME: 'one-time',
   PACKAGE: 'package',
   PAUSE: 'pause',
+  PAUSE_CIRCLE: 'pause-circle',
   PAYOUT: 'payout',
   PEN: 'pen',
   PHONE_PORTRAIT: 'phone-portrait',
