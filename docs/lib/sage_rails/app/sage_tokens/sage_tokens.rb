@@ -275,6 +275,7 @@ module SageTokens
     "one-time",
     "package",
     "pause",
+    "pause-circle",
     "payout",
     "pen",
     "phone-portrait",
