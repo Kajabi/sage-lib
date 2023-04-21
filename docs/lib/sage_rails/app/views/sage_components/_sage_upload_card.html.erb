@@ -1,15 +1,23 @@
-<% upload_card_classes = ['sage-upload-card']
+<%
+  upload_card_classes = ['sage-upload-card']
   upload_card_classes << 'sage-upload-card--selected' if component.file_selected.present?
   upload_card_classes << 'sage-upload-card--error' if component.has_error.present?
   upload_card_classes << component.generated_css_classes
+  upload_card_input_label = component.selection_label.present? ? component.selection_label : "Select a file"
+  upload_card_imagetypes = ['image/*']
+
+  upload_card_preview_image_options = {
+    class: "sage-upload-card__preview",
+    alt: ""
+  }
 %>
-<div
-  class="<%= upload_card_classes.join(" ") %>"
-  <%= component.generated_html_attributes.html_safe %>
->
+<div class="<%= upload_card_classes.join(" ") %>" <%= component.generated_html_attributes.html_safe %>>
   <div class="sage-upload-card__dropzone">
-    <input class="sage-upload-card__input" accept=".csv" multiple="multiple" type="file" autocomplete="off" />
-    <% if component.file_selected.present? %>
+    <label for="<%= component.id %>" class="visually-hidden"><%= upload_card_input_label %></label>
+    <input class="sage-upload-card__input" accept="<%= upload_card_imagetypes %>" multiple="multiple" type="file" autocomplete="off" name="<%= component.name.present? ? component.name : component.id %>" id="<%= component.id %>" />
+    <% if component.selection_preview.present? %>
+      <%= image_tag(component.selection_preview, upload_card_preview_image_options) %>
+    <% else %>
       <%= sage_component SageIconCard, {
         color: "draft",
         css_classes: "sage-upload-card__preview",
@@ -17,24 +25,29 @@
         label: "Upload graphic",
         size: "2xl",
       } %>
-      <div class="sage-upload-card__body">
-        <p class="sage-upload-card__text"><%= component.accepted_files[0][:name] %></p>
-        <%= sage_component SageButton, {
-          style: "secondary",
-          value: component.selection_label
-        } %>
-        <p class="sage-upload-card__subtext"><%= component.selection_subtext %></p>
-      </div>
-    <% else %>
-      <div class="sage-upload-card__body">
-        <i class="sage-upload-card__icon sage-icon-image-2xl" aria-label="Upload graphic"></i>
-        <%= sage_component SageButton, {
-          style: "secondary",
-          value: component.selection_label
-        } %>
-        <p class="sage-upload-card__subtext"><%= component.selection_subtext %></p>
-      </div>
     <% end %>
+    <div class="sage-upload-card__body">
+      <div class="sage-upload-card__label">
+        <% if component.file_selected.present? || component.selection_preview.present? %>
+          <p class="sage-upload-card__text">
+            <%= component.accepted_files[0][:name] %>
+          </p>
+        <% end %>
+        <% if component.selection_subtext.present? %>
+          <p class="sage-upload-card__subtext">
+            <%= component.selection_subtext %>
+          </p>
+        <% end %>
+      </div>
+      <% if component.selection_label.present? %>
+        <%= sage_component SageButton, {
+          style: "secondary",
+          value: component.selection_label
+        } %>
+      <% elsif content_for? :sage_upload_card_actions %>
+        <%= content_for :sage_upload_card_actions %>
+      <% end %>
+    </div>
   </div>
   <% if component.errors.present? %>
     <div class="sage-upload-card__errors">
