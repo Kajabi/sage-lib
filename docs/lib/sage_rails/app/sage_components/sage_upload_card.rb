@@ -9,7 +9,13 @@ class SageUploadCard < SageComponent
     ]]],
     file_selected: [:optional, NilClass, TrueClass],
     has_error: [:optional, NilClass, TrueClass],
+    id: String,
+    name: [:optional, NilClass, String],
+    selection_preview: [:optional, NilClass, String],
     selection_label: [:optional, NilClass, String],
     selection_subtext: [:optional, NilClass, String],
   })
+  def actions
+    %w(upload_card_actions)
+  end
 end

@@ -1,28 +1,72 @@
-<h3 class="t-sage-heading-6">Initial State</h3>
+<%
+  dropdown_menu_items = [
+    {
+      value: "Upload file",
+    }, {
+      value: "Select recent file",
+    },
+  ]
+
+  dropdown_menu_remove = {
+    icon: "remove-circle",
+    style: "danger",
+    value: "Take A Dangerous Action",
+  }
+%>
+
+<h3 class="t-sage-heading-6">Default State (no file selected)</h3>
 <%= sage_component SageUploadCard, {
+  id: "upload-card-default",
   selection_label: "Select file",
   selection_subtext: "Recommended dimensions or file size requirements",
 } %>
+
 
 <h3 class="t-sage-heading-6">Selected File State</h3>
 
 <%= sage_component SageUploadCard, {
   accepted_files: [
-    {name: "contacts.csv"},
+    {name: "my-image-file.jpg"},
   ],
   file_selected: true,
+  selection_preview: "https://placekitten.com/600",
+  id: "upload-card-selected",
   selection_label: "Edit file",
   selection_subtext: "Recommended dimensions or file size requirements",
 } %>
+
+<h3 class="t-sage-heading-6">Dropdown actions</h3>
+
+<%= sage_component SageUploadCard, {
+  accepted_files: [
+    {name: "my-image-file.jpg"},
+  ],
+  file_selected: true,
+  id: "upload-card-dropdown"
+} do %>
+  <% content_for :sage_upload_card_actions do %>
+    <%= sage_component SageDropdown, { items: dropdown_menu_items } do %>
+      <% content_for :sage_dropdown_trigger, flush: true do %>
+        <%= sage_component SageButton, {
+          style: "secondary",
+          icon: { name: "caret-down", style: "right" },
+          value: "Select filezzzz",
+        } %>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>
+
 
 <h3 class="t-sage-heading-6">Error State</h3>
 
 <%= sage_component SageUploadCard, {
   has_error: true,
+  id: "upload-card-error",
   selection_label: "Select a file",
   selection_subtext: "Recommended dimensions or file size requirements",
   errors: [
-    {text: "This is the error message."},
+    {text: "This is an error message."},
   ]
 } %>
 
