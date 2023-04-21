@@ -652,6 +652,7 @@
 /// Adds the basic default panel setup including grid, spacing, and border treatment
 ///
 @mixin sage-panel() {
+  container-type: inline-size;
   padding: sage-spacing(panel);
   background-color: sage-color(white);
   border: sage-border();
