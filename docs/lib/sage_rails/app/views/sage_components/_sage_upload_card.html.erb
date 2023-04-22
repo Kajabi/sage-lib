@@ -1,5 +1,6 @@
 <%
   upload_card_classes = ['sage-upload-card']
+  upload_card_classes << 'sage-upload-card--stack-only' if component.stack_layout == true
   upload_card_classes << 'sage-upload-card--selected' if component.file_selected.present?
   upload_card_classes << 'sage-upload-card--error' if component.has_error.present?
   upload_card_classes << component.generated_css_classes
@@ -13,8 +14,7 @@
 %>
 <div class="<%= upload_card_classes.join(" ") %>" <%= component.generated_html_attributes.html_safe %>>
   <div class="sage-upload-card__dropzone">
-    <label for="<%= component.id %>" class="visually-hidden"><%= upload_card_input_label %></label>
-    <input class="sage-upload-card__input" accept="<%= upload_card_imagetypes %>" multiple="multiple" type="file" autocomplete="off" name="<%= component.name.present? ? component.name : component.id %>" id="<%= component.id %>" />
+    <input class="sage-upload-card__input" accept="<%= upload_card_imagetypes %>" multiple="multiple" type="file" autocomplete="off" value="<%= upload_card_input_label %>" name="<%= component.name.present? ? component.name : component.id %>" id="<%= component.id %>" />
     <% if component.selection_preview.present? %>
       <%= image_tag(component.selection_preview, upload_card_preview_image_options) %>
     <% else %>
@@ -27,7 +27,7 @@
       } %>
     <% end %>
     <div class="sage-upload-card__body">
-      <div class="sage-upload-card__label">
+      <div class="sage-upload-card__description">
         <% if component.file_selected.present? || component.selection_preview.present? %>
           <p class="sage-upload-card__text">
             <%= component.accepted_files[0][:name] %>
@@ -40,10 +40,7 @@
         <% end %>
       </div>
       <% if component.selection_label.present? %>
-        <%= sage_component SageButton, {
-          style: "secondary",
-          value: component.selection_label
-        } %>
+        <label for="<%= component.id %>" class="sage-upload-card__input-label sage-btn sage-btn--secondary"><%= upload_card_input_label %></label>
       <% elsif content_for? :sage_upload_card_actions %>
         <%= content_for :sage_upload_card_actions %>
       <% end %>

@@ -14,6 +14,7 @@ class SageUploadCard < SageComponent
     selection_preview: [:optional, NilClass, String],
     selection_label: [:optional, NilClass, String],
     selection_subtext: [:optional, NilClass, String],
+    stack_layout:[:optional, NilClass, TrueClass],
   })
   def actions
     %w(upload_card_actions)

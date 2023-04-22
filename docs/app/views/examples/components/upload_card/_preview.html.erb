@@ -15,6 +15,8 @@
 %>
 
 <h3 class="t-sage-heading-6">Default State (no file selected)</h3>
+<p>This layout will adjust from a vertical (stacked) orientation to horizontal depending on available space and/or screen size.</p>
+
 <%= sage_component SageUploadCard, {
   id: "upload-card-default",
   selection_label: "Select file",
@@ -29,14 +31,30 @@
     {name: "my-image-file.jpg"},
   ],
   file_selected: true,
-  selection_preview: "https://placekitten.com/600",
+  selection_preview: "https://placekitten.com/520",
   id: "upload-card-selected",
   selection_label: "Edit file",
   selection_subtext: "Recommended dimensions or file size requirements",
 } %>
 
-<h3 class="t-sage-heading-6">Dropdown actions</h3>
 
+<h3 class="t-sage-heading-6">Stacked layout</h3>
+<p>Locks the layout to vertical (stacked) orientation</p>
+
+<%= sage_component SageUploadCard, {
+  accepted_files: [
+    {name: "my-image-file.jpg"},
+  ],
+  file_selected: true,
+  selection_preview: "https://placekitten.com/640/480",
+  stack_layout: true,
+  id: "upload-card-selected",
+  selection_label: "Edit file",
+  selection_subtext: "Recommended dimensions or file size requirements",
+} %>
+
+<h3 class="t-sage-heading-6">Custom actions</h3>
+<p>Use the <code>sage_upload_card_actions</code> slot to replace the default button and display custom components like dropdowns.</p>
 <%= sage_component SageUploadCard, {
   accepted_files: [
     {name: "my-image-file.jpg"},
