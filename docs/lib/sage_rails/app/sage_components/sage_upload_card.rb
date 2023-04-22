@@ -4,6 +4,7 @@ class SageUploadCard < SageComponent
       name: [:optional, NilClass, String],
       size: [:optional, NilClass, String],
     ]]],
+    accepted_file_types: [:optional, NilClass, String],
     errors: [:optional, NilClass, [[
       text: [:optional, NilClass, String],
     ]]],
