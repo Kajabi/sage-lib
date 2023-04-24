@@ -23,6 +23,7 @@ Banner.defaultProps = {
   bannerContext: null,
   dismissable: true,
   link: null,
+  onDismiss: null,
   text: null,
   type: Banner.TYPES.DEFAULT,
 };
@@ -37,6 +38,7 @@ Banner.propTypes = {
     rel: PropTypes.string,
     target: PropTypes.string
   }),
+  onDismiss: PropTypes.func,
   text: PropTypes.string,
   type: PropTypes.oneOf(Object.values(BANNER_TYPES)),
 };

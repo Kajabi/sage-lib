@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { SageTokens } from '../configs';
@@ -13,19 +13,28 @@ export const BannerContent = ({
   className,
   dismissable,
   id,
+  onDismiss,
   link,
   text,
   type,
   ...rest
 }) => {
+
+  const [isActive, setIsActive] = useState(active);
+
   const classNames = classnames(
     'sage-banner',
     className,
     {
       [`sage-banner--${type}`]: type,
-      'sage-banner--active': active,
+      'sage-banner--active': isActive,
     }
   );
+
+  const handleDismiss = () => {
+    setIsActive(false);
+    if (onDismiss) onDismiss();
+  };
 
   return (
     <div
@@ -57,6 +66,7 @@ export const BannerContent = ({
           icon={SageTokens.ICONS.REMOVE}
           iconOnly={true}
           subtle={true}
+          onClick={handleDismiss}
         >
           Dismiss
         </Button>
@@ -75,6 +85,7 @@ BannerContent.defaultProps = {
   dismissable: null,
   id: null,
   link: null,
+  onDismiss: null,
   text: null,
   type: null
 };
@@ -92,6 +103,7 @@ BannerContent.propTypes = {
     rel: PropTypes.string,
     target: PropTypes.string
   }),
+  onDismiss: PropTypes.func,
   text: PropTypes.string,
   type: PropTypes.oneOf(Object.values(BannerContent.TYPES)),
 };
