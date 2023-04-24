@@ -19,7 +19,6 @@ export const BannerContent = ({
   type,
   ...rest
 }) => {
-
   const [isActive, setIsActive] = useState(active);
 
   const classNames = classnames(
