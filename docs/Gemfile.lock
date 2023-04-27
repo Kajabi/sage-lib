@@ -1,7 +1,7 @@
 PATH
   remote: lib/sage_rails
   specs:
-    sage_rails (5.12.2)
+    sage_rails (5.12.3)
       classy_hash
       rails
 
@@ -230,4 +230,4 @@ RUBY VERSION
    ruby 2.5.9p229
 
 BUNDLED WITH
-   2.3.26
+   2.3.14
