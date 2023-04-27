@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.10](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@1.2.9...@kajabi/sage-system@1.2.10) (2023-04-27)
+
+
+### Bug Fixes
+
+* **copy-button:** use new clipboard functions ([05c560d](https://github.com/Kajabi/sage-lib/commit/05c560d7af4785f41b0d6b089db0d5c23c67f4df))
+
+
+
+
+
 ## [1.2.9](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@1.2.8...@kajabi/sage-system@1.2.9) (2023-03-20)
 
 **Note:** Version bump only for package @kajabi/sage-system

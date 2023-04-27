@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.11.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.11.2...@kajabi/sage-react@1.11.3) (2023-04-27)
+
+
+### Bug Fixes
+
+* **banner:** toggle active state when dismiss button clicked ([46bbb6b](https://github.com/Kajabi/sage-lib/commit/46bbb6b0ad3decb359d9e5fd7be66e4e553c4b1d))
+* **icons:** add new icon to icons.js ([e0fec19](https://github.com/Kajabi/sage-lib/commit/e0fec1988d7c401c404eb7a773f5594660ff2e26))
+
+
+
+
+
 ## [1.11.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.11.1...@kajabi/sage-react@1.11.2) (2023-04-03)
 
 

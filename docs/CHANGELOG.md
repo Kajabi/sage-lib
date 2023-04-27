@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.12.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.12.2...@kajabi/sage@5.12.3) (2023-04-27)
+
+
+### Bug Fixes
+
+* **icons:** add new icon to sage_tokens.rb ([671f050](https://github.com/Kajabi/sage-lib/commit/671f05059c93c9862b5e68db81de8eac08fa6722))
+
+
+
+
+
 ## [5.12.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.12.1...@kajabi/sage@5.12.2) (2023-04-03)
 
 
