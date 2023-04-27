@@ -5,19 +5,34 @@ Sage.copyButton = (function() {
   // ==================================================
 
   function handleClick(ev) {
-    const str = ev.currentTarget.dataset.jsCopyButton;
-    const el = document.createElement('textarea');
-    el.value = str;
-    el.setAttribute('readonly', '');
-    el.setAttribute('class', 'visually-hidden');
-    document.body.appendChild(el);
-    el.select();
-    document.execCommand('copy');
-    document.body.removeChild(el);
-    ev.currentTarget.focus();
-    Sage.toast.trigger({text:'Copied to clipboard'})
-  };
+    const strToCopy = ev.currentTarget.dataset.jsCopyButton;
 
+
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(strToCopy)
+        .then(() => {
+          Sage.toast.trigger({text:'Copied to clipboard'})
+        })
+        .catch(err => {
+          const errMsg = 'Error writing text to clipboard: ' + err;
+          Sage.toast.trigger({text: errMsg})
+        });
+    } else {
+      // Fallback for Safari
+      const el = document.createElement('textarea');
+      el.value = strToCopy;
+      el.setAttribute('readonly', '');
+      el.setAttribute('class', 'visually-hidden');
+      document.body.appendChild(el);
+      el.select();
+
+      document.execCommand("copy");
+      document.body.removeChild(el);
+      Sage.toast.trigger({text:'Copied to clipboard'})
+    }
+
+    ev.currentTarget.focus();
+  };
 
   // ==================================================
   // Functions
