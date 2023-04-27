@@ -9,39 +9,14 @@ Sage.copyButton = (function() {
 
 
     if (navigator.clipboard) {
-      navigator.permissions.query({name: 'clipboard-write'}).then(result => {
-        if (result.state == 'granted' || result.state == 'prompt') {
-          navigator.clipboard.writeText(strToCopy)
-            .then(() => {
-              Sage.toast.trigger({text:'Copied to clipboard'})
-            })
-            .catch(err => {
-              Sage.toast.trigger({text:'Does not have access to clipboard'})
-            });
-        } else {
-          // Permission not granted, ask the user to grant it
-          navigator.permissions.request({name: 'clipboard-write'}).then(result => {
-            if (result.state == 'granted') {
-              navigator.clipboard.writeText(strToCopy)
-                .then(() => {
-                  Sage.toast.trigger({text:'Copied to clipboard'})
-                })
-                .catch(err => {
-                  const errMsg = 'Error writing text to clipboard: ' + err;
-                  Sage.toast.trigger({text: errMsg})
-                });
-              } else {
-                Sage.toast.trigger({text: 'Permission to write to clipboard denied'});
-              }
-            }).catch(err => {
-              const errMsg = 'Error requesting permission to write to clipboard: ' + err;
-              Sage.toast.trigger({text: errMsg})
-            });
-          }
-        }).catch(err => {
-          const errMsg = 'Error querying permission to write to clipboard: ' + err;
+      navigator.clipboard.writeText(strToCopy)
+        .then(() => {
+          Sage.toast.trigger({text:'Copied to clipboard'})
+        })
+        .catch(err => {
+          const errMsg = 'Error writing text to clipboard: ' + err;
           Sage.toast.trigger({text: errMsg})
-      });
+        });
     } else {
       // Fallback for Safari
       const el = document.createElement('textarea');
