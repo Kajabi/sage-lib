@@ -4,7 +4,8 @@ class SageUploadCard < SageComponent
       name: [:optional, NilClass, String],
       size: [:optional, NilClass, String],
     ]]],
-    accepted_file_types: [:optional, NilClass, String],
+    accepted_file_types: [:optional, NilClass, Array],
+    custom_file_input_field: [:optional, NilClass, TrueClass],
     errors: [:optional, NilClass, [[
       text: [:optional, NilClass, String],
     ]]],
@@ -14,9 +15,14 @@ class SageUploadCard < SageComponent
     name: [:optional, NilClass, String],
     selection_preview: [:optional, NilClass, String],
     selection_label: [:optional, NilClass, String],
-    selection_subtext: [:optional, NilClass, String],
     stack_layout:[:optional, NilClass, TrueClass],
   })
+  def instructions
+    %w(upload_card_instructions)
+  end
+  def image
+    %w(upload_card_preview)
+  end
   def actions
     %w(upload_card_actions)
   end
