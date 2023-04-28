@@ -7,66 +7,68 @@
 
 $-upload-card-border-radius: sage-border(radius-large);
 $-upload-card-border-width: 2;
-$-upload-card-selected-width: rem(200px);
+$-upload-card-error-color: sage-color(red, 300);
+$-upload-card-body-width: rem(200px);
+$-upload-card-body-width-stack: rem(340px);
 $-upload-card-preview-border-radius: sage-border(radius-medium);
 $-upload-card-preview-width: rem(32px);
 $-upload-card-preview-max-width: rem(190px);
-$-upload-card-preview-max-width-mobile: rem(304px);
+$-upload-card-preview-max-width-stack: rem(292px);
 $-upload-card-background: sage-color(white);
+$-upload-card-mobile-breakpoint: 609px;
+
+:root {
+  --sage-upload-card-aspect-ratio: 190 / 107;
+  --sage-upload-card-aspect-ratio-stack: 19 / 12;
+}
 
 .sage-upload-card__body {
   display: flex;
   flex-flow: column;
-  align-items: center;
-  flex: 1;
-  gap: sage-spacing(sm);
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 1 1 $-upload-card-body-width;
+  gap: sage-spacing();
   color: sage-color(charcoal, 200);
 
-  :not(.sage-upload-card--selected) & {
-    justify-content: center;
-    align-items: center;
-  }
-
   .sage-upload-card--selected & {
-    justify-content: flex-start;
-    align-items: flex-start;
-  }
-
-  .sage-upload-card--selected & {
-    flex-basis: $-upload-card-selected-width;
     color: sage-color(charcoal, 300);
+  }
+
+  .sage-upload-card--error & {
+    color: $-upload-card-error-color;
   }
 }
 
 .sage-upload-card__dropzone {
   display: flex;
+  flex-flow: row wrap;
   align-items: center;
   justify-content: center;
-  gap: sage-spacing(xs);
+  gap: sage-spacing();
   padding: sage-spacing(md);
   background-color: $-upload-card-background;
   border-radius: $-upload-card-border-radius;
   border: sage-border(default);
 
-  .sage-upload-card:not(.sage-upload-card--selected) & {
-    flex-flow: column;
-  }
-
-  .sage-upload-card--selected & {
-    flex-flow: row wrap;
-    gap: sage-spacing();
-  }
-
   .sage-upload-card.sage-upload-card--error & {
-    border-color: sage-color(red, 300);
+    border-color: $-upload-card-error-color;
   }
 
   .sage-upload-card.sage-upload-card--error & {
     &:hover,
     &:focus,
     &:focus-within {
-      border-color: sage-color(red, 300);
+      border-color: $-upload-card-error-color;
     }
+  }
+
+  .sage-upload-card--stack-only & {
+    flex-flow: column;
+    align-items: flex-start;
+    max-width: $-upload-card-body-width-stack;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -76,7 +78,7 @@ $-upload-card-background: sage-color(white);
   > p {
     @extend %t-sage-body-med;
 
-    color: sage-color(red, 300);
+    color: $-upload-card-error-color;
 
     &:not(:last-child) {
       margin-bottom: sage-spacing(2xs);
@@ -89,7 +91,7 @@ $-upload-card-background: sage-color(white);
 
     &:focus,
     &:hover {
-      color: sage-color(red, 300);
+      color: $-upload-card-error-color;
       text-decoration: underline;
       outline: 0;
     }
@@ -109,26 +111,37 @@ $-upload-card-background: sage-color(white);
   @include visually-hidden;
 }
 
+.sage-upload-card__input-label {
+  /* NOTE: label provides keyboard focus but does not allow form interaction */
+  @include sage-focus-ring;
+}
+
 .sage-upload-card__preview {
-  width: $-upload-card-preview-width;
-  max-width: $-upload-card-preview-max-width;
+  width: 100%;
   margin-right: 0;
   text-align: center;
   border-radius: $-upload-card-preview-border-radius;
+  aspect-ratio: var(--sage-upload-card-aspect-ratio-stack);
+  object-fit: cover;
 
-  .sage-upload-card--selected & {
-    width: 100%;
+  @media (min-width: 610px) {
+    max-width: $-upload-card-preview-max-width;
+    aspect-ratio: var(--sage-upload-card-aspect-ratio);
   }
 
-  @media (max-width: 609px) {
-    max-width: $-upload-card-preview-max-width-mobile;
+  .sage-upload-card--stack-only & {
+    max-width: $-upload-card-preview-max-width-stack;
+    aspect-ratio: var(--sage-upload-card-aspect-ratio-stack);
   }
 }
 
-.sage-upload-card__subtext {
+.sage-upload-card__description {
+  display: flex;
+  flex-direction: column;
+  gap: sage-spacing(sm);
+}
+
+.sage-upload-card__instructions {
   @extend %t-sage-body;
-}
-
-.sage-upload-card__text {
-  @extend %t-sage-heading-6;
+  color: sage-color(charcoal, 200);
 }
