@@ -19,6 +19,8 @@
     <% end %>
     <% if component.selection_preview.present? %>
       <%= image_tag(component.selection_preview, upload_card_preview_image_options) %>
+    <% elsif content_for? :sage_upload_card_preview %>
+      <%= content_for :sage_upload_card_preview %>
     <% else %>
       <%= sage_component SageIconCard, {
         color: "draft",
