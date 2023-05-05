@@ -9,7 +9,7 @@ end
 
 %>
 <% if component.card_color.present? %>
-  <div class="sage-icon-background 
+  <div class="sage-icon-background
     <%= "sage-icon-background--#{component.card_color}" %>
     <%= "sage-icon-background--#{component.size}" if component.size.present? %>
     <%= "sage-icon-background--custom-size" if component.background_height || component.background_width %>
@@ -32,6 +32,7 @@ end
     "
     <% if component.label.present? %>
       aria-label="<%= component.label %>"
+      role="img"
     <% else %>
       aria-hidden=true
     <% end %>
