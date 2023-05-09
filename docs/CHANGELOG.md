@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.12.4](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.12.3...@kajabi/sage@5.12.4) (2023-05-09)
+
+
+### Bug Fixes
+
+* **icon:** add role to rails icon template ([7104b25](https://github.com/Kajabi/sage-lib/commit/7104b2547d7ef70f8001516178f88a0fe3a39411))
+
+
+
+
+
 ## [5.12.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.12.2...@kajabi/sage@5.12.3) (2023-04-27)
 
 

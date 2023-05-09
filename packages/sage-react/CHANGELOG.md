@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.11.4](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.11.3...@kajabi/sage-react@1.11.4) (2023-05-09)
+
+
+### Bug Fixes
+
+* **icon:** corrects 'role not present' a11y violation ([4792fae](https://github.com/Kajabi/sage-lib/commit/4792fae999ebaed6f413d7da75921a6d7ad1cfc0))
+
+
+
+
+
 ## [1.11.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.11.2...@kajabi/sage-react@1.11.3) (2023-04-27)
 
 
