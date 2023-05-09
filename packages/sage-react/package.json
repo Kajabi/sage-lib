@@ -9,6 +9,7 @@
   "homepage": "https://github.com/Kajabi/sage-lib#readme",
   "license": "MIT",
   "main": "dist/main.js",
+  "types": "./dist/types/main.d.ts",
   "directories": {
     "lib": "lib"
   },
@@ -33,9 +34,10 @@
     "yarn": "1.x"
   },
   "scripts": {
-    "build": "build-storybook -o build && webpack --config webpack/webpack.prod.js",
+    "build": "build-storybook -o build && webpack --config webpack/webpack.prod.js && yarn run generate:types",
     "build:watch": "build-storybook -o build && webpack --config webpack/webpack.prod.js --watch",
     "heroku-prebuild": "npm install react@16.13.1 react-dom@16.13.1 react-router-dom@5.1.0 --no-package-lock",
+    "generate:types": "npx tsc",
     "lint": "yarn run eslint \"lib/**/*.{js,jsx}\"",
     "storybook": "start-storybook -p 4100 --ci",
     "preversion": "yarn install && yarn run build",
