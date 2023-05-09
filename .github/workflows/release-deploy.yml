@@ -10,7 +10,7 @@ jobs:
     name: Release and Deploy
     runs-on: ubuntu-latest
     container:
-      image: ruby:2.5.9-alpine3.13
+      image: ruby:2.7.7-alpine3.16
 
     steps:
       - name: Install dependencies
@@ -51,8 +51,8 @@ jobs:
           # pulls all commits (needed for lerna / semantic release to correctly version)
           fetch-depth: "0"
 
-      - name: Install Bundler 2.3.14
-        run: gem install bundler:2.3.14
+      - name: Install Bundler 2.3.22
+        run: gem install bundler:2.3.22
 
       # Setup Git Credentials to come from the Bot
       - name: Set Bot Email
