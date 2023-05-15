@@ -77,7 +77,7 @@ export const Button = React.forwardRef(({
       aria-disabled={isLink && disabled}
       disabled={!isLink && disabled}
       tag={isLink ? linkTag : null}
-      suppressDefaultClass={isLink}
+      {...(isLink ? { suppressDefaultClass: isLink } : {})}
       onClick={onClick}
       {...rest}
     >
