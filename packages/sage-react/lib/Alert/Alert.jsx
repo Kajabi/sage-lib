@@ -28,6 +28,7 @@ export const Alert = ({
       [`sage-alert--${color}`]: color,
       'sage-alert--dismissable': dismissable,
       'sage-alert--small': small,
+      'sage-alert--actions': actions !== null,
     }
   );
 

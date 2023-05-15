@@ -37,9 +37,7 @@ $-alert-icon-colors: (
 .sage-alert {
   display: grid;
   grid-template-columns: auto 1fr;
-  grid-template-areas:
-    "icon copy"
-    ".    actions";
+  grid-template-areas: "icon copy";
   gap: sage-spacing(sm);
   padding: sage-spacing();
   margin-bottom: sage-spacing();
@@ -50,11 +48,21 @@ $-alert-icon-colors: (
     margin-bottom: 0;
   }
 
+  &.sage-alert--actions {
+    grid-template-areas:
+      "icon copy"
+      ".    actions";
+  }
+
   &.sage-alert--dismissable {
     grid-template-columns: auto 1fr auto;
-    grid-template-areas:
-      "icon copy    close"
-      ".    actions .";
+    grid-template-areas: "icon copy    close";
+
+    &.sage-alert--actions {
+      grid-template-areas:
+        "icon copy    close"
+        ".    actions .";
+    }
   }
 }
 
@@ -74,6 +82,14 @@ $-alert-icon-colors: (
   &.sage-alert--dismissable {
     grid-template-columns: auto 1fr auto auto;
     grid-template-areas: "icon copy actions close";
+
+    &.sage-alert--actions {
+      grid-template-areas: "icon copy actions close";
+    }
+  }
+
+  &.sage-alert--actions {
+    grid-template-areas: "icon copy actions";
   }
 }
 
