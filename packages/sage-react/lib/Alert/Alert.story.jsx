@@ -31,8 +31,46 @@ export default {
 
 const Template = (args) => <Alert {...args} />;
 
+export const Default = Template.bind({});
+Default.args = {
+  description: 'This is a default alert with only the required attributes',
+  title: null,
+  titleAddon: null,
+};
+
+export const DefaultWithActions = Template.bind({});
+DefaultWithActions.args = {
+  description: 'This is a default alert with only the required attributes',
+  title: null,
+  titleAddon: null,
+  actions: (
+    <>
+      <Button
+        className={Alert.PRIMARY_ACTION_CLASSNAME}
+        color={Button.COLORS.PRIMARY}
+      >
+        Get unlimited pages
+      </Button>
+      <Link
+        href="//example.com"
+        suppressDefaultClass
+      >
+        Check Usage
+      </Link>
+    </>
+  )
+};
+
 export const DismissableAlert = Template.bind({});
 DismissableAlert.args = {
+  description: 'Body duis rhoncus neque, sed nulla sed quis fames. Eu eu ut at odio ultrices orci varius habitant. Tempor vulputate in nisl massa eget id.',
+  color: Alert.COLORS.DEFAULT,
+  dismissable: true,
+  onClickDismiss: () => console.log('clicked to dismiss'), // eslint-disable-line
+};
+
+export const DismissableAlertWithActions = Template.bind({});
+DismissableAlertWithActions.args = {
   description: 'Body duis rhoncus neque, sed nulla sed quis fames. Eu eu ut at odio ultrices orci varius habitant. Tempor vulputate in nisl massa eget id.',
   color: Alert.COLORS.DEFAULT,
   dismissable: true,
@@ -95,5 +133,3 @@ SmallAlert.args = {
   ),
   small: true,
 };
-
-export const Accessible = () => <Alert color={Alert.COLORS.DEFAULT}>Accessible button</Alert>;
