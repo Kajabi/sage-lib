@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.13.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.12.4...@kajabi/sage@5.13.0) (2023-05-19)
+
+
+### Features
+
+* **alert-rails:** update view to add new class ([4d47872](https://github.com/Kajabi/sage-lib/commit/4d478721b29f2a9bcf6cb681612a5c96a2b5ce7c))
+
+
+
+
+
 ## [5.12.4](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.12.3...@kajabi/sage@5.12.4) (2023-05-09)
 
 

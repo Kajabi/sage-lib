@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.11.5](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.11.4...@kajabi/sage-react@1.11.5) (2023-05-19)
+
+
+### Bug Fixes
+
+* **alert-react:** update grid template to remove row when actions not present ([f3837dc](https://github.com/Kajabi/sage-lib/commit/f3837dcac3138189688e88704c64ee34181d68cf))
+* **react-button:** suppressDefaultClass warning ([4f23182](https://github.com/Kajabi/sage-lib/commit/4f23182a05a103df483c9b2aeb8fbaeea88b9c1a))
+
+
+
+
+
 ## [1.11.4](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.11.3...@kajabi/sage-react@1.11.4) (2023-05-09)
 
 
