@@ -13,7 +13,7 @@ gem 'webpacker', '~> 4.3', '>= 4.3.0'
 gem 'sage_rails', path: 'lib/sage_rails'
 gem "kaminari", "~> 1.2.1"
 
-group :production do
+group :production, :qa, :staging do
   gem 'rails_12factor'
 end
 
