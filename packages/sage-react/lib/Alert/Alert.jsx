@@ -40,13 +40,13 @@ export const Alert = ({
   const getDefaultIcon = () => {
     switch (color) {
       case ALERT_COLORS.WARNING:
-        return SageTokens.ICONS.WARNING_FILLED;
+        return SageTokens.ICONS.DANGER_FILLED;
       case ALERT_COLORS.APPROACHING:
-        return SageTokens.ICONS.WARNING_FILLED;
+        return SageTokens.ICONS.DANGER_FILLED;
       case ALERT_COLORS.DANGER:
-        return SageTokens.ICONS.DANGER_FILLED;
+        return SageTokens.ICONS.WARNING_FILLED;
       case ALERT_COLORS.EXCEEDED:
-        return SageTokens.ICONS.DANGER_FILLED;
+        return SageTokens.ICONS.WARNING_FILLED;
       case ALERT_COLORS.REACHED:
         return SageTokens.ICONS.FLAG;
       case ALERT_COLORS.SUCCESS:
