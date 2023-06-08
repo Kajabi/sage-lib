@@ -98,14 +98,14 @@ $-modal-inner-size: sage-container(md);
 
   }
 
-  .sage-drawer.sage-drawer--floating & {
+  .sage-drawer.sage-drawer--compact & {
     display: flex;
     flex-direction: column;
     height: calc(100vh - 97px);
     max-width: rem(400px);
-    margin-top: 79px;
-    margin-right: 16px;
-    border-radius: 16px;
+    margin-top: rem(79px);
+    margin-right: sage-spacing(sm);
+    border-radius: sage-border(radius-large);
   }
 
   .sage-drawer--expanded & {
@@ -280,7 +280,7 @@ $-modal-inner-size: sage-container(md);
     margin: 0 calc(#{sage-spacing(card)} / 2);
   }
 
-  .sage-drawer--floating & {
+  .sage-drawer--compact & {
     margin-left: 0;
     margin-right: 0;
     padding-left: rem(20px);
@@ -325,7 +325,7 @@ $-modal-inner-size: sage-container(md);
   gap: sage-spacing(sm);
   margin: $-modal-padding-y $-modal-padding-x;
 
-  .sage-drawer--floating & {
+  .sage-drawer--compact & {
     margin: 1rem;
   }
 }

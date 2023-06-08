@@ -14,10 +14,6 @@
   justify-content: flex-end;
   padding: 0;
 
-  &.sage-drawer--floating {
-    --sage-drawer-size: 400px;
-  }
-
   .sage-modal__footer {
     input {
       width: 100%;
@@ -42,13 +38,13 @@
   margin-left: auto; // preserves alignment when only close button is present
 }
 
-.sage-drawer-floating__input-wrapper {
+.sage-drawer-compact__input-wrapper {
   display: flex;
 
   input {
-    border: 0;
     width: 100%;
     margin-bottom: 0;
+    border: 0;
 
     &:active,
     &:focus,
@@ -58,11 +54,11 @@
     }
   }
 
-  button {
+  .sage-btn {
     flex-shrink: 0;
 
     &:not(.sage-btn--subtle) {
-      padding: 8px;
+      padding: sage-spacing(xs);
     }
   }
 }

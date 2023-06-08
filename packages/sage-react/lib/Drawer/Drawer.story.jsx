@@ -76,6 +76,7 @@ export const Compact = Template.bind({});
 Compact.args = {
   active: true,
   children: drawerChildren,
+  compact: true,
   customHeader: (
     <Button
       color={Button.COLORS.SECONDARY}
@@ -86,7 +87,6 @@ Compact.args = {
       Open full profile
     </Button>
   ),
-  floating: true,
   footer: drawerFooter,
   showClose: true,
 };
