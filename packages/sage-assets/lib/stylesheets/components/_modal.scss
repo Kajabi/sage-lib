@@ -95,6 +95,17 @@ $-modal-inner-size: sage-container(md);
     @media (max-width: sage-breakpoint(md-min)) {
       max-width: var(--sage-drawer-mobile-size);
     }
+
+  }
+
+  .sage-drawer.sage-drawer--floating & {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 97px);
+    max-width: rem(400px);
+    margin-top: 79px;
+    margin-right: 16px;
+    border-radius: 16px;
   }
 
   .sage-drawer--expanded & {
@@ -269,6 +280,15 @@ $-modal-inner-size: sage-container(md);
     margin: 0 calc(#{sage-spacing(card)} / 2);
   }
 
+  .sage-drawer--floating & {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: rem(20px);
+    padding-right: rem(20px);
+    padding-bottom: sage-spacing();
+    border-bottom: sage-border(default);
+  }
+
   > :last-child {
     margin-bottom: 0;
   }
@@ -304,6 +324,10 @@ $-modal-inner-size: sage-container(md);
   align-items: center;
   gap: sage-spacing(sm);
   margin: $-modal-padding-y $-modal-padding-x;
+
+  .sage-drawer--floating & {
+    margin: 1rem;
+  }
 }
 
 .sage-modal__footer-aside {

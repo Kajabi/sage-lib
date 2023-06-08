@@ -2,6 +2,7 @@ import React from 'react';
 import { Drawer } from './Drawer';
 import { SageClassnames, SageTokens } from '../configs';
 import { Button } from '../Button';
+import { Icon } from '../Icon';
 import { Grid } from '../Grid';
 
 const drawerChildren = (
@@ -21,6 +22,21 @@ const drawerChildren = (
       ex molestias temporibus accusantium fuga debitis,
       voluptates hic eos ab perferendis ad quo.
     </p>
+  </>
+);
+
+const drawerFooter = (
+  <>
+    <input
+      placeholder="Ask anything or get started with a suggestion..."
+    />
+    <Button
+      color={Button.COLORS.PRIMARY}
+      icon={Icon.ICONS.SEND_MESSAGE}
+      iconOnly
+    >
+      Set
+    </Button>
   </>
 );
 
@@ -55,6 +71,25 @@ export default {
 const Template = (args) => <Drawer {...args} />;
 
 export const Default = Template.bind({});
+
+export const Compact = Template.bind({});
+Compact.args = {
+  active: true,
+  children: drawerChildren,
+  customHeader: (
+    <Button
+      color={Button.COLORS.SECONDARY}
+      subtle={true}
+      icon={SageTokens.ICONS.EXPAND}
+      iconPosition={Button.ICON_POSITIONS.LEFT}
+    >
+      Open full profile
+    </Button>
+  ),
+  floating: true,
+  footer: drawerFooter,
+  showClose: true,
+};
 
 export const WiredExample = () => {
   const [drawerContents, setDrawerContents] = React.useState(null);

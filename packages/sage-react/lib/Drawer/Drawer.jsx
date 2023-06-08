@@ -19,6 +19,8 @@ export const Drawer = ({
   disableBackgroundDismiss,
   expanded,
   expandedSize,
+  floating,
+  footer,
   onExpandChange,
   id,
   onExit,
@@ -43,6 +45,7 @@ export const Drawer = ({
     className,
     {
       'sage-drawer--expanded': expanded,
+      'sage-drawer--floating': floating,
     }
   );
 
@@ -89,6 +92,11 @@ export const Drawer = ({
       <Modal.Body spacing={Modal.Body.SPACINGS.PANEL}>
         {children}
       </Modal.Body>
+      {footer && (
+        <Modal.Footer className="sage-drawer-floating__input-wrapper">
+          {footer}
+        </Modal.Footer>
+      )}
     </Modal>
   );
 };
@@ -106,6 +114,8 @@ Drawer.defaultProps = {
   disableBackgroundDismiss: true,
   expanded: false,
   expandedSize: null,
+  floating: false,
+  footer: null,
   onExit: (val) => val,
   onExpandChange: (expanded) => expanded,
   showClose: true,
@@ -121,6 +131,8 @@ Drawer.propTypes = {
   disableBackgroundDismiss: PropTypes.bool,
   expanded: PropTypes.bool,
   expandedSize: PropTypes.string,
+  floating: PropTypes.bool,
+  footer: PropTypes.node,
   id: PropTypes.string.isRequired,
   onExit: PropTypes.func,
   onExpandChange: PropTypes.func,
