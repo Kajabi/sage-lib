@@ -18,6 +18,18 @@
   }
 }
 
+[data-deprecated=true] {
+  .sage-sidebar .sage-nav__list & {
+    color: sage-color(charcoal, 200);
+  }
+}
+
+.sage-nav__label {
+  .sage-sidebar [data-deprecated=true] & {
+    color: inherit;
+  }
+}
+
 // Side Navigation Footer Top Border
 // Visual division between the scrolling content and the footer
 .sage-sidebar__footer {

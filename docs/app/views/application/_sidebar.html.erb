@@ -108,12 +108,21 @@
           text: component[:title].titleize,
           link: pages_component_path(component[:title]),
           active: current_page?(pages_component_path(component[:title])),
+          icon: component[:deprecated] ? "warning" : nil,
+          attributes: {
+            "data-deprecated": component[:deprecated] ? "true" : nil
+          }
         }
       end
     %>
     <%= sage_component SageNav, {
       items: [
-        { link: pages_component_path(sorted_sage_components[0][:title]), text: "COMPONENTS", items: component_list }
+        {
+          link: pages_component_path(sorted_sage_components[0][:title]),
+          text: "COMPONENTS",
+          items: component_list,
+          icon: "product"
+        }
       ]
     } %>
   <% end %>
