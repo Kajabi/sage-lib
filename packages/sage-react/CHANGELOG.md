@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.11.6](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.11.5...@kajabi/sage-react@1.11.6) (2023-06-09)
+
+
+### Bug Fixes
+
+* **alert:** correct react component icon display ([a86883f](https://github.com/Kajabi/sage-lib/commit/a86883f0c6abad5cd8b0f4ba3931900dca50229e))
+
+
+
+
+
 ## [1.11.5](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.11.4...@kajabi/sage-react@1.11.5) (2023-05-19)
 
 
