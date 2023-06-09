@@ -324,10 +324,6 @@ $-modal-inner-size: sage-container(md);
   align-items: center;
   gap: sage-spacing(sm);
   margin: $-modal-padding-y $-modal-padding-x;
-
-  .sage-drawer--compact & {
-    margin: 1rem;
-  }
 }
 
 .sage-modal__footer-aside {

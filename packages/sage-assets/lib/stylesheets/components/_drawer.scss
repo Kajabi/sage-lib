@@ -40,15 +40,20 @@
 
 .sage-drawer-compact__input-wrapper {
   display: flex;
+  position: relative;
+  margin: 0;
 
   input {
     width: 100%;
     margin-bottom: 0;
+    padding: rem(20px) 1rem;
+    padding-right: 60px;
+    font-size: 14px;
+    border-bottom-left-radius: sage-border(radius-large);
+    border-bottom-right-radius: sage-border(radius-large);
     border: 0;
 
-    &:active,
-    &:focus,
-    &:focus-visible {
+    &:focus {
       border: 0;
       outline: none;
     }
@@ -56,6 +61,8 @@
 
   .sage-btn {
     flex-shrink: 0;
+    position: absolute;
+    right: 16px;
 
     &:not(.sage-btn--subtle) {
       padding: sage-spacing(xs);
