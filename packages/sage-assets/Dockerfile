@@ -7,7 +7,6 @@ ARG NODE_VERSION="16.20.2"
 ARG YARN_VERSION="1.22.18"
 ARG ARCH="x64"
 
-
 RUN apk add \
   bash \
   build-base \
