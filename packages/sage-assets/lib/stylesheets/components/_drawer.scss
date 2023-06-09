@@ -47,8 +47,8 @@
     width: 100%;
     margin-bottom: 0;
     padding: rem(20px) 1rem;
-    padding-right: 60px;
-    font-size: 14px;
+    padding-right: rem(60px);
+    font-size: sage-font-size(body-sm);
     border-bottom-left-radius: sage-border(radius-large);
     border-bottom-right-radius: sage-border(radius-large);
     border: 0;
