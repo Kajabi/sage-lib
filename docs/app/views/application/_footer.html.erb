@@ -8,6 +8,8 @@
     <%= sage_component SageButtonGroup, { gap: :md } do %>
       <%= sage_component SageButton, {
         value: "Was this page helpful?",
+        subtle: true,
+        style: "primary",
         icon: {
           style: "left",
           name: "feedback",
@@ -23,6 +25,10 @@
         external: true,
         style: "secondary",
         remove_underline: true,
+        icon: {
+          name: "launch",
+          style: "right"
+        },
       } %>
       <%= sage_component SageLink, {
         label: "Storybook",
@@ -30,6 +36,10 @@
         external: true,
         style: "secondary",
         remove_underline: true,
+        icon: {
+          name: "launch",
+          style: "right"
+        },
       } %>
     <% end %>
     <%= sage_component SageButtonGroup, { gap: :md } do %>
