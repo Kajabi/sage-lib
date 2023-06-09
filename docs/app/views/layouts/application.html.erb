@@ -10,7 +10,7 @@
     <%= render "application/content_skip_link",
       link_id: "main-content"
     -%>
-    <%= sage_component(SageHeader, {}) do %>
+    <%= sage_component(SageHeader, {css_classes: "sage-docs-header"}) do %>
       <%= render "application/assistant" %>
     <% end %>
     <%= sage_component(SageStage, {}) do %>
