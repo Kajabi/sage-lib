@@ -103,8 +103,8 @@ $-modal-inner-size: sage-container(md);
     flex-direction: column;
     height: calc(100vh - 97px);
     max-width: rem(400px);
-    margin-top: rem(79px);
-    margin-right: sage-spacing(sm);
+    margin-block-start: rem(79px);
+    margin-inline-end: sage-spacing(sm);
     border-radius: sage-border(radius-large);
   }
 
