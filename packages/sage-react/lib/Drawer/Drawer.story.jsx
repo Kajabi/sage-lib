@@ -89,6 +89,7 @@ Compact.args = {
   ),
   footer: drawerFooter,
   showClose: true,
+  customWidth: 425
 };
 
 export const WiredExample = () => {

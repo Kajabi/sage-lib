@@ -17,6 +17,7 @@ export const Drawer = ({
   className,
   compact,
   customHeader,
+  customWidth,
   disableBackgroundDismiss,
   expanded,
   expandedSize,
@@ -68,6 +69,9 @@ export const Drawer = ({
       id={id}
       onExit={onExit}
       styles={{ ...localStyles }}
+      style={{
+        '--sage-drawer-compact-width': `${customWidth}px`
+      }}
     >
       {(customHeader || title || showClose) && (
         <Modal.Header
@@ -112,6 +116,7 @@ Drawer.defaultProps = {
   className: null,
   compact: false,
   customHeader: null,
+  customWidth: null,
   disableBackgroundDismiss: true,
   expanded: false,
   expandedSize: null,
@@ -129,6 +134,7 @@ Drawer.propTypes = {
   className: PropTypes.string,
   compact: PropTypes.bool,
   customHeader: PropTypes.node,
+  customWidth: PropTypes.number,
   disableBackgroundDismiss: PropTypes.bool,
   expanded: PropTypes.bool,
   expandedSize: PropTypes.string,
