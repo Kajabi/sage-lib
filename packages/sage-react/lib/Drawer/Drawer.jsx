@@ -15,10 +15,13 @@ export const Drawer = ({
   active,
   children,
   className,
+  compact,
   customHeader,
+  customWidth,
   disableBackgroundDismiss,
   expanded,
   expandedSize,
+  footer,
   onExpandChange,
   id,
   onExit,
@@ -43,6 +46,7 @@ export const Drawer = ({
     className,
     {
       'sage-drawer--expanded': expanded,
+      'sage-drawer--compact': compact,
     }
   );
 
@@ -65,6 +69,9 @@ export const Drawer = ({
       id={id}
       onExit={onExit}
       styles={{ ...localStyles }}
+      style={{
+        '--sage-drawer-compact-width': `${customWidth}px`
+      }}
     >
       {(customHeader || title || showClose) && (
         <Modal.Header
@@ -89,6 +96,11 @@ export const Drawer = ({
       <Modal.Body spacing={Modal.Body.SPACINGS.PANEL}>
         {children}
       </Modal.Body>
+      {footer && (
+        <Modal.Footer className="sage-drawer-compact__input-wrapper">
+          {footer}
+        </Modal.Footer>
+      )}
     </Modal>
   );
 };
@@ -102,10 +114,13 @@ Drawer.defaultProps = {
   active: false,
   children: null,
   className: null,
+  compact: false,
   customHeader: null,
+  customWidth: null,
   disableBackgroundDismiss: true,
   expanded: false,
   expandedSize: null,
+  footer: null,
   onExit: (val) => val,
   onExpandChange: (expanded) => expanded,
   showClose: true,
@@ -117,10 +132,13 @@ Drawer.propTypes = {
   active: PropTypes.bool,
   children: PropTypes.node,
   className: PropTypes.string,
+  compact: PropTypes.bool,
   customHeader: PropTypes.node,
+  customWidth: PropTypes.number,
   disableBackgroundDismiss: PropTypes.bool,
   expanded: PropTypes.bool,
   expandedSize: PropTypes.string,
+  footer: PropTypes.node,
   id: PropTypes.string.isRequired,
   onExit: PropTypes.func,
   onExpandChange: PropTypes.func,

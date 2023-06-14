@@ -4,7 +4,7 @@
 /// @group sage
 ////
 
-// The Drawer component is an extension of the Modal component. 
+// The Drawer component is an extension of the Modal component.
 // This file is used to isolate the Drawer specific styles.
 
 .sage-drawer {
@@ -13,6 +13,12 @@
 
   justify-content: flex-end;
   padding: 0;
+
+  .sage-modal__footer {
+    input {
+      width: 100%;
+    }
+  }
 }
 
 [data-js-drawer-expanded-content].sage-drawer__hidden-content,
@@ -30,4 +36,36 @@
 
 .sage-drawer__close {
   margin-left: auto; // preserves alignment when only close button is present
+}
+
+.sage-drawer-compact__input-wrapper {
+  display: flex;
+  position: relative;
+  margin: 0;
+
+  input {
+    width: 100%;
+    margin-bottom: 0;
+    padding: rem(20px) 1rem;
+    padding-right: rem(60px);
+    font-size: sage-font-size(body-sm);
+    border-bottom-left-radius: sage-border(radius-large);
+    border-bottom-right-radius: sage-border(radius-large);
+    border: 0;
+
+    &:focus {
+      border: 0;
+      outline: none;
+    }
+  }
+
+  .sage-btn {
+    flex-shrink: 0;
+    position: absolute;
+    right: sage-spacing(sm);
+
+    &:not(.sage-btn--subtle) {
+      padding: sage-spacing(xs);
+    }
+  }
 }
