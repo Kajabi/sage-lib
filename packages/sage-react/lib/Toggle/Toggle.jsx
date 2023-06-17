@@ -113,7 +113,9 @@ export const Toggle = ({
       {message && (
         <div className={`${baseClass}__message`}>{message}</div>
       )}
-      {renderCustomContent()}
+      {customContent && (
+        renderCustomContent()
+      )}
     </Tag>
   );
 };
