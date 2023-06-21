@@ -21,7 +21,7 @@
   <% if component.spinner_on_submit.present? %>
     data-js-sage-spinner-on-submit="<%= component.spinner_on_submit %>"
   <% end %>
-  <%= component.generated_html_attributes.html_safe %>
+  <%= component.generated_html_attributes %>
 >
   <% if component.icon&.dig(:style) == "only" %>
     <span class="visually-hidden">
