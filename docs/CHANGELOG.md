@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.14.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.14.0...@kajabi/sage@5.14.1) (2023-06-22)
+
+
+### Bug Fixes
+
+* **button:** removes html_safe from attributes ([d2b0441](https://github.com/Kajabi/sage-lib/commit/d2b04410c5414e9fcfce903b6627c7f1cadc1dc5))
+* gemfile update ([fc97e5f](https://github.com/Kajabi/sage-lib/commit/fc97e5f997066e615aea940fc59e737b60ad4590))
+
+
+
+
+
 # [5.14.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.13.0...@kajabi/sage@5.14.0) (2023-06-09)
 
 

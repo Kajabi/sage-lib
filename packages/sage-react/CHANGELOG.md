@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.12.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.11.6...@kajabi/sage-react@1.12.0) (2023-06-22)
+
+
+### Bug Fixes
+
+* **toggle:** add condition for customContent ([225e53d](https://github.com/Kajabi/sage-lib/commit/225e53da9c56ab396136b97b817ab1eb4d6b50c9))
+
+
+### Features
+
+* **drawer:** add variation for ai drawer ([277ed5a](https://github.com/Kajabi/sage-lib/commit/277ed5a6fbb09bddff62871561164e69eb594d40))
+
+
+
+
+
 ## [1.11.6](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.11.5...@kajabi/sage-react@1.11.6) (2023-06-09)
 
 

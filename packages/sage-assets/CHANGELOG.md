@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.10.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.9.4...@kajabi/sage-assets@1.10.0) (2023-06-22)
+
+
+### Features
+
+* **drawer:** add variation for ai drawer ([277ed5a](https://github.com/Kajabi/sage-lib/commit/277ed5a6fbb09bddff62871561164e69eb594d40))
+
+
+
+
+
 ## [1.9.4](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.9.3...@kajabi/sage-assets@1.9.4) (2023-05-19)
 
 
