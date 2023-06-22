@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.14.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.14.1...@kajabi/sage@5.14.2) (2023-06-22)
+
+
+### Bug Fixes
+
+* **button:** remove question for test_id / data-kjb-element ([c587f65](https://github.com/Kajabi/sage-lib/commit/c587f655181dbbb0cbd96d20459e67ffdb62d1f9))
+
+
+
+
+
 ## [5.14.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.14.0...@kajabi/sage@5.14.1) (2023-06-22)
 
 
