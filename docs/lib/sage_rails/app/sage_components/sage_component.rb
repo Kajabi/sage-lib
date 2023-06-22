@@ -78,7 +78,7 @@ class SageComponent
   def test_id=(id_string)
     @test_id = id_string
     if id_string
-      generated_html_attributes << " data-kjb-element=\"#{id_string}\""
+      generated_html_attributes << " data-kjb-element=#{id_string}"
     end
   end
 
