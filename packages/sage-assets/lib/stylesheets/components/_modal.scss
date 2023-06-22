@@ -95,6 +95,17 @@ $-modal-inner-size: sage-container(md);
     @media (max-width: sage-breakpoint(md-min)) {
       max-width: var(--sage-drawer-mobile-size);
     }
+
+  }
+
+  .sage-drawer.sage-drawer--compact & {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 97px);
+    max-width: var(--sage-drawer-compact-width, rem(400px));
+    margin-block-start: rem(79px);
+    margin-inline-end: sage-spacing(sm);
+    border-radius: sage-border(radius-large);
   }
 
   .sage-drawer--expanded & {
@@ -267,6 +278,15 @@ $-modal-inner-size: sage-container(md);
     height: calc(100% - var(--sage-drawer-header-height, 24px) - #{3 * sage-spacing(md)}); // a customizable height value for the header area minus top and bottom padding and one gap between header and content (sage-spacing(md))
     padding: 0 calc(#{sage-spacing(card)} / 2);
     margin: 0 calc(#{sage-spacing(card)} / 2);
+  }
+
+  .sage-drawer--compact & {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: rem(20px);
+    padding-right: rem(20px);
+    padding-bottom: sage-spacing();
+    border-bottom: sage-border(default);
   }
 
   > :last-child {
