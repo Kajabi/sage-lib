@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.14.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.14.2...@kajabi/sage@5.14.3) (2023-06-22)
+
+
+### Reverts
+
+* **button:** revert quote and html_safe updates ([8ef008f](https://github.com/Kajabi/sage-lib/commit/8ef008f159abbbec30aceecc90f81805c8baa060))
+
+
+
+
+
 ## [5.14.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.14.1...@kajabi/sage@5.14.2) (2023-06-22)
 
 
