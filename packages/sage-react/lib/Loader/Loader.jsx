@@ -68,9 +68,9 @@ export const Loader = ({
       )}
       {(type === LOADER_TYPES.TYPING) && (
         <div className="sage-loader__typing">
-          <span></span>
-          <span></span>
-          <span></span>
+          <span />
+          <span />
+          <span />
         </div>
       )}
       {label ? (
