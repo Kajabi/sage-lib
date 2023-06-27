@@ -3,4 +3,5 @@ export const LOADER_TYPES = {
   SPINNER: 'spinner',
   SPINNER_IN_BUTTON: 'spinner-in-button',
   SUCCESS: 'success',
+  TYPING: 'typing',
 };
