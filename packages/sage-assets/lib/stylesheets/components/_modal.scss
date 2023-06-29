@@ -47,6 +47,11 @@ $-modal-inner-size: sage-container(md);
     opacity: 1;
   }
 
+  &.sage-modal--is-closing {
+    opacity: 0;
+    transition: opacity 0.15s ease-in-out;
+  }
+
   &.sage-modal--fullscreen {
     padding: 0;
   }
@@ -192,6 +197,7 @@ $-modal-inner-size: sage-container(md);
     }
   }
 }
+
 
 .sage-modal__header {
   display: grid;

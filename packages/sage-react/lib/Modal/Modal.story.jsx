@@ -188,9 +188,14 @@ Default.decorators = [
 
 export const Wired = (args) => {
   const [active, setActive] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
 
   const onExit = () => {
-    setActive(false);
+    setIsClosing(true);
+    setTimeout(() => {
+      setActive(false);
+      setIsClosing(false);
+    }, 1000);
   };
 
   return (
@@ -204,6 +209,7 @@ export const Wired = (args) => {
       <Modal
         {...args}
         active={active}
+        isClosing={isClosing}
         animation={{ direction: Modal.ANIMATION_DIRECTIONS.BOTTOM }}
         onExit={onExit}
       >

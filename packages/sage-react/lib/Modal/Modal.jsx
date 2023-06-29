@@ -19,6 +19,7 @@ export const Modal = ({
   disableBackgroundDismiss,
   fullScreen,
   id,
+  isClosing,
   large,
   onExit,
   size,
@@ -30,6 +31,7 @@ export const Modal = ({
     className,
     {
       'sage-modal--active': active,
+      'sage-modal--is-closing': isClosing,
       'sage-modal--scrollable': allowScroll,
       'sage-modal--large': large,
       'sage-modal--fullscreen': fullScreen,
@@ -120,6 +122,7 @@ Modal.defaultProps = {
   fullScreen: false,
   large: false,
   id: null,
+  isClosing: false,
   disableBackgroundBlur: false,
   disableBackgroundDismiss: false,
   onExit: (val) => val,
@@ -142,6 +145,7 @@ Modal.propTypes = {
   disableBackgroundDismiss: PropTypes.bool,
   fullScreen: PropTypes.bool,
   id: PropTypes.string,
+  isClosing: PropTypes.bool,
   large: PropTypes.bool,
   onExit: PropTypes.func,
   size: PropTypes.oneOf(Object.values(Modal.SIZES))
