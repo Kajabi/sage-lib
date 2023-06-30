@@ -100,7 +100,6 @@ $-modal-inner-size: sage-container(md);
     @media (max-width: sage-breakpoint(md-min)) {
       max-width: var(--sage-drawer-mobile-size);
     }
-
   }
 
   .sage-drawer.sage-drawer--compact & {
