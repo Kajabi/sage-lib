@@ -190,8 +190,6 @@ export const Wired = (args) => {
   const [active, setActive] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
 
-  // The onExit will need to be modified per instance to include this functionality
-  // in order to contain the fade out effect
   const onExit = () => {
     setIsClosing(true);
     setTimeout(() => {
