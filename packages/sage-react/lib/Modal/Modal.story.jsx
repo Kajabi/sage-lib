@@ -190,6 +190,8 @@ export const Wired = (args) => {
   const [active, setActive] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
 
+  // The onExit will need to be modified per instance to include this functionality
+  // in order to contain the fade out effect
   const onExit = () => {
     setIsClosing(true);
     setTimeout(() => {
@@ -210,7 +212,7 @@ export const Wired = (args) => {
         {...args}
         active={active}
         isClosing={isClosing}
-        animation={{ direction: Modal.ANIMATION_DIRECTIONS.BOTTOM }}
+        animation={false}
         onExit={onExit}
       >
         <DefaultBody onExit={onExit} />
