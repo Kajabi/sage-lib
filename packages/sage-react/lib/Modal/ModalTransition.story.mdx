@@ -1,0 +1,32 @@
+import { Meta } from "@storybook/addon-docs";
+
+<Meta title="Sage/Modal/Transition Notes" />
+
+## Transition Notes
+The modal provides a fadeout transition. The developer can opt in by adding the following items to the `<Modal />`.
+
+### useState
+Add useState to the import list
+`import { useState } from 'react';`
+
+### isClosing
+Add isClosing={true} to the Modal to enable the closing transition timer.
+
+```
+<Modal isClosing={true} />
+```
+
+### onExit
+Create an `onExit` below and pass to the Modal's `onExit` prop. Create a `setTimeout` function. `1500` is the recommended value for the closing transiton.
+
+```
+const onExit = () => {
+  setIsClosing(true);
+  setTimeout(() => {
+    setOpen(false);
+    setIsClosing(false);
+  }, 1500);
+};
+
+<Modal onExit={onExit}/>
+```
