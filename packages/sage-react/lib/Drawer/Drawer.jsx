@@ -24,6 +24,7 @@ export const Drawer = ({
   footer,
   onExpandChange,
   id,
+  isClosing,
   onExit,
   showClose,
   size,
@@ -67,6 +68,7 @@ export const Drawer = ({
       className={classNames}
       disableBackgroundDismiss={disableBackgroundDismiss}
       id={id}
+      isClosing={isClosing}
       onExit={onExit}
       styles={{ ...localStyles }}
       style={{
@@ -121,6 +123,7 @@ Drawer.defaultProps = {
   expanded: false,
   expandedSize: null,
   footer: null,
+  isClosing: false,
   onExit: (val) => val,
   onExpandChange: (expanded) => expanded,
   showClose: true,
@@ -140,6 +143,7 @@ Drawer.propTypes = {
   expandedSize: PropTypes.string,
   footer: PropTypes.node,
   id: PropTypes.string.isRequired,
+  isClosing: PropTypes.bool,
   onExit: PropTypes.func,
   onExpandChange: PropTypes.func,
   showClose: PropTypes.bool,
