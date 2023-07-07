@@ -20,7 +20,7 @@
     "react-router-dom": "5.2.0",
     "semver": "^7.3.2",
     "style-dictionary": "^3.0.2",
-    "stylelint": "^13.7.2",
+    "stylelint": "^15.10.1",
     "stylelint-config-sass-guidelines": "^7.0.0",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-webpack-plugin": "^2.0.0",
