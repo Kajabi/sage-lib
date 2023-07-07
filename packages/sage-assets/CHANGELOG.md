@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.11.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.10.0...@kajabi/sage-assets@1.11.0) (2023-07-07)
+
+
+### Features
+
+* **loader:** add typing variant ([389d559](https://github.com/Kajabi/sage-lib/commit/389d559204e1360af2b8355b437da41e6257a64e))
+
+
+
+
+
 # [1.10.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.9.4...@kajabi/sage-assets@1.10.0) (2023-06-22)
 
 

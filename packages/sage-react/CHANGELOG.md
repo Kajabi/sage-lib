@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.13.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.12.0...@kajabi/sage-react@1.13.0) (2023-07-07)
+
+
+### Bug Fixes
+
+* **react-dropdown:** positions the dropdown based on viewport available space ([cf11dc9](https://github.com/Kajabi/sage-lib/commit/cf11dc91a26db066b0323984e0d280ee274c5253))
+
+
+### Features
+
+* **loader:** add typing variant ([389d559](https://github.com/Kajabi/sage-lib/commit/389d559204e1360af2b8355b437da41e6257a64e))
+
+
+
+
+
 # [1.12.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.11.6...@kajabi/sage-react@1.12.0) (2023-06-22)
 
 
