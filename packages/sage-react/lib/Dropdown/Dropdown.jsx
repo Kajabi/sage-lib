@@ -55,21 +55,11 @@ export const Dropdown = ({
     }
   };
 
-  const setPanelCoords = () => {
-    const rect = wrapperRef.current.getBoundingClientRect();
-
-    updateCoords({
-      top: rect.bottom + topBoxOffset,
-      left: align !== 'right'
-        ? rect.left + inlineBoxOffset
-        : 'intitial',
-      right: align === 'right'
-        ? window.innerWidth - rect.right + inlineBoxOffset
-        : 'intitial',
-    });
+  const setPanelCoords = (coords) => {
+    updateCoords(coords);
   };
 
-  const onUpdate = useCallback(debounce(() => setPanelCoords(), 20), []); // eslint-disable-line
+  const onUpdate = useCallback(debounce(() => positionElement(), 0), []); // eslint-disable-line
 
   // NOTE: getHeight and positionElement must be kept in alignment
   // with packages/sage-system/lib/dropdown.js since we don't
@@ -86,49 +76,52 @@ export const Dropdown = ({
     return height - borderBottomWidth - borderTopWidth - paddingTop - paddingBottom;
   };
 
-  const positionElement = (el) => {
+  const positionElement = () => {
     let direction = null;
-
+    const el = wrapperRef.current;
     // Elements
     const button = el;
     const panel = el.lastElementChild;
-    const win = panel.ownerDocument.defaultView;
-    const docEl = window.document.documentElement;
-
-    panel.style.top = ''; // resets the style
 
     // Dimensions
     const buttonDimensions = button.getBoundingClientRect();
     const panelDimensions = panel.getBoundingClientRect();
 
-    const panelNewLoc = {
-      top: (buttonDimensions.height / 2) + panelDimensions.height
-    };
-
-    const viewport = {
-      top: docEl.scrollTop,
-      bottom: window.pageYOffset + docEl.clientHeight,
-    };
-
-    const offset = {
-      top: panelDimensions.top + win.pageYOffset,
-      left: panelDimensions.left + win.pageXOffset,
-      bottom: (panelDimensions.top + win.pageYOffset)
-    };
-
     const panelHeight = getHeight(panel);
-    const enoughSpaceAbove = viewport.top < (offset.top + panelHeight);
-    const enoughSpaceBelow = viewport.bottom > (offset.bottom + panelHeight);
+    const enoughSpaceAbove = panelHeight + buttonDimensions.bottom > window.innerHeight;
+    const enoughSpaceBelow = panelHeight + buttonDimensions.bottom < window.innerHeight;
 
     if (!enoughSpaceBelow && enoughSpaceAbove) {
       direction = 'above';
     } else if (!enoughSpaceAbove && enoughSpaceBelow) {
       direction = 'below';
     }
+    const rect = wrapperRef.current.getBoundingClientRect();
+    const coords = {
+      top: buttonDimensions.bottom + topBoxOffset,
+      left: align !== 'right'
+        ? rect.left + inlineBoxOffset
+        : 'initial',
+      right: align === 'right' && isPinned
+        ? window.innerWidth - rect.right + inlineBoxOffset
+        : 'initial',
+    };
+
+    if (!isPinned) {
+      coords.top = null;
+      coords.left = 'initial';
+    }
 
     if (direction === 'above') {
-      panel.style.top = `-${panelNewLoc.top}px`;
+      coords.top = ((buttonDimensions.height / 4) + panelDimensions.height) * -1;
+      coords.left = 'initial';
+      if (isPinned) {
+        coords.top = (buttonDimensions.top - panelDimensions.height);
+        coords.right = window.innerWidth - buttonDimensions.right + inlineBoxOffset;
+      }
     }
+
+    setPanelCoords(coords);
   };
 
   useEffect(() => {
@@ -136,27 +129,22 @@ export const Dropdown = ({
       return false;
     }
 
-    if (isActive && isPinned) {
-      setPanelCoords();
-      window.addEventListener('scroll', onUpdate);
-      window.addEventListener('resize', onUpdate);
-    } else {
-      positionElement(wrapperRef.current);
-      window.removeEventListener('scroll', onUpdate);
-      window.removeEventListener('resize', onUpdate);
-    }
+    positionElement();
+
+    window.addEventListener('scroll', onUpdate);
+    window.addEventListener('resize', onUpdate);
 
     return () => {
       window.removeEventListener('scroll', onUpdate);
       window.removeEventListener('resize', onUpdate);
     };
-  }, [wrapperRef, isActive, isPinned, onUpdate]);
+  }, [wrapperRef, isActive, isPinned, onUpdate]); // eslint-disable-line
 
   useEffect(() => {
     if (panelStateToken) {
       setActive(!isActive);
     }
-  }, [panelStateToken]);
+  }, [panelStateToken]); // eslint-disable-line
 
   const a11yAttrs = {
     'aria-expanded': isActive,

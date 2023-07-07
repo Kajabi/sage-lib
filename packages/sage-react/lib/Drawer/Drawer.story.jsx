@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Drawer } from './Drawer';
 import { SageClassnames, SageTokens } from '../configs';
 import { Button } from '../Button';
@@ -96,6 +96,7 @@ export const WiredExample = () => {
   const [drawerContents, setDrawerContents] = React.useState(null);
   const [drawerActive, setDrawerActive] = React.useState(true);
   const [drawerExpanded, setDrawerExpanded] = React.useState(false);
+  const [isClosing, setIsClosing] = useState(false);
 
   const drawerCustomHeader = (
     <Button
@@ -128,6 +129,14 @@ export const WiredExample = () => {
       </p>
     </>
   );
+
+  const onExit = () => {
+    setIsClosing(true);
+    setTimeout(() => {
+      setDrawerActive(false);
+      setIsClosing(false);
+    }, 1000);
+  };
 
   const respondToDrawerExpandChange = (status) => {
     switch (status) {
@@ -164,7 +173,8 @@ export const WiredExample = () => {
       <Drawer
         active={drawerActive}
         expanded={drawerExpanded}
-        onExit={() => setDrawerActive(false)}
+        isClosing={isClosing}
+        onExit={onExit}
         onExpandChange={respondToDrawerExpandChange}
         customHeader={drawerCustomHeader}
         disableBackgroundDismiss={!drawerExpanded}
