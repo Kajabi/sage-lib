@@ -15,6 +15,7 @@ export const OptionsDropdown = ({
   panelSize,
   options,
   triggerButtonSubtle,
+  ...rest // Used as an option to pass other props to Dropdown (base) component
 }) => (
   <Dropdown
     align={align}
@@ -29,6 +30,7 @@ export const OptionsDropdown = ({
     panelSize={panelSize}
     triggerModifier="options"
     triggerButtonSubtle={triggerButtonSubtle}
+    {...rest}
   >
     <Dropdown.ItemList items={options} />
   </Dropdown>

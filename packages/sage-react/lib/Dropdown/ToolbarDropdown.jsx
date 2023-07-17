@@ -15,6 +15,7 @@ export const ToolbarDropdown = ({
   options,
   triggerButtonSubtle,
   triggerClassnames,
+  ...rest // Used as an option to pass other props to Dropdown (base) component
 }) => (
   <Dropdown
     align={align}
@@ -30,6 +31,7 @@ export const ToolbarDropdown = ({
     triggerModifier="options"
     triggerButtonSubtle={triggerButtonSubtle}
     triggerClassnames={triggerClassnames}
+    {...rest}
   >
     <Dropdown.ItemList items={options} />
   </Dropdown>
