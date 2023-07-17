@@ -37,6 +37,7 @@ export const SelectDropdown = ({
   selectionBecomesLabel,
   showSelectionsAsLabels,
   triggerWidth,
+  ...rest // Used as an option to pass other props to Dropdown (base) component
 }) => {
   const emptySelectedValue = (
     <>
@@ -213,6 +214,7 @@ export const SelectDropdown = ({
       panelSize={panelSize}
       triggerModifier="select"
       triggerWidth={triggerWidth}
+      {...rest}
     >
       <Dropdown.ItemList
         allowMultiselect={allowMultiselect}
