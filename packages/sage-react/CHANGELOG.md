@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.13.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.13.0...@kajabi/sage-react@1.13.1) (2023-07-17)
+
+
+### Bug Fixes
+
+* **react-dropdowns:** add ...rest to allow additional props ([6810313](https://github.com/Kajabi/sage-lib/commit/6810313a09bf60048e034b27fdd98973fe690e00))
+
+
+
+
+
 # [1.13.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.12.0...@kajabi/sage-react@1.13.0) (2023-07-07)
 
 
