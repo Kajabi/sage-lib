@@ -25,3 +25,18 @@
     {text: "This is the error message."},
   ]
 } %>
+
+<h3 class="t-sage-heading-6">Selected Error State</h3>
+
+<%= sage_component SageUploadCard, {
+  accepted_files: [
+    {name: "contacts.csv"},
+  ],
+  file_selected: true,
+  has_error: true,
+  selection_label: "Replace file",
+  selection_subtext: "Recommended dimensions or file size requirements",
+  errors: [
+    {text: "This is the error message."},
+  ]
+} %>

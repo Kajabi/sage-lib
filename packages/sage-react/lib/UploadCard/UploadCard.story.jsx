@@ -17,7 +17,7 @@ export default {
     selectionLabel: 'Select a file',
     selectionSubtext: 'Upload a .csv up to 10KB',
     replaceLabel: 'Replace file'
-  }
+  },
 };
 const Template = (args) => <UploadCard {...args} />;
 
@@ -31,3 +31,22 @@ Default.decorators = [
     </>
   )
 ];
+
+export const DefaultWithError = Template.bind({});
+DefaultWithError.args = {
+  errors: [
+    {
+      message: 'This is the error message.'
+    },
+  ]
+};
+
+export const SelectedWithError = Template.bind({});
+SelectedWithError.args = {
+  acceptedFiles: [{ name: '.csv', size: '1 M' }],
+  errors: [
+    {
+      message: 'This is the error message.'
+    },
+  ]
+};
