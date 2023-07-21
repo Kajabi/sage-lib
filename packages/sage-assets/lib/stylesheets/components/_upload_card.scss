@@ -63,7 +63,7 @@ $-upload-card-background: sage-color(white);
     border-color: sage-color(red, 300);
   }
 
-  .sage-upload-card.sage-upload-card--error:not(.sage-upload-card--selected) & {
+  .sage-upload-card.sage-upload-card--error & {
     &:hover,
     &:focus,
     &:focus-within {
