@@ -95,3 +95,15 @@ $-expandable-card-padding-xs: sage-spacing(xs);
   }
 }
 // NOTE: Styles for align_arrow_right prop added in `_button`
+
+.sage-expandable-card__trigger-custom {
+  display: grid;
+  grid-auto-columns: auto;
+  grid-auto-flow: column;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 16px;
+  .sage-expandable-card__trigger::before {
+    margin-right: 0;
+  }
+}
