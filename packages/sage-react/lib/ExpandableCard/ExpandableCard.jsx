@@ -11,6 +11,8 @@ export const ExpandableCard = ({
   expanded,
   children,
   className,
+  customTrigger,
+  customTriggerContent,
   name,
   onClick,
   sageType,
@@ -49,18 +51,39 @@ export const ExpandableCard = ({
 
   return (
     <div className={`${containerClassnames} ${className || ''}`} {...rest}>
-      <Button
-        aria-controls={id}
-        aria-expanded={isExpanded}
-        className="sage-expandable-card__trigger"
-        color="secondary"
-        fullWidth={true}
-        icon={SageTokens.ICONS.CARET_RIGHT}
-        onClick={handleChange}
-        subtle={true}
-      >
-        {triggerLabel}
-      </Button>
+      {customTrigger ? (
+        <div className="sage-expandable-card__trigger-custom">
+          <Button
+            aria-controls={id}
+            aria-expanded={isExpanded}
+            className="sage-expandable-card__trigger"
+            color="secondary"
+            fullWidth={false}
+            iconOnly={true}
+            icon={SageTokens.ICONS.CARET_RIGHT}
+            onClick={handleChange}
+            small={true}
+            subtle={true}
+          >
+            {triggerLabel}
+          </Button>
+          {customTriggerContent}
+        </div>
+      ) : (
+        <Button
+          aria-controls={id}
+          aria-expanded={isExpanded}
+          className="sage-expandable-card__trigger"
+          color="secondary"
+          fullWidth={true}
+          icon={SageTokens.ICONS.CARET_RIGHT}
+          onClick={handleChange}
+          subtle={true}
+        >
+          {triggerLabel}
+        </Button>
+      )}
+
       <div id={id} className={bodyClassnames}>
         {children}
       </div>
@@ -74,6 +97,8 @@ ExpandableCard.defaultProps = {
   expanded: false,
   children: null,
   className: null,
+  customTrigger: false,
+  customTriggerContent: null,
   name: null,
   onClick: null,
   sageType: false,
@@ -83,6 +108,8 @@ ExpandableCard.defaultProps = {
 ExpandableCard.propTypes = {
   alignArrowRight: PropTypes.bool,
   bodyBordered: PropTypes.bool,
+  customTrigger: PropTypes.bool,
+  customTriggerContent: PropTypes.node,
   expanded: PropTypes.bool,
   className: PropTypes.string,
   children: PropTypes.node,
