@@ -1,22 +1,21 @@
-import React from "react";
-import { Checkbox } from "../Toggle";
-import { ExpandableCard } from "./ExpandableCard";
-import { Badge } from "../Badge";
-import { Card } from "../Card";
-import { OptionsDropdown } from "../Dropdown";
-import { Divider } from "../Divider";
-import { SageClassnames, SageTokens } from "../configs";
-import { Grid } from "../Grid";
+import React from 'react';
+import { Checkbox } from '../Toggle';
+import { ExpandableCard } from './ExpandableCard';
+import { Badge } from '../Badge';
+import { OptionsDropdown } from '../Dropdown';
+import { Divider } from '../Divider';
+import { SageClassnames } from '../configs';
+import { Grid } from '../Grid';
 
 export default {
-  title: "Sage/ExpandableCard",
+  title: 'Sage/ExpandableCard',
   component: ExpandableCard,
   // displays description on Docs tab
   parameters: {
     docs: {
       description: {
         component:
-          "Card that can be expanded and collapsed in order to display additional content.",
+          'Card that can be expanded and collapsed in order to display additional content.',
       },
     },
   },
@@ -51,7 +50,7 @@ export default {
         />
       </>
     ),
-    triggerLabel: "Expand",
+    triggerLabel: 'Expand',
   },
 };
 const Template = (args) => <ExpandableCard {...args} />;
@@ -63,7 +62,7 @@ export const CustomTrigger = () => (
     <ExpandableCard
       triggerLabel="Expand"
       customTrigger={true}
-      customTriggerContent={
+      customTriggerContent={(
         <>
           <Grid>
             <Grid.Row horizontalAlignment="space-between">
@@ -76,25 +75,25 @@ export const CustomTrigger = () => (
                 />
               </Grid.Col>
               <Grid.Col className={SageClassnames.TYPE_ALIGN_RIGHT}>
-                <time datetime="2023-02-14 20:00">Feb 14, 2023</time>
+                <time dateTime="2023-02-14 20:00">Feb 14, 2023</time>
                 <OptionsDropdown
                   className={SageClassnames.SPACERS.LG_LEFT}
                   exitPanelHandler={() => {}}
                   isPinned={false}
-                  onEscapeHook={function noRefCheck() {}}
+                  onEscapeHook={() => {}}
                   triggerButtonSubtle={true}
                   options={[
                     {
                       id: 1,
-                      label: "Send reciept",
+                      label: 'Send reciept',
                     },
                     {
                       id: 2,
-                      label: "View receipt",
+                      label: 'View receipt',
                     },
                     {
                       id: 3,
-                      label: "Refund payment",
+                      label: 'Refund payment',
                     },
                   ]}
                 />
@@ -102,7 +101,7 @@ export const CustomTrigger = () => (
             </Grid.Row>
           </Grid>
         </>
-      }
+      )}
     >
       <div>This is the content</div>
     </ExpandableCard>
@@ -114,7 +113,7 @@ export const CustomTrigger = () => (
     <ExpandableCard
       triggerLabel="Expand"
       customTrigger={true}
-      customTriggerContent={
+      customTriggerContent={(
         <>
           <Grid>
             <Grid.Row horizontalAlignment="space-between">
@@ -127,25 +126,25 @@ export const CustomTrigger = () => (
                 />
               </Grid.Col>
               <Grid.Col className={SageClassnames.TYPE_ALIGN_RIGHT}>
-                <time datetime="2023-02-14 20:00">Feb 14, 2023</time>
+                <time dateTime="2023-02-14 20:00">Feb 14, 2023</time>
                 <OptionsDropdown
                   className={SageClassnames.SPACERS.LG_LEFT}
                   exitPanelHandler={() => {}}
                   isPinned={false}
-                  onEscapeHook={function noRefCheck() {}}
+                  onEscapeHook={() => {}}
                   triggerButtonSubtle={true}
                   options={[
                     {
                       id: 1,
-                      label: "Send reciept",
+                      label: 'Send reciept',
                     },
                     {
                       id: 2,
-                      label: "View receipt",
+                      label: 'View receipt',
                     },
                     {
                       id: 3,
-                      label: "Refund payment",
+                      label: 'Refund payment',
                     },
                   ]}
                 />
@@ -153,7 +152,7 @@ export const CustomTrigger = () => (
             </Grid.Row>
           </Grid>
         </>
-      }
+      )}
     >
       <div>This is the content</div>
     </ExpandableCard>
