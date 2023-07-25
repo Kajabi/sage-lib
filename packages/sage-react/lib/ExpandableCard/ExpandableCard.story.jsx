@@ -1,15 +1,22 @@
-import React from 'react';
-import { Checkbox } from '../Toggle';
-import { ExpandableCard } from './ExpandableCard';
+import React from "react";
+import { Checkbox } from "../Toggle";
+import { ExpandableCard } from "./ExpandableCard";
+import { Badge } from "../Badge";
+import { Card } from "../Card";
+import { OptionsDropdown } from "../Dropdown";
+import { Divider } from "../Divider";
+import { SageClassnames, SageTokens } from "../configs";
+import { Grid } from "../Grid";
 
 export default {
-  title: 'Sage/ExpandableCard',
+  title: "Sage/ExpandableCard",
   component: ExpandableCard,
   // displays description on Docs tab
   parameters: {
     docs: {
       description: {
-        component: 'Card that can be expanded and collapsed in order to display additional content.'
+        component:
+          "Card that can be expanded and collapsed in order to display additional content.",
       },
     },
   },
@@ -44,9 +51,111 @@ export default {
         />
       </>
     ),
-    triggerLabel: 'Expand'
-  }
+    triggerLabel: "Expand",
+  },
 };
 const Template = (args) => <ExpandableCard {...args} />;
 
 export const Default = Template.bind({});
+
+export const CustomTrigger = () => (
+  <>
+    <ExpandableCard
+      triggerLabel="Expand"
+      customTrigger={true}
+      customTriggerContent={
+        <>
+          <Grid>
+            <Grid.Row horizontalAlignment="space-between">
+              <Grid.Col>
+                ¥1,107,243.69 JPY ($8,000.50 USD)
+                <Badge
+                  className={SageClassnames.SPACERS.XS_LEFT}
+                  isInteractive={false}
+                  value="Label"
+                />
+              </Grid.Col>
+              <Grid.Col className={SageClassnames.TYPE_ALIGN_RIGHT}>
+                <time datetime="2023-02-14 20:00">Feb 14, 2023</time>
+                <OptionsDropdown
+                  className={SageClassnames.SPACERS.LG_LEFT}
+                  exitPanelHandler={() => {}}
+                  isPinned={false}
+                  onEscapeHook={function noRefCheck() {}}
+                  triggerButtonSubtle={true}
+                  options={[
+                    {
+                      id: 1,
+                      label: "Send reciept",
+                    },
+                    {
+                      id: 2,
+                      label: "View receipt",
+                    },
+                    {
+                      id: 3,
+                      label: "Refund payment",
+                    },
+                  ]}
+                />
+              </Grid.Col>
+            </Grid.Row>
+          </Grid>
+        </>
+      }
+    >
+      <div>This is the content</div>
+    </ExpandableCard>
+
+    <Divider
+      className={`${SageClassnames.SPACERS.XS_BOTTOM} ${SageClassnames.SPACERS.XS_TOP}`}
+    />
+
+    <ExpandableCard
+      triggerLabel="Expand"
+      customTrigger={true}
+      customTriggerContent={
+        <>
+          <Grid>
+            <Grid.Row horizontalAlignment="space-between">
+              <Grid.Col>
+                ¥1,107,243.69 JPY ($8,000.50 USD)
+                <Badge
+                  className={SageClassnames.SPACERS.XS_LEFT}
+                  isInteractive={false}
+                  value="Label"
+                />
+              </Grid.Col>
+              <Grid.Col className={SageClassnames.TYPE_ALIGN_RIGHT}>
+                <time datetime="2023-02-14 20:00">Feb 14, 2023</time>
+                <OptionsDropdown
+                  className={SageClassnames.SPACERS.LG_LEFT}
+                  exitPanelHandler={() => {}}
+                  isPinned={false}
+                  onEscapeHook={function noRefCheck() {}}
+                  triggerButtonSubtle={true}
+                  options={[
+                    {
+                      id: 1,
+                      label: "Send reciept",
+                    },
+                    {
+                      id: 2,
+                      label: "View receipt",
+                    },
+                    {
+                      id: 3,
+                      label: "Refund payment",
+                    },
+                  ]}
+                />
+              </Grid.Col>
+            </Grid.Row>
+          </Grid>
+        </>
+      }
+    >
+      <div>This is the content</div>
+    </ExpandableCard>
+  </>
+);
