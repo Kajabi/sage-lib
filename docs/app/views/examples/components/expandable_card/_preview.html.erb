@@ -105,3 +105,73 @@
     has_error: false
   } %>
 <% end %>
+
+<%= md("
+#### Custom Header
+
+A custom header can be applied using the `sage_expandable_card_custom_header` section. This will replace the default header with the content provided.
+This should be used in conjunction with the `align_trigger` option.
+
+", use_sage_type: true) %>
+
+<%= sage_component SageExpandableCard, {
+  trigger_label: "Expand",
+  align_arrow_right: true,
+  align_trigger: "left",
+} do %>
+  <% content_for :sage_expandable_card_custom_header do %>
+    <p>This is custom header content with trigger to left</p>
+  <% end %>
+  <%= sage_component SageCheckbox, {
+    id:"c4",
+    label_text: "Grant offers",
+    checked: false,
+    disabled: false,
+    has_error: false
+  } %>
+  <%= sage_component SageCheckbox, {
+    id:"c5",
+    label_text: "Add tags",
+    checked: false,
+    disabled: false,
+    has_error: false
+  } %>
+  <%= sage_component SageCheckbox, {
+    id:"c6",
+    label_text: "Subscribe to emails",
+    checked: false,
+    disabled: false,
+    has_error: false
+  } %>
+<% end %>
+
+<%= sage_component SageExpandableCard, {
+  trigger_label: "Expand",
+  align_arrow_right: true,
+  align_trigger: "right",
+} do %>
+  <% content_for :sage_expandable_card_custom_header do %>
+    <p>This is custom header content with trigger to right</p>
+  <% end %>
+  <%= sage_component SageCheckbox, {
+    id:"c4",
+    label_text: "Grant offers",
+    checked: false,
+    disabled: false,
+    has_error: false
+  } %>
+  <%= sage_component SageCheckbox, {
+    id:"c5",
+    label_text: "Add tags",
+    checked: false,
+    disabled: false,
+    has_error: false
+  } %>
+  <%= sage_component SageCheckbox, {
+    id:"c6",
+    label_text: "Subscribe to emails",
+    checked: false,
+    disabled: false,
+    has_error: false
+  } %>
+<% end %>
