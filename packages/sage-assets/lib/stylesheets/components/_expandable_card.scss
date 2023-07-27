@@ -19,6 +19,12 @@ $-expandable-card-padding-xs: sage-spacing(xs);
     &:not(:last-child) {
       margin-bottom: sage-spacing();
     }
+
+    .sage-expandable-card__header {
+      padding: sage-spacing();
+      padding-bottom: 0;
+      margin-bottom: -#{sage-spacing(xs)};
+    }
   }
 }
 
@@ -86,6 +92,8 @@ $-expandable-card-padding-xs: sage-spacing(xs);
       height: 100%;
       border-radius: rem(14px);
     }
+
+
   }
 }
 
@@ -96,13 +104,13 @@ $-expandable-card-padding-xs: sage-spacing(xs);
 }
 // NOTE: Styles for align_arrow_right prop added in `_button`
 
-
+// styles related to custom header
 .sage-expandable-card__header {
   display: grid;
   grid-auto-columns: auto;
   grid-auto-flow: column;
   align-items: center;
-  gap: 16px;
+  gap: $-expandable-card-padding;
   .sage-expandable-card__trigger::before {
     margin: 0;
   }
@@ -114,5 +122,24 @@ $-expandable-card-padding-xs: sage-spacing(xs);
   grid-template-columns: 1fr auto;
   .sage-expandable-card__trigger {
     order: 1;
+  }
+}
+
+
+// styles related to custom header when used in accordian
+.sage-accordion {
+  .sage-expandable-card__header {
+    .sage-btn--subtle::after {
+      width: rem(32px);
+      height: rem(32px);
+      padding: inherit;
+      border-radius: sage-border(radius-round);
+    }
+    .sage-expandable-card__trigger {
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      border-radius: sage-border(radius-round);
+    }
   }
 }
