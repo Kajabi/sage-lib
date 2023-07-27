@@ -96,14 +96,23 @@ $-expandable-card-padding-xs: sage-spacing(xs);
 }
 // NOTE: Styles for align_arrow_right prop added in `_button`
 
-.sage-expandable-card__trigger-custom {
+
+.sage-expandable-card__header {
   display: grid;
   grid-auto-columns: auto;
   grid-auto-flow: column;
-  grid-template-columns: auto 1fr;
   align-items: center;
   gap: 16px;
   .sage-expandable-card__trigger::before {
-    margin-right: 0;
+    margin: 0;
+  }
+}
+.sage-expandable-card__trigger-left {
+  grid-template-columns: auto 1fr;
+}
+.sage-expandable-card__trigger-right {
+  grid-template-columns: 1fr auto;
+  .sage-expandable-card__trigger {
+    order: 1;
   }
 }

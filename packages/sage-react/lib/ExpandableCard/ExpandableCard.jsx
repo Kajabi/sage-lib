@@ -7,12 +7,12 @@ import { SageClassnames, SageTokens } from '../configs';
 
 export const ExpandableCard = ({
   alignArrowRight,
+  alignTrigger,
   bodyBordered,
   expanded,
   children,
   className,
-  customTrigger,
-  customTriggerContent,
+  headerContent,
   name,
   onClick,
   sageType,
@@ -49,28 +49,10 @@ export const ExpandableCard = ({
     [`${SageClassnames.TYPE_BLOCK}`]: sageType,
   });
 
-  return (
-    <div className={`${containerClassnames} ${className || ''}`} {...rest}>
-      {customTrigger ? (
-        <div className="sage-expandable-card__trigger-custom">
-          <Button
-            aria-controls={id}
-            aria-expanded={isExpanded}
-            className="sage-expandable-card__trigger"
-            color="secondary"
-            fullWidth={false}
-            iconOnly={true}
-            icon={SageTokens.ICONS.CARET_RIGHT}
-            onClick={handleChange}
-            small={true}
-            subtle={true}
-          >
-            {triggerLabel}
-          </Button>
-          {customTriggerContent}
-        </div>
-      ) : (
-        <Button
+  const determineAlignment = () => {
+    let className = "sage-expandable-card__header";
+    const ButtonWrapper = ({...rest}) => (
+      <Button
           aria-controls={id}
           aria-expanded={isExpanded}
           className="sage-expandable-card__trigger"
@@ -79,10 +61,32 @@ export const ExpandableCard = ({
           icon={SageTokens.ICONS.CARET_RIGHT}
           onClick={handleChange}
           subtle={true}
+          {...rest}
         >
           {triggerLabel}
         </Button>
-      )}
+    );
+
+    if (alignTrigger === "middle") {
+      return (
+        <>
+          <ButtonWrapper/>
+        </>
+      )
+      ;
+    } else {
+      return (
+        <div className={`${className} sage-expandable-card__trigger-${alignTrigger}`}>
+          {<ButtonWrapper iconOnly={true} fullWidth={false} />}
+          <div>{headerContent}</div>
+        </div>
+      );
+    }
+  };
+
+  return (
+    <div className={`${containerClassnames} ${className || ''}`} {...rest}>
+      {determineAlignment()}
 
       <div id={id} className={bodyClassnames}>
         {children}
@@ -97,8 +101,8 @@ ExpandableCard.defaultProps = {
   expanded: false,
   children: null,
   className: null,
-  customTrigger: false,
-  customTriggerContent: null,
+  headerContent: null,
+  alignTrigger: 'middle',
   name: null,
   onClick: null,
   sageType: false,
@@ -108,11 +112,11 @@ ExpandableCard.defaultProps = {
 ExpandableCard.propTypes = {
   alignArrowRight: PropTypes.bool,
   bodyBordered: PropTypes.bool,
-  customTrigger: PropTypes.bool,
-  customTriggerContent: PropTypes.node,
+  headerContent: PropTypes.node,
   expanded: PropTypes.bool,
   className: PropTypes.string,
   children: PropTypes.node,
+  alignTrigger: PropTypes.oneOf(['left', 'middle', 'right']).isRequired,
   name: PropTypes.string,
   onClick: PropTypes.func,
   sageType: PropTypes.bool,
