@@ -1,21 +1,41 @@
-<div
-  class="sage-expandable-card
+<div class="sage-expandable-card
     <%= component.generated_css_classes %>
     <% if component.expanded.present? %>sage-expandable-card--expanded<% end %>
     <% if component.align_arrow_right %>sage-expandable-card--align-arrow-right<% end %>"
     <%= component.generated_html_attributes.html_safe %>
 >
-  <%= sage_component SageButton, {
-    style: "secondary",
-    subtle: true,
-    value: component.trigger_label,
-    icon: { name: "caret-right", style: "left" },
-    css_classes: "sage-expandable-card__trigger",
-    attributes: {
-      "data-js-accordion": "header",
-      "aria-expanded": (component.expanded.present? ? true : false)
-    },
-  } %>
+  <% if component.align_trigger == "right" || component.align_trigger == "left" %>
+    <div class="sage-expandable-card__header sage-expandable-card__trigger-<%= component.align_trigger %>">
+      <%= sage_component SageButton, {
+        style: "secondary",
+        subtle: true,
+        value: component.trigger_label,
+        icon: { name: "caret-right", style: "only" },
+        css_classes: "sage-expandable-card__trigger",
+        attributes: {
+          "data-js-accordion": "header",
+          "aria-expanded": (component.expanded.present? ? true : false)
+        },
+      } %>
+      <div>
+        <% if content_for? :sage_expandable_card_custom_header %>
+          <%= content_for :sage_expandable_card_custom_header %>
+        <% end %>
+      </div>
+    </div>
+  <% else %>
+    <%= sage_component SageButton, {
+      style: "secondary",
+      subtle: true,
+      value: component.trigger_label,
+      icon: { name: "caret-right", style: "left" },
+      css_classes: "sage-expandable-card__trigger",
+      attributes: {
+        "data-js-accordion": "header",
+        "aria-expanded": (component.expanded.present? ? true : false)
+      },
+    } %>
+  <% end %>
   <div class="
       <% if component.body_bordered.present? %>sage-expandable-card__body-bordered<% else %>sage-expandable-card__body<% end %>
       <%= "sage-type" if component.sage_type %>
