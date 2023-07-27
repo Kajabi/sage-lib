@@ -38,7 +38,6 @@ export const ExpandableCard = ({
     'sage-expandable-card',
     {
       'sage-expandable-card--align-arrow-right': alignArrowRight,
-      'sage-expandable-card': !isExpanded,
       'sage-expandable-card--expanded': isExpanded
     }
   );
