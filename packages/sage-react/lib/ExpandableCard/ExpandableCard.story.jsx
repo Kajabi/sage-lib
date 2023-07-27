@@ -3,7 +3,6 @@ import { Checkbox } from '../Toggle';
 import { ExpandableCard } from './ExpandableCard';
 import { Badge } from '../Badge';
 import { OptionsDropdown } from '../Dropdown';
-import { Divider } from '../Divider';
 import { SageClassnames } from '../configs';
 import { Grid } from '../Grid';
 
@@ -105,11 +104,5 @@ export const CustomHeader = () => (
     >
       <div>This is the content</div>
     </ExpandableCard>
-
-    {/* <Divider
-      className={`${SageClassnames.SPACERS.XS_BOTTOM} ${SageClassnames.SPACERS.XS_TOP}`}
-    /> */}
-
-
   </>
 );

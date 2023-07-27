@@ -50,38 +50,36 @@ export const ExpandableCard = ({
   });
 
   const determineAlignment = () => {
-    let className = "sage-expandable-card__header";
-    const ButtonWrapper = ({...rest}) => (
+    const className = 'sage-expandable-card__header';
+    const ButtonWrapper = ({ ...rest }) => (
       <Button
-          aria-controls={id}
-          aria-expanded={isExpanded}
-          className="sage-expandable-card__trigger"
-          color="secondary"
-          fullWidth={true}
-          icon={SageTokens.ICONS.CARET_RIGHT}
-          onClick={handleChange}
-          subtle={true}
-          {...rest}
-        >
-          {triggerLabel}
-        </Button>
+        aria-controls={id}
+        aria-expanded={isExpanded}
+        className="sage-expandable-card__trigger"
+        color="secondary"
+        fullWidth={true}
+        icon={SageTokens.ICONS.CARET_RIGHT}
+        onClick={handleChange}
+        subtle={true}
+        {...rest}
+      >
+        {triggerLabel}
+      </Button>
     );
 
-    if (alignTrigger === "middle") {
+    if (alignTrigger === 'middle') {
       return (
         <>
-          <ButtonWrapper/>
+          <ButtonWrapper />
         </>
-      )
-      ;
-    } else {
-      return (
-        <div className={`${className} sage-expandable-card__trigger-${alignTrigger}`}>
-          {<ButtonWrapper iconOnly={true} fullWidth={false} />}
-          <div>{headerContent}</div>
-        </div>
       );
     }
+    return (
+      <div className={`${className} sage-expandable-card__trigger-${alignTrigger}`}>
+        <ButtonWrapper iconOnly={true} fullWidth={false} />
+        <div>{headerContent}</div>
+      </div>
+    );
   };
 
   return (
@@ -116,7 +114,7 @@ ExpandableCard.propTypes = {
   expanded: PropTypes.bool,
   className: PropTypes.string,
   children: PropTypes.node,
-  alignTrigger: PropTypes.oneOf(['left', 'middle', 'right']).isRequired,
+  alignTrigger: PropTypes.oneOf(['left', 'middle', 'right']),
   name: PropTypes.string,
   onClick: PropTypes.func,
   sageType: PropTypes.bool,
