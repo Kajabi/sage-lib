@@ -17,6 +17,7 @@
     name="<%= select_id %>"
     id="<%= select_id %>"
     <%= "disabled" if component.disabled %>
+    <%= component.generated_component_attributes.html_safe %>
   >
     <% if component.select_options.present? %>
       <% component.select_options.each do |option| %>
