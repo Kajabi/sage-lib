@@ -7,10 +7,12 @@ import { SageClassnames, SageTokens } from '../configs';
 
 export const ExpandableCard = ({
   alignArrowRight,
+  alignTrigger,
   bodyBordered,
   expanded,
   children,
   className,
+  headerContent,
   name,
   onClick,
   sageType,
@@ -36,7 +38,6 @@ export const ExpandableCard = ({
     'sage-expandable-card',
     {
       'sage-expandable-card--align-arrow-right': alignArrowRight,
-      'sage-expandable-card': !isExpanded,
       'sage-expandable-card--expanded': isExpanded
     }
   );
@@ -47,8 +48,9 @@ export const ExpandableCard = ({
     [`${SageClassnames.TYPE_BLOCK}`]: sageType,
   });
 
-  return (
-    <div className={`${containerClassnames} ${className || ''}`} {...rest}>
+  const determineAlignment = () => {
+    const className = 'sage-expandable-card__header';
+    const ButtonWrapper = ({ ...rest }) => (
       <Button
         aria-controls={id}
         aria-expanded={isExpanded}
@@ -58,9 +60,31 @@ export const ExpandableCard = ({
         icon={SageTokens.ICONS.CARET_RIGHT}
         onClick={handleChange}
         subtle={true}
+        {...rest}
       >
         {triggerLabel}
       </Button>
+    );
+
+    if (alignTrigger === 'middle') {
+      return (
+        <>
+          <ButtonWrapper />
+        </>
+      );
+    }
+    return (
+      <div className={`${className} sage-expandable-card__trigger-${alignTrigger}`}>
+        <ButtonWrapper iconOnly={true} fullWidth={false} />
+        <div>{headerContent}</div>
+      </div>
+    );
+  };
+
+  return (
+    <div className={`${containerClassnames} ${className || ''}`} {...rest}>
+      {determineAlignment()}
+
       <div id={id} className={bodyClassnames}>
         {children}
       </div>
@@ -74,6 +98,8 @@ ExpandableCard.defaultProps = {
   expanded: false,
   children: null,
   className: null,
+  headerContent: null,
+  alignTrigger: 'middle',
   name: null,
   onClick: null,
   sageType: false,
@@ -83,9 +109,11 @@ ExpandableCard.defaultProps = {
 ExpandableCard.propTypes = {
   alignArrowRight: PropTypes.bool,
   bodyBordered: PropTypes.bool,
+  headerContent: PropTypes.node,
   expanded: PropTypes.bool,
   className: PropTypes.string,
   children: PropTypes.node,
+  alignTrigger: PropTypes.oneOf(['left', 'middle', 'right']),
   name: PropTypes.string,
   onClick: PropTypes.func,
   sageType: PropTypes.bool,

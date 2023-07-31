@@ -48,7 +48,7 @@ Sage.accordion = (function () {
     // Toggle target
     const toggle = el.getAttribute('aria-expanded') === 'true';
     el.setAttribute('aria-expanded', !toggle);
-    el.parentNode.classList.toggle('sage-expandable-card--expanded');
+    el.closest('.sage-expandable-card').classList.toggle('sage-expandable-card--expanded')
   }
 
   // In a single panel accordion, this closes all panels that are not the current target
@@ -66,7 +66,7 @@ Sage.accordion = (function () {
 
   function init(el) {
     const header = el;
-    const body = el.parentNode.querySelector(`[${JS_ACCORDION_ROOT}="${JS_ACCORDION_BODY}"]`);
+    const body = el.closest('.sage-expandable-card').querySelector(`[${JS_ACCORDION_ROOT}="${JS_ACCORDION_BODY}"]`);
 
     // Ensure there's a corresponding body
     if (!body) {
