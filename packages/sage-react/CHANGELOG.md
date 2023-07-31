@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.13.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.13.2...@kajabi/sage-react@1.13.3) (2023-07-31)
+
+
+### Bug Fixes
+
+* **expandablecard:** add new props and conditionals ([05305a7](https://github.com/Kajabi/sage-lib/commit/05305a7db7f24f18e60747e8e36666be60f4612a))
+* **expandablecard:** remove duplicate class name ([35020ad](https://github.com/Kajabi/sage-lib/commit/35020ad7b02bb81f46c3da33ed7caf4046cefc02))
+* **expandablecard:** update to use customHeader and alignTrigger ([e649ee2](https://github.com/Kajabi/sage-lib/commit/e649ee2a475fc857ed5aa01e3d5c234dc117aa89))
+
+
+
+
+
 ## [1.13.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.13.1...@kajabi/sage-react@1.13.2) (2023-07-21)
 
 

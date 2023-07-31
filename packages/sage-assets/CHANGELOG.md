@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.11.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.11.1...@kajabi/sage-assets@1.11.2) (2023-07-31)
+
+
+### Bug Fixes
+
+* **expandablecard:** add new styles ([d0c87e0](https://github.com/Kajabi/sage-lib/commit/d0c87e0ef3e1fdc8d48efe078848b36c530f5e49))
+* **expandablecard:** styling adjustments ([9bf245e](https://github.com/Kajabi/sage-lib/commit/9bf245ea22b98890bb0e00d65cc674f04c0623ef))
+* **expandablecard:** update to use customHeader and alignTrigger ([e649ee2](https://github.com/Kajabi/sage-lib/commit/e649ee2a475fc857ed5aa01e3d5c234dc117aa89))
+
+
+
+
+
 ## [1.11.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.11.0...@kajabi/sage-assets@1.11.1) (2023-07-21)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.11](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@1.2.10...@kajabi/sage-system@1.2.11) (2023-07-31)
+
+
+### Bug Fixes
+
+* **expandablecard:** update targeting to account for new markup ([cc4f20b](https://github.com/Kajabi/sage-lib/commit/cc4f20b00a773c821f0c22bc366a233aacdbabbf))
+
+
+
+
+
 ## [1.2.10](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@1.2.9...@kajabi/sage-system@1.2.10) (2023-04-27)
 
 

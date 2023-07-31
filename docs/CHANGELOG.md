@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.15.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.14.6...@kajabi/sage@5.15.0) (2023-07-31)
+
+
+### Bug Fixes
+
+* **expandablecard:** add new prop and conditionals rails ([e7c115d](https://github.com/Kajabi/sage-lib/commit/e7c115dcbcadd63478cf959a91b5c2fbc173b10a))
+
+
+### Features
+
+* add custom component attributes hash ([493c234](https://github.com/Kajabi/sage-lib/commit/493c23423c3b5e919a5544e59c10e9c603cad096))
+* allow the form select component to receive additional attributes ([6924856](https://github.com/Kajabi/sage-lib/commit/6924856e0491d7b259ffc790d2333403d427aaba))
+
+
+
+
+
 ## [5.14.6](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.14.5...@kajabi/sage@5.14.6) (2023-07-21)
 
 
