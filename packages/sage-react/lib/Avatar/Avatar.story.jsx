@@ -36,8 +36,20 @@ export default {
 const Template = (args) => <Avatar {...args} />;
 export const Default = Template.bind({});
 
+export const WithImage = Template.bind({});
+WithImage.args = {
+  image: {
+    alt: 'Kajabi',
+    src: 'https://picsum.photos/64/64',
+    id: '1234'
+  },
+  size: '64px'
+};
+
 export const WithBadge = Template.bind({});
-WithBadge.args = { badge: true, size: '64px' };
+WithBadge.args = {
+  badge: true, size: '64px'
+};
 
 export const CustomBadge = Template.bind({});
 CustomBadge.args = {
@@ -46,4 +58,11 @@ CustomBadge.args = {
   badgeForegroundColor: 'red-200',
   badgeIcon: SageTokens.ICONS.DANGER_FILLED,
   size: '64px',
+};
+
+export const WithInitials = Template.bind({});
+WithInitials.args = {
+  size: '64px',
+  initials: 'KJ',
+  useFallbackGraphic: false,
 };
