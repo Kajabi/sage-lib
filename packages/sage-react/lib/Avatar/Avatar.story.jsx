@@ -10,7 +10,7 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: 'The Avatar component shows a user\'s profile image in a circular frame and allows for a few helpful modifications for different uses.'
+        component: 'The Avatar component represents a user\'s profile image or placeholder in the user interface. It visually signifies the user\'s presence and may contain images, initials, or icons.'
       },
     },
   },
