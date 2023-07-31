@@ -55,10 +55,10 @@ module ComponentsHelper
       },
       {
         title: "avatar",
-        description: "The Avatar component shows a user's profile image in a circular frame and allows for a few helpful modifications for different uses.",
+        description: "The Avatar component represents a user's profile image or placeholder in the user interface. It visually signifies the user's presence and may contain images, initials, or icons.",
         scss: "done",
         docs: "done",
-        rails: "no",
+        rails: "done",
         react: "done",
         responsive: "done",
         a11y: "done",
