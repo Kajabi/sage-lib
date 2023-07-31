@@ -55,7 +55,7 @@ module ComponentsHelper
       },
       {
         title: "avatar",
-        description: "The Avatar component represents a user's profile image or placeholder in the user interface. It visually signifies the user's presence and may contain images, initials, or icons.",
+        description: "Avatar is used for showing a thumbnail representation of an admin, customer, or business",
         scss: "done",
         docs: "done",
         rails: "done",
