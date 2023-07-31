@@ -145,4 +145,34 @@
   ]
 } %>
 
+<script>
+  const handleOnChange = (consoles) => {
+    var selectedText = consoles.options[consoles.selectedIndex].innerHTML;
+    var selectedVal = consoles.value;
+    alert("Selected Text: " + selectedText + " Value: " + selectedVal);
+  }
+</script>
+<h3 class="<%= SageClassnames::TYPE::HEADING_6 %>">Example on how to pass additional attributes to the component</h3>
+<%= sage_component SageFormSelect, {
+  name: "Consoles",
+  component_attributes: {
+    onChange: "handleOnChange(this)",
+    "my-attribute": "hello"
+  },
+  select_options: [
+    {
+      text: "X-Box",
+      value: "x-box"
+    },
+    {
+      text: "PlayStation",
+      value: "playstation"
+    },
+    {
+      text: "Nintendo Switch",
+      value: "switch"
+    },
+  ]
+} %>
+
 <p><strong>Note:</strong> For a fully styled dropdown selector, see the Dropdown component.</p>

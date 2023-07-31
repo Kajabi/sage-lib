@@ -7,6 +7,7 @@ class SageComponent
 
   ATTRIBUTE_SCHEMA = {
     test_id: [:optional, NilClass, String],
+    component_attributes: [:optional, NilClass, Hash],
     html_attributes: [:optional, NilClass, Hash],
     spacer: [:optional, NilClass, SageSchemas::SPACER],
     css_classes: [:optional, NilClass, String],
@@ -15,6 +16,10 @@ class SageComponent
 
   def generated_css_classes
     @generated_css_classes ||= ""
+  end
+
+  def generated_component_attributes
+    @generated_component_attributes ||= ""
   end
 
   def generated_html_attributes
@@ -52,6 +57,24 @@ class SageComponent
     @spacer = spacer_hash
     spacer_hash.each do |key, value|
       generated_css_classes << " sage-spacer-#{key}#{(value != :md and value != "md") ? "-#{value}" : ""}"
+    end
+  end
+
+  # SageComponent Custom Event Attributes
+  #   Accepts a :component_attributes has that generates the additional
+  #   attributes on the element and not the parent container.
+  #
+  #   USAGE:
+  #   sage_component <CLASSNAME>, { component_attributes: { "onChange": "handleChange(this)" } }
+  #   sage_component <CLASSNAME>, { component_attributes: { "onChange": "alert('hello world')" } }
+  def component_attributes
+    @component_attributes ||= {}
+  end
+
+  def component_attributes=(component_attributes_hash)
+    @component_attributes = component_attributes_hash
+    component_attributes_hash.each do |key, value|
+      generated_component_attributes << " #{key}=\"#{value.to_s}\""
     end
   end
 
