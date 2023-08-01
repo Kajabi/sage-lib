@@ -495,7 +495,6 @@ $-btn-loading-min-height: rem(36px);
 /* stylelint-disable selector-no-qualifying-type */
 a.sage-btn {
   text-decoration: none;
-  border-color: transparent;
 }
 /* stylelint-enable selector-no-qualifying-type */
 
@@ -603,10 +602,6 @@ a.sage-btn {
     background-color: sage-color(white);
     border-color: sage-color(grey, 300);
   }
-
-  &.sage-btn--subtle {
-    border: 0;
-  }
 }
 
 .sage-btn--subtle {
@@ -616,6 +611,7 @@ a.sage-btn {
   padding: 0;
   box-shadow: none;
   border-radius: sage-border(radius);
+  border: 0;
 
   &:focus {
     box-shadow: none;
