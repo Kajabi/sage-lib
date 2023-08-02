@@ -17,13 +17,7 @@ class SageUploadCard < SageComponent
     selection_label: [:optional, NilClass, String],
     stack_layout:[:optional, NilClass, TrueClass],
   })
-  def instructions
-    %w(upload_card_instructions)
-  end
-  def image
-    %w(upload_card_preview)
-  end
-  def actions
-    %w(upload_card_actions)
+  def sections
+    %w(upload_card_instructions upload_card_preview upload_card_actions)
   end
 end

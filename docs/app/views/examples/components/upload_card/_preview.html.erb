@@ -17,7 +17,11 @@
 <%= sage_component SageUploadCard, {
   id: "upload-card-default",
   selection_label: "Select file",
-} %>
+} do %>
+  <% content_for :sage_upload_card_instructions do %>
+    <p>Upload a JPEG sdbfksbfkjb</p>
+  <% end %>
+<% end %>
 
 <h3>Selected File State</h3>
 
@@ -31,10 +35,9 @@
   accepted_file_types: ["image/jpg"],
   selection_preview: "https://placekitten.com/360",
   id: "upload-card-selected",
-  selection_label: "Edit file"
 } do %>
   <% content_for :sage_upload_card_instructions do %>
-    <p>Upload a JPEG</p>
+    <p>Upload a JPEG this is a test</p>
   <% end %>
 <% end %>
 
@@ -108,6 +111,7 @@
   ],
   file_selected: true,
   has_error: true,
+  id: "upload-card-selected-error",
   selection_label: "Replace file",
   selection_subtext: "Recommended dimensions or file size requirements",
   errors: [
