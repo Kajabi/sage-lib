@@ -127,8 +127,8 @@ CustomContent.args = {
   color: Button.COLORS.SECONDARY,
   children: (
     <>
-      <Avatar initials="CM" />
-      Court McFadzean
+      <Avatar initials="KJ" />
+      Kajabi
     </>
   ),
   customContentClassName: 'demo-custom-class',
