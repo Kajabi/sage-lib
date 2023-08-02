@@ -4,7 +4,7 @@
 /// @group sage
 ////
 
-$-icon-font-cdn-version: "19"; // Keep in sync with desired `vX` folder from CDN
+$-icon-font-cdn-version: "20"; // Keep in sync with desired `vX` folder from CDN
 $-icon-font-path: "#{$sage-font-cdn-root}/sage/v#{$-icon-font-cdn-version}" !default;
 $-icon-font-version: 1; // Only used for cache busting so increment as needed for such purposes
 
