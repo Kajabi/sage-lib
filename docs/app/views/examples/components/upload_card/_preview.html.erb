@@ -19,7 +19,7 @@
   selection_label: "Select file",
 } do %>
   <% content_for :sage_upload_card_instructions do %>
-    <p>Upload a JPEG sdbfksbfkjb</p>
+    <p>Upload a JPEG</p>
   <% end %>
 <% end %>
 
@@ -101,7 +101,11 @@
   errors: [
     {text: "This is an error message."},
   ]
-} %>
+} do %>
+  <% content_for :sage_upload_card_instructions do %>
+    <p>Recommended dimensions or file size requirements</p>
+  <% end %>
+<% end %>
 
 <h3 class="t-sage-heading-6">Selected Error State</h3>
 

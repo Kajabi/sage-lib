@@ -27,7 +27,7 @@ $-upload-card-mobile-breakpoint: 609px;
   flex-flow: column;
   align-items: flex-start;
   justify-content: flex-start;
-  flex: 1 1 $-upload-card-body-width;
+  flex: 1 1;
   gap: sage-spacing();
   color: sage-color(charcoal, 200);
 
@@ -141,7 +141,8 @@ $-upload-card-mobile-breakpoint: 609px;
   gap: sage-spacing(sm);
 }
 
-.sage-upload-card__instructions {
-  @extend %t-sage-body;
+.sage-upload-card__instructions,
+.sage-upload-card__filename {
+  @extend %t-sage-body-med;
   color: sage-color(charcoal, 200);
 }
