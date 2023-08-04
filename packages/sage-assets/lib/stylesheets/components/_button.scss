@@ -27,25 +27,30 @@ $-btn-base-styles: (
     default: (
       color: sage-color(white),
       background-color: sage-color(primary, 300),
+      border-color: sage-color(primary, 300),
       ring-color: sage-color(primary, 200),
     ),
     hover: (
       color: sage-color(white),
       background-color: sage-color(primary, 400),
+      border-color: sage-color(primary, 400),
     ),
     focus: (
       color: sage-color(white),
       background-color: sage-color(primary, 300),
+      border-color: sage-color(primary, 300),
     ),
     disabled: (
       color: sage-color(primary, 200),
       background-color: sage-color(primary, 100),
+      border-color: sage-color(primary, 100),
     )
   ),
   primary: (
     default: (
       color: sage-color(white),
       background-color: sage-color(charcoal, 400),
+      border-color: sage-color(charcoal, 400),
       ring-color: sage-color(primary, 200),
     ),
     hover: (
@@ -55,10 +60,12 @@ $-btn-base-styles: (
     focus: (
       color: sage-color(white),
       background-color: sage-color(charcoal, 400),
+      border-color: sage-color(charcoal, 400),
     ),
     disabled: (
       color: sage-color(charcoal, 100),
       background-color: sage-color(grey, 300),
+      border-color: sage-color(grey, 300),
     )
   ),
   secondary: (
@@ -84,6 +91,7 @@ $-btn-base-styles: (
     default: (
       color: sage-color(white),
       background-color: sage-color(red, 300),
+      border-color: sage-color(red, 300),
       ring-color: sage-color(red, 200),
     ),
     hover: (
@@ -93,10 +101,12 @@ $-btn-base-styles: (
     focus: (
       color: sage-color(white),
       background-color: sage-color(red, 300),
+      border-color: sage-color(red, 300),
     ),
     disabled: (
       color: sage-color(red, 200),
       background-color: sage-color(red, 100),
+      border-color: sage-color(red, 100),
     )
   ),
 );
@@ -170,7 +180,8 @@ $-btn-loading-min-height: rem(36px);
   justify-self: flex-start;
   padding: $-btn-base-padding-block $-btn-base-padding-inline;
   text-align: left; // Prevents text alignment issue when inner text is truncated
-  border: 0;
+  border-width: 1px;
+  border-style: solid;
   border-radius: $-btn-border-radius;
   transition: $-btn-transition;
   transition-property: border, background-color, box-shadow;
@@ -307,6 +318,7 @@ $-btn-loading-min-height: rem(36px);
     height: rem(38px);
     background-color: sage-color(white);
     box-shadow: rem(-1px) 0 0 0 sage-color(grey, 400);
+    border-color: transparent;
 
     @include sage-focus-outline--update-color(transparent);
 
@@ -315,7 +327,7 @@ $-btn-loading-min-height: rem(36px);
     }
 
     &:focus {
-      box-shadow: 0 0 0 rem(2px) sage-color(primary, 300);
+      @include sage-focus-ring;
     }
   }
 
@@ -335,6 +347,7 @@ $-btn-loading-min-height: rem(36px);
   .sage-toolbar__group > .sage-input ~ &.sage-btn--primary,
   .sage-toolbar__group > .sage-search ~ &.sage-btn--primary {
     box-shadow: 0 0 0 1px sage-color(charcoal, 400);
+    border-color: transparent;
   }
 
   .sage-toolbar__group .sage-dropdown__trigger > & {
@@ -508,6 +521,7 @@ a.sage-btn {
         &:active {
           color: map-get($-style-type-configs, color);
           background-color: map-get($-style-type-configs, background-color);
+          border-color: map-get($-style-type-configs, border-color);
         }
       }
       @else if ($-style-type-name == disabled) {
@@ -515,6 +529,7 @@ a.sage-btn {
         &[aria-disabled="true"] {
           color: map-get($-style-type-configs, color);
           background-color: map-get($-style-type-configs, background-color);
+          border-color: map-get($-style-type-configs, border-color);
           box-shadow: none;
         }
       }
@@ -587,10 +602,6 @@ a.sage-btn {
     background-color: sage-color(white);
     border-color: sage-color(grey, 300);
   }
-
-  &.sage-btn--subtle {
-    border: 0;
-  }
 }
 
 .sage-btn--subtle {
@@ -600,6 +611,7 @@ a.sage-btn {
   padding: 0;
   box-shadow: none;
   border-radius: sage-border(radius);
+  border: 0;
 
   &:focus {
     box-shadow: none;
@@ -633,7 +645,7 @@ a.sage-btn {
     &.sage-btn--#{$-style-name} {
       color: map-get($-styles, default);
       background-color: transparent;
-
+      border-color: transparent;
       &::after {
         border-color: transparent;
       }
@@ -728,6 +740,7 @@ a.sage-btn {
     @include sage-focus-outline--update-color(sage-color(white));
 
     color: sage-color(grey, 200);
+    border-color: transparent;
 
     &:hover {
       color: sage-color(white);

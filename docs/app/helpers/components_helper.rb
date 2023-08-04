@@ -13,6 +13,12 @@ module ComponentsHelper
     [
       # Sage Generated Components
       {
+        title: "sage_component",
+        description: "This serves as the base component for all Rails components",
+        rails: "done",
+        order: 1,
+      },
+      {
         title: "accordion",
         description: "The accordion component is used to show and hide sections of related content on a page.",
         scss: "done",
@@ -915,7 +921,7 @@ module ComponentsHelper
 
   # Sorts available components based on alphabet
   def sorted_sage_components
-    sage_components.sort_by { |h| h[:title] }
+    sage_components.sort_by { |h| [ ( h[:order] || 99 ), h[:title] ] }
   end
 
   # Archive of deprecated components
