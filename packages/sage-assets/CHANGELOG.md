@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.11.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.11.2...@kajabi/sage-assets@1.11.3) (2023-08-04)
+
+
+### Bug Fixes
+
+* **button:** adjust border to correct button height ([7af41d5](https://github.com/Kajabi/sage-lib/commit/7af41d5af71a772a1e93cf485963a673b41ababe))
+* **button:** revert border change to a.sage-btn and fix subtle ([eabc481](https://github.com/Kajabi/sage-lib/commit/eabc481a206615c8e56696ecd1890d95ebda0409))
+* **icons:** add new icons to _icon.scss ([7086c2a](https://github.com/Kajabi/sage-lib/commit/7086c2a973038c4e069c2843210a4267a17c7107))
+* **icons:** increment cdn-version variable ([df627b9](https://github.com/Kajabi/sage-lib/commit/df627b92c395354de67e1e6b4f197680b3f083d0))
+
+
+
+
+
 ## [1.11.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.11.1...@kajabi/sage-assets@1.11.2) (2023-07-31)
 
 
