@@ -59,10 +59,3 @@ CustomBadge.args = {
   badgeIcon: SageTokens.ICONS.DANGER_FILLED,
   size: '64px',
 };
-
-export const WithInitials = Template.bind({});
-WithInitials.args = {
-  size: '64px',
-  initials: 'KJ',
-  useFallbackGraphic: false,
-};
