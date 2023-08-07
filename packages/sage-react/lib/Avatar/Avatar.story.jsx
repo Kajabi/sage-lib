@@ -39,9 +39,9 @@ export const Default = Template.bind({});
 export const WithImage = Template.bind({});
 WithImage.args = {
   image: {
-    alt: 'Kajabi',
+    alt: 'Kajabi image avatar',
     src: 'https://picsum.photos/64/64',
-    id: '1234'
+    id: 'image-avatar'
   },
   size: '64px'
 };
