@@ -7,7 +7,7 @@
     "packs"
   ],
   "engines": {
-    "node": "14.x",
+    "node": "16.x",
     "npm": "6.x",
     "yarn": "1.x"
   },
