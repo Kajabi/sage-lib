@@ -125,12 +125,6 @@ export const CustomContent = Template.bind({});
 CustomContent.args = {
   hasCustomContent: true,
   color: Button.COLORS.SECONDARY,
-  children: (
-    <>
-      <Avatar initials="KJ" />
-      Kajabi
-    </>
-  ),
   customContentClassName: 'demo-custom-class',
   subtle: true,
 };
