@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { selectArgs } from '../story-support/helpers';
 import { SageTokens } from '../configs';
-import { Avatar } from '../Avatar';
 import { Button } from './Button';
 
 export default {
