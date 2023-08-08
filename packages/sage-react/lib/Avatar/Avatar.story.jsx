@@ -10,7 +10,7 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: 'The Avatar component shows a user\'s profile image in a circular frame and allows for a few helpful modifications for different uses.'
+        component: 'Avatar is used for showing a thumbnail representation of an admin, customer, or business.'
       },
     },
   },
@@ -36,8 +36,20 @@ export default {
 const Template = (args) => <Avatar {...args} />;
 export const Default = Template.bind({});
 
+export const WithImage = Template.bind({});
+WithImage.args = {
+  image: {
+    alt: 'Kajabi image avatar',
+    src: 'https://picsum.photos/64/64',
+    id: 'image-avatar'
+  },
+  size: '64px'
+};
+
 export const WithBadge = Template.bind({});
-WithBadge.args = { badge: true, size: '64px' };
+WithBadge.args = {
+  badge: true, size: '64px'
+};
 
 export const CustomBadge = Template.bind({});
 CustomBadge.args = {
