@@ -514,6 +514,7 @@ a.sage-btn {
         &:hover {
           color: map-get($-style-type-configs, color);
           background-color: map-get($-style-type-configs, background-color);
+          border-color: map-get($-style-type-configs, border-color);
         }
       }
       @else if ($-style-type-name == focus) {
@@ -538,6 +539,7 @@ a.sage-btn {
 
         color: map-get($-style-type-configs, color);
         background-color: map-get($-style-type-configs, background-color);
+        border-color: map-get($-style-type-configs, border-color);
 
         .sage-toolbar > &,
         .sage-toolbar__group > & {
