@@ -2,11 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { SageClassnames } from '../configs';
-import { validNumberWithinGrid, validBreakpoint, VERTICAL_ALIGNMENT_TYPES } from './configs';
+import { validNumberWithinGrid, validBreakpoint, HORIZONTAL_ALIGNMENT_TYPES, VERTICAL_ALIGNMENT_TYPES } from './configs';
 
 export const GridCol = ({
   children,
   className,
+  horizontalAlignment,
   large,
   medium,
   sageType,
@@ -27,6 +28,7 @@ export const GridCol = ({
       [`sage-col--md-${medium}`]: medium,
       [`sage-col--lg-${large}`]: large,
       [`sage-col--xl-${xlarge}`]: xlarge,
+      [`sage-col--align-${horizontalAlignment}`]: horizontalAlignment,
       [`sage-col--valign-${verticalAlignment}`]: verticalAlignment,
       [`${SageClassnames.TYPE_BLOCK}`]: sageType
     }
@@ -39,11 +41,13 @@ export const GridCol = ({
   );
 };
 
+GridCol.HORIZONTAL_ALIGNMENT_TYPES = HORIZONTAL_ALIGNMENT_TYPES;
 GridCol.VERTICAL_ALIGNMENT_TYPES = VERTICAL_ALIGNMENT_TYPES;
 
 GridCol.defaultProps = {
   className: null,
   children: null,
+  horizontalAlignment: null,
   large: null,
   medium: null,
   sageType: false,
@@ -56,6 +60,7 @@ GridCol.defaultProps = {
 GridCol.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node,
+  horizontalAlignment: PropTypes.oneOf(Object.values(GridCol.HORIZONTAL_ALIGNMENT_TYPES)),
   small: validBreakpoint,
   medium: validBreakpoint,
   large: validBreakpoint,

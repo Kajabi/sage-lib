@@ -254,3 +254,21 @@ $-grid-col-gap-inline-padding: calc(#{$-grid-gap} / 2);
 .sage-col--valign-stretch {
   align-self: stretch;
 }
+
+// column horizontal alignment
+
+.sage-col--align-start {
+  justify-self: flex-start;
+}
+.sage-col--align-center {
+  justify-self: center;
+}
+.sage-col--align-end {
+  justify-self: flex-end;
+}
+.sage-col--align-baseline {
+  justify-self: baseline;
+}
+.sage-col--align-stretch {
+  justify-self: stretch;
+}
