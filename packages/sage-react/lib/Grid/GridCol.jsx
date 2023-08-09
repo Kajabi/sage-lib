@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { SageClassnames } from '../configs';
-import { validNumberWithinGrid, validBreakpoint, HORIZONTAL_ALIGNMENT_TYPES, VERTICAL_ALIGNMENT_TYPES } from './configs';
+import { validNumberWithinGrid, validBreakpoint, VERTICAL_ALIGNMENT_TYPES } from './configs';
 
 export const GridCol = ({
   children,
