@@ -1,5 +1,6 @@
 import React from 'react';
-import { Grid } from '..';
+import { Button } from '../Button';
+import { Grid, SageTokens } from '..';
 import { UploadCard } from './UploadCard';
 
 export default {
@@ -34,6 +35,15 @@ Default.decorators = [
 
 export const DefaultWithError = Template.bind({});
 DefaultWithError.args = {
+  actions: (
+    <Button
+      color={Button.COLORS.SECONDARY}
+      icon={SageTokens.ICONS.CARET_DOWN}
+      iconPosition={Button.ICON_POSITIONS.RIGHT}
+    >
+      Select a file
+    </Button>
+  ),
   errors: [
     {
       message: 'This is the error message.'
@@ -44,9 +54,22 @@ DefaultWithError.args = {
 export const SelectedWithError = Template.bind({});
 SelectedWithError.args = {
   acceptedFiles: [{ name: '.csv', size: '1 M' }],
+  actions: (
+    <Button
+      color={Button.COLORS.SECONDARY}
+      icon={SageTokens.ICONS.CARET_DOWN}
+      iconPosition={Button.ICON_POSITIONS.RIGHT}
+    >
+      Replace a file
+    </Button>
+  ),
   errors: [
     {
       message: 'This is the error message.'
     },
-  ]
+  ],
+  previewImage: {
+    alt: 'cat',
+    src: 'https://placekitten.com/360'
+  }
 };

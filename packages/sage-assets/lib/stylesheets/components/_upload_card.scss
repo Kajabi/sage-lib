@@ -136,13 +136,10 @@ $-upload-card-mobile-breakpoint: 609px;
 }
 
 .sage-upload-card__description {
+  @extend %t-sage-body-med;
+
   display: flex;
   flex-direction: column;
   gap: sage-spacing(sm);
-}
-
-.sage-upload-card__instructions,
-.sage-upload-card__filename {
-  @extend %t-sage-body-med;
   color: sage-color(charcoal, 200);
 }

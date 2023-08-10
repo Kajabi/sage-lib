@@ -2,15 +2,19 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { Button } from '../Button';
-import { Icon } from '../Icon';
 import { IconCard } from '../IconCard';
 import { SageTokens } from '../configs';
+import { render } from 'react-dom';
 
 export const UploadCard = ({
+  actions,
   acceptedFiles,
   className,
+  customFileInputField,
   errors,
+  id,
   inputProps,
+  previewImage,
   replaceLabel,
   rootProps,
   selectionLabel,
@@ -31,11 +35,87 @@ export const UploadCard = ({
     }
   );
 
+  const renderDefaultInputField = () => (
+    !customFileInputField && (
+      <input className="sage-upload-card__input" {...inputProps} />
+    )
+  );
+
+  const renderActions = () => (
+    actions && !customFileInputField && (
+      actions
+    )
+  );
+
+  const renderPreviewImage = () => (
+    previewImage ? (
+      <img className="sage-upload-card__preview" alt={previewImage.alt} src={previewImage.src} />
+    ) : (
+      <IconCard
+        className="sage-upload-card__preview"
+        color={IconCard.COLORS.DRAFT}
+        icon={IconCard.ICONS.FILE}
+        size={IconCard.SIZES.XL}
+      />
+    )
+  );
+
+  const renderReplaceLabel = () => (
+    replaceLabel && !customFileInputField && (
+      <>
+        <label htmlFor={id} className="sage-upload-card__input-lable sage-btn sage-btn--secondary">{replaceLabel}</label>
+        {renderActions()}
+      </>
+    )
+  );
+
+  const renderLabel = () => {
+    if ((selectionLabel || replaceLabel) && !customFileInputField) {
+      return (
+        <>
+          <label htmlFor={id} className="sage-upload-card__input-lable sage-btn sage-btn--secondary">{selectionLabel || replaceLabel}</label>
+        </>
+      );
+    }
+
+    if (actions) {
+      if (!customFileInputField) {
+        return (
+          <label htmlFor={id} className="visually-hidden">{selectionLabel || replaceLabel}</label>
+        );
+      }
+    }
+    return actions;
+  };
+
   return (
     <div className={classNames} {...rest}>
       <div className="sage-upload-card__dropzone" {...rootProps}>
-        <input className="sage-upload-card__input" {...inputProps} />
+        {renderDefaultInputField()}
         {filesSelected ? (
+          <>
+            {renderPreviewImage()}
+            <div className="sage-upload-card__body">
+              <div className="sage-upload-card__description">
+                {acceptedFiles.map(({ name }, i) => {
+                  // Limit to one file for now
+                  if (i > 0) {
+                    return null;
+                  }
+
+                  return (
+                    <React.Fragment key={name}>
+                      <p className="sage-upload-card__filename">
+                        {name}
+                      </p>
+                      {renderLabel()}
+                    </React.Fragment>
+                  );
+                })}
+              </div>
+            </div>
+          </>
+        ) : (
           <>
             <IconCard
               className="sage-upload-card__preview"
@@ -44,47 +124,14 @@ export const UploadCard = ({
               size={IconCard.SIZES.XL}
             />
             <div className="sage-upload-card__body">
-              {acceptedFiles.map(({ name, size }, i) => {
-                // Limit to one file for now
-                if (i > 0) {
-                  return null;
-                }
-
-                return (
-                  <React.Fragment key={name}>
-                    <p className="sage-upload-card__text">{name}</p>
-                    <Button
-                      color={Button.COLORS.PRIMARY}
-                      subtle={true}
-                    >
-                      Replace file
-                    </Button>
-                    <p className="sage-upload-card__subtext">
-                      {`File size: ${size}B`}
-                    </p>
-                  </React.Fragment>
-                );
-              })}
+              <div className="sage-upload-card__description">
+                <p className="sage-upload-card__filename">
+                  {selectionSubtext}
+                </p>
+                {renderLabel()}
+              </div>
             </div>
           </>
-        ) : (
-          <div className="sage-upload-card__body">
-            <Icon
-              className="sage-upload-card__icon"
-              icon={Icon.ICONS.FILE}
-              size={Icon.SIZES.XL}
-              color={SageTokens.COLOR_SLIDERS.CHARCOAL_100}
-            />
-            <Button
-              color={Button.COLORS.PRIMARY}
-              subtle={true}
-            >
-              {selectionLabel}
-            </Button>
-            <p className="sage-upload-card__subtext">
-              {selectionSubtext}
-            </p>
-          </div>
         )}
       </div>
       {errors && (
@@ -100,9 +147,12 @@ export const UploadCard = ({
 
 UploadCard.defaultProps = {
   acceptedFiles: [],
+  actions: null,
   className: null,
+  customFileInputField: false,
   errors: null,
   inputProps: null,
+  previewImage: null,
   replaceLabel: 'Replace file',
   rootProps: null,
   selectionLabel: 'Select a file',
@@ -111,12 +161,18 @@ UploadCard.defaultProps = {
 
 UploadCard.propTypes = {
   acceptedFiles: PropTypes.arrayOf(PropTypes.shape),
+  actions: PropTypes.node,
   className: PropTypes.string,
+  customFileInputField: PropTypes.bool,
   errors: PropTypes.arrayOf(PropTypes.shape({
     code: PropTypes.string,
     message: PropTypes.string,
   })),
   inputProps: PropTypes.shape({}),
+  previewImage: PropTypes.shape({
+    alt: PropTypes.string,
+    src: PropTypes.string
+  }),
   replaceLabel: PropTypes.string,
   rootProps: PropTypes.shape({}),
   selectionLabel: PropTypes.string,
