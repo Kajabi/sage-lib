@@ -15,6 +15,9 @@ import PropTypes from 'prop-types';
   title="Sage/Grid/GridCol"
   component={GridCol}
   argTypes={{
+    horizontalAlignment: {
+      options: Object.values(GridCol.HORIZONTAL_ALIGNMENT_TYPES),
+    },
     verticalAlignment: {
       options: Object.values(GridCol.VERTICAL_ALIGNMENT_TYPES),
     },
@@ -60,6 +63,12 @@ export const AlignmentTypes = ({ types }) => {
 ## Properties
 <ArgsTable of={GridCol} />
 
+### Horizontal Alignment
+
+The horizontal alignment default for each <code>.sage-col</code> aligns to the start (left) of the <code>.sage-col</code> container. Alignments will only be visible if the total amount of width taken up by rows is less than the total amount of space.
+
+Supported Types: <AlignmentTypes types={GridCol.HORIZONTAL_ALIGNMENT_TYPES}/>
+
 ### Vertical Alignment
 
 The vertical alignment default for each <code>.sage-col</code> aligns to stretch the full height of each respective <code>.sage-row</code> container. Alignments will only be visible if the total amount of height taken up by columns is less than the total amount of space.
@@ -71,6 +80,7 @@ Supported Types: <AlignmentTypes types={GridCol.VERTICAL_ALIGNMENT_TYPES}/>
 <Canvas>
     <Story name="Default"
       args = {{
+        horizontalAlignment: GridCol.HORIZONTAL_ALIGNMENT_TYPES.CENTER,
         verticalAlignment: GridCol.VERTICAL_ALIGNMENT_TYPES.CENTER,
       }}
     >
