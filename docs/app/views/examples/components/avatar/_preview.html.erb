@@ -13,48 +13,48 @@
   <%= sage_component SageAvatar, {
     size: "24px",
     image: {
-      alt: "Court's profile image",
-      src: "avatar/court.png",
+      alt: "Joshua's profile image",
+      src: "avatar/joshua_wilson.png",
       id: "custom_id"
     }
   } %>
   <%= sage_component SageAvatar, {
     size: "32px",
     image: {
-      alt: "Court's profile image",
-      src: "avatar/court.png",
+      alt: "Joshua's profile image",
+      src: "avatar/joshua_wilson.png",
       id: "custom_id"
     }
   } %>
   <%= sage_component SageAvatar, {
     size: "40px",
     image: {
-      alt: "Court's profile image",
-      src: "avatar/court.png",
+      alt: "Joshua's profile image",
+      src: "avatar/joshua_wilson.png",
       id: "custom_id"
     }
   } %>
   <%= sage_component SageAvatar, {
     size: "56px",
     image: {
-      alt: "Court's profile image",
-      src: "avatar/court.png",
+      alt: "Joshua's profile image",
+      src: "avatar/joshua_wilson.png",
       id: "custom_id"
     }
   } %>
   <%= sage_component SageAvatar, {
     size: "72px",
     image: {
-      alt: "Court's profile image",
-      src: "avatar/court.png",
+      alt: "Joshua's profile image",
+      src: "avatar/joshua_wilson.png",
       id: "custom_id"
     }
   } %>
   <%= sage_component SageAvatar, {
     size: "88px",
     image: {
-      alt: "Court's profile image",
-      src: "avatar/court.png",
+      alt: "Joshua's profile image",
+      src: "avatar/joshua_wilson.png",
       id: "custom_id"
     }
   } %>
@@ -70,8 +70,8 @@
     badge: true,
     size: "72px",
     image: {
-      alt: "Court's profile image",
-      src: "avatar/court.png",
+      alt: "Joshua's profile image",
+      src: "avatar/joshua_wilson.png",
       id: "custom_id"
     }
   } %>
@@ -79,8 +79,8 @@
     badge: true,
     size: "88px",
     image: {
-      alt: "Court's profile image",
-      src: "avatar/court.png",
+      alt: "Joshua's profile image",
+      src: "avatar/joshua_wilson.png",
       id: "custom_id"
     }
   } %>
@@ -95,8 +95,8 @@
     badge_icon: "play-circle",
     size: "80px",
     image: {
-      alt: "Court's profile image",
-      src: "avatar/court.png",
+      alt: "Joshua's profile image",
+      src: "avatar/joshua_wilson.png",
       id: "custom_id"
     }
   } %>
@@ -107,8 +107,8 @@
     badge_icon: "danger",
     size: "80px",
     image: {
-      alt: "Court's profile image",
-      src: "avatar/court.png",
+      alt: "Joshua's profile image",
+      src: "avatar/joshua_wilson.png",
       id: "custom_id"
     }
   } %>
@@ -165,7 +165,7 @@
 </div>
 
 <h3>Avatar centered + custom size</h3>
-<%= sage_component SageAvatar, { 
+<%= sage_component SageAvatar, {
   centered: true,
   image: {
     alt: "Joshua Wilson",
@@ -175,25 +175,28 @@
   size: "128px"
 } %>
 
-<h3>Layering and lazy loading</h3>
+<h3>Initials and Lazy Loading</h3>
+<div class="sage-avatar-wrapper">
+  <%= sage_component SageAvatar, {
+    size: "52px",
+    initials: "KJ"
+  } %>
+
+<div class="sage-avatar-wrapper">
+<%= sage_component SageAvatar, {
+  size: "52px",
+  image: {
+    alt: "Joshua's profile image",
+    src: "avatar/joshua_wilson.png",
+    id: "custom_id"
+  },
+  initials: "CA",
+  lazy_load_initials: true,
+} %>
+</div>
+
 <%= md('
-By default, Avatars with both an `image` and `initials` provided will stack with the image on top of the initials.
-The result is a lazy loading effect where initials appear immediately and an image will appear later on slower or delayed connetions.
-If this effect is not desired when an `image` is used, then also set `lazy_load_initials: false`.
+When you provide initials for your Avatar, the system will promptly display them. If you also provide an image `src`, it is designed to layer this image over the initials, creating a lazy loading effect. This layering creates a lazy loading effect, effective in situations with slower connections, as the initials appear immediately while the image lazy loads.
 
-NOTE: This also allows for a fallback approach with image APIs such as Gravatar that return a default image when no user image is available.
-In such cases a transparent PNG image can be provided as the default image so that when this default image is layered on top of the initials,
-the initials are seen rather than a generic "anonymous user" image.
+However, if this effect is not required when using an image, it can easily be disabled by setting `lazy_load_initials` to false.
 ') %>
-
-<p>Valid Gravatar with lazy loading:</p>
-<%= sage_component SageAvatar, {
-  image: { src: "https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?" }
-} %>
-
-<p>Valid Gravatar with NO lazy loading:</p>
-<%= sage_component SageAvatar, {
-  initials: "PS",
-  image: { src: "https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?" },
-  lazy_load_initials: false
-} %>
