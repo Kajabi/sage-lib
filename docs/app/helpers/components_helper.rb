@@ -114,7 +114,7 @@ module ComponentsHelper
       },
       {
         title: "button",
-        description: "Standard button styling with multiple display options. Can be applied on both button and link components.",
+        description: "Buttons are the clickable elements used to perform actions.",
         scss: "done",
         docs: "done",
         rails: "done",
