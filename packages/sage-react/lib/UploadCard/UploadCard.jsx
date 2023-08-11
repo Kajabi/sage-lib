@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { Button } from '../Button';
 import { IconCard } from '../IconCard';
-import { SageTokens } from '../configs';
-import { render } from 'react-dom';
 
 export const UploadCard = ({
   actions,
@@ -19,6 +16,7 @@ export const UploadCard = ({
   rootProps,
   selectionLabel,
   selectionSubtext,
+  stacked,
   ...rest
 }) => {
   const [filesSelected, updateFilesSelected] = useState(acceptedFiles && acceptedFiles.length > 0);
@@ -32,18 +30,13 @@ export const UploadCard = ({
     {
       'sage-upload-card--selected': filesSelected,
       'sage-upload-card--error': errors,
+      'sage-upload-card--stack-only': stacked,
     }
   );
 
   const renderDefaultInputField = () => (
     !customFileInputField && (
       <input className="sage-upload-card__input" {...inputProps} />
-    )
-  );
-
-  const renderActions = () => (
-    actions && !customFileInputField && (
-      actions
     )
   );
 
@@ -60,20 +53,11 @@ export const UploadCard = ({
     )
   );
 
-  const renderReplaceLabel = () => (
-    replaceLabel && !customFileInputField && (
-      <>
-        <label htmlFor={id} className="sage-upload-card__input-lable sage-btn sage-btn--secondary">{replaceLabel}</label>
-        {renderActions()}
-      </>
-    )
-  );
-
   const renderLabel = () => {
     if ((selectionLabel || replaceLabel) && !customFileInputField) {
       return (
         <>
-          <label htmlFor={id} className="sage-upload-card__input-lable sage-btn sage-btn--secondary">{selectionLabel || replaceLabel}</label>
+          <label htmlFor={id} className="sage-upload-card__input-label sage-btn sage-btn--secondary">{selectionLabel || replaceLabel}</label>
         </>
       );
     }
@@ -84,8 +68,8 @@ export const UploadCard = ({
           <label htmlFor={id} className="visually-hidden">{selectionLabel || replaceLabel}</label>
         );
       }
+      return actions;
     }
-    return actions;
   };
 
   return (
@@ -151,12 +135,14 @@ UploadCard.defaultProps = {
   className: null,
   customFileInputField: false,
   errors: null,
+  id: null,
   inputProps: null,
   previewImage: null,
   replaceLabel: 'Replace file',
   rootProps: null,
   selectionLabel: 'Select a file',
   selectionSubtext: null,
+  stacked: false,
 };
 
 UploadCard.propTypes = {
@@ -168,6 +154,7 @@ UploadCard.propTypes = {
     code: PropTypes.string,
     message: PropTypes.string,
   })),
+  id: PropTypes.string,
   inputProps: PropTypes.shape({}),
   previewImage: PropTypes.shape({
     alt: PropTypes.string,
@@ -177,4 +164,5 @@ UploadCard.propTypes = {
   rootProps: PropTypes.shape({}),
   selectionLabel: PropTypes.string,
   selectionSubtext: PropTypes.string,
+  stacked: PropTypes.bool
 };
