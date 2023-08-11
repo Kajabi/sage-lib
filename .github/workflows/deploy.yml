@@ -20,7 +20,7 @@ jobs:
 
       - name: Install node and yarn
         env:
-          YARN_VERSION: 1.22.5
+          YARN_VERSION: 1.22.19
           NODE_VERSION: 16.20.0
           ARCH: "x64"
         run: |
