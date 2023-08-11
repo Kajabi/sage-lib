@@ -3,6 +3,7 @@ trigger_configs = component.trigger.present? ? component.trigger : {}
 %>
 <div
   class="sage-dropdown
+    <%= "sage-dropdown--allow-multiple" if component.allow_multiple %>
     <%= "sage-dropdown--anchor-left" if component.align == "left" %>
     <%= "sage-dropdown--anchor-right" if component.align == "right" %>
     <%= "sage-dropdown--anchor-center" if component.align == "center" %>
