@@ -19,21 +19,13 @@ jobs:
         run: |
           apk add --update --no-cache $BUILD_PACKAGES
 
-      - name: Install node and yarn
-        env:
-          YARN_VERSION: 1.22.19
-          NODE_VERSION: 16.20.0
-          ARCH: "x64"
-        run: |
-          curl -fsSLO --compressed "https://unofficial-builds.nodejs.org/download/release/v$NODE_VERSION/node-v$NODE_VERSION-linux-$ARCH-musl.tar.xz"; \
-          tar -xJf "node-v$NODE_VERSION-linux-$ARCH-musl.tar.xz" -C /usr/local --strip-components=1 --no-same-owner \
-          && ln -s /usr/local/bin/node /usr/local/bin/nodejs \
-          && curl -fSLO --compressed "https://yarnpkg.com/downloads/$YARN_VERSION/yarn-v$YARN_VERSION.tar.gz" \
-          && tar -xzf yarn-v$YARN_VERSION.tar.gz -C /opt/ \
-          && ln -snf /opt/yarn-v$YARN_VERSION/bin/yarn /usr/local/bin/yarn \
-          && ln -snf /opt/yarn-v$YARN_VERSION/bin/yarnpkg /usr/local/bin/yarnpkg \
-          && rm yarn-v$YARN_VERSION.tar.gz \
-          && rm node-v$NODE_VERSION-linux-$ARCH-musl.tar.xz
+      - name: Set Node Version
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16"
+
+      - name: Install Yarn
+        run: npm install -g yarn
 
       # Setup Auth token to push to github packages
       - name: Set NPM Config
