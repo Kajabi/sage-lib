@@ -25,6 +25,9 @@ export default {
       },
     },
   },
+  subcomponents: {
+    'List.Item': ListItem,
+  },
   argTypes: {
     ...selectArgs({
       dragHandleType: List.DRAG_HANDLE_TYPES,
