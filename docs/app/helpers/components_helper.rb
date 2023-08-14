@@ -121,8 +121,8 @@ module ComponentsHelper
         react: "done",
         responsive: "done",
         a11y: "done",
-        react_component_slug: "sage-button--default",
-        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FsMbtLUHSt2vfKgKjyQ3052%2F%25F0%259F%25A7%25A9-Sage-components%3Fnode-id%3D3%253A15",
+        react_component_slug: "sage-button--standard",
+        figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FsMbtLUHSt2vfKgKjyQ3052%2F%25F0%259F%25A7%25A9-Sage-components%3Ftype%3Ddesign%26node-id%3D3%253A15%26mode%3Ddesign%26t%3DebQtyPh3UGfivP5i-1",
       },
       {
         title: "card",
