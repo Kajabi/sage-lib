@@ -6,16 +6,14 @@
 </tr>
 <tr>
   <td><%= md('`attributes`') %></td>
-  <td><%= md('For setting additional attributes not defined above. Accepts a Ruby hash of valid key-value properties, such as data-attributes') %></td>
+  <td><%= md('Allows for the configuration of additional settings not previously described. It requires a Ruby hash, which is a collection of key-value pairs. Inside this hash, you can include valid properties such as data attributes.') %></td>
   <td><%= md('Hash') %></td>
   <td><%= md('`nil`') %></td>
 </tr>
 <tr>
   <td><%= md('`custom_content_class`') %></td>
   <td>
-    <%= md('
-      Passes a custom CSS class for when custom HTML content is provided as content in the component.
-      We recommend this be used primarily for controlling the layout of the custom content and to avoid any color modifications that would overrides system styles for buttons.
+    <%= md('Allows you to apply a custom CSS class when you provide custom HTML content within it. The primary purpose of using this custom CSS class should be to manage the layout of the custom content within the component.
     ') %>
   </td>
   <td><%= md('String') %></td>
@@ -78,25 +76,25 @@ icon: {
   <td><%= md('`false`') %></td>
 </tr>
 <tr>
-  <td><%= md('`raised`') %></td>
+  <td><%= md('`raised`') %><%= sage_component SageBadge, { color: "danger", value: "deprecated" } %></td>
   <td><%= md('Toggles "raised" shadows effect on standard buttons.') %></td>
   <td><%= md('Boolean') %></td>
   <td><%= md('`false`') %></td>
 </tr>
 <tr>
-  <td><%= md('`small`') %></td>
+  <td><%= md('`small`') %><%= sage_component SageBadge, { color: "danger", value: "deprecated" } %></td>
   <td><%= md('Toggles whether buttons in the "subtle" format can be display in a regular (default) and small size using this property.') %></td>
   <td><%= md('Boolean') %></td>
   <td><%= md('`false`') %></td>
 </tr>
 <tr>
   <td><%= md('`style`') %></td>
-  <td><%= md('Buttons have three different "styles" that affect color appearance to create a "primary", "secondary", and "danger" variation.') %></td>
-  <td><%= md('[`"primary"` | `"secondary"` | `"danger"`]') %></td>
+  <td><%= md('Buttons have several different "styles" that affect color appearance to create a "primary", "accent", "secondary", and "danger" variation.') %></td>
+  <td><%= md('[`"primary"` | `"accent"` | `"secondary"` | `"danger"`]') %></td>
   <td><%= md('`primary`') %></td>
 </tr>
 <tr>
-  <td><%= md('`subtle`') %></td>
+  <td><%= md('`subtle`') %><%= sage_component SageBadge, { color: "danger", value: "deprecated" } %></td>
   <td><%= md('Whether or not to render the button in the "subtle" format.') %></td>
   <td><%= md('Boolean') %></td>
   <td><%= md('`false`') %></td>

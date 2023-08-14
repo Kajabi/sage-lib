@@ -54,7 +54,7 @@ module SageSchemas
     icon: [:optional, NilClass, { name: String, style: Set.new(["left", "right", "only"]) }],
     icon_only: [:optional, NilClass, TrueClass],
     spinner_on_submit: [:optional, NilClass, String],
-    style: [:optional, NilClass, Set.new(["accent", "primary", "secondary", "danger"])],
+    style: [:optional, NilClass, Set.new(["primary", "accent", "secondary", "danger"])],
     value: [:optional, NilClass, String],
     # TODO: Deprecations in Next
     subtle: [:optional, NilClass, TrueClass],
