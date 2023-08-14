@@ -201,8 +201,8 @@
   <%= sage_component SageBadge, {
     color: "danger",
     value: "Deprecated",
-  }%> 
-  Subtle buttons are deprecated. Replace Subtle button with a “plain” link.
+  }%>
+  <%= md('Subtle buttons are deprecated. Replace Subtle button with a “plain” link. See documentation for the <a href="link">Link</a> component.') %>
 </p>
 
 <%= sage_component SageButtonGroup, { gap: :sm, spacer: { bottom: :sm }} do %>
@@ -320,7 +320,7 @@
     color: "danger",
     value: "Deprecated",
   }%> 
-  With the Subtle button being deprecated, this property will be as well. Replace a small button with a “plain” link.
+  <%= md('With the Subtle button being deprecated, this property will be as well. Replace Subtle button with a “plain” link. See documentation for the <a href="link">Link</a> component.') %>
 </p>
 
   <%= sage_component SageButton, {
