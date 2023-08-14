@@ -114,7 +114,7 @@ module ComponentsHelper
       },
       {
         title: "button",
-        description: "Buttons are the clickable elements used to perform actions.",
+        description: "Buttons are used to perform actions within a page or view.",
         scss: "done",
         docs: "done",
         rails: "done",
