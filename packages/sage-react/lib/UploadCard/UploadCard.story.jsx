@@ -38,19 +38,14 @@ DefaultWithError.args = {
     {
       message: 'This is the error message.'
     },
-  ]
-};
-
-export const SelectedWithError = Template.bind({});
-SelectedWithError.args = {
-  acceptedFiles: [{ name: '.csv', size: '1 M' }],
-  errors: [
-    {
-      message: 'This is the error message.'
-    },
   ],
   previewImage: {
     alt: 'cat',
     src: 'https://placekitten.com/360'
   }
+};
+
+export const Stacked = Template.bind({});
+Stacked.args = {
+  stacked: true,
 };

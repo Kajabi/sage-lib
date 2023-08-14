@@ -114,8 +114,6 @@ $-upload-card-mobile-breakpoint: 609px;
 .sage-upload-card__input-label {
   /* NOTE: label provides keyboard focus but does not allow form interaction */
   @include sage-focus-ring;
-
-  justify-self: flex-start;
 }
 
 .sage-upload-card__preview {
@@ -142,6 +140,7 @@ $-upload-card-mobile-breakpoint: 609px;
 
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: sage-spacing(sm);
   color: sage-color(charcoal, 200);
 }
