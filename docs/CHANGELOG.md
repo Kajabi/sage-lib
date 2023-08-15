@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.16.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.15.1...@kajabi/sage@5.16.0) (2023-08-15)
+
+
+### Features
+
+* **avatar:** remove obsolete images for avatar ([0c63e08](https://github.com/Kajabi/sage-lib/commit/0c63e08bfa6d4e52b1475c43c3668cb4aebc5a35))
+* **avatar:** update naming in files to generic folks ([66061d5](https://github.com/Kajabi/sage-lib/commit/66061d501b0dade3680e86f499d688161cdde865))
+
+
+
+
+
 ## [5.15.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.15.0...@kajabi/sage@5.15.1) (2023-08-04)
 
 
