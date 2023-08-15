@@ -1,5 +1,6 @@
 import React from 'react';
-import { Grid } from '..';
+import { Button } from '../Button';
+import { Grid, SageTokens } from '..';
 import { UploadCard } from './UploadCard';
 
 export default {
@@ -43,6 +44,20 @@ DefaultWithError.args = {
     alt: 'cat',
     src: 'https://placekitten.com/360'
   }
+};
+
+export const CustomActions = Template.bind({});
+CustomActions.args = {
+  actions: (
+    <Button
+      color={Button.COLORS.SECONDARY}
+      icon={SageTokens.ICONS.CARET_DOWN}
+      iconPosition={Button.ICON_POSITIONS.RIGHT}
+    >
+      Select a file
+    </Button>
+  ),
+  customFileInputField: true,
 };
 
 export const Stacked = Template.bind({});
