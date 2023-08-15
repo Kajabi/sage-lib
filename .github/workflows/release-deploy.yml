@@ -83,9 +83,14 @@ jobs:
       - name: Yarn Build
         run: yarn build
 
+      - name: Change permissions for workspace
+        run: chmod -R 755 $GITHUB_WORKSPACE
+
       # Lerna Bootstrap and Publish package
       - name: Lerna Bootstrap
-        run: npx lerna bootstrap --ci
+        run: |
+          chmod 755 /github/home/.config
+          npx lerna bootstrap --ci
 
       - name: Lerna Publish
         run: npx lerna publish --registry github --yes
