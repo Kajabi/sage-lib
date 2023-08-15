@@ -61,15 +61,16 @@ describe('Sage Upload Card', () => {
         alt: 'cat',
         src: 'https://placekitten.com/360',
       },
+      selectionLabel: 'Select a file',
       selectionSubtext: 'Upload a .csv up to 10KB',
     };
 
     render(<UploadCard {...defaultProps} />);
 
-    const previewImage = document.querySelector('.sage-upload-card__preview');
+    const previewImage = document.querySelector('img');
     expect(previewImage).not.toBeNull();
-    expect(previewImage).toHaveAttribute('src', 'https://placekitten.com/360');
     expect(previewImage).toHaveAttribute('alt', 'cat');
+    expect(previewImage).toHaveAttribute('src', 'https://placekitten.com/360');
   });
 
   it('renders with actions when prop is set', () => {
@@ -97,6 +98,7 @@ describe('Sage Upload Card', () => {
     const defaultProps = {
       errors: [
         {
+          code: '1',
           message: 'This is the error message.',
         },
       ],

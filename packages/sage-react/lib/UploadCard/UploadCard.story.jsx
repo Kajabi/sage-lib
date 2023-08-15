@@ -34,6 +34,13 @@ Default.decorators = [
 ];
 
 export const DefaultWithError = Template.bind({});
+DefaultWithError.parameters = {
+  docs: {
+    description: {
+      story: 'The Upload Card will display an error message if the `errors` prop is set, with the appropriate styling.'
+    },
+  },
+};
 DefaultWithError.args = {
   errors: [
     {
@@ -47,6 +54,13 @@ DefaultWithError.args = {
 };
 
 export const CustomActions = Template.bind({});
+CustomActions.parameters = {
+  docs: {
+    description: {
+      story: 'The `actions` prop is a slot to allow for custom labels and inputs, buttons, dropdowns, etc. to be used in place of the default input field when the `customFileInputField` prop is set to `true.`'
+    },
+  },
+};
 CustomActions.args = {
   actions: (
     <Button
@@ -61,6 +75,13 @@ CustomActions.args = {
 };
 
 export const Stacked = Template.bind({});
+Stacked.parameters = {
+  docs: {
+    description: {
+      story: 'The default layout will adjust from a vertical (stacked) orientation to horizontal depending on available space and/or screen size. Setting `stack_layout` to `true` locks the component to the vertical orientation.'
+    },
+  },
+};
 Stacked.args = {
   stacked: true,
 };

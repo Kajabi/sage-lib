@@ -68,17 +68,17 @@ export const UploadCard = ({
           <label htmlFor={id} className="visually-hidden">{selectionLabel || replaceLabel}</label>
         );
       }
-      return actions;
     }
+    return actions;
   };
 
   return (
     <div className={classNames} {...rest}>
       <div className="sage-upload-card__dropzone" {...rootProps}>
         {renderDefaultInputField()}
+        {renderPreviewImage()}
         {filesSelected ? (
           <>
-            {renderPreviewImage()}
             <div className="sage-upload-card__body">
               <div className="sage-upload-card__description">
                 {acceptedFiles.map(({ name }, i) => {
@@ -101,12 +101,6 @@ export const UploadCard = ({
           </>
         ) : (
           <>
-            <IconCard
-              className="sage-upload-card__preview"
-              color={IconCard.COLORS.DRAFT}
-              icon={IconCard.ICONS.FILE}
-              size={IconCard.SIZES.XL}
-            />
             <div className="sage-upload-card__body">
               <div className="sage-upload-card__description">
                 <p className="sage-upload-card__filename">

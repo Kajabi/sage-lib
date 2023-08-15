@@ -106,19 +106,3 @@
     <p>Recommended dimensions or file size requirements</p>
   <% end %>
 <% end %>
-
-<h3 class="t-sage-heading-6">Selected Error State</h3>
-
-<%= sage_component SageUploadCard, {
-  accepted_files: [
-    {name: "contacts.csv"},
-  ],
-  file_selected: true,
-  has_error: true,
-  id: "upload-card-selected-error",
-  selection_label: "Replace file",
-  selection_subtext: "Recommended dimensions or file size requirements",
-  errors: [
-    {text: "This is the error message."},
-  ]
-} %>
