@@ -17,7 +17,7 @@
     "dist/*"
   ],
   "engines": {
-    "node": "16.x",
+    "node": "14.x",
     "npm": "6.x",
     "yarn": "1.x"
   },
