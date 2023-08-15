@@ -85,7 +85,7 @@ jobs:
 
       # Lerna Bootstrap and Publish package
       - name: Lerna Bootstrap
-        run: npx lerna bootstrap --ci
+        run: yarn install --frozen-lockfile # npx lerna bootstrap --ci
 
       - name: Lerna Publish
         run: npx lerna publish --registry github --yes
