@@ -6,7 +6,6 @@ import { Button } from './Button';
 export default {
   title: 'Sage/Button',
   component: Button,
-  // displays description on Docs tab
   parameters: {
     docs: {
       description: {
