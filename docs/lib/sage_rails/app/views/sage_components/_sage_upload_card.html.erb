@@ -5,7 +5,7 @@
   upload_card_classes << 'sage-upload-card--error' if component.has_error.present?
   upload_card_classes << component.generated_css_classes
   upload_card_input_label = component.selection_label.present? ? component.selection_label : "Select a file"
-  upload_card_imagetypes = component.accepted_file_types.present? ? component.accepted_file_types.join(",") : "image/*"
+  upload_card_image_types = component.accepted_file_types.present? ? component.accepted_file_types.join(",") : "image/*"
 
   upload_card_preview_image_options = {
     class: "sage-upload-card__preview",
@@ -15,7 +15,7 @@
 <div class="<%= upload_card_classes.join(" ") %>" <%= component.generated_html_attributes.html_safe %>>
   <div class="sage-upload-card__dropzone">
     <% unless component.custom_file_input_field %>
-      <input class="sage-upload-card__input" accept="<%= upload_card_imagetypes %>" multiple="multiple" type="file" autocomplete="off" name="<%= component.name.present? ? component.name : component.id %>" id="<%= component.id %>" />
+      <input class="sage-upload-card__input" accept="<%= upload_card_image_types %>" multiple="multiple" type="file" autocomplete="off" name="<%= component.name.present? ? component.name : component.id %>" id="<%= component.id %>" />
     <% end %>
     <% if component.selection_preview.present? %>
       <%= image_tag(component.selection_preview, upload_card_preview_image_options) %>
