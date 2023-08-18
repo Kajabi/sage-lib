@@ -54,22 +54,23 @@ export const UploadCard = ({
   );
 
   const renderLabel = () => {
-    if ((selectionLabel || replaceLabel) && !customFileInputField) {
-      return (
-        <>
-          <label htmlFor={id} className="sage-upload-card__input-label sage-btn sage-btn--secondary">{selectionLabel || replaceLabel}</label>
-        </>
-      );
-    }
-
-    if (actions) {
-      if (!customFileInputField) {
-        return (
-          <label htmlFor={id} className="visually-hidden">{selectionLabel || replaceLabel}</label>
-        );
+    let classnames = 'visually-hidden';
+    const CustomLabel = () => (
+      <>
+        <label htmlFor={id} className={classnames}>
+          {selectionLabel || replaceLabel}
+        </label>
+      </>
+    );
+    if ((selectionLabel || replaceLabel) && customFileInputField === false) {
+      classnames = 'sage-upload-card__input-label sage-btn sage-btn--secondary';
+    } else if (actions !== null) {
+      if (customFileInputField === false) {
+        classnames = 'visually-hidden';
       }
+      return actions;
     }
-    return actions;
+    return <CustomLabel />;
   };
 
   return (
