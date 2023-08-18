@@ -1,184 +1,355 @@
-<%
-demo_configs = [
-  {
-    heading: "Accent",
-    label: "Accent",
-    style: "accent",
-  },
-  {
-    heading: "Primary",
-    label: "Primary",
+<h2>Variants</h2>
+
+<h3>Primary</h3>
+<p>Default button styles, used with affirmative actions such as submitting, continuing, and saving.</p>
+
+<%= sage_component SageButtonGroup, { gap: :sm, spacer: { bottom: :sm }} do %>
+
+  <%= sage_component SageButton, {
+    value: "Button",
     style: "primary",
-  },
-  {
-    heading: "Secondary",
-    label: "Secondary",
-    style: "secondary",
-  },
-  {
-    heading: "Danger",
-    label: "Danger",
-    style: "danger",
-  }
-]
-%>
+  } %>
 
-<h3>Standard Buttons</h3>
+  <%= sage_component SageButton, {
+    value: "Disabled",
+    style: "primary",
+    attributes: {
+      type: "submit"
+    },
+    disabled: true,
+  } %>
 
-<% demo_configs.each do | config | %>
-  <%= sage_component SageCardBlock, {} do %>
-    <%= sage_component SageBadge, {
-      color: "draft",
-      value: config[:heading],
-    } %>
-  <% end %>
+  <%= sage_component SageButton, {
+    value: "Right icon",
+    style: "primary",
+    icon: {
+      style: "right",
+      name: "menu"
+    }
+  } %>
 
-  <% [false, true].each do | disabled | %>
-    <%= sage_component SageButtonGroup, { gap: :sm, spacer: { bottom: :sm }} do %>
-      <%= sage_component SageButton, {
-        value: "Button",
-        style: config[:style],
-        disabled: disabled,
-      } %>
+  <%= sage_component SageButton, {
+    value: "Left icon",
+    style: "primary",
+    icon: {
+      style: "left",
+      name: "menu"
+    }
+  } %>
 
-      <%= sage_component SageButton, {
-        value: "Submit",
-        style: config[:style],
-        disabled: disabled,
-        attributes: {
-          type: "submit"
-        }
-      } %>
-
-      <%= sage_component SageButton, {
-        value: "Link",
-        style: config[:style],
-        attributes: {
-          href: "#element-button"
-        },
-        disabled: disabled
-      } %>
-
-      <%= sage_component SageButton, {
-        value: "Left icon",
-        style: config[:style],
-        icon: {
-          style: "left",
-          name: "menu"
-        },
-        disabled: disabled
-      } %>
-
-      <%= sage_component SageButton, {
-        value: "Right icon",
-        style: config[:style],
-        icon: {
-          style: "right",
-          name: "menu"
-        },
-        disabled: disabled
-      } %>
-
-      <%= sage_component SageButton, {
-        value: "Icon only",
-        style: config[:style],
-        icon: {
-          style: "only",
-          name: "menu"
-        },
-        disabled: disabled
-      } %>
-
-      <%= sage_component SageButton, {
-        style: config[:style],
-        disabled: disabled,
-        custom_content_class: 'demo-custom-class',
-      } do %>
-        <strong>Custom</strong> <em>content</em>
-      <% end %>
-    <% end %>
-  <% end %>
-<% end %>
-
-<h3>Subtle Buttons</h3>
-<% demo_configs.each do | config | %>
-  <%= sage_component SageCardBlock, {} do %>
-    <%= sage_component SageBadge, {
-      color: "draft",
-      value: "Subtle #{config[:heading]}",
-    } %>
-  <% end %>
-
-  <% [false, true].each do | disabled | %>
-    <%= sage_component SageButtonGroup, { gap: :sm, spacer: { bottom: :sm }} do %>
-      <%= sage_component SageButton, {
-        value: "Button",
-        style: config[:style],
-        subtle: true,
-        disabled: disabled
-      } %>
-
-      <%= sage_component SageButton, {
-        value: "Link",
-        style: config[:style],
-        attributes: {
-          href: "#element-button"
-        },
-        subtle: true,
-        disabled: disabled
-      } %>
-
-      <%= sage_component SageButton, {
-        value: "Left icon",
-        style: config[:style],
-        icon: {
-          style: "left",
-          name: "gear"
-        },
-        subtle: true,
-        disabled: disabled
-      } %>
-
-      <%= sage_component SageButton, {
-        value: "Right icon",
-        style: config[:style],
-        icon: {
-          style: "right",
-          name: "gear"
-        },
-        subtle: true,
-        disabled: disabled
-      } %>
-
-      <%= sage_component SageButton, {
-        value: "Icon only",
-        style: config[:style],
-        icon: {
-          style: "only",
-          name: "gear"
-        },
-        subtle: true,
-        disabled: disabled
-      } %>
-
-      <%= sage_component SageButton, {
-        style: config[:style],
-        subtle: true,
-        disabled: disabled
-      } do %>
-        <strong>Custom</strong> <em>content</em>
-      <% end %>
-    <% end %>
-  <% end %>
-<% end %>
-
-<h3>Button Groups</h3>
-<%= sage_component SageCardBlock, {} do %>
-  <%= sage_component SageBadge, {
-    color: "draft",
-    value: "Button group: Align End",
+  <%= sage_component SageButton, {
+    value: "Icon button",
+    style: "primary",
+    icon: {
+      style: "only",
+      name: "menu"
+    }
   } %>
 <% end %>
+
+<%= sage_component SageDivider, {} %>
+
+<h3>Accent</h3>
+<p>Accent button styles, used for tertiary actions or when more contrast is needed.</p>
+
+<%= sage_component SageButtonGroup, { gap: :sm, spacer: { bottom: :sm }} do %>
+
+  <%= sage_component SageButton, {
+    value: "Button",
+    style: "accent",
+  } %>
+
+  <%= sage_component SageButton, {
+    value: "Disabled",
+    style: "accent",
+    disabled: true,
+    attributes: {
+      type: "submit"
+    }
+  } %>
+
+  <%= sage_component SageButton, {
+    value: "Left icon",
+    style: "accent",
+    icon: {
+      style: "left",
+      name: "menu"
+    }
+  } %>
+
+  <%= sage_component SageButton, {
+    value: "Left icon",
+    style: "accent",
+    icon: {
+      style: "left",
+      name: "menu"
+    }
+  } %>
+
+  <%= sage_component SageButton, {
+    value: "Icon button",
+    style: "accent",
+    icon: {
+      style: "only",
+      name: "menu"
+    }
+  } %>
+<% end %>
+
+<%= sage_component SageDivider, {} %>
+
+<h3>Danger / Destructive</h3>
+<p>Danger or destructive button styles, used with actions that delete information such as deleting an item or removing a contact.</p>
+<%= sage_component SageButtonGroup, { gap: :sm, spacer: { bottom: :sm }} do %>
+
+  <%= sage_component SageButton, {
+    value: "Button",
+    style: "danger",
+  } %>
+
+  <%= sage_component SageButton, {
+    value: "Disabled",
+    style: "danger",
+    disabled: true,
+    attributes: {
+      type: "submit"
+    }
+  } %>
+
+  <%= sage_component SageButton, {
+    value: "Left icon",
+    style: "danger",
+    icon: {
+      style: "left",
+      name: "menu"
+    }
+  } %>
+
+  <%= sage_component SageButton, {
+    value: "Left icon",
+    style: "danger",
+    icon: {
+      style: "left",
+      name: "menu"
+    }
+  } %>
+
+  <%= sage_component SageButton, {
+    value: "Icon button",
+    style: "danger",
+    icon: {
+      style: "only",
+      name: "menu"
+    }
+  } %>
+<% end %>
+
+<%= sage_component SageDivider, {} %>
+
+<h3>Secondary</h3>
+<p>Secondary button styles, used with neutral actions such as going back, saving as a draft, and canceling.</p>
+
+<%= sage_component SageButtonGroup, { gap: :sm, spacer: { bottom: :sm }} do %>
+
+  <%= sage_component SageButton, {
+    value: "Button",
+    style: "secondary",
+  } %>
+
+  <%= sage_component SageButton, {
+    value: "Disabled",
+    style: "secondary",
+    disabled: true,
+    attributes: {
+      type: "submit"
+    }
+  } %>
+
+  <%= sage_component SageButton, {
+    value: "Right icon",
+    style: "secondary",
+    icon: {
+      style: "right",
+      name: "menu"
+    }
+  } %>
+
+  <%= sage_component SageButton, {
+    value: "Left icon",
+    style: "secondary",
+    icon: {
+      style: "left",
+      name: "menu"
+    }
+  } %>
+
+  <%= sage_component SageButton, {
+    value: "Icon button",
+    style: "secondary",
+    icon: {
+      style: "only",
+      name: "menu"
+    }
+  } %>
+<% end %>
+
+<%= sage_component SageDivider, {} %>
+
+<h3>Subtle</h3>
+
+<p>
+  <%= sage_component SageBadge, {
+    color: "danger",
+    value: "Deprecated",
+  }%>
+  <%= md('Subtle buttons are deprecated. Replace Subtle button with a “plain” link. See documentation for the <a href="link">Link</a> component.') %>
+</p>
+
+<%= sage_component SageButtonGroup, { gap: :sm, spacer: { bottom: :sm }} do %>
+
+  <%= sage_component SageButton, {
+    value: "Button",
+    style: "primary",
+    subtle: true,
+  } %>
+
+  <%= sage_component SageButton, {
+    value: "Disabled",
+    style: "primary",
+    disabled: true,
+    subtle: true,
+    attributes: {
+      type: "submit"
+    }
+  } %>
+
+  <%= sage_component SageButton, {
+    value: "Right icon",
+    style: "primary",
+    subtle: true,
+    icon: {
+      style: "right",
+      name: "menu"
+    }
+  } %>
+
+  <%= sage_component SageButton, {
+    value: "Left icon",
+    style: "primary",
+    subtle: true,
+    icon: {
+      style: "left",
+      name: "menu"
+    }
+  } %>
+
+  <%= sage_component SageButton, {
+    value: "Icon button",
+    style: "primary",
+    subtle: true,
+    icon: {
+      style: "only",
+      name: "menu"
+    }
+  } %>
+<% end %>
+
+<%= sage_component SageDivider, {} %>
+
+<h3>Disclosure Button</h3>
+<p>The disclosure button is used with menus and dropdown components. </p>
+
+<%= sage_component SageButtonGroup, { gap: :sm, spacer: { bottom: :sm }} do %>
+  <%= sage_component SageButton, {
+    value: "Month",
+    disclosure: true,
+    attributes: {
+      href: "#",
+      rel: "noopener",
+      title: "Select month"
+    },
+    style: "secondary",
+  } %>
+
+  <%= sage_component SageButton, {
+    value: "Add item",
+    disclosure: true,
+    icon: { name: "add", style: "left" },
+    attributes: {
+      href: "#",
+      rel: "noopener",
+      title: "Add an item"
+    },
+    style: "secondary",
+  } %>
+
+  <%= sage_component SageButton, {
+    css_classes: "sage-btn--rich-text",
+    value: "Add item",
+    icon: { name: "add", style: "only" },
+    attributes: {
+      href: "#",
+      rel: "noopener",
+      title: "Open Sassdocs site"
+    },
+    style: "secondary",
+  } %>
+<% end %>
+
+<%= sage_component SageDivider, {} %>
+
+<h3>Loading State</h3>
+<p>Displays a loading indicator in the button, such as when a button is used to submit a form. Including the <code>spinner_on_submit</code> property will activate the loading state, and place the corresponding text as the <code>aria-label</code>.</p>
+
+<%= sage_component SageButton, {
+  value: "Select to activate loading state",
+  spinner_on_submit: "my aria label",
+  attributes: {
+    href: "#",
+    rel: "noopener",
+    title: "Activate loading state"
+  },
+  style: "primary",
+} %>
+
+<%= sage_component SageDivider, {} %>
+
+<h3>Small Button</h3>
+<p> 
+  <%= sage_component SageBadge, {
+    color: "danger",
+    value: "Deprecated",
+  }%> 
+  <%= md('With the Subtle button being deprecated, this property will be as well. Replace Subtle button with a “plain” link. See documentation for the <a href="link">Link</a> component.') %>
+</p>
+
+  <%= sage_component SageButton, {
+    value: "Small button here",
+    style: "primary",
+    subtle: true,
+    small: true
+  } %>
+
+<%= sage_component SageDivider, {} %>
+
+<h3>Full Width</h3>
+<p>Displays a button that takes up 100% of the width of its container. Enable the <code>full_width</code> treatment by adding the attribute: <code>full_width: true</code>.</p>
+<div>
+  <%= sage_component SageButton, {
+    value: "Full width button example",
+    style: "primary",
+    full_width: true
+  } %>
+</div>
+
+<%= sage_component SageDivider, {} %>
+
+<h2>Button Groups</h2>
+
+<%= sage_component SageDivider, {} %>
+
+<h3>Aligned to the end</h3>
+
 <%= sage_component SageButtonGroup, { gap: :sm, align: "end" } do %>
   <%= sage_component SageButton, {
     value: "Button",
@@ -190,12 +361,10 @@ demo_configs = [
   } %>
 <% end %>
 
-<%= sage_component SageCardBlock, {} do %>
-  <%= sage_component SageBadge, {
-    color: "draft",
-    value: "Button group: Align Space-Between",
-  } %>
-<% end %>
+<%= sage_component SageDivider, {} %>
+
+<h3>Space Between</h3>
+
 <%= sage_component SageButtonGroup, { gap: :sm, align: "space-between" } do %>
   <%= sage_component SageButton, {
     value: "Button",
@@ -207,17 +376,16 @@ demo_configs = [
   } %>
 <% end %>
 
-<%= sage_component SageCardBlock, {} do %>
-  <%= sage_component SageBadge, {
-    color: "draft",
-    value: "Button group: Button + Link",
-  } %>
-<% end %>
+<%= sage_component SageDivider, {} %>
+
+<h3>Left inline</h3>
+
 <%= sage_component SageButtonGroup, { gap: :sm } do %>
   <%= sage_component SageButton, {
     value: "Button",
     style: "primary",
   } %>
+
   <%= sage_component SageLink, {
     url: "#",
     label: "Link",
@@ -230,12 +398,10 @@ demo_configs = [
   } %>
 <% end %>
 
-<%= sage_component SageCardBlock, {} do %>
-  <%= sage_component SageBadge, {
-    color: "draft",
-    value: "Button group: Link + Buttons - Align Space-Between",
-  } %>
-<% end %>
+<%= sage_component SageDivider, {} %>
+
+<h3>Nested button group</h3>
+
 <%= sage_component SageButtonGroup, { gap: :sm, align: "space-between" } do %>
   <%= sage_component SageLink, {
     url: "#",
@@ -247,11 +413,13 @@ demo_configs = [
     show_label: true,
     style: "secondary"
   } %>
+
   <%= sage_component SageButtonGroup, { gap: :sm } do %>
     <%= sage_component SageButton, {
       value: "Button",
       style: "secondary",
     } %>
+
     <%= sage_component SageButton, {
       value: "Button",
       style: "primary",
@@ -259,153 +427,37 @@ demo_configs = [
   <% end %>
 <% end %>
 
-<%= sage_component SageCardBlock, {} do %>
-  <%= sage_component SageBadge, {
-    color: "draft",
-    value: "Button group: Align End with top border",
-  } %>
-<% end %>
+<%= sage_component SageDivider, {} %>
+
+<h3>Aligned to the end and border top</h3>
 
 <%= sage_component SageButtonGroup, { gap: :sm, align: "end", borderTop: true } do %>
   <%= sage_component SageButton, {
     value: "Button",
     style: "secondary",
   } %>
+
   <%= sage_component SageButton, {
     value: "Button",
     style: "primary",
   } %>
 <% end %>
 
+<%= sage_component SageDivider, {} %>
+
 <h3>Button Group Wrap</h3>
-<%= md("
-  When enabled, button groups are no longer restricted to a single row, allowing contents to wrap to multiple lines via `flex-wrap: wrap`. **Note: all button groups regardless of this attribute will wrap at breakpoints below `sm-min` to prevent horizontal scrolling on small screen devices.**
-  Click the button below to toggle button group wrapping throughout the page, and resize your browser to view the resulting change.
-", use_sage_type: true) %>
-<div>
-  <%= sage_component SageButton, {
-    value: "Toggle button group wrap",
-    style: "primary",
-    icon: {
-      style: "right",
-      name: "menu-bordered"
-    },
-    attributes: {
-      id: "button-group-wrap-example"
-    }
-  } %>
-</div>
+<p>When enabled, button groups are no longer restricted to a single row, allowing contents to wrap to multiple lines via <code>flex-wrap: wrap</code>.</p> 
+<p>Note: all button groups regardless of this attribute will wrap at breakpoints below <code>sm-min</code> to prevent horizontal scrolling on small screen devices.</p>
+<p>Click the button below to toggle button group wrapping throughout the page, and resize your browser to view the resulting change.</p>
 
-<h3>Disclosure Button</h3>
-<%= md("
-  The disclosure button is used mainly with menus and dropdown components, accompanied with a down caret icon.
-", use_sage_type: true) %>
-<div>
-  <%= sage_component SageButton, {
-    value: "Month",
-    disclosure: true,
-    attributes: {
-      href: "#",
-      rel: "noopener",
-      title: "Open Sassdocs site"
-    },
-    style: "secondary",
-  } %>
-</div>
-
-<h4>Disclosure Button with Icon</h4>
-<%= md("
-  The disclosure button allows for an icon affordance.
-", use_sage_type: true) %>
-<div>
-  <%= sage_component SageButton, {
-    value: "Add item",
-    disclosure: true,
-    icon: { name: "add", style: "left" },
-    attributes: {
-      href: "#",
-      rel: "noopener",
-      title: "Open Sassdocs site"
-    },
-    style: "secondary",
-  } %>
-</div>
-
-<h4>Rich Text Editor Button</h4>
-<%= md("
-  The disclosure button allows for an icon affordance.
-", use_sage_type: true) %>
-<div>
-  <%= sage_component SageButton, {
-    css_classes: "sage-btn--rich-text",
-    value: "Add item",
-    icon: { name: "add", style: "only" },
-    attributes: {
-      href: "#",
-      rel: "noopener",
-      title: "Open Sassdocs site"
-    },
-    style: "secondary",
-  } %>
-</div>
-<h4>Rich Text Editor Disclosure Button</h4>
-<%= md("
-  The disclosure button allows for an icon affordance to exist with hidden text.
-", use_sage_type: true) %>
-<div>
-  <%= sage_component SageButton, {
-    css_classes: "sage-btn--rich-text",
-    value: "Add item",
-    disclosure: true,
-    small: true,
-    icon: { name: "add", style: "only" },
-    attributes: {
-      href: "#",
-      rel: "noopener",
-      title: "Open Sassdocs site"
-    },
-    style: "secondary",
-  } %>
-</div>
-
-<h3>Loading State</h3>
-<%= md("
-  Displays a loading indicator in the button, such as when a button is used to submit a form. Including the `spinner_on_submit` property will activate the loading state, and place the corresponding text as the `aria-label`.
-", use_sage_type: true) %>
-<div>
-  <%= sage_component SageButton, {
-    value: "Select to activate loading state",
-    spinner_on_submit: "my aria label",
-    attributes: {
-      href: "#",
-      rel: "noopener",
-      title: "Open Sassdocs site"
-    },
-    style: "primary",
-  } %>
-</div>
-
-<h3>Small Button</h3>
-<%= md("
-  Sets a subtle button to be smaller in `font-size` and `line-height`. Enable the `small` treatment by adding the attribute: `small: true`.
-", use_sage_type: true) %>
-<div>
-  <%= sage_component SageButton, {
-    value: "Small button here",
-    style: "primary",
-    subtle: true,
-    small: true
-  } %>
-</div>
-
-<h3>Full Width</h3>
-<%= md("
-  Displays a button that takes up 100% of the width of its container. Enable the `full_width` treatment by adding the attribute: `full_width: true`.
-", use_sage_type: true) %>
-<div>
-  <%= sage_component SageButton, {
-    value: "Full width button example",
-    style: "primary",
-    full_width: true
-  } %>
-</div>
+<%= sage_component SageButton, {
+  value: "Toggle button group wrap",
+  style: "primary",
+  icon: {
+    style: "right",
+    name: "menu-bordered"
+  },
+  attributes: {
+    id: "button-group-wrap-example"
+  }
+} %>
