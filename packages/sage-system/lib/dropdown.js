@@ -120,7 +120,7 @@ Sage.dropdown = (function () {
       val = (el.value || el.textContent).trim();
     }
 
-    if (val !== null) {
+    if (val !== null && !isMultiselect) {
       updateTriggerLabel(val, elTrigger);
       updateStateClass(val, elDropdown);
     }
