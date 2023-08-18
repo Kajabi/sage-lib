@@ -38,6 +38,7 @@ Sage.dropdown = (function () {
   const dropdownItemControlClass = ".sage-dropdown__item-control";
   const dropdownClass = ".sage-dropdown";
   const dropdownTriggerLabelClass = ".sage-dropdown__trigger-label";
+  const dropdownAllowMultipleClass = "sage-dropdown--allow-multiple";
 
   // ==================================================
   // Functions
@@ -111,6 +112,7 @@ Sage.dropdown = (function () {
     const eventIsOnDropdownItem = el.classList.contains(dropdownItemClass);
     const closestDropdownItemControl = el.closest(dropdownItemControlClass);
     const eventIsWithinCustomItemControl = closestDropdownItemControl && closestDropdownItemControl.classList.contains(dropdownItemControlCustomClass);
+    const isMultiselect = elDropdown.classList.contains(dropdownAllowMultipleClass);
 
     if (eventIsWithinCustomItemControl && elTrigger) {
       val = closestDropdownItemControl.innerHTML;
@@ -122,6 +124,11 @@ Sage.dropdown = (function () {
       updateTriggerLabel(val, elTrigger);
       updateStateClass(val, elDropdown);
     }
+
+
+    // Keep open if multiselect is enabled
+    const didClickOnScreen = !!el.closest(".sage-dropdown__screen");
+    if(isMultiselect && isExpanded(elDropdown) && !didClickOnScreen) return;
 
     isExpanded(elDropdown) ? close(elDropdown) : open(elDropdown);
   }

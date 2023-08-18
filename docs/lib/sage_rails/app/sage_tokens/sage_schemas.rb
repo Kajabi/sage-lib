@@ -103,6 +103,7 @@ module SageSchemas
 
   DROPDOWN = {
     align: [:optional, NilClass, Set.new(["left", "center", "right"])],
+    allow_multiple: [:optional, NilClass, TrueClass],
     contained: [:optional, NilClass, TrueClass],
     customized: [:optional, NilClass, TrueClass],
     custom_modifier: [:optional, NilClass, Set.new(["actions", "sort"])],
