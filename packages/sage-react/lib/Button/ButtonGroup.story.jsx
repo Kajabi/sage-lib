@@ -7,11 +7,10 @@ import { Link } from '../Link';
 export default {
   title: 'Sage/Button Group',
   component: ButtonGroup,
-  // displays description on Docs tab
   parameters: {
     docs: {
       description: {
-        component: '', // TODO: Add component description.
+        component: 'Button Group allows buttons to be positioned in various ways.',
       },
     },
   },

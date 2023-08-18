@@ -1,20 +1,48 @@
-import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs/blocks';
 import { Button } from './Button';
 
 <Meta title="Sage/Button" component={Button} />
 
-## Subtitle (h2 equivalent)
+# Button
 
-Standard button styling with multiple display options.
+Buttons are used to perform actions within a page or view.
 
-### Another Subtitle (h3 equivalent)
+## Usage Guidelines
 
-Additional paragraph 1 goes here.
+### When to use
 
-Another paragraph here if needed.
+- Communicating an action that will occur. (e.g. saving a page)
+- Triggering or enabling an action, such as submitting requested information. (e.g. forms)
+- Progressing or regressing a user through a step in a flow. (e.g. modals)
+
+### When not to use
+
+- Directing users to a new page or different part within the same page. Instead, use [Link](/docs/sage-link--primary).
+
+## Accessibility
+
+When following our usage guidelines, the button should be accessible right out of the box but there are still a few general accessibility best practices to make sure you follow:
+
+- Buttons should always contain helpful text about what they do even if this text is expected to be visually hidden. (e.g. "Submit Form" or "Delete Account")
+- Buttons should not disable tabbing or keyboard navigation.
+
+## Properties
+
+<ArgsTable story="Primary" />
+
+## Variants
+
+### Primary
 
 <Canvas>
   <Story name="Primary">
     <Button>Button</Button>
+    <Button
+      color={Button.COLORS.PRIMARY}
+      icon="arrow-right"
+      iconPosition="right"
+    >
+      Button
+    </Button>
   </Story>
 </Canvas>
