@@ -183,6 +183,12 @@ jobs:
       - name: Set Bot Name
         run: git config user.name "Kajabi Automation Bot"
 
+      - name: Set NPM Config
+        run: npm config set '//npm.pkg.github.com/:_authToken' '${{ secrets.ACCESS_TOKEN }}'
+
+      - name: Unsafe Perm set
+        run: npm config set unsafe-perm true
+
       - name: Lerna Boostrap
         run: npx lerna bootstrap --ci
 
