@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.15.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.13.4...@kajabi/sage-react@1.15.0) (2023-08-21)
+
+
+### Bug Fixes
+
+* **avatar:** remove button avatar reference ([7e9eb48](https://github.com/Kajabi/sage-lib/commit/7e9eb487dfef9733e2fc03d4b5f5f6c8815cd019))
+* **avatar:** remove initial story ([6bec95a](https://github.com/Kajabi/sage-lib/commit/6bec95ab6724c377f434215e64bde0a357b311cf))
+* **avatar:** remove previous updates ([983fdf9](https://github.com/Kajabi/sage-lib/commit/983fdf9aaef85e780294ae00b08e6a669b0cf585))
+* **avatar:** remove react button avatar example with initials ([1e716e9](https://github.com/Kajabi/sage-lib/commit/1e716e9ca52781b98852fabb5385a950d603da10))
+* **avatar:** update example for WithImage ([34c9174](https://github.com/Kajabi/sage-lib/commit/34c9174571e34ac5c2acc493369f6632d527dd1c))
+
+
+### Features
+
+* add two new examples to React Storybook ([808183b](https://github.com/Kajabi/sage-lib/commit/808183bef84cbca331d69b7320991c4e21b62b0c))
+* **avatar:** add initials and lazy load support to avatar component ([7ea2d8f](https://github.com/Kajabi/sage-lib/commit/7ea2d8f32b604bd67040e34f909d5f482c9da01a))
+* **avatar:** update naming in files to generic folks ([66061d5](https://github.com/Kajabi/sage-lib/commit/66061d501b0dade3680e86f499d688161cdde865))
+
+
+
+
+
 # [1.14.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.13.4...@kajabi/sage-react@1.14.0) (2023-08-21)
 
 

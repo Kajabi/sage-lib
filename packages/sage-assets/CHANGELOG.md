@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.11.5](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.11.3...@kajabi/sage-assets@1.11.5) (2023-08-21)
+
+
+### Bug Fixes
+
+* **button:** add missing border-color values ([d69469e](https://github.com/Kajabi/sage-lib/commit/d69469e010e89edb1b5afa1b8712a69038fc7fe5))
+
+
+
+
+
 ## [1.11.4](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.11.3...@kajabi/sage-assets@1.11.4) (2023-08-21)
 
 

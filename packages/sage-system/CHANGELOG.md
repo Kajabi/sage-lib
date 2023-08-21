@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.12](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@1.2.11...@kajabi/sage-system@1.2.12) (2023-08-21)
+
+
+### Bug Fixes
+
+* **dropdoown:** update to prevent triggerLabel from updating when multiselect is enabled ([8cb7942](https://github.com/Kajabi/sage-lib/commit/8cb79426b187878bb3919ae131d01d21bac80c96))
+* **rails-dropdown:** resolve multi-select panel closing on option click ([3515f64](https://github.com/Kajabi/sage-lib/commit/3515f6451a53dea97ea5b498cd9373c7a1c435bd))
+
+
+
+
+
 ## [1.2.11](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@1.2.10...@kajabi/sage-system@1.2.11) (2023-07-31)
 
 
