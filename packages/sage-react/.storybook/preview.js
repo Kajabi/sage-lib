@@ -12,7 +12,7 @@ export const parameters = {
   },
   docs: {
     source: {
-      state: 'closed',
+      state: 'open',
     },
   },
 }
