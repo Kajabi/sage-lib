@@ -12,6 +12,7 @@ export const Select = ({
   message,
   onChange,
   options,
+  placeholder,
   required,
   value,
   ...rest
@@ -70,6 +71,7 @@ export const Select = ({
         required={required}
         {...rest}
       >
+        {(placeholder && <option value="" disabled hidden>{placeholder}</option>)}
         {(label && includeLabelInOptions) && <option label={label} />}
         {options && options.map((option, i) => (option.groupLabel
           ? buildOptgroup(option, i)
@@ -98,6 +100,7 @@ Select.defaultProps = {
   message: null,
   onChange: (evt) => evt,
   options: [],
+  placeholder: null,
   required: false,
   value: '',
 };
@@ -137,6 +140,7 @@ Select.propTypes = {
       }),
     ]),
   ),
+  placeholder: PropTypes.string,
   required: PropTypes.bool,
   value: PropTypes.string,
 };

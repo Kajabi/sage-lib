@@ -23,6 +23,7 @@ export default {
       'Option 3',
       'Option 4',
     ],
+    placeholder: 'Select an option',
   },
 };
 
@@ -67,7 +68,6 @@ DisabledSelectFieldWithOptionPreselected.args = {
   ],
   disabled: true,
   value: 'Option 3',
-  placeholder: 'Choose wisely…'
 };
 
 export const SelectWithOptionDisabled = (args) => {
@@ -85,17 +85,17 @@ SelectWithOptionDisabled.args = {
   id: 'field-4',
   label: 'Select from the following:',
   options: [
-    'First option',
     {
-      label: 'Second option',
-      value: 'second-option',
+      label: 'Country',
+      value: '',
       disabled: true,
     },
+    'First option',
     'Third option',
     'Fourth option',
     'Fifth option',
   ],
-  placeholder: 'Select from the following:'
+  placeholder: 'Pick an option:'
 };
 
 export const SelectWithOptgroups = (args) => {
