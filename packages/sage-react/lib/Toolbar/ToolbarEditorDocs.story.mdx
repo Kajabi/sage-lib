@@ -1,7 +1,7 @@
 import { Canvas, Meta, Story, ArgsTable } from '@storybook/addon-docs';
 
 import * as Stories from './ToolbarEditor.story.jsx';
-import * as ButtonStories from '../Button/Button.story.jsx';
+import { Button } from '../Button';
 import { ToolbarEditor } from './ToolbarEditor';
 
 export const ImageComponent = () => <img src='ToolbarEditorSections.png' alt="" />;
@@ -24,19 +24,43 @@ For sections that are not intended to have the responsive behavior, set `isFixed
 
 ## Button types
 #### Rich Text Editor Button
-The default toolbar editor button has an icon only treatment. To see the code for the buttons, go to the [Button documentation](?path=/docs/sage-button--rich-text-editor)
+The default toolbar editor button has an icon only treatment.
 
-<Story id="sage-button--rich-text-editor" />
+<Canvas>
+  <Button
+    color="secondary"
+    className="sage-btn--rich-text"
+    selected={true}
+    icon="strikethrough"
+    iconOnly={true}>Button
+  </Button>
+</Canvas>
 
 #### Rich Text Editor Dropdown Button with Icon
-This variant of the toolbar edit button is a icon-only dropdown button. To see the code for the buttons, go to the [Button documentation](?path=/docs/sage-button--rich-text-editor)
+This variant of the toolbar edit button is a icon-only dropdown button.
 
-<Story id="sage-button--rich-text-editor-icon-and-arrow" />
+<Canvas>
+  <Button 
+    color="secondary"
+    children="Text"
+    className="sage-btn--rich-text"
+    icon="align-left"
+    iconOnly={true}
+    disclosure={true}>Text
+  </Button>
+</Canvas>
 
 #### Rich Text Editor Dropdown Button
-There are cases when text is shown instead of the icon. To see the code for the buttons, go to the [Button documentation](?path=/docs/sage-dropdown--rich-text-editor-icon-only)
+There are cases when text is shown instead of the icon.
 
-<Story id="sage-button--rich-text-editor-words-and-arrow" />
+<Canvas>
+  <Button 
+    color="secondary"
+    children="Text"
+    className="sage-btn--rich-text"
+    disclosure={true}>Text
+  </Button>
+</Canvas>
 
 ## Selected buttons
 Add the `selected` attribute to your `<SageButton />`s to receive the selected treatment.

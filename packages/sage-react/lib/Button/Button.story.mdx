@@ -1,15 +1,276 @@
-import { Meta } from "@storybook/addon-docs";
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs/blocks';
+import { Button } from './Button';
+import { Card } from '../Card';
+import { ButtonGroup } from './ButtonGroup';
 
-<Meta title="Sage/Button/Notes" />
+<Meta title="Sage/Button" component={Button} />
 
-Sage Buttons allow a number of modifiers to customize their appearance including:
+# Button
 
-- Color -- use `color` prop; default is `primary`
-- Size -- use `size` prop; default is standard size (40px)
-- Alignment -- option to align to the right with `alignRight` set to `true`
-- Icons -- All Sage icons can be added either to the left or the right of the button label using `icon` and `iconPosition` (left is default). You can even make an icon-only button with `iconOnly` set to `true` in which case the label becomes visually hidden leaving just the icon visible while still screen reader accessible.
-- Loading -- Buttons can be set into a loading state by setting `loading` to `true`
+Buttons are used to perform actions within a page or view.
 
-Buttons can also be configured as hyperlinks while keeping the styling consistent. Just pass the desired properties (at least `href`) for external links or `to` for route-based links (must be within React Router components). Additional HTML attributes and `Link` props may also be passed as needed.
+## Usage Guidelines
 
-When two or more buttons need to be grouped together use `Button.Group` to wrap them. Use the `gap` prop to adjust the spacing as needed. The group can also be set to align to the right with `alignEnd={true}` if needed.
+### When to use
+
+- Communicating an action that will occur. (e.g. saving a page)
+- Triggering or enabling an action, such as submitting requested information. (e.g. forms)
+- Progressing or regressing a user through a step in a flow. (e.g. modals)
+
+### When not to use
+
+- Directing users to a new page or different part within the same page. Instead, use [Link](/docs/sage-link--primary).
+
+## Accessibility
+
+When following our usage guidelines, the button should be accessible right out of the box but there are still a few general accessibility best practices to make sure you follow:
+
+- Buttons should always contain helpful text about what they do even if this text is expected to be visually hidden. (e.g. "Submit Form" or "Delete Account")
+- Buttons should not disable tabbing or keyboard navigation.
+
+## Properties
+
+<ArgsTable story="Primary" />
+
+## Variants
+
+### Primary
+Used with affirmative actions such as submitting, continuing, and saving.
+
+<Canvas>
+  <Story name="Primary">
+    <ButtonGroup gap="sm">
+      <Button>Button</Button>
+      <Button disabled={true}>Disabled</Button>
+      <Button
+        color="primary"
+        icon="arrow-right"
+        iconPosition="right">Right Icon</Button>
+      <Button
+        color="primary"
+        icon="arrow-left"
+        iconPosition="left">Left Icon</Button>
+      <Button  
+        color="primary"
+        icon="menu"
+        iconOnly={true}>Icon Button</Button>
+    </ButtonGroup>
+  </Story>
+</Canvas>
+
+### Accent
+Used for tertiary actions or when more contrast is needed.
+
+<Canvas>
+  <Story name="Accent">
+    <ButtonGroup gap="sm">
+      <Button color="accent">Button</Button>
+      <Button color="accent" disabled={true}>Disabled</Button>
+      <Button
+        color="accent"
+        icon="arrow-right"
+        iconPosition="right">Right Icon</Button>
+      <Button
+        color="accent"
+        icon="arrow-left"
+        iconPosition="left">Left Icon</Button>
+      <Button  
+        color="accent"
+        icon="menu"
+        iconOnly={true}>Icon Button</Button>
+    </ButtonGroup>
+  </Story>
+</Canvas>
+
+### Danger / Destructive
+Used with actions that delete information such as deleting an ite or removing a contact.
+
+<Canvas>
+  <Story name="Danger/Destructive">
+    <ButtonGroup gap="sm">
+      <Button color="danger">Button</Button>
+      <Button color="danger" disabled={true}>Disabled</Button>
+      <Button
+        color="danger"
+        icon="arrow-right"
+        iconPosition="right">Right Icon</Button>
+      <Button
+        color="danger"
+        icon="arrow-left"
+        iconPosition="left">Left Icon</Button>
+      <Button  
+        color="danger"
+        icon="menu"
+        iconOnly={true}>Icon Button</Button>
+    </ButtonGroup>
+  </Story>
+</Canvas>
+
+### Secondary
+Used with neutral actions such as going back, saving as a draft, and canceling.
+
+<Canvas>
+  <Story name="Secondary">
+    <ButtonGroup gap="sm">
+      <Button color="secondary">Button</Button>
+      <Button color="secondary" disabled={true}>Disabled</Button>
+      <Button
+        color="secondary"
+        icon="arrow-right"
+        iconPosition="right">Right Icon</Button>
+      <Button
+        color="secondary"
+        icon="arrow-left"
+        iconPosition="left">Left Icon</Button>
+      <Button  
+        color="secondary"
+        icon="menu"
+        iconOnly={true}>Icon Button</Button>
+    </ButtonGroup>
+  </Story>
+</Canvas>
+
+
+### Subtle 
+Subtle buttons are deprecated. Replace Subtle button with a “plain” link. See documentation for the <a href="?path=/story/sage-link--primary">Link</a> component.
+
+<Canvas>
+  <Story name="Subtle - Deprecated">
+    <ButtonGroup gap="sm">
+      <Button subtle={true}>Button</Button>
+      <Button
+        subtle={true}
+        disabled={true}>Disabled</Button>
+      <Button subtle={true}
+        icon="arrow-right"
+        iconPosition="right">Right Icon</Button>
+      <Button subtle={true}
+        icon="arrow-left"
+        iconPosition="left">Left Icon</Button>
+      <Button subtle={true}
+        icon="menu"
+        iconOnly={true}>Icon Button</Button>
+      <Button subtle={true} small={true}>Small Button</Button>
+    </ButtonGroup>
+  </Story>
+</Canvas>
+
+### Disclosure
+Used with menus and dropdown components. 
+
+<Canvas>
+  <Story name="Disclosure">
+    <Button 
+      disclosure={true}
+      color="secondary">Button</Button>
+  </Story>
+</Canvas>
+
+### Loading
+Displays an animated spinner when `loading` is set to `true`. By default, `loading` is set to `false`.
+
+<Canvas>
+  <Story name="Loading state">
+    <Button loading={true}>Loading Button</Button>
+  </Story>
+</Canvas>
+
+### Full Width
+Displays a button that takes up 100% of the width of its container.
+
+<Canvas>
+  <Story name="Full Width">
+    <Button fullWidth={true}>Full Width Button</Button>
+  </Story>
+</Canvas>
+
+### Rich Text Editor
+Used for the Rich Text Editor UI. The option for `selected={true}` is available to keep the visual selection on various Rich Text Editor buttons. View more documentation on this at [Toolbar Editor](/docs/sage-toolbareditor--default).
+
+<Canvas>
+  <Story name="Rich Text Editor">
+    <ButtonGroup gap="sm">
+      <Button
+        color="secondary"
+        className="sage-btn--rich-text"
+        selected={true}
+        icon="strikethrough"
+        iconOnly={true}>Button</Button>
+      <Button 
+        color="secondary"
+        className="sage-btn--rich-text"
+        disclosure={true}>Text</Button>
+      <Button 
+        color="secondary"
+        className="sage-btn--rich-text"
+        icon="align-left"
+        iconOnly={true}
+        disclosure={true}>Text</Button>
+    </ButtonGroup>
+  </Story>
+</Canvas>
+
+## Additional Properties
+
+### Align End
+Floats a button to the right of the container. It's default is set to `false`.
+
+<Canvas>
+  <Story name="Align End">
+    <Button alignEnd={true}>Button</Button>
+  </Story>
+</Canvas>
+
+### Children
+Sets the text of the string that displays in the button.
+
+<Canvas>
+  <Story name="Button Text">
+    <Button>Button Text String</Button>
+  </Story>
+</Canvas>
+
+### Class name
+Assigns a class name to the `button` for style customizations.
+
+<Canvas>
+  <Story name="Class name">
+    <Button className="your-class-name-here">Button</Button>
+  </Story>
+</Canvas>
+
+### Custom Content
+Allows you to apply a custom CSS class when you provide custom HTML content within the button. The primary purpose of using this custom CSS class should be to manage the layout of the custom content within the component.
+
+<Canvas>
+  <Story name="Custom Content">
+  <Button
+    color="secondary"
+    hasCustomContent={true}
+    customContentClassName="demo-custom-class">
+    <Card>
+      <Card.Block>
+        <p>This is content in a card, in a button</p>
+      </Card.Block>
+    </Card>
+  </Button>
+  </Story>
+</Canvas>
+
+### Link Tag
+Allows you to pass a `Link` for React Router Links.
+
+<Canvas>
+  <Story name="Link Tag">
+    <Button linkTag="React Router Link goes here">Get Started</Button>
+  </Story>
+</Canvas>
+
+### onClick
+Allows you to pass a function to trigger when the button is selected.
+
+<Canvas>
+  <Story name="onClick">
+    <Button onClick={() => alert("Great success!")}>I trigger an alert!</Button>
+  </Story>
+</Canvas>
