@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.16.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.15.0...@kajabi/sage-react@1.16.0) (2023-08-25)
+
+
+### Features
+
+* **select-react:** add the placeholder attribute ([80d4740](https://github.com/Kajabi/sage-lib/commit/80d4740b04198b0c219bd51b37b9006d71afb1c7))
+
+
+
+
+
 # [1.15.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.13.4...@kajabi/sage-react@1.15.0) (2023-08-21)
 
 
