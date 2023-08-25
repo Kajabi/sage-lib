@@ -141,6 +141,15 @@ jobs:
         if: steps.restore-sage-lib-node-modules.outputs.cache-hit != true
         run: yarn install --frozen-lockfile
 
+      - name: Cache build assets
+        uses: actions/cache@v3
+        id: sage-lib-build-assets
+        env:
+          cache-name: sage-lib-build-assets
+        with:
+          path: 'packages/**'
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
+
       - name: Build
         run: yarn build
 
@@ -191,6 +200,19 @@ jobs:
 
       - name: Lerna Boostrap
         run: npx lerna bootstrap --ci
+
+      - name: Restore Build assets
+        uses: actions/cache/restore@v3
+        id: restore-sage-lib-build-assets
+        env:
+          cache-name: sage-lib-build-assets
+        with:
+          path: 'packages/**'
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
+
+      - name: Check Build Assets cache hit
+        if: steps.restore-sage-lib-build-assets.outputs.cache-hit != 'true'
+        run: exit 1
 
       - name: Lerna Publish
         run: npx lerna publish --registry github --yes
