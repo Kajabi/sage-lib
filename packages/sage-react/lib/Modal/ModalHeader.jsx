@@ -55,7 +55,7 @@ export const ModalHeader = ({
         </Card.Row>
         {subheader && (
           <Card.Row>
-            <h2 className={SageClassnames.TYPE.HEADING_6}>{subheader}</h2>
+            <h2 className={`${SageClassnames.TYPE.BODY} ${SageClassnames.TYPE_COLORS.CHARCOAL_300}`}>{subheader}</h2>
             {popover && (
               <Popover
                 title={popover.title}
