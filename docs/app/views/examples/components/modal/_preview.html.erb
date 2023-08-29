@@ -41,7 +41,10 @@
 
   <%# Standard Modal %>
   <%= sage_component SageModal, { id: "cool-modal", size: "lg" } do %>
-    <%= sage_component SageModalContent, { title: "Modal header" } do %>
+    <%= sage_component SageModalContent, {
+      title: "Modal header",
+      subheader: "This is subheader copy for your viewing pleasure",
+    } do %>
       <% content_for :sage_header_aside do %>
         <%= sage_component SageButton, {
           style: "secondary",
@@ -78,7 +81,10 @@
 
   <%# Standard Modal with Scrolling %>
   <%= sage_component SageModal, { allow_scroll: true, id: "cool-modal-scrolling" } do %>
-    <%= sage_component SageModalContent, { title: "Modal header" } do %>
+    <%= sage_component SageModalContent, {
+      title: "Modal header",
+      subheader: "This is subheader copy for your viewing pleasure",
+    } do %>
       <% content_for :sage_header_aside do %>
         <%= sage_component SageButton, {
           style: "secondary",
