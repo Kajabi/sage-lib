@@ -148,6 +148,7 @@ export const TOKENS_ICONS = {
   LOCATION: 'location',
   LOCK: 'lock',
   LOCK_ALT: 'lock-alt',
+  LOGO_AFTERPAY: 'logo-afterpay',
   LOGO_FACEBOOK: 'logo-facebook',
   LOGO_FACEBOOK_ROUND: 'logo-facebook-round',
   LOGO_INSTAGRAM: 'logo-instagram',

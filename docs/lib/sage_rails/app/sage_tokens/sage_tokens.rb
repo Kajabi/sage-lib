@@ -247,6 +247,7 @@ module SageTokens
     "location",
     "lock",
     "lock-alt",
+    "logo-afterpay",
     "logo-facebook",
     "logo-facebook-round",
     "logo-instagram",
