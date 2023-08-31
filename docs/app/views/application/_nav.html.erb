@@ -4,74 +4,71 @@
       value: "Home",
       attributes: {
         href: "/",
-        title: "Home"
+        title: "Home",
+        "data-nav-active": page_active('index') ? "true" : nil
       },
       subtle: true,
       icon: {
         style: "left",
         name: "home"
       },
+      css_classes: "docs-nav__item"
     } %>
     <%= sage_component SageButton, {
       value: "Foundations",
       attributes: {
         href: pages_foundation_path(:design_principles),
-        title: "Foundations"
+        title: "Foundations",
+        "data-nav-active": page_active('foundation') ? "true" : nil
       },
       subtle: true,
       icon: {
         style: "left",
-        name: "form"
+        name: "customize"
       },
+      css_classes: "docs-nav__item"
     } %>
     <%= sage_component SageButton, {
       value: "Components",
       attributes: {
         href: pages_component_path(sorted_sage_components.first[:title]),
-        title: "Components"
+        title: "Components",
+        "data-nav-active": page_active('component') ? "true" : nil
       },
       subtle: true,
       icon: {
         style: "left",
-        name: "folder"
+        name: "product"
       },
+      css_classes: "docs-nav__item"
     } %>
     <%= sage_component SageButton, {
       value: "Layout Tools",
       attributes: {
         href: pages_layout_path(sage_layouts_sorted.first[:title]),
-        title: "Layout Tools"
+        title: "Layout Tools",
+        "data-nav-active": page_active('layout') ? "true" : nil
       },
       subtle: true,
       icon: {
         style: "left",
         name: "stack"
       },
+      css_classes: "docs-nav__item"
     } %>
-    <!-- COMING SOON 
-    <%= sage_component SageButton, {
-      value: "Interactions",
-      attributes: {
-        href: pages_interactions_path(:container),
-        title: "JS Interactions"
-      },
-      subtle: true,
-      icon: {
-        style: "left",
-        name: "select"
-      },
-    } %>-->
     <%= sage_component SageButton, {
       value: "Helpers",
       attributes: {
         href: pages_helpers_path(:spacing),
-        title: "Style Helpers"
+        title: "Style Helpers",
+        "data-nav-active": page_active('helpers') ? "true" : nil
       },
       subtle: true,
       icon: {
         style: "left",
         name: "code"
       },
+      css_classes: "docs-nav__item"
     } %>
   <% end %>
 </div>

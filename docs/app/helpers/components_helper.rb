@@ -169,6 +169,7 @@ module ComponentsHelper
         responsive: "todo",
         a11y: "done",
         figma_embed: "",
+        deprecated: true
       },
       {
         title: "chart_legend",

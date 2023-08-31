@@ -1,44 +1,60 @@
 <% footerContainer ||= false %>
 
-<div class="docs-footer">
+<footer class="docs-footer">
   <% if footerContainer %>
     <div class="sage-container sage-container--xl">
   <% end %>
-
-  <%= sage_component SageButtonGroup, { gap: :md } do %>
-    <%= sage_component SageButton, {
-      value: "Version #{$SAGE_VERSION_GEM}",
-      attributes: {
-        href: $SAGE_RELEASE_URL,
-        target: "_blank",
-        rel: "noopener",
-        title: "Open SageRails gem source"
-      },
-      subtle: true,
-    } %>
-    <%= sage_component SageButton, {
-      value: "SASS Docs",
-      attributes: {
-        href: Rails.application.config.sassdocs_root_url,
-        target: "_blank",
-        rel: "noopener",
-        title: "Open Sassdocs site"
-      },
-      subtle: true,
-    } %>
-    <%= sage_component SageButton, {
-      value: "Storybook",
-      attributes: {
-        href: storybook_url(nil),
-        target: "_blank",
-        rel: "noopener",
-        title: "Open Storybook React components site"
-      },
-      subtle: true,
-    } %>
+  <%= sage_component SageButtonGroup, { gap: :md, align: "space-between" } do %>
+    <%= sage_component SageButtonGroup, { gap: :md } do %>
+      <%= sage_component SageButton, {
+        value: "Was this page helpful?",
+        subtle: true,
+        style: "primary",
+        icon: {
+          style: "left",
+          name: "feedback",
+        },
+        attributes: {
+          "data-js-modaltrigger": "support-request",
+          "data-js-event": "support-request-sidebar"
+        }
+      } %>
+      <%= sage_component SageLink, {
+        label: "SassDocs",
+        url: Rails.application.config.sassdocs_root_url,
+        external: true,
+        style: "secondary",
+        remove_underline: true,
+        icon: {
+          name: "launch",
+          style: "right"
+        },
+      } %>
+      <%= sage_component SageLink, {
+        label: "Storybook",
+        url: storybook_url(nil),
+        external: true,
+        style: "secondary",
+        remove_underline: true,
+        icon: {
+          name: "launch",
+          style: "right"
+        },
+      } %>
+    <% end %>
+    <%= sage_component SageButtonGroup, { gap: :md } do %>
+      <%= sage_component SageLink, {
+        label: "Sage v.#{$SAGE_VERSION_GEM}",
+        url: $SAGE_RELEASE_URL,
+        external: true,
+        style: "secondary",
+        small: true,
+        remove_underline: true,
+      } %>
+    <% end %>
   <% end %>
 
   <% if footerContainer %>
     </div>
   <% end %>
-</div>
+</footer>

@@ -4,8 +4,11 @@
   For Sage documentation use
 ================================================== */
 
-.docs-nav {
+.sage-docs-header {
+  position: relative;
+}
 
+.docs-nav {
   .sage-btn::before {
     @media screen and (min-width: sage-breakpoint(md-min)) {
       display: none;
@@ -22,6 +25,20 @@
   .docs-hero & {
     margin-bottom: rem(100px);
   }
+}
+
+.docs-nav__item > span::before {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: rem(3px);
+  background-color: sage-color(sage, 200);
+}
+
+[data-nav-active=true] > span::before {
+  content: "";
 }
 
 // displays "skip to content" link when focused

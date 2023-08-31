@@ -4,36 +4,19 @@
 <%= content_for :heading do %>
   <h1>Component Search</h1>
 <% end %>
-<%= form_tag(pages_search_path, method: :get) do %>
-  <%= sage_component SageToolbar, {} do %>
-    <%= sage_component SageToolbarGroup, {} do %>
-      <%= sage_component SageFormInput, {
-        id: "search",
-        label_text: "Search for a component",
-        placeholder: "Search Sage Components",
-        value: params[:search] || "",
-      } %>
-      <%= sage_component SageButton, {
-        value: "Search",
-        style: "primary",
-        attributes: { type: "submit" }
-      } %>
-    <% end %>
-  <% end %>
-<% end %>
+<%= render "component_search", search_btn_style: "primary", search_form_spacing: "xl" %>
 <% if @search.present? %>
   <%= sage_component SageCard, { spacer: { top: :xl }} do %>
     <% sorted_sage_components.each do |component| %>
-      <% if component[:title].include? @search %>
+      <% if component[:title].include? @search or component[:description].include? @search %>
         <%= sage_component SageChoice, {
-            attributes: {
-              href: pages_component_path(component[:title])
-            },
-            subtext: component[:description],
-            text: component[:title].titleize,
-            type: "arrow",
-          }
-        %>
+          attributes: {
+            href: pages_component_path(component[:title])
+          },
+          subtext: component[:description],
+          text: component[:title].titleize,
+          type: "arrow",
+        } %>
       <% end %>
     <% end %>
   <% end %>

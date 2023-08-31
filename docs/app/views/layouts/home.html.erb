@@ -11,7 +11,14 @@
       link_id: "main-content"
     -%>
     <%= yield %>
+    <%= render "pages/support_modal" %>
     <%= render "application/footer", footerContainer: true %>
+    <%= sage_component(SageOverlay, {}) %>
+    <% if content_for? :sage_docs_modals %>
+      <div id="sage-docs-modals">
+        <%= content_for :sage_docs_modals %>
+      </div>
+    <% end %>
     <%= render "scripts" %>
   </body>
 </html>

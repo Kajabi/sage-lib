@@ -1,0 +1,71 @@
+<% content_for :sage_docs_modals do %>
+  <%= sage_component SageDrawer, {
+      id: "support-request",
+      show_close: true,
+      size: "30vw",
+      expanded_size: "100vw",
+      disable_background_dismiss: false,
+    } do %>
+    <% content_for :sage_drawer_header do %>
+      <h1>Help & Feedback</h1>
+    <% end %>
+
+    <%= render "component_search", search_btn_style: "primary" %>
+
+    <%= sage_component SagePanel, {} do %>
+      <%= sage_component SagePanelHeader, {
+        title: "How can we help?",
+        title_tag: "h2"
+      } do %>
+        <%= sage_component SageLink, {
+          url: "https://slack.com/app_redirect?channel=C01A424HY8Y",
+          label: "#sage-support",
+          external: true,
+          icon: { name: "launch", style: "right" },
+          remove_underline: true,
+          small: true,
+          style: "secondary"
+        } %>
+      <% end %>
+      <%= sage_component SagePanelBlock, { type_block: true } do %>
+        <p>
+          Questions? Head to our
+          <%= sage_component SageLink, {
+            url: "https://slack.com/app_redirect?channel=C01A424HY8Y",
+            label: "#sage-support Slack Channel",
+            external: true,
+            style: "secondary"
+          } %>
+          and join the conversation.</p>
+      <% end %>
+    <% end %>
+    <%= sage_component SagePanel, {} do %>
+      <%= sage_component SagePanelHeader, {
+        title: "Tell us how we're doing",
+        title_tag: "h2",
+      } do %>
+        <%= sage_component SageLink, {
+          url: "https://forms.gle/Y4TGCimUGectGFHq9?utm_source=feedback_form&utm_medium=rails_docs",
+          label: "Share your feedback",
+          external: true,
+          icon: { name: "launch", style: "right" },
+          remove_underline: true,
+          small: true,
+          style: "secondary"
+        } %>
+      <% end %>
+      <%= sage_component SagePanelBlock, { type_block: true } do %>
+        <p>
+          Spotted a bug or have an idea or suggestion?
+          <%= sage_component SageLink, {
+            url: "https://forms.gle/Y4TGCimUGectGFHq9?utm_source=feedback_form&utm_medium=rails_docs",
+            label: "Let us know with this form.",
+            external: true,
+            style: "secondary"
+          } %>
+           We care about improving your experience!
+        </p>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>

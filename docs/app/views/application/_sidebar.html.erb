@@ -2,30 +2,33 @@
   <% if current_page_foundations? %>
     <%= sage_component SageNav, {
       items: [
-        { link: pages_foundation_path(:design_principles), text: "FOUNDATIONS", items: [
-          {
-            text: "Design Principles",
-            link: pages_foundation_path(:design_principles),
-            active: current_page?(pages_foundation_path(:design_principles)),
-          },
-          {
-            text: "Colors",
-            link: pages_foundation_path(:color),
-            active: current_page?(pages_foundation_path(:color)),
-          },
-          {
-            text: "Typography",
-            link: pages_foundation_path(:typography),
-            active: current_page?(pages_foundation_path(:typography)),
-          },
-          {
-            text: "Icons",
-            link: pages_foundation_path(:icon),
-            active: current_page?(pages_foundation_path(:icon)),
-          }]
-        }
-      ]
-    } %>
+        {
+          link: pages_foundation_path(:design_principles),
+          text: "FOUNDATIONS",
+          icon: "customize",
+          items: [
+            {
+              text: "Design Principles",
+              link: pages_foundation_path(:design_principles),
+              active: current_page?(pages_foundation_path(:design_principles)),
+            },
+            {
+              text: "Colors",
+              link: pages_foundation_path(:color),
+              active: current_page?(pages_foundation_path(:color)),
+            },
+            {
+              text: "Typography",
+              link: pages_foundation_path(:typography),
+              active: current_page?(pages_foundation_path(:typography)),
+            },
+            {
+              text: "Icons",
+              link: pages_foundation_path(:icon),
+              active: current_page?(pages_foundation_path(:icon)),
+            }]
+          }
+    ] } %>
   <% end %>
   <% if current_page_interactions? %>
     <%= sage_component SageNav, {
@@ -43,22 +46,26 @@
   <% if current_page_helpers? %>
     <%= sage_component SageNav, {
       items: [
-        { link: pages_helpers_path(:spacing), text: "HELPERS", items: [
-          {
-            text: "Spacing",
-            link: pages_helpers_path(:spacing),
-            active: current_page?(pages_helpers_path(:spacing)),
-          },
-          {
-            text: "Truncation",
-            link: pages_helpers_path(:truncation),
-            active: current_page?(pages_patterns_path(:truncation)),
-          },
-          {
-            text: "Reveal",
-            link: pages_helpers_path(:reveal),
-            active: current_page?(pages_patterns_path(:reveal)),
-          }
+        {
+          link: pages_helpers_path(:spacing),
+          text: "HELPERS",
+          icon: "code",
+          items: [
+            {
+              text: "Spacing",
+              link: pages_helpers_path(:spacing),
+              active: current_page?(pages_helpers_path(:spacing)),
+            },
+            {
+              text: "Truncation",
+              link: pages_helpers_path(:truncation),
+              active: current_page?(pages_patterns_path(:truncation)),
+            },
+            {
+              text: "Reveal",
+              link: pages_helpers_path(:reveal),
+              active: current_page?(pages_patterns_path(:reveal)),
+            }
         ] },
       ]
     } %>
@@ -96,6 +103,7 @@
       items: [{
         link: pages_layout_path(sage_layouts_sorted[0][:title]),
         text: "LAYOUT TOOLS",
+        icon: "stack",
         items: layout_list
       }]
     } %>
@@ -108,26 +116,38 @@
           text: component[:title].titleize,
           link: pages_component_path(component[:title]),
           active: current_page?(pages_component_path(component[:title])),
+          icon: component[:deprecated] ? "warning" : nil,
+          attributes: {
+            "data-deprecated": component[:deprecated] ? "true" : nil
+          }
         }
       end
     %>
     <%= sage_component SageNav, {
       items: [
-        { link: pages_component_path(sorted_sage_components[0][:title]), text: "COMPONENTS", items: component_list }
+        {
+          link: pages_component_path(sorted_sage_components[0][:title]),
+          text: "COMPONENTS",
+          items: component_list,
+          icon: "product"
+        }
       ]
     } %>
   <% end %>
 
   <%= content_for :sage_sidebar_footer do %>
-    <%= sage_component SageNav, {
-      aria_label: "Secondary",
-      items: [
-        {
-          text: "Get Support",
-          link: pages_support_path,
-          active: current_page?(pages_support_path),
-        }
-      ]
+    <%= sage_component SageButton, {
+      value: "Help & Feedback",
+      icon: {
+        style: "left",
+        name: "help-filled",
+      },
+      attributes: {
+        "data-js-modaltrigger": "support-request",
+        "data-js-event": "support-request-sidebar"
+      }
     } %>
   <% end %>
 <% end %>
+
+<%= render "pages/support_modal" %>

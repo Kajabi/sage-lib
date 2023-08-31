@@ -1,0 +1,28 @@
+<%
+  search_btn_style = search_btn_style || "secondary"
+  search_form_spacing = search_form_spacing || "xs"
+%>
+<%= form_tag(pages_search_path, method: :get) do %>
+  <%= sage_component SageToolbar, { spacer: { top: search_form_spacing } } do %>
+    <%= sage_component SageToolbarGroup, {} do %>
+      <%= sage_component SageFormInput, {
+        id: "search",
+        input_type: "search",
+        label_text: "Search Sage",
+        placeholder: "Search Sage components",
+        value: params[:search] || "",
+      } %>
+      <%= sage_component SageButton, {
+        value: "Search",
+        style: search_btn_style,
+        icon: {
+          style: "only",
+          name: "search"
+        },
+        attributes: {
+          type: "submit"
+        }
+      } %>
+    <% end %>
+  <% end %>
+<% end %>

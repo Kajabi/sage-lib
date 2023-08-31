@@ -12,8 +12,18 @@
   <div class="sage-col--lg-6">
   <%= md(%(
 ## We ❤️ Slack
-<p>We believe in being highly collaborative. Head to our <a href="https://slack.com/app_redirect?channel=C01A424HY8Y" target="_blank">Slack Support Channel</a> and join the conversation.</p>
+<p>We believe in being highly collaborative. Head to our <a href="https://slack.com/app_redirect?channel=C01A424HY8Y" target="_blank">#sage-support Slack Channel</a> and join the conversation.</p>
 )) %>
+
+<%= sage_component SageButton, {
+  style: "primary",
+  icon: { name: "help-filled", style: "left" },
+  value: "How can we help?",
+  attributes: {
+    "data-js-modaltrigger": "support-request",
+    "data-js-event": "Open support modal"
+  }
+} %>
   </div>
   <div class="sage-col--lg-6">
   <%= md(%(
