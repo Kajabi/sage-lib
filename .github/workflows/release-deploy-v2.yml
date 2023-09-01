@@ -198,9 +198,6 @@ jobs:
       - name: Unsafe Perm set
         run: npm config set unsafe-perm true
 
-      - name: Lerna Boostrap
-        run: npx lerna bootstrap --ci
-
       - name: Restore Build assets
         uses: actions/cache/restore@v3
         id: restore-sage-lib-build-assets
@@ -213,6 +210,9 @@ jobs:
       - name: Check Build Assets cache hit
         if: steps.restore-sage-lib-build-assets.outputs.cache-hit != 'true'
         run: exit 1
+
+      - name: Lerna Boostrap
+        run: npx lerna bootstrap --ci
 
       - name: Lerna Publish
         run: npx lerna publish --registry github --yes
