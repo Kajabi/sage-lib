@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.17.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.17.1...@kajabi/sage@5.17.2) (2023-09-06)
+
+
+### Bug Fixes
+
+* **icons:** add new icon to sage_tokens.rb ([1a1cc80](https://github.com/Kajabi/sage-lib/commit/1a1cc80874cf9540a226b69e6d6d65eae2209634))
+* **modal:** update subheader to match figma spec ([c12509a](https://github.com/Kajabi/sage-lib/commit/c12509a70c09fa8d560b5e623b61077618a5821c))
+
+
+
+
+
 ## [5.17.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.17.0...@kajabi/sage@5.17.1) (2023-08-25)
 
 **Note:** Version bump only for package @kajabi/sage

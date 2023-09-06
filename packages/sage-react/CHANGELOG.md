@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.16.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.16.0...@kajabi/sage-react@1.16.1) (2023-09-06)
+
+
+### Bug Fixes
+
+* **icons:** add new icon to icons.js ([967d93b](https://github.com/Kajabi/sage-lib/commit/967d93b0fd3fb4e54ff63a81779207e18a25645a))
+* **modal:** update subheader to match figma spec (react) ([c681e4f](https://github.com/Kajabi/sage-lib/commit/c681e4f5c1bd279653392de7a2aebadece9e8221))
+
+
+
+
+
 # [1.16.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.15.0...@kajabi/sage-react@1.16.0) (2023-08-25)
 
 
