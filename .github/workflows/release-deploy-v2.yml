@@ -141,17 +141,18 @@ jobs:
         if: steps.restore-sage-lib-node-modules.outputs.cache-hit != true
         run: yarn install --frozen-lockfile
 
+      - name: Build
+        run: yarn build
+
       - name: Cache build assets
-        uses: actions/cache@v3
+        uses: actions/cache/save@v3
         id: sage-lib-build-assets
         env:
           cache-name: sage-lib-build-assets
         with:
           path: 'packages/**'
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ runner.os }}-build-${{ env.cache-name }}
 
-      - name: Build
-        run: yarn build
 
   publish:
     needs: [lint, test, build]
@@ -205,7 +206,7 @@ jobs:
           cache-name: sage-lib-build-assets
         with:
           path: 'packages/**'
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ runner.os }}-build-${{ env.cache-name }}
 
       - name: Check Build Assets cache hit
         if: steps.restore-sage-lib-build-assets.outputs.cache-hit != 'true'
