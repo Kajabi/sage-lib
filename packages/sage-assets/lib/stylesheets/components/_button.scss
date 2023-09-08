@@ -806,6 +806,10 @@ a.sage-btn {
   .sage-btn--is-loading & {
     opacity: 0;
   }
+
+  .sage-copy-btn & {
+    display: flex;
+  }
 }
 
 // Button groups allow for several buttons together to be spaced appropriately
