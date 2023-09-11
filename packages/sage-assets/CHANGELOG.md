@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.11.7](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.11.6...@kajabi/sage-assets@1.11.7) (2023-09-11)
+
+
+### Bug Fixes
+
+* **copy-button:** update order and alignment when child of expandable card ([69a035a](https://github.com/Kajabi/sage-lib/commit/69a035ac67d33d6ebbaa49039389594de391c419))
+* **copybutton-react:** update icon alignment ([074bf95](https://github.com/Kajabi/sage-lib/commit/074bf95af7a0bca0044f373d8dd48168e581b79e))
+
+
+
+
+
 ## [1.11.6](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.11.5...@kajabi/sage-assets@1.11.6) (2023-09-06)
 
 
