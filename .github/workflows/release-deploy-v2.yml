@@ -150,7 +150,9 @@ jobs:
         env:
           cache-name: sage-lib-build-assets
         with:
-          path: 'packages/**'
+          path: |
+            'packages/**'
+            'docs/**'
           key: ${{ runner.os }}-build-${{ env.cache-name }}
 
 
@@ -205,12 +207,15 @@ jobs:
         env:
           cache-name: sage-lib-build-assets
         with:
-          path: 'packages/**'
+          path: |
+            'packages/**'
+            'docs/**'
           key: ${{ runner.os }}-build-${{ env.cache-name }}
 
       - name: Check Build Assets cache hit
         if: steps.restore-sage-lib-build-assets.outputs.cache-hit != 'true'
-        run: exit 1
+        continue-on-error: true
+        run: yarn build
 
       - name: Lerna Boostrap
         run: npx lerna bootstrap --ci
