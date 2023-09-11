@@ -240,7 +240,7 @@ $-btn-loading-min-height: rem(36px);
     font-weight: sage-font-weight(regular);
   }
 
-  .sage-expandable-card--align-arrow-right & {
+  .sage-expandable-card--align-arrow-right &.sage-expandable-card__trigger {
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -799,12 +799,16 @@ a.sage-btn {
     align-items: center;
   }
 
-  .sage-expandable-card--align-arrow-right & {
+  .sage-expandable-card--align-arrow-right .sage-expandable-card__trigger & {
     order: -1;
   }
 
   .sage-btn--is-loading & {
     opacity: 0;
+  }
+
+  .sage-copy-btn & {
+    display: flex;
   }
 }
 
