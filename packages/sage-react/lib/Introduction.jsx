@@ -16,7 +16,7 @@ export const Introduction = () => (
     </ul>
     <br />
     <p>Dive into these components to get a feel for our system.
-      And remember, we are always here to help should you have any questions or feedback!
+      And remember, we are always here to help should you have any questions or feedback at our internal channel for <a href="https://app.slack.com/client/T026K7YCY/C01A424HY8Y">Sage Support</a>.
     </p>
     <br />
     <p>Happy coding! 🚀</p>
