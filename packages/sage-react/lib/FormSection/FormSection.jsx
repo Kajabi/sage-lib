@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Grid } from '../Grid';
 import { Panel } from '../Panel';
+import { SageClassnames } from '../configs';
 
 export const FormSection = ({
   children,
@@ -17,7 +18,7 @@ export const FormSection = ({
       <Grid.Row>
         <Grid.Col size={4} small={12} large={4}>
           <div className="sage-form-section__info">
-            <TagName className="sage-form-section__title">{title}</TagName>
+            <TagName className={`sage-form-section__title ${SageClassnames.TYPE.HEADING_5}`}>{title}</TagName>
             {subtitle && (
               <div className="sage-form-section__subtitle">{subtitle}</div>
             )}
