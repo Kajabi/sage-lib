@@ -8,7 +8,7 @@ import {
   INPUT_TYPE
 } from './configs';
 
-export const Input = ({
+export const Input = React.forwardRef(({
   autocomplete,
   className,
   disabled,
@@ -38,7 +38,7 @@ export const Input = ({
   suffix,
   value,
   ...rest
-}) => {
+}, ref) => {
   const inputPaddingOffset = 16;
   const [fieldValue, updateFieldValue] = useState(null);
   const [inputStyles, updateStyles] = useState(rest.style || {});
@@ -123,6 +123,7 @@ export const Input = ({
         pattern={pattern}
         placeholder={setPlaceholder()}
         readOnly={readonly}
+        ref={ref}
         required={required}
         step={step}
         style={inputStyles}
@@ -165,7 +166,7 @@ export const Input = ({
       {popover}
     </div>
   );
-};
+});
 Input.Mode = INPUT_MODE;
 Input.Type = INPUT_TYPE;
 
