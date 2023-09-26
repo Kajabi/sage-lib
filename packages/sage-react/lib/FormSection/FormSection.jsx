@@ -7,36 +7,43 @@ export const FormSection = ({
   children,
   subtitle,
   title,
+  titleTag,
   ...rest
-}) => (
-  <Grid className="sage-form-section" {...rest}>
-    <Grid.Row>
-      <Grid.Col size={4} small={12} large={4}>
-        <div className="sage-form-section__info">
-          <h3 className="sage-form-section__title">{title}</h3>
-          {subtitle && (
-            <div className="sage-form-section__subtitle">{subtitle}</div>
-          )}
-        </div>
-      </Grid.Col>
-      <Grid.Col size={8} small={12} large={8}>
-        <Panel>
-          <div className="sage-form-section__content">
-            {children}
+}) => {
+  const TagName = titleTag || 'h5';
+
+  return (
+    <Grid className="sage-form-section" {...rest}>
+      <Grid.Row>
+        <Grid.Col size={4} small={12} large={4}>
+          <div className="sage-form-section__info">
+            <TagName className="sage-form-section__title">{title}</TagName>
+            {subtitle && (
+              <div className="sage-form-section__subtitle">{subtitle}</div>
+            )}
           </div>
-        </Panel>
-      </Grid.Col>
-    </Grid.Row>
-  </Grid>
-);
+        </Grid.Col>
+        <Grid.Col size={8} small={12} large={8}>
+          <Panel>
+            <div className="sage-form-section__content">
+              {children}
+            </div>
+          </Panel>
+        </Grid.Col>
+      </Grid.Row>
+    </Grid>
+  );
+};
 
 FormSection.defaultProps = {
   children: null,
   subtitle: null,
+  titleTag: null,
 };
 
 FormSection.propTypes = {
   children: PropTypes.node,
   subtitle: PropTypes.node,
   title: PropTypes.string.isRequired,
+  titleTag: PropTypes.string,
 };
