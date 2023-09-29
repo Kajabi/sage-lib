@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.16.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.16.2...@kajabi/sage-react@1.16.3) (2023-09-29)
+
+
+### Bug Fixes
+
+* **react-input:** allow ref to be forwarded to component ([d672b2a](https://github.com/Kajabi/sage-lib/commit/d672b2a15b7c7275131203feea56518df4b44a2b))
+
+
+
+
+
 ## [1.16.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.16.1...@kajabi/sage-react@1.16.2) (2023-09-11)
 
 **Note:** Version bump only for package @kajabi/sage-react
