@@ -144,6 +144,36 @@ export const InputWithPopover = (args) => {
   );
 };
 
+const FocusTemplate = (args) => {
+  const [value, updateValue] = useState(args.value);
+  const onChange = (e) => {
+    updateValue(e.target.value);
+  };
+
+  const onFocus = () => {
+    console.log('Has Focus!!!!');
+  };
+
+  const inputRef = React.useRef(null);
+
+  React.useEffect(() => {
+    if (inputRef.current) {
+      inputRef.current.focus();
+    }
+  }, []);
+
+  return (
+    <Input {...args} onChange={onChange} value={value} onFocus={onFocus} ref={inputRef} />
+  );
+};
+
+export const InputFocusTest = FocusTemplate.bind({});
+InputFocusTest.args = {
+  inputType: Input.Type.EMAIL,
+  label: 'Email address',
+  id: 'field-focus',
+};
+
 Default.args = {
   id: 'field-1',
   message: 'this is a test message',
