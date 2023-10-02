@@ -5,26 +5,22 @@ jobs:
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
-    container:
-      image: ruby:2.7.7-alpine3.16
 
     steps:
-      - name: Install dependencies
-        env:
-          BUILD_PACKAGES: bash build-base cyrus-sasl-dev git git-subtree libtool libsasl snappy-dev tzdata tar curl xz
-        run: |
-          apk add --update --no-cache $BUILD_PACKAGES
+      - name: Check out latest
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
 
-      - name: Install Bundler 2.3.22
-        run: gem install bundler:2.3.22
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '2.7.7'
 
       - name: Set Node Version
         uses: actions/setup-node@v3
         with:
-          node-version: "16"
-
-      - name: Install Yarn
-        run: npm install -g yarn
+          node-version: 16.20.0
 
       - name: Documentation Site Deploy
         env:
