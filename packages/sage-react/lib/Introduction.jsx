@@ -1,5 +1,4 @@
 import React from 'react';
-import PackageInfo from '../../../docs/package.json';
 
 export const Introduction = () => (
   <div>
@@ -20,9 +19,5 @@ export const Introduction = () => (
     </p>
     <br />
     <p>Happy coding! 🚀</p>
-    <br />
-    <h2>Version Information</h2>
-    <h3>{`v${PackageInfo.version}`}</h3>
-    <p><a href={`https://github.com/Kajabi/sage-lib/releases/tag/v${PackageInfo.version}`}>Change log</a> for {`v${PackageInfo.version}`}.</p>
   </div>
 );
