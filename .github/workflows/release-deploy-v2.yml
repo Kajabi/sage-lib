@@ -27,7 +27,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: 16.20.0
+          node-version: 16.20.2
 
       - name: Set NPM Config
         run: npm config set '//npm.pkg.github.com/:_authToken' '${{ secrets.ACCESS_TOKEN }}'
@@ -64,7 +64,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: 16.20.0
+          node-version: 16.20.2
 
       - name: Restore Node modules
         uses: actions/cache/restore@v3
@@ -95,7 +95,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: 16.20.0
+          node-version: 16.20.2
 
       - name: Restore Node modules
         uses: actions/cache/restore@v3
@@ -126,7 +126,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: 16.20.0
+          node-version: 16.20.2
 
       - name: Restore Node modules
         uses: actions/cache/restore@v3
@@ -174,7 +174,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: 16.20.0
+          node-version: 16.20.2
 
       - name: Restore Node modules
         uses: actions/cache/restore@v3
@@ -241,7 +241,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: 16.20.0
+          node-version: 16.20.2
 
       - name: Deploy Documentation Site
         env:
