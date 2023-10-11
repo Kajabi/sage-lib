@@ -1,178 +1,100 @@
-<h3 class="<%= SageClassnames::TYPE::HEADING_6 %>">Default</h3>
+<h2>Variants</h2>
+
+<h3>Default</h3>
+<p>The Default variation of the Select component is a simple HTML form element.</p>
 <%= sage_component SageFormSelect, {
-  name: "Characters",
-  id: "characters",
+  name: "Language",
+  id: "language",
   select_options: [
     {
-      text: "-- Please Select a Character --",
-      value: "",
+      text: "de - German",
+      value: "de",
     },
     {
-      text: "(None Specified)",
-      value: "",
+      text: "en - English",
+      value: "en",
     },
     {
-      text: "Mario",
-      value: "mario",
+      text: "es - Spanish",
+      value: "es",
     },
     {
-      text: "Luigi",
-      value: "luigi",
+      text: "fi - Finnish",
+      value: "fi",
     },
     {
-      text: "Princess Peach",
-      value: "princess-peach",
-    },
-    {
-      text: "Daisy",
-      value: "daisy",
-    },
-    {
-      text: "Toad",
-      value: "toad",
+      text: "fr - French",
+      value: "fr",
     },
   ],
-  message: "This is a message"
 } %>
 
-<h3 class="<%= SageClassnames::TYPE::HEADING_6 %>">Error state with message and disabled option</h3>
+<%= sage_component SageDivider, {} %>
+
+<h3>Select with Message</h3>
+<p>The Select component can be used with a message to provide additional context.</p>
+
 <%= sage_component SageFormSelect, {
-  name: "Pets",
+  name: "Default Currency",
+  select_options: [
+    {
+      text: "USD - United States Dollar",
+      value: "USD",
+    },
+    {
+      text: "AED - United Arab Emirates Dirham",
+      value: "AED",
+    },
+    {
+      text: "AFN - Afghan Afghani",
+      value: "AFN",
+    },
+    {
+      text: "ALL - Albanian Lek",
+      value: "ALL",
+    },
+  ],
+  message: "The default currency will be used for formatting and calculation purposes."
+} %>
+
+<%= sage_component SageDivider, {} %>
+
+<h3>Error State</h3>
+<p>The Select component can indicate an error state.</p>
+
+<%= sage_component SageFormSelect, {
+  name: "Text direction",
   has_error: true,
   select_options: [
     {
-      text: "-- Please Select a Pet --",
-      value: "",
+      text: "Left to right (ltr)",
+      value: "ltr",
     },
     {
-      text: "(None Specified)",
-      value: "",
-      selected: true
-    },
-    {
-      text: "Dog",
-      value: "dog",
-    },
-    {
-      text: "Cat",
-      value: "cat",
-    },
-    {
-      text: "Hamster",
-      value: "hamster",
-    },
-    {
-      text: "Parrot",
-      value: "parrot",
-    },
-    {
-      text: "Spider",
-      value: "spider",
-      disabled: true
-    },
-    {
-      text: "Goldfish",
-      value: "goldfish",
+      text: "Right to left (rtl)",
+      value: "rtl",
     },
   ],
-  message: "This is a message"
+  message: "This field is required."
 } %>
 
-<h3 class="<%= SageClassnames::TYPE::HEADING_6 %>">Disabled (with pre-selected option)</h3>
+<%= sage_component SageDivider, {} %>
+
+<h3>Disabled</h3>
+<p>The Select component can be marked as disabled. Selects labeled as Disabled will not be submitted in forms.</p>
+
 <%= sage_component SageFormSelect, {
-  name: "Sports",
+  name: "Text direction",
   disabled: true,
   select_options: [
     {
-      text: "Basketball",
-      value: "basketball"
+      text: "Left to right (ltr)",
+      value: "ltr",
     },
     {
-      text: "Football",
-      value: "football"
+      text: "Right to left (rtl)",
+      value: "rtl",
     },
-    {
-      text: "Lacrosse",
-      value: "lacrosse"
-    },
-    {
-      text: "Baseball",
-      value: "baseball",
-      selected: true
-    },
-    {
-      text: "Blitzball",
-      value: "blitzball"
-    },
-  ]
+  ],
+  message: "This field is not available until you select a language."
 } %>
-
-<h3 class="<%= SageClassnames::TYPE::HEADING_6 %>">Optgroup use</h3>
-<%= sage_component SageFormSelect, {
-  name: "Sports!",
-  select_options: [
-    {
-      text: "Bowling",
-      value: "bowling",
-    },
-    {
-      group_label: "Hand Sports",
-      group_options: [
-        {
-          text: "Football",
-          value: "football",
-        },
-        {
-          text: "Basketball",
-          value: "basketball",
-        },
-      ],
-    },
-    {
-      text: "Nascar",
-      value: "nascar",
-      selected: true,
-    },
-    {
-      group_label: "Foot Sports",
-      group_options: [
-        {
-          text: "Soccer",
-          value: "soccer",
-        },
-      ],
-    },
-  ]
-} %>
-
-<script>
-  const handleOnChange = (consoles) => {
-    var selectedText = consoles.options[consoles.selectedIndex].innerHTML;
-    var selectedVal = consoles.value;
-    alert("Selected Text: " + selectedText + " Value: " + selectedVal);
-  }
-</script>
-<h3 class="<%= SageClassnames::TYPE::HEADING_6 %>">Example on how to pass additional attributes to the component</h3>
-<%= sage_component SageFormSelect, {
-  name: "Consoles",
-  component_attributes: {
-    onChange: "handleOnChange(this)",
-    "my-attribute": "hello"
-  },
-  select_options: [
-    {
-      text: "X-Box",
-      value: "x-box"
-    },
-    {
-      text: "PlayStation",
-      value: "playstation"
-    },
-    {
-      text: "Nintendo Switch",
-      value: "switch"
-    },
-  ]
-} %>
-
-<p><strong>Note:</strong> For a fully styled dropdown selector, see the Dropdown component.</p>
