@@ -1,0 +1,80 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs/blocks';
+import { Select } from './Select';
+import { Card } from '../Card';
+
+<Meta title="Sage/Select" component={Select} />
+
+# Select
+The Select component is a user-friendly form control designed to let users pick an option or multiple options from a set. Upon selection, it presents a dialog showcasing all choices in an easily navigable list, with features like added context messages, error indications, and a disabled mode.
+
+## Usage Guidelines
+
+### When to use
+
+- 
+
+### When not to use
+
+- 
+
+## Accessibility
+
+## Properties
+
+<ArgsTable story="Default" />
+
+## Variants
+### Default
+The Default variation of the Select component is a simple HTML form element.
+
+<Canvas>
+  <Story name="Default">
+    <Select
+      id="language-select"
+      label="Language"
+      options={[
+        'en - English',
+        'es - Spanish',
+        'fi - Finnish',
+        'fr - French'
+      ]}
+    />
+  </Story>
+</Canvas>
+
+### Select with Message
+The Select component can be used with a message to provide additional context.
+
+<Canvas>
+  <Story name="Select with Message">
+    <Select
+      id="current-select"
+      label="Currency"
+      message="The default currency will be used for formatting and calculation purposes."
+      options={[
+        'USD - United States Dollar',
+        'AED - United Arab Emirates Dirham',
+        'AFN - Afghan Afghani',
+        'ALL - Albanian Lek'
+      ]}
+    />
+  </Story>
+</Canvas>
+
+### Error State
+The Select component can indicate an error state.
+
+<Canvas>
+  <Story name="Select with Error State">
+    <Select
+      id="current-select"
+      label="Currency"
+      message="This field is required."
+      hasError
+      options={[
+        'Left to right (ltr)',
+        'Right to left (rtl)'
+      ]}
+    />
+  </Story>
+</Canvas>
