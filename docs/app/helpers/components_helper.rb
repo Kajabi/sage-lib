@@ -382,7 +382,7 @@ module ComponentsHelper
         title: "form_select",
         description: "The Select component is a user-friendly form control designed to let users pick an option or multiple options from a set. Upon selection, it presents a dialog showcasing all choices in an easily navigable list, with features like added context messages, error indications, and a disabled mode.",
         scss: "done",
-        docs: "todo",
+        docs: "done",
         rails: "done",
         react: "todo",
         responsive: "todo",
