@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.18.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.17.5...@kajabi/sage@5.18.0) (2023-10-16)
+
+
+### Bug Fixes
+
+* **upload card:** align specs, refactor template logic ([c04f9c2](https://github.com/Kajabi/sage-lib/commit/c04f9c23447b804b2f46927982a65e3c0cd93ed5))
+* **upload card:** examples, file types and a11y fixes ([28078c4](https://github.com/Kajabi/sage-lib/commit/28078c44ccd449cee81ae3bf8f2fdc253402fdb6))
+* **upload card:** fixes issue with content for content is replicated in multiple upload cards ([8dbdb8b](https://github.com/Kajabi/sage-lib/commit/8dbdb8b4977994dee8c6fe1f5e0350878afec47e))
+* **upload card:** remove input and label with custom actions ([23efd64](https://github.com/Kajabi/sage-lib/commit/23efd646cf818ad4898d788329fd93f3a26339c3))
+
+
+### Features
+
+* **upload card:** adjust content areas ([91c7fa8](https://github.com/Kajabi/sage-lib/commit/91c7fa80a3acd8db129aef16215154b297f7969e))
+* **upload card:** force stack layout option ([f2536ca](https://github.com/Kajabi/sage-lib/commit/f2536ca7cac07c3f7fc541e3efbca3155271dd0a))
+
+
+
+
+
 ## [5.17.5](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.17.4...@kajabi/sage@5.17.5) (2023-10-02)
 
 **Note:** Version bump only for package @kajabi/sage
