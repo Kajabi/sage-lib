@@ -290,9 +290,7 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
   }
   
   @media (max-height: $-dropdown-panel-max-height-breakpoint) {
-    & {
-      max-height: $-dropdown-panel-max-height-small;
-    }
+    max-height: $-dropdown-panel-max-height-small;
   }
 }
 
