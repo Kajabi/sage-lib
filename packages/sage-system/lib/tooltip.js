@@ -15,10 +15,16 @@ Sage.tooltip = (function() {
   // TODO: Reverting tooltip reveal on focus/blur until further investigation of persistent focus
   // can resolve it lingering when it shouldn't.
 
-  function init(el) {
+  function init(el, onClick) {
     el.addEventListener("mouseenter", buildToolTip);
     // el.addEventListener("focus", buildToolTip);
     el.addEventListener("mouseleave", removeTooltip);
+    el.addEventListener("click", function(ev) {
+      removeTooltip(ev);
+      if (onClick) {
+        onClick(ev);
+      }
+    });
     // el.addEventListener("blur", removeTooltip);
   }
 
@@ -50,7 +56,7 @@ Sage.tooltip = (function() {
 
   // Removes tooltip from DOM
   function removeTooltip(evt) {
-    if (!evt.target.hasAttribute(DATA_ATTR) || !document.querySelector(SELECTOR) || !evt.target.dataset.jsTooltip)  return;
+    if (!evt.target.hasAttribute(DATA_ATTR) || !document.querySelector(SELECTOR) || !document.querySelector(`.${TOOLTIP_CLASS}`) || !evt.target.dataset.jsTooltip)  return;
 
     window.requestAnimationFrame(function() {
       document.body.removeChild(document.querySelector(`.${TOOLTIP_CLASS}`));
