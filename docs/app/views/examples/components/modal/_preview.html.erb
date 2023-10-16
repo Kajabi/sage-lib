@@ -132,6 +132,47 @@ in the footer contain error styling to indicate that the action is destructive.<
   <% end %>
 <% end %>
 
+<h3>Header Image</h3>
+<p>Modals can contain a thumbnail image in the header.</p>
+<%= sage_component SageButton, {
+  style: "primary",
+  icon: { name: "launch", style: "right" },
+  value: "Subheader",
+  attributes: {
+    "data-js-modaltrigger": "cool-modal-header-image",
+  }
+} %>
+<%= sage_component SageModal, {id: "cool-modal-header-image" } do %>
+  <%= sage_component SageModalContent, {
+    header_image: "avatar/joshua_wilson.png",
+    title: "Modal header",
+    subheader: "This is subheader copy for your viewing pleasure",
+  } do %>
+    <% content_for :sage_header_aside do %>
+      <%= sage_component SageButton, {
+        style: "secondary",
+        subtle: true,
+        value: "Close Modal",
+        icon: { name: "remove", style: "only" },
+        attributes: { "data-js-modal": true }
+      } %>
+    <% end %>
+
+   <p>Add a description of the content you're showing in the modal.</p>
+
+    <% content_for :sage_footer do %>
+      <%= sage_component SageButton, {
+        style: "secondary",
+        value: "Cancel",
+      } %>
+      <%= sage_component SageButton, {
+        style: "primary",
+        value: "Confirm",
+      } %>
+    <% end %>
+  <% end %>
+<% end %>
+
 <h3>Subheader</h3>
 <p>Modals can contain a subheader.</p>
 <%= sage_component SageButton, {
@@ -280,7 +321,7 @@ in the footer contain error styling to indicate that the action is destructive.<
 <% end %>
 
 <h3>Scrollable Content</h3>
-<p>Modals can be configured to allow scrolling of content.</p>
+<p>Modals can be configured to allow scrolling of content. This option is useful when the header and footer needs to visible contain actions.</p>
 <%= sage_component SageButton, {
   style: "primary",
   icon: { name: "launch", style: "right" },
