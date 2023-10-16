@@ -672,26 +672,24 @@ in the footer contain error styling to indicate that the action is destructive.<
 <% end %>
 
 <%= md("
-<h3 class=\"SageClassnames::TYPE::HEADING_6\">Asyncronous Modals</h3>
-There are a number of situations where it might be most practical to load content for a modal asyncronously.
-For example, in a list of products, each product may allow an option to edit that product's details in a modal.
-In this case you may have a route that delivers only the contents of the modal that can be called asyncronously when the modal trigger is clicked.
+<h3 class=\"SageClassnames::TYPE::HEADING_6\">Asynchronous Modal Setup</h3>
 
-Set this up as follows:
-
-1. Ensure that you have at least one modal stub in your view using `SageModal` and be sure to provide an `id` for it along with any other configurations.
-    As best practices consider:
-  - Use the `remove_content_on_close: true` to ensure that any asynchronous content is removed from the modal when it is closed.
-  - You can provide default content (typically inside of a `SageModalContent` nested within the `SageModal` stub) such as a `SageLoader` inside this modal stub.
-    This will be replaced by the asynchronous content once it loads and be put back when the content unloads.
-2. Ensure you have an endpoint that delivers _only_ the content of the modal, typically wrapped by the `SageModalContent` component.
-3. In the primary view, add hyperlinks, buttons, or other clickable triggers. On such triggers use the following:
-  - `data-js-modaltrigger=\"[modal-id]\"` where `modal-id` is the `id` you placed on the corresponding `SageModal` stub.
-  - `data-js-remote-url=\"[url]\"` where `url` is the edpoint that delivers the content.
-
-Note as well that you can set up `remote_url`'s on both the main `SageModal` stub and on triggers.
-In such cases, the `remote_url` from the triggers overrides the one on the modal stub; but if no `remote_url` is provided from the trigger, the one on the modal itself is used.
-As shown elsewhere on this page default content (such as `SageLoader`) can also be manually populated inside the `SageModal` that is then replaced by asynchronous `remote_url` content.
+1. Use Case:
+  - Load modals asynchronously, ideal for scenarios like editing product details in a list.
+2. Setup:
+  - Include a `SageModal` stub in the view with an ID and configurations.
+  - Utilize `remove_content_on_close: true` for best practices.
+  - Add default content (e.g., `SageLoader`) in the `SageModal` stub.
+  - Create an endpoint delivering modal content (wrapped by `SageModalContent`).
+3. Trigger Configuration:
+  - In the main view, add clickable triggers (e.g., buttons).
+  - Configure triggers with:
+      - `data-js-modaltrigger=\"[modal-id]\"`: ID of the `SageModal` stub.
+      - `data-js-remote-url=\"[url]\"`: Endpoint delivering the content.
+4. Remote URLs:
+  - Set remote URLs on both the main `SageModal` stub and triggers.
+  - Trigger's `remote_url` overrides the stub's, but stub's is used if trigger has none.
+  - Default content inside `SageModal` is replaced by asynchronous `remote_url` content.
 ", use_sage_type: true) %>
 
 <%= sage_component SageButtonGroup, { gap: :sm } do %>
