@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.17.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.16.4...@kajabi/sage-react@1.17.0) (2023-10-16)
+
+
+### Features
+
+* **upload card:** adds stacked layout and id props ([4ccb1ca](https://github.com/Kajabi/sage-lib/commit/4ccb1cab5ac21bae8f07079f23da2cf0068b8166))
+
+
+
+
+
 ## [1.16.4](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.16.3...@kajabi/sage-react@1.16.4) (2023-10-02)
 
 

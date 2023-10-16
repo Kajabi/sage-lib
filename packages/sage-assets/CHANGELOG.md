@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.12.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.11.7...@kajabi/sage-assets@1.12.0) (2023-10-16)
+
+
+### Bug Fixes
+
+* **upload card:** align specs, refactor template logic ([c04f9c2](https://github.com/Kajabi/sage-lib/commit/c04f9c23447b804b2f46927982a65e3c0cd93ed5))
+* **upload card:** style adjustments ([fde0ba7](https://github.com/Kajabi/sage-lib/commit/fde0ba7b4a9a3941c34b1743bd8821501ec62403))
+
+
+### Features
+
+* **upload card:** adds stacked layout and id props ([4ccb1ca](https://github.com/Kajabi/sage-lib/commit/4ccb1cab5ac21bae8f07079f23da2cf0068b8166))
+
+
+
+
+
 ## [1.11.7](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.11.6...@kajabi/sage-assets@1.11.7) (2023-09-11)
 
 
