@@ -14,6 +14,8 @@ $-dropdown-item-focus-line-spacing-x: sage-spacing(sm);
 $-dropdown-option-menu-size: rem(40px);
 
 $-dropdown-panel-max-height: rem(400px);
+$-dropdown-panel-max-height-small: rem(185px);
+$-dropdown-panel-max-height-breakpoint: 700px;
 
 $-dropdown-trigger-label-color-label-background: map-get($sage-field-colors, label-background);
 $-dropdown-trigger-label-color-default: map-get($sage-field-colors, default);
@@ -285,6 +287,12 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
 
   .sage-dropdown--page-size & {
     min-width: 100%;
+  }
+  
+  @media (max-height: $-dropdown-panel-max-height-breakpoint) {
+    & {
+      max-height: $-dropdown-panel-max-height-small;
+    }
   }
 }
 
