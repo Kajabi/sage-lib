@@ -1,42 +1,109 @@
-<h3 class="t-sage-heading-6">Initial State</h3>
-<%= sage_component SageUploadCard, {
-  selection_label: "Select a file",
-  selection_subtext: "Recommended dimensions or file size requirements",
-} %>
+<%
+  dropdown_menu_items = [
+    {
+      value: "Upload file",
+    }, {
+      value: "Select recent file",
+    }, {
+      style: "danger",
+      modifiers: ["border-before"],
+      value: "Remove image",
+    }
+  ]
+%>
 
-<h3 class="t-sage-heading-6">Selected File State</h3>
+<h3>Default State (no file selected)</h3>
+
+<%= sage_component SageUploadCard, {
+  id: "upload-card-default",
+  selection_label: "Select file",
+} do %>
+  <% content_for :sage_upload_card_instructions do %>
+    <p>Upload a JPEG</p>
+  <% end %>
+<% end %>
+
+<h3>Selected File State</h3>
+
+<p>Restrict accepted file types using <code>accepted_file_types</code>.</p>
 
 <%= sage_component SageUploadCard, {
   accepted_files: [
-    {name: "contacts.csv"},
+    {name: "my-image-file.jpg"},
   ],
   file_selected: true,
+  accepted_file_types: ["image/jpg"],
+  selection_preview: "https://placekitten.com/360",
   selection_label: "Replace file",
-  selection_subtext: "Recommended dimensions or file size requirements",
-} %>
+  id: "upload-card-selected",
+} do %>
+  <% content_for :sage_upload_card_instructions do %>
+    <p>Upload a JPEG this is a test</p>
+  <% end %>
+<% end %>
 
-<h3 class="t-sage-heading-6">Error State</h3>
 
-<%= sage_component SageUploadCard, {
-  has_error: true,
-  selection_label: "Select a file",
-  selection_subtext: "Recommended dimensions or file size requirements",
-  errors: [
-    {text: "This is the error message."},
-  ]
-} %>
+<h3>Vertical (stacked) layout</h3>
+<p>The default layout will adjust from a vertical (stacked) orientation to horizontal depending on available space and/or screen size.</p>
 
-<h3 class="t-sage-heading-6">Selected Error State</h3>
+<p>Setting <code>stack_layout</code> to <code>true</code> locks the component to the vertical orientation.</p>
 
 <%= sage_component SageUploadCard, {
   accepted_files: [
-    {name: "contacts.csv"},
+    {name: "my-image-file.jpg"},
   ],
   file_selected: true,
+  selection_preview: "https://placekitten.com/360",
+  stack_layout: true,
+  id: "upload-card-stack",
+  selection_label: "Edit file",
+} do %>
+  <% content_for :sage_upload_card_instructions do %>
+    <p>Recommended dimensions or file size requirements</p>
+  <% end %>
+<% end %>
+
+<h3>Custom content areas</h3>
+<h4>Instructions area</h4>
+<p>The <code>sage_upload_card_instructions</code> slot provides an area for  extended instructions and custom markup.</p>
+
+<h4>Actions area</h4>
+<p>Use the <code>sage_upload_card_actions</code> slot to replace the default button and display custom components, such as dropdowns.</p>
+<p><strong>NOTE:</strong> a file input field and label are <em>included by default in the base component</em>, as seen in the examples above. When applying a custom file input with `sage_upload_card_actions`, set <code>custom_file_input_field</code> to <code>true</code> to remove these defaults.</p>
+<%= sage_component SageUploadCard, {
+  accepted_files: [
+    {name: "fluffy-kitteh.jpg"},
+  ],
+  custom_file_input_field: true,
+  file_selected: true,
+  selection_preview: "https://placekitten.com/360",
+  id: "upload-card-dropdown"
+} do %>
+  <% content_for :sage_upload_card_actions do %>
+    <%= sage_component SageDropdown, { items: dropdown_menu_items } do %>
+      <% content_for :sage_dropdown_trigger, flush: true do %>
+        <%= sage_component SageButton, {
+          style: "secondary",
+          icon: { name: "caret-down", style: "right" },
+          value: "Edit file",
+        } %>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>
+
+
+<h3>Error State</h3>
+
+<%= sage_component SageUploadCard, {
   has_error: true,
-  selection_label: "Replace file",
-  selection_subtext: "Recommended dimensions or file size requirements",
+  id: "upload-card-error",
+  selection_label: "Select a file",
   errors: [
-    {text: "This is the error message."},
+    {text: "This is an error message."},
   ]
-} %>
+} do %>
+  <% content_for :sage_upload_card_instructions do %>
+    <p>Recommended dimensions or file size requirements</p>
+  <% end %>
+<% end %>
