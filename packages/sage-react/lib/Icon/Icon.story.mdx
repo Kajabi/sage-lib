@@ -1,0 +1,141 @@
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs/blocks";
+import { Icon } from "./Icon";
+
+<Meta title="Sage/Icon" component={Icon} />
+
+# Icon
+
+The icon component displays a standalone icon with customizable options.
+
+## Properties
+
+<ArgsTable story="Default" />
+
+## Default
+
+<Canvas>
+  <Story name="Default">
+    <Icon icon="pen" />
+  </Story>
+</Canvas>
+
+## Variants
+
+### Color
+
+To change the color of the icon, pass a color name to the `color` prop. Color values are [defined in Figma](https://www.figma.com/file/SHwMHKJXzMRn0tPZXEkfc5/%F0%9F%8E%A8-Sage-styles?type=design&node-id=3%3A1401&mode=design&t=Ri1acMQCzmfaaR9r-1) and include values like `primary-300`, `sage-300`, `red-300`, etc.
+
+<Canvas>
+  <Story name="Color">
+    <div style={{ display: "flex", gap: "16px" }}>
+      <Icon color="primary-300" icon="pen" />
+      <Icon color="sage-300" icon="preview-on" />
+      <Icon color="red-300" icon="trash" />
+    </div>
+  </Story>
+</Canvas>
+
+### Size
+
+Size can be used to increase or decrease the size of the icon. The default size is `md`.
+
+<Canvas>
+  <Story name="Size">
+    <div style={{ display: "flex", gap: "16px" }}>
+      <Icon icon="pen" size="xs" />
+      <Icon icon="preview-on" />
+      <Icon icon="trash" size="xl" />
+    </div>
+  </Story>
+</Canvas>
+
+### Card Color
+
+Icons can be placed on a background by setting the `cardColor` property.
+
+<Canvas>
+  <Story name="Card Color">
+    <div style={{ display: "flex", gap: "16px" }}>
+      <Icon cardColor="danger" icon="danger"  />
+      <Icon cardColor="warning" icon="warning" />
+      <Icon cardColor="published" icon="check-circle" />
+    </div>
+  </Story>
+</Canvas>
+
+### Background Sizes
+
+Background sizes can be applied by setting the `size` property.
+
+<Canvas>
+  <Story name="Background Sizes">
+    <div style={{ display: "flex", gap: "16px" }}>
+      <Icon cardColor="draft" icon="danger" size="xs" />
+      <Icon cardColor="draft" icon="warning" size="sm" />
+      <Icon cardColor="draft" icon="check-circle" size="md" />
+    </div>
+  </Story>
+</Canvas>
+
+### Custom Background Sizes
+
+Custom background sizes can be applied by setting the `backgroundWidth` and `backgroundHeight` properties. These values are applied as inline styles, so they can be any valid CSS value. The `backgroundWidth` property is required when using `backgroundHeight`.
+
+<Canvas>
+  <Story name="Custom Background Sizes">
+    <div style={{ display: "flex", gap: "16px" }}>
+      <Icon
+        backgroundHeight="128px"
+        backgroundWidth="128px"
+        cardColor="draft"
+        icon="pen"
+      />
+      <Icon
+        backgroundHeight="128px"
+        backgroundWidth="64px"
+        cardColor="warning"
+        icon="preview-on"
+      />
+      <Icon
+        backgroundHeight="80px"
+        backgroundWidth="240px"
+        cardColor="danger"
+        icon="trash"
+      />
+    </div>
+  </Story>
+</Canvas>
+
+### Circular
+
+Icons can be made circular by setting the `circular` property to `true`.
+
+<Canvas>
+  <Story name="Circular">
+    <div style={{ display: "flex", gap: "16px" }}>
+      <Icon cardColor="draft" circular="true" icon="pen" />
+      <Icon cardColor="published" circular="true" icon="preview-on" />
+      <Icon cardColor="danger" circular="true" icon="trash" />
+    </div>
+  </Story>
+</Canvas>
+
+### Alignment Next to Type
+
+The `adjacentType` property can be used to align an icon next to a heading or paragraph. This is useful for placing an icon next to a heading or paragraph in a variety of forms. The effect is that the icon's `height` and `line-height` are updated to match the spec responsively. This can be used in combination with the different icon sizes and also be used with a vareity of layout techniques or components such as CSS flexbox (used below) or grid templates within `SageCardRow` or `SagePanelRow`.
+
+<Canvas>
+  <Story name="Adjacent Type">
+    <div style={{ display: "flex", gap: "16px" }}>
+      <Icon adjacentType="h2" icon="pen" />
+      <h2>This is an H2 headline.</h2>
+    </div>
+    <div style={{ display: "flex", gap: "16px" }}>
+      <Icon adjacentType="body" icon="pen" />
+      <p>
+        This is paragraph text. This is paragraph text. This is paragraph text.
+        This is paragraph text.
+      </p>
+    </div>
+  </Story>
+</Canvas>
