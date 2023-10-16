@@ -1,5 +1,6 @@
 import React from 'react';
-import { Grid } from '..';
+import { Button } from '../Button';
+import { Grid, SageTokens } from '..';
 import { UploadCard } from './UploadCard';
 
 export default {
@@ -33,20 +34,54 @@ Default.decorators = [
 ];
 
 export const DefaultWithError = Template.bind({});
+DefaultWithError.parameters = {
+  docs: {
+    description: {
+      story: 'The Upload Card will display an error message if the `errors` prop is set, with the appropriate styling.'
+    },
+  },
+};
 DefaultWithError.args = {
   errors: [
     {
       message: 'This is the error message.'
     },
-  ]
+  ],
+  previewImage: {
+    alt: 'cat',
+    src: 'https://placekitten.com/360'
+  }
 };
 
-export const SelectedWithError = Template.bind({});
-SelectedWithError.args = {
-  acceptedFiles: [{ name: '.csv', size: '1 M' }],
-  errors: [
-    {
-      message: 'This is the error message.'
+export const CustomActions = Template.bind({});
+CustomActions.parameters = {
+  docs: {
+    description: {
+      story: 'The `actions` prop is a slot to allow for custom labels and inputs, buttons, dropdowns, etc. to be used in place of the default input field when the `customFileInputField` prop is set to `true.`'
     },
-  ]
+  },
+};
+CustomActions.args = {
+  actions: (
+    <Button
+      color={Button.COLORS.SECONDARY}
+      icon={SageTokens.ICONS.CARET_DOWN}
+      iconPosition={Button.ICON_POSITIONS.RIGHT}
+    >
+      Select a file
+    </Button>
+  ),
+  customFileInputField: true,
+};
+
+export const Stacked = Template.bind({});
+Stacked.parameters = {
+  docs: {
+    description: {
+      story: 'The default layout will adjust from a vertical (stacked) orientation to horizontal depending on available space and/or screen size. Setting `stack_layout` to `true` locks the component to the vertical orientation.'
+    },
+  },
+};
+Stacked.args = {
+  stacked: true,
 };
