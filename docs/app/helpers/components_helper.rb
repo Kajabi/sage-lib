@@ -567,7 +567,7 @@ module ComponentsHelper
       },
       {
         title: "modal",
-        description: "Sage modal",
+        description: "Modals are overlays used to display content on a layer above the page, preventing users from interacting with content behind the modal.",
         scss: "done",
         docs: "done",
         rails: "doing",
