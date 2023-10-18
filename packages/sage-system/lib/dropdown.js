@@ -190,7 +190,8 @@ Sage.dropdown = (function () {
   }
 
   function positionElement(el) {
-    let direction = null;
+    let directionX = null;
+    let directionY = null;
   
     // Elements
     const button = el;
@@ -200,6 +201,7 @@ Sage.dropdown = (function () {
   
     panel.style.top = ''; // resets the style
     panel.style.left = ''; // resets the style
+    panel.style.right = ''; // resets the style
   
     // Dimensions
     const buttonDimensions = button.getBoundingClientRect();
@@ -231,31 +233,37 @@ Sage.dropdown = (function () {
     const enoughSpaceLeft = viewport.left < (offset.left + panelWidth);
     const enoughSpaceRight = viewport.right > (offset.right + panelWidth);
   
+    // Check if there is enough space to the top or bottom
     if (!enoughSpaceBelow && enoughSpaceAbove) {
-      direction = 'above';
+      directionY = 'above';
     } else if (!enoughSpaceAbove && enoughSpaceBelow) {
-      direction = 'below';
-    } else if (!enoughSpaceRight && enoughSpaceLeft) {
-      direction = 'left';
-    } else if (!enoughSpaceLeft && enoughSpaceRight) {
-      direction = 'right';
+      directionY = 'below';
     }
-
-    console.log('direction: ', direction);
   
-    if (direction === 'above') {
+    if (directionY === 'above') {
       panel.style.top = `-${panelNewLoc.top}px`;
-    } else if (direction === 'below') {
-      // panel.style.top = 'inherit';
-      // panel.style.bottom = 0;
-    } else if (direction === 'left') {
-      // panel.style.left = `-${panelNewLoc.left}px`;
+    } else if (directionY === 'below') {
+      // find test case
+      // panel.style.top = 0;
+    } 
+
+    // Check if there is enough space to the left or right
+    if (!enoughSpaceRight && enoughSpaceLeft) {
+      directionX = 'left';
+    } else if (!enoughSpaceLeft && enoughSpaceRight) {
+      directionX = 'right';
+    }
+    
+    if (directionX === 'left') {
       panel.style.left = 'inherit';
       panel.style.right = 0;
-    } else if (direction === 'right') {
+    } else if (directionX === 'right') {
       panel.style.left = 0;
       panel.style.right = 'inherit';
     }
+
+    console.log('directionX', directionX);
+    console.log('directionY', directionY);
   }
   
   function open(el) {
