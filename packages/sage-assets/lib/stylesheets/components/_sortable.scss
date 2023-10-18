@@ -15,7 +15,7 @@ $-sortable-image-height: rem(48px);
 
 .sage-sortable__item {
   display: grid;
-  grid-template-columns: min-content minmax(0, min-content) auto auto;
+  grid-template-columns: min-content minmax(0, 1fr) auto auto;
   gap: sage-spacing(card);
   align-items: center;
   padding: sage-spacing(xs) sage-spacing(panel);
@@ -114,6 +114,7 @@ $-sortable-image-height: rem(48px);
 
 .sage-sortable__item-subtitle {
   @extend %t-sage-body-xsmall;
+  @include truncate();
   color: sage-color(charcoal, 100);
 }
 
