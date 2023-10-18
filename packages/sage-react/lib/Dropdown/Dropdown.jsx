@@ -77,7 +77,8 @@ export const Dropdown = ({
   };
 
   const positionElement = () => {
-    let direction = null;
+    let directionX = null;
+    let directionY = null;
     const el = wrapperRef.current;
     // Elements
     const button = el;
@@ -90,11 +91,13 @@ export const Dropdown = ({
     const panelHeight = getHeight(panel);
     const enoughSpaceAbove = panelHeight + buttonDimensions.bottom > window.innerHeight;
     const enoughSpaceBelow = panelHeight + buttonDimensions.bottom < window.innerHeight;
+    const enoughSpaceLeft = panelDimensions.width < buttonDimensions.left;
+    const enoughSpaceRight = panelDimensions.width < window.innerWidth - buttonDimensions.right;
 
     if (!enoughSpaceBelow && enoughSpaceAbove) {
-      direction = 'above';
+      directionY = 'above';
     } else if (!enoughSpaceAbove && enoughSpaceBelow) {
-      direction = 'below';
+      directionY = 'below';
     }
     const rect = wrapperRef.current.getBoundingClientRect();
     const coords = {
@@ -112,12 +115,36 @@ export const Dropdown = ({
       coords.left = 'initial';
     }
 
-    if (direction === 'above') {
+    if (directionY === 'above') {
       coords.top = ((buttonDimensions.height / 4) + panelDimensions.height) * -1;
       coords.left = 'initial';
       if (isPinned) {
         coords.top = (buttonDimensions.top - panelDimensions.height);
         coords.right = window.innerWidth - buttonDimensions.right + inlineBoxOffset;
+      }
+    }
+
+    // Check if there is enough space to the left or right
+    // CHECK ISPINNED
+    if (!enoughSpaceRight && enoughSpaceLeft) {
+      directionX = 'left';
+    } else if (!enoughSpaceLeft && enoughSpaceRight) {
+      directionX = 'right';
+    }
+
+    if (directionX === 'left') {
+      coords.left = 'initial';
+      coords.right = 0;
+      if (isPinned) {
+        coords.right = window.innerWidth - buttonDimensions.right + inlineBoxOffset;
+      }
+    }
+
+    if (directionX === 'right') {
+      coords.left = 0;
+      coords.right = 'initial';
+      if (isPinned) {
+        coords.left = buttonDimensions.left + inlineBoxOffset;
       }
     }
 
