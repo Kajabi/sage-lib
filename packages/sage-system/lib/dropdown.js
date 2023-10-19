@@ -198,7 +198,7 @@ Sage.dropdown = (function () {
     const panel = el.lastElementChild;
     const win = panel.ownerDocument.defaultView;
     const docEl = window.document.documentElement;
-  
+
     panel.style.top = ''; // resets the style
     panel.style.left = ''; // resets the style
     panel.style.right = ''; // resets the style
@@ -206,7 +206,7 @@ Sage.dropdown = (function () {
     // Dimensions
     const buttonDimensions = button.getBoundingClientRect();
     const panelDimensions = panel.getBoundingClientRect();
-  
+
     const panelNewLoc = {
       top: (buttonDimensions.height / 2) + panelDimensions.height,
       left: (buttonDimensions.width / 2) + panelDimensions.width,
@@ -225,7 +225,7 @@ Sage.dropdown = (function () {
       bottom: (panelDimensions.top + win.pageYOffset),
       right: (panelDimensions.left + win.pageXOffset),
     };
-  
+
     const panelHeight = getHeight(panel);
     const panelWidth = panelDimensions.width;
     const enoughSpaceAbove = viewport.top < (offset.top + panelHeight);
@@ -239,7 +239,7 @@ Sage.dropdown = (function () {
     } else if (!enoughSpaceAbove && enoughSpaceBelow) {
       directionY = 'below';
     }
-  
+
     if (directionY === 'above') {
       panel.style.top = `-${panelNewLoc.top}px`;
     } else if (directionY === 'below') {
@@ -261,9 +261,6 @@ Sage.dropdown = (function () {
       panel.style.left = 0;
       panel.style.right = 'inherit';
     }
-
-    console.log('directionX', directionX);
-    console.log('directionY', directionY);
   }
   
   function open(el) {
