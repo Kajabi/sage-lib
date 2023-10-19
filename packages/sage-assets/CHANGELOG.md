@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.12.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.12.0...@kajabi/sage-assets@1.12.1) (2023-10-19)
+
+
+### Bug Fixes
+
+* **dropdown:** remove unnecessary duplicate selector ([a1ff19c](https://github.com/Kajabi/sage-lib/commit/a1ff19c85271e30b4974b75db1c382f723b3da57))
+* **dropdown:** resolve contact ui dropdown getting cut off on small screens ([7945af0](https://github.com/Kajabi/sage-lib/commit/7945af07ce4c42a634ba49633e0508c9e3b3a363))
+* **sortable:** fixes issue with title dictating content's width ([451a9bc](https://github.com/Kajabi/sage-lib/commit/451a9bc9596e5157b804d710a9962d53a8f97c2b))
+
+
+
+
+
 # [1.12.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.11.7...@kajabi/sage-assets@1.12.0) (2023-10-16)
 
 
