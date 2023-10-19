@@ -237,8 +237,8 @@ in the footer contain error styling to indicate that the action is destructive.<
 
 <%= sage_component SageModal, { id: "cool-modal-footer" } do %>
   <%= sage_component SageModalContent, {
-    title: "Delete item",
-    help_content: "<p>Are you sure you want to delete this item? This action cannot be undone.</p>",
+    title: "Modal Header",
+    help_content: "<p>Add a description of the content you're showing in the modal.</p>",
     help_link: {
       href: "#",
       name: "Link"
@@ -292,8 +292,8 @@ in the footer contain error styling to indicate that the action is destructive.<
 
 <%= sage_component SageModal, { id: "cool-modal-footer-aside" } do %>
   <%= sage_component SageModalContent, {
-    title: "Delete item",
-    help_content: "<p>Are you sure you want to delete this item? This action cannot be undone.</p>",
+    title: "Modal Header",
+    help_content: "<p>Add a description of the content you're showing in the modal.</p>",
     help_link: {
       href: "#",
       name: "Link"
@@ -380,7 +380,7 @@ in the footer contain error styling to indicate that the action is destructive.<
 <%= sage_component SageDivider, {} %>
 
 <h3>Sizes</h3>
-<p>Modals can be configured to be extra small, small, medium, or large.</p>
+<p>Modal widths can be configured to be extra small, small, medium, or large.</p>
 <%= sage_component SageButtonGroup, { gap: :sm, spacer: { bottom: :sm }} do %>
   <%= sage_component SageButton, {
     style: "primary",
@@ -734,7 +734,7 @@ in the footer contain error styling to indicate that the action is destructive.<
 <%= sage_component SageDivider, {} %>
 
 <%= md("
-<h3 class=\"SageClassnames::TYPE::HEADING_6\">Asynchronous Modal Setup</h3>
+<h3>Asynchronous Modal Setup</h3>
 
 1. Use Case:
   - Load modals asynchronously, ideal for scenarios like editing product details in a list.
@@ -754,6 +754,12 @@ in the footer contain error styling to indicate that the action is destructive.<
   - Default content inside `SageModal` is replaced by asynchronous `remote_url` content.
 ", use_sage_type: true) %>
 
+<h4>Remote URLs</h4>
+<ul>
+  <li>Modal A demonstrates <code>remote_url</code> prop usage on <code>SageModal</code></li>
+  <li>Modal B and C demonstrate usage of the <code>data-js-remote-url</code> key within <code>html_attributes</code>.
+  The value of the <code>async_path()</code> equals the all content in this path residing within <code>SageModalContent</code></li>
+</ul>
 <%= sage_component SageButtonGroup, { gap: :sm } do %>
   <%= sage_component SageButton, {
     html_attributes: {
