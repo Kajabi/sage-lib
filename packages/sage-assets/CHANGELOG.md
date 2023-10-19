@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.12.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.12.1...@kajabi/sage-assets@1.12.2) (2023-10-19)
+
+
+### Bug Fixes
+
+* **dropdown:** update dropdown breakpoint ([259f280](https://github.com/Kajabi/sage-lib/commit/259f280e1a791f97fcc8b3b2fbd2a5b79080ade9))
+
+
+
+
+
 ## [1.12.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.12.0...@kajabi/sage-assets@1.12.1) (2023-10-19)
 
 
