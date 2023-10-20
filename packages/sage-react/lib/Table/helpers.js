@@ -72,9 +72,11 @@ export const parseRowData = (row, schema) => {
       return parseCellData(cell, field);
     });
   } else if (row instanceof Object) {
-    // An object for the row must be parse by the keys in contains
-    // and such an object will assume the keys are field names
-    parsedRow = Object.keys(row).map((field) => parseCellData(row[field], field));
+    if (schema !== null && Object.keys(schema).length > 0) {
+      parsedRow = Object.keys(schema).map((field) => parseCellData(row[field], field));
+    } else {
+      parsedRow = Object.keys(row).map((field) => parseCellData(row[field], field));
+    }
   }
 
   return parsedRow;
