@@ -103,81 +103,162 @@ export const PanelStack = (args) => (
   </Grid>
 );
 
+const listItems = [
+  (
+    <>
+      <Icon icon={Icon.ICONS.CHECK_CIRCLE} />
+      <Panel.Block>
+        <p className={SageClassnames.TYPE.BODY}>
+          Lorem ipsum dolor sit amet
+        </p>
+        <p className={`${SageClassnames.TYPE.BODY_SMALL} ${SageClassnames.TYPE_COLORS.GREY_500}`}>
+          Aliquam malesuada leo
+        </p>
+      </Panel.Block>
+      <Button
+        icon={SageTokens.ICONS.DOT_MENU_HORIZONTAL}
+        subtle={true}
+        iconOnly={true}
+        color={Button.COLORS.SECONDARY}
+      >
+        Options
+      </Button>
+    </>
+  ),
+  (
+    <>
+      <Icon icon={Icon.ICONS.CHECK_CIRCLE} />
+      <Panel.Block>
+        <p className={SageClassnames.TYPE.BODY}>
+          Lorem ipsum dolor sit amet
+        </p>
+        <p className={`${SageClassnames.TYPE.BODY_SMALL} ${SageClassnames.TYPE_COLORS.GREY_500}`}>
+          Aliquam malesuada leo
+        </p>
+      </Panel.Block>
+      <Button
+        icon={SageTokens.ICONS.DOT_MENU_HORIZONTAL}
+        subtle={true}
+        iconOnly={true}
+        color={Button.COLORS.SECONDARY}
+      >
+        Options
+      </Button>
+    </>
+  ),
+  (
+    <>
+      <Icon icon={Icon.ICONS.CHECK_CIRCLE} />
+      <Panel.Block>
+        <p className={SageClassnames.TYPE.BODY}>
+          Lorem ipsum dolor sit amet
+        </p>
+        <p className={`${SageClassnames.TYPE.BODY_SMALL} ${SageClassnames.TYPE_COLORS.GREY_500}`}>
+          Aliquam malesuada leo
+        </p>
+      </Panel.Block>
+      <Button
+        icon={SageTokens.ICONS.DOT_MENU_HORIZONTAL}
+        subtle={true}
+        iconOnly={true}
+        color={Button.COLORS.SECONDARY}
+      >
+        Options
+      </Button>
+    </>
+  )
+];
 export const PanelList = (args) => (
   <Grid container={Grid.CONTAINER_SIZES.MD}>
     <Panel {...args}>
       <Panel.Header title="Panel with a list" />
       <Panel.List
         itemGridTemplate={SageTokens.GRID_TEMPLATES.ETE}
-        items={[
-          (
-            <>
-              <Icon icon={Icon.ICONS.CHECK_CIRCLE} />
-              <Panel.Block>
-                <p className={SageClassnames.TYPE.BODY}>
-                  Lorem ipsum dolor sit amet
-                </p>
-                <p className={`${SageClassnames.TYPE.BODY_SMALL} ${SageClassnames.TYPE_COLORS.GREY_500}`}>
-                  Aliquam malesuada leo
-                </p>
-              </Panel.Block>
-              <Button
-                icon={SageTokens.ICONS.DOT_MENU_HORIZONTAL}
-                subtle={true}
-                iconOnly={true}
-                color={Button.COLORS.SECONDARY}
-              >
-                Options
-              </Button>
-            </>
-          ),
-          (
-            <>
-              <Icon icon={Icon.ICONS.CHECK_CIRCLE} />
-              <Panel.Block>
-                <p className={SageClassnames.TYPE.BODY}>
-                  Lorem ipsum dolor sit amet
-                </p>
-                <p className={`${SageClassnames.TYPE.BODY_SMALL} ${SageClassnames.TYPE_COLORS.GREY_500}`}>
-                  Aliquam malesuada leo
-                </p>
-              </Panel.Block>
-              <Button
-                icon={SageTokens.ICONS.DOT_MENU_HORIZONTAL}
-                subtle={true}
-                iconOnly={true}
-                color={Button.COLORS.SECONDARY}
-              >
-                Options
-              </Button>
-            </>
-          ),
-          (
-            <>
-              <Icon icon={Icon.ICONS.CHECK_CIRCLE} />
-              <Panel.Block>
-                <p className={SageClassnames.TYPE.BODY}>
-                  Lorem ipsum dolor sit amet
-                </p>
-                <p className={`${SageClassnames.TYPE.BODY_SMALL} ${SageClassnames.TYPE_COLORS.GREY_500}`}>
-                  Aliquam malesuada leo
-                </p>
-              </Panel.Block>
-              <Button
-                icon={SageTokens.ICONS.DOT_MENU_HORIZONTAL}
-                subtle={true}
-                iconOnly={true}
-                color={Button.COLORS.SECONDARY}
-              >
-                Options
-              </Button>
-            </>
-          )
-        ]}
+        items={listItems}
       />
     </Panel>
   </Grid>
 );
+
+const tileItems = [
+  (
+    <Panel.Block>
+      <Icon icon={Icon.ICONS.CIRCLE_1} size={Icon.SIZES['2XL']} />
+      <p className={SageClassnames.TYPE.BODY}>
+        Lorem ipsum dolor sit amet
+      </p>
+      <p className={`${SageClassnames.TYPE.BODY_SMALL} ${SageClassnames.TYPE_COLORS.GREY_500}`}>
+        Aliquam malesuada leo
+      </p>
+    </Panel.Block>
+  ),
+  (
+    <Panel.Block>
+      <Icon icon={Icon.ICONS.CIRCLE_2} size={Icon.SIZES['2XL']} />
+      <p className={SageClassnames.TYPE.BODY}>
+        Consectetur adipiscing elit
+      </p>
+      <p className={`${SageClassnames.TYPE.BODY_SMALL} ${SageClassnames.TYPE_COLORS.GREY_500}`}>
+        Ut posuere tortor sodales
+      </p>
+    </Panel.Block>
+  ),
+  (
+    <Panel.Block>
+      <Icon icon={Icon.ICONS.CIRCLE_3} size={Icon.SIZES['2XL']} />
+      <p className={SageClassnames.TYPE.BODY}>
+        Nunc quis arcu maximus
+      </p>
+      <p className={`${SageClassnames.TYPE.BODY_SMALL} ${SageClassnames.TYPE_COLORS.GREY_500}`}>
+        Praesent id urna vel arcu
+      </p>
+    </Panel.Block>
+  ),
+  (
+    <Panel.Block>
+      <Icon icon={Icon.ICONS.CIRCLE_4} size={Icon.SIZES['2XL']} />
+      <p className={SageClassnames.TYPE.BODY}>
+        Sed at ipsum pretium
+      </p>
+      <p className={`${SageClassnames.TYPE.BODY_SMALL} ${SageClassnames.TYPE_COLORS.GREY_500}`}>
+        Ornare convallis vitae sit
+      </p>
+    </Panel.Block>
+  ),
+  (
+    <Panel.Block>
+      <Icon icon={Icon.ICONS.CIRCLE_5} size={Icon.SIZES['2XL']} />
+      <p className={SageClassnames.TYPE.BODY}>
+        Eleifend ligula
+      </p>
+      <p className={`${SageClassnames.TYPE.BODY_SMALL} ${SageClassnames.TYPE_COLORS.GREY_500}`}>
+        Finibus est
+      </p>
+    </Panel.Block>
+  ),
+  (
+    <Panel.Block>
+      <Icon icon={Icon.ICONS.CIRCLE_6} size={Icon.SIZES['2XL']} />
+      <p className={SageClassnames.TYPE.BODY}>
+        Mauris in orci ac odio
+      </p>
+      <p className={`${SageClassnames.TYPE.BODY_SMALL} ${SageClassnames.TYPE_COLORS.GREY_500}`}>
+        Aliquet tristique nec et mi
+      </p>
+    </Panel.Block>
+  ),
+  (
+    <Panel.Block>
+      <Icon icon={Icon.ICONS.CIRCLE_7} size={Icon.SIZES['2XL']} />
+      <p className={SageClassnames.TYPE.BODY}>
+        Proin nec tellus varius
+      </p>
+      <p className={`${SageClassnames.TYPE.BODY_SMALL} ${SageClassnames.TYPE_COLORS.GREY_500}`}>
+        Molestie libero vel
+      </p>
+    </Panel.Block>
+  )
+];
 
 export const PanelTiles = ({ tiles, ...args }) => (
   <Grid container={Grid.CONTAINER_SIZES.XL}>
@@ -187,85 +268,7 @@ export const PanelTiles = ({ tiles, ...args }) => (
       <Panel.Tiles
         tilesInRow={tiles}
         wrapTiles={false}
-        tiles={[
-          (
-            <Panel.Block>
-              <Icon icon={Icon.ICONS.CIRCLE_1} size={Icon.SIZES['2XL']} />
-              <p className={SageClassnames.TYPE.BODY}>
-                Lorem ipsum dolor sit amet
-              </p>
-              <p className={`${SageClassnames.TYPE.BODY_SMALL} ${SageClassnames.TYPE_COLORS.GREY_500}`}>
-                Aliquam malesuada leo
-              </p>
-            </Panel.Block>
-          ),
-          (
-            <Panel.Block>
-              <Icon icon={Icon.ICONS.CIRCLE_2} size={Icon.SIZES['2XL']} />
-              <p className={SageClassnames.TYPE.BODY}>
-                Consectetur adipiscing elit
-              </p>
-              <p className={`${SageClassnames.TYPE.BODY_SMALL} ${SageClassnames.TYPE_COLORS.GREY_500}`}>
-                Ut posuere tortor sodales
-              </p>
-            </Panel.Block>
-          ),
-          (
-            <Panel.Block>
-              <Icon icon={Icon.ICONS.CIRCLE_3} size={Icon.SIZES['2XL']} />
-              <p className={SageClassnames.TYPE.BODY}>
-                Nunc quis arcu maximus
-              </p>
-              <p className={`${SageClassnames.TYPE.BODY_SMALL} ${SageClassnames.TYPE_COLORS.GREY_500}`}>
-                Praesent id urna vel arcu
-              </p>
-            </Panel.Block>
-          ),
-          (
-            <Panel.Block>
-              <Icon icon={Icon.ICONS.CIRCLE_4} size={Icon.SIZES['2XL']} />
-              <p className={SageClassnames.TYPE.BODY}>
-                Sed at ipsum pretium
-              </p>
-              <p className={`${SageClassnames.TYPE.BODY_SMALL} ${SageClassnames.TYPE_COLORS.GREY_500}`}>
-                Ornare convallis vitae sit
-              </p>
-            </Panel.Block>
-          ),
-          (
-            <Panel.Block>
-              <Icon icon={Icon.ICONS.CIRCLE_5} size={Icon.SIZES['2XL']} />
-              <p className={SageClassnames.TYPE.BODY}>
-                Eleifend ligula
-              </p>
-              <p className={`${SageClassnames.TYPE.BODY_SMALL} ${SageClassnames.TYPE_COLORS.GREY_500}`}>
-                Finibus est
-              </p>
-            </Panel.Block>
-          ),
-          (
-            <Panel.Block>
-              <Icon icon={Icon.ICONS.CIRCLE_6} size={Icon.SIZES['2XL']} />
-              <p className={SageClassnames.TYPE.BODY}>
-                Mauris in orci ac odio
-              </p>
-              <p className={`${SageClassnames.TYPE.BODY_SMALL} ${SageClassnames.TYPE_COLORS.GREY_500}`}>
-                Aliquet tristique nec et mi
-              </p>
-            </Panel.Block>
-          ),
-          (
-            <Panel.Block>
-              <Icon icon={Icon.ICONS.CIRCLE_7} size={Icon.SIZES['2XL']} />
-              <p className={SageClassnames.TYPE.BODY}>
-                Proin nec tellus varius
-              </p>
-              <p className={`${SageClassnames.TYPE.BODY_SMALL} ${SageClassnames.TYPE_COLORS.GREY_500}`}>
-                Molestie libero vel
-              </p>
-            </Panel.Block>
-          )
-        ]}
+        tiles={tileItems}
       />
       <Panel.Divider />
       <Panel.Subheader title="Tiles provided through as children" />
