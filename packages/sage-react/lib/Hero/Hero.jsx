@@ -14,6 +14,7 @@ export const Hero = ({
   contained,
   footerActions,
   image,
+  imageStart,
   heroSize,
   title,
   titleTag,
@@ -25,6 +26,7 @@ export const Hero = ({
       [`sage-hero--${heroSize}`]: heroSize,
       'sage-hero--borderless': borderless,
       'sage-hero--contained': contained,
+      'sage-hero--image-start': imageStart,
       'sage-hero--custom-background-color': customBackgroundColor,
     },
   );
@@ -90,6 +92,7 @@ Hero.defaultProps = {
     alt: null,
     src: null
   },
+  imageStart: null,
   heroSize: Hero.Sizes.LARGE,
   title: null,
   titleTag: 'h2',
@@ -107,6 +110,7 @@ Hero.propTypes = {
     alt: PropTypes.string,
     src: PropTypes.string
   }),
+  imageStart: PropTypes.bool,
   heroSize: PropTypes.oneOf(Hero.Sizes),
   title: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   titleTag: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6'])

@@ -4,11 +4,11 @@ import { Hero } from './Hero';
 import { Button } from '../Button';
 
 import imageFile from '../../public/HeroContainerPlaceholder.png';
+import heroFull from '../../public/HeroWorkshopPlaceholder.jpg';
 
 export default {
   title: 'Sage/Hero',
   component: Hero,
-  // displays description on Docs tab
   parameters: {
     docs: {
       description: {
@@ -22,9 +22,10 @@ export default {
     }),
   },
   args: {
-    description: 'Get early access to new unreleased features and work along side our team by beta testing features before they go live.',
+    title: 'Learn with Kajabi in our live workshops',
+    description: 'Did you know we offer free workshops? Kajabi experts host live workshops every week on topics from marketing your products to building out your Kajabi account.',
     image: {
-      src: '//source.unsplash.com/random'
+      src: `${heroFull}`,
     },
     footerActions: (
       <>
@@ -32,18 +33,10 @@ export default {
           className=""
           color="primary"
         >
-          Get started
-        </Button>
-        <Button
-          className=""
-          color="primary"
-          subtle={true}
-        >
           Learn more
         </Button>
       </>
     ),
-    title: 'My Title',
   }
 };
 
@@ -54,9 +47,9 @@ export const Default = Template.bind({});
 export const Small = Template.bind({});
 Small.args = {
   title: 'Be the first to try what Kajabi is building',
-  description: 'Get early access to new unreleased features and work along side our team by beta testing features before they go live.',
+  description: 'Did you know we offer free workshops? Kajabi experts host live workshops every week on topics from marketing your products to building out your Kajabi account.',
   image: {
-    src: '//source.unsplash.com/random'
+    src: `${heroFull}`,
   },
   heroSize: 'small',
 };
@@ -64,7 +57,7 @@ Small.args = {
 export const Contained = Template.bind({});
 Contained.args = {
   title: 'Be the first to try what Kajabi is building',
-  description: 'Get early access to new unreleased features and work along side our team by beta testing features before they go live.',
+  description: 'Did you know we offer free workshops? Kajabi experts host live workshops every week on topics from marketing your products to building out your Kajabi account.',
   image: {
     src: `${imageFile}`,
   },
@@ -74,9 +67,9 @@ Contained.args = {
 export const withCTA = Template.bind({});
 withCTA.args = {
   title: 'Be the first to try what Kajabi is building',
-  description: 'Get early access to new unreleased features and work along side our team by beta testing features before they go live.',
+  description: 'Did you know we offer free workshops? Kajabi experts host live workshops every week on topics from marketing your products to building out your Kajabi account.',
   image: {
-    src: '//source.unsplash.com/random'
+    src: `${heroFull}`,
   },
   ctaAttributes: {
     href: '#'
@@ -86,10 +79,10 @@ withCTA.args = {
 export const customBackground = Template.bind({});
 customBackground.args = {
   title: 'Be the first to try what Kajabi is building',
-  description: 'Get early access to new unreleased features and work along side our team by beta testing features before they go live.',
+  description: 'Did you know we offer free workshops? Kajabi experts host live workshops every week on topics from marketing your products to building out your Kajabi account.',
   image: {
-    src: '//source.unsplash.com/random'
+    src: `${heroFull}`,
   },
-  customBackgroundColor: '#E6F4FE',
+  customBackgroundColor: '#e6f4fe',
   borderless: true,
 };
