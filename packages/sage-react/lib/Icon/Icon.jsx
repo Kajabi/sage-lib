@@ -95,14 +95,46 @@ Icon.defaultProps = {
 };
 
 Icon.propTypes = {
+  /**
+   * Improves alignment for icons that are placed beside type.
+   */
   adjacentType: PropTypes.oneOf(Object.values(Icon.ADJACENT_TYPES)),
+  /**
+   * Allows a custom height for the icon background.
+   */
   backgroundHeight: PropTypes.string,
+  /**
+   * Allows a custom width for the icon background.
+   */
   backgroundWidth: PropTypes.string,
+  /**
+   * Rather than just changing the icon color with the color property, this option
+   * adds a padded background behind the icon in one of the brand status color options.
+   */
   cardColor: PropTypes.oneOf(Object.values(Icon.CARD_COLORS)),
+  /**
+   * Optionally, when an icon has a background color, present the shape
+   * inside a circle (as opposed to default square with rounded corners.
+   */
   circular: PropTypes.bool,
+  /**
+   * Allows a custom class name to be added to the icon.
+   */
   className: PropTypes.string,
+  /**
+   * Which color to use to render the icon.
+   */
   color: PropTypes.oneOf(Object.values(Icon.COLORS)),
+  /**
+   * Which icon to display.
+   */
   icon: PropTypes.oneOf(Object.values(Icon.ICONS)).isRequired,
+  /**
+   * An optional accessible label to use for the icon.
+   */
   label: PropTypes.string,
+  /**
+   * Adjusts the size of the icon.
+   */
   size: PropTypes.oneOf(Object.values(Icon.SIZES)),
 };
