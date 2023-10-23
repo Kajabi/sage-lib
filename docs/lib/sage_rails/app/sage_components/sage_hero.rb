@@ -8,6 +8,7 @@ class SageHero < SageComponent
     custom_background_color: [:optional, String],
     description: [:optional, NilClass, String],
     image: [:optional, NilClass, String],
+    image_start: [:optional, NilClass, TrueClass],
     size: [:optional, NilClass, SageSchemas::HERO_SIZE],
     title: [:optional, NilClass, String],
     title_tag: [:optional, NilClass, String],
