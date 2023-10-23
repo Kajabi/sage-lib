@@ -1,273 +1,173 @@
-<h2 class="t-sage-heading-6">Small</h2>
+<h2>Sizes</h2>
+<p>There are two sizes for the Hero component: small and large. The small Hero component takes up a portion of the viewport width and the large Hero component takes up the entire viewport width.</p>
+
+<h3>Small</h3>
 
 <%= sage_component SageHero, {
-  alt_text: "Well done alt text",
-  description: "Get early access to new unreleased features and work before they go live.",
-  image: "card-placeholder-hero.jpg",
+  title: "Learn with Kajabi in our live workshops",
+  description: "Did you know we offer free workshops? Kajabi experts host live workshops every week on topics from marketing your products to building out your Kajabi account.",
+  image: "hero-workshop-placeholder.jpg",
+  alt_text: "Multi-layered illustration of UI elements and woman clasping her hands together in excitement",
   size: "small",
-  title: "Be the first to try what Kajabi is building",
 } do %>
   <% content_for :sage_hero_footer_actions do %>
     <%= sage_component SageButton, {
+      value: "Learn more",
       style: "primary",
-      value: "Primary action",
     } %>
   <% end %>
 <% end %>
 
-<h2 class="t-sage-heading-6">Small Contained</h2>
-
+<h3>Large</h3>
 <%= sage_component SageHero, {
-  alt_text: "Well done alt text",
-  description: "Get early access to new unreleased features and work before they go live.",
-  image: "hero-contained-placeholder.png",
-  size: "small",
-  title: "Be the first to try what Kajabi is building",
-  contained: true,
-} do %>
-  <% content_for :sage_hero_footer_actions do %>
-    <%= sage_component SageButton, {
-      style: "primary",
-      value: "Primary action",
-    } %>
-  <% end %>
-<% end %>
-
-<h2 class="t-sage-heading-6">Small w/ CTA</h2>
-
-<%= sage_component SageHero, {
-  alt_text: "Well done alt text",
-  cta_attributes: {
-    "data-js-modaltrigger": "cool-modal",
-    href: "#",
-  },
-  description: "Get early access to new unreleased features and work before they go live.",
-  image: "card-placeholder-hero.jpg",
-  size: "small",
-  title: "Be the first to try what Kajabi is building",
-} do %>
-  <% content_for :sage_hero_footer_actions do %>
-    <%= sage_component SageButton, {
-      style: "primary",
-      value: "Primary action",
-    } %>
-  <% end %>
-<% end %>
-
-<h2 class="t-sage-heading-6">Small Contained w/ CTA</h2>
-
-<%= sage_component SageHero, {
-  alt_text: "Well done alt text",
-  cta_attributes: {
-    "data-js-modaltrigger": "cool-modal",
-    href: "#",
-  },
-  description: "Get early access to new unreleased features and work before they go live.",
-  image: "hero-contained-placeholder.png",
-  size: "small",
-  title: "Be the first to try what Kajabi is building",
-  contained: true,
-} do %>
-  <% content_for :sage_hero_footer_actions do %>
-    <%= sage_component SageButton, {
-      style: "primary",
-      value: "Primary action",
-    } %>
-  <% end %>
-<% end %>
-
-<h2 class="t-sage-heading-6">Small - Borderless with Custom Background</h2>
-
-<%= sage_component SageHero, {
-  alt_text: "Well done alt text",
-  borderless: true,
-  cta_attributes: {
-    "data-js-modaltrigger": "cool-modal",
-    href: "#",
-  },
-  custom_background_color: "#E6F4FE",
-  description: "Get early access to new unreleased features and work before they go live.",
-  image: "card-placeholder-hero.jpg",
-  size: "small",
-  title: "Be the first to try what Kajabi is building",
-} do %>
-  <% content_for :sage_hero_footer_actions do %>
-    <%= sage_component SageButton, {
-      style: "primary",
-      value: "Primary action",
-    } %>
-  <% end %>
-<% end %>
-
-<h2 class="t-sage-heading-6">Large</h2>
-
-<%= sage_component SageHero, {
-  alt_text: "",
-  description: "Get early access to new unreleased features and work before they go live.",
-  image: "card-placeholder-hero.jpg",
-  title: "Be the first to try what Kajabi is building before anyone else",
-  title_tag: "h3",
-  size: "large"
-} do %>
-  <% content_for :sage_hero_footer_actions do %>
-    <%= sage_component SageButtonGroup, { gap: :md } do %>
-        <%= sage_component SageButton, {
-          value: "Primary",
-          style: "primary",
-        } %>
-      <%= sage_component SageButton, {
-        value: "Dismiss",
-        style: "primary",
-        subtle: true,
-        attributes: {
-          "data-js-hero--dismiss": ""
-        }
-      } %>
-    <% end %>
-  <% end %>
-<% end %>
-
-<h2 class="t-sage-heading-6">Large Contained</h2>
-
-<%= sage_component SageHero, {
-  alt_text: "",
-  description: "Get early access to new unreleased features and work before they go live.",
-  image: "hero-contained-placeholder.png",
-  title: "Be the first to try what Kajabi is building before anyone else",
-  title_tag: "h3",
-  contained: true,
-  size: "large"
-} do %>
-  <% content_for :sage_hero_footer_actions do %>
-    <%= sage_component SageButtonGroup, { gap: :md } do %>
-        <%= sage_component SageButton, {
-          value: "Primary",
-          style: "primary",
-        } %>
-      <%= sage_component SageButton, {
-        value: "Dismiss",
-        style: "primary",
-        subtle: true,
-        attributes: {
-          "data-js-hero--dismiss": ""
-        }
-      } %>
-    <% end %>
-  <% end %>
-<% end %>
-
-<h2 class="t-sage-heading-6">Large w/ CTA</h2>
-
-<%= sage_component SageHero, {
-  alt_text: "",
-  cta_attributes: {
-    "data-js-modaltrigger": "cool-modal",
-    href: "#",
-  },
-  description: "Get early access to new unreleased features and work before they go live.",
-  image: "card-placeholder-hero.jpg",
-  title: "Be the first to try what Kajabi is building before anyone else",
-  title_tag: "h3",
-  size: "large"
-} do %>
-  <% content_for :sage_hero_footer_actions do %>
-    <%= sage_component SageButtonGroup, { gap: :md } do %>
-        <%= sage_component SageButton, {
-          value: "Primary",
-          style: "primary",
-        } %>
-      <%= sage_component SageButton, {
-        value: "Dismiss",
-        style: "primary",
-        subtle: true,
-        attributes: {
-          "data-js-hero--dismiss": ""
-        }
-      } %>
-    <% end %>
-  <% end %>
-<% end %>
-
-<h2 class="t-sage-heading-6">Large Contained w/ CTA</h2>
-
-<%= sage_component SageHero, {
-  alt_text: "",
-  cta_attributes: {
-    "data-js-modaltrigger": "cool-modal",
-    href: "#",
-  },
-  description: "Get early access to new unreleased features and work before they go live.",
-  image: "hero-contained-placeholder.png",
-  title: "Be the first to try what Kajabi is building before anyone else",
-  title_tag: "h3",
-  contained: true,
-  size: "large"
-} do %>
-  <% content_for :sage_hero_footer_actions do %>
-    <%= sage_component SageButtonGroup, { gap: :md } do %>
-        <%= sage_component SageButton, {
-          value: "Primary",
-          style: "primary",
-        } %>
-      <%= sage_component SageButton, {
-        value: "Dismiss",
-        style: "primary",
-        subtle: true,
-        attributes: {
-          "data-js-hero--dismiss": ""
-        }
-      } %>
-    <% end %>
-  <% end %>
-<% end %>
-
-<h2 class="t-sage-heading-6">Large Contained - Borderless with Custom Background</h2>
-
-<%= sage_component SageHero, {
-  alt_text: "Well done alt text",
-  borderless: true,
-  custom_background_color: "#E6F4FE",
-  description: "Get early access to new unreleased features and work before they go live.",
-  image: "hero-contained-placeholder.png",
+  title: "Learn with Kajabi in our live workshops",
+  description: "Did you know we offer free workshops? Kajabi experts host live workshops every week on topics from marketing your products to building out your Kajabi account.",
+  image: "hero-workshop-placeholder.jpg",
+  alt_text: "Multi-layered illustration of UI elements and woman clasping her hands together in excitement",
   size: "large",
-  title: "Be the first to try what Kajabi is building before anyone else",
-  contained: true,
 } do %>
   <% content_for :sage_hero_footer_actions do %>
-    <%= sage_component SageButtonGroup, { gap: :md } do %>
-        <%= sage_component SageButton, {
-          value: "Primary",
-          style: "primary",
-        } %>
-      <%= sage_component SageButton, {
-        value: "Dismiss",
-        style: "primary",
-        subtle: true,
-        attributes: {
-          "data-js-hero--dismiss": ""
-        }
-      } %>
-    <% end %>
+    <%= sage_component SageButton, {
+      value: "Learn more",
+      style: "primary",
+    } %>
   <% end %>
 <% end %>
 
-<%# Video player modal %>
-<%= sage_component SageModal, { id: "cool-modal" } do %>
-  <header class="sage-modal__header">
-    <h1 class="t-sage-heading-4">Example Sage Modal</h1>
-    <aside class="sage-modal__header-aside">
-      <button class="sage-btn sage-btn--secondary sage-btn--subtle sage-btn--icon-only-dot-menu-horizontal">
-        <span class="visually-hidden">Menu</span>
-      </button>
-    </aside>
-  </header>
-  <div class="sage-modal__content">
-    <p class="t-sage-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-  </div>
-  <footer class="sage-modal__footer">
-    <aside class="sage-modal__footer-aside">
-      <button class="sage-btn sage-btn--subtle sage-btn--secondary" data-js-modal-close>Close Modal</button>
-    </aside>
-    <button class="sage-btn sage-btn--primary sage-btn--icon-left-check">Take An Action</button>
-  </footer>
+<%= sage_component SageDivider, {} %>
+
+<h2>Borderless</h2>
+<p>When the Hero is set to borderless, the Hero will have no border.</p>
+
+<%= sage_component SageHero, {
+  title: "Learn with Kajabi in our live workshops",
+  description: "Did you know we offer free workshops? Kajabi experts host live workshops every week on topics from marketing your products to building out your Kajabi account.",
+  image: "hero-workshop-placeholder.jpg",
+  alt_text: "Multi-layered illustration of UI elements and woman clasping her hands together in excitement",
+  size: "small",
+  borderless: true,
+} do %>
+  <% content_for :sage_hero_footer_actions do %>
+    <%= sage_component SageButton, {
+      value: "Learn more",
+      style: "primary",
+    } %>
+  <% end %>
+<% end %>
+
+<%= sage_component SageDivider, {} %>
+
+<h2>Contained</h2>
+<p>When the Hero is set to contained, the Hero will have margins that push the image away from the sides of the Hero container.</p>
+
+<%= sage_component SageHero, {
+  title: "Introducing the Kajabi template store",
+  description: "Did you know we offer free workshops? Kajabi experts host live workshops every week on topics from marketing your products to building out your Kajabi account.",
+  image: "hero-contained-placeholder.png",
+  alt_text: "Multi layered illustration of UI elements and woman smiling to the camera",
+  size: "small",
+  contained: true,
+} do %>
+  <% content_for :sage_hero_footer_actions do %>
+    <%= sage_component SageButton, {
+      style: "primary",
+      value: "Learn more",
+    } %>
+  <% end %>
+<% end %>
+
+<%= sage_component SageDivider, {} %>
+
+<h2>Custom Background</h2>
+<p>When the Hero has a custom background color, the background color will be applied to the entire Hero.</p>
+
+<%= sage_component SageHero, {
+  title: "Learn with Kajabi in our live workshops",
+  description: "Did you know we offer free workshops? Kajabi experts host live workshops every week on topics from marketing your products to building out your Kajabi account.",
+  image: "hero-workshop-placeholder.jpg",
+  alt_text: "Multi-layered illustration of UI elements and woman clasping her hands together in excitement",
+  custom_background_color: "#e6f4fe",
+  size: "small",
+} do %>
+  <% content_for :sage_hero_footer_actions do %>
+    <%= sage_component SageButton, {
+      style: "primary",
+      value: "Learn more",
+    } %>
+  <% end %>
+<% end %>
+
+<%= sage_component SageDivider, {} %>
+
+<h2>Image Start</h2>
+<p>When the image is set to start, the image will be placed at the start of the Hero component.</p>
+
+<%= sage_component SageHero, {
+  title: "Learn with Kajabi in our live workshops",
+  description: "Did you know we offer free workshops? Kajabi experts host live workshops every week on topics from marketing your products to building out your Kajabi account.",
+  image: "hero-workshop-placeholder.jpg",
+  alt_text: "Multi-layered illustration of UI elements and woman clasping her hands together in excitement",
+  size: "small",
+  image_start: true,
+} do %>
+  <% content_for :sage_hero_footer_actions do %>
+    <%= sage_component SageButton, {
+      value: "Learn more",
+      style: "primary",
+    } %>
+  <% end %>
+<% end %>
+
+<%= sage_component SageDivider, {} %>
+
+<h2>CTA Attribute</h2>
+<p>When the Hero has a CTA attribute, the CTA will be applied to the Hero image.</p>
+
+<%= sage_component SageHero, {
+  title: "Learn with Kajabi in our live workshops",
+  description: "Did you know we offer free workshops? Kajabi experts host live workshops every week on topics from marketing your products to building out your Kajabi account.",
+  image: "hero-workshop-placeholder.jpg",
+  alt_text: "Multi-layered illustration of UI elements and woman clasping her hands together in excitement",
+  size: "small",
+  cta_attributes: {
+    "data-js-modaltrigger": "cool-modal",
+    href: "#",
+  },
+} do %>
+  <% content_for :sage_hero_footer_actions do %>
+    <%= sage_component SageButton, {
+      value: "Learn more",
+      style: "primary",
+    } %>
+  <% end %>
+<% end %>
+
+<%# This is the modal triggered from various examples in this documentation %>
+<%= sage_component SageModal, { id: "cool-modal"} do %>
+  <%= sage_component SageModalContent, {
+    title: "Modal title",
+  } do %>
+    <% content_for :sage_header_aside do %>
+      <%= sage_component SageButton, {
+        style: "secondary",
+        subtle: true,
+        value: "Close Modal",
+        icon: { name: "remove", style: "only" },
+        attributes: { "data-js-modal": true }
+      } %>
+    <% end %>
+
+    <p>Add a description of the content you're showing in the modal.</p>
+
+    <% content_for :sage_footer do %>
+      <%= sage_component SageButton, {
+        style: "secondary",
+        value: "Cancel",
+      } %>
+      <%= sage_component SageButton, {
+        style: "primary",
+        value: "Confirm",
+      } %>
+    <% end %>
+  <% end %>
 <% end %>
