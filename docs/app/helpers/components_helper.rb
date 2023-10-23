@@ -404,14 +404,14 @@ module ComponentsHelper
       },
       {
         title: "hero",
-        description: "A Hero can be used to call call attention to new features or content. The hero is flexible in size and can contain text, illustrations, full bleed images, and a full bleed video thumbnail.",
+        description: "A Hero is used to call attention to new features or content. The hero is flexible in size and can contain text, illustrations, full-bleed images, and a full-bleed video thumbnail.",
         scss: "done",
-        docs: "todo",
+        docs: "done",
         rails: "done",
-        react: "todo",
+        react: "done",
         responsive: "done",
         a11y: "done",
-        react_component_slug: "sage-hero--default",
+        react_component_slug: "sage-hero--small",
         figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FsMbtLUHSt2vfKgKjyQ3052%2F%25F0%259F%25A7%25A9-Sage-components%3Fnode-id%3D3686%253A21923",
       },
       {
