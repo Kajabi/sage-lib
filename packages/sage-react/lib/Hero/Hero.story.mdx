@@ -1,0 +1,161 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs/blocks';
+import { Hero } from '../Hero';
+import { Button } from '../Button';
+
+import heroContained from '../../public/HeroContainedPlaceholder.png';
+import heroFull from '../../public/HeroWorkshopPlaceholder.jpg';
+
+<Meta title="Sage/Hero" component={Hero} />
+
+# Hero
+A Hero is used to call attention to new features or content. The hero is flexible in size and can contain text, illustrations, full-bleed images, and a full-bleed video thumbnail.
+
+## Usage Guidelines
+
+### When to use
+
+- When you want to deliver a powerful message, statement, or value proposition immediately upon a user a page or view.
+- To provide a visually compelling first impression.
+- For limited-time events or promotions, where the emphasis is timely and needs immediate attention.
+
+### When not to use
+
+- If there’s a risk that the Hero might overshadow or distract from other critical content or actions on the page.
+
+## Accessibility
+
+Ensure images that are used in the Hero component have alt text that describes the image and are not used for decorative purposes.
+
+## Properties
+
+<ArgsTable story="Small" />
+
+## Sizes
+There are two sizes for the Hero component: small and large. The small Hero component takes up a portion of the viewport width and the large Hero component takes up the entire viewport width.
+
+### Small
+<Canvas>
+  <Story name="Small">
+    <Hero
+      title="Learn with Kajabi in our live workshops"
+      description="Did you know we offer free workshops? Kajabi experts host live workshops every week on topics from marketing your products to building out your Kajabi account."
+      heroSize="small"
+      image={{
+        src: `${heroFull}`,
+        alt: 'Multi layered illustration of UI elements and woman clasping her hands together in excitement'
+      }}
+      footerActions={<><Button color="primary">Learn more</Button></>}
+    />
+  </Story>
+</Canvas>
+
+### Large
+<Canvas>
+  <Story name="Large">
+    <Hero
+      title="Learn with Kajabi in our live workshops"
+      description="Did you know we offer free workshops? Kajabi experts host live workshops every week on topics from marketing your products to building out your Kajabi account."
+      heroSize="large"
+      image={{
+        src: `${heroFull}`,
+        alt: 'Multi layered illustration of UI elements and woman clasping her hands together in excitement'
+      }}
+      footerActions={<><Button color="primary">Learn more</Button></>}
+    />
+  </Story>
+</Canvas>
+
+## Borderless
+When the Hero is set to borderless, the Hero will have no border.
+<Canvas>
+  <Story name="Borderless">
+    <Hero
+      title="Learn with Kajabi in our live workshops"
+      description="Did you know we offer free workshops? Kajabi experts host live workshops every week on topics from marketing your products to building out your Kajabi account."
+      heroSize="small"
+      borderless={true}
+      image={{
+        src: `${heroFull}`,
+        alt: 'Multi layered illustration of UI elements and woman clasping her hands together in excitement'
+      }}
+      footerActions={<><Button color="primary">Learn more</Button></>}
+    />
+  </Story>
+</Canvas>
+
+## Contained
+When the Hero is set to contained, the Hero will have margins that push the image away from the sides of the Hero container.
+<Canvas>
+  <Story name="Contained">
+    <Hero
+      title="Learn with Kajabi in our live workshops"
+      description="Did you know we offer free workshops? Kajabi experts host live workshops every week on topics from marketing your products to building out your Kajabi account."
+      heroSize="small"
+      contained={true}
+      image={{
+        src: `${heroContained}`,
+        alt: 'Multi layered illustration of UI elements and woman smiling to the camera'
+      }}
+      footerActions={<><Button color="primary">Learn more</Button></>}
+    />
+  </Story>
+</Canvas>
+
+## Custom Background
+When the Hero has a custom background color, the background color will be applied to the entire Hero.
+<Canvas>
+  <Story name="Custom Background">
+    <Hero
+      title="Learn with Kajabi in our live workshops"
+      description="Did you know we offer free workshops? Kajabi experts host live workshops every week on topics from marketing your products to building out your Kajabi account."
+      heroSize="small"
+      customBackgroundColor="#e6f4fe"
+      borderless={true}
+      image={{
+        src: `${heroFull}`,
+        alt: 'Multi layered illustration of UI elements and woman clasping her hands together in excitement'
+      }}
+      footerActions={<><Button color="primary">Learn more</Button></>}
+    />
+  </Story>
+</Canvas>
+
+## Image Start
+When the image is set to start, the image will be placed at the start of the Hero component.
+<Canvas>
+  <Story name="Image Start">
+    <Hero
+      title="Learn with Kajabi in our live workshops"
+      description="Did you know we offer free workshops? Kajabi experts host live workshops every week on topics from marketing your products to building out your Kajabi account."
+      heroSize="small"
+      imageStart={true}
+      image={{
+        src: `${heroFull}`,
+        alt: 'Multi layered illustration of UI elements and woman clasping her hands together in excitement'
+      }}
+      footerActions={<><Button color="primary">Learn more</Button></>}
+    />
+  </Story>
+</Canvas>
+
+## CTA Attribute
+When the Hero has a CTA attribute, the CTA will be applied to the Hero image.
+
+<Canvas>
+  <Story name="CTA Attribute">
+    <Hero
+      title="Learn with Kajabi in our live workshops"
+      description="Did you know we offer free workshops? Kajabi experts host live workshops every week on topics from marketing your products to building out your Kajabi account."
+      heroSize="small"
+      contained={true}
+      image={{
+        src: `${heroContained}`,
+        alt: 'Multi layered illustration of UI elements and woman smiling to the camera'
+      }}
+      ctaAttributes={{
+        href: '#'
+      }}
+      footerActions={<><Button color="primary">Learn more</Button></>}
+    />
+  </Story>
+</Canvas>
