@@ -44,7 +44,7 @@ $-hero-play-icon-background-color: sage-color(white);
 }
 
 .sage-hero--large {
-  max-width: map-get($sage-containers, "xl");
+  max-width: map-get($sage-containers, "full");
 }
 
 .sage-hero__title {
