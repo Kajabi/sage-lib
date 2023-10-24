@@ -72,10 +72,16 @@ Panel.defaultProps = {
 };
 
 Panel.propTypes = {
+  /** Renders any content passed within. */
   children: PropTypes.node,
+  /** CSS class that will be applied to the outermost container. */
   className: PropTypes.string,
+  /** Removes padding on both top and bottom of the Panel */
   clearPaddingBoth: PropTypes.bool,
+  /** Removes padding on the bottom of the Panel */
   clearPaddingBottom: PropTypes.bool,
+  /** Removes padding on the top of the Panel */
   clearPaddingTop: PropTypes.bool,
+  /** Setting this to true will display a loading spinner within the Panel */
   loading: PropTypes.bool,
 };
