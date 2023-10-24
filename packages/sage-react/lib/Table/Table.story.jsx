@@ -81,10 +81,15 @@ Default.decorators = [
     </>
   )
 ];
+Default.args = {
+  selectable: false
+};
 
 export const TableWithRichContent = Template.bind({});
 TableWithRichContent.args = {
+  hasMenuOptions: true,
   rows: domains,
+  selectable: false,
   schema: {
     domain: {
       label: 'Domain',
@@ -106,6 +111,37 @@ TableWithRichContent.decorators = [
     <>
       <Panel>
         {Story()}
+      </Panel>
+    </>
+  )
+];
+
+export const TableWithRichContentAndCheckbox = Template.bind({});
+TableWithRichContentAndCheckbox.args = {
+  rows: domains,
+  hasLeadingInput: true,
+  hasMenuOptions: true,
+  schema: {
+    domain: {
+      label: 'Domain',
+      dataType: Table.DATA_TYPES.STRING,
+    },
+    status: {
+      label: 'Status',
+      dataType: Table.DATA_TYPES.LABEL,
+    },
+    options: {
+      label: '',
+      dataType: Table.DATA_TYPES.HTML,
+    },
+  }
+};
+
+TableWithRichContentAndCheckbox.decorators = [
+  (Story) => (
+    <>
+      <Panel>
+        <Story />
       </Panel>
     </>
   )

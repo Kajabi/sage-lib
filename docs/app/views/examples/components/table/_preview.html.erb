@@ -110,7 +110,255 @@ sample_table = {
     }
   ]
 }
+
+table_dropdown_menu_items = [
+  {
+    attributes: { "href": "#" },
+    icon: "pen",
+    value: "Edit",
+  },
+  {
+    attributes: {
+      "href": "https://kajabi.com",
+      "data-js-tooltip": "Tooltip",
+      "data-js-tooltip-position": "right",
+    },
+    icon: "pen",
+    modifiers: ["disabled"],
+    value: "Disabled link w/ tooltip",
+  },
+  {
+    attributes: { "href": "#" },
+    icon: "add",
+    style: "primary",
+    value: "New",
+  },
+  {
+    attributes: { "href": "#" },
+    icon: "url",
+    modifiers: ["border-before"],
+    value: "Share Element",
+  },
+  {
+    attributes: { "href": "#" },
+    icon: "remove-circle",
+    style: "danger",
+    value: "Take A Dangerous Action",
+  },
+  {
+    attributes: {
+      "data-js-tooltip": "Tooltip",
+      "data-js-tooltip-position": "right",
+    },
+    icon: "users",
+    modifiers: ["disabled"],
+    value: "Disabled w/ Tooltip",
+  }
+]
 %>
+
+<%= sage_component SageTable, {
+  caption: %(
+    Basic table
+  ),
+  has_menu_options: true,
+  headers: [
+    "Name",
+    "Email",
+    "Revenue",
+    "Status"
+  ],
+  # responsive_stack: true,
+  rows: [
+    [
+      %(
+        #{link_to "Frank Dux", "#", class: "sage-table-cell__link"}
+      ),
+      "fd@email.com",
+      "$275.43",
+      %(
+        #{sage_component(SageButton, {
+          value: "Icon only",
+          small: true,
+          style: "secondary",
+          subtle: true,
+          icon: {
+            style: "only",
+            name: "dot-menu-horizontal"
+          },
+          small: true
+        })})
+    ],
+    [
+      %(
+        #{link_to "Stinkmeaner", "#", class: "sage-table-cell__link"}
+      ),
+      "st@email.com",
+      "$775.43",
+      %(
+        #{sage_component(SageButton, {
+          value: "Icon only",
+          small: true,
+          style: "secondary",
+          subtle: true,
+          icon: {
+            style: "only",
+            name: "dot-menu-horizontal"
+          },
+          small: true
+        })})
+    ],
+    [
+      %(
+        #{link_to "Huey Freeman", "#", class: "sage-table-cell__link"}
+      ),
+      "hf@email.com",
+      "$1275.43",
+      %(
+        #{sage_component(SageButton, {
+          value: "Icon only",
+          small: true,
+          style: "secondary",
+          subtle: true,
+          icon: {
+            style: "only",
+            name: "dot-menu-horizontal"
+          },
+          small: true
+        })})
+    ],
+  ]
+} %>
+
+<h3 class="t-sage-heading-6">Responsive "stacked" table with checkbox selection</h3>
+<%= sage_component SageTable, {
+  caption: %(
+    Set `responsive_stack` to enable the mobile "stacked" layout
+  ),
+  caption_side: "bottom",
+  has_leading_input: true,
+  has_menu_options: true,
+  headers: [
+    "",
+    "Name",
+    "Email",
+    "Marketing Status",
+    "Added date",
+    "Last activity",
+    ""
+  ],
+  responsive_stack: true,
+  rows: [
+    [
+      %(
+        #{sage_component(SageCheckbox, {
+          id:"c331",
+          label_text: "Select row",
+          checked: false,
+          disabled: false,
+          has_error: false,
+          partial_selection: true,
+          standalone: true
+        })}),
+      %(
+        #{link_to "Frank Dux", "#", class: "sage-table-cell__link"}
+      ),
+      "fd@email.com",
+      %(
+        #{sage_component(SageBadge, {
+          color: "locked",
+          value: "Subscribed",
+        })}
+      ),
+      "August 21, 2019",
+      "November 21, 2019",
+      %(
+        #{sage_component(SageButton, {
+          value: "Icon only",
+          small: true,
+          style: "secondary",
+          subtle: true,
+          icon: {
+            style: "only",
+            name: "dot-menu-horizontal"
+          },
+          small: true
+        })})
+    ],
+    [
+      %(
+        #{sage_component(SageCheckbox, {
+          id:"c332",
+          label_text: "Select row",
+          checked: false,
+          disabled: false,
+          has_error: false,
+          partial_selection: true,
+          standalone: true
+        })}),
+      %(
+        #{link_to "Stinkmeaner", "#", class: "sage-table-cell__link"}
+      ),
+      "st@email.com",
+      %(
+        #{sage_component(SageBadge, {
+          color: "locked",
+          value: "Subscribed",
+        })}
+      ),
+      "December 18, 2019",
+      "February 16, 2021",
+      %(
+        #{sage_component(SageButton, {
+          value: "Icon only",
+          small: true,
+          style: "secondary",
+          subtle: true,
+          icon: {
+            style: "only",
+            name: "dot-menu-horizontal"
+          },
+          small: true
+        })})
+    ],
+    [
+      %(
+        #{sage_component(SageCheckbox, {
+          id:"c333",
+          label_text: "Select row",
+          checked: false,
+          disabled: false,
+          has_error: false,
+          partial_selection: true,
+          standalone: true
+        })}),
+      %(
+        #{link_to "Huey Freeman", "#", class: "sage-table-cell__link"}
+      ),
+      "hf@email.com",
+      %(
+        #{sage_component(SageBadge, {
+          color: "draft",
+          value: "Not subscribed",
+        })}
+      ),
+      "July 22, 2020",
+      "September 16, 2020",
+      %(
+        #{sage_component(SageButton, {
+          value: "Icon only",
+          small: true,
+          style: "secondary",
+          subtle: true,
+          icon: {
+            style: "only",
+            name: "dot-menu-horizontal"
+          },
+          small: true
+        })})
+    ],
+  ],
+} %>
 
 <h3 class="t-sage-heading-6">Responsive table with borders</h3>
 <%= sage_component SageTable, {
@@ -233,7 +481,12 @@ This involves calling `sage_table_for` with a collection, and then using `t.colu
 **NOTE:** This is an MVP implementation based on a helper written earlier for `kajabi-products` and may not be fully aligned with SageTable. It is safe to use, but should be tracked against future updates.
 ") %>
 
-<%= sage_table_for people_data, selectable: true, sortable: true, responsive: true, caption: "Caption positioned above using `caption_side`".html_safe, caption_side: "top" do |t| %>
+<%= sage_table_for people_data,
+    selectable: true,
+    sortable: true,
+    responsive: true,
+    responsive_stack: true,
+    caption: "Caption positioned above using `caption_side`".html_safe, caption_side: "top" do |t| %>
   <% t.column :initials, label: "", data_type: "checkbox" do |c| %>
     <%= sage_component SageCheckbox, {
       label_text: 'Select row',
@@ -265,15 +518,15 @@ This involves calling `sage_table_for` with a collection, and then using `t.colu
     </span>
   <% end %>
 
-  <% t.column :price, label: "Price", style: "width: 140px", hide: { md: true } do |c| %>
+  <% t.column :price, label: "Price", hide: { md: true } do |c| %>
     <%= c[:price] %>
   <% end %>
 
-  <% t.column :amount, label: "Amount", style: "width: 100px", hide: { md: true } do |c| %>
+  <% t.column :amount, label: "Amount", hide: { md: true } do |c| %>
     <%= c[:amount] %>
   <% end %>
 
-  <% t.column :labels, label: "Labels", style: "width: 150px", hide: { sm: true } do |c| %>
+  <% t.column :labels, label: "Labels", hide: { sm: true } do |c| %>
     <% c[:labels].each do |label| %>
       <%= sage_component SageBadge, {
         value: label,
@@ -282,14 +535,14 @@ This involves calling `sage_table_for` with a collection, and then using `t.colu
     <% end %>
   <% end %>
 
-  <% t.column :status, label: "Status", style: "width: 100px", hide: { sm: true } do |c| %>
+  <% t.column :status, label: "Status", hide: { sm: true } do |c| %>
     <%= sage_component SageBadge, {
       value: c[:status].titlecase,
       color: c[:status],
       } %>
   <% end %>
 
-  <% t.column :actions, label: "Actions", style: "width: 100px" do |c| %>
+  <% t.column :actions, label: "Actions" do |c| %>
     <%= sage_component SageButtonGroup, { gap: :xs } do %>
       <%= sage_component SageButton, {
         subtle: true,

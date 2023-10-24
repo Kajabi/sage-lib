@@ -80,7 +80,7 @@ module SageTableHelper
   end
 
   class SageTableFor
-    attr_reader :caption, :caption_side, :columns, :condensed, :template, :id, :class_name, :collection, :has_borders, :row_proc, :sortable, :responsive, :skip_headers, :reset_above, :reset_below
+    attr_reader :caption, :caption_side, :columns, :condensed, :template, :id, :class_name, :collection, :has_borders, :row_proc, :sortable, :responsive, :responsive_stack, :skip_headers, :reset_above, :reset_below
     delegate :content_tag, :tag, to: :template
 
     def initialize(template, collection, opts={})
@@ -94,6 +94,7 @@ module SageTableHelper
       @reset_above = opts[:reset_above]
       @reset_below = opts[:reset_below]
       @responsive = opts[:responsive]
+      @responsive_stack = opts[:responsive_stack]
       @skip_headers = opts[:skip_headers]
       @sortable = opts[:sortable]
       @id = opts[:id]
@@ -132,6 +133,7 @@ module SageTableHelper
       table_classes = "sage-table"
       table_classes << " sage-table--condensed" if condensed
       table_classes << " sage-table--sortable" if sortable
+      table_classes << " sage-table--stack" if responsive_stack
       table_classes << " #{class_name}" if class_name
 
       content_tag "table", id: id, class: table_classes do
@@ -152,7 +154,8 @@ module SageTableHelper
     end
 
     def head
-      if skip_headers
+      # responsive_stack enforces use of headers
+      if skip_headers && !responsive_stack
         ""
       else
         content_tag "thead" do
@@ -213,6 +216,55 @@ module SageTableHelper
     yield table if block_given?
 
     table.contents
+  end
+
+  def sage_table_classes(table)
+    table_classlist = "sage-table"
+
+    table_classlist << " sage-table--selectable" if table.selectable
+    table_classlist << " sage-table--condensed" if table.condensed
+    table_classlist << " sage-table--has-leading-input" if table.has_leading_input
+    table_classlist << " sage-table--has-menu-options" if table.has_menu_options
+    table_classlist << " sage-table--stack" if table.responsive_stack
+
+    return table_classlist
+  end
+
+  def sage_table_wrapper_classes(table, is_responsive)
+    table_wrapper_classlist = "sage-table-wrapper"
+    table_wrapper_classlist << " sage-table-wrapper--reset-above" if table.reset_above
+    table_wrapper_classlist << " sage-table-wrapper--reset-below" if table.reset_below
+    table_wrapper_classlist << " sage-table-wrapper--scroll" if is_responsive
+
+    return table_wrapper_classlist
+  end
+
+  def sage_table_caption_classes(table)
+    table_caption_classlist = "sage-table__caption"
+
+    table_caption_classlist << " sage-table__caption--#{table.caption_side}" if table.caption_side
+
+    return table_caption_classlist
+  end
+
+  def sage_table_row_classes(table)
+    table_row_classlist = ""
+
+    if table.selectable
+      table_row_classlist << "sage-table__row--selectable"
+    end
+
+    return table_row_classlist
+  end
+
+  def sage_table_cell_classes(table)
+    table_cell_classlist = "sage-table-cell"
+
+    if table.has_borders
+      table_cell_classlist << " sage-table-cell--borders"
+    end
+
+    return table_cell_classlist
   end
 
   def sage_table_sortable_header_link(label, attribute)

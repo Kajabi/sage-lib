@@ -1,32 +1,24 @@
 <%
-is_responsive = true
-if component&.responsive == false
-  is_responsive = false
-end
+  # see `docs/lib/sage_rails/app/helpers/sage_table_helper.rb` for CSS class output logic
+  is_responsive = true
+  if component&.responsive == false
+    is_responsive = false
+  end
 %>
-<div class="
-  sage-table-wrapper
-  <%= "sage-table-wrapper--reset-above" if component.reset_above %>
-  <%= "sage-table-wrapper--reset-below" if component.reset_below %>
-  <%= "sage-table-wrapper--scroll" if is_responsive %>
+<div class="<%= sage_table_wrapper_classes(component, is_responsive) %>"
   <%= component.generated_css_classes %>
-">
+>
   <% if is_responsive %>
     <div class="sage-table-wrapper__overflow">
   <% end %>
 
-  <table class="
-      sage-table
-      <%= "sage-table--selectable" if component.selectable %>
-      <%= "sage-table--condensed" if component.condensed %>
-    "
+  <table
+    class="<%= sage_table_classes(component) %>"
+    data-js-table
     <%= component.generated_html_attributes.html_safe %>
   >
     <% if component.caption.present? %>
-      <caption class="
-        sage-table__caption
-        <%= "sage-table__caption--#{component.caption_side}" if component.caption_side %>
-      ">
+      <caption class="<%= sage_table_caption_classes(component) %>">
         <%= component.caption.html_safe %>
       </caption>
     <% end %>
@@ -34,7 +26,8 @@ end
       <thead>
         <tr>
           <% component.headers.each do | header | %>
-            <th
+            <% table_header_element = header.to_s.strip.empty? ? "td" : "th" %>
+            <<%= table_header_element %>
               class="
                 sage-table__header
                 <%= "sage-table__header--#{header[:data_type]}" if header&.is_a?(Hash) && header[:data_type].present? %>
@@ -44,7 +37,7 @@ end
               <% end if header&.is_a?(Hash) && header[:html_attributes].present? %>
             >
               <%= header&.is_a?(Hash) ? header[:value].html_safe : header.html_safe %>
-            </th>
+            </<%= table_header_element %>>
           <% end %>
         </tr>
       </thead>
@@ -52,10 +45,10 @@ end
     <tbody>
       <% if component.rows.present? %>
         <% component.rows.each do | row | %>
-          <tr class="<%= "sage-table__row--selectable" if component.selectable %>">
+          <tr class="<%= sage_table_row_classes(component) %>">
             <% if row.is_a? Array %>
               <% row.each do | cell | %>
-                <td class="<%= "sage-table-cell--borders" if component.has_borders %>"
+                <td class="<%= sage_table_cell_classes(component) %>"
                   <% cell[:html_attributes].each do | key, value | %>
                     <%= "#{key}=#{value}" %>
                   <% end if cell&.is_a?(Hash) && cell[:html_attributes].present? %>
@@ -65,7 +58,7 @@ end
               <% end %>
             <% elsif row.is_a? Object or row.is_a? Hash %>
               <% row.each do | key, value | %>
-                <td class="<%= "sage-table-cell--borders" if component.has_borders %>"
+                <td class="<%= sage_table_cell_classes(component) %>"
                   data-cell-key="<%= key %>"
                   <% value[:html_attributes].each do | k, v | %>
                     <%= "#{k}=#{v}" %>

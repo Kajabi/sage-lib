@@ -16,11 +16,11 @@ export const domains = [
       <Button
         color={Button.COLORS.SECONDARY}
         subtle={true}
-        onClick={() => console.log('do something!')} // eslint-disable-line
-        icon={SageTokens.ICONS.PEN}
+        onClick={() => console.log('temp button, not dropdown')} // eslint-disable-line
+        icon={SageTokens.ICONS.DOT_MENU_HORIZONTAL}
         iconOnly={true}
       >
-        Edit
+        Open Menu
       </Button>
     ),
   },
@@ -36,11 +36,11 @@ export const domains = [
       <Button
         color={Button.COLORS.SECONDARY}
         subtle={true}
-        onClick={() => console.log('go somewhere!')} // eslint-disable-line
-        icon={SageTokens.ICONS.CARET_RIGHT}
+        onClick={() => console.log('temp button, not dropdown')} // eslint-disable-line
+        icon={SageTokens.ICONS.DOT_MENU_HORIZONTAL}
         iconOnly={true}
       >
-        View Settings
+        Open Menu
       </Button>
     ),
   },
