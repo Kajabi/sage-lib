@@ -1,16 +1,10 @@
 import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs/blocks';
 import { Hero } from '../Hero';
 
-<Meta 
-  title="Sage/Hero"
-  component={Hero}
-  argTypes={{
-    type: {
-      title: 'Title',
-      description: 'The text blah blah',
-    }
-  }} 
-/>
+import heroContained from '../../public/HeroContainedPlaceholder.png';
+import heroFull from '../../public/HeroWorkshopPlaceholder.jpg';
+
+<Meta title="Sage/Hero" />
 
 # Hero
 
@@ -39,6 +33,13 @@ Used with affirmative actions such as submitting, continuing, and saving.
 
 <Canvas>
   <Story name="Default">
-    <Hero />
+    <Hero
+      title="Learn with Kajabi in our live workshops"
+      description="Did you know we offer free workshops? Kajabi experts host live workshops every week on topics from marketing your products to building out your Kajabi account."
+      image={{
+        src: `${heroFull}`
+      }}
+      footerActions={<><Button color="primary">Learn more</Button></>}
+    />
   </Story>
 </Canvas>
