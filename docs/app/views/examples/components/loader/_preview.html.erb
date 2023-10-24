@@ -1,29 +1,48 @@
-<h2 class="<%= SageClassnames::TYPE::HEADING_6 %>">Without text</h2>
-<div class="sage-row">
-  <div class="sage-col--md-6 example__block--lg">
+<h2>Variants</h2>
+
+<h3>Bar</h3>
+<%= sage_component SageGridRow, {} do %>
+  <%= sage_component SageGridCol, { size: 12, css_classes: "example__block--lg" } do %>
     <%= sage_component SageLoader, {
-      type: "spinner"
+      type: "bar"
     } %>
-  </div>
-  <div class="sage-col--md-6 example__block--lg">
-    <%= sage_component SageLoader, {
-      type: "success"
-    } %>
-  </div>
-</div>
-<hr>
-<h2 class="<%= SageClassnames::TYPE::HEADING_6 %>">With text</h2>
-<div class="sage-row">
-  <div class="sage-col--md-6 example__block--lg">
+  <% end %>
+<% end %>
+
+<%= sage_component SageDivider, {} %>
+
+<h3>Spinner</h3>
+<%= sage_component SageGridRow, {} do %>
+  <%= sage_component SageGridCol, { size: 6, css_classes: "example__block--lg" } do %>
+    <h2 class="<%= SageClassnames::TYPE::HEADING_6 %>">With text</h2>
     <%= sage_component SageLoader, {
       type: "spinner",
       text: true
     } %>
-  </div>
-  <div class="sage-col--md-6 example__block--lg">
+  <% end %>
+  <%= sage_component SageGridCol, { size: 6, css_classes: "example__block--lg" } do %>
+    <h2 class="<%= SageClassnames::TYPE::HEADING_6 %>">Without text</h2>
+    <%= sage_component SageLoader, {
+      type: "spinner"
+    } %>
+  <% end %>
+<% end %>
+
+<%= sage_component SageDivider, {} %>
+
+<h3>Success</h3>
+<%= sage_component SageGridRow, {} do %>
+  <%= sage_component SageGridCol, { size: 6, css_classes: "example__block--lg" } do %>
+    <h2 class="<%= SageClassnames::TYPE::HEADING_6 %>">With text</h2>
     <%= sage_component SageLoader, {
       type: "success",
       text: true
     } %>
-  </div>
-</div>
+  <% end %>
+  <%= sage_component SageGridCol, { size: 6, css_classes: "example__block--lg" } do %>
+    <h2 class="<%= SageClassnames::TYPE::HEADING_6 %>">Without text</h2>
+    <%= sage_component SageLoader, {
+      type: "success"
+    } %>
+  <% end %>
+<% end %>

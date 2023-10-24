@@ -1,0 +1,127 @@
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+import { Loader } from './Loader';
+
+<Meta
+  title="Sage/Loader"
+  component={Loader}
+   argTypes={{
+    type: {
+      name: 'Type',
+      description: 'The type of Loader to be rendered',
+      options: Object.values(Loader.TYPES)
+    }
+  }}
+  args={{
+    loading: true,
+  }}
+/>
+
+# Loader
+
+Animated UI elements indicating that a page, section, or action is loading.
+
+## Usage Guidelines
+
+- Communicate that the system is working on a request.
+
+### When to use
+
+- Communicate to the user that something is loading.
+- Any action that cannot be performed instantly and will require a short time to process.
+
+## Accessibility
+
+We achieve accessibility by leveraging the ARIA attributes `aria-live` and `aria-busy`. Each of these provide information to
+screen readers and assitive tech.
+
+- ARIA Busy indicates that an element is currently in a state of being updated or undergoing changes.
+- ARIA Live at its core defines how dynamic content changes are announced to the user. We use the `Polite` option, which informs the user
+without interrupting the user.
+
+## Properties
+
+<ArgsTable story="Default" />
+
+### Types of Loaders
+- Bar
+- Spinner
+- Spinner in Button
+- Success
+- Typing
+
+## Variants
+
+### Default
+When using the component in its default state, it will use the default type of `SPINNER`
+
+<Canvas>
+  <Story name="Default">
+    <Loader loading={true} />
+  </Story>
+</Canvas>
+
+### Bar
+The continuous progress bar is used when the content and the indefinable loading progress of the system
+are to be displayed in the view at the same time.
+
+<Canvas>
+ <Story name="Bar">
+  <Loader loading={true} type={Loader.TYPES.BAR} />
+ </Story>
+</Canvas>
+
+### Spinner
+The continuous spinner is used when loading progress cannot be determined. They indicate to the user
+with continuous movement that the system is still processing.
+
+<Canvas>
+ <Story name="Spinner">
+  <Loader loading={true} type={Loader.TYPES.SPINNER} />
+ </Story>
+</Canvas>
+
+### Success
+This should be used to notify the user that the process/request has been completed succesfully.
+
+<Canvas>
+ <Story name="Success">
+  <Loader loading={true} type={Loader.TYPES.SUCCESS} />
+ </Story>
+</Canvas>
+
+### Typing
+This loading indicator is good when you want to provide feedback to the user that they are typing.
+
+<Canvas>
+ <Story name="Typing">
+  <Loader loading={true} type={Loader.TYPES.TYPING} />
+ </Story>
+</Canvas>
+
+## Additional Properties
+
+### Fill Space (deprecated)
+<Canvas>
+  <Story name="Fill Space - Deprecated">
+    <div>
+      <Loader loading={true} fillSpace={true} />
+    </div>
+  </Story>
+</Canvas>
+
+### Hide when Done
+Setting this property will hide the loader when the process/request has been completed.
+<Canvas>
+  <Story name="Hide When Done - Deprecated">
+    <Loader hideWhenDone={true} />
+  </Story>
+</Canvas>
+
+### Label
+Allows you to provide custom text to the Spinner loader.
+
+<Canvas>
+  <Story name="Label">
+    <Loader loading={true} label="My loading label...." type={Loader.TYPES.SPINNER} />
+  </Story>
+</Canvas>

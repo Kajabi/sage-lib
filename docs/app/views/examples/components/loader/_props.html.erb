@@ -1,12 +1,19 @@
 <tr>
-  <td><%= md('`type`') %><%= sage_component SageBadge, { color: "published", value: "required" } %></td>
-  <td><%= md('Determines which loader will be used; `spinner` or `success`') %></td>
-  <td><%= md('String') %></td>
-  <td><%= md('`nil`') %></td>
+  <td><%= md('`fill`') %>
+  <td><%= md('If true, will fill the space within the container.') %></td>
+  <td><%= md('Boolean') %></td>
+  <td><%= md('`false`') %></td>
 </tr>
 <tr>
   <td><%= md('`text`') %></td>
   <td><%= md('Includes text that aligns with the loader.') %></td>
   <td><%= md('Boolean') %></td>
+  <td><%= md('`false`') %></td>
+</tr>
+<tr>
+  <td><%= md('`type`') %><%= sage_component SageBadge, { color: "published", value: "required" } %></td>
+  <td><%= md('Determines which loader will be used; `bar`, `spinner` or `success`') %></td>
+  <td><%= md('String') %></td>
   <td><%= md('`nil`') %></td>
 </tr>
+
