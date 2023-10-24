@@ -4,6 +4,7 @@ import classnames from 'classnames';
 import uuid from 'react-uuid';
 import { TableHelpers } from '../helpers';
 import { CAPTION_SIDE, cellPropTypes, dataPropTypes } from './configs';
+import { TableSortableHeading } from './TableSortableHeading';
 import { TableHeader } from './TableHeader';
 import { TableRow } from './TableRow';
 import { SELECTION_TYPES } from '../PanelControls/configs';
@@ -49,6 +50,7 @@ export const Table = ({
   selectAllConfigs,
   selectedRows,
   showSelectAll,
+  sortable,
   tableAttributes,
 }) => {
   const [selfSelectedRows, setSelfSelectedRows] = useState([]);
@@ -68,6 +70,7 @@ export const Table = ({
     'sage-table',
     {
       'sage-table--selectable': selectable,
+      'sage-table--sortable': sortable,
     }
   );
 
@@ -139,6 +142,7 @@ export const Table = ({
           className,
           dataType,
           field,
+          sortable,
           style,
           value: label,
         };
@@ -242,6 +246,7 @@ export const Table = ({
     className,
     dataType,
     field,
+    sortable,
     style,
     value,
   }) => {
@@ -256,6 +261,7 @@ export const Table = ({
         attributes={attributes}
         className={className}
         dataType={dataType}
+        sortable={sortable}
         style={style}
         value={value}
       />
@@ -327,6 +333,7 @@ export const Table = ({
   );
 };
 
+Table.SortableHeading = TableSortableHeading;
 Table.Header = TableHeader;
 Table.Row = TableRow;
 Table.CAPTION_SIDE = CAPTION_SIDE;
@@ -349,6 +356,7 @@ Table.defaultProps = {
   selectAllConfigs: null,
   selectedRows: [],
   showSelectAll: false,
+  sortable: false,
   tableAttributes: null,
 };
 
@@ -393,5 +401,6 @@ Table.propTypes = {
     ])),
   ]),
   showSelectAll: PropTypes.bool,
+  sortable: PropTypes.bool,
   tableAttributes: PropTypes.shape({}),
 };
