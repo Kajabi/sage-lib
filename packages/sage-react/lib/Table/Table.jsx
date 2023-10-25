@@ -353,12 +353,32 @@ Table.defaultProps = {
 };
 
 Table.propTypes = {
+  /**
+   * Sets the caption for the component.
+   */
   caption: PropTypes.string,
+
+  /** Sets the caption position for the component. */
   captionSide: PropTypes.oneOf(Object.values(Table.CAPTION_SIDE)),
+
+  /** The CSS class that will be applied to the container. */
   className: PropTypes.string,
+
+  /** When set to `true`, adds borders for cleaner readability. */
   hasBorders: PropTypes.bool,
+
+  /** Deprecated */
   hasDataBeyondCurrentRows: PropTypes.bool,
-  // Headers provide a simpler alternative to schema
+
+  /**
+   * An array of strings that will serve as the headers for the table.
+   * Headers provide a simpler alternative to schema.
+   *
+   * The number of items in the array need to coincide with the number of keys in your data.
+   *
+   * When combined with the Schema property, the headers can
+   * be an object and will match based on Key names.
+   */
   headers: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.oneOfType([
       PropTypes.shape(cellPropTypes),
@@ -366,24 +386,50 @@ Table.propTypes = {
     ])),
     PropTypes.shape({}),
   ]),
+
+  /**
+   * When set to true, allows the table to scroll horizontally without
+   * breaking its parent container.
+   */
   isResponsive: PropTypes.bool,
+
+  /**
+   * Allows a function to be passed, which will be executed when a row is
+   * selected.
+   */
   onSelectRowHook: PropTypes.func,
+
+  /** Resets the top margin of the component. */
   resetAbove: PropTypes.bool,
+
+  /** Resets the bottom margin of the component. */
   resetBelow: PropTypes.bool,
+
+  /** Array of items to populate the table. These items are key/value pairs. */
   rows: PropTypes.arrayOf(PropTypes.oneOfType([
     PropTypes.shape(cellPropTypes),
     PropTypes.arrayOf(dataPropTypes),
     PropTypes.shape({}),
   ])),
-  // Schema provides a structure for applying settings to headers and cells
+
+  /**
+   * Provides a structure for applying the column order, and may specify the data types
+   * to the headers and cells.
+   */
   schema: PropTypes.shape({}),
+
+  /** Adds a background color when a user hovers over rows. */
   selectable: PropTypes.bool,
+
+  /**  Additional information for Select all column.  */
   selectAllConfigs: PropTypes.shape({
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     label: PropTypes.string.isRequired,
     onChange: PropTypes.func,
   }),
+
+  /** An array of the selected rows when `selectable` set to `true` */
   selectedRows: PropTypes.oneOfType([
     PropTypes.oneOf([SELECTION_TYPES.ALL]),
     PropTypes.arrayOf(PropTypes.oneOfType([
@@ -392,6 +438,10 @@ Table.propTypes = {
       PropTypes.string,
     ])),
   ]),
+
+  /** When true, shows the checkbox in the header row. */
   showSelectAll: PropTypes.bool,
+
+  /** Allows you to provide additional HTML attributes. */
   tableAttributes: PropTypes.shape({}),
 };

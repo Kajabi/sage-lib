@@ -126,16 +126,36 @@ TableRow.defaultProps = {
   schema: {}
 };
 TableRow.propTypes = {
+  /** The CSS class name for the table row. */
   className: PropTypes.string,
+
+  /** A collection of column data. */
   cells: PropTypes.arrayOf(PropTypes.shape(cellPropTypes)),
+
+  /** When true, the row will have borders. */
   hasBorders: PropTypes.bool,
+
+  /** The id of the row. */
   id: PropTypes.oneOfType([
     PropTypes.number,
     PropTypes.string,
   ]).isRequired,
+
+  /** A function that will execute when row is selected. */
   onSelect: PropTypes.func,
+
+  /** When true, the row will be selectable. */
   selectable: PropTypes.bool,
+
+  /** When true, indicates that the row is selected. */
   selected: PropTypes.bool,
+
+  /**
+   * Provides a structure for applying the column order, and may specify the data types
+   * to the headers and cells.
+   */
   schema: PropTypes.shape({}),
+
+  /** The data types that could be renedered in a Table Cell. */
   typeRenderers: PropTypes.shape({}),
 };
