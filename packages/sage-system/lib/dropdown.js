@@ -190,49 +190,79 @@ Sage.dropdown = (function () {
   }
 
   function positionElement(el) {
-    let direction = null;
-
+    let directionX = null;
+    let directionY = null;
+  
     // Elements
     const button = el;
-    const panel = el.lastElementChild
+    const panel = el.lastElementChild;
     const win = panel.ownerDocument.defaultView;
     const docEl = window.document.documentElement;
 
     panel.style.top = ''; // resets the style
-
+    panel.style.left = ''; // resets the style
+    panel.style.right = ''; // resets the style
+  
     // Dimensions
     const buttonDimensions = button.getBoundingClientRect();
     const panelDimensions = panel.getBoundingClientRect();
 
     const panelNewLoc = {
-      top: ( buttonDimensions.height / 2 ) + panelDimensions.height
-    }
-
+      top: (buttonDimensions.height / 2) + panelDimensions.height,
+      left: (buttonDimensions.width / 2) + panelDimensions.width,
+    };
+  
     const viewport = {
       top: docEl.scrollTop,
       bottom: window.pageYOffset + docEl.clientHeight,
-    }
-
+      left: docEl.scrollLeft,
+      right: window.pageXOffset + docEl.clientWidth,
+    };
+  
     const offset = {
       top: panelDimensions.top + win.pageYOffset,
       left: panelDimensions.left + win.pageXOffset,
-      bottom: (panelDimensions.top + win.pageYOffset)
+      bottom: (panelDimensions.top + win.pageYOffset),
+      right: (panelDimensions.left + win.pageXOffset),
     };
 
     const panelHeight = getHeight(panel);
-    const enoughSpaceAbove = viewport.top < ( offset.top + panelHeight);
+    const panelWidth = panelDimensions.width;
+    const enoughSpaceAbove = viewport.top < (offset.top + panelHeight);
     const enoughSpaceBelow = viewport.bottom > (offset.bottom + panelHeight);
-
+    const enoughSpaceLeft = viewport.left < (offset.left + panelWidth);
+    const enoughSpaceRight = viewport.right > (offset.right + panelWidth);
+  
+    // Check if there is enough space to the top or bottom
     if (!enoughSpaceBelow && enoughSpaceAbove) {
-      direction = 'above';
+      directionY = 'above';
     } else if (!enoughSpaceAbove && enoughSpaceBelow) {
-      direction = 'below';
+      directionY = 'below';
     }
 
-    if ( direction == 'above') {
+    if (directionY === 'above') {
       panel.style.top = `-${panelNewLoc.top}px`;
+    } else if (directionY === 'below') {
+      // find test case
+      // panel.style.top = 0;
+    } 
+
+    // Check if there is enough space to the left or right
+    if (!enoughSpaceRight && enoughSpaceLeft) {
+      directionX = 'left';
+    } else if (!enoughSpaceLeft && enoughSpaceRight) {
+      directionX = 'right';
+    }
+    
+    if (directionX === 'left') {
+      panel.style.left = 'inherit';
+      panel.style.right = 0;
+    } else if (directionX === 'right') {
+      panel.style.left = 0;
+      panel.style.right = 'inherit';
     }
   }
+  
   function open(el) {
     el.setAttribute("aria-expanded", "true");
     positionElement(el);
