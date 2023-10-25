@@ -102,22 +102,22 @@ export const Dropdown = ({
     const rect = wrapperRef.current.getBoundingClientRect();
     const coords = {
       top: buttonDimensions.bottom + topBoxOffset,
-      left: align !== 'right'
+      left: align === DROPDOWN_POSITIONS.LEFT || null
         ? rect.left + inlineBoxOffset
-        : 'initial',
-      right: align === 'right' && isPinned
+        : null,
+      right: align === DROPDOWN_POSITIONS.RIGHT && isPinned
         ? window.innerWidth - rect.right + inlineBoxOffset
-        : 'initial',
+        : null,
     };
 
     if (!isPinned) {
       coords.top = null;
-      coords.left = 'initial';
+      coords.left = null;
     }
 
     if (directionY === 'above') {
       coords.top = ((buttonDimensions.height / 4) + panelDimensions.height) * -1;
-      coords.left = 'initial';
+      coords.left = null;
       if (isPinned) {
         coords.top = (buttonDimensions.top - panelDimensions.height);
         coords.right = window.innerWidth - buttonDimensions.right + inlineBoxOffset;
@@ -127,22 +127,22 @@ export const Dropdown = ({
     // Check if there is enough space to the left or right
     // CHECK ISPINNED
     if (!enoughSpaceRight && enoughSpaceLeft) {
-      directionX = 'left';
+      directionX = DROPDOWN_POSITIONS.LEFT;
     } else if (!enoughSpaceLeft && enoughSpaceRight) {
-      directionX = 'right';
+      directionX = DROPDOWN_POSITIONS.RIGHT;
     }
 
-    if (directionX === 'left') {
-      coords.left = 'initial';
+    if (directionX === DROPDOWN_POSITIONS.LEFT) {
+      coords.left = null;
       coords.right = 0;
       if (isPinned) {
         coords.right = window.innerWidth - buttonDimensions.right + inlineBoxOffset;
       }
     }
 
-    if (directionX === 'right') {
+    if (directionX === DROPDOWN_POSITIONS.RIGHT) {
       coords.left = 0;
-      coords.right = 'initial';
+      coords.right = null;
       if (isPinned) {
         coords.left = buttonDimensions.left + inlineBoxOffset;
       }
