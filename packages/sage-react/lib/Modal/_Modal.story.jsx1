@@ -239,6 +239,7 @@ export const Fullscreen = (args) => {
         animation={{ direction: Modal.ANIMATION_DIRECTIONS.BOTTOM }}
         fullScreen={true}
         onExit={onExit}
+        containerClassName="my-stuff"
         {...args}
       >
         <FullscreenBody onExit={onExit} />

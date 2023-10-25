@@ -130,23 +130,65 @@ Modal.defaultProps = {
 };
 
 Modal.propTypes = {
+  /**
+   * Enabling this property will return the JS early to not initialize any handlers.
+   */
   active: PropTypes.bool,
+  /**
+   * Toggles whether to allow scrolling of the modal by attaching `.sage-modal--scrollable`.
+   */
   allowScroll: PropTypes.bool,
+  /**
+   * Toggles whether to animate the modal by attaching `.sage-modal--animate`. If an object is passed, it will be used to set the direction of the animation.
+   */
   animation: PropTypes.oneOfType([
     PropTypes.bool,
     PropTypes.shape({
       direction: PropTypes.oneOf(Object.values(Modal.ANIMATION_DIRECTIONS))
     })
   ]),
+  /**
+   * Content to render within the modal
+   */
   children: PropTypes.node,
+  /**
+   * Classname to apply to the container element, `.sage-modal__container`. Useful for applying custom styles.
+   */
   containerClassName: PropTypes.string,
+  /**
+   * Classname to apply to the root element, `.sage-modal`. Useful for applying custom styles.
+   */
   className: PropTypes.string,
+  /**
+   * Enabling this property will return the JS early to not initialize any handlers.
+   */
   disableBackgroundBlur: PropTypes.bool,
+  /**
+   * Enabling this property will return the JS early to not initialize any handlers.
+   */
   disableBackgroundDismiss: PropTypes.bool,
+  /**
+   * Toggles whether to use the fullscreen variant of the modal by attaching `.sage-modal--fullscreen`.
+   */
   fullScreen: PropTypes.bool,
+  /**
+   * Unique identifier for component. Should match the `data-js-modaltrigger` property on the corresponding button
+   */
   id: PropTypes.string,
+  /**
+   * Denotes the closing state of the by attaching `.sage-modal--is-closing`.
+   */
   isClosing: PropTypes.bool,
+  /**
+   * Toggles whether to use the large variant of the modal by attaching `.sage-modal--large`
+   */
   large: PropTypes.bool,
+  /**
+   * Callback function for when the modal is closed
+   */
   onExit: PropTypes.func,
+  /**
+   * Presets a size for the modal
+   */
   size: PropTypes.oneOf(Object.values(Modal.SIZES))
 };
