@@ -1,380 +1,765 @@
-<%
-  sample_body_text = "<p class='#{SageClassnames::TYPE::BODY}'>Add a description of the content you're showing in the modal.</p>".html_safe
+<h2>Variants</h2>
 
-  long_sample_text = "<p class=' #{SageClassnames::TYPE::BODY}'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse urna leo, condimentum nec pellentesque finibus, ultricies pulvinar ante. Donec eu interdum ligula. Pellentesque aliquam ullamcorper orci, nec tempor libero tristique in. Aliquam vitae felis at leo condimentum placerat eget id libero. In dictum tortor ac accumsan aliquam. Donec sit amet tortor porttitor, tincidunt nisl at, egestas lacus. Integer metus augue, aliquet accumsan vulputate eget, tristique id erat. Donec a venenatis nibh, ac molestie risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus in orci vitae ex tempor ultrices in a leo. Sed purus magna, vulputate aliquet ligula eget, consectetur sagittis nunc.</p>".html_safe
-%>
-<%= sage_component SagePanelBlock, {} do %>
-  <%= sage_component SageButtonGroup, { wrap: true, gap: :sm, spacer: { bottom: :sm }} do %>
-    <%= sage_component SageButton, {
-      style: "primary",
-      icon: { name: "launch", style: "right" },
-      value: "Basic",
-      attributes: {
-        "data-js-modaltrigger": "cool-modal",
-      }
-    } %>
-    <%= sage_component SageButton, {
-      style: "primary",
-      icon: { name: "launch", style: "right" },
-      value: "Scrollable Content",
-      attributes: {
-        "data-js-modaltrigger": "cool-modal-scrolling",
-      }
-    } %>
-    <%= sage_component SageButton, {
-      style: "primary",
-      icon: { name: "launch", style: "right" },
-      value: "Fullscreen",
-      attributes: {
-        "data-js-modaltrigger": "cool-modal-fullscreen",
-      }
-    } %>
-    <%= sage_component SageButton, {
-      style: "primary",
-      icon: { name: "launch", style: "right" },
-      value: "Destructive",
-      attributes: {
-        "data-js-modaltrigger": "cool-modal-destructive",
-      }
-    } %>
-  <% end %>
+<h3>Basic</h3>
+Basic modals contain a title, a body of content, and a footer with buttons.
+<%= sage_component SageButton, {
+  style: "primary",
+  icon: { name: "launch", style: "right" },
+  value: "Basic",
+  attributes: {
+    "data-js-modaltrigger": "cool-modal",
+  }
+} %>
 
-  <%# Standard Modal %>
-  <%= sage_component SageModal, { id: "cool-modal", size: "lg" } do %>
-    <%= sage_component SageModalContent, {
-      title: "Modal header",
-      subheader: "This is subheader copy for your viewing pleasure",
-    } do %>
-      <% content_for :sage_header_aside do %>
-        <%= sage_component SageButton, {
-          style: "secondary",
-          subtle: true,
-          value: "Close Modal",
-          icon: { name: "remove", style: "only" },
-          attributes: { "data-js-modal": true }
-        } %>
-      <% end %>
-
-      <%= sample_body_text %>
-
-
-      <% content_for :sage_footer do %>
-        <% content_for :sage_footer_aside do %>
-          <%= sage_component SageButton, {
-            style: "secondary",
-            subtle: true,
-            value: "Link",
-            attributes: { "data-js-modal": true }
-          } %>
-        <% end %>
-        <%= sage_component SageButton, {
-          style: "secondary",
-          value: "Cancel",
-        } %>
-        <%= sage_component SageButton, {
-          style: "primary",
-          value: "Confirm",
-        } %>
-      <% end %>
-    <% end %>
-  <% end %>
-
-  <%# Standard Modal with Scrolling %>
-  <%= sage_component SageModal, { allow_scroll: true, id: "cool-modal-scrolling" } do %>
-    <%= sage_component SageModalContent, {
-      title: "Modal header",
-      subheader: "This is subheader copy for your viewing pleasure",
-    } do %>
-      <% content_for :sage_header_aside do %>
-        <%= sage_component SageButton, {
-          style: "secondary",
-          subtle: true,
-          value: "Close Modal",
-          icon: { name: "remove", style: "only" },
-          attributes: { "data-js-modal": true }
-        } %>
-      <% end %>
-
-      <%= long_sample_text %>
-      <%= long_sample_text %>
-      <%= long_sample_text %>
-      <%= long_sample_text %>
-
-      <% content_for :sage_footer do %>
-        <% content_for :sage_footer_aside do %>
-          <%= sage_component SageButton, {
-            style: "secondary",
-            subtle: true,
-            value: "Link",
-            attributes: { "data-js-modal": true }
-          } %>
-        <% end %>
-        <%= sage_component SageButton, {
-          style: "secondary",
-          value: "Cancel",
-        } %>
-        <%= sage_component SageButton, {
-          style: "primary",
-          value: "Confirm",
-        } %>
-      <% end %>
-    <% end %>
-  <% end %>
-
-  <%# Fullscreen Modal %>
-  <%= sage_component SageModal, {
-    id: "cool-modal-fullscreen",
-    fullscreen: true
+<%= sage_component SageModal, { id: "cool-modal"} do %>
+  <%= sage_component SageModalContent, {
+    title: "Modal title",
   } do %>
-    <%= sage_component SageModalContent, {
-      title: "Modal header"
-    } do %>
-      <% content_for :sage_header_aside do %>
-        <%= sage_component SageButton, {
-          style: "secondary",
-          subtle: true,
-          value: "Close Modal",
-          icon: { name: "remove", style: "only" },
-          attributes: { "data-js-modal": true }
-        } %>
-      <% end %>
-
-      <%= sample_body_text %>
+    <% content_for :sage_header_aside do %>
+      <%= sage_component SageButton, {
+        style: "secondary",
+        subtle: true,
+        value: "Close Modal",
+        icon: { name: "remove", style: "only" },
+        attributes: { "data-js-modal": true }
+      } %>
     <% end %>
-  <% end %>
 
-  <%# Destructive Modal %>
-  <%= sage_component SageModal, { id: "cool-modal-destructive" } do %>
-    <%= sage_component SageModalContent, {
-      title: "Delete item",
-      help_content: "<p>Are you sure you want to delete this item? This action cannot be undone.</p>",
-      help_link: {
-        href: "#",
-        name: "Link"
-      }
-    } do %>
-      <% content_for :sage_header_aside do %>
-        <%= sage_component SageButton, {
-          style: "secondary",
-          subtle: true,
-          value: "Close Modal",
-          icon: { name: "remove", style: "only" },
-          attributes: { "data-js-modal": true }
-        } %>
-      <% end %>
+    <p>Add a description of the content you're showing in the modal.</p>
 
-      <p>Are you sure you want to delete this item? This action cannot be undone.</p>
-
-      <% content_for :sage_footer do %>
-        <% content_for :sage_footer_aside do %>
-          <%= sage_component SageButton, {
-            style: "secondary",
-            subtle: true,
-            value: "Link",
-            attributes: { "data-js-modal": true }
-          } %>
-        <% end %>
-        <%= sage_component SageButton, {
-          style: "secondary",
-          value: "Cancel",
-        } %>
-        <%= sage_component SageButton, {
-          style: "danger",
-          icon: { name: "trash", style: "left" },
-          value: "Delete",
-        } %>
-      <% end %>
+    <% content_for :sage_footer do %>
+      <%= sage_component SageButton, {
+        style: "secondary",
+        value: "Cancel",
+      } %>
+      <%= sage_component SageButton, {
+        style: "primary",
+        value: "Confirm",
+      } %>
     <% end %>
   <% end %>
 <% end %>
 
-<%= sage_component SagePanelBlock, {} do %>
-  <h3 class="<%= SageClassnames::TYPE::HEADING_6 %>">Animated</h3>
-  <%= sage_component SageButtonGroup, { gap: :sm, spacer: { bottom: :sm }} do %>
-    <%= sage_component SageButton, {
-      style: "primary",
-      icon: { name: "launch", style: "right" },
-      value: "Default",
-      attributes: {
-        "data-js-modaltrigger": "cool-modal-animate-default",
-      }
-    } %>
-    <%= sage_component SageButton, {
-      style: "primary",
-      icon: { name: "launch", style: "right" },
-      value: "To top",
-      attributes: {
-        "data-js-modaltrigger": "cool-modal-animate-top",
-      }
-    } %>
-    <%= sage_component SageButton, {
-      style: "primary",
-      icon: { name: "launch", style: "right" },
-      value: "To left (blur off)",
-      attributes: {
-        "data-js-modaltrigger": "cool-modal-animate-left",
-      }
-    } %>
-    <%= sage_component SageButton, {
-      style: "primary",
-      icon: { name: "launch", style: "right" },
-      value: "To right (blur off)",
-      attributes: {
-        "data-js-modaltrigger": "cool-modal-animate-right",
-      }
-    } %>
-  <% end %>
+<%= sage_component SageDivider, {} %>
 
-  <%# Animated Modals %>
-  <%= sage_component SageModal, { id: "cool-modal-animate-default", animate: true, css_classes: "custom-class-name-here" } do %>
-    <%= sage_component SageModalContent, { title: "Modal header" } do %>
-      <% content_for :sage_header_aside do %>
-        <%= sage_component SageButton, {
-          style: "secondary",
-          subtle: true,
-          value: "Close Modal",
-          icon: { name: "remove", style: "only" },
-          attributes: { "data-js-modal": true }
-        } %>
-      <% end %>
+<h3>Destructive</h3>
+<p>Contain a title, a body of content, and a footer with buttons. The call to action button 
+in the footer contain error styling to indicate that the action is destructive.</p>
+<%= sage_component SageButton, {
+  style: "primary",
+  icon: { name: "launch", style: "right" },
+  value: "Destructive",
+  attributes: {
+    "data-js-modaltrigger": "cool-modal-destructive",
+  }
+} %>
 
-      <%= sample_body_text %>
-
-      <% content_for :sage_footer do %>
-        <% content_for :sage_footer_aside do %>
-          <%= sage_component SageButton, {
-            style: "secondary",
-            subtle: true,
-            value: "Close Modal",
-            attributes: { "data-js-modal": true }
-          } %>
-        <% end %>
-        <%= sage_component SageButton, {
-          style: "primary",
-          value: "Confirm",
-        } %>
-      <% end %>
+<%= sage_component SageModal, { id: "cool-modal-destructive" } do %>
+  <%= sage_component SageModalContent, {
+    title: "Delete item",
+    help_content: "<p>Are you sure you want to delete this item? This action cannot be undone.</p>",
+    help_link: {
+      href: "#",
+      name: "Link"
+    }
+  } do %>
+    <% content_for :sage_header_aside do %>
+      <%= sage_component SageButton, {
+        style: "secondary",
+        subtle: true,
+        value: "Close Modal",
+        icon: { name: "remove", style: "only" },
+        attributes: { "data-js-modal": true }
+      } %>
     <% end %>
-  <% end %>
 
-  <%= sage_component SageModal, { id: "cool-modal-animate-top", animate: { direction: "top" } } do %>
-    <%= sage_component SageModalContent, { title: "Modal header" } do %>
-      <% content_for :sage_header_aside do %>
-        <%= sage_component SageButton, {
-          style: "secondary",
-          subtle: true,
-          value: "Close Modal",
-          icon: { name: "remove", style: "only" },
-          attributes: { "data-js-modal": true }
-        } %>
-      <% end %>
+    <p>Are you sure you want to delete this item? This action cannot be undone.</p>
 
-      <%= sample_body_text %>
-
-      <% content_for :sage_footer do %>
-        <% content_for :sage_footer_aside do %>
-          <%= sage_component SageButton, {
-            style: "secondary",
-            subtle: true,
-            value: "Link",
-            attributes: { "data-js-modal": true }
-          } %>
-        <% end %>
-        <%= sage_component SageButton, {
-          style: "primary",
-          value: "Confirm",
-        } %>
-      <% end %>
-    <% end %>
-  <% end %>
-
-  <%= sage_component SageModal, { id: "cool-modal-animate-left", disable_background_blur: true, animate: { direction: "left" } } do %>
-    <%= sage_component SageModalContent, { title: "Modal header" } do %>
-      <% content_for :sage_header_aside do %>
-        <%= sage_component SageButton, {
-          style: "secondary",
-          subtle: true,
-          value: "Close Modal",
-          icon: { name: "remove", style: "only" },
-          attributes: { "data-js-modal": true }
-        } %>
-      <% end %>
-
-      <%= sample_body_text %>
-
-      <% content_for :sage_footer do %>
-        <% content_for :sage_footer_aside do %>
-          <%= sage_component SageButton, {
-            style: "secondary",
-            subtle: true,
-            value: "Link",
-            attributes: { "data-js-modal": true }
-          } %>
-        <% end %>
-        <%= sage_component SageButton, {
-          style: "primary",
-          value: "Confirm",
-        } %>
-      <% end %>
-    <% end %>
-  <% end %>
-
-  <%= sage_component SageModal, { id: "cool-modal-animate-right", disable_background_blur: true, animate: { direction: "right" } } do %>
-    <%= sage_component SageModalContent, { title: "Modal header" } do %>
-      <% content_for :sage_header_aside do %>
-        <%= sage_component SageButton, {
-          style: "secondary",
-          subtle: true,
-          value: "Close Modal",
-          icon: { name: "remove", style: "only" },
-          attributes: { "data-js-modal": true }
-        } %>
-      <% end %>
-
-      <%= sample_body_text %>
-
-      <% content_for :sage_footer do %>
-        <% content_for :sage_footer_aside do %>
-          <%= sage_component SageButton, {
-            style: "secondary",
-            subtle: true,
-            value: "Link",
-            attributes: { "data-js-modal": true }
-          } %>
-        <% end %>
-        <%= sage_component SageButton, {
-          style: "primary",
-          icon: { name: "check", style: "left" },
-          value: "Confirm"
-        } %>
-      <% end %>
+    <% content_for :sage_footer do %>
+      <%= sage_component SageButton, {
+        style: "secondary",
+        value: "Cancel",
+      } %>
+      <%= sage_component SageButton, {
+        style: "danger",
+        icon: { name: "trash", style: "left" },
+        value: "Delete",
+      } %>
     <% end %>
   <% end %>
 <% end %>
+
+<%= sage_component SageDivider, {} %>
+
+<h3>Header Icon</h3>
+<p>Modals can contain an icon in the header.</p>
+<%= sage_component SageButton, {
+  style: "primary",
+  icon: { name: "launch", style: "right" },
+  value: "Subheader",
+  attributes: {
+    "data-js-modaltrigger": "cool-modal-header-icon",
+  }
+} %>
+
+<%= sage_component SageModal, {id: "cool-modal-header-icon" } do %>
+  <%= sage_component SageModalContent, {
+    header_icon: {
+      name: "check-circle",
+      color: "sage-400"
+    },
+    title: "Modal header",
+    subheader: "This is subheader copy for your viewing pleasure",
+  } do %>
+    <% content_for :sage_header_aside do %>
+      <%= sage_component SageButton, {
+        style: "secondary",
+        subtle: true,
+        value: "Close Modal",
+        icon: { name: "remove", style: "only" },
+        attributes: { "data-js-modal": true }
+      } %>
+    <% end %>
+
+   <p>Add a description of the content you're showing in the modal.</p>
+
+    <% content_for :sage_footer do %>
+      <%= sage_component SageButton, {
+        style: "secondary",
+        value: "Cancel",
+      } %>
+      <%= sage_component SageButton, {
+        style: "primary",
+        value: "Confirm",
+      } %>
+    <% end %>
+  <% end %>
+<% end %>
+
+<%= sage_component SageDivider, {} %>
+
+<h3>Header Image</h3>
+<p>Modals can contain a thumbnail image in the header.</p>
+<%= sage_component SageButton, {
+  style: "primary",
+  icon: { name: "launch", style: "right" },
+  value: "Subheader",
+  attributes: {
+    "data-js-modaltrigger": "cool-modal-header-image",
+  }
+} %>
+<%= sage_component SageModal, {id: "cool-modal-header-image" } do %>
+  <%= sage_component SageModalContent, {
+    header_image: "avatar/joshua_wilson.png",
+    title: "Modal header",
+    subheader: "This is subheader copy for your viewing pleasure",
+  } do %>
+    <% content_for :sage_header_aside do %>
+      <%= sage_component SageButton, {
+        style: "secondary",
+        subtle: true,
+        value: "Close Modal",
+        icon: { name: "remove", style: "only" },
+        attributes: { "data-js-modal": true }
+      } %>
+    <% end %>
+
+   <p>Add a description of the content you're showing in the modal.</p>
+
+    <% content_for :sage_footer do %>
+      <%= sage_component SageButton, {
+        style: "secondary",
+        value: "Cancel",
+      } %>
+      <%= sage_component SageButton, {
+        style: "primary",
+        value: "Confirm",
+      } %>
+    <% end %>
+  <% end %>
+<% end %>
+
+<%= sage_component SageDivider, {} %>
+
+<h3>Subheader</h3>
+<p>Modals can contain a subheader.</p>
+<%= sage_component SageButton, {
+  style: "primary",
+  icon: { name: "launch", style: "right" },
+  value: "Subheader",
+  attributes: {
+    "data-js-modaltrigger": "cool-modal-subheader",
+  }
+} %>
+
+<%= sage_component SageModal, { allow_scroll: true, id: "cool-modal-subheader" } do %>
+  <%= sage_component SageModalContent, {
+    title: "Modal header",
+    subheader: "This is subheader copy for your viewing pleasure",
+  } do %>
+    <% content_for :sage_header_aside do %>
+      <%= sage_component SageButton, {
+        style: "secondary",
+        subtle: true,
+        value: "Close Modal",
+        icon: { name: "remove", style: "only" },
+        attributes: { "data-js-modal": true }
+      } %>
+    <% end %>
+
+   <p>Add a description of the content you're showing in the modal.</p>
+
+    <% content_for :sage_footer do %>
+      <%= sage_component SageButton, {
+        style: "secondary",
+        value: "Cancel",
+      } %>
+      <%= sage_component SageButton, {
+        style: "primary",
+        value: "Confirm",
+      } %>
+    <% end %>
+  <% end %>
+<% end %>
+
+<%= sage_component SageDivider, {} %>
+
+<h3>Footer</h3>
+<p>Modals contain a footer that can contain buttons and links</p>
+<%= sage_component SageButton, {
+  style: "primary",
+  icon: { name: "launch", style: "right" },
+  value: "Footer",
+  attributes: {
+    "data-js-modaltrigger": "cool-modal-footer",
+  }
+} %>
+
+<%= sage_component SageModal, { id: "cool-modal-footer" } do %>
+  <%= sage_component SageModalContent, {
+    title: "Modal Header",
+    help_content: "<p>Add a description of the content you're showing in the modal.</p>",
+    help_link: {
+      href: "#",
+      name: "Link"
+    }
+  } do %>
+    <% content_for :sage_header_aside do %>
+      <%= sage_component SageButton, {
+        style: "secondary",
+        subtle: true,
+        value: "Close Modal",
+        icon: { name: "remove", style: "only" },
+        attributes: { "data-js-modal": true }
+      } %>
+    <% end %>
+
+    <p>Add a description of the content you're showing in the modal.</p>
+
+    <% content_for :sage_footer do %>
+      <% content_for :sage_footer_aside do %>
+        <%= sage_component SageButton, {
+          style: "secondary",
+          subtle: true,
+          value: "Link",
+          attributes: { "data-js-modal": true }
+        } %>
+      <% end %>
+      <%= sage_component SageButton, {
+        style: "secondary",
+        value: "Cancel",
+      } %>
+      <%= sage_component SageButton, {
+        style: "primary",
+        value: "Confirm",
+      } %>
+    <% end %>
+  <% end %>
+<% end %>
+
+<%= sage_component SageDivider, {} %>
+
+<h3>Footer Aside</h3>
+<p>The footer aside is a section of the footer that can contain additional buttons or links.</p>
+<%= sage_component SageButton, {
+  style: "primary",
+  icon: { name: "launch", style: "right" },
+  value: "Footer Aside",
+  attributes: {
+    "data-js-modaltrigger": "cool-modal-footer-aside",
+  }
+} %>
+
+<%= sage_component SageModal, { id: "cool-modal-footer-aside" } do %>
+  <%= sage_component SageModalContent, {
+    title: "Modal Header",
+    help_content: "<p>Add a description of the content you're showing in the modal.</p>",
+    help_link: {
+      href: "#",
+      name: "Link"
+    }
+  } do %>
+    <% content_for :sage_header_aside do %>
+      <%= sage_component SageButton, {
+        style: "secondary",
+        subtle: true,
+        value: "Close Modal",
+        icon: { name: "remove", style: "only" },
+        attributes: { "data-js-modal": true }
+      } %>
+    <% end %>
+
+    <p>Add a description of the content you're showing in the modal.</p>
+
+    <% content_for :sage_footer do %>
+      <% content_for :sage_footer_aside do %>
+        <%= sage_component SageButton, {
+          style: "secondary",
+          subtle: true,
+          value: "Link",
+          attributes: { "data-js-modal": true }
+        } %>
+      <% end %>
+      <%= sage_component SageButton, {
+        style: "secondary",
+        value: "Cancel",
+      } %>
+      <%= sage_component SageButton, {
+        style: "primary",
+        value: "Confirm",
+      } %>
+    <% end %>
+  <% end %>
+<% end %>
+
+<%= sage_component SageDivider, {} %>
+
+<h3>Scrollable Content</h3>
+<p>Modals can be configured to allow scrolling of content. This option is useful when the header and footer needs to visible contain actions.</p>
+<%= sage_component SageButton, {
+  style: "primary",
+  icon: { name: "launch", style: "right" },
+  value: "Scrollable Content",
+  attributes: {
+    "data-js-modaltrigger": "cool-modal-scrolling",
+  }
+} %>
+
+<%= sage_component SageModal, { allow_scroll: true, id: "cool-modal-scrolling" } do %>
+  <%= sage_component SageModalContent, {
+    title: "Modal header",
+  } do %>
+    <% content_for :sage_header_aside do %>
+      <%= sage_component SageButton, {
+        style: "secondary",
+        subtle: true,
+        value: "Close Modal",
+        icon: { name: "remove", style: "only" },
+        attributes: { "data-js-modal": true }
+      } %>
+    <% end %>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse urna leo, condimentum nec pellentesque finibus, ultricies pulvinar ante. Donec eu interdum ligula. Pellentesque aliquam ullamcorper orci, nec tempor libero tristique in. Aliquam vitae felis at leo condimentum placerat eget id libero. In dictum tortor ac accumsan aliquam. Donec sit amet tortor porttitor, tincidunt nisl at, egestas lacus. Integer metus augue, aliquet accumsan vulputate eget, tristique id erat. Donec a venenatis nibh, ac molestie risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus in orci vitae ex tempor ultrices in a leo. Sed purus magna, vulputate aliquet ligula eget, consectetur sagittis nunc.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse urna leo, condimentum nec pellentesque finibus, ultricies pulvinar ante. Donec eu interdum ligula. Pellentesque aliquam ullamcorper orci, nec tempor libero tristique in. Aliquam vitae felis at leo condimentum placerat eget id libero. In dictum tortor ac accumsan aliquam. Donec sit amet tortor porttitor, tincidunt nisl at, egestas lacus. Integer metus augue, aliquet accumsan vulputate eget, tristique id erat. Donec a venenatis nibh, ac molestie risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus in orci vitae ex tempor ultrices in a leo. Sed purus magna, vulputate aliquet ligula eget, consectetur sagittis nunc.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse urna leo, condimentum nec pellentesque finibus, ultricies pulvinar ante. Donec eu interdum ligula. Pellentesque aliquam ullamcorper orci, nec tempor libero tristique in. Aliquam vitae felis at leo condimentum placerat eget id libero. In dictum tortor ac accumsan aliquam. Donec sit amet tortor porttitor, tincidunt nisl at, egestas lacus. Integer metus augue, aliquet accumsan vulputate eget, tristique id erat. Donec a venenatis nibh, ac molestie risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus in orci vitae ex tempor ultrices in a leo. Sed purus magna, vulputate aliquet ligula eget, consectetur sagittis nunc.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse urna leo, condimentum nec pellentesque finibus, ultricies pulvinar ante. Donec eu interdum ligula. Pellentesque aliquam ullamcorper orci, nec tempor libero tristique in. Aliquam vitae felis at leo condimentum placerat eget id libero. In dictum tortor ac accumsan aliquam. Donec sit amet tortor porttitor, tincidunt nisl at, egestas lacus. Integer metus augue, aliquet accumsan vulputate eget, tristique id erat. Donec a venenatis nibh, ac molestie risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus in orci vitae ex tempor ultrices in a leo. Sed purus magna, vulputate aliquet ligula eget, consectetur sagittis nunc.</p>
+
+    <% content_for :sage_footer do %>
+      <%= sage_component SageButton, {
+        style: "secondary",
+        value: "Cancel",
+      } %>
+      <%= sage_component SageButton, {
+        style: "primary",
+        value: "Confirm",
+      } %>
+    <% end %>
+  <% end %>
+<% end %>
+
+<%= sage_component SageDivider, {} %>
+
+<h3>Sizes</h3>
+<p>Modal widths can be configured to be extra small, small, medium, or large.</p>
+<%= sage_component SageButtonGroup, { gap: :sm, spacer: { bottom: :sm }} do %>
+  <%= sage_component SageButton, {
+    style: "primary",
+    icon: { name: "launch", style: "right" },
+    value: "Size xs",
+    attributes: {
+      "data-js-modaltrigger": "cool-modal-size-xs",
+    }
+  } %>
+  <%= sage_component SageButton, {
+    style: "primary",
+    icon: { name: "launch", style: "right" },
+    value: "Size sm",
+    attributes: {
+      "data-js-modaltrigger": "cool-modal-size-sm",
+    }
+  } %>
+  <%= sage_component SageButton, {
+    style: "primary",
+    icon: { name: "launch", style: "right" },
+    value: "Size md",
+    attributes: {
+      "data-js-modaltrigger": "cool-modal-size-md",
+    }
+  } %>
+  <%= sage_component SageButton, {
+    style: "primary",
+    icon: { name: "launch", style: "right" },
+    value: "Size lg",
+    attributes: {
+      "data-js-modaltrigger": "cool-modal-size-lg",
+    }
+  } %>
+<% end %>
+
+<%= sage_component SageModal, { id: "cool-modal-size-xs", size: "xs"} do %>
+  <%= sage_component SageModalContent, {
+    title: "Modal title",
+  } do %>
+    <% content_for :sage_header_aside do %>
+      <%= sage_component SageButton, {
+        style: "secondary",
+        subtle: true,
+        value: "Close Modal",
+        icon: { name: "remove", style: "only" },
+        attributes: { "data-js-modal": true }
+      } %>
+    <% end %>
+
+    <p>Add a description of the content you're showing in the modal.</p>
+
+    <% content_for :sage_footer do %>
+      <%= sage_component SageButton, {
+        style: "secondary",
+        value: "Cancel",
+      } %>
+      <%= sage_component SageButton, {
+        style: "primary",
+        value: "Confirm",
+      } %>
+    <% end %>
+  <% end %>
+<% end %>
+
+<%= sage_component SageModal, { id: "cool-modal-size-sm", size: "sm"} do %>
+  <%= sage_component SageModalContent, {
+    title: "Modal title",
+  } do %>
+    <% content_for :sage_header_aside do %>
+      <%= sage_component SageButton, {
+        style: "secondary",
+        subtle: true,
+        value: "Close Modal",
+        icon: { name: "remove", style: "only" },
+        attributes: { "data-js-modal": true }
+      } %>
+    <% end %>
+
+    <p>Add a description of the content you're showing in the modal.</p>
+
+    <% content_for :sage_footer do %>
+      <%= sage_component SageButton, {
+        style: "secondary",
+        value: "Cancel",
+      } %>
+      <%= sage_component SageButton, {
+        style: "primary",
+        value: "Confirm",
+      } %>
+    <% end %>
+  <% end %>
+<% end %>
+
+<%= sage_component SageModal, { id: "cool-modal-size-md", size: "md"} do %>
+  <%= sage_component SageModalContent, {
+    title: "Modal title",
+  } do %>
+    <% content_for :sage_header_aside do %>
+      <%= sage_component SageButton, {
+        style: "secondary",
+        subtle: true,
+        value: "Close Modal",
+        icon: { name: "remove", style: "only" },
+        attributes: { "data-js-modal": true }
+      } %>
+    <% end %>
+
+    <p>Add a description of the content you're showing in the modal.</p>
+
+    <% content_for :sage_footer do %>
+      <%= sage_component SageButton, {
+        style: "secondary",
+        value: "Cancel",
+      } %>
+      <%= sage_component SageButton, {
+        style: "primary",
+        value: "Confirm",
+      } %>
+    <% end %>
+  <% end %>
+<% end %>
+
+<%= sage_component SageModal, { id: "cool-modal-size-lg", size: "lg"} do %>
+  <%= sage_component SageModalContent, {
+    title: "Modal title",
+  } do %>
+    <% content_for :sage_header_aside do %>
+      <%= sage_component SageButton, {
+        style: "secondary",
+        subtle: true,
+        value: "Close Modal",
+        icon: { name: "remove", style: "only" },
+        attributes: { "data-js-modal": true }
+      } %>
+    <% end %>
+
+    <p>Add a description of the content you're showing in the modal.</p>
+
+    <% content_for :sage_footer do %>
+      <%= sage_component SageButton, {
+        style: "secondary",
+        value: "Cancel",
+      } %>
+      <%= sage_component SageButton, {
+        style: "primary",
+        value: "Confirm",
+      } %>
+    <% end %>
+  <% end %>
+<% end %>
+
+<%= sage_component SageDivider, {} %>
+
+<h3>Fullscreen</h3>
+<p>Modals can be configured to take up the full screen.</p>
+<%= sage_component SageButton, {
+  style: "primary",
+  icon: { name: "launch", style: "right" },
+  value: "Fullscreen",
+  attributes: {
+    "data-js-modaltrigger": "cool-modal-fullscreen",
+  }
+} %>
+
+<%= sage_component SageModal, {
+  id: "cool-modal-fullscreen",
+  fullscreen: true
+} do %>
+  <%= sage_component SageModalContent, {
+    title: "Modal header"
+  } do %>
+    <% content_for :sage_header_aside do %>
+      <%= sage_component SageButton, {
+        style: "secondary",
+        subtle: true,
+        value: "Close Modal",
+        icon: { name: "remove", style: "only" },
+        attributes: { "data-js-modal": true }
+      } %>
+    <% end %>
+
+    <p>Add a description of the content you're showing in the modal.</p>
+  <% end %>
+<% end %>
+
+<%= sage_component SageDivider, {} %>
+
+<h3>Animated</h3>
+<p>Modals can be configured to animate in from the top, left, or right.</p>
+<%= sage_component SageButtonGroup, { gap: :sm, spacer: { bottom: :sm }} do %>
+  <%= sage_component SageButton, {
+    style: "primary",
+    icon: { name: "launch", style: "right" },
+    value: "Default",
+    attributes: {
+      "data-js-modaltrigger": "cool-modal-animate-default",
+    }
+  } %>
+  <%= sage_component SageButton, {
+    style: "primary",
+    icon: { name: "launch", style: "right" },
+    value: "To top",
+    attributes: {
+      "data-js-modaltrigger": "cool-modal-animate-top",
+    }
+  } %>
+  <%= sage_component SageButton, {
+    style: "primary",
+    icon: { name: "launch", style: "right" },
+    value: "To left (blur off)",
+    attributes: {
+      "data-js-modaltrigger": "cool-modal-animate-left",
+    }
+  } %>
+  <%= sage_component SageButton, {
+    style: "primary",
+    icon: { name: "launch", style: "right" },
+    value: "To right (blur off)",
+    attributes: {
+      "data-js-modaltrigger": "cool-modal-animate-right",
+    }
+  } %>
+<% end %>
+
+<%# Animated Modals %>
+<%= sage_component SageModal, { id: "cool-modal-animate-default", animate: true, css_classes: "custom-class-name-here" } do %>
+  <%= sage_component SageModalContent, { title: "Modal header" } do %>
+    <% content_for :sage_header_aside do %>
+      <%= sage_component SageButton, {
+        style: "secondary",
+        subtle: true,
+        value: "Close Modal",
+        icon: { name: "remove", style: "only" },
+        attributes: { "data-js-modal": true }
+      } %>
+    <% end %>
+
+    <p>Add a description of the content you're showing in the modal.</p>
+
+    <% content_for :sage_footer do %>
+      <% content_for :sage_footer_aside do %>
+        <%= sage_component SageButton, {
+          style: "secondary",
+          subtle: true,
+          value: "Close Modal",
+          attributes: { "data-js-modal": true }
+        } %>
+      <% end %>
+      <%= sage_component SageButton, {
+        style: "primary",
+        value: "Confirm",
+      } %>
+    <% end %>
+  <% end %>
+<% end %>
+
+<%= sage_component SageModal, { id: "cool-modal-animate-top", animate: { direction: "top" } } do %>
+  <%= sage_component SageModalContent, { title: "Modal header" } do %>
+    <% content_for :sage_header_aside do %>
+      <%= sage_component SageButton, {
+        style: "secondary",
+        subtle: true,
+        value: "Close Modal",
+        icon: { name: "remove", style: "only" },
+        attributes: { "data-js-modal": true }
+      } %>
+    <% end %>
+
+    <p>Add a description of the content you're showing in the modal.</p>
+
+    <% content_for :sage_footer do %>
+      <% content_for :sage_footer_aside do %>
+        <%= sage_component SageButton, {
+          style: "secondary",
+          subtle: true,
+          value: "Link",
+          attributes: { "data-js-modal": true }
+        } %>
+      <% end %>
+      <%= sage_component SageButton, {
+        style: "primary",
+        value: "Confirm",
+      } %>
+    <% end %>
+  <% end %>
+<% end %>
+
+<%= sage_component SageModal, { id: "cool-modal-animate-left", disable_background_blur: true, animate: { direction: "left" } } do %>
+  <%= sage_component SageModalContent, { title: "Modal header" } do %>
+    <% content_for :sage_header_aside do %>
+      <%= sage_component SageButton, {
+        style: "secondary",
+        subtle: true,
+        value: "Close Modal",
+        icon: { name: "remove", style: "only" },
+        attributes: { "data-js-modal": true }
+      } %>
+    <% end %>
+
+    <p>Add a description of the content you're showing in the modal.</p>
+
+    <% content_for :sage_footer do %>
+      <% content_for :sage_footer_aside do %>
+        <%= sage_component SageButton, {
+          style: "secondary",
+          subtle: true,
+          value: "Link",
+          attributes: { "data-js-modal": true }
+        } %>
+      <% end %>
+      <%= sage_component SageButton, {
+        style: "primary",
+        value: "Confirm",
+      } %>
+    <% end %>
+  <% end %>
+<% end %>
+
+<%= sage_component SageModal, { id: "cool-modal-animate-right", disable_background_blur: true, animate: { direction: "right" } } do %>
+  <%= sage_component SageModalContent, { title: "Modal header" } do %>
+    <% content_for :sage_header_aside do %>
+      <%= sage_component SageButton, {
+        style: "secondary",
+        subtle: true,
+        value: "Close Modal",
+        icon: { name: "remove", style: "only" },
+        attributes: { "data-js-modal": true }
+      } %>
+    <% end %>
+
+    <p>Add a description of the content you're showing in the modal.</p>
+
+    <% content_for :sage_footer do %>
+      <% content_for :sage_footer_aside do %>
+        <%= sage_component SageButton, {
+          style: "secondary",
+          subtle: true,
+          value: "Link",
+          attributes: { "data-js-modal": true }
+        } %>
+      <% end %>
+      <%= sage_component SageButton, {
+        style: "primary",
+        icon: { name: "check", style: "left" },
+        value: "Confirm"
+      } %>
+    <% end %>
+  <% end %>
+<% end %>
+
+<%= sage_component SageDivider, {} %>
 
 <%= md("
-<h3 class=\"SageClassnames::TYPE::HEADING_6\">Asyncronous Modals</h3>
-There are a number of situations where it might be most practical to load content for a modal asyncronously.
-For example, in a list of products, each product may allow an option to edit that product's details in a modal.
-In this case you may have a route that delivers only the contents of the modal that can be called asyncronously when the modal trigger is clicked.
+<h2>Asynchronous Modal Setup</h2>
 
-Set this up as follows:
-
-1. Ensure that you have at least one modal stub in your view using `SageModal` and be sure to provide an `id` for it along with any other configurations.
-    As best practices consider:
-  - Use the `remove_content_on_close: true` to ensure that any asynchronous content is removed from the modal when it is closed.
-  - You can provide default content (typically inside of a `SageModalContent` nested within the `SageModal` stub) such as a `SageLoader` inside this modal stub.
-    This will be replaced by the asynchronous content once it loads and be put back when the content unloads.
-2. Ensure you have an endpoint that delivers _only_ the content of the modal, typically wrapped by the `SageModalContent` component.
-3. In the primary view, add hyperlinks, buttons, or other clickable triggers. On such triggers use the following:
-  - `data-js-modaltrigger=\"[modal-id]\"` where `modal-id` is the `id` you placed on the corresponding `SageModal` stub.
-  - `data-js-remote-url=\"[url]\"` where `url` is the edpoint that delivers the content.
-
-Note as well that you can set up `remote_url`'s on both the main `SageModal` stub and on triggers.
-In such cases, the `remote_url` from the triggers overrides the one on the modal stub; but if no `remote_url` is provided from the trigger, the one on the modal itself is used.
-As shown elsewhere on this page default content (such as `SageLoader`) can also be manually populated inside the `SageModal` that is then replaced by asynchronous `remote_url` content.
+1. Use Case:
+  - Load modals asynchronously, ideal for scenarios like editing product details in a list.
+2. Setup:
+  - Include a `SageModal` stub in the view with an ID and configurations.
+  - Utilize `remove_content_on_close: true` for best practices.
+  - Add default content (e.g., `SageLoader`) in the `SageModal` stub.
+  - Create an endpoint delivering modal content (wrapped by `SageModalContent`).
+3. Trigger Configuration:
+  - In the main view, add clickable triggers (e.g., buttons).
+  - Configure triggers with:
+      - `data-js-modaltrigger=\"[modal-id]\"`: ID of the `SageModal` stub.
+      - `data-js-remote-url=\"[url]\"`: Endpoint delivering the content.
+4. Remote URLs:
+  - Set remote URLs on both the main `SageModal` stub and triggers.
+  - Trigger's `remote_url` overrides the stub's, but stub's is used if trigger has none.
+  - Default content inside `SageModal` is replaced by asynchronous `remote_url` content.
 ", use_sage_type: true) %>
 
+<h3>Remote URLs</h3>
+<ul>
+  <li>Modal A demonstrates <code>remote_url</code> prop usage on <code>SageModal</code></li>
+  <li>Modal B and C demonstrate usage of the <code>data-js-remote-url</code> key within <code>html_attributes</code>.
+  The value of the <code>async_path()</code> equals the all content in this path residing within <code>SageModalContent</code></li>
+</ul>
 <%= sage_component SageButtonGroup, { gap: :sm } do %>
   <%= sage_component SageButton, {
     html_attributes: {
@@ -483,7 +868,7 @@ As shown elsewhere on this page default content (such as `SageLoader`) can also 
         } %>
       <% end %>
 
-      <%= sample_body_text %>
+      <p>Add a description of the content you're showing in the modal.</p>
 
       <% content_for :sage_footer do %>
         <% content_for :sage_footer_aside do %>
@@ -515,7 +900,7 @@ As shown elsewhere on this page default content (such as `SageLoader`) can also 
         } %>
       <% end %>
 
-      <%= sample_body_text %>
+      <p>Add a description of the content you're showing in the modal.</p>
 
       <% content_for :sage_footer do %>
         <% content_for :sage_footer_aside do %>
@@ -547,7 +932,7 @@ As shown elsewhere on this page default content (such as `SageLoader`) can also 
         } %>
       <% end %>
 
-      <%= sample_body_text %>
+      <p>Add a description of the content you're showing in the modal.</p>
 
       <% content_for :sage_footer do %>
         <% content_for :sage_footer_aside do %>
@@ -579,7 +964,7 @@ As shown elsewhere on this page default content (such as `SageLoader`) can also 
         } %>
       <% end %>
 
-      <%= sample_body_text %>
+      <p>Add a description of the content you're showing in the modal.</p>
 
       <% content_for :sage_footer do %>
         <% content_for :sage_footer_aside do %>
