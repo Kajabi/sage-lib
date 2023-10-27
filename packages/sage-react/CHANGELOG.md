@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.17.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.17.2...@kajabi/sage-react@1.17.3) (2023-10-27)
+
+
+### Bug Fixes
+
+* **dropdown react:** add horizontal repositioning to unpinned dropdowns ([7d38b2c](https://github.com/Kajabi/sage-lib/commit/7d38b2cfeaf55a93e54179e1a0684b1102471ef1))
+* **dropdown:** fix default inline positioning ([e27ab08](https://github.com/Kajabi/sage-lib/commit/e27ab081250e3a2661b8d26c02d27c9d3b2b5993))
+* **form section:** allow user-defined heading ([b1410ee](https://github.com/Kajabi/sage-lib/commit/b1410ee2a1d1b906ed43f2247121f009b0e9a118))
+* **form section:** apply heading style ([46d3fdb](https://github.com/Kajabi/sage-lib/commit/46d3fdb9e22d7feff85164ba16f914899bf38910))
+* **icon:** hello linter my old friend ([245beeb](https://github.com/Kajabi/sage-lib/commit/245beeb5772535ea390441796022413670a03073))
+* **table:** update the helper to order table data based on the schema column order ([6e412b3](https://github.com/Kajabi/sage-lib/commit/6e412b37e6b7bf7c5946326cf06a02440954a534))
+
+
+
+
+
 ## [1.17.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.17.1...@kajabi/sage-react@1.17.2) (2023-10-19)
 
 **Note:** Version bump only for package @kajabi/sage-react

@@ -1,6 +1,6 @@
 {
   "name": "@kajabi/sage",
-  "version": "5.18.2",
+  "version": "5.18.3",
   "description": "The Sage Design System (SDS) is our single source of truth, providing everything you need to build great products for our customers. It is the culmination of designers and developers working together to give teams the ability to ship high-quality products faster.",
   "main": "sage/pages/index",
   "directories": {
@@ -37,7 +37,7 @@
   "dependencies": {
     "@babel/core": "^7.12.3",
     "@babel/plugin-transform-runtime": "^7.12.1",
-    "@kajabi/sage-packs": "^1.0.48",
+    "@kajabi/sage-packs": "^1.0.49",
     "@rails/webpacker": "5.2.2",
     "arrive": "^2.4.1",
     "core-js": "^3.6.5",

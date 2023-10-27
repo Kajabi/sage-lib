@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.12.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.12.2...@kajabi/sage-assets@1.12.3) (2023-10-27)
+
+
+### Bug Fixes
+
+* **dropdown:** add visual indicator when dropdown is scrollable ([95f41f8](https://github.com/Kajabi/sage-lib/commit/95f41f8fc4529343a9b2ef2b8e57a3ae911fdf9a))
+* **hero:** update large hero max width to full ([59fad64](https://github.com/Kajabi/sage-lib/commit/59fad64a8e888ba43133337eccf6258f1441821b))
+
+
+
+
+
 ## [1.12.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.12.1...@kajabi/sage-assets@1.12.2) (2023-10-19)
 
 

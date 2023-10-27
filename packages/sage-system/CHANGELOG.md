@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.14](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@1.2.13...@kajabi/sage-system@1.2.14) (2023-10-27)
+
+
+### Bug Fixes
+
+* **dropdown rails:** keep dropdown content on the screen ([3526e82](https://github.com/Kajabi/sage-lib/commit/3526e82ff2d8160854b55e6ad1df5b27d90221f7))
+* **dropdown:** add left and right repositioning for the rails dropdown ([1d89206](https://github.com/Kajabi/sage-lib/commit/1d89206108856ad05ea0bdcd54f9a2c8e1ff2fa8))
+
+
+
+
+
 ## [1.2.13](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@1.2.12...@kajabi/sage-system@1.2.13) (2023-10-19)
 
 
