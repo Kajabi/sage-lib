@@ -89,14 +89,32 @@ Loader.defaultProps = {
   fillSpace: false,
   label: 'Loading...',
   hideWhenDone: true,
-  type: LOADER_TYPES.SPINNER,
+  type: Loader.TYPES.SPINNER,
 };
 
 Loader.propTypes = {
+  /**
+   * The name of the class you want to apply to the loader.
+   */
   className: PropTypes.string,
+  /**
+   * If true, will fill the space within the container.
+   */
   fillSpace: PropTypes.bool,
+  /**
+   * If true, will hide the loader when loading is false.
+   */
   hideWhenDone: PropTypes.bool,
+  /**
+   * The text that aligns with the loader.
+   */
   label: PropTypes.string,
+  /**
+   * If true, it will display the loader.
+   */
   loading: PropTypes.bool.isRequired,
-  type: PropTypes.oneOf(Object.values(LOADER_TYPES)),
+  /**
+   * The type of Loader to be rendered
+   */
+  type: PropTypes.oneOf(Object.values(Loader.TYPES)),
 };

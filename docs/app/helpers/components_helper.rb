@@ -380,9 +380,9 @@ module ComponentsHelper
       },
       {
         title: "form_select",
-        description: "The form select presents a selectable menu of options. The options within the menu are represented by <option> elements.",
+        description: "The Select component is a user-friendly form control designed to let users pick an option or multiple options from a set. Upon selection, it presents a dialog showcasing all choices in an easily navigable list, with features like added context messages, error indications, and a disabled mode.",
         scss: "done",
-        docs: "todo",
+        docs: "done",
         rails: "done",
         react: "todo",
         responsive: "todo",
@@ -567,7 +567,7 @@ module ComponentsHelper
       },
       {
         title: "modal",
-        description: "Sage modal",
+        description: "Modals are overlays used to display content on a layer above the page, preventing users from interacting with content behind the modal.",
         scss: "done",
         docs: "done",
         rails: "doing",

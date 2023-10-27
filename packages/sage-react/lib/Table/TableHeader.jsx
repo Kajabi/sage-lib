@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { parseCellData } from './helpers';
-import { cellPropTypes } from './configs';
+import { dataPropTypes } from './configs';
 
 export const TableHeader = ({
   attributes,
@@ -40,6 +40,21 @@ TableHeader.defaultProps = {
 };
 
 TableHeader.propTypes = {
-  ...cellPropTypes,
+  /** Allows you to provide additional HTML attributes. */
+  attributes: PropTypes.shape({}),
+
   children: PropTypes.node,
+
+  /** The CSS class name for the Table Header. */
+  className: PropTypes.string,
+
+  /** The data type for the Table Header. */
+  dataType: PropTypes.string,
+
+  /** Additional styles to be applied. */
+  style: PropTypes.shape({}),
+
+  /** The content of the Header. */
+  value: dataPropTypes,
+
 };

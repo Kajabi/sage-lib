@@ -1,0 +1,362 @@
+import { ArgsTable, Canvas, Meta, Source, Story } from '@storybook/addon-docs';
+import { selectArgs } from '../story-support/helpers';
+
+import { dataCollection } from './sample-data/contacts';
+import { domains } from './sample-data/domains';
+
+import { Table } from './Table';
+
+<Meta
+  title="Sage/Table"
+  component={Table}
+  subcomponents={{Header: Table.Header, Row: Table.Row}}
+  argTypes={{
+    captionSide: {
+      options: Object.values(Table.CAPTION_SIDE),
+      control: 'select'
+    }
+  }}
+  parameters={{
+    docs: {
+      description: {
+        component: 'Basic table component.'
+      }
+    }
+  }}
+/>
+
+# Table
+Tables are a fundamental tool in web development and design, serving as a structured way to present tabular data.
+
+## Usage Guidelines
+
+### When to use
+- Data that needs to be rendered in tabular format.
+- Need to provide sorting, filtering, and/or pagination.
+
+### When not to use
+- If your data does NOT need to be rendered with data columns.
+
+## Accessibility
+Table component is built accessibly with native HTML in mind.
+
+## Properties
+
+<ArgsTable of={Table} />
+
+## Variants
+### Default
+
+export const DefaultTemplate = (args) => <Table {...args} />;
+
+<Canvas mdxSource={`
+  <Table rows={dataCollection} />
+`}>
+  <Story name="Default"
+    args={{
+      rows: dataCollection
+    }}
+  >
+    { DefaultTemplate.bind({}) }
+  </Story>
+</Canvas>
+
+### With Headers
+
+<Canvas mdxSource={`
+  <Table
+    rows={dataCollection}
+    headers={{
+      first: {
+        label: 'First Name'
+      }
+    }}
+  />
+`}>
+  <Story name="Headers"
+    args={{
+      rows: dataCollection,
+      headers: ['id', 'first', 'email', 'phone']
+    }}
+  >
+    { DefaultTemplate.bind({}) }
+  </Story>
+</Canvas>
+
+### Headers and Schemas
+Should you provide both properties `headers` and `schemas` there are few things you will need to take into
+consideration.
+
+1. `headers` can be passed an object.
+2. The keys in `headers` should align with the key names in the `schema`
+3. The headers will override the label specified in `schema`.
+
+Here is a table outlining the properties:
+
+|Property Name|Description|
+|-----|-------|
+|attributes|Additional HTML attributes you want to add.|
+|className|The CSS Classname to be applied to the Table Header.|
+|dataType|The Sage DataType for the Table Header.|
+|label|The text content of the Table Header.|
+|style|Additional styles to be applied.|
+
+Given the header and schema information, let's look at some examples.
+
+#### Header override
+<Canvas mdxSource={`
+  <Table rows={dataCollection}
+    headers={{
+      first:  {
+        label: 'Overrides First Name Label'
+      }
+    }}
+    schema={{
+      first: {
+        label: 'First name',
+      },
+      phone: {
+        label: 'Phone'
+      },
+      email: {
+        label: 'Email'
+      }
+    }}
+`}>
+  <Story name="Header Overrides Schema"
+    args={{
+      rows: dataCollection,
+      headers: {
+        first:  {
+          label: 'Overrides First Name Label'
+        }
+      },
+      schema: {
+        first: {
+          label: 'First name',
+        },
+        phone: {
+          label: 'Phone'
+        },
+        email: {
+          label: 'Email'
+        }
+      },
+    }}
+  >
+    { DefaultTemplate.bind({}) }
+  </Story>
+</Canvas>
+
+#### Schema Order
+The order of the Schema determines the placement of the columns.
+
+With the given schema below, the order of the columns will be `Email, First, Phone`. `ID` will be ignored
+since it is set to `false`.
+
+<Source format={true} code={`
+ {
+    id: false,
+    email: {
+      label: 'Email Address'
+    },
+    first: {
+      label: 'First name',
+    },
+    phone: {
+      label: 'Phone'
+    },
+  },
+`} />
+
+Data used can be in any order as the schema will determine the order.
+<Source format={true} code={`
+[
+  {
+    id: 1,
+    first: 'Maiya',
+    email: 'maiya@example.com',
+    phone: '555-111-1100',
+  },
+  {
+    id: 2,
+    first: 'Rowan',
+    email: 'rowan@example.com',
+    phone: '555-111-1101',
+  },
+  {
+    id: 3,
+    first: 'August',
+    email: 'August@example.com',
+    phone: '555-111-1110',
+  },
+  {
+    id: 4,
+    first: 'Paige',
+    email: 'paige@example.com',
+    phone: '555-111-1111',
+  },
+  {
+    id: 5,
+    first: 'Madelaine',
+    email: 'madelaine@example.com',
+    phone: '555-111-1112',
+  },
+]}`} />
+
+<Canvas mdxSource={`
+  <Table
+    rows={[
+      {
+        id: 1,
+        first: 'Maiya',
+        email: 'maiya@example.com',
+        phone: '555-111-1100',
+      },
+      {
+        id: 2,
+        first: 'Rowan',
+        email: 'rowan@example.com',
+        phone: '555-111-1101',
+      },
+      {
+        id: 3,
+        first: 'August',
+        email: 'August@example.com',
+        phone: '555-111-1110',
+      },
+      {
+        id: 4,
+        first: 'Paige',
+        email: 'paige@example.com',
+        phone: '555-111-1111',
+      },
+      {
+        id: 5,
+        first: 'Madelaine',
+        email: 'madelaine@example.com',
+        phone: '555-111-1112',
+      },
+    ]}
+    schema={{
+      id: false,
+      email: {
+        label: 'Email Address'
+      },
+      first: {
+        label: 'First name',
+      },
+      phone: {
+        label: 'Phone'
+      },
+    }}
+  />
+`}>
+  <Story name="Schema Order"
+    args={{
+      rows: dataCollection,
+      schema: {
+        id: false,
+        email: {
+          label: 'Email Address'
+        },
+        first: {
+          label: 'First name',
+        },
+        phone: {
+          label: 'Phone'
+        },
+      },
+    }}
+  >
+    { DefaultTemplate.bind({}) }
+  </Story>
+</Canvas>
+
+
+### With Rich Content
+With the schema set and DataType specified to HTML, it will render the markup in the column.
+
+<Canvas mdxSource={`
+  <Table
+    rows={[
+      {
+        domain: 'www.daydreamsurfshop.mykajabi.com',
+        status: {
+          value: {
+            value: 'Kajabi Default',
+            color: Label.COLORS.INFO,
+          },
+        },
+        options: (
+          <Button
+            color={Button.COLORS.SECONDARY}
+            subtle={true}
+            onClick={() => console.log('do something!')}
+            icon={SageTokens.ICONS.PEN}
+            iconOnly={true}
+          >
+            Edit
+          </Button>
+        ),
+      },
+      {
+        domain: 'courses.daydreamsurfshop.com',
+        status: {
+          value: {
+            value: 'Connected',
+            color: Label.COLORS.SUCCESS,
+          },
+        },
+        options: (
+          <Button
+            color={Button.COLORS.SECONDARY}
+            subtle={true}
+            onClick={() => console.log('go somewhere!')}
+            icon={SageTokens.ICONS.CARET_RIGHT}
+            iconOnly={true}
+          >
+            View Settings
+          </Button>
+        ),
+      },
+    ]}
+    schema={{
+      domain: {
+          label: 'Domain',
+          dataType: Table.DATA_TYPES.STRING,
+        },
+        status: {
+          label: 'Status',
+          dataType: Table.DATA_TYPES.LABEL,
+        },
+        options: {
+          label: '',
+          dataType: Table.DATA_TYPES.HTML,
+        },
+      }
+  }} />
+`}>
+  <Story name="Rich Content"
+    args={{
+      rows: domains,
+      schema: {
+        domain: {
+          label: 'Domain',
+          dataType: Table.DATA_TYPES.STRING,
+        },
+        status: {
+          label: 'Status',
+          dataType: Table.DATA_TYPES.LABEL,
+        },
+        options: {
+          label: '',
+          dataType: Table.DATA_TYPES.HTML,
+        },
+      }
+    }}
+  >
+    { DefaultTemplate.bind({}) }
+  </Story>
+</Canvas>
+
