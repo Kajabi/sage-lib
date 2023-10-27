@@ -99,19 +99,55 @@ Hero.defaultProps = {
 };
 
 Hero.propTypes = {
+  /**
+   * If true, will remove the border.
+   */
   borderless: PropTypes.bool,
+  /**
+   * The attributes for the CTA link.
+   */
   ctaAttributes: PropTypes.node,
+  /**
+   * The content to be rendered within the Hero.
+   */
   children: PropTypes.node,
+  /**
+   * If true, the image will not fill the space.
+   */
   contained: PropTypes.bool,
+  /**
+   * The background color to be applied to the Hero.
+   */
   customBackgroundColor: PropTypes.string,
+  /**
+   * The description to be rendered within the Hero.
+   */
   description: PropTypes.string,
+  /**
+   * The actions to be rendered within the Hero's footer.
+   */
   footerActions: PropTypes.node,
+  /**
+   * The image to be rendered within the Hero.
+   */
   image: PropTypes.shape({
     alt: PropTypes.string,
     src: PropTypes.string
   }),
+  /**
+   * If true, the image will be rendered before the content.
+   */
   imageStart: PropTypes.bool,
+  /**
+   * Sets the size of the Hero's width.
+   */
   heroSize: PropTypes.oneOf(Hero.Sizes),
+  /**
+   * The title to be rendered within the Hero.
+   */
   title: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+  /**
+   * The HTML tag to be applied to the title.
+   */
   titleTag: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6'])
 };
