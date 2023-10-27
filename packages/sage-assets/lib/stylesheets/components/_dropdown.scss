@@ -267,12 +267,12 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
 }
 
 .sage-dropdown__menu {
-  border-radius: sage-border(radius-medium);
   overflow: auto;
   min-width: $-dropdown-width;
   width: auto;
   max-height: $-dropdown-panel-max-height;
   padding: sage-spacing(xs) 0;
+  border-radius: sage-border(radius-medium);
   
   // adds a box shadow to the menu when it is scrollable
   overflow-scrolling: touch;
