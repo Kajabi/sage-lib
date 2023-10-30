@@ -51,7 +51,7 @@ $-hero-play-icon-background-color: sage-color(white);
 }
 
 .sage-hero--image-start {
-  @media (min-width: 1200px) {
+  @media (min-width: sage-breakpoint(xl-min)) {
     grid-template-areas:
       "artwork title"
       "artwork content";
