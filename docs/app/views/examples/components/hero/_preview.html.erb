@@ -39,7 +39,6 @@
 <h2>Borderless</h2>
 <p>When the Hero is set to borderless, the Hero will have no border.</p>
 
-<h3>Full-bleed image</h3>
 <%= sage_component SageHero, {
   title: "Learn with Kajabi in our live workshops",
   description: "Did you know we offer free workshops? Kajabi experts host live workshops every week on topics from marketing your products to building out your Kajabi account.",
@@ -52,25 +51,6 @@
     <%= sage_component SageButton, {
       value: "Learn more",
       style: "primary",
-    } %>
-  <% end %>
-<% end %>
-
-<h3>Contained image</h3>
-<%= sage_component SageHero, {
-  title: "Introducing the Kajabi template store",
-  description: "Did you know we offer free workshops? Kajabi experts host live workshops every week on topics from marketing your products to building out your Kajabi account.",
-  image: "hero-contained-placeholder.png",
-  alt_text: "Multi layered illustration of UI elements and woman smiling to the camera",
-  size: "large",
-  contained: true,
-  image_start: true,
-  borderless: true,
-} do %>
-  <% content_for :sage_hero_footer_actions do %>
-    <%= sage_component SageButton, {
-      style: "primary",
-      value: "Learn more",
     } %>
   <% end %>
 <% end %>
