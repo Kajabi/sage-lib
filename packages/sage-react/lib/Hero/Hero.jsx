@@ -81,10 +81,10 @@ export const Hero = ({
 Hero.Sizes = HERO_SIZES;
 
 Hero.defaultProps = {
-  borderless: null,
+  borderless: false,
   ctaAttributes: null,
   children: null,
-  contained: null,
+  contained: false,
   customBackgroundColor: null,
   description: null,
   footerActions: null,
@@ -92,7 +92,7 @@ Hero.defaultProps = {
     alt: null,
     src: null
   },
-  imageStart: null,
+  imageStart: false,
   heroSize: Hero.Sizes.LARGE,
   title: null,
   titleTag: 'h2',
