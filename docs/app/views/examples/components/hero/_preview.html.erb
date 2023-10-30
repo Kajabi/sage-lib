@@ -1,8 +1,7 @@
-<h2>Full-Bleed Images</h2>
-<p>Full-bleed images within Heroes take up the entire vertical and horizontal space allocated at the start or end of the Hero component.</p>
+<h2>Sizes</h2>
+<p>There are two sizes for the Hero component: small and large. The small Hero component takes up a portion of the viewport width and the large Hero component takes up the entire viewport width.</p>
 
-<h3>Default - Small</h3>
-<p>The small Hero component takes up a portion of the viewport width and image fills the space within the container.</p>
+<h3>Small</h3>
 
 <%= sage_component SageHero, {
   title: "Learn with Kajabi in our live workshops",
@@ -19,11 +18,7 @@
   <% end %>
 <% end %>
 
-<%= sage_component SageDivider, {} %>
-
-<h3>Default - Large</h3>
-<p>The default large Hero component takes up the entire viewport width and image fills the space within the container.</p>
-
+<h3>Large</h3>
 <%= sage_component SageHero, {
   title: "Learn with Kajabi in our live workshops",
   description: "Did you know we offer free workshops? Kajabi experts host live workshops every week on topics from marketing your products to building out your Kajabi account.",
@@ -39,81 +34,29 @@
   <% end %>
 <% end %>
 
-<h3>Image has a trigger</h3>
-<p>When the image has a trigger, the image is clickable, will trigger an action, and image fills the space within the container.</p>
-
-<%= sage_component SageHero, {
-  title: "Learn with Kajabi in our live workshops",
-  description: "Did you know we offer free workshops? Kajabi experts host live workshops every week on topics from marketing your products to building out your Kajabi account.",
-  image: "hero-workshop-placeholder.jpg",
-  alt_text: "Multi-layered illustration of UI elements and woman clasping her hands together in excitement",
-  size: "small",
-  cta_attributes: {
-    "data-js-modaltrigger": "cool-modal",
-    href: "#",
-  },
-} do %>
-  <% content_for :sage_hero_footer_actions do %>
-    <%= sage_component SageButton, {
-      value: "Learn more",
-      style: "primary",
-    } %>
-  <% end %>
-<% end %>
-
 <%= sage_component SageDivider, {} %>
 
-<h3>Borderless and custom background color</h3>
-<p>When the Hero is set to borderless and has a custom background color, the Hero will have no border and the background color will be applied to the entire Hero. The image will fill the space within the container.</p>
+<h2>Borderless</h2>
+<p>When the Hero is set to borderless, the Hero will have no border.</p>
 
+<h3>Full-bleed image</h3>
 <%= sage_component SageHero, {
   title: "Learn with Kajabi in our live workshops",
   description: "Did you know we offer free workshops? Kajabi experts host live workshops every week on topics from marketing your products to building out your Kajabi account.",
   image: "hero-workshop-placeholder.jpg",
   alt_text: "Multi-layered illustration of UI elements and woman clasping her hands together in excitement",
-  custom_background_color: "#e6f4fe",
   size: "small",
   borderless: true,
-  cta_attributes: {
-    "data-js-modaltrigger": "cool-modal",
-    href: "#",
-  },
 } do %>
   <% content_for :sage_hero_footer_actions do %>
     <%= sage_component SageButton, {
-      style: "primary",
       value: "Learn more",
+      style: "primary",
     } %>
   <% end %>
 <% end %>
 
-<%= sage_component SageDivider, {} %>
-
-<h2>Contained Images</h2>
-<p>Contained images within a Hero component will have margins that push the image away from the sides of the Hero container.</p>
-
-<h3>Default - Small</h3>
-
-<%= sage_component SageHero, {
-  title: "Introducing the Kajabi template store",
-  description: "Did you know we offer free workshops? Kajabi experts host live workshops every week on topics from marketing your products to building out your Kajabi account.",
-  image: "hero-contained-placeholder.png",
-  alt_text: "Multi layered illustration of UI elements and woman smiling to the camera",
-  size: "small",
-  contained: true,
-} do %>
-  <% content_for :sage_hero_footer_actions do %>
-    <%= sage_component SageButton, {
-      style: "primary",
-      value: "Learn more",
-    } %>
-  <% end %>
-<% end %>
-
-<%= sage_component SageDivider, {} %>
-
-<h3>Default - Large</h3>
-
+<h3>Contained image</h3>
 <%= sage_component SageHero, {
   title: "Introducing the Kajabi template store",
   description: "Did you know we offer free workshops? Kajabi experts host live workshops every week on topics from marketing your products to building out your Kajabi account.",
@@ -121,6 +64,8 @@
   alt_text: "Multi layered illustration of UI elements and woman smiling to the camera",
   size: "large",
   contained: true,
+  image_start: true,
+  borderless: true,
 } do %>
   <% content_for :sage_hero_footer_actions do %>
     <%= sage_component SageButton, {
@@ -132,7 +77,8 @@
 
 <%= sage_component SageDivider, {} %>
 
-<h3>Image has a trigger</h3>
+<h2>Contained</h2>
+<p>When the Hero is set to contained, the Hero will have margins that push the image away from the sides of the Hero container.</p>
 
 <%= sage_component SageHero, {
   title: "Introducing the Kajabi template store",
@@ -141,10 +87,6 @@
   alt_text: "Multi layered illustration of UI elements and woman smiling to the camera",
   size: "small",
   contained: true,
-  cta_attributes: {
-    "data-js-modaltrigger": "cool-modal",
-    href: "#",
-  },
 } do %>
   <% content_for :sage_hero_footer_actions do %>
     <%= sage_component SageButton, {
@@ -156,43 +98,30 @@
 
 <%= sage_component SageDivider, {} %>
 
-<h3>Borderless with custom background</h3>
+<h2>Custom Background</h2>
+<p>When the Hero has a custom background color, the background color will be applied to the entire Hero.</p>
 
 <%= sage_component SageHero, {
-  title: "Introducing the Kajabi template store",
+  title: "Learn with Kajabi in our live workshops",
   description: "Did you know we offer free workshops? Kajabi experts host live workshops every week on topics from marketing your products to building out your Kajabi account.",
-  image: "hero-contained-placeholder.png",
-  alt_text: "Multi layered illustration of UI elements and woman smiling to the camera",
-  borderless: true,
+  image: "hero-workshop-placeholder.jpg",
+  alt_text: "Multi-layered illustration of UI elements and woman clasping her hands together in excitement",
   custom_background_color: "#e6f4fe",
   size: "small",
-  contained: true,
 } do %>
   <% content_for :sage_hero_footer_actions do %>
-    <%= sage_component SageButtonGroup, { gap: :md } do %>
-        <%= sage_component SageButton, {
-          value: "Learn more",
-          style: "primary",
-        } %>
-      <%= sage_component SageButton, {
-        value: "Dismiss",
-        style: "primary",
-        subtle: true,
-        attributes: {
-          "data-js-hero--dismiss": ""
-        }
-      } %>
-    <% end %>
+    <%= sage_component SageButton, {
+      style: "primary",
+      value: "Learn more",
+    } %>
   <% end %>
 <% end %>
 
 <%= sage_component SageDivider, {} %>
 
-<h2>Image start</h2>
+<h2>Image Start</h2>
 <p>When the image is set to start, the image will be placed at the start of the Hero component.</p>
 
-<h3>Default - Small</h3>
-
 <%= sage_component SageHero, {
   title: "Learn with Kajabi in our live workshops",
   description: "Did you know we offer free workshops? Kajabi experts host live workshops every week on topics from marketing your products to building out your Kajabi account.",
@@ -211,57 +140,19 @@
 
 <%= sage_component SageDivider, {} %>
 
-<h3>Default - Large</h3>
+<h2>CTA Attribute</h2>
+<p>When the Hero has a CTA attribute, the CTA will be applied to the Hero image.</p>
 
 <%= sage_component SageHero, {
   title: "Learn with Kajabi in our live workshops",
   description: "Did you know we offer free workshops? Kajabi experts host live workshops every week on topics from marketing your products to building out your Kajabi account.",
   image: "hero-workshop-placeholder.jpg",
   alt_text: "Multi-layered illustration of UI elements and woman clasping her hands together in excitement",
-  size: "large",
-  image_start: true,
-} do %>
-  <% content_for :sage_hero_footer_actions do %>
-    <%= sage_component SageButton, {
-      value: "Learn more",
-      style: "primary",
-    } %>
-  <% end %>
-<% end %>
-
-<%= sage_component SageDivider, {} %>
-
-<h3>Contained - Small</h3>
-
-<%= sage_component SageHero, {
-  title: "Learn with Kajabi in our live workshops",
-  description: "Did you know we offer free workshops? Kajabi experts host live workshops every week on topics from marketing your products to building out your Kajabi account.",
-  image: "hero-contained-placeholder.png",
-  alt_text: "Multi layered illustration of UI elements and woman smiling to the camera",
   size: "small",
-  image_start: true,
-  contained: true,
-} do %>
-  <% content_for :sage_hero_footer_actions do %>
-    <%= sage_component SageButton, {
-      value: "Learn more",
-      style: "primary",
-    } %>
-  <% end %>
-<% end %>
-
-<%= sage_component SageDivider, {} %>
-
-<h3>Contained - Large</h3>
-
-<%= sage_component SageHero, {
-  title: "Learn with Kajabi in our live workshops",
-  description: "Did you know we offer free workshops? Kajabi experts host live workshops every week on topics from marketing your products to building out your Kajabi account.",
-  image: "hero-contained-placeholder.png",
-  alt_text: "Multi layered illustration of UI elements and woman smiling to the camera",
-  size: "large",
-  image_start: true,
-  contained: true,
+  cta_attributes: {
+    "data-js-modaltrigger": "cool-modal",
+    href: "#",
+  },
 } do %>
   <% content_for :sage_hero_footer_actions do %>
     <%= sage_component SageButton, {
