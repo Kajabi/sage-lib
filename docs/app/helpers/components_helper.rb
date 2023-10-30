@@ -408,10 +408,10 @@ module ComponentsHelper
         scss: "done",
         docs: "done",
         rails: "done",
-        react: "todo",
+        react: "done",
         responsive: "done",
         a11y: "done",
-        react_component_slug: "sage-hero--default",
+        react_component_slug: "sage-hero--small-full-bleed",
         figma_embed: "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FsMbtLUHSt2vfKgKjyQ3052%2F%25F0%259F%25A7%25A9-Sage-components%3Fnode-id%3D3686%253A21923",
       },
       {

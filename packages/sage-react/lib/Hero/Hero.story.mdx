@@ -5,7 +5,7 @@ import { Button } from '../Button';
 import heroContained from '../../public/HeroContainedPlaceholder.png';
 import heroFull from '../../public/HeroWorkshopPlaceholder.jpg';
 
-<Meta title="Sage/Hero" />
+<Meta title="Sage/Hero" component={Hero} />
 
 # Hero
 A Hero is used to call attention to new features or content. The hero is flexible in size and can contain text, illustrations, full-bleed images, and a full-bleed video thumbnail.
@@ -28,15 +28,15 @@ Ensure images that are used in the Hero component have alt text that describes t
 
 ## Properties
 
-<ArgsTable story="Default" />
+<ArgsTable story="Small - full-bleed" />
 
 ## Full-Bleed Images
 
-### Default
-The small Hero component takes up a portion of the viewport width.
+### Small - full-bleed
+The small Hero component takes up a portion of the viewport width and image fills the space within the container.
 
 <Canvas>
-  <Story name="Default">
+  <Story name="Small - full-bleed">
     <Hero
       title="Learn with Kajabi in our live workshops"
       description="Did you know we offer free workshops? Kajabi experts host live workshops every week on topics from marketing your products to building out your Kajabi account."
@@ -51,7 +51,7 @@ The small Hero component takes up a portion of the viewport width.
 </Canvas>
 
 ### Large - full-bleed
-The default large Hero component takes up the entire viewport width.
+The default large Hero component takes up the entire viewport width and image fills the space within the container.
 
 <Canvas>
   <Story name="Large - full-bleed">
@@ -69,7 +69,7 @@ The default large Hero component takes up the entire viewport width.
 </Canvas>
 
 ### Image with trigger - full-bleed
-When the image has a trigger, the image is clickable and will trigger an action.
+When the image has a trigger, the image is clickable, will trigger an action, and image fills the space within the container.
 
 <Canvas>
   <Story name="Image with trigger - full-bleed">
@@ -90,7 +90,7 @@ When the image has a trigger, the image is clickable and will trigger an action.
 </Canvas>
 
 ### Borderless and custom background color - full-bleed
-When the Hero is set to borderless and has a custom background color, the Hero will have no border and the background color will be applied to the entire Hero.
+When the Hero is set to borderless and has a custom background color, the Hero will have no border and the background color will be applied to the entire Hero. The image will fill the space within the container.
 
 <Canvas>
   <Story name="Borderless and custom background color - full-bleed">
@@ -109,6 +109,7 @@ When the Hero is set to borderless and has a custom background color, the Hero w
 </Canvas>
 
 ## Contained Images
+Contained images within a Hero component will have margins that push the image away from the sides of the Hero container.
 
 ### Small - contained
 
@@ -129,7 +130,6 @@ When the Hero is set to borderless and has a custom background color, the Hero w
 </Canvas>
 
 ### Large - contained
-The default large Hero component takes up the entire viewport width.
 
 <Canvas>
   <Story name="Large - contained">
@@ -148,7 +148,6 @@ The default large Hero component takes up the entire viewport width.
 </Canvas>
 
 ### Small - contained - trigger
-When the image has a trigger, the image is clickable and will trigger an action.
 
 <Canvas>
   <Story name="Small - contained - trigger">
@@ -169,11 +168,10 @@ When the image has a trigger, the image is clickable and will trigger an action.
   </Story>
 </Canvas>
 
-### Small - contained - borderless - background color
-When the Hero is set to borderless and has a custom background color, the Hero will have no border and the background color will be applied to the entire Hero.
+### Borderless and custom background color - contained
 
 <Canvas>
-  <Story name="Small - contained - borderless - background color">
+  <Story name="Borderless and custom background color - contained">
     <Hero
       title="Learn with Kajabi in our live workshops"
       description="Did you know we offer free workshops? Kajabi experts host live workshops every week on topics from marketing your products to building out your Kajabi account."
