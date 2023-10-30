@@ -28,57 +28,58 @@ Ensure images that are used in the Hero component have alt text that describes t
 
 ## Properties
 
-<ArgsTable story="Small" />
+<ArgsTable story="Default" />
 
 ## Full-Bleed Images
 
-### Small
+### Default
 The small Hero component takes up a portion of the viewport width.
 
 <Canvas>
-  <Story name="Small">
+  <Story name="Default">
     <Hero
       title="Learn with Kajabi in our live workshops"
       description="Did you know we offer free workshops? Kajabi experts host live workshops every week on topics from marketing your products to building out your Kajabi account."
       heroSize="small"
       image={{
         src: `${heroFull}`,
-        alt: ''
+        alt: 'Multi layered illustration of UI elements and woman clasping her hands together in excitement'
       }}
       footerActions={<><Button color="primary">Learn more</Button></>}
     />
   </Story>
 </Canvas>
 
-### Large
+### Large - full-bleed
 The default large Hero component takes up the entire viewport width.
 
 <Canvas>
-  <Story name="Large">
+  <Story name="Large - full-bleed">
     <Hero
       title="Learn with Kajabi in our live workshops"
       description="Did you know we offer free workshops? Kajabi experts host live workshops every week on topics from marketing your products to building out your Kajabi account."
       heroSize="large"
       image={{
         src: `${heroFull}`,
-        alt: ''
+        alt: 'Multi layered illustration of UI elements and woman clasping her hands together in excitement'
       }}
       footerActions={<><Button color="primary">Learn more</Button></>}
     />
   </Story>
 </Canvas>
 
-### Image with trigger
+### Image with trigger - full-bleed
 When the image has a trigger, the image is clickable and will trigger an action.
 
 <Canvas>
-  <Story name="Image with Trigger">
+  <Story name="Image with trigger - full-bleed">
     <Hero
       title="Learn with Kajabi in our live workshops"
       description="Did you know we offer free workshops? Kajabi experts host live workshops every week on topics from marketing your products to building out your Kajabi account."
       heroSize="small"
       image={{
-        src: `${heroFull}`
+        src: `${heroFull}`,
+        alt: 'Multi layered illustration of UI elements and woman clasping her hands together in excitement'
       }}
       ctaAttributes={{
         href: '#'
@@ -88,18 +89,19 @@ When the image has a trigger, the image is clickable and will trigger an action.
   </Story>
 </Canvas>
 
-### Borderless and custom background color
+### Borderless and custom background color - full-bleed
 When the Hero is set to borderless and has a custom background color, the Hero will have no border and the background color will be applied to the entire Hero.
 
 <Canvas>
-  <Story name="Borderless and custom background color">
+  <Story name="Borderless and custom background color - full-bleed">
     <Hero
       title="Learn with Kajabi in our live workshops"
       description="Did you know we offer free workshops? Kajabi experts host live workshops every week on topics from marketing your products to building out your Kajabi account."
       heroSize="small"
       customBackgroundColor="#e6f4fe"
       image={{
-        src: `${heroFull}`
+        src: `${heroFull}`,
+        alt: 'Multi layered illustration of UI elements and woman clasping her hands together in excitement'
       }}
       footerActions={<><Button color="primary">Learn more</Button></>}
     />
@@ -108,52 +110,56 @@ When the Hero is set to borderless and has a custom background color, the Hero w
 
 ## Contained Images
 
-### Small and contained image
+### Small - contained
 
 <Canvas>
-  <Story name="Small and contained image">
+  <Story name="Small - contained">
     <Hero
       title="Learn with Kajabi in our live workshops"
       description="Did you know we offer free workshops? Kajabi experts host live workshops every week on topics from marketing your products to building out your Kajabi account."
       heroSize="small"
+      contained={true}
       image={{
         src: `${heroContained}`,
-        alt: ''
+        alt: 'Multi layered illustration of UI elements and woman smiling to the camera'
       }}
       footerActions={<><Button color="primary">Learn more</Button></>}
     />
   </Story>
 </Canvas>
 
-### Large and contained image
+### Large - contained
 The default large Hero component takes up the entire viewport width.
 
 <Canvas>
-  <Story name="Large and contained image">
+  <Story name="Large - contained">
     <Hero
       title="Learn with Kajabi in our live workshops"
       description="Did you know we offer free workshops? Kajabi experts host live workshops every week on topics from marketing your products to building out your Kajabi account."
       heroSize="large"
+      contained={true}
       image={{
         src: `${heroContained}`,
-        alt: ''
+        alt: 'Multi layered illustration of UI elements and woman smiling to the camera'
       }}
       footerActions={<><Button color="primary">Learn more</Button></>}
     />
   </Story>
 </Canvas>
 
-### Contained image has a trigger
+### Small - contained - trigger
 When the image has a trigger, the image is clickable and will trigger an action.
 
 <Canvas>
-  <Story name="Contained image has a trigger">
+  <Story name="Small - contained - trigger">
     <Hero
       title="Learn with Kajabi in our live workshops"
       description="Did you know we offer free workshops? Kajabi experts host live workshops every week on topics from marketing your products to building out your Kajabi account."
       heroSize="small"
+      contained={true}
       image={{
-        src: `${heroContained}`
+        src: `${heroContained}`,
+        alt: 'Multi layered illustration of UI elements and woman smiling to the camera'
       }}
       ctaAttributes={{
         href: '#'
@@ -163,18 +169,98 @@ When the image has a trigger, the image is clickable and will trigger an action.
   </Story>
 </Canvas>
 
-### Contained image with borderless container and custom background color
+### Small - contained - borderless - background color
 When the Hero is set to borderless and has a custom background color, the Hero will have no border and the background color will be applied to the entire Hero.
 
 <Canvas>
-  <Story name="Contained image with borderless container and custom background color">
+  <Story name="Small - contained - borderless - background color">
     <Hero
       title="Learn with Kajabi in our live workshops"
       description="Did you know we offer free workshops? Kajabi experts host live workshops every week on topics from marketing your products to building out your Kajabi account."
       heroSize="small"
       customBackgroundColor="#e6f4fe"
+      contained={true}
       image={{
-        src: `${heroContained}`
+        src: `${heroContained}`,
+        alt: 'Multi layered illustration of UI elements and woman smiling to the camera'
+      }}
+      footerActions={<><Button color="primary">Learn more</Button></>}
+    />
+  </Story>
+</Canvas>
+
+## Image start
+When the image is set to start, the image will be placed at the start of the Hero component.
+
+### Image start - Small
+
+<Canvas>
+  <Story name="Image start - small">
+    <Hero
+      title="Learn with Kajabi in our live workshops"
+      description="Did you know we offer free workshops? Kajabi experts host live workshops every week on topics from marketing your products to building out your Kajabi account."
+      heroSize="small"
+      imageStart={true}
+      image={{
+        src: `${heroFull}`,
+        alt: 'Multi layered illustration of UI elements and woman clasping her hands together in excitement'
+      }}
+      footerActions={<><Button color="primary">Learn more</Button></>}
+    />
+  </Story>
+</Canvas>
+
+### Image start - Large
+
+<Canvas>
+  <Story name="Image start - Large">
+    <Hero
+      title="Learn with Kajabi in our live workshops"
+      description="Did you know we offer free workshops? Kajabi experts host live workshops every week on topics from marketing your products to building out your Kajabi account."
+      heroSize="large"
+      imageStart={true}
+      image={{
+        src: `${heroFull}`,
+        alt: 'Multi layered illustration of UI elements and woman clasping her hands together in excitement'
+      }}
+      footerActions={<><Button color="primary">Learn more</Button></>}
+    />
+  </Story>
+</Canvas>
+
+### Image start - contained - small
+
+<Canvas>
+  <Story name="Image start - contained - small">
+    <Hero
+      title="Learn with Kajabi in our live workshops"
+      description="Did you know we offer free workshops? Kajabi experts host live workshops every week on topics from marketing your products to building out your Kajabi account."
+      heroSize="small"
+      imageStart={true}
+      contained={true}
+      image={{
+        src: `${heroContained}`,
+        alt: 'Multi layered illustration of UI elements and woman smiling to the camera'
+      }}
+      footerActions={<><Button color="primary">Learn more</Button></>}
+    />
+  </Story>
+</Canvas>
+
+
+### Image start - contained - large
+
+<Canvas>
+  <Story name="Image start - contained - large">
+    <Hero
+      title="Learn with Kajabi in our live workshops"
+      description="Did you know we offer free workshops? Kajabi experts host live workshops every week on topics from marketing your products to building out your Kajabi account."
+      heroSize="large"
+      imageStart={true}
+      contained={true}
+      image={{
+        src: `${heroContained}`,
+        alt: 'Multi layered illustration of UI elements and woman smiling to the camera'
       }}
       footerActions={<><Button color="primary">Learn more</Button></>}
     />
