@@ -347,3 +347,120 @@ $-modal-inner-size: sage-container(md);
     transition: none;
   }
 }
+
+
+$-modal-fixed-fullscreen-top-spacing: 8rem;
+$-modal-fixed-fullscreen-column-top-spacing: rem(60px);
+$-modal-fixed-fullscreen-column-height: rem(74px);
+$-modal-fixed-column-offset: 14rem;
+$-modal-fixed-fullscreen-column-scroll-height: rem(140px);
+
+$-modal-scrollable-cols-sidebar-width: 36%;
+$-modal-scrollable-cols-preview-width: 919px;
+$-modal-scrollable-cols-preview-visible-breakpoint: 1359px;
+$-modal-scrollable-cols-mobile-fixed-column-padding-top: rem(32px);
+
+$-modal-scrollable-cols-xsmall-mobile-fixed-column-padding-top: rem(90px);
+
+.modal-scrollable-cols__modal {
+  .sage-modal__header {
+    position: relative;
+    z-index: 2;
+    margin: 0;
+    padding: rem(12px) 0;
+    border-start-start-radius: sage-spacing(sm);
+    border-start-end-radius: sage-spacing(sm);
+    box-shadow: sage-shadow(md);
+  }
+
+  .sage-modal__header-text {
+    padding: sage-spacing(2xs) sage-spacing(md);
+
+    /* stylelint-disable max-nesting-depth */
+    > {
+      .sage-card__row {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+    /* stylelint-enable max-nesting-depth */
+  }
+
+  .sage-modal__content {
+    margin: 0;
+  }
+
+  .modal-scrollable-cols__fixed-column {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: calc(100vh - #{$-modal-fixed-column-offset});
+    background-color: #fff;
+  }
+
+  .modal-scrollable-cols__fixed-column-scroll {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    overflow: scroll;
+    height: 100%;
+    padding: sage-spacing(sm);
+  }
+}
+
+.modal-scrollable-cols__sidebar {
+  z-index: 2;
+  flex-grow: 0;
+  flex-basis: $-modal-scrollable-cols-sidebar-width;
+  overflow-y: auto;
+  position: relative;
+  background-color: sage-color(white);
+  border-block-start: sage-border(default);
+  border-inline-end: sage-border(default);
+  box-shadow: 6px 0 7px -6px rgba(sage-color(black), 0.16);
+
+  &.modal-scrollable-cols__fixed-column {
+    border-end-start-radius: sage-spacing(sm);
+  }
+}
+
+.modal-scrollable-cols__preview {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAALklEQVR4AdXPsQoAAASEYbz/syqLuomyi0n56rZ/OQYQtCC0dBCqeW0MO/zgdQLEyQ2Rj7XXawAAAABJRU5ErkJggg==");
+
+  &.modal-scrollable-cols__fixed-column {
+    border-end-end-radius: sage-spacing(sm);
+  }
+
+  .modal-scrollable-cols__fixed-column-scroll {
+    padding: sage-spacing(xl);
+  }
+}
+
+// TODO: update to use image and not icon
+.modal-scrollable-cols-header-text {
+  min-width: 0;
+  padding-left: sage-spacing(sm);
+  border-left: sage-border();
+
+  @media (max-width: sage-breakpoint(sm-max)) {
+    padding-left: sage-spacing(xs);
+  }
+
+  h1 {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  img {
+    max-width: 40px;
+  }
+}
+
+.modal-scrollable-cols-header-content {
+  width: 100%;
+}
+
+.modal-scrollable-cols-header-actions {
+  flex-shrink: 0;
+}
