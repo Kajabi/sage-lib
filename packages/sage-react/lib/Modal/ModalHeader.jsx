@@ -94,26 +94,59 @@ ModalHeader.defaultProps = {
 };
 
 ModalHeader.propTypes = {
+  /** 
+   * Actions to render within the ModalHeaderActions. This space is reserved for buttons that will render to the right of the title.
+  */
   actions: PropTypes.node,
+  /**
+   * Content to render within the ModalHeaderAside. This space is normally reserved for the close icon in the ModalHeader.
+   */
   aside: PropTypes.node,
+  /**
+   * Content to render within the ModalBody
+   */
   children: PropTypes.node,
+  /**
+   * Class name(s) to be added to the root element
+   */
   className: PropTypes.string,
+  /** 
+   * Custom header to render within the ModalHeader. This will override the default title.
+  */
   customHeader: PropTypes.node,
+  /**
+   * Progess bar to render within the ModalHeader
+   */
   headerProgressBar: PropTypes.node,
+  /**
+   * Icon to render within the ModalHeader
+   */
   icon: PropTypes.shape({
     color: PropTypes.oneOf(Object.values(Icon.COLORS)),
     name: PropTypes.oneOf(Object.values(Icon.ICONS)),
   }),
+  /**
+   * Image to render within the ModalHeader
+   */
   image: PropTypes.shape({
     alt: PropTypes.string,
     src: PropTypes.string
   }),
+  /**
+   * Popover to render within the ModalHeader. This will render a question mark icon that will trigger the popover when clicked.
+   */
   popover: PropTypes.shape({
     content: PropTypes.node,
     link: PropTypes.string,
     linkText: PropTypes.string,
     title: PropTypes.string
   }),
+  /**
+   * Subheader to render within the ModalHeader
+   */
   subheader: PropTypes.string,
+  /**
+   * Title of the modal
+   */
   title: PropTypes.string,
 };

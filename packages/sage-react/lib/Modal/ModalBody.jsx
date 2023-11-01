@@ -37,8 +37,20 @@ ModalBody.defaultProps = {
 };
 
 ModalBody.propTypes = {
+  /**
+   * Content to render within the ModalBody
+   */
   children: PropTypes.node,
+  /**
+   * Class name(s) to be added to the root element
+   */
   className: PropTypes.string,
+  /**
+   * Gap between grid columns
+   */
   gap: PropTypes.oneOf(Object.values(ModalBody.GAP_OPTIONS)),
+  /**
+   * Spacing between grid columns
+   */
   spacing: PropTypes.oneOf(Object.values(ModalBody.SPACINGS)),
 };

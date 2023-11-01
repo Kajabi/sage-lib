@@ -152,11 +152,11 @@ Modal.propTypes = {
    */
   children: PropTypes.node,
   /**
-   * Classname to apply to the container element, `.sage-modal__container`. Useful for applying custom styles.
+   * Class name(s) to apply to the container element, `.sage-modal__container`. Useful for applying custom styles.
    */
   containerClassName: PropTypes.string,
   /**
-   * Classname to apply to the root element, `.sage-modal`. Useful for applying custom styles.
+   * Class name(s) to apply to the root element, `.sage-modal`. Useful for applying custom styles.
    */
   className: PropTypes.string,
   /**

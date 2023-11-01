@@ -25,6 +25,12 @@ ModalFooterAside.defaultProps = {
 };
 
 ModalFooterAside.propTypes = {
+  /**
+   * Content to render within the ModalFooterAside
+   */
   children: PropTypes.node,
+  /**
+   * Class name(s) to be added to the root element
+   */
   className: PropTypes.string,
 };

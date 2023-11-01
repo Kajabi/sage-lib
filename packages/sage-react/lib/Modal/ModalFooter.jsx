@@ -28,6 +28,12 @@ ModalFooter.defaultProps = {
 };
 
 ModalFooter.propTypes = {
+  /**
+   * Content to render within the ModalFooter
+   */
   children: PropTypes.node,
+  /**
+   * Class name(s) to be added to the root element
+   */
   className: PropTypes.string,
 };
