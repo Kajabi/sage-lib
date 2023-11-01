@@ -70,26 +70,10 @@ Basic modals contain a title, a body of content, and a footer with buttons.
             />
             <Modal.Body gap={Modal.Body.GAP_OPTIONS.LG}>
               <p className={SageClassnames.TYPE.BODY}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua.
-              </p>
-              <p className={SageClassnames.TYPE.BODY}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua.
+                Add a description of the content you're showing in the modal.
               </p>
             </Modal.Body>
             <Modal.Footer>
-              <Modal.FooterAside>
-                <Button
-                  color={Button.COLORS.SECONDARY}
-                  onClick={onExit}
-                  subtle={true}
-                >
-                  Link
-                </Button>
-              </Modal.FooterAside>
               <Button
                 color={Button.COLORS.SECONDARY}
                 onClick={onExit}
@@ -190,15 +174,317 @@ Pending
 
 ## Footer
 Modals contain a footer that can contain buttons and links
+<Canvas>
+  <Story name="Footer">
+    {(args) => {
+      const [active, setActive] = useState(false);
+      const [isClosing, setIsClosing] = useState(false);
+      const onExit = () => {
+        setIsClosing(true);
+        setTimeout(() => {
+          setActive(false);
+          setIsClosing(false);
+        }, 1000);
+      };
+      return (
+        <>
+          <Button
+            color={Button.COLORS.PRIMARY}
+            onClick={() => setActive(true)}
+          >
+            Open Modal
+          </Button>
+          <Modal
+            {...args}
+            active={active}
+            isClosing={isClosing}
+            onExit={onExit}
+          >
+            <Modal.Header
+              title="Modal header"
+              aside={(
+                <Button
+                  color={Button.COLORS.SECONDARY}
+                  iconOnly={true}
+                  icon={SageTokens.ICONS.REMOVE}
+                  onClick={onExit}
+                  subtle={true}
+                >
+                  Close modal
+                </Button>
+              )}
+            />
+            <Modal.Body gap={Modal.Body.GAP_OPTIONS.LG}>
+              <p className={SageClassnames.TYPE.BODY}>
+                Add a description of the content you're showing in the modal.
+              </p>
+            </Modal.Body>
+            <Modal.Footer>
+              <Button
+                color={Button.COLORS.SECONDARY}
+                onClick={onExit}
+              >
+                Cancel
+              </Button>
+              <Button
+                color={Button.COLORS.PRIMARY}
+                onClick={onExit}
+              >
+                Confirm
+              </Button>
+            </Modal.Footer>
+          </Modal>
+        </>
+      )
+    }}
+  </Story>
+</Canvas>
 
 ## Footer Aside
 The footer aside is a section of the footer that can contain additional buttons or links.
+<Canvas>
+  <Story name="Footer Aside">
+    {(args) => {
+      const [active, setActive] = useState(false);
+      const [isClosing, setIsClosing] = useState(false);
+      const onExit = () => {
+        setIsClosing(true);
+        setTimeout(() => {
+          setActive(false);
+          setIsClosing(false);
+        }, 1000);
+      };
+      return (
+        <>
+          <Button
+            color={Button.COLORS.PRIMARY}
+            onClick={() => setActive(true)}
+          >
+            Open Modal
+          </Button>
+          <Modal
+            {...args}
+            active={active}
+            isClosing={isClosing}
+            onExit={onExit}
+          >
+            <Modal.Header
+              title="Modal header"
+              aside={(
+                <Button
+                  color={Button.COLORS.SECONDARY}
+                  iconOnly={true}
+                  icon={SageTokens.ICONS.REMOVE}
+                  onClick={onExit}
+                  subtle={true}
+                >
+                  Close modal
+                </Button>
+              )}
+            />
+            <Modal.Body gap={Modal.Body.GAP_OPTIONS.LG}>
+              <p className={SageClassnames.TYPE.BODY}>
+                Add a description of the content you're showing in the modal.
+              </p>
+            </Modal.Body>
+            <Modal.Footer>
+              <Modal.FooterAside>
+                <Button
+                  color={Button.COLORS.SECONDARY}
+                  onClick={onExit}
+                  subtle={true}
+                >
+                  Link
+                </Button>
+              </Modal.FooterAside>
+              <Button
+                color={Button.COLORS.SECONDARY}
+                onClick={onExit}
+              >
+                Cancel
+              </Button>
+              <Button
+                color={Button.COLORS.PRIMARY}
+                onClick={onExit}
+              >
+                Confirm
+              </Button>
+            </Modal.Footer>
+          </Modal>
+        </>
+      )
+    }}    
+  </Story>
+</Canvas>
 
 ## Scrollable Content
 Modals can be configured to allow scrolling of content. This option is useful when the header and footer needs to visible contain actions.
+<Canvas>
+  <Story name="Scrollable Content">
+    {(args) => {
+      const [active, setActive] = useState(false);
+      const [isClosing, setIsClosing] = useState(false);
+      const onExit = () => {
+        setIsClosing(true);
+        setTimeout(() => {
+          setActive(false);
+          setIsClosing(false);
+        }, 1000);
+      };
+      return (
+        <>
+          <Button
+            color={Button.COLORS.PRIMARY}
+            onClick={() => setActive(true)}
+          >
+            Open xs Modal
+          </Button>
+          <Modal
+            {...args}
+            active={active}
+            isClosing={isClosing}
+            onExit={onExit}
+          >
+            <Modal.Header
+              title="Modal header"
+              aside={(
+                <Button
+                  color={Button.COLORS.SECONDARY}
+                  iconOnly={true}
+                  icon={SageTokens.ICONS.REMOVE}
+                  onClick={onExit}
+                  subtle={true}
+                >
+                  Close modal
+                </Button>
+              )}
+            />
+            <Modal.Body gap={Modal.Body.GAP_OPTIONS.LG}>
+              <p className={SageClassnames.TYPE.BODY}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse urna leo, condimentum nec pellentesque finibus, ultricies pulvinar ante. Donec eu interdum ligula. Pellentesque aliquam ullamcorper orci, nec tempor libero tristique in. Aliquam vitae felis at leo condimentum placerat eget id libero. In dictum tortor ac accumsan aliquam. Donec sit amet tortor porttitor, tincidunt nisl at, egestas lacus. Integer metus augue, aliquet accumsan vulputate eget, tristique id erat. Donec a venenatis nibh, ac molestie risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus in orci vitae ex tempor ultrices in a leo. Sed purus magna, vulputate aliquet ligula eget, consectetur sagittis nunc.
+              </p>
+              <p className={SageClassnames.TYPE.BODY}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse urna leo, condimentum nec pellentesque finibus, ultricies pulvinar ante. Donec eu interdum ligula. Pellentesque aliquam ullamcorper orci, nec tempor libero tristique in. Aliquam vitae felis at leo condimentum placerat eget id libero. In dictum tortor ac accumsan aliquam. Donec sit amet tortor porttitor, tincidunt nisl at, egestas lacus. Integer metus augue, aliquet accumsan vulputate eget, tristique id erat. Donec a venenatis nibh, ac molestie risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus in orci vitae ex tempor ultrices in a leo. Sed purus magna, vulputate aliquet ligula eget, consectetur sagittis nunc.
+              </p>
+              <p className={SageClassnames.TYPE.BODY}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse urna leo, condimentum nec pellentesque finibus, ultricies pulvinar ante. Donec eu interdum ligula. Pellentesque aliquam ullamcorper orci, nec tempor libero tristique in. Aliquam vitae felis at leo condimentum placerat eget id libero. In dictum tortor ac accumsan aliquam. Donec sit amet tortor porttitor, tincidunt nisl at, egestas lacus. Integer metus augue, aliquet accumsan vulputate eget, tristique id erat. Donec a venenatis nibh, ac molestie risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus in orci vitae ex tempor ultrices in a leo. Sed purus magna, vulputate aliquet ligula eget, consectetur sagittis nunc.
+              </p>
+              <p className={SageClassnames.TYPE.BODY}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse urna leo, condimentum nec pellentesque finibus, ultricies pulvinar ante. Donec eu interdum ligula. Pellentesque aliquam ullamcorper orci, nec tempor libero tristique in. Aliquam vitae felis at leo condimentum placerat eget id libero. In dictum tortor ac accumsan aliquam. Donec sit amet tortor porttitor, tincidunt nisl at, egestas lacus. Integer metus augue, aliquet accumsan vulputate eget, tristique id erat. Donec a venenatis nibh, ac molestie risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus in orci vitae ex tempor ultrices in a leo. Sed purus magna, vulputate aliquet ligula eget, consectetur sagittis nunc.
+              </p>
+              <p className={SageClassnames.TYPE.BODY}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse urna leo, condimentum nec pellentesque finibus, ultricies pulvinar ante. Donec eu interdum ligula. Pellentesque aliquam ullamcorper orci, nec tempor libero tristique in. Aliquam vitae felis at leo condimentum placerat eget id libero. In dictum tortor ac accumsan aliquam. Donec sit amet tortor porttitor, tincidunt nisl at, egestas lacus. Integer metus augue, aliquet accumsan vulputate eget, tristique id erat. Donec a venenatis nibh, ac molestie risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus in orci vitae ex tempor ultrices in a leo. Sed purus magna, vulputate aliquet ligula eget, consectetur sagittis nunc.
+              </p>
+              <p className={SageClassnames.TYPE.BODY}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse urna leo, condimentum nec pellentesque finibus, ultricies pulvinar ante. Donec eu interdum ligula. Pellentesque aliquam ullamcorper orci, nec tempor libero tristique in. Aliquam vitae felis at leo condimentum placerat eget id libero. In dictum tortor ac accumsan aliquam. Donec sit amet tortor porttitor, tincidunt nisl at, egestas lacus. Integer metus augue, aliquet accumsan vulputate eget, tristique id erat. Donec a venenatis nibh, ac molestie risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus in orci vitae ex tempor ultrices in a leo. Sed purus magna, vulputate aliquet ligula eget, consectetur sagittis nunc.
+              </p>
+            </Modal.Body>
+            <Modal.Footer>
+              <Modal.FooterAside>
+                <Button
+                  color={Button.COLORS.SECONDARY}
+                  onClick={onExit}
+                  subtle={true}
+                >
+                  Link
+                </Button>
+              </Modal.FooterAside>
+              <Button
+                color={Button.COLORS.SECONDARY}
+                onClick={onExit}
+              >
+                Cancel
+              </Button>
+              <Button
+                color={Button.COLORS.PRIMARY}
+                onClick={onExit}
+              >
+                Confirm
+              </Button>
+            </Modal.Footer>
+          </Modal>
+        </>
+      )
+    }}  
+  </Story>
+</Canvas>
 
 ## Sizes
 Modal widths can be configured to be extra small, small, medium, or large.
+<Canvas>
+  <Story name="Sizes">
+    {(args) => {
+      const [active, setActive] = useState(false);
+      const [isClosing, setIsClosing] = useState(false);
+      const onExit = () => {
+        setIsClosing(true);
+        setTimeout(() => {
+          setActive(false);
+          setIsClosing(false);
+        }, 1000);
+      };
+      return (
+        <>
+          <Button
+            color={Button.COLORS.PRIMARY}
+            onClick={() => setActive(true)}
+          >
+            Open xs Modal
+          </Button>
+          <Modal
+            {...args}
+            active={active}
+            isClosing={isClosing}
+            onExit={onExit}
+          >
+            <Modal.Header
+              title="Modal header"
+              aside={(
+                <Button
+                  color={Button.COLORS.SECONDARY}
+                  iconOnly={true}
+                  icon={SageTokens.ICONS.REMOVE}
+                  onClick={onExit}
+                  subtle={true}
+                >
+                  Close modal
+                </Button>
+              )}
+            />
+            <Modal.Body gap={Modal.Body.GAP_OPTIONS.LG}>
+              <p className={SageClassnames.TYPE.BODY}>
+                Add a description of the content you're showing in the modal.
+              </p>
+            </Modal.Body>
+            <Modal.Footer>
+              <Modal.FooterAside>
+                <Button
+                  color={Button.COLORS.SECONDARY}
+                  onClick={onExit}
+                  subtle={true}
+                >
+                  Link
+                </Button>
+              </Modal.FooterAside>
+              <Button
+                color={Button.COLORS.SECONDARY}
+                onClick={onExit}
+              >
+                Cancel
+              </Button>
+              <Button
+                color={Button.COLORS.PRIMARY}
+                onClick={onExit}
+              >
+                Confirm
+              </Button>
+            </Modal.Footer>
+          </Modal>
+        </>
+      )
+    }}  
+  </Story>
+</Canvas>
 
 ## Fullscreen
 Modals can be configured to take up the full screen.
