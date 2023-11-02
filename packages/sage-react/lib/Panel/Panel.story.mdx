@@ -24,11 +24,57 @@ import { SageClassnames, SageTokens } from "../configs";
   }}
 />
 
+export const DefaultTemplate = args => (
+  <Panel {...args}>
+    <Panel.Header title='Panel Title' />
+    <Panel.Block>
+      Eu occaecat dolor minim mollit dolore qui cillum aliquip mollit ipsum et
+      ullamco consectetur occaecat. Officia irure elit ex nulla. Labore qui sit
+      nulla ex excepteur qui id sit id minim irure excepteur et. Excepteur
+      consectetur nisi Lorem tempor do deserunt veniam occaecat.
+    </Panel.Block>
+    <Panel.Footer>
+      <Button color={Button.COLORS.PRIMARY}>Submit</Button>
+    </Panel.Footer>
+  </Panel>
+);
+
 # Panel
 
 Panels are rich containers that allow for grouping and organizing content details.
 
 All panels are made up of three basic building blocks: Header, Body, and Footer.
+
+<Canvas
+  mdxSource={`
+  <Panel>
+    <Panel.Header title="Panel Title" />
+    <Panel.Block>
+      Eu occaecat dolor minim mollit dolore qui cillum aliquip mollit ipsum et
+      ullamco consectetur occaecat. Officia irure elit ex nulla. Labore qui
+      sit nulla ex excepteur qui id sit id minim irure excepteur et. Excepteur
+      consectetur nisi Lorem tempor do deserunt veniam occaecat.
+    </Panel.Block>
+    <Panel.Footer>
+      <Button color={Button.COLORS.PRIMARY}>Submit</Button>
+    </Panel.Footer>
+  </Panel>
+`}
+>
+  <Story
+    name='Default'
+    args={{
+      children: null,
+      className: null,
+      clearPaddingBoth: false,
+      clearPaddingBottom: false,
+      clearPaddingTop: false,
+      loading: false,
+    }}
+  >
+    {DefaultTemplate.bind({})}
+  </Story>
+</Canvas>
 
 ## Properties
 
@@ -48,10 +94,18 @@ There are a few options for the panel body container.
 
 A block is a completely unopinionated container meant to provide the most flexible way to group elements within a panel. This component is purely a wrapper and does not apply any layout or spacing by default so it is great for blocks of text or small groups of content within some of the other panel components. Set `type_block` to `true` to enforce open text spacing rules as established by the `sage-type` class.
 
-<Canvas>
-  <Story name='Default'>
+<Canvas
+  mdxSource={`
     <Panel>
       <Panel.Block sageType={true}>
+        <p>Panel block text</p>
+      </Panel.Block>
+    </Panel>
+  `}
+>
+  <Story name='Block'>
+    <Panel>
+      <Panel.Block>
         <p>Panel block text</p>
       </Panel.Block>
     </Panel>
@@ -62,7 +116,17 @@ A block is a completely unopinionated container meant to provide the most flexib
 
 A stack is a single column of elements sitting atop each other with the standard `8px` gap between each item in the stack. A common use is for stacking cards, but this is also help for presentation of several distinct lines of text content beyond open type formatting.
 
-<Canvas>
+<Canvas
+  mdxSource={`
+    <Panel>
+      <Panel.Stack>
+        <p>Panel stack text</p>
+        <p>Panel stack text</p>
+        <p>Panel stack text</p>
+      </Panel.Stack>
+    </Panel>
+  `}
+>
   <Story name='Stack'>
     <Panel>
       <Panel.Stack>
@@ -78,7 +142,23 @@ A stack is a single column of elements sitting atop each other with the standard
 
 A list is a similar to a stack but has no space between items, and each item has a border that extends into the panel's outer gutters. Lists can also have row-like layouts with elements setup inline.
 
-<Canvas>
+<Canvas
+  mdxSource={`
+    <Panel>
+      <Panel.List>
+        <Panel.ListItem>
+          <p>Panel list text</p>
+        </Panel.ListItem>
+        <Panel.ListItem>
+          <p>Panel list text</p>
+        </Panel.ListItem>
+        <Panel.ListItem>
+          <p>Panel list text</p>
+        </Panel.ListItem>
+      </Panel.List>
+    </Panel>
+  `}
+>
   <Story name='List'>
     <Panel>
       <Panel.List>
@@ -106,14 +186,41 @@ This area often contains one or more buttons that can be sent to the right edge 
 
 A panel row is a single or isolated inline arrangement of elements. It can either be a custom component or employ one of the standard Grid Template Patterns.
 
-<Canvas>
+<Canvas
+  mdxSource={`
+    <Panel>
+      <Panel.Row gridTemplate='eti'>
+        <Icon
+          icon={Icon.ICONS.CHECK_CIRCLE}
+          color={SageTokens.COLOR_SLIDERS.SAGE}
+        />
+        <Panel.Block>
+          <p className={SageClassnames.TYPE.BODY}>Proin nec tellus varius</p>
+          <p
+            className={"${SageClassnames.TYPE.BODY_SMALL} ${SageClassnames.TYPE_COLORS.GREY_500}"}
+          >
+            Molestie libero vel
+          </p>
+        </Panel.Block>
+        <Badge color={Badge.COLORS.WARNING} value='In progress' />
+        <Button
+          icon={SageTokens.ICONS.PEN}
+          subtle={true}
+          iconOnly={true}
+          color={Button.COLORS.PRIMARY}
+        >
+          Options
+        </Button>
+      </Panel.Row>
+    </Panel>
+  `}
+>
   <Story name='Row'>
     <Panel>
       <Panel.Row gridTemplate='eti'>
         <Icon
           icon={Icon.ICONS.CHECK_CIRCLE}
           color={SageTokens.COLOR_SLIDERS.SAGE}
-          iconOnly={true}
         />
         <Panel.Block>
           <p className={SageClassnames.TYPE.BODY}>Proin nec tellus varius</p>
@@ -141,8 +248,42 @@ A panel row is a single or isolated inline arrangement of elements. It can eithe
 
 Tiles are groups of elements that typically also each contain additional content but are laid out in a neat tiling pattern. Items can use the generic `.sage-panel__tile`, or be another Sage Component such as a Card. Use one of the tiling pattern modifiers to determine how many tiles appear in a row of the grid: 2-up, 3-up, and 4-up patterns.
 
-<Canvas>
-  <Story name='Tile'>
+<Canvas
+  mdxSource={`
+    <Panel>
+      <Panel.Tiles tilesInRow={3}>
+        <Panel.Block>
+          <Icon icon={Icon.ICONS.CIRCLE_4} size={Icon.SIZES["2XL"]} />
+          <p className={SageClassnames.TYPE.BODY}>Sed at ipsum pretium</p>
+          <p
+            className={"${SageClassnames.TYPE.BODY_SMALL} ${SageClassnames.TYPE_COLORS.GREY_500}"}
+          >
+            Ornare convallis vitae sit
+          </p>
+        </Panel.Block>
+        <Panel.Block>
+          <Icon icon={Icon.ICONS.CIRCLE_4} size={Icon.SIZES["2XL"]} />
+          <p className={SageClassnames.TYPE.BODY}>Sed at ipsum pretium</p>
+          <p
+            className={"${SageClassnames.TYPE.BODY_SMALL} ${SageClassnames.TYPE_COLORS.GREY_500}"}
+          >
+            Ornare convallis vitae sit
+          </p>
+        </Panel.Block>
+        <Panel.Block>
+          <Icon icon={Icon.ICONS.CIRCLE_4} size={Icon.SIZES["2XL"]} />
+          <p className={SageClassnames.TYPE.BODY}>Sed at ipsum pretium</p>
+          <p
+            className={"${SageClassnames.TYPE.BODY_SMALL} ${SageClassnames.TYPE_COLORS.GREY_500}"}
+          >
+            Ornare convallis vitae sit
+          </p>
+        </Panel.Block>
+      </Panel.Tiles>
+    </Panel>
+  `}
+>
+  <Story name='Tiles'>
     <Panel>
       <Panel.Tiles tilesInRow={3}>
         <Panel.Block>
@@ -181,7 +322,27 @@ Tiles are groups of elements that typically also each contain additional content
 
 The Divider is a thin rule that helps to provide additional visual separation between groups within the panel.
 
-<Canvas>
+<Canvas
+  mdxSource={`
+    <Panel>
+      <Panel.Block>
+        <p>Divider</p>
+      </Panel.Block>
+      <Panel.Divider />
+      <Panel.Block>
+        <p>Divider with label</p>
+      </Panel.Block>
+      <Panel.Divider data-divider-label='Divider label' />
+      <Panel.Block>
+        <p>Divider with full bleed</p>
+      </Panel.Block>
+      <Panel.Divider bleed={true} />
+      <Panel.Block>
+        <p>Panel block text</p>
+      </Panel.Block>
+    </Panel>
+  `}
+>
   <Story name='Divider'>
     <Panel>
       <Panel.Block>
@@ -189,9 +350,9 @@ The Divider is a thin rule that helps to provide additional visual separation be
       </Panel.Block>
       <Panel.Divider />
       <Panel.Block>
-        <p>Divider with label (check inspector tools)</p>
+        <p>Divider with label</p>
       </Panel.Block>
-      <Panel.Divider label='Divider label' />
+      <Panel.Divider data-divider-label='Divider label' />
       <Panel.Block>
         <p>Divider with full bleed</p>
       </Panel.Block>
@@ -207,7 +368,15 @@ The Divider is a thin rule that helps to provide additional visual separation be
 
 A panel figure contains an image that occupies a substantive space in the panel, typically filling edge to edge.
 
-<Canvas>
+<Canvas
+  mdxSource={`
+    <Panel>
+      <Panel.Figure>
+        <img src='https://source.unsplash.com/random/800x600' alt='' />
+      </Panel.Figure>
+    </Panel>
+  `}
+>
   <Story name='Figure'>
     <Panel>
       <Panel.Figure>
