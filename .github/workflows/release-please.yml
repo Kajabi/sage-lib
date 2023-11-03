@@ -1,0 +1,36 @@
+name: release-please
+
+on:
+  push:
+    branches:
+      - develop
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    outputs:
+      paths_released: ${{ steps.manifest-release.outputs.paths_released }}
+    steps:
+      - uses: google-github-actions/release-please-action@v3
+        id: manifest-release
+        with:
+          command: manifest
+          monorepo-tags: true
+          default-branch: main
+
+      - name: Show output from Release-Please
+        if: ${{ steps.manifest-release.outputs.releases_created }}
+        run: |
+          echo "releases_created: ${{ steps.manifest-release.outputs.releases_created }}"
+          echo "upload_url: ${{ steps.manifest-release.outputs.upload_url }}"
+          echo "html_url: ${{ steps.manifest-release.outputs.html_url }}"
+          echo "tag_name: ${{ steps.manifest-release.outputs.tag_name }}"
+          echo "major: ${{ steps.manifest-release.outputs.major }}"
+          echo "minor: ${{ steps.manifest-release.outputs.minor }}"
+          echo "patch: ${{ steps.manifest-release.outputs.patch }}"
+          echo "sha: ${{ steps.manifest-release.outputs.sha }}"
+          echo "pr: ${{ steps.manifest-release.outputs.pr }}"
