@@ -1,10 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { Modal } from '../Modal';
-import { Button } from '../Button';
-import { SageTokens } from '../configs';
-import { Icon } from '../Icon';
+import { Modal } from './Modal';
 import { Grid } from '../Grid';
 
 export const ModalScrollableCols = ({
@@ -20,26 +17,20 @@ export const ModalScrollableCols = ({
   ...rest
 }) => {
   const classNames = classnames(
-    'sage-modal-scrollable-cols',
+    'modal-scrollable-cols__modal',
     className,
   );
 
   return (
     <Modal
       active={active}
-      className="modal-scrollable-cols__funnel modal-scrollable-cols__modal"
+      className={classNames}
       size={Modal.SIZES.LG}
       {...rest}
     >
       <Modal.Header
-        icon={{ color: Icon.COLORS.RED_200, name: Icon.ICONS.DANGER }}
-        title="Modal header"
-        popover={{
-          title: 'Example popover title',
-          link: '#',
-          linkText: 'Learn more about modals',
-          content: 'Popover content'
-        }}
+        image={headerImage}
+        title={title}
         aside={headerActions}
       />
       <Modal.Body>
@@ -55,7 +46,6 @@ export const ModalScrollableCols = ({
             {preview && (
               <div className="modal-scrollable-cols__fixed-column-scroll">
                 { preview }
-                
               </div>
             )}
           </Grid.Col>

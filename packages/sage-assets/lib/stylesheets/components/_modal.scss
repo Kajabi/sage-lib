@@ -364,24 +364,26 @@ $-modal-scrollable-cols-xsmall-mobile-fixed-column-padding-top: rem(90px);
 
 .modal-scrollable-cols__modal {
   .sage-modal__header {
-    box-shadow: sage-shadow(md);
+    position: relative;
+    z-index: 2;
     margin: 0;
     padding: rem(12px) 0;
-    position: relative;
     border-start-start-radius: sage-spacing(sm);
     border-start-end-radius: sage-spacing(sm);
-    z-index: 2;
+    box-shadow: sage-shadow(md);
   }
 
   .sage-modal__header-text {
     padding: sage-spacing(2xs) sage-spacing(md);
 
+    /* stylelint-disable max-nesting-depth */
     > {
       .sage-card__row {
         display: flex;
         justify-content: space-between;
       }
     }
+    /* stylelint-enable max-nesting-depth */
   }
 
   .sage-modal__content {
@@ -393,7 +395,7 @@ $-modal-scrollable-cols-xsmall-mobile-fixed-column-padding-top: rem(90px);
     flex-direction: column;
     overflow: hidden;
     height: calc(100vh - #{$-modal-fixed-column-offset});
-    background-color: #ffffff;
+    background-color: #fff;
   }
 
   .modal-scrollable-cols__fixed-column-scroll {
@@ -407,27 +409,25 @@ $-modal-scrollable-cols-xsmall-mobile-fixed-column-padding-top: rem(90px);
 }
 
 .modal-scrollable-cols__sidebar {
+  z-index: 2;
   flex-grow: 0;
   flex-basis: $-modal-scrollable-cols-sidebar-width;
   overflow-y: auto;
-  background-color: sage-color(white);
   position: relative;
-  z-index: 2;
+  background-color: sage-color(white);
   border-block-start: sage-border(default);
   border-inline-end: sage-border(default);
   box-shadow: 6px 0 7px -6px rgba(sage-color(black), 0.16);
 
   &.modal-scrollable-cols__fixed-column {
     border-end-start-radius: sage-spacing(sm);
-    // background: blue;
   }
 }
 
 .modal-scrollable-cols__preview {
-  background-image: url('../../images/system/dot.png');
+  background-image: url("../../images/system/dot.png");
 
   &.modal-scrollable-cols__fixed-column {
-    // background: red;
     border-end-end-radius: sage-spacing(sm);
   }
 
@@ -438,17 +438,17 @@ $-modal-scrollable-cols-xsmall-mobile-fixed-column-padding-top: rem(90px);
 
 // TODO: update to use image and not icon
 .modal-scrollable-cols-header-text {
-  border-left: sage-border();
   min-width: 0;
   padding-left: sage-spacing(sm);
+  border-left: sage-border();
 
   @media (max-width: sage-breakpoint(sm-max)) {
     padding-left: sage-spacing(xs);
   }
 
   h1 {
-    white-space: nowrap;
     overflow: hidden;
+    white-space: nowrap;
     text-overflow: ellipsis;
   }
 

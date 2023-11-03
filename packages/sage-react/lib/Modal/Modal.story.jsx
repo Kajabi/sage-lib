@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { Button } from '../Button';
-import { Grid } from '../Grid';
 import { ProgressBar } from '../ProgressBar';
 import { Icon } from '../Icon';
 import { SageTokens, SageClassnames } from '../configs';
@@ -221,93 +220,6 @@ export const Wired = (args) => {
   );
 };
 
-export const ScrollableColumnsModal = (args) => {
-  const [active, setActive] = useState(false);
-  const [isClosing, setIsClosing] = useState(false);
-
-  const onExit = () => {
-    setIsClosing(true);
-    setTimeout(() => {
-      setActive(false);
-      setIsClosing(false);
-    }, 1000);
-  };
-
-  return (
-    <>
-      <Button
-        color={Button.COLORS.PRIMARY}
-        onClick={() => setActive(true)}
-      >
-        Take An Action
-      </Button>
-      <Modal
-        {...args}
-        active={active}
-        className="modal-scrollable-cols__funnel modal-scrollable-cols__modal"
-        isClosing={isClosing}
-        animation={false}
-        size={Modal.SIZES.LG}
-        onExit={onExit}
-      >
-        <Modal.Header
-          icon={{ color: Icon.COLORS.RED_200, name: Icon.ICONS.DANGER }}
-          title="Modal header"
-          popover={{
-            title: 'Example popover title',
-            link: '#',
-            linkText: 'Learn more about modals',
-            content: 'Popover content'
-          }}
-          aside={(
-            <>
-              <Button.Group gap={Button.Group.GAP_OPTIONS.MD}>
-                <Button
-                  color={Button.COLORS.SECONDARY}
-                  icon={SageTokens.ICONS.PREVIEW_ON}
-                  onClick={onExit}
-                >
-                  Preview
-                </Button>
-
-                <Button
-                  color={Button.COLORS.SECONDARY}
-                  iconOnly={true}
-                  icon={SageTokens.ICONS.REMOVE}
-                  onClick={onExit}
-                  subtle={true}
-                >
-                  Menu
-                </Button>
-              </Button.Group>
-            </>
-          )}
-        />
-        <Modal.Body>
-          <Grid.Row className="modal-scrollable-cols__container">
-            <Grid.Col className="modal-scrollable-cols__sidebar modal-scrollable-cols__fixed-column">
-              {/* {form && ( */}
-                <div className="modal-scrollable-cols__fixed-column-scroll">
-                  {/* { form } */}
-                  <p>form side</p>
-                </div>
-              {/* )} */}
-            </Grid.Col>
-            <Grid.Col className="modal-scrollable-cols__preview modal-scrollable-cols__fixed-column">
-              {/* {preview && ( */}
-                <div className="modal-scrollable-cols__fixed-column-scroll">
-                  {/* { preview } */}
-                  <p>preview side</p>
-                </div>
-              {/* )} */}
-            </Grid.Col>
-          </Grid.Row>
-        </Modal.Body>
-      </Modal>
-    </>
-  );
-};
-
 export const Fullscreen = (args) => {
   const [active, setActive] = useState(false);
 
@@ -387,7 +299,7 @@ export const ModalWithScrollingColumns = (args) => {
       <ModalScrollableCols
         {...args}
         active={active}
-        headerActions={
+        headerActions={(
           <>
             <Button.Group gap={Button.Group.GAP_OPTIONS.MD}>
               <Button
@@ -408,8 +320,8 @@ export const ModalWithScrollingColumns = (args) => {
               </Button>
             </Button.Group>
           </>
-        }
-        form={
+        )}
+        form={(
           <>
             <p>form side</p>
             <p>form side</p>
@@ -423,8 +335,9 @@ export const ModalWithScrollingColumns = (args) => {
             <p>form side</p>
             <p>form side</p>
           </>
-        }
-        preview={
+        )}
+        // headerImage="" - find way to add asset
+        preview={(
           <>
             <p>preview side</p>
             <p>preview side</p>
@@ -438,7 +351,7 @@ export const ModalWithScrollingColumns = (args) => {
             <p>preview side</p>
             <p>preview side</p>
           </>
-        }
+        )}
         isClosing={isClosing}
         onExit={onExit}
         title="My Modal"
