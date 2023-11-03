@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.15](https://github.com/kajabi/sage-lib/compare/sage-system-v1.2.14...sage-system-1.2.15) (2023-11-03)
+
+
+### Bug Fixes
+
+* **copy-button:** Use new clipboard functions ([05c560d](https://github.com/kajabi/sage-lib/commit/05c560d7af4785f41b0d6b089db0d5c23c67f4df))
+* **dropdoown:** Update to prevent triggerLabel from updating when multiselect is enabled ([8cb7942](https://github.com/kajabi/sage-lib/commit/8cb79426b187878bb3919ae131d01d21bac80c96))
+* **dropdoown:** Update to prevent triggerLabel from updating when multiselect is enabled ([5d5cee9](https://github.com/kajabi/sage-lib/commit/5d5cee9325c9b4febfa9811508114a39cadc4fdb))
+* **dropdown rails:** Keep dropdown content on the screen ([3526e82](https://github.com/kajabi/sage-lib/commit/3526e82ff2d8160854b55e6ad1df5b27d90221f7))
+* **dropdown:** Add left and right repositioning for the rails dropdown ([1d89206](https://github.com/kajabi/sage-lib/commit/1d89206108856ad05ea0bdcd54f9a2c8e1ff2fa8))
+* DSS-388 ([05c560d](https://github.com/kajabi/sage-lib/commit/05c560d7af4785f41b0d6b089db0d5c23c67f4df))
+* **expandablecard:** Update targeting to account for new markup ([cc4f20b](https://github.com/kajabi/sage-lib/commit/cc4f20b00a773c821f0c22bc366a233aacdbabbf))
+* **rails-dropdown:** Resolve multi-select panel closing on option click ([3515f64](https://github.com/kajabi/sage-lib/commit/3515f6451a53dea97ea5b498cd9373c7a1c435bd))
+* **rails-dropdown:** Resolve multi-select panel closing on option click ([13a3f14](https://github.com/kajabi/sage-lib/commit/13a3f149ae1b8905c7a0ae55cdd614ae194e1ef5))
+* **tooltip:** Add closing on click ([47d4c26](https://github.com/kajabi/sage-lib/commit/47d4c2655b6b2562778dd3541999b540478effdb))
+
 ## [1.2.14](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@1.2.13...@kajabi/sage-system@1.2.14) (2023-10-27)
 
 

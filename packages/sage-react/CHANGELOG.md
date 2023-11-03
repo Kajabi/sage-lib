@@ -3,6 +3,78 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.18.0](https://github.com/kajabi/sage-lib/compare/sage-react-v1.17.3...sage-react-1.18.0) (2023-11-03)
+
+
+### Features
+
+* Add two new examples to React Storybook ([808183b](https://github.com/kajabi/sage-lib/commit/808183bef84cbca331d69b7320991c4e21b62b0c))
+* **avatar:** Add initials and lazy load support to avatar component ([7ea2d8f](https://github.com/kajabi/sage-lib/commit/7ea2d8f32b604bd67040e34f909d5f482c9da01a))
+* **avatar:** Update naming in files to generic folks ([66061d5](https://github.com/kajabi/sage-lib/commit/66061d501b0dade3680e86f499d688161cdde865))
+* **drawer:** Add variation for ai drawer ([277ed5a](https://github.com/kajabi/sage-lib/commit/277ed5a6fbb09bddff62871561164e69eb594d40))
+* **loader:** Add typing variant ([389d559](https://github.com/kajabi/sage-lib/commit/389d559204e1360af2b8355b437da41e6257a64e))
+* **progress bar:** Add `animate` property to ProgressBar to turn animation on/off ([e867063](https://github.com/kajabi/sage-lib/commit/e8670632dc758293c8bb9e177638dea047d0f9e6))
+* **select-react:** Add the placeholder attribute ([80d4740](https://github.com/kajabi/sage-lib/commit/80d4740b04198b0c219bd51b37b9006d71afb1c7))
+* **upload card:** Adds stacked layout and id props ([4ccb1ca](https://github.com/kajabi/sage-lib/commit/4ccb1cab5ac21bae8f07079f23da2cf0068b8166))
+
+
+### Bug Fixes
+
+* **alert-react:** Update grid template to remove row when actions not present ([f3837dc](https://github.com/kajabi/sage-lib/commit/f3837dcac3138189688e88704c64ee34181d68cf))
+* **alert:** Correct react component icon display ([a86883f](https://github.com/kajabi/sage-lib/commit/a86883f0c6abad5cd8b0f4ba3931900dca50229e))
+* **avatar:** Remove button avatar reference ([7e9eb48](https://github.com/kajabi/sage-lib/commit/7e9eb487dfef9733e2fc03d4b5f5f6c8815cd019))
+* **avatar:** Remove initial story ([6bec95a](https://github.com/kajabi/sage-lib/commit/6bec95ab6724c377f434215e64bde0a357b311cf))
+* **avatar:** Remove previous updates ([983fdf9](https://github.com/kajabi/sage-lib/commit/983fdf9aaef85e780294ae00b08e6a669b0cf585))
+* **avatar:** Remove react button avatar example with initials ([1e716e9](https://github.com/kajabi/sage-lib/commit/1e716e9ca52781b98852fabb5385a950d603da10))
+* **avatar:** Update example for WithImage ([34c9174](https://github.com/kajabi/sage-lib/commit/34c9174571e34ac5c2acc493369f6632d527dd1c))
+* **banner tests:** Update tests to actually test banner and add tests for new link structure ([6c75c0b](https://github.com/kajabi/sage-lib/commit/6c75c0b81f353637bb2abce6787aa9024d734f46))
+* **banner:** Toggle active state when dismiss button clicked ([46bbb6b](https://github.com/kajabi/sage-lib/commit/46bbb6b0ad3decb359d9e5fd7be66e4e553c4b1d))
+* **button group:** Added example with link to ButtonGroup story ([cea44a3](https://github.com/kajabi/sage-lib/commit/cea44a36ac2ed5780cc887476e885775f8cfd6d2))
+* **button group:** Hello linter my old friend ([5dc091f](https://github.com/kajabi/sage-lib/commit/5dc091f6b017314b00c974bf3e77430b19ff8043))
+* **carousel:** Add parentheses to handleNext... functions ([a81141a](https://github.com/kajabi/sage-lib/commit/a81141a94f8df5752b421bf7a691b6463945db28))
+* **checkbox:** Add message to disabled example ([73ec0d0](https://github.com/kajabi/sage-lib/commit/73ec0d0d41635be503e7632120d1cc8913d7ba94))
+* **divider:** Add initial react setup and story ([c7228c8](https://github.com/kajabi/sage-lib/commit/c7228c8c6f15dd36cf22cb1945afcc45dec9c30a))
+* **divider:** Hello double quotes linter :( ([a95cad6](https://github.com/kajabi/sage-lib/commit/a95cad68bd67c463c7fe058a3d83d644012b5e35))
+* **divider:** Hello linter my old friend ([b6e1fd1](https://github.com/kajabi/sage-lib/commit/b6e1fd1614fb0db8c702144a117b685afd87e062))
+* **dropdown react:** Add horizontal repositioning to unpinned dropdowns ([7d38b2c](https://github.com/kajabi/sage-lib/commit/7d38b2cfeaf55a93e54179e1a0684b1102471ef1))
+* **dropdown:** Fix default inline positioning ([e27ab08](https://github.com/kajabi/sage-lib/commit/e27ab081250e3a2661b8d26c02d27c9d3b2b5993))
+* DSS-374 ([4f23182](https://github.com/kajabi/sage-lib/commit/4f23182a05a103df483c9b2aeb8fbaeea88b9c1a))
+* DSS-400 ([80d4740](https://github.com/kajabi/sage-lib/commit/80d4740b04198b0c219bd51b37b9006d71afb1c7))
+* DSS-405 ([b9253dd](https://github.com/kajabi/sage-lib/commit/b9253dd465f187ffb16cf488ea9662d85f5dc06d))
+* **expandablecard:** Add new props and conditionals ([05305a7](https://github.com/kajabi/sage-lib/commit/05305a7db7f24f18e60747e8e36666be60f4612a))
+* **expandablecard:** Remove duplicate class name ([35020ad](https://github.com/kajabi/sage-lib/commit/35020ad7b02bb81f46c3da33ed7caf4046cefc02))
+* **expandablecard:** Update to use customHeader and alignTrigger ([e649ee2](https://github.com/kajabi/sage-lib/commit/e649ee2a475fc857ed5aa01e3d5c234dc117aa89))
+* **form section:** Allow user-defined heading ([b1410ee](https://github.com/kajabi/sage-lib/commit/b1410ee2a1d1b906ed43f2247121f009b0e9a118))
+* **form section:** Apply heading style ([46d3fdb](https://github.com/kajabi/sage-lib/commit/46d3fdb9e22d7feff85164ba16f914899bf38910))
+* **hero:** Add stories and sync up prop documentation ([8eaa3f2](https://github.com/kajabi/sage-lib/commit/8eaa3f2b22573392eb8cafe90fad52cba3d73ea2))
+* **hero:** Correct img path to reduce requests ([be7bae2](https://github.com/kajabi/sage-lib/commit/be7bae24d8d2d4cfa1c26f20ee01ea0ad7db8b35))
+* **hero:** Fine tuning based on review - hat-tip [@anechol](https://github.com/anechol) ([f9cd8c7](https://github.com/kajabi/sage-lib/commit/f9cd8c7395ed5bd31c44d784a41756c46ad4effb))
+* **hero:** Hello linter my old friend ([b399758](https://github.com/kajabi/sage-lib/commit/b39975832dea101bb5b4f36184c15454cdd307ed))
+* **hero:** Remove branding prop and updates hero story ([b835fb9](https://github.com/kajabi/sage-lib/commit/b835fb950faa3fbe55c86c3548255b307de287a3))
+* **hero:** Remove extra comma from import ([c975c10](https://github.com/kajabi/sage-lib/commit/c975c10164e4c7c607c07014d1004011648235a3))
+* **hero:** Removed branding prop/code and added new contained prop ([fa4da78](https://github.com/kajabi/sage-lib/commit/fa4da786bc656e5136f816ec7418bb82ea6eef2b))
+* **hero:** Typo and single quote lint fix ([30999fa](https://github.com/kajabi/sage-lib/commit/30999fac85621afee05194447779ccbfeb0146ea))
+* **icon:** Corrects 'role not present' a11y violation ([4792fae](https://github.com/kajabi/sage-lib/commit/4792fae999ebaed6f413d7da75921a6d7ad1cfc0))
+* **icon:** Hello linter my old friend ([245beeb](https://github.com/kajabi/sage-lib/commit/245beeb5772535ea390441796022413670a03073))
+* **icons:** Add additional ios icons ([7e96db5](https://github.com/kajabi/sage-lib/commit/7e96db55a401f8dc3949668e9dd761cbbf0b9fd4))
+* **icons:** Add new icon to icons.js ([967d93b](https://github.com/kajabi/sage-lib/commit/967d93b0fd3fb4e54ff63a81779207e18a25645a))
+* **icons:** Add new icon to icons.js ([e0fec19](https://github.com/kajabi/sage-lib/commit/e0fec1988d7c401c404eb7a773f5594660ff2e26))
+* **icons:** Add new icon to icons.js ([ca1e19b](https://github.com/kajabi/sage-lib/commit/ca1e19b06a676dc1656ce6776d6460a91b9bae4a))
+* **icons:** Add new icons to icons.js ([b5f78c4](https://github.com/kajabi/sage-lib/commit/b5f78c4af316bb1c92f1b7ec97e6d49d70e06365))
+* **icons:** Add new icons to icons.js ([2d3a051](https://github.com/kajabi/sage-lib/commit/2d3a051829336cde00c74f7dad73a993383a5e78))
+* **modal:** Update subheader to match figma spec (react) ([c681e4f](https://github.com/kajabi/sage-lib/commit/c681e4f5c1bd279653392de7a2aebadece9e8221))
+* **react banner link:** Change link prop to accept shape with multiple link params ([a81a839](https://github.com/kajabi/sage-lib/commit/a81a8399d85259c7fd68622d417cc4fb8954071f))
+* **react-button:** SuppressDefaultClass warning ([4f23182](https://github.com/kajabi/sage-lib/commit/4f23182a05a103df483c9b2aeb8fbaeea88b9c1a))
+* **react-dropdown:** Max depth reached due to improper dependency added ([e6ba3c7](https://github.com/kajabi/sage-lib/commit/e6ba3c72610ed29157137db2d625e329420d8324))
+* **react-dropdown:** Positions the dropdown based on viewport available space ([cf11dc9](https://github.com/kajabi/sage-lib/commit/cf11dc91a26db066b0323984e0d280ee274c5253))
+* **react-dropdowns:** Add ...rest to allow additional props ([6810313](https://github.com/kajabi/sage-lib/commit/6810313a09bf60048e034b27fdd98973fe690e00))
+* **react-input:** Allow ref to be forwarded to component ([d672b2a](https://github.com/kajabi/sage-lib/commit/d672b2a15b7c7275131203feea56518df4b44a2b))
+* Removing until we find a better solution to read Sage version ([150118c](https://github.com/kajabi/sage-lib/commit/150118cf043c2343cbe30bf66b06a7004e789b2d))
+* **table:** Update the helper to order table data based on the schema column order ([6e412b3](https://github.com/kajabi/sage-lib/commit/6e412b37e6b7bf7c5946326cf06a02440954a534))
+* **tests:** Add a few more tests for all expected rendering of link ([643fe0a](https://github.com/kajabi/sage-lib/commit/643fe0ad739eaf95fb84ebbdfc6ebc74ac2fd6ba))
+* **tests:** Make tests more explicit to check for  element ([2121519](https://github.com/kajabi/sage-lib/commit/21215194fb48e7225e88ba7d557b1f1946d61d4d))
+* **toggle:** Add condition for customContent ([225e53d](https://github.com/kajabi/sage-lib/commit/225e53da9c56ab396136b97b817ab1eb4d6b50c9))
+
 ## [1.17.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.17.2...@kajabi/sage-react@1.17.3) (2023-10-27)
 
 

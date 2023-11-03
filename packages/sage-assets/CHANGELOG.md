@@ -3,6 +3,72 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.13.0](https://github.com/kajabi/sage-lib/compare/sage-assets-v1.12.3...sage-assets-1.13.0) (2023-11-03)
+
+
+### Features
+
+* **drawer:** Add variation for ai drawer ([277ed5a](https://github.com/kajabi/sage-lib/commit/277ed5a6fbb09bddff62871561164e69eb594d40))
+* **loader:** Add typing variant ([389d559](https://github.com/kajabi/sage-lib/commit/389d559204e1360af2b8355b437da41e6257a64e))
+* **progress bar:** Add `animate` property to ProgressBar to turn animation on/off ([e867063](https://github.com/kajabi/sage-lib/commit/e8670632dc758293c8bb9e177638dea047d0f9e6))
+* **upload card:** Adds stacked layout and id props ([4ccb1ca](https://github.com/kajabi/sage-lib/commit/4ccb1cab5ac21bae8f07079f23da2cf0068b8166))
+
+
+### Bug Fixes
+
+* **alert-react:** Update grid template to remove row when actions not present ([f3837dc](https://github.com/kajabi/sage-lib/commit/f3837dcac3138189688e88704c64ee34181d68cf))
+* **assistant:** Add width to branding ([8b36888](https://github.com/kajabi/sage-lib/commit/8b36888c425c4c0d8f1a3d566624a01d1e50fa41))
+* **badge:** Adjsuted padding to match design spec ([c257a1e](https://github.com/kajabi/sage-lib/commit/c257a1e19f25ecf6c96c1b3766a136d988a92f13))
+* **banner:** Add underline to link ([ad2e383](https://github.com/kajabi/sage-lib/commit/ad2e383817c873ccb7702cd67a3c4ea0fcfdd4fb))
+* **button:** Add missing border-color values ([d69469e](https://github.com/kajabi/sage-lib/commit/d69469e010e89edb1b5afa1b8712a69038fc7fe5))
+* **button:** Adjust border to correct button height ([7af41d5](https://github.com/kajabi/sage-lib/commit/7af41d5af71a772a1e93cf485963a673b41ababe))
+* **button:** Revert border change to a.sage-btn and fix subtle ([eabc481](https://github.com/kajabi/sage-lib/commit/eabc481a206615c8e56696ecd1890d95ebda0409))
+* **checkbox:** Margin value update for labels ([e79b747](https://github.com/kajabi/sage-lib/commit/e79b74716ac1c2eed2ec2a6126e722e1b9565ba9))
+* **checkbox:** Update message color when disabled ([b0504fb](https://github.com/kajabi/sage-lib/commit/b0504fbf3f0dce7dd6475283333b1a5a0422b85a))
+* **copy-button:** Update order and alignment when child of expandable card ([69a035a](https://github.com/kajabi/sage-lib/commit/69a035ac67d33d6ebbaa49039389594de391c419))
+* **copybutton-react:** Update icon alignment ([074bf95](https://github.com/kajabi/sage-lib/commit/074bf95af7a0bca0044f373d8dd48168e581b79e))
+* **divider:** Add divider styles ([1340707](https://github.com/kajabi/sage-lib/commit/1340707daf425a2a4571bb0825e5aa1e7416a4a8))
+* **divider:** Convert px value to use rem function ([d049118](https://github.com/kajabi/sage-lib/commit/d0491182e6117252759062400125379982449b01))
+* **dropdown:** Add visual indicator when dropdown is scrollable ([95f41f8](https://github.com/kajabi/sage-lib/commit/95f41f8fc4529343a9b2ef2b8e57a3ae911fdf9a))
+* **dropdown:** Remove unnecessary duplicate selector ([a1ff19c](https://github.com/kajabi/sage-lib/commit/a1ff19c85271e30b4974b75db1c382f723b3da57))
+* **dropdown:** Resolve contact ui dropdown getting cut off on small screens ([7945af0](https://github.com/kajabi/sage-lib/commit/7945af07ce4c42a634ba49633e0508c9e3b3a363))
+* **dropdown:** Update dropdown breakpoint ([259f280](https://github.com/kajabi/sage-lib/commit/259f280e1a791f97fcc8b3b2fbd2a5b79080ade9))
+* **expandablecard:** Add new styles ([d0c87e0](https://github.com/kajabi/sage-lib/commit/d0c87e0ef3e1fdc8d48efe078848b36c530f5e49))
+* **expandablecard:** Styling adjustments ([9bf245e](https://github.com/kajabi/sage-lib/commit/9bf245ea22b98890bb0e00d65cc674f04c0623ef))
+* **expandablecard:** Update to use customHeader and alignTrigger ([e649ee2](https://github.com/kajabi/sage-lib/commit/e649ee2a475fc857ed5aa01e3d5c234dc117aa89))
+* **help link:** Refactor styling to remove set sizing ([307403a](https://github.com/kajabi/sage-lib/commit/307403a91eb04f82889ee4c872730dcbbb9119c6))
+* **hero:** Add stories and sync up prop documentation ([8eaa3f2](https://github.com/kajabi/sage-lib/commit/8eaa3f2b22573392eb8cafe90fad52cba3d73ea2))
+* **hero:** Css adjustments  + formatting clean up ([ae3e7f6](https://github.com/kajabi/sage-lib/commit/ae3e7f6b2673cbed483b6f80c4099dc073a7eb0d))
+* **hero:** Css adjustments for max image size ([413185a](https://github.com/kajabi/sage-lib/commit/413185a008e55cdd0e64813be03e7d2f4b988eb4))
+* **hero:** Fine tuning based on review - hat-tip [@anechol](https://github.com/anechol) ([f9cd8c7](https://github.com/kajabi/sage-lib/commit/f9cd8c7395ed5bd31c44d784a41756c46ad4effb))
+* **hero:** Initial styling adjustments ([7f6dd56](https://github.com/kajabi/sage-lib/commit/7f6dd56e5a2e36426c02178d5d794155dfb10684))
+* **hero:** Styling updates based on feedback ([91c366e](https://github.com/kajabi/sage-lib/commit/91c366ecad42fbb6b1a296f66e3124437a05cb35))
+* **hero:** Styling updates based on feedback ([15014d1](https://github.com/kajabi/sage-lib/commit/15014d1fea1f5ff9431a5a0c828bd1edb7cd71b4))
+* **hero:** Update large hero max width to full ([59fad64](https://github.com/kajabi/sage-lib/commit/59fad64a8e888ba43133337eccf6258f1441821b))
+* **icons:** Add additional ios icons ([7e96db5](https://github.com/kajabi/sage-lib/commit/7e96db55a401f8dc3949668e9dd761cbbf0b9fd4))
+* **icons:** Add new icon to _icon.scss ([2fa981e](https://github.com/kajabi/sage-lib/commit/2fa981e1e1906047963b28d425a39ecee4056b76))
+* **icons:** Add new icon to _icon.scss ([d7c48f9](https://github.com/kajabi/sage-lib/commit/d7c48f923ddbc47061c7416c889c146f93f1e80e))
+* **icons:** Add new icon to _icon.scss ([58a3189](https://github.com/kajabi/sage-lib/commit/58a3189bf8f4fd1eb1193030efaddc61a52c4517))
+* **icons:** Add new icon to _icon.scss ([36b98ea](https://github.com/kajabi/sage-lib/commit/36b98eafe432266c7ab31d2849bf8002e9c04dae))
+* **icons:** Add new icons to _icon.scss ([7086c2a](https://github.com/kajabi/sage-lib/commit/7086c2a973038c4e069c2843210a4267a17c7107))
+* **icons:** Increment cdn-version variable ([1c9b9eb](https://github.com/kajabi/sage-lib/commit/1c9b9eb47043c06208b0837caab97c566ab12897))
+* **icons:** Increment cdn-version variable ([df627b9](https://github.com/kajabi/sage-lib/commit/df627b92c395354de67e1e6b4f197680b3f083d0))
+* **icons:** Increment cdn-version variable ([c0ee158](https://github.com/kajabi/sage-lib/commit/c0ee158f5e7393107e2dc7cab9c5a81b899b894e))
+* **icons:** Increment cdn-version variable ([0277bd1](https://github.com/kajabi/sage-lib/commit/0277bd13665132fa909015648fb78faed106fa42))
+* **icons:** Increment cdn-version variable ([850d34b](https://github.com/kajabi/sage-lib/commit/850d34b6d69f0945343c4b21c57a2c8f42397dd8))
+* **indicator:** Update current color to match design spec ([7b09ef0](https://github.com/kajabi/sage-lib/commit/7b09ef0ba2aabdfc9dff7ddb8bf12ce219abee42))
+* **link:** Update focus outline for help icon link ([3988a5a](https://github.com/kajabi/sage-lib/commit/3988a5a7f650753f6f3f7c34f0627e47635a984d))
+* **panel controls:** Padding adjustments ([205dded](https://github.com/kajabi/sage-lib/commit/205dded81aba78caef79cc431ecfd88aa8597768))
+* **panel controls:** Style adjustments ([5882ade](https://github.com/kajabi/sage-lib/commit/5882ade8c890b5b3af93606fdef07f80d182b154))
+* **search:** Adjust icon and border styling ([950c97a](https://github.com/kajabi/sage-lib/commit/950c97aa0413de8256b8a319765a9b623276d6b8))
+* **search:** Adjust icon and padding for alignment - hat-tip [@goodwinchris](https://github.com/goodwinchris) ([adf903b](https://github.com/kajabi/sage-lib/commit/adf903b7e954056ab65d403ff47a60e49e3bd78f))
+* **search:** Typo ([cc8bb71](https://github.com/kajabi/sage-lib/commit/cc8bb714175a1c0a5077d07a0e99adc3f2940fa6))
+* **search:** Undo typo ([c493609](https://github.com/kajabi/sage-lib/commit/c493609582c0b83ebc40733fd61d5ce02d67a7d8))
+* **search:** Updates styling for default search input ([85645f8](https://github.com/kajabi/sage-lib/commit/85645f8069e8b8d4791180e6174c94cdc6183d5d))
+* **sortable:** Fixes issue with title dictating content's width ([451a9bc](https://github.com/kajabi/sage-lib/commit/451a9bc9596e5157b804d710a9962d53a8f97c2b))
+* **upload card:** Align specs, refactor template logic ([c04f9c2](https://github.com/kajabi/sage-lib/commit/c04f9c23447b804b2f46927982a65e3c0cd93ed5))
+* **upload card:** Style adjustments ([fde0ba7](https://github.com/kajabi/sage-lib/commit/fde0ba7b4a9a3941c34b1743bd8821501ec62403))
+
 ## [1.12.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.12.2...@kajabi/sage-assets@1.12.3) (2023-10-27)
 
 
