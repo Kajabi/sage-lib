@@ -21,6 +21,7 @@ jobs:
           command: manifest
           monorepo-tags: true
           default-branch: main
+          changelog-types: '[{"type":"docs", "section": "Documentation","hidden":false}]'
 
       - name: Show output from Release-Please
         if: ${{ steps.manifest-release.outputs.releases_created }}
@@ -34,3 +35,7 @@ jobs:
           echo "patch: ${{ steps.manifest-release.outputs.patch }}"
           echo "sha: ${{ steps.manifest-release.outputs.sha }}"
           echo "pr: ${{ steps.manifest-release.outputs.pr }}"
+
+      - name: Run Release Deploy
+        if: ${{ steps.manifest-release.outputs.releases_created }}
+        uses: ./.github/workflows/release-deploy-v3.yml

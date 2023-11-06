@@ -1,12 +1,10 @@
-name: 'Release and Deploy v2 - DISABLED'
+name: 'Release and Deploy v2'
 
 on:
-  # Uncomment the line below if you want to run the workflow manually
-  # and comment out lines 7-9
-  # workflow_dispatch:
-  # push:
-  #   branches:
-  #     - main
+  workflow_call:
+  push:
+    branches:
+      - main
 
 concurrency:
   group: ${{ github.ref }}
@@ -221,7 +219,7 @@ jobs:
         run: npx lerna bootstrap --ci
 
       - name: Lerna Publish
-        run: npx lerna publish --registry github --yes
+        run: npx lerna publish from-package --no-push --registry github --yes
 
   deploy-sites:
     needs: publish
