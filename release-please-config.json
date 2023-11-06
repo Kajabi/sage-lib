@@ -1,0 +1,31 @@
+{
+  "bootstrap-sha": "42ddac26b10cdb21dfcd547308fb6a29f9b8c6ef",
+  "bump-minor-pre-major": false,
+  "bump-patch-for-minor-pre-major": false,
+  "include-v-in-tag": false,
+  "include-component-in-tag": true,
+  "packages": {
+    "docs":{
+      "package-name": "@kajabi/sage"
+    },
+    "packages/sage-assets": {
+      "package-name": "@kajabi/sage-assets"
+
+    },
+    "packages/sage-packs": {
+      "package-name": "@kajabi/sage-packs"
+
+    },
+    "packages/sage-react": {
+      "package-name": "@kajabi/sage-react"
+
+    },
+    "packages/sage-system": {
+      "package-name": "@kajabi/sage-system"
+    }
+  },
+  "plugins": [
+    "sentence-case"
+  ],
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json"
+}
