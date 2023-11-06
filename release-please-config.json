@@ -1,0 +1,27 @@
+{
+  "bootstrap-sha": "42ddac26b10cdb21dfcd547308fb6a29f9b8c6ef",
+  "bump-minor-pre-major": false,
+  "bump-patch-for-minor-pre-major": false,
+  "include-v-in-tag": false,
+  "include-component-in-tag": true,
+  "packages": {
+    "docs":{
+    },
+    "packages/sage-assets": {
+
+    },
+    "packages/sage-packs": {
+
+    },
+    "packages/sage-react": {
+
+    },
+    "packages/sage-system": {
+
+    }
+  },
+  "plugins": [
+    "sentence-case"
+  ],
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json"
+}
