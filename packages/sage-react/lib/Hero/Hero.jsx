@@ -106,7 +106,9 @@ Hero.propTypes = {
   /**
    * The attributes for the CTA link.
    */
-  ctaAttributes: PropTypes.node,
+  ctaAttributes: PropTypes.shape({
+    href: PropTypes.string
+  }),
   /**
    * The content to be rendered within the Hero.
    */
