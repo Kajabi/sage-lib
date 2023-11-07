@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.19.0](https://github.com/Kajabi/sage-lib/compare/sage-v5.18.3...sage-5.19.0) (2023-11-07)
+
+
+### Features
+
+* **hero:** Image start ([c3ec8bd](https://github.com/Kajabi/sage-lib/commit/c3ec8bd898c3656c60044b5971cd64ab74bbd553))
+* **hero:** Rails - add image_start prop to rb ([c3ec8bd](https://github.com/Kajabi/sage-lib/commit/c3ec8bd898c3656c60044b5971cd64ab74bbd553))
+* **hero:** Rails - add image-start class to erb ([c3ec8bd](https://github.com/Kajabi/sage-lib/commit/c3ec8bd898c3656c60044b5971cd64ab74bbd553))
+* **hero:** Rails - add new hero image ([c3ec8bd](https://github.com/Kajabi/sage-lib/commit/c3ec8bd898c3656c60044b5971cd64ab74bbd553))
+* **hero:** Rails - add props for inline start image option ([c3ec8bd](https://github.com/Kajabi/sage-lib/commit/c3ec8bd898c3656c60044b5971cd64ab74bbd553))
+* **hero:** React - make the updates to react code for image start ([c3ec8bd](https://github.com/Kajabi/sage-lib/commit/c3ec8bd898c3656c60044b5971cd64ab74bbd553))
+* **hero:** Update styles for logical properties and start image alignment ([c3ec8bd](https://github.com/Kajabi/sage-lib/commit/c3ec8bd898c3656c60044b5971cd64ab74bbd553))
+
+
+### Bug Fixes
+
+* **hero:** React - correct ctaAttribute prop type ([c3ec8bd](https://github.com/Kajabi/sage-lib/commit/c3ec8bd898c3656c60044b5971cd64ab74bbd553))
+
 ## [5.18.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.18.2...@kajabi/sage@5.18.3) (2023-10-27)
 
 **Note:** Version bump only for package @kajabi/sage
