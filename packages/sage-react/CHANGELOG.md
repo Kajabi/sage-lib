@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.18.0](https://github.com/Kajabi/sage-lib/compare/sage-react-v1.17.3...sage-react-1.18.0) (2023-11-13)
+
+
+### Features
+
+* **hero:** Image start ([3de0e20](https://github.com/Kajabi/sage-lib/commit/3de0e20748733334a3d37b7b501f740b2b8b44ec))
+* **hero:** Rails - add image_start prop to rb ([3de0e20](https://github.com/Kajabi/sage-lib/commit/3de0e20748733334a3d37b7b501f740b2b8b44ec))
+* **hero:** Rails - add image-start class to erb ([3de0e20](https://github.com/Kajabi/sage-lib/commit/3de0e20748733334a3d37b7b501f740b2b8b44ec))
+* **hero:** Rails - add new hero image ([3de0e20](https://github.com/Kajabi/sage-lib/commit/3de0e20748733334a3d37b7b501f740b2b8b44ec))
+* **hero:** Rails - add props for inline start image option ([3de0e20](https://github.com/Kajabi/sage-lib/commit/3de0e20748733334a3d37b7b501f740b2b8b44ec))
+* **hero:** React - make the updates to react code for image start ([3de0e20](https://github.com/Kajabi/sage-lib/commit/3de0e20748733334a3d37b7b501f740b2b8b44ec))
+* **hero:** Update styles for logical properties and start image alignment ([3de0e20](https://github.com/Kajabi/sage-lib/commit/3de0e20748733334a3d37b7b501f740b2b8b44ec))
+* **modal:** Add custom modal with scrolling content variant ([b9ec7ee](https://github.com/Kajabi/sage-lib/commit/b9ec7ee0e4255bccf9cb1f70dc63fed2b2069c71))
+
+
+### Bug Fixes
+
+* **hero:** React - correct ctaAttribute prop type ([3de0e20](https://github.com/Kajabi/sage-lib/commit/3de0e20748733334a3d37b7b501f740b2b8b44ec))
+* **modal:** Update image ([b9ec7ee](https://github.com/Kajabi/sage-lib/commit/b9ec7ee0e4255bccf9cb1f70dc63fed2b2069c71))
+
 ## [1.17.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.17.2...@kajabi/sage-react@1.17.3) (2023-10-27)
 
 
