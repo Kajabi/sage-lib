@@ -1,10 +1,12 @@
-name: 'Release and Deploy v3'
+# Disabling until release-please is resolved
+# see .github/workflows/release-please.yml for more information
+name: 'Release and Deploy v3 - NOT IN USE'
 
 on:
-  # workflow_call:
-  push:
-    branches:
-      - main
+  workflow_call:
+  # push:
+  #   branches:
+  #     - main
 
 concurrency:
   group: ${{ github.ref }}

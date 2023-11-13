@@ -1,9 +1,15 @@
+# Disabling until work through missing steps
+# 1. Updating Docs
+#   a. lib/sage_rails/lib/sage_rails/version.rb
+#   b. package.json
+# 2. Updating "dependency" packages
+#   a. sage-react: "@kajabi/sage-assets"
+#   b. docs: "@kajabi/sage-packs"
+#   c. packs: "@kajabi/sage-assets", "@kajabi/sage-react", "@kajabi/sage-system"
 name: release-please
 
 on:
-  push:
-    branches:
-      - develop
+  workflow_dispatch:
 
 permissions:
   contents: write

@@ -1,12 +1,12 @@
-name: 'Release and Deploy v2 - DISABLED'
+name: 'Release and Deploy v2'
 
 on:
   # Uncomment the line below if you want to run the workflow manually
   # and comment out lines 7-9
-  workflow_dispatch:
-  # push:
-  #   branches:
-  #     - main
+  # workflow_dispatch:
+  push:
+    branches:
+      - main
 
 concurrency:
   group: ${{ github.ref }}
