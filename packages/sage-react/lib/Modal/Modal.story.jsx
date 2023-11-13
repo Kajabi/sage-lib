@@ -6,7 +6,6 @@ import { Icon } from '../Icon';
 import { SageTokens, SageClassnames } from '../configs';
 import { disableArgs, selectArgs } from '../story-support/helpers';
 import { Modal } from './Modal';
-import { ModalScrollableCols } from './ModalScrollableCols';
 
 const DefaultBody = ({ onExit }) => (
   <>
@@ -272,90 +271,6 @@ export const ModalWithCustomSize = (args) => {
       >
         <DefaultBody onExit={onExit} />
       </Modal>
-    </>
-  );
-};
-
-export const ModalWithScrollingColumns = (args) => {
-  const [active, setActive] = useState(false);
-  const [isClosing, setIsClosing] = useState(false);
-
-  const onExit = () => {
-    setIsClosing(true);
-    setTimeout(() => {
-      setActive(false);
-      setIsClosing(false);
-    }, 1000);
-  };
-
-  return (
-    <>
-      <Button
-        color={Button.COLORS.PRIMARY}
-        onClick={() => setActive(true)}
-      >
-        Take An Action
-      </Button>
-      <ModalScrollableCols
-        {...args}
-        active={active}
-        headerActions={(
-          <>
-            <Button.Group gap={Button.Group.GAP_OPTIONS.MD}>
-              <Button
-                color={Button.COLORS.SECONDARY}
-                icon={SageTokens.ICONS.PREVIEW_ON}
-                onClick={onExit}
-              >
-                Preview
-              </Button>
-              <Button
-                color={Button.COLORS.SECONDARY}
-                iconOnly={true}
-                icon={SageTokens.ICONS.REMOVE}
-                onClick={onExit}
-                subtle={true}
-              >
-                Menu
-              </Button>
-            </Button.Group>
-          </>
-        )}
-        form={(
-          <>
-            <p>form side</p>
-            <p>form side</p>
-            <p>form side</p>
-            <p>form side</p>
-            <p>form side</p>
-            <p>form side</p>
-            <p>form side</p>
-            <p>form side</p>
-            <p>form side</p>
-            <p>form side</p>
-            <p>form side</p>
-          </>
-        )}
-        // headerImage="" - find way to add asset
-        preview={(
-          <>
-            <p>preview side</p>
-            <p>preview side</p>
-            <p>preview side</p>
-            <p>preview side</p>
-            <p>preview side</p>
-            <p>preview side</p>
-            <p>preview side</p>
-            <p>preview side</p>
-            <p>preview side</p>
-            <p>preview side</p>
-            <p>preview side</p>
-          </>
-        )}
-        isClosing={isClosing}
-        onExit={onExit}
-        title="My Modal"
-      />
     </>
   );
 };
