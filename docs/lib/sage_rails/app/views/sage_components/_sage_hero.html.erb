@@ -21,6 +21,7 @@
     <%= "sage-hero--borderless" if component.borderless %>
     <%= "sage-hero--contained" if component.contained %>
     <%= "sage-hero--custom-background-color" if component.custom_background_color %>
+    <%= "sage-hero--image-start" if component.image_start %>
     <%= component.generated_css_classes %>
   "
   data-js-hero
@@ -43,6 +44,7 @@
       <%= content_for :sage_hero_footer_actions %>
     <% end %>
   </div>
+
   <% if component.cta_attributes.present? %>
     <a
       <% component.cta_attributes.each do |key, value| %>
@@ -57,4 +59,5 @@
       <%= artwork %>
     </div>
   <% end %>
+
 </article>

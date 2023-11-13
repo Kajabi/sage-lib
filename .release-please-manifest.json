@@ -1,9 +1,8 @@
 {
   ".": "0.0.0",
-  "docs": "5.18.3",
-  "packages/sage-assets": "1.12.3",
+  "docs": "5.19.0",
+  "packages/sage-assets": "1.13.0",
   "packages/sage-packs": "1.0.49",
-  "packages/sage-react": "1.17.3",
+  "packages/sage-react": "1.18.0",
   "packages/sage-system": "1.2.14"
-
 }

@@ -14,6 +14,7 @@ export const Hero = ({
   contained,
   footerActions,
   image,
+  imageStart,
   heroSize,
   title,
   titleTag,
@@ -25,6 +26,7 @@ export const Hero = ({
       [`sage-hero--${heroSize}`]: heroSize,
       'sage-hero--borderless': borderless,
       'sage-hero--contained': contained,
+      'sage-hero--image-start': imageStart,
       'sage-hero--custom-background-color': customBackgroundColor,
     },
   );
@@ -79,10 +81,10 @@ export const Hero = ({
 Hero.Sizes = HERO_SIZES;
 
 Hero.defaultProps = {
-  borderless: null,
+  borderless: false,
   ctaAttributes: null,
   children: null,
-  contained: null,
+  contained: false,
   customBackgroundColor: null,
   description: null,
   footerActions: null,
@@ -90,24 +92,64 @@ Hero.defaultProps = {
     alt: null,
     src: null
   },
+  imageStart: false,
   heroSize: Hero.Sizes.LARGE,
   title: null,
   titleTag: 'h2',
 };
 
 Hero.propTypes = {
+  /**
+   * If true, will remove the border.
+   */
   borderless: PropTypes.bool,
-  ctaAttributes: PropTypes.node,
+  /**
+   * The attributes for the CTA link.
+   */
+  ctaAttributes: PropTypes.shape({
+    href: PropTypes.string
+  }),
+  /**
+   * The content to be rendered within the Hero.
+   */
   children: PropTypes.node,
+  /**
+   * If true, the image will not fill the space.
+   */
   contained: PropTypes.bool,
+  /**
+   * The background color to be applied to the Hero.
+   */
   customBackgroundColor: PropTypes.string,
+  /**
+   * The description to be rendered within the Hero.
+   */
   description: PropTypes.string,
+  /**
+   * The actions to be rendered within the Hero's footer.
+   */
   footerActions: PropTypes.node,
+  /**
+   * The image to be rendered within the Hero.
+   */
   image: PropTypes.shape({
     alt: PropTypes.string,
     src: PropTypes.string
   }),
+  /**
+   * If true, the image will be rendered before the content.
+   */
+  imageStart: PropTypes.bool,
+  /**
+   * Sets the size of the Hero's width.
+   */
   heroSize: PropTypes.oneOf(Hero.Sizes),
+  /**
+   * The title to be rendered within the Hero.
+   */
   title: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+  /**
+   * The HTML tag to be applied to the title.
+   */
   titleTag: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6'])
 };
