@@ -341,6 +341,7 @@ module SageTokens
     "tag-filled",
     "text-styles",
     "theme-store",
+    "theme-store-filled",
     "thumb-down",
     "thumb-down-filled",
     "thumb-up",

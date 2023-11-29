@@ -242,6 +242,7 @@ export const TOKENS_ICONS = {
   TAG_FILLED: 'tag-filled',
   TEXT_STYLES: 'text-styles',
   THEME_STORE: 'theme-store',
+  THEME_STORE_FILLED: 'theme-store-filled',
   THUMB_DOWN: 'thumb-down',
   THUMB_DOWN_FILLED: 'thumb-down-filled',
   THUMB_UP: 'thumb-up',
