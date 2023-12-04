@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.19.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.19.1...@kajabi/sage@5.19.2) (2023-12-04)
+
+
+### Bug Fixes
+
+* **icons:** add additional icon theme-store-filled ([9b132b2](https://github.com/Kajabi/sage-lib/commit/9b132b2c3d707581ff45fd0a5fdb61d0edbf423e))
+* **icons:** add new icons to sage_tokens.rb ([838c527](https://github.com/Kajabi/sage-lib/commit/838c527025aad8fa9a0cb7aa192b5d56fd3267ca))
+
+
+
+
+
 ## [5.19.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.18.3...@kajabi/sage@5.19.1) (2023-11-13)
 
 **Note:** Version bump only for package @kajabi/sage
