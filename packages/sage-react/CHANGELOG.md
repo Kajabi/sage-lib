@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.18.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.18.1...@kajabi/sage-react@1.18.3) (2023-12-04)
+
+
+### Bug Fixes
+
+* **icons:** add additional icon theme-store-filled ([9b132b2](https://github.com/Kajabi/sage-lib/commit/9b132b2c3d707581ff45fd0a5fdb61d0edbf423e))
+* **icons:** add new icons to icons.js ([c484483](https://github.com/Kajabi/sage-lib/commit/c4844830a494048fa37010e8331c783efab9665a))
+
+
+
+
+
 ## [1.18.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.18.1...@kajabi/sage-react@1.18.2) (2023-12-04)
 
 
