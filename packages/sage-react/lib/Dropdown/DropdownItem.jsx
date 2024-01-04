@@ -244,7 +244,5 @@ DropdownItem.propTypes = {
   to: PropTypes.string,
   tooltip: PropTypes.shape({
     position: PropTypes.oneOf(Object.values(Tooltip.POSITIONS)),
-    size: PropTypes.oneOf(Object.values(Tooltip.SIZES)),
-    theme: PropTypes.oneOf(Object.values(Tooltip.THEMES)),
   }),
 };
