@@ -37,6 +37,7 @@ export const SelectDropdown = ({
   selectionBecomesLabel,
   showSelectionsAsLabels,
   triggerWidth,
+  triggerClassnames,
   ...rest // Used as an option to pass other props to Dropdown (base) component
 }) => {
   const emptySelectedValue = (
@@ -204,6 +205,7 @@ export const SelectDropdown = ({
           label={label}
           icon={configs.icon}
           selectedValue={configs.selectedValue}
+          triggerClassnames={triggerClassnames}
         />
       )}
       disabled={disabled}
@@ -279,6 +281,7 @@ SelectDropdown.defaultProps = {
   searchPlaceholder: 'Find',
   selectionBecomesLabel: true,
   showSelectionsAsLabels: false,
+  triggerClassnames: '',
   triggerWidth: null,
 };
 
@@ -320,5 +323,6 @@ SelectDropdown.propTypes = {
   searchPlaceholder: PropTypes.string,
   selectionBecomesLabel: PropTypes.bool,
   showSelectionsAsLabels: PropTypes.bool,
+  triggerClassnames: PropTypes.string,
   triggerWidth: PropTypes.string,
 };
