@@ -14,7 +14,6 @@ export const DropdownTriggerSelect = ({
   selectedValue,
   triggerClassnames
 }) => {
-
   const classNames = classnames(
     'sage-dropdown__trigger-selected-value',
     triggerClassnames,
