@@ -41,7 +41,7 @@ $-nav-subitem-border-width: rem(2px);
   display: flex;
   align-items: center;
   padding: rem(4px) rem(12px);
-  margin-bottom: sage-spacing(2xs);
+  margin-bottom: $-nav-icon-spacing;
   text-decoration: none;
   color: $-nav-color-text;
   border-radius: sage-border(radius-medium);
