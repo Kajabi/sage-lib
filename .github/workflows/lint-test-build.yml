@@ -19,16 +19,26 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: Install Yarn
+        env:
+          NODE_OPTIONS: "--openssl-legacy-provider"
         run: npm install -g yarn
 
       - name: Yarn Install
+        env:
+          NODE_OPTIONS: "--openssl-legacy-provider"
         run: yarn install
 
       - name: Yarn Lint
+        env:
+          NODE_OPTIONS: "--openssl-legacy-provider"
         run: yarn lint
 
       - name: Yarn Test
+        env:
+          NODE_OPTIONS: "--openssl-legacy-provider"
         run: yarn test
 
       - name: Yarn Build
+        env:
+          NODE_OPTIONS: "--openssl-legacy-provider"
         run: yarn build
