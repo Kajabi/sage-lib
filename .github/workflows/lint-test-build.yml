@@ -20,25 +20,46 @@ jobs:
 
       - name: Install Yarn
         env:
-          NODE_OPTIONS: "--openssl-legacy-provider"
-        run: npm install -g yarn
+          NODE_VERSION: ${{ matrix.node-version }}
+        run: |
+          if [[ $NODE_VERSION == '18' ]]; then
+            echo "NODE_OPTIONS=--openssl-legacy-provider" >> "$GITHUB_ENV"
+          fi
+          npm install -g yarn
 
       - name: Yarn Install
         env:
-          NODE_OPTIONS: "--openssl-legacy-provider"
-        run: yarn install
+          NODE_VERSION: ${{ matrix.node-version }}
+        run: |
+          if [[ $NODE_VERSION == '18' ]]; then
+            echo "NODE_OPTIONS=--openssl-legacy-provider" >> "$GITHUB_ENV"
+          fi
+          yarn install
+
 
       - name: Yarn Lint
         env:
-          NODE_OPTIONS: "--openssl-legacy-provider"
-        run: yarn lint
+          NODE_VERSION: ${{ matrix.node-version }}
+        run: |
+          if [[ $NODE_VERSION == '18' ]]; then
+            echo "NODE_OPTIONS=--openssl-legacy-provider" >> "$GITHUB_ENV"
+          fi
+          yarn lint
 
       - name: Yarn Test
         env:
-          NODE_OPTIONS: "--openssl-legacy-provider"
-        run: yarn test
+          NODE_VERSION: ${{ matrix.node-version }}
+        run: |
+          if [[ $NODE_VERSION == '18' ]]; then
+            echo "NODE_OPTIONS=--openssl-legacy-provider" >> "$GITHUB_ENV"
+          fi
+          yarn test
 
       - name: Yarn Build
         env:
-          NODE_OPTIONS: "--openssl-legacy-provider"
-        run: yarn build
+          NODE_VERSION: ${{ matrix.node-version }}
+        run: |
+          if [[ $NODE_VERSION == '18' ]]; then
+            echo "NODE_OPTIONS=--openssl-legacy-provider" >> "$GITHUB_ENV"
+          fi
+          yarn build
