@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [16 | 18]
+        node-version: [16, 18]
     steps:
       - name: Clone Sage-Lib Repo
         uses: actions/checkout@v3
