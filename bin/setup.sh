@@ -15,30 +15,6 @@ function add_token() {
   echo "//npm.pkg.github.com/:_authToken=${GH_TOKEN}" >> ~/.npmrc
 }
 
-# Install the CircleCI CLI if it's missing
-function install_circleci_cli() {
-  which circleci > /dev/null || (
-    case "$(uname -s)" in
-      Darwin)
-        brew install circleci
-      ;;
-      Linux)
-        set -x
-        tempd=$(mktemp -d)
-        curl https://raw.githubusercontent.com/CircleCI-Public/circleci-cli/master/install.sh > $tempd/install.sh
-        chmod a+x $tempd/install.sh
-        sudo $tempd/install.sh
-        rm -rf $tempd
-        set +x
-      ;;
-      *)
-        echo "OS type (${uname -s}) is not currently supported."
-        exit 1
-      ;;
-    esac
-  )
-}
-
 # Check to see if we have an auth token for GitHub in the main npmrc
 if grep -Fq "npm.pkg.github.com" ~/.npmrc; then
     echo_custom '[SETUP] Found GitHub authorization token in ~/.npmrc'
@@ -50,5 +26,4 @@ else
     add_token
 fi
 
-install_circleci_cli;
 yarn setup:init

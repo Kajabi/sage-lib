@@ -6,6 +6,9 @@ jobs:
   lint_test_build:
     name: Lint, Test, Build
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16, 18]
     steps:
       - name: Clone Sage-Lib Repo
         uses: actions/checkout@v3
