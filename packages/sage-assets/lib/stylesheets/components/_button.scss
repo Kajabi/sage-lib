@@ -238,6 +238,11 @@ $-btn-loading-min-height: rem(36px);
 
   .sage-dropdown__trigger--select & {
     font-weight: sage-font-weight(regular);
+    border-width: 0;
+    box-shadow: sage-border-interactive(default);
+    &:hover {
+      box-shadow: sage-border-interactive(hover);
+    }
   }
 
   .sage-expandable-card--align-arrow-right &.sage-expandable-card__trigger {

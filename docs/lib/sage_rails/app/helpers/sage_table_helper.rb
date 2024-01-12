@@ -104,8 +104,7 @@ module SageTableHelper
       @row_proc = block
     end
 
-    def column(attr, opts={})
-      block = Proc.new if block_given?
+    def column(attr, opts={}, &block)
       columns << SageColumn.new(template, attr, block, opts)
     end
 

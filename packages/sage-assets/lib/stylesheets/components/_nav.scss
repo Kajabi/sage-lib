@@ -9,7 +9,7 @@ $-nav-color-focus: sage-color(grey, 500);
 $-nav-color-background: sage-color(grey, 300);
 $-nav-color-background-hover: sage-color(grey, 300);
 $-nav-icon-size: rem(20px);
-$-nav-icon-spacing: rem(10px);
+$-nav-icon-spacing: rem(8px);
 $-nav-subitem-border-width: rem(2px);
 
 .sage-nav__icon {
@@ -25,7 +25,7 @@ $-nav-subitem-border-width: rem(2px);
 }
 
 .sage-nav__link {
-  @extend %t-sage-heading-6;
+  @extend %t-sage-body-med;
 }
 
 .sage-nav__link,
@@ -40,8 +40,8 @@ $-nav-subitem-border-width: rem(2px);
 
   display: flex;
   align-items: center;
-  padding: rem(10px) rem(12px);
-  margin-bottom: sage-spacing(2xs);
+  padding: rem(4px) rem(12px);
+  margin-bottom: $-nav-icon-spacing;
   text-decoration: none;
   color: $-nav-color-text;
   border-radius: sage-border(radius-medium);
@@ -59,7 +59,7 @@ $-nav-subitem-border-width: rem(2px);
 }
 
 .sage-nav__link--sub {
-  @extend %t-sage-body-small-semi;
+  @extend %t-sage-body-small-med;
 
   &.sage-nav__link--active {
     @include sage-focus-outline--update-color(sage-color(primary, 200));
@@ -115,6 +115,6 @@ $-nav-subitem-border-width: rem(2px);
 
 .sage-nav__list--sub-with-icon {
   margin-left: calc((#{sage-spacing(sm)} + (#{$-nav-icon-size} / 2)) - (#{$-nav-subitem-border-width} / 2) - (#{$-nav-icon-spacing} / 2));
-  padding-left: sage-spacing();
+  padding-left: sage-spacing(sm);
   border-left: $-nav-subitem-border-width solid sage-color(grey, 400);
 }
