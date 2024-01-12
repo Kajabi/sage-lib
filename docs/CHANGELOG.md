@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.19.4](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.19.3...@kajabi/sage@5.19.4) (2024-01-12)
+
+
+### Bug Fixes
+
+* **icons:** add new icons to sage_tokens.rb ([124fee9](https://github.com/Kajabi/sage-lib/commit/124fee9f656bde76d8d88393f5e532e2354f3cdc))
+* **table:** avoids empty Proc.new call for Ruby 3 compatibility ([39261ee](https://github.com/Kajabi/sage-lib/commit/39261eed5c81616849be0ebff203a2d8a8e274c9))
+
+
+
+
+
 ## [5.19.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.19.1...@kajabi/sage@5.19.3) (2023-12-04)
 
 

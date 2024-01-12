@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.18.4](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.18.3...@kajabi/sage-react@1.18.4) (2024-01-12)
+
+
+### Bug Fixes
+
+* **dropdown:** add triggerclassnames to select dropdown ([e265e17](https://github.com/Kajabi/sage-lib/commit/e265e17e6ce39f2ca12b5fdd1d93faf41f2ac3c7))
+* **dropdown:** correct linter error ([b4bd433](https://github.com/Kajabi/sage-lib/commit/b4bd433632d6b67298ecae3efd762a8df2c58cc1))
+* **icons:** add new icons to icons.js ([c77cbfd](https://github.com/Kajabi/sage-lib/commit/c77cbfd3423a90ae2fe0e35ba41e451abf5b916c))
+* remove tooltip size and theme props from propTypes ([15be621](https://github.com/Kajabi/sage-lib/commit/15be62174d8e67b2b90fa0bb365df46397d710ea))
+* **tooltip:** remove size and theme props ([28657a4](https://github.com/Kajabi/sage-lib/commit/28657a4c80065f5f1be6516712662a91cb636a2b))
+
+
+
+
+
 ## [1.18.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.18.1...@kajabi/sage-react@1.18.3) (2023-12-04)
 
 

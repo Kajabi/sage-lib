@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.13.4](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.13.3...@kajabi/sage-assets@1.13.4) (2024-01-12)
+
+
+### Bug Fixes
+
+* **icons:** add new icons to _icon.scss ([73e3d99](https://github.com/Kajabi/sage-lib/commit/73e3d99312b616c2deaa5ee9372822b6202809d5))
+* **icons:** increment cdn-version variable ([008c9bf](https://github.com/Kajabi/sage-lib/commit/008c9bf4bf84db1b67d45c4c89217e1270f8349e))
+* **nav:** adjust nav icon spacing ([f9bdba5](https://github.com/Kajabi/sage-lib/commit/f9bdba53d1672ef9bd46c6ecb04d06cc121b98a8))
+* **nav:** adjust spacing ([56b5611](https://github.com/Kajabi/sage-lib/commit/56b5611706e6dc7392947de8c9e1c08ba3a4cd78))
+* **nav:** adjust spacing and typography ([d397789](https://github.com/Kajabi/sage-lib/commit/d397789099dd1ea695c4f1a313186705338c5ba5))
+* style adjustments for dropdown select trigger ([a7e8cba](https://github.com/Kajabi/sage-lib/commit/a7e8cbaa1a1d7cf8e21d10da6ae86822cbbff5d2))
+
+
+
+
+
 ## [1.13.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.13.1...@kajabi/sage-assets@1.13.3) (2023-12-04)
 
 
