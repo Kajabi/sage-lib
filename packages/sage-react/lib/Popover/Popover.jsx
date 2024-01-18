@@ -21,19 +21,19 @@ export const Popover = ({
   title,
   ...rest
 }) => {
-  const [isActive, setisActive] = useState(active);
+  const [isActive, setIsActive] = useState(active);
 
   const handleExpandClick = () => {
-    setisActive(true);
+    setIsActive(true);
   };
 
   const handleCloseClick = () => {
-    setisActive(false);
+    setIsActive(false);
   };
 
   const handleKeydown = (ev) => {
     if (isActive && ev.keyCode === 27) {
-      setisActive(false);
+      setIsActive(false);
     }
   };
 
