@@ -21,6 +21,7 @@ export default {
     }),
   },
   args: {
+    active: false,
     label: 'Learn more',
     icon: SageTokens.ICONS.QUESTION_CIRCLE,
     iconOnly: true,

@@ -7,6 +7,7 @@ import { SageTokens } from '../configs';
 import { POPOVER_POSITIONS } from './configs';
 
 export const Popover = ({
+  active,
   className,
   children,
   customContentClassName,
@@ -20,19 +21,19 @@ export const Popover = ({
   title,
   ...rest
 }) => {
-  const [selfActive, setSelfActive] = useState(false);
+  const [isActive, setIsActive] = useState(active);
 
   const handleExpandClick = () => {
-    setSelfActive(true);
+    setIsActive(true);
   };
 
   const handleCloseClick = () => {
-    setSelfActive(false);
+    setIsActive(false);
   };
 
   const handleKeydown = (ev) => {
-    if (selfActive && ev.keyCode === 27) {
-      setSelfActive(false);
+    if (isActive && ev.keyCode === 27) {
+      setIsActive(false);
     }
   };
 
@@ -40,7 +41,7 @@ export const Popover = ({
     'sage-popover',
     className,
     {
-      'sage-popover--is-expanded': selfActive,
+      'sage-popover--is-expanded': isActive,
       [`sage-popover--${position}`]: position,
     }
   );
@@ -66,7 +67,7 @@ export const Popover = ({
     >
       <Button
         aria-controls={id}
-        aria-expanded={selfActive}
+        aria-expanded={isActive}
         aria-haspopup={true}
         className="sage-popover__button"
         color={Button.COLORS.SECONDARY}
@@ -84,6 +85,7 @@ export const Popover = ({
         role="button"
         onKeyDown={handleKeydown}
         tabIndex={-1}
+        aria-expanded={isActive}
       />
       <div className="sage-popover__panel">
         {media && (
@@ -118,6 +120,7 @@ export const Popover = ({
 Popover.POSITIONS = POPOVER_POSITIONS;
 
 Popover.defaultProps = {
+  active: false,
   className: null,
   children: null,
   customContentClassName: null,
@@ -132,6 +135,7 @@ Popover.defaultProps = {
 };
 
 Popover.propTypes = {
+  active: PropTypes.bool,
   className: PropTypes.string,
   children: PropTypes.node,
   customContentClassName: PropTypes.string,
