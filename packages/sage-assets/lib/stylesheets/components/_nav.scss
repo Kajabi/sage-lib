@@ -4,11 +4,11 @@
 /// @group sage
 ////
 
-$-nav-color-text: sage-color(charcoal, 500);
+$-nav-color-text: sage-color(charcoal, 300);
 $-nav-color-focus: sage-color(grey, 500);
 $-nav-color-background: sage-color(grey, 300);
 $-nav-color-background-hover: sage-color(grey, 300);
-$-nav-icon-size: rem(20px);
+$-nav-icon-size: rem(16px);
 $-nav-icon-spacing: rem(8px);
 $-nav-subitem-border-width: rem(2px);
 
@@ -49,6 +49,7 @@ $-nav-subitem-border-width: rem(2px);
   transition-property: background, box-shadow;
 
   &:hover {
+    color: $-nav-color-text;
     background-color: $-nav-color-background-hover;
   }
 }
