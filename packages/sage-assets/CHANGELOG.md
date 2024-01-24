@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.13.5](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.13.4...@kajabi/sage-assets@1.13.5) (2024-01-24)
+
+
+### Bug Fixes
+
+* **nav:** adjust sizing and color of text and icon ([1769d47](https://github.com/Kajabi/sage-lib/commit/1769d479d3cf4f4f4d7e1fa5730a885189e99772))
+
+
+
+
+
 ## [1.13.4](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.13.3...@kajabi/sage-assets@1.13.4) (2024-01-12)
 
 
