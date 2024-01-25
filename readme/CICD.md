@@ -1,6 +1,6 @@
 # Continuous Integration, Deployment, Versioning, and Releases
 
-Continuous Integration is being handled by CircleCI with deployments going to Heroku. Lerna is integrated into the Pipeline to allow for automatic Versioning, Changelogs, and Releases.
+Continuous Integration is being handled by GitHub Actions with deployments going to Heroku. Lerna is integrated into the Pipeline to allow for automatic Versioning, Changelogs, and Releases.
 
 ## Jobs
 
@@ -22,7 +22,7 @@ The `bin/bump-gem.sh` script is executed as part of the versioning processes to 
 
 Once all versioning is handled Lerna will [publish](https://github.com/lerna/lerna/tree/main/commands/publish#readme) tags and releases to the main repository.
 
-CircleCI will then initiate a deployment of the primary "docs" site, the storybook site as part of the `@kajabi/sage-react` package, and the sassdocs site as part of the `@kajabi/sage-assets` package. Read the Deployment section of this document for more information.
+GitHub Actions will then initiate a deployment of the primary "docs" site, the storybook site as part of the `@kajabi/sage-react` package, and the sassdocs site as part of the `@kajabi/sage-assets` package. Read the Deployment section of this document for more information.
 
 ## Deployment
 
@@ -34,15 +34,9 @@ Deployed to: https://sage-lib-documentation.herokuapp.com/
 
 The `docs:deploy` script at the root of the monorepo is designed to push a subtree of the `docs/` folder to the Heroku master.
 
-#### CircleCI Env Requirements
-
-- **$GH_TOKEN**: A GitHub Personal Access Token with permissions to publish to the repository as well as packages.
-- **$HEROKU_API_KEY**: An API key with access to deploy to the environment
-- **$HEROKU_DOCS_APP_NAME**: The git address name for the Heroku app (e.g. "sage-lib-documentation")
-
 #### Heroku Env Requirements
 
-- **NPMRC**: Utilize the $GH_TOKEN environment variable listed in your CircleCI env in place of `<your_token>`:
+> Note: Must be a valid GitHub PAT
 
 ```text
 //npm.pkg.github.com/:_authToken=<your_token>
@@ -61,12 +55,6 @@ Deployed to: https://sage-lib-storybook.herokuapp.com/
 
 The `storybook:deploy` script at the root of the monorepo is designed to push a subtree of the `packages/sage-react` folder to the Heroku master.
 
-#### CircleCI Env Requirements
-
-- **$GH_TOKEN**: A GitHub Personal Access Token with permissions to publish to the repository as well as packages.
-- **$HEROKU_API_KEY**: An API key with access to deploy to the environment
-- **$HEROKU_STORYBOOK_APP_NAME:** The git address name for the Heroku app (e.g. "sage-lib-storybook")
-
 #### Heroku Buildpack Requirements
 
 - heroku/nodejs
@@ -76,12 +64,6 @@ The `storybook:deploy` script at the root of the monorepo is designed to push a 
 Deployed to: https://sage-lib-sassdocs.herokuapp.com/
 
 The `sassdoc:deploy` script at the root of the monorepo is designed to push a subtree of the `packages/sage-assets` folder to the Heroku master.
-
-#### CircleCI Env Requirements
-
-- **$GH_TOKEN**: A GitHub Personal Access Token with permissions to publish to the repository as well as packages.
-- **$HEROKU_API_KEY**: An API key with access to deploy to the environment
-- **$HEROKU_SASSDOCS_APP_NAME**: The git address name for the Heroku app (e.g. "sage-lib-sassdocs")
 
 #### Heroku Buildpack Requirements
 
