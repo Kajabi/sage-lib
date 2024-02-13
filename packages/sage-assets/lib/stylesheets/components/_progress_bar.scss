@@ -54,6 +54,7 @@ $-progress-bar-height: sage-spacing(xs);
 
 .sage-progress-bar__animate {
   animation: 3s sage-progress-bar--slide ease;
+  transition: 1s width ease;
 }
 
 .sage-progress-bar__element {
