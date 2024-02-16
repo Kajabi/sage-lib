@@ -53,6 +53,7 @@ $-progress-bar-height: sage-spacing(xs);
 }
 
 .sage-progress-bar__animate {
+  transition: 1s width ease;
   animation: 3s sage-progress-bar--slide ease;
 }
 
