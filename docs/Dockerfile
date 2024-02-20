@@ -8,6 +8,10 @@ ARG NODE_VERSION="16.20.2"
 ARG YARN_VERSION="1.22.18"
 ARG ARCH="x64"
 ARG GITHUB_TOKEN
+ARG SECRET_KEY_BASE="setting_random_secret_for_asset_precompile"
+
+ENV SECRET_KEY_BASE=$SECRET_KEY_BASE
+ENV RAILS_ENV=$RAILS_ENV
 
 RUN apk add \
   bash \
@@ -34,14 +38,9 @@ ENV HOME="/app"
 ENV BUNDLE_PATH="/app/vendor/gems"
 ENV BUNDLE_APP_CONFIG="/app/.bundle"
 
-
-RUN gem update --system
 RUN gem install bundler:$BUNDLER_VERSION
 
 COPY Gemfile Gemfile.lock ./
-
-# ISSUE - why is this being run twice... TODO delete
-# RUN gem install bundler
 
 RUN if [[ "$RAILS_ENV" == "production" ]]; then  bundle config set --local without 'development test'; fi
 
@@ -49,13 +48,14 @@ COPY --chown=${NONROOT_UID}:${NONROOT_GID} . .
 
 RUN bundle install
 
-RUN echo "-----> Using .npmrc from config "
+RUN echo "-----> Using .npmrc from config"
+RUN npm config set @kajabi:registry https://npm.pkg.github.com
 RUN npm config set '//npm.pkg.github.com/:_authToken' '${GITHUB_TOKEN}'
 
+RUN bundle exec rails assets:precompile
 RUN yarn install --check-files
-RUN bundle exec rails assets:precompile SECRET_KEY_BASE=foobarbaz
 
 EXPOSE 3000
 
-CMD ["bundle", "exec", "rails", "s", "-b", "0.0.0.0"]
+CMD bundle exec rails s -b 0.0.0.0 -e $RAILS_ENV
 

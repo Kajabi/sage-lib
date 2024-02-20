@@ -5,5 +5,5 @@ Rails.application.configure do
   config.storybook_root_url = "https://sage-lib-storybook.staging.kajabi.farm/?path=/docs/"
 
   # Sassdocs deploy url to differentiate in different environments
-  config.sassdocs_root_url = "https://sage-lib-documentation.staging.kajabi.farm/pages/index"
+  config.sassdocs_root_url = "https://sage-lib-sassdocs.staging.kajabi.farm/pages/index"
 end

@@ -1,7 +1,9 @@
 name: Lint-Test-Build
 on:
+  workflow_call:
   workflow_dispatch:
   pull_request:
+
 jobs:
   lint_test_build:
     name: Lint, Test, Build
