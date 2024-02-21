@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.18.5](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.18.4...@kajabi/sage-react@1.18.5) (2024-01-24)
+
+
+### Bug Fixes
+
+* **popover:** add active prop ([65a7515](https://github.com/Kajabi/sage-lib/commit/65a7515811fcc794531729ffc2719afd3c1c9a41))
+* **popover:** update case for naming ([2d91753](https://github.com/Kajabi/sage-lib/commit/2d9175308595b862cd7653d9249d82fb75d2d70f))
+* **popover:** update naming for clarity ([bd26ae4](https://github.com/Kajabi/sage-lib/commit/bd26ae42adefa1c84cd671d51d9a0ed84cd0f4ae))
+
+
+
+
+
 ## [1.18.4](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.18.3...@kajabi/sage-react@1.18.4) (2024-01-12)
 
 
