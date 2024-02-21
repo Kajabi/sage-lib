@@ -270,6 +270,7 @@ module SageTokens
     "loop",
     "mail",
     "mail-filled",
+    "mail-open",
     "map",
     "mapped",
     "margin-left",
