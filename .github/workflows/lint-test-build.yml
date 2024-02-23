@@ -13,10 +13,10 @@ jobs:
         node-version: ${{ fromJSON(vars.NODE_VERSIONS) }}
     steps:
       - name: Clone Sage-Lib Repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set Node Version
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
 

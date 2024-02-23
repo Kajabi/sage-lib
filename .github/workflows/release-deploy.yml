@@ -100,7 +100,7 @@ jobs:
         run: echo "DOCKER_BRANCH_NAME=$(echo $BRANCH_NAME | sed "s/[^[:alnum:]\-\.\_]/-/g")-$GITHUB_RUN_NUMBER" >> $GITHUB_ENV
 
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       # Docs Site
       - name: Build and push docs site

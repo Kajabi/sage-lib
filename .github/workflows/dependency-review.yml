@@ -5,7 +5,7 @@
 # Source repository: https://github.com/actions/dependency-review-action
 # Public documentation: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-dependency-review#dependency-review-enforcement
 name: 'Dependency Review'
-on: 
+on:
   pull_request:
     paths:
       - 'package.json'
@@ -32,7 +32,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 'Checkout Repository'
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Dependency Review
         uses: actions/dependency-review-action@v3
         with:
@@ -61,10 +61,10 @@ jobs:
             GPL-1.0-only, GPL-1.0-or-later, GPL-1.0, GPL-2.0-only,
             GPL-2.0-or-later, GPL-2.0, GPL-3.0-only, GPL-3.0-or-later, GPL-3.0,
             QPL-1.0, Sleepycat
-          comment-summary-in-pr: true 
+          comment-summary-in-pr: true
         # ([String]). Block the pull request on these licenses (optional)
         # Possible values: Any  `spdx_id` value(s) from https://docs.github.com/en/rest/licenses
-         
+
         # ([String]). Skip these GitHub Advisory Database IDs during detection (optional)
         # Possible values: Any valid GitHub Advisory Database ID from https://github.com/advisories
-        #allow-ghsas: 
+        #allow-ghsas:
