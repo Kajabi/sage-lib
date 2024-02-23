@@ -243,6 +243,9 @@ $-btn-loading-min-height: rem(36px);
     &:hover {
       box-shadow: sage-border-interactive(hover);
     }
+    &:disabled {
+      box-shadow: sage-border-interactive(disabled);
+    }
   }
 
   .sage-expandable-card--align-arrow-right &.sage-expandable-card__trigger {
