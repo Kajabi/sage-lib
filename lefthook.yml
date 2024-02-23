@@ -1,9 +1,3 @@
-pre-push:
-  commands:
-    circleci_validate:
-      files: git diff --name-only main -- .circleci/config.yml
-      run: circleci config validate
-
 pre-commit:
   commands:
     yarn_validate:

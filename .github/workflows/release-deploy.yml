@@ -1,0 +1,154 @@
+name: Release-Deploy
+on:
+  # !!Emergency override!! uncomment below and access the actions tab in GitHub to run a release/deploy
+  # workflow_dispatch:
+  push:
+    branches:
+      - main
+      - develop
+
+concurrency:
+  group: ${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint-test-build:
+    uses: ./.github/workflows/lint-test-build.yml
+
+  setup:
+    needs: [lint-test-build]
+    runs-on: ubuntu-latest
+    outputs:
+      postfix: ${{ env.postfix }}
+      gitsha: ${{ steps.gitsha.outputs.value }}
+    steps:
+      # # Setup Auth token to push to github packages
+      - name: Set NPM Config
+        run: npm config set '//npm.pkg.github.com/:_authToken' '${{ secrets.ACCESS_TOKEN }}'
+
+      - name: Add safe directory
+        run: git config --global --add safe.directory /__w/sage-lib/sage-lib
+
+      - name: Clone Sage-Lib Repo
+        uses: actions/checkout@v2
+        with:
+          # pulls all commits (needed for lerna / semantic release to correctly version)
+          fetch-depth: "0"
+
+      # Setup Git Credentials to come from the Bot
+      - name: Set Bot Email
+        run: git config user.email "dev+github-bot@kajabi.com"
+
+      - name: Set Bot Name
+        run: git config user.name "Kajabi Automation Bot"
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+        with:
+          version: v0.9.1
+
+      - name: Determine git sha to checkout
+        uses: haya14busa/action-cond@v1
+        id: gitsha
+        with:
+          cond: ${{ github.event_name == 'pull_request' }}
+          if_true: ${{ github.event.pull_request.head.sha }}
+          if_false: ${{ github.sha }}
+
+      # Envs based on the current branch
+      - name: Branch Env
+        id: branch_env
+        run: |
+          echo "Running on branch "
+          if [ "${{ github.ref }}" == "refs/heads/develop" ]; then
+            echo "postfix=staging" >> $GITHUB_ENV
+          elif [ "${{ github.ref }}" == "refs/heads/main" ]; then
+            echo "postfix=production" >> $GITHUB_ENV
+          else
+            echo "postfix=staging" >> $GITHUB_ENV
+          fi
+
+  build_and_push:
+    needs: [setup]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.SAGE_ECR_AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.SAGE_ECR_AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+          role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
+          role-duration-seconds: 1200
+          role-session-name: SageECRPushSession
+
+      - name: Login to Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v2
+        with:
+          mask-password: true
+
+      - name: Set branch name if not PR
+        if: github.event_name != 'pull_request'
+        run: echo "BRANCH_NAME=$(echo ${GITHUB_REF#refs/heads/})" >> $GITHUB_ENV
+
+      - name: Set branch name if PR
+        if: github.event_name == 'pull_request'
+        run: echo "BRANCH_NAME=$(echo ${GITHUB_HEAD_REF})" >> $GITHUB_ENV
+
+      - name: Set valid docker tag branch name
+        run: echo "DOCKER_BRANCH_NAME=$(echo $BRANCH_NAME | sed "s/[^[:alnum:]\-\.\_]/-/g")-$GITHUB_RUN_NUMBER" >> $GITHUB_ENV
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Docs Site
+      - name: Build and push docs site
+        uses: docker/build-push-action@v2
+        env:
+          ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+          ECR_REPOSITORY: ${{ secrets.ECR_REPOSITORY_SAGE_DOCS }}
+          IMAGE_SHA_TAG: ${{ needs.setup.outputs.gitsha }}
+          POSTFIX: ${{ needs.setup.outputs.postfix }}
+        with:
+          file: ./docs/Dockerfile
+          build-args: |
+            GITHUB_TOKEN=${{ secrets.ACCESS_TOKEN }}
+          context: ./docs
+          push: true
+          tags: |
+            ${{ env.ECR_REGISTRY }}/${{ env.ECR_REPOSITORY }}:${{ env.IMAGE_SHA_TAG }}-release-${{ env.POSTFIX }}
+
+      # Storybook Site
+      - name: Build and push storybook
+        uses: docker/build-push-action@v2
+        env:
+          ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+          ECR_REPOSITORY: ${{ secrets.ECR_REPOSITORY_SAGE_STORYBOOK }}
+          IMAGE_SHA_TAG: ${{ needs.setup.outputs.gitsha }}
+          POSTFIX: ${{ needs.setup.outputs.postfix }}
+        with:
+          file: ./packages/sage-react/Dockerfile
+          build-args: |
+            GITHUB_TOKEN=${{ secrets.ACCESS_TOKEN }}
+          context: ./packages/sage-react/
+          push: true
+          tags: |
+            ${{ env.ECR_REGISTRY }}/${{ env.ECR_REPOSITORY }}:${{ env.IMAGE_SHA_TAG }}-release-${{ env.POSTFIX }}
+
+      # Sassdocs Site
+      - name: Build and push sassdocs
+        uses: docker/build-push-action@v2
+        env:
+          ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+          ECR_REPOSITORY: ${{ secrets.ECR_REPOSITORY_SAGE_SASSDOCS }}
+          IMAGE_SHA_TAG: ${{ needs.setup.outputs.gitsha }}
+          POSTFIX: ${{ needs.setup.outputs.postfix }}
+        with:
+          file: ./packages/sage-assets/Dockerfile
+          build-args: |
+            GITHUB_TOKEN=${{ secrets.ACCESS_TOKEN }}
+          context: ./packages/sage-assets/
+          push: true
+          tags: |
+            ${{ env.ECR_REGISTRY }}/${{ env.ECR_REPOSITORY }}:${{ env.IMAGE_SHA_TAG }}-release-${{ env.POSTFIX }}

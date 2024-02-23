@@ -38,11 +38,12 @@ RUN npm config set @kajabi:registry https://npm.pkg.github.com
 RUN npm config set '//npm.pkg.github.com/:_authToken' '${GITHUB_TOKEN}'
 
 COPY --chown={$NONROOT_UID}:${NONROOT_GID} package.json /app/package.json
-RUN yarn
+RUN yarn install --check-files
 
 COPY --chown={$NONROOT_UID}:${NONROOT_GID} .babelrc /app/.babelrc
 COPY --chown={$NONROOT_UID}:${NONROOT_GID} lib /app/lib
 COPY --chown={$NONROOT_UID}:${NONROOT_GID} .storybook /app/.storybook
+COPY --chown={$NONROOT_UID}:${NONROOT_GID} public /app/public
 
 EXPOSE $PORT
 

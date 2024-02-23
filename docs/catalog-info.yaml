@@ -12,8 +12,6 @@ metadata:
     - url: https://sage-lib-documentation.herokuapp.com/pages/index
       title: Public Documentation Site
       icon: dashboard
-  annotations:
-    circleci.com/project-slug: github/Kajabi/sage-lib
 spec:
   type: website
   lifecycle: production

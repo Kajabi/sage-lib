@@ -1,31 +1,72 @@
 name: Lint-Test-Build
 on:
+  workflow_call:
   workflow_dispatch:
   pull_request:
+
 jobs:
   lint_test_build:
     name: Lint, Test, Build
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: ${{ fromJSON(vars.NODE_VERSIONS) }}
     steps:
       - name: Clone Sage-Lib Repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set Node Version
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: "16"
+          node-version: ${{ matrix.node-version }}
 
       - name: Install Yarn
-        run: npm install -g yarn
+        env:
+          NODE_VERSION: ${{ matrix.node-version }}
+        run: |
+          if [[ $NODE_VERSION == '18' ]]; then
+            NODE_OPTIONS=--openssl-legacy-provider npm install -g yarn
+          else
+            npm install -g yarn
+          fi
 
       - name: Yarn Install
-        run: yarn install
+        env:
+          NODE_VERSION: ${{ matrix.node-version }}
+        run: |
+          if [[ $NODE_VERSION == '18' ]]; then
+            NODE_OPTIONS=--openssl-legacy-provider yarn install
+          else
+            yarn install
+          fi
+
 
       - name: Yarn Lint
-        run: yarn lint
+        env:
+          NODE_VERSION: ${{ matrix.node-version }}
+        run: |
+          if [[ $NODE_VERSION == '18' ]]; then
+            NODE_OPTIONS=--openssl-legacy-provider yarn lint
+          else
+            yarn lint
+          fi
 
       - name: Yarn Test
-        run: yarn test
+        env:
+          NODE_VERSION: ${{ matrix.node-version }}
+        run: |
+          if [[ $NODE_VERSION == '18' ]]; then
+            NODE_OPTIONS=--openssl-legacy-provider yarn test
+          else
+            yarn test
+          fi
 
       - name: Yarn Build
-        run: yarn build
+        env:
+          NODE_VERSION: ${{ matrix.node-version }}
+        run: |
+          if [[ $NODE_VERSION == '18' ]]; then
+            NODE_OPTIONS=--openssl-legacy-provider yarn build
+          else
+            yarn build
+          fi
