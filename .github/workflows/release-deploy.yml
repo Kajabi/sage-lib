@@ -68,8 +68,13 @@ jobs:
             echo "postfix=staging" >> $GITHUB_ENV
           fi
 
-  build_and_push:
+  publish:
     needs: [setup]
+    uses: ./.github/workflows/publish.yml
+    secrets: inherit
+
+  build_and_push:
+    needs: [setup, publish]
     runs-on: ubuntu-latest
     steps:
       - name: Configure AWS credentials

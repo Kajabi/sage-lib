@@ -1,0 +1,49 @@
+name: Publish
+on:
+    workflow_call:
+
+jobs:
+  publish:
+    name: Publish Packages
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out latest
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '2.7.7'
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          registry-url: https://npm.pkg.github.com
+
+      - name: Install Packages
+        run:  NODE_OPTIONS=--openssl-legacy-provider yarn install --frozen-lockfile
+
+      - name: Set Bot Email
+        run: git config user.email "dev+github-bot@kajabi.com"
+
+      - name: Set Bot Name
+        run: git config user.name "Kajabi Automation Bot"
+
+      - name: Set NPM Config
+        run: npm config set '//npm.pkg.github.com/:_authToken' '${{ secrets.ACCESS_TOKEN }}'
+
+      - name: Lerna Boostrap
+        run: npx lerna bootstrap --ci
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          registry-url: https://npm.pkg.github.com
+
+      - name: Lerna Publish
+        run: NODE_OPTIONS=--openssl-legacy-provider npx lerna publish --registry github --yes
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.ACCESS_TOKEN }}
