@@ -107,6 +107,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - run: git checkout HEAD
+
       # Docs Site
       - name: Build and push docs site
         uses: docker/build-push-action@v2
