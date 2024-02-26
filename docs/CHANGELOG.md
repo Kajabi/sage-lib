@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.20.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.19.5...@kajabi/sage@5.20.0) (2024-02-26)
+
+
+### Bug Fixes
+
+* removing branch from deploy workflow, updating secret value in docs/dockerfile ([f3d4595](https://github.com/Kajabi/sage-lib/commit/f3d4595ba6d60cd251cfebcdd264b8edf5c7c6f5))
+
+
+### Features
+
+* add workflows for K8s deployment ([ed1555c](https://github.com/Kajabi/sage-lib/commit/ed1555c03751f94cef51e6a4bc68a21e5b050525))
+* updating to Node18 with support for 16, removing circleci references ([16022bf](https://github.com/Kajabi/sage-lib/commit/16022bfb2a107b18b256f5e131865ddf96049e6b))
+
+
+
+
+
 ## [5.19.5](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.19.4...@kajabi/sage@5.19.5) (2024-01-24)
 
 

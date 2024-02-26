@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@1.2.14...@kajabi/sage-system@1.3.0) (2024-02-26)
+
+
+### Features
+
+* updating to Node18 with support for 16, removing circleci references ([16022bf](https://github.com/Kajabi/sage-lib/commit/16022bfb2a107b18b256f5e131865ddf96049e6b))
+
+
+
+
+
 ## [1.2.14](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@1.2.13...@kajabi/sage-system@1.2.14) (2023-10-27)
 
 

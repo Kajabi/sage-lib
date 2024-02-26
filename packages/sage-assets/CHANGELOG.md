@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.14.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.13.5...@kajabi/sage-assets@1.14.0) (2024-02-26)
+
+
+### Bug Fixes
+
+* **dropdown:** adds missing disabled border styles ([871582b](https://github.com/Kajabi/sage-lib/commit/871582b6b1d64e4bbf54e8011c4c03687e363583))
+
+
+### Features
+
+* add workflows for K8s deployment ([ed1555c](https://github.com/Kajabi/sage-lib/commit/ed1555c03751f94cef51e6a4bc68a21e5b050525))
+* updating to Node18 with support for 16, removing circleci references ([16022bf](https://github.com/Kajabi/sage-lib/commit/16022bfb2a107b18b256f5e131865ddf96049e6b))
+
+
+
+
+
 ## [1.13.5](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.13.4...@kajabi/sage-assets@1.13.5) (2024-01-24)
 
 
