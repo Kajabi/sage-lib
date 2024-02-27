@@ -118,10 +118,6 @@ When running the `bridge`, you *must* have `yarn start` running in this reposito
 Within your Kajabi Products repository, run the project as you usually would and in tandem also run Kajabi-Products' `webpack-dev-server`. For Kajabi Products to watch changes within your local Sage repo `webpack-dev-server` needs to be running.
 
 ```bash
-$ heroku local
-```
-
-```bash
 $ bin/webpack-dev-server
 ```
 
@@ -184,10 +180,6 @@ Start the documentation site from the `docs/` folder. Will be located at http://
 
 Run `bundle install` on the `docs/` folder.
 
-### `docs:deploy`
-
-This command is to deploy the Documentation Site application to Heroku. This is an automated process through Continuous Deployment.
-
 ### `docs:initialize`
 
 Initialize the docs site. Install all gems/packages
@@ -216,10 +208,6 @@ Establish a local link between the Sage Rails gem and the internal Sage Packages
 
 Run the SassDoc server from the `@kajabi/sage-assets` package.
 
-### `sassdocs:deploy`
-
-This command is for deploying the SassDocs application to Heroku. This is an automated process through Continuous Deployment.
-
 ### `setup` :star:
 
 Run the initial setup scripts
@@ -239,10 +227,6 @@ Continually compiles packages on changes and starts the applications.
 ### `storybook`
 
 Launch "storybook" from the `@kajabi/sage-react` package
-
-### `storybook:deploy`
-
-This command is for deploying the Storybook application to Heroku. This is an automated process through Continuous Integration.
 
 ### `test`
 
