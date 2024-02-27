@@ -9,7 +9,7 @@ metadata:
     - javascript
     - documentation
   links:
-    - url: https://sage-lib-documentation.herokuapp.com/pages/index
+    - url: https://sage-lib-documentation.production.kajabi.farm/pages/index
       title: Public Documentation Site
       icon: dashboard
 spec:

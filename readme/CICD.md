@@ -1,16 +1,12 @@
 # Continuous Integration, Deployment, Versioning, and Releases
 
-Continuous Integration is being handled by GitHub Actions with deployments going to Heroku. Lerna is integrated into the Pipeline to allow for automatic Versioning, Changelogs, and Releases.
+Continuous Integration is being handled by GitHub Actions with deployments going to EKS. Lerna is integrated into the Pipeline to allow for automatic Versioning, Changelogs, and Releases.
 
 ## Jobs
 
 ### lint-test-build
 
 The `lint-build-test` job is reponsible for verifying the integrity of the suite. It ensures all linting, testing, and build procedures pass before allowing a merge. This job is run as part of every PR and push to `main`.
-
-*NOTE: Do not ever push to `main` directly*
-
-[Review Apps](https://devcenter.heroku.com/articles/github-integration-review-apps) have been integrated on every PR. They will only show the main Rails Documentation Site.
 
 ### release-and-deploy
 
@@ -30,41 +26,12 @@ There are 3 applications as part of the Sage suite. Each of these elements have 
 
 ### Rails "Docs" Site
 
-Deployed to: https://sage-lib-documentation.herokuapp.com/
-
-The `docs:deploy` script at the root of the monorepo is designed to push a subtree of the `docs/` folder to the Heroku master.
-
-#### Heroku Env Requirements
-
-> Note: Must be a valid GitHub PAT
-
-```text
-//npm.pkg.github.com/:_authToken=<your_token>
- @kajabi:registry=https://npm.pkg.github.com/
-```
-
-#### Heroku Buildpack Requirements
-
-- https://github.com/debitoor/heroku-buildpack-npmrc.git
-- heroku/ruby
-- heroku/nodejs
+Deployed to: https://sage-lib-documentation.production.kajabi.farm/
 
 ### React Storybook Site
 
-Deployed to: https://sage-lib-storybook.herokuapp.com/
-
-The `storybook:deploy` script at the root of the monorepo is designed to push a subtree of the `packages/sage-react` folder to the Heroku master.
-
-#### Heroku Buildpack Requirements
-
-- heroku/nodejs
+Deployed to: https://sage-lib-storybook.production.kajabi.farm/
 
 ### SASSDocs Site
 
-Deployed to: https://sage-lib-sassdocs.herokuapp.com/
-
-The `sassdoc:deploy` script at the root of the monorepo is designed to push a subtree of the `packages/sage-assets` folder to the Heroku master.
-
-#### Heroku Buildpack Requirements
-
-- heroku/nodejs
+Deployed to: https://sage-lib-sassdocs.production.kajabi.farm/
