@@ -9,6 +9,7 @@ export const Hero = ({
   borderless,
   children,
   ctaAttributes,
+  className,
   customBackgroundColor,
   description,
   contained,
@@ -20,8 +21,9 @@ export const Hero = ({
   titleTag,
   ...rest
 }) => {
-  const className = classnames(
+  const classNames = classnames(
     'sage-hero',
+    className,
     {
       [`sage-hero--${heroSize}`]: heroSize,
       'sage-hero--borderless': borderless,
@@ -41,7 +43,7 @@ export const Hero = ({
 
   return (
     <article
-      className={className}
+      className={classNames}
       style={{ '--custom-background-color': customBackgroundColor || '' }}
       {...rest}
     >
@@ -85,6 +87,7 @@ Hero.defaultProps = {
   ctaAttributes: null,
   children: null,
   contained: false,
+  className: null,
   customBackgroundColor: null,
   description: null,
   footerActions: null,
@@ -117,6 +120,10 @@ Hero.propTypes = {
    * If true, the image will not fill the space.
    */
   contained: PropTypes.bool,
+  /**
+   * Allows a custom class name to apply to the component.
+   */
+  className: PropTypes.string,
   /**
    * The background color to be applied to the Hero.
    */
