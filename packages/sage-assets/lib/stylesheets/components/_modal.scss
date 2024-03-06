@@ -181,8 +181,8 @@ $-modal-inner-size: sage-container(md);
   .sage-modal--scrollable & > .simple_form {
     display: grid;
     grid-template-rows: auto 1fr auto;
-    max-height: 85vh;
     overflow: hidden; /* needed to apply border-radius to scrollbar */
+    max-height: 85vh;
   }
 
   .sage-modal--scrollable & > .simple_form {
