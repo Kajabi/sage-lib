@@ -12,18 +12,13 @@ $-input-padding-offset: sage-spacing(sm) - $-input-border-width;
 $-input-popover-size: rem(40px);
 $-input-text-height: sage-font-size(body);
 
-.sage-input {
+.sage-input-v2 {
   @include sage-form-field-group;
 
-  display: grid;
-  grid-template-areas:
-    "label label label"
-    "input input input"
-    "message message message";
-  grid-template-columns: minmax(0, 1fr) 1fr min-content;
-  grid-template-rows: min-content min-content min-content; /* needed to resolve Safari 14 layout issue */
+  display: flex;
+  flex-direction: column;
 
-  .sage-input-group &,
+  .sage-input-v2-group &,
   .sage-toolbar & {
     height: auto;
     width: 100%;
@@ -31,13 +26,13 @@ $-input-text-height: sage-font-size(body);
   }
 
   .sage-toolbar__group & {
-    &:first-child:not(:only-child) .sage-input__field {
+    &:first-child .sage-input-v2__field {
       border-radius: sage-border(radius-medium);
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
     }
 
-    &:last-child .sage-input__field {
+    &:last-child .sage-input-v2__field {
       border-radius: sage-border(radius-medium);
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
@@ -49,12 +44,17 @@ $-input-text-height: sage-font-size(body);
     grid-column: -1 / -2;
   }
 
-  .sage-input__action {
+  .sage-input-v2__action {
     display: flex;
     align-items: center;
     grid-row: 2 / 3;
     grid-column: -1 / -2;
   }
+}
+
+.sage-input-v2__field-wrapper {
+  display: flex;
+  align-items: center;
 }
 
 .sage-form-field--error {
@@ -63,15 +63,15 @@ $-input-text-height: sage-font-size(body);
   }
 }
 
-.sage-input__affix {
+.sage-input-v2__affix {
   display: flex;
   align-items: center;
   position: absolute;
   z-index: sage-z-index(default, 1);
   height: $-input-height;
 
-  .sage-input--suffixed &,
-  .sage-input--prefixed & {
+  .sage-input-v2--suffixed &,
+  .sage-input-v2--prefixed & {
     position: absolute;
     white-space: nowrap;
   }
@@ -81,12 +81,12 @@ $-input-text-height: sage-font-size(body);
   }
 }
 
-.sage-input__affix-value {
+.sage-input-v2__affix-value {
   color: sage-color(charcoal, 100);
 }
 
-.sage-input__affix--prefix,
-.sage-input__left-element {
+.sage-input-v2__affix--prefix,
+.sage-input-v2__left-element {
   grid-row: 2 / 3;
   grid-column: 1 / 2;
   top: 0;
@@ -94,8 +94,8 @@ $-input-text-height: sage-font-size(body);
   padding-right: sage-spacing(2xs);
 }
 
-.sage-input__affix--suffix,
-.sage-input__right-element {
+.sage-input-v2__affix--suffix,
+.sage-input-v2__right-element {
   grid-row: 2 / 3;
   grid-column: -1 / -2;
   top: 0;
@@ -103,41 +103,44 @@ $-input-text-height: sage-font-size(body);
   padding-left: sage-spacing(2xs);
 }
 
-.sage-input__left-element,
-.sage-input__right-element {
+.sage-input-v2__left-element,
+.sage-input-v2__right-element {
   display: flex;
   align-items: center;
   white-space: nowrap;
 }
 
-.sage-input__label {
+.sage-input-v2__label {
   @include sage-form-field-label;
 
-  grid-area: label;
+  order: -1;
   margin-bottom: sage-spacing(xs);
-
-  // input labels within toolbar groups are visually hidden to maintain alignment
-  .sage-toolbar__group & {
-    @include visually-hidden();
-  }
-}
-.sage-input__field-wrapper {
-  position: relative;
 }
 
-.sage-input__field {
+.sage-input-v2__field-wrapper {
   @include sage-form-field;
   @include sage-focus-ring;
 
-  grid-area: input;
+  display: flex;
+  align-items: center;
+  padding: 0;
+
+}
+
+.sage-input-v2__field {
+  // @include sage-form-field;
+  // @include sage-focus-ring;
+
   height: $-input-height;
   padding: sage-spacing(xs) sage-spacing(sm);
+  border: 0;
+  flex-grow: 1;
 
-  .sage-input--has-icon & {
+  .sage-input-v2--has-icon & {
     padding-right: $-input-popover-size;
   }
 
-  .sage-input--has-popover & {
+  .sage-input-v2--has-popover & {
     padding-right: $-input-popover-size;
   }
 
@@ -145,37 +148,33 @@ $-input-text-height: sage-font-size(body);
     position: relative;
     height: inherit;
     border-radius: 0;
-    box-shadow: map-get($sage-toolbar-button-borders, default);
 
-    &:hover {
-      box-shadow: map-get($sage-toolbar-button-borders, hover-large);
-    }
-
+    &:hover,
     &:focus,
     &:active {
-      box-shadow: map-get($sage-toolbar-button-borders, focus);
+      z-index: sage-z-index(default, 1);
     }
   }
 
-  .sage-input__select-combo--anchor-left,
-  .sage-input--has-left-element & {
+  .sage-input-v2__select-combo--anchor-left,
+  .sage-input-v2--has-left-element & {
     padding-left: rem(100px);
   }
-  .sage-input__select-combo--anchor-right,
-  .sage-input--has-right-element & {
+  .sage-input-v2__select-combo--anchor-right,
+  .sage-input-v2--has-right-element & {
     padding-right: rem(100px);
   }
 }
 
-.sage-input__select-combo {
+.sage-input-v2__select-combo {
   position: relative;
 }
 
-.sage-input__icon {
+.sage-input-v2__icon {
   grid-row: 2 / 3;
   grid-column: -1 / -2;
 
-  .sage-input--has-icon & {
+  .sage-input-v2--has-icon & {
     @include sage-form-field-icon;
 
     pointer-events: none;
@@ -186,10 +185,9 @@ $-input-text-height: sage-font-size(body);
   }
 }
 
-.sage-input__info {
-  grid-area: message;
+.sage-input-v2__info {
 }
 
-.sage-input__message {
+.sage-input-v2__message {
   @include sage-form-field-message;
 }

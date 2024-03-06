@@ -39,6 +39,7 @@ export { IconList } from './IconList';
 export { Indicator } from './Indicator';
 export { Introduction } from './Introduction';
 export { Input } from './Input';
+export { InputV2 } from './InputV2';
 export { Label } from './Label';
 export { Link } from './Link';
 export { List } from './List';

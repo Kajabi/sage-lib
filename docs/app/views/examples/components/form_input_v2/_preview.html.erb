@@ -1,0 +1,86 @@
+<h3 class="t-sage-heading-6">My stuff</h3>
+<%= sage_component SageFormInputV2, {
+  id: "inputv2",
+  input_type: "text",
+  label_text: "Template Second",
+  message_text: "This is a message",
+} %>
+
+<%= sage_component SageFormInputV2, {
+  id: "inputv21",
+  input_type: "text",
+  label_text: "Template Second",
+  message_text: "This is a message",
+} do %>
+  <% content_for :sage_form_input_left_element do %>
+    Prefix
+  <% end %>
+  <% content_for :sage_form_input_right_element do %>
+    Suffix
+  <% end %>
+<% end %>
+
+
+<%= sage_component SageFormInputV2, {
+  id: "inputv22",
+  input_type: "text",
+  label_text: "Template Second",
+  message_text: "This is a message",
+} do %>
+  <% content_for :sage_form_input_left_element do %>
+    <%= sage_component SageFormSelect, {
+    name: "date",
+    select_options: [
+      {
+        text: "AUD",
+        value: "aud",
+      },
+      {
+        text: "GBP",
+        value: "gbp",
+      },
+      {
+        text: "EUR",
+        value: "eur",
+      },
+      {
+        text: "JPY",
+        value: "jpy",
+      },
+      {
+        text: "USD",
+        value: "usd",
+        selected: true,
+      },
+    ],
+  } %>
+  <% end %>
+  <% content_for :sage_form_input_right_element do %>
+    <%= sage_component SageFormSelect, {
+    name: "country",
+    select_options: [
+      {
+        text: "AUD",
+        value: "aud",
+      },
+      {
+        text: "GBP",
+        value: "gbp",
+      },
+      {
+        text: "EUR",
+        value: "eur",
+      },
+      {
+        text: "JPY",
+        value: "jpy",
+      },
+      {
+        text: "USD",
+        value: "usd",
+        selected: true,
+      },
+    ],
+  } %>
+  <% end %>
+<% end %>

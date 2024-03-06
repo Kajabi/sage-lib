@@ -1,4 +1,4 @@
-class SageFormInput < SageComponent
+class SageFormInputV2 < SageComponent
   set_attribute_schema({
     autocomplete: [:optional, NilClass, String],
     disabled: [:optional, NilClass, TrueClass],
@@ -28,6 +28,6 @@ class SageFormInput < SageComponent
   })
 
   def sections
-    %w(form_input_popover form_input_select_combo form_input_left_element form_input_right_element)
+    %w(form_input_prefix form_input_suffix)
   end
 end
