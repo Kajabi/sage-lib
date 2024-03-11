@@ -190,8 +190,12 @@ Sage.dropdown = (function () {
   }
 
   function positionElement(el) {
+    // Guard clause to check if wrapperRef.current is null
+    if (!wrapperRef.current) return;
+
     let directionX = null;
     let directionY = null;
+    const el = wrapperRef.current;
   
     // Elements
     const button = el;
