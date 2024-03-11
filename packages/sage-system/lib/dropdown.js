@@ -189,24 +189,23 @@ Sage.dropdown = (function () {
     return height - borderBottomWidth - borderTopWidth - paddingTop - paddingBottom;
   }
 
-  function positionElement(el) {
+  function positionElement(dropdownElement) {
     // Guard clause to check if wrapperRef.current is null
-    if (!wrapperRef.current) return;
+    if (!dropdownElement) return;
 
     let directionX = null;
     let directionY = null;
-    const el = wrapperRef.current;
   
     // Elements
-    const button = el;
-    const panel = el.lastElementChild;
+    const button = dropdownElement;
+    const panel = dropdownElement.lastElementChild;
     const win = panel.ownerDocument.defaultView;
     const docEl = window.document.documentElement;
 
     panel.style.top = ''; // resets the style
     panel.style.left = ''; // resets the style
     panel.style.right = ''; // resets the style
-  
+
     // Dimensions
     const buttonDimensions = button.getBoundingClientRect();
     const panelDimensions = panel.getBoundingClientRect();
@@ -215,14 +214,14 @@ Sage.dropdown = (function () {
       top: (buttonDimensions.height / 2) + panelDimensions.height,
       left: (buttonDimensions.width / 2) + panelDimensions.width,
     };
-  
+
     const viewport = {
       top: docEl.scrollTop,
       bottom: window.pageYOffset + docEl.clientHeight,
       left: docEl.scrollLeft,
       right: window.pageXOffset + docEl.clientWidth,
     };
-  
+
     const offset = {
       top: panelDimensions.top + win.pageYOffset,
       left: panelDimensions.left + win.pageXOffset,
@@ -257,7 +256,7 @@ Sage.dropdown = (function () {
     } else if (!enoughSpaceLeft && enoughSpaceRight) {
       directionX = 'right';
     }
-    
+
     if (directionX === 'left') {
       panel.style.left = 'inherit';
       panel.style.right = 0;
@@ -266,7 +265,7 @@ Sage.dropdown = (function () {
       panel.style.right = 'inherit';
     }
   }
-  
+
   function open(el) {
     el.setAttribute("aria-expanded", "true");
     positionElement(el);
