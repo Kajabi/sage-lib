@@ -53,16 +53,17 @@ Sage.tooltip = (function() {
     positionTooltip(evt.target, tooltip, pos);
   }
 
-
   // Removes tooltip from DOM
   function removeTooltip(evt) {
-    if (!evt.target.hasAttribute(DATA_ATTR) || !document.querySelector(SELECTOR) || !document.querySelector(`.${TOOLTIP_CLASS}`) || !evt.target.dataset.jsTooltip)  return;
+    if (!evt.target.hasAttribute(DATA_ATTR) || !document.querySelector(SELECTOR) || !document.querySelector(`.${TOOLTIP_CLASS}`) || !evt.target.dataset.jsTooltip) return;
 
     window.requestAnimationFrame(function() {
-      document.body.removeChild(document.querySelector(`.${TOOLTIP_CLASS}`));
+        var tooltip = document.querySelector(`.${TOOLTIP_CLASS}`);
+        if (tooltip && tooltip.parentNode === document.body) { // Ensure tooltip exists and its parent is document.body before removing
+            document.body.removeChild(tooltip);
+        }
     });
   }
-
 
   // Builds list of modifier classes from array of data-attributes
   function generateClasses(ele, evt) {
