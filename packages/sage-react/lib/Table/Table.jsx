@@ -278,7 +278,7 @@ export const Table = ({
         cells={cells}
         schema={schema}
         selected={selfSelectedRows === SELECTION_TYPES.ALL || selfSelectedRows.includes(rowId)}
-        selectable={selectable}
+        selectable={!!(row.selectable || selectable)}
         onSelect={onSelectRow}
       />
     );
