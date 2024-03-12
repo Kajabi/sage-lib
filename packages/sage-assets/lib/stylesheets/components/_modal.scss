@@ -268,8 +268,8 @@ $-modal-inner-size: sage-container(md);
   .sage-modal--scrollable & {
     @include overflow-scroll(y);
 
-    margin-top: 0;
-    padding: sage-spacing(xs) sage-spacing(3xs);
+    padding: sage-spacing(xs) sage-spacing(md) sage-spacing(md);
+    margin: 0;
 
     > :first-child {
       margin-top: sage-spacing(xs);

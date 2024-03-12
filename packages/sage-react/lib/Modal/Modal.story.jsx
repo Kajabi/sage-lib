@@ -148,6 +148,7 @@ export default {
     'Modal.FooterAside': Modal.FooterAside,
   },
   args: {
+    allowScroll: false,
     animation: Modal.ANIMATION_PRESETS,
   },
   argTypes: {
@@ -264,6 +265,7 @@ export const ModalWithCustomSize = (args) => {
       </Button>
       <Modal
         active={active}
+        allowScroll={true}
         animation={{ direction: Modal.ANIMATION_DIRECTIONS.BOTTOM }}
         onExit={onExit}
         size={Modal.SIZES.LG}
