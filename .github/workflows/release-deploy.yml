@@ -70,6 +70,7 @@ jobs:
 
   publish:
     needs: [setup]
+    if: needs.setup.outputs.postfix == 'production'
     uses: ./.github/workflows/publish.yml
     secrets: inherit
 
