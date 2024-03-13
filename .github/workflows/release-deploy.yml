@@ -24,7 +24,7 @@ jobs:
         run: git config --global --add safe.directory /__w/sage-lib/sage-lib
 
       - name: Clone Sage-Lib Repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           # pulls all commits (needed for lerna / semantic release to correctly version)
           fetch-depth: "0"
@@ -65,8 +65,6 @@ jobs:
   login:
     needs: [setup]
     runs-on: ubuntu-latest
-    outputs:
-      registry: ${{ steps.login-ecr.outputs.registry }}
     steps:
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
@@ -78,11 +76,6 @@ jobs:
           role-duration-seconds: 1200
           role-session-name: SageECRPushSession
 
-      - name: Login to Amazon ECR
-        id: login-ecr
-        uses: aws-actions/amazon-ecr-login@v2
-        with:
-          mask-password: true
 
       - name: Set branch name if not PR
         if: github.event_name != 'pull_request'
@@ -104,11 +97,33 @@ jobs:
     needs: [setup, login]
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          # pulls all commits (needed for lerna / semantic release to correctly version)
+          fetch-depth: "0"
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.SAGE_ECR_AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.SAGE_ECR_AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+          role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
+          role-duration-seconds: 1200
+          role-session-name: SageECRPushSession
+
+      - name: Login to Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v2
+        with:
+          mask-password: true
+
       # Docs Site
       - name: Build and push docs site
         uses: docker/build-push-action@v2
         env:
-          ECR_REGISTRY: ${{ needs.login.outputs.registry }}
+          ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
           ECR_REPOSITORY: ${{ secrets.ECR_REPOSITORY_SAGE_DOCS }}
           IMAGE_SHA_TAG: ${{ needs.setup.outputs.gitsha }}
           POSTFIX: ${{ needs.setup.outputs.postfix }}
@@ -125,11 +140,33 @@ jobs:
     needs: [setup, login]
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          # pulls all commits (needed for lerna / semantic release to correctly version)
+          fetch-depth: "0"
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.SAGE_ECR_AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.SAGE_ECR_AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+          role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
+          role-duration-seconds: 1200
+          role-session-name: SageECRPushSession
+
+      - name: Login to Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v2
+        with:
+          mask-password: true
+
       # Storybook Site
       - name: Build and push storybook
         uses: docker/build-push-action@v2
         env:
-          ECR_REGISTRY: ${{ needs.login.outputs.registry }}
+          ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
           ECR_REPOSITORY: ${{ secrets.ECR_REPOSITORY_SAGE_STORYBOOK }}
           IMAGE_SHA_TAG: ${{ needs.setup.outputs.gitsha }}
           POSTFIX: ${{ needs.setup.outputs.postfix }}
@@ -146,11 +183,34 @@ jobs:
     needs: [setup, login]
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          # pulls all commits (needed for lerna / semantic release to correctly version)
+          fetch-depth: "0"
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.SAGE_ECR_AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.SAGE_ECR_AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+          role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
+          role-duration-seconds: 1200
+          role-session-name: SageECRPushSession
+
+      - name: Login to Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v2
+        with:
+          mask-password: true
+
+
       # Sassdocs Site
       - name: Build and push sassdocs
         uses: docker/build-push-action@v2
         env:
-          ECR_REGISTRY: ${{ needs.login.outputs.registry }}
+          ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
           ECR_REPOSITORY: ${{ secrets.ECR_REPOSITORY_SAGE_SASSDOCS }}
           IMAGE_SHA_TAG: ${{ needs.setup.outputs.gitsha }}
           POSTFIX: ${{ needs.setup.outputs.postfix }}
