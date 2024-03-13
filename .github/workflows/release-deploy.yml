@@ -2,14 +2,9 @@ name: Release-Deploy
 on:
   # !!Emergency override!! uncomment below and access the actions tab in GitHub to run a release/deploy
   # workflow_dispatch:
-  push:
-    branches:
-      - main
-      - develop
-
-concurrency:
-  group: ${{ github.ref }}
-  cancel-in-progress: true
+  release:
+    types:
+      - published
 
 jobs:
   lint-test-build:
@@ -68,14 +63,8 @@ jobs:
             echo "postfix=staging" >> $GITHUB_ENV
           fi
 
-  publish:
+  login:
     needs: [setup]
-    if: needs.setup.outputs.postfix == 'production'
-    uses: ./.github/workflows/publish.yml
-    secrets: inherit
-
-  build_and_push:
-    needs: [setup, publish]
     runs-on: ubuntu-latest
     steps:
       - name: Configure AWS credentials
@@ -110,6 +99,10 @@ jobs:
 
       - run: git checkout HEAD
 
+  deploy-docs-site:
+    needs: [login]
+    runs-on: ubuntu-latest
+    steps:
       # Docs Site
       - name: Build and push docs site
         uses: docker/build-push-action@v2
@@ -127,6 +120,10 @@ jobs:
           tags: |
             ${{ env.ECR_REGISTRY }}/${{ env.ECR_REPOSITORY }}:${{ env.IMAGE_SHA_TAG }}-release-${{ env.POSTFIX }}
 
+  deploy-storybook-site:
+    needs: [login]
+    runs-on: ubuntu-latest
+    steps:
       # Storybook Site
       - name: Build and push storybook
         uses: docker/build-push-action@v2
@@ -144,6 +141,10 @@ jobs:
           tags: |
             ${{ env.ECR_REGISTRY }}/${{ env.ECR_REPOSITORY }}:${{ env.IMAGE_SHA_TAG }}-release-${{ env.POSTFIX }}
 
+  deploy-sassdocs-site:
+    needs: [login]
+    runs-on: ubuntu-latest
+    steps:
       # Sassdocs Site
       - name: Build and push sassdocs
         uses: docker/build-push-action@v2
