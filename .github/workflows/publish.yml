@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - develop
 
 jobs:
   lint-test-build:
@@ -58,11 +57,9 @@ jobs:
         run: yarn install --frozen-lockfile
 
       - name: Lerna Boostrap
-        if: ${{ github.ref == 'refs/heads/main' }} # Only create package on `main`
         run: yarn lerna bootstrap --ci
 
       - name: Lerna Publish
-        if: ${{ github.ref == 'refs/heads/main' }} # Only create package on `main`
         run: NODE_OPTIONS=--openssl-legacy-provider yarn lerna publish --registry github --yes
         env:
           NODE_AUTH_TOKEN: ${{ secrets.ACCESS_TOKEN }}
