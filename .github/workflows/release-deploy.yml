@@ -65,6 +65,8 @@ jobs:
   login:
     needs: [setup]
     runs-on: ubuntu-latest
+    outputs:
+      registry: ${{ steps.login-ecr.outputs.registry }}
     steps:
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
@@ -99,14 +101,14 @@ jobs:
       - run: git checkout HEAD
 
   deploy-docs-site:
-    needs: [login]
+    needs: [setup, login]
     runs-on: ubuntu-latest
     steps:
       # Docs Site
       - name: Build and push docs site
         uses: docker/build-push-action@v2
         env:
-          ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+          ECR_REGISTRY: ${{ needs.login.outputs.registry }}
           ECR_REPOSITORY: ${{ secrets.ECR_REPOSITORY_SAGE_DOCS }}
           IMAGE_SHA_TAG: ${{ needs.setup.outputs.gitsha }}
           POSTFIX: ${{ needs.setup.outputs.postfix }}
@@ -120,14 +122,14 @@ jobs:
             ${{ env.ECR_REGISTRY }}/${{ env.ECR_REPOSITORY }}:${{ env.IMAGE_SHA_TAG }}-release-${{ env.POSTFIX }}
 
   deploy-storybook-site:
-    needs: [login]
+    needs: [setup, login]
     runs-on: ubuntu-latest
     steps:
       # Storybook Site
       - name: Build and push storybook
         uses: docker/build-push-action@v2
         env:
-          ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+          ECR_REGISTRY: ${{ needs.login.outputs.registry }}
           ECR_REPOSITORY: ${{ secrets.ECR_REPOSITORY_SAGE_STORYBOOK }}
           IMAGE_SHA_TAG: ${{ needs.setup.outputs.gitsha }}
           POSTFIX: ${{ needs.setup.outputs.postfix }}
@@ -141,14 +143,14 @@ jobs:
             ${{ env.ECR_REGISTRY }}/${{ env.ECR_REPOSITORY }}:${{ env.IMAGE_SHA_TAG }}-release-${{ env.POSTFIX }}
 
   deploy-sassdocs-site:
-    needs: [login]
+    needs: [setup, login]
     runs-on: ubuntu-latest
     steps:
       # Sassdocs Site
       - name: Build and push sassdocs
         uses: docker/build-push-action@v2
         env:
-          ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+          ECR_REGISTRY: ${{ needs.login.outputs.registry }}
           ECR_REPOSITORY: ${{ secrets.ECR_REPOSITORY_SAGE_SASSDOCS }}
           IMAGE_SHA_TAG: ${{ needs.setup.outputs.gitsha }}
           POSTFIX: ${{ needs.setup.outputs.postfix }}
