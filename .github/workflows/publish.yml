@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - develop
 
 jobs:
   lint-test-build:
@@ -12,14 +13,11 @@ jobs:
   publish:
     needs: [lint-test-build]
     runs-on: ubuntu-latest
-    outputs:
-      postfix: ${{ env.postfix }}
-      gitsha: ${{ steps.gitsha.outputs.value }}
 
     steps:
       # # Setup Auth token to push to github packages
       - name: Set NPM Config
-        run: npm config set '//npm.pkg.github.com/:_authToken' '${{ secrets.ACCESS_TOKEN }}'
+        run: npm config set '//npm.pkg.github.com/:_authToken=${{ secrets.ACCESS_TOKEN }}'
 
       - name: Add safe directory
         run: git config --global --add safe.directory /__w/sage-lib/sage-lib
@@ -59,7 +57,29 @@ jobs:
       - name: Lerna Boostrap
         run: yarn lerna bootstrap --ci
 
+      - name: Set PreId
+        id: set_preid
+        run: |
+          if [ "${{ github.ref }}" == "refs/heads/develop" ]; then
+            echo "preid='rc'" >> $GITHUB_OUTPUT
+          else
+            echo "preid=''" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Lerna Version Develop
+        if: github.ref == 'refs/heads/develop'
+        run: NODE_OPTIONS=--openssl-legacy-provider yarn lerna publish --canary --yes --preid rc
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+
       - name: Lerna Publish
+        if: github.ref == 'refs/heads/main'
         run: NODE_OPTIONS=--openssl-legacy-provider yarn lerna publish --registry github --yes
         env:
           NODE_AUTH_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+
+  deploy:
+    needs: publish
+    if: github.ref == 'refs/heads/develop'
+    uses: ./.github/workflows/release-deploy.yml
+    secrets: inherit
