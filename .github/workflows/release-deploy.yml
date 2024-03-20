@@ -2,8 +2,10 @@ name: Release-Deploy
 on:
   # !!Emergency override!! uncomment below and access the actions tab in GitHub to run a release/deploy
   # workflow_dispatch:
+  workflow_call:
   release:
     types: [published]
+
 
 jobs:
   lint-test-build:

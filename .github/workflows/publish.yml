@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - develop
 
 jobs:
   lint-test-build:
@@ -59,7 +60,20 @@ jobs:
       - name: Lerna Boostrap
         run: yarn lerna bootstrap --ci
 
+      - name: Set PreId
+        id: set_preid
+        run: |
+          if [ "${{ github.ref }}" == "refs/heads/develop" ]; then
+            echo "preid='rc'" >> $GITHUB_ENV
+          else
+            echo "preid=" >> $GITHUB_ENV
+          fi
+
       - name: Lerna Publish
-        run: NODE_OPTIONS=--openssl-legacy-provider yarn lerna publish --registry github --yes
+        run: NODE_OPTIONS=--openssl-legacy-provider yarn lerna publish --registry github --yes --preid ${{steps.set_preid.outputs.preid}}
         env:
           NODE_AUTH_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+
+      - name: Deploy Development
+        if: github.ref == 'ref/heads/develop'
+        uses: ./.github/workflows/release-deploy
