@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Search } from './Search';
 
 export default {
@@ -38,6 +38,7 @@ export const ContainedWithLabelHidden = (args) => {
     </>
   );
 };
+
 ContainedWithLabelHidden.args = {
   contained: true,
   hideLabel: true,
@@ -45,6 +46,34 @@ ContainedWithLabelHidden.args = {
   id: 'search_contained',
   placeholder: 'Search',
   value: ''
+};
+
+export const WithRef = (args) => {
+  const [searchValue, setSearchValue] = useState('');
+  const searchInputRef = React.useRef(null);
+
+  useEffect(() => {
+    searchInputRef.current.focus();
+  }, []);
+
+  return (
+    <>
+      <Search
+        {...args}
+        ref={searchInputRef}
+        onChange={(e) => setSearchValue(e.target.value)}
+        onClear={() => setSearchValue('')}
+        value={searchValue}
+      />
+    </>
+  );
+};
+
+WithRef.args = {
+  label: 'Search',
+  id: 'search_with_ref',
+  placeholder: 'Search',
+  value: '',
 };
 
 export const Disabled = Template.bind({});
