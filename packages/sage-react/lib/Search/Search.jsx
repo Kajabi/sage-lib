@@ -4,7 +4,7 @@ import classnames from 'classnames';
 import { Button } from '../Button';
 import { SageTokens } from '../configs';
 
-export const Search = ({
+export const Search = React.forwardRef(({
   className,
   contained,
   disabled,
@@ -16,7 +16,7 @@ export const Search = ({
   placeholder,
   value,
   ...rest
-}) => {
+}, ref) => {
   const classNames = classnames(
     'sage-search',
     className,
@@ -42,6 +42,7 @@ export const Search = ({
       )}
       <div className="sage-search__field-wrapper">
         <input
+          ref={ref}
           className="sage-search__input"
           type="search"
           onChange={onChange}
@@ -68,7 +69,7 @@ export const Search = ({
       </div>
     </div>
   );
-};
+});
 
 Search.defaultProps = {
   className: null,
