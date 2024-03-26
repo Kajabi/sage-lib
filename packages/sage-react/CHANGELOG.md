@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.19.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.19.1...@kajabi/sage-react@1.19.2) (2024-03-26)
+
+
+### Bug Fixes
+
+* **search:** add ref to the input for the React search component ([#1875](https://github.com/Kajabi/sage-lib/issues/1875)) ([cd51072](https://github.com/Kajabi/sage-lib/commit/cd51072f66492ab3d086c279f9a0434e30301245))
+
+
+
+
+
 ## [1.19.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.19.0...@kajabi/sage-react@1.19.1) (2024-03-12)
 
 **Note:** Version bump only for package @kajabi/sage-react

@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.1](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@1.3.0...@kajabi/sage-system@1.3.1) (2024-03-26)
+
+
+### Bug Fixes
+
+* **dropdown:** fix duplicative variable and parameter ([9079d49](https://github.com/Kajabi/sage-lib/commit/9079d49506390d5e96b418d1174d7661d4effd39))
+* **dropdown:** prevent null reference errors on dynamic positioning ([f33da86](https://github.com/Kajabi/sage-lib/commit/f33da8631e627b2eec5141fcfd800dc21f9f8b1a))
+* **tooltip:** ensure valid node before removal to prevent errors ([da9b7c3](https://github.com/Kajabi/sage-lib/commit/da9b7c31989d8f6d290bcc9d1449abe25f4d193a))
+
+
+
+
+
 # [1.3.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@1.2.14...@kajabi/sage-system@1.3.0) (2024-02-26)
 
 
