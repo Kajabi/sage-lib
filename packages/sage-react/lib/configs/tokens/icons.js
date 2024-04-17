@@ -179,7 +179,7 @@ export const TOKENS_ICONS = {
   LOGO_LINKEDIN: 'logo-linkedin',
   LOGO_TIKTOK: 'logo-tiktok',
   LOGO_TWITTER: 'logo-twitter',
-  LOGO_TWITTER_X: `logo-twitter-x`,
+  LOGO_TWITTER_X: 'logo-twitter-x',
   LOGO_YOUTUBE: 'logo-youtube',
   LOOP: 'loop',
   MAIL: 'mail',
