@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@1.1.2...@kajabi/sage-packs@1.1.3) (2024-04-19)
+
+
+### Bug Fixes
+
+* remove comment ([97821a3](https://github.com/Kajabi/sage-lib/commit/97821a36bcc071ce9987a5a979d4a20c7271a4f7))
+* see if removing the require.context still gets us results ([aa64643](https://github.com/Kajabi/sage-lib/commit/aa64643cd16d7524c47702a9086d5dc2d5e27772))
+
+
+
+
+
 ## [1.1.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-packs@1.1.1...@kajabi/sage-packs@1.1.2) (2024-03-26)
 
 **Note:** Version bump only for package @kajabi/sage-packs

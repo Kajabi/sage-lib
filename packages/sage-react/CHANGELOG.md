@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.19.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.19.2...@kajabi/sage-react@1.19.3) (2024-04-19)
+
+
+### Bug Fixes
+
+* correct single quote. hat-tip linter! ([7b7f1ae](https://github.com/Kajabi/sage-lib/commit/7b7f1ae34dbb7479fd86810bdecd2f608fe0de33))
+
+
+
+
+
 ## [1.19.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.19.1...@kajabi/sage-react@1.19.2) (2024-03-26)
 
 
