@@ -54,11 +54,10 @@ jobs:
       # Envs based on the current branch
       - name: Branch Env
         id: branch_env
+        shell: bash
         run: |
           echo "Running on branch "
-          if [ "${{ github.ref }}" == "refs/heads/develop" ]; then
-            echo "postfix=staging" >> $GITHUB_ENV
-          elif [ "${{ github.ref }}" == "refs/heads/main" ]; then
+          if [[ "${{ github.ref }}" == *"refs/tags"* ]]; then
             echo "postfix=production" >> $GITHUB_ENV
           else
             echo "postfix=staging" >> $GITHUB_ENV
