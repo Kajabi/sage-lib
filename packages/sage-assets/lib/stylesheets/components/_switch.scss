@@ -19,7 +19,7 @@ $-switch-color-error: sage-color(red, 300);
 $-switch-focus-outline-error-color: sage-color(red, 200);
 
 // Switch
-$-switch-label-left-spacing: sage-spacing(xs);
+$-switch-label-left-spacing: rem(12px);
 $-switch-border-radius: rem(16px);
 $-switch-height: rem(20px);
 $-switch-width: rem(36px);
