@@ -201,7 +201,7 @@ Sage.dropdown = (function () {
     const panel = dropdownElement.lastElementChild;
     const win = panel.ownerDocument.defaultView;
     const docEl = window.document.documentElement;
-
+    
     // if panel is null, return
     if (!panel) return;
 
