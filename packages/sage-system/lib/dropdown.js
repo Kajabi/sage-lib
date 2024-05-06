@@ -195,13 +195,13 @@ Sage.dropdown = (function () {
 
     let directionX = null;
     let directionY = null;
-  
+
     // Elements
     const button = dropdownElement;
     const panel = dropdownElement.lastElementChild;
     const win = panel.ownerDocument.defaultView;
     const docEl = window.document.documentElement;
-    
+
     // if panel is null, return
     if (!panel) return;
 
@@ -238,7 +238,7 @@ Sage.dropdown = (function () {
     const enoughSpaceBelow = viewport.bottom > (offset.bottom + panelHeight);
     const enoughSpaceLeft = viewport.left < (offset.left + panelWidth);
     const enoughSpaceRight = viewport.right > (offset.right + panelWidth);
-  
+
     // Check if there is enough space to the top or bottom
     if (!enoughSpaceBelow && enoughSpaceAbove) {
       directionY = 'above';
@@ -251,7 +251,7 @@ Sage.dropdown = (function () {
     } else if (directionY === 'below') {
       // find test case
       // panel.style.top = 0;
-    } 
+    }
 
     // Check if there is enough space to the left or right
     if (!enoughSpaceRight && enoughSpaceLeft) {

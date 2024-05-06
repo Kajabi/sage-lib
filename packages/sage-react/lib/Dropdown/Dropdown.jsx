@@ -83,7 +83,7 @@ export const Dropdown = ({
     // Elements
     const button = el;
     const panel = el.lastElementChild;
-    
+
     // if panel is null, return
     if (!panel) return;
 
