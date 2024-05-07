@@ -84,6 +84,9 @@ export const Dropdown = ({
     const button = el;
     const panel = el.lastElementChild;
 
+    // if panel is null, return
+    if (!panel) return;
+
     // Dimensions
     const buttonDimensions = button.getBoundingClientRect();
     const panelDimensions = panel.getBoundingClientRect();
