@@ -24,7 +24,7 @@ jobs:
         env:
           NODE_VERSION: ${{ matrix.node-version }}
         run: |
-          if [[ $NODE_VERSION == '18' ]]; then
+          if (( $NODE_VERSION >= 18 )); then
             NODE_OPTIONS=--openssl-legacy-provider npm install -g yarn
           else
             npm install -g yarn
@@ -34,7 +34,7 @@ jobs:
         env:
           NODE_VERSION: ${{ matrix.node-version }}
         run: |
-          if [[ $NODE_VERSION == '18' ]]; then
+          if (( $NODE_VERSION >= 18 )); then
             NODE_OPTIONS=--openssl-legacy-provider yarn install
           else
             yarn install
@@ -45,7 +45,7 @@ jobs:
         env:
           NODE_VERSION: ${{ matrix.node-version }}
         run: |
-          if [[ $NODE_VERSION == '18' ]]; then
+          if (( $NODE_VERSION >= 18 )); then
             NODE_OPTIONS=--openssl-legacy-provider yarn lint
           else
             yarn lint
@@ -55,7 +55,7 @@ jobs:
         env:
           NODE_VERSION: ${{ matrix.node-version }}
         run: |
-          if [[ $NODE_VERSION == '18' ]]; then
+          if (( $NODE_VERSION >= 18 )); then
             NODE_OPTIONS=--openssl-legacy-provider yarn test
           else
             yarn test
@@ -65,7 +65,7 @@ jobs:
         env:
           NODE_VERSION: ${{ matrix.node-version }}
         run: |
-          if [[ $NODE_VERSION == '18' ]]; then
+          if (( $NODE_VERSION >= 18 )); then
             NODE_OPTIONS=--openssl-legacy-provider yarn build
           else
             yarn build
