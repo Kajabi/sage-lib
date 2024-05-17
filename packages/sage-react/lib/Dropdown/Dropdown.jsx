@@ -80,6 +80,10 @@ export const Dropdown = ({
     let directionX = null;
     let directionY = null;
     const el = wrapperRef.current;
+
+    // if el is null, return
+    if (!el) return;
+
     // Elements
     const button = el;
     const panel = el.lastElementChild;
