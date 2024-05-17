@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import { downSmall } from '@pine-ds/icons/icons';
 import { SageTokens } from '../configs';
 import { ICON_ADJACENT_TYPES, ICON_CARD_COLORS, ICON_SIZES } from './configs';
 
@@ -46,8 +47,18 @@ export const Icon = ({
     attributes.role = 'img';
   }
 
+  // const sizeMapping = {
+  //   [ICON_SIZES.XS]: 'small',
+  //   [ICON_SIZES.SM]: 'normal',
+  //   [ICON_SIZES.MD]: 'medium',
+  //   [ICON_SIZES.LG]: 'large',
+  //   [ICON_SIZES.XL]: 'large',
+  // };
+
   const renderIcon = () => (
-    <i className={classNames} {...attributes} {...rest} />
+    <i>
+      <pds-icon name={downSmall} />
+    </i>
   );
 
   const setBackgroundDimensions = () => {

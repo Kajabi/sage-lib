@@ -72,5 +72,7 @@
     "watch:react": "cd packages/sage-react && yarn build:watch",
     "watch:system": "cd packages/sage-system && yarn build:watch"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@pine-ds/icons": "^4.2.0"
+  }
 }
