@@ -28,6 +28,7 @@
     <span class="visually-hidden">
       <%= component.value.html_safe %>
     </span>
+     <pds-icon name="<%= component.icon[:name] %>" />
   <% else %>
     <% if component.value %>
       <span class="sage-btn__truncate-text">
@@ -38,6 +39,9 @@
       <span class="sage-btn__custom-content <%= component.custom_content_class if component.custom_content_class.present? %>">
         <%= component.content %>
       </span>
+    <% end %>
+    <% if component.icon&.dig(:name) %>
+      <pds-icon name="<%= component.icon[:name] %>" />
     <% end %>
   <% end %>
 </<%= html_tag %>>

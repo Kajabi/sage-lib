@@ -83,6 +83,7 @@ export const Button = React.forwardRef(({
     >
       <span className={generatedClassNames}>
         {children}
+        <pds-icon name={icon} />
       </span>
       {!hasCustomContent && (
         <Loader
