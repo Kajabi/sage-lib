@@ -139,6 +139,8 @@ $-select-arrow-position-inverse-with-message: calc(100% - #{$-select-height + $-
 
 .sage-select__message {
   @include sage-form-field-message;
+  display: flex;
+  align-items: center;
 
   .sage-select--value-selected & + .sage-select__arrow::before {
     @include sage-icon-base(up-small);

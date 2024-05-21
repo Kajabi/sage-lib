@@ -57,7 +57,12 @@
   ></pds-icon>
   <% if component.message.present? %>
     <div class="sage-select__info">
-      <div class="sage-select__message"><%= component.message %></div>
+      <div class="sage-select__message">
+        <% if component.has_error %>
+          <pds-icon name="danger" class="<%= SageClassnames::SPACERS::XS_RIGHT %>"></pds-icon>
+        <% end %>
+        <%= component.message %>
+      </div>
     </div>
   <% end %>
 </div>
