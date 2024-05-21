@@ -28,9 +28,15 @@
     <span class="visually-hidden">
       <%= component.value.html_safe %>
     </span>
-     <pds-icon name="<%= component.icon[:name] %>" />
+    <pds-icon name="<%= component.icon[:name] %>" />
   <% else %>
     <% if component.value %>
+      <% if component.icon&.dig(:name) %>
+        <pds-icon
+          name="<%= component.icon[:name]%>"
+          class="<%= component.icon[:style] == "right" ? 'sage-spacer-left-xs' : 'sage-spacer-right-xs' %>">
+        </pds-icon>
+      <% end %>
       <span class="sage-btn__truncate-text">
         <%# if the component.value is an empty string, add a `&nbsp;` to prevent height collapse %>
         <%= (component.value.strip.empty? ? "&nbsp;" : component.value).html_safe %>
@@ -40,8 +46,11 @@
         <%= component.content %>
       </span>
     <% end %>
-    <% if component.icon&.dig(:name) %>
-      <pds-icon name="<%= component.icon[:name] %>" />
+    <% if component.disclosure %>
+      <pds-icon
+        name="caret-down"
+        class="sage-spacer-left-xs">
+      </pds-icon>
     <% end %>
   <% end %>
 </<%= html_tag %>>

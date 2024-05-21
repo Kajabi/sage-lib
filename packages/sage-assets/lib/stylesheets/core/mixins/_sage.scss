@@ -98,7 +98,7 @@
       flex-direction: row;
 
       &::before {
-        @include sage-icon-base($icon-name);
+        @include sage-icon-base($icon-name, md, pine);
 
         align-self: center;
         margin-right: sage-spacing(xs);
@@ -160,7 +160,7 @@
       }
 
       &::before {
-        @include sage-icon-base($icon-name);
+        @include sage-icon-base($icon-name, md, pine);
 
         align-self: center;
         padding: 0;
@@ -648,7 +648,7 @@
       content: sage-icon($icon);
     }
     @else {
-      margin: 5px;
+      z-index: 1;
     }
   }
 }
