@@ -107,7 +107,7 @@ $-icon-beside-type: (
 
   .sage-badge__decor-icon--#{$icon-name}::before,
   .sage-label__decor-icon--#{$icon-name}::before {
-    @include sage-icon-base($icon-name, md);
+    @include sage-icon-base($icon-name, md, pine);
     align-self: center;
   }
 
