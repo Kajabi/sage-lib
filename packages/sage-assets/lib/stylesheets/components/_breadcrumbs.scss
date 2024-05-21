@@ -37,8 +37,17 @@ $-breadcrumb-outline-color: sage-color(primary, 200);
     }
 
     .sage-breadcrumbs--progressbar &::after {
+      content: ""
+    }
+    .sage-breadcrumbs--progressbar pds-icon {
       margin: 0 sage-spacing(xs) sage-spacing(2xs);
-      @include sage-icon-base(right-small, xl);
+      @include sage-icon-base(right-small, xl, pine);
+    }
+  }
+
+  .sage-breadcrumbs--progressbar & {
+    &:last-child pds-icon {
+      display: none;
     }
   }
 }

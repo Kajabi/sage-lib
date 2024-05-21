@@ -647,9 +647,6 @@
     @if $component != pine {
       content: sage-icon($icon);
     }
-    @else {
-      z-index: 1;
-    }
   }
 }
 
