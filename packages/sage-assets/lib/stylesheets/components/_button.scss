@@ -785,7 +785,7 @@ a.sage-btn {
     }
   }
 
-  &:has(pds-icon) {
+  pds-icon {
     z-index: 1;
   }
 }
