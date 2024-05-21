@@ -554,7 +554,7 @@
     color: sage-color(red, 300);
 
     &::before {
-      @include sage-icon-base(danger, md);
+      @include sage-icon-base(danger, md, pine);
 
       position: relative;
       top: rem(1px);
