@@ -48,7 +48,13 @@
     <% end %>
   </select>
   <label class="sage-select__label" for="<%= select_id %>"><%= label %></label>
-  <i class="sage-select__arrow" aria-hidden="true"></i>
+  <pds-icon
+    aria-hidden="true"
+    class="sage-select__arrow"
+    color="<%= SageTokens::COLOR_PALETTE[:CHARCOAL_100] %>"
+    name="caret-down"
+    size=""
+  ></pds-icon>
   <% if component.message.present? %>
     <div class="sage-select__info">
       <div class="sage-select__message"><%= component.message %></div>

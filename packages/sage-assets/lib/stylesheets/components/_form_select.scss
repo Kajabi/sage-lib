@@ -51,6 +51,7 @@ $-select-arrow-position-inverse-with-message: calc(100% - #{$-select-height + $-
   position: relative;
   z-index: sage-z-index(default, 1);
   pointer-events: none;
+  height: $-select-height;
 }
 
 .sage-select__arrow::before {
