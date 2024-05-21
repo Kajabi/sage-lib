@@ -79,7 +79,7 @@ $-icon-beside-type: (
   }
 
   .sage-choice--icon-#{$icon-name}::before {
-    @include sage-icon-base($icon-name);
+    @include sage-icon-base($icon-name, md, pine);
   }
 
   .sage-dropdown__item-control--icon-#{$icon-name}::before {
