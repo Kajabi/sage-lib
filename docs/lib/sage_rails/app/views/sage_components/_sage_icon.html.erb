@@ -23,21 +23,16 @@ end
     <% end %>
   >
 <% end %>
-  <i class="
-      sage-icon
+  <pds-icon
+    name="<%= "#{component.icon}"%>"
+    class="
+      <%= "t-sage--color-#{component.color}" if component.color.present? %>
       <%= "sage-icon-#{component.icon}" %><%= "-#{component.size}" if component.size.present? %>
       <%= "sage-icon--adjacent-type-#{component.adjacent_type}" if component.adjacent_type %>
-      <%= "t-sage--color-#{component.color}" if component.color.present? %>
       <%= component.generated_css_classes %>
     "
-    <% if component.label.present? %>
-      aria-label="<%= component.label %>"
-      role="img"
-    <% else %>
-      aria-hidden=true
-    <% end %>
-    <%= component.generated_html_attributes.html_safe %>
-  ></i>
+    size="<%= "#{component.size}" if component.size.present? %>"
+    ></pds-icon>
 <% if component.card_color.present? %>
   </div>
 <% end %>

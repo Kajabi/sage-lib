@@ -63,7 +63,7 @@ $-icon-beside-type: (
       height: $size;
 
       &::before {
-        @include sage-icon-base($icon-name, $size-name);
+        @include sage-icon-base($icon-name, $size-name, pine);
       }
     }
   }
