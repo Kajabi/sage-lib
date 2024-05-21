@@ -10,7 +10,12 @@
   <%- if component.label_text.present? -%><label for="<%= component.id %>" class="sage-textarea__label"><%= component.label_text -%></label><% end -%>
   <% if component.message_text.present? %>
     <div class="sage-textarea__info">
-      <div class="sage-textarea__message"><%= component.message_text %></div>
+      <div class="sage-textarea__message">
+        <% if component.has_error %>
+          <pds-icon name="danger" class="<%= SageClassnames::SPACERS::XS_RIGHT %>"></pds-icon>
+        <% end %>
+        <%= component.message_text %>
+      </div>
     </div>
   <% end %>
 </div>
