@@ -16,6 +16,7 @@
     type="button"
     <%= component.generated_html_attributes.html_safe %>
   >
+    <pds-icon name="copy" class="<%= SageClassnames::SPACERS::SM_LEFT %>"></pds-icon>
     <%= sage_component SageCopyText, { value: component.value, semibold: component.semibold.present? && component.semibold } %>
   </button>
 <% end %>
