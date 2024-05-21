@@ -59,7 +59,8 @@ $-link-base-styles: (
 
 .sage-link {
   @extend %t-sage-body-semi;
-
+  align-items: center;
+  gap: sage-spacing(2xs);
   display: inline-flex;
   position: relative;
   max-width: 100%;
@@ -158,7 +159,7 @@ $-link-base-styles: (
   &::after {
     margin-left: sage-spacing(2xs);
     margin-right: sage-spacing(2xs);
-    @include sage-icon-base(launch, sm);
+    @include sage-icon-base(launch, sm, pine);
   }
 }
 
