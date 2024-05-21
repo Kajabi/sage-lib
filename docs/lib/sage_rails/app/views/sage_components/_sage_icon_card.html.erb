@@ -21,12 +21,14 @@ style = {
   <% end %>
   <%= component.generated_html_attributes.html_safe %>
 >
-  <i
+  <pds-icon
     class="sage-icon-<%= component.icon %><%= size %>"
+    name="<%= component.icon %>"
+    size="<%= size %>"
     <% if component.label.present? %>
-    aria-label="<%= component.label %>"
+      aria-label="<%= component.label %>"
     <% else %>
-    aria-hidden="true"
+      aria-hidden="true"
     <% end %>
-  ></i>
+  ></pds-icon>
 </div>
