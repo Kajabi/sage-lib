@@ -28,7 +28,13 @@
     <span class="visually-hidden">
       <%= component.value.html_safe %>
     </span>
-    <pds-icon name="<%= component.icon[:name] %>" />
+    <pds-icon name="<%= component.icon[:name] %>"></pds-icon>
+    <% if component.disclosure %>
+      <pds-icon
+        name="caret-down"
+        class="sage-spacer-left-xs">
+      </pds-icon>
+    <% end %>
   <% else %>
     <% if component.value %>
       <% if component.icon&.dig(:name) %>

@@ -441,7 +441,7 @@ $-btn-loading-min-height: rem(36px);
     }
 
     &[class*="icon-only"]::after {
-      @include sage-icon-base(caret-down, xs);
+      @include sage-icon-base(caret-down, xs, pine);
 
       right: $-btn-disclosure-left-padding;
       font-weight: sage-font-weight(bold);
