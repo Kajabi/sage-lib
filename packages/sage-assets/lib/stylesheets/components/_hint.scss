@@ -12,11 +12,11 @@ $-hint-background-color: sage-color(grey, 300);
   display: flex;
   padding: sage-spacing(xs) rem(12px);
   background-color: $-hint-background-color;
+  align-items: center;
 }
 
 .sage-hint__icon {
   display: flex;
-  margin-top: 4px;
   margin-right: sage-spacing(xs);
 }
 
