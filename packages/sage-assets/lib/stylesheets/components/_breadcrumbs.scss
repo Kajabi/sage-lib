@@ -37,7 +37,7 @@ $-breadcrumb-outline-color: sage-color(primary, 200);
     }
 
     .sage-breadcrumbs--progressbar &::after {
-      content: ""
+      content: "";
     }
     .sage-breadcrumbs--progressbar pds-icon {
       margin: 0 sage-spacing(xs) sage-spacing(2xs);

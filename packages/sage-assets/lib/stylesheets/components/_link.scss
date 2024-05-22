@@ -59,9 +59,9 @@ $-link-base-styles: (
 
 .sage-link {
   @extend %t-sage-body-semi;
-  align-items: center;
-  gap: sage-spacing(2xs);
   display: inline-flex;
+  gap: sage-spacing(xs);
+  align-items: center;
   position: relative;
   max-width: 100%;
   min-width: 0; /* the is needed so that truncation work when the link doesn't have an explicit width set  */
