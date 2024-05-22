@@ -20,6 +20,10 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
+      # # Setup Auth token to push to github packages
+      - name: Set NPM Config
+        run: npm config set '//npm.pkg.github.com/:_authToken=${{ secrets.ACCESS_TOKEN }}'
+
       - name: Install Yarn
         env:
           NODE_VERSION: ${{ matrix.node-version }}
