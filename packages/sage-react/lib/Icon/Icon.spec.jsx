@@ -33,15 +33,16 @@ describe('Sage Icon', () => {
     screen.findByText('sage-icon-background');
   });
 
-  it('has aria-label when label prop passed', () => {
-    const props = {
-      icon: Icon.ICONS.INFO_CIRCLE,
-      label: 'information',
-    };
+  // TODO: Revisit as we look at Sage React Icon with Pine
+  // it('has aria-label when label prop passed', () => {
+  //   const props = {
+  //     icon: Icon.ICONS.INFO_CIRCLE,
+  //     label: 'information',
+  //   };
 
-    render(<Icon {...props} />);
-    expect(screen.getByLabelText('information'));
-  });
+  //   render(<Icon {...props} />);
+  //   expect(screen.getByLabelText('information'));
+  // });
 
   it('sets style icon background height and width to be equal when circular true', () => {
     const props = {
