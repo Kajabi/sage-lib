@@ -21,10 +21,11 @@
     </h1>
     <% if component.help_link.present? && component.help_html.blank? %>
       <a href="<%= component.help_link[:href] %>"
-        class="sage-link--no-launch sage-link--help-icon-only"
+        class="sage-link--no-launch sage-link--remove-underline sage-link--secondary"
         target="_blank"
         rel="noopener"
       >
+        <pds-icon name="question-circle"></pds-icon>
         <span class="visually-hidden">
           <%= component.help_link[:name] %>
         </span>
