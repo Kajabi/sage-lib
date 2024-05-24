@@ -23,7 +23,7 @@ $-sortable-image-height: rem(48px);
   cursor: grab;
 
   &::before {
-    @include sage-icon-base(handle-2-vertical);
+    @include sage-icon-base(handle-2-vertical, md, pine);
     padding: 0;
     color: sage-color(charcoal, 100);
   }

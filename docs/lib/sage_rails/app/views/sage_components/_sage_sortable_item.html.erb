@@ -8,6 +8,7 @@
   <%= "id=#{component.id}" if component.id %>
   <%= component.generated_html_attributes.html_safe %>
 >
+  <pds-icon name="handle-2-vertical" color="<%= SageTokens::COLOR_PALETTE[:CHARCOAL_200] %>"></pds-icon>
   <% if component.image.present? %>
     <div class="sage-sortable__item-image">
       <%= image_tag component.image, alt: "Cover for #{component.title}" %>
