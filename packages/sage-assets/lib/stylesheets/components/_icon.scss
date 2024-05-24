@@ -123,7 +123,7 @@ $-icon-beside-type: (
 
   .sage-status-icon--#{$icon-name} {
     &::before {
-      @include sage-icon-base($icon-name);
+      @include sage-icon-base($icon-name, md, pine);
     }
   }
 }
