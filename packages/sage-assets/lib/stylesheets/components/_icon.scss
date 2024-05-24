@@ -74,7 +74,7 @@ $-icon-beside-type: (
   @include sage-button-icon-generator($icon-name, $icon-code, right);
 
   .sage-tab--icon-#{$icon-name}::before {
-    @include sage-icon-base($icon-name);
+    @include sage-icon-base($icon-name, md, pine);
     margin-right: sage-spacing(xs);
   }
 

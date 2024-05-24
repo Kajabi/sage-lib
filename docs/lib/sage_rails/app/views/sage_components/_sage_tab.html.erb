@@ -24,6 +24,9 @@ html_tag = is_button ? "button" : "a"
   data-sage-active-class="<%= css_active_class %>"
   <%= component.generated_html_attributes.html_safe %>
 >
+  <% if component.icon.present? %>
+    <pds-icon name="<%= component.icon %>" class="<%= SageClassnames::SPACERS::XS_RIGHT %>"></pds-icon>
+  <% end %>
   <% if component.text.present? %>
     <%= component.text.html_safe %>
   <% end %>
