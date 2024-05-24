@@ -83,7 +83,7 @@ $-icon-beside-type: (
   }
 
   .sage-dropdown__item-control--icon-#{$icon-name}::before {
-    @include sage-icon-base($icon-name);
+    @include sage-icon-base($icon-name, md, pine);
     margin: 0 sage-spacing(xs) 0 0;
   }
 
