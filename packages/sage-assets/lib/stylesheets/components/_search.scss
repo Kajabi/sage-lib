@@ -185,6 +185,9 @@ $-search-icon: "::before";
   .sage-toolbar &,
   .sage-toolbar__group & {
     box-shadow: map-get($sage-toolbar-button-borders, default);
+    padding-left: calc(sage-spacing(xl) - sage-spacing(xs));
+    margin-left: calc(sage-spacing(lg) * -1);
+    z-index: -1;
 
     &:hover {
       box-shadow: map-get($sage-toolbar-button-borders, hover);
