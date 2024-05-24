@@ -237,7 +237,7 @@ Marketing uses the Megaphone icon. We do not use the megaphone icon for other tr
   <% action_icons.each do |icon| %>
     <div class="docs-icon-inline">
       <%= sage_component SageCardRow, { grid_template: "it" } do %>
-        <i class="sage-icon-<%= icon[:name] %>-xl" aria-hidden="true"></i>
+        <pds-icon class="sage-icon-<%= icon[:name] %>-xl" name="<%= icon[:name] %>" size="xl"></pds-icon>
         <p class="docs-icon-inline__label"><%= icon[:name] %></p>
         <p class="docs-icon-inline__usage"><strong><%= icon[:action] %></strong> Actions</p>
       <% end %>
@@ -250,7 +250,7 @@ Marketing uses the Megaphone icon. We do not use the megaphone icon for other tr
   <% feature_icons.each do |icon| %>
     <div class="docs-icon-inline">
       <%= sage_component SageCardRow, { grid_template: "it" } do %>
-        <i class="sage-icon-<%= icon[:name] %>-xl" aria-hidden="true"></i>
+        <pds-icon class="sage-icon-<%= icon[:name] %>-xl" name="<%= icon[:name] %>" size="xl"></pds-icon>
         <p class="docs-icon-inline__label"><%= icon[:name] %></p>
         <p class="docs-icon-inline__usage"><strong><%= icon[:action] %></strong></p>
       <% end %>
@@ -263,7 +263,7 @@ Marketing uses the Megaphone icon. We do not use the megaphone icon for other tr
   <% dialogue_icons.each do |icon| %>
     <div class="docs-icon-inline">
       <%= sage_component SageCardRow, { grid_template: "it" } do %>
-        <i class="sage-icon-<%= icon[:name] %>-xl" aria-hidden="true"></i>
+        <pds-icon class="sage-icon-<%= icon[:name] %>-xl" name="<%= icon[:name] %>" size="xl"></pds-icon>
         <p class="docs-icon-inline__label"><%= icon[:name] %></p>
         <p class="docs-icon-inline__usage"><strong><%= icon[:action] %></strong> Dialogues</p>
       <% end %>
