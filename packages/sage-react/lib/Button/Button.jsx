@@ -54,7 +54,7 @@ export const Button = React.forwardRef(({
     }
   );
 
-  let setIconClassName = (iconOnly, iconPosition) => {
+  const setIconClassName = (iconOnly, iconPosition) => {
     if (iconOnly) {
       return '';
     }
