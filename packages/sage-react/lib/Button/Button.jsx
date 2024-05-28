@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import { SageClassnames } from '../configs';
 import { Link } from '../Link';
 import { Loader } from '../Loader';
 import { SageTokens } from '../configs';
@@ -81,10 +82,21 @@ export const Button = React.forwardRef(({
       onClick={onClick}
       {...rest}
     >
+      {icon && (
+          <pds-icon
+            name={icon}
+            class={iconOnly ? "" : iconPosition === "right" ? SageClassnames.SPACERS.XS_LEFT : SageClassnames.SPACERS.XS_RIGHT}
+          />
+      )}
       <span className={generatedClassNames}>
         {children}
-        <pds-icon name={icon} />
       </span>
+      {disclosure && (
+        <pds-icon
+          name='caret-down'
+          class={SageClassnames.SPACERS.XS_LEFT}
+        />
+      )}
       {!hasCustomContent && (
         <Loader
           loading={loading}
