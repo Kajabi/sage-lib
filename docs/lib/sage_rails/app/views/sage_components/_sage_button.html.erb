@@ -40,7 +40,7 @@
       <% if component.icon&.dig(:name) %>
         <pds-icon
           name="<%= component.icon[:name]%>"
-          class="<%= component.icon[:style] == "right" ? 'sage-spacer-left-xs' : 'sage-spacer-right-xs' %>">
+          class="<%= component.icon[:style] == "right" ? SageClassnames::SPACERS::XS_LEFT : SageClassnames::SPACERS::XS_RIGHT %>">
         </pds-icon>
       <% end %>
       <span class="sage-btn__truncate-text">
@@ -55,7 +55,7 @@
     <% if component.disclosure %>
       <pds-icon
         name="caret-down"
-        class="sage-spacer-left-xs">
+        class="<%= SageClassnames::SPACERS::XS_LEFT %>%>">
       </pds-icon>
     <% end %>
   <% end %>
