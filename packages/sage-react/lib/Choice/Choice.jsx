@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { SageTokens } from '../configs';
+import { SageClassnames } from '../configs';
 import { ICON_ALIGNMENTS, TYPES } from './configs';
 
 export const Choice = ({
@@ -25,6 +25,7 @@ export const Choice = ({
   const baseClass = 'sage-choice';
   const isIconType = type && type === TYPES.ICON;
   const isRadioType = type && type === TYPES.RADIO;
+  const isArrowType = type && type === TYPES.ARROW;
 
   const classNames = classnames(
     baseClass,
@@ -84,6 +85,12 @@ export const Choice = ({
           <img src={graphic} alt="" />
         </span>
       )}
+      {(isIconType || isArrowType) && (
+        <pds-icon
+          name={isArrowType ? 'caret-right' : icon}
+          class={!isArrowType ? SageClassnames.SPACERS.XS_RIGHT : ''}
+        />
+      )}
       <div className={contentClassNames}>
         {text && (
           <em className="sage-choice__text">
@@ -134,7 +141,7 @@ Choice.propTypes = {
   customContentClassName: PropTypes.string,
   disabled: PropTypes.bool,
   graphic: PropTypes.string,
-  icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),
+  icon: PropTypes.string,
   isActive: PropTypes.bool,
   linkText: PropTypes.string,
   radioConfigs: PropTypes.shape({

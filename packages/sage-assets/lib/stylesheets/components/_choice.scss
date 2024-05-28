@@ -135,13 +135,13 @@ $-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
   }
 
   pds-icon {
-    align-self: start;
     margin-top: var(--icon-top-offset);
   }
 
   &.sage-choice--vertical-align-icon-start::#{$-choice-el-icon} {
     align-self: start;
     margin-top: var(--icon-top-offset);
+
   }
 
   @media (max-width: sage-breakpoint(xs-max)) {
@@ -237,4 +237,11 @@ $-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
 
   margin-top: sage-spacing(2xs);
   color: sage-color(charcoal, 200);
+}
+
+pds-icon {
+  .sage-choice--vertical-align-icon-start & {
+    align-self: start;
+    margin-top: var(--icon-top-offset);
+  }
 }
