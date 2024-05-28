@@ -55,7 +55,7 @@ $-select-arrow-position-inverse-with-message: calc(100% - #{$-select-height + $-
 }
 
 .sage-select__arrow::before {
-  @include sage-icon-base(caret-down);
+  @include sage-icon-base(caret-down, md, pine);
 
   align-items: center;
   height: $-select-height;
@@ -143,7 +143,7 @@ $-select-arrow-position-inverse-with-message: calc(100% - #{$-select-height + $-
   align-items: center;
 
   .sage-select--value-selected & + .sage-select__arrow::before {
-    @include sage-icon-base(up-small);
+    @include sage-icon-base(up-small, md, pine);
   }
 }
 
