@@ -117,7 +117,7 @@ $-icon-beside-type: (
     &::before {
       margin-right: sage-spacing(xs);
 
-      @include sage-icon-base($icon-name);
+      @include sage-icon-base($icon-name, md, pine);
     }
   }
 

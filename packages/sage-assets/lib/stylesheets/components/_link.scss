@@ -169,7 +169,7 @@ $-link-base-styles: (
   text-decoration: none;
 
   &::before {
-    @include sage-icon-base(question-circle, lg);
+    @include sage-icon-base(question-circle, lg, pine);
 
     color: sage-color(charcoal, 100);
   }

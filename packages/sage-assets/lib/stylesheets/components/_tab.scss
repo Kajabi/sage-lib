@@ -116,7 +116,7 @@ $-tab-color-disabled: map-get($sage-tab-colors, disabled);
         order: 2;
         color: sage-color(charcoal, 100);
 
-        @include sage-icon-base(right-small, xl);
+        @include sage-icon-base(right-small, xl, pine);
       }
     }
   }
