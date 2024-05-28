@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { SageClassnames } from '../configs';
 import { Link } from '../Link';
 import { Loader } from '../Loader';
-import { SageTokens } from '../configs';
+import { SageTokens, SageClassnames } from '../configs';
 import { ButtonGroup } from './ButtonGroup';
 import {
   BUTTON_COLORS,
@@ -55,6 +54,13 @@ export const Button = React.forwardRef(({
     }
   );
 
+  let setIconClassName = (iconOnly, iconPosition) => {
+    if (iconOnly) {
+      return '';
+    }
+    return iconPosition === 'right' ? SageClassnames.SPACERS.XS_LEFT : SageClassnames.SPACERS.XS_RIGHT;
+  };
+
   if (loading) {
     rest['aria-busy'] = true;
     rest['aria-label'] = rest['aria-label'] || BUTTON_DEFAULT_LOADING_TEXT;
@@ -83,17 +89,17 @@ export const Button = React.forwardRef(({
       {...rest}
     >
       {icon && (
-          <pds-icon
-            name={icon}
-            class={iconOnly ? "" : iconPosition === "right" ? SageClassnames.SPACERS.XS_LEFT : SageClassnames.SPACERS.XS_RIGHT}
-          />
+        <pds-icon
+          name={icon}
+          class={setIconClassName(iconOnly, iconPosition)}
+        />
       )}
       <span className={generatedClassNames}>
         {children}
       </span>
       {disclosure && (
         <pds-icon
-          name='caret-down'
+          name="caret-down"
           class={SageClassnames.SPACERS.XS_LEFT}
         />
       )}
