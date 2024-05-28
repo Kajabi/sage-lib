@@ -1,5 +1,5 @@
 <%
-has_back_icon = component.has_back_icon.present? ? component.has_back_icon : component.items.length() == 1
+has_back_icon = component.has_back_icon.nil? ? component.items.length() == 1 : component.has_back_icon
 is_progressbar = component.is_progressbar.present? && component.is_progressbar
 %>
 <nav
@@ -38,7 +38,7 @@ is_progressbar = component.is_progressbar.present? && component.is_progressbar
         <i class="sage-breadcrumbs__icon sage-icon-arrow-left" aria-hidden="true"></i>
       <% end %>
       <%= component.items[0][:text] %>
-    </a>  
+    </a>
   </p>
   <% end %>
 </nav>
