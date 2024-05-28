@@ -1,4 +1,5 @@
 <%
+# The intent is to set this prop to false unless the has_back_icon prop is explicitly set
 has_back_icon = component.has_back_icon.nil? ? component.items.length() == 1 : component.has_back_icon
 is_progressbar = component.is_progressbar.present? && component.is_progressbar
 %>
