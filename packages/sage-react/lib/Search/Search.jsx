@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { Button } from '../Button';
-import { SageTokens } from '../configs';
+import { SageTokens, SageClassnames } from '../configs';
 
 export const Search = React.forwardRef(({
   className,
@@ -41,6 +41,11 @@ export const Search = React.forwardRef(({
         </label>
       )}
       <div className="sage-search__field-wrapper">
+        <pds-icon
+          name="search-small"
+          class={SageClassnames.SPACERS.SM_LEFT} color={SageTokens.COLOR_PALETTE.CHARCOAL_200}
+          style={{zIndex: '2'}}
+        />
         <input
           ref={ref}
           className="sage-search__input"
