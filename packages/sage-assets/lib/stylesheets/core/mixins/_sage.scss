@@ -450,8 +450,6 @@
     box-shadow: sage-border-interactive(disabled);
     cursor: not-allowed;
     resize: none;
-    padding-left: calc(#{sage-spacing(xl)} - #{sage-spacing(xs)});
-    margin-left: calc(#{sage-spacing(lg)} * -1);
 
     @include placeholder {
       color: sage-color(charcoal, 200);
