@@ -24,7 +24,7 @@ style = {
   <pds-icon
     class="sage-icon-<%= component.icon %><%= size %>"
     name="<%= component.icon %>"
-    size="<%= size %>"
+    size="<%= component.size || "3xl" %>"
     <% if component.label.present? %>
       aria-label="<%= component.label %>"
     <% else %>
