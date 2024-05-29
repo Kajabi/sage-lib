@@ -14,12 +14,17 @@ $-tag-button-icon-mobile-size: rem(24px);
 
   display: inline-flex;
   align-items: center;
-  padding: sage-spacing(3xs) sage-spacing(2xs) sage-spacing(3xs) sage-spacing(xs);
+  padding: sage-spacing(3xs) sage-spacing(xs) sage-spacing(3xs) sage-spacing(xs);
   background-color: sage-color(grey, 300);
   border-radius: sage-border(radius-x-large);
 
   &:hover {
     background-color: sage-color(grey, 400);
+  }
+
+  pds-icon {
+    width: rem(13px) !important;
+    height: rem(13px) !important;
   }
 }
 
@@ -39,6 +44,7 @@ $-tag-button-icon-mobile-size: rem(24px);
   width: auto;
   height: auto;
   margin-left: rem(6px);
+  margin-right: calc(sage-spacing(2xs) * -1);
   color: $-tag-button-color;
 
   &::before {
