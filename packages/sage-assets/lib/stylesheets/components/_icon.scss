@@ -135,7 +135,7 @@ $-icon-beside-type: (
 @each $type-spec in $-icon-beside-type {
   .sage-icon--adjacent-type-#{$type-spec},
   pds-icon.sage-icon--adjacent-type-#{$type-spec} {
-    height: sage-line-height($type-spec) !important;
+    height: sage-line-height($type-spec) !important; /* stylelint-disable-line declaration-no-important */
 
     &::before {
       height: sage-line-height($type-spec);
