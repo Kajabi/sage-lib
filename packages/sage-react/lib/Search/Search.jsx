@@ -43,8 +43,9 @@ export const Search = React.forwardRef(({
       <div className="sage-search__field-wrapper">
         <pds-icon
           name="search-small"
-          class={SageClassnames.SPACERS.SM_LEFT} color={SageTokens.COLOR_PALETTE.CHARCOAL_200}
-          style={{zIndex: '2'}}
+          class={SageClassnames.SPACERS.SM_LEFT}
+          color={SageTokens.COLOR_PALETTE.CHARCOAL_200}
+          style={{ zIndex: '2' }}
         />
         <input
           ref={ref}
