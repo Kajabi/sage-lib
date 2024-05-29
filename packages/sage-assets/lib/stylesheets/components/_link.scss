@@ -168,7 +168,8 @@ $-link-base-styles: (
   position: relative;
   text-decoration: none;
 
-  &::before {
+  &::before,
+  pds-icon {
     @include sage-icon-base(question-circle, lg, pine);
 
     color: sage-color(charcoal, 100);
@@ -178,6 +179,10 @@ $-link-base-styles: (
   &:active,
   &:focus {
     outline: 0;
+
+    pds-icon {
+      color: sage-color(charcoal, 300);
+    }
 
     &::before {
       color: sage-color(charcoal, 300);
