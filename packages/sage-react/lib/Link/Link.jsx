@@ -46,6 +46,9 @@ export const Link = ({
             className={classNames}
             {...rest}
           >
+            {icon && (
+              <pds-icon name={icon} class="sage-link__icon"></pds-icon>
+            )}
             {truncate ? (
               <span className="t-sage--truncate">
                 {children}
@@ -58,6 +61,9 @@ export const Link = ({
           className={classNames}
           {...rest}
         >
+          {icon && (
+            <pds-icon name={icon} class="sage-link__icon"></pds-icon>
+          )}
           {truncate ? (
             <span className="t-sage--truncate">
               {children}
