@@ -44,7 +44,7 @@ $-tag-button-icon-mobile-size: rem(24px);
   width: auto;
   height: auto;
   margin-left: rem(6px);
-  margin-right: calc((sage-spacing(2xs)) * -1);
+  margin-right: calc(#{sage-spacing(2xs)} * -1);
   color: $-tag-button-color;
 
   &::before {
