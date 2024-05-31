@@ -1,8 +1,7 @@
 <%
   # Temporary variables here until refactor for 'name' is complete; see https://kajabi.atlassian.net/browse/SAGE-214
   label = component.label || component.name;
-  select_id = component.id.downcase.dasherize if component.id;
-  select_name = label.downcase.dasherize;
+  select_id = component.id.downcase if component.id;
 %>
 
 <div class="
@@ -48,7 +47,7 @@
       <% end %>
     <% end %>
   </select>
-  <label class="sage-select__label" for="<%= select_name %>"><%= label %></label>
+  <label class="sage-select__label" for="<%= select_id %>"><%= label %></label>
   <i class="sage-select__arrow" aria-hidden="true"></i>
   <% if component.message.present? %>
     <div class="sage-select__info">
