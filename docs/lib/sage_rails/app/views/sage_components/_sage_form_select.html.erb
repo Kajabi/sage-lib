@@ -1,7 +1,7 @@
 <%
   # Temporary variables here until refactor for 'name' is complete; see https://kajabi.atlassian.net/browse/SAGE-214
   label = component.label || component.name;
-  select_id = component.id.downcase if component.id;
+  select_id = component.id ? component.id.downcase : label.downcase.dasherize;
 %>
 
 <div class="
