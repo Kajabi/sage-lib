@@ -36,13 +36,13 @@ export const BannerContent = ({
   };
 
   const iconMap = {
-    secondary: "info-circle",
-    warning: "warning",
-    danger: "danger",
-    default: "flag",
+    secondary: 'info-circle',
+    warning: 'warning',
+    danger: 'danger',
+    default: 'flag',
   };
 
-  const icon_name = iconMap[type] || iconMap.default;
+  const iconName = iconMap[type] || iconMap.default;
 
   return (
     <div
@@ -50,7 +50,7 @@ export const BannerContent = ({
       {...rest}
       id={id}
     >
-      <pds-icon name={icon_name} class="sage-banner__icon"></pds-icon>
+      <pds-icon name={iconName} class="sage-banner__icon" />
       {text && (
         <p className="sage-banner__text">{text}</p>
       )}
