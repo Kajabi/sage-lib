@@ -2,7 +2,7 @@
   color: "warning",
   title: "Deprecated",
   desc:  "Catalog Item usage is no longer recommended. Please use the #{link_to "List component", "/pages/component/list"} instead to construct a similar experience or as a replacement option.".html_safe,
-  icon_name: "sage-icon-danger-filled",
+  icon_name: "danger-filled",
 } %>
 
 <%= sage_component SageCardList, {} do %>
@@ -75,7 +75,7 @@
   <% 2.times do %>
     <%= sage_component SageCatalogItem, {
       title: "Fun For All – The Children Call: Their Favorite Time Of Year",
-      icon: "sage-icon-mail-xl",
+      icon: "mail",
       href: "#"
     } do %>
       <%= sage_component SageButton, {

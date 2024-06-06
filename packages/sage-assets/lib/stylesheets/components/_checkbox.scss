@@ -171,19 +171,20 @@ $-checkbox-focus-outline-color: sage-color(primary, 200);
 
   // Checkmark
   &::after {
-    @include sage-icon-base(check, sm);
+    @include sage-icon-base(check, sm, pine);
 
     $-checkbox-scale: calc(14 / 16);
-    transform: translate3d(calc(-50% - 0.5px), calc(-50% - 0.5px), 0) scale3d(#{$-checkbox-scale}, #{$-checkbox-scale}, #{$-checkbox-scale});
+    transform: translate3d(calc(-50% - 0.5px), calc(-50% - 0.5px), 0);
     color: sage-color(white);
     font-weight: sage-font-weight(bold);
-    opacity: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' class='pdsicon'%3E%3Cpath fill-rule='evenodd' fill='%23fff' d='M15.138 3.529c.26.26.26.682 0 .942l-8.667 8.667a.667.667 0 0 1-.942 0L.862 8.471a.667.667 0 0 1 .943-.942L6 11.724l8.195-8.195c.26-.26.683-.26.943 0Z'%3E%3C/path%3E%3C/svg%3E");
   }
 
   .sage-checkbox--partial-selection &,
   &.sage-checkbox--partial-selection {
     &::after {
-      @include sage-icon-base(horizontal-line);
+      @include sage-icon-base(horizontal-line, md, pine);
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' class='pdsicon'%3E%3Cpath fill='%23ffffff' d='M14.667 7.333H1.333c-.4 0-.666.267-.666.667s.266.667.666.667h13.334c.4 0 .666-.267.666-.667s-.266-.667-.666-.667Z'%3E%3C/path%3E%3C/svg%3E");
     }
   }
 

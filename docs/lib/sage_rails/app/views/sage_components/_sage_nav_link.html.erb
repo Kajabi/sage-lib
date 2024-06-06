@@ -22,7 +22,7 @@ attributes = component.attributes.present? ? component.attributes : {}
 %>
 <%= link_to component.link, method: component.method, class: "sage-nav__link #{active_class} #{component_class} #{nav_link_icon_class}", **attributes do %>
   <% if component.icon %>
-    <i class="sage-icon-<%= component.icon %> sage-nav__icon"></i>
+    <pds-icon name="<%= component.icon %>" class="sage-nav__icon"></pds-icon>
   <% end %>
   <span class="sage-nav__label">
     <%= component.text %>

@@ -15,7 +15,6 @@ export const Icon = ({
   icon,
   label,
   size,
-  ...rest
 }) => {
   const classNames = classnames(
     className,
@@ -46,8 +45,19 @@ export const Icon = ({
     attributes.role = 'img';
   }
 
+  const sizeMapping = {
+    [ICON_SIZES.XS]: '8px',
+    [ICON_SIZES.SM]: '12px',
+    [ICON_SIZES.MD]: '16px',
+    [ICON_SIZES.LG]: '20px',
+    [ICON_SIZES.XL]: '24px',
+    [ICON_SIZES.XXL]: '28px',
+    [ICON_SIZES.XXXL]: '32px',
+    [ICON_SIZES.XXXXL]: '36px',
+  };
+
   const renderIcon = () => (
-    <i className={classNames} {...attributes} {...rest} />
+    <pds-icon name={icon} class={`t-sage--color-${color} ${classNames}`} size={sizeMapping[size]} />
   );
 
   const setBackgroundDimensions = () => {

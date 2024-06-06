@@ -79,7 +79,7 @@
       flex-direction: row-reverse;
 
       &::before {
-        @include sage-icon-base($icon-name, md);
+        @include sage-icon-base($icon-name, md, pine);
 
         align-self: center;
         margin-left: sage-spacing(xs);
@@ -98,7 +98,7 @@
       flex-direction: row;
 
       &::before {
-        @include sage-icon-base($icon-name);
+        @include sage-icon-base($icon-name, md, pine);
 
         align-self: center;
         margin-right: sage-spacing(xs);
@@ -160,7 +160,7 @@
       }
 
       &::before {
-        @include sage-icon-base($icon-name);
+        @include sage-icon-base($icon-name, md, pine);
 
         align-self: center;
         padding: 0;
@@ -554,7 +554,7 @@
     color: sage-color(red, 300);
 
     &::before {
-      @include sage-icon-base(danger, md);
+      @include sage-icon-base(danger, md, pine);
 
       position: relative;
       top: rem(1px);
@@ -624,7 +624,7 @@
 /// @param {string | null} $icon [null] The alias from the icon library for the icon to use
 /// @param {string} $icon [md] The code for the desired spacing size from the `sage-icon-sizes` token
 ///
-@mixin sage-icon-base($icon: null, $icon-size: md) {
+@mixin sage-icon-base($icon: null, $icon-size: md, $component: null) {
   $size: map-get($sage-icon-sizes, $icon-size);
 
   display: inline-flex;
@@ -644,7 +644,9 @@
   -moz-osx-font-smoothing: grayscale;
 
   @if ($icon) {
-    content: sage-icon($icon);
+    @if $component != pine {
+      content: sage-icon($icon);
+    }
   }
 }
 

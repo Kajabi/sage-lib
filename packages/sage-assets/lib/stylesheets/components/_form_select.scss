@@ -50,11 +50,12 @@ $-select-arrow-position-inverse-with-message: calc(100% - #{$-select-height + $-
   grid-row: 2 / 3;
   position: relative;
   z-index: sage-z-index(default, 1);
+  height: $-select-height;
   pointer-events: none;
 }
 
 .sage-select__arrow::before {
-  @include sage-icon-base(caret-down);
+  @include sage-icon-base(caret-down, md, pine);
 
   align-items: center;
   height: $-select-height;
@@ -138,9 +139,11 @@ $-select-arrow-position-inverse-with-message: calc(100% - #{$-select-height + $-
 
 .sage-select__message {
   @include sage-form-field-message;
+  display: flex;
+  align-items: center;
 
   .sage-select--value-selected & + .sage-select__arrow::before {
-    @include sage-icon-base(up-small);
+    @include sage-icon-base(up-small, md, pine);
   }
 }
 

@@ -55,4 +55,6 @@ $-textarea-color-default: sage-color(charcoal, 300);
 
 .sage-textarea__message {
   @include sage-form-field-message;
+  display: flex;
+  align-items: center;
 }

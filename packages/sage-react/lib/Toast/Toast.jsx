@@ -103,6 +103,7 @@ export const Toast = ({
           className="sage-toast__button sage-toast__button--close sage-btn sage-btn--subtle sage-btn--secondary sage-btn--icon-only-remove"
           onClick={onClickDismiss}
         >
+          <pds-icon name="remove" />
           <span className="visually-hidden">
             Dismiss message
           </span>

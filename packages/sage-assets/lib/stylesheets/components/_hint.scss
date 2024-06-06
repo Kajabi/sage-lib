@@ -10,13 +10,13 @@ $-hint-background-color: sage-color(grey, 300);
 
 .sage-hint {
   display: flex;
+  align-items: center;
   padding: sage-spacing(xs) rem(12px);
   background-color: $-hint-background-color;
 }
 
 .sage-hint__icon {
   display: flex;
-  margin-top: 4px;
   margin-right: sage-spacing(xs);
 }
 

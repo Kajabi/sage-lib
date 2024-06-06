@@ -434,14 +434,14 @@ $-btn-loading-min-height: rem(36px);
     padding-right: calc(1rem + #{$-btn-disclosure-left-padding});
 
     &::after {
-      @include sage-icon-base(caret-down, md);
+      @include sage-icon-base(caret-down, md, pine);
 
       position: absolute;
       right: 1rem;
     }
 
     &[class*="icon-only"]::after {
-      @include sage-icon-base(caret-down, xs);
+      @include sage-icon-base(caret-down, xs, pine);
 
       right: $-btn-disclosure-left-padding;
       font-weight: sage-font-weight(bold);
@@ -449,6 +449,10 @@ $-btn-loading-min-height: rem(36px);
 
     &[class*="icon-only"].sage-btn--small::after {
       right: rem(12px);
+    }
+
+    &:has(pds-icon) {
+      padding-right: $-btn-base-padding-inline;
     }
   }
 
@@ -779,6 +783,11 @@ a.sage-btn {
     &:not(:focus):hover::after {
       background-color: transparent;
     }
+  }
+
+  pds-icon {
+    z-index: 2;
+    pointer-events: none;
   }
 }
 

@@ -61,6 +61,11 @@ end
       <%= component.graphic.html_safe %>
     </div>
   <% end %>
+  <% if component.type == "icon" && component.icon.present? %>
+    <pds-icon name="<%= "#{component.icon}" %>" class="<%= SageClassnames::SPACERS::XS_RIGHT %>"></pds-icon>
+  <% elsif component.type == "arrow" %>
+    <pds-icon name="<%= "caret-right" %>"></pds-icon>
+  <% end %>
   <div class="
     sage-choice__content
     <%= "sage-choice__content--custom" if component.content.present? %>

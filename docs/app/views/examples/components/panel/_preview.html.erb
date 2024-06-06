@@ -10,7 +10,7 @@ Ut elementum id leo ac fringilla.
 <%= sage_component SageAlert, {
   color: "warning",
   desc: "While this page depicts Panels within Cards, this is merely a consequence of our documentation structure and not a pattern that should be implemented elsewhere.",
-  icon_name: "sage-icon-warning",
+  icon_name: "warning",
 } %>
 
 <h2>Overview</h2>
@@ -70,25 +70,25 @@ There are a few options for the panel body container.
   <%= sage_component SagePanelStack, {} do %>
     <%= sage_component SageCard, {} do %>
       <%= sage_component SageCardRow, { grid_template: "et" } do %>
-        <i class="sage-icon-video-on"></i>
+        <%= sage_component SageIcon, { icon: "video-on" } %>
         <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
       <% end %>
     <% end %>
     <%= sage_component SageCard, {} do %>
       <%= sage_component SageCardRow, { grid_template: "et" } do %>
-        <i class="sage-icon-video-on"></i>
+        <%= sage_component SageIcon, { icon: "video-on" } %>
         <span>Morbi rhoncus mauris ut turpis gravida bibendum.</span>
       <% end %>
     <% end %>
     <%= sage_component SageCard, {} do %>
       <%= sage_component SageCardRow, { grid_template: "et" } do %>
-        <i class="sage-icon-video-on"></i>
+        <%= sage_component SageIcon, { icon: "video-on" } %>
         <span>Donec feugiat accumsan velit et semper.</span>
       <% end %>
     <% end %>
     <%= sage_component SageCard, {} do %>
       <%= sage_component SageCardRow, { grid_template: "et" } do %>
-        <i class="sage-icon-video-on"></i>
+        <%= sage_component SageIcon, { icon: "video-on" } %>
         <span>Ut elementum id leo ac fringilla.</span>
       <% end %>
     <% end %>
@@ -102,19 +102,19 @@ There are a few options for the panel body container.
 <%= sage_component SagePanel, {} do %>
   <%= sage_component SagePanelList, {} do %>
     <%= sage_component SagePanelListItem, { grid_template: "et" } do %>
-      <i class="sage-icon-video-on"></i>
+      <%= sage_component SageIcon, { icon: "video-on" } %>
       <span class="t-sage-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
     <% end %>
     <%= sage_component SagePanelListItem, { grid_template: "et" } do %>
-      <i class="sage-icon-video-on"></i>
+      <%= sage_component SageIcon, { icon: "video-on" } %>
       <span class="t-sage-body">Morbi rhoncus mauris ut turpis gravida bibendum.</span>
     <% end %>
     <%= sage_component SagePanelListItem, { grid_template: "et" } do %>
-      <i class="sage-icon-video-on"></i>
+      <%= sage_component SageIcon, { icon: "video-on" } %>
       <span class="t-sage-body">Donec feugiat accumsan velit et semper.</span>
     <% end %>
     <%= sage_component SagePanelListItem, { grid_template: "et" } do %>
-      <i class="sage-icon-video-on"></i>
+      <%= sage_component SageIcon, { icon: "video-on" } %>
       <span class="t-sage-body">Ut elementum id leo ac fringilla.</span>
     <% end %>
   <% end %>
@@ -132,7 +132,7 @@ There are a few options for the panel body container.
 
 <%= sage_component SagePanel, {} do %>
   <%= sage_component SagePanelRow, { grid_template: "ete" } do %>
-    <i class="sage-icon-check-circle-xl t-sage--color-sage"></i>
+    <%= sage_component SageIcon, { icon: "check-circle", css_classes: "t-sage--color-sage" } %>
     <%= sage_component SagePanelBlock, {} do %>
       <p class="t-sage-body-semi">Lorem ipsum dolor sit amet</p>
       <p class="t-sage-body-small t-sage--color-grey">consectetur adipiscing elit</p>

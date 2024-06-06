@@ -16,6 +16,7 @@
     <%= "sage-btn--#{component.style}" if component.style %>
     <%= "sage-btn--align-end" if (component.align == "end") %>
     <%= "sage-btn--icon-#{component.icon[:style]}-#{component.icon[:name]}" if component.icon %>
+
     <%= component.generated_css_classes %>
   "
   <% if component.spinner_on_submit.present? %>
@@ -27,8 +28,21 @@
     <span class="visually-hidden">
       <%= component.value.html_safe %>
     </span>
+    <pds-icon name="<%= component.icon[:name] %>"></pds-icon>
+    <% if component.disclosure %>
+      <pds-icon
+        name="caret-down"
+        class="sage-spacer-left-xs">
+      </pds-icon>
+    <% end %>
   <% else %>
     <% if component.value %>
+      <% if component.icon&.dig(:name) %>
+        <pds-icon
+          name="<%= component.icon[:name]%>"
+          class="<%= component.icon[:style] == "right" ? SageClassnames::SPACERS::XS_LEFT : SageClassnames::SPACERS::XS_RIGHT %>">
+        </pds-icon>
+      <% end %>
       <span class="sage-btn__truncate-text">
         <%# if the component.value is an empty string, add a `&nbsp;` to prevent height collapse %>
         <%= (component.value.strip.empty? ? "&nbsp;" : component.value).html_safe %>
@@ -37,6 +51,12 @@
       <span class="sage-btn__custom-content <%= component.custom_content_class if component.custom_content_class.present? %>">
         <%= component.content %>
       </span>
+    <% end %>
+    <% if component.disclosure %>
+      <pds-icon
+        name="caret-down"
+        class="<%= SageClassnames::SPACERS::XS_LEFT %>">
+      </pds-icon>
     <% end %>
   <% end %>
 </<%= html_tag %>>

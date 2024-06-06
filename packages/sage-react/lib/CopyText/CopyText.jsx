@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import { SageClassnames } from '../configs';
 
 export const CopyText = ({ children, className, semibold }) => {
   const classNames = classnames(
@@ -12,9 +13,12 @@ export const CopyText = ({ children, className, semibold }) => {
   );
 
   return (
-    <span className={classNames}>
-      {children}
-    </span>
+    <>
+      <span className={classNames}>
+        {children}
+      </span>
+      <pds-icon name="copy" class={SageClassnames.SPACERS.SM_LEFT} />
+    </>
   );
 };
 

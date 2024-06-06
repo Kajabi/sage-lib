@@ -117,32 +117,19 @@ $-badge-statuses: (
     }
 
     &.sage-badge--large .sage-badge__decor-icon {
-      right: rem(4px);
+      right: rem(10px);
     }
 
     .sage-badge__decor-icon {
       display: flex;
       justify-content: center;
+      align-items: center;
       position: absolute;
-      right: 0;
+      right: rem(8px);
       width: rem(22px);
       min-height: rem(22px);
-      margin: auto 0;
+      margin-top: rem(1px);
       border-radius: 0 $-badge-border-radius $-badge-border-radius 0;
-
-      &::before {
-        @extend %t-sage-body-xsmall;
-
-        position: relative;
-        top: rem(1px);
-        color: sage-color(charcoal, 300);
-
-        /* stylelint-disable max-nesting-depth */
-        @media (max-width: sage-breakpoint(sm-max)) {
-          width: sage-spacing(md);
-        }
-        /* stylelint-enable max-nesting-depth */
-      }
 
       &::after {
         width: $-badge-interactive-icon-size;

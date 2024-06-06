@@ -11,7 +11,7 @@
   <%= component.generated_html_attributes.html_safe %>
 >
   <% if component.icon_name %>
-    <i class="sage-alert__icon <%= component.icon_name %>" aria-hidden="true"></i>
+    <pds-icon name="<%= component.icon_name %>" class="sage-alert__icon"></pds-icon>
   <% end %>
   <div class="sage-alert__copy">
     <% if component.title %>
