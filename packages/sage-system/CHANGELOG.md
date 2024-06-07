@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.4](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@1.3.3...@kajabi/sage-system@1.3.4) (2024-06-07)
+
+**Note:** Version bump only for package @kajabi/sage-system
+
+
+
+
+
 ## [1.3.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@1.3.2...@kajabi/sage-system@1.3.3) (2024-05-17)
 
 **Note:** Version bump only for package @kajabi/sage-system
