@@ -58,7 +58,7 @@
     <% items.each do |item| %>
       <li class="sage-typeahead__item">
         <button class="sage-typeahead__item-trigger">
-          <i class="sage-icon-<%= item[:icon] %>" style="grid-area: icon;"></i>
+          <pds-icon name="<%= item[:icon] %>" class="sage-icon-<%= item[:icon] %>" style="grid-area: icon;"></pds-icon>
           <div class="t-sage-heading-6" style="grid-area: title;">
             <%= item[:title] %>
           </div>

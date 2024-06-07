@@ -59,8 +59,9 @@ $-link-base-styles: (
 
 .sage-link {
   @extend %t-sage-body-semi;
-
   display: inline-flex;
+  gap: sage-spacing(xs);
+  align-items: center;
   position: relative;
   max-width: 100%;
   min-width: 0; /* the is needed so that truncation work when the link doesn't have an explicit width set  */
@@ -158,7 +159,7 @@ $-link-base-styles: (
   &::after {
     margin-left: sage-spacing(2xs);
     margin-right: sage-spacing(2xs);
-    @include sage-icon-base(launch, sm);
+    @include sage-icon-base(launch, sm, pine);
   }
 }
 
@@ -167,8 +168,9 @@ $-link-base-styles: (
   position: relative;
   text-decoration: none;
 
-  &::before {
-    @include sage-icon-base(question-circle, lg);
+  &::before,
+  pds-icon {
+    @include sage-icon-base(question-circle, lg, pine);
 
     color: sage-color(charcoal, 100);
   }
@@ -177,6 +179,10 @@ $-link-base-styles: (
   &:active,
   &:focus {
     outline: 0;
+
+    pds-icon {
+      color: sage-color(charcoal, 300);
+    }
 
     &::before {
       color: sage-color(charcoal, 300);

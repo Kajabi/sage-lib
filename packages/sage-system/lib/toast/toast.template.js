@@ -33,6 +33,7 @@ export const toastTemplate = ({id, type, icon, text, link, testId = null}) => (`
       type="button"
       ${DATA_ATTR_CLOSE_BUTTON}
     >
+      <pds-icon name="remove" size="16"></pds-icon>
       <span class="visually-hidden">Close</span>
     </button>
   </dialog>
@@ -68,5 +69,5 @@ const loadingTemplate = () => (
 );
 
 const iconTemplate = (icon) => (
-  `<i class="sage-toast__icon sage-icon-${icon}"></i>`
+  `<pds-icon name="${icon}" class="sage-toast__icon sage-icon-${icon}"></pds-icon>`
 );

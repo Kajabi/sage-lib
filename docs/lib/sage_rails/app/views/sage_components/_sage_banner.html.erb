@@ -1,3 +1,13 @@
+<% if component.type == 'secondary' %>
+  <% icon_name = 'info-circle' %>
+<% elsif component.type == 'warning' %>
+  <% icon_name = 'warning' %>
+<% elsif component.type == 'danger' %>
+  <% icon_name = 'danger' %>
+<% else %>
+  <% icon_name = 'flag' %>
+<% end %>
+
 <% if component.banner_context.present? %>
   <div class="
     sage-banner-wrapper
@@ -16,6 +26,9 @@
   <%= "aria-hidden=true" if !component.active %>
   <%= component.generated_html_attributes.html_safe %>
 >
+  <% if component.type.present? || "default" %>
+    <pds-icon name="<%= icon_name %>" size="16px" class="sage-banner__icon"></pds-icon>
+  <% end %>
   <% if component.text.present? %>
     <p class="sage-banner__text">
       <%= component.text %>

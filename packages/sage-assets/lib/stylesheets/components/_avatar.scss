@@ -164,7 +164,8 @@ $-avatar-group-item-sizes: (
     background-color: var(--badge-custom-bg-color);
   }
 
-  i {
+  i,
+  pds-icon {
     display: flex;
   }
 

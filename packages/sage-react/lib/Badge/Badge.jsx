@@ -48,10 +48,10 @@ export const Badge = React.forwardRef(({
         <span className="sage-badge__value-text">
           {value}
         </span>
+        {isInteractive && (
+          <pds-icon name="down-small" size="12px" class="sage-badge__decor-icon sage-badge__decor-icon--down-small" />
+        )}
       </TagName>
-      {(isInteractive === true) && (
-        <span className="sage-badge__decor-icon sage-badge__decor-icon--down-small" />
-      )}
     </span>
   );
 });

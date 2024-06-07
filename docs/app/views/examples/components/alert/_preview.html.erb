@@ -18,7 +18,7 @@ These also determine the icon that will appear by default.
   color: "default",
   title: "A default alert",
   desc: demo_description,
-  icon_name: "sage-icon-info-circle-filled",
+  icon_name: "info-circle-filled",
 } do %>
   <% content_for :sage_alert_actions do %>
     <%= sage_component SageButton, {
@@ -31,7 +31,7 @@ These also determine the icon that will appear by default.
   color: "info",
   title: "An informative alert",
   desc: demo_description,
-  icon_name: "sage-icon-info-circle-filled",
+  icon_name: "info-circle-filled",
 } do %>
   <% content_for :sage_alert_actions do %>
     <%= sage_component SageButton, {
@@ -44,7 +44,7 @@ These also determine the icon that will appear by default.
   color: "success",
   title: "An informative alert",
   desc: demo_description,
-  icon_name: "sage-icon-check-circle-filled",
+  icon_name: "check-circle-filled",
 } do %>
   <% content_for :sage_alert_actions do %>
     <%= sage_component SageButton, {
@@ -57,7 +57,7 @@ These also determine the icon that will appear by default.
   color: "warning",
   title: "Uh, oh! Here's a warning alert",
   desc: demo_description,
-  icon_name: "sage-icon-danger-filled",
+  icon_name: "danger-filled",
 } do %>
   <% content_for :sage_alert_actions do %>
     <%= sage_component SageButton, {
@@ -70,7 +70,7 @@ These also determine the icon that will appear by default.
   color: "danger",
   title: "Look out! This alert means there's an error",
   desc: demo_description,
-  icon_name: "sage-icon-warning-filled",
+  icon_name: "warning-filled",
 } do %>
   <% content_for :sage_alert_actions do %>
     <%= sage_component SageButton, {
@@ -91,7 +91,7 @@ These include a single primary action button and one or more additional secondar
   color: "published",
   title: "Alert with all actions",
   desc: demo_description,
-  icon_name: "sage-icon-check-circle-filled",
+  icon_name: "check-circle-filled",
 } do %>
   <% content_for :sage_alert_actions do %>
     <%= sage_component SageButton, {
@@ -134,7 +134,7 @@ You can listen for this event as it bubbles and respond as you see fit.
   title: "This nifty alert can be dismissed",
   desc: demo_description,
   dismissable: true,
-  icon_name: "sage-icon-info-circle-filled",
+  icon_name: "info-circle-filled",
 } do %>
   <% content_for :sage_alert_actions do %>
     <%= sage_component SageButton, {
@@ -156,7 +156,7 @@ They support all other properties with the exception of buttons in the `sage_ale
   desc: demo_description,
   small: true,
   dismissable: true,
-  icon_name: "sage-icon-info-circle-filled",
+  icon_name: "info-circle-filled",
 } do %>
   <% content_for :sage_alert_actions do %>
     <%= sage_component SageLink, {

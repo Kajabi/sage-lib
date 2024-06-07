@@ -18,7 +18,7 @@ $-search-icon: "::before";
   background-color: sage-color(white);
 
   &#{$-search-icon} {
-    @include sage-icon-base(search-small);
+    @include sage-icon-base(search-small, sm, pine);
 
     z-index: sage-z-index(default, 2);
     margin-left: sage-spacing(sm);
@@ -72,6 +72,7 @@ $-search-icon: "::before";
     .sage-toolbar__group & {
       border-radius: 0;
     }
+
   }
 
   .sage-panel-controls__toolbar & {
@@ -141,7 +142,7 @@ $-search-icon: "::before";
   position: relative;
   z-index: 1;
   flex: 1;
-  padding: rem(6px) sage-spacing(sm) rem(6px) rem(40px);
+  padding: rem(6px) sage-spacing(sm) rem(6px) sage-spacing(xs);
   border: 0;
   border-radius: 0;
   box-shadow: none;
@@ -170,6 +171,10 @@ $-search-icon: "::before";
     &:hover:not(:disabled) {
       background-color: sage-color(white);
     }
+    &:disabled {
+      padding-left: calc(#{sage-spacing(xl)} - #{sage-spacing(xs)});
+      margin-left: calc(#{sage-spacing(lg)} * -1);
+    }
   }
 
   .sage-panel-controls__toolbar &,
@@ -184,6 +189,8 @@ $-search-icon: "::before";
   .sage-toolbar__group &,
   .sage-toolbar &,
   .sage-toolbar__group & {
+    padding-left: calc(#{sage-spacing(xl)} - #{sage-spacing(xs)});
+    margin-left: calc(#{sage-spacing(lg)} * -1);
     box-shadow: map-get($sage-toolbar-button-borders, default);
 
     &:hover {

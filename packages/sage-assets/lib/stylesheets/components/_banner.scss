@@ -63,7 +63,7 @@ $-banner-el-icon: "before";
   }
 
   &::#{$-banner-el-icon} {
-    @include sage-icon-base(map-get(map-get($-banner-colors, default), icon));
+    @include sage-icon-base(map-get(map-get($-banner-colors, default), icon, pine));
     margin-right: sage-spacing(sm);
   }
 }
@@ -74,7 +74,7 @@ $-banner-el-icon: "before";
     background: map-get($configs, background);
 
     &::#{$-banner-el-icon} {
-      content: sage-icon(map-get($configs, icon));
+      content: sage-icon(map-get($configs, icon, pine));
     }
   }
 }
@@ -98,7 +98,7 @@ $-banner-el-icon: "before";
 .sage-banner__icon {
   display: inline-flex;
   align-self: center;
-  margin-right: sage-spacing(xs);
+  margin-right: sage-spacing(sm);
 }
 
 .sage-banner__link {

@@ -51,4 +51,9 @@ html_attributes[:class] = css_classes
   .join(" ")
   .squish
 %>
-<%= link_to label, component.url, html_attributes %>
+<%= link_to component.url, html_attributes do %>
+  <% if component.icon %>
+    <pds-icon name="<%= component.icon[:name] %>" class="sage-link__icon"></pds-icon>
+  <% end %>
+  <%= label %>
+<% end %>

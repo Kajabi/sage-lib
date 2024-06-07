@@ -49,6 +49,9 @@
   <% if component.message_text.present? %>
     <div class="sage-input__info">
       <div class="sage-input__message">
+        <% if component.has_error %>
+          <pds-icon name="danger" class="<%= SageClassnames::SPACERS::XS_RIGHT %>"></pds-icon>
+        <% end %>
         <%= component.message_text %>
       </div>
     </div>

@@ -63,7 +63,7 @@ $-icon-beside-type: (
       height: $size;
 
       &::before {
-        @include sage-icon-base($icon-name, $size-name);
+        @include sage-icon-base($icon-name, $size-name, pine);
       }
     }
   }
@@ -74,16 +74,16 @@ $-icon-beside-type: (
   @include sage-button-icon-generator($icon-name, $icon-code, right);
 
   .sage-tab--icon-#{$icon-name}::before {
-    @include sage-icon-base($icon-name);
+    @include sage-icon-base($icon-name, md, pine);
     margin-right: sage-spacing(xs);
   }
 
   .sage-choice--icon-#{$icon-name}::before {
-    @include sage-icon-base($icon-name);
+    @include sage-icon-base($icon-name, md, pine);
   }
 
   .sage-dropdown__item-control--icon-#{$icon-name}::before {
-    @include sage-icon-base($icon-name);
+    @include sage-icon-base($icon-name, md, pine);
     margin: 0 sage-spacing(xs) 0 0;
   }
 
@@ -93,7 +93,7 @@ $-icon-beside-type: (
   }
 
   .sage-label--icon-#{$icon-name} .sage-label__value::before {
-    @include sage-icon-base($icon-name, md);
+    @include sage-icon-base($icon-name, md, pine);
     align-self: center;
     position: relative;
     margin: 0 sage-spacing(xs) 0 0;
@@ -107,7 +107,7 @@ $-icon-beside-type: (
 
   .sage-badge__decor-icon--#{$icon-name}::before,
   .sage-label__decor-icon--#{$icon-name}::before {
-    @include sage-icon-base($icon-name, md);
+    @include sage-icon-base($icon-name, md, pine);
     align-self: center;
   }
 
@@ -117,13 +117,13 @@ $-icon-beside-type: (
     &::before {
       margin-right: sage-spacing(xs);
 
-      @include sage-icon-base($icon-name);
+      @include sage-icon-base($icon-name, md, pine);
     }
   }
 
   .sage-status-icon--#{$icon-name} {
     &::before {
-      @include sage-icon-base($icon-name);
+      @include sage-icon-base($icon-name, md, pine);
     }
   }
 }
@@ -133,8 +133,9 @@ $-icon-beside-type: (
 // various responsive type specs
 //
 @each $type-spec in $-icon-beside-type {
-  .sage-icon--adjacent-type-#{$type-spec} {
-    height: sage-line-height($type-spec);
+  .sage-icon--adjacent-type-#{$type-spec},
+  pds-icon.sage-icon--adjacent-type-#{$type-spec} {
+    height: sage-line-height($type-spec) !important; /* stylelint-disable-line declaration-no-important */
 
     &::before {
       height: sage-line-height($type-spec);

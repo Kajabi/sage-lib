@@ -113,7 +113,7 @@ export const WiredIcon = () => {
 export const Graphic = () => (
   <div style={{ maxWidth: '100%', display: 'flex' }}>
     <Choice
-      graphic="https://sage.kajabi.com/assets/card-placeholder-sm-34e033e836fc6c012f09e041dca054f44b68c9dbd69dbdb62c271f980f0b6bc9.png"
+      graphic="https://sage.kajabi.com/assets/card-placeholder-sm-2e328163eacc10ed2c294b9059c802257b4e80881a81f5a47a47f38d1a481f2e.png"
       href="https://example.com"
       subtext="Description of Option 1"
       text="Option 1"
@@ -138,7 +138,7 @@ export const Arrow = () => (
 export const LinkText = () => (
   <div style={{ maxWidth: '100%', display: 'flex' }}>
     <Choice
-      graphic="https://sage.kajabi.com/assets/card-placeholder-sm-34e033e836fc6c012f09e041dca054f44b68c9dbd69dbdb62c271f980f0b6bc9.png"
+      graphic="https://sage.kajabi.com/assets/card-placeholder-sm-2e328163eacc10ed2c294b9059c802257b4e80881a81f5a47a47f38d1a481f2e.png"
       href="https://example.com"
       linkText="Sign In"
       text="Option 1"

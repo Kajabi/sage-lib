@@ -23,6 +23,12 @@
     <%= "type=button" if component.interactive_type %>
     <%= component.generated_html_attributes.html_safe %>
   />
+    <% if component.icon %>
+      <pds-icon
+        name="<%= component.icon %>"
+        class="<%= SageClassnames::SPACERS::XS_RIGHT %> <%= "sage-label--icon--custom-color" if component.icon && component.custom_icon_color %>"
+      ></pds-icon>
+    <% end %>
     <span class="sage-label__value-text">
       <%= component.value.html_safe %>
     </span>
@@ -35,5 +41,9 @@
   <% end %>
   <% if component.interactive_type === :dropdown %>
     <span class="sage-label__decor-icon sage-label__decor-icon--down-small"></span>
+    <pds-icon
+      name="down-small"
+      class="sage-label__decor-icon"
+    ></pds-icon>
   <% end %>
 </span>

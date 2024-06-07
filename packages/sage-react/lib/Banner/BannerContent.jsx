@@ -35,12 +35,22 @@ export const BannerContent = ({
     if (onDismiss) onDismiss();
   };
 
+  const iconMap = {
+    secondary: 'info-circle',
+    warning: 'warning',
+    danger: 'danger',
+    default: 'flag',
+  };
+
+  const iconName = iconMap[type] || iconMap.default;
+
   return (
     <div
       className={classNames}
       {...rest}
       id={id}
     >
+      <pds-icon name={iconName} class="sage-banner__icon" />
       {text && (
         <p className="sage-banner__text">{text}</p>
       )}

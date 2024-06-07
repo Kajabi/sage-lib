@@ -1,8 +1,7 @@
 <%
   # Temporary variables here until refactor for 'name' is complete; see https://kajabi.atlassian.net/browse/SAGE-214
   label = component.label || component.name;
-  select_id = component.id.downcase.dasherize if component.id;
-  select_name = label.downcase.dasherize;
+  select_id = component.id ? component.id.downcase : label.downcase.dasherize;
 %>
 
 <div class="
@@ -48,11 +47,22 @@
       <% end %>
     <% end %>
   </select>
-  <label class="sage-select__label" for="<%= select_name %>"><%= label %></label>
-  <i class="sage-select__arrow" aria-hidden="true"></i>
+  <label class="sage-select__label" for="<%= select_id %>"><%= label %></label>
+  <pds-icon
+    aria-hidden="true"
+    class="sage-select__arrow"
+    color="<%= SageTokens::COLOR_PALETTE[:CHARCOAL_100] %>"
+    name="caret-down"
+    size=""
+  ></pds-icon>
   <% if component.message.present? %>
     <div class="sage-select__info">
-      <div class="sage-select__message"><%= component.message %></div>
+      <div class="sage-select__message">
+        <% if component.has_error %>
+          <pds-icon name="danger" class="<%= SageClassnames::SPACERS::XS_RIGHT %>"></pds-icon>
+        <% end %>
+        <%= component.message %>
+      </div>
     </div>
   <% end %>
 </div>

@@ -73,10 +73,11 @@ $-expandable-card-padding-xs: sage-spacing(xs);
 .sage-expandable-card__trigger {
   display: inline-flex;
 
-  &::before {
+  &::before,
+  pds-icon {
     justify-content: center;
     transform: rotateZ(90deg);
-    margin-right: rem(4px);
+    margin-right: rem(8px);
     font-size: rem(8px);
     transition: transform 0.125s linear;
   }
@@ -98,7 +99,8 @@ $-expandable-card-padding-xs: sage-spacing(xs);
 }
 
 .sage-expandable-card--expanded {
-  .sage-expandable-card__trigger::before {
+  .sage-expandable-card__trigger::before,
+  pds-icon {
     transform: rotateZ(-90deg);
   }
 }
@@ -111,7 +113,8 @@ $-expandable-card-padding-xs: sage-spacing(xs);
   grid-auto-flow: column;
   align-items: center;
   gap: $-expandable-card-padding;
-  .sage-expandable-card__trigger::before {
+  .sage-expandable-card__trigger::before,
+  pds-icon {
     margin: 0;
   }
 }
