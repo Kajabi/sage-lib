@@ -5,6 +5,7 @@ import { Loader } from '../Loader';
 import { CardBlock } from './CardBlock';
 import { CardDivider } from './CardDivider';
 import { CardFigure } from './CardFigure';
+import { CardHeader } from './CardHeader';
 import { CardFooter } from './CardFooter';
 import { CardHighlight } from './CardHighlight';
 import { CardImage } from './CardImage';
@@ -52,6 +53,7 @@ export const Card = ({
 Card.Block = CardBlock;
 Card.Divider = CardDivider;
 Card.Figure = CardFigure;
+Card.Header = CardHeader;
 Card.Footer = CardFooter;
 Card.Highlight = CardHighlight;
 Card.Image = CardImage;

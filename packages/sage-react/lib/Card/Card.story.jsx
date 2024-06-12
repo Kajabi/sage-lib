@@ -1,11 +1,12 @@
 import React from 'react';
 import { selectArgs } from '../story-support/helpers';
-import { SageTokens } from '../configs';
+import { SageTokens, SageClassnames } from '../configs';
 import { Button } from '../Button';
 import { Grid } from '../Grid';
 import { Icon } from '../Icon';
 import { Link } from '../Link';
 import { Card } from './Card';
+import { Frame } from '../Frame';
 
 export default {
   title: 'Sage/Card',
@@ -19,6 +20,7 @@ export default {
     },
   },
   subcomponents: {
+    'Card.Header': Card.Header,
     'Card.Title': Card.Title,
     'Card.Block': Card.Block,
     'Card.Stack': Card.Stack,
@@ -47,7 +49,6 @@ Default.decorators = [
 Default.args = {
   children: (
     <>
-      <Card.Title>Card Title</Card.Title>
       <Card.Title>Block (with Sage Type)</Card.Title>
       <Card.Block sageType={true}>
         <p>
@@ -132,6 +133,41 @@ Default.args = {
     </>
   ),
 };
+
+export const CardWithHeader = (args) => (
+  <Card>
+    <Card.Header background={args.background}>
+      <Frame padding={Frame.PADDINGS.SM} direction={Frame.DIRECTIONS.HORIZONTAL}>
+        <Frame direction={Frame.DIRECTIONS.VERTICAL} gap={Frame.GAPS.NONE}>
+          <p className={SageClassnames.TYPE.BODY_SMALL}>November 7, 2018</p>
+          <p className={SageClassnames.TYPE.BODY_SMALL_BOLD}>Order #12931820</p>
+        </Frame>
+        <Frame direction={Frame.DIRECTIONS.VERTICAL} gap={Frame.GAPS.NONE}>
+          <p className={SageClassnames.TYPE.BODY_SMALL}>Total</p>
+          <p className={SageClassnames.TYPE.BODY_SMALL_BOLD}>$623.98</p>
+        </Frame>
+      </Frame>
+    </Card.Header>
+    <Card.Row gridTemplate={SageTokens.GRID_TEMPLATES.ETE}>
+      <p>Main content goes here.</p>
+    </Card.Row>
+    <Card.Footer>
+      <Button color="secondary">Lorem ipsum</Button>
+      <Button>Dolor sit</Button>
+    </Card.Footer>
+  </Card>
+);
+
+CardWithHeader.args = {
+  background: SageTokens.COLOR_SLIDERS.GREY_200,
+};
+
+CardWithHeader.argTypes = {
+  ...selectArgs({
+    background: SageTokens.COLOR_SLIDERS
+  }),
+};
+
 
 export const InteractiveCard = () => (
   <Card interactive={true}>

@@ -5,6 +5,9 @@
 ////
 
 
+// Default background option
+$-sage-frame-background: transparent;
+
 .sage-card {
   @include sage-card();
 
@@ -153,6 +156,26 @@
 
 .sage-card__header {
   @include sage-grid-card-row();
+}
+
+
+.sage-card--background-custom {
+  background: var(--sage-card-background, transparent);
+}
+
+@each $-color, $-sliders in $sage-colors {
+  @each $-number, $-configs in $-sliders {
+    .sage-frame--background-#{"" + $-color}-#{$-number} {
+      background: #{sage-color($-color, $-number)};
+    }
+  }
+}
+
+.sage-card__header-layout {
+  width: calc(100% + #{2 * sage-spacing(card)});
+  margin: (-1 * sage-spacing(card)) (-1 * sage-spacing(card)) (-1 * sage-spacing(card));
+  border-top-left-radius: sage-border(radius-large);
+  border-top-right-radius: sage-border(radius-large);
 }
 
 .sage-card__list {
