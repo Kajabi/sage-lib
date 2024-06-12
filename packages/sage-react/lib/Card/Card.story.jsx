@@ -168,7 +168,6 @@ CardWithHeader.argTypes = {
   }),
 };
 
-
 export const InteractiveCard = () => (
   <Card interactive={true}>
     <Link className="sage-card__link--primary" href="//example.com">
