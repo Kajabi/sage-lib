@@ -10,7 +10,7 @@ export const CardHeader = ({ background, children, ...rest }) => {
     && !Object.values(SageTokens.COLOR_SLIDERS).includes(background);
 
   if (hasCustomBackground) {
-    styles['--sage-frame-background'] = background;
+    styles['--sage-card-background'] = background;
   }
 
   return (
@@ -18,8 +18,8 @@ export const CardHeader = ({ background, children, ...rest }) => {
       className={
         [
           'sage-card__header-layout',
-          hasCustomBackground ? 'sage-frame--background-custom' : '',
-          background && !hasCustomBackground ? `sage-frame--background-${background}` : ''
+          hasCustomBackground ? 'sage-card--background-custom' : '',
+          background && !hasCustomBackground ? `sage-card--background-${background}` : ''
         ].filter((x) => x).join(' ')
       }
       {...rest}

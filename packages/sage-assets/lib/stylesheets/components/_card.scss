@@ -6,7 +6,7 @@
 
 
 // Default background option
-$-sage-frame-background: transparent;
+$-sage-card-background: transparent;
 
 .sage-card {
   @include sage-card();
@@ -165,7 +165,7 @@ $-sage-frame-background: transparent;
 
 @each $-color, $-sliders in $sage-colors {
   @each $-number, $-configs in $-sliders {
-    .sage-frame--background-#{"" + $-color}-#{$-number} {
+    .sage-card--background-#{"" + $-color}-#{$-number} {
       background: #{sage-color($-color, $-number)};
     }
   }
