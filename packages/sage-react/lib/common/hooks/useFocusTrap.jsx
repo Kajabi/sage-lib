@@ -1,6 +1,8 @@
 import { useEffect } from 'react';
 import { createFocusTrap } from 'focus-trap';
 
+/* eslint-disable react-hooks/exhaustive-deps */
+
 /**
 *
 * @param {Boolean} active          - React boolean state
