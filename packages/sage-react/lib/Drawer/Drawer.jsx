@@ -11,6 +11,8 @@ import {
   DRAWER_END_COLLAPSE,
 } from './configs';
 
+/* eslint-disable react-hooks/exhaustive-deps */
+
 export const Drawer = ({
   active,
   children,

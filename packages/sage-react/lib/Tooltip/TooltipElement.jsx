@@ -5,6 +5,8 @@ import {
   TOOLTIP_POSITIONS
 } from './configs';
 
+/* eslint-disable react-hooks/exhaustive-deps */
+
 const TOOLTIP_DISTANCE = 8;
 
 export const TooltipElement = ({

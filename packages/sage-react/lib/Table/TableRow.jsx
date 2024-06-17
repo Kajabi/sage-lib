@@ -7,6 +7,8 @@ import { cellPropTypes } from './configs';
 import { TableHelpers } from '../helpers';
 import { Checkbox } from '../Toggle';
 
+/* eslint-disable react-hooks/exhaustive-deps */
+
 export const TableRow = ({
   className,
   cells,
