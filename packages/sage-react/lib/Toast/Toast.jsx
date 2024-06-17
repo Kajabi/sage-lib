@@ -6,6 +6,8 @@ import { SageTokens } from '../configs';
 import { Icon } from '../Icon';
 import { TOAST_TYPES } from './configs';
 
+/* eslint-disable react-hooks/exhaustive-deps */
+
 export const Toast = ({
   className,
   description,

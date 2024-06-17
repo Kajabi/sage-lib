@@ -9,6 +9,8 @@ import { Table } from '../Table';
 import { getNews } from '../services/newsapi';
 import { PanelControls } from './PanelControls';
 
+/* eslint-disable react-hooks/exhaustive-deps */
+
 // TODO: Consider how select all affects all items
 // when only one page is currently selected
 

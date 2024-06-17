@@ -8,6 +8,8 @@ import {
   INPUT_TYPE
 } from './configs';
 
+/* eslint-disable react-hooks/exhaustive-deps */
+
 export const Input = React.forwardRef(({
   autocomplete,
   className,

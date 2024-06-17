@@ -9,6 +9,8 @@ import { TableRow } from './TableRow';
 import { SELECTION_TYPES } from '../PanelControls/configs';
 import { Checkbox } from '../Toggle';
 
+/* eslint-disable react-hooks/exhaustive-deps */
+
 //
 // Tables are built out from a provided set of rows.
 // These rows can be provided in a variety of formats,
