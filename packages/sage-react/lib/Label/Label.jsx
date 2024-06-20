@@ -67,7 +67,7 @@ export const Label = React.forwardRef(({
       </TagName>
       {interactiveType === LABEL_INTERACTIVE_TYPES.SECONDARY_BUTTON && secondaryButton}
       {(interactiveType === LABEL_INTERACTIVE_TYPES.DROPDOWN) && (
-        <span className="sage-label__decor-icon sage-label__decor-icon--down-small" />
+        <pds-icon className="sage-label__decor-icon" name="down-small" />
       )}
     </span>
   );
