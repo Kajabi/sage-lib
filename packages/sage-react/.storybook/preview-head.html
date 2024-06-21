@@ -2,7 +2,31 @@
   Need local instance of Pine CORE running. not PINE ICONS
   Make sure that the port here matches what is running in your local instance.
 -->
-<script type="module" src="https://localhost:7300/build/pine-core.esm.js"></script>
-<script nomodule src="https://localhost:7300/build/index.esm.js"></script>
+<script>
+  const LOCAL_PORT = 7301;
+  const host = window.location.host;
+  const timestamp = new Date().getTime(); // Generate a unique timestamp
 
-<link rel="stylesheet" href="https://localhost:7300/build/pine-core.css" />
+  if ( host.includes('localhost') ) {
+    window.PINE_CORE_URL = `https://localhost:${LOCAL_PORT}/build`;
+  } else {
+    window.PINE_CORE_URL = 'https://cdn.jsdelivr.net/npm/@pine-ds/core/dist/pine-core';
+  }
+
+  function setScriptLinks() {
+    const scriptModule = document.getElementById("scriptModule");
+    const scriptNoModule = document.getElementById("scriptNoModule");
+    const linkStyleSheet = document.getElementById("linkStyleSheet");
+
+    scriptModule.src = `${window.PINE_CORE_URL}/pine-core.esm.js?v=${timestamp}`;
+    scriptNoModule.src = `${window.PINE_CORE_URL}/index.esm.js?v=${timestamp}`;
+    linkStyleSheet.href = `${window.PINE_CORE_URL}/pine-core.css?v=${timestamp}`;
+  }
+
+  document.addEventListener('DOMContentLoaded', setScriptLinks);
+</script>
+
+<script id="scriptNoModule" nomodule></script>
+<script id="scriptModule" type="module"></script>
+<link id="linkStyleSheet" rel="stylesheet" />
+
