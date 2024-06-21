@@ -15,6 +15,7 @@ export const Icon = ({
   icon,
   label,
   size,
+  ...rest
 }) => {
   const classNames = classnames(
     className,
