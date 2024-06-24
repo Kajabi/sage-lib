@@ -5,6 +5,8 @@ import { Search } from '../Search';
 import { useFocusTrap, useDebounceEffect } from '../common/hooks';
 import { TypeaheadPanel } from './TypeaheadPanel';
 
+/* eslint-disable react-hooks/exhaustive-deps */
+
 const A11Y_ID = uuid();
 
 export const Typeahead = ({

@@ -3,6 +3,8 @@ import { disableArgs, selectArgs } from '../story-support/helpers';
 import { Switch } from './Switch';
 import { Toggle } from './Toggle';
 
+/* eslint-disable react/forbid-foreign-prop-types */
+
 export default {
   title: 'Sage/Switch',
   component: Switch,

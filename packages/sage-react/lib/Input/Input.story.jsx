@@ -4,6 +4,8 @@ import { SageTokens } from '../configs';
 import { Input } from './Input';
 import { Popover } from '../Popover';
 
+/* eslint-disable no-console */
+
 export default {
   title: 'Sage/Input',
   component: Input,

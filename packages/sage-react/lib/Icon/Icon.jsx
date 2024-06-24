@@ -15,6 +15,7 @@ export const Icon = ({
   icon,
   label,
   size,
+  ...rest
 }) => {
   const classNames = classnames(
     className,
@@ -57,7 +58,7 @@ export const Icon = ({
   };
 
   const renderIcon = () => (
-    <pds-icon name={icon} class={`t-sage--color-${color} ${classNames}`} size={sizeMapping[size]} />
+    <pds-icon name={icon} class={`t-sage--color-${color} ${classNames}`} size={sizeMapping[size]} {...rest} />
   );
 
   const setBackgroundDimensions = () => {
