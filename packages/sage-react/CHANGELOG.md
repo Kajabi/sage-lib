@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.19.7](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.19.6...@kajabi/sage-react@1.19.7) (2024-06-24)
+
+
+### Bug Fixes
+
+* **Icon:** adds back rest to icon component ([#1898](https://github.com/Kajabi/sage-lib/issues/1898)) ([ebdef16](https://github.com/Kajabi/sage-lib/commit/ebdef1621a35856500ee385f25fa19d9ed423a00))
+* **label:** convert icon to pine ([#1896](https://github.com/Kajabi/sage-lib/issues/1896)) ([57496a7](https://github.com/Kajabi/sage-lib/commit/57496a729622784794608deeba3517f266ade60d))
+
+
+
+
+
 ## [1.19.6](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.19.5...@kajabi/sage-react@1.19.6) (2024-06-07)
 
 **Note:** Version bump only for package @kajabi/sage-react
