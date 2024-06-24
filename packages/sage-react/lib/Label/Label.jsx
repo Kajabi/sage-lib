@@ -64,7 +64,7 @@ export const Label = React.forwardRef(({
         {icon && (
           <pds-icon
             name={icon}
-            class={`${SageClassnames.SPACERS.XS_RIGHT} ${icon && customIconColor ? "sage-label--icon--custom-color" : ""}`}
+            class={`${SageClassnames.SPACERS.XS_RIGHT} ${icon && customIconColor ? 'sage-label--icon--custom-color' : ''}`}
           />
         )}
         <span className="sage-label__value-text">
