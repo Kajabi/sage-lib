@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.15.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.14.7...@kajabi/sage-assets@1.15.0) (2024-07-01)
+
+
+### Bug Fixes
+
+* update css class naming ([e390a2c](https://github.com/Kajabi/sage-lib/commit/e390a2cb6b38162db9c82e07a79a5707d39427bb))
+
+
+### Features
+
+* add Card.Header component with updates to storybook ([9e53463](https://github.com/Kajabi/sage-lib/commit/9e53463ecd68e6e53a0b45442712749f315780bd))
+
+
+
+
+
 ## [1.14.7](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.14.6...@kajabi/sage-assets@1.14.7) (2024-06-24)
 
 **Note:** Version bump only for package @kajabi/sage-assets

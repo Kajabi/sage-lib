@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.20.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.19.7...@kajabi/sage-react@1.20.0) (2024-07-01)
+
+
+### Bug Fixes
+
+* correct linting errors ([d6da56d](https://github.com/Kajabi/sage-lib/commit/d6da56d0fdc52bb5630433eac36a949ebce66ed2))
+* **label:** adds missing icon and corrects class typo ([#1902](https://github.com/Kajabi/sage-lib/issues/1902)) ([35d35d5](https://github.com/Kajabi/sage-lib/commit/35d35d5bc2403d2df73311c482fc78a99c68ad44))
+* update css class naming ([e390a2c](https://github.com/Kajabi/sage-lib/commit/e390a2cb6b38162db9c82e07a79a5707d39427bb))
+
+
+### Features
+
+* add Card.Header component with updates to storybook ([9e53463](https://github.com/Kajabi/sage-lib/commit/9e53463ecd68e6e53a0b45442712749f315780bd))
+
+
+
+
+
 ## [1.19.7](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.19.6...@kajabi/sage-react@1.19.7) (2024-06-24)
 
 
