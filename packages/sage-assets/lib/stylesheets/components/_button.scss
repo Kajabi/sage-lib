@@ -500,7 +500,9 @@ $-btn-loading-min-height: rem(36px);
       }
     }
   }
-
+  pds-icon {
+    pointer-events: none;
+  }
   // NOTE: Icon generation consolidated in `core/_icons.scss`
 }
 
@@ -675,7 +677,8 @@ a.sage-btn {
         }
 
         &::before,
-        span {
+        span,
+        pds-icon {
           z-index: 1;
         }
       }
@@ -783,11 +786,6 @@ a.sage-btn {
     &:not(:focus):hover::after {
       background-color: transparent;
     }
-  }
-
-  pds-icon {
-    z-index: 1;
-    pointer-events: none;
   }
 }
 

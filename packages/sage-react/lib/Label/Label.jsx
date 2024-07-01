@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { SageTokens } from '../configs';
+import { SageTokens, SageClassnames } from '../configs';
 import {
   LABEL_COLORS,
   LABEL_STYLES,
@@ -61,13 +61,19 @@ export const Label = React.forwardRef(({
         type={interactiveType ? 'button' : null}
         {...rest}
       >
+        {icon && (
+          <pds-icon
+            name={icon}
+            class={`${SageClassnames.SPACERS.XS_RIGHT} ${icon && customIconColor ? 'sage-label--icon--custom-color' : ''}`}
+          />
+        )}
         <span className="sage-label__value-text">
           {value}
         </span>
       </TagName>
       {interactiveType === LABEL_INTERACTIVE_TYPES.SECONDARY_BUTTON && secondaryButton}
       {(interactiveType === LABEL_INTERACTIVE_TYPES.DROPDOWN) && (
-        <pds-icon className="sage-label__decor-icon" name="down-small" />
+        <pds-icon class="sage-label__decor-icon" name="down-small" />
       )}
     </span>
   );
