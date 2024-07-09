@@ -3,7 +3,7 @@
     "base": {
       "primary": {
         "100": {
-          "hex": { "value": "#Fee2e1" },
+          "hex": { "value": "#fee2e1" },
           "code": { "value": "primary-100" },
           "classname": { "value": "t-sage--color-primary-100" }
         },
@@ -153,7 +153,7 @@
           "classname": { "value": "t-sage--color-purple-300" }
         },
         "400": {
-          "hex": { "value": "#402Fa4" },
+          "hex": { "value": "#402fa4" },
           "code": { "value": "purple-400" },
           "classname": { "value": "t-sage--color-purple-400" }
         },
