@@ -22,9 +22,141 @@
 // Static vars for color base
 //
 ///
+/// color color-base-blue-5-hex
+///
+$sd-sage-color-base-blue-5-hex: #EFF6FF;
+///
+/// color color-base-blue-5-code
+///
+$sd-sage-color-base-blue-5-code: "blue-5";
+///
+/// color color-base-blue-5-classname
+///
+$sd-sage-color-base-blue-5-classname: "t-sage--color-blue-5";
+///
+/// color color-base-blue-10-hex
+///
+$sd-sage-color-base-blue-10-hex: #DBE9FE;
+///
+/// color color-base-blue-10-code
+///
+$sd-sage-color-base-blue-10-code: "blue-10";
+///
+/// color color-base-blue-10-classname
+///
+$sd-sage-color-base-blue-10-classname: "t-sage--color-blue-10";
+///
+/// color color-base-blue-20-hex
+///
+$sd-sage-color-base-blue-20-hex: #BFDBFE;
+///
+/// color color-base-blue-20-code
+///
+$sd-sage-color-base-blue-20-code: "blue-20";
+///
+/// color color-base-blue-20-classname
+///
+$sd-sage-color-base-blue-20-classname: "t-sage--color-blue-20";
+///
+/// color color-base-blue-30-hex
+///
+$sd-sage-color-base-blue-30-hex: #92C5FD;
+///
+/// color color-base-blue-30-code
+///
+$sd-sage-color-base-blue-30-code: "blue-30";
+///
+/// color color-base-blue-30-classname
+///
+$sd-sage-color-base-blue-30-classname: "t-sage--color-blue-30";
+///
+/// color color-base-blue-40-hex
+///
+$sd-sage-color-base-blue-40-hex: #60A5FA;
+///
+/// color color-base-blue-40-code
+///
+$sd-sage-color-base-blue-40-code: "blue-40";
+///
+/// color color-base-blue-40-classname
+///
+$sd-sage-color-base-blue-40-classname: "t-sage--color-blue-40";
+///
+/// color color-base-blue-50-hex
+///
+$sd-sage-color-base-blue-50-hex: #3C82F6;
+///
+/// color color-base-blue-50-code
+///
+$sd-sage-color-base-blue-50-code: "blue-50";
+///
+/// color color-base-blue-50-classname
+///
+$sd-sage-color-base-blue-50-classname: "t-sage--color-blue-50";
+///
+/// color color-base-blue-60-hex
+///
+$sd-sage-color-base-blue-60-hex: #2463EB;
+///
+/// color color-base-blue-60-code
+///
+$sd-sage-color-base-blue-60-code: "blue-60";
+///
+/// color color-base-blue-60-classname
+///
+$sd-sage-color-base-blue-60-classname: "t-sage--color-blue-60";
+///
+/// color color-base-blue-70-hex
+///
+$sd-sage-color-base-blue-70-hex: #1C4ED8;
+///
+/// color color-base-blue-70-code
+///
+$sd-sage-color-base-blue-70-code: "blue-70";
+///
+/// color color-base-blue-70-classname
+///
+$sd-sage-color-base-blue-70-classname: "t-sage--color-blue-70";
+///
+/// color color-base-blue-80-hex
+///
+$sd-sage-color-base-blue-80-hex: #1E40AF;
+///
+/// color color-base-blue-80-code
+///
+$sd-sage-color-base-blue-80-code: "blue-80";
+///
+/// color color-base-blue-80-classname
+///
+$sd-sage-color-base-blue-80-classname: "t-sage--color-blue-80";
+///
+/// color color-base-blue-90-hex
+///
+$sd-sage-color-base-blue-90-hex: #1F3A8A;
+///
+/// color color-base-blue-90-code
+///
+$sd-sage-color-base-blue-90-code: "blue-90";
+///
+/// color color-base-blue-90-classname
+///
+$sd-sage-color-base-blue-90-classname: "t-sage--color-blue-90";
+///
+/// color color-base-blue-95-hex
+///
+$sd-sage-color-base-blue-95-hex: #172554;
+///
+/// color color-base-blue-95-code
+///
+$sd-sage-color-base-blue-95-code: "blue-95";
+///
+/// color color-base-blue-95-classname
+///
+$sd-sage-color-base-blue-95-classname: "t-sage--color-blue-95";
+///
 /// color color-base-primary-100-hex
 ///
-$sd-sage-color-base-primary-100-hex: #fee2e1;
+$sd-sage-color-base-primary-100-hex: #DBE9FE;
 ///
 /// color color-base-primary-100-code
 ///
@@ -626,6 +758,63 @@ $sd-sage-color-base-black-500-classname: "t-sage--color-black-500";
 /// Map for color base
 ///
 $sd-sage-color: (
+  blue: (
+    5: (
+      hex: $sd-sage-color-base-blue-5-hex,
+      code: $sd-sage-color-base-blue-5-code,
+      classname: $sd-sage-color-base-blue-5-classname,
+    ),
+    10: (
+      hex: $sd-sage-color-base-blue-10-hex,
+      code: $sd-sage-color-base-blue-10-code,
+      classname: $sd-sage-color-base-blue-10-classname,
+    ),
+    20: (
+      hex: $sd-sage-color-base-blue-20-hex,
+      code: $sd-sage-color-base-blue-20-code,
+      classname: $sd-sage-color-base-blue-20-classname,
+    ),
+    30: (
+      hex: $sd-sage-color-base-blue-30-hex,
+      code: $sd-sage-color-base-blue-30-code,
+      classname: $sd-sage-color-base-blue-30-classname,
+    ),
+    40: (
+      hex: $sd-sage-color-base-blue-40-hex,
+      code: $sd-sage-color-base-blue-40-code,
+      classname: $sd-sage-color-base-blue-40-classname,
+    ),
+    50: (
+      hex: $sd-sage-color-base-blue-50-hex,
+      code: $sd-sage-color-base-blue-50-code,
+      classname: $sd-sage-color-base-blue-50-classname,
+    ),
+    60: (
+      hex: $sd-sage-color-base-blue-60-hex,
+      code: $sd-sage-color-base-blue-60-code,
+      classname: $sd-sage-color-base-blue-60-classname,
+    ),
+    70: (
+      hex: $sd-sage-color-base-blue-70-hex,
+      code: $sd-sage-color-base-blue-70-code,
+      classname: $sd-sage-color-base-blue-70-classname,
+    ),
+    80: (
+      hex: $sd-sage-color-base-blue-80-hex,
+      code: $sd-sage-color-base-blue-80-code,
+      classname: $sd-sage-color-base-blue-80-classname,
+    ),
+    90: (
+      hex: $sd-sage-color-base-blue-90-hex,
+      code: $sd-sage-color-base-blue-90-code,
+      classname: $sd-sage-color-base-blue-90-classname,
+    ),
+    95: (
+      hex: $sd-sage-color-base-blue-95-hex,
+      code: $sd-sage-color-base-blue-95-code,
+      classname: $sd-sage-color-base-blue-95-classname,
+    ),
+  ),
   primary: (
     100: (
       hex: $sd-sage-color-base-primary-100-hex,
@@ -1014,7 +1203,7 @@ $sd-sage-color-combos-info-default-foreground-accent: #572627;
 ///
 /// color combos color-combos-info-default-background
 ///
-$sd-sage-color-combos-info-default-background: #fee2e1;
+$sd-sage-color-combos-info-default-background: #DBE9FE;
 ///
 /// color combos color-combos-info-default-background-accent
 ///
@@ -1038,7 +1227,7 @@ $sd-sage-color-combos-info-subtle-background: #fda5a5;
 ///
 /// color combos color-combos-info-bold-foreground
 ///
-$sd-sage-color-combos-info-bold-foreground: #fee2e1;
+$sd-sage-color-combos-info-bold-foreground: #DBE9FE;
 ///
 /// color combos color-combos-info-bold-background
 ///
@@ -1352,6 +1541,10 @@ $sd-sage-color-combos: (
 // Static vars for color core
 //
 ///
+/// color core color-core-blue
+///
+$sd-sage-color-core-blue: #2463EB;
+///
 /// color core color-core-primary
 ///
 $sd-sage-color-core-primary: #ef4444;
@@ -1396,6 +1589,7 @@ $sd-sage-color-core-black: #000;
 /// Map for color core
 ///
 $sd-sage-color-core: (
+  blue: $sd-sage-color-core-blue,
   primary: $sd-sage-color-core-primary,
   sage: $sd-sage-color-core-sage,
   yellow: $sd-sage-color-core-yellow,

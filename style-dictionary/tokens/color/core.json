@@ -1,6 +1,9 @@
 {
   "color": {
     "core": {
+      "blue": {
+        "value": "{color.base.blue.60.hex}"
+      },
       "primary": {
         "value": "{color.base.primary.300.hex}"
       },

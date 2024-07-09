@@ -19,7 +19,40 @@
 //
 // Static vars for COLOR BASE
 //
-export const COLOR_BASE_PRIMARY_100_HEX = '#fee2e1';
+export const COLOR_BASE_BLUE_5_HEX = '#EFF6FF';
+export const COLOR_BASE_BLUE_5_CODE = 'blue-5';
+export const COLOR_BASE_BLUE_5_CLASSNAME = 't-sage--color-blue-5';
+export const COLOR_BASE_BLUE_10_HEX = '#DBE9FE';
+export const COLOR_BASE_BLUE_10_CODE = 'blue-10';
+export const COLOR_BASE_BLUE_10_CLASSNAME = 't-sage--color-blue-10';
+export const COLOR_BASE_BLUE_20_HEX = '#BFDBFE';
+export const COLOR_BASE_BLUE_20_CODE = 'blue-20';
+export const COLOR_BASE_BLUE_20_CLASSNAME = 't-sage--color-blue-20';
+export const COLOR_BASE_BLUE_30_HEX = '#92C5FD';
+export const COLOR_BASE_BLUE_30_CODE = 'blue-30';
+export const COLOR_BASE_BLUE_30_CLASSNAME = 't-sage--color-blue-30';
+export const COLOR_BASE_BLUE_40_HEX = '#60A5FA';
+export const COLOR_BASE_BLUE_40_CODE = 'blue-40';
+export const COLOR_BASE_BLUE_40_CLASSNAME = 't-sage--color-blue-40';
+export const COLOR_BASE_BLUE_50_HEX = '#3C82F6';
+export const COLOR_BASE_BLUE_50_CODE = 'blue-50';
+export const COLOR_BASE_BLUE_50_CLASSNAME = 't-sage--color-blue-50';
+export const COLOR_BASE_BLUE_60_HEX = '#2463EB';
+export const COLOR_BASE_BLUE_60_CODE = 'blue-60';
+export const COLOR_BASE_BLUE_60_CLASSNAME = 't-sage--color-blue-60';
+export const COLOR_BASE_BLUE_70_HEX = '#1C4ED8';
+export const COLOR_BASE_BLUE_70_CODE = 'blue-70';
+export const COLOR_BASE_BLUE_70_CLASSNAME = 't-sage--color-blue-70';
+export const COLOR_BASE_BLUE_80_HEX = '#1E40AF';
+export const COLOR_BASE_BLUE_80_CODE = 'blue-80';
+export const COLOR_BASE_BLUE_80_CLASSNAME = 't-sage--color-blue-80';
+export const COLOR_BASE_BLUE_90_HEX = '#1F3A8A';
+export const COLOR_BASE_BLUE_90_CODE = 'blue-90';
+export const COLOR_BASE_BLUE_90_CLASSNAME = 't-sage--color-blue-90';
+export const COLOR_BASE_BLUE_95_HEX = '#172554';
+export const COLOR_BASE_BLUE_95_CODE = 'blue-95';
+export const COLOR_BASE_BLUE_95_CLASSNAME = 't-sage--color-blue-95';
+export const COLOR_BASE_PRIMARY_100_HEX = '#DBE9FE';
 export const COLOR_BASE_PRIMARY_100_CODE = 'primary-100';
 export const COLOR_BASE_PRIMARY_100_CLASSNAME = 't-sage--color-primary-100';
 export const COLOR_BASE_PRIMARY_200_HEX = '#fda5a5';
@@ -174,6 +207,63 @@ export const COLOR_BASE_BLACK_500_CLASSNAME = 't-sage--color-black-500';
 // Map for COLOR BASE
 //
 export const COLOR = {
+  BLUE: {
+    5: {
+      HEX: COLOR_BASE_BLUE_5_HEX,
+      CODE: COLOR_BASE_BLUE_5_CODE,
+      CLASSNAME: COLOR_BASE_BLUE_5_CLASSNAME,
+    },
+    10: {
+      HEX: COLOR_BASE_BLUE_10_HEX,
+      CODE: COLOR_BASE_BLUE_10_CODE,
+      CLASSNAME: COLOR_BASE_BLUE_10_CLASSNAME,
+    },
+    20: {
+      HEX: COLOR_BASE_BLUE_20_HEX,
+      CODE: COLOR_BASE_BLUE_20_CODE,
+      CLASSNAME: COLOR_BASE_BLUE_20_CLASSNAME,
+    },
+    30: {
+      HEX: COLOR_BASE_BLUE_30_HEX,
+      CODE: COLOR_BASE_BLUE_30_CODE,
+      CLASSNAME: COLOR_BASE_BLUE_30_CLASSNAME,
+    },
+    40: {
+      HEX: COLOR_BASE_BLUE_40_HEX,
+      CODE: COLOR_BASE_BLUE_40_CODE,
+      CLASSNAME: COLOR_BASE_BLUE_40_CLASSNAME,
+    },
+    50: {
+      HEX: COLOR_BASE_BLUE_50_HEX,
+      CODE: COLOR_BASE_BLUE_50_CODE,
+      CLASSNAME: COLOR_BASE_BLUE_50_CLASSNAME,
+    },
+    60: {
+      HEX: COLOR_BASE_BLUE_60_HEX,
+      CODE: COLOR_BASE_BLUE_60_CODE,
+      CLASSNAME: COLOR_BASE_BLUE_60_CLASSNAME,
+    },
+    70: {
+      HEX: COLOR_BASE_BLUE_70_HEX,
+      CODE: COLOR_BASE_BLUE_70_CODE,
+      CLASSNAME: COLOR_BASE_BLUE_70_CLASSNAME,
+    },
+    80: {
+      HEX: COLOR_BASE_BLUE_80_HEX,
+      CODE: COLOR_BASE_BLUE_80_CODE,
+      CLASSNAME: COLOR_BASE_BLUE_80_CLASSNAME,
+    },
+    90: {
+      HEX: COLOR_BASE_BLUE_90_HEX,
+      CODE: COLOR_BASE_BLUE_90_CODE,
+      CLASSNAME: COLOR_BASE_BLUE_90_CLASSNAME,
+    },
+    95: {
+      HEX: COLOR_BASE_BLUE_95_HEX,
+      CODE: COLOR_BASE_BLUE_95_CODE,
+      CLASSNAME: COLOR_BASE_BLUE_95_CLASSNAME,
+    },
+  },
   PRIMARY: {
     100: {
       HEX: COLOR_BASE_PRIMARY_100_HEX,
@@ -475,13 +565,13 @@ export const COLOR_COMBOS_PUBLISHED_BOLD_FOREGROUND = '#fff';
 export const COLOR_COMBOS_PUBLISHED_BOLD_BACKGROUND = '#079250';
 export const COLOR_COMBOS_INFO_DEFAULT_FOREGROUND = '#991b1b';
 export const COLOR_COMBOS_INFO_DEFAULT_FOREGROUND_ACCENT = '#572627';
-export const COLOR_COMBOS_INFO_DEFAULT_BACKGROUND = '#fee2e1';
+export const COLOR_COMBOS_INFO_DEFAULT_BACKGROUND = '#DBE9FE';
 export const COLOR_COMBOS_INFO_DEFAULT_BACKGROUND_ACCENT = '#fda5a5';
 export const COLOR_COMBOS_INFO_DEFAULT_ICON_BACKGROUND_ACCENT = '#ef4444';
 export const COLOR_COMBOS_INFO_SUBTLE_FOREGROUND = '#991b1b';
 export const COLOR_COMBOS_INFO_SUBTLE_FOREGROUND_ACCENT = '#ef4444';
 export const COLOR_COMBOS_INFO_SUBTLE_BACKGROUND = '#fda5a5';
-export const COLOR_COMBOS_INFO_BOLD_FOREGROUND = '#fee2e1';
+export const COLOR_COMBOS_INFO_BOLD_FOREGROUND = '#DBE9FE';
 export const COLOR_COMBOS_INFO_BOLD_BACKGROUND = '#ef4444';
 export const COLOR_COMBOS_LOCKED_DEFAULT_FOREGROUND = '#402fa4';
 export const COLOR_COMBOS_LOCKED_DEFAULT_FOREGROUND_ACCENT = '#221b4b';
@@ -659,6 +749,7 @@ export const COLOR_COMBOS = {
 //
 // Static vars for COLOR CORE
 //
+export const COLOR_CORE_BLUE = '#2463EB';
 export const COLOR_CORE_PRIMARY = '#ef4444';
 export const COLOR_CORE_SAGE = '#079250';
 export const COLOR_CORE_YELLOW = '#fdbb21';
@@ -674,6 +765,7 @@ export const COLOR_CORE_BLACK = '#000';
 // Map for COLOR CORE
 //
 export const COLOR_CORE = {
+  BLUE: COLOR_CORE_BLUE,
   PRIMARY: COLOR_CORE_PRIMARY,
   SAGE: COLOR_CORE_SAGE,
   YELLOW: COLOR_CORE_YELLOW,

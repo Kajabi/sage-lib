@@ -60,6 +60,10 @@
         color: sage-color(white);
       }
 
+      @else if (($name == blue)) {
+        color: sage-color(blue, 30);
+      }
+
       @else if (lightness($hex) < 65) {
         color: sage-color($name, 100);
       }

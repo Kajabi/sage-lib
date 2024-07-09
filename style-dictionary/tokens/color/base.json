@@ -1,9 +1,66 @@
 {
   "color": {
     "base": {
+      "blue": {
+        "5": {
+          "hex": { "value": "#EFF6FF" },
+          "code": { "value": "blue-5" },
+          "classname": { "value": "t-sage--color-blue-5" }
+        },
+        "10": {
+          "hex": { "value": "#DBE9FE" },
+          "code": { "value": "blue-10" },
+          "classname": { "value": "t-sage--color-blue-10" }
+        },
+        "20": {
+          "hex": { "value": "#BFDBFE" },
+          "code": { "value": "blue-20" },
+          "classname": { "value": "t-sage--color-blue-20" }
+        },
+        "30": {
+          "hex": { "value": "#92C5FD" },
+          "code": { "value": "blue-30" },
+          "classname": { "value": "t-sage--color-blue-30" }
+        },
+        "40": {
+          "hex": { "value": "#60A5FA" },
+          "code": { "value": "blue-40" },
+          "classname": { "value": "t-sage--color-blue-40" }
+        },
+        "50": {
+          "hex": { "value": "#3C82F6" },
+          "code": { "value": "blue-50" },
+          "classname": { "value": "t-sage--color-blue-50" }
+        },
+        "60": {
+          "hex": { "value": "#2463EB" },
+          "code": { "value": "blue-60" },
+          "classname": { "value": "t-sage--color-blue-60" }
+        },
+        "70": {
+          "hex": { "value": "#1C4ED8" },
+          "code": { "value": "blue-70" },
+          "classname": { "value": "t-sage--color-blue-70" }
+        },
+        "80": {
+          "hex": { "value": "#1E40AF" },
+          "code": { "value": "blue-80" },
+          "classname": { "value": "t-sage--color-blue-80" }
+        },
+        "90": {
+          "hex": { "value": "#1F3A8A" },
+          "code": { "value": "blue-90" },
+          "classname": { "value": "t-sage--color-blue-90" }
+        },
+        "95": {
+          "hex": { "value": "#172554" },
+          "code": { "value": "blue-95" },
+          "classname": { "value": "t-sage--color-blue-95" }
+        }
+      },
       "primary": {
         "100": {
-          "hex": { "value": "#fee2e1" },
+          "hex": { "value": "{color.base.blue.10.hex.value}" },
           "code": { "value": "primary-100" },
           "classname": { "value": "t-sage--color-primary-100" }
         },
