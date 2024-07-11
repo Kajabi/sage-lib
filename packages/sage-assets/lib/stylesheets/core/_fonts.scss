@@ -3,79 +3,139 @@
 ///
 /// @group sage
 ////
-
-$-body-font-path: "#{$sage-font-cdn-root}/circular" !default; // pathname of font directory
-$-body-font-name: "CircularXXWeb";
 $-body-font-version: 1;
+
+$-greet-font-path: "#{$sage-font-cdn-root}/greet" !default; // pathname of font directory
+$-greet-font-name: "greetstandard";
+
+// Sample Url
+// https://sage.kajabi-cdn.com/font/greet/greetstandard-bold.woff2?v=1
+// https://sage.kajabi-cdn.com/font/greet/greetstandard-bold.woff?v=1
+
+// Greet Standard
+
+// Light
+@font-face {
+  font-family: "GreetStandard";
+  font-style: normal;
+  font-weight: 300;
+  src: local("#{$-greet-font-name}-light"),
+    url("#{$sage-greet-font-path}/#{$-greet-font-name}-light.woff2?v=#{$-body-font-version}") format("woff2"),
+    url("#{$sage-greet-font-path}/#{$-greet-font-name}-light.woff?v=#{$-body-font-version}") format("woff");
+}
+
+// Light Italic
+@font-face {
+  font-family: "GreetStandard";
+  font-style: italic;
+  font-weight: 300;
+  src: local("#{$-greet-font-name}-lightitalic"),
+    url("#{$sage-greet-font-path}/#{$-greet-font-name}-lightitalic.woff2?v=#{$-body-font-version}") format("woff2"),
+    url("#{$sage-greet-font-path}/#{$-greet-font-name}-lightitalic.woff?v=#{$-body-font-version}") format("woff");
+}
 
 // Regular
 @font-face {
-  font-family: "Circular";
+  font-family: "GreetStandard";
   font-style: normal;
   font-weight: 400;
-  font-display: swap;
-  src: local("#{$-body-font-name}-Regular"), url("#{$-body-font-path}/#{$-body-font-name}-Regular.woff2?v=#{$-body-font-version}") format("woff2"), url("#{$-body-font-path}/#{$-body-font-name}-Regular.woff?v=#{$-body-font-version}") format("woff");
+  src: local("#{$-greet-font-name}-regular"),
+    url("#{$sage-greet-font-path}/#{$-greet-font-name}-regular.woff2?v=#{$-body-font-version}") format("woff2"),
+    url("#{$sage-greet-font-path}/#{$-greet-font-name}-regular.woff?v=#{$-body-font-version}") format("woff");
 }
 
 // Regular Italic
 @font-face {
-  font-family: "Circular";
+  font-family: "GreetStandard";
   font-style: italic;
   font-weight: 400;
-  font-display: swap;
-  src: local("#{$-body-font-name}-Italic"), url("#{$-body-font-path}/#{$-body-font-name}-Italic.woff2?v=#{$-body-font-version}") format("woff2"), url("#{$-body-font-path}/#{$-body-font-name}-Italic.woff?v=#{$-body-font-version}") format("woff");
+  src: local("#{$-greet-font-name}-regularitalic"),
+    url("#{$sage-greet-font-path}/#{$-greet-font-name}-regularitalic.woff2?v=#{$-body-font-version}") format("woff2"),
+    url("#{$sage-greet-font-path}/#{$-greet-font-name}-regularitalic.woff?v=#{$-body-font-version}") format("woff");
 }
 
 // Medium
 @font-face {
-  font-family: "Circular";
+  font-family: "GreetStandard";
   font-style: normal;
   font-weight: 500;
-  font-display: swap;
-  src: local("#{$-body-font-name}-Book"), url("#{$-body-font-path}/#{$-body-font-name}-Book.woff2?v=#{$-body-font-version}") format("woff2"), url("#{$-body-font-path}/#{$-body-font-name}-Book.woff?v=#{$-body-font-version}") format("woff");
+  src: local("#{$-greet-font-name}-medium"),
+    url("#{$sage-greet-font-path}/#{$-greet-font-name}-medium.woff2?v=#{$-body-font-version}") format("woff2"),
+    url("#{$sage-greet-font-path}/#{$-greet-font-name}-medium.woff?v=#{$-body-font-version}") format("woff");
 }
 
 // Medium Italic
 @font-face {
-  font-family: "Circular";
+  font-family: "GreetStandard";
   font-style: italic;
   font-weight: 500;
-  font-display: swap;
-  src: local("#{$-body-font-name}-BookItalic"), url("#{$-body-font-path}/#{$-body-font-name}-BookItalic.woff2?v=#{$-body-font-version}") format("woff2"), url("#{$-body-font-path}/#{$-body-font-name}-BookItalic.woff?v=#{$-body-font-version}") format("woff");
+  src: local("#{$-greet-font-name}-mediumitalic"),
+    url("#{$sage-greet-font-path}/#{$-greet-font-name}-mediumitalic.woff2?v=#{$-body-font-version}") format("woff2"),
+    url("#{$sage-greet-font-path}/#{$-greet-font-name}-mediumitalic.woff?v=#{$-body-font-version}") format("woff");
 }
 
-// Semibold
+// Semi-Bold
 @font-face {
-  font-family: "Circular";
-  font-style: normal;
-  font-weight: 600;
+  font-family: "GreetStandard";
+  font-style: normal ;
+  font-weight: 600 ;
   font-display: swap;
-  src: local("#{$-body-font-name}-Medium"), url("#{$-body-font-path}/#{$-body-font-name}-Medium.woff2?v=#{$-body-font-version}") format("woff2"), url("#{$-body-font-path}/#{$-body-font-name}-Medium.woff?v=#{$-body-font-version}") format("woff");
+  src: local("#{$-greet-font-name}-semibold"),
+    url("#{$sage-greet-font-path}/#{$-greet-font-name}-semibold.woff2?v=#{$-body-font-version}") format("woff2"),
+    url("#{$sage-greet-font-path}/#{$-greet-font-name}-semibold.woff?v=#{$-body-font-version}") format("woff");
 }
 
-// Semibold Italic
+// Semi-Bold Italic
 @font-face {
-  font-family: "Circular";
-  font-style: italic;
-  font-weight: 600;
+  font-family: "GreetStandard";
+  font-style: italic ;
+  font-weight: 600 ;
   font-display: swap;
-  src: local("#{$-body-font-name}-MediumItalic"), url("#{$-body-font-path}/#{$-body-font-name}-MediumItalic.woff2?v=#{$-body-font-version}") format("woff2"), url("#{$-body-font-path}/#{$-body-font-name}-MediumItalic.woff?v=#{$-body-font-version}") format("woff");
+  src: local("#{$-greet-font-name}-semibolditalic"),
+    url("#{$sage-greet-font-path}/#{$-greet-font-name}-semibolditalic.woff2?v=#{$-body-font-version}") format("woff2"),
+    url("#{$sage-greet-font-path}/#{$-greet-font-name}-semibolditalic.woff?v=#{$-body-font-version}") format("woff");
 }
 
 // Bold
 @font-face {
-  font-family: "Circular";
-  font-style: normal;
-  font-weight: 700;
+  font-family: "GreetStandard";
+  font-style: normal ;
+  font-weight: 700 ;
   font-display: swap;
-  src: local("#{$-body-font-name}-Bold"), url("#{$-body-font-path}/#{$-body-font-name}-Bold.woff2?v=#{$-body-font-version}") format("woff2"), url("#{$-body-font-path}/#{$-body-font-name}-Bold.woff?v=#{$-body-font-version}") format("woff");
+  src: local("#{$-greet-font-name}-bold"),
+    url("#{$sage-greet-font-path}/#{$-greet-font-name}-bold.woff2?v=#{$-body-font-version}") format("woff2"),
+    url("#{$sage-greet-font-path}/#{$-greet-font-name}-bold.woff?v=#{$-body-font-version}") format("woff");
 }
 
 // Bold Italic
 @font-face {
-  font-family: "Circular";
-  font-style: italic;
-  font-weight: 700;
+  font-family: "GreetStandard";
+  font-style: italic ;
+  font-weight: 700 ;
   font-display: swap;
-  src: local("#{$-body-font-name}-BoldItalic"), url("#{$-body-font-path}/#{$-body-font-name}-BoldItalic.woff2?v=#{$-body-font-version}") format("woff2"), url("#{$-body-font-path}/#{$-body-font-name}-BoldItalic.woff?v=#{$-body-font-version}") format("woff");
+  src: local("#{$-greet-font-name}-bolditalic"),
+    url("#{$sage-greet-font-path}/#{$-greet-font-name}-bolditalic.woff2?v=#{$-body-font-version}") format("woff2"),
+    url("#{$sage-greet-font-path}/#{$-greet-font-name}-bolditalic.woff?v=#{$-body-font-version}") format("woff");
+}
+
+// Heavy (Black)
+@font-face {
+  font-family: "GreetStandard";
+  font-style: "normal";
+  font-weight: 900;
+  font-display: swap;
+  src: local("#{$-greet-font-name}-heavy"),
+    url("#{$sage-greet-font-path}/#{$-greet-font-name}-heavy.woff2?v=#{$-body-font-version}") format("woff2"),
+    url("#{$sage-greet-font-path}/#{$-greet-font-name}-heavy.woff?v=#{$-body-font-version}") format("woff");
+}
+
+// Heavy (Black) Italic
+@font-face {
+  font-family: "GreetStandard";
+  font-style: italic;
+  font-weight: 900;
+  font-display: swap;
+  src: local("#{$-greet-font-name}-heavyitalic"),
+    url("#{$sage-greet-font-path}/#{$-greet-font-name}-heavyitalic.woff2?v=#{$-body-font-version}") format("woff2"),
+    url("#{$sage-greet-font-path}/#{$-greet-font-name}-heavyitalic.woff?v=#{$-body-font-version}") format("woff");
 }
