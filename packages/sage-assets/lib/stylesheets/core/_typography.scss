@@ -24,23 +24,23 @@ $-headings-margin-bottom: sage-spacing(sm);
   --sage-font-size-body-xs: #{map-get($sage-font-sizes, xs)};
   --sage-font-size-body-sm: #{map-get($sage-font-sizes, sm)};
   --sage-font-size-body: #{map-get($sage-font-sizes, md)};
-  --sage-font-size-h6: #{map-get($sage-font-sizes, md)};
-  --sage-font-size-h5: #{map-get($sage-font-sizes, lg)};
-  --sage-font-size-h4: #{map-get($sage-font-sizes, xl)};
-  --sage-font-size-h3: #{map-get($sage-font-sizes, 2xl)};
-  --sage-font-size-h2: #{map-get($sage-font-sizes, 3xl)};
-  --sage-font-size-h1: #{map-get($sage-font-sizes, 4xl)};
+  --sage-font-size-h6: #{map-get($sage-font-sizes, lg)};
+  --sage-font-size-h5: #{map-get($sage-font-sizes, xl)};
+  --sage-font-size-h4: #{map-get($sage-font-sizes, 2xl)};
+  --sage-font-size-h3: #{map-get($sage-font-sizes, 3xl)};
+  --sage-font-size-h2: #{map-get($sage-font-sizes, 4xl)};
+  --sage-font-size-h1: #{map-get($sage-font-sizes, 5xl)};
 
   // Line heights
   --sage-line-height-body-xs: #{map-get($sage-line-heights, xs)};
   --sage-line-height-body-sm: #{map-get($sage-line-heights, sm)};
   --sage-line-height-body: #{map-get($sage-line-heights, md)};
   --sage-line-height-h6: #{map-get($sage-line-heights, lg)};
-  --sage-line-height-h5: #{map-get($sage-line-heights, lg)};
-  --sage-line-height-h4: #{map-get($sage-line-heights, xl)};
-  --sage-line-height-h3: #{map-get($sage-line-heights, xl)};
-  --sage-line-height-h2: #{map-get($sage-line-heights, 2xl)};
-  --sage-line-height-h1: #{map-get($sage-line-heights, 3xl)};
+  --sage-line-height-h5: #{map-get($sage-line-heights, xl)};
+  --sage-line-height-h4: #{map-get($sage-line-heights, 2xl)};
+  --sage-line-height-h3: #{map-get($sage-line-heights, 3xl)};
+  --sage-line-height-h2: #{map-get($sage-line-heights, 4xl)};
+  --sage-line-height-h1: #{map-get($sage-line-heights, 5xl)};
 }
 
 // Responsive adjustments are currently TBD
