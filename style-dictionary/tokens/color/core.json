@@ -4,6 +4,12 @@
       "blue": {
         "value": "{color.base.blue.60.hex}"
       },
+      "green": {
+        "value": "{color.base.green.60.hex}"
+      },
+      "mercury": {
+        "value": "{color.base.mercury.50.hex}"
+      },
       "primary": {
         "value": "{color.base.primary.300.hex}"
       },
