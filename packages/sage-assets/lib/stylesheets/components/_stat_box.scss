@@ -94,7 +94,18 @@ $-stat-box-image-max-width: rem(48px);
 
 @each $-color-name, $-color-sliders in $sage-colors {
   .sage-stat-box__title--legend-#{"" + $-color-name} {
-    --legend-color: #{sage-color($-color-name, 500)};
+    @if ($-color-name == blue) {
+      --legend-color: #{sage-color($-color-name, 60)};
+    }
+    @else if ($-color-name == green) {
+      --legend-color: #{sage-color($-color-name, 60)};
+    }
+    @else if ($-color-name == mercury) {
+      --legend-color: #{sage-color($-color-name, 50)};
+    }
+    @else {
+      --legend-color: #{sage-color($-color-name, 500)};
+    }
   }
 }
 

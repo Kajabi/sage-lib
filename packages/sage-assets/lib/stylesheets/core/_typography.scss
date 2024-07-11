@@ -209,14 +209,26 @@ body:not(.sage-excluded),
 
 // Generate text color modifiers
 @each $color-name, $color-slider in $sage-colors {
-  // Default color values
-  $color-value: sage-color($color-name);
+  $color-value: "";
 
-  @if ($color-name == grey) {
+  @if ($color-name == blue) {
+    $color-value: sage-color($color-name, 60);
+  }
+  @else if ($color-name == green) {
+    $color-value: sage-color($color-name, 60);
+  }
+  @else if ($color-name == mercury) {
+    $color-value: sage-color($color-name, 50);
+  }
+  @else if ($color-name == grey) {
     $color-value: sage-color($color-name, 500);
   }
-
+  @else {
+    // Default color values
+    $color-value: sage-color($color-name);
+  }
   .t-sage--color-#{"" + $color-name} {
+
     color: $color-value;
   }
 

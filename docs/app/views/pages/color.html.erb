@@ -26,17 +26,17 @@ General background and text colors.
 
 Text and border colors, drop-shadows, and other interface components.
 ", use_sage_type: true) %>
-  <%= render "color_values_neutral", color: "grey"%>
-  <%= render "color_values_neutral", color: "charcoal"%>
+  <%= render "color_values", color: "grey"%>
 </div>
 
 <div id="primary">
 <%= md("
 ## Primary palette
 
-Kajabi blue is the primary color used to signify that an element is clickable or has a selected state.
+To signify that an element is clickable or has a selected state.
 ", use_sage_type: true) %>
-  <%= render "color_values", color: "primary"%>
+  <%= render "color_values", color: "blue"%>
+  <%= render "color_values", color: "mercury"%>
 </div>
 
 <div id="success">
@@ -45,7 +45,7 @@ Kajabi blue is the primary color used to signify that an element is clickable or
 
 To communicate success and positive states.
 ", use_sage_type: true) %>
-  <%= render "color_values", color: "sage"%>
+  <%= render "color_values", color: "green"%>
 </div>
 
 <div id="warning">
@@ -73,5 +73,24 @@ Reserved for times when something important is missing or for irreversible or de
 Used only when no other color option is available.
 ", use_sage_type: true) %>
   <%= render "color_values", color: "purple"%>
+</div>
+
+<div id="deprecated">
+<%= md("
+## Deprecated colors
+
+It is no longer recommended to use these colors.
+", use_sage_type: true) %>
+  <h3 class="sage-spacer-top">Primary</h3>
+  <p>Blue should be used instead of primary.</p>
+  <%= render "color_values", color: "primary"%>
+  <h3>Sage</h3>
+  <p>Green should be used instead of sage.</p>
+  <%= render "color_values", color: "sage"%>
+  <h3>Orange</h3>
+  <p>Mercury should be used instead of orange.</p>
   <%= render "color_values", color: "orange"%>
+  <h3>Charcoal</h3>
+  <p>Grey should be used instead of charcoal.</p>
+  <%= render "color_values_neutral", color: "charcoal"%>
 </div>
