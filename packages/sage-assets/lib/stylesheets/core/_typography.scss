@@ -32,15 +32,15 @@ $-headings-margin-bottom: sage-spacing(sm);
   --sage-font-size-h1: #{map-get($sage-font-sizes, 5xl)};
 
   // Line heights
-  --sage-line-height-body-xs: #{map-get($sage-line-heights, xs)};
-  --sage-line-height-body-sm: #{map-get($sage-line-heights, sm)};
-  --sage-line-height-body: #{map-get($sage-line-heights, md)};
-  --sage-line-height-h6: #{map-get($sage-line-heights, lg)};
-  --sage-line-height-h5: #{map-get($sage-line-heights, xl)};
-  --sage-line-height-h4: #{map-get($sage-line-heights, 2xl)};
-  --sage-line-height-h3: #{map-get($sage-line-heights, 3xl)};
-  --sage-line-height-h2: #{map-get($sage-line-heights, 4xl)};
-  --sage-line-height-h1: #{map-get($sage-line-heights, 5xl)};
+  --sage-line-height-body-xs: 1.425;
+  --sage-line-height-body-sm: 1.425;
+  --sage-line-height-body: 1.425;
+  --sage-line-height-h6: 1.25;
+  --sage-line-height-h5: 1.25;
+  --sage-line-height-h4: 1.25;
+  --sage-line-height-h3: 1.25;
+  --sage-line-height-h2: 1.25;
+  --sage-line-height-h1: 1.25;
 }
 
 // Responsive adjustments are currently TBD
