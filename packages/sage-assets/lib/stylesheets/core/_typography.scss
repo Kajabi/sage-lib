@@ -273,3 +273,7 @@ body:not(.sage-excluded),
     -webkit-line-clamp: #{$i};
   }
 }
+
+p:not([class]) {
+  margin-bottom: 1.5rem;
+}
