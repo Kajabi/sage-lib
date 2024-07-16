@@ -105,7 +105,6 @@ body:not(.sage-excluded),
 .sage-type {
 
   // Body-like elements get spacing below
-  > p:not([class]),
   > ul:not([class]),
   > ol:not([class]),
   > dl:not([class]),
@@ -272,8 +271,4 @@ body:not(.sage-excluded),
   .t-sage--line-clamp-#{$i} {
     -webkit-line-clamp: #{$i};
   }
-}
-
-p:not([class]) {
-  margin-bottom: 1.5rem;
 }
