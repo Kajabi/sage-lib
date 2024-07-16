@@ -83,19 +83,19 @@ $sage-type-specs: (
     kerning: sage-letter-spacing(5xl),
     responsive: true,
     type-pairing: h1,
-    weight: sage-font-weight(bold),
+    weight: sage-font-weight(semibold),
   ),
   "heading-2": (
     kerning: sage-letter-spacing(4xl),
     responsive: true,
     type-pairing: h2,
-    weight: sage-font-weight(bold),
+    weight: sage-font-weight(semibold),
   ),
   "heading-3": (
     kerning: sage-letter-spacing(3xl),
     responsive: true,
     type-pairing: h3,
-    weight: sage-font-weight(bold),
+    weight: sage-font-weight(semibold),
   ),
   "heading-4": (
     kerning: sage-letter-spacing(2xl),
