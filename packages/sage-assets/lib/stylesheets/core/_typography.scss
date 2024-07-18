@@ -105,7 +105,6 @@ body:not(.sage-excluded),
 .sage-type {
 
   // Body-like elements get spacing below
-  > p:not([class]),
   > ul:not([class]),
   > ol:not([class]),
   > dl:not([class]),
