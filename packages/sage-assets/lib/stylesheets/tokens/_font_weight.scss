@@ -15,6 +15,13 @@ $sage-font-weights: (
   bold: 725
 );
 
+$sage-heading-font-weights: (
+  regular: 400,
+  medium: 500,
+  semibold: 600,
+  bold: 700
+);
+
 ///
 /// Sage font weight token utility
 ///
@@ -22,7 +29,12 @@ $sage-font-weights: (
 ///
 /// @return {number} The value retrieved
 ///
-@function sage-font-weight($key: regular) {
+@function sage-font-weight($key: regular, $heading: false) {
   $value: map-get($sage-font-weights, $key);
+
+  @if $heading {
+    $value: map-get($sage-heading-font-weights, $key);
+  }
+
   @return $value;
 }
