@@ -35,6 +35,7 @@ body {
   margin: 0;
   font-family: "Inter", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Roboto", "Ubuntu", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-feature-settings: "liga" 1, "calt" 1; /* fix for Chrome */
   font-size: 1rem;
   font-weight: 425;
   line-height: 1.5; /* NOTE: line-height must be '1.5' to avoid conflicts with Ladera */
