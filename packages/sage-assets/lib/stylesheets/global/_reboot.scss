@@ -74,7 +74,7 @@ p {
   margin-top: 0;
   margin-bottom: 0;
 
-  & + p {
+  + p {
     margin-top: 1.5rem;
   }
 }
