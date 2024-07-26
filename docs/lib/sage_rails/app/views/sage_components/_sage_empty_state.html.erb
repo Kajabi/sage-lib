@@ -1,6 +1,6 @@
 <%
 variant = component.scope.present? ? component.scope : false
-title_tag = variant == "feature" ? "h1" : "h2"
+title_tag = variant == "compact" ? "h2" : "h1"
 if component.title_tag.present?
   title_tag = component.title_tag
 end
@@ -20,9 +20,11 @@ end
     </div>
   <% end %>
 
-  <%= sage_component SageIcon, {
+  <%= sage_component SageIconCard, {
+    color: 'published',
     icon: component.icon,
     size: "3xl",
+    round: true,
     css_classes: "sage-empty-state__icon"
   } if component.icon %>
 
