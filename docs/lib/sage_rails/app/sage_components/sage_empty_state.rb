@@ -1,6 +1,7 @@
 class SageEmptyState < SageComponent
   set_attribute_schema({
     center_vertical: [:optional, NilClass, TrueClass],
+    gradient: [:optional, NilClass, {topColor: String, bottomColor: String}],
     graphic: [:optional, NilClass, String],
     icon: [:optional, NilClass, String],
     scope: [:optional, NilClass, Set.new(["compact", nil])],
