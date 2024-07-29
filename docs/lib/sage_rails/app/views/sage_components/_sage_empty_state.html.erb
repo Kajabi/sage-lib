@@ -21,10 +21,14 @@ end
   <% end %>
 
   <%= sage_component SageIconCard, {
-    color: 'published',
+    foreground_color: SageTokens::COLOR_PALETTE[:WHITE],
+    gradient: {
+      topColor: component.gradient.present? ? component.gradient[:topColor] : SageTokens::COLOR_PALETTE[:MERCURY_20],
+      bottomColor: component.gradient.present? ? component.gradient[:bottomColor] : SageTokens::COLOR_PALETTE[:MERCURY_30],
+    },
     icon: component.icon,
-    size: "3xl",
     round: true,
+    size: "3xl",
     css_classes: "sage-empty-state__icon"
   } if component.icon %>
 
