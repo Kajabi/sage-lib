@@ -33,11 +33,11 @@ section {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-    "Helvetica Neue", "Arial", "Noto Sans", sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Inter", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Roboto", "Ubuntu", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-feature-settings: "liga" 1, "calt" 1; /* fix for Chrome */
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 425;
   line-height: 1.5; /* NOTE: line-height must be '1.5' to avoid conflicts with Ladera */
   text-align: left;
 }
@@ -57,15 +57,26 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+.t-sage-heading-1,
+.t-sage-heading-2,
+.t-sage-heading-3,
+.t-sage-heading-4,
+.t-sage-heading-5,
+.t-sage-heading-6 {
   margin-top: 0;
   margin-bottom: 0;
   color: sage-color(charcoal, 500);
+  font-family: "GreetStandard", "Inter", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Roboto", "Ubuntu", sans-serif ;
 }
 
 p {
   margin-top: 0;
   margin-bottom: 0;
+
+  + p {
+    margin-top: 1.5rem;
+  }
 }
 
 li {
@@ -172,7 +183,7 @@ pre,
 code,
 kbd,
 samp {
-  font-family: "SFMono-Regular", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", monospace;
+  font-family: "ui-monospace", "Menlo", "Consolas", "Liberation Mono", monospace;
   font-size: 1em;
 }
 
