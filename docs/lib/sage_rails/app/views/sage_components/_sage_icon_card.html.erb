@@ -4,8 +4,6 @@ size = component.size.present? ? component.size == "md" ? "" : "-#{component.siz
 style = {
   "--background-color": (component.background_color if component.background_color.present?),
   "--color": (component.foreground_color if component.foreground_color.present?),
-  "--color-gradient-top": (component.gradient[:topColor] if component.gradient.present?),
-  "--color-gradient-bottom": (component.gradient[:bottomColor] if component.gradient.present?),
 }.compact.map{|k,v| "#{k}:#{v}"}.join(";")
 %>
 <div
@@ -19,7 +17,7 @@ style = {
   <% component.attributes.each do |key, value| %>
     <%= "#{key}=\"#{value}\"".html_safe %>
   <% end if component.attributes&.is_a?(Hash) %>
-  <% if component.background_color.present? or component.foreground_color.present? or component.gradient.present? %>
+  <% if component.background_color.present? or component.foreground_color.present? %>
     style="<%= style %>"
   <% end %>
   <%= component.generated_html_attributes.html_safe %>
