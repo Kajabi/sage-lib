@@ -20,15 +20,9 @@ end
     </div>
   <% end %>
 
-  <%= sage_component SageIconCard, {
-    foreground_color: SageTokens::COLOR_PALETTE[:WHITE],
-    gradient: {
-      topColor: component.gradient.present? ? component.gradient[:topColor] : SageTokens::COLOR_PALETTE[:MERCURY_20],
-      bottomColor: component.gradient.present? ? component.gradient[:bottomColor] : SageTokens::COLOR_PALETTE[:MERCURY_30],
-    },
+  <%= sage_component SageIcon, {
     icon: component.icon,
-    round: true,
-    size: "3xl",
+    size: variant == 'compact' ? 'xl' : '3xl',
     css_classes: "sage-empty-state__icon"
   } if component.icon %>
 

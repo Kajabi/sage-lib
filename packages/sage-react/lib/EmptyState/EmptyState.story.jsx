@@ -23,11 +23,7 @@ export default {
   },
   args: {
     actions: (
-      <>
-        <Button.Group gap={Button.Group.GAP_OPTIONS.SM}>
-          <Button>Lorem ipsum</Button>
-        </Button.Group>
-      </>
+      <Button>Lorem ipsum</Button>
     ),
     icon: SageTokens.ICONS.GEAR,
     text: 'Text Here',
@@ -39,8 +35,8 @@ const Template = (args) => <EmptyState {...args} />;
 
 export const Default = Template.bind({});
 
-export const PageScope = Template.bind({});
-PageScope.args = {
+export const CompactScope = Template.bind({});
+CompactScope.args = {
   icon: null,
   graphic: (<img src="//source.unsplash.com/random/530x500" alt="" />),
   scope: EmptyState.SCOPES.PAGE,
