@@ -109,6 +109,22 @@ $-sage-frame-borders: (
   default: sage-border(),
 );
 
+// Border radii options
+// Generally aligned to border tokens plus a `none` option
+$-sage-frame-box-shadows: (
+  none: 0,
+  sm: sage-shadow(sm),
+  md: sage-shadow(md),
+  lg: sage-shadow(lg),
+  modal: sage-shadow(modal),
+  050: sage-shadow(050),
+  100: sage-shadow(100),
+  200: sage-shadow(200),
+  300: sage-shadow(300),
+  400: sage-shadow(400),
+  500: sage-shadow(500),
+);
+
 // Directions that map to `flex-direction`
 // named to resemble the auto layout settings in Figma
 $-sage-frame-directions: (
@@ -216,6 +232,7 @@ $-sage-frame-wrap: none;
 
 @each $-key, $-val in $-sage-frame-borders {
   .sage-frame--border-#{$-key} {
+    background-color: sage-color(white);
     border: #{$-val};
   }
 }
@@ -223,6 +240,12 @@ $-sage-frame-wrap: none;
 @each $-key, $-val in $-sage-frame-border-radii {
   .sage-frame--border-radius-#{$-key} {
     border-radius: #{$-val};
+  }
+}
+
+@each $-key, $-val in $-sage-frame-box-shadows {
+  .sage-frame--box-shadow-#{$-key} {
+    box-shadow: #{$-val};
   }
 }
 
@@ -242,7 +265,7 @@ $-sage-frame-wrap: none;
   .sage-frame--gap-#{$-key} {
     gap: #{$-val};
   }
-  
+
   .sage-frame--padding-#{$-key} {
     padding: #{$_val};
   }

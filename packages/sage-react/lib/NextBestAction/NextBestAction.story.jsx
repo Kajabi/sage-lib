@@ -2,6 +2,7 @@ import React from 'react';
 import { selectArgs } from '../story-support/helpers';
 import { NextBestAction } from './NextBestAction';
 import { Button } from '../Button';
+import placeholderImg from '../../public/CardPlaceholderLarge.png';
 
 export default {
   title: 'Sage/Next Best Action',
@@ -34,7 +35,7 @@ export default {
     ),
     dismissable: true,
     graphic: {
-      element: (<img src="//source.unsplash.com/random/272x272" alt="" />)
+      element: (<img src={placeholderImg} alt="" />)
     },
     // eslint-disable-next-line no-console
     onClickDismiss: () => { console.log('Add your own dismiss functionality here!'); },

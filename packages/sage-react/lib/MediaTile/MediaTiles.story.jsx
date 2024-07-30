@@ -1,6 +1,7 @@
 import React from 'react';
 import { selectArgs } from '../story-support/helpers';
 import { MediaTiles } from './MediaTiles';
+import placeholderImg from '../../public/CardPlaceholderLarge.png';
 
 const actionsDropdownItems = [
   {
@@ -55,7 +56,7 @@ export default {
         children: commonChildren,
         footer: null,
         media: (
-          <img src="//source.unsplash.com/random/800x600?1" alt="" />
+          <img src={placeholderImg} alt="" />
         ),
         tileLink: commonTileLink,
       },
@@ -66,7 +67,7 @@ export default {
         children: commonChildren,
         footer: null,
         media: (
-          <img src="//source.unsplash.com/random/800x600?2" alt="" />
+          <img src={placeholderImg} alt="" />
         ),
         tileLink: commonTileLink,
       },
@@ -77,7 +78,7 @@ export default {
         children: commonChildren,
         footer: null,
         media: (
-          <img src="//source.unsplash.com/random/800x600?3" alt="" />
+          <img src={placeholderImg} alt="" />
         ),
         tileLink: commonTileLink,
       },
@@ -88,7 +89,7 @@ export default {
         children: commonChildren,
         footer: null,
         media: (
-          <img src="//source.unsplash.com/random/800x600?4" alt="" />
+          <img src={placeholderImg} alt="" />
         ),
         tileLink: commonTileLink,
       },
