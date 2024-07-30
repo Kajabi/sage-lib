@@ -52,18 +52,39 @@
       font-size: sage-font-size(body);
       background: $hex;
 
-      @if (($name == white) or ($name == grey)) {
-        color: sage-color(charcoal, 500);
-      }
-
-      @else if (($name == black) or ($name == charcoal)) {
+      @if ($name == grey and $value > 40) {
         color: sage-color(white);
       }
-
+      @else if ($name == white or $name == grey) {
+        color: sage-color(charcoal, 500);
+      }
+      @else if ($name == black or $name == charcoal) {
+        color: sage-color(white);
+      }
+      @else if ($name == blue and $value > 40) {
+        color: sage-color(blue, 20);
+      }
+      @else if ($name == blue) {
+        color: sage-color(blue, 95);
+      }
+      @else if ($name == mercury and $value > 20) {
+        color: sage-color(white);
+      }
+      @else if ($name == mercury) {
+        color: sage-color(mercury, 50);
+      }
+      @else if ($name == green and $value > 20) {
+        color: sage-color(white);
+      }
+      @else if ($name == green) {
+        color: sage-color(green, 60);
+      }
+      @else if ($name == yellow and $value > 30) {
+        color: sage-color(white);
+      }
       @else if (lightness($hex) < 65) {
         color: sage-color($name, 100);
       }
-
       @else {
         color: sage-color($name, 400);
       }
