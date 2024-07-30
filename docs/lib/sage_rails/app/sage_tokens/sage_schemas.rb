@@ -124,6 +124,7 @@ module SageSchemas
     background: [:optional, NilClass, Set.new(SageTokens::COLOR_SLIDERS), String],
     border: [:optional, NilClass, Set.new(SageTokens::FRAME_BORDERS)],
     border_radius: [:optional, NilClass, Set.new(SageTokens::FRAME_BORDER_RADII)],
+    box_shadow: [:optional, NilClass, Set.new(SageTokens::FRAME_BOX_SHADOWS)],
     direction: [:optional, NilClass, Set.new(SageTokens::FRAME_DIRECTIONS)],
     gap: [:optional, NilClass, Set.new(SageTokens::FRAME_SPACINGS)],
     padding: [:optional, NilClass, Set.new(SageTokens::FRAME_SPACINGS)],

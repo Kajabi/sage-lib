@@ -4,6 +4,7 @@ import { selectArgs } from '../story-support/helpers';
 import { Button } from '../Button';
 import { Badge } from '../Badge';
 import { MediaTile } from './MediaTile';
+import placeholderImg from '../../public/CardPlaceholderLarge.png';
 
 export default {
   title: 'Sage/Media Tile',
@@ -53,7 +54,7 @@ export default {
     ),
     footer: null,
     media: (
-      <img src="//source.unsplash.com/random/800x600" alt="" />
+      <img src={placeholderImg} alt="" />
     ),
     tileLink: {
       href: '//example.com',
@@ -84,7 +85,7 @@ KitchenSink.args = {
   ),
   mediaConfigs: {
     aspectRatio: 1.8,
-    backgroundColor: SageTokens.COLOR_PALETTE.SAGE_100,
+    backgroundColor: SageTokens.COLOR_PALETTE.GREEN_150,
     padded: true,
   },
   tileLink: null,

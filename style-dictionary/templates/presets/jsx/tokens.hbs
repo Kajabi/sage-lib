@@ -34,13 +34,13 @@ export const {{constantCase ../category}}{{#if (notBaseType type)}}_{{constantCa
   {{constantCase item}}: {
         {{#each subitems}}
           {{#if (hasAny states)}}
-    {{constantCase subitem}}: {
+    {{{ startsWithZero (constantCase subitem) }}}: {
             {{#each states}}
-      {{constantCase state}}: {{name}},
+      {{{startsWithZero (constantCase state) }}}: {{name}},
             {{/each}}
     },
           {{else}}
-    {{constantCase subitem}}: {{name}},
+    {{{startsWithZero (constantCase subitem)}}}: {{name}},
           {{/if}}
         {{/each}}
   },

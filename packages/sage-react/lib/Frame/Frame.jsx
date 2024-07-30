@@ -6,6 +6,7 @@ import {
   FRAME_ALIGNMENTS,
   FRAME_BORDERS,
   FRAME_BORDER_RADII,
+  FRAME_BOX_SHADOWS,
   FRAME_DIRECTIONS,
   FRAME_SPACINGS,
   FRAME_WIDTHS,
@@ -19,6 +20,7 @@ export const Frame = ({
   background,
   border,
   borderRadius,
+  boxShadow,
   direction,
   gap,
   maxWidth,
@@ -49,6 +51,7 @@ export const Frame = ({
       [`sage-frame--background-${background}`]: background && !hasCustomBackground,
       [`sage-frame--border-${border}`]: border,
       [`sage-frame--border-radius-${borderRadius}`]: borderRadius,
+      [`sage-frame--box-shadow-${boxShadow}`]: boxShadow,
       [`sage-frame--direction-${direction}`]: direction,
       [`sage-frame--gap-${gap}`]: gap,
       [`sage-frame--padding-${padding}`]: padding,
@@ -98,6 +101,7 @@ export const Frame = ({
 
 Frame.ALIGNMENTS = FRAME_ALIGNMENTS;
 Frame.BORDERS = FRAME_BORDERS;
+Frame.BOX_SHADOWS = FRAME_BOX_SHADOWS;
 Frame.BORDER_RADII = FRAME_BORDER_RADII;
 Frame.DIRECTIONS = FRAME_DIRECTIONS;
 Frame.GAPS = FRAME_SPACINGS;
@@ -110,6 +114,7 @@ Frame.defaultProps = {
   background: null,
   border: null,
   borderRadius: null,
+  boxShadow: null,
   children: null,
   className: '',
   direction: FRAME_DIRECTIONS.VERTICAL,
@@ -133,6 +138,7 @@ Frame.propTypes = {
   ]),
   border: PropTypes.oneOf(Object.values(Frame.BORDERS)),
   borderRadius: PropTypes.oneOf(Object.values(Frame.BORDER_RADII)),
+  boxShadow: PropTypes.oneOf(Object.values(Frame.BOX_SHADOWS)),
   direction: PropTypes.oneOf(Object.values(Frame.DIRECTIONS)),
   gap: PropTypes.oneOf(Object.values(Frame.GAPS)),
   maxWidth: PropTypes.oneOfType([

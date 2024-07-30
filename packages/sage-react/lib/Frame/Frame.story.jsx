@@ -4,6 +4,8 @@ import { SageClassnames, SageTokens } from '../configs';
 import { Button, Label, Property } from '..';
 import { Frame } from './Frame';
 
+import placeholderImg from '../../public/CardPlaceholderLarge.png';
+
 export default {
   title: 'Sage/Frame',
   component: Frame,
@@ -82,6 +84,18 @@ export const BorderedBox = () => (
   </Frame>
 );
 
+export const BoxShadow = () => (
+  <Frame
+    borderRadius={Frame.BORDER_RADII.MD}
+    boxShadow={Frame.BOX_SHADOWS[100]}
+    padding={Frame.PADDINGS.MD}
+  >
+    <Property icon={SageTokens.ICONS.USER}>Galinti Marcus</Property>
+    <Property icon={SageTokens.ICONS.MAIL}>galinti@example.com</Property>
+    <Property icon={SageTokens.ICONS.STAR}>Member since 2022</Property>
+  </Frame>
+);
+
 export const NestingFrames = () => (
   <Frame
     border={Frame.BORDERS.DEFAULT}
@@ -91,14 +105,14 @@ export const NestingFrames = () => (
     align={Frame.ALIGNMENTS.CENTER_LEFT}
   >
     <Frame width="160px">
-      <img src="//source.unsplash.com/240x160" alt="" style={{ maxWidth: '100%' }} />
+      <img src={placeholderImg} alt="" style={{ maxWidth: '100%' }} />
     </Frame>
     <Frame width="flex" gap={Frame.GAPS.XS}>
       <Frame gap={Frame.GAPS.NONE}>
         <h4 className={SageClassnames.TYPE.HEADING_3}>
           Lorem ipsum dolor sit
         </h4>
-        <p className={`${SageClassnames.TYPE.BODY_SMALL} ${SageClassnames.TYPE_COLORS.CHARCOAL_200}`}>
+        <p className={`${SageClassnames.TYPE.BODY_SMALL} ${SageClassnames.TYPE_COLORS.GREY_700}`}>
           Consectetur adipiscing elit
         </p>
       </Frame>
@@ -195,7 +209,7 @@ export const CustomBlock = () => (
       </Button.Group>
     </Frame>
     <Frame width="104px">
-      <img src="//source.unsplash.com/random/104x104" alt="" />
+      <img src={placeholderImg} alt="" style={{ maxWidth: '100%' }} />
     </Frame>
   </Frame>
 );
@@ -211,7 +225,7 @@ export const StatBox = () => (
   >
     <Frame gap={Frame.GAPS.SM}>
       <Frame gap={Frame.GAPS.NONE}>
-        <h3 className={`${SageClassnames.TYPE.BODY_SMALL} ${SageClassnames.TYPE_COLORS.CHARCOAL_200}`}>
+        <h3 className={`${SageClassnames.TYPE.BODY_SMALL} ${SageClassnames.TYPE_COLORS.GREY_700}`}>
           All payments
         </h3>
         <Frame
@@ -223,7 +237,7 @@ export const StatBox = () => (
           <b className={SageClassnames.TYPE.HEADING_5}>
             40
           </b>
-          <span className={`${SageClassnames.TYPE.BODY_XSMALL} ${SageClassnames.TYPE_COLORS.CHARCOAL_100}`}>
+          <span className={`${SageClassnames.TYPE.BODY_XSMALL} ${SageClassnames.TYPE_COLORS.GREY_600}`}>
             successful payments
           </span>
         </Frame>

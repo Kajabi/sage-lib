@@ -9,9 +9,15 @@
 /// Sage letter spacing/kerning token
 ///
 $sage-letter-spacings: (
-  xs: rem(-0.15px),
-  sm: rem(-0.5px),
-  md: rem(-0.6px),
+  xs: rem(0),
+  sm: rem(0),
+  md: rem(-0.16px),
+  lg: rem(0.16px),
+  xl: rem(0.18px),
+  2xl: rem(0.2px),
+  3xl: rem(0.22px),
+  4xl: rem(0.24px),
+  5xl: rem(0.26px),
 );
 
 ///
