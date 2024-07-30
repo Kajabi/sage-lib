@@ -701,6 +701,7 @@
 ///
 @mixin sage-font-family() {
   font-family: $-body-font-stack;
+  font-feature-settings: "liga" 1, "calt" 1; /* fix for Chrome */
 }
 
 ///
