@@ -7,21 +7,63 @@
 
 // Base specs to avoid repetition
 $-t-base-spec: (
-  kerning: sage-letter-spacing(xs),
+  kerning: sage-letter-spacing(sm),
   responsive: true,
   type-pairing: body,
-  weight: sage-font-weight(),
-);
-$-t-body-small-spec: (
-  kerning: sage-letter-spacing(xs),
-  responsive: true,
-  type-pairing: body-sm,
   weight: sage-font-weight(),
 );
 $-t-body-xsmall-spec: (
   kerning: sage-letter-spacing(xs),
   responsive: true,
   type-pairing: body-xs,
+  weight: sage-font-weight(),
+);
+$-t-body-small-spec: (
+  kerning: sage-letter-spacing(sm),
+  responsive: true,
+  type-pairing: body-sm,
+  weight: sage-font-weight(),
+);
+$-t-body-medium-spec: (
+  kerning: sage-letter-spacing(md),
+  responsive: true,
+  type-pairing: body-md,
+  weight: sage-font-weight(),
+);
+$-t-body-large-spec: (
+  kerning: sage-letter-spacing(lg),
+  responsive: true,
+  type-pairing: body-lg,
+  weight: sage-font-weight(),
+);
+$-t-body-xlarge-spec: (
+  kerning: sage-letter-spacing(xl),
+  responsive: true,
+  type-pairing: body-xl,
+  weight: sage-font-weight(),
+);
+$-t-body-2xlarge-spec: (
+  kerning: sage-letter-spacing(2xl),
+  responsive: true,
+  type-pairing: body-2xl,
+  weight: sage-font-weight(),
+);
+$-t-body-3xlarge-spec: (
+  kerning: sage-letter-spacing(3xl),
+  responsive: true,
+  type-pairing: body-3xl,
+  weight: sage-font-weight(),
+);
+$-t-body-4xlarge-spec: (
+  kerning: sage-letter-spacing(4xl),
+  responsive: true,
+  type-pairing: body-4xl,
+  weight: sage-font-weight(),
+);
+$-t-body-5xlarge-spec: (
+  kerning: sage-letter-spacing(5xl),
+  responsive: true,
+  type-pairing: body-5xl,
   weight: sage-font-weight(),
 );
 
@@ -38,38 +80,40 @@ $-t-body-xsmall-spec: (
 $sage-type-specs: (
   // Headings
   "heading-1": (
-    kerning: sage-letter-spacing(md),
+    kerning: sage-letter-spacing(5xl),
     responsive: true,
     type-pairing: h1,
-    weight: sage-font-weight(bold),
+    weight: sage-font-weight(semibold, true),
   ),
   "heading-2": (
-    kerning: sage-letter-spacing(md),
+    kerning: sage-letter-spacing(4xl),
     responsive: true,
     type-pairing: h2,
-    weight: sage-font-weight(bold),
+    weight: sage-font-weight(semibold, true),
   ),
   "heading-3": (
-    kerning: sage-letter-spacing(xs),
+    kerning: sage-letter-spacing(3xl),
     responsive: true,
     type-pairing: h3,
-    weight: sage-font-weight(bold),
+    weight: sage-font-weight(semibold, true),
   ),
   "heading-4": (
-    kerning: sage-letter-spacing(xs),
+    kerning: sage-letter-spacing(2xl),
     responsive: true,
     type-pairing: h4,
-    weight: sage-font-weight(semibold),
+    weight: sage-font-weight(semibold, true),
   ),
   "heading-5": (
+    kerning: sage-letter-spacing(xl),
     responsive: true,
     type-pairing: h5,
-    weight: sage-font-weight(semibold),
+    weight: sage-font-weight(medium, true),
   ),
   "heading-6": (
+    kerning: sage-letter-spacing(lg),
     responsive: true,
     type-pairing: h6,
-    weight: sage-font-weight(semibold),
+    weight: sage-font-weight(medium, true),
   ),
   "nav": (
     responsive: false,
