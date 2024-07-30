@@ -12,13 +12,14 @@ $-empty-state-icon-size: rem(104px);
 $-empty-state-icon-compact-size: rem(56px);
 
 .sage-empty-state {
+  @include sage-grid-panel();
+
   margin-inline-start: auto;
   margin-inline-end: auto;
   max-width: sage-container(md);
   text-align: center;
   justify-items: center;
-
-  @include sage-grid-panel();
+  gap: sage-spacing(sm);
 }
 
 .sage-empty-state--center {
@@ -58,15 +59,9 @@ $-empty-state-icon-compact-size: rem(56px);
 
 .sage-empty-state__icon {
   display: inline-flex;
-  color: sage-color(white);
+  color: sage-color(grey, 60);
   inline-size: $-empty-state-icon-size;
   block-size: $-empty-state-icon-size;
-
-  .sage-empty-state--compact & {
-    inline-size: $-empty-state-icon-compact-size;
-    block-size: $-empty-state-icon-compact-size;
-    padding: 1rem;
-  }
 }
 
 .sage-empty-state__title {
