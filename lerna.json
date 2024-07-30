@@ -11,7 +11,7 @@
       "conventionalCommits": true,
       "message": "chore(release): publish [skip ci]",
       "registry": "https://npm.pkg.github.com",
-      "allowBranch": ["main", "develop"]
+      "allowBranch": ["main", "develop", "mercury-rising"]
     }
   }
 }
