@@ -58,7 +58,7 @@ $-typeahead-item-height: rem(68px);
     $outline-offset-inline: -4px,
     $outline-animation-speed: 0.05s
   );
-  @include sage-focus-outline--update-color(sage-color(primary, 200));
+  @include sage-focus-outline--update-color(sage-color(purple, 30));
 
   display: grid;
   position: unset; // Undo position defined in sage-focus-outline()
