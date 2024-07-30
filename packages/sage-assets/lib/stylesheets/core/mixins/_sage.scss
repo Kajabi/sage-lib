@@ -178,13 +178,14 @@
 /// @param {time} $focus-animation-speed [0.2s] How quickly the focus ring animates on activation
 ///
 @mixin sage-focus-ring(
-  $focus-shadow: sage-color(primary, 200),
-  $focus-width: 4px
+  $focus-shadow: sage-color(purple, 30),
+  $focus-width-inner: 1px,
+  $focus-width-outter: 3px
 ) {
   &:focus {
     z-index: sage-z-index(default, 1);
     outline: none;
-    box-shadow: 0 0 0 $focus-width $focus-shadow;
+    box-shadow: 0 0 0 $focus-width-inner #fff, 0 0 0 $focus-width-outter $focus-shadow;
   }
 }
 
@@ -198,7 +199,7 @@
 /// @param {time} $outline-animation-speed [0.2s] How quickly the focus ring animates on activation
 ///
 @mixin sage-focus-outline(
-  $outline-width: 4px,
+  $outline-width: 2px,
   $outline-offset-block: 0,
   $outline-offset-inline: 0,
   $outline-animation-speed: 0.2s,
@@ -283,7 +284,6 @@
   }
   gap: sage-spacing();
   padding: sage-spacing(card);
-  border: sage-border();
   border-radius: sage-border(radius-large);
 }
 
@@ -656,8 +656,8 @@
 @mixin sage-panel() {
   padding: sage-spacing(panel);
   background-color: sage-color(white);
-  border: sage-border();
   border-radius: sage-border(radius-large);
+  box-shadow: sage-shadow(100);
 }
 
 ///
@@ -669,7 +669,7 @@
   $item-underline: "after";
 
   &::#{$item-underline} {
-    $spacing-off: 50%;
+    $spacing-off: calc(50% + #{sage-letter-spacing(lg)});
 
     content: "";
     position: absolute;
@@ -701,6 +701,7 @@
 ///
 @mixin sage-font-family() {
   font-family: $-body-font-stack;
+  font-feature-settings: "liga" 1, "calt" 1; /* fix for Chrome */
 }
 
 ///

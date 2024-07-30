@@ -8,13 +8,14 @@
 /// Base Font CDN path
 ///
 $sage-font-cdn-root: "https://sage.kajabi-cdn.com/fonts";
+$sage-greet-font-path: "#{$sage-font-cdn-root}/greet";
 
 ///
 /// Active underline configuration
 ///
 $sage-active-underline-configs: (
   height: rem(3px),
-  color: sage-color(charcoal, 400),
+  color: sage-color(mercury, 50),
 );
 
 ///
@@ -102,7 +103,7 @@ $sage-text-colors: (
 ///
 $sage-toolbar-button-borders: (
   default: 0 0 0 1px sage-color(grey, 500),
-  focus: 0 0 0 4px sage-color(primary, 200),
+  focus: 0 0 0 2px sage-color(purple, 30),
   hover: 0 0 0 1px sage-color(charcoal, 100),
   hover-large: 0 0 0 2px sage-color(charcoal, 100),
   active-hover: 0 0 0 4px sage-color(primary, 200),

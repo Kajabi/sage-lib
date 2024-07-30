@@ -13,7 +13,7 @@ $-btn-transition: map-get($sage-transitions, default);
 $-btn-base-padding-block: sage-spacing(xs); // vertical (y) axis
 $-btn-base-padding-inline: sage-spacing(sm); // horizontal (x) axis
 $-btn-base-line-height: var(--sage-line-height-body, #{rem(24px)});
-$-btn-border-radius: sage-border(radius);
+$-btn-border-radius: 9999px;
 $-btn-shadow-base: sage-shadow(sm);
 $-btn-icon-only-standard-size: rem(40px);
 $-btn-icon-only-subtle-size: rem(16px);
@@ -26,24 +26,24 @@ $-btn-base-styles: (
   accent: (
     default: (
       color: sage-color(white),
-      background-color: sage-color(primary, 300),
-      border-color: sage-color(primary, 300),
-      ring-color: sage-color(primary, 200),
+      background-color: sage-color(purple, 50),
+      border-color: sage-color(purple, 50),
+      ring-color: sage-color(purple, 30),
     ),
     hover: (
       color: sage-color(white),
-      background-color: sage-color(primary, 400),
-      border-color: sage-color(primary, 400),
+      background-color: sage-color(purple, 60),
+      border-color: sage-color(purple, 60),
     ),
     focus: (
       color: sage-color(white),
-      background-color: sage-color(primary, 300),
-      border-color: sage-color(primary, 300),
+      background-color: sage-color(purple, 50),
+      border-color: sage-color(purple, 50),
     ),
     disabled: (
-      color: sage-color(primary, 200),
-      background-color: sage-color(primary, 100),
-      border-color: sage-color(primary, 100),
+      color: sage-color(purple, 30),
+      background-color: sage-color(purple, 15),
+      border-color: sage-color(purple, 15),
     )
   ),
   primary: (
@@ -51,7 +51,7 @@ $-btn-base-styles: (
       color: sage-color(white),
       background-color: sage-color(charcoal, 400),
       border-color: sage-color(charcoal, 400),
-      ring-color: sage-color(primary, 200),
+      ring-color: sage-color(purple, 30),
     ),
     hover: (
       color: sage-color(white),
@@ -72,7 +72,7 @@ $-btn-base-styles: (
     default: (
       color: sage-color(charcoal, 400),
       background-color: sage-color(white),
-      ring-color: sage-color(primary, 200),
+      ring-color: sage-color(purple, 30),
     ),
     hover: (
       color: sage-color(charcoal, 400),
@@ -117,7 +117,7 @@ $-btn-subtle-styles: (
     hover: sage-color(primary, 300),
     hover-background: sage-color(primary, 100),
     focus: sage-color(primary, 300),
-    focus-outline: sage-color(primary, 200),
+    focus-outline: sage-color(purple, 30),
     disabled: sage-color(primary, 200),
   ),
   primary: (
@@ -125,7 +125,7 @@ $-btn-subtle-styles: (
     hover: sage-color(charcoal, 400),
     hover-background: sage-color(grey, 200),
     focus: sage-color(charcoal, 400),
-    focus-outline: sage-color(primary, 200),
+    focus-outline: sage-color(purple, 30),
     disabled: sage-color(charcoal, 100),
   ),
   secondary: (
@@ -133,7 +133,7 @@ $-btn-subtle-styles: (
     hover: sage-color(charcoal, 400),
     hover-background: sage-color(grey, 200),
     focus: sage-color(charcoal, 400),
-    focus-outline: sage-color(primary, 200),
+    focus-outline: sage-color(purple, 30),
     disabled: sage-color(charcoal, 100),
   ),
   danger: (
@@ -169,7 +169,7 @@ $-btn-loading-min-height: rem(36px);
 
 // stylelint-disable max-nesting-depth
 .sage-btn {
-  @extend %t-sage-body-semi;
+  @extend %t-sage-body-med;
   @include sage-button-style-reset();
   @include sage-focus-ring;
 
@@ -179,6 +179,7 @@ $-btn-loading-min-height: rem(36px);
   align-items: center;
   justify-self: flex-start;
   padding: $-btn-base-padding-block $-btn-base-padding-inline;
+  font-family: $-heading-font;
   text-align: left; // Prevents text alignment issue when inner text is truncated
   border-width: 1px;
   border-style: solid;
@@ -259,15 +260,6 @@ $-btn-loading-min-height: rem(36px);
 
     &::after {
       transform: translate3D(-50%, -50%, 0);
-    }
-  }
-
-  .sage-accordion &.sage-expandable-card__trigger {
-    &:focus {
-      box-shadow: inherit;
-    }
-    &:focus-visible {
-      @include sage-focus-ring;
     }
   }
 
@@ -422,7 +414,7 @@ $-btn-loading-min-height: rem(36px);
 
   .sage-upload-card & {
     &.sage-btn--subtle:focus {
-      @include sage-focus-outline--update-color(sage-color(primary, 300));
+      @include sage-focus-outline--update-color(sage-color(purple, 30));
     }
   }
 

@@ -10,14 +10,15 @@
 /// See core/_typography.scss for where these are primarily implemented.
 ///
 $sage-line-heights: (
-  xs: sage-baseline(4), // 16
-  sm: sage-baseline(5), // 20
-  md: sage-baseline(6), // 24
-  lg: sage-baseline(7), // 28
-  xl: sage-baseline(8), // 32
-  2xl: sage-baseline(10), // 40
-  3xl: sage-baseline(12), // 48
-  4xl: sage-baseline(15), // 60
+  xs: rem(18px),
+  sm: rem(18px),
+  md: rem(20px),
+  lg: rem(20px),
+  xl: rem(22px),
+  2xl: rem(26px),
+  3xl: rem(28px),
+  4xl: rem(32px),
+  5xl: rem(36px),
 );
 
 ///

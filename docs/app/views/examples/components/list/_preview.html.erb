@@ -124,7 +124,7 @@ Note that this example also implements the [Reveal utility class](#{pages_helper
       css_classes: SageClassnames::REVEAL_CONTAINER,
     } do %>
       <%= sage_component SageCardRow, { grid_template: "ete" } do %>
-        <img src="https://source.unsplash.com/random/240x160?v=<%= item[:id] %>" width="64" alt="" />
+        <img src="/assets/card-placeholder-lg.png" width="64" alt="" />
         <%= sage_component SageCardBlock, {} do %>
           <h4><%= item[:name] %></h4>
           <p>Item <%= item[:id] %> specs</p>
@@ -161,7 +161,7 @@ Note that this example also implements the [Reveal utility class](#{pages_helper
       more_actions: { items: dropdown_items(item[:id]) },
     } do %>
       <%= sage_component SageCardRow, { grid_template: "ete" } do %>
-        <img src="https://source.unsplash.com/random/240x160?v=<%= item[:id] %>" width="120" height="64" alt=""  />
+        <img src="/assets/card-placeholder-lg.png" width="120" height="64" alt=""  />
         <%= sage_component SageCardBlock, {} do %>
           <%= sage_component SageLink, {
             spacer: { bottom: "2xs" },

@@ -20,7 +20,7 @@
     $outline-offset-block: 4px,
     $outline-border-radius: sage-border(radius-round),
   );
-  @include sage-focus-outline--update-color(sage-color(primary, 200));
+  @include sage-focus-outline--update-color(sage-color(purple, 30));
 
   &:hover:not(:focus):not(:active) {
     color: sage-color(charcoal, 400);

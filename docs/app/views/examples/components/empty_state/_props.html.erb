@@ -1,6 +1,6 @@
 <tr>
   <td><%= md('`center_vertical`') %></td>
-  <td><%= md('If true, the empty state will be adjust to be visually centered inside the entire page context. Meant to be used in pairing with `scope: "page"`.') %></td>
+  <td><%= md('If true, the empty state will be visually centered inside the entire page context.') %></td>
   <td><%= md('Boolean') %></td>
   <td><%= md('`false`') %></td>
 </tr>
@@ -17,14 +17,13 @@
   <td><%= md('`nil`') %></td>
 </tr>
 <tr>
-  <td><%= md('`scope`') %></td>
-  <td><%= md('The layout of the component adjusts depending on this context setting:
-  
-- `nil` (default) sets up a "feature"-level layout for use within panels or cards for showing empty state for particular features.
+  <td><%= md('`size`') %></td>
+  <td><%= md('The size of the icon adjusts depending on this context setting:
+
+- `nil` (default) sets up a "feature"-level layout for use on whole page empty states and is intended to fill the stage.
 - `"compact"` similar to the default above, this compacts the spacing a little more for smaller contexts.
-- `"page"` is for use on whole page empty states and is intended to fill the stage.
 ') %></td>
-  <td><%= md('`nil` | `"compact"` | `"page"`') %></td>
+  <td><%= md('`nil` | `"compact"`') %></td>
   <td><%= md('`nil`') %></td>
 </tr>
 <tr>
@@ -49,10 +48,27 @@
   <td colspan="4"><strong>Content Slots</strong></td>
 </tr>
 <tr>
-  <td><%= md('`:sage_empty_state_video`') %></td>
+  <td><%= md('`:sage_empty_state_actions`') %></td>
   <td><%= md('
-  Slot into which video cards or other media can be placed.
+    Slot into which buttons or other actions can be placed.
   ') %></td>
   <td></td>
   <td></td>
 </tr>
+<tr>
+  <td><%= md('`:sage_empty_state_text`') %></td>
+  <td><%= md('
+    Slot into which text can be placed.
+  ') %></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td><%= md('`:sage_empty_state_video`') %></td>
+  <td><%= md('
+    Slot into which video cards or other media can be placed.
+  ') %></td>
+  <td></td>
+  <td></td>
+</tr>
+

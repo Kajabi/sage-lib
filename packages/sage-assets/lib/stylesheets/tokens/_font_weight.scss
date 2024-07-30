@@ -24,5 +24,6 @@ $sage-font-weights: (
 ///
 @function sage-font-weight($key: regular) {
   $value: map-get($sage-font-weights, $key);
+
   @return $value;
 }

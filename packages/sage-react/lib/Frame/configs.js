@@ -31,6 +31,21 @@ export const FRAME_BORDERS = {
 };
 
 // Keep in sync with `packages/sage-assets/lib/stylesheets/components/_frame.scss`
+export const FRAME_BOX_SHADOWS = {
+  NONE: 'none',
+  SM: 'sm',
+  MD: 'md',
+  LG: 'lg',
+  MODAL: 'modal',
+  '050': '050',
+  100: '100',
+  200: '200',
+  300: '300',
+  400: '400',
+  500: '500',
+};
+
+// Keep in sync with `packages/sage-assets/lib/stylesheets/components/_frame.scss`
 export const FRAME_BORDER_RADII = {
   NONE: 'none',
   SM: 'sm',

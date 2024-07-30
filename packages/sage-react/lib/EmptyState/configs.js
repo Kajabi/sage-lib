@@ -1,5 +1,4 @@
-export const EMPTY_STATE_SCOPES = {
+export const EMPTY_STATE_SIZES = {
   DEFAULT: null,
-  PAGE: 'page',
   COMPACT: 'compact',
 };

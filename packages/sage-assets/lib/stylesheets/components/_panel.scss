@@ -7,6 +7,11 @@
 .sage-panel {
   @include sage-panel;
   @include sage-grid-panel;
+
+  .sage-card &,
+  .sage-panel {
+    box-shadow: none;
+  }
 }
 
 .sage-panel-grid {

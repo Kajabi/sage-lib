@@ -197,9 +197,12 @@ $-search-icon: "::before";
       box-shadow: map-get($sage-toolbar-button-borders, hover);
     }
 
-    &:focus,
     &:active {
       box-shadow: map-get($sage-toolbar-button-borders, active-hover);
+    }
+
+    &:focus {
+      box-shadow: map-get($sage-toolbar-button-borders, focus);
     }
   }
 

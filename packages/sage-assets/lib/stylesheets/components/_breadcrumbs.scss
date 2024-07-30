@@ -6,7 +6,7 @@
 
 $-breadcrumb-current-color: sage-color(charcoal, 400);
 $-breadcrumb-interactive-color: sage-color(charcoal, 400);
-$-breadcrumb-outline-color: sage-color(primary, 200);
+$-breadcrumb-outline-color: sage-color(purple, 30);
 
 .sage-breadcrumbs {
   display: flex;
@@ -89,10 +89,10 @@ $-breadcrumb-outline-color: sage-color(primary, 200);
     background: transparent;
     border-radius: rem(6px);
     @include sage-focus-outline(
-      $outline-width: 4px,
-      $outline-offset-block: -4,
-      $outline-offset-inline: -6,
-      $outline-border-radius: rem(6px)
+      $outline-width: 2px,
+      $outline-offset-block: -2,
+      $outline-offset-inline: -3,
+      $outline-border-radius: rem(3px)
     );
     @include sage-focus-outline--update-color($-breadcrumb-outline-color);
 
