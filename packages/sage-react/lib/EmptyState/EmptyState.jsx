@@ -39,7 +39,13 @@ export const EmptyState = ({
           {graphic}
         </div>
       )}
-      {icon && (<Icon icon={icon} size={Icon.SIZES.XXXL} className="sage-empty-state__icon" />)}
+      {icon && (
+        <Icon
+          icon={icon}
+          size={Icon.SIZES.XXXL}
+          className="sage-empty-state__icon"
+        />
+      )}
       <div className="sage-empty-state__content">
         {title && (
           <TitleTag className="sage-empty-state__title">
@@ -59,7 +65,10 @@ export const EmptyState = ({
         )}
         {actions && (
           <div className="sage-empty-state__actions">
-            <Button.Group gap={Button.Group.GAP_OPTIONS.SM}>
+            <Button.Group
+              align={Button.Group.ALIGN_OPTIONS.CENTER}
+              gap={Button.Group.GAP_OPTIONS.SM}
+            >
               {actions}
             </Button.Group>
           </div>
