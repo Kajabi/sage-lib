@@ -35,8 +35,8 @@ const Template = (args) => <EmptyState {...args} />;
 
 export const Default = Template.bind({});
 
-export const Compactsize = Template.bind({});
-Compactsize.args = {
+export const CompactSize = Template.bind({});
+CompactSize.args = {
   icon: null,
   graphic: (<img src="//source.unsplash.com/random/530x500" alt="" />),
   size: EmptyState.SIZES.PAGE,
