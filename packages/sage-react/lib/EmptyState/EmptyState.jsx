@@ -4,7 +4,7 @@ import classnames from 'classnames';
 import { SageTokens } from '../configs';
 import { Button } from '../Button';
 import { Icon } from '../Icon';
-import { EMPTY_STATE_SCOPES } from './configs';
+import { EMPTY_STATE_SIZES } from './configs';
 
 export const EmptyState = ({
   actions,
@@ -12,7 +12,7 @@ export const EmptyState = ({
   children,
   graphic,
   icon,
-  scope,
+  size,
   text,
   title,
   titleTag,
@@ -23,7 +23,7 @@ export const EmptyState = ({
     'sage-empty-state',
     {
       'sage-empty-state--center': centerVertical,
-      [`sage-empty-state--${scope}`]: scope,
+      [`sage-empty-state--${size}`]: size,
     },
   );
 
@@ -84,7 +84,7 @@ export const EmptyState = ({
   );
 };
 
-EmptyState.SCOPES = EMPTY_STATE_SCOPES;
+EmptyState.SIZES = EMPTY_STATE_SIZES;
 
 EmptyState.defaultProps = {
   actions: null,
@@ -92,7 +92,7 @@ EmptyState.defaultProps = {
   children: null,
   graphic: null,
   icon: null,
-  scope: EmptyState.SCOPES.DEFAULT,
+  size: EmptyState.SIZES.DEFAULT,
   text: null,
   title: null,
   titleTag: 'h2',
@@ -105,7 +105,7 @@ EmptyState.propTypes = {
   children: PropTypes.node,
   graphic: PropTypes.node,
   icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),
-  scope: PropTypes.oneOf(Object.values(EmptyState.SCOPES)),
+  size: PropTypes.oneOf(Object.values(EmptyState.SIZES)),
   text: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   title: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   titleTag: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']),

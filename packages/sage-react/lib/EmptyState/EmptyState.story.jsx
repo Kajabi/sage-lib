@@ -18,7 +18,7 @@ export default {
   argTypes: {
     ...selectArgs({
       icon: SageTokens.ICONS,
-      scope: EmptyState.SCOPES
+      size: EmptyState.SIZES
     })
   },
   args: {
@@ -35,11 +35,11 @@ const Template = (args) => <EmptyState {...args} />;
 
 export const Default = Template.bind({});
 
-export const CompactScope = Template.bind({});
-CompactScope.args = {
+export const Compactsize = Template.bind({});
+Compactsize.args = {
   icon: null,
   graphic: (<img src="//source.unsplash.com/random/530x500" alt="" />),
-  scope: EmptyState.SCOPES.PAGE,
+  size: EmptyState.SIZES.PAGE,
   text: (
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
