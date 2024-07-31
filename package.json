@@ -56,7 +56,7 @@
     "sassdocs": "cd packages/sage-assets && yarn run start",
     "setup": "bin/setup.sh",
     "setup:init": "yarn install && yarn docs:initialize",
-    "start": "yarn npm-run-all --parallel build:sd watch docs storybook sassdocs",
+    "start": "NODE_OPTIONS=--openssl-legacy-provider yarn npm-run-all --parallel build:sd watch docs storybook sassdocs",
     "storybook": "cd packages/sage-react && yarn storybook",
     "test": "yarn npm-run-all test:prod:*",
     "test:dev": "yarn npm-run-all test:dev:*",
