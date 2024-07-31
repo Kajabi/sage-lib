@@ -32,6 +32,7 @@ end
       <%= component.generated_css_classes %>
     "
     size="<%= "#{component.size}" if component.size.present? %>"
+    <%= component.generated_html_attributes.html_safe %>
     ></pds-icon>
 <% if component.card_color.present? %>
   </div>
