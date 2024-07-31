@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.20.10](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.20.9...@kajabi/sage@5.20.10) (2024-07-31)
+
+
+### Bug Fixes
+
+* **sage-icon:** add html_attributes to render on pds-icon ([#1916](https://github.com/Kajabi/sage-lib/issues/1916)) ([097d53f](https://github.com/Kajabi/sage-lib/commit/097d53fd2aa09ebaed420d4e9f3bd6035dcf5860))
+
+
+
+
+
 ## [5.20.9](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.20.8...@kajabi/sage@5.20.9) (2024-07-01)
 
 **Note:** Version bump only for package @kajabi/sage
