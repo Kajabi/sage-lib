@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import { SageTokens } from '../configs';
 
 export const Select = ({
   className,
@@ -78,7 +79,13 @@ export const Select = ({
           : buildOption(option, i)
         ))}
       </select>
-      <i className="sage-select__arrow" aria-hidden="true" />
+      <pds-icon
+        aria-hidden="true"
+        class="sage-select__arrow"
+        color={SageTokens.COLOR_PALETTE.CHARCOAL_100}
+        name="caret-down"
+        size=""
+      />
       {label && (
         <label htmlFor={id} className="sage-select__label">{label}</label>
       )}
