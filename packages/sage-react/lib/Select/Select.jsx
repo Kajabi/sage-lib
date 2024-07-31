@@ -85,7 +85,7 @@ export const Select = ({
         color={SageTokens.COLOR_PALETTE.CHARCOAL_100}
         name="caret-down"
         size=""
-      ></pds-icon>
+      />
       {label && (
         <label htmlFor={id} className="sage-select__label">{label}</label>
       )}
