@@ -37,7 +37,7 @@
     "build:watch": "build-storybook -o build && webpack --config webpack/webpack.prod.js --watch",
     "lint": "yarn run eslint \"lib/**/*.{js,jsx}\"",
     "storybook": "start-storybook -p 4100 --ci",
-    "preversion": "yarn install && yarn run build",
+    "preversion": "NODE_OPTIONS=--openssl-legacy-provider yarn install && yarn run build",
     "test": "jest --runInBand",
     "test:coverage:server": "browser-sync start -s \"coverage/lcov-report\" -f \"coverage/lcov-report/**/*.*\" --port 4110",
     "test:coverage:watch": "jest --coverage=true --watchAll=true",

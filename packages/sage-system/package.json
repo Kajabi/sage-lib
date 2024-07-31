@@ -34,7 +34,7 @@
   "scripts": {
     "build": "webpack --config webpack/webpack.prod.js",
     "build:watch": "yarn build --watch",
-    "preversion": "yarn run build"
+    "preversion": "NODE_OPTIONS=--openssl-legacy-provider yarn run build"
   },
   "devDependencies": {
     "@babel/core": "^7.11.6",

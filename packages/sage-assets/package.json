@@ -28,7 +28,7 @@
     "build:sassdoc": "sassdoc lib/stylesheets --config sassdoc-config.yaml",
     "build:sassdoc:watch": "nodemon -e scss --watch lib/stylesheets -x \"yarn run build:sassdoc\"",
     "build:watch": "npm-run-all -p build:webpack:watch build:sassdoc:watch",
-    "preversion": "yarn run build",
+    "preversion": "NODE_OPTIONS=--openssl-legacy-provider yarn run build",
     "server": "yarn ws --directory sassdoc -p 4200",
     "prestart": "yarn build:sassdoc",
     "start": "yarn server",
