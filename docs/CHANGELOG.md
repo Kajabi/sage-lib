@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.20.11](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.20.10...@kajabi/sage@5.20.11) (2024-08-01)
+
+
+### Reverts
+
+* **select:** removes size prop from pds-icon ([#1921](https://github.com/Kajabi/sage-lib/issues/1921)) ([4ac2e57](https://github.com/Kajabi/sage-lib/commit/4ac2e57e69a8c46bec1a286c926283c85a36b9e2))
+
+
+
+
+
 ## [5.20.10](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.20.9...@kajabi/sage@5.20.10) (2024-07-31)
 
 
