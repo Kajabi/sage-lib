@@ -3,6 +3,7 @@ class SageEmptyState < SageComponent
     center_vertical: [:optional, NilClass, TrueClass],
     graphic: [:optional, NilClass, String],
     icon: [:optional, NilClass, String],
+    icon_background: [:optional, NilClass, String],
     size: [:optional, NilClass, Set.new(["compact", nil])],
     text: [:optional, NilClass, String],
     title: [:optional, NilClass, String],
