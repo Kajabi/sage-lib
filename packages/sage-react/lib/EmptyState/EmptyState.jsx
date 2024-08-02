@@ -12,6 +12,7 @@ export const EmptyState = ({
   children,
   graphic,
   icon,
+  backgroundColor,
   size,
   text,
   title,
@@ -40,11 +41,16 @@ export const EmptyState = ({
         </div>
       )}
       {icon && (
-        <Icon
-          icon={icon}
-          size={Icon.SIZES.XXXL}
-          className="sage-empty-state__icon"
-        />
+        <div
+          className="sage-empty-state__icon-container"
+          style={{ '--color-background-icon': backgroundColor || SageTokens.COLOR_PALETTE.MERCURY_30 }}
+        >
+          <Icon
+            icon={icon}
+            size={Icon.SIZES.XXXL}
+            className="sage-empty-state__icon"
+          />
+        </div>
       )}
       <div className="sage-empty-state__content">
         {title && (
@@ -92,6 +98,7 @@ EmptyState.defaultProps = {
   children: null,
   graphic: null,
   icon: null,
+  backgroundColor: null,
   size: EmptyState.SIZES.DEFAULT,
   text: null,
   title: null,
@@ -105,6 +112,7 @@ EmptyState.propTypes = {
   children: PropTypes.node,
   graphic: PropTypes.node,
   icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),
+  backgroundColor: PropTypes.string,
   size: PropTypes.oneOf(Object.values(EmptyState.SIZES)),
   text: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   title: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
