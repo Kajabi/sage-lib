@@ -46,8 +46,9 @@ export const EmptyState = ({
           style={{ '--color-background-icon': backgroundColor || SageTokens.COLOR_PALETTE.MERCURY_30 }}
         >
           <Icon
+            color={Icon.COLORS.WHITE}
             icon={icon}
-            size={Icon.SIZES.XXXL}
+            size={size === EmptyState.SIZES.COMPACT ? Icon.SIZES.XL : Icon.SIZES.XXXL}
             className="sage-empty-state__icon"
           />
         </div>
@@ -107,15 +108,48 @@ EmptyState.defaultProps = {
 };
 
 EmptyState.propTypes = {
+  /**
+   * Slot into which buttons or other actions can be placed.
+   */
   actions: PropTypes.node,
+  /**
+   * If true, the Empty State will be visually centered inside the entire page context.
+   */
   centerVertical: PropTypes.bool,
+  /**
+   * The content to be rendered within the Empty State.
+   */
   children: PropTypes.node,
+  /**
+   * Adds a graphic above the content.
+   */
   graphic: PropTypes.node,
+  /**
+   * Adds an icon above the content.
+   */
   icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),
+  /**
+   * Sets the background color of the icon container. Defaults to Mercury 30
+   */
   backgroundColor: PropTypes.string,
+  /**
+   * The size and context of the Empty State.
+   */
   size: PropTypes.oneOf(Object.values(EmptyState.SIZES)),
+  /**
+   * Sets the text for the Empty State.
+   */
   text: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+  /**
+   * Sets the title for the Empty State.
+   */
   title: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+  /**
+   * Sets which HTML heading tag to use on the title.
+   */
   titleTag: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']),
+  /**
+   * Slot into which video cards or other media can be placed.
+   */
   video: PropTypes.node,
 };
