@@ -38,7 +38,7 @@ export const Default = Template.bind({});
 export const CompactSize = Template.bind({});
 CompactSize.args = {
   icon: null,
-  graphic: (<img src="//source.unsplash.com/random/530x500" alt="" />),
+  graphic: (<img src="https://unsplash.it/2000/1100" alt="" />),
   size: EmptyState.SIZES.PAGE,
   text: (
     <p>
