@@ -53,15 +53,15 @@ $-empty-state-icon-compact-size: rem(56px);
   }
 
   .sage-empty-state--compact & {
-    inline-size: $-empty-state-graphic-compact-width;
     block-size: $-empty-state-graphic-compact-height;
+    inline-size: $-empty-state-graphic-compact-width;
   }
 }
 
 .sage-empty-state__icon-container {
   display: flex;
-  background-color: $-empty-state-icon-background-color;
   padding: sage-spacing(lg);
+  background-color: $-empty-state-icon-background-color;
   border-radius: sage-border(radius-round);
 
   .sage-empty-state--compact & {
