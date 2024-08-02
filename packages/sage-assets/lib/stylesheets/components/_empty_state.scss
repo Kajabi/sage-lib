@@ -8,6 +8,7 @@ $-empty-state-graphic-default-width: 100%;
 $-empty-state-graphic-default-height: rem(104px);
 $-empty-state-graphic-compact-width: 100%;
 $-empty-state-graphic-compact-height: rem(56px);
+$-empty-state-icon-background-color: var(--color-background-icon);
 $-empty-state-icon-size: rem(104px);
 $-empty-state-icon-compact-size: rem(56px);
 
@@ -57,9 +58,20 @@ $-empty-state-icon-compact-size: rem(56px);
   }
 }
 
+.sage-empty-state__icon-container {
+  display: flex;
+  background-color: $-empty-state-icon-background-color;
+  padding: sage-spacing(lg);
+  border-radius: sage-border(radius-round);
+
+  .sage-empty-state--compact & {
+    padding: sage-spacing(sm);
+  }
+}
+
 .sage-empty-state__icon {
   display: inline-flex;
-  color: sage-color(grey, 60);
+  color: sage-color(white);
   inline-size: $-empty-state-icon-size;
   block-size: $-empty-state-icon-size;
 }
