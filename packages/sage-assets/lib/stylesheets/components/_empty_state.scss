@@ -71,7 +71,6 @@ $-empty-state-icon-compact-size: rem(56px);
 
 .sage-empty-state__icon {
   display: inline-flex;
-  color: sage-color(white);
   inline-size: $-empty-state-icon-size;
   block-size: $-empty-state-icon-size;
 }
