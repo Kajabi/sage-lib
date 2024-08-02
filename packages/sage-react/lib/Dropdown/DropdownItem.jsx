@@ -4,7 +4,7 @@ import classnames from 'classnames';
 import { Checkbox } from '../Toggle';
 import { Link } from '../Link';
 import { Tooltip } from '../Tooltip';
-import { SageTokens } from '../configs';
+import { SageTokens, SageClassnames } from '../configs';
 import { OptionsDropdown } from './OptionsDropdown';
 import { DROPDOWN_ITEM_COLORS } from './configs';
 
@@ -117,9 +117,12 @@ export const DropdownItem = ({
             value={label}
             {...rest}
           />
-          <span className="sage-dropdown__item-label" title={label}>
-            {label}
-          </span>
+          <>
+            {icon && (<pds-icon class={`sage-dropdown__item-icon ${SageClassnames.SPACERS.XS_RIGHT}`} name={icon} />)}
+            <span className="sage-dropdown__item-label" title={label}>
+              {label}
+            </span>
+          </>
         </label>
       );
     }
@@ -138,9 +141,12 @@ export const DropdownItem = ({
           {...rest}
         >
           {(!customComponent && isLabelVisible) && (
-            <span className="sage-dropdown__item-label" title={label}>
-              {label}
-            </span>
+            <>
+              {icon && (<pds-icon class={`sage-dropdown__item-icon ${SageClassnames.SPACERS.XS_RIGHT}`} name={icon} />)}
+              <span className="sage-dropdown__item-label" title={label}>
+                {label}
+              </span>
+            </>
           )}
           {customComponent && <CustomComponent {...payload} />}
         </Link>
@@ -157,9 +163,12 @@ export const DropdownItem = ({
         {...rest}
       >
         {(!customComponent && isLabelVisible) && (
-          <span className="sage-dropdown__item-label" title={label}>
-            {label}
-          </span>
+          <>
+            {icon && (<pds-icon class={`sage-dropdown__item-icon ${SageClassnames.SPACERS.XS_RIGHT}`} name={icon} />)}
+            <span className="sage-dropdown__item-label" title={label}>
+              {label}
+            </span>
+          </>
         )}
         {customComponent && <CustomComponent {...payload} />}
       </button>
