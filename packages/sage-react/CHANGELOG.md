@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.20.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.20.2...@kajabi/sage-react@1.20.3) (2024-08-02)
+
+
+### Bug Fixes
+
+* **dropdownitem:** convert before to pds-icon ([#1924](https://github.com/Kajabi/sage-lib/issues/1924)) ([b869368](https://github.com/Kajabi/sage-lib/commit/b86936883335c3b46f6d89fae253794494082842))
+
+
+
+
+
 ## [1.20.2](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.20.1...@kajabi/sage-react@1.20.2) (2024-08-01)
 
 
