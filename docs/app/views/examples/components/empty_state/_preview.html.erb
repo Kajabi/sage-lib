@@ -8,12 +8,12 @@
 <% end %>
 
 <h3>With Icon and Compact</h3>
-<p> Compact variants, with less top and bottom padding, are useful for smaller contexts.</p>
+<p> Compact variants, with a smaller icon, are useful for smaller contexts.</p>
 <%= sage_component SageEmptyState, {
   icon: "bold",
   title: "Title for state, compact variety",
   text: "Text to appear below. Lorem ipsum dolor sit amet consectituor.",
-  scope: "compact",
+  size: "compact",
 } do %>
   <p>Other stuff such as buttons...</p>
 <% end %>
@@ -25,62 +25,4 @@
   text: "Text to appear below. Lorem ipsum dolor sit amet consectituor.",
 } do %>
   <p>Other stuff such as buttons...</p>
-<% end %>
-
-<h3>Page Scope and Graphic</h3>
-<%= sage_component SageEmptyState, {
-  title: "Create your first Email Campaign",
-  graphic: image_tag("empty-state-lg.svg", alt: ""),
-  scope: "page",
-} do %>
-  <% content_for :sage_empty_state_text do %>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Elit arcu volutpat cursus ultricies ac, ultricies.
-      Platea sed nibh molestie ut.
-    </p>
-  <% end %>
-  <% content_for :sage_empty_state_actions do %>
-    <%= sage_component SageButtonGroup, { gap: :sm } do %>
-      <%= sage_component SageButton, {
-        attributes: { href: "#" },
-        style: "primary",
-        value: "Create Email Campaigns",
-      } %>
-      <%= sage_component SageButton, {
-        attributes: { href: "#" },
-        style: "secondary",
-        subtle: true,
-        value: "Learn More",
-      } %>
-    <% end %>
-  <% end %>
-<% end %>
-
-<h3>Page Scope and Graphic with Video</h3>
-<%= sage_component SageEmptyState, {
-  title: "Create your first Email Campaign",
-  graphic: image_tag("empty-state-lg.svg", alt: ""),
-  scope: "page",
-} do %>
-  <% content_for :sage_empty_state_text do %>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Elit arcu volutpat cursus ultricies ac, ultricies.
-      Platea sed nibh molestie ut.
-    </p>
-  <% end %>
-  <% content_for :sage_empty_state_actions do %>
-    <%= sage_component SageButton, {
-      attributes: { href: "#" },
-      style: "primary",
-      value: "Create Email Campaigns",
-    } %>
-    <%= sage_component SageButton, {
-      attributes: { href: "#" },
-      style: "secondary",
-      subtle: true,
-      value: "Learn More",
-    } %>
-  <% end %>
 <% end %>
