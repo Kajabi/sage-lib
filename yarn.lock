@@ -2848,12 +2848,12 @@
   dependencies:
     "@octokit/openapi-types" "^12.11.0"
 
-"@pine-ds/icons@^7.0.1":
-  version "7.4.1"
-  resolved "https://registry.yarnpkg.com/@pine-ds/icons/-/icons-7.4.1.tgz#b1643881f60e4d04dafd51e8a94f545de9d2afd0"
-  integrity sha512-FkA8P2khHQcy7g27Ak+uL8ZSU7TU6O/1KiqVc2o/IVOXRZowT2Apq9Hkt77lchW0nKp1MgGcFwGAVLRj87EujA==
+"@pine-ds/icons@^7.4.3":
+  version "7.4.3"
+  resolved "https://registry.yarnpkg.com/@pine-ds/icons/-/icons-7.4.3.tgz#4d334e890e84e4b8252e2d4bade8458dc07de089"
+  integrity sha512-D+TvRSFQFBxuShWSckZPs8E64bXEqumtQ1ev36HFDEb/RqMapqSsqY0eUy+JYHFvJ3Q51HaMg1V8Zc10+sXGog==
   dependencies:
-    "@stencil/core" "^4.8.1"
+    "@stencil/core" "^4.20.0"
 
 "@pmmmwh/react-refresh-webpack-plugin@^0.5.3":
   version "0.5.7"
@@ -2953,10 +2953,10 @@
   resolved "https://registry.npmjs.org/@socket.io/component-emitter/-/component-emitter-3.1.0.tgz"
   integrity sha512-+9jVqKhRSpsc591z5vX+X5Yyw+he/HCB4iQ/RYxw35CEPaY1gnsNE43nf9n9AaYjAQrTiI/mOwKUKdUs9vf7Xg==
 
-"@stencil/core@^4.8.1":
-  version "4.18.3"
-  resolved "https://registry.yarnpkg.com/@stencil/core/-/core-4.18.3.tgz#8568ffe3db307ea36aaacf82813cfed9ae319388"
-  integrity sha512-8yoG5AFQYEPocVtuoc5kvRS0Hku0MoDWDUpADRaXPVHsOFLmxR16LJENj25ucCz5GEfeTGQ/tCE8JAypPmr/fQ==
+"@stencil/core@^4.20.0":
+  version "4.20.0"
+  resolved "https://registry.yarnpkg.com/@stencil/core/-/core-4.20.0.tgz#221f2b36ab999891560449b02d6915862c435f49"
+  integrity sha512-WPrTHFngvN081RY+dJPneKQLwnOFD60OMCOQGmmSHfCW0f4ujPMzzhwWU1gcSwXPWXz5O+8cBiiCaxAbJU7kAg==
 
 "@storybook/addon-a11y@^6.5.9":
   version "6.5.10"

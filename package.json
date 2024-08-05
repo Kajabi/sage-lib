@@ -73,6 +73,6 @@
     "watch:system": "cd packages/sage-system && yarn build:watch"
   },
   "dependencies": {
-    "@pine-ds/icons": "^7.0.1"
+    "@pine-ds/icons": "^7.4.3"
   }
 }
