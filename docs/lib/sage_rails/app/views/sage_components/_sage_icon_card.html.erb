@@ -11,7 +11,6 @@ style = {
     sage-icon-card
     <%= "sage-icon-card--#{color}" if color.present? %>
     <%= "sage-icon-card--round" if component.round %>
-    <%= "sage-icon-card--gradient" if component.gradient %>
     <%= component.generated_css_classes %>
   "
   <% component.attributes.each do |key, value| %>
