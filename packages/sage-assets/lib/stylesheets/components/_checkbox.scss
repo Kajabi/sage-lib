@@ -285,7 +285,7 @@ $-checkbox-focus-outline-color: sage-color(primary, 200);
   }
 
   .sage-checkbox & {
-    margin-top: rem(4px);
+    margin-top: rem(2px);
   }
 
   &.sage-checkbox, // spcificity that should apply only to `--standalone` variation
