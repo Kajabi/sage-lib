@@ -9,8 +9,10 @@ $-stat-box-image-max-width: rem(48px);
 .sage-stat-box {
   // Styles here
   @include sage-card($grid: false);
+  background-color: sage-color(white);
   padding: rem(18px) sage-spacing(sm);
   border-radius: sage-border(radius-large);
+  box-shadow: sage-shadow(md);
 
   &.sage-stat-box--raised {
     box-shadow: sage-shadow(sm);

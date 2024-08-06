@@ -145,7 +145,7 @@ $-sage-frame-wraps: (
 // 2. Variables for default settings
 //
 $-sage-frame-alignment: top-left;
-$-sage-frame-background: transparent;
+$-sage-frame-background: sage-color(white);
 $-sage-frame-border: none;
 $-sage-frame-border-radius: none;
 $-sage-frame-direction: vertical;
@@ -163,6 +163,7 @@ $-sage-frame-wrap: none;
 
 // Root element
 .sage-frame {
+  background-color: $-sage-frame-background;
   display: flex;
 
   // Add default settings
@@ -242,7 +243,7 @@ $-sage-frame-wrap: none;
   .sage-frame--gap-#{$-key} {
     gap: #{$-val};
   }
-  
+
   .sage-frame--padding-#{$-key} {
     padding: #{$_val};
   }

@@ -39,9 +39,11 @@ $-switch-toggle-size: rem(16px);
 
   &.sage-switch--has-border {
     align-items: center;
+    background-color: sage-color(white);
     padding: sage-spacing(card);
     border: sage-border();
     border-radius: sage-border(radius);
+    box-shadow: sage-shadow(md);
   }
 
   &.sage-switch--toggle-right {
