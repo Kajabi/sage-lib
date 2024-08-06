@@ -163,8 +163,8 @@ $-sage-frame-wrap: none;
 
 // Root element
 .sage-frame {
-  background-color: $-sage-frame-background;
   display: flex;
+  background-color: $-sage-frame-background;
 
   // Add default settings
   &:not([class*="sage-frame--align-"]) {
