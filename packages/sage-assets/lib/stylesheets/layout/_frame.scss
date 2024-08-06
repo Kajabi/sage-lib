@@ -166,6 +166,10 @@ $-sage-frame-wrap: none;
   display: flex;
   background-color: $-sage-frame-background;
 
+  .sage-frame {
+    background-color: inherit; // ensures nested frames inherit the main parent frame background color
+  }
+
   // Add default settings
   &:not([class*="sage-frame--align-"]) {
     align-items: map-get(map-get($-sage-frame-alignments, $-sage-frame-alignment), v);
