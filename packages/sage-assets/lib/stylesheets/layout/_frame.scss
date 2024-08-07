@@ -145,7 +145,7 @@ $-sage-frame-wraps: (
 // 2. Variables for default settings
 //
 $-sage-frame-alignment: top-left;
-$-sage-frame-background: sage-color(white);
+$-sage-frame-background: transparent;
 $-sage-frame-border: none;
 $-sage-frame-border-radius: none;
 $-sage-frame-direction: vertical;
@@ -164,11 +164,6 @@ $-sage-frame-wrap: none;
 // Root element
 .sage-frame {
   display: flex;
-  background-color: $-sage-frame-background;
-
-  .sage-frame {
-    background-color: inherit; // ensures nested frames inherit the main parent frame background color
-  }
 
   // Add default settings
   &:not([class*="sage-frame--align-"]) {
@@ -221,6 +216,7 @@ $-sage-frame-wrap: none;
 
 @each $-key, $-val in $-sage-frame-borders {
   .sage-frame--border-#{$-key} {
+    background-color: sage-color(white);
     border: #{$-val};
   }
 }
