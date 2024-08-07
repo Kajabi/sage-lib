@@ -32,10 +32,12 @@ ENV HOME="/app"
 
 ENV PORT ${PORT:-4100}
 ENV NODE_PATH=lib
+ENV GITHUB_TOKEN='${GITHUB_TOKEN}'
 
-RUN echo "-----> Using .npmrc from config"
-RUN npm config set @kajabi:registry https://npm.pkg.github.com
-RUN npm config set '//npm.pkg.github.com/:_authToken' '${GITHUB_TOKEN}'
+COPY <<'EOF' ./.npmrc
+//npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}
+@kajabi:registry=https://npm.pkg.github.com/
+EOF
 
 COPY --chown={$NONROOT_UID}:${NONROOT_GID} package.json /app/package.json
 RUN yarn install --check-files
