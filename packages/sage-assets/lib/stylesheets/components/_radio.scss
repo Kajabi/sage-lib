@@ -22,7 +22,7 @@ $-radio-color-focus-outline-error: sage-color(red, 200);
 $-radio-button-size: $sage-radio-size;
 $-radio-gap-spacing: rem(12px);
 $-radio-transition: 0.15s ease-in-out;
-$-radio-selected-indicator-size: rem(7px);
+$-radio-selected-indicator-size: rem(6px);
 
 // Focus state
 $-radio-focus-outline-size: rem(3px);
@@ -226,10 +226,6 @@ $-radio-focus-outline-color: currentColor;
         border-radius: sage-border(radius);
       }
     }
-  }
-
-  .sage-radio & {
-    margin-top: rem(4px);
   }
 
   .sage-sortable & {
