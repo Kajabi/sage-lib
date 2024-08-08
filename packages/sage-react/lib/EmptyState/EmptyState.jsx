@@ -13,6 +13,7 @@ export const EmptyState = ({
   graphic,
   icon,
   backgroundColor,
+  scope,
   size,
   text,
   title,
@@ -92,6 +93,7 @@ export const EmptyState = ({
 };
 
 EmptyState.SIZES = EMPTY_STATE_SIZES;
+EmptyState.SCOPES = EMPTY_STATE_SIZES;
 
 EmptyState.defaultProps = {
   actions: null,
@@ -100,6 +102,7 @@ EmptyState.defaultProps = {
   graphic: null,
   icon: null,
   backgroundColor: null,
+  scope: EmptyState.SIZES.DEFAULT,
   size: EmptyState.SIZES.DEFAULT,
   text: null,
   title: null,
@@ -132,6 +135,10 @@ EmptyState.propTypes = {
    * Sets the background color of the icon container. Defaults to Mercury 30
    */
   backgroundColor: PropTypes.string,
+  /**
+   * Sets the scope for the Empty State. Deprecated.
+   */
+  scope: PropTypes.oneOf(Object.values(EmptyState.SIZES)),
   /**
    * The size and context of the Empty State.
    */
