@@ -13,6 +13,8 @@ $-sage-card-background: transparent;
 
   position: relative;
   width: 100%;
+  background-color: sage-color(white);
+  box-shadow: sage-shadow(md);
 }
 
 .sage-card--border-dashed {
