@@ -4,7 +4,7 @@ class SageEmptyState < SageComponent
     graphic: [:optional, NilClass, String],
     icon: [:optional, NilClass, String],
     icon_background: [:optional, NilClass, String],
-    scope: [:optional, NilClass, Set.new(["page", "compact", nil])]
+    scope: [:optional, NilClass, Set.new(["page", "compact", nil])],
     size: [:optional, NilClass, Set.new(["compact", nil])],
     text: [:optional, NilClass, String],
     title: [:optional, NilClass, String],
