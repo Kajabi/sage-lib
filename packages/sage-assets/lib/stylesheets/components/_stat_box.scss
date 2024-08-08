@@ -11,6 +11,8 @@ $-stat-box-image-max-width: rem(48px);
   @include sage-card($grid: false);
   padding: rem(18px) sage-spacing(sm);
   border-radius: sage-border(radius-large);
+  box-shadow: sage-shadow(md);
+  background-color: sage-color(white);
 
   &.sage-stat-box--raised {
     box-shadow: sage-shadow(sm);

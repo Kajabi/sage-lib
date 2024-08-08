@@ -13,6 +13,8 @@ $-transaction-card-price-max-width: rem(100px);
 
   position: relative;
   width: 100%;
+  background-color: sage-color(white);
+  box-shadow: sage-shadow(md);
 
   > * {
     min-width: 0;
