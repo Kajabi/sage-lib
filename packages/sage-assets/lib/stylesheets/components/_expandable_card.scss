@@ -100,7 +100,7 @@ $-expandable-card-padding-xs: sage-spacing(xs);
 
 .sage-expandable-card--expanded {
   .sage-expandable-card__trigger::before,
-  pds-icon {
+  pds-icon[name="caret-right"] {
     transform: rotateZ(-90deg);
   }
 }
@@ -114,7 +114,7 @@ $-expandable-card-padding-xs: sage-spacing(xs);
   align-items: center;
   gap: $-expandable-card-padding;
   .sage-expandable-card__trigger::before,
-  pds-icon {
+  pds-icon[name="caret-right"] {
     margin: 0;
   }
 }
