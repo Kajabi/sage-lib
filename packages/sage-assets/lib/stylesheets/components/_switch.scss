@@ -42,6 +42,8 @@ $-switch-toggle-size: rem(16px);
     padding: sage-spacing(card);
     border: sage-border();
     border-radius: sage-border(radius);
+    box-shadow: sage-shadow(md);
+    background-color: sage-color(white);
   }
 
   &.sage-switch--toggle-right {

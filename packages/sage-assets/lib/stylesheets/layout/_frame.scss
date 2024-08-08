@@ -216,6 +216,7 @@ $-sage-frame-wrap: none;
 
 @each $-key, $-val in $-sage-frame-borders {
   .sage-frame--border-#{$-key} {
+    background-color: sage-color(white);
     border: #{$-val};
   }
 }
@@ -242,7 +243,7 @@ $-sage-frame-wrap: none;
   .sage-frame--gap-#{$-key} {
     gap: #{$-val};
   }
-  
+
   .sage-frame--padding-#{$-key} {
     padding: #{$_val};
   }
