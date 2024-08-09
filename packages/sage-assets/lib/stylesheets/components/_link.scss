@@ -167,6 +167,7 @@ $-link-base-styles: (
 .sage-link--help-icon-only {
   position: relative;
   text-decoration: none;
+  color: inherit;
 
   &::before,
   pds-icon {
@@ -179,6 +180,7 @@ $-link-base-styles: (
   &:active,
   &:focus {
     outline: 0;
+    color: inherit;
 
     pds-icon {
       color: sage-color(charcoal, 300);
