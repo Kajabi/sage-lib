@@ -115,3 +115,22 @@ Neutral links live in items with non-white backgrounds, such as Banner and Toast
     }
   }
 } %>
+
+<h3 class="t-sage-heading-6">Help Link</h3>
+
+<div>
+  <%= sage_component SageLink, {
+    url: "https://example.com",
+    label: "External link",
+    help_link: true,
+    show_label: false
+  } %>
+</div>
+<div>
+  <%= sage_component SageLink, {
+    url: "https://example.com",
+    label: "Help link label",
+    help_link: true,
+    show_label: true,
+  } %>
+</div>
