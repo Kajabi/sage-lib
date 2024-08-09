@@ -179,8 +179,8 @@ $-link-base-styles: (
   &:hover,
   &:active,
   &:focus {
-    outline: 0;
     color: inherit;
+    outline: 0;
 
     pds-icon {
       color: sage-color(charcoal, 300);
