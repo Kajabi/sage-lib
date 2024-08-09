@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.20.14](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.20.13...@kajabi/sage@5.20.14) (2024-08-09)
+
+
+### Bug Fixes
+
+* **link:** add missing icon for help link variant ([#1943](https://github.com/Kajabi/sage-lib/issues/1943)) ([f3be8b7](https://github.com/Kajabi/sage-lib/commit/f3be8b78ccb09799ffc016f5a4ff387ceca01822))
+
+
+
+
+
 ## [5.20.13](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.20.12...@kajabi/sage@5.20.13) (2024-08-05)
 
 **Note:** Version bump only for package @kajabi/sage

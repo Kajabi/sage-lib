@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.15.4](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.15.3...@kajabi/sage-assets@1.15.4) (2024-08-09)
+
+
+### Bug Fixes
+
+* **link:** add missing icon for help link variant ([#1943](https://github.com/Kajabi/sage-lib/issues/1943)) ([f3be8b7](https://github.com/Kajabi/sage-lib/commit/f3be8b78ccb09799ffc016f5a4ff387ceca01822))
+
+
+
+
+
 ## [1.15.3](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.15.2...@kajabi/sage-assets@1.15.3) (2024-08-02)
 
 **Note:** Version bump only for package @kajabi/sage-assets
