@@ -11,6 +11,11 @@ $-transaction-card-price-max-width: rem(100px);
 .sage-transaction-card {
   @include sage-card;
 
+  .sage-card &,
+  .sage-panel & {
+    box-shadow: none;
+  }
+
   position: relative;
   width: 100%;
   background-color: sage-color(white);

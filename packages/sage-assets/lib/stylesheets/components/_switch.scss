@@ -44,6 +44,11 @@ $-switch-toggle-size: rem(16px);
     border-radius: sage-border(radius);
     box-shadow: sage-shadow(md);
     background-color: sage-color(white);
+
+    .sage-card &,
+    .sage-panel & {
+      box-shadow: none;
+    }
   }
 
   &.sage-switch--toggle-right {
