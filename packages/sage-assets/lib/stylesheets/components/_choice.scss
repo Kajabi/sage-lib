@@ -94,6 +94,11 @@ $-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
     }
   }
 
+  .sage-card & ,
+  .sage-panel & {
+    box-shadow: none;
+  }
+
   .sage-tabs--layout-default &:not(:last-child) {
     @media (max-width: sage-breakpoint(sm-max)) {
       margin-bottom: sage-spacing(sm);
