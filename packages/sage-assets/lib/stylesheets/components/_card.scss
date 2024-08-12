@@ -15,6 +15,11 @@ $-sage-card-background: transparent;
   width: 100%;
   background-color: sage-color(white);
   box-shadow: sage-shadow(md);
+
+  .sage-card,
+  .sage-panel & {
+    box-shadow: none;
+  }
 }
 
 .sage-card--border-dashed {
