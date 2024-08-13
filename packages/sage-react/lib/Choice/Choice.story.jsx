@@ -5,7 +5,6 @@ import { Avatar } from '../Avatar';
 import { Choice } from './Choice';
 import placeholderImg from '../../public/CardPlaceholderSmall.png';
 
-
 // Default Sandbox
 export default {
   title: 'Sage/Choice',
