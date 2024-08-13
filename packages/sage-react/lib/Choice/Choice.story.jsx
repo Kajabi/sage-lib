@@ -3,7 +3,7 @@ import { selectArgs } from '../story-support/helpers';
 import { SageTokens } from '../configs';
 import { Avatar } from '../Avatar';
 import { Choice } from './Choice';
-import placeholderImg from '../../public/CardPlaceholderLarge.png';
+import placeholderImg from '../../public/CardPlaceholderSmall.png';
 
 
 // Default Sandbox
@@ -140,7 +140,7 @@ export const Arrow = () => (
 export const LinkText = () => (
   <div style={{ maxWidth: '100%', display: 'flex' }}>
     <Choice
-      graphic="https://sage.kajabi.com/assets/card-placeholder-sm-2e328163eacc10ed2c294b9059c802257b4e80881a81f5a47a47f38d1a481f2e.png"
+      graphic={placeholderImg}
       href="https://example.com"
       linkText="Sign In"
       text="Option 1"
