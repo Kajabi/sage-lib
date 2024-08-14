@@ -3,6 +3,8 @@ import { Button } from '../Button';
 import { SageTokens } from '../configs';
 import { EmptyState } from './EmptyState';
 
+import placeholderImg from '../../public/CardPlaceholderLarge.png';
+
 <Meta title="Sage/EmptyState" component={EmptyState} />
 
 # Empty State
@@ -79,7 +81,7 @@ The Empty State component has two sizes: default and `compact`. The default size
           <Button subtle={true} color={Button.COLORS.SECONDARY}>Link</Button>
         </>
       )}
-      graphic={(<img src="https://unsplash.it/2000/1100" alt="" />)}
+      graphic={(<img src={placeholderImg} alt="" />)}
       title="Create your first Email Campaign"
       titleTag="h1"
       text={(<p>
