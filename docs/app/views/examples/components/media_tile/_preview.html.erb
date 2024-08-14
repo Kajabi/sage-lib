@@ -32,7 +32,7 @@ panels = [
     caption: %(
       <p>Vivamus dictum rutrum dui, nec placerat ante</p>
     ),
-    media: %(<img src="//source.unsplash.com/Ssj4uWXcvS4/600x400?1" alt="Image of Product Abra" />),
+    media: %(<img src="/assets/card-placeholder-lg.png" alt="Image of Product Abra" />),
     title: "Product Abra",
   },
   {
@@ -44,7 +44,7 @@ panels = [
     caption: %(
       <p>Suspendisse eu tellus quis arcu sagittis semper</p>
     ),
-    media: %(<img src="//source.unsplash.com/gkJCCn1hZDk/600x400?2" alt="Image of Product Cadabra" />),
+    media: %(<img src="/assets/card-placeholder-lg.png" alt="Image of Product Cadabra" />),
     title: "Product Cadabra",
   },
   {
@@ -56,7 +56,7 @@ panels = [
     caption: %(
       <p>Maecenas vitae leo eu tellus efficitur viverra sit amet ut tortor vestibulum</p>
     ),
-    media: %(<img src="//source.unsplash.com/3lqEqS1s7mw/600x400?3" alt="Image of Product Jimminycricket" />),
+    media: %(<img src="/assets/card-placeholder-lg.png" alt="Image of Product Jimminycricket" />),
     title: "Product Jimminycricket",
   },
 ]
@@ -155,7 +155,7 @@ NOTE: the examples below omit `media` but this can safely be used as well with t
   title_tag: "h2",
 } do %>
   <%= content_for :sage_media_tile_media do %>
-    <img src="//source.unsplash.com/Ssj4uWXcvS4/600x400?1" alt="MEDIA Image of Product Abra" />
+    <img src="/assets/card-placeholder-lg.png" alt="MEDIA Image of Product Abra" />
   <% end %>
   <%= content_for :sage_media_tile_actions_custom do %>
     <%= sage_component SageBadge, { value: "CUSTOM Draft", color: "draft" } %>

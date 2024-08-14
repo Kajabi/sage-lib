@@ -4,6 +4,8 @@ import { SageClassnames, SageTokens } from '../configs';
 import { Button, Label, Property } from '..';
 import { Frame } from './Frame';
 
+import placeholderImg from '../../public/CardPlaceholderLarge.png';
+
 export default {
   title: 'Sage/Frame',
   component: Frame,
@@ -91,7 +93,7 @@ export const NestingFrames = () => (
     align={Frame.ALIGNMENTS.CENTER_LEFT}
   >
     <Frame width="160px">
-      <img src="//source.unsplash.com/240x160" alt="" style={{ maxWidth: '100%' }} />
+      <img src={placeholderImg} alt="" style={{ maxWidth: '100%' }} />
     </Frame>
     <Frame width="flex" gap={Frame.GAPS.XS}>
       <Frame gap={Frame.GAPS.NONE}>
@@ -195,7 +197,7 @@ export const CustomBlock = () => (
       </Button.Group>
     </Frame>
     <Frame width="104px">
-      <img src="//source.unsplash.com/random/104x104" alt="" />
+      <img src={placeholderImg} alt="" style={{ maxWidth: '100%' }} />
     </Frame>
   </Frame>
 );
