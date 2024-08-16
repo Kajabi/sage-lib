@@ -2,7 +2,7 @@ FROM alpine:3.17.0
 
 ARG NONROOT_UID="1000"
 ARG NONROOT_GID="1000"
-ARG NODE_VERSION="16.20.2"
+ARG NODE_VERSION="18.20.4"
 ARG YARN_VERSION="1.22.18"
 ARG ARCH="x64"
 ARG GITHUB_TOKEN
@@ -32,12 +32,10 @@ ENV HOME="/app"
 
 ENV PORT ${PORT:-4100}
 ENV NODE_PATH=lib
-ENV GITHUB_TOKEN='${GITHUB_TOKEN}'
 
-COPY <<'EOF' ./.npmrc
-//npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}
-@kajabi:registry=https://npm.pkg.github.com/
-EOF
+RUN echo "-----> Using .npmrc from config"
+RUN npm config set @kajabi:registry https://npm.pkg.github.com
+RUN npm config set '//npm.pkg.github.com/:_authToken' '${GITHUB_TOKEN}'
 
 COPY --chown={$NONROOT_UID}:${NONROOT_GID} package.json /app/package.json
 RUN yarn install --check-files
