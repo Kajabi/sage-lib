@@ -37,6 +37,7 @@ WORKDIR /app
 ENV HOME="/app"
 ENV BUNDLE_PATH="/app/vendor/gems"
 ENV BUNDLE_APP_CONFIG="/app/.bundle"
+ENV NODE_OPTIONS=--openssl-legacy-provider
 
 RUN gem install bundler:$BUNDLER_VERSION
 
