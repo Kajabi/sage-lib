@@ -28,7 +28,7 @@
     "url": "https://github.com/Kajabi/sage-lib/issues"
   },
   "engines": {
-    "node": "16.x || 18.x || 20.x",
+    "node": "18.x || 20.x || 22.x",
     "npm": "8.x",
     "yarn": "1.x"
   },
