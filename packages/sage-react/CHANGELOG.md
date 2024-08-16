@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.20.5](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.20.4...@kajabi/sage-react@1.20.5) (2024-08-16)
+
+
+### Reverts
+
+* ci dockerfile changes ([dea2c36](https://github.com/Kajabi/sage-lib/commit/dea2c365efc36460470c6c54cafba8c5f7094205))
+
+
+
+
+
 ## [1.20.4](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.20.3...@kajabi/sage-react@1.20.4) (2024-08-09)
 
 **Note:** Version bump only for package @kajabi/sage-react
