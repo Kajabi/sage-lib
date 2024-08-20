@@ -47,7 +47,13 @@
   @each $value, $map in $color {
     $hex: sage-color($name, $value);
 
-    .color-#{"" + $name}-#{$value} {
+    // Determine class name for $value == 50
+    $classname: ".color-#{"" + $name}-#{$value}";
+    @if ($value == 50) {
+      $classname: ".color-#{"" + $name}-0#{$value}";
+    }
+
+    #{$classname} {
       padding: sage-spacing(sm) sage-spacing();
       font-size: sage-font-size(body);
       background: $hex;

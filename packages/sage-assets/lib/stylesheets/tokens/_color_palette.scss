@@ -32,14 +32,37 @@ $sage-color-default-name: "grey 500";
 ///
 /// @return {color} the value retrieved
 ///
-@function sage-color($base, $value: 300) {
+@function sage-color($base, $value: null) {
+  // Map base colors to their default values
+  $default-values: (
+    black: 500,
+    blue: 600,
+    charcoal: 300,
+    grey: 300,
+    green: 600,
+    mercury: 500,
+    orange: 300,
+    primary: 300,
+    purple: 600,
+    red: 500,
+    sage: 300,
+    white: 500,
+    yellow: 400
+  );
+
+  // Get the default value for the given base color
+  $default-value: map-get($default-values, $base);
+
+  // If no value is provided, use the default value
+  $value: if($value == null, $default-value, $value);
+
   $color: sd-sage-color($base, $value, hex);
-  
+
   @if $color {
     @return $color;
   }
 
   @warn "Could not retrieve color: #{$base} #{$value}. Got `#{$color}` from `sd-sage-color()`. Default color #{$sage-color-default-name} (`#{$sage-color-default}`) returned instead.";
-  
+
   @return $sage-color-default;
 }

@@ -473,7 +473,7 @@
   .sage-form-field--error &:focus:not(:disabled),
   .sage-form-field--error &:not(:placeholder-shown),
   .sage-form-field--error &:required:not(:placeholder-shown):not(:valid) {
-    @include sage-focus-ring(sage-color(red, 30));
+    @include sage-focus-ring(sage-color(red, 300));
 
     box-shadow: sage-border-interactive(error);
 
@@ -552,7 +552,7 @@
   color: sage-color(charcoal, 200);
 
   .sage-form-field--error & {
-    color: sage-color(red, 50);
+    color: sage-color(red, 500);
 
     &::before {
       @include sage-icon-base(danger, md, pine);

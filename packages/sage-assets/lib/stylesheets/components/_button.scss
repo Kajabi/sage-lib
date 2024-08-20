@@ -90,23 +90,23 @@ $-btn-base-styles: (
   danger: (
     default: (
       color: sage-color(white),
-      background-color: sage-color(red, 50),
-      border-color: sage-color(red, 50),
-      ring-color: sage-color(red, 30),
+      background-color: sage-color(red, 500),
+      border-color: sage-color(red, 500),
+      ring-color: sage-color(red, 300),
     ),
     hover: (
       color: sage-color(white),
-      background-color: sage-color(red, 80),
+      background-color: sage-color(red, 800),
     ),
     focus: (
       color: sage-color(white),
-      background-color: sage-color(red, 50),
-      border-color: sage-color(red, 50),
+      background-color: sage-color(red, 500),
+      border-color: sage-color(red, 500),
     ),
     disabled: (
-      color: sage-color(red, 30),
-      background-color: sage-color(red, 15),
-      border-color: sage-color(red, 15),
+      color: sage-color(red, 300),
+      background-color: sage-color(red, 150),
+      border-color: sage-color(red, 150),
     )
   ),
 );
@@ -137,12 +137,12 @@ $-btn-subtle-styles: (
     disabled: sage-color(charcoal, 100),
   ),
   danger: (
-    default: sage-color(red, 50),
-    hover: sage-color(red, 50),
-    hover-background: sage-color(red, 15),
-    focus: sage-color(red, 50),
-    focus-outline: sage-color(red, 30),
-    disabled: sage-color(red, 30),
+    default: sage-color(red, 500),
+    hover: sage-color(red, 500),
+    hover-background: sage-color(red, 150),
+    focus: sage-color(red, 500),
+    focus-outline: sage-color(red, 300),
+    disabled: sage-color(red, 300),
   ),
 );
 
@@ -157,8 +157,8 @@ $-alert-close-btn-background-colors: (
   warning: sage-color(yellow, 200),
   approaching: sage-color(yellow, 200),
   reached: sage-color(orange, 200),
-  exceeded: sage-color(red, 30),
-  danger: sage-color(red, 30),
+  exceeded: sage-color(red, 300),
+  danger: sage-color(red, 300),
 );
 
 //

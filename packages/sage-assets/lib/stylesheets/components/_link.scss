@@ -45,14 +45,14 @@ $-link-base-styles: (
   ),
   danger:(
     default: (
-      color: sage-color(red, 50),
+      color: sage-color(red, 500),
     ),
     hover: (
-      color: sage-color(red, 80),
+      color: sage-color(red, 800),
     ),
     focus-visible: (
-      color: sage-color(red, 50),
-      focus-outline: sage-color(red, 30),
+      color: sage-color(red, 500),
+      focus-outline: sage-color(red, 300),
     ),
   )
 );

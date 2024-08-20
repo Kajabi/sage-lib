@@ -329,62 +329,62 @@
         }
       },
       "red": {
-        "5": {
+        "50": {
           "hex": { "value": "#fffafa" },
           "code": { "value": "red-5" },
           "classname": { "value": "t-sage--color-red-5" }
         },
-        "10": {
+        "100": {
           "hex": { "value": "#fef2f2" },
           "code": { "value": "red-10" },
           "classname": { "value": "t-sage--color-red-10" }
         },
-        "15": {
+        "150": {
           "hex": { "value": "#fee2e1" },
           "code": { "value": "red-15" },
           "classname": { "value": "t-sage--color-red-15" }
         },
-        "20": {
+        "200": {
           "hex": { "value": "#fecaca" },
           "code": { "value": "red-20" },
           "classname": { "value": "t-sage--color-red-20" }
         },
-        "30": {
+        "300": {
           "hex": { "value": "#fda5a5" },
           "code": { "value": "red-30" },
           "classname": { "value": "t-sage--color-red-30" }
         },
-        "40": {
+        "400": {
           "hex": { "value": "#f87171" },
           "code": { "value": "red-40" },
           "classname": { "value": "t-sage--color-red-40" }
         },
-        "50": {
+        "500": {
           "hex": { "value": "#ef4444" },
           "code": { "value": "red-50" },
           "classname": { "value": "t-sage--color-red-50" }
         },
-        "60": {
+        "600": {
           "hex": { "value": "#dc2625" },
           "code": { "value": "red-60" },
           "classname": { "value": "t-sage--color-red-60" }
         },
-        "70": {
+        "700": {
           "hex": { "value": "#b91c1b" },
           "code": { "value": "red-70" },
           "classname": { "value": "t-sage--color-red-70" }
         },
-        "80": {
+        "800": {
           "hex": { "value": "#991b1b" },
           "code": { "value": "red-80" },
           "classname": { "value": "t-sage--color-red-80" }
         },
-        "90": {
+        "900": {
           "hex": { "value": "#7f1c1d" },
           "code": { "value": "red-90" },
           "classname": { "value": "t-sage--color-red-90" }
         },
-        "95": {
+        "950": {
           "hex": { "value": "#572627" },
           "code": { "value": "red-95" },
           "classname": { "value": "t-sage--color-red-95" }

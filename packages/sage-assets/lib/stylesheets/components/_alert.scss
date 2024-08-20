@@ -17,8 +17,8 @@ $-alert-background-colors: (
   warning: sage-color(yellow, 100),
   approaching: sage-color(yellow, 100),
   reached: sage-color(orange, 100),
-  exceeded: sage-color(red, 15),
-  danger: sage-color(red, 15),
+  exceeded: sage-color(red, 150),
+  danger: sage-color(red, 150),
 );
 
 $-alert-icon-colors: (
@@ -30,8 +30,8 @@ $-alert-icon-colors: (
   warning: sage-color(yellow, 400),
   approaching: sage-color(yellow, 400),
   reached: sage-color(orange, 400),
-  exceeded: sage-color(red, 50),
-  danger: sage-color(red, 50),
+  exceeded: sage-color(red, 500),
+  danger: sage-color(red, 500),
 );
 
 $-alert-border-colors: (
