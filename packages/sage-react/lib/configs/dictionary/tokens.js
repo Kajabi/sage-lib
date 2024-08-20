@@ -19,42 +19,42 @@
 //
 // Static vars for COLOR BASE
 //
-export const COLOR_BASE_BLUE_5_HEX = '#fafcff';
-export const COLOR_BASE_BLUE_5_CODE = 'blue-5';
-export const COLOR_BASE_BLUE_5_CLASSNAME = 't-sage--color-blue-5';
-export const COLOR_BASE_BLUE_10_HEX = '#eff6ff';
-export const COLOR_BASE_BLUE_10_CODE = 'blue-10';
-export const COLOR_BASE_BLUE_10_CLASSNAME = 't-sage--color-blue-10';
-export const COLOR_BASE_BLUE_15_HEX = '#dbe9fe';
-export const COLOR_BASE_BLUE_15_CODE = 'blue-15';
-export const COLOR_BASE_BLUE_15_CLASSNAME = 't-sage--color-blue-15';
-export const COLOR_BASE_BLUE_20_HEX = '#bfdbfe';
-export const COLOR_BASE_BLUE_20_CODE = 'blue-20';
-export const COLOR_BASE_BLUE_20_CLASSNAME = 't-sage--color-blue-20';
-export const COLOR_BASE_BLUE_30_HEX = '#92c5fd';
-export const COLOR_BASE_BLUE_30_CODE = 'blue-30';
-export const COLOR_BASE_BLUE_30_CLASSNAME = 't-sage--color-blue-30';
-export const COLOR_BASE_BLUE_40_HEX = '#60a5fa';
-export const COLOR_BASE_BLUE_40_CODE = 'blue-40';
-export const COLOR_BASE_BLUE_40_CLASSNAME = 't-sage--color-blue-40';
-export const COLOR_BASE_BLUE_50_HEX = '#3c82f6';
+export const COLOR_BASE_BLUE_50_HEX = '#fafcff';
 export const COLOR_BASE_BLUE_50_CODE = 'blue-50';
 export const COLOR_BASE_BLUE_50_CLASSNAME = 't-sage--color-blue-50';
-export const COLOR_BASE_BLUE_60_HEX = '#2463eb';
-export const COLOR_BASE_BLUE_60_CODE = 'blue-60';
-export const COLOR_BASE_BLUE_60_CLASSNAME = 't-sage--color-blue-60';
-export const COLOR_BASE_BLUE_70_HEX = '#1c4ed8';
-export const COLOR_BASE_BLUE_70_CODE = 'blue-70';
-export const COLOR_BASE_BLUE_70_CLASSNAME = 't-sage--color-blue-70';
-export const COLOR_BASE_BLUE_80_HEX = '#1d40ae';
-export const COLOR_BASE_BLUE_80_CODE = 'blue-80';
-export const COLOR_BASE_BLUE_80_CLASSNAME = 't-sage--color-blue-80';
-export const COLOR_BASE_BLUE_90_HEX = '#1f3a8a';
-export const COLOR_BASE_BLUE_90_CODE = 'blue-90';
-export const COLOR_BASE_BLUE_90_CLASSNAME = 't-sage--color-blue-90';
-export const COLOR_BASE_BLUE_95_HEX = '#172554';
-export const COLOR_BASE_BLUE_95_CODE = 'blue-95';
-export const COLOR_BASE_BLUE_95_CLASSNAME = 't-sage--color-blue-95';
+export const COLOR_BASE_BLUE_100_HEX = '#eff6ff';
+export const COLOR_BASE_BLUE_100_CODE = 'blue-100';
+export const COLOR_BASE_BLUE_100_CLASSNAME = 't-sage--color-blue-100';
+export const COLOR_BASE_BLUE_150_HEX = '#dbe9fe';
+export const COLOR_BASE_BLUE_150_CODE = 'blue-150';
+export const COLOR_BASE_BLUE_150_CLASSNAME = 't-sage--color-blue-150';
+export const COLOR_BASE_BLUE_200_HEX = '#bfdbfe';
+export const COLOR_BASE_BLUE_200_CODE = 'blue-200';
+export const COLOR_BASE_BLUE_200_CLASSNAME = 't-sage--color-blue-200';
+export const COLOR_BASE_BLUE_300_HEX = '#92c5fd';
+export const COLOR_BASE_BLUE_300_CODE = 'blue-300';
+export const COLOR_BASE_BLUE_300_CLASSNAME = 't-sage--color-blue-300';
+export const COLOR_BASE_BLUE_400_HEX = '#60a5fa';
+export const COLOR_BASE_BLUE_400_CODE = 'blue-400';
+export const COLOR_BASE_BLUE_400_CLASSNAME = 't-sage--color-blue-400';
+export const COLOR_BASE_BLUE_500_HEX = '#3c82f6';
+export const COLOR_BASE_BLUE_500_CODE = 'blue-500';
+export const COLOR_BASE_BLUE_500_CLASSNAME = 't-sage--color-blue-500';
+export const COLOR_BASE_BLUE_600_HEX = '#2463eb';
+export const COLOR_BASE_BLUE_600_CODE = 'blue-600';
+export const COLOR_BASE_BLUE_600_CLASSNAME = 't-sage--color-blue-600';
+export const COLOR_BASE_BLUE_700_HEX = '#1c4ed8';
+export const COLOR_BASE_BLUE_700_CODE = 'blue-700';
+export const COLOR_BASE_BLUE_700_CLASSNAME = 't-sage--color-blue-700';
+export const COLOR_BASE_BLUE_800_HEX = '#1d40ae';
+export const COLOR_BASE_BLUE_800_CODE = 'blue-800';
+export const COLOR_BASE_BLUE_800_CLASSNAME = 't-sage--color-blue-800';
+export const COLOR_BASE_BLUE_900_HEX = '#1f3a8a';
+export const COLOR_BASE_BLUE_900_CODE = 'blue-900';
+export const COLOR_BASE_BLUE_900_CLASSNAME = 't-sage--color-blue-900';
+export const COLOR_BASE_BLUE_950_HEX = '#172554';
+export const COLOR_BASE_BLUE_950_CODE = 'blue-950';
+export const COLOR_BASE_BLUE_950_CLASSNAME = 't-sage--color-blue-950';
 export const COLOR_BASE_GREEN_50_HEX = '#fbfefc';
 export const COLOR_BASE_GREEN_50_CODE = 'green-50';
 export const COLOR_BASE_GREEN_50_CLASSNAME = 't-sage--color-green-50';
@@ -412,65 +412,65 @@ export const COLOR_BASE_BLACK_500_CLASSNAME = 't-sage--color-black-500';
 //
 export const COLOR = {
   BLUE: {
-    5: {
-      HEX: COLOR_BASE_BLUE_5_HEX,
-      CODE: COLOR_BASE_BLUE_5_CODE,
-      CLASSNAME: COLOR_BASE_BLUE_5_CLASSNAME,
-    },
-    10: {
-      HEX: COLOR_BASE_BLUE_10_HEX,
-      CODE: COLOR_BASE_BLUE_10_CODE,
-      CLASSNAME: COLOR_BASE_BLUE_10_CLASSNAME,
-    },
-    15: {
-      HEX: COLOR_BASE_BLUE_15_HEX,
-      CODE: COLOR_BASE_BLUE_15_CODE,
-      CLASSNAME: COLOR_BASE_BLUE_15_CLASSNAME,
-    },
-    20: {
-      HEX: COLOR_BASE_BLUE_20_HEX,
-      CODE: COLOR_BASE_BLUE_20_CODE,
-      CLASSNAME: COLOR_BASE_BLUE_20_CLASSNAME,
-    },
-    30: {
-      HEX: COLOR_BASE_BLUE_30_HEX,
-      CODE: COLOR_BASE_BLUE_30_CODE,
-      CLASSNAME: COLOR_BASE_BLUE_30_CLASSNAME,
-    },
-    40: {
-      HEX: COLOR_BASE_BLUE_40_HEX,
-      CODE: COLOR_BASE_BLUE_40_CODE,
-      CLASSNAME: COLOR_BASE_BLUE_40_CLASSNAME,
-    },
     50: {
       HEX: COLOR_BASE_BLUE_50_HEX,
       CODE: COLOR_BASE_BLUE_50_CODE,
       CLASSNAME: COLOR_BASE_BLUE_50_CLASSNAME,
     },
-    60: {
-      HEX: COLOR_BASE_BLUE_60_HEX,
-      CODE: COLOR_BASE_BLUE_60_CODE,
-      CLASSNAME: COLOR_BASE_BLUE_60_CLASSNAME,
+    100: {
+      HEX: COLOR_BASE_BLUE_100_HEX,
+      CODE: COLOR_BASE_BLUE_100_CODE,
+      CLASSNAME: COLOR_BASE_BLUE_100_CLASSNAME,
     },
-    70: {
-      HEX: COLOR_BASE_BLUE_70_HEX,
-      CODE: COLOR_BASE_BLUE_70_CODE,
-      CLASSNAME: COLOR_BASE_BLUE_70_CLASSNAME,
+    150: {
+      HEX: COLOR_BASE_BLUE_150_HEX,
+      CODE: COLOR_BASE_BLUE_150_CODE,
+      CLASSNAME: COLOR_BASE_BLUE_150_CLASSNAME,
     },
-    80: {
-      HEX: COLOR_BASE_BLUE_80_HEX,
-      CODE: COLOR_BASE_BLUE_80_CODE,
-      CLASSNAME: COLOR_BASE_BLUE_80_CLASSNAME,
+    200: {
+      HEX: COLOR_BASE_BLUE_200_HEX,
+      CODE: COLOR_BASE_BLUE_200_CODE,
+      CLASSNAME: COLOR_BASE_BLUE_200_CLASSNAME,
     },
-    90: {
-      HEX: COLOR_BASE_BLUE_90_HEX,
-      CODE: COLOR_BASE_BLUE_90_CODE,
-      CLASSNAME: COLOR_BASE_BLUE_90_CLASSNAME,
+    300: {
+      HEX: COLOR_BASE_BLUE_300_HEX,
+      CODE: COLOR_BASE_BLUE_300_CODE,
+      CLASSNAME: COLOR_BASE_BLUE_300_CLASSNAME,
     },
-    95: {
-      HEX: COLOR_BASE_BLUE_95_HEX,
-      CODE: COLOR_BASE_BLUE_95_CODE,
-      CLASSNAME: COLOR_BASE_BLUE_95_CLASSNAME,
+    400: {
+      HEX: COLOR_BASE_BLUE_400_HEX,
+      CODE: COLOR_BASE_BLUE_400_CODE,
+      CLASSNAME: COLOR_BASE_BLUE_400_CLASSNAME,
+    },
+    500: {
+      HEX: COLOR_BASE_BLUE_500_HEX,
+      CODE: COLOR_BASE_BLUE_500_CODE,
+      CLASSNAME: COLOR_BASE_BLUE_500_CLASSNAME,
+    },
+    600: {
+      HEX: COLOR_BASE_BLUE_600_HEX,
+      CODE: COLOR_BASE_BLUE_600_CODE,
+      CLASSNAME: COLOR_BASE_BLUE_600_CLASSNAME,
+    },
+    700: {
+      HEX: COLOR_BASE_BLUE_700_HEX,
+      CODE: COLOR_BASE_BLUE_700_CODE,
+      CLASSNAME: COLOR_BASE_BLUE_700_CLASSNAME,
+    },
+    800: {
+      HEX: COLOR_BASE_BLUE_800_HEX,
+      CODE: COLOR_BASE_BLUE_800_CODE,
+      CLASSNAME: COLOR_BASE_BLUE_800_CLASSNAME,
+    },
+    900: {
+      HEX: COLOR_BASE_BLUE_900_HEX,
+      CODE: COLOR_BASE_BLUE_900_CODE,
+      CLASSNAME: COLOR_BASE_BLUE_900_CLASSNAME,
+    },
+    950: {
+      HEX: COLOR_BASE_BLUE_950_HEX,
+      CODE: COLOR_BASE_BLUE_950_CODE,
+      CLASSNAME: COLOR_BASE_BLUE_950_CLASSNAME,
     },
   },
   GREEN: {

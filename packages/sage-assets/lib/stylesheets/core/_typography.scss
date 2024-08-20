@@ -212,7 +212,7 @@ body:not(.sage-excluded),
   $color-value: "";
 
   @if ($color-name == blue) {
-    $color-value: sage-color($color-name, 60);
+    $color-value: sage-color($color-name, 600);
   }
   @else if ($color-name == green) {
     $color-value: sage-color($color-name, 600);

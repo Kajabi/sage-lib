@@ -102,7 +102,7 @@ $-stat-box-image-max-width: rem(48px);
 @each $-color-name, $-color-sliders in $sage-colors {
   .sage-stat-box__title--legend-#{"" + $-color-name} {
     @if ($-color-name == blue) {
-      --legend-color: #{sage-color($-color-name, 60)};
+      --legend-color: #{sage-color($-color-name, 600)};
     }
     @else if ($-color-name == green) {
       --legend-color: #{sage-color($-color-name, 600)};

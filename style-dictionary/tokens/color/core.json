@@ -2,7 +2,7 @@
   "color": {
     "core": {
       "blue": {
-        "value": "{color.base.blue.60.hex}"
+        "value": "{color.base.blue.600.hex}"
       },
       "green": {
         "value": "{color.base.green.600.hex}"
