@@ -11,8 +11,8 @@ $-data-card-colors: (
     text-color: sage-color(charcoal, 400),
   ),
   danger: (
-    border-color: sage-color(red, 300),
-    text-color: sage-color(red, 300),
+    border-color: sage-color(red, 50),
+    text-color: sage-color(red, 50),
   ),
   muted: (
     border-color: sage-color(charcoal, 300),
@@ -118,7 +118,7 @@ $-data-card-padding: sage-spacing(xs);
     gap: sage-spacing(sm);
     padding-bottom: sage-spacing(sm);
   }
-  
+
   .sage-data-card-scroll-container &:not(:last-child) {
     padding-right: sage-spacing(md);
     border-right: 1px solid sage-color(grey, 400);
@@ -138,7 +138,7 @@ $-data-card-padding: sage-spacing(xs);
 
 .sage-data-card-group__title {
   @extend %t-sage-body-semi;
-  
+
   @each $-color-name, $-values in $-data-card-colors {
     @if $-color-name == default {
       color: map-get($-values, text-color);

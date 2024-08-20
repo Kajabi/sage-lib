@@ -55,7 +55,7 @@ $sage-field-colors: (
   default: sage-color(charcoal, 300),
   disabled: sage-color(grey, 500),
   disabled-background: sage-color(grey, 200),
-  error: sage-color(red, 300),
+  error: sage-color(red, 50),
   label-background: sage-color(white),
   success: sage-color(primary, 300),
 );
@@ -72,7 +72,7 @@ $sage-radio-colors: (
   checked-inner: sage-color(white),
   default: sage-color(grey, 400),
   disabled: sage-color(grey, 200),
-  error: sage-color(red, 300),
+  error: sage-color(red, 50),
   hover: sage-color(grey, 500),
 );
 

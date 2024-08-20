@@ -26,9 +26,9 @@ $-banner-colors: (
     icon: "warning",
   ),
   danger: (
-    background: sage-color(red, 300),
+    background: sage-color(red, 50),
     text: sage-color(white),
-    text-hover: sage-color(red, 100),
+    text-hover: sage-color(red, 15),
     icon: "danger",
   ),
 );

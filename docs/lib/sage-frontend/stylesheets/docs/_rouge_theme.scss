@@ -11,19 +11,19 @@ $-color-9: sage-color(charcoal, 400);
 // Comments of various sorts
 $-color-3: sage-color(charcoal, 300);
 // Subheading
-$-color-12: sage-color(red, 300);
+$-color-12: sage-color(red, 50);
 // Constant
-$-color-18: sage-color(red, 300);
+$-color-18: sage-color(red, 50);
 // Keyword type
-$-color-14: sage-color(red, 300);
+$-color-14: sage-color(red, 50);
 // Strings
-$-color-15: sage-color(red, 300);
+$-color-15: sage-color(red, 50);
 // Name exception
-$-color-21: sage-color(red, 200);
+$-color-21: sage-color(red, 30);
 // Error underlines
-$-color-4: sage-color(red, 300);
+$-color-4: sage-color(red, 50);
 // Generic deleted?
-$-color-8: sage-color(red, 200);
+$-color-8: sage-color(red, 30);
 // Escape string
 $-color-25: sage-color(orange, 200);
 // Regex/interpolation
@@ -58,7 +58,7 @@ $-color-23: sage-color(primary, 300);
   .hll {
     background-color: $-color-2;
   }
-  
+
   /* Comment */
   .c {
     color: $-color-3;

@@ -240,11 +240,11 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
 }
 
 .sage-dropdown__item-control--danger {
-  color: sage-color(red, 300);
+  color: sage-color(red, 50);
 
   &:hover {
-    color: sage-color(red, 300);
-    background-color: sage-color(red, 100);
+    color: sage-color(red, 50);
+    background-color: sage-color(red, 15);
   }
 }
 

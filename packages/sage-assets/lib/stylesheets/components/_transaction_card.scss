@@ -66,7 +66,7 @@ $-transaction-card-price-max-width: rem(100px);
 }
 
 .sage-transaction-card__amount--red {
-  color: sage-color(red, 300);
+  color: sage-color(red, 50);
 }
 
 .sage-transaction-card__label {
@@ -91,7 +91,7 @@ $-transaction-card-price-max-width: rem(100px);
 }
 
 .sage-transaction-card__state--red {
-  color: sage-color(red, 300);
+  color: sage-color(red, 50);
 }
 
 .sage-transaction-card__state--sage {
