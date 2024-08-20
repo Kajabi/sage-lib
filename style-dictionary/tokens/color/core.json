@@ -8,7 +8,7 @@
         "value": "{color.base.green.600.hex}"
       },
       "mercury": {
-        "value": "{color.base.mercury.50.hex}"
+        "value": "{color.base.mercury.500.hex}"
       },
       "primary": {
         "value": "{color.base.primary.300.hex}"
@@ -17,7 +17,7 @@
         "value": "{color.base.sage.300.hex}"
       },
       "yellow": {
-        "value": "{color.base.yellow.300.hex}"
+        "value": "{color.base.yellow.400.hex}"
       },
       "red": {
         "value": "{color.base.red.500.hex}"

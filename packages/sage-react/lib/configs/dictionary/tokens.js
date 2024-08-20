@@ -157,57 +157,42 @@ export const COLOR_BASE_SAGE_400_CLASSNAME = 't-sage--color-sage-400';
 export const COLOR_BASE_SAGE_500_HEX = '#052e1c';
 export const COLOR_BASE_SAGE_500_CODE = 'sage-500';
 export const COLOR_BASE_SAGE_500_CLASSNAME = 't-sage--color-sage-500';
-export const COLOR_BASE_YELLOW_5_HEX = '#fffefa';
-export const COLOR_BASE_YELLOW_5_CODE = 'yellow-5';
-export const COLOR_BASE_YELLOW_5_CLASSNAME = 't-sage--color-yellow-5';
-export const COLOR_BASE_YELLOW_10_HEX = '#fffbeb';
-export const COLOR_BASE_YELLOW_10_CODE = 'yellow-10';
-export const COLOR_BASE_YELLOW_10_CLASSNAME = 't-sage--color-yellow-10';
-export const COLOR_BASE_YELLOW_15_HEX = '#fff3c6';
-export const COLOR_BASE_YELLOW_15_CODE = 'yellow-15';
-export const COLOR_BASE_YELLOW_15_CLASSNAME = 't-sage--color-yellow-15';
-export const COLOR_BASE_YELLOW_20_HEX = '#fee589';
-export const COLOR_BASE_YELLOW_20_CODE = 'yellow-20';
-export const COLOR_BASE_YELLOW_20_CLASSNAME = 't-sage--color-yellow-20';
-export const COLOR_BASE_YELLOW_30_HEX = '#fed04b';
-export const COLOR_BASE_YELLOW_30_CODE = 'yellow-30';
-export const COLOR_BASE_YELLOW_30_CLASSNAME = 't-sage--color-yellow-30';
-export const COLOR_BASE_YELLOW_40_HEX = '#fdbb21';
-export const COLOR_BASE_YELLOW_40_CODE = 'yellow-40';
-export const COLOR_BASE_YELLOW_40_CLASSNAME = 't-sage--color-yellow-40';
-export const COLOR_BASE_YELLOW_50_HEX = '#f79a0b';
+export const COLOR_BASE_YELLOW_50_HEX = '#fffefa';
 export const COLOR_BASE_YELLOW_50_CODE = 'yellow-50';
 export const COLOR_BASE_YELLOW_50_CLASSNAME = 't-sage--color-yellow-50';
-export const COLOR_BASE_YELLOW_60_HEX = '#db7303';
-export const COLOR_BASE_YELLOW_60_CODE = 'yellow-60';
-export const COLOR_BASE_YELLOW_60_CLASSNAME = 't-sage--color-yellow-60';
-export const COLOR_BASE_YELLOW_70_HEX = '#b64f06';
-export const COLOR_BASE_YELLOW_70_CODE = 'yellow-70';
-export const COLOR_BASE_YELLOW_70_CLASSNAME = 't-sage--color-yellow-70';
-export const COLOR_BASE_YELLOW_80_HEX = '#943d0e';
-export const COLOR_BASE_YELLOW_80_CODE = 'yellow-80';
-export const COLOR_BASE_YELLOW_80_CLASSNAME = 't-sage--color-yellow-80';
-export const COLOR_BASE_YELLOW_90_HEX = '#79330e';
-export const COLOR_BASE_YELLOW_90_CODE = 'yellow-90';
-export const COLOR_BASE_YELLOW_90_CLASSNAME = 't-sage--color-yellow-90';
-export const COLOR_BASE_YELLOW_95_HEX = '#451902';
-export const COLOR_BASE_YELLOW_95_CODE = 'yellow-95';
-export const COLOR_BASE_YELLOW_95_CLASSNAME = 't-sage--color-yellow-95';
-export const COLOR_BASE_YELLOW_100_HEX = '#fff3c6';
+export const COLOR_BASE_YELLOW_100_HEX = '#fffbeb';
 export const COLOR_BASE_YELLOW_100_CODE = 'yellow-100';
 export const COLOR_BASE_YELLOW_100_CLASSNAME = 't-sage--color-yellow-100';
-export const COLOR_BASE_YELLOW_200_HEX = '#fed04b';
+export const COLOR_BASE_YELLOW_150_HEX = '#fff3c6';
+export const COLOR_BASE_YELLOW_150_CODE = 'yellow-150';
+export const COLOR_BASE_YELLOW_150_CLASSNAME = 't-sage--color-yellow-150';
+export const COLOR_BASE_YELLOW_200_HEX = '#fee589';
 export const COLOR_BASE_YELLOW_200_CODE = 'yellow-200';
 export const COLOR_BASE_YELLOW_200_CLASSNAME = 't-sage--color-yellow-200';
-export const COLOR_BASE_YELLOW_300_HEX = '#fdbb21';
+export const COLOR_BASE_YELLOW_300_HEX = '#fed04b';
 export const COLOR_BASE_YELLOW_300_CODE = 'yellow-300';
 export const COLOR_BASE_YELLOW_300_CLASSNAME = 't-sage--color-yellow-300';
-export const COLOR_BASE_YELLOW_400_HEX = '#db7303';
+export const COLOR_BASE_YELLOW_400_HEX = '#fdbb21';
 export const COLOR_BASE_YELLOW_400_CODE = 'yellow-400';
 export const COLOR_BASE_YELLOW_400_CLASSNAME = 't-sage--color-yellow-400';
-export const COLOR_BASE_YELLOW_500_HEX = '#451902';
+export const COLOR_BASE_YELLOW_500_HEX = '#f79a0b';
 export const COLOR_BASE_YELLOW_500_CODE = 'yellow-500';
 export const COLOR_BASE_YELLOW_500_CLASSNAME = 't-sage--color-yellow-500';
+export const COLOR_BASE_YELLOW_600_HEX = '#db7303';
+export const COLOR_BASE_YELLOW_600_CODE = 'yellow-60';
+export const COLOR_BASE_YELLOW_600_CLASSNAME = 't-sage--color-yellow-600';
+export const COLOR_BASE_YELLOW_700_HEX = '#b64f06';
+export const COLOR_BASE_YELLOW_700_CODE = 'yellow-700';
+export const COLOR_BASE_YELLOW_700_CLASSNAME = 't-sage--color-yellow-700';
+export const COLOR_BASE_YELLOW_800_HEX = '#943d0e';
+export const COLOR_BASE_YELLOW_800_CODE = 'yellow-800';
+export const COLOR_BASE_YELLOW_800_CLASSNAME = 't-sage--color-yellow-800';
+export const COLOR_BASE_YELLOW_900_HEX = '#79330e';
+export const COLOR_BASE_YELLOW_900_CODE = 'yellow-900';
+export const COLOR_BASE_YELLOW_900_CLASSNAME = 't-sage--color-yellow-900';
+export const COLOR_BASE_YELLOW_950_HEX = '#451902';
+export const COLOR_BASE_YELLOW_950_CODE = 'yellow-950';
+export const COLOR_BASE_YELLOW_950_CLASSNAME = 't-sage--color-yellow-950';
 export const COLOR_BASE_RED_50_HEX = '#fffafa';
 export const COLOR_BASE_RED_50_CODE = 'red-50';
 export const COLOR_BASE_RED_50_CLASSNAME = 't-sage--color-red-50';
@@ -652,70 +637,20 @@ export const COLOR = {
     },
   },
   YELLOW: {
-    5: {
-      HEX: COLOR_BASE_YELLOW_5_HEX,
-      CODE: COLOR_BASE_YELLOW_5_CODE,
-      CLASSNAME: COLOR_BASE_YELLOW_5_CLASSNAME,
-    },
-    10: {
-      HEX: COLOR_BASE_YELLOW_10_HEX,
-      CODE: COLOR_BASE_YELLOW_10_CODE,
-      CLASSNAME: COLOR_BASE_YELLOW_10_CLASSNAME,
-    },
-    15: {
-      HEX: COLOR_BASE_YELLOW_15_HEX,
-      CODE: COLOR_BASE_YELLOW_15_CODE,
-      CLASSNAME: COLOR_BASE_YELLOW_15_CLASSNAME,
-    },
-    20: {
-      HEX: COLOR_BASE_YELLOW_20_HEX,
-      CODE: COLOR_BASE_YELLOW_20_CODE,
-      CLASSNAME: COLOR_BASE_YELLOW_20_CLASSNAME,
-    },
-    30: {
-      HEX: COLOR_BASE_YELLOW_30_HEX,
-      CODE: COLOR_BASE_YELLOW_30_CODE,
-      CLASSNAME: COLOR_BASE_YELLOW_30_CLASSNAME,
-    },
-    40: {
-      HEX: COLOR_BASE_YELLOW_40_HEX,
-      CODE: COLOR_BASE_YELLOW_40_CODE,
-      CLASSNAME: COLOR_BASE_YELLOW_40_CLASSNAME,
-    },
     50: {
       HEX: COLOR_BASE_YELLOW_50_HEX,
       CODE: COLOR_BASE_YELLOW_50_CODE,
       CLASSNAME: COLOR_BASE_YELLOW_50_CLASSNAME,
     },
-    60: {
-      HEX: COLOR_BASE_YELLOW_60_HEX,
-      CODE: COLOR_BASE_YELLOW_60_CODE,
-      CLASSNAME: COLOR_BASE_YELLOW_60_CLASSNAME,
-    },
-    70: {
-      HEX: COLOR_BASE_YELLOW_70_HEX,
-      CODE: COLOR_BASE_YELLOW_70_CODE,
-      CLASSNAME: COLOR_BASE_YELLOW_70_CLASSNAME,
-    },
-    80: {
-      HEX: COLOR_BASE_YELLOW_80_HEX,
-      CODE: COLOR_BASE_YELLOW_80_CODE,
-      CLASSNAME: COLOR_BASE_YELLOW_80_CLASSNAME,
-    },
-    90: {
-      HEX: COLOR_BASE_YELLOW_90_HEX,
-      CODE: COLOR_BASE_YELLOW_90_CODE,
-      CLASSNAME: COLOR_BASE_YELLOW_90_CLASSNAME,
-    },
-    95: {
-      HEX: COLOR_BASE_YELLOW_95_HEX,
-      CODE: COLOR_BASE_YELLOW_95_CODE,
-      CLASSNAME: COLOR_BASE_YELLOW_95_CLASSNAME,
-    },
     100: {
       HEX: COLOR_BASE_YELLOW_100_HEX,
       CODE: COLOR_BASE_YELLOW_100_CODE,
       CLASSNAME: COLOR_BASE_YELLOW_100_CLASSNAME,
+    },
+    150: {
+      HEX: COLOR_BASE_YELLOW_150_HEX,
+      CODE: COLOR_BASE_YELLOW_150_CODE,
+      CLASSNAME: COLOR_BASE_YELLOW_150_CLASSNAME,
     },
     200: {
       HEX: COLOR_BASE_YELLOW_200_HEX,
@@ -736,6 +671,31 @@ export const COLOR = {
       HEX: COLOR_BASE_YELLOW_500_HEX,
       CODE: COLOR_BASE_YELLOW_500_CODE,
       CLASSNAME: COLOR_BASE_YELLOW_500_CLASSNAME,
+    },
+    600: {
+      HEX: COLOR_BASE_YELLOW_600_HEX,
+      CODE: COLOR_BASE_YELLOW_600_CODE,
+      CLASSNAME: COLOR_BASE_YELLOW_600_CLASSNAME,
+    },
+    700: {
+      HEX: COLOR_BASE_YELLOW_700_HEX,
+      CODE: COLOR_BASE_YELLOW_700_CODE,
+      CLASSNAME: COLOR_BASE_YELLOW_700_CLASSNAME,
+    },
+    800: {
+      HEX: COLOR_BASE_YELLOW_800_HEX,
+      CODE: COLOR_BASE_YELLOW_800_CODE,
+      CLASSNAME: COLOR_BASE_YELLOW_800_CLASSNAME,
+    },
+    900: {
+      HEX: COLOR_BASE_YELLOW_900_HEX,
+      CODE: COLOR_BASE_YELLOW_900_CODE,
+      CLASSNAME: COLOR_BASE_YELLOW_900_CLASSNAME,
+    },
+    950: {
+      HEX: COLOR_BASE_YELLOW_950_HEX,
+      CODE: COLOR_BASE_YELLOW_950_CODE,
+      CLASSNAME: COLOR_BASE_YELLOW_950_CLASSNAME,
     },
   },
   RED: {
@@ -1299,7 +1259,7 @@ export const COLOR_COMBOS = {
 //
 export const COLOR_CORE_BLUE = '#2463eb';
 export const COLOR_CORE_GREEN = '#079250';
-export const COLOR_CORE_MERCURY = '#fffcfa';
+export const COLOR_CORE_MERCURY = '#ff3e15';
 export const COLOR_CORE_PRIMARY = '#2463eb';
 export const COLOR_CORE_SAGE = '#079250';
 export const COLOR_CORE_YELLOW = '#fdbb21';

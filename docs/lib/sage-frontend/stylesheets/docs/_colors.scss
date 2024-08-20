@@ -85,7 +85,7 @@
       @else if ($name == green) {
         color: sage-color(green, 600);
       }
-      @else if ($name == yellow and $value > 30) {
+      @else if ($name == yellow and $value > 300) {
         color: sage-color(white);
       }
       @else if (lightness($hex) < 65) {
