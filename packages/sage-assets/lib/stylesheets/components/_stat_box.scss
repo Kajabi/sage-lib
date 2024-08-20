@@ -108,7 +108,7 @@ $-stat-box-image-max-width: rem(48px);
       --legend-color: #{sage-color($-color-name, 600)};
     }
     @else if ($-color-name == mercury) {
-      --legend-color: #{sage-color($-color-name, 50)};
+      --legend-color: #{sage-color($-color-name, 500)};
     }
     @else {
       --legend-color: #{sage-color($-color-name, 500)};

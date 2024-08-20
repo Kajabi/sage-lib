@@ -61,7 +61,7 @@ $-card-highlight-size: rem(12px);
       --color: #{sage-color($-color-name, 600)};
     }
     @else if ($-color-name == mercury) {
-      --color: #{sage-color($-color-name, 50)};
+      --color: #{sage-color($-color-name, 500)};
     }
     @else {
       --color: #{sage-color($-color-name, 300)};

@@ -91,42 +91,42 @@ export const COLOR_BASE_GREEN_900_CLASSNAME = 't-sage--color-green-900';
 export const COLOR_BASE_GREEN_950_HEX = '#052e1c';
 export const COLOR_BASE_GREEN_950_CODE = 'green-950';
 export const COLOR_BASE_GREEN_950_CLASSNAME = 't-sage--color-green-950';
-export const COLOR_BASE_MERCURY_5_HEX = '#fffcfa';
-export const COLOR_BASE_MERCURY_5_CODE = 'mercury-5';
-export const COLOR_BASE_MERCURY_5_CLASSNAME = 't-sage--color-mercury-5';
-export const COLOR_BASE_MERCURY_10_HEX = '#fff3ed';
-export const COLOR_BASE_MERCURY_10_CODE = 'mercury-10';
-export const COLOR_BASE_MERCURY_10_CLASSNAME = 't-sage--color-mercury-10';
-export const COLOR_BASE_MERCURY_15_HEX = '#ffe3d4';
-export const COLOR_BASE_MERCURY_15_CODE = 'mercury-15';
-export const COLOR_BASE_MERCURY_15_CLASSNAME = 't-sage--color-mercury-15';
-export const COLOR_BASE_MERCURY_20_HEX = '#ffc3a8';
-export const COLOR_BASE_MERCURY_20_CODE = 'mercury-20';
-export const COLOR_BASE_MERCURY_20_CLASSNAME = 't-sage--color-mercury-20';
-export const COLOR_BASE_MERCURY_30_HEX = '#ff9970';
-export const COLOR_BASE_MERCURY_30_CODE = 'mercury-30';
-export const COLOR_BASE_MERCURY_30_CLASSNAME = 't-sage--color-mercury-30';
-export const COLOR_BASE_MERCURY_40_HEX = '#ff6337';
-export const COLOR_BASE_MERCURY_40_CODE = 'mercury-40';
-export const COLOR_BASE_MERCURY_40_CLASSNAME = 't-sage--color-mercury-40';
-export const COLOR_BASE_MERCURY_50_HEX = '#ff3e15';
+export const COLOR_BASE_MERCURY_50_HEX = '#fffcfa';
 export const COLOR_BASE_MERCURY_50_CODE = 'mercury-50';
 export const COLOR_BASE_MERCURY_50_CLASSNAME = 't-sage--color-mercury-50';
-export const COLOR_BASE_MERCURY_60_HEX = '#f11f06';
-export const COLOR_BASE_MERCURY_60_CODE = 'mercury-60';
-export const COLOR_BASE_MERCURY_60_CLASSNAME = 't-sage--color-mercury-60';
-export const COLOR_BASE_MERCURY_70_HEX = '#c81307';
-export const COLOR_BASE_MERCURY_70_CODE = 'mercury-70';
-export const COLOR_BASE_MERCURY_70_CLASSNAME = 't-sage--color-mercury-70';
-export const COLOR_BASE_MERCURY_80_HEX = '#9e110e';
-export const COLOR_BASE_MERCURY_80_CODE = 'mercury-80';
-export const COLOR_BASE_MERCURY_80_CLASSNAME = 't-sage--color-mercury-80';
-export const COLOR_BASE_MERCURY_90_HEX = '#7f120f';
-export const COLOR_BASE_MERCURY_90_CODE = 'mercury-90';
-export const COLOR_BASE_MERCURY_90_CLASSNAME = 't-sage--color-mercury-90';
-export const COLOR_BASE_MERCURY_95_HEX = '#450506';
-export const COLOR_BASE_MERCURY_95_CODE = 'mercury-95';
-export const COLOR_BASE_MERCURY_95_CLASSNAME = 't-sage--color-mercury-95';
+export const COLOR_BASE_MERCURY_100_HEX = '#fff3ed';
+export const COLOR_BASE_MERCURY_100_CODE = 'mercury-100';
+export const COLOR_BASE_MERCURY_100_CLASSNAME = 't-sage--color-mercury-100';
+export const COLOR_BASE_MERCURY_150_HEX = '#ffe3d4';
+export const COLOR_BASE_MERCURY_150_CODE = 'mercury-150';
+export const COLOR_BASE_MERCURY_150_CLASSNAME = 't-sage--color-mercury-150';
+export const COLOR_BASE_MERCURY_200_HEX = '#ffc3a8';
+export const COLOR_BASE_MERCURY_200_CODE = 'mercury-200';
+export const COLOR_BASE_MERCURY_200_CLASSNAME = 't-sage--color-mercury-200';
+export const COLOR_BASE_MERCURY_300_HEX = '#ff9970';
+export const COLOR_BASE_MERCURY_300_CODE = 'mercury-300';
+export const COLOR_BASE_MERCURY_300_CLASSNAME = 't-sage--color-mercury-300';
+export const COLOR_BASE_MERCURY_400_HEX = '#ff6337';
+export const COLOR_BASE_MERCURY_400_CODE = 'mercury-400';
+export const COLOR_BASE_MERCURY_400_CLASSNAME = 't-sage--color-mercury-400';
+export const COLOR_BASE_MERCURY_500_HEX = '#ff3e15';
+export const COLOR_BASE_MERCURY_500_CODE = 'mercury-500';
+export const COLOR_BASE_MERCURY_500_CLASSNAME = 't-sage--color-mercury-500';
+export const COLOR_BASE_MERCURY_600_HEX = '#f11f06';
+export const COLOR_BASE_MERCURY_600_CODE = 'mercury-600';
+export const COLOR_BASE_MERCURY_600_CLASSNAME = 't-sage--color-mercury-600';
+export const COLOR_BASE_MERCURY_700_HEX = '#c81307';
+export const COLOR_BASE_MERCURY_700_CODE = 'mercury-700';
+export const COLOR_BASE_MERCURY_700_CLASSNAME = 't-sage--color-mercury-700';
+export const COLOR_BASE_MERCURY_800_HEX = '#9e110e';
+export const COLOR_BASE_MERCURY_800_CODE = 'mercury-800';
+export const COLOR_BASE_MERCURY_800_CLASSNAME = 't-sage--color-mercury-800';
+export const COLOR_BASE_MERCURY_900_HEX = '#7f120f';
+export const COLOR_BASE_MERCURY_900_CODE = 'mercury-900';
+export const COLOR_BASE_MERCURY_900_CLASSNAME = 't-sage--color-mercury-900';
+export const COLOR_BASE_MERCURY_950_HEX = '#450506';
+export const COLOR_BASE_MERCURY_950_CODE = 'mercury-950';
+export const COLOR_BASE_MERCURY_950_CLASSNAME = 't-sage--color-mercury-950';
 export const COLOR_BASE_PRIMARY_100_HEX = '#dbe9fe';
 export const COLOR_BASE_PRIMARY_100_CODE = 'primary-100';
 export const COLOR_BASE_PRIMARY_100_CLASSNAME = 't-sage--color-primary-100';
@@ -536,65 +536,65 @@ export const COLOR = {
     },
   },
   MERCURY: {
-    5: {
-      HEX: COLOR_BASE_MERCURY_5_HEX,
-      CODE: COLOR_BASE_MERCURY_5_CODE,
-      CLASSNAME: COLOR_BASE_MERCURY_5_CLASSNAME,
-    },
-    10: {
-      HEX: COLOR_BASE_MERCURY_10_HEX,
-      CODE: COLOR_BASE_MERCURY_10_CODE,
-      CLASSNAME: COLOR_BASE_MERCURY_10_CLASSNAME,
-    },
-    15: {
-      HEX: COLOR_BASE_MERCURY_15_HEX,
-      CODE: COLOR_BASE_MERCURY_15_CODE,
-      CLASSNAME: COLOR_BASE_MERCURY_15_CLASSNAME,
-    },
-    20: {
-      HEX: COLOR_BASE_MERCURY_20_HEX,
-      CODE: COLOR_BASE_MERCURY_20_CODE,
-      CLASSNAME: COLOR_BASE_MERCURY_20_CLASSNAME,
-    },
-    30: {
-      HEX: COLOR_BASE_MERCURY_30_HEX,
-      CODE: COLOR_BASE_MERCURY_30_CODE,
-      CLASSNAME: COLOR_BASE_MERCURY_30_CLASSNAME,
-    },
-    40: {
-      HEX: COLOR_BASE_MERCURY_40_HEX,
-      CODE: COLOR_BASE_MERCURY_40_CODE,
-      CLASSNAME: COLOR_BASE_MERCURY_40_CLASSNAME,
-    },
     50: {
       HEX: COLOR_BASE_MERCURY_50_HEX,
       CODE: COLOR_BASE_MERCURY_50_CODE,
       CLASSNAME: COLOR_BASE_MERCURY_50_CLASSNAME,
     },
-    60: {
-      HEX: COLOR_BASE_MERCURY_60_HEX,
-      CODE: COLOR_BASE_MERCURY_60_CODE,
-      CLASSNAME: COLOR_BASE_MERCURY_60_CLASSNAME,
+    100: {
+      HEX: COLOR_BASE_MERCURY_100_HEX,
+      CODE: COLOR_BASE_MERCURY_100_CODE,
+      CLASSNAME: COLOR_BASE_MERCURY_100_CLASSNAME,
     },
-    70: {
-      HEX: COLOR_BASE_MERCURY_70_HEX,
-      CODE: COLOR_BASE_MERCURY_70_CODE,
-      CLASSNAME: COLOR_BASE_MERCURY_70_CLASSNAME,
+    150: {
+      HEX: COLOR_BASE_MERCURY_150_HEX,
+      CODE: COLOR_BASE_MERCURY_150_CODE,
+      CLASSNAME: COLOR_BASE_MERCURY_150_CLASSNAME,
     },
-    80: {
-      HEX: COLOR_BASE_MERCURY_80_HEX,
-      CODE: COLOR_BASE_MERCURY_80_CODE,
-      CLASSNAME: COLOR_BASE_MERCURY_80_CLASSNAME,
+    200: {
+      HEX: COLOR_BASE_MERCURY_200_HEX,
+      CODE: COLOR_BASE_MERCURY_200_CODE,
+      CLASSNAME: COLOR_BASE_MERCURY_200_CLASSNAME,
     },
-    90: {
-      HEX: COLOR_BASE_MERCURY_90_HEX,
-      CODE: COLOR_BASE_MERCURY_90_CODE,
-      CLASSNAME: COLOR_BASE_MERCURY_90_CLASSNAME,
+    300: {
+      HEX: COLOR_BASE_MERCURY_300_HEX,
+      CODE: COLOR_BASE_MERCURY_300_CODE,
+      CLASSNAME: COLOR_BASE_MERCURY_300_CLASSNAME,
     },
-    95: {
-      HEX: COLOR_BASE_MERCURY_95_HEX,
-      CODE: COLOR_BASE_MERCURY_95_CODE,
-      CLASSNAME: COLOR_BASE_MERCURY_95_CLASSNAME,
+    400: {
+      HEX: COLOR_BASE_MERCURY_400_HEX,
+      CODE: COLOR_BASE_MERCURY_400_CODE,
+      CLASSNAME: COLOR_BASE_MERCURY_400_CLASSNAME,
+    },
+    500: {
+      HEX: COLOR_BASE_MERCURY_500_HEX,
+      CODE: COLOR_BASE_MERCURY_500_CODE,
+      CLASSNAME: COLOR_BASE_MERCURY_500_CLASSNAME,
+    },
+    600: {
+      HEX: COLOR_BASE_MERCURY_600_HEX,
+      CODE: COLOR_BASE_MERCURY_600_CODE,
+      CLASSNAME: COLOR_BASE_MERCURY_600_CLASSNAME,
+    },
+    700: {
+      HEX: COLOR_BASE_MERCURY_700_HEX,
+      CODE: COLOR_BASE_MERCURY_700_CODE,
+      CLASSNAME: COLOR_BASE_MERCURY_700_CLASSNAME,
+    },
+    800: {
+      HEX: COLOR_BASE_MERCURY_800_HEX,
+      CODE: COLOR_BASE_MERCURY_800_CODE,
+      CLASSNAME: COLOR_BASE_MERCURY_800_CLASSNAME,
+    },
+    900: {
+      HEX: COLOR_BASE_MERCURY_900_HEX,
+      CODE: COLOR_BASE_MERCURY_900_CODE,
+      CLASSNAME: COLOR_BASE_MERCURY_900_CLASSNAME,
+    },
+    950: {
+      HEX: COLOR_BASE_MERCURY_950_HEX,
+      CODE: COLOR_BASE_MERCURY_950_CODE,
+      CLASSNAME: COLOR_BASE_MERCURY_950_CLASSNAME,
     },
   },
   PRIMARY: {
@@ -1299,7 +1299,7 @@ export const COLOR_COMBOS = {
 //
 export const COLOR_CORE_BLUE = '#2463eb';
 export const COLOR_CORE_GREEN = '#079250';
-export const COLOR_CORE_MERCURY = '#ff3e15';
+export const COLOR_CORE_MERCURY = '#fffcfa';
 export const COLOR_CORE_PRIMARY = '#2463eb';
 export const COLOR_CORE_SAGE = '#079250';
 export const COLOR_CORE_YELLOW = '#fdbb21';

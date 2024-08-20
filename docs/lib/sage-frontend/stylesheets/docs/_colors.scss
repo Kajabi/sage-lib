@@ -73,11 +73,11 @@
       @else if ($name == blue) {
         color: sage-color(blue, 950);
       }
-      @else if ($name == mercury and $value > 20) {
+      @else if ($name == mercury and $value > 200) {
         color: sage-color(white);
       }
       @else if ($name == mercury) {
-        color: sage-color(mercury, 50);
+        color: sage-color(mercury, 500);
       }
       @else if ($name == green and $value > 200) {
         color: sage-color(white);
