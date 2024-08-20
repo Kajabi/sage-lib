@@ -134,13 +134,13 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
 .sage-dropdown__item--border-before {
   padding-top: sage-spacing(xs);
   margin-top: sage-spacing(xs);
-  border-top: 1px solid sage-color(grey, 300);
+  border-top: 1px solid sage-color(grey, 200);
 }
 
 .sage-dropdown__item--border-after {
   padding-bottom: sage-spacing(xs);
   margin-bottom: sage-spacing(xs);
-  border-bottom: 1px solid sage-color(grey, 300);
+  border-bottom: 1px solid sage-color(grey, 200);
 }
 
 .sage-dropdown__item--disabled {
@@ -188,7 +188,7 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
 
 
   &:hover {
-    background-color: sage-color(grey, 300);
+    background-color: sage-color(grey, 200);
   }
 
   &:focus-within {
@@ -253,7 +253,7 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
 
   &:hover {
     color: sage-color(charcoal, 400);
-    background-color: sage-color(grey, 300);
+    background-color: sage-color(grey, 200);
   }
 }
 

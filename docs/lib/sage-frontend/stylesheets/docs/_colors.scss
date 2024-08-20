@@ -58,7 +58,7 @@
       font-size: sage-font-size(body);
       background: $hex;
 
-      @if ($name == grey and $value > 40) {
+      @if ($name == grey and $value > 400) {
         color: sage-color(white);
       }
       @else if ($name == white or $name == grey) {

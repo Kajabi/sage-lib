@@ -51,10 +51,10 @@ $sage-field-configs: (
 /// Field coloring
 ///
 $sage-field-colors: (
-  border: sage-color(grey, 400),
+  border: sage-color(grey, 300),
   default: sage-color(charcoal, 300),
   disabled: sage-color(grey, 500),
-  disabled-background: sage-color(grey, 200),
+  disabled-background: sage-color(grey, 150),
   error: sage-color(red, 500),
   label-background: sage-color(white),
   success: sage-color(primary, 300),
@@ -67,11 +67,11 @@ $sage-field-colors: (
 ///
 $sage-radio-colors: (
   checked: sage-color(charcoal, 400),
-  checked-disabled: sage-color(grey, 300),
+  checked-disabled: sage-color(grey, 200),
   checked-hover: sage-color(charcoal, 500),
   checked-inner: sage-color(white),
-  default: sage-color(grey, 400),
-  disabled: sage-color(grey, 200),
+  default: sage-color(grey, 300),
+  disabled: sage-color(grey, 150),
   error: sage-color(red, 500),
   hover: sage-color(grey, 500),
 );

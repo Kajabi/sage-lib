@@ -10,10 +10,10 @@
             "value": "{color.base.charcoal.500.hex}"
           },
           "background": {
-            "value": "{color.base.grey.300.hex}"
+            "value": "{color.base.grey.200.hex}"
           },
           "background-accent": {
-            "value": "{color.base.grey.400.hex}"
+            "value": "{color.base.grey.300.hex}"
           },
           "icon-background-accent": {
             "value": "{color.base.charcoal.200.hex}"
@@ -32,7 +32,7 @@
         },
         "bold": {
           "foreground": {
-            "value": "{color.base.grey.200.hex}"
+            "value": "{color.base.grey.150.hex}"
           },
           "background": {
             "value": "{color.base.charcoal.400.hex}"

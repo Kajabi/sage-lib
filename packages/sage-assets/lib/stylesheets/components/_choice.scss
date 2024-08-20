@@ -82,12 +82,12 @@ $-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
 
   &[aria-disabled="true"],
   &:disabled {
-    background-color: sage-color(grey, 200);
+    background-color: sage-color(grey, 150);
     cursor: default;
     pointer-events: none;
 
     &::before {
-      background-color: sage-color(grey, 300);
+      background-color: sage-color(grey, 200);
     }
 
     &:hover::before {

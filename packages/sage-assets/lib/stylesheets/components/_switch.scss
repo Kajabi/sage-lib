@@ -6,14 +6,14 @@
 
 
 // Colors
-$-switch-color-default: sage-color(grey, 400);
+$-switch-color-default: sage-color(grey, 300);
 $-switch-color-default-hover: sage-color(grey, 500);
 $-switch-color-default-text: sage-color(charcoal, 300);
 $-switch-color-checked: sage-color(charcoal, 400);
 $-switch-color-checked-hover: sage-color(charcoal, 500);
-$-switch-color-disabled: sage-color(grey, 300);
+$-switch-color-disabled: sage-color(grey, 200);
 $-switch-color-disabled-text: sage-color(charcoal, 300);
-$-switch-color-disabled-checked: sage-color(grey, 300);
+$-switch-color-disabled-checked: sage-color(grey, 200);
 $-switch-color-disabled-checked-text: sage-color(charcoal, 100);
 $-switch-color-error: sage-color(red, 500);
 $-switch-focus-outline-error-color: sage-color(red, 300);

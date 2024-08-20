@@ -148,7 +148,7 @@ $-toast-bottom-spacing: sage-spacing(xs);
   }
 
   &.sage-btn--subtle.sage-btn--secondary:not(:focus):hover {
-    color: sage-color(grey, 200);
+    color: sage-color(grey, 150);
     background-color: inherit;
 
     &::after {
