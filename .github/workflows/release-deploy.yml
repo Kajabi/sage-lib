@@ -137,6 +137,9 @@ jobs:
           tags: |
             ${{ env.ECR_REGISTRY }}/${{ env.ECR_REPOSITORY }}:${{ env.IMAGE_SHA_TAG }}-release-${{ env.POSTFIX }}
 
+  # This is kind of "hacky", but we were having problems with the Dockerfile doing a 
+  # correct build for Storybook. This will build it on the runner and then just copy
+  # over the folder
   deploy-storybook-site:
     needs: [setup, login]
     runs-on: ubuntu-latest
@@ -146,6 +149,9 @@ jobs:
         with:
           # pulls all commits (needed for lerna / semantic release to correctly version)
           fetch-depth: "0"
+
+      - name: Build Storybook
+        run: 'NODE_OPTIONS=--openssl-legacy-provider yarn build:react'
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
@@ -173,8 +179,6 @@ jobs:
           POSTFIX: ${{ needs.setup.outputs.postfix }}
         with:
           file: ./packages/sage-react/Dockerfile
-          build-args: |
-            GITHUB_TOKEN=${{ secrets.ACCESS_TOKEN }}
           context: ./packages/sage-react/
           push: true
           tags: |
