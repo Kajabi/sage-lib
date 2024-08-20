@@ -244,57 +244,42 @@ export const COLOR_BASE_ORANGE_400_CLASSNAME = 't-sage--color-orange-400';
 export const COLOR_BASE_ORANGE_500_HEX = '#450506';
 export const COLOR_BASE_ORANGE_500_CODE = 'orange-500';
 export const COLOR_BASE_ORANGE_500_CLASSNAME = 't-sage--color-orange-500';
-export const COLOR_BASE_PURPLE_5_HEX = '#fafbff';
-export const COLOR_BASE_PURPLE_5_CODE = 'purple-5';
-export const COLOR_BASE_PURPLE_5_CLASSNAME = 't-sage--color-purple-5';
-export const COLOR_BASE_PURPLE_10_HEX = '#edf1ff';
-export const COLOR_BASE_PURPLE_10_CODE = 'purple-10';
-export const COLOR_BASE_PURPLE_10_CLASSNAME = 't-sage--color-purple-10';
-export const COLOR_BASE_PURPLE_15_HEX = '#e0e4ff';
-export const COLOR_BASE_PURPLE_15_CODE = 'purple-15';
-export const COLOR_BASE_PURPLE_15_CLASSNAME = 't-sage--color-purple-15';
-export const COLOR_BASE_PURPLE_20_HEX = '#c7cdfe';
-export const COLOR_BASE_PURPLE_20_CODE = 'purple-20';
-export const COLOR_BASE_PURPLE_20_CLASSNAME = 't-sage--color-purple-20';
-export const COLOR_BASE_PURPLE_30_HEX = '#a3acfd';
-export const COLOR_BASE_PURPLE_30_CODE = 'purple-30';
-export const COLOR_BASE_PURPLE_30_CLASSNAME = 't-sage--color-purple-30';
-export const COLOR_BASE_PURPLE_40_HEX = '#8081f9';
-export const COLOR_BASE_PURPLE_40_CODE = 'purple-40';
-export const COLOR_BASE_PURPLE_40_CLASSNAME = 't-sage--color-purple-40';
-export const COLOR_BASE_PURPLE_50_HEX = '#6a62f2';
+export const COLOR_BASE_PURPLE_50_HEX = '#fafbff';
 export const COLOR_BASE_PURPLE_50_CODE = 'purple-50';
 export const COLOR_BASE_PURPLE_50_CLASSNAME = 't-sage--color-purple-50';
-export const COLOR_BASE_PURPLE_60_HEX = '#533be5';
-export const COLOR_BASE_PURPLE_60_CODE = 'purple-60';
-export const COLOR_BASE_PURPLE_60_CLASSNAME = 't-sage--color-purple-60';
-export const COLOR_BASE_PURPLE_70_HEX = '#4f37cb';
-export const COLOR_BASE_PURPLE_70_CODE = 'purple-70';
-export const COLOR_BASE_PURPLE_70_CLASSNAME = 't-sage--color-purple-70';
-export const COLOR_BASE_PURPLE_80_HEX = '#402fa4';
-export const COLOR_BASE_PURPLE_80_CODE = 'purple-80';
-export const COLOR_BASE_PURPLE_80_CLASSNAME = 't-sage--color-purple-80';
-export const COLOR_BASE_PURPLE_90_HEX = '#372d82';
-export const COLOR_BASE_PURPLE_90_CODE = 'purple-90';
-export const COLOR_BASE_PURPLE_90_CLASSNAME = 't-sage--color-purple-90';
-export const COLOR_BASE_PURPLE_95_HEX = '#221b4b';
-export const COLOR_BASE_PURPLE_95_CODE = 'purple-95';
-export const COLOR_BASE_PURPLE_95_CLASSNAME = 't-sage--color-purple-95';
-export const COLOR_BASE_PURPLE_100_HEX = '#e0e4ff';
+export const COLOR_BASE_PURPLE_100_HEX = '#edf1ff';
 export const COLOR_BASE_PURPLE_100_CODE = 'purple-100';
 export const COLOR_BASE_PURPLE_100_CLASSNAME = 't-sage--color-purple-100';
-export const COLOR_BASE_PURPLE_200_HEX = '#a3acfd';
+export const COLOR_BASE_PURPLE_150_HEX = '#e0e4ff';
+export const COLOR_BASE_PURPLE_150_CODE = 'purple-150';
+export const COLOR_BASE_PURPLE_150_CLASSNAME = 't-sage--color-purple-150';
+export const COLOR_BASE_PURPLE_200_HEX = '#c7cdfe';
 export const COLOR_BASE_PURPLE_200_CODE = 'purple-200';
 export const COLOR_BASE_PURPLE_200_CLASSNAME = 't-sage--color-purple-200';
-export const COLOR_BASE_PURPLE_300_HEX = '#533be5';
+export const COLOR_BASE_PURPLE_300_HEX = '#a3acfd';
 export const COLOR_BASE_PURPLE_300_CODE = 'purple-300';
 export const COLOR_BASE_PURPLE_300_CLASSNAME = 't-sage--color-purple-300';
-export const COLOR_BASE_PURPLE_400_HEX = '#402fa4';
+export const COLOR_BASE_PURPLE_400_HEX = '#8081f9';
 export const COLOR_BASE_PURPLE_400_CODE = 'purple-400';
 export const COLOR_BASE_PURPLE_400_CLASSNAME = 't-sage--color-purple-400';
-export const COLOR_BASE_PURPLE_500_HEX = '#221b4b';
+export const COLOR_BASE_PURPLE_500_HEX = '#6a62f2';
 export const COLOR_BASE_PURPLE_500_CODE = 'purple-500';
 export const COLOR_BASE_PURPLE_500_CLASSNAME = 't-sage--color-purple-500';
+export const COLOR_BASE_PURPLE_600_HEX = '#533be5';
+export const COLOR_BASE_PURPLE_600_CODE = 'purple-600';
+export const COLOR_BASE_PURPLE_600_CLASSNAME = 't-sage--color-purple-600';
+export const COLOR_BASE_PURPLE_700_HEX = '#4f37cb';
+export const COLOR_BASE_PURPLE_700_CODE = 'purple-700';
+export const COLOR_BASE_PURPLE_700_CLASSNAME = 't-sage--color-purple-700';
+export const COLOR_BASE_PURPLE_800_HEX = '#402fa4';
+export const COLOR_BASE_PURPLE_800_CODE = 'purple-800';
+export const COLOR_BASE_PURPLE_800_CLASSNAME = 't-sage--color-purple-800';
+export const COLOR_BASE_PURPLE_900_HEX = '#372d82';
+export const COLOR_BASE_PURPLE_900_CODE = 'purple-900';
+export const COLOR_BASE_PURPLE_900_CLASSNAME = 't-sage--color-purple-900';
+export const COLOR_BASE_PURPLE_950_HEX = '#221b4b';
+export const COLOR_BASE_PURPLE_950_CODE = 'purple-950';
+export const COLOR_BASE_PURPLE_950_CLASSNAME = 't-sage--color-purple-950';
 export const COLOR_BASE_CHARCOAL_100_HEX = '#828180';
 export const COLOR_BASE_CHARCOAL_100_CODE = 'charcoal-100';
 export const COLOR_BASE_CHARCOAL_100_CLASSNAME = 't-sage--color-charcoal-100';
@@ -788,70 +773,20 @@ export const COLOR = {
     },
   },
   PURPLE: {
-    5: {
-      HEX: COLOR_BASE_PURPLE_5_HEX,
-      CODE: COLOR_BASE_PURPLE_5_CODE,
-      CLASSNAME: COLOR_BASE_PURPLE_5_CLASSNAME,
-    },
-    10: {
-      HEX: COLOR_BASE_PURPLE_10_HEX,
-      CODE: COLOR_BASE_PURPLE_10_CODE,
-      CLASSNAME: COLOR_BASE_PURPLE_10_CLASSNAME,
-    },
-    15: {
-      HEX: COLOR_BASE_PURPLE_15_HEX,
-      CODE: COLOR_BASE_PURPLE_15_CODE,
-      CLASSNAME: COLOR_BASE_PURPLE_15_CLASSNAME,
-    },
-    20: {
-      HEX: COLOR_BASE_PURPLE_20_HEX,
-      CODE: COLOR_BASE_PURPLE_20_CODE,
-      CLASSNAME: COLOR_BASE_PURPLE_20_CLASSNAME,
-    },
-    30: {
-      HEX: COLOR_BASE_PURPLE_30_HEX,
-      CODE: COLOR_BASE_PURPLE_30_CODE,
-      CLASSNAME: COLOR_BASE_PURPLE_30_CLASSNAME,
-    },
-    40: {
-      HEX: COLOR_BASE_PURPLE_40_HEX,
-      CODE: COLOR_BASE_PURPLE_40_CODE,
-      CLASSNAME: COLOR_BASE_PURPLE_40_CLASSNAME,
-    },
     50: {
       HEX: COLOR_BASE_PURPLE_50_HEX,
       CODE: COLOR_BASE_PURPLE_50_CODE,
       CLASSNAME: COLOR_BASE_PURPLE_50_CLASSNAME,
     },
-    60: {
-      HEX: COLOR_BASE_PURPLE_60_HEX,
-      CODE: COLOR_BASE_PURPLE_60_CODE,
-      CLASSNAME: COLOR_BASE_PURPLE_60_CLASSNAME,
-    },
-    70: {
-      HEX: COLOR_BASE_PURPLE_70_HEX,
-      CODE: COLOR_BASE_PURPLE_70_CODE,
-      CLASSNAME: COLOR_BASE_PURPLE_70_CLASSNAME,
-    },
-    80: {
-      HEX: COLOR_BASE_PURPLE_80_HEX,
-      CODE: COLOR_BASE_PURPLE_80_CODE,
-      CLASSNAME: COLOR_BASE_PURPLE_80_CLASSNAME,
-    },
-    90: {
-      HEX: COLOR_BASE_PURPLE_90_HEX,
-      CODE: COLOR_BASE_PURPLE_90_CODE,
-      CLASSNAME: COLOR_BASE_PURPLE_90_CLASSNAME,
-    },
-    95: {
-      HEX: COLOR_BASE_PURPLE_95_HEX,
-      CODE: COLOR_BASE_PURPLE_95_CODE,
-      CLASSNAME: COLOR_BASE_PURPLE_95_CLASSNAME,
-    },
     100: {
       HEX: COLOR_BASE_PURPLE_100_HEX,
       CODE: COLOR_BASE_PURPLE_100_CODE,
       CLASSNAME: COLOR_BASE_PURPLE_100_CLASSNAME,
+    },
+    150: {
+      HEX: COLOR_BASE_PURPLE_150_HEX,
+      CODE: COLOR_BASE_PURPLE_150_CODE,
+      CLASSNAME: COLOR_BASE_PURPLE_150_CLASSNAME,
     },
     200: {
       HEX: COLOR_BASE_PURPLE_200_HEX,
@@ -872,6 +807,31 @@ export const COLOR = {
       HEX: COLOR_BASE_PURPLE_500_HEX,
       CODE: COLOR_BASE_PURPLE_500_CODE,
       CLASSNAME: COLOR_BASE_PURPLE_500_CLASSNAME,
+    },
+    600: {
+      HEX: COLOR_BASE_PURPLE_600_HEX,
+      CODE: COLOR_BASE_PURPLE_600_CODE,
+      CLASSNAME: COLOR_BASE_PURPLE_600_CLASSNAME,
+    },
+    700: {
+      HEX: COLOR_BASE_PURPLE_700_HEX,
+      CODE: COLOR_BASE_PURPLE_700_CODE,
+      CLASSNAME: COLOR_BASE_PURPLE_700_CLASSNAME,
+    },
+    800: {
+      HEX: COLOR_BASE_PURPLE_800_HEX,
+      CODE: COLOR_BASE_PURPLE_800_CODE,
+      CLASSNAME: COLOR_BASE_PURPLE_800_CLASSNAME,
+    },
+    900: {
+      HEX: COLOR_BASE_PURPLE_900_HEX,
+      CODE: COLOR_BASE_PURPLE_900_CODE,
+      CLASSNAME: COLOR_BASE_PURPLE_900_CLASSNAME,
+    },
+    950: {
+      HEX: COLOR_BASE_PURPLE_950_HEX,
+      CODE: COLOR_BASE_PURPLE_950_CODE,
+      CLASSNAME: COLOR_BASE_PURPLE_950_CLASSNAME,
     },
   },
   CHARCOAL: {

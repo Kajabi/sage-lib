@@ -118,38 +118,38 @@
       "locked": {
         "default": {
           "foreground": {
-            "value": "{color.base.purple.400.hex}"
+            "value": "{color.base.purple.800.hex}"
           },
           "foreground-accent": {
-            "value": "{color.base.purple.500.hex}"
+            "value": "{color.base.purple.950.hex}"
           },
           "background": {
-            "value": "{color.base.purple.100.hex}"
+            "value": "{color.base.purple.150.hex}"
           },
           "background-accent": {
-            "value": "{color.base.purple.200.hex}"
+            "value": "{color.base.purple.300.hex}"
           },
           "icon-background-accent": {
-            "value": "{color.base.purple.300.hex}"
+            "value": "{color.base.purple.600.hex}"
           }
         },
         "subtle": {
           "foreground": {
-            "value": "{color.base.purple.400.hex}"
+            "value": "{color.base.purple.800.hex}"
           },
           "foreground-accent": {
-            "value": "{color.base.purple.300.hex}"
+            "value": "{color.base.purple.600.hex}"
           },
           "background": {
-            "value": "{color.base.purple.200.hex}"
+            "value": "{color.base.purple.300.hex}"
           }
         },
         "bold": {
           "foreground": {
-            "value": "{color.base.purple.100.hex}"
+            "value": "{color.base.purple.150.hex}"
           },
           "background": {
-            "value": "{color.base.purple.300.hex}"
+            "value": "{color.base.purple.600.hex}"
           }
         }
       },

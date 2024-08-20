@@ -393,90 +393,65 @@
         }
       },
       "purple": {
-        "5": {
-          "hex": { "value": "#fafbff" },
-          "code": { "value": "purple-5" },
-          "classname": { "value": "t-sage--color-purple-5" }
-        },
-        "10": {
-          "hex": { "value": "#edf1ff" },
-          "code": { "value": "purple-10" },
-          "classname": { "value": "t-sage--color-purple-10" }
-        },
-        "15": {
-          "hex": { "value": "#e0e4ff" },
-          "code": { "value": "purple-15" },
-          "classname": { "value": "t-sage--color-purple-15" }
-        },
-        "20": {
-          "hex": { "value": "#c7cdfe" },
-          "code": { "value": "purple-20" },
-          "classname": { "value": "t-sage--color-purple-20" }
-        },
-        "30": {
-          "hex": { "value": "#a3acfd" },
-          "code": { "value": "purple-30" },
-          "classname": { "value": "t-sage--color-purple-30" }
-        },
-        "40": {
-          "hex": { "value": "#8081f9" },
-          "code": { "value": "purple-40" },
-          "classname": { "value": "t-sage--color-purple-40" }
-        },
         "50": {
-          "hex": { "value": "#6a62f2" },
+          "hex": { "value": "#fafbff" },
           "code": { "value": "purple-50" },
           "classname": { "value": "t-sage--color-purple-50" }
         },
-        "60": {
-          "hex": { "value": "#533be5" },
-          "code": { "value": "purple-60" },
-          "classname": { "value": "t-sage--color-purple-60" }
-        },
-        "70": {
-          "hex": { "value": "#4f37cb" },
-          "code": { "value": "purple-70" },
-          "classname": { "value": "t-sage--color-purple-70" }
-        },
-        "80": {
-          "hex": { "value": "#402fa4" },
-          "code": { "value": "purple-80" },
-          "classname": { "value": "t-sage--color-purple-80" }
-        },
-        "90": {
-          "hex": { "value": "#372d82" },
-          "code": { "value": "purple-90" },
-          "classname": { "value": "t-sage--color-purple-90" }
-        },
-        "95": {
-          "hex": { "value": "#221b4b" },
-          "code": { "value": "purple-95" },
-          "classname": { "value": "t-sage--color-purple-95" }
-        },
         "100": {
-          "hex": { "value": "{color.base.purple.15.hex.value}" },
+          "hex": { "value": "#edf1ff" },
           "code": { "value": "purple-100" },
           "classname": { "value": "t-sage--color-purple-100" }
         },
+        "150": {
+          "hex": { "value": "#e0e4ff" },
+          "code": { "value": "purple-150" },
+          "classname": { "value": "t-sage--color-purple-150" }
+        },
         "200": {
-          "hex": { "value": "{color.base.purple.30.hex.value}" },
+          "hex": { "value": "#c7cdfe" },
           "code": { "value": "purple-200" },
           "classname": { "value": "t-sage--color-purple-200" }
         },
         "300": {
-          "hex": { "value": "{color.base.purple.60.hex.value}" },
+          "hex": { "value": "#a3acfd" },
           "code": { "value": "purple-300" },
           "classname": { "value": "t-sage--color-purple-300" }
         },
         "400": {
-          "hex": { "value": "{color.base.purple.80.hex.value}" },
+          "hex": { "value": "#8081f9" },
           "code": { "value": "purple-400" },
           "classname": { "value": "t-sage--color-purple-400" }
         },
         "500": {
-          "hex": { "value": "{color.base.purple.95.hex.value}" },
+          "hex": { "value": "#6a62f2" },
           "code": { "value": "purple-500" },
           "classname": { "value": "t-sage--color-purple-500" }
+        },
+        "600": {
+          "hex": { "value": "#533be5" },
+          "code": { "value": "purple-600" },
+          "classname": { "value": "t-sage--color-purple-600" }
+        },
+        "700": {
+          "hex": { "value": "#4f37cb" },
+          "code": { "value": "purple-700" },
+          "classname": { "value": "t-sage--color-purple-700" }
+        },
+        "800": {
+          "hex": { "value": "#402fa4" },
+          "code": { "value": "purple-800" },
+          "classname": { "value": "t-sage--color-purple-800" }
+        },
+        "900": {
+          "hex": { "value": "#372d82" },
+          "code": { "value": "purple-900" },
+          "classname": { "value": "t-sage--color-purple-900" }
+        },
+        "950": {
+          "hex": { "value": "#221b4b" },
+          "code": { "value": "purple-950" },
+          "classname": { "value": "t-sage--color-purple-950" }
         }
       },
       "charcoal": {

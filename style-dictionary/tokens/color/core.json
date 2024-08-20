@@ -26,7 +26,7 @@
         "value": "{color.base.orange.300.hex}"
       },
       "purple": {
-        "value": "{color.base.purple.300.hex}"
+        "value": "{color.base.purple.600.hex}"
       },
       "charcoal": {
         "value": "{color.base.charcoal.300.hex}"
