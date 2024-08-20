@@ -20,7 +20,7 @@
         "value": "{color.base.yellow.300.hex}"
       },
       "red": {
-        "value": "{color.base.red.300.hex}"
+        "value": "{color.base.red.50.hex}"
       },
       "orange": {
         "value": "{color.base.orange.300.hex}"

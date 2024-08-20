@@ -388,31 +388,6 @@
           "hex": { "value": "#572627" },
           "code": { "value": "red-95" },
           "classname": { "value": "t-sage--color-red-95" }
-        },
-        "100": {
-          "hex": { "value": "{color.base.red.15.hex.value}" },
-          "code": { "value": "red-100" },
-          "classname": { "value": "t-sage--color-red-100" }
-        },
-        "200": {
-          "hex": { "value": "{color.base.red.30.hex.value}" },
-          "code": { "value": "red-200" },
-          "classname": { "value": "t-sage--color-red-200" }
-        },
-        "300": {
-          "hex": { "value": "{color.base.red.50.hex.value}" },
-          "code": { "value": "red-300" },
-          "classname": { "value": "t-sage--color-red-300" }
-        },
-        "400": {
-          "hex": { "value": "{color.base.red.80.hex.value}" },
-          "code": { "value": "red-400" },
-          "classname": { "value": "t-sage--color-red-400" }
-        },
-        "500": {
-          "hex": { "value": "{color.base.red.95.hex.value}" },
-          "code": { "value": "red-500" },
-          "classname": { "value": "t-sage--color-red-500" }
         }
       },
       "orange": {

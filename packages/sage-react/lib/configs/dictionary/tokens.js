@@ -244,21 +244,6 @@ export const COLOR_BASE_RED_90_CLASSNAME = 't-sage--color-red-90';
 export const COLOR_BASE_RED_95_HEX = '#572627';
 export const COLOR_BASE_RED_95_CODE = 'red-95';
 export const COLOR_BASE_RED_95_CLASSNAME = 't-sage--color-red-95';
-export const COLOR_BASE_RED_100_HEX = '#fee2e1';
-export const COLOR_BASE_RED_100_CODE = 'red-100';
-export const COLOR_BASE_RED_100_CLASSNAME = 't-sage--color-red-100';
-export const COLOR_BASE_RED_200_HEX = '#fda5a5';
-export const COLOR_BASE_RED_200_CODE = 'red-200';
-export const COLOR_BASE_RED_200_CLASSNAME = 't-sage--color-red-200';
-export const COLOR_BASE_RED_300_HEX = '#ef4444';
-export const COLOR_BASE_RED_300_CODE = 'red-300';
-export const COLOR_BASE_RED_300_CLASSNAME = 't-sage--color-red-300';
-export const COLOR_BASE_RED_400_HEX = '#991b1b';
-export const COLOR_BASE_RED_400_CODE = 'red-400';
-export const COLOR_BASE_RED_400_CLASSNAME = 't-sage--color-red-400';
-export const COLOR_BASE_RED_500_HEX = '#572627';
-export const COLOR_BASE_RED_500_CODE = 'red-500';
-export const COLOR_BASE_RED_500_CLASSNAME = 't-sage--color-red-500';
 export const COLOR_BASE_ORANGE_100_HEX = '#ffe3d4';
 export const COLOR_BASE_ORANGE_100_CODE = 'orange-100';
 export const COLOR_BASE_ORANGE_100_CLASSNAME = 't-sage--color-orange-100';
@@ -813,31 +798,6 @@ export const COLOR = {
       HEX: COLOR_BASE_RED_95_HEX,
       CODE: COLOR_BASE_RED_95_CODE,
       CLASSNAME: COLOR_BASE_RED_95_CLASSNAME,
-    },
-    100: {
-      HEX: COLOR_BASE_RED_100_HEX,
-      CODE: COLOR_BASE_RED_100_CODE,
-      CLASSNAME: COLOR_BASE_RED_100_CLASSNAME,
-    },
-    200: {
-      HEX: COLOR_BASE_RED_200_HEX,
-      CODE: COLOR_BASE_RED_200_CODE,
-      CLASSNAME: COLOR_BASE_RED_200_CLASSNAME,
-    },
-    300: {
-      HEX: COLOR_BASE_RED_300_HEX,
-      CODE: COLOR_BASE_RED_300_CODE,
-      CLASSNAME: COLOR_BASE_RED_300_CLASSNAME,
-    },
-    400: {
-      HEX: COLOR_BASE_RED_400_HEX,
-      CODE: COLOR_BASE_RED_400_CODE,
-      CLASSNAME: COLOR_BASE_RED_400_CLASSNAME,
-    },
-    500: {
-      HEX: COLOR_BASE_RED_500_HEX,
-      CODE: COLOR_BASE_RED_500_CODE,
-      CLASSNAME: COLOR_BASE_RED_500_CLASSNAME,
     },
   },
   ORANGE: {

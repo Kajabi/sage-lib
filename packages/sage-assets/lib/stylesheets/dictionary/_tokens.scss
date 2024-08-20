@@ -922,66 +922,6 @@ $sd-sage-color-base-red-95-code: "red-95";
 ///
 $sd-sage-color-base-red-95-classname: "t-sage--color-red-95";
 ///
-/// color color-base-red-100-hex
-///
-$sd-sage-color-base-red-100-hex: #fee2e1;
-///
-/// color color-base-red-100-code
-///
-$sd-sage-color-base-red-100-code: "red-100";
-///
-/// color color-base-red-100-classname
-///
-$sd-sage-color-base-red-100-classname: "t-sage--color-red-100";
-///
-/// color color-base-red-200-hex
-///
-$sd-sage-color-base-red-200-hex: #fda5a5;
-///
-/// color color-base-red-200-code
-///
-$sd-sage-color-base-red-200-code: "red-200";
-///
-/// color color-base-red-200-classname
-///
-$sd-sage-color-base-red-200-classname: "t-sage--color-red-200";
-///
-/// color color-base-red-300-hex
-///
-$sd-sage-color-base-red-300-hex: #ef4444;
-///
-/// color color-base-red-300-code
-///
-$sd-sage-color-base-red-300-code: "red-300";
-///
-/// color color-base-red-300-classname
-///
-$sd-sage-color-base-red-300-classname: "t-sage--color-red-300";
-///
-/// color color-base-red-400-hex
-///
-$sd-sage-color-base-red-400-hex: #991b1b;
-///
-/// color color-base-red-400-code
-///
-$sd-sage-color-base-red-400-code: "red-400";
-///
-/// color color-base-red-400-classname
-///
-$sd-sage-color-base-red-400-classname: "t-sage--color-red-400";
-///
-/// color color-base-red-500-hex
-///
-$sd-sage-color-base-red-500-hex: #572627;
-///
-/// color color-base-red-500-code
-///
-$sd-sage-color-base-red-500-code: "red-500";
-///
-/// color color-base-red-500-classname
-///
-$sd-sage-color-base-red-500-classname: "t-sage--color-red-500";
-///
 /// color color-base-orange-100-hex
 ///
 $sd-sage-color-base-orange-100-hex: #ffe3d4;
@@ -2021,31 +1961,6 @@ $sd-sage-color: (
       hex: $sd-sage-color-base-red-95-hex,
       code: $sd-sage-color-base-red-95-code,
       classname: $sd-sage-color-base-red-95-classname,
-    ),
-    100: (
-      hex: $sd-sage-color-base-red-100-hex,
-      code: $sd-sage-color-base-red-100-code,
-      classname: $sd-sage-color-base-red-100-classname,
-    ),
-    200: (
-      hex: $sd-sage-color-base-red-200-hex,
-      code: $sd-sage-color-base-red-200-code,
-      classname: $sd-sage-color-base-red-200-classname,
-    ),
-    300: (
-      hex: $sd-sage-color-base-red-300-hex,
-      code: $sd-sage-color-base-red-300-code,
-      classname: $sd-sage-color-base-red-300-classname,
-    ),
-    400: (
-      hex: $sd-sage-color-base-red-400-hex,
-      code: $sd-sage-color-base-red-400-code,
-      classname: $sd-sage-color-base-red-400-classname,
-    ),
-    500: (
-      hex: $sd-sage-color-base-red-500-hex,
-      code: $sd-sage-color-base-red-500-code,
-      classname: $sd-sage-color-base-red-500-classname,
     ),
   ),
   orange: (
