@@ -46,7 +46,7 @@ $-sage-dot-size--badge: rem(6px);
       --sage-dot-color: #{sage-color($-color-name, 60)};
     }
     @else if ($-color-name == green) {
-      --sage-dot-color: #{sage-color($-color-name, 60)};
+      --sage-dot-color: #{sage-color($-color-name, 600)};
     }
     @else if ($-color-name == mercury) {
       --sage-dot-color: #{sage-color($-color-name, 50)};

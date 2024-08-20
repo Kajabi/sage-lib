@@ -215,7 +215,7 @@ body:not(.sage-excluded),
     $color-value: sage-color($color-name, 60);
   }
   @else if ($color-name == green) {
-    $color-value: sage-color($color-name, 60);
+    $color-value: sage-color($color-name, 600);
   }
   @else if ($color-name == mercury) {
     $color-value: sage-color($color-name, 50);

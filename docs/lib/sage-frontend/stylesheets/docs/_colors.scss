@@ -83,7 +83,7 @@
         color: sage-color(white);
       }
       @else if ($name == green) {
-        color: sage-color(green, 60);
+        color: sage-color(green, 600);
       }
       @else if ($name == yellow and $value > 30) {
         color: sage-color(white);
