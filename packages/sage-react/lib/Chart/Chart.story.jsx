@@ -134,7 +134,7 @@ Donut.args = {
     {
       name: 'Inactive',
       value: 153,
-      fill: SageTokens.COLOR_PALETTE.RED_200,
+      fill: SageTokens.COLOR_PALETTE.RED_300,
     },
     {
       name: 'Hungry',
