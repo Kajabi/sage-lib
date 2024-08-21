@@ -144,7 +144,7 @@ Donut.args = {
     {
       name: 'Grumpy',
       value: 53,
-      fill: SageTokens.COLOR_PALETTE.PURPLE_200,
+      fill: SageTokens.COLOR_PALETTE.PURPLE_300,
     },
   ],
   loading: false,
