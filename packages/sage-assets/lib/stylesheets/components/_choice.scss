@@ -87,7 +87,7 @@ $-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
     pointer-events: none;
 
     &::before {
-      background-color: sage-color(grey, 200);
+      background-color: sage-color(grey, 150);
     }
 
     &:hover::before {

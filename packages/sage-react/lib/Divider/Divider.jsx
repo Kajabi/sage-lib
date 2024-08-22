@@ -29,7 +29,7 @@ export const Divider = ({
 };
 
 Divider.defaultProps = {
-  color: SageTokens.COLOR_PALETTE.GREY_300,
+  color: SageTokens.COLOR_PALETTE.GREY_200,
   vertical: null,
   offset: null,
 };
