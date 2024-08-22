@@ -218,6 +218,7 @@ $-sage-frame-wrap: none;
   .sage-frame--border-#{$-key} {
     background-color: sage-color(white);
     border: #{$-val};
+    box-shadow: sage-shadow(100);
   }
 }
 
