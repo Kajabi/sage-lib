@@ -30,7 +30,7 @@ $-typeahead-item-height: rem(68px);
 .sage-typeahead__null-state {
   @extend %t-sage-body-small;
   padding: sage-spacing(sm);
-  color: sage-color(charcoal, 100);
+  color: sage-color(grey, 600);
   text-align: center;
 }
 
@@ -91,7 +91,7 @@ $-typeahead-item-height: rem(68px);
     @include truncate;
 
     :hover & {
-      color: sage-color(charcoal, 500);
+      color: sage-color(grey, 950);
     }
   }
 }

@@ -15,14 +15,14 @@ $-banner-colors: (
   ),
   secondary: (
     background: sage-color(grey, 200),
-    text: sage-color(charcoal, 500),
-    text-hover: sage-color(charcoal, 300),
+    text: sage-color(grey, 950),
+    text-hover: sage-color(grey, 800),
     icon: "info-circle",
   ),
   warning: (
     background: sage-color(yellow, 300),
-    text: sage-color(charcoal, 500),
-    text-hover: sage-color(charcoal, 300),
+    text: sage-color(grey, 950),
+    text-hover: sage-color(grey, 800),
     icon: "warning",
   ),
   danger: (

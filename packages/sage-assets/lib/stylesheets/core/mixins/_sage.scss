@@ -58,7 +58,7 @@
   @include truncate();
 
   padding: rem(6px) sage-spacing(sm);
-  color: sage-color(charcoal, 400);
+  color: sage-color(grey, 900);
   background-color: transparent;
   border: $-copy-text-border;
   border-radius: sage-border(radius-medium);
@@ -410,7 +410,7 @@
 
   width: 100%;
   padding: sage-spacing(sm);
-  color: sage-color(charcoal, 400);
+  color: sage-color(grey, 900);
   appearance: none;
   box-shadow: sage-border-interactive(default);
   border: 0;
@@ -420,11 +420,11 @@
   transition-property: border, box-shadow, color;
 
   @include placeholder {
-    color: sage-color(charcoal, 200);
+    color: sage-color(grey, 700);
   }
 
   &:hover:not(:disabled) {
-    color: sage-color(charcoal, 400);
+    color: sage-color(grey, 900);
     box-shadow: sage-border-interactive(hover);
 
     .sage-form-field--error & {
@@ -453,7 +453,7 @@
     resize: none;
 
     @include placeholder {
-      color: sage-color(charcoal, 200);
+      color: sage-color(grey, 700);
     }
 
     .sage-form-field--showplaceholder & ~ label {
@@ -478,7 +478,7 @@
     box-shadow: sage-border-interactive(error);
 
     ~ label {
-      color: sage-color(charcoal, 400);
+      color: sage-color(grey, 900);
     }
 
     &:hover:not(:disabled) {
@@ -549,7 +549,7 @@
   @extend %t-sage-body-small-med;
 
   margin-top: sage-spacing(xs);
-  color: sage-color(charcoal, 200);
+  color: sage-color(grey, 700);
 
   .sage-form-field--error & {
     color: sage-color(red, 500);
@@ -613,7 +613,7 @@
   position: relative;
   z-index: sage-z-index(default);
   width: 100%;
-  color: sage-color(charcoal, 200);
+  color: sage-color(grey, 700);
 }
 
 ///

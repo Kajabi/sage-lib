@@ -95,7 +95,7 @@ $-radio-focus-outline-color: currentColor;
   margin-left: 0;
 
   .sage-radio--has-border & {
-    color: sage-color(charcoal, 400);
+    color: sage-color(grey, 900);
     font-weight: sage-font-weight(semibold);
 
     &::after {

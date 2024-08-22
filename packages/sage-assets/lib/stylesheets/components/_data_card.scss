@@ -8,15 +8,15 @@
 $-data-card-colors: (
   default: (
     border-color: sage-color(grey, 300),
-    text-color: sage-color(charcoal, 400),
+    text-color: sage-color(grey, 900),
   ),
   danger: (
     border-color: sage-color(red, 500),
     text-color: sage-color(red, 500),
   ),
   muted: (
-    border-color: sage-color(charcoal, 300),
-    text-color: sage-color(charcoal, 300),
+    border-color: sage-color(grey, 800),
+    text-color: sage-color(grey, 800),
   ),
 );
 $-data-card-transition: 0.2s linear;

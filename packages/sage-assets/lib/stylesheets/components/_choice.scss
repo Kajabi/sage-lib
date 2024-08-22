@@ -74,7 +74,7 @@ $-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
     color: $-choice-color-active;
 
     &::after {
-      border-color: sage-color(charcoal, 400);
+      border-color: sage-color(grey, 900);
       border-width: rem(4px);
     }
 
@@ -122,7 +122,7 @@ $-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
     @include sage-icon-base(caret-right, lg, pine);
 
     margin: 0 0 0 sage-spacing(sm);
-    color: sage-color(charcoal, 400);
+    color: sage-color(grey, 900);
     transition: color map-get($sage-transitions, default);
   }
 
@@ -233,14 +233,14 @@ $-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
 
 .sage-choice__text {
   font-style: normal;
-  color: sage-color(charcoal, 400);
+  color: sage-color(grey, 900);
 }
 
 .sage-choice__subtext {
   @extend %t-sage-body-xsmall;
 
   margin-top: sage-spacing(2xs);
-  color: sage-color(charcoal, 200);
+  color: sage-color(grey, 700);
 }
 
 pds-icon {

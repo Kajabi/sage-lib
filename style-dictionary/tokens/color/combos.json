@@ -4,10 +4,10 @@
       "draft": {
         "default": {
           "foreground": {
-            "value": "{color.base.charcoal.400.hex}"
+            "value": "{color.base.grey.900.hex}"
           },
           "foreground-accent": {
-            "value": "{color.base.charcoal.500.hex}"
+            "value": "{color.base.grey.950.hex}"
           },
           "background": {
             "value": "{color.base.grey.200.hex}"
@@ -16,18 +16,18 @@
             "value": "{color.base.grey.300.hex}"
           },
           "icon-background-accent": {
-            "value": "{color.base.charcoal.200.hex}"
+            "value": "{color.base.grey.700.hex}"
           }
         },
         "subtle": {
           "foreground": {
-            "value": "{color.base.charcoal.200.hex}"
+            "value": "{color.base.grey.700.hex}"
           },
           "foreground-accent": {
-            "value": "{color.base.charcoal.100.hex}"
+            "value": "{color.base.grey.600.hex}"
           },
           "background": {
-            "value": "{color.base.charcoal.100.hex}"
+            "value": "{color.base.grey.600.hex}"
           }
         },
         "bold": {
@@ -35,7 +35,7 @@
             "value": "{color.base.grey.150.hex}"
           },
           "background": {
-            "value": "{color.base.charcoal.400.hex}"
+            "value": "{color.base.grey.900.hex}"
           }
         }
       },

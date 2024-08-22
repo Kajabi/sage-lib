@@ -6,8 +6,8 @@
 
 $-link-color: sage-color(primary, 300);
 $-link-color-hover: sage-color(primary, 400);
-$-link-subtext-color: sage-color(charcoal, 200);
-$-link-subtext-color-hover: sage-color(charcoal, 400);
+$-link-subtext-color: sage-color(grey, 700);
+$-link-subtext-color-hover: sage-color(grey, 900);
 
 $-link-base-styles: (
   primary:(
@@ -23,13 +23,13 @@ $-link-base-styles: (
   ),
   secondary:(
     default: (
-      color: sage-color(charcoal, 400),
+      color: sage-color(grey, 900),
     ),
     hover: (
       color: sage-color(black),
     ),
     focus-visible: (
-      color: sage-color(charcoal, 400),
+      color: sage-color(grey, 900),
     ),
   ),
   neutral:(
@@ -173,7 +173,7 @@ $-link-base-styles: (
   pds-icon {
     @include sage-icon-base(question-circle, lg, pine);
 
-    color: sage-color(charcoal, 100);
+    color: sage-color(grey, 600);
   }
 
   &:hover,
@@ -183,11 +183,11 @@ $-link-base-styles: (
     outline: 0;
 
     pds-icon {
-      color: sage-color(charcoal, 300);
+      color: sage-color(grey, 800);
     }
 
     &::before {
-      color: sage-color(charcoal, 300);
+      color: sage-color(grey, 800);
     }
   }
 

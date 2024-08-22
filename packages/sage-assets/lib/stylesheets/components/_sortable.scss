@@ -25,7 +25,7 @@ $-sortable-image-height: rem(48px);
   &::before {
     @include sage-icon-base(handle-2-vertical, md, pine);
     padding: 0;
-    color: sage-color(charcoal, 100);
+    color: sage-color(grey, 600);
   }
 
   &:focus,
@@ -115,7 +115,7 @@ $-sortable-image-height: rem(48px);
 .sage-sortable__item-subtitle {
   @extend %t-sage-body-xsmall;
   @include truncate();
-  color: sage-color(charcoal, 100);
+  color: sage-color(grey, 600);
 }
 
 .sage-sortable__item-actions {

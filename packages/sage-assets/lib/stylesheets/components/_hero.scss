@@ -91,7 +91,7 @@ $-hero-play-icon-background-color: sage-color(white);
   padding-inline-end: sage-spacing(md);
   margin-block-end: $-hero-margin-y;
   font-weight: sage-font-weight(medium);
-  color: sage-color(charcoal, 300);
+  color: sage-color(grey, 800);
 
   @media (min-width: sage-breakpoint(lg-max)) {
     padding-block-start: 0;
@@ -170,7 +170,7 @@ $-hero-play-icon-background-color: sage-color(white);
       align-items: center;
       width: $-hero-icon-size;
       font-size: $-hero-icon-size;
-      color: sage-color(charcoal, 500);
+      color: sage-color(grey, 950);
     }
 
     &::after {

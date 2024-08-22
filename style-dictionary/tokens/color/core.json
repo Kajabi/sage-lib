@@ -29,10 +29,10 @@
         "value": "{color.base.purple.600.hex}"
       },
       "charcoal": {
-        "value": "{color.base.charcoal.300.hex}"
+        "value": "{color.base.grey.800.hex}"
       },
       "grey": {
-        "value": "{color.base.charcoal.100.hex}"
+        "value": "{color.base.grey.600.hex}"
       },
       "white": {
         "value": "{color.base.white.500.hex}"

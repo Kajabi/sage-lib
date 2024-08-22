@@ -59,11 +59,11 @@ $-sage-card-background: transparent;
 
   .sage-link.sage-card__link--primary {
     // Remove when Link component is updated with new styles
-    color: sage-color(charcoal, 400);
+    color: sage-color(grey, 900);
     text-decoration: none;
 
     &:hover {
-      color: sage-color(charcoal, 500);
+      color: sage-color(grey, 950);
     }
   }
 
@@ -110,7 +110,7 @@ $-sage-card-background: transparent;
     display: inline-block;
     position: relative;
     padding: 0 sage-spacing(sm);
-    color: sage-color(charcoal, 100);
+    color: sage-color(grey, 600);
     font-size: sage-font-size(body-xs);
     background-color: sage-color(white);
   }

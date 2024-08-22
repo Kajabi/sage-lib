@@ -53,7 +53,7 @@
     display: inline-block;
     position: relative;
     padding: 0 sage-spacing(sm);
-    color: sage-color(charcoal, 100);
+    color: sage-color(grey, 600);
     font-size: sage-font-size(body-xs);
     background-color: sage-color(white);
   }
@@ -97,7 +97,7 @@
 
 .sage-panel__title {
   @extend %t-sage-heading-5;
-  color: sage-color(charcoal, 500);
+  color: sage-color(grey, 950);
 
   + .sage-panel__subtext {
     margin-top: sage-spacing(xs);
@@ -106,7 +106,7 @@
 
 .sage-panel__subtext {
   grid-column: 1 / -1;
-  color: sage-color(charcoal, 100);
+  color: sage-color(grey, 600);
 
   .sage-panel__header & {
     @extend %t-sage-body;

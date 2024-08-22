@@ -64,7 +64,7 @@ $-tab-color-disabled: map-get($sage-tab-colors, disabled);
     color: $-tab-color-active;
     .sage-tabs--filter & {
       color: sage-color(white);
-      background: sage-color(charcoal, 400);
+      background: sage-color(grey, 900);
       &::after {
         display: none;
       }
@@ -116,7 +116,7 @@ $-tab-color-disabled: map-get($sage-tab-colors, disabled);
     &:not(:last-child) {
       &::before {
         order: 2;
-        color: sage-color(charcoal, 100);
+        color: sage-color(grey, 600);
 
         @include sage-icon-base(right-small, xl, pine);
       }

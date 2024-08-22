@@ -5,7 +5,7 @@
 ////
 
 $-tag-image-size: rem(24px);
-$-tag-button-color: sage-color(charcoal, 500);
+$-tag-button-color: sage-color(grey, 950);
 $-tag-button-icon-size: rem(18px);
 $-tag-button-icon-mobile-size: rem(24px);
 
@@ -84,5 +84,5 @@ $-tag-button-icon-mobile-size: rem(24px);
 }
 
 .sage-tag__value {
-  color: sage-color(charcoal, 500);
+  color: sage-color(grey, 950);
 }

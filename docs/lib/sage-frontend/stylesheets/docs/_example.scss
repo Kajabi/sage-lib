@@ -5,7 +5,7 @@
 ================================================== */
 
 $-example-link-color: inherit;
-$-example-link-color-hover: sage-color(charcoal, 100);
+$-example-link-color-hover: sage-color(grey, 600);
 
 $-example-code-preview-height: 13rem;
 $-example-code-preview-button-color: sage-color(white);
@@ -14,7 +14,7 @@ $-example-code-preview-button-blur: blur(2px);
 $-example-code-preview-button-bg: rgba(sage-color(primary, 300), 0.75);
 
 .example__title {
-  color: sage-color(charcoal, 500);
+  color: sage-color(grey, 950);
   text-transform: capitalize;
 }
 
@@ -40,7 +40,7 @@ $-example-code-preview-button-bg: rgba(sage-color(primary, 300), 0.75);
   &:hover,
   &:focus,
   &:active {
-    color: sage-color(charcoal, 500);
+    color: sage-color(grey, 950);
     text-decoration: none;
   }
 }
@@ -50,7 +50,7 @@ $-example-code-preview-button-bg: rgba(sage-color(primary, 300), 0.75);
   min-width: rem(100px);
   margin: sage-spacing() 0;
   padding: sage-spacing(xs) sage-spacing();
-  color: sage-color(charcoal, 500);
+  color: sage-color(grey, 950);
   text-align: center;
   background: sage-color(white);
   box-shadow: sage-shadow();
@@ -197,11 +197,11 @@ $-example-code-preview-button-bg: rgba(sage-color(primary, 300), 0.75);
     @media (max-width: map-get($-media-tile-breakpoints, 1-col-max)) {
       grid-template-columns: repeat(1, 1fr);
     }
-    
+
     @media (min-width: map-get($-media-tile-breakpoints, 2-col-min)) and (max-width: map-get($-media-tile-breakpoints, 2-col-max)) {
       grid-template-columns: repeat(2, 1fr);
     }
-    
+
     @media (min-width: map-get($-media-tile-breakpoints, 3-col-min)) {
       grid-template-columns: repeat(3, 1fr);
     }

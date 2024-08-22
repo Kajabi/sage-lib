@@ -62,7 +62,7 @@
         color: sage-color(white);
       }
       @else if ($name == white or $name == grey) {
-        color: sage-color(charcoal, 500);
+        color: sage-color(grey, 950);
       }
       @else if ($name == black or $name == charcoal) {
         color: sage-color(white);
@@ -111,8 +111,8 @@
 
 .color-white-100 {
   border-radius: sage-border(radius);
-  border: 1px solid sage-color(charcoal, 300);
-  box-shadow: inset 0 0 0.0625rem sage-color(charcoal, 300);
+  border: 1px solid sage-color(grey, 800);
+  box-shadow: inset 0 0 0.0625rem sage-color(grey, 800);
 }
 
 .color-black-100 {

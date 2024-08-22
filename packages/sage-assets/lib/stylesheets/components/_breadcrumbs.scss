@@ -6,7 +6,7 @@
 
 $-breadcrumb-current-color: sage-color(charcoal, 400);
 $-breadcrumb-interactive-color: sage-color(charcoal, 400);
-$-breadcrumb-outline-color: sage-color(purple, 30);
+$-breadcrumb-outline-color: sage-color(purple, 300);
 
 .sage-breadcrumbs {
   display: flex;
@@ -33,7 +33,7 @@ $-breadcrumb-outline-color: sage-color(purple, 30);
   &:not(:last-child) {
     &::after {
       content: "/";
-      color: sage-color(charcoal, 200);
+      color: sage-color(grey, 700);
     }
 
     .sage-breadcrumbs--progressbar &::after {
@@ -56,7 +56,7 @@ $-breadcrumb-outline-color: sage-color(purple, 30);
   display: inline-flex;
   align-items: center;
   padding: sage-spacing(3xs) sage-spacing(xs);
-  color: sage-color(charcoal, 300);
+  color: sage-color(grey, 800);
   font-size: sage-font-size(body-sm);
   font-weight: sage-font-weight(semibold);
   text-decoration: none;

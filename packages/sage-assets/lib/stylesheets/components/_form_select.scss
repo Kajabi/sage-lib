@@ -6,10 +6,10 @@
 
 $-select-border-box-shadow-size: map-get($sage-field-configs, box-shadow-size);
 $-select-color-border: sage-color(grey, 500);
-$-select-color-border-hover: sage-color(charcoal, 100);
+$-select-color-border-hover: sage-color(grey, 600);
 $-select-color-border-selected: sage-color(primary, 200);
-$-select-color-default: sage-color(charcoal, 200);
-$-select-color-default-hover: sage-color(charcoal, 400);
+$-select-color-default: sage-color(grey, 700);
+$-select-color-default-hover: sage-color(grey, 900);
 $-select-color-error: sage-color(red, 500);
 $-select-color-label-background: sage-color(white);
 $-select-color-success: sage-color(primary, 200);
@@ -68,7 +68,7 @@ $-select-arrow-position-inverse-with-message: calc(100% - #{$-select-height + $-
   align-items: center;
   height: $-select-height;
   font-size: $-select-arrow-font-size;
-  color: sage-color(charcoal, 100);
+  color: sage-color(grey, 600);
   transition: 0.2s color ease;
 }
 
@@ -96,7 +96,7 @@ $-select-arrow-position-inverse-with-message: calc(100% - #{$-select-height + $-
   }
 
   .sage-select--value-selected & {
-    color: sage-color(charcoal, 400);
+    color: sage-color(grey, 900);
   }
 
   .sage-select--value-selected &:not(:disabled) + .sage-select__arrow::before {
@@ -132,16 +132,16 @@ $-select-arrow-position-inverse-with-message: calc(100% - #{$-select-height + $-
   }
 
   &:disabled {
-    color: sage-color(charcoal, 200);
+    color: sage-color(grey, 700);
     background-color: sage-color(grey, 100);
 
     ~ .sage-select__arrow::before {
-      color: sage-color(charcoal, 200);
+      color: sage-color(grey, 700);
       opacity: 0.5;
     }
 
     @include placeholder {
-      color: sage-color(charcoal, 200);
+      color: sage-color(grey, 700);
     }
   }
 }
@@ -169,6 +169,6 @@ $-select-arrow-position-inverse-with-message: calc(100% - #{$-select-height + $-
   }
 
   &.sage-select--value-selected .form-group:focus-within:not(:disabled) ~ .sage-select__label {
-    color: sage-color(charcoal, 400);
+    color: sage-color(grey, 900);
   }
 }

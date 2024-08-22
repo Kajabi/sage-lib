@@ -126,11 +126,11 @@ module TypeSpecsHelper
         )),
       },
       {
-        color: %(<span class="t-sage-body-semi t-sage--color-charcoal-100">Grey</span>),
-        type_class: md("`t-sage--color-charcoal-100`"),
+        color: %(<span class="t-sage-body-semi t-sage--color-grey-600">Grey</span>),
+        type_class: md("`t-sage--color-grey-600`"),
         constants: md(%(
-          Rails: `SageClassnames::TYPE_COLORS::CHARCOAL_100`<br/>
-          React: `SageClassnames.TYPE_COLORS.CHARCOAL_100`
+          Rails: `SageClassnames::TYPE_COLORS::GREY_600`<br/>
+          React: `SageClassnames.TYPE_COLORS.GREY_600`
         )),
       },
       {
