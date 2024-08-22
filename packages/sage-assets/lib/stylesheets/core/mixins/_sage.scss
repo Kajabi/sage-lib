@@ -670,7 +670,7 @@
   $item-underline: "after";
 
   &::#{$item-underline} {
-    $spacing-off: 50%;
+    $spacing-off: calc(50% + #{sage-letter-spacing(lg)});
 
     content: "";
     position: absolute;
