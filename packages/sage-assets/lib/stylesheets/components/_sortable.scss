@@ -75,7 +75,7 @@ $-sortable-image-height: rem(48px);
   }
 
   &.sage-sortable__item--ghost {
-    background: sage-color(grey, 150);
+    background: sage-color(grey, 200);
   }
 }
 
@@ -84,7 +84,7 @@ $-sortable-image-height: rem(48px);
   overflow: hidden;
   height: $-sortable-image-height;
   width: $-sortable-image-width;
-  background: sage-color(grey, 150);
+  background: sage-color(grey, 200);
   border-radius: sage-border(radius);
   border: sage-border();
 
