@@ -65,4 +65,5 @@ $sage-color-default-name: "grey 500";
   @warn "Could not retrieve color: #{$base} #{$value}. Got `#{$color}` from `sd-sage-color()`. Default color #{$sage-color-default-name} (`#{$sage-color-default}`) returned instead.";
 
   @return $sage-color-default;
+
 }
