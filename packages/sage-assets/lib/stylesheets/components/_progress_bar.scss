@@ -34,7 +34,7 @@ $-progress-bar-height: sage-spacing(xs);
   height: $-progress-bar-height;
   width: 100%;
   border-radius: sage-border(radius-small);
-  background-color: var(--sage-progress-bar-background-color, sage-color(grey, 150));
+  background-color: var(--sage-progress-bar-background-color, sage-color(grey, 200));
 
   .sage-modal__header & {
     border-radius: 0;

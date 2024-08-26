@@ -28,7 +28,7 @@ $-tab-color-disabled: map-get($sage-tab-colors, disabled);
 
   .sage-tabs--filter & {
     padding: rem(6px) rem(14px);
-    background-color: sage-color(grey, 150);
+    background-color: sage-color(grey, 200);
     border-radius: sage-border(radius-x-large);
     @extend %t-sage-body-small-semi;
   }
@@ -38,7 +38,7 @@ $-tab-color-disabled: map-get($sage-tab-colors, disabled);
   &:hover {
     color: $-tab-color-active;
     .sage-tabs--filter & {
-      background: sage-color(grey, 150);
+      background: sage-color(grey, 300);
     }
   }
 
