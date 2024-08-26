@@ -64,8 +64,8 @@ $-btn-base-styles: (
     ),
     disabled: (
       color: sage-color(grey, 600),
-      background-color: sage-color(grey, 200),
-      border-color: sage-color(grey, 200),
+      background-color: sage-color(grey, 150),
+      border-color: sage-color(grey, 150),
     )
   ),
   secondary: (
@@ -149,8 +149,8 @@ $-btn-subtle-styles: (
 // NOTE: the following colors should be kept in sync
 // with the colors in `_alert.scss`
 $-alert-close-btn-background-colors: (
-  default: sage-color(grey, 300),
-  draft: sage-color(grey, 300),
+  default: sage-color(grey, 150),
+  draft: sage-color(grey, 150),
   info: sage-color(primary, 200),
   published: sage-color(sage, 200),
   success: sage-color(sage, 200),
@@ -317,7 +317,7 @@ $-btn-loading-min-height: rem(36px);
     bottom: rem(1px);
     height: rem(38px);
     background-color: sage-color(white);
-    box-shadow: rem(-1px) 0 0 0 sage-color(grey, 300);
+    box-shadow: rem(-1px) 0 0 0 sage-color(grey, 150);
     border-color: transparent;
 
     @include sage-focus-outline--update-color(transparent);
@@ -472,7 +472,7 @@ $-btn-loading-min-height: rem(36px);
     }
 
     &:hover {
-      background-color: sage-color(grey, 200);
+      background-color: sage-color(grey, 150);
     }
 
     &.sage-btn--selected {
@@ -612,7 +612,7 @@ a.sage-btn {
   &[aria-disabled="true"] {
     color: sage-color(grey, 600);
     background-color: sage-color(white);
-    border-color: sage-color(grey, 200);
+    border-color: sage-color(grey, 150);
   }
 }
 
