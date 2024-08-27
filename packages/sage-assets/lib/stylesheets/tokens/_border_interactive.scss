@@ -9,13 +9,13 @@
 /// Sage borders interactive token
 ///
 $sage-borders-interactive: (
-  default: 0 0 0 1px sage-color(grey, 300),
+  default: 0 0 0 1px sage-color(grey, 200),
   hover: 0 0 0 1px sage-color(grey, 500),
   focus: 0 0 0 4px sage-color(primary, 200),
   selected: 0 0 0 4px sage-color(grey, 900),
   error: 0 0 0 1px sage-color(red, 500),
   error-focus: 0 0 0 4px sage-color(red, 500),
-  disabled: 0 0 0 1px sage-color(grey, 200),
+  disabled: 0 0 0 1px sage-color(grey, 150),
 );
 
 ///

@@ -9,9 +9,9 @@
 /// Sage borders token
 ///
 $sage-borders: (
-  default: rem(1px) solid sage-color(grey, 200),
+  default: rem(1px) solid sage-color(grey, 150),
   error: rem(1px) solid sage-color(red, 500),
-  interactive: rem(1px) solid sage-color(grey, 300),
+  interactive: rem(1px) solid sage-color(grey, 200),
   interactive-hover: rem(1px) solid sage-color(grey, 500),
   radius-small: rem(4px),
   radius: rem(8px),
