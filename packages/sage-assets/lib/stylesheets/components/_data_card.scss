@@ -7,7 +7,7 @@
 
 $-data-card-colors: (
   default: (
-    border-color: sage-color(grey, 200),
+    border-color: sage-color(grey, 300),
     text-color: sage-color(grey, 900),
   ),
   danger: (
@@ -121,7 +121,7 @@ $-data-card-padding: sage-spacing(xs);
 
   .sage-data-card-scroll-container &:not(:last-child) {
     padding-right: sage-spacing(md);
-    border-right: 1px solid sage-color(grey, 200);
+    border-right: 1px solid sage-color(grey, 300);
   }
 
   .sage-data-card-scroll-container &:not(:first-child) {

@@ -26,7 +26,7 @@ $-sage-card-background: transparent;
   border-color: sage-color(white);
   @include sage-dashed-border(
     $border-radius: sage-border(radius),
-    $color: sage-color(grey, 200),
+    $color: sage-color(grey, 300),
   );
 }
 
@@ -103,7 +103,7 @@ $-sage-card-background: transparent;
     top: 50%;
     width: 100%;
     height: 1px;
-    background: sage-color(grey, 150);
+    background: sage-color(grey, 200);
   }
   &::after {
     content: attr(data-divider-label);
