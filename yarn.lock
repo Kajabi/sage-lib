@@ -2849,9 +2849,9 @@
     "@octokit/openapi-types" "^12.11.0"
 
 "@pine-ds/icons@^8.0.0":
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/@pine-ds/icons/-/icons-8.0.0.tgz#d1372984908f8e25eff0f52e9e1fb291b9bcdbdc"
-  integrity sha512-HTOOQj9O5O8xonbvEBTXEzlXIbUC322pu+kuD3Qae8K1RX2QFhNekuV/Ni2KVlhxhfziXV8drhagCk2lCfXB8Q==
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/@pine-ds/icons/-/icons-8.1.0.tgz#e9b7ef42bf597ab21ca1146ecb1c34b148663504"
+  integrity sha512-peTUaMz/4zq6e+Is3tbEFs1ybk08JrD4nhTJKp34pP9qIT3HCqsEOwoGNWC3jSUJI55PX391QzGkUQgT/EZP6g==
   dependencies:
     "@stencil/core" "^4.20.0"
 
@@ -2954,9 +2954,9 @@
   integrity sha512-+9jVqKhRSpsc591z5vX+X5Yyw+he/HCB4iQ/RYxw35CEPaY1gnsNE43nf9n9AaYjAQrTiI/mOwKUKdUs9vf7Xg==
 
 "@stencil/core@^4.20.0":
-  version "4.20.0"
-  resolved "https://registry.yarnpkg.com/@stencil/core/-/core-4.20.0.tgz#221f2b36ab999891560449b02d6915862c435f49"
-  integrity sha512-WPrTHFngvN081RY+dJPneKQLwnOFD60OMCOQGmmSHfCW0f4ujPMzzhwWU1gcSwXPWXz5O+8cBiiCaxAbJU7kAg==
+  version "4.21.0"
+  resolved "https://registry.yarnpkg.com/@stencil/core/-/core-4.21.0.tgz#6e294c57468e58dd77a458244968fe73d589b41b"
+  integrity sha512-v50lnVbzS8mpMSnEVxR+G75XpvxHKtkJaQrNPE8+/fF6Ppr5z4bcdcBhcP8LPfEW+4BZcic6VifMXRwTopc+kw==
 
 "@storybook/addon-a11y@^6.5.9":
   version "6.5.10"
