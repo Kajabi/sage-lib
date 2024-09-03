@@ -283,7 +283,6 @@
   }
   gap: sage-spacing();
   padding: sage-spacing(card);
-  border: sage-border();
   border-radius: sage-border(radius-large);
 }
 
@@ -656,7 +655,6 @@
 @mixin sage-panel() {
   padding: sage-spacing(panel);
   background-color: sage-color(white);
-  border: sage-border();
   border-radius: sage-border(radius-large);
   box-shadow: sage-shadow(100);
 }
