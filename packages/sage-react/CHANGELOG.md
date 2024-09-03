@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.20.6](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.20.5...@kajabi/sage-react@1.20.6) (2024-09-03)
+
+
+### Bug Fixes
+
+* update the workflow/Dockerfile for storybook so it's built on the runner ([4465d9f](https://github.com/Kajabi/sage-lib/commit/4465d9f397c1e546a24dd4595a1e4b5e7abd3340))
+
+
+
+
+
 ## [1.20.5](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.20.4...@kajabi/sage-react@1.20.5) (2024-08-16)
 
 
