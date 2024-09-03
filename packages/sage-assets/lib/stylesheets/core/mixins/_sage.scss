@@ -178,13 +178,14 @@
 /// @param {time} $focus-animation-speed [0.2s] How quickly the focus ring animates on activation
 ///
 @mixin sage-focus-ring(
-  $focus-shadow: sage-color(primary, 200),
-  $focus-width: 4px
+  $focus-shadow: sage-color(purple, 30),
+  $focus-width-inner: 1px,
+  $focus-width-outter: 4px
 ) {
   &:focus {
     z-index: sage-z-index(default, 1);
     outline: none;
-    box-shadow: 0 0 0 $focus-width $focus-shadow;
+    box-shadow: 0 0 0 $focus-width-inner white, 0 0 0 $focus-width-outter $focus-shadow;
   }
 }
 
