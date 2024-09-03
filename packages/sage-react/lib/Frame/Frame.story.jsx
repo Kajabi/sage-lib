@@ -84,6 +84,19 @@ export const BorderedBox = () => (
   </Frame>
 );
 
+export const BoxShadow = () => (
+  <Frame
+    borderRadius={Frame.BORDER_RADII.MD}
+    boxShadow={Frame.BOX_SHADOWS[100]}
+    padding={Frame.PADDINGS.MD}
+  >
+    <Property icon={SageTokens.ICONS.USER}>Galinti Marcus</Property>
+    <Property icon={SageTokens.ICONS.MAIL}>galinti@example.com</Property>
+    <Property icon={SageTokens.ICONS.STAR}>Member since 2022</Property>
+  </Frame>
+);
+
+
 export const NestingFrames = () => (
   <Frame
     border={Frame.BORDERS.DEFAULT}
