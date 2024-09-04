@@ -43,9 +43,7 @@ $-tab-color-disabled: map-get($sage-tab-colors, disabled);
   }
 
   &:focus {
-    z-index: sage-z-index(default, 1);
-    outline: none;
-    box-shadow: 0 0 0 4px sage-color(primary, 200);
+    @include sage-focus-ring();
     border-radius: sage-border(radius-small);
 
     .sage-tabs--filter & {

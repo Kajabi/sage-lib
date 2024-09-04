@@ -126,7 +126,7 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
   &:focus-within {
     outline: none;
 
-    @include sage-focus-outline--update-color(sage-color(primary, 200));
+    @include sage-focus-outline--update-color(sage-color(purple, 30));
   }
 }
 
@@ -144,7 +144,7 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
 
 .sage-dropdown__item--disabled {
   &:active {
-    @include sage-focus-outline--update-color(sage-color(primary, 200));
+    @include sage-focus-outline--update-color(sage-color(purple, 30));
   }
 }
 
@@ -161,7 +161,7 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
 .sage-dropdown__item-control {
   @include sage-button-style-reset();
   @include sage-focus-outline($outline-offset-inline: 4px, $outline-offset-block: -2px);
-  @include sage-focus-outline--update-color(sage-color(primary, 200));
+  @include sage-focus-outline--update-color(sage-color(purple, 30));
 
   @extend %t-sage-body-med;
 
@@ -192,7 +192,7 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
 
   &:focus-within {
     @include sage-focus-outline($outline-offset-inline: 4px, $outline-offset-block: -2px);
-    @include sage-focus-outline--update-color(sage-color(primary, 200));
+    @include sage-focus-outline--update-color(sage-color(purple, 30));
 
     &::after {
       opacity: 1;
