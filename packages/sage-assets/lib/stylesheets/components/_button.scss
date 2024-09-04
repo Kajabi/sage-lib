@@ -262,15 +262,6 @@ $-btn-loading-min-height: rem(36px);
     }
   }
 
-  .sage-accordion &.sage-expandable-card__trigger {
-    &:focus {
-      box-shadow: inherit;
-    }
-    &:focus-visible {
-      @include sage-focus-ring;
-    }
-  }
-
   .sage-input-group & {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
