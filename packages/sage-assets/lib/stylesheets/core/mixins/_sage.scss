@@ -185,7 +185,7 @@
   &:focus {
     z-index: sage-z-index(default, 1);
     outline: none;
-    box-shadow: 0 0 0 $focus-width-inner white, 0 0 0 $focus-width-outter $focus-shadow;
+    box-shadow: 0 0 0 $focus-width-inner #fff, 0 0 0 $focus-width-outter $focus-shadow;
   }
 }
 
