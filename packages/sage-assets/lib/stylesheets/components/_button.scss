@@ -13,7 +13,7 @@ $-btn-transition: map-get($sage-transitions, default);
 $-btn-base-padding-block: sage-spacing(xs); // vertical (y) axis
 $-btn-base-padding-inline: sage-spacing(sm); // horizontal (x) axis
 $-btn-base-line-height: var(--sage-line-height-body, #{rem(24px)});
-$-btn-border-radius: sage-border(radius);
+$-btn-border-radius: 9999px;
 $-btn-shadow-base: sage-shadow(sm);
 $-btn-icon-only-standard-size: rem(40px);
 $-btn-icon-only-subtle-size: rem(16px);
