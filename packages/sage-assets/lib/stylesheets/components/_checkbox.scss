@@ -32,8 +32,8 @@ $-checkbox-marker-offset: $-checkbox-marker-border * 2;
 // Focus state
 //
 $-checkbox-focus-outline-size: rem(3px);
-$-checkbox-focus-outline-width: 4;
-$-checkbox-focus-outline-color: sage-color(primary, 200);
+$-checkbox-focus-outline-width: 2;
+$-checkbox-focus-outline-color: sage-color(purple, 30);
 
 
 .sage-checkbox {

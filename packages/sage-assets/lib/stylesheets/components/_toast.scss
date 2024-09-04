@@ -161,7 +161,7 @@ $-toast-bottom-spacing: sage-spacing(xs);
   text-decoration: underline;
 
   @include sage-focus-outline($outline-offset-inline: 4px);
-  @include sage-focus-outline--update-color(sage-color(primary, 200));
+  @include sage-focus-outline--update-color(sage-color(purple, 30));
 }
 
 @keyframes rotate {

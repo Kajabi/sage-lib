@@ -28,7 +28,7 @@ $-btn-base-styles: (
       color: sage-color(white),
       background-color: sage-color(primary, 300),
       border-color: sage-color(primary, 300),
-      ring-color: sage-color(primary, 200),
+      ring-color: sage-color(purple, 30),
     ),
     hover: (
       color: sage-color(white),
@@ -51,7 +51,7 @@ $-btn-base-styles: (
       color: sage-color(white),
       background-color: sage-color(charcoal, 400),
       border-color: sage-color(charcoal, 400),
-      ring-color: sage-color(primary, 200),
+      ring-color: sage-color(purple, 30),
     ),
     hover: (
       color: sage-color(white),
@@ -72,7 +72,7 @@ $-btn-base-styles: (
     default: (
       color: sage-color(charcoal, 400),
       background-color: sage-color(white),
-      ring-color: sage-color(primary, 200),
+      ring-color: sage-color(purple, 30),
     ),
     hover: (
       color: sage-color(charcoal, 400),
@@ -117,7 +117,7 @@ $-btn-subtle-styles: (
     hover: sage-color(primary, 300),
     hover-background: sage-color(primary, 100),
     focus: sage-color(primary, 300),
-    focus-outline: sage-color(primary, 200),
+    focus-outline: sage-color(purple, 30),
     disabled: sage-color(primary, 200),
   ),
   primary: (
@@ -125,7 +125,7 @@ $-btn-subtle-styles: (
     hover: sage-color(charcoal, 400),
     hover-background: sage-color(grey, 200),
     focus: sage-color(charcoal, 400),
-    focus-outline: sage-color(primary, 200),
+    focus-outline: sage-color(purple, 30),
     disabled: sage-color(charcoal, 100),
   ),
   secondary: (
@@ -133,7 +133,7 @@ $-btn-subtle-styles: (
     hover: sage-color(charcoal, 400),
     hover-background: sage-color(grey, 200),
     focus: sage-color(charcoal, 400),
-    focus-outline: sage-color(primary, 200),
+    focus-outline: sage-color(purple, 30),
     disabled: sage-color(charcoal, 100),
   ),
   danger: (
@@ -259,15 +259,6 @@ $-btn-loading-min-height: rem(36px);
 
     &::after {
       transform: translate3D(-50%, -50%, 0);
-    }
-  }
-
-  .sage-accordion &.sage-expandable-card__trigger {
-    &:focus {
-      box-shadow: inherit;
-    }
-    &:focus-visible {
-      @include sage-focus-ring;
     }
   }
 
@@ -422,7 +413,7 @@ $-btn-loading-min-height: rem(36px);
 
   .sage-upload-card & {
     &.sage-btn--subtle:focus {
-      @include sage-focus-outline--update-color(sage-color(primary, 300));
+      @include sage-focus-outline--update-color(sage-color(purple, 30));
     }
   }
 
