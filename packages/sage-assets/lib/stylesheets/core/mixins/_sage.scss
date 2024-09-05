@@ -178,7 +178,7 @@
 /// @param {time} $focus-animation-speed [0.2s] How quickly the focus ring animates on activation
 ///
 @mixin sage-focus-ring(
-  $focus-shadow: sage-color(purple, 30),
+  $focus-shadow: sage-color(purple, 300),
   $focus-width-inner: 1px,
   $focus-width-outter: 3px
 ) {

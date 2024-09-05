@@ -102,7 +102,7 @@ $-badge-statuses: (
 
     .sage-badge__value {
       @include sage-focus-outline($outline-offset-block: -1, $outline-offset-inline: -1);
-      @include sage-focus-outline--update-color(sage-color(purple, 30));
+      @include sage-focus-outline--update-color(sage-color(purple, 300));
 
       position: static;
       padding-right: rem(24px);

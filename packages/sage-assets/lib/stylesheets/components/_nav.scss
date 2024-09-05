@@ -36,7 +36,7 @@ $-nav-subitem-border-width: rem(2px);
     $outline-offset-block: -1,
     $outline-border-radius: sage-border(radius-medium),
   );
-  @include sage-focus-outline--update-color(sage-color(purple, 30));
+  @include sage-focus-outline--update-color(sage-color(purple, 300));
 
   display: flex;
   align-items: center;
@@ -63,7 +63,7 @@ $-nav-subitem-border-width: rem(2px);
   @extend %t-sage-body-small-med;
 
   &.sage-nav__link--active {
-    @include sage-focus-outline--update-color(sage-color(purple, 30));
+    @include sage-focus-outline--update-color(sage-color(purple, 300));
 
     background: $-nav-color-background;
   }
@@ -88,7 +88,7 @@ $-nav-subitem-border-width: rem(2px);
 
   &:not(.sage-nav__list--sub) {
     .sage-nav__link--active {
-      @include sage-focus-outline--update-color(sage-color(purple, 30));
+      @include sage-focus-outline--update-color(sage-color(purple, 300));
     }
 
     .sage-nav__link--active::after {

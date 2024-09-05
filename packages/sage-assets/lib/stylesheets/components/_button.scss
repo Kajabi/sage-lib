@@ -26,24 +26,24 @@ $-btn-base-styles: (
   accent: (
     default: (
       color: sage-color(white),
-      background-color: sage-color(purple, 50),
-      border-color: sage-color(purple, 50),
-      ring-color: sage-color(purple, 30),
+      background-color: sage-color(purple, 500),
+      border-color: sage-color(purple, 500),
+      ring-color: sage-color(purple, 300),
     ),
     hover: (
       color: sage-color(white),
-      background-color: sage-color(purple, 60),
-      border-color: sage-color(purple, 60),
+      background-color: sage-color(purple, 600),
+      border-color: sage-color(purple, 600),
     ),
     focus: (
       color: sage-color(white),
-      background-color: sage-color(purple, 50),
-      border-color: sage-color(purple, 50),
+      background-color: sage-color(purple, 500),
+      border-color: sage-color(purple, 500),
     ),
     disabled: (
-      color: sage-color(purple, 30),
-      background-color: sage-color(purple, 15),
-      border-color: sage-color(purple, 15),
+      color: sage-color(purple, 300),
+      background-color: sage-color(purple, 150),
+      border-color: sage-color(purple, 150),
     )
   ),
   primary: (
@@ -72,7 +72,7 @@ $-btn-base-styles: (
     default: (
       color: sage-color(grey, 900),
       background-color: sage-color(white),
-      ring-color: sage-color(purple, 30),
+      ring-color: sage-color(purple, 300),
     ),
     hover: (
       color: sage-color(grey, 900),
@@ -117,7 +117,7 @@ $-btn-subtle-styles: (
     hover: sage-color(primary, 300),
     hover-background: sage-color(primary, 100),
     focus: sage-color(primary, 300),
-    focus-outline: sage-color(purple, 30),
+    focus-outline: sage-color(purple, 300),
     disabled: sage-color(primary, 200),
   ),
   primary: (
@@ -414,7 +414,7 @@ $-btn-loading-min-height: rem(36px);
 
   .sage-upload-card & {
     &.sage-btn--subtle:focus {
-      @include sage-focus-outline--update-color(sage-color(purple, 30));
+      @include sage-focus-outline--update-color(sage-color(purple, 300));
     }
   }
 

@@ -134,7 +134,7 @@ $-hero-play-icon-background-color: sage-color(white);
   @include sage-focus-ring;
 
   &:focus {
-    @include sage-focus-outline--update-color(sage-color(purple, 30));
+    @include sage-focus-outline--update-color(sage-color(purple, 300));
   }
 }
 
