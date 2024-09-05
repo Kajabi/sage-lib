@@ -26,24 +26,24 @@ $-btn-base-styles: (
   accent: (
     default: (
       color: sage-color(white),
-      background-color: sage-color(primary, 300),
-      border-color: sage-color(primary, 300),
+      background-color: sage-color(purple, 50),
+      border-color: sage-color(purple, 50),
       ring-color: sage-color(purple, 30),
     ),
     hover: (
       color: sage-color(white),
-      background-color: sage-color(primary, 400),
-      border-color: sage-color(primary, 400),
+      background-color: sage-color(purple, 60),
+      border-color: sage-color(purple, 60),
     ),
     focus: (
       color: sage-color(white),
-      background-color: sage-color(primary, 300),
-      border-color: sage-color(primary, 300),
+      background-color: sage-color(purple, 50),
+      border-color: sage-color(purple, 50),
     ),
     disabled: (
-      color: sage-color(primary, 200),
-      background-color: sage-color(primary, 100),
-      border-color: sage-color(primary, 100),
+      color: sage-color(purple, 30),
+      background-color: sage-color(purple, 15),
+      border-color: sage-color(purple, 15),
     )
   ),
   primary: (
