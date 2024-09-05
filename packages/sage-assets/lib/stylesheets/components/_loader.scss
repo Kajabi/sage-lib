@@ -11,7 +11,6 @@ $-loader-bar-speed-delay: 0.5s;
 $-loader-bar-width: rem(300px);
 $-loader-spinner-size: rem(48px);
 $-loader-spinner-speed: 2s;
-$-loader-spinner-path-speed: 1.5s;
 $-loader-typing-size: rem(6px);
 $-loader-lower-opacity: 0.4;
 
@@ -84,7 +83,7 @@ $-loader-lower-opacity: 0.4;
 .sage-loader__spinner {
   width: sage-spacing(xl);
   height: sage-spacing(xl);
-  animation: rotate $-loader-spinner-speed linear infinite;
+  animation: loader-rotate $-loader-spinner-speed linear infinite;
 }
 
 .sage-loader__spinner--loading-button {
@@ -94,11 +93,20 @@ $-loader-lower-opacity: 0.4;
 }
 
 .sage-loader__spinner-path {
-  stroke-dasharray: 150, 200;
-  stroke-dashoffset: -10;
+  stroke-width: 8px;
+}
+
+.sage-loader__spinner-secondHalf {
+  stroke: url("#sage-loader__spinner-secondHalf");
+}
+
+.sage-loader__spinner-firstHalf {
+  stroke: url("#sage-loader__spinner-firstHalf");
+}
+
+.sage-loader__spinner-highlight {
+  stroke: currentColor;
   stroke-linecap: round;
-  stroke: sage-color(primary, 300);
-  animation: dash $-loader-spinner-path-speed ease-in-out infinite;
 }
 
 .sage-loader__spinner-path--loading-button {
@@ -146,24 +154,12 @@ $-loader-lower-opacity: 0.4;
   }
 }
 
-@keyframes rotate {
+@keyframes loader-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
   100% {
     transform: rotate(360deg);
-  }
-}
-
-@keyframes dash {
-  0% {
-    stroke-dasharray: 1, 200;
-    stroke-dashoffset: 0;
-  }
-  50% {
-    stroke-dasharray: 89, 200;
-    stroke-dashoffset: -35;
-  }
-  100% {
-    stroke-dasharray: 89, 200;
-    stroke-dashoffset: -124;
   }
 }
 
