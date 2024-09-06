@@ -2,10 +2,10 @@
   "color": {
     "base": {
       "blue": {
-        "50": {
+        "050": {
           "hex": { "value": "#fafcff" },
-          "code": { "value": "blue-50" },
-          "classname": { "value": "t-sage--color-blue-50" }
+          "code": { "value": "blue-050" },
+          "classname": { "value": "t-sage--color-blue-050" }
         },
         "100": {
           "hex": { "value": "#eff6ff" },
@@ -64,10 +64,10 @@
         }
       },
       "green": {
-        "50": {
+        "050": {
           "hex": { "value": "#fbfefc" },
-          "code": { "value": "green-50" },
-          "classname": { "value": "t-sage--color-green-50" }
+          "code": { "value": "green-050" },
+          "classname": { "value": "t-sage--color-green-050" }
         },
         "100": {
           "hex": { "value": "#edfcf2" },
@@ -126,10 +126,10 @@
         }
       },
       "mercury": {
-        "50": {
+        "050": {
           "hex": { "value": "#fffcfa" },
-          "code": { "value": "mercury-50" },
-          "classname": { "value": "t-sage--color-mercury-50" }
+          "code": { "value": "mercury-050" },
+          "classname": { "value": "t-sage--color-mercury-050" }
         },
         "100": {
           "hex": { "value": "#fff3ed" },
@@ -242,10 +242,10 @@
         }
       },
       "yellow": {
-        "50": {
+        "050": {
           "hex": { "value": "#fffefa" },
-          "code": { "value": "yellow-50" },
-          "classname": { "value": "t-sage--color-yellow-50" }
+          "code": { "value": "yellow-050" },
+          "classname": { "value": "t-sage--color-yellow-050" }
         },
         "100": {
           "hex": { "value": "#fffbeb" },
@@ -304,10 +304,10 @@
         }
       },
       "red": {
-        "50": {
+        "050": {
           "hex": { "value": "#fffafa" },
-          "code": { "value": "red-50" },
-          "classname": { "value": "t-sage--color-red-50" }
+          "code": { "value": "red-050" },
+          "classname": { "value": "t-sage--color-red-050" }
         },
         "100": {
           "hex": { "value": "#fef2f2" },
@@ -393,10 +393,10 @@
         }
       },
       "purple": {
-        "50": {
+        "050": {
           "hex": { "value": "#fafbff" },
-          "code": { "value": "purple-50" },
-          "classname": { "value": "t-sage--color-purple-50" }
+          "code": { "value": "purple-050" },
+          "classname": { "value": "t-sage--color-purple-050" }
         },
         "100": {
           "hex": { "value": "#edf1ff" },
@@ -482,10 +482,10 @@
         }
       },
       "grey": {
-        "50": {
+        "050": {
           "hex": { "value": "#fcfcfc" },
-          "code": { "value": "grey-50" },
-          "classname": { "value": "t-sage--color-grey-50" }
+          "code": { "value": "grey-050" },
+          "classname": { "value": "t-sage--color-grey-050" }
         },
         "100": {
           "hex": { "value": "#f8f8f8" },

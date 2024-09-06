@@ -22,18 +22,6 @@
 // Static vars for color base
 //
 ///
-/// color color-base-blue-50-hex
-///
-$sd-sage-color-base-blue-50-hex: #fafcff;
-///
-/// color color-base-blue-50-code
-///
-$sd-sage-color-base-blue-50-code: "blue-50";
-///
-/// color color-base-blue-50-classname
-///
-$sd-sage-color-base-blue-50-classname: "t-sage--color-blue-50";
-///
 /// color color-base-blue-100-hex
 ///
 $sd-sage-color-base-blue-100-hex: #eff6ff;
@@ -166,17 +154,17 @@ $sd-sage-color-base-blue-950-code: "blue-950";
 ///
 $sd-sage-color-base-blue-950-classname: "t-sage--color-blue-950";
 ///
-/// color color-base-green-50-hex
+/// color color-base-blue-050-hex
 ///
-$sd-sage-color-base-green-50-hex: #fbfefc;
+$sd-sage-color-base-blue-050-hex: #fafcff;
 ///
-/// color color-base-green-50-code
+/// color color-base-blue-050-code
 ///
-$sd-sage-color-base-green-50-code: "green-50";
+$sd-sage-color-base-blue-050-code: "blue-050";
 ///
-/// color color-base-green-50-classname
+/// color color-base-blue-050-classname
 ///
-$sd-sage-color-base-green-50-classname: "t-sage--color-green-50";
+$sd-sage-color-base-blue-050-classname: "t-sage--color-blue-050";
 ///
 /// color color-base-green-100-hex
 ///
@@ -310,17 +298,17 @@ $sd-sage-color-base-green-950-code: "green-950";
 ///
 $sd-sage-color-base-green-950-classname: "t-sage--color-green-950";
 ///
-/// color color-base-mercury-50-hex
+/// color color-base-green-050-hex
 ///
-$sd-sage-color-base-mercury-50-hex: #fffcfa;
+$sd-sage-color-base-green-050-hex: #fbfefc;
 ///
-/// color color-base-mercury-50-code
+/// color color-base-green-050-code
 ///
-$sd-sage-color-base-mercury-50-code: "mercury-50";
+$sd-sage-color-base-green-050-code: "green-050";
 ///
-/// color color-base-mercury-50-classname
+/// color color-base-green-050-classname
 ///
-$sd-sage-color-base-mercury-50-classname: "t-sage--color-mercury-50";
+$sd-sage-color-base-green-050-classname: "t-sage--color-green-050";
 ///
 /// color color-base-mercury-100-hex
 ///
@@ -454,6 +442,18 @@ $sd-sage-color-base-mercury-950-code: "mercury-950";
 ///
 $sd-sage-color-base-mercury-950-classname: "t-sage--color-mercury-950";
 ///
+/// color color-base-mercury-050-hex
+///
+$sd-sage-color-base-mercury-050-hex: #fffcfa;
+///
+/// color color-base-mercury-050-code
+///
+$sd-sage-color-base-mercury-050-code: "mercury-050";
+///
+/// color color-base-mercury-050-classname
+///
+$sd-sage-color-base-mercury-050-classname: "t-sage--color-mercury-050";
+///
 /// color color-base-primary-100-hex
 ///
 $sd-sage-color-base-primary-100-hex: #dbe9fe;
@@ -573,18 +573,6 @@ $sd-sage-color-base-sage-500-code: "sage-500";
 /// color color-base-sage-500-classname
 ///
 $sd-sage-color-base-sage-500-classname: "t-sage--color-sage-500";
-///
-/// color color-base-yellow-50-hex
-///
-$sd-sage-color-base-yellow-50-hex: #fffefa;
-///
-/// color color-base-yellow-50-code
-///
-$sd-sage-color-base-yellow-50-code: "yellow-50";
-///
-/// color color-base-yellow-50-classname
-///
-$sd-sage-color-base-yellow-50-classname: "t-sage--color-yellow-50";
 ///
 /// color color-base-yellow-100-hex
 ///
@@ -718,17 +706,17 @@ $sd-sage-color-base-yellow-950-code: "yellow-950";
 ///
 $sd-sage-color-base-yellow-950-classname: "t-sage--color-yellow-950";
 ///
-/// color color-base-red-50-hex
+/// color color-base-yellow-050-hex
 ///
-$sd-sage-color-base-red-50-hex: #fffafa;
+$sd-sage-color-base-yellow-050-hex: #fffefa;
 ///
-/// color color-base-red-50-code
+/// color color-base-yellow-050-code
 ///
-$sd-sage-color-base-red-50-code: "red-50";
+$sd-sage-color-base-yellow-050-code: "yellow-050";
 ///
-/// color color-base-red-50-classname
+/// color color-base-yellow-050-classname
 ///
-$sd-sage-color-base-red-50-classname: "t-sage--color-red-50";
+$sd-sage-color-base-yellow-050-classname: "t-sage--color-yellow-050";
 ///
 /// color color-base-red-100-hex
 ///
@@ -862,6 +850,18 @@ $sd-sage-color-base-red-950-code: "red-950";
 ///
 $sd-sage-color-base-red-950-classname: "t-sage--color-red-950";
 ///
+/// color color-base-red-050-hex
+///
+$sd-sage-color-base-red-050-hex: #fffafa;
+///
+/// color color-base-red-050-code
+///
+$sd-sage-color-base-red-050-code: "red-050";
+///
+/// color color-base-red-050-classname
+///
+$sd-sage-color-base-red-050-classname: "t-sage--color-red-050";
+///
 /// color color-base-orange-100-hex
 ///
 $sd-sage-color-base-orange-100-hex: #ffe3d4;
@@ -921,18 +921,6 @@ $sd-sage-color-base-orange-500-code: "orange-500";
 /// color color-base-orange-500-classname
 ///
 $sd-sage-color-base-orange-500-classname: "t-sage--color-orange-500";
-///
-/// color color-base-purple-50-hex
-///
-$sd-sage-color-base-purple-50-hex: #fafbff;
-///
-/// color color-base-purple-50-code
-///
-$sd-sage-color-base-purple-50-code: "purple-50";
-///
-/// color color-base-purple-50-classname
-///
-$sd-sage-color-base-purple-50-classname: "t-sage--color-purple-50";
 ///
 /// color color-base-purple-100-hex
 ///
@@ -1066,6 +1054,18 @@ $sd-sage-color-base-purple-950-code: "purple-950";
 ///
 $sd-sage-color-base-purple-950-classname: "t-sage--color-purple-950";
 ///
+/// color color-base-purple-050-hex
+///
+$sd-sage-color-base-purple-050-hex: #fafbff;
+///
+/// color color-base-purple-050-code
+///
+$sd-sage-color-base-purple-050-code: "purple-050";
+///
+/// color color-base-purple-050-classname
+///
+$sd-sage-color-base-purple-050-classname: "t-sage--color-purple-050";
+///
 /// color color-base-charcoal-100-hex
 ///
 $sd-sage-color-base-charcoal-100-hex: #828180;
@@ -1125,18 +1125,6 @@ $sd-sage-color-base-charcoal-500-code: "charcoal-500";
 /// color color-base-charcoal-500-classname
 ///
 $sd-sage-color-base-charcoal-500-classname: "t-sage--color-charcoal-500";
-///
-/// color color-base-grey-50-hex
-///
-$sd-sage-color-base-grey-50-hex: #fcfcfc;
-///
-/// color color-base-grey-50-code
-///
-$sd-sage-color-base-grey-50-code: "grey-50";
-///
-/// color color-base-grey-50-classname
-///
-$sd-sage-color-base-grey-50-classname: "t-sage--color-grey-50";
 ///
 /// color color-base-grey-100-hex
 ///
@@ -1270,6 +1258,18 @@ $sd-sage-color-base-grey-950-code: "grey-950";
 ///
 $sd-sage-color-base-grey-950-classname: "t-sage--color-grey-950";
 ///
+/// color color-base-grey-050-hex
+///
+$sd-sage-color-base-grey-050-hex: #fcfcfc;
+///
+/// color color-base-grey-050-code
+///
+$sd-sage-color-base-grey-050-code: "grey-050";
+///
+/// color color-base-grey-050-classname
+///
+$sd-sage-color-base-grey-050-classname: "t-sage--color-grey-050";
+///
 /// color color-base-white-100-hex
 ///
 $sd-sage-color-base-white-100-hex: #fff;
@@ -1395,11 +1395,6 @@ $sd-sage-color-base-black-500-classname: "t-sage--color-black-500";
 ///
 $sd-sage-color: (
   blue: (
-    50: (
-      hex: $sd-sage-color-base-blue-50-hex,
-      code: $sd-sage-color-base-blue-50-code,
-      classname: $sd-sage-color-base-blue-50-classname,
-    ),
     100: (
       hex: $sd-sage-color-base-blue-100-hex,
       code: $sd-sage-color-base-blue-100-code,
@@ -1455,13 +1450,13 @@ $sd-sage-color: (
       code: $sd-sage-color-base-blue-950-code,
       classname: $sd-sage-color-base-blue-950-classname,
     ),
+    050: (
+      hex: $sd-sage-color-base-blue-050-hex,
+      code: $sd-sage-color-base-blue-050-code,
+      classname: $sd-sage-color-base-blue-050-classname,
+    ),
   ),
   green: (
-    50: (
-      hex: $sd-sage-color-base-green-50-hex,
-      code: $sd-sage-color-base-green-50-code,
-      classname: $sd-sage-color-base-green-50-classname,
-    ),
     100: (
       hex: $sd-sage-color-base-green-100-hex,
       code: $sd-sage-color-base-green-100-code,
@@ -1517,13 +1512,13 @@ $sd-sage-color: (
       code: $sd-sage-color-base-green-950-code,
       classname: $sd-sage-color-base-green-950-classname,
     ),
+    050: (
+      hex: $sd-sage-color-base-green-050-hex,
+      code: $sd-sage-color-base-green-050-code,
+      classname: $sd-sage-color-base-green-050-classname,
+    ),
   ),
   mercury: (
-    50: (
-      hex: $sd-sage-color-base-mercury-50-hex,
-      code: $sd-sage-color-base-mercury-50-code,
-      classname: $sd-sage-color-base-mercury-50-classname,
-    ),
     100: (
       hex: $sd-sage-color-base-mercury-100-hex,
       code: $sd-sage-color-base-mercury-100-code,
@@ -1578,6 +1573,11 @@ $sd-sage-color: (
       hex: $sd-sage-color-base-mercury-950-hex,
       code: $sd-sage-color-base-mercury-950-code,
       classname: $sd-sage-color-base-mercury-950-classname,
+    ),
+    050: (
+      hex: $sd-sage-color-base-mercury-050-hex,
+      code: $sd-sage-color-base-mercury-050-code,
+      classname: $sd-sage-color-base-mercury-050-classname,
     ),
   ),
   primary: (
@@ -1635,11 +1635,6 @@ $sd-sage-color: (
     ),
   ),
   yellow: (
-    50: (
-      hex: $sd-sage-color-base-yellow-50-hex,
-      code: $sd-sage-color-base-yellow-50-code,
-      classname: $sd-sage-color-base-yellow-50-classname,
-    ),
     100: (
       hex: $sd-sage-color-base-yellow-100-hex,
       code: $sd-sage-color-base-yellow-100-code,
@@ -1695,13 +1690,13 @@ $sd-sage-color: (
       code: $sd-sage-color-base-yellow-950-code,
       classname: $sd-sage-color-base-yellow-950-classname,
     ),
+    050: (
+      hex: $sd-sage-color-base-yellow-050-hex,
+      code: $sd-sage-color-base-yellow-050-code,
+      classname: $sd-sage-color-base-yellow-050-classname,
+    ),
   ),
   red: (
-    50: (
-      hex: $sd-sage-color-base-red-50-hex,
-      code: $sd-sage-color-base-red-50-code,
-      classname: $sd-sage-color-base-red-50-classname,
-    ),
     100: (
       hex: $sd-sage-color-base-red-100-hex,
       code: $sd-sage-color-base-red-100-code,
@@ -1757,6 +1752,11 @@ $sd-sage-color: (
       code: $sd-sage-color-base-red-950-code,
       classname: $sd-sage-color-base-red-950-classname,
     ),
+    050: (
+      hex: $sd-sage-color-base-red-050-hex,
+      code: $sd-sage-color-base-red-050-code,
+      classname: $sd-sage-color-base-red-050-classname,
+    ),
   ),
   orange: (
     100: (
@@ -1786,11 +1786,6 @@ $sd-sage-color: (
     ),
   ),
   purple: (
-    50: (
-      hex: $sd-sage-color-base-purple-50-hex,
-      code: $sd-sage-color-base-purple-50-code,
-      classname: $sd-sage-color-base-purple-50-classname,
-    ),
     100: (
       hex: $sd-sage-color-base-purple-100-hex,
       code: $sd-sage-color-base-purple-100-code,
@@ -1846,6 +1841,11 @@ $sd-sage-color: (
       code: $sd-sage-color-base-purple-950-code,
       classname: $sd-sage-color-base-purple-950-classname,
     ),
+    050: (
+      hex: $sd-sage-color-base-purple-050-hex,
+      code: $sd-sage-color-base-purple-050-code,
+      classname: $sd-sage-color-base-purple-050-classname,
+    ),
   ),
   charcoal: (
     100: (
@@ -1875,11 +1875,6 @@ $sd-sage-color: (
     ),
   ),
   grey: (
-    50: (
-      hex: $sd-sage-color-base-grey-50-hex,
-      code: $sd-sage-color-base-grey-50-code,
-      classname: $sd-sage-color-base-grey-50-classname,
-    ),
     100: (
       hex: $sd-sage-color-base-grey-100-hex,
       code: $sd-sage-color-base-grey-100-code,
@@ -1934,6 +1929,11 @@ $sd-sage-color: (
       hex: $sd-sage-color-base-grey-950-hex,
       code: $sd-sage-color-base-grey-950-code,
       classname: $sd-sage-color-base-grey-950-classname,
+    ),
+    050: (
+      hex: $sd-sage-color-base-grey-050-hex,
+      code: $sd-sage-color-base-grey-050-code,
+      classname: $sd-sage-color-base-grey-050-classname,
     ),
   ),
   white: (
