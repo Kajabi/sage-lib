@@ -36,6 +36,14 @@ $-select-arrow-position-inverse-with-message: calc(100% - #{$-select-height + $-
   grid-template-rows: min-content min-content min-content; /* needed to resolve Safari 14 layout issue */
 }
 
+.sage-select--help-content {
+  grid-template-areas:
+    "label helpcontent helpcontent"
+    "field field field"
+    "message message message";
+  grid-template-columns: 1fr auto minmax(sage-spacing(lg), min-content);
+}
+
 .sage-select__label {
   @include sage-form-field-label;
 
@@ -62,6 +70,11 @@ $-select-arrow-position-inverse-with-message: calc(100% - #{$-select-height + $-
   font-size: $-select-arrow-font-size;
   color: sage-color(charcoal, 100);
   transition: 0.2s color ease;
+}
+
+.sage-select__help-content {
+  display: inline-flex;
+  grid-area: helpcontent;
 }
 
 .sage-select__field {
