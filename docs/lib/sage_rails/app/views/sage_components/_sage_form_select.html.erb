@@ -7,6 +7,7 @@
 <div class="
   sage-select
   <%= "sage-form-field--error" if component.has_error %>
+  <%= "sage-select--help-content" if component.help_content %>
   <%= component.generated_css_classes %>"
   data-js-select="true"
   <%= component.generated_html_attributes.html_safe %>
@@ -48,6 +49,11 @@
     <% end %>
   </select>
   <label class="sage-select__label" for="<%= select_id %>"><%= label %></label>
+  <% if component.help_content.present? %>
+    <div class="sage-select__help-content <%= SageClassnames::SPACERS::XS_LEFT %> <%= SageClassnames::SPACERS::XS_BOTTOM %>">
+      <%= component.help_content %>
+    </div>
+  <% end %>
   <pds-icon
     aria-hidden="true"
     class="sage-select__arrow"

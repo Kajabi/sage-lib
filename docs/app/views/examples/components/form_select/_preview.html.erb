@@ -59,6 +59,45 @@
 
 <%= sage_component SageDivider, {} %>
 
+<h3>Select with Message and Help Content</h3>
+<p>The Select component can display the "Help content" area to provide inline context alongside the label. This area allows text or other components, and may be useful when the Message area is occupied.</p>
+
+<% sample_help_content = sage_component SageLink, {
+    url: "https://help.kajabi.com",
+    label: "External link",
+    external: true,
+    launch: true,
+    help_link: false,
+    show_label: true,
+    style: "secondary",
+  } %>
+
+<%= sage_component SageFormSelect, {
+  name: "Default Currency",
+  select_options: [
+    {
+      text: "USD - United States Dollar",
+      value: "USD",
+    },
+    {
+      text: "AED - United Arab Emirates Dirham",
+      value: "AED",
+    },
+    {
+      text: "AFN - Afghan Afghani",
+      value: "AFN",
+    },
+    {
+      text: "ALL - Albanian Lek",
+      value: "ALL",
+    },
+  ],
+  message: "The default currency will be used for formatting and calculation purposes.",
+  help_content: sample_help_content,
+} %>
+
+<%= sage_component SageDivider, {} %>
+
 <h3>Error State</h3>
 <p>The Select component can indicate an error state.</p>
 
