@@ -64,7 +64,7 @@
 
 <% sample_help_content = sage_component SageLink, {
     url: "https://help.kajabi.com",
-    label: "External link",
+    label: "What are payouts?",
     external: true,
     launch: true,
     help_link: false,
@@ -73,26 +73,27 @@
   } %>
 
 <%= sage_component SageFormSelect, {
-  name: "Default Currency",
+  label: "Payout currency",
+  name: "payout_currency",
   select_options: [
     {
       text: "USD - United States Dollar",
       value: "USD",
     },
     {
-      text: "AED - United Arab Emirates Dirham",
-      value: "AED",
+      text: "CAD - Canadian Dollar",
+      value: "CAD",
     },
     {
-      text: "AFN - Afghan Afghani",
-      value: "AFN",
+      text: "AUD - Australian Dollar",
+      value: "AUD",
     },
     {
-      text: "ALL - Albanian Lek",
-      value: "ALL",
+      text: "GBP - British Pound",
+      value: "GBP",
     },
   ],
-  message: "The default currency will be used for formatting and calculation purposes.",
+  message: "The payout currency determines the currency used when depositing funds to your bank account",
   help_content: sample_help_content,
 } %>
 
