@@ -75,7 +75,6 @@ $-select-arrow-position-inverse-with-message: calc(100% - #{$-select-height + $-
 .sage-select__help-content {
   display: inline-flex;
   grid-area: helpcontent;
-  margin-left: sage-spacing(xs);
 }
 
 .sage-select__field {
