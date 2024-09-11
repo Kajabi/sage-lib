@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { Select } from './Select';
+import { Link } from '../Link';
+import { Popover } from '../Popover';
+import { SageClassnames } from '../configs';
 
 export default {
   title: 'Sage/Select',
@@ -12,7 +15,7 @@ export default {
       },
     },
   },
-  decorators: [(Story) => <div style={{ width: 300, marginLeft: 'auto', marginRight: 'auto' }}>{Story()}</div>],
+  decorators: [(Story) => <div style={{ width: 400, margin: '0 auto' }}>{Story()}</div>],
   args: {
     label: 'Select',
     id: 'field-1',
@@ -98,6 +101,71 @@ SelectWithOptionDisabled.args = {
   placeholder: 'Pick an option:'
 };
 
+export const SelectWithHelpContentLink = (args) => {
+  const [value, updateValue] = useState(args.value);
+  return (
+    <Select
+      {...args}
+      value={value}
+      onChange={(evt) => updateValue(evt.target.value)}
+    />
+  );
+};
+
+SelectWithHelpContentLink.args = {
+  id: 'field-5',
+  label: 'Choose an option:',
+  options: [
+    'First option',
+    'Second option',
+    'Third option',
+  ],
+  helpContent: (
+    <Link href="https://help.kajabi.com" target="_blank" style={Link.COLORS.SECONDARY}>
+      What&rsquo;s this?
+    </Link>
+  ),
+  placeholder: 'Choose an option:'
+};
+
+export const SelectWithHelpContentPopover = (args) => {
+  const [value, updateValue] = useState(args.value);
+  return (
+    <Select
+      {...args}
+      value={value}
+      onChange={(evt) => updateValue(evt.target.value)}
+    />
+  );
+};
+
+SelectWithHelpContentPopover.args = {
+  id: 'field-6',
+  label: 'Select fruit:',
+  options: [
+    'Apple',
+    'Banana',
+    'Orange',
+    'Peach',
+    'Pineapple',
+  ],
+  helpContent: (
+    <Popover
+      active={false}
+      iconOnly={false}
+      label="Fruit allergies?"
+      moreLinkText="Harvest schedule"
+      moreLinkURL="https://help.kajabi.com"
+      position={Popover.POSITIONS.LEFT}
+    >
+      <p className={SageClassnames.TYPE.BODY}>
+        Incredibly helpful text goes here
+      </p>
+    </Popover>
+  ),
+  placeholder: 'Select fruit:'
+};
+
 export const SelectWithOptgroups = (args) => {
   const [value, updateValue] = useState(args.value);
   return (
@@ -110,7 +178,7 @@ export const SelectWithOptgroups = (args) => {
 };
 
 SelectWithOptgroups.args = {
-  id: 'field-3',
+  id: 'field-7',
   label: 'Choose a sport...',
   value: 'nascar',
   options: [

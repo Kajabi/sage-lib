@@ -59,6 +59,46 @@
 
 <%= sage_component SageDivider, {} %>
 
+<h3>Select with Message and Help Content</h3>
+<p>The Select component can display the "Help content" area to provide inline context alongside the label. This area allows text or other components, and may be useful when the Message area is occupied.</p>
+
+<% sample_help_content = sage_component SageLink, {
+    url: "https://help.kajabi.com",
+    label: "What are payouts?",
+    external: true,
+    launch: true,
+    help_link: false,
+    show_label: true,
+    style: "secondary",
+  } %>
+
+<%= sage_component SageFormSelect, {
+  label: "Payout currency",
+  name: "payout_currency",
+  select_options: [
+    {
+      text: "USD - United States Dollar",
+      value: "USD",
+    },
+    {
+      text: "CAD - Canadian Dollar",
+      value: "CAD",
+    },
+    {
+      text: "AUD - Australian Dollar",
+      value: "AUD",
+    },
+    {
+      text: "GBP - British Pound",
+      value: "GBP",
+    },
+  ],
+  message: "The payout currency determines the currency used when depositing funds to your bank account",
+  help_content: sample_help_content,
+} %>
+
+<%= sage_component SageDivider, {} %>
+
 <h3>Error State</h3>
 <p>The Select component can indicate an error state.</p>
 

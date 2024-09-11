@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { SageTokens } from '../configs';
+import { SageClassnames, SageTokens } from '../configs';
 
 export const Select = ({
   className,
@@ -10,6 +10,7 @@ export const Select = ({
   id,
   includeLabelInOptions,
   label,
+  helpContent,
   message,
   onChange,
   options,
@@ -24,6 +25,7 @@ export const Select = ({
     {
       'sage-form-field--error': hasError,
       'sage-select--value-selected': value,
+      'sage-select--help-content': helpContent,
     }
   );
 
@@ -88,6 +90,11 @@ export const Select = ({
       {label && (
         <label htmlFor={id} className="sage-select__label">{label}</label>
       )}
+      {helpContent && (
+        <div className={`sage-select__help-content ${SageClassnames.SPACERS.XS_LEFT} ${SageClassnames.SPACERS.XS_BOTTOM}`}>
+          {helpContent}
+        </div>
+      )}
       {message && (
         <div className="sage-select__info">
           <div className="sage-select__message">{message}</div>
@@ -101,6 +108,7 @@ Select.defaultProps = {
   className: null,
   disabled: false,
   hasError: false,
+  helpContent: null,
   includeLabelInOptions: false,
   label: null,
   message: null,
@@ -115,6 +123,7 @@ Select.propTypes = {
   className: PropTypes.string,
   disabled: PropTypes.bool,
   hasError: PropTypes.bool,
+  helpContent: PropTypes.node,
   id: PropTypes.string.isRequired,
   includeLabelInOptions: PropTypes.bool,
   label: PropTypes.string,
