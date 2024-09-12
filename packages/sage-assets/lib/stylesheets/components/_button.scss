@@ -179,6 +179,7 @@ $-btn-loading-min-height: rem(36px);
   align-items: center;
   justify-self: flex-start;
   padding: $-btn-base-padding-block $-btn-base-padding-inline;
+  font-family: $-heading-font;
   text-align: left; // Prevents text alignment issue when inner text is truncated
   border-width: 1px;
   border-style: solid;
