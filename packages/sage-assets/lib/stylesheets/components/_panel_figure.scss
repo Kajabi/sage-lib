@@ -61,10 +61,10 @@ $-panel-figure-default-background-color: sage-color(grey, 150);
 .sage-panel__figure--bleed-bottom {
   width: calc(100% + #{2 * $-panel-figure-padding});
   margin: 0 (-1 * sage-spacing(lg)) (-1 * sage-spacing(lg));
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  border-bottom-left-radius: inherit;
-  border-bottom-right-radius: inherit;
+  border-start-start-radius: 0;
+  border-start-end-radius: 0;
+  border-end-start-radius: inherit;
+  border-end-end-radius: inherit;
 }
 
 .sage-panel__figure--bleed-sides {
@@ -76,10 +76,10 @@ $-panel-figure-default-background-color: sage-color(grey, 150);
 .sage-panel__figure--bleed-top {
   width: calc(100% + #{2 * $-panel-figure-padding});
   margin: (-1 * sage-spacing(lg)) (-1 * sage-spacing(lg)) 0;
-  border-top-left-radius: inherit;
-  border-top-right-radius: inherit;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
+  border-start-start-radius: inherit;
+  border-start-end-radius: inherit;
+  border-end-start-radius: 0;
+  border-end-end-radius: 0;
 }
 
 .sage-panel__figure--wistia {

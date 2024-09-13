@@ -86,8 +86,8 @@ $-tab-color-disabled: map-get($sage-tab-colors, disabled);
 
   .sage-tabs--with-background & {
     padding: sage-spacing(xs) sage-spacing(sm) sage-spacing(md);
-    border-top-left-radius: sage-border(radius-large);
-    border-top-right-radius: sage-border(radius-large);
+    border-start-start-radius: sage-border(radius-large);
+    border-start-end-radius: sage-border(radius-large);
     background-clip: padding-box;
 
     @extend %t-sage-body-xsmall-med;
@@ -125,8 +125,8 @@ $-tab-color-disabled: map-get($sage-tab-colors, disabled);
 
   .sage-tabs--with-background &.sage-tab--active {
     background-color: sage-color(white);
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
+    border-end-end-radius: 0;
+    border-end-start-radius: 0;
 
     &:focus-visible {
       border-radius: sage-border(radius-small);
