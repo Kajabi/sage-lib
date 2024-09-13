@@ -21,7 +21,7 @@ $-breadcrumb-outline-color: sage-color(purple, 300);
   align-items: center;
 
   .sage-breadcrumbs__link & {
-    margin-right: sage-spacing(xs);
+    margin-inline-end: sage-spacing(xs);
   }
 }
 
@@ -76,7 +76,7 @@ $-breadcrumb-outline-color: sage-color(purple, 300);
 
   .sage-breadcrumbs--progressbar & {
     position: relative;
-    padding-bottom: sage-spacing(2xs);
+    padding-block-end: sage-spacing(2xs);
 
     &:active {
       color: $-breadcrumb-interactive-color;

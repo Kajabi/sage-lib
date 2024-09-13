@@ -64,86 +64,86 @@ $-popover-tooltip-inactive: $-popover-tooltip-width solid transparent;
   }
 
   .sage-popover--top & {
-    bottom: calc(100% + #{$-popover-panel-offset});
-    left: 0;
+    inset-block-end: calc(100% + #{$-popover-panel-offset});
+    inset-inline-start: 0;
 
     &::after {
-      left: $-popover-tooltip-offset;
-      top: 100%;
+      inset-inline-start: $-popover-tooltip-offset;
+      inset-block-start: 100%;
       transform: translate3d(-50%, 0, 0);
-      border-left: $-popover-tooltip-inactive;
-      border-right: $-popover-tooltip-inactive;
-      border-top: $-popover-tooltip-active;
+      border-inline-start: $-popover-tooltip-inactive;
+      border-inline-end: $-popover-tooltip-inactive;
+      border-block-start: $-popover-tooltip-active;
     }
   }
 
   .sage-popover--top-right & {
-    bottom: calc(100% + #{$-popover-panel-offset});
-    right: 0;
+    inset-block-end: calc(100% + #{$-popover-panel-offset});
+    inset-inline-end: 0;
 
     &::after {
-      right: $-popover-tooltip-offset;
-      top: 100%;
+      inset-inline-end: $-popover-tooltip-offset;
+      inset-block-start: 100%;
       transform: translate3d(-50%, 0, 0);
-      border-left: $-popover-tooltip-inactive;
-      border-right: $-popover-tooltip-inactive;
-      border-top: $-popover-tooltip-active;
+      border-inline-start: $-popover-tooltip-inactive;
+      border-inline-end: $-popover-tooltip-inactive;
+      border-block-start: $-popover-tooltip-active;
     }
   }
 
   .sage-popover--right & {
-    top: $-popover-tooltip-horizontal-offset;
-    left: calc(100% + #{$-popover-panel-offset} + #{$-popover-tooltip-width});
+    inset-block-start: $-popover-tooltip-horizontal-offset;
+    inset-inline-start: calc(100% + #{$-popover-panel-offset} + #{$-popover-tooltip-width});
 
     &::after {
-      left: -($-popover-tooltip-width);
-      top: $-popover-tooltip-offset;
+      inset-inline-start: -($-popover-tooltip-width);
+      inset-block-start: $-popover-tooltip-offset;
       transform: translate3d(0, -50%, 0);
-      border-right: $-popover-tooltip-active;
-      border-top: $-popover-tooltip-inactive;
-      border-bottom: $-popover-tooltip-inactive;
+      border-inline-end: $-popover-tooltip-active;
+      border-block-start: $-popover-tooltip-inactive;
+      border-block-end: $-popover-tooltip-inactive;
     }
   }
 
   .sage-popover--bottom & {
-    top: calc(100% + #{$-popover-panel-offset});
-    left: 0;
+    inset-block-start: calc(100% + #{$-popover-panel-offset});
+    inset-inline-start: 0;
 
     &::after {
-      left: $-popover-tooltip-offset;
-      bottom: 100%;
+      inset-inline-start: $-popover-tooltip-offset;
+      inset-block-end: 100%;
       transform: translate3d(-50%, 0, 0);
-      border-left: $-popover-tooltip-inactive;
-      border-right: $-popover-tooltip-inactive;
-      border-bottom: $-popover-tooltip-active;
+      border-inline-start: $-popover-tooltip-inactive;
+      border-inline-end: $-popover-tooltip-inactive;
+      border-block-end: $-popover-tooltip-active;
     }
   }
 
   .sage-popover--bottom-right & {
-    top: calc(100% + #{$-popover-panel-offset});
-    right: 0;
+    inset-block-start: calc(100% + #{$-popover-panel-offset});
+    inset-inline-end: 0;
 
     &::after {
-      right: $-popover-tooltip-offset;
-      bottom: 100%;
+      inset-inline-end: $-popover-tooltip-offset;
+      inset-block-end: 100%;
       transform: translate3d(-50%, 0, 0);
-      border-left: $-popover-tooltip-inactive;
-      border-right: $-popover-tooltip-inactive;
-      border-bottom: $-popover-tooltip-active;
+      border-inline-start: $-popover-tooltip-inactive;
+      border-inline-end: $-popover-tooltip-inactive;
+      border-block-end: $-popover-tooltip-active;
     }
   }
 
   .sage-popover--left & {
-    top: $-popover-tooltip-horizontal-offset;
-    right: calc(100% + #{$-popover-panel-offset} + #{$-popover-tooltip-width});
+    inset-block-start: $-popover-tooltip-horizontal-offset;
+    inset-inline-end: calc(100% + #{$-popover-panel-offset} + #{$-popover-tooltip-width});
 
     &::after {
-      right: -($-popover-tooltip-width);
-      top: $-popover-tooltip-offset;
+      inset-inline-end: -($-popover-tooltip-width);
+      inset-block-start: $-popover-tooltip-offset;
       transform: translate3d(0, -50%, 0);
-      border-left: $-popover-tooltip-active;
-      border-top: $-popover-tooltip-inactive;
-      border-bottom: $-popover-tooltip-inactive;
+      border-inline-start: $-popover-tooltip-active;
+      border-block-start: $-popover-tooltip-inactive;
+      border-block-end: $-popover-tooltip-inactive;
     }
   }
 }

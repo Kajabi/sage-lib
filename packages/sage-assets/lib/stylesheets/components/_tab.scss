@@ -72,7 +72,7 @@ $-tab-color-disabled: map-get($sage-tab-colors, disabled);
   }
 
   &:last-of-type {
-    margin-right: 0;
+    margin-inline-end: 0;
   }
 
   &[aria-disabled="true"],
@@ -93,9 +93,9 @@ $-tab-color-disabled: map-get($sage-tab-colors, disabled);
     @extend %t-sage-body-xsmall-med;
 
     &::after {
-      left: sage-spacing(sm);
-      right: sage-spacing(sm);
-      bottom: sage-spacing(sm);
+      inset-inline-start: sage-spacing(sm);
+      inset-inline-end: sage-spacing(sm);
+      inset-block-end: sage-spacing(sm);
       opacity: 0;
     }
 

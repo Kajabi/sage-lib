@@ -13,7 +13,7 @@
     flex-direction: column;
 
     @media (max-width: sage-breakpoint(sm-max)) {
-      margin-bottom: sage-spacing(sm);
+      margin-block-end: sage-spacing(sm);
     }
 
     @media (min-width: sage-breakpoint(md-min)) {
@@ -35,9 +35,9 @@
 }
 
 .sage-tabs--with-background {
-  padding-top: sage-spacing(sm);
-  padding-left: sage-spacing(xs);
-  padding-right: sage-spacing(xs);
+  padding-block-start: sage-spacing(sm);
+  padding-inline-start: sage-spacing(xs);
+  padding-inline-end: sage-spacing(xs);
   background-color: sage-color(grey, 200);
 }
 
@@ -52,7 +52,7 @@
 .sage-tabs-divider,
 .sage-tabs-container > hr {
   margin: 0;
-  border-top: 1px solid sage-color(grey, 300);
+  border-block-start: 1px solid sage-color(grey, 300);
 }
 
 .sage-tabs-pane {

@@ -48,7 +48,7 @@ $-select-arrow-position-inverse-with-message: calc(100% - #{$-select-height + $-
   @include sage-form-field-label;
 
   grid-area: label;
-  margin-bottom: $-select-margin-label;
+  margin-block-end: $-select-margin-label;
 }
 
 .sage-select__arrow {

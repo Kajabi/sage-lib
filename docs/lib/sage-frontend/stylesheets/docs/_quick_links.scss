@@ -10,7 +10,7 @@ $-quick-links-color-background: sage-color(primary, 200);
 
 .quick-links {
   position: sticky;
-  top: 0;
+  inset-block-start: 0;
   overflow: hidden;
   padding: sage-spacing(2xs) sage-spacing();
   background-color: #fff;
@@ -29,14 +29,14 @@ $-quick-links-color-background: sage-color(primary, 200);
   list-style: none;
 
   &:not(:last-child) {
-    margin-bottom: sage-spacing(2xs);
+    margin-block-end: sage-spacing(2xs);
   }
 }
 
 .quick-links__link {
   display: flex;
   align-items: center;
-  margin-bottom: rem(2px);
+  margin-block-end: rem(2px);
   padding: sage-spacing(2xs) sage-spacing(xs);
   color: $-quick-links-color-text;
   border-radius: sage-border(radius);
@@ -58,7 +58,7 @@ $-quick-links-color-background: sage-color(primary, 200);
 }
 
 .quick-links__link--secondary {
-  margin-left: sage-spacing(sm);
+  margin-inline-start: sage-spacing(sm);
 }
 
 .quick-links__title {

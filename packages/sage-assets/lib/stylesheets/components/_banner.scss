@@ -42,8 +42,8 @@ $-banner-el-icon: "before";
   align-items: center;
   justify-content: center;
   position: fixed;
-  left: 0;
-  top: 0;
+  inset-inline-start: 0;
+  inset-block-start: 0;
   z-index: sage-z-index(negative);
   transform: translateY(-100px);
   width: 100%;
@@ -64,7 +64,7 @@ $-banner-el-icon: "before";
 
   &::#{$-banner-el-icon} {
     @include sage-icon-base(map-get(map-get($-banner-colors, default), icon, pine));
-    margin-right: sage-spacing(sm);
+    margin-inline-end: sage-spacing(sm);
   }
 }
 
@@ -86,19 +86,19 @@ $-banner-el-icon: "before";
 }
 
 .sage-banner-wrapper--context-ladera-top {
-  margin-bottom: $-banner-height-ladera;
+  margin-block-end: $-banner-height-ladera;
 }
 
 .sage-banner__text {
   display: inline-flex;
-  margin-right: auto;
+  margin-inline-end: auto;
   color: inherit;
 }
 
 .sage-banner__icon {
   display: inline-flex;
   align-self: center;
-  margin-right: sage-spacing(sm);
+  margin-inline-end: sage-spacing(sm);
 }
 
 .sage-banner__link {
@@ -111,7 +111,7 @@ $-banner-el-icon: "before";
 }
 
 .sage-banner__close {
-  margin-left: sage-spacing(sm);
+  margin-inline-start: sage-spacing(sm);
 }
 
 .sage-banner__close,

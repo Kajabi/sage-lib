@@ -42,13 +42,13 @@ $-checkbox-focus-outline-color: sage-color(purple, 300);
   }
 
   .sage-list & {
-    margin-bottom: calc(#{sage-spacing(card)} / 2);
+    margin-block-end: calc(#{sage-spacing(card)} / 2);
   }
 
   @include sage-form-toggle-parents;
 
   .sage-panel-controls__bulk-actions & {
-    margin-bottom: 0;
+    margin-block-end: 0;
   }
 
   .sage-panel-controls__bulk-actions > & {
@@ -69,13 +69,13 @@ $-checkbox-focus-outline-color: sage-color(purple, 300);
     border: 1px solid sage-color(grey, 500);
 
     &:first-child {
-      border-top-left-radius: sage-border(radius);
-      border-bottom-left-radius: sage-border(radius);
+      border-start-start-radius: sage-border(radius);
+      border-end-start-radius: sage-border(radius);
     }
 
     &:last-child {
-      border-top-right-radius: sage-border(radius);
-      border-bottom-right-radius: sage-border(radius);
+      border-start-end-radius: sage-border(radius);
+      border-end-end-radius: sage-border(radius);
     }
 
     &:hover {
@@ -92,7 +92,7 @@ $-checkbox-focus-outline-color: sage-color(purple, 300);
   .sage-sortable &,
   .sage-toolbar > &,
   .sage-toolbar__group > & {
-    margin-bottom: 0;
+    margin-block-end: 0;
   }
 }
 
@@ -125,7 +125,7 @@ $-checkbox-focus-outline-color: sage-color(purple, 300);
 
   .sage-panel-controls__bulk-actions--checked & {
     display: unset;
-    padding-right: sage-spacing(sm);
+    padding-block-end: sage-spacing(sm);
   }
 }
 
@@ -148,8 +148,8 @@ $-checkbox-focus-outline-color: sage-color(purple, 300);
     content: "";
     display: block;
     position: absolute;
-    left: 50%;
-    top: 50%;
+    inset-inline-start: 50%;
+    block-start: 50%;
     transition: opacity 0.2s ease-in-out, transform $-checkbox-transition;
     opacity: 0;
   }
@@ -289,19 +289,19 @@ $-checkbox-focus-outline-color: sage-color(purple, 300);
   }
 
   .sage-checkbox & {
-    margin-top: rem(2px);
+    margin-block-start: rem(2px);
   }
 
   &.sage-checkbox, // spcificity that should apply only to `--standalone` variation
   .sage-panel-controls__bulk-actions-checkbox & {
-    margin-top: 0;
+    margin-block-start: 0;
   }
 }
 
 .sage-checkbox__message {
   @include sage-form-toggle-message;
-  margin-left: #{$-checkbox-size + $-checkbox-label-spacing};
-  margin-top: rem(2px);
+  margin-inline-start: #{$-checkbox-size + $-checkbox-label-spacing};
+  margin-block-start: rem(2px);
 
   .sage-checkbox--error &,
   .sage-checkbox__input:invalid + & {
@@ -315,6 +315,6 @@ $-checkbox-focus-outline-color: sage-color(purple, 300);
 }
 
 .sage-checkbox__custom-content {
-  margin-left: #{$-checkbox-size + $-checkbox-label-spacing};
-  margin-top: rem(2px);
+  margin-inline-start: #{$-checkbox-size + $-checkbox-label-spacing};
+  margin-block-start: rem(2px);
 }

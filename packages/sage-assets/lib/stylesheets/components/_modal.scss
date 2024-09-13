@@ -117,18 +117,18 @@ $-modal-inner-size: sage-container(md);
   }
 
   @media (min-width: sage-breakpoint(lg-min)) {
-    margin-top: $-modal-margin-lg;
+    margin-block-start: $-modal-margin-lg;
 
     .sage-drawer & {
-      margin-top: 0;
+      margin-block-start: 0;
     }
   }
 
   @media (min-width: sage-breakpoint(xl-min)) {
-    margin-top: $-modal-margin-xl;
+    margin-block-start: $-modal-margin-xl;
 
     .sage-drawer & {
-      margin-top: 0;
+      margin-block-start: 0;
     }
   }
 
@@ -206,8 +206,8 @@ $-modal-inner-size: sage-container(md);
   .sage-modal--fullscreen & {
     position: fixed;
     z-index: sage-z-index(default, 1);
-    left: 0;
-    right: 0;
+    inset-inline-start: 0;
+    inset-inline-end: 0;
     margin: 0;
     padding: sage-spacing(sm) $-modal-padding-x;
     background-color: sage-color(white);
@@ -244,11 +244,11 @@ $-modal-inner-size: sage-container(md);
 }
 
 .sage-modal__header-aside {
-  margin-left: auto;
+  margin-inline-start: auto;
 
   .sage-modal__header--has-header-actions & {
     order: -2; /* causes the header-aside area to be first in the visual order */
-    margin-left: 0;
+    margin-inline-start: 0;
   }
 }
 
@@ -272,7 +272,7 @@ $-modal-inner-size: sage-container(md);
     margin: 0;
 
     > :first-child {
-      margin-top: sage-spacing(xs);
+      margin-block-start: sage-spacing(xs);
     }
   }
 
@@ -285,20 +285,20 @@ $-modal-inner-size: sage-container(md);
   }
 
   .sage-drawer--compact & {
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: rem(20px);
-    padding-right: rem(20px);
-    padding-bottom: sage-spacing();
-    border-bottom: sage-border(default);
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    padding-inline-start: rem(20px);
+    padding-inline-end: rem(20px);
+    padding-block-end: sage-spacing();
+    border-block-end: sage-border(default);
   }
 
   > :last-child {
-    margin-bottom: 0;
+    margin-block-end: 0;
   }
 
   &:not([class*="sage-modal__content--spacing-"]) p + p {
-    margin-top: sage-spacing();
+    margin-block-start: sage-spacing();
   }
 
   @include clearfix;
@@ -331,7 +331,7 @@ $-modal-inner-size: sage-container(md);
 }
 
 .sage-modal__footer-aside {
-  margin-right: auto;
+  margin-inline-end: auto;
 }
 
 @media (prefers-reduced-motion) {

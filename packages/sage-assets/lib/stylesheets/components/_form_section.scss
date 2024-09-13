@@ -6,20 +6,20 @@
 
 
 .sage-form-section {
-  margin-bottom: sage-spacing();
+  margin-block-end: sage-spacing();
 }
 
 // TODO: refactor extends following final design of form section
 .sage-form-section__info {
 
   @media (max-width: sage-breakpoint(md-max)) {
-    margin-bottom: sage-spacing(md);
+    margin-block-end: sage-spacing(md);
   }
 }
 
 .sage-form-section__title {
-  margin-top: rem(12px);
-  margin-bottom: sage-spacing(md);
+  margin-block-start: rem(12px);
+  margin-block-end: sage-spacing(md);
 }
 
 .sage-form-section__subtitle {
@@ -47,7 +47,7 @@
     flex-direction: column;
 
     > :last-child {
-      margin-bottom: 0;
+      margin-block-end: 0;
     }
   }
 }

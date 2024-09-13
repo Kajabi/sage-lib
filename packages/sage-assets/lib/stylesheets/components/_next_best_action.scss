@@ -52,11 +52,11 @@ $-next-best-action-colors: (
 }
 
 .sage-next-best-action__title {
-  margin-bottom: sage-spacing(xs);
+  margin-block-end: sage-spacing(xs);
 }
 
 .sage-next-best-action__description {
-  margin-bottom: sage-spacing(sm);
+  margin-block-end: sage-spacing(sm);
 }
 
 .sage-next-best-action__close {

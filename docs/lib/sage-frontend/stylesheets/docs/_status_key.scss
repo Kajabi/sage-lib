@@ -9,12 +9,12 @@
   align-items: center;
   flex-wrap: wrap;
   flex-grow: 1;
-  margin-right: sage-spacing(sm);
+  margin-inline-end: sage-spacing(sm);
 
   &__wrapper {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: sage-spacing();
+    margin-block-end: sage-spacing();
   }
 
   &__icon {
@@ -49,7 +49,7 @@
   }
 
   &__text {
-    margin-left: sage-spacing(xs);
+    margin-inline-start: sage-spacing(xs);
     font-size: sage-font-size(body-sm);
     font-weight: sage-font-weight(semibold);
     color: sage-color(grey, 700);
@@ -60,6 +60,6 @@
   }
 
   @media screen and (min-width: sage-breakpoint(xl-min)) {
-    margin-right: sage-spacing(lg);
+    margin-inline-end: sage-spacing(lg);
   }
 }

@@ -23,8 +23,8 @@ $-menubtn-focus-outline-color: currentColor;
     content: none;
     display: inline-block;
     position: absolute;
-    left: 50%;
-    top: 50%;
+    inset-inline-start: 50%;
+    inset-block-start: 50%;
     transform: translate3d(-50%, -50%, 0) scale(0.94);
     width: calc(100% + ((#{$-menubtn-focus-outline-width} * 1px ) + (#{$-menubtn-focus-outline-size} * 2)));
     height: calc(100% + ((#{$-menubtn-focus-outline-width} * 1px) + (#{$-menubtn-focus-outline-size} * 2)));
@@ -45,8 +45,8 @@ $-menubtn-focus-outline-color: currentColor;
     position: relative;
     height: $-menubtn-toggle-size;
     width: $-menubtn-toggle-size;
-    margin-right: sage-spacing();
-    margin-bottom: 0;
+    margin-inline-end: sage-spacing();
+    margin-block-end: 0;
     cursor: pointer;
 
     &::after {
@@ -83,7 +83,7 @@ $-menubtn-focus-outline-color: currentColor;
   transition: transform 0.2s ease-out, opacity 0.15s ease-in-out;
 
   &:not(:first-child) {
-    margin-top: rem(6px);
+    margin-block-start: rem(6px);
   }
 
   &:nth-child(1) {

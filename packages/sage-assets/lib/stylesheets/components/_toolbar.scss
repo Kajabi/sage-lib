@@ -32,6 +32,6 @@
   }
 
   &:not(:last-child) {
-    margin-right: sage-spacing(panel);
+    margin-inline-end: sage-spacing(panel);
   }
 }

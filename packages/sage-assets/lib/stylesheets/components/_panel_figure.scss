@@ -32,12 +32,12 @@ $-panel-figure-default-background-color: sage-color(grey, 150);
 .sage-panel__figure--aspect-ratio {
   position: relative;
   height: 0;
-  padding-top: calc(100% / var(--sage-figure-aspect-ratio));
+  padding-block-start: calc(100% / var(--sage-figure-aspect-ratio));
 
   img {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    inset-block-start: 50%;
+    inset-inline-start: 50%;
     transform: translate(-50%, -50%);
     height: 100%;
   }
@@ -53,7 +53,7 @@ $-panel-figure-default-background-color: sage-color(grey, 150);
 
   &.sage-panel__figure--aspect-ratio {
     img {
-      top: calc(50% + (#{$-panel-figure-padding} / 2));
+      inset-block-start: calc(50% + (#{$-panel-figure-padding} / 2));
     }
   }
 }

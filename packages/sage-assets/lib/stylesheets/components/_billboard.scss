@@ -26,7 +26,7 @@ $-billboard-title-spacing: sage-spacing(sm);
 
 .sage-billboard__title {
   @extend %t-sage-heading-5;
-  margin-bottom: $-billboard-title-spacing;
+  margin-block-end: $-billboard-title-spacing;
   color: $-billboard-text-color;
 }
 

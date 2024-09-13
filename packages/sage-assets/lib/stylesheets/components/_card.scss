@@ -33,12 +33,12 @@ $-sage-card-background: transparent;
 
 .sage-card--clear-padding-top,
 .sage-card--clear-padding-both {
-  padding-top: 0;
+  padding-block-start: 0;
 }
 
 .sage-card--clear-padding-bottom,
 .sage-card--clear-padding-both {
-  padding-bottom: 0;
+  padding-block-end: 0;
 }
 
 .sage-card--compact {
@@ -100,8 +100,8 @@ $-sage-card-background: transparent;
   &::before {
     content: "";
     position: absolute;
-    left: 0;
-    top: 50%;
+    inset-inline-start: 0;
+    inset-block-start: 50%;
     width: 100%;
     height: 1px;
     background: sage-color(grey, 200);
@@ -195,27 +195,27 @@ $-sage-card-background: transparent;
 .sage-card__list-item {
   @include sage-grid-card-row();
 
-  margin-bottom: rem(-1px);
+  margin-block-end: rem(-1px);
   padding: sage-spacing(xs) sage-spacing();
-  border-top: sage-border(default);
-  border-bottom: sage-border(default);
+  border-block-start: sage-border(default);
+  border-block-end: sage-border(default);
 
   .sage-card__list--block-space-sm & {
-    padding-top: sage-spacing(sm);
-    padding-bottom: sage-spacing(sm);
+    padding-block-start: sage-spacing(sm);
+    padding-block-end: sage-spacing(sm);
   }
 
   .sage-card__list:first-child &:first-child {
-    border-top: transparent;
+    border-block-start: transparent;
   }
 
   .sage-card__list:last-child &:last-child {
-    border-bottom: transparent;
+    border-block-end: transparent;
   }
 
   &:first-child {
     .sage-card__list--hide-first-border & {
-      border-top: 0;
+      border-block-start: 0;
     }
   }
 }

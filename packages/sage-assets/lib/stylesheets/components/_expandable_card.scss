@@ -17,13 +17,13 @@ $-expandable-card-padding-xs: sage-spacing(xs);
     border: 1px solid $-expandable-card-border-color;
 
     &:not(:last-child) {
-      margin-bottom: sage-spacing();
+      margin-block-end: sage-spacing();
     }
 
     .sage-expandable-card__header {
       padding: sage-spacing();
-      padding-bottom: 0;
-      margin-bottom: -#{sage-spacing(xs)};
+      padding-block-end: 0;
+      margin-block-end: -#{sage-spacing(xs)};
     }
   }
 }
@@ -40,7 +40,7 @@ $-expandable-card-padding-xs: sage-spacing(xs);
     visibility: visible;
     overflow: initial;
     height: auto;
-    margin-top: sage-spacing(xs);
+    margin-block-start: sage-spacing(xs);
   }
 
   .sage-accordion & {
@@ -48,22 +48,22 @@ $-expandable-card-padding-xs: sage-spacing(xs);
   }
 
   .sage-accordion [aria-expanded="false"] + & {
-    padding-top: 0;
-    padding-bottom: 0;
+    padding-block-start: 0;
+    padding-block-end: 0;
   }
 
   > :last-child {
-    margin-bottom: 0;
+    margin-block-end: 0;
   }
 }
 
 .sage-expandable-card__body-bordered {
-  padding-left: $-expandable-card-padding;
-  padding-right: $-expandable-card-padding;
+  padding-inline-start: $-expandable-card-padding;
+  padding-inline-end: $-expandable-card-padding;
 
   .sage-expandable-card--expanded & {
-    padding-top: $-expandable-card-padding;
-    padding-bottom: $-expandable-card-padding;
+    padding-block-start: $-expandable-card-padding;
+    padding-block-end: $-expandable-card-padding;
     border-radius: $-expandable-card-border-radius;
     border: 1px solid $-expandable-card-border-color;
     background: $-expandable-card-bg-color;
@@ -77,7 +77,7 @@ $-expandable-card-padding-xs: sage-spacing(xs);
   pds-icon {
     justify-content: center;
     transform: rotateZ(90deg);
-    margin-right: rem(8px);
+    margin-inline-end: rem(8px);
     font-size: rem(8px);
     transition: transform 0.125s linear;
   }

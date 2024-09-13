@@ -86,10 +86,10 @@ $-link-base-styles: (
     &::before {
       content: "";
       position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
+      inset-block-start: 0;
+      inset-inline-end: 0;
+      inset-block-end: 0;
+      inset-inline-start: 0;
       z-index: sage-z-index(default, 1);
       box-shadow: sage-border-interactive();
       border-radius: sage-border(radius-medium);
@@ -157,8 +157,8 @@ $-link-base-styles: (
 .sage-link--launch .t-sage--truncate,
 .sage-type a[target="_blank"]:not(.sage-link--no-launch):not([class*="icon-right-launch"]) .t-sage--truncate {
   &::after {
-    margin-left: sage-spacing(2xs);
-    margin-right: sage-spacing(2xs);
+    margin-inline-start: sage-spacing(2xs);
+    margin-inline-end: sage-spacing(2xs);
     @include sage-icon-base(launch, sm, pine);
   }
 }
@@ -196,7 +196,7 @@ $-link-base-styles: (
   }
 
   .sage-page-heading__title & {
-    margin-left: sage-spacing(xs);
+    margin-inline-start: sage-spacing(xs);
   }
 }
 
@@ -205,14 +205,14 @@ $-link-base-styles: (
   align-items: center;
 
   &::before {
-    margin-right: sage-spacing(xs);
+    margin-inline-end: sage-spacing(xs);
   }
 }
 
 .sage-link--help-icon-only {
   display: inline-flex;
   align-items: center;
-  margin-left: sage-spacing(2xs);
+  margin-inline-start: sage-spacing(2xs);
   @include sage-focus-outline(
     $outline-offset-inline: 4px,
     $outline-offset-block: 4px,
