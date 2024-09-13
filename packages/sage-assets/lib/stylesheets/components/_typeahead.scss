@@ -78,13 +78,13 @@ $-typeahead-item-height: rem(68px);
   }
 
   .sage-typeahead__item:first-child &::after {
-    border-top-left-radius: sage-border(radius);
-    border-top-right-radius: sage-border(radius);
+    border-start-start-radius: sage-border(radius);
+    border-start-end-radius: sage-border(radius);
   }
 
   .sage-typeahead__item:last-child &::after {
-    border-bottom-left-radius: sage-border(radius);
-    border-bottom-right-radius: sage-border(radius);
+    border-end-start-radius: sage-border(radius);
+    border-end-end-radius: sage-border(radius);
   }
 
   > * {

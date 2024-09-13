@@ -33,14 +33,14 @@ $-input-text-height: sage-font-size(body);
   .sage-toolbar__group & {
     &:first-child:not(:only-child) .sage-input__field {
       border-radius: sage-border(radius-medium);
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
+      border-start-end-radius: 0;
+      border-end-end-radius: 0;
     }
 
     &:last-child .sage-input__field {
       border-radius: sage-border(radius-medium);
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
+      border-start-start-radius: 0;
+      border-end-start-radius: 0;
     }
   }
 
