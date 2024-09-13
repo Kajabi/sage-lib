@@ -89,7 +89,7 @@ $-input-text-height: sage-font-size(body);
   grid-row: 2 / 3;
   grid-column: 1 / 2;
   top: 0;
-  left: sage-spacing(sm);
+  inset-inline-start: sage-spacing(sm);
   padding-inline-end: sage-spacing(2xs);
 }
 
@@ -97,7 +97,7 @@ $-input-text-height: sage-font-size(body);
   grid-row: 2 / 3;
   grid-column: -1 / -2;
   top: 0;
-  left: sage-spacing(sm);
+  inset-inline-end: sage-spacing(sm);
   padding-inline-start: sage-spacing(2xs);
 }
 
