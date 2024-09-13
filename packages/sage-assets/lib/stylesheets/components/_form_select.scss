@@ -84,7 +84,8 @@ $-select-arrow-position-inverse-with-message: calc(100% - #{$-select-height + $-
   grid-area: field;
   position: relative;
   height: $-select-height;
-  padding: 0 ($-select-padding-x + $-select-arrow-icon-width + rem(4px)) 0 $-select-padding-x;
+  padding-block: 0;
+  padding-inline: $-select-padding-x ($-select-padding-x + $-select-arrow-icon-width + rem(4px));
   outline: none;
   transition: border map-get($sage-transitions, default);
   cursor: pointer;

@@ -60,9 +60,9 @@ $-meter-bar-divider-color: sage-color(white);
     content: "";
     display: block;
     position: absolute;
-    inset-inline-start: 0;
-    inset-inline-end: 0;
-    inset-block-start: 50%;
+    left: 0;
+    right: 0;
+    top: 50%;
     transform: translateY(-50%);
     height: $-meter-bar-height;
     background: linear-gradient(
