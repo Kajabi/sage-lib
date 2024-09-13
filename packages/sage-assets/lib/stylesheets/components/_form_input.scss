@@ -88,16 +88,16 @@ $-input-text-height: sage-font-size(body);
 .sage-input__affix--prefix {
   grid-row: 2 / 3;
   grid-column: 1 / 2;
-  inset-block-start: 0;
-  inset-inline-start: sage-spacing(sm);
+  top: 0;
+  left: sage-spacing(sm);
   padding-inline-end: sage-spacing(2xs);
 }
 
 .sage-input__affix--suffix {
   grid-row: 2 / 3;
   grid-column: -1 / -2;
-  inset-block-start: 0;
-  inset-inline-start: sage-spacing(sm);
+  top: 0;
+  left: sage-spacing(sm);
   padding-inline-start: sage-spacing(2xs);
 }
 

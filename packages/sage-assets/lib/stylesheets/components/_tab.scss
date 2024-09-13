@@ -93,9 +93,9 @@ $-tab-color-disabled: map-get($sage-tab-colors, disabled);
     @extend %t-sage-body-xsmall-med;
 
     &::after {
-      inset-inline-start: sage-spacing(sm);
-      inset-inline-end: sage-spacing(sm);
-      inset-block-end: sage-spacing(sm);
+      left: sage-spacing(sm);
+      right: sage-spacing(sm);
+      bottom: sage-spacing(sm);
       opacity: 0;
     }
 

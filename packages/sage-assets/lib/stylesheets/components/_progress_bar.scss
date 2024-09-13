@@ -47,6 +47,10 @@ $-progress-bar-height: sage-spacing(xs);
   background-color: var(--progress-bar-value-color, sage-color(mercury, 500));
   border-radius: sage-border(radius-small);
 
+  [dir="rtl"] & {
+    transform-origin: center right;
+  }
+
   .sage-modal__header & {
     border-radius: 0;
   }
