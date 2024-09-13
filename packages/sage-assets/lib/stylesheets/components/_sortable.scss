@@ -46,14 +46,14 @@ $-sortable-image-height: rem(48px);
     transition-property: border-color, box-shadow;
 
     &:first-child {
-      border-top-left-radius: sage-border(radius);
-      border-top-right-radius: sage-border(radius);
+      border-start-start-radius: sage-border(radius);
+      border-start-end-radius: sage-border(radius);
       border-block-start: sage-border();
     }
 
     &:last-child {
-      border-bottom-left-radius: sage-border(radius);
-      border-bottom-right-radius: sage-border(radius);
+      border-end-start-radius: sage-border(radius);
+      border-end-end-radius: sage-border(radius);
     }
   }
 

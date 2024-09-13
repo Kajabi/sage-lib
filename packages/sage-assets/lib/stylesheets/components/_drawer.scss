@@ -49,8 +49,8 @@
     padding: rem(20px) 1rem;
     padding-inline-end: rem(60px);
     font-size: sage-font-size(body-sm);
-    border-bottom-left-radius: sage-border(radius-large);
-    border-bottom-right-radius: sage-border(radius-large);
+    border-end-start-radius: sage-border(radius-large);
+    border-end-end-radius: sage-border(radius-large);
     border: 0;
 
     &:focus {

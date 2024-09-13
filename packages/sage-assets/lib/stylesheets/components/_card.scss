@@ -141,8 +141,8 @@ $-sage-card-background: transparent;
 .sage-card__figure--bleed-bottom {
   width: calc(100% + #{2 * sage-spacing(sm)});
   margin: 0 (-1 * sage-spacing(sm)) (-1 * sage-spacing(sm));
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+  border-start-start-radius: 0;
+  border-start-end-radius: 0;
 }
 
 .sage-card__figure--bleed-sides {
@@ -154,8 +154,8 @@ $-sage-card-background: transparent;
 .sage-card__figure--bleed-top {
   width: calc(100% + #{2 * sage-spacing(sm)});
   margin: (-1 * sage-spacing(sm)) (-1 * sage-spacing(sm)) 0;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
+  border-end-start-radius: 0;
+  border-end-end-radius: 0;
 }
 
 .sage-card__figure--wistia {
@@ -182,8 +182,8 @@ $-sage-card-background: transparent;
 .sage-card__header-layout {
   width: calc(100% + #{2 * sage-spacing(card)});
   margin: (-1 * sage-spacing(card)) (-1 * sage-spacing(card)) (-1 * sage-spacing(card));
-  border-top-left-radius: sage-border(radius-large);
-  border-top-right-radius: sage-border(radius-large);
+  border-start-start-radius: sage-border(radius-large);
+  border-start-end-radius: sage-border(radius-large);
 }
 
 .sage-card__list {
