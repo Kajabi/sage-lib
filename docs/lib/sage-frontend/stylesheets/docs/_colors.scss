@@ -11,8 +11,8 @@
 // color block groupings
 .colors {
   overflow: hidden;
-  margin-top: sage-spacing();
-  margin-bottom: sage-spacing();
+  margin-block-start: sage-spacing();
+  margin-block-end: sage-spacing();
   border-radius: sage-border(radius);
 }
 
@@ -99,7 +99,7 @@
 
       &::after {
         content: "#{$hex}";
-        padding-left: sage-spacing(xs);
+        padding-inline-start: sage-spacing(xs);
         font-weight: sage-font-weight(semibold);
         text-transform: uppercase;
       }

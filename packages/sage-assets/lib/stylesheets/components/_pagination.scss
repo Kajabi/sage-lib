@@ -23,7 +23,7 @@ $-pagination-focus-ring-color: sage-color(purple, 300);
   flex-grow: 1;
 
   .sage-panel-controls__default-controls & {
-    margin-right: sage-spacing();
+    margin-inline-end: sage-spacing();
   }
 }
 
@@ -43,12 +43,12 @@ $-pagination-focus-ring-color: sage-color(purple, 300);
   display: flex;
   flex-flow: row wrap;
   gap: sage-spacing(2xs);
-  padding-left: 0;
+  padding-inline-start: 0;
   list-style-type: none;
   border-radius: $-pagination-radius;
 
   .sage-panel-controls & {
-    margin-left: auto;
+    margin-inline-start: auto;
   }
 }
 
@@ -61,11 +61,11 @@ $-pagination-focus-ring-color: sage-color(purple, 300);
   }
 
   .sage-panel-controls--show-pagination & {
-    margin-right: rem(12px);
+    margin-inline-end: rem(12px);
     border: 0;
 
     &:last-of-type {
-      margin-right: 0;
+      margin-inline-end: 0;
     }
   }
 }
@@ -135,13 +135,13 @@ $-pagination-focus-ring-color: sage-color(purple, 300);
   pointer-events: none;
 
   [class*="sage-icon"] {
-    margin-top: sage-spacing(xs);
+    margin-block-start: sage-spacing(xs);
   }
 }
 
 .sage-pagination__count {
   @extend %t-sage-body;
-  padding-right: sage-spacing();
+  padding-inline-end: sage-spacing();
 
   /* stylelint-disable selector-max-compound-selectors */
   .sage-panel-controls--show-pagination .sage-panel-controls__bulk-actions--checked + .sage-panel-controls__toolbar .sage-pagination & {
@@ -151,5 +151,5 @@ $-pagination-focus-ring-color: sage-color(purple, 300);
 }
 
 .sage-pagination__count--solo {
-  padding-right: 0;
+  padding-inline-end: 0;
 }

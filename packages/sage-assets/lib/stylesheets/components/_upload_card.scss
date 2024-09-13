@@ -67,13 +67,13 @@ $-upload-card-mobile-breakpoint: 609px;
     flex-flow: column;
     align-items: flex-start;
     max-width: $-upload-card-body-width-stack;
-    margin-left: auto;
-    margin-right: auto;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
   }
 }
 
 .sage-upload-card__errors {
-  margin-top: sage-spacing(sm);
+  margin-block-start: sage-spacing(sm);
 
   > p {
     @extend %t-sage-body-med;
@@ -81,7 +81,7 @@ $-upload-card-mobile-breakpoint: 609px;
     color: $-upload-card-error-color;
 
     &:not(:last-child) {
-      margin-bottom: sage-spacing(2xs);
+      margin-block-end: sage-spacing(2xs);
     }
   }
 
@@ -103,7 +103,7 @@ $-upload-card-mobile-breakpoint: 609px;
   color: sage-color(grey, 600);
 
   .sage-upload-card:not(.sage-uploaded-card--selected) & {
-    margin-bottom: sage-spacing(2xs);
+    margin-block-end: sage-spacing(2xs);
   }
 }
 
@@ -118,7 +118,7 @@ $-upload-card-mobile-breakpoint: 609px;
 
 .sage-upload-card__preview {
   width: 100%;
-  margin-right: 0;
+  margin-inline-end: 0;
   text-align: center;
   border-radius: $-upload-card-preview-border-radius;
   aspect-ratio: var(--sage-upload-card-aspect-ratio-stack);

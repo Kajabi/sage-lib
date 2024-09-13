@@ -6,17 +6,17 @@
 
 
 .sage-list {
-  padding-left: 0;
+  padding-inline-start: 0;
   list-style: none;
-  
+
   // TODO: These styles interfered with the new List component and should be deprecated.
   &:not(.sage-list--inline-compact):not(.sage-list--inline-fit-compact):not(.sage-list__item) {
-    margin-right: -1 * sage-spacing(sm);
-    margin-left: -1 * sage-spacing(sm);
+    margin-inline-end: -1 * sage-spacing(sm);
+    margin-inline-start: -1 * sage-spacing(sm);
 
     > li {
-      margin-right: sage-spacing(sm);
-      margin-left: sage-spacing(sm);
+      margin-inline-end: sage-spacing(sm);
+      margin-inline-start: sage-spacing(sm);
     }
   }
 }
@@ -30,11 +30,11 @@
 .sage-list--inline-fit,
 .sage-list--inline-fit-compact {
   display: flex;
-  
+
   @media (max-width: 767px) {
     flex-flow: row wrap;
   }
-  
+
   @media (min-width: 768px) {
     flex-flow: row nowrap;
   }

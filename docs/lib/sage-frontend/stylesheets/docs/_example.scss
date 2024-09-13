@@ -62,26 +62,26 @@ $-example-code-preview-button-bg: rgba(sage-color(primary, 300), 0.75);
 }
 
 .example__block {
-  margin-top: sage-spacing(sm);
-  margin-bottom: sage-spacing(sm);
+  margin-block-start: sage-spacing(sm);
+  margin-block-end: sage-spacing(sm);
 }
 
 .example__block--md {
-  margin-top: sage-spacing(md);
-  margin-bottom: sage-spacing(md);
+  margin-block-start: sage-spacing(md);
+  margin-block-end: sage-spacing(md);
 }
 
 .example__block--lg {
-  margin-top: sage-spacing(lg);
-  margin-bottom: sage-spacing(lg);
+  margin-block-start: sage-spacing(lg);
+  margin-block-end: sage-spacing(lg);
 }
 
 .example__expand-btn {
   @include sage-button-style-reset();
   position: absolute;
   z-index: sage-z_index(raised);
-  bottom: sage-spacing(xs);
-  left: 0;
+  inset-block-end: sage-spacing(xs);
+  inset-inline-start: 0;
   width: 100%;
   padding: sage-spacing(xs);
   color: $-example-code-preview-button-color;
@@ -131,8 +131,8 @@ $-example-code-preview-button-bg: rgba(sage-color(primary, 300), 0.75);
   max-height: $-example-code-preview-height;
 
   .prettyprint {
-    margin-bottom: 0;
-    padding-bottom: sage-spacing(xl);
+    margin-block-end: 0;
+    padding-block-end: sage-spacing(xl);
   }
 
   &::before {
@@ -140,9 +140,9 @@ $-example-code-preview-button-bg: rgba(sage-color(primary, 300), 0.75);
     display: block;
     z-index: sage-z-index(default, 100);
     position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    inset-inline-start: 0;
+    inset-inline-end: 0;
+    inset-block-end: 0;
     height: 100%;
     background-image: linear-gradient(to bottom, rgba($docs-code-editor-background, 0) 0%, rgba($docs-code-editor-background, 0.9) 100%);
     transition: map-get($sage-transitions, default);
@@ -168,7 +168,7 @@ $-example-code-preview-button-bg: rgba(sage-color(primary, 300), 0.75);
   }
   .sage-card__header {
     padding: sage-spacing();
-    padding-bottom: sage-spacing(xs);
+    padding-block-end: sage-spacing(xs);
     code {
       background: sage-color(grey, 300);
     }

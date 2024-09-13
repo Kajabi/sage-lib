@@ -27,7 +27,7 @@ $-input-text-height: sage-font-size(body);
   .sage-toolbar & {
     height: auto;
     width: 100%;
-    margin-bottom: 0;
+    margin-block-end: 0;
   }
 
   .sage-toolbar__group & {
@@ -59,7 +59,7 @@ $-input-text-height: sage-font-size(body);
 
 .sage-form-field--error {
   .sage-upload-card & {
-    margin-top: sage-spacing(sm);
+    margin-block-start: sage-spacing(sm);
   }
 }
 
@@ -88,24 +88,24 @@ $-input-text-height: sage-font-size(body);
 .sage-input__affix--prefix {
   grid-row: 2 / 3;
   grid-column: 1 / 2;
-  top: 0;
-  left: sage-spacing(sm);
-  padding-right: sage-spacing(2xs);
+  inset-block-start: 0;
+  inset-inline-start: sage-spacing(sm);
+  padding-inline-end: sage-spacing(2xs);
 }
 
 .sage-input__affix--suffix {
   grid-row: 2 / 3;
   grid-column: -1 / -2;
-  top: 0;
-  right: sage-spacing(sm);
-  padding-left: sage-spacing(2xs);
+  inset-block-start: 0;
+  inset-inline-start: sage-spacing(sm);
+  padding-inline-start: sage-spacing(2xs);
 }
 
 .sage-input__label {
   @include sage-form-field-label;
 
   grid-area: label;
-  margin-bottom: sage-spacing(xs);
+  margin-block-end: sage-spacing(xs);
 
   // input labels within toolbar groups are visually hidden to maintain alignment
   .sage-toolbar__group & {
@@ -125,11 +125,11 @@ $-input-text-height: sage-font-size(body);
   padding: sage-spacing(xs) sage-spacing(sm);
 
   .sage-input--has-icon & {
-    padding-right: $-input-popover-size;
+    padding-inline-end: $-input-popover-size;
   }
 
   .sage-input--has-popover & {
-    padding-right: $-input-popover-size;
+    padding-inline-end: $-input-popover-size;
   }
 
   .sage-toolbar__group & {
