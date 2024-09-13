@@ -10,7 +10,7 @@ $-indicator-size: rem(6px);
 .sage-indicator-list {
   display: flex;
   align-items: center;
-  padding-left: 0;
+  padding-inline-start: 0;
 }
 
 .sage-indicator {
@@ -24,13 +24,13 @@ $-indicator-size: rem(6px);
   }
 
   &:not(:last-child) {
-    margin-right: 8px;
+    margin-inline-end: 8px;
   }
 }
 
 .sage-indicator-text {
   .sage-modal & {
-    margin-top: sage-spacing(2xs);
+    margin-block-start: sage-spacing(2xs);
   }
 }
 

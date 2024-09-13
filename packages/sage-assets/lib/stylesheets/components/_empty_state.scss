@@ -30,8 +30,8 @@ $-empty-state-page-max-width: rem(1064px);
 
 .sage-empty-state--center {
   position: absolute;
-  left: 50%;
-  top: 50%;
+  inset-inline-start: 50%;
+  inset-block-start: 50%;
   transform: translate(-50%, -50%);
   padding: sage-spacing();
 

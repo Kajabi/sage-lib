@@ -19,22 +19,22 @@ $-toast-bottom-spacing: sage-spacing(xs);
 
 @keyframes sage-toast--animate-in-default {
   from {
-    margin-bottom: -$-toast-height-default;
+    margin-block-end: -$-toast-height-default;
     opacity: 0;
   }
   to {
-    margin-bottom: $-toast-bottom-spacing;
+    margin-block-end: $-toast-bottom-spacing;
     opacity: 1;
   }
 }
 
 @keyframes sage-toast--animate-in-mobile {
   from {
-    margin-bottom: -$-toast-height-mobile;
+    margin-block-end: -$-toast-height-mobile;
     opacity: 0;
   }
   to {
-    margin-bottom: $-toast-bottom-spacing;
+    margin-block-end: $-toast-bottom-spacing;
     opacity: 1;
   }
 }
@@ -42,22 +42,22 @@ $-toast-bottom-spacing: sage-spacing(xs);
 .sage-toast-container {
   display: flex;
   position: fixed;
-  right: 0;
-  bottom: 0;
+  inset-inline-end: 0;
+  inset-block-end: 0;
   flex-direction: column;
   align-items: flex-end;
   z-index: sage-z-index(priority);
 
   @media #{$-toast-breakpoint-default} {
-    padding-bottom: $-toast-viewport-spacing-default - $-toast-bottom-spacing;
-    padding-left: $-toast-viewport-spacing-default;
-    padding-right: $-toast-viewport-spacing-default;
+    padding-block-end: $-toast-viewport-spacing-default - $-toast-bottom-spacing;
+    padding-inline-start: $-toast-viewport-spacing-default;
+    padding-inline-end: $-toast-viewport-spacing-default;
   }
 
   @media #{$-toast-breakpoint-mobile} {
-    padding-bottom: $-toast-viewport-spacing-mobile - $-toast-bottom-spacing;
-    padding-left: $-toast-viewport-spacing-mobile;
-    padding-right: $-toast-viewport-spacing-mobile;
+    padding-block-end: $-toast-viewport-spacing-mobile - $-toast-bottom-spacing;
+    padding-inline-start: $-toast-viewport-spacing-mobile;
+    padding-inline-end: $-toast-viewport-spacing-mobile;
   }
 }
 
@@ -66,9 +66,9 @@ $-toast-bottom-spacing: sage-spacing(xs);
   position: relative;
   align-items: center;
   max-width: $-toast-max-width;
-  margin-bottom: $-toast-bottom-spacing;
-  padding-top: sage-spacing(xs);
-  padding-bottom: sage-spacing(xs);
+  margin-block-end: $-toast-bottom-spacing;
+  padding-block-start: sage-spacing(xs);
+  padding-block-end: sage-spacing(xs);
   padding: 0 sage-spacing(md);
   color: sage-color(white);
   border-radius: sage-border(radius-medium);
@@ -80,16 +80,16 @@ $-toast-bottom-spacing: sage-spacing(xs);
     min-height: $-toast-height-default;
     width: auto;
     min-width: rem(350px);
-    padding-left: sage-spacing(lg);
-    padding-right: sage-spacing(lg);
+    padding-inline-start: sage-spacing(lg);
+    padding-inline-end: sage-spacing(lg);
     animation-name: sage-toast--animate-in-default;
   }
 
   @media #{$-toast-breakpoint-mobile} {
     min-height: $-toast-height-mobile;
     width: fit-content;
-    padding-left: sage-spacing(xs);
-    padding-right: sage-spacing(xs);
+    padding-inline-start: sage-spacing(xs);
+    padding-inline-end: sage-spacing(xs);
     animation-name: sage-toast--animate-in-mobile;
   }
 
@@ -105,7 +105,7 @@ $-toast-bottom-spacing: sage-spacing(xs);
 
 .sage-toast__icon {
   display: inline-flex;
-  margin-right: sage-spacing(xs);
+  margin-inline-end: sage-spacing(xs);
   color: sage-color(white);
 }
 
@@ -120,7 +120,7 @@ $-toast-bottom-spacing: sage-spacing(xs);
   @include truncate();
 
   padding: 0;
-  margin-right: auto;
+  margin-inline-end: auto;
   color: sage-color(white);
 
   @extend %t-sage-body-small-semi;
@@ -132,7 +132,7 @@ $-toast-bottom-spacing: sage-spacing(xs);
 
   display: inline-flex;
   align-items: center;
-  margin-left: sage-spacing(sm);
+  margin-inline-start: sage-spacing(sm);
   white-space: nowrap;
   color: sage-color(white);
   border-radius: sage-border(radius-large);

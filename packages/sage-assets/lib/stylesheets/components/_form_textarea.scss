@@ -37,7 +37,7 @@ $-textarea-color-default: sage-color(charcoal, 300);
   @include sage-form-field-label;
 
   grid-area: label;
-  margin-bottom: $-textarea-label-margin;
+  margin-block-end: $-textarea-label-margin;
 }
 
 .sage-textarea__field {
