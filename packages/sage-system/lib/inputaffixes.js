@@ -29,14 +29,27 @@ Sage.inputaffixes = (() => {
       const elLabel = makeLabel(elRoot.dataset.jsInputPrefix, 'prefix');
       elRoot.appendChild(elLabel);
       elRoot.classList.add(prefixRootClass);
-      elInput.style.paddingLeft = `${elLabel.offsetWidth + inputPaddingOffset}px`;
+      const parentDir = elRoot.closest("html").getAttribute('dir');
+      console.log("parentDir", parentDir);
+
+      if (parentDir === 'rtl') {
+        elInput.style.paddingRight = `${elLabel.offsetWidth + inputPaddingOffset}px`;
+      } else {
+        elInput.style.paddingLeft = `${elLabel.offsetWidth + inputPaddingOffset}px`;
+      }
     }
 
     if (elRoot.dataset.jsInputSuffix) {
       const elLabel = makeLabel(elRoot.dataset.jsInputSuffix, 'suffix');
       elRoot.appendChild(elLabel);
       elRoot.classList.add(suffixRootClass);
-      elInput.style.paddingRight = `${elLabel.offsetWidth + inputPaddingOffset}px`;
+      const parentDir = elRoot.closest("html").getAttribute('dir');
+
+      if (parentDir === 'rtl') {
+        elInput.style.paddingLeft = `${elLabel.offsetWidth + inputPaddingOffset}px`;
+      } else {
+        elInput.style.paddingRight = `${elLabel.offsetWidth + inputPaddingOffset}px`;
+      }
     }
   };
 
