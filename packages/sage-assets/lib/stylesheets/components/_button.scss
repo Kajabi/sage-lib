@@ -475,7 +475,7 @@ $-btn-loading-min-height: rem(36px);
     }
 
     &::after {
-      inset-inline-start: 7px;
+      left: 7px;
       font-size: 11px;
       font-weight: sage-font-weight(bold);
     }

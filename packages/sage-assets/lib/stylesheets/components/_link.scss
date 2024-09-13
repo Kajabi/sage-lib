@@ -86,10 +86,10 @@ $-link-base-styles: (
     &::before {
       content: "";
       position: absolute;
-      inset-block-start: 0;
-      inset-inline-end: 0;
-      inset-block-end: 0;
-      inset-inline-start: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
       z-index: sage-z-index(default, 1);
       box-shadow: sage-border-interactive();
       border-radius: sage-border(radius-medium);

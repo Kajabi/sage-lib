@@ -47,8 +47,8 @@ $-loader-lower-opacity: 0.4;
 .sage-loader--bar {
   overflow: hidden;
   position: relative;
-  inset-block-start: 50%;
-  inset-inline-start: 50%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
   max-width: $-loader-bar-width;
@@ -56,13 +56,19 @@ $-loader-lower-opacity: 0.4;
   border-radius: sage-border(radius);
   background-color: $-loader-bar-bg-color;
 
+  [dir="rtl"] & {
+    left: initial;
+    right: 50%;
+    transform: translate(50%, -50%);
+  }
+
   &::before,
   &::after {
     content: "";
     z-index: sage-z-index(default, 2);
     position: absolute;
-    inset-block-start: 0;
-    inset-inline-start: 0;
+    top: 0;
+    left: 0;
     width: 0;
     height: $-loader-bar-height;
     border-radius: sage-border(radius);
@@ -141,15 +147,15 @@ $-loader-lower-opacity: 0.4;
     width: 0;
   }
   25% {
-    inset-inline-start: 15%;
+    left: 15%;
     width: 30%;
   }
   50% {
-    inset-inline-start: 40%;
+    left: 40%;
     width: 70%;
   }
   100% {
-    inset-inline-start: 100%;
+    left: 100%;
     width: 15%;
   }
 }

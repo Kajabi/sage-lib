@@ -82,8 +82,8 @@ $-table-avatar-width: rem(32px);
     display: block;
     position: absolute;
     z-index: sage-z-index(default, 2);
-    inset-inline-start: 0;
-    inset-inline-end: 0;
+    left: 0;
+    right: 0;
     height: 0;
     border-block-end: $-table-header-border;
   }

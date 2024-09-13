@@ -68,8 +68,8 @@ $-popover-tooltip-inactive: $-popover-tooltip-width solid transparent;
     inset-inline-start: 0;
 
     &::after {
-      inset-inline-start: $-popover-tooltip-offset;
-      inset-block-start: 100%;
+      left: $-popover-tooltip-offset;
+      top: 100%;
       transform: translate3d(-50%, 0, 0);
       border-inline-start: $-popover-tooltip-inactive;
       border-inline-end: $-popover-tooltip-inactive;
@@ -82,8 +82,8 @@ $-popover-tooltip-inactive: $-popover-tooltip-width solid transparent;
     inset-inline-end: 0;
 
     &::after {
-      inset-inline-end: $-popover-tooltip-offset;
-      inset-block-start: 100%;
+      right: $-popover-tooltip-offset;
+      top: 100%;
       transform: translate3d(-50%, 0, 0);
       border-inline-start: $-popover-tooltip-inactive;
       border-inline-end: $-popover-tooltip-inactive;
@@ -96,8 +96,8 @@ $-popover-tooltip-inactive: $-popover-tooltip-width solid transparent;
     inset-inline-start: calc(100% + #{$-popover-panel-offset} + #{$-popover-tooltip-width});
 
     &::after {
-      inset-inline-start: -($-popover-tooltip-width);
-      inset-block-start: $-popover-tooltip-offset;
+      left: -($-popover-tooltip-width);
+      top: $-popover-tooltip-offset;
       transform: translate3d(0, -50%, 0);
       border-inline-end: $-popover-tooltip-active;
       border-block-start: $-popover-tooltip-inactive;
@@ -110,8 +110,8 @@ $-popover-tooltip-inactive: $-popover-tooltip-width solid transparent;
     inset-inline-start: 0;
 
     &::after {
-      inset-inline-start: $-popover-tooltip-offset;
-      inset-block-end: 100%;
+      left: $-popover-tooltip-offset;
+      bottom: 100%;
       transform: translate3d(-50%, 0, 0);
       border-inline-start: $-popover-tooltip-inactive;
       border-inline-end: $-popover-tooltip-inactive;
@@ -120,12 +120,12 @@ $-popover-tooltip-inactive: $-popover-tooltip-width solid transparent;
   }
 
   .sage-popover--bottom-right & {
-    inset-block-start: calc(100% + #{$-popover-panel-offset});
-    inset-inline-end: 0;
+    top: calc(100% + #{$-popover-panel-offset});
+    right: 0;
 
     &::after {
-      inset-inline-end: $-popover-tooltip-offset;
-      inset-block-end: 100%;
+      right: $-popover-tooltip-offset;
+      bottom: 100%;
       transform: translate3d(-50%, 0, 0);
       border-inline-start: $-popover-tooltip-inactive;
       border-inline-end: $-popover-tooltip-inactive;
@@ -138,8 +138,8 @@ $-popover-tooltip-inactive: $-popover-tooltip-width solid transparent;
     inset-inline-end: calc(100% + #{$-popover-panel-offset} + #{$-popover-tooltip-width});
 
     &::after {
-      inset-inline-end: -($-popover-tooltip-width);
-      inset-block-start: $-popover-tooltip-offset;
+      right: -($-popover-tooltip-width);
+      top: $-popover-tooltip-offset;
       transform: translate3d(0, -50%, 0);
       border-inline-start: $-popover-tooltip-active;
       border-block-start: $-popover-tooltip-inactive;

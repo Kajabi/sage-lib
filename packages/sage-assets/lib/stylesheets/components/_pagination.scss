@@ -102,6 +102,10 @@ $-pagination-focus-ring-color: sage-color(purple, 300);
   content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' class='pdsicon'%3E%3Cpath fill-rule='evenodd' d='M11.805.862c.26.26.26.682 0 .943L5.609 8l6.196 6.195a.667.667 0 1 1-.943.943L4.195 8.471a.667.667 0 0 1 0-.942L10.862.862c.26-.26.682-.26.943 0Z'%3E%3C/path%3E%3C/svg%3E");
   display: inline-block;
   color: currentColor;
+
+  [dir="rtl"] & {
+    transform: rotate(180deg);
+  }
 }
 
 .sage-pagination__item:last-of-type .sage-pagination__page::before {
@@ -109,6 +113,10 @@ $-pagination-focus-ring-color: sage-color(purple, 300);
   content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' class='pdsicon'%3E%3Cpath fill-rule='evenodd' d='M4.195.862c.26-.26.683-.26.943 0l6.667 6.667c.26.26.26.682 0 .942l-6.667 6.667a.667.667 0 0 1-.943-.943L10.39 8 4.195 1.805a.667.667 0 0 1 0-.943Z'%3E%3C/path%3E%3C/svg%3E");
   display: inline-block;
   color: currentColor;
+
+  [dir="rtl"] & {
+    transform: rotate(180deg);
+  }
 }
 
 .sage-pagination__page-text {

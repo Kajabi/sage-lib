@@ -51,8 +51,8 @@ $-tooltip-large-maxwidth: rem(320px);
 
 .sage-tooltip--top {
   &::after {
-    inset-inline-start: 50%;
-    inset-block-start: 100%;
+    left: 50%;
+    top: 100%;
     transform: translate3d(-50%, 0, 0);
     border-inline-start: $-tooltip-arrow-inactive;
     border-inline-end: $-tooltip-arrow-inactive;
@@ -62,8 +62,8 @@ $-tooltip-large-maxwidth: rem(320px);
 
 .sage-tooltip--bottom {
   &::after {
-    inset-inline-start: 50%;
-    inset-block-end: 100%;
+    left: 50%;
+    right: 100%;
     transform: translate3d(-50%, 0, 0);
     border-inline-start: $-tooltip-arrow-inactive;
     border-inline-end: $-tooltip-arrow-inactive;
@@ -73,8 +73,8 @@ $-tooltip-large-maxwidth: rem(320px);
 
 .sage-tooltip--left {
   &::after {
-    inset-inline-start: 100%;
-    inset-block-end: 50%;
+    left: 100%;
+    right: 50%;
     transform: translate3d(0, 50%, 0);
     border-block-start: $-tooltip-arrow-inactive;
     border-block-end: $-tooltip-arrow-inactive;
@@ -84,8 +84,8 @@ $-tooltip-large-maxwidth: rem(320px);
 
 .sage-tooltip--right {
   &::after {
-    inset-inline-start: 0;
-    inset-block-end: 50%;
+    left: 0;
+    right: 50%;
     transform: translate3d(-100%, 50%, 0);
     border-block-start: $-tooltip-arrow-inactive;
     border-block-end: $-tooltip-arrow-inactive;

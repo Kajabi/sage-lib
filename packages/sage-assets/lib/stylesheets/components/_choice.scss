@@ -166,7 +166,7 @@ $-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
     height: $-choice-radio-size;
     min-width: $-choice-radio-size;
     width: $-choice-radio-size;
-    margin: 0 sage-spacing(xs) 0 0;
+    margin-inline: 0 sage-spacing(xs);
     background-color: $-choice-radio-color-checked-inner;
     border-radius: sage-border(radius-round);
     border: sage-border();
