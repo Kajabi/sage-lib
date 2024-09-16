@@ -5,21 +5,35 @@
 ////
 
 
+$css-property-map-rtl: (
+  top: block-start,
+  right: inline-start,
+  bottom: block-end,
+  left: inline-end
+);
+
 @each $-name, $-value in $sage-spacings {
   $suffix: "-#{$-name}";
-  
+
   @if $-name == md {
     $suffix: "";
   }
-  
+
   @each $-box-side in (
     top,
     right,
     bottom,
     left
   ) {
+    $css-logical-property: map-get($css-property-map, $-box-side);
+    $css-logical-property-rtl: map-get($css-property-map-rtl, $-box-side);
+
     .sage-spacer-#{$-box-side}#{$suffix} {
       margin-#{$-box-side}: $-value;
+    }
+
+    [dir="rtl"] .sage-spacer-#{$-box-side}#{$suffix} {
+      margin-#{$css-logical-property-rtl}: $-value;
     }
   }
 }
