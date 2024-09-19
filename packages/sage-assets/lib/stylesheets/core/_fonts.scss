@@ -11,6 +11,9 @@ $-greet-font-name: "greetstandard";
 $sage-inter-font-path: "#{$sage-font-cdn-root}/inter" !default; // pathname of font directory
 $-inter-font-name: "Inter";
 
+$sage-sprig-font-path: "#{$sage-font-cdn-root}/sprig" !default; // pathname of font directory
+$-sprig-font-name: "FAIRE-Sprig";
+
 // Sample Url
 // https://sage.kajabi-cdn.com/font/greet/greetstandard-bold.woff2?v=1
 // https://sage.kajabi-cdn.com/font/greet/greetstandard-bold.woff?v=1
@@ -257,7 +260,7 @@ $-inter-font-name: "Inter";
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: local("#{$-inter-font-name}-Thin"),
+  src: local("#{$-inter-font-name}-SemiBold"),
     url("#{$sage-inter-font-path}/#{$-inter-font-name}-SemiBold.woff2?v=#{$-body-font-version}") format("woff2");
 }
 
@@ -266,7 +269,7 @@ $-inter-font-name: "Inter";
   font-style: italic;
   font-weight: 600;
   font-display: swap;
-  src: local("#{$-inter-font-name}-Thin"),
+  src: local("#{$-inter-font-name}-SemiBoldItalic"),
     url("#{$sage-inter-font-path}/#{$-inter-font-name}-SemiBoldItalic.woff2?v=#{$-body-font-version}") format("woff2");
 }
 
@@ -276,7 +279,7 @@ $-inter-font-name: "Inter";
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: local("#{$-inter-font-name}-SemiBold"),
+  src: local("#{$-inter-font-name}-Bold"),
     url("#{$sage-inter-font-path}/#{$-inter-font-name}-Bold.woff2?v=#{$-body-font-version}") format("woff2");
 }
 
@@ -328,4 +331,127 @@ $-inter-font-name: "Inter";
   font-display: swap;
   src: local("#{$-inter-font-name}-BlackItalic"),
     url("#{$sage-inter-font-path}/#{$-inter-font-name}-BlackItalic.woff2?v=#{$-body-font-version}") format("woff2");
+}
+
+
+// FAIRE Sprig
+
+// Thin
+@font-face {
+  font-family: "Sprig";
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: local("#{$-sprig-font-name}-Thin"),
+    url("#{$sage-sprig-font-path}/#{$-sprig-font-name}-Thin.woff2?v=#{$-body-font-version}") format("woff2");
+}
+
+// Thin Italic
+@font-face {
+  font-family: "Sprig";
+  font-style: italic;
+  font-weight: 200;
+  font-display: swap;
+  src: local("#{$-sprig-font-name}-ThinItalic"),
+    url("#{$sage-sprig-font-path}/#{$-sprig-font-name}-ThinItalic.woff2?v=#{$-body-font-version}") format("woff2");
+}
+
+// Light
+@font-face {
+  font-family: "Sprig";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local("#{$-sprig-font-name}-Light"),
+    url("#{$sage-sprig-font-path}/#{$-sprig-font-name}-Light.woff2?v=#{$-body-font-version}") format("woff2");
+}
+
+// Light Italic
+@font-face {
+  font-family: "Sprig";
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: local("#{$-sprig-font-name}-LightItalic"),
+    url("#{$sage-sprig-font-path}/#{$-sprig-font-name}-LightItalic.woff2?v=#{$-body-font-version}") format("woff2");
+}
+
+// Regular
+@font-face {
+  font-family: "Sprig";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("#{$-sprig-font-name}-Regular"),
+    url("#{$sage-sprig-font-path}/#{$-sprig-font-name}-Regular.woff2?v=#{$-body-font-version}") format("woff2");
+}
+
+// Regular Italic
+@font-face {
+  font-family: "Sprig";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: local("#{$-sprig-font-name}-RegularItalic"),
+    url("#{$sage-sprig-font-path}/#{$-sprig-font-name}-RegularItalic.woff2?v=#{$-body-font-version}") format("woff2");
+}
+
+// Medium
+@font-face {
+  font-family: "Sprig";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local("#{$-sprig-font-name}-Medium"),
+    url("#{$sage-sprig-font-path}/#{$-sprig-font-name}-Medium.woff2?v=#{$-body-font-version}") format("woff2");
+}
+
+// Medium Italic
+@font-face {
+  font-family: "Sprig";
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: local("#{$-sprig-font-name}-MediumItalic"),
+    url("#{$sage-sprig-font-path}/#{$-sprig-font-name}-MediumItalic.woff2?v=#{$-body-font-version}") format("woff2");
+}
+
+// Bold
+@font-face {
+  font-family: "Sprig";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local("#{$-sprig-font-name}-Bold"),
+    url("#{$sage-sprig-font-path}/#{$-sprig-font-name}-Bold.woff2?v=#{$-body-font-version}") format("woff2");
+}
+
+// Bold Italic
+@font-face {
+  font-family: "Sprig";
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: local("#{$-sprig-font-name}-BoldItalic"),
+    url("#{$sage-sprig-font-path}/#{$-sprig-font-name}-BoldItalic.woff2?v=#{$-body-font-version}") format("woff2");
+}
+
+// Super
+@font-face {
+  font-family: "Sprig";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: local("#{$-sprig-font-name}-Super"),
+    url("#{$sage-sprig-font-path}/#{$-sprig-font-name}-Super.woff2?v=#{$-body-font-version}") format("woff2");
+}
+
+// Super Italic
+@font-face {
+  font-family: "Sprig";
+  font-style: italic;
+  font-weight: 900;
+  font-display: swap;
+  src: local("#{$-sprig-font-name}-SuperItalic"),
+    url("#{$sage-sprig-font-path}/#{$-sprig-font-name}-SuperItalic.woff2?v=#{$-body-font-version}") format("woff2");
 }
