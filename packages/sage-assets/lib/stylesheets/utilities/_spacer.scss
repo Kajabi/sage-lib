@@ -4,6 +4,12 @@
 /// @group sage
 ////
 
+$css-property-map: (
+  top: block-start,
+  right: inline-end,
+  bottom: block-end,
+  left: inline-start
+);
 
 $css-property-map-rtl: (
   top: block-start,
