@@ -8,8 +8,8 @@
 // Font definitions
 $-heading-font: "GreetStandard", "Inter", -apple-system, system-ui, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Ubuntu", sans-serif;
 $-body-font-stack: "Inter", -apple-system, system-ui, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Ubuntu", sans-serif;
-$-body-margin-bottom: sage-spacing(xs);
-$-headings-margin-bottom: sage-spacing(sm);
+$-body-margin-block-end: sage-spacing(xs);
+$-headings-margin-block-end: sage-spacing(sm);
 
 ///
 /// Sage responsive font sizes and line heights custom props
