@@ -41,7 +41,7 @@ $-alert-icon-colors: (
   gap: sage-spacing(sm);
   padding: sage-spacing();
   margin-block-end: sage-spacing();
-  border: 1px solid sage-color(grey, 30);
+  border: 1px solid sage-color(grey, 300);
   border-radius: sage-border(radius-large);
 
   .sage-frame > &,
