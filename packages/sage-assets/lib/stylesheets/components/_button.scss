@@ -169,7 +169,7 @@ $-btn-loading-min-height: rem(36px);
 
 // stylelint-disable max-nesting-depth
 .sage-btn {
-  @extend %t-sage-body-semi;
+  @extend %t-sage-body-med;
   @include sage-button-style-reset();
   @include sage-focus-ring;
 
