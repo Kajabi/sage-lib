@@ -176,7 +176,7 @@ $-radio-focus-outline-color: currentColor;
     }
   }
 
-  &:focus:not(:disabled),
+  &:focus-visible:not(:disabled),
   &:active:not(:disabled) {
     outline: none;
 

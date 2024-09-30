@@ -17,7 +17,7 @@ $-link-base-styles: (
     hover: (
       color: sage-color(primary, 400),
     ),
-    focus: (
+    focus-visible: (
       color: sage-color(primary, 300),
     ),
   ),
@@ -28,7 +28,7 @@ $-link-base-styles: (
     hover: (
       color: sage-color(black),
     ),
-    focus: (
+    focus-visible: (
       color: sage-color(charcoal, 400),
     ),
   ),
@@ -39,7 +39,7 @@ $-link-base-styles: (
     hover: (
       color: sage-color(grey, 100),
     ),
-    focus: (
+    focus-visible: (
       color: sage-color(white),
     ),
   ),
@@ -50,7 +50,7 @@ $-link-base-styles: (
     hover: (
       color: sage-color(red, 400),
     ),
-    focus: (
+    focus-visible: (
       color: sage-color(red, 300),
       focus-outline: sage-color(red, 200),
     ),
@@ -74,7 +74,7 @@ $-link-base-styles: (
     cursor: pointer;
   }
 
-  &:focus {
+  &:focus-visible {
     color: sage-color(primary, 300);
 
     @include sage-focus-outline--update-color(sage-color(purple, 30));
@@ -99,8 +99,8 @@ $-link-base-styles: (
       box-shadow: sage-border-interactive(hover);
     }
 
-    &:focus::before {
-      box-shadow: sage-border-interactive(focus);
+    &:focus-visible::before {
+      box-shadow: sage-border-interactive(focus-visible);
     }
 
     &:active::before {
@@ -111,11 +111,11 @@ $-link-base-styles: (
       box-shadow: sage-border-interactive(error);
     }
 
-    &:focus:invalid::before {
+    &:focus-visible:invalid::before {
       box-shadow: sage-border-interactive(error-focus);
     }
 
-    &:focus::after {
+    &:focus-visible::after {
       border: 0;
     }
 
@@ -137,9 +137,9 @@ $-link-base-styles: (
         }
         /* stylelint-enable max-nesting-depth */
       }
-      @else if ($-style-type-name == focus) {
+      @else if ($-style-type-name == focus-visible) {
         /* stylelint-disable max-nesting-depth */
-        &:focus,
+        &:focus-visible,
         &:active {
           color: map-get($-style-type-configs, color);
 
@@ -178,7 +178,7 @@ $-link-base-styles: (
 
   &:hover,
   &:active,
-  &:focus {
+  &:focus-visible {
     color: inherit;
     outline: 0;
 
@@ -239,7 +239,7 @@ $-link-base-styles: (
     text-decoration: underline;
   }
 
-  &:focus {
+  &:focus-visible {
     color: $-link-subtext-color-hover;
     text-decoration: none;
   }
