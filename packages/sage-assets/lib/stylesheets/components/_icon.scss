@@ -75,7 +75,7 @@ $-icon-beside-type: (
 
   .sage-tab--icon-#{$icon-name}::before {
     @include sage-icon-base($icon-name, md, pine);
-    margin-right: sage-spacing(xs);
+    margin-inline-end: sage-spacing(xs);
   }
 
   .sage-choice--icon-#{$icon-name}::before {
@@ -115,7 +115,7 @@ $-icon-beside-type: (
     white-space: nowrap;
 
     &::before {
-      margin-right: sage-spacing(xs);
+      margin-inline-end: sage-spacing(xs);
 
       @include sage-icon-base($icon-name, md, pine);
     }
