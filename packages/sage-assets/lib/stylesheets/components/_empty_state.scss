@@ -11,8 +11,8 @@ $-empty-state-graphic-page-height: rem(336px);
 $-empty-state-page-max-width: rem(1064px);
 
 .sage-empty-state {
-  margin-left: auto;
-  margin-right: auto;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
 
   &:not(.sage-empty-state--page) {
     @include sage-grid-panel();
@@ -65,7 +65,7 @@ $-empty-state-page-max-width: rem(1064px);
 .sage-empty-state__actions,
 .sage-empty-state__custom-content,
 .sage-empty-state__video {
-  margin-top: sage-spacing();
+  margin-block-start: sage-spacing();
 }
 
 .sage-empty-state__content {
@@ -119,7 +119,7 @@ $-empty-state-page-max-width: rem(1064px);
   }
 
   &:not(:only-child) {
-    margin-bottom: sage-spacing(sm);
+    margin-block-end: sage-spacing(sm);
   }
 }
 

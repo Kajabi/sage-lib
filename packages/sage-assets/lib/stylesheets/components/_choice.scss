@@ -135,7 +135,7 @@ $-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
   }
 
   pds-icon {
-    margin-top: var(--icon-top-offset);
+    margin-block-start: var(--icon-top-offset);
   }
 
   &.sage-choice--vertical-align-icon-start::#{$-choice-el-icon} {
