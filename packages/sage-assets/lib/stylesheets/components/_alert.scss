@@ -172,7 +172,7 @@ $-alert-border-colors: (
       text-decoration: underline;
     }
 
-    &:focus {
+    &:focus-visible {
       @include sage-focus-outline--update-color(sage-color(purple, 30));
     }
   }
@@ -199,7 +199,7 @@ $-alert-border-colors: (
       text-decoration: none;
     }
 
-    &:focus {
+    &:focus-visible {
       @include sage-focus-outline--update-color(sage-color(purple, 30));
     }
   }
