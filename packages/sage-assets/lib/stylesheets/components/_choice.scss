@@ -65,7 +65,7 @@ $-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
     color: $-choice-color-active;
   }
 
-  &:focus {
+  &:focus-visible {
     border-color: sage-color(purple, 30);
     outline: none;
   }

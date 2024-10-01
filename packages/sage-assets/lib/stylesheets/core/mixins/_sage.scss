@@ -182,7 +182,7 @@
   $focus-width-inner: 1px,
   $focus-width-outter: 3px
 ) {
-  &:focus {
+  &:focus-visible {
     z-index: sage-z-index(default, 1);
     outline: none;
     box-shadow: 0 0 0 $focus-width-inner #fff, 0 0 0 $focus-width-outter $focus-shadow;
@@ -208,6 +208,7 @@
   position: relative;
 
   &:focus,
+  &:focus-visible,
   &:focus-within {
     outline: none;
   }
@@ -234,7 +235,7 @@
     will-change: transform;
   }
 
-  &:focus:not(:disabled):not([aria-disabled="true"]),
+  &:focus-visible:not(:disabled):not([aria-disabled="true"]),
   &:active:not(:disabled):not([aria-disabled="true"]) {
     &::after {
       transform: translate3d(-50%, -50%, 0) scale(1);
