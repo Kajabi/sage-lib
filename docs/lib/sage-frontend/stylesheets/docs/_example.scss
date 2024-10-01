@@ -164,13 +164,13 @@ $-example-code-preview-button-bg: rgba(sage-color(primary, 300), 0.75);
     overflow: hidden;
     padding: 0;
     border: 0;
-    background: sage-color(gray, 100);
+    background: sage-color(grey, 100);
   }
   .sage-card__header {
     padding: sage-spacing();
     padding-bottom: sage-spacing(xs);
     code {
-      background: sage-color(gray, 300);
+      background: sage-color(grey, 300);
     }
   }
 }

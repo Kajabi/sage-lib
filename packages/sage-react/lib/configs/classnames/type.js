@@ -31,7 +31,7 @@ Object.keys(SageDictionary.COLOR).forEach((colorName) => {
     black: 500,
     blue: 600,
     charcoal: 300,
-    gray: 300,
+    grey: 300,
     green: 600,
     mercury: 500,
     orange: 300,
