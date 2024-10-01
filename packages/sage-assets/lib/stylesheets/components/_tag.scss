@@ -63,7 +63,7 @@ $-tag-button-icon-mobile-size: rem(24px);
     color: $-tag-button-color;
   }
 
-  &:focus {
+  &:focus-visible {
     color: $-tag-button-color;
     border-color: sage-color(primary, 200);
   }
@@ -73,12 +73,12 @@ $-tag-button-icon-mobile-size: rem(24px);
     height: $-tag-button-icon-mobile-size;
   }
 
-  &:not(:focus):hover {
+  &:not(:focus-visible):hover {
     color: inherit;
     background-color: transparent;
   }
 
-  &:not(:focus):hover::after {
+  &:not(:focus-visible):hover::after {
     background-color: transparent;
   }
 }

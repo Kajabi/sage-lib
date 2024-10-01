@@ -48,7 +48,7 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
       background-color: sage-color(white);
     }
 
-    &:focus,
+    &:focus-visible,
     &:focus-within {
       z-index: sage-z-index(default, 2);
       box-shadow: map-get($sage-toolbar-button-borders, focus);
@@ -123,6 +123,7 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
   @extend %t-sage-body;
 
   &:active,
+  &:focus-visible,
   &:focus-within {
     outline: none;
 

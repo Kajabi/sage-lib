@@ -43,6 +43,10 @@ $-tab-color-disabled: map-get($sage-tab-colors, disabled);
   }
 
   &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
     @include sage-focus-ring();
     border-radius: sage-border(radius-small);
 
@@ -95,11 +99,11 @@ $-tab-color-disabled: map-get($sage-tab-colors, disabled);
       opacity: 0;
     }
 
-    &:focus {
+    &:focus-visible {
       border-radius: sage-border(radius-small);
     }
 
-    &:focus::after,
+    &:focus-visible::after,
     &.sage-tab--active::after {
       opacity: 1;
     }
@@ -124,7 +128,7 @@ $-tab-color-disabled: map-get($sage-tab-colors, disabled);
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
 
-    &:focus {
+    &:focus-visible {
       border-radius: sage-border(radius-small);
     }
   }

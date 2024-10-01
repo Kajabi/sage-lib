@@ -213,7 +213,7 @@ $-checkbox-focus-outline-color: sage-color(purple, 30);
     background-color: sage-color(grey, 100);
   }
 
-  &:focus:not(:disabled),
+  &:focus-visible:not(:disabled),
   &:active:not(:disabled) {
     outline: none;
     border-color: $-checkbox-focus-outline-color;
@@ -264,7 +264,7 @@ $-checkbox-focus-outline-color: sage-color(purple, 30);
       background-color: $-checkbox-color-error;
     }
 
-    &:focus:not(:disabled),
+    &:focus-visible:not(:disabled),
     &:active:not(:disabled) {
       border-color: $-checkbox-color-error;
     }

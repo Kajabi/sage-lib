@@ -524,7 +524,7 @@ a.sage-btn {
         }
       }
       @else if ($-style-type-name == focus) {
-        &:focus,
+        &:focus-visible,
         &:active {
           color: map-get($-style-type-configs, color);
           background-color: map-get($-style-type-configs, background-color);
@@ -562,10 +562,10 @@ a.sage-btn {
         box-shadow: map-get($sage-toolbar-button-borders, hover);
       }
 
-      .sage-toolbar > &:focus,
-      .sage-toolbar > .sage-dropdown .sage-dropdown__trigger &:focus,
-      .sage-toolbar__group > &:focus,
-      .sage-toolbar__group > .sage-dropdown .sage-dropdown__trigger &:focus {
+      .sage-toolbar > &:focus-visible,
+      .sage-toolbar > .sage-dropdown .sage-dropdown__trigger &:focus-visible,
+      .sage-toolbar__group > &:focus-visible,
+      .sage-toolbar__group > .sage-dropdown .sage-dropdown__trigger &:focus-visible {
         z-index: sage-z-index(default, 2);
         box-shadow: map-get($sage-toolbar-button-borders, focus);
       }
@@ -580,8 +580,8 @@ a.sage-btn {
   .sage-toolbar__group > .sage-search ~ &:not(.sage-btn--subtle):not(:disabled):not([aria-disabled="true"]):hover {
     box-shadow: map-get($sage-toolbar-button-borders, hover-large);
   }
-  .sage-toolbar__group > .sage-input ~ &:not(.sage-btn--subtle):not(:disabled):not([aria-disabled="true"]):focus,
-  .sage-toolbar__group > .sage-search ~ &:not(.sage-btn--subtle):not(:disabled):not([aria-disabled="true"]):focus {
+  .sage-toolbar__group > .sage-input ~ &:not(.sage-btn--subtle):not(:disabled):not([aria-disabled="true"]):focus-visible,
+  .sage-toolbar__group > .sage-search ~ &:not(.sage-btn--subtle):not(:disabled):not([aria-disabled="true"]):focus-visible {
     box-shadow: map-get($sage-toolbar-button-borders, focus);
   }
 }
@@ -597,7 +597,11 @@ a.sage-btn {
     border-color: sage-color(charcoal, 100);
   }
 
-  &:focus,
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible,
   &:active {
     color: sage-color(charcoal, 300);
     background-color: sage-color(white);
@@ -755,7 +759,7 @@ a.sage-btn {
       color: sage-color(white);
     }
 
-    &:focus {
+    &:focus-visible {
       color: sage-color(white);
     }
   }
@@ -765,7 +769,7 @@ a.sage-btn {
   &.sage-banner__close.sage-btn--primary {
     color: inherit;
 
-    &:focus,
+    &:focus-visible,
     &:active {
       color: inherit;
 
