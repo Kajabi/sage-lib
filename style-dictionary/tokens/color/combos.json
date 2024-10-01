@@ -4,38 +4,38 @@
       "draft": {
         "default": {
           "foreground": {
-            "value": "{color.base.charcoal.400.hex}"
+            "value": "{color.base.grey.900.hex}"
           },
           "foreground-accent": {
-            "value": "{color.base.charcoal.500.hex}"
+            "value": "{color.base.grey.950.hex}"
           },
           "background": {
-            "value": "{color.base.grey.300.hex}"
+            "value": "{color.base.grey.200.hex}"
           },
           "background-accent": {
-            "value": "{color.base.grey.400.hex}"
+            "value": "{color.base.grey.300.hex}"
           },
           "icon-background-accent": {
-            "value": "{color.base.charcoal.200.hex}"
+            "value": "{color.base.grey.700.hex}"
           }
         },
         "subtle": {
           "foreground": {
-            "value": "{color.base.charcoal.200.hex}"
+            "value": "{color.base.grey.700.hex}"
           },
           "foreground-accent": {
-            "value": "{color.base.charcoal.100.hex}"
+            "value": "{color.base.grey.600.hex}"
           },
           "background": {
-            "value": "{color.base.charcoal.100.hex}"
+            "value": "{color.base.grey.600.hex}"
           }
         },
         "bold": {
           "foreground": {
-            "value": "{color.base.grey.200.hex}"
+            "value": "{color.base.grey.150.hex}"
           },
           "background": {
-            "value": "{color.base.charcoal.400.hex}"
+            "value": "{color.base.grey.900.hex}"
           }
         }
       },
@@ -118,68 +118,68 @@
       "locked": {
         "default": {
           "foreground": {
-            "value": "{color.base.purple.400.hex}"
+            "value": "{color.base.purple.800.hex}"
           },
           "foreground-accent": {
-            "value": "{color.base.purple.500.hex}"
+            "value": "{color.base.purple.950.hex}"
           },
           "background": {
-            "value": "{color.base.purple.100.hex}"
+            "value": "{color.base.purple.150.hex}"
           },
           "background-accent": {
-            "value": "{color.base.purple.200.hex}"
+            "value": "{color.base.purple.300.hex}"
           },
           "icon-background-accent": {
-            "value": "{color.base.purple.300.hex}"
+            "value": "{color.base.purple.600.hex}"
           }
         },
         "subtle": {
           "foreground": {
-            "value": "{color.base.purple.400.hex}"
+            "value": "{color.base.purple.800.hex}"
           },
           "foreground-accent": {
-            "value": "{color.base.purple.300.hex}"
+            "value": "{color.base.purple.600.hex}"
           },
           "background": {
-            "value": "{color.base.purple.200.hex}"
+            "value": "{color.base.purple.300.hex}"
           }
         },
         "bold": {
           "foreground": {
-            "value": "{color.base.purple.100.hex}"
+            "value": "{color.base.purple.150.hex}"
           },
           "background": {
-            "value": "{color.base.purple.300.hex}"
+            "value": "{color.base.purple.600.hex}"
           }
         }
       },
       "warning": {
         "default": {
           "foreground": {
-            "value": "{color.base.yellow.400.hex}"
+            "value": "{color.base.yellow.600.hex}"
           },
           "foreground-accent": {
-            "value": "{color.base.yellow.500.hex}"
+            "value": "{color.base.yellow.950.hex}"
           },
           "background": {
-            "value": "{color.base.yellow.100.hex}"
+            "value": "{color.base.yellow.150.hex}"
           },
           "background-accent": {
-            "value": "{color.base.yellow.200.hex}"
+            "value": "{color.base.yellow.300.hex}"
           },
           "icon-background-accent": {
-            "value": "{color.base.yellow.400.hex}"
+            "value": "{color.base.yellow.600.hex}"
           }
         },
         "subtle": {
           "foreground": {
-            "value": "{color.base.yellow.400.hex}"
+            "value": "{color.base.yellow.600.hex}"
           },
           "foreground-accent": {
-            "value": "{color.base.yellow.300.hex}"
+            "value": "{color.base.yellow.400.hex}"
           },
           "background": {
-            "value": "{color.base.yellow.300.hex}"
+            "value": "{color.base.yellow.400.hex}"
           }
         },
         "bold": {
@@ -187,45 +187,45 @@
             "value": "{color.base.white.300.hex}"
           },
           "background": {
-            "value": "{color.base.yellow.300.hex}"
+            "value": "{color.base.yellow.400.hex}"
           }
         }
       },
       "danger": {
         "default": {
           "foreground": {
-            "value": "{color.base.red.400.hex}"
+            "value": "{color.base.red.800.hex}"
           },
           "foreground-accent": {
-            "value": "{color.base.red.500.hex}"
+            "value": "{color.base.red.950.hex}"
           },
           "background": {
-            "value": "{color.base.red.100.hex}"
+            "value": "{color.base.red.150.hex}"
           },
           "background-accent": {
-            "value": "{color.base.red.200.hex}"
+            "value": "{color.base.red.300.hex}"
           },
           "icon-background-accent": {
-            "value": "{color.base.red.300.hex}"
+            "value": "{color.base.red.500.hex}"
           }
         },
         "subtle": {
           "foreground": {
-            "value": "{color.base.red.400.hex}"
+            "value": "{color.base.red.800.hex}"
           },
           "foreground-accent": {
-            "value": "{color.base.red.200.hex}"
+            "value": "{color.base.red.300.hex}"
           },
           "background": {
-            "value": "{color.base.red.200.hex}"
+            "value": "{color.base.red.300.hex}"
           }
         },
         "bold": {
           "foreground": {
-            "value": "{color.base.red.100.hex}"
+            "value": "{color.base.red.150.hex}"
           },
           "background": {
-            "value": "{color.base.red.200.hex}"
+            "value": "{color.base.red.300.hex}"
           }
         }
       },

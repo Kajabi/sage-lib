@@ -72,7 +72,7 @@ MultipleBars.args = {
       {
         dataKey: 'thisYear',
         name: 'This Year',
-        fill: SageTokens.COLOR_PALETTE.SAGE_100,
+        fill: SageTokens.COLOR_PALETTE.GREEN_150,
       },
       {
         dataKey: 'lastYear',
@@ -124,7 +124,7 @@ Donut.args = {
     {
       name: 'Healthy',
       value: 2467,
-      fill: SageTokens.COLOR_PALETTE.SAGE_100,
+      fill: SageTokens.COLOR_PALETTE.GREEN_150,
     },
     {
       name: 'Unengaged',
@@ -134,7 +134,7 @@ Donut.args = {
     {
       name: 'Inactive',
       value: 153,
-      fill: SageTokens.COLOR_PALETTE.RED_200,
+      fill: SageTokens.COLOR_PALETTE.RED_300,
     },
     {
       name: 'Hungry',
@@ -144,7 +144,7 @@ Donut.args = {
     {
       name: 'Grumpy',
       value: 53,
-      fill: SageTokens.COLOR_PALETTE.PURPLE_200,
+      fill: SageTokens.COLOR_PALETTE.PURPLE_300,
     },
   ],
   loading: false,
