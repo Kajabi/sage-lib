@@ -18,10 +18,10 @@ $-table-caption-font-size: "%t-sage-body-small";
 $-table-caption-alignment: center;
 $-table-cell-font-color: sage-color(charcoal, 200);
 $-table-cell-font-color-strong: sage-color(charcoal, 400);
-$-table-cell-type-spec: "%t-sage-body-small-med";
-$-table-cell-type-spec-strong: "%t-sage-body-small-semi";
+$-table-cell-type-spec: "%t-sage-body-med";
+$-table-cell-type-spec-strong: "%t-sage-body-semi";
 $-table-heading-font-color: sage-color(charcoal, 500);
-$-table-heading-type-spec: "%t-sage-body-small-semi";
+$-table-heading-type-spec: "%t-sage-body-med";
 
 // Overflow gradient
 $-table-overflow-indicator-width: sage-spacing(sm);
@@ -70,6 +70,7 @@ $-table-avatar-width: rem(32px);
 
     th {
       padding: $-table-padding-heading;
+      font-weight: sage-font-weight(semibold);
     }
   }
 
