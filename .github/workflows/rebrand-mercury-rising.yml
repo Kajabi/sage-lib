@@ -1,9 +1,6 @@
 name: Rebrand Mercury-Rising
 on:
   workflow_call:
-  push:
-    branches:
-      - mercury-rising
 
 jobs:
   lint-test-build:
