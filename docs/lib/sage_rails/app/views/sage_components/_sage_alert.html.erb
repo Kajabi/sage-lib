@@ -5,6 +5,7 @@
     <%= "sage-alert--dismissable" if component.dismissable %>
     <%= "sage-alert--small" if component.small %>
     <%= "sage-alert--actions" if component.primary_action or component.secondary_actions or content_for? :sage_alert_actions  %>
+    <%= "sage-alert--no-actions" unless component.primary_action || component.secondary_actions || content_for?(:sage_alert_actions) %>
     <%= component.generated_css_classes %>
   "
   data-js-alert="true"

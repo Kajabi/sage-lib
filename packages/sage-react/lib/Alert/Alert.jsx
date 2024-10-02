@@ -29,6 +29,7 @@ export const Alert = ({
       'sage-alert--dismissable': dismissable,
       'sage-alert--small': small,
       'sage-alert--actions': actions !== null,
+      'sage-alert--no-actions': !actions || actions.length === 0,
     }
   );
 
