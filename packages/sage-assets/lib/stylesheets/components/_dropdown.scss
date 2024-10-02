@@ -127,31 +127,31 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
   &:focus-within {
     outline: none;
 
-    @include sage-focus-outline--update-color(sage-color(purple, 30));
+    @include sage-focus-outline--update-color(sage-color(purple, 300));
   }
 }
 
 .sage-dropdown__item--border-before {
   padding-top: sage-spacing(xs);
   margin-top: sage-spacing(xs);
-  border-top: 1px solid sage-color(grey, 300);
+  border-top: 1px solid sage-color(grey, 200);
 }
 
 .sage-dropdown__item--border-after {
   padding-bottom: sage-spacing(xs);
   margin-bottom: sage-spacing(xs);
-  border-bottom: 1px solid sage-color(grey, 300);
+  border-bottom: 1px solid sage-color(grey, 200);
 }
 
 .sage-dropdown__item--disabled {
   &:active {
-    @include sage-focus-outline--update-color(sage-color(purple, 30));
+    @include sage-focus-outline--update-color(sage-color(purple, 300));
   }
 }
 
 .sage-dropdown__item--heading {
   padding: sage-spacing(sm) sage-spacing(sm) 0 sage-spacing(sm);
-  color: sage-color(charcoal, 100);
+  color: sage-color(grey, 600);
   text-transform: uppercase;
   cursor: default;
   pointer-events: none;
@@ -162,7 +162,7 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
 .sage-dropdown__item-control {
   @include sage-button-style-reset();
   @include sage-focus-outline($outline-offset-inline: 4px, $outline-offset-block: -2px);
-  @include sage-focus-outline--update-color(sage-color(purple, 30));
+  @include sage-focus-outline--update-color(sage-color(purple, 300));
 
   @extend %t-sage-body-med;
 
@@ -188,12 +188,12 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
 
 
   &:hover {
-    background-color: sage-color(grey, 300);
+    background-color: sage-color(grey, 200);
   }
 
   &:focus-within {
     @include sage-focus-outline($outline-offset-inline: 4px, $outline-offset-block: -2px);
-    @include sage-focus-outline--update-color(sage-color(purple, 30));
+    @include sage-focus-outline--update-color(sage-color(purple, 300));
 
     &::after {
       opacity: 1;
@@ -240,20 +240,20 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
 }
 
 .sage-dropdown__item-control--danger {
-  color: sage-color(red, 300);
+  color: sage-color(red, 500);
 
   &:hover {
-    color: sage-color(red, 300);
-    background-color: sage-color(red, 100);
+    color: sage-color(red, 500);
+    background-color: sage-color(red, 150);
   }
 }
 
 .sage-dropdown__item-control--muted {
-  color: sage-color(charcoal, 100);
+  color: sage-color(grey, 600);
 
   &:hover {
-    color: sage-color(charcoal, 400);
-    background-color: sage-color(grey, 300);
+    color: sage-color(grey, 900);
+    background-color: sage-color(grey, 200);
   }
 }
 
@@ -430,7 +430,7 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
 .sage-btn--icon-right-caret-down::before {
   .sage-dropdown__trigger--select &,
   .sage-dropdown__trigger & {
-    color: sage-color(charcoal, 100);
+    color: sage-color(grey, 600);
   }
 }
 

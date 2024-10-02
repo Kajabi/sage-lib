@@ -27,8 +27,24 @@ export const CLASSNAMES_TYPE = {
 // CLASSNAMES_TYPE_COLORS.RED_200 ---> `t-sage--color-red-200`
 export const CLASSNAMES_TYPE_COLORS = {};
 Object.keys(SageDictionary.COLOR).forEach((colorName) => {
+  const defaultIndex = {
+    black: 500,
+    blue: 600,
+    charcoal: 300,
+    grey: 300,
+    green: 600,
+    mercury: 500,
+    orange: 300,
+    primary: 300,
+    purple: 600,
+    red: 500,
+    sage: 300,
+    white: 500,
+    yellow: 400
+  }[colorName.toLowerCase()];
+
   Object.keys(SageDictionary.COLOR[colorName]).forEach((index) => {
-    if (index === '300') {
+    if (Number(index) === defaultIndex) {
       CLASSNAMES_TYPE_COLORS[`${colorName}`] = SageDictionary.COLOR[colorName][index].CLASSNAME;
     }
     CLASSNAMES_TYPE_COLORS[`${colorName}_${index}`] = SageDictionary.COLOR[colorName][index].CLASSNAME;

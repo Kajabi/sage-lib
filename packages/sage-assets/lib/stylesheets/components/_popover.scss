@@ -157,7 +157,7 @@ $-popover-tooltip-inactive: $-popover-tooltip-width solid transparent;
   @include sage-grid-stack();
 
   gap: rem(20px);
-  color: sage-color(charcoal, 300);
+  color: sage-color(grey, 800);
 }
 
 .sage-popover__media {
@@ -185,5 +185,5 @@ $-popover-tooltip-inactive: $-popover-tooltip-width solid transparent;
 .sage-popover__title {
   @extend %t-sage-heading-5;
 
-  color: sage-color(charcoal, 500);
+  color: sage-color(grey, 950);
 }

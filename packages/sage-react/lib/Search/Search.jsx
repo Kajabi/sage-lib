@@ -44,7 +44,7 @@ export const Search = React.forwardRef(({
         <pds-icon
           name="search-small"
           class={SageClassnames.SPACERS.SM_LEFT}
-          color={SageTokens.COLOR_PALETTE.CHARCOAL_200}
+          color={SageTokens.COLOR_PALETTE.GREY_700}
           style={{ zIndex: '2' }}
         />
         <input

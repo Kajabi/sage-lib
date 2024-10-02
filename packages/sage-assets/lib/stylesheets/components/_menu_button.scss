@@ -6,7 +6,7 @@
 
 
 $-menubtn-toggle-size: rem(24px);
-$-menubtn-toggle-line-color: sage-color(grey, 200);
+$-menubtn-toggle-line-color: sage-color(grey, 150);
 $-menubtn-toggle-line-height: rem(2px);
 $-menubtn-toggle-radius: rem(2px);
 $-menubtn-focus-outline-size: sage-spacing(xs);
@@ -55,7 +55,7 @@ $-menubtn-focus-outline-color: currentColor;
 
     &:focus::after {
       transform: translate3d(-50%, -50%, 0) scale(1);
-      border-color: sage-color(charcoal, 100);
+      border-color: sage-color(grey, 600);
       opacity: 1;
     }
 
@@ -64,7 +64,7 @@ $-menubtn-focus-outline-color: currentColor;
     }
 
     &:active::after {
-      border-color: sage-color(charcoal, 200);
+      border-color: sage-color(grey, 700);
     }
 
     &[aria-expanded="true"]::after {

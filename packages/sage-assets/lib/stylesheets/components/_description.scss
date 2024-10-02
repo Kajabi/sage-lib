@@ -70,14 +70,14 @@ $-description-spacing: sage-spacing(sm);
   @extend %t-sage-body;
 
   grid-area: title;
-  color: sage-color(charcoal, 200);
+  color: sage-color(grey, 700);
 }
 
 .sage-description__data {
   @extend %t-sage-body-med;
 
   grid-area: data;
-  color: sage-color(charcoal, 400);
+  color: sage-color(grey, 900);
 }
 
 .sage-description__action {

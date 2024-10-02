@@ -73,7 +73,7 @@ $-toast-bottom-spacing: sage-spacing(xs);
   color: sage-color(white);
   border-radius: sage-border(radius-medium);
   box-shadow: sage-shadow(lg);
-  background-color: sage-color(charcoal, 400);
+  background-color: sage-color(grey, 900);
   animation: 0.5s ease;
 
   @media #{$-toast-breakpoint-default} {
@@ -94,7 +94,7 @@ $-toast-bottom-spacing: sage-spacing(xs);
   }
 
   &.sage-toast--style-danger {
-    background-color: sage-color(red, 300);
+    background-color: sage-color(red, 500);
   }
 
   &.sage-toast--dismissed {
@@ -148,7 +148,7 @@ $-toast-bottom-spacing: sage-spacing(xs);
   }
 
   &.sage-btn--subtle.sage-btn--secondary:not(:focus):hover {
-    color: sage-color(grey, 200);
+    color: sage-color(grey, 150);
     background-color: inherit;
 
     &::after {
@@ -161,7 +161,7 @@ $-toast-bottom-spacing: sage-spacing(xs);
   text-decoration: underline;
 
   @include sage-focus-outline($outline-offset-inline: 4px);
-  @include sage-focus-outline--update-color(sage-color(purple, 30));
+  @include sage-focus-outline--update-color(sage-color(purple, 300));
 }
 
 @keyframes rotate {

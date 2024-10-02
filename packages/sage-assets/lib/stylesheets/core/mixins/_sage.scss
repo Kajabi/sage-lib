@@ -58,7 +58,7 @@
   @include truncate();
 
   padding: rem(6px) sage-spacing(sm);
-  color: sage-color(charcoal, 400);
+  color: sage-color(grey, 900);
   background-color: transparent;
   border: $-copy-text-border;
   border-radius: sage-border(radius-medium);
@@ -178,7 +178,7 @@
 /// @param {time} $focus-animation-speed [0.2s] How quickly the focus ring animates on activation
 ///
 @mixin sage-focus-ring(
-  $focus-shadow: sage-color(purple, 30),
+  $focus-shadow: sage-color(purple, 300),
   $focus-width-inner: 1px,
   $focus-width-outter: 3px
 ) {
@@ -410,7 +410,7 @@
 
   width: 100%;
   padding: sage-spacing(sm);
-  color: sage-color(charcoal, 400);
+  color: sage-color(grey, 900);
   appearance: none;
   box-shadow: sage-border-interactive(default);
   border: 0;
@@ -420,11 +420,11 @@
   transition-property: border, box-shadow, color;
 
   @include placeholder {
-    color: sage-color(charcoal, 200);
+    color: sage-color(grey, 700);
   }
 
   &:hover:not(:disabled) {
-    color: sage-color(charcoal, 400);
+    color: sage-color(grey, 900);
     box-shadow: sage-border-interactive(hover);
 
     .sage-form-field--error & {
@@ -453,7 +453,7 @@
     resize: none;
 
     @include placeholder {
-      color: sage-color(charcoal, 200);
+      color: sage-color(grey, 700);
     }
 
     .sage-form-field--showplaceholder & ~ label {
@@ -473,12 +473,12 @@
   .sage-form-field--error &:focus:not(:disabled),
   .sage-form-field--error &:not(:placeholder-shown),
   .sage-form-field--error &:required:not(:placeholder-shown):not(:valid) {
-    @include sage-focus-ring(sage-color(red, 200));
+    @include sage-focus-ring(sage-color(red, 300));
 
     box-shadow: sage-border-interactive(error);
 
     ~ label {
-      color: sage-color(charcoal, 400);
+      color: sage-color(grey, 900);
     }
 
     &:hover:not(:disabled) {
@@ -549,10 +549,10 @@
   @extend %t-sage-body-small-med;
 
   margin-top: sage-spacing(xs);
-  color: sage-color(charcoal, 200);
+  color: sage-color(grey, 700);
 
   .sage-form-field--error & {
-    color: sage-color(red, 300);
+    color: sage-color(red, 500);
 
     &::before {
       @include sage-icon-base(danger, md, pine);
@@ -613,7 +613,7 @@
   position: relative;
   z-index: sage-z-index(default);
   width: 100%;
-  color: sage-color(charcoal, 200);
+  color: sage-color(grey, 700);
 }
 
 ///

@@ -85,7 +85,7 @@ KitchenSink.args = {
   ),
   mediaConfigs: {
     aspectRatio: 1.8,
-    backgroundColor: SageTokens.COLOR_PALETTE.SAGE_100,
+    backgroundColor: SageTokens.COLOR_PALETTE.GREEN_150,
     padded: true,
   },
   tileLink: null,

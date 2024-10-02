@@ -47,39 +47,45 @@
   @each $value, $map in $color {
     $hex: sage-color($name, $value);
 
-    .color-#{"" + $name}-#{$value} {
+    // Determine class name for $value == 50
+    $classname: ".color-#{"" + $name}-#{$value}";
+    @if ($value == "50") {
+      $classname: ".color-#{"" + $name}-0#{$value}";
+    }
+
+    #{$classname} {
       padding: sage-spacing(sm) sage-spacing();
       font-size: sage-font-size(body);
       background: $hex;
 
-      @if ($name == grey and $value > 40) {
+      @if ($name == grey and $value > 400) {
         color: sage-color(white);
       }
       @else if ($name == white or $name == grey) {
-        color: sage-color(charcoal, 500);
+        color: sage-color(grey, 950);
       }
       @else if ($name == black or $name == charcoal) {
         color: sage-color(white);
       }
-      @else if ($name == blue and $value > 40) {
-        color: sage-color(blue, 20);
+      @else if ($name == blue and $value > 400) {
+        color: sage-color(blue, 200);
       }
       @else if ($name == blue) {
-        color: sage-color(blue, 95);
+        color: sage-color(blue, 950);
       }
-      @else if ($name == mercury and $value > 20) {
+      @else if ($name == mercury and $value > 200) {
         color: sage-color(white);
       }
       @else if ($name == mercury) {
-        color: sage-color(mercury, 50);
+        color: sage-color(mercury, 500);
       }
-      @else if ($name == green and $value > 20) {
+      @else if ($name == green and $value > 200) {
         color: sage-color(white);
       }
       @else if ($name == green) {
-        color: sage-color(green, 60);
+        color: sage-color(green, 600);
       }
-      @else if ($name == yellow and $value > 30) {
+      @else if ($name == yellow and $value > 300) {
         color: sage-color(white);
       }
       @else if (lightness($hex) < 65) {
@@ -105,8 +111,8 @@
 
 .color-white-100 {
   border-radius: sage-border(radius);
-  border: 1px solid sage-color(charcoal, 300);
-  box-shadow: inset 0 0 0.0625rem sage-color(charcoal, 300);
+  border: 1px solid sage-color(grey, 800);
+  box-shadow: inset 0 0 0.0625rem sage-color(grey, 800);
 }
 
 .color-black-100 {

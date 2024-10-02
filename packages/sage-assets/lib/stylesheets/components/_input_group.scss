@@ -26,13 +26,13 @@ $-input-group-pw-field-button-color-text-hover: sage-color(black);
   }
 
   .sage-input-group:focus-within & {
-    background-color: sage-color(grey, 300);
+    background-color: sage-color(grey, 200);
     opacity: 1;
   }
 
   .sage-input-group--disabled & {
     color: sage-color(grey, 500);
-    background-color: sage-color(grey, 200);
+    background-color: sage-color(grey, 150);
   }
 }
 
@@ -80,7 +80,7 @@ $-input-group-pw-field-button-color-text-hover: sage-color(black);
   }
 
   .sage-input-group--disabled & {
-    color: sage-color(charcoal, 300);
-    background-color: sage-color(grey, 200);
+    color: sage-color(grey, 800);
+    background-color: sage-color(grey, 150);
   }
 }

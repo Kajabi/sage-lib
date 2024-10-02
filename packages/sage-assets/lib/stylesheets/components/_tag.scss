@@ -5,7 +5,7 @@
 ////
 
 $-tag-image-size: rem(24px);
-$-tag-button-color: sage-color(charcoal, 500);
+$-tag-button-color: sage-color(grey, 950);
 $-tag-button-icon-size: rem(18px);
 $-tag-button-icon-mobile-size: rem(24px);
 
@@ -15,11 +15,11 @@ $-tag-button-icon-mobile-size: rem(24px);
   display: inline-flex;
   align-items: center;
   padding: sage-spacing(3xs) sage-spacing(xs) sage-spacing(3xs) sage-spacing(xs);
-  background-color: sage-color(grey, 300);
+  background-color: sage-color(grey, 200);
   border-radius: sage-border(radius-x-large);
 
   &:hover {
-    background-color: sage-color(grey, 400);
+    background-color: sage-color(grey, 300);
   }
 
   pds-icon {
@@ -84,5 +84,5 @@ $-tag-button-icon-mobile-size: rem(24px);
 }
 
 .sage-tag__value {
-  color: sage-color(charcoal, 500);
+  color: sage-color(grey, 950);
 }

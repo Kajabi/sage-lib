@@ -93,7 +93,7 @@ IconListItem.defaultProps = {
   children: null,
   className: null,
   icon: null,
-  iconColor: Icon.COLORS.CHARCOAL_100,
+  iconColor: Icon.COLORS.GREY_600,
   input: null,
   inputId: null,
   inputName: null,
