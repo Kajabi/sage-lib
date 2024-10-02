@@ -19,17 +19,43 @@ These also determine the icon that will appear by default.
   title: "A default alert",
   desc: demo_description,
   icon_name: "info-circle-filled",
-} do %>
-  <% content_for :sage_alert_actions do %>
-    <%= sage_component SageButton, {
-      style: "primary",
-      value: "Primary action",
-    } %>
-  <% end %>
-<% end %>
+} %>
 <%= sage_component SageAlert, {
   color: "info",
   title: "An informative alert",
+  desc: demo_description,
+  icon_name: "info-circle-filled",
+} %>
+<%= sage_component SageAlert, {
+  color: "success",
+  title: "An informative alert",
+  desc: demo_description,
+  icon_name: "check-circle-filled",
+} %>
+<%= sage_component SageAlert, {
+  color: "warning",
+  title: "Uh, oh! Here's a warning alert",
+  desc: demo_description,
+  icon_name: "danger-filled",
+} %>
+<%= sage_component SageAlert, {
+  color: "danger",
+  title: "Look out! This alert means there's an error",
+  desc: demo_description,
+  icon_name: "warning-filled",
+} %>
+
+<%= md("
+### Alert actions
+
+Alerts can include buttons and links for users to take further action.
+These include a single primary action button and one or more additional secondary actions.
+
+", use_sage_type: true) %>
+
+<%= sage_component SageAlert, {
+  color: "default",
+  title: "A default alert",
   desc: demo_description,
   icon_name: "info-circle-filled",
 } do %>
@@ -40,53 +66,7 @@ These also determine the icon that will appear by default.
     } %>
   <% end %>
 <% end %>
-<%= sage_component SageAlert, {
-  color: "success",
-  title: "An informative alert",
-  desc: demo_description,
-  icon_name: "check-circle-filled",
-} do %>
-  <% content_for :sage_alert_actions do %>
-    <%= sage_component SageButton, {
-      style: "primary",
-      value: "Primary action",
-    } %>
-  <% end %>
-<% end %>
-<%= sage_component SageAlert, {
-  color: "warning",
-  title: "Uh, oh! Here's a warning alert",
-  desc: demo_description,
-  icon_name: "danger-filled",
-} do %>
-  <% content_for :sage_alert_actions do %>
-    <%= sage_component SageButton, {
-      style: "primary",
-      value: "Primary action",
-    } %>
-  <% end %>
-<% end %>
-<%= sage_component SageAlert, {
-  color: "danger",
-  title: "Look out! This alert means there's an error",
-  desc: demo_description,
-  icon_name: "warning-filled",
-} do %>
-  <% content_for :sage_alert_actions do %>
-    <%= sage_component SageButton, {
-      style: "primary",
-      value: "Primary action",
-    } %>
-  <% end %>
-<% end %>
 
-<%= md("
-### Alert actions
-
-Alerts can include buttons and links for users to take further action.
-These include a single primary action button and one or more additional secondary actions.
-
-", use_sage_type: true) %>
 <%= sage_component SageAlert, {
   color: "published",
   title: "Alert with all actions",
