@@ -84,7 +84,7 @@ export const Select = ({
       <pds-icon
         aria-hidden="true"
         class="sage-select__arrow"
-        color={SageTokens.COLOR_PALETTE.CHARCOAL_100}
+        color={SageTokens.COLOR_PALETTE.GREY_600}
         name="caret-down"
       />
       {label && (

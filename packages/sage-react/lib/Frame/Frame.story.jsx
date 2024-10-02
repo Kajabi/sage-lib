@@ -112,7 +112,7 @@ export const NestingFrames = () => (
         <h4 className={SageClassnames.TYPE.HEADING_3}>
           Lorem ipsum dolor sit
         </h4>
-        <p className={`${SageClassnames.TYPE.BODY_SMALL} ${SageClassnames.TYPE_COLORS.CHARCOAL_200}`}>
+        <p className={`${SageClassnames.TYPE.BODY_SMALL} ${SageClassnames.TYPE_COLORS.GREY_700}`}>
           Consectetur adipiscing elit
         </p>
       </Frame>
@@ -225,7 +225,7 @@ export const StatBox = () => (
   >
     <Frame gap={Frame.GAPS.SM}>
       <Frame gap={Frame.GAPS.NONE}>
-        <h3 className={`${SageClassnames.TYPE.BODY_SMALL} ${SageClassnames.TYPE_COLORS.CHARCOAL_200}`}>
+        <h3 className={`${SageClassnames.TYPE.BODY_SMALL} ${SageClassnames.TYPE_COLORS.GREY_700}`}>
           All payments
         </h3>
         <Frame
@@ -237,7 +237,7 @@ export const StatBox = () => (
           <b className={SageClassnames.TYPE.HEADING_5}>
             40
           </b>
-          <span className={`${SageClassnames.TYPE.BODY_XSMALL} ${SageClassnames.TYPE_COLORS.CHARCOAL_100}`}>
+          <span className={`${SageClassnames.TYPE.BODY_XSMALL} ${SageClassnames.TYPE_COLORS.GREY_600}`}>
             successful payments
           </span>
         </Frame>

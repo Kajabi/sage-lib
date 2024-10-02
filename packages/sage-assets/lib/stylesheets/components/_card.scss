@@ -26,7 +26,7 @@ $-sage-card-background: transparent;
   border-color: sage-color(white);
   @include sage-dashed-border(
     $border-radius: sage-border(radius),
-    $color: sage-color(grey, 400),
+    $color: sage-color(grey, 300),
   );
 }
 
@@ -59,11 +59,11 @@ $-sage-card-background: transparent;
 
   .sage-link.sage-card__link--primary {
     // Remove when Link component is updated with new styles
-    color: sage-color(charcoal, 400);
+    color: sage-color(grey, 900);
     text-decoration: none;
 
     &:hover {
-      color: sage-color(charcoal, 500);
+      color: sage-color(grey, 950);
     }
   }
 
@@ -103,14 +103,14 @@ $-sage-card-background: transparent;
     top: 50%;
     width: 100%;
     height: 1px;
-    background: sage-color(grey, 300);
+    background: sage-color(grey, 200);
   }
   &::after {
     content: attr(data-divider-label);
     display: inline-block;
     position: relative;
     padding: 0 sage-spacing(sm);
-    color: sage-color(charcoal, 100);
+    color: sage-color(grey, 600);
     font-size: sage-font-size(body-xs);
     background-color: sage-color(white);
   }
