@@ -55,13 +55,13 @@ $-card-highlight-size: rem(12px);
 @each $-color-name, $-color-sliders in $sage-colors {
   .sage-card-highlight--#{"" + $-color-name} {
     @if ($-color-name == blue) {
-      --color: #{sage-color($-color-name, 60)};
+      --color: #{sage-color($-color-name, 600)};
     }
     @else if ($-color-name == green) {
-      --color: #{sage-color($-color-name, 60)};
+      --color: #{sage-color($-color-name, 600)};
     }
     @else if ($-color-name == mercury) {
-      --color: #{sage-color($-color-name, 50)};
+      --color: #{sage-color($-color-name, 500)};
     }
     @else {
       --color: #{sage-color($-color-name, 300)};

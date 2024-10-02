@@ -41,7 +41,7 @@ $-badge-statuses: (
   max-width: 100%;
   min-height: $-badge-min-height;
   padding: $-badge-padding;
-  color: sage-color(charcoal, 500);
+  color: sage-color(grey, 950);
   white-space: nowrap;
   background-color: transparent;
   border-radius: $-badge-border-radius;
@@ -102,7 +102,7 @@ $-badge-statuses: (
 
     .sage-badge__value {
       @include sage-focus-outline($outline-offset-block: -1, $outline-offset-inline: -1);
-      @include sage-focus-outline--update-color(sage-color(purple, 30));
+      @include sage-focus-outline--update-color(sage-color(purple, 300));
 
       position: static;
       padding-right: rem(24px);

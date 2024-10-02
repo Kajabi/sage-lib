@@ -44,7 +44,7 @@ export const EmptyState = ({
       {icon && (
         <div
           className="sage-empty-state__icon-container"
-          style={{ '--color-background-icon': backgroundColor || SageTokens.COLOR_PALETTE.MERCURY_30 }}
+          style={{ '--color-background-icon': backgroundColor || SageTokens.COLOR_PALETTE.MERCURY_300 }}
         >
           <Icon
             color={Icon.COLORS.WHITE}

@@ -5,7 +5,7 @@
 ////
 
 // Borders and sizing
-$-table-header-border: rem(1px) solid sage-color(grey, 300);
+$-table-header-border: rem(1px) solid sage-color(grey, 200);
 $-table-cell-padding-xs: sage-spacing(xs);
 $-table-cell-padding-card: sage-spacing();
 $-table-cell-padding-panel: sage-spacing();
@@ -16,11 +16,11 @@ $-table-max-width: none;
 // Text
 $-table-caption-font-size: "%t-sage-body-small";
 $-table-caption-alignment: center;
-$-table-cell-font-color: sage-color(charcoal, 200);
-$-table-cell-font-color-strong: sage-color(charcoal, 400);
+$-table-cell-font-color: sage-color(grey, 700);
+$-table-cell-font-color-strong: sage-color(grey, 900);
 $-table-cell-type-spec: "%t-sage-body-med";
 $-table-cell-type-spec-strong: "%t-sage-body-semi";
-$-table-heading-font-color: sage-color(charcoal, 500);
+$-table-heading-font-color: sage-color(grey, 950);
 $-table-heading-type-spec: "%t-sage-body-med";
 
 // Overflow gradient
@@ -37,7 +37,7 @@ $-table-overflow-indicator-gradient: linear-gradient(
 
 // Other
 $-table-row-color-hover: sage-color(grey, 100);
-$-table-cell-focus: sage-color(charcoal, 300);
+$-table-cell-focus: sage-color(grey, 800);
 $-table-cell-truncate-width: 6.5em;
 $-table-sort-indicator-width: rem(5px);
 $-table-sort-indicator-direction: rem(7px);
@@ -167,7 +167,7 @@ $-table-avatar-width: rem(32px);
   }
 
   .sage-table__sort-link--selected {
-    color: sage-color(charcoal, 100);
+    color: sage-color(grey, 600);
     text-decoration: underline;
 
     &::after {
