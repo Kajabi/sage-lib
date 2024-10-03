@@ -9,5 +9,19 @@ class SageIcon < SageComponent
     icon: SageSchemas::ICON,
     label: [:optional, NilClass, String],
     size: [:optional, NilClass, SageSchemas::ICON_SIZE],
+    card_css_classes: [:optional, NilClass, String],
   })
+end
+
+def generated_card_css_classes
+  @generated_css_classes ||= ""
+end
+
+def card_css_classes
+  @card_css_classes ||= ""
+end
+
+def card_css_classes=(card_classes_string)
+  @card_css_classes = card_classes_string
+  generated_card_css_classes << " #{card_classes_string}"
 end

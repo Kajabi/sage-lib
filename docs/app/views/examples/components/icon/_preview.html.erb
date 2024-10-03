@@ -72,6 +72,20 @@
 
 <%= sage_component SageDivider, {} %>
 
+<h3>Card CSS Classes</h3>
+
+<style>
+  .custom-card-class {
+    background-color: #000;
+  }
+</style>
+
+<div style="display:flex;gap:16px">
+  <%= sage_component SageIcon, { icon: "pen", color: "blue-300", card_css_classes: "custom-card-class" } %>
+</div>
+
+<%= sage_component SageDivider, {} %>
+
 <h3>Alignment next to Type</h3>
 
 <p>The <code>adjacent_type</code> property can be used to align an icon next to a heading or paragraph. This is useful for placing an icon next to a heading or paragraph in a variety of forms. The effect is that the icon's <code>height</code> and <code>line-height</code> are updated to match the spec responsively. This can be used in combination with the different icon sizes and also be used with a vareity of layout techniques or components such as CSS flexbox (used below) or grid templates within <code>SageCardRow</code> or <code>SagePanelRow</code>.

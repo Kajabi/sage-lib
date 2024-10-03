@@ -8,12 +8,13 @@ if component.circular
 end
 
 %>
-<% if component.card_color.present? %>
+<% if component.card_color.present? || component.card_css_classes.present? %>
   <div class="sage-icon-background
     <%= "sage-icon-background--#{component.card_color}" %>
     <%= "sage-icon-background--#{component.size}" if component.size.present? %>
     <%= "sage-icon-background--custom-size" if component.background_height || component.background_width %>
     <%= "sage-icon-background--circular" if component.circular %>
+    <%= component.generated_card_css_classes %>
   "
     <% if component.background_height || component.background_width %>
       style="
