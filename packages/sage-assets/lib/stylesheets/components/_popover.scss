@@ -51,7 +51,7 @@ $-popover-tooltip-inactive: $-popover-tooltip-width solid transparent;
   padding: $-popover-panel-padding;
   background-color: sage-color(white);
   background-clip: padding-box;
-  box-shadow: sage-shadow(lg);
+  box-shadow: sage-shadow(md);
   border-radius: sage-border(radius-large);
 
   &::after {
