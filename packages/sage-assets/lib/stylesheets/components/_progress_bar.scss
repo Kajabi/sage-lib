@@ -44,7 +44,7 @@ $-progress-bar-height: sage-spacing(xs);
 .sage-progress-bar__value {
   transform-origin: center left;
   height: 100%;
-  background-color: var(--progress-bar-value-color, sage-color(sage, 300));
+  background-color: var(--progress-bar-value-color, sage-color(mercury, 500));
   border-radius: sage-border(radius-small);
 
   .sage-modal__header & {
