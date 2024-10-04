@@ -36,7 +36,7 @@ export const Loader = ({
           className="sage-loader__spinner sage-loader__spinner--loading-button"
           viewBox="0 0 200 200"
           fill="none"
-          color={SageTokens.COLOR_PALETTE.MERCURY_40}
+          color={SageTokens.COLOR_PALETTE.MERCURY_400}
           aria-hidden="true"
         >
           <defs>
@@ -61,7 +61,7 @@ export const Loader = ({
           className="sage-loader__spinner"
           viewBox="0 0 200 200"
           fill="none"
-          color={SageTokens.COLOR_PALETTE.MERCURY_40}
+          color={SageTokens.COLOR_PALETTE.MERCURY_400}
           aria-hidden="true"
         >
           <defs>
