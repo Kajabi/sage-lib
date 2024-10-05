@@ -29,7 +29,7 @@ const Template = (args) => <ProgressBar {...args} />;
 export const Default = Template.bind({});
 export const CustomColor = Template.bind({});
 CustomColor.args = {
-  color: ProgressBar.COLORS.PURPLE_50,
+  color: ProgressBar.COLORS.PURPLE_300,
   backgroundColor: ProgressBar.COLORS.ORANGE_100,
   label: 'Cloning product',
   percent: '44',
