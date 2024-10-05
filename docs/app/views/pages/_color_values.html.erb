@@ -1,10 +1,10 @@
 <div class="colors">
-  <% if color == "primary" || color == "sage" || color == "orange" %>
+  <% if color == "primary" || color == "sage" || color == "orange" || color == "charcoal" || color == "white" || color == "black" %>
     <% [100, 200, 300, 400, 500].each do |value| %>
       <%= render "color_values_body", color: color, value: value %>
     <% end %>
   <% else %>
-    <% ["050", 100, 200, 300, 400, 500, 600, 700, 800, 950].each do |value| %>
+    <% ["050", 100, 150, 200, 300, 400, 500, 600, 700, 800, 950].each do |value| %>
       <%= render "color_values_body", color: color, value: value %>
     <% end %>
   <% end %>
