@@ -49,7 +49,9 @@
 
     // Determine class name for $value == 50
     $classname: ".color-#{"" + $name}-#{$value}";
-    @if ($value == "50") {
+
+    // This should be numeric, not string
+    @if ($value == 50) {
       $classname: ".color-#{"" + $name}-0#{$value}";
     }
 
