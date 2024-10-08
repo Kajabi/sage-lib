@@ -4,22 +4,30 @@
 /// @group sage
 ////
 
+$css-property-map: (
+  top: block-start,
+  right: inline-end,
+  bottom: block-end,
+  left: inline-start
+);
 
 @each $-name, $-value in $sage-spacings {
   $suffix: "-#{$-name}";
-  
+
   @if $-name == md {
     $suffix: "";
   }
-  
+
   @each $-box-side in (
     top,
     right,
     bottom,
     left
   ) {
+    $css-logical-property: map-get($css-property-map, $-box-side);
+
     .sage-spacer-#{$-box-side}#{$suffix} {
-      margin-#{$-box-side}: $-value;
+      margin-#{$css-logical-property}: $-value;
     }
   }
 }

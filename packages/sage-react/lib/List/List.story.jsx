@@ -9,6 +9,7 @@ import { OptionsDropdown } from '../Dropdown';
 import { Property } from '../Property';
 import { List } from './List';
 import { ListItem } from './ListItem';
+import placeholderImg from '../../public/CardPlaceholderLarge.png';
 import {
   sampleItems,
   sampleItemRenderer,
@@ -81,7 +82,7 @@ export const otherActionItems = () => (
       >
         <Card.Row gridTemplate={SageTokens.GRID_TEMPLATES.ETE}>
           <img
-            src="https://source.unsplash.com/random/240x160"
+            src={placeholderImg}
             width="120"
             height="64"
             alt=""

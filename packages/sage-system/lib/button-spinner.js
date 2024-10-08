@@ -4,7 +4,23 @@ Sage.buttonSpinner = (function () {
   // ==================================================
 
   const SELECTOR_BUTTON_SPINNER_ON_SUBMIT = "data-js-sage-spinner-on-submit"
-  const BUTTON_LOADING_SPINNER = `<svg class='sage-loader__spinner sage-loader__spinner--loading-button' viewBox='25 25 50 50' aria-hidden='true'><circle class='sage-loader__spinner-path sage-loader__spinner-path--loading-button' cx='50' cy='50' r='20' fill='none' stroke='0072EF' stroke-width='4'></circle></svg>`;
+  const BUTTON_LOADING_SPINNER = `<svg class="sage-loader__spinner sage-loader__spinner--loading-button" viewBox="0 0 200 200" fill="none">
+      <defs>
+        <linearGradient id="sage-loader__spinner-secondHalf">
+          <stop offset="0%" stop-opacity="0" stop-color="currentColor" />
+          <stop offset="100%" stop-opacity="0.5" stop-color="currentColor" />
+        </linearGradient>
+        <linearGradient id="sage-loader__spinner-firstHalf">
+          <stop offset="0%" stop-opacity="1" stop-color="currentColor" />
+          <stop offset="100%" stop-opacity="0.5" stop-color="currentColor" />
+        </linearGradient>
+      </defs>
+      <g>
+        <path class="sage-loader__spinner-path sage-loader__spinner-secondHalf" d="M 4 100 A 96 96 0 0 1 196 100" />
+        <path class="sage-loader__spinner-path sage-loader__spinner-firstHalf" d="M 196 100 A 96 96 0 0 1 4 100" />
+        <path class="sage-loader__spinner-path sage-loader__spinner-highlight" d="M 4 100 A 96 96 0 0 1 4 98" />
+      </g>
+    </svg>`;
 
   const ATTRIBUTE_ARIA_LABEL = 'aria-label';
   const ATTRIBUTE_ARIA_BUSY = 'aria-busy';

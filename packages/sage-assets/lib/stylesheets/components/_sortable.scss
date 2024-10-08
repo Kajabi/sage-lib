@@ -15,7 +15,7 @@ $-sortable-image-height: rem(48px);
 
 .sage-sortable__item {
   display: grid;
-  grid-template-columns: min-content minmax(0, 1fr) auto auto;
+  grid-template-columns: min-content min-content minmax(0, 1fr) auto auto;
   gap: sage-spacing(card);
   align-items: center;
   padding: sage-spacing(xs) sage-spacing(panel);
@@ -25,12 +25,12 @@ $-sortable-image-height: rem(48px);
   &::before {
     @include sage-icon-base(handle-2-vertical, md, pine);
     padding: 0;
-    color: sage-color(charcoal, 100);
+    color: sage-color(grey, 600);
   }
 
   &:focus,
   &:hover {
-    background-color: sage-color(grey, 200);
+    background-color: sage-color(grey, 150);
 
     &::before {
       color: sage-color(primary, 300);
@@ -75,7 +75,7 @@ $-sortable-image-height: rem(48px);
   }
 
   &.sage-sortable__item--ghost {
-    background: sage-color(grey, 300);
+    background: sage-color(grey, 200);
   }
 }
 
@@ -84,7 +84,7 @@ $-sortable-image-height: rem(48px);
   overflow: hidden;
   height: $-sortable-image-height;
   width: $-sortable-image-width;
-  background: sage-color(grey, 300);
+  background: sage-color(grey, 200);
   border-radius: sage-border(radius);
   border: sage-border();
 
@@ -115,7 +115,7 @@ $-sortable-image-height: rem(48px);
 .sage-sortable__item-subtitle {
   @extend %t-sage-body-xsmall;
   @include truncate();
-  color: sage-color(charcoal, 100);
+  color: sage-color(grey, 600);
 }
 
 .sage-sortable__item-actions {

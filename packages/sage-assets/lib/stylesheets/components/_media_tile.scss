@@ -31,7 +31,7 @@ $-media-tile-breakpoints: (
 }
 
 .sage-media-tile__body {
-  color: sage-color(charcoal, 200);
+  color: sage-color(grey, 700);
 
   > p {
     @extend %t-sage-body;
@@ -39,7 +39,7 @@ $-media-tile-breakpoints: (
 }
 
 .sage-media-tile__caption {
-  color: sage-color(charcoal, 100);
+  color: sage-color(grey, 600);
 
   > p {
     @extend %t-sage-body-small;
@@ -77,12 +77,12 @@ $-media-tile-breakpoints: (
     color: inherit;
   }
 
-  &:focus {
+  &:focus-visible {
     outline: 0;
 
     &::after {
-      border-width: sage-spacing(2xs);
-      border-color: sage-color(primary, 200);
+      border-width: rem(2px);
+      border-color: sage-color(purple, 300);
     }
   }
 }

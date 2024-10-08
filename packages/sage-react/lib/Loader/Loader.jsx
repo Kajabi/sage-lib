@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { LOADER_TYPES } from './configs';
+import { SageTokens } from '../configs';
 
 export const Loader = ({
   fillSpace,
@@ -33,34 +34,51 @@ export const Loader = ({
       {(type === LOADER_TYPES.SPINNER_IN_BUTTON) && (
         <svg
           className="sage-loader__spinner sage-loader__spinner--loading-button"
-          viewBox="25 25 50 50"
+          viewBox="0 0 200 200"
+          fill="none"
+          color={SageTokens.COLOR_PALETTE.MERCURY_400}
           aria-hidden="true"
         >
-          <circle
-            className="sage-loader__spinner-path sage-loader__spinner-path--loading-button"
-            cx="50"
-            cy="50"
-            r="20"
-            fill="none"
-            stroke="0072EF"
-            strokeWidth="4"
-          />
+          <defs>
+            <linearGradient id="sage-loader__spinner-secondHalf">
+              <stop offset="0%" stopOpacity="0" stopColor="currentColor" />
+              <stop offset="100%" stopOpacity="0.5" stopColor="currentColor" />
+            </linearGradient>
+            <linearGradient id="sage-loader__spinner-firstHalf">
+              <stop offset="0%" stopOpacity="1" stopColor="currentColor" />
+              <stop offset="100%" stopOpacity="0.5" stopColor="currentColor" />
+            </linearGradient>
+          </defs>
+          <g>
+            <path className="sage-loader__spinner-path sage-loader__spinner--loading-button sage-loader__spinner-secondHalf" d="M 4 100 A 96 96 0 0 1 196 100" />
+            <path className="sage-loader__spinner-path sage-loader__spinner--loading-button sage-loader__spinner-firstHalf" d="M 196 100 A 96 96 0 0 1 4 100" />
+            <path className="sage-loader__spinner-path sage-loader__spinner--loading-button sage-loader__spinner-highlight" d="M 4 100 A 96 96 0 0 1 4 98" />
+          </g>
         </svg>
       )}
       {(type === LOADER_TYPES.SPINNER) && (
         <svg
           className="sage-loader__spinner"
-          viewBox="25 25 50 50"
+          viewBox="0 0 200 200"
+          fill="none"
+          color={SageTokens.COLOR_PALETTE.MERCURY_400}
+          aria-hidden="true"
         >
-          <circle
-            className="sage-loader__spinner-path"
-            cx="50"
-            cy="50"
-            r="20"
-            fill="none"
-            stroke="0072EF"
-            strokeWidth="2"
-          />
+          <defs>
+            <linearGradient id="sage-loader__spinner-secondHalf">
+              <stop offset="0%" stopOpacity="0" stopColor="currentColor" />
+              <stop offset="100%" stopOpacity="0.5" stopColor="currentColor" />
+            </linearGradient>
+            <linearGradient id="sage-loader__spinner-firstHalf">
+              <stop offset="0%" stopOpacity="1" stopColor="currentColor" />
+              <stop offset="100%" stopOpacity="0.5" stopColor="currentColor" />
+            </linearGradient>
+          </defs>
+          <g>
+            <path className="sage-loader__spinner-path sage-loader__spinner-secondHalf" d="M 4 100 A 96 96 0 0 1 196 100" />
+            <path className="sage-loader__spinner-path sage-loader__spinner-firstHalf" d="M 196 100 A 96 96 0 0 1 4 100" />
+            <path className="sage-loader__spinner-path sage-loader__spinner-highlight" d="M 4 100 A 96 96 0 0 1 4 98" />
+          </g>
         </svg>
       )}
       {(type === LOADER_TYPES.SUCCESS) && (

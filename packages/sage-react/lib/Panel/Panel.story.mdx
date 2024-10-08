@@ -5,6 +5,7 @@ import { Icon } from "../Icon";
 import { OptionsDropdown } from "../Dropdown";
 import { Panel } from "./Panel";
 import { SageClassnames, SageTokens } from "../configs";
+import placeholderImg from '../../public/CardPlaceholderLarge.png';
 
 <Meta
   title='Sage/Panel'
@@ -372,7 +373,7 @@ A panel figure contains an image that occupies a substantive space in the panel.
   mdxSource={`
     <Panel>
       <Panel.Figure>
-        <img src='https://source.unsplash.com/random/800x600' alt='' />
+        <img src={placeholderImg} alt='' />
       </Panel.Figure>
     </Panel>
   `}
@@ -380,7 +381,7 @@ A panel figure contains an image that occupies a substantive space in the panel.
   <Story name='Figure'>
     <Panel>
       <Panel.Figure>
-        <img src='https://source.unsplash.com/random/800x600' alt='' />
+        <img src={placeholderImg} alt='' />
       </Panel.Figure>
     </Panel>
   </Story>

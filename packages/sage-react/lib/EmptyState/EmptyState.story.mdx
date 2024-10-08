@@ -1,0 +1,94 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs/blocks';
+import { Button } from '../Button';
+import { SageTokens } from '../configs';
+import { EmptyState } from './EmptyState';
+
+import placeholderImg from '../../public/CardPlaceholderLarge.png';
+
+<Meta title="Sage/EmptyState" component={EmptyState} />
+
+# Empty State
+
+The Empty State is displayed for main application features that have never been interacted with before. The Empty State is also used for smaller features in the app that primarily focus on data entry and have no data to show.
+
+## Accessibility
+
+Ensure images or graphics that are used in the Empty State component *do not* include `alt` text so that the image remains decorative and invisible to screen readers.
+
+## Properties
+
+<ArgsTable story="Default" />
+
+## Size
+
+The Empty State component has two sizes: default and `compact`. The default size is meant to be used for whole-page empty states and is intended to fill the stage. The compact size features a smaller icon and is intended to fill empty states for smaller contexts.
+
+### Default
+
+<Canvas>
+  <Story name="Default">
+    <EmptyState
+      actions={(
+        <>
+          <Button>Add Email Campaign</Button>
+          <Button subtle={true} color={Button.COLORS.SECONDARY}>Link</Button>
+        </>
+      )}
+      icon={SageTokens.ICONS.PEN}
+      title="Create your first Email Campaign"
+      titleTag="h1"
+      text={(<p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Elit arcu volutpat cursus ultricies ac, ultricies.
+      Platea sed nibh molestie ut.
+    </p>)}
+    />
+  </Story>
+</Canvas>
+
+### Compact
+
+<Canvas>
+  <Story name="Compact">
+    <EmptyState
+      actions={(
+        <>
+          <Button>Add Email Campaign</Button>
+          <Button subtle={true} color={Button.COLORS.SECONDARY}>Link</Button>
+        </>
+      )}
+      icon={SageTokens.ICONS.PEN}
+      size={EmptyState.SIZES.COMPACT}
+      title="Create your first Email Campaign"
+      titleTag="h1"
+      text={(<p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Elit arcu volutpat cursus ultricies ac, ultricies.
+      Platea sed nibh molestie ut.
+    </p>)}
+    />
+  </Story>
+</Canvas>
+
+### With Graphic
+
+<Canvas>
+  <Story name="WithGraphic">
+    <EmptyState
+      actions={(
+        <>
+          <Button>Add Email Campaign</Button>
+          <Button subtle={true} color={Button.COLORS.SECONDARY}>Link</Button>
+        </>
+      )}
+      graphic={(<img src={placeholderImg} alt="" />)}
+      title="Create your first Email Campaign"
+      titleTag="h1"
+      text={(<p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Elit arcu volutpat cursus ultricies ac, ultricies.
+      Platea sed nibh molestie ut.
+    </p>)}
+    />
+  </Story>
+</Canvas>

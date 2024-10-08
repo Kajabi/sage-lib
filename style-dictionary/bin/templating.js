@@ -112,6 +112,13 @@ Handlebars.registerHelper('lowercase', function (value) {
 });
 
 
+Handlebars.registerHelper('startsWithZero', function(value, options) {
+  if (value && value.toString().startsWith('0')) {
+      return "'" + value.toString() + "'";
+  }
+  return value;
+});
+
 //
 // Templates compilation
 //

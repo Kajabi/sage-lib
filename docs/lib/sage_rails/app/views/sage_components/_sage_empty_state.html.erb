@@ -1,6 +1,6 @@
 <%
-variant = component.scope.present? ? component.scope : false
-title_tag = variant == "feature" ? "h1" : "h2"
+variant = component.size.present? ? component.size : false
+title_tag = variant == "compact" ? "h2" : "h1"
 if component.title_tag.present?
   title_tag = component.title_tag
 end
@@ -20,11 +20,19 @@ end
     </div>
   <% end %>
 
-  <%= sage_component SageIcon, {
-    icon: component.icon,
-    size: "3xl",
-    css_classes: "sage-empty-state__icon"
-  } if component.icon %>
+  <% if component.icon.present? %>
+    <div
+      class="sage-empty-state__icon-container"
+      style="--color-background-icon: <%= component.icon_background || SageTokens::COLOR_PALETTE[:MERCURY_300] %>"
+    >
+      <%= sage_component SageIcon, {
+        color: "white",
+        icon: component.icon,
+        size: variant == 'compact' ? 'xl' : '3xl',
+        css_classes: "sage-empty-state__icon"
+      }%>
+    </div>
+  <% end %>
 
   <div class="sage-empty-state__content">
     <% if component.title.present? %>

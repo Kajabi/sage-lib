@@ -6,17 +6,17 @@
 
 
 // Colors
-$-switch-color-default: sage-color(grey, 400);
+$-switch-color-default: sage-color(grey, 300);
 $-switch-color-default-hover: sage-color(grey, 500);
-$-switch-color-default-text: sage-color(charcoal, 300);
-$-switch-color-checked: sage-color(charcoal, 400);
-$-switch-color-checked-hover: sage-color(charcoal, 500);
-$-switch-color-disabled: sage-color(grey, 300);
-$-switch-color-disabled-text: sage-color(charcoal, 300);
-$-switch-color-disabled-checked: sage-color(grey, 300);
-$-switch-color-disabled-checked-text: sage-color(charcoal, 100);
-$-switch-color-error: sage-color(red, 300);
-$-switch-focus-outline-error-color: sage-color(red, 200);
+$-switch-color-default-text: sage-color(grey, 800);
+$-switch-color-checked: sage-color(grey, 900);
+$-switch-color-checked-hover: sage-color(grey, 950);
+$-switch-color-disabled: sage-color(grey, 200);
+$-switch-color-disabled-text: sage-color(grey, 800);
+$-switch-color-disabled-checked: sage-color(grey, 200);
+$-switch-color-disabled-checked-text: sage-color(grey, 600);
+$-switch-color-error: sage-color(red, 500);
+$-switch-focus-outline-error-color: sage-color(red, 300);
 
 // Switch
 $-switch-label-left-spacing: rem(12px);
@@ -42,6 +42,13 @@ $-switch-toggle-size: rem(16px);
     padding: sage-spacing(card);
     border: sage-border();
     border-radius: sage-border(radius);
+    box-shadow: sage-shadow(100);
+    background-color: sage-color(white);
+
+    .sage-card &,
+    .sage-panel & {
+      box-shadow: none;
+    }
   }
 
   &.sage-switch--toggle-right {
@@ -107,7 +114,7 @@ $-switch-toggle-size: rem(16px);
 
     .sage-switch--has-border & {
       margin-left: ($-switch-width + $-switch-label-left-spacing);
-      color: sage-color(charcoal, 400);
+      color: sage-color(grey, 900);
       font-weight: sage-font-weight(semibold);
     }
 

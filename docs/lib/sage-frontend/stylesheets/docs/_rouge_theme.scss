@@ -1,39 +1,39 @@
 // background
-$-color-1: sage-color(grey, 300);
+$-color-1: sage-color(grey, 200);
 // Whitespace
-$-color-24: sage-color(charcoal, 200);
+$-color-24: sage-color(grey, 700);
 // Name entity
-$-color-20: sage-color(charcoal, 400);
+$-color-20: sage-color(grey, 900);
 // Operators, numbers
-$-color-6: sage-color(charcoal, 300);
+$-color-6: sage-color(grey, 800);
 // Heading and prompt
-$-color-9: sage-color(charcoal, 400);
+$-color-9: sage-color(grey, 900);
 // Comments of various sorts
-$-color-3: sage-color(charcoal, 300);
+$-color-3: sage-color(grey, 800);
 // Subheading
-$-color-12: sage-color(red, 300);
+$-color-12: sage-color(red, 500);
 // Constant
-$-color-18: sage-color(red, 300);
+$-color-18: sage-color(red, 500);
 // Keyword type
-$-color-14: sage-color(red, 300);
+$-color-14: sage-color(red, 500);
 // Strings
-$-color-15: sage-color(red, 300);
+$-color-15: sage-color(red, 500);
 // Name exception
-$-color-21: sage-color(red, 200);
+$-color-21: sage-color(red, 300);
 // Error underlines
-$-color-4: sage-color(red, 300);
+$-color-4: sage-color(red, 500);
 // Generic deleted?
-$-color-8: sage-color(red, 200);
+$-color-8: sage-color(red, 300);
 // Escape string
 $-color-25: sage-color(orange, 200);
 // Regex/interpolation
 $-color-26: sage-color(orange, 200);
 // Preproc comment
-$-color-7: sage-color(charcoal, 300);
+$-color-7: sage-color(grey, 800);
 // Highlight?
-$-color-2: sage-color(yellow, 100);
+$-color-2: sage-color(yellow, 150);
 // Name label
-$-color-22: sage-color(yellow, 300);
+$-color-22: sage-color(yellow, 400);
 // Keywords and built ins, tag names
 $-color-5: sage-color(sage, 300);
 // Generic inserted?
@@ -47,7 +47,7 @@ $-color-13: sage-color(primary, 200);
 // Class, function, namespace
 $-color-17: sage-color(sage, 200);
 // Name decorator and word operator
-$-color-19: sage-color(purple, 200);
+$-color-19: sage-color(purple, 300);
 // Variables
 $-color-23: sage-color(primary, 300);
 
@@ -58,7 +58,7 @@ $-color-23: sage-color(primary, 300);
   .hll {
     background-color: $-color-2;
   }
-  
+
   /* Comment */
   .c {
     color: $-color-3;

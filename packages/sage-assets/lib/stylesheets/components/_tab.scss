@@ -28,7 +28,7 @@ $-tab-color-disabled: map-get($sage-tab-colors, disabled);
 
   .sage-tabs--filter & {
     padding: rem(6px) rem(14px);
-    background-color: sage-color(grey, 300);
+    background-color: sage-color(grey, 200);
     border-radius: sage-border(radius-x-large);
     @extend %t-sage-body-small-semi;
   }
@@ -38,14 +38,16 @@ $-tab-color-disabled: map-get($sage-tab-colors, disabled);
   &:hover {
     color: $-tab-color-active;
     .sage-tabs--filter & {
-      background: sage-color(grey, 400);
+      background: sage-color(grey, 300);
     }
   }
 
   &:focus {
-    z-index: sage-z-index(default, 1);
     outline: none;
-    box-shadow: 0 0 0 4px sage-color(primary, 200);
+  }
+
+  &:focus-visible {
+    @include sage-focus-ring();
     border-radius: sage-border(radius-small);
 
     .sage-tabs--filter & {
@@ -62,7 +64,7 @@ $-tab-color-disabled: map-get($sage-tab-colors, disabled);
     color: $-tab-color-active;
     .sage-tabs--filter & {
       color: sage-color(white);
-      background: sage-color(charcoal, 400);
+      background: sage-color(grey, 900);
       &::after {
         display: none;
       }
@@ -97,11 +99,11 @@ $-tab-color-disabled: map-get($sage-tab-colors, disabled);
       opacity: 0;
     }
 
-    &:focus {
+    &:focus-visible {
       border-radius: sage-border(radius-small);
     }
 
-    &:focus::after,
+    &:focus-visible::after,
     &.sage-tab--active::after {
       opacity: 1;
     }
@@ -114,7 +116,7 @@ $-tab-color-disabled: map-get($sage-tab-colors, disabled);
     &:not(:last-child) {
       &::before {
         order: 2;
-        color: sage-color(charcoal, 100);
+        color: sage-color(grey, 600);
 
         @include sage-icon-base(right-small, xl, pine);
       }
@@ -126,7 +128,7 @@ $-tab-color-disabled: map-get($sage-tab-colors, disabled);
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
 
-    &:focus {
+    &:focus-visible {
       border-radius: sage-border(radius-small);
     }
   }

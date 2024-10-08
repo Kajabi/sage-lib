@@ -6,8 +6,8 @@
 
 $-link-color: sage-color(primary, 300);
 $-link-color-hover: sage-color(primary, 400);
-$-link-subtext-color: sage-color(charcoal, 200);
-$-link-subtext-color-hover: sage-color(charcoal, 400);
+$-link-subtext-color: sage-color(grey, 700);
+$-link-subtext-color-hover: sage-color(grey, 900);
 
 $-link-base-styles: (
   primary:(
@@ -17,19 +17,19 @@ $-link-base-styles: (
     hover: (
       color: sage-color(primary, 400),
     ),
-    focus: (
+    focus-visible: (
       color: sage-color(primary, 300),
     ),
   ),
   secondary:(
     default: (
-      color: sage-color(charcoal, 400),
+      color: sage-color(grey, 900),
     ),
     hover: (
       color: sage-color(black),
     ),
-    focus: (
-      color: sage-color(charcoal, 400),
+    focus-visible: (
+      color: sage-color(grey, 900),
     ),
   ),
   neutral:(
@@ -39,20 +39,20 @@ $-link-base-styles: (
     hover: (
       color: sage-color(grey, 100),
     ),
-    focus: (
+    focus-visible: (
       color: sage-color(white),
     ),
   ),
   danger:(
     default: (
-      color: sage-color(red, 300),
+      color: sage-color(red, 500),
     ),
     hover: (
-      color: sage-color(red, 400),
+      color: sage-color(red, 800),
     ),
-    focus: (
-      color: sage-color(red, 300),
-      focus-outline: sage-color(red, 200),
+    focus-visible: (
+      color: sage-color(red, 500),
+      focus-outline: sage-color(red, 300),
     ),
   )
 );
@@ -74,10 +74,10 @@ $-link-base-styles: (
     cursor: pointer;
   }
 
-  &:focus {
+  &:focus-visible {
     color: sage-color(primary, 300);
 
-    @include sage-focus-outline--update-color(sage-color(primary, 200));
+    @include sage-focus-outline--update-color(sage-color(purple, 300));
   }
 
   .sage-card--interactive & {
@@ -99,8 +99,8 @@ $-link-base-styles: (
       box-shadow: sage-border-interactive(hover);
     }
 
-    &:focus::before {
-      box-shadow: sage-border-interactive(focus);
+    &:focus-visible::before {
+      box-shadow: sage-border-interactive(focus-visible);
     }
 
     &:active::before {
@@ -111,11 +111,11 @@ $-link-base-styles: (
       box-shadow: sage-border-interactive(error);
     }
 
-    &:focus:invalid::before {
+    &:focus-visible:invalid::before {
       box-shadow: sage-border-interactive(error-focus);
     }
 
-    &:focus::after {
+    &:focus-visible::after {
       border: 0;
     }
 
@@ -137,9 +137,9 @@ $-link-base-styles: (
         }
         /* stylelint-enable max-nesting-depth */
       }
-      @else if ($-style-type-name == focus) {
+      @else if ($-style-type-name == focus-visible) {
         /* stylelint-disable max-nesting-depth */
-        &:focus,
+        &:focus-visible,
         &:active {
           color: map-get($-style-type-configs, color);
 
@@ -173,21 +173,21 @@ $-link-base-styles: (
   pds-icon {
     @include sage-icon-base(question-circle, lg, pine);
 
-    color: sage-color(charcoal, 100);
+    color: sage-color(grey, 600);
   }
 
   &:hover,
   &:active,
-  &:focus {
+  &:focus-visible {
     color: inherit;
     outline: 0;
 
     pds-icon {
-      color: sage-color(charcoal, 300);
+      color: sage-color(grey, 800);
     }
 
     &::before {
-      color: sage-color(charcoal, 300);
+      color: sage-color(grey, 800);
     }
   }
 
@@ -214,7 +214,7 @@ $-link-base-styles: (
     $outline-offset-block: 4px,
     $outline-border-radius: sage-border(radius-round),
   );
-  @include sage-focus-outline--update-color(sage-color(primary, 200));
+  @include sage-focus-outline--update-color(sage-color(purple, 300));
 }
 
 .sage-link--remove-underline {
@@ -239,7 +239,7 @@ $-link-base-styles: (
     text-decoration: underline;
   }
 
-  &:focus {
+  &:focus-visible {
     color: $-link-subtext-color-hover;
     text-decoration: none;
   }

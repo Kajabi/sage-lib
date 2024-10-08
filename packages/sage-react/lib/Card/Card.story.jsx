@@ -8,6 +8,8 @@ import { Link } from '../Link';
 import { Card } from './Card';
 import { Frame } from '../Frame';
 
+import placeholderImg from '../../public/CardPlaceholderLarge.png';
+
 export default {
   title: 'Sage/Card',
   component: Card,
@@ -122,7 +124,7 @@ Default.args = {
       </Card.Row>
       <Card.Title>Figure (with side bleed)</Card.Title>
       <Card.Figure bleed={Card.Figure.BLEED_OPTIONS.SIDES}>
-        <img src="//source.unsplash.com/800x500" alt="" />
+        <img src={placeholderImg} alt="" />
       </Card.Figure>
       <Card.Title>Divider</Card.Title>
       <Card.Divider fullBleed={true} />
