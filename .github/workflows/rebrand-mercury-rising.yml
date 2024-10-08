@@ -63,7 +63,7 @@ jobs:
         run: echo "preid='rc'" >> $GITHUB_OUTPUT
 
       - name: Lerna Version Develop
-        run: NODE_OPTIONS=--openssl-legacy-provider yarn lerna publish --canary --yes --preid mercury --pre-dist-tag next
+        run: NODE_OPTIONS=--openssl-legacy-provider yarn lerna publish --canary --yes --preid mercury --pre-dist-tag next --force-publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.ACCESS_TOKEN }}
 
