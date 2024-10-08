@@ -29,7 +29,7 @@ $-tag-button-icon-mobile-size: rem(24px);
 }
 
 .sage-tag--has-image {
-  padding-left: sage-spacing(2xs);
+  padding-inline-start: sage-spacing(2xs);
 }
 
 .sage-tag__image {
@@ -43,8 +43,8 @@ $-tag-button-icon-mobile-size: rem(24px);
   display: inline-flex;
   width: auto;
   height: auto;
-  margin-left: rem(6px);
-  margin-right: calc(#{sage-spacing(2xs)} * -1);
+  margin-inline-start: rem(6px);
+  margin-inline-end: calc(#{sage-spacing(2xs)} * -1);
   color: $-tag-button-color;
 
   &::before {
