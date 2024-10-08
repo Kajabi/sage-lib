@@ -1930,6 +1930,52 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
+"@kajabi/sage-assets@^1.15.7":
+  version "1.15.7"
+  resolved "https://npm.pkg.github.com/download/@Kajabi/sage-assets/1.15.7/33ae3a655cb368d105f5d856061a8880502246b3#33ae3a655cb368d105f5d856061a8880502246b3"
+  integrity sha512-eyKM0d9XUeXxbZmrWwoPIwfX76UEYrukH2zsCKkTyP7Ca2ud9b1TD+b3Dld1Bzt2dvA5WdCaDCijf2btpYvlqg==
+  dependencies:
+    sass "^1.54.3"
+
+"@kajabi/sage-packs@^1.1.15":
+  version "1.1.15"
+  resolved "https://npm.pkg.github.com/download/@Kajabi/sage-packs/1.1.15/6e61772ce0b7d6eb87ca1ecda746d2b83b60a981#6e61772ce0b7d6eb87ca1ecda746d2b83b60a981"
+  integrity sha512-0p4OdxOlbxPNLVvghci062dGCZwlCrzEqQMse1k34+a18AXOGyn3WQ7314/bNQVoeqrDOh+hBctrJvWL+LhunQ==
+  dependencies:
+    "@kajabi/sage-assets" "^1.15.7"
+    "@kajabi/sage-react" "^1.20.7"
+    "@kajabi/sage-system" "^1.3.6"
+
+"@kajabi/sage-react@^1.20.7":
+  version "1.20.7"
+  resolved "https://npm.pkg.github.com/download/@Kajabi/sage-react/1.20.7/69bbc2c2a22f03971bfd839ed713f5bc16ce3b02#69bbc2c2a22f03971bfd839ed713f5bc16ce3b02"
+  integrity sha512-cE1FWuHeqptJFhXqLSjSDun8vBw8IwiSNcOmclh+XLBLlTu6uLk3oLG9S18BZ1pmN1VQ/DWkASnefJ0ZFONA8g==
+  dependencies:
+    "@kajabi/sage-assets" "^1.15.7"
+    classnames "^2.2.6"
+    debounce "^1.2.0"
+    focus-trap "^6.2.2"
+    html-react-parser "^0.14.2"
+    pluralize "^8.0.0"
+    prop-types "^15.7.2"
+    react-docgen "^5.4.3"
+    react-sortablejs "6.0.0"
+    react-uuid "^1.0.2"
+    recharts "^2.0.9"
+    sortablejs "^1.12.0"
+    tiny-slider "^2.9.4"
+
+"@kajabi/sage-system@^1.3.6":
+  version "1.3.6"
+  resolved "https://npm.pkg.github.com/download/@Kajabi/sage-system/1.3.6/1038764db0f0782d6822770492d041e1c823aaa5#1038764db0f0782d6822770492d041e1c823aaa5"
+  integrity sha512-Sq/iDYt1glbI7xWbqVw5Zng9azLAqcnLvBVhfRDnY/uYks2a+PiZ3vVpSQkMfz/6nBslqDyf3l0YdZpNw3zWtQ==
+  dependencies:
+    "@babel/preset-env" "^7.18.10"
+    arrive "^2.4.1"
+    babel-loader "^8.1.0"
+    sortablejs "^1.12.0"
+    tiny-slider "^2.9.4"
+
 "@koa/cors@^3.2.0":
   version "3.4.1"
   resolved "https://registry.npmjs.org/@koa/cors/-/cors-3.4.1.tgz"

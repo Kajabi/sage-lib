@@ -3,15 +3,14 @@
     "packages/*",
     "docs"
   ],
-  "version": "independent",
+  "version": "5.0.0",
   "npmClient": "yarn",
   "useWorkspaces": true,
   "command": {
     "publish": {
       "conventionalCommits": true,
       "message": "chore(release): publish [skip ci]",
-      "registry": "https://npm.pkg.github.com",
-      "allowBranch": ["main", "develop", "mercury-rising"]
+      "registry": "https://npm.pkg.github.com"
     }
   }
 }
