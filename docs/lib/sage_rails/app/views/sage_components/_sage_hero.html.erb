@@ -11,7 +11,7 @@
     <span class="sage-hero__artwork-image-container">
       #{image_tag(component.image, image_options)}
     </span>
-  ).html_safe
+  ).html_safe if component.image.present?
 %>
 
 <article
@@ -45,7 +45,7 @@
     <% end %>
   </div>
 
-  <% if component.cta_attributes.present? %>
+  <% if component.cta_attributes.present? && artwork.present? %>
     <a
       <% component.cta_attributes.each do |key, value| %>
         <%= "#{key}='#{value}'".html_safe %>
@@ -55,9 +55,11 @@
       <%= artwork %>
     </a>
   <% else %>
-    <div class="sage-hero__artwork">
-      <%= artwork %>
-    </div>
+    <% if artwork.present? %>
+      <div class="sage-hero__artwork">
+        <%= artwork %>
+      </div>
+    <% end %>
   <% end %>
 
 </article>

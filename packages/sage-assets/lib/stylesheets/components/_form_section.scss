@@ -24,11 +24,11 @@
 
 .sage-form-section__subtitle {
   @extend %t-sage-body;
-  
+
   display: flex;
   flex-direction: column;
   gap: sage-spacing(sm);
-  color: sage-color(charcoal, 200);
+  color: sage-color(grey, 700);
 }
 
 .sage-form-section__subtitle--legacy {

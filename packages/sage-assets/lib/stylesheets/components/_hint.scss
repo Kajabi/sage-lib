@@ -5,8 +5,8 @@
 ////
 
 // Colors
-$-hint-text-color: sage-color(charcoal, 400);
-$-hint-background-color: sage-color(grey, 300);
+$-hint-text-color: sage-color(grey, 900);
+$-hint-background-color: sage-color(grey, 200);
 
 .sage-hint {
   display: flex;
@@ -21,7 +21,7 @@ $-hint-background-color: sage-color(grey, 300);
 }
 
 .sage-hint__content {
-  @extend %t-sage-body-small;
+  @extend %t-sage-body;
   color: $-hint-text-color;
   word-break: break-word;
 }

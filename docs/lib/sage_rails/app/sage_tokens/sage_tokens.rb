@@ -480,6 +480,21 @@ module SageTokens
   ]
 
   # Keep in sync with `packages/sage-assets/lib/stylesheets/components/_frame.scss`
+  FRAME_BOX_SHADOWS = [
+    "none",
+    "sm",
+    "md",
+    "lg",
+    "modal",
+    "050",
+    "100",
+    "200",
+    "300",
+    "400",
+    "500",
+  ]
+
+  # Keep in sync with `packages/sage-assets/lib/stylesheets/components/_frame.scss`
   FRAME_DIRECTIONS = [
     "vertical",
     "horizontal",
