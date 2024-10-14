@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.15.7...@kajabi/sage-assets@2.0.0) (2024-10-14)
+
+
+### feature
+
+* mercury rising rebranding ([#1988](https://github.com/Kajabi/sage-lib/issues/1988)) ([60f0873](https://github.com/Kajabi/sage-lib/commit/60f08732d02e9b34f8901b4fce7578ab7944c265)), closes [#1922](https://github.com/Kajabi/sage-lib/issues/1922) [#1926](https://github.com/Kajabi/sage-lib/issues/1926) [#1930](https://github.com/Kajabi/sage-lib/issues/1930) [#1931](https://github.com/Kajabi/sage-lib/issues/1931) [#1934](https://github.com/Kajabi/sage-lib/issues/1934) [#1935](https://github.com/Kajabi/sage-lib/issues/1935) [#1933](https://github.com/Kajabi/sage-lib/issues/1933) [#1936](https://github.com/Kajabi/sage-lib/issues/1936) [#1944](https://github.com/Kajabi/sage-lib/issues/1944) [#1947](https://github.com/Kajabi/sage-lib/issues/1947) [#1951](https://github.com/Kajabi/sage-lib/issues/1951) [#1952](https://github.com/Kajabi/sage-lib/issues/1952) [#1956](https://github.com/Kajabi/sage-lib/issues/1956) [#1957](https://github.com/Kajabi/sage-lib/issues/1957) [#1960](https://github.com/Kajabi/sage-lib/issues/1960) [#1958](https://github.com/Kajabi/sage-lib/issues/1958) [#1959](https://github.com/Kajabi/sage-lib/issues/1959) [#1965](https://github.com/Kajabi/sage-lib/issues/1965) [#1967](https://github.com/Kajabi/sage-lib/issues/1967) [#1969](https://github.com/Kajabi/sage-lib/issues/1969) [#1970](https://github.com/Kajabi/sage-lib/issues/1970) [#1972](https://github.com/Kajabi/sage-lib/issues/1972) [#1971](https://github.com/Kajabi/sage-lib/issues/1971) [#1973](https://github.com/Kajabi/sage-lib/issues/1973) [#1968](https://github.com/Kajabi/sage-lib/issues/1968) [#1974](https://github.com/Kajabi/sage-lib/issues/1974) [#1975](https://github.com/Kajabi/sage-lib/issues/1975)
+
+
+### BREAKING CHANGES
+
+* This is a breaking change due to the rebranding effort
+
+ci: update rebrand mercury workflow for deployments
+
+revert(font-weight): combine font-weights back to *00 based
+
+fix: DSS-752
+
+
+
+
+
 ## [1.15.7](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-assets@1.15.6...@kajabi/sage-assets@1.15.7) (2024-09-11)
 
 **Note:** Version bump only for package @kajabi/sage-assets
