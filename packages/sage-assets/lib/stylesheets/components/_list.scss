@@ -19,7 +19,7 @@
   border-radius: sage-border(radius-medium);
 
   &:hover {
-    background-color: sage-color(grey, 200);
+    background-color: sage-color(grey, 150);
   }
 
   .sage-list--draggable-by-row & {
@@ -44,7 +44,7 @@
 }
 
 .sage-list__item--sortable-ghost {
-  background-color: sage-color(grey, 200);
+  background-color: sage-color(grey, 150);
 }
 
 .sage-list__item-content {

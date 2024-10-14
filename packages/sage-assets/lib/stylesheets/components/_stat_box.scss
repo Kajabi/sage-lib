@@ -11,6 +11,13 @@ $-stat-box-image-max-width: rem(48px);
   @include sage-card($grid: false);
   padding: rem(18px) sage-spacing(sm);
   border-radius: sage-border(radius-large);
+  box-shadow: sage-shadow(100);
+  background-color: sage-color(white);
+
+  .sage-card &,
+  .sage-panel & {
+    box-shadow: none;
+  }
 
   &.sage-stat-box--raised {
     box-shadow: sage-shadow(sm);
@@ -72,7 +79,7 @@ $-stat-box-image-max-width: rem(48px);
 
 .sage-stat-box__title,
 .sage-stat-box__data--no-data {
-  color: sage-color(charcoal, 200);
+  color: sage-color(grey, 700);
 }
 
 .sage-stat-box__title {
@@ -94,7 +101,18 @@ $-stat-box-image-max-width: rem(48px);
 
 @each $-color-name, $-color-sliders in $sage-colors {
   .sage-stat-box__title--legend-#{"" + $-color-name} {
-    --legend-color: #{sage-color($-color-name, 500)};
+    @if ($-color-name == blue) {
+      --legend-color: #{sage-color($-color-name, 600)};
+    }
+    @else if ($-color-name == green) {
+      --legend-color: #{sage-color($-color-name, 600)};
+    }
+    @else if ($-color-name == mercury) {
+      --legend-color: #{sage-color($-color-name, 500)};
+    }
+    @else {
+      --legend-color: #{sage-color($-color-name, 500)};
+    }
   }
 }
 
@@ -108,7 +126,7 @@ $-stat-box-image-max-width: rem(48px);
 .sage-stat-box__timeframe {
   @extend %t-sage-body-xsmall;
   margin-left: sage-spacing(xs);
-  color: sage-color(charcoal, 100);
+  color: sage-color(grey, 600);
 }
 
 .sage-stat-box__link {
