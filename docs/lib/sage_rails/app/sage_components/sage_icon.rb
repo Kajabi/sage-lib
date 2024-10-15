@@ -6,7 +6,7 @@ class SageIcon < SageComponent
     card_color: [:optional, NilClass, Set.new(SageSchemas::STATUSES), String],
     circular: [:optional, NilClass, TrueClass],
     color: [:optional, NilClass, SageSchemas::COLOR_SLIDER],
-    icon: SageSchemas::ICON,
+    icon: String,
     label: [:optional, NilClass, String],
     size: [:optional, NilClass, SageSchemas::ICON_SIZE],
   })
