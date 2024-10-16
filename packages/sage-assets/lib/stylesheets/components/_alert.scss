@@ -47,19 +47,6 @@ $-alert-border-colors: (
   danger: sage-color(red, 300),
 );
 
-$-alert-border-colors: (
-  default: sage-color(grey, 300),
-  draft: sage-color(grey, 300),
-  info: sage-color(blue, 300),
-  published: sage-color(green, 300),
-  success: sage-color(green, 300),
-  warning: sage-color(yellow, 300),
-  approaching: sage-color(yellow, 300),
-  reached: sage-color(mercury, 300),
-  exceeded: sage-color(red, 300),
-  danger: sage-color(red, 300),
-);
-
 .sage-alert {
   display: grid;
   grid-template-columns: auto 1fr;
