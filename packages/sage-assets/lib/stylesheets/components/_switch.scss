@@ -95,6 +95,10 @@ $-switch-toggle-size: rem(16px);
   border-radius: $-switch-border-radius;
   transition: background 0.3s ease-out;
 
+  &:focus {
+    outline: none !important; /* stylelint-disable-line declaration-no-important */
+  }
+
   .sage-switch--has-border & {
     position: absolute;
   }
