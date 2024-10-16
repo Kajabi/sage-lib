@@ -20,7 +20,7 @@ $-banner-height-offset: map-get($sage-banner-heights, default);
 
 .sage-page__icon {
   height: 60px;
-  margin-bottom: sage-spacing();
+  margin-block-end: sage-spacing();
 }
 
 .sage-page--has-open-modal {

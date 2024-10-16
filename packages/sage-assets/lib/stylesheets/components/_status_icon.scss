@@ -33,12 +33,12 @@
 
   .sage-sortable__item & {
     &:not(:last-child) {
-      margin-right: sage-spacing(sm);
+      margin-inline-end: sage-spacing(sm);
     }
   }
 
   & + & {
-    margin-left: sage-spacing(2xs);
+    margin-inline-start: sage-spacing(2xs);
   }
 
   // NOTE: Icon generation consolidated in `core/_icons.scss`

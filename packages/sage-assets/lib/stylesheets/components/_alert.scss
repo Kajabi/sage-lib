@@ -53,13 +53,13 @@ $-alert-border-colors: (
   grid-template-areas: "icon copy";
   gap: sage-spacing(sm);
   padding: sage-spacing();
-  margin-bottom: sage-spacing();
+  margin-block-end: sage-spacing();
   border: 1px solid sage-color(grey, 300);
   border-radius: sage-border(radius-large);
 
   .sage-frame > &,
   .sage-panel > & {
-    margin-bottom: 0;
+    margin-block-end: 0;
   }
 
   &.sage-alert--actions {

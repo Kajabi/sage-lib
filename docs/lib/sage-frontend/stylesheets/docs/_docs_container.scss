@@ -5,8 +5,8 @@
 ================================================== */
 
 .docs-container {
-  margin-top: sage-spacing();
-  margin-bottom: sage-spacing();
+  margin-block-start: sage-spacing();
+  margin-block-end: sage-spacing();
 
   @include sage-panel;
 }
