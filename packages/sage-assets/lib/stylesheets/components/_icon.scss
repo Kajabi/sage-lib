@@ -209,3 +209,8 @@ $-icon-beside-type: (
     --background-color: #{sage-color-combo($-color, default, background)};
   }
 }
+
+// flip icons with directional names for RTL - MUST LIVE IN PINE
+[dir="rtl"] pds-icon[name*="left"], [dir="rtl"] pds-icon[name*="right"] {
+  transform: scale(-1);
+}
