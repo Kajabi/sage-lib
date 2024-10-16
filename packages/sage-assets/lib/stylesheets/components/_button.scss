@@ -244,6 +244,9 @@ $-btn-loading-min-height: rem(36px);
     font-weight: sage-font-weight(regular);
     border-width: 0;
     box-shadow: sage-border-interactive(default);
+    height: rem(40px);
+    font-family: $-body-font-stack;
+    font-weight: sage-font-weight(medium);;
     &:hover {
       box-shadow: sage-border-interactive(hover);
     }
