@@ -14,7 +14,7 @@ $-btn-base-padding-block: sage-spacing(xs); // vertical (y) axis
 $-btn-base-padding-inline: sage-spacing(sm); // horizontal (x) axis
 $-btn-base-line-height: var(--sage-line-height-body, #{rem(24px)});
 $-btn-border-radius: 9999px;
-$-btn-shadow-base: sage-shadow(sm);
+$-btn-shadow-base: sage-shadow(050);
 $-btn-icon-only-standard-size: rem(40px);
 $-btn-icon-only-subtle-size: rem(16px);
 $-btn-icon-only-hover-size: rem(24px);
@@ -49,13 +49,14 @@ $-btn-base-styles: (
   primary: (
     default: (
       color: sage-color(white),
-      background-color: sage-color(charcoal, 400),
-      border-color: sage-color(charcoal, 400),
+      background-color: sage-color(grey, 900),
+      border-color: sage-color(grey, 900),
       ring-color: sage-color(purple, 300),
     ),
     hover: (
       color: sage-color(white),
       background-color: sage-color(grey, 950),
+      border-color: sage-color(grey, 950),
     ),
     focus: (
       color: sage-color(white),
@@ -63,19 +64,19 @@ $-btn-base-styles: (
       border-color: sage-color(grey, 900),
     ),
     disabled: (
-      color: sage-color(grey, 600),
-      background-color: sage-color(grey, 200),
-      border-color: sage-color(grey, 200),
+      color: sage-color(grey, 400),
+      background-color: sage-color(grey, 150),
+      border-color: sage-color(grey, 150),
     )
   ),
   secondary: (
     default: (
-      color: sage-color(grey, 900),
+      color: sage-color(grey, 800),
       background-color: sage-color(white),
       ring-color: sage-color(purple, 300),
     ),
     hover: (
-      color: sage-color(grey, 900),
+      color: sage-color(grey, 950),
       background-color: sage-color(grey, 100),
     ),
     focus: (
@@ -96,7 +97,8 @@ $-btn-base-styles: (
     ),
     hover: (
       color: sage-color(white),
-      background-color: sage-color(red, 800),
+      background-color: sage-color(red, 600),
+      border-color: sage-color(red, 600),
     ),
     focus: (
       color: sage-color(white),
@@ -184,6 +186,7 @@ $-btn-loading-min-height: rem(36px);
   border-width: 1px;
   border-style: solid;
   border-radius: $-btn-border-radius;
+  box-shadow: $-btn-shadow-base;
   transition: $-btn-transition;
   transition-property: border, background-color, box-shadow;
 
@@ -588,13 +591,14 @@ a.sage-btn {
 
 // Secondary styles, no shadow variation
 .sage-btn--secondary {
-  color: sage-color(grey, 900);
+  color: sage-color(grey, 800);
   background-color: sage-color(white);
-  border: 1px solid sage-color(grey, 500);
+  border: 1px solid sage-color(grey, 200);
 
   &:hover {
-    background-color: sage-color(white);
-    border-color: sage-color(grey, 600);
+    color: sage-color(grey, 950);
+    background-color: sage-color(grey, 100);
+    border-color: sage-color(grey, 300);
   }
 
   &:focus {
@@ -603,16 +607,15 @@ a.sage-btn {
 
   &:focus-visible,
   &:active {
-    color: sage-color(grey, 800);
     background-color: sage-color(white);
     border-color: sage-color(grey);
   }
 
   &:disabled,
   &[aria-disabled="true"] {
-    color: sage-color(grey, 600);
+    color: sage-color(grey, 400);
     background-color: sage-color(white);
-    border-color: sage-color(grey, 200);
+    border-color: sage-color(grey, 150);
   }
 }
 
