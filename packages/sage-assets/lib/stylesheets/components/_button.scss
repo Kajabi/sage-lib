@@ -241,12 +241,11 @@ $-btn-loading-min-height: rem(36px);
   }
 
   .sage-dropdown__trigger--select & {
-    font-weight: sage-font-weight(regular);
-    border-width: 0;
-    box-shadow: sage-border-interactive(default);
     height: rem(40px);
     font-family: $-body-font-stack;
-    font-weight: sage-font-weight(medium);;
+    font-weight: sage-font-weight(medium);
+    border-width: 0;
+    box-shadow: sage-border-interactive(default);
     &:hover {
       box-shadow: sage-border-interactive(hover);
     }

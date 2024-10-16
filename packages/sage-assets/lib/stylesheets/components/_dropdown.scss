@@ -472,12 +472,11 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
 
   .sage-dropdown--value-selected & {
     @extend %t-sage-body-xsmall-semi;
-
     transform: translateY(calc(#{-$-dropdown-height} + 50%));
     width: auto;
+    font-weight: sage-font-weight(medium);
     background-color: $-dropdown-trigger-label-color-label-background;
     transition: transform 0.15s ease-in-out, color 0.15s ease-out;
-    font-weight: sage-font-weight(medium);
   }
 
   .sage-dropdown--value-selected .sage-dropdown__trigger--select & {
