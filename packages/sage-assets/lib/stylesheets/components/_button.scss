@@ -533,6 +533,7 @@ a.sage-btn {
         }
       }
       @else if ($-style-type-name == focus) {
+        &:focus,
         &:focus-visible,
         &:active {
           color: map-get($-style-type-configs, color);
