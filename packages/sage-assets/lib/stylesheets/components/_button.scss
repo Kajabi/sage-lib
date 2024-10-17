@@ -190,6 +190,10 @@ $-btn-loading-min-height: rem(36px);
   transition: $-btn-transition;
   transition-property: border, background-color, box-shadow;
 
+  &:focus {
+    outline: none;
+  }
+
   &:disabled,
   &[aria-disabled="true"] {
     @include sage-button-style-disabled;
@@ -599,10 +603,6 @@ a.sage-btn {
     color: sage-color(grey, 950);
     background-color: sage-color(grey, 100);
     border-color: sage-color(grey, 300);
-  }
-
-  &:focus {
-    outline: none;
   }
 
   &:focus-visible,

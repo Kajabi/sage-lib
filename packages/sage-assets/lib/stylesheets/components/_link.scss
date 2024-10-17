@@ -176,6 +176,10 @@ $-link-base-styles: (
     color: sage-color(grey, 600);
   }
 
+  &:focus {
+    outline: none;
+  }
+
   &:hover,
   &:active,
   &:focus-visible {
