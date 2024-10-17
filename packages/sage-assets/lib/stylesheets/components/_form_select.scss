@@ -96,7 +96,7 @@ $-select-arrow-position-inverse-with-message: calc(100% - #{$-select-height + $-
   }
 
   .sage-select--value-selected & {
-    color: sage-color(grey, 900);
+    color: map-get($sage-field-colors, default);
   }
 
   .sage-select--value-selected &:not(:disabled) + .sage-select__arrow::before {
