@@ -2,14 +2,13 @@ import React, { Children, useState, cloneElement } from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import { TooltipElement } from './TooltipElement';
-import {
-  TOOLTIP_POSITIONS
-} from './configs';
+import { TOOLTIP_POSITIONS } from './configs';
 
 export const Tooltip = ({
   children,
   content,
   position,
+  tooltipCustomClass,
   ...rest
 }) => {
   const [active, setActive] = useState(false);
@@ -38,6 +37,7 @@ export const Tooltip = ({
           content={content}
           parentDomRect={parentDomRect}
           position={position}
+          tooltipCustomClass={tooltipCustomClass}
         />,
         document.body
       )}
@@ -50,10 +50,12 @@ Tooltip.POSITIONS = TOOLTIP_POSITIONS;
 
 Tooltip.defaultProps = {
   position: TOOLTIP_POSITIONS.DEFAULT,
+  tooltipCustomClass: '',
 };
 
 Tooltip.propTypes = {
   children: PropTypes.node.isRequired,
   content: PropTypes.oneOfType([PropTypes.node, PropTypes.string]).isRequired,
   position: PropTypes.oneOf(Object.values(TOOLTIP_POSITIONS)),
+  tooltipCustomClass: PropTypes.string,
 };
