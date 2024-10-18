@@ -41,9 +41,9 @@ export const Static = () => (
 export const CustomClass = Template.bind({});
 CustomClass.args = {
   children: <Button>Button</Button>,
-  content: "This content and sizing is styled with the applied custom class. Use at your own risk",
+  content: 'This content and sizing is styled with the applied custom class. Use at your own risk',
   position: Tooltip.POSITIONS.DEFAULT,
-  tooltipCustomClass: "custom-tooltip-class",
+  tooltipCustomClass: 'custom-tooltip-class',
 };
 
 CustomClass.decorators = [
@@ -63,4 +63,3 @@ CustomClass.decorators = [
     </>
   ),
 ];
-
