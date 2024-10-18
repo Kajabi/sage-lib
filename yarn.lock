@@ -2849,9 +2849,9 @@
     "@octokit/openapi-types" "^12.11.0"
 
 "@pine-ds/icons@^8.0.0":
-  version "8.6.0"
-  resolved "https://registry.yarnpkg.com/@pine-ds/icons/-/icons-8.6.0.tgz#22faaa67832d38d4d4ca64cd56bbc497781a11a6"
-  integrity sha512-UuvQ+kve39Nhewy1+xPkVjnpp84N3B03DIUowDC1vYanVnU92LDryf7fohcOmiwEiONG/jI6KgiiSvRiz5U1SA==
+  version "8.7.0"
+  resolved "https://registry.yarnpkg.com/@pine-ds/icons/-/icons-8.7.0.tgz#13b33b115b6df9b5794798da00be5f13689b9f36"
+  integrity sha512-In34QqkMrj7gSKxSCgarkzCvmlCt9KaRnI+1IUZXM/UaFSM+QtUpkEm/2FxxHp9CZ4EBj/4VtVd12nAIwiUjhw==
   dependencies:
     "@stencil/core" "^4.20.0"
 
