@@ -176,6 +176,10 @@ $-radio-focus-outline-color: currentColor;
     }
   }
 
+  &:focus:not(:disabled) {
+    outline: none;
+  }
+
   &:focus-visible:not(:disabled),
   &:active:not(:disabled) {
     outline: none;

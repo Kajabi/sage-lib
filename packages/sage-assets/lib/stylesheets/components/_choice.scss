@@ -65,6 +65,10 @@ $-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
     color: $-choice-color-active;
   }
 
+  &:focus {
+    outline: none;
+  }
+
   &:focus-visible {
     border-color: sage-color(purple, 300);
     outline: none;
@@ -98,6 +102,7 @@ $-choice-radio-color-checked-inner: map-get($sage-radio-colors, checked-inner);
   .sage-card & ,
   .sage-panel & {
     box-shadow: none;
+    border: sage-border();
   }
 
   .sage-tabs--layout-default &:not(:last-child) {

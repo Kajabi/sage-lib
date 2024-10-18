@@ -77,6 +77,10 @@ $-media-tile-breakpoints: (
     color: inherit;
   }
 
+  &:focus {
+    outline: none;
+  }
+
   &:focus-visible {
     outline: 0;
 

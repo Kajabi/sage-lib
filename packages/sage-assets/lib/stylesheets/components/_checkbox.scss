@@ -213,6 +213,10 @@ $-checkbox-focus-outline-color: sage-color(purple, 300);
     background-color: sage-color(grey, 100);
   }
 
+  &:focus:not(:disabled) {
+    outline: none;
+  }
+
   &:focus-visible:not(:disabled),
   &:active:not(:disabled) {
     outline: none;

@@ -14,6 +14,7 @@ $-transaction-card-price-max-width: rem(100px);
   .sage-card &,
   .sage-panel & {
     box-shadow: none;
+    border: sage-border();
   }
 
   position: relative;
