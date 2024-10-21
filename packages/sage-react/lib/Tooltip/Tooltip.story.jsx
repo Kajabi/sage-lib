@@ -37,3 +37,29 @@ export const Default = Template.bind({});
 export const Static = () => (
   <Tooltip.Element content="Testing static tooltip" />
 );
+
+export const CustomClass = Template.bind({});
+CustomClass.args = {
+  children: <Button>Button</Button>,
+  content: 'This content and sizing is styled with the applied custom class. Use at your own risk',
+  position: Tooltip.POSITIONS.DEFAULT,
+  tooltipCustomClass: 'custom-tooltip-class',
+};
+
+CustomClass.decorators = [
+  (Story) => (
+    <>
+      <style>
+        {`
+          .custom-tooltip-class {
+            color: #ff3e15;
+            height: 200px;
+            max-width: 800px;
+            width: 400px;
+          }
+        `}
+      </style>
+      <Story />
+    </>
+  ),
+];
