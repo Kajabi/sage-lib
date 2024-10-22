@@ -12,6 +12,7 @@ export const ExpandableCard = ({
   expanded,
   children,
   className,
+  customKey,
   headerContent,
   name,
   onClick,
@@ -32,7 +33,7 @@ export const ExpandableCard = ({
     }
   };
 
-  const id = uuid();
+  const id = customKey || uuid();
 
   const containerClassnames = classnames(
     'sage-expandable-card',
@@ -98,6 +99,7 @@ ExpandableCard.defaultProps = {
   expanded: false,
   children: null,
   className: null,
+  customKey: null,
   headerContent: null,
   alignTrigger: 'middle',
   name: null,
@@ -109,6 +111,7 @@ ExpandableCard.defaultProps = {
 ExpandableCard.propTypes = {
   alignArrowRight: PropTypes.bool,
   bodyBordered: PropTypes.bool,
+  customKey: PropTypes.string,
   headerContent: PropTypes.node,
   expanded: PropTypes.bool,
   className: PropTypes.string,

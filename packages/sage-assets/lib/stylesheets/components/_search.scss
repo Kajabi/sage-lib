@@ -115,10 +115,6 @@ $-search-icon: "::before";
   .sage-dropdown__panel & {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-
-    &:focus-within {
-      box-shadow: inset map-get($sage-toolbar-button-borders, focus);
-    }
   }
 }
 

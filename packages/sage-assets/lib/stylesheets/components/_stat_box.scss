@@ -17,6 +17,7 @@ $-stat-box-image-max-width: rem(48px);
   .sage-card &,
   .sage-panel & {
     box-shadow: none;
+    border: sage-border();
   }
 
   &.sage-stat-box--raised {

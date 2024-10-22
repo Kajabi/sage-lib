@@ -1,9 +1,7 @@
 import React, { useState, useRef, useLayoutEffect } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import {
-  TOOLTIP_POSITIONS
-} from './configs';
+import { TOOLTIP_POSITIONS } from './configs';
 
 /* eslint-disable react-hooks/exhaustive-deps */
 
@@ -13,12 +11,14 @@ export const TooltipElement = ({
   content,
   parentDomRect,
   position,
+  tooltipCustomClass,
 }) => {
   const tooltipRef = useRef(null);
   const [coordinates, setCoordinates] = useState({ top: null, left: null });
 
   const classNames = classnames(
     'sage-tooltip',
+    tooltipCustomClass,
     {
       'sage-tooltip--static': !parentDomRect,
       [`sage-tooltip--${position}`]: position,
@@ -86,6 +86,7 @@ TooltipElement.POSITIONS = TOOLTIP_POSITIONS;
 TooltipElement.defaultProps = {
   parentDomRect: null,
   position: TOOLTIP_POSITIONS.DEFAULT,
+  tooltipCustomClass: '',
 };
 
 TooltipElement.propTypes = {
@@ -98,4 +99,5 @@ TooltipElement.propTypes = {
     width: PropTypes.number,
   }),
   position: PropTypes.oneOf(Object.values(TOOLTIP_POSITIONS)),
+  tooltipCustomClass: PropTypes.string,
 };

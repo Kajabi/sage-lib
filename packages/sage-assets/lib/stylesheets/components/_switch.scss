@@ -48,6 +48,7 @@ $-switch-toggle-size: rem(16px);
     .sage-card &,
     .sage-panel & {
       box-shadow: none;
+      border: sage-border();
     }
   }
 
@@ -94,6 +95,10 @@ $-switch-toggle-size: rem(16px);
   border: 0;
   border-radius: $-switch-border-radius;
   transition: background 0.3s ease-out;
+
+  &:focus {
+    outline: none !important; /* stylelint-disable-line declaration-no-important */
+  }
 
   .sage-switch--has-border & {
     position: absolute;
