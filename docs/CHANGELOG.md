@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.1.0](https://github.com/Kajabi/sage-lib/compare/v6.0.0...v6.1.0) (2024-10-22)
+
+
+### Bug Fixes
+
+* **rails-icon:** change the schema for icon attribute to string ([ac2eaa5](https://github.com/Kajabi/sage-lib/commit/ac2eaa549ca3ef9d75e7b65ffe4280d5ffcd2f28))
+
+
+
+
+
 # [6.0.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage@5.20.19...@kajabi/sage@6.0.0) (2024-10-14)
 
 

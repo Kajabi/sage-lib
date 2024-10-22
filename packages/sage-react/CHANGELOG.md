@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.1.0](https://github.com/Kajabi/sage-lib/compare/v6.0.0...v6.1.0) (2024-10-22)
+
+
+### Bug Fixes
+
+* tooltip custom class (react) ([#2012](https://github.com/Kajabi/sage-lib/issues/2012)) ([2fe5d18](https://github.com/Kajabi/sage-lib/commit/2fe5d18ad886986b9f3dbdc212d96b8e921e3337))
+
+
+### Features
+
+* **expandablecard:** add new optional key prop ([d9b8036](https://github.com/Kajabi/sage-lib/commit/d9b803616bc5227960d81774996e1ae30d807881))
+
+
+
+
+
 # [2.0.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-react@1.20.7...@kajabi/sage-react@2.0.0) (2024-10-14)
 
 

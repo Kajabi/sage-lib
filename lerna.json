@@ -3,7 +3,7 @@
     "packages/*",
     "docs"
   ],
-  "version": "6.0.0",
+  "version": "6.1.0",
   "npmClient": "yarn",
   "useWorkspaces": true,
   "command": {
@@ -11,7 +11,10 @@
       "conventionalCommits": true,
       "message": "chore(release): publish [skip ci]",
       "registry": "https://npm.pkg.github.com",
-      "allowBranch": ["main", "develop"]
+      "allowBranch": [
+        "main",
+        "develop"
+      ]
     }
   }
 }
