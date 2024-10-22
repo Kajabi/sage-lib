@@ -31,6 +31,10 @@ $-tab-color-disabled: map-get($sage-tab-colors, disabled);
     background-color: sage-color(grey, 200);
     border-radius: sage-border(radius-x-large);
     @extend %t-sage-body-small-semi;
+
+    &::after {
+      display: none;
+    }
   }
 
   @extend %t-sage-body-semi;
