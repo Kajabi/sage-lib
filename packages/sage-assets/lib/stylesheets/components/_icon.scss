@@ -211,6 +211,7 @@ $-icon-beside-type: (
 }
 
 // flip icons with directional names for RTL - MUST LIVE IN PINE
-[dir="rtl"] pds-icon[name*="left"], [dir="rtl"] pds-icon[name*="right"] {
+[dir="rtl"] pds-icon[name*="left"],
+[dir="rtl"] pds-icon[name*="right"] {
   transform: scale(-1);
 }
