@@ -17,7 +17,7 @@ $-hint-background-color: sage-color(grey, 200);
 
 .sage-hint__icon {
   display: flex;
-  margin-right: sage-spacing(xs);
+  margin-inline-end: sage-spacing(xs);
 }
 
 .sage-hint__content {

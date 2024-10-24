@@ -21,12 +21,12 @@
 
 .sage-panel--clear-padding-top,
 .sage-panel--clear-padding-both {
-  padding-top: 0;
+  padding-block-start: 0;
 }
 
 .sage-panel--clear-padding-bottom,
 .sage-panel--clear-padding-both {
-  padding-bottom: 0;
+  padding-block-end: 0;
 }
 
 .sage-panel__divider {
@@ -101,7 +101,7 @@
   color: sage-color(grey, 950);
 
   + .sage-panel__subtext {
-    margin-top: sage-spacing(xs);
+    margin-block-start: sage-spacing(xs);
   }
 }
 
@@ -129,26 +129,26 @@
 }
 
 .sage-panel__list-item {
-  margin-bottom: rem(-1px);
+  margin-block-end: rem(-1px);
   padding: sage-spacing(sm) sage-spacing();
-  border-top: sage-border(default);
-  border-bottom: sage-border(default);
+  border-block-start: sage-border(default);
+  border-block-end: sage-border(default);
 
   @include sage-grid-card-row;
 
   .sage-panel__list--block-space-xs & {
-    padding-top: sage-spacing(xs);
-    padding-bottom: sage-spacing(xs);
+    padding-block-start: sage-spacing(xs);
+    padding-block-end: sage-spacing(xs);
   }
 
   .sage-panel__list--block-space-md & {
-    padding-top: sage-spacing();
-    padding-bottom: sage-spacing();
+    padding-block-start: sage-spacing();
+    padding-block-end: sage-spacing();
   }
 
   &:first-child {
     .sage-panel__list--hide-first-border & {
-      border-top: 0;
+      border-block-start: 0;
     }
   }
 }
@@ -166,7 +166,7 @@
 }
 
 .sage-panel__stack {
-  padding-left: 0;
+  padding-inline-start: 0;
 
   @include sage-grid-stack();
 }

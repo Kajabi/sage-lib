@@ -8,7 +8,7 @@
   width: 100%;
   border: sage-border();
   border-radius: sage-border(radius);
-  border-bottom: 0;
+  border-block-end: 0;
 }
 
 .token {
@@ -17,7 +17,7 @@
   flex-wrap: wrap;
   padding: sage-spacing(xs) sage-spacing(sm);
   font-size: sage-font-size(body-sm);
-  border-bottom: sage-border();
+  border-block-end: sage-border();
 
   &::after {
     max-width: max-content;

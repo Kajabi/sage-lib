@@ -85,7 +85,7 @@ $-stat-box-image-max-width: rem(48px);
 
 .sage-stat-box__title {
   @extend %t-sage-body-small-med;
-  margin-right: sage-spacing(xs);
+  margin-inline-end: sage-spacing(xs);
 }
 
 [class*="sage-stat-box__title--legend"] {
@@ -94,7 +94,7 @@ $-stat-box-image-max-width: rem(48px);
     display: block;
     width: rem(8px);
     height: rem(8px);
-    margin-right: sage-spacing(xs);
+    margin-inline-end: sage-spacing(xs);
     border-radius: sage-border(radius);
     background-color: var(--legend-color);
   }
@@ -126,11 +126,11 @@ $-stat-box-image-max-width: rem(48px);
 
 .sage-stat-box__timeframe {
   @extend %t-sage-body-xsmall;
-  margin-left: sage-spacing(xs);
+  margin-inline-start: sage-spacing(xs);
   color: sage-color(grey, 600);
 }
 
 .sage-stat-box__link {
   @extend %t-sage-body-med;
-  margin-top: sage-spacing(xs);
+  margin-block-start: sage-spacing(xs);
 }

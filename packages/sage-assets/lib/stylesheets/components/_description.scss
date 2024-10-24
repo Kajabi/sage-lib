@@ -28,12 +28,12 @@ $-description-spacing: sage-spacing(sm);
   width: 100%;
 
   &:not(:last-child) {
-    padding-bottom: sage-spacing(md);
-    border-bottom: sage-border();
+    padding-block-end: sage-spacing(md);
+    border-block-end: sage-border();
 
     .sage-description--no-dividers & {
-      padding-bottom: 0;
-      border-bottom: 0;
+      padding-block-end: 0;
+      border-block-end: 0;
     }
   }
 
@@ -82,5 +82,5 @@ $-description-spacing: sage-spacing(sm);
 
 .sage-description__action {
   display: block;
-  margin-top: $-description-spacing;
+  margin-block-start: $-description-spacing;
 }

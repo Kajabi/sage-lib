@@ -31,12 +31,12 @@ $-sage-dot-size--badge: rem(6px);
   }
 
   .sage-badge & {
-    margin-left: rem(6px);
+    margin-inline-start: rem(6px);
   }
 
   .sage-badge--large & {
-    margin-left: rem(12px);
-    margin-right: rem(-4px);
+    margin-inline-start: rem(12px);
+    margin-inline-end: rem(-4px);
   }
 }
 

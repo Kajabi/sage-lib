@@ -36,8 +36,8 @@ $-grid-col-gap-inline-padding: calc(#{$-grid-gap} / 2);
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-left: $-grid-col-gap-inline-margin;
-  margin-right: $-grid-col-gap-inline-margin;
+  margin-inline-start: $-grid-col-gap-inline-margin;
+  margin-inline-end: $-grid-col-gap-inline-margin;
 }
 
 .sage-row {
@@ -49,29 +49,29 @@ $-grid-col-gap-inline-padding: calc(#{$-grid-gap} / 2);
 }
 
 .sage-row--stage {
-  margin-left: $-grid-row-stage-inline-margin;
-  margin-right: $-grid-row-stage-inline-margin;
+  margin-inline-start: $-grid-row-stage-inline-margin;
+  margin-inline-end: $-grid-row-stage-inline-margin;
 
   &:not(:last-child) {
-    margin-bottom: sage-spacing(stage);
+    margin-block-end: sage-spacing(stage);
   }
 }
 
 .sage-row--panel {
-  margin-left: $-grid-row-panel-inline-margin;
-  margin-right: $-grid-row-panel-inline-margin;
+  margin-inline-start: $-grid-row-panel-inline-margin;
+  margin-inline-end: $-grid-row-panel-inline-margin;
 
   &:not(:last-child) {
-    margin-bottom: sage-spacing(panel);
+    margin-block-end: sage-spacing(panel);
   }
 }
 
 .sage-row--card {
-  margin-left: $-grid-row-card-inline-margin;
-  margin-right: $-grid-row-card-inline-margin;
+  margin-inline-start: $-grid-row-card-inline-margin;
+  margin-inline-end: $-grid-row-card-inline-margin;
 
   &:not(:last-child) {
-    margin-bottom: sage-spacing(card);
+    margin-block-end: sage-spacing(card);
   }
 }
 
@@ -153,11 +153,11 @@ $-grid-col-gap-inline-padding: calc(#{$-grid-gap} / 2);
     }
 
     .sage-modal &:first-child {
-      padding-left: 0;
+      padding-inline-start: 0;
     }
 
     .sage-modal &:last-child {
-      padding-right: 0;
+      padding-inline-end: 0;
     }
   }
 }
