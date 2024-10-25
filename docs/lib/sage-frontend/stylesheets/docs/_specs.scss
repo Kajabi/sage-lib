@@ -8,18 +8,18 @@
   th {
     padding: 4px;
     color: sage-color(grey, 700);
-    border-bottom: 1px solid sage-color(grey, 300);
+    border-block-end: 1px solid sage-color(grey, 300);
   }
 
   td {
     padding: 4px;
     font-size: sage-font-size(body-xs);
     vertical-align: middle;
-    border-bottom: 1px solid sage-color(grey, 200);
+    border-block-end: 1px solid sage-color(grey, 200);
   }
 
   tfoot td {
-    padding-top: 12px;
+    padding-block-start: 12px;
     border-bottom-color: transparent;
   }
 }

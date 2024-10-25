@@ -68,12 +68,12 @@ $-avatar-group-item-sizes: (
 
   // Documentation-specific styles
   .sage-avatar-wrapper > & {
-    margin-right: sage-spacing();
+    margin-inline-end: sage-spacing();
   }
 
   .sage-table td > & {
-    margin-top: -1 * sage-spacing(2xs);
-    margin-bottom: -1 * sage-spacing(2xs);
+    margin-block-start: -1 * sage-spacing(2xs);
+    margin-block-end: -1 * sage-spacing(2xs);
   }
 
   // Items inside avatar group should be 100% to start
@@ -95,45 +95,45 @@ $-avatar-group-item-sizes: (
 
     // Positioning is same for first item is same in all configs
     &:nth-child(1) {
-      top: 0;
-      left: 0;
+      inset-block-start: 0;
+      inset-inline-start: 0;
     }
   }
 
   .sage-avatar-group--2-up &:nth-child(2) {
-    bottom: rem(5px);
-    right: rem(6px);
+    inset-block-end: rem(5px);
+    inset-inline-end: rem(6px);
   }
 
   .sage-avatar-group--3-up &,
   .sage-avatar-group--4-up & {
     &:nth-child(2) {
-      bottom: rem(16px);
-      right: 0;
+      inset-block-end: rem(16px);
+      inset-inline-end: 0;
     }
 
     &:nth-child(3) {
-      bottom: 0;
-      left: rem(16px);
+      inset-block-end: 0;
+      inset-inline-start: rem(16px);
     }
 
     &:nth-child(4) {
-      top: rem(8px);
-      right: rem(8px);
+      inset-block-start: rem(8px);
+      inset-inline-end: rem(8px);
     }
   }
 }
 
 .sage-avatar--centered {
-  margin-right: auto;
-  margin-left: auto;
+  margin-inline-end: auto;
+  margin-inline-start: auto;
 }
 
 // Documentation-specific styles
 .sage-avatar-wrapper {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: sage-spacing();
+  margin-block-end: sage-spacing();
 }
 
 .sage-avatar--tile {
@@ -154,8 +154,8 @@ $-avatar-group-item-sizes: (
 .sage-avatar__badge {
   position: absolute;
   z-index: sage-z-index(default, 3);
-  bottom: rem(-4px);
-  right: rem(-4px);
+  inset-block-end: rem(-4px);
+  inset-inline-end: rem(-4px);
   background-color: sage-color(white);
   border-radius: sage-border(radius-round);
   border: rem(2px) solid sage-color(white);
@@ -228,6 +228,6 @@ $-avatar-group-item-sizes: (
 
   // Documentation-specific styles
   .sage-avatar-wrapper & {
-    margin-right: sage-spacing();
+    margin-inline-end: sage-spacing();
   }
 }

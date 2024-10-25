@@ -8,8 +8,8 @@
 // Font definitions
 $-heading-font: "GreetStandard", "Inter", -apple-system, system-ui, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Ubuntu", sans-serif;
 $-body-font-stack: "Inter", -apple-system, system-ui, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Ubuntu", sans-serif;
-$-body-margin-bottom: sage-spacing(xs);
-$-headings-margin-bottom: sage-spacing(sm);
+$-body-margin-block-end: sage-spacing(xs);
+$-headings-margin-block-end: sage-spacing(sm);
 
 ///
 /// Sage responsive font sizes and line heights custom props
@@ -110,7 +110,7 @@ body:not(.sage-excluded),
   > ol:not([class]),
   > dl:not([class]),
   > [class*="t-sage-body"] {
-    @include sage-block-spacing($-body-margin-bottom);
+    @include sage-block-spacing($-body-margin-block-end);
   }
 
   // Heading-like elements get spacing below as well
@@ -123,7 +123,7 @@ body:not(.sage-excluded),
   > [class*="t-sage-heading-"] {
     color: map-get($sage-text-colors, heading);
 
-    @include sage-block-spacing($-headings-margin-bottom);
+    @include sage-block-spacing($-headings-margin-block-end);
   }
 
   // Elements with no classes extend related type specs
@@ -135,19 +135,19 @@ body:not(.sage-excluded),
     @extend %t-sage-heading-2;
 
     &:not(:first-child) {
-      margin-top: sage-spacing(lg);
+      margin-block-start: sage-spacing(lg);
     }
   }
 
   > .t-sage-heading-2:not(:first-child) {
-    margin-top: sage-spacing(lg);
+    margin-block-start: sage-spacing(lg);
   }
 
   > h3:not([class]) {
     @extend %t-sage-heading-3;
 
     &:not(:first-child) {
-      margin-top: sage-spacing();
+      margin-block-start: sage-spacing();
     }
   }
 
@@ -155,7 +155,7 @@ body:not(.sage-excluded),
     @extend %t-sage-heading-4;
 
     &:not(:first-child) {
-      margin-top: sage-spacing();
+      margin-block-start: sage-spacing();
     }
   }
 
@@ -163,7 +163,7 @@ body:not(.sage-excluded),
     @extend %t-sage-heading-5;
 
     &:not(:first-child) {
-      margin-top: sage-spacing();
+      margin-block-start: sage-spacing();
     }
   }
 
@@ -171,7 +171,7 @@ body:not(.sage-excluded),
     @extend %t-sage-heading-6;
 
     &:not(:first-child) {
-      margin-top: sage-spacing();
+      margin-block-start: sage-spacing();
     }
   }
 
@@ -180,7 +180,7 @@ body:not(.sage-excluded),
   > .t-sage-heading-5,
   > .t-sage-heading-6 {
     &:not(:first-child) {
-      margin-top: sage-spacing();
+      margin-block-start: sage-spacing();
     }
   }
 
@@ -201,8 +201,8 @@ body:not(.sage-excluded),
   }
 
   > table:not(:last-child) {
-    margin-top: sage-spacing();
-    margin-bottom: sage-spacing();
+    margin-block-start: sage-spacing();
+    margin-block-end: sage-spacing();
   }
 }
 

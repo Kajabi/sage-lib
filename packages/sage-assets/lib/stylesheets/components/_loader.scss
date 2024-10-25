@@ -30,10 +30,10 @@ $-loader-lower-opacity: 0.4;
 
   .sage-btn--is-loading & {
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    inset-block-start: 0;
+    inset-inline-end: 0;
+    inset-block-end: 0;
+    inset-inline-start: 0;
     margin: auto;
   }
 
@@ -55,6 +55,12 @@ $-loader-lower-opacity: 0.4;
   height: $-loader-bar-height;
   border-radius: sage-border(radius);
   background-color: $-loader-bar-bg-color;
+
+  [dir="rtl"] & {
+    left: initial;
+    right: 50%;
+    transform: translate(50%, -50%);
+  }
 
   &::before,
   &::after {
@@ -89,7 +95,7 @@ $-loader-lower-opacity: 0.4;
 .sage-loader__spinner--loading-button {
   width: sage-spacing(sm);
   height: sage-spacing(sm);
-  margin-right: sage-spacing(xs);
+  margin-inline-end: sage-spacing(xs);
 }
 
 .sage-loader__spinner-path {
@@ -133,7 +139,7 @@ $-loader-lower-opacity: 0.4;
 }
 
 .sage-loader__text {
-  margin-top: sage-spacing(sm);
+  margin-block-start: sage-spacing(sm);
 }
 
 @keyframes loader-bar {

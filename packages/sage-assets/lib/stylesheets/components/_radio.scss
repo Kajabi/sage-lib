@@ -42,7 +42,7 @@ $-radio-focus-outline-color: currentColor;
   grid-template-columns: min-content 1fr;
 
   .sage-list & {
-    margin-bottom: calc(#{sage-spacing(card)} / 2);
+    margin-block-end: calc(#{sage-spacing(card)} / 2);
   }
 
   @include sage-form-toggle-parents;
@@ -92,7 +92,7 @@ $-radio-focus-outline-color: currentColor;
   @include sage-form-toggle-label;
 
   grid-area: label;
-  margin-left: 0;
+  margin-inline-start: 0;
 
   .sage-radio--has-border & {
     color: sage-color(grey, 900);
@@ -223,7 +223,7 @@ $-radio-focus-outline-color: currentColor;
 
   &:not(.sage-radio--standalone) {
     .sage-radio--has-border & {
-      margin-top: 0;
+      margin-block-start: 0;
 
       &:checked + .sage-radio__label::after {
         box-shadow: sage-border-interactive(selected);
@@ -233,7 +233,7 @@ $-radio-focus-outline-color: currentColor;
   }
 
   .sage-sortable & {
-    margin-top: 0;
+    margin-block-start: 0;
   }
 }
 

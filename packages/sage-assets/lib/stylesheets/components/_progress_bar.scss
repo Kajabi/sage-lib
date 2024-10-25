@@ -20,7 +20,7 @@ $-progress-bar-height: sage-spacing(xs);
 
   .sage-modal__header & {
     position: absolute;
-    bottom: 0;
+    inset-block-end: 0;
     width: 100%;
   }
 }
@@ -47,6 +47,10 @@ $-progress-bar-height: sage-spacing(xs);
   background-color: var(--progress-bar-value-color, sage-color(mercury, 500));
   border-radius: sage-border(radius-small);
 
+  [dir="rtl"] & {
+    transform-origin: center right;
+  }
+
   .sage-modal__header & {
     border-radius: 0;
   }
@@ -65,6 +69,6 @@ $-progress-bar-height: sage-spacing(xs);
 .sage-progress-bar__percent {
   @extend %t-sage-body-small-semi;
 
-  margin-left: rem(12px);
+  margin-inline-start: rem(12px);
 }
 

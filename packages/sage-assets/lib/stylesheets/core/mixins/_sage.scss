@@ -11,11 +11,11 @@
 /// @param {length} $block-spacing Amount of spacing to apply
 ///
 @mixin sage-block-spacing($block-spacing) {
-  margin-bottom: $block-spacing;
+  margin-block-end: $block-spacing;
 
   &.no-margin-bottom,
   &:last-child {
-    margin-bottom: 0;
+    margin-block-end: 0;
   }
 }
 
@@ -82,12 +82,12 @@
         @include sage-icon-base($icon-name, md, pine);
 
         align-self: center;
-        margin-left: sage-spacing(xs);
+        margin-inline-start: sage-spacing(xs);
       }
     }
 
     .sage-link--icon-right-#{$icon-name}::before {
-      margin-left: sage-spacing(2xs);
+      margin-inline-start: sage-spacing(2xs);
     }
   }
 
@@ -101,13 +101,13 @@
         @include sage-icon-base($icon-name, md, pine);
 
         align-self: center;
-        margin-right: sage-spacing(xs);
+        margin-inline-end: sage-spacing(xs);
         padding: var(--icon-block-padding) 0;
       }
     }
 
     .sage-link--icon-left-#{$icon-name}::before {
-      margin-right: sage-spacing(2xs);
+      margin-inline-end: sage-spacing(2xs);
     }
   }
 
@@ -128,10 +128,10 @@
 
         /* stylelint-disable max-nesting-depth */
         &::before {
-          margin-right: rem(20px);
+          margin-inline-end: rem(20px);
 
           @media (max-width: sage-breakpoint(sm-max)) {
-            margin-right: sage-spacing(sm);
+            margin-inline-end: sage-spacing(sm);
           }
         }
 
@@ -142,8 +142,8 @@
         &.sage-btn--rich-text,
         .toolbar-editor &,
         .toolbar-editor__section & {
-          margin-left: sage-spacing(3xs);
-          margin-right: sage-spacing(3xs);
+          margin-inline-start: sage-spacing(3xs);
+          margin-inline-end: sage-spacing(3xs);
           padding: sage-spacing(xs) rem(12px) sage-spacing(xs) sage-spacing(xs);
           border-radius: 6px;
 
@@ -152,7 +152,7 @@
           }
 
           &::after {
-            right: 15px;
+            inset-inline-end: 15px;
             font-size: 11px;
           }
         }
@@ -386,7 +386,7 @@
   flex-direction: column;
 
   &:not(:last-child) {
-    margin-bottom: sage-spacing();
+    margin-block-end: sage-spacing();
   }
 
   .sage-frame > &,
@@ -398,7 +398,7 @@
   .sage-card__row > &,
   .sage-card__stack > &,
   .sage-card__block > & {
-    margin-bottom: 0;
+    margin-block-end: 0;
   }
 }
 
@@ -507,8 +507,8 @@
   align-items: center;
   justify-content: center;
   position: absolute;
-  right: 0;
-  top: 0;
+  inset-inline-end: 0;
+  inset-block-start: 0;
   height: rem(40px);
   width: rem(40px);
 }
@@ -548,7 +548,7 @@
 @mixin sage-form-field-message() {
   @extend %t-sage-body-small-med;
 
-  margin-top: sage-spacing(xs);
+  margin-block-start: sage-spacing(xs);
   color: sage-color(grey, 700);
 
   .sage-form-field--error & {
@@ -558,8 +558,8 @@
       @include sage-icon-base(danger, md, pine);
 
       position: relative;
-      top: rem(1px);
-      padding-right: sage-spacing(xs);
+      inset-block-start: rem(1px);
+      padding-inline-end: sage-spacing(xs);
     }
   }
 }
@@ -571,7 +571,7 @@
   display: flex;
   flex-flow: row wrap;
   align-items: flex-start;
-  margin-bottom: sage-spacing(card);
+  margin-block-end: sage-spacing(card);
 }
 
 @mixin sage-form-toggle-parents() {
@@ -584,7 +584,7 @@
   .sage-card__row > &,
   .sage-card__stack > &,
   .sage-card__block > & {
-    margin-bottom: 0;
+    margin-block-end: 0;
     @content;
   }
 }
@@ -602,7 +602,7 @@
 
   display: inline-block;
   flex: 1;
-  margin-left: rem(12px);
+  margin-inline-start: rem(12px);
   vertical-align: top;
   cursor: pointer;
 }

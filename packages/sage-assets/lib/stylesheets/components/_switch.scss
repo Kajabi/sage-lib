@@ -34,7 +34,7 @@ $-switch-toggle-size: rem(16px);
   color: $-switch-color-default-text;
 
   & + & {
-    margin-top: calc(#{sage-spacing(card)} / -2);
+    margin-block-start: calc(#{sage-spacing(card)} / -2);
   }
 
   &.sage-switch--has-border {
@@ -57,28 +57,28 @@ $-switch-toggle-size: rem(16px);
   }
 
   .sage-list & {
-    margin-top: 0;
-    margin-bottom: calc(#{sage-spacing(card)} / 2);
+    margin-block-start: 0;
+    margin-block-end: calc(#{sage-spacing(card)} / 2);
   }
 
   @include sage-form-toggle-parents {
     + .sage-switch {
-      margin-top: 0;
+      margin-block-start: 0;
     }
   }
 
   .sage-feature-toggle & {
-    margin-bottom: 0;
+    margin-block-end: 0;
   }
 }
 
 .sage-switch__message {
   @include sage-form-toggle-message;
-  margin-left: ($-switch-width + $-switch-label-left-spacing);
+  margin-inline-start: ($-switch-width + $-switch-label-left-spacing);
 
   .sage-switch--toggle-right & {
-    margin-left: 0;
-    padding-left: 0;
+    margin-inline-start: 0;
+    padding-inline-start: 0;
   }
 }
 
@@ -118,13 +118,13 @@ $-switch-toggle-size: rem(16px);
     }
 
     .sage-switch--has-border & {
-      margin-left: ($-switch-width + $-switch-label-left-spacing);
+      margin-inline-start: ($-switch-width + $-switch-label-left-spacing);
       color: sage-color(grey, 900);
       font-weight: sage-font-weight(semibold);
     }
 
     .sage-switch--toggle-right & {
-      margin-left: 0;
+      margin-inline-start: 0;
     }
   }
 

@@ -35,7 +35,7 @@
 }
 
 .sage-drawer__close {
-  margin-left: auto; // preserves alignment when only close button is present
+  margin-inline-start: auto; // preserves alignment when only close button is present
 }
 
 .sage-drawer-compact__input-wrapper {
@@ -45,12 +45,12 @@
 
   input {
     width: 100%;
-    margin-bottom: 0;
+    margin-block-end: 0;
     padding: rem(20px) 1rem;
-    padding-right: rem(60px);
+    padding-inline-end: rem(60px);
     font-size: sage-font-size(body-sm);
-    border-bottom-left-radius: sage-border(radius-large);
-    border-bottom-right-radius: sage-border(radius-large);
+    border-end-start-radius: sage-border(radius-large);
+    border-end-end-radius: sage-border(radius-large);
     border: 0;
 
     &:focus {
@@ -62,7 +62,7 @@
   .sage-btn {
     flex-shrink: 0;
     position: absolute;
-    right: sage-spacing(sm);
+    inset-inline-end: sage-spacing(sm);
 
     &:not(.sage-btn--subtle) {
       padding: sage-spacing(xs);
