@@ -245,7 +245,7 @@ $-btn-loading-min-height: rem(36px);
   }
 
   .sage-dropdown__trigger--select & {
-    height: rem(40px);
+    min-height: rem(40px);
     font-family: $-body-font-stack;
     font-weight: sage-font-weight(medium);
     border-width: 0;
