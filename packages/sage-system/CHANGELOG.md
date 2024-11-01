@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.1.1](https://github.com/Kajabi/sage-lib/compare/v6.1.0...v6.1.1) (2024-11-01)
+
+
+### Bug Fixes
+
+* add logical properties to components ([#1979](https://github.com/Kajabi/sage-lib/issues/1979)) ([17885ab](https://github.com/Kajabi/sage-lib/commit/17885ab9c4fe4e5e7ad2499855883d03abf400ee))
+
+
+
+
+
 # [2.0.0](https://github.com/Kajabi/sage-lib/compare/@kajabi/sage-system@1.3.6...@kajabi/sage-system@2.0.0) (2024-10-14)
 
 
