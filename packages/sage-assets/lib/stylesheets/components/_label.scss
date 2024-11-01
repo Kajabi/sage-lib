@@ -89,7 +89,7 @@ $-label-statuses: (
 
   #{$-color-modifier}.sage-label--interactive {
     &.sage-label--interactive-right-cta-affordance .sage-label__value {
-      padding-right: $-label-interactive-icon-size-decor;
+      padding-inline-end: $-label-interactive-icon-size-decor;
     }
 
     .sage-label__value {
@@ -125,7 +125,7 @@ $-label-statuses: (
       display: flex;
       justify-content: center;
       position: absolute;
-      right: 0;
+      inset-inline-end: 0;
       width: $-label-interactive-icon-size-decor;
       min-height: $-label-interactive-icon-size;
       margin: auto 0;

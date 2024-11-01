@@ -55,7 +55,7 @@ $-data-card-padding: sage-spacing(xs);
 
 .sage-data-card__footer {
   padding: $-data-card-padding;
-  border-top: sage-border();
+  border-block-start: sage-border();
 
   @each $-color-name, $-values in $-data-card-colors {
     @if $-color-name == default {
@@ -75,7 +75,7 @@ $-data-card-padding: sage-spacing(xs);
 
 .sage-data-card__header {
   padding: $-data-card-padding;
-  border-bottom: sage-border();
+  border-block-end: sage-border();
 
   @include sage-grid-card-row();
 
@@ -96,7 +96,7 @@ $-data-card-padding: sage-spacing(xs);
 .sage-data-card__header-aside {
   display: inline-flex;
   align-self: baseline;
-  margin-left: auto;
+  margin-inline-start: auto;
 }
 
 .sage-data-card__title {
@@ -109,23 +109,23 @@ $-data-card-padding: sage-spacing(xs);
 //
 
 .sage-data-card-group {
-  padding-left: 0;
+  padding-inline-start: 0;
   list-style: none;
 
   @include sage-grid-stack();
 
   .sage-data-card-scroll-container & {
     gap: sage-spacing(sm);
-    padding-bottom: sage-spacing(sm);
+    padding-block-end: sage-spacing(sm);
   }
 
   .sage-data-card-scroll-container &:not(:last-child) {
-    padding-right: sage-spacing(md);
-    border-right: 1px solid sage-color(grey, 300);
+    padding-inline-end: sage-spacing(md);
+    border-inline-end: 1px solid sage-color(grey, 300);
   }
 
   .sage-data-card-scroll-container &:not(:first-child) {
-    padding-left: sage-spacing(md);
+    padding-inline-start: sage-spacing(md);
   }
 }
 

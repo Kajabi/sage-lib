@@ -65,7 +65,7 @@ $-page-heading-image-height-mobile: rem(120px);
   grid-area: title;
   gap: sage-spacing(xs);
   min-width: 0;
-  margin-right: sage-spacing(sm);
+  margin-inline-end: sage-spacing(sm);
 }
 
 .sage-page-heading__title {
@@ -75,7 +75,7 @@ $-page-heading-image-height-mobile: rem(120px);
 
 .sage-page-heading__intro {
   grid-area: intro;
-  margin-top: rem(12px);
+  margin-block-start: rem(12px);
   color: sage-color(grey, 800);
 }
 
@@ -84,28 +84,28 @@ $-page-heading-image-height-mobile: rem(120px);
   grid-area: image;
   overflow: hidden;
   min-height: $-page-heading-image-height-min;
-  background: sage-color(grey, 300);
+  background: sage-color(grey, 100);
   border-radius: sage-border(radius);
   border: sage-border();
 
   img {
     position: absolute;
     transform: translateY(-50%);
-    top: 50%;
+    inset-block-start: 50%;
     width: 100%;
   }
 
   @media (max-width: sage-breakpoint(sm-max)) {
-    margin-bottom: sage-spacing();
+    margin-block-end: sage-spacing();
   }
   @media (min-width: sage-breakpoint(md-min)) {
-    margin-right: sage-spacing();
+    margin-inline-end: sage-spacing();
   }
 }
 
 .sage-page-heading__crumbs {
   grid-area: crumbs;
-  margin-bottom: sage-spacing(sm);
+  margin-block-end: sage-spacing(sm);
 }
 
 .sage-page-heading__toolbar {
@@ -113,7 +113,7 @@ $-page-heading-image-height-mobile: rem(120px);
   grid-area: toolbar;
   flex-wrap: wrap;
   gap: sage-spacing();
-  margin-top: sage-spacing();
+  margin-block-start: sage-spacing();
 
   // NOTE: Icon generation consolidated in `core/_icons.scss`
 }
@@ -130,7 +130,7 @@ $-page-heading-image-height-mobile: rem(120px);
   @media (max-width: sage-breakpoint(sm-max)) {
     flex-wrap: wrap;
     justify-content: flex-start;
-    margin-top: sage-spacing(sm);
+    margin-block-start: sage-spacing(sm);
   }
 
   @media (min-width: sage-breakpoint()) {
@@ -145,7 +145,7 @@ $-page-heading-image-height-mobile: rem(120px);
   grid-area: secondary;
   justify-content: flex-end;
   align-items: center;
-  margin-top: sage-spacing(sm);
+  margin-block-start: sage-spacing(sm);
   color: sage-color(grey, 700);
   font-style: italic;
   @media (max-width: sage-breakpoint()) {

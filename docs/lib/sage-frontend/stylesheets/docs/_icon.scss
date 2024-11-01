@@ -9,7 +9,7 @@
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
-  margin-bottom: sage-spacing();
+  margin-block-end: sage-spacing();
   padding: sage-spacing(lg) sage-spacing(sm);
   text-align: center;
   background: sage-color(grey, 150);
@@ -18,15 +18,15 @@
 }
 
 .docs-icon-block__label {
-  margin-top: sage-spacing(xs);
-  margin-bottom: 0;
+  margin-block-start: sage-spacing(xs);
+  margin-block-end: 0;
   font-size: sage-font-size(body-xs);
   font-weight: sage-font-weight(semibold);
 }
 
 
 .docs-icon-inline {
-  margin-bottom: sage-spacing(sm);
+  margin-block-end: sage-spacing(sm);
   padding: sage-spacing(sm);
   text-align: right;
   background: sage-color(grey, 150);

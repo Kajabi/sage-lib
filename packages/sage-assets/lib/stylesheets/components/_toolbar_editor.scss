@@ -6,7 +6,7 @@
     padding-inline: sage-spacing(3xs);
 
     + * {
-      border-left: sage-border(interactive);
+      border-inline-start: sage-border(interactive);
     }
   }
 
@@ -39,10 +39,10 @@
   flex: 2 1 auto;
   flex-grow: 0; /* there is currently an issue with extra space between sections, this will reduce space but will not allow the group to grow on upward resize */
   align-items: center;
-  margin-left: 0;
+  margin-inline-start: 0;
 
   & + & {
-    border-left: sage-border(interactive);
+    border-inline-start: sage-border(interactive);
   }
 }
 
@@ -51,7 +51,7 @@
 }
 
 .toolbar-editor__section-list {
-  padding-left: 0;
+  padding-inline-start: 0;
   list-style: none;
 }
 
@@ -71,7 +71,7 @@
 
   &::before {
     @media screen and (max-width: 767px) {
-      margin-right: 0;
+      margin-inline-end: 0;
     }
     @media screen and (min-width: 768px) {
       display: none;

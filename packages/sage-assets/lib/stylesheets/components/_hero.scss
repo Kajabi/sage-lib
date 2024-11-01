@@ -140,7 +140,7 @@ $-hero-play-icon-background-color: sage-color(white);
 
 .sage-hero__artwork-image {
   position: absolute;
-  top: 50%;
+  inset-block-start: 50%;
   transform: translateY(-50%);
   width: 100%;
 

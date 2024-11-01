@@ -73,11 +73,11 @@ $-feature-toggle-image-height-mobile: rem(96px);
 .sage-feature-toggle__form-item {
   display: flex;
   align-items: center;
-  margin-bottom: sage-spacing(md);
+  margin-block-end: sage-spacing(md);
 
   @media (min-width: sage-breakpoint(sm-min)) {
-    margin-right: sage-spacing(md);
-    margin-bottom: 0;
+    margin-inline-end: sage-spacing(md);
+    margin-block-end: 0;
   }
 
   &:first-of-type {
@@ -85,7 +85,7 @@ $-feature-toggle-image-height-mobile: rem(96px);
   }
 
   &:last-of-type {
-    margin-right: 0;
+    margin-inline-end: 0;
   }
 }
 
@@ -93,7 +93,7 @@ $-feature-toggle-image-height-mobile: rem(96px);
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  margin-top: sage-spacing(xs);
+  margin-block-start: sage-spacing(xs);
 }
 
 .sage-feature-toggle__aside {
@@ -109,15 +109,15 @@ $-feature-toggle-image-height-mobile: rem(96px);
 
 .sage-feature-toggle__label {
   align-self: center;
-  margin-left: auto;
+  margin-inline-start: auto;
 
   @media (max-width: sage-breakpoint(md-min)) {
-    margin-left: 0;
+    margin-inline-start: 0;
   }
 }
 
 .sage-feature-toggle__link-item {
-  margin-right: sage-spacing(sm);
+  margin-inline-end: sage-spacing(sm);
 }
 
 .sage-feature-toggle__image-link {

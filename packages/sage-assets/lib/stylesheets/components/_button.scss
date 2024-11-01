@@ -231,8 +231,8 @@ $-btn-loading-min-height: rem(36px);
 
   .sage-dropdown__item > & {
     width: 100%;
-    padding-top: rem(9px);
-    padding-bottom: rem(9px);
+    padding-block-start: rem(9px);
+    padding-block-end: rem(9px);
     border-radius: 0;
   }
 
@@ -245,7 +245,7 @@ $-btn-loading-min-height: rem(36px);
   }
 
   .sage-dropdown__trigger--select & {
-    height: rem(40px);
+    min-height: rem(40px);
     font-family: $-body-font-stack;
     font-weight: sage-font-weight(medium);
     border-width: 0;
@@ -264,7 +264,7 @@ $-btn-loading-min-height: rem(36px);
     width: 100%;
 
     &::before {
-      margin-right: 0;
+      margin-inline-end: 0;
     }
 
     &::after {
@@ -273,15 +273,15 @@ $-btn-loading-min-height: rem(36px);
   }
 
   .sage-input-group & {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
+    border-start-start-radius: 0;
+    border-end-start-radius: 0;
   }
 
   .sage-badge & {
     display: flex;
     justify-content: center;
     position: absolute;
-    right: 0;
+    inset-inline-start: 0;
     width: $-btn-interactive-badge-icon-size;
     margin: auto 0;
     border-radius: 0 sage-border(radius-x-large) sage-border(radius-x-large) 0;
@@ -298,11 +298,11 @@ $-btn-loading-min-height: rem(36px);
     }
 
     &:first-child:not(:last-child) {
-      margin-right: sage-spacing(xs);
+      margin-inline-end: sage-spacing(xs);
     }
 
     + & {
-      margin-left: 0;
+      margin-inline-start: 0;
     }
 
     &.sage-btn--tag::before {
@@ -315,14 +315,14 @@ $-btn-loading-min-height: rem(36px);
   }
   .sage-sortable__item-actions & {
     &:not(:last-child) {
-      margin-right: sage-spacing(sm);
+      margin-inline-end: sage-spacing(sm);
     }
   }
 
   .sage-input-group & {
     position: absolute;
     z-index: sage-z-index(default, 1);
-    right: rem(1px);
+    inset-inline-end: rem(1px);
     bottom: rem(1px);
     height: rem(38px);
     background-color: sage-color(white);
@@ -332,7 +332,7 @@ $-btn-loading-min-height: rem(36px);
     @include sage-focus-outline--update-color(transparent);
 
     &::before {
-      margin-right: 0;
+      margin-inline-end: 0;
     }
 
     &:focus {
@@ -348,8 +348,8 @@ $-btn-loading-min-height: rem(36px);
 
   .sage-panel-controls__toolbar-btn-group > &:not(.sage-btn--secondary) {
     position: absolute;
-    right: 0;
-    bottom: 0;
+    inset-inline-start: 0;
+    inset-block-end: 0;
     min-height: calc(#{$-btn-toolbar-group-height} + #{rem(2px)}); /* expand to toolbar group height + border offset */
   }
 
@@ -364,34 +364,34 @@ $-btn-loading-min-height: rem(36px);
   }
 
   .sage-panel-controls__toolbar-btn-group &:not(:only-child) {
-    margin-left: rem(-1px); /* offset border overlap of multiple buttons */
+    margin-inline-start: rem(-1px); /* offset border overlap of multiple buttons */
   }
 
   .sage-panel-controls__toolbar-btn-group > &:first-child {
-    border-top-left-radius: sage-border(radius);
-    border-bottom-left-radius: sage-border(radius);
+    border-start-start-radius: sage-border(radius);
+    border-end-start-radius: sage-border(radius);
   }
 
   .sage-panel-controls__toolbar-btn-group > &:last-child {
-    border-top-right-radius: sage-border(radius);
-    border-bottom-right-radius: sage-border(radius);
+    border-start-end-radius: sage-border(radius);
+    border-end-end-radius: sage-border(radius);
   }
 
   .sage-toolbar__group > &:first-child,
   .sage-toolbar__group > .sage-dropdown:first-child .sage-dropdown__trigger > & {
-    border-top-left-radius: sage-border(radius-medium);
-    border-bottom-left-radius: sage-border(radius-medium);
+    border-start-start-radius: sage-border(radius-medium);
+    border-end-start-radius: sage-border(radius-medium);
   }
 
   .sage-toolbar__group > &:last-child,
   .sage-toolbar__group > .sage-dropdown:last-child .sage-dropdown__trigger > & {
-    border-top-right-radius: sage-border(radius-medium);
-    border-bottom-right-radius: sage-border(radius-medium);
+    border-start-end-radius: sage-border(radius-medium);
+    border-end-end-radius: sage-border(radius-medium);
   }
 
   .sage-toolbar__group > .sage-dropdown + &,
   .sage-toolbar__group > & + & {
-    margin-left: rem(-1px); /* offset border overlap of multiple buttons */
+    margin-inline-start: rem(-1px); /* offset border overlap of multiple buttons */
   }
 
   .sage-panel-controls__toolbar > &:hover,
@@ -412,7 +412,7 @@ $-btn-loading-min-height: rem(36px);
   .sage-panel-controls__toolbar > &,
   .sage-panel-controls__pagination > & {
     &:not(:last-child) {
-      margin-right: sage-spacing(card);
+      margin-inline-end: sage-spacing(card);
     }
   }
 
@@ -432,28 +432,28 @@ $-btn-loading-min-height: rem(36px);
   }
 
   &.sage-btn--disclosure {
-    padding-right: calc(1rem + #{$-btn-disclosure-left-padding});
+    padding-inline-end: calc(1rem + #{$-btn-disclosure-left-padding});
 
     &::after {
       @include sage-icon-base(caret-down, md, pine);
 
       position: absolute;
-      right: 1rem;
+      inset-inline-start: 1rem;
     }
 
     &[class*="icon-only"]::after {
       @include sage-icon-base(caret-down, xs, pine);
 
-      right: $-btn-disclosure-left-padding;
+      inset-inline-start: $-btn-disclosure-left-padding;
       font-weight: sage-font-weight(bold);
     }
 
     &[class*="icon-only"].sage-btn--small::after {
-      right: rem(12px);
+      inset-inline-start: rem(12px);
     }
 
     &:has(pds-icon) {
-      padding-right: $-btn-base-padding-inline;
+      padding-inline-end: $-btn-base-padding-inline;
     }
   }
 
@@ -475,7 +475,7 @@ $-btn-loading-min-height: rem(36px);
     }
 
     &::after {
-      right: 7px;
+      left: 7px;
       font-size: 11px;
       font-weight: sage-font-weight(bold);
     }
@@ -724,14 +724,14 @@ a.sage-btn {
           width: $-btn-icon-only-standard-size;
           height: $-btn-icon-only-standard-size;
           padding: 0;
-          border-top-left-radius: 0;
-          border-bottom-left-radius: 0;
+          border-start-start-radius: 0;
+          border-end-start-radius: 0;
         }
 
         // Remove class when Sage Label is fully deprecated in Products
         .sage-label & {
           position: absolute;
-          right: sage-spacing(xs);
+          inset-inline-start: sage-spacing(xs);
         }
       }
     }
@@ -865,6 +865,6 @@ a.sage-btn {
 }
 
 .sage-btn-group--border-top {
-  padding-top: sage-spacing(lg);
-  border-top: 1px solid sage-color(grey, 300);
+  padding-block-start: sage-spacing(lg);
+  border-block-start: 1px solid sage-color(grey, 300);
 }

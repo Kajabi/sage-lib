@@ -40,6 +40,10 @@ body {
   font-weight: 400;
   line-height: 1.5; /* NOTE: line-height must be '1.5' to avoid conflicts with Ladera */
   text-align: left;
+
+  [dir="rtl"] & {
+    text-align: right;
+  }
 }
 
 [tabindex="-1"]:focus {
@@ -64,20 +68,20 @@ h6,
 .t-sage-heading-4,
 .t-sage-heading-5,
 .t-sage-heading-6 {
-  margin-top: 0;
-  margin-bottom: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
   color: sage-color(grey, 950);
   font-family: "GreetStandard", "Inter", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Roboto", "Ubuntu", sans-serif ;
 }
 
 p {
-  margin-top: 0;
-  margin-bottom: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
 li {
-  margin-top: 0;
-  margin-bottom: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
 dialog {
@@ -89,14 +93,14 @@ abbr[data-original-title] {
   -webkit-text-decoration: underline dotted;
   text-decoration: underline;
   text-decoration: underline dotted;
-  border-bottom: 0;
+  border-block-end: 0;
   cursor: help;
   -webkit-text-decoration-skip-ink: none;
   text-decoration-skip-ink: none;
 }
 
 address {
-  margin-bottom: 0;
+  margin-block-end: 0;
   font-style: normal;
   line-height: inherit;
 }
@@ -104,15 +108,15 @@ address {
 ol,
 ul,
 dl {
-  margin-top: 0;
-  margin-bottom: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
 ol ol,
 ul ul,
 ol ul,
 ul ol {
-  margin-bottom: 0;
+  margin-block-end: 0;
 }
 
 dt {
@@ -120,8 +124,8 @@ dt {
 }
 
 dd {
-  margin-bottom: 0;
-  margin-left: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
 }
 
 blockquote {
@@ -146,11 +150,11 @@ sup {
 }
 
 sub {
-  bottom: -0.25em;
+  inset-block-end: -0.25em;
 }
 
 sup {
-  top: -0.5em;
+  inset-block-start: -0.5em;
 }
 
 a {
@@ -185,8 +189,8 @@ samp {
 
 pre {
   overflow: auto;
-  margin-top: 0;
-  margin-bottom: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
 figure {
@@ -209,8 +213,8 @@ table {
 
 caption {
   caption-side: bottom;
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
+  padding-block-start: 0.75rem;
+  padding-block-end: 0.75rem;
   color: #6c757d;
   text-align: left;
 }
@@ -221,7 +225,7 @@ th {
 
 label {
   display: inline-block;
-  margin-bottom: 0;
+  margin-block-end: 0;
 }
 
 button {
@@ -311,7 +315,7 @@ legend {
   width: 100%;
   max-width: 100%;
   padding: 0;
-  margin-bottom: 0;
+  margin-block-end: 0;
   font-size: 1.5rem;
   line-height: inherit;
   color: inherit;
@@ -378,5 +382,5 @@ a {
 hr {
   margin: sage-spacing() 0;
   border: 0;
-  border-top: sage-border();
+  border-block-start: sage-border();
 }

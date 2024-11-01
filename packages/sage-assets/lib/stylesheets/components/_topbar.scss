@@ -10,13 +10,13 @@
   align-items: center;
   position: fixed;
   z-index: sage-z-index(nav);
-  top: 0;
-  left: sage-sidebar();
+  inset-block-start: 0;
+  inset-inline-start: sage-sidebar();
   height: rem(88px);
   width: calc(100% - #{sage-sidebar()});
   padding: sage-spacing(md) sage-spacing(xl);
   background-color: sage-color(white);
-  border-bottom: sage-border();
+  border-block-end: sage-border();
 }
 
 .sage-topbar__right {
@@ -27,7 +27,7 @@
 
 @media (max-width: sage-breakpoint(md-max)) {
   .sage-topbar {
-    left: 0;
+    inset-inline-start: 0;
     width: 100%;
   }
 

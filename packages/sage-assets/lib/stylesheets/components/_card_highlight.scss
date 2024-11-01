@@ -16,40 +16,40 @@ $-card-highlight-size: rem(12px);
 
 .sage-card-highlight--right,
 .sage-card-highlight--left {
-  top: 0;
-  bottom: 0;
+  inset-block-start: 0;
+  inset-block-end: 0;
   width: $-card-highlight-size;
 }
 
 .sage-card-highlight--right {
-  right: 0;
-  border-top-right-radius: $-card-highlight-border-radius;
-  border-bottom-right-radius: $-card-highlight-border-radius;
+  inset-inline-end: 0;
+  border-start-end-radius: $-card-highlight-border-radius;
+  border-end-end-radius: $-card-highlight-border-radius;
 }
 
 .sage-card-highlight--left {
-  left: 0;
-  border-top-left-radius: $-card-highlight-border-radius;
-  border-bottom-left-radius: $-card-highlight-border-radius;
+  inset-inline-start: 0;
+  border-start-start-radius: $-card-highlight-border-radius;
+  border-end-start-radius: $-card-highlight-border-radius;
 }
 
 .sage-card-highlight--top,
 .sage-card-highlight--bottom {
-  right: 0;
-  left: 0;
+  inset-inline-end: 0;
+  inset-inline-start: 0;
   height: $-card-highlight-size;
 }
 
 .sage-card-highlight--top {
-  top: 0;
-  border-top-left-radius: $-card-highlight-border-radius;
-  border-top-right-radius: $-card-highlight-border-radius;
+  inset-block-start: 0;
+  border-start-start-radius: $-card-highlight-border-radius;
+  border-start-end-radius: $-card-highlight-border-radius;
 }
 
 .sage-card-highlight--bottom {
-  bottom: 0;
-  border-bottom-left-radius: $-card-highlight-border-radius;
-  border-bottom-right-radius: $-card-highlight-border-radius;
+  inset-block-end: 0;
+  border-end-start-radius: $-card-highlight-border-radius;
+  border-end-end-radius: $-card-highlight-border-radius;
 }
 
 @each $-color-name, $-color-sliders in $sage-colors {

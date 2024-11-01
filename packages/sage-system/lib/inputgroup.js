@@ -28,7 +28,13 @@ Sage.inputgroup = (function() {
     inputGroupBtns.forEach(function(btn) {
       const parentGroup = btn.closest(".sage-input-group");
       const field = parentGroup.querySelector(".sage-input__field");
-      field.style.paddingRight = `${btn.offsetWidth + inputPaddingOffset }px`;
+      const parentDir = btn.closest('html[dir="rtl"]');
+
+      if (parentDir) {
+        field.style.paddingLeft = `${btn.offsetWidth + inputPaddingOffset}px`;
+      } else {
+        field.style.paddingRight = `${btn.offsetWidth + inputPaddingOffset}px`;
+      }
     });
   }
 
