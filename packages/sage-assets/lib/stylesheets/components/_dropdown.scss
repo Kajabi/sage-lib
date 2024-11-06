@@ -317,7 +317,7 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
   }
 
   .sage-dropdown--anchor-right > .sage-dropdown__panel & {
-    inset-inline-start: 0;
+    inset-inline-end: 0;
   }
 
   .sage-dropdown--small & {
@@ -359,7 +359,7 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
   }
 
   .sage-dropdown--anchor-right & {
-    inset-inline-start: 0;
+    inset-inline-end: 0;
   }
 
   .sage-dropdown--anchor-center & {
