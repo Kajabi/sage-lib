@@ -15,8 +15,8 @@ $-typeahead-item-height: rem(68px);
 .sage-typeahead__panel {
   z-index: sage-z-index(raised);
   position: absolute;
-  inset-inline-start: 0;
-  inset-inline-end: 0;
+  left: 0;
+  right: 0;
   transform: translateY(#{sage-spacing(2xs)});
   overflow-x: hidden;
   padding: 0;

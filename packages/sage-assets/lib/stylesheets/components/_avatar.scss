@@ -95,31 +95,31 @@ $-avatar-group-item-sizes: (
 
     // Positioning is same for first item is same in all configs
     &:nth-child(1) {
-      inset-block-start: 0;
-      inset-inline-start: 0;
+      top: 0;
+      left: 0;
     }
   }
 
   .sage-avatar-group--2-up &:nth-child(2) {
-    inset-block-end: rem(5px);
-    inset-inline-end: rem(6px);
+    bottom: rem(5px);
+    right: rem(6px);
   }
 
   .sage-avatar-group--3-up &,
   .sage-avatar-group--4-up & {
     &:nth-child(2) {
-      inset-block-end: rem(16px);
-      inset-inline-end: 0;
+      bottom: rem(16px);
+      right: 0;
     }
 
     &:nth-child(3) {
-      inset-block-end: 0;
-      inset-inline-start: rem(16px);
+      bottom: 0;
+      left: rem(16px);
     }
 
     &:nth-child(4) {
-      inset-block-start: rem(8px);
-      inset-inline-end: rem(8px);
+      top: rem(8px);
+      right: rem(8px);
     }
   }
 }
@@ -154,8 +154,8 @@ $-avatar-group-item-sizes: (
 .sage-avatar__badge {
   position: absolute;
   z-index: sage-z-index(default, 3);
-  inset-block-end: rem(-4px);
-  inset-inline-end: rem(-4px);
+  bottom: rem(-4px);
+  right: rem(-4px);
   background-color: sage-color(white);
   border-radius: sage-border(radius-round);
   border: rem(2px) solid sage-color(white);

@@ -117,7 +117,7 @@ $-badge-statuses: (
     }
 
     &.sage-badge--large .sage-badge__decor-icon {
-      inset-inline-end: rem(10px);
+      right: rem(10px);
     }
 
     .sage-badge__decor-icon {
@@ -125,7 +125,7 @@ $-badge-statuses: (
       justify-content: center;
       align-items: center;
       position: absolute;
-      inset-inline-end: rem(8px);
+      right: rem(8px);
       margin-block-start: rem(1px);
       border-radius: 0 $-badge-border-radius $-badge-border-radius 0;
 

@@ -62,7 +62,7 @@
   .sage-btn {
     flex-shrink: 0;
     position: absolute;
-    inset-inline-end: sage-spacing(sm);
+    right: sage-spacing(sm);
 
     &:not(.sage-btn--subtle) {
       padding: sage-spacing(xs);

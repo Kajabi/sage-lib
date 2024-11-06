@@ -281,7 +281,7 @@ $-btn-loading-min-height: rem(36px);
     display: flex;
     justify-content: center;
     position: absolute;
-    inset-inline-start: 0;
+    left: 0;
     width: $-btn-interactive-badge-icon-size;
     margin: auto 0;
     border-radius: 0 sage-border(radius-x-large) sage-border(radius-x-large) 0;
@@ -322,7 +322,7 @@ $-btn-loading-min-height: rem(36px);
   .sage-input-group & {
     position: absolute;
     z-index: sage-z-index(default, 1);
-    inset-inline-end: rem(1px);
+    right: rem(1px);
     bottom: rem(1px);
     height: rem(38px);
     background-color: sage-color(white);
@@ -348,8 +348,8 @@ $-btn-loading-min-height: rem(36px);
 
   .sage-panel-controls__toolbar-btn-group > &:not(.sage-btn--secondary) {
     position: absolute;
-    inset-inline-start: 0;
-    inset-block-end: 0;
+    left: 0;
+    bottom: 0;
     min-height: calc(#{$-btn-toolbar-group-height} + #{rem(2px)}); /* expand to toolbar group height + border offset */
   }
 
@@ -438,18 +438,18 @@ $-btn-loading-min-height: rem(36px);
       @include sage-icon-base(caret-down, md, pine);
 
       position: absolute;
-      inset-inline-start: 1rem;
+      left: 1rem;
     }
 
     &[class*="icon-only"]::after {
       @include sage-icon-base(caret-down, xs, pine);
 
-      inset-inline-start: $-btn-disclosure-left-padding;
+      left: $-btn-disclosure-left-padding;
       font-weight: sage-font-weight(bold);
     }
 
     &[class*="icon-only"].sage-btn--small::after {
-      inset-inline-start: rem(12px);
+      left: rem(12px);
     }
 
     &:has(pds-icon) {
@@ -731,7 +731,7 @@ a.sage-btn {
         // Remove class when Sage Label is fully deprecated in Products
         .sage-label & {
           position: absolute;
-          inset-inline-start: sage-spacing(xs);
+          left: sage-spacing(xs);
         }
       }
     }

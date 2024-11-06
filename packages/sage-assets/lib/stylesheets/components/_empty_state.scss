@@ -25,8 +25,8 @@ $-empty-state-icon-compact-size: rem(56px);
 
 .sage-empty-state--center {
   position: absolute;
-  inset-inline-start: 50%;
-  inset-block-start: 50%;
+  left: 50%;
+  top: 50%;
   transform: translate(-50%, -50%);
   padding: sage-spacing();
 }

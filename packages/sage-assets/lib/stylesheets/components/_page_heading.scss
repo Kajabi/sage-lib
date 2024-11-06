@@ -91,7 +91,7 @@ $-page-heading-image-height-mobile: rem(120px);
   img {
     position: absolute;
     transform: translateY(-50%);
-    inset-block-start: 50%;
+    top: 50%;
     width: 100%;
   }
 

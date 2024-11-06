@@ -8,8 +8,8 @@
   .example__preview & {
     z-index: sage-z-index();
     position: relative;
-    inset-block-start: auto;
-    inset-inline-start: auto;
+    top: auto;
+    left: auto;
     transform: none;
     height: auto;
     box-shadow: none;

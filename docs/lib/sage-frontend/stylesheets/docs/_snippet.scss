@@ -11,8 +11,8 @@
     content: "";
     display: block;
     position: absolute;
-    inset-inline-end: 0;
-    inset-block-start: 0;
+    right: 0;
+    top: 0;
     height: 100%;
     width: sage-spacing(lg);
     background: linear-gradient(

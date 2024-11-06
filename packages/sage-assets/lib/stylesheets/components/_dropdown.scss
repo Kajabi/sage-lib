@@ -313,11 +313,11 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
   background-attachment: local, local, scroll, scroll;
 
   :not(.sage-dropdown--anchor-right) > .sage-dropdown__panel & {
-    inset-inline-start: 0;
+    left: 0;
   }
 
   .sage-dropdown--anchor-right > .sage-dropdown__panel & {
-    inset-inline-start: 0;
+    left: 0;
   }
 
   .sage-dropdown--small & {
@@ -337,7 +337,7 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
   display: none;
   z-index: sage-z-index(negative);
   position: absolute;
-  inset-block-start: calc(100% + #{sage-spacing(xs)});
+  top: calc(100% + #{sage-spacing(xs)});
   // Temporarily removing animation as it causes
   // a positioning issue with nested fixed positioned elements
   // transform: rotate3d(1, 0, 0, -90deg);
@@ -355,15 +355,15 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
   margin-block-end: sage-spacing(); /* stylelint-disable-line order/properties-order */
 
   .sage-dropdown--anchor-left & {
-    inset-inline-start: 0;
+    left: 0;
   }
 
   .sage-dropdown--anchor-right & {
-    inset-inline-start: 0;
+    left: 0;
   }
 
   .sage-dropdown--anchor-center & {
-    inset-inline-start: 50%;
+    left: 50%;
     transform: translateX(-50%);
   }
 
@@ -410,10 +410,10 @@ $-dropdown-trigger-dropdown-offset: rem(16px) + sage-spacing(xs);
     display: block;
     position: fixed;
     z-index: sage-z-index(default, 90);
-    inset-block-start: 0;
-    inset-inline-end: 0;
-    inset-block-end: 0;
-    inset-inline-start: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
   }
 }
 

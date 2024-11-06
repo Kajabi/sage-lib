@@ -248,7 +248,7 @@ $-search-icon: "::before";
 .sage-search__reset-button {
   visibility: hidden;
   position: absolute;
-  inset-inline-end: 0;
+  right: 0;
   z-index: sage-z-index(default, 1);
 
   :not(.sage-search--contained) & {

@@ -152,7 +152,7 @@
           }
 
           &::after {
-            inset-inline-end: 15px;
+            right: 15px;
             font-size: 11px;
           }
         }
@@ -507,8 +507,8 @@
   align-items: center;
   justify-content: center;
   position: absolute;
-  inset-inline-end: 0;
-  inset-block-start: 0;
+  right: 0;
+  top: 0;
   height: rem(40px);
   width: rem(40px);
 }
@@ -558,7 +558,7 @@
       @include sage-icon-base(danger, md, pine);
 
       position: relative;
-      inset-block-start: rem(1px);
+      top: rem(1px);
       padding-inline-end: sage-spacing(xs);
     }
   }
