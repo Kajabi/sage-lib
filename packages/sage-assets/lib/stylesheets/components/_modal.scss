@@ -206,8 +206,8 @@ $-modal-inner-size: sage-container(md);
   .sage-modal--fullscreen & {
     position: fixed;
     z-index: sage-z-index(default, 1);
-    left: 0;
-    right: 0;
+    inset-inline-start: 0;
+    inset-inline-end: 0;
     margin: 0;
     padding: sage-spacing(sm) $-modal-padding-x;
     background-color: sage-color(white);

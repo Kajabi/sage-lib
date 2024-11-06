@@ -27,9 +27,9 @@
     padding-inline-end: 0 !important; /* stylelint-disable-line declaration-no-important */
 
     .mce-preview {  /* stylelint-disable-line selector-max-compound-selectors */
-      top: rem(18px) !important; /* stylelint-disable-line declaration-no-important */
-      right: rem(-2px) !important; /* stylelint-disable-line declaration-no-important */
-      left: unset !important; /* stylelint-disable-line declaration-no-important */
+      inset-block-start: rem(18px) !important; /* stylelint-disable-line declaration-no-important */
+      inset-inline-end: rem(-2px) !important; /* stylelint-disable-line declaration-no-important */
+      inset-inline-start: unset !important; /* stylelint-disable-line declaration-no-important */
       width: rem(13px) !important; /* stylelint-disable-line declaration-no-important */
       height: rem(4px) !important; /* stylelint-disable-line declaration-no-important */
       margin-inline-start: unset !important; /* stylelint-disable-line declaration-no-important */

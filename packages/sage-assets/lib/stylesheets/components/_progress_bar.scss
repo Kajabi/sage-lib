@@ -20,7 +20,7 @@ $-progress-bar-height: sage-spacing(xs);
 
   .sage-modal__header & {
     position: absolute;
-    bottom: 0;
+    inset-block-end: 0;
     width: 100%;
   }
 }

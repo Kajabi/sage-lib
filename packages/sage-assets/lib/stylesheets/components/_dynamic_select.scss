@@ -17,15 +17,15 @@ $-dynamic-select-open-arrow: rotate(180deg) scaleX(-1);
 /* stylelint-disable selector-max-compound-selectors */
 
 .sage-dynamic-select .sage-dynamic-select__data {
-  bottom: sage-spacing(xs);
-  left: 50%;
+  inset-block-end: sage-spacing(xs);
+  inset-inline-start: 50%;
 }
 
 // empty state //
 .sage-dynamic-select {
   position: relative;
   .select2-container--sage .sage-select__arrow::before {
-    top: rem(3px);
+    inset-block-start: rem(3px);
   }
 
   .select2-container--sage .select2-dropdown--below {
@@ -71,7 +71,7 @@ $-dynamic-select-open-arrow: rotate(180deg) scaleX(-1);
 // selected state //
 .sage-dynamic-select.sage-select--value-selected .select2-container--sage {
   .sage-select__arrow::before {
-    top: rem(6px);
+    inset-block-start: rem(6px);
   }
   .select2-selection--single.sage-select__field {
     height: $-dynamic-select-selected-height;

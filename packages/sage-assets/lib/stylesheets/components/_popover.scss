@@ -64,8 +64,8 @@ $-popover-tooltip-inactive: $-popover-tooltip-width solid transparent;
   }
 
   .sage-popover--top & {
-    bottom: calc(100% + #{$-popover-panel-offset});
-    left: 0;
+    inset-block-end: calc(100% + #{$-popover-panel-offset});
+    inset-inline-start: 0;
 
     &::after {
       left: $-popover-tooltip-offset;
@@ -78,8 +78,8 @@ $-popover-tooltip-inactive: $-popover-tooltip-width solid transparent;
   }
 
   .sage-popover--top-right & {
-    bottom: calc(100% + #{$-popover-panel-offset});
-    right: 0;
+    inset-block-end: calc(100% + #{$-popover-panel-offset});
+    inset-inline-end: 0;
 
     &::after {
       right: $-popover-tooltip-offset;
@@ -92,8 +92,8 @@ $-popover-tooltip-inactive: $-popover-tooltip-width solid transparent;
   }
 
   .sage-popover--right & {
-    top: $-popover-tooltip-horizontal-offset;
-    left: calc(100% + #{$-popover-panel-offset} + #{$-popover-tooltip-width});
+    inset-block-start: $-popover-tooltip-horizontal-offset;
+    inset-inline-start: calc(100% + #{$-popover-panel-offset} + #{$-popover-tooltip-width});
 
     &::after {
       left: -($-popover-tooltip-width);
@@ -106,8 +106,8 @@ $-popover-tooltip-inactive: $-popover-tooltip-width solid transparent;
   }
 
   .sage-popover--bottom & {
-    top: calc(100% + #{$-popover-panel-offset});
-    left: 0;
+    inset-block-start: calc(100% + #{$-popover-panel-offset});
+    inset-inline-start: 0;
 
     &::after {
       left: $-popover-tooltip-offset;
@@ -134,8 +134,8 @@ $-popover-tooltip-inactive: $-popover-tooltip-width solid transparent;
   }
 
   .sage-popover--left & {
-    top: $-popover-tooltip-horizontal-offset;
-    right: calc(100% + #{$-popover-panel-offset} + #{$-popover-tooltip-width});
+    inset-block-start: $-popover-tooltip-horizontal-offset;
+    inset-inline-end: calc(100% + #{$-popover-panel-offset} + #{$-popover-tooltip-width});
 
     &::after {
       right: -($-popover-tooltip-width);

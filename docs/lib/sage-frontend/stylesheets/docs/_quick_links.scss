@@ -10,7 +10,7 @@ $-quick-links-color-background: sage-color(primary, 200);
 
 .quick-links {
   position: sticky;
-  top: 0;
+  inset-block-start: 0;
   overflow: hidden;
   padding: sage-spacing(2xs) sage-spacing();
   background-color: #fff;
