@@ -63,7 +63,7 @@ $-tooltip-large-maxwidth: rem(320px);
 .sage-tooltip--bottom {
   &::after {
     left: 50%;
-    right: 100%;
+    bottom: 100%;
     transform: translate3d(-50%, 0, 0);
     border-inline-start: $-tooltip-arrow-inactive;
     border-inline-end: $-tooltip-arrow-inactive;
@@ -80,7 +80,7 @@ $-tooltip-large-maxwidth: rem(320px);
 .sage-tooltip--left {
   &::after {
     left: 100%;
-    right: 50%;
+    bottom: 50%;
     transform: translate3d(0, 50%, 0);
     border-block-start: $-tooltip-arrow-inactive;
     border-block-end: $-tooltip-arrow-inactive;
@@ -102,7 +102,7 @@ $-tooltip-large-maxwidth: rem(320px);
 .sage-tooltip--right {
   &::after {
     left: 0;
-    right: 50%;
+    bottom: 50%;
     transform: translate3d(-100%, 50%, 0);
     border-block-start: $-tooltip-arrow-inactive;
     border-block-end: $-tooltip-arrow-inactive;
