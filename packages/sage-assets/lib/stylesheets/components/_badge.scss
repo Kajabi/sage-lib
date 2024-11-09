@@ -8,7 +8,7 @@
 $-badge-min-height: rem(20px);
 $-badge-interactive-icon-size: rem(24px);
 $-badge-interactive-icon-size-decor: rem(28px);
-$-badge-padding: sage-spacing(3xs) rem(10px) sage-spacing(3xs) sage-spacing(xs);
+$-badge-padding: 1px rem(10px) 1px sage-spacing(xs);
 $-badge-padding-lg: sage-spacing(2xs) rem(12px);
 $-badge-border-radius: sage-border(radius-x-large);
 $-badge-statuses: (
@@ -34,7 +34,7 @@ $-badge-statuses: (
 
   &:not(.sage-badge--large) {
     .sage-badge__value-text {
-      letter-spacing: sage-letter-spacing(md);  
+      letter-spacing: sage-letter-spacing(md);
     }
   }
 }
@@ -69,7 +69,7 @@ $-badge-statuses: (
     padding: $-badge-padding-lg;
     font-family: $-heading-font;
 
-    .sage-badge__value-text { 
+    .sage-badge__value-text {
       font-size: sage-font-size(lg, false);
       letter-spacing: sage-letter-spacing(sm);
     }
@@ -96,9 +96,9 @@ $-badge-statuses: (
   $-color-modifier: ".sage-badge--#{$-color-name}";
 
   #{$-color-modifier} {
+    color: sage-color-combo($-color-name, default, foreground-accent);
     background-color: sage-color-combo($-color-name, default, background);
     border-color: sage-color-combo($-color-name, default, background-accent);
-    color: sage-color-combo($-color-name, default, foreground-accent);
   }
 
   #{$-color-modifier} .sage-dot {
