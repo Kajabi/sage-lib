@@ -1,102 +1,84 @@
-<%
-configs = [
-  {
-    color: "draft",
-    icon: "draft",
-  },
-  {
-    color: "published",
-    icon: "check",
-  },
-  {
-    color: "info",
-    icon: "draft",
-  },
-  {
-    color: "warning",
-    icon: "warning",
-  },
-  {
-    color: "danger",
-    icon: "danger",
-  },
-  {
-    color: "locked",
-    icon: "lock",
-  }
-]
-%>
-<%= sage_component SagePanelBlock, {} do %>
-  <h3 class="t-sage-heading-6">Default Badge</h3>
-  <%= sage_component SageLabelGroup, {} do %>
-    <% configs.each do | config | %>
-      <%= sage_component SageBadge, {
-        color: config[:color],
-        value: config[:color].capitalize,
-      }%>
+<h2>Variants</h2>
+
+<h3>Default Badge</h3>
+<p>Demonstrates the use of the default badge with various color options.</p>
+
+<%= sage_component SageLabelGroup, { gap: :md, spacer: { bottom: :sm }} do %>
+  <%= sage_component SageBadge, { color: "locked", value: "Accent" } %>
+  <%= sage_component SageBadge, { color: "danger", value: "Danger" } %>
+  <%= sage_component SageBadge, { color: "info", value: "Info" } %>
+  <%= sage_component SageBadge, { color: "draft", value: "Neutral" } %>
+  <%= sage_component SageBadge, { color: "published", value: "Success" } %>
+  <%= sage_component SageBadge, { color: "warning", value: "Warning" } %>
+<% end %>
+
+<%= sage_component SageDivider, {} %>
+
+<h3>Dot</h3>
+<p>Illustrates a badge with an indicator dot.</p>
+
+<%= sage_component SageLabelGroup, { gap: :md, spacer: { bottom: :sm }} do %>
+  <%= sage_component SageBadge, { color: "locked", value: "Accent" } do %>
+    <% content_for :sage_badge_dot do %>
+      <%= sage_component SageDot, { color: "primary" } %>
+    <% end %>
+  <% end %>
+  <%= sage_component SageBadge, { color: "danger", value: "Danger" } do %>
+    <% content_for :sage_badge_dot do %>
+      <%= sage_component SageDot, { color: "primary" } %>
+    <% end %>
+  <% end %>
+  <%= sage_component SageBadge, { color: "info", value: "Info" } do %>
+    <% content_for :sage_badge_dot do %>
+      <%= sage_component SageDot, { color: "primary" } %>
+    <% end %>
+  <% end %>
+  <%= sage_component SageBadge, { color: "draft", value: "Neutral" } do %>
+    <% content_for :sage_badge_dot do %>
+      <%= sage_component SageDot, { color: "primary" } %>
+    <% end %>
+  <% end %>
+  <%= sage_component SageBadge, { color: "published", value: "Success" } do %>
+    <% content_for :sage_badge_dot do %>
+      <%= sage_component SageDot, { color: "primary" } %>
+    <% end %>
+  <% end %>
+  <%= sage_component SageBadge, { color: "warning", value: "Warning" } do %>
+    <% content_for :sage_badge_dot do %>
+      <%= sage_component SageDot, { color: "primary" } %>
     <% end %>
   <% end %>
 <% end %>
 
-<%= sage_component SagePanelBlock, {} do %>
-  <h3 class="t-sage-heading-6">Indicator Badge</h3>
-  <%= sage_component SageLabelGroup, {} do %>
-    <% configs.each do | config | %>
-      <%= sage_component SageBadge, {
-        color: config[:color],
-        value: config[:color].capitalize,
-      } do %>
-        <% content_for :sage_badge_dot do %>
-          <%= sage_component SageDot, { color: "primary" } %>
-        <% end %>
-      <% end %>
-    <% end %>
-  <% end %>
+<%= sage_component SageDivider, {} %>
+
+<h3>Interactive Badge</h3>
+<p>Shows how to create an interactive badge with dropdown functionality.</p>
+
+<%= sage_component SageLabelGroup, { gap: :md, spacer: { bottom: :sm }} do %>
+  <%= sage_component SageBadge, { color: "locked", value: "Accent", interactive_type: :dropdown } %>
+  <%= sage_component SageBadge, { color: "danger", value: "Danger", interactive_type: :dropdown } %>
+  <%= sage_component SageBadge, { color: "info", value: "Info", interactive_type: :dropdown } %>
+  <%= sage_component SageBadge, { color: "draft", value: "Neutral", interactive_type: :dropdown } %>
+  <%= sage_component SageBadge, { color: "published", value: "Success", interactive_type: :dropdown } %>
+  <%= sage_component SageBadge, { color: "warning", value: "Warning", interactive_type: :dropdown } %>
 <% end %>
 
-<%= sage_component SagePanelBlock, {} do %>
-  <h3 class="t-sage-heading-6">Interactive Badge</h3>
-  <%= sage_component SageLabelGroup, {} do %>
-    <% configs.each do | config | %>
-      <%= sage_component SageBadge, {
-        color: config[:color],
-        value: config[:color].capitalize,
-        interactive_type: :dropdown
-      } do %>
-        <% content_for :sage_badge_dot do %>
-          <%= sage_component SageDot, { color: "primary" } %>
-        <% end %>
-      <% end %>
+<%= sage_component SageDivider, {} %>
+
+<h3>Large Badge</h3>
+<p>Demonstrates larger badge sizes for emphasis.</p>
+
+<%= sage_component SageLabelGroup, { gap: :md, spacer: { bottom: :sm }} do %>
+  <%= sage_component SageBadge, { color: "draft", value: "Neutral", large: true } %>
+  <%= sage_component SageBadge, { color: "published", value: "Success", large: true } do %>
+    <% content_for :sage_badge_dot do %>
+      <%= sage_component SageDot, {} %>
     <% end %>
   <% end %>
-<% end %>
-
-<%= sage_component SagePanelBlock, {} do %>
-  <h3 class="t-sage-heading-6">Large Badge</h3>
-  <%= sage_component SageLabelGroup, {} do %>
-    <%= sage_component SageBadge, {
-      color: "draft",
-      value: "Draft",
-      large: true,
-    } %>
-    <%= sage_component SageBadge, {
-      color: "published",
-      value: "Published",
-      large: true,
-    } do %>
-      <% content_for :sage_badge_dot do %>
-        <%= sage_component SageDot, {} %>
-      <% end %>
-    <% end %>
-    <%= sage_component SageBadge, {
-      color: "warning",
-      value: "Warning",
-      large: true,
-      interactive_type: :dropdown
-    } do %>
-      <% content_for :sage_badge_dot do %>
-        <%= sage_component SageDot, {} %>
-      <% end %>
+  <%= sage_component SageBadge, { color: "warning", value: "Warning", large: true, interactive_type: :dropdown } do %>
+    <% content_for :sage_badge_dot do %>
+      <%= sage_component SageDot, {} %>
     <% end %>
   <% end %>
 <% end %>
