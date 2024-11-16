@@ -125,7 +125,7 @@ $-checkbox-focus-outline-color: sage-color(purple, 300);
 
   .sage-panel-controls__bulk-actions--checked & {
     display: unset;
-    padding-block-end: sage-spacing(sm);
+    padding-inline-end: sage-spacing(sm);
   }
 }
 
