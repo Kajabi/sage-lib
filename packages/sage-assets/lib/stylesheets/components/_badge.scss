@@ -35,13 +35,13 @@ $-badge-statuses: (
 
 .sage-badge__value {
   @extend %t-sage-body-med;
-  letter-spacing: sage-letter-spacing(md);
   appearance: none;
   display: flex;
   align-items: center;
   max-width: 100%;
   min-height: $-badge-min-height;
   padding: $-badge-padding;
+  letter-spacing: sage-letter-spacing(md);
   white-space: nowrap;
   background-color: transparent;
   border-radius: $-badge-border-radius;
