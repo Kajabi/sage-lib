@@ -4,12 +4,12 @@
 <p>Demonstrates the use of the default badge with various color options.</p>
 
 <%= sage_component SageLabelGroup, { gap: :md, spacer: { bottom: :sm }} do %>
-  <%= sage_component SageBadge, { color: "locked", value: "Accent" } %>
-  <%= sage_component SageBadge, { color: "danger", value: "Danger" } %>
-  <%= sage_component SageBadge, { color: "info", value: "Info" } %>
   <%= sage_component SageBadge, { color: "draft", value: "Neutral" } %>
+  <%= sage_component SageBadge, { color: "info", value: "Info" } %>
   <%= sage_component SageBadge, { color: "published", value: "Success" } %>
   <%= sage_component SageBadge, { color: "warning", value: "Warning" } %>
+  <%= sage_component SageBadge, { color: "danger", value: "Danger" } %>
+  <%= sage_component SageBadge, { color: "locked", value: "Accent" } %>
 <% end %>
 
 <%= sage_component SageDivider, {} %>
@@ -18,22 +18,12 @@
 <p>Illustrates a badge with an indicator dot.</p>
 
 <%= sage_component SageLabelGroup, { gap: :md, spacer: { bottom: :sm }} do %>
-  <%= sage_component SageBadge, { color: "locked", value: "Accent" } do %>
-    <% content_for :sage_badge_dot do %>
-      <%= sage_component SageDot, { color: "primary" } %>
-    <% end %>
-  <% end %>
-  <%= sage_component SageBadge, { color: "danger", value: "Danger" } do %>
+  <%= sage_component SageBadge, { color: "draft", value: "Neutral" } do %>
     <% content_for :sage_badge_dot do %>
       <%= sage_component SageDot, { color: "primary" } %>
     <% end %>
   <% end %>
   <%= sage_component SageBadge, { color: "info", value: "Info" } do %>
-    <% content_for :sage_badge_dot do %>
-      <%= sage_component SageDot, { color: "primary" } %>
-    <% end %>
-  <% end %>
-  <%= sage_component SageBadge, { color: "draft", value: "Neutral" } do %>
     <% content_for :sage_badge_dot do %>
       <%= sage_component SageDot, { color: "primary" } %>
     <% end %>
@@ -48,6 +38,16 @@
       <%= sage_component SageDot, { color: "primary" } %>
     <% end %>
   <% end %>
+  <%= sage_component SageBadge, { color: "danger", value: "Danger" } do %>
+    <% content_for :sage_badge_dot do %>
+      <%= sage_component SageDot, { color: "primary" } %>
+    <% end %>
+  <% end %>
+  <%= sage_component SageBadge, { color: "locked", value: "Accent" } do %>
+    <% content_for :sage_badge_dot do %>
+      <%= sage_component SageDot, { color: "primary" } %>
+    <% end %>
+  <% end %>
 <% end %>
 
 <%= sage_component SageDivider, {} %>
@@ -56,12 +56,12 @@
 <p>Shows how to create an interactive badge with dropdown functionality.</p>
 
 <%= sage_component SageLabelGroup, { gap: :md, spacer: { bottom: :sm }} do %>
-  <%= sage_component SageBadge, { color: "locked", value: "Accent", interactive_type: :dropdown } %>
-  <%= sage_component SageBadge, { color: "danger", value: "Danger", interactive_type: :dropdown } %>
-  <%= sage_component SageBadge, { color: "info", value: "Info", interactive_type: :dropdown } %>
   <%= sage_component SageBadge, { color: "draft", value: "Neutral", interactive_type: :dropdown } %>
+  <%= sage_component SageBadge, { color: "info", value: "Info", interactive_type: :dropdown } %>
   <%= sage_component SageBadge, { color: "published", value: "Success", interactive_type: :dropdown } %>
   <%= sage_component SageBadge, { color: "warning", value: "Warning", interactive_type: :dropdown } %>
+  <%= sage_component SageBadge, { color: "danger", value: "Danger", interactive_type: :dropdown } %>
+  <%= sage_component SageBadge, { color: "locked", value: "Accent", interactive_type: :dropdown } %>
 <% end %>
 
 <%= sage_component SageDivider, {} %>
