@@ -90,6 +90,7 @@ $-empty-state-icon-compact-size: rem(56px);
   @extend %t-sage-body;
 
   word-wrap: break-word;
+  text-wrap: balance;
 }
 
 .sage-empty-state__text,
