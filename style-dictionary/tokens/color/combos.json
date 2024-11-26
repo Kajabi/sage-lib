@@ -10,7 +10,7 @@
             "value": "{color.base.grey.950.hex}"
           },
           "background": {
-            "value": "{color.base.grey.200.hex}"
+            "value": "{color.base.grey.150.hex}"
           },
           "background-accent": {
             "value": "{color.base.grey.300.hex}"

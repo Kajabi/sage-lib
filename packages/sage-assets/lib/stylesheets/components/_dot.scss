@@ -31,7 +31,7 @@ $-sage-dot-size--badge: rem(6px);
   }
 
   .sage-badge & {
-    margin-inline-start: rem(6px);
+    margin-inline-start: sage-spacing(xs);
   }
 
   .sage-badge--large & {
