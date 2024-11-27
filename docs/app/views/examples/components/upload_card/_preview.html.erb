@@ -33,7 +33,7 @@
   ],
   file_selected: true,
   accepted_file_types: ["image/jpg"],
-  selection_preview: "https://placekitten.com/360",
+  selection_preview: "hero-workshop-placeholder.jpg",
   selection_label: "Replace file",
   id: "upload-card-selected",
 } do %>
@@ -53,7 +53,7 @@
     {name: "my-image-file.jpg"},
   ],
   file_selected: true,
-  selection_preview: "https://placekitten.com/360",
+  selection_preview: "hero-workshop-placeholder.jpg",
   stack_layout: true,
   id: "upload-card-stack",
   selection_label: "Edit file",
@@ -72,11 +72,11 @@
 <p><strong>NOTE:</strong> a file input field and label are <em>included by default in the base component</em>, as seen in the examples above. When applying a custom file input with `sage_upload_card_actions`, set <code>custom_file_input_field</code> to <code>true</code> to remove these defaults.</p>
 <%= sage_component SageUploadCard, {
   accepted_files: [
-    {name: "fluffy-kitteh.jpg"},
+    {name: "my-image-file.jpg"},
   ],
   custom_file_input_field: true,
   file_selected: true,
-  selection_preview: "https://placekitten.com/360",
+  selection_preview: "hero-workshop-placeholder.jpg",
   id: "upload-card-dropdown"
 } do %>
   <% content_for :sage_upload_card_actions do %>
