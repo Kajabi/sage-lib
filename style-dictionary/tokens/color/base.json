@@ -23,7 +23,7 @@
           "classname": { "value": "t-sage--color-blue-200" }
         },
         "300": {
-          "hex": { "value": "#92c5fd" },
+          "hex": { "value": "#93c5fd" },
           "code": { "value": "blue-300" },
           "classname": { "value": "t-sage--color-blue-300" }
         },
