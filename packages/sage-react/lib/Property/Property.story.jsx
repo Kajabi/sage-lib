@@ -16,7 +16,8 @@ export default {
   },
   args: {
     icon: SageTokens.ICONS.USERS,
-    children: 'Property'
+    children: 'Property',
+    testId: 'exampleProperty',
   },
   argTypes: {
     ...selectArgs({

@@ -34,7 +34,8 @@ export const IndicatorBadge = Template.bind({});
 IndicatorBadge.args = {
   dot: (
     <Dot />
-  )
+  ),
+  testId: 'indicatorBadge',
 };
 
 export const InteractiveBadge = Template.bind({});
@@ -43,7 +44,8 @@ InteractiveBadge.args = {
   isInteractive: true,
   dot: (
     <Dot />
-  )
+  ),
+  testId: 'interactiveBadge',
 };
 
 export const LargeBadge = Template.bind({});
@@ -52,5 +54,6 @@ LargeBadge.args = {
   large: true,
   dot: (
     <Dot />
-  )
+  ),
+  testId: 'largeBadge',
 };

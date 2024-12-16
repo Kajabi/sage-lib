@@ -16,8 +16,8 @@ const MultipleTemplate = () => {
   };
 
   return (
-    <Accordion>
-      <ExpandableCard name="panel-1" expanded={activePanel === 'panel-1'} onClick={handleChange('panel-1')} alignArrowRight={true} triggerLabel="Expand">
+    <Accordion testId="exampleSingleAccordion">
+      <ExpandableCard name="panel-1" expanded={activePanel === 'panel-1'} onClick={handleChange('panel-1')} alignArrowRight={true} testId="firstExamplePanel" triggerLabel="Expand">
         <Checkbox
           checked={false}
           disabled={false}
@@ -25,6 +25,7 @@ const MultipleTemplate = () => {
           id="checkbox1-demo"
           label="Grant offers"
           name="checkbox1-demo"
+          testId="grantOffers"
         />
         <Checkbox
           checked={false}
@@ -33,6 +34,7 @@ const MultipleTemplate = () => {
           id="checkbox2-demo"
           label="Add tags"
           name="checkbox2-demo"
+          testId="addTags"
         />
         <Checkbox
           checked={false}
@@ -41,9 +43,10 @@ const MultipleTemplate = () => {
           id="checkbox3-demo"
           label="Subscribe to emails"
           name="checkbox3-demo"
+          testId="subscribeToEmails"
         />
       </ExpandableCard>
-      <ExpandableCard name="panel-2" alignArrowRight={true} expanded={activePanel === 'panel-2'} onClick={handleChange('panel-2')} triggerLabel="Expand">
+      <ExpandableCard name="panel-2" alignArrowRight={true} expanded={activePanel === 'panel-2'} onClick={handleChange('panel-2')} testId="secondExpandablePanel" triggerLabel="Expand">
         <Checkbox
           checked={false}
           disabled={false}
@@ -51,6 +54,7 @@ const MultipleTemplate = () => {
           id="checkbox1-demo"
           label="Grant offers"
           name="checkbox1-demo"
+          testId="grantOffers"
         />
         <Checkbox
           checked={false}
@@ -59,6 +63,7 @@ const MultipleTemplate = () => {
           id="checkbox2-demo"
           label="Add tags"
           name="checkbox2-demo"
+          testId="addTags"
         />
         <Checkbox
           checked={false}
@@ -67,9 +72,10 @@ const MultipleTemplate = () => {
           id="checkbox3-demo"
           label="Subscribe to emails"
           name="checkbox3-demo"
+          testId="subscribeToEmails"
         />
       </ExpandableCard>
-      <ExpandableCard name="panel-3" alignArrowRight={true} expanded={activePanel === 'panel-3'} onClick={handleChange('panel-3')} triggerLabel="Expand">
+      <ExpandableCard name="panel-3" alignArrowRight={true} expanded={activePanel === 'panel-3'} onClick={handleChange('panel-3')} testId="thirdExpandablePanel" triggerLabel="Expand">
         <Checkbox
           checked={false}
           disabled={false}
@@ -77,6 +83,7 @@ const MultipleTemplate = () => {
           id="checkbox1-demo"
           label="Grant offers"
           name="checkbox1-demo"
+          testId="grantOffers"
         />
         <Checkbox
           checked={false}
@@ -85,6 +92,7 @@ const MultipleTemplate = () => {
           id="checkbox2-demo"
           label="Add tags"
           name="checkbox2-demo"
+          testId="addTags"
         />
         <Checkbox
           checked={false}
@@ -93,6 +101,7 @@ const MultipleTemplate = () => {
           id="checkbox3-demo"
           label="Subscribe to emails"
           name="checkbox3-demo"
+          testId="subscribeToEmails"
         />
       </ExpandableCard>
     </Accordion>
@@ -101,7 +110,7 @@ const MultipleTemplate = () => {
 
 const DefaultTemplate = () => (
   <Accordion>
-    <ExpandableCard name="panel-1" alignArrowRight={true} triggerLabel="Expand">
+    <ExpandableCard name="panel-1" alignArrowRight={true} triggerLabel="Expand" testId="">
       <Checkbox
         checked={false}
         disabled={false}

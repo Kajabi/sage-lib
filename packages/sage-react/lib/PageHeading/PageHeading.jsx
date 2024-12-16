@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { Breadcrumbs } from '../Breadcrumbs';
+import { TestIds } from '../automationTestIds';
 
 export const PageHeading = ({
   actions,
@@ -24,11 +25,12 @@ export const PageHeading = ({
         'sage-page-heading--has-image': image.src,
       }
     )}
+    data-kjb-element={TestIds.pageHeadingHeading}
     {...rest}
   >
     {breadcrumbs && (
       <div className="sage-page-heading__crumbs">
-        <Breadcrumbs items={breadcrumbs} className="sage-page-heading__back" />
+        <Breadcrumbs items={breadcrumbs} className="sage-page-heading__back" testId={TestIds.pageHeadingBreadcrumbs} />
       </div>
     )}
     {introText && (
@@ -37,7 +39,7 @@ export const PageHeading = ({
       </div>
     )}
     <div className="sage-page-heading__title-wrapper">
-      <h1 className="sage-page-heading__title">
+      <h1 className="sage-page-heading__title" data-kjb-element={TestIds.pageHeadingTitle}>
         {children}
       </h1>
       {help && (
@@ -47,7 +49,7 @@ export const PageHeading = ({
       )}
     </div>
     {image.src && (
-      <div className="sage-page-heading__image">
+      <div className="sage-page-heading__image" data-kjb-element={TestIds.pageHeadingImage}>
         <img alt={image.alt || ''} src={image.src} />
       </div>
     )}
@@ -64,7 +66,7 @@ export const PageHeading = ({
       </div>
     )}
     {secondaryText && (
-      <div className="sage-page-heading__secondary">
+      <div className="sage-page-heading__secondary" data-kjb-element={TestIds.pageHeadingSubTitle}>
         {secondaryText}
       </div>
     )}

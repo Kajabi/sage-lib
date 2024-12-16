@@ -22,6 +22,7 @@ export default {
   args: {
     content: 'Hello, world!',
     icon: SageTokens.ICONS.INFO_CIRCLE,
+    testId: 'exampleHint',
   }
 };
 

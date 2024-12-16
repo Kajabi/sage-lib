@@ -5,6 +5,7 @@ import { Button } from '../Button';
 import { Icon } from '../Icon';
 import { ALERT_COLORS, ALERT_PRIMARY_ACTION_CLASSNAME } from './configs';
 import { SageTokens } from '../configs';
+import { TestIds } from '../automationTestIds';
 
 export const Alert = ({
   actions,
@@ -15,6 +16,7 @@ export const Alert = ({
   icon,
   onDismiss,
   small,
+  testId,
   title,
   titleAddon,
   ...rest
@@ -58,17 +60,17 @@ export const Alert = ({
   };
 
   return !selfDismissed ? (
-    <div className={classNames} {...rest}>
-      <Icon icon={icon || getDefaultIcon()} className="sage-alert__icon" />
+    <div className={classNames} {...rest} data-kjb-element={testId}>
+      <Icon icon={icon || getDefaultIcon()} className="sage-alert__icon" testId={TestIds.alertIcon} />
       <div className="sage-alert__copy">
         {title && (
-          <h3 className="sage-alert__title">
+          <h3 className="sage-alert__title" data-kjb-element={TestIds.alertTitle}>
             {title}
             <span className="sage-alert__title--add-on"> {titleAddon}</span>
           </h3>
         )}
         {description && (
-          <p className="sage-alert__desc">{description}</p>
+          <p className="sage-alert__desc" data-kjb-element={TestIds.alertDescripton}>{description}</p>
         )}
       </div>
       {actions && (
@@ -87,6 +89,7 @@ export const Alert = ({
             value="Close"
             onClick={handleDismiss}
             aria-label="Close Alert"
+            testId="closeButton"
           />
         </div>
       )}
@@ -105,6 +108,7 @@ Alert.defaultProps = {
   icon: null,
   onDismiss: null,
   small: false,
+  testId: null,
   title: null,
   titleAddon: null,
 };
@@ -118,6 +122,7 @@ Alert.propTypes = {
   icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),
   onDismiss: PropTypes.func,
   small: PropTypes.bool,
+  testId: PropTypes.string,
   title: PropTypes.string,
   titleAddon: PropTypes.string,
 };

@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { TestIds } from '../automationTestIds';
 
 export const DataCardHeader = ({
   children,
@@ -12,7 +13,7 @@ export const DataCardHeader = ({
     {...rest}
   >
     {title && (
-      <h4 className="sage-data-card__title t-sage--truncate">{title}</h4>
+      <h4 className="sage-data-card__title t-sage--truncate" data-kjb-element={TestIds.dataCardHeader}>{title}</h4>
     )}
     {children}
   </div>

@@ -6,6 +6,7 @@ import { parseRowData, parseCellData } from './helpers';
 import { cellPropTypes } from './configs';
 import { TableHelpers } from '../helpers';
 import { Checkbox } from '../Toggle';
+import { TestIds } from '../automationTestIds';
 
 /* eslint-disable react-hooks/exhaustive-deps */
 
@@ -18,6 +19,7 @@ export const TableRow = ({
   schema,
   selectable,
   selected,
+  testId,
   typeRenderers,
 }) => {
   const [selfSelected, setSelfSelected] = useState(false);
@@ -86,7 +88,7 @@ export const TableRow = ({
   };
 
   return (
-    <tr className={classNames} data-table-row-id={id}>
+    <tr className={classNames} data-kjb-element={testId} data-table-row-id={id}>
       {selectable && (
         <td className={selectableClassNames}>
           <Checkbox
@@ -96,6 +98,7 @@ export const TableRow = ({
             name="sage-table-selections"
             onChange={onChangeSelector}
             standalone={true}
+            testId={TestIds.tableRowCheckbox}
             value={id.toString()}
           />
         </td>
@@ -104,10 +107,16 @@ export const TableRow = ({
         if (!configs) {
           return;
         }
-        const { key, classNames, style, attributes, contents } = configs;
+        const { key, classNames, style, attributes, contents, testId } = configs;
         // eslint-disable-next-line consistent-return
         return (
-          <td key={key} className={classNames} style={style} {...attributes}>
+          <td
+            data-kjb-element={testId}
+            key={key}
+            className={classNames}
+            style={style}
+            {...attributes}
+          >
             {contents}
           </td>
         );
@@ -124,6 +133,7 @@ TableRow.defaultProps = {
   onSelect: (ev) => ev,
   selectable: false,
   selected: false,
+  testId: null,
   typeRenderers: {},
   schema: {}
 };
@@ -157,6 +167,13 @@ TableRow.propTypes = {
    * to the headers and cells.
    */
   schema: PropTypes.shape({}),
+
+  /**
+   * Adds a data-kjb-element to each table row. The value should be in the form
+   * `descriptionListItem`. For example, a list of contacts should have a value
+   * like `contactListItem`.
+   */
+  testId: PropTypes.string,
 
   /** The data types that could be renedered in a Table Cell. */
   typeRenderers: PropTypes.shape({}),

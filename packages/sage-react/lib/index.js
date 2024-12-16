@@ -93,3 +93,4 @@ export {
   useSageBreakpoint,
   SageBreakpointProvider,
 } from './common/providers';
+export { TestIds } from './automationTestIds';

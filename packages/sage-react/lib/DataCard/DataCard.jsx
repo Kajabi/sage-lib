@@ -11,6 +11,7 @@ export const DataCard = ({
   children,
   className,
   color,
+  testId,
   ...rest
 }) => {
   const classNames = classnames(
@@ -22,7 +23,7 @@ export const DataCard = ({
   );
 
   return (
-    <div className={classNames} {...rest}>
+    <div className={classNames} {...rest} data-kjb-element={testId}>
       {children}
     </div>
   );
@@ -38,10 +39,12 @@ DataCard.defaultProps = {
   children: null,
   className: '',
   color: DATA_CARD_COLORS.DEFAULT,
+  testId: null,
 };
 
 DataCard.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
   color: PropTypes.oneOf(Object.values(DATA_CARD_COLORS)),
+  testId: PropTypes.string,
 };

@@ -9,6 +9,7 @@ export const Property = ({
   children,
   className,
   icon,
+  testId,
   ...rest
 }) => {
   const classNames = classnames(
@@ -17,7 +18,7 @@ export const Property = ({
   );
 
   return (
-    <span className={classNames} {...rest}>
+    <span className={classNames} data-kjb-element={testId} {...rest}>
       {icon && (
         <Icon icon={icon} className="sage-property__icon" />
       )}
@@ -36,10 +37,12 @@ Property.defaultProps = {
   className: null,
   children: null,
   icon: null,
+  testId: null,
 };
 
 Property.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node,
   icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),
+  testId: PropTypes.string,
 };
