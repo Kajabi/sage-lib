@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { TestIds } from '../automationTestIds';
+import { TestIds } from '../configs';
 
 export const DataCardHeader = ({
   children,

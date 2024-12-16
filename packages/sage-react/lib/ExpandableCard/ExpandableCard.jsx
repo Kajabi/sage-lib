@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import uuid from 'react-uuid';
 import { Button } from '../Button';
-import { SageClassnames, SageTokens } from '../configs';
-import { TestIds } from '../automationTestIds';
+import { SageClassnames, SageTokens, TestIds } from '../configs';
 
 export const ExpandableCard = ({
   alignArrowRight,

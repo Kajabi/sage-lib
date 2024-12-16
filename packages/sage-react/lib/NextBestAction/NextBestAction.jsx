@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { Button } from '../Button';
 import { NEXT_BEST_ACTION_COLORS } from './configs';
-import { TestIds } from '../automationTestIds';
+import { TestIds } from '../configs';
 
 export const NextBestAction = ({
   actions,

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { Breadcrumbs } from '../Breadcrumbs';
-import { TestIds } from '../automationTestIds';
+import { TestIds } from '../configs';
 
 export const PageHeading = ({
   actions,

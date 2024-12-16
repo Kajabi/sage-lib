@@ -6,7 +6,7 @@ import { parseRowData, parseCellData } from './helpers';
 import { cellPropTypes } from './configs';
 import { TableHelpers } from '../helpers';
 import { Checkbox } from '../Toggle';
-import { TestIds } from '../automationTestIds';
+import { TestIds } from '../configs';
 
 /* eslint-disable react-hooks/exhaustive-deps */
 

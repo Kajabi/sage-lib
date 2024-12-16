@@ -1,3 +1,6 @@
+/**
+ * The list of automation test ids used in the components.
+ */
 export const TestIds = {
   alertDescripton: 'alertDescription',
   alertIcon: 'alertIcon',

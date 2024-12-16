@@ -4,8 +4,7 @@ import classnames from 'classnames';
 import { Button } from '../Button';
 import { Icon } from '../Icon';
 import { ALERT_COLORS, ALERT_PRIMARY_ACTION_CLASSNAME } from './configs';
-import { SageTokens } from '../configs';
-import { TestIds } from '../automationTestIds';
+import { SageTokens, TestIds } from '../configs';
 
 export const Alert = ({
   actions,
@@ -61,7 +60,7 @@ export const Alert = ({
 
   return !selfDismissed ? (
     <div className={classNames} {...rest} data-kjb-element={testId}>
-      <Icon icon={icon || getDefaultIcon()} className="sage-alert__icon" testId={TestIds.alertIcon} />
+      <Icon icon={icon || getDefaultIcon()} className="sage-alert__icon" testId={TestIds.al} />
       <div className="sage-alert__copy">
         {title && (
           <h3 className="sage-alert__title" data-kjb-element={TestIds.alertTitle}>
