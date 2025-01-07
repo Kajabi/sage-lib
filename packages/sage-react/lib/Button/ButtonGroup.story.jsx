@@ -39,8 +39,8 @@ export const WithLink = () => (
   <ButtonGroup align="space-between">
     <Link href="http://example.com" removeUnderline style={Link.COLORS.SECONDARY}>Link</Link>
     <ButtonGroup gap="md">
-      <Button color={Button.COLORS.PRIMARY} testId="examplePrimaryButton">Foo</Button>
-      <Button color={Button.COLORS.SECONDARY} testId="exampleSecondaryButton">Bar</Button>
+      <Button color={Button.COLORS.PRIMARY} kjbElementId="examplePrimaryButton">Foo</Button>
+      <Button color={Button.COLORS.SECONDARY} kjbElementId="exampleSecondaryButton">Bar</Button>
     </ButtonGroup>
   </ButtonGroup>
 );

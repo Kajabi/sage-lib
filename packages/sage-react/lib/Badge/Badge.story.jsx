@@ -35,7 +35,7 @@ IndicatorBadge.args = {
   dot: (
     <Dot />
   ),
-  testId: 'indicatorBadge',
+  kjbElementId: 'indicatorBadge',
 };
 
 export const InteractiveBadge = Template.bind({});
@@ -45,7 +45,7 @@ InteractiveBadge.args = {
   dot: (
     <Dot />
   ),
-  testId: 'interactiveBadge',
+  kjbElementId: 'interactiveBadge',
 };
 
 export const LargeBadge = Template.bind({});
@@ -55,5 +55,5 @@ LargeBadge.args = {
   dot: (
     <Dot />
   ),
-  testId: 'largeBadge',
+  kjbElementId: 'largeBadge',
 };

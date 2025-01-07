@@ -15,7 +15,7 @@ export const Icon = ({
   icon,
   label,
   size,
-  testId,
+  kjbElementId,
   ...rest
 }) => {
   const classNames = classnames(
@@ -104,7 +104,7 @@ Icon.defaultProps = {
   color: SageTokens.COLOR_SLIDERS.INHERIT,
   label: '',
   size: null,
-  testId: null,
+  kjbElementId: null,
 };
 
 Icon.propTypes = {
@@ -153,5 +153,5 @@ Icon.propTypes = {
   /**
    * Specifies the value of the data-kjb-element attribute for test automation
    */
-  testId: PropTypes.string,
+  kjbElementId: PropTypes.string,
 };

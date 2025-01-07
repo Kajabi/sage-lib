@@ -14,7 +14,7 @@ export default {
   },
   args: {
     children: 'https://www.example.com',
-    testId: 'exampleCopyButton',
+    kjbElementId: 'exampleCopyButton',
   }
 };
 
@@ -25,5 +25,5 @@ export const Borderless = Template.bind({});
 Borderless.args = {
   borderless: true,
   children: 'example@example.com',
-  testId: 'exampleBorderlessCopyButton',
+  kjbElementId: 'exampleBorderlessCopyButton',
 };

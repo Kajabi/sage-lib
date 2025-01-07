@@ -7,7 +7,7 @@ export const Accordion = ({
   children,
   id,
   onlyOnePanelExpanded,
-  testId,
+  kjbElementId,
   ...rest
 }) => {
   const classNames = classnames(
@@ -19,7 +19,7 @@ export const Accordion = ({
   );
 
   return (
-    <div className={classNames} {...rest} data-kjb-element={testId}>
+    <div className={classNames} {...rest} data-kjb-element={kjbElementId}>
       {children}
     </div>
   );
@@ -30,7 +30,7 @@ Accordion.defaultProps = {
   className: '',
   id: '',
   onlyOnePanelExpanded: false,
-  testId: null,
+  kjbElementId: null,
 };
 
 Accordion.propTypes = {
@@ -38,5 +38,5 @@ Accordion.propTypes = {
   className: PropTypes.string,
   id: PropTypes.string,
   onlyOnePanelExpanded: PropTypes.bool,
-  testId: PropTypes.string,
+  kjbElementId: PropTypes.string,
 };

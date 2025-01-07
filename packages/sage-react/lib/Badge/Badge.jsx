@@ -14,7 +14,7 @@ export const Badge = React.forwardRef(({
   isInteractive,
   isStatus,
   large,
-  testId,
+  kjbElementId,
   value,
   ...rest
 }, ref) => {
@@ -33,7 +33,7 @@ export const Badge = React.forwardRef(({
   return (
     <span
       className={classNames}
-      data-kjb-element={testId}
+      data-kjb-element={kjbElementId}
       ref={ref}
       {...containerAttributes}
     >
@@ -69,7 +69,7 @@ Badge.defaultProps = {
   isDropdown: false,
   isStatus: false,
   large: false,
-  testId: null,
+  kjbElementId: null,
 };
 
 Badge.propTypes = {
@@ -81,6 +81,6 @@ Badge.propTypes = {
   isDropdown: PropTypes.bool,
   isStatus: PropTypes.bool,
   large: PropTypes.bool,
-  testId: PropTypes.string,
+  kjbElementId: PropTypes.string,
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
 };

@@ -17,7 +17,7 @@ export const Checkbox = ({
   partialSelection,
   required,
   standalone,
-  testId,
+  kjbElementId,
   value,
   ...rest
 }) => (
@@ -58,7 +58,7 @@ Checkbox.defaultProps = {
   itemInList: false,
   required: false,
   standalone: false,
-  testId: null,
+  kjbElementId: null,
   value: '',
 };
 
@@ -77,6 +77,6 @@ Checkbox.propTypes = {
   partialSelection: PropTypes.bool,
   required: PropTypes.bool,
   standalone: PropTypes.bool,
-  testId: PropTypes.string,
+  kjbElementId: PropTypes.string,
   value: PropTypes.string
 };

@@ -30,7 +30,7 @@ export const Button = React.forwardRef(({
   selected,
   small,
   subtle,
-  testId,
+  kjbElementId,
   ...rest
 }, ref) => {
   const { to, href } = rest;
@@ -83,10 +83,10 @@ export const Button = React.forwardRef(({
       ref={ref}
       className={classNames}
       aria-disabled={isLink && disabled}
-      data-kjb-element={testId}
+      data-kjb-element={kjbElementId}
       disabled={!isLink && disabled}
       tag={isLink ? linkTag : null}
-      testId={testId}
+      kjbElementId={kjbElementId}
       {...(isLink ? { suppressDefaultClass: isLink } : {})}
       onClick={onClick}
       {...rest}
@@ -141,7 +141,7 @@ Button.defaultProps = {
   selected: false,
   small: false,
   subtle: false,
-  testId: null,
+  kjbElementId: null,
   type: 'button',
 };
 
@@ -164,6 +164,6 @@ Button.propTypes = {
   selected: PropTypes.bool,
   small: PropTypes.bool,
   subtle: PropTypes.bool,
-  testId: PropTypes.string,
+  kjbElementId: PropTypes.string,
   type: PropTypes.string,
 };

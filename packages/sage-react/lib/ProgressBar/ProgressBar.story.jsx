@@ -16,7 +16,7 @@ export default {
   args: {
     label: 'Cloning product',
     percent: '44',
-    testId: 'exampleProgressBar',
+    kjbElementId: 'exampleProgressBar',
   },
   argTypes: {
     ...selectArgs({
@@ -34,5 +34,5 @@ CustomColor.args = {
   backgroundColor: ProgressBar.COLORS.ORANGE_100,
   label: 'Cloning product',
   percent: '44',
-  testId: 'exampleColorProgressBar',
+  kjbElementId: 'exampleColorProgressBar',
 };

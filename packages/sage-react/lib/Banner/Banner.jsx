@@ -8,7 +8,7 @@ import { BANNER_TYPES } from './configs';
 export const Banner = ({
   active,
   bannerContext,
-  testId,
+  kjbElementId,
   ...rest
 }) => (
   (bannerContext !== null)
@@ -25,7 +25,7 @@ Banner.defaultProps = {
   dismissable: true,
   link: null,
   onDismiss: null,
-  testId: null,
+  kjbElementId: null,
   text: null,
   type: Banner.TYPES.DEFAULT,
 };
@@ -41,7 +41,7 @@ Banner.propTypes = {
     target: PropTypes.string
   }),
   onDismiss: PropTypes.func,
-  testId: PropTypes.string,
+  kjbElementId: PropTypes.string,
   text: PropTypes.string,
   type: PropTypes.oneOf(Object.values(BANNER_TYPES)),
 };

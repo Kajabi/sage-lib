@@ -38,7 +38,7 @@ export const Panel = ({
   );
 
   return (
-    <div className={classNames} data-kjb-element={testId} {...rest}>
+    <div className={classNames} data-kjb-element={kjbElementId} {...rest}>
       {loading ? (
         <Loader loading={true} fillSpace={true} type={Loader.TYPES.SPINNER} />
       ) : children}
@@ -69,7 +69,7 @@ Panel.defaultProps = {
   clearPaddingBottom: false,
   clearPaddingTop: false,
   loading: false,
-  testId: null,
+  kjbElementId: null,
 };
 
 Panel.propTypes = {
@@ -86,5 +86,5 @@ Panel.propTypes = {
   /** Setting this to true will display a loading spinner within the Panel. */
   loading: PropTypes.bool,
   /** The value of data-kjb-element for automated tests */
-  testId: PropTypes.string,
+  kjbElementId: PropTypes.string,
 };

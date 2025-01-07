@@ -6,7 +6,7 @@ import { parseRowData, parseCellData } from './helpers';
 import { cellPropTypes } from './configs';
 import { TableHelpers } from '../helpers';
 import { Checkbox } from '../Toggle';
-import { TestIds } from '../configs';
+import { KjbElementIds } from '../configs';
 
 /* eslint-disable react-hooks/exhaustive-deps */
 
@@ -19,7 +19,7 @@ export const TableRow = ({
   schema,
   selectable,
   selected,
-  testId,
+  kjbElementId,
   typeRenderers,
 }) => {
   const [selfSelected, setSelfSelected] = useState(false);
@@ -88,7 +88,7 @@ export const TableRow = ({
   };
 
   return (
-    <tr className={classNames} data-kjb-element={testId} data-table-row-id={id}>
+    <tr className={classNames} data-kjb-element={kjbElementId} data-table-row-id={id}>
       {selectable && (
         <td className={selectableClassNames}>
           <Checkbox
@@ -98,7 +98,7 @@ export const TableRow = ({
             name="sage-table-selections"
             onChange={onChangeSelector}
             standalone={true}
-            testId={TestIds.tableRowCheckbox}
+            kjbElementId={KjbElementIds.tableRowCheckbox}
             value={id.toString()}
           />
         </td>
@@ -107,11 +107,11 @@ export const TableRow = ({
         if (!configs) {
           return;
         }
-        const { key, classNames, style, attributes, contents, testId } = configs;
+        const { key, classNames, style, attributes, contents, kjbElementId } = configs;
         // eslint-disable-next-line consistent-return
         return (
           <td
-            data-kjb-element={testId}
+            data-kjb-element={kjbElementId}
             key={key}
             className={classNames}
             style={style}
@@ -133,7 +133,7 @@ TableRow.defaultProps = {
   onSelect: (ev) => ev,
   selectable: false,
   selected: false,
-  testId: null,
+  kjbElementId: null,
   typeRenderers: {},
   schema: {}
 };
@@ -173,7 +173,7 @@ TableRow.propTypes = {
    * `descriptionListItem`. For example, a list of contacts should have a value
    * like `contactListItem`.
    */
-  testId: PropTypes.string,
+  kjbElementId: PropTypes.string,
 
   /** The data types that could be renedered in a Table Cell. */
   typeRenderers: PropTypes.shape({}),

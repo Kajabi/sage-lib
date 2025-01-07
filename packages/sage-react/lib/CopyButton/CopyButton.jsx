@@ -11,7 +11,7 @@ export const CopyButton = ({
   className,
   fillContainer,
   semibold,
-  testId,
+  kjbElementId,
 }) => {
   const classNames = classnames(
     'sage-copy-btn',
@@ -37,7 +37,7 @@ export const CopyButton = ({
         icon={borderless ? SageTokens.ICONS.COPY : null}
         iconPosition={Button.ICON_POSITIONS.RIGHT}
         subtle={true}
-        testId={testId}
+        kjbElementId={kjbElementId}
         type="button"
         onClick={onClick}
       >
@@ -59,7 +59,7 @@ CopyButton.defaultProps = {
   className: null,
   fillContainer: false,
   semibold: true,
-  testId: null,
+  kjbElementId: null,
 };
 
 CopyButton.propTypes = {
@@ -68,5 +68,5 @@ CopyButton.propTypes = {
   className: PropTypes.string,
   fillContainer: PropTypes.bool,
   semibold: PropTypes.bool,
-  testId: PropTypes.string,
+  kjbElementId: PropTypes.string,
 };

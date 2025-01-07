@@ -1,8 +1,8 @@
 /**
  * The list of automation test ids used in the components.
  */
-export const TestIds = {
-  alertDescripton: 'alertDescription',
+export const KjbElementIds = {
+  alertDescription: 'alertDescription',
   alertIcon: 'alertIcon',
   alertTitle: 'alertTitle',
   closeButton: 'closeButton',
@@ -10,7 +10,7 @@ export const TestIds = {
   expandableCardBody: 'cardBody',
   expandableCardButton: 'expandCollapseButton',
   avatarContainer: 'avatarContainer',
-  nextBestActionButtion: 'nextBestActionButton',
+  nextBestActionButton: 'nextBestActionButton',
   pageHeadingBreadcrumbs: 'pageHeadingBreadcrumbs',
   pageHeadingHeading: 'pageHeading',
   pageHeadingImage: 'pageHeadingImage',

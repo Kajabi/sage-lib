@@ -19,7 +19,7 @@ export default {
     actions: (
       <Button
         color={Button.COLORS.PRIMARY}
-        testId="upsellButton"
+        kjbElementId="upsellButton"
       >
         Add an Upsell
       </Button>
@@ -40,7 +40,7 @@ export default {
     },
     // eslint-disable-next-line no-console
     onClickDismiss: () => { console.log('Add your own dismiss functionality here!'); },
-    testId: 'exampleNextAction',
+    kjbElementId: 'exampleNextAction',
     title: 'Offer an additional buy with Upsell',
   },
   argTypes: {

@@ -38,7 +38,7 @@ export const Input = React.forwardRef(({
   standalone,
   step,
   suffix,
-  testId,
+  kjbElementId,
   value,
   ...rest
 }, ref) => {
@@ -109,7 +109,7 @@ export const Input = React.forwardRef(({
   }, [prefix, suffix]);
 
   return (
-    <div className={classNames} data-kjb-element={testId}>
+    <div className={classNames} data-kjb-element={kjbElementId}>
       <input
         autoComplete={autocomplete}
         className="sage-form-field sage-input__field"
@@ -200,7 +200,7 @@ Input.defaultProps = {
   standalone: false,
   step: null,
   suffix: null,
-  testId: null,
+  kjbElementId: null,
   value: '',
 };
 
@@ -232,6 +232,6 @@ Input.propTypes = {
   standalone: PropTypes.bool,
   step: PropTypes.string,
   suffix: PropTypes.string,
-  testId: PropTypes.string,
+  kjbElementId: PropTypes.string,
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };

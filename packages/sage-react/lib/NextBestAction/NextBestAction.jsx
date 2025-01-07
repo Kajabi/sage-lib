@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { Button } from '../Button';
 import { NEXT_BEST_ACTION_COLORS } from './configs';
-import { TestIds } from '../configs';
+import { KjbElementIds } from '../configs';
 
 export const NextBestAction = ({
   actions,
@@ -13,7 +13,7 @@ export const NextBestAction = ({
   dismissable,
   graphic,
   onClickDismiss,
-  testId,
+  kjbElementId,
   title,
 }) => {
   const baseClass = 'sage-next-best-action';
@@ -28,7 +28,7 @@ export const NextBestAction = ({
   );
 
   return (
-    <div className={classNames} data-kjb-element={testId}>
+    <div className={classNames} data-kjb-element={kjbElementId}>
       {graphic.element && (
         <div className="sage-next-best-action__graphic">
           {graphic.element}
@@ -53,7 +53,7 @@ export const NextBestAction = ({
           onClick={onClickDismiss}
           subtle={true}
           small={true}
-          testId={TestIds.closeButton}
+          kjbElementId={KjbElementIds.closeButton}
         >
           Close
         </Button>
@@ -74,7 +74,7 @@ NextBestAction.defaultProps = {
     onRight: false,
   },
   onClickDismiss: null,
-  testId: null,
+  kjbElementId: null,
   title: '',
 };
 
@@ -89,6 +89,6 @@ NextBestAction.propTypes = {
     onRight: PropTypes.bool,
   }),
   onClickDismiss: PropTypes.func,
-  testId: PropTypes.string,
+  kjbElementId: PropTypes.string,
   title: PropTypes.string,
 };

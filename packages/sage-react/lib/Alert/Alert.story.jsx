@@ -48,14 +48,14 @@ DefaultWithActions.args = {
       <Button
         className={Alert.PRIMARY_ACTION_CLASSNAME}
         color={Button.COLORS.PRIMARY}
-        testId="getUnlimitedPagesButton"
+        kjbElementId="getUnlimitedPagesButton"
       >
         Get unlimited pages
       </Button>
       <Link
         href="//example.com"
         suppressDefaultClass
-        testId="checkUsageLink"
+        kjbElementId="checkUsageLink"
       >
         Check Usage
       </Link>
@@ -68,7 +68,7 @@ DismissableAlert.args = {
   description: 'Body duis rhoncus neque, sed nulla sed quis fames. Eu eu ut at odio ultrices orci varius habitant. Tempor vulputate in nisl massa eget id.',
   color: Alert.COLORS.DEFAULT,
   dismissable: true,
-  testId: 'exampleAlert',
+  kjbElementId: 'exampleAlert',
   onClickDismiss: () => console.log('clicked to dismiss'), // eslint-disable-line
 };
 
@@ -83,13 +83,13 @@ DismissableAlertWithActions.args = {
       <Button
         className={Alert.PRIMARY_ACTION_CLASSNAME}
         color={Button.COLORS.PRIMARY}
-        testId="checkUsageButton"
+        kjbElementId="checkUsageButton"
       >
         Get unlimited pages
       </Button>
       <Link
         href="//example.com"
-        testId="checkUsage"
+        kjbElementId="checkUsage"
         suppressDefaultClass
       >
         Check Usage
@@ -102,20 +102,20 @@ export const NonDismissableAlert = Template.bind({});
 NonDismissableAlert.args = {
   color: Alert.COLORS.APPROACHING,
   description: 'Body duis rhoncus neque, sed nulla sed quis fames. Eu eu ut at odio ultrices orci varius habitant. Tempor vulputate in nisl massa eget id.',
-  testId: 'nonDismissableAlert',
+  kjbElementId: 'nonDismissableAlert',
   actions: (
     <>
       <Button
         className={Alert.PRIMARY_ACTION_CLASSNAME}
         color={Button.COLORS.PRIMARY}
-        testId="getUnlimitedPages"
+        kjbElementId="getUnlimitedPages"
       >
         Get unlimited pages
       </Button>
       <Link
         href="//example.com"
         suppressDefaultClass
-        testId="checkUsage"
+        kjbElementId="checkUsage"
       >
         Check Usage
       </Link>
@@ -129,13 +129,13 @@ SmallAlert.args = {
   dismissable: true,
   title: null,
   description: 'Body duis rhoncus neque, sed nulla sed quis fames et tu odio.',
-  testId: 'smallAlert',
+  kjbElementId: 'smallAlert',
   actions: (
     <>
       <Link
         href="//example.com"
         suppressDefaultClass
-        testId="checkUsage"
+        kjbElementId="checkUsage"
       >
         Check Usage
       </Link>

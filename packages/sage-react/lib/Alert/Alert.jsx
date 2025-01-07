@@ -4,7 +4,7 @@ import classnames from 'classnames';
 import { Button } from '../Button';
 import { Icon } from '../Icon';
 import { ALERT_COLORS, ALERT_PRIMARY_ACTION_CLASSNAME } from './configs';
-import { SageTokens, TestIds } from '../configs';
+import { SageTokens, KjbElementIds } from '../configs';
 
 export const Alert = ({
   actions,
@@ -15,7 +15,7 @@ export const Alert = ({
   icon,
   onDismiss,
   small,
-  testId,
+  kjbElementId,
   title,
   titleAddon,
   ...rest
@@ -59,17 +59,17 @@ export const Alert = ({
   };
 
   return !selfDismissed ? (
-    <div className={classNames} {...rest} data-kjb-element={testId}>
-      <Icon icon={icon || getDefaultIcon()} className="sage-alert__icon" testId={TestIds.al} />
+    <div className={classNames} {...rest} data-kjb-element={kjbElementId}>
+      <Icon icon={icon || getDefaultIcon()} className="sage-alert__icon" kjbElementId={KjbElementIds.al} />
       <div className="sage-alert__copy">
         {title && (
-          <h3 className="sage-alert__title" data-kjb-element={TestIds.alertTitle}>
+          <h3 className="sage-alert__title" data-kjb-element={KjbElementIds.alertTitle}>
             {title}
             <span className="sage-alert__title--add-on"> {titleAddon}</span>
           </h3>
         )}
         {description && (
-          <p className="sage-alert__desc" data-kjb-element={TestIds.alertDescripton}>{description}</p>
+          <p className="sage-alert__desc" data-kjb-element={KjbElementIds.alertDescription}>{description}</p>
         )}
       </div>
       {actions && (
@@ -88,7 +88,7 @@ export const Alert = ({
             value="Close"
             onClick={handleDismiss}
             aria-label="Close Alert"
-            testId="closeButton"
+            kjbElementId="closeButton"
           />
         </div>
       )}
@@ -107,7 +107,7 @@ Alert.defaultProps = {
   icon: null,
   onDismiss: null,
   small: false,
-  testId: null,
+  kjbElementId: null,
   title: null,
   titleAddon: null,
 };
@@ -121,7 +121,7 @@ Alert.propTypes = {
   icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),
   onDismiss: PropTypes.func,
   small: PropTypes.bool,
-  testId: PropTypes.string,
+  kjbElementId: PropTypes.string,
   title: PropTypes.string,
   titleAddon: PropTypes.string,
 };

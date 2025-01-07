@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import uuid from 'react-uuid';
 import { Button } from '../Button';
-import { SageClassnames, SageTokens, TestIds } from '../configs';
+import { SageClassnames, SageTokens, KjbElementIds } from '../configs';
 
 export const ExpandableCard = ({
   alignArrowRight,
@@ -17,7 +17,7 @@ export const ExpandableCard = ({
   name,
   onClick,
   sageType,
-  testId,
+  kjbElementId,
   triggerLabel,
   ...rest
 }) => {
@@ -62,7 +62,7 @@ export const ExpandableCard = ({
         icon={SageTokens.ICONS.CARET_RIGHT}
         onClick={handleChange}
         subtle={true}
-        testId={TestIds.expandableCardButton}
+        kjbElementId={KjbElementIds.expandableCardButton}
         {...rest}
       >
         {triggerLabel}
@@ -85,10 +85,10 @@ export const ExpandableCard = ({
   };
 
   return (
-    <div className={`${containerClassnames} ${className || ''}`} data-kjb-element={testId} {...rest}>
+    <div className={`${containerClassnames} ${className || ''}`} data-kjb-element={kjbElementId} {...rest}>
       {determineAlignment()}
 
-      <div id={id} className={bodyClassnames} data-kjb-element={TestIds.expandableCardBody}>
+      <div id={id} className={bodyClassnames} data-kjb-element={KjbElementIds.expandableCardBody}>
         {children}
       </div>
     </div>
@@ -107,7 +107,7 @@ ExpandableCard.defaultProps = {
   name: null,
   onClick: null,
   sageType: false,
-  testId: null,
+  kjbElementId: null,
   triggerLabel: null,
 };
 
@@ -123,6 +123,6 @@ ExpandableCard.propTypes = {
   name: PropTypes.string,
   onClick: PropTypes.func,
   sageType: PropTypes.bool,
-  testId: PropTypes.string,
+  kjbElementId: PropTypes.string,
   triggerLabel: PropTypes.string,
 };
