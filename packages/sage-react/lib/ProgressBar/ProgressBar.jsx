@@ -14,6 +14,7 @@ export const ProgressBar = ({
   displayPercent,
   label,
   percent,
+  testId,
   tooltipPosition,
   ...rest
 }) => {
@@ -33,7 +34,7 @@ export const ProgressBar = ({
     }
 
     return (
-      <div className="sage-progress-bar__background" style={bgStyles}>
+      <div className="sage-progress-bar__background" data-kjb-element={testId} style={bgStyles}>
         <progress
           className="sage-progress-bar__element"
           aria-valuemax="100"
@@ -86,6 +87,7 @@ ProgressBar.defaultProps = {
   displayPercent: false,
   label: null,
   percent: null,
+  testId: null,
   tooltipPosition: null,
 };
 
@@ -98,5 +100,6 @@ ProgressBar.propTypes = {
   displayPercent: PropTypes.bool,
   label: PropTypes.string,
   percent: PropTypes.string,
+  testId: PropTypes.string,
   tooltipPosition: PropTypes.oneOf(Object.values(ProgressBar.TOOLTIP_POSITIONS)),
 };

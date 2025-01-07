@@ -21,5 +21,6 @@ export const cellPropTypes = {
   field: PropTypes.string,
   id: PropTypes.string,
   style: PropTypes.shape({}),
+  testId: PropTypes.string,
   value: dataPropTypes,
 };

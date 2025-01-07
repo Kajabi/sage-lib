@@ -25,6 +25,7 @@ export const Card = ({
   interactive,
   loading,
   borderDashed,
+  testId,
   ...rest
 }) => {
   const classNames = classnames(
@@ -73,6 +74,7 @@ Card.defaultProps = {
   interactive: false,
   loading: false,
   borderDashed: false,
+  testId: null,
 };
 
 Card.propTypes = {
@@ -86,4 +88,5 @@ Card.propTypes = {
   interactive: PropTypes.bool,
   loading: PropTypes.bool,
   borderDashed: PropTypes.bool,
+  testId: PropTypes.string,
 };

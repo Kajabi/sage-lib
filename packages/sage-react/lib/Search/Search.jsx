@@ -14,6 +14,7 @@ export const Search = React.forwardRef(({
   onClear,
   onChange,
   placeholder,
+  testId,
   value,
   ...rest
 }, ref) => {
@@ -34,7 +35,7 @@ export const Search = React.forwardRef(({
     });
 
   return (
-    <div className={classNames}>
+    <div data-kjb-element={testId} className={classNames}>
       {label && (
         <label htmlFor={id} className={labelClassnames}>
           {label}
@@ -84,6 +85,7 @@ Search.defaultProps = {
   hideLabel: false,
   onClear: null,
   placeholder: 'Search',
+  testId: null,
 };
 
 Search.propTypes = {
@@ -96,5 +98,6 @@ Search.propTypes = {
   onChange: PropTypes.func.isRequired,
   onClear: PropTypes.func,
   placeholder: PropTypes.string,
+  testId: PropTypes.string,
   value: PropTypes.string.isRequired,
 };

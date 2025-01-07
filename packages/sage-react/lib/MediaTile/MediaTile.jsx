@@ -15,6 +15,7 @@ export const MediaTile = ({
   footer,
   media,
   mediaConfigs,
+  testId,
   tileLink,
   title,
   titleTag,
@@ -31,7 +32,7 @@ export const MediaTile = ({
   const TitleTag = titleTag;
 
   return (
-    <Panel className={classNames} {...rest}>
+    <Panel className={classNames} data-kjb-element={testId} {...rest}>
       {media && (
         <Panel.Figure
           bleed={Panel.Figure.BLEED_OPTIONS.TOP}
@@ -94,6 +95,7 @@ MediaTile.defaultProps = {
   footer: null,
   media: null,
   mediaConfigs: null,
+  testId: null,
   tileLink: null,
   title: null,
   titleTag: 'h3',
@@ -108,6 +110,7 @@ MediaTile.propTypes = {
   footer: PropTypes.node,
   media: PropTypes.node,
   mediaConfigs: PropTypes.shape(Panel.Figure.propTypes), // TODO: panel figure configs
+  testId: PropTypes.string,
   tileLink: PropTypes.shape(Link.propTypes),
   title: PropTypes.string,
   titleTag: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']),

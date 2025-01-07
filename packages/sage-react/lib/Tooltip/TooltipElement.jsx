@@ -11,6 +11,7 @@ export const TooltipElement = ({
   content,
   parentDomRect,
   position,
+  testId,
   tooltipCustomClass,
 }) => {
   const tooltipRef = useRef(null);
@@ -75,6 +76,7 @@ export const TooltipElement = ({
       ref={tooltipRef}
       className={classNames}
       style={parentDomRect ? coordinates : {}}
+      data-kjb-element={testId}
     >
       {content}
     </div>
@@ -86,6 +88,7 @@ TooltipElement.POSITIONS = TOOLTIP_POSITIONS;
 TooltipElement.defaultProps = {
   parentDomRect: null,
   position: TOOLTIP_POSITIONS.DEFAULT,
+  testId: null,
   tooltipCustomClass: '',
 };
 
@@ -99,5 +102,6 @@ TooltipElement.propTypes = {
     width: PropTypes.number,
   }),
   position: PropTypes.oneOf(Object.values(TOOLTIP_POSITIONS)),
+  testId: PropTypes.string,
   tooltipCustomClass: PropTypes.string,
 };

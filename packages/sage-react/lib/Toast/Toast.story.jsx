@@ -39,6 +39,7 @@ Default.args = {
   icon: SageTokens.ICONS.INFO_CIRCLE,
   title: 'Hello',
   description: 'How are you?',
+  testId: 'exampleToast',
   timeout: 3500,
   type: Toast.TYPES.DEFAULT
 };
@@ -48,6 +49,7 @@ WithLink.args = {
   icon: SageTokens.ICONS.INFO_CIRCLE,
   title: 'Congratulations on your success',
   link: { href: 'http://kajabi.com', text: 'Go to next step' },
+  testId: 'exampleWithLink',
   type: Toast.TYPES.LOADING,
   timeout: false
 };

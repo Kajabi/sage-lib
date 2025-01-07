@@ -20,6 +20,7 @@ export const StatBox = ({
   link,
   popover,
   raised,
+  testId,
   timeframe,
   title,
 }) => {
@@ -67,6 +68,7 @@ export const StatBox = ({
   return (
     <article
       className={statBoxContainer}
+      data-kjb-element={testId}
     >
       {icon && (
         <div className="sage-stat-box__icon">
@@ -138,6 +140,7 @@ StatBox.defaultProps = {
   link: null,
   popover: null,
   raised: false,
+  testId: null,
   timeframe: null,
 };
 
@@ -166,6 +169,7 @@ StatBox.propTypes = {
   }),
   popover: PropTypes.node,
   raised: PropTypes.bool,
+  testId: PropTypes.string,
   timeframe: PropTypes.string,
   title: PropTypes.string.isRequired,
 };

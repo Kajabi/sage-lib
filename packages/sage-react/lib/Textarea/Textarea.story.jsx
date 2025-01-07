@@ -39,6 +39,7 @@ export const TextareaWithState = (args) => {
     <Textarea
       {...args}
       value={value}
+      testId="exampleTextArea"
       onChange={onChange}
     />
   );

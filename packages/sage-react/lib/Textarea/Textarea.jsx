@@ -10,6 +10,7 @@ export const Textarea = ({
   label,
   message,
   onChange,
+  testId,
   value,
   ...rest
 }) => {
@@ -31,7 +32,7 @@ export const Textarea = ({
   };
 
   return (
-    <div className={classNames}>
+    <div className={classNames} data-kjb-element={testId}>
       <textarea
         className="sage-textarea__field"
         disabled={disabled}
@@ -62,6 +63,7 @@ Textarea.defaultProps = {
   label: null,
   message: null,
   onChange: null,
+  testId: null,
   value: '',
 };
 
@@ -73,5 +75,6 @@ Textarea.propTypes = {
   label: PropTypes.string,
   message: PropTypes.string,
   onChange: PropTypes.func,
+  testId: PropTypes.string,
   value: PropTypes.string,
 };

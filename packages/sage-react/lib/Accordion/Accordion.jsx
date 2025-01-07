@@ -7,6 +7,7 @@ export const Accordion = ({
   children,
   id,
   onlyOnePanelExpanded,
+  testId,
   ...rest
 }) => {
   const classNames = classnames(
@@ -18,7 +19,7 @@ export const Accordion = ({
   );
 
   return (
-    <div className={classNames} {...rest}>
+    <div className={classNames} {...rest} data-kjb-element={testId}>
       {children}
     </div>
   );
@@ -29,6 +30,7 @@ Accordion.defaultProps = {
   className: '',
   id: '',
   onlyOnePanelExpanded: false,
+  testId: null,
 };
 
 Accordion.propTypes = {
@@ -36,4 +38,5 @@ Accordion.propTypes = {
   className: PropTypes.string,
   id: PropTypes.string,
   onlyOnePanelExpanded: PropTypes.bool,
+  testId: PropTypes.string,
 };

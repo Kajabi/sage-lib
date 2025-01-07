@@ -16,6 +16,7 @@ export const Select = ({
   options,
   placeholder,
   required,
+  testId,
   value,
   ...rest
 }) => {
@@ -63,7 +64,7 @@ export const Select = ({
   );
 
   return (
-    <div className={classNames}>
+    <div className={classNames} data-kjb-element={testId}>
       <select
         className="sage-select__field"
         id={id}
@@ -116,6 +117,7 @@ Select.defaultProps = {
   options: [],
   placeholder: null,
   required: false,
+  testId: null,
   value: '',
 };
 
@@ -157,5 +159,6 @@ Select.propTypes = {
   ),
   placeholder: PropTypes.string,
   required: PropTypes.bool,
+  testId: PropTypes.string,
   value: PropTypes.string,
 };
