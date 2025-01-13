@@ -1,0 +1,34 @@
+name: Release-Notification
+on:
+  # Remove after testing
+  workflow_dispatch:
+  release:
+    types: [published]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get Latest Release
+        id: latest-release
+        uses: pozetroninc/github-action-get-latest-release@master
+        with:
+          repository: ${{ github.repository }}
+          excludes: prerelease, draft
+
+      - name: Notify Standard Model Bot
+        id: notify
+        env:
+          # Slack Channel: design-system-discussion
+          CHANNEL: "C046HHS5KTN"
+          URL: "https://6vq8s36zn7.execute-api.us-east-1.amazonaws.com/tools"
+          # Organization level secret
+          TOKEN: ${{ secrets.KAJABI_CHAT_BOT_TOKEN_TOOLS }}
+          TAG: ${{ steps.latest-release.outputs.release }}
+          EMOJI: "sageicon"
+          UPDATE_TOPIC: "true"
+          REPO: "sage-lib"
+        run: |
+          echo "{\"type\": \"software-release\", \"repo\": \"$REPO\", \"tag\": \"$TAG\", \"channels\": \"$CHANNEL\", \"emoji\": \"$EMOJI\", \"updateTopic\": \"$UPDATE_TOPIC\"}" | \
+          curl -H "Authorization: Bearer $TOKEN" -H "Content-Type: application/json" -H "Accept: application/json" -d @-  "$URL/slack/webhook"
+
