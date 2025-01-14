@@ -6,6 +6,7 @@
 
 
 $-typeahead-item-height: rem(68px);
+$-typeahead-item-width: rem(240px);
 
 
 .sage-typeahead {
@@ -25,6 +26,7 @@ $-typeahead-item-height: rem(68px);
   background-color: sage-color(white);
   border-radius: sage-border(radius);
   box-shadow: sage-shadow(md);
+  min-width: $-typeahead-item-width;
 }
 
 .sage-typeahead__null-state {
@@ -73,6 +75,14 @@ $-typeahead-item-height: rem(68px);
   padding: sage-spacing(md) sage-spacing(sm);
   text-align: left;
 
+  @media (hover: none) {
+    gap: 0;
+
+    pds-icon {
+      display: none;
+    }
+  }
+
   &::after {
     border-radius: 0;
   }
@@ -97,9 +107,12 @@ $-typeahead-item-height: rem(68px);
 }
 
 .sage-typeahead__item-actions {
-  visibility: hidden;
   display: flex;
   flex-wrap: nowrap;
+
+  @media (hover: hover) {
+    visibility: hidden;
+  }
 
   :hover > &,
   :focus-within > & {
