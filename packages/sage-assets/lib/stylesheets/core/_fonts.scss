@@ -7,6 +7,7 @@ $-body-font-version: 1;
 
 $sage-greet-font-path: "#{$sage-font-cdn-root}/greet" !default; // pathname of font directory
 $-greet-font-name: "greetstandard";
+$-greet-condensed-font-name: "Greet-Condensed";
 
 $sage-inter-font-path: "#{$sage-font-cdn-root}/inter" !default; // pathname of font directory
 $-inter-font-name: "Inter";
@@ -152,6 +153,139 @@ $-sprig-font-name: "FAIRE-Sprig";
     url("#{$sage-greet-font-path}/#{$-greet-font-name}-heavyitalic.woff?v=#{$-body-font-version}") format("woff");
 }
 
+// Greet Condensed
+
+// Light
+@font-face {
+  font-family: "Greet-Condensed";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local("#{$-greet-condensed-font-name}Light"),
+    url("#{$sage-greet-font-path}/#{$-greet-condensed-font-name}Light.woff2?v=#{$-body-font-version}") format("woff2"),
+    url("#{$sage-greet-font-path}/#{$-greet-condensed-font-name}Light.woff?v=#{$-body-font-version}") format("woff");
+}
+
+// Light Italic
+@font-face {
+  font-family: "Greet-Condensed";
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: local("#{$-greet-condensed-font-name}LightItalic"),
+    url("#{$sage-greet-font-path}/#{$-greet-condensed-font-name}LightItalic.woff2?v=#{$-body-font-version}") format("woff2"),
+    url("#{$sage-greet-font-path}/#{$-greet-condensed-font-name}LightItalic.woff?v=#{$-body-font-version}") format("woff");
+}
+
+// Regular
+@font-face {
+  font-family: "Greet-Condensed";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("#{$-greet-condensed-font-name}Regular"),
+    url("#{$sage-greet-font-path}/#{$-greet-condensed-font-name}Regular.woff2?v=#{$-body-font-version}") format("woff2"),
+    url("#{$sage-greet-font-path}/#{$-greet-condensed-font-name}Regular.woff?v=#{$-body-font-version}") format("woff");
+}
+
+// Regular Italic
+@font-face {
+  font-family: "Greet-Condensed";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: local("#{$-greet-condensed-font-name}RegularItalic"),
+    url("#{$sage-greet-font-path}/#{$-greet-condensed-font-name}RegularItalic.woff2?v=#{$-body-font-version}") format("woff2"),
+    url("#{$sage-greet-font-path}/#{$-greet-condensed-font-name}RegularItalic.woff?v=#{$-body-font-version}") format("woff");
+}
+
+// Medium
+@font-face {
+  font-family: "Greet-Condensed";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local("#{$-greet-condensed-font-name}Medium"),
+    url("#{$sage-greet-font-path}/#{$-greet-condensed-font-name}Medium.woff2?v=#{$-body-font-version}") format("woff2"),
+    url("#{$sage-greet-font-path}/#{$-greet-condensed-font-name}Medium.woff?v=#{$-body-font-version}") format("woff");
+}
+
+// Medium Italic
+@font-face {
+  font-family: "Greet-Condensed";
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: local("#{$-greet-condensed-font-name}MediumItalic"),
+    url("#{$sage-greet-font-path}/#{$-greet-condensed-font-name}MediumItalic.woff2?v=#{$-body-font-version}") format("woff2"),
+    url("#{$sage-greet-font-path}/#{$-greet-condensed-font-name}MediumItalic.woff?v=#{$-body-font-version}") format("woff");
+}
+
+// Semi-Bold
+@font-face {
+  font-family: "Greet-Condensed";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local("#{$-greet-condensed-font-name}SemiBold"),
+    url("#{$sage-greet-font-path}/#{$-greet-condensed-font-name}SemiBold.woff2?v=#{$-body-font-version}") format("woff2"),
+    url("#{$sage-greet-font-path}/#{$-greet-condensed-font-name}SemiBold.woff?v=#{$-body-font-version}") format("woff");
+}
+
+// Semi-Bold Italic
+@font-face {
+  font-family: "Greet-Condensed";
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: local("#{$-greet-condensed-font-name}SemiBoldItalic"),
+    url("#{$sage-greet-font-path}/#{$-greet-condensed-font-name}SemiBoldItalic.woff2?v=#{$-body-font-version}") format("woff2"),
+    url("#{$sage-greet-font-path}/#{$-greet-condensed-font-name}SemiBoldItalic.woff?v=#{$-body-font-version}") format("woff");
+}
+
+// Bold
+@font-face {
+  font-family: "Greet-Condensed";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local("#{$-greet-condensed-font-name}Bold"),
+    url("#{$sage-greet-font-path}/#{$-greet-condensed-font-name}Bold.woff2?v=#{$-body-font-version}") format("woff2"),
+    url("#{$sage-greet-font-path}/#{$-greet-condensed-font-name}Bold.woff?v=#{$-body-font-version}") format("woff");
+}
+
+// Bold Italic
+@font-face {
+  font-family: "Greet-Condensed";
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: local("#{$-greet-condensed-font-name}BoldItalic"),
+    url("#{$sage-greet-font-path}/#{$-greet-condensed-font-name}BoldItalic.woff2?v=#{$-body-font-version}") format("woff2"),
+    url("#{$sage-greet-font-path}/#{$-greet-condensed-font-name}BoldItalic.woff?v=#{$-body-font-version}") format("woff");
+}
+
+// Heavy (Black)
+@font-face {
+  font-family: "Greet-Condensed";
+  font-style: "normal";
+  font-weight: 900;
+  font-display: swap;
+  src: local("#{$-greet-condensed-font-name}Heavy"),
+    url("#{$sage-greet-font-path}/#{$-greet-condensed-font-name}Heavy.woff2?v=#{$-body-font-version}") format("woff2"),
+    url("#{$sage-greet-font-path}/#{$-greet-condensed-font-name}Heavy.woff?v=#{$-body-font-version}") format("woff");
+}
+
+// Heavy (Black) Italic
+@font-face {
+  font-family: "Greet-Condensed";
+  font-style: italic;
+  font-weight: 900;
+  font-display: swap;
+  src: local("#{$-greet-condensed-font-name}HeavyItalic"),
+    url("#{$sage-greet-font-path}/#{$-greet-condensed-font-name}HeavyItalic.woff2?v=#{$-body-font-version}") format("woff2"),
+    url("#{$sage-greet-font-path}/#{$-greet-condensed-font-name}HeavyItalic.woff?v=#{$-body-font-version}") format("woff");
+}
 
 // Inter
 
