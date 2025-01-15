@@ -20,13 +20,13 @@ $-typeahead-item-width: rem(240px);
   inset-inline-end: 0;
   transform: translateY(#{sage-spacing(2xs)});
   overflow-x: hidden;
+  min-width: $-typeahead-item-width;
   padding: 0;
   list-style: none;
   border: sage-border();
   background-color: sage-color(white);
   border-radius: sage-border(radius);
   box-shadow: sage-shadow(md);
-  min-width: $-typeahead-item-width;
 }
 
 .sage-typeahead__null-state {
