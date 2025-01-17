@@ -119,7 +119,7 @@ export const DropdownItem = ({
           />
           <>
             {icon && (<pds-icon class={`sage-dropdown__item-icon ${SageClassnames.SPACERS.XS_RIGHT}`} name={icon} />)}
-            <span className="sage-dropdown__item-label" title={label}>
+            <span className="sage-dropdown__item-label">
               {label}
             </span>
           </>
@@ -143,7 +143,7 @@ export const DropdownItem = ({
           {(!customComponent && isLabelVisible) && (
             <>
               {icon && (<pds-icon class={`sage-dropdown__item-icon ${SageClassnames.SPACERS.XS_RIGHT}`} name={icon} />)}
-              <span className="sage-dropdown__item-label" title={label}>
+              <span className="sage-dropdown__item-label">
                 {label}
               </span>
             </>
@@ -165,7 +165,7 @@ export const DropdownItem = ({
         {(!customComponent && isLabelVisible) && (
           <>
             {icon && (<pds-icon class={`sage-dropdown__item-icon ${SageClassnames.SPACERS.XS_RIGHT}`} name={icon} />)}
-            <span className="sage-dropdown__item-label" title={label}>
+            <span className="sage-dropdown__item-label">
               {label}
             </span>
           </>

@@ -6,6 +6,7 @@
 
 
 $-typeahead-item-height: rem(68px);
+$-typeahead-item-width: rem(240px);
 
 
 .sage-typeahead {
@@ -19,6 +20,7 @@ $-typeahead-item-height: rem(68px);
   inset-inline-end: 0;
   transform: translateY(#{sage-spacing(2xs)});
   overflow-x: hidden;
+  min-width: $-typeahead-item-width;
   padding: 0;
   list-style: none;
   border: sage-border();
@@ -73,6 +75,14 @@ $-typeahead-item-height: rem(68px);
   padding: sage-spacing(md) sage-spacing(sm);
   text-align: left;
 
+  @media (hover: none) {
+    gap: 0;
+
+    pds-icon {
+      display: none;
+    }
+  }
+
   &::after {
     border-radius: 0;
   }
@@ -97,9 +107,12 @@ $-typeahead-item-height: rem(68px);
 }
 
 .sage-typeahead__item-actions {
-  visibility: hidden;
   display: flex;
   flex-wrap: nowrap;
+
+  @media (hover: hover) {
+    visibility: hidden;
+  }
 
   :hover > &,
   :focus-within > & {
