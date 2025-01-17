@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.1.5](https://github.com/Kajabi/sage-lib/compare/v6.1.4...v6.1.5) (2025-01-17)
+
+
+### Features
+
+* adding release notification automation ([5e7f8e9](https://github.com/Kajabi/sage-lib/commit/5e7f8e947771582e7fbd9926318f1a6b1c71907c))
+
+
+
+
+
 ## [6.1.4](https://github.com/Kajabi/sage-lib/compare/v6.1.3...v6.1.4) (2024-12-13)
 
 **Note:** Version bump only for package root
