@@ -28,10 +28,6 @@ $-catalogue-item-image-height-mobile: rem(120px);
     min-width: 0; /* to prevent grid blowout */
   }
 
-  &:only-child {
-    border: 0;
-  }
-
   &:last-child {
     border-block-end: 0;
   }

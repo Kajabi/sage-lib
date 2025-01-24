@@ -29,6 +29,10 @@ $-empty-state-icon-compact-size: rem(56px);
   inset-block-start: 50%;
   transform: translate(-50%, -50%);
   padding: sage-spacing();
+
+  [rtl] & {
+    transform: translate(50%, -50%);
+  }
 }
 
 .sage-empty-state__actions,

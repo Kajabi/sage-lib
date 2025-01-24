@@ -80,7 +80,6 @@ export const Modal = ({
     attrs.onMouseDown = handleMouseDown;
     attrs.onMouseUp = handleMouseUp;
     attrs.onKeyPress = handleBackgroundKeypress;
-    attrs.role = 'button';
     attrs.tabIndex = '0';
   }
 
