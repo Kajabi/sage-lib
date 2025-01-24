@@ -20,6 +20,7 @@ export const Link = ({
   style,
   suppressDefaultClass,
   tag,
+  kjbElementId,
   tooltip,
   truncate,
   ...rest
@@ -44,6 +45,7 @@ export const Link = ({
         <Tooltip {...tooltip}>
           <SelfTag
             className={classNames}
+            data-kjb-element={kjbElementId}
             {...rest}
           >
             {icon && (
@@ -59,6 +61,7 @@ export const Link = ({
       ) : (
         <SelfTag
           className={classNames}
+          data-kjb-element={kjbElementId}
           {...rest}
         >
           {icon && (
@@ -89,6 +92,7 @@ Link.defaultProps = {
   style: Link.COLORS.PRIMARY,
   suppressDefaultClass: false,
   tag: null,
+  kjbElementId: null,
   tooltip: null,
   truncate: false,
 };
@@ -105,6 +109,7 @@ Link.propTypes = {
   style: PropTypes.oneOf(Object.values(Link.COLORS)),
   suppressDefaultClass: PropTypes.bool,
   tag: tagPropTypes,
+  kjbElementId: PropTypes.string,
   tooltip: PropTypes.shape({
     position: PropTypes.oneOf(Object.values(Tooltip.POSITIONS)),
   }),

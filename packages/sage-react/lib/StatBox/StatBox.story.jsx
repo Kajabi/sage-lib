@@ -50,6 +50,7 @@ DefaultWithSageColorLegendDot.args = {
     value: 'View More',
     href: '#'
   },
+  kjbElementId: 'exampleStatBox',
   timeframe: 'in last 30 days',
   title: 'In Progress'
 };
@@ -66,6 +67,7 @@ DefaultWithSageCustomColorLegendDot.args = {
     value: 'View More',
     href: '#'
   },
+  kjbElementId: 'exampleDefaultWithColorLegend',
   timeframe: 'in last 30 days',
   title: 'In Progress'
 };
@@ -82,6 +84,7 @@ DefaultRaised.args = {
     href: '#'
   },
   raised: true,
+  kjbElementId: 'exampleDefaultRaised',
   timeframe: 'in last 30 days',
   title: 'In Progress'
 };
@@ -94,6 +97,7 @@ SimpleWithImage.args = {
     alt: 'Example',
     src: 'https://via.placeholder.com/150'
   },
+  kjbElementId: 'exampleSimpleWithImage',
   title: 'Title'
 };
 
@@ -105,6 +109,7 @@ SimpleWithIcon.args = {
     cardColor: Icon.CARD_COLORS.PUBLISHED,
     name: Icon.ICONS.CHECK
   },
+  kjbElementId: 'exampleSimpleWithIcon',
   title: 'Title'
 };
 
@@ -113,5 +118,6 @@ NullView.args = {
   change: null,
   data: 'No insights to show',
   hasData: false,
+  kjbElementId: 'exampleNullView',
   title: 'In Progress'
 };

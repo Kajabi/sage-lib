@@ -16,6 +16,7 @@ export const Toast = ({
   onDismiss,
   timeout,
   link,
+  kjbElementId,
   type,
   title,
 }) => {
@@ -78,7 +79,7 @@ export const Toast = ({
   };
 
   return !isDismissed && (
-    <div className="sage-toast-container">
+    <div className="sage-toast-container" data-kjb-element={kjbElementId}>
       <dialog open className={classNames} aria-labelledby={`sage-toast-label-${id}`}>
         {renderAsset()}
 
@@ -104,6 +105,7 @@ export const Toast = ({
           type="button"
           className="sage-toast__button sage-toast__button--close sage-btn sage-btn--subtle sage-btn--secondary sage-btn--icon-only-remove"
           onClick={onClickDismiss}
+          kjbElementId="closeButton"
         >
           <pds-icon name="remove" />
           <span className="visually-hidden">
@@ -125,6 +127,7 @@ Toast.defaultProps = {
   onDismiss: (evt) => evt,
   timeout: 4500,
   link: null,
+  kjbElementId: null,
   title: null,
   type: Toast.TYPES.DEFAULT,
 };
@@ -143,6 +146,7 @@ Toast.propTypes = {
     text: PropTypes.string,
     href: PropTypes.string,
   }),
+  kjbElementId: PropTypes.string,
   type: PropTypes.oneOf(Object.values(Toast.TYPES)),
   title: PropTypes.string,
 };
