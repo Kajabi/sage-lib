@@ -69,7 +69,7 @@ export default {
         <h2>Additional Type Features</h2>
 
         <h3>Trunction</h3>
-        <p className={`${SageClassnames.TRUNCATE_TEXT}`}>Text truncation for extra long strings of text will get cut off if it's longer than its container and an ellipsis will be added</p>
+        <p className={`${SageClassnames.TRUNCATE_TEXT}`}>Text truncation for extra long strings of text will get cut off if it&apos;s longer than its container and an ellipsis will be added</p>
 
         <h3>Alignment</h3>
         <p>Text can be left aligned.</p>
