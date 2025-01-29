@@ -209,6 +209,14 @@ module TypeSpecsHelper
           Rails: `SageClassnames::TYPE_STRIKETHROUGH`<br />
           React: `SageClassnames.TYPE_STRIKETHROUGH`
         ))
+      },
+      {
+        description: md("Apply dotted underline to text"),
+        class: md("`t-sage--underline-dotted`"),
+        constants: md(%(
+          Rails: `SageClassnames::TYPE_UNDERLINE_DOTTED`<br />
+          React: `SageClassnames.TYPE_UNDERLINE_DOTTED`
+        ))
       }
     ]
   end

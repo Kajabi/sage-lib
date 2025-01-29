@@ -1,4 +1,5 @@
 import React from 'react';
+import { SageClassnames } from '../configs';
 import { Grid } from '../Grid';
 import { Link } from '../Link';
 import { Type } from './Type';
@@ -64,6 +65,22 @@ export default {
           </li>
           <li>Vivamus at suscipit odio. Proin at purus vel ante suscipit porttitor.</li>
         </ol>
+
+        <h2>Additional Type Features</h2>
+
+        <h3>Trunction</h3>
+        <p className={`${SageClassnames.TRUNCATE_TEXT}`}>Text truncation for extra long strings of text will get cut off if it's longer than its container and an ellipsis will be added</p>
+
+        <h3>Alignment</h3>
+        <p>Text can be left aligned.</p>
+        <p className={`${SageClassnames.TYPE_ALIGN_CENTER}`}>Text can be center aligned.</p>
+        <p className={`${SageClassnames.TYPE_ALIGN_RIGHT}`}>Text can be right aligned.</p>
+
+        <h3>Strikethrough</h3>
+        <p className={`${SageClassnames.TYPE_STRIKETHROUGH}`}>Strikethough can be applied to text.</p>
+
+        <h3>Underline</h3>
+        <p className={`${SageClassnames.TYPE_UNDERLINE_DOTTED}`}>Dotted underline can be applied to text.</p>
       </>
     )
   }
