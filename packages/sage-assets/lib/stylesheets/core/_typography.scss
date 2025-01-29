@@ -280,3 +280,11 @@ body:not(.sage-excluded),
     -webkit-line-clamp: #{$i};
   }
 }
+
+.t-sage--underline-dotted {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: sage-color(grey, 600);
+  text-underline-offset: 25%;
+  text-decoration-thickness: 12%;
+}
