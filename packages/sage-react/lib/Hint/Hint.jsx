@@ -8,6 +8,7 @@ export const Hint = ({
   className,
   content,
   icon,
+  kjbElementId,
   ...rest
 }) => {
   const classNames = classnames(
@@ -15,7 +16,7 @@ export const Hint = ({
     className,
   );
   return (
-    <div className={classNames} {...rest}>
+    <div className={classNames} {...rest} data-kjb-element={kjbElementId}>
       {icon && (
         <Icon
           className="sage-hint__icon"
@@ -30,10 +31,12 @@ export const Hint = ({
 Hint.defaultProps = {
   className: '',
   icon: null,
+  kjbElementId: null,
 };
 
 Hint.propTypes = {
   className: PropTypes.string,
   content: PropTypes.string.isRequired,
   icon: PropTypes.oneOf(Object.values(SageTokens.ICONS)),
+  kjbElementId: PropTypes.string,
 };

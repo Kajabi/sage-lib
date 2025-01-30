@@ -55,7 +55,8 @@ SelectWithState.args = {
     'Option 3',
     'Option 4',
   ],
-  placeholder: 'Choose...'
+  placeholder: 'Choose...',
+  kjbElementId: 'exampleSelectWithState',
 };
 
 export const DisabledSelectFieldWithOptionPreselected = (args) => <Select {...args} />;
@@ -70,6 +71,7 @@ DisabledSelectFieldWithOptionPreselected.args = {
     'Option 4',
   ],
   disabled: true,
+  kjbElementId: 'exampleDisabledWithPreselectedOption',
   value: 'Option 3',
 };
 
@@ -98,7 +100,8 @@ SelectWithOptionDisabled.args = {
     'Fourth option',
     'Fifth option',
   ],
-  placeholder: 'Pick an option:'
+  placeholder: 'Pick an option:',
+  kjbElementId: 'exampleSelectWithOptionDisabled',
 };
 
 export const SelectWithHelpContentLink = (args) => {
@@ -125,7 +128,8 @@ SelectWithHelpContentLink.args = {
       What&rsquo;s this?
     </Link>
   ),
-  placeholder: 'Choose an option:'
+  placeholder: 'Choose an option:',
+  kjbElementId: 'exampleSelectWithHelpContentLink',
 };
 
 export const SelectWithHelpContentPopover = (args) => {
@@ -204,5 +208,6 @@ SelectWithOptgroups.args = {
       ],
     },
   ],
-  placeholder: 'Choose wisely…'
+  placeholder: 'Choose wisely…',
+  kjbElementId: 'exampleSelectWithOptgroups',
 };
