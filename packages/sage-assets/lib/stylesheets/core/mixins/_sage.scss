@@ -113,7 +113,8 @@
 
   // --- Standalone Icon Buttons
   @else if $direction == only {
-    .sage-btn--icon-only-#{$icon-name} {
+    .sage-btn--icon-only-#{$icon-name},
+    [class*="sage-btn--icon-only-"]  {
       justify-content: center;
       text-align: center;
       border-radius: sage-border(radius-round);
