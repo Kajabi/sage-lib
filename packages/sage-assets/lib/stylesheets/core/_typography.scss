@@ -282,9 +282,10 @@ body:not(.sage-excluded),
 }
 
 .t-sage--underline-dotted {
-  text-decoration: underline;
-  text-decoration-style: dotted;
   text-decoration-color: sage-color(grey, 600);
-  text-underline-offset: 25%;
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
   text-decoration-thickness: 12%;
+  text-underline-offset: 0.3rem;
+  text-underline-position: under;
 }
