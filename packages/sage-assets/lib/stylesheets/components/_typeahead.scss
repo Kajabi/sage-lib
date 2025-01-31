@@ -32,7 +32,7 @@ $-typeahead-item-width: rem(240px);
 .sage-typeahead__null-state {
   @extend %t-sage-body-small;
   padding: sage-spacing(sm);
-  color: sage-color(grey, 600);
+  color: var(--pine-color-grey-600);
   text-align: center;
 }
 
@@ -49,7 +49,7 @@ $-typeahead-item-width: rem(240px);
 
   &:hover,
   &:focus-within {
-    background-color: sage-color(grey, 150);
+    background-color: var(--pine-color-grey-150);
   }
 }
 
@@ -60,7 +60,7 @@ $-typeahead-item-width: rem(240px);
     $outline-offset-inline: -4px,
     $outline-animation-speed: 0.05s
   );
-  @include sage-focus-outline--update-color(sage-color(purple, 300));
+  @include sage-focus-outline--update-color(var(--pine-color-purple-300));
 
   display: grid;
   position: unset; // Undo position defined in sage-focus-outline()
@@ -101,7 +101,7 @@ $-typeahead-item-width: rem(240px);
     @include truncate;
 
     :hover & {
-      color: sage-color(grey, 950);
+      color: var(--pine-color-grey-950);
     }
   }
 }

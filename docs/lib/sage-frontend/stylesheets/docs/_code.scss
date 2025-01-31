@@ -9,7 +9,7 @@
 
   display: block;
   padding: sage-spacing();
-  color: sage-color(sage, 100);
+  color: var(--pine-color-sage-100);
   font-size: sage-font-size(body-sm);
   font-weight: sage-font-weight(normal);
   white-space: pre-wrap;
@@ -28,45 +28,45 @@
   }
 }
 pre .nocode {
-  color: sage-color(grey, 950);
+  color: var(--pine-color-grey-950);
   background-color: none;
 }
 pre .str { /* string */
-  color: sage-color(orange, 100);
+  color: var(--pine-color-orange-100);
 }
 pre .kwd {
-  color: sage-color(sage, 100);
+  color: var(--pine-color-sage-100);
   font-weight: bold;
 }
 pre .com { /* comment */
-  color: sage-color(sage, 100);
+  color: var(--pine-color-sage-100);
   opacity: 0.4;
 }
 pre .typ { /* typen */
-  color: sage-color(sage, 100);
+  color: var(--pine-color-sage-100);
 }
 pre .lit { /* literal */
-  color: sage-color(sage, 100);
+  color: var(--pine-color-sage-100);
 }
 pre .pun { /* punctuation */
-  color: sage-color(purple, 150);
+  color: var(--pine-color-purple-150);
 }
 pre .pln { /* plaintext */
-  color: sage-color(primary, 100);
+  color: var(--pine-color-primary-100);
 }
 pre .tag { /* html/xml tag */
-  color: sage-color(purple, 150);
+  color: var(--pine-color-purple-150);
   font-weight: bold;
 }
 pre .atn { /* attribute name */
-  color: sage-color(primary, 100);
+  color: var(--pine-color-primary-100);
 }
 pre .atv { /* attribute value */
-  color: sage-color(primary, 100);
+  color: var(--pine-color-primary-100);
   font-weight: bold;
 }
 pre .dec { /* decimal */
-  color: sage-color(sage, 100);
+  color: var(--pine-color-sage-100);
 }
 
 @media print {

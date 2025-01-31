@@ -10,7 +10,7 @@
 
   display: inline-flex;
   align-items: center;
-  color: sage-color(grey, 800);
+  color: var(--pine-color-grey-800);
 
   .sage-property-group &:not(:last-child) {
     margin-inline-end: sage-spacing(md);

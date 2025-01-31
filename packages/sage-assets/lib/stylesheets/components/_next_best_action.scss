@@ -72,10 +72,10 @@ $-next-best-action-colors: (
 
   @each $name, $color in $-next-best-action-colors {
     .sage-next-best-action--#{$name} & {
-      color: sage-color($color, 500);
+      color: var(--pine-color-$color-500);
 
       @include sage-focus-outline($outline-offset-inline: 3px, $outline-offset-block: 3px);
-      @include sage-focus-outline--update-color(sage-color($color, 500));
+      @include sage-focus-outline--update-color(var(--pine-color-$color-500));
     }
   }
 
@@ -90,7 +90,7 @@ $-next-best-action-colors: (
 
 @each $name, $color in $-next-best-action-colors {
   .sage-next-best-action--#{$name} {
-    background: sage-color($color, 100);
-    border: 1px solid sage-color($color, 400);
+    background: var(--pine-color-$color-100);
+    border: 1px solid var(--pine-color-$color-400);
   }
 }

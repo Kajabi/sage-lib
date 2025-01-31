@@ -4,14 +4,14 @@
   For Sage documentation use
 ================================================== */
 .docs-home {
-  background: sage-color(grey, 200);
+  background: var(--pine-color-grey-200);
 }
 
 .docs-hero {
   position: relative;
   padding: sage-spacing() sage-spacing() rem(100px);
   color: sage-color(white);
-  background-color: sage-color(primary, 500);
+  background-color: var(--pine-color-primary-500);
 
   @media (max-width: sage-breakpoint(md-min)) {
     padding-block-end: sage-spacing(xl);

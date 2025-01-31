@@ -12,7 +12,7 @@
   margin-block-end: sage-spacing();
   padding: sage-spacing(lg) sage-spacing(sm);
   text-align: center;
-  background: sage-color(grey, 150);
+  background: var(--pine-color-grey-150);
   border-radius: sage-border(radius);
   cursor: pointer;
 }
@@ -29,7 +29,7 @@
   margin-block-end: sage-spacing(sm);
   padding: sage-spacing(sm);
   text-align: right;
-  background: sage-color(grey, 150);
+  background: var(--pine-color-grey-150);
   border-radius: sage-border(radius);
   i {
     line-height: 1;

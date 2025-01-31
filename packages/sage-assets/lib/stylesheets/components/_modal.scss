@@ -24,10 +24,10 @@ $-modal-inner-size: sage-container(md);
   overflow-y: scroll;
   z-index: sage-z-index(negative);
   padding: sage-spacing(md);
-  background-color: rgba(sage-color(grey, 950), 0.4);
+  background-color: rgba(var(--pine-color-grey-950), 0.4);
   background-image: linear-gradient(
-    rgba(sage-color(grey, 700), 0.35) 0%,
-    rgba(sage-color(grey, 950), 0.4) 100%
+    rgba(var(--pine-color-grey-700), 0.35) 0%,
+    rgba(var(--pine-color-grey-950), 0.4) 100%
   );
   transition: opacity 0.1s ease-out;
   pointer-events: none;
@@ -59,8 +59,8 @@ $-modal-inner-size: sage-container(md);
   &.sage-modal--no-blur {
     backdrop-filter: none;
     background-image: linear-gradient(
-      rgba(sage-color(grey, 800), 0.5) 0%,
-      rgba(sage-color(grey, 950), 0.5) 100%
+      rgba(var(--pine-color-grey-800), 0.5) 0%,
+      rgba(var(--pine-color-grey-950), 0.5) 100%
     );
   }
 
@@ -336,7 +336,7 @@ $-modal-inner-size: sage-container(md);
 
 @media (prefers-reduced-motion) {
   .sage-modal {
-    background-color: rgba(sage-color(grey, 950), 0.85);
+    background-color: rgba(var(--pine-color-grey-950), 0.85);
     backdrop-filter: none;
   }
 

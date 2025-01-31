@@ -80,7 +80,7 @@ $-stat-box-image-max-width: rem(48px);
 
 .sage-stat-box__title,
 .sage-stat-box__data--no-data {
-  color: sage-color(grey, 700);
+  color: var(--pine-color-grey-700);
 }
 
 .sage-stat-box__title {
@@ -103,16 +103,16 @@ $-stat-box-image-max-width: rem(48px);
 @each $-color-name, $-color-sliders in $sage-colors {
   .sage-stat-box__title--legend-#{"" + $-color-name} {
     @if ($-color-name == blue) {
-      --legend-color: #{sage-color($-color-name, 600)};
+      --legend-color: #{var(--pine-color-$-color-name-600)};
     }
     @else if ($-color-name == green) {
-      --legend-color: #{sage-color($-color-name, 600)};
+      --legend-color: #{var(--pine-color-$-color-name-600)};
     }
     @else if ($-color-name == mercury) {
-      --legend-color: #{sage-color($-color-name, 500)};
+      --legend-color: #{var(--pine-color-$-color-name-500)};
     }
     @else {
-      --legend-color: #{sage-color($-color-name, 500)};
+      --legend-color: #{var(--pine-color-$-color-name-500)};
     }
   }
 }
@@ -127,7 +127,7 @@ $-stat-box-image-max-width: rem(48px);
 .sage-stat-box__timeframe {
   @extend %t-sage-body-xsmall;
   margin-inline-start: sage-spacing(xs);
-  color: sage-color(grey, 600);
+  color: var(--pine-color-grey-600);
 }
 
 .sage-stat-box__link {

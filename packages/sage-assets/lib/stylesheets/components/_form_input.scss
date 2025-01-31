@@ -82,7 +82,7 @@ $-input-text-height: sage-font-size(body);
 }
 
 .sage-input__affix-value {
-  color: sage-color(grey, 600);
+  color: var(--pine-color-grey-600);
 }
 
 .sage-input__affix--prefix {
@@ -160,7 +160,7 @@ $-input-text-height: sage-font-size(body);
   }
 
   .sage-form-field--error & i {
-    color: sage-color(red, 500);
+    color: var(--pine-color-red-500);
   }
 }
 

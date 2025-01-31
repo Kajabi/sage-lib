@@ -5,14 +5,14 @@
 ////
 
 $-select-border-box-shadow-size: map-get($sage-field-configs, box-shadow-size);
-$-select-color-border: sage-color(grey, 500);
-$-select-color-border-hover: sage-color(grey, 600);
-$-select-color-border-selected: sage-color(primary, 200);
-$-select-color-default: sage-color(grey, 700);
-$-select-color-default-hover: sage-color(grey, 900);
-$-select-color-error: sage-color(red, 500);
+$-select-color-border: var(--pine-color-grey-500);
+$-select-color-border-hover: var(--pine-color-grey-600);
+$-select-color-border-selected: var(--pine-color-primary-200);
+$-select-color-default: var(--pine-color-grey-700);
+$-select-color-default-hover: var(--pine-color-grey-900);
+$-select-color-error: var(--pine-color-red-500);
 $-select-color-label-background: sage-color(white);
-$-select-color-success: sage-color(primary, 200);
+$-select-color-success: var(--pine-color-primary-200);
 $-select-filled-top-padding: rem(4.4px);
 $-select-height: rem(40px);
 $-select-padding-x: sage-spacing(sm);
@@ -68,7 +68,7 @@ $-select-arrow-position-inverse-with-message: calc(100% - #{$-select-height + $-
   align-items: center;
   height: $-select-height;
   font-size: $-select-arrow-font-size;
-  color: sage-color(grey, 600);
+  color: var(--pine-color-grey-600);
   transition: 0.2s color ease;
 }
 
@@ -133,16 +133,16 @@ $-select-arrow-position-inverse-with-message: calc(100% - #{$-select-height + $-
   }
 
   &:disabled {
-    color: sage-color(grey, 700);
-    background-color: sage-color(grey, 100);
+    color: var(--pine-color-grey-700);
+    background-color: var(--pine-color-grey-100);
 
     ~ .sage-select__arrow::before {
-      color: sage-color(grey, 700);
+      color: var(--pine-color-grey-700);
       opacity: 0.5;
     }
 
     @include placeholder {
-      color: sage-color(grey, 700);
+      color: var(--pine-color-grey-700);
     }
   }
 }
@@ -170,6 +170,6 @@ $-select-arrow-position-inverse-with-message: calc(100% - #{$-select-height + $-
   }
 
   &.sage-select--value-selected .form-group:focus-within:not(:disabled) ~ .sage-select__label {
-    color: sage-color(grey, 900);
+    color: var(--pine-color-grey-900);
   }
 }

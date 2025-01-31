@@ -14,9 +14,9 @@ $-radio-color-default: map-get($sage-radio-colors, default);
 $-radio-color-disabled: map-get($sage-radio-colors, disabled);
 $-radio-color-error: map-get($sage-radio-colors, error);
 $-radio-color-hover: map-get($sage-radio-colors, hover);
-$-radio-color-text-disabled: sage-color(grey, 500);
-$-radio-color-focus-outline: sage-color(purple, 300);
-$-radio-color-focus-outline-error: sage-color(red, 300);
+$-radio-color-text-disabled: var(--pine-color-grey-500);
+$-radio-color-focus-outline: var(--pine-color-purple-300);
+$-radio-color-focus-outline-error: var(--pine-color-red-300);
 
 // Additional configurations
 $-radio-button-size: $sage-radio-size;
@@ -95,7 +95,7 @@ $-radio-focus-outline-color: currentColor;
   margin-inline-start: 0;
 
   .sage-radio--has-border & {
-    color: sage-color(grey, 900);
+    color: var(--pine-color-grey-900);
     font-weight: sage-font-weight(semibold);
 
     &::after {
@@ -172,7 +172,7 @@ $-radio-focus-outline-color: currentColor;
   &:hover {
     &:not(:checked):not(:disabled) {
       border-color: $-radio-color-hover;
-      background-color: sage-color(grey, 100);
+      background-color: var(--pine-color-grey-100);
     }
   }
 

@@ -4,9 +4,9 @@
   For Sage documentation use
 ================================================== */
 
-$-quick-links-color-text: sage-color(grey, 900);
-$-quick-links-color-focus: sage-color(primary, 300);
-$-quick-links-color-background: sage-color(primary, 200);
+$-quick-links-color-text: var(--pine-color-grey-900);
+$-quick-links-color-focus: var(--pine-color-primary-300);
+$-quick-links-color-background: var(--pine-color-primary-200);
 
 .quick-links {
   position: sticky;

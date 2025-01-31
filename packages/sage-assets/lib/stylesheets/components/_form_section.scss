@@ -28,7 +28,7 @@
   display: flex;
   flex-direction: column;
   gap: sage-spacing(sm);
-  color: sage-color(grey, 700);
+  color: var(--pine-color-grey-700);
 }
 
 .sage-form-section__subtitle--legacy {

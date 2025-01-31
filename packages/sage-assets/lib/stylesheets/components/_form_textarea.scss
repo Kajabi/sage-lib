@@ -19,7 +19,7 @@ $-textarea-height: 100%;
 $-textarea-min-height: rem(90px);
 
 // Colors
-$-textarea-color-default: sage-color(grey, 800);
+$-textarea-color-default: var(--pine-color-grey-800);
 
 .sage-textarea {
   @include sage-form-field-group;
