@@ -17,7 +17,7 @@
   display: flex;
   align-items: center;
   list-style: none;
-  color: sage-color(grey, 700);
+  color: var(--pine-color-grey-700);
 
   &::before {
     content: "";

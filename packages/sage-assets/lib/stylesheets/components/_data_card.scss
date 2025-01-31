@@ -7,16 +7,16 @@
 
 $-data-card-colors: (
   default: (
-    border-color: sage-color(grey, 300),
-    text-color: sage-color(grey, 900),
+    border-color: var(--pine-color-grey-300),
+    text-color: var(--pine-color-grey-900),
   ),
   danger: (
-    border-color: sage-color(red, 500),
-    text-color: sage-color(red, 500),
+    border-color: var(--pine-color-red-500),
+    text-color: var(--pine-color-red-500),
   ),
   muted: (
-    border-color: sage-color(grey, 800),
-    text-color: sage-color(grey, 800),
+    border-color: var(--pine-color-grey-800),
+    text-color: var(--pine-color-grey-800),
   ),
 );
 $-data-card-transition: 0.2s linear;
@@ -121,7 +121,7 @@ $-data-card-padding: sage-spacing(xs);
 
   .sage-data-card-scroll-container &:not(:last-child) {
     padding-inline-end: sage-spacing(md);
-    border-inline-end: 1px solid sage-color(grey, 300);
+    border-inline-end: 1px solid var(--pine-color-grey-300);
   }
 
   .sage-data-card-scroll-container &:not(:first-child) {

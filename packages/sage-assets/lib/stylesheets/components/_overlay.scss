@@ -5,7 +5,7 @@
 ////
 
 
-$-overlay-bg-color: rgba(sage-color(grey, 600), 0.5);
+$-overlay-bg-color: rgba(var(--pine-color-grey-600), 0.5);
 $-overlay-backdrop-filter: blur(rem(2px));
 $-overlay-z-index: sage-z-index(underlay);
 $-overlay-transition-default: opacity 0.5s ease-in-out;

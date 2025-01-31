@@ -193,10 +193,10 @@ body:not(.sage-excluded),
   // Hyperlinks get some default coloring applied
   > a:not([class]),
   > a[class*="sage-link"] {
-    color: sage-color(primary, 300);
+    color: var(--pine-color-primary-300);
 
     &:hover {
-      color: sage-color(primary, 400);
+      color: var(--pine-color-primary-400);
     }
   }
 
@@ -212,16 +212,16 @@ body:not(.sage-excluded),
   $color-value: "";
 
   @if ($color-name == blue) {
-    $color-value: sage-color($color-name, 600);
+    $color-value: var(--pine-color-$color-name-600);
   }
   @else if ($color-name == green) {
-    $color-value: sage-color($color-name, 600);
+    $color-value: var(--pine-color-$color-name-600);
   }
   @else if ($color-name == mercury) {
-    $color-value: sage-color($color-name, 500);
+    $color-value: var(--pine-color-$color-name-500);
   }
   @else if ($color-name == grey) {
-    $color-value: sage-color($color-name, 500);
+    $color-value: var(--pine-color-$color-name-500);
   }
   @else {
     // Default color values
@@ -282,7 +282,7 @@ body:not(.sage-excluded),
 }
 
 .t-sage--underline-dotted {
-  text-decoration-color: sage-color(grey, 600);
+  text-decoration-color: var(--pine-color-grey-600);
   text-decoration-line: underline;
   text-decoration-style: dotted;
   text-decoration-thickness: 12%;

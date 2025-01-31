@@ -4,9 +4,9 @@
 /// @group sage
 ////
 
-$-breadcrumb-current-color: sage-color(grey, 900);
-$-breadcrumb-interactive-color: sage-color(grey, 900);
-$-breadcrumb-outline-color: sage-color(purple, 300);
+$-breadcrumb-current-color: var(--pine-color-grey-900);
+$-breadcrumb-interactive-color: var(--pine-color-grey-900);
+$-breadcrumb-outline-color: var(--pine-color-purple-300);
 
 .sage-breadcrumbs {
   display: flex;
@@ -33,7 +33,7 @@ $-breadcrumb-outline-color: sage-color(purple, 300);
   &:not(:last-child) {
     &::after {
       content: "/";
-      color: sage-color(grey, 700);
+      color: var(--pine-color-grey-700);
     }
 
     .sage-breadcrumbs--progressbar &::after {
@@ -56,7 +56,7 @@ $-breadcrumb-outline-color: sage-color(purple, 300);
   display: inline-flex;
   align-items: center;
   padding: sage-spacing(3xs) sage-spacing(xs);
-  color: sage-color(grey, 800);
+  color: var(--pine-color-grey-800);
   font-size: sage-font-size(body-sm);
   font-weight: sage-font-weight(semibold);
   text-decoration: none;

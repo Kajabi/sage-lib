@@ -7,7 +7,7 @@
 
 $-upload-card-border-radius: sage-border(radius-large);
 $-upload-card-border-width: 2;
-$-upload-card-error-color: sage-color(red, 500);
+$-upload-card-error-color: var(--pine-color-red-500);
 $-upload-card-body-width: rem(200px);
 $-upload-card-body-width-stack: rem(340px);
 $-upload-card-preview-border-radius: sage-border(radius-medium);
@@ -29,10 +29,10 @@ $-upload-card-mobile-breakpoint: 609px;
   justify-content: flex-start;
   flex: 1 1;
   gap: sage-spacing();
-  color: sage-color(grey, 700);
+  color: var(--pine-color-grey-700);
 
   .sage-upload-card--selected & {
-    color: sage-color(grey, 800);
+    color: var(--pine-color-grey-800);
   }
 
   .sage-upload-card--error & {
@@ -100,7 +100,7 @@ $-upload-card-mobile-breakpoint: 609px;
 
 .sage-upload-card__icon {
   display: inline-flex;
-  color: sage-color(grey, 600);
+  color: var(--pine-color-grey-600);
 
   .sage-upload-card:not(.sage-uploaded-card--selected) & {
     margin-block-end: sage-spacing(2xs);
@@ -142,5 +142,5 @@ $-upload-card-mobile-breakpoint: 609px;
   flex-direction: column;
   align-items: flex-start;
   gap: sage-spacing(sm);
-  color: sage-color(grey, 700);
+  color: var(--pine-color-grey-700);
 }

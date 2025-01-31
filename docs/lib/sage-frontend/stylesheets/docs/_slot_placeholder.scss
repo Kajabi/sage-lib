@@ -1,11 +1,11 @@
-$-placeholder-border-color: "f89035"; // sage-color(orange, 300);
+$-placeholder-border-color: "f89035"; // var(--pine-color-orange-300);
 
 .docs-slot-placeholder {
   display: flex;
   flex-direction: column;
   gap: sage-spacing(xs);
   padding: sage-spacing(sm);
-  background-color: sage-color(orange, 100);
+  background-color: var(--pine-color-orange-100);
   background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23#{$-placeholder-border-color}' stroke-width='2' stroke-dasharray='8%2c 8' stroke-dashoffset='0' stroke-linecap='round'/%3e%3c/svg%3e");
 }
 

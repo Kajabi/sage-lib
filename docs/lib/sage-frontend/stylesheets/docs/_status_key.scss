@@ -35,7 +35,7 @@
     }
 
     &--todo {
-      border-color: sage-color(primary, 300);
+      border-color: var(--pine-color-primary-300);
     }
 
     &--no {
@@ -43,8 +43,8 @@
     }
 
     &--stop {
-      border-color: sage-color(red, 500);
-      background: sage-color(red, 500);
+      border-color: var(--pine-color-red-500);
+      background: var(--pine-color-red-500);
     }
   }
 
@@ -52,7 +52,7 @@
     margin-inline-start: sage-spacing(xs);
     font-size: sage-font-size(body-sm);
     font-weight: sage-font-weight(semibold);
-    color: sage-color(grey, 700);
+    color: var(--pine-color-grey-700);
   }
 
   @media screen and (min-width: sage-breakpoint(lg-min)) {

@@ -4,7 +4,7 @@
 /// @group sage
 ////
 
-$-loader-bar-bg-color: sage-color(grey, 500);
+$-loader-bar-bg-color: var(--pine-color-grey-500);
 $-loader-bar-height: rem(6px);
 $-loader-bar-speed: 1.2s;
 $-loader-bar-speed-delay: 0.5s;
@@ -75,12 +75,12 @@ $-loader-lower-opacity: 0.4;
   }
 
   &::before {
-    background-color: sage-color(primary, 300);
+    background-color: var(--pine-color-primary-300);
     animation: loader-bar $-loader-bar-speed linear infinite;
   }
 
   &::after {
-    background-color: sage-color(primary, 300);
+    background-color: var(--pine-color-primary-300);
     animation: loader-bar $-loader-bar-speed $-loader-bar-speed-delay linear
       infinite;
   }
@@ -127,7 +127,7 @@ $-loader-lower-opacity: 0.4;
 .sage-loader__success-path {
   stroke-dasharray: 150, 200;
   stroke-linecap: round;
-  stroke: sage-color(sage, 300);
+  stroke: var(--pine-color-sage-300);
 }
 
 .sage-loader__success-check {
@@ -135,7 +135,7 @@ $-loader-lower-opacity: 0.4;
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-miterlimit: 10;
-  stroke: sage-color(sage, 300);
+  stroke: var(--pine-color-sage-300);
 }
 
 .sage-loader__text {
@@ -177,7 +177,7 @@ $-loader-lower-opacity: 0.4;
   position: relative;
   margin: 0 auto;
   padding: rem(15px) rem(20px);
-  background-color: sage-color(grey, 150);
+  background-color: var(--pine-color-grey-150);
   will-change: transform;
   border-radius: sage-border(radius-large);
   box-shadow: sage-shadow(sm);
@@ -185,7 +185,7 @@ $-loader-lower-opacity: 0.4;
   span {
     height: $-loader-typing-size;
     width: $-loader-typing-size;
-    background-color: sage-color(grey, 500);
+    background-color: var(--pine-color-grey-500);
     border-radius: sage-border(radius-round);
     opacity: $-loader-lower-opacity;
 

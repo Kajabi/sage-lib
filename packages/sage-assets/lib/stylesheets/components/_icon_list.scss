@@ -52,7 +52,7 @@
 
 .sage-icon-list-item__label-subtext {
   @extend %t-sage-body;
-  color: sage-color(grey, 900);
+  color: var(--pine-color-grey-900);
 }
 
 .sage-icon-list-item__title {

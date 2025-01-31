@@ -7,15 +7,15 @@
 .sage-specs {
   th {
     padding: 4px;
-    color: sage-color(grey, 700);
-    border-block-end: 1px solid sage-color(grey, 300);
+    color: var(--pine-color-grey-700);
+    border-block-end: 1px solid var(--pine-color-grey-300);
   }
 
   td {
     padding: 4px;
     font-size: sage-font-size(body-xs);
     vertical-align: middle;
-    border-block-end: 1px solid sage-color(grey, 200);
+    border-block-end: 1px solid var(--pine-color-grey-200);
   }
 
   tfoot td {

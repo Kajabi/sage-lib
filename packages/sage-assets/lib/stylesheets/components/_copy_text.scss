@@ -5,11 +5,11 @@
 ////
 
 
-$-copy-text-border: 1px solid sage-color(grey, 300);
-$-copy-text-border-focus-color: sage-color(purple, 300);
-$-copy-text-border-hover-color: sage-color(grey, 500);
-$-copy-text-color: sage-color(grey, 900);
-$-copy-text-color-hover: sage-color(grey, 950);
+$-copy-text-border: 1px solid var(--pine-color-grey-300);
+$-copy-text-border-focus-color: var(--pine-color-purple-300);
+$-copy-text-border-hover-color: var(--pine-color-grey-500);
+$-copy-text-color: var(--pine-color-grey-900);
+$-copy-text-color-hover: var(--pine-color-grey-950);
 
 
 .sage-copy-text {

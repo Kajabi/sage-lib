@@ -9,32 +9,32 @@ $-avatar-min-size: rem(32px);
 $-avatar-max-size: rem(128px);
 $-avatar-ring-colors: (
   charcoal: (
-    main: sage-color(grey, 950),
-    bg: sage-color(grey, 200)
+    main: var(--pine-color-grey-950),
+    bg: var(--pine-color-grey-200)
   ),
   grey: (
-    main: sage-color(grey, 950),
-    bg: sage-color(grey, 200)
+    main: var(--pine-color-grey-950),
+    bg: var(--pine-color-grey-200)
   ),
   purple: (
-    main: sage-color(purple, 600),
-    bg: sage-color(purple, 150)
+    main: var(--pine-color-purple-600),
+    bg: var(--pine-color-purple-150)
   ),
   sage: (
-    main: sage-color(sage, 300),
-    bg: sage-color(sage, 100)
+    main: var(--pine-color-sage-300),
+    bg: var(--pine-color-sage-100)
   ),
   yellow: (
-    main: sage-color(yellow, 400),
-    bg: sage-color(yellow, 150)
+    main: var(--pine-color-yellow-400),
+    bg: var(--pine-color-yellow-150)
   ),
   orange: (
-    main: sage-color(orange, 300),
-    bg: sage-color(orange, 100)
+    main: var(--pine-color-orange-300),
+    bg: var(--pine-color-orange-100)
   ),
   red: (
-    main: sage-color(red, 500),
-    bg: sage-color(red, 150)
+    main: var(--pine-color-red-500),
+    bg: var(--pine-color-red-150)
   )
 );
 $-avatar-tile-size: rem(216px);
@@ -64,7 +64,7 @@ $-avatar-group-item-sizes: (
   width: $-avatar-min-size;
   height: $-avatar-min-size;
   border-radius: sage-border(radius-round);
-  background-color: sage-color(primary, 100);
+  background-color: var(--pine-color-primary-100);
 
   // Documentation-specific styles
   .sage-avatar-wrapper > & {
@@ -178,8 +178,8 @@ $-avatar-group-item-sizes: (
   grid-area: full;
   width: 100%;
   text-align: center;
-  color: sage-color(primary, 400);
-  fill: sage-color(primary, 400);
+  color: var(--pine-color-primary-400);
+  fill: var(--pine-color-primary-400);
 
   @extend %t-sage-body-xsmall-bold;
 

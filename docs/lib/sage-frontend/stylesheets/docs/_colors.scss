@@ -64,37 +64,37 @@
         color: sage-color(white);
       }
       @else if ($name == white or $name == grey) {
-        color: sage-color(grey, 950);
+        color: var(--pine-color-grey-950);
       }
       @else if ($name == black or $name == charcoal) {
         color: sage-color(white);
       }
       @else if ($name == blue and $value > 400) {
-        color: sage-color(blue, 200);
+        color: var(--pine-color-blue-200);
       }
       @else if ($name == blue) {
-        color: sage-color(blue, 950);
+        color: var(--pine-color-blue-950);
       }
       @else if ($name == mercury and $value > 200) {
         color: sage-color(white);
       }
       @else if ($name == mercury) {
-        color: sage-color(mercury, 500);
+        color: var(--pine-color-mercury-500);
       }
       @else if ($name == green and $value > 200) {
         color: sage-color(white);
       }
       @else if ($name == green) {
-        color: sage-color(green, 600);
+        color: var(--pine-color-green-600);
       }
       @else if ($name == yellow and $value > 300) {
         color: sage-color(white);
       }
       @else if (lightness($hex) < 65) {
-        color: sage-color($name, 100);
+        color: var(--pine-color-$name-100);
       }
       @else {
-        color: sage-color($name, 400);
+        color: var(--pine-color-$name-400);
       }
 
       &::after {
@@ -113,8 +113,8 @@
 
 .color-white-100 {
   border-radius: sage-border(radius);
-  border: 1px solid sage-color(grey, 800);
-  box-shadow: inset 0 0 0.0625rem sage-color(grey, 800);
+  border: 1px solid var(--pine-color-grey-800);
+  box-shadow: inset 0 0 0.0625rem var(--pine-color-grey-800);
 }
 
 .color-black-100 {

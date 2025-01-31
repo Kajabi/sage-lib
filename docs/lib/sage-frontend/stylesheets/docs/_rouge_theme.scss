@@ -1,55 +1,55 @@
 // background
-$-color-1: sage-color(grey, 200);
+$-color-1: var(--pine-color-grey-200);
 // Whitespace
-$-color-24: sage-color(grey, 700);
+$-color-24: var(--pine-color-grey-700);
 // Name entity
-$-color-20: sage-color(grey, 900);
+$-color-20: var(--pine-color-grey-900);
 // Operators, numbers
-$-color-6: sage-color(grey, 800);
+$-color-6: var(--pine-color-grey-800);
 // Heading and prompt
-$-color-9: sage-color(grey, 900);
+$-color-9: var(--pine-color-grey-900);
 // Comments of various sorts
-$-color-3: sage-color(grey, 800);
+$-color-3: var(--pine-color-grey-800);
 // Subheading
-$-color-12: sage-color(red, 500);
+$-color-12: var(--pine-color-red-500);
 // Constant
-$-color-18: sage-color(red, 500);
+$-color-18: var(--pine-color-red-500);
 // Keyword type
-$-color-14: sage-color(red, 500);
+$-color-14: var(--pine-color-red-500);
 // Strings
-$-color-15: sage-color(red, 500);
+$-color-15: var(--pine-color-red-500);
 // Name exception
-$-color-21: sage-color(red, 300);
+$-color-21: var(--pine-color-red-300);
 // Error underlines
-$-color-4: sage-color(red, 500);
+$-color-4: var(--pine-color-red-500);
 // Generic deleted?
-$-color-8: sage-color(red, 300);
+$-color-8: var(--pine-color-red-300);
 // Escape string
-$-color-25: sage-color(orange, 200);
+$-color-25: var(--pine-color-orange-200);
 // Regex/interpolation
-$-color-26: sage-color(orange, 200);
+$-color-26: var(--pine-color-orange-200);
 // Preproc comment
-$-color-7: sage-color(grey, 800);
+$-color-7: var(--pine-color-grey-800);
 // Highlight?
-$-color-2: sage-color(yellow, 150);
+$-color-2: var(--pine-color-yellow-150);
 // Name label
-$-color-22: sage-color(yellow, 400);
+$-color-22: var(--pine-color-yellow-400);
 // Keywords and built ins, tag names
-$-color-5: sage-color(sage, 300);
+$-color-5: var(--pine-color-sage-300);
 // Generic inserted?
-$-color-10: sage-color(primary, 200);
+$-color-10: var(--pine-color-primary-200);
 // Output
-$-color-11: sage-color(primary, 200);
+$-color-11: var(--pine-color-primary-200);
 // Name attribute
-$-color-16: sage-color(sage, 200);
+$-color-16: var(--pine-color-sage-200);
 // Tracebake
-$-color-13: sage-color(primary, 200);
+$-color-13: var(--pine-color-primary-200);
 // Class, function, namespace
-$-color-17: sage-color(sage, 200);
+$-color-17: var(--pine-color-sage-200);
 // Name decorator and word operator
-$-color-19: sage-color(purple, 300);
+$-color-19: var(--pine-color-purple-300);
 // Variables
-$-color-23: sage-color(primary, 300);
+$-color-23: var(--pine-color-primary-300);
 
 
 .highlight {

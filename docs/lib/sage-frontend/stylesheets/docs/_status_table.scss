@@ -6,7 +6,7 @@
 
 $-status-table-border: rem(2px) solid sage-color(grey);
 $-status-table-cell-padding: sage-spacing(xs) sage-spacing(sm);
-$-status-table-heading-color: sage-color(grey, 600);
+$-status-table-heading-color: var(--pine-color-grey-600);
 $-status-table-heading-font-size: sage-font-size(body-sm);
 $-status-table-heading-padding: sage-spacing(xs) sage-spacing(sm);
 
