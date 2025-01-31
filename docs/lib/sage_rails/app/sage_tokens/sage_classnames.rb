@@ -108,4 +108,5 @@ module SageClassnames
   end
 
   TYPE_STRIKETHROUGH = "t-sage--strikethrough"
+  TYPE_UNDERLINE_DOTTED = "t-sage--underline-dotted"
 end

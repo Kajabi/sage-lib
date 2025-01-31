@@ -6,7 +6,7 @@
 
 
 // Font definitions
-$-heading-font: "GreetStandard", "Inter", -apple-system, system-ui, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Ubuntu", sans-serif;
+$-heading-font: "Greet Standard", "Inter", -apple-system, system-ui, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Ubuntu", sans-serif;
 $-body-font-stack: "Inter", -apple-system, system-ui, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Ubuntu", sans-serif;
 $-body-margin-block-end: sage-spacing(xs);
 $-headings-margin-block-end: sage-spacing(sm);
@@ -279,4 +279,13 @@ body:not(.sage-excluded),
   .t-sage--line-clamp-#{$i} {
     -webkit-line-clamp: #{$i};
   }
+}
+
+.t-sage--underline-dotted {
+  text-decoration-color: sage-color(grey, 600);
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  text-decoration-thickness: 12%;
+  text-underline-offset: 0.3rem;
+  text-underline-position: under;
 }

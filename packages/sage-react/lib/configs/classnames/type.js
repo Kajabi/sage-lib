@@ -56,3 +56,4 @@ export const CLASSNAME_STRIKETHROUGH = `${typeClassPrefix}--strikethrough`;
 export const CLASSNAME_TYPE_ALIGN_CENTER = 't-sage--align-center';
 export const CLASSNAME_TYPE_ALIGN_RIGHT = 't-sage--align-right';
 export const CLASSNAME_TYPE_BLOCK = 'sage-type';
+export const CLASSNAME_UNDERLINE_DOTTED = `${typeClassPrefix}--underline-dotted`;
